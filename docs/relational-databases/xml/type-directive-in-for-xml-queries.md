@@ -1,0 +1,152 @@
+---
+title: "FOR XML クエリの TYPE ディレクティブ | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dbe-xml"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "FOR XML 句, TYPE ディレクティブ"
+  - "TYPE ディレクティブ"
+ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
+caps.latest.revision: 40
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 40
+---
+# FOR XML クエリの TYPE ディレクティブ
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) がサポートされるため、必要に応じて TYPE ディレクティブを指定することにより、FOR XML クエリの結果を **xml** データ型として返すように要求できます。 これにより、サーバーで FOR XML クエリの結果を処理できるようになります。 たとえば、その結果に対して XQuery を指定したり、結果を **xml** 型の変数に割り当てたり、[入れ子になった FOR XML クエリ](../../relational-databases/xml/use-nested-for-xml-queries.md)を記述したりできます。  
+  
+> [!NOTE]  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、TYPE ディレクティブを使用した FOR XML クエリなど、サーバーでのさまざまな構成の結果として、または SQL テーブルの列および出力パラメーターの XML インスタンス データ値を返すために **xml** データ型が使用された場合に、XML データ型のインスタンス データをクライアントに返します。 クライアント アプリケーション コードでは、ADO.NET プロバイダーが、この XML データ型の情報をサーバーからバイナリ エンコードで送信するように要求します。 ただし、TYPE ディレクティブを指定せずに FOR XML を使用した場合、この XML データは文字列型として返されます。 どんな場合でも、クライアント プロバイダーは常にいずれかの形式の XML を処理できます。 TYPE ディレクティブを指定していない最上位レベルでの FOR XML 句は、カーソルと共に使用できません。  
+  
+## 使用例  
+ 次の例は、FOR XML クエリでの TYPE ディレクトリの使用方法を示しています。  
+  
+### FOR XML クエリの結果の xml 型としての取得  
+ 次のクエリでは、`Contacts` テーブルから顧客の連絡先に関する情報を取得します。 `FOR XML` に `TYPE` ディレクティブが指定されているので、結果は **xml** 型として返されます。  
+  
+```  
+USE AdventureWorks2012;  
+Go  
+SELECT BusinessEntityID, FirstName, LastName  
+FROM Person.Person  
+ORDER BY BusinessEntityID  
+FOR XML AUTO, TYPE;  
+```  
+  
+ 結果の一部を次に示します。  
+  
+ `<Person.Person BusinessEntityID="1" FirstName="Ken" LastName="Sánchez"/>`  
+  
+ `<Person.Person BusinessEntityID="2" FirstName="Terri" LastName="Duffy"/>`  
+  
+ `...`  
+  
+### FOR XML クエリ結果の xml 型の変数への代入  
+ 次の例では、FOR XML の結果が **xml** 型の変数 `@x` に代入されます。 このクエリでは、**xml**`TYPE`  の `AdditionalContactInfo` 列から、`BusinessEntityID`、`FirstName`、`LastName`、追加の電話番号など、連絡先に関する情報を取得します。 `FOR XML` 句に `TYPE` ディレクティブを指定するので、この XML は **xml** 型として返され、変数に代入されます。  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+DECLARE @x xml;  
+SET @x = (  
+   SELECT BusinessEntityID,   
+          FirstName,   
+          LastName,   
+          AdditionalContactInfo.query('  
+declare namespace aci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
+declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+              //act:telephoneNumber/act:number') as MorePhoneNumbers  
+   FROM Person.Person  
+   FOR XML AUTO, TYPE);  
+SELECT @x;  
+GO  
+```  
+  
+### FOR XML クエリの結果のクエリ  
+ FOR XML クエリにより、XML が返されます。 したがって、FOR XML クエリにより返された XML 結果には、**query()** や **value()** などの **xml** 型のメソッドを適用できます。  
+  
+ 次のクエリでは、**xml** データ型の `query()` メソッドを使用して、`FOR XML` クエリの結果にクエリします。 詳細については、「[query&#40;&#41; メソッド &#40;xml データ型&#41;](../../t-sql/xml/query-method-xml-data-type.md)」を参照してください。  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+SELECT (SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('  
+DECLARE namespace aci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
+DECLARE namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+ //act:telephoneNumber/act:number  
+') AS PhoneNumbers  
+FROM Person.Person  
+FOR XML AUTO, TYPE).query('/Person.Person[1]');  
+```  
+  
+ 内側の `SELECT … FOR XML` クエリにより **xml** 型の結果が返され、外側の `SELECT` によりその **xml** 型の結果に `query()` メソッドが適用されます。 `TYPE` ディレクティブが指定されていることに注意してください。  
+  
+ 結果を次に示します。  
+  
+ `<Person.Person BusinessEntityID="1" FirstName="Ken" LastName="Sánchez">`  
+  
+ `<PhoneNumbers>`  
+  
+ `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">111-111-1111</act:number>`  
+  
+ `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">112-111-1111</act:number>`  
+  
+ `</PhoneNumbers>`  
+  
+ `</Person.Person>`  
+  
+ 次のクエリでは、**xml** データ型の `value()` メソッドを使用して、`SELECT…FOR XML` クエリにより返された XML 結果から値を取得します。 詳細については、「[value&#40;&#41; メソッド &#40;xml データ型&#41;](../../t-sql/xml/value-method-xml-data-type.md)」を参照してください。  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+DECLARE @FirstPhoneFromAdditionalContactInfo varchar(40);  
+SELECT @FirstPhoneFromAdditionalContactInfo =   
+ ( SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('  
+declare namespace aci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
+declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+   //act:telephoneNumber/act:number  
+   ') AS PhoneNumbers  
+   FROM Person.Person Contact  
+   FOR XML AUTO, TYPE).value('  
+declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+  /Contact[@BusinessEntityID="1"][1]/PhoneNumbers[1]/act:number[1]', 'varchar(40)'  
+ )  
+SELECT @FirstPhoneFromAdditionalContactInfo;  
+```  
+  
+ `value()` メソッドの XQuery パス式により、`BusinessEntityID` が `1` の顧客の連絡先から 1 つ目の電話番号が取得されます。  
+  
+> [!NOTE]  
+>  TYPE ディレクティブを指定しなかった場合、この FOR XML クエリの結果は **nvarchar(max)** 型として返されます。  
+  
+### INSERT、UPDATE、および DELETE (Transact-SQL DML) での FOR XML クエリの結果の使用  
+ 次の例では、FOR XML クエリをデータ操作言語 (DML) ステートメントで使用する方法について説明します。 この例では、`FOR XML` により **xml** 型のインスタンスが返されます。 また、`INSERT` ステートメントによりこの XML がテーブルに挿入されます。  
+  
+```  
+CREATE TABLE T1(intCol int, XmlCol xml);  
+GO  
+INSERT INTO T1   
+VALUES(1, '<Root><ProductDescription ProductModelID="1" /></Root>');  
+GO  
+  
+CREATE TABLE T2(XmlCol xml)  
+GO  
+INSERT INTO T2(XmlCol)   
+SELECT (SELECT XmlCol.query('/Root')   
+        FROM T1   
+        FOR XML AUTO,TYPE);   
+GO  
+```  
+  
+## 参照  
+ [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
+  
+  

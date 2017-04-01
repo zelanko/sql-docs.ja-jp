@@ -1,0 +1,47 @@
+---
+title: "表形式モデル (SSAS) | Microsoft Docs"
+ms.custom: 
+  - "SQL2016_New_Updated"
+ms.date: "03/02/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "analysis-services"
+  - "analysis-services/multidimensional-tabular"
+  - "analysis-services/data-mining"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 80027288-c203-4667-a3e1-40fa572b4975
+caps.latest.revision: 17
+author: "Minewiskan"
+ms.author: "owend"
+manager: "erikre"
+caps.handback.revision: 17
+---
+# 表形式モデル (SSAS)
+  表形式モデルは、インメモリ モードまたは DirectQuery モードで実行される Analysis Services データベースで、バックエンド リレーショナル データ ソースから直接取得したデータにアクセスします。  
+  
+ 既定のモードはインメモリ モードです。 インメモリ分析エンジンは、最新の圧縮アルゴリズムおよびマルチスレッド クエリ プロセッサを使用し、Microsoft Excel、Microsoft [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] などのレポート クライアント アプリケーションにより、表形式のモデル オブジェクトおよびデータへの高速アクセスを実現します。  
+  
+ DirectQuery は、モデルが大きすぎてメモリに収まらない場合やデータの揮発性によって妥当な処理方法が阻害される場合に使用できる、代替クエリ モードです。 このリリースの DirectQuery では、追加のデータ ソースのサポート、DirectQuery モデルの計算テーブルおよび列の処理機能、バックエンド データベースに達する DAX 式を介した行レベルのセキュリティ、および以前のバージョンよりも高速なスループットを実現するクエリ最適化により、インメモリ モデルとの同等性が高まっています。 最新の拡張機能を使用するには、今回のリリースで導入された互換性レベル 1200 が必要です。  
+  
+ 表形式モデルは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で、モデル、テーブル、リレーションシップ、および DAX 式を作成するためのデザイン画面を提供する表形式モデル プロジェクト テンプレートを使用して作成します。 複数のソースからデータをインポートした後、リレーションシップ、計算テーブルおよび列、メジャー、KPI、階層、および翻訳を追加して、モデルを拡充することができます。  
+  
+ モデルは、クライアント レポート アプリケーションの接続先の、表形式サーバー モード用に構成された Analysis Services のインスタンスに配置できます。 配置済みのモデルは、SQL Server Management Studio で多次元モデルのように管理できます。 また、最適処理のためにパーティション分割したり、ロール ベースのセキュリティを使用して行レベルに保護したりすることもできます。  
+  
+## このセクションの内容  
+ [表形式モデル ソリューション &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md) - このセクションのトピックでは、表形式モデル ソリューションの作成と配置について説明します。
+  
+ [表形式モデル データベース &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md) - このセクションのトピックでは、配置された表形式モデル ソリューションの管理について説明します。
+  
+ [表形式モデル データ アクセス](../../analysis-services/tabular-models/tabular-model-data-access.md) - このセクションのトピックでは、配置された表形式モデル ソリューションへの接続について説明します。
+  
+## 参照  
+ [Analysis Services の新機能](../../analysis-services/what-s-new-in-analysis-services.md)   
+ [テーブル ソリューションと多次元ソリューションの比較 &#40;SSAS&#41;](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
+ [Analysis Services で使用するツールとアプリケーション](../../analysis-services/tools-and-applications-used-in-analysis-services.md)   
+ [DirectQuery モード &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
+ [Analysis Services での表形式モデルの互換性レベル](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
+  
+  

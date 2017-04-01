@@ -1,0 +1,77 @@
+---
+title: "レッスン 2: 親レポートのデータ接続とデータ テーブルを定義する | Microsoft Docs"
+ms.custom: ""
+ms.date: "05/18/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "reporting-services-native"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+applies_to: 
+  - "SQL Server 2016"
+ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
+caps.latest.revision: 8
+author: "guyinacube"
+ms.author: "asaxton"
+manager: "erikre"
+caps.handback.revision: 8
+---
+# レッスン 2: 親レポートのデータ接続とデータ テーブルを定義する
+Visual C# 用の ASP.NET Web サイト テンプレートを使用して新しい Web サイト プロジェクトを作成した後は、親レポートのデータ接続とデータ テーブルを作成します。 このチュートリアルでは、データ接続先として AdventureWorks2014 データベースを使用します。  
+  
+## DataSet を追加してデータ接続とデータ テーブルを定義するには (親レポート用)  
+  
+1.  [**Web サイト**] メニューの [**新しい項目の追加**] を選択します。  
+  
+2.  **[新しい項目の追加]** ダイアログ ボックスで、**[DataSet]** をクリックし、**[追加]** を選択します。 メッセージが表示されたら、**[はい]** を選択して **App_Code** フォルダーに項目を追加します。  
+  
+    これにより、**DataSet1.xsd** という新しい XSD ファイルがプロジェクトに追加され、データセット デザイナーが開きます。  
+  
+3.  [ツールボックス] ウィンドウから **[TableAdapter](http://msdn.microsoft.com/library/bz9tthwx.aspx)** コントロールをデザイン画面にドラッグします。 これにより、**TableAdapter** の構成ウィザードが起動します。  
+  
+4.  **[データ接続の選択]** ページで、**[新しい接続]** をクリックします。  
+  
+5.  Visual Studio で初めてデータ ソースを作成する場合は、**[データ ソースの選択]** ページが表示されます。 **[データ ソース]** ボックスで、**[Microsoft SQL Server]** を選択します。  
+  
+6.  [**接続の追加**] ダイアログ ボックスで、次の手順を実行します。  
+  
+    1.  [**サーバー名**] ボックスに、**AdventureWorks2014** データベースが存在するサーバーを入力します。  
+  
+        既定の SQL Server Express インスタンスは **(local)\sqlexpress** です。  
+  
+    2.  [**サーバーへのログオン**] セクションで、データへのアクセスを提供するオプションを選択します。 既定は **[Windows 認証を使用する]** です。  
+  
+    3.  **[データベース名の選択または入力]** ドロップダウン リストで、**[AdventureWorks2014]** を選択します。  
+  
+    4.  **[OK]** を選択し、**[次へ]** を選択します。  
+  
+7.  手順 6. (b) で **[SQL Server 認証を使用する]** を選択した場合は、機密データを文字列に含めるか、またはその情報をアプリケーション コードで設定するかどうかを指定するオプションを選択します。  
+  
+8.  **[接続文字列をアプリケーション構成ファイルに保存する]** ページで、接続文字列の名前を入力するか、既定値の **AdventureWorks2014ConnectionString** をそのまま使用します。 [ **次へ**] を選択します。  
+  
+9. **[コマンドの種類を選択します]** ページで、**[SQL ステートメントを使用する]** を選択し、**[次へ]** を選択します。  
+  
+10. **[SQL ステートメントの入力]** ページで、**AdventureWorks2014** データベースからデータを取得するための次の Transact-SQL クエリを入力し、**[次へ]** を選択します。  
+  
+    ```  
+    SELECT ProductID, Name, ProductNumber, SafetyStockLevel, ReorderPoint FROM  Production.Product Order By ProductID  
+    ```  
+  
+    また、**[クエリ ビルダー]** を選択してクエリを作成し、**[クエリの実行]** を選択してクエリを確認することもできます。 クエリを実行したときに期待したデータが返されない場合は、以前のバージョンの AdventureWorks を使用している可能性があります。 **AdventureWorks2014** サンプル データベースの取得方法の詳細については、[Microsoft SQL Server データベースの製品サンプル](http://msftdbprodsamples.codeplex.com/)に関するページを参照してください。  
+  
+11. **[生成するメソッドの選択]** ページで、**[更新を直接データベースに送信するためのメソッドを作成する (GenerateDBDirectMethods)]** チェック ボックスをオフにし、**[完了]** を選択します。  
+  
+    > [!WARNING]  
+    > **[更新を直接データベースに送信するためのメソッドを作成する (GenerateDBDirectMethods)]** は、必ずオフにしてください。  
+  
+    これで、レポートのデータ ソースとしての ADO.NET DataTable オブジェクトの構成が完了しました。 Visual Studio の [データセット デザイナー] ページに、追加した DataTable オブジェクトにクエリで指定した列が表示されます。 DataSet1 には、クエリに基づいて Product テーブルのデータが含まれています。  
+  
+12. ファイルを保存します。  
+  
+13. データをプレビューするには、**[データ]** メニューの **[データのプレビュー]** を選択し、**[プレビュー]** を選択します。  
+  
+## 次の作業  
+これで、親レポートのデータ接続とデータ テーブルを作成できました。 次は、レポート ウィザードを使用して親レポートを設計します。 「[レッスン 3: レポート ウィザードを使用して親レポートを設計する](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)」を参照してください。  
+  

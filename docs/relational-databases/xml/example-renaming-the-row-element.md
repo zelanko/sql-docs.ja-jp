@@ -1,0 +1,46 @@
+---
+title: "例 : &lt;row&gt; 要素の名前を変更する | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dbe-xml"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "RAW モード、<row> 要素の名前変更の例"
+ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
+caps.latest.revision: 9
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 9
+---
+# 例 : &lt;row&gt; 要素の名前を変更する
+  結果セットの各行では、RAW モードによって `<row>` 要素が生成されます。 次のクエリに示すように、必要に応じて、RAW モードへの省略可能な引数を指定することにより、この要素に別の名前を指定できます。 クエリでは、行セットの行ごとに <`ProductModel`> 要素が返されます。  
+  
+## 例  
+  
+```  
+SELECT ProductModelID, Name   
+FROM Production.ProductModel  
+WHERE ProductModelID=122  
+FOR XML RAW ('ProductModel'), ELEMENTS  
+GO  
+```  
+  
+ 結果は次のとおりです。 `ELEMENTS` ディレクティブがクエリに追加されたので、結果は要素中心になります。  
+  
+```  
+<ProductModel>  
+  <ProductModelID>122</ProductModelID>  
+  <Name>All-Purpose Bike Stand</Name>  
+</ProductModel>   
+```  
+  
+## 参照  
+ [FOR XML での RAW モードの使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
+  
+  

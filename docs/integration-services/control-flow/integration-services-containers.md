@@ -1,0 +1,102 @@
+---
+title: "Integration Services コンテナー | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "integration-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "SSIS コンテナー"
+  - "コンテナー [Integration Services]"
+  - "コンテナー [Integration Services], コンテナーについて"
+  - "制御フロー [Integration Services], コンテナー"
+  - "SQL Server Integration Services コンテナー"
+ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
+caps.latest.revision: 48
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "jhubbard"
+caps.handback.revision: 48
+---
+# Integration Services コンテナー
+  コンテナーとは、パッケージに構造を提供し、タスクにサービスを提供する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクトのことです。 コンテナーは、パッケージ内の制御フローの反復をサポートし、タスクおよびコンテナーを意味のある作業単位にグループ化します。 コンテナーには、タスクの他に別のコンテナーを含めることができます。  
+  
+ パッケージには、次の目的でコンテナーが使用されます。  
+  
+-   フォルダー内のファイル、スキーマ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) オブジェクトなど、コレクション内の各要素に対してタスクを繰り返します。 たとえば、複数ファイル内に含まれる Transact-SQL ステートメントをパッケージで実行できます。  
+  
+-   指定された式が **false** に評価されるまで、タスクを繰り返します。 たとえば、パッケージは各種電子メール メッセージを各曜日に 1 回、週に合計 7 回送信できます。  
+  
+-   ある単位として処理の成否を評価する必要のあるタスクおよびコンテナーをグループ化します。 たとえば、パッケージはデータベース テーブルの行を削除および追加するタスクをグループ化し、1 つのタスクが失敗したときにタスク全体をコミットまたはロールバックできます。  
+  
+## コンテナーの種類  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、パッケージを構築するために 4 種類のコンテナーが用意されています。 次の表に、使用できるコンテナーの種類の一覧を示します。  
+  
+|コンテナー|Description|  
+|---------------|-----------------|  
+|[Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md)|列挙子を使用して、制御フローを繰り返し実行します。|  
+|[For ループ コンテナー](../../integration-services/control-flow/for-loop-container.md)|条件をテストして、制御フローを繰り返し実行します。|  
+|[シーケンス コンテナー](../../integration-services/control-flow/sequence-container.md)|タスクおよびコンテナーをグループ化して、パッケージ制御フローのサブセットである制御フローにします。|  
+|[タスク ホスト コンテナー](../../integration-services/control-flow/task-host-container.md)|単一のタスクにサービスを提供します。|  
+  
+ パッケージおよびイベント ハンドラーも、コンテナーの種類に含まれます。 詳細については、「[Integration Services (SSIS) のパッケージ](../../integration-services/integration-services-ssis-packages.md)」および「[Integration Services (SSIS) のイベント ハンドラー](../../integration-services/integration-services-ssis-event-handlers.md)」を参照してください。  
+  
+### コンテナー プロパティのまとめ  
+ すべての種類のコンテナーには、一連の共通のプロパティがあります。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に用意されているグラフィック ツールを使用してパッケージを作成すると、Foreach ループ、For ループ、およびシーケンスの各コンテナーに対して、次のプロパティが [プロパティ] ウィンドウに一覧表示されます。 タスク ホスト コンテナーのプロパティは、タスク ホストがカプセル化しているタスクの構成の一環として、 タスクを構成するときに設定します。  
+  
+|プロパティ|Description|  
+|--------------|-----------------|  
+|**DelayValidation**|コンテナーの検証を実行時まで遅らせるかどうかを示すブール値です。 このプロパティの既定値は、 **False**です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>」を参照してください。|  
+|**Description**|コンテナーの説明です。 このプロパティに格納されるのは文字列で、空白にすることもできます。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>」を参照してください。|  
+|**Disable**|コンテナーを実行するかどうかを示すブール値です。 このプロパティの既定値は、 **False**です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Disable%2A>」を参照してください。|  
+|**DisableEventHandlers**|コンテナーに関連付けられているイベント ハンドラーを実行するかどうかを示すブール値です。 このプロパティの既定値は、 **False**です。|  
+|**FailPackageOnFailure**|コンテナーでエラーが発生した場合、パッケージが失敗するかどうかを示すブール値です。 このプロパティの既定値は、 **False**です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>」を参照してください。|  
+|**FailParentOnFailure**|コンテナーでエラーが発生した場合、親コンテナーが失敗するかどうかを示すブール値です。 このプロパティの既定値は、 **False**です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>」を参照してください。|  
+|**ForcedExecutionValue**|**ForcedExecutionValue** が **True** に設定されている場合は、コンテナーのオプションの実行値を含むオブジェクトです。 このプロパティの既定値は **0**です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>」を参照してください。|  
+|**ForcedExecutionValueType**|**ForcedExecutionValue** のデータ型。 このプロパティの既定値は **Int32**です。|  
+|**ForceExecutionResult**|パッケージまたはコンテナーの強制実行結果を示す値です。 有効値は、 **None**、 **Success**、 **Failure**、および **Completion**です。 このプロパティの既定値は、**None** です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>」を参照してください。|  
+|**ForceExecutionValue**|コンテナーのオプションの実行値に特定の値を適用する必要があるかどうかを示すブール値です。 このプロパティの既定値は **False**です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>」を参照してください。|  
+|**ID**|コンテナー GUID です。パッケージの作成時に割り当てられます。 このプロパティは読み取り専用です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>」を参照してください。|  
+|**IsolationLevel**|コンテナー トランザクションの分離レベルです。 値は、 **Unspecified**、 **Chaos**、 **ReadUncommitted**、 **ReadCommitted**、 **RepeatableRead**、 **Serializable**、および **Snapshot**です。 このプロパティの既定値は **Serializable**です。 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>」を参照してください。|  
+|**LocaleID**|Microsoft Win32 ロケールです。 このプロパティの既定値は、ローカル コンピューター上のオペレーティング システムのロケールです。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>」を参照してください。|  
+|**LoggingMode**|コンテナーのログ記録の動作を指定する値です。 値は、 **Disabled**、 **Enabled**、および **UseParentSetting**です。 このプロパティの既定値は **UseParentSetting**です。 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>」を参照してください。|  
+|**MaximumErrorCount**|コンテナーが実行を停止するまでに発生が許可される、最大エラー数を示します。 このプロパティの既定値は **1**です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>」を参照してください。|  
+|**名前**|コンテナーの名前です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>」を参照してください。|  
+|**TransactionOption **|コンテナーに対するトランザクションの関与を示します。 値は、 **NotSupported**、 **Supported**、および **Required**です。 このプロパティの既定値は **Supported**です。 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>」を参照してください。|  
+  
+ Foreach ループ、For ループ、シーケンス、およびタスク ホストの各コンテナーをプログラムで構成する際に使用できるすべてのプロパティの詳細については、以下の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API のトピックを参照してください。  
+  
+-   T:Microsoft.SqlServer.Dts.Runtime.ForEachLoop  
+  
+-   T:Microsoft.SqlServer.Dts.Runtime.ForLoop  
+  
+-   T:Microsoft.SqlServer.Dts.Runtime.Sequence  
+  
+-   T:Microsoft.SqlServer.Dts.Runtime.TaskHost  
+  
+## コンテナーの機能を拡張するオブジェクト  
+ コンテナーには実行可能ファイルおよび優先順位制約で構成される制御フローが含まれ、場合によってはイベント ハンドラーおよび変数が使用されています。 ただし、タスク ホスト コンテナーは単一タスクをカプセル化し、優先順位制約を使用しない、例外的なコンテナーです。  
+  
+### 実行可能ファイル  
+ 実行可能ファイルは、コンテナー レベルのタスクおよびコンテナー内の任意のコンテナーを参照します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が提供するタスクおよびコンテナーのいずれか、またはカスタム タスクを実行ファイルとすることができます。 詳細については、「[Integration Services のタスク](../../integration-services/control-flow/integration-services-tasks.md)」を参照してください。  
+  
+### 優先順位制約  
+ 優先順位制約は、同じ親コンテナー内のコンテナーとタスクを連結して、順序付けられた制御フローを作成します。 優先順位制約の詳細については、「[優先順位制約](../../integration-services/control-flow/precedence-constraints.md)」を参照してください。  
+  
+### イベント ハンドラー  
+ コンテナー レベルのイベント ハンドラーは、コンテナーまたはそれに含まれるオブジェクトにより発生したイベントに応答します。 詳細については、「[Integration Services (SSIS) のイベント ハンドラー](../../integration-services/integration-services-ssis-event-handlers.md)」を参照してください。  
+  
+### 変数  
+ コンテナーで使用される変数には、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が提供するコンテナー レベルのシステム変数、およびコンテナーが使用するユーザー定義の変数が含まれます。 詳細については、「[Integration Services (SSIS) の変数](../../integration-services/integration-services-ssis-variables.md)」を参照してください。  
+  
+## ブレークポイント  
+ コンテナーにブレークポイントを設定していて、ブレークの条件が **[コンテナーに OnVariableValueChanged イベントが渡されたときに停止します]** である場合は、変数をコンテナーのスコープ内で定義します。  
+  
+## 参照  
+ [制御フロー](../../integration-services/control-flow/control-flow.md)  
+  
+  

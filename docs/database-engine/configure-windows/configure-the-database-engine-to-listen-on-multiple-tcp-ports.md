@@ -1,0 +1,109 @@
+---
+title: "複数の TCP ポートでリッスンするデータベース エンジンの構成 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "ポート [SQL Server], 複数"
+  - "TDS (TDS)"
+  - "複数のポートでリッスン"
+  - "エンドポイント [SQL Server], TDS"
+  - "ポートの追加"
+  - "表形式のデータ ストリーム (tabular data stream)"
+  - "複数のポート"
+ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
+caps.latest.revision: 26
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 26
+---
+# 複数の TCP ポートでリッスンするデータベース エンジンの構成
+  このトピックでは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] で SQL Server 構成マネージャーを使用して、複数の TCP ポートをリッスンするように[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を構成する方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で TCP/IP を有効にしている場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は、IP アドレスと TCP ポート番号で構成される接続ポイントで着信接続をリッスンします。次の手順では、表形式のデータ ストリーム (TDS) エンドポイントを作成し、追加の TCP ポートを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンするように設定します。  
+  
+ 2 つ目の TDS エンドポイントを作成する理由として考えられる点を次に示します。  
+  
+-   特定のサブネットに存在するローカル クライアント コンピューターの既定のエンドポイントへのアクセスを制限するようにファイアウォールを構成することによって、セキュリティを強化することができます。 サポート チーム向けに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのインターネット アクセスを保持する場合は、ファイアウォールからインターネットに公開する新しいエンドポイントを作成し、このエンドポイントへの接続の権利をサーバー サポート チームに制限します。  
+  
+-   NUMA (Non-Uniform Memory Access) を使用する場合に、特定のプロセッサに接続を関係付けることができます。  
+  
+ TDS エンドポイントの構成手順は次のとおりです。実行する順序は問いません。  
+  
+-   TCP ポートに対して TDS エンドポイントを作成し、必要に応じて既定のエンドポイントへのアクセスを復元します。  
+  
+-   対象のサーバー プリンシパルにエンドポイントへのアクセス権を与えます。  
+  
+-   選択された IP アドレス用の TCP ポート番号を指定します。  
+  
+ Windows ファイアウォールの既定の設定の詳細と、データベース エンジン、Analysis Services、Reporting Services、および Integration Services に影響する TCP ポートの説明については、「[SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」をご覧ください。  
+  
+##  <a name="SSMSProcedure"></a>  
+  
+#### TDS エンドポイントを作成するには  
+  
+-   次のステートメントを実行し、サーバー上の利用できるすべての TCP アドレスのポート 1500 に対して **CustomConnection** という名前のエンドポイントを作成します。  
+  
+    ```  
+    USE master;  
+    GO  
+    CREATE ENDPOINT [CustomConnection]  
+    STATE = STARTED  
+    AS TCP  
+       (LISTENER_PORT = 1500, LISTENER_IP =ALL)  
+    FOR TSQL() ;  
+    GO  
+    ```  
+  
+ 新しい [!INCLUDE[tsql](../../includes/tsql-md.md)] エンドポイントを作成すると、既定の TDS エンドポイントに対する **public** の接続権限は取り消されます。 既定のエンドポイントに対して **public** グループへのアクセスが必要な場合は、 `GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] to [public];` ステートメントを使用してこの権限を再適用します。  
+  
+#### エンドポイントへのアクセスを許可するには  
+  
+-   次のステートメントを実行し、corp ドメイン内の SQLSupport グループに対して **CustomConnection** エンドポイントへのアクセスを許可します。  
+  
+    ```  
+    GRANT CONNECT ON ENDPOINT::[CustomConnection] to [corp\SQLSupport] ;  
+    GO  
+    ```  
+  
+#### 追加の TCP ポートでリッスンするように SQL Server データベース エンジンを構成するには  
+  
+1.  SQL Server 構成マネージャーで **[SQL Server ネットワークの構成]** を展開し、***[<instance_name>* のプロトコル]** をクリックします。  
+  
+2.  **[*<instance_name>* のプロトコル]** を展開し、**[TCP/IP]** をクリックします。  
+  
+3.  右ペインで、無効になっている IP アドレスのうち、有効にする IP アドレスをそれぞれ右クリックし、**[有効化]** をクリックします。  
+  
+4.  **[IPAll]** を右クリックし、**[プロパティ]** をクリックします。  
+  
+5.  **[TCP ポート]** ボックスで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] がリッスンするポートを入力します。複数のポートを指定する場合はコンマで区切ります。 たとえば、既定のポート 1433 がボックスに含まれている場合、「 **,1500** 」と入力します。ボックスの内容は " **1433,1500**" になります。次に **[OK]**をクリックします。  
+  
+    > [!NOTE]  
+    >  一部の IP アドレスのポートだけを有効にする場合、[プロパティ] ダイアログ ボックスで、必要なアドレスに対してのみ追加のポートを構成します。 次に、コンソール ペインで、**[TCP/IP]** を右クリックし、**[プロパティ]** をクリックします。**[すべて受信待ち]** ボックスで、**[いいえ]** を選択します。  
+  
+6.  左ペインで、 **[SQL Server のサービス]**をクリックします。  
+  
+7.  右ペインで、**[SQL Server*<instance_name>*]** を右クリックし、**[再起動]** をクリックします。  
+  
+     [!INCLUDE[ssDE](../../includes/ssde-md.md)]が再起動すると、エラー ログには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンしているポートが記録されています。  
+  
+#### 新しいエンドポイントに接続するには  
+  
+-   次のステートメントを実行し、ACCT という名前のサーバー上にある、既定の SQL Server インスタンスの **CustomConnection** エンドポイントに接続します。このとき、信頼関係接続を使用します。ユーザーは [corp\SQLSupport] グループのメンバーであると想定しています。  
+  
+    ```  
+    sqlcmd -SACCT,1500  
+    ```  
+  
+## 参照  
+ [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
+ [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
+ [NUMA ノードへの TCP/IP ポートのマッピング &#40;SQL Server&#41;](../../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md)  
+  
+  

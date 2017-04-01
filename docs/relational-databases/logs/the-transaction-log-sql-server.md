@@ -1,0 +1,171 @@
+---
+title: "トランザクション ログ (SQL Server) | Microsoft Docs"
+ms.custom: ""
+ms.date: "02/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dbe-transaction-log"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "トランザクション ログ [SQL Server]、説明"
+  - "データベース [SQL Server]、トランザクション ログ"
+  - "ログ [SQL Server]、トランザクション ログ"
+ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
+caps.latest.revision: 65
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 63
+---
+# トランザクション ログ (SQL Server)
+  すべての SQL Server データベースにはトランザクション ログがあり、データベース内のすべてのトランザクションとそれらのトランザクションによって加えられた変更が記録されます。
+  
+トランザクション ログは、データベースの重要なコンポーネントです。 システム障害がある場合、データベースを一貫性のある状態に戻すには、そのログが必要になります。 もたらされる影響を完全に理解していない限り、このログを削除または移動しないでください。 
+
+  
+ > **注:** データベース復旧時にトランザクション ログの適用を開始する既知の最適なポイントがチェックポイントによって作成されます。 詳細については、「 [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)」を参照してください。  
+  
+## <a name="operations-supported-by-the-transaction-log"></a>トランザクション ログによりサポートされる操作  
+ トランザクション ログでは、次の操作がサポートされます。  
+  
+-   個別のトランザクションの復旧  
+  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に未完了だったすべてのトランザクションの復旧  
+  
+-   復元したデータベース、ファイル、ファイル グループ、またはページの障害時点までのロールフォワード  
+  
+-   トランザクション レプリケーションのサポート  
+  
+-   高可用性および災害復旧ソリューションのサポート: [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、データベース ミラーリング、およびログ配布
+
+### <a name="individual-transaction-recovery"></a>個別のトランザクションの復旧
+アプリケーションで ROLLBACK ステートメントが実行されるか、データベース エンジンでクライアントとの通信の喪失などのエラーが検出された場合、未完了のトランザクションによって加えられた変更をロールバックするために、ログ レコードが使用されます。 
+
+### <a name="recovery-of-all-incomplete-transactions-when-includessnoversiontokenssnoversionmdmd-is-started"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に未完了だったすべてのトランザクションの復旧
+SQL Server を実行しているサーバーに障害が起きると、データベースは一部の変更がバッファー キャッシュからデータ ファイルに書き込まれていない状態になる場合があり、未完了のトランザクションによる変更がデータ ファイル内に存在している可能性もあります。 SQL Server のインスタンスは、起動時に各データベースの復旧を行います。 ログに記録されていて、データ ファイルに書き込まれなかった可能性があるすべての変更は、ロールフォワードされます。 その後、トランザクション ログに記録されている未完了のトランザクションは、データベースの整合性を確保するために、すべてロールバックされます。 
+
+### <a name="rolling-a-restored-database-file-filegroup-or-page-forward-to-the-point-of-failure"></a>復元したデータベース、ファイル、ファイル グループ、またはページの障害時点までのロールフォワード
+ハードウェアの故障やディスク障害などによりデータベース ファイルが影響を受けた場合、そのデータベースを障害が発生した時点まで復元できます。 まずデータベースの最新の完全バックアップまたは差分バックアップを復元し、次にその後の一連のトランザクション ログ バックアップを障害が発生した時点まで復元します。 各ログ バックアップを復元するときに、ログに記録されている変更がデータベース エンジンにより再適用されて、すべてのトランザクションがロールフォワードされます。 最後のログ バックアップまで復元されると、データベース エンジンはログ情報を使用して、障害の時点では完了していなかったすべてのトランザクションをロールバックします。 
+
+### <a name="supporting-transactional-replication"></a>トランザクション レプリケーションのサポート
+ログ リーダー エージェントは、トランザクション レプリケーション用に構成された各データベースのトランザクション ログを監視し、レプリケーションのマークが付けられたトランザクションをトランザクション ログからディストリビューション データベースにコピーします。 詳しくは、「[トランザクション レプリケーションの動作方法](http://msdn.microsoft.com/library/ms151706.aspx)」をご覧ください。
+
+### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>高可用性と障害復旧ソリューションのサポート
+スタンバイ サーバー ソリューション、AlwaysOn 可用性グループ、データベース ミラーリング、およびログ配布は、トランザクション ログに大きく依存しています。 
+
+AlwaysOn 可用性グループのシナリオでは、データベース (プライマリ レプリカ) に対するすべての更新は、別に存在するデータベースの完全なコピー (セカンダリ レプリカ) で直ちに再現されます。 プライマリ レプリカは各ログ レコードを直ちにセカンダリ レプリカに送信し、セカンダリ レプリカは受信したログ レコードを可用性グループのデータベースに適用します。このようにして継続的に展開されます。 詳しくは、「[AlwaysOn フェールオーバー クラスター インスタンス](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」をご覧ください。
+
+ログ配布シナリオでは、プライマリ データベースのアクティブなトランザクション ログがプライマリ サーバーから 1 つ以上の配布先に送信されます。 各セカンダリ サーバーでは、受信したログがローカルのセカンダリ データベースに復元されます。 詳しくは、「[ログ配布について](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」をご覧ください。 
+
+データベース ミラーリング シナリオでは、プリンシパル データベースに対するすべての更新が、そのデータベースの完全なコピーである、独立したミラー データベースに直ちに再現されます。 各ログ レコードは、プリンシパル サーバー インスタンスからミラー サーバー インスタンスに直ちに送信されます。ミラー サーバー インスタンスでは、受信したログ レコードがミラー データベースに適用され、ミラー データベースが継続的にロールフォワードされます。 詳しくは、「[データベース ミラーリング](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」をご覧ください。
+  
+
+##  <a name="a-namecharacteristicsatransaction-log-characteristics"></a><a name="Characteristics"></a>トランザクション ログの特性
+
+[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のトランザクション ログには、次のような特性があります。 
+-  トランザクション ログは、データベース内に別個のファイルまたはファイル セットとして実装されます。 ログ キャッシュはデータ ページ用のバッファー キャッシュとは別に管理され、単純かつ高速の、堅牢なコードとしてデータベース エンジンに実装されています。
+-  ログのレコードとページの形式は、データ ページの形式に従うように制約はされません。
+-  トランザクション ログは、複数のファイルとして実装できます。 ログの FILEGROWTH 値を設定することで、これらのファイルが自動的に拡張されるように定義できます。 これにより、トランザクション ログが領域不足になる可能性が減り、同時に管理のオーバーヘッドも減少します。 詳しくは、「[ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)」をご覧ください。
+-  ログ ファイル内の領域を再利用するメカニズムは高速で、トランザクションのスループットに及ぼす影響も最小限で済みます。
+
+##  <a name="a-nametruncationa-transaction-log-truncation"></a><a name="Truncation"></a> トランザクション ログの切り捨て  
+ ログの切り捨てによりログ ファイルの領域が解放され、トランザクション ログで再利用できるようになります。 トランザクション ログの定期的な切り捨ては、ログがいっぱいにならないようにするために不可欠です。 いくつかの要因によってログの切り捨てが遅れる可能性があるため、ログのサイズを監視することは重要です。 一部の操作は、トランザクション ログのサイズへの影響を軽減するためにログへの記録を最小限に抑えることができます。  
+ 
+  ログの切り捨てでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの論理トランザクション ログから非アクティブな仮想ログ ファイルが削除されます。また、論理ログの領域が解放され、物理トランザクション ログで再利用できるようになります。 トランザクション ログが切り捨てられなければ、物理ログ ファイルに割り当てられているディスク上の領域がいっぱいになってしまいます。  
+  
+ この問題を回避するために、何かの理由でログの切り捨てが遅れている場合を除き、次のイベントの後に切り捨てが自動的に発生します。  
+  
+-   単純復旧モデルでは、チェックポイント以降。  
+  
+-   完全復旧モデルまたは一括ログ復旧モデルでは、前回のバックアップ後にチェックポイントが発生した場合、ログ バックアップ (コピーのみのログ バックアップの場合を除く) の後に切り捨てが発生します。  
+  
+ 詳細については、このトピックの「 [ログの切り捨てが遅れる原因となる要因](#FactorsThatDelayTruncation)」を参照してください。  
+  
+> **注:** ログの切り捨てを行っても、物理ログ ファイルのサイズは縮小されません。 物理ログ ファイルの物理サイズを削減するには、ログ ファイルを圧縮する必要があります。 物理ログ ファイルのサイズの圧縮の詳細については、「 [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)」を参照してください。  
+  
+##  <a name="a-namefactorsthatdelaytruncationa-factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> ログの切り捨てが遅れる原因となる要因  
+ ログ レコードが長い間アクティブなままになると、トランザクション ログの切り捨てが遅れて、トランザクション ログがいっぱいになる可能性があります。  
+  
+> **重要:** トランザクション ログがいっぱいに応答する方法については、「 [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)」を参照してください。  
+  
+ ログの切り捨ては、さまざまな理由で遅延が発生する場合があります。 ログの切り捨てを妨げている原因は、 **sys.databases** カタログ ビューの **log_reuse_wait** 列と [log_reuse_wait_desc](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列に対するクエリを実行して見つけることができます。 次の表では、これらの列の値について説明します。  
+  
+|log_reuse_wait の値|log_reuse_wait_desc の値|説明|  
+|----------------------------|----------------------------------|-----------------|  
+|0|NOTHING|現在 1 つ以上の再利用可能な仮想ログ ファイルがある。|  
+|1|CHECKPOINT|最後にログの切り捨てを行ってからチェックポイントが発生していないか、ログの先頭が仮想ログ ファイルを超えて移動していない (すべての復旧モデル)。<br /><br /> これは、ログの切り捨てが遅れる一般的な原因です。 詳細については、「 [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)」を参照してください。|  
+|2|LOG_BACKUP|トランザクション ログを切り捨てる前にログ バックアップが必要である (完全復旧モデルまたは一括ログ復旧モデルのみ)。<br /><br /> 次のログ バックアップが完了した時点で、ログ領域の一部が再利用可能になります。|  
+|3|ACTIVE_BACKUP_OR_RESTORE|データ バックアップまたは復元が実行中である (すべての復旧モデル)。<br /><br /> データ バックアップによってログの切り捨てが妨げられる場合、バックアップ操作を取り消すと、当面の問題には対処できます。|  
+|4|ACTIVE_TRANSACTION|トランザクションがアクティブである (すべての復旧モデル):<br /><br /> 実行時間の長いトランザクションがログ バックアップの先頭に存在する可能性がある。 この場合、領域を解放するには再度ログ バックアップが必要になります。 単純復旧モデルを含むすべての復旧モデルでは、実行時間の長いトランザクションによってログの切り捨てが妨げられます。この場合、通常は自動チェックポイントのたびにトランザクション ログが切り捨てられます。<br /><br /> トランザクションが遅延している。 *遅延トランザクション* は、一部リソースが確保できないためにロールバックがブロックされている、実質的にはアクティブなトランザクションです。 遅延トランザクションの原因、およびトランザクションの遅延を解決する方法については、「[遅延トランザクション &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)」を参照してください。|  
+|5|DATABASE_MIRRORING|データベース ミラーリングが一時中断されるか、高パフォーマンス モードでは、ミラー データベースがプリンシパル データベースに大幅に遅れる (完全復旧モデルのみ)。<br /><br /> 詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。|  
+|6|REPLICATION|トランザクション レプリケーション中、パブリケーションに関連するトランザクションがディストリビューション データベースにまだ配信されていない (完全復旧モデルのみ)。<br /><br /> トランザクション レプリケーションの詳細については、「 [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)」を参照してください。|  
+|7|DATABASE_SNAPSHOT_CREATION|データベース スナップショットが作成されている (すべての復旧モデル)。<br /><br /> これは、通常、短い時間ログの切り捨てが遅れる一般的な原因となります。|  
+|8|LOG_SCAN|ログ スキャンが行われている (すべての復旧モデル)。<br /><br /> これは、通常、短い時間ログの切り捨てが遅れる一般的な原因となります。|  
+|9|AVAILABILITY_REPLICA|可用性グループのセカンダリ レプリカが、このデータベースのトランザクション ログ レコードを対応するセカンダリ データベースに適用中である (完全復旧モデル)。<br /><br /> 詳細については、「[Always On 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。|  
+|10|—|内部使用のみ|  
+|11|—|内部使用のみ|  
+|12|—|内部使用のみ|  
+|13|OLDEST_PAGE|データベースが間接的なチェックポイントを使用するように構成されている場合、データベース上の最も古いページはチェックポイントの LSN よりも古くなることがある。 この場合、最も古いページのログの切り捨てが遅れる可能性があります (すべての復旧モデル)。<br /><br /> 間接的なチェックポイントの詳細については、「 [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)」を参照してください。|  
+|14|OTHER_TRANSIENT|この値は現在使用されていません。|  
+  
+##  <a name="a-nameminimallyloggeda-operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a> 最小ログ記録が可能な操作  
+ *最小ログ記録* では、トランザクションの復旧に必要な情報だけが記録されます。特定の時点への復旧はサポートしません。 このトピックでは、一括ログ [復旧モデル](https://msdn.microsoft.com/library/ms189275.aspx) で (バックアップが実行されていない場合は単純復旧モデルで) 最小ログが記録される操作について説明します。  
+  
+> **注:** 最小ログ記録は、メモリ最適化テーブルではサポートされていません。  
+  
+> **もう 1 つ注意してください。** 完全 [復旧モデル](https://msdn.microsoft.com/library/ms189275.aspx)では、すべての一括操作が完全にログに記録されます。 ただし、一括操作のためにデータベースを一時的に一括ログ復旧モデルに切り替えることで、一連の一括操作用のログ記録を最小限に抑えることができます。 最小ログ記録は、完全ログ記録より効率的であり、一括トランザクションの実行中に、使用可能なトランザクション ログ領域が大規模な一括操作でいっぱいになる可能性を低減します。 ただし、最小ログ記録が有効なときにデータベースが破損または消失した場合は、データベースを障害発生時点まで復旧できません。  
+  
+ 次に示す操作は、完全復旧モデルで完全にログ記録されますが、単純復旧モデルと一括ログ復旧モデルでは最小限にしかログ記録されません。  
+  
+-   一括インポート操作 ([bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)、[INSERT...SELECT](../../t-sql/statements/insert-transact-sql.md))。 テーブルへの一括インポートの最小ログ記録の詳細については、「 [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」を参照してください。  
+  
+トランザクション レプリケーションが有効な場合、BULK INSERT 操作は、一括ログ復旧モデルでも完全にログ記録されます。  
+  
+-   SELECT [INTO](../Topic/INTO%20Clause%20\(Transact-SQL\).md) 操作。  
+  
+トランザクション レプリケーションが有効な場合、SELECT INTO 操作は、一括ログ復旧モデルでも完全にログ記録されます。  
+  
+-   新規データの挿入時または追加時の、 [UPDATE](../../t-sql/queries/update-transact-sql.md) ステートメントの .WRITE 句を使用した、大きな値のデータ型の部分更新。 既存の値を更新する場合は、最小ログ記録は使用されません。 大きな値のデータ型の詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。  
+  
+-   [text](../../t-sql/queries/writetext-transact-sql.md) 、 [ntext](../../t-sql/queries/updatetext-transact-sql.md) 、 **image**の各データ型列に新規データを挿入または追加するときの **WRITETEXT**ステートメントおよび **UPDATETEXT** ステートメント。 既存の値を更新する場合は、最小ログ記録は使用されません。  
+  
+    >  WRITETEXT ステートメントおよび UPDATETEXT ステートメントの使用は **推奨されなくなりました**。新しいアプリケーションでは、これらを使用しないようにしてください。  
+  
+-   データベースが単純復旧モデルまたは一括ログ復旧モデルに設定されている場合、一部のインデックス DDL 操作は、オフラインで実行されても、オンラインで実行されても、最小ログ記録の対象になります。 最小ログ記録が行われるインデックス操作は、次のとおりです。  
+  
+    -   [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) 操作 (インデックス付きビューを含む)。  
+  
+    -   [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) REBUILD 操作または DBCC DBREINDEX 操作。  
+  
+        > **DBCC DBREINDEX ステートメント**の使用は**推奨されなくなりました**。新しいアプリケーションでは、これを使用しないようにしてください。  
+  
+    -   DROP INDEX による新しいヒープの再構築 (適用可能な場合)。 ( [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 操作中のインデックス ページの割り当て解除は、 **常に** 完全にログ記録されます。)
+  
+##  <a name="a-namerelatedtasksa-related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
+ **トランザクション ログの管理**  
+  
+-   [トランザクション ログ ファイルのサイズの管理](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  
+  
+-   [満杯になったトランザクション ログのトラブルシューティング &#40;SQL Server エラー 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+  
+ **トランザクション ログのバックアップ (完全復旧モデル)**  
+  
+-   [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
+  
+ **トランザクション ログの復元 (完全復旧モデル)**  
+  
+-   [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
+  
+## <a name="more-information"></a>その他の情報  
+  [SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)   
+ [トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)   
+ [一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
+ [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [データベース チェックポイント &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
+ [データベースのプロパティの表示または変更](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)   
+ [復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
+  
+  

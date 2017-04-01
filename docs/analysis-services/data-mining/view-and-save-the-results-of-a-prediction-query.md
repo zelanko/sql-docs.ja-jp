@@ -1,0 +1,53 @@
+---
+title: "予測クエリの結果の表示および保存 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "analysis-services"
+  - "analysis-services/data-mining"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "予測クエリ [Analysis Services]"
+  - "予測クエリの結果の参照"
+  - "予測クエリの結果の表示"
+  - "マイニング モデル予測 [Analysis Services]、結果の表示"
+ms.assetid: abba4d24-3619-44c1-8279-88f27ad627d3
+caps.latest.revision: 15
+author: "Minewiskan"
+ms.author: "owend"
+manager: "jhubbard"
+caps.handback.revision: 15
+---
+# 予測クエリの結果の表示および保存
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の予測クエリ ビルダーを使用してクエリを定義した後は、クエリ結果ビューに切り替えてクエリを実行し、結果を表示できます。  
+  
+ 予測クエリの結果は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトで定義される任意のデータ ソースのテーブルに保存できます。 新しいテーブルを作成するか、または既存のテーブルにクエリ結果を保存できます。 既存のテーブルに結果を保存する場合は、テーブルに現在保存されているデータを上書きするように選択できます。上書きしない場合、クエリ結果は、テーブルの既存のデータに追加されます。  
+  
+### クエリを実行し、結果を表示する  
+  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のデータ マイニング デザイナーの **[マイニング モデル予測]** タブにあるツール バーで、**[結果]** をクリックします。  
+  
+     クエリ結果ビューが表示され、クエリが実行されます。 結果がビューアーのグリッドに表示されます。  
+  
+### 予測クエリの結果をテーブルに保存する  
+  
+1.  データ マイニング デザイナーの **[マイニング モデル予測]** タブのツール バーで、**[クエリ結果の保存]** をクリックします。  
+  
+     **[データ マイニングのクエリ結果を保存]** ダイアログ ボックスが開きます。  
+  
+2.  **[データ ソース]** 一覧からデータ ソースを選択するか、**[新規作成]** をクリックして新しいデータ ソースを作成します。  
+  
+3.  **[テーブル名]** ボックスにテーブルの名前を入力します。 同じテーブル名が既に存在する場合、テーブルの内容をクエリ結果に置き換えるには、**[存在する場合は上書きする]** チェック ボックスをオンにします。 テーブルの内容を上書きしない場合は、このチェック ボックスをオフにします。 新しいクエリ結果が、テーブルの既存のデータに追加されます。  
+  
+4.  データ ソース ビューにテーブルを追加する場合は、**[DSV に追加]** からデータ ソース ビューを選択します。  
+  
+5.  **[保存]**をクリックします。  
+  
+    > [!WARNING]  
+    >  保存先で階層的な行セットがサポートされていない場合は、結果に FALTTENED キーワードを追加して、フラット テーブルとして保存できます。  
+  
+  

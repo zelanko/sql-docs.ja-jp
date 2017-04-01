@@ -1,0 +1,7 @@
+# [SQL Server 監査ログの表示](view-a-sql-server-audit-log.md)
+# [SQL Server 監査のアクション グループとアクション](sql-server-audit-action-groups-and-actions.md)
+# [SQL Server 監査レコード](sql-server-audit-records.md)
+# [セキュリティ ログへの SQL サーバー監査イベントの書き込み](write-sql-server-audit-events-to-the-security-log.md)
+# [サーバー監査およびサーバー監査の仕様を作成する方法](create-a-server-audit-and-server-audit-specification.md)
+# [サーバー監査の仕様およびデータベース監査の仕様を作成する方法](create-a-server-audit-and-database-audit-specification.md)
+# [SQL Server Audit (データベース エンジン)](sql-server-audit-database-engine.md)

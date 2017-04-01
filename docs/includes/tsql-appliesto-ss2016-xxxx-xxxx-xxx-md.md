@@ -1,0 +1,1 @@
+**適用対象:**![○](../includes/media/yes.png)SQL Server (2016 以降)![×](../includes/media/no.png)Azure SQL Database![×](../includes/media/no.png)Azure SQL Data Warehouse ![×](../includes/media/no.png)Parallel Data Warehouse

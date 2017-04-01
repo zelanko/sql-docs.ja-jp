@@ -1,0 +1,56 @@
+---
+title: "OPENROWSET 一括行セット プロバイダーを使用したラージ オブジェクト データの一括インポート (SQL Server) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dbe-bulk-import-export"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "SINGLE_NCLOB オプション"
+  - "一括行セット プロバイダー [SQL Server]"
+  - "一括インポート [SQL Server], データ形式"
+  - "OPENROWSET 関数, 大規模なデータの一括インポート"
+  - "SINGLE_CLOB オプション"
+  - "データ形式 [SQL Server], 大規模なオブジェクトのデータ"
+  - "大規模データ, 一括インポート"
+  - "SINGLE_BLOB オプション"
+ms.assetid: 171cdd5c-1e47-4bd7-b99a-4f0fd4e10526
+caps.latest.revision: 16
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+---
+# OPENROWSET 一括行セット プロバイダーを使用したラージ オブジェクト データの一括インポート (SQL Server)
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET 一括行セット プロバイダーを使用すると、データ ファイルをラージ オブジェクト データとして一括インポートすることができます。  
+  
+ OPENROWSET 一括行セット プロバイダーがサポートするラージ オブジェクト データ型は、**varbinary**(max) (または **image**)、**varchar**(max) (または **text**)、および **nvarchar**(max) (または **ntext**) です。  
+  
+> [!NOTE]  
+>  **image**、**text**、**ntext** の各データ型は非推奨です。  
+  
+ OPENROWSET BULK 句では、データ ファイルの内容を単一行、単一列の行セットとしてインポートするための 3 つのオプションがサポートされています。 フォーマット ファイルを使用する代わりに、ラージ オブジェクトのいずれかのオプションを指定できます。 これらのオプションを次に示します。  
+  
+ SINGLE_BLOB  
+ *data_file* の内容を単一行として読み取り、**varbinary(max)** 型の単一列の行セットとして内容を返します。  
+  
+ SINGLE_CLOB  
+ 指定したデータ ファイルの内容を文字として読み取り、テキストや [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 文書などの現在のデータベースの照合順序を使用して、**varchar(max)** 型の単一行および単一列の行セットとして内容を返します。  
+  
+ SINGLE_NCLOB  
+ 指定したデータ ファイルの内容を Unicode として読み取り、現在のデータベースの照合順序を使用して、**nvarchar(max)** 型の単一行および単一列の行セットとして内容を返します。  
+  
+## 参照  
+ [BULK INSERT または OPENROWSET&#40;BULK...&#41; を使用した一括データのインポート &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
+ [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
+ [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
+ [一括インポート中の NULL の保持または既定値の使用 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)   
+ [bcp ユーティリティ](../../tools/bcp-utility.md)   
+ [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)  
+  
+  

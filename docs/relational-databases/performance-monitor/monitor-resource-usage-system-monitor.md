@@ -1,0 +1,90 @@
+---
+title: "リソースの利用状況の監視 (システム モニター) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "パフォーマンスの監視 [SQL Server レプリケーション]、リソースの利用状況"
+  - "システム モニター [SQL Server]、Windows システム モニターについて"
+  - "リソースの利用状況の監視 [SQL Server]"
+  - "システム モニター [SQL Server]"
+  - "カウンター [SQL Server]、 リソース利用状況の対象"
+  - "パフォーマンス カウンター [SQL Server]、リソース利用状況の対象"
+  - "Windows システム モニター [SQL Server]、Windows システム モニターについて"
+  - "監視 [SQL Server]、サーバー リソースの利用状況"
+  - "リソースの利用状況の監視 [SQL Server]"
+  - "Windows システム モニター [SQL Server]"
+  - "データベース監視 [SQL Server]、リソースの利用状況"
+  - "データベース パフォーマンス [SQL Server]、リソースの利用状況"
+  - "データベースのチューニング [SQL Server]、リソースの利用状況"
+  - "サーバー パフォーマンス [SQL Server]、リソースの利用状況"
+ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
+caps.latest.revision: 29
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 29
+---
+# リソースの利用状況の監視 (システム モニター)
+  Microsoft Windows サーバー オペレーティング システムを使用している場合は、システム モニター GUI ツールを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンスを測定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のオブジェクトやパフォーマンス カウンターだけでなく、プロセッサ、メモリ、キャッシュ、スレッド、プロセスなどその他のオブジェクトの動作も確認できます。 これらの各オブジェクトには、それに関連したデバイス使用率、キューの長さ、遅延を測定するカウンターと、スループットおよび内部輻輳を表示するインジケーターのセットがあります。  
+  
+> [!NOTE]  
+>  システム モニターは、Windows NT 4.0 以前に使用されていたパフォーマンス モニターの後継ツールです。  
+  
+## システム モニターの利点  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と Windows のパフォーマンスの相関を調べるには、Windows オペレーティング システムと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のカウンターを同時に監視することをお勧めします。 たとえば、Windows のディスク I/O (入力/出力) カウンターと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Buffer Manager カウンターを同時に監視すると、システム全体の動作を把握できます。  
+  
+ システム モニターを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の現在の利用状況およびパフォーマンスに関する統計を取ることができます。 次に、システム モニターを使用して行うことができる操作を示します。  
+  
+-   任意の数のコンピューターのデータを同時に表示する。  
+  
+-   現在の利用状況を反映したグラフを表示して変更し、ユーザーが定義した頻度で更新されるカウンター値を表示する。  
+  
+-   さらに操作を行ったり出力したりするために、グラフ、ログ、警告ログ、およびレポートから表計算アプリケーションまたはデータベース アプリケーションにデータをエクスポートする。  
+  
+-   警告ログにイベントを記録し、ネットワーク警告によってユーザーに通知できるシステム警告を追加する。  
+  
+-   カウンター値がユーザー定義値を上回るか下回るようなケースが発生するたびに、または最初に発生したときに、あらかじめ定義しておいたアプリケーションを実行する。  
+  
+-   複数のコンピューターのさまざまなオブジェクトについてのデータを含むログ ファイルを作成する。  
+  
+-   既存の複数のログ ファイルから選択した項目を 1 つのファイルに追加していき、長期的なアーカイブを作成する。  
+  
+-   現在の利用状況のレポートを表示するか、既存のログ ファイルからレポートを作成する。  
+  
+-   グラフ、警告、ログ、またはレポートの個々の設定、あるいはワークスペースの設定全体を再利用するために保存する。  
+  
+    > [!NOTE]  
+    >  Windows NT 4.0 以降では、パフォーマンス モニターがシステム モニターに変わっています。 ここで示したタスクには、システム モニターまたはパフォーマンス モニターのいずれかを使用できます。  
+  
+## システム モニターのパフォーマンス  
+ パフォーマンス関連の問題を調査するために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および Microsoft Windows オペレーティング システムを監視するときは、大きく分けて次の 3 点に注目することから始めます。  
+  
+-   ディスク利用状況  
+  
+-   プロセッサ使用率  
+  
+-   メモリ使用量  
+  
+ システム モニターを実行しているコンピューターを監視すると、コンピューターのパフォーマンスにわずかに影響する場合があります。 したがって、システム モニターのデータを他のディスク (またはコンピューター) に記録して監視対象のコンピューターへの影響を減らすか、リモート コンピューターからシステム モニターを実行してください。 また、監視するカウンターは関心のあるものだけに絞ります。 監視するカウンターが多すぎると、リソース使用量のオーバーヘッドが監視プロセスに上乗せされ、監視対象のコンピューターのパフォーマンスに影響を及ぼします。  
+  
+## システム モニターのタスク  
+  
+|タスクの説明|トピック|  
+|----------------------|-----------|  
+|どのような状況でシステム モニターを使用するかについて示し、システム モニター使用時のパフォーマンスのオーバーヘッドについて説明します。|[システム モニターの実行](../../relational-databases/performance-monitor/run-system-monitor.md)|  
+|ディスク カウンターを監視することで、ディスクの利用状況と、SQL Server コンポーネントによって生成される I/O の量を調べる方法について説明します。|[ディスクの使用量の監視](../../relational-databases/performance-monitor/monitor-disk-usage.md)|  
+|CPU 使用率が通常の範囲内にあるかどうかを確認するために、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを監視する方法について説明します。|[CPU 使用率の監視](../../relational-databases/performance-monitor/monitor-cpu-usage.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを監視して、メモリ使用率が通常の範囲内であることを確認する方法について説明します。|[メモリ使用率の監視](../../relational-databases/performance-monitor/monitor-memory-usage.md)|  
+|システム モニターのカウンターがしきい値に達したときに発生する警告を作成する方法について説明します。|[SQL Server データベース警告の作成](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを監視するためのグラフ、警告、ログ、およびレポートを作成する方法について説明します。|[グラフ、警告、ログ、およびレポートの作成](../../relational-databases/performance-monitor/create-charts-alerts-logs-and-reports.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行しているコンピューターの利用状況をシステム モニターで監視する際に使用されるオブジェクトとカウンターを示します。|[SQL Server オブジェクトの使用](../../relational-databases/performance-monitor/use-sql-server-objects.md)|  
+|システム モニターでインメモリ OLTP のアクティビティを監視する際に使用されるオブジェクトとカウンターを示します。|[SQL Server XTP &#40;インメモリ OLTP&#41; パフォーマンス カウンター](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)|  
+  
+  

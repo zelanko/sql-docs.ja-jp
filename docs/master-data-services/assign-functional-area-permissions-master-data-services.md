@@ -1,0 +1,54 @@
+---
+title: "機能領域の権限を割り当てる (マスター データ サービス) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "master-data-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "権限 [マスター データ サービス], 機能領域の権限を割り当てる"
+  - "機能領域の権限 [マスター データ サービス], 割り当てる"
+ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
+caps.latest.revision: 6
+author: "sabotta"
+ms.author: "carlasab"
+manager: "jhubbard"
+caps.handback.revision: 6
+---
+# 機能領域の権限を割り当てる (マスター データ サービス)
+  機能領域の権限を割り当てて、ユーザーまたはグループに[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]の機能領域へのアクセス権を付与します。  
+  
+## 前提条件  
+ この手順を実行するには  
+  
+-   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
+  
+### 機能領域の権限を割り当てるには  
+  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]**をクリックします。  
+  
+2.  **[ユーザー]** または **[グループ]** ページで、編集するユーザーまたはグループの行を選択します。  
+  
+3.  **[選択したユーザーの編集]** をクリックします。  
+  
+4.  **[関数]** タブをクリックします。  
+  
+5.  **[編集]**をクリックします。  
+  
+6.  機能領域をクリックして **[追加]** 矢印をクリックします。  
+  
+7.  終了したら **[保存]** をクリックします。  
+  
+## 次の手順  
+  
+-   [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
+  
+## 参照  
+ [モデル管理者を作成する (マスター データ サービス)](../master-data-services/create-a-model-administrator-master-data-services.md)   
+ [セキュリティ (マスター データ サービス)](../master-data-services/security-master-data-services.md)  
+  
+  
