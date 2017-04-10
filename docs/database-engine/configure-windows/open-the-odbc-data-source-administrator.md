@@ -1,0 +1,54 @@
+---
+title: "ODBC データ ソース アドミニストレーターの起動 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/07/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "ODBC データ ソース アドミニストレーター"
+  - "ODBC データ ソース アドミニストレーターの起動"
+ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
+caps.latest.revision: 16
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 16
+---
+# ODBC データ ソース アドミニストレーターの起動
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  このトピックでは、ODBC データ ソース アドミニストレーターを起動する方法について説明します。 ODBC データ ソース アドミニストレーターは Windows コンポーネントです。 ODBC データ ソース アドミニストレーターは、ODBC データ ソースの作成および管理に使用します。  
+  
+##  <a name="SSMSProcedure"></a>  
+
+#### <a name="to-open-the-odbc-data-source-administrator-in-windows-10"></a>Windows 10 で ODBC データ ソース アドミニストレーターを起動するには   
+
+1.  **[スタート]** ページで、「**ODBC データ ソース**」と入力します。  *ODBC データ ソース デスクトップ アプリ* が選択肢として表示されます。 
+
+  
+#### <a name="to-open-the-odbc-data-source-administrator-in-windows-7"></a>Windows 7 で ODBC データ ソース アドミニストレーターを起動するには  
+  
+1.  **[スタート]** ボタンをクリックし、 **[コントロール パネル]**をクリックします。  
+  
+2.  **[コントロール パネル]**ウィンドウの **[管理ツール]**をダブルクリックします。  
+  
+3.  **[管理ツール]**ウィンドウの **[データ ソース (ODBC)]**をダブルクリックします。  
+
+
+#### <a name="to-open-the-odbc-data-source-administrator-in-windows-server-2008"></a>Windows Server 2008 で ODBC データ ソース アドミニストレーターを起動するには  
+  
+1.  **[スタート]** ボタンをクリックし、 **[管理ツール]**をポイントします。次に、 **[データ ソース (ODBC)]**をクリックします。  
+
+
+> [!NOTE]  
+>  SQL Database の Azure Active Directory 認証への接続には、[ODBC Driver 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339) などの最新ドライバーをインストールします。   
+  
+## <a name="see-also"></a>参照  
+ [ODBC SQL Server のドライバーのバージョンを確認する方法 &#40;Windows&#41;](../../database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md)  
+  
+  

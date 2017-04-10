@@ -1,0 +1,140 @@
+---
+title: "ソフト NUMA (SQL Server) | Microsoft Docs"
+ms.custom: 
+  - "SQL2016_New_Updated"
+ms.date: "11/16/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "NUMA"
+  - "soft-NUMA"
+helpviewer_keywords: 
+  - "NUMA"
+  - "Non-Uniform Memory Access"
+  - "ソフト NUMA"
+ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
+caps.latest.revision: 53
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "jhubbard"
+caps.handback.revision: 52
+---
+# ソフト NUMA (SQL Server)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  最新のプロセッサでは、1 つのソケットに対して複数のコアが与えられます。 各ソケットは、通常、1 つの NUMA ノードとして表示されます。 SQL Server データベース エンジンは、さまざまな内部構造を分割し、NUMA ノード単位でサービス スレッドを分割します。  1 つのソケットに対してコアを 10 個以上含むプロセッサの場合、ソフトウェア NUMA を使用してハードウェア NUMA ノードを分割すると、一般的に、拡張性と性能が向上します。 SQL Server 2014 SP2 より前は、ソフトウェア ベースの NUMA (ソフト NUMA) では、レジストリを編集し、ノード構成関係マスクを追加する必要がありました。また、ソフト NUMA は、インスタンス単位ではなく、コンピューター単位で構成されていました。  SQL Server 2014 SP2 および SQL Server 2016 では、ソフト NUMA は、SQL Server サービスの起動時、データベース/インスタンス レベルで自動的に構成されます。  
+  
+> [!NOTE]  
+>  ホット アド プロセッサは、ソフト NUMA ではサポートされていません。  
+  
+## <a name="automatic-soft-numa"></a>自動ソフト NUMA  
+ SQL Server 2016 では、データベース エンジン サーバーが起動時に NUMA ノードまたはソケットあたり 8 個以上の物理コアを検出すると、ソフト NUMA ノードが既定で自動的に作成されます。 ハイパースレッドのプロセッサ コアは、ノードの物理プロセッサを数えるときに区別されません。  ソケットあたり 8 個以上の物理コアが検出されると、データベース エンジン サービスによりソフト NUMA ノードが作成されます。ソフト NUMA は 8 コアが理想ですが、ノードあたり 5 ～ 9 個の論理コアを含めることができます。 ハードウェア ノードのサイズは CPU 関係マスクにより制限されます。 参照先   
+            [ALTER SERVER CONFIGURATION &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)」を参照してください。 NUMA ノードの数がサポートされる NUMA ノードの最大数を超えることはありません。  
+  
+  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) ステートメントと SET SOFTNUMA 引数を使用し、ソフト NUMA を無効化したり、再有効化したりできます。 この設定の値を変更した場合、その変更を適用するには、データベース エンジンを再起動する必要があります。  
+  
+ 下の図は、SQL Server で、ノードまたはソケットあたり物理コアを 8 個以上含むハードウェア NUMA ノードが検出されたときに SQL Server エラー ログに表示される、ソフト NUMA に関する情報の種類を示しています。  
+
+
+``2016-11-14 13:39:43.17 Server      SQL Server detected 2 sockets with 12 cores per socket and 24 logical processors per socket, 48 total logical processors; using 48 logical processors based on SQL Server licensing. This is an informational message; no user action is required.``  
+  **``2016-11-14 13:39:43.35 Server      Automatic soft-NUMA was enabled because SQL Server has detected hardware NUMA nodes with greater than 8 physical cores.``**  
+  ``2016-11-14 13:39:43.63 Server      Node configuration: node 0: CPU mask: 0x0000000000555555:0 Active CPU mask: 0x0000000000555555:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.``  
+  ``2016-11-14 13:39:43.63 Server      Node configuration: node 1: CPU mask: 0x0000000000aaaaaa:0 Active CPU mask: 0x0000000000aaaaaa:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.``  
+  ``2016-11-14 13:39:43.63 Server      Node configuration: node 2: CPU mask: 0x0000555555000000:0 Active CPU mask: 0x0000555555000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.``  
+  ``2016-11-14 13:39:43.63 Server      Node configuration: node 3: CPU mask: 0x0000aaaaaa000000:0 Active CPU mask: 0x0000aaaaaa000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.``
+
+  
+## <a name="manual-soft-numa"></a>手動ソフト NUMA  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を手動で構成してソフト NUMA を使用できるようにするには、自動のソフト NUMA を無効化し、レジストリを編集してノード構成関係マスクを追加します。 この方法を利用すると、ソフト NUMA マスクは、バイナリ、DWORD (16 進数または 10 進数)、または QWORD (16 進数または 10 進数) のレジストリ エントリとして記述できます。 最初の 32 個を超える CPU を構成するには、QWORD またはバイナリのレジストリ値を使用します ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前では QWORD 値を使用できません。)レジストリの変更後、ソフト NUMA 構成を適用するには [!INCLUDE[ssDE](../../includes/ssde-md.md)] を再起動する必要があります。  
+  
+> [!TIP] CPU には、0 から始まる番号が付けられます。  
+
+> [!WARNING] [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
+  
+ 次の例を考えてみましょう。 この 8 個の CPU が搭載されたコンピューターには、ハードウェア NUMA がありません。 3 つのソフト NUMA ノードが構成されています。   
+            [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンス A は、CPU 0 から 3 を使用するように構成されています。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の 2 つ目のインスタンスがインストールされており、CPU 4 から 7 を使用するように構成されています。 この例は、次のように視覚的に表されます。  
+  
+ `CPUs          0  1  2  3  4  5  6  7`  
+  
+ `Soft-NUMA   <-N0--><-N1-><----N2---->`  
+  
+ `SQL Server  <instance A ><instance B>`  
+  
+ 多くの I/O が発生するインスタンス A には、2 つの I/O スレッドと 1 つのレイジー ライター スレッドが存在するようになります。一方、プロセッサに負荷が集中する操作を実行するインスタンス B には、1 つの I/O スレッドと 1 つのレイジー ライター スレッドしかありません。 異なる量のメモリをこれらのインスタンスに割り当てることができますが、ハードウェア NUMA とは異なり、どちらもオペレーティング システムの同じメモリ ブロックからメモリを受け取るのでメモリおよびプロセッサ間の関係はありません。  
+  
+ レイジー ライター スレッドは、物理 NUMA メモリ ノードの SQL OS のビューに関連付けられています。 したがって、ハードウェアが物理 NUMA ノードとして表すものは、作成されるレイジー ライター スレッドの数と一致します。 詳細については、「   
+            [動作方法: ソフト NUMA、I/O 完了スレッド、レイジー ライター ワーカー、およびメモリ ノード](http://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)」を参照してください。  
+  
+> [!NOTE] [!INCLUDE[ssNoVersion] (../Token/ssNoVersion_md.md)] のインスタンスをアップグレードするときに **ソフト NUMA** レジストリ キーはコピーされません。  
+  
+### <a name="set-the-cpu-affinity-mask"></a>CPU affinity mask の設定  
+ インスタンス A で次のステートメントを実行し、CPU affinity mask を設定して CPU 0、1、2、および 3 を使用するように構成します。  
+  
+```  
+ALTER SERVER CONFIGURATION   
+SET PROCESS AFFINITY CPU=0 TO 3;  
+```  
+  
+ インスタンス B で次のステートメントを実行し、CPU affinity mask を設定して CPU 4、5、6、および 7 を使用するように構成します。  
+  
+```  
+ALTER SERVER CONFIGURATION   
+SET PROCESS AFFINITY CPU=4 TO 7;  
+```  
+  
+### <a name="map-soft-numa-nodes-to-cpus"></a>CPU へのソフト NUMA ノードのマッピング  
+ レジストリ エディター プログラム (regedit.exe) を使用して、次のレジストリ キーを追加し、ソフト NUMA ノード 0 を CPU 0 および 1 に、ソフト NUMA ノード 1 を CPU 2 および 3 に、ソフト NUMA ノード 2 を CPU 4、 5、6、および 7 にマッピングします。  
+  
+> [!TIP] CPU 60 ～ 63 を指定するには、QWORD 値 F000000000000000 またはバイナリ値 1111000000000000000000000000000000000000000000000000000000000000 を使用します。  
+  
+ 次の例では、1 ソケットにつき 18 個のコア (4 ソケットを装備) を備え、各ソケットがそれぞれ独自の K グループに属する DL580 G9 サーバーを使用するとします。 次のようなソフト NUMA の構成を作成できます。 (ノードごとに 6 コア、グループごとに 3 ノード、4 グループ)。  
+  
+|複数の K グループを持つ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] サーバーの例|型|値の名前|値データ|  
+|-----------------------------------------------------------------------------------------------------------------|----------|----------------|----------------|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node0|DWORD|CPUMask|0x3F|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node0|DWORD|[グループ]|0|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node1|DWORD|CPUMask|0x0fc0|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node1|DWORD|[グループ]|0|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node2|DWORD|CPUMask|0x3f000|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node2|DWORD|[グループ]|0|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node3|DWORD|CPUMask|0x3F|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node3|DWORD|[グループ]|1|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node4|DWORD|CPUMask|0x0fc0|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node4|DWORD|[グループ]|1|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node5|DWORD|CPUMask|0x3f000|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node5|DWORD|[グループ]|1|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node6|DWORD|CPUMask|0x3F|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node6|DWORD|[グループ]|2|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node7|DWORD|CPUMask|0x0fc0|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node7|DWORD|[グループ]|2|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node8|DWORD|CPUMask|0x3f000|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node8|DWORD|[グループ]|2|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node9|DWORD|CPUMask|0x3F|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node9|DWORD|[グループ]|3|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node10|DWORD|CPUMask|0x0fc0|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node10|DWORD|[グループ]|3|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node11|DWORD|CPUMask|0x3f000|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node11|DWORD|[グループ]|3|  
+  
+## <a name="metadata"></a>メタデータ  
+ 次の DMV を使用し、ソフト NUMA の現在の状態と構成を表示できます。  
+  
+-   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md): SOFTNUMA の現在の値 (0 または 1) を表示します。  
+  
+-   [sys.dm_os_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-nodes-transact-sql.md): 各 NUMA ノードの node_state_desc 列には、ソフト NUMA によりノードが作成されたかどうかが示されます。  
+  
+-   [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): softnuma 列と softnuma_desc 列には構成値が表示されます。  
+  
+> [!NOTE] [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を利用することにより、自動ソフト NUMA の実行中の値を表示できますが、 **sp_configure** でその値を変更することはできません。 [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) ステートメントは SET SOFTNUMA 引数とともに使用する必要があります。  
+  
+## <a name="see-also"></a>参照  
+ [NUMA ノードへの TCP/IP ポートのマッピング &#40;SQL Server&#41;](../../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md)   
+ [affinity mask サーバー構成オプション](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)   
+ [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)  
+  
+  

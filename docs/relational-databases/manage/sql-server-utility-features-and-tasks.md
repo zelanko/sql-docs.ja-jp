@@ -1,0 +1,62 @@
+---
+title: "SQL Server ユーティリティの機能とタスク | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "SQL Server ユーティリティ [SQL Server]"
+  - "ユーティリティ コントロール ポイント (utility control point)"
+  - "ユーティリティの増加率"
+  - "マルチサーバーの管理"
+  - "UCP (UCP)"
+  - "複数サーバー管理 [SQL Server]"
+ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
+caps.latest.revision: 10
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 10
+---
+# SQL Server ユーティリティの機能とタスク
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境全体をまとめて管理する必要があります。このリリースでは、この管理作業に対して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのアプリケーションとマルチサーバーの管理という発想で対応しています。  
+  
+## SQL Server ユーティリティの利点  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティでは、組織の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 関連のエンティティを統合ビューでモデル化します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSMS) のユーティリティ エクスプローラーと [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ユーティリティのビューポイントを使用すると、管理者は、ユーティリティ コントロール ポイント (UCP) として機能する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを通じて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースの正常性を総合的に確認することができます。 過小使用ポリシーと過大使用ポリシーの両方、およびさまざまな主要パラメーターについて、概要データと詳細データを組み合わせて UCP に表示すると、リソースの統合の可能性とリソースの過大使用を簡単に特定することができます。 正常性ポリシーは、構成可能なため、リソース使用率のしきい値の上限または下限を変更して調整できます。 グローバルな監視ポリシーを変更したり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティで管理されているエンティティごとに個別の監視ポリシーを構成したりできます。  
+  
+##  <a name="typical_scenarios"></a> SQL Server ユーティリティの概要  
+ 一般的なユーザー シナリオでは、まず、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの中心的な裏付けとなるポイントを確立する、ユーティリティ コントロール ポイント (UCP) を作成します。 UCP は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の管理対象インスタンスから収集されたリソースの正常性を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティでまとめて表示します。 UCP の作成後は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録して UCP で管理できるようにします。  
+  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティで管理される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスおよびデータ層アプリケーションは、グローバルのポリシー定義または個々のポリシー定義に基づいて監視できます。  
+  
+## 関連タスク  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの基礎知識については、次の各トピックを参照してください。  
+  
+|||  
+|-|-|  
+|**説明**|**トピック**|  
+|ユーティリティ コレクション セットと非ユーティリティ コレクション セットを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の同じインスタンス上で実行するようにサーバーを構成する際の注意点について説明します。|[SQL Server の同じインスタンスでユーティリティ コレクション セットとユーティリティ以外のコレクション セットを実行する場合の考慮事項](../../relational-databases/manage/run utility and non-utility collection sets on same sql instance.md)|  
+|SQL Server ユーティリティ コントロール ポイントを作成する方法について説明します。|[SQL Server ユーティリティ コントロール ポイントの作成 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)|  
+|SQL Server ユーティリティに接続する方法について説明します。|[SQL Server ユーティリティへの接続](../../relational-databases/manage/connect-to-a-sql-server-utility.md)|  
+|SQL Server のインスタンスをユーティリティ コントロール ポイントに登録する方法について説明します。|[SQL Server のインスタンスの登録 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)|  
+|ユーティリティ エクスプローラーを使用して SQL Server ユーティリティを管理する方法について説明します。|[ユーティリティ エクスプローラーを使用した SQL Server ユーティリティの管理](../../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)|  
+|SQL Server ユーティリティで SQL Server のインスタンスを監視する方法について説明します。|[SQL Server ユーティリティでの SQL Server のインスタンスの監視](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)|  
+|リソース正常性ポリシーの結果を表示する方法について説明します。|[リソース正常性ポリシーの結果の表示 &#40;SQL Server ユーティリティ&#40;](../../relational-databases/manage/view-resource-health-policy-results-sql-server-utility.md)|  
+|リソース正常性ポリシーの定義を変更する方法について説明します。|[リソース正常性ポリシーの定義の変更 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)|  
+|UCP データ ウェアハウスを構成する方法について説明します。|[ユーティリティ コントロール ポイント データ ウェアハウスの構成 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md)|  
+|ユーティリティ正常性ポリシーを構成する方法について説明します。|[正常性ポリシーの構成 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/configure-health-policies-sql-server-utility.md)|  
+|CPU 使用ポリシーの減弱を調整する方法について説明します。|[CPU 使用率のポリシーにおけるノイズの軽減 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)|  
+|SQL Server のインスタンスを UCP から削除する方法について説明します。|[SQL Server ユーティリティからの SQL Server のインスタンスの削除](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md)|  
+|SQL Server のマネージ インスタンスでユーティリティ コレクション セットのプロキシ アカウントを変更する方法について説明します。|[SQL Server のマネージ インスタンスにおけるユーティリティ コレクション セットのプロキシ アカウントの変更 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/change proxy account for utility collection on managed sql server.md)|  
+|SQL Server のインスタンス間で UCP を移動する方法について説明します。|[SQL Server のインスタンス間での UCP の移動 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md)|  
+|UCP を削除する方法について説明します。|[ユーティリティ コントロール ポイントの削除 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/remove-a-utility-control-point-sql-server-utility.md)|  
+|SQL Server ユーティリティのトラブルシューティングの方法について説明します。|[SQL Server ユーティリティのトラブルシューティング](../Topic/Troubleshoot%20the%20SQL%20Server%20Utility.md)|  
+|SQL Server リソース正常性をトラブルシューティングする方法について説明します。|[SQL Server のリソース正常性のトラブルシューティング &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)|  
+|ユーティリティ エクスプローラーの F1 ヘルプ トピックを紹介します。|[ユーティリティ エクスプローラーの F1 ヘルプ](../../relational-databases/manage/ユーティリティ-エクスプローラーの-f1-ヘルプ.md)|  
+  
+  
