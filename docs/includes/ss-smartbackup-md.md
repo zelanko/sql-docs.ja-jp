@@ -1,0 +1,1 @@
+ Microsoft Azure への SQL Server マネージ バックアップ 

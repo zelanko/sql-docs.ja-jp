@@ -1,0 +1,2 @@
+<Token>**適用対象:** ![○](../includes/media/yes.png)SQL Server (2008 以降)![○](../includes/media/yes.png)Azure SQL Database![○](../includes/media/yes.png)Azure SQL Data Warehouse ![○](../includes/media/yes.png)Parallel Data Warehouse
+ </Token>

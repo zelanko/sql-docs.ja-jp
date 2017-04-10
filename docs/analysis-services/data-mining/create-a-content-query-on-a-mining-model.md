@@ -1,0 +1,84 @@
+---
+title: "マイニング モデルのコンテンツ クエリの作成 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/04/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "analysis-services"
+  - "analysis-services/data-mining"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "コンテンツ クエリ [DMX]"
+ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
+caps.latest.revision: 17
+author: "Minewiskan"
+ms.author: "owend"
+manager: "jhubbard"
+caps.handback.revision: 17
+---
+# マイニング モデルのコンテンツ クエリの作成
+  AMO や XML/A を使用すると、プログラムでマイニング モデル コンテンツにクエリを実行できますが、DMX を使用してクエリを作成する方が簡単です。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスへの接続を確立し、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって提供される DMV を使用してクエリを作成することにより、データ マイニング スキーマ行セットに対するクエリを作成することもできます。  
+  
+ 次の手順では、DMX を使用してマイニング モデルに対するクエリを作成する方法と、データ マイニング スキーマ行セットに対するクエリを実行する方法について説明します。  
+  
+ XML/A を使用して類似のクエリを作成する方法の例については、「[XMLA を使用したデータ マイニング クエリの作成](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)」を参照してください。  
+  
+## DMX を使用したデータ マイニング モデル コンテンツのクエリ  
+  
+#### DMX モデル コンテンツ クエリを作成するには  
+  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[テンプレート エクスプローラー]**をクリックします。  
+  
+2.  **[テンプレート エクスプローラー]** ペインで、キューブ アイコンをクリックして一覧を変更し、Analysis Services テンプレートを表示します。  
+  
+3.  テンプレート カテゴリの一覧で、**[DMX]**、**[モデル コンテンツ]** の順に展開し、**[コンテンツ クエリ]** をダブルクリックします。  
+  
+4.  **[Analysis Services への接続]** ダイアログ ボックスで、クエリを実行するマイニング モデルを含むインスタンスを選択し、**[接続]** をクリックします。  
+  
+     コード エディターに **[コンテンツ クエリ]** テンプレートが表示されます。 メタデータ ペインに、現在のデータベースで使用可能なモデルが一覧表示されます。 データベースを変更するには、**[使用できるデータベース]** の一覧から別のデータベースを選択します。  
+  
+5.  `FROM` [*\<mining model, name, MyModel>*]`.CONTENT` 行に、マイニング モデルの名前を入力します。 マイニング モデル名にスペースが含まれる場合は、名前を角かっこで囲む必要があります。  
+  
+     名前を入力せずに、**オブジェクト エクスプローラー**でマイニング モデルを選択してテンプレートにドラッグすることもできます。  
+  
+6.  `SELECT`*\<select list, expr list, \*>* 行に、マイニング モデル コンテンツ スキーマ行セットの列の名前を入力します。  
+  
+     マイニング モデル コンテンツ クエリで返すことができる列の一覧については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+  
+7.  必要に応じて、テンプレートの WHERE 句に条件を入力し、特定のノードや値に対して返される行を制限します。  
+  
+8.  **[実行]**をクリックします。  
+  
+## データ マイニング スキーマ行セットのクエリ  
+  
+#### データ マイニング スキーマ行セットに対するクエリを作成するには  
+  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[新しいクエリ]** ツール バーで、**[Analysis Services DMX クエリ]** または **[Analysis Services MDX クエリ]** をクリックします。  
+  
+2.  **[Analysis Services への接続]** ダイアログ ボックスで、クエリを実行するオブジェクトを含むインスタンスを選択し、**[接続]** をクリックします。  
+  
+     コード エディターに **[コンテンツ クエリ]** テンプレートが表示されます。 メタデータ ペインに、現在のデータベースで使用可能なオブジェクトが一覧表示されます。 データベースを変更するには、**[使用できるデータベース]** の一覧から別のデータベースを選択します。  
+  
+3.  クエリ エディターに次のように入力します。  
+  
+     `SELECT *`  
+  
+     `FROM $system.DMSCHEMA_MINING_MODEL_CONTENT`  
+  
+     `WHERE MODEL_NAME = '<model name>'`  
+  
+4.  **[実行]**をクリックします。  
+  
+     結果ペインにモデルのコンテンツが表示されます。  
+  
+    > [!NOTE]  
+    >  現在のインスタンスでクエリを実行できるすべてのスキーマ行セットを一覧表示するには、`SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS というクエリを使用します。 データ マイニング固有のスキーマ行セットの一覧については、「[データ マイニング スキーマ行セット](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)」を参照してください。  
+  
+## 参照  
+ [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [データ マイニング スキーマ行セット](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+  
+  

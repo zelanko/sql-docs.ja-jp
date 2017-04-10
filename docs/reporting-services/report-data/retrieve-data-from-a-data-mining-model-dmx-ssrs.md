@@ -1,0 +1,89 @@
+---
+title: "データ マイニング モデル (DMX) からデータを取得する (SSRS) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "reporting-services-sharepoint"
+  - "reporting-services-native"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "レポートのデータの取得"
+  - "データセット [Reporting Services], DMX クエリ"
+  - "データセット [Reporting Services], Analysis Services"
+  - "クエリ [Reporting Services], データ マイニング予測"
+ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
+caps.latest.revision: 19
+author: "guyinacube"
+ms.author: "asaxton"
+manager: "erikre"
+caps.handback.revision: 19
+---
+# データ マイニング モデル (DMX) からデータを取得する (SSRS)
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニング モデルのデータをレポートで使用するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースと 1 つ以上のレポート データセットを定義する必要があります。 データ ソース定義を作成する場合、クライアント コンピューターからデータ ソースにアクセスできるように接続文字列と資格情報を指定する必要があります。  
+  
+ 単一のレポートで使用するように埋め込みデータ ソースの定義を作成することも、複数のレポートで使用できる共有データ ソースの定義を作成することもできます。 このトピックでは、埋め込みデータ ソースを作成する手順について説明します。 埋め込みデータ ソースと共有データ ソースの相違点の詳細については、「[埋め込みおよび共有のデータ接続またはデータ ソース &#40;レポート ビルダーおよび SSRS&#41;](../Topic/Embedded%20and%20Shared%20Data%20Connections%20or%20Data%20Sources%20\(Report%20Builder%20and%20SSRS\).md)」および「[共有データ ソースを作成、変更、および削除する &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)」をご覧ください。  
+  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースを作成したら、1 つ以上のデータセットを作成できます。 データセットごとに、データ マイニング予測式 (DMX) クエリ デザイナーを使用して、フィールド コレクションを指定する DMX クエリを作成します。 詳細については、「[Analysis Services の DMX クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)」をご覧ください。  
+  
+ データセットを作成すると、そのデータセットの名前がデータ ソースの下のノードとしてレポート データ ペインに表示されます。  
+  
+ レポートをパブリッシュした後、レポートをレポート サーバーで実行するときに、データを取得するための権限が有効な状態になるように、データ ソースの資格情報を変更する必要が生じる場合があります。  
+  
+### 埋め込み Microsoft SQL Server Analysis Services データ ソースを作成するには  
+  
+1.  ツール バーのレポート データ ペインで、**[新規作成]**、 **[データ ソース]**の順にクリックします。  
+  
+2.  **[データ ソースのプロパティ]** ダイアログ ボックスの **[名前]** ボックスに名前を入力するか、既定の名前をそのまま使用します。  
+  
+3.  **[埋め込み接続]** が選択されていることを確認します。  
+  
+4.  **[種類]** ボックスで、**[Microsoft SQL Server Analysis Services]** を選択します。  
+  
+5.  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに使用する接続文字列を指定します。  
+  
+     データ ソースへの接続に使用する接続情報および資格情報については、データベース管理者に問い合わせてください。 ローカル クライアント上のサンプル [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] データベースを指定する接続文字列の例を次に示します。  
+  
+    ```  
+    Data Source=localhost;Initial Catalog=AdventureWorksDW2012  
+    ```  
+  
+6.  **[資格情報]** をクリックします。  
+  
+     データ ソースへの接続に使用する資格情報を設定します。 詳細については、「[レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」をご覧ください。  
+  
+    > [!NOTE]  
+    >  データ ソース接続をテストするには、**[編集]** をクリックします。 **[接続プロパティ]** ダイアログ ボックスで、**[接続テスト]** をクリックします。 テストが成功すると "接続テストに成功しました。" というメッセージが表示されます。 テストが失敗すると、その原因に関する詳しい情報を記載した警告メッセージが表示されます。  
+  
+7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+  
+     データ ソースがレポート データ ペインに表示されます。  
+  
+### Microsoft SQL Server Analysis Services のデータセットを作成するには  
+  
+1.  **レポート データ** ペインで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに接続するデータ ソースの名前を右クリックし、**[データセットの追加]** をクリックします。  
+  
+2.  **[データセットのプロパティ]** ダイアログ ボックスで、**[名前]** ボックスに名前を入力します。  
+  
+3.  **[データ ソース]** ボックスに表示された名前が、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに接続するデータ ソースの名前であることを確認します。  
+  
+4.  **[クエリ デザイナー]** をクリックしてグラフィカル クエリ デザイナーを開き、クエリを対話形式で作成します。 クエリ デザイナーが MDX モードで開いた場合は、ツール バーの **[コマンドの種類 DMX]** (![DMX クエリ言語ビューへの変更](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.png "DMX クエリ言語ビューへの変更")) をクリックしてデータ マイニング クエリ デザイナーに切り替えます。 詳細については、「[Analysis Services の DMX クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)」をご覧ください。  
+  
+     代わりに、既存の DMX クエリを別のレポートからインポートするには、**[インポート]** をクリックし、DMX クエリを使用して .rdl ファイルに移動します。 .dmx ファイルからクエリをインポートすることはできません。  
+  
+5.  クエリを作成して実行した後、サンプルの結果を表示するには **[OK]** をクリックします。  
+  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+  
+     データセットとそのフィールド コレクションがレポート データ ペインのデータ ソース ノードの下に表示されます。  
+  
+## 参照  
+ [DMX のための Analysis Services の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
+ [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+  
+  

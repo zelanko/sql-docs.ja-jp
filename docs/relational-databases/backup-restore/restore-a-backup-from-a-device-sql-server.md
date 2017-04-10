@@ -1,0 +1,100 @@
+---
+title: "デバイスからのバックアップ復元 (SQL Server) | Microsoft Docs"
+ms.custom: ""
+ms.date: "08/01/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dbe-backup-restore"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "データベースの復元 [SQL Server], デバイス復元"
+  - "バックアップ デバイス [SQL Server], からの復元"
+  - "データベース復元 [SQL Server], デバイス復元"
+  - "デバイス [SQL Server]"
+ms.assetid: 6e139de7-7de2-4d18-9df0-beac31ba7ff1
+caps.latest.revision: 28
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 28
+---
+# デバイスからのバックアップ復元 (SQL Server)
+  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、バックアップをデバイスから復元する方法について説明します。  
+  
+> [!NOTE]  
+>  Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップについては、「[Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」をご覧ください。  
+  
+ **このトピックの内容**  
+  
+-   **作業を開始する準備:**  
+  
+     [セキュリティ](#Security)  
+  
+-   **デバイスからバックアップを復元する方法:**  
+  
+     [SQL Server Management Studio](#SSMSProcedure)  
+  
+     [Transact-SQL](#TsqlProcedure)  
+  
+##  <a name="BeforeYouBegin"></a> はじめに  
+  
+###  <a name="Security"></a> セキュリティ  
+  
+####  <a name="Permissions"></a> アクセス許可  
+ 復元するデータベースが存在しない場合、ユーザーは RESTORE を実行できる CREATE DATABASE 権限を使用する必要があります。 データベースが存在する場合、既定では、RESTORE 権限は **sysadmin** 固定サーバー ロールおよび **dbcreator** 固定サーバー ロールのメンバーと、データベースの所有者 (**dbo**) に与えられています (FROM DATABASE_SNAPSHOT オプションを使用する場合、データベースは常に存在します)。  
+  
+ RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で損傷していないことが必ずしも保証されないため、**db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
+  
+##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+  
+#### デバイスからバックアップを復元するには  
+  
+1.  オブジェクト エクスプローラーで適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
+  
+2.  **[データベース]**を展開します。さらに、そのデータベースに応じて、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。  
+  
+3.  データベースを右クリックして **[タスク]** をポイントし、**[復元]** をクリックします。  
+  
+4.  実行する復元操作の種類 (**[データベース]**、**[ファイルとファイル グループ]**、または **[トランザクション ログ]**) をクリックします。 対応する復元ダイアログ ボックスが開きます。  
+  
+5.  **[全般]** ページの **[復元用のソース]** セクションで、 **[デバイスから]**をクリックします。  
+  
+6.  **[デバイスから]** ボックスの参照ボタン ([...]) をクリックします。 **[バックアップの指定]** ダイアログ ボックスが開きます。  
+  
+7.  **[バックアップ メディア]** ボックスの一覧で、 **[バックアップ デバイス]**をクリックします。次に、 **[追加]** をクリックして **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。  
+  
+8.  **[バックアップ デバイス]** ボックスで、復元操作に使用するデバイスを選択します。  
+  
+##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+  
+#### デバイスからバックアップを復元するには  
+  
+1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
+  
+2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+  
+3.  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) ステートメントで、バックアップ操作に使用する論理バックアップ デバイスまたは物理バックアップ デバイスを、次のように指定します。 この例は、物理名が `Z:\SQLServerBackups\AdventureWorks2012.bak`というディスク ファイルから復元します。  
+  
+```tsql  
+RESTORE DATABASE AdventureWorks2012  
+   FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' ;  
+  
+```  
+  
+## 参照  
+ [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)   
+ [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)   
+ [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)   
+ [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)   
+ [単純復旧モデルでのデータベース バックアップの復元 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)   
+ [SSMS を使用したデータベース バックアップの復元](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
+ [データベースの差分バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)   
+ [データベースを新しい場所に復元する &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
+ [ファイルおよびファイル グループのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
+ [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
+ [データベースの差分バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
+  
+  

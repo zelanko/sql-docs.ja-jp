@@ -1,0 +1,58 @@
+---
+title: "Analysis Services データベースの変更または削除 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/06/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "analysis-services"
+  - "analysis-services/multidimensional-tabular"
+  - "analysis-services/data-mining"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "データベース [Analysis Services], 変更"
+  - "削除、データベース"
+  - "消去、データベース"
+  - "破棄、データベース"
+  - "データベース [Analysis Services], 削除"
+  - "変更、データベース"
+ms.assetid: e48e3988-c091-4379-aabc-4da62f709a7e
+caps.latest.revision: 34
+author: "Minewiskan"
+ms.author: "owend"
+manager: "erikre"
+caps.handback.revision: 34
+---
+# Analysis Services データベースの変更または削除
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの名前と説明は、配置前には [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で、配置後には [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で変更できます。 また、環境に応じて [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの追加の設定を調整することもできます。  
+  
+> [!NOTE]  
+>  オンライン モードで [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用して、データベースのプロパティを変更することはできません。  
+  
+## SQL Server Management Studio を使用したデータベースの変更  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの配置後は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、データベース内のデータ ソースに接続するときに [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で使用される権限借用モードを変更できます。 権限借用モードを使用すると、処理、参照、またはドリルスルーの目的でデータ ソースに接続するときに [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で使用されるセキュリティ コンテキストを指定できます。  
+  
+## SQL Server データ ツールを使用したデータベースの変更  
+ プロジェクト モードで [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用すると、データベースの定義に使用する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトのキャプションや説明の翻訳を変更できます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースでの翻訳の使用方法については、「[Analysis Services のグローバリゼーションのシナリオ](../../analysis-services/globalization-scenarios-for-analysis-services.md)」をご覧ください。  
+  
+ データベースに含まれているディメンションの勘定科目属性で使用される勘定科目の種類に関連付けられている別名や集計関数を設定することもできます。 別名を使用すると、勘定科目一覧表の勘定科目の種類に対して組織が使用するビジネス固有の用語を選択できます。 勘定科目属性のメンバーは、勘定科目の種類を使用して、各メンバーのメジャーを集計する方法を示します。集計は、データベース内の各勘定科目の種類に指定されている集計関数を使用して行います。 勘定科目属性の詳細については、「[属性と属性階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)」をご覧ください。  
+  
+## データベースの削除  
+ 既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを削除すると、データベースとすべてのキューブ、ディメンション、およびデータベース内のマイニング モデルが削除されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、既存の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] データベースのみを削除できます。  
+  
+#### Analysis Services データベースを削除するには  
+  
+1.  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに接続します。  
+  
+2.  **オブジェクト エクスプローラー**で、接続した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのノードを展開し、削除するオブジェクトを表示します。  
+  
+3.  削除するオブジェクトを右クリックし、**[削除]** をクリックします。  
+  
+4.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]**をクリックします。  
+  
+## 参照  
+ [Analysis Services データベースのドキュメントとスクリプトの作成](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)  
+  
+  

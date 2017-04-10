@@ -1,0 +1,7 @@
+# [SQL Server 更新プログラムのインストール後の DQS データベース スキーマのアップグレード](upgrade-dqs-databases-schema-after-installing-sql-server-update.md)
+# [.NET Framework 更新後の SQLCLR アセンブリのアップグレード](upgrade-sqlclr-assemblies-after-net-framework-update.md)
+# [ユーザーに DQS ロールを付与する](grant-dqs-roles-to-users.md)
+# [DQS 操作のためのデータへのアクセス](access-data-for-the-dqs-operations.md)
+# [DQSInstaller.exe を使用した DQS ナレッジ ベースのエクスポートとインポート](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)
+# [Data Quality Server のインストールを完了するための DQSInstaller.exe の実行](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)
+# [Data Quality Services のインストール](install-data-quality-services.md)
