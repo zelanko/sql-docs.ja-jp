@@ -1,28 +1,32 @@
 ---
-title: "レプリケーション エージェント プロファイルの操作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "replication [SQL Server], agents and profiles"
-  - "replication agent profiles [SQL Server]"
-  - "agents [SQL Server replication], profiles"
-  - "プロファイル [SQL Server], レプリケーション エージェント"
+title: "レプリケーション エージェント プロファイルを操作する | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- replication [SQL Server], agents and profiles
+- replication agent profiles [SQL Server]
+- agents [SQL Server replication], profiles
+- profiles [SQL Server], replication agents
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 caps.latest.revision: 49
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d47140507a42084ddf60fa9c54ef6abe43c6f8b6
+ms.lasthandoff: 04/11/2017
+
 ---
-# レプリケーション エージェント プロファイルの操作
-  このトピックでは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、レプリケーション エージェント プロファイルを操作する方法について説明します。 各レプリケーション エージェントの動作は、エージェント プロファイルで設定できる一連のパラメーターによって制御されます。 各エージェントには既定のプロファイルがあり、その一部には事前に定義された追加のプロファイルがあります。1 つのエージェントに対しては、1 つのプロファイルのみがアクティブになります。  
+# <a name="work-with-replication-agent-profiles"></a>レプリケーション エージェント プロファイルを操作する
+  このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、レプリケーション エージェント プロファイルを操作する方法について説明します。 各レプリケーション エージェントの動作は、エージェント プロファイルで設定できる一連のパラメーターによって制御されます。 各エージェントには既定のプロファイルがあり、その一部には事前に定義された追加のプロファイルがあります。1 つのエージェントに対しては、1 つのプロファイルのみがアクティブになります。  
   
  **このトピックの内容**  
   
@@ -60,23 +64,23 @@ caps.handback.revision: 49
   
     -   プロファイルの削除  
   
--   **補足情報:**  [エージェントのパラメーターを変更した後](#FollowUp)  
+-   **フォロー アップ:** [エージェント パラメーターを変更した後](#FollowUp)  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 ###  <a name="Access_SSMS"></a> SQL Server Management Studio から [エージェント プロファイル] ダイアログ ボックスにアクセスするには  
   
-1.   **全般** のページ、 **ディストリビューターのプロパティ - \< ディストリビューター>** ダイアログ ボックスで、をクリックして **プロファイルは既定で**します。  
+1.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスの **[全般]** ページで、**[プロファイルの既定値]** をクリックします。  
   
-#### レプリケーション モニターから [エージェント プロファイル] ダイアログ ボックスにアクセスするには  
+#### <a name="to-access-the-agent-profiles-dialog-box-from-replication-monitor"></a>レプリケーション モニターから [エージェント プロファイル] ダイアログ ボックスにアクセスするには  
   
--   すべてのエージェント] ダイアログ ボックスを表示する、パブリッシャーを右クリックし、をクリックして **エージェント プロファイル**します。  
+-   すべてのエージェントに対するダイアログ ボックスを開くには、パブリッシャーを右クリックし、 **[エージェント プロファイル]**をクリックします。  
   
 -   単一のエージェントに対するダイアログ ボックスを開くには  
   
     1.  レプリケーション モニターの左ペインのパブリッシャー グループを展開し、パブリッシャーを展開して、パブリケーションをクリックします。  
   
-    2.  ディストリビューション エージェントおよびマージ エージェントのプロファイルをサブスクリプションを右クリックして、 **すべてのサブスクリプション** タブをクリックし、をクリックし、 **エージェント プロファイル**します。 その他のエージェントでエージェントを右クリックして、 **エージェント** タブをクリックし、をクリックし、 **エージェント プロファイル**します。  
+    2.  ディストリビューション エージェントとマージ エージェントのプロファイルの場合は、 **[すべてのサブスクリプション]** タブでサブスクリプションを右クリックし、 **[エージェント プロファイル]**をクリックします。 その他のエージェントの場合は、 **[エージェント]** タブでエージェントを右クリックし、 **[エージェント プロファイル]**をクリックします。  
   
 ###  <a name="Specify_SSMS"></a> エージェントのプロファイルを指定するには  
   
@@ -90,9 +94,9 @@ caps.handback.revision: 49
   
 1.  **[エージェント プロファイル]** ダイアログ ボックスにエージェントのプロファイルが複数表示されている場合は、エージェントを 1 つ選択します。  
   
-2.  [プロパティ] ボタンをクリックして (**...**) プロファイルの横にあります。  
+2.  プロファイルの横にあるプロパティ ボタン (**[...]**) をクリックします。  
   
-3.  パラメーターと値を表示、 **\< ProfileName> プロファイル プロパティ** ] ダイアログ ボックス。  
+3.  **[\<ProfileName> プロファイル プロパティ]** ダイアログ ボックスにパラメーターと値が表示されます。  
   
     -   ユーザー定義プロファイルのパラメーターは編集できます。事前に定義されているシステム プロファイルのパラメーターは編集できません。  
   
@@ -135,93 +139,93 @@ caps.handback.revision: 49
   
 ###  <a name="Create_tsql"></a> 新しいエージェント プロファイルを作成するには  
   
-1.  ディストリビューターで実行 [sp_add_agent_profile & #40 です。Transact SQL と #41;](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)します。 指定 **@name**, の値 **1** の **@profile_type**, 、次のいずれかの値と **@agent_type**:  
+1.  ディストリビューターで、[sp_add_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md) を実行します。 **@name** に名前、**@profile_type に**値 **1**、および **@agent_type** に次のいずれかの値を指定します。  
   
-    -   **1** - [レプリケーション スナップショット エージェント](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+    -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
-    -   **2** - [レプリケーション ログ リーダー エージェント](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
+    -   **2** - [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
-    -   **3** - [レプリケーション ディストリビューション エージェント](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
+    -   **3** - [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
-    -   **4** - [レプリケーション マージ エージェント](../../../relational-databases/replication/agents/replication-merge-agent.md)  
+    -   **4** - [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
-    -   **9** - [レプリケーション キュー リーダー エージェント](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+    -   **9** - [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-     このプロファイルがこの種類のレプリケーション エージェントの新しい既定のプロファイルになる場合、 **@default** に **1**を指定します。 使用して新しいプロファイルの識別子が返される、 **@profile_id** 出力パラメーターです。 これにより、特定の種類のエージェントの既定のプロファイルに基づいたプロファイル パラメーターのセットを備えた、新しいプロファイルが作成されます。  
+     このプロファイルがこの種類のレプリケーション エージェントの新しい既定のプロファイルになる場合、 **@profile_type** に **@default**をクリックします。 新しいプロファイルの ID は、 **@profile_id** 出力パラメーターにより返されます。 これにより、特定の種類のエージェントの既定のプロファイルに基づいたプロファイル パラメーターのセットを備えた、新しいプロファイルが作成されます。  
   
 2.  新しいプロファイルを作成したら、既定のパラメーターを追加、削除、変更してプロファイルをカスタマイズします。  
   
 ###  <a name="Modify_tsql"></a> 既存のエージェント プロファイルを変更するには  
   
-1.  ディストリビューターで実行 [sp_help_agent_profile & #40 です。Transact SQL と #41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)します。 次の値のいずれかを指定 **@agent_type**:  
+1.  ディストリビューターで、[sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md) を実行します。 次のいずれかの値を **@agent_type**に次のいずれかの値を指定します。  
   
-    -   **1** - [レプリケーション スナップショット エージェント](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+    -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
-    -   **2** - [レプリケーション ログ リーダー エージェント](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
+    -   **2** - [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
-    -   **3** - [レプリケーション ディストリビューション エージェント](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
+    -   **3** - [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
-    -   **4** - [レプリケーション マージ エージェント](../../../relational-databases/replication/agents/replication-merge-agent.md)  
+    -   **4** - [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
-    -   **9** - [レプリケーション キュー リーダー エージェント](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+    -   **9** - [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-     これにより、指定された種類のエージェントのプロファイルがすべて返されます。 値に注意してください **profile_id** を変更するプロファイルの結果セットにします。  
+     これにより、指定された種類のエージェントのプロファイルがすべて返されます。 変更するプロファイルの結果セットで **profile_id** の値を確認します。  
   
-2.  ディストリビューターで実行 [sp_help_agent_parameter & #40 です。Transact SQL と #41;](../../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)します。 手順 1. のプロファイル id を指定する **@profile_id**します。 これにより、プロファイルのすべてのパラメーターが返されます。 変更するパラメーター、またはプロファイルから削除するパラメーターの名前を確認します。  
+2.  ディストリビューターで、[sp_help_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id**をクリックします。 これにより、プロファイルのすべてのパラメーターが返されます。 変更するパラメーター、またはプロファイルから削除するパラメーターの名前を確認します。  
   
-3.  プロファイルのパラメーターの値を変更するには、実行 [sp_change_agent_profile & #40 です。Transact SQL と #41;](../../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)します。 手順 1. のプロファイル id を指定する **@profile_id**, を変更するパラメーターの名前 **@property**, 、およびパラメーターの新しい値 **@value**します。  
+3.  プロファイル内のパラメーターの値を変更するには、[sp_change_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id**に指定し、変更するパラメーターの名前を **@property**に、パラメーターの新しい値を **@value**をクリックします。  
   
     > [!NOTE]  
     >  既存のエージェント プロファイルを変更して、エージェントの既定のプロファイルにすることはできません。 代わりに、前の手順に示すように、新しいプロファイルを既定のプロファイルとして作成する必要があります。  
   
-4.  プロファイルからパラメーターを削除するには、実行 [sp_drop_agent_parameter & #40 です。Transact SQL と #41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)します。 手順 1. のプロファイル id を指定する **@profile_id** を削除するパラメーターの名前と **@parameter_name**です。  
+4.  プロファイルからパラメーターを削除するには、[sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id** に指定し、削除するパラメーターの名前を **@parameter_name**をクリックします。  
   
 5.  プロファイルに新しいパラメーターを追加するには、次の手順を実行する必要があります。  
   
-    -   クエリ、 [MSagentparameterlist & #40 です。Transact SQL と #41;](../../../relational-databases/system-tables/msagentparameterlist-transact-sql.md) 各エージェント タイプのプロファイル パラメーターを設定できるか判断する、ディストリビューター側でテーブルです。  
+    -   ディストリビューターで [MSagentparameterlist &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msagentparameterlist-transact-sql.md) テーブルに対してクエリを実行して、各種類のエージェントに設定できるプロファイル パラメーターを確認します。  
   
-    -   ディストリビューターで実行 [sp_add_agent_parameter & #40 です。Transact SQL と #41;](../../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)します。 手順 1. のプロファイル id を指定する **@profile_id**, に追加する有効なパラメーターの名前 **@parameter_name**, 、およびパラメーターの値 **@parameter_value**します。  
+    -   ディストリビューターで、[sp_add_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id**に指定し、追加する有効なパラメーターの名前を **@parameter_name**に、パラメーターの値を **@parameter_value**をクリックします。  
   
 ###  <a name="Delete_tsql"></a> エージェント プロファイルを削除するには  
   
-1.  ディストリビューターで実行 [sp_help_agent_profile & #40 です。Transact SQL と #41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)します。 次の値のいずれかを指定 **@agent_type**:  
+1.  ディストリビューターで、[sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md) を実行します。 次のいずれかの値を **@agent_type**に次のいずれかの値を指定します。  
   
-    -   **1** - [レプリケーション スナップショット エージェント](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+    -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
-    -   **2** - [レプリケーション ログ リーダー エージェント](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
+    -   **2** - [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
-    -   **3** - [レプリケーション ディストリビューション エージェント](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
+    -   **3** - [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
-    -   **4** - [レプリケーション マージ エージェント](../../../relational-databases/replication/agents/replication-merge-agent.md)  
+    -   **4** - [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
-    -   **9** - [レプリケーション キュー リーダー エージェント](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+    -   **9** - [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-     これにより、指定された種類のエージェントのプロファイルがすべて返されます。 値に注意してください **profile_id** を削除するプロファイルの結果セットにします。  
+     これにより、指定された種類のエージェントのプロファイルがすべて返されます。 削除するプロファイルの結果セットで **profile_id** の値を確認します。  
   
-2.  ディストリビューターで実行 [sp_drop_agent_profile & #40 です。Transact SQL と #41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)します。 手順 1. のプロファイル id を指定する **@profile_id**します。  
+2.  ディストリビューターで、[sp_drop_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id**をクリックします。  
   
 ###  <a name="Synch_tsql"></a> 同期の際にエージェント プロファイルを使用するには  
   
-1.  ディストリビューターで実行 [sp_help_agent_profile & #40 です。Transact SQL と #41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)します。 次の値のいずれかを指定 **@agent_type**:  
+1.  ディストリビューターで、[sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md) を実行します。 次のいずれかの値を **@agent_type**に次のいずれかの値を指定します。  
   
-    -   **1** - [レプリケーション スナップショット エージェント](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+    -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
-    -   **2** - [レプリケーション ログ リーダー エージェント](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
+    -   **2** - [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
-    -   **3** - [レプリケーション ディストリビューション エージェント](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
+    -   **3** - [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
-    -   **4** - [レプリケーション マージ エージェント](../../../relational-databases/replication/agents/replication-merge-agent.md)  
+    -   **4** - [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
-    -   **9** - [レプリケーション キュー リーダー エージェント](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+    -   **9** - [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-     これにより、指定された種類のエージェントのプロファイルがすべて返されます。 値に注意してください **profile_name** を使用するプロファイルの結果セットにします。  
+     これにより、指定された種類のエージェントのプロファイルがすべて返されます。 使用するプロファイルの結果セットで **profile_name** の値を確認します。  
   
-2.  エージェントが開始されて、エージェント ジョブの場合は、値を指定する、エージェントが起動するジョブ ステップを編集 **profile_name** 後に手順 1. で得た、 **- ProfileName** コマンド ライン パラメーター。 詳細については、次を参照してください。 [表示および変更のレプリケーション エージェントのコマンド プロンプト パラメーター & #40 です。SQL Server Management Studio と #41;](../../../relational-databases/replication/agents/view and modify replication agent command prompt parameters.md)です。  
+2.  エージェントがエージェント ジョブから起動される場合、エージェントを起動するジョブ ステップを編集して、手順 1. で得た **profile_name** の値を **-ProfileName** コマンド ライン パラメーターの後に指定します。 詳細については、「[View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)」(レプリケーション エージェント コマンド プロンプト パラメーターを表示および変更する &#40;SQL Server Management Studio&#41;) を参照してください。  
   
-3.  コマンド プロンプトから、エージェントを開始するときにの値を指定 **profile_name** 後に手順 1. で得た、 **- ProfileName** コマンド ライン パラメーター。  
+3.  コマンド プロンプトからエージェントを起動する場合、手順 1. で得た **profile_name** の値を **-ProfileName** コマンド ライン パラメーターの後に指定します。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
- この例では、マージ エージェントがという名前のカスタム プロファイルを作成 **custom_merge**, の値を変更、 **- UploadReadChangesPerBatch** パラメーターの新しい追加 **-exchangetype** パラメーター、および作成されるプロファイルに関する情報を返します。  
+ 次の例では、 **custom_merge**という名前のマージ エージェント用のカスタム プロファイルを作成して、 **-UploadReadChangesPerBatch** パラメーターの値を変更し、 **-ExchangeType** パラメーターを新しく追加して、作成されたプロファイルに関する情報を返します。  
   
  [!code-sql[HowTo#sp_addagentprofileparam](../../../relational-databases/replication/codesnippet/tsql/work-with-replication-ag_1.sql)]  
   
@@ -229,69 +233,69 @@ caps.handback.revision: 49
   
 ###  <a name="Create_RMO"></a> 新しいエージェント プロファイルを作成するには  
   
-1.  インスタンスを使用してディストリビューターに接続を作成、 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスです。  
+1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、ディストリビューターへの接続を作成します。  
   
-2.  インスタンスを作成、 <xref:Microsoft.SqlServer.Replication.AgentProfile> クラスです。  
+2.  <xref:Microsoft.SqlServer.Replication.AgentProfile> クラスのインスタンスを作成します。  
   
 3.  オブジェクトの次のプロパティを設定します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> -プロファイルの名前。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> - プロファイルの名前。  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AgentType%2A> - <xref:Microsoft.SqlServer.Replication.AgentType> プロファイルが作成されているレプリケーション エージェントの種類を指定する値。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AgentType%2A> - プロファイルが作成されるレプリケーション エージェントの種類を指定する <xref:Microsoft.SqlServer.Replication.AgentType> 値。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 手順 1. で作成します。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 手順 1 で作成した <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
   
-    -   (省略可能) <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> -プロファイルの説明。  
+    -   (省略可能) <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> - プロファイルの説明。  
   
-    -   (省略可能) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> -このプロパティを設定 **true** 場合はこの新しいエージェント ジョブをすべて <xref:Microsoft.SqlServer.Replication.AgentType> 既定では、このプロファイルを使用します。  
+    -   (省略可能) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - 指定した <xref:Microsoft.SqlServer.Replication.AgentType> のすべての新しいエージェント ジョブが既定でこのプロファイルを使用する場合は、このプロパティを **true** に設定します。  
   
-4.  呼び出す、 <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> サーバーで、プロファイルを作成します。  
+4.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> メソッドを呼び出して、サーバーにプロファイルを作成します。  
   
 5.  サーバーにプロファイルが作成されたら、レプリケーション エージェントのパラメーター値を追加、削除、変更することで、プロファイルをカスタマイズできます。  
   
-6.  プロファイルを既存のレプリケーション エージェント ジョブに割り当てるには、呼び出し、 <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> メソッドです。 ディストリビューション データベースの名前を *distributionDBName* に渡し、ジョブの ID を *agentID*に渡します。  
+6.  プロファイルを既存のレプリケーション エージェント ジョブに割り当てるには、<xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> メソッドを呼び出します。 ディストリビューション データベースの名前を *distributionDBName* に渡し、ジョブの ID を *agentID*に渡します。  
   
 ###  <a name="Modify_RMO"></a> 既存のエージェント プロファイルを変更するには  
   
-1.  インスタンスを使用してディストリビューターに接続を作成、 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスです。  
+1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、ディストリビューターへの接続を作成します。  
   
-2.  インスタンスを作成、 <xref:Microsoft.SqlServer.Replication.ReplicationServer> クラスです。 渡す、 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 手順 1. で作成されたオブジェクト。  
+2.  <xref:Microsoft.SqlServer.Replication.ReplicationServer> クラスのインスタンスを作成します。 手順 1 で作成した <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトを渡します。  
   
-3.  呼び出す、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドです。 このメソッドが **false**を返す場合、ディストリビューターが存在するかどうかを確認してください。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>  メソッドを呼び出します。 このメソッドが **false**を返す場合、ディストリビューターが存在するかどうかを確認してください。  
   
-4.  呼び出す、 <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A> メソッドです。 渡す、 <xref:Microsoft.SqlServer.Replication.AgentType> を絞り込むには、特定の種類のレプリケーション エージェント プロファイルが返される値。  
+4.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A> メソッドを呼び出します。 特定の種類のレプリケーション エージェントのプロファイルのみが返るようにするには、<xref:Microsoft.SqlServer.Replication.AgentType> 値を渡します。  
   
-5.  必要な取得 <xref:Microsoft.SqlServer.Replication.AgentProfile> から返されたオブジェクト <xref:System.Collections.ArrayList>, ここで、 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> オブジェクトのプロパティには、プロファイル名が一致します。  
+5.  オブジェクトの <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> プロパティがプロファイル名と一致している、返された <xref:System.Collections.ArrayList> から目的の <xref:Microsoft.SqlServer.Replication.AgentProfile> オブジェクトを取得します。  
   
-6.  次のメソッドの 1 つを呼び出して <xref:Microsoft.SqlServer.Replication.AgentProfile> プロファイルを変更します。  
+6.  <xref:Microsoft.SqlServer.Replication.AgentProfile> の次のいずれかのメソッドを呼び出して、プロファイルを変更します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AddParameter%2A> -、プロファイルにサポートされているパラメーターを追加、 *名前* レプリケーション エージェント パラメーターの名前を指定し、 *値* 指定されている値。 指定されたエージェントの種類のすべてのサポートされているエージェント パラメーターを列挙するを呼び出す、 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> メソッドです。 このメソッドが戻る、 <xref:System.Collections.ArrayList> の <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> サポートされているすべてのパラメーターを表すオブジェクト。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AddParameter%2A> - サポートされているパラメーターをプロファイルに追加します。*name* はレプリケーション エージェント パラメーターの名前であり、*value* は指定する値です。 特定の種類のエージェントでサポートされているエージェント パラメーターをすべて列挙するには、<xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> メソッドを呼び出します。 このメソッドは、サポートされているすべてのパラメーターを表す <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> オブジェクトの <xref:System.Collections.ArrayList> を返します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.RemoveParameter%2A> -プロファイルから既存のパラメーターを削除、 *名前* レプリケーション エージェント パラメーターの名前を指定します。 プロファイルに対して定義されている現在のすべてのエージェント パラメーターを列挙するを呼び出して、 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> メソッドです。 このメソッドが戻る、 <xref:System.Collections.ArrayList> の <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> このプロファイルの既存のパラメーターを表すオブジェクト。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.RemoveParameter%2A> - 既存のパラメーターをプロファイルから削除します。*name* はレプリケーション エージェント パラメーターの名前です。 プロファイルに定義されている現在のエージェント パラメーターをすべて列挙するには、<xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> メソッドを呼び出します。 このメソッドは、プロファイルの既存のパラメーターを表す <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> オブジェクトの <xref:System.Collections.ArrayList> を返します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A> -プロファイルでは、既存のパラメーターの設定を変更、 *名前* エージェント パラメーターの名前を指定し、 *newValue* パラメーターが変更されている値は、です。 プロファイルに対して定義されている現在のすべてのエージェント パラメーターを列挙するを呼び出して、 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> メソッドです。 このメソッドが戻る、 <xref:System.Collections.ArrayList> の <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> このプロファイルの既存のパラメーターを表すオブジェクト。 サポートされるエージェント パラメーターの設定をすべて列挙する、呼び出し、 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> メソッドです。 このメソッドが戻る、 <xref:System.Collections.ArrayList> の <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> サポートされるすべてのパラメーターの値を表すオブジェクト。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A> - プロファイルの既存のパラメーターの設定を変更します。*name* はエージェント パラメーターの名前であり、*newValue* はパラメーターの変更後の値です。 プロファイルに定義されている現在のエージェント パラメーターをすべて列挙するには、<xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> メソッドを呼び出します。 このメソッドは、プロファイルの既存のパラメーターを表す <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> オブジェクトの <xref:System.Collections.ArrayList> を返します。 サポートされるエージェント パラメーターの設定をすべて列挙するには、<xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> メソッドを呼び出します。 このメソッドは、すべてのパラメーターのサポートされている値を表す <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> オブジェクトの <xref:System.Collections.ArrayList> を返します。  
   
 ###  <a name="Delete_RMO"></a> エージェント プロファイルを削除するには  
   
-1.  インスタンスを使用してディストリビューターに接続を作成、 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスです。  
+1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、ディストリビューターへの接続を作成します。  
   
-2.  インスタンスを作成、 <xref:Microsoft.SqlServer.Replication.AgentProfile> クラスです。 プロファイルの名前を設定 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> と <xref:Microsoft.SqlServer.Management.Common.ServerConnection> に手順 1. の <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>します。  
+2.  <xref:Microsoft.SqlServer.Replication.AgentProfile> クラスのインスタンスを作成します。 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> にプロファイルの名前を、<xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> に手順 1 の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> を設定します。  
   
-3.  呼び出す、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドです。 このメソッドが **false**を返す場合、指定された名前が誤っているか、プロファイルがサーバーに存在していません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>  メソッドを呼び出します。 このメソッドが **false**を返す場合、指定された名前が誤っているか、プロファイルがサーバーに存在していません。  
   
-4.  いることを確認、 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> にプロパティが設定されている <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>, 、顧客のプロファイルを示します。 値を持つプロファイルを削除しないでください <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> の <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>します。  
+4.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> プロパティが <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User> に設定されていることを確認します。これは顧客のプロファイルを表します。 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> の値が <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> であるプロファイルは削除しないでください。  
   
-5.  呼び出す、 <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> サーバーからこのオブジェクトによって表されるユーザー定義プロファイルを削除するメソッドです。  
+5.  このオブジェクトによって表されているユーザー定義プロファイルをサーバーから削除するには、<xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> メソッドを呼び出します。  
   
 ##  <a name="FollowUp"></a> フォロー アップ: エージェント パラメーターを変更した後  
  エージェント パラメーターの変更は、エージェントの次回起動時に反映されます。 エージェントを継続して実行している場合は、そのエージェントを停止して再起動する必要があります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レプリケーション エージェント プロファイル](../../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [レプリケーション スナップショット エージェント](../../../relational-databases/replication/agents/replication-snapshot-agent.md)   
- [レプリケーション ログ リーダー エージェント](../../../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [レプリケーション ディストリビューション エージェント](../../../relational-databases/replication/agents/replication-distribution-agent.md)   
- [レプリケーション マージ エージェント](../../../relational-databases/replication/agents/replication-merge-agent.md)   
- [レプリケーション キュー リーダー エージェント](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+ [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)   
+ [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)   
+ [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)   
+ [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)   
+ [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
   
