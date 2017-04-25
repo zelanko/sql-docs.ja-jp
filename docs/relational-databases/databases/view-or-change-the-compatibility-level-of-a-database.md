@@ -1,27 +1,31 @@
 ---
 title: "データベースの互換性レベルの表示または変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "互換性レベル [SQL Server], 表示"
-  - "互換性 [SQL Server]、データベース"
-  - "互換性レベル [SQL Server], 変更"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- compatibility levels [SQL Server], viewing
+- compatibility [SQL Server], databases
+- compatibility levels [SQL Server], changing
 ms.assetid: 579867ec-57cb-4cb8-af35-9688c1e9e15d
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fa6785003c2e66f446cdc3a41960c5e3d18fad69
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベースの互換性レベルの表示または変更
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、データベースの互換性レベルを表示または変更する方法について説明します。 データベースの互換性レベルを変更する前に、この変更がアプリケーションに及ぼす影響について理解しておく必要があります。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)」を参照してください。  
+# <a name="view-or-change-the-compatibility-level-of-a-database"></a>データベースの互換性レベルの表示または変更
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、データベースの互換性レベルを表示または変更する方法について説明します。 データベースの互換性レベルを変更する前に、この変更がアプリケーションに及ぼす影響について理解しておく必要があります。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
   
  **このトピックの内容**  
   
@@ -44,13 +48,13 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### データベースの互換性レベルを表示または変更するには  
+#### <a name="to-view-or-change-the-compatibility-level-of-a-database"></a>データベースの互換性レベルを表示または変更するには  
   
 1.  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の適切なインスタンスに接続した後、オブジェクト エクスプローラーでサーバー名をクリックします。  
   
 2.  **[データベース]**を展開します。さらに、そのデータベースに応じて、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。  
   
-3.  データベースを右クリックし、**[プロパティ]** をクリックします。  
+3.  データベースを右クリックし、 **[プロパティ]**をクリックします。  
   
      **[データベースのプロパティ]** ダイアログ ボックスが表示されます。  
   
@@ -58,11 +62,11 @@ caps.handback.revision: 20
   
      **[互換性レベル]** ボックスの一覧に現在の互換性レベルが表示されます。  
   
-5.  互換性レベルを変更するには、一覧から別のオプションを選択します。 選択できるのは、**[SQL Server 2008 (100)]**、**[SQL Server 2012 (110)]**、**[SQL Server 2014 (120)]** のいずれかです。  
+5.  互換性レベルを変更するには、一覧から別のオプションを選択します。 選択できるのは、 **[SQL Server 2008 (100)]**、 **[SQL Server 2012 (110)]**、 **[SQL Server 2014 (120)]**のいずれかです。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### データベースの互換性レベルを表示するには  
+#### <a name="to-view-the-compatibility-level-of-a-database"></a>データベースの互換性レベルを表示するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -79,7 +83,7 @@ GO
   
 ```  
   
-#### データベースの互換性レベルを変更するには  
+#### <a name="to-change-the-compatibility-level-of-a-database"></a>データベースの互換性レベルを変更するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   

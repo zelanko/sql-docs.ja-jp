@@ -1,26 +1,30 @@
 ---
 title: "WSFC クォーラム モードと投票の構成 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性グループ [SQL Server], WSFC クラスター"
-  - "クォーラム [SQL Server], AlwaysOn と WSFC クォーラム"
-  - "フェールオーバー クラスタリング [SQL Server]、AlwaysOn 可用性グループ"
+ms.custom: 
+ms.date: 10/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
+- failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 439b7c66da985003952c897583d520674c26d2ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# WSFC クォーラム モードと投票の構成 (SQL Server)
+# <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC クォーラム モードと投票の構成 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と Always On フェールオーバー クラスター インスタンス (FCI) のどちらも、Windows Server フェールオーバー クラスタリング (WSFC) をプラットフォーム テクノロジとして使用します。  WSFC は、クォーラム ベースのアプローチを使用してクラスターの全体的な正常性を監視し、ノード レベルのフォールト トレランスを最大限に高めます。 WSFC クォーラム モードおよびノード投票構成の基本について理解することは、Always On 高可用性および災害復旧ソリューションの設計、運用、トラブルシューティングのために非常に重要です。  
   
  **このトピックの内容:**  
@@ -47,7 +51,7 @@ caps.handback.revision: 14
 > [!IMPORTANT]  
 >  クォーラム障害のために WSFC クラスターがオフラインに設定されると、オンラインに戻すために手動介入が必要です。  
 >   
->  詳細については、「[WSFC の強制クォーラムによる災害復旧 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)」を参照してください。  
+>  詳細については、「 [WSFC の強制クォーラムによる災害復旧 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)によって決定されます。  
   
 ##  <a name="QuorumModes"></a> クォーラム モード  
  *クォーラム モード* は、WSFC クラスター レベルで構成され、クォーラム投票の方法を指定します。  フェールオーバー クラスター マネージャー ユーティリティは、クラスター内のノード数に基づいて、クォーラム モードを推奨します。  
@@ -65,7 +69,7 @@ caps.handback.revision: 14
 -   **ディスクのみ。** 共有ディスク クラスター リソースが監視として使用され、その共有ディスクに対する各ノードからの接続も肯定的な投票としてカウントされます。  
   
 > [!TIP]  
->  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の非対称的なストレージ構成を使用する際には、通常、投票ノード数が奇数の場合はノード マジョリティ クォーラム モード、投票ノード数が偶数の場合はノードおよびファイル共有マジョリティ クォーラム モードを使用してください。  
+>  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の非対称的なストレージ構成を使用する際には、通常、投票ノード数が奇数の場合はノード マジョリティ クォーラム モード、投票ノード数が偶数の場合はノードおよびファイル共有マジョリティ クォーラム モードを使用してください。  
   
 ##  <a name="VotingandNonVotingNodes"></a> 投票と非投票ノード  
  既定では、WSFC クラスター内の各ノードがクラスター クォーラムのメンバーとして含まれます。各ノードはクラスターの全体的な正常性の決定において 1 つの投票を持ちます。また、各ノードはクォーラムの構築を試行し続けます。  クォーラムに関するここまでの説明では、クラスター状態について投票する WSFC クラスター ノードのセットを *投票ノード*として注意深く限定してきました。  
@@ -76,7 +80,7 @@ caps.handback.revision: 14
   
  しかし、クォーラム投票で他のサブネット上のノードが応答しないように見えるが実際はオンラインで正常である場合、サブネット間のネットワーク通信のエラーが原因であることが考えられます。  クラスター トポロジ、クォーラム モード、およびフェールオーバー ポリシー構成によっては、ネットワーク通信エラーによって投票ノードのセット (またはサブセット) が実質的に複数作成されてしまう可能性があります。  
   
- 投票ノードの複数のサブセットが自身でクォーラムを構築できる場合、それは*スプリット ブレイン シナリオ*と呼ばれます。  このようなシナリオでは、各クォーラム上のノードが別々の動作をし、相互に競合します。  
+ 投票ノードの複数のサブセットが自身でクォーラムを構築できる場合、それは *スプリット ブレイン シナリオ*と呼ばれます。  このようなシナリオでは、各クォーラム上のノードが別々の動作をし、相互に競合します。  
   
 > [!NOTE]  
 >  スプリット ブレイン シナリオは、システム管理者が強制クォーラム動作を手動で実行、または非常にまれですが強制フェールオーバーを実行することで、クォーラム ノード セットが明示的に細分化された場合にのみ発生する可能性があります。  
@@ -113,7 +117,7 @@ caps.handback.revision: 14
 > [!TIP]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WSFC クラスター構成およびノード クォーラム投票に関する設定を管理するために、いくつかのシステム動的管理ビュー (DMV) を公開しています。  
 >   
->  詳細については、[sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md)、[sys.dm_hadr_cluster_members](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)、[sys.dm_os_cluster_nodes](../../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)、[sys.dm_hadr_cluster_networks](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql.md) を参照してください。  
+>  詳細については、  [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md), [sys.dm_hadr_cluster_members](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md), [sys.dm_os_cluster_nodes](../../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md), [sys.dm_hadr_cluster_networks](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql.md)を参照してください。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
@@ -125,14 +129,15 @@ caps.handback.revision: 14
   
 -   [高可用性と災害復旧のための Microsoft SQL Server Always On ソリューション ガイド](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Always On 可用性グループ ウィザードでのクォーラムの投票の構成のチェック](http://blogs.msdn.com/b/sqlAlways%20On/archive/2012/03/13/quorum-vote-configuration-check-in-Always%20On-availability-group-wizards-andy-jing.aspx)  
+-   [Always On 可用性グループ ウィザードでのクォーラムの投票の構成のチェック](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   
 -   [Windows Server テクノロジ: フェールオーバー クラスター](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
 -   [フェールオーバー クラスターのステップ バイ ステップ ガイド: フェールオーバー クラスターのクォーラムの構成](http://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [WSFC の強制クォーラムによる災害復旧 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
+

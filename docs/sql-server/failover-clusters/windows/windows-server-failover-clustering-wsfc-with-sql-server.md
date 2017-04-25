@@ -1,28 +1,32 @@
 ---
 title: "Windows Server フェールオーバー クラスタリング (WSFC) と SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性グループ [SQL Server], WSFC クラスター"
-  - "Windows Server フェールオーバー クラスタリング (WSFC), SQL Server"
-  - "WSFC, SQL Server"
-  - "クォーラム [SQL Server]"
-  - "フェールオーバー クラスタリング [SQL Server]、AlwaysOn 可用性グループ"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- Windows Server Failover Clustering (WSFC), with SQL Server
+- WSFC, with SQL Server
+- quorum [SQL Server]
+- failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: faf617519fde35e957969a98d2564821ee01e8a2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Windows Server フェールオーバー クラスタリング (WSFC) と SQL Server
+# <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>Windows Server フェールオーバー クラスタリング (WSFC) と SQL Server
   *Windows Server フェールオーバー クラスタリング* (WSFC) クラスターは、アプリケーションとサービスの可用性を高めるために連携する独立したサーバーのグループです。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] は、WSFC サービスと機能を活用して [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスをサポートします。  
   
    
@@ -74,28 +78,28 @@ caps.handback.revision: 34
   
 -   **フェールオーバーの調整。** 各リソースはプライマリ ノードでホストされるように構成され、それぞれ自動的に、または手動で 1 つ以上のセカンダリ ノードに転送されます。 正常性ベースのフェールオーバー ポリシーによって、ノード間でのリソース所有権の自動転送が制御されます。 フェールオーバーが発生すると、適切に対応できるように、ノードおよびホストされているアプリケーションに通知されます。  
   
- 詳細については、「[フェールオーバー クラスタリングの概要](https://technet.microsoft.com/library/hh831579(v=ws.11).aspx)」を参照してください。  
+ 詳細については、「 [フェールオーバー クラスタリングの概要](https://technet.microsoft.com/library/hh831579(v=ws.11).aspx)」を参照してください。  
   
 ##  <a name="AlwaysOnWsfcTech"></a> SQL Server Always On テクノロジと WSFC  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *Always On* は、WSFC を利用する、高可用性および災害復旧ソリューションです。 Always On は、アプリケーションの可用性を高め、ハードウェア投資の回収率を上げ、高可用性配置と管理を簡素化する、統合された柔軟なソリューションを提供します。  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と Always On フェールオーバー クラスター インスタンスのどちらも WSFC をプラットフォーム テクノロジとして使用して、コンポーネントを WSFC クラスター リソースとして登録します。  関連するリソースは *リソース グループ*としてまとめられ、他の WSFC クラスター リソースに依存するように設定できます。 これによって、WSFC クラスター サービスは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを再起動する必要がある場合はこれを検出して通知したり、WSFC クラスター内の他のサーバー ノードに自動的にフェールオーバーしたりします。  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と Always On フェールオーバー クラスター インスタンスのどちらも WSFC をプラットフォーム テクノロジとして使用して、コンポーネントを WSFC クラスター リソースとして登録します。  関連するリソースは *リソース グループ*としてまとめられ、他の WSFC クラスター リソースに依存するように設定できます。 これによって、WSFC クラスター サービスは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを再起動する必要がある場合はこれを検出して通知したり、WSFC クラスター内の他のサーバー ノードに自動的にフェールオーバーしたりします。  
   
 > **重要!!** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On テクノロジの利点を完全に活かすには、WSFC 関連のいくつかの前提条件を適用する必要があります。  
 >   
->  詳細については、「[Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)」を参照してください。  
+>  詳細については、「[Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
   
-### Always On フェールオーバー クラスター インスタンスとインスタンス レベルの高可用性  
- Always On *フェールオーバー クラスター インスタンス* (FCI) は、WSFC クラスター内のノードにまたがってインストールされた [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスです。 この種類のインスタンスには、共有ディスク ストレージ (ファイバー チャネルまたは iSCSI SAN 経由) および仮想ネットワーク名に対してリソース依存関係があります。 仮想ネットワーク名には、それぞれが異なるサブネットに存在する 1 つ以上の仮想 IP アドレスに対してリソース依存関係があります。 SQL Server サービスおよび SQL Server エージェント サービスはリソースとして登録され、どちらも仮想ネットワーク名リソースに依存します。  
+### <a name="instance-level-high-availability-with-always-on-failover-cluster-instances"></a>Always On フェールオーバー クラスター インスタンスとインスタンス レベルの高可用性  
+ Always On *フェールオーバー クラスター インスタンス* (FCI) は、WSFC クラスター内のノードにまたがってインストールされた [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスです。 このタイプのインスタンスは、ストレージと仮想ネットワーク名のリソースに依存します。 ストレージは共有ディスク ストレージにファイバー チャネル、iSCSI、FCoE、または SAS を使用したり、[記憶域スペース ダイレクト (S2D)](http://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview) でローカルにアタッチされたストレージを使用したりできます。 仮想ネットワーク名のリソースは、それぞれが異なるサブネットに存在する 1 つまたは複数の仮想 IP アドレスに依存します。 SQL Server サービスと SQL Server エージェント サービスもリソースであり、どちらもストレージと仮想ネットワーク名リソースに依存します。  
   
- フェールオーバーが発生した場合、WSFC サービスはインスタンスのリソース所有権を指定されたフェールオーバー ノードに転送します。 その後、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスは、フェールオーバー ノードで再起動され、データベースが通常どおり復元されます。 特定の時点で、FCI と基になるリソースをホストできるのは、クラスター内の 1 つのノードのみです。  
+ フェールオーバーが発生した場合、WSFC サービスはインスタンスのリソース所有権を指定されたフェールオーバー ノードに転送します。 その後、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスは、フェールオーバー ノードで再起動され、データベースが通常どおり復元されます。 特定の時点で、FCI と基になるリソースをホストできるのは、クラスター内の 1 つのノードのみです。  
   
-> **注:** Always On フェールオーバー クラスター インスタンスには、ストレージ エリア ネットワーク (SAN) や SMB ファイル共有などの対称的な共有ディスク ストレージが必要です。  共有ディスク ストレージ ボリュームは、WSFC クラスター内のすべてのフェールオーバー ノードで使用できる必要があります。  
+> **注:**  Always On フェールオーバー クラスター インスタンスには、ストレージ エリア ネットワーク (SAN) や SMB ファイル共有などの対称的な共有ディスク ストレージが必要です。  共有ディスク ストレージ ボリュームは、WSFC クラスター内のすべてのフェールオーバー ノードで使用できる必要があります。  
   
  詳細については、「[Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。  
   
-### データベース レベルの高可用性 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  
- *可用性グループ* は、共にフェールオーバーするユーザー データベースのセットです。 可用性グループは、1 つのプライマリ*可用性レプリカ*と、共有ストレージを必要としないデータ保護のために SQL Server ログに基づくデータ移動を介して維持される 1 ～ 4 個のセカンダリ レプリカから構成されます。 各レプリカは、WSFC クラスターの別々のノードにある [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスによってホストされます。 可用性グループとこれに対応する仮想ネットワーク名は、WSFC クラスターのリソースとして登録されます。  
+### <a name="database-level-high-availability-with-includesshadrincludessshadr-mdmd"></a>データベース レベルの高可用性 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  
+ *可用性グループ* は、共にフェールオーバーするユーザー データベースのセットです。 可用性グループは、1 つのプライマリ *可用性レプリカ* と、共有ストレージを必要としないデータ保護のために SQL Server ログに基づくデータ移動を介して維持される 1 ～ 4 個のセカンダリ レプリカから構成されます。 各レプリカは、WSFC クラスターの別々のノードにある [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスによってホストされます。 可用性グループとこれに対応する仮想ネットワーク名は、WSFC クラスターのリソースとして登録されます。  
   
  プライマリ レプリカのノード上の *可用性グループ リスナー* は、受信クライアント要求に応答し、仮想ネットワーク名に接続します。そして、接続文字列の属性に基づいて各要求を適切な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスにリダイレクトします。  
   
@@ -103,51 +107,51 @@ caps.handback.revision: 34
   
  特定の時点で、可用性グループ データベースのプライマリ レプリカをホストできるのは、1 つの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのみです。また、関連付けられたすべてのセカンダリ レプリカは別々のインスタンスに存在する必要があり、各インスタンスは別々の物理ノードに存在する必要があります。  
   
-> **注:** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ではフェールオーバー クラスター インスタンスを配置する必要はありません。また、対称共有ストレージ (SAN または SMB) を使用する必要もありません。  
+> **NOTE:** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] do not require deployment of a Failover Cluster Instance or use of symmetric shared storage (SAN or SMB).  
 >   
 >  フェールオーバー クラスター インスタンス (FCI) を可用性グループと共に使用することによって、可用性レプリカの可用性を高めることができます。 ただし、WSFC クラスター内での競合状態の発生を回避するため、FCI 上でホストされる可用性レプリカとの間の可用性グループの自動フェールオーバーはサポートされていません。  
   
- 詳細については、「[Always On 可用性グループの概要 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。  
+ 詳細については、「 [Always On 可用性グループの概要 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。  
   
 ##  <a name="AlwaysOnWsfcHealth"></a> WSFC の正常性監視とフェールオーバー  
  Always On ソリューションの高可用性は、物理的および論理的 WSFC クラスター リソースのプロアクティブな正常性状態の監視と、冗長ハードウェアでの自動フェールオーバーおよび再構成によって実現します。  また、システム管理者は、可用性グループまたはノード間での *インスタンスの* 手動フェールオーバー [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を開始できます。  
   
-### ノード、フェールオーバー クラスター インスタンス、可用性グループのフェールオーバー ポリシー  
- *フェールオーバー ポリシー*は、WSFC クラスター ノード、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI)、および可用性グループのレベルで構成されます。  これらのポリシーは、クラスター リソースの異常な状態の重大度、期間、頻度とノードの応答時間に基づいたもので、サービスの再起動のトリガー、ノード間でのクラスター リソースの *自動フェールオーバー* のトリガー、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス間での可用性グループ プライマリ レプリカの移動のトリガーを行うことができます。  
+### <a name="failover-policies-for-nodes-failover-cluster-instances-and-availability-groups"></a>ノード、フェールオーバー クラスター インスタンス、可用性グループのフェールオーバー ポリシー  
+ *フェールオーバー ポリシー* は、WSFC クラスター ノード、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI)、および可用性グループのレベルで構成されます。  これらのポリシーは、クラスター リソースの異常な状態の重大度、期間、頻度とノードの応答時間に基づいたもので、サービスの再起動のトリガー、ノード間でのクラスター リソースの *自動フェールオーバー* のトリガー、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス間での可用性グループ プライマリ レプリカの移動のトリガーを行うことができます。  
   
  可用性グループ レプリカのフェールオーバーは、基になる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに影響しません。  FCI のフェールオーバーでは、ホストされている可用性グループ レプリカとインスタンスが移動します。  
   
- 詳細については、「[フェールオーバー クラスター インスタンスのフェールオーバー ポリシー](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)」を参照してください。  
+ 詳細については、「 [フェールオーバー クラスター インスタンスのフェールオーバー ポリシー](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)」を参照してください。  
   
-### WSFC リソースの正常性の検出  
+### <a name="wsfc-resource-health-detection"></a>WSFC リソースの正常性の検出  
  WSFC クラスター ノード内の各リソースの状態と正常性は、定期的または要求時に報告されます。 リソースの障害を示す状況としては、電源障害、ディスクまたはメモリのエラー、ネットワーク通信エラー、応答しないサービスなどがあります。  
   
  ネットワーク、ストレージ、サービスなどの WSFC クラスター リソースは、互いに依存するように構成できます。 リソースの累積正常性は、リソース依存関係の正常性で正常性を連続的にロール アップすることで決定されます。  
   
-### WSFC ノード間の正常性の検出とクォーラム投票  
+### <a name="wsfc-inter-node-health-detection-and-quorum-voting"></a>WSFC ノード間の正常性の検出とクォーラム投票  
  WSFC クラスター内の各ノードは、定期的なハートビート通信に参加し、ノードの正常性状態を他のノードと共有します。 応答しないノードは、エラー状態であると見なされます。  
   
  *クォーラム* ノード セットは、WSFC クラスター内の大多数の投票ノードおよび監視サーバーです。 WSFC クラスターの全体的な正常性と状態は、定期的な *クォーラムの投票*によって決定されます。 クォーラムの存在は、クラスターが正常であり、ノード レベルのフォールト トレランスを提供できることを表します。  
   
  *クォーラム モード* は、WSFC クラスター レベルで構成され、クォーラム投票の方法、および自動フェールオーバーを実行するタイミングまたはクラスターをオフラインにするタイミングを指定します。  
   
-> **ヒント:** WSFC クラスターのクォーラム投票の数は、常に奇数にすることをお勧めします。  クォーラム投票のために、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をクラスター内のすべてのノードにインストールする必要はありません。 追加サーバーはクォーラム メンバーとして機能できます。また、リモート ファイル共有を決定機構として使用するように WSFC クォーラム モデルを構成することもできます。  
+> **ヒント:** WSFC クラスターのクォーラム投票の数は、常に奇数にすることをお勧めします。  クォーラム投票のために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をクラスター内のすべてのノードにインストールする必要はありません。 追加サーバーはクォーラム メンバーとして機能できます。また、リモート ファイル共有を決定機構として使用するように WSFC クォーラム モデルを構成することもできます。  
 >   
->  詳細については、「[WSFC クォーラム モードと投票の構成 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)」を参照してください。  
+>  詳細については、「 [WSFC クォーラム モードと投票の構成 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)」を参照してください。  
   
-### 強制されたクォーラムによる災害復旧  
+### <a name="disaster-recovery-through-forced-quorum"></a>強制されたクォーラムによる災害復旧  
  実際の運用状況と WSFC クラスター構成に応じて、自動フェールオーバーと手動フェールオーバーの両方を使用できます。これによって、堅牢でフォールト トレランスな [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On ソリューションを維持できます。 ただし、WSFC クラスター内の投票ノードのクォーラムが相互に通信できない場合、または WSFC クラスターがこれ以外の理由で正常性の検証に失敗する場合は、WSFC クラスターがオフラインになる場合があります。  
   
- 災害や、永続的なハードウェア障害または通信障害が原因で WSFC クラスターがオフラインになった場合は、手動で管理操作を実行して、*クォーラムを強制*し、稼働しているクラスター ノードを非フォールト トレラント構成でオンラインに戻す必要があります。  
+ 災害や、永続的なハードウェア障害または通信障害が原因で WSFC クラスターがオフラインになった場合は、手動で管理操作を実行して、 *クォーラムを強制* し、稼働しているクラスター ノードを非フォールト トレラント構成でオンラインに戻す必要があります。  
   
  その後、WSFC クラスターを再構成し、影響を受けたデータベース レプリカを復元し、新しいクォーラムを再構築するという一連の手順を実行する必要があります。  
   
- 詳細については、「[WSFC の強制クォーラムによる災害復旧 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)」を参照してください。  
+ 詳細については、「 [WSFC の強制クォーラムによる災害復旧 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)」を参照してください。  
   
 ##  <a name="AlwaysOnWsfcRelationship"></a> SQL Server AlwaysOn コンポーネントと WSFC との関係  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On と WSFC の機能およびコンポーネント間には、いくつかのリレーションシップの層が存在します。  
   
- Always On 可用性グループは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスでホストされています。  
+ Always On 可用性グループは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスでホストされています。  
  クライアントは、可用性グループ リスナーの論理ネットワーク名を指定してプライマリまたはセカンダリ データベースに接続することを要求します。この要求は、基になる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスまたは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) の適切なインスタンス ネットワーク名にリダイレクトされます。  
   
  SQL サーバー インスタンスは、1 つのノード上でアクティブにホストされています。  
@@ -160,7 +164,7 @@ caps.handback.revision: 34
  Windows Server フェールオーバー クラスター (WSFC) サービスは、WSFC 構成メタデータへの変更とその状態を、クラスター内のすべてのノードに反映します。 一部のメタデータと状態が、WSFC クォーラム監視リモート ファイル共有に保存されることもあります。 2 つ以上のアクティブなノードまたは監視サーバーによって、WSFC クラスターの正常性について投票するクォーラムが構成されます。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] レジストリ キーは WSFC クラスターのサブキーです。  
- WSFC クラスターを削除してから再作成した場合は、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を有効にしていた、元の WSFC クラスター上の各サーバー インスタンスについて、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]機能を無効にしてから再度有効にする必要があります。 詳細については、「[AlwaysOn 可用性グループの有効化と無効化 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)」を参照してください。  
+ WSFC クラスターを削除してから再作成した場合は、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を有効にしていた、元の WSFC クラスター上の各サーバー インスタンスについて、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能を無効にしてから再度有効にする必要があります。 詳細については、「[Always On 可用性グループの有効化と無効化 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)」を参照してください。  
   
  ![SQL Server AlwaysOn コンポーネント コンテキストの図](../../../sql-server/failover-clusters/windows/media/alwaysoncomponentcontextdiagram.gif "SQL Server AlwaysOn コンポーネント コンテキストの図")  
   
@@ -175,18 +179,21 @@ caps.handback.revision: 34
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
 -   [Windows Server テクノロジ: フェールオーバー クラスター](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
-  
+
+-   [記憶域スペース ダイレクト \(S2D\) の概要](http://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)
+
 -   [Windows Server 2008 R2 のフェールオーバー クラスター](http://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   
 -   [フェールオーバー クラスターのイベントおよびログを表示する](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
 -   [Get-ClusterLog フェールオーバー クラスター コマンドレット](http://technet.microsoft.com/library/ee461045.aspx)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Always On フェールオーバー クラスター インスタンス (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
- [AlwaysOn 可用性グループの概要 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Always On 可用性グループの概要 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [WSFC クォーラム モードと投票の構成 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [フェールオーバー クラスター インスタンスのフェールオーバー ポリシー](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [WSFC の強制クォーラムによる災害復旧 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
+ [SQL Server 2016 は Windows Server 2016 の記憶域スペース ダイレクトをサポートします](http://blogs.technet.microsoft.com/dataplatforminsider/2016/09/27/sql-server-2016-now-supports-windows-server-2016-storage-spaces-direct/)
   
-  
+

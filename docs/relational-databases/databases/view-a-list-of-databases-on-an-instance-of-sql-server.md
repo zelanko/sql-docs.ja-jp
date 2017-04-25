@@ -1,31 +1,35 @@
 ---
 title: "SQL Server インスタンス上のデータベースの一覧表示 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "現在のデータベース"
-  - "現在サーバー上に存在するデータベース [SQL Server]"
-  - "データベース一覧 [SQL Server]"
-  - "データベース一覧の表示"
-  - "データベース一覧の確認"
-  - "データベース [SQL Server], 表示"
-  - "サーバー [SQL Server], に一覧表示されているデータベース"
-  - "データベースの一覧表示"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- current databases
+- databases currently on server [SQL Server]
+- database list [SQL Server]
+- viewing database list
+- displaying database list
+- databases [SQL Server], viewing
+- servers [SQL Server], databases listed on
+- listing databases
 ms.assetid: 7ee7a789-db36-4be9-8a0e-0362a1e152dd
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: abc61a3002a87583c6b297917ff8f7665472c423
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server インスタンス上のデータベースの一覧表示
+# <a name="view-a-list-of-databases-on-an-instance-of-sql-server"></a>SQL Server インスタンス上のデータベースの一覧表示
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]インスタンス上のデータベースの一覧を表示する方法について説明します。  
   
  **このトピックの内容**  
@@ -45,11 +49,11 @@ caps.handback.revision: 31
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> 権限  
- **sys.databases** の呼び出し元がデータベースの所有者ではなく、データベースが **master** でも **tempdb** でもない場合、対応する行を表示するには、少なくとも **master** データベースで、ALTER ANY DATABASE または VIEW ANY DATABASE のサーバーレベルの権限、あるいは、CREATE DATABASE の権限が必要です。 呼び出し元が接続しているデータベースは常に **sys.databases**で確認できます。  
+ **sys.databases** の呼び出し元がデータベースの所有者ではなく、データベースが **master** でも **tempdb**でもない場合、対応する行を表示するには、少なくとも **master** データベースで、ALTER ANY DATABASE または VIEW ANY DATABASE のサーバーレベルの権限、あるいは、CREATE DATABASE の権限が必要です。 呼び出し元が接続しているデータベースは常に **sys.databases**で確認できます。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### SQL Server インスタンス上のデータベースの一覧を表示するには  
+#### <a name="to-view-a-list-of-databases-on-an-instance-of-sql-server"></a>SQL Server インスタンス上のデータベースの一覧を表示するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
@@ -57,7 +61,7 @@ caps.handback.revision: 31
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### SQL Server インスタンス上のデータベースの一覧を表示するには  
+#### <a name="to-view-a-list-of-databases-on-an-instance-of-sql-server"></a>SQL Server インスタンス上のデータベースの一覧を表示するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -74,7 +78,7 @@ GO
   
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データベースとファイルのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

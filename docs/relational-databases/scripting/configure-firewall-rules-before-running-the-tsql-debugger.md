@@ -1,36 +1,40 @@
 ---
-title: "TSQL デバッガーを実行する前にファイアウォール規則を構成します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.error.sqlde_register_failed"
-  - "vs.debug.error.sqlde_accessdenied"
-  - "vs.debug.error.sqlde_firewall.remotemachines"
-helpviewer_keywords: 
-  - "Transact-SQL デバッガー、リモート接続"
-  - "Windows ファイアウォール [データベース エンジン]、Transact-SQL デバッガー"
-  - "Transact-SQL デバッガー、Windows ファイアウォール"
-  - "Transact-SQL デバッガー、構成"
-  - "ポート [SQL Server]、Transact-SQL デバッガー"
-  - "TCP/IP [SQL Server]、ポート番号"
+title: "TSQL デバッガーを実行する前にファイアウォール規則を構成する | Microsoft Docs"
+ms.custom: 
+ms.date: 10/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.error.sqlde_register_failed
+- vs.debug.error.sqlde_accessdenied
+- vs.debug.error.sqlde_firewall.remotemachines
+helpviewer_keywords:
+- Transact-SQL debugger, remote connections
+- Windows Firewall [Database Engine], Transact-SQL debugger
+- Transact-SQL debugger, Windows Firewall
+- Transact-SQL debugger, configuring
+- ports [SQL Server], Transact-SQL debugger
+- TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1aec49f13a7e4c37fd9d8212393c5bdc3a5694d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# TSQL デバッガーを実行する前にファイアウォール規則を構成します。
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディターとは別のコンピューター上で動作する [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスに接続するときに [!INCLUDE[ssDE](../../includes/ssde-md.md)] デバッグを有効にするように Windows ファイアウォール規則を構成する必要があります。  
+# <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>TSQL デバッガーを実行する前にファイアウォール規則を構成します。
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディターとは別のコンピューター上で動作する[!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスに接続するときに [!INCLUDE[ssDE](../../includes/ssde-md.md)] デバッグを有効にするように Windows ファイアウォール規則を構成する必要があります。  
   
-## Transact-SQL デバッガーの構成  
+## <a name="configuring-the-transact-sql-debugger"></a>Transact-SQL デバッガーの構成  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーには、サーバー側のコンポーネントとクライアント側のコンポーネントの両方が含まれています。 サーバー側のデバッガー コンポーネントは、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) 以降のデータベース エンジンの各インスタンスと共にインストールされます。 クライアント側のデバッガー コンポーネントは、以下の時点で含まれます。  
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降からクライアント側のツールをインストールするとき。  
@@ -46,7 +50,7 @@ caps.handback.revision: 43
 > [!CAUTION]  
 >  Windows ファイアウォール規則を有効にした場合、ファイアウォールでブロックするように指定されているセキュリティ上の脅威にコンピューターがさらされる可能性があります。 リモート デバッグ用の規則を有効にすると、このトピックで示されているポートとプログラムのブロックが解除されます。  
   
-## サーバー上のファイアウォール規則  
+## <a name="firewall-rules-on-the-server"></a>サーバー上のファイアウォール規則  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスが実行されているコンピューター上で、 **セキュリティが強化された Windows ファイアウォール** を使用して、次の情報を指定します。  
   
 -   sqlservr.exe の受信プログラム規則を追加します。 リモート デバッグ セッションをサポートする必要がある各インスタンス用の規則が必要です。  
@@ -91,7 +95,7 @@ caps.handback.revision: 43
   
 -   ドメイン ポリシーにより IPSec 経由でネットワーク通信を行う必要がある場合は、UDP ポート 4500 と UDP ポート 500 を開く受信規則も追加する必要があります。  
   
-## クライアント上のファイアウォール規則  
+## <a name="firewall-rules-on-the-client"></a>クライアント上のファイアウォール規則  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターを実行中のコンピューターでは、SQL Server セットアップまたは [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] セットアップで Windows ファイアウォールがリモート デバッグを許可するように構成されている場合があります。  
   
  リモート デバッグ セッションを開こうとしたときにエラーが発生する場合は、 **セキュリティが強化された Windows ファイアウォール** を使用してファイアウォール規則を構成することで、プログラムとポートの例外を手動で構成できます。  
@@ -146,7 +150,7 @@ caps.handback.revision: 43
   
     9. **[プロトコルの種類:]** ボックスで **[TCP]** 、 **[ローカル ポート:]** ボックスで **[RPC 動的ポート]** を選択します。次に、 **[適用]**をクリックし、 **[OK]**をクリックします。  
   
-## デバッガーを起動するための要件  
+## <a name="requirements-for-starting-the-debugger"></a>デバッガーを起動するための要件  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを起動するには、次の要件をすべて満たしている必要があります。  
   
 * [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] が、sysadmin 固定サーバー ロールのメンバーである Windows アカウントで実行されている必要があります。  
@@ -157,7 +161,7 @@ caps.handback.revision: 43
 
 * サーバーとクライアントが RPC 経由で通信をしている必要があります。 SQL Server サービスが実行されているアカウントで、クライアントへのアクセス許可を認証している必要があります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Transact-SQL デバッガー](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Transact-SQL デバッガーの実行](../../relational-databases/scripting/run-the-transact-sql-debugger.md)   
  [Transact-SQL コードのステップ実行](../../relational-databases/scripting/step-through-transact-sql-code.md)   
@@ -165,3 +169,4 @@ caps.handback.revision: 43
  [データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)  
   
   
+

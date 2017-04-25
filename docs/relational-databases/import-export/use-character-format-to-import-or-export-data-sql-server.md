@@ -1,31 +1,35 @@
 ---
 title: "文字形式を使用したデータのインポートまたはエクスポート (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データ形式 [SQL Server], 文字"
-  - "文字形式 [SQL Server]"
+ms.custom: 
+ms.date: 09/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data formats [SQL Server], character
+- character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: babd3dc4daaa60af026d8694e0cc69292ab44ce0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 文字形式を使用したデータのインポートまたはエクスポート (SQL Server)
+# <a name="use-character-format-to-import-or-export-data-sql-server"></a>文字形式を使用したデータのインポートまたはエクスポート (SQL Server)
 後で別のプログラムで使われるテキスト ファイルにデータを一括エクスポートする場合や、別のプログラムにより生成されたテキスト ファイルからデータを一括インポートする場合は、文字形式の使用をお勧めします。  
 
 文字形式では、すべての列に文字データ形式が使用されます。 データがスプレッドシートなどの別のプログラムで使用されるとき、または Oracle など別のデータベース ベンダーの製品から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにデータをコピーする必要があるときは、文字形式で情報を格納すると便利です。  
   
 > [!NOTE]
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスと、拡張文字や DBCS 文字を含まない Unicode 文字データを含むデータ ファイル間でデータの一括転送を行う場合は、Unicode 文字形式を使用します。 詳細については、「[Unicode 文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)」をご覧ください。
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスと、拡張文字や DBCS 文字を含まない Unicode 文字データを含むデータ ファイル間でデータの一括転送を行う場合は、Unicode 文字形式を使用します。 詳細については、「 [Unicode 文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)」をご覧ください。
   
 |このトピックの内容|
 |---|
@@ -51,12 +55,12 @@ caps.handback.revision: 42
   
 -   変換中に拡張文字が失われないようにするには、Unicode 文字形式を使用するか、コード ページを指定します。  
   
--   [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) データが文字形式ファイルに保存される場合は、メタデータなしで保存されます。 各データ値は、暗黙的なデータ変換の規則に従って [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 形式に変換されます。 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 型の列にインポートされるときは、[char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 型のデータとしてインポートされます。 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 型以外のデータ型の列にインポートされるときは、暗黙の変換を使用してデータが [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) から変換されます。 詳細については、「[データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)」を参照してください。  
+-   [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) データが文字形式ファイルに保存される場合は、メタデータなしで保存されます。 各データ値は、暗黙的なデータ変換の規則に従って [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 形式に変換されます。 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 型の列にインポートされるときは、 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)型のデータとしてインポートされます。 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 型以外のデータ型の列にインポートされるときは、暗黙の変換を使用してデータが [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) から変換されます。 詳細については、「[データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)」を参照してください。  
   
 -   [bcp ユーティリティ](../../tools/bcp-utility.md)は [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 型の値をエクスポートする場合、コンマなどの桁区切り文字で区切らずに、小数点以下 4 桁の文字形式データ ファイルとしてエクスポートします。 たとえば、値 1,234,567.123456 を含む [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 型の列は、文字列 1234567.1235 としてデータ ファイルに一括エクスポートされます。  
   
 ## 文字形式のコマンド オプション<a name="command_options"></a>  
-文字形式のデータは、[bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)、または [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) を使用してテーブルにインポートできます。 [bcp](../../tools/bcp-utility.md) コマンドまたは [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ステートメントの場合は、ステートメントでデータ形式を指定できます。  [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) ステートメントの場合は、フォーマット ファイルでデータ形式を指定する必要があります。  
+文字形式のデータは、[bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)、または [INSERT ...SELECT * FROM OPENROWSET(BULK...) を使用してテーブルにインポートできます](../../t-sql/functions/openrowset-transact-sql.md)。 [bcp](../../tools/bcp-utility.md) コマンドまたは [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ステートメントの場合は、ステートメントでデータ形式を指定できます。  [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) ステートメントの場合は、フォーマット ファイルでデータ形式を指定する必要があります。  
   
 文字形式は、次のコマンド オプションでサポートされています。  
   
@@ -66,16 +70,16 @@ caps.handback.revision: 42
 |BULK INSERT|DATAFILETYPE **='char'**|データの一括インポート時に文字形式を使用します。|  
 |OPENROWSET|なし|フォーマット ファイルを使用する必要があります|
   
- \** 文字 (**-c**) データを、先行バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントと互換性のある形式で読み込むには、**-V** スイッチを使用します。 詳細については、「[以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)」をご覧ください。  
+ \** 文字 (**-c**) データを、先行バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントと互換性のある形式で読み込むには、 **-V** スイッチを使用します。 詳細については、「 [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)」をご覧ください。  
    
 > [!NOTE]
->  また、フォーマット ファイルでフィールドごとに形式を指定することもできます。 詳細については、「[データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)」をご覧ください。
+>  また、フォーマット ファイルでフィールドごとに形式を指定することもできます。 詳細については、「 [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。
 
 ## テスト条件の例<a name="etc"></a>  
 このトピックの例は、以下に定義されたテーブルとフォーマット ファイルに基づいています。
 
 ### **サンプル テーブル**<a name="sample_table"></a>
-次のスクリプトは、`myChar` という名前のテーブルのテスト データベースを作成し、テーブルにいくつかの初期値を設定します。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
+次のスクリプトは、 `myChar` という名前のテーブルのテスト データベースを作成し、テーブルにいくつかの初期値を設定します。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
 ```tsql
 CREATE DATABASE TestDatabase;
 GO
@@ -101,7 +105,7 @@ SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
 ### **XML 形式以外のフォーマット ファイルのサンプル**<a name="nonxml_format_file"></a>
-SQL Server は、非 XML 形式と XML 形式の 2 種類のフォーマット ファイルをサポートしています。  XML 以外のフォーマットとは、以前のバージョンの SQL Server でサポートされる従来のフォーマットです。  詳細については、「[XML 以外のフォーマット ファイル (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)」を参照してください。  次のコマンドでは、[bcp ユーティリティ](../../tools/bcp-utility.md)を使用し、`myChar` のスキーマに基づいて XML 以外のフォーマット ファイル `myChar.fmt` を生成します。  [bcp](../../tools/bcp-utility.md) コマンドを使用してフォーマット ファイルを作成するには、**format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。  format オプションには、次に示す **-f** オプションが必要です。  さらに、この例では、修飾子 **c** を使用して文字データを指定し、**T** を使用して統合セキュリティによる信頼関係接続を指定します。  コマンド プロンプトで、次のコマンドを入力します。
+SQL Server は、非 XML 形式と XML 形式の 2 種類のフォーマット ファイルをサポートしています。  XML 以外のフォーマットとは、以前のバージョンの SQL Server でサポートされる従来のフォーマットです。  詳細については、「 [XML 以外のフォーマット ファイル (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 」を参照してください。  次のコマンドでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用し、 `myChar.fmt`のスキーマに基づいて XML 以外のフォーマット ファイル `myChar`を生成します。  [bcp](../../tools/bcp-utility.md) コマンドを使用してフォーマット ファイルを作成するには、 **format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。  format オプションには、次に示す **-f** オプションが必要です。  さらに、この例では、修飾子 **c** を使用して文字データを指定し、 **T** を使用して統合セキュリティによる信頼関係接続を指定します。  コマンド プロンプトで、次のコマンドを入力します。
 
 ```
 bcp TestDatabase.dbo.myChar format nul -f D:\BCP\myChar.fmt -T -c 
@@ -208,11 +212,12 @@ SELECT * FROM TestDatabase.dbo.myChar;
   
 -   [Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## 参照  
- [bcp ユーティリティ](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>参照  
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
   
+

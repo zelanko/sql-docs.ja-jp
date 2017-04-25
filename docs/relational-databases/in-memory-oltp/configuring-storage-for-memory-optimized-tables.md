@@ -1,29 +1,33 @@
 ---
 title: "メモリ最適化テーブルのストレージの構成 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0250c8370960dc17adf13c020c51bfc603b111c8
+ms.lasthandoff: 04/11/2017
+
 ---
-# メモリ最適化テーブルのストレージの構成
+# <a name="configuring-storage-for-memory-optimized-tables"></a>メモリ最適化テーブルのストレージの構成
   記憶域の容量と 1 秒間の入出力操作 (IOPS) を構成する必要があります。  
   
-## 記憶域の容量  
- [メモリ最適化テーブルのメモリ必要量の推定](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)の情報を使用して、データベースの持続性のあるメモリ最適化テーブルのメモリ内サイズを推定します。 インデックスはメモリ最適化テーブルに対して永続化されないため、インデックスのサイズは含めません。 サイズを確認した後には、持続性のあるメモリ内テーブルのサイズの 4 倍のディスク領域を提供する必要があります。  
+## <a name="storage-capacity"></a>記憶域の容量  
+ [メモリ最適化テーブルのメモリ必要量の推定](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) の情報を使用して、データベースの持続性のあるメモリ最適化テーブルのメモリ内サイズを推定します。 インデックスはメモリ最適化テーブルに対して永続化されないため、インデックスのサイズは含めません。 サイズを確認した後には、持続性のあるメモリ内テーブルのサイズの 4 倍のディスク領域を提供する必要があります。  
   
-## 記憶域の IOPS  
+## <a name="storage-iops"></a>記憶域の IOPS  
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] は、ワークロードのスループットを大幅に上げることができます。 したがって、IO がボトルネックになっていないことを確認してください。  
   
 -   ディスク ベース テーブルをメモリ最適化テーブルに移行するときは、トランザクション ログ アクティビティの増加をサポートできる記憶メディアにトランザクション ログがあることを確認してください。 たとえば、記憶メディアが 100 MB/秒のトランザクション ログの処理をサポートし、その結果としてメモリ最適化テーブルが 5 倍優れたパフォーマンスをもたらす場合、トランザクション ログ アクティビティがパフォーマンスのボトルネックになることを防ぐために、トランザクション ログの記憶メディアでも、5 倍のパフォーマンス向上をサポートできる必要があります。  
@@ -36,10 +40,10 @@ caps.handback.revision: 7
   
 -   スピンドルの数が偶数の場合、SQL Server 2014 とは異なり、チェックポイント ファイルがすべてのスピンドル間で均等に分散されます。  
   
-## 暗号化  
+## <a name="encryption"></a>暗号化  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、メモリ最適化テーブルのストレージの暗号化は、データベースで TDE を有効化する際に行われます。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [メモリ最適化オブジェクト用ストレージの作成と管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

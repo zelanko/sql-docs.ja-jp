@@ -1,29 +1,33 @@
 ---
 title: "クエリ式と Uniform Resource Name | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "クエリ式"
-  - "一意なリソース名"
-  - "URN"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- query expressions
+- unique resource names
+- URN
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 70426dcb9e6ca23d3e8de717fe7b9430155c7243
+ms.lasthandoff: 04/11/2017
+
 ---
-# クエリ式と Uniform Resource Name
+# <a name="query-expressions-and-uniform-resource-names"></a>クエリ式と Uniform Resource Name
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) モデルおよび [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell スナップインでは、XPath 式に似た、2 種類の式文字列が使用されます。 クエリ式は、オブジェクト モデル階層内の 1 つまたは複数のオブジェクトを列挙するための条件のセットを指定する文字列です。 URN (Uniform Resource Name) は、単一のオブジェクトを一意に識別する特定の種類のクエリ式文字列です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -43,7 +47,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
   
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  *オブジェクト*  
  オブジェクトの種類を指定します。オブジェクトの種類は、式文字列のこのノードで表されます。 各オブジェクトは、これらの SMO オブジェクト モデルの名前空間からのコレクション クラスを表します。  
   
@@ -66,7 +70,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  たとえば、サーバーでは **ServerCollection** クラスを、データベースでは **DatabaseCollection** クラスを指定します。  
   
  @*PropertyName*  
- *Object* に指定したオブジェクトと関連付けるクラスのいずれかのプロパティの名前を指定します。 プロパティの名前の前に @ 文字を付ける必要があります。 たとえば、 **Database** クラスのプロパティ **IsAnsiNull**には、@IsAnsiNull と指定します。  
+ *Object*に指定したオブジェクトと関連付けるクラスのいずれかのプロパティの名前を指定します。 プロパティの名前の前に @ 文字を付ける必要があります。 たとえば、**Database** クラスのプロパティ **IsAnsiNull** には、@IsAnsiNull と指定します。  
   
  @*BooleanPropertyName*=true()  
  指定したブール型のプロパティが TRUE に設定されているすべてのオブジェクトを列挙します。  
@@ -93,73 +97,73 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
 |ss|秒を表す 2 桁の数字 (01 ～ 59)。|  
 |mmm|ミリ秒数 (001 ～ 999)。|  
   
- この形式で指定された日付は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に格納されているすべての日付形式に対して評価できます。  
+ この形式で指定された日付は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に格納されているすべての日付形式に対して評価できます。  
   
  is_null(@*PropertyName*)  
  指定したプロパティの値が NULL であるすべてのオブジェクトを列挙します。  
   
  not(\<*PropertyExpression*>)  
- *PropertyExpression* の評価値を否定して、*PropertyExpression* に指定した条件に一致しないすべてのオブジェクトを列挙します。 たとえば、"not(contains(@Name, 'xyz'))" と指定した場合、名前に xyz という文字列が含まれないすべてのオブジェクトが列挙されます。  
+ *PropertyExpression*の評価値を否定して、 *PropertyExpression*に指定した条件に一致しないすべてのオブジェクトを列挙します。 たとえば、"not(contains(@Name, 'xyz'))" と指定した場合、名前に xyz という文字列が含まれないすべてのオブジェクトが列挙されます。  
   
-## 解説  
+## <a name="remarks"></a>解説  
  クエリ式は、SMO モデル階層のノードを列挙する文字列です。 各ノードには、そのノードのどのオブジェクトを列挙するかを決定する条件を指定するためのフィルター式があります。 クエリ式は、XPath 式言語をモデル化したものです。 クエリ式は、XPath でサポートされる式の小さなサブセットを実装し、XPath には用意されていないいくつかの拡張を含みます。 XPath 式は、XML ドキュメント内の 1 つまたは複数のタグを列挙するための条件のセットを指定する文字列です。 XPath の詳細については、 [W3C XPath 言語の Web サイト](http://www.w3.org/TR/xpath20/)を参照してください。  
   
  クエリ式は、Server オブジェクトへの絶対参照で開始する必要があります。 / で始まる相対的な式は使用できません。 クエリ式に指定するオブジェクトの順序は、関連付けられたオブジェクト モデルのコレクション オブジェクトの階層に従っている必要があります。 たとえば、Microsoft.SqlServer.Management.Smo 名前空間のオブジェクトを参照するクエリ式は、Server ノードで開始し、続けて Database ノードを指定する必要があります。  
   
  オブジェクトに対して *\<FilterExpression>* を指定しなかった場合、そのノードのすべてのオブジェクトが列挙されます。  
   
-## URN (Uniform Resource Name)  
+## <a name="uniform-resource-names-urn"></a>URN (Uniform Resource Name)  
  URN は、クエリ式のサブセットです。 それぞれの URN は、1 つのオブジェクトへの完全修飾参照を示します。 一般的な URN では、Name プロパティを使用して、各ノードの単独のオブジェクトを識別します。 たとえば、次の URN は特定の列を参照します。  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='SalesPerson' and @Schema='Sales']/Column[@Name='SalesPersonID']  
 ```  
   
-## 使用例  
+## <a name="examples"></a>使用例  
   
-### A. false() を使用したオブジェクトの列挙  
+### <a name="a-enumerating-objects-using-false"></a>A. false() を使用したオブジェクトの列挙  
  このクエリ式は、 **MyComputer** 上の既定のインスタンスにおいて **AutoClose**属性が false に設定されているすべてのデータベースを列挙します。  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@AutoClose=false()]  
 ```  
   
-### B. contains を使用したオブジェクトの列挙  
+### <a name="b-enumerating-objects-using-contains"></a>B. contains を使用したオブジェクトの列挙  
  このクエリ式は、大文字と小文字が区別されない、名前に m という文字を含むすべてのデータベースを列挙します。  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@CaseSensitive=false() and contains(@Name, 'm')]   
 ```  
   
-### C. not を使用したオブジェクトの列挙  
+### <a name="c-enumerating-objects-using-not"></a>C. not を使用したオブジェクトの列挙  
  このクエリ式は、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] Production **スキーマに含まれていない、テーブル名に History という単語を含むすべての** テーブルを列挙します。  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[not(@Schema='Production') and contains(@Name, 'History')]  
 ```  
   
-### D. 最後のノードのフィルター式を省略した例  
+### <a name="d-not-supplying-a-filter-expression-for-the-final-node"></a>D. 最後のノードのフィルター式を省略した例  
  このクエリ式は、 **AdventureWorks2012.Sales.SalesPerson** テーブル内のすべての列を列挙します。  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@Schema='Sales' and @Name='SalesPerson']/Columns  
 ```  
   
-### E. datetime を使用したオブジェクトの列挙  
+### <a name="e-enumerating-objects-using-datetime"></a>E. datetime を使用したオブジェクトの列挙  
  このクエリ式は、特定の時刻に [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベースに作成されたすべてのテーブルを列挙します。  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDate=datetime('2008-03-21 19:49:32.647')]  
 ```  
   
-### F. is_null を使用したオブジェクトの列挙  
+### <a name="f-enumerating-objects-using-isnull"></a>F. is_null を使用したオブジェクトの列挙  
  このクエリ式は、最終更新日プロパティの値が NULL ではない [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベース内のすべてのテーブルを列挙します。  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_null(@DateLastModified))]  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Invoke-PolicyEvaluation コマンドレット](../powershell/invoke-policyevaluation-cmdlet.md)   
  [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   

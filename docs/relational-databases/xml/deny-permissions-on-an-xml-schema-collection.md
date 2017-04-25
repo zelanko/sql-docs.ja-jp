@@ -1,27 +1,31 @@
 ---
 title: "XML スキーマ コレクションに対する権限の拒否 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "権限の拒否 [SQL Server]、XML サーバー コレクション"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- denying permissions [SQL Server], XML server collections
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 803150cde12790eefbeea8c8f4ef0ad32dc350fe
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML スキーマ コレクションに対する権限の拒否
+# <a name="deny-permissions-on-an-xml-schema-collection"></a>XML スキーマ コレクションに対する権限の拒否
   新しい XML スキーマ コレクションを作成したり、既存の XML スキーマ コレクションを使用する権限を拒否できます。  
   
-## XML スキーマ コレクションを作成する権限の拒否  
+## <a name="denying-permission-to-create-an-xml-schema-collection"></a>XML スキーマ コレクションを作成する権限の拒否  
  次の方法で、XML スキーマ コレクションを作成する権限を拒否できます。  
   
 -   リレーショナル スキーマに対する ALTER 権限を拒否します。  
@@ -30,7 +34,7 @@ caps.handback.revision: 34
   
 -   データベースに対する ALTER ANY SCHEMA を拒否します。 この場合、プリンシパルはデータベースのどこにも XML スキーマ コレクションを作成できなくなります。 データベースに対する ALTER 権限または CONTROL 権限を拒否すると、データベース内のすべてのオブジェクトに対するすべての権限を拒否することになるので注意が必要です。  
   
-## XML スキーマ コレクション オブジェクトの権限の拒否  
+## <a name="denying-permissions-on-an-xml-schema-collection-object"></a>XML スキーマ コレクション オブジェクトの権限の拒否  
  既存の XML スキーマ コレクションで拒否可能な権限とその結果を次に示します。  
   
 -   ALTER 権限を拒否すると、XML スキーマ コレクションの内容を変更するプリンシパルの権限を拒否することになります。  
@@ -43,13 +47,13 @@ caps.handback.revision: 34
   
 -   EXECUTE 権限を拒否すると、XML スキーマ コレクションによって型指定または制約された列、変数、およびパラメーターの値を挿入または更新するプリンシパルの権限を拒否することになります。 また、同じ xml 型の列や変数の値のクエリを実行するプリンシパルの権限も拒否することになります。  
   
-## 使用例  
+## <a name="examples"></a>使用例  
  次の例のシナリオでは、XML スキーマ権限の動作を示します。 各例では、必要なテスト データベース、リレーショナル スキーマ、およびログインを作成します。 それらのログインには、必要な XML スキーマ コレクション権限が許可されています。 最後に必要なクリーンアップを行います。  
   
-### A. ユーザーによる XML スキーマ コレクションの作成を防止する  
+### <a name="a-preventing-a-user-from-creating-an-xml-schema-collection"></a>A. ユーザーによる XML スキーマ コレクションの作成を防止する  
  ユーザーが XML スキーマ コレクションを作成できないようにする方法の 1 つは、リレーショナル スキーマの ALTER 権限を拒否することです。 次の例を参照してください。  
   
- この例では、ユーザー `TestLogin1` とデータベースを作成します。 このデータベースには、`dbo` スキーマに加えてリレーショナル スキーマも作成します。 まず、`CREATE XML SCHEMA` 権限によって、データベース内の任意の場所にスキーマ コレクションを作成する権限をユーザーに許可します。 次に、リレーショナル スキーマの 1 つに対して、そのユーザーの `ALTER` 権限を拒否します。 これにより、ユーザーはこのリレーショナル スキーマで XML スキーマ コレクションを作成できなくなります。  
+ この例では、ユーザー `TestLogin1`とデータベースを作成します。 このデータベースには、 `dbo` スキーマに加えてリレーショナル スキーマも作成します。 まず、 `CREATE XML SCHEMA` 権限によって、データベース内の任意の場所にスキーマ コレクションを作成する権限をユーザーに許可します。 次に、リレーショナル スキーマの 1 つに対して、そのユーザーの `ALTER` 権限を拒否します。 これにより、ユーザーはこのリレーショナル スキーマで XML スキーマ コレクションを作成できなくなります。  
   
 ```  
 CREATE LOGIN TestLogin1 WITH password='SQLSvrPwd1'  
@@ -108,12 +112,12 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### B. XML スキーマ コレクションに対する権限の拒否  
+### <a name="b-denying-permissions-on-an-xml-schema-collection"></a>B. XML スキーマ コレクションに対する権限の拒否  
  次の例では、既存の XML スキーマ コレクションに対するログインの特定の権限を拒否する方法を示します。 この例では、テスト ログインは既存の XML スキーマ コレクションに対する REFERENCES 権限を拒否します。  
   
- この例では、ユーザー `TestLogin1` とデータベースを作成します。 このデータベースには、`dbo` スキーマに加えてリレーショナル スキーマも作成します。 まず、`CREATE XML SCHEMA` 権限によって、データベース内の任意の場所にスキーマ コレクションを作成する権限をユーザーに許可します。  
+ この例では、ユーザー `TestLogin1`とデータベースを作成します。 このデータベースには、 `dbo` スキーマに加えてリレーショナル スキーマも作成します。 まず、 `CREATE XML SCHEMA` 権限によって、データベース内の任意の場所にスキーマ コレクションを作成する権限をユーザーに許可します。  
   
- `REFERENCES` に XML スキーマ コレクションに対する `TestLogin1` 権限があれば、テーブルに型指定された `xml` 列を作成するときにスキーマを使用できます。 XML スキーマ コレクションに対する `REFERENCES` 権限が拒否された場合、`TestLogin1` は XML スキーマ コレクションを使用できません。  
+ `REFERENCES` に XML スキーマ コレクションに対する `TestLogin1` 権限があれば、テーブルに型指定された `xml` 列を作成するときにスキーマを使用できます。 XML スキーマ コレクションに対する `REFERENCES` 権限が拒否された場合、 `TestLogin1` は XML スキーマ コレクションを使用できません。  
   
 ```  
 CREATE LOGIN TestLogin1 WITH password='SQLSvrPwd1'  
@@ -187,7 +191,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML スキーマ コレクション &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   
  [サーバー上の XML スキーマ コレクションの要件と制限](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)   

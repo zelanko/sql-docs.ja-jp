@@ -1,30 +1,34 @@
 ---
 title: "クラスター クォーラムの NodeWeight 設定を表示 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性グループ [SQL Server], WSFC クラスター"
-  - "クォーラム [SQL Server], AlwaysOn と WSFC クォーラム"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1bd8e579c3d75e804a552622039053b6700a352a
+ms.lasthandoff: 04/11/2017
+
 ---
-# クラスター クォーラムの NodeWeight 設定を表示
-  このトピックでは、Windows Server フェールオーバー クラスタリング (WSFC) クラスター内の各メンバー ノードの NodeWeight 設定を表示する方法について説明します。 NodeWeight 設定は、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスの災害復旧とマルチサブネットのシナリオをサポートするためのクォーラムの投票時に使用されます。  
+# <a name="view-cluster-quorum-nodeweight-settings"></a>クラスター クォーラムの NodeWeight 設定を表示
+  このトピックでは、Windows Server フェールオーバー クラスタリング (WSFC) クラスター内の各メンバー ノードの NodeWeight 設定を表示する方法について説明します。 NodeWeight 設定は、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスの災害復旧とマルチサブネットのシナリオをサポートするためのクォーラムの投票時に使用されます。  
   
--   **開始前の準備:**  [前提条件](#Prerequisites)、 [セキュリティ](#Security)  
+-   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   
--   **クォーラムの NodeWeight 設定を表示する方法:** [Transact-SQL の使用](#TsqlProcedure)、 [PowerShell の使用](#PowerShellProcedure)、 [cluster.exe の使用](#CommandPromptProcedure)  
+-   **To view quorum NodeWeight settings using:** [Using Transact-SQL](#TsqlProcedure), [Using Powershell](#PowerShellProcedure), [Using Cluster.exe](#CommandPromptProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始前の準備  
   
@@ -44,13 +48,13 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-##### NodeWeight 設定を表示するには  
+##### <a name="to-view-nodeweight-settings"></a>NodeWeight 設定を表示するには  
   
 1.  クラスター内の任意の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。  
   
 2.  [sys].[dm_hadr_cluster_members] ビューに対してクエリを実行します。  
   
-### 例 (Transact-SQL)  
+### <a name="example-transact-sql"></a>例 (Transact-SQL)  
  次の例では、システム ビューに対するクエリを実行して、そのインスタンスのクラスター内のすべてのノードの値を返します。  
   
 ```tsql  
@@ -60,7 +64,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
   
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
   
-##### NodeWeight 設定を表示するには  
+##### <a name="to-view-nodeweight-settings"></a>NodeWeight 設定を表示するには  
   
 1.  **[実行管理者として実行]**から高度な権限で Windows PowerShell を起動します。  
   
@@ -70,7 +74,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
   
 4.  クラスター ノードのプロパティを判読可能な形式で出力します。  
   
-### 例 (PowerShell)  
+### <a name="example-powershell"></a>例 (PowerShell)  
  次の例では、"Cluster001" というクラスターについて、ノードの一部のプロパティを出力します。  
   
 ```powershell  
@@ -87,20 +91,20 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 > [!NOTE]  
 >  cluster.exe ユーティリティは [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] リリースでは推奨されません。  今後は PowerShell とフェールオーバー クラスタリングを使用してください。  cluster.exe ユーティリティは、Windows Server の次のリリースで削除されます。 詳細については、「 [フェールオーバー クラスターの Windows PowerShell コマンドレットへの Cluster.exe コマンドのマッピング](http://technet.microsoft.com/library/ee619744\(WS.10\).aspx)」を参照してください。  
   
-##### NodeWeight 設定を表示するには  
+##### <a name="to-view-nodeweight-settings"></a>NodeWeight 設定を表示するには  
   
 1.  **[実行管理者として実行]**から高度な権限でコマンド プロンプトを起動します。  
   
 2.  **cluster.exe** を使用して、ノードの状態と NodeWeight の値を返します。  
   
-### 例 (Cluster.exe)  
+### <a name="example-clusterexe"></a>例 (Cluster.exe)  
  次の例では、"Cluster001" というクラスターについて、ノードの一部のプロパティを出力します。  
   
 ```ms-dos  
 cluster.exe Cluster001 node /status /properties  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [WSFC クォーラム モードと投票の構成 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [クラスター クォーラムの NodeWeight の設定の構成](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)   
  [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)   

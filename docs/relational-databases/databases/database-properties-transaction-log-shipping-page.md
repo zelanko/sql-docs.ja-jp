@@ -1,29 +1,33 @@
 ---
 title: "[データベースのプロパティ] ([トランザクション ログの配布] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.f1"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.logshipping.f1
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 11d0b9d1cde11ab1f3a0944c313d4d800e5039b0
+ms.lasthandoff: 04/11/2017
+
 ---
-# [データベースのプロパティ] ([トランザクション ログの配布] ページ)
+# <a name="database-properties-transaction-log-shipping-page"></a>[データベースのプロパティ] ([トランザクション ログの配布] ページ)
   このページを使用すると、データベースのログ配布のプロパティを構成および変更できます。  
   
  ログ配布の概念については、「[ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[ログ配布構成のプライマリ データベースとして有効にする]**  
  このデータベースをログ配布のプライマリ データベースとして有効にします。 オンにした場合は、このページの残りのオプションを構成します。 このチェック ボックスをオフにした場合、このデータベースのログ配布構成は削除されます。  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 21
  このプライマリ データベースに対して現在構成されているセカンダリ サーバーおよびセカンダリ データベースを表示します。 セカンダリ データベースに関連付けられているパラメーターを変更するには、データベースを強調表示し、 **[...]** をクリックします。  
   
  **[追加]**  
- このプライマリ データベースのログ配布構成にセカンダリ データベースを追加するには、**[追加]** をクリックします。  
+ このプライマリ データベースのログ配布構成にセカンダリ データベースを追加するには、 **[追加]** をクリックします。  
   
  **[削除]**  
  選択されているデータベースをこのログ配布構成から削除します。 データベースを選択してから、 **[削除]**をクリックします。  
@@ -60,7 +64,7 @@ caps.handback.revision: 21
 > [!IMPORTANT]  
 >  セカンダリ データベースの設定スクリプトを生成するには、 **[セカンダリ データベースの設定]** ダイアログ ボックスを呼び出す必要があります。 このダイアログ ボックスを呼び出すことにより、セカンダリ サーバーに接続して、スクリプトの生成に必要なセカンダリ データベースの現在の設定を取得できます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ログ配布ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md)   
  [ログ配布テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)  
   

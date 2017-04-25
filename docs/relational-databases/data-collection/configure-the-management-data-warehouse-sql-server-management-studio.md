@@ -1,47 +1,51 @@
 ---
 title: "管理データ ウェアハウスの構成 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dc.datacollection.wizard_completecfg.f1"
-  - "sql13.swb.dc.datacollection.wizard_config.f1"
-  - "sql13.swb.dc.datacollection.wizard_finish.f1"
-  - "sql13.swb.dc.datacollection.wizard_maploginuser.f1"
-  - "sql13.swb.dc.datacollection.wizard_choosemdw.f1"
-  - "sql13.swb.dc.datacollection.wizard_welcome.f1"
-  - "sql13.swb.dc.datacollection.wizard_createmdw.f1"
-helpviewer_keywords: 
-  - "データ ウェアハウス [SQL Server], 複数のインスタンス"
-  - "データ ウェアハウス [SQL Server], 構成"
-  - "管理データ ウェアハウス構成ウィザード"
-  - "管理データ ウェアハウス, 構成"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dc.datacollection.wizard_completecfg.f1
+- sql13.swb.dc.datacollection.wizard_config.f1
+- sql13.swb.dc.datacollection.wizard_finish.f1
+- sql13.swb.dc.datacollection.wizard_maploginuser.f1
+- sql13.swb.dc.datacollection.wizard_choosemdw.f1
+- sql13.swb.dc.datacollection.wizard_welcome.f1
+- sql13.swb.dc.datacollection.wizard_createmdw.f1
+helpviewer_keywords:
+- data warehouse [SQL Server], multiple instances
+- data warehouse [SQL Server], configuring
+- Configure Management Data Warehouse Wizard
+- management data warehouse, configuring
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0be7c28ff6d9359ae858902f7b2d07cee6f353f6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 管理データ ウェアハウスの構成 (SQL Server Management Studio)
+# <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>管理データ ウェアハウスの構成 (SQL Server Management Studio)
   このトピックでは、データ コレクターを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つまたは複数のインスタンスのデータ ストレージをサポートするように管理データ ウェアハウスを構成する方法について説明します。 対象のインスタンスは、同じサーバーまたは別々のサーバーのどちらに配置されていてもかまいません。 このトピックでは、 [管理データ ウェアハウス構成ウィザード](#Wizard) のユーザー インターフェイスについても説明します。 データ コレクターの構成の詳細については、「 [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)」を参照してください。  
   
 > [!NOTE]  
 >  システム サービス アカウント (ローカル システム、ネットワーク サービス、またはローカル サービス) を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを実行するように構成している場合に、管理データ ウェアハウスをデータ コレクターとは別のインスタンス上に作成するときは、プロキシを使用して管理データ ウェアハウスにデータをアップロードするようにコレクション セットを構成する必要があります。  
   
-###  の 1 つまたは複数のインスタンスの管理データ ウェアハウスの構成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>の 1 つまたは複数のインスタンスの管理データ ウェアハウスの構成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されていることを確認します。  
   
 2.  オブジェクト エクスプローラーで、 **[管理]** ノードを展開します。  
   
-3.  **[データ コレクション]** を右クリックし、**[タスク]** を展開して **[管理データ ウェアハウスの構成]** をクリックします。  
+3.  **[データ コレクション]**を右クリックし、 **[タスク]**を展開して **[管理データ ウェアハウスの構成]**をクリックします。  
   
 4.  [管理データ ウェアハウス構成ウィザード](#Wizard) で、管理データ ウェアハウスを作成し、ログインを構成します。次に、データ コレクションを有効化し、 **システム データ コレクション セット**を開始します。  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 28
   
     -   管理データ ウェアハウス構成ウィザードを使用して、既存の管理データ ウェアハウス用にデータ コレクションを構成します。  
   
-    -   **[データ コレクション]** を右クリックし、**[プロパティ]** をクリックします。 **[全般]** タブで、既存の管理データ ウェアハウス、およびそれがインストールされたサーバーを指定します。  
+    -   **[データ コレクション]**を右クリックし、 **[プロパティ]**をクリックします。 **[全般]** タブで、既存の管理データ ウェアハウス、およびそれがインストールされたサーバーを指定します。  
   
 6.  データ コレクターを使用するすべてのデータベース インスタンスが共有管理データ ウェアハウスにデータをアップロードするように構成されるまで、手順 5. を繰り返します。  
   
@@ -92,7 +96,7 @@ caps.handback.revision: 28
   
  ログインの **[マップ]** チェック ボックスをオンにしてログインを指定します。  
   
- **データベース ロール メンバーシップ:** *\<data warehouse name>*  
+ *\<data warehouse name>* の**データベース ロール メンバーシップ**  
  次のオプションの 1 つ以上についてチェック ボックスをオンにし、ログインがマップされる管理データ ウェアハウス ロールを選択します。  
   
 -   **mdw_admin**  
@@ -132,10 +136,10 @@ caps.handback.revision: 28
  **[閉じる]**  
  ウィザードを閉じます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
  [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
- [データ コレクション](../../relational-databases/data-collection/data-collection.md)   
+ [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)   
  [データ コレクションの管理](../../relational-databases/data-collection/manage-data-collection.md)  
   
   

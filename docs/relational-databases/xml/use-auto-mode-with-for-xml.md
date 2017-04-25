@@ -1,28 +1,32 @@
 ---
 title: "FOR XML での AUTO モードの使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML 句, AUTO モード"
-  - "ELEMENTS オプション"
-  - "FOR XML AUTO モード"
-  - "AUTO FOR XML モード"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, AUTO mode
+- ELEMENTS option
+- FOR XML AUTO mode
+- AUTO FOR XML mode
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1dcb415f177d7a7163520c1b4295cadbca5f4cc9
+ms.lasthandoff: 04/11/2017
+
 ---
-# FOR XML での AUTO モードの使用
-  「[FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)」で説明したように、AUTO モードを使用すると、入れ子構造の XML 要素としてクエリ結果が返されます。 AUTO モードでは、クエリ結果から生成される XML の構造はあまり制御されません。 AUTO モードのクエリは、単純な階層を生成する場合に役立ちます。 ただし、[FOR XML での EXPLICIT モードの使用](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)や [FOR XML での PATH モードの使用](../../relational-databases/xml/use-path-mode-with-for-xml.md)により、クエリ結果から XML の構造を決定するときに、より厳密な制御や高い柔軟性を実現できます。  
+# <a name="use-auto-mode-with-for-xml"></a>FOR XML での AUTO モードの使用
+  「 [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)」で説明したように、AUTO モードを使用すると、入れ子構造の XML 要素としてクエリ結果が返されます。 AUTO モードでは、クエリ結果から生成される XML の構造はあまり制御されません。 AUTO モードのクエリは、単純な階層を生成する場合に役立ちます。 ただし、 [FOR XML での EXPLICIT モードの使用](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) や [FOR XML での PATH モードの使用](../../relational-databases/xml/use-path-mode-with-for-xml.md) により、クエリ結果から XML の構造を決定するときに、より厳密な制御や高い柔軟性を実現できます。  
   
  FROM 句の各テーブルは XML 要素として表され、そのうち少なくとも 1 列が SELECT 句のリストに含められます。 FOR XML 句で省略可能な ELEMENTS オプションを指定すると、SELECT 句のリストに含められる列は属性またはサブ要素にマップされます。  
   
@@ -122,13 +126,13 @@ FOR XML AUTO, ELEMENTS
   
  このクエリでは、\<Cust> 要素の作成時に CustomerID の値が行ごとに比較されます。これは、CustomerID がテーブルの主キーであるためです。 CustomerID がテーブルの主キーとして識別されない場合、列のすべての値 (このクエリでは CustomerID、CustomerType) が行ごとに比較されます。 値が異なる場合は、新しい \<Cust> 要素が XML に追加されます。  
   
- これらの列の値を比較するとき、比較するいずれかの列が **text** 型、**ntext** 型、**image** 型、または **xml** 型の場合は、FOR XML では値が同じ場合でも値が異なると想定され比較されません。 これは、ラージ オブジェクトの比較がサポートされていないためです。 選択した行ごとに、要素が結果に追加されます。 **(n)varchar(max)** 型および **varbinary(max)** 型の列は比較されることに注意してください。  
+ これらの列の値を比較するとき、比較するいずれかの列が **text**型、 **ntext**型、 **image**型、または **xml**型の場合は、FOR XML では値が同じ場合でも値が異なると想定され比較されません。 これは、ラージ オブジェクトの比較がサポートされていないためです。 選択した行ごとに、要素が結果に追加されます。 **(n)varchar(max)** 型および **varbinary(max)** 型の列は比較されることに注意してください。  
   
  集計列や計算列の場合と同様に、SELECT 句内の列を FROM 句内で識別されるいずれかのテーブルと関連付けることができない場合、その列がリストに見つかった時点で最も深い入れ子レベルの XML ドキュメントに追加されます。 このような列が SELECT 句内の最初の列の場合は、最上位の要素に追加されます。  
   
  SELECT 句にアスタリスク (*) ワイルドカード文字を指定すると、クエリ エンジンから行が返される順序に基づいて上記の説明と同じ方法で入れ子が決定されます。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
  次のトピックでは、AUTO モードの詳細について説明します。  
   
 -   [BINARY BASE64 オプションの使用](../../relational-databases/xml/use-the-binary-base64-option.md)  
@@ -137,7 +141,7 @@ FOR XML AUTO, ELEMENTS
   
 -   [例 : AUTO モードの使用](../../relational-databases/xml/examples-using-auto-mode.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   

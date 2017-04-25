@@ -1,28 +1,32 @@
 ---
 title: "データの一括インポートでのフォーマット ファイルの使用 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "一括インポート [SQL Server], フォーマット ファイル"
-  - "フォーマット ファイル [SQL Server], データのインポートでの使用"
+ms.custom: 
+ms.date: 09/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bulk importing [SQL Server], format files
+- format files [SQL Server], importing data using
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56c7e17bb97577907d21c0e1109ee3336337164b
+ms.lasthandoff: 04/11/2017
+
 ---
-# データの一括インポートでのフォーマット ファイルの使用 (SQL Server)
+# <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>データの一括インポートでのフォーマット ファイルの使用 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-このトピックでは、一括インポート操作でのフォーマット ファイルの使用方法について説明します。  フォーマット ファイルでは、データ ファイルのフィールドがテーブルの列にマップされます。  詳細については、「[フォーマット ファイルの作成 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)」を参照してください。
+このトピックでは、一括インポート操作でのフォーマット ファイルの使用方法について説明します。  フォーマット ファイルでは、データ ファイルのフィールドがテーブルの列にマップされます。  詳細については、「 [フォーマット ファイルの作成 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) 」を参照してください。
 
 |[外枠]|
 |---|
@@ -34,7 +38,7 @@ caps.handback.revision: 45
   * SQLCHAR または SQLVARYCHAR (データは、クライアント コード ページまたは照合順序で暗黙的に指定されるコード ページで送られます)
   * SQLNCHAR または SQLNVARCHAR (データは Unicode として送信されます)
   * SQLBINARY または SQLVARYBIN (データは変換なしで送られます)
-* Azure SQL Database と Azure SQL Data Warehouse は、[bcp](../../tools/bcp-utility.md) のみをサポートします。  その他の詳細については、以下を参照してください。
+* Azure SQL Database と Azure SQL Data Warehouse は、 [bcp](../../tools/bcp-utility.md)のみをサポートします。  その他の詳細については、以下を参照してください。
   * [Azure SQL Data Warehouse にデータを読み込む](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-load/)
   * [SQL Server から Azure SQL Data Warehouse にデータを読み込む (フラット ファイル)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
   * [データを移行する](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-migrate-data/)
@@ -43,7 +47,7 @@ caps.handback.revision: 45
 このトピックのフォーマット ファイルの例は、以下に定義されたテーブルとデータ ファイルに基づいています。
 
 ### **サンプル テーブル**<a name="sample_table"></a>
-以下のスクリプトでは、テスト データベースと `myFirstImport` という名前のテーブルが作成されます。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
+以下のスクリプトでは、テスト データベースと `myFirstImport`という名前のテーブルが作成されます。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
 ```tsql
 CREATE DATABASE TestDatabase;
 GO
@@ -97,7 +101,7 @@ Invoke-Item $bcpFile;
 SQL Server は、非 XML 形式と XML 形式の 2 種類のフォーマット ファイルをサポートしています。  XML 以外のフォーマットとは、以前のバージョンの SQL Server でサポートされる従来のフォーマットです。
 
 ### **XML 以外のフォーマット ファイルの作成**<a name="nonxml_format_file"></a>
-詳細については、「[XML 以外のフォーマット ファイル (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)」を参照してください。  次のコマンドでは、[bcp ユーティリティ](../../tools/bcp-utility.md)を使用し、`myFirstImport` のスキーマに基づいて XML 以外のフォーマット ファイル `myFirstImport.fmt` を生成します。  bcp コマンドを使用してフォーマット ファイルを作成するには、**format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。  format オプションには、次に示す **-f** オプションが必要です。  さらに、この例では、修飾子 **c** を使用して文字データを指定し、**t** を使用して[フィールド ターミネータ](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)としてコンマを指定し、**T** を使用して統合セキュリティによる信頼された接続を指定します。  コマンド プロンプトで、次のコマンドを入力します。
+詳細については、「 [XML 以外のフォーマット ファイル (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 」を参照してください。  次のコマンドでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用し、 `myFirstImport.fmt`のスキーマに基づいて XML 以外のフォーマット ファイル `myFirstImport`を生成します。  bcp コマンドを使用してフォーマット ファイルを作成するには、 **format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。  format オプションには、次に示す **-f** オプションが必要です。  さらに、この例では、修飾子 **c** を使用して文字データを指定し、 **t** を使用して [フィールド ターミネータ](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)としてコンマを指定し、 **T** を使用して統合セキュリティによる信頼された接続を指定します。  コマンド プロンプトで、次のコマンドを入力します。
 
 ```
 bcp TestDatabase.dbo.myFirstImport format nul -c -f D:\BCP\myFirstImport.fmt -t, -T
@@ -123,7 +127,7 @@ Notepad D:\BCP\myFirstImport.fmt
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
 ### **XML フォーマット ファイルの作成**<a name="xml_format_file"></a>  
-詳細については、「[XML フォーマット ファイル (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)」を参照してください。  次のコマンドでは、[bcp ユーティリティ](../../tools/bcp-utility.md)を使用し、`myFirstImport` のスキーマに基づいて XML のフォーマット ファイル `myFirstImport.xml` を生成します。 bcp コマンドを使用してフォーマット ファイルを作成するには、**format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。  format オプションには常に **-f** オプションが必要です。XML フォーマット ファイルを作成するには、**-x** オプションも指定する必要があります。  さらに、この例では、修飾子 **c** を使用して文字データを指定し、**t** を使用して[フィールド ターミネータ](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)としてコンマを指定し、**T** を使用して統合セキュリティによる信頼された接続を指定します。  コマンド プロンプトで、次のコマンドを入力します。
+詳細については、「 [XML フォーマット ファイル (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) 」を参照してください。  次のコマンドでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用し、 `myFirstImport.xml`のスキーマに基づいて XML のフォーマット ファイル `myFirstImport`を生成します。 bcp コマンドを使用してフォーマット ファイルを作成するには、 **format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。  format オプションには常に **-f** オプションが必要です。XML フォーマット ファイルを作成するには、 **-x** オプションも指定する必要があります。  さらに、この例では、修飾子 **c** を使用して文字データを指定し、 **t** を使用して [フィールド ターミネータ](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)としてコンマを指定し、 **T** を使用して統合セキュリティによる信頼された接続を指定します。  コマンド プロンプトで、次のコマンドを入力します。
 ```
 bcp TestDatabase.dbo.myFirstImport format nul -c -x -f D:\BCP\myFirstImport.xml -t, -T
 
@@ -133,19 +137,19 @@ Notepad D:\BCP\myFirstImport.xml
 
 XML フォーマット ファイルの `D:\BCP\myFirstImport.xml` は次のようになります。
 ```
-<?xml version="1.0"?>
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+\<?xml version="1.0"?>
+\<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
-  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
-  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  <FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="11"/>
+  \<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
+  \<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="11"/>
  </RECORD>
  <ROW>
-  <COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
-  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="4" NAME="BirthDate" xsi:type="SQLDATE"/>
+  \<COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
+  \<COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
+  \<COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
+  \<COLUMN SOURCE="4" NAME="BirthDate" xsi:type="SQLDATE"/>
  </ROW>
 </BCPFORMAT>
 ```
@@ -213,7 +217,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### **[OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) と [XML 以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)の使用**<a name="openrowset_nonxml"></a> 
+### **[OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) と [XML 以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)の使用**<a name="openrowset_nonxml"></a>    
 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
 ```tsql
 USE TestDatabase;
@@ -251,17 +255,18 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
   
-## その他の例  
+## <a name="more-examples"></a>その他の例  
  [フォーマット ファイルの作成 &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
  [フォーマット ファイルを使用したテーブル列のスキップ &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
  [フォーマット ファイルを使用したデータ フィールドのスキップ &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
  [フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## 参照  
- [bcp ユーティリティ](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>参照  
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [XML フォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)  
   [データのインポートまたはエクスポート用のフォーマット ファイル (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
   
+

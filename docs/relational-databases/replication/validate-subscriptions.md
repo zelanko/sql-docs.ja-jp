@@ -1,29 +1,33 @@
 ---
-title: "[サブスクリプションの検証] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.validate.subscriptions.f1"
-helpviewer_keywords: 
-  - "[サブスクリプションの検証] ダイアログ ボックス"
+title: "サブスクリプションの検証 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.validate.subscriptions.f1
+helpviewer_keywords:
+- Validate Subscriptions dialog box
 ms.assetid: 0ca39a35-f22c-46c5-82a4-342e34bf5d1b
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3751c169e73b2c15ffe204221a3ce3db3176506
+ms.lasthandoff: 04/11/2017
+
 ---
-# [サブスクリプションの検証]
-  使用して、 **のサブスクリプションの検証** ダイアログ ボックスをトランザクション パブリケーションに対するサブスクリプションが次回各サブスクリプションに対してディストリビューション エージェントが実行を検証するかを指定します。 検証の結果はレプリケーション モニターに表示されます。 詳しくは、「 [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md)」をご覧ください。  
+# <a name="validate-subscriptions"></a>[サブスクリプションの検証]
+  **[サブスクリプションの検証]** ダイアログ ボックスを使用すると、各サブスクリプションのディストリビューション エージェントを次に実行するときに、トランザクション パブリケーションに対するサブスクリプションを検証するように指定できます。 検証の結果はレプリケーション モニターに表示されます。 詳細については、「 [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md)」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[すべての SQL Server サブスクリプションを検証する]**  
  選択すると、このパブリケーションに対するすべての SQL Server サブスクリプションのデータが検証されます。  
   
@@ -31,9 +35,9 @@ caps.handback.revision: 21
  すべてのサブスクリプションを検証しない場合に選択します。 検証するサブスクリプションを一覧から選択します。  
   
  **[検証オプション]**  
- クリックするとアクセス、 **サブスクリプションの検証オプション** ] ダイアログ ボックスは、行数の検証またはバイナリ チェックサムの検証を使用するかどうかを指定することができます。  
+ クリックすると、 **[サブスクリプションの検証オプション]** ダイアログ ボックスが開き、行数の検証とバイナリ チェックサムの検証のどちらを使用するかを指定できます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レプリケートされたデータの検証](../../relational-databases/replication/validate-replicated-data.md)  
   
   

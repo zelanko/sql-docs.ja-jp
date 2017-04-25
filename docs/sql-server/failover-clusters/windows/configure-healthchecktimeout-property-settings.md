@@ -1,32 +1,36 @@
 ---
 title: "HealthCheckTimeout プロパティ設定の構成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: fe45e057f3e8a9a4cd105cad16ef773c2aed0928
+ms.lasthandoff: 04/11/2017
+
 ---
-# HealthCheckTimeout プロパティ設定の構成
+# <a name="configure-healthchecktimeout-property-settings"></a>HealthCheckTimeout プロパティ設定の構成
   HealthCheckTimeout 設定を使用して、SQL Server リソース DLL が [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) ストアド プロシージャによって返される情報を待機する時間を、ミリ秒単位で指定できます。この待機時間を経過すると、AlwaysOn フェールオーバー クラスター インスタンス (FCI) は応答不能としてレポートされます。 タイムアウトの設定に加えられた変更は直ちに有効になり、SQL Server リソースを再起動する必要はありません。  
   
--   **作業を開始する準備:** [制限事項と制約事項](#Limits)、[セキュリティ](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Limits), [Security](#Security)  
   
--   **HeathCheckTimeout 設定を構成する方法:** [PowerShell](#PowerShellProcedure)、[フェールオーバー クラスター マネージャー](#WSFC)、[Transact-SQL](#TsqlProcedure)  
+-   **To Configure the HeathCheckTimeout setting, using:**  [PowerShell](#PowerShellProcedure), [Failover Cluster Manager](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Limits"></a> 制限事項と制約事項  
- このプロパティの既定値は 60,000 ミリ秒 (60 秒) です。 最小値は 15,000 ミリ秒 (15 秒) です。  
+ このプロパティの既定値は 30,000 ミリ秒 (30 秒) です。 最小値は 15,000 ミリ秒 (15 秒) です。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 30
   
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
   
-##### HealthCheckTimeout 設定を構成するには  
+##### <a name="to-configure-healthchecktimeout-settings"></a>HealthCheckTimeout 設定を構成するには  
   
 1.  **[実行管理者として実行]**から高度な権限で Windows PowerShell を起動します。  
   
@@ -44,10 +48,10 @@ caps.handback.revision: 30
 3.  **Get-ClusterResource** コマンドレットを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースを検索し、次に **Set-ClusterParameter** コマンドレットを使用してフェールオーバー クラスター インスタンスの **HealthCheckTimeout** プロパティを設定します。  
   
 > [!TIP]  
->  新しい PowerShell ウィンドウを開くたびに、**FailoverClusters** モジュールをインポートする必要があります。  
+>  新しい PowerShell ウィンドウを開くたびに、 **FailoverClusters** モジュールをインポートする必要があります。  
   
-### 例 (PowerShell)  
- 次の例では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソース "`SQL Server (INST1)`" の HealthCheckTimeout 設定が 60000 ミリ秒に変更されます。  
+### <a name="example-powershell"></a>例 (PowerShell)  
+ 次の例では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソース "`SQL Server (INST1)`" の HealthCheckTimeout 設定が 60000 ミリ秒に変更されます。  
   
 ```powershell  
 Import-Module FailoverClusters  
@@ -57,7 +61,7 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 ```  
   
-### 関連コンテンツ (PowerShell)  
+### <a name="related-content-powershell"></a>関連コンテンツ (PowerShell)  
   
 -   [クラスターと高可用性](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (フェールオーバー クラスタリングとネットワーク負荷分散のチームのブログ)  
   
@@ -87,7 +91,8 @@ ALTER SERVER CONFIGURATION
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [フェールオーバー クラスター インスタンスのフェールオーバー ポリシー](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   
+

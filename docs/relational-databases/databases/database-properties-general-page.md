@@ -1,28 +1,32 @@
 ---
 title: "[データベースのプロパティ] ([全般] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/27/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.general.f1"
-  - "sql13.swb.databaseproperties.segments.f1"
+ms.custom: 
+ms.date: 10/27/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.general.f1
+- sql13.swb.databaseproperties.segments.f1
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1ab703fcc2c29fae271b7484495cacf47bbcfd67
+ms.lasthandoff: 04/11/2017
+
 ---
-# [データベースのプロパティ] ([全般] ページ)
+# <a name="database-properties-general-page"></a>[データベースのプロパティ] ([全般] ページ)
   このページを使用すると、選択されているデータベースのプロパティを表示または変更できます。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[最終データベース バックアップ]**  
  データベースが最後にバックアップされた日付を表示します。  
   
@@ -33,10 +37,10 @@ caps.handback.revision: 28
  データベースの名前が表示されます。  
   
  **[状態]**  
- データベースの状態を表示します。 詳細については、「[データベースの状態](../../relational-databases/databases/database-states.md)」を参照してください。  
+ データベースの状態を表示します。 詳細については、「 [データベースの状態](../../relational-databases/databases/database-states.md)」を参照してください。  
   
  **所有者**  
- データベースの所有者の名前を表示します。 所有者は、**[ファイル]** ページで変更できます。  
+ データベースの所有者の名前を表示します。 所有者は、 **[ファイル]** ページで変更できます。  
   
  **[作成日]**  
  データベースが作成された日時を表示します。  
@@ -51,12 +55,13 @@ caps.handback.revision: 28
  データベースに構成されているユーザー数を表示します。  
   
  **[照合順序名]**  
- データベースの照合順序を表示します。 照合順序は、**[オプション]** ページで変更できます。  
+ データベースの照合順序を表示します。 照合順序は、 **[オプション]** ページで変更できます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
+ [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)  
   
   
+

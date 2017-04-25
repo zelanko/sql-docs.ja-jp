@@ -1,0 +1,1 @@
+![ダウンロード](../ssdt/media/download.png)[pyodbc Python Driver のインストール](../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md) ![ダウンロード](../ssdt/media/download.png)[pymssql Python Driver のインストール](../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md) 

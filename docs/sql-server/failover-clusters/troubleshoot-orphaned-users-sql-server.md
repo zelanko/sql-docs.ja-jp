@@ -1,39 +1,43 @@
 ---
 title: "孤立ユーザーのトラブルシューティング (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "孤立ユーザー [SQL Server]"
-  - "ログイン [SQL Server]、孤立ユーザー"
-  - "トラブルシューティング [SQL Server]、ユーザー アカウント"
-  - "ユーザー アカウント [SQL Server]、孤立ユーザー"
-  - "フェールオーバー [SQL Server]、メタデータの管理"
-  - "データベース ミラーリング [SQL Server]、メタデータ"
-  - "ユーザー [SQL Server]、孤立"
+ms.custom: 
+ms.date: 07/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- orphaned users [SQL Server]
+- logins [SQL Server], orphaned users
+- troubleshooting [SQL Server], user accounts
+- user accounts [SQL Server], orphaned users
+- failover [SQL Server], managing metadata
+- database mirroring [SQL Server], metadata
+- users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5f76cf5789d67f93443149074b0c4e8708f90000
+ms.lasthandoff: 04/11/2017
+
 ---
-# 孤立ユーザーのトラブルシューティング (SQL Server)
+# <a name="troubleshoot-orphaned-users-sql-server"></a>孤立ユーザーのトラブルシューティング (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   データベース ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マスター **データベースのログインに基づくが、ログインが** マスター **に存在しなくなったとき、**の孤立ユーザーが発生します。 これはログインが削除されたか、データベースが別のサーバーに移され、ログインがなくなったときに発生します。 このトピックでは、孤立ユーザーを見つけ、ログインに再マッピングする方法について説明します。  
   
 > [!NOTE]  
->  移動される可能性のあるデータベースには包含データベース ユーザーを利用し、孤立ユーザーの可能性を減らします。 詳細については、「[包含データベース ユーザー - データベースの可搬性を確保する](../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
+>  移動される可能性のあるデータベースには包含データベース ユーザーを利用し、孤立ユーザーの可能性を減らします。 詳細については、「 [包含データベース ユーザー - データベースの可搬性を確保する](../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
   
-## 背景情報  
- ログインに基づくセキュリティ プリンシパルを利用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでデータベースに接続するには、**マスター** データベースでプリンシパルに有効なログインを与える必要があります。 このログインは、プリンシパル ID を確認し、プリンシパルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続できるかどうかを決定する認証プロセスで使用されます。 サーバー インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインは、**sys.server_principals** カタログ ビューと **sys.sql_logins** 互換性ビューで表示できます。  
+## <a name="background"></a>背景情報  
+ ログインに基づくセキュリティ プリンシパルを利用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでデータベースに接続するには、 **マスター** データベースでプリンシパルに有効なログインを与える必要があります。 このログインは、プリンシパル ID を確認し、プリンシパルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続できるかどうかを決定する認証プロセスで使用されます。 サーバー インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインは、 **sys.server_principals** カタログ ビューと **sys.sql_logins** 互換性ビューで表示できます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにマップされている "データベース ユーザー" として個々のデータベースにアクセスします。 このルールには次の 3 つの例外があります。  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 41
   
  データベース ユーザー (ログイン ベース) は、それに対応する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが未定義のとき、またはサーバー インスタンスで適切に定義されていないとき、インスタンスにログインできません。 このようなユーザーは、そのサーバー インスタンスのデータベースの *孤立ユーザー* と呼ばれます。 孤立状態は、データベース ユーザーが `master` インスタンスに存在しないログイン SID にマップされると発生する場合があります。 データベースを復元した後や、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の別のインスタンスにアタッチしたが、そこではログインが作成されていないときも、孤立状態になることがあります。 データベース ユーザーは、対応する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが削除された場合にも孤立状態になることがあります。 ログインが再作成される場合でも、異なる SID が与えられ、データベース ユーザーが孤立します。  
   
-## 孤立ユーザーを検出するには  
+## <a name="to-detect-orphaned-users"></a>孤立ユーザーを検出するには  
 
 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および PDW の場合**
 
@@ -93,7 +97,7 @@ WHERE sp.SID IS NULL
 
 3. 2 つのリストを比較して、ユーザー データベースの `sys.database_principals` テーブルのユーザー SID の中に、マスター データベースの `sql_logins` テーブルのログイン SID と一致しないものがあるかどうかを調べます。 
   
-## 孤立ユーザーを解決するには  
+## <a name="to-resolve-an-orphaned-user"></a>孤立ユーザーを解決するには  
 マスター データベースで、SID オプションで [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) ステートメントを使用して、なくなったログインを再作成します。前のセクションで取得したデータベース ユーザーの `SID` を提供します。  
   
 ```  
@@ -119,7 +123,7 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
   
  非推奨プロシージャ [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) も孤立ユーザーで機能します。 `sp_change_users_login` と [!INCLUDE[ssSDS](../../includes/sssds-md.md)]は一緒には使用できません。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER USER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
@@ -134,3 +138,4 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
  [sys.syslogins &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
   
   
+

@@ -1,24 +1,28 @@
 ---
 title: "FileTable 内のディレクトリとパスの操作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server]、ディレクトリ"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d41410b3da1f823a29da0c5b7bd706dff4ce4584
+ms.lasthandoff: 04/11/2017
+
 ---
-# FileTable 内のディレクトリとパスの操作
+# <a name="work-with-directories-and-paths-in-filetables"></a>FileTable 内のディレクトリとパスの操作
   FileTable 内でファイルが格納されるディレクトリ構造について説明します。  
   
 ##  <a name="HowToDirectories"></a> 方法: FileTable 内のディレクトリとパスを操作する  
@@ -31,7 +35,7 @@ caps.handback.revision: 25
 |パスを指定して、FileTable 内の指定されたファイルまたはディレクトリのパス ロケーター ID 値を取得する。|[GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md)|  
   
 ##  <a name="BestPracticeRelativePaths"></a> 方法: 相対パスを使用して移植可能なコードを実現する  
- コードとアプリケーションが現在のコンピューターとデータベースから切り離された状態を維持するには、絶対ファイル パスに依存したコードを記述しないでください。 代わりに、以下の例に示すように [FileTableRootPath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) 関数および [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 関数を併用して、実行時にファイルの完全なパスを取得します。 既定では、 **GetFileNamespacePath** 関数は、データベースのルート パスの下のファイルの相対パスを返します。  
+ コードとアプリケーションが現在のコンピューターとデータベースから切り離された状態を維持するには、絶対ファイル パスに依存したコードを記述しないでください。 代わりに、以下の例に示すように [FileTableRootPath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) 関数および [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)関数を併用して、実行時にファイルの完全なパスを取得します。 既定では、 **GetFileNamespacePath** 関数は、データベースのルート パスの下のファイルの相対パスを返します。  
   
 ```tsql  
 USE database_name;  
@@ -62,9 +66,9 @@ GO
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス レベルでの FILESTREAM ファイル I/O アクセスが有効になっている共有。  
   
-2.  データベース レベルで指定された **DIRECTORY_NAME**。  
+2.  データベース レベルで指定された **DIRECTORY_NAME** 。  
   
-3.  FileTable レベルで指定された **FILETABLE_DIRECTORY**。  
+3.  FileTable レベルで指定された **FILETABLE_DIRECTORY** 。  
   
  以上を組み合わせた階層は、次のようになります。  
   
@@ -77,22 +81,22 @@ GO
 ##  <a name="roots"></a> インスタンス レベル、データベース レベル、および FileTable レベルのルート ディレクトリのセマンティクス  
  このディレクトリ階層は次のセマンティクスに従います。  
   
--   インスタンス レベルの FILESTREAM 共有は管理者によって構成され、サーバーのプロパティとして格納されます。 この共有の名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して変更できます。 名前変更の操作は、サーバーを再起動するまで有効になりません。  
+-   インスタンス レベルの FILESTREAM 共有は管理者によって構成され、サーバーのプロパティとして格納されます。 この共有の名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して変更できます。 名前変更の操作は、サーバーを再起動するまで有効になりません。  
   
 -   新しいデータベースを作成した場合、データベース レベルの **DIRECTORY_NAME** は既定で null です。 管理者は **ALTER DATABASE** ステートメントを使用して、この名前を設定または変更することができます。 名前は、インスタンス内で一意であることが必要です (大文字と小文字は区別されません)。  
   
--   通常、**FILETABLE_DIRECTORY** 名は、FileTable を作成する際に **CREATE TABLE** ステートメントの中で指定します。 この名前は、 **ALTER TABLE** コマンドを使用して変更することができます。  
+-   通常、 **FILETABLE_DIRECTORY** 名は、FileTable を作成する際に **CREATE TABLE** ステートメントの中で指定します。 この名前は、 **ALTER TABLE** コマンドを使用して変更することができます。  
   
 -   ファイル I/O 操作でこれらのルート ディレクトリの名前を変更することはできません。  
   
 -   排他的なファイル ハンドルを使用してこれらのルート ディレクトリを開くことはできません。  
   
 ##  <a name="is_directory"></a> FileTable スキーマの is_directory 列  
- 次の表に、**is_directory** 列と、FileTable の FILESTREAM データを格納する **file_stream** 列との間のやり取りを示します。  
+ 次の表に、 **is_directory** 列と、FileTable の FILESTREAM データを格納する **file_stream** 列との間のやり取りを示します。  
   
 ||||  
 |-|-|-|  
-|*is_directory* **の値**|*file_stream* **の値**|**動作**|  
+|*is_directory* **value**|*file_stream* **value**|**動作**|  
 |FALSE|NULL|これは、システム定義の制約によってキャッチされる無効な組み合わせです。|  
 |FALSE|\<値>|アイテムはファイルを表します。|  
 |TRUE|NULL|アイテムはディレクトリを表します。|  
@@ -105,10 +109,11 @@ GO
   
 -   ファイル システム API を介した FILESTREAM または FileTable データへのすべてのアクセスでは、コンピューター名ではなく VNN を使用する必要があります。 詳細については、「[FILESTREAM および FileTable と AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [FileTable の前提条件の有効化](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)   
  [FileTable の作成、変更、および削除](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
  [Transact SQL を使用した FileTable へのアクセス](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [ファイル I/O API を使用した FileTable へのアクセス](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   
   
+

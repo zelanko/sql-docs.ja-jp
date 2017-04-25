@@ -1,37 +1,41 @@
 ---
 title: "ストアド プロシージャの削除 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "削除、ストアド プロシージャ"
-  - "ストアド プロシージャ [SQL Server], 削除"
-  - "消去、ストアド プロシージャ"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing stored procedures
+- stored procedures [SQL Server], deleting
+- deleting stored procedures
 ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d9f9d65d2521299d34188897fbbf5675b5c9eea4
+ms.lasthandoff: 04/11/2017
+
 ---
-# ストアド プロシージャの削除
+# <a name="delete-a-stored-procedure"></a>ストアド プロシージャの削除
     
-##  <a name="Top"></a> このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] でストアド プロシージャを削除する方法について説明します。  
+##  <a name="Top"></a> このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャを削除する方法について説明します。  
   
--   **作業を開始する準備:** [制限事項と制約事項](#Restrictions)、[セキュリティ](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
--   **プロシージャの削除に使用するもの:** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **To delete a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
- プロシージャを削除すると、依存オブジェクトとスクリプトを更新してプロシージャの削除を反映しない限り、そのオブジェクトとスクリプトが失敗する可能性があります。 ただし、名前とパラメーターが同じである新しいプロシージャを作成し、削除したプロシージャと置き換えた場合、そのプロシージャを参照する他のオブジェクトは正常に処理されます。 詳細については、「[ストアド プロシージャの依存関係の表示](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)」を参照してください。  
+ プロシージャを削除すると、依存オブジェクトとスクリプトを更新してプロシージャの削除を反映しない限り、そのオブジェクトとスクリプトが失敗する可能性があります。 ただし、名前とパラメーターが同じである新しいプロシージャを作成し、削除したプロシージャと置き換えた場合、そのプロシージャを参照する他のオブジェクトは正常に処理されます。 詳細については、「 [ストアド プロシージャの依存関係の表示](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)」を参照してください。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 26
   
 2.  **[データベース]**を展開し、プロシージャが属するデータベースを展開し、 **[プログラミング]**を展開します。  
   
-3.  **[ストアド プロシージャ]** を展開し、削除するプロシージャを右クリックして、**[削除]** をクリックします。  
+3.  **[ストアド プロシージャ]**を展開し、削除するプロシージャを右クリックして、 **[削除]**をクリックします。  
   
 4.  プロシージャに依存するオブジェクトを表示するには、 **[依存関係の表示]**をクリックします。  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 26
   
 6.  任意の依存オブジェクトおよびスクリプトからプロシージャへの参照を削除します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ストアド プロシージャの作成](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [ストアド プロシージャの変更](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [ストアド プロシージャの名前の変更](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)   

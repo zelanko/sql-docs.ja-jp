@@ -1,26 +1,30 @@
 ---
 title: "ポリシー ベースの管理条件のプロパティの表示または変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ポリシー ベースの管理、ポリシー条件の表示"
-  - "ポリシー ベースの管理、ポリシー条件の変更"
+ms.custom: 
+ms.date: 10/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, view policy conditions
+- Policy-Based Management, modify policy conditions
 ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cac543a91282a6329e44c297d56a9550b18f4681
+ms.lasthandoff: 04/11/2017
+
 ---
-# ポリシー ベースの管理条件のプロパティの表示または変更
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] でポリシー ベースの管理条件のプロパティを表示または変更する方法について説明します。  
+# <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>ポリシー ベースの管理条件のプロパティの表示または変更
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でポリシー ベースの管理条件のプロパティを表示または変更する方法について説明します。  
   
 
   
@@ -33,7 +37,7 @@ caps.handback.revision: 11
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### 条件のプロパティを表示または変更するには  
+#### <a name="to-view-or-modify-a-conditions-properties"></a>条件のプロパティを表示または変更するには  
   
 1.  **オブジェクト エクスプローラー**で、表示または変更する条件を含むサーバーをプラス記号をクリックして展開します。  
   
@@ -43,13 +47,13 @@ caps.handback.revision: 11
   
 4.  プラス記号をクリックして **[条件]** フォルダーを展開します。  
   
-5.  表示または編集する条件を右クリックし、**[プロパティ]** をクリックします。 [**条件を開く-***condition_name*] ダイアログ ボックスで使用可能なオプションの詳細については、「[[新しい条件の作成] または [条件を開く] ダイアログ ボックスの [全般] ページ](../Topic/Create%20New%20Condition%20or%20Open%20Condition%20Dialog%20Box,%20General%20Page.md)」、「[[条件を開く] ダイアログ ボックス、[依存ポリシー] ページ](../Topic/Open%20Condition%20Dialog%20Box,%20Dependent%20Policies%20Page.md)」「[[新しい条件の作成] または [条件を開く] ダイアログ ボックスの [説明] ページ](../Topic/Create%20New%20Condition%20or%20Open%20Condition%20Dialog%20Box,%20Description%20Page.md)」、「[[高度な編集] &#40;条件&#41; ダイアログ ボックス](../Topic/Advanced%20Edit%20\(Condition\)%20Dialog%20Box.md)」を参照してください。  
+5.  表示または編集する条件を右クリックし、**[プロパティ]** をクリックします。 [**条件を開く-***condition_name*] ダイアログ ボックスで使用可能なオプションの詳細については、「[[新しい条件の作成] または [条件を開く] ダイアログ ボックスの [全般] ページ](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)」、「[[条件を開く] ダイアログ ボックス、[依存ポリシー] ページ](../../relational-databases/policy-based-management/open-condition-dialog-box-dependent-policies-page.md)」「[[新しい条件の作成] または [条件を開く] ダイアログ ボックスの [説明] ページ](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-description-page.md)」、「[[高度な編集] &#40;条件&#41; ダイアログ ボックス](../../relational-databases/policy-based-management/advanced-edit-condition-dialog-box.md)」を参照してください。  
   
 6.  完了したら、 **[OK]**をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### 条件のプロパティを表示するには  
+#### <a name="to-view-a-conditions-properties"></a>条件のプロパティを表示するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -74,3 +78,4 @@ caps.handback.revision: 11
  詳細については、「[syspolicy_conditions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md)」を参照してください。  
   
   
+

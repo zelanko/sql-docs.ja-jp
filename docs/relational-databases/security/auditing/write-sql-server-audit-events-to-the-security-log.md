@@ -1,32 +1,36 @@
 ---
 title: "セキュリティ ログへの SQL サーバー監査イベントの書き込み | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ログ [SQL Server], セキュリティ ログ"
-  - "サーバー監査 [SQL Server]"
-  - "監査 [SQL Server], セキュリティ ログへの書き込み"
-  - "セキュリティ ログ [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [SQL Server], Security Log
+- server audit [SQL Server]
+- audits [SQL Server], writing to Security Log
+- security logs [SQL Server]
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 268f1fbd8ea57db8626c84999a3454e4c4459511
+ms.lasthandoff: 04/11/2017
+
 ---
-# セキュリティ ログへの SQL サーバー監査イベントの書き込み
+# <a name="write-sql-server-audit-events-to-the-security-log"></a>セキュリティ ログへの SQL サーバー監査イベントの書き込み
   高度なセキュリティ環境では、オブジェクト アクセスを記録するイベントを書き込むのに適切な場所は Windows セキュリティ ログです。 他の監査場所は、サポートされていますが、改ざんされる可能性が高くなります。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サーバー監査を Windows セキュリティ ログに書き込むための主要な要件は 2 つあります。  
   
--   オブジェクト アクセスの監査の設定は、イベントをキャプチャするように構成する必要があります。 監査ポリシー ツール (`auditpol.exe`) は、"**オブジェクト アクセスの監査**" カテゴリでさまざまなサブポリシー設定を公開しています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がオブジェクト アクセスを監査できるようにするには、 **application generated** 設定を構成します。  
+-   オブジェクト アクセスの監査の設定は、イベントをキャプチャするように構成する必要があります。 監査ポリシー ツール (`auditpol.exe`) は、" **オブジェクト アクセスの監査** " カテゴリでさまざまなサブポリシー設定を公開しています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がオブジェクト アクセスを監査できるようにするには、 **application generated** 設定を構成します。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを実行しているアカウントは、Windows セキュリティ ログに書き込むための " **セキュリティ監査の生成** " 権限を持っている必要があります。 既定では、LOCAL SERVICE アカウントおよび NETWORK SERVICE アカウントにこの権限があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がこれらのアカウントのいずれかで実行されている場合、この手順は必要ありません。  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 19
   
 1.  管理権限を使用してコマンド プロンプトを開きます。  
   
-    1.  **[スタート]** ボタンをクリックし、**[すべてのプログラム]**、**[アクセサリ]** の順にポイントします。次に、**[コマンド プロンプト]** を右クリックし、**[管理者として実行]** をクリックします。  
+    1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[アクセサリ]**の順にポイントします。次に、 **[コマンド プロンプト]**を右クリックし、 **[管理者として実行]**をクリックします。  
   
     2.  **[ユーザー アカウント制御]** ダイアログ ボックスが表示されたら、 **[続行]**をクリックします。  
   
@@ -88,11 +92,11 @@ caps.handback.revision: 19
   
 3.  ローカル セキュリティ ポリシー ツールで、 **[セキュリティの設定]**、 **[ローカル ポリシー]**の順に展開し、 **[ユーザー権利の割り当て]**をクリックします。  
   
-4.  結果ペインで **[セキュリティ監査の生成]** をダブルクリックします。  
+4.  結果ペインで **[セキュリティ監査の生成]**をダブルクリックします。  
   
 5.  **[ローカル セキュリティの設定]** タブの **[ユーザーまたはグループの追加]**をクリックします。  
   
-6.  **[ユーザー、コンピューター、またはグループの選択]** ダイアログ ボックスで、ユーザー アカウントの名前 (**domain1\user1** など) を入力して **[OK]** をクリックするか、**[詳細設定]** をクリックしてアカウントを検索します。  
+6.  **[ユーザー、コンピューター、またはグループの選択]** ダイアログ ボックスで、ユーザー アカウントの名前 ( **domain1\user1** など) を入力して **[OK]**をクリックするか、 **[詳細設定]** をクリックしてアカウントを検索します。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -108,7 +112,7 @@ caps.handback.revision: 19
   
 3.  ローカル セキュリティ ポリシー ツールで、 **[セキュリティの設定]**、 **[ローカル ポリシー]**の順に展開し、 **[監査ポリシー]**をクリックします。  
   
-4.  結果ペインで、**[オブジェクト アクセスの監査]** をダブルクリックします。  
+4.  結果ペインで、 **[オブジェクト アクセスの監査]**をダブルクリックします。  
   
 5.  **[ローカル セキュリティの設定]** タブの **[次の場合に監査する]** で、 **[成功]** チェック ボックスと **[失敗]**チェック ボックスの両方をオンにします。  
   
@@ -116,7 +120,7 @@ caps.handback.revision: 19
   
 7.  セキュリティ ポリシー ツールを閉じます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

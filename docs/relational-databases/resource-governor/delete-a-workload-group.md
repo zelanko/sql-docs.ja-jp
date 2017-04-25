@@ -1,30 +1,34 @@
 ---
 title: "ワークロード グループの削除 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ワークロード グループ [SQL Server], 削除"
-  - "リソース ガバナー, ワークロード グループの削除"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- workload groups [SQL Server], delete
+- Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 498058e4186851b78bf67795828f1a7562794a72
+ms.lasthandoff: 04/11/2017
+
 ---
-# ワークロード グループの削除
-  ワークロード グループまたはリソース プールを削除にするには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Transact-SQL を使用します。  
+# <a name="delete-a-workload-group"></a>ワークロード グループの削除
+  ワークロード グループまたはリソース プールを削除にするには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Transact-SQL を使用します。  
   
--   **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)、 [権限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **ワークロード グループの削除に使用するもの:** [オブジェクト エクスプローラー](#DelWGObjEx)、[リソース ガバナーのプロパティ](#DelWGRGProp)、[Transact-SQL](#DelWGTSQL)  
+-   **To delete a workload group, using:**  [Object Explorer](#DelWGObjEx), [Resource Governor Properties](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
  アクティブなセッションが含まれている場合は、ワークロード グループを削除できません。  
@@ -38,7 +42,7 @@ caps.handback.revision: 19
   
 -   サーバーを再起動します。 再起動プロセスの完了後、削除したグループは作成されず、移動したグループは新しいリソース プール割り当てを使用します。  
   
-###  <a name="Permissions"></a> アクセス許可  
+###  <a name="Permissions"></a> 権限  
  ワークロード グループを削除するには、CONTROL SERVER 権限が必要です。  
   
 ##  <a name="DelWGObjEx"></a> オブジェクト エクスプ ローラーを使用してワークロード グループを削除する  
@@ -48,7 +52,7 @@ caps.handback.revision: 19
   
 2.  削除するワークロード グループを含むリソース プールで、 **[リソース プール]** ノードを **[ワークロード グループ]** ノードまで再帰的に展開します。  
   
-3.  ワークロード グループを右クリックし、**[削除]** をクリックします。  
+3.  ワークロード グループを右クリックし、 **[削除]**をクリックします。  
   
 4.  **[オブジェクトの削除]** ウィンドウの **[削除されるオブジェクト]** ボックスの一覧に、ワークロード グループが表示されます。 ワークロード グループを削除するには、 **[OK]**をクリックします。  
   
@@ -57,9 +61,9 @@ caps.handback.revision: 19
   
 1.  オブジェクト エクスプローラーで、 **[管理]** ノードを **[リソース プール]**ノードまで展開します。  
   
-2.  削除するワークロード グループを含むリソース プールを右クリックし、**[プロパティ]** をクリックします。 **[リソース ガバナーのプロパティ]** ページが開きます。  
+2.  削除するワークロード グループを含むリソース プールを右クリックし、 **[プロパティ]**をクリックします。 **[リソース ガバナーのプロパティ]** ページが開きます。  
   
-3.  **[リソース プールのワークロード グループ]** ウィンドウで、削除するワークロード グループの行をクリックし、行の左側にある右矢印を右クリックして **[削除]** をクリックします。  
+3.  **[リソース プールのワークロード グループ]** ウィンドウで、削除するワークロード グループの行をクリックし、行の左側にある右矢印を右クリックして **[削除]**をクリックします。  
   
 4.  ワークロード グループを削除するには、 **[OK]**をクリックします。  
   
@@ -80,8 +84,8 @@ caps.handback.revision: 19
   
 3.  **ALTER RESOURCE GOVERNOR RECONFIGURE** ステートメントを実行します。  
   
-### 例 (Transact-SQL)  
- 次の例では、`groupAdhoc` というワークロード グループを削除します。  
+### <a name="example-transact-sql"></a>例 (Transact-SQL)  
+ 次の例では、 `groupAdhoc`というワークロード グループを削除します。  
   
 ```  
 DROP WORKLOAD GROUP groupAdhoc;  
@@ -90,7 +94,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
  [リソース プールの作成](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [ワークロード グループの作成](../../relational-databases/resource-governor/create-a-workload-group.md)   

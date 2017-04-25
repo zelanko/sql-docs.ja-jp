@@ -1,65 +1,69 @@
 ---
 title: "Invoke-Sqlcmd コマンドレット | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PowerShell [SQL Server]、Invoke-Sqlcmd"
-  - "コマンドレット [SQL Server]、Invoke-Sqlcmd"
-  - "Invoke-Sqlcmd コマンドレット"
-  - "sqlcmd ユーティリティ、PowerShell"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PowerShell [SQL Server], Invoke-Sqlcmd
+- Cmdlets [SQL Server], Invoke-Sqlcmd
+- Invoke-Sqlcmd cmdlet
+- sqlcmd utility, PowerShell
 ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 679625527f4f29d086b50e2291af4cff14b74d3e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Invoke-Sqlcmd コマンドレット
-  **Invoke-Sqlcmd** は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コマンドレットであり、言語 ([!INCLUDE[tsql](../includes/tsql-md.md)] と XQuery) のステートメントと **sqlcmd** ユーティリティでサポートされているコマンドを含んだスクリプトを実行します。  
+# <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd コマンドレット
+  **Invoke-Sqlcmd** は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コマンドレットであり、言語 ([!INCLUDE[tsql](../includes/tsql-md.md)] と XQuery) のステートメントと **sqlcmd** ユーティリティでサポートされているコマンドを含んだスクリプトを実行します。  
   
-## Invoke-Sqlcmd の使用  
- **Invoke-Sqlcmd** コマンドレットを使用すると、Windows PowerShell 環境で **sqlcmd** スクリプト ファイルを実行できます。 **sqlcmd** で実行できる処理の多くは、**Invoke-Sqlcmd** を使用しても実行できます。  
+## <a name="using-invoke-sqlcmd"></a>Invoke-Sqlcmd の使用  
+ **Invoke-Sqlcmd** コマンドレットを使用すると、Windows PowerShell 環境で **sqlcmd** スクリプト ファイルを実行できます。 **sqlcmd** で実行できる処理の多くは、 **Invoke-Sqlcmd**を使用しても実行できます。  
   
- 次の例では、Invoke-Sqlcmd を呼び出して単純なクエリを実行しています。これは、**sqlcmd** で **-Q** および **-S** オプションを指定する場合と同様です。  
+ 次の例では、Invoke-Sqlcmd を呼び出して単純なクエリを実行しています。これは、 **sqlcmd** で **-Q** および **-S** オプションを指定する場合と同様です。  
   
 ```  
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance"  
 ```  
   
- 次の例では、**Invoke-Sqlcmd** を呼び出し、入力ファイルを指定して、出力をファイルにパイプしています。これは、**sqlcmd** に **-i** および **-o** オプションを指定する場合と同様です。  
+ 次の例では、 **Invoke-Sqlcmd**を呼び出し、入力ファイルを指定して、出力をファイルにパイプしています。これは、 **sqlcmd** に **-i** および **-o** オプションを指定する場合と同様です。  
   
 ```  
 Invoke-Sqlcmd -InputFile "C:\MyFolder\TestSQLCmd.sql" | Out-File -filePath "C:\MyFolder\TestSQLCmd.rpt"  
 ```  
   
- 次の例では、Windows PowerShell 配列を使用して複数の **sqlcmd** スクリプト変数を **Invoke-Sqlcmd** に渡しています。 SELECT ステートメントで **sqlcmd** スクリプト変数を識別する "$" 文字をエスケープするために、PowerShell のバック ティック "`" エスケープ文字が使用されています。  
+ 次の例では、Windows PowerShell 配列を使用して複数の **sqlcmd** スクリプト変数を **Invoke-Sqlcmd**に渡しています。 SELECT ステートメントで **sqlcmd** スクリプト変数を識別する "$" 文字をエスケープするために、PowerShell のバック ティック "`" エスケープ文字が使用されています。  
   
 ```  
 $MyArray = "MyVar1 = 'String1'", "MyVar2 = 'String2'"  
 Invoke-Sqlcmd -Query "SELECT `$(MyVar1) AS Var1, `$(MyVar2) AS Var2;" -Variable $MyArray  
 ```  
   
- 次の例では、Windows PowerShell 用の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーを使用して [!INCLUDE[ssDE](../includes/ssde-md.md)] のインスタンスに移動した後に、Windows PowerShell の **Get-Item** コマンドレットを使用してそのインスタンスの SMO サーバー オブジェクトを取得し、**Invoke-Sqlcmd** に渡しています。  
+ 次の例では、Windows PowerShell 用の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーを使用して [!INCLUDE[ssDE](../includes/ssde-md.md)]のインスタンスに移動した後に、Windows PowerShell の **Get-Item** コマンドレットを使用してそのインスタンスの SMO サーバー オブジェクトを取得し、 **Invoke-Sqlcmd**に渡しています。  
   
 ```  
 Set-Location SQLSERVER:\SQL\MyComputer\MyInstance  
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance (Get-Item .)  
 ```  
   
- -Query パラメーターは位置で指定するパラメーターであり、名前を指定する必要はありません。 **Invoke-Sqlcmd** に渡された最初の文字列に名前が付いていない場合、その文字列は -Query パラメーターとして扱われます。  
+ -Query パラメーターは位置で指定するパラメーターであり、名前を指定する必要はありません。 **Invoke-Sqlcmd**に渡された最初の文字列に名前が付いていない場合、その文字列は -Query パラメーターとして扱われます。  
   
 ```  
 Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance"  
 ```  
   
-## Invoke-Sqlcmd のパス コンテキスト  
+## <a name="path-context-in-invoke-sqlcmd"></a>Invoke-Sqlcmd のパス コンテキスト  
  -Database パラメーターを使用しない場合、Invoke-Sqlcmd のデータベース コンテキストは、コマンドレットが呼び出されたときにアクティブなパスによって設定されます。  
   
 |[パス]|データベース コンテキスト|  
@@ -78,7 +82,7 @@ Set-Location SQLSERVER:\SQL
 Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"  
 ```  
   
- 次のコマンドを実行すると、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] が返されます。  
+ 次のコマンドを実行すると、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]が返されます。  
   
 ```  
 Set-Location SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Person.Person  
@@ -87,10 +91,10 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
   
  Invoke-Sqlcmd は、パス データベース コンテキストを使用するときに警告を表示します。 -SuppressProviderContextWarning パラメーターを使用すると、警告メッセージが出力されないようにすることができます。 -IgnoreProviderContext パラメーターを使用すると、Invoke-Sqlcmd を実行するときに常にログインの既定のデータベースが使用されます。  
   
-## Invoke-Sqlcmd と sqlcmd ユーティリティの比較  
- **Invoke-Sqlcmd** では、**sqlcmd** ユーティリティを使用して実行できるスクリプトの多くを実行できます。 ただし、**Invoke-Sqlcmd** が実行される Windows PowerShell 環境は、**sqlcmd** が実行されるコマンド プロンプト環境とは異なります。 **Invoke-Sqlcmd** の動作は、Windows PowerShell 環境で機能するように変更されています。  
+## <a name="comparing-invoke-sqlcmd-and-the-sqlcmd-utility"></a>Invoke-Sqlcmd と sqlcmd ユーティリティの比較  
+ **Invoke-Sqlcmd** では、 **sqlcmd** ユーティリティを使用して実行できるスクリプトの多くを実行できます。 ただし、 **Invoke-Sqlcmd** が実行される Windows PowerShell 環境は、 **sqlcmd** が実行されるコマンド プロンプト環境とは異なります。 **Invoke-Sqlcmd** の動作は、Windows PowerShell 環境で機能するように変更されています。  
   
- すべての **sqlcmd** コマンドが **Invoke-Sqlcmd** で実装されるわけではありません。 実装されないコマンドには、**:!!**、**:connect**、**:error**、**:out**、**:ed**、**:list**、**:listvar**、**:reset**、**:perftrace**、**:serverlist** があります。  
+ すべての **sqlcmd** コマンドが **Invoke-Sqlcmd**で実装されるわけではありません。 実装されないコマンドには、 **:!!**、 **:connect**、 **:error**、 **:out**、 **:ed**、 **:list**、 **:listvar**、 **:reset**、 **:perftrace**、 **:serverlist**があります。  
   
  **Invoke-Sqlcmd** では **sqlcmd** 環境または SQLCMDDBNAME や SQLCMDWORKSTATION などのスクリプト変数が初期化されません。  
   
@@ -100,7 +104,7 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
 ```  
   
- **sqlcmd** のすべてのパラメーターが PowerShell 環境で必要となるわけではありません。 たとえば、Windows PowerShell ではコマンドレットからのすべての出力の書式が自動的に設定されるため、書式設定オプションを指定する **sqlcmd** のパラメーターは **Invoke-Sqlcmd** には実装されていません。 **Invoke-Sqlcmd** のパラメーターと **sqlcmd** のオプションの関係を次の表に示します。  
+ **sqlcmd** のすべてのパラメーターが PowerShell 環境で必要となるわけではありません。 たとえば、Windows PowerShell ではコマンドレットからのすべての出力の書式が自動的に設定されるため、書式設定オプションを指定する **sqlcmd** のパラメーターは **Invoke-Sqlcmd**には実装されていません。 **Invoke-Sqlcmd** のパラメーターと **sqlcmd** のオプションの関係を次の表に示します。  
   
 |説明|sqlcmd オプション|Invoke-Sqlcmd パラメーター|  
 |-----------------|-------------------|------------------------------|  
@@ -114,40 +118,41 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |エラー発生時の実行停止|-b|-AbortOnError|  
 |専用管理者接続|-A|-DedicatedAdministratorConnection|  
 |対話型コマンド、スタートアップ スクリプト、および環境変数の無効化|-X|-DisableCommands|  
-|変数の代入の無効化|-x|-DisableVariables|  
-|レポートする最小重大度レベル|-V|-SeverityLevel|  
+|変数の代入の無効化|-X|-DisableVariables|  
+|レポートする最小重大度レベル|-v|-SeverityLevel|  
 |レポートする最小エラー レベル|-m|-ErrorLevel|  
 |ログインのタイムアウト間隔|-l|-ConnectionTimeout|  
 |ホスト名|-H|-HostName|  
 |パスワードの変更と終了|-Z|-NewPassword|  
-|クエリが含まれている入力ファイル|-i |-InputFile|  
+|クエリが含まれている入力ファイル|-i|-InputFile|  
 |文字出力の最大長|-w|-MaxCharLength|  
 |バイナリ出力の最大長|-w|-MaxBinaryLength|  
 |SSL 暗号化を使用した接続|パラメーターなし|-EncryptConnection|  
 |エラーの表示|パラメーターなし|-OutputSqlErrors|  
 |stderr へのメッセージの出力|-r|パラメーターなし|  
-|クライアントの地域別設定の使用|-R|パラメーターなし|  
-|指定したクエリの実行と実行の継続|-q|パラメーターなし|  
+|クライアントの地域別設定の使用|-r|パラメーターなし|  
+|指定したクエリの実行と実行の継続|-Q|パラメーターなし|  
 |出力データに使用するコード ページ|-f|パラメーターなし|  
-|パスワードの変更と実行の継続|-z|パラメーターなし|  
-|パケット サイズ|-a|パラメーターなし|  
-|列の区切り|-s|パラメーターなし|  
-|出力ヘッダーの制御|-h|パラメーターなし|  
+|パスワードの変更と実行の継続|-Z|パラメーターなし|  
+|パケット サイズ|-A|パラメーターなし|  
+|列の区切り|-S|パラメーターなし|  
+|出力ヘッダーの制御|-H|パラメーターなし|  
 |制御文字の指定|-k|パラメーターなし|  
 |固定長表示幅|-Y|パラメーターなし|  
-|可変長表示幅|-y|パラメーターなし|  
+|可変長表示幅|-Y|パラメーターなし|  
 |入力のエコー|-e|パラメーターなし|  
-|引用符で囲まれた識別子の有効化|-I|パラメーターなし|  
-|末尾のスペースの削除|-W|パラメーターなし|  
-|インスタンスの一覧表示|-L|パラメーターなし|  
-|出力の形式を Unicode に設定|-u|パラメーターなし|  
-|統計情報の印刷|-p|パラメーターなし|  
+|引用符で囲まれた識別子の有効化|-i|パラメーターなし|  
+|末尾のスペースの削除|-w|パラメーターなし|  
+|インスタンスの一覧表示|-l|パラメーターなし|  
+|出力の形式を Unicode に設定|-U|パラメーターなし|  
+|統計情報の印刷|-P|パラメーターなし|  
 |コマンドの終了|-c|パラメーターなし|  
-|Windows 認証を使用した接続|-E|パラメーターなし|  
+|Windows 認証を使用した接続|-e|パラメーターなし|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データベース エンジン コマンドレットの使用](../relational-databases/scripting/use-the-database-engine-cmdlets.md)   
  [sqlcmd ユーティリティ](../tools/sqlcmd-utility.md)   
- [sqlcmd ユーティリティの使用](../relational-databases/scripting/use-the-sqlcmd-utility.md)  
+ [sqlcmd ユーティリティの使用](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
   
+

@@ -1,40 +1,44 @@
 ---
 title: "tempdb データベース | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "一時テーブル [SQL Server], tempdb データベース"
-  - "tempdb データベース [SQL Server], tempdb について"
-  - "一時ストアド プロシージャ [SQL Server]"
-  - "tempdb データベース [SQL Server]"
+ms.custom: 
+ms.date: 03/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- temporary tables [SQL Server], tempdb database
+- tempdb database [SQL Server], about tempdb
+- temporary stored procedures [SQL Server]
+- tempdb database [SQL Server]
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 caps.latest.revision: 66
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 66
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 003196d8c30ca45c54750587c03c8d7d6e5a358d
+ms.lasthandoff: 04/11/2017
+
 ---
-# tempdb データベース
+# <a name="tempdb-database"></a>tempdb データベース
   **tempdb** システム データベースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続しているすべてのユーザーが使用できるグローバル リソースであり、以下のものを保持するために使用されます。  
   
 -   グローバルまたはローカルな一時テーブル、一時ストアド プロシージャ、テーブル変数、カーソルなど、明示的に作成された一時的なユーザー オブジェクト。  
   
--   スプールまたは並べ替えのために中間結果を格納するための作業テーブルなど、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]が作成する内部オブジェクト。  
+-   スプールまたは並べ替えのために中間結果を格納するための作業テーブルなど、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]が作成する内部オブジェクト。  
   
 -   行のバージョン管理を伴う READ COMMITTED 分離トランザクションまたはスナップショット分離トランザクションを使用するデータベースで、データ変更トランザクションによって生成される行バージョン。  
   
 -   オンライン インデックス操作、複数のアクティブな結果セット (MARS)、AFTER トリガーなどの機能に対してデータ変更トランザクションによって生成される行バージョン。  
   
- **tempdb** 内の操作は、最低限必要な情報だけがログに記録されます。 これにより、トランザクションをロールバックできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動されるたびに **tempdb** が再作成され、システムが常にデータベースのクリーンなコピーで起動されるようにします。 一時テーブルと一時ストアド プロシージャは、切断時に自動的に削除され、システムのシャットダウン時にアクティブな接続はありません。 そのため、 **tempdb** には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のあるセッションから別のセッションに保存されるものは一切含まれません。 **tempdb**では、バックアップ操作と復元操作は実行できません。  
+ **tempdb** 内の操作は、最低限必要な情報だけがログに記録されます。 これにより、トランザクションをロールバックできます。 **が起動されるたびに** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再作成され、システムが常にデータベースのクリーンなコピーで起動されるようにします。 一時テーブルと一時ストアド プロシージャは、切断時に自動的に削除され、システムのシャットダウン時にアクティブな接続はありません。 そのため、 **tempdb** には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のあるセッションから別のセッションに保存されるものは一切含まれません。 **tempdb**では、バックアップ操作と復元操作は実行できません。  
   
-## tempdb の物理プロパティ  
+## <a name="physical-properties-of-tempdb"></a>tempdb の物理プロパティ  
  次の表は、 **tempdb** のデータ ファイルとログ ファイルの初期構成値の一覧です。 これらのファイルのサイズは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエディションによって多少異なる場合があります。  
   
 |ファイル|論理名|物理名|初期サイズ|ファイル拡張|  
@@ -46,16 +50,16 @@ caps.handback.revision: 66
  \* ファイルの数は、コンピューター上の (論理) コアの数によって異なります。 値はコア数または 8 のどちらか小さい方になります。   
 データ ファイルの数の既定値は、 [KB 2154845](https://support.microsoft.com/en-us/kb/2154845/)の一般的なガイドラインに基づいています。  
   
-## tempdb でのパフォーマンスの強化  
+## <a name="performance-improvements-in-tempdb"></a>tempdb でのパフォーマンスの強化  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、 **tempdb** のパフォーマンスは以下の方法で強化されています。  
   
 -   一時テーブルとテーブル変数をキャッシュできます。 キャッシュを使用することで、一時オブジェクトを削除および作成する操作を非常に高速に実行でき、ページ割り当ての競合が減少します。  
   
 -   割り当てページ ラッチ プロトコルが強化されています。 これにより、使用される UP (更新) ラッチの数が減少します。  
   
--   **tempdb** に対するログ記録のオーバーヘッドが削減されています。 これにより、**tempdb** ログ ファイルでのディスク I/O 帯域幅の消費量が減少します。  
+-   **tempdb** に対するログ記録のオーバーヘッドが削減されています。 これにより、 **tempdb** ログ ファイルでのディスク I/O 帯域幅の消費量が減少します。  
   
--   セットアップによって、新しいインスタンスのインストール中に複数の tempdb データ ファイルが追加されます。 この操作を実行するには、**[データベース エンジンの構成]** セクションの新しい UI 入力コントロールまたはコマンド ライン パラメーター /SQLTEMPDBFILECOUNT を使用します。 既定では、セットアップ時に、CPU 数または 8 のいずれか小さい方と同数の tempdb ファイルが追加されます。  
+-   セットアップによって、新しいインスタンスのインストール中に複数の tempdb データ ファイルが追加されます。 この操作を実行するには、 **[データベース エンジンの構成]** セクションの新しい UI 入力コントロールまたはコマンド ライン パラメーター /SQLTEMPDBFILECOUNT を使用します。 既定では、セットアップ時に、CPU 数または 8 のいずれか小さい方と同数の tempdb ファイルが追加されます。  
   
 -   複数の **tempdb** データ ファイルがある場合は、拡張設定に応じて、すべてのファイルが同時に同量ずつ自動拡張されます。  トレース フラグ 1117 は必須ではなくなりました。  
   
@@ -63,10 +67,10 @@ caps.handback.revision: 66
   
 -   プライマリ ファイル グループの場合は、AUTOGROW_ALL_FILES プロパティがオンで、プロパティは変更できません。  
   
-### tempdb のデータ ファイルとログ ファイルの移動  
- **tempdb** データ ファイルとログ ファイルを移動するには、「[システム データベースの移動](../../relational-databases/databases/move-system-databases.md)」を参照してください。  
+### <a name="moving-the-tempdb-data-and-log-files"></a>tempdb のデータ ファイルとログ ファイルの移動  
+ **tempdb** データ ファイルとログ ファイルを移動するには、「 [システム データベースの移動](../../relational-databases/databases/move-system-databases.md)」を参照してください。  
   
-### データベース オプション  
+### <a name="database-options"></a>データベース オプション  
  **tempdb** データベースの各データベース オプションの既定値とそのオプションを変更できるかどうかを次の表に示します。 これらのオプションの現在の設定を表示するには、 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューを使用します。  
   
 |データベース オプション|既定値|変更可否|  
@@ -92,7 +96,7 @@ caps.handback.revision: 66
 |ENCRYPTION|OFF|いいえ|  
 |MIXED_PAGE_ALLOCATION|OFF|いいえ|  
 |NUMERIC_ROUNDABORT|OFF|はい|  
-|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新規インストールの場合は CHECKSUM<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアップグレードの場合は NONE|可|  
+|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新規インストールの場合は CHECKSUM<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアップグレードの場合は NONE|はい|  
 |PARAMETERIZATION|SIMPLE|はい|  
 |QUOTED_IDENTIFIER|OFF|はい|  
 |READ_COMMITTED_SNAPSHOT|OFF|いいえ|  
@@ -101,9 +105,9 @@ caps.handback.revision: 66
 |Service Broker のオプション|ENABLE_BROKER|はい|  
 |TRUSTWORTHY|OFF|いいえ|  
   
- これらのデータベース オプションの説明は、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)」を参照してください。  
+ これらのデータベース オプションの説明は、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。  
   
-## 制限  
+## <a name="restrictions"></a>制限  
  **tempdb** データベースでは、次の操作は実行できません。  
   
 -   ファイル グループの追加。  
@@ -136,10 +140,10 @@ caps.handback.revision: 66
   
 -   データベースまたはプライマリ ファイル グループの READ_ONLY への設定。  
   
-## 権限  
+## <a name="permissions"></a>権限  
  すべてのユーザーが tempdb 内に一時オブジェクトを作成できます。 ユーザーは追加の権限を付与されない限り、自分で作成したオブジェクトにしかアクセスできません。 ユーザーが tempdb を使用できないように tempdb への接続権限を取り消すことはできますが、一部のルーチン処理で tempdb を使用する必要があるためお勧めしません。  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
  [インデックスの SORT_IN_TEMPDB オプション](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)  
   
  [システム データベース](../../relational-databases/databases/system-databases.md)  
@@ -150,7 +154,8 @@ caps.handback.revision: 66
   
  [データベース ファイルの移動](../../relational-databases/databases/move-database-files.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server 2005 での tempdb の使用](http://go.microsoft.com/fwlink/?LinkId=81216)  
   
   
+

@@ -1,0 +1,7 @@
+# [SSDT のダウンロード](download-sql-server-data-tools-ssdt.md)
+# [SSDT の変更ログ](changelog-for-sql-server-data-tools-ssdt.md)
+# [データ層アプリケーション フレームワーク - ライセンス条項](data-tier-application-framework-license-terms.md)
+# [SSDT と SSDT-BI の以前のリリース](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)
+# [SQL Server ツール](sql-server-tools.md)
+# [SSDT リリース候補](sql-server-data-tools-ssdt-release-candidate.md)
+# [ライセンス条項 - SSDT](sql-server-data-tools-license-terms.md)

@@ -1,32 +1,36 @@
 ---
 title: "SQL Server リソースへの依存関係の追加 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "リソースの依存関係 [SQL Server]"
-  - "フェールオーバー クラスタリング [SQL Server], 依存関係"
-  - "クラスター [SQL Server], 依存関係"
-  - "依存関係 [SQL Server], クラスタリング"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resource dependencies [SQL Server]
+- failover clustering [SQL Server], dependencies
+- clusters [SQL Server], dependencies
+- dependencies [SQL Server], clustering
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 caps.latest.revision: 33
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: bffe545296432d465fd744092519c9882ccc04c1
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server リソースへの依存関係の追加
+# <a name="add-dependencies-to-a-sql-server-resource"></a>SQL Server リソースへの依存関係の追加
   このトピックでは、フェールオーバー クラスター マネージャー スナップインを使用して、AlwaysOn フェールオーバー クラスター インスタンス (FCI) リソースに依存関係を追加する方法について説明します。 フェールオーバー クラスター マネージャー スナップインは、Windows Server フェールオーバー クラスタリング (WSFC) サービスのクラスター管理アプリケーションです。  
   
--   **作業を開始する準備:** [制限事項と制約事項](#Restrictions)、[前提条件](#Prerequisites)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Prerequisites](#Prerequisites)  
   
--   **SQL Server リソースに依存関係を追加するために使用するもの:** [Windows フェールオーバー クラスター マネージャー](#WinClusManager)  
+-   **To add a dependency to a SQL Server resource, using:** [Windows Failover Cluster Manager](#WinClusManager)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 33
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースの依存関係 : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] グループにリソースを追加し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用できるようにするために [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースに依存している場合は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] エージェント リソースに依存関係を追加することを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はお勧めしています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースに依存関係を追加しないでください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行しているコンピューターで高い可用性を維持するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント リソースに障害が発生した場合に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] グループが影響を受けないように [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント リソースを構成します。  
   
--   ファイル共有とプリンター リソース : ファイル共有リソースやプリンター クラスター リソースをインストールするときは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を実行しているコンピューターと同じ物理ディスク リソースに配置しないでください。 同じ物理ディスク リソースにインストールすると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行しているコンピューターのパフォーマンスが低下したり、サービスが失われたりする場合があります。  
+-   ファイル共有とプリンター リソース : ファイル共有リソースやプリンター クラスター リソースをインストールするときは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を実行しているコンピューターと同じ物理ディスク リソースに配置しないでください。 同じ物理ディスク リソースにインストールすると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を実行しているコンピューターのパフォーマンスが低下したり、サービスが失われたりする場合があります。  
   
 -   MS DTC の考慮事項: オペレーティング システムをインストールし FCI を構成してから、フェールオーバー クラスター マネージャー スナップインを使用して、クラスター内で機能するように [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) を構成する必要があります。 MS DTC のクラスター化に失敗しても [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップは中断しませんが、MS DTC が適切に構成されていない場合は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のアプリケーション機能に影響が生じる可能性があります。  
   

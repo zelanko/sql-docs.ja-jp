@@ -1,31 +1,35 @@
 ---
 title: "インデックスの削除 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "削除、インデックス"
-  - "消去、インデックス"
-  - "破棄、インデックス"
-  - "削除するインデックス [SQL Server]"
-  - "インデックスの削除 [SQL Server]"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing indexes
+- deleting indexes
+- dropping indexes
+- indexes [SQL Server], dropping
+- index deletions [SQL Server]
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77d88bfd9ae9cb742bc9dc18f8baffdd32e5ac3e
+ms.lasthandoff: 04/11/2017
+
 ---
-# インデックスの削除
+# <a name="delete-an-index"></a>インデックスの削除
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、インデックスを削除する方法について説明します。  
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、インデックスを削除する方法について説明します。  
   
  **このトピックの内容**  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 29
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### オブジェクト エクスプローラーを使用してインデックスを削除するには  
+#### <a name="to-delete-an-index-by-using-object-explorer"></a>オブジェクト エクスプローラーを使用してインデックスを削除するには  
   
 1.  オブジェクト エクスプローラーで、インデックスを削除するテーブルが格納されているデータベースを展開します。  
   
@@ -63,11 +67,11 @@ caps.handback.revision: 29
   
 4.  **[インデックス]** フォルダーを展開します。  
   
-5.  削除するインデックスを右クリックして、**[削除]** をクリックします。  
+5.  削除するインデックスを右クリックして、 **[削除]**をクリックします。  
   
 6.  **[オブジェクトの削除]** ダイアログ ボックスで、 **[削除されるオブジェクト]** グリッドに目的のインデックスが表示されていることを確認し、 **[OK]**をクリックします。  
   
-#### テーブル デザイナーを使用してインデックスを削除するには  
+#### <a name="to-delete-an-index-using-table-designer"></a>テーブル デザイナーを使用してインデックスを削除するには  
   
 1.  オブジェクト エクスプローラーで、インデックスを削除するテーブルが格納されているデータベースを展開します。  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 29
   
 3.  削除するインデックスのあるテーブルを右クリックし、[デザイン] をクリックします。  
   
-4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]** をクリックします。  
+4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]**をクリックします。  
   
 5.  **[インデックス/キー]** ダイアログ ボックスで、削除するインデックスを選択します。  
   
@@ -83,11 +87,11 @@ caps.handback.revision: 29
   
 7.  **[閉じる]**をクリックします。  
   
-8.  **[ファイル]** メニューの [*table_name ***を保存**] を選びます。  
+8.  **[ファイル]** メニューの [ **table_name***を保存*] を選びます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### インデックスを削除するには  
+#### <a name="to-delete-an-index"></a>インデックスを削除するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -108,3 +112,4 @@ caps.handback.revision: 29
  詳細については、「[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)」を参照してください。  
   
   
+

@@ -1,44 +1,48 @@
 ---
 title: "データ層アプリケーションのアップグレード | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.upgradedacwizard.summary.f1"
-  - "sql13.swb.upgradedacwizard.reviewplan.f1"
-  - "sql13.swb.upgradedacwizard.upgradedac.f1"
-  - "sql13.swb.upgradedacwizard.selectpackage.f1"
-  - "sql13.swb.upgradedacwizard.reviewpolicy.f1"
-  - "sql13.swb.upgradedacwizard.selectoptions.f1"
-  - "sql13.swb.upgradedacwizard.checkdrift.f1"
-  - "sql13.swb.upgradedacwizard.introduction.f1"
-helpviewer_keywords: 
-  - "DAC のアップグレード"
-  - "データ層アプリケーション [SQL Server], アップグレード"
-  - "ウィザード [DAC], アップグレード"
-  - "方法 [DAC], アップグレード"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.upgradedacwizard.summary.f1
+- sql13.swb.upgradedacwizard.reviewplan.f1
+- sql13.swb.upgradedacwizard.upgradedac.f1
+- sql13.swb.upgradedacwizard.selectpackage.f1
+- sql13.swb.upgradedacwizard.reviewpolicy.f1
+- sql13.swb.upgradedacwizard.selectoptions.f1
+- sql13.swb.upgradedacwizard.checkdrift.f1
+- sql13.swb.upgradedacwizard.introduction.f1
+helpviewer_keywords:
+- upgrade DAC
+- data-tier application [SQL Server], upgrade
+- wizard [DAC], upgrade
+- How to [DAC], upgrade
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7989f6c7fa8ff85ceb5cb5ed06d989343edb46a2
+ms.lasthandoff: 04/11/2017
+
 ---
-# データ層アプリケーションのアップグレード
+# <a name="upgrade-a-data-tier-application"></a>データ層アプリケーションのアップグレード
   データ層アプリケーションのアップグレード ウィザードまたは Windows PowerShell スクリプトを使用すると、現在配置されているデータ層アプリケーション (DAC) のスキーマとプロパティを、新しいバージョンの DAC で定義されているスキーマとプロパティに一致するように変更できます。  
   
--   **作業を開始する準備:**  [DAC アップグレード オプションの選択](#ChoseDACUpgOptions)、 [制限事項と制約事項](#LimitationsRestrictions)、 [前提条件](#Prerequisites)、 [セキュリティ](#Security)、 [権限](#Permissions)  
+-   **Before you begin:**  [Choosing DAC Upgrade Options](#ChoseDACUpgOptions), [Limitations and Restrictions](#LimitationsRestrictions), [Prerequisites](#Prerequisites), [Security](#Security), [Permissions](#Permissions)  
   
--   **DAC のアップグレード:** [データ層アプリケーションのアップグレード ウィザードの使用](#UsingDACUpgradeWizard)、[PowerShell の使用](#UpgradeDACPowerShell)  
+-   **To upgrade a DAC, using:**  [The Upgrade Data-tier Application Wizard](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
- DAC アップグレードは、既存のデータベースのスキーマを新しい DAC バージョンで定義されているスキーマに一致するように変更するインプレース アップグレードです。 新しい DAC バージョンは、DAC パッケージ ファイルで提供されます。 DAC パッケージの作成の詳細については、「[データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)」を参照してください。  
+ DAC アップグレードは、既存のデータベースのスキーマを新しい DAC バージョンで定義されているスキーマに一致するように変更するインプレース アップグレードです。 新しい DAC バージョンは、DAC パッケージ ファイルで提供されます。 DAC パッケージの作成の詳細については、「 [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)」を参照してください。  
   
 ###  <a name="ChoseDACUpgOptions"></a> DAC アップグレード オプションの選択  
  インプレース アップグレードには 4 つのアップグレード オプションがあります。  
@@ -52,7 +56,7 @@ caps.handback.revision: 35
 -   **[ポリシーの検証をスキップ]** : **True**の場合、DAC サーバー選択ポリシーは評価されません。 **False**の場合は、ポリシーが評価され、検証エラーがあるとアップグレードは終了します。 既定の設定は **False**です。  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
- DAC アップグレードは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 以降でのみ実行できます。  
+ DAC アップグレードは、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 以降でのみ実行できます。  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  アップグレードを開始する前に、データベースの完全バックアップを実行することをお勧めします。 アップグレード時にエラーが発生し、すべての変更をロールバックできない場合は、バックアップの復元が必要になる場合があります。  
@@ -73,16 +77,16 @@ caps.handback.revision: 35
  セキュリティを強化するために、SQL Server 認証のログインは、パスワードなしで DAC パッケージに格納されます。 パッケージが配置またはアップグレードされると、ログインは、生成されたパスワードを伴う無効なログインとして作成されます。 ログインを有効にするには、ALTER ANY LOGIN 権限を持つユーザーとしてログインし、ALTER LOGIN を使用してログインを有効にします。さらに、新しいパスワードを割り当て、そのパスワードを該当ユーザーに通知します。 Windows 認証ログインの場合、ログインのパスワードは SQL Server で管理されていないため、この操作は必要ありません。  
   
 ####  <a name="Permissions"></a> 権限  
- DAC をアップグレードできるのは、 **sysadmin** または **serveradmin** 固定サーバー ロールのメンバーか、 **dbcreator** 固定サーバー ロールに存在する ALTER ANY LOGIN 権限を持つログインのみです。 ログインは既存のデータベースの所有者である必要があります。 あらかじめ登録された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウント (**sa**) も DAC をアップグレードできます。  
+ DAC をアップグレードできるのは、 **sysadmin** または **serveradmin** 固定サーバー ロールのメンバーか、 **dbcreator** 固定サーバー ロールに存在する ALTER ANY LOGIN 権限を持つログインのみです。 ログインは既存のデータベースの所有者である必要があります。 あらかじめ登録された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウント ( **sa** ) も DAC をアップグレードできます。  
   
 ##  <a name="UsingDACUpgradeWizard"></a> データ層アプリケーションのアップグレード ウィザードの使用  
  **ウィザードを使用して、DAC をアップグレードするには**  
   
 1.  **オブジェクト エクスプローラー**で、アップグレードする DAC を含んだインスタンスのノードを展開します。  
   
-2.  **[管理]** ノードを展開し、**[データ層のアプリケーション]** ノードを展開します。  
+2.  **[管理]** ノードを展開し、 **[データ層のアプリケーション]** ノードを展開します。  
   
-3.  アップグレードする DAC のノードを右クリックし、**[データ層アプリケーションのアップグレード]** をクリックします。  
+3.  アップグレードする DAC のノードを右クリックし、 **[データ層アプリケーションのアップグレード]**をクリックします。  
   
 4.  ウィザードの各ダイアログの手順を実行します。  
   
@@ -112,7 +116,7 @@ caps.handback.revision: 35
 ##  <a name="Select_dac_package"></a> [パッケージの選択] ページ  
  このページでは、新しいバージョンのデータ層アプリケーションを含む DAC パッケージを指定します。 このページは、2 つの状態を遷移します。  
   
-### DAC パッケージの選択  
+### <a name="select-the-dac-package"></a>DAC パッケージの選択  
  ページの初期状態では、配置する DAC パッケージを選択します。 DAC パッケージは有効な DAC パッケージ ファイルで、拡張子は .dacpac である必要があります。 DAC パッケージ内の DAC アプリケーション名は、現在の DAC のアプリケーション名と同じである必要があります。  
   
  **[DAC パッケージ]** : 新しいバージョンのデータ層アプリケーションを含む DAC パッケージのパスとファイル名を指定します。 ボックスの右にある **[参照]** をクリックして、DAC パッケージの場所に移動することができます。  
@@ -129,7 +133,7 @@ caps.handback.revision: 35
   
  **[キャンセル]** : DAC をアップグレードせずにウィザードを終了します。  
   
-### DAC パッケージの検証  
+### <a name="validating-the-dac-package"></a>DAC パッケージの検証  
  選択したファイルが有効な DAC パッケージかどうかが確認され、進捗状況バーが表示されます。 DAC パッケージが検証されると、ウィザードは **[ポリシーの確認]** ページに進みます。 ファイルが有効な DAC パッケージでない場合は、 **[DAC パッケージの選択]** ページが表示されたままになります。 別の有効な DAC パッケージを選択するか、ウィザードを取り消して新しい DAC パッケージを生成してください。  
   
  **[DAC パッケージの内容を検証しています]** : 検証プロセスの現在の状態を示す進捗状況バーです。  
@@ -141,7 +145,7 @@ caps.handback.revision: 35
  **[キャンセル]** : DAC を配置せずにウィザードを終了します。  
   
 ##  <a name="Review_policy"></a> [ポリシーの確認] ページ  
- このページでは、DAC にポリシーが含まれている場合に DAC サーバーの選択ポリシーを評価した結果を確認します。 DAC サーバーの選択ポリシーは、省略可能で、Microsoft Visual Studio で作成された DAC に割り当てられます。 このポリシーでは、サーバーの選択ポリシーのファセットを使用して、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスで DAC をホストするために満たす必要がある条件を指定します。  
+ このページでは、DAC にポリシーが含まれている場合に DAC サーバーの選択ポリシーを評価した結果を確認します。 DAC サーバーの選択ポリシーは、省略可能で、Microsoft Visual Studio で作成された DAC に割り当てられます。 このポリシーでは、サーバーの選択ポリシーのファセットを使用して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスで DAC をホストするために満たす必要がある条件を指定します。  
   
  **[ポリシー条件の評価結果]** : DAC サーバーの選択ポリシーの条件の評価に成功したかどうかを示す読み取り専用のレポートです。 各条件の評価結果が、レポートの各行に表示されます。  
   
@@ -160,9 +164,9 @@ caps.handback.revision: 35
   
  **[変更の検出結果]** : 分析が完了したことを示し、結果が下に表示されます。  
   
- **[データベース <DatabaseName> は変更されていません]** : ウィザードで、データベースで定義されているオブジェクトと DAC 定義の対応するオブジェクトの間で相違点が検出されませんでした。  
+ **[データベース &lt;DatabaseName&gt; は変更されていません]** : ウィザードで、データベースで定義されているオブジェクトと DAC 定義の対応するオブジェクトの間で相違点が検出されませんでした。  
   
- **[データベース <DatabaseName> が変更されました]** : ウィザードで、データベースのオブジェクトと DAC 定義の対応するオブジェクトの間で変更点が検出されました。  
+ **[データベース &lt;DatabaseName&gt; が変更されました]** : ウィザードで、データベースのオブジェクトと DAC 定義の対応するオブジェクトの間で変更点が検出されました。  
   
  **[変更が失われる可能性がありますが続行します]** : 現在のデータベース内のオブジェクトやデータの一部が新しいデータベースに存在しない場合があることがわかっていて、アップグレードを続行することを指定します。 このボタンは、変更レポートの分析が完了し、新しいデータベースで必要なオブジェクトやデータを手動で転送するための手順がわかっている場合にのみクリックしてください。 わからない場合は、 **[レポートの保存]** をクリックして変更レポートを保存し、 **[キャンセル]**をクリックします。 レポートを分析して、アップグレードの完了後に必要なオブジェクトやデータを転送する方法を計画し、ウィザードを再起動します。  
   
@@ -174,7 +178,7 @@ caps.handback.revision: 35
   
  **[キャンセル]** : DAC を配置せずにウィザードを終了します。  
   
-## [オプション] ページ)  
+## <a name="options-page"></a>[オプション] ページ)  
  このページを使用すると、アップグレードの失敗時のロールバック オプションを選択できます。  
   
  **[失敗時にロールバック]** : このオプションを選択すると、アップグレードはトランザクションに含まれ、エラーが発生した場合はウィザードからロールバックを試行できます。 オプションの詳細については、「 [DAC アップグレード オプションの選択](#ChoseDACUpgOptions)」を参照してください。  
@@ -196,7 +200,7 @@ caps.handback.revision: 35
   
  **[アクション レポートの保存]** : アクション ウィンドウの内容を HTML ファイルに保存します。  
   
- **[変更が失われる可能性がありますが続行します]** : 現在のデータベース内のオブジェクトやデータの一部が新しいデータベースに存在しない場合があることがわかっていて、アップグレードを続行することを指定します。 このボタンは、変更レポートの分析が完了し、新しいデータベースで必要なオブジェクトやデータを手動で転送するための手順がわかっている場合にのみクリックしてください。 わからない場合は、**[アクション レポートの保存]** をクリックして変更レポートを保存し、**[スクリプトの保存]** をクリックして Transact-SQL スクリプトを保存してから、**[キャンセル]** をクリックします。 レポートとスクリプトを分析して、アップグレードの完了後に必要なオブジェクトやデータを転送する方法を計画し、ウィザードを再起動します。  
+ **[変更が失われる可能性がありますが続行します]** : 現在のデータベース内のオブジェクトやデータの一部が新しいデータベースに存在しない場合があることがわかっていて、アップグレードを続行することを指定します。 このボタンは、変更レポートの分析が完了し、新しいデータベースで必要なオブジェクトやデータを手動で転送するための手順がわかっている場合にのみクリックしてください。 わからない場合は、 **[アクション レポートの保存]** をクリックして変更レポートを保存し、 **[スクリプトの保存]** をクリックして Transact-SQL スクリプトを保存してから、 **[キャンセル]**をクリックします。 レポートとスクリプトを分析して、アップグレードの完了後に必要なオブジェクトやデータを転送する方法を計画し、ウィザードを再起動します。  
   
  **[スクリプトの保存]** : アップグレードを実行するために使用される Transact-SQL ステートメントをテキスト ファイルに保存します。  
   
@@ -245,8 +249,8 @@ caps.handback.revision: 35
   
 7.  DAC パッケージ ファイルの読み取りに使用するファイル ストリームを閉じます。  
   
-### 例 (PowerShell)  
- 次の例では、MyApplicationVNext.dacpac パッケージで新しい DAC バージョンを使用して、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の既定のインスタンスの MyApplication という名前の DAC をアップグレードします。  
+### <a name="example-powershell"></a>例 (PowerShell)  
+ 次の例では、MyApplicationVNext.dacpac パッケージで新しい DAC バージョンを使用して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の既定のインスタンスの MyApplication という名前の DAC をアップグレードします。  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -283,8 +287,9 @@ $dacstore.IncrementalUpgrade($dacName, $dacType, $upgradeProperties)
 $fileStream.Close()  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   
+

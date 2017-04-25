@@ -1,33 +1,37 @@
 ---
-title: "Tutorial: Ownership Chains and Context Switching | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "context switching [SQL Server], tutorials"
-  - "ownership chains [SQL Server]"
+title: "チュートリアル : 所有権の継承とコンテキストの切り替え | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- context switching [SQL Server], tutorials
+- ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 858ca3c26c6d5297de86e5b0710a3b464ed4ce18
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tutorial: Ownership Chains and Context Switching
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 このチュートリアルでは、1 つのシナリオを使用して、所有権の継承とユーザー コンテキストの切り替えに関係する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のセキュリティ概念について説明します。  
   
 > [!NOTE]  
-> このチュートリアルのコードを実行するには、混合モードのセキュリティが構成されていることと、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベースがインストールされていることが条件となります。 混合モードのセキュリティの詳細については、「[認証モードの選択](../relational-databases/security/choose-an-authentication-mode.md)」を参照してください。  
+> このチュートリアルのコードを実行するには、混合モードのセキュリティが構成されていることと、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベースがインストールされていることが条件となります。 混合モードのセキュリティの詳細については、「 [認証モードの選択](../relational-databases/security/choose-an-authentication-mode.md)」を参照してください。  
   
-## Scenario  
+## <a name="scenario"></a>Scenario  
 このシナリオでは、2 人のユーザーが、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベースに格納されている購買発注データにアクセスするためのアカウントを必要としていることを想定します。 要件は次のとおりです。  
   
 -   最初のアカウント (TestManagerUser) では、すべての購買注文のすべての詳細を確認できる必要があります。  
@@ -48,7 +52,7 @@ caps.handback.revision: 16
   
 以下で、この例の各コード ブロックについて説明します。 完全なサンプル コードをコピーするには、このチュートリアルの最後の「 [完全なサンプル コード](#CompleteExample) 」を参照してください。  
   
-## 1.環境を構成する  
+## <a name="1-configure-the-environment"></a>1.環境を構成する  
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] と次のコードを使用して `AdventureWorks2012` データベースを開き、`CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを使用して、dbo ユーザーがコンテキストとして表示されていることを確認します。  
   
 ```  
@@ -81,7 +85,7 @@ GO
   
 CREATE_USER ステートメントの詳細については、「[CREATE USER (Transact-SQL)](../t-sql/statements/create-user-transact-sql.md)」を参照してください。 CREATE_LOGIN ステートメントの詳細については、「[CREATE LOGIN (Transact-SQL)](../t-sql/statements/create-login-transact-sql.md)」を参照してください。  
   
-次のコードを実行し、 `Purchasing` スキーマの所有権を `TestManagerUser` アカウントに変更します。 所有権を与えられたアカウントでは、`SELECT` 権限や `INSERT` 権限などすべてのデータ操作言語 (DML) のアクセス権限を、中のオブジェクトに対し使用できます。 `TestManagerUser` にもストアド プロシージャを作成する権限が付与されます。  
+次のコードを実行し、 `Purchasing` スキーマの所有権を `TestManagerUser` アカウントに変更します。 所有権を与えられたアカウントでは、 `SELECT` 権限や `INSERT` 権限などすべてのデータ操作言語 (DML) のアクセス権限を、中のオブジェクトに対し使用できます。 `TestManagerUser` にもストアド プロシージャを作成する権限が付与されます。  
   
 ```  
 /* Change owner of the Purchasing Schema to TestManagerUser */  
@@ -98,7 +102,7 @@ GO
   
 GRANT ステートメントの詳細については、「[GRANT (Transact-SQL)](../t-sql/statements/grant-transact-sql.md)」を参照してください。 ストアド プロシージャの詳細については、「[ストアド プロシージャ (データベース エンジン)](../relational-databases/stored-procedures/stored-procedures-database-engine.md)」を参照してください。 [!INCLUDE[ssDE](../includes/ssde-md.md)]のすべての権限を示したポスターについては、[http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142) を参照してください。  
   
-## 2.データにアクセスするストアド プロシージャを作成する  
+## <a name="2-create-a-stored-procedure-to-access-data"></a>2.データにアクセスするストアド プロシージャを作成する  
 データベース内でコンテキストを切り替えるには、EXECUTE AS ステートメントを使用します。 EXECUTE AS を使用するには IMPERSONATE 権限が必要です。  
   
 次のコードでは、 `EXECUTE AS` ステートメントによりコンテキストを `TestManagerUser` に変更し、 `TestEmployeeUser`に必要とされるデータのみを表示するストアド プロシージャを作成します。 要件を満たすには、ストアド プロシージャでは発注番号を表す変数を 1 つ受け取ります。財務情報は表示せず、WHERE 句によって結果を一部配送のみに限定します。  
@@ -156,8 +160,8 @@ GO
   
 REVERT ステートメントの詳細については、「[REVERT (Transact-SQL)](../t-sql/statements/revert-transact-sql.md)」 を参照してください。  
   
-## 3.ストアド プロシージャからデータにアクセスする  
-`TestEmployeeUser` は、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベースのオブジェクトに対し、ログイン権限と public データベース ロールに割り当てられた権限だけを持ちます。 `TestEmployeeUser` がベース テーブルにアクセスしようとすると、次のコードによりエラーが返されます。  
+## <a name="3-access-data-through-the-stored-procedure"></a>3.ストアド プロシージャからデータにアクセスする  
+`TestEmployeeUser` は、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベースのオブジェクトに対し、ログイン権限と public データベース ロールに割り当てられた権限だけを持ちます。 `TestEmployeeUser` がベース テーブルにアクセスしようとすると、次のコードによりエラーが返されます。  
   
 ```  
 EXECUTE AS LOGIN = 'TestEmployeeUser'  
@@ -180,7 +184,7 @@ EXEC Purchasing.usp_ShowWaitingItems 952
 GO  
 ```  
   
-## 4.環境をリセットする  
+## <a name="4-reset-the-environment"></a>4.環境をリセットする  
 次のコードでは、 `REVERT` コマンドにより現在のアカウントのコンテキストを `dbo`に戻し、環境をリセットします。  
   
 ```  
@@ -322,8 +326,9 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
 [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   
+

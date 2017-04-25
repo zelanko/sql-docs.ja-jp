@@ -1,29 +1,33 @@
 ---
 title: "テープ ドライブの論理バックアップ デバイスの定義 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "定義するバックアップ デバイス [SQL Server]"
-  - "バックアップ デバイス [SQL Server], テープ"
-  - "データベースのバックアップ [SQL Server], テープ"
-  - "データベース バックアップ [SQL Server], テープ"
-  - "テープ バックアップ デバイス, 作成"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup devices [SQL Server], defining
+- backup devices [SQL Server], tapes
+- backing up databases [SQL Server], tapes
+- database backups [SQL Server], tapes
+- tape backup devices, creating
 ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c0584680550617726042122f2d18dc7e967d88dc
+ms.lasthandoff: 04/11/2017
+
 ---
-# テープ ドライブの論理バックアップ デバイスの定義 (SQL Server)
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] でテープ ドライブの論理バックアップ デバイスを定義する方法について説明します。 論理バックアップ デバイスとは、特定の物理バックアップ デバイス (ディスク ファイルまたはテープ ドライブ) を示すユーザー定義名です。  物理デバイスは、後で、つまりバックアップがバックアップ デバイスに書き込まれたときに初期化されます。  
+# <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>テープ ドライブの論理バックアップ デバイスの定義 (SQL Server)
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でテープ ドライブの論理バックアップ デバイスを定義する方法について説明します。 論理バックアップ デバイスとは、特定の物理バックアップ デバイス (ディスク ファイルまたはテープ ドライブ) を示すユーザー定義名です。  物理デバイスは、後で、つまりバックアップがバックアップ デバイスに書き込まれたときに初期化されます。  
   
 > [!NOTE]  
 >  テープ バックアップ デバイスは、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でサポートされなくなる予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。  
@@ -59,11 +63,11 @@ caps.handback.revision: 38
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### テープ ドライブの論理バックアップ デバイスを定義するには  
+#### <a name="to-define-a-logical-backup-device-for-a-tape-drive"></a>テープ ドライブの論理バックアップ デバイスを定義するには  
   
 1.  オブジェクト エクスプローラーで適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
   
-2.  **[サーバー オブジェクト]** を展開し、**[バックアップ デバイス]** を右クリックします。  
+2.  **[サーバー オブジェクト]**を展開し、 **[バックアップ デバイス]**を右クリックします。  
   
 3.  **[新しいバックアップ デバイス]**をクリックし、 **[バックアップ デバイス]** ダイアログ ボックスを開きます。  
   
@@ -73,17 +77,17 @@ caps.handback.revision: 38
   
 6.  新しいデバイスを定義するには、 **[OK]**をクリックします。  
   
- この新しいデバイスをバックアップするには、このデバイスを **[データベースのバックアップ]** ダイアログ ボックス (**[全般]** ページ) の **[バックアップ先]** フィールドに追加します。 詳細については、「[データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)」を参照してください。  
+ この新しいデバイスをバックアップするには、このデバイスを **[データベースのバックアップ]** ダイアログ ボックス (**[全般]** ページ) の **[バックアップ先]** フィールドに追加します。 詳細については、データベースの完全バックアップの作成 [データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)を使用してデータベースの差分バックアップを作成します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### テープ ドライブの論理バックアップ デバイスを定義するには  
+#### <a name="to-define-a-logical-backup-device-for-a-tape-drive"></a>テープ ドライブの論理バックアップ デバイスを定義するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、[sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) を使用して、テープの論理バックアップ デバイスを定義します。 この例では、`tapedump1` というテープ バックアップ デバイスを物理名 `\\.\tape0` で追加します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) を使用して、テープの論理バックアップ デバイスを定義します。 この例では、 `tapedump1`というテープ バックアップ デバイスを物理名 `\\.\tape0`で追加します。  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -92,7 +96,7 @@ EXEC sp_addumpdevice 'tape', 'tapedump1', '\\.\tape0' ;
 GO  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   

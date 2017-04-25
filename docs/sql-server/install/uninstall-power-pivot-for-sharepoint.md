@@ -1,23 +1,27 @@
 ---
 title: "Power Pivot for SharePoint のアンインストール | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 caps.latest.revision: 27
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "erikre"
-caps.handback.revision: 27
+author: MikeRayMSFT
+ms.author: mikeray
+manager: erikre
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 861d60a66b9dc6d86b31aded956561fcdf1be6ff
+ms.lasthandoff: 04/11/2017
+
 ---
-# Power Pivot for SharePoint のアンインストール
+# <a name="uninstall-power-pivot-for-sharepoint"></a>Power Pivot for SharePoint のアンインストール
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] のアンインストールは、複数の手順で構成されるプロセスです。これには、アンインストールの準備、ファームからの機能およびソリューションの削除、プログラム ファイルおよびレジストリ設定の削除が含まれます。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
@@ -44,7 +48,7 @@ caps.handback.revision: 27
   
 -   データベース エンジンもアンインストールする場合は、SQL Server のシステム管理者であり、ローカル Administrators グループのメンバーであることが必要です。  
   
--   Analysis Services と [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をアンインストールするには、Analysis Services のシステム管理者であり、ローカル Administrators グループのメンバーであることが必要です。  
+-   Analysis Services と [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]をアンインストールするには、Analysis Services のシステム管理者であり、ローカル Administrators グループのメンバーであることが必要です。  
   
 ##  <a name="bkmk_before"></a> 手順 1. アンインストール前のチェック リスト  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスは、クエリとデータ処理をサポートするソフトウェアがファームから削除されると無効になります。 最初の手順として、機能しなくなるファイルとライブラリを事前に削除する必要があります。 これにより、ソフトウェアのアンインストール前の「欠落データ」に関する問題と懸念に対処できます。  
@@ -84,9 +88,9 @@ caps.handback.revision: 27
   
 4.  タスク一覧内の各アクションの機能を確認します。  
   
-     **[[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service アプリケーションの削除]** では、サービス アプリケーションに関連付けられたアプリケーション データを削除することを選択できます。 アプリケーション データは、データ更新スケジュール、データベース インスタンス情報、使用状況データ、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint によって使用されるその他のデータを格納するためにサービス アプリケーションを使って作成された SQL Server データベースです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックなどのユーザー ファイルは格納されません。 (たとえば、データ更新またはデータ アクセスに関連するデータ保持ポリシーに従うなど) アプリケーション データを保持する特定の理由がある場合を除き、SharePoint ユーザーによって作成または保存されたファイルを削除することなく、アプリケーション データベースを削除できます。  
+     **[削除] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service アプリケーションの削除**では、サービス アプリケーションに関連付けられたアプリケーション データを削除することを選択できます。 アプリケーション データは、データ更新スケジュール、データベース インスタンス情報、使用状況データ、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint によって使用されるその他のデータを格納するためにサービス アプリケーションを使って作成された SQL Server データベースです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックなどのユーザー ファイルは格納されません。 (たとえば、データ更新またはデータ アクセスに関連するデータ保持ポリシーに従うなど) アプリケーション データを保持する特定の理由がある場合を除き、SharePoint ユーザーによって作成または保存されたファイルを削除することなく、アプリケーション データベースを削除できます。  
   
-     データベースを削除するには、**[[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service アプリケーションの削除]** を選択し、**[このサービス アプリケーションに関連付けられているアプリケーション データを削除します]** を選択します。  
+     データベースを削除するには、 **[削除] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service アプリケーションの削除** を選択し、 **[このサービス アプリケーションに関連付けられているアプリケーション データを削除します]**をアンインストールするには、Analysis Services のシステム管理者であり、ローカル Administrators グループのメンバーであることが必要です。  
   
 5.  必要に応じて、 **[出力]** タブまたは **[スクリプト]** タブの詳細情報を確認します。  
   
@@ -112,7 +116,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
  既にキューに入っている配置または取り消しジョブを見つけて削除するには、次の操作を行います。  
   
-1.  他のエラーについては、ULS ログを確認します。 詳細については、「[SharePoint ログ ファイルと診断ログの構成と表示 &#40;Power Pivot for SharePoint&#41;](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md)」を参照してください。  
+1.  他のエラーについては、ULS ログを確認します。 詳細については、「[SharePoint ログ ファイルと診断ログの構成と表示 &#40;Power Pivot for SharePoint&#41;](~/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)」を参照してください。  
   
 2.  SharePoint 管理シェルを管理者として起動し、次のコマンドを実行してキュー内のジョブを表示します。  
   
@@ -122,7 +126,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 3.  既存の配置について、 **[種類]** が "取り消し" または "展開" であり、 **[ファイル]** が powerpivotwebapp.wsp または powerpivotfarm.wsp であることを確認します。  
   
-4.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューションに関連するデプロイまたは取り消しの場合、**[JobId]** の GUID 値をコピーし、次のコマンドに貼り付けます (シェルの [編集] メニューの [マーク]、[コピー]、および [貼り付け] を使用して GUID をコピーします)。  
+4.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューションに関連するデプロイまたは取り消しの場合、 **[JobId]** の GUID 値をコピーし、次のコマンドに貼り付けます (シェルの [編集] メニューの [マーク]、[コピー]、および [貼り付け] を使用して GUID をコピーします)。  
   
     ```  
     Stsadm –o canceldeployment –id “<GUID>”  
@@ -130,7 +134,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 5.  構成ツールで **[検証]** に続けて **[実行]**をクリックして、タスクを再試行します。  
   
- また、PowerShell を使用して、機能とソリューションをファームから削除することもできます。 詳細については、「[Power Pivot for SharePoint 用 PowerShell リファレンス](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)」を参照してください。  
+ また、PowerShell を使用して、機能とソリューションをファームから削除することもできます。 詳細については、「 [Power Pivot for SharePoint 用 PowerShell リファレンス](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)」を参照してください。  
   
 ##  <a name="bkmk_uninstall"></a> 手順 3. SQLServer セットアップを実行してローカル コンピューターからプログラムを削除する  
  プログラム ファイルを削除するには、SQL Server セットアップを実行してソフトウェアをアンインストールする必要があります。 アンインストールを実行すると、ファイルだけでなく、セットアップによって作成されたレジストリ エントリも削除されます。 [プログラムと機能] ページを使用して、ソフトウェアをアンインストールできます。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] インストールは、SQL Server インストールの一部です。  
@@ -139,14 +143,14 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 1.  プログラム リストから **[Microsoft SQL Server 2014 (64 ビット)]** を選択します。  
   
-2.  **[アンインストール] または [変更]** をクリックします。  
+2.  **[アンインストール] または [変更]**をクリックします。  
   
 3.  **[削除]**をクリックします。 SQL Server セットアップが起動します。  
   
      セットアップで **[[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]]** インスタンスを選択してから、**[Analysis Services]** および **[Analysis Services SharePoint 統合]** を選択して、他はすべてそのままの状態で、その機能だけを削除できます。  
   
 ##  <a name="bkmk_addin"></a> 手順 4. PowerPivot for SharePoint アドインをアンインストールする  
- [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 配置に 2 台以上のサーバーがあり、[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] アドインをインストールした場合は、インストール先の各サーバーから [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] アドインをアンインストールして、[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] のすべてのファイルを完全にアンインストールします。 詳細については、「[PowerPivot for SharePoint アドインのインストールまたはアンインストール &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)」を参照してください。  
+ [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 配置に 2 台以上のサーバーがあり、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] アドインをインストールした場合は、インストール先の各サーバーから [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] アドインをアンインストールして、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] のすべてのファイルを完全にアンインストールします。 詳細については、「 [Power Pivot for SharePoint アドインのインストールまたはアンインストール &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)をアンインストールするには、Analysis Services のシステム管理者であり、ローカル Administrators グループのメンバーであることが必要です。  
   
 ##  <a name="verify"></a> 手順 5. アンインストールを確認する  
   
@@ -164,7 +168,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
     3.  [監視] の **[診断ログの構成]** と **[使用状況と正常性のデータ収集の構成]**で、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] イベントとイベント カテゴリが表示されないことを確認します。  
   
-    4.  [アプリケーションの全般設定] で、 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボード]** がページに表示されないことを確認します。  
+    4.  [アプリケーションの全般設定] で、 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボード** がページに表示されないことを確認します。  
   
 ##  <a name="bkmk_post"></a> 手順 6. アンインストール後のチェック リスト  
  次の一覧を使用して、アンインストール時に削除されなかったソフトウェアとファイルを削除します。  
@@ -179,7 +183,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 3.  Secure Store Service で、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint で使用されている保存された資格情報を含む対象アプリケーションを削除します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をアンインストールすると、Secure Store Service のエントリの一部は削除されますが、削除されないエントリもあります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 自動データ更新アカウント用に作成された対象アプリケーションと、データ更新用に作成した対象アプリケーションはまだ存在しているため、手動で削除する必要があります。  
   
-     一方で、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスで自動生成された個々の対象アプリケーションは、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のアンインストール時に自動的に削除されます。  
+     一方で、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスで自動生成された個々の対象アプリケーションは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のアンインストール時に自動的に削除されます。  
   
 4.  コントロール パネルで、 **[プログラム]**、 **[プログラムのアンインストール]** の順にクリックします。使用しなくなった Analysis Services クライアント ライブラリをアンインストールします。 Analysis Services ADOMD.NET と Microsoft SQL Server Analysis 管理オブジェクトは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をアンインストールしても削除されません。 ライブラリは、Analysis Services データを使用する他のプログラムで使用されることがあるので、SQL Server セットアップではこれらは自動的にはアンインストールされません。 クライアント ライブラリが不要になった場合には、これらを個別にアンインストールする必要があります。  
   
@@ -187,8 +191,9 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      Analysis Services OLE DB プロバイダーはアンインストールしないでください。 SharePoint では、Analysis Services データベースに接続する Excel ブックの前提条件として OLE DB プロバイダーがインストールされます。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] では、より新しいバージョンがインストールされますが、このバージョンは下位互換性があるため、後でデータ接続の問題が発生するのを避けるためにシステムに残しておく必要があります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Power Pivot for SharePoint アドインのインストールまたはアンインストール &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [Power Pivot の構成ツール](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
   
+

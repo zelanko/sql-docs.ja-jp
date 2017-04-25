@@ -1,26 +1,30 @@
 ---
 title: "パブリケーションの情報を表示し、タスクを実行する (レプリケーション モニター) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "パブリケーション情報の表示"
-  - "パブリケーション [SQL Server レプリケーション], 情報の表示"
-  - "パブリケーション [SQL Server レプリケーション], レプリケーション モニター タスク"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing publication information
+- publications [SQL Server replication], viewing information
+- publications [SQL Server replication], Replication Monitor tasks
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d01adb7abcb4c110f826e0cd54814a66c83c0051
+ms.lasthandoff: 04/11/2017
+
 ---
-# パブリケーションの情報を表示し、タスクを実行する (レプリケーション モニター)
+# <a name="view-information-and-perform-tasks-for-a-publication-replication-monitor"></a>パブリケーションの情報を表示し、タスクを実行する (レプリケーション モニター)
   レプリケーション モニターには、選択したパブリケーションについての情報を含む以下のタブが用意されています。  
   
 -   **[すべてのサブスクリプション]**  
@@ -37,33 +41,33 @@ caps.handback.revision: 39
   
     -   キュー更新サブスクリプションを持つトランザクション パブリケーションで使用されるキュー リーダー エージェント  
   
--   **警告** (実行しているディストリビューター [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降)  
+-   **[警告]** ( [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降を実行しているディストリビューター)  
   
     -   このタブを使用して、エージェントに対する警告とアラートを指定できます。  
   
--   **トレーサー トークン** (トランザクション レプリケーションを実行するディストリビューターに対してのみ、 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降)  
+-   **[トレーサー トークン]** ( [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降を実行しているディストリビューターのトランザクション レプリケーションのみ)  
   
      このタブでは、待機時間、つまりパブリッシャーでトランザクションがコミットされてから、対応するトランザクションがサブスクライバーでコミットされるまでの経過時間を測定できます。  
   
- 各タブでオプションの詳細については、右側のウィンドウ] タブをクリックし、をクリックして **ヘルプ** メニュー バーでします。 レプリケーション モニターの起動方法については、次を参照してください。 [レプリケーション モニターを起動](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)します。  
+ それぞれのタブのオプションの詳細については、右ペインでタブをクリックしてから、メニュー バーで **[ヘルプ]** をクリックします。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor (レプリケーション モニターの開始)](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)」をご覧ください。  
   
-### パブリケーションの情報を表示し、タスクを実行するには  
+### <a name="to-view-information-and-perform-tasks-for-a-publication"></a>パブリケーションの情報を表示し、タスクを実行するには  
   
 1.  左ペインでパブリッシャー グループを展開し、パブリッシャーを展開して、パブリケーションをクリックします。  
   
-2.  表示し、パブリケーションのプロパティを変更、パブリケーションを右クリックし、をクリックし、 **プロパティ**します。  
+2.  パブリケーションのプロパティを表示および変更するには、パブリケーションを右クリックし、 **[プロパティ]**をクリックします。  
   
-3.  サブスクリプションに関する情報を表示する] をクリックして、 **すべてのサブスクリプション** ] タブをクリックします。  
+3.  サブスクリプションの情報を表示するには、 **[すべてのサブスクリプション]** タブをクリックします。  
   
-     表示し、サブスクリプションのプロパティを変更、サブスクリプションを右クリックし、をクリックして **プロパティ**です。 このタブで、さらに詳しい情報を表示したり、タスクを実行したりできます。 詳細については、次を参照してください。 [情報を表示したりタスクを実行する、エージェント関連付けられているサブスクリプションに関連付け & #40 です。レプリケーション モニターと #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)です。  
+     サブスクリプションのプロパティを表示および変更するには、サブスクリプションを右クリックしてから、 **[プロパティ]**をクリックします。 このタブで、さらに詳しい情報を表示したり、タスクを実行したりできます。 詳細については、[サブスクリプションに関連付けられているエージェントの情報の表示およびタスクの実行](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)に関するページを参照してください。  
   
-4.  エージェントの情報を表示する] をクリックして、 **エージェント** ] タブをクリックします。 このタブで、さらに詳しい情報を表示したり、タスクを実行したりできます。 詳細については、次を参照してください。 [情報を表示したりタスクを実行するエージェント関連付けられていると、パブリケーションと #40 です。レプリケーション モニターと #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)します。  
+4.  エージェントの情報を表示するには、 **[エージェント]** タブをクリックします。 このタブで、さらに詳しい情報を表示したり、タスクを実行したりできます。 詳細については、[パブリケーションに関連付けられているエージェントの情報の表示およびタスクの実行](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)に関するページを参照してください。  
   
-5.  エージェントの警告としきい値に関する情報を表示する] をクリックして、 **警告** ] タブをクリックします。 詳細については、次を参照してください。 [しきい値の設定とレプリケーション モニターで警告](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)します。  
+5.  エージェントの警告としきい値の情報を表示するには、 **[警告]** タブをクリックします。 詳細については、「 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
   
-6.  トレーサー トークンに関する情報を表示する] をクリックして、 **トレーサー トークン** ] タブをクリックします。 トレーサー トークンを使用する方法の詳細については、次を参照してください。 [メジャーの待機時間とトランザクション レプリケーション用の接続の検証](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)します。  
+6.  トレーサー トークンの情報を表示するには、 **[トレーサー トークン]** タブをクリックします。 トレーサー トークンの使用方法の詳細については、「 [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [レプリケーションの監視](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   

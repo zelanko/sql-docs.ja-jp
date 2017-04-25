@@ -1,26 +1,30 @@
 ---
 title: "DDL イベント | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DDL イベント"
-  - "DDL トリガー, イベント"
-  - "イベント [SQL Server], DDL"
+ms.custom: 
+ms.date: 11/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DDL events
+- DDL triggers, events
+- events [SQL Server], DDL
 ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 411eb6c824b073818fbda216ba801d34ee5bcf0b
+ms.lasthandoff: 04/11/2017
+
 ---
-# DDL イベント
+# <a name="ddl-events"></a>DDL イベント
   次の表は、DDL トリガーまたはイベント通知を起動するために使用できる DDL イベントの一覧です。 各イベントは、キーワード間にアンダースコア文字 (_) を含めるように変更されたステートメント構文を備えた [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたはストアド プロシージャに対応しています。  
   
 > [!IMPORTANT]  
@@ -117,3 +121,4 @@ caps.handback.revision: 29
  [DDL イベント グループ](../../relational-databases/triggers/ddl-event-groups.md)  
   
   
+

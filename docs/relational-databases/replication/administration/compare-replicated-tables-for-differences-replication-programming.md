@@ -1,77 +1,81 @@
 ---
 title: "レプリケートされたテーブルを比較して相違があるかどうかを確認する (レプリケーション プログラミング) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "tablediff ユーティリティ"
-  - "レプリケートされたテーブルの比較"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- tablediff utility
+- comparing replicated tables
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f53c21103cf05d606ab9a8543606577df097a353
+ms.lasthandoff: 04/11/2017
+
 ---
-# レプリケートされたテーブルを比較して相違があるかどうかを確認する (レプリケーション プログラミング)
-  テーブルのアーティクル用にパブリッシュされたデータが、パブリッシャー側とサブスクライバー側とで異なっていると、データが収束しない可能性があります。アーティクルを検証することにより、両者に相違点が存在するかどうかを確認できます。 詳細については、次を参照してください。 [レプリケート データの検証](../../../relational-databases/replication/validate-replicated-data.md)します。 ただし、検証によって返されるのは、一致しているかどうかという情報だけであり、両者のテーブル間の相違について、それ以上詳しい情報は提供されません。  **Tablediff** 詳細なコマンド プロンプト ユーティリティを違いは、2 つのテーブル間の情報と、生成することもできます、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 、パブリッシャー側でデータを収束にサブスクリプションを表示するスクリプトです。  
+# <a name="compare-replicated-tables-for-differences-replication-programming"></a>レプリケートされたテーブルを比較して相違があるかどうかを確認する (レプリケーション プログラミング)
+  テーブルのアーティクル用にパブリッシュされたデータが、パブリッシャー側とサブスクライバー側とで異なっていると、データが収束しない可能性があります。アーティクルを検証することにより、両者に相違点が存在するかどうかを確認できます。 詳細については、「[レプリケートされたデータの検証](../../../relational-databases/replication/validate-replicated-data.md)」をご覧ください。 ただし、検証によって返されるのは、一致しているかどうかという情報だけであり、両者のテーブル間の相違について、それ以上詳しい情報は提供されません。 **tablediff** コマンド プロンプト ユーティリティを使用すると、2 つのテーブル間の詳細な相違点を取得できるだけでなく、サブスクリプションをパブリッシャー側のデータに収束させるための [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを生成することもできます。  
   
 > [!NOTE]  
->   **Tablediff** ユーティリティのみがサポートされて [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サーバーです。  
+>  **tablediff** ユーティリティは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サーバーでのみサポートされます。  
   
-### tablediff を使用してレプリケートされたテーブルを比較し相違点を確認するには  
+### <a name="to-compare-replicated-tables-for-differences-using-tablediff"></a>tablediff を使用してレプリケートされたテーブルを比較し相違点を確認するには  
   
-1.  レプリケーション トポロジ内の任意のサーバーでコマンド プロンプトから実行、 [tablediff ユーティリティ](../../../tools/tablediff-utility.md)します。 次のパラメーターを指定します。  
+1.  レプリケーション トポロジの任意のサーバーで、コマンド プロンプトから [tablediff Utility](../../../tools/tablediff-utility.md)を実行します。 次のパラメーターを指定します。  
   
-    -   **-sourceserver** - データが正しく認識、サーバー、通常はパブリッシャーの名前。  
+    -   **-sourceserver** - データが正しいとわかっている方のサーバー (通常はパブリッシャー) の名前。  
   
-    -   **-sourcedatabase** - 正しいデータを含むデータベースの名前。  
+    -   **-sourcedatabase** - 正しいデータが格納されているデータベースの名前。  
   
-    -   **-sourcetable** - 比較対象となるアーティクルのソース テーブルの名前。  
+    -   **-sourcetable** - アーティクルの比較元テーブルの名前。  
   
-    -   (省略可能) **-sourceschema** -既定のスキーマでない場合に、ソース テーブルのスキーマの所有者。  
+    -   (省略可) **-sourceschema** - 比較元テーブルのスキーマ所有者 (既定のスキーマを使用しない場合)。  
   
-    -   (省略可能) **-sourceuser** と **- sourcepassword** SQL Server 認証を使用してパブリッシャーに接続する場合。  
-  
-        > [!IMPORTANT]  
-        >  可能な場合は、Windows 認証を使用します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用する必要がある場合は、セキュリティ資格情報の入力を、ユーザーに対して実行時に求めるようにしてください。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
-  
-    -   **-destinationserver** - 通常はサブスクライバーをデータは、比較される、サーバーの名前。  
-  
-    -   **-destinationdatabase** - の名前、比較対象となるデータベース。  
-  
-    -   **-destinationtable** - 比較対象となるテーブルの名前。  
-  
-    -   (省略可能) **-destinationschema** -既定のスキーマかどうか変換先テーブルのスキーマの所有者。  
-  
-    -   (省略可能) **-destinationuser** と **- destinationpassword** を使用する場合 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーへの接続を認証します。  
+    -   (省略可) SQL Server 認証を使用してパブリッシャーに接続する場合は、 **-sourceuser** および **-sourcepassword** を指定します。  
   
         > [!IMPORTANT]  
         >  可能な場合は、Windows 認証を使用します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用する必要がある場合は、セキュリティ資格情報の入力を、ユーザーに対して実行時に求めるようにしてください。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
-    -   (省略可能)使用 **-c** 列レベルの比較を行う。  
+    -   **-destinationserver** - 比較対象のデータが格納されているサーバー (通常はサブスクライバー) の名前。  
   
-    -   (省略可能)使用 **-q** 高速には、行の数、およびスキーマのみの比較します。  
+    -   **-destinationdatabase** - 比較対象データベースの名前。  
   
-    -   (省略可能)ファイル名およびパスを指定 **-o** ファイルに結果を出力します。  
+    -   **-destinationtable** - 比較対象テーブルの名前。  
   
-    -   (省略可能)結果を挿入するサブスクリプション データベースのテーブルを指定 **-et**します。 テーブルが既に存在する場合は、指定 **-dt** 先テーブルを削除します。  
+    -   (省略可) **-destinationschema** - 比較対象テーブルのスキーマの所有者 (既定のスキーマを使用しない場合)。  
   
-    -   (省略可能)使用 **-f** を生成する、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] パブリッシャーのデータに一致するように、サブスクライバーでデータを修正するファイルです。 使用 **-df** の数を指定する [!INCLUDE[tsql](../../../includes/tsql-md.md)] 各ファイル内のステートメントです。  
+    -   (省略可) **認証を使用してサブスクライバーに接続する場合は、** -destinationuser **および** -destinationpassword [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。  
   
-    -   (省略可能)使用 **-rc** と **-ri** の操作を再試行する間隔を再試行する回数を指定します。  
+        > [!IMPORTANT]  
+        >  可能な場合は、Windows 認証を使用します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用する必要がある場合は、セキュリティ資格情報の入力を、ユーザーに対して実行時に求めるようにしてください。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
-    -   (省略可能)使用 **-strict** 元とコピー先のテーブル間の厳密なスキーマ比較を適用します。  
+    -   (省略可) 列レベルの比較を行う場合は、 **-c** を使用します。  
   
-## 参照  
+    -   (省略可) 短時間で処理が済むように行数およびスキーマのみの比較を行う場合は、 **-q** を使用します。  
+  
+    -   (省略可) **-o** に、結果の出力先ファイルの名前とパスを指定します。  
+  
+    -   (省略可) 結果を挿入するサブスクリプション データベース内のテーブルを **-et**に指定します。 テーブルが既に存在する場合は、 **-dt** を指定して、最初にテーブルを削除します。  
+  
+    -   (省略可) サブスクライバー側のデータをパブリッシャー側のデータと一致するように修正するための **ファイルを生成する場合は、** -f [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用します。 各ファイルの **ステートメントの数を指定するには、** -df [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用します。  
+  
+    -   (省略可) 操作を再試行する回数と再試行間隔を指定するには、 **-rc** および **-ri** を使用します。  
+  
+    -   (省略可) 比較元テーブルと比較先テーブル間の完全なスキーマの比較を実行するには、 **-strict** を使用します。  
+  
+## <a name="see-also"></a>参照  
  [サブスクライバーでのデータの検証](../../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

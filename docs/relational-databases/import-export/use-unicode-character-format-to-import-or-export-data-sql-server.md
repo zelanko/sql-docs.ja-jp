@@ -1,25 +1,29 @@
 ---
 title: "Unicode 文字形式を使用したデータのインポートまたはエクスポート (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データ形式 [SQL Server], Unicode 文字"
-  - "Unicode [SQL Server], 一括インポートと一括エクスポート"
+ms.custom: 
+ms.date: 09/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data formats [SQL Server], Unicode character
+- Unicode [SQL Server], bulk importing and exporting
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 63fb68860ade1e0bd64ce87ca98ec4439bf238fa
+ms.lasthandoff: 04/11/2017
+
 ---
-# Unicode 文字形式を使用したデータのインポートまたはエクスポート (SQL Server)
+# <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Unicode 文字形式を使用したデータのインポートまたはエクスポート (SQL Server)
 拡張文字や DBCS 文字を含むデータ ファイルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送する場合は、Unicode 文字形式を使用することをお勧めします。 Unicode 文字データ形式を使用すると、操作を実行するクライアントで使用しているコード ページとは異なるコード ページを使用して、サーバーからデータをエクスポートできます。 このような場合、Unicode 文字形式を使用すると、次の利点があります。  
   
 * 転送元のデータと転送先のデータが Unicode データ型の場合、Unicode 文字形式を使用するとすべての文字データが保持されます。  
@@ -43,7 +47,7 @@ Unicode 文字形式を使用するときは、以下の点をご考慮くださ
 * Unicode 文字形式のデータ ファイルに格納されている [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) データの動作は、[char](../../t-sql/data-types/char-and-varchar-transact-sql.md) データではなく [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) データとして格納されている点を除いて、文字形式のデータ ファイルの場合と同様になります。 文字形式の詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
 
 ## Unicode 文字形式、bcp、フォーマット ファイルの使用に関する特別な注意点<a name="special_considerations"></a>
-Unicode 文字形式のデータ ファイルは、Unicode ファイルの規則に従います。  ファイルの先頭の 2 バイトは、16 進数の 0xFFFE です。  これらのバイトは、バイト順マーク (BOM) としての役割を果たし、高位のバイトをファイルの先頭に格納するか、最後に格納するかを指定します。  [bcp ユーティリティ](../../tools/bcp-utility.md)が BOM の解釈を間違えてインポート プロセスの一部が失敗し、次のようなエラー メッセージが表示される場合があります。
+Unicode 文字形式のデータ ファイルは、Unicode ファイルの規則に従います。  ファイルの先頭の 2 バイトは、16 進数の 0xFFFE です。  これらのバイトは、バイト順マーク (BOM) としての役割を果たし、高位のバイトをファイルの先頭に格納するか、最後に格納するかを指定します。  [bcp ユーティリティ](../../tools/bcp-utility.md) が BOM の解釈を間違えてインポート プロセスの一部が失敗し、次のようなエラー メッセージが表示される場合があります。
 ```
 Starting copy...
 SQLState = 22005, NativeError = 0
@@ -51,31 +55,31 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
 ```
 
 次の条件下で BOM の解釈を間違える可能性があります。
-* [cp ユーティリティ](../../tools/bcp-utility.md) を使用しており、**-w** スイッチを使用して Unicode 文字を指定している
+* [cp ユーティリティ](../../tools/bcp-utility.md) を使用しており、 **-w** スイッチを使用して Unicode 文字を指定している
 
 * フォーマット ファイルを使用している
 
 * データ ファイルの最初のフィールドが文字以外である
 
-*特定の*状況に次の回避策のいずれかを使用できるかどうかご検討ください。
-* フォーマット ファイルを使用しないようにします。  この回避策の例については、以下の「[フォーマット ファイルなしで bcp と Unicode文字形式を使用してデータをインポートする方法](#bcp_widechar_import)」をご覧ください。
+*特定の* 状況に次の回避策のいずれかを使用できるかどうかご検討ください。
+* フォーマット ファイルを使用しないようにします。  この回避策の例については、以下の「 [フォーマット ファイルなしで bcp と Unicode文字形式を使用してデータをインポートする方法](#bcp_widechar_import)」をご覧ください。
 
-* **-w** スイッチの代わりに **-c** スイッチを使用します。
+* **-w** スイッチの代わりに **-c**スイッチを使用します。
 
 * ネイティブ形式を使用して、データをもう一度エクスポートします。
 
-* [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) または [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) を使用します。  これらの回避策の例については、以下の「[XML 形式以外のフォーマット ファイルで BULK INSERT と Unicode 文字形式を使用する方法](#bulk_widechar_fmt)」と「[XML 形式以外のフォーマット ファイルで OPENROWSET と Unicode 文字形式を使用する方法](#openrowset_widechar_fmt)」をご覧ください。
+* [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) または [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)を使用します。  これらの回避策の例については、以下の「 [XML 形式以外のフォーマット ファイルで BULK INSERT と Unicode 文字形式を使用する方法](#bulk_widechar_fmt) 」と「 [XML 形式以外のフォーマット ファイルで OPENROWSET と Unicode 文字形式を使用する方法](#openrowset_widechar_fmt)」をご覧ください。
  
-* 転送先のテーブルに手動で最初のレコードを挿入し、**-F 2** スイッチを使用して、2 番目のレコードからインポートを開始します。
+* 転送先のテーブルに手動で最初のレコードを挿入し、 **-F 2** スイッチを使用して、2 番目のレコードからインポートを開始します。
 
-* データ ファイルに手動でダミーの最初のレコードを挿入し、**-F 2** スイッチを使用して、2 番目のレコードからインポートを開始します。  この回避策の例については、「[XML 形式以外のフォーマット ファイルで bcp と Unicode文字形式を使用してデータをインポートする方法](#bcp_widechar_import_fmt)」をご覧ください。
+* データ ファイルに手動でダミーの最初のレコードを挿入し、 **-F 2** スイッチを使用して、2 番目のレコードからインポートを開始します。  この回避策の例については、「 [XML 形式以外のフォーマット ファイルで bcp と Unicode文字形式を使用してデータをインポートする方法](#bcp_widechar_import_fmt)」をご覧ください。
 
 * 最初の列が文字データ型のステージング テーブルを使用します。
 
-* データをもう一度エクスポートし、最初のデータ フィールドが文字になるように、データ フィールドの順序を変更します。  その後、フォーマット ファイルを使用して、データ フィールドをテーブルの実際の順序にもう一度マッピングします。  例については、「[フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)」をご覧ください。
+* データをもう一度エクスポートし、最初のデータ フィールドが文字になるように、データ フィールドの順序を変更します。  その後、フォーマット ファイルを使用して、データ フィールドをテーブルの実際の順序にもう一度マッピングします。  例については、「 [フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)」をご覧ください。
   
 ## Unicode 文字形式のコマンド オプション<a name="command_options"></a>  
-Unicode 文字形式のデータは[bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)、または [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) を使用してテーブルにインポートできます。  [bcp](../../tools/bcp-utility.md) コマンドまたは [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ステートメントの場合は、ステートメントでデータ形式を指定できます。  [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) ステートメントの場合は、フォーマット ファイルでデータ形式を指定する必要があります。  
+Unicode 文字形式のデータは [bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)、または [INSERT ...SELECT * FROM OPENROWSET(BULK...) を使用してテーブルにインポートできます](../../t-sql/functions/openrowset-transact-sql.md)。  [bcp](../../tools/bcp-utility.md) コマンドまたは [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ステートメントの場合は、ステートメントでデータ形式を指定できます。  [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) ステートメントの場合は、フォーマット ファイルでデータ形式を指定する必要があります。  
   
 Unicode 文字形式は、次のコマンド オプションでサポートされています。  
   
@@ -86,13 +90,13 @@ Unicode 文字形式は、次のコマンド オプションでサポートさ�
 |OPENROWSET|なし|フォーマット ファイルを使用する必要があります|
   
 > [!NOTE]
->  また、フォーマット ファイルでフィールドごとに形式を指定することもできます。 詳細については、「[データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)」をご覧ください。
+>  また、フォーマット ファイルでフィールドごとに形式を指定することもできます。 詳細については、「 [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。
   
 ## テスト条件の例<a name="etc"></a>  
 このトピックの例は、以下に定義されたテーブルとフォーマット ファイルに基づいています。
 
 ### **サンプル テーブル**<a name="sample_table"></a>
-次のスクリプトは、`myWidechar` という名前のテーブルのテスト データベースを作成し、テーブルにいくつかの初期値を設定します。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
+次のスクリプトは、 `myWidechar` という名前のテーブルのテスト データベースを作成し、テーブルにいくつかの初期値を設定します。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
 ```tsql
 CREATE DATABASE TestDatabase;
 GO
@@ -118,7 +122,7 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
 ```
 
 ### **XML 形式以外のフォーマット ファイルのサンプル**<a name="nonxml_format_file"></a>
-SQL Server は、非 XML 形式と XML 形式の 2 種類のフォーマット ファイルをサポートしています。  XML 以外のフォーマットとは、以前のバージョンの SQL Server でサポートされる従来のフォーマットです。  詳細については、「[XML 以外のフォーマット ファイル (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)」を参照してください。  次のコマンドでは、[bcp ユーティリティ](../../tools/bcp-utility.md)を使用し、`myWidechar` のスキーマに基づいて XML 以外のフォーマット ファイル `myWidechar.fmt` を生成します。  [bcp](../../tools/bcp-utility.md) コマンドを使用してフォーマット ファイルを作成するには、**format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。  format オプションには、次に示す **-f** オプションが必要です。  さらに、この例では、修飾子 **c** を使用して文字データを指定し、**T** を使用して統合セキュリティによる信頼関係接続を指定します。  コマンド プロンプトで、次のコマンドを入力します。
+SQL Server は、非 XML 形式と XML 形式の 2 種類のフォーマット ファイルをサポートしています。  XML 以外のフォーマットとは、以前のバージョンの SQL Server でサポートされる従来のフォーマットです。  詳細については、「 [XML 以外のフォーマット ファイル (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 」を参照してください。  次のコマンドでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用し、 `myWidechar.fmt`のスキーマに基づいて XML 以外のフォーマット ファイル `myWidechar`を生成します。  [bcp](../../tools/bcp-utility.md) コマンドを使用してフォーマット ファイルを作成するには、 **format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。  format オプションには、次に示す **-f** オプションが必要です。  さらに、この例では、修飾子 **c** を使用して文字データを指定し、 **T** を使用して統合セキュリティによる信頼関係接続を指定します。  コマンド プロンプトで、次のコマンドを入力します。
 
 ```
 bcp TestDatabase.dbo.myWidechar format nul -f D:\BCP\myWidechar.fmt -T -w
@@ -159,7 +163,7 @@ REM Review results is SSMS
 ```
 
 ### **XML 形式以外のフォーマット ファイルで bcp と Unicode文字形式を使用してデータをインポートする方法**<a name="bcp_widechar_import_fmt"></a>
-**-w** および **-f** スイッチと **IN** コマンドです。  この例は bcp、フォーマット ファイル、Unicode 文字を使用し、かつデータ ファイル内の最初のデータ フィールドが文字でないため、回避策を実行する必要があります。  上記の「[Unicode 文字形式、bcp、フォーマット ファイルの使用に関する特別な注意点](#special_considerations)」をご覧ください。  データ ファイル `myWidechar.bcp` は、「ダミー」のレコードとして追加のレコードを追加して変更されます。このレコードはその後、`-F 2` スイッチでスキップされます。
+**-w** および **-f** スイッチと **IN** コマンドです。  この例は bcp、フォーマット ファイル、Unicode 文字を使用し、かつデータ ファイル内の最初のデータ フィールドが文字でないため、回避策を実行する必要があります。  上記の「 [Unicode 文字形式、bcp、フォーマット ファイルの使用に関する特別な注意点](#special_considerations)」をご覧ください。  データ ファイル `myWidechar.bcp` は、「ダミー」のレコードとして追加のレコードを追加して変更されます。このレコードはその後、 `-F 2` スイッチでスキップされます。
 
 コマンド プロンプトで次のコマンドを入力し、変更手順を実行します。
 ```
@@ -234,11 +238,12 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
   
 -   [Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## 参照  
- [bcp ユーティリティ](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>参照  
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
+

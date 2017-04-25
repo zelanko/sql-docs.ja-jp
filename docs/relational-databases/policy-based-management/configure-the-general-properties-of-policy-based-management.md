@@ -1,27 +1,31 @@
 ---
 title: "ポリシー ベースの管理の全般プロパティの構成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.PolicyManagement.f1"
-helpviewer_keywords: 
-  - "ポリシー ベースの管理, プロパティの構成"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.PolicyManagement.f1
+helpviewer_keywords:
+- Policy-Based Management, configure properties
 ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7f7103ab22a01f6dcb60c31d7ad7fdcc503746db
+ms.lasthandoff: 04/11/2017
+
 ---
-# ポリシー ベースの管理の全般プロパティの構成
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] でポリシー ベースの管理のプロパティを構成する方法について説明します。  
+# <a name="configure-the-general-properties-of-policy-based-management"></a>ポリシー ベースの管理の全般プロパティの構成
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でポリシー ベースの管理のプロパティを構成する方法について説明します。  
   
  **このトピックの内容**  
   
@@ -44,13 +48,13 @@ caps.handback.revision: 8
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### ポリシー ベースの管理を構成するには  
+#### <a name="to-configure-policy-based-management"></a>ポリシー ベースの管理を構成するには  
   
 1.  **オブジェクト エクスプローラー**で、プラス記号をクリックして、ポリシー ベースの管理のプロパティを構成するサーバーを展開します。  
   
 2.  プラス記号をクリックして **[管理]** フォルダーを展開します。  
   
-3.  **[ポリシー管理]** を右クリックし、**[プロパティ]** をクリックします。  
+3.  **[ポリシー管理]** を右クリックし、 **[プロパティ]**をクリックします。  
   
      **[ポリシー管理のプロパティ]** ダイアログ ボックスでは、次のオプションを使用できます。  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 8
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### ポリシー ベースの管理を構成するには  
+#### <a name="to-configure-policy-based-management"></a>ポリシー ベースの管理を構成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

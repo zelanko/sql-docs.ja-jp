@@ -1,0 +1,105 @@
+---
+title: "警告への応答の定義 (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Agent, alerts
+- alerts [SQL Server], responding to
+- responding to alerts
+ms.assetid: c86ca6eb-c59f-46e9-bc32-d474e7c3b170
+caps.latest.revision: 5
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 84d57ba42f6f2e42155b85abfc29e1708d0b210e
+ms.lasthandoff: 04/11/2017
+
+---
+# <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>Define the Response to an Alert (SQL Server Management Studio)
+このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] または [!INCLUDE[tsql](../../includes/tsql_md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの警告に対して [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] がどのように応答するかを定義する方法について説明します。  
+  
+**このトピックの内容**  
+  
+-   **作業を開始する準備:**  
+  
+    [制限事項と制約事項](#Restrictions)  
+  
+    [Security](#Security)  
+  
+-   **警告に対する応答を定義する方法:**  
+  
+    [SQL Server Management Studio](#SSMSProcedure)  
+  
+    [Transact-SQL](#TsqlProcedure)  
+  
+## <a name="BeforeYouBegin"></a>はじめに  
+  
+### <a name="Restrictions"></a>制限事項と制約事項  
+  
+-   今後のバージョンの **では、** エージェントからポケットベル オプションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] net send [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オプションが削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
+  
+-   SQL Server エージェントは、データベース メールを使用して、電子メールおよびポケットベルによる通知をオペレーターへ送信するように構成する必要があります。 詳細については、「 [オペレーターへの警告の割り当て](http://msdn.microsoft.com/library/ms190038.aspx)」を参照してください。  
+  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
+  
+### <a name="Security"></a>Security  
+  
+#### <a name="Permissions"></a>Permissions  
+警告に対する応答を定義できるのは、 **sysadmin** 固定サーバー ロールのメンバーだけです。  
+  
+## <a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
+  
+#### <a name="to-define-the-response-to-an-alert"></a>警告に対する応答を定義するには  
+  
+1.  **オブジェクト エクスプローラー**で、応答を定義する警告を格納するサーバーをプラス記号をクリックして展開します。  
+  
+2.  プラス記号をクリックして **[SQL Server エージェント]**を展開します。  
+  
+3.  プラス記号をクリックして **[警告]** フォルダーを展開します。  
+  
+4.  応答を定義する警告を右クリックし、**[プロパティ]** を選択します。  
+  
+5.  [*alert_name* **警告のプロパティ**] ダイアログ ボックスで、**[ページの選択]** から **[応答]** を選択します。  
+  
+6.  **[ジョブの実行]** チェック ボックスをオンにし、 **[ジョブの実行]** チェック ボックスの下に表示されている一覧から、警告の発生時に実行するジョブを選択します。 **[新しいジョブ]**をクリックすることで、新しいジョブを作成できます。 **[ジョブの表示]**をクリックすると、ジョブに関するより詳しい情報を表示できます。 **[新しいジョブ]** ダイアログ ボックスと [**ジョブのプロパティ** *job_name*] ダイアログ ボックスで使用できるオプションの詳細については、「[ジョブの作成](../../ssms/agent/create-a-job.md)」と「[ジョブの表示](../../ssms/agent/view-a-job.md)」を参照してください。  
+  
+7.  警告がアクティブになったときにオペレーターに通知する場合は、 **[オペレーターに通知する]** チェック ボックスをオンにします。 **[オペレーター一覧]**の **[電子メール]**、 **[ポケットベル]**、 **[Net Send]**から、オペレーターに通知する方法を選択します (複数選択可)。 **[新しいオペレーター]**をクリックすることで、新しいオペレーターを作成できます。 **[オペレーターの表示]**をクリックすることで、オペレーターに関するより詳しい情報を表示できます。 **[新しいオペレーター]** ダイアログ ボックスと **[オペレーターのプロパティの表示]** ダイアログ ボックスで使用できるオプションの詳細については、「 [Create an Operator](../../ssms/agent/create-an-operator.md) 」と「 [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md)」を参照してください。  
+  
+8.  完了したら、 **[OK]**をクリックします。  
+  
+## <a name="TsqlProcedure"></a>Transact-SQL の使用  
+  
+#### <a name="to-define-the-response-to-an-alert"></a>警告に対する応答を定義するには  
+  
+1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]のインスタンスに接続します。  
+  
+2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+  
+    ```  
+    -- adds an e-mail notification for Test Alert.  
+    -- assumes that Test Alert already exists and that
+    -- François Ajenstat is a valid operator name   
+    USE msdb ;  
+    GO  
+  
+    EXEC dbo.sp_add_notification  
+     @alert_name = N'Test Alert',  
+     @operator_name = N'François Ajenstat',  
+     @notification_method = 1 ;  
+    GO  
+    ```  
+  
+詳細については、「 [sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)」を参照してください。  
+  
+

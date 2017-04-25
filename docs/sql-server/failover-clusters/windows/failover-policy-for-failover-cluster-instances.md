@@ -1,27 +1,31 @@
 ---
 title: "フェールオーバー クラスター インスタンスのフェールオーバー ポリシー | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "柔軟なフェールオーバー ポリシー"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 caps.latest.revision: 45
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5f71e743730968231015410177f9bea2d6f00228
+ms.lasthandoff: 04/11/2017
+
 ---
-# フェールオーバー クラスター インスタンスのフェールオーバー ポリシー
+# <a name="failover-policy-for-failover-cluster-instances"></a>フェールオーバー クラスター インスタンスのフェールオーバー ポリシー
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) において、特定の時点で Windows Server フェールオーバー クラスター (WSFC) クラスター リソース グループを所有できるノードは 1 つだけです。 FCI のこのノードを通じて、クライアント要求が処理されます。 万一障害が発生した場合や再起動が失敗した場合、グループの所有権が、FCI 内の別の WSFC ノードに移ります。 この処理はフェールオーバーと呼ばれます。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] では、障害検出の信頼性が向上し、柔軟なフェールオーバー ポリシーが提供されます。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI は、基になる WSFC サービスにフェールオーバー検出を依存します。 したがって、FCI のフェールオーバー動作は、ネイティブ WSFC 機能と、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップによって追加される機能の 2 つのメカニズムによって決定されます。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI は、基になる WSFC サービスにフェールオーバー検出を依存します。 したがって、FCI のフェールオーバー動作は、ネイティブ WSFC 機能と、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップによって追加される機能の 2 つのメカニズムによって決定されます。  
   
 -   WSFC クラスターはクォーラム構成を保持するため、自動フェールオーバーにおいて一意のフェールオーバー ターゲットが保証されます。 WSFC サービスは、クラスターが常に最適なクォーラム状態であるかどうかを判定したうえで、リソース グループをオンラインまたはオフラインにします。  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 45
 ####  <a name="instance"></a> SQL Server インスタンスの応答時間  
  SQL Server の起動時、WSFC サービスは、SQL Server データベース エンジン リソース DLL を使用して、正常性状態の監視にのみ使用される新しい接続を別個のスレッド上に作成します。 これにより、負荷があるときの正常性状態を SQL インスタンスがレポートするために必要なリソースが確保されます。 この専用の接続を使用して、SQL Server は [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) システム ストアド プロシージャを繰り返しモードで実行し、SQL Server コンポーネントの正常性状態をリソース DLL に定期的に報告します。  
   
- リソース DLL は、正常性チェックのタイムアウトを使用して SQL インスタンスの応答時間を判定します。 HealthCheckTimeout プロパティは、リソース DLL が sp_server_diagnostics ストアド プロシージャを待機する時間を定義します。この待機時間を経過すると、SQL インスタンスは応答不能と見なされ、その旨が WSFC サービスに報告されます。 このプロパティは、フェールオーバー クラスター マネージャー スナップインに加え、T-SQL を使用して構成できます。 詳細については、「[HealthCheckTimeout プロパティ設定の構成](../../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md)」を参照してください。 次に、このプロパティがタイムアウトに与える影響、およびリピート間隔設定について説明します。  
+ リソース DLL は、正常性チェックのタイムアウトを使用して SQL インスタンスの応答時間を判定します。 HealthCheckTimeout プロパティは、リソース DLL が sp_server_diagnostics ストアド プロシージャを待機する時間を定義します。この待機時間を経過すると、SQL インスタンスは応答不能と見なされ、その旨が WSFC サービスに報告されます。 このプロパティは、フェールオーバー クラスター マネージャー スナップインに加え、T-SQL を使用して構成できます。 詳細については、「 [HealthCheckTimeout プロパティ設定の構成](../../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md)」を参照してください。 次に、このプロパティがタイムアウトに与える影響、およびリピート間隔設定について説明します。  
   
 -   リソース DLL によって sp_server_diagnostics ストアド プロシージャが呼び出され、リピート間隔が HealthCheckTimeout 設定の 1/3 に設定されます。  
   
@@ -79,13 +83,13 @@ caps.handback.revision: 45
   
  system、resource、および query process コンポーネントはエラー検出に使用されます。 io_subsytem および events コンポーネントは、診断目的でのみ使用されます。  
   
- それぞれの情報の行セットは、SQL Server クラスター診断ログに書き込まれます。 詳細については、「[フェールオーバー クラスター インスタンスの診断ログを表示して読む方法](../../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)」を参照してください。  
+ それぞれの情報の行セットは、SQL Server クラスター診断ログに書き込まれます。 詳細については、「 [フェールオーバー クラスター インスタンスの診断ログを表示して読む方法](../../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)」を参照してください。  
   
 > [!TIP]  
 >  sp_server_diagnostic ストアド プロシージャは SQL Server AlwaysOn テクノロジによって使用されるほか、問題の検出とトラブルシューティングを行うために任意の SQL Server インスタンスで使用できます。  
   
 ####  <a name="determine"></a> エラーの特定  
- SQL Server データベース エンジン リソース DLL は、FailureConditionLevel プロパティを使用して、検出された正常性状態がエラー条件に該当するかどうかを判定します。 FailureConditionLevel プロパティは、どの検出された正常性状態に基づいて再起動またはフェールオーバーを発生させるかを定義します。 "自動フェールオーバーまたは再起動なし" から自動再起動またはフェールオーバーを発生させる可能性のあるあらゆるエラー条件に至るまで、複数レベルのオプションを使用できます。 このプロパティの構成方法については、「[FailureConditionLevel プロパティ設定の構成](../../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)」を参照してください。  
+ SQL Server データベース エンジン リソース DLL は、FailureConditionLevel プロパティを使用して、検出された正常性状態がエラー条件に該当するかどうかを判定します。 FailureConditionLevel プロパティは、どの検出された正常性状態に基づいて再起動またはフェールオーバーを発生させるかを定義します。 "自動フェールオーバーまたは再起動なし" から自動再起動またはフェールオーバーを発生させる可能性のあるあらゆるエラー条件に至るまで、複数レベルのオプションを使用できます。 このプロパティの構成方法については、「 [FailureConditionLevel プロパティ設定の構成](../../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)」を参照してください。  
   
  エラー状態にはレベルが設定されています。 レベル 1 ～ 5 の各レベルには、前のレベルのすべての状態に加えて独自の状態が含まれています。 これは、それぞれのレベルで、フェールオーバーまたは再起動の可能性が増加することを意味します。 次の表では、エラー状態のレベルについて説明しています。  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 45
   
  クォーラムの正常性の維持については、「[WSFC クォーラム モードと投票の構成 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)」をご覧ください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   

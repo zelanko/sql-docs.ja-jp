@@ -1,0 +1,2 @@
+  SQL Server 2005 からスキーマの動作が変更されました。 その結果、スキーマがデータベース ユーザーと同じであると想定しているコードでは、正しい結果が返されない場合があります。 CREATE SCHEMA、ALTER SCHEMA、DROP SCHEMA、CREATE USER、ALTER USER、DROP USER、CREATE ROLE、ALTER ROLE、DROP ROLE、CREATE APPROLE、ALTER APPROLE、DROP APPROLE、ALTER AUTHORIZATION のいずれかの DDL ステートメントが使用されたことのあるデータベースでは、sysobjects などの古いカタログ ビューを使用しないでください。 そのようなデータベースでは、代わりに新しいカタログ ビューを使用してください。 新しいカタログ ビューでは、SQL Server 2005 で導入されたプリンシパルとスキーマの分離が考慮されます。 カタログ ビューの詳細については、「[カタログ ビュー &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)」を参照してください。
+   

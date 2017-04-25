@@ -1,27 +1,31 @@
 ---
-title: "ビューの削除 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "破棄、ビュー"
-  - "消去、ビュー"
-  - "ビュー [SQL Server], 削除"
-  - "削除、ビュー"
+title: "ビューの削除 |Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dropping views
+- deleting views
+- views [SQL Server], deleting
+- removing views
 ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1c869b1e4ba7cc992687baa3236c96d25b0e63e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# ビューの削除
+# <a name="delete-views"></a>ビューの削除
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、次のいずれかを使用してビューを削除できます: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **このトピックの内容**  
@@ -53,20 +57,20 @@ caps.handback.revision: 15
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### データベースからビューを削除するには  
+#### <a name="to-delete-a-view-from-a-database"></a>データベースからビューを削除するには  
   
 1.  **オブジェクト エクスプローラー**で、削除するビューを含むデータベースを展開します。次に、 **[ビュー]** フォルダーを展開します。  
   
-2.  削除するビューを右クリックし、**[削除]** をクリックします。  
+2.  削除するビューを右クリックし、 **[削除]**をクリックします。  
   
 3.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]**をクリックします。  
   
     > [!IMPORTANT]  
-    >  **[オブジェクトの削除]** ダイアログ ボックスの **[依存関係の表示]** をクリックして *[view_name*** の依存関係]** ダイアログ ボックスを開きます。 ビューに依存するすべてのオブジェクトと、ビューが依存するすべてのオブジェクトが表示されます。  
+    >  **[オブジェクトの削除]** ダイアログ ボックスの **[依存関係の表示]** をクリックして *[view_name***の依存関係]** ダイアログ ボックスを開きます。 ビューに依存するすべてのオブジェクトと、ビューが依存するすべてのオブジェクトが表示されます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### データベースからビューを削除するには  
+#### <a name="to-delete-a-view-from-a-database"></a>データベースからビューを削除するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

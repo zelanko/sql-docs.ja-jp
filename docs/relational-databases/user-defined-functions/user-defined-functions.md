@@ -1,25 +1,29 @@
 ---
 title: "ユーザー定義関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ユーザー定義関数 [SQL Server], コンポーネント"
-  - "user-defined functions [SQL Server], about user-defined functions"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-defined functions [SQL Server], components
+- user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f4c8c44b4c07b26676fd424acb36ea7ccce19df3
+ms.lasthandoff: 04/11/2017
+
 ---
-# ユーザー定義関数
+# <a name="user-defined-functions"></a>ユーザー定義関数
   プログラミング言語の関数と同様、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のユーザー定義関数は、パラメーターを受け取り複雑な計算などの処理を実行してその結果を値として返すルーチンです。 戻り値は、単一のスカラー値または結果セットになります。  
    
 ##  <a name="Benefits"></a> ユーザー定義関数  
@@ -44,16 +48,16 @@ caps.handback.revision: 23
 ##  <a name="FunctionTypes"></a> 関数の種類  
 **スカラー関数**  
  ユーザー定義のスカラー関数は、RETURNS 句で定義された型の単一のデータ値を返します。 インライン スカラー関数の場合、スカラー値は単一ステートメントの結果であり、関数の本体がありません。 複数ステートメントを持つスカラー関数の場合、BEGIN...END ブロックで定義された関数本体に、単一の値を返す一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが含まれています。 戻り値の型は、 **text**、 **ntext**、 **image**、 **cursor**、 **timestamp**を除く各種のデータ型になります。 
- **[例:](https://msdn.microsoft.com/library/bb386973(v=vs.110).aspx)**
+ **[使用例。](https://msdn.microsoft.com/library/bb386973(v=vs.110).aspx)**
   
 **テーブル値関数**  
- ユーザー定義テーブル値関数は、**table** データ型を返します。 インライン テーブル値関数の場合、テーブルは単一の SELECT ステートメントの結果セットであり、関数の本体がありません。 **[例:](https://msdn.microsoft.com/library/bb386954(v=vs.110).aspx)**
+ ユーザー定義テーブル値関数は、**table** データ型を返します。 インライン テーブル値関数の場合、テーブルは単一の SELECT ステートメントの結果セットであり、関数の本体がありません。 **[使用例。](https://msdn.microsoft.com/library/bb386954(v=vs.110).aspx)**
   
 **システム関数**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] さまざまな操作を実行するために使用できる多数のシステム関数が用意されています。 システム関数は変更できません。 詳細については、「[組み込み関数 &#40;Transact-SQL&#41;](../Topic/Built-in%20Functions%20\(Transact-SQL\).md)」、「[システム ストアド関数 &#40;Transact-SQL&#41;](../Topic/System%20Stored%20Functions%20\(Transact-SQL\).md)」、および「[動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](../Topic/Dynamic%20Management%20Views%20and%20Functions%20\(Transact-SQL\).md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、さまざまな操作を実行するために使用できる多数のシステム関数が用意されています。 システム関数は変更できません。 詳細については、「[組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)」、「[システム ストアド関数 &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md)」、および「[動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
   
 ##  <a name="Guidelines"></a> ガイドライン  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが取り消されて、モジュール (トリガーやストアド プロシージャ) 内の次のステートメントが続行されるようなエラーについては、関数内では扱いが異なります。 関数内では、このようなエラーによって関数自体の実行が停止されます。 そのため、次に関数を呼び出したステートメントも取り消されることになります。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントが取り消されて、モジュール (トリガーやストアド プロシージャ) 内の次のステートメントが続行されるようなエラーについては、関数内では扱いが異なります。 関数内では、このようなエラーによって関数自体の実行が停止されます。 そのため、次に関数を呼び出したステートメントも取り消されることになります。  
   
  BEGIN...END ブロック内のステートメントは、副作用を伴いません。 関数の副作用とは、データベース テーブルの変更など、その関数の有効範囲外のリソースの状態を永続的に変更してしまうことです。 関数内のステートメントが変更できる内容は、ローカル カーソルまたはローカル変数など、その関数に対してローカルなオブジェクトの変更のみです。 データベース テーブルの変更、関数に対してローカルではないカーソルの操作、電子メールの送信、カタログ変更、ユーザーへ返す結果セットの生成などの操作は、関数では実行できません。  
   
@@ -78,7 +82,7 @@ caps.handback.revision: 23
   
 -   拡張ストアド プロシージャを呼び出す EXECUTE ステートメント。  
   
-### 組み込みシステム関数  
+### <a name="built-in-system-functions"></a>組み込みシステム関数  
  Transact-SQL ユーザー定義関数では、次の非決定的な組み込み関数を使用できます。  
   
 |||  
@@ -118,7 +122,7 @@ caps.handback.revision: 23
 ##  <a name="Parameters"></a> パラメーターの指定  
  ユーザー定義関数は、0 個またはそれ以上の入力パラメーターを受け取り、スカラー値またはテーブルのいずれかを返します。 1 つの関数では、最大で 1,024 個の入力パラメーターを受け取ることができます。 関数のパラメーターが既定値を持つ場合は、既定値を得るために、関数を呼び出すときに DEFAULT キーワードを指定する必要があります。 この動作はユーザー定義ストアド プロシージャ内の既定値を持つパラメーターとは異なります。ユーザー定義ストアド プロシージャの場合は、パラメーターを省略すると既定値が暗黙的に使用されます。 ユーザー定義関数では、出力パラメーターがサポートされません。  
   
-##  <a name="Tasks"></a> その他の例  
+##  <a name="Tasks"></a> 他の例について  
   
 |||  
 |-|-|  
@@ -133,3 +137,7 @@ caps.handback.revision: 23
 |ユーザー定義関数の定義を表示する方法について説明します。|[ユーザー定義関数の表示](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
+
+
+
+

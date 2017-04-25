@@ -1,31 +1,35 @@
 ---
 title: "WSFC の強制クォーラムによる災害復旧 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性グループ [SQL Server], WSFC クラスター"
-  - "クォーラム [SQL Server], AlwaysOn と WSFC クォーラム"
-  - "フェールオーバー クラスタリング [SQL Server]、AlwaysOn 可用性グループ"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
+- failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f79077825cabd60fa12cd906ff375d149b29a7d3
+ms.lasthandoff: 04/11/2017
+
 ---
-# WSFC の強制クォーラムによる災害復旧 (SQL Server)
+# <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>WSFC の強制クォーラムによる災害復旧 (SQL Server)
   クォーラム障害は、通常、システム障害、永続的な通信障害、または WSFC クラスター内の複数のノードにおける不適切な構成が原因で発生します。  クォーラム障害からの復旧には、手動による介入が必要になります。  
   
--   **開始前の準備:**  [前提条件](#Prerequisites)、 [セキュリティ](#Security)  
+-   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   
--   **WSFC の強制クォーラムの手順による災害復旧** [WSFC の強制クォーラムの手順による災害復旧](#Main)  
+-   **WSFC Disaster Recovery through the Forced Quorum Procedure** [WSFC Disaster Recovery through the Forced Quorum Procedure](#Main)  
   
 -   [関連タスク](#RelatedTasks)  
   
@@ -37,9 +41,9 @@ caps.handback.revision: 20
  強制クォーラムの手順では、クォーラム障害の発生前に、正常なクォーラムが存在していたことを前提としています。  
   
 > [!WARNING]  
->  ユーザーは、Windows Server フェールオーバー クラスタリング、WSFC クォーラム モデル、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、および環境に固有の配置構成の概念および操作に関する十分な知識を持っている必要があります。  
+>  ユーザーは、Windows Server フェールオーバー クラスタリング、WSFC クォーラム モデル、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、および環境に固有の配置構成の概念および操作に関する十分な知識を持っている必要があります。  
 >   
->  詳細については、「[Windows Server フェールオーバー クラスタリング (WSFC) と SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx)」および「[WSFC クォーラム モードと投票の構成 (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)」を参照してください。  
+>  詳細については、「  [Windows Server フェールオーバー クラスタリング (WSFC) と SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC クォーラム モードと投票の構成 (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)」を参照してください。  
   
 ###  <a name="Security"></a> セキュリティ  
  ユーザーは、WSFC クラスターの各ノードのローカル Administrators グループのメンバーであるドメイン アカウントを使用する必要があります。  
@@ -53,12 +57,12 @@ caps.handback.revision: 20
   
  この種の災害復旧プロセスの手順を次に示します。  
   
-#### クォーラム障害から復旧するには:  
+#### <a name="to-recover-from-quorum-failure"></a>クォーラム障害から復旧するには:  
   
 1.  **障害の範囲を特定します。** 応答しない可用性グループや SQL Server インスタンス、災害後に使用できるオンラインのクラスター ノードをそれぞれ特定し、Windows イベント ログと SQL Server システム ログを確認します。  必要に応じて、後で分析できるように解析データやシステム ログを保存しておきます。  
   
     > [!TIP]  
-    >  応答している [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] インスタンスで、[sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) 動的管理ビュー (DMV) クエリを実行して、ローカル サーバー インスタンスに可用性レプリカを保持している可用性グループの正常性に関する情報を取得できます。  
+    >  応答している [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]インスタンスで、 [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) 動的管理ビュー (DMV) クエリを実行して、ローカル サーバー インスタンスに可用性レプリカを保持している可用性グループの正常性に関する情報を取得できます。  
   
 2.  **1 つのノードで強制クォーラムを使用して WSFC クラスターを起動します。** WSFC クラスター サービスがシャットダウンしたもの以外で、コンポーネントの障害が最も少ないノードを特定し、  そのノードが他の大半のノードと通信できることを確認します。  
   
@@ -112,7 +116,7 @@ caps.handback.revision: 20
   
 -   [クラスター クォーラムの NodeWeight の設定の構成](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
--   [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](../Topic/Use%20the%20AlwaysOn%20Dashboard%20\(SQL%20Server%20Management%20Studio\).md)  
+-   [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
@@ -120,7 +124,7 @@ caps.handback.revision: 20
   
 -   [Get-ClusterLog フェールオーバー クラスター コマンドレット](http://technet.microsoft.com/library/ee461045.aspx)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

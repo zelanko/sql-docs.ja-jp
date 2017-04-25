@@ -1,27 +1,31 @@
 ---
 title: "SQLServer のエディション別の計算容量制限 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "サポートするプロセッサ [SQL Server]"
-  - "サポートするプロセッサ数"
-  - "サポートする最大プロセッサ数"
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- processors [SQL Server], supported
+- number of processors supported
+- maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 caps.latest.revision: 60
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2f32d9ca838e004676a3cccffbe62bbbc0e46a3f
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQLServer のエディション別の計算容量制限
-  このトピックでは、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の各エディションの計算容量の制限と、ハイパースレッド プロセッサを持つ物理環境と仮想化環境での違いについて説明します。  
+# <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQLServer のエディション別の計算容量制限
+  このトピックでは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の各エディションの計算容量の制限と、ハイパースレッド プロセッサを持つ物理環境と仮想化環境での違いについて説明します。  
   
  ![容量制限計算のためのマッピング](../sql-server/media/compute-capacity-limits.gif "容量制限計算のためのマッピング")  
   
@@ -57,7 +61,7 @@ caps.handback.revision: 60
   
  次の定義は、このトピック全体で使用される用語に適用されます。  
   
--   スレッドまたは論理プロセッサは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、オペレーティング システム、アプリケーション、ドライバーでは 1 個の論理コンピューティング エンジンとして見なされます。  
+-   スレッドまたは論理プロセッサは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、オペレーティング システム、アプリケーション、ドライバーでは 1 個の論理コンピューティング エンジンとして見なされます。  
   
 -   コアは、1 個以上の論理プロセッサで構成されるプロセッサ ユニットです。  
   
@@ -75,9 +79,9 @@ caps.handback.revision: 60
   
 2.  オペレーティング システムによって報告されたコアの最大数。  
   
- これらの制限は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の 1 つのインスタンスに適用され、 1 つのインスタンスが使用する最大計算容量を表します。 これらの制限には、インスタンスが配置される可能性があるサーバーは含まれません。 実際、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の複数のインスタンスを同じ物理サーバーに配置することは、以下に示す容量制限よりも多くのソケットまたはコアを搭載した物理サーバーの計算容量を使用するための効果的な方法です。  
+ これらの制限は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の 1 つのインスタンスに適用され、 1 つのインスタンスが使用する最大計算容量を表します。 これらの制限には、インスタンスが配置される可能性があるサーバーは含まれません。 実際、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の複数のインスタンスを同じ物理サーバーに配置することは、以下に示す容量制限よりも多くのソケットまたはコアを搭載した物理サーバーの計算容量を使用するための効果的な方法です。  
   
- 次の表に、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の各エディションの 1 つのインスタンスに適用される計算容量制限を示します。  
+ 次の表に、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の各エディションの 1 つのインスタンスに適用される計算容量制限を示します。  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [エディション]|1 つのインスタンスで使用される最大計算容量 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|1 つのインスタンスで使用される最大計算容量 (AS、RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
@@ -85,16 +89,18 @@ caps.handback.revision: 60
 |開発者|オペレーティング システムの最大容量|オペレーティング システムの最大容量|  
 |Standard|4 ソケットまたは 24 コアのいずれか小さいほうに制限|4 ソケットまたは 24 コアのいずれか小さいほうに制限|  
 |Express|1 ソケットまたは 4 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|  
- *Enterprise Edition with Server および Client Access License (CAL) に基づくライセンス (新しい使用許諾契約では利用できません) は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスあたり最大 20 コアに制限されています。 コアベースのサーバー ライセンス モデルでは、制限はありません。  
+ *Enterprise Edition with Server および Client Access License (CAL) に基づくライセンス (新しい使用許諾契約では利用できません) は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスあたり最大 20 コアに制限されています。 コアベースのサーバー ライセンス モデルでは、制限はありません。  
   
  仮想化された環境では、計算容量の制限はコアではなく論理プロセッサの数に基づいて決まります。これは、ゲスト アプリケーションがプロセッサのアーキテクチャを認識できないためです。  たとえば、クアッド コア プロセッサが搭載された 4 個のソケットと、コアごとに 2 個のハイパースレッドを有効にする機能を備えたサーバーには、ハイパースレッディングが有効になっている論理プロセッサが 32 個ありますが、ハイパースレッディングが無効になっている論理プロセッサは 16 個しかありません。 これらの論理プロセッサはサーバー上の仮想マシンにマップすることができます。これを行うと、マップした論理プロセッサに対する仮想マシンの計算負荷がホスト サーバーの物理プロセッサの実行スレッドにマップされます。  
   
  仮想プロセッサあたりのパフォーマンスが重要な場合は、ハイパースレッディングを無効にすることができます。 ハイパースレッディングの有効化または無効化は、BIOS のセットアップ中にプロセッサの BIOS 設定で行うことができます。ただし、サーバー上で実行されているすべてのワークロードに影響するのは、通常はサーバー スコープの操作です。 したがって、仮想化された環境で実行されるワークロードを、物理オペレーティング システム環境でハイパースレッディングによるパフォーマンス向上の恩恵を受けるワークロードから切り離すと良い結果が得られる場合があります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server 2016 のエディションとコンポーネント](../sql-server/editions-and-components-of-sql-server-2016.md)   
- [SQL Server 2016 の各エディションでサポートされる機能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)   
+ [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server の最大容量仕様](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
- [SQL Server 2016 のクイックスタート インストール](../Topic/Quick-Start%20Installation%20of%20SQL%20Server%202016.md)  
+ [SQL Server 2016 のクイックスタート インストール](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
   
   
+
+

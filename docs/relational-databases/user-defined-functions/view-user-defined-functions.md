@@ -1,31 +1,35 @@
 ---
 title: "ユーザー定義関数の表示 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.udfproperties.general.f1"
-  - "sql13.swb.functionproperties.general.f1"
-helpviewer_keywords: 
-  - "ユーザー定義関数の表示"
-  - "ユーザー定義関数の確認"
-  - "ユーザー定義関数 [SQL Server], 表示"
-  - "状態情報 [SQL Server], ユーザー定義関数"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.udfproperties.general.f1
+- sql13.swb.functionproperties.general.f1
+helpviewer_keywords:
+- displaying user-defined functions
+- viewing user-defined functions
+- user-defined functions [SQL Server], viewing
+- status information [SQL Server], user-defined functions
 ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16f1c2ed871db93259f87bc2e26dba634a0602d6
+ms.lasthandoff: 04/11/2017
+
 ---
-# ユーザー定義関数の表示
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のユーザー定義関数の定義またはプロパティに関する情報は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して取得できます。 関数のデータが元のテーブルからどのように抽出されているのかを理解したり、関数で定義されているデータを確認するために、関数の定義を調べたい場合があります。  
+# <a name="view-user-defined-functions"></a>ユーザー定義関数の表示
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のユーザー定義関数の定義またはプロパティに関する情報は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して取得できます。 関数のデータが元のテーブルからどのように抽出されているのかを理解したり、関数で定義されているデータを確認するために、関数の定義を調べたい場合があります。  
   
 > [!IMPORTANT]  
 >  関数から参照しているオブジェクトの名前を変更する場合は、関数のテキストに新しいオブジェクト名が反映されるように関数を変更する必要があります。 したがって、オブジェクトの名前を変更する前に、まずオブジェクトの依存関係を表示して、オブジェクト名の変更により影響を受ける関数があるかどうかを確認してください。  
@@ -51,7 +55,7 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### ユーザー定義関数のプロパティを表示するには  
+#### <a name="to-show-a-user-defined-functions-properties"></a>ユーザー定義関数のプロパティを表示するには  
   
 1.  **オブジェクト エクスプローラー**で、プロパティを表示する関数を含むデータベースの横にあるプラス記号をクリックします。次に、プラス記号をクリックして **[プログラミング]** フォルダーを展開します。  
   
@@ -65,9 +69,9 @@ caps.handback.revision: 30
   
     -   集計関数  
   
-4.  プロパティを表示する関数を右クリックし、**[プロパティ]** を選択します。  
+4.  プロパティを表示する関数を右クリックし、 **[プロパティ]**を選択します。  
   
-     **[関数のプロパティ – ** *function_name*] ダイアログ ボックスに、次のプロパティが表示されます。  
+     **[関数のプロパティ –** *function_name* ] ダイアログ ボックスに、次のプロパティが表示されます。  
   
      **データベース**  
      この関数を含むデータベースの名前です。  
@@ -110,7 +114,7 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### 関数の定義およびプロパティを取得するには  
+#### <a name="to-get-the-definition-and-properties-of-a-function"></a>関数の定義およびプロパティを取得するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -151,7 +155,7 @@ caps.handback.revision: 30
   
  詳細については、「[sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)」および「[OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)」を参照してください。  
   
-#### 関数の依存関係を取得するには  
+#### <a name="to-get-the-dependencies-of-a-function"></a>関数の依存関係を取得するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

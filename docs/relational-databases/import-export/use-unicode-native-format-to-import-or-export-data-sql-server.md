@@ -1,30 +1,34 @@
 ---
 title: "Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Unicode [SQL Server], 一括インポートと一括エクスポート"
-  - "データ形式 [SQL Server], Unicode ネイティブ"
+ms.custom: 
+ms.date: 09/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Unicode [SQL Server], bulk importing and exporting
+- data formats [SQL Server], Unicode native
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cdd63f41c8a567bde4fcadab2802a2c0b6f468cd
+ms.lasthandoff: 04/11/2017
+
 ---
-# Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server)
+# <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server)
 Unicode ネイティブ形式は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール環境間で情報をコピーする必要がある場合に役立ちます。 非文字データに対してネイティブ形式を使用すると、時間を節約でき、文字形式との間でデータ型の不要な変換が行われなくなります。 すべての文字データに対して Unicode 文字形式を使用すると、異なるコード ページを使用している複数のサーバー間でデータを一括転送するときに、拡張文字の損失を防ぐことができます。 Unicode ネイティブ形式のデータ ファイルは、すべての一括インポート方法で読み取ることができます。  
   
- 拡張文字や DBCS 文字を含むデータ ファイルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送する場合は、Unicode ネイティブ形式を使用することをお勧めします。 非文字データの場合、Unicode ネイティブ形式ではネイティブ (データベース) データ型が使用されます。 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)、[nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、[varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)、[nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、[text](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)、[varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)、[nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、[ntext](../../t-sql/data-types/ntext-text-and-image-transact-sql.md) などの文字データの場合、Unicode ネイティブ形式では Unicode 文字データ形式が使用されます。  
+ 拡張文字や DBCS 文字を含むデータ ファイルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送する場合は、Unicode ネイティブ形式を使用することをお勧めします。 非文字データの場合、Unicode ネイティブ形式ではネイティブ (データベース) データ型が使用されます。 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [text](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [ntext](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)などの文字データの場合、Unicode ネイティブ形式では Unicode 文字データ形式が使用されます。  
   
- Unicode ネイティブ形式のデータ ファイルに SQLVARIANT として格納される [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) データは、ネイティブ形式のデータ ファイルに格納される場合と同様に動作します。ただし、[char](../../t-sql/data-types/char-and-varchar-transact-sql.md) と [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) の値がそれぞれ [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) と [nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) に変換される点を除きます。この場合、影響を受ける列で 2 倍のストレージが必要になります。 元のメタデータは保持され、値はテーブル列に一括インポートされるときに、元の [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) データ型や [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) データ型に再び変換されます。  
+ Unicode ネイティブ形式のデータ ファイルに SQLVARIANT として格納される [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) データは、ネイティブ形式のデータ ファイルに格納される場合と同様に動作します。ただし、 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) と [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) の値がそれぞれ [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) と [nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)に変換される点を除きます。この場合、影響を受ける列で 2 倍のストレージが必要になります。 元のメタデータは保持され、値はテーブル列に一括インポートされるときに、元の [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) データ型や [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) データ型に再び変換されます。  
  
  |このトピックの内容|
 |---|
@@ -34,24 +38,24 @@ Unicode ネイティブ形式は、[!INCLUDE[msCoName](../../includes/msconame-m
 |[関連タスク](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
   
 ## Unicode ネイティブ形式のコマンド オプション<a name="command_options"></a>  
-Unicode ネイティブ形式のデータは、[bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)、または [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) を使用してテーブルにインポートできます。  [bcp](../../tools/bcp-utility.md) コマンドまたは [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ステートメントの場合は、ステートメントでデータ形式を指定できます。  [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) ステートメントの場合は、フォーマット ファイルでデータ形式を指定する必要があります。  
+Unicode ネイティブ形式のデータは、[bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)、または [INSERT ...SELECT * FROM OPENROWSET(BULK...) を使用してテーブルにインポートできます](../../t-sql/functions/openrowset-transact-sql.md)。  [bcp](../../tools/bcp-utility.md) コマンドまたは [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ステートメントの場合は、ステートメントでデータ形式を指定できます。  [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) ステートメントの場合は、フォーマット ファイルでデータ形式を指定する必要があります。  
   
 Unicode ネイティブ形式は、次のコマンド オプションでサポートされています。  
   
 |Command|オプション|説明|  
 |-------------|------------|-----------------|  
-|bcp|**-N**|**bcp** ユーティリティで Unicode ネイティブ形式が使用されるようにします。Unicode ネイティブ形式では、すべての非文字データに対してネイティブ (データベース) データ型が使用され、すべての文字 (**char**、**nchar**、**varchar**、**nvarchar**、**text**、**ntext**) データに対して Unicode 文字データ形式が使用されます。|  
+|bcp|**-N**|**bcp** ユーティリティで Unicode ネイティブ形式が使用されるようにします。Unicode ネイティブ形式では、すべての非文字データに対してネイティブ (データベース) データ型が使用され、すべての文字 (**char**、 **nchar**、 **varchar**、 **nvarchar**、 **text**、 **ntext**) データに対して Unicode 文字データ形式が使用されます。|  
 |BULK INSERT|DATAFILETYPE **='widenative'**|データの一括インポート時に Unicode ネイティブ形式を使用します。|  
 |OPENROWSET|なし|フォーマット ファイルを使用する必要があります|
     
 > [!NOTE]
->  また、フォーマット ファイルでフィールドごとに形式を指定することもできます。 詳細については、「[データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)」をご覧ください。
+>  また、フォーマット ファイルでフィールドごとに形式を指定することもできます。 詳細については、「 [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。
   
 ## テスト条件の例<a name="etc"></a>  
 このトピックの例は、以下に定義されたテーブルとフォーマット ファイルに基づいています。
 
 ### **サンプル テーブル**<a name="sample_table"></a>
-次のスクリプトは、`myWidenative` という名前のテーブルのテスト データベースを作成し、テーブルにいくつかの初期値を設定します。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
+次のスクリプトは、 `myWidenative` という名前のテーブルのテスト データベースを作成し、テーブルにいくつかの初期値を設定します。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
 ```tsql
 CREATE DATABASE TestDatabase;
 GO
@@ -77,7 +81,7 @@ SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
 ### **XML 形式以外のフォーマット ファイルのサンプル**<a name="nonxml_format_file"></a>
-SQL Server は、非 XML 形式と XML 形式の 2 種類のフォーマット ファイルをサポートしています。  XML 以外のフォーマットとは、以前のバージョンの SQL Server でサポートされる従来のフォーマットです。  詳細については、「[XML 以外のフォーマット ファイル (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)」を参照してください。  次のコマンドでは、[bcp ユーティリティ](../../tools/bcp-utility.md)を使用し、`myWidenative` のスキーマに基づいて XML 以外のフォーマット ファイル `myWidenative.fmt` を生成します。  [bcp](../../tools/bcp-utility.md) コマンドを使用してフォーマット ファイルを作成するには、**format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。  format オプションには、次に示す **-f** オプションが必要です。  さらに、この例では、修飾子 **c** を使用して文字データを指定し、**T** を使用して統合セキュリティによる信頼関係接続を指定します。  コマンド プロンプトで、次のコマンドを入力します。
+SQL Server は、非 XML 形式と XML 形式の 2 種類のフォーマット ファイルをサポートしています。  XML 以外のフォーマットとは、以前のバージョンの SQL Server でサポートされる従来のフォーマットです。  詳細については、「 [XML 以外のフォーマット ファイル (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 」を参照してください。  次のコマンドでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用し、 `myWidenative.fmt`のスキーマに基づいて XML 以外のフォーマット ファイル `myWidenative`を生成します。  [bcp](../../tools/bcp-utility.md) コマンドを使用してフォーマット ファイルを作成するには、 **format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。  format オプションには、次に示す **-f** オプションが必要です。  さらに、この例では、修飾子 **c** を使用して文字データを指定し、 **T** を使用して統合セキュリティによる信頼関係接続を指定します。  コマンド プロンプトで、次のコマンドを入力します。
 
 ```
 bcp TestDatabase.dbo.myWidenative format nul -f D:\BCP\myWidenative.fmt -T -N
@@ -181,10 +185,11 @@ SELECT * FROM TestDatabase.dbo.myWidenative;
   
 -   [Unicode 文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
-## 参照  
- [bcp ユーティリティ](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>参照  
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   
   
+

@@ -1,41 +1,45 @@
 ---
 title: "計算列での XML の使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "計算列; XML"
-  - "XML [SQL Server], 計算列"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- computed columns, XML
+- XML [SQL Server], computed columns
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f156afc96d002d1db972fb3060676c7043563a25
+ms.lasthandoff: 04/11/2017
+
 ---
-# 計算列での XML の使用
+# <a name="use-xml-in-computed-columns"></a>計算列での XML の使用
   XML インスタンスは、計算列のソースとして、または計算列の一種として使用できます。 このトピックでは、計算列で XML を使用する方法を示す例を紹介します。  
   
-## XML 列から計算列を作成する  
- 次の `CREATE TABLE` ステートメントでは、`xml` から `col2` 型の列 (`col1`) を計算しています。  
+## <a name="creating-computed-columns-from-xml-columns"></a>XML 列から計算列を作成する  
+ 次の `CREATE TABLE` ステートメントでは、 `xml` から`col2`型の列 ( `col1`) を計算しています。  
   
 ```  
 CREATE TABLE T(col1 varchar(max), col2 AS CAST(col1 AS xml) )    
 ```  
   
- 次の `xml` ステートメントで示すように、`CREATE TABLE` データ型は計算列を作成するときのソースとしても使用できます。  
+ 次の `xml` ステートメントで示すように、 `CREATE TABLE` データ型は計算列を作成するときのソースとしても使用できます。  
   
 ```  
 CREATE TABLE T (col1 xml, col2 as cast(col1 as varchar(1000) ))   
 ```  
   
- 次の例に示すように、`xml` 型の列から値を抽出して計算列を作成できます。 計算列を作成するときは **xml** データ型のメソッドを直接使用できません。そのため、この例では XML インスタンスの値を返す関数 (`my_udf`) をまず定義しています。 この関数には、`value()` 型の `xml` メソッドがラップされています。 `CREATE TABLE` ステートメントで、この関数名が計算列の代わりに指定されています。  
+ 次の例に示すように、 `xml` 型の列から値を抽出して計算列を作成できます。 計算列を作成するときは **xml** データ型のメソッドを直接使用できません。そのため、この例では XML インスタンスの値を返す関数 (`my_udf`) をまず定義しています。 この関数には、 `value()` 型の `xml` メソッドがラップされています。 `CREATE TABLE` ステートメントで、この関数名が計算列の代わりに指定されています。  
   
 ```  
 CREATE FUNCTION my_udf(@var xml) returns int  
@@ -55,7 +59,7 @@ FROM T
   
 ```  
   
- 上記の例と同様に、次の例では計算列用に **xml** 型のインスタンスを返す関数を定義しています。 関数内では、`query()` データ型の `xml` メソッドにより `xml` 型のパラメーターの値を取得しています。  
+ 上記の例と同様に、次の例では計算列用に **xml** 型のインスタンスを返す関数を定義しています。 関数内では、 `query()` データ型の `xml` メソッドにより `xml` 型のパラメーターの値を取得しています。  
   
 ```  
 CREATE FUNCTION my_udf(@var xml)   
@@ -82,7 +86,7 @@ SELECT *
 FROM T  
 ```  
   
-### このセクションの内容  
+### <a name="in-this-section"></a>このセクションの内容  
   
 |トピック|説明|  
 |-----------|-----------------|  

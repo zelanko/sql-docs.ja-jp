@@ -1,22 +1,26 @@
 ---
 title: "インメモリ OLTP でサポートされていない Transact-SQL の構造 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 caps.latest.revision: 51
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3539b07a27be375ebfe58e16a4792d9095fce0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# インメモリ OLTP でサポートされていない Transact-SQL の構造
+# <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>インメモリ OLTP でサポートされていない Transact-SQL の構造
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   メモリ最適化テーブルと、ネイティブ コンパイル ストアド プロシージャおよびユーザー定義関数では、ディスク ベース テーブルと、解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャおよびユーザー定義関数でサポートされる完全な [!INCLUDE[tsql](../../includes/tsql-md.md)] 領域はサポートされません。 サポートされていない機能を使用しようとすると、サーバーはエラーを返します。  
@@ -51,7 +55,7 @@ caps.handback.revision: 51
 |----------|----------|----------------|  
 |機能|ON|メモリ最適化テーブルをファイル グループまたはパーティション構成に配置できません。 **CREATE TABLE** ステートメントから ON 句を削除します。<br /><br /> すべてのメモリ最適化テーブルは、メモリ最適化ファイル グループにマップされます。|  
 |データ型|*データ型名*|指示されたデータ型はサポートされていません。 サポートされているデータ型に置き換えます。 詳細については、「 [サポートされるデータ型](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)」を参照してください。|  
-|機能|計算列|計算列は、メモリ最適化テーブルではサポートされていません。 **CREATE TABLE** ステートメントから計算列を削除します。<br/><br/>**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降、メモリ最適化テーブルとインデックスで計算列がサポートされています。|  
+|機能|計算列|計算列は、メモリ最適化テーブルではサポートされていません。 **CREATE TABLE** ステートメントから計算列を削除します。<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降、メモリ最適化テーブルとインデックスで計算列がサポートされています。|  
 |機能|レプリケーション|レプリケーションはメモリ最適化テーブルではサポートされていません。|  
 |機能|FILESTREAM|FILESTREAM ストレージは、メモリ最適化テーブルのサポートされた列ではありません。 列定義から **FILESTREAM** キーワードを削除します。|  
 |機能|SPARSE|メモリ最適化テーブルの列を SPARSE として定義することはできません。 列定義から **SPARSE** キーワードを削除します。|  
@@ -136,7 +140,7 @@ caps.handback.revision: 51
 |演算子|OFFSET|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **OFFSET** を削除します。|  
 |演算子|INTERSECT|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **INTERSECT** を削除します。 場合によっては INNER JOIN を使用して同じ結果を得ることができます。|  
 |演算子|EXCEPT|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **EXCEPT** を削除します。|  
-|演算子|APPLY|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **APPLY** を削除します。<br/><br/>**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 より、ネイティブ コンパイル モジュールで APPLY 演算子がサポートされます。|  
+|演算子|APPLY|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **APPLY** を削除します。<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 より、ネイティブ コンパイル モジュールで APPLY 演算子がサポートされます。|  
 |演算子|PIVOT|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **PIVOT** を削除します。|  
 |演算子|UNPIVOT|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **UNPIVOT** を削除します。|  
 |演算子|CONTAINS|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **CONTAINS** を削除します。|  
@@ -152,7 +156,7 @@ caps.handback.revision: 51
 |オプション|FOR XML|このオプションはサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **FOR XML** を削除します。|  
 |オプション|FOR BROWSE|このオプションはサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **FOR BROWSE** を削除します。|  
 |結合ヒント|HASH、MERGE|ネイティブ コンパイル ストアド プロシージャは、入れ子になったループ結合のみをサポートします。 HASH および MERGE 結合はサポートされていません。 結合ヒントを削除します。|  
-|クエリ ヒント|*クエリ ヒント*|このクエリ ヒントはネイティブ コンパイル ストアド プロシージャ内にありません。 サポートされているクエリ ヒントについては、「[クエリ ヒント &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md)」を参照してください。|  
+|クエリ ヒント|*クエリ ヒント*|このクエリ ヒントはネイティブ コンパイル ストアド プロシージャ内にありません。 サポートされているクエリ ヒントについては、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。|  
 |オプション|PERCENT|このオプションは **TOP** 句でサポートされていません。 ネイティブ コンパイル ストアド プロシージャのクエリから **PERCENT** を削除します。|  
 |オプション|WITH TIES|このオプションは **TOP** 句でサポートされていません。 ネイティブ コンパイル ストアド プロシージャのクエリから **WITH TIES** を削除します。|  
 |集計関数|*集計関数*|この句はサポートされていません。 ネイティブ コンパイル ストアド プロシージャ内の集計関数の詳細については、「 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)」を参照してください。|  
@@ -165,7 +169,7 @@ caps.handback.revision: 51
 |機能|ROLLUP|**ROLLUP** は、ネイティブ コンパイル ストアド プロシージャ内の **GROUP BY** 句では使用できません。 プロシージャの定義から **ROLLUP** を削除します。|  
 |機能|CUBE|**CUBE** は、ネイティブ コンパイル ストアド プロシージャ内の **GROUP BY** 句では使用できません。 プロシージャの定義から **CUBE** を削除します。|  
 |機能|GROUPING SETS|**GROUPING SETS** は、ネイティブ コンパイル ストアド プロシージャ内の **GROUP BY** 句では使用できません。 プロシージャの定義から **GROUPING SETS** を削除します。|  
-|機能|BEGIN TRANSACTION、COMMIT TRANSACTION、ROLLBACK TRANSACTION|ATOMIC ブロックを使用してトランザクションおよびエラー処理を制御します。 詳細については、「 [Atomic Blocks](../../relational-databases/in-memory-oltp/ネイティブ-プロシージャの-atomic-ブロック.md)」を参照してください。|  
+|機能|BEGIN TRANSACTION、COMMIT TRANSACTION、ROLLBACK TRANSACTION|ATOMIC ブロックを使用してトランザクションおよびエラー処理を制御します。 詳細については、「 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)」を参照してください。|  
 |機能|インライン テーブル変数の宣言。|テーブル変数は、明示的に定義されたメモリ最適化テーブル型を参照する必要があります。 メモリ最適化テーブル型を作成し、(インライン型を指定する変わりに) 変数の宣言でその型を使用します。|  
 |機能|ディスク ベース テーブル|ディスク ベース テーブルには、ネイティブ コンパイル ストアド プロシージャからアクセスできません。 ディスク ベース テーブルへの参照をネイティブ コンパイル ストアド プロシージャから削除します。 または、ディスク ベース テーブルをメモリ最適化テーブルに移行します。|  
 |機能|ビュー|ビューには、ネイティブ コンパイル ストアド プロシージャからアクセスできません。 ビューではなく、基になるベース テーブルを参照します。|  
@@ -187,3 +191,4 @@ caps.handback.revision: 51
  [インメモリ OLTP への移行](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

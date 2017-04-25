@@ -1,29 +1,33 @@
 ---
 title: "フェールオーバー クラスター インスタンスの診断ログを表示して読む方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 912c05cd783ead67aaa506f07586387eabcb2ca4
+ms.lasthandoff: 04/11/2017
+
 ---
-# フェールオーバー クラスター インスタンスの診断ログを表示して読む方法
+# <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>フェールオーバー クラスター インスタンスの診断ログを表示して読む方法
   SQL Server Resource DLL のすべての重大なエラーと警告イベントが、Windows イベント ログに書き込まれます。 [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) システム ストアド プロシージャによってキャプチャされる SQL Server に固有の診断情報の実行ログは、SQL Server フェールオーバー クラスター診断ログ ファイル (*SQLDIAG* ログとも呼ばれます) に書き込まれます。  
   
 -   **作業を開始する準備:**  [推奨事項](#Recommendations)、[セキュリティ](#Security)  
   
--   **診断ログの表示:**  [SQL Server Management Studio の使用](#SSMSProcedure)、[Transact-SQL の使用](#TsqlProcedure)  
+-   **To View the Diagnostic Log, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **診断ログ設定の構成:** [Transact-SQL の使用](#TsqlConfigure)  
+-   **To Configure Diagnostic Log settings, using:** [Transact-SQL](#TsqlConfigure)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 23
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> 権限  
- **fn_xe_file_target_read_file** を実行するには、VIEW SERVER STATE 権限が必要です。  
+ **fn_xe_file_target_read_file**を実行するには、VIEW SERVER STATE 権限が必要です。  
   
  SQL Server Management Studio を管理者として開きます。  
   
@@ -90,30 +94,30 @@ ORDER BY Time;
  **診断ログのプロパティを構成するには**  
   
 > [!NOTE]  
->  この手順の例については、このセクションの後半の「[例 (Transact-SQL)](#TsqlExample)」を参照してください。  
+>  この手順の例については、このセクションの後半の「 [例 (Transact-SQL)](#TsqlExample)」を参照してください。  
   
  データ定義言語 (DDL) ステートメント **ALTER SERVER CONFIGURATION** を使用すると、[sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) プロシージャによってキャプチャされた診断データのログ記録を開始または停止し、SQLDIAG ログの構成パラメーター (ログ ファイルのロールオーバー回数、ログ ファイルのサイズ、ファイルの場所など) を設定できます。 構文の詳細については、「 [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic)」を参照してください。  
   
 ###  <a name="ConfigTsqlExample"></a> 例 (Transact-SQL)  
   
-####  <a name="TsqlExample"></a> 診断ログ オプションを設定する  
+####  <a name="TsqlExample"></a> Setting diagnostic log options  
  このセクションの例では、診断ログ オプションの値を設定する方法を示します。  
   
-##### A. 診断ログの記録を開始する  
+##### <a name="a-starting-diagnostic-logging"></a>A. 診断ログの記録を開始する  
  次の例では、診断データのログ記録を開始します。  
   
 ```  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG ON;  
 ```  
   
-##### B. 診断ログの記録を停止する  
+##### <a name="b-stopping-diagnostic-logging"></a>B. 診断ログの記録を停止する  
  次の例では、診断データのログ記録を停止します。  
   
 ```  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG OFF;  
 ```  
   
-##### C. 診断ログの場所を指定する  
+##### <a name="c-specifying-the-location-of-the-diagnostic-logs"></a>C. 診断ログの場所を指定する  
  次の例では、診断ログの場所を、指定されたファイル パスに設定します。  
   
 ```  
@@ -121,7 +125,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG PATH = 'C:\logs';  
 ```  
   
-##### D. 各診断ログの最大サイズを指定する  
+##### <a name="d-specifying-the-maximum-size-of-each-diagnostic-log"></a>D. 各診断ログの最大サイズを指定する  
  次の例では、各診断ログの最大サイズを 10 MB に設定します。  
   
 ```  
@@ -129,7 +133,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [フェールオーバー クラスター インスタンスのフェールオーバー ポリシー](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

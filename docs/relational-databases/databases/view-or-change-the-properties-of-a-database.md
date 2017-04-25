@@ -1,28 +1,32 @@
 ---
 title: "データベースのプロパティの表示または変更 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データベースの表示"
-  - "データベース表示 [SQL Server]"
-  - "データベース [SQL Server], 表示"
-  - "データベースの確認"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- displaying databases
+- database viewing [SQL Server]
+- databases [SQL Server], viewing
+- viewing databases
 ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ead93afe9ce79d5cee37f190f5c2d2707f69b880
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベースのプロパティの表示または変更
+# <a name="view-or-change-the-properties-of-a-database"></a>データベースのプロパティの表示または変更
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)]のデータベースのプロパティを表示または変更する方法について説明します。 データベースのプロパティを変更すると、変更は直ちに有効になります。  
@@ -45,7 +49,7 @@ caps.handback.revision: 40
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
--   AUTO_CLOSE が ON の場合、データベースからデータを取得できないため、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの一部の列、および DATABASEPROPERTYEX 関数は、NULL を返します。 これを解決するには、データベースを開きます。  
+-   AUTO_CLOSE が ON の場合、データベースからデータを取得できないため、 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの一部の列、および DATABASEPROPERTYEX 関数は、NULL を返します。 これを解決するには、データベースを開きます。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -54,30 +58,30 @@ caps.handback.revision: 40
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### データベースのプロパティを表示または変更するには  
+#### <a name="to-view-or-change-the-properties-of-a-database"></a>データベースのプロパティを表示または変更するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]** を展開し、表示するデータベースを右クリックします。次に **[プロパティ]** をクリックします。  
+2.  **[データベース]**を展開し、表示するデータベースを右クリックします。次に **[プロパティ]**をクリックします。  
   
 3.  **[データベースのプロパティ]** ダイアログ ボックスで、任意のページを選択して、対応する情報を表示します。 たとえば、データおよびログ ファイルの情報を表示するには、 **[ファイル]** ページをクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
- Transact-SQL を使用すると、さまざまな方法でデータベースのプロパティを表示および変更できます。 データベースのプロパティを表示するには、 [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数と [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューを使用します。 データベースのプロパティを変更するには、自分の環境に合う ALTER DATABASE ステートメントのバージョン ([ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) または [ALTER DATABASE &#40;Azure SQL データベース&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)) を使用できます。 データベース スコープのプロパティを表示するには、[sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) カタログ ビューを使用します。データベース スコープのプロパティを変更するには、[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) ステートメントを使用します。  
+ Transact-SQL を使用すると、さまざまな方法でデータベースのプロパティを表示および変更できます。 データベースのプロパティを表示するには、 [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数と [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューを使用します。 データベースのプロパティを変更するには、自分の環境に合う ALTER DATABASE ステートメントのバージョン ([ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) または [ALTER DATABASE (Azure SQL データベース ) ](../../t-sql/statements/alter-database-azure-sql-database.md)) を使用できます。 データベース スコープのプロパティを表示するには、 [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) カタログ ビューを使用します。データベース スコープのプロパティを変更するには、 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) ステートメントを使用します。  
   
-#### DATABASEPROPERTYEX 関数を使用してデータベースのプロパティを表示するには  
+#### <a name="to-view-a-property-of-a-database-by-using-the-databasepropertyex-function"></a>DATABASEPROPERTYEX 関数を使用してデータベースのプロパティを表示するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)] に接続し、プロパティを表示するデータベースに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの AUTO_SHRINK データベース オプションのステータスを、[DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) システム関数を使用して取得します。 戻り値が 1 の場合はオプションがオンに、戻り値が 0 の場合はオフに設定されていることを意味します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 [データベースの AUTO_SHRINK データベース オプションのステータスを、](../../t-sql/functions/databasepropertyex-transact-sql.md) DATABASEPROPERTYEX [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] システム関数を使用して取得します。 戻り値が 1 の場合はオプションがオンに、戻り値が 0 の場合はオフに設定されていることを意味します。  
   
     ```tsql  
     SELECT DATABASEPROPERTYEX('AdventureWorks2012', 'IsAutoShrink');  
     ```  
   
-#### sys.databases をクエリすることによってデータベースのプロパティを表示するには  
+#### <a name="to-view-the-properties-of-a-database-by-querying-sysdatabases"></a>sys.databases をクエリすることによってデータベースのプロパティを表示するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)] に接続し、プロパティを表示するデータベースに接続します。  
   
@@ -90,22 +94,22 @@ caps.handback.revision: 40
     FROM sys.databases WHERE name = 'AdventureWorks2012';  
     ```  
   
-#### sys.databases_scoped_configuration を照会してデータベース スコープの構成のプロパティを表示するには  
+#### <a name="to-view-the-properties-of-a-database-scoped-configuration-by-querying-sysdatabasesscopedconfiguration"></a>sys.databases_scoped_configuration を照会してデータベース スコープの構成のプロパティを表示するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)] に接続し、プロパティを表示するデータベースに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、[sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) カタログ ビューのクエリを実行し、現在のデータベースのいくつかのプロパティを表示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) カタログ ビューのクエリを実行し、現在のデータベースのいくつかのプロパティを表示します。  
   
     ```tsql  
     SELECT configuration_id, name, value, value_for_secondary  
     FROM sys.database_scoped_configurations;  
     ```  
   
-     詳細については、「[sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)」を参照してください。  
+     詳細については、「 [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)  
   
-#### ALTER DATABASE を使用して SQL Server 2016 データベースのプロパティを変更するには  
+#### <a name="to-change-the-properties-of-a-sql-server-2016-database-using-alter-database"></a>ALTER DATABASE を使用して SQL Server 2016 データベースのプロパティを変更するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -121,7 +125,7 @@ caps.handback.revision: 40
   
      [!code-sql[DatabaseDDL#AlterDatabase9](../../relational-databases/databases/codesnippet/tsql/view-or-change-the-prope_1.sql)]  
   
-#### ALTER DATABASE SCOPED CONFIGURATION を使用してデータベース スコープのプロパティを変更するには  
+#### <a name="to-change-the-database-scoped-properties-using-alter-database-scoped-configuration"></a>ALTER DATABASE SCOPED CONFIGURATION を使用してデータベース スコープのプロパティを変更するには  
   
 1.  SQL Server インスタンスのデータベースに接続します。  
   
@@ -133,13 +137,14 @@ caps.handback.revision: 40
     ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY   
     ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [ALTER DATABASE &#40;Azure SQL データベース&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
+ [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
  [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)  
 
   
   
+

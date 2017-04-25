@@ -1,27 +1,31 @@
 ---
-title: "チュートリアル : 証明書を使用したストアド プロシージャへの署名 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "ストアド プロシージャへの署名のチュートリアル [SQL Server]"
+title: "チュートリアル: 証明書を使用したストアド プロシージャへの署名 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- signing stored procedures tutorial [SQL Server]
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0ccfcccf5fbed9a2b0e4f09fdd80e7f3e5dcda9
+ms.lasthandoff: 04/11/2017
+
 ---
-# チュートリアル : 証明書を使用したストアド プロシージャへの署名
-このチュートリアルでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で生成された証明書を使用してストアド プロシージャに署名する方法について説明します。  
+# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>チュートリアル : 証明書を使用したストアド プロシージャへの署名
+このチュートリアルでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で生成された証明書を使用してストアド プロシージャに署名する方法について説明します。  
   
 > [!NOTE]  
 > このチュートリアルのコードを実行するには、混合モードのセキュリティが構成されていることと、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベースがインストールされていることが条件となります。 Scenario  
@@ -48,7 +52,7 @@ master データベースに証明書を作成し、サーバーレベルの権�
   
 以下で、この例の各コード ブロックについて説明します。 完全なサンプル コードをコピーするには、このチュートリアルの最後の「 [完全なサンプル コード](#CompleteExample) 」を参照してください。  
   
-## 1.環境を構成する  
+## <a name="1-configure-the-environment"></a>1.環境を構成する  
 この例の初期コンテキストを設定するには、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で新しいクエリを開き、次のコードを実行して [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベースを開きます。 このコードにより、データベース コンテキストが `AdventureWorks2012` に変更され、新しいサーバー ログインとデータベース ユーザー アカウント (`TestCreditRatingUser`) が作成されます。ログインにはパスワードが設定されます。  
   
 ```  
@@ -65,7 +69,7 @@ GO
   
 CREATE USER ステートメントの詳細については、[「CREATE USER (Transact-SQL)」](../t-sql/statements/create-user-transact-sql.md) を参照してください。 CREATE LOGIN ステートメントの詳細については、[「CREATE LOGIN (Transact-SQL)」](../t-sql/statements/create-login-transact-sql.md) を参照してください。  
   
-## 2.証明書を作成する  
+## <a name="2-create-a-certificate"></a>2.証明書を作成する  
 コンテキストの master データベース、またはユーザー データベース、あるいはその両方を使用して、サーバー内に証明書を作成できます。 証明書をセキュリティ保護するには複数のオプションがあります。 証明書の詳細については、[「CREATE CERTIFICATE (Transact-SQL)」](../t-sql/statements/create-certificate-transact-sql.md) を参照してください。  
   
 次のコードを実行し、データベース証明書をパスワードの保護付きで作成します。  
@@ -78,7 +82,7 @@ CREATE CERTIFICATE TestCreditRatingCer
 GO  
 ```  
   
-## 3.ストアド プロシージャを作成し、証明書を使用して署名する  
+## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3.ストアド プロシージャを作成し、証明書を使用して署名する  
 次のコードを実行し、`Vendor` データベース スキーマ内の `Purchasing` テーブルからデータを選択するストアド プロシージャを作成して、信用格付け 1 の会社にアクセスを限定します。 ストアド プロシージャの最初のセクションに、ストアド プロシージャを実行するユーザー アカウントのコンテキストが表示されていますが、これは概念を説明するためだけのものです。 要件を満たすために必要なものではありません。  
   
 ```  
@@ -114,7 +118,7 @@ GO
   
 ストアド プロシージャへの署名の詳細については、[「ADD SIGNATURE (Transact-SQL)」](../t-sql/statements/add-signature-transact-sql.md) を参照してください。  
   
-## 4.証明書を使用して証明書アカウントを作成する  
+## <a name="4-create-a-certificate-account-using-the-certificate"></a>4.証明書を使用して証明書アカウントを作成する  
 次のコードを実行し、証明書からデータベース ユーザー (`TestCreditRatingcertificateAccount`) を作成します。 このアカウントにサーバー ログインは与えません。最終的には、このアカウントによって基になるテーブルに対するアクセスが制御されます。  
   
 ```  
@@ -125,7 +129,7 @@ CREATE USER TestCreditRatingcertificateAccount
 GO  
 ```  
   
-## 5.証明書アカウントにデータベース権限を与える  
+## <a name="5-grant-the-certificate-account-database-rights"></a>5.証明書アカウントにデータベース権限を与える  
 次のコードを実行し、ベース テーブルとストアド プロシージャに `TestCreditRatingcertificateAccount` 権限を与えます。  
   
 ```  
@@ -142,7 +146,7 @@ GO
   
 オブジェクトに対する権限付与の詳細については、[「GRANT (Transact-SQL)」](../t-sql/statements/grant-transact-sql.md) を参照してください。  
   
-## 6.アクセス コンテキストを表示する  
+## <a name="6-display-the-access-context"></a>6.アクセス コンテキストを表示する  
 ストアド プロシージャへのアクセスに関連する権限を表示するには、次のコードを実行して、ストアド プロシージャの実行権限を `TestCreditRatingUser` ユーザーに与えます。  
   
 ```  
@@ -159,7 +163,7 @@ EXECUTE TestCreditRatingSP;
 GO  
 ```  
   
-次のコードを実行し、`EXECUTE AS` ステートメントにより `TestCreditRatingUser` アカウントとなってストアド プロシージャを実行します。 今度は、ユーザー コンテキストが USER MAPPED TO CERTIFICATE コンテキストに設定されていることを確認できます。  
+次のコードを実行し、 `EXECUTE AS` ステートメントにより `TestCreditRatingUser` アカウントとなってストアド プロシージャを実行します。 今度は、ユーザー コンテキストが USER MAPPED TO CERTIFICATE コンテキストに設定されていることを確認できます。  
   
 ```  
 EXECUTE AS LOGIN = 'TestCreditRatingUser';  
@@ -173,7 +177,7 @@ GO
 > [!NOTE]  
 > データベース内でコンテキストを切り替えるには、EXECUTE AS を使用します。  
   
-## 7.環境をリセットする  
+## <a name="7-reset-the-environment"></a>7.環境をリセットする  
 次のコードを実行して、`REVERT` ステートメントにより現在のアカウントのコンテキストを dbo に戻し、環境をリセットします。  
   
 ```  
@@ -289,8 +293,9 @@ DROP CERTIFICATE TestCreditRatingCer;
 GO  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
 [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   
+

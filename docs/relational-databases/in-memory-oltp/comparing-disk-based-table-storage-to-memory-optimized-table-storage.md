@@ -1,22 +1,26 @@
 ---
 title: "ディスク ベース テーブル ストレージとメモリ最適化テーブル ストレージの比較 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eacf443c-001a-445f-ad1c-5f5a45eca6f4
 caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1d68c71f727aefd0a95bb1e1c95d0a3fe77edb5
+ms.lasthandoff: 04/11/2017
+
 ---
-# ディスク ベース テーブル ストレージとメモリ最適化テーブル ストレージの比較
+# <a name="comparing-disk-based-table-storage-to-memory-optimized-table-storage"></a>ディスク ベース テーブル ストレージとメモリ最適化テーブル ストレージの比較
   
   
 |カテゴリ|ディスク ベース テーブル|持続性のあるメモリ最適化テーブル|  
@@ -27,7 +31,7 @@ caps.handback.revision: 5
 |DML 操作|最初の手順は、ページを見つけてバッファー プールに読み込むことです。<br /><br /> Insert<br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、クラスター化インデックスの場合に行の順序を考慮して、ページ上に行を挿入します。<br /><br /> Del<br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ページ上の削除する行を検索し、削除のマークを付けます。<br /><br /> Update<br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ページ上の行を検索します。 更新は非キー列に対してインプレースで実行されます。 キー列の更新は削除と挿入操作によって実行されます。<br /><br /> DML 操作の完了後、影響を受けるページは、最小ログ記録操作に関するバッファー プール ポリシー、チェックポイント、またはトランザクションのコミットの一部としてディスクにフラッシュされます。 ページに対する読み取り/書き込みの両方が不要な I/O につながります。|メモリ最適化テーブルの場合、データがメモリに格納されるので、DML 操作はメモリ内で直接実行されます。 メモリ最適化テーブルのログ レコードを読み取ってデータ ファイルとデルタ ファイルに保存するバックグラウンド スレッドがあります。 更新では新しい行バージョンが生成されます。 ただし、更新は削除としてログに記録され、その後に挿入が続きます。|  
 |データの断片化|データ操作のフラグメント データにより、一部分しか入力されていないページや、ディスクでは連続していない論理的に連続するページが生じる可能性があります。 これにより、データ アクセスのパフォーマンスが低下するため、データのデフラグが必要になります。|メモリ最適化データはページに格納されないので、データの断片化はありません。 ただし、行が更新または削除されると、データ ファイルとデルタ ファイルは圧縮が必要になります。 これは、マージ ポリシーに基づいて、バックグラウンドの MERGE スレッドで実行されます。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [メモリ最適化オブジェクト用ストレージの作成と管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

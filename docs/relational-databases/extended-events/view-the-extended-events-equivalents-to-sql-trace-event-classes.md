@@ -1,36 +1,40 @@
 ---
 title: "SQL トレースのイベント クラスと等価な拡張イベントを確認する | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL トレース, 等価な拡張イベント"
-  - "拡張イベント [SQL Server], 等価な SQL トレース"
-  - "拡張イベント [SQL Server], ユーザーが構成できるイベント"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Trace, extended events equivalents
+- extended events [SQL Server], SQL Trace equivalents
+- extended events [SQL Server], user configurable events
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfa6eb722a8dcbd4c3a9e72d731fe8a59d436ba8
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL トレースのイベント クラスと等価な拡張イベントを確認する
+# <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>SQL トレースのイベント クラスと等価な拡張イベントを確認する
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   拡張イベントを使用して、SQL トレース イベントのクラスや列に相当するイベント データを収集する場合、SQL トレース イベントが、拡張イベントのイベントおよびアクションとどのように対応しているかを理解しておくことが大切です。  
   
  SQL トレースのイベントとそれに関連した列について、拡張イベントにおける等価なイベントとアクションを確認するには、次の手順に従います。  
   
-## クエリ エディターを使用して SQL トレース イベントと等価な拡張イベントを確認するには  
+## <a name="to-view-the-extended-events-equivalents-to-sql-trace-events-using-query-editor"></a>クエリ エディターを使用して SQL トレース イベントと等価な拡張イベントを確認するには  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターから、次のクエリを実行します。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディターから、次のクエリを実行します。  
   
     ```  
     USE MASTER;  
@@ -79,7 +83,7 @@ caps.handback.revision: 13
   
 -   ユーザーが構成できる SQL トレースのイベント クラス (UserConfigurable:1 ～ UserConfigurable:9) は、拡張イベントでは単一のイベントに置き換えられます。 このイベントには、user_event という名前が付けられます。 このイベントは、SQL トレースと同じ sp_trace_generateevent ストアド プロシージャを使用して生成されます。 user_event イベントは、ストアド プロシージャに渡されたイベント ID に関係なく返されます。 ただし、event_id フィールドは、イベント データの一部として返されます。 これによって、イベント ID に基づく述語の作成が可能となります。 たとえば、UserConfigurable:0 (イベント ID = 82) をコード内で使用する場合、user_event イベントをセッションに追加し、'event_id = 82' という述語を指定することができます。 拡張イベントの user_event イベントも SQL トレースにおける等価なイベント クラスも sp_trace_generateevent ストアド プロシージャによって生成されるため、コードを変更する必要はありません。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)  
   
   

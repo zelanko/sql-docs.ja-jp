@@ -1,34 +1,38 @@
 ---
 title: "DAC パッケージの検証 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データ層アプリケーション [SQL Server], 検証"
-  - "データ層アプリケーション [SQL Server], 比較"
-  - "DAC の検証"
-  - "DAC の比較"
-  - "データ層アプリケーション [SQL Server], 表示"
-  - "DAC の表示"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data-tier application [SQL Server], validate
+- data-tier application [SQL Server], compare
+- validate DAC
+- compare DACs
+- data-tier application [SQL Server], view
+- view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 036df2b92a90337202eb84adb6284169a8f54f76
+ms.lasthandoff: 04/11/2017
+
 ---
-# DAC パッケージの検証
+# <a name="validate-a-dac-package"></a>DAC パッケージの検証
   DAC パッケージを運用環境に配置する前にパッケージの内容を確認し、既存の DAC をアップグレードする前にアップグレード処理を検証するようにしてください。 これは、特に、外部で開発されたパッケージを配置する場合に当てはまります。  
   
-1.  **作業を開始する準備:**  [前提条件](#Prerequisites)  
+1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
   
-2.  **DAC のアップグレード:**  [DAC の内容の表示](#ViewDACContents)、 [データベースの変更の表示](#ViewDBChanges)、 [アップグレード処理の表示](#ViewUpgradeActions)、 [DAC の比較](#CompareDACs)  
+2.  **To upgrade a DAC, using:**  [View the Contents of a DAC](#ViewDACContents), [View Database Changes](#ViewDBChanges), [View Upgrade Actions](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> 前提条件  
  ソースが不明または信頼されていない DAC パッケージは配置しないことをお勧めします。 こうした DAC には、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマを変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 DAC のソースが不明または信頼されていない場合は、使用する前に、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の隔離されたテスト インスタンスに DAC を配置し、データベースに対して [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行してください。また、ストアド プロシージャやその他のユーザー定義コードなど、データベースのコードを確認してください。  
@@ -46,9 +50,9 @@ caps.handback.revision: 17
   
 4.  **[プロジェクトの設定]** タブの **[出力の種類]** セクションで **[データ層アプリケーション (.dacpac File)]** チェック ボックスをオンにし、プロパティ ダイアログ ボックスを閉じます。  
   
-5.  **ソリューション エクスプローラー**でプロジェクト ノードを右クリックし、**[データ層アプリケーションのインポート]** をクリックします。  
+5.  **ソリューション エクスプローラー**でプロジェクト ノードを右クリックし、 **[データ層アプリケーションのインポート]**をクリックします。  
   
-6.  **ソリューション エクスプローラー**を使用して、サーバーの選択ポリシーや配置前スクリプトと配置後スクリプトなど、DAC 内のすべてのファイルを開くことができます。  
+6.  **ソリューション エクスプローラー** を使用して、サーバーの選択ポリシーや配置前スクリプトと配置後スクリプトなど、DAC 内のすべてのファイルを開くことができます。  
   
 7.  **スキーマ ビュー** を使用すると、スキーマ内のすべてのオブジェクトを確認できます。特に、関数やストアド プロシージャなどのオブジェクトのコードを確認します。  
   
@@ -65,13 +69,13 @@ caps.handback.revision: 17
   
  **ウィザードの使用によるデータベースの変更の表示**  
   
-1.  現在配置されている DAC と、新しいバージョンの DAC を含む DAC パッケージを指定して、**データ層アプリケーションのアップグレード** ウィザードを実行します。  
+1.  現在配置されている DAC と、新しいバージョンの DAC を含む DAC パッケージを指定して、 **データ層アプリケーションのアップグレード** ウィザードを実行します。  
   
 2.  **[変更の検出]** ページで、データベースに対する変更のレポートを確認します。  
   
 3.  アップグレードを続行しない場合は、 **[キャンセル]** をクリックします。  
   
-4.  ウィザードの使用方法については、「[データ層アプリケーションのアップグレード](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)」を参照してください。  
+4.  ウィザードの使用方法については、「 [データ層アプリケーションのアップグレード](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)」を参照してください。  
   
  **PowerShell の使用によるデータベースの変更の表示**  
   
@@ -83,7 +87,7 @@ caps.handback.revision: 17
   
 4.  **GetDatabaseChanges()** メソッドを使用して **ChangeResults** オブジェクトを取得し、そのオブジェクトをテキスト ファイルにパイプして、新しいオブジェクト、削除したオブジェクト、および変更したオブジェクトを含む簡単なレポートを生成します。  
   
-### データベースの変更の表示の例 (PowerShell)  
+### <a name="view-database-changes-example-powershell"></a>データベースの変更の表示の例 (PowerShell)  
  **データベースの変更の表示の例 (PowerShell)**  
   
  次の例は、MyApplicaiton という名前の配置された DAC で行われた、データベースのすべての変更のレポートを生成します。  
@@ -105,18 +109,18 @@ $dacName  = "MyApplication"
 $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DACScripts\MyApplicationChanges.txt  
 ```  
   
-##  <a name="ViewUpgradeActions"></a> アップグレードの処理の表示  
+##  <a name="ViewUpgradeActions"></a> アップグレード処理の表示  
  DAC パッケージの新しいバージョンを使用して前の DAC パッケージから配置された DAC をアップグレードする前に、アップグレード中に実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含むレポートを生成して、ステートメントを確認することができます。  
   
  **ウィザードの使用によるアップグレードの処理のレポート生成**  
   
-1.  現在配置されている DAC と、新しいバージョンの DAC を含む DAC パッケージを指定して、**データ層アプリケーションのアップグレード** ウィザードを実行します。  
+1.  現在配置されている DAC と、新しいバージョンの DAC を含む DAC パッケージを指定して、 **データ層アプリケーションのアップグレード** ウィザードを実行します。  
   
 2.  **[概要]** ページで、アップグレード処理のレポートを確認します。  
   
 3.  アップグレードを続行しない場合は、 **[キャンセル]** をクリックします。  
   
-4.  ウィザードの使用方法については、「[データ層アプリケーションのアップグレード](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)」を参照してください。  
+4.  ウィザードの使用方法については、「 [データ層アプリケーションのアップグレード](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)」を参照してください。  
   
  **PowerShell の使用によるアップグレードの処理のレポート生成**  
   
@@ -132,7 +136,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 6.  DAC パッケージ ファイルの読み取りに使用するファイル ストリームを閉じます。  
   
-### アップグレード処理の表示の例 (PowerShell)  
+### <a name="view-upgrade-actions-example-powershell"></a>アップグレード処理の表示の例 (PowerShell)  
  **アップグレード処理の表示の例 (PowerShell)**  
   
  次の例は、MyApplicaiton という名前の DAC を MyApplicationVNext.dacpac ファイルで定義されているスキーマにアップグレードするために実行される Transact-SQL ステートメントのレポートを生成します。  
@@ -162,14 +166,14 @@ $dacstore.GetIncrementalUpgradeScript($dacName, $dacType) | Out-File -Filepath C
 $fileStream.Close()  
 ```  
   
-##  <a name="CompareDACs"></a> Dac の比較  
+##  <a name="CompareDACs"></a> Compare DACs  
  DAC をアップグレードする前に、現在の DAC と新しい DAC に、データベースレベルおよびインスタンスレベルでオブジェクトにどんな相違があるか確認してください。 現在の DAC パッケージのコピーがない場合は、現在のデータベースからパッケージを抽出できます。  
   
  SQL Server 開発者ツールで両方の DAC パッケージを DAC プロジェクトにインポートする場合は、スキーマ比較ツールを使用して 2 つの DAC 間の相違を分析できます。  
   
  または、DAC を別々のフォルダーにアンパックします。 その後、WinDiff ユーティリティなどの比較ツールを使用して、相違を分析できます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [データ層アプリケーションの配置](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [データ層アプリケーションのアップグレード](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  

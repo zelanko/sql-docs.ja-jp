@@ -1,33 +1,37 @@
 ---
 title: "SQL Server 2016 の新機能 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "12/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "server-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "新しい sql server"
-helpviewer_keywords: 
-  - "新機能 [SQL Server]"
-  - "SQL Server, 新機能"
-  - "SQL Server 2008 の新機能"
-  - "新機能 [SQL Server]"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 12/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- "新しい sql server"
+helpviewer_keywords:
+- new features [SQL Server]
+- SQL Server, what's new
+- SQL Server 2008 what's new
+- what's new [SQL Server]
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 caps.latest.revision: 224
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
-caps.handback.revision: 224
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: a702ff8995bc7d4ad7b67c1e7a9d12299afb068f
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 2016 の新機能
+# <a name="what39s-new-in-sql-server-2016"></a>SQL Server 2016 の新機能
  [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] は、Microsoft データ プラットフォーム史上で最大の進歩を遂げたプラットフォームです。 これまでにないインメモリ パフォーマンスをはじめ、セキュリティの最新技術、高可用性、高度な分析機能まで、ミッション クリティカルなアプリケーションをインテリジェントにするあらゆる機能が組み込まれたスケーラブルなデータベース プラットフォームを利用して、トランザクション データおよび分析データ全体からリアルタイムで洞察を得ることができます。
  
- このトピックでは、[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] コンポーネント レベルの新機能に関する詳細情報へのリンクをまとめて示します。   
+ このトピックでは、 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] コンポーネント レベルの新機能に関する詳細情報へのリンクをまとめて示します。   
  
   ![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
  
@@ -40,9 +44,9 @@ caps.handback.revision: 224
  
 [![Evaluation Center からダウンロードする](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)** から SQL Server 2016 をダウンロードする 
     
-[![Azure Virtual Machine のアイコン](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Azure アカウントをすでにお持ちですか?  **[こちら](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)**にアクセスして、SQL Server 2016 SP1 がインストール済みの仮想マシンをすぐにご利用いただけます。  
+[![Azure Virtual Machine のアイコン](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Azure アカウントをすでにお持ちですか?  **[こちら](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** にアクセスして、SQL Server 2016 SP1 がインストール済みの仮想マシンをすぐにご利用いただけます。  
 
- [![Evaluation Center からダウンロードする](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) [**最新バージョンの SQL Server Management Studio (SSMS)**](https://msdn.microsoft.com/library/mt238290.aspx) をダウンロードする。   
+ [![Download from Evaluation Center](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) [**Download the latest version of SQL Server Management Studio (SSMS)**](https://msdn.microsoft.com/library/mt238290.aspx).   
 
     
  ## <a name="whats-new-in-sql-server"></a>SQL Server の新機能
@@ -67,9 +71,11 @@ caps.handback.revision: 224
   
     
 ## <a name="see-also"></a>参照    
- + [![リリース ノート](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png)](../Topic/SQL%20Server%202016%20Release%20Notes.md)  [SQL Server 2016 リリース ノート](../sql-server/sql-server-2016-release-notes.md) 
+ +   [SQL Server 2016 リリース ノート](../sql-server/sql-server-2016-release-notes.md)をダウンロードする。 
 + [SQL Server 2016 データシート](http://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
 + [SQL Server の各エディションがサポートする機能](https://msdn.microsoft.com/library/cc645993.aspx)
- + [SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)
- + [インストール ウィザードからの SQL Server 2016 のインストール](../database-engine/install-windows/install-sql-server-2016-from-the-installation-wizard-setup.md)
- [セットアプリケーションとサービスのインストール](Setup%20and%20Servicing%20Installation.md)    
+ + [SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
+ + [インストール ウィザードからの SQL Server 2016 のインストール](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+ [セットアプリケーションとサービスのインストール](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)    
+
+

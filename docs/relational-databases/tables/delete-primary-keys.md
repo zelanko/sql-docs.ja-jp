@@ -1,29 +1,33 @@
 ---
 title: "主キーの削除 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "主キーの消去"
-  - "主キーの削除"
-  - "主キー [SQL Server], 削除"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing primary keys
+- deleting primary keys
+- primary keys [SQL Server], deleting
 ms.assetid: c472e465-7bdd-4d74-8fc9-e47fca007ccb
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1dbc3eb4968f27665df80e414a590f8b4e3df7b4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 主キーの削除
+# <a name="delete-primary-keys"></a>主キーの削除
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して主キーを削除できます。 主キーを削除すると、対応するインデックスが削除されます。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して主キーを削除できます。 主キーを削除すると、対応するインデックスが削除されます。  
   
  **このトピックの内容**  
   
@@ -46,28 +50,28 @@ caps.handback.revision: 15
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### オブジェクト エクスプローラーを使用して主キーを削除するには  
+#### <a name="to-delete-a-primary-key-constraint-using-object-explorer"></a>オブジェクト エクスプローラーを使用して主キーを削除するには  
   
 1.  オブジェクト エクスプローラーで、主キーを含むテーブルを展開し、 **[キー]**を展開します。  
   
-2.  キーを右クリックし、**[削除]** をクリックします。  
+2.  キーを右クリックし、 **[削除]**をクリックします。  
   
 3.  **[オブジェクトの削除]** ダイアログ ボックスで正しいキーが指定されていることを確認し、 **[OK]**をクリックします。  
   
-#### テーブル デザイナーを使用して主キーを削除するには  
+#### <a name="to-delete-a-primary-key-constraint-using-table-designer"></a>テーブル デザイナーを使用して主キーを削除するには  
   
-1.  オブジェクト エクスプローラーで、主キーが設定されたテーブルを右クリックし、**[デザイン]** をクリックします。  
+1.  オブジェクト エクスプローラーで、主キーが設定されたテーブルを右クリックし、 **[デザイン]**をクリックします。  
   
-2.  テーブル グリッドで、主キーを持つ行を右クリックし、**[主キーの削除]** をクリックして、設定をオンからオフに切り替えます。  
+2.  テーブル グリッドで、主キーを持つ行を右クリックし、 **[主キーの削除]** をクリックして、設定をオンからオフに切り替えます。  
   
     > [!NOTE]  
     >  この操作を元に戻すには、変更を保存せずにテーブルを閉じます。 主キーの削除を元に戻すと、テーブルに対するその他の変更はすべて失われます。  
   
-3.  **[ファイル]** メニューの **table name***の保存]*をクリックします。  
+3.  **ファイル** メニューの **table name***の保存*をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### 主キー制約を削除するには  
+#### <a name="to-delete-a-primary-key-constraint"></a>主キー制約を削除するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

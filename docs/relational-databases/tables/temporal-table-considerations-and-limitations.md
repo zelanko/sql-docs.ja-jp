@@ -1,23 +1,27 @@
 ---
 title: "テンポラル テーブルの考慮事項と制約 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/24/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 caps.latest.revision: 18
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 22bab0bc2c039e68a336ac827a3e2d028ca77c78
+ms.lasthandoff: 04/11/2017
+
 ---
-# テンポラル テーブルの考慮事項と制約
+# <a name="temporal-table-considerations-and-limitations"></a>テンポラル テーブルの考慮事項と制約
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   テンポラル テーブルを使用する場合は、システムのバージョン管理の性質の上、注意すべき考慮事項と制約がいくつかあります。  
@@ -26,7 +30,7 @@ caps.handback.revision: 17
   
 -   テンポラル テーブルには、現在のテーブルと履歴テーブルの間でレコードを関連付けるために主キーが定義されている必要があります。履歴テーブルに主キーを定義することはできません。  
   
--   データ型 datetime2 を使用して、**SysStartTime** と **SysEndTime** の値を記録するために使用する SYSTEM_TIME 期間列を定義する必要があります。  
+-   データ型 datetime2 を使用して、 **SysStartTime** と **SysEndTime** の値を記録するために使用する SYSTEM_TIME 期間列を定義する必要があります。  
   
 -   履歴テーブルの作成時に履歴テーブルの名前を指定すると場合、は、スキーマとテーブルの名前を指定する必要があります。  
   
@@ -34,25 +38,25 @@ caps.handback.revision: 17
   
 -   現在のテーブルがパーティション分割する場合、履歴テーブルは、パーティション分割構成がレプリケートされていないために自動的に現在のテーブルから履歴テーブルに既定のファイル グループに作成されます。  
   
--   テンポラル テーブルと履歴テーブルは **FILETABLE** にすることができず、サポートされている **FILESTREAM** 以外の任意のデータ型の列を含めることができます。これは、**FILETABLE** と **FILESTREAM** では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の外部でのデータ操作が可能なので、システムのバージョン管理を保証できないためです。  
+-   テンポラル テーブルと履歴テーブルは **FILETABLE** にすることができず、サポートされている **FILESTREAM** 以外の任意のデータ型の列を含めることができます。これは、 **FILETABLE** と **FILESTREAM** では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の外部でのデータ操作が可能なので、システムのバージョン管理を保証できないためです。  
   
--   テンポラル テーブルでは、**(n)varchar(max)**、**varbinary(max)**、**(n)text**、**image** などの BLOB データ型がサポートされていますが、これらは多大なストレージ コストを発生させ、サイズが多いためにパフォーマンスに影響を与えます。 そのため、システムの設計時に、これらのデータ型を使用する場合は注意が必要です。  
+-   テンポラル テーブルでは、 **(n)varchar(max)**、 **varbinary(max)**、 **(n)text**、 **image**などの BLOB データ型がサポートされていますが、これらは多大なストレージ コストを発生させ、サイズが多いためにパフォーマンスに影響を与えます。 そのため、システムの設計時に、これらのデータ型を使用する場合は注意が必要です。  
   
 -   履歴テーブルは、現在のテーブルと同じデータベースで作成する必要があります。 **Linked Server** に対するテンポラル クエリはサポートされていません。  
   
 -   履歴テーブルには、制約 (主キー、外部キー、テーブル、または列の制約) を含めることはできません。  
   
--   テンポラル クエリ (**FOR SYSTEM_TIME** 句を使用するクエリ) 上では、インデックス付きビューはサポートされていません。  
+-   テンポラル クエリ ( **FOR SYSTEM_TIME** 句を使用するクエリ) 上では、インデックス付きビューはサポートされていません。  
   
 -   システムでバージョン管理されたテンポラル テーブルの場合、ONLINE オプション (**WITH (ONLINE = ON**) は **ALTER TABLE ALTER COLUMN** に影響を与えません。 ONLINE オプションに指定された値に関係なく、ALTER 列はオンラインとしては実行されません。  
   
 -   **INSERT** および **UPDATE** ステートメントは、SYSTEM_TIME 期間列を参照できません。 これらの列に値を直接挿入しようとすると、ブロックされます。  
   
--   **SYSTEM_VERSIONING** が**オン**になっている時は、**TRUNCATE TABLE** はサポートされていません  
+-   **TRUNCATE TABLE** is not supported while **SYSTEM_VERSIONING** is **ON**  
   
 -   履歴テーブルのデータを直接変更することはできません。  
   
--   現在のテーブルでは、**ON DELETE CASCADE** と **ON UPDATE CASCADE** は許可されません。 つまり、テンポラル テーブルが外部キー リレーションシップの参照元テーブル (sys.foreign_keys の *parent_object_id* に対応) である場合、CASCADE オプションは使用できません。 この制約を回避するには、アプリケーション ロジックまたは AFTER トリガーを使用して、主キー テーブル (sys.foreign_keys の *referenced_object_id* に対応) での削除の一貫性を維持します。 主キー テーブルがテンポラルで、参照元テーブルが非テンポラルである場合、このような制約はありません。  
+-   現在のテーブルでは、**ON DELETE CASCADE** と **ON UPDATE CASCADE** は許可されません。 つまり、テンポラル テーブルが外部キー リレーションシップの参照元テーブル (sys.foreign_keys の *parent_object_id* に対応) である場合、CASCADE オプションは使用できません。 この制約を回避するには、アプリケーション ロジックまたは AFTER トリガーを使用して、主キー テーブル (sys.foreign_keys の  *referenced_object_id* に対応) での削除の一貫性を維持します。 主キー テーブルがテンポラルで、参照元テーブルが非テンポラルである場合、このような制約はありません。  
   
 -   DML ロジックが無効になるのを防ぐために、**INSTEAD OF** トリガーは現在のテーブルでも履歴テーブルでも許可されません。 **AFTER** トリガーは、現在のテーブルでのみ許可されます。 DML ロジックが無効になるのを防ぐために、このトリガーは履歴テーブルではブロックされます。  
   
@@ -93,10 +97,10 @@ caps.handback.revision: 17
   
 -   履歴テーブルは、履歴テーブルのチェーン内で現在のテーブルとして構成することはできません。  
   
-## この記事は役に立ちましたか? フィードバックをお待ちしております。  
- どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツ改善のため、フィードバックをお待ちしています。  [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20Considerations%20and%20Limitations%20page)にコメントをお送りください  
+## <a name="did-this-article-help-you-were-listening"></a>この記事は役に立ちましたか? フィードバックをお待ちしております。  
+ どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツ改善のため、フィードバックをお待ちしています。 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20Considerations%20and%20Limitations%20page) にコメントをお送りください  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)   
  [システム バージョン管理されたテンポラル テーブルの概要](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [テンポラル テーブルのシステム一貫性のチェック](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
@@ -107,3 +111,4 @@ caps.handback.revision: 17
  [テンポラル テーブル メタデータのビューおよび関数](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

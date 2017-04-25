@@ -1,32 +1,36 @@
 ---
 title: "クォーラムを使用せずに WSFC クラスターを強制的に起動する | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性グループ [SQL Server], WSFC クラスター"
-  - "クォーラム [SQL Server], AlwaysOn と WSFC クォーラム"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7cef5f82996bc541f55bc8ec6560edce2e0d9acf
+ms.lasthandoff: 04/11/2017
+
 ---
-# クォーラムを使用せずに WSFC クラスターを強制的に起動する
-  このトピックでは、クォーラムを使用せずに Windows Server フェールオーバー クラスタリング (WSFC) クラスター ノードを強制的に起動する方法について説明します。  この処理が必要になるのは、災害復旧とマルチサブネットのシナリオにおいて、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのデータを復旧し、高可用性を完全に再確立する場合です。  
+# <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>クォーラムを使用せずに WSFC クラスターを強制的に起動する
+  このトピックでは、クォーラムを使用せずに Windows Server フェールオーバー クラスタリング (WSFC) クラスター ノードを強制的に起動する方法について説明します。  この処理が必要になるのは、災害復旧とマルチサブネットのシナリオにおいて、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのデータを復旧し、高可用性を完全に再確立する場合です。  
   
--   **開始前の準備:**  [推奨事項](#推奨事項)、 [セキュリティ](#セキュリティ)  
+-   **Before you start:**  [Recommendations](#Recommendations), [Security](#Security)  
   
--   **クォーラムを使用せずにクラスターを強制的に起動する方法:**  [フェールオーバー クラスター マネージャーの使用](#FailoverClusterManagerProcedure)、 [PowerShell の使用](#PowerShellProcedure)、 [net.exe の使用](#CommandPromptProcedure)  
+-   **To force a cluster to start without a quorum using:**  [Using Failover Cluster Manager](#FailoverClusterManagerProcedure), [Using Powershell](#PowerShellProcedure), [Using Net.exe](#CommandPromptProcedure)  
   
--   **補足情報:**  [補足情報: クォーラムを使用せずにクラスターを強制的に起動した後](#FollowUp)  
+-   **Follow up:**  [Follow Up: After Forcing Cluster to Start without a Quorum](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始前の準備  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 21
   
 ##  <a name="FailoverClusterManagerProcedure"></a> フェールオーバー クラスター マネージャーの使用  
   
-##### クォーラムを使用せずにクラスターを強制的に起動するには  
+##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>クォーラムを使用せずにクラスターを強制的に起動するには  
   
 1.  フェールオーバー クラスター マネージャーを開き、強制的にオンラインにする目的のクラスター ノードに接続します。  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 21
   
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
   
-##### クォーラムを使用せずにクラスターを強制的に起動するには  
+##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>クォーラムを使用せずにクラスターを強制的に起動するには  
   
 1.  **[実行管理者として実行]**から高度な権限で Windows PowerShell を起動します。  
   
@@ -64,8 +68,8 @@ caps.handback.revision: 21
   
 6.  クラスター ノードのプロパティを判読可能な形式で出力します。  
   
-### 例 (PowerShell)  
- 次の例では、クォーラムを使用せずに AlwaysOnSrv02 ノードのクラスター サービスを強制的に起動します。また、`NodeWeight = 1` を設定し、新しく強制的に起動されたノードからクラスター ノードの状態を列挙します。  
+### <a name="example-powershell"></a>例 (PowerShell)  
+ 次の例では、クォーラムを使用せずに AlwaysOnSrv02 ノードのクラスター サービスを強制的に起動します。また、 `NodeWeight = 1`を設定し、新しく強制的に起動されたノードからクラスター ノードの状態を列挙します。  
   
 ```powershell  
 Import-Module FailoverClusters  
@@ -83,7 +87,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 ##  <a name="CommandPromptProcedure"></a> net.exe の使用  
   
-##### クォーラムを使用せずにクラスターを強制的に起動するには  
+##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>クォーラムを使用せずにクラスターを強制的に起動するには  
   
 1.  リモート デスクトップを使用して、強制的にオンラインにする目的のクラスター ノードに接続します。  
   
@@ -93,8 +97,8 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 4.  **を指定した** net.exe `/forcequorum` を使用して、ローカルのクラスター サービスを強制的に起動します。  
   
-### 例 (net.exe)  
- 次の例では、クォーラムを使用せずにノードのクラスター サービスを強制的に起動します。また、`NodeWeight = 1` を設定し、新しく強制的に起動されたノードからクラスター ノードの状態を列挙します。  
+### <a name="example-netexe"></a>例 (net.exe)  
+ 次の例では、クォーラムを使用せずにノードのクラスター サービスを強制的に起動します。また、 `NodeWeight = 1`を設定し、新しく強制的に起動されたノードからクラスター ノードの状態を列挙します。  
   
 ```ms-dos  
 net.exe stop clussvc  
@@ -109,7 +113,7 @@ net.exe start clussvc /forcequorum
   
 -   このトピックの手順は、クォーラムに予定外の障害が発生した場合に、WSFC クラスターをオンラインに戻すことのできる唯一の手順です。  他の WSFC クラスター ノードが新しいクォーラム構成に影響を与えないようにするために、追加の手順の実行が必要になる場合もあります。  
   
--   また、データを復旧し、高可用性を完全に再確立するために、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のその他の機能 ([!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]、データベース ミラーリング、ログ配布など) にも追加の操作が必要になる場合があります。  
+-   また、データを復旧し、高可用性を完全に再確立するために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のその他の機能 ( [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]、データベース ミラーリング、ログ配布など) にも追加の操作が必要になる場合があります。  
   
      **詳細:**  
   
@@ -125,7 +129,7 @@ net.exe start clussvc /forcequorum
   
 -   [Get-ClusterLog フェールオーバー クラスター コマンドレット](http://technet.microsoft.com/library/ee461045.aspx)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [WSFC の強制クォーラムによる災害復旧 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [クラスター クォーラムの NodeWeight の設定の構成](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)   
  [タスク フォーカスによって一覧表示される Windows PowerShell でのフェールオーバー クラスター コマンドレット](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  

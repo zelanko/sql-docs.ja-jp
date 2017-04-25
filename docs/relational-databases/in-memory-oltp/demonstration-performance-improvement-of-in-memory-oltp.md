@@ -1,39 +1,43 @@
 ---
 title: "実証: インメモリ OLTP によるパフォーマンスの向上 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 08/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6a6edd38b5efb5b617308b9359eea8d255daeb8d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 実証: インメモリ OLTP によるパフォーマンスの向上
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>実証: インメモリ OLTP によるパフォーマンスの向上
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  このトピック内のコード サンプルは、メモリ最適化テーブルの高速なパフォーマンスを実証します。 パフォーマンス向上は、従来の解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] から、メモリ最適化テーブル内のデータにアクセスする場合にも明白になります。 このパフォーマンス向上は、ネイティブ コンパイル ストアド プロシージャ (NCSProc) からメモリ最適化テーブル内のデータにアクセスするときにさらに大きくなります。  
+  このトピック内のコード サンプルは、メモリ最適化テーブルの高速なパフォーマンスを実証します。 パフォーマンス向上は、従来の解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)]から、メモリ最適化テーブル内のデータにアクセスする場合にも明白になります。 このパフォーマンス向上は、ネイティブ コンパイル ストアド プロシージャ (NCSProc) からメモリ最適化テーブル内のデータにアクセスするときにさらに大きくなります。  
  
-インメモリ OLTP のパフォーマンスを改善できる可能性を示す包括的なデモについては、[In-Memory OLTP Performance Demo v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0) を参照してください。 
+インメモリ OLTP のパフォーマンスを改善できる可能性を示す包括的なデモについては、 [In-Memory OLTP Performance Demo v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)を参照してください。 
   
  この記事のサンプル コードはシングル スレッドで、インメモリ OLTP の同時実行の利点を利用していません。 同時実行を使用するワークロードでは、さらにパフォーマンスが向上します。 このサンプル コードでは、パフォーマンス向上の一面のみ、具体的には INSERT のデータ アクセスの効率性を示します。  
   
  メモリ最適化テーブルによって達成されるパフォーマンス向上は、NCSProc から、メモリ最適化テーブル内のデータにアクセスするときに完全に実現します。  
   
-## コード例  
+## <a name="code-example"></a>コード例  
  次のサブセクションでは、各手順について説明します。  
   
-### 手順 1a: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- この最初のサブセクションの手順は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行する場合にのみ適用され、[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] で実行する場合には適用されません。 次の操作を行います。  
+### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>手順 1a: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ この最初のサブセクションの手順は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で実行する場合にのみ適用され、 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]で実行する場合には適用されません。 次の操作を行います。  
   
-1.  SQL Server Management Studio (SSMS.exe) を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続します。 または、SSMS.exe に類似した任意のツールも使用できます。  
+1.  SQL Server Management Studio (SSMS.exe) を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続します。 または、SSMS.exe に類似した任意のツールも使用できます。  
   
 2.  **C:\data\\\** という名前のディレクトリを手動で作成します。 サンプルの Transact-SQL コードでは、ディレクトリがあらかじめ存在することが想定されています。  
   
@@ -56,8 +60,8 @@ USE imoltp;
 go  
 ```  
   
-### 手順 1b: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
- このサブセクションは、[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] を使用している場合にのみ適用されます。 次の操作を行います。  
+### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>手順 1b: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
+ このサブセクションは、 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]を使用している場合にのみ適用されます。 次の操作を行います。  
   
 1.  コード例に使用する既存のテスト データベースを決定します。  
   
@@ -65,7 +69,7 @@ go
   
  その場合に Azure ポータルを使用する手順については、「 [Get Started with Azure SQL Database (Azure SQL Database の概要)](http://azure.microsoft.com/documentation/articles/sql-database-get-started)」を参照してください。  
   
-### 手順 2: メモリ最適化テーブルと NCSProc を作成する  
+### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>手順 2: メモリ最適化テーブルと NCSProc を作成する  
  この手順では、メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャ (NCSProc) を作成します。 次の操作を行います。  
   
 1.  SSMS.exe を使用して、新しいデータベースに接続します。  
@@ -115,7 +119,7 @@ END;
 go  
 ```  
   
-### 手順 3: コードを実行する  
+### <a name="step-3-run-the-code"></a>手順 3: コードを実行する  
  ここで、メモリ最適化テーブルによるパフォーマンスを実証するクエリを実行できます。 次の操作を行います。  
   
 1.  SSMS.exe を使用して、データベースで次の T-SQL を実行します。  
@@ -193,7 +197,8 @@ go
 3937 ms , C: memory-optimized table with hash index and native SP.  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

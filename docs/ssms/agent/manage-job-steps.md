@@ -1,0 +1,220 @@
+---
+title: "ジョブ ステップの管理 | Microsoft Docs"
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- job steps [SQL Server replication]
+- job steps [SQL Server Agent]
+- jobs [SQL Server Agent], Integration Services package step
+- executable programs as job steps
+- operating systems [SQL Server], job steps
+- Transact-SQL job step
+- job steps [Transact-SQL]
+- Integration Services packages, job steps
+- replication job steps [SQL Server]
+- logs [SQL Server], jobs
+- SQL Server Agent jobs, job steps
+- ActiveX scripting jobs [SQL Server]
+- job steps [Analysis Services]
+ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
+caps.latest.revision: 5
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5f9ecad6fcec2596f26351839311cc8b647e094e
+ms.lasthandoff: 04/11/2017
+
+---
+# <a name="manage-job-steps"></a>ジョブ ステップの管理
+ジョブ ステップは、ジョブがデータベースまたはサーバーで行う処理です。 すべてのジョブには、最低 1 つのジョブ ステップを含める必要があります。 ジョブ ステップには次のような種類があります。  
+  
+-   実行可能プログラムまたはオペレーティング システムのコマンド。  
+  
+-   [!INCLUDE[tsql](../../includes/tsql_md.md)] ステートメント。ストアド プロシージャと拡張ストアド プロシージャを含みます。  
+  
+-   PowerShell スクリプト。  
+  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] ActiveX スクリプト。  
+  
+-   レプリケーション タスク。  
+  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] タスク。  
+  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] パッケージ。  
+  
+各ジョブ ステップは特定のセキュリティ コンテキストで実行されます。 ジョブ ステップがプロキシを指定している場合、このジョブ ステップは指定されたプロキシの資格情報のセキュリティ コンテキストで実行されます。 ジョブ ステップがプロキシを指定していない場合、このジョブ ステップは [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービス アカウントのコンテキストで実行されます。 プロキシを明示的に指定せずにジョブを作成できるのは、sysadmin 固定サーバー ロールのメンバーのみです。  
+  
+ジョブ ステップは特定の [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows ユーザーのコンテキストで実行されるので、ユーザーには、ジョブ ステップの実行に必要なアクセス許可と構成が必要です。 たとえば、ドライブ文字または汎用名前付け規則 (UNC) パスを必要とするようなジョブを作成した場合、タスクのテスト時にはジョブ ステップを作成者の Windows ユーザー アカウントで実行していることがあります。 ところが、このジョブ ステップの Windows ユーザーにも、このジョブ ステップを実行するためのアクセス許可、ドライブ文字構成、指定ドライブへのアクセスが必要になります。 そうでなければ、このジョブ ステップは失敗します。 この問題を回避するには、各ジョブ ステップのプロキシに、ジョブ ステップで実行するタスクに対して必要なアクセス許可が設定されていることを確認してください。 詳細については、「 [セキュリティと保護 (データベース エンジン)](http://msdn.microsoft.com/en-us/dfb39d16-722a-4734-94bb-98e61e014ee7)」を参照してください。  
+  
+## <a name="job-step-logs"></a>ジョブ ステップのログ  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントは、オペレーティング システム ファイルまたは msdb データベースの sysjobstepslogs テーブルに、一部のジョブ ステップからの出力を書き込むことができます。 両方の出力先に出力を書き込めるジョブ ステップの種類は次のとおりです。  
+  
+-   実行可能プログラムまたはオペレーティング システムのコマンド。  
+  
+-   [!INCLUDE[tsql](../../includes/tsql_md.md)] ステートメントのいずれでもサポートされません。  
+  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] タスク。  
+  
+ジョブ ステップの出力をオペレーティング システム ファイルに書き込めるのは、sysadmin 固定サーバー ロールのメンバーであるユーザーが実行するジョブ ステップのみです。 ジョブ ステップを実行するユーザーが、msdb データベースの SQLAgentUserRole 固定データベース ロール、SQLAgentReaderRole 固定データベース ロール、または SQLAgentOperatorRole 固定データベース ロールのメンバーである場合、ジョブ ステップの出力は sysjobstepslogs テーブルにのみ書き込むことができます。  
+  
+ジョブ ステップのログは、ジョブまたはジョブ ステップが削除されると自動的に削除されます。  
+  
+> [!NOTE]  
+> レプリケーション タスクと [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] パッケージのジョブ ステップのログ記録は、それぞれのサブシステムによって処理されます。 これらのタイプのジョブ ステップについては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを使用してジョブ ステップのログ記録を構成することはできません。  
+  
+## <a name="executable-programs-and-operating-system-commands-as-job-steps"></a>ジョブ ステップとしての実行可能プログラムとオペレーティング システム コマンド  
+実行可能プログラムとオペレーティング システム コマンドは、ジョブ ステップとして使用できます。 これらのファイルの拡張子は、.bat、.cmd、.com、または .exe です。  
+  
+実行可能プログラムまたはオペレーティング システム コマンドをジョブ ステップとして使用する場合は、次の項目を指定する必要があります。  
+  
+-   コマンドが正常に終了した場合に返されるプロセス終了コード。  
+  
+-   実行するコマンドです。 オペレーティング システム コマンドを実行する場合、これはコマンド自体を指します。 外部プログラムの場合は、 **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**など、プログラム名とそのプログラムの引数を指します。  
+  
+    > [!NOTE]  
+    > システム パスまたはジョブ ステップの実行ユーザーのパスで指定されたディレクトリ内に、実行可能ファイルが存在しない場合は、実行可能ファイルの完全パスを指定する必要があります。  
+  
+## <a name="transact-sql-job-steps"></a>Transact-SQL ジョブ ステップ  
+[!INCLUDE[tsql](../../includes/tsql_md.md)] ジョブ ステップを作成するには、次の操作を行う必要があります。  
+  
+-   ジョブを実行するデータベースを特定します。  
+  
+-   実行する [!INCLUDE[tsql](../../includes/tsql_md.md)] ステートメントを入力します。 このステートメントで、ストアド プロシージャまたは拡張ストアド プロシージャを呼び出すことができます。  
+  
+必要に応じて、ジョブ ステップのコマンドとして既存の [!INCLUDE[tsql](../../includes/tsql_md.md)] ファイルを開くことができます。  
+  
+[!INCLUDE[tsql](../../includes/tsql_md.md)] ジョブ ステップでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント プロキシを使用しません。 このジョブ ステップはジョブ ステップの所有者として実行されるか、ジョブ ステップの所有者が sysadmin 固定サーバー ロールのメンバーの場合には [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービス アカウントとして実行されます。 sysadmin 固定サーバー ロールのメンバーは、sp_add_jobstep ストアド プロシージャの [!INCLUDE[tsql](../../includes/tsql_md.md)] database_user_name *パラメーターを使用して、別のユーザーのコンテキストで* ジョブ ステップが実行されるように指定することもできます。 詳細については、「 [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/en-us/97900032-523d-49d6-9865-2734fba1c755)」を参照してください。  
+  
+> [!NOTE]  
+> 1 つの [!INCLUDE[tsql](../../includes/tsql_md.md)] ジョブ ステップに、複数のバッチを含めることができます。 [!INCLUDE[tsql](../../includes/tsql_md.md)] ジョブ ステップには埋め込み GO コマンドを含めることができます。  
+  
+## <a name="powershell-scripting-job-steps"></a>PowerShell スクリプティング ジョブ ステップ  
+PowerShell スクリプト ジョブ ステップを作成するときには、次のいずれかをステップのコマンドとして指定する必要があります。  
+  
+-   PowerShell スクリプトのテキスト。  
+  
+-   開く対象の既存の PowerShell スクリプト ファイル。  
+  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの PowerShell サブシステムは、PowerShell セッションを開いて [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell スナップインを読み込みます。 ジョブ ステップ コマンドとして使用される PowerShell スクリプトでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell プロバイダーおよびコマンドレットを参照できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell スナップインを使用した PowerShell スクリプトの作成の詳細については、「 [SQL Server PowerShell](http://msdn.microsoft.com/en-us/89b70725-bbe7-4ffe-a27d-2a40005a97e7)」を参照してください。  
+  
+## <a name="activex-scripting-job-steps"></a>ActiveX スクリプティング ジョブ ステップ  
+  
+> [!IMPORTANT]  
+> ActiveX スクリプティング ジョブ ステップは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の将来のバージョンで [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]エージェントから削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。  
+  
+ActiveX スクリプティング ジョブ ステップを作成するには、次の操作を行う必要があります。  
+  
+-   ジョブ ステップを記述するスクリプティング言語を特定します。  
+  
+-   ActiveX スクリプトを記述します。  
+  
+ジョブ ステップのコマンドとして既存の ActiveX スクリプト ファイルを開くこともできます。 ActiveX スクリプト コマンドは、Microsoft Visual Basic などを使用して外部でコンパイルし、実行可能プログラムとして実行することもできます。  
+  
+ジョブ ステップ コマンドが ActiveX スクリプトの場合は、SQLActiveScriptHost オブジェクトを使用してジョブ ステップ履歴ログに出力するか、COM オブジェクトを作成することができます。 SQLActiveScriptHost は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのホスト システムによってスクリプト名前空間に導入されるグローバル オブジェクトです。 このオブジェクトには 2 つのメソッドがあります (Print と CreateObject)。 次の例は、Visual Basic Scripting Edition (VBScript) での ActiveX スクリプティングの動作を示しています。  
+  
+```  
+' VBScript example for ActiveX Scripting job step  
+' Create a Dmo.Server object. The object connects to the  
+' server on which the script is running.  
+  
+Set oServer = CreateObject("SQLDmo.SqlServer")  
+oServer.LoginSecure = True  
+oServer.Connect "(local)"  
+'Disconnect and destroy the server object  
+oServer.DisConnect  
+Set oServer = nothing  
+```  
+  
+## <a name="replication-job-steps"></a>レプリケーション ジョブ ステップ  
+レプリケーションを使用してパブリケーションとサブスクリプションを作成した場合、既定でレプリケーション ジョブが作成されます。 作成されるジョブの種類は、レプリケーションの種類 (スナップショット レプリケーション、トランザクション レプリケーション、またはマージ レプリケーション) と使用するオプションによって決まります。  
+  
+レプリケーション ジョブ ステップでは、次のレプリケーション エージェントのいずれかがアクティブになります。  
+  
+-   スナップショット エージェント (スナップショット ジョブ)  
+  
+-   ログ リーダー エージェント (LogReader ジョブ)  
+  
+-   ディストリビューション エージェント (ディストリビューション ジョブ)  
+  
+-   マージ エージェント (マージ ジョブ)  
+  
+-   キュー リーダー エージェント (QueueReader ジョブ)  
+  
+レプリケーションのセットアップ時には、レプリケーション エージェントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント起動後に連続的に実行するか、要求に応じて実行するか、またはスケジュールに従って実行するかを指定できます。 レプリケーション エージェントの詳細については、「 [レプリケーション エージェントの概要](http://msdn.microsoft.com/en-us/a35ecd7d-f130-483c-87e3-ddc8927bb91b)」を参照してください。  
+  
+## <a name="analysis-services-job-steps"></a>Analysis Services ジョブ ステップ  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントでは、コマンド ジョブ ステップとクエリ ジョブ ステップという 2 種類の Analysis Services ジョブ ステップがサポートされます。  
+  
+### <a name="analysis-services-command-job-steps"></a>Analysis Services コマンド ジョブ ステップ  
+[!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] コマンド ジョブ ステップを作成するには、次の操作を行う必要があります。  
+  
+-   ジョブ ステップが実行される OLAP サーバーのデータベースを特定します。  
+  
+-   実行するステートメントを入力します。 ステートメントは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Execute** メソッドの XML である必要があります。 ステートメントには、完全な SOAP エンベロープまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Discover** メソッドの XML が含まれていない可能性があります。 SOAP エンベロープおよび [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] Discover **メソッドは、** ではサポートされていますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブ ステップではサポートされていません。  
+  
+### <a name="analysis-services-query-job-steps"></a>Analysis Services クエリ ジョブ ステップ  
+[!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] クエリ ジョブ ステップを作成するには、次の操作を行う必要があります。  
+  
+-   ジョブ ステップが実行される OLAP サーバーのデータベースを特定します。  
+  
+-   実行するステートメントを入力します。 このステートメントでは、多次元式 (MDX) クエリを使用する必要があります。  
+  
+MDX の詳細については、「 [MDX ステートメントの基礎 (MDX)](http://msdn.microsoft.com/en-us/a560383b-bb58-472e-95f5-65d03d8ea08b)」を参照してください。  
+  
+## <a name="integration-services-packages"></a>Integration Services パッケージ  
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] パッケージ ジョブ ステップを作成するには、次の操作を行う必要があります。  
+  
+-   パッケージのソースを特定します。  
+  
+-   パッケージの場所を特定します。  
+  
+-   パッケージに構成ファイルが必要な場合は、構成ファイルを特定します。  
+  
+-   パッケージにコマンド ファイルが必要な場合は、コマンド ファイルを特定します。  
+  
+-   パッケージに使用する検証方法を特定します。 たとえば、パッケージに署名や特定のパッケージ ID が必要であることを指定できます。  
+  
+-   パッケージのデータ ソースを特定します。  
+  
+-   ログ プロバイダーを特定します。  
+  
+-   パッケージを実行する前に、変数と値を指定します。  
+  
+-   実行オプションを特定します。  
+  
+-   コマンド ライン オプションを追加または変更します。  
+  
+SSIS カタログにパッケージを配置し、 **[SSIS カタログ]** をパッケージのソースとして指定した場合、この構成情報の多くがパッケージから自動的に得られることに注意してください。 **[構成]** タブでは、環境、パラメーターの値、接続マネージャーの値、プロパティの優先設定、およびパッケージが 32 ビット ランタイム環境で実行するかどうかを指定できます。  
+  
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] パッケージを実行するジョブ ステップの作成に関する詳細については、「 [パッケージに対する SQL Server エージェント ジョブ](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31)」を参照してください。  
+  
+## <a name="related-tasks"></a>関連タスク  
+  
+|||  
+|-|-|  
+|**Description**|**トピック**|  
+|実行可能プログラムを使用してジョブ ステップを作成する方法について説明します。|[CmdExec ジョブ ステップの作成](../../ssms/agent/create-a-cmdexec-job-step.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのアクセス許可をリセットする方法について説明します。|[SQL Server エージェント ジョブ ステップを作成および管理するユーザーの構成](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
+|[!INCLUDE[tsql](../../includes/tsql_md.md)] ジョブ ステップを作成する方法について説明します。|[Create a Transact-SQL Job Step](../../ssms/agent/create-a-transact-sql-job-step.md)|  
+|Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント Transact-SQL ジョブ ステップのオプションを定義する方法について説明します。|[Define Transact-SQL Job Step Options](../../ssms/agent/define-transact-sql-job-step-options.md)|  
+|ActiveX スクリプト ジョブ ステップを作成する方法について説明します。|[Create an ActiveX Script Job Step](../../ssms/agent/create-an-activex-script-job-step.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Analysis Service のコマンドとクエリを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブ ステップを作成し、定義する方法について説明します。|[Create an Analysis Services Job Step](../../ssms/agent/create-an-analysis-services-job-step.md)|  
+|ジョブの実行中にエラーが発生した場合に [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] が実行する必要があるアクションについて説明します。|[Set Job Step Success or Failure Flow](../../ssms/agent/set-job-step-success-or-failure-flow.md)|  
+|[ジョブ ステップのプロパティ] ダイアログ ボックスにジョブ ステップの詳細を表示する方法について説明します。|[ジョブ ステップ情報の表示](../../ssms/agent/view-job-step-information.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのジョブ ステップのログを削除する方法について説明します。|[Delete a Job Step Log](../../ssms/agent/delete-a-job-step-log.md)|  
+  
+## <a name="see-also"></a>参照  
+[sysjobstepslogs (Transact-SQL)](http://msdn.microsoft.com/en-us/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
+[ジョブの作成](../../ssms/agent/create-jobs.md)  
+[sp_add_job (Transact-SQL)](http://msdn.microsoft.com/en-us/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
+  
+

@@ -1,32 +1,36 @@
 ---
 title: "Microsoft Azure への SQL Server マネージ バックアップの詳細設定オプションの構成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6c41a2a22b034f36ebe96508e978096b0ed29524
+ms.lasthandoff: 04/11/2017
+
 ---
-# Microsoft Azure への SQL Server マネージ バックアップの詳細設定オプションの構成
+# <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージ バックアップの詳細設定オプションの構成
   次のチュートリアルでは、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の詳細設定オプションを設定する方法について説明します。 この手順は、その機能が必要な場合のみ必要です。 それ以外の場合、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にし、既定の動作に依存します。  
   
  各シナリオで、バックアップは `database_name` パラメーターを使用して指定します。 `database_name` が NUL または * の場合、変更はインスタンス レベルで既定の設定に影響します。 インスタンス レベルの設定は、変更後に作成された新しいデータベースにも影響します。  
   
- これらの設定を指定したら、データベースまたはインスタンスで、システム ストアド プロシージャ [managed_backup.sp_backup_config_basic &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) を使用してマネージ バックアップを有効にできます。 詳細については、「 [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。  
+ これらの設定を指定したら、データベースまたはインスタンスで、システム ストアド プロシージャ [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) を使用してマネージ バックアップを有効にできます。 詳細については、「 [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。  
   
 > [!WARNING]  
->  [managed_backup.sp_backup_config_basic &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) で [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にする前に、常に高度なオプションとカスタム スケジュール オプションを設定する必要があります。 しない場合、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にしてこれらの設定を行っている間に、望ましくないバックアップ操作が実行される可能性あります。  
+>  [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) で [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にする前に、常に高度なオプションとカスタム スケジュール オプションを設定する必要があります。 しない場合、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にしてこれらの設定を行っている間に、望ましくないバックアップ操作が実行される可能性あります。  
   
-## 暗号化の構成  
+## <a name="configure-encryption"></a>暗号化の構成  
  次の手順では、ストアド プロシージャ [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) を使用して暗号化設定を指定する方法を示します。  
   
 1.  **暗号化アルゴリズムを決定する:** まず、使用する暗号化アルゴリズムの名前を決定します。 次のアルゴリズムから 1 つ選択します。  
@@ -78,7 +82,7 @@ caps.handback.revision: 7
     > [!WARNING]  
     >  前の例で `@database_name` が NULL の場合、設定は SQL Server インスタンスに適用されます。  
   
-## カスタム バックアップ スケジュールの構成  
+## <a name="configure-a-custom-backup-schedule"></a>カスタム バックアップ スケジュールの構成  
  次の手順では、ストアド プロシージャ [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) を使用して、カスタム スケジュールを設定する方法を示します。  
   
 1.  **完全バックアップの頻度を決定する** : データベースの完全バックアップを実行する頻度を決定します。 完全バックアップを '毎日' または '毎週' 実行するか選択できます。  
@@ -87,7 +91,7 @@ caps.handback.revision: 7
   
 3.  **毎週バックアップをする曜日を決定する** : 毎週バックアップをする場合、完全バックアップを実行する曜日を選択します。  
   
-4.  **バックアップの開始時刻を決定する**: 24 時間表記を使用し、バックアップの開始時刻を選択します。  
+4.  **バックアップの開始時刻を決定する** : 24 時間表記を使用し、バックアップの開始時刻を選択します。  
   
 5.  **バックアップを許可する時間の長さを決定する** : バックアップが完了しなければならない時間を指定します。  
   
@@ -108,10 +112,10 @@ caps.handback.revision: 7
   
     ```  
   
-## 次の手順  
+## <a name="next-steps"></a>次の手順  
  高度なオプションとカスタム スケジュールを構成したら、ターゲット データベースまたは SQL Server インスタンスで [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にする必要があります。 詳細については、「 [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Microsoft Azure への SQL Server マネージ バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

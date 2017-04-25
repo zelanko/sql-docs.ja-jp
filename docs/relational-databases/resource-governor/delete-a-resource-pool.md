@@ -1,32 +1,36 @@
 ---
 title: "リソース プールの削除 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "リソース ガバナー, リソース プールの削除"
-  - "リソース プール [SQL Server], 削除"
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, resource pool delete
+- resource pools [SQL Server], delete
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 857ce687209066520bb2ec552b93fd46d547b38e
+ms.lasthandoff: 04/11/2017
+
 ---
-# リソース プールの削除
+# <a name="delete-a-resource-pool"></a>リソース プールの削除
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  リソース プールを削除にするには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Transact-SQL を使用します。  
+  リソース プールを削除にするには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Transact-SQL を使用します。  
   
--   **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)、 [権限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **リソース プールの削除に使用するもの:** [SQL Server Management Studio](#DelRPSSMS)、[Transact-SQL](#DelRPTSQL)  
+-   **To delete a resource pool, using:** [SQL Server Management Studio](#DelRPSSMS), [Transact-SQL](#DelRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
  ワークロード グループが含まれている場合は、リソース プールを削除できません。  
@@ -42,7 +46,7 @@ caps.handback.revision: 9
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]**ノードまで再帰的に展開します。  
   
-2.  削除するリソース プールを右クリックし、**[削除]** をクリックします。  
+2.  削除するリソース プールを右クリックし、 **[削除]**をクリックします。  
   
 3.  **[オブジェクトの削除]** ウィンドウの **[削除されるオブジェクト]** ボックスの一覧に、リソース プールが表示されます。 リソース プールを削除するには、 **[OK]**をクリックします。  
   
@@ -56,8 +60,8 @@ caps.handback.revision: 9
   
 2.  **ALTER RESOURCE GOVERNOR RECONFIGURE** ステートメントを実行します。  
   
-### 例 (Transact-SQL)  
- 次の例では、`poolAdhoc` というワークロード グループを削除します。  
+### <a name="example-transact-sql"></a>例 (Transact-SQL)  
+ 次の例では、 `poolAdhoc`というワークロード グループを削除します。  
   
 ```  
 DROP RESOURCE POOL poolAdhoc;  
@@ -66,8 +70,8 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 参照  
- [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="see-also"></a>参照  
+ [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
  [リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [リソース プールの作成](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [リソース プールの設定の変更](../../relational-databases/resource-governor/change-resource-pool-settings.md)   
@@ -81,3 +85,4 @@ GO
  [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)  
   
   
+

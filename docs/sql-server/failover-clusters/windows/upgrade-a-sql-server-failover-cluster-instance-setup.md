@@ -1,37 +1,41 @@
 ---
 title: "SQL Server フェールオーバー クラスター インスタンスのアップグレード (セットアップ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "クラスターのアップグレード"
-  - "クラスター [SQL Server], アップグレード"
-  - "フェールオーバー クラスタリング [SQL Server], クラスターの作成"
-  - "クラスター [SQL Server], 作成"
-  - "フェールオーバー クラスタリング [SQL Server], アップグレード"
+ms.custom: 
+ms.date: 01/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- upgrading clusters
+- clusters [SQL Server], upgrading
+- failover clustering [SQL Server], creating clusters
+- clusters [SQL Server], creating
+- failover clustering [SQL Server], upgrading
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 caps.latest.revision: 63
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 50db49a567f4247b1014fba9114aa168b90709f5
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server フェールオーバー クラスター インスタンスのアップグレード (セットアップ)
+# <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>SQL Server フェールオーバー クラスター インスタンスのアップグレード (セットアップ)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターを [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] フェールオーバー クラスターにアップグレードするには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップ UI またはコマンド プロンプトを使用します。  
   
  ローカルでのインストールの場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限を持つドメイン アカウントを使用する必要があります。  
   
- アップグレードを行う前に、「[SQL Server フェールオーバー クラスター インスタンスのアップグレード](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)」を参照してください。  
+ アップグレードを行う前に、「 [SQL Server フェールオーバー クラスター インスタンスのアップグレード](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)」を参照してください。  
   
-##  <a name="UpgradeSteps"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターをアップグレードするには  
+##  <a name="UpgradeSteps"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターをアップグレードするには  
   
-#### [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターをアップグレードするには  
+#### <a name="to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターをアップグレードするには  
   
 1.  アップグレードするエディションと一致するエディションの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インストール メディアで、ルート フォルダーの setup.exe をダブルクリックします。 必須コンポーネントがインストールされていない場合は、インストールするように求められます。  
   
@@ -47,19 +51,19 @@ caps.handback.revision: 63
   
 7.  [インスタンスの選択] ページで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にアップグレードする [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]インスタンスを指定します。 **[次へ]**をクリックして次に進みます。  
   
-8.  [機能の選択] ページでは、アップグレードする機能があらかじめ選択されています。 機能名を選択すると、右側のペインに各コンポーネント グループの説明が表示されます。 アップグレードする機能は変更できず、アップグレード操作中に機能を追加することもできないことに注意してください。 アップグレード操作の完了後に、アップグレードされた [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] のインスタンスに機能を追加するには、「[SQL Server 2016 のインスタンスへの機能の追加 &#40;セットアップ&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)」を参照してください。  
+8.  [機能の選択] ページでは、アップグレードする機能があらかじめ選択されています。 機能名を選択すると、右側のペインに各コンポーネント グループの説明が表示されます。 アップグレードする機能は変更できず、アップグレード操作中に機能を追加することもできないことに注意してください。 アップグレード操作の完了後に、アップグレードされた [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] のインスタンスに機能を追加するには、「 [SQL Server 2016 のインスタンスへの機能の追加 &#40;セットアップ&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)」を参照してください。  
   
      選択した機能の必須コンポーネントが、右側のペインに表示されます。 SQL Server セットアップでは、この手順の後半で説明するインストール手順の間に、まだインストールされていない必須コンポーネントをインストールします。 時間を節約するには、各ノードにこれらの必須コンポーネントを事前にインストールしておく必要があります。  
   
 9. フィールドが [インスタンスの構成] ページで以前のインスタンスから自動的に生成されます。 新しい InstanceID 値を指定することもできます。  
   
-     **[インスタンス ID]**: 既定では、インスタンス名がインスタンス ID として使用されます。 これは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスのインストール ディレクトリとレジストリ キーを識別するために使用されます。 これは、既定のインスタンスの場合も名前付きインスタンスの場合も同様です。 既定のインスタンスの場合、インスタンス名とインスタンス ID は、MSSQLSERVER になります。 既定以外のインスタンス ID を使用するには、 **[インスタンス ID]** チェック ボックスをオンにして、値を指定します。 既定値をオーバーライドする場合、すべてのフェールオーバー クラスター ノードでアップグレードされたものと同じインスタンス ID を指定する必要があります。 アップグレード済みインスタンスのインスタンス ID は、すべてのノードに一致している必要があります。  
+     **[インスタンス ID]** : 既定では、インスタンス名がインスタンス ID として使用されます。 これは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスのインストール ディレクトリとレジストリ キーを識別するために使用されます。 これは、既定のインスタンスの場合も名前付きインスタンスの場合も同様です。 既定のインスタンスの場合、インスタンス名とインスタンス ID は、MSSQLSERVER になります。 既定以外のインスタンス ID を使用するには、 **[インスタンス ID]** チェック ボックスをオンにして、値を指定します。 既定値をオーバーライドする場合、すべてのフェールオーバー クラスター ノードでアップグレードされたものと同じインスタンス ID を指定する必要があります。 アップグレード済みインスタンスのインスタンス ID は、すべてのノードに一致している必要があります。  
   
      **[検出されたインスタンスと機能]** : セットアップを実行中のコンピューター上にある [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスがグリッドに表示されます。 **[次へ]**をクリックして次に進みます。  
   
 10. [必要なディスク領域] ページでは、指定した機能に必要なディスク領域が計算され、セットアップを実行中のコンピューター上の空き領域と比較されます。  
   
-11. [フルテキスト検索アップグレード] ページで、アップグレードするデータベースのアップグレード オプションを指定します。 詳細については、「[フルテキスト検索アップグレード オプション](../Topic/Full-Text%20Search%20Upgrade%20Options.md)」。  
+11. [フルテキスト検索アップグレード] ページで、アップグレードするデータベースのアップグレード オプションを指定します。 詳細については、「 [フルテキスト検索アップグレード オプション](http://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9)」。  
   
 12. **[エラー レポート]** ページで、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] に送信する、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の機能向上に役立つ情報を指定します。 既定では、エラー レポートのオプションは有効になっています。  
   
@@ -75,19 +79,19 @@ caps.handback.revision: 63
   
 18. アップグレードが終了すると、[完了] ページにインストールの概要ログ ファイルへのリンクと、その他の重要な注意事項が表示されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール プロセスを完了するには、 **[閉じる]**をクリックします。  
   
-19. コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 セットアップ ログ ファイルの詳細については、「[SQL Server セットアップ ログ ファイルの表示と読み取り](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。  
+19. コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 セットアップ ログ ファイルの詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。  
   
 20. アップグレード プロセスを完了するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの他のすべてのノードで、これらの手順を繰り返します。  
   
-## [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスターをアップグレードするには  
+## <a name="to-upgrade-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスターをアップグレードするには  
   
-#### [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスターにアップグレードするには (既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クラスターがマルチサブネット クラスターでない場合)  
+#### <a name="to-upgrade-to-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster-existing-includessnoversionincludesssnoversion-mdmd-cluster-is-a-non-multi-subnet-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスターにアップグレードするには (既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クラスターがマルチサブネット クラスターでない場合)  
   
 1.  前述の手順に従って、クラスターを [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]にアップグレードします。  
   
 2.  AddNode セットアップ操作を使用して別のサブネット上のノードを追加し、 **[クラスター ネットワークの構成]** ページで IP アドレス リソースの依存関係が OR になっていることを確認します。 詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;セットアップ&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」を参照してください。  
   
-#### 拡張 V-LAN を現在使用しているマルチサブネット クラスターをアップグレードするには  
+#### <a name="to-upgrade-a-multi-subnet-cluster-currently-using-stretch-v-lan"></a>拡張 V-LAN を現在使用しているマルチサブネット クラスターをアップグレードするには  
   
 1.  前述の手順に従って、クラスターを [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]にアップグレードします。  
   
@@ -95,18 +99,19 @@ caps.handback.revision: 63
   
 3.  Windows フェールオーバー クラスター管理ツールを使用して、IP アドレス リソースの依存関係が OR に設定された新しいサブネットの新しい IP アドレスを追加します。  
   
-## 次の手順  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] へのアップグレード後は、次の作業を実行します。  
+## <a name="next-steps"></a>次の手順  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]へのアップグレード後は、次の作業を実行します。  
   
 -   [データベース エンジンのアップグレードの完了](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
   
 -   [データベース互換性モードの変更とクエリ ストアの使用](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)  
   
--   [SQL Server 2016 の新機能を利用する](../Topic/Take%20Advantage%20of%20New%20SQL%20Server%202016%20Features.md)  
+-   [SQL Server 2016 の新機能を利用する](http://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server フェールオーバー クラスター インスタンスのアップグレード](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)   
  [SQL Server セットアップ ログ ファイルの表示と読み取り](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [SQL Server 2016 のインスタンスへの機能の追加 &#40;セットアップ&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  
   
   
+

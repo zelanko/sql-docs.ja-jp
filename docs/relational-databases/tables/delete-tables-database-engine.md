@@ -1,30 +1,34 @@
 ---
 title: "テーブルの削除 (データベース エンジン) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "テーブルの削除 [SQL Server]"
-  - "消去、テーブル"
-  - "削除、テーブル"
-  - "破棄、テーブル"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table deletions [SQL Server]
+- deleting tables
+- removing tables
+- dropping tables
 ms.assetid: ca6aa3e9-9885-44c3-bafc-aec441fd97ec
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff85fc5a39fbb4c64bd934c98c235c69a2eff514
+ms.lasthandoff: 04/11/2017
+
 ---
-# テーブルの削除 (データベース エンジン)
+# <a name="delete-tables-database-engine"></a>テーブルの削除 (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用してデータベースからテーブルを削除できます。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してデータベースからテーブルを削除できます。  
   
 > [!CAUTION]  
 >  テーブルの削除については、十分に検討してください。 テーブルを参照するクエリ、ビュー、ユーザー定義関数、ストアド プロシージャ、またはプログラムがある場合は、テーブルを削除すると、各オブジェクトが無効になります。  
@@ -64,7 +68,7 @@ caps.handback.revision: 19
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### データベースからテーブルを削除するには  
+#### <a name="to-delete-a-table-from-the-database"></a>データベースからテーブルを削除するには  
   
 1.  オブジェクト エクスプローラーで、削除するテーブルを選択します。  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### クエリ エディターでテーブルを削除するには  
+#### <a name="to-delete-a-table-in-query-editor"></a>クエリ エディターでテーブルを削除するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

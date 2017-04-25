@@ -1,30 +1,34 @@
 ---
 title: "クラスター クォーラムの NodeWeight の設定の構成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性グループ [SQL Server], WSFC クラスター"
-  - "クォーラム [SQL Server], AlwaysOn と WSFC クォーラム"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: cb3fd9a6-39a2-4e9c-9157-619bf3db9951
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2c43965a7e6b0021bb4bcf2d6fdca14e66cafa18
+ms.lasthandoff: 04/11/2017
+
 ---
-# クラスター クォーラムの NodeWeight の設定の構成
-  このトピックでは、Windows Server フェールオーバー クラスタリング (WSFC) クラスター内のメンバー ノードに NodeWeight 設定を構成する方法について説明します。 NodeWeight 設定は、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスの災害復旧とマルチサブネットのシナリオをサポートするためのクォーラムの投票時に使用されます。  
+# <a name="configure-cluster-quorum-nodeweight-settings"></a>クラスター クォーラムの NodeWeight の設定の構成
+  このトピックでは、Windows Server フェールオーバー クラスタリング (WSFC) クラスター内のメンバー ノードに NodeWeight 設定を構成する方法について説明します。 NodeWeight 設定は、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスの災害復旧とマルチサブネットのシナリオをサポートするためのクォーラムの投票時に使用されます。  
   
--   **開始前の準備:**  [前提条件](#Prerequisites)、 [セキュリティ](#Security)  
+-   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   
--   **クォーラムの NodeWeight 設定を表示する方法:** [PowerShell の使用](#PowerShellProcedure)、 [cluster.exe の使用](#CommandPromptProcedure)  
+-   **To view quorum NodeWeight settings using:** [Using Powershell](#PowerShellProcedure), [Using Cluster.exe](#CommandPromptProcedure)  
   
 -   [関連コンテンツ](#RelatedContent)  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 15
   
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
   
-##### NodeWeight 設定を構成するには  
+##### <a name="to-configure-nodeweight-settings"></a>NodeWeight 設定を構成するには  
   
 1.  **[実行管理者として実行]**から高度な権限で Windows PowerShell を起動します。  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 15
   
 4.  クラスター ノードのプロパティを判読可能な形式で出力します。  
   
-### 例 (PowerShell)  
+### <a name="example-powershell"></a>例 (PowerShell)  
  次の例では、NodeWeight 設定を "AlwaysOnSrv1" ノードのクォーラムの投票を削除するように変更して、クラスター内のすべてのノードに設定を出力します。  
   
 ```powershell  
@@ -76,13 +80,13 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 > [!NOTE]  
 >  cluster.exe ユーティリティは [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] リリースでは推奨されません。  今後は PowerShell とフェールオーバー クラスタリングを使用してください。  cluster.exe ユーティリティは、Windows Server の次のリリースで削除されます。 詳細については、「 [フェールオーバー クラスターの Windows PowerShell コマンドレットへの Cluster.exe コマンドのマッピング](http://technet.microsoft.com/library/ee619744\(WS.10\).aspx)」を参照してください。  
   
-##### NodeWeight 設定を構成するには  
+##### <a name="to-configure-nodeweight-settings"></a>NodeWeight 設定を構成するには  
   
 1.  **[実行管理者として実行]**から高度な権限でコマンド プロンプトを起動します。  
   
 2.  **cluster.exe** を使用して、 `NodeWeight` 値を設定します。  
   
-### 例 (Cluster.exe)  
+### <a name="example-clusterexe"></a>例 (Cluster.exe)  
  次の例では、NodeWeight の値を "Cluster001" クラスターで "AlwaysOnSrv1" ノードのクォーラムの投票を削除するように変更します。  
   
 ```ms-dos  
@@ -95,7 +99,7 @@ cluster.exe Cluster001 node Always OnSrv1 /prop NodeWeight=0
   
 -   [Get-ClusterLog フェールオーバー クラスター コマンドレット](http://technet.microsoft.com/library/ee461045.aspx)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [WSFC クォーラム モードと投票の構成 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [クラスター クォーラムの NodeWeight 設定を表示](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)   
  [タスク フォーカスによって一覧表示される Windows PowerShell でのフェールオーバー クラスター コマンドレット](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  

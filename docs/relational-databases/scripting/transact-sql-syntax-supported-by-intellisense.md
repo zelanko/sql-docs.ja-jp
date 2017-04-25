@@ -1,36 +1,40 @@
 ---
 title: "IntelliSense でサポートされている Transact-SQL 構文 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "Transact-SQL IntelliSense"
-  - "IntelliSense [SQL Server], Transact-SQL 構文"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Transact-SQL IntelliSense
+- IntelliSense [SQL Server], Transact-SQL syntax
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 328ed60693a51b4bd081b1089e39e4805124f042
+ms.lasthandoff: 04/11/2017
+
 ---
-# IntelliSense でサポートされている Transact-SQL 構文
-  このトピックでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] の IntelliSense でサポートされる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ステートメントと構文要素について説明します。  
+# <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense でサポートされている Transact-SQL 構文
+  このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] の IntelliSense でサポートされる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ステートメントと構文要素について説明します。  
   
-## IntelliSense でサポートされるステートメント  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の IntelliSense では、特に一般的な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのみがサポートされます。 いくつかの一般的な[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの状態が原因で IntelliSense が動作しなくなる場合があります。 詳細については、「[IntelliSense のトラブルシューティング &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense-sql-server-management-studio.md)」を参照してください。  
+## <a name="statements-supported-by-intellisense"></a>IntelliSense でサポートされるステートメント  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の IntelliSense では、特に一般的な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのみがサポートされます。 いくつかの一般的な[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの状態が原因で IntelliSense が動作しなくなる場合があります。 詳細については、「[IntelliSense のトラブルシューティング &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense.md)」を参照してください。  
   
 > [!NOTE]  
 >  IntelliSense は、暗号化されたデータベース オブジェクト (たとえば暗号化されたストアド プロシージャまたはユーザー定義関数) に対しては利用できません。 拡張されたストアド プロシージャおよび CLR 統合のユーザー定義型のパラメーターに対しては、パラメーターのヘルプおよびクイック ヒントを利用できません。  
   
-### SELECT ステートメント  
+### <a name="select-statement"></a>SELECT ステートメント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターでは、IntelliSense によって、SELECT ステートメント内の次の構文要素がサポートされます。  
   
 |||  
@@ -41,7 +45,7 @@ caps.handback.revision: 28
 |FOR|GROUP BY|  
 |先頭に戻る|OPTION (hint)|  
   
-### サポートされているその他の Transact-SQL ステートメント  
+### <a name="additional-transact-sql-statements-that-are-supported"></a>サポートされているその他の Transact-SQL ステートメント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターでは、IntelliSense によって、次の表に示す [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントもサポートされています。  
   
 |Transact-SQL ステートメント|サポートされている構文|例外|  
@@ -58,8 +62,8 @@ caps.handback.revision: 28
 |[ALTER PROCEDURE](../../t-sql/statements/alter-procedure-transact-sql.md)|すべての構文。|IntelliSense では EXTERNAL NAME 句をサポートしていません。<br /><br /> AS 句では、このトピックに記載されているステートメントと構文のみが IntelliSense によってサポートされます。|  
 |[USE](../../t-sql/language-elements/use-transact-sql.md)|すべての構文。|なし|  
   
-## サポートされているステートメントでの IntelliSense  
- 次の構文要素は、サポートされている [!INCLUDE[ssDE](../../includes/ssde-md.md)] ステートメントのいずれかで使用されている場合、[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディターの IntelliSense によってサポートされます。  
+## <a name="intellisense-in-supported-statements"></a>サポートされているステートメントでの IntelliSense  
+ 次の構文要素は、サポートされている [!INCLUDE[ssDE](../../includes/ssde-md.md)] ステートメントのいずれかで使用されている場合、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディターの IntelliSense によってサポートされます。  
   
 -   すべての結合の種類 (APPLY など)。  
   
@@ -92,8 +96,8 @@ caps.handback.revision: 28
   
  前に示した要素が他の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント内で使用されている場合、IntelliSense は提供されません。 たとえば、SELECT ステートメント内で使用されている列名に対しては IntelliSense のサポートがありますが、CREATE FUNCTION ステートメント内で使用されている列に対してはサポートがありません。  
   
-## 使用例  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] のスクリプトまたはバッチ内では、このトピックに記載されているステートメントと構文のみが[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの IntelliSense によってサポートされています。 IntelliSense でサポートされるステートメントと構文要素を次の [!INCLUDE[tsql](../../includes/tsql-md.md)] のコード例に示します。 たとえば、次のバッチにおいて、`SELECT` ステートメントが単独で記述されているときは IntelliSense を利用できますが、`SELECT` が `CREATE FUNCTION` ステートメントに含まれているときは IntelliSense を利用できません。  
+## <a name="examples"></a>使用例  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] のスクリプトまたはバッチ内では、このトピックに記載されているステートメントと構文のみが [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの IntelliSense によってサポートされています。 IntelliSense でサポートされるステートメントと構文要素を次の [!INCLUDE[tsql](../../includes/tsql-md.md)] のコード例に示します。 たとえば、次のバッチにおいて、 `SELECT` ステートメントが単独で記述されているときは IntelliSense を利用できますが、 `SELECT` が `CREATE FUNCTION` ステートメントに含まれているときは IntelliSense を利用できません。  
   
 ```  
 USE AdventureWorks2012;  
@@ -129,6 +133,6 @@ GO
 SELECT   
 ```  
   
- スクリプトが実行されていないため `MyTable` が `MyTestDB` に存在しない場合でも、`SELECT` を入力すると、IntelliSense により、使用可能な要素として **PrimaryKeyCol**、**FirstNameCol**、および **LastNameCol** が選択リストに表示されます。  
+ スクリプトが実行されていないため `SELECT`が **に存在しない場合でも、**を入力すると、IntelliSense により、使用可能な要素として **PrimaryKeyCol**、 **FirstNameCol** 、および `MyTable` LastNameCol `MyTestDB`が選択リストに表示されます。  
   
   

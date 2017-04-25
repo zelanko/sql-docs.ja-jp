@@ -1,43 +1,47 @@
 ---
 title: "データベースの復旧モデルの表示または変更 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データベースのバックアップ [SQL Server], 復旧モデル"
-  - "復旧 [SQL Server], 復旧モデル"
-  - "データベースのバックアップ [SQL Server], 復旧モデル"
-  - "復旧モデル [SQL Server], 切り替え"
-  - "復旧モデル [SQL Server], 表示"
-  - "データベースの復元 [SQL Server], 復旧モデル"
-  - "データベースの復旧モデルの変更"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database backups [SQL Server], recovery models
+- recovery [SQL Server], recovery model
+- backing up databases [SQL Server], recovery models
+- recovery models [SQL Server], switching
+- recovery models [SQL Server], viewing
+- database restores [SQL Server], recovery models
+- modifying database recovery models
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d848c756eee54184aa10b5553779d0ebf1807366
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベースの復旧モデルの表示または変更 (SQL Server)
+# <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>データベースの復旧モデルの表示または変更 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を利用してデータベースを表示または変更する方法について説明します。 
+  このトピックでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を利用してデータベースを表示または変更する方法について説明します。 
   
-  *復旧モデル*は、トランザクションをログに記録する方法、トランザクション ログのバックアップを必須 (および可能) にするかどうか、利用できる復元操作の種類などを制御するデータベース プロパティです。 復旧モデルの種類は、単純、完全、および一括ログの 3 種類です。 通常、データベースには完全復旧モデルまたは単純復旧モデルが使用されます。 データベースは、任意の時点で別の復旧モデルに切り替えることができます。 **model** データベースは、新しいデータベースの既定の復旧モデルを設定します。  
+  *復旧モデル* は、トランザクションをログに記録する方法、トランザクション ログのバックアップを必須 (および可能) にするかどうか、利用できる復元操作の種類などを制御するデータベース プロパティです。 復旧モデルの種類は、単純、完全、および一括ログの 3 種類です。 通常、データベースには完全復旧モデルまたは単純復旧モデルが使用されます。 データベースは、任意の時点で別の復旧モデルに切り替えることができます。 **model** データベースは、新しいデータベースの既定の復旧モデルを設定します。  
   
-  [復旧モデル](https://msdn.microsoft.com/library/ms189275.aspx)についての詳細な説明は、[MSSQLTips!](https://www.mssqltips.com/) の提供する「[SQL Server Recovery Models](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/)」 (SQL Server 復旧モデル) を参照してください。
+  [復旧モデル](https://msdn.microsoft.com/library/ms189275.aspx)についての詳細な説明は、 [SQL Server Recovery Models](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) の提供する「 [SQL Server Recovery Models](https://www.mssqltips.com/)」 (SQL Server 復旧モデル) を参照してください。
   
   
 ##  <a name="BeforeYouBegin"></a> アンインストールの準備  
   
 
--   [完全復旧モデルまたは一括ログ復旧モデル](https://msdn.microsoft.com/library/ms189275.aspx)から切り替える**前**に、[トランザクション ログをバックアップ](https://msdn.microsoft.com/library/ms179478.aspx)してください。  
+-   [Back up the transaction log](https://msdn.microsoft.com/library/ms179478.aspx) **before** switching from the [full recovery or bulk-logged recovery model](https://msdn.microsoft.com/library/ms189275.aspx).  
   
 -   一括ログ復旧モデルでは特定の時点に復旧できません。 一括ログ復旧モデルでトランザクション ログの復元を必要とするトランザクションを実行すると、データが失われる可能性があります。 障害復旧シナリオでデータをより確実に復旧するには、次の条件下でのみ一括ログ復旧モデルに切り替えることをお勧めします。  
   
@@ -54,25 +58,25 @@ caps.handback.revision: 40
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### 復旧モデルを表示または変更するには  
+#### <a name="to-view-or-change-the-recovery-model"></a>復旧モデルを表示または変更するには  
   
 1.  適切な [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスへの接続後、オブジェクト エクスプローラーでサーバー名をクリックしてサーバー ツリーを展開します。  
   
 2.  **[データベース]**を展開します。さらに、そのデータベースに応じて、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。  
   
-3.  データベースを右クリックし、**[プロパティ]** をクリックすると、**[データベースのプロパティ]** ダイアログ ボックスが開きます。  
+3.  データベースを右クリックし、 **[プロパティ]**をクリックすると、 **[データベースのプロパティ]** ダイアログ ボックスが開きます。  
   
 4.  **[ページの選択]** ペインの **[オプション]**をクリックします。  
   
 5.  **[復旧モデル]** ボックスの一覧に現在の復旧モデルが表示されています。  
   
-6.  復旧モデルを変更する必要がある場合は、別のモデルをこの一覧で選択します。 選択できるのは、**[完全]**、**[一括ログ]**、**[単純]** のいずれかです。  
+6.  復旧モデルを変更する必要がある場合は、別のモデルをこの一覧で選択します。 選択できるのは、 **[完全]**、 **[一括ログ]**、 **[単純]**のいずれかです。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### 復旧モデルを表示するには  
+#### <a name="to-view-the-recovery-model"></a>復旧モデルを表示するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -88,13 +92,13 @@ GO
   
 ```  
   
-#### 復旧モデルを変更するには  
+#### <a name="to-change-the-recovery-model"></a>復旧モデルを変更するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 `model` ALTER DATABASE `FULL` ステートメントの `SET RECOVERY` オプションを使用して、 [データベース内の復旧モデルを](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) に変更する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 `model` ALTER DATABASE `FULL` ステートメントの `SET RECOVERY` オプションを使用して、 [データベース内の復旧モデルを](../../t-sql/statements/alter-database-transact-sql-set-options.md) に変更する方法を示します。  
   
 ```tsql  
 USE master ;  
@@ -133,15 +137,15 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
--   [ジョブの作成](../../ssms/agent/create-a-job.md)  
+-   [ジョブの作成](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
   
--   [ジョブの有効化または無効化](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [ジョブの有効化または無効化](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)  
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [メンテナンス プラン](http://msdn.microsoft.com/library/ms187658.aspx) ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] オンライン ブック)  
+-   [メンテナンス プラン](http://msdn.microsoft.com/library/ms187658.aspx) ( [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] オンライン ブック)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
@@ -149,3 +153,4 @@ ALTER DATABASE model SET RECOVERY FULL ;
  [復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
+

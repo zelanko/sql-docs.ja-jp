@@ -1,27 +1,30 @@
 ---
 title: "データベースに対して Stretch Database を有効にする | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Stretch Database、データベースの有効化"
-  - "データベースの有効化、Stretch Database"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stretch
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Stretch Database, enabling database
+- enabling database for Stretch Database
 ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 69
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 15d9caa3c474d5cbe2e16e158e6f2fcfe7959ed6
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベースに対して Stretch Database を有効にする
+# <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Stretch Database 用にデータベースを構成するには、SQL Server Management Studio でデータベースに対して **[タスク]、[ストレッチ]、[有効にする]** の順に選択し、**[データベースのストレッチの有効化]** ウィザードを開きます。 Transact-SQL を使用してデータベースの Stretch Database を有効にすることもできます。  
@@ -30,13 +33,14 @@ caps.handback.revision: 69
   
  データベースまたはテーブルで Stretch Database を有効にするには、db_owner アクセス許可が必要です。 データベースで Stretch Database を有効にするには、管理データベースのアクセス許可も必要です。  
 
- >   [!NOTE] 後で、Stretch Database を無効にする場合は、テーブルまたはデータベースで Stretch Database を無効にしてもリモート オブジェクトは削除されないことに注意してください。 リモート テーブルまたはリモート データベースを削除する場合は、Azure 管理ポータルを使用して削除する必要があります。 リモート オブジェクトを手動で削除するまで、引き続き Azure ストレージのコストが発生します。 
+ >   [!NOTE]
+ > 後で、Stretch Database を無効にする場合は、テーブルまたはデータベースで Stretch Database を無効にしてもリモート オブジェクトは削除されないことに注意してください。 リモート テーブルまたはリモート データベースを削除する場合は、Azure 管理ポータルを使用して削除する必要があります。 リモート オブジェクトを手動で削除するまで、引き続き Azure ストレージのコストが発生します。 
  
-## 始める前に  
+## <a name="before-you-get-started"></a>始める前に  
   
--   データベースで Stretch を構成する前に、Stretch Database Advisor を実行して、Stretch を構成できるデータベースとテーブルを識別することをお勧めします。 Stretch Database Advisor はブロックの問題も識別します。 詳細については、「[Stretch Database Advisor を実行して Stretch Database のデータベースとテーブルを特定する](../../sql-server/stretch-database/stretch database databases and tables - stretch database advisor.md)」をご覧ください。  
+-   データベースで Stretch を構成する前に、Stretch Database Advisor を実行して、Stretch を構成できるデータベースとテーブルを識別することをお勧めします。 Stretch Database Advisor はブロックの問題も識別します。 詳細については、「 [Stretch Database Advisor を実行して Stretch Database のデータベースとテーブルを特定する](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)」をご覧ください。  
   
--   [Stretch Database の制限事項](../../sql-server/stretch-database/limitations-for-stretch-database.md) を確認します。  
+-   [Stretch Database の制限事項](../../sql-server/stretch-database/limitations-for-stretch-database.md)を確認します。  
   
 -   Stretch Database はデータを Azure に移行します。 そのため、Azure アカウントとサブスクリプションを請求のために用意する必要があります。 Azure アカウントを取得するには、 [こちらをクリック](http://azure.microsoft.com/en-us/pricing/free-trial/)してください。  
   
@@ -45,11 +49,11 @@ caps.handback.revision: 69
 ##  <a name="EnableTSQLServer"></a> 前提条件: サーバーで Stretch Database を有効にする  
  データベースまたはテーブルで Stretch Database を有効にする前に、ローカル サーバーで有効にする必要があります。 この操作には、sysadmin または serveradmin のアクセス許可が必要です。  
   
--   必要な管理アクセス許可がある場合、**データベースのストレッチの有効化**ウィザードは Stretch 用にサーバーを構成します。  
+-   必要な管理アクセス許可がある場合、 **データベースのストレッチの有効化** ウィザードは Stretch 用にサーバーを構成します。  
   
 -   必要なアクセス許可がない場合、ユーザーがウィザードを実行する前に管理者が **sp_configure** を実行して手動でオプションを有効にするか、または管理者がウィザードを実行する必要があります。  
   
- 手動によってサーバーで Stretch Database を有効にするには、**sp_configure** を実行して、**remote data archive** オプションを有効にします。 次の例では、値を 1 に設定することによって **remote data archive** オプションを有効にしています。  
+ 手動によってサーバーで Stretch Database を有効にするには、 **sp_configure** を実行して、 **remote data archive** オプションを有効にします。 次の例では、値を 1 に設定することによって **remote data archive** オプションを有効にしています。  
   
 ```  
 EXEC sp_configure 'remote data archive' , '1';  
@@ -62,7 +66,7 @@ GO
  詳細については、「[remote data archive サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-remote-data-archive-server-configuration-option.md)」と「[sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)」をご覧ください。  
   
 ##  <a name="Wizard"></a> ウィザードを使用してデータベースで Stretch Database を有効にする  
- 入力する必要がある情報や選択など、データベースのストレッチの有効化ウィザードの詳細については、「[Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)」 (データベースのストレッチの有効化ウィザードの実行から開始する) をご覧ください。  
+ 入力する必要がある情報や選択など、データベースのストレッチの有効化ウィザードの詳細については、「 [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)」 (データベースのストレッチの有効化ウィザードの実行から開始する) をご覧ください。  
   
 ##  <a name="EnableTSQLDatabase"></a> Transact-SQL を使用してデータベースで Stretch Database を有効にする  
  個別のテーブルで Stretch Database を有効にする前に、データベースで有効にする必要があります。  
@@ -94,7 +98,7 @@ GO
   
         -   ウィザードを実行して Stretch Database を有効にする場合は、そのときに資格情報を作成できます。  
   
-        -   **ALTER DATABASE** を実行して Stretch Database を有効にする場合は、**ALTER DATABASE** を実行して Stretch Database を有効にする前に、資格情報を手動で作成する必要があります。 
+        -   **ALTER DATABASE**を実行して Stretch Database を有効にする場合は、 **ALTER DATABASE** を実行して Stretch Database を有効にする前に、資格情報を手動で作成する必要があります。 
         
         新しい資格情報を作成する例を次に示します。
   
@@ -132,7 +136,7 @@ GO
     GO
     ```  
   
-## 次の手順  
+## <a name="next-steps"></a>次の手順  
 -   追加のテーブルを有効にする場合: [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
 -   データ移行の状態を表示する場合: [データ移行の監視とトラブルシューティング &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)  
@@ -145,8 +149,9 @@ GO
   
 -   [Stretch 対応データベースの復元](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
-## 参照  
- [Stretch Database Advisor を実行して Stretch Database のデータベースとテーブルを特定する](../../sql-server/stretch-database/stretch database databases and tables - stretch database advisor.md)   
- [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)  
+## <a name="see-also"></a>参照  
+ [Stretch Database Advisor を実行して Stretch Database のデータベースとテーブルを特定する](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
+ [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
   
+

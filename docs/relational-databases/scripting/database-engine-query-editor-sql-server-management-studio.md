@@ -1,37 +1,41 @@
 ---
 title: "データベース エンジン クエリ エディター (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.tsqlquery.f1"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "クエリ エディター [データベース エンジン]"
-  - "Transact-SQL エディター 「クエリ エディター [データベース エンジン]」を参照"
-  - "データベース エンジン クエリ エディター 「クエリ エディター [データベース エンジン]」を参照"
-  - "クエリ エディター [データベース エンジン], ツールバー"
-  - "エディター [SQL Server Management Studio], データベース エンジン クエリ エディター"
-  - "クエリ エディター [データベース エンジン], 機能"
-  - "SQL Server Management Studio [SQL Server], データベース エンジン クエリ エディター"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.tsqlquery.f1
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Query Editor [Database Engine]
+- Transact-SQL Editor See Query Editor [Database Engine]
+- Database Engine Query Editor See Query Editor [Database Engine]
+- Query Editor [Database Engine], Toolbar
+- editors [SQL Server Management Studio], Database Engine Query Editor
+- Query Editor [Database Engine], Features
+- SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 40ac7dd736d0366fe5cb564719a375e2e6a6a43d
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベース エンジン クエリ エディター (SQL Server Management Studio)
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターを使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含んだスクリプトの作成と実行を行います。 **sqlcmd** コマンドを含んだスクリプトの実行もサポートされます。  
+# <a name="database-engine-query-editor-sql-server-management-studio"></a>データベース エンジン クエリ エディター (SQL Server Management Studio)
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含んだスクリプトの作成と実行を行います。 **sqlcmd** コマンドを含んだスクリプトの実行もサポートされます。  
   
-## Transact-SQL F1 ヘルプ  
+## <a name="transact-sql-f1-help"></a>Transact-SQL F1 ヘルプ  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターは F1 ヘルプをサポートしており、特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントから、関連するリファレンス トピックに移動することができます。 それには、Transact-SQL ステートメントの名前を強調表示し、F1 キーを押します。 強調表示した文字列と一致する F1 ヘルプ属性を持ったトピックが、ヘルプの検索エンジンによって検索されます。  
   
  強調表示した文字列と完全に一致する F1 ヘルプ キーワードに該当するトピックが見つからなかった場合は、このトピックが表示されます。 その場合は、次の 2 つの方法で、目的のヘルプを探すことができます。  
@@ -46,10 +50,10 @@ caps.handback.revision: 47
   
     -   システム ストアド プロシージャのテーブル名やビュー名 (sys.data_spaces、sp_tableoption など)。  
   
-## データベース エンジン クエリ エディターを使用した作業  
+## <a name="working-with-the-database-engine-query-editor"></a>データベース エンジン クエリ エディターを使用した作業  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] に実装されている 4 つのエディターの 1 つです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターに実装されている機能の詳細と、このエディターを使用して実行できる主な作業については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)」をご覧ください。  
   
-## SQL エディター ツール バー  
+## <a name="sql-editor-toolbar"></a>SQL エディター ツール バー  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターが開いているときは、次のボタンを持つ SQL エディター ツール バーが表示されます。  
   
  **Connect**  
@@ -101,7 +105,7 @@ caps.handback.revision: 47
  クエリ結果を 1 つまたは複数のグリッドとして **[結果]** ウィンドウに表示します。  
   
  **[結果をファイルに出力]**  
- クエリを実行したときに、**[結果の保存]** ダイアログ ボックスが開きます。 ファイルを保存するフォルダーを **[保存先]** で選択します。 **[ファイル名]** にファイルの名前を入力し、**[保存]** をクリックして、拡張子 .rpt を持つ**レポート** ファイルとしてクエリ結果を保存します。 詳細設定オプションを指定するには、**[保存]** ボタンの下向き矢印をクリックし、**[エンコード付きで保存]** をクリックします。  
+ クエリを実行したときに、 **[結果の保存]** ダイアログ ボックスが開きます。 ファイルを保存するフォルダーを **[保存先]**で選択します。 **[ファイル名]**にファイルの名前を入力し、 **[保存]** をクリックして、拡張子 .rpt を持つ **レポート** ファイルとしてクエリ結果を保存します。 詳細設定オプションを指定するには、 **[保存]** ボタンの下向き矢印をクリックし、 **[エンコード付きで保存]**をクリックします。  
   
  **[選択範囲のコメント]**  
  行の先頭にコメント演算子 (--) を追加することで、現在の行をコメントにします。  
@@ -118,25 +122,25 @@ caps.handback.revision: 47
  **[テンプレート パラメーターの値の指定]**  
  ストアド プロシージャや関数のパラメーター値を指定するためのダイアログ ボックスを開きます。  
   
- また、**[表示]** メニューの **[ツール バー]** を選択し、**[SQL エディター]** を選択して、SQL エディター ツール バーを追加することもできます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターのウィンドウが開いていない状態で SQL エディター ツール バーを追加した場合、ボタンは使用できません。  
+ また、 **[表示]** メニューの **[ツール バー]**を選択し、 **[SQL エディター]**を選択して、SQL エディター ツール バーを追加することもできます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターのウィンドウが開いていない状態で SQL エディター ツール バーを追加した場合、ボタンは使用できません。  
   
-## SQL エディター ツール バー  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが開いているときに、**[表示]** メニューから **[ツール バー]**、**[デバッグ]** の順に選択すると、[デバッグ] ツール バーが追加されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが開いていない状態で [デバッグ] ツール バーを追加した場合、ボタンは使用できません。  
+## <a name="sql-editor-toolbar"></a>SQL エディター ツール バー  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが開いているときに、 **[表示]** メニューから **[ツール バー]**、 **[デバッグ]**の順に選択すると、[デバッグ] ツール バーが追加されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが開いていない状態で [デバッグ] ツール バーを追加した場合、ボタンは使用できません。  
   
  **Continue**  
- ブレークポイントに達するまで、[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウ内のコードを実行します。  
+ ブレークポイントに達するまで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウ内のコードを実行します。  
   
  **[すべて中断]**  
  中断が生じたときに、デバッガーがアタッチされているすべてのプロセスを中断するようにデバッガーを設定します。  
   
  **[デバッグの停止]**  
- 選択された[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウのデバッグ モードを解除して、標準の実行モードに戻します。  
+ 選択された [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウのデバッグ モードを解除して、標準の実行モードに戻します。  
   
  **[次のステートメントの表示]**  
  次に実行されるステートメントにカーソルを移動します。  
   
  **[ステップ イン]**  
- 次のステートメントが実行されます。 ステートメントで Transact-SQL ストアド プロシージャ、関数、またはトリガーが呼び出される場合、モジュールのコードが含まれた新しい**クエリ エディター** ウィンドウが表示されます。 ウィンドウはデバッグ モードに設定され、実行はモジュールの最初のステートメントで一時停止します。 その後、モジュールに対して、ブレークポイントの設定やコードのステップ実行などの操作を行うことができます。  
+ 次のステートメントが実行されます。 ステートメントで Transact-SQL ストアド プロシージャ、関数、またはトリガーが呼び出される場合、モジュールのコードが含まれた新しい **クエリ エディター** ウィンドウが表示されます。 ウィンドウはデバッグ モードに設定され、実行はモジュールの最初のステートメントで一時停止します。 その後、モジュールに対して、ブレークポイントの設定やコードのステップ実行などの操作を行うことができます。  
   
  **[ステップ オーバー]**  
  次のステートメントが実行されます。 ステートメントで Transact-SQL ストアド プロシージャ、関数、またはトリガーが呼び出される場合、モジュールは完了するまで実行され、その結果が呼び出し元のコードに返されます。 モジュールにエラーがないことがわかっている場合は、それをステップ オーバーできます。 実行は、モジュールへの呼び出しに続くステートメントで一時停止します。  
@@ -147,7 +151,7 @@ caps.handback.revision: 47
  **Windows**  
  **[ブレークポイント]** ウィンドウまたは **[イミディエイト]** ウィンドウを開きます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server Management Studio のキーボード ショートカット](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

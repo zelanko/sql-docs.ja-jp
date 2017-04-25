@@ -1,26 +1,30 @@
 ---
 title: "ポリシー ベースの管理ポリシーのプロパティの表示または変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/06/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ポリシー ベースの管理, ポリシーの変更"
-  - "ポリシー ベースの管理, ポリシーの表示"
+ms.custom: 
+ms.date: 10/06/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, modify policies
+- Policy-Based Management, view policies
 ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 485dca1df0b2d62fb71b1c51b86fe30e449b7ccf
+ms.lasthandoff: 04/11/2017
+
 ---
-# ポリシー ベースの管理ポリシーのプロパティの表示または変更
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] でポリシー ベースの管理ポリシーのプロパティを表示または変更する方法について説明します。  
+# <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>ポリシー ベースの管理ポリシーのプロパティの表示または変更
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でポリシー ベースの管理ポリシーのプロパティを表示または変更する方法について説明します。  
   
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
@@ -31,13 +35,13 @@ caps.handback.revision: 9
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### オブジェクトのすべてのポリシーのプロパティを表示するには  
+#### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>オブジェクトのすべてのポリシーのプロパティを表示するには  
   
-1.  オブジェクト エクスプローラーで、サーバー、サーバー オブジェクト、データベース、またはデータベース オブジェクトを右クリックして、**[ポリシー]** をポイントし、**[表示]** をクリックします。 **[ポリシーの表示 - ***object_name]* ダイアログ ボックスで使用可能なオプションの詳細については、「[[ポリシーの表示] ダイアログ ボックス](../Topic/View%20Policies%20Dialog%20Box.md)」を参照してください。  
+1.  オブジェクト エクスプローラーで、サーバー、サーバー オブジェクト、データベース、またはデータベース オブジェクトを右クリックして、 **[ポリシー]** をポイントし、 **[表示]**をクリックします。 **[ポリシーの表示 -***object_name]* ダイアログ ボックスで使用可能なオプションの詳細については、「 [[ポリシーの表示] ダイアログ ボックス](../../relational-databases/policy-based-management/view-policies-dialog-box.md)」を参照してください。  
   
 2.  完了したら、 **[閉じる]**をクリックします。  
   
-#### 特定のポリシーのプロパティを表示または変更するには:  
+#### <a name="to-view-or-modify-a-specific-policys-properties"></a>特定のポリシーのプロパティを表示または変更するには:  
   
 1.  **オブジェクト エクスプローラー**で、表示または変更するポリシー ベースの管理ポリシーを含むサーバーをプラス記号をクリックして展開します。  
   
@@ -47,13 +51,13 @@ caps.handback.revision: 9
   
 4.  プラス記号をクリックして **[ポリシー]** フォルダーを展開します。  
   
-5.  表示または変更するポリシーを右クリックし、**[プロパティ]** をクリックします。 **[ポリシーを開く -***policy_name]* ダイアログ ボックスで使用可能なオプションの詳細については、「[[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [全般] ページ](../Topic/Create%20New%20Policy%20or%20Open%20Policy%20Dialog%20Box,%20General%20Page.md)」および「[[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [説明] ページ](../Topic/Create%20New%20Policy%20or%20Open%20Policy%20Dialog%20Box,%20Description%20Page.md)」を参照してください。  
+5.  表示または変更するポリシーを右クリックし、 **[プロパティ]**をクリックします。 **[ポリシーを開く -***policy_name]* ダイアログ ボックスで使用可能なオプションの詳細については、「 [[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [全般] ページ](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) 」および「 [[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [説明] ページ](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)」を参照してください。  
   
 6.  完了したら、 **[OK]**をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### ポリシーのプロパティを表示するには  
+#### <a name="to-view-a-policys-properties"></a>ポリシーのプロパティを表示するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -76,3 +80,4 @@ caps.handback.revision: 9
  詳細については、「[syspolicy_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syspolicy-policies-transact-sql.md)」を参照してください。  
   
   
+

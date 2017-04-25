@@ -1,0 +1,2 @@
+  この SQL Server 2000 システム テーブルは、下位互換性を保つためにビューとして含まれています。 代わりに、現在の SQL Server システム ビューを使用することをお勧めします。 対応するシステム ビューを調べるには、「[システム テーブルのシステム ビューへのマッピング (Transact-SQL)](../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)」をご覧ください。 この機能は、Microsoft SQL Server の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。
+   

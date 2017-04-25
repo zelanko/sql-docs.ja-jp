@@ -1,28 +1,32 @@
 ---
 title: "UNIQUE 制約の削除 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "削除、制約"
-  - "UNIQUE 制約 [SQL Server], 削除"
-  - "制約 [SQL Server] を削除します。"
-  - "消去、制約"
-  - "制約 [SQL Server], unique"
+ms.custom: 
+ms.date: 10/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing constraints
+- UNIQUE constraints [SQL Server], deleting
+- constraints [SQL Server], deleting
+- deleting constraints
+- constraints [SQL Server], unique
 ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 49169c8ac7e47e6b9d9efff891810c68372aa6c5
+ms.lasthandoff: 04/11/2017
+
 ---
-# UNIQUE 制約の削除
+# <a name="delete-unique-constraints"></a>UNIQUE 制約の削除
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して UNIQUE 制約を削除できます。 UNIQUE 制約を削除すると、制約式に含まれる 1 つ以上の列に入力される値に対する一意性の条件が取り除かれ、対応する一意なインデックスが削除されます。  
@@ -48,29 +52,29 @@ caps.handback.revision: 14
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### オブジェクト エクスプローラーを使用して UNIQUE 制約を削除するには  
+#### <a name="to-delete-a-unique-constraint-using-object-explorer"></a>オブジェクト エクスプローラーを使用して UNIQUE 制約を削除するには  
   
 1.  オブジェクト エクスプローラーで、UNIQUE 制約を含むテーブルを展開し、 **[制約]**を展開します。  
   
-2.  キーを右クリックし、**[削除]** をクリックします。  
+2.  キーを右クリックし、 **[削除]**をクリックします。  
   
 3.  **[オブジェクトの削除]** ダイアログ ボックスで正しいキーが指定されていることを確認し、 **[OK]**をクリックします。  
   
-#### テーブル デザイナーを使用して UNIQUE 制約を削除するには  
+#### <a name="to-delete-a-unique-constraint-using-table-designer"></a>テーブル デザイナーを使用して UNIQUE 制約を削除するには  
   
-1.  **オブジェクト エクスプローラー**で、UNIQUE 制約が設定されたテーブルを右クリックし、**[デザイン]** をクリックします。  
+1.  **オブジェクト エクスプローラー**で、UNIQUE 制約が設定されたテーブルを右クリックし、 **[デザイン]**をクリックします。  
   
-2.  **[テーブル デザイナー]** メニューの **[インデックス/キー]** をクリックします。  
+2.  **[テーブル デザイナー]** メニューの **[インデックス/キー]**をクリックします。  
   
 3.  **[インデックス/キー]** ダイアログ ボックスの **[Selected Primary/Unique Key and Index (選択された主/一意キーまたはインデックス)]** ボックスの一意キーをクリックします。  
   
 4.  **[削除]**をクリックします。  
   
-5.  **[ファイル]** メニューの **table name** *の保存]*をクリックします。  
+5.  **ファイル** メニューの **の保存** *の保存*をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### UNIQUE 制約を削除するには  
+#### <a name="to-delete-a-unique-constraint"></a>UNIQUE 制約を削除するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -93,3 +97,4 @@ caps.handback.revision: 14
  詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」および「[sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。  
   
 ###  <a name="TsqlExample"></a>  
+

@@ -1,23 +1,27 @@
 ---
 title: "ユーザー定義関数の削除 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7731c5fd8d7bc5c62cd7ced03f3ebd638e68e58e
+ms.lasthandoff: 04/11/2017
+
 ---
-# ユーザー定義関数の削除
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または  を使用してユーザー定義関数を削除できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+# <a name="delete-user-defined-functions"></a>ユーザー定義関数の削除
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または  を使用してユーザー定義関数を削除できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **このトピックの内容**  
   
@@ -48,7 +52,7 @@ caps.handback.revision: 7
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### ユーザー定義関数を削除するには  
+#### <a name="to-delete-a-user-defined-function"></a>ユーザー定義関数を削除するには  
   
 1.  変更する関数を含むデータベースの横にあるプラス記号をクリックします。  
   
@@ -62,16 +66,16 @@ caps.handback.revision: 7
   
     -   集計関数  
   
-4.  削除する関数を右クリックして、**[削除]** をクリックします。  
+4.  削除する関数を右クリックして、 **[削除]**をクリックします。  
   
 5.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]**をクリックします。  
   
     > [!IMPORTANT]  
-    >  **[オブジェクトの削除]** ダイアログ ボックスの **[依存関係の表示]** をクリックして **[*function_name* の依存関係]** ダイアログ ボックスを開きます。 関数に依存するすべてのオブジェクトと、関数が依存するすべてのオブジェクトが表示されます。  
+    >  **オブジェクトの削除** ダイアログ ボックスの **依存関係の表示** をクリックして *function_name***の依存関係** ダイアログ ボックスを開きます。 関数に依存するすべてのオブジェクトと、関数が依存するすべてのオブジェクトが表示されます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### ユーザー定義関数を削除するには  
+#### <a name="to-delete-a-user-defined-function"></a>ユーザー定義関数を削除するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

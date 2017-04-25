@@ -1,46 +1,50 @@
 ---
 title: "SQL Server のフェールオーバー クラスター インスタンスの名前変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "クラスター [SQL Server], 仮想サーバー"
-  - "仮想サーバーの名前の変更"
-  - "仮想サーバー [SQL Server], フェールオーバー クラスタリング"
-  - "フェールオーバー クラスタリング [SQL Server], 仮想サーバー"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clusters [SQL Server], virtual servers
+- renaming virtual servers
+- virtual servers [SQL Server], failover clustering
+- failover clustering [SQL Server], virtual servers
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0d98bc0762d800a4fc86c56c37ee815fd189a4cd
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server のフェールオーバー クラスター インスタンスの名前変更
-  フェールオーバー クラスターに含まれる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの場合、仮想サーバーの名前を変更する手順は、スタンドアロン インスタンスでの手順とは異なります。 詳細については、[SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) を参照してください。  
+# <a name="rename-a-sql-server-failover-cluster-instance"></a>SQL Server のフェールオーバー クラスター インスタンスの名前変更
+  フェールオーバー クラスターに含まれる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの場合、仮想サーバーの名前を変更する手順は、スタンドアロン インスタンスでの手順とは異なります。 詳細については、 [SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)を参照してください。  
   
  仮想サーバーの名前は、常に SQL ネットワーク名 (SQL 仮想サーバー ネットワーク名) と同じになります。 仮想サーバー名は変更できますが、インスタンス名は変更できません。 たとえば、VS1\instance1 という仮想サーバー名を SQL35\instance1 などの別の名前に変更することはできますが、名前のインスタンスの部分 instance1 は変更されません。  
   
  名前の変更処理を開始する前に、次の項目を確認します。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  では、レプリケーションにログ配布が使用されている場合を除いて、レプリケーション対象サーバーの名前は変更できません。 プライマリ サーバーが完全に存在しなくなった場合は、ログ配布対象のセカンダリ サーバーの名前を変更することができます。 詳細については、[ログ配布とレプリケーション &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md) を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、レプリケーションにログ配布が使用されている場合を除いて、レプリケーション対象サーバーの名前は変更できません。 プライマリ サーバーが完全に存在しなくなった場合は、ログ配布対象のセカンダリ サーバーの名前を変更することができます。 詳細については、[ログ配布とレプリケーション &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md) を参照してください。  
   
 -   データベース ミラーリングを使用するよう構成されている仮想サーバーの名前を変更する場合は、名前の変更を行う前にデータベース ミラーリングを無効にし、名前の変更後に新しい仮想サーバー名でデータベース ミラーリングを再確立する必要があります。 データベース ミラーリングのメタデータは、新しい仮想サーバー名に、自動的には更新されません。  
   
-### 仮想サーバーの名前を変更するには  
+### <a name="to-rename-a-virtual-server"></a>仮想サーバーの名前を変更するには  
   
 1.  クラスター アドミニストレーターを使用して、SQL ネットワーク名を新しい名前に変更します。  
   
-2.  ネットワーク名リソースをオフラインにします。 これにより、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースや、他の依存リソースもオフラインになります。  
+2.  ネットワーク名リソースをオフラインにします。 これにより、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースや、他の依存リソースもオフラインになります。  
   
 3.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースをオンラインに戻します。  
   
-## 名前の変更操作の確認  
+## <a name="verify-the-renaming-operation"></a>名前の変更操作の確認  
  仮想サーバーの名前を変更したら、このサーバーの古い名前を使用している接続は、新しい名前を使用して接続するように変更する必要があります。  
   
  名前の変更が完了していることを確認するには、**@@servername** または **sys.servers** のいずれかを使用して情報を取得します。 **@@servername** 関数は新しい仮想サーバー名を返し、**sys.servers** テーブルには新しい仮想サーバー名が表示されます。 また、フェールオーバー処理が新しい名前を使って正常に機能していることを確認するには、他のノードに対する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースのフェールオーバーが発生するように試行します。  
@@ -49,7 +53,7 @@ caps.handback.revision: 16
   
  仮想サーバー名の変更をネットワークに伝達する時間を最小限に抑えるには、次の手順を実行します。  
   
-#### ネットワークの伝達の遅延を最小限に抑えるには  
+#### <a name="to-minimize-network-propagation-delay"></a>ネットワークの伝達の遅延を最小限に抑えるには  
   
 1.  サーバー ノードでコマンド プロンプトから次のコマンドを実行します。  
   
@@ -59,20 +63,18 @@ caps.handback.revision: 16
     nbtstat –RR  
     ```  
   
-## 名前変更操作後のその他の考慮事項  
- フェールオーバー クラスターのネットワーク名を変更した後は、以下の点を検証および実行して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントと [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のすべてのシナリオを有効にする必要があります。  
-  
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]: **Windows クラスター アドミニストレーター ツールを使用して [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] フェールオーバー クラスターの名前を変更した後にアップグレードまたはアンインストールを実行すると、処理が失敗する場合があります。 この問題を解決するには、[ここ](http://go.microsoft.com/fwlink/?LinkId=244002) (http://go.microsoft.com/fwlink/?LinkId=244002) の解決方法の指示に従って **ClusterName** レジストリ エントリを更新します。  
+## <a name="additional-considerations-after-the-renaming-operation"></a>名前変更操作後のその他の考慮事項  
+ フェールオーバー クラスターのネットワーク名を変更した後は、以下の点を検証および実行して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントと [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]のすべてのシナリオを有効にする必要があります。  
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービス:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービスに推奨される以下の追加事項を検証および実行します。  
   
--   SQL エージェントがイベントの転送用に構成されている場合は、レジストリ設定を修正します。 詳細については、[イベントの転送先サーバーの指定 &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md) を参照してください。  
+-   SQL エージェントがイベントの転送用に構成されている場合は、レジストリ設定を修正します。 詳細については、[イベントの転送先サーバーの指定 &#40;SQL Server Management Studio&#41;](http://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12) を参照してください。  
   
 -   コンピューター/クラスターのネットワーク名が変更されている場合は、マスター サーバー (MSX) と対象サーバー (TSX) のインスタンス名を修正します。 詳細については、次の各トピックを参照してください。  
   
-    -   [マスター サーバーからの複数の対象サーバーの参加の解除](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
+    -   [マスター サーバーからの複数の対象サーバーの参加の解除](http://msdn.microsoft.com/library/61a3713b-403a-4806-bfc4-66db72ca1156)  
   
-    -   [マルチサーバー環境の作成](../../../ssms/agent/create-a-multiserver-environment.md)  
+    -   [マルチサーバー環境の作成](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)  
   
 -   ログ配布を再構成して、更新されたサーバー名を使ってログがバックアップおよび復元されるようにします。 詳細については、次の各トピックを参照してください。  
   
@@ -80,9 +82,9 @@ caps.handback.revision: 16
   
     -   [ログ配布の削除 &#40;SQL Server&#41;](../../../database-engine/log-shipping/remove-log-shipping-sql-server.md)  
   
--   サーバー名を使用するジョブ ステップを更新します。 詳細については、[ジョブ ステップの管理](../../../ssms/agent/manage-job-steps.md) を参照してください。  
+-   サーバー名を使用するジョブ ステップを更新します。 詳細については、 [ジョブ ステップの管理](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   

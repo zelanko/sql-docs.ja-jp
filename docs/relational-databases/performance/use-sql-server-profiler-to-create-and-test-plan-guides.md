@@ -1,38 +1,42 @@
 ---
 title: "SQL Server Profiler を使用したプラン ガイドの作成とテスト | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プラン ガイドのチェック"
-  - "プラン ガイド [SQL Server], テスト"
-  - "プラン ガイド [SQL Server], SQL Server Profiler"
-  - "プラン ガイドとのクエリの照合 [SQL Server]"
-  - "プラン ガイドのテスト"
-  - "SQL Server Profiler, プラン ガイド"
-  - "プラン ガイド [SQL Server], 作成"
-  - "クエリ テキストのキャプチャ [SQL Server]"
-  - "プラン ガイドの確認"
-  - "プロファイラー [SQL Server Profiler], プラン ガイド"
-  - "クエリとプラン ガイドの照合 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- checking plan guides
+- plan guides [SQL Server], testing
+- plan guides [SQL Server], SQL Server Profiler
+- matching queries to plan guides [SQL Server]
+- testing plan guides
+- SQL Server Profiler, plan guides
+- plan guides [SQL Server], creating
+- capturing query text [SQL Server]
+- verifying plan guides
+- Profiler [SQL Server Profiler], plan guides
+- query-to-plan guide matching [SQL Server]
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 06df9d04d443ee83ab188bf56b08afd7126e70b2
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server Profiler を使用したプラン ガイドの作成とテスト
-  プラン ガイドを作成するとき、**sp_create_plan_guide** ストアド プロシージャの *statement_text* 引数に使用するために、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して正確なクエリ テキストをキャプチャできます。 これにより、コンパイル時にプラン ガイドをクエリに一致させることができます。 プラン ガイドを作成した後、プラン ガイドが実際にクエリに一致することをテストするためにも [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用できます。 通常、クエリがプラン ガイドに一致することを確認するには、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してプラン ガイドをテストする必要があります。  
+# <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>SQL Server Profiler を使用したプラン ガイドの作成とテスト
+  プラン ガイドを作成するとき、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sp_create_plan_guide *ストアド プロシージャの* statement_text **引数に使用するために、** を使用して正確なクエリ テキストをキャプチャできます。 これにより、コンパイル時にプラン ガイドをクエリに一致させることができます。 プラン ガイドを作成した後、プラン ガイドが実際にクエリに一致することをテストするためにも [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用できます。 通常、クエリがプラン ガイドに一致することを確認するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してプラン ガイドをテストする必要があります。  
   
-## SQL Server Profiler を使用したクエリ テキストのキャプチャ  
- クエリを実行し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] に送信されたテキストを正確にキャプチャすると、そのクエリ テキストに正確に一致する SQL 型または TEMPLATE 型のプラン ガイドを作成できます。 これにより、このプラン ガイドをクエリ オプティマイザーに使用させることができます。  
+## <a name="capturing-query-text-by-using-sql-server-profiler"></a>SQL Server Profiler を使用したクエリ テキストのキャプチャ  
+ クエリを実行し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]に送信されたテキストを正確にキャプチャすると、そのクエリ テキストに正確に一致する SQL 型または TEMPLATE 型のプラン ガイドを作成できます。 これにより、このプラン ガイドをクエリ オプティマイザーに使用させることができます。  
   
  スタンドアロン バッチとしてアプリケーションから送信される次のクエリについて考えてみます。  
   
@@ -56,7 +60,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 4.  クエリに対応する **SQL:BatchStarting** イベントをクリックします。  
   
-5.  イベントを右クリックして **[イベント データの抽出]** をクリックします。  
+5.  イベントを右クリックして **[イベント データの抽出]**をクリックします。  
   
     > [!IMPORTANT]  
     >  SQL Server Profiler のトレース ウィンドウ内の下のペインで、バッチ テキストを選択してコピーすることは避けてください。 作成するプラン ガイドが元のバッチと一致しなくなる場合があります。  
@@ -65,7 +69,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  メモ帳でバッチ テキスト ファイルを開き、テキストをクリップボードにコピーします。  
   
-8.  プラン ガイドを作成し、**@stmt** 引数に指定する引用符 (**'**') 内にコピーしたテキストを貼り付けます。 **@stmt** 引数内に単一引用符がある場合は、その前にもう 1 つ単一引用符を追加してエスケープする必要があります。 単一引用符を挿入する際は、別の文字を追加したり削除したりしないように注意してください。 たとえば、日付リテラル **'**20000101**'** は、**''**20000101**''** として区切る必要があります。  
+8.  プラン ガイドを作成し、**@stmt**引数に指定する引用符 ( **@stmt** ') 内にコピーしたテキストを貼り付けます。 **@stmt** 引数内に単一引用符がある場合は、その前にもう 1 つ単一引用符を追加してエスケープする必要があります。 単一引用符を挿入する際は、別の文字を追加したり削除したりしないように注意してください。 たとえば、日付リテラル **'**20000101**'** は、 **''**20000101**''**として区切る必要があります。  
   
  次に、このプラン ガイドを示します。  
   
@@ -79,10 +83,10 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (MERGE JOIN)';  
 ```  
   
-## SQL Server Profiler を使用したプラン ガイドのテスト  
+## <a name="testing-plan-guides-by-using-sql-server-profiler"></a>SQL Server Profiler を使用したプラン ガイドのテスト  
  プラン ガイドがクエリに一致することを確認するには、次の手順に従います。  
   
-1.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] トレースを開始し、イベントの種類として **Showplan XML** が選択されていることを確認します (**[Performance]** ノードの下にあります)。  
+1.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] トレースを開始し、イベントの種類として **Showplan XML** が選択されていることを確認します ( **[Performance]** ノードの下にあります)。  
   
 2.  アプリケーションでクエリを実行します。  
   
@@ -93,9 +97,9 @@ EXEC sp_create_plan_guide
     > [!NOTE]  
     >  **Showplan XML for Query Compile** イベントは使用できません。 **PlanGuideDB** はそのイベントに存在しません。  
   
-5.  プラン ガイドが OBJECT 型または SQL 型の場合は、**Showplan XML** イベントに、クエリと一致させるプラン ガイドの **PlanGuideDB** 属性と **PlanGuideName** 属性が含まれていることを確認します。 または、TEMPLATE プラン ガイドの場合は、**Showplan XML** イベントに、クエリと一致させるプラン ガイドの **TemplatePlanGuideDB** 属性と **TemplatePlanGuideName** 属性が含まれていることを確認します。 これにより、プラン ガイドが機能していることを確認できます。 これらの属性は、プランの **\<StmtSimple>** 要素に含まれます。  
+5.  プラン ガイドが OBJECT 型または SQL 型の場合は、 **Showplan XML** イベントに、クエリと一致させるプラン ガイドの **PlanGuideDB** 属性と **PlanGuideName** 属性が含まれていることを確認します。 または、TEMPLATE プラン ガイドの場合は、 **Showplan XML** イベントに、クエリと一致させるプラン ガイドの **TemplatePlanGuideDB** 属性と **TemplatePlanGuideName** 属性が含まれていることを確認します。 これにより、プラン ガイドが機能していることを確認できます。 これらの属性は、プランの **\<StmtSimple>** 要素に含まれます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  
   
   
