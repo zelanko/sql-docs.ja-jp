@@ -1,30 +1,34 @@
 ---
 title: "データベース スナップショット (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "静的データベース ビュー"
-  - "スナップショット [SQL Server データベース スナップショット]"
-  - "ソース データベース [SQL Server]"
-  - "スナップショット [SQL Server データベース スナップショット]、データベース スナップショットについて"
-  - "データベース スナップショット [SQL Server]"
-  - "読み取り専用のデータベース ビュー"
-  - "データベース スナップショット [SQL Server データベース スナップショット]、データベース スナップショットについて"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- static database views
+- snapshots [SQL Server database snapshots]
+- source databases [SQL Server]
+- snapshots [SQL Server database snapshots], about database snapshots
+- database snapshots [SQL Server]
+- read-only database views
+- database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1087898fae9896722e795f2c6c68c5df20d0f3aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベース スナップショット (SQL Server)
+# <a name="database-snapshots-sql-server"></a>データベース スナップショット (SQL Server)
   データベース スナップショットは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース (*ソース データベース*) の読み取り専用の静的ビューです。 データベース スナップショットには、そのスナップショットを作成した時点でのソース データベースに対するトランザクションが反映されています。 データベース スナップショットは、常にそのソース データベースと同じサーバー インスタンス上に存在します。 ソース データベースが更新されると、データベース スナップショットが更新されます。 したがって、データベース スナップショットが長期間にわたって存在するほど、使用可能なディスク領域が使い尽くされる可能性が高くなります。  
   
  1 つのソース データベースには複数のスナップショットが存在できます。 各データベース スナップショットは、データベースの所有者によって明示的に削除されるまで保持されます。  
@@ -63,7 +67,7 @@ caps.handback.revision: 54
   
 -   可用性の目的で維持しているミラー データベースを使用して、レポート作成に伴う負担を軽減できます。  
   
-     データベース スナップショットをデータベース ミラーリングと共に使用すると、ミラー サーバー上のデータをレポートに使用できるようになります。 また、ミラー データベースに対してクエリを実行すると、プリンシパル サーバー上のリソースを解放することもできます。 詳細については、「[データベース ミラーリングとデータベース スナップショット &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)」を参照してください。  
+     データベース スナップショットをデータベース ミラーリングと共に使用すると、ミラー サーバー上のデータをレポートに使用できるようになります。 また、ミラー データベースに対してクエリを実行すると、プリンシパル サーバー上のリソースを解放することもできます。 詳細については、「 [データベース ミラーリングとデータベース スナップショット &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)が使用されます。  
   
 -   管理者によるエラーからデータを保護できます。  
   
@@ -96,7 +100,7 @@ caps.handback.revision: 54
  データベース スナップショット (database snapshot)  
  データベース (ソース データベース) の読み取り専用の静的なビュー。トランザクションの一貫性が確保されます。  
   
- ソース データベース (source database)  
+ ソース データベース  
  データベース スナップショットの場合、スナップショットの作成元となったデータベース。 データベース スナップショットはソース データベースに依存します。 データベースのスナップショットは、データベースと同じサーバー インスタンス上に格納する必要があります。 さらに、データベースがなんらかの理由で使用できなくなった場合、データベース スナップショットもすべて使用できなくなります。  
   
  スパース ファイル (sparse file)  
@@ -118,7 +122,7 @@ caps.handback.revision: 54
 ###  <a name="Prerequisites"></a> 前提条件  
  任意の復旧モデルを使用できるソース データベースは、次の前提条件を満たす必要があります。  
   
--   データベース スナップショットをサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディションでサーバー インスタンスが実行されている必要があります。 詳細については、「[SQL Server 2016 の各エディションがサポートする機能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)」を参照してください。  
+-   データベース スナップショットをサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディションでサーバー インスタンスが実行されている必要があります。 詳細については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
 -   ソース データベースは、データベース ミラーリング セッション内のミラー データベースである場合を除き、オンラインである必要があります。  
   
@@ -126,13 +130,13 @@ caps.handback.revision: 54
   
      データベース スナップショットの作成は、データベースの同期状態が "同期中" または "同期済み" であるときに実行することをお勧めします。 ただし、データベースの同期状態が "同期されていません" であっても、データベース スナップショットを作成することはできます。  
   
-     詳細については、「[AlwaysOn 可用性グループを含むデータベース スナップショット (SQL Server)](../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)」を参照してください。  
+     詳細については、「 [AlwaysOn 可用性グループを含むデータベース スナップショット (SQL Server)](../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)」を参照してください。  
   
 -   ミラー データベースにデータベース スナップショットを作成するには、データベースは "同期済み" のミラーリング状態になっている必要があります。  
   
 -   ソース データベースは、スケーラブルな共有データベースとして構成できません。  
 
--   ソース データベースに MEMORY_OPTIMIZED_DATA ファイルグループを含めることはできません。  詳細については、「[インメモリ OLTP に対してサポートされていない SQL Server の機能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)」を参照してください 。
+-   ソース データベースに MEMORY_OPTIMIZED_DATA ファイルグループを含めることはできません。  詳細については、「 [インメモリ OLTP に対してサポートされていない SQL Server の機能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)」を参照してください 。
   
 > [!NOTE]  
 >  すべての復旧モデルがデータベース スナップショットをサポートしています。  
@@ -193,7 +197,7 @@ caps.handback.revision: 54
     > [!NOTE]  
     >  データベース スナップショットで実行する SELECT ステートメントには、FILESTREAM 列を指定しないようにする必要があります。FILESTREAM 列が含まれていると、次のようなエラー メッセージが返されます。 `Could not continue scan with NOLOCK due to data movement.`  
   
--   読み取り専用スナップショットに関する統計が欠落しているか、古くなっている場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は、tempdb に一時的な統計を作成して維持します。 詳細については、「 [Statistics](../../relational-databases/statistics/statistics.md)」を参照してください。  
+-   読み取り専用スナップショットに関する統計が欠落しているか、古くなっている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、tempdb に一時的な統計を作成して維持します。 詳細については、「 [Statistics](../../relational-databases/statistics/statistics.md)」を参照してください。  
   
 ###  <a name="DiskSpace"></a> 必要なディスク領域  
  データベース スナップショットはディスク領域を消費します。 データベース スナップショットによってディスク領域が足りなくなった場合、そのデータベース スナップショットは問題ありに設定されるので、削除する必要があります  (ただし、ソース データベースは影響を受けず、操作は正常に続行されます)。しかし、データベースの完全なコピーと比較すると、スナップショットでは領域が非常に効率的に使用されます。 スナップショットにとって必要なのは、有効期間中に変化するページを格納する領域だけです。 通常はスナップショットが保持されている時間は限られているので、サイズはそれほど大きな問題ではありません。  
@@ -234,7 +238,9 @@ caps.handback.revision: 54
   
 -   [データベース スナップショットの削除 &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データベース ミラーリングとデータベース スナップショット &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   
+
+

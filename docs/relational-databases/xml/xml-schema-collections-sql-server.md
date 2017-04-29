@@ -1,33 +1,37 @@
 ---
 title: "XML スキーマ コレクション (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XSD スキーマ [SQL Server]"
-  - "xml_schema_namespace 関数"
-  - "XML スキーマ コレクション [SQL Server], XML スキーマ コレクションについて"
-  - "メタデータ [SQL Server], XML スキーマ コレクション"
-  - "クエリ [SQL Server の XML], XML スキーマ コレクション"
-  - "スキーマ コレクション [SQL Server]"
-  - "XML のスキーマ [SQL Server]"
-  - "XML [SQL Server], スキーマ コレクション"
-  - "XML スキーマ コレクション [SQL Server]"
-  - "スキーマ コレクション [SQL Server], XML スキーマ コレクションについて"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XSD schemas [SQL Server]
+- xml_schema_namespace function
+- XML schema collections [SQL Server], about XML schema collections
+- metadata [SQL Server], XML schema collections
+- queries [XML in SQL Server], XML schema collections
+- schema collections [SQL Server]
+- schemas [SQL Server], XML
+- XML [SQL Server], schema collections
+- XML schema collections [SQL Server]
+- schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5368814b9cd123c0e968ecef14fa236d09b3c57d
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML スキーマ コレクション (SQL Server)
+# <a name="xml-schema-collections-sql-server"></a>XML スキーマ コレクション (SQL Server)
   「[xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md)」で説明したように、SQL Server には、**xml** データ型を使った XML データのネイティブ ストレージが用意されています。 必要に応じて、XML スキーマ コレクションを使って **xml** 型の変数や列と XSD スキーマを関連付けることができます。 XML スキーマ コレクションにはインポートした XML スキーマが格納され、その後このコレクションを次の操作に使用します。  
   
 -   XML インスタンスの検証  
@@ -42,7 +46,7 @@ caps.handback.revision: 31
   
  また SQL Server では、型指定された **xml**の場合、XML インスタンスを検証するために関連付けられた XML スキーマ コレクションが使用されます。 XML インスタンスがスキーマを使ってコンパイルされると、そのデータベースはインスタンスを型情報と共にシステムに格納できます。 それ以外の場合は、インスタンスを拒否します。  
   
- 固有の関数 XML_SCHEMA_NAMESPACE を使用して、データベースに格納されているスキーマ コレクションを取得できます。 詳細については、「[格納されている XML スキーマ コレクションの表示](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)」を参照してください。  
+ 固有の関数 XML_SCHEMA_NAMESPACE を使用して、データベースに格納されているスキーマ コレクションを取得できます。 詳細については、「 [格納されている XML スキーマ コレクションの表示](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)」を参照してください。  
   
  また、XML スキーマ コレクションは、XML 変数、パラメーター、および列の型指定にも使用できます。  
   
@@ -97,7 +101,7 @@ caps.handback.revision: 31
   
  上記のスキーマは、データベースに格納できる、異なる型のコンポーネントを示しています。 これには、 `SomeAttribute`、 `SomeType`、 `OrderType`、 `CustomerType`、 `Customer`、 `Order`、 `CustomerID`、 `OrderID`、 `OrderDate`、 `RequiredDate`、および `ShippedDate`があります。  
   
-### コンポーネントのカテゴリ  
+### <a name="component-categories"></a>コンポーネントのカテゴリ  
  データベースに格納されるスキーマ コンポーネントは、次のように分類されます。  
   
 -   ELEMENT  
@@ -118,7 +122,7 @@ caps.handback.revision: 31
   
 -   **Customer** は、ELEMENT コンポーネントです。  
   
- スキーマをデータベースにインポートするとき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではスキーマ自体は格納されません。 代わりに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって個々のさまざまなコンポーネントが格納されます。 つまり、\<Schema> タグは格納されず、定義されているコンポーネントのみが保持されます。 すべてのスキーマの要素は保持されません。 \<Schema> タグにそのコンポーネントの既定の動作を指定する属性が含まれている場合、次の表に示すように、そのような属性はインポート処理中にスキーマ コンポーネントに移動されます。  
+ スキーマをデータベースにインポートするとき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではスキーマ自体は格納されません。 代わりに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって個々のさまざまなコンポーネントが格納されます。 つまり、\<Schema> タグは格納されず、定義されているコンポーネントのみが保持されます。 すべてのスキーマの要素は保持されません。 \<Schema> タグにそのコンポーネントの既定の動作を指定する属性が含まれている場合、次の表に示すように、そのような属性はインポート処理中にスキーマ コンポーネントに移動されます。  
   
 |属性名|動作|  
 |--------------------|--------------|  
@@ -160,17 +164,17 @@ caps.handback.revision: 31
 ##  <a name="info"></a> XML スキーマおよびスキーマ コレクションに関する情報の取得  
  カタログ ビュー sys.xml_schema_collections には XML スキーマ コレクションが列挙されます。 XML スキーマ コレクション "sys" がシステムにより定義されています。 このコレクションには、すべてのユーザー定義 XML スキーマ コレクションで明示的に読み込むことなく使用できる定義済みの名前空間が含まれています。 一覧には xml、xs、xsi、fn、および xdt 用の名前空間が含まれています。 この他に、各 XML スキーマ コレクションのすべての名前空間を列挙する sys.xml_schema_namespaces、および各 XML スキーマのすべての XML スキーマ コンポーネントを列挙する sys.xml_components の 2 つのカタログ ビューがあります。  
   
- 組み込み関数 **XML_SCHEMA_NAMESPACE**、*schemaName, XmlSchemacollectionName, namespace-uri* により **xml** データ型のインスタンスが生成されます。 このインスタンスには、XML スキーマ コレクションに含まれるスキーマ (定義済みの XML スキーマを除く) の XML スキーマ フラグメントが含まれます。  
+ 組み込み関数 **XML_SCHEMA_NAMESPACE**、 *schemaName, XmlSchemacollectionName, namespace-uri*により **xml** データ型のインスタンスが生成されます。 このインスタンスには、XML スキーマ コレクションに含まれるスキーマ (定義済みの XML スキーマを除く) の XML スキーマ フラグメントが含まれます。  
   
  XML スキーマ コレクションのコンテンツは、次のようにして列挙できます。  
   
 -   XML スキーマ コレクションのカタログ ビューに対する Transact-SQL クエリを記述します。  
   
--   組み込み関数 **XML_SCHEMA_NAMESPACE()** を使用します。 この関数の出力には **xml** データ型のメソッドを適用できます。 ただし、基になる XML スキーマは変更できません。  
+-   組み込み関数 **XML_SCHEMA_NAMESPACE()**を使用します。 この関数の出力には **xml** データ型のメソッドを適用できます。 ただし、基になる XML スキーマは変更できません。  
   
  このことを次の例で説明します。  
   
-### 例 : XML スキーマ コレクションでの XML 名前空間の列挙  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>例 : XML スキーマ コレクションでの XML 名前空間の列挙  
  XML スキーマ コレクション "myCollection" に次のクエリを実行します。  
   
 ```  
@@ -180,16 +184,16 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### 例 : XML スキーマ コレクションのコンテンツの列挙  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>例 : XML スキーマ コレクションのコンテンツの列挙  
  次のステートメントは、リレーショナル スキーマ dbo 内の XML スキーマ コレクション "myCollection" のコンテンツを列挙します。  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- **XML_SCHEMA_NAMESPACE()** の 3 番目の引数として対象になる名前空間を指定することで、コレクション内の個別の XML スキーマを **xml** データ型のインスタンスとして取得できます。 次の例を参照してください。  
+ **XML_SCHEMA_NAMESPACE()** の 3 番目の引数として対象になる名前空間を指定することで、コレクション内の個別の XML スキーマを **xml**データ型のインスタンスとして取得できます。 次の例を参照してください。  
   
-### 例 : XML スキーマ コレクションからの指定したスキーマの出力  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>例 : XML スキーマ コレクションからの指定したスキーマの出力  
  次のステートメントを実行すると、リレーショナル スキーマ dbo の XML スキーマ コレクション "myCollection" から、対象になる名前空間が "http://www.microsoft.com/books" である XML スキーマが出力されます。  
   
 ```  
@@ -197,14 +201,14 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',
 N'http://www.microsoft.com/books')  
 ```  
   
-### XML スキーマへのクエリ  
+### <a name="querying-xml-schemas"></a>XML スキーマへのクエリ  
  XML スキーマ コレクションに読み込んだ XML スキーマには、次のようにしてクエリを実行できます。  
   
 -   XML スキーマ名前空間のカタログ ビューに対する Transact-SQL クエリを記述します。  
   
 -   **xml** データ型の列を含むテーブルを作成し、その列に XML スキーマを保存して XML 型のシステムに読み込みます。 その後、 **xml** データ型のメソッドを使用して XML 列にクエリを実行できます。 また、この列に XML インデックスを作成することもできます。 ただしこの方法を使用する場合は、XML 列に保存されている XML スキーマと XML 型のシステムとの整合性をアプリケーションで保つ必要があります。 たとえば、XML 型のシステムから XML スキーマ名前空間を削除する場合、整合性を保つためにテーブルからもその名前空間を削除する必要があります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [格納されている XML スキーマ コレクションの表示](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)   
  [含まれているスキーマをマージするためのスキーマの前処理](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)   
  [サーバー上の XML スキーマ コレクションの要件と制限](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  

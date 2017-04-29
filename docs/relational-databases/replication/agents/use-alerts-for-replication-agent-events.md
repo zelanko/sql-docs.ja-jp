@@ -1,69 +1,73 @@
 ---
 title: "レプリケーション エージェント イベントに対する警告の使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "警告の表示"
-  - "キュー リーダー エージェント、警告"
-  - "警告 [SQL Server レプリケーション]"
-  - "定義済みのレプリケーションの警告 [SQL Server レプリケーション]"
-  - "ログ リーダー エージェント、警告"
-  - "ディストリビューション エージェント、警告"
-  - "マージ エージェント、警告"
-  - "エージェント [SQL Server レプリケーション], 警告"
-  - "警告の表示"
-  - "スナップショット エージェント、警告"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing alerts
+- Queue Reader Agent, alerts
+- alerts [SQL Server replication]
+- predefined replication alerts [SQL Server replication]
+- Log Reader Agent, alerts
+- Distribution Agent, alerts
+- Merge Agent, alerts
+- agents [SQL Server replication], alerts
+- displaying alerts
+- Snapshot Agent, alerts
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 915d79db6a2c8f55443c92cb568bac8a9cc2c7d4
+ms.lasthandoff: 04/11/2017
+
 ---
-# レプリケーション エージェント イベントに対する警告の使用
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントは警告を使用して、レプリケーション エージェント イベントなどのイベントを監視する方法を提供します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントは、Windows アプリケーション ログに警告に関連付けられているイベントを監視します。 このようなイベントが発生すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントは、定義されたタスクを実行したり、電子メールまたはポケットベルのメッセージを指定したオペレーターに送信することにより、自動的に応答します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] タスクを実行したりオペレーターに通知を構成できる、レプリケーション エージェントに対する一連定義済みの警告にはが含まれます。 実行するタスクの定義の詳細については、このトピックの「警告への応答の自動化」を参照してください。  
+# <a name="use-alerts-for-replication-agent-events"></a>レプリケーション エージェント イベントに対する警告の使用
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent provide a way to monitor events, such as replication agent events, using alerts. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントでは、警告に関連するイベントに対し、Windows アプリケーション ログを監視します。 このようなイベントが発生すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントは、定義されたタスクを実行したり、電子メールまたはポケットベルのメッセージを指定したオペレーターに送信することにより、自動的に応答します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、タスクを実行したりオペレーターに通知するように設定できる、レプリケーション エージェントに対する一連の定義済みの警告が含まれます。 実行するタスクの定義の詳細については、このトピックの「警告への応答の自動化」を参照してください。  
   
  次の警告は、コンピューターをディストリビューターとして構成したときにインストールされます。  
   
 |メッセージ ID|定義済みの警告|警告を表示する原因となった条件|msdb..sysreplicationalerts への追加情報の入力|  
 |----------------|----------------------|-----------------------------------------|-----------------------------------------------------------------|  
 |14150|**レプリケーション: エージェントが成功しました**|エージェントが正常にシャットダウンされました。|はい|  
-|14151|**レプリケーション: エージェントが失敗しました**|エージェントがエラーでシャットダウンされました。|可|  
-|14152|**レプリケーション: エージェントを再試行します**|操作の再試行が成功せず、エージェントはシャットダウンされました (エージェントが、サーバーの利用不能、デッドロック、接続の失敗、タイムアウト障害などのエラーを検出しました)。|可|  
+|14151|**レプリケーション: エージェントが失敗しました**|エージェントがエラーでシャットダウンされました。|はい|  
+|14152|**レプリケーション: エージェントを再試行します**|操作の再試行が成功せず、エージェントはシャットダウンされました (エージェントが、サーバーの利用不能、デッドロック、接続の失敗、タイムアウト障害などのエラーを検出しました)。|はい|  
 |14157|**レプリケーション: 有効期限の切れたサブスクリプションを削除しました**|有効期限の切れたサブスクリプションが削除されました。|いいえ|  
 |20572|**レプリケーション: データ検証で問題が見つかった後、サブスクリプションが再初期化されました**|応答ジョブ "データ検証で問題が見つかったサブスクリプションの再初期化" でサブスクリプションが正常に再初期化されました。|いいえ|  
 |20574|**レプリケーション: サブスクライバーでデータ検証で問題が見つかりました**|ディストリビューション エージェントまたはマージ エージェントはデータの検証で問題が見つかりました。|はい|  
-|20575|**レプリケーション: サブスクライバーでデータ検証を正常に終了しました**|ディストリビューション エージェントまたはマージ エージェントはデータの検証を正常に終了しました。|可|  
+|20575|**レプリケーション: サブスクライバーでデータ検証を正常に終了しました**|ディストリビューション エージェントまたはマージ エージェントはデータの検証を正常に終了しました。|はい|  
 |20578|**レプリケーション: エージェントのカスタム シャットダウン**|||  
 |22815|**ピア ツー ピア競合検出の警告**|ピア ツー ピア ノードで変更を適用しようとしたときにディストリビューション エージェントで競合が検出されました。|はい|  
   
- これらの警告に加え、レプリケーション モニターでは、ステータスおよびパフォーマンスに関連する一連の警告を使用できます。 詳細については、次を参照してください。 [しきい値の設定とレプリケーション モニターで警告](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警告システムを使用して、他のレプリケーション イベントの警告を定義することもできます。 詳細については、次を参照してください。 [ユーザー定義イベントを作成する](../../../ssms/agent/create-a-user-defined-event.md)です。  
+ これらの警告に加え、レプリケーション モニターでは、ステータスおよびパフォーマンスに関連する一連の警告を使用できます。 詳細については、「 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警告システムを使用して、他のレプリケーション イベントの警告を定義することもできます。 詳細については、「[ユーザー定義イベントの作成](http://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)」を参照してください。  
   
  **定義済みのレプリケーションの警告を構成するには**  
   
--   [!含める [ssManStudioFull] (../Token/ssManStudioFull_md.md)]: [Configure Predefined Replication Alerts &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configure Predefined Replication Alerts &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
-## アプリケーション ログの直接表示  
- 表示するには、Windows アプリケーション ログを使用して、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows イベント ビューアー。 アプリケーション ログには [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のエラー メッセージだけでなく、コンピューターのその他多くの利用状況に関するメッセージが含まれます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エラー ログとは異なり、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を起動するたびに新しいアプリケーション ログが作成されることはありません (各 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セッションでは、既存のアプリケーション ログに新しいイベントを書き込みます)。ただし、ログに記録されたイベントを保有する期間を指定できます。 Windows アプリケーション ログを表示するときに、特定のイベントのログをフィルター選択できます。 詳細については、Windows のマニュアルを参照してください。  
+## <a name="viewing-the-application-log-directly"></a>アプリケーション ログの直接表示  
+ Windows アプリケーション ログを表示するには、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows イベント ビューアーを使用します。 アプリケーション ログには [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のエラー メッセージだけでなく、コンピューターのその他多くの利用状況に関するメッセージが含まれます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エラー ログとは異なり、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を起動するたびに新しいアプリケーション ログが作成されることはありません (各 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セッションでは、既存のアプリケーション ログに新しいイベントを書き込みます)。ただし、ログに記録されたイベントを保有する期間を指定できます。 Windows アプリケーション ログを表示するときに、特定のイベントのログをフィルター選択できます。 詳細については、Windows のマニュアルを参照してください。  
   
-## 警告への応答の自動化  
- レプリケーションでは、データ検証に失敗するサブスクリプションに対する応答ジョブ、および自動化された警告への応答を追加作成するためのフレームワークが用意されています。 応答ジョブのタイトルは **データ検証で問題のサブスクリプションを再初期化** に格納されて、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント **ジョブ** フォルダーに [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]します。 この応答ジョブを有効にする方法については、次を参照してください。 [[定義済みのレプリケーションの警告と #40 です。SQL Server Management Studio と #41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)します。 トランザクション パブリケーション内のアーティクルが検証に失敗すると、応答ジョブは、その失敗したアーティクルのみを再初期化します。 マージ パブリケーション内のアーティクルが検証に失敗すると、応答ジョブは、パブリケーション内のすべてのアーティクルを再初期化します。  
+## <a name="automating-a-response-to-an-alert"></a>警告への応答の自動化  
+ レプリケーションでは、データ検証に失敗するサブスクリプションに対する応答ジョブ、および自動化された警告への応答を追加作成するためのフレームワークが用意されています。 応答ジョブは、" **データ検証で問題が見つかったサブスクリプションの再初期化** " というタイトルが付けられ、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にある **エージェントの** [ジョブ] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]フォルダーに保存されます。 この応答ジョブを有効にする方法については、「[Configure Predefined Replication Alerts &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)」 (定義済みのレプリケーションの警告の構成 &#40;SQL Server Management Studio&#41;) を参照してください。 トランザクション パブリケーション内のアーティクルが検証に失敗すると、応答ジョブは、その失敗したアーティクルのみを再初期化します。 マージ パブリケーション内のアーティクルが検証に失敗すると、応答ジョブは、パブリケーション内のすべてのアーティクルを再初期化します。  
   
-### 応答の自動化のためのフレームワーク  
- 通常では、警告が表示された場合、警告の原因と実行する適切な操作を知るのに役立つ唯一の情報は、警告自体に含まれています。 この情報の解析は間違いやすく、時間がかかります。 レプリケーションでのアラートに関する追加情報を提供することによって応答の自動化を容易に、 **sysreplicationalerts** システム テーブルの情報が既に解析済みで、カスタマイズしたプログラムで簡単に使用します。  
+### <a name="framework-for-automating-responses"></a>応答の自動化のためのフレームワーク  
+ 通常では、警告が表示された場合、警告の原因と実行する適切な操作を知るのに役立つ唯一の情報は、警告自体に含まれています。 この情報の解析は間違いやすく、時間がかかります。 レプリケーションでは、 **sysreplicationalerts** システム テーブルで警告についての追加情報が提供され、応答の自動化を容易にしています。提供される情報は、既に解析済みで、カスタマイズしたプログラムで簡単に使用できます。  
   
- たとえば場合のデータ、 **Sales.SalesOrderHeader** サブスクライバー A のテーブルは、検証に失敗 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] その失敗を通知するメッセージ 20574 をトリガーすることができます。 受信したメッセージが表示されます:「'A'、パブリケーション 'MyPublication' のアーティクル 'SalesOrderHeader' に対するサブスクリプションをサブスクライバーにデータの検証が失敗しました」。  
+ たとえば、サブスクライバー A の **Sales.SalesOrderHeader** テーブルのデータが検証に失敗した場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、その失敗を通知するメッセージ 20574 を表示します。 "パブリケーション 'MyPublication' のアーティクル 'SalesOrderHeader' に対するサブスクライバー 'A' のサブスクリプションで、データ検証に失敗しました" というメッセージが表示されます。  
   
- このメッセージに基づいた応答を作成する場合は、サブスクライバー名、アーティクル名、パブリケーション名、およびエラーをメッセージから手動で解析する必要があります。 ただし、ディストリビューション エージェントおよびマージ エージェントは、その同じ情報を書き込むため **sysreplicationalerts** (エージェントの種類、時刻、アラート、パブリケーション データベース、サブスクライバー データベース、およびパブリケーションの種類などの詳細情報) と共に、応答ジョブは直接テーブルからの関連情報をクエリします。 正確な行は、警告の特定のインスタンスに関連付けられていることはできませんが、テーブルには、 **ステータス** 列で、サービスのエントリを追跡に使用できます。 このテーブルのエントリは、履歴の保有期間の間、維持されます。  
+ このメッセージに基づいた応答を作成する場合は、サブスクライバー名、アーティクル名、パブリケーション名、およびエラーをメッセージから手動で解析する必要があります。 しかし、ディストリビューション エージェントおよびマージ エージェントは **sysreplicationalerts** にそれらの情報 (およびエージェントの種類、警告の時刻、パブリケーション データベース、サブスクライバー データベース、パブリケーションの種類などの詳細) を書き込みます。このため、応答ジョブではテーブルから関連情報を直接クエリできます。 正確な行を警告の特定のインスタンスへ関連付けることはできませんが、このテーブルにある **status** 列を使用して、対象となるエントリを追跡できます。 このテーブルのエントリは、履歴の保有期間の間、維持されます。  
   
- たとえば、[!INCLUDE[tsql](../../../includes/tsql-md.md)] で警告メッセージ 20574 を対象とする応答を作成する場合、次のロジックを使用します。  
+ たとえば、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] で警告メッセージ 20574 を対象とする応答を作成する場合、次のロジックを使用します。  
   
 ```  
 declare @publisher sysname, @publisher_db sysname, @publication sysname, @publication_type int, @article sysname, @subscriber sysname, @subscriber_db sysname, @alert_id int  
@@ -85,9 +89,9 @@ close hc
 deallocate hc  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レプリケーション エージェントの管理](../../../relational-databases/replication/agents/replication-agent-administration.md)   
- [レプリケーション管理の推奨事項](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
- [監視と #40 です。レプリケーションと #41 です。](../../../relational-databases/replication/monitor/monitoring-replication.md)  
+ [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
+ [監視 &#40;レプリケーション&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

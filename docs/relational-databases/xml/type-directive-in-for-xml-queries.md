@@ -1,35 +1,39 @@
 ---
 title: "FOR XML クエリの TYPE ディレクティブ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML 句, TYPE ディレクティブ"
-  - "TYPE ディレクティブ"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, TYPE directive
+- TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1e060f93c4aa26d86fbd6683099a66821c38e9b2
+ms.lasthandoff: 04/11/2017
+
 ---
-# FOR XML クエリの TYPE ディレクティブ
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) がサポートされるため、必要に応じて TYPE ディレクティブを指定することにより、FOR XML クエリの結果を **xml** データ型として返すように要求できます。 これにより、サーバーで FOR XML クエリの結果を処理できるようになります。 たとえば、その結果に対して XQuery を指定したり、結果を **xml** 型の変数に割り当てたり、[入れ子になった FOR XML クエリ](../../relational-databases/xml/use-nested-for-xml-queries.md)を記述したりできます。  
+# <a name="type-directive-in-for-xml-queries"></a>FOR XML クエリの TYPE ディレクティブ
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) がサポートされるため、必要に応じて TYPE ディレクティブを指定することにより、FOR XML クエリの結果を **xml** データ型として返すように要求できます。 これにより、サーバーで FOR XML クエリの結果を処理できるようになります。 たとえば、その結果に対して XQuery を指定したり、結果を **xml** 型の変数に割り当てたり、 [入れ子になった FOR XML クエリ](../../relational-databases/xml/use-nested-for-xml-queries.md)を記述したりできます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、TYPE ディレクティブを使用した FOR XML クエリなど、サーバーでのさまざまな構成の結果として、または SQL テーブルの列および出力パラメーターの XML インスタンス データ値を返すために **xml** データ型が使用された場合に、XML データ型のインスタンス データをクライアントに返します。 クライアント アプリケーション コードでは、ADO.NET プロバイダーが、この XML データ型の情報をサーバーからバイナリ エンコードで送信するように要求します。 ただし、TYPE ディレクティブを指定せずに FOR XML を使用した場合、この XML データは文字列型として返されます。 どんな場合でも、クライアント プロバイダーは常にいずれかの形式の XML を処理できます。 TYPE ディレクティブを指定していない最上位レベルでの FOR XML 句は、カーソルと共に使用できません。  
   
-## 使用例  
+## <a name="examples"></a>使用例  
  次の例は、FOR XML クエリでの TYPE ディレクトリの使用方法を示しています。  
   
-### FOR XML クエリの結果の xml 型としての取得  
- 次のクエリでは、`Contacts` テーブルから顧客の連絡先に関する情報を取得します。 `FOR XML` に `TYPE` ディレクティブが指定されているので、結果は **xml** 型として返されます。  
+### <a name="retrieving-for-xml-query-results-as-xml-type"></a>FOR XML クエリの結果の xml 型としての取得  
+ 次のクエリでは、 `Contacts` テーブルから顧客の連絡先に関する情報を取得します。 `TYPE` に `FOR XML`ディレクティブが指定されているので、結果は **xml** 型として返されます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -48,8 +52,8 @@ FOR XML AUTO, TYPE;
   
  `...`  
   
-### FOR XML クエリ結果の xml 型の変数への代入  
- 次の例では、FOR XML の結果が **xml** 型の変数 `@x` に代入されます。 このクエリでは、**xml**`TYPE`  の `AdditionalContactInfo` 列から、`BusinessEntityID`、`FirstName`、`LastName`、追加の電話番号など、連絡先に関する情報を取得します。 `FOR XML` 句に `TYPE` ディレクティブを指定するので、この XML は **xml** 型として返され、変数に代入されます。  
+### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>FOR XML クエリ結果の xml 型の変数への代入  
+ 次の例では、FOR XML の結果が **xml** 型の変数 `@x`に代入されます。 このクエリでは、 `BusinessEntityID`xml `FirstName`の `LastName`列から、 `AdditionalContactInfo` 、 **、**`TYPE`、追加の電話番号など、連絡先に関する情報を取得します。 `FOR XML` 句に `TYPE` ディレクティブを指定するので、この XML は **xml** 型として返され、変数に代入されます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -69,8 +73,8 @@ SELECT @x;
 GO  
 ```  
   
-### FOR XML クエリの結果のクエリ  
- FOR XML クエリにより、XML が返されます。 したがって、FOR XML クエリにより返された XML 結果には、**query()** や **value()** などの **xml** 型のメソッドを適用できます。  
+### <a name="querying-results-of-a-for-xml-query"></a>FOR XML クエリの結果のクエリ  
+ FOR XML クエリにより、XML が返されます。 したがって、FOR XML クエリにより返された XML 結果には、 **query()** や **value()** などの **xml**型のメソッドを適用できます。  
   
  次のクエリでは、**xml** データ型の `query()` メソッドを使用して、`FOR XML` クエリの結果にクエリします。 詳細については、「[query&#40;&#41; メソッド &#40;xml データ型&#41;](../../t-sql/xml/query-method-xml-data-type.md)」を参照してください。  
   
@@ -125,10 +129,10 @@ SELECT @FirstPhoneFromAdditionalContactInfo;
  `value()` メソッドの XQuery パス式により、`BusinessEntityID` が `1` の顧客の連絡先から 1 つ目の電話番号が取得されます。  
   
 > [!NOTE]  
->  TYPE ディレクティブを指定しなかった場合、この FOR XML クエリの結果は **nvarchar(max)** 型として返されます。  
+>  TYPE ディレクティブを指定しなかった場合、この FOR XML クエリの結果は **nvarchar(max)**型として返されます。  
   
-### INSERT、UPDATE、および DELETE (Transact-SQL DML) での FOR XML クエリの結果の使用  
- 次の例では、FOR XML クエリをデータ操作言語 (DML) ステートメントで使用する方法について説明します。 この例では、`FOR XML` により **xml** 型のインスタンスが返されます。 また、`INSERT` ステートメントによりこの XML がテーブルに挿入されます。  
+### <a name="using-for-xml-query-results-in-insert-update-and-delete-transact-sql-dml"></a>INSERT、UPDATE、および DELETE (Transact-SQL DML) での FOR XML クエリの結果の使用  
+ 次の例では、FOR XML クエリをデータ操作言語 (DML) ステートメントで使用する方法について説明します。 この例では、 `FOR XML` により **xml** 型のインスタンスが返されます。 また、 `INSERT` ステートメントによりこの XML がテーブルに挿入されます。  
   
 ```  
 CREATE TABLE T1(intCol int, XmlCol xml);  
@@ -146,7 +150,7 @@ SELECT (SELECT XmlCol.query('/Root')
 GO  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

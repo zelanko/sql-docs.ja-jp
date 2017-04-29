@@ -1,29 +1,33 @@
 ---
 title: "一意のパーティクル属性の制約 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "unique particle attribution"
-helpviewer_keywords: 
-  - "スキーマ コレクション [SQL Server], 一意のパーティクル属性"
-  - "XML スキーマ コレクション [SQL Server], 一意のパーティクル属性"
-  - "UPA 制約の規則"
-  - "一意のパーティクル属性の制約の規則"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- unique particle attribution
+helpviewer_keywords:
+- schema collections [SQL Server], unique particle attribution
+- XML schema collections [SQL Server], unique particle attribution
+- UPA constraint rule
+- unique particle attribution constraint rule
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e8b99a18280070f3960e6e9259e36144e22889c2
+ms.lasthandoff: 04/11/2017
+
 ---
-# 一意のパーティクル属性の制約
+# <a name="unique-particle-attribution-constraint"></a>一意のパーティクル属性の制約
   XSD では、UPA (一意のパーティクル属性) 制約の規則によって、複雑なコンテンツ モデルが制約を受けます。 この規則では、あいまいさを排除し、インスタンス ドキュメント内の各要素が、その親のコンテンツ モデル内の `<xsd:element>` パーティクルまたは `<xsd:any>` パーティクルの 1 つに正確に対応することが必要です。 あいまいなコンテンツ モデルになる可能性のある型を含むスキーマは拒否されます。  
   
  あいまいさの最も一般的な原因は、`<xsd:any>` のワイルドカード文字や、minOccurs < maxOccurs のような可変の出現範囲を持つパーティクルです。 たとえば、次のコンテンツ モデルでは、<`e1`> 要素は `<xsd:element>` 要素または `<xsd:any>` 要素のどちらにも一致するので、あいまいになります。  
@@ -53,7 +57,7 @@ caps.handback.revision: 14
 </xsd:element>  
 ```  
   
- `<root><e1/><e2/><e1/></root>` などのドキュメントは明確に検証できますが、`<root><e1/><e1/></root>` などのドキュメントは明確に検証できません。これは、2 番目の `<xsd:element>` がどの `<e1/>` に対応するかが明確でないためです。 一部のドキュメントを明確に検証できても、あいまいさが残る可能性があるため、スキーマは拒否されます。  
+ `<root><e1/><e2/><e1/></root>` などのドキュメントは明確に検証できますが、 `<root><e1/><e1/></root>` などのドキュメントは明確に検証できません。これは、2 番目の `<xsd:element>` がどの `<e1/>` に対応するかが明確でないためです。 一部のドキュメントを明確に検証できても、あいまいさが残る可能性があるため、スキーマは拒否されます。  
   
  コンテンツ モデルが有効であるためには、先行読み取りを行わなくても、インスタンスを明確に検証できる必要があります。 たとえば、次のコンテンツ モデルについて考えてみます。  
   
@@ -74,9 +78,9 @@ caps.handback.revision: 14
 </xsd:element>  
 ```  
   
- `<root><e1/><e3/></root>` などのドキュメントの場合、シーケンス `<e1/><e3/>` が 2 番目の `<xsd:sequence>` に明確に一致します。 ただし、`<xsd:element>` を先行読み取りしないと、`<e1/>` が対応する `<e3/>` を決定できないので、コンテンツ モデルは UPA 制約規則に違反することになります。  
+ `<root><e1/><e3/></root>`などのドキュメントの場合、シーケンス `<e1/><e3/>` が 2 番目の `<xsd:sequence>`に明確に一致します。 ただし、 `<xsd:element>` を先行読み取りしないと、 `<e1/>` が対応する `<e3/>`を決定できないので、コンテンツ モデルは UPA 制約規則に違反することになります。  
   
-## 詳細情報  
+## <a name="finding-more-information"></a>詳細情報  
  次のドキュメントは W3C (World Wide Web Consortium) が発行したもので、一意のパーティクル属性の制約に関する技術的な説明が含まれています。  
   
  『XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation』  
@@ -85,9 +89,9 @@ caps.handback.revision: 14
   
 -   「Appendix H: Analysis of the Unique Particle Attribution Constraint (non-normative)」  
   
- ドキュメントについては、[http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?linkid=48881) を参照してください。  
+ ドキュメントについては、 [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?linkid=48881)を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [XML スキーマ コレクション &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

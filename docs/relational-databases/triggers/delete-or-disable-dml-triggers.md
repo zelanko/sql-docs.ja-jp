@@ -1,29 +1,33 @@
 ---
 title: "DML トリガーの削除または無効化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DML トリガーを無効にします。"
-  - "DML トリガーの除去"
-  - "DML トリガーの無効化"
-  - "DML トリガーの消去"
-  - "DML トリガーの削除"
-  - "DML トリガーを削除します。"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DML triggers, disabling
+- removing DML triggers
+- disabling DML triggers
+- dropping DML triggers
+- deleting DML triggers
+- DML triggers, removing
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fe807c194c057f2109bb40b13a8f8918c0cc75f
+ms.lasthandoff: 04/11/2017
+
 ---
-# DML トリガーの削除または無効化
+# <a name="delete-or-disable-dml-triggers"></a>DML トリガーの削除または無効化
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、DML トリガーを削除または無効にする方法について説明します。  
   
  **このトピックの内容**  
@@ -59,29 +63,29 @@ caps.handback.revision: 27
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### DML トリガーを削除するには  
+#### <a name="to-delete-a-dml-trigger"></a>DML トリガーを削除するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
 2.  目的のデータベースを展開し、 **[テーブル]**を展開します。次に、削除するトリガーが格納されているテーブルを展開します。  
   
-3.  **[トリガー]** を展開し、削除するトリガーを右クリックして、**[削除]** をクリックします。  
+3.  **[トリガー]**を展開し、削除するトリガーを右クリックして、 **[削除]**をクリックします。  
   
 4.  **[オブジェクトの削除]** ダイアログ ボックスで、削除対象のトリガーを確認し、 **[OK]**をクリックします。  
   
-#### DML トリガーを有効または無効にするには  
+#### <a name="to-disable-and-enable-a-dml-trigger"></a>DML トリガーを有効または無効にするには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
 2.  目的のデータベースを展開し、 **[テーブル]**を展開します。次に、無効にするトリガーが格納されているテーブルを展開します。  
   
-3.  **[トリガー]** を展開し、無効にするトリガーを右クリックして、**[無効化]** をクリックします。  
+3.  **[トリガー]**を展開し、無効にするトリガーを右クリックして、 **[無効化]**をクリックします。  
   
 4.  トリガーを有効にするには、 **[有効化]**をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### DML トリガーを削除するには  
+#### <a name="to-delete-a-dml-trigger"></a>DML トリガーを削除するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -115,7 +119,7 @@ GO
   
 ```  
   
-#### DML トリガーを有効または無効にするには  
+#### <a name="to-disable-and-enable-a-dml-trigger"></a>DML トリガーを有効または無効にするには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -156,7 +160,7 @@ ENABLE TRIGGER Sales.bonus_reminder ON Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

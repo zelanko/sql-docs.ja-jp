@@ -1,26 +1,30 @@
 ---
 title: "EVENTDATA 関数の使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "EVENTDATA 関数"
-  - "DDL トリガー, EVENTDATA 関数"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- EVENTDATA function
+- DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5cb1a29cd7638f5ec9a4248f615381fe6da721b9
+ms.lasthandoff: 04/11/2017
+
 ---
-# EVENTDATA 関数の使用
-  DDL トリガーを起動するイベントに関する情報は、EVENTDATA 関数を使用してキャプチャされます。 この関数は、**xml** 値を返します。 XML スキーマには、次の項目に関する情報が含まれています。  
+# <a name="use-the-eventdata-function"></a>EVENTDATA 関数の使用
+  DDL トリガーを起動するイベントに関する情報は、EVENTDATA 関数を使用してキャプチャされます。 この関数は、 **xml** 値を返します。 XML スキーマには、次の項目に関する情報が含まれています。  
   
 -   イベントの時刻。  
   
@@ -28,7 +32,7 @@ caps.handback.revision: 38
   
 -   トリガーを起動したイベントの種類。  
   
- イベントの種類に応じて、イベントが発生したデータベース、イベントが発生したオブジェクト、イベントの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントなどの追加情報がスキーマに含まれます。 詳細については、「[DDL トリガー](../../relational-databases/triggers/ddl-triggers.md)」を参照してください。  
+ イベントの種類に応じて、イベントが発生したデータベース、イベントが発生したオブジェクト、イベントの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントなどの追加情報がスキーマに含まれます。 詳細については、「 [DDL トリガー](../../relational-databases/triggers/ddl-triggers.md)」を参照してください。  
   
  たとえば、次の DDL トリガーが [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースに作成されたとします。  
   
@@ -48,7 +52,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- DDL トリガーの `EVENTDATA()` ステートメントにより、`CREATE TABLE` ステートメントでは許可されないテキストがキャプチャされます。 これは、EVENTDATA によって生成された **xml** データに対して XQuery ステートメントを使用して、\<CommandText> 要素を取得することによって行われます。 詳細については、「[XQuery 言語リファレンス &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)」を参照してください。  
+ DDL トリガーの `EVENTDATA()` ステートメントにより、 `CREATE TABLE` ステートメントでは許可されないテキストがキャプチャされます。 これは、EVENTDATA によって生成された **xml** データに対して XQuery ステートメントを使用して、\<CommandText> 要素を取得することによって行われます。 詳細については、「[XQuery 言語リファレンス &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)」を参照してください。  
   
 > [!CAUTION]  
 >  EVENTDATA は、CREATE_SCHEMA イベントのデータをキャプチャします。対応する CREATE SCHEMA 定義の <schema_element> がある場合にはそれもキャプチャします。 さらに、EVENTDATA は <schema_element> 定義を別のイベントとして認識します。 したがって、CREATE_SCHEMA イベント、および CREATE SCHEMA 定義の <schema_element> によって表されるイベントの両方で作成される DDL トリガーは、`TSQLCommand` データのように同じイベント データを 2 回返す場合があります。 たとえば、CREATE_SCHEMA イベントと CREATE_TABLE イベントの両方で DDL トリガーが作成され、次のバッチを実行するとします。  
@@ -59,7 +63,7 @@ AS
 >   
 >  アプリケーションで CREATE_TABLE イベントの `TSQLCommand` データを取得する場合は、このデータが 2 回発生する可能性があることに注意してください。つまり、CREATE_SCHEMA イベントの発生時と、CREATE_TABLE イベントの発生時です。 CREATE_SCHEMA イベントと、対応する CREATE SCHEMA 定義の <schema_element> テキストの両方で DDL トリガーを作成しないようにするか、または同じイベントを 2 回処理しないようにアプリケーションのロジックを作成します。  
   
-## ALTER TABLE イベントと ALTER DATABASE イベント  
+## <a name="alter-table-and-alter-database-events"></a>ALTER TABLE イベントと ALTER DATABASE イベント  
  ALTER_TABLE および ALTER_DATABASE イベントのイベント データには、DDL ステートメントの影響を受けた他のオブジェクトの名前と種類、およびそれらのオブジェクトで実行されたアクションも含まれます。 ALTER_TABLE イベント データには、ALTER TABLE ステートメントの影響を受けた列、制約、またはトリガーの名前と、それらのオブジェクトで実行されたアクション (作成、変更、削除、有効化、または無効化) が含まれます。 ALTER_DATABASE イベント データには、ALTER DATABASE ステートメントの影響を受けたファイルまたはファイル グループの名前と、それらのオブジェクトで実行されたアクション (作成、変更、または削除) が含まれます。  
   
  たとえば、次の DDL トリガーを AdventureWorks サンプル データベースに作成します。  
@@ -81,9 +85,9 @@ ROLLBACK;
 ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;   
 ```  
   
- DDL トリガーの EVENTDATA() ステートメントにより、`ALTER TABLE` ステートメントでは許可されないテキストがキャプチャされます。  
+ DDL トリガーの EVENTDATA() ステートメントにより、 `ALTER TABLE` ステートメントでは許可されないテキストがキャプチャされます。  
   
-## 例  
+## <a name="example"></a>例  
  EVENTDATA 関数を使用して、イベントのログを作成できます。 次の例では、イベント情報を格納するためのテーブルが作成されます。 次に、現在のデータベースに DDL トリガーが作成されます。この DDL トリガーにより、データベース レベルの DDL イベントが発生するたびに、次の情報がテーブルに設定されます。  
   
 -   イベントの時刻 (GETDATE 関数を使用)。  
@@ -124,11 +128,11 @@ GO
 ```  
   
 > [!NOTE]  
->  イベント データを返す場合は、**query()** メソッドの代わりに XQuery の **value()** を使用してください。 **query()** メソッドでは、XML およびアンパサンドでエスケープされる復帰と改行 (CRLF) インスタンスが出力に返されます。一方 **value()** メソッドでは、CRLF インスタンスが出力に返されますが、表示はされません。  
+>  イベント データを返す場合は、 **query()** メソッドの代わりに XQuery の **value()** を使用してください。 **query()** メソッドでは、XML およびアンパサンドでエスケープされる復帰と改行 (CRLF) インスタンスが出力に返されます。一方 **value()** メソッドでは、CRLF インスタンスが出力に返されますが、表示はされません。  
   
- 同様の DDL トリガーの例を、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースで提供しています。 この例を入手するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して Database Triggers フォルダーを探します。 このフォルダーは [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの **[プログラミング]** フォルダーにあります。 **ddlDatabseTriggerLog** を右クリックし、**[データベース トリガーをスクリプト化]** をクリックします。 既定では、DDL トリガー **ddlDatabseTriggerLog** は無効になっています。  
+ 同様の DDL トリガーの例を、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースで提供しています。 この例を入手するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して Database Triggers フォルダーを探します。 このフォルダーは **データベースの** [プログラミング] [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] フォルダーにあります。 **ddlDatabseTriggerLog** を右クリックし、 **[データベース トリガーをスクリプト化]**をクリックします。 既定では、DDL トリガー **ddlDatabseTriggerLog** は無効になっています。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [DDL イベント](../../relational-databases/triggers/ddl-events.md)   
  [DDL イベント グループ](../../relational-databases/triggers/ddl-event-groups.md)  
   

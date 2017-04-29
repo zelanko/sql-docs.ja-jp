@@ -1,30 +1,34 @@
 ---
 title: "ASP.NET における入れ子になった FOR XML クエリの使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML 句, 入れ子になった FOR XML クエリ"
-  - "クエリ [SQL Server の XML], ASP.NET および"
-  - "ASP.NET における入れ子になった FOR XML クエリ"
-  - "ASP.NET [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, nested FOR XML queries
+- queries [XML in SQL Server], ASP.NET and
+- nested FOR XML queries in ASP.NET
+- ASP.NET [SQL Server]
 ms.assetid: 691ac7dd-afc5-4760-932c-2b1dcd9394ed
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3ecd3e1bd26780c54fa4ab24d48526f12398445b
+ms.lasthandoff: 04/11/2017
+
 ---
-# ASP.NET における入れ子になった FOR XML クエリの使用
-  この例では、ASP.NET アプリケーションで SQL Server のストアド プロシージャを実行してブラウザーに XML を返します。 このストアド プロシージャは、入れ子になったクエリを使用して XML を生成します。 同様の SELECT ステートメントは、「[入れ子構造で AUTO モードのクエリを使用した兄弟の生成](../../relational-databases/xml/generate-siblings-with-a-nested-auto-mode-query.md)」でも見ることができます。 この例は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で入れ子になった FOR XML クエリを使用して要素中心の XML を生成する方法の一例を示しています。  
+# <a name="use-nested-for-xml-queries-in-aspnet"></a>ASP.NET における入れ子になった FOR XML クエリの使用
+  この例では、ASP.NET アプリケーションで SQL Server のストアド プロシージャを実行してブラウザーに XML を返します。 このストアド プロシージャは、入れ子になったクエリを使用して XML を生成します。 同様の SELECT ステートメントは、「 [入れ子構造で AUTO モードのクエリを使用した兄弟の生成](../../relational-databases/xml/generate-siblings-with-a-nested-auto-mode-query.md)」でも見ることができます。 この例は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で入れ子になった FOR XML クエリを使用して要素中心の XML を生成する方法の一例を示しています。  
   
-## 例  
+## <a name="example"></a>例  
   
 ```  
 CREATE PROC GetSalesOrderInfo AS  
@@ -83,7 +87,7 @@ using(System.Data.SqlClient.SqlCommand cmd = c.CreateCommand())
 %>  
 ```  
   
-##### アプリケーションをテストするには  
+##### <a name="to-test-the-application"></a>アプリケーションをテストするには  
   
 1.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースにストアド プロシージャを作成します。  
   
@@ -91,7 +95,7 @@ using(System.Data.SqlClient.SqlCommand cmd = c.CreateCommand())
   
 3.  アプリケーションを実行します (http://server/GetSalesOrderInfo.aspx)。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [入れ子になった FOR XML クエリの使用](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

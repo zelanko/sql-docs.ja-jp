@@ -1,57 +1,61 @@
 ---
 title: "SQL Server オブジェクトの使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "サーバー パフォーマンス [SQL Server], 監視するオブジェクト"
-  - "データベースの監視 [SQL Server], 監視するオブジェクト"
-  - "グラフ [SQL Server]"
-  - "システム モニター [SQL Server], カウンター"
-  - "カウンター [SQL Server], 一覧"
-  - "オブジェクト [SQL Server], パフォーマンスの監視"
-  - "オブジェクト [SQL Server], Windows システム モニター"
-  - "パフォーマンス カウンター [SQL Server], パフォーマンス カウンターについて"
-  - "システム モニター [SQL Server], オブジェクト"
-  - "パフォーマンス カウンター [SQL Server]"
-  - "カウンター [SQL Server], パフォーマンス カウンターについて"
-  - "データベースのチューニング [SQL Server], 監視するオブジェクト"
-  - "データベースのパフォーマンス [SQL Server], 監視するオブジェクト"
-  - "SQL Server, オブジェクト"
-  - "パフォーマンスの監視 [SQL Server], 監視するオブジェクト"
-  - "Windows システム モニター [SQL Server], オブジェクト"
-  - "Windows システム モニター [SQL Server], カウンター"
-  - "カウンター [SQL Server]"
-  - "パフォーマンス カウンター [SQL Server], 一覧"
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- server performance [SQL Server], objects for monitoring
+- database monitoring [SQL Server], objects for monitoring
+- charts [SQL Server]
+- System Monitor [SQL Server], counters
+- counters [SQL Server], listed
+- objects [SQL Server], performance monitoring
+- objects [SQL Server], Windows System Monitor
+- performance counters [SQL Server], about performance counters
+- System Monitor [SQL Server], objects
+- performance counters [SQL Server]
+- counters [SQL Server], about performance counters
+- tuning databases [SQL Server], objects for monitoring
+- database performance [SQL Server], objects for monitoring
+- SQL Server, objects
+- monitoring performance [SQL Server], objects for monitoring
+- Windows System Monitor [SQL Server], objects
+- Windows System Monitor [SQL Server], counters
+- counters [SQL Server]
+- performance counters [SQL Server], listed
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 caps.latest.revision: 56
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2fc909391a0c7aefa483f2b6c42d769b34b52fbe
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server オブジェクトの使用
+# <a name="use-sql-server-objects"></a>SQL Server オブジェクトの使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、システム モニターで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを実行しているコンピューターの利用状況を監視できるオブジェクトとカウンターが用意されています。 オブジェクトとは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロックや Windows プロセスなど任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースです。 各オブジェクトには、監視するオブジェクトのさまざまな特性を示す 1 つ以上のカウンターが含まれます。 たとえば、**SQL Server Locks** オブジェクトには、**Number of Deadlocks/sec** や **Lock Timeouts/sec** という名前のカウンターが含まれています。  
+  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、システム モニターで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを実行しているコンピューターの利用状況を監視できるオブジェクトとカウンターが用意されています。 オブジェクトとは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロックや Windows プロセスなど任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースです。 各オブジェクトには、監視するオブジェクトのさまざまな特性を示す 1 つ以上のカウンターが含まれます。 たとえば、 **SQL Server Locks** オブジェクトには、 **Number of Deadlocks/sec** や **Lock Timeouts/sec**という名前のカウンターが含まれています。  
   
- 同じ種類の複数のリソースがコンピューター上に存在する場合、オブジェクトによっては複数のインスタンスがある場合があります。 たとえば、システムに複数のプロセッサが搭載されている場合、オブジェクトの種類 **Processor** には複数のインスタンスがあります。 オブジェクトの種類 **Databases** には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータベースごとに 1 つのインスタンスがあります。 **Memory Manager** オブジェクトなど一部のオブジェクトの種類には、1 しかインスタンスのないものもあります。 あるオブジェクトの種類に複数のインスタンスがある場合には、インスタンスごとに、または多くの場合は一度にすべてのインスタンスに、統計を追跡するためのカウンターを追加できます。 既定のインスタンスのカウンターは、**SQLServer:***\<オブジェクト名>* という形式で表示されます。 名前付きインスタンスは、**MSSQL$***\<インスタンス名>\>***:***\<カウンター名>* または **SQLAgent$***\<インスタンス名>\>***:***\<カウンター名>* という形式で表示されます。  
+ 同じ種類の複数のリソースがコンピューター上に存在する場合、オブジェクトによっては複数のインスタンスがある場合があります。 たとえば、システムに複数のプロセッサが搭載されている場合、オブジェクトの種類 **Processor** には複数のインスタンスがあります。 オブジェクトの種類 **Databases** には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータベースごとに 1 つのインスタンスがあります。 **Memory Manager** オブジェクトなど一部のオブジェクトの種類には、1 しかインスタンスのないものもあります。 あるオブジェクトの種類に複数のインスタンスがある場合には、インスタンスごとに、または多くの場合は一度にすべてのインスタンスに、統計を追跡するためのカウンターを追加できます。 既定のインスタンスのカウンターは、**SQLServer:***\<オブジェクト名>* という形式で表示されます。 名前付きインスタンスのカウンターは、**MSSQL$***\<インスタンス名>***:***\<カウンター名>* または **SQLAgent$***\<インスタンス名>***:***\<カウンター名>* という形式で表示されます。  
   
  グラフでカウンターを追加または削除し、グラフ設定を保存して、システム モニターを起動したときに監視する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトとカウンターを指定できます。  
   
- システム モニターは、任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カウンターの統計を表示するように構成することができます。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カウンターにしきい値を設定して、カウンターがしきい値を超えたときに警告を生成することもできます。 警告を構成する方法の詳細については、「[SQL Server データベース警告の作成](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md)」を参照してください。  
+ システム モニターは、任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カウンターの統計を表示するように構成することができます。 また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カウンターにしきい値を設定して、カウンターがしきい値を超えたときに警告を生成することもできます。 警告を構成する方法の詳細については、「 [SQL Server データベース警告の作成](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md)」を参照してください。  
   
 > [!TIP]  
->  動的管理ビュー [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) のクエリによって、パフォーマンス カウンターの値を返すこともできます。    
+>  動的管理ビュー [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) のクエリによって、パフォーマンス カウンターの値を返すこともできます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の統計情報は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがインストールされているときにのみ表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを停止して再起動すると、SQL Server の統計情報の表示も中断され、自動的に再開されます。 システム モニター スナップインでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されていないときでも、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のカウンターが表示されます。 クラスター化されたインスタンスでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されているノードでのみ、パフォーマンス カウンターが機能します。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の統計情報は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがインストールされているときにのみ表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを停止して再起動すると、SQL Server の統計情報の表示も中断され、自動的に再開されます。 システム モニター スナップインでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されていないときでも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のカウンターが表示されます。 クラスター化されたインスタンスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されているノードでのみ、パフォーマンス カウンターが機能します。  
   
  このトピックには、次のセクションが含まれます。  
   
@@ -82,7 +86,7 @@ caps.handback.revision: 55
   
 |パフォーマンス オブジェクト|説明|  
 |------------------------|-----------------|  
-|[SQLServer:Broker Activation](../../relational-databases/performance-monitor/sql-server-broker-activation-object.md)|[!INCLUDE[ssSB](../../includes/sssb-md.md)] のアクティブなタスクについての情報を提供します。|  
+|[SQLServer:Broker Activation](../../relational-databases/performance-monitor/sql-server-broker-activation-object.md)|[!INCLUDE[ssSB](../../includes/sssb-md.md)]のアクティブなタスクについての情報を提供します。|  
 |[SQLServer:Broker Statistics](../../relational-databases/performance-monitor/sql-server-broker-statistics-object.md)|[!INCLUDE[ssSB](../../includes/sssb-md.md)] についての一般的な情報を提供します。|  
 |[SQLServer:Broker Transport](../../relational-databases/performance-monitor/sql-server-broker-dbm-transport-object.md)|[!INCLUDE[ssSB](../../includes/sssb-md.md)] のネットワークについての情報を提供します。|  
   
@@ -93,24 +97,27 @@ caps.handback.revision: 55
 |------------------------|-----------------|  
 |[SQLServer:Access Methods](../../relational-databases/performance-monitor/sql-server-access-methods-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトの割り当てを検索して計測します。たとえば、インデックスとデータに割り当てられているインデックス検索の数またはページ数を計測します。|  
 |[SQLServer:Backup Device](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)|バックアップ デバイスのスループットなど、バックアップ操作と復元操作で使用するバックアップ デバイスについての情報を提供します。|  
+|[SQLServer:Batch Resp Statistics](../../relational-databases/performance-monitor/sql-server-batch-resp-statistics-object.md)|SQL バッチ応答時間を追跡するカウンターです。| 
 |[SQLServer: Buffer Manager](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]freememory **や** buffer cache hit ratio **など、**で使用するメモリ バッファーについての情報を提供します。|  
 |[SQL Server: Buffer Node](../../relational-databases/performance-monitor/sql-server-buffer-node.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によるフリー ページの要求頻度とアクセスの頻度についての情報を提供します。|  
+|[SQLServer:Catalog Metadata](../../relational-databases/performance-monitor/sql-server-catalog-metadata-object.md)|SQL Server のカタログ メタデータ マネージャー オブジェクトを定義します。| 
 |[SQLServer:CLR](../../relational-databases/performance-monitor/sql-server-clr-object.md)|共通言語ランタイム (CLR: Common Language Runtime) に関する情報を提供します。|  
-|[SQLServer:Columnstore](../../relational-databases/performance-monitor/sql-server-columnstore-object.md)|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。
-<br /><br /> 列ストアインデックスの行グループとセグメントに関する情報を提供します。|  
+|[SQLServer:Columnstore](../../relational-databases/performance-monitor/sql-server-columnstore-object.md)|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]まで)。<br /><br /> 列ストアインデックスの行グループとセグメントに関する情報を提供します。|  
 |[SQLServer:Cursor Manager by Type](../../relational-databases/performance-monitor/sql-server-cursor-manager-by-type-object.md)|カーソルについての情報を提供します。|  
 |[SQLServer:Cursor Manager Total](../../relational-databases/performance-monitor/sql-server-cursor-manager-total-object.md)|カーソルについての情報を提供します。|  
 |[SQLServer:Database Mirroring](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)|データベース ミラーリングについての情報を提供します。|  
 |[SQLServer:Databases](../../relational-databases/performance-monitor/sql-server-databases-object.md)|使用できるログ用空きディスク領域やデータベース内のアクティブなトランザクションの数など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースについての情報を提供します。 このオブジェクトには、複数のインスタンスが存在することがあります。|  
 |[SQL Server:Deprecated Features](../../relational-databases/performance-monitor/sql-server-deprecated-features-object.md)|非推奨機能が使用された回数をカウントします。|  
 |[SQLServer:Exec Statistics](../../relational-databases/performance-monitor/sql-server-execstatistics-object.md)|実行統計についての情報を提供します。|  
-|[SQLServer:External Scripts](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。
-<br /><br /> 外部スクリプトの実行についての情報を提供します。|  
-|[SQLServer:General Statistics](../../relational-databases/performance-monitor/sql-server-general-statistics-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続しているユーザーの数など、一般的なサーバー全体の利用状況についての情報を提供します。|  
+|[SQLServer:External Scripts](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]まで)。<br /><br /> 外部スクリプトの実行についての情報を提供します。|  
+|[SQLServer:FileTable](../../relational-databases/performance-monitor/sql-server-filetable-object.md)|FileTable と非トランザクション アクセスに関する統計です。|  
+|[SQLServer:General Statistics](../../relational-databases/performance-monitor/sql-server-general-statistics-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続しているユーザーの数など、一般的なサーバー全体の利用状況についての情報を提供します。|  
 |[SQL Server:HADR Availability Replica](../../relational-databases/performance-monitor/sql-server-availability-replica.md)|現在割り当てられているロック構造の総数など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性レプリカについての情報を提供します。|  
 |[SQL Server:HADR Database Replica](../../relational-databases/performance-monitor/sql-server-database-replica.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] データベース レプリカについての情報を提供します。|  
 |[SQLServer:Latches](../../relational-databases/performance-monitor/sql-server-latches-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で使用されるデータベース ページなど、内部リソースのラッチについての情報を提供します。|  
-|[SQLServer:Locks](../../relational-databases/performance-monitor/sql-server-locks-object.md)|ロック タイムアウトやデッドロックなど、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] による各ロック要求についての情報を提供します。 このオブジェクトには、複数のインスタンスが存在することがあります。|  
+|[SQLServer:Locks](../../relational-databases/performance-monitor/sql-server-locks-object.md)|ロック タイムアウトやデッドロックなど、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]による各ロック要求についての情報を提供します。 このオブジェクトには、複数のインスタンスが存在することがあります。|  
+|[SQLServer:LogPool FreePool](../../relational-databases/performance-monitor/sql-server-logpool-freepool-object.md)|ログ プール内の空きプールに関する統計を説明します。|
+|[SQLServer:Memory Broker Clerks](../../relational-databases/performance-monitor/sql-server-memory-broker-clerks-object.md)|Memory Broker Clerk に関する統計です。|
 |[SQLServer:Memory Manager](../../relational-databases/performance-monitor/sql-server-memory-manager-object.md)|現在割り当てられているロック構造の総数など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメモリの利用状況についての情報を提供します。|  
 |[SQLServer:Plan Cache](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)|ストアド プロシージャ、トリガー、クエリ プランなど、オブジェクトを保存するために使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] キャッシュについての情報を提供します。|  
 |[SQLServer:Query Store](../../relational-databases/performance-monitor/sql-server-query-store-object.md)|クエリ ストアに関する情報を提供します。|  
@@ -130,13 +137,14 @@ caps.handback.revision: 55
 |**SQLServer:Replication Agents**<br /><br /> **SQLServer:Replication Snapshot**<br /><br /> **SQLServer:Replication Logreader**<br /><br /> **SQLServer:Replication Dist.**<br /><br /> **SQLServer:Replication Merge**<br /><br /> 詳細については、「 [Monitoring Replication with System Monitor](../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md)」を参照してください。|レプリケーション エージェントの利用状況についての情報を提供します。|  
   
 ##  <a name="SsisPipelineCounters"></a> SSIS Pipeline カウンター  
- **SSIS Pipeline** カウンターの詳細については、「[パフォーマンス カウンター](../../integration-services/performance/performance-counters.md)」を参照してください。  
+ **SSIS Pipeline** カウンターの詳細については、「 [パフォーマンス カウンター](../../integration-services/performance/performance-counters.md)」を参照してください。  
   
 ##  <a name="RequiredPermissions"></a> 必要な権限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgent:Alerts **以外の**オブジェクトを使用する際の権限は Windows のアクセス許可に依存しています。 **SQLAgent:Alerts** を使用するには、ユーザーは **sysadmin**固定サーバー ロールのメンバーでなければなりません。  
   
-## 参照  
- [パフォーマンス オブジェクトの使用](../../ssms/agent/use-performance-objects.md)   
+## <a name="see-also"></a>参照  
+ [パフォーマンス オブジェクトの使用](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  
   
   
+

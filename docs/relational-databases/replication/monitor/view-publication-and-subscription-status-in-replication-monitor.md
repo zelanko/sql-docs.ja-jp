@@ -1,34 +1,38 @@
 ---
 title: "レプリケーション モニターでのパブリケーションおよびサブスクリプションの状態の表示 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ログ リーダー エージェント, 監視"
-  - "マージ エージェント, 監視"
-  - "キュー リーダー エージェント, 監視"
-  - "パブリケーション [SQL Server レプリケーション], 情報の表示"
-  - "スナップショット エージェント, 監視"
-  - "ディストリビューション エージェント, 監視"
-  - "パフォーマンスの監視 [SQL Server レプリケーション], パブリケーションの状態"
-  - "パフォーマンスの監視 [SQL Server レプリケーション], サブスクリプションの状態"
-  - "サブスクリプション [SQL Server レプリケーション], 状態の表示"
-  - "レプリケーション モニター, パブリケーションおよびサブスクリプションの状態"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Log Reader Agent, monitoring
+- Merge Agent, monitoring
+- Queue Reader Agent, monitoring
+- publications [SQL Server replication], viewing information
+- Snapshot Agent, monitoring
+- Distribution Agent, monitoring
+- monitoring performance [SQL Server replication], publication status
+- monitoring performance [SQL Server replication], subscription status
+- subscriptions [SQL Server replication], viewing status
+- Replication Monitor, publication and subscription status
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6de5f69f5c5d6fefea0fb3dca7f6b11b3c6c7194
+ms.lasthandoff: 04/11/2017
+
 ---
-# レプリケーション モニターでのパブリケーションおよびサブスクリプションの状態の表示
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターには、パブリケーションおよびサブスクリプションの状態情報が表示されます。  
+# <a name="view-publication-and-subscription-status-in-replication-monitor"></a>レプリケーション モニターでのパブリケーションおよびサブスクリプションの状態の表示
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor displays status information for publications and subscriptions:  
   
 -   パブリケーションの状態は、そのサブスクリプションの最も優先度の高い状態によって決定されます。 たとえば、あるパブリケーションに対する 1 つのサブスクリプションにエラーが発生し、別のサブスクリプションにはパフォーマンス上の問題がある場合、そのパブリケーションに対してはエラーの状態が表示されます。  
   
@@ -38,78 +42,78 @@ caps.handback.revision: 34
   
 -   有効期限切れサブスクリプション  
   
-     この状態値は、すべての種類のレプリケーションに適用されます。 詳細については、次を参照してください。 [しきい値の設定とレプリケーション モニターで警告](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)します。  
+     この状態値は、すべての種類のレプリケーションに適用されます。 詳細については、「 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
   
 -   [パフォーマンス クリティカル]  
   
-     この状態値は、トランザクション レプリケーションとマージ レプリケーションに適用されます。 詳細については、次を参照してください。 [レプリケーション モニターを使用してパフォーマンスを監視する](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)です。  
+     この状態値は、トランザクション レプリケーションとマージ レプリケーションに適用されます。 詳細については、「[レプリケーション モニターを使用したパフォーマンスの監視](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)」をご覧ください。  
   
 -   [長期マージ]  
   
-     この状態値はマージ レプリケーションに適用されます。 詳細については、次を参照してください。 [レプリケーション モニターを使用してパフォーマンスを監視する](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)です。  
+     この状態値はマージ レプリケーションに適用されます。 詳細については、「[レプリケーション モニターを使用したパフォーマンスの監視](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)」をご覧ください。  
   
  パブリケーションおよびサブスクリプションの状態の他に、マージ レプリケーションではアーティクル レベルの統計が使用できます。この情報は、マージ フェーズの完了までに要する時間、指定されたアーティクルの処理に費やされた時間、サブスクライバーが使用している接続の種類、およびその他の重要な情報についての詳細を提供します。 統計情報は、レプリケーション モニターの [マージ エージェント] ウィンドウに表示されます。 スナップショット レプリケーションおよびトランザクション レプリケーションでは、ディストリビューション エージェントの処理に関する詳細が提供されます。  
   
  **パブリケーションおよびサブスクリプションの状態を表示するには**  
   
--   レプリケーション モニター: [情報を表示し、パブリケーションと #40; のタスクを実行レプリケーション モニターと #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  [情報を表示し、サブスクリプションと #40; のタスクを実行レプリケーション モニターと #41 です。](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+-   レプリケーション モニター: [パブリケーションの情報の表示とタスクの実行 &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)[サブスクリプションの情報の表示とタスクの実行 &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
   
  **エージェントの詳細情報を表示するには**  
   
--   レプリケーション モニター: [情報を表示し、パブリケーションと #40; に関連付けられているエージェントのタスクを実行レプリケーション モニターと #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)  [情報を表示し、サブスクリプションと #40; に関連付けられているエージェントのタスクを実行レプリケーション モニターと #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)します。  
+-   レプリケーション モニター: [パブリケーションに関連付けられているエージェントの情報の表示とタスクの実行 &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)、[サブスクリプションに関連付けられているエージェントの情報の表示とタスクの実行 &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
   
-## パブリケーションの状態の値  
+## <a name="publication-status-values"></a>パブリケーションの状態の値  
  次の表は、パブリケーションの状態の値と対応するアイコンを優先度順に示しています。  
   
 |[状態]|アイコン|  
 |------------|----------|  
-|[エラー]|![UI アイコン:error](../../../database-engine/availability-groups/windows/media/repl-icon-error.png "UI アイコン:error")|  
-|[パフォーマンス クリティカル]|![UI アイコン:warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI アイコン:warning")|  
-|[失敗したコマンドの再試行]|![UI アイコン:レプリケーション エージェントの再試行](../../../relational-databases/replication/monitor/media/repl-icon-retry.png "UI アイコン:レプリケーション エージェントの再試行")|  
+|[エラー]|![UI アイコン: エラー](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI アイコン: エラー")|  
+|[パフォーマンス クリティカル]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
+|[失敗したコマンドの再試行]|![UI アイコン: レプリケーション エージェントの再試行](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI アイコン: レプリケーション エージェントの再試行")|  
 |OK|なし|  
   
-## サブスクリプションの状態値  
- 次の表は、サブスクリプションの状態値と対応するアイコンを優先度順に示しています。 サブスクリプションなど、同時に 2 つの状態である可能性が **まもなく期限切れ/期限切れ** と **失敗したコマンドの再試行**; 最高の優先順位のステータスが表示されます。  
+## <a name="subscription-status-values"></a>サブスクリプションの状態値  
+ 次の表は、サブスクリプションの状態値と対応するアイコンを優先度順に示しています。 サブスクリプションは、" **まもなく期限切れ/期限切れ** " と " **失敗したコマンドの再試行**" など同時に 2 つの状態になることがあります。その場合、最も優先度の高い状態が表示されます。  
   
- 状態値 **パフォーマンス クリティカル**, 、**まもなく期限切れ/期限切れ**, 、および **初期化されていない** 警告します。 警告が表示されるとき、レプリケーション モニターにはエージェントが実行中であるかどうかも表示されます。 たとえば、 **[実行中]、[パフォーマンス クリティカル]**という形で状態が表示されます。  
+ 状態値 " **パフォーマンス クリティカル**"、" **まもなく期限切れ/期限切れ**"、および " **初期化されていないサブスクリプション** " は警告です。 警告が表示されるとき、レプリケーション モニターにはエージェントが実行中であるかどうかも表示されます。 たとえば、 **[実行中]、[パフォーマンス クリティカル]**という形で状態が表示されます。  
   
-### トランザクション サブスクリプション  
-  
-|[状態]|アイコン|  
-|------------|----------|  
-|[エラー]|![UI アイコン:error](../../../database-engine/availability-groups/windows/media/repl-icon-error.png "UI アイコン:error")|  
-|[パフォーマンス クリティカル]|![UI アイコン:warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI アイコン:warning")|  
-|[まもなく期限切れ/期限切れ]|![UI アイコン:warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI アイコン:warning")|  
-|[初期化されていないサブスクリプション]|![UI アイコン:warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI アイコン:warning")|  
-|[失敗したコマンドの再試行]|![UI アイコン:レプリケーション エージェントの再試行](../../../relational-databases/replication/monitor/media/repl-icon-retry.png "UI アイコン:レプリケーション エージェントの再試行")|  
-|[実行されていません]|![UI アイコン:レプリケーション エージェントの停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.png "UI アイコン:レプリケーション エージェントの停止")|  
-|実行中|![UI アイコン:レプリケーション エージェントの実行](../../../relational-databases/replication/monitor/media/repl-icon-running.png "UI アイコン:レプリケーション エージェントの実行")|  
-  
-### マージ サブスクリプション  
+### <a name="transactional-subscriptions"></a>トランザクション サブスクリプション  
   
 |[状態]|アイコン|  
 |------------|----------|  
-|[エラー]|![UI アイコン:error](../../../database-engine/availability-groups/windows/media/repl-icon-error.png "UI アイコン:error")|  
-|[パフォーマンス クリティカル]|![UI アイコン:warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI アイコン:warning")|  
-|[長期マージ]|![UI アイコン:warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI アイコン:warning")|  
-|[まもなく期限切れ/期限切れ]|![UI アイコン:warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI アイコン:warning")|  
-|[初期化されていないサブスクリプション]|![UI アイコン:warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI アイコン:warning")|  
-|[失敗したコマンドの再試行]|![UI アイコン:レプリケーション エージェントの再試行](../../../relational-databases/replication/monitor/media/repl-icon-retry.png "UI アイコン:レプリケーション エージェントの再試行")|  
-|[同期中]|![UI アイコン:レプリケーション エージェントの実行](../../../relational-databases/replication/monitor/media/repl-icon-running.png "UI アイコン:レプリケーション エージェントの実行")|  
-|同期されていません|![UI アイコン:レプリケーション エージェントの停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.png "UI アイコン:レプリケーション エージェントの停止")|  
+|[エラー]|![UI アイコン: エラー](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI アイコン: エラー")|  
+|[パフォーマンス クリティカル]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
+|[まもなく期限切れ/期限切れ]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
+|[初期化されていないサブスクリプション]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
+|[失敗したコマンドの再試行]|![UI アイコン: レプリケーション エージェントの再試行](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI アイコン: レプリケーション エージェントの再試行")|  
+|[実行されていません]|![UI アイコン: レプリケーション エージェントの停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI アイコン: レプリケーション エージェントの停止")|  
+|実行中|![UI アイコン: レプリケーション エージェントの実行](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI アイコン: レプリケーション エージェントの実行")|  
   
-### スナップショット サブスクリプション  
+### <a name="merge-subscriptions"></a>マージ サブスクリプション  
   
 |[状態]|アイコン|  
 |------------|----------|  
-|[エラー]|![UI アイコン:error](../../../database-engine/availability-groups/windows/media/repl-icon-error.png "UI アイコン:error")|  
-|[まもなく期限切れ/期限切れ]|![UI アイコン:warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI アイコン:warning")|  
-|[初期化されていないサブスクリプション]|![UI アイコン:warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI アイコン:warning")|  
-|[失敗したコマンドの再試行]|![UI アイコン:レプリケーション エージェントの再試行](../../../relational-databases/replication/monitor/media/repl-icon-retry.png "UI アイコン:レプリケーション エージェントの再試行")|  
-|[同期中]|![UI アイコン:レプリケーション エージェントの実行](../../../relational-databases/replication/monitor/media/repl-icon-running.png "UI アイコン:レプリケーション エージェントの実行")|  
-|同期されていません|![UI アイコン:レプリケーション エージェントの停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.png "UI アイコン:レプリケーション エージェントの停止")|  
+|[エラー]|![UI アイコン: エラー](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI アイコン: エラー")|  
+|[パフォーマンス クリティカル]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
+|[長期マージ]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
+|[まもなく期限切れ/期限切れ]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
+|[初期化されていないサブスクリプション]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
+|[失敗したコマンドの再試行]|![UI アイコン: レプリケーション エージェントの再試行](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI アイコン: レプリケーション エージェントの再試行")|  
+|[同期中]|![UI アイコン: レプリケーション エージェントの実行](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI アイコン: レプリケーション エージェントの実行")|  
+|同期されていません|![UI アイコン: レプリケーション エージェントの停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI アイコン: レプリケーション エージェントの停止")|  
   
-## 参照  
+### <a name="snapshot-subscriptions"></a>スナップショット サブスクリプション  
+  
+|[状態]|アイコン|  
+|------------|----------|  
+|[エラー]|![UI アイコン: エラー](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI アイコン: エラー")|  
+|[まもなく期限切れ/期限切れ]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
+|[初期化されていないサブスクリプション]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
+|[失敗したコマンドの再試行]|![UI アイコン: レプリケーション エージェントの再試行](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI アイコン: レプリケーション エージェントの再試行")|  
+|[同期中]|![UI アイコン: レプリケーション エージェントの実行](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI アイコン: レプリケーション エージェントの実行")|  
+|同期されていません|![UI アイコン: レプリケーション エージェントの停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI アイコン: レプリケーション エージェントの停止")|  
+  
+## <a name="see-also"></a>参照  
  [レプリケーションの監視](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

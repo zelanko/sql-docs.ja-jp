@@ -1,28 +1,32 @@
 ---
 title: "Microsoft Azure サブスクリプションへの接続 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
 caps.latest.revision: 4
-author: "dagiro"
-ms.author: "v-dagir"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: dagiro
+ms.author: v-dagir
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6db65c242dc6dd9fd1c6c910d583d026f45422c1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Microsoft Azure サブスクリプションへの接続
-**Microsoft サブスクリプションへの接続**を使用して、既存の Azure BLOB コンテナーを SQL Server のインスタンスに登録します。  ダイアログ ボックスでは、Shared Access Signature と格納されたアクセス ポリシーが Azure BLOB コンテナーに作成された後に、SQL Server 資格情報が作成されます。  このダイアログ ボックスは、SQL Server Management Studio からバックアップ タスクまたは復元タスクを使用する際に表示され、その操作には URL デバイスが必要です。
+# <a name="connect-to-a-microsoft-azure-subscription"></a>Microsoft Azure サブスクリプションへの接続
+**Microsoft サブスクリプションへの接続** を使用して、既存の Azure BLOB コンテナーを SQL Server のインスタンスに登録します。  ダイアログ ボックスでは、Shared Access Signature と格納されたアクセス ポリシーが Azure BLOB コンテナーに作成された後に、SQL Server 資格情報が作成されます。  このダイアログ ボックスは、SQL Server Management Studio からバックアップ タスクまたは復元タスクを使用する際に表示され、その操作には URL デバイスが必要です。
 
-## 制限事項
-**Microsoft サブスクリプションへの接続**は、Service Management (クラシック) デプロイメント モデルを使って作成された Azure Storage アカウントでのみ機能します。  Azure デプロイメント モデルに関する詳細については、「[Azure Resource Manager とクラシック デプロイ](https://azure.microsoft.com/en-us/documentation/articles/resource-manager-deployment-model/)」を参照してください。
+## <a name="limitation"></a>制限事項
+**Microsoft サブスクリプションへの接続** は、Service Management (クラシック) デプロイメント モデルを使って作成された Azure Storage アカウントでのみ機能します。  Azure デプロイメント モデルに関する詳細については、「 [Azure Resource Manager とクラシック デプロイ](https://azure.microsoft.com/en-us/documentation/articles/resource-manager-deployment-model/)」を参照してください。
 
-## オプション
+## <a name="options"></a>オプション
 **サインイン**     
 適切な Azure アカウントでサインインします。
 
@@ -43,3 +47,4 @@ Shared Access Policy は、指定された日付に期限が切れます。  既
 
 **資格情報の作成**   
 ボタンを使って、格納されたアクセス ポリシーおよび Shared Access Signature が生成された後に SQL Server 資格情報が作成されます。
+

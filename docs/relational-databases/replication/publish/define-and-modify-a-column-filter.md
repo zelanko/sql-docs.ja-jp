@@ -1,27 +1,31 @@
 ---
 title: "列フィルターの定義および変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "filters [SQL Server replication], column"
-  - "modifying filters, column"
-  - "modifying filters"
-  - "列フィルター [SQL Server レプリケーション]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filters [SQL Server replication], column
+- modifying filters, column
+- modifying filters
+- column filters [SQL Server replication]
 ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9c556f82f888c3237fcc77e6264aaefb2d67adb9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 列フィルターの定義および変更
+# <a name="define-and-modify-a-column-filter"></a>列フィルターの定義および変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、列フィルターを定義および変更する方法について説明します。  
   
  **このトピックの内容**  
@@ -40,22 +44,22 @@ caps.handback.revision: 40
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
--   いくつかの列をフィルター処理できません。詳細については、次を参照してください。 [パブリッシュされたデータのフィルター](../../../relational-databases/replication/publish/filter-published-data.md)します。 サブスクリプションを初期化した後で列フィルターを変更する場合には、列フィルターの変更後、新規スナップショットを生成してすべてのサブスクリプションを再初期化する必要があります。 プロパティの変更に対する要件の詳細については、次を参照してください。 [変更パブリケーションとアーティクルのプロパティ](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)します。  
+-   一部の列はフィルター選択できません。詳細については、「[Filter Published Data](../../../relational-databases/replication/publish/filter-published-data.md)」(パブリッシュされたデータのフィルター処理) をご覧ください。 サブスクリプションを初期化した後で列フィルターを変更する場合には、列フィルターの変更後、新規スナップショットを生成してすべてのサブスクリプションを再初期化する必要があります。 プロパティ変更の要件の詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) をご覧ください。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- パブリケーションの新規作成ウィザードの **[アーティクル]** ページで列フィルターを定義します。 詳細については、パブリケーションの新規作成ウィザードを使用して、次を参照してください。 [パブリケーションを作成](../../../relational-databases/replication/publish/create-a-publication.md)します。  
+ パブリケーションの新規作成ウィザードの **[アーティクル]** ページで列フィルターを定義します。 パブリケーションの新規作成ウィザードの詳細については、「[Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)」(パブリケーションの作成) をご覧ください。  
   
- 定義し、列フィルターを変更、 **記事** のページ、 **パブリケーションのプロパティ - \< パブリケーション>** ] ダイアログ ボックス。 パブリケーションとアーティクルのプロパティの詳細については、次を参照してください。 [パブリケーション プロパティの変更を表示および](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)です。  
+ **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[アーティクル]** ページで列フィルターの定義および変更を行います。 パブリケーションとアーティクルのプロパティの詳細については、「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」(パブリケーション プロパティの表示と変更) をご覧ください。  
   
-#### 列フィルターを定義するには  
+#### <a name="to-define-a-column-filter"></a>列フィルターを定義するには  
   
 1.  パブリケーションの新規作成ウィザードの **[アーティクル]** ページにある **[パブリッシュするオブジェクト]** ペインで、フィルター選択するテーブルを展開します。  
   
 2.  フィルター選択する列の隣にあるチェック ボックスをオフにします。  
   
-#### 列フィルターを変更するには  
+#### <a name="to-modify-column-filtering"></a>列フィルターを変更するには  
   
-1.   **記事** のページ、 **パブリケーションのプロパティ - \< パブリケーション>** ] ダイアログ ボックスで、フィルター選択されるテーブルを展開し、 **パブリッシュするオブジェクト** ウィンドウです。  
+1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[アーティクル]** ページにある **[パブリッシュするオブジェクト]** ペインで、フィルター選択するテーブルを展開します。  
   
 2.  フィルター選択する列の隣にあるチェック ボックスをオフにして、アーティクルに含める列のチェック ボックスをオンにします。  
   
@@ -65,65 +69,65 @@ caps.handback.revision: 40
  テーブル アーティクルを作成するときに、アーティクルにどの列を含めるかを定義したり、アーティクルを定義した後で列を変更したりできます。 レプリケーション ストアド プロシージャを使用して、フィルターが適用された列をプログラムで作成および変更できます。  
   
 > [!NOTE]  
->  次の手順は、基になるテーブルが変更されていないことが前提となっています。 パブリッシュされたテーブルに対するデータ定義言語 (DDL) の変更をレプリケートする方法については、次を参照してください。 [パブリケーション データベースでスキーマ変更を行う](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)します。  
+>  次の手順は、基になるテーブルが変更されていないことが前提となっています。 パブリッシュされたテーブルにデータ定義言語 (DDL) の変更をレプリケートする方法の詳細については、「[Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」(パブリケーション データベースでのスキーマの変更) をご覧ください。  
   
-#### スナップショット パブリケーションまたはトランザクション パブリケーションでパブリッシュされたアーティクルの列フィルターを定義するには  
+#### <a name="to-define-a-column-filter-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションでパブリッシュされたアーティクルの列フィルターを定義するには  
   
-1.  フィルターを適用するアーティクルを定義します。 詳しくは、「 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+1.  フィルターを適用するアーティクルを定義します。 詳細については、「 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
-2.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)します。 これにより、アーティクルに含める列、またはアーティクルから削除する列を定義します。  
+2.  パブリッシャー側のパブリケーション データベースで、 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)を実行します。 これにより、アーティクルに含める列、またはアーティクルから削除する列を定義します。  
   
-    -   多くの列を含むテーブルからのいくつか列のみをパブリッシュする場合は、実行 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 追加する各列に対して 1 回です。 **@column** に列名を指定し、 **@operation** に **add**を指定します。  
+    -   多数の列を含むテーブルから少数の列をパブリッシュする場合は、追加する各列に対して [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) を一度実行します。 **@column** に列名を指定し、**@operation** に **add** を指定します。  
   
-    -   列のほとんどを多くの列を含むテーブルをパブリッシュする場合は、実行 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), の値を指定する **null** の **@column** の値との **追加** の **@operation** すべての列を追加します。 実行し、 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), 除外する各列の値を指定するとしたら、 **ドロップ** の **@operation** と除外する列名を **@column**します。  
+    -   多数の列を含むテーブルの列の大半をパブリッシュする場合は、 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)を実行します。その場合、 **@column** に **@column** に列名を指定し、 **@operation** に **@operation** を指定してすべての列を追加します。 次に、除外する各列に [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)を一度ずつ実行します。その場合、 **@operation** に **@operation** を指定し、 **@column**を使用して、列フィルターを定義および変更する方法について説明します。  
   
-3.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)します。 **@publication** にパブリケーション名を指定し、 **@article**にフィルターを適用するアーティクルの名前を指定します。 これにより、フィルターを適用するアーティクルの同期オブジェクトが作成されます。  
+3.  パブリッシャー側のパブリケーション データベースで、 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)を実行します。 **@publication** にパブリケーション名を指定し、**@article** にフィルターを適用するアーティクルの名前を指定します。 これにより、フィルターを適用するアーティクルの同期オブジェクトが作成されます。  
   
-#### スナップショット パブリケーションまたはトランザクション パブリケーションでパブリッシュされたアーティクルに対して、追加列を含めるための列フィルターを定義するには  
+#### <a name="to-change-a-column-filter-to-include-additional-columns-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションでパブリッシュされたアーティクルに対して、追加列を含めるための列フィルターを定義するには  
   
-1.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 追加する各列に対して 1 回です。 **@column** に列名を指定し、 **@operation** に **add**を指定します。  
+1.  パブリッシャー側のパブリケーション データベースで、追加する各列に対して [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) を一度ずつ実行します。 **@column** に列名を指定し、**@operation** に **add** を指定します。  
   
-2.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)します。 **@publication** にパブリケーション名を指定し、 **@article**にフィルターを適用するアーティクルの名前を指定します。 パブリケーションに既存のサブスクリプションがある場合は、値を指定 **1** の **@change_active**します。 これにより、フィルターを適用するアーティクルの同期オブジェクトが再作成されます。  
-  
-3.  パブリケーションに対してスナップショット エージェント ジョブを再実行し、更新済みスナップショットを生成します。  
-  
-4.  サブスクリプションを再初期化します。 詳細については、次を参照してください。 [サブスクリプションの再初期化](../../../relational-databases/replication/reinitialize-subscriptions.md)します。  
-  
-#### スナップショット パブリケーションまたはトランザクション パブリケーションでパブリッシュされたアーティクルに対して、列を削除するための列フィルターを定義するには  
-  
-1.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 削除する各列に対して 1 回です。 **@column** に列名を指定し、 **@operation** に **drop**を指定します。  
-  
-2.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)します。 **@publication** にパブリケーション名を指定し、 **@article**にフィルターを適用するアーティクルの名前を指定します。 パブリケーションに既存のサブスクリプションがある場合は、値を指定 **1** の **@change_active**します。 これにより、フィルターを適用するアーティクルの同期オブジェクトが再作成されます。  
+2.  パブリッシャー側のパブリケーション データベースで、 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)を実行します。 **@publication** にパブリケーション名を指定し、**@article** にフィルターを適用するアーティクルの名前を指定します。 パブリケーションに既存のサブスクリプションが存在する場合は、 **@change_active** に **@change_active**を使用して、列フィルターを定義および変更する方法について説明します。 これにより、フィルターを適用するアーティクルの同期オブジェクトが再作成されます。  
   
 3.  パブリケーションに対してスナップショット エージェント ジョブを再実行し、更新済みスナップショットを生成します。  
   
-4.  サブスクリプションを再初期化します。 詳細については、次を参照してください。 [サブスクリプションの再初期化](../../../relational-databases/replication/reinitialize-subscriptions.md)します。  
+4.  サブスクリプションを再初期化します。 詳細については、「 [サブスクリプションの再初期化](../../../relational-databases/replication/reinitialize-subscriptions.md)」を参照してください。  
   
-#### スナップショットまたはマージ パブリケーションでパブリッシュされたアーティクルの列フィルターを定義するには  
+#### <a name="to-change-a-column-filter-to-remove-columns-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションでパブリッシュされたアーティクルに対して、列を削除するための列フィルターを定義するには  
   
-1.  フィルターを適用するアーティクルを定義します。 詳しくは、「 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+1.  パブリッシャー側のパブリケーション データベースで、削除する各列に対して [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) を一度実行します。 **@column** に列名を指定し、**@operation** に **drop** を指定します。  
   
-2.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)します。 これにより、アーティクルに含める列、またはアーティクルから削除する列を定義します。  
+2.  パブリッシャー側のパブリケーション データベースで、 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)を実行します。 **@publication** にパブリケーション名を指定し、**@article** にフィルターを適用するアーティクルの名前を指定します。 パブリケーションに既存のサブスクリプションが存在する場合は、 **@change_active** に **@change_active**を使用して、列フィルターを定義および変更する方法について説明します。 これにより、フィルターを適用するアーティクルの同期オブジェクトが再作成されます。  
   
-    -   多くの列を含むテーブルからのいくつか列のみをパブリッシュする場合は、実行 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 追加する各列に対して 1 回です。 **@column** に列名を指定し、 **@operation** に **add**を指定します。  
+3.  パブリケーションに対してスナップショット エージェント ジョブを再実行し、更新済みスナップショットを生成します。  
   
-    -   列のほとんどを多くの列を含むテーブルをパブリッシュする場合は、実行 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md), の値を指定する **null** の **@column** の値との **追加** の **@operation** すべての列を追加します。 実行し、 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md), 除外する各列の値を指定するとしたら、 **ドロップ** の **@operation** と除外する列名を **@column**します。  
+4.  サブスクリプションを再初期化します。 詳細については、「 [サブスクリプションの再初期化](../../../relational-databases/replication/reinitialize-subscriptions.md)」を参照してください。  
   
-#### マージ パブリケーションでパブリッシュされたアーティクルに対して、追加列を含めるための列フィルターを定義するには  
+#### <a name="to-define-a-column-filter-for-an-article-published-in-a-merge-publication"></a>スナップショットまたはマージ パブリケーションでパブリッシュされたアーティクルの列フィルターを定義するには  
   
-1.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 追加する各列に対して 1 回です。 列名を指定 **@column**, の値 **追加** の **@operation** の値との **1** 両方の **@force_invalidate_snapshot** と **@force_reinit_subscription**します。  
+1.  フィルターを適用するアーティクルを定義します。 詳細については、「 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+  
+2.  パブリッシャー側のパブリケーション データベースで、 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)を実行します。 これにより、アーティクルに含める列、またはアーティクルから削除する列を定義します。  
+  
+    -   多数の列を含むテーブルから少数の列のみをパブリッシュする場合は、追加する各列に対して [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) を一度ずつ実行します。 **@column** に列名を指定し、**@operation** に **add** を指定します。  
+  
+    -   多数の列を含むテーブルの列の大半をパブリッシュする場合は、 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)を実行します。その場合、 **@column** に **@column** に列名を指定し、 **@operation** に **@operation** を指定してすべての列を追加します。 次に、除外する各列に [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)を一度ずつ実行します。その場合、 **@operation** に **@operation** を指定し、 **@column**を使用して、列フィルターを定義および変更する方法について説明します。  
+  
+#### <a name="to-change-a-column-filter-to-include-additional-columns-for-an-article-published-in-a-merge-publication"></a>マージ パブリケーションでパブリッシュされたアーティクルに対して、追加列を含めるための列フィルターを定義するには  
+  
+1.  パブリッシャー側のパブリケーション データベースで、追加する各列に対して [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) を一度ずつ実行します。 **@column** に列名を指定し、**@operation** に **add** を指定し、**@force_invalidate_snapshot** と **@force_reinit_subscription** の両方に **1** を指定します。  
   
 2.  パブリケーションに対してスナップショット エージェント ジョブを再実行し、更新済みスナップショットを生成します。  
   
-3.  サブスクリプションを再初期化します。 詳細については、次を参照してください。 [サブスクリプションの再初期化](../../../relational-databases/replication/reinitialize-subscriptions.md)します。  
+3.  サブスクリプションを再初期化します。 詳細については、「 [サブスクリプションの再初期化](../../../relational-databases/replication/reinitialize-subscriptions.md)」を参照してください。  
   
-#### マージ パブリケーションでパブリッシュされたアーティクルに対して、列を削除するための列フィルターを変更するには  
+#### <a name="to-change-a-column-filter-to-remove-columns-for-an-article-published-in-a-merge-publication"></a>マージ パブリケーションでパブリッシュされたアーティクルに対して、列を削除するための列フィルターを変更するには  
   
-1.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 削除する各列に対して 1 回です。 列名を指定 **@column**, の値 **ドロップ** の **@operation** の **1** 両方の **@force_invalidate_snapshot** と **@force_reinit_subscription**です。  
+1.  パブリッシャー側のパブリケーション データベースで、削除する各列に対して [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) を一度ずつ実行します。 **@column** に列名を指定し、**@operation** に **drop** を指定し、**@force_invalidate_snapshot** と **@force_reinit_subscription** の両方に **1**を指定します。  
   
 2.  パブリケーションに対してスナップショット エージェント ジョブを再実行し、更新済みスナップショットを生成します。  
   
-3.  サブスクリプションを再初期化します。 詳細については、次を参照してください。 [サブスクリプションの再初期化](../../../relational-databases/replication/reinitialize-subscriptions.md)します。  
+3.  サブスクリプションを再初期化します。 詳細については、「 [サブスクリプションの再初期化](../../../relational-databases/replication/reinitialize-subscriptions.md)」を参照してください。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  次のトランザクション レプリケーション例では、 `DaysToManufacture` テーブルに基づく `Product` 列がアーティクルから削除されます。  
@@ -134,9 +138,9 @@ caps.handback.revision: 40
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-colu_2.sql)]  
   
-## 参照  
- [パブリケーションおよびアーティクルのプロパティの変更](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [パブリッシュされたデータのフィルター選択](../../../relational-databases/replication/publish/filter-published-data.md)   
- [マージ レプリケーション用にパブリッシュされたデータのフィルター選択](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  
+## <a name="see-also"></a>参照  
+ [パブリケーションとアーティクルのプロパティの変更](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [パブリッシュされたデータのフィルター処理](../../../relational-databases/replication/publish/filter-published-data.md)   
+ [マージ レプリケーション用にパブリッシュされたデータのフィルター処理](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  
   
   

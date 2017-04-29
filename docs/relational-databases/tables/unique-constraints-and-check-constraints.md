@@ -1,25 +1,29 @@
 ---
 title: "UNIQUE 制約と CHECK 制約 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "制約 [SQL Server], Visual Database Tools"
-  - "Visual Database Tools [SQL Server], 制約"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- constraints [SQL Server], Visual Database Tools
+- Visual Database Tools [SQL Server], constraints
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b5596207dc1188bd9830c0993402194954737c6a
+ms.lasthandoff: 04/11/2017
+
 ---
-# UNIQUE 制約と CHECK 制約
+# <a name="unique-constraints-and-check-constraints"></a>UNIQUE 制約と CHECK 制約
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   UNIQUE 制約と CHECK 制約は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内のデータに整合性を適用するために使用できる 2 種類の制約です。 これらは重要なデータベース オブジェクトです。  
@@ -44,15 +48,15 @@ caps.handback.revision: 20
 ##  <a name="Check"></a> CHECK 制約  
  CHECK 制約は、1 つ以上の列に格納できる値を制限することによってドメインの整合性を強制します。 論理演算子に基づいて TRUE または FALSE を返す論理 (ブール) 式を使って CHECK 制約を作成できます。 たとえば、 **salary** 列の値の範囲は、$15,000 ～ $100,000 のデータのみを許容する CHECK 制約を作成することにより制限できます。 これにより、この一定の給与範囲を超える給与を入力できなくなります。 論理式は、 `salary >= 15000 AND salary <= 100000`になります。  
   
- 複数の CHECK 制約を 1 つの列に適用できます。 テーブル レベルで CHECK 制約を作成すると、1 つの CHECK 制約を複数の列に適用できます。 たとえば、複数列の CHECK 制約を使用して、**country_region** 列の値が **USA** であるいずれかの行の **state** 列に 2 文字の値が格納されているかどうかを確認できます。 これにより、1 か所で複数の条件をチェックできるようになります。  
+ 複数の CHECK 制約を 1 つの列に適用できます。 テーブル レベルで CHECK 制約を作成すると、1 つの CHECK 制約を複数の列に適用できます。 たとえば、複数列の CHECK 制約を使用して、 **country_region** 列の値が **USA** であるいずれかの行の **state** 列に 2 文字の値が格納されているかどうかを確認できます。 これにより、1 か所で複数の条件をチェックできるようになります。  
   
  CHECK 制約は、列に格納される値を制御するという点では FOREIGN KEY 制約に似ています。 異なる点は、有効な値を決定する方法です。FOREIGN KEY 制約では別のテーブルから有効な値の一覧が取得されますが、CHECK 制約では論理式によって有効な値が決定されます。  
   
 > [!CAUTION]  
 >  暗黙的または明示的なデータ型の変換が含まれる制約により、特定の操作が失敗することがあります。 たとえば、パーティションの切り替え元のテーブルに定義された制約により、ALTER TABLE...SWITCH 操作が失敗することがあります。 制約の定義ではデータ型を変換しないようにしてください。  
   
-### CHECK 制約の制限事項  
- CHECK 制約は、FALSE と評価された値を拒否します。 NULL 値は UNKNOWN と評価されるので、式に NULL 値が含まれていると制約が無効になる場合があります。 たとえば、**int** 型の列 **MyColumn** に、**MyColumn** には値 10 (**MyColumn=10**) しか格納できないことを指定する制約を適用したとします。 **MyColumn**に値 NULL を挿入すると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって NULL が追加され、エラーは返されません。  
+### <a name="limitations-of-check-constraints"></a>CHECK 制約の制限事項  
+ CHECK 制約は、FALSE と評価された値を拒否します。 NULL 値は UNKNOWN と評価されるので、式に NULL 値が含まれていると制約が無効になる場合があります。 たとえば、 **int** 型の列 **MyColumn** に、 **MyColumn** には値 10 (**MyColumn=10**) しか格納できないことを指定する制約を適用したとします。 **MyColumn**に値 NULL を挿入すると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって NULL が追加され、エラーは返されません。  
   
  CHECK 制約は、チェックしている条件がテーブルのすべての行に対して FALSE でない場合、TRUE を返します。 CHECK 制約は行レベルで機能します。 作成したばかりのテーブルに行が含まれていない場合、このテーブルに適用された CHECK 制約は有効であると見なされます。 この場合、次の例に示すような予期しない結果が生成されることがあります。  
   

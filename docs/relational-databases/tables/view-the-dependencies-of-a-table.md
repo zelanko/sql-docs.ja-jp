@@ -1,27 +1,31 @@
 ---
 title: "テーブルの依存関係の表示 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "テーブルの依存関係 [SQL Server]"
-  - "依存関係 [SQL Server], テーブル"
-  - "依存関係の表示"
-  - "依存関係の確認"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table dependencies [SQL Server]
+- dependencies [SQL Server], tables
+- displaying dependences
+- viewing dependencies
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8359eccee9aeda470c962793d13c85819ef9fe49
+ms.lasthandoff: 04/11/2017
+
 ---
-# テーブルの依存関係の表示
+# <a name="view-the-dependencies-of-a-table"></a>テーブルの依存関係の表示
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してテーブルの依存関係を表示できます。  
@@ -47,19 +51,19 @@ caps.handback.revision: 24
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### テーブルの依存関係を表示するには  
+#### <a name="to-view-the-dependencies-of-a-table"></a>テーブルの依存関係を表示するには  
   
 1.  **オブジェクト エクスプローラー**で、 **[データベース]**を展開し、データベース、 **[テーブル]**の順に展開します。  
   
-2.  テーブルを右クリックし、**[依存関係の表示]** をクリックします。  
+2.  テーブルを右クリックし、 **[依存関係の表示]**をクリックします。  
   
-3.  **[オブジェクトの依存関係 *\<オブジェクト名>*]** ダイアログ ボックスで、**[*\<オブジェクト名>* に依存するオブジェクト]** または **[***\<オブジェクト名>*** が依存するオブジェクト]** を選択します。  
+3.  **[オブジェクトの依存関係*\<object name>*]** ダイアログ ボックスで、**[*\<object name>* に依存するオブジェクト]** または **[***\<object name>* **が依存するオブジェクト]** を選択します。  
   
-4.  **[依存関係]** グリッドでオブジェクトをクリックします。 オブジェクトの種類 ("トリガー" や "ストアド プロシージャ" など) が、**[種類]** ボックスに表示されます。  
+4.  **[依存関係]** グリッドでオブジェクトをクリックします。 オブジェクトの種類 ("トリガー" や "ストアド プロシージャ" など) が、 **[種類]** ボックスに表示されます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### テーブルに依存しているオブジェクトを表示するには  
+#### <a name="to-view-the-objects-that-depend-on-a-table"></a>テーブルに依存しているオブジェクトを表示するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 24
   
     ```  
   
-#### テーブルが依存しているオブジェクトを表示するには  
+#### <a name="to-view-the-objects-on-which-a-table-depends"></a>テーブルが依存しているオブジェクトを表示するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

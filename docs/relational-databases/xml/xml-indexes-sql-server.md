@@ -1,45 +1,49 @@
 ---
 title: "XML インデックス (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "削除、インデックス"
-  - "消去、インデックス"
-  - "セカンダリ インデックス [SQL Server の XML]"
-  - "xml データ型 [SQL Server]、インデックス"
-  - "破棄、インデックス"
-  - "PATH インデックス"
-  - "DROP_EXISTING 句"
-  - "XML [SQL Server]、インデックス"
-  - "プライマリ インデックス [SQL Server の XML]"
-  - "インデックス [SQL Server]、XML"
-  - "XML インデックス [SQL Server]、セカンダリ"
-  - "BLOB、XML インデックス"
-  - "無効化、インデックス"
-  - "変更する XML インデックス [SQL Server]"
-  - "XML インデックス [SQL Server]"
-  - "XML インデックス [SQL Server]、プライマリ"
-  - "変更、インデックス"
-  - "XML インデックス [SQL Server] を削除します。"
-  - "VALUE インデックス"
-  - "XML インデックス [SQL Server]、xml データ型"
-  - "PROPERTY インデックス"
-  - "作成する XML インデックス [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing indexes
+- deleting indexes
+- secondary indexes [XML in SQL Server]
+- xml data type [SQL Server], indexes
+- dropping indexes
+- PATH index
+- DROP_EXISTING clause
+- XML [SQL Server], indexes
+- primary indexes [XML in SQL Server]
+- indexes [SQL Server], XML
+- XML indexes [SQL Server], secondary
+- BLOBs, XML indexes
+- disabling indexes
+- XML indexes [SQL Server], modifying
+- XML indexes [SQL Server]
+- XML indexes [SQL Server], primary
+- modifying indexes
+- XML indexes [SQL Server], dropping
+- VALUE index
+- XML indexes [SQL Server], xml data type
+- PROPERTY index
+- XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 caps.latest.revision: 59
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5b905c48770f83d3b77e2549466eb2513d270b30
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML インデックス (SQL Server)
+# <a name="xml-indexes-sql-server"></a>XML インデックス (SQL Server)
   **xml** データ型の列には xml インデックスを作成できます。 列に保存されている XML インスタンスのすべてのタグ、値、およびパスにインデックスが設定されるので、クエリのパフォーマンスが向上します。 次のような場合、XML インデックスの効果が得られる可能性があります。  
   
 -   ワークロードで XML 列へのクエリが頻繁に行われる場合。 データ変更時の XML インデックスのメンテナンス コストを考慮する必要があります。  
@@ -55,9 +59,9 @@ caps.handback.revision: 59
  **xml** 型の列の最初のインデックスは、プライマリ XML インデックスである必要があります。 プライマリ XML インデックスを使用している場合は、PATH、VALUE、および PROPERTY という種類のセカンダリ XML インデックスがサポートされます。 クエリの種類によって異なりますが、これらのセカンダリ XML インデックスを使用することで、クエリのパフォーマンス向上に役立つ場合があります。  
   
 > [!NOTE]  
->  XML インデックスを作成したり変更したりするには、**xml** データ型を操作できるようにデータベース オプションが正しく設定されている必要があります。 詳細については、「[XML 列でのフルテキスト検索の使用](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)」を参照してください。  
+>  XML インデックスを作成したり変更したりするには、 **xml** データ型を操作できるようにデータベース オプションが正しく設定されている必要があります。 詳細については、「 [XML 列でのフルテキスト検索の使用](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)」を参照してください。  
   
- XML インスタンスは、BLOB (バイナリ ラージ オブジェクト) として **xml** 型の列に格納されます。 これらの XML インスタンスは大きくなる可能性がありますが、**xml** データ型インスタンスをバイナリ表記したものを最大 2 GB まで格納できます。 インデックスを設定しない場合、クエリを評価するためにこのようなバイナリ ラージ オブジェクトが実行時に細分化されます。 この細分化には時間がかかる場合があります。 たとえば、次のクエリについて考えてみます。  
+ XML インスタンスは、BLOB (バイナリ ラージ オブジェクト) として **xml** 型の列に格納されます。 これらの XML インスタンスは大きくなる可能性がありますが、 **xml** データ型インスタンスをバイナリ表記したものを最大 2 GB まで格納できます。 インデックスを設定しない場合、クエリを評価するためにこのようなバイナリ ラージ オブジェクトが実行時に細分化されます。 この細分化には時間がかかる場合があります。 たとえば、次のクエリについて考えてみます。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
@@ -69,14 +73,14 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]') = 1  
 ```  
   
- `WHERE` 句の条件を満たす XML インスタンスを選択するために、テーブル `Production.ProductModel` の各行内の XML BLOB (バイナリ ラージ オブジェクト) が実行時に細分化されます。 次に、`(/PD:ProductDescription/@ProductModelID[.="19"]` メソッドの式 `exist()`) が評価されます。 このような実行時の細分化は、列に格納されたインスタンスのサイズや数によってはコストが高くなる場合があります。  
+ `WHERE` 句の条件を満たす XML インスタンスを選択するために、テーブル `Production.ProductModel` の各行内の XML BLOB (バイナリ ラージ オブジェクト) が実行時に細分化されます。 次に、 `(/PD:ProductDescription/@ProductModelID[.="19"]`メソッドの式 `exist()` ) が評価されます。 このような実行時の細分化は、列に格納されたインスタンスのサイズや数によってはコストが高くなる場合があります。  
   
- 使用しているアプリケーション環境で、XML BLOB (バイナリ ラージ オブジェクト) に対するクエリを頻繁に実行する場合は、**xml** 型の列のインデックスを設定することが役に立ちます。 ただし、データの変更時には、インデックスのメンテナンスに関するコストがかかります。  
+ 使用しているアプリケーション環境で、XML BLOB (バイナリ ラージ オブジェクト) に対するクエリを頻繁に実行する場合は、 **xml** 型の列のインデックスを設定することが役に立ちます。 ただし、データの変更時には、インデックスのメンテナンスに関するコストがかかります。  
   
-## プライマリ XML インデックス  
+## <a name="primary-xml-index"></a>プライマリ XML インデックス  
  プライマリ XML インデックスにより、XML 列に保存されている XML インスタンスのすべてのタグ、値、およびパスにインデックスが設定されます。 プライマリ XML インデックスを作成するには、XML 列があるテーブルの主キーにクラスター化インデックスが作成されている必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この主キーを使用して、プライマリ XML インデックスの行を、XML 列を含むテーブルの行に関連付けます。  
   
- プライマリ XML インデックスは、**xml** データ型列内の XML BLOB の細分化された永続化表現です。 インデックスでは、列内の XML BLOB (バイナリ ラージ オブジェクト) ごとに、数行のデータ行が作成されます。 インデックス内の行数は、XML バイナリ ラージ オブジェクトのノード数とほぼ等しくなります。 クエリで完全な XML インスタンスを取得する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって XML 列からインスタンスが返されます。 XML インスタンス内でクエリを実行するときはプライマリ XML インデックスが使用され、インデックス自体によってスカラー値または XML サブツリーが返すことができます。  
+ プライマリ XML インデックスは、 **xml** データ型列内の XML BLOB の細分化された永続化表現です。 インデックスでは、列内の XML BLOB (バイナリ ラージ オブジェクト) ごとに、数行のデータ行が作成されます。 インデックス内の行数は、XML バイナリ ラージ オブジェクトのノード数とほぼ等しくなります。 クエリで完全な XML インスタンスを取得する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって XML 列からインスタンスが返されます。 XML インスタンス内でクエリを実行するときはプライマリ XML インデックスが使用され、インデックス自体によってスカラー値または XML サブツリーが返すことができます。  
   
  各行には、次のノード情報が格納されます。  
   
@@ -100,7 +104,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `/Book/*/Title` 式の中間でワイルドカード文字 (`*`) が指定されています。  
   
- [xml データ型のメソッド](../../t-sql/xml/xml-data-type-methods.md)に関係するクエリの場合、クエリ プロセッサでプライマリ XML インデックスが使用され、スカラー値またはプライマリ インデックス自体の XML サブツリーのどちらかが返されます。 (このプライマリ XML インデックスには XML インスタンスの再構築に必要なすべての情報が格納されています)。  
+ [xml データ型のメソッド](../../t-sql/xml/xml-data-type-methods.md) に関係するクエリの場合、クエリ プロセッサでプライマリ XML インデックスが使用され、スカラー値またはプライマリ インデックス自体の XML サブツリーのどちらかが返されます。 (このプライマリ XML インデックスには XML インスタンスの再構築に必要なすべての情報が格納されています)。  
   
  たとえば、次のクエリからは `ProductModel` テーブルの `CatalogDescription`**xml** 型の列に格納された集計情報が返されます。 このクエリでは、カタログの説明に <`Features`> の説明も含まれている製品モデルに限り <`Summary`> 情報が返されます。  
   
@@ -116,7 +120,7 @@ WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-wo
 USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE ProductModelID=7;  
 ```  
   
-## セカンダリ XML インデックス  
+## <a name="secondary-xml-indexes"></a>セカンダリ XML インデックス  
  検索のパフォーマンスを向上するために、セカンダリ XML インデックスを作成できます。 セカンダリ XML インデックスを作成する前に、プライマリ XML インデックスが存在している必要があります。 セカンダリ XML インデックスの種類を次に示します。  
   
 -   PATH セカンダリ XML インデックス  
@@ -133,7 +137,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   XML インスタンスの値を、要素名または属性名がわからないままクエリで取得する場合、VALUE インデックスを作成できます。 //author[last-name="Howard"] (\<author> 要素が階層のどのレベルにあってもよい) のように、descendant 軸を参照する場合がその典型です。 また、ワイルドカードを使用するクエリ (いずれかの属性に値 "novel" が指定された \<book> 要素をクエリで検索する /book [@* = "novel"] など) もこれに該当します。  
   
-### PATH セカンダリ XML インデックス  
+### <a name="path-secondary-xml-index"></a>PATH セカンダリ XML インデックス  
  クエリで **xml** 型列のパス式をよく指定している場合、PATH セカンダリ インデックスにより検索速度を向上できる場合があります。 このトピックで既に説明したように、WHERE 句に **exist()** メソッドを指定するクエリを使用する場合には、プライマリ インデックスが役に立ちます。 PATH セカンダリ インデックスを追加することでも、そのようなクエリの検索パフォーマンスが向上する場合があります。  
   
  プライマリ XML インデックスにより、XML バイナリ ラージ オブジェクトを実行時に細分化せずに済むようになりますが、パス式に基づくクエリのパフォーマンスが最適にならない場合があります。 XML バイナリ ラージ オブジェクトに対応するプライマリ XML インデックスのすべての行は大きな XML インスタンスに対して順番に検索されるので、検索速度が低下する場合があります。 このような場合、プライマリ インデックスのパス値とノード値にセカンダリ インデックスを構築すると、インデックス検索の速度を大幅に向上できます。 PATH セカンダリ インデックスではパス値とノード値がキー列になり、パスの検索時により効率的にシークできるようになります。 クエリ オプティマイザーでは、次に示すような式に PATH インデックスを使用できます。  
@@ -156,18 +160,18 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]') = 1  
 ```  
   
- このクエリでは、`exist()` メソッド内のパス式 `/PD:ProductDescription/@ProductModelID` と値 `"19"` が PATH インデックスのキー フィールドに対応しています。 これにより、PATH インデックス内を直接シークできるようになり、プライマリ XML インデックスでパス値を順番に検索するよりも検索のパフォーマンスが向上します。  
+ このクエリでは、 `/PD:ProductDescription/@ProductModelID` メソッド内のパス式 `"19"` と値 `exist()` が PATH インデックスのキー フィールドに対応しています。 これにより、PATH インデックス内を直接シークできるようになり、プライマリ XML インデックスでパス値を順番に検索するよりも検索のパフォーマンスが向上します。  
   
-### VALUE セカンダリ XML インデックス  
- `/Root/ProductDescription/@*[. = "Mountain Bike"]` や `//ProductDescription[@Name = "Mountain Bike"]` などのように、クエリが値に基づいており、パスが完全に指定されていない場合や、パスにワイルドカードが含まれている場合は、プライマリ XML インデックスのノード値にセカンダリ XML インデックスを構築すると、より迅速に結果を得られる場合があります。  
+### <a name="value-secondary-xml-index"></a>VALUE セカンダリ XML インデックス  
+ `/Root/ProductDescription/@*[. = "Mountain Bike"]` や `//ProductDescription[@Name = "Mountain Bike"]`などのように、クエリが値に基づいており、パスが完全に指定されていない場合や、パスにワイルドカードが含まれている場合は、プライマリ XML インデックスのノード値にセカンダリ XML インデックスを構築すると、より迅速に結果を得られる場合があります。  
   
  VALUE インデックスのキー列は、プライマリ XML インデックスの列 (ノード値とパス) です。 値を格納している要素名または属性名がわからない状態で XML インスタンスの値に対するクエリを実行する作業がワークロードに含まれている場合、VALUE インデックスが役立つことがあります。 たとえば、次の式は VALUE インデックスを使用すると効率的になります。  
   
--   `//author[LastName="someName"]` <`LastName`> 要素の値はわかっていますが、親である <`author`> はどこにでも存在し得ます。  
+-   `//author[LastName="someName"]`: <`LastName`> 要素の値はわかっていますが、親である <`author`> はどこにでも存在し得ます。  
   
--   `/book[@* = "someValue"]` `"someValue"` という値の属性を持つ <`book`> 要素を検索します。  
+-   `/book[@* = "someValue"]`: `"someValue"` という値の属性を持つ <`book`> 要素を検索します。  
   
- 次のクエリは、`ContactID` テーブルから `Contact` を返します。 `WHERE` 句では、`AdditionalContactInfo`**xml** 型列の値を検索するフィルターを指定しています。 連絡先 ID は、対応する追加の連絡先情報の XML バイナリ ラージ オブジェクトに特定の電話番号が含まれている場合にのみ返されます。 <`telephoneNumber`> 要素は XML 内のどこにでも存在し得るので、パス式で descendent-or-self 軸を指定しています。  
+ 次のクエリは、 `ContactID` テーブルから `Contact` を返します。 `WHERE` 句では、 `AdditionalContactInfo`**xml** 型列の値を検索するフィルターを指定しています。 連絡先 ID は、対応する追加の連絡先情報の XML バイナリ ラージ オブジェクトに特定の電話番号が含まれている場合にのみ返されます。 <`telephoneNumber`> 要素は XML 内のどこにでも存在し得るので、パス式で descendent-or-self 軸を指定しています。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -181,12 +185,12 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
   
  この場合、検索する <`number`> の値はわかっていますが、この値は <`telephoneNumber`> 要素の子として XML インスタンス内のどこにでも存在できます。 このようなクエリでは特定の値に基づいてインデックス参照を行うと、効率的になる場合があります。  
   
-### PROPERTY セカンダリ XML インデックス  
+### <a name="property-secondary-index"></a>PROPERTY セカンダリ XML インデックス  
  個々の XML インスタンスから 1 つ以上の値を取得するクエリでは、PROPERTY インデックスを使用するとメリットが得られる場合があります。 **xml** 型の **value()** メソッドを使用してオブジェクトのプロパティを取得する場合や、オブジェクトの主キー値が既知である場合にこのような状況が発生します。  
   
  PROPERTY インデックスは、プライマリ XML インデックスの列 (PK、パス、およびノード値) について構築されます。PK はベース テーブルの主キーです。  
   
- たとえば、次のクエリでは、製品モデル `19` の `ProductModelID` 属性と `ProductModelName` 属性の値を `value()` メソッドを使用して取得しています。 プライマリ XML インデックスや他のセカンダリ XML インデックスではなく PROPERTY インデックスを使用すると、クエリをより迅速に実行できる場合があります。  
+ たとえば、次のクエリでは、製品モデル `19`の `ProductModelID` 属性と `ProductModelName` 属性の値を `value()` メソッドを使用して取得しています。 プライマリ XML インデックスや他のセカンダリ XML インデックスではなく PROPERTY インデックスを使用すると、クエリをより迅速に実行できる場合があります。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
@@ -205,14 +209,14 @@ WHERE ProductModelID = 19
   
 -   [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  
   
-## XML インデックスに関する情報の取得  
+## <a name="getting-information-about-xml-indexes"></a>XML インデックスに関する情報の取得  
  XML インデックス エントリは、カタログ ビュー sys.indexes にインデックスの "type" 3 として表示されます。 name 列には XML インデックスの名前が格納されています。  
   
  XML インデックスはカタログ ビュー sys.xml_indexes にも記録されます。 このビューには、sys.indexes のすべての列および XML インデックスに有用な特定の列が含まれています。 列 secondary_type に値 NULL がある場合はプライマリ XML インデックスであることを示します。セカンダリ XML インデックスの値 "P"、"R"、および "V" はそれぞれ PATH、PROPERTY、VALUE を示します。  
   
- XML インデックスによる領域の使用状況は、テーブル値関数 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) でわかります。 この関数は、すべてのインデックスの種類について、占有しているディスク ページの数、バイト単位の平均行サイズ、レコードの数などの情報を示します。 また、この情報には XML インデックスも含まれています。 この情報はデータベース パーティションごとに取得できます。 どの XML インデックスにも同一の、ベース テーブルのパーティション構成とパーティション関数が使用されます。  
+ XML インデックスによる領域の使用状況は、テーブル値関数 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)でわかります。 この関数は、すべてのインデックスの種類について、占有しているディスク ページの数、バイト単位の平均行サイズ、レコードの数などの情報を示します。 また、この情報には XML インデックスも含まれています。 この情報はデータベース パーティションごとに取得できます。 どの XML インデックスにも同一の、ベース テーブルのパーティション構成とパーティション関数が使用されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
  [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

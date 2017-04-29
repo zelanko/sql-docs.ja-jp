@@ -1,31 +1,35 @@
 ---
-title: "ビュー | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ビュー [SQL Server], ビューの概要"
+title: "ビュー |Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- views [SQL Server], about views
 ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ca3c02162484ebf4f12a8b98b1cad2b1aea89c22
+ms.lasthandoff: 04/11/2017
+
 ---
-# ビュー
+# <a name="views"></a>ビュー
   ビューとは、クエリによって内容が定義される仮想テーブルです。 ビューは、テーブルと同様に、一連の名前の付いた列とデータ行で構成されます。 インデックスが設定されていないと、データベース内に保存された一連のデータ値としてビューが作成されることはありません。 データは、ビューを定義するクエリが参照するテーブルから取り出され、ビューの行と列はビューを参照したときに動的に作成されます。  
   
  ビューは、ビューが参照する基になるテーブルに対するフィルターの役目を果たします。 ビューを定義するクエリでは、1 つ以上のテーブルを参照することも、現在のデータベースや他のデータベースのビューを参照することもできます。 参照先が複数で種類が異なる場合、ビューの定義に分散クエリも使用できます。 分散クエリは、組織のデータを地域ごとのサーバーに保存している場合に、複数のサーバーから同じ構造のデータを結合するときなどに便利です。  
   
- ビューは一般的に、各ユーザーのデータベースに対する認識を特化、簡素化、およびカスタマイズするために使用されます。 ビューは、基になるベース テーブルに直接アクセスする権限をユーザーに与えずに、ユーザーがビューを介してデータにアクセスできるように設定することにより、セキュリティのメカニズムとして使用できます。 ビューを使用すると、以前に存在していたテーブルのスキーマが変更された場合に、このテーブルをエミュレートするための後方互換性インターフェイスを提供できます。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にデータをコピーする場合、および SQL Server からデータをコピーする場合に、パフォーマンスの向上やデータのパーティション分割にビューを使用できます。  
+ ビューは一般的に、各ユーザーのデータベースに対する認識を特化、簡素化、およびカスタマイズするために使用されます。 ビューは、基になるベース テーブルに直接アクセスする権限をユーザーに与えずに、ユーザーがビューを介してデータにアクセスできるように設定することにより、セキュリティのメカニズムとして使用できます。 ビューを使用すると、以前に存在していたテーブルのスキーマが変更された場合に、このテーブルをエミュレートするための後方互換性インターフェイスを提供できます。 また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にデータをコピーする場合、および SQL Server からデータをコピーする場合に、パフォーマンスの向上やデータのパーティション分割にビューを使用できます。  
   
-## ビューの種類  
+## <a name="types-of-views"></a>ビューの種類  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、標準的な役割を果たす基本的なユーザー定義のビュー以外に、データベース内で特別な目的で使用される次のようなビューがあります。  
   
  インデックス付きビュー  
@@ -35,22 +39,22 @@ caps.handback.revision: 21
  パーティション ビューでは、1 台以上のサーバーに分散された一連のメンバー テーブルからの、行方向にパーティション分割されたデータが結合されます。 これにより、データが 1 つのテーブルからのデータのように表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の同じインスタンスのメンバー テーブルを結合するビューは、ローカル パーティション ビューです。  
   
  システム ビュー  
- システム ビューは、カタログ メタデータを公開します。 システム ビューを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの情報や、インスタンスで定義されているオブジェクトの情報を返すことができます。 たとえば、sys.databases カタログ ビューに対してクエリを実行し、インスタンスで使用可能なユーザー定義データベースについての情報を返すことができます。 詳細については、「[システム ビュー &#40;Transact-SQL&#41;](../Topic/System%20Views%20\(Transact-SQL\).md)」を参照してください。  
+ システム ビューは、カタログ メタデータを公開します。 システム ビューを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの情報や、インスタンスで定義されているオブジェクトの情報を返すことができます。 たとえば、sys.databases カタログ ビューに対してクエリを実行し、インスタンスで使用可能なユーザー定義データベースについての情報を返すことができます。 詳細については、「[システム ビュー &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)」を参照してください。  
   
-## ビューの一般的なタスク  
+## <a name="common-view-tasks"></a>ビューの一般的なタスク  
  次の表に、ビューの作成や変更に関連する一般的なタスクへのリンクを示します。  
   
 |ビューのタスク|トピック|  
 |----------------|-----------|  
-|ビューを作成する方法について説明します。|[ビューの作成](../../relational-databases/views/create-views.md)|  
-|インデックス付きビューを作成する方法について説明します。|[インデックス付きビューの作成](../../relational-databases/views/create-indexed-views.md)|  
-|ビュー定義を変更する方法について説明します。|[ビューの変更](../../relational-databases/views/modify-views.md)|  
-|ビューでデータを変更する方法について説明します。|[ビューを使用したデータ変更](../../relational-databases/views/modify-data-through-a-view.md)|  
-|ビューを削除する方法について説明します。|[ビューの削除](../../relational-databases/views/delete-views.md)|  
-|ビュー定義など、ビューに関する情報を返す方法について説明します。|[ビューに関する情報の取得](../../relational-databases/views/get-information-about-a-view.md)|  
-|ビューの名前を変更する方法について説明します。|[ビューの名前の変更](../../relational-databases/views/rename-views.md)|  
+|ビューを作成する方法について説明します。|[Create Views (ビューの作成)](../../relational-databases/views/create-views.md)|  
+|インデックス付きビューを作成する方法について説明します。|[Create Indexed Views (インデックス付きビューの作成)](../../relational-databases/views/create-indexed-views.md)|  
+|ビュー定義を変更する方法について説明します。|[Modify Views (ビューの変更)](../../relational-databases/views/modify-views.md)|  
+|ビューでデータを変更する方法について説明します。|[Modify Data Through a View (ビューを使用したデータ変更)](../../relational-databases/views/modify-data-through-a-view.md)|  
+|ビューを削除する方法について説明します。|[Delete Views (ビューの削除)](../../relational-databases/views/delete-views.md)|  
+|ビュー定義など、ビューに関する情報を返す方法について説明します。|[Get Information About a View (ビューに関する情報の取得)](../../relational-databases/views/get-information-about-a-view.md)|  
+|ビューの名前を変更する方法について説明します。|[Rename Views (ビューの名前の変更)](../../relational-databases/views/rename-views.md)|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [XML 列でのビューの作成](../../relational-databases/xml/create-views-over-xml-columns.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)  
   

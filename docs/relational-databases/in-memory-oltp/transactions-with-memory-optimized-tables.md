@@ -1,25 +1,29 @@
 ---
 title: "メモリ最適化テーブルでのトランザクション | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "08/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- MSDN content
+- MSDN - SQL DB
+ms.date: 08/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.service: sql-database
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aaa888f18eae1c5d49eb3bcff13424a4cbfc6ec6
+ms.lasthandoff: 04/11/2017
+
 ---
-# メモリ最適化テーブルでのトランザクション
+# <a name="transactions-with-memory-optimized-tables"></a>メモリ最適化テーブルでのトランザクション
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
@@ -27,13 +31,13 @@ caps.handback.revision: 15
   
 SQL Server のトランザクション分離レベルは、ディスク ベースのテーブルとは異なる方法でメモリ最適化テーブルに適用されます。基になるメカニズムも異なっています。 プログラマは、この違いを理解することで、高スループットのシステムを設計しやすくなります。 トランザクションの整合性という目標は、すべての状況で共有されます。  
 
-メモリ最適化テーブルでのトランザクションに固有のエラー条件については、「[競合の検出と再試行ロジック](#confdetretry34ni)」のセクションに移動してください。
+メモリ最適化テーブルでのトランザクションに固有のエラー条件については、「 [競合の検出と再試行ロジック](#confdetretry34ni)」のセクションに移動してください。
   
-詳細については、「[SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。  
+詳細については、「 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。  
   
   
   
-#### この記事のセクション:  
+#### <a name="sections-in-this-article"></a>この記事のセクション:  
   
 - [ペシミスティックとオプティミスティック](#pessvoptim22ni)  
 - [トランザクション開始モード](#txninitmodes24ni)  
@@ -52,7 +56,7 @@ SQL Server のトランザクション分離レベルは、ディスク ベー�
   
 <a name="pessvoptim22ni"/>  
   
-## ペシミスティックとオプティミスティック  
+## <a name="pessimistic-versus-optimistic"></a>ペシミスティックとオプティミスティック  
   
 トランザクションの整合性へのアプローチがオプティミスティックかペシミスティックかによって、機能は異なってきます。 メモリ最適化テーブルでは、オプティミスティック アプローチが使用されます。  
   
@@ -65,7 +69,7 @@ SQL Server のトランザクション分離レベルは、ディスク ベー�
   
 <a name="txninitmodes24ni"/>  
   
-## トランザクション開始モード  
+## <a name="transaction-initiation-modes"></a>トランザクション開始モード  
   
 SQL Server のトランザクション開始モードは次のとおりです。  
   
@@ -81,7 +85,7 @@ SQL Server のトランザクション開始モードは次のとおりです。
   
 <a name="codeexamexpmode25ni"/>  
   
-### Explicit モードのコード例  
+### <a name="code-example-with-explicit-mode"></a>Explicit モードのコード例  
   
 解釈された Transact-SQL スクリプトでは次を使用します。  
   
@@ -110,23 +114,23 @@ SQL Server のトランザクション開始モードは次のとおりです。
       
     COMMIT TRANSACTION;  
   
-なお、データベース オプション `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` を使用することで、`WITH (SNAPSHOT)` ヒントの必要はなくなります。 このオプションを `ON` に設定すると、低い分離レベルでのメモリ最適化テーブルへのアクセスは、自動的に SNAPSHOT 分離に昇格されます。  
+なお、データベース オプション `WITH (SNAPSHOT)` を使用することで、 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`ヒントの必要はなくなります。 このオプションを `ON`に設定すると、低い分離レベルでのメモリ最適化テーブルへのアクセスは、自動的に SNAPSHOT 分離に昇格されます。  
   
     ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
   
 <a name="rowver28ni"/>  
   
-## 行のバージョン管理  
+## <a name="row-versioning"></a>行のバージョン管理  
   
-メモリ最適化テーブルでは高度な行バージョン管理システムが使用され、最も厳密な分離レベル SERIALIZABLE でも、効率的なオプティミスティック アプローチが実現します。 詳細については、「[メモリ最適化テーブルの概要](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)」を参照してください。  
+メモリ最適化テーブルでは高度な行バージョン管理システムが使用され、最も厳密な分離レベル SERIALIZABLE でも、効率的なオプティミスティック アプローチが実現します。 詳細については、「 [メモリ最適化テーブルの概要](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)」を参照してください。  
   
 READ_COMMITTED_SNAPSHOT または SNAPSHOT 分離レベルが有効な場合は、行バージョン管理システムがディスク ベースのテーブルに間接的に含まれます。 このシステムは tempdb に基づいています。一方、メモリ最適化データ構造には、最大限の効率を得るために、行バージョン管理が組み込まれています。  
   
 <a name="confdegreeiso30ni"/>  
   
-## 分離レベル 
+## <a name="isolation-levels"></a>分離レベル 
   
-次の表は、トランザクション分離のレベルを、分離が少ないものから順に示しています。 発生する可能性のある競合、およびこれらの競合を処理するための再試行ロジックの詳細については、「[競合の検出と再試行ロジック](#confdetretry34ni)」を参照してください。 
+次の表は、トランザクション分離のレベルを、分離が少ないものから順に示しています。 発生する可能性のある競合、およびこれらの競合を処理するための再試行ロジックの詳細については、「 [競合の検出と再試行ロジック](#confdetretry34ni)」を参照してください。 
   
 | [分離レベル] | 説明 |   
 | :-- | :-- |   
@@ -134,14 +138,14 @@ READ_COMMITTED_SNAPSHOT または SNAPSHOT 分離レベルが有効な場合は�
 | READ COMMITTED | オートコミット モードが有効の場合にのみ、メモリ最適化テーブルに対してサポートされます。 この場合でも、セッション レベル TRANSACTION ISOLATION LEVEL が READ COMMITTED に設定されていれば、WITH (SNAPSHOT) テーブル ヒントを使用するか、データベース設定 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT を ON に設定することにより、SNAPSHOT 分離でメモリ最適化テーブルにアクセスすることができます。 <br/><br/> なお、データベース オプション READ_COMMITTED_SNAPSHOT が ON に設定されている場合は、同じステートメント内でメモリ最適化テーブルとディスク ベースのテーブルの両方に READ COMMITTED 分離でアクセスすることはできません。 |  
 | SNAPSHOT | メモリ最適化テーブルでサポートされます。 <br/><br/> 内部的には、SNAPSHOT は、メモリ最適化テーブルを対象とした最も要求が少ないトランザクション分離レベルです。 <br/><br/> SNAPSHOT が使用するシステム リソースは、REPEATABLE READ または SERIALIZABLE での使用量を下回ります。 |  
 | REPEATABLE READ | メモリ最適化テーブルでサポートされます。 REPEATABLE READ 分離では、同時実行トランザクションはこのトランザクションが読み取ったどの行もコミット時に更新していないということが保証されます。 <br/><br/> オプティミスティック モデルであるため、このトランザクションが読み取った行を同時実行トランザクションが更新することは妨げられません。 代わりに、REPEATABLE READ 分離に違反していないことをコミット時にこのトランザクションが検証しています。 違反している場合、このトランザクションはロールバックされるため、再試行する必要があります。 | 
-| SERIALIZABLE | メモリ最適化テーブルでサポートされます。 <br/><br/> 分離が厳密すぎるため、トランザクションが同時ではなくほぼ順番に実行されることから、*Serializable* という名前が付いています。 | 
+| SERIALIZABLE | メモリ最適化テーブルでサポートされます。 <br/><br/> 分離が厳密すぎるため、トランザクションが同時ではなくほぼ順番に実行されることから、 *Serializable* という名前が付いています。 | 
 
 
 
 
 <a name="txnphaslife32ni"/>  
   
-## トランザクション フェーズと有効期間  
+## <a name="transaction-phases-and-lifetime"></a>トランザクション フェーズと有効期間  
   
 メモリ最適化テーブルが関係している場合、トランザクションの有効期間は次の図に示すようなフェーズを辿ります。  
   
@@ -149,17 +153,17 @@ READ_COMMITTED_SNAPSHOT または SNAPSHOT 分離レベルが有効な場合は�
   
 各フェーズの説明は次のとおりです。  
   
-#### 通常の処理: フェーズ 1 (1/3)  
+#### <a name="regular-processing-phase-1-of-3"></a>通常の処理: フェーズ 1 (1/3)  
   
 - このフェーズは、すべてのクエリとクエリ内の DML ステートメントの実行で構成されます。  
 - このフェーズでは、トランザクションの論理的開始時点のメモリ最適化テーブルのバージョンをステートメントが調べます。  
   
-#### 検証: フェーズ 2 (2/3)  
+#### <a name="validation-phase-2-of-3"></a>検証: フェーズ 2 (2/3)  
   
 - 終了時刻を割り当て、それによってトランザクションに論理的完了とマークすると、検証フェーズが始まります。 これにより、トランザクションのすべての変更が他のトランザクションから見えるようになります。他のトランザクションはこのトランザクションに依存するようになり、このトランザクションが正常に完了するまでコミットすることはできません。 さらに、このような依存関係を保持するトランザクションは、結果セットをクライアントに返すことはできません。データベースに正常にコミットされたデータのみ、クライアントが参照するようにするためです。  
-- このフェーズは、repeatable read と serializable の検証で構成されます。 repeatable read の検証では、トランザクションによって読み取られた行のいずれかが以降更新されたかどうかがチェックされます。 serializable の検証では、このトランザクションによってスキャンされたいずれかのデータ範囲に行が挿入されたかどうかがチェックされます。 なお、スナップショット分離の使用時は、一意キー制約と外部キー制約の整合性を検証するために、「[分離レベルと競合](#confdegreeiso30ni)」の表に従って、repeatable read と serializable の両方の検証が行われることがあります。  
+- このフェーズは、repeatable read と serializable の検証で構成されます。 repeatable read の検証では、トランザクションによって読み取られた行のいずれかが以降更新されたかどうかがチェックされます。 serializable の検証では、このトランザクションによってスキャンされたいずれかのデータ範囲に行が挿入されたかどうかがチェックされます。 なお、スナップショット分離の使用時は、一意キー制約と外部キー制約の整合性を検証するために、「 [分離レベルと競合](#confdegreeiso30ni)」の表に従って、repeatable read と serializable の両方の検証が行われることがあります。  
   
-#### コミット処理: フェーズ 3 (3/3)  
+#### <a name="commit-processing-phase-3-of-3"></a>コミット処理: フェーズ 3 (3/3)  
   
 - コミット フェーズでは、持続性のあるテーブルへの変更がログに書き込まれ、そのログはディスクに書き込まれます。 その後、制御がクライアントに返されます。  
 - コミット処理が完了すると、すべての従属トランザクションにコミット可能であることが通知されます。  
@@ -168,7 +172,7 @@ READ_COMMITTED_SNAPSHOT または SNAPSHOT 分離レベルが有効な場合は�
   
 <a name="confdetretry34ni"/>  
   
-## 競合の検出と再試行ロジック 
+## <a name="conflict-detection-and-retry-logic"></a>競合の検出と再試行ロジック 
 
 トランザクションが失敗してロールバックが行われる原因となるトランザクション関連のエラー条件には、2 種類あります。 ほとんどの場合、このようなエラーが発生したら、デッドロックが発生したときと同様に、トランザクションを再試行する必要があります。
 - 同時実行トランザクション間の競合。 これらは更新の競合と検証のエラーであり、トランザクション分離レベル違反や制約違反が原因として考えられます。
@@ -179,13 +183,13 @@ READ_COMMITTED_SNAPSHOT または SNAPSHOT 分離レベルが有効な場合は�
 | エラー コード | 説明 | 原因 |
 | :-- | :-- | :-- |
 | **41302** | 現在のトランザクションが開始されてから別のトランザクションで更新された行を更新しようとしました。 | このエラー条件は、2 つの同時実行トランザクションが同時に同じ行を更新または削除しようとした場合に発生します。 2 つのトランザクションのうちの 1 つがこのエラー メッセージを受け取り、そのトランザクションは再試行が必要になります。 <br/><br/>  | 
-| **41305**| REPEATABLE READ の検証の失敗。 このトランザクションがメモリ最適化テーブルから読み取った行が、このトランザクションのコミット前にコミットした別のトランザクションによって更新されました。 | このエラーは、REPEATABLE READ 分離または SERIALIZABLE 分離の使用時に発生することがあります。また、同時実行トランザクションのアクションが FOREIGN KEY 制約の違反を引き起こした場合も発生する可能性があります。 <br/><br/>外部キー制約のこのような同時違反は通常まれであり、一般的にはアプリケーション ロジックまたはデータ エントリの問題を示しています。 ただし、FOREIGN KEY 制約に関係する列のインデックスが存在しない場合も、このエラーが発行する可能性があります。 したがって、メモリ最適化テーブルでは、外部キー列のインデックスを必ず作成するようにしてください。 <br/><br/> 外部キー違反によって発生する検証エラーに関する考慮事項の詳細については、SQL Server Customer Advisory Team による[このブログ投稿](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/)を参照してください。 |  
+| **41305**| REPEATABLE READ の検証の失敗。 このトランザクションがメモリ最適化テーブルから読み取った行が、このトランザクションのコミット前にコミットした別のトランザクションによって更新されました。 | このエラーは、REPEATABLE READ 分離または SERIALIZABLE 分離の使用時に発生することがあります。また、同時実行トランザクションのアクションが FOREIGN KEY 制約の違反を引き起こした場合も発生する可能性があります。 <br/><br/>外部キー制約のこのような同時違反は通常まれであり、一般的にはアプリケーション ロジックまたはデータ エントリの問題を示しています。 ただし、FOREIGN KEY 制約に関係する列のインデックスが存在しない場合も、このエラーが発行する可能性があります。 したがって、メモリ最適化テーブルでは、外部キー列のインデックスを必ず作成するようにしてください。 <br/><br/> 外部キー違反によって発生する検証エラーに関する考慮事項の詳細については、SQL Server Customer Advisory Team による [このブログ投稿](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) を参照してください。 |  
 | **41325** | SERIALIZABLE の検証の失敗。 以前スキャンされた範囲に、現在のトランザクションによって新しい行が挿入されました。 これはファントム行と呼ばれます。 | このエラーは、SERIALIZABLE 分離の使用時に発生することがあります。また、同時実行トランザクションのアクションが PRIMARY KEY、UNIQUE、または FOREIGN KEY 制約の違反を引き起こした場合も発生する可能性があります。 <br/><br/> このような同時制約違反は通常まれであり、一般的にはアプリケーション ロジックまたはデータ エントリの問題を示しています。 ただし、repeatable read の検証エラーと同様に、関係する列のインデックスが指定されていない FOREIGN KEY 制約が存在する場合も、このエラーが発生する可能性があります。 |  
 | **41301** | 依存関係のエラー: 後でコミットに失敗した別のトランザクションに依存していました。 | このトランザクション (Tx1) は別のトランザクション (Tx2) が書き込んだデータを読み取ることによって、そのトランザクション (Tx2) への依存関係ができましたが、Tx2 は自身の検証またはコミット処理のフェーズでした。 Tx2 はその後コミットに失敗しました。 Tx2 がコミットに失敗する最も一般的な原因は、repeatable read (41305) および serializable (41325) 検証エラーです。まれな原因として、ログ IO エラーがあります。 |
-| **41839** | トランザクションがコミット依存関係の最大数を超えました。 | ある特定のトランザクション (Tx1) が依存できるトランザクションの数には制限があります (出力依存関係)。 また、ある特定のトランザクション (Tx1) に依存できるトランザクションの数にも制限があります (入力依存関係)。 両方とも 8 が限度です。 <br/><br/> このエラーの最も一般的なケースは、1 つの書き込みトランザクションによって書き込まれたデータに多数の読み取りトランザクションがアクセスする場合です。 同じデータの大規模スキャンを読み取りトランザクションがすべて実行している場合、および書き込みトランザクションの検証またはコミット処理に時間がかかる場合は、この条件が発生する可能性が高くなります。たとえば、書き込みトランザクションが serializable 分離で大規模スキャンを実行します (検証フェーズが長くなる)。また、トランザクション ログが低速ログ IO デバイスに置かれます (コミット処理が長くなる)。 読み取りトランザクションが大規模スキャンを実行しているものの、数行しかアクセスしないと思われる場合、このエラーは、インデックスの欠落を示している可能性があります。 同様に、書き込みトランザクションが serializable 分離を使用して大規模スキャンを実行しているものの、数行しかアクセスしないと思われる場合も、このエラーは、インデックスの欠落を示しています。 <br/><br/> コミット依存関係の数の制限は、トレース フラグ **9926** を使用することによって引き上げることができます。 このトレース フラグは、インデックスが欠落していないことを確認した後もこのエラー条件が発生する場合のみ使用してください。上記のケースにおけるこうした問題が隠されてしまう可能性があるからです。 もう 1 つの注意点は、依存関係グラフが複雑になると、システムの非効率につながる可能性があるということです。各トランザクションの入力依存関係と出力依存関係の両方の数が大きくなり、個々のトランザクションに依存関係の層が多数存在するようになるからです。  |
+| **41839** | トランザクションがコミット依存関係の最大数を超えました。 | ある特定のトランザクション (Tx1) が依存できるトランザクションの数には制限があります (出力依存関係)。 また、ある特定のトランザクション (Tx1) に依存できるトランザクションの数にも制限があります (入力依存関係)。 両方とも 8 が限度です。 <br/><br/> このエラーの最も一般的なケースは、1 つの書き込みトランザクションによって書き込まれたデータに多数の読み取りトランザクションがアクセスする場合です。 同じデータの大規模スキャンを読み取りトランザクションがすべて実行している場合、および書き込みトランザクションの検証またはコミット処理に時間がかかる場合は、この条件が発生する可能性が高くなります。たとえば、書き込みトランザクションが serializable 分離で大規模スキャンを実行します (検証フェーズが長くなる)。また、トランザクション ログが低速ログ IO デバイスに置かれます (コミット処理が長くなる)。 読み取りトランザクションが大規模スキャンを実行しているものの、数行しかアクセスしないと思われる場合、このエラーは、インデックスの欠落を示している可能性があります。 同様に、書き込みトランザクションが serializable 分離を使用して大規模スキャンを実行しているものの、数行しかアクセスしないと思われる場合も、このエラーは、インデックスの欠落を示しています。 <br/><br/> コミット依存関係の数の制限は、トレース フラグ **9926**を使用することによって引き上げることができます。 このトレース フラグは、インデックスが欠落していないことを確認した後もこのエラー条件が発生する場合のみ使用してください。上記のケースにおけるこうした問題が隠されてしまう可能性があるからです。 もう 1 つの注意点は、依存関係グラフが複雑になると、システムの非効率につながる可能性があるということです。各トランザクションの入力依存関係と出力依存関係の両方の数が大きくなり、個々のトランザクションに依存関係の層が多数存在するようになるからです。  |
  
   
-### 再試行ロジック 
+### <a name="retry-logic"></a>再試行ロジック 
 
 上記の条件のいずれかが原因でトランザクションが失敗した場合は、そのトランザクションを再試行する必要があります。
   
@@ -193,7 +197,7 @@ READ_COMMITTED_SNAPSHOT または SNAPSHOT 分離レベルが有効な場合は�
   
 <a name="retrytsqlcodeexam35ni"/>  
   
-#### 再試行 T-SQL コードの例  
+#### <a name="retry-t-sql-code-example"></a>再試行 T-SQL コードの例  
   
 T-SQL を使用するサーバー側の再試行ロジックは、クライアントに結果セットを返さないトランザクションにのみ使用するようにしてください。再試行では、予想されていないような追加の結果セットがクライアントに返されることになる可能性があるためです。  
   
@@ -254,7 +258,7 @@ T-SQL を使用するサーバー側の再試行ロジックは、クライア�
   
 <a name="crossconttxn38ni"/>  
   
-## 複数コンテナーにまたがるトランザクション  
+## <a name="cross-container-transaction"></a>複数コンテナーにまたがるトランザクション  
   
   
 次の場合、トランザクションは複数コンテナーにまたがるトランザクションと呼ばれます。  
@@ -278,7 +282,7 @@ Transact-SQL コードの例を次に示します。
       -- within one explicit transaction.  
   
     SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-    go  
+    GO  
   
     BEGIN TRANSACTION;  
   
@@ -296,13 +300,13 @@ Transact-SQL コードの例を次に示します。
   
   
     COMMIT TRANSACTION;  
-    go  
+    GO  
   
   
   
 <a name="limitations40ni"/>  
   
-## 制限事項  
+## <a name="limitations"></a>制限事項  
   
   
 - 複数データベースにまたがるトランザクションは、メモリ最適化テーブルではサポートされません。 トランザクションがメモリ最適化テーブルにアクセスする場合、そのトランザクションは、他のデータベースにはアクセスできません。ただし次を除きます。  
@@ -314,18 +318,18 @@ Transact-SQL コードの例を次に示します。
   
 <a name="natcompstorprocs42ni"/>  
   
-## ネイティブ コンパイル ストアド プロシージャ  
+## <a name="natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャ  
   
 - ネイティブ プロシージャでは、次のように、ATOMIC ブロックが、ブロック全体に対してトランザクション分離レベルを宣言する必要があります。  
   - `... BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, ...) ...`  
   
 - ネイティブ プロシージャの本文では、明示的なトランザクション制御ステートメントは許可されません。 BEGIN TRANSACTION、ROLLBACK TRANSACTION など、どれも許可されていません。  
   
-- ATOMIC ブロックに関するトランザクション制御の詳細については、「[ATOMIC ブロック](https://msdn.microsoft.com/library/dn452281.aspx)」を参照してください。  
+- ATOMIC ブロックに関するトランザクション制御の詳細については、「 [ATOMIC ブロック](https://msdn.microsoft.com/library/dn452281.aspx)」を参照してください。  
   
 <a name="othertxnlinks44ni"/>  
   
-## その他のトランザクション リンク  
+## <a name="other-transaction-links"></a>その他のトランザクション リンク  
   
 - [[SET IMPLICIT_TRANSACTIONS]](../../t-sql/statements/set-implicit-transactions-transact-sql.md)  
   
@@ -339,18 +343,18 @@ Transact-SQL コードの例を次に示します。
 Link Guids:  
 016fb05e-a702-484b-bd2a-a6eabd0d76fd , ms173763.aspx , "SET TRANSACTION ISOLATION LEVEL (Transact-SQL)"  
   
-ef1cc7de-63be-4fa3-a622-6d93b440e3ac , dn511014(v=sql.130,d=robot).aspx , "Introduction to Memory-Optimized Tables"  
+ef1cc7de-63be-4fa3-a622-6d93b440e3ac , dn511014(v=sql.130,d=robot).aspx ,"メモリ最適化テーブルの概要"  
   
 a300ac43-e4c0-4329-8b79-a1a05e63370a , ms187807.aspx , "SET IMPLICIT_TRANSACTIONS (Transact-SQL)"  
   
 e1e85908-9f31-47cf-8af6-88c77e6f24c9 , ms189823.aspx , "sp_getapplock (Transact-SQL)"  
   
-3ac93b28-cac7-483e-a8ab-ac44e1cc1c76 , dn449490.aspx , "Control Transaction Durability"  
+3ac93b28-cac7-483e-a8ab-ac44e1cc1c76 , dn449490.aspx , "トランザクションの持続性の制御"  
   
 Image: 'hekaton_transactions' , e9c5eb2f-c9a3-4625-8ae4-ac91447db42f  
-See also XMetal articles: dn133169.aspx , "Transaction Lifetime"  
+XMetal 記事: dn133169.aspx、「トランザクションの有効期間」もご覧ください  
   
-Transactions with In-Memory Tables and Procedures  
+インメモリ テーブルおよびプロシージャでのトランザクション  
 {ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5} , dn479429.aspx  
 Maybe replaces: 06075248-705e-4563-9371-b64cd609793c , dn479429.aspx , "Understanding Transactions on Memory-Optimized Tables"  
   
@@ -360,3 +364,5 @@ GeneMi , 2016-03-28 11:40am
   
   
   
+
+

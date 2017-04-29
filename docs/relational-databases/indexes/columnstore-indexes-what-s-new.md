@@ -1,26 +1,30 @@
 ---
-title: "列ストア インデックスのバージョン管理機能の概要 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "列ストア インデックス - 新機能 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
 caps.latest.revision: 28
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8dc55e28462cd04a90274ada860fd418bcc54775
+ms.lasthandoff: 04/11/2017
+
 ---
-# 列ストア インデックスのバージョン管理機能の概要
+# <a name="columnstore-indexes---what39s-new"></a>列ストア インデックス - 新機能
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各バージョンと、Azure SQL Database Premium Edition、Azure SQL Data Warehouse、および Parallel Data Warehouse の最新リリースで使用できる列ストア機能の概要。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各バージョンと、Azure SQL Database Premium Edition、Azure SQL Data Warehouse、および Parallel Data Warehouse の最新リリースで使用できる列ストア機能の概要。  
 
  >[!NOTE]
  > Azure SQL Database の場合、列ストア インデックスは Premium Edition でのみ使用できます。
@@ -161,11 +165,12 @@ caps.handback.revision: 27
 -   バッチ処理は、クエリのパフォーマンスを 2 倍以上向上させますが、並列クエリの実行でしか利用できません。  
   
 ## <a name="see-also"></a>参照  
- [列ストア インデックス ガイド](../Topic/Columnstore%20Indexes%20Guide.md)   
- [列ストア インデックス データの読み込み](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
+ 列ストア インデックス ガイド   
+ 列ストア インデックス データの読み込み   
  [列ストア インデックスのクエリ パフォーマンス](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [列ストアを使用したリアルタイム運用分析の概要](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [データ ウェアハウスの列ストア インデックス](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
+ データ ウェアハウスの列ストア インデックス   
  [列ストア インデックスの最適化](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

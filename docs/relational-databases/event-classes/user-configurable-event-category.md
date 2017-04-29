@@ -1,29 +1,33 @@
 ---
 title: "ユーザー構成可能イベント カテゴリ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server イベント クラス, ユーザー構成可能イベント カテゴリ"
-  - "イベント クラス [SQL Server], ユーザー構成可能イベント カテゴリ"
-  - "ユーザー構成可能イベント カテゴリ [SQL Server]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, User-Configurable event category
+- event classes [SQL Server], User-Configurable event category
+- User-Configurable event category [SQL Server]
 ms.assetid: 1791785b-d67d-4cab-8acc-b3cf13af7a1f
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 63ce89349141934c2e4d5cfd5a8507b7d28e2650
+ms.lasthandoff: 04/11/2017
+
 ---
-# ユーザー構成可能イベント カテゴリ
-  **ユーザー構成可能**イベント カテゴリには、**ユーザーが構成可能**なイベント クラスが含まれています。  
+# <a name="user-configurable-event-category"></a>ユーザー構成可能イベント カテゴリ
+  **ユーザー構成可能** イベント カテゴリには、 **ユーザーが構成可能** なイベント クラスが含まれています。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
   
 |トピック|説明|  
 |-----------|-----------------|  

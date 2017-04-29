@@ -1,30 +1,34 @@
 ---
 title: "アプリケーション コードでの FOR XML の結果の使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML 句, アプリケーション コードの使用"
-  - "XML [SQL Server], FOR XML 句"
-  - "ASP.NET [SQL Server]"
-  - ".NET framework [SQL Server], FOR XML データ"
-  - "ADO [SQL Server]"
-  - "XML データ アイランド [SQL Server]"
-  - "データ アイランド [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, application code usage
+- XML [SQL Server], FOR XML clause
+- ASP.NET [SQL Server]
+- .NET Framework [SQL Server], FOR XML data
+- ADO [SQL Server]
+- XML data islands [SQL Server]
+- data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f687e8b100ea8810bf92b21b0467932c72d21237
+ms.lasthandoff: 04/11/2017
+
 ---
-# アプリケーション コードでの FOR XML の結果の使用
+# <a name="use-for-xml-results-in-application-code"></a>アプリケーション コードでの FOR XML の結果の使用
   SQL クエリで FOR XML 句を使用することにより、クエリの結果を XML データで取得したり、XML データにキャストすることができます。 この機能により、FOR XML のクエリの結果を XML アプリケーション コードで使用するときに、次のことが可能になります。  
   
 -   [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md) 値のインスタンスの SQL テーブルにクエリを実行する  
@@ -33,10 +37,10 @@ caps.handback.revision: 23
   
  このトピックでは、これらの方法を示す例を提供します。  
   
-## ADO と XML データ アイランドによる、FOR XML データの取得  
+## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>ADO と XML データ アイランドによる、FOR XML データの取得  
  FOR XML クエリで作業を行っているときに、ADO **Stream** オブジェクト、または ASP (Active Server Page) **Request** オブジェクトや **Response** オブジェクトなどの、COM **IStream** インターフェイスをサポートする他のオブジェクトを使用して、結果を含めることができます。  
   
- たとえば、次の ASP コードは、AdventureWorks サンプル データベースの Sales.Store テーブルにある、**xml** データ型の列である Demographics のクエリ結果を示しています。 具体的には、クエリは CustomerID が 3 の行で、この列のインスタンス値を検索します。  
+ たとえば、次の ASP コードは、AdventureWorks サンプル データベースの Sales.Store テーブルにある、 **xml** データ型の列である Demographics のクエリ結果を示しています。 具体的には、クエリは CustomerID が 3 の行で、この列のインスタンス値を検索します。  
   
 ```  
 <!-- BeginRecordAndStreamVBS -->  
@@ -121,9 +125,9 @@ caps.handback.revision: 23
   
  この例の ASP ページには、ADO を使用して FOR XML クエリを実行し、XML データ アイランドの MyDataIsle に XML の結果を返す、サーバー側の VBScript が含まれています。 次に、クライアント側の追加処理用に、この XML データ アイランドがブラウザーに返されます。 その後、クライアント側の追加の VBScript コードを使用して、XML データ アイランドのコンテンツが処理されます。 この処理が実行されてから、結果の DHTML の一部としてコンテンツを表示し、メッセージ ボックスを開いて XML データ アイランドの前処理されたコンテンツを示します。  
   
-#### この例をテストするには  
+#### <a name="to-test-this-example"></a>この例をテストするには  
   
-1.  IIS がインストールされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の AdventureWorks サンプル データベースがインストールされていることを確認します。  
+1.  IIS がインストールされ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の AdventureWorks サンプル データベースがインストールされていることを確認します。  
   
      この例では、IIS (インターネット インフォメーション サービス) Version 5.0 以降がインストールされていて、ASP のサポートが有効になっている必要があります。 また、AdventureWorks サンプル データベースがインストールされている必要があります。  
   
@@ -137,7 +141,7 @@ caps.handback.revision: 23
   
  表示される生成後の HTML ページの結果は、次のサンプル出力のようになります。  
   
-##### サーバー側の処理  
+##### <a name="server-side-processing"></a>サーバー側の処理  
  Page Generated @ 3/11/2006 3:36:02 PM  
   
  Connect String = Provider=SQLOLEDB;Data Source=MyServer;Initial Catalog=AdventureWorks;Integrated Security=SSPI;  
@@ -150,7 +154,7 @@ caps.handback.revision: 23
   
  Pushing XML to client for processing  
   
-##### XML ドキュメント MyDataIsle のクライアント側の処理  
+##### <a name="client-side-processing-of-xml-document-mydataisle"></a>XML ドキュメント MyDataIsle のクライアント側の処理  
   
 -   **AnnualSales:** 1500000  
   
@@ -195,18 +199,18 @@ caps.handback.revision: 23
 </ROOT>  
 ```  
   
-## ASP.NET と .NET Framework を使用した、FOR XML データの取得  
- 前述の例と同様に、次の ASP.NET コードは、AdventureWorks サンプル データベースの Sales.Store テーブルにある、**xml** データ型の列である Demographics のクエリ結果を示しています。 前述の例と同様に、クエリは CustomerID が 3 の行で、この列のインスタンス値を検索します。  
+## <a name="retrieving-for-xml-data-with-aspnet-and-the-net-framework"></a>ASP.NET と .NET Framework を使用した、FOR XML データの取得  
+ 前述の例と同様に、次の ASP.NET コードは、AdventureWorks サンプル データベースの Sales.Store テーブルにある、 **xml** データ型の列である Demographics のクエリ結果を示しています。 前述の例と同様に、クエリは CustomerID が 3 の行で、この列のインスタンス値を検索します。  
   
  この例では、FOR XML のクエリ結果を返して表示するために、次の Microsoft .NET Framework マネージ API が使用されています。  
   
 1.  指定した接続文字列変数 strConn の内容に基づいて SQL Server への接続を開くために、**SqlConnection** が使用されます。  
   
-2.  次に、データ アダプターとして **SqlDataAdapter** が使用されます。また、FOR XML クエリを実行するために、SQL 接続および指定した SQL クエリ文字列を使用します。  
+2.  次に、データ アダプターとして**SqlDataAdapter** が使用されます。また、FOR XML クエリを実行するために、SQL 接続および指定した SQL クエリ文字列を使用します。  
   
-3.  クエリの実行後、**SqlDataAdapter.Fill** メソッドが呼び出され、FOR XML クエリの出力をデータセットに設定するために、**DataSet** のインスタンスである MyDataSet が渡されます。  
+3.  クエリの実行後、 **SqlDataAdapter.Fill** メソッドが呼び出され、FOR XML クエリの出力をデータセットに設定するために、 **DataSet** のインスタンスである MyDataSet が渡されます。  
   
-4.  その後、サーバーで生成される HTML ページに表示可能な文字列としてクエリ結果を返すために、**DataSet.GetXml** メソッドが呼び出されます。  
+4.  その後、サーバーで生成される HTML ページに表示可能な文字列としてクエリ結果を返すために、 **DataSet.GetXml** メソッドが呼び出されます。  
   
     ```  
     <%@ Page Language="VB" %>  
@@ -260,9 +264,9 @@ caps.handback.revision: 23
     </HTML>  
     ```  
   
-#### この例をテストするには  
+#### <a name="to-test-this-example"></a>この例をテストするには  
   
-1.  IIS がインストールされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の AdventureWorks サンプル データベースがインストールされていることを確認します。  
+1.  IIS がインストールされ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の AdventureWorks サンプル データベースがインストールされていることを確認します。  
   
      この例では、IIS (インターネット インフォメーション サービス) Version 5.0 以降がインストールされていて、ASP.NET のサポートが有効になっている必要があります。 また、AdventureWorks サンプル データベースがインストールされている必要があります。  
   
@@ -276,7 +280,7 @@ caps.handback.revision: 23
   
  表示される生成後の HTML ページの結果は、次のサンプル出力のようになります。  
   
-##### サーバー側の処理  
+##### <a name="server-side-processing"></a>サーバー側の処理  
   
 ```  
 Page Generated @ 3/11/2006 3:36:02 PM  
@@ -291,7 +295,7 @@ SqlConnection closed.
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] による **xml** データ型のサポートにより、[TYPE ディレクティブ](../../relational-databases/xml/type-directive-in-for-xml-queries.md)を指定することで、FOR XML クエリの結果を、string データ型または image データ型ではなく、**xml** データ型で返すように要求できます。 FOR XML クエリに TYPE ディレクティブを使用すると、「[アプリケーションでの XML データの使用](../../relational-databases/xml/use-xml-data-in-applications.md)」で示したのと同様に、プログラムから FOR XML の結果にアクセスできます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

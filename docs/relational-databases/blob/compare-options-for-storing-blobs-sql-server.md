@@ -1,22 +1,26 @@
 ---
 title: "Blob (SQL Server) を保存するオプションの比較 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 98538bd77f81cd6a1f16857b70a866ee3f6d171a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Blob (SQL Server) を保存するオプションの比較
+# <a name="compare-options-for-storing-blobs-sql-server"></a>Blob (SQL Server) を保存するオプションの比較
   ファイルおよびドキュメントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納するために使用できるオプションを説明して比較します。  
   
 ##  <a name="Expectations"></a> データベースへのファイルの格納 - 利点と予測  
@@ -40,19 +44,19 @@ caps.handback.revision: 10
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、ファイル システムでファイルとして格納される非構造化データの効率的な保管、管理、およびストリーミングを可能にする FILESTREAM 機能が既に装備されています。 ただし、FILESTREAM ソリューションはカスタム プログラミングを必要とし、上で説明した完全な Windows アプリケーションの互換性の要件を満たしていません。  
   
 ##  <a name="FileTables"></a> FileTables  
- FileTable 機能は、既存の FILESTREAM 機能をベースとして構築されています。企業は、FileTable 機能を使用することにより、非トランザクション アクセスやファイルベース データの Windows アプリケーションの互換性の要件を解決して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の非構造化ファイル データおよびディレクトリ階層を格納できるようになります。  
+ FileTable 機能は、既存の FILESTREAM 機能をベースとして構築されています。企業は、FileTable 機能を使用することにより、非トランザクション アクセスやファイルベース データの Windows アプリケーションの互換性の要件を解決して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の非構造化ファイル データおよびディレクトリ階層を格納できるようになります。  
   
 ##  <a name="CompareFileTable"></a> FILESTREAM と FileTable の比較  
   
 |機能|ファイル サーバーとデータベース ソリューション|FILESTREAM ソリューション|FileTable ソリューション|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
 |**管理タスクのシングル ストーリー**|いいえ|可|**可**|  
-|**サービスの単一セット**: 検索、レポート、クエリなど|いいえ|可|**はい**|  
-|**統合セキュリティ モデル**|いいえ|可|**はい**|  
-|**FILESTREAM データのインプレース更新**|はい|いいえ|**はい**|  
-|**データベースで管理されるファイルおよびディレクトリの階層**|いいえ|不可|**はい**|  
-|**Windows アプリケーションの互換性**|はい|いいえ|**はい**|  
-|**ファイルの属性へのリレーショナル アクセス**|いいえ|不可|**可**|  
+|**サービスの単一セット**: 検索、レポート、クエリなど|いいえ|可|**可**|  
+|**統合セキュリティ モデル**|いいえ|可|**可**|  
+|**FILESTREAM データのインプレース更新**|可|いいえ|**可**|  
+|**データベースで管理されるファイルおよびディレクトリの階層**|いいえ|いいえ|**可**|  
+|**Windows アプリケーションの互換性**|可|いいえ|**可**|  
+|**ファイルの属性へのリレーショナル アクセス**|いいえ|いいえ|**可**|  
   
 ##  <a name="CompareRBS"></a> FILESTREAM とリモート BLOB ストア (RBS) の比較  
  これらの 2 つの機能の比較については、RBS チームのブログ投稿「 [SQL Server リモート BLOB ストアと FILESTREAM 機能の比較](http://go.microsoft.com/fwlink/?LinkId=210317)」を参照してください。  

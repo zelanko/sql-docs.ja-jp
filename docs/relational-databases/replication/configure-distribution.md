@@ -1,32 +1,36 @@
 ---
 title: "ディストリビューションの構成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "replication [SQL Server], distribution"
-  - "ディストリビューションの構成 [SQL Server レプリケーション]"
-  - "リモート ディストリビューター [SQL Server レプリケーション]"
-  - "トランザクション レプリケーション、ディストリビューションの構成"
-  - "分散データベース [SQL Server レプリケーション], サイズ変更"
-  - "ディストリビューター [SQL Server レプリケーション], 構成"
-  - "ディストリビューション データベース [SQL Server レプリケーション], ディストリビューション データベースについて"
-  - "分散データベース [SQL Server レプリケーション]"
-  - "マージ レプリケーション [SQL Server レプリケーション], ディストリビューションの構成"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- replication [SQL Server], distribution
+- distribution configuration [SQL Server replication]
+- remote Distributors [SQL Server replication]
+- transactional replication, configuring distribution
+- distribution databases [SQL Server replication], sizing
+- Distributors [SQL Server replication], configuring
+- distribution databases [SQL Server replication], about distribution databases
+- distribution databases [SQL Server replication]
+- merge replication [SQL Server replication], configuring distribution
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dc7ddc90a9592cd62c50b31a2d5b8220c85e3f83
+ms.lasthandoff: 04/11/2017
+
 ---
-# ディストリビューションの構成
+# <a name="configure-distribution"></a>ディストリビューションの構成
   ディストリビューターは、ディストリビューション データベースを含むサーバーです。ディストリビューション データベースには、すべての種類のレプリケーションのメタデータと履歴データ、およびトランザクション レプリケーションに対するトランザクションが格納されます。 レプリケーションを設定するには、ディストリビューターを構成する必要があります。 パブリッシャーはそれぞれ 1 つのディストリビューター インスタンスにしか割り当てることができませんが、複数のパブリッシャーで 1 つのディストリビューターを共有できます。 サーバーがディストリビューターとして指定されると、次のようなリソースが新たに消費されることになります。  
   
 -   パブリケーションのスナップショット ファイルをディストリビューターに格納する場合 (通常の場合) は、そのためのディスク領域  
@@ -37,7 +41,7 @@ caps.handback.revision: 44
   
  ディストリビューターとして指定するサーバーには、サーバー上でさまざまな機能を果たしながら、レプリケーションの処理を実行できるだけの十分なディスク容量とプロセッサ パワーが必要です。 ディストリビューターを構成するには、以下の設定を行います。  
   
--   ディストリビューターを使用するすべてのパブリッシャーに対して既定で使用されるスナップショット フォルダー。 フォルダーが既に共有されていること、および適切な権限が設定されていることを確認します。 詳細については、次を参照してください。 [スナップショット フォルダーをセキュリティで保護された](../../relational-databases/replication/security/secure-the-snapshot-folder.md)します。  
+-   ディストリビューターを使用するすべてのパブリッシャーに対して既定で使用されるスナップショット フォルダー。 フォルダーが既に共有されていること、および適切な権限が設定されていることを確認します。 詳細については、「[Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md)」(スナップショット フォルダーのセキュリティ保護) をご覧ください。  
   
 -   ディストリビューション データベースの名前とファイルの場所。 ディストリビューション データベースの名前は、作成後には変更できません。 データベースで別の名前を使用するには、ディストリビューションを無効にして再構成する必要があります。  
   
@@ -45,11 +49,11 @@ caps.handback.revision: 44
   
  トランザクション レプリケーションでは、ディストリビューションの構成後に以下の作業を行うことをお勧めします。  
   
--   ディストリビューション データベースのサイズを適切に設定する。 システムの典型的な負荷でレプリケーションをテストし、コマンドを格納するために必要な領域を決定します。 データベースが頻繁に自動拡張しなくてもコマンドを格納できるだけの大きさを備えていることを確認します。 データベースのサイズを変更する方法の詳細については、次を参照してください。 [ALTER DATABASE & #40 です。Transact SQL と #41;](../../t-sql/statements/alter-database-transact-sql.md)します。  
+-   ディストリビューション データベースのサイズを適切に設定する。 システムの典型的な負荷でレプリケーションをテストし、コマンドを格納するために必要な領域を決定します。 データベースが頻繁に自動拡張しなくてもコマンドを格納できるだけの大きさを備えていることを確認します。 データベースのサイズの変更に関する詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
--   設定、 **バックアップと同期** ディストリビューション データベースのオプションです。 詳細については、次を参照してください [データベースのバックアップおよび復元するスナップショットおよびトランザクション レプリケーションのための戦略](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md) と [#40; (&)、トランザクション レプリケーションの連携バックアップを有効にする。レプリケーション TRANSACT-SQL プログラミングと #41;](../../relational-databases/replication/administration/enable coordinated backups for transactional replication.md)します。  
+-   ディストリビューション データベースで " **sync with backup** " オプションを設定する。 詳細については、「[スナップショット レプリケーションおよびトランザクション レプリケーションのバックアップと復元の方式](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)」と「[トランザクション レプリケーションの連携バックアップの有効化 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)」をご覧ください。  
   
-## ローカル ディストリビューターとリモート ディストリビューター  
+## <a name="local-and-remote-distributors"></a>ローカル ディストリビューターとリモート ディストリビューター  
  既定では、ディストリビューターはパブリッシャーと同じサーバー (ローカル ディストリビューター) になりますが、別のサーバー (リモート ディストリビューター) にすることもできます。 一般に、リモート ディストリビューターは次のような場合に使用されます。  
   
 -   処理を別のコンピューターにオフロードする場合 (たとえばパブリッシャーが OLTP サーバーである場合など、パブリッシャーに対するレプリケーションの影響を最小限に抑えたい場合)  
@@ -60,13 +64,13 @@ caps.handback.revision: 44
   
 -   トランザクション レプリケーションでは、レプリケートされたすべてのトランザクションの書き込みと読み取りがディストリビューション データベースに対して行われるため、ディストリビューターが果たす役割が大きくなります。  
   
--   マージ レプリケーション トポロジでは通常、プル サブスクリプションが使用されるため、ディストリビューターですべてのエージェントが実行されるのではなく、各サブスクライバーでエージェントが実行されます。 詳細については、次を参照してください。 [パブリケーションをサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)します。 マージ レプリケーションでは、ほとんどの場合、ローカル ディストリビューターを使用します。  
+-   マージ レプリケーション トポロジでは通常、プル サブスクリプションが使用されるため、ディストリビューターですべてのエージェントが実行されるのではなく、各サブスクライバーでエージェントが実行されます。 詳細については、「[パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)」をご覧ください。 マージ レプリケーションでは、ほとんどの場合、ローカル ディストリビューターを使用します。  
   
- パブリッシングおよびディストリビューションを構成するのを参照してください。 [パブリッシングとディストリビューション](../../relational-databases/replication/configure-publishing-and-distribution.md)します。  
+ パブリッシングおよびディストリビューションを構成するには、「 [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)」を参照してください。  
   
- パブリッシャーとディストリビューターのプロパティを変更するを参照してください。 [表示と変更のディストリビューターとパブリッシャーのプロパティ](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)します。  
+ パブリッシャーとディストリビューターのプロパティを変更するには、「 [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [ディストリビューターのセキュリティ保護](../../relational-databases/replication/security/secure-the-distributor.md)  
   

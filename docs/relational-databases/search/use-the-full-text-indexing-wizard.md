@@ -1,40 +1,44 @@
 ---
 title: "フルテキスト インデックス作成ウィザードの使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.fulltextindexingwizard.welcome.f1"
-  - "sql13.swb.fulltextindexingwizard.selectorcreatepopschedules.f1"
-  - "sql13.swb.fulltextindexingwizard.progress.f1"
-  - "sql13.swb.fulltextindexingwizard.selectchangetracking.f1"
-  - "sql13.swb.fulltextindexingwizard.selectacatalog.f1"
-  - "sql13.swb.fulltextindexingwizard.selectatableorview.f1"
-  - "sql13.swb.fulltextindexingwizard.selectanindex.f1"
-  - "sql13.swb.fulltextindexingwizard.summary.f1"
-  - "sql13.swb.fulltextindexingwizard.selecttablecolumns.f1"
-helpviewer_keywords: 
-  - "フルテキスト インデックス作成ウィザード"
-  - "フルテキスト検索 [SQL Server], フルテキスト インデックス作成ウィザード"
+ms.custom: 
+ms.date: 08/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.fulltextindexingwizard.welcome.f1
+- sql13.swb.fulltextindexingwizard.selectorcreatepopschedules.f1
+- sql13.swb.fulltextindexingwizard.progress.f1
+- sql13.swb.fulltextindexingwizard.selectchangetracking.f1
+- sql13.swb.fulltextindexingwizard.selectacatalog.f1
+- sql13.swb.fulltextindexingwizard.selectatableorview.f1
+- sql13.swb.fulltextindexingwizard.selectanindex.f1
+- sql13.swb.fulltextindexingwizard.summary.f1
+- sql13.swb.fulltextindexingwizard.selecttablecolumns.f1
+helpviewer_keywords:
+- Full-Text Indexing Wizard
+- full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: dd4ac1d2f93c1fa776473cdc7b1b99a07b5f8164
+ms.lasthandoff: 04/11/2017
+
 ---
-# フルテキスト インデックス作成ウィザードの使用
+# <a name="use-the-full-text-indexing-wizard"></a>フルテキスト インデックス作成ウィザードの使用
   SSMS のフルテキスト インデックス作成ウィザードを使用すると、フルテキスト インデックスを作成するために作られた一連の手順を実行できます。  
   
-## フルテキスト インデックスを作成する 
+## <a name="create-a--full-text-index"></a>フルテキスト インデックスを作成する 
 
-1. オブジェクト エクスプローラーで、フルテキスト インデックスを作成するテーブルを右クリックして **[フルテキスト インデックス]** をポイントし、**[フルテキスト インデックスの定義]** をクリックします。 別のウィンドウでウィザードが起動します。
+1. オブジェクト エクスプローラーで、フルテキスト インデックスを作成するテーブルを右クリックして **[フルテキスト インデックス]**をポイントし、 **[フルテキスト インデックスの定義]**をクリックします。 別のウィンドウでウィザードが起動します。
    [次へ] をクリックします。 
   
 2. **[一意インデックス]。**  ドロップダウン リストからインデックスを選択します。 インデックスは、単一キー列の、一意で NULL 値が許容されないインデックスである必要があります。 フルテキストの一意キーには、一番小さな一意キー インデックスを選択します。 最高のパフォーマンスを得るためには、クラスター化インデックスをお勧めします。  
@@ -44,15 +48,15 @@ caps.handback.revision: 24
 4. **[ワード ブレーカーの言語]。** ドロップダウン リストから言語を選択します。 この選択は、インデックスに適したワード ブレーカーを識別するために使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ワード ブレーカーを使用してフルテキスト インデックス付きデータ内の単語の境界を識別します。  
   
 5.  **[型列]。** フルテキスト インデックスの付いた列の文書型を保持する列の名前を選択します。  
-> **注:** **[型列]** は、**[使用できる列]** 列内の名前の付いた列の型が **varbinary(max)** または **image** である場合のみ有効です。  
+> **注:** **[型列]** は、 **[使用できる列]** 列内の名前の付いた列の型が **varbinary(max)** または **image**である場合のみ有効です。  
   
 6. **[統計的セマンティクス]。** 選択されている列に対するセマンティック インデックスを有効にするかどうかを選択します。 詳細については、「[セマンティック検索 &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)」を参照してください。  
   
 >**注** 
 >
->選択した言語に関連付けられているセマンティック言語モデルがない場合、**[統計的セマンティクス]** チェック ボックスは有効になりませんん。 **[言語]** を選択する前に **[統計的セマンティクス]** を選択した場合、ドロップダウン コンボ ボックスで使用できる言語は、セマンティック言語モデルでサポートされているものだけに制限されます。  
+>選択した言語に関連付けられているセマンティック言語モデルがない場合、 **[統計的セマンティクス]** チェック ボックスは有効になりませんん。 **[言語]** を選択する前に **[統計的セマンティクス]**を選択した場合、ドロップダウン コンボ ボックスで使用できる言語は、セマンティック言語モデルでサポートされているものだけに制限されます。  
 >
-> セマンティック検索は、**Azure SQL Database では使用できません**。 Azure SQL Database でこのウィザードを実行すると、[統計的セマンティクス] オプションは表示されません。
+> セマンティック検索は、 **Azure SQL Database では使用できません**。 Azure SQL Database でこのウィザードを実行すると、[統計的セマンティクス] オプションは表示されません。
   
 7. 変更追跡オプションを選択します。  
   
@@ -71,11 +75,11 @@ caps.handback.revision: 24
      
      [次へ] をクリックします。
   
-## カタログ、インデックス ファイル グループ、およびストップリスト   
+## <a name="catalog-index-filegroup-and-stoplist"></a>カタログ、インデックス ファイル グループ、およびストップリスト   
   
 9.  **[フルテキスト カタログの選択]**  
 
-     **[カタログの選択]:** フルテキスト カタログを一覧から選択します。 データベースの既定のカタログが一覧の既定の選択項目となります。 カタログが存在しない場合、一覧は無効になり、**[カタログの新規作成]** チェック ボックスはオンのまま変更できなくなります。  
+     **[カタログの選択]:** フルテキスト カタログを一覧から選択します。 データベースの既定のカタログが一覧の既定の選択項目となります。 カタログが存在しない場合、一覧は無効になり、 **[カタログの新規作成]** チェック ボックスはオンのまま変更できなくなります。  
   
   または
   
@@ -89,7 +93,7 @@ caps.handback.revision: 24
      このカタログをこのデータベースの既定のカタログにする場合に選択します。  
   
      c. **[アクセントの区別]**  
-     新しいカタログでアクセントが区別されるかどうかを指定します。 データベースでアクセントが区別される場合は、**[区別する]** が既定で選択されます。  
+     新しいカタログでアクセントが区別されるかどうかを指定します。 データベースでアクセントが区別される場合は、 **[区別する]** が既定で選択されます。  
   
      d. **[インデックス ファイル グループの選択]**  
      フルテキスト インデックスを作成するファイル グループを指定します。  
@@ -97,7 +101,7 @@ caps.handback.revision: 24
      e. 値を選択します。  
     |値|説明|  
     |-----------|-----------------|
-      |**\<default>**| テーブルまたはビューがパーティション分割されていない場合に、基になるテーブルまたはビューと同じファイル グループを使用するには、この値を選択します。 テーブルまたはビューがパーティション分割されている場合は、プライマリ ファイル グループが使用されます。|
+      |**<default>**| テーブルまたはビューがパーティション分割されていない場合に、基になるテーブルまたはビューと同じファイル グループを使用するには、この値を選択します。 テーブルまたはビューがパーティション分割されている場合は、プライマリ ファイル グループが使用されます。|
       |**PRIMARY**|新しいフルテキスト インデックスにプライマリ ファイル グループを使用する場合に選択します。|
              *ユーザー指定の既定のファイル グループ*|ユーザー定義の既定のストップリストが存在する場合に、新しいフルテキスト インデックスにそのファイル グループを使用するには、一覧からそのストップリストの名前を選択します。|  
   
@@ -105,14 +109,14 @@ caps.handback.revision: 24
  11. **[フルテキスト ストップリストの選択]**  
      フルテキスト インデックスに使用するストップリストを指定します。または、ストップリストの使用を無効にします。  
   
-     ストップワードは、ストップリストと呼ばれるオブジェクトを使用してデータベースで管理されます。 *ストップリスト*は、フルテキスト インデックスに関連付けられている場合、そのインデックスのフルテキスト クエリに適用されるストップワードの一覧です。 詳細については、「[フルテキスト検索に使用するストップワードとストップリストの構成と管理](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)」を参照してください。  
+     ストップワードは、ストップリストと呼ばれるオブジェクトを使用してデータベースで管理されます。 *ストップリスト* は、フルテキスト インデックスに関連付けられている場合、そのインデックスのフルテキスト クエリに適用されるストップワードの一覧です。 詳細については、「 [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)」を参照してください。  
   
      次のいずれかの値を選択します。  
   
    |値|説明|  
     |-----------|-----------------|  
-    |**\<system>**|新しいフルテキスト インデックスに対してシステム ストップリストを使用する場合に選択します。 これは既定値です。|  
-    |**\<off>**|新しいフルテキスト インデックスに対してストップリストを無効にする場合に選択します。|  
+    |**<system>**|新しいフルテキスト インデックスに対してシステム ストップリストを使用する場合に選択します。 これは既定値です。|  
+    |**<off>**|新しいフルテキスト インデックスに対してストップリストを無効にする場合に選択します。|  
     |*ユーザー定義のストップ リスト名*|ユーザー定義のストップリストがデータベース上に作成されている場合は、その名前が一覧に表示されます。 その場合に、新しいフルテキスト インデックスに対して使用するユーザー定義のストップリストを選択します。|  
   
   [次へ] をクリックします。
@@ -140,3 +144,4 @@ caps.handback.revision: 24
      すべての操作の実行が完了しているときにこのボタンをクリックすると、実行された操作に関するレポートにアクセスできます。 レポートは、表示したり、ファイルに保存したりできます。また、クリップボードにコピーしたり、電子メールで送信したりすることもできます。  
   
   
+

@@ -1,25 +1,29 @@
 ---
 title: "ワイルドカード コンポーネントと内容検証 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ワイルドカード コンポーネント [XML]"
-  - "内容の検証 [XML]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- wildcard components [XML]
+- content validation [XML]
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3eac26ac7add89b64c19672ae9fd34e224c6e7e1
+ms.lasthandoff: 04/11/2017
+
 ---
-# ワイルドカード コンポーネントと内容検証
+# <a name="wildcard-components-and-content-validation"></a>ワイルドカード コンポーネントと内容検証
   ワイルドカード コンポーネントは、コンテンツ モデルで使用できる表現の柔軟性を高めるために使用されます。 ワイルドカード コンポーネントは、次のように XSD 言語でサポートされています。  
   
 -   要素ワイルドカード コンポーネント。 これらは **\<xsd:any>** 要素で表現されます。  
@@ -34,7 +38,7 @@ caps.handback.revision: 13
   
 -   **lax** 値は、スキーマ定義が有効な要素と属性だけを検証することを指定します。  
   
-## lax 検証と xs:anyType 要素  
+## <a name="lax-validation-and-xsanytype-elements"></a>lax 検証と xs:anyType 要素  
  XML スキーマの仕様では、 **anyType** 型の要素には **lax** 検証が使用されています。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では lax 検証をサポートしていなかったので、 **anyType**型の要素にも strict 検証が適用されていました。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]からは lax 検証がサポートされるようになったため、 **anyType** 型の要素の内容は lax 検証を使用して検証されます。  
   
  次の例は、lax 検証を示しています。 スキーマ要素 `e` は **anyType** 型です。 この例では、型指定された **xml** 変数を作成し、 **anyType** 型の要素の lax 検証を示します。  
@@ -66,7 +70,7 @@ SET @var = '<e xmlns="http://ns"><a>1</a><c>Wrong</c><b>data</b></e>'
 GO  
 ```  
   
- 次の例の XML インスタンスは拒否されます。これは、`<a>` 要素の定義で文字列値が許可されていないためです。  
+ 次の例の XML インスタンスは拒否されます。これは、 `<a>` 要素の定義で文字列値が許可されていないためです。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -75,7 +79,7 @@ SELECT @var
 GO  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [サーバー上の XML スキーマ コレクションの要件と制限](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

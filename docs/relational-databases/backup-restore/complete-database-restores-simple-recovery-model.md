@@ -1,28 +1,32 @@
 ---
 title: "データベースの全体復元 (単純復旧モデル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データベースの全体復元"
-  - "データベースの復元 [SQL Server], データベース全体"
-  - "復元、データベース [SQL Server], データベース全体"
-  - "単純復旧モデル [SQL Server]"
-  - "復元 [SQL Server], データベース"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- complete database restores
+- database restores [SQL Server], complete database
+- restoring databases [SQL Server], complete database
+- simple recovery model [SQL Server]
+- restoring [SQL Server], database
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 caps.latest.revision: 58
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d64038885f4344df3fc09c58038a724d5fd11aab
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベースの全体復元 (単純復旧モデル)
+# <a name="complete-database-restores-simple-recovery-model"></a>データベースの全体復元 (単純復旧モデル)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   データベースの全体復元の目的は、データベース全体を復元することです。 復元の実行中は、データベース全体がオフラインになります。 データベースの各部がオンラインになる前に、すべてのデータが一貫性のある状態に復旧されます。一貫性のある状態とは、データベースのすべての部分が同じ時点にあり、コミットされていないトランザクションが存在しない状態を示します。  
@@ -39,29 +43,29 @@ caps.handback.revision: 58
 -   [関連タスク](#RelatedTasks)  
   
 > [!NOTE]  
->  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からのバックアップに対するサポートの情報については、「[RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)」の「互換性サポート」のセクションを参照してください。  
+>  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのバックアップに対するサポートの情報については、「 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)」の「互換性サポート」のセクションを参照してください。  
   
 ##  <a name="Overview"></a> 単純復旧モデルでのデータベース復元の概要  
- 単純復旧モデルでのデータベース全体の復元は、データベースの差分バックアップを復元する必要があるかどうかに応じて 1 つまたは 2 つの [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) ステートメントで行われます。 次の図に示すように、データベースの完全バックアップのみを使用する場合は、最新のバックアップを復元するだけで完了します。  
+ 単純復旧モデルでのデータベース全体の復元は、データベースの差分バックアップを復元する必要があるかどうかに応じて 1 つまたは 2 つの [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントで行われます。 次の図に示すように、データベースの完全バックアップのみを使用する場合は、最新のバックアップを復元するだけで完了します。  
   
- ![データベースの完全バックアップのみの復元](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "データベースの完全バックアップのみの復元")  
+ ![データベースの完全バックアップのみを復元](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "データベースの完全バックアップのみを復元")  
   
  データベースの差分バックアップも使用する場合は、データベースを復旧しないで最新の完全バックアップを復元してから、最新の差分バックアップを復元してデータベースを復旧します。 次の図に、このプロセスを示します。  
   
- ![データベースの完全および差分バックアップの復元](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.gif "データベースの完全および差分バックアップの復元")  
+ ![データベース全体と差分バックアップを復元](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.gif "データベース全体と差分バックアップを復元")  
   
 > [!NOTE]  
->  データベースのバックアップを別のサーバー インスタンスに復元する予定の場合は、「[バックアップと復元によるデータベースのコピー](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)」を参照してください。  
+>  データベースのバックアップを別のサーバー インスタンスに復元する予定の場合は、「 [バックアップと復元によるデータベースのコピー](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)」を参照してください。  
   
 ###  <a name="TsqlSyntax"></a> 基本的な Transact-SQL RESTORE 構文  
- データベースの完全バックアップを復元する際に使用する、 [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) の基本構文を次に示します。  
+ データベースの完全バックアップを復元する際に使用する、 [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) の基本構文を次に示します。  
   
  RESTORE DATABASE *database_name* FROM *backup_device* [ WITH NORECOVERY ]  
   
 > [!NOTE]  
 >  データベースの差分バックアップも復元する場合は、WITH NORECOVERY を指定してください。  
   
- データベース バックアップを復元する際に使用する、 [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) の基本構文を次に示します。  
+ データベース バックアップを復元する際に使用する、 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) の基本構文を次に示します。  
   
  RESTORE DATABASE *database_name* FROM *backup_device* WITH RECOVERY  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 58
  この例は、データベースの全体復元シナリオの復元シーケンスで重要なオプションを示しています。 *復元シーケンス* は、1 つ以上の復元フェーズによってデータを移動する、1 つ以上の復元操作で構成されます。 説明の目的に関係しない構文や詳細は、省略しています。 データベースを復旧する際は、RECOVERY オプションを明示的に指定することをお勧めします。このオプションは既定値ですが、指定しておくと判別がつきやすくなります。  
   
 > [!NOTE]  
->  この例の先頭では、[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用して復旧モデルを `SIMPLE` に設定しています。  
+>  この例の先頭では、 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用して復旧モデルを `SIMPLE`に設定しています。  
   
 ```  
 USE master;  
@@ -116,8 +120,8 @@ GO
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
-## 参照  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>参照  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [データベースの完全バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)   

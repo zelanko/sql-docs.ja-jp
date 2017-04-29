@@ -1,31 +1,35 @@
 ---
 title: "遅延トランザクション (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "I/O [SQL Server], データベース復旧"
-  - "ページの復元 [SQL Server]"
-  - "遅延トランザクション"
-  - "トランザクション遅延状態の変更"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- I/O [SQL Server], database recovery
+- restoring pages [SQL Server]
+- deferred transactions
+- modifying transaction deferred state
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ee31af10105103d0bccb8c1ff7b48a73086f44d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 遅延トランザクション (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise では、ロールバック (元に戻す) に必要なデータがデータベースの起動時にオフラインになっている場合、損傷したトランザクションが遅延することがあります。 *遅延トランザクション*は、ロールフォワード フェーズの完了時にコミットされておらず、ロールバックを妨げるエラーが発生しているトランザクションです。 トランザクションはロールバックできないので、遅延します。  
+# <a name="deferred-transactions-sql-server"></a>遅延トランザクション (SQL Server)
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise では、ロールバック (元に戻す) に必要なデータがデータベースの起動時にオフラインになっている場合、損傷したトランザクションが遅延することがあります。 *遅延トランザクション* は、ロールフォワード フェーズの完了時にコミットされておらず、ロールバックを妨げるエラーが発生しているトランザクションです。 トランザクションはロールバックできないので、遅延します。  
   
 > [!NOTE]  
->  損傷したトランザクションが遅延するのは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise の場合のみです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他のエディションでは、損傷したトランザクションが原因で起動に失敗します。  
+>  損傷したトランザクションが遅延するのは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise の場合のみです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の他のエディションでは、損傷したトランザクションが原因で起動に失敗します。  
   
  通常、遅延トランザクションが発生する原因は、データベースがロールフォワードされている間に、I/O エラーによってトランザクションに必要なページを読み取れなくなったことにあります。 ただし、ファイル レベルのエラーによって遅延トランザクションが発生する場合もあります。 また、トランザクションのロールバックが必要な時点で部分復元シーケンスが停止し、トランザクションがオフラインになっているデータを必要とする場合にも、遅延トランザクションが発生する可能性があります。  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 45
 |データベース ミラーリングの再実行|遅延トランザクション|  
 |ファイル グループのオフライン化|遅延トランザクション|  
   
-## トランザクションの DEFERRED 状態の解決  
+## <a name="moving-a-transaction-out-of-the-deferred-state"></a>トランザクションの DEFERRED 状態の解決  
   
 > [!IMPORTANT]  
 >  遅延トランザクションにより、トランザクション ログはアクティブなままになります。 遅延トランザクションを保持する仮想ログ ファイルは、これらのトランザクションが遅延状態ではなくなるまで、切り捨てることができません。 ログの切り捨ての詳細については、「[トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
@@ -71,7 +75,7 @@ caps.handback.revision: 45
     > [!IMPORTANT]  
     >  機能していないファイル グループを復旧することはできません。  
   
-     詳細については、「[機能していないファイル グループの削除 &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)」を参照してください。  
+     詳細については、「 [機能していないファイル グループの削除 &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)」を参照してください。  
   
 -   不適切なページが原因でトランザクションが遅延し、適切なデータベースのバックアップが存在しない場合、データベースを修復するには、次のプロセスを使用します。  
   
@@ -81,13 +85,13 @@ caps.handback.revision: 45
         ALTER DATABASE <database_name> SET EMERGENCY  
         ```  
   
-         緊急モードの詳細については、「[データベースの状態](../../relational-databases/databases/database-states.md)」を参照してください。  
+         緊急モードの詳細については、「 [データベースの状態](../../relational-databases/databases/database-states.md)」を参照してください。  
   
-    -   次に、[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、[DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)、または [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) のいずれかの DBCC ステートメントで DBCC REPAIR_ALLOW_DATA_LOSS オプションを使用して、データベースを修復します。  
+    -   次に、 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、 [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)、または [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)のいずれかの DBCC ステートメントで DBCC REPAIR_ALLOW_DATA_LOSS オプションを使用して、データベースを修復します。  
   
          DBCC では、不適切なページが検出されると、そのページの割り当てが解除され、関連するすべてのエラーが修復されます。 この方法を使用すると、物理的に一貫性のある状態でデータベースをオンラインに戻すことができます。 ただし、追加されたデータが失われる場合もあるため、この方法は最後の手段として使用してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [復元と復旧の概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [機能していないファイル グループの削除 &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)   
  [ファイル復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
@@ -95,6 +99,6 @@ caps.handback.revision: 45
  [ページ復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

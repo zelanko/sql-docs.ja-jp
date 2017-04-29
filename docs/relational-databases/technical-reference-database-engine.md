@@ -1,35 +1,39 @@
 ---
 title: "テクニカル リファレンス (データベース エンジン) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "テクニカル リファレンス [SQL Server データベース エンジン]"
-  - "データベース エンジン [SQL Server], 参考資料"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- technical reference [SQL Server Database Engine]
+- Database Engine [SQL Server], getting assistance
 ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9149c0ca25b016449a1fb9f6315ae4acda691420
+ms.lasthandoff: 04/11/2017
+
 ---
-# テクニカル リファレンス (データベース エンジン)
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] の[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]には、ツール、言語、および管理プログラミングのリファレンス ドキュメントがあります。  
+# <a name="technical-reference-database-engine"></a>テクニカル リファレンス (データベース エンジン)
+  [!INCLUDE[ssDE](../includes/ssde-md.md)] の [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]には、ツール、言語、および管理プログラミングのリファレンス ドキュメントがあります。  
   
- ![小さいファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") **機能リファレンス**  
- [[登録済みサーバー] の F1 ヘルプ](../Topic/Registered%20Servers%20F1%20Help.md)  
+ ![小ファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "Small File Folder Icon")**機能リファレンス**  
+ [[登録済みサーバー] の F1 ヘルプ](../tools/sql-server-management-studio/registered-servers-f1-help.md)  
   
- [SQL Server Management Studio メニュー ヘルプ](../ssms/menu-help/sql-server-management-studio-menu-help.md)  
+ [SQL Server Management Studio メニュー ヘルプ](http://msdn.microsoft.com/library/5b8b2e45-bee6-42c8-93d6-31432f4d5699)  
   
- [Visual Database Tools の F1 ヘルプ](../ssms/visual-db-tools/visual-database-tools-f1-help.md)  
+ [Visual Database Tools の F1 ヘルプ](http://msdn.microsoft.com/library/79d15b47-6759-4f48-b9ac-2c86a3cd9980)  
   
- ![小さいファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") **コマンド プロンプト ユーティリティ リファレンス**  
+ ![小ファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "Small File Folder Icon")**コマンド プロンプト ユーティリティ リファレンス**  
  [bcp ユーティリティ](../tools/bcp-utility.md)  
   
  [dta ユーティリティ](../tools/dta/dta-utility.md)  
@@ -38,15 +42,15 @@ caps.handback.revision: 32
   
  [詳細情報](../tools/command-prompt-utility-reference-database-engine.md)  
   
- ![小さいファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") **データベース エンジンの PowerShell コマンドレット**  
+ ![小ファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "Small File Folder Icon")**データベース エンジン PowerShell コマンドレット**  
  [Invoke-PolicyEvaluation コマンドレット](../powershell/invoke-policyevaluation-cmdlet.md)  
   
  [Invoke-Sqlcmd コマンドレット](../powershell/invoke-sqlcmd-cmdlet.md)  
   
- ![小さいファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") **エラーとイベントのリファレンス**  
+ ![小ファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "Small File Folder Icon")**エラーとイベントのリファレンス**  
  [データベース エンジンのイベントとエラー](../relational-databases/errors-events/database-engine-events-and-errors.md)  
   
- ![小さいファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") **プラン表示の論理操作と物理操作のリファレンス**  
+ ![小ファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **プラン表示の論理および物理演算子のリファレンス**  
  [プラン表示の論理操作と物理操作のリファレンス](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   
   

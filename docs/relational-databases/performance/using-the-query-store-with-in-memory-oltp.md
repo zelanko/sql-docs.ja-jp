@@ -1,30 +1,34 @@
 ---
 title: "インメモリ OLTP でのクエリ ストアの使用 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "クエリ ストア, インメモリ"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, in-memory
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31483a4450089f194241f19df0bd0072b5026375
+ms.lasthandoff: 04/11/2017
+
 ---
-# インメモリ OLTP でのクエリ ストアの使用
+# <a name="using-the-query-store-with-in-memory-oltp"></a>インメモリ OLTP でのクエリ ストアの使用
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ ストアでは、ネイティブ コンパイル コードのパフォーマンスを監視して、インメモリ OLTP で実行されているワークロードを確認することができます。  
 コンパイルと実行時の統計情報が収集され、ディスク ベースのワークロードと同じように公開されます。   
-インメモリ OLTP に移行しても、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で引き続きクエリ ストア ビューを使用でき、移行前にディスク ベースのワークロード用に開発したカスタム スクリプトを使用することができます。 これにより、クエリ ストア テクノロジを学習するための投資を確保し、すべての種類のワークロードのトラブルシューティングで一般的に使用できるようになります。  
+インメモリ OLTP に移行しても、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で引き続きクエリ ストア ビューを使用でき、移行前にディスク ベースのワークロード用に開発したカスタム スクリプトを使用することができます。 これにより、クエリ ストア テクノロジを学習するための投資を確保し、すべての種類のワークロードのトラブルシューティングで一般的に使用できるようになります。  
 クエリ ストアの使用に関する一般情報については、「 [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)」を参照してください。  
   
  インメモリ OLTP でクエリ ストアを使用する場合、追加の機能構成は必要ありません。 データベースで有効にすれば、すべての種類のワークロードで機能します。   
@@ -52,9 +56,9 @@ caps.handback.revision: 10
   
 -   [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) 内のメモリ許可メトリックは、ネイティブ コンパイル クエリでは設定されません。この値は常に 0 です。 メモリの許可の列は、avg_query_max_used_memory、last_query_max_used_memory、min_query_max_used_memory、max_query_max_used_memory、および stdev_query_max_used_memory です。  
   
-## クエリ ストアを有効にしてインメモリ OLTP で使用する  
+## <a name="enabling-and-using-query-store-with-in-memory-oltp"></a>クエリ ストアを有効にしてインメモリ OLTP で使用する  
  エンド ツー エンド ユーザー シナリオでのクエリ ストアとインメモリ OLTP の簡単な使用例を以下に示します。 この例は、インメモリ OLTP に対してデータベース (`MemoryOLTP`) が有効になっていることを前提としています。  
-    メモリ最適化テーブルの前提条件の詳細については、「[メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャの作成](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)」を参照してください。  
+    メモリ最適化テーブルの前提条件の詳細については、「 [メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャの作成](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)」を参照してください。  
   
 ```  
 USE MemoryOLTP;  
@@ -133,11 +137,12 @@ JOIN sys.query_store_runtime_stats_interval AS rsi
 WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');  
 ```  
   
-## 参照  
- [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+## <a name="see-also"></a>参照  
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャの作成](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
  [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [クエリ ストアのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [クエリ ストアのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
+

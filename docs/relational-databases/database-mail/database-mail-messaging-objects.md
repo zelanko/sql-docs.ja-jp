@@ -1,30 +1,34 @@
 ---
 title: "データベース メール メッセージング オブジェクト | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データベース メール [SQL Server]、ホスト データベース"
-  - "データベース メール [SQL Server]、メッセージング オブジェクト"
-  - "メール ホスト データベース [SQL Server]"
-  - "ホスト データベース [データベース メール]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Database Mail [SQL Server], host databases
+- Database Mail [SQL Server], messaging objects
+- mail host databases [SQL Server]
+- host databases [Database Mail]
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0ac02628b0b385841805994ec17dd121d84d7399
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベース メール メッセージング オブジェクト
+# <a name="database-mail-messaging-objects"></a>データベース メール メッセージング オブジェクト
   **msdb** データベースはデータベース メール ホスト データベースです。 このデータベースには、データベース メールのストアド プロシージャやメッセージング オブジェクトが格納されます。 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] にはデータベース メール構成ウィザードが付属していて、データベース メールの有効化、プロファイルとアカウントの作成と管理、およびデータベース メール オプションの構成をこのウィザードから行うことができます。  
   
-##  <a name="ComponentsAndConcepts"></a> **msdb** データベース内にあるオブジェクト  
+##  <a name="ComponentsAndConcepts"></a>**msdb** データベース内にあるオブジェクト  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] msdb **データベースで、** を有効にする必要があります。 ただし、データベース メールでは [!INCLUDE[ssSB](../../includes/sssb-md.md)] ネットワークを使用しません。 そのため、ユーザーはデータベース メールを使用するための [!INCLUDE[ssSB](../../includes/sssb-md.md)] エンドポイントを作成する必要はありません。 データベース メールの外部プロセスでは、 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] との通信に標準の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続が使用されます。  
   
  データベース メールが有効になっていると、 **msdb** データベース内の次のオブジェクトがデータベース メールによって公開されます。  
@@ -46,9 +50,8 @@ caps.handback.revision: 31
 |[sysmail_start_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|**ストアド プロシージャ**|外部プログラムによって使用される Service Broker オブジェクトを開始します。 これらのオブジェクトは、既定で開始されます。|  
 |[sysmail_stop_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|**ストアド プロシージャ**|外部プログラムによって使用される Service Broker オブジェクトを停止します。|  
   
- [&#91;先頭に戻る&#93;](#Top)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [SQL Server Service Broker (SQL Server Service Broker)](../../database-engine/configure-windows/sql-server-service-broker.md)  
   

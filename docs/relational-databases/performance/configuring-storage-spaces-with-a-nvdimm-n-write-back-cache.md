@@ -1,27 +1,31 @@
 ---
 title: "NVDIMM-N ライトバック キャッシュを使った記憶域スペースの構成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a0a115eba3fbd1afe52c211fe0f93362a989fc2
+ms.lasthandoff: 04/11/2017
+
 ---
-# NVDIMM-N ライトバック キャッシュを使った記憶域スペースの構成
+# <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>NVDIMM-N ライトバック キャッシュを使った記憶域スペースの構成
   Windows Server 2016 は、超高速の入出力 (I/O) 操作を可能にする NVDIMM-N デバイスをサポートします。 そのようなデバイスを使用する魅力的な方法の 1 つは、書き込みの低待機時間を実現するためのライトバック キャッシュです。 このトピックでは、ミラー化された NVDIMM-N ライトバック キャッシュを使用して、SQL Server トランザクション ログを格納するための仮想ドライブとしてミラー化された記憶域スペースをセットアップする方法について説明します。 この記憶域スペースをデータ テーブルまたは他のデータを格納するためにも活用する場合は、記憶域プールにディスクを追加するか、分離が重要な場合は複数のプールを作成します。  
   
- この手法を使用して Channel 9 のビデオを視聴するには、「[Windows Server 2016 でブロック記憶域として不揮発性メモリ (NVDIMM-N) を使用する](https://channel9.msdn.com/Events/Build/2016/P466)」をご覧ください。  
+ この手法を使用して Channel 9 のビデオを視聴するには、「 [Windows Server 2016 でブロック記憶域として不揮発性メモリ (NVDIMM-N) を使用する](https://channel9.msdn.com/Events/Build/2016/P466)」をご覧ください。  
   
-## 適切なディスクを識別する  
+## <a name="identifying-the-right-disks"></a>適切なディスクを識別する  
  特に高度な機能 (ライトバック キャッシュなど) を使用した Windows Server 2016 の記憶域スペースのセットアップは、PowerShell で最も簡単に達成できます。 最初の手順として、仮想ディスクが作成される記憶域スペース プールの一部とする必要のあるディスクを識別します。 NVDIMM-N には、メディア型とバス型の SCM (記憶域クラス メモリ) があります。これらについては、Get-PhysicalDisk PowerShell コマンドレットを使用してクエリを実行できます。  
   
 ```  
@@ -45,9 +49,9 @@ $pd =  Get-PhysicalDisk | Select FriendlyName, MediaType, BusType | WHere-Object
 $pd | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Select FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "Select FriendlyName")  
+ ![FriendlyName の選択](../../relational-databases/performance/media/select-friendlyname.png "FriendlyName の選択")  
   
-## 記憶域プールの作成  
+## <a name="creating-the-storage-pool"></a>記憶域プールの作成  
  PhysicalDisks を含む $pd 変数を使用すると、New-StoragePool PowerShell コマンドレットを使用して記憶域プールを構築するのが容易になります。  
   
 ```  
@@ -56,7 +60,7 @@ New-StoragePool –StorageSubSystemFriendlyName “Windows Storage*” –Friend
   
  ![New-StoragePool](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
   
-## 仮想ディスクとボリュームの作成  
+## <a name="creating-the-virtual-disk-and-volume"></a>仮想ディスクとボリュームの作成  
  プールが作成されたら、次に仮想ディスクを切り出して、書式設定します。 次のケースでは、仮想ディスクは 1 つだけ作成され、New-Volume PowerShell コマンドレットを使用してこのプロセスを効率化することができます。  
   
 ```  
@@ -71,12 +75,12 @@ New-Volume –StoragePool (Get-StoragePool –FriendlyName NVDIMM_Pool) –Frien
   
  サーバーで表示されるこの新しいボリュームが確認できるようになりました。 SQL Server トランザクション ログに対してこのドライブを使用できます。  
   
- ![Log_Space Drive](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
+ ![Log_Space ドライブ](../../relational-databases/performance/media/log-space-drive.png "Log_Space ドライブ")  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Windows 10 の Windows 記憶域スペース](http://windows.microsoft.com/en-us/windows-10/storage-spaces-windows-10)   
  [Windows 2012 R2 の Windows 記憶域スペース](https://technet.microsoft.com/en-us/library/hh831739.aspx)   
  [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- [データ ファイルとログ ファイルの既定の場所の表示または変更 &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view or change the default locations for data and log files.md)  
+ [データ ファイルとログ ファイルの既定の場所の表示または変更 &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md)  
   
   

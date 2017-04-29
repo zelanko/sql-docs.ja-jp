@@ -1,33 +1,37 @@
 ---
 title: "ストアド プロシージャの定義の表示 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ストアド プロシージャ [SQL Server]、表示"
-  - "ストアド プロシージャの定義"
-  - "ストアド プロシージャの確認"
-  - "ストアド プロシージャの表示"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stored procedures [SQL Server], viewing
+- definition of stored procedure
+- viewing stored procedures
+- displaying stored procedures
 ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c47576b90eb7b14738d8612b99f36ed8a5ccb12
+ms.lasthandoff: 04/11/2017
+
 ---
-# ストアド プロシージャの定義の表示
+# <a name="view-the-definition-of-a-stored-procedure"></a>ストアド プロシージャの定義の表示
     
 ##  <a name="Top"></a> ストアド プロシージャの定義は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でオブジェクト エクスプローラーのメニュー オプションを使用するか、クエリ エディターで [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して表示できます。 このトピックでは、オブジェクト エクスプローラーでプロシージャの定義を表示する方法について説明します。さらに、クエリ エディターでのシステム プロシージャ、システム関数、およびオブジェクト カタログ ビューを使用した表示方法について説明します。  
   
--   **作業を開始する準備:**  [セキュリティ](#Security)  
+-   **Before you begin:**  [Security](#Security)  
   
--   **プロシージャの定義を** [SQL Server Management Studio](#SSMSProcedure) または [Transact-SQL](#TsqlProcedure) を使用して表示するには  
+-   **To view the definition of a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 29
  ロール **public** のメンバーシップが必要です。 システム オブジェクトの定義は、公開されます。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION のいずれかの権限を許可された人が表示できます。  
   
  システム関数: **OBJECT_DEFINITION**  
- システム オブジェクトの定義は、公開されます。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION のいずれかの権限を許可された人が表示できます。 これらの権限は **db_owner**、**db_ddladmin**、および **db_securityadmin** 固定データベース ロールのメンバーが暗黙的に保有します。  
+ システム オブジェクトの定義は、公開されます。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION のいずれかの権限を許可された人が表示できます。 これらの権限は **db_owner**、 **db_ddladmin**、および **db_securityadmin** 固定データベース ロールのメンバーが暗黙的に保有します。  
   
  オブジェクト カタログ ビュー: **sys.sql_modules**  
  カタログ ビューでのメタデータの表示が、ユーザーが所有しているかそのユーザーが権限を許可されている、セキュリティ保護可能なメタデータに制限されます。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
@@ -57,7 +61,7 @@ caps.handback.revision: 29
   
 2.  **[データベース]**を展開し、プロシージャが属するデータベースを展開し、 **[プログラミング]**を展開します。  
   
-3.  **[ストアド プロシージャ]** を展開します。プロシージャを右クリックし、**[ストアド プロシージャをスクリプト化]** を選択し、**[CREATE]**、**[ALTER]**、**[DROP および CREATE]** のいずれかをクリックします。  
+3.  **[ストアド プロシージャ]**を展開します。プロシージャを右クリックし、 **[ストアド プロシージャをスクリプト化]**を選択し、 **[CREATE]**、 **[ALTER]**、 **[DROP および CREATE]**のいずれかをクリックします。  
   
 4.  **[新しいクエリ エディター ウィンドウ]**をクリックします。 プロシージャの定義が表示されます。  
   
@@ -65,11 +69,11 @@ caps.handback.revision: 29
  **クエリ エディターでプロシージャの定義を表示するには**  
   
  システム ストアド プロシージャ: **sp_helptext**  
- 1.  オブジェクト エクスプローラーで[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+ 1.  オブジェクト エクスプローラーで [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  ツール バーの **[新しいクエリ]**をクリックします。  
   
-3.  クエリ ウィンドウで、**sp_helptext** システム ストアド プロシージャを使用した次のステートメントを入力します。 データベース名とストアド プロシージャ名を変更し、目的のデータベースとストアド プロシージャを参照するようにします。  
+3.  クエリ ウィンドウで、 **sp_helptext** システム ストアド プロシージャを使用した次のステートメントを入力します。 データベース名とストアド プロシージャ名を変更し、目的のデータベースとストアド プロシージャを参照するようにします。  
   
     ```  
     USE AdventureWorks2012;  
@@ -78,11 +82,11 @@ caps.handback.revision: 29
     ```  
   
  システム関数: **OBJECT_DEFINITION**  
- 1.  オブジェクト エクスプローラーで[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+ 1.  オブジェクト エクスプローラーで [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  ツール バーの **[新しいクエリ]**をクリックします。  
   
-3.  クエリ ウィンドウで、**OBJECT_DEFINITION** システム関数を使用した次のステートメントを入力します。 データベース名とストアド プロシージャ名を変更し、目的のデータベースとストアド プロシージャを参照するようにします。  
+3.  クエリ ウィンドウで、 **OBJECT_DEFINITION** システム関数を使用した次のステートメントを入力します。 データベース名とストアド プロシージャ名を変更し、目的のデータベースとストアド プロシージャを参照するようにします。  
   
     ```  
     USE AdventureWorks2012;  
@@ -91,11 +95,11 @@ caps.handback.revision: 29
     ```  
   
  オブジェクト カタログ ビュー: **sys.sql_modules**  
- 1.  オブジェクト エクスプローラーで[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+ 1.  オブジェクト エクスプローラーで [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  ツール バーの **[新しいクエリ]**をクリックします。  
   
-3.  クエリ ウィンドウで、**sys.sql_modules** カタログ ビューを使用した次のステートメントを入力します。 データベース名とストアド プロシージャ名を変更し、目的のデータベースとストアド プロシージャを参照するようにします。  
+3.  クエリ ウィンドウで、 **sys.sql_modules** カタログ ビューを使用した次のステートメントを入力します。 データベース名とストアド プロシージャ名を変更し、目的のデータベースとストアド プロシージャを参照するようにします。  
   
     ```  
     USE AdventureWorks2012;  
@@ -105,7 +109,7 @@ caps.handback.revision: 29
     WHERE object_id = (OBJECT_ID(N'AdventureWorks2012.dbo.uspLogError'));  
     ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ストアド プロシージャの作成](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [ストアド プロシージャの変更](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [ストアド プロシージャの削除](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)   

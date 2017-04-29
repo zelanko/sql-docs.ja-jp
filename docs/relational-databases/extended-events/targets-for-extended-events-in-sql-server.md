@@ -1,23 +1,27 @@
 ---
 title: "SQL Server の拡張イベントのターゲット | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 caps.latest.revision: 2
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 66e1984acfa86bea31f2cedbea70dbac5195a090
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server の拡張イベントのターゲット
+# <a name="targets-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントのターゲット
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -27,32 +31,32 @@ caps.handback.revision: 2
 - package0 のパラメーター。名前を見ればわかるパラメーターは除きます。
 
 
-#### XQuery の例
+#### <a name="xquery-example"></a>XQuery の例
 
 
-「[ring_buffer ターゲット](#h2_target_ring_buffer)」セクションには、[Transact-SQL で XQuery](../../xquery/xquery-language-reference-sql-server.md) を使用して XML の文字列をリレーショナル行セットにコピーする例が含まれます。
+「 [ring_buffer ターゲット](#h2_target_ring_buffer) 」セクションには、 [Transact-SQL で XQuery](../../xquery/xquery-language-reference-sql-server.md) を使用して XML の文字列をリレーショナル行セットにコピーする例が含まれます。
 
 
-### 前提条件
+### <a name="prerequisites"></a>前提条件
 
 
-- 「[クイック スタート: SQL Server の拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)」で説明されている拡張イベントの基本について一般的に理解していること。
+- 「 [クイック スタート: SQL Server の拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)」で説明されている拡張イベントの基本について一般的に理解していること。
 
 
 - 頻繁に更新される SQL Server Management Studio (SSMS.exe) ユーティリティの最近のバージョンをインストールしてあること。 詳細については、次の項目を参照してください。
     - [SQL Server Management Studio (SSMS) のダウンロード](https://msdn.microsoft.com/library/mt238290.aspx)
 
 
-- SSMS.exe の **オブジェクト エクスプローラー**でイベント セッションのターゲット ノードを右クリックして[出力データを簡単に表示する](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)方法を知っていること。
+- SSMS.exe の **オブジェクト エクスプローラー** でイベント セッションのターゲット ノードを右クリックして [出力データを簡単に表示する](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)方法を知っていること。
     - イベント データは XML 文字列としてキャプチャされます。 この記事ではまだデータはリレーショナル行で表示されます。 SSMS を使用してデータを表示した後、コピーしてこの記事に貼り付けました。
-    - T-SQL を使用して XML から行セットを生成する別の方法については、「[ring_buffer ターゲット](#h2_target_ring_buffer)」セクションの説明をご覧ください。 その方法では XQuery を使用します。
+    - T-SQL を使用して XML から行セットを生成する別の方法については、「 [ring_buffer ターゲット](#h2_target_ring_buffer)」セクションの説明をご覧ください。 その方法では XQuery を使用します。
 
 
 
-## パラメーター、アクション、フィールド
+## <a name="parameters-actions-and-fields"></a>パラメーター、アクション、フィールド
 
 
-Transact-SQL で拡張イベントの中心になるのは [CREATE EVENT SESSION](CREATE EVENT SESSION %28Transact-SQL%29.md) ステートメントです。 ステートメントを書くには、多くの場合、次のものに関するリストと記述が必要になります。
+Transact-SQL で拡張イベントの中心になるのは [CREATE EVENT SESSION](~/t-sql/statements/create-event-session-transact-sql.md) ステートメントです。 ステートメントを書くには、多くの場合、次のものに関するリストと記述が必要になります。
 
 - 選択したイベントに関連付けられているフィールド。
 - 選択したイベントに関連付けられているパラメーター。
@@ -60,18 +64,18 @@ Transact-SQL で拡張イベントの中心になるのは [CREATE EVENT SESSION
 システム ビューからこのようなリストを返す SELECT ステートメントは、次の記事のセクション C からコピーできます。
 
 - [SQL Server の拡張イベントに対するシステム ビューからの SELECT と JOIN](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md)
-    - [C.4](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields): イベントに対する SELECT のフィールド。
-    - [C.6](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_6_parameters_targets): ターゲットに対する SELECT のパラメーター。
-    - [C.3](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_3_select_all_available_objects): SELECT のアクション。
+    - [C.4](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields) : イベントに対する SELECT のフィールド。
+    - [C.6](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_6_parameters_targets) : ターゲットに対する SELECT のパラメーター。
+    - [C.3](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_3_select_all_available_objects) : SELECT のアクション。
 
 
-実際の CREATE EVENT SESSION ステートメントのコンテキストで使用されているパラメーター、フィールド、アクションについては、[こちらのリンク](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_B_2_TSQL_perspective)をご覧ください。
+実際の CREATE EVENT SESSION ステートメントのコンテキストで使用されているパラメーター、フィールド、アクションについては、 [こちらのリンク](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_B_2_TSQL_perspective)をご覧ください。
 
 
 
 <a name="h2_target_etw_classic_sync_target"></a>
 
-## etw_classic_sync_target ターゲット
+## <a name="etwclassicsynctarget-target"></a>etw_classic_sync_target ターゲット
 
 
 SQL Server の拡張イベントは、Event Tracing for Windows (ETW) と連携してシステムの使用状況を監視できます。 詳細については、以下をご覧ください。
@@ -80,18 +84,17 @@ SQL Server の拡張イベントは、Event Tracing for Windows (ETW) と連携�
 - [拡張イベントを使用したシステムの使用状況の監視](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
 
 
-この ETW ターゲットは受信したデータを*同期的*に処理しますが、ほとんどのターゲットは*非同期的*に処理します。
+この ETW ターゲットは受信したデータを *同期的* に処理しますが、ほとんどのターゲットは *非同期的*に処理します。
 
 
-\<!--
-Revisit this ETW section later.
+\<!-- この ETW セクションをあとでもう一度確認してください。
 -->
 
 
 
 <a name="h2_target_event_counter"></a>
 
-## event_counter ターゲット
+## <a name="eventcounter-target"></a>event_counter ターゲット
 
 
 event_counter ターゲットは、指定された各イベントが発生した回数をカウントするだけです。
@@ -102,12 +105,12 @@ event_counter ターゲットは、指定された各イベントが発生した
 - event_counter にはパラメーターがありません。
 
 
-- 受信したデータを*同期的*に処理します。
+- 受信したデータを *同期的* に処理します。
     - event_counter は処理がほとんどない単純なターゲットなので、同期処理でもかまいません。
-    - データベース エンジンは、処理が遅く、データベース エンジンのパフォーマンスが低下する可能性のあるターゲットからは切断します。 これは、ほとんどのターゲットが*非同期*処理である理由の 1 つです。
+    - データベース エンジンは、処理が遅く、データベース エンジンのパフォーマンスが低下する可能性のあるターゲットからは切断します。 これは、ほとんどのターゲットが *非同期*処理である理由の 1 つです。
 
 
-#### event_counter によってキャプチャされる出力の例
+#### <a name="example-output-captured-by-eventcounter"></a>event_counter によってキャプチャされる出力の例
 
 
 ```
@@ -139,7 +142,7 @@ CREATE EVENT SESSION [event_counter_1]
 
 <a name="h2_target_event_file"></a>
 
-## event_file ターゲット
+## <a name="eventfile-target"></a>event_file ターゲット
 
 
 **event_file** ターゲットは、イベント セッションの出力をバッファーからディスク ファイルに書き込みます。
@@ -152,7 +155,7 @@ CREATE EVENT SESSION [event_counter_1]
 - 指定したファイル名をプレフィックスとして使用し、その後に日時に基づく長い整数と、.xel 拡張子が付加されます。
 
 
-#### CREATE EVENT SESSION と **event_file** ターゲット
+#### <a name="create-event-session-with-eventfile-target"></a>CREATE EVENT SESSION と **event_file** ターゲット
 
 
 次に示すのは、テストに使用した CREATE EVENT SESSION です。 ADD TARGET 句の 1 つで、event_file を指定しています。
@@ -204,7 +207,7 @@ CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
 ```
 
 
-#### sys.fn_xe_file_target_read_file 関数
+#### <a name="sysfnxefiletargetreadfile-function"></a>sys.fn_xe_file_target_read_file 関数
 
 
 event_file ターゲットは、人間が読むことのできないバイナリ形式で、受信したデータを格納します。 [**sys.fn_xe_file_target_read_file**](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md) 関数に対して SELECT と FROM を使用して、.xel ファイルの内容を取得できます。
@@ -223,7 +226,7 @@ SELECT f.*
 ```
 
 
-SQL Server **2014** では、次のような SELECT でデータを取得します。 SQL Server 2014 より後では、.xem ファイルは使われなくなっています。
+SQL Server **2014**では、次のような SELECT でデータを取得します。 SQL Server 2014 より後では、.xem ファイルは使われなくなっています。
 
 
 ```
@@ -240,24 +243,24 @@ SELECT f.*
 もちろん、SSMS UI を使用して手動で .xel データを見ることはできます。
 
 
-#### event_file ターゲットに格納されているデータ
+#### <a name="data-stored-in-the-eventfile-target"></a>event_file ターゲットに格納されているデータ
 
 
-SQL Server 2016 で **sys.fn_xe_file_target_read_file** に SELECT を使用した結果を次に示します。
+SQL Server 2016 で **sys.fn_xe_file_target_read_file**に SELECT を使用した結果を次に示します。
 
 
 ```
 module_guid                            package_guid                           object_name     event_data                                                                                                                                                                                                                                                                                          file_name                                                      file_offset
 -----------                            ------------                           -----------     ----------                                                                                                                                                                                                                                                                                          ---------                                                      -----------
-D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_acquired   <event name="lock_acquired" package="sqlserver" timestamp="2016-08-07T20:13:35.827Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value><![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
-D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_released   <event name="lock_released" package="sqlserver" timestamp="2016-08-07T20:13:35.832Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value><![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
+D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_acquired   <event name="lock_acquired" package="sqlserver" timestamp="2016-08-07T20:13:35.827Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value>\<![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
+D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_released   <event name="lock_released" package="sqlserver" timestamp="2016-08-07T20:13:35.832Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value>\<![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
 ```
 
 
 
 <a name="h2_target_histogram"></a>
 
-## histogram ターゲット
+## <a name="histogram-target"></a>histogram ターゲット
 
 
 **histogram** ターゲットは、event_counter ターゲットより高機能です。 histogram では次のことができます。
@@ -280,12 +283,12 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lo
 - たとえば、slots=59 は 64 に切り上げられます。
 
 
-### histogram の*アクション*の例
+### <a name="action-example-for-histogram"></a>histogram の*アクション* の例
 
 
-次の CREATE EVENT SESSION ステートメントの TARGET...SET 句では、ターゲット パラメーターとして **source_type=1** を指定しています。 1 は、histogram ターゲットがアクションを追跡することを意味します。
+次の CREATE EVENT SESSION ステートメントの TARGET...SET 句では、ターゲット パラメーターとして **source_type=1**を指定しています。 1 は、histogram ターゲットがアクションを追跡することを意味します。
 
-この例では、EVENT...ACTION 句は **sqlos.system_thread_id** というターゲットの 1 つのアクションだけを提供します。 TARGET...SET 句では、**source=N'sqlos.system_thread_id'** と割り当てられています。
+この例では、EVENT...ACTION 句は **sqlos.system_thread_id**というターゲットの 1 つのアクションだけを提供します。 TARGET...SET 句では、 **source=N'sqlos.system_thread_id'** と割り当てられています。
 
 - 複数のソース アクションを追跡するには、CREATE EVENT SESSION ステートメントに histogram ターゲットを追加します。
 
@@ -310,7 +313,7 @@ CREATE EVENT SESSION [histogram_lockacquired]
         )
     WITH
         (
-        <.... (For brevity, numerous parameter assignments generated by SSMS.exe are not shown here.) ....>
+        \<.... (For brevity, numerous parameter assignments generated by SSMS.exe are not shown here.) ....>
         );
 ```
 
@@ -330,10 +333,10 @@ value   count
 ```
 
 
-#### 使用可能なアクションを検出するための SELECT
+#### <a name="select-to-discover-available-actions"></a>使用可能なアクションを検出するための SELECT
 
 
-[C.3](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_3_select_all_available_objects) の SELECT ステートメントを使用すると、CREATE EVENT SESSION ステートメントで使用できるアクションを取得できます。 WHERE 句で、**o.name LIKE** フィルターを編集して目的のアクションを指定します。
+[C.3](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_3_select_all_available_objects) の SELECT ステートメントを使用すると、CREATE EVENT SESSION ステートメントで使用できるアクションを取得できます。 WHERE 句で、 **o.name LIKE** フィルターを編集して目的のアクションを指定します。
 
 
 C.3 の SELECT で返される行セットの例を次に示します。 **system_thread_id** アクションは 2 行目にあります。
@@ -349,10 +352,10 @@ sqlserver      create_dump_single_thread   Create mini dump for the current thre
 ```
 
 
-### histogram のイベント *フィールド*の例
+### <a name="event-field-example-for-histogram"></a>histogram のイベント *フィールド* の例
 
 
-次の例では、**source_type=0** を設定します。 **source=** に割り当てられる値は、アクションではなくイベント フィールドです。
+次の例では、 **source_type=0**を設定します。 **source=** に割り当てられる値は、アクションではなくイベント フィールドです。
 
 
 
@@ -368,7 +371,7 @@ CREATE EVENT SESSION [histogram_checkpoint_dbid]
         source_type          = (0)
     )
     WITH
-    ( <....> );
+    ( \<....> );
 ```
 
 
@@ -384,10 +387,10 @@ value   count
 ```
 
 
-#### 選択したイベントで使用可能なフィールドを検出する SELECT
+#### <a name="select-to-discover-available-fields-on-your-chosen-event"></a>選択したイベントで使用可能なフィールドを検出する SELECT
 
 
-[C.4](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields) の SELECT ステートメントでは、選択できるイベント フィールドが示されます。 最初に、**o.name LIKE** フィルターを編集して選択するイベント名を指定します。
+[C.4](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields) の SELECT ステートメントでは、選択できるイベント フィールドが示されます。 最初に、 **o.name LIKE** フィルターを編集して選択するイベント名を指定します。
 
 
 C.4 SELECT からは次のような行セットが返されます。 この行セットでは、checkpoint_begin イベントが histogram ターゲットに提供できるフィールドは database_id の 1 つだけであることがわかります。
@@ -403,7 +406,7 @@ sqlserver      checkpoint_end     database_id  NULL
 
 <a name="h2_target_pair_matching"></a>
 
-## pair_matching ターゲット
+## <a name="pairmatching-target"></a>pair_matching ターゲット
 
 
 pair_matching ターゲットを使用すると、対応する終了イベントのない開始イベントを検出できます。 たとえば、lock_acquired イベントが発生した後に適切なタイミングで対応する lock_released イベントが発生しないと、問題になる可能性があります。
@@ -412,10 +415,10 @@ pair_matching ターゲットを使用すると、対応する終了イベント
 システムで開始イベントと終了イベントが自動的にマッチングされることはありません。 代わりに、開発者が CREATE EVENT SESSION ステートメントでシステムにマッチングを示す必要があります。 開始イベントと終了イベントがマッチングする場合、ペアは破棄されるので、マッチングしていない開始イベントに注目できます。
 
 
-#### 開始イベントと終了イベントのペアのマッチングが可能なフィールドの検索
+#### <a name="finding-matchable-fields-for-the-start-and-end-event-pair"></a>開始イベントと終了イベントのペアのマッチングが可能なフィールドの検索
 
 
-[C.4 の SELECT](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields) を使用することで、次の行セットには lock_acquired イベントの対象になるフィールドが約 16 個あることがわかります。 ここで示されている行セットは、マッチングするフィールドがわかるように手動で分割されています。 **duration** などの一部のフィールドでは両方のイベントをマッチングできません。
+[C.4 の SELECT](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields)を使用することで、次の行セットには lock_acquired イベントの対象になるフィールドが約 16 個あることがわかります。 ここで示されている行セットは、マッチングするフィールドがわかるように手動で分割されています。 **duration** などの一部のフィールドでは両方のイベントをマッチングできません。
 
 
 ```
@@ -441,7 +444,7 @@ sqlserver   lock_acquired   resource_type            NULL
 ```
 
 
-### pair_matching の例
+### <a name="example-of-pairmatching"></a>pair_matching の例
 
 
 次の CREATE EVENT SESSION ステートメントでは、2 つのイベントと 2 つのターゲットが指定されています。 pair_matching ターゲットでは、イベントをペアにするために 2 つのフィールド セットが指定されています。 **begin_matching_columns=** と **end_matching_columns=** に割り当てるコンマ区切りフィールドのシーケンスは同じでなければなりません。 コンマ区切り値で示されるフィールドの間にタブや改行文字があってはなりませんが、スペースは許されます。
@@ -534,12 +537,12 @@ sqlserver      lock_acquired   2016-08-05 12:45:47.9980000   InMemTest2      0  
 ```
 
 
-ペアになっていない lock_acquired イベントの行には、ロックを取得する T-SQL テキスト **sqlserver.sql_text** が含まれる場合があります。 表示が多くなるので示してはありません。
+ペアになっていない lock_acquired イベントの行には、ロックを取得する T-SQL テキスト **sqlserver.sql_text**が含まれる場合があります。 表示が多くなるので示してはありません。
 
 
 <a name="h2_target_ring_buffer"></a>
 
-## ring_buffer ターゲット
+## <a name="ringbuffer-target"></a>ring_buffer ターゲット
 
 
 ring_buffer ターゲットは、簡単なイベントのテストに便利です。 イベント セッションを停止すると、格納されている出力は破棄されます。
@@ -547,7 +550,7 @@ ring_buffer ターゲットは、簡単なイベントのテストに便利で�
 この ring_buffer のセクションでは、XQuery の Transact-SQL 実装を使用して ring_buffer の XML の内容をもっと読みやすいリレーショナル行セットにコピーする方法も示します。
 
 
-#### CREATE EVENT SESSION と ring_buffer
+#### <a name="create-event-session-with-ringbuffer"></a>CREATE EVENT SESSION と ring_buffer
 
 
 ring_buffer を使用するこの CREATE EVENT SESSION ステートメントに関して特別なことは何もありません。
@@ -581,7 +584,7 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
 ```
 
 
-### ring_buffer が受け取る lock_acquired に関する XML 形式の出力
+### <a name="xml-output-received-for-lockacquired-by-ringbuffer"></a>ring_buffer が受け取る lock_acquired に関する XML 形式の出力
 
 
 SELECT から取得する内容は XML 形式の文字列です。 このテストで ring_buffer ターゲットが格納した XML 文字列を次に示します。 ただし、簡潔にするため、2 つの &#x3c;event&#x3e; 要素以外はすべて除去してあります。 さらに、各 &#x3c;event&#x3e; に含まれる関係のない &#x3c;data&#x3e; 要素も削除してあります。
@@ -593,7 +596,7 @@ SELECT から取得する内容は XML 形式の文字列です。 このテス�
     <data name="mode">
       <type name="lock_mode" package="sqlserver"></type>
       <value>1</value>
-      <text><![CDATA[SCH_S]]></text>
+      <text>\<![CDATA[SCH_S]]></text>
     </data>
     <data name="transaction_id">
       <type name="int64" package="package0"></type>
@@ -617,18 +620,18 @@ SELECT から取得する内容は XML 形式の文字列です。 このテス�
     </data>
     <data name="database_name">
       <type name="unicode_string" package="package0"></type>
-      <value><![CDATA[]]></value>
+      <value>\<![CDATA[]]></value>
     </data>
     <action name="database_name" package="sqlserver">
       <type name="unicode_string" package="package0"></type>
-      <value><![CDATA[InMemTest2]]></value>
+      <value>\<![CDATA[InMemTest2]]></value>
     </action>
   </event>
   <event name="lock_acquired" package="sqlserver" timestamp="2016-08-05T23:59:56.012Z">
     <data name="mode">
       <type name="lock_mode" package="sqlserver"></type>
       <value>1</value>
-      <text><![CDATA[SCH_S]]></text>
+      <text>\<![CDATA[SCH_S]]></text>
     </data>
     <data name="transaction_id">
       <type name="int64" package="package0"></type>
@@ -652,18 +655,18 @@ SELECT から取得する内容は XML 形式の文字列です。 このテス�
     </data>
     <data name="database_name">
       <type name="unicode_string" package="package0"></type>
-      <value><![CDATA[]]></value>
+      <value>\<![CDATA[]]></value>
     </data>
     <action name="database_name" package="sqlserver">
       <type name="unicode_string" package="package0"></type>
-      <value><![CDATA[InMemTest2]]></value>
+      <value>\<![CDATA[InMemTest2]]></value>
     </action>
   </event>
 </RingBufferTarget>
 ```
 
 
-上の XML を取得するには、イベント セッションがアクティブになっている間に次の SELECT を発行します。 アクティブな XML データが、システム ビュー **sys.dm_xe_session_targets** から取得されます。
+上の XML を取得するには、イベント セッションがアクティブになっている間に次の SELECT を発行します。 アクティブな XML データが、システム ビュー **sys.dm_xe_session_targets**から取得されます。
 
 
 ```tsql
@@ -692,7 +695,7 @@ SELECT * FROM #XmlAsTable;
 ```
 
 
-### XML を行セットとして表示するための XQuery
+### <a name="xquery-to-see-the-xml-as-a-rowset"></a>XML を行セットとして表示するための XQuery
 
 
 上の XML をリレーショナル行セットとして表示するには、上の SELECT ステートメントに続けて次の T-SQL ステートメントを発行します。 コメントの付いた行では、各 XQuery の使用方法が説明されています。
@@ -723,7 +726,7 @@ SELECT
 ```
 
 
-#### 前の SELECT で使用されている XQuery に関するメモ
+#### <a name="xquery-notes-from-preceding-select"></a>前の SELECT で使用されている XQuery に関するメモ
 
 
 (A)
@@ -749,7 +752,7 @@ SELECT
 - これは、上の FROM 句から返された XML に対して行われます。
 
 
-#### XQuery SELECT からの出力
+#### <a name="output-from-xquery-select"></a>XQuery SELECT からの出力
 
 
 次に示すのは、前の XQuery を含む T-SQL によって生成された行セットです。
@@ -764,7 +767,7 @@ OccurredDtTm              Mode    DatabaseName
 
 
 
-## XEvent .NET の名前空間と C&#x23;
+## <a name="xevent-net-namespaces-and-cx23"></a>XEvent .NET の名前空間と C&#x23;
 
 
 Package0 にはさらに次の 2 つのターゲットがありますが、Transact-SQL では使用できません。
@@ -781,10 +784,13 @@ event_stream ターゲットは、C# などの言語で記述された .NET プ�
 発生する可能性がある **25726** エラーは、データが格納されたイベント ストリームがクライアントのデータ処理より速いことを意味します。 これにより、サーバーのパフォーマンス低下を回避するため、データベース エンジンはイベント ストリームから切断されています。
 
 
-### XEvent の名前空間
+### <a name="xevent-namespaces"></a>XEvent の名前空間
 
 
 - [Microsoft.SqlServer.Management.XEvent 名前空間](https://msdn.microsoft.com/library/microsoft.sqlserver.management.xevent.aspx)
 
 - [Microsoft.SqlServer.XEvent.Linq 名前空間](https://msdn.microsoft.com/library/microsoft.sqlserver.xevent.linq.aspx)
+
+
+
 

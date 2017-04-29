@@ -1,33 +1,37 @@
 ---
 title: "XML データのシリアル化の定義 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "エンティティ変換の規則 [SQL Server の XML]"
-  - "シリアル化 (serialization)"
-  - "シリアル化された XML 構造の再解析"
-  - "エンコード [SQL Server の XML]"
-  - "XML [SQL Server], シリアル化"
-  - "xml データ型 [SQL Server], シリアル化"
-  - "型指定された XML"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- entitization rules [XML in SQL Server]
+- serialization
+- reparsing serialized XML structures
+- encoding [XML in SQL Server]
+- XML [SQL Server], serialization
+- xml data type [SQL Server], serialization
+- typed XML
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01e295b33ebd66543f2b431661799570bbe419b9
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML データのシリアル化の定義
+# <a name="define-the-serialization-of-xml-data"></a>XML データのシリアル化の定義
   XML データ型を SQL 文字列型やバイナリ型に明示的または暗黙にキャストすると、XML データ型のコンテンツはこのトピックで説明する規則に従ってシリアル化されます。  
   
-## シリアル化のエンコード  
+## <a name="serialization-encoding"></a>シリアル化のエンコード  
  SQL の対象型が VARBINARY の場合、結果は UTF-16 バイト順マークを前に付け、XML 宣言を付けずに、UTF-16 でシリアル化されます。 対象型が小さすぎる場合は、エラーが発生します。  
   
  例:  
@@ -68,15 +72,15 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
   
  XML の結果がクライアント側に返されるときは、UTF-16 エンコードでデータが送信されます。 クライアント側のプロバイダーでは、API の規則に従ってデータを公開します。  
   
-## XML 構造のシリアル化  
+## <a name="serialization-of-the-xml-structures"></a>XML 構造のシリアル化  
  **xml** データ型のコンテンツは、通常の方法でシリアル化されます。 具体的には、要素ノードは要素マークアップにマップされ、テキスト ノードはテキスト コンテンツにマップされます。 ただし、文字がエンティティに変換される状況、および型指定されたアトミック値がシリアル化される方法については、次に説明します。  
   
-## シリアル化中の XML 文字のエンティティ変換  
+## <a name="entitization-of-xml-characters-during-serialization"></a>シリアル化中の XML 文字のエンティティ変換  
  シリアル化されたすべての XML 構造は再解析が可能である必要があります。 したがって、XML パーサーの正規化フェーズ中に引き続き文字を互いにやり取りできるようにするには、一部の文字をエンティティに変換する方法でシリアル化する必要があります。 ただし、一部の文字をエンティティに変換する場合は、ドキュメントが整形式になり、解析可能になるようにする必要があります。 次に、シリアル化中に適用されるエンティティ変換の規則を示します。  
   
--   &、\<、および > の文字が属性値や要素のコンテンツ内に出現する場合、常に、それぞれ &amp;、&lt;、および &gt; にエンティティ変換されます。  
+-   &、\<、> の文字が属性値や要素のコンテンツ内に出現する場合、常に、それぞれ &amp;、&lt;、&gt; にエンティティ変換されます。  
   
--   SQL Server では属性値を囲むために引用符 (U+0022) が使用されるので、属性値の引用符は &quot; にエンティティ変換されます。  
+-   SQL Server では属性値を囲むために引用符 (U+0022) が使用されるので、属性値の引用符は &quot;にエンティティ変換されます。  
   
 -   サーバーのみでキャストする場合は、サロゲート ペアが 1 つの数字参照としてエンティティ変換されます。 たとえば、サロゲート ペア U+D800 U+DF00 は、数字参照 &\#x00010300; にエンティティ変換されます。  
   
@@ -103,13 +107,13 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
 </a>  
 ```  
   
- 最後の空白文字の保護規則を適用しない場合は、**xml** から文字列型またはバイナリ型にキャストするときに、CONVERT オプションを明示的に 1 に設定できます。 たとえば、エンティティ変換が行われないように、次のように設定できます。  
+ 最後の空白文字の保護規則を適用しない場合は、 **xml** から文字列型またはバイナリ型にキャストするときに、CONVERT オプションを明示的に 1 に設定できます。 たとえば、エンティティ変換が行われないように、次のように設定できます。  
   
 ```  
 select CONVERT(NVARCHAR(50), CONVERT(XML, '<a>   </a>', 1), 1)  
 ```  
   
- [query() メソッド (XML データ型)](../../t-sql/xml/query-method-xml-data-type.md) の結果は、XML データ型のインスタンスになることに注意してください。 したがって、文字列型またはバイナリ型にキャストされる **query()** メソッドの結果は、上記の規則に従ってエンティティに変換されます。 エンティティに変換されていない文字列値を取得する場合は、代わりに [value() メソッド (XML データ型)](../../t-sql/xml/value-method-xml-data-type.md) を使用する必要があります。 次に、**query()** メソッドを使用する例を示します。  
+ [query() メソッド (XML データ型)](../../t-sql/xml/query-method-xml-data-type.md) の結果は、XML データ型のインスタンスになることに注意してください。 したがって、文字列型またはバイナリ型にキャストされる **query()** メソッドの結果は、上記の規則に従ってエンティティに変換されます。 エンティティに変換されていない文字列値を取得する場合は、代わりに [value() メソッド (XML データ型)](../../t-sql/xml/value-method-xml-data-type.md) を使用する必要があります。 次に、 **query()** メソッドを使用する例を示します。  
   
 ```  
 declare @x xml  
@@ -123,7 +127,7 @@ select @x.query('/a/text()')
 This example contains an entitized char: <.  
 ```  
   
- 次に、**value()** メソッドを使用する例を示します。  
+ 次に、 **value()** メソッドを使用する例を示します。  
   
 ```  
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
@@ -135,8 +139,8 @@ select @x.value('(/a/text())[1]', 'nvarchar(100)')
 This example contains an entitized char: <.  
 ```  
   
-## 型指定された XML データ型のシリアル化  
- 型指定された **xml** データ型のインスタンスには、XML スキーマ型に従って型指定される値が含まれています。 このような値は、XQuery が xs:string にキャストするのと同じ形式で、XML スキーマ型に従ってシリアル化されます。 詳細については、「[XQuery での型キャストの規則](../../xquery/type-casting-rules-in-xquery.md)」を参照してください。  
+## <a name="serializing-a-typed-xml-data-type"></a>型指定された XML データ型のシリアル化  
+ 型指定された **xml** データ型のインスタンスには、XML スキーマ型に従って型指定される値が含まれています。 このような値は、XQuery が xs:string にキャストするのと同じ形式で、XML スキーマ型に従ってシリアル化されます。 詳細については、「 [XQuery での型キャストの規則](../../xquery/type-casting-rules-in-xquery.md)」を参照してください。  
   
  たとえば、次の例で示すように、xs:double の値 1.34e1 は 13.4 にシリアル化されます。  
   
@@ -148,7 +152,7 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
  これは、文字列値 13.4 を返します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [XQuery での型キャストの規則](../../xquery/type-casting-rules-in-xquery.md)   
  [CAST と CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   

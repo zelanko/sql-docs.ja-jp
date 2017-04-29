@@ -1,30 +1,34 @@
 ---
 title: "プッシュ サブスクリプションのプロパティの表示または変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "viewing replication properties"
-  - "push subscriptions [SQL Server replication], properties"
-  - "subscriptions [SQL Server replication], push"
-  - "push subscriptions [SQL Server replication], modifying"
-  - "modifying replication properties, push subscriptions"
-  - "サブスクリプションの変更, SQL Server Management Studio"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing replication properties
+- push subscriptions [SQL Server replication], properties
+- subscriptions [SQL Server replication], push
+- push subscriptions [SQL Server replication], modifying
+- modifying replication properties, push subscriptions
+- modifying subscriptions, SQL Server Management Studio
 ms.assetid: 801d2995-7aa5-4626-906e-c8190758ec71
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3fc246be116d9468733d8b66f501717a4310bba2
+ms.lasthandoff: 04/11/2017
+
 ---
-# プッシュ サブスクリプションのプロパティの表示または変更
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、プッシュ サブスクリプションのプロパティを表示および変更する方法について説明します。  
+# <a name="view-and-modify-push-subscription-properties"></a>プッシュ サブスクリプションのプロパティの表示または変更
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、プッシュ サブスクリプションのプロパティを表示および変更する方法について説明します。  
   
  **このトピックの内容**  
   
@@ -39,46 +43,46 @@ caps.handback.revision: 37
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  プッシュ サブスクリプション プロパティを表示および変更するには、以下の方法があります。  
   
--    **サブスクリプションのプロパティ - \< Publisher>: \< PublicationDatabase>** ] ダイアログ ボックスから利用できる [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[サブスクリプションのプロパティ - \<Publisher>: \<PublicationDatabase>]** ダイアログ ボックス。  
   
--   レプリケーション モニターの **[すべてのサブスクリプション]** タブ。 レプリケーション モニターの起動方法については、次を参照してください。 [レプリケーション モニターを起動](../../relational-databases/replication/monitor/start-the-replication-monitor.md)します。  
+-   レプリケーション モニターの **[すべてのサブスクリプション]** タブ。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)」(レプリケーション モニターの開始) をご覧ください。  
   
-#### Management Studio でプッシュ サブスクリプション プロパティを表示および変更するには  
+#### <a name="to-view-and-modify-push-subscription-properties-in-management-studio"></a>Management Studio でプッシュ サブスクリプション プロパティを表示および変更するには  
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でパブリッシャーに接続し、サーバー ノードを展開します。  
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
   
-3.  適切なパブリケーションを展開し、サブスクリプションを右クリックしてをクリックし、 **プロパティ**します。  
+3.  適切なパブリケーションを展開し、サブスクリプションを右クリックして、 **[プロパティ]**をクリックします。  
   
 4.  必要に応じてプロパティを変更し、 **[OK]**をクリックします。  
   
-#### レプリケーション モニターでプッシュ サブスクリプション プロパティを表示および変更するには  
+#### <a name="to-view-and-modify-push-subscription-properties-in-replication-monitor"></a>レプリケーション モニターでプッシュ サブスクリプション プロパティを表示および変更するには  
   
 1.  レプリケーション モニターの左ペインのパブリッシャー グループを展開し、パブリッシャーを展開して、パブリケーションをクリックします。  
   
 2.  **[すべてのサブスクリプション]** タブをクリックします。  
   
-3.  サブスクリプションの場合を右クリックし、をクリックし、 **プロパティ**します。  
+3.  サブスクリプションを右クリックし、 **[プロパティ]**をクリックします。  
   
 4.  必要に応じてプロパティを変更し、 **[OK]**をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  プッシュ サブスクリプションのプロパティは、レプリケーションのストアド プロシージャを使用して、プログラムから変更できます。 使用するストアド プロシージャは、サブスクリプションが属するパブリケーションの種類によって異なります。  
   
-#### スナップショット パブリケーションまたはトランザクション パブリケーションのプッシュ サブスクリプションのプロパティを表示するには  
+#### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションのプッシュ サブスクリプションのプロパティを表示するには  
   
-1.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)します。 **@publication**と **@subscriber**を指定し、 **@article** に **all**を指定します。  
+1.  パブリッシャーのパブリケーション データベースで [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)を実行します。 **@publication**、**@subscriber** を指定し、**@article** に **all** を指定します。  
   
-2.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md), を指定して **@subscriber**します。  
+2.  パブリッシャーのパブリケーション データベースで [@subscriber](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)を指定して **@subscriber**ダイアログ ボックス。  
   
-#### スナップショット パブリケーションまたはトランザクション パブリケーションのプッシュ サブスクリプションのプロパティを変更するには  
+#### <a name="to-change-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションのプッシュ サブスクリプションのプロパティを変更するには  
   
-1.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_changesubscriber](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md), を指定して **@subscriber** および変更するサブスクライバーのプロパティのパラメーターです。  
+1.  パブリッシャーのパブリケーション データベースで [sp_changesubscriber](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)を指定して **@subscriber** を指定し、さらに、変更対象とするサブスクライバー プロパティのパラメーターをすべて指定します。  
   
-2.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)します。 指定 **@publication**, 、**@subscriber**, 、**@destination_db**, の値 **すべて** の **@article**, 、変更対象のサブスクリプション プロパティ **@property**, 、し、新しい値として **@value**します。 これにより、プッシュ サブスクリプションのセキュリティ設定が変更されます。  
+2.  パブリッシャーのパブリケーション データベースで [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)を実行します。 **@publication**、**@subscriber**、**@destination_db** を指定し、**@article** に **all** を、**@property** に変更するサブスクリプション プロパティを、**@value** に新しい値を指定します。 これにより、プッシュ サブスクリプションのセキュリティ設定が変更されます。  
   
-3.  (省略可能)サブスクリプションのデータ変換サービス (DTS) パッケージのプロパティを変更するには、実行 [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md) サブスクライバー側でサブスクリプション データベースです。 **@jobid** にディストリビューション エージェント ジョブの ID を指定し、さらに、次の DTS パッケージ プロパティを指定します。  
+3.  (省略可) サブスクリプションのデータ変換サービス (DTS) パッケージのプロパティを変更するには、サブスクライバーのサブスクリプション データベースで [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md) を実行します。 **@jobid** にディストリビューション エージェント ジョブの ID を指定し、さらに、次の DTS パッケージ プロパティを指定します。  
   
     -   **@dts_package_name**  
   
@@ -89,57 +93,57 @@ caps.handback.revision: 37
      これにより、サブスクリプションの DTS パッケージ プロパティが変更されます。  
   
     > [!NOTE]  
-    >  ジョブを実行して ID を取得できる [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)します。  
+    >  ジョブ ID は、 [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)を実行することで取得できます。  
   
-#### マージ パブリケーションのプッシュ サブスクリプションのプロパティを表示するには  
+#### <a name="to-view-the-properties-of-a-push-subscription-to-a-merge-publication"></a>マージ パブリケーションのプッシュ サブスクリプションのプロパティを表示するには  
   
-1.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)します。 **@publication** と **@subscriber**を指定します。  
+1.  パブリッシャーのパブリケーション データベースで [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)を実行します。 **@publication** と **@subscriber** を指定します。  
   
-2.  パブリッシャーで実行 [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md), を指定して **@subscriber**します。  
+2.  パブリッシャーで、 [@subscriber](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)を指定して **@subscriber**ダイアログ ボックス。  
   
-#### マージ パブリケーションのプッシュ サブスクリプションのプロパティを変更するには  
+#### <a name="to-change-the-properties-of-a-push-subscription-to-a-merge-publication"></a>マージ パブリケーションのプッシュ サブスクリプションのプロパティを変更するには  
   
-1.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)します。 指定 **@publication**, 、**@subscriber**, 、**@subscriber_db**, 、変更対象のサブスクリプション プロパティ **@property**, 、し、新しい値として **@value**します。  
+1.  パブリッシャーのパブリケーション データベースで [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)を実行します。 **@publication**、**@subscriber**、**@subscriber_db** を指定し、**@property** に変更するサブスクリプション プロパティを、**@value** に新しい値を指定します。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
   
 ##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
  プッシュ サブスクリプション プロパティの表示や変更に使用する RMO クラスは、プッシュ サブスクリプションをサブスクライブするパブリケーションの種類によって異なります。  
   
-#### スナップショット パブリケーションまたはトランザクション パブリケーションに対するプッシュ サブスクリプションのプロパティを表示または変更するには  
+#### <a name="to-view-or-modify-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションに対するプッシュ サブスクリプションのプロパティを表示または変更するには  
   
-1.  使用してパブリッシャーへの接続を作成、 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスです。  
+1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、パブリッシャーへの接続を作成します。  
   
-2.  インスタンスを作成、 <xref:Microsoft.SqlServer.Replication.TransSubscription> クラスです。  
+2.  <xref:Microsoft.SqlServer.Replication.TransSubscription> クラスのインスタンスを作成します。  
   
-3.  設定、 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, 、<xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, 、<xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>, 、および <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> プロパティです。  
+3.  <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A> プロパティ、<xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> プロパティ、<xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A> プロパティ、<xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> プロパティを設定します。  
   
-4.  設定、 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> に手順 1. の <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティの設定です。  
+4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティの設定に、手順 1 の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> を設定します。  
   
-5.  呼び出す、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> オブジェクトのプロパティを取得します。 このメソッドから **false**が返された場合、手順 3. で指定したサブスクリプションのプロパティが正しく定義されていないか、サブスクリプションが存在していません。  
+5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから **false**が返された場合、手順 3. で指定したサブスクリプションのプロパティが正しく定義されていないか、サブスクリプションが存在していません。  
   
-6.  (省略可能)プロパティを変更するには、いずれかの新しい値を設定、 <xref:Microsoft.SqlServer.Replication.TransSubscription> プロパティを設定でき、まず、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドです。  
+6.  (省略可) プロパティを変更するには、設定可能な <xref:Microsoft.SqlServer.Replication.TransSubscription> プロパティのいずれかに新しい値を設定し、<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出します。  
   
-7.  (省略可能)新しい設定を表示する呼び出し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> メソッドをサブスクリプションのプロパティを再読み込みします。  
+7.  (省略可) 新しい設定を表示するには、<xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> メソッドを呼び出してサブスクリプションのプロパティを再読み込みします。  
   
-#### マージ パブリケーションに対するプッシュ サブスクリプションのプロパティを表示または変更するには  
+#### <a name="to-view-or-modify-properties-of-a-push-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプッシュ サブスクリプションのプロパティを表示または変更するには  
   
-1.  使用してサブスクライバーへの接続を作成、 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスです。  
+1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、サブスクライバーへの接続を作成します。  
   
-2.  インスタンスを作成、 <xref:Microsoft.SqlServer.Replication.MergeSubscription> クラスです。  
+2.  <xref:Microsoft.SqlServer.Replication.MergeSubscription> クラスのインスタンスを作成します。  
   
-3.  設定、 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, 、<xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, 、<xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>, 、および <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> プロパティです。  
+3.  <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A> プロパティ、<xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> プロパティ、<xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A> プロパティ、<xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> プロパティを設定します。  
   
-4.  設定、 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> に手順 1. の <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティの設定です。  
+4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティの設定に、手順 1 の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> を設定します。  
   
-5.  呼び出す、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> オブジェクトのプロパティを取得します。 このメソッドから **false**が返された場合、手順 3. で指定したサブスクリプションのプロパティが正しく定義されていないか、サブスクリプションが存在していません。  
+5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドから **false**が返された場合、手順 3. で指定したサブスクリプションのプロパティが正しく定義されていないか、サブスクリプションが存在していません。  
   
-6.  (省略可能)プロパティを変更するには、いずれかの新しい値を設定、 <xref:Microsoft.SqlServer.Replication.MergeSubscription> プロパティを設定でき、まず、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドです。  
+6.  (省略可) プロパティを変更するには、設定可能な <xref:Microsoft.SqlServer.Replication.MergeSubscription> プロパティのいずれかに新しい値を設定し、<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出します。  
   
-7.  (省略可能)新しい設定を表示する呼び出し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> メソッドをサブスクリプションのプロパティを再読み込みします。  
+7.  (省略可) 新しい設定を表示するには、<xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> メソッドを呼び出してサブスクリプションのプロパティを再読み込みします。  
   
-## 参照  
- [情報を表示し、サブスクリプションと #40; のタスクを実行レプリケーション モニターと #41 です。](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
+## <a name="see-also"></a>参照  
+ [サブスクリプションの情報の表示とタスクの実行 &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
  [レプリケーション セキュリティの推奨事項](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)  
   

@@ -1,23 +1,27 @@
 ---
 title: "テンポラル テーブルの使用シナリオ | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 caps.latest.revision: 11
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: bb6a2865838df1d66119f68c6d8cd19809a8f86c
+ms.lasthandoff: 04/11/2017
+
 ---
-# テンポラル テーブルの使用シナリオ
+# <a name="temporal-table-usage-scenarios"></a>テンポラル テーブルの使用シナリオ
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   テンポラル テーブルは、データの変更履歴を追跡する必要のあるシナリオに一般的に便利です。    
@@ -33,8 +37,8 @@ caps.handback.revision: 10
   
 -   [データの行レベルでの破損の修復](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_4)  
   
-## データの監査  
- 何が変更されたか、いつ変更されたか、誰が変更したかを追跡する必要のある重要な情報が保存されている、また任意の時点のデータ フォレンジクスを実行する必要のあるテーブルには、システム バージョン管理されたテンポラル テーブルを使用します。    
+## <a name="data-audit"></a>データの監査  
+ 何が変更されたか、いつ変更されたかを追跡する必要のある重要な情報が保存されている、また任意の時点のデータ フォレンジクスを実行する必要のあるテーブルには、システム バージョン管理されたテンポラル テーブルを使用します。    
 システム バージョン管理されたテンポラル テーブルでは、開発サイクルの初期段階でデータの監査シナリオを計画したり、必要な時に既存のアプリケーションまたはソリューションにデータ監査を追加したりできます。  
   
  次の図に、現在 (青) と履歴行バージョン (グレー) のデータ サンプルを含む Employee テーブルのシナリオを示します。   
@@ -42,7 +46,7 @@ caps.handback.revision: 10
   
  ![TemporalUsageScenario1](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")  
   
-### データ監査用に新しいテーブルでシステム バージョン管理を有効にする  
+### <a name="enabling-system-versioning-on-a-new-table-for-data-audit"></a>データ監査用に新しいテーブルでシステム バージョン管理を有効にする  
  データの監査が必要な情報を特定したら、データベース テーブルをシステム バージョン管理されたテンポラル テーブルとして作成します。 次に、Employee 情報が仮定の HR データベースにあるシナリオの簡単な例を示します。  
   
 ```  
@@ -61,10 +65,10 @@ CREATE TABLE Employee
  WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));  
 ```  
   
- システム バージョン管理されたテンポラル テーブルを作成する際のさまざまなオプションの説明については、「[システム バージョン管理されたテンポラル テーブルの作成](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)」を参照してください。  
+ システム バージョン管理されたテンポラル テーブルを作成する際のさまざまなオプションの説明については、「 [システム バージョン管理されたテンポラル テーブルの作成](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)」を参照してください。  
   
-### データ監査用に既存のテーブルでシステム バージョン管理を有効にする  
- 既存のデータベースのデータを監査する必要がある場合、ALTER TABLE を使用し、非テンポラル テーブルをシステム バージョン管理テーブルにします。 アプリケーションの互換性を壊す変更を行わないようにするには、「[非テンポラル テーブルをシステム バージョン管理されたテンポラル テーブルに変更する](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3)」の説明に従って、期間列を HIDDEN として追加します。 次の例では、仮定の HR データベース内の既存の Employee テーブルで、システム バージョン管理を有効にする方法について説明します。  
+### <a name="enabling-system-versioning-on-an-existing-table-for-data-audit"></a>データ監査用に既存のテーブルでシステム バージョン管理を有効にする  
+ 既存のデータベースのデータを監査する必要がある場合、ALTER TABLE を使用し、非テンポラル テーブルをシステム バージョン管理テーブルにします。 アプリケーションの互換性を壊す変更を行わないようにするには、「 [非テンポラル テーブルをシステム バージョン管理されたテンポラル テーブルに変更する](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3)」の説明に従って、期間列を HIDDEN として追加します。 次の例では、仮定の HR データベース内の既存の Employee テーブルで、システム バージョン管理を有効にする方法について説明します。  
   
 ```  
 /*   
@@ -87,7 +91,7 @@ ALTER TABLE Employee
  前述のスクリプトを実行すると、データに対するすべての変更は履歴テーブルに透過的に収集されます。    
 典型的なデータの監査シナリオでは、関心のある期間に各行に適用されたすべてのデータ変更を問い合わせます。 この用途に効果的に対応する、クラスター化された行ストア B ツリーを持つ既定の履歴テーブルが作成されます。  
   
-### データ分析の実行  
+### <a name="performing-data-analysis"></a>データ分析の実行  
  上記のいずれかの方法を使用してシステム バージョン管理を有効にすれば、データの監査はクエリを 1 回のみ実行すればできます。 次のクエリでは、少なくとも 2014年の 1 月 1 日から 2015年 1 月 1 日 (上限の境界を含む) の間にアクティブであった、EmployeeID が 1000 の従業員レコードの行バージョンが検索されます。  
   
 ```  
@@ -145,13 +149,13 @@ FROM Employee
   
 > [!TIP]  
 >  FOR SYSTEM_TIME のテンポラル句で指定されたフィルタリング条件は SARG-able です (つまり、 SQL Server は基礎となっているクラスター化インデックスを使用して、スキャン操作ではなくシークを実行します)。   
-> 履歴テーブルを直接クエリする場合、フィルター条件も \<期間列>  {\< | > | =, …} date_condition AT TIME ZONE ‘UTC’ の書式を使用して同様に SARGable にする必要があります。  
+> 履歴テーブルを直接クエリする場合、フィルター条件も、\<期間列>  {< | > | =, …} date_condition AT TIME ZONE ‘UTC’ の書式を使用して同様に SARGable にする必要があります。  
 > AT TIME ZONE を期間列に適用すると、SQL Server は非常に負荷のかかるテーブルおよびインデックス スキャンを実行します。 また、  
-> \<期間列>  AT TIME ZONE ‘\<ローカルのタイムゾーン>’  >  {\< | > | =, …} date_condition のような条件は、クエリでは避けてください。  
+> \<期間列>  AT TIME ZONE ‘\<タイム ゾーン>’  >  {< | > | =, …} date_condition のような条件は、クエリでは避けてください。  
   
- 関連項目: 「[システム バージョン管理されたテンポラル テーブルのデータのクエリ](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)」  
+ 関連項目: 「 [システム バージョン管理されたテンポラル テーブルのデータのクエリ](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)」  
   
-## 特定の時点の分析 (タイム トラベル)  
+## <a name="point-in-time-analysis-time-travel"></a>特定の時点の分析 (タイム トラベル)  
  個々のレコードに発生した変更が注目されるデータの監査とは異なり、タイム トラベルのシナリオでは、ユーザーは、時間の経過とともにデータ セット全体がどのように変わったかを確認したいと考えます。 タイム トラベルには、それぞれが別のペースで変更される、次に示すような分析すべき関連するテンポラル テーブルが含まれることがあります。  
   
 -   重要な指標の過去および現在のデータでの傾向  
@@ -162,9 +166,9 @@ FROM Employee
   
  現実には、タイム トラベル分析が必要なシナリオが多数あります。 この使用シナリオを示す、履歴が自動生成される OLTP で見てみましょう。  
   
-### 自動生成されたデータ履歴を使用する OLTP  
+### <a name="oltp-with-auto-generated-data-history"></a>自動生成されたデータ履歴を使用する OLTP  
  トランザクション処理システムでは、しばしば時間の経過とともに重要なメトリックがどのように変わるかが分析されます。 履歴の分析では、理想的には、OLTP アプリケーションのパフォーマンスは落ちないようにする必要があります。これでは、最新状態のデータへ最小限の遅延とデータ ロックでアクセスできる必要があります。  システム バージョン管理されたテンポラル テーブルは、後で分析できるよう、現在のデータとは別に、変更の完全な履歴を透過的に保持できるよう設計されており、これはメインの OLTP ワークロードには最小限にしか影響しません。  
-トランザクション処理の多いワークロードでは、コスト効率の高い方法で現在のデータをメモリ内に保存し、変更の完全な履歴をディスクに保存する[メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)を使用することをお勧めします。  
+トランザクション処理の多いワークロードでは、コスト効率の高い方法で現在のデータをメモリ内に保存し、変更の完全な履歴をディスクに保存する [メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)を使用することをお勧めします。  
   
  履歴テーブルには、次の理由から、クラスター化列ストア インデックスを使用することお勧めします。  
   
@@ -184,7 +188,7 @@ FROM Employee
  次のコード例では、ProductInventory は、(既定で作成される行ストア インデックスを実際に置き換える) クラスター化列ストア インデックスが履歴テーブルにある、システム バージョン管理されたテンポラル テーブルがメモリ内に作成されます。  
   
 > [!NOTE]  
->  データベースでメモリ最適化テーブルの作成が許可されていることを確認します。 「[メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャの作成](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)」を参照してください。  
+>  データベースでメモリ最適化テーブルの作成が許可されていることを確認します。 「 [メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャの作成](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)」を参照してください。  
   
 ```  
 USE TemporalProductInventory  
@@ -372,7 +376,7 @@ JOIN vw_ProductInventoryDetails FOR SYSTEM_TIME AS OF @monthAgo AS inventoryMont
     ON inventoryDayAgo.ProductId = inventoryMonthAgo.ProductId AND inventoryDayAgo.LocationId = inventoryMonthAgo.LocationID;  
 ```  
   
-## 異常検出  
+## <a name="anomaly-detection"></a>異常検出  
  異常検出 (または外れ値検知) では、予想されているパターンと一致しないアイテムまたはデータセット内の他のアイテムと一致しないアイテムを識別できます。   
 システム バージョン管理されたテンポラル テーブルを使用すると、一時的なクエリを使用して、特定のパターンをすばやく検索できるので、定期的にまたは不規則に発生する異常を検出できます。  
 何が異常であるかは、収集するデータの種類およびビジネス ロジックによって異なります。  
@@ -431,7 +435,7 @@ FROM CTE
 > [!NOTE]  
 >  この例は意図的に単純化しています。 実稼働のシナリオでは、共通のパターンを示さないサンプルの識別には高度な統計的手法が使用されるでしょう。  
   
-## 緩やかに変化するディメンション  
+## <a name="slowly-changing-dimensions"></a>緩やかに変化するディメンション  
  通常、データ ウェアハウスのディメンションには、エンティティに関する地理的な場所、顧客、または製品など、比較的静的なデータが含まれます。 ただし、一部のシナリオでは、ディメンション テーブル内のデータも追跡する必要があります。 ディメンションに対する変更は予測できない方法でまれにしか実行されず、ファクト テーブルに適用される定期的な更新スケジュール外のものであるため、この種のディメンション テーブルは、緩やかに変化するディメンション (SCD) と呼ばれています。  
   
  変更履歴がどのように保存されるかによって、緩やかに変化するディメンションには、いくつかのカテゴリがあります。  
@@ -511,7 +515,7 @@ GROUP BY DimProduct_History.ProductId, DimLocation_History.LocationId ;
   
 -   SCD テーブルの履歴行が多くなることが予想される場合、履歴テーブルのメインのストレージ オプションとしてクラスター化列ストア インデックスを使用することを検討してください。 これにより、履歴テーブルのフットプリントが減り、分析クエリを高速化できます。  
   
-## データの行レベルでの破損の修復  
+## <a name="repairing-row-level-data-corruption"></a>データの行レベルでの破損の修復  
  システム バージョン管理されたテンポラル テーブルの履歴データを使用すると、個々の行を以前にキャプチャした任意の状態に迅速に修復できます。 テンポラル テーブルのこのプロパティは、影響を受けた行を探すことができた場合や、不要なデータ変更が行われた時間がわかっている場合、バックアップを使用する必要がなく修復を非常に効率よく実行できるため、非常に便利です。  
   
  このアプローチにはいくつかの利点があります。  
@@ -549,7 +553,7 @@ UPDATE Employee
   
 ```  
   
- このストアド プロシージャでは、入力パラメーターとして @EmployeeID および @versionNumber を取ります。 既定で、この手順は、行の状態を履歴から最新のバージョンに復元します (@versionNumber = 1)。  
+ このストアド プロシージャでは、@EmployeeID と @versionNumber を入力パラメーターとして受け取ります。 この手順は、既定では、行の状態を履歴から最新のバージョンに復元します (@versionNumber = 1)。  
   
  次の図は、プロシージャの呼び出しの前後に行の状態を示しています。 長方形で赤くマークされているのは、不正な行バージョンで、長方形で緑にマークされているのは履歴の正しいバージョンです。  
   
@@ -580,7 +584,7 @@ UPDATE Employee
   
 ```  
   
- 次の図では、同じデータ サンプルを時間条件で復元するシナリオを示しています。 @asOf パラメーター、提供された時点で履歴で実際に選択されていた行、修復操作後の現在のテーブルの新しい行バージョンが強調表示されます。  
+ 次の図では、同じデータ サンプルを時間条件で復元するシナリオを示しています。 @asOf パラメーター、提供された時点で履歴で実際に選択されていた行、修復操作後の現在のテーブルの新しい行バージョンが強調表示されています。  
   
  ![TemporalUsageRepair3](../../relational-databases/tables/media/temporalusagerepair3.png "TemporalUsageRepair3")  
   
@@ -589,7 +593,7 @@ UPDATE Employee
   
  ![TemporalUsageRepair4](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)   
  [システム バージョン管理されたテンポラル テーブルの概要](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [テンポラル テーブルのシステム一貫性のチェック](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
@@ -600,3 +604,4 @@ UPDATE Employee
  [テンポラル テーブル メタデータのビューおよび関数](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

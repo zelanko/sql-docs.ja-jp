@@ -1,41 +1,45 @@
 ---
-title: "[トポロジの構成] (ピア ツー ピア レプリケーション) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.p2pwizard.peers.f1"
+title: "トポロジの構成 (ピア ツー ピア レプリケーション) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a41d0a93fcee491dad6bc2b310720e65f9ee607
+ms.lasthandoff: 04/11/2017
+
 ---
-# [トポロジの構成] (ピア ツー ピア レプリケーション)
-  使用して、 **トポロジを構成する** を新しいノードの追加、ノードの削除、既存のノード間の新しい接続の追加などの一般的な構成タスクを実行するページです。 選択したノード、 **パブリケーション** このウィザードのページがデザイン サーフェイスに表示されます。 構成オプションを指定するには、ノード、接続、またはデザイン画面を右クリックします。  
+# <a name="configure-topology-peer-to-peer-replication"></a>[トポロジの構成] (ピア ツー ピア レプリケーション)
+  **[トポロジの構成]** ページを使用すると、新しいノードの追加、ノードの削除、既存のノード間の新しい接続の追加など、一般的な構成タスクを実行できます。 このウィザードの **[パブリケーション]** ページで選択したノードがデザイン画面に表示されます。 構成オプションを指定するには、ノード、接続、またはデザイン画面を右クリックします。  
   
 > [!NOTE]  
 >  ピア ツー ピア トポロジ構成ウィザードでは、ウィザードの終了時にトポロジ情報が要求されます。 すべてのノードが情報の要求に応答する前にウィザードを閉じて再度開くと、ウィザードに不完全なネットワークが表示される場合があります。  
   
-## オプション  
-  **トポロジを構成する** ページには、インターフェイスの要素と要素を右クリックしたときに使用できるオプションが含まれています。 次の表では、各インターフェイス要素を説明します。  
+## <a name="options"></a>オプション  
+ **[トポロジの構成]** ページには、要素を右クリックすると表示されるインターフェイス要素およびオプションがあります。 次の表では、各インターフェイス要素を説明します。  
   
 |インターフェイス要素|説明|  
 |-----------------------|-----------------|  
 |デザイン画面|その他のインターフェイス要素を表示します。 要素を追加するには、デザイン画面を右クリックします。|  
-|![トポロジの最初のノード](../../relational-databases/replication/media/p2pwizard-firstnode.png "トポロジの最初のノード")|トポロジの元のノード。 元のノードのパブリケーション データベースのコピーを使用して、新しいノードが初期化されます。|  
-|![情報が完全なノード](../../relational-databases/replication/media/p2pwizard-complete.png "情報が完全なノード")|インスタンスを実行しているノード [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] レプリケーションの詳細については、以降のバージョン。 構成オプションを指定するには、ノードを右クリックします。|  
-|![情報が不完全なノード](../../relational-databases/replication/media/p2pwizard-incomplete.png "情報が不完全なノード")|レプリケーションに含まれている情報が不完全なノード。 構成オプションを指定するには、ノードを右クリックします。<br /><br /> レプリケーションに含まれている情報は、次のいずれかの理由で不完全になっています。<br /><br /> -ノードでのインスタンスを実行している [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], 、ウィザードによって必要なすべてのメタデータを格納しません。<br /><br /> -ノードでの以降のバージョンを実行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], がレプリケーション ノードからサブスクリプション情報を取得することはできません。 このような場合は、次の方法で対処してください。<br /><br /> ノードのデータベースがオンラインであること、およびノードに接続するディストリビューション エージェントと同じ資格情報を使用してデータベースに接続できることを確認します。<br /><br /> ノードに接続するログ リーダー エージェントおよびすべてのディストリビューション エージェントが実行されていることを確認します。<br /><br /> すべてのトポロジ情報を収集できるように更新のタイムアウトが十分高く設定されていることを確認します。 タイムアウトを設定するには、デザイン サーフェイスを右クリックし、クリックして **[更新のタイムアウト**します。|  
+|![トポロジ内の最初のノード](../../relational-databases/replication/media/p2pwizard-firstnode.gif "トポロジ内の最初のノード")|トポロジの元のノード。 元のノードのパブリケーション データベースのコピーを使用して、新しいノードが初期化されます。|  
+|![完全な情報があるノード](../../relational-databases/replication/media/p2pwizard-complete.gif "完全な情報があるノード")|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンのインスタンスを実行しており、レプリケーションに含まれている情報が完全なノード。 構成オプションを指定するには、ノードを右クリックします。|  
+|![情報が不完全なノード](../../relational-databases/replication/media/p2pwizard-incomplete.gif "情報が不完全なノード")|レプリケーションに含まれている情報が不完全なノード。 構成オプションを指定するには、ノードを右クリックします。<br /><br /> レプリケーションに含まれている情報は、次のいずれかの理由で不完全になっています。<br /><br /> - ウィザードで必要なメタデータが一部格納されない [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のインスタンスがノードで実行されている。<br /><br /> - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の最新バージョンがノードで実行されているが、レプリケーションがノードからサブスクリプション情報を取得できない。 このような場合は、次の方法で対処してください。<br /><br /> ノードのデータベースがオンラインであること、およびノードに接続するディストリビューション エージェントと同じ資格情報を使用してデータベースに接続できることを確認します。<br /><br /> ノードに接続するログ リーダー エージェントおよびすべてのディストリビューション エージェントが実行されていることを確認します。<br /><br /> すべてのトポロジ情報を収集できるように更新のタイムアウトが十分高く設定されていることを確認します。 タイムアウトを設定するには、デザイン画面を右クリックして **[更新のタイムアウトの設定]**をクリックします。|  
 |矢印の付いた灰色の線|2 つのノード間の接続。 接続を追加するには、接続するノードのいずれかを右クリックします。 接続を削除するには、接続を右クリックします。<br /><br /> 線に付いている矢印が単一の場合、レプリケーションに含まれているいずれかのノードの情報が不完全です。|  
   
-### デザイン画面のオプション  
+### <a name="options-for-the-design-surface"></a>デザイン画面のオプション  
  **[グラフの再表示]**  
  トポロジを更新せずに、デザイン画面上のオブジェクトを再表示します。 再表示すると、トポロジが見やすくなる場合があります。  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 29
  ウィザードによってトポロジ情報が要求された場合、すべてのノードが要求に応答する前にウィザードを閉じて再度開くと、このページにトポロジのノードが一部表示されない場合があります。  
   
  **[新しいピア ノードの追加]**  
- インスタンスに追加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ピア ツー ピア トポロジにします。 インスタンスをノードとして追加すると、ウィザードの完了後にそのインスタンスでパブリケーションが作成されます。 ノードの追加後に、そのノードを右クリックして新しいノードと既存のノード間の接続を追加します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをピア ツー ピア トポロジに追加します。 インスタンスをノードとして追加すると、ウィザードの完了後にそのインスタンスでパブリケーションが作成されます。 ノードの追加後に、そのノードを右クリックして新しいノードと既存のノード間の接続を追加します。  
   
  ピア ツー ピア トポロジに参加するためには、インスタンスが次の要件を満たしている必要があります。  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 29
  **[更新のタイムアウトの設定]**  
  操作がタイムアウトするまでに更新プロセスを実行できる期間を指定します。  
   
-### 各ノードのオプション  
+### <a name="options-for-each-node"></a>各ノードのオプション  
  **[新しいピア接続の追加]**  
  2 つのノード間の接続を追加します。 たとえば、ノード A とノード B 間の接続を追加すると、レプリケーションによって 2 つのサブスクリプションが追加されます。最初のサブスクリプションによってノード A がノード B のパブリケーションから変更を受信できるようになり、2 番目のサブスクリプションによってノード B がノード A のパブリケーションから変更を受信できるようになります。  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 29
  トポロジからノードを削除します。 たとえば、ノード C を削除すると、そのノードのパブリケーションが削除されます。 ノード A とノード C、およびノード B とノード C 間のサブスクリプションも削除されます。 ノード C のデータベースは削除されず、パブリッシングおよびディストリビューションは無効になりません。  
   
 > [!NOTE]  
->  ピア ツー ピア レプリケーションを構成する場合は、各ノードに ID を指定します。 この ID は、トポロジ内のすべてのノード間で一意でなければなりません、originator_id 列に格納されます、 [MSpeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) システム テーブルです。 ノードがトポロジから削除されても、ID は履歴テーブルに保持されたままです。 ID が保持されるのは、削除されたノードからの変更がトポロジ全体でレプリケートされたままである場合に誤った競合が発生しないようにするためです。 新しいノードに対してこの ID を再利用する場合は、先にすべてのノードで MSpeer_originatorid_history テーブルからこの ID を手動で削除する必要があります。 ノードの ID を削除する前に実行 [sp_requestpeerresponse](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) そのノードから開始されたすべての変更がレプリケートされていることを確認します。  
+>  ピア ツー ピア レプリケーションを構成する場合は、各ノードに ID を指定します。 この ID は、トポロジ内のすべてのノードに対して一意である必要があり、[MSpeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) システム テーブルの originator_id 列に格納されます。 ノードがトポロジから削除されても、ID は履歴テーブルに保持されたままです。 ID が保持されるのは、削除されたノードからの変更がトポロジ全体でレプリケートされたままである場合に誤った競合が発生しないようにするためです。 新しいノードに対してこの ID を再利用する場合は、先にすべてのノードで MSpeer_originatorid_history テーブルからこの ID を手動で削除する必要があります。 ノードの ID を削除する前に、 [sp_requestpeerresponse](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) を実行して、そのノードから発行されたすべての変更がレプリケートされていることを確認します。  
   
  **[表示されているすべてのノードに接続]**  
  選択したノードと他のすべてのノード間の接続を追加します。 たとえば、3 ノード トポロジのノード C に対してこのオプションを選択すると、レプリケーションによって 4 つのサブスクリプションが追加されます。このうちの 2 つのサブスクリプションによってノード A とノード B がノード C のパブリケーションから変更を受信できるようになり、他の 2 つのサブスクリプションによってノード C がノード A とノード B のパブリケーションから変更を受信できるようになります。  
@@ -75,13 +79,13 @@ caps.handback.revision: 29
  **[表示するノードの選択]**  
  デザイン画面に表示するノードを選択します。 このオプションは、トポロジに多数のノードが存在する場合に役立ちます。 デザイン画面に表示されているノード間にしか接続を追加できないことに注意してください。  
   
-### 接続矢印のオプション  
+### <a name="options-for-the-connection-arrows"></a>接続矢印のオプション  
  **[ピア接続の削除]**  
  2 つのノード間の接続を削除します。 たとえば、ノード A とノード B 間の接続を削除すると、レプリケーションによって 2 つのサブスクリプション (ノード A がノード B のパブリケーションから変更を受信できるようにしているサブスクリプションと、ノード B がノード A のパブリケーションから変更を受信できるようにしているサブスクリプション) が削除されます。  
   
-## 参照  
- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [#40; (&)、ピア ツー ピア トポロジを管理します。レプリケーション TRANSACT-SQL プログラミングと #41 です。](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+## <a name="see-also"></a>参照  
+ [パブリッシングとディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
+ [ピア ツー ピア トポロジの管理 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [ピア ツー ピア トランザクション レプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

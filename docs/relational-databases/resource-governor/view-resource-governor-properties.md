@@ -1,29 +1,33 @@
 ---
-title: "View Resource Governor Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.rg.properties.f1"
-helpviewer_keywords: 
-  - "Resource Governor, properties"
+title: "リソース ガバナーのプロパティの表示 | Microsoft Docs"
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.rg.properties.f1
+helpviewer_keywords:
+- Resource Governor, properties
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e856286b6048e320481b5983685fbfcd4e838c1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# View Resource Governor Properties
+# <a name="view-resource-governor-properties"></a>View Resource Governor Properties
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [リソース ガバナーのプロパティ] ページを使用して、リソース プールやワークロード グループなどのリソース ガバナー エンティティを作成または構成できます。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [リソース ガバナーのプロパティ] ページを使用して、リソース プールやワークロード グループなどのリソース ガバナー エンティティを作成または構成できます。  
   
  ##  <a name="BeforeYouBegin"></a> 関連トピック 
  **[リソース ガバナーのプロパティ]** ページでは、リソース ガバナー エンティティのプロパティを表示する以外に、さまざまな構成タスクを実行できます。 詳細については、次のトピックをご覧ください。  
@@ -56,13 +60,13 @@ caps.handback.revision: 28
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]**ノードまで再帰的に展開します。  
   
-2.  **[リソース ガバナー]** を右クリックし、**[プロパティ]** をクリックすると、**[リソース ガバナーのプロパティ]** ページが開きます。  
+2.  **[リソース ガバナー]** を右クリックし、 **[プロパティ]**をクリックすると、 **[リソース ガバナーのプロパティ]** ページが開きます。  
   
 3.  このページのフィールドの詳細については、「 [リソース ガバナー プロパティ](#RGProp)」を参照してください。  
   
 4.  変更を保存するには、 **[OK]**をクリックします。  
   
-##  <a name="RGProp"></a> リソース ガバナー プロパティ  
+##  <a name="RGProp"></a> Resource Governor properties  
  **[分類子関数の名前]**  
  分類子関数を一覧から選択して指定します。  
   
@@ -115,18 +119,19 @@ caps.handback.revision: 28
   
  詳細については、「[CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)」を参照してください。  
   
-## Transact-SQL を使用してリソース ガバナーのプロパティを表示する  
+## <a name="view-resource-governor-properties-using-transact-sql"></a>Transact-SQL を使用してリソース ガバナーのプロパティを表示する  
  **Transact-SQL を使用してリソース ガバナーのプロパティを表示する**  
   
 1.  リソース ガバナー エンティティの定義を表示するには、「[リソース ガバナーのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)」を使用します。  
   
 2.  リソース ガバナー エンティティの現在の構成を表示するには、「[リソース ガバナー関連の動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)」を使用します。  
   
-## 詳細情報
- [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="more-information"></a>詳細情報
+ [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
  [リソース ガバナーの有効化](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [リソース ガバナー ワークロード グループ](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [リソース ガバナーの分類子関数](../../relational-databases/resource-governor/resource-governor-classifier-function.md)  
   
   
+

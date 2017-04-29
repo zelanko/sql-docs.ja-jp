@@ -1,29 +1,33 @@
 ---
 title: "データベースの全体復元 (完全復旧モデル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データベースの全体復元"
-  - "データベースの復元 [SQL Server], データベース全体"
-  - "データベースの復元 [SQL Server], データベース全体"
-  - "復元 [SQL Server], データベース"
-  - "完全復旧モデル [SQL Server]、復元の実行"
-  - "ログのバックアップ [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- complete database restores
+- database restores [SQL Server], complete database
+- restoring databases [SQL Server], complete database
+- restoring [SQL Server], database
+- full recovery model [SQL Server], performing restores
+- log backups [SQL Server[
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 caps.latest.revision: 77
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 77
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b2fe04099e9ec76ea157b1428fa0a4896ad8e78
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベースの全体復元 (完全復旧モデル)
+# <a name="complete-database-restores-full-recovery-model"></a>データベースの全体復元 (完全復旧モデル)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   データベースの全体復元の目的は、データベース全体を復元することです。 復元の実行中は、データベース全体がオフラインになります。 データベースの各部がオンラインになる前に、すべてのデータが一貫性のある状態に復旧されます。一貫性のある状態とは、データベースのすべての部分が同じ時点にあり、コミットされていないトランザクションが存在しない状態を示します。  
@@ -44,7 +48,7 @@ caps.handback.revision: 77
 -   [関連タスク](#RelatedTasks)  
   
 > [!NOTE]  
->  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からのバックアップに対するサポートの情報については、「[RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)」の「互換性サポート」のセクションを参照してください。  
+>  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのバックアップに対するサポートの情報については、「 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)」の「互換性サポート」のセクションを参照してください。  
   
 ##  <a name="PointOfFailure"></a> 障害発生時点へのデータベースの復旧  
  通常、障害が発生した時点までデータベースを復旧するには、次の基本的な手順が必要です。  
@@ -71,10 +75,10 @@ caps.handback.revision: 77
  ![障害発生時点へのデータベースの全体復元](../../relational-databases/backup-restore/media/bnrr-rmfull1-db-failure-pt.gif "障害発生時点へのデータベースの全体復元")  
   
 > [!NOTE]  
->  データベースのバックアップを別のサーバー インスタンスに復元する場合は、「[バックアップと復元によるデータベースのコピー](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)」を参照してください。  
+>  データベースのバックアップを別のサーバー インスタンスに復元する場合は、「 [バックアップと復元によるデータベースのコピー](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)」を参照してください。  
   
 ###  <a name="TsqlSyntax"></a> 基本的な Transact-SQL RESTORE 構文  
- 前の図に示した復元シーケンスの基本的な [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 構文は次のとおりです。  
+ 前の図に示した復元シーケンスの基本的な [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 構文は次のとおりです。  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 77
  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] の例は、データベースを障害発生時点まで復元する復元シーケンスに不可欠なオプションを示しています。 この例では、データベースのログ末尾のバックアップを作成します。 次に、データベースの完全バックアップとログ バックアップを復元してから、ログ末尾のバックアップを復元します。 最後に、別の手順でデータベースを復旧します。  
   
 > [!NOTE]  
->  この例では、「[データベースの完全バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)」の「完全復旧モデルでのデータベース バックアップ」で作成される、データベース バックアップおよびログ バックアップを使用します。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースは完全復旧モデルを使用するように、データベースのバックアップ前に設定されています。  
+>  この例では、「 [データベースの完全バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)」の「互換性サポート」のセクションを参照してください。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースは完全復旧モデルを使用するように、データベースのバックアップ前に設定されています。  
   
 ```  
 USE master;  
@@ -125,7 +129,7 @@ GO
 ##  <a name="PointWithinBackup"></a> ログ バックアップ内の特定の時点へのデータベースの復元  
  一般に、完全復旧モデルでは、データベースの全体復元によって、特定の時点、マークされたトランザクション、またはログ バックアップ内の特定の LSN まで復元することができます。 ただし、一括ログ復旧モデルの場合は、一括ログ操作による変更がログ バックアップに含まれていると、特定の時点への復旧はできません。  
   
-### 特定の時点への復元のサンプル シナリオ  
+### <a name="sample-point-in-time-restore-scenarios"></a>特定の時点への復元のサンプル シナリオ  
  ミッションクリティカルなデータベース システムで、データベースの完全バックアップを毎晩午前 0 時に作成し、データベースの差分バックアップを月曜日から土曜日まで 1 時間ごとに作成し、トランザクション ログのバックアップを 1 日中 10 分間隔で作成するとします。 データベースを水曜日の午前 5 時 19 分の状態に復元するには、 次のようにします。  
   
 1.  火曜日の午前 0 時に作成したデータベースの完全バックアップを復元します。  
@@ -147,7 +151,7 @@ GO
 4.  木曜日の午前 3 時 10 分に作成したトランザクション ログ バックアップを適用し、 復旧処理を午前 3 時 4 分で停止します。  
   
 > [!NOTE]  
->  特定の時点への復元の例については、「[SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。  
+>  特定の時点への復元の例については、「 [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」の「互換性サポート」のセクションを参照してください。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **データベースの完全バックアップを復元するには**  
@@ -176,8 +180,8 @@ GO
   
 -   [ログ シーケンス番号への復旧 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md)  
   
-## 参照  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>参照  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   

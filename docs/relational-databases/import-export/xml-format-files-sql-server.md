@@ -1,32 +1,36 @@
 ---
 title: "XML フォーマット ファイル (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "フォーマット ファイル [SQL Server]、XML フォーマット ファイル"
-  - "一括インポート [SQL Server]、フォーマット ファイル"
-  - "XML フォーマット ファイル [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- format files [SQL Server], XML format files
+- bulk importing [SQL Server], format files
+- XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bf5b724d58fde9162bc75a4052f569b5218bbe8c
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML フォーマット ファイル (SQL Server)
+# <a name="xml-format-files-sql-server"></a>XML フォーマット ファイル (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には、 *のテーブルにデータを一括インポートする目的で使用する* XML フォーマット ファイル [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を記述するための構文を定義した XML スキーマが用意されています。 このスキーマは XML Schema Definition Language (XSDL) で定義されています。XML フォーマット ファイルはこのスキーマに準拠している必要があります。 XML フォーマット ファイルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client と共にインストールされている場合のみサポートされます。  
   
  XML フォーマット ファイルは、**bcp** コマンド、BULK INSERT ステートメント、または INSERT ...SELECT \* FROM OPENROWSET(BULK...) ステートメントのいずれかを使用して実行します。 **bcp** コマンドを使用して、あるテーブルに対する XML フォーマット ファイルを自動的に生成できます。詳細については、「 [bcp Utility](../../tools/bcp-utility.md)」を参照してください。  
   
 > [!NOTE]  
->  一括エクスポートおよび一括インポート用に 2 種類のフォーマット ファイルがサポートされています。*XML 以外のフォーマット ファイル*と *XML フォーマット ファイル*です。 XML フォーマット ファイルは XML 以外のフォーマット ファイルに比べ、柔軟かつ強力です。 XML 以外のフォーマット ファイルの詳細については、「[XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)」を参照してください。  
+>  一括エクスポートおよび一括インポート用に 2 種類のフォーマット ファイルがサポートされています。 *XML 以外のフォーマット ファイル* と *XML フォーマット ファイル*です。 XML フォーマット ファイルは XML 以外のフォーマット ファイルに比べ、柔軟かつ強力です。 XML 以外のフォーマット ファイルの詳細については、「 [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)」を参照してください。  
   
  **このトピックの内容**  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 45
 ##  <a name="StructureOfXmlFFs"></a> XML フォーマット ファイルの構造  
  XML 以外のフォーマット ファイルと同様に、XML フォーマット ファイルでもデータ ファイル内のデータ フィールドの形式および構造を定義し、定義したデータ フィールドを 1 つのマップ先テーブル内の列にマップします。  
   
- XML フォーマット ファイルには、\<RECORD> および \<ROW> という 2 つの主要なコンポーネントがあります。  
+ XML フォーマット ファイルには、\<RECORD> と \<ROW> という 2 つの主要なコンポーネントがあります。  
   
 -   \<RECORD> にはデータ ファイルに保存するデータをそのまま記述します。  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 45
   
      各 \<FIELD> 要素には、特定のデータ フィールドの内容を記述します。 個々のフィールドは、テーブル内の 1 つの列にのみマップできます。 すべてのフィールドを列にマップする必要はありません。  
   
-     データ ファイルのフィールドは、固定/可変長にすることも、任意の文字で区切ることもできます。 *フィールドの値*は、半角文字 (1 バイト表現を使用)、全角文字 (Unicode の 2 バイト表現を使用)、ネイティブ データベース形式、またはファイル名で表現できます。 フィールドの値をファイル名で表現する場合、対象になるテーブルの BLOB 列の値を含むファイルをそのファイル名で指すようにします。  
+     データ ファイルのフィールドは、固定/可変長にすることも、任意の文字で区切ることもできます。 *フィールドの値* は、半角文字 (1 バイト表現を使用)、全角文字 (Unicode の 2 バイト表現を使用)、ネイティブ データベース形式、またはファイル名で表現できます。 フィールドの値をファイル名で表現する場合、対象になるテーブルの BLOB 列の値を含むファイルをそのファイル名で指すようにします。  
   
 -   \<ROW> には、データ ファイルから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにデータをインポートするときのデータ行の構成方法を記述します。  
   
@@ -95,12 +99,12 @@ caps.handback.revision: 45
      個々の \<COLUMN> 要素は、データ ファイル内の 1 つのフィールドにのみマップできます。 \<ROW> 要素内の \<COLUMN> 要素の順序により、一括操作で返される順序が決定されます。 XML フォーマット ファイルでは、一括インポート操作の対象になるテーブルの列とのリレーションシップがない各 \<COLUMN> 要素にローカル名が割り当てられます。  
   
 ##  <a name="SchemaSyntax"></a> XML フォーマット ファイルのスキーマ構文  
- このセクションでは、XML フォーマット ファイルに対する XML スキーマの要素および属性について概要を説明します。 フォーマット ファイルの構文は、操作の方向とは関係がありません。つまり、一括エクスポートでも一括インポートでも構文は同じです。 また、一括インポートで \<ROW> 要素と \<COLUMN> 要素を使用する方法、および要素の xsi:type 値をデータセットに格納する方法についても説明します。  
+ このセクションでは、XML フォーマット ファイルに対する XML スキーマの要素および属性について概要を説明します。 フォーマット ファイルの構文は、操作の方向とは関係がありません。つまり、一括エクスポートでも一括インポートでも構文は同じです。 また、一括インポートで \<ROW> 要素と \<COLUMN> 要素を使用する方法、および要素の xsi:type 値をデータ セットに格納する方法についても説明します。  
   
  構文が実際の XML フォーマット ファイルとどのように対応しているかについては、このトピックの「 [XML フォーマット ファイルのサンプル](#SampleXmlFFs)」を参照してください。  
   
 > [!NOTE]  
->  フォーマット ファイルを変更して、フィールドの数や順序がテーブル列とは異なるデータ ファイルから一括インポートできます。 詳細については、「[データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。  
+>  フォーマット ファイルを変更して、フィールドの数や順序がテーブル列とは異なるデータ ファイルから一括インポートできます。 詳細については、「 [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。  
   
  **このセクションの内容**  
   
@@ -113,7 +117,7 @@ caps.handback.revision: 45
 -   [xsi:type 値のデータセットへの格納](#PutXsiTypeValueIntoDataSet)  
   
 ###  <a name="BasicSyntax"></a> XML スキーマの基本構文  
- この基本構文のステートメントでは、要素 (\<BCPFORMAT>、\<RECORD>、\<FIELD>、\<ROW>、および \<COLUMN>) とその基本属性のみを示します。  
+ この基本構文のステートメントでは、要素 (\<BCPFORMAT>、\<RECORD>、\<FIELD>、\<ROW>、\<COLUMN>) とその基本属性のみを示します。  
   
  \<BCPFORMAT ...>  
   
@@ -142,9 +146,9 @@ caps.handback.revision: 45
   
 -   [Schema 要素](#SchemaElements)  
   
--   [\<FIELD> 要素の属性](#AttrOfFieldElement) (と [\<FIELD> 要素の Xsi:type 値](#XsiTypeValuesOfFIELD))  
+-   [\<FIELD> 要素の属性](#AttrOfFieldElement) (と[\<FIELD> 要素の Xsi:type 値](#XsiTypeValuesOfFIELD))  
   
--   [\<COLUMN> 要素の属性](#AttrOfColumnElement) (と [\<COLUMN> 要素の Xsi:type 値](#XsiTypeValuesOfCOLUMN))  
+-   [\<COLUMN> 要素の属性](#AttrOfColumnElement) (と[\<COLUMN> 要素のXsi:type 値](#XsiTypeValuesOfCOLUMN))  
   
 ####  <a name="SchemaElements"></a> Schema 要素  
  ここでは、XML スキーマで XML フォーマット ファイル用に定義している各要素の目的を説明します。 各要素の属性については、このトピックの後半で説明します。  
@@ -166,14 +170,14 @@ caps.handback.revision: 45
  詳細については、このトピックの「[一括インポートで \<ROW> 要素を使用する方法](#HowUsesROW)」を参照してください。  
   
  \<COLUMN>  
- 列を要素 (\<COLUMN>) として定義します。 各 \<COLUMN> 要素は、\<FIELD> 要素に対応しています (FIELD 要素の ID は、\<COLUMN> 要素の SOURCE 属性で指定されます)。  
+ 列を要素 (\<COLUMN>) として定義します。 各 \<COLUMN> 要素は、\<FIELD> 要素に対応しています (FIELD> 要素の ID は、\<COLUMN> 要素の SOURCE 属性で指定されます)。  
   
  この要素の属性については、このトピックの「[\<COLUMN> 要素の属性](#AttrOfColumnElement)」で説明します。 また、このトピックの「[一括インポートで \<COLUMN> 要素を使用する方法](#HowUsesColumn)」を参照してください。  
   
  \</BCPFORMAT>  
  フォーマット ファイルを終了するために必要なフォーマット ファイル要素です。  
   
-####  <a name="AttrOfFieldElement"></a> \<FIELD> 要素の属性  
+####  <a name="AttrOfFieldElement"></a>\<FIELD> 要素の属性  
  ここでは、次のスキーマ構文に示す \<FIELD> 要素の属性について説明します。  
   
  \<FIELD  
@@ -198,25 +202,25 @@ caps.handback.revision: 45
   
 |FIELD 要素の属性|説明|省略可能 /<br /><br /> 必須|  
 |---------------------|-----------------|------------------------------|  
-|ID **="***fieldID***"**|データ ファイル内のフィールドの論理名を指定します。 フィールドの ID は、フィールドを参照する際に使用するキーになります。<br /><br /> \<FIELD ID**="***fieldID***"**/> maps to \<COLUMN SOURCE**="***fieldID***"**/>|必須|  
+|ID **="***fieldID***"**|データ ファイル内のフィールドの論理名を指定します。 フィールドの ID は、フィールドを参照する際に使用するキーになります。<br /><br /> \<FIELD ID**="***fieldID***"**/> は \<COLUMN SOURCE**="***fieldID***"**/> にマップします|必須|  
 |xsi:type **="***fieldType***"**|要素のインスタンスの種類を特定する XML コンストラクトです (これは属性のように使用します)。 *fieldType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。|必須 (データ型により異なる)|  
 |LENGTH **="***n***"**|固定長データ型のインスタンスの長さを定義します。<br /><br /> *n* の値は、正の整数にする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
-|PREFIX_LENGTH **="***p***"**|バイナリ データ表現のプレフィックス長を定義します。 PREFIX_LENGTH 値の *p* は、1、2、4、または 8 のいずれかにする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
+|PREFIX_LENGTH **="***p***"**|バイナリ データ表現のプレフィックス長を定義します。 PREFIX_LENGTH 値の *p*は、1、2、4、または 8 のいずれかにする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
 |MAX_LENGTH **="***m***"**|指定したフィールドに格納できる最大バイト数を定義します。 対象のテーブルがない場合、列の最大長を決めることはできません。 MAX_LENGTH 属性では、出力先の文字列型の列の最大長を制限し、列の値に割り当てる領域を制限しています。 この属性は、SELECT FROM 句で OPENROWSET 関数の BULK オプションを使用している場合に特に有益です。<br /><br /> *m* の値は、正の整数にする必要があります。 既定では、 **char** 列の最大長は 8,000 文字で、 **nchar** 列の最大長は 4,000 文字です。|省略可|  
 |COLLATION **="***collationName***"**|COLLATION は、文字列型のフィールドでのみ使用できる属性です。 SQL 照合順序名の一覧については、「[SQL Server の照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)」を参照してください。|省略可|  
 |TERMINATOR **= "***terminator***"**|データ フィールドのターミネータを指定します。 ターミネータには、任意の文字を使用できます。 ただし、ターミネータには、データに含まれていない一意な文字を使用する必要があります。<br /><br /> 既定では、フィールド ターミネータはタブ文字 (\t) です。 段落記号を表すには、\r\n を使用します。|この属性が必要な文字型データの xsi:type でのみ使用されます。|  
   
-#####  <a name="XsiTypeValuesOfFIELD"></a> \<FIELD> 要素の Xsi:type 値  
+#####  <a name="XsiTypeValuesOfFIELD"></a>\<FIELD> 要素の Xsi:type 値  
  xsi:type 値は、要素のインスタンスのデータ型を特定する XML コンストラクトです (これは属性のように使用します)。 詳細については、このトピックの「xsi:type 値のデータセットへの格納」を参照してください。  
   
  \<FIELD> 要素の xsi:type 値では、次のデータ型がサポートされています。  
   
-|\<FIELD> 要素の xsi:type の値|必要な XML<br /><br /> 属性|データ型に関する省略可能な XML <br /><br /> 属性|  
+|\<FIELD> xsi:type 値|必要な XML<br /><br /> 属性|データ型に関する省略可能な XML<br /><br /> 属性|  
 |-------------------------------|---------------------------------------------------|---------------------------------------------------|  
-|**NativeFixed**|**[LENGTH]**|[なし] :|  
+|**NativeFixed**|**LENGTH**|[なし] :|  
 |**NativePrefix**|**PREFIX_LENGTH**|MAX_LENGTH|  
-|**CharFixed**|**[LENGTH]**|COLLATION|  
-|**NCharFixed**|**[LENGTH]**|COLLATION|  
+|**CharFixed**|**LENGTH**|COLLATION|  
+|**NCharFixed**|**LENGTH**|COLLATION|  
 |**CharPrefix**|**PREFIX_LENGTH**|MAX_LENGTH、COLLATION|  
 |**NCharPrefix**|**PREFIX_LENGTH**|MAX_LENGTH、COLLATION|  
 |**CharTerm**|**TERMINATOR**|MAX_LENGTH、COLLATION|  
@@ -224,10 +228,10 @@ caps.handback.revision: 45
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型の詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。  
   
-####  <a name="AttrOfColumnElement"></a> \<COLUMN> 要素の属性  
+####  <a name="AttrOfColumnElement"></a>\<COLUMN> 要素の属性  
  ここでは、次のスキーマ構文に示す \<COLUMN> 要素の属性について説明します。  
   
- \<COLUMN  
+ \<要素の xsi:type 値  
   
  SOURCE = "*fieldID*"  
   
@@ -259,12 +263,12 @@ caps.handback.revision: 45
 |SCALE **="***int***"**|数値の中で小数点より右側の桁数を示します。 たとえば、数字 123.45 の小数点以下桁数は 2 桁です。<br /><br /> この値は、整数にする必要があります。|省略可能 (xsi:type が可変数値のデータ型の場合にのみ使用可能)|  
 |NULLABLE **=** { **"**YES**"**<br /><br /> **"**NO**"** }|列で NULL 値を使用できるかどうかを示します。 この属性は、FIELDS 要素から完全に独立しています。 ただし、列が NULLABLE ではない場合に、フィールドで NULL が指定された (何も値が指定されない) 場合、実行時エラーが発生します。<br /><br /> NULLABLE 属性は、単純な SELECT FROM OPENROWSET(BULK...) ステートメントを実行する場合にのみ使用されます。|省略可能 (任意のデータ型で使用可能)|  
   
-#####  <a name="XsiTypeValuesOfCOLUMN"></a> \<COLUMN> 要素の xsi:type 値  
+#####  <a name="XsiTypeValuesOfCOLUMN"></a>\<COLUMN> 要素の xsi:type 値  
  xsi:type 値は、要素のインスタンスのデータ型を特定する XML コンストラクトです (これは属性のように使用します)。 詳細については、このトピックの「xsi:type 値のデータセットへの格納」を参照してください。  
   
  次の表に示すように、\<COLUMN> 要素ではネイティブな SQL データ型がサポートされています。  
   
-|データ型|\<COLUMN> のデータ型|必要な XML<br /><br /> 属性|データ型に関する省略可能な XML <br /><br /> 属性|  
+|データ型|\<COLUMN> データ型|必要な XML<br /><br /> 属性|データ型に関する省略可能な XML<br /><br /> 属性|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
 |固定|**SQLBIT**、 **SQLTINYINT**、 **SQLSMALLINT**、 **SQLINT**、 **SQLBIGINT**、 **SQLFLT4**、 **SQLFLT8**、 **SQLDATETIME**、 **SQLDATETIM4**、 **SQLDATETIM8**、 **SQLMONEY**、 **SQLMONEY4**、 **SQLVARIANT**、および **SQLUNIQUEID**|[なし] :|NULLABLE|  
 |可変数値|**SQLDECIMAL** および **SQLNUMERIC**|[なし] :|NULLABLE、PRECISION、SCALE|  
@@ -278,23 +282,23 @@ caps.handback.revision: 45
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型の詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。  
   
-###  <a name="HowUsesROW"></a> 一括インポートで \<ROW> 要素を使用する方法  
+###  <a name="HowUsesROW"></a>一括インポートで \<ROW> 要素を使用する方法  
  \<ROW> 要素は、一部のコンテキストでは無視されます。 \<ROW> 要素が、一括インポート操作に影響を与えるかどうかは、一括インポート操作がどのように実行されるかによって異なります。  
   
 -   **bcp** コマンド  
   
      データがインポート先のテーブルに読み込まれるときに、**bcp** コマンドでは \<ROW> コンポーネントは無視されます。 代わりに、 **bcp** コマンドでは、インポート先テーブルの列の型に基づいてデータが読み込まれます。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]  ステートメント (BULK INSERT および OPENROWSET の一括行セット プロバイダー)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント (BULK INSERT および OPENROWSET の一括行セット プロバイダー)  
   
-     テーブルにデータを一括インポートする際、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、\<ROW> コンポーネントを使用して入力行セットが生成されます。 また、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、\<ROW> で指定されている列の型とインポート先のテーブルの対応する列に基づいて適切な型変換が実行されます。 フォーマット ファイルで指定されている列の型とインポート先のテーブルの列の型が一致しない場合、追加の型変換が実行されます。 この追加の型変換によって、**bcp** コマンドと比べたときの BULK INSERT または OPENROWSET の一括行セット プロバイダーの動作に矛盾が生じる (精度が低下する) ことがあります。  
+     テーブルにデータを一括インポートする際、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、\<ROW> コンポーネントを使用して入力行セットが生成されます。 また、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、\<ROW> で指定されている列の型とインポート先のテーブルの対応する列に基づいて、適切な型変換が実行されます。 フォーマット ファイルで指定されている列の型とインポート先のテーブルの列の型が一致しない場合、追加の型変換が実行されます。 この追加の型変換によって、 **bcp**コマンドと比べたときの BULK INSERT または OPENROWSET の一括行セット プロバイダーの動作に矛盾が生じる (精度が低下する) ことがあります。  
   
      \<ROW> 要素の情報に基づいて行が構築されるので、追加の情報は必要ありません。 このため、SELECT ステートメント (SELECT \* FROM OPENROWSET(BULK *datafile* FORMATFILE=*xmlformatfile*) を使用して行セットを生成することができます。  
   
     > [!NOTE]  
     >  OPENROWSET BULK 句では、フォーマット ファイルが必要です (フィールドのデータ型から列のデータ型に変換する処理には、XML フォーマット ファイルが必要であることに注意してください)。  
   
-###  <a name="HowUsesColumn"></a> 一括インポートで \<COLUMN> 要素を使用する方法  
+###  <a name="HowUsesColumn"></a>一括インポートで \<COLUMN> 要素を使用する方法  
  データをテーブルに一括インポートする際、フォーマット ファイル内の \<COLUMN> 要素により、次のことが指定され、データ ファイルのフィールドがテーブルの列にマップされます。  
   
 -   データ ファイルの行内における各フィールドの位置。  
@@ -306,7 +310,7 @@ caps.handback.revision: 45
  同様に、データをテーブルから一括エクスポートする際、フォーマット ファイルの各 \<COLUMN> 要素により、エクスポート元のテーブル行の列が出力先データ ファイルの対応するフィールドにマップされます。  
   
 ###  <a name="PutXsiTypeValueIntoDataSet"></a> xsi:type 値のデータセットへの格納  
- XML ドキュメントが XML Schema Definition (XSD) 言語で検証されると、xsi:type 値はデータセットに格納されません。 ただし、次のコードに示すように、XML フォーマット ファイルを XML ドキュメント (たとえば、`myDoc`) に読み込んで、xsi:type の情報をデータセットに格納することができます。  
+ XML ドキュメントが XML Schema Definition (XSD) 言語で検証されると、xsi:type 値はデータセットに格納されません。 ただし、次のコードに示すように、XML フォーマット ファイルを XML ドキュメント (たとえば、 `myDoc`) に読み込んで、xsi:type の情報をデータセットに格納することができます。  
   
 ```  
 ...;  
@@ -320,10 +324,10 @@ for(int i=0;i<ColumnList.Count;i++)
 ```  
   
 ##  <a name="SampleXmlFFs"></a> XML フォーマット ファイルのサンプル  
- ここでは、[!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] の例を基に、さまざまな状況で XML フォーマット ファイルを使用するときの情報について説明します。  
+ ここでは、 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] の例を基に、さまざまな状況で XML フォーマット ファイルを使用するときの情報について説明します。  
   
 > [!NOTE]  
->  下記の例で示すデータ ファイルでは、`<tab>` がデータ ファイル内のタブ文字、`<return>` が復帰を表します。  
+>  下記の例で示すデータ ファイルでは、 `<tab>` がデータ ファイル内のタブ文字、 `<return>` が復帰を表します。  
   
  以下、XML フォーマット ファイルを使用する際の主な局面について例を使用して説明します。  
   
@@ -342,7 +346,7 @@ for(int i=0;i<ColumnList.Count;i++)
 -   [その他の例](#AdditionalExamples)  
   
 > [!NOTE]  
->  フォーマット ファイルの作成方法については、「[フォーマット ファイルの作成 &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)」を参照してください。  
+>  フォーマット ファイルの作成方法については、「 [フォーマット ファイルの作成 &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)」を参照してください。  
   
 ###  <a name="OrderCharFieldsSameAsCols"></a> A. 文字データ フィールドの順序とテーブル列の順序が同じ場合  
  次の例は、文字データのフィールドを 3 つ含んだデータ ファイルを記述する XML フォーマット ファイルを示しています。 フォーマット ファイルによって、このデータ ファイルを 3 列のテーブルにマッピングします。 データ フィールドは、テーブルの列と一対一に対応します。  
@@ -500,7 +504,7 @@ xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"
 CREATE TABLE t_xml (c1 int, c2 xml)  
 ```  
   
- 次の XML フォーマット ファイルを使用すると、テーブル `t_xml` にデータ ファイルが読み込まれます。  
+ 次の XML フォーマット ファイルを使用すると、テーブル `t_xml`にデータ ファイルが読み込まれます。  
   
 ```  
 <?xml version="1.0"?>  
@@ -518,7 +522,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
   
 ###  <a name="ImportFixedFields"></a> F. 固定長フィールドまたは固定幅フィールドをインポートする場合  
- 次の例では、長さと幅がそれぞれ `10` 文字または `6` 文字に固定されたフィールドについて説明します。 これらのフィールドの長さと幅は `LENGTH="10"` および `LENGTH="6"` としてそれぞれ表現されています。 データ ファイルのすべての行の末尾には、復帰と改行の組み合わせ ({CR}{LF}) が記述されます。フォーマット ファイルでは `TERMINATOR="\r\n"` として表現されています。  
+ 次の例では、長さと幅がそれぞれ `10` 文字または `6` 文字に固定されたフィールドについて説明します。 これらのフィールドの長さと幅は `LENGTH="10"` および `LENGTH="6"`としてそれぞれ表現されています。 データ ファイルのすべての行の末尾には、復帰と改行の組み合わせ ({CR}{LF}) が記述されます。フォーマット ファイルでは `TERMINATOR="\r\n"`として表現されています。  
   
 ```  
 <?xml version="1.0"?>  
@@ -561,7 +565,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
  [なし] :  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データの一括インポートと一括エクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   

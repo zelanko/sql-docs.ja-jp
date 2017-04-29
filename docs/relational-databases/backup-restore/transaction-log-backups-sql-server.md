@@ -1,28 +1,32 @@
 ---
 title: "トランザクション ログのバックアップ (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "バックアップ [SQL Server]、トランザクション ログ"
-  - "トランザクション ログ バックアップ [SQL Server]、作成"
-  - "ログのバックアップ [SQL Server]"
-  - "トランザクション ログ バックアップ [SQL Server]、シーケンス化"
+ms.custom: 
+ms.date: 08/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backing up [SQL Server], transaction logs
+- transaction log backups [SQL Server], creating
+- log backups [SQL Server[
+- transaction log backups [SQL Server], sequencing
 ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b7bad833291d3ad6b61cb4fac99334284404b97f
+ms.lasthandoff: 04/11/2017
+
 ---
-# トランザクション ログのバックアップ (SQL Server)
-  このトピックは、完全復旧モデルまたは一括ログ復旧モデルを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのみに関連しています。 このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのトランザクション ログのバックアップについて説明します。  
+# <a name="transaction-log-backups-sql-server"></a>トランザクション ログのバックアップ (SQL Server)
+  このトピックは、完全復旧モデルまたは一括ログ復旧モデルを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのみに関連しています。 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのトランザクション ログのバックアップについて説明します。  
   
  少なくとも 1 つの完全バックアップを作成しておかなければ、ログ バックアップを作成できません。 完全バックアップを作成しておくと、いつでもトランザクション ログをバックアップできます。ただし、そのログのバックアップが既に進行中である場合、バックアップを開始できません。 
  
@@ -41,15 +45,15 @@ caps.handback.revision: 52
 |午後 6 時|データベースのバックアップ。|  
 |午後 8 時|トランザクション ログのバックアップ。|  
   
- 午後 8 時に作成されたトランザクション ログ バックアップには、 午後 4 時から午後 8 時までのトランザクション ログ レコードが含まれています。 その間、午後 6 時に、データベースの完全バックアップが作成されています。 トランザクション ログ バックアップのシーケンスは、午前 8 時に最初にデータベースの完全バックアップが作成されて以降、 午後 8 時に作成された最後のトランザクション ログ バックアップまで継続しています。 これらのログ バックアップを適用する方法の詳細については、「[トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)」の例を参照してください。  
+ 午後 8 時に作成されたトランザクション ログ バックアップには、 午後 4 時から午後 8 時までのトランザクション ログ レコードが含まれています。 その間、午後 6 時に、データベースの完全バックアップが作成されています。 トランザクション ログ バックアップのシーケンスは、午前 8 時に最初にデータベースの完全バックアップが作成されて以降、 午後 8 時に作成された最後のトランザクション ログ バックアップまで継続しています。 これらのログ バックアップを適用する方法の詳細については、「 [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)」の例を参照してください。  
   
 ##  <a name="Recommendations"></a> 推奨事項  
   
 -   トランザクション ログが破損すると、前回の有効なバックアップ以降に行われた作業が失われます。 そのため、ログ ファイルはフォールト トレランス ストレージに置くことを強くお勧めします。  
   
--   データベースが破損した場合、またはデータベースを復元する場合は、[ログ末尾のバックアップ](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)を作成して、データベースを現在の状態に復元できるようにすることをお勧めします。  
+-   データベースが破損した場合、またはデータベースを復元する場合は、 [ログ末尾のバックアップ](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) を作成して、データベースを現在の状態に復元できるようにすることをお勧めします。  
   
--   既定では、バックアップ操作が成功するたびに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログおよびシステム イベント ログにエントリが 1 つ追加されます。 ログを頻繁にバックアップすると、これらの成功メッセージがすぐに蓄積され、他のメッセージを探すのが困難になるほどエラー ログが大きくなることがあります。 そのような場合、これらのエントリに依存するスクリプトがなければ、トレース フラグ 3226 を使用することによってこれらのログ エントリを除外できます。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md)」を参照してください。  
+-   既定では、バックアップ操作が成功するたびに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログおよびシステム イベント ログにエントリが 1 つ追加されます。 ログを頻繁にバックアップすると、これらの成功メッセージがすぐに蓄積され、他のメッセージを探すのが困難になるほどエラー ログが大きくなることがあります。 そのような場合、これらのエントリに依存するスクリプトがなければ、トレース フラグ 3226 を使用することによってこれらのログ エントリを除外できます。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **トランザクション ログのバックアップを作成するには**  
@@ -61,10 +65,11 @@ caps.handback.revision: 52
  バックアップ ジョブのスケジュールを設定するには、「 [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)」を参照してください。  
   
 
-## 参照  
+## <a name="see-also"></a>参照  
  [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [ログ末尾のバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)   
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
   
   
+

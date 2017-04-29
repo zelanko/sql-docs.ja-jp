@@ -1,29 +1,33 @@
 ---
 title: "一般にバックアップの更新が必要になるアクション | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "復旧 [SQL Server レプリケーション], バックアップを必要とするアクション"
-  - "復元 [SQL Server レプリケーション], バックアップを必要とするアクション"
-  - "バックアップ [SQL Server レプリケーション], バックアップを必要とするアクション"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recovery [SQL Server replication], actions requiring a backup
+- restoring [SQL Server replication], actions requiring a backup
+- backups [SQL Server replication], actions requiring a backup
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8784d006b175b3b6471464f401ad460080a273a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 一般にバックアップの更新が必要になるアクション
-  定期的なログ バックアップを実行する場合は、レプリケーション関連の変更をログ バックアップでキャプチャする必要があります。 ログのバックアップを実行しない場合は、パブリケーション、ディストリビューション、サブスクリプションのバックアップを実行 **msdb**, 、および **マスター** レプリケーション スキーマまたはトポロジを変更した後のデータベースです。  
+# <a name="common-actions-requiring-an-updated-backup"></a>一般にバックアップの更新が必要になるアクション
+  定期的なログ バックアップを実行する場合は、レプリケーション関連の変更をログ バックアップでキャプチャする必要があります。 ログ バックアップを実行しない場合は、レプリケーション スキーマまたはトポロジを変更した後でパブリケーション、ディストリビューション、サブスクリプション、 **msdb**、および **master** の各データ ベースのバックアップを実行してください。  
   
-## パブリケーション データベース  
+## <a name="publication-database"></a>パブリケーション データベース  
  以下の処理の後で、パブリケーション データベースをバックアップしてください。  
   
 -   パブリケーションの新規作成。  
@@ -36,7 +40,7 @@ caps.handback.revision: 32
   
 -   パブリッシュされたテーブルでのスキーマの変更。  
   
--   オンデマンドでスクリプトの実行を実行する [sp_addscriptexec & #40 です。Transact SQL と #41;](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md)します。  
+-   [sp_addscriptexec &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md) による要求時スクリプトの実行。  
   
 -   任意のアーティクル プロパティの変更。  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 32
   
 -   レプリケーションの無効化。  
   
-## ディストリビューション データベース  
+## <a name="distribution-database"></a>ディストリビューション データベース  
  以下の処理の後で、ディストリビューション データベースをバックアップしてください。  
   
 -   レプリケーション エージェント プロファイルの作成または変更。  
@@ -57,7 +61,7 @@ caps.handback.revision: 32
   
 -   自動 ID 範囲管理機能による新しい ID 範囲の割り当て。  
   
-## サブスクリプション データベース  
+## <a name="subscription-database"></a>サブスクリプション データベース  
  以下の処理の後で、サブスクリプション データベースをバックアップしてください。  
   
 -   任意のサブスクリプション プロパティの変更。  
@@ -68,8 +72,8 @@ caps.handback.revision: 32
   
 -   レプリケーションの無効化。  
   
-## msdb データベース  
- バックアップ、 **msdb** 後に適切なノードでシステム データベース。  
+## <a name="msdb-database"></a>msdb データベース  
+ 以下の処理の後で、適切なノードで **msdb** システム データベースをバックアップしてください。  
   
 -   レプリケーションの有効化または無効化。  
   
@@ -89,8 +93,8 @@ caps.handback.revision: 32
   
 -   変換可能なサブスクリプションの追加または削除 (ディストリビューターおよびサブスクライバーで)。  
   
-## master データベース  
- バックアップ、 **マスター** 後に適切なノードでシステム データベース。  
+## <a name="master-database"></a>master データベース  
+ 以下の処理の後で、適切なノードで **master** システム データベースをバックアップしてください。  
   
 -   レプリケーションの有効化または無効化。  
   
@@ -104,8 +108,8 @@ caps.handback.revision: 32
   
 -   ディストリビューション パブリッシャーのパブリッシャーの有効化または無効化 (パブリッシャーおよびディストリビューターで)。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server データベースのバックアップと復元](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [レプリケートされたデータベースのバックアップと復元](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
+ [Back Up and Restore Replicated Databases (レプリケートされたデータベースのバックアップと復元)](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
   
   

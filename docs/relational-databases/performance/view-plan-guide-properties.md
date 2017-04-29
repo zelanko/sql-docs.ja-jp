@@ -1,28 +1,32 @@
 ---
 title: "プラン ガイド プロパティの表示 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.planguideprop.general.f1"
-helpviewer_keywords: 
-  - "プラン ガイド [SQL Server], プラン ガイド プロパティの表示"
-  - "プラン ガイド プロパティの表示"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.planguideprop.general.f1
+helpviewer_keywords:
+- plan guides [SQL Server], view plan guide properties
+- viewing plan guide properties
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a68f0e1e0c15000f40de408f41ce4c40f281900e
+ms.lasthandoff: 04/11/2017
+
 ---
-# プラン ガイド プロパティの表示
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のプラン ガイドのプロパティは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または  を使用して表示できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+# <a name="view-plan-guide-properties"></a>プラン ガイド プロパティの表示
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のプラン ガイドのプロパティは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または  を使用して表示できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **このトピックの内容**  
   
@@ -45,13 +49,13 @@ caps.handback.revision: 19
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### プラン ガイドのプロパティを表示するには  
+#### <a name="to-view-the-properties-of-a-plan-guide"></a>プラン ガイドのプロパティを表示するには  
   
 1.  プラス記号をクリックして、プロパティを表示するプラン ガイドのあるデータベースを展開し、プラス記号をクリックして **[プログラミング]** フォルダーを展開します。  
   
 2.  プラス記号をクリックして **[プラン ガイド]** フォルダーを展開します。  
   
-3.  プロパティを表示するプラン ガイドを右クリックし、**[プロパティ]** を選択します。  
+3.  プロパティを表示するプラン ガイドを右クリックし、 **[プロパティ]**を選択します。  
   
      **[プラン ガイドのプロパティ]** ダイアログ ボックスに次のプロパティが表示されます。  
   
@@ -65,13 +69,13 @@ caps.handback.revision: 19
      プラン ガイドの名前が表示されます。  
   
      **パラメーター**  
-     スコープの種類が SQL または TEMPLATE の場合は、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに埋め込まれているすべてのパラメーターの名前とデータ型が表示されます。  
+     スコープの種類が SQL または TEMPLATE の場合は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに埋め込まれているすべてのパラメーターの名前とデータ型が表示されます。  
   
      **[スコープ バッチ]**  
      [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含むバッチ テキストが表示されます。  
   
      **[スコープ オブジェクト名]**  
-     スコープの種類が OBJECT の場合は、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含む [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ、ユーザー定義スカラー関数、複数ステートメントのテーブル値関数、または DML トリガーの名前が表示されます。  
+     スコープの種類が OBJECT の場合は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含む [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ、ユーザー定義スカラー関数、複数ステートメントのテーブル値関数、または DML トリガーの名前が表示されます。  
   
      **[スコープ スキーマ名]**  
      スコープの種類が OBJECT の場合は、そのオブジェクトを含むスキーマの名前が表示されます。  
@@ -86,7 +90,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### プラン ガイドのプロパティを表示するには  
+#### <a name="to-view-the-properties-of-a-plan-guide"></a>プラン ガイドのプロパティを表示するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

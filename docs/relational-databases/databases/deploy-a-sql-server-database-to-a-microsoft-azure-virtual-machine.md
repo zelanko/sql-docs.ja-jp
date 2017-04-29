@@ -1,46 +1,50 @@
 ---
 title: "Microsoft Azure Virtual Machine の SQL Server データベースの配置 | Microsoft Docs"
-ms.date: "07/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.deploymentwizard.deploymentsettings.f1"
-  - "sql13.swb.deploymentwizard.sourcesettings.f1"
-  - "sql13.swb.deploymentwizard.summary.f1"
-  - "sql13.swb.agdashboard.agp9virtualnw.issues.f1"
-  - "sql13.swb.deploymentwizard.f1"
-  - "sql13.swb.deploymentwizard.progress.f1"
-  - "sql13.swb.usevmdialog.f1"
-  - "sql13.swb.newvmdialog.f1"
-  - "sql13.swb.sqlvmdialog.f1"
-  - "sql13.swb.deploymentwizard.results.f1"
-  - "sql13.swb.deploymentwizard.azuresignin.f1"
-helpviewer_keywords: 
-  - "データベースの配置"
-  - "Azure 仮想マシンへの配置"
-  - "Azure への移行"
-  - "Windows Azure 仮想マシン"
-  - "Azure VM への移行"
-  - "クラウドへの移行"
-  - "SQL Server Management Studio"
-  - "SSMS"
-  - "データベース配置ウィザード"
-  - "Azure への SQL Server データベースの配置"
-  - "Azure 仮想マシン"
+ms.date: 07/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.deploymentwizard.deploymentsettings.f1
+- sql13.swb.deploymentwizard.sourcesettings.f1
+- sql13.swb.deploymentwizard.summary.f1
+- sql13.swb.agdashboard.agp9virtualnw.issues.f1
+- sql13.swb.deploymentwizard.f1
+- sql13.swb.deploymentwizard.progress.f1
+- sql13.swb.usevmdialog.f1
+- sql13.swb.newvmdialog.f1
+- sql13.swb.sqlvmdialog.f1
+- sql13.swb.deploymentwizard.results.f1
+- sql13.swb.deploymentwizard.azuresignin.f1
+helpviewer_keywords:
+- Deploy a database
+- Deploy to Azure VM
+- Migrate to Azure
+- Windows Azure virtual machine
+- Migrate to Azure VM
+- Migrate to the cloud
+- SQL Server Management Studio
+- SSMS
+- Deploy database wizard
+- Deploy a SQL Server database to Azure
+- Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aca87c0050dd501c73bb4da8953a93bf40c0c8e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Microsoft Azure Virtual Machine の SQL Server データベースの配置
-  **Microsoft Azure 仮想マシンにデータベースを配置**ウィザードを使用して、データベースを[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスから Microsoft Azure Virtual Machine (VM) の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に配置します。 このウィザードはデータベースの完全バックアップ操作を活用し、SQL Server のユーザー データベースから常にデータベース スキーマ全体とデータ全体をコピーします。 また、このウィザードは Azure のすべての仮想マシンを自動的に構成するため、仮想マシンの事前構成は必要ありません。  
+# <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Microsoft Azure Virtual Machine の SQL Server データベースの配置
+  **Microsoft Azure 仮想マシンにデータベースを配置** ウィザードを使用して、データベースを [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスから Microsoft Azure Virtual Machine (VM) の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に配置します。 このウィザードはデータベースの完全バックアップ操作を活用し、SQL Server のユーザー データベースから常にデータベース スキーマ全体とデータ全体をコピーします。 また、このウィザードは Azure のすべての仮想マシンを自動的に構成するため、仮想マシンの事前構成は必要ありません。  
   
  このウィザードを使用して差分バックアップを実行することはできません。 なぜなら、同じデータベース名を持つ既存のデータベースが上書きされないからです。 仮想マシン上にある既存のデータベースを置き換えるには、まず既存のデータベースを削除するか、データベース名を変更する必要があります。 インフライト配置操作を実行しているときに、複数のデータベース名の間で名前の競合が発生し、既存のデータベースが仮想マシン上に存在している場合は、ウィザードはインフライト データベースに対して付加的なデータベース名を提示し、操作を完了できるようにします。  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 30
 -   [ウィザード ページ](#wizard_pages)  
   
 > [!NOTE]  
->  このウィザードの詳細な手順については、「[Azure VM の SQL Server への SQL Server データベースの移行](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-migrate-onpremises-database/)」をご覧ください。  
+>  このウィザードの詳細な手順については、「 [Azure VM の SQL Server への SQL Server データベースの移行](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-migrate-onpremises-database/)」をご覧ください。  
   
 ##  <a name="before_you_begin"></a> はじめに  
  このウィザードを完了するには、次の情報を用意し、これらの構成設定を整える必要があります。  
@@ -73,7 +77,7 @@ caps.handback.revision: 30
     > [!CAUTION]  
     >  SQL Server では現在、公開プロファイルのバージョン 2.0 がサポートされています。 公開プロファイルのサポート対象バージョンをダウンロードするには、「 [公開プロファイルのバージョン 2.0 のダウンロード](http://go.microsoft.com/fwlink/?LinkId=396421)」をご覧ください。  
   
--   Microsoft Azure サブスクリプションにアップロードされた管理証明書。  Powershell のコマンドレット [New-SelfSignedCertificate](https://technet.microsoft.com/library/hh848633(v=wps.630)) で管理証明書を作成します。  その後、Microsoft Azure サブスクリプションに管理証明書をアップロードします。  管理証明書のアップロードの詳細については、「[Azure Management API Management 証明書のアップロード](https://azure.microsoft.com/en-us/documentation/articles/azure-api-management-certs/)」をご覧ください。  次に示すのは、「[Azure Cloud Services の証明書の概要](https://azure.microsoft.com/en-us/documentation/articles/cloud-services-certs-create/)」から抜粋した管理証明書作成の構文のサンプルです。 
+-   Microsoft Azure サブスクリプションにアップロードされた管理証明書。  Powershell のコマンドレット [New-SelfSignedCertificate](https://technet.microsoft.com/library/hh848633(v=wps.630))で管理証明書を作成します。  その後、Microsoft Azure サブスクリプションに管理証明書をアップロードします。  管理証明書のアップロードの詳細については、「 [Azure Management API Management 証明書のアップロード](https://azure.microsoft.com/en-us/documentation/articles/azure-api-management-certs/)」をご覧ください。  次に示すのは、「 [Azure Cloud Services の証明書の概要](https://azure.microsoft.com/en-us/documentation/articles/cloud-services-certs-create/)」から抜粋した管理証明書作成の構文のサンプルです。 
 
     ```powershell  
     $cert = New-SelfSignedCertificate -DnsName yourdomain.cloudapp.net -CertStoreLocation "cert:\LocalMachine\My"
@@ -82,17 +86,17 @@ caps.handback.revision: 30
     ```    
 
     > [!NOTE]  
-    > MakeCert ツールを使用して管理証明書を作成することもできますが、MakeCert は推奨されなくなっています。  詳細については、「[MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968)」をご覧ください。
+    > MakeCert ツールを使用して管理証明書を作成することもできますが、MakeCert は推奨されなくなっています。  詳細については、「 [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968)」をご覧ください。
    
   -   ウィザードを実行するコンピューターで個人証明書ストアに保存された管理証明書。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをホストするコンピューターで使用できる一時格納場所が必要です。 この一時格納場所は、このウィザードを実行するコンピューターでも使用できる必要があります。  
   
--   既存の仮想マシンにデータベースを配置する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを TCP/IP ポートでリッスンするように構成する必要があります。  
+-   既存の仮想マシンにデータベースを配置する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを TCP/IP ポートでリッスンするように構成する必要があります。  
   
--   仮想マシンの作成に使用する Windows Azure VM またはギャラリーの図では、[SQL Server 用のクラウド アダプター](Cloud%20Adapter%20for%20SQL%20Server.md)が構成および実行されている必要があります。  
+-   仮想マシンの作成に使用する Windows Azure VM またはギャラリーの図では、 [SQL Server 用のクラウド アダプター](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) が構成および実行されている必要があります。  
   
--   Windows Azure ゲートウェイ上にプライベート ポート 11435 で [SQL Server 用クラウド アダプター](Cloud%20Adapter%20for%20SQL%20Server.md)のオープン エンドポイントを構成する必要があります。  
+-   Windows Azure ゲートウェイ上にプライベート ポート 11435 で [SQL Server 用クラウド アダプター](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) のオープン エンドポイントを構成する必要があります。  
   
  また、データベースを既存の Windows Azure 仮想マシンに配置する計画がある場合は、次の情報も用意する必要があります。  
   
@@ -102,7 +106,7 @@ caps.handback.revision: 30
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のソース インスタンスから配置を計画しているデータベースのバックアップ操作の特権資格情報。  
   
- Microsoft Azure Virtual Machines で SQL Server を実行する詳細については、「[Azure ポータルでの SQL Server 仮想マシンのプロビジョニング](https://msdn.microsoft.com/library/dn133141.aspx)」および「[Azure VM の SQL Server への SQL Server データベースの移行](http://msdn.microsoft.com/library/dn133142.aspx)」をご覧ください。  
+ Microsoft Azure Virtual Machines で SQL Server を実行する詳細については、「 [Azure ポータルでの SQL Server 仮想マシンのプロビジョニング](https://msdn.microsoft.com/library/dn133141.aspx) 」および「 [Azure VM の SQL Server への SQL Server データベースの移行](http://msdn.microsoft.com/library/dn133142.aspx)」をご覧ください。  
   
  Windows Server オペレーティング システムを実行しているコンピューターでは、このウィザードを実行するために、次の構成設定を使用する必要があります。  
   
@@ -111,11 +115,11 @@ caps.handback.revision: 30
 -   JavaScript の有効化。Internet Explorer > [インターネット オプション] > [セキュリティ] > [レベルのカスタマイズ] > [スクリプト] > [アクティブ スクリプト] を選択し、**[有効にする]** に設定します。  
   
 ###  <a name="limitations"></a> 制限事項と制約事項  
-この配置機能は、Service Management (クラシック) デプロイメント モデルを使って作成された Azure Storage アカウントでのみ使用できます。 Azure デプロイメント モデルに関する詳細については、「[Azure Resource Manager とクラシック デプロイ](https://azure.microsoft.com/en-us/documentation/articles/resource-manager-deployment-model/)」を参照してください。
+この配置機能は、Service Management (クラシック) デプロイメント モデルを使って作成された Azure Storage アカウントでのみ使用できます。 Azure デプロイメント モデルに関する詳細については、「 [Azure Resource Manager とクラシック デプロイ](https://azure.microsoft.com/en-us/documentation/articles/resource-manager-deployment-model/)」を参照してください。
 
  この操作に対応するデータベース サイズの上限は 1 TB です。  
   
- この配置機能は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 用の SQL Server Management Studio で使用できます。  
+ この配置機能は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]用の SQL Server Management Studio で使用できます。  
   
  この配置機能は、ユーザー データベースを使用している場合にのみ有効です。システム データベースの配置はサポートされていません。  
   
@@ -146,9 +150,9 @@ caps.handback.revision: 30
 ###  <a name="filestream"></a> FILESTREAM が有効なデータベースの Azure 仮想マシンへの配置に関する注意点  
  FILESTREAM オブジェクトに格納されている BLOBS があるデータベースを配置する場合は、次のガイドラインと制限事項に注意してください:  
   
--   配置機能は FILESTREAM が有効なデータベースを新しい仮想マシンに配置することはできません。 ウィザードを実行する前に FILESTREAM が仮想マシンで有効になっていない場合は、データベースの復元操作が失敗し、ウィザードの操作が正常に完了できません。 FILESTREAM を使用するデータベースを正常に配置するには、ウィザードを起動する前にホスト仮想マシンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで FILESTREAM を有効にします。 詳細については、「[FILESTREAM (SQL Server)](http://msdn.microsoft.com/library/gg471497.aspx)」を参照してください。  
+-   配置機能は FILESTREAM が有効なデータベースを新しい仮想マシンに配置することはできません。 ウィザードを実行する前に FILESTREAM が仮想マシンで有効になっていない場合は、データベースの復元操作が失敗し、ウィザードの操作が正常に完了できません。 FILESTREAM を使用するデータベースを正常に配置するには、ウィザードを起動する前にホスト仮想マシンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで FILESTREAM を有効にします。 詳細については、「 [FILESTREAM (SQL Server)](http://msdn.microsoft.com/library/gg471497.aspx)」を参照してください。  
   
--   データベースがインメモリ OLTP を使用すると、データベースを変更せずに Azure 仮想マシンにデータベースを配置できます。 詳細については、「[インメモリ OLTP (インメモリ最適化)](http://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx)」を参照してください。  
+-   データベースがインメモリ OLTP を使用すると、データベースを変更せずに Azure 仮想マシンにデータベースを配置できます。 詳細については、「 [インメモリ OLTP (インメモリ最適化)](http://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx)」を参照してください。  
   
 ###  <a name="geography"></a> 資産の地理的分散に関する注意点  
  次の資産が同じ地理的領域に存在する必要があることに注意してください:  
@@ -174,7 +178,7 @@ caps.handback.revision: 30
   
             -   TraceLevel="Debug" \<!-- Logging level -->  
   
-            -   BackupPath=" \\\\[サーバー名]\\[ボリューム]\\" \<!-- バックアップの最後に使用されたパス。 ウィザードで既定値として使用されます。 -->  
+            -   BackupPath="\\\\[サーバー名]\\[ボリューム]\\" \<!-- バックアップの最後に使用されたパス。 ウィザードで既定値として使用されます。 -->  
   
             -   CleanupDisabled = False /> \<! -- 中間のファイルおよび Windows Azure オブジェクト (仮想マシン、CS、SA) は削除されません。 -->  
   
@@ -202,7 +206,7 @@ caps.handback.revision: 30
   
 2.  **オブジェクト エクスプローラー**で、インスタンス名を展開してから、 **データベース** ノードを展開します。  
   
-3.  配置するデータベースを右クリックして **[タスク]** を選択し、**[Microsoft Azure 仮想マシンへのデータベースの配置]** をクリックします。  
+3.  配置するデータベースを右クリックして **[タスク]**を選択し、 **[Microsoft Azure 仮想マシンへのデータベースの配置]**をクリックします。  
   
 ##  <a name="wizard_pages"></a> ウィザード ページ  
  以下のセクションでは、この操作の配置設定と構成の詳細に関する追加情報を示しています。  
@@ -220,7 +224,7 @@ caps.handback.revision: 30
 -   [[結果]](#Results)  
   
 ##  <a name="Introduction"></a> 概要 
- このページでは、**Microsoft Azure 仮想マシンへのデータベースの配置**ウィザードについて説明します。  
+ このページでは、 **Microsoft Azure 仮想マシンへのデータベースの配置** ウィザードについて説明します。  
   
 -   **[次回からこのページを表示しない]**  
   今後 [説明] ページを表示しないようにするには、このチェック ボックスをオンにします。  
@@ -247,7 +251,7 @@ caps.handback.revision: 30
 このフィールドで、Microsoft Azure 仮想マシン サービスがアクセスできる共有フォルダーを指定します。  
   
 ##  <a name="Azure_sign-in"></a> Microsoft Azure へのサインイン  
- Microsoft アカウントまたは組織アカウントを使用して Microsoft Azure にサインインします。 Microsoft アカウントまたは組織アカウントは、patc@contoso.com などの電子メール アドレスの形式になっています。 Azure の資格情報の詳細については、「[Microsoft Account for Organizations FAQ](http://technet.microsoft.com/jj592903)」(組織向け Microsoft アカウントに関する FAQ) および「[Troubleshooting Problems](https://technet.microsoft.com/dn197220)」(問題のトラブルシューティング) をご覧ください。  
+ Microsoft アカウントまたは組織アカウントを使用して Microsoft Azure にサインインします。 Microsoft アカウントまたは組織アカウントは、patc@contoso.com などの電子メール アドレスの形式になっています。 Azure の資格情報の詳細については、「 [Microsoft Account for Organizations FAQ](http://technet.microsoft.com/jj592903) 」(組織向け Microsoft アカウントに関する FAQ) および「 [Troubleshooting Problems](https://technet.microsoft.com/dn197220)」(問題のトラブルシューティング) をご覧ください。  
   
 ##  <a name="Deployment_settings"></a> 配置の設定
  このページを使用して、配置先サーバーと、新しいデータベースの詳細を指定します。  
@@ -257,7 +261,7 @@ caps.handback.revision: 30
 -   **[クラウド サービス名]**  
 仮想マシンをホストするサービスの名前を指定します。 新しいクラウド サービスを作成するには、新しいクラウド サービスの名前を指定します。  
   
--   **[仮想マシン名]**: SQL Server データベースをホストする仮想マシンの名前を指定します。 新しい Microsoft Azure VM を作成するには、新しい仮想マシンの名前を指定します。  
+-   **[仮想マシン名]** : SQL Server データベースをホストする仮想マシンの名前を指定します。 新しい Microsoft Azure VM を作成するには、新しい仮想マシンの名前を指定します。  
   
 -   **[ストレージ アカウント]**  
 ドロップダウン リストからストレージ アカウントを選択します。 新しいストレージ アカウントを作成するには、新しいアカウントの名前を指定します。 アフィニティ グループに関連付けられたストレージ アカウントは、ドロップダウン リストに使用できないことに注意してください。  
@@ -274,7 +278,7 @@ caps.handback.revision: 30
 新しいデータベースの名前を指定または確認します。 対象の SQL Server インスタンスにデータベース名が既にある場合は、変更したデータベース名を指定することをお勧めします。  
   
 ##  <a name="Summary"></a> 概要
- このページを使用すると、操作について指定した設定を確認できます。 指定した設定で配置操作を実行するには、 **[完了]**をクリックします。 配置操作を取り消してウィザードを終了するには、 **[キャンセル]**をクリックします。  **[完了]** をクリックすると、**[配置状況]** ページが表示されます。  `"%LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM"` にあるログ ファイルから進行状況を見ることもできます。
+ このページを使用すると、操作について指定した設定を確認できます。 指定した設定で配置操作を実行するには、 **[完了]**をクリックします。 配置操作を取り消してウィザードを終了するには、 **[キャンセル]**をクリックします。  **[完了]** をクリックすると、 **[配置状況]** ページが表示されます。  `"%LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM"`にあるログ ファイルから進行状況を見ることもできます。
   
  データベースの詳細を Windows Azure 仮想マシンの SQL Server データベースに配置するために手動の手順が必要になる場合があります。 これらの手順については概要を詳しく説明します。  
   
@@ -283,8 +287,8 @@ caps.handback.revision: 30
   
  **[完了]** をクリックして、ウィザードを終了します。  
   
-## 参照  
- [SQL Server のクラウド アダプター](../Topic/Cloud%20Adapter%20for%20SQL%20Server.md)   
+## <a name="see-also"></a>参照  
+ [SQL Server 用のクラウド アダプター](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877)   
  [データベースのライフサイクル管理](../../relational-databases/database-lifecycle-management.md)   
  [データ層アプリケーションのエクスポート](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [BACPAC ファイルのインポートによる新しいユーザー データベースの作成](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
@@ -293,3 +297,4 @@ caps.handback.revision: 30
  [Microsoft Azure Virtual Machines に SQL Server を移行するための準備](http://msdn.microsoft.com/library/dn133142.aspx)  
   
   
+

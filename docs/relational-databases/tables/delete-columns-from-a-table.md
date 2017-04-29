@@ -1,27 +1,31 @@
 ---
 title: "テーブルからの列の削除 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "列 [SQL Server], 削除"
-  - "消去、列"
-  - "消去、列"
-  - "破棄、列"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [SQL Server], deleting
+- removing columns
+- deleting columns
+- dropping columns
 ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20aa31c62de21e9718f504538ae4199395a5dab0
+ms.lasthandoff: 04/11/2017
+
 ---
-# テーブルからの列の削除
+# <a name="delete-columns-from-a-table"></a>テーブルからの列の削除
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してテーブル列を削除する方法について説明します。  
@@ -57,19 +61,19 @@ caps.handback.revision: 16
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### オブジェクト エクスプローラーを使用して列を削除するには  
+#### <a name="to-delete-columns-by-using-object-explorer"></a>オブジェクト エクスプローラーを使用して列を削除するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  **オブジェクト エクスプローラー**で、列を削除するテーブルを右クリックし、**[削除]** をクリックします。  
+2.  **オブジェクト エクスプローラー**で、列を削除するテーブルを右クリックし、 **[削除]**をクリックします。  
   
 3.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]**をクリックします。  
   
  列に制約またはその他の依存関係が含まれている場合は、 **[オブジェクトの削除]** ダイアログ ボックスにエラー メッセージが表示されます。 参照制約を削除することによって、エラーを解決します。  
   
-#### テーブル デザイナーを使用して列を削除するには  
+#### <a name="to-delete-columns-by-using-table-designer"></a>テーブル デザイナーを使用して列を削除するには  
   
-1.  **オブジェクト エクスプローラー**で、列を削除するテーブルを右クリックし、**[デザイン]** をクリックします。  
+1.  **オブジェクト エクスプローラー**で、列を削除するテーブルを右クリックし、 **[デザイン]**をクリックします。  
   
 2.  削除する列を右クリックし、ショートカット メニューの **[列の削除]** をクリックします。  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 16
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### 列を削除するには  
+#### <a name="to-delete-columns"></a>列を削除するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

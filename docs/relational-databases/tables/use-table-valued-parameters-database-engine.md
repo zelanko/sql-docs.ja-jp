@@ -1,34 +1,38 @@
 ---
 title: "テーブル値パラメーターの使用 (データベース エンジン) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "テーブル値パラメーター"
-  - "テーブル値パラメーター、テーブル値パラメーターについて"
-  - "パラメーター [SQL Server]、テーブル値"
-  - "TVP 「テーブル値パラメーター」を参照"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table-valued parameters
+- table-valued parameters, about table-valued parameters
+- parameters [SQL Server], table-valued
+- TVP See table-valued parameters
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 021177aa350c47474e48453f7d9a5735e1083b04
+ms.lasthandoff: 04/11/2017
+
 ---
-# テーブル値パラメーターの使用 (データベース エンジン)
+# <a name="use-table-valued-parameters-database-engine"></a>テーブル値パラメーターの使用 (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   テーブル値パラメーターは、ユーザー定義テーブル型を使用して宣言されます。 テーブル値パラメーターを使用すると、一時テーブルまたは多数のパラメーターを作成せずに、ストアド プロシージャや関数などの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたはルーチンに複数行のデータを送信できます。  
   
- テーブル値パラメーターは OLE DB や ODBC のパラメーター配列に似ていますが、より柔軟性が高く、[!INCLUDE[tsql](../../includes/tsql-md.md)] との統合も緊密です。 テーブル値パラメーターには、セットベースの操作に使用できるという利点もあります。  
+ テーブル値パラメーターは OLE DB や ODBC のパラメーター配列に似ていますが、より柔軟性が高く、 [!INCLUDE[tsql](../../includes/tsql-md.md)]との統合も緊密です。 テーブル値パラメーターには、セットベースの操作に使用できるという利点もあります。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] では、入力データのコピーが作成されないようにするために、テーブル値パラメーターがルーチンに参照渡しされます。 テーブル値パラメーターを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチンを作成して実行し、[!INCLUDE[tsql](../../includes/tsql-md.md)] コード、および任意のマネージ言語のマネージ クライアントとネイティブ クライアントから呼び出すことができます。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] では、入力データのコピーが作成されないようにするために、テーブル値パラメーターがルーチンに参照渡しされます。 テーブル値パラメーターを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチンを作成して実行し、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コード、および任意のマネージ言語のマネージ クライアントとネイティブ クライアントから呼び出すことができます。  
   
  **このトピックの内容**  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 31
   
 -   クライアントで並べ替え順序と一意キーを指定できます。  
   
--   ストアド プロシージャで使用すると、一時テーブルのようにキャッシュされます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、テーブル値パラメーターはパラメーター化クエリ用にもキャッシュされます。  
+-   ストアド プロシージャで使用すると、一時テーブルのようにキャッシュされます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、テーブル値パラメーターはパラメーター化クエリ用にもキャッシュされます。  
   
 ##  <a name="Restrictions"></a> 制限  
  テーブル値パラメーターには、次の制限があります。  
@@ -70,7 +74,7 @@ caps.handback.revision: 31
   
 -   SELECT INTO または INSERT EXEC ステートメントの対象としてテーブル値パラメーターを使用することはできません。 テーブル値パラメーターは、SELECT INTO の FROM 句か、INSERT EXEC 文字列またはストアド プロシージャに含めることができます。  
   
-##  <a name="BulkInsert"></a> テーブル値パラメーターと BULK INSERT 操作  
+##  <a name="BulkInsert"></a>テーブル値パラメーターと BULK INSERT 操作  
  テーブル値パラメーターの使用はセットベースの変数を使用するその他の方法に似ていますが、多くの場合、大規模なデータセットを処理するときは、テーブル値パラメーターを使用する方が短時間で済みます。 テーブル値パラメーターよりもスタートアップ コストがかかる一括操作と比較すると、1,000 行未満の行を挿入する場合は、テーブル値パラメーターの方がパフォーマンスが高くなります。  
   
  再利用されるテーブル値パラメーターの場合、一時テーブル キャッシュを使用するとメリットがあります。 このテーブル キャッシュを使用すると、同等の BULK INSERT 操作よりもスケーラビリティが向上します。 少数の行の挿入操作では、BULK INSERT 操作またはテーブル値パラメーターではなく、パラメーター一覧またはバッチにまとめられたステートメントを使用すると、パフォーマンス上の利点が多少得られる場合があります。 ただし、これらの方法はプログラミングが容易ではなく、行が増えるとすぐにパフォーマンスが低下します。  
@@ -78,7 +82,7 @@ caps.handback.revision: 31
  テーブル値パラメーターは、同等のパラメーター配列の実装と同様またはそれ以上のパフォーマンスを実現します。  
   
 ##  <a name="Example"></a> 例  
- 次の例では、[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、テーブル値パラメーターの型を作成してその型を参照する変数を宣言し、パラメーター一覧を入力して値をストアド プロシージャに渡す方法を示します。  
+ 次の例では、 [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、テーブル値パラメーターの型を作成してその型を参照する変数を宣言し、パラメーター一覧を入力して値をストアド プロシージャに渡す方法を示します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -117,7 +121,7 @@ EXEC usp_InsertProductionLocation @LocationTVP;
 GO  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
