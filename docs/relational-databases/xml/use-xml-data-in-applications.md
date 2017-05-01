@@ -1,49 +1,53 @@
 ---
 title: "アプリケーションでの XML データの使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "パラメーター [SQL Server の XML]"
-  - "XML [SQL Server], ADO"
-  - "列 [SQL Server の XML], ADO.NET"
-  - "ADO [SQL Server の XML]"
-  - "列 [SQL Server の XML], SQL Server Native Client"
-  - "xml データ型 [SQL Server], ADO"
-  - "SQLNCLI, XML"
-  - "xml データ型 [SQL Server], SQL Server Native Client"
-  - "SQL Server Native Client, XML"
-  - "ADO.NET [SQL Server の XML]"
-  - "XML [SQL Server], ADO.NET"
-  - "列 [SQL Server の XML], ADO"
-  - "xml データ型 [SQL Server], ADO.NET"
-  - "XML [SQL Server], SQL Server Native Client"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parameters [XML in SQL Server]
+- XML [SQL Server], ADO
+- columns [XML in SQL Server], ADO.NET
+- ADO [XML in SQL Server]
+- columns [XML in SQL Server], SQL Server Native Client
+- xml data type [SQL Server], ADO
+- SQLNCLI, XML
+- xml data type [SQL Server], SQL Server Native Client
+- SQL Server Native Client, XML
+- ADO.NET [XML in SQL Server]
+- XML [SQL Server], ADO.NET
+- columns [XML in SQL Server], ADO
+- xml data type [SQL Server], ADO.NET
+- XML [SQL Server], SQL Server Native Client
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ae4b7e7ed2efc44ce1b432313d56288a66e778c
+ms.lasthandoff: 04/11/2017
+
 ---
-# アプリケーションでの XML データの使用
+# <a name="use-xml-data-in-applications"></a>アプリケーションでの XML データの使用
   このトピックでは、アプリケーションで **xml** データ型を操作する際のオプションについて説明します。 このトピックには、次の項目に関する情報が含まれています。  
   
--   ADO および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を使用した、**xml** 型の列に含まれている XML の操作  
+-   ADO および **Native Client を使用した、** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型の列に含まれている XML の操作  
   
--   ADO.NET を使用した、**xml** 型の列に含まれている XML の操作  
+-   ADO.NET を使用した、 **xml** 型の列に含まれている XML の操作  
   
 -   ADO.NET を使用した、パラメーターに含まれている **xml** 型の操作  
   
-## ADO および SQL Server Native Client を使用した、xml 型の列に含まれている XML の操作  
- MDAC コンポーネントを使用して、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] に導入された型や機能にアクセスするためには、DataTypeCompatibility 初期化プロパティを ADO 接続文字列で設定する必要があります。  
+## <a name="handling-xml-from-an-xml-type-column-by-using-ado-and-sql-server-native-client"></a>ADO および SQL Server Native Client を使用した、xml 型の列に含まれている XML の操作  
+ MDAC コンポーネントを使用して、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]に導入された型や機能にアクセスするためには、DataTypeCompatibility 初期化プロパティを ADO 接続文字列で設定する必要があります。  
   
- たとえば、次の Visual Basic Scripting Edition (VBScript) サンプルは、`AdventureWorks2012` サンプル データベースの `Sales.Store` テーブルにある、**xml** データ型の列である `Demographics` に対するクエリの結果を示しています。 具体的には、クエリは `CustomerID` が `3` と等しい行のこの列のインスタンス値を検索します。  
+ たとえば、次の Visual Basic Scripting Edition (VBScript) サンプルは、 **サンプル データベースの** テーブルにある、 `Demographics`xml `Sales.Store` データ型の列である `AdventureWorks2012` に対するクエリの結果を示しています。 具体的には、クエリは `CustomerID` が `3`と等しい行のこの列のインスタンス値を検索します。  
   
 ```  
 Const DS = "MyServer"  
@@ -87,15 +91,15 @@ Set objRs = Nothing
 Set objConn = Nothing  
 ```  
   
- この例は、DataTypeCompatibility を設定する方法を示しています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を使用している場合、このプロパティには既定値の 0 が設定されています。 この値を 80 に設定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client プロバイダーにより、**xml** 型およびユーザー定義型の列が [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] データ型として示されます。 それぞれのデータ型は、DBTYPE_WSTR および DBTYPE_BYTES になります。  
+ この例は、DataTypeCompatibility を設定する方法を示しています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を使用している場合、このプロパティには既定値の 0 が設定されています。 この値を 80 に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client プロバイダーにより、 **xml** 型およびユーザー定義型の列が [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] データ型として示されます。 それぞれのデータ型は、DBTYPE_WSTR および DBTYPE_BYTES になります。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client はクライアント コンピューターにもインストールし、データ プロバイダーとして使用するために、"`Provider=SQLNCLI11;...`" を含む接続文字列を指定する必要があります。  
   
-#### この例をテストするには  
+#### <a name="to-test-this-example"></a>この例をテストするには  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client がクライアント コンピューターにインストールされており、クライアント コンピューターで MDAC 2.6.0 以降のバージョンを使用できることを確認します。  
   
-     詳細については、「[SQL Server Native Client プログラミング](../../relational-databases/native-client/sql-server-native-client-programming.md)」を参照してください。  
+     詳細については、「 [SQL Server Native Client プログラミング](../../relational-databases/native-client/sql-server-native-client-programming.md)」を参照してください。  
   
 2.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サンプル データベースがインストールされていることを確認します。  
   
@@ -105,7 +109,7 @@ Set objConn = Nothing
   
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールでの必要性に応じてスクリプトを変更し、変更を保存します。  
   
-     たとえば、`MyServer` が指定されている箇所は、`(local)` または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされているサーバーの実際の名前のいずれかに置き換える必要があります。  
+     たとえば、 `MyServer` が指定されている箇所は、 `(local)` または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされているサーバーの実際の名前のいずれかに置き換える必要があります。  
   
 5.  HandlingXmlDataType.vbs を実行し、スクリプトを実行します。  
   
@@ -143,17 +147,17 @@ Row 2
 </StoreSurvey>  
 ```  
   
-## ADO.NET を使用した、xml 型の列に含まれている XML の操作  
- ADO.NET および [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用して、**xml** データ型の列に含まれている XML を操作するには、**SqlCommand** クラスの標準の動作を使用します。 たとえば、**xml** データ型の列とその値は、**SqlDataReader** を使用して SQL 列を取得するときと同じ方法で取得できます。ただし、XML として **xml** データ型の列のコンテンツを使用して作業を行う場合は、最初にそのコンテンツを **XmlReader** 型に割り当てる必要があります。  
+## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>ADO.NET を使用した、xml 型の列に含まれている XML の操作  
+ ADO.NET および **** を使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] you can use the standard behavior of the **SqlCommand** class. たとえば、 **xml** データ型の列とその値は、 **SqlDataReader**を使用して SQL 列を取得するときと同じ方法で取得できます。ただし、XML として **xml** データ型の列のコンテンツを使用して作業を行う場合は、最初にそのコンテンツを **XmlReader** 型に割り当てる必要があります。  
   
- 詳細とコード例については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK のマニュアルの「XML Column Values in a Data Reader」を参照してください。  
+ 詳細とコード例については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK のマニュアルの「XML Column Values in a Data Reader」を参照してください。  
   
-## ADO.NET を使用した、パラメーター内の xml 型の列の操作  
- ADO.NET および [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] でパラメーターとして渡された xml データ型を操作するには、**SqlXml** データ型のインスタンスとして値を指定することができます。 特殊な処理は必要ありません。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **xml** データ型の列は、**string** や **integer** などの他の列やデータ型と同じように、パラメーター値を受け取ることができます。  
+## <a name="handling-an-xml-type-column-in-parameters-by-using-adonet"></a>ADO.NET を使用した、パラメーター内の xml 型の列の操作  
+ ADO.NET および [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]でパラメーターとして渡された xml データ型を操作するには、 **SqlXml** データ型のインスタンスとして値を指定することができます。 特殊な処理は必要ありません。 **の** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型の列は、 **string** や **integer**などの他の列やデータ型と同じように、パラメーター値を受け取ることができます。  
   
- 詳細とコード例については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK のマニュアルの「XML Values as Command Parameters」を参照してください。  
+ 詳細とコード例については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK のマニュアルの「XML Values as Command Parameters」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [XML データ &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   
