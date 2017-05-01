@@ -1,27 +1,31 @@
 ---
 title: "イベント通知のダイアログ セキュリティの構成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "イベント通知 [SQL Server], セキュリティ"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 473e5873e7a522c691f39c5fa8b68d5eb17ab2ce
+ms.lasthandoff: 04/11/2017
+
 ---
-# イベント通知のダイアログ セキュリティの構成
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] ダイアログ セキュリティを構成する必要があります。 ダイアログ セキュリティは、[!INCLUDE[ssSB](../../includes/sssb-md.md)] ダイアログの完全セキュリティ モデルに従って手動で構成する必要があります。 完全セキュリティ モデルでは、リモート サーバーとの間で送受信するメッセージの暗号化および暗号化解除が可能です。 イベント通知は一方向に送信されますが、エラーなどのメッセージは逆方向にも返されます。  
+# <a name="configure-dialog-security-for-event-notifications"></a>イベント通知のダイアログ セキュリティの構成
+  [!INCLUDE[ssSB](../../includes/sssb-md.md)] ダイアログ セキュリティを構成する必要があります。 ダイアログ セキュリティは、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] ダイアログの完全セキュリティ モデルに従って手動で構成する必要があります。 完全セキュリティ モデルでは、リモート サーバーとの間で送受信するメッセージの暗号化および暗号化解除が可能です。 イベント通知は一方向に送信されますが、エラーなどのメッセージは逆方向にも返されます。  
   
-## イベント通知のダイアログ セキュリティの構成  
+## <a name="configuring-dialog-security-for-event-notifications"></a>イベント通知のダイアログ セキュリティの構成  
  イベント通知のダイアログ セキュリティを実装するために必要な処理は、以下に示す手順のようになります。 これらの手順には、送信元サーバーと送信先サーバーの両方で実行する必要のある操作が含まれています。 送信元サーバーとは、イベント通知が作成されるサーバーです。 送信先サーバーとは、イベント通知メッセージを受信するサーバーです。 送信元サーバーと送信先サーバーで各手順の操作を実行する必要がある場合は、次の手順に進む前に両方のサーバーで完了する必要があります。  
   
 > [!IMPORTANT]  
@@ -51,12 +55,12 @@ caps.handback.revision: 23
 |[転送元サーバー]|送信先サーバー|  
 |-------------------|-------------------|  
 |送信先データベースのユーザーを所有者に指定して、送信先の証明書のバックアップ ファイルから[証明書を作成](../../t-sql/statements/create-certificate-transact-sql.md) します。|送信元データベースのユーザーを所有者に指定して、送信元の証明書のバックアップ ファイルから証明書を作成します。|  
-|送信元データベースのユーザーに、イベント通知を作成する[権限を許可](../../t-sql/statements/grant-transact-sql.md) します。 この権限の詳細については、「[CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md)」をご覧ください。|送信先データベースのユーザーに既存のイベント通知の [!INCLUDE[ssSB](../../includes/sssb-md.md)] コントラクト : `http://schemas.microsoft.com/SQL/Notifications/PostEventNotification` に対する REFERENCES 権限を許可します。|  
+|送信元データベースのユーザーに、イベント通知を作成する[権限を許可](../../t-sql/statements/grant-transact-sql.md) します。 この権限の詳細については、「 [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md)します。|送信先データベースのユーザーに既存のイベント通知の [!INCLUDE[ssSB](../../includes/sssb-md.md)] コントラクト : `http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`に対する REFERENCES 権限を許可します。|  
 |送信先サービスへの[リモート サービス バインドを作成](../../t-sql/statements/create-remote-service-binding-transact-sql.md) し、送信先データベースのユーザーの資格情報を指定します。 リモート サービス バインドは、送信先サーバーに送信されるメッセージが、送信元データベースのユーザーが所有する証明書の公開キーによって認証されることを保証します。|送信先データベースのユーザーに CREATE QUEUE 権限、CREATE SERVICE 権限、および CREATE SCHEMA 権限を[許可](../../t-sql/statements/grant-transact-sql.md) します。|  
 ||まだデータベースに送信先データベース ユーザーとして接続していない場合は、直ちに接続してください。|  
 ||イベント通知メッセージを受信する[キューを作成](../../t-sql/statements/create-queue-transact-sql.md) し、メッセージを配信する [サービスを作成](../../t-sql/statements/create-service-transact-sql.md) します。|  
 ||送信元データベースのユーザーに、送信先サービスに対する[SEND 権限を許可](../../t-sql/statements/grant-transact-sql.md) します。|  
-|送信元データベースの Service Broker 識別子を送信先サーバーに指定します。 この識別子は、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの **service_broker_guid** 列にクエリを実行することで取得できます。 サーバー レベルのイベント通知の場合は、Service Broker 識別子として **msdb** を使用します。|送信先データベースの Service Broker 識別子を送信元サーバーに指定します。|  
+|送信元データベースの Service Broker 識別子を送信先サーバーに指定します。 この識別子は、 **sys.databases** カタログ ビューの [service_broker_guid](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列にクエリを実行することで取得できます。 サーバー レベルのイベント通知の場合は、Service Broker 識別子として **msdb**を使用します。|送信先データベースの Service Broker 識別子を送信元サーバーに指定します。|  
   
  **手順 4. : ルートを作成し、サーバー レベルの認証を設定します。**  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 23
   
 |[転送元サーバー]|送信先サーバー|  
 |-------------------|-------------------|  
-|送信先サービスへの[ルートを作成](../../t-sql/statements/create-route-transact-sql.md)し、送信先データベースの Service Broker 識別子と設定済み TCP ポート番号を指定します。|送信元サービスへのルートを作成し、送信元データベースの Service Broker 識別子と設定済み TCP ポート番号を指定します。 送信元サービスを指定するには、`http://schemas.microsoft.com/SQL/Notifications/EventNotificationService` で提供されるサービスを使用します。|  
+|送信先サービスへの[ルートを作成](../../t-sql/statements/create-route-transact-sql.md) し、送信先データベースの Service Broker 識別子と設定済み TCP ポート番号を指定します。|送信元サービスへのルートを作成し、送信元データベースの Service Broker 識別子と設定済み TCP ポート番号を指定します。 送信元サービスを指定するには、 `http://schemas.microsoft.com/SQL/Notifications/EventNotificationService`で提供されるサービスを使用します。|  
 |**master** データベースに切り替えて、サーバー レベルの認証を構成します。|**master** データベースに切り替えて、サーバー レベルの認証を構成します。|  
 |**master** データベースにマスター キーが存在しない場合は、 [マスター キーを作成](../../t-sql/statements/create-master-key-transact-sql.md)します。|**master** データベースにマスター キーが存在しない場合は、マスター キーを作成します。|  
 |データベースを認証する[証明書を作成](../../t-sql/statements/create-certificate-transact-sql.md) します。|データベースを認証する証明書を作成します。|  
@@ -84,7 +88,7 @@ caps.handback.revision: 23
 |イベント通知を作成する送信元データベースに切り替えます。まだ送信元データベースのユーザーとして接続していない場合は、直ちに接続します。|送信先データベースに切り替えて、イベント通知メッセージを受信します。|  
 |[イベント通知を作成](../../t-sql/statements/create-event-notification-transact-sql.md)し、送信先データベースの Broker Service と識別子を指定します。||  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
