@@ -1,28 +1,32 @@
 ---
 title: "ビューの変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ビュー [SQL Server]、名前の変更"
-  - "変更するビュー [SQL Server]"
-  - "変更、ビュー"
-  - "ビューの名前の変更"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- views [SQL Server], renaming
+- views [SQL Server], modifying
+- modifying views
+- renaming views
 ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 242d7b946699560cf24c59a262e3a14a5c08b8d9
+ms.lasthandoff: 04/11/2017
+
 ---
-# ビューの変更
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、ビューの定義後にビューの削除や再作成を行わずに、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、ビューの名前または定義を変更できます。  
+# <a name="modify-views"></a>ビューの変更
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、ビューの定義後にビューの削除や再作成を行わずに、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、ビューの名前または定義を変更できます。  
   
  **このトピックの内容**  
   
@@ -55,25 +59,25 @@ caps.handback.revision: 22
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### ビューを変更するには  
+#### <a name="to-modify-a-view"></a>ビューを変更するには  
   
 1.  **オブジェクト エクスプローラー**で、ビューがあるデータベースの横にあるプラス記号をクリックし、 **[ビュー]** フォルダーの横にあるプラス記号をクリックします。  
   
-2.  変更するビューを右クリックし、**[デザイン]** を選択します。  
+2.  変更するビューを右クリックし、 **[デザイン]**を選択します。  
   
 3.  クエリ デザイナーのダイアグラム ペインで、次の方法を使用してビューを変更します。  
   
     1.  追加または削除する要素のチェック ボックスをオンまたはオフにします。  
   
-    2.  ダイアグラム ペイン内で右クリックし、**[テーブルの追加]** を選択します。次に、**[テーブルの追加]** ダイアログ ボックスで、ビューに追加する列を選択します。  
+    2.  ダイアグラム ペイン内で右クリックし、 **[テーブルの追加]**を選択します。次に、 **[テーブルの追加]** ダイアログ ボックスで、ビューに追加する列を選択します。  
   
-    3.  削除するテーブルのタイトル バーを右クリックし、**[削除]** をクリックします。  
+    3.  削除するテーブルのタイトル バーを右クリックし、 **[削除]**をクリックします。  
   
-4.  **[ファイル]** メニューの **view name***の保存]*をクリックします。  
+4.  **ファイル** メニューの **view name***の保存*をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### ビューを変更するには  
+#### <a name="to-modify-a-view"></a>ビューを変更するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

@@ -1,32 +1,36 @@
 ---
 title: "リソース プールの設定の変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "リソース ガバナー, リソース プールの変更"
-  - "リソース プール [SQL Server], 変更"
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, resource pool alter
+- resource pools [SQL Server], alter
 ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 27adde47bca4c894d044940d00bc6867e6f8e58f
+ms.lasthandoff: 04/11/2017
+
 ---
-# リソース プールの設定の変更
+# <a name="change-resource-pool-settings"></a>リソース プールの設定の変更
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   リソース プールの設定を変更するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。  
   
--   **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)、 [権限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **リソース プールの設定変更に使用するもの:** [SQL Server Management Studio](#ChgRPProp)、[Transact-SQL](#ChgRPTSQL)  
+-   **To change the settings for a resource pool, using:**  [SQL Server Management Studio](#ChgRPProp), [Transact-SQL](#ChgRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 15
   
  すべてのリソース プールの CPU の割合の最小値の合計およびメモリの割合の最小値の合計が、それぞれ 100 を超えないようにしてください。  
   
-###  <a name="Permissions"></a> アクセス許可  
+###  <a name="Permissions"></a> 権限  
  リソース プールの設定を変更するには、CONTROL SERVER 権限が必要です。  
   
 ##  <a name="ChgRPProp"></a> SQL Server Management Studio を使用してリソース プールの設定を変更する  
@@ -43,7 +47,7 @@ caps.handback.revision: 15
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース プール]**ノードまで再帰的に展開します。  
   
-2.  変更するリソース プールを右クリックし、**[プロパティ]** をクリックします。  
+2.  変更するリソース プールを右クリックし、 **[プロパティ]**をクリックします。  
   
 3.  **[リソース ガバナーのプロパティ]** ページで、自動的に **[リソース プール]** グリッドの対象リソース プールの行が選択されない場合は、その行を選択します。  
   
@@ -58,8 +62,8 @@ caps.handback.revision: 15
   
 2.  **ALTER RESOURCE GOVERNOR RECONFIGURE** ステートメントを実行します。  
   
-### 例 (Transact-SQL)  
- 次の例では、`poolAdhoc` という名前のリソース プールの CPU の割合の最大値を変更します。  
+### <a name="example-transact-sql"></a>例 (Transact-SQL)  
+ 次の例では、 `poolAdhoc`という名前のリソース プールの CPU の割合の最大値を変更します。  
   
 ```  
 ALTER RESOURCE POOL poolAdhoc  
@@ -69,8 +73,8 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 参照  
- [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="see-also"></a>参照  
+ [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
  [リソース ガバナーの有効化](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [リソース プールの作成](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [リソース プールの削除](../../relational-databases/resource-governor/delete-a-resource-pool.md)   
@@ -82,3 +86,4 @@ GO
  [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)  
   
   
+

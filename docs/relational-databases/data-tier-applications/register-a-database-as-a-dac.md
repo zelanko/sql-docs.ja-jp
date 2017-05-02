@@ -1,48 +1,52 @@
 ---
 title: "データベースを DAC として登録する方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.registerdacwizard.summary.f1"
-  - "sql13.swb.registerdacwizard.introduction.f1"
-  - "sql13.swb.registerdacwizard.setproperties.f1"
-  - "sql13.swb.registerdacwizard.registerdac.f1"
-helpviewer_keywords: 
-  - "ウィザード [DAC], 登録"
-  - "方法 [DAC], 登録"
-  - "DAC の登録"
-  - "データ層アプリケーション [SQL Server], 登録"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.registerdacwizard.summary.f1
+- sql13.swb.registerdacwizard.introduction.f1
+- sql13.swb.registerdacwizard.setproperties.f1
+- sql13.swb.registerdacwizard.registerdac.f1
+helpviewer_keywords:
+- wizard [DAC], register
+- How to [DAC], register
+- register DAC
+- data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: af264d24411b3d384abea2723df465dd926232c6
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベースを DAC として登録する方法
-  **データ層アプリケーションの登録ウィザード**または Windows PowerShell スクリプトを使用して、既存のデータベース内のオブジェクトを表すデータ層アプリケーション (DAC) 定義を作成し、その DAC 定義を **msdb** システム データベース ([!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]では **master** データベース) に登録します。  
+# <a name="register-a-database-as-a-dac"></a>データベースを DAC として登録する方法
+  **データ層アプリケーションの登録ウィザード** または Windows PowerShell スクリプトを使用して、既存のデータベース内のオブジェクトを表すデータ層アプリケーション (DAC) 定義を作成し、その DAC 定義を **msdb** システム データベース (**では** master [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]データベース) に登録します。  
   
--   **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)、 [権限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **DAC のアップグレード:** [データ層アプリケーションの登録ウィザードの使用](#UsingRegisterDACWizard)、[PowerShell の使用](#RegisterDACPowerShell)  
+-   **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
-## はじめに  
- 登録プロセスでデータベース オブジェクトを定義する DAC 定義を作成します。 DAC の定義とデータベースを組み合わせたものが DAC インスタンスになります。 データベース エンジンのマネージ インスタンス上で DAC としてデータベースを登録した場合は、SQL Server ユーティリティ コレクション セットをこのインスタンスからユーティリティ コントロール ポイントへ次に送信するときに、登録した DAC が SQL Server ユーティリティに組み込まれます。 その後、DAC は、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の**ユーティリティ エクスプローラー**の **[配置済みのデータ層アプリケーション]** ノードに表示され、**[配置済みのデータ層アプリケーション]** 詳細ページで報告されます。  
+## <a name="before-you-begin"></a>はじめに  
+ 登録プロセスでデータベース オブジェクトを定義する DAC 定義を作成します。 DAC の定義とデータベースを組み合わせたものが DAC インスタンスになります。 データベース エンジンのマネージ インスタンス上で DAC としてデータベースを登録した場合は、SQL Server ユーティリティ コレクション セットをこのインスタンスからユーティリティ コントロール ポイントへ次に送信するときに、登録した DAC が SQL Server ユーティリティに組み込まれます。 その後、DAC は、 **の** ユーティリティ エクスプローラー [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **の** details page.  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
- DAC は、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 以降のデータベースでのみ登録できます。 DAC が既にデータベースに登録されている場合は、DAC の登録を実行できません。 たとえば、DAC を配置してデータベースを作成した場合、**データ層アプリケーションの登録ウィザード**を実行できません。  
+ DAC は、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 以降のデータベースでのみ登録できます。 DAC が既にデータベースに登録されている場合は、DAC の登録を実行できません。 たとえば、DAC を配置してデータベースを作成した場合、 **データ層アプリケーションの登録ウィザード**を実行できません。  
   
  DAC でサポートされていないオブジェクトまたは包含ユーザーがデータベースに存在する場合は、DAC を登録できません。 DAC でサポートされるオブジェクトの種類の詳細については、「 [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)」を参照してください。  
   
 ###  <a name="Permissions"></a> 権限  
- DAC を[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに登録するには、少なくとも ALTER ANY LOGIN 権限とデータベース スコープの VIEW DEFINITION 権限、**sys.sql_expression_dependencies** に対する SELECT 権限、および **dbcreator** 固定サーバー ロールのメンバーシップが必要です。 **sysadmin** 固定サーバー ロールのメンバーまたは **sa** という組み込みの SQL Server システム管理者アカウントも DAC を登録できます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] へのログインが含まれない DAC を登録するには、 **dbmanager** ロールまたは **serveradmin** ロールのメンバーシップが必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] へのログインが含まれる DAC を登録するには、 **loginmanager** ロールまたは **serveradmin** ロールのメンバーシップが必要です。  
+ DAC を [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに登録するには、少なくとも ALTER ANY LOGIN 権限とデータベース スコープの VIEW DEFINITION 権限、 **sys.sql_expression_dependencies**に対する SELECT 権限、および **dbcreator** 固定サーバー ロールのメンバーシップが必要です。 **sysadmin** 固定サーバー ロールのメンバーまたは **sa** という組み込みの SQL Server システム管理者アカウントも DAC を登録できます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] へのログインが含まれない DAC を登録するには、 **dbmanager** ロールまたは **serveradmin** ロールのメンバーシップが必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] へのログインが含まれる DAC を登録するには、 **loginmanager** ロールまたは **serveradmin** ロールのメンバーシップが必要です。  
   
 ##  <a name="UsingRegisterDACWizard"></a> データ層アプリケーションの登録ウィザードの使用  
  **ウィザードを使用して DAC を登録するには**  
@@ -51,7 +55,7 @@ caps.handback.revision: 22
   
 2.  **[データベース]** ノードを展開します。  
   
-3.  登録するデータベースを右クリックし、**[タスク]** をポイントして **[データ層アプリケーションとして登録]** をクリックします。  
+3.  登録するデータベースを右クリックし、 **[タスク]**をポイントして **[データ層アプリケーションとして登録]**をクリックします。  
   
 4.  ウィザードの各ダイアログの手順を実行します。  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 22
   
  **[次へ >]** : **[プロパティの設定]** ページに進みます。  
   
- **[キャンセル]**: DAC を登録せずにウィザードを終了します。  
+ **[キャンセル]** : DAC を登録せずにウィザードを終了します。  
   
  [データ層アプリケーションの登録ウィザードの使用](#UsingRegisterDACWizard)  
   
@@ -79,15 +83,15 @@ caps.handback.revision: 22
   
  **[アプリケーション名]** : DAC 定義を識別するための名前。このフィールドには、選択したデータベースの名前が自動的に入力されます。  
   
- **[バージョン]** : DAC のバージョンを表す数値。 DAC のバージョンは、開発者が操作している DAC のバージョンを特定するために Visual Studio で使用します。 DAC を配置すると、バージョンは **msdb** データベースに格納され、後で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[データ層アプリケーション]** ノードの下に表示できます。  
+ **[バージョン]** : DAC のバージョンを表す数値。 DAC のバージョンは、開発者が操作している DAC のバージョンを特定するために Visual Studio で使用します。 DAC を配置すると、バージョンは **msdb** データベースに格納され、後で **の** [データ層アプリケーション] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ノードの下に表示できます。  
   
  **説明** : 省略可。 この DAC の目的についての説明。 DAC を配置すると、説明は **msdb** データベースに格納され、後で [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の **[データ層アプリケーション]** ノードの下に表示できます。  
   
- **[\< 戻る]** : **[説明]** ページに戻ります。  
+ **[< 戻る]** : **[説明]** ページに戻ります。  
   
  **[次へ >]** : データベースのオブジェクトから DAC を作成できるかどうかを検証し、その結果を **[検証と概要]** ページに表示します。  
   
- **[キャンセル]**: DAC を登録せずにウィザードを終了します。  
+ **[キャンセル]** : DAC を登録せずにウィザードを終了します。  
   
  [データ層アプリケーションの登録ウィザードの使用](#UsingRegisterDACWizard)  
   
@@ -96,49 +100,49 @@ caps.handback.revision: 22
   
  [データ層アプリケーションの登録ウィザードの使用](#UsingRegisterDACWizard)  
   
-### オブジェクトの取得  
+### <a name="retrieving-objects"></a>オブジェクトの取得  
  **[データベース オブジェクトとサーバー オブジェクトを取得しています。]** : データベースおよびデータベース エンジンのインスタンスから必要なすべてのオブジェクトを取得する間、進行状況バーが表示されます。  
   
- **[\< 戻る]** : **[プロパティの設定]** ページに戻り、現在の設定を変更できます。  
+ **[< 戻る]** : **[プロパティの設定]** ページに戻り、現在の設定を変更できます。  
   
  **[次へ >]** : DAC が登録され、**[DAC の登録]** ページが表示されます。  
   
- **[キャンセル]**: DAC を登録せずにウィザードを終了します。  
+ **[キャンセル]** : DAC を登録せずにウィザードを終了します。  
   
  [データ層アプリケーションの登録ウィザードの使用](#UsingRegisterDACWizard)  
   
-### オブジェクトの検証  
- **[**  *SchemaName* **.** *ObjectName* **.** : 取得したオブジェクトの依存関係を検証し、それらすべてのオブジェクトが DAC に対して有効かどうかを確認する間、進行状況バーが表示されます。 *SchemaName***.***ObjectName* は、現在検証されているオブジェクトを示します。  
+### <a name="validating-objects"></a>オブジェクトの検証  
+ **Checking**  *SchemaName* **.** *ObjectName* **.** : 取得したオブジェクトの依存関係を検証し、それらすべてのオブジェクトが DAC に対して有効かどうかを確認する間、進行状況バーが表示されます。 *SchemaName***.***ObjectName* は、現在検証されているオブジェクトを示します。  
   
- **[\< 戻る]** : **[プロパティの設定]** ページに戻り、現在の設定を変更できます。  
+ **[< 戻る]** : **[プロパティの設定]** ページに戻り、現在の設定を変更できます。  
   
  **[次へ >]** : DAC が登録され、**[DAC の登録]** ページが表示されます。  
   
- **[キャンセル]**: DAC を登録せずにウィザードを終了します。  
+ **[キャンセル]** : DAC を登録せずにウィザードを終了します。  
   
  [データ層アプリケーションの登録ウィザードの使用](#UsingRegisterDACWizard)  
   
-### 概要  
+### <a name="summary"></a>概要  
  **[次の設定を使用して DAC を登録します。]** : DAC に追加されるプロパティとオブジェクトのレポートが表示されます。  
   
- **[レポートの保存]**: 検証レポートのコピーを HTML ファイルに保存します。 既定のフォルダーは、Windows アカウントの Documents フォルダーにある **SQL Server Management Studio\DAC Packages** フォルダーです。  
+ **[レポートの保存]** : 検証レポートのコピーを HTML ファイルに保存します。 既定のフォルダーは、Windows アカウントの Documents フォルダーにある **SQL Server Management Studio\DAC Packages** フォルダーです。  
   
- **[\< 戻る]** : **[プロパティの設定]** ページに戻り、現在の設定を変更できます。  
+ **[< 戻る]** : **[プロパティの設定]** ページに戻り、現在の設定を変更できます。  
   
  **[次へ >]** : DAC が登録され、**[DAC の登録]** ページが表示されます。  
   
- **[キャンセル]**: DAC を登録せずにウィザードを終了します。  
+ **[キャンセル]** : DAC を登録せずにウィザードを終了します。  
   
  [データ層アプリケーションの登録ウィザードの使用](#UsingRegisterDACWizard)  
   
 ##  <a name="Register"></a> [DAC の登録] ページ  
  このページには、登録の成功または失敗が表示されます。  
   
- **[DAC の登録]**: DAC を登録するために行った各アクションの成功または失敗が表示されます。 内容を確認して、各アクションの成功または失敗を判断します。 エラーが発生したアクションには、 **[結果]** 列にリンクが表示されます。 そのアクションのエラーのレポートを表示するには、リンクをクリックします。  
+ **[DAC の登録]** : DAC を登録するために行った各アクションの成功または失敗が表示されます。 内容を確認して、各アクションの成功または失敗を判断します。 エラーが発生したアクションには、 **[結果]** 列にリンクが表示されます。 そのアクションのエラーのレポートを表示するには、リンクをクリックします。  
   
- **[レポートの保存]**: 登録レポートを HTML ファイルに保存します。 ファイルには、アクションで発生したすべてのエラーを含む、各アクションのステータスが報告されます。 既定のフォルダーは、Windows アカウントの Documents フォルダーにある **SQL Server Management Studio\DAC Packages** フォルダーです。 ファイル名の形式は、\<DACPackageName>_RegisterDACReport_yyyymmdd.html です。ここで、\<*DACPackageName*> は配置するパッケージの名前、*yyyy* は現在の年、*mm* は現在の月、*dd* は現在の日です。  
+ **[レポートの保存]** : 登録レポートを HTML ファイルに保存します。 ファイルには、アクションで発生したすべてのエラーを含む、各アクションのステータスが報告されます。 既定のフォルダーは、Windows アカウントの Documents フォルダーにある **SQL Server Management Studio\DAC Packages** フォルダーです。 ファイル名の形式は、\<DACPackageName>_RegisterDACReport_yyyymmdd.html です。ここで、\<*DACPackageName*> は配置するパッケージの名前、*yyyy* は現在の年、*mm* は現在の月、*dd* は現在の日です。  
   
- **[完了]**: ウィザードを終了します。  
+ **[完了]** : ウィザードを終了します。  
   
  [データ層アプリケーションの登録ウィザードの使用](#UsingRegisterDACWizard)  
   
@@ -153,7 +157,7 @@ caps.handback.revision: 22
   
 4.  上記で指定した情報を使用して Register メソッドを実行します。  
   
-### 例 (PowerShell)  
+### <a name="example-powershell"></a>例 (PowerShell)  
  次の例は、DAC として MyDB というデータベースを登録します。  
   
 ```  
@@ -175,7 +179,8 @@ $registerunit.Description = $description
 $registerunit.Register()  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   
+

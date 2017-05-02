@@ -1,29 +1,33 @@
 ---
 title: "セマンティック検索の DDL、関数、ストアド プロシージャ、およびビュー | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "セマンティック検索 [SQL Server], データベース オブジェクト"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- semantic search [SQL Server], database objects
 ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 326f645ff1c214623b5c46fbaa4f86f08066e64b
+ms.lasthandoff: 04/11/2017
+
 ---
-# セマンティック検索の DDL、関数、ストアド プロシージャ、およびビュー
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の統計的セマンティック検索をサポートする Transact-SQL ステートメントおよびデータベース オブジェクトの一覧を示します。  
+# <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>セマンティック検索の DDL、関数、ストアド プロシージャ、およびビュー
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の統計的セマンティック検索をサポートする Transact-SQL ステートメントおよびデータベース オブジェクトの一覧を示します。  
   
- フルテキスト検索をサポートするステートメントおよびデータベース オブジェクトの一覧については、「[フルテキスト検索の DDL、関数、ストアド プロシージャ、およびビュー](../../relational-databases/search/full-text-search-ddl-functions-stored-procedures-and-views.md)」を参照してください。  
+ フルテキスト検索をサポートするステートメントおよびデータベース オブジェクトの一覧については、「 [フルテキスト検索の DDL、関数、ストアド プロシージャ、およびビュー](../../relational-databases/search/full-text-search-ddl-functions-stored-procedures-and-views.md)」を参照してください。  
   
-##  <a name="ddl"></a> Transact-SQL データ定義言語 (DDL) ステートメント  
+##  <a name="ddl"></a> データ定義言語 (DDL) ステートメント  
   
 |オブジェクト|その他の情報|  
 |------------|----------------------|  
@@ -56,7 +60,7 @@ caps.handback.revision: 13
 |[sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md)|[セマンティック検索のインストールと構成](../../relational-databases/search/install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql.md)|[セマンティック検索のインストールと構成](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
-##  <a name="cv"></a> システム ビュー: カタログ ビュー  
+##  <a name="cv"></a> カタログ ビュー  
   
 |オブジェクト|その他の情報|  
 |------------|----------------------|  
@@ -64,7 +68,7 @@ caps.handback.revision: 13
 |[sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)|[セマンティック検索のインストールと構成](../../relational-databases/search/install-and-configure-semantic-search.md)|  
 |[sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)|[セマンティック検索のインストールと構成](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
-##  <a name="dmv"></a> システム ビュー: 動的管理ビュー  
+##  <a name="dmv"></a> 動的管理ビュー  
   
 |オブジェクト|その他の情報|  
 |------------|----------------------|  
@@ -72,7 +76,7 @@ caps.handback.revision: 13
 |[sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)|[セマンティクス検索の管理および監視](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
 |[sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)|[セマンティクス検索の管理および監視](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [セマンティクス検索の管理および監視](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
   
   

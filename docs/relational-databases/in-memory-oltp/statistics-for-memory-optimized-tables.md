@@ -1,22 +1,26 @@
 ---
 title: "メモリ最適化テーブルの統計 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 caps.latest.revision: 18
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd78478647e468be36959aa201c94720be106d08
+ms.lasthandoff: 04/11/2017
+
 ---
-# メモリ最適化テーブルの統計
+# <a name="statistics-for-memory-optimized-tables"></a>メモリ最適化テーブルの統計
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   クエリ オプティマイザーでは、クエリのパフォーマンスを向上させるクエリ プランを作成するために列に関する統計を使用します。 統計はデータベースのテーブルから収集され、データベース メタデータに格納されます。  
@@ -27,13 +31,13 @@ caps.handback.revision: 18
   
  メモリ最適化テーブルの統計に関する考慮事項を次に示します。  
   
--   SQL Server 2016 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]では、データベース互換性レベル 130 以上を使用している場合、メモリ最適化テーブルに対する統計の自動更新がサポートされます。 「[ALTER DATABASE 互換性レベル (Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20(Transact-SQL).md)」を参照してください。 これより低い互換性レベルを使用して以前に作成されたテーブルがデータベースにある場合、今後統計の自動更新を有効にするには、1 回統計を手動で更新する必要があります。
+-   SQL Server 2016 以降、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]では、データベース互換性レベル 130 以上を使用している場合、メモリ最適化テーブルに対する統計の自動更新がサポートされます。 「 [ALTER DATABASE 互換性レベル (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。 これより低い互換性レベルを使用して以前に作成されたテーブルがデータベースにある場合、今後統計の自動更新を有効にするには、1 回統計を手動で更新する必要があります。
   
 -   ネイティブ コンパイル ストアド プロシージャの場合、プロシージャのコンパイル時にプロシージャ内のクエリの実行プランが最適化されます。コンパイルは作成時に実行されます。 統計の更新時に自動的に再コンパイルされることはありません。 したがって、プロシージャが作成される前に、テーブルに代表的なデータのセットが含まれている必要があります。  
   
--   ネイティブ コンパイル ストアド プロシージャは、[sp_recompile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md) を使用して手動で再コンパイルできます。さらに、データベースがオフラインになってからもう一度オンラインに戻った場合、データベース フェールオーバーの場合、またはサーバーが再起動された場合に、自動的に再コンパイルされます。  
+-   ネイティブ コンパイル ストアド プロシージャは、 [sp_recompile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)を使用して手動で再コンパイルできます。さらに、データベースがオフラインになってからもう一度オンラインに戻った場合、データベース フェールオーバーの場合、またはサーバーが再起動された場合に、自動的に再コンパイルされます。  
   
-## 既存のテーブル内の統計の自動更新を有効にする
+## <a name="enabling-automatic-update-of-statistics-in-existing-tables"></a>既存のテーブル内の統計の自動更新を有効にする
 
 互換性レベルが 130 以上のデータベース内にテーブルが作成されると、そのテーブル上のすべての統計に対して統計の自動更新が有効になり、それ以上の操作は何も必要ありません。
 
@@ -72,7 +76,7 @@ GO
 -- UPDATE STATISTICS [dbo].[MyMemoryOptimizedTable];
 ```
 
-*自動更新が有効になっているかどうかの確認:* 次のスクリプトは、メモリ最適化テーブル上の統計に対して自動更新が有効になっているかどうかを確認します。 前述のスクリプトの実行後、すべての統計オブジェクトについて、`auto-update enabled` 列に `1` が返されます。
+*自動更新が有効になっているかどうかの確認:* 次のスクリプトは、メモリ最適化テーブル上の統計に対して自動更新が有効になっているかどうかを確認します。 前述のスクリプトの実行後、すべての統計オブジェクトについて、 `1` 列に `auto-update enabled` が返されます。
 
 ```
 SELECT 
@@ -83,12 +87,12 @@ FROM sys.stats s JOIN sys.tables o ON s.object_id=o.object_id
 WHERE o.is_memory_optimized=1
 ```
 
-## テーブルとプロシージャの配置に関するガイドライン  
+## <a name="guidelines-for-deploying-tables-and-procedures"></a>テーブルとプロシージャの配置に関するガイドライン  
  クエリ オプティマイザーでクエリ プランを作成するときに最新の統計が使用されるように、次の 4 つの手順を使用して、メモリ最適化テーブルと、そのテーブルにアクセスするネイティブ コンパイル ストアド プロシージャを配置します。  
   
-1.  データベースの互換性レベルが 130 以上であることをご確認ください。 「[ALTER DATABASE 互換性レベル (Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20(Transact-SQL).md)」を参照してください。
+1.  データベースの互換性レベルが 130 以上であることをご確認ください。 「 [ALTER DATABASE 互換性レベル (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。
 
-2.  テーブルとインデックスを作成します。 インデックスは、**CREATE TABLE** ステートメントにインラインで指定する必要があります。  
+2.  テーブルとインデックスを作成します。 インデックスは、 **CREATE TABLE** ステートメントにインラインで指定する必要があります。  
   
 3.  テーブルにデータを読み込みます。  
   
@@ -96,7 +100,8 @@ WHERE o.is_memory_optimized=1
   
  データを読み込んでからネイティブ コンパイル ストアド プロシージャを作成することにより、オプティマイザーで統計をメモリ最適化テーブル用に使用できます。 これによって、プロシージャをコンパイルすると効率的なクエリ プランが作成されます。  
 
-## 参照  
+## <a name="see-also"></a>参照  
  [メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
+

@@ -1,30 +1,34 @@
 ---
 title: "[データベースの復元] ([ファイル] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restoredb.files.f1"
-  - "sql13.swb.restoredb.files.f1 in the code"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restoredb.files.f1
+- sql13.swb.restoredb.files.f1 in the code
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 840b9d449ad320dc104960c322590e96082f0cdb
+ms.lasthandoff: 04/11/2017
+
 ---
-# [データベースの復元] ([ファイル] ページ)
+# <a name="restore-database-files-page"></a>[データベースの復元] ([ファイル] ページ)
   **[データベースの復元]** ダイアログ ボックスの **[ファイル]** ページを使用して、データベース内で復元するように選択した特定のファイルを管理します。  
   
-## オプション  
+## <a name="options"></a>オプション  
   
-### [次のデータベース ファイルに復元]  
+### <a name="restore-database-files-as"></a>[次のデータベース ファイルに復元]  
  復元されたファイルに新しいファイル パスを割り当て、管理できます。  
   
  **[すべてのファイルをフォルダーに移動]**  
@@ -47,11 +51,11 @@ caps.handback.revision: 16
  **[復元先]**  
  復元されたファイルが保存される際のファイル名が表示されます。 適切なファイル名を入力または検索します。  
   
-## 参照  
- [[データベースの復元] &#40;[全般] ページ&#41;](../Topic/Restore%20Database%20\(General%20Page\).md)   
- [[データベースの復元] &#40;[オプション] ページ&#41;](../Topic/Restore%20Database%20\(Options%20Page\).md)   
- [RESTORE の引数 &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>参照  
+ [[データベースの復元] &#40;[全般] ページ&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)   
+ [[データベースの復元] &#40;[オプション] ページ&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)   
+ [RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)   
  [テープ ドライブの論理バックアップ デバイスの定義 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

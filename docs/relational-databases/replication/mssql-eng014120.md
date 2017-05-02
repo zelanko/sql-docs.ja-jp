@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG014120 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG014120 エラー"
+title: MSSQL_ENG014120 | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG014120 error
 ms.assetid: 6b169a3b-30da-4981-b998-b52d61811572
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 127a8b4b7b1b91559ad221e38eff2475b34b3ddf
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG014120
+# <a name="mssqleng014120"></a>MSSQL_ENG014120
     
-## メッセージの詳細  
+## <a name="message-details"></a>メッセージの詳細  
   
 |||  
 |-|-|  
@@ -31,14 +35,14 @@ caps.handback.revision: 14
 |シンボル名||  
 |メッセージ テキスト|ディストリビューション データベース '%s' を削除できませんでした。 このディストリビューション データベースはパブリッシャーに関連付けられています。|  
   
-## 説明  
+## <a name="explanation"></a>説明  
  ディストリビューション データベースには、すべての種類のレプリケーションのメタデータと履歴データ、およびトランザクション レプリケーションに対するトランザクションが格納されます。 このエラーは、1 つ以上のパブリッシャーに関連付けられているディストリビューション データベースを削除しようとした場合に発生します。  
   
-## ユーザーの操作  
- ディストリビューション データベースを削除するには、まずディストリビューターとパブリッシャーの関連付けを解除する必要があります。 詳細については、次を参照してください。 [sp_dropdistpublisher & #40 です。Transact SQL と #41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)します。  
+## <a name="user-action"></a>ユーザーの操作  
+ ディストリビューション データベースを削除するには、まずディストリビューターとパブリッシャーの関連付けを解除する必要があります。 詳細については、「[sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)」を参照してください。  
   
-## 参照  
- [エラーとイベントのリファレンスと #40 です。レプリケーションと #41 です。](../../relational-databases/replication/errors-and-events-reference-replication.md)   
+## <a name="see-also"></a>参照  
+ [エラーとイベントのリファレンス &#40;レプリケーション&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [ディストリビューションの構成](../../relational-databases/replication/configure-distribution.md)  
   
   

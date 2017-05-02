@@ -1,31 +1,35 @@
 ---
 title: "SQL Server 2016 の非推奨フルテキスト検索機能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "非推奨機能 [フルテキスト検索]"
-  - "フルテキスト検索 [SQL Server]、非推奨機能"
-  - "フルテキスト クエリ [SQL Server]、近接"
+ms.custom: 
+ms.date: 08/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deprecated features [full-text search]
+- full-text search [SQL Server], deprecated features
+- full-text queries [SQL Server], proximity
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5d927fde6997929f3f92870ea55100f64d4b7395
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 2016 の非推奨フルテキスト検索機能
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でまだ使用できるものの、非推奨となったフルテキスト検索機能について説明します。 これらの機能は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の今後のリリースで削除される予定です。 非推奨機能を新しいアプリケーションで使用しないでください。  
+# <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>SQL Server 2016 の非推奨フルテキスト検索機能
+  このトピックでは、SQL Server でまだ使用できるものの、非推奨となったフルテキスト検索機能について説明します。 これらの機能は今後のリリースで削除される予定です。 非推奨機能を新しいアプリケーションで使用しないでください。  
   
- 非推奨機能の使用は、**SQL Server:Deprecated Features** オブジェクトのパフォーマンス カウンターおよびトレース イベントを使用して監視できます。 詳細については、「[SQL Server オブジェクトの使用](../../relational-databases/performance-monitor/use-sql-server-objects.md)」を参照してください。  
+非推奨機能の使用は、**SQL Server:Deprecated Features** オブジェクトのパフォーマンス カウンターおよびトレース イベントを使用して監視します。 詳細については、「 [SQL Server オブジェクトの使用](../../relational-databases/performance-monitor/use-sql-server-objects.md)」を参照してください。  
   
-## SQL Server の次のバージョンでサポートされない機能  
+## <a name="features-no-longer-supported"></a>機能は現在サポートされません  
 
   
 |非推奨機能|代替|機能名|機能 ID|  
@@ -40,19 +44,20 @@ caps.handback.revision: 32
 |sys.dm_fts_memory_buffers 列<br /><br /> row_count|[なし] :|dm_fts_memory_buffers.row_count|225|  
 |sys.fulltext_catalogs 列<br /><br /> path<br /><br /> data_space_id<br /><br /> file_id 列|[なし] :|fulltext_catalogs.path<br /><br /> fulltext_catalogs.data_space_id<br /><br /> fulltext_catalogs.file_id|215<br /><br /> 216<br /><br /> 217|  
   
-## SQL Server の今後のバージョンでサポートされない機能  
- 以下のフルテキスト検索機能は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の次のバージョンではサポートされますが、その後のバージョンでは削除されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のどのバージョンであるかは決定していません。  
+## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>SQL Server の今後のバージョンでサポートされない機能  
+ 以下のフルテキスト検索機能は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の次のバージョンではサポートされますが、その後のバージョンでは削除されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のどのバージョンであるかは決定していません。  
   
- **機能名**の値は、トレース イベントには ObjectName として表示され、パフォーマンス カウンターおよび sys.dm_os_performance_counters にはインスタンス名として表示されます。 **機能 ID** の値は、トレース イベントに ObjectId として表示されます。  
+ **機能名** の値は、トレース イベントには ObjectName として表示され、パフォーマンス カウンターおよび sys.dm_os_performance_counters にはインスタンス名として表示されます。 **機能 ID** の値は、トレース イベントに ObjectId として表示されます。  
   
 |非推奨機能|代替|機能名|機能 ID|  
 |------------------------|-----------------|------------------|----------------|  
-|CONTAINS および CONTAINSTABLE 汎用 NEAR 演算子<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|カスタム NEAR 演算子<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,…*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,…*n*] )<br /><br /> [,\<distance> [,\<order>] ]<br /><br /> }<br /><br /> )<br /><br /> \<distance> ::= {*integer* &#124; **MAX**}<br /><br /> \<order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|CONTAINS および CONTAINSTABLE 汎用 NEAR 演算子<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|カスタム NEAR 演算子<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,…*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,…*n*] )<br /><br /> [,<distance> [,<order>] ]<br /><br /> }<br /><br /> )<br /><br /> <distance> ::= {*integer* &#124; **MAX**}<br /><br /> <order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |CREATE FULLTEXT CATALOG オプション<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|[なし] :|CREATE FULLTEXT CATLOG IN PATH<br /><br /> [なし] :<sup>*</sup>|237<br /><br /> なし*|  
 |DATABASEPROPERTYEX プロパティ : IsFullTextEnabled|[なし] :|DATABASEPROPERTYEX**('IsFullTextEnabled')**|202|  
 |sp_detach_db オプション<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|[なし] :|sp_detach_db @keepfulltextindexfile|226|  
 |sp_fulltext_service アクションの値: resource_usage には機能がありません。|なし|sp_fulltext_service @action=resource_usage|200|  
   
- \***SQL Server:Deprecated Features** オブジェクトは、CREATE FULLTEXT CATLOG ON FILEGROUP *filegroup* の使用を監視しません。  
+ * **SQL Server:Deprecated Features** オブジェクトは、CREATE FULLTEXT CATLOG ON FILEGROUP *filegroup* の使用を監視しません。  
   
   
+

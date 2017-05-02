@@ -1,25 +1,29 @@
 ---
 title: "XML ファイルへのポリシー ベースの管理ファセットの状態のコピー | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ポリシー ベースの管理, XML ファイルへのファセットの状態のコピー"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, copy facet state to XML file
 ms.assetid: 7d604ab1-6dd6-4f8e-a79c-eba99ab106fd
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0248d7e6090eb1a5cab319b7b41e1f2baebc98b7
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML ファイルへのポリシー ベースの管理ファセットの状態のコピー
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でポリシー ベースの管理ファセットの状態を XML ファイルにコピーする方法について説明します。  
+# <a name="copy-a-policy-based-management-facet-state-to-an-xml-file"></a>XML ファイルへのポリシー ベースの管理ファセットの状態のコピー
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でポリシー ベースの管理ファセットの状態を XML ファイルにコピーする方法について説明します。  
   
  **このトピックの内容**  
   
@@ -40,11 +44,11 @@ caps.handback.revision: 6
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### ファセットの状態を XML ファイルにコピーするには  
+#### <a name="to-copy-a-facet-state-to-an-xml-file"></a>ファセットの状態を XML ファイルにコピーするには  
   
-1.  オブジェクト エクスプローラーで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを右クリックし、**[ファセット]** をクリックします。  
+1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを右クリックし、 **[ファセット]**をクリックします。  
   
-2.  **[ファセットの表示 - *object_name*]** ダイアログ ボックスで、**[現在の状態をポリシーとしてエクスポート]** をクリックします。  
+2.  **object_name**** ダイアログ ボックスで、 **現在の状態をポリシーとしてエクスポート**をクリックします。  
   
 3.  **[ポリシーとしてエクスポート]** ダイアログ ボックスで、ファイルのパスと名前を入力します。または、参照ボタン (**[...]**) を使用してファイルを指定し、XML ファイルの名前を入力します。 このダイアログ ボックスで利用可能なオプションの詳細については、「 [Export As Policy Dialog Box](../../relational-databases/policy-based-management/export-as-policy-dialog-box.md)」を参照してください。  
   

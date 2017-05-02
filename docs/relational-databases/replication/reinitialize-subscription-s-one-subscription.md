@@ -1,29 +1,33 @@
 ---
 title: "[サブスクリプションの再初期化] - 1 つのサブスクリプション | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.reinit.single.f1"
-helpviewer_keywords: 
-  - "[サブスクリプションの再初期化] ダイアログ ボックス"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.reinit.single.f1
+helpviewer_keywords:
+- Reinitialize Subscription(s) dialog box
 ms.assetid: 9b0cf0be-d1f1-4163-a0ca-d6f095aa707e
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8fbb60295103fad2edccc62b19c791407148b91
+ms.lasthandoff: 04/11/2017
+
 ---
-# [サブスクリプションの再初期化] - 1 つのサブスクリプション
-   **サブスクリプションの再初期化** ] ダイアログ ボックスでは、サブスクリプションの再初期化用にマークすることができます。 再初期化には、サブスクライバーへのスナップショットの適用が含まれています。トランザクション パブリケーションに対するサブスクリプションの場合はディストリビューション エージェントによって実行され、マージ パブリケーションに対するサブスクリプションの場合はマージ エージェントによって実行されます。  
+# <a name="reinitialize-subscriptions---one-subscription"></a>[サブスクリプションの再初期化] - 1 つのサブスクリプション
+  **[サブスクリプションの再初期化]** ダイアログ ボックスを使用すると、サブスクリプションに再初期化を設定できます。 再初期化には、サブスクライバーへのスナップショットの適用が含まれています。トランザクション パブリケーションに対するサブスクリプションの場合はディストリビューション エージェントによって実行され、マージ パブリケーションに対するサブスクリプションの場合はマージ エージェントによって実行されます。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[現在のスナップショットを使用する]**  
  このオプションを選択すると、次にディストリビューション エージェントまたはマージ エージェントが実行されたときに、現在のスナップショットがサブスクライバーに適用されます。 有効なスナップショットが使用できない場合、このオプションは選択できません。  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 11
  **[再初期化するように設定]**  
  クリックすると、サブスクリプションに再初期化が設定されます。 有効なスナップショットが使用できるようになった後、サブスクリプションに対してディストリビューション エージェントまたはマージ エージェントを次回実行するとき、スナップショットはサブスクライバーに適用されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-subscriptions.md)  
   
   

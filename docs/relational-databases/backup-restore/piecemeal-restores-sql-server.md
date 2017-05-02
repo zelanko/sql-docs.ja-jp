@@ -1,44 +1,48 @@
 ---
 title: "段階的な部分復元 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "部分更新 [SQL Server]"
-  - "段階的な復元 [SQL Server]"
-  - "段階的な部分復元 [SQL Server]"
-  - "復元 [SQL Server], 段階的な部分復元シナリオ"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partial updates [SQL Server]
+- staged restores [SQL Server]
+- piecemeal restores [SQL Server]
+- restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 caps.latest.revision: 74
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 74
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1c653a1facffa0c6f6422645f3336120e8864f1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 段階的な部分復元 (SQL Server)
+# <a name="piecemeal-restores-sql-server"></a>段階的な部分復元 (SQL Server)
   このトピックの内容は、複数のファイルまたはファイル グループ (単純復旧モデルでは、読み取り専用ファイル グループのみ) を含む [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Enterprise エディションのデータベースだけに関するものです。  
   
- 段階的な部分復元とメモリ最適化テーブルの詳細については、「[メモリ最適化テーブルを持つデータベースの段階的な部分復元](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)」を参照してください。  
+ 段階的な部分復元とメモリ最適化テーブルの詳細については、「 [メモリ最適化テーブルを持つデータベースの段階的な部分復元](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)」を参照してください。  
   
- *段階的な部分復元*機能では、複数のファイル グループを含むデータベースを段階的に復元および復旧できます。 段階的な部分復元には、プライマリ ファイル グループから始まり、場合によっては 1 つ以上のセカンダリ ファイル グループを復元するための、一連の復元シーケンスが含まれています。 段階的な部分復元では、データベースの一貫性を最終的に確保するために、継続的にチェックが行われます。 復元シーケンスの完了後、復元されたファイルは (これらのファイルが有効で、データベースとの一貫性があれば) 直接オンラインにできます。  
+ *段階的な部分復元* 機能では、複数のファイル グループを含むデータベースを段階的に復元および復旧できます。 段階的な部分復元には、プライマリ ファイル グループから始まり、場合によっては 1 つ以上のセカンダリ ファイル グループを復元するための、一連の復元シーケンスが含まれています。 段階的な部分復元では、データベースの一貫性を最終的に確保するために、継続的にチェックが行われます。 復元シーケンスの完了後、復元されたファイルは (これらのファイルが有効で、データベースとの一貫性があれば) 直接オンラインにできます。  
   
  段階的な部分復元は、すべての復旧モデルで使用できますが、単純復旧モデルよりも完全復旧モデルと一括ログ復旧モデルの方がより柔軟に実行できます。  
   
- すべての段階的な部分復元は、*部分復元シーケンス*と呼ばれる初期復元シーケンスから始まります。 最小限の部分復元シーケンスでは、プライマリ ファイル グループが復元および復旧されます。単純な復旧モデルでは、すべての読み取り/書き込みファイル グループが復元および復旧されます。 段階的な部分復元シーケンスの間は、データベース全体をオフラインにする必要があります。 その後、データベースをオンラインにすると、復元されたファイル グループが使用可能になります。 ただし、復元されないファイル グループはオフラインのままで、アクセスできません。 オフラインのファイル グループを復元してオンラインにするには、後でファイル復元を行います。  
+ すべての段階的な部分復元は、 *部分復元シーケンス*と呼ばれる初期復元シーケンスから始まります。 最小限の部分復元シーケンスでは、プライマリ ファイル グループが復元および復旧されます。単純な復旧モデルでは、すべての読み取り/書き込みファイル グループが復元および復旧されます。 段階的な部分復元シーケンスの間は、データベース全体をオフラインにする必要があります。 その後、データベースをオンラインにすると、復元されたファイル グループが使用可能になります。 ただし、復元されないファイル グループはオフラインのままで、アクセスできません。 オフラインのファイル グループを復元してオンラインにするには、後でファイル復元を行います。  
   
  データベースに使用されている復旧モデルにかかわらず、部分復元シーケンスは、完全バックアップを復元する RESTORE DATABASE ステートメントと PARTIAL オプションから始まります。 PARTIAL オプションを指定すると、常に新しい段階的な部分復元が開始されます。このため、PARTIAL オプションは部分復元シーケンスの最初のステートメントに 1 回だけ指定します。 この部分復元シーケンスが完了し、データベースがオンラインになると、残りのファイルの状態が "復旧待ち" になります。これは、残りのファイルの復旧が延期されているためです。  
   
- 段階的な部分復元のこの後の部分には、通常、*ファイル グループ復元シーケンス*と呼ばれる 1 つ以上の復元シーケンスがあります。 特定のファイル グループ復元シーケンスは、必要な時間待機させることができます。 各ファイル グループ復元シーケンスでは、1 つ以上のオフラインのファイル グループを、データベースの一貫性がある時点に復元および復旧します。 ファイル グループ復元シーケンスのタイミングと数は、復旧の目的、つまり復旧するオフライン ファイル グループの数、および 1 回のファイル グループ復元シーケンスで復元するファイル グループの数によって異なります。  
+ 段階的な部分復元のこの後の部分には、通常、 *ファイル グループ復元シーケンス*と呼ばれる 1 つ以上の復元シーケンスがあります。 特定のファイル グループ復元シーケンスは、必要な時間待機させることができます。 各ファイル グループ復元シーケンスでは、1 つ以上のオフラインのファイル グループを、データベースの一貫性がある時点に復元および復旧します。 ファイル グループ復元シーケンスのタイミングと数は、復旧の目的、つまり復旧するオフライン ファイル グループの数、および 1 回のファイル グループ復元シーケンスで復元するファイル グループの数によって異なります。  
   
  実行する段階的な部分復元の正確な要件は、データベースの復旧モデルによって異なります。 詳細については、後の「単純復旧モデルでの段階的な部分復元」および「完全復旧モデルでの段階的な部分復元」を参照してください。  
   
-## 段階的な部分復元のシナリオ  
+## <a name="piecemeal-restore-scenarios"></a>段階的な部分復元のシナリオ  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではすべてのエディションで、オフラインの段階的な部分復元がサポートされます。 Enterprise エディションでは、段階的な部分復元をオンラインでもオフラインでも実行できます。 オフラインとオンラインの段階的な部分復元の影響を以下に示します。  
   
 -   オフラインの段階的な部分復元のシナリオ  
@@ -49,16 +53,16 @@ caps.handback.revision: 74
   
      オンラインの段階的な部分復元シナリオでは、部分復元シーケンスの実行後にデータベースがオンラインになり、プライマリ ファイル グループと復旧されたすべてのセカンダリ ファイル グループが使用可能になります。 復元されていないファイル グループはオフラインのままになりますが、データベースがオンラインの状態であれば、その間に必要に応じて復元できます。  
   
-     オンラインの段階的な部分復元では遅延トランザクションを実行できます。 ファイル グループのサブセットだけが復元された場合、データベース内のトランザンションの中でオンライン ファイル グループに依存するものは遅延される場合があります。 これは、データベース全体の一貫性を保つための一般的な動作です。 詳細については、「[遅延トランザクション &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)」を参照してください。  
+     オンラインの段階的な部分復元では遅延トランザクションを実行できます。 ファイル グループのサブセットだけが復元された場合、データベース内のトランザンションの中でオンライン ファイル グループに依存するものは遅延される場合があります。 これは、データベース全体の一貫性を保つための一般的な動作です。 詳細については、「 [遅延トランザクション &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)を使用して、機能していないファイル グループを削除する方法を説明します。  
   
 -   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 段階的な部分復元のシナリオ  
   
-     インメモリ OLTP データベースの段階的な部分復元の詳細については、「[メモリ最適化テーブルを持つデータベースの段階的なバックアップと部分復元](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)」を参照してください。  
+     インメモリ OLTP データベースの段階的な部分復元の詳細については、「 [メモリ最適化テーブルを持つデータベースの段階的なバックアップと部分復元](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)」を参照してください。  
   
-## 制限  
+## <a name="restrictions"></a>制限  
  部分復元シーケンスで [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) ファイル グループを除外した場合、特定の時点への復元はサポートされません。 復元シーケンスを強制的に実行して続行することもできます。 ただし、RESTORE ステートメントから除外された FILESTREAM ファイル グループは復元できません。 特定の時点への復元を強制的に実行するには、STOPAT、STOPATMARK、または STOPBEFOREMARK オプションに CONTINUE_AFTER_ERROR オプションを組み合わせて指定します。これらのオプションは、後続の RESTORE LOG ステートメントでも指定する必要があります。 CONTINUE_AFTER_ERROR を指定した場合、部分復元シーケンスは正常に実行されますが、FILESTREAM ファイル グループは復元できなくなります。  
   
-## 単純復旧モデルでの段階的な部分復元  
+## <a name="piecemeal-restore-under-the-simple-recovery-model"></a>単純復旧モデルでの段階的な部分復元  
  単純復旧モデルでは、データベースの完全バックアップまたは差分バックアップから段階的な部分復元シーケンスを始める必要があります。 その後、復元されたバックアップが差分ベースであれば、最新の差分バックアップを復元します。  
   
  最初の部分復元シーケンスの間に読み取り/書き込みファイル グループのサブセットだけを復元した場合、部分的に復元されたデータベースを復旧すると、復元されていないファイル グループはすべて機能しなくなります。 部分復元シーケンスから読み取り/書き込みファイル グループを除くことが適切なのは、次の場合に限られます。  
@@ -69,7 +73,7 @@ caps.handback.revision: 74
   
 -   データベースに対して単純復旧モデルを使用している期間中に完全バックアップを行ったが、完全復旧モデルを使用している時点に復旧ポイントがある場合。 詳細については、後の「復旧モデルを単純から完全に切り替えたデータベースの段階的な部分復元の実行」を参照してください。  
   
-### 単純復旧モデルでの段階的な部分復元の要件  
+### <a name="requirements-for-piecemeal-restore-under-the-simple-recovery-model"></a>単純復旧モデルでの段階的な部分復元の要件  
  単純復旧モデルでは、初期段階でプライマリ ファイル グループと、すべての読み取り/書き込みセカンダリ ファイル グループが復元および復旧されます。 初期段階の完了後、復元されたファイルは (これらのファイルが有効で、データベースとの一貫性があれば) 直接オンラインにできます。  
   
  その後、読み取り専用のファイル グループが 1 回以上の追加段階で復元されます。  
@@ -90,7 +94,7 @@ caps.handback.revision: 74
   
 -   読み取り専用ファイルのバックアップとプライマリ ファイル グループに一貫性がある場合、セカンダリ ファイル グループがバックアップされ、プライマリ ファイル グループを含んでいるバックアップが完了するまでの間、そのセカンダリ ファイル グループは読み取り専用である必要があります。 セカンダリ ファイル グループが読み取り専用になった後でバックアップを作成した場合は、ファイルの差分バックアップを使用できます。  
   
-### 段階的な部分復元の各段階 (単純復旧モデル)  
+### <a name="piecemeal-restore-stages-simple-recovery-model"></a>段階的な部分復元の各段階 (単純復旧モデル)  
  段階的な部分復元シナリオには、次の段階があります。  
   
 -   初期段階 (プライマリ ファイル グループとすべての読み取り/書き込みファイル グループを復元および復旧します)。  
@@ -116,13 +120,13 @@ caps.handback.revision: 74
   
     -   損傷しているファイルや、データベースと一貫性のないファイルは、復旧する前に復元する必要があります。  
   
-### 使用例  
+### <a name="examples"></a>使用例  
   
 -   [例: データベースの段階的な部分復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
-## 完全復旧モデルでの段階的な部分復元  
+## <a name="piecemeal-restore-under-the-full-recovery-model"></a>完全復旧モデルでの段階的な部分復元  
  完全復旧モデルまたは一括ログ復旧モデルでは、複数のファイル グループを含むすべてのデータベースで段階的な部分復元を実行でき、データベースを任意の時点に復元できます。 段階的な部分復元の復元シーケンスは、次のように行われます。  
   
 -   部分復元シーケンス  
@@ -141,16 +145,16 @@ caps.handback.revision: 74
   
      Enterprise エディションでは、データベースをオンラインにしたまま、オフラインのセカンダリ ファイル グループを復元および復旧できます。 特定の読み取り専用ファイルに損傷がなく、データベースと一貫性があれば、そのファイルを復元する必要はありません。 詳細については、「[データを復元しないデータベースの復旧 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)」を参照してください。  
   
-### ログ バックアップの適用  
+### <a name="applying-log-backups"></a>ログ バックアップの適用  
  読み取り専用ファイル グループがバックアップの作成前から読み取り専用だった場合は、ログ バックアップをファイル グループに適用する必要はないので、ファイルの復元の際にスキップされます。 読み取り/書き込みファイル グループの場合は、最新の完全復元または差分復元にチェーンが途切れていないログ バックアップを適用し、ファイル グループに現在のログ ファイルの状態を反映する必要があります。  
   
-### 使用例  
+### <a name="examples"></a>使用例  
   
 -   [例: データベースの段階的な部分復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
 -   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
-## 復旧モデルを単純から完全に切り替えたデータベースの段階的な部分復元の実行  
+## <a name="performing-a-piecemeal-restore-of-a-database-whose-recovery-model-has-been-switched-from-simple-to-full"></a>復旧モデルを単純から完全に切り替えたデータベースの段階的な部分復元の実行  
  データベースの完全バックアップまたは部分バックアップ以降に単純復旧モデルから完全復旧モデルに切り替えたデータベースは、段階的な部分復元を実行できます。 たとえば、データベースで次の手順を実行した場合を検討します。  
   
 1.  単純モデルのデータベースの部分バックアップ (backup_1) を作成します。  
@@ -171,9 +175,9 @@ caps.handback.revision: 74
   
 4.  差分バックアップの後、元の段階的な部分復元でその他の復元を実行して、元の復旧ポイントまでデータを復元する。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [復元と復旧の概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [復元シーケンスの計画と実行 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  

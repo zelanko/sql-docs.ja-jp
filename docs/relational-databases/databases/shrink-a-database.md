@@ -1,30 +1,34 @@
 ---
 title: "データベースの圧縮 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.shrinkdatabase.f1"
-helpviewer_keywords: 
-  - "圧縮、データベース"
-  - "データベース [SQL Server]、圧縮"
-  - "縮小、データベース サイズ"
-  - "データベースの圧縮 [SQL Server]"
-  - "削減、データベース サイズ"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.shrinkdatabase.f1
+helpviewer_keywords:
+- shrinking databases
+- databases [SQL Server], shrinking
+- decreasing database size
+- database shrinking [SQL Server]
+- reducing database size
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cdc33c918c6817d9c242b6e52617c00845195f7d
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベースの圧縮
+# <a name="shrink-a-database"></a>データベースの圧縮
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] から [!INCLUDE[tsql](../../includes/tsql-md.md)]のオブジェクトを使用して、データベースを圧縮する方法について説明します。  
   
  ファイルの末尾にあるデータのページを、ファイルの先頭に近い占有されていない領域に移動することにより、データ ファイルが圧縮され、領域が回復されます。 ファイル末尾に十分な空き領域が作成された場合は、ファイル末尾のデータ ページの割り当てを解除して、ファイル システムに戻すことができます。  
@@ -45,7 +49,7 @@ caps.handback.revision: 42
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報: **[データベースの圧縮](#FollowUp)  
+-   **補足情報:** [データベースの圧縮](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -78,15 +82,15 @@ caps.handback.revision: 42
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### データベースを圧縮するには  
+#### <a name="to-shrink-a-database"></a>データベースを圧縮するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]** を展開し、圧縮するデータベースを右クリックします。  
+2.  **[データベース]**を展開し、圧縮するデータベースを右クリックします。  
   
 3.  **[タスク]**、 **[圧縮]**の順にポイントし、 **[データベース]**をクリックします。  
   
-     **データベース**  
+     **[データベース]**  
      選択しているデータベースの名前が表示されます。  
   
      **[現在割り当てられている領域]**  
@@ -105,7 +109,7 @@ caps.handback.revision: 42
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### データベースを圧縮するには  
+#### <a name="to-shrink-a-database"></a>データベースを圧縮するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -118,7 +122,7 @@ caps.handback.revision: 42
 ##  <a name="FollowUp"></a> 補足情報: データベースを圧縮した後  
  ファイルを圧縮するために移動されたデータは、ファイル内のあらゆる使用可能な場所に分散される場合があります。 これにより、インデックスの断片化が発生し、広範なインデックスを検索するクエリのパフォーマンスが低下する場合があります。 断片化を解消するには、圧縮後にファイルのインデックスを再構築することを検討してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ファイルの圧縮](../../relational-databases/databases/shrink-a-file.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

@@ -1,23 +1,27 @@
 ---
 title: "ユーティリティ コントロール ポイントの削除 (SQL Server ユーティリティ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c048a416-900e-4c77-8243-e0f0d8b94068
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b38f97d5d0dacb8222faf67387c97b33d2dd5de6
+ms.lasthandoff: 04/11/2017
+
 ---
-# ユーティリティ コントロール ポイントの削除 (SQL Server ユーティリティ)
-  このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスから [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーティリティ コントロール ポイント (UCP) を削除する方法について説明します。  
+# <a name="remove-a-utility-control-point-sql-server-utility"></a>ユーティリティ コントロール ポイントの削除 (SQL Server ユーティリティ)
+  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスから [!INCLUDE[tsql](../../includes/tsql-md.md)]ユーティリティ コントロール ポイント (UCP) を削除する方法について説明します。  
   
  **このトピックの内容**  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 10
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  この手順を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティから UCP を削除する前に、次の要件を確認してください。 ストアド プロシージャでは、操作の一部として前提条件がチェックされます。  
   
--   この手順を実行する前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージ インスタンスをすべて UCP から削除する必要があります。 UCP は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージ インスタンスの 1 つです。 詳細については、「[SQL Server ユーティリティからの SQL Server のインスタンスの削除](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md)」を参照してください。  
+-   この手順を実行する前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージ インスタンスをすべて UCP から削除する必要があります。 UCP は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマネージ インスタンスの 1 つです。 詳細については、「 [SQL Server ユーティリティからの SQL Server のインスタンスの削除](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md)」を参照してください。  
   
 -   このプロシージャは、UCP として構成されたコンピューターで実行する必要があります。  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 10
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### ユーティリティ コントロール ポイントを削除するには  
+#### <a name="to-remove-a-utility-control-point"></a>ユーティリティ コントロール ポイントを削除するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -61,9 +65,9 @@ caps.handback.revision: 10
 EXEC msdb.dbo.sp_sysutility_ucp_remove;  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server ユーティリティの機能とタスク](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [ユーティリティ エクスプローラーを使用した SQL Server ユーティリティの管理](../../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
- [SQL Server ユーティリティのトラブルシューティング](../Topic/Troubleshoot%20the%20SQL%20Server%20Utility.md)  
+ [SQL Server ユーティリティのトラブルシューティング](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

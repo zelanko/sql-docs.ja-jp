@@ -1,48 +1,52 @@
 ---
 title: "検索プロパティ リストを使用したドキュメント プロパティの検索 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "検索プロパティ リストをフルテキスト検索 [SQL Server]"
-  - "プロパティである、フルテキスト検索 [SQL Server]"
-  - "検索プロパティ リスト [SQL Server]"
-  - "プロパティの検索 [SQL Server], 概要"
-  - "フルテキスト インデックス [SQL Server], 検索プロパティ リスト"
-  - "検索プロパティ リスト [SQL Server], 概要"
-  - "プロパティの検索 [SQL Server]"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text search [SQL Server], search property lists
+- full-text search [SQL Server], properties
+- search property lists [SQL Server]
+- property searching [SQL Server], about
+- full-text indexes [SQL Server], search property lists
+- search property lists [SQL Server], about
+- property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e408a414ec070cdef39b69bf535ceb0d45f73435
+ms.lasthandoff: 04/11/2017
+
 ---
-# 検索プロパティ リストを使用したドキュメント プロパティの検索
-  以前のバージョンでは、ドキュメント プロパティの内容はドキュメントの本文の内容と区別できませんでした。 この制限により、フルテキスト クエリは、ドキュメント全体に対する汎用検索に制限されていました。 しかし、現在のバージョンでは、**varbinary**、**varbinary(max)** (**FILESTREAM** を含む)、または **image** バイナリ データ列がサポートされているドキュメントの種類については、フルテキスト インデックスを構成することで、Author や Title などの特定のプロパティに対するプロパティ スコープの検索をサポートすることができます。 この形式の検索を、*プロパティ検索*と呼びます。  
+# <a name="search-document-properties-with-search-property-lists"></a>検索プロパティ リストを使用したドキュメント プロパティの検索
+  以前のバージョンでは、ドキュメント プロパティの内容はドキュメントの本文の内容と区別できませんでした。 この制限により、フルテキスト クエリは、ドキュメント全体に対する汎用検索に制限されていました。 しかし、現在のバージョンでは、 **varbinary**、 **varbinary(max)** ( **FILESTREAM**を含む)、または **image** バイナリ データ列がサポートされているドキュメントの種類については、フルテキスト インデックスを構成することで、Author や Title などの特定のプロパティに対するプロパティ スコープの検索をサポートすることができます。 この形式の検索を、 *プロパティ検索*と呼びます。  
   
- 特定の種類のドキュメントでプロパティ検索が可能かどうかは、対応する[フィルター](../../relational-databases/search/configure-and-manage-filters-for-search.md) (IFilter) によって異なります。 ドキュメントの種類によっては、ドキュメント本文の内容に加えて、そのドキュメントの種類に対して定義されている検索プロパティの一部またはすべてが、対応する IFilter によって抽出されます。 フルテキスト インデックスの作成時に IFilter によって抽出されたプロパティに対してのみプロパティ検索をサポートするように、フルテキスト インデックスを構成することができます。 さまざまなドキュメント プロパティを抽出する IFilter の一例として、Microsoft Office のドキュメントの種類 (.docx、.xlsx、.pptx など) に対応した IFilter があります。 一方、XML IFilter では、プロパティは生成されません。  
+ 特定の種類のドキュメントでプロパティ検索が可能かどうかは、対応する [フィルター](../../relational-databases/search/configure-and-manage-filters-for-search.md) (IFilter) によって異なります。 ドキュメントの種類によっては、ドキュメント本文の内容に加えて、そのドキュメントの種類に対して定義されている検索プロパティの一部またはすべてが、対応する IFilter によって抽出されます。 フルテキスト インデックスの作成時に IFilter によって抽出されたプロパティに対してのみプロパティ検索をサポートするように、フルテキスト インデックスを構成することができます。 さまざまなドキュメント プロパティを抽出する IFilter の一例として、Microsoft Office のドキュメントの種類 (.docx、.xlsx、.pptx など) に対応した IFilter があります。 一方、XML IFilter では、プロパティは生成されません。  
   
 ##  <a name="How_FTS_Works_with_search_properties"></a> 検索プロパティのフルテキスト検索  
   
-### 内部プロパティ ID  
+### <a name="internal-property-ids"></a>内部プロパティ ID  
  Full-Text Engine は、登録されている各プロパティに対して内部プロパティ ID を適宜割り当てます。この内部プロパティ ID は、特定の検索リスト内のプロパティを一意に識別するためのもので、検索プロパティ リストで固有の ID になります。 また、1 つのプロパティを複数の検索プロパティ リストに追加した場合、その内部 ID がリスト間で異なる可能性があります。  
   
- プロパティを検索リストに追加したときに、Full-Text Engine によって*内部プロパティ ID* がプロパティに適宜割り当てられます。 この内部プロパティ ID は、該当する検索プロパティ リスト内のプロパティを一意に識別する整数です。  
+ プロパティを検索リストに追加したときに、Full-Text Engine によって *内部プロパティ ID* がプロパティに適宜割り当てられます。 この内部プロパティ ID は、該当する検索プロパティ リスト内のプロパティを一意に識別する整数です。  
   
  次の図は、Title と Keywords の 2 つのプロパティを指定する検索プロパティ リストの論理的なビューを示しています。 Keywords のプロパティ リスト名は "Tags" です。 これらのプロパティは、F29F85E0-4FF9-1068-AB91-08002B27B3D9 という GUID を持つ同じプロパティ セットに属します。 Title のプロパティ整数識別子は 2、Tags (Keywords) のプロパティ整数識別子は 5 です。 Full-Text Engine は、各プロパティを、検索プロパティ リストで一意となる内部プロパティ ID に適宜関連付けます。 Title プロパティの内部プロパティ ID は 1、Tags プロパティの内部プロパティ ID は 2 になります。  
   
- ![内部テーブルへの検索プロパティ リストの���ッピング](../../relational-databases/search/media/ifts-spl-w-title-and-keywords.gif "内部テーブルへの検索プロパティ リストの���ッピング")  
+ ![内部テーブルへの検索プロパティ リストのマッピング](../../relational-databases/search/media/ifts-spl-w-title-and-keywords.gif "内部テーブルへの検索プロパティ リストのマッピング")  
   
  内部プロパティ ID は、プロパティのプロパティ整数識別子とは異なる場合があります。 特定のプロパティを複数の検索プロパティ リストに登録した場合、検索プロパティ リストごとに異なる内部プロパティ ID が割り当てられる可能性があります。 たとえば、ある検索プロパティ リストでは内部プロパティ ID が 4 である一方で、別の検索プロパティ リストでは内部プロパティ ID が 1 であったり 3 であったりする場合があります。 これに対し、プロパティ整数識別子はプロパティに固有な識別子であるため、プロパティがどこで使用されるかに関係なく同じ値になります。  
   
-### 登録済みのプロパティのインデックスの作成  
+### <a name="indexing-of-registered-properties"></a>登録済みのプロパティのインデックスの作成  
  フルテキスト インデックスが検索プロパティ リストに関連付けらた後で、プロパティに固有の検索語句のインデックスを作成するために、インデックスを再作成する必要があります。 フルテキスト インデックスの作成中、すべてのプロパティの内容が他の内容と共にフルテキスト インデックスに格納されます。 登録されたプロパティに含まれている検索語句のインデックスを作成しているときには、フルテキスト インデクサーによって、対応する内部プロパティ ID も語句と共に格納されます。 一方、プロパティが登録されていない場合、プロパティはドキュメントの本文の一部であるかのようにフルテキスト インデックスに格納され、内部プロパティ ID として値 0 が割り当てられます。  
   
  次の図に、フルテキスト インデックスに示された検索語句の論理ビューを示します。このフルテキスト インデックスは、前の図に示した検索プロパティ リストに関連付けられています。 サンプル ドキュメント Document 1 には、ドキュメントの本文に加えて、Title、Author、および Keywords の 3 つのプロパティが含まれています。 検索プロパティ リストに指定されている Title と Keywords のプロパティの場合、検索語句がフルテキスト インデックスの対応する内部プロパティ ID に関連付けられています。 これに対し、Author プロパティの内容については、ドキュメントの本文の一部であるかのようにインデックスが作成されます。 これは、プロパティを登録することにより、プロパティに格納されている内容の量に応じてフルテキスト インデックスのサイズが増加することを示しています。  
@@ -65,15 +69,15 @@ caps.handback.revision: 49
   
  少なくともリストの名前を指定して、[CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md) ステートメントを使用します。  
   
-##### Management Studio で検索プロパティ リストを作成するには  
+##### <a name="to-create-a-search-property-list-in-management-studio"></a>Management Studio で検索プロパティ リストを作成するには  
   
 1.  オブジェクト エクスプローラーで、サーバーを展開します。  
   
-2.  **[データベース]** を展開し、検索プロパティ リストを作成する対象のデータベースを展開します。  
+2.  **[データベース]**を展開し、検索プロパティ リストを作成する対象のデータベースを展開します。  
   
-3.  **[ストレージ]** を展開し、**[検索プロパティ リスト]** を右クリックします。  
+3.  **[ストレージ]**を展開し、 **[検索プロパティ リスト]**を右クリックします。  
   
-4.  **[新しい検索プロパティ リスト]** をクリックします。  
+4.  **[新しい検索プロパティ リスト]**をクリックします。  
   
 5.  プロパティ リストの名前を指定します。  
   
@@ -85,12 +89,12 @@ caps.handback.revision: 49
   
     -   **[既存の検索プロパティ リストから作成する]**  
   
-     詳細については、「[New Search Property List](../Topic/New%20Search%20Property%20List.md)」を参照してください。  
+     詳細については、「 [New Search Property List](http://msdn.microsoft.com/library/ffca78e9-8608-4b15-bd38-b2d78da4247a)」を参照してください。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ###  <a name="adding"></a> 検索プロパティ リストへのプロパティの追加  
- プロパティを検索するには、*検索プロパティ リスト*を作成し、検索可能にする 1 つまたは複数のプロパティを指定する必要があります。 プロパティを検索プロパティ リストに追加すると、プロパティはその特定のリスト用に登録されます。 プロパティを検索プロパティ リストに追加するには、次の値が必要です。  
+ プロパティを検索するには、 *検索プロパティ リスト* を作成し、検索可能にする 1 つまたは複数のプロパティを指定する必要があります。 プロパティを検索プロパティ リストに追加すると、プロパティはその特定のリスト用に登録されます。 プロパティを検索プロパティ リストに追加するには、次の値が必要です。  
   
 -   プロパティ セット GUID  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 49
   
      プロパティ名として、次のいずれかを指定できます。  
   
-    -   **System.Author** や **System.Contact.HomeAddress** など、プロパティの Windows の正規名。  
+    -   **System.Author** や **System.Contact.HomeAddress**など、プロパティの Windows の正規名。  
   
     -   ユーザーにとって覚えやすくわかりやすい名前。 いくつかのプロパティは "Author" や "Home Address" などの一般的なわかりやすい名前に関連付けられていますが、ユーザーにとって最も適した任意の名前を指定できます。  
   
@@ -119,7 +123,7 @@ caps.handback.revision: 49
   
  **検索プロパティ リストの値を取得するには**  
   
- 「[検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)」を参照してください。  
+ 「 [検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)」を参照してください。  
   
  **Transact-SQL を使用してプロパティを検索プロパティ リストに追加するには**  
   
@@ -151,7 +155,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  **Management Studio を使用して検索プロパティ リストをフルテキスト インデックスに関連付けるには**  
   
- **[フルテキスト インデックスのプロパティ]** ダイアログ ボックスの **[全般]** ページで、**[検索プロパティ リスト]** の値を指定します。  
+ **[フルテキスト インデックスのプロパティ]** ダイアログ ボックスの **[全般]** ページで、 **[検索プロパティ リスト]** の値を指定します。  
   
 ##  <a name="Ov_CONTAINS_using_PROPERTY"></a> CONTAINS を使用した検索プロパティのクエリ  
  プロパティ スコープのフルテキスト クエリのための [CONTAINS](../../t-sql/queries/contains-transact-sql.md) の基本的な構文を次に示します。  
@@ -161,7 +165,7 @@ SELECT column_name FROM table_name
   WHERE CONTAINS ( PROPERTY ( column_name, 'property_name' ), '<contains_search_condition>' )  
 ```  
   
- たとえば、次のクエリは、`Title` データベースの `Document` テーブルの `Production.Document` 列内で、インデックス化されたプロパティ `AdventureWorks` に対する検索を実行します。 このクエリは、`Maintenance` という文字列が `Title` プロパティに含まれているドキュメントのみを返します。 `Repair`  
+ たとえば、次のクエリは、 `Title`データベースの `Document` テーブルの `Production.Document` 列内で、インデックス化されたプロパティ `AdventureWorks` に対する検索を実行します。 このクエリは、 `Title` という文字列が `Maintenance` プロパティに含まれているドキュメントのみを返します。 `Repair`  
   
 ```  
 USE AdventureWorks  
@@ -180,25 +184,25 @@ GO
   
  [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) ステートメントを使用して、検索プロパティを追加または削除します。  
   
-##### Management Studio で検索プロパティ リストを表示および変更するには  
+##### <a name="to-view-and-change-a-search-property-list-in-management-studio"></a>Management Studio で検索プロパティ リストを表示および変更するには  
   
 1.  オブジェクト エクスプローラーで、サーバーを展開します。  
   
-2.  **[データベース]** を展開し、データベースを展開します。  
+2.  **[データベース]**を展開し、データベースを展開します。  
   
-3.  **[ストレージ]** を展開します。  
+3.  **[ストレージ]**を展開します。  
   
 4.  **[検索プロパティ リスト]** を展開して、検索プロパティ リストを表示します。  
   
-5.  プロパティ リストを右クリックし、**[プロパティ]** をクリックします。  
+5.  プロパティ リストを右クリックし、 **[プロパティ]**をクリックします。  
   
 6.  **[検索プロパティ リスト エディター]** ダイアログ ボックスで、プロパティ グリッドを使用して、検索プロパティを追加または削除します。  
   
     1.  ドキュメント プロパティを削除するには、プロパティの左側にある行ヘッダーをクリックして、Del キーを押します。  
   
-    2.  ドキュメント プロパティを追加するには、リストの末尾で **\*** の右側の空白行をクリックして、新しいプロパティの値を入力します。  
+    2.  ドキュメント プロパティを追加するには、リストの末尾で **\***の右側の空白行をクリックして、新しいプロパティの値を入力します。  
   
-         これらの値の詳細については、「[検索プロパティ リスト エディター](../Topic/Search%20Property%20List%20Editor.md)」を参照してください。 Microsoft によって定義されているプロパティのこれらの値を取得する方法については、「[検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)」を参照してください。 独立系ソフトウェア ベンダー (ISV) によって定義されたプロパティの詳細については、そのベンダーのマニュアルを参照してください。  
+         これらの値の詳細については、「 [検索プロパティ リスト エディター](http://msdn.microsoft.com/library/0f3ced6e-0dfd-49fc-b175-82378c3d668e)」を参照してください。 Microsoft によって定義されているプロパティのこれらの値を取得する方法については、「 [検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)」を参照してください。 独立系ソフトウェア ベンダー (ISV) によって定義されたプロパティの詳細については、そのベンダーのマニュアルを参照してください。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -209,19 +213,19 @@ GO
   
  [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md) ステートメントを使用します。  
   
-##### Management Studio で検索プロパティ リストを削除するには  
+##### <a name="to-delete-a-search-property-list-in-management-studio"></a>Management Studio で検索プロパティ リストを削除するには  
   
 1.  オブジェクト エクスプローラーで、サーバーを展開します。  
   
-2.  **[データベース]** を展開し、データベースを展開します。  
+2.  **[データベース]**を展開し、データベースを展開します。  
   
-3.  **[ストレージ]** を展開し、**[検索プロパティ リスト]** ノードを展開します。  
+3.  **[ストレージ]**を展開し、 **[検索プロパティ リスト]** ノードを展開します。  
   
-4.  削除するプロパティ リストを右クリックして、**[削除]** をクリックします。  
+4.  削除するプロパティ リストを右クリックして、 **[削除]**をクリックします。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [検索用フィルターの構成と管理](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   

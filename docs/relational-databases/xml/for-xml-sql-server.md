@@ -1,31 +1,35 @@
 ---
-title: "FOR XML (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML 句, FOR XML 句について"
-  - "PATH FOR XML モード, 構築"
-  - "EXPLICIT FOR XML モード"
-  - "RAW FOR XML モード"
-  - "XML データの取得"
-  - "XML [SQL Server], FOR XML 句"
-  - "AUTO FOR XML モード"
-  - "[SQL Server] ダイアログ ボックスの XML の構築"
+title: FOR XML (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, about FOR XML clause
+- PATH FOR XML mode, construction
+- EXPLICIT FOR XML mode
+- RAW FOR XML mode
+- retrieving XML data
+- XML [SQL Server], FOR XML clause
+- AUTO FOR XML mode
+- XML [SQL Server], construction
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f48dc6ebc5af10d1157978a65ceb224041229326
+ms.lasthandoff: 04/11/2017
+
 ---
-# FOR XML (SQL Server)
+# <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
   SELECT クエリは、結果を行セットとして返します。 必要に応じて、SQL クエリに FOR XML 句を指定することで、SQL クエリの結果を XML 形式で取得することができます。 FOR XML 句は、最上位レベルのクエリとサブクエリのいずれでも使用できます。 最上位レベルの FOR XML 句は、SELECT ステートメント内でのみ使用できます。 サブ クエリでは、FOR XML 句を INSERT、UPDATE、DELETE ステートメント内で使用できます。 また、代入ステートメントでも使用できます。  
   
  FOR XML 句には、次のモードのうち 1 つを指定します。  
@@ -44,7 +48,7 @@ caps.handback.revision: 44
   
  EXPLICIT モードでは、XML の構造をより厳密に制御することができます。 属性や要素を自由に組み合わせて、XML の構造を決めることができます。 このモードでは、クエリを実行した結果として生成される行セットに特定の形式を指定する必要があります。 その後、この行セットの形式が、XML の構造にマップされます。 EXPLICIT モードの利点は、属性と要素を自由に組み合わせることができる点です。また、ラッパーや入れ子にした複雑なプロパティを作成したり、スペースで区切られた値を作成したり (OrderID 属性に注文 ID 値の一覧を渡すなど)、混合コンテンツを作成することもできます。  
   
- ただし、EXPLICIT モードのクエリを記述する作業は複雑になることがあります。 EXPLICIT モードを使用して階層を生成する代わりに、RAW、AUTO、または PATH モードの入れ子にした FOR XML クエリと TYPE ディレクティブを作成するなど、FOR XML の新しい機能を使用できます。 このような入れ子にした FOR XML クエリでも、EXPLICIT モードで生成できる XML を作成することができます。 詳細については、[入れ子になった FOR XML クエリの使用](../../relational-databases/xml/use-nested-for-xml-queries.md) および [FOR XML クエリの TYPE ディレクティブ](../../relational-databases/xml/type-directive-in-for-xml-queries.md) を参照してください。  
+ ただし、EXPLICIT モードのクエリを記述する作業は複雑になることがあります。 EXPLICIT モードを使用して階層を生成する代わりに、RAW、AUTO、または PATH モードの入れ子にした FOR XML クエリと TYPE ディレクティブを作成するなど、FOR XML の新しい機能を使用できます。 このような入れ子にした FOR XML クエリでも、EXPLICIT モードで生成できる XML を作成することができます。 詳細については、 [入れ子になった FOR XML クエリの使用](../../relational-databases/xml/use-nested-for-xml-queries.md) および [FOR XML クエリの TYPE ディレクティブ](../../relational-databases/xml/type-directive-in-for-xml-queries.md)を参照してください。  
   
  PATH モードと FOR XML クエリの入れ子機能を組み合わせると、EXPLICIT モードと同等の柔軟性が得られます。  
   
@@ -52,8 +56,8 @@ caps.handback.revision: 44
   
  FOR BROWSE 句で使用されるどのような選択に対しても FOR XML は無効です。  
   
-## 例  
- 次の `SELECT` ステートメントは、`Sales.Customer` データベースの `Sales.SalesOrderHeader` テーブルおよび `AdventureWorks2012` テーブルの情報を取得します。 このクエリでは、`AUTO` 句に `FOR XML` モードを指定しています。  
+## <a name="example"></a>例  
+ 次の `SELECT` ステートメントは、 `Sales.Customer` データベースの `Sales.SalesOrderHeader` テーブルおよび `AdventureWorks2012` テーブルの情報を取得します。 このクエリでは、 `AUTO` 句に `FOR XML` モードを指定しています。  
   
 ```  
 USE AdventureWorks2012  
@@ -68,7 +72,7 @@ ON Cust.CustomerID = OrderHeader.CustomerID
 FOR XML AUTO  
 ```  
   
-## FOR XML 句とサーバー名  
+## <a name="the-for-xml-clause-and-server-names"></a>FOR XML 句とサーバー名  
  FOR XML 句を伴う SELECT ステートメントが、クエリの中で 4 つの部分から構成される名前を指定している場合、クエリがローカル コンピューター上で実行されると、結果の XML ドキュメントにサーバー名は返されません。 しかし、クエリがネットワーク サーバー上で実行されると、4 つの部分から構成される名前でサーバー名が返されます。  
   
  たとえば、次のクエリについて考えてみます。  
@@ -105,7 +109,7 @@ FOR XML AUTO
 <x LastName="Achong"/>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [FOR XML 句の基本構文](../../relational-databases/xml/basic-syntax-of-the-for-xml-clause.md)   
  [FOR XML での RAW モードの使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
  [FOR XML での AUTO モードの使用](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   

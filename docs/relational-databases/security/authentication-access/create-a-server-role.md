@@ -1,28 +1,32 @@
 ---
 title: "サーバー ロールの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQL13.SWB.SERVERROLE.GENERAL.F1"
-  - "sql13.swb.serverrole.memberships.f1"
-  - "sql13.swb.serverrole.members.f1"
-helpviewer_keywords: 
-  - "サーバー ロール, 作成"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SQL13.SWB.SERVERROLE.GENERAL.F1
+- sql13.swb.serverrole.memberships.f1
+- sql13.swb.serverrole.members.f1
+helpviewer_keywords:
+- SERVER ROLE, creating
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be798eb132d37378b94659eda0efc1b586e7110a
+ms.lasthandoff: 04/11/2017
+
 ---
-# サーバー ロールの作成
+# <a name="create-a-server-role"></a>サーバー ロールの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]で新しいサーバー ロールを作成する方法について説明します。  
   
  **このトピックの内容**  
@@ -50,7 +54,7 @@ caps.handback.revision: 13
   
 -   CREATE SERVER ROLE 権限、または sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
--   さらに、ログインのための *server_principal* に対する IMPERSONATE 権限、*server_principal* として使用されるサーバー ロールのための ALTER 権限、または server_principal として使用される Windows グループのメンバーシップも必要です。  
+-   さらに、ログインのための *server_principal* に対する IMPERSONATE 権限、 *server_principal*として使用されるサーバー ロールのための ALTER 権限、または server_principal として使用される Windows グループのメンバーシップも必要です。  
   
 -   AUTHORIZATION オプションを使用してサーバー ロールの所有権を割り当てる場合は、次の権限も必要です。  
   
@@ -60,31 +64,31 @@ caps.handback.revision: 13
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### 新しいサーバー ロールを作成するには  
+#### <a name="to-create-a-new-server-role"></a>新しいサーバー ロールを作成するには  
   
 1.  オブジェクト エクスプローラーで、新しいサーバー ロールを作成するサーバーを展開します。  
   
 2.  **[セキュリティ]** フォルダーを展開します。  
   
-3.  **[サーバー ロール]** フォルダーを右クリックし、**[新しいサーバー ロール]** を選択します。  
+3.  **[サーバー ロール]** フォルダーを右クリックし、 **[新しいサーバー ロール]**を選択します。  
   
-4.  **[全般]** ページの [**新しいサーバー ロール – ***server_role_name*] ダイアログ ボックスで、新しいサーバー ロールの名前を **[サーバー ロール名]** ボックスに入力します。  
+4.  **[全般]***ページの [* 新しいサーバー ロール – **server_role_name** ] ダイアログ ボックスで、新しいサーバー ロールの名前を **[サーバー ロール名]** ボックスに入力します。  
   
 5.  **[所有者]** ボックスに、新しいサーバー ロールを所有するサーバー プリンシパルの名前を入力します。 または、省略記号 **[...]** をクリックして **[サーバー ログインまたはロールの選択]** ダイアログ ボックスを開きます。  
   
-6.  **[セキュリティ保護可能なリソース]** で、1 つ以上のサーバーレベルのセキュリティ保護可能なリソースを選択します。 セキュリティ保護可能なリソースを選択すると、サーバー ロールに、そのセキュリティ保護可能なリソースに対する権限を許可または拒否できます。  
+6.  **[セキュリティ保護可能なリソース]**で、1 つ以上のサーバーレベルのセキュリティ保護可能なリソースを選択します。 セキュリティ保護可能なリソースを選択すると、サーバー ロールに、そのセキュリティ保護可能なリソースに対する権限を許可または拒否できます。  
   
 7.  **[権限: 明示的]** ボックスで、選択されたセキュリティ保護可能なリソースに対するこのサーバー ロールの権限について、許可、許可の許可、または拒否のいずれかのチェック ボックスをオンにします。 選択されたセキュリティ保護可能なリソースすべてに対して権限を許可または拒否できない場合、権限は部分的に選択された形で表されます。  
   
 8.  **[メンバー]** ページで **[追加]** ボタンを使用して、新しいサーバー ロールに個人またはグループを表すログインを追加します。  
   
-9. ユーザー定義のサーバー ロールを、別のサーバー ロールのメンバーにすることができます。 現在のユーザー定義のサーバー ロールを、選択したサーバー ロールのメンバーにする場合は、**[メンバーシップ]** ページでチェック ボックスをオンにします。  
+9. ユーザー定義のサーバー ロールを、別のサーバー ロールのメンバーにすることができます。 現在のユーザー定義のサーバー ロールを、選択したサーバー ロールのメンバーにする場合は、 **[メンバーシップ]** ページでチェック ボックスをオンにします。  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### 新しいサーバー ロールを作成するには  
+#### <a name="to-create-a-new-server-role"></a>新しいサーバー ロールを作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   

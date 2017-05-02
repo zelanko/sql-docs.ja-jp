@@ -1,31 +1,35 @@
 ---
 title: "含まれているスキーマをマージするためのスキーマの前処理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プリプロセッサ ツールのテスト"
-  - "xsd:include"
-  - "XML スキーマ コレクション [SQL Server], プリプロセッサ ツール"
-  - "include 要素"
-  - "XML スキーマ [SQL Server], 前処理"
-  - "スキーマ コレクション [SQL Server], プリプロセッサ ツール"
-  - "プリプロセッサ ツール [XML スキーマ]"
-  - "XML スキーマ [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- testing preprocessor tool
+- xsd:include
+- XML schema collections [SQL Server], preprocessor tool
+- include element
+- XML schemas [SQL Server], preprocessing
+- schema collections [SQL Server], preprocessor tool
+- preprocessor tool [XML schemas]
+- XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73bb2043bf3e0cb0d8a076a07b4d9c33366c1cf7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 含まれているスキーマをマージするためのスキーマの前処理
+# <a name="preprocess-a-schema-to-merge-included-schemas"></a>含まれているスキーマをマージするためのスキーマの前処理
   W3C XSD の **include** 要素では、スキーマのモジュール性がサポートされます。そのため、1 つの XML スキーマを複数の物理ファイルにパーティション分割できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この要素は現在サポートされていません。 この要素を含む XML スキーマはサーバーによって拒否されます。  
   
  解決方法として、\<xsd:include> ディレクティブを含む XML スキーマを前処理して、含まれているすべてのスキーマの内容をコピーし、1 つのスキーマにマージすることで、サーバーにアップロードできます。 次の C# コードを使用すると、前処理を行うことができます。 コードの最初の部分にあるコメントにはこのコードの使用方法が記述されています。  
@@ -186,10 +190,10 @@ public class XmlSchemaIncludeNormalizer
 }  
 ```  
   
-## プリプロセッサ ツールのテスト  
+## <a name="testing-the-preprocessor-tool"></a>プリプロセッサ ツールのテスト  
  次の XSD スキーマを使用すると、プリプロセッサ ツールをテストできます。  
   
-### books_common.xsd  
+### <a name="bookscommonxsd"></a>books_common.xsd  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -199,7 +203,7 @@ public class XmlSchemaIncludeNormalizer
 </xsd:schema>  
 ```  
   
-### books.xsd  
+### <a name="booksxsd"></a>books.xsd  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -211,7 +215,7 @@ public class XmlSchemaIncludeNormalizer
 </xsd:schema>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [XML スキーマ コレクション &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

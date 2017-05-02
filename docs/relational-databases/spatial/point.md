@@ -1,35 +1,39 @@
 ---
 title: "ポイント | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "geometry サブタイプ Point [SQL Server]"
-  - "geometry データ型 [SQL Server], 空間データ"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Point geometry subtype [SQL Server]
+- geometry data type [SQL Server], spatial data
 ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3ab4b354292130b01c73f771c221a13b595bdbdc
+ms.lasthandoff: 04/11/2017
+
 ---
-# ポイント
+# <a name="point"></a>ポイント
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空間データの **Point** は、1 つの場所を表す 0 次元のオブジェクトです。これには、Z (昇格) 値と M (メジャー) 値が含まれる場合もあります。  
   
-## geography データ型  
- geography データ型の Point 型は、*Lat* が緯度、*Long* が経度を表している 1 つの場所を表します。 緯度と経度の値は度数で測定されます。 緯度の値は、常に [-90, 90] の範囲内になります。この範囲外の値が入力されると、例外がスローされます。 経度の値は、常に [-180, 180] の範囲内になります。この範囲外の入力値は、この範囲に収まるように調整されます。 たとえば、経度の値として 190 を入力した場合は、値 -170 に調整されます。 *SRID* は、返される **geography** インスタンスの空間参照 ID を表します。  
+## <a name="geography-data-type"></a>geography データ型  
+ geography データ型の Point 型は、 *Lat* が緯度、 *Long* が経度を表している 1 つの場所を表します。 緯度と経度の値は度数で測定されます。 緯度の値は、常に [-90, 90] の範囲内になります。この範囲外の値が入力されると、例外がスローされます。 経度の値は、常に [-180, 180] の範囲内になります。この範囲外の入力値は、この範囲に収まるように調整されます。 たとえば、経度の値として 190 を入力した場合は、値 -170 に調整されます。 *SRID* は、返される **geography** インスタンスの空間参照 ID を表します。  
   
-## geometry データ型  
- geometry データ型の Point 型は、*X* が生成される Point の X 座標、*Y* が生成される Point の Y 座標を表している 1 つの場所を表します。 *SRID* は、返される **geometry** インスタンスの空間参照 ID を表します。  
+## <a name="geometry-data-type"></a>geometry データ型  
+ geometry データ型の Point 型は、 *X* が生成される Point の X 座標、 *Y* が生成される Point の Y 座標を表している 1 つの場所を表します。 *SRID* は、返される **geometry** インスタンスの空間参照 ID を表します。  
   
-## 使用例  
- 次の例では、点 (3, 4) を表す `geometry Point` インスタンスを作成します。このインスタンスの SRID は 0 です。  
+## <a name="examples"></a>使用例  
+ 次の例では、点 (3, 4) を表す `geometry Point`インスタンスを作成します。このインスタンスの SRID は 0 です。  
   
 ```  
 DECLARE @g geometry;  
@@ -43,7 +47,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('POINT(3 4 7 2.5)');  
 ```  
   
- 最後の例では、`geometry``Point` インスタンスの X、Y、Z、および M の値を返します。  
+ 最後の例では、 `geometry``Point` インスタンスの X、Y、Z、および M の値を返します。  
   
 ```  
 SELECT @g.STX;  
@@ -59,7 +63,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('POINT(3 4 NULL NULL)');  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [MultiPoint](../../relational-databases/spatial/multipoint.md)   
  [STX &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stx-geometry-data-type.md)   
  [STY &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/sty-geometry-data-type.md)   

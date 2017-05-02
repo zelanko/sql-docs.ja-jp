@@ -1,27 +1,31 @@
 ---
 title: "ロールの追加 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1"
-helpviewer_keywords: 
-  - "メンバーをロールに追加"
-  - "ロールの追加"
+ms.custom: 
+ms.date: 07/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1
+helpviewer_keywords:
+- adding a member to a role
+- join a role
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 750dc366fde98b7d1c6514a2beeae4d7fd831c6f
+ms.lasthandoff: 04/11/2017
+
 ---
-# ロールの追加
+# <a name="join-a-role"></a>ロールの追加
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、ログインおよびデータベース ユーザーにロールを割り当てる方法について説明します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で権限を効率的に管理するには、ロールを使用します。 ロールに権限を割り当て、そのロールに対してユーザーとログインの追加および削除を行います。 ロールを使用すると、権限をユーザーごとに個別に管理する必要がありません。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、4 種類のロールをサポートしています。  
@@ -34,7 +38,7 @@ caps.handback.revision: 13
   
 -   ユーザー定義データベース ロール  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、固定ロールは自動的に使用可能になります。 固定ロールには、一般的なタスクを実行するのに必要な権限があります。 固定ロールの詳細については、次のリンクを参照してください。 ユーザー定義ロールはユーザーが作成するもので、権限を選択してカスタマイズできます。 ユーザー定義ロールの詳細については、次のリンクを参照してください。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、固定ロールは自動的に使用可能になります。 固定ロールには、一般的なタスクを実行するのに必要な権限があります。 固定ロールの詳細については、次のリンクを参照してください。 ユーザー定義ロールはユーザーが作成するもので、権限を選択してカスタマイズできます。 ユーザー定義ロールの詳細については、次のリンクを参照してください。  
   
  **このトピックの内容**  
   
@@ -61,11 +65,11 @@ caps.handback.revision: 13
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> 権限  
- データベースに対する **ALTER ANY ROLE** アクセス許可、ロールに対する **ALTER** アクセス許可、または **db_securityadmin** のメンバーシップが必要です。  
+ データベースに対する **ALTER ANY ROLE** アクセス許可、ロールに対する **ALTER** アクセス許可、または **db_securityadmin**のメンバーシップが必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### 固定サーバー ロールにメンバーを追加するには  
+#### <a name="to-add-a-member-to-a-fixed-server-role"></a>固定サーバー ロールにメンバーを追加するには  
   
 1.  オブジェクト エクスプローラーで、固定サーバー ロールを編集するサーバーを展開します。  
   
@@ -73,15 +77,15 @@ caps.handback.revision: 13
   
 3.  **[サーバー ロール]** フォルダーを展開します。  
   
-4.  編集するロールを右クリックし、**[プロパティ]** をクリックします。  
+4.  編集するロールを右クリックし、 **[プロパティ]**をクリックします。  
   
-5.  **[サーバー ロールのプロパティ - *server_role_name*]** ダイアログ ボックスの **[メンバー]** ページで、**[追加]** をクリックします。  
+5.  **server_role_name**** ダイアログ ボックスの **メンバー** ページで、 **追加**をクリックします。  
   
-6.  **[サーバー ログインまたはロールの選択]** ダイアログ ボックスで、**[選択するオブジェクト名を入力してください (例)]** に、このサーバー ロールに追加するログインまたはサーバー ロールを入力します。 または、 **[参照]** をクリックし、 **[オブジェクトの参照]** ダイアログ ボックスに表示されるいずれかのオブジェクトまたはすべてのオブジェクトを選択します。 **[OK]** をクリックして **[サーバー ロールのプロパティ - *server_role_name*]** ダイアログ ボックスに戻ります。  
+6.  **[サーバー ログインまたはロールの選択]** ダイアログ ボックスで、 **[選択するオブジェクト名を入力してください (例)]**に、このサーバー ロールに追加するログインまたはサーバー ロールを入力します。 または、 **[参照]** をクリックし、 **[オブジェクトの参照]** ダイアログ ボックスに表示されるいずれかのオブジェクトまたはすべてのオブジェクトを選択します。 **OK** をクリックして **server_role_name**** ダイアログ ボックスに戻ります。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-#### ユーザー定義データベース ロールにメンバーを追加するには  
+#### <a name="to-add-a-member-to-a-user-defined-database-role"></a>ユーザー定義データベース ロールにメンバーを追加するには  
   
 1.  オブジェクト エクスプローラーで、ユーザー定義のデータベース ロールを編集するサーバーを展開します。  
   
@@ -95,17 +99,17 @@ caps.handback.revision: 13
   
 6.  **[サーバー ロール]** フォルダーを展開します。  
   
-7.  編集するロールを右クリックし、**[プロパティ]** をクリックします。  
+7.  編集するロールを右クリックし、 **[プロパティ]**をクリックします。  
   
-8.  **[データベース ロールのプロパティ - *database_role_name*]** ダイアログ ボックスの **[全般]** ページで、**[追加]** をクリックします。  
+8.  **database_role_name**** ダイアログ ボックスの **全般** ページで、 **追加**をクリックします。  
   
-9. **[データベース ユーザーまたはロールの選択]** ダイアログ ボックスで、**[選択するオブジェクト名を入力してください (例)]** に、このデータベース ロールに追加するログインまたはデータベース ロールを入力します。 または、 **[参照]** をクリックし、 **[オブジェクトの参照]** ダイアログ ボックスに表示されるいずれかのオブジェクトまたはすべてのオブジェクトを選択します。 **[OK]** をクリックして **[データベース ロールのプロパティ - *database_role_name*]** ダイアログ ボックスに戻ります。  
+9. **[データベース ユーザーまたはロールの選択]** ダイアログ ボックスで、 **[選択するオブジェクト名を入力してください (例)]**に、このデータベース ロールに追加するログインまたはデータベース ロールを入力します。 または、 **[参照]** をクリックし、 **[オブジェクトの参照]** ダイアログ ボックスに表示されるいずれかのオブジェクトまたはすべてのオブジェクトを選択します。 **OK** をクリックして **database_role_name**** ダイアログ ボックスに戻ります。  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### 固定サーバー ロールにメンバーを追加するには  
+#### <a name="to-add-a-member-to-a-fixed-server-role"></a>固定サーバー ロールにメンバーを追加するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -120,7 +124,7 @@ caps.handback.revision: 13
   
  詳細については、「[ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md)」を参照してください。  
   
-#### ユーザー定義データベース ロールにメンバーを追加するには  
+#### <a name="to-add-a-member-to-a-user-defined-database-role"></a>ユーザー定義データベース ロールにメンバーを追加するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -135,9 +139,10 @@ caps.handback.revision: 13
   
  詳細については、「[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [サーバー レベルのロール](../../../relational-databases/security/authentication-access/server-level-roles.md)   
  [データベース レベルのロール](../../../relational-databases/security/authentication-access/database-level-roles.md)   
  [アプリケーション ロール](../../../relational-databases/security/authentication-access/application-roles.md)  
   
   
+

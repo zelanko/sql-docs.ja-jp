@@ -1,25 +1,29 @@
 ---
 title: "データベースをデータベース スナップショットに戻す | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データベース スナップショット [SQL Server]"
-  - "データベースを戻す"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database snapshots [SQL Server], reverting to
+- reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 caps.latest.revision: 58
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7af090ce5354c1cf7a255a80d8f2f6ca1da48405
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベースをデータベース スナップショットに戻す
+# <a name="revert-a-database-to-a-database-snapshot"></a>データベースをデータベース スナップショットに戻す
   オンライン データベースのデータが破損した場合、特定のケースでは、データベースをバックアップから復元する代わりに、データベースをデータが破損した日付より前のデータベース スナップショットに復帰させる方が適切であることがあります。 たとえば、テーブルの削除など、最近の重大なユーザー エラーを元に戻すには、データベースの復帰が役立つ場合があります。 ただし、スナップショットの作成後に行った変更はすべて失われます。  
   
 -   **作業を開始する準備:**  
@@ -30,7 +34,7 @@ caps.handback.revision: 58
   
      [セキュリティ](#Security)  
   
--   **データベースをデータベース スナップショットに戻すには、**  [Transact-SQL](#TsqlProcedure) を使用します。  
+-   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -73,9 +77,9 @@ caps.handback.revision: 58
     > [!NOTE]  
     >  データベースが破損している場合は、バックアップから復元する必要があります。 詳細については、「[データベースの全体復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)」または「[データベースの全体復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)」を参照してください。  
   
--   エラーの前に作成された最近のスナップショットを特定する。 詳細については、「[データベース スナップショットの表示 &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)」を参照してください。  
+-   エラーの前に作成された最近のスナップショットを特定する。 詳細については、「 [データベース スナップショットの表示 &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)」を参照してください。  
   
--   データベース上に現在存在するその他のスナップショットをすべて削除する。 詳細については、「[データベース スナップショットの削除&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)」を参照してください。  
+-   データベース上に現在存在するその他のスナップショットをすべて削除する。 詳細については、「 [データベース スナップショットの削除 &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)」を参照してください。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -86,13 +90,13 @@ caps.handback.revision: 58
  **データベースをデータベース スナップショットに戻すには**  
   
 > [!NOTE]  
->  この手順の例については、このセクションの後半の「[例 (Transact-SQL)](#TsqlExample)」を参照してください。  
+>  この手順の例については、このセクションの後半の「 [例 (Transact-SQL)](#TsqlExample)」を参照してください。  
   
-1.  データベースを戻す対象になるデータベース スナップショットを特定します。 データベース内のスナップショットは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で参照できます (詳細については、「[データベース スナップショットの表示 &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)」を参照してください)。 また、[sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの **source_database_id** 列から、ビューのソース データベースを特定することもできます。  
+1.  データベースを戻す対象になるデータベース スナップショットを特定します。 データベース内のスナップショットは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で参照できます (詳細については、「 [データベース スナップショットの表示 &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)」を参照してください)。 また、 **sys.databases &#40;Transact-SQL&#41;** カタログ ビューの [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列から、ビューのソース データベースを特定することもできます。  
   
 2.  他のデータベース スナップショットを削除します。  
   
-     スナップショットの削除の詳細については、「[データベース スナップショットの削除&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)」を参照してください。 データベースで完全復旧モデルを使用している場合は、データベースを戻す前にログをバックアップする必要があります。 詳細については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)」または「[データベースが破損したときのトランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)」を参照してください。  
+     スナップショットの削除の詳細については、「 [データベース スナップショットの削除 &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)」を参照してください。 データベースで完全復旧モデルを使用している場合は、データベースを戻す前にログをバックアップする必要があります。 詳細については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)」または「[データベースが破損したときのトランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)」を参照してください。  
   
 3.  データベースを戻す操作を実行します。  
   
@@ -100,9 +104,9 @@ caps.handback.revision: 58
   
      RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=***database_snapshot_name*  
   
-     *database_name* はソース データベースで、*database_snapshot_name* はデータベースを戻す対象になるスナップショットの名前です。 このステートメントでは、バックアップ デバイスではなく、スナップショット名を指定する必要があることに注意してください。  
+     *database_name* はソース データベースで、 *database_snapshot_name* はデータベースを戻す対象になるスナップショットの名前です。 このステートメントでは、バックアップ デバイスではなく、スナップショット名を指定する必要があることに注意してください。  
   
-     詳細については、「[RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)」を参照してください。  
+     詳細については、「 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)」を参照してください。  
   
     > [!NOTE]  
     >  データベースを戻す操作中、スナップショットとソース データベースはどちらも使用できません。 ソース データベースとスナップショットは、どちらも "復元中" に設定されます。 データベースを戻す操作中にエラーが発生した場合は、データベースを再び起動したときに、データベースを戻す操作の完了を試行します。  
@@ -124,7 +128,7 @@ caps.handback.revision: 58
 -   B. [Sales データベースのスナップショットを戻す](#Reverting_Sales)  
   
 ####  <a name="Reverting_AW"></a> A. AdventureWorks データベースのスナップショットを戻す  
- この例では、現在、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに 1 つだけスナップショットが存在することを想定しています。 データベースを戻す対象になるスナップショットを作成する例については、「[データベース スナップショットの作成 &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)」を参照してください。  
+ この例では、現在、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに 1 つだけスナップショットが存在することを想定しています。 データベースを戻す対象になるスナップショットを作成する例については、「 [データベース スナップショットの作成 &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)」を参照してください。  
   
 ```  
 USE master;  
@@ -135,7 +139,7 @@ GO
 ```  
   
 ####  <a name="Reverting_Sales"></a> B. Sales データベースのスナップショットを戻す  
- この例では、現在、**Sales** データベースに 2 つのスナップショット (**sales_snapshot0600** および **sales_snapshot1200**) が存在することを想定しています。 古いスナップショットを削除し、新しいスナップショットにデータベースを戻します。  
+ この例では、現在、 **Sales** データベースに 2 つのスナップショット ( **sales_snapshot0600** および **sales_snapshot1200**) が存在することを想定しています。 古いスナップショットを削除し、新しいスナップショットにデータベースを戻します。  
   
  この例で使用するサンプル データベースおよびスナップショットを作成するためのコードについては、次の各トピックを参照してください。  
   
@@ -164,9 +168,9 @@ GO
   
 -   [データベース スナップショットの削除 &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データベース スナップショット &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [データベース ミラーリングとデータベース スナップショット &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   

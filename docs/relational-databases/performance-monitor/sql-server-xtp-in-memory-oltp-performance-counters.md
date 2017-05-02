@@ -1,34 +1,38 @@
 ---
 title: "SQL Server XTP (インメモリ OLTP) パフォーマンス カウンター | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/06/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 04/06/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c4fb8ea7bd2ca4a09f0758c175b9eb2781f2ed5b
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server XTP (インメモリ OLTP) パフォーマンス カウンター
+# <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>SQL Server XTP (インメモリ OLTP) パフォーマンス カウンター
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、パフォーマンス モニターがインメモリ OLTP のアクティビティを監視するために使用できるオブジェクトとカウンターが用意されています。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降では、オブジェクトとカウンターがマシン上で指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンのすべてのインスタンス間で共有されます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、パフォーマンス モニターがインメモリ OLTP のアクティビティを監視するために使用できるオブジェクトとカウンターが用意されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降では、オブジェクトとカウンターがマシン上で指定した [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]バージョンのすべてのインスタンス間で共有されます。  
   
- 以前は、オブジェクトおよびカウンター名は **XTP Cursors** のように、*XTP* から始まりました。 現在は、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から始まり、名前は次のようなパターンとなります。  
+ 以前は、オブジェクトおよびカウンター名は *XTP Cursors*のように、 **XTP**から始まりました。 現在は、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]から始まり、名前は次のようなパターンとなります。  
   
 -   **SQL Server** *\<version>* **XTP Cursors**  
   
- *\<version >* の値は、2016 のようになります。  
+ *\<version>* の値は、2016 のようになります。  
   
 ##  <a name="SQLServerPOs"></a> SQL Server XTP パフォーマンス オブジェクト  
- 次の表では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パフォーマンス オブジェクトについて説明します。  
+ 次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パフォーマンス オブジェクトについて説明します。  
   
 |パフォーマンス オブジェクト|説明|  
 |------------------------|-----------------|  
@@ -37,8 +41,9 @@ caps.handback.revision: 17
 |[SQL Server XTP Garbage Collection](../../relational-databases/performance-monitor/sql-server-xtp-garbage-collection.md)|SQL Server XTP Garbage Collection パフォーマンス オブジェクトには、インメモリ OLTP エンジンのガベージ コレクターに関連するカウンターが含まれています。|  
 |[SQL Server 2016 XTP IO ガバナー](../../relational-databases/performance-monitor/sql-server-xtp-io-governor.md)|SQL Server XTP IO ガバナーのパフォーマンス オブジェクトには、インメモリ OLTP IO レート ガバナーに関連するカウンターが含まれています。|
 |[SQL Server XTP Phantom Processor](../../relational-databases/performance-monitor/sql-server-xtp-phantom-processor.md)|SQL Server XTP Phantom Processor パフォーマンス オブジェクトには、インメモリ OLTP エンジンのファントム処理サブシステムに関連するカウンターが含まれています。 このコンポーネントには、SERIALIZABLE 分離レベルで実行されているトランザクション内のファントム行を検出する役割があります。|  
-|[SQL Server の XTP ストレージ](../../relational-databases/performance-monitor/sql-server-xtp-storage.md)|SQL Server XTP ストレージのパフォーマンス オブジェクトには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインメモリ OLTP のストレージに関連するカウンターが含まれています。|  
-|[SQL Server XTP トランザクション ログ](../../relational-databases/performance-monitor/sql-server-xtp-transaction-log.md)|SQL Server XTP トランザクション ログ パフォーマンス オブジェクトには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインメモリ OLTP トランザクション ログに関連するカウンターが含まれています。|  
-|[SQL Server XTP トランザクション](../../relational-databases/performance-monitor/sql-server-xtp-transactions.md)|SQL Server XTP トランザクション ログ パフォーマンス オブジェクトには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインメモリ OLTP のエンジン トランザクションに関連するカウンターが含まれています。|  
+|[SQL Server の XTP ストレージ](../../relational-databases/performance-monitor/sql-server-xtp-storage.md)|SQL Server XTP ストレージのパフォーマンス オブジェクトには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインメモリ OLTP のストレージに関連するカウンターが含まれています。|  
+|[SQL Server XTP トランザクション ログ](../../relational-databases/performance-monitor/sql-server-xtp-transaction-log.md)|SQL Server XTP トランザクション ログ パフォーマンス オブジェクトには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインメモリ OLTP トランザクション ログに関連するカウンターが含まれています。|  
+|[SQL Server XTP トランザクション](../../relational-databases/performance-monitor/sql-server-xtp-transactions.md)|SQL Server XTP トランザクション ログ パフォーマンス オブジェクトには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインメモリ OLTP のエンジン トランザクションに関連するカウンターが含まれています。|  
   
   
+

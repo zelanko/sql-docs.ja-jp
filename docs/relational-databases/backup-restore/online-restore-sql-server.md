@@ -1,25 +1,29 @@
 ---
 title: "オンライン復元 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "オンライン復元 [SQL Server]"
-  - "オンライン復元 [SQL Server], オンライン復元について"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online restores [SQL Server]
+- online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66c1f5169f8978d05f34b19536af54964c3057d9
+ms.lasthandoff: 04/11/2017
+
 ---
-# オンライン復元 (SQL Server)
+# <a name="online-restore-sql-server"></a>オンライン復元 (SQL Server)
   オンライン復元は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition でのみサポートされています。 このエディションの既定で、ファイル復元、ページ復元、または段階的な部分復元はオンラインで行われます。 このトピックの内容は、複数のファイルまたはファイル グループを含むデータベース (単純復旧モデルでは、読み取り専用ファイル グループのみ) に関連しています。  
   
  データベースがオンラインのときにデータを復元する処理を *オンライン復元*といいます。 プライマリ ファイル グループがオンラインの場合、1 つ以上のセカンダリ ファイル グループがオフラインでも、そのデータベースはオンラインと見なされます。 どの復旧モデルでも、データベースがオンラインであれば、オフラインのファイルを復元できます。 完全復旧モデルでは、データベースがオンラインであれば、ページも復元できます。  
@@ -44,9 +48,9 @@ caps.handback.revision: 45
 >  サーバーに接続された複数のデバイス使用してバックアップを行った場合は、オンライン復元時に同じ数のデバイスを使用できるようにしておく必要があります。  
   
 > [!CAUTION]  
->  スナップショット バックアップを使用する場合は、**オンライン復元** を実行できません。 **スナップショット バックアップ** の詳細については、「[Azure でのデータベース ファイルのスナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。  
+>  スナップショット バックアップを使用する場合は、 **オンライン復元**を実行できません。 **スナップショット バックアップ**の詳細については、「 [Azure でのデータベース ファイルのスナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。  
   
-## オンライン復元のログ バックアップ  
+## <a name="log-backups-for-online-restore"></a>オンライン復元のログ バックアップ  
  オンライン復元の場合、復旧ポイントとは、復元しているデータがオフラインになった時点、または前回読み取り専用に設定された時点です。 復旧ポイントに至るまでのトランザクション ログ バックアップ、およびこの復旧ポイントを含むトランザクション ログ バックアップが、すべて使用可能になっている必要があります。 通常、ファイルの復旧ポイントに対応するには、復旧ポイント以降のログ バックアップが必要です。 唯一の例外は、データが読み取り専用になった後に作成されたデータ バックアップから、読み取り専用データのオンライン復元を実行する場合です。 この場合、ログ バックアップは必要ありません。  
   
  通常、データベースがオンラインの間は、復元シーケンスを開始した後でも、トランザクション ログ バックアップを実行できます。 最後のログ バックアップのタイミングは、復元されるファイルのプロパティによって異なります。  
@@ -56,7 +60,7 @@ caps.handback.revision: 45
     > [!NOTE]  
     >  上記の情報は、オフライン ファイルにも当てはまります。  
   
--   最初の復元ステートメントが実行された時点でオンラインになっていた読み取りと書き込みが可能なファイル、またはその復元ステートメントで自動的にオフラインになった読み取りと書き込みが可能なファイルは、特殊なケースです。 この場合、最初の *復元シーケンス* (復元、ロールフォワード、およびデータの復旧を行う、1 つ以上の RESTORE ステートメントのシーケンス) の間にログ バックアップを実行する必要があります。 通常、このログ バックアップは、すべての完全バックアップの復元後かつデータ復旧の前に行われる必要があります。 ただし、特定のファイル グループに対して複数のファイル バックアップが存在する場合、ログ バックアップの最小復旧ポイントはそのファイル グループがオフラインになった後の時点になります。 このデータ復元後のログ バックアップにより、ファイルがオフラインになった時点がキャプチャされます。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ではオンライン復元のオンライン ログを使用できないので、データ復元後のログ バックアップが必要です。  
+-   最初の復元ステートメントが実行された時点でオンラインになっていた読み取りと書き込みが可能なファイル、またはその復元ステートメントで自動的にオフラインになった読み取りと書き込みが可能なファイルは、特殊なケースです。 この場合、最初の *復元シーケンス* (復元、ロールフォワード、およびデータの復旧を行う、1 つ以上の RESTORE ステートメントのシーケンス) の間にログ バックアップを実行する必要があります。 通常、このログ バックアップは、すべての完全バックアップの復元後かつデータ復旧の前に行われる必要があります。 ただし、特定のファイル グループに対して複数のファイル バックアップが存在する場合、ログ バックアップの最小復旧ポイントはそのファイル グループがオフラインになった後の時点になります。 このデータ復元後のログ バックアップにより、ファイルがオフラインになった時点がキャプチャされます。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ではオンライン復元のオンライン ログを使用できないので、データ復元後のログ バックアップが必要です。  
   
     > [!NOTE]  
     >  または、復元シーケンスの前に手動でファイルをオフラインにすることもできます。 詳細については、このトピックの「データベースまたはファイルのオフライン化」を参照してください。  
@@ -74,22 +78,22 @@ caps.handback.revision: 45
   
  データベースがオフライン状態の間、すべての復元処理はオフライン復元になります。  
   
-## 使用例  
+## <a name="examples"></a>使用例  
   
 > [!NOTE]  
 >  オンライン復元シーケンスでは、オフライン復元シーケンスと同じ構文を使用します。  
   
 -   [例 : データベースの段階的な部分復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [例 : 一部のファイル グループのみを復元する段階的な部分復元 &#40;Sim単純復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
--   [例 : 読み取り専用ファイルのオンライン復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [例: 読み取り専用ファイルのオンライン復元 &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [例 : データベースの段階的な部分復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [例: データベースの段階的な部分復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [例 : 一部のファイル グループのみを復元する段階的な部分復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
--   [例 : 読み取り/書き込みファイルのオンライン復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [例: 読み取り/書き込みファイルのオンライン復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
 -   [例 : 読み取り専用ファイルのオンライン復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
@@ -105,7 +109,7 @@ caps.handback.revision: 45
   
 -   [機能していないファイル グループの削除 &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ファイル復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [ファイル復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [ページ復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   

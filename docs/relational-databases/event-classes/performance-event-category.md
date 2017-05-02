@@ -1,29 +1,33 @@
 ---
 title: "Performance イベント カテゴリ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server イベント クラス, Performance イベント カテゴリ"
-  - "Performance イベント カテゴリ [SQL Server]"
-  - "イベント クラス [SQL Server], Performance イベント カテゴリ"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, Performance event category
+- Performance event category [SQL Server]
+- event classes [SQL Server], Performance event category
 ms.assetid: 708f3585-d8be-4980-bbff-672d7c59397e
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c74104068ce59f26b98d30b9e5af31704347d14a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Performance イベント カテゴリ
-  **Performance** イベント カテゴリを使用すると、**Showplan** イベント クラス、および SQL DML (データ操作言語) の操作を実行したときに作成されるイベント クラスを監視できます。  
+# <a name="performance-event-category"></a>Performance イベント カテゴリ
+  **Performance** イベント カテゴリを使用すると、 **Showplan** イベント クラス、および SQL DML (データ操作言語) の操作を実行したときに作成されるイベント クラスを監視できます。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
   
 |トピック|説明|  
 |-----------|-----------------|  
@@ -40,7 +44,7 @@ caps.handback.revision: 32
 |[Plan Guide Successful イベント クラス](../../relational-databases/event-classes/plan-guide-successful-event-class.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でプラン ガイドを含むクエリまたはバッチの実行プランが正常に生成されたことを示します。|  
 |[Plan Guide Unsuccessful イベント クラス](../../relational-databases/event-classes/plan-guide-unsuccessful-event-class.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でプラン ガイドを含むクエリまたはバッチの実行プランを生成できなかったことを示します。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)  
   
   

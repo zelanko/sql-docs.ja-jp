@@ -1,30 +1,34 @@
 ---
 title: "msdb データベース | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server エージェント, msdb データベース"
-  - "警告 [SQL Server], msdb データベース"
-  - "ジョブ [SQL Server], msdb データベース"
-  - "msdb データベース [SQL Server]"
+ms.custom: 
+ms.date: 11/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Agent, msdb database
+- alerts [SQL Server], msdb database
+- jobs [SQL Server], msdb database
+- msdb database [SQL Server]
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3ea8b1e63f5cc458130e3dd7deeed99be7f53e9
+ms.lasthandoff: 04/11/2017
+
 ---
-# msdb データベース
+# <a name="msdb-database"></a>msdb データベース
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **msdb** データベースは、警告やジョブのスケジュール設定のために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって使用されます。また、その他の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 、データベース メールなどの機能でも使用されます。  
+  **msdb** データベースは、警告やジョブのスケジュール設定のために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって使用されます。また、その他の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[ssSB](../../includes/sssb-md.md)]、データベース メールなどの機能でも使用されます。  
   
  たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、オンラインのバックアップおよび復元の履歴をすべて **msdb**データベース内のテーブルで自動的に管理します。 この情報には、バックアップの実行者名、バックアップ日時、バックアップが格納されているデバイスやファイルなどが含まれます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、この情報を使用して、データベースを復元してトランザクション ログ バックアップを適用するプランを立てます。 すべてのデータベースに対するバックアップ イベントは、独自のアプリケーションやサード パーティのツールで発生した場合にも記録されます。 たとえば、SMO (SQL Server 管理オブジェクト) オブジェクトを呼び出してバックアップ操作を行う [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] アプリケーションの場合、イベントは **msdb** システム テーブル、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログ、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに記録されます。 **msdb**に格納される情報を保護するために、 **msdb** トランザクション ログをフォールト トレラント ストレージに置くことを検討するようにお勧めします。  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 46
 |CONCAT_NULL_YIELDS_NULL|OFF|はい|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|はい|  
 |CURSOR_DEFAULT|GLOBAL|はい|  
-|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> [ユーザー アカウント制御]<br /><br /> はい|  
+|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> はい<br /><br /> はい|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|はい|  
 |DB_CHAINING|ON|はい|  
 |ENCRYPTION|OFF|いいえ|  
@@ -115,3 +119,4 @@ caps.handback.revision: 46
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   
+

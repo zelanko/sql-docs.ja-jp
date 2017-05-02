@@ -1,24 +1,28 @@
 ---
 title: "例: EXPLICIT モードを使用した兄弟の構築 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "EXPLICIT FOR XML モード"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- EXPLICIT FOR XML mode
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9ada54a0e85cc9e03441ef008372d0df59a4030f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 例: EXPLICIT モードを使用した兄弟の構築
+# <a name="example-constructing-siblings-with-explicit-mode"></a>例: EXPLICIT モードを使用した兄弟の構築
   販売注文情報を提供する XML を生成するとします。 <`SalesPerson`> 要素と <`OrderDetail`> 要素は兄弟です。 各注文には、<`OrderHeader`> 要素が 1 つ、<`SalesPerson`> 要素が 1 つ、<`OrderDetail`> 要素が 1 つ以上あります。  
   
 ```  
@@ -108,7 +112,7 @@ FOR XML EXPLICIT;
   
  `</OrderHeader>`  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [FOR XML での EXPLICIT モードの使用](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

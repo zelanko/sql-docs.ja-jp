@@ -1,25 +1,29 @@
 ---
 title: "テーブル内の列の順序の変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "列 [SQL Server], テーブル内の順序の変更"
-  - "列の順序, 変更"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [SQL Server], change order in a table
+- column order, change
 ms.assetid: cd99ef56-9085-431a-a0fc-58e7add5399f
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9ab22cf6c60bd7d89ff70eba15ca65c731a1fb1
+ms.lasthandoff: 04/11/2017
+
 ---
-# テーブル内の列の順序の変更
+# <a name="change-column-order-in-a-table"></a>テーブル内の列の順序の変更
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、テーブル デザイナーで列の順序を変更できます。  
@@ -37,9 +41,9 @@ caps.handback.revision: 15
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### 列の順序を変更するには  
+#### <a name="to-change-the-column-order"></a>列の順序を変更するには  
   
-1.  **オブジェクト エクスプローラー**で、並べ替える列が含まれているテーブルを右クリックし、**[デザイン]** をクリックします。  
+1.  **オブジェクト エクスプローラー**で、並べ替える列が含まれているテーブルを右クリックし、 **[デザイン]**をクリックします。  
   
 2.  順序を変更する列の名前の左側にあるボックスを選択します。  
   

@@ -1,29 +1,33 @@
 ---
 title: "リソース ガバナー ワークロード グループ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "リソース ガバナー, ワークロード グループ"
-  - "ワークロード グループ [SQL Server]"
-  - "ワークロード グループ [SQL Server], 概要"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, workload group
+- workload groups [SQL Server]
+- workload groups [SQL Server], overview
 ms.assetid: a84c3c3f-55b6-4a30-9c42-13f082d9281e
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f67e0fd5de601ceb4d808f42fa710c02fa23d3d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# リソース ガバナー ワークロード グループ
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーでは、ワークロード グループは分類基準が類似しているセッション要求のコンテナーとして機能します。 ワークロードは、セッションの全体的な監視を可能にし、セッションのポリシーを定義します。 各ワークロード グループはリソース プール内に存在します。リソース プールは [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの物理リソースのサブセットを表します。 セッションの起動時に、リソース ガバナーの分類子によって、セッションは指定されたワークロード グループに割り当てられます。セッションの実行にはワークロード グループに割り当てられたポリシーおよびリソース プールに対して定義されたリソースを使用する必要があります。  
+# <a name="resource-governor-workload-group"></a>リソース ガバナー ワークロード グループ
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーでは、ワークロード グループは分類基準が類似しているセッション要求のコンテナーとして機能します。 ワークロードは、セッションの全体的な監視を可能にし、セッションのポリシーを定義します。 各ワークロード グループはリソース プール内に存在します。リソース プールは [!INCLUDE[ssDE](../../includes/ssde-md.md)]インスタンスの物理リソースのサブセットを表します。 セッションの起動時に、リソース ガバナーの分類子によって、セッションは指定されたワークロード グループに割り当てられます。セッションの実行にはワークロード グループに割り当てられたポリシーおよびリソース プールに対して定義されたリソースを使用する必要があります。  
   
-## ワークロード グループの概念  
+## <a name="workload-group-concepts"></a>ワークロード グループの概念  
  ワークロード グループは、分類基準を適用して類似すると判断されたセッション要求のコンテナーとして機能します。 ワークロード グループによって、リソース消費の全体的な監視、およびグループ内のすべての要求に対する一貫したポリシーの適用が可能となります。 グループは、そのメンバーに対するポリシーを定義します。  
   
 > [!NOTE]  
@@ -39,7 +43,7 @@ caps.handback.revision: 6
   
  リソース ガバナーには、ワークロード グループを作成、変更、および削除するための DDL ステートメントも用意されています。  
   
-## ワークロード グループのタスク  
+## <a name="workload-group-tasks"></a>ワークロード グループのタスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
@@ -47,8 +51,8 @@ caps.handback.revision: 6
 |ワークロード グループの設定を変更する方法について説明します。|[ワークロード グループの設定の変更](../../relational-databases/resource-governor/change-workload-group-settings.md)|  
 |ワークロード グループを削除する方法について説明します。|[ワークロード グループの削除](../../relational-databases/resource-governor/delete-a-workload-group.md)|  
   
-## 参照  
- [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="see-also"></a>参照  
+ [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
  [リソース ガバナーの有効化](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [リソース ガバナーの分類子関数](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   

@@ -1,29 +1,33 @@
 ---
 title: "[T-SQL ステートメントの実行タスク] (メンテナンス プラン) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.tsql.f1"
-helpviewer_keywords: 
-  - "[T-SQL ステートメントの実行タスク] ダイアログ ボックス"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.tsql.f1
+helpviewer_keywords:
+- Execute T-SQL Statement Task dialog box
 ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cc4fe80e02dfde259794807f700cee0e73dcd43f
+ms.lasthandoff: 04/11/2017
+
 ---
-# [T-SQL ステートメントの実行タスク] (メンテナンス プラン)
+# <a name="execute-t-sql-statement-task-maintenance-plan"></a>[T-SQL ステートメントの実行タスク] (メンテナンス プラン)
   **[T-SQL ステートメントの実行タスク]** ダイアログを使用すると、適切な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをこのメンテナンス プランに追加して、メンテナンス プランをカスタマイズできます。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **接続**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
@@ -42,7 +46,7 @@ caps.handback.revision: 18
 > [!NOTE]  
 >  影響を受けるオブジェクトが大量にある場合は、表示にかなりの時間を要する場合があります。  
   
-## [新しい接続] ダイアログ ボックス  
+## <a name="new-connection-dialog-box"></a>[新しい接続] ダイアログ ボックス  
  **[接続名]**  
  新しい接続の名前を入力します。  
   
@@ -56,10 +60,10 @@ caps.handback.revision: 18
  サーバーの認証情報を指定します。  
   
  **[Windows NT の統合セキュリティを使用する]**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証を使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続します。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] のインスタンスに接続します。  
   
  **[特定のユーザー名とパスワードを使用する]**  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続します。 このオプションは利用できません。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
   
  **ユーザー名**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  

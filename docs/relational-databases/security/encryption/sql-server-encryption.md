@@ -1,40 +1,44 @@
 ---
 title: "SQL Server の暗号化 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "05/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "暗号化 [SQL Server], 暗号化について"
-  - "セキュリティ [SQL Server], 暗号化"
-  - "暗号化 [SQL Server], 暗号方式について"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], about encryption
+- security [SQL Server], encryption
+- cryptography [SQL Server], about cryptography
 ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 441968f81086a875ee526d31dcaf753c1e103868
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server の暗号化
+# <a name="sql-server-encryption"></a>SQL Server の暗号化
   暗号化は、キーまたはパスワードを使用してデータを難読化するプロセスです。 暗号化によって、データは対応する暗号化解除キーまたはパスワードがないと使用できなくなります。 暗号化では、アクセス コントロールの問題は解決されません。 ただし、暗号化を使用すると、アクセス コントロールがバイパスされる場合でもデータ損失のリスクが限定されるので、セキュリティが強化されます。 たとえば、データベース ホスト コンピューターの構成が適切でない場合に、機密データをハッカーが入手したとしても、その情報が暗号化されていれば、ハッカーはその情報を使用できません。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、接続、データ、およびストアド プロシージャに対して暗号化を使用できます。 次の表に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] での暗号化の詳細を示します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、接続、データ、およびストアド プロシージャに対して暗号化を使用できます。 次の表に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]での暗号化の詳細を示します。  
   
 > [!IMPORTANT]  
 >  暗号化は、セキュリティの強化に役立つ便利なツールですが、すべてのデータまたは接続に対して考慮すべきものではありません。 暗号化を実装するかどうかを検討する際は、ユーザーがデータにどのようにアクセスするかを考慮する必要があります。 ユーザーがパブリック ネットワーク経由でデータにアクセスする場合は、セキュリティを強化するためにデータの暗号化が必要になると考えられます。 一方、すべてのアクセスにセキュリティで保護されたイントラネット構成が使用される場合には、暗号化は必ずしも必要ありません。 暗号化を使用する場合は、それに伴ってパスワード、キー、および証明書のメンテナンス計画が必要になります。  
   
 > [!NOTE]  
->  トランスポート層セキュリティ (TLS1.2) に関する最新情報は、「[Microsoft SQL Server 用の TLS 1.2 サポート](https://support.microsoft.com/kb/3135244)」から入手できます。  
+>  トランスポート層セキュリティ (TLS1.2) に関する最新情報は、「 [Microsoft SQL Server 用の TLS 1.2 サポート](https://support.microsoft.com/kb/3135244)」から入手できます。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
  [暗号化階層](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化階層について説明します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の暗号化階層について説明します。  
   
  [暗号化アルゴリズムの選択](../../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
  効果的な暗号化アルゴリズムを選択する方法について説明します。  
@@ -43,7 +47,7 @@ caps.handback.revision: 21
  データを透過的に暗号化する方法に関する一般情報を提供します。  
   
  [SQL Server とデータベースの暗号化キー &#40;データベース エンジン&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化キーでは、公開キー、秘密キー、対称キーを組み合わせて機密データの保護に使用します。 このセクションでは、暗号化キーを実装および管理する方法について説明します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の暗号化キーでは、公開キー、秘密キー、対称キーを組み合わせて機密データの保護に使用します。 このセクションでは、暗号化キーを実装および管理する方法について説明します。  
   
  [Always Encrypted &#40;データベース エンジン&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
  オンプレミスのデータベース管理者、クラウド データベース オペレーターなどを含む、高い特権を持つものの無許可のユーザーが暗号化データにアクセスできないようにします。  
@@ -54,7 +58,7 @@ caps.handback.revision: 21
  [SQL Server の証明書と非対称キー](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)  
  公開キー暗号化の使用に関する情報。  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
  [SQL Server の保護](../../../relational-databases/security/securing-sql-server.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] プラットフォームを保護する方法、およびユーザーとセキュリティ保護可能なオブジェクトを操作する方法の概要を説明します。  
   
@@ -73,13 +77,14 @@ caps.handback.revision: 21
  [ENCRYPTBYCERT &#40;Transact-SQL&#41;](../../../t-sql/functions/encryptbycert-transact-sql.md)  
  証明書を使用してデータを暗号化する方法について説明します。  
   
-## 外部リソース  
+## <a name="external-resources"></a>外部リソース  
  [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 - セキュリティと保護](https://msdn.microsoft.com/sqlserver/bb895847.aspx)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のセキュリティに関する最新情報が掲載されています。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [sys.key_encryptions &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)   
  [SQL Server とデータベースの暗号化キー &#40;データベース エンジン&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
- [Reporting Services の暗号化キーのバックアップと復元](../../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md)  
+ [Reporting Services の暗号化キーのバックアップと復元](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   
+

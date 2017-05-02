@@ -1,24 +1,28 @@
 ---
 title: "FileTable の前提条件の有効化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server]、前提条件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], prerequisites
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed35c6e65d3c9670ddb59f352451adfde6c37e07
+ms.lasthandoff: 04/11/2017
+
 ---
-# FileTable の前提条件の有効化
+# <a name="enable-the-prerequisites-for-filetable"></a>FileTable の前提条件の有効化
   FileTable を作成および使用するための前提条件を有効にする方法について説明します。  
   
 ##  <a name="EnablePrereq"></a> FileTable の前提条件の有効化  
@@ -37,21 +41,21 @@ caps.handback.revision: 25
     -   [データベース レベルでの FileTable のディレクトリ指定](#BasicsDirectory)  
   
 ##  <a name="BasicsFilestream"></a> インスタンス レベルでの FILESTREAM の有効化  
- FileTable は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の FILESTREAM 機能を拡張します。 したがって、FileTable を作成および使用するには、ファイル I/O アクセス用の FILESTREAM を Windows レベルおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで事前に有効にする必要があります。  
+ FileTable は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の FILESTREAM 機能を拡張します。 したがって、FileTable を作成および使用するには、ファイル I/O アクセス用の FILESTREAM を Windows レベルおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで事前に有効にする必要があります。  
   
 ###  <a name="HowToFilestream"></a> 方法: インスタンス レベルで FILESTREAM を有効にする  
- FILESTREAM を有効にする方法の詳細については、「[FILESTREAM の有効化と構成](../../relational-databases/blob/enable-and-configure-filestream.md)」を参照してください。  
+ FILESTREAM を有効にする方法の詳細については、「 [FILESTREAM の有効化と構成](../../relational-databases/blob/enable-and-configure-filestream.md)」を参照してください。  
   
- **sp_configure** を呼び出し、FILESTREAM をインスタンス レベルで有効にするには、filestream_access_level オプションを 2 に設定する必要があります。 詳細については、「[filestream access level サーバー構成オプション](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)」を参照してください。  
+ **sp_configure** を呼び出し、FILESTREAM をインスタンス レベルで有効にするには、filestream_access_level オプションを 2 に設定する必要があります。 詳細については、「 [filestream access level サーバー構成オプション](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)」を参照してください。  
   
 ###  <a name="firewall"></a> 方法: FILESTREAM がファイアウォールを通過できるようにする  
  FILESTREAM がファイアウォールを通過できるようにする方法については、「 [Configure a Firewall for FILESTREAM Access](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)」をご覧ください。  
   
 ##  <a name="filegroup"></a> データベース レベルでの FILESTREAM ファイル グループの指定  
- データベースに FileTable を作成するには、データベースに FILESTREAM ファイル グループが必要です。 この前提条件の詳細については、「[FILESTREAM が有効なデータベースを作成する方法](../../relational-databases/blob/create-a-filestream-enabled-database.md)」を参照してください。  
+ データベースに FileTable を作成するには、データベースに FILESTREAM ファイル グループが必要です。 この前提条件の詳細については、「 [FILESTREAM が有効なデータベースを作成する方法](../../relational-databases/blob/create-a-filestream-enabled-database.md)」を参照してください。  
   
 ##  <a name="BasicsNTAccess"></a> データベース レベルでの非トランザクション アクセスの有効化  
- FileTable は、Windows アプリケーションがトランザクションを必要とすることなく FILESTREAM データに対する Windows ファイル ハンドルを取得することを可能にします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納されているファイルに対するこの非トランザクション アクセスを可能にするには、FileTable を格納するデータベースごとに、データベース レベルで非トランザクション アクセスのレベルを指定する必要があります。  
+ FileTable は、Windows アプリケーションがトランザクションを必要とすることなく FILESTREAM データに対する Windows ファイル ハンドルを取得することを可能にします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納されているファイルに対するこの非トランザクション アクセスを可能にするには、FileTable を格納するデータベースごとに、データベース レベルで非トランザクション アクセスのレベルを指定する必要があります。  
   
 ###  <a name="HowToCheckAccess"></a> 方法: データベースで非トランザクション アクセスが有効かどうかを確認する  
  カタログ ビュー [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) に対してクエリを実行し、**non_transacted_access** 列と **non_transacted_access_desc** 列をチェックします。  
@@ -81,7 +85,7 @@ GO
     ```  
   
  **SQL Server Management Studio を使用して非トランザクション アクセスのレベルを指定する**  
- **[データベースのプロパティ]** ダイアログ ボックスの  **[オプション]** ページの **[FILESTREAM 非トランザクション アクセス]** ボックスで、非トランザクション アクセスのレベルを指定できます。 このダイアログ ボックスの詳細については、「[[データベースのプロパティ] &#40;[オプション] ページ&#41;](../Topic/Database%20Properties%20\(Options%20Page\).md)」を参照してください。  
+ **[データベースのプロパティ]** ダイアログ ボックスの **[オプション]** ページの **[FILESTREAM 非トランザクション アクセス]** ボックスで、非トランザクション アクセスのレベルを指定できます。 このダイアログ ボックスの詳細については、「[[データベースのプロパティ] &#40;[オプション] ページ&#41;](../../relational-databases/databases/database-properties-options-page.md)」を参照してください。  
   
 ##  <a name="BasicsDirectory"></a> データベース レベルでの FileTable のディレクトリ指定  
  ファイルに対する非トランザクション アクセスをデータベース レベルで有効にする場合、必要に応じて **DIRECTORY_NAME** オプションを使用してディレクトリ名も指定できます。 非トランザクション アクセスを有効にしたときにディレクトリ名を指定しなかった場合は、データベースに FileTable を作成する前にディレクトリ名を指定する必要があります。  
@@ -116,7 +120,7 @@ GO
     GO  
     ```  
   
--   **データベースを復元**するときに、**DIRECTORY_NAME** FILESTREAM オプションを使用して [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) ステートメントを呼び出します。  
+-   **データベースを復元**するときに、**DIRECTORY_NAME** FILESTREAM オプションを使用して [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントを呼び出します。  
   
     ```tsql  
     RESTORE DATABASE database_name  
@@ -125,7 +129,7 @@ GO
     ```  
   
  **SQL Server Management Studio を使用して、FileTable のディレクトリを指定する**  
- **[データベースのプロパティ]** ダイアログ ボックスの **[オプション]** ページの **[FILESTREAM ディレクトリ名]** ボックスで、ディレクトリ名を指定できます。 このダイアログ ボックスの詳細については、「[[データベースのプロパティ] &#40;[オプション] ページ&#41;](../Topic/Database%20Properties%20\(Options%20Page\).md)」を参照してください。  
+ **[データベースのプロパティ]** ダイアログ ボックスの **[オプション]** ページの **[FILESTREAM ディレクトリ名]** ボックスで、ディレクトリ名を指定できます。 このダイアログ ボックスの詳細については、「[[データベースのプロパティ] &#40;[オプション] ページ&#41;](../../relational-databases/databases/database-properties-options-page.md)」を参照してください。  
   
 ###  <a name="viewnames"></a> 方法: インスタンスの既存のディレクトリ名を表示する  
  インスタンスの既存のディレクトリ名の一覧を表示するには、[ys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) カタログ ビューに対するクエリを実行し、**filestream_database_directory_name** 列を確認します。  
@@ -138,15 +142,15 @@ GO
   
 ###  <a name="ReqDirectory"></a> データベース レベルのディレクトリの要件と制限  
   
--   **CREATE DATABASE** または **ALTER DATABASE** を呼び出すとき、**DIRECTORY_NAME** をオプションで設定できます。 **DIRECTORY_NAME** の値を指定しなかった場合、ディレクトリ名は null のままになります。 ただし、データベース レベルで **DIRECTORY_NAME** の値を指定しないと、データベースに FileTable を作成できません。  
+-   **CREATE DATABASE** または **ALTER DATABASE** を呼び出すとき、 **DIRECTORY_NAME**をオプションで設定できます。 **DIRECTORY_NAME**の値を指定しなかった場合、ディレクトリ名は null のままになります。 ただし、データベース レベルで **DIRECTORY_NAME** の値を指定しないと、データベースに FileTable を作成できません。  
   
 -   指定するディレクトリ名は、ファイル システムの有効なディレクトリ名に関する要件を満たしている必要があります。  
   
--   データベースに FileTable が含まれている場合、**DIRECTORY_NAME** を再度 null 値に設定することはできません。  
+-   データベースに FileTable が含まれている場合、 **DIRECTORY_NAME** を再度 null 値に設定することはできません。  
   
--   データベースをアタッチまたは復元するときに、対象のインスタンスに既に存在する **DIRECTORY_NAME** の値が新しいデータベースにある場合、操作は失敗します。 **CREATE DATABASE FOR ATTACH** または **RESTORE DATABASE** を呼び出すときは、**DIRECTORY_NAME** に対して一意の値を指定してください。  
+-   データベースをアタッチまたは復元するときに、対象のインスタンスに既に存在する **DIRECTORY_NAME** の値が新しいデータベースにある場合、操作は失敗します。 **CREATE DATABASE FOR ATTACH** または **RESTORE DATABASE** を呼び出すときは、 **DIRECTORY_NAME**に対して一意の値を指定してください。  
   
--   既存のデータベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードした場合、**DIRECTORY_NAME** の値は null になります。  
+-   既存のデータベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードした場合、 **DIRECTORY_NAME** の値は null になります。  
   
 -   非トランザクション アクセスをデータベース レベルで有効または無効にするとき、ディレクトリ名が指定されているかどうか、またはディレクトリ名が一意であるかどうかのチェックは行われません。  
   

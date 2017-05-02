@@ -1,29 +1,33 @@
 ---
 title: "ステータス バー (データベース エンジン クエリ エディター) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 34d7a9bfaf04f1ea7d201083201aa3c8a3895061
+ms.lasthandoff: 04/11/2017
+
 ---
-# ステータス バー (データベース エンジン クエリ エディター)
+# <a name="status-bar-database-engine-query-editor"></a>ステータス バー (データベース エンジン クエリ エディター)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウのステータス バーでは、各ウィンドウが [!INCLUDE[ssDE](../../includes/ssde-md.md)] のどのインスタンスに接続しているかを色分けして示すことができます。  
   
-1.  **作業を開始する準備:**  [ステータス バーの色](#StatusBarColors)  
+1.  **Before you begin:**  [Status Bar Colors](#StatusBarColors)  
   
-2.  **サーバーの状態の色を設定するには:**  [オブジェクト エクスプローラー](#SetOEServerColor)、 [登録済みサーバー](#SetRegServerColor)  
+2.  **To set a server status color in:**  [Object Explorer](#SetOEServerColor), [Registered Server](#SetRegServerColor)  
   
-3.  **状態の色を使用するには:**  [サーバーの色を使用したクエリ エディターの起動](#OpenServerColor)、 [状態の色の指定によるエディターの起動](#OpenSpecColor)  
+3.  **To use a status color:**  [Open Query Editor Using a Server Color](#OpenServerColor), [Open a Query Editor Specifying a Status Color](#OpenSpecColor)  
   
 ##  <a name="StatusBarColors"></a> ステータス バーの色  
  **[オブジェクト エクスプローラー]** または **[登録済みサーバー]**の特定のサーバー ノードとステータス バーの色を関連付けることができます。 ステータス バーの色を指定できるのは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続されているサーバー ノードのみで、他の SQL Server テクノロジのノードでは指定できません。 また、新しい [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウを [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続するたびに、作成したステータス バーの色を指定することもできます。 その後、サーバー ノードに定義された状態の色を使用してクエリ エディター ウィンドウを開くか、そのエディター ウィンドウに対して一意の色を指定することができます。  
@@ -63,7 +67,7 @@ caps.handback.revision: 7
 ##  <a name="OpenServerColor"></a> サーバーの色を使用したエディターの起動  
  **サーバーの色を使用してエディター ウィンドウを開くには**  
   
--   **オブジェクト エクスプローラー**または **[登録済みサーバー]** でサーバー ノードを右クリックして、**[新しいクエリ]** をクリックします。  
+-   **オブジェクト エクスプローラー** または **[登録済みサーバー]**でサーバー ノードを右クリックして、 **[新しいクエリ]**をクリックします。  
   
 -   または、サーバー ノードを強調表示して、 **[新しいクエリ]** ツール バー ボタンをクリックします。  
   
@@ -84,7 +88,7 @@ caps.handback.revision: 7
   
 -   残りの接続情報を入力して、 **[接続]** ボタンをクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

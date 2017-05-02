@@ -1,28 +1,32 @@
 ---
 title: "[空間結果] ウィンドウ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66e1a9e14b4a786e6ca45a9ab0e761975563c415
+ms.lasthandoff: 04/11/2017
+
 ---
-# [空間結果] ウィンドウ
+# <a name="spatial-results-window"></a>[空間結果] ウィンドウ
   **[空間結果]** ウィンドウには、空間データを表示するための視覚的なマッピング ツールが用意されています。 空間結果を表示するには、geometry 型または geography 型のデータを含む空間列がクエリ結果に含まれている必要があります。  
   
 > [!NOTE]  
 >  **[空間結果]** ウィンドウを使用できるのは、 **[結果]** ウィンドウ内のグリッドに結果が返される場合だけです。 結果がテキストとして返されるように設定すると、このウィンドウは使用できません。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[空間列の選択]**  
  クエリ結果の空間列から、表示する空間列を指定します。 列は、一度に 1 つしか選択できません。  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  Point インスタンスにラベルを付けることはできません。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [オブジェクト エクスプローラーでの空間データの表示](../../relational-databases/scripting/view-spatial-data-in-object-explorer.md)   
  [空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
  [データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)   

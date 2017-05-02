@@ -1,26 +1,30 @@
 ---
 title: "SQL Server オブジェクトとバージョンの DAC サポート | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データ層アプリケーション [SQL Server], サポートされるオブジェクト"
-  - "オブジェクト [SQL Server], データ層アプリケーション"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data-tier application [SQL Server], supported objects
+- objects [SQL Server], data-tier applications
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6c6fa912592feefe48ce023f58fbf032d64004e6
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server オブジェクトとバージョンの DAC サポート
-  データ層アプリケーション (DAC) では、よく使用される[!INCLUDE[ssDE](../../includes/ssde-md.md)] オブジェクトがサポートされます。  
+# <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server オブジェクトとバージョンの DAC サポート
+  データ層アプリケーション (DAC) では、よく使用される [!INCLUDE[ssDE](../../includes/ssde-md.md)] オブジェクトがサポートされます。  
   
  **このトピックの内容**  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 19
   
 -   サポートされているすべてのバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で、エクスポートと抽出がサポートされています。  
   
--   [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]と、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、および [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] のすべてのバージョンで、すべての操作がサポートされています。  
+-   [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] と、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、および [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]のすべてのバージョンで、すべての操作がサポートされています。  
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Service Pack 2 (SP2) 以降と [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 以降で、すべての操作がサポートされています。  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 19
 ##  <a name="DeploymentLimitations"></a> データ配置の制限  
  SQL Server 2012 SP1 の DAC Framework データ配置エンジンには、忠実性に関してここで述べるような制限があることに注意してください。 制限が適用される DAC Framework 操作は、.dacpac ファイルの展開またはパブリッシュ、および .bacpac ファイルのインポートです。  
   
-1.  sql_variant 列内の特定の条件と基本データ型によるメタデータの消失。 影響を受ける場合は、**"DAC Framework によって配置される場合、sql_variant 列内で使用される特定のデータ型の特定のプロパティは保持されません。"** という警告メッセージが表示されます。  
+1.  sql_variant 列内の特定の条件と基本データ型によるメタデータの消失。 影響を受ける場合は、  **"DAC Framework によって配置される場合、sql_variant 列内で使用される特定のデータ型の特定のプロパティは保持されません。"**という警告メッセージが表示されます。  
   
     -   MONEY、SMALLMONEY、NUMERIC、DECIMAL の各基本データ型: 有効桁数は保持されません。  
   
@@ -110,11 +114,11 @@ caps.handback.revision: 19
   
 -   **配置、パブリッシュ、インポート** - DAC Framework を使用してパッケージをデータベースに配置する操作 (たとえば、.dacpac ファイルの配置またはパブリッシュ、.bacpac ファイルのインポート) では、ここで述べた制限が適用されます。 対象データベースに作成されるデータが、パッケージのデータを完全に忠実に再現していない可能性があります。 配置およびインポートのログには、問題が発生したすべてのインスタンスに関して、上記のメッセージが記録されます。 操作はエラーによってブロックされます (上記の分類 3 を参照)。しかし、他の警告では続行されます。  
   
-     この場合に影響を受けるデータおよび、配置、パブリッシュ、インポートの各操作時におけるこの制限の対処方法の詳細については、[こちらのトピック](http://go.microsoft.com/fwlink/?LinkId=267087)を参照してください。  
+     この場合に影響を受けるデータおよび、配置、パブリッシュ、インポートの各操作時におけるこの制限の対処方法の詳細については、 [こちらのトピック](http://go.microsoft.com/fwlink/?LinkId=267087)を参照してください。  
   
 -   **回避策** – 抽出およびエクスポート操作では、完全に忠実な BCP データ ファイルが .dacpac ファイルまたは .bacpac ファイルに書き出されます。 制限を回避するには、SQL Server の BCP.exe コマンド ライン ユーティリティを使用して、完全に忠実なデータを DAC パッケージから対象データベースに配置します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   

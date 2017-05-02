@@ -1,26 +1,30 @@
 ---
 title: "レプリケーション管理の推奨事項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "レプリケーションの管理, ベスト プラクティス"
-  - "レプリケーション [SQL Server], 管理"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- administering replication, best practices
+- replication [SQL Server], administering
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b4e86f2eb13062223533a3994180446174f9291b
+ms.lasthandoff: 04/11/2017
+
 ---
-# レプリケーション管理の推奨事項
-  レプリケーションを構成したら、レプリケーション トポロジの管理方法について理解することが重要です。 このトピックでは、さまざまな分野における推奨事項について説明し、また各分野の詳細情報へのリンクも提供します。 に加えて、このトピックで紹介したベスト プラクティスのガイダンスに従うと、よく寄せられる質問と問題を理解するよく寄せられる質問のトピックを読むを検討してください: [よく寄せられる質問レプリケーション管理者向け](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)します。  
+# <a name="best-practices-for-replication-administration"></a>レプリケーション管理の推奨事項
+  レプリケーションを構成したら、レプリケーション トポロジの管理方法について理解することが重要です。 このトピックでは、さまざまな分野における推奨事項について説明し、また各分野の詳細情報へのリンクも提供します。 このトピックで説明する推奨事項に従うだけでなく、よく寄せられる質問のトピック「[レプリケーションの管理者に関してよく寄せられる質問](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)」に目を通し、一般的な疑問と問題点について理解することをお勧めします。  
   
  推奨事項について理解するには、以下の 2 つの分野に分けて行うのが効果的です。  
   
@@ -48,7 +52,7 @@ caps.handback.revision: 17
   
     -   アプリケーション要件が変更された場合のスキーマの変更方法についての理解  
   
-## バックアップと復元方法の開発およびテスト  
+## <a name="develop-and-test-a-backup-and-restore-strategy"></a>バックアップと復元方法の開発およびテスト  
  すべてのデータベースは定期的にバックアップする必要があります。また、バックアップの復元機能についても定期的にテストする必要があります。これらの要件は、レプリケートされたデータベースの場合についても同様です。 以下のデータベースは定期的にバックアップする必要があります。  
   
 -   パブリケーション データベース  
@@ -57,16 +61,16 @@ caps.handback.revision: 17
   
 -   サブスクリプション データベース  
   
--   **msdb** データベースおよび **マスター** パブリッシャー、ディストリビューター、およびすべてのサブスクライバーにあるデータベース  
+-   パブリッシャー、ディストリビューター、すべてのサブスクライバーの**msdb** データベースおよび **master** データベース  
   
- レプリケートされたデータベースでは、データのバックアップと復元に対する特別な注意が必要です。 詳細については、次を参照してください。 [をバックアップし、レプリケートされたデータベースの復元](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)します。  
+ レプリケートされたデータベースでは、データのバックアップと復元に対する特別な注意が必要です。 詳細については、「 [レプリケートされたデータベースのバックアップと復元](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)」を参照してください。  
   
-## レプリケーション トポロジ スクリプトの作成  
- トポロジ内のすべてのレプリケーション コンポーンネントは、災害復旧計画の一部としてスクリプト化され、スクリプトはタスクの繰り返しの自動化にも使用することができます。 スクリプトには、パブリケーションやサブスクリプションなどスクリプト化されたレプリケーション コンポーネントを実装するために必要な [!INCLUDE[tsql](../../../includes/tsql-md.md)] システム ストアド プロシージャが格納されます。 スクリプトを作成できます (パブリケーションの新規作成ウィザード) などのウィザードまたは [ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] コンポーネントを作成した後です。 表示、変更、およびスクリプトを使用して実行 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または **sqlcmd**します。 スクリプトをバックアップ ファイルと共に保存して、レプリケーション トポロジの再構成が必要な場合に使用できます。 詳しくは、「 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)」をご覧ください。  
+## <a name="script-the-replication-topology"></a>レプリケーション トポロジ スクリプトの作成  
+ トポロジ内のすべてのレプリケーション コンポーンネントは、災害復旧計画の一部としてスクリプト化され、スクリプトはタスクの繰り返しの自動化にも使用することができます。 スクリプトには、パブリケーションやサブスクリプションなどスクリプト化されたレプリケーション コンポーネントを実装するために必要な [!INCLUDE[tsql](../../../includes/tsql-md.md)] システム ストアド プロシージャが格納されます。 スクリプトはウィザード (パブリケーションの新規作成ウィザードなど) で作成することができ、コンポーネントの作成後、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して作成することもできます。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または **sqlcmd**を使用すると、スクリプトの表示、変更、および実行を行うことができます。 スクリプトをバックアップ ファイルと共に保存して、レプリケーション トポロジの再構成が必要な場合に使用できます。 詳細については、「 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)」を参照してください。  
   
- プロパティが変更された場合は、コンポーネントのスクリプトを再作成する必要があります。 トランザクション レプリケーションでカスタム ストアド プロシージャを使用している場合は、各プロシージャのコピーをスクリプトと共に保存しておく必要があります。プロシージャが変更された場合は、プロシージャのコピーも更新する必要があります (スキーマやアプリケーション要件が変更されると、通常、プロシージャが更新されます)。 カスタム プロシージャの詳細については、次を参照してください。 [トランザクション アーティクルに変更を反映する方法を指定](../../../relational-databases/replication/transactional/specify-how-changes-are-propagated-for-transactional-articles.md)します。  
+ プロパティが変更された場合は、コンポーネントのスクリプトを再作成する必要があります。 トランザクション レプリケーションでカスタム ストアド プロシージャを使用している場合は、各プロシージャのコピーをスクリプトと共に保存しておく必要があります。プロシージャが変更された場合は、プロシージャのコピーも更新する必要があります (スキーマやアプリケーション要件が変更されると、通常、プロシージャが更新されます)。 カスタム プロシージャの詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。  
   
-## パフォーマンス基準の確立と必要に応じたレプリケーションの調整  
+## <a name="establish-performance-baselines-and-tune-replication-if-necessary"></a>パフォーマンス基準の確立と必要に応じたレプリケーションの調整  
  レプリケーションを構成する前に、レプリケーションのパフォーマンスに影響を及ぼす要因について理解しておくことをお勧めします。  
   
 -   サーバーおよびネットワークのハードウェア  
@@ -101,38 +105,38 @@ caps.handback.revision: 17
   
  トランザクション レプリケーションに最も関連するのは待機時間およびスループットです。トランザクション レプリケーションを使用するシステムでは、一般的に短い待機時間と高いスループットが要求されるためです。 マージ レプリケーションに最も関連するのは同時実行数と同期の実行時間です。マージ レプリケーションを使用するシステムでは多数のサブスクライバーが存在することが多く、これらのサブスクライバーに対してパブリッシャーが同時に多数の同期を行うことがあるためです。  
   
- 基準となる数値を設定したら、レプリケーション モニターでしきい値を設定します。 詳細については、次を参照してください。 [しきい値の設定とレプリケーション モニターで警告](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md) と [レプリケーション エージェント イベントに対する警告を使用する](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)です。 パフォーマンスに関する問題が発生した場合は、上記のパフォーマンスの向上に関するトピックに目を通し、問題の解決に役立つ変更を適用することをお勧めします。  
+ 基準となる数値を設定したら、レプリケーション モニターでしきい値を設定します。 詳細については、「[Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」 (レプリケーション モニターのしきい値と警告の設定) と「[Use Alerts for Replication Agent Events](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)」 (レプリケーション エージェント イベントに対する警告の使用) を参照してください。 パフォーマンスに関する問題が発生した場合は、上記のパフォーマンスの向上に関するトピックに目を通し、問題の解決に役立つ変更を適用することをお勧めします。  
   
-## しきい値および警告の作成  
- レプリケーション モニターを使用すると、ステータスやパフォーマンスに関連したさまざまなしきい値を設定できます。 トポロジに対する適切なしきい値を設定することをお勧めします。しきい値に到達した場合は警告が表示されます。また、オプションで電子メール アカウントやポケットベルなどのデバイスに警告を送信することもできます。 詳細については、次を参照してください。 [しきい値の設定とレプリケーション モニターで警告](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)します。  
+## <a name="create-thresholds-and-alerts"></a>しきい値および警告の作成  
+ レプリケーション モニターを使用すると、ステータスやパフォーマンスに関連したさまざまなしきい値を設定できます。 トポロジに対する適切なしきい値を設定することをお勧めします。しきい値に到達した場合は警告が表示されます。また、オプションで電子メール アカウントやポケットベルなどのデバイスに警告を送信することもできます。 詳細については、「 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
   
- レプリケーションでは、しきい値の監視に関連する警告に加えて、レプリケーション エージェント アクションに対応する定義済みの警告を多数利用できます。 これらの警告を使用することで、管理者はレプリケーション トポロジの状態について常時把握することができます。 警告について説明したトピックに目を通し、管理ニーズに合った警告を使用することをお勧めします (必要に応じて新しい警告を追加することもできます)。 詳細については、次を参照してください。 [レプリケーション エージェント イベントに対する警告を使用する](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)です。  
+ レプリケーションでは、しきい値の監視に関連する警告に加えて、レプリケーション エージェント アクションに対応する定義済みの警告を多数利用できます。 これらの警告を使用することで、管理者はレプリケーション トポロジの状態について常時把握することができます。 警告について説明したトピックに目を通し、管理ニーズに合った警告を使用することをお勧めします (必要に応じて新しい警告を追加することもできます)。 詳細については、「[レプリケーション エージェント イベントに対する警告の使用](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)」を参照してください。  
   
-## レプリケーション トポロジの監視  
+## <a name="monitor-the-replication-topology"></a>レプリケーション トポロジの監視  
  レプリケーション トポロジを配置し、しきい値と警告の構成を終えたら、レプリケーションを定期的に監視することをお勧めします。 レプリケーション トポロジの監視は、レプリケーションの配置における重要な側面です。 レプリケーション処理は分散環境で行われるため、レプリケーションに関連するすべてのコンピューターについてその利用状況と状態を追跡することが不可欠です。 レプリケーションの監視には以下のツールを使用できます。  
   
--   レプリケーション モニターは、レプリケーションの監視に最も重要なツールです。レプリケーション モニターを使用すると、レプリケーション トポロジ全体の状態を監視できます。 詳しくは、「 [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)」をご覧ください。  
+-   レプリケーション モニターは、レプリケーションの監視に最も重要なツールです。レプリケーション モニターを使用すると、レプリケーション トポロジ全体の状態を監視できます。 詳細については、「 [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)」を参照してください。  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] およびレプリケーション管理オブジェクト (RMO) は、レプリケーションを監視するためのインターフェイスを提供します。 詳しくは、「 [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)」をご覧ください。  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] およびレプリケーション管理オブジェクト (RMO) には、レプリケーション監視用のインターフェイスが用意されています。 詳細については、「 [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)」を参照してください。  
   
 -   レプリケーションのパフォーマンスの監視には、システム モニターも役立ちます。 詳細については、「 [Monitoring Replication with System Monitor](../../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md)」を参照してください。  
   
-## 定期的なデータの検証  
+## <a name="validate-data-periodically"></a>定期的なデータの検証  
  レプリケーションでは検証は必須ではありませんが、トランザクション レプリケーションおよびマージ レプリケーションを行う場合には定期的に検証することをお勧めします。 検証を行うことによって、サブスクライバーのデータがパブリッシャーのデータに一致していることを検証できます。 検証が正常に行われるのは、パブリッシャーの変更内容がその時点ですべてサブスクライバーにレプリケートされていて (サブスクライバーでの更新がサポートされている場合は、サブスクライバーからパブリッシャーへも変更内容がレプリケートされ)、2 つのデータベースが同期している場合です。  
   
- パブリケーション データベースのバックアップ スケジュールに従って検証を行うことを推奨します。 たとえば、パブリケーション データベースを週に 1 回完全バックアップする場合は、検証もバックアップの終了後、週に 1 回行います。 詳細については、次を参照してください。 [レプリケート データの検証](../../../relational-databases/replication/validate-replicated-data.md)します。  
+ パブリケーション データベースのバックアップ スケジュールに従って検証を行うことを推奨します。 たとえば、パブリケーション データベースを週に 1 回完全バックアップする場合は、検証もバックアップの終了後、週に 1 回行います。 詳細については、「[レプリケートされたデータの検証](../../../relational-databases/replication/validate-replicated-data.md)」を参照してください。  
   
-## エージェント プロファイルによるエージェント パラメーターへの必要に応じた変更  
- エージェント プロファイルを使用すると、レプリケーション エージェントのパラメーターを簡単に設定できます。 エージェントのコマンド ラインでパラメーターを指定することもできますが、通常は定義済みのエージェント プロファイルを使用するか、パラメーターの値の変更が必要な場合新規プロファイルを作成します。 たとえば、マージ レプリケーションを使用するいるし、サブスクライバーが、ブロード バンド接続からダイヤルアップ接続に移動、使用を検討して、 **低速リンク** マージ エージェントのプロファイル; このプロファイルが低速通信リンクににより適したパラメーターのセットを使用します。 詳しくは、「 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)」をご覧ください。  
+## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>エージェント プロファイルによるエージェント パラメーターへの必要に応じた変更  
+ エージェント プロファイルを使用すると、レプリケーション エージェントのパラメーターを簡単に設定できます。 エージェントのコマンド ラインでパラメーターを指定することもできますが、通常は定義済みのエージェント プロファイルを使用するか、パラメーターの値の変更が必要な場合新規プロファイルを作成します。 たとえば、マージ レプリケーションを使用中にサブスクライバーの接続をブロードバンドからダイヤルアップに変更する場合、マージ エージェントに対して **低速リンク** プロファイルの使用を検討してください。このプロファイルでは、低速通信リンクにより適したパラメーターのセットが使用されます。 詳細については、「 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)」を参照してください。  
   
-## パブリケーションおよびディストリビューションの保有期間の必要に応じた調整  
- トランザクション レプリケーションとマージ レプリケーションでは、ディストリビューション データベースでのトランザクションの保有期間、およびサブスクリプションの同期頻度を決定する保有期間が使用されます。 最初は既定の設定を使用することをお勧めしますが、トポロジを監視して、設定を調整する必要があるかどうかを確認することをお勧めします。 たとえば、マージ レプリケーションの場合、パブリケーションの保有期間 (既定では 14 日間) によって、システム テーブルにおけるメタデータの保有期間が決定されます。 サブスクリプションを常に 5 日以内に同期する場合は、この期間を短くすることを検討してください。こうすることにより、メタデータが削減され、パフォーマンスの向上につながる場合があります。 詳しくは、「 [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)」をご覧ください。  
+## <a name="adjust-publication-and-distribution-retention-periods-if-necessary"></a>パブリケーションおよびディストリビューションの保有期間の必要に応じた調整  
+ トランザクション レプリケーションとマージ レプリケーションでは、ディストリビューション データベースでのトランザクションの保有期間、およびサブスクリプションの同期頻度を決定する保有期間が使用されます。 最初は既定の設定を使用することをお勧めしますが、トポロジを監視して、設定を調整する必要があるかどうかを確認することをお勧めします。 たとえば、マージ レプリケーションの場合、パブリケーションの保有期間 (既定では 14 日間) によって、システム テーブルにおけるメタデータの保有期間が決定されます。 サブスクリプションを常に 5 日以内に同期する場合は、この期間を短くすることを検討してください。こうすることにより、メタデータが削減され、パフォーマンスの向上につながる場合があります。 詳細については、「 [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)」を参照してください。  
   
-## アプリケーション要件が変更された場合のスキーマの変更方法についての理解  
- パブリケーションの作成後、アーティクルの追加や削除、またはパブリケーションおよびアーティクルのプロパティの変更が必要になる場合があります。 ほとんどの変更はパブリケーションの作成後に行うことができますが、場合によっては、パブリケーションのスナップショットの新規生成やパブリケーションに対するサブスクリプションの再初期化が必要になります。 詳細については、次を参照してください。 [変更パブリケーションとアーティクルのプロパティ](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) と [にアーティクルを追加し、既存のパブリケーションからアーティクルを削除](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)します。  
+## <a name="understand-how-to-modify-publications-if-application-requirements-change"></a>アプリケーション要件が変更された場合のスキーマの変更方法についての理解  
+ パブリケーションの作成後、アーティクルの追加や削除、またはパブリケーションおよびアーティクルのプロパティの変更が必要になる場合があります。 ほとんどの変更はパブリケーションの作成後に行うことができますが、場合によっては、パブリケーションのスナップショットの新規生成やパブリケーションに対するサブスクリプションの再初期化が必要になります。 詳細については、「[パブリケーションおよびアーティクルのプロパティの変更](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」と「[既存のパブリケーションでのアーティクルの追加および削除](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)」を参照してください。  
   
-## アプリケーション要件が変更された場合のスキーマの変更方法についての理解  
- アプリケーションの運用後、スキーマの変更が必要になる場合が多々あります。 レプリケーション トポロジでは、多くの場合、このような変更をすべてのサブスクライバーに反映する必要があります。 レプリケーションは、パブリッシュされたオブジェクトに対するさまざまなスキーマ変更をサポートしています。 オブジェクトをパブリッシュを行うとき、次のスキーマ変更のいずれかで、適切な [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 出版社、そのすべてに既定では変更が反映されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバー。  
+## <a name="understand-how-to-make-schema-changes-if-application-requirements-change"></a>アプリケーション要件が変更された場合のスキーマの変更方法についての理解  
+ アプリケーションの運用後、スキーマの変更が必要になる場合が多々あります。 レプリケーション トポロジでは、多くの場合、このような変更をすべてのサブスクライバーに反映する必要があります。 レプリケーションは、パブリッシュされたオブジェクトに対するさまざまなスキーマ変更をサポートしています。 パブリッシュされた適切なオブジェクトに対して、以下に示すスキーマ変更を [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パブリッシャーで実行した場合、既定ではすべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーにその変更が反映されます。  
   
 -   ALTER TABLE  
   
@@ -144,9 +148,9 @@ caps.handback.revision: 17
   
 -   ALTER TRIGGER  
   
- 詳細については、次を参照してください。 [パブリケーション データベースでスキーマ変更を行う](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)します。  
+ 詳細については、「[パブリケーション データベースでのスキーマの変更](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
   
-## 参照  
- [管理と #40 です。レプリケーションと #41 です。](../../../relational-databases/replication/administration/administration-replication.md)  
+## <a name="see-also"></a>参照  
+ [管理 &#40;レプリケーション&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
   
   

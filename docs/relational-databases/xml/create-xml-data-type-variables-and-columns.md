@@ -1,29 +1,33 @@
 ---
 title: "XML データ型の変数と列の作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "xml データ型 [SQL Server], 変数"
-  - "xml データ型 [SQL Server], 列"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xml data type [SQL Server], variables
+- xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 751fccc2a458239715c187a1925046cdf74de98a
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML データ型の変数と列の作成
-  **xml** データ型は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での組み込みデータ型の 1 つであり、**int**、**varchar** などの他の組み込みデータ型といくつかの点で似ている部分があります。 他の組み込みの型と同じく、**xml** データ型はテーブルを作成するときに列の型として変数の型、パラメーターの型、および関数の戻り値の型と同様に使用したり、[CAST および CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) で使用できます。  
+# <a name="create-xml-data-type-variables-and-columns"></a>XML データ型の変数と列の作成
+  **xml** データ型は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での組み込みデータ型の 1 つであり、 **int** 、 **varchar**などの他の組み込みデータ型といくつかの点で似ている部分があります。 他の組み込みの型と同じく、 **xml** データ型はテーブルを作成するときに列の型として変数の型、パラメーターの型、および関数の戻り値の型と同様に使用したり、 [CAST および CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)で使用できます。  
   
-## 列と変数の作成  
- テーブルの一部として `xml` 型の列を作成するには、`CREATE TABLE` ステートメントを使用します。次に例を示します。  
+## <a name="creating-columns-and-variables"></a>列と変数の作成  
+ テーブルの一部として `xml` 型の列を作成するには、 `CREATE TABLE` ステートメントを使用します。次に例を示します。  
   
 ```  
 CREATE TABLE T1(Col1 int primary key, Col2 xml)   
@@ -41,16 +45,16 @@ DECLARE @x xml
 DECLARE @x xml (Sales.StoreSurveySchemaCollection)  
 ```  
   
- `xml` 型のパラメーターをストアド プロシージャに渡すには、`CREATE PROCEDURE` ステートメントを使用します。次に例を示します。  
+ `xml` 型のパラメーターをストアド プロシージャに渡すには、 `CREATE PROCEDURE` ステートメントを使用します。次に例を示します。  
   
 ```  
 CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...   
 ```  
   
- XQuery を使用して、列、パラメーター、または変数に格納されている XML インスタンスにクエリを実行できます。 また、XML DML (データ操作言語) を使用して、XML インスタンスに更新を適用することもできます。 開発時点では XQuery 標準に XQuery DML が定められていなかったので、XQuery については [XML DML (XML データ変更言語)](../../t-sql/xml/xml-data-modification-language-xml-dml.md) 拡張機能が[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に実装されています。 この拡張機能を使用して、挿入、更新、および削除を実行できます。  
+ XQuery を使用して、列、パラメーター、または変数に格納されている XML インスタンスにクエリを実行できます。 また、XML DML (データ操作言語) を使用して、XML インスタンスに更新を適用することもできます。 開発時点では XQuery 標準に XQuery DML が定められていなかったので、XQuery については [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML DML (XML データ変更言語) [拡張機能が](../../t-sql/xml/xml-data-modification-language-xml-dml.md) に実装されています。 この拡張機能を使用して、挿入、更新、および削除を実行できます。  
   
-## 既定の XML の割り当て  
- テーブル内で、**xml** 型の列に、既定の XML インスタンスを割り当てることができます。 既定の XML を割り当てるには、XML 定数を使用する方法と、**xml** 型への明示的なキャストを使用する方法の 2 つがあります。  
+## <a name="assigning-defaults"></a>既定の XML の割り当て  
+ テーブル内で、 **xml** 型の列に、既定の XML インスタンスを割り当てることができます。 既定の XML を割り当てるには、XML 定数を使用する方法と、 **xml** 型への明示的なキャストを使用する方法の 2 つがあります。  
   
  既定の XML を XML 定数として割り当てるには、次の例の構文を使用します。 文字列は暗黙的に **xml** 型にキャストされることに注意してください。  
   
@@ -58,27 +62,27 @@ CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...
 CREATE TABLE T (XmlColumn xml default N'<element1/><element2/>')  
 ```  
   
- 既定の XML を `CAST` への明示的な `xml` として割り当てるには、次の例の構文を使用します。  
+ 既定の XML を `CAST` への明示的な `xml`として割り当てるには、次の例の構文を使用します。  
   
 ```  
 CREATE TABLE T (XmlColumn xml   
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml** 型の列に対する NULL 制約および NOT NULL 制約もサポートされます。 例:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** 型の列に対する NULL 制約および NOT NULL 制約もサポートされます。 例:  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  
 ```  
   
-## 制約の指定  
+## <a name="specifying-constraints"></a>制約の指定  
  **xml** 型の列を作成するときには、列レベルまたはテーブル レベルの制約を定義できます。 制約は、次のような場合に使用してください。  
   
--   ビジネス ルールが XML スキーマでは表現できない場合。 たとえば、花屋の配達可能地域が店舗から 80 km 以内に限られている場合などです。 このルールは XML 列の制約として記述できます。 この制約には、**xml** データ型のメソッドが必要になる場合があります。  
+-   ビジネス ルールが XML スキーマでは表現できない場合。 たとえば、花屋の配達可能地域が店舗から 80 km 以内に限られている場合などです。 このルールは XML 列の制約として記述できます。 この制約には、 **xml** データ型のメソッドが必要になる場合があります。  
   
 -   制約が、テーブル内の他の XML 列または XML 以外の列に関係している場合。 たとえば、XML インスタンスに現れる Customer の ID (`/Customer/@CustId`) が、CustomerID リレーショナル列の値と一致する必要がある場合などです。  
   
- 制約は、型指定された **xml** データ型の列にも、型指定されていない **xml** データ型の列にも指定できます。 ただし、制約を指定するとき、[XML データ型のメソッド](../../t-sql/xml/xml-data-type-methods.md) は使用できません。 また、**xml** データ型では次の列およびテーブルの制約はサポートされません。  
+ 制約は、型指定された **xml** データ型の列にも、型指定されていない xml データ型の列にも指定できます。 ただし、制約を指定するとき、[XML データ型のメソッド](../../t-sql/xml/xml-data-type-methods.md) は使用できません。 また、 **xml** データ型では次の列およびテーブルの制約はサポートされません。  
   
 -   PRIMARY KEY/ FOREIGN KEY  
   
@@ -90,9 +94,9 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   RULE  
   
- 制約を使用する代わりに、次の例に示すように、**xml** データ型のメソッドをラップするためのラッパーと呼ばれるユーザー定義関数を作成し、ユーザー定義関数を CHECK 制約を適用して指定します。  
+ 制約を使用する代わりに、次の例に示すように、 **xml** データ型のメソッドをラップするためのラッパーと呼ばれるユーザー定義関数を作成し、ユーザー定義関数を CHECK 制約を適用して指定します。  
   
- 次の例では、`Col2` 列に対して、保存する各 XML インスタンスには `<ProductDescription>` 属性を持つ `ProductID` 要素が必要であるという制約を指定します。 この制約は、次のユーザー定義関数によって適用されます。  
+ 次の例では、 `Col2` 列に対して、保存する各 XML インスタンスには `<ProductDescription>` 属性を持つ `ProductID` 要素が必要であるという制約を指定します。 この制約は、次のユーザー定義関数によって適用されます。  
   
 ```  
 CREATE FUNCTION my_udf(@var xml) returns bit  
@@ -102,7 +106,7 @@ END
 GO  
 ```  
   
- インスタンスの `exist()` 要素に `xml` 属性が含まれる場合、`1` データ型の `<ProductDescription>` メソッドは `ProductID` を返します。 それ以外の場合は `0` を返します。  
+ インスタンスの `exist()` 要素に `xml` 属性が含まれる場合、 `1` データ型の `<ProductDescription>` メソッドは `ProductID` を返します。 それ以外の場合は `0`を返します。  
   
  ここで、次のようにして列レベルの制約を定義したテーブルを作成できます。  
   
@@ -125,7 +129,7 @@ INSERT INTO T values(1,'<ProductDescription ProductID="1" />')
 INSERT INTO T values(1,'<Product />')  
 ```  
   
-## 同じテーブルと別のテーブル  
+## <a name="same-or-different-table"></a>同じテーブルと別のテーブル  
  **xml** データ型の列は、他にリレーショナル列が存在するテーブルにも作成できます。また、メインのテーブルと外部キー リレーションシップがある別のテーブルにも作成できます。  
   
  次の条件のいずれかに該当する場合は、同一のテーブルに **xml** データ型の列を作成してください。  

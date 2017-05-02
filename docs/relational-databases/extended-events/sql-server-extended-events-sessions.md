@@ -1,27 +1,31 @@
 ---
 title: "SQL Server 拡張イベント セッション | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "xe"
-  - "セッション"
-  - "拡張イベント [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xe
+- sessions
+- extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff9ce12cc98171946715d16f18d15885d7098c4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 拡張イベント セッション
+# <a name="sql-server-extended-events-sessions"></a>SQL Server 拡張イベント セッション
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベント セッションは、拡張イベント エンジンをホストしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス内で作成されます。 拡張イベント インフラストラクチャとその全体的な処理を理解するには、拡張イベント セッションの次の側面に注目します。  
@@ -30,7 +34,7 @@ caps.handback.revision: 20
   
 -   セッションの内容と特性。 拡張イベント セッションの内容 (ターゲット、イベントなど) と、これらのオブジェクトがセッション内またはセッション間でどのように関係しているかを表します。  
   
-## セッション状態  
+## <a name="session-states"></a>セッション状態  
  拡張イベント セッションの各種の状態を次の図に示します。  
   
  ![拡張イベント セッションの状態](../../relational-databases/extended-events/media/xesessionstate.gif "拡張イベント セッションの状態")  
@@ -47,12 +51,12 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  ALTER EVENT SESSION と DROP EVENT SESSION は、メタデータに適用される場合と、アクティブ セッションとメタデータに適用される場合とがあります。  
   
-## セッションの内容と特性  
+## <a name="session-content-and-characteristics"></a>セッションの内容と特性  
  拡張イベント セッションには暗黙的な境界があり、あるセッションの構成によって、別のセッションの構成が変更されることはありません。 ただし、イベントまたはターゲットを複数のセッションで使用することは可能です。  
   
  次の図は、セッションの内容、およびパッケージとセッションの関係を示しています。  
   
- ![セッション内でのオブジェクトの共存と共有。](../../relational-databases/extended-events/media/xesessions.gif "セッション内でのオブジェクトの共存と共有。")  
+ ![セッションでのオブジェクトの共存と共有。](../../relational-databases/extended-events/media/xesessions.gif "セッションでのオブジェクトの共存と共有。")  
   
  次の点に注目してください。  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 20
   
  拡張イベント アーキテクチャは、さまざまなオブジェクトを組み合わせて特定の問題を解決できる柔軟なシステムを提供します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)  
   
   

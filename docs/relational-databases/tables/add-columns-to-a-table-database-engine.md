@@ -1,26 +1,30 @@
 ---
 title: "テーブルへの列の追加 (データベース エンジン) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "列の挿入"
-  - "追加の列 [SQL Server]"
-  - "列の追加"
+ms.custom: 
+ms.date: 10/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- inserting columns
+- columns [SQL Server], adding
+- adding columns
 ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d1bdb75de2db0eba015500fa9a80ef44937727c7
+ms.lasthandoff: 04/11/2017
+
 ---
-# テーブルへの列の追加 (データベース エンジン)
+# <a name="add-columns-to-a-table-database-engine"></a>テーブルへの列の追加 (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してテーブルに新しい列を追加する方法について説明します。  
@@ -37,7 +41,7 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### テーブル デザイナーでテーブルに列を挿入するには  
+#### <a name="to-insert-columns-into-a-table-with-table-designer"></a>テーブル デザイナーでテーブルに列を挿入するには  
   
 1.  **オブジェクト エクスプローラー**で、列を追加するテーブルを右クリックし、 **[デザイン]**をクリックします。  
   
@@ -55,11 +59,11 @@ caps.handback.revision: 20
     > [!NOTE]  
     >  新しい列の作成時には、列プロパティの既定の値が追加されますが、 **[列のプロパティ]** タブで値を変更できます。  
   
-6.  列の追加が完了したら、**[ファイル]** メニューで [*table name* の**保存**]を選択します。  
+6.  列の追加が完了したら、 **ファイル** メニューで  **table name** *table name*.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### テーブルに列を挿入するには  
+#### <a name="to-insert-columns-into-a-table"></a>テーブルに列を挿入するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -71,6 +75,7 @@ caps.handback.revision: 20
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;  
 ```  
   
-####  <a name="FollowUp"></a> 詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
+####  <a name="FollowUp"></a> 詳細については、「[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
   
   
+

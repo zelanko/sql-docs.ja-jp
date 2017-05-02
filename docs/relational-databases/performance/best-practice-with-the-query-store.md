@@ -1,47 +1,51 @@
 ---
-title: "クエリ ストアを使用する際の推奨事項 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "クエリ ストアを使用する際の推奨事項"
+title: "クエリ ストアを使用するときの推奨事項 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
+ms.openlocfilehash: 9cd813b72eda096f780ed7140b6691f528251a30
+ms.lasthandoff: 04/29/2017
+
 ---
-# クエリ ストアを使用する際の推奨事項
+# <a name="best-practice-with-the-query-store"></a>クエリ ストアを使用するときの推奨事項
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   このトピックでは、ワークロードでクエリ ストアを使用する際の推奨事項について説明します。  
   
-##  <a name="a-namessmsa-use-the-latest-sql-server-management-studio"></a><a name="SSMS"></a> 最新の SQL Server Management Studio を使用する  
+##  <a name="SSMS"></a> Use the Latest SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、クエリ ストアを構成するためのユーザー インターフェイスと、ワークロードについて収集されたデータを使用するためのユーザー インターフェイスが用意されています。  
 [https://msdn.microsoft.com/library/mt238290.aspx](https://msdn.microsoft.com/library/mt238290.aspx) から [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の最新バージョンをダウンロードしてください。  
   
  [クエリ ストアに関する @Azure ブログ](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/)の記事で、トラブルシューティングのシナリオでクエリ ストアを使用する方法について簡単に説明しています。  
   
-##  <a name="a-nameinsighta-use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> UseAzure SQL Database で Query Performance Insight を使用する  
+##  <a name="Insight"></a> UseAzure SQL Database で Query Performance Insight を使用する  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] でクエリ ストアを実行する場合、 **Query Performance Insight** を使用して、時間の経過に応じた DTU 消費量を分析できます。  
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用してすべてのクエリの詳細なリソースの消費量を取得することもできますが (CPU、メモリ、IO など)、Query Performance Insight を使用すると、迅速かつ効率的な方法で、データベースの全体的な DTU 消費量に与える影響を判断できます。  
 詳細については、「 [Azure SQL Database Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)」を参照してください。    
 
 ##  <a name="using-query-store-with-elastic-pool-databases"></a>エラスティック プール データベースでクエリ ストアを使用する
 クエリ ストアは、すべてのデータベースで (高密度でパックされたプールであっても) 問題なく使用できます。 エラスティック プール内の多数のデータベースに対してクエリ ストアを有効にすると発生する可能性があった、リソースの過剰使用に関連するすべての問題は解決されました。
-##  <a name="a-nameconfigurea-keep-query-store-adjusted-to-your-workload"></a><a name="Configure"></a> ワークロードに合わせてクエリ ストアを調整する  
+##  <a name="Configure"></a> Keep Query Store Adjusted to your Workload  
  ワークロードとパフォーマンスのトラブルシューティングの要件に基づいて、クエリ ストアを構成します。   
 最初は既定のパラメーターを使用してもよいですが、時間の経過と共にクエリ ストアの動作がどのように変化するかを監視して、必要に応じて構成を調整する必要があります。  
   
- ![query-store-properties](../../relational-databases/performance/media/query-store-properties.png "query-store-properties")  
+ ![クエリ ストア プロパティ](../../relational-databases/performance/media/query-store-properties.png "query-store-properties")  
   
  次に、パラメーター値を設定する際のガイドラインを示します。  
   
@@ -76,7 +80,7 @@ ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);
  **古いクエリのしきい値 (日):** 保存する実行時統計と非アクティブ クエリの保有期間を制御する、時間ベースのクリーンアップ ポリシーです。  
 既定では、クエリ ストアはデータを 30 日間保持するよう構成されていますが、シナリオによっては必要以上に長すぎることもあります。  
   
- 使用予定のない履歴データは保持しないようにしてください。 そうすることで、クエリ ストアが読み取り専用モードになる可能性を減らせます。 また、クエリ ストアのデータのサイズと、問題を検出して軽減するまでの時間を予測しやすくなります。 時間ベースのクリーンアップ ポリシーを構成するには、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] または次のスクリプトを使用します。  
+ 使用予定のない履歴データは保持しないようにしてください。 そうすることで、クエリ ストアが読み取り専用モードになる可能性を減らせます。 また、クエリ ストアのデータのサイズと、問題を検出して軽減するまでの時間を予測しやすくなります。 時間ベースのクリーンアップ ポリシーを構成するには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] または次のスクリプトを使用します。  
   
 ```  
 ALTER DATABASE [QueryStoreDB]   
@@ -110,7 +114,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
 ## <a name="how-to-start-with-query-performance-troubleshooting"></a>クエリ パフォーマンスのトラブルシューティングを開始する方法  
  次の図に示すように、クエリ ストアでのトラブルシューティングのワークフローはシンプルです。  
   
- ![query-store-troubleshooting](../../relational-databases/performance/media/query-store-troubleshooting.png "query-store-troubleshooting")  
+ ![クエリ ストアのトラブルシューティング](../../relational-databases/performance/media/query-store-troubleshooting.png "query-store-troubleshooting")  
   
  前のセクションで説明したように、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用してクエリ ストアを有効にするか、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。  
   
@@ -128,7 +132,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
  次の図は、クエリ ストアのビューの場所を示しています。  
   
- ![query-store-views](../../relational-databases/performance/media/query-store-views.png "query-store-views")  
+ ![クエリ ストア ビュー](../../relational-databases/performance/media/query-store-views.png "query-store-views")  
   
  次の表では、各クエリ ストア ビューの用途を説明します。  
   
@@ -146,11 +150,11 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
 -   クエリの実行プランが複数あり、最後のプランのパフォーマンスが前のプランよりも大幅に悪いような場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が今後は常に最適なプランを使用するよう、プランの強制適用メカニズムを使用することができます。  
   
-     ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
+     ![クエリ ストアのプランの強制](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
   
 -   クエリが最適に実行するために必要なインデックスが欠落している場合があります。 この情報は、クエリの実行プラン内で確認できます。 クエリ ストアを使用して欠落しているインデックスを作成し、クエリのパフォーマンスを確認します。  
   
-     ![query-store-show-plan](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")  
+     ![クエリ ストアのプラン表示](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")  
   
      [!INCLUDE[ssSDS](../../includes/sssds-md.md)]でワークロードを実行している場合、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Index Advisor にサインアップすると、推奨されるインデックスを自動的に取得できます。  
   
@@ -158,7 +162,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
 -   問題のあるクエリを書き直します。 たとえば、クエリのパラメーター化を利用したり、より最適なロジックを実装したりする場合などです。  
   
-##  <a name="a-nameverifya-verify-query-store-is-collecting-query-data-continuously"></a><a name="Verify"></a> クエリ ストアがクエリ データを収集していることを定期的に確認する  
+##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
  クエリ ストアの操作モードは、通知なしに変更されることがあります。 クエリ ストアの状態を定期的に監視して、クエリ ストアが問題なく動作していることを確認し、回避できたはずのエラーが発生しないようにしてください。 操作モードを確認して最も重要なパラメーターを表示するには、次のクエリを実行します。  
   
 ```  
@@ -174,11 +178,11 @@ FROM sys.database_query_store_options;
   
  `actual_state_desc` と `desired_state_desc` が一致していない場合、それは操作モードが自動的に変更されていることを示します。 最も一般的な変更は、クエリ ストアが通知なしで読み取り専用モードに切り替わることです。 非常にまれなケースとしては、クエリ ストアが内部エラーにより最終的にエラー状態になることがあります。  
   
- 実際の状態が読み取り専用になっている場合は、**readonly_reason** 列で根本原因を調べます。 通常は、クエリ ストアがサイズの制限を超えたために読み取り専用モードに移行したことが原因です。 その場合、**readonly_reason** は 65536 に設定されています。 他の理由については、「[sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)」を参照してください。  
+ 実際の状態が読み取り専用になっている場合は、 **readonly_reason** 列で根本原因を調べます。 通常は、クエリ ストアがサイズの制限を超えたために読み取り専用モードに移行したことが原因です。 その場合、**readonly_reason** は 65536 に設定されています。 他の理由については、「[sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)」を参照してください。  
   
  クエリ ストアを読み取り/書き込みモードに戻してデータの収集を再開するには、次の手順を実行します。  
   
--   **ALTER DATABASE** の **MAX_STORAGE_SIZE_MB** オプションを使用して、ストレージの最大サイズを増やします。  
+-   **ALTER DATABASE** の **MAX_STORAGE_SIZE_MB**オプションを使用して、ストレージの最大サイズを増やします。  
   
 -   次のステートメントを使用して、クエリ ストアのデータをクリーンアップする。  
   
@@ -239,9 +243,9 @@ FROM sys.database_query_store_options;
   
 |クエリ キャプチャ モード|Scenario|  
 |------------------------|--------------|  
-|すべて|すべてのクエリの形式とその実行頻度やその他の統計情報の観点から、ワークロードを詳しく分析します。<br /><br /> ワークロードの新しいクエリを特定します。<br /><br /> ユーザーまたは自動パラメーター化の機会を識別するためにアドホック クエリが使用されているかどうかを検出します。|  
+|All|すべてのクエリの形式とその実行頻度やその他の統計情報の観点から、ワークロードを詳しく分析します。<br /><br /> ワークロードの新しいクエリを特定します。<br /><br /> ユーザーまたは自動パラメーター化の機会を識別するためにアドホック クエリが使用されているかどうかを検出します。|  
 |Auto|定期的に実行されるクエリや大量にリソースを消費するクエリなど、対応が必要な重要なクエリに焦点を絞ります。|  
-|なし|実行時に監視する必要があるクエリ セットを既にキャプチャしており、他のクエリによる影響を受けたくない場合に使用します。<br /><br /> このモードは、テストやベンチマークの環境に適しています。<br /><br /> このモードは、アプリケーションのワークロードを監視するよう構成したクエリ ストアの構成を販売するソフトウェア ベンダーにも適しています。<br /><br /> 重要な新しいクエリを追跡して最適化する機会を見逃す可能性があるので、このモードを使用する際は注意してください。 シナリオで必要な特別な場合を除き、このモードは使用しないでください。|  
+|None|実行時に監視する必要があるクエリ セットを既にキャプチャしており、他のクエリによる影響を受けたくない場合に使用します。<br /><br /> このモードは、テストやベンチマークの環境に適しています。<br /><br /> このモードは、アプリケーションのワークロードを監視するよう構成したクエリ ストアの構成を販売するソフトウェア ベンダーにも適しています。<br /><br /> 重要な新しいクエリを追跡して最適化する機会を見逃す可能性があるので、このモードを使用する際は注意してください。 シナリオで必要な特別な場合を除き、このモードは使用しないでください。|  
   
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>最も重要なデータをクエリ ストアに保存する  
  重要なデータのみを格納するようクエリ ストアを構成すると、通常のワークロードへの影響も最小限に抑えながら、効果的にトラブルシューティングを行えます。  
@@ -253,7 +257,7 @@ FROM sys.database_query_store_options;
 |重要でないクエリを除外する。|クエリ キャプチャ モードを Auto に設定します。|  
 |最大サイズに達したときに、重要でないクエリを削除する。|サイズ ベースのクリーンアップ ポリシーを有効にします。|  
   
-##  <a name="a-nameparameterizea-avoid-using-non-parameterized-queries"></a><a name="Parameterize"></a> パラメーター化されていないクエリを使用しない  
+##  <a name="Parameterize"></a> Avoid Using Non-Parameterized Queries  
  アドホック分析など必ずしも必要でない場面でパラメーター化されていないクエリを使用することはお勧めしません。  キャッシュされたプランは再利用できません。再利用すると、クエリ オプティマイザーによって一意のクエリ テキストごとにクエリが強制的にコンパイルされます。  
   また、クエリ テキストの数が増えると類似する実行プランの数も増えるため、クエリ ストアのサイズがすぐに制限を超えてしまう可能性があります。  
 その結果、ワークロードのパフォーマンスが最適化されず、クエリ ストアが読み取り専用モードに切り替わったり、後続のクエリに対応するためにデータが常に削除されるようになったりする可能性があります。  
@@ -262,7 +266,7 @@ FROM sys.database_query_store_options;
   
 -   可能であればクエリをパラメーター化します (ストアド プロシージャ内にクエリをラップするなど)。  
   
--   ワークロードに 1 回限りのアドホック バッチが多数含まれており、そこで異なるクエリ プランが使用されている場合は、**[アドホック ワークロードの最適化]** オプションを使用します。  
+-   ワークロードに 1 回限りのアドホック バッチが多数含まれており、そこで異なるクエリ プランが使用されている場合は、 **[アドホック ワークロードの最適化]** オプションを使用します。  
   
     -   個々の query_hash 値の数と、sys.query_store_query 内のエントリの総数を比較します。 この比率が 1 に近い場合、アドホック ワークロードは異なるクエリを生成します。  
   
@@ -272,12 +276,12 @@ FROM sys.database_query_store_options;
   
     -   ワークロード内の異なるクエリ プランの数が少ない場合は、データベースに対して FORCED PARAMETERIZATION を構成します。 (個々の query_hash の数と sys.query_store_query 内のエントリの総数の比率が 1 よりもかなり小さい場合。)  
   
--   リソース消費の少ないアドホック クエリを自動的に除外するには、**クエリ キャプチャ モード**を AUTO に設定します。  
+-   リソース消費の少ないアドホック クエリを自動的に除外するには、 **クエリ キャプチャ モード** を AUTO に設定します。  
   
-##  <a name="a-namedropa-avoid-a-drop-and-create-pattern-when-maintaining-containing-objects-for-the-queries"></a><a name="Drop"></a> クエリの親オブジェクトを保持する場合は DROP と CREATE のパターンを避ける  
+##  <a name="Drop"></a> Avoid a DROP and CREATE Pattern When Maintaining Containing Objects for the Queries  
  クエリ ストアは、クエリ エントリと親オブジェクト (ストアド プロシージャ、関数、トリガー) を関連付けます。  親オブジェクトを再作成すると、同じクエリ テキストに対して新しいクエリ エントリが生成されます。 これにより、クエリのパフォーマンス統計情報を継続して追跡できなくなるので、プランの強制適用メカニズムを使用することになります。 これを回避するには、可能な限り `ALTER <object>` プロセスを使用して親オブジェクトの定義を変更します。  
   
-##  <a name="a-namecheckforceda-check-the-status-of-forced-plans-regularly"></a><a name="CheckForced"></a> 強制適用されたプランの状態を定期的に確認する  
+##  <a name="CheckForced"></a> Check the Status of Forced Plans Regularly  
  プランの強制適用は、重要なクエリのパフォーマンスを修正してより正確な予測を可能にするための便利なメカニズムです。 ただし、プラン ヒントやプラン ガイドと同様に、強制的に適用されたプランがその後の実行でも確実に使用されるとは限りません。 通常、実行プランによって参照されるオブジェクトが変更または削除されたことによってデータベース スキーマが変更された場合、プランを強制的に適用できなくます。 その場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はクエリの再コンパイルに戻りますが、強制適用が失敗した実際の理由は [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) に示されます。 次のクエリは、強制適用されたプランに関する情報を返します。  
   
 ```  
@@ -293,7 +297,7 @@ WHERE is_forced_plan = 1;
   
  理由の一覧については、「[sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)」を参照してください。 **query_store_plan_forcing_failed** XEvent を使用して、プラン強制の失敗のトラブルシューティングを追跡することもできます。  
   
-##  <a name="a-namerenaminga-avoid-renaming-databases-if-you-have-queries-with-forced-plans"></a><a name="Renaming"></a> 強制適用されたプランを持つクエリがある場合はデータベースの名前を変更しない  
+##  <a name="Renaming"></a> Avoid Renaming Databases if you have Queries with Forced Plans  
  実行プランは、3 つの要素で構成される名前 (`database.schema.object`) を使用してオブジェクトを参照します。   
 データベース名を変更すると、プランの強制適用が失敗し、その後のすべてのクエリ実行で再コンパイルが発生します。  
   
@@ -304,3 +308,4 @@ WHERE is_forced_plan = 1;
  [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
   
+

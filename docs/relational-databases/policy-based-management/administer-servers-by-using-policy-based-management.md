@@ -1,33 +1,37 @@
 ---
 title: "ポリシー ベースの管理を使用したサーバーの管理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ファセット"
-  - "Declarative Management Framework 「ポリシー ベースの管理」を参照"
-  - "セキュリティ構成 [SQL Server], ポリシー ベースの管理"
-  - "ポリシー ベースの管理"
-  - "ファセット [ポリシー ベースの管理]"
-  - "ポリシー ベースの管理, 管理"
-  - "条件 [ポリシー ベースの管理]"
-  - "ファセット [ポリシー ベースの管理], ファセットについて"
-  - "PolicyAdministratorRole ロール"
+ms.custom: 
+ms.date: 08/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- facet See facets
+- Declarative Management Framework See Policy-Based Management
+- surface area configuration [SQL Server], Policy-Based Management
+- Policy-Based Management
+- facets [Policy-Based Management]
+- Policy-Based Management, administering
+- conditions [Policy-Based Management]
+- facets [Policy-Based Management], about facets
+- PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 caps.latest.revision: 76
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 76
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc3d3e94cd6d5993b9647a394338649fe357f021
+ms.lasthandoff: 04/11/2017
+
 ---
-# ポリシー ベースの管理を使用したサーバーの管理
-   ポリシー ベースの管理とは、1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを管理するためのポリシー ベースのシステムのことです。 条件式を含む条件を作成します。 次に、作成した条件を対象のデータベース オブジェクトに適用するポリシーを作成します。  
+# <a name="administer-servers-by-using-policy-based-management"></a>ポリシー ベースの管理を使用したサーバーの管理
+   ポリシー ベースの管理とは、1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを管理するためのポリシー ベースのシステムのことです。 条件式を含む条件を作成します。 次に、作成した条件を対象のデータベース オブジェクトに適用するポリシーを作成します。  
 
 たとえば、データベース管理者として、特定のサーバーでデータベース メールが有効になっていないことを確認することが必要があるとします。その場合は、そのサーバー オプションを設定した条件とポリシーを作成します。 
    
@@ -45,9 +49,9 @@ caps.handback.revision: 76
   
  ポリシーに違反する場合は、オブジェクト エクスプローラーで、対象およびオブジェクト エクスプローラー ツリーの上位にあるノードの横に、重大な状態の警告が赤いアイコンとして示されます。  
   
-> **注:** ポリシーのオブジェクト セットをシステムが計算する際、既定ではシステム オブジェクトが除外されます。  たとえば、ポリシーのオブジェクト セットがすべてのテーブルを参照する場合、システム テーブルにはそのポリシーが適用されません。 システム オブジェクトに対してポリシーを評価する必要がある場合は、ユーザーが、それらのオブジェクト セットに対し、システム オブジェクトを明示的に追加できます。 **"スケジュールに基づいて確認"** の評価モードではすべてのポリシーがサポートされますが、パフォーマンス上の理由により、 **"変更時に確認"** の評価モードでは、任意のオブジェクト セットを含んだポリシーは、必ずしもすべてサポートされるとは限りません。 詳細については、[http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx) を参照してください。  
+> **注:** ポリシーのオブジェクト セットをシステムが計算する際、既定ではシステム オブジェクトが除外されます。  たとえば、ポリシーのオブジェクト セットがすべてのテーブルを参照する場合、システム テーブルにはそのポリシーが適用されません。 システム オブジェクトに対してポリシーを評価する必要がある場合は、ユーザーが、それらのオブジェクト セットに対し、システム オブジェクトを明示的に追加できます。 **"スケジュールに基づいて確認"** の評価モードではすべてのポリシーがサポートされますが、パフォーマンス上の理由により、 **"変更時に確認"** の評価モードでは、任意のオブジェクト セットを含んだポリシーは、必ずしもすべてサポートされるとは限りません。 詳細については、 [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)を参照してください。  
   
-## ポリシー ベースの管理は 3 つの要素で構成されます。  
+## <a name="three-policy-based-management-components"></a>ポリシー ベースの管理は 3 つの要素で構成されます。  
  ポリシー ベースの管理は 3 つの要素で構成されます。  
   
 -   ポリシー管理。 ポリシー管理者がポリシーを作成します。  
@@ -56,19 +60,19 @@ caps.handback.revision: 76
   
 -   評価モード。 実行モードには次の 4 種類があり、そのうち 3 つは自動化できます。  
   
-    -   **[要求時]**:  このモードでは、ユーザーが直接指定した場合にポリシーが評価されます。  
+    -   **[要求時]**: このモードでは、ユーザーが直接指定した場合にポリシーが評価されます。  
   
-    -   **[変更時: 回避]**:  この自動モードでは、DDL トリガーを使用してポリシー違反が防止されます。  
+    -   **[変更時: 回避]**: この自動モードでは、DDL トリガーを使用してポリシー違反が防止されます。  
   
-        > **重要: ** nested triggers サーバー構成オプションが無効になっている場合、**[変更時: 回避]** は正しく動作しません。 ポリシー ベースの管理では、この評価モードを使用するポリシーに準拠しない DDL 操作の検出およびロールバックに DDL トリガーが使用されます。 ポリシー ベースの管理の DDL トリガーを削除するか、nested triggers を無効にすると、この評価モードが失敗したり、予期しない動作をすることがあります。  
+        > **重要:** nested triggers サーバー構成オプションが無効になっている場合、 **[変更時: 回避]** は正しく動作しません。 ポリシー ベースの管理では、この評価モードを使用するポリシーに準拠しない DDL 操作の検出およびロールバックに DDL トリガーが使用されます。 ポリシー ベースの管理の DDL トリガーを削除するか、nested triggers を無効にすると、この評価モードが失敗したり、予期しない動作をすることがあります。  
   
-    -   **[変更時: ログのみ]**:  この自動モードでは、関連する変更が行われたときにイベント通知を使用してポリシーが評価されます。  
+    -   **[変更時: ログのみ]**: この自動モードでは、関連する変更が行われたときにイベント通知を使用してポリシーが評価されます。  
   
-    -   **[スケジュールで実行]**:  この自動モードでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを使用してポリシーが定期的に評価されます。  
+    -   **[スケジュールで実行]**: この自動モードでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを使用してポリシーが定期的に評価されます。  
   
      自動ポリシーが有効になっていない場合、ポリシー ベースの管理はシステム パフォーマンスに影響しません。  
   
-## 用語  
+## <a name="terms"></a>用語  
  **ポリシー ベースの管理の管理対象** 
 ポリシー ベースの管理で管理するエンティティ ([!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンス、データベース、テーブル、インデックスなど)。 サーバー インスタンス内のすべての対象で、対象となる階層が構成されます。 対象セットは、対象となる階層に一連の対象フィルターを適用した結果得られる一連の対象です (HumanResources スキーマが所有するデータベース内のすべてのテーブルなど)。  
   
@@ -101,7 +105,7 @@ caps.handback.revision: 76
   
 -   対象または対象のいずれかの先祖がこのポリシーを含んでいるポリシー グループにサブスクライブしている。  
   
-## 特定のタスクへのリンク 
+## <a name="links-to-specific-tasks"></a>特定のタスクへのリンク 
 
  - [ポリシー ベースの管理のストレージ](https://msdn.microsoft.com/library/hh213476.aspx)|  
  - [ポリシー管理者にポリシー エラーを通知する警告の構成](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
@@ -115,10 +119,11 @@ caps.handback.revision: 76
  - [ポリシー ベースの管理を使用したベスト プラクティスの監視と実行](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
 
   
- ## 使用例
+ ## <a name="examples"></a>使用例
  - ["既定でオフ" ポリシーの作成](https://msdn.microsoft.com/library/bb500172.aspx)
   - ["既定でオフ" ポリシーを実行するためのサーバーの構成](https://msdn.microsoft.com/library/bb522470.aspx)
-## 参照  
+## <a name="see-also"></a>参照  
  [ポリシーベースの管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   
+

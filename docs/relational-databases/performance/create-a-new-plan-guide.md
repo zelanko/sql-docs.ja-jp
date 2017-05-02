@@ -1,34 +1,38 @@
 ---
 title: "新しいプラン ガイドの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.designer.newplanguide.f1"
-helpviewer_keywords: 
-  - "プラン ガイドの作成"
-  - "プラン ガイド [SQL Server] 作成"
+ms.custom: 
+ms.date: 08/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.designer.newplanguide.f1
+helpviewer_keywords:
+- creating plan guides
+- plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c0cc530e59007070fba228c06a4f8f2983faa3f3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 新しいプラン ガイドの作成
+# <a name="create-a-new-plan-guide"></a>新しいプラン ガイドの作成
 プラン ガイドは、クエリ ヒントまたは固定クエリ プランをクエリにアタッチすることにより、クエリの最適化を促します。 プラン ガイドでは、最適化するステートメントと、使用するクエリ ヒントを含む OPTION 句 またはクエリの最適化に使用する特定のクエリ プランのいずれかを指定します。 クエリが実行されると、クエリ オプティマイザーにより [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがプラン ガイドと照合され、実行時にクエリに OPTION 句がアタッチされるか、指定されたクエリ プランが使用されます。  
 
 プラン ガイドは固定クエリ プランまたはクエリ ヒントをクエリに適用します。
   
 ##  <a name="Restrictions"></a> 制限事項と制約事項  
   
--   sp_create_plan_guide の引数は、表示される順序で指定する必要があります。 **sp_create_plan_guide** のパラメーターに値を指定する場合、パラメーター名はすべて明示的に指定するか、すべて指定しないかのいずれかにする必要があります。 たとえば、**@name =** を指定する場合は、**@stmt =**、**@type =** なども指定する必要があります。 同様に、**@name =** を省略してパラメーター値だけを指定する場合は、その他のパラメーター名も省略し、値だけを指定する必要があります。 引数の名前は、構文を理解しやすくするための説明目的のものです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定したパラメーター名と、その名前が使用されている位置にあるパラメーターの名前が一致しているかどうかは確認されません。  
+-   sp_create_plan_guide の引数は、表示される順序で指定する必要があります。 **sp_create_plan_guide**のパラメーターに値を指定する場合、パラメーター名はすべて明示的に指定するか、すべて指定しないかのいずれかにする必要があります。 たとえば、**@name =** を指定する場合は、**@stmt =**、**@type =** なども指定する必要があります。 同様に、**@name =** を省略してパラメーター値だけを指定する場合は、その他のパラメーター名も省略し、値だけを指定する必要があります。 引数の名前は、構文を理解しやすくするための説明目的のものです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定したパラメーター名と、その名前が使用されている位置にあるパラメーターの名前が一致しているかどうかは確認されません。  
   
 -   同一のクエリとバッチまたはモジュールに対し、複数の OBJECT または SQL プラン ガイドを作成できます。 ただし、有効にできるプラン ガイドは常に 1 つだけです。  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 17
  
 1.  プラス記号をクリックして、作成するプラン ガイドのあるデータベースを展開し、プラス記号をクリックして **[プログラミング]** フォルダーを展開します。  
   
-2.  **[プラン ガイド]** フォルダーを右クリックし、**[新しいプラン ガイド]** をクリックします。
+2.  **[プラン ガイド]** フォルダーを右クリックし、 **[新しいプラン ガイド]**をクリックします。
 ![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
   
 3.  **[新しいプラン ガイド]** ダイアログ ボックスの **[名前]** ボックスに、プラン ガイドの名前を入力します。  
@@ -58,7 +62,7 @@ caps.handback.revision: 17
   
 7.  **[スコープのスキーマ名]** ボックスに、対象のオブジェクトを含んでいるスキーマの名前を入力します。 **[スコープのスキーマ名]** ボックスは、スコープの種類として **[オブジェクト]** を選択した場合にのみ利用できます。  
   
-8.  **[スコープのオブジェクト名]** ボックスに、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含む [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ、ユーザー定義スカラー関数、複数ステートメントのテーブル値関数、または DML トリガーの名前を入力します。 **[スコープのオブジェクト名]** ボックスは、スコープの種類として **[オブジェクト]** を選択した場合にのみ利用できます。  
+8.  **[スコープのオブジェクト名]** ボックスに、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含む [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ、ユーザー定義スカラー関数、複数ステートメントのテーブル値関数、または DML トリガーの名前を入力します。 **[スコープのオブジェクト名]** ボックスは、スコープの種類として **[オブジェクト]** を選択した場合にのみ利用できます。  
   
 9. **ステートメントに埋め込まれているすべてのパラメーターの名前とデータ型を** [パラメーター] [!INCLUDE[tsql](../../includes/tsql-md.md)] ボックスに入力します。  
   
@@ -100,3 +104,4 @@ caps.handback.revision: 17
  詳細については、「[sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)」を参照してください。  
   
   
+

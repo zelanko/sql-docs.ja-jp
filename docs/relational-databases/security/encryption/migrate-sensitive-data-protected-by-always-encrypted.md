@@ -1,36 +1,40 @@
 ---
 title: "Always Encrypted で保護された機微なデータの移行 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/04/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Always Encrypted, 一括インポート"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/04/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Always Encrypted, bulk import
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: da73d0d20404f513e22dcdf0340e24fe85dc3184
+ms.lasthandoff: 04/11/2017
+
 ---
-# Always Encrypted で保護された機微なデータの移行
-  一括コピー操作中にサーバーでメタデータ チェックを実行せずに暗号化されたデータを読み込むには、**ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** オプションを指定してユーザーを作成します。 このオプションは、[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] より古いバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から従来のツールで使用するためのものです。Always Encrypted を使用できないサードパーティの ETL (Extract-Transform-Load) ワークフローで使用する場合もあります。 これにより、ユーザーは、暗号化された列を含むあるテーブル セットから、(同じデータベースまたは別のデータベース内の) 暗号化された列を含む別のテーブル セットに暗号化されたデータを安全に移動することができます。  
+# <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>Always Encrypted で保護された機微なデータの移行
+  一括コピー操作中にサーバーでメタデータ チェックを実行せずに暗号化されたデータを読み込むには、 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** オプションを指定してユーザーを作成します。 このオプションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より古いバージョンの [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] から従来のツールで使用するためのものです。Always Encrypted を使用できないサードパーティの ETL (Extract-Transform-Load) ワークフローで使用する場合もあります。 これにより、ユーザーは、暗号化された列を含むあるテーブル セットから、(同じデータベースまたは別のデータベース内の) 暗号化された列を含む別のテーブル セットに暗号化されたデータを安全に移動することができます。  
   
-## ALLOW_ENCRYPTED_VALUE_MODIFICATIONS オプション  
+## <a name="the-allowencryptedvaluemodifications-option"></a>ALLOW_ENCRYPTED_VALUE_MODIFICATIONS オプション  
  [CREATE USER](https://msdn.microsoft.com/library/ms173463.aspx) と [ALTER USER](https://msdn.microsoft.com/library/ms176060.aspx) の両方に ALLOW_ENCRYPTED_VALUE_MODIFICATIONS オプションがあります。 このオプションを ON に設定すると (既定値は OFF)、一括コピー操作でサーバーに対する暗号化メタデータ チェックが抑制されます。これにより、ユーザーはデータの暗号化を解除せずにテーブルまたはデータベース間で暗号化されたデータの一括コピーを行うことができます。  
   
-## データの移行シナリオ  
+## <a name="data-migration-scenarios"></a>データの移行シナリオ  
  次の表では、いくつかの移行シナリオに適した推奨設定を示しています。  
   
  ![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
   
-## 暗号化されたデータの一括読み込み  
+## <a name="bulk-loading-of-encrypted-data"></a>暗号化されたデータの一括読み込み  
  次のプロセスを使用して、暗号化されたデータを読み込みます。  
   
 1.  一括コピー操作の対象となるデータベース内のユーザーに対して、オプションを ON に設定します。 例:  
@@ -39,7 +43,7 @@ caps.handback.revision: 11
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON;  
     ```  
   
-2.  そのユーザーとして接続して、一括コピー アプリケーションまたはツールを実行します。 (アプリケーションで Always Encrypted が有効なクライアント ドライバーを使用する場合は、暗号化された列から取得されたデータが暗号化された状態のままになるように、データ ソースの接続文字列に **column encryption setting=enabled** が含まれていないことを確認します。 詳細については、「[Always Encrypted &#40;client development&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)」(Always Encrypted &#40;クライアント開発&#41;) を参照してください。  
+2.  そのユーザーとして接続して、一括コピー アプリケーションまたはツールを実行します。 (アプリケーションで Always Encrypted が有効なクライアント ドライバーを使用する場合は、暗号化された列から取得されたデータが暗号化された状態のままになるように、データ ソースの接続文字列に **column encryption setting=enabled** が含まれていないことを確認します。 詳細については、「 [Always Encrypted &#40;クライアント開発&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)」(Always Encrypted &#40;クライアント開発&#41;) を参照してください。  
   
 3.  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS オプションを OFF に戻します。 例:  
   
@@ -47,20 +51,20 @@ caps.handback.revision: 11
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = OFF;  
     ```  
   
-## データ破損の可能性  
+## <a name="potential-for-data-corruption"></a>データ破損の可能性  
  このオプションを不適切に使用すると、データが破損する場合があります。 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** オプションでは、ユーザーはデータベース内の暗号化された列に任意のデータを挿入することができます。これには、さまざまなキーで暗号化されたデータ、適切に暗号化されていないか、まったく暗号化されていないデータが含まれます。 ユーザーが、対象列に設定されている暗号化スキーム (列暗号化キー、アルゴリズム、暗号化の種類) を使用して適切に暗号化されていないデータを誤ってコピーした場合、データの暗号化を解除することはできません (データが破損します)。 このオプションは、データベース内のデータが破損する場合があるため、慎重に使用する必要があります。  
   
  次のシナリオでは、データが破損する可能性のあるデータの不適切なインポートについて説明します。  
   
 1.  あるユーザーに対して、オプションを ON に設定します。  
   
-2.  このユーザーは、データベースに接続されているアプリケーションを実行します。 アプリケーションは一括 API を使用して、暗号化された列にプレーン テキスト値を挿入します。 アプリケーションには、挿入時にデータを暗号化するために Always Encrypted が有効なクライアント ドライバーが必要です。 しかし、アプリケーションが正しく構成されていないため、結局、Always Encrypted をサポートしていないドライバー、または **column encryption setting=enabled** が含まれていない接続文字列が使用されます。  
+2.  このユーザーは、データベースに接続されているアプリケーションを実行します。 アプリケーションは一括 API を使用して、暗号化された列にプレーン テキスト値を挿入します。 アプリケーションには、挿入時にデータを暗号化するために Always Encrypted が有効なクライアント ドライバーが必要です。 しかし、アプリケーションが正しく構成されていないため、結局、Always Encrypted をサポートしていないドライバー、または **column encryption setting=enabled**が含まれていない接続文字列が使用されます。  
   
 3.  アプリケーションはプレーンテキスト値をサーバーに送信します。 暗号化メタデータ チェックがユーザーのサーバーでは無効になっているため、サーバーでは不適切なデータ (適切に暗号化された暗号化テキストではなくプレーンテキスト) を暗号化された列に挿入することができます。  
   
 4.  同じアプリケーションまたは別のアプリケーションは、Always Encrypted が有効なドライバーを使用し、接続文字列で **column encryption setting=enabled** を指定してデータベースに接続し、データを取得します。 アプリケーションは、透過的にデータの暗号化が解除されることを期待します。 しかし、データが不適切な暗号化テキストであるため、ドライバーはデータの暗号化を解除できません。  
   
-## ベスト プラクティス  
+## <a name="best-practice"></a>ベスト プラクティス  
   
 -   長時間実行のワークロードの場合は、このオプションを使用して指定されたユーザー アカウントを使用します。  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 11
   
 -   新しいアプリケーションの開発には、このオプションを使用しないでください。 代わりに、クライアント ドライバー (ADO 4.6.1 など) を使用してください。このドライバーでは、1 つのセッションの暗号化メタデータ チェックを抑制するための API が提供されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
  [ALTER USER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
  [Always Encrypted &#40;データベース エンジン&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
@@ -76,3 +80,4 @@ caps.handback.revision: 11
  [Always Encrypted &#40;クライアント開発&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   
+

@@ -1,32 +1,36 @@
 ---
 title: "既存のトレースの変更 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "トレース [SQL Server], 変更"
-  - "トレースの変更"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], modifying
+- modifying traces
 ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f58e12e1c04c65974dbc985c8acc525ed44be06
+ms.lasthandoff: 04/11/2017
+
 ---
-# 既存のトレースの変更 (Transact-SQL)
+# <a name="modify-an-existing-trace-transact-sql"></a>既存のトレースの変更 (Transact-SQL)
   このトピックでは、ストアド プロシージャを使用して既存のトレースを変更する方法について説明します。  
   
-### 既存のトレースを変更するには  
+### <a name="to-modify-an-existing-trace"></a>既存のトレースを変更するには  
   
 1.  トレースが既に実行中の場合は、**@status = 0** を指定して **sp_trace_setstatus** を実行し、トレースを停止します。  
   
-2.  トレース イベントを変更するには、パラメーターを使用して変更を指定し、**sp_trace_setevent** を実行します。 パラメーターは次の順序で指定します。  
+2.  トレース イベントを変更するには、パラメーターを使用して変更を指定し、 **sp_trace_setevent** を実行します。 パラメーターは次の順序で指定します。  
   
     -   **@traceid** (トレース ID)  
   
@@ -48,7 +52,7 @@ caps.handback.revision: 18
 > [!IMPORTANT]  
 >  通常のストアド プロシージャとは異なり、すべての [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ストアド プロシージャ (**sp_trace_*xx***) で、パラメーターのデータ型が厳密に定義されており、データ型の自動変換はサポートしていません。 これらのパラメーターが、引数の説明で指定されている正しいデータ型で呼び出されないと、このストアド プロシージャではエラーが返されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

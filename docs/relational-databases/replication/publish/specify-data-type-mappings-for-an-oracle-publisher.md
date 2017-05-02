@@ -1,26 +1,30 @@
 ---
 title: "Oracle パブリッシャーのデータ型マッピングの指定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Oracle パブリッシング [SQL Server レプリケーション]、データ型マッピング"
-  - "データ型 [SQL Server レプリケーション]、Oracle パブリッシング"
-  - "マッピング データ型 [SQL Server レプリケーション]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], data type mapping
+- data types [SQL Server replication], Oracle publishing
+- mapping data types [SQL Server replication]
 ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e9ce8ce849533cb29249790d00371fe738d21db6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Oracle パブリッシャーのデータ型マッピングの指定
+# <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Oracle パブリッシャーのデータ型マッピングの指定
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、Oracle パブリッシャーのデータ型マッピングを指定する方法について説明します。 Oracle パブリッシャーには一連の既定のデータ型マッピングが用意されていますが、パブリケーションによっては、こうした既定のマッピングとは異なるマッピングの指定が必要になる場合もあります。  
   
  **このトピックの内容**  
@@ -32,15 +36,15 @@ caps.handback.revision: 37
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- 上のデータ型のマッピングの指定、 **データ マッピング** のタブ、 **アーティクルのプロパティ - \< 記事>** ] ダイアログ ボックス。 これは、 **記事** パブリケーションの新規作成ウィザードのページと **パブリケーションのプロパティ - \< パブリケーション>** ] ダイアログ ボックス。 ウィザードを使用して、ダイアログ ボックスへのアクセスに関する詳細については、次を参照してください。 [Oracle データベースからパブリケーションを作成](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md) と [パブリケーション プロパティの変更を表示および](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)です。  
+ データ型マッピングは、**[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[データのマッピング]** タブで指定します。 このタブは、パブリケーションの新規作成ウィザードの **[アーティクル]** ページおよび **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスから利用できます。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[Oracle データベースからのパブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)」および「[パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。  
   
-#### データ型マッピングを指定するには  
+#### <a name="to-specify-a-data-type-mapping"></a>データ型マッピングを指定するには  
   
-1.   **記事** パブリケーションの新規作成ウィザードのページまたは **パブリケーションのプロパティ - \< パブリケーション>** ] ダイアログ ボックスでは、テーブルを選択し、をクリックして **アーティクルのプロパティ**します。  
+1.  パブリケーションの新規作成ウィザードの **[アーティクル]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスでテーブルを選択し、**[アーティクルのプロパティ]** をクリックします。  
   
 2.  **[反転表示されたテーブル アーティクルのプロパティを設定]**をクリックします。  
   
-3.   **データ マッピング** のタブ、 **アーティクルのプロパティ - \< 記事>** からマッピングを選択] ダイアログ ボックス、 **サブスクライバーのデータ型** 列。  
+3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[データのマッピング]** タブで、**[サブスクライバーのデータ型]** 列からマッピングを選択します。  
   
     -   データ型によっては、可能なマッピングが 1 つしかない場合があります。このような場合、プロパティ グリッドの列は読み取り専用になります。  
   
@@ -49,38 +53,38 @@ caps.handback.revision: 37
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
- レプリケーションのストアド プロシージャを使用すると、カスタム データ型マッピングをプログラムから指定できます。 データ型をマップ間ときに使用される既定のマッピングを設定することもできます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース管理システム (DBMS)。 詳しくは、「 [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)」をご覧ください。  
+ レプリケーションのストアド プロシージャを使用すると、カスタム データ型マッピングをプログラムから指定できます。 また、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータベース管理システム (DBMS) と[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のデータベース管理システム間でデータ型をマップする際に使用する既定のマッピングを設定することもできます。 詳しくは、「 [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)」をご覧ください。  
   
-#### Oracle パブリケーションのアーティクル作成時にカスタム データ型マッピングを定義するには  
+#### <a name="to-define-custom-data-type-mappings-when-creating-an-article-belonging-to-an-oracle-publication"></a>Oracle パブリケーションのアーティクル作成時にカスタム データ型マッピングを定義するには  
   
 1.  Oracle パブリケーションが存在しない場合は、Oracle パブリケーションを作成します。  
   
-2.  ディストリビューターで実行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)します。 値を指定して **0** の **@use_default_datatypes**します。 詳しくは、「 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+2.  ディストリビューターで [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)を実行します。 **@use_default_datatypes** の値には **0** を指定します。 詳しくは、「 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
-3.  ディストリビューターで実行 [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) パブリッシュされたアーティクルで列の既存のマッピングを表示します。  
+3.  ディストリビューターで [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) を実行して、パブリッシュ対象アーティクルに含まれる列の既存のマッピングを表示します。  
   
-4.  ディストリビューターで実行 [sp_changearticlecolumndatatype](../../../relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql.md)します。 **@publisher**に Oracle パブリッシャーの名前を指定し、 **@publication**、 **@article**、および **@column** を指定して、パブリッシュする列を定義します。 マップする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型名を **@type**に指定し、該当する **@length**、 **@precision**、および **@scale**を指定します。  
+4.  ディストリビューターで [sp_changearticlecolumndatatype](../../../relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql.md)を実行します。 **@publisher** に Oracle パブリッシャーの名前を指定し、**@publication**、**@article**、および **@column** を指定して、パブリッシュする列を定義します。 マップする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型名を **@type**に Oracle パブリッシャーの名前を指定し、 **@length**、 **@precision**、および **@scale**を指定します。  
   
-5.  ディストリビューターで実行 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)します。 これにより、Oracle パブリケーションからスナップショットを生成するときに使用するビューが作成されます。  
+5.  ディストリビューターで [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)を実行します。 これにより、Oracle パブリケーションからスナップショットを生成するときに使用するビューが作成されます。  
   
-#### データ型に対する既定のマッピングを指定するには  
+#### <a name="to-specify-a-mapping-as-the-default-mapping-for-a-data-type"></a>データ型に対する既定のマッピングを指定するには  
   
-1.  (省略可能)ディストリビューターのデータベースで、次のように実行します。 [sp_getdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)します。 指定 **@source_dbms**, 、**@source_type**, 、**@destination_dbms**, 、**@destination_version**, 、マップ元 DBMS を識別するために必要なその他のパラメーターです。 マップ先 DBMS で現在マップされているデータ型の情報は、出力パラメーターを使って返されます。  
+1.  (省略可) ディストリビューターから任意のデータベースで [sp_getdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)を実行します。 **@source_dbms**、**@source_type**、**@destination_dbms**、**@destination_version** を指定します。また、マップ元 DBMS を識別するために必要なパラメーターが他にもあれば、それらを指定してください。 マップ先 DBMS で現在マップされているデータ型の情報は、出力パラメーターを使って返されます。  
   
-2.  (省略可能)ディストリビューターのデータベースで、次のように実行します。 [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)します。 指定 **@source_dbms** を結果セットをフィルター処理するために必要なその他のパラメーターとします。 値に注意してください **mapping_id** 結果に目的のマッピングを設定します。  
+2.  (省略可) ディストリビューター側の任意のデータベースに対して [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)を実行します。 **@source_dbms** を指定し、さらに、結果セットをフィルター選択するために必要なパラメーターが他にもあれば、それらを指定します。 目的のマッピングの **mapping_id** を結果セットで確認してください。  
   
-3.  ディストリビューターのデータベースで、次のように実行します。 [sp_setdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)します。  
+3.  ディストリビューターから任意のデータベースで [sp_setdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)を実行します。  
   
-    -   目的の値がわかっている場合 **mapping_id** の指定手順 2. で取得した **@mapping_id**します。  
+    -   手順 2. で **mapping_id** の値を確認できた場合は、その値を **@mapping_id**を使用して、Oracle パブリッシャーのデータ型マッピングを指定する方法について説明します。  
   
-    -   不明な場合、 **mapping_id**, 、パラメーターを指定 **@source_dbms**, 、**@source_type**, 、**@destination_dbms**, 、**@destination_type**, 、既存のマッピングを識別するために必要なその他のパラメーターです。  
+    -   **mapping_id** がわからない場合は、**@source_dbms**、**@source_type**、**@destination_dbms**、**@destination_type** の各パラメーターを指定し、さらに、既存のマッピングを識別するために必要なパラメーターが他にもあれば、それらを指定します。  
   
-#### 特定の Oracle データ型に対して有効なデータ型を見つけるには  
+#### <a name="to-find-valid-data-types-for-a-given-oracle-data-type"></a>特定の Oracle データ型に対して有効なデータ型を見つけるには  
   
-1.  ディストリビューターのデータベースで、次のように実行します。 [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)します。 値を指定して **ORACLE** の **@source_dbms** を結果セットをフィルター処理するために必要なその他のパラメーターとします。  
+1.  ディストリビューターから任意のデータベースで [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)を実行します。 **@source_dbms** に **ORACLE** を指定し、さらに、結果セットをフィルター選択するために必要なパラメーターが他にもあれば、それらを指定します。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
- この例では数値の Oracle データ型の列にマップされているので [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型 **数値**(38, 38)、既定のデータ型ではなく **float**します。  
+ 次の例では、Oracle のデータ型 NUMBER の列を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型にマップします。既定では、 **numeric**データ型にマップされますが、ここでは、 **float**を使用して、Oracle パブリッシャーのデータ型マッピングを指定する方法について説明します。  
   
  [!code-sql[HowTo#sp_changecolumndatatype](../../../relational-databases/replication/codesnippet/tsql/specify-data-type-mappin_1.sql)]  
   
@@ -92,10 +96,10 @@ caps.handback.revision: 37
   
  [!code-sql[HowTo#sp_helpcolumndatatype_number](../../../relational-databases/replication/codesnippet/tsql/specify-data-type-mappin_3.sql)]  
   
-## 参照  
- [Oracle パブリッシャーのデータ型マッピング](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
+## <a name="see-also"></a>参照  
+ [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [異種データベース レプリケーション](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [レプリケーション システム ストアド プロシージャの概念](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)  
   
   

@@ -1,26 +1,30 @@
 ---
 title: "XPath ノード テストの名前が付いた列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "名前 [SQL Server], 名前付きの列"
-  - "XPath ノード テスト"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [SQL Server], columns with
+- XPath node test
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41bc7b31ff9f5185dcdfde4a90bbfe631fbef089
+ms.lasthandoff: 04/11/2017
+
 ---
-# XPath ノード テストの名前が付いた列
-  XPath ノード テストのいずれかが列名である場合、内容は次の表に示すようにマップされます。 列名がいずれかの XPath ノード テストであれば、対応するノードに内容がマップされます。 列の SQL 型が **xml** の場合は、エラーが返されます。  
+# <a name="columns-with-the-name-of-an-xpath-node-test"></a>XPath ノード テストの名前が付いた列
+  XPath ノード テストのいずれかが列名である場合、内容は次の表に示すようにマップされます。 列名がいずれかの XPath ノード テストであれば、対応するノードに内容がマップされます。 列の SQL 型が **xml**の場合は、エラーが返されます。  
   
 |列名|動作|  
 |-----------------|--------------|  
@@ -84,7 +88,7 @@ FOR XML PATH;
   
  `</row>`  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [FOR XML での PATH モードの使用](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

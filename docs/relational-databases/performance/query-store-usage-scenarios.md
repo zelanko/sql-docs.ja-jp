@@ -1,25 +1,29 @@
 ---
 title: "クエリ ストアの使用シナリオ | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "04/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-query-tuning"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "クエリ ストア、使用シナリオ"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 04/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-query-tuning
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, usage scenarios
 ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ce278d494e2d5ab7dfc82e244a9d6b8821099cc0
+ms.lasthandoff: 04/11/2017
+
 ---
-# クエリ ストアの使用シナリオ
+# <a name="query-store-usage-scenarios"></a>クエリ ストアの使用シナリオ
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   クエリ ストアは、予測可能なワークロードのパフォーマンスの追跡と確保が重要である幅広いシナリオで使用できます。 考慮できるいくつかの例を次に示します。  
@@ -34,8 +38,8 @@ caps.handback.revision: 11
   
 -   アドホック ワークロードを識別して改善する  
   
-## プランの選択による後退が発生しているクエリを特定して修正する  
- 通常のクエリの実行中に、重要な入力が変わったためにクエリ オプティマイザーが別のプランを採用することを決定する場合があります (データ量の変化やインデックスの作成、変更、破棄、統計の更新など)。選択される新しいプランの大部分は、前に使用されていたプランよりも優れているか、同程度のパフォーマンスを提供します。 ただし、新しいプランでパフォーマンスが大幅に低下することがあります。この状況をプランの選択変更による後退と呼びます。 クエリ ストアが導入される前は、これは、識別して修正することが非常に難しい問題でした。その理由は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、使用されていた実行プランをユーザーが調べるための組み込みのデータ ストアが提供されていなかったためです。  
+## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>プランの選択による後退が発生しているクエリを特定して修正する  
+ 通常のクエリの実行中に、重要な入力が変わったためにクエリ オプティマイザーが別のプランを採用することを決定する場合があります (データ量の変化やインデックスの作成、変更、破棄、統計の更新など)。選択される新しいプランの大部分は、前に使用されていたプランよりも優れているか、同程度のパフォーマンスを提供します。 ただし、新しいプランでパフォーマンスが大幅に低下することがあります。この状況をプランの選択変更による後退と呼びます。 クエリ ストアが導入される前は、これは、識別して修正することが非常に難しい問題でした。その理由は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、使用されていた実行プランをユーザーが調べるための組み込みのデータ ストアが提供されていなかったためです。  
   
  現在、クエリ ストアを使用して、次に示す操作を短時間で実行できます。  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 11
   
  このシナリオの詳細な説明については、「 [Query Store: A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) 」(クエリ ストア: データベースのためのフライト データ レコーダー) ブログを参照してください。  
   
-## リソースを大量に消費しているクエリを識別して調整する  
+## <a name="identify-and-tune-top-resource-consuming-queries"></a>リソースを大量に消費しているクエリを識別して調整する  
  ワークロードで数千のクエリが生成される可能性がありますが、通常は少数のクエリのみがシステム リソースの大半を実際に使用しています。このため、そのような少数のクエリに注目する必要があります。 ほとんどの場合、リソースを大量に消費しているクエリの中から、後退しているクエリか、調整を行うことで改善できるクエリを見つけることができます。  
   
  調査を開始する最も簡単な方法は、 **で** [Top Resource Consuming Queries] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)](上位リソース消費クエリ) を開くことです。  ユーザー インターフェイスは、次の 3 つのウィンドウに分かれています。上位リソース消費クエリを表すヒストグラム (左側)、選択したクエリで使用されたプランの概要 (右側)、および選択したプランの視覚化されたクエリ プラン (下部)。 分析するクエリの数と関心のある期間を制御するには、 **[構成]** ボタンをクリックします。 異なるリソース消費ディメンション (期間、CPU、メモリ、IO、実行回数) とベースライン (平均、最小、最大、合計、標準偏差) も選択できます。  
@@ -70,7 +74,7 @@ caps.handback.revision: 11
   
 5.  高コストのクエリの書き直しを検討します。 たとえば、クエリのパラメーター化を利用して、動的 SQL の使用率を下げます。 データを読み取るときに最適なロジックを実装します (アプリケーション側ではなく、データベース側でデータのフィルター処理を適用します)。  
   
-## A/B テストを実行する  
+## <a name="ab-testing"></a>A/B テストを実行する  
  クエリ ストアを使用して、予定しているアプリケーションの変更の導入前と導入後のワークロードのパフォーマンスを比較します。  次の一覧は、クエリ ストアを使用して、環境またはアプリケーションの変更がワークロードのパフォーマンスに与える影響を評価できるさまざまな例を示しています。  
   
 -   新しいアプリケーションのバージョンのロールアウト。  
@@ -95,15 +99,15 @@ caps.handback.revision: 11
   
     1.  	**[Overall Database Consumption]** (全体的なデータベースの消費) を開いて、データベース全体に対する影響を判断します。  
   
-    2.  **[リソースを消費するクエリの上位]** を開いて (または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して独自の分析を実行して)、最も重要なクエリに対する変更の影響を分析します。  
+    2.  **[リソースを消費するクエリの上位]** を開いて (または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して独自の分析を実行して)、最も重要なクエリに対する変更の影響を分析します。  
   
 5.  変更を維持するか、ロールバックを実行する (新しいパフォーマンスが容認できない場合) かを決定します。  
   
- 次の図は、不足しているインデックスを作成した場合のクエリ ストアの分析 (手順 4) を示しています。 [プランの概要] ウィンドウにインデックスの作成による影響を受けたクエリのこのビューを取得するには、**[リソースを消費するクエリの上位]** を開きます。  
+ 次の図は、不足しているインデックスを作成した場合のクエリ ストアの分析 (手順 4) を示しています。 [プランの概要] ウィンドウにインデックスの作成による影響を受けたクエリのこのビューを取得するには、 **[リソースを消費するクエリの上位]** を開きます。  
   
  ![query-store-usage-3](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
   
- さらに、インデックス作成の前と後のプランを並べて表示して、それらを比較できます  (ツールバーの赤い四角形でマークされている[Compare the plans for the selected query in a separate window] (別のウィンドウで選択したクエリのプランの比較) ツールバー オプションを選択します)。  
+ さらに、インデックス作成の前と後のプランを並べて表示して、それらを比較できます (ツールバーの赤い四角形でマークされている[Compare the plans for the selected query in a separate window] (別のウィンドウで選択したクエリのプランの比較) ツールバー オプションを選択します)。  
   
  ![query-store-usage-4](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
   
@@ -113,14 +117,14 @@ caps.handback.revision: 11
   
  クエリのパフォーマンスが向上しているため、分析に基づいてこのインデックスを保持することができます。  
   
-## SQL Server 2016 へのアップグレード中にパフォーマンスの安定性を維持する  
+## <a name="keep-performance-stability-during-the-upgrade-to-sql-server-2016"></a>SQL Server 2016 へのアップグレード中にパフォーマンスの安定性を維持する  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]の前のバージョンでは、最新バージョンのプラットフォームへのアップグレード中にパフォーマンスが後退するというリスクがありました。 それは、新しいビットがインストールされると、クエリ オプティマイザーの最新バージョンがすぐにアクティブになるためでした。  
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降、すべてのクエリ オプティマイザーの変更は最新の `COMPATIBILITY_LEVEL`と連携しているため、プランの変更は、アップグレードの時点ではなく、ユーザーが `COMPATIBILITY_LEVEL` を最新のものに変更した時点で発生します。 この機能とクエリ ストアの組み合わせによって、アップグレード プロセス中のクエリのパフォーマンスを高いレベルで制御できます。 推奨されるアップグレードのワークフローを次の図に示します。  
   
  ![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
   
-1.  `COMPATIBILITY_LEVEL` を変更せずに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアップグレードします。 最新のクエリ オプティマイザーは開始されませんが、クエリ ストアに含まれている [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の機能が与えられます。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を変更せずに `COMPATIBILITY_LEVEL`をアップグレードします。 最新のクエリ オプティマイザーは開始されませんが、クエリ ストアに含まれている [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の機能が与えられます。  
   
 2.  クエリ ストアを有効にします。クエリとプランをキャプチャして、前の `COMPATIBILITY_LEVEL`でのパフォーマンス ベースラインを確立します。 すべてのクエリをキャプチャし、安定したベースラインが取得されるまで、十分にこの手順を続けます。  
   
@@ -128,16 +132,16 @@ caps.handback.revision: 11
   
 4.  クエリ ストアを使用して、分析と後退の修正を行います。大部分の新しいクエリ オプティマイザーはより適切なプランを生成します。 ただし、クエリ ストアでは、簡単な方法でプランの選択による後退を特定し、プラン強制実行メカニズムを使用してそれらを修正できます。  
   
-## アドホック ワークロードを識別して改善する  
- 一部のワークロードには、アプリケーション全体のパフォーマンスを向上させるために調整できる支配的なクエリはありません。 通常、これらのワークロードは、それぞれがシステムリソースの一部を消費する、比較的多数の異なるクエリに分類されます。 これらのクエリは非常にまれに実行される一意のクエリである (通常は 1 回のみ実行されます。このためアドホックという名前がついています) ため、それらのランタイム消費は重要ではありません。 一方で、アプリケーションが常に新しいクエリを生成する場合、システム リソースのかなりの部分がクエリのコンパイルで消費され、これは最適な状況ではありません。 このような状況はクエリ ストアにとって理想的ではなく、大量のクエリとプランが予約済みの領域に殺到した場合、クエリ ストアが非常に短時間で読み取り専用モードに至る可能性があることを意味します。 **サイズ ベース クリーンアップ ポリシー**がアクティブな場合 (クエリ ストアを常に稼働させるために[強くお勧めします](https://msdn.microsoft.com/library/mt604821.aspx))、バックグラウンド プロセスによってほぼ常にクエリ ストア構造がクリーンアップされますが、この動作もシステム リソースを大幅に消費します。  
+## <a name="identify-and-improve-ad-hoc-workloads"></a>アドホック ワークロードを識別して改善する  
+ 一部のワークロードには、アプリケーション全体のパフォーマンスを向上させるために調整できる支配的なクエリはありません。 通常、これらのワークロードは、それぞれがシステムリソースの一部を消費する、比較的多数の異なるクエリに分類されます。 これらのクエリは非常にまれに実行される一意のクエリである (通常は 1 回のみ実行されます。このためアドホックという名前がついています) ため、それらのランタイム消費は重要ではありません。 一方で、アプリケーションが常に新しいクエリを生成する場合、システム リソースのかなりの部分がクエリのコンパイルで消費され、これは最適な状況ではありません。 このような状況はクエリ ストアにとって理想的ではなく、大量のクエリとプランが予約済みの領域に殺到した場合、クエリ ストアが非常に短時間で読み取り専用モードに至る可能性があることを意味します。 **サイズ ベース クリーンアップ ポリシー** がアクティブな場合 (クエリ ストアを常に稼働させるために[強くお勧めします](https://msdn.microsoft.com/library/mt604821.aspx) )、バックグラウンド プロセスによってほぼ常にクエリ ストア構造がクリーンアップされますが、この動作もシステム リソースを大幅に消費します。  
   
  **[リソースを消費するクエリの上位]** ビューに、ワークロードのアドホックな性質の最初の兆候が表示されます。  
   
  ![query-store-usage-6](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
   
- **[実行回数]** メトリックを使用して、上位クエリがアドホックであるかどうかを分析します (クエリ ストアを `QUERY_CAPTURE_MODE = ALL` で実行する必要があります)。 上の図から、 **[Top Resource Consuming Queries]** (上位リソース消費クエリ) の 90% が 1 回だけ実行されていることがわかります。  
+ **[実行回数]** メトリックを使用して、上位クエリがアドホックであるかどうかを分析します (クエリ ストアを `QUERY_CAPTURE_MODE = ALL`で実行する必要があります)。 上の図から、 **[Top Resource Consuming Queries]** (上位リソース消費クエリ) の 90% が 1 回だけ実行されていることがわかります。  
   
- 別の方法として、[!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを実行して、システム内のクエリ テキスト、クエリ、およびプランの合計数を取得し、query_hash と plan_hash を比較することで、それらの違いを判別できます。  
+ 別の方法として、 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを実行して、システム内のクエリ テキスト、クエリ、およびプランの合計数を取得し、query_hash と plan_hash を比較することで、それらの違いを判別できます。  
   
 ```  
 /*Do cardinality analysis when suspect on ad-hoc workloads*/  
@@ -213,8 +217,9 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
     (OPERATION_MODE = READ_WRITE, QUERY_CAPTURE_MODE = AUTO);  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   
   
+

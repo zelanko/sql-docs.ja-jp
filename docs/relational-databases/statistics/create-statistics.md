@@ -1,31 +1,35 @@
 ---
-title: "統計の作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.stat.properties.f1"
-  - "sql13.swb.statistics.filter.f1"
-  - "sql13.swb.stat.columns.f1"
-  - "sql13.swb.statistics.propertis.f1"
-helpviewer_keywords: 
-  - "統計の作成"
-  - "統計 [SQL Server], 作成"
+title: "統計の作成 |Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.stat.properties.f1
+- sql13.swb.statistics.filter.f1
+- sql13.swb.stat.columns.f1
+- sql13.swb.statistics.propertis.f1
+helpviewer_keywords:
+- creating statistics
+- statistics [SQL Server], creating
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e08b4318e4faa13aba2e242f0458db3572d7884
+ms.lasthandoff: 04/11/2017
+
 ---
-# 統計の作成
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] のテーブルまたはインデックス付きビューの 1 つまたは複数の列で、クエリの最適化に関する統計 (フィルター選択された統計情報を含む) を作成できます。 ほとんどのクエリでは、高品質のクエリ プランに必要な統計がクエリ オプティマイザーによって既に生成されていますが、最適な結果を得るために追加の統計情報を作成する必要がある場合もあります。  
+# <a name="create-statistics"></a>統計の作成
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のテーブルまたはインデックス付きビューの 1 つまたは複数の列で、クエリの最適化に関する統計 (フィルター選択された統計情報を含む) を作成できます。 ほとんどのクエリでは、高品質のクエリ プランに必要な統計がクエリ オプティマイザーによって既に生成されていますが、最適な結果を得るために追加の統計情報を作成する必要がある場合もあります。  
   
  **このトピックの内容**  
   
@@ -54,11 +58,11 @@ caps.handback.revision: 9
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> 権限  
- ユーザーがテーブルまたはインデックス付きビューの所有者であるか、**sysadmin** 固定サーバー ロール、**db_owner** 固定データベース ロール、または **db_ddladmin** 固定データベース ロールのメンバーである必要があります。  
+ ユーザーがテーブルまたはインデックス付きビューの所有者であるか、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、または **db_ddladmin** 固定データベース ロールのメンバーである必要があります。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### 統計を作成するには  
+#### <a name="to-create-statistics"></a>統計を作成するには  
   
 1.  **オブジェクト エクスプローラー**で、新しい統計を作成するデータベースをプラス記号をクリックして展開します。  
   
@@ -66,9 +70,9 @@ caps.handback.revision: 9
   
 3.  プラス記号をクリックして、新しい統計を作成するテーブルを展開します。  
   
-4.  **[統計]** フォルダーを右クリックし、**[新しい統計]** をクリックします。  
+4.  **[統計]** フォルダーを右クリックし、 **[新しい統計]**をクリックします。  
   
-     **[テーブルの新しい統計 - *テーブル名*]** ダイアログ ボックスの **[全般]** ページで次のプロパティが表示されます。  
+     **テーブル名**  **ダイアログ ボックスの***全般* ページで次のプロパティが表示されます。  
   
      **テーブル名**  
      統計の対象となるテーブルの名前が表示されます。  
@@ -112,12 +116,12 @@ caps.handback.revision: 9
      **[この列の統計を更新する]**  
      オンにすると、ダイアログ ボックスを閉じたときに統計を更新します。  
   
-     **[テーブルの新しい統計 - *テーブル名*]** ダイアログ ボックスの **[フィルター]** ページで次のプロパティが表示されます。  
+     **テーブル名**  **ダイアログ ボックスの***フィルター* ページで次のプロパティが表示されます。  
   
      **[フィルター式]**  
      フィルター処理された統計情報にどのデータ行を含めるかを定義します。 例を次に示します。 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  **[テーブルの新しい統計 - *テーブル名*]** ダイアログ ボックスの **[全般]** ページで **[追加]** をクリックします。  
+5.  **テーブル名**** ダイアログ ボックスの **全般** ページで **追加**をクリックします。  
   
      **[列の選択]** ダイアログ ボックスに次のプロパティが表示されます。 この情報は読み取り専用です。  
   
@@ -133,16 +137,16 @@ caps.handback.revision: 9
      **Identity**  
      オンの場合、ID 列を示します。  
   
-     **[NULL を許容]**  
+     **Allow NULLs**  
      列で NULL 値が許容されるかどうかを示します。  
   
 6.  **[列の選択]** ダイアログ ボックスで、統計を作成する列のチェック ボックスをオンにし、 **[OK]**をクリックします。  
   
-7.  **[テーブルの新しい統計 - *テーブル名*]** ダイアログ ボックスで、**[OK]** をクリックします。  
+7.  **テーブル名**** ダイアログ ボックスで、 **OK**をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### 統計を作成するには  
+#### <a name="to-create-statistics"></a>統計を作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

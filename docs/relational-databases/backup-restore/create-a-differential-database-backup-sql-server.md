@@ -1,27 +1,31 @@
 ---
 title: "データベースの差分バックアップの作成 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "完全な差分バックアップ [SQL Server]"
-  - "データベース バックアップ [SQL Server]、完全な差分バックアップ"
-  - "データベースのバックアップ [SQL Server]、完全な差分バックアップ"
-  - "バックアップ [SQL Server]、作成"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full differential backups [SQL Server]
+- database backups [SQL Server], full differential backups
+- backing up databases [SQL Server], full differential backups
+- backups [SQL Server], creating
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72e15006bdae1d2ae6d33a9780b62f17fd88a69b
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベースの差分バックアップの作成 (SQL Server)
+# <a name="create-a-differential-database-backup-sql-server"></a>データベースの差分バックアップの作成 (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してデータベースの差分バックアップを作成します。  
   
  **このトピックのセクション**  
@@ -44,13 +48,13 @@ caps.handback.revision: 34
   
 ##  <a name="BeforeYouBegin"></a> アンインストールの準備  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="Restrictions"></a> Limitations and restrictions  
   
 -   BACKUP ステートメントは、明示的または暗黙的なトランザクションでは使用できません。  
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
--   データベースの差分バックアップを作成するには、データベースの以前の完全バックアップが必要です。 データベースをバックアップしたことがない場合は、差分バックアップを作成する前に、データベースの完全バックアップを実行してください。 詳細については、データベースの完全バックアップの作成[ &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)を参照してください。  
+-   データベースの差分バックアップを作成するには、データベースの以前の完全バックアップが必要です。 データベースをバックアップしたことがない場合は、差分バックアップを作成する前に、データベースの完全バックアップを実行してください。 詳細については、データベースの完全バックアップの作成 [データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)を使用してデータベースの差分バックアップを作成します。  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
@@ -59,19 +63,19 @@ caps.handback.revision: 34
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> 最初に権限を確認してください。  
- BACKUP DATABASE 権限と BACKUP LOG 権限は、既定では、**sysadmin** 固定サーバー ロール、**db_owner** 固定データベース ロール、および **db_backupoperator** 固定データベース ロールのメンバーに与えられています。  
+ BACKUP DATABASE 権限と BACKUP LOG 権限は、既定では、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_backupoperator** 固定データベース ロールのメンバーに与えられています。  
   
- バックアップ デバイスの物理ファイルに対する所有権と権限に問題があると、バックアップ操作が妨げられます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、デバイスに対して読み書きを実行できる必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが実行されているアカウントには書き込み権限が必要です。 ただし、システム テーブルにバックアップ デバイスのエントリを追加する [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) では、ファイル アクセスの権限は確認**されません**。 バックアップ デバイスの物理ファイルに対する権限の問題は、バックアップや復元を試行したときに物理リソースがアクセスされるまで、表面化しない可能性があります。  
+ バックアップ デバイスの物理ファイルに対する所有権と権限に問題があると、バックアップ操作が妨げられます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、デバイスに対して読み書きを実行できる必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが実行されているアカウントには書き込み権限が必要です。 ただし、システム テーブルにバックアップ デバイスのエントリを追加する [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)では、ファイル アクセスの権限は確認 **されません** 。 バックアップ デバイスの物理ファイルに対する権限の問題は、バックアップや復元を試行したときに物理リソースがアクセスされるまで、表面化しない可能性があります。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio  
   
-#### データベースの差分バックアップの作成  
+#### <a name="create-a-differential-database-backup"></a>データベースの差分バックアップの作成  
   
 1.  オブジェクト エクスプローラーで適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
   
 2.  **[データベース]**を展開し、目的のデータベースに応じて、任意のユーザー データベースを選択するか、または **[システム データベース]** を展開して任意のシステム データベースを選択します。  
   
-3.  データベースを右クリックして **[タスク]** をポイントし、**[バックアップ]** をクリックします。 **[データベースのバックアップ]** ダイアログ ボックスが表示されます。  
+3.  データベースを右クリックして **[タスク]**をポイントし、 **[バックアップ]**をクリックします。 **[データベースのバックアップ]** ダイアログ ボックスが表示されます。  
   
 4.  **[データベース]** ボックスに、適切なデータベース名が表示されていることを確認します。 必要に応じて、このボックスの一覧から別のデータベースを選択することもできます。  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 34
 5.  **[バックアップの種類]** ボックスの一覧の **[差分]**を選択します。  
   
     > [!IMPORTANT]  
-    >  **[差分]** を選択した後、**[バックアップのみコピーする]** チェック ボックスがオフになっていることを確認します。  
+    >  **[差分]** を選択した後、 **[バックアップのみコピーする]** チェック ボックスがオフになっていることを確認します。  
   
 6.  **[バックアップ コンポーネント]**で、 **[データベース]**をクリックします。  
   
@@ -90,9 +94,9 @@ caps.handback.revision: 34
   
 9. バックアップ セットの有効期限を指定します。  
   
-    -   バックアップ セットが指定の日数後に期限切れになるようにするには、**[期間指定]** (既定のオプション) をクリックし、セットを作成してからセットが期限切れになるまでの日数を入力します。 0 ～ 99,999 日の値を指定できます。0 日を指定すると、バックアップ セットの有効期限は無期限になります。  
+    -   バックアップ セットが指定の日数後に期限切れになるようにするには、 **[期間指定]** (既定のオプション) をクリックし、セットを作成してからセットが期限切れになるまでの日数を入力します。 0 ～ 99,999 日の値を指定できます。0 日を指定すると、バックアップ セットの有効期限は無期限になります。  
   
-         既定値は、**[サーバーのプロパティ]** ダイアログ ボックス (**[データベースの設定]** ページ) の **[バックアップ メディアの既定の保有期間 (日)]** オプションで設定されています。 このオプションを表示するには、オブジェクト エクスプローラーでサーバー名を右クリックし、[プロパティ] をクリックします。次に、**[データベースの設定]** ページをクリックします。  
+         既定値は、 **[サーバーのプロパティ]** ダイアログ ボックス ( **[データベースの設定]** ページ) の**[バックアップ メディアの既定の保有期間 (日)]** オプションで設定されています。 このオプションを表示するには、オブジェクト エクスプローラーでサーバー名を右クリックし、[プロパティ] をクリックします。次に、 **[データベースの設定]** ページをクリックします。  
   
     -   バックアップ セットが特定の日付に期限切れになるようにするには、 **[日時指定]**をクリックし、セットの有効期限が切れる日付を入力します。  
   
@@ -123,9 +127,9 @@ caps.handback.revision: 34
 14. **[全般]** ページの **[バックアップ先]** セクションで、テープ ドライブにバックアップするように指定した場合は、**[バックアップ後にテープをアンロードする]** チェック ボックスがアクティブになります。 このオプションをオンにすると、 **[アンロードの前にテープを巻き戻す]** オプションがアクティブになります。  
   
     > [!NOTE]  
-    >  **[全般]** ページの **[バックアップの種類]** で、トランザクション ログをバックアップするように指定しなかった場合、**[トランザクション ログ]** セクションの各オプションは無効になっています。  
+    >  **[全般]** ページの **[バックアップの種類]** で、トランザクション ログをバックアップするように指定しなかった場合、 **[トランザクション ログ]** セクションの各オプションは無効になっています。  
   
-15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 以降では、 [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)がサポートされています。 既定では、バックアップが圧縮されるかどうかは、**backup-compression default** サーバー構成オプションの値によって決まります。 ただし、現在のサーバー レベルの既定の設定にかかわらず、**[バックアップを圧縮する]** をオンにしてバックアップを圧縮することも、**[バックアップを圧縮しない]** をオンにして圧縮しないようにすることもできます。  
+15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 以降では、 [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)がサポートされています。 既定では、バックアップが圧縮されるかどうかは、 **backup-compression default** サーバー構成オプションの値によって決まります。 ただし、現在のサーバー レベルの既定の設定にかかわらず、 **[バックアップを圧縮する]**をオンにしてバックアップを圧縮することも、 **[バックアップを圧縮しない]**をオンにして圧縮しないようにすることもできます。  
   
      **現在の backup compression default 値を表示するには**  
   
@@ -136,7 +140,7 @@ caps.handback.revision: 34
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL  
   
-#### データベースの差分バックアップの作成  
+#### <a name="create-a-differential-database-backup"></a>データベースの差分バックアップの作成  
   
 1.  次の項目を指定した BACKUP DATABASE ステートメントを実行し、データベースの差分バックアップを作成します。  
   
@@ -151,7 +155,7 @@ caps.handback.revision: 34
      BACKUP DATABASE *database_name* TO <backup_device> WITH DIFFERENTIAL  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
- この例では、`MyAdvWorks` データベースの完全バックアップおよび差分バックアップを作成します。  
+ この例では、 `MyAdvWorks` データベースの完全バックアップおよび差分バックアップを作成します。  
   
 ```tsql  
 -- Create a full database backup first.  
@@ -168,7 +172,7 @@ BACKUP DATABASE MyAdvWorks
 GO  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)   
  [ファイルおよびファイル グループのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

@@ -1,50 +1,51 @@
 ---
 title: "権限 (データベース エンジン) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseuser.permissions.database.f1--May use common.permissions"
-  - "sql13.swb.databaseuser.permissions.object.f1--May use common.permissions"
-helpviewer_keywords: 
-  - "REFERENCES 権限"
-  - "権限 [SQL Server]"
-  - "セキュリティ [SQL Server], 権限"
-  - "名前付け規則 [SQL Server]"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseuser.permissions.database.f1--May use common.permissions
+- sql13.swb.databaseuser.permissions.object.f1--May use common.permissions
+helpviewer_keywords:
+- REFERENCES permission
+- permissions [SQL Server]
+- security [SQL Server], permissions
+- naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 caps.latest.revision: 76
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 75
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e1c8c3f3c82e39da5e5f3b1cd018af8b3b2d26d7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 権限 (データベース エンジン)
+# <a name="permissions-database-engine"></a>権限 (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ保護可能なリソースにはすべて、プリンシパルに許可できる権限が関連付けられています。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の権限は、ログインおよびサーバー ロールに割り当てられたサーバー レベル、およびデータベース ユーザーおよびデータベース ロールに割り当てられたデータベース レベルで管理されます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のモデルには、データベース権限用に同じシステムがありますが、サーバー レベルの権限は使用できません。 このトピックでは、権限の一覧を示します。 アクセス許可の一般的な実装については、「 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)」を参照してください。  
   
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] と [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] の権限の合計数 は 236 です。 ほとんどの権限はすべてのプラットフォームに適用されますがが、一部は適用されません。 たとえば、サーバー レベルの権限は SQL データベースに対して付与することができず、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] で意味を成すのは、いくつかの権限のみです。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] は 230 の権限を公開します。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] は 219 の権限を公開します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] は 214 の権限を公開します。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] は 195 の権限を公開します。 [Sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) トピックでは、最近のバージョンでどのトピックが新しいかが明確に記載されています。 次の図は、権限とそれらの関連性を示します。 一部の高いレベルの許可 (`CONTROL SERVER` など) は複数回列挙されています。
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] と [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] の権限の合計数 は 237 です。 ほとんどの権限はすべてのプラットフォームに適用されますがが、一部は適用されません。 たとえば、サーバー レベルの権限は SQL データベースに対して付与することができず、 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]で意味を成すのは、いくつかの権限のみです。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] は 230 の権限を公開します。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] は 219 の権限を公開します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] は 214 の権限を公開します。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] は 195 の権限を公開します。 [Sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) トピックでは、最近のバージョンでどのトピックが新しいかが明確に記載されています。 次の図は、権限とそれらの関連性を示します。 一部の高いレベルの許可 ( `CONTROL SERVER`など) は複数回列挙されています。 画像をクリックすると、**データベース エンジンのアクセス許可ポスター**を pdf 形式でダウンロードできます。  
   
-![データベース エンジンの権限](../../relational-databases/security/media/database-engine-permissions.PNG) 
+[![データベース エンジンの権限](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
 
->[!NOTE]
-> このトピックの一部として、ポスターは、読み取るには小さすぎます。 データベース エンジンの権限ポスターは、 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)からダウンロードしてください。  
-
-権限を理解したら、[GRANT](../../t-sql/statements/grant-transact-sql.md) 、[REVOKE](../../t-sql/statements/revoke-transact-sql.md)、および [DENY](../../t-sql/statements/deny-transact-sql.md) ステートメントを使用してサーバー レベルの権限をログインとデータベース レベルの権限ユーザーに付与します。 例:   
+権限を理解したら、 [GRANT](../../t-sql/statements/grant-transact-sql.md)、 [REVOKE](../../t-sql/statements/revoke-transact-sql.md)、および [DENY](../../t-sql/statements/deny-transact-sql.md) ステートメントを使用してサーバー レベルの権限をログインとデータベース レベルの権限ユーザーに付与します。 例:   
 ```tsql
 GRANT SELECT ON OBJECT::HumanResources.Employee TO Larry;
 REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
 権限システムの計画のヒントについては、「 [データベース エンジンの権限の概要](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)」を参照してください。
   
-##  <a name="a-nameconventionsa-permissions-naming-conventions"></a><a name="_conventions"></a> 権限の名前付け規則  
+##  <a name="_conventions"></a> Permissions Naming Conventions  
  ここでは、権限に名前を付ける際に従う一般的な規則について説明します。  
   
 -   CONTROL  
@@ -100,13 +101,13 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 権限の一覧表  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のすべての権限を示した pdf 形式のポスター サイズの一覧表については、 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)を参照してください。  
   
-##  <a name="a-namesecurablesa-permissions-applicable-to-specific-securables"></a><a name="_securables"></a> 特定のセキュリティ保護可能なリソースに適用できる権限  
+##  <a name="_securables"></a> Permissions Applicable to Specific Securables  
  次の表に、主な権限のクラスおよび各権限を適用できるセキュリティ保護可能なリソースの種類を示します。  
   
 |権限|適用対象|  
 |----------------|----------------|  
 |ALTER|オブジェクトのすべてのクラス (TYPE を除く)。|  
-|CONTROL|オブジェクトのすべてのクラス:  <br />AGGREGATE、<br />APPLICATION ROLE、<br />ASSEMBLY、<br />ASYMMETRIC KEY、<br />AVAILABILITY GROUP、<br />CERTIFICATE、<br />CONTRACT、<br />CREDENTIALS、DATABASE、<br />DATABASE SCOPED CREDENTIAL、<br /> DEFAULT、<br />ENDPOINT、<br />FULLTEXT CATALOG、<br />FULLTEXT STOPLIST、<br />FUNCTION、<br />LOGIN、<br />MESSAGE TYPE、<br />PROCEDURE、<br />QUEUE、 <br />REMOTE SERVICE BINDING、<br />ROLE、<br />ROUTE、<br />RULE、<br />SCHEMA、<br />SEARCH PROPERTY LIST、<br />SERVER、<br />SERVER ROLE、<br />SERVICE、<br />SYMMETRIC KEY、<br />SYNONYM、<br />TABLE、<br />TYPE、USER、<br />VIEW、および<br />XML SCHEMA COLLECTION|  
+|CONTROL|オブジェクトのすべてのクラス: <br />AGGREGATE、<br />APPLICATION ROLE、<br />ASSEMBLY、<br />ASYMMETRIC KEY、<br />AVAILABILITY GROUP、<br />CERTIFICATE、<br />CONTRACT、<br />CREDENTIALS、DATABASE、<br />DATABASE SCOPED CREDENTIAL、<br /> DEFAULT、<br />ENDPOINT、<br />FULLTEXT CATALOG、<br />FULLTEXT STOPLIST、<br />FUNCTION、<br />LOGIN、<br />MESSAGE TYPE、<br />PROCEDURE、<br />QUEUE、 <br />REMOTE SERVICE BINDING、<br />ROLE、<br />ROUTE、<br />RULE、<br />SCHEMA、<br />SEARCH PROPERTY LIST、<br />SERVER、<br />SERVER ROLE、<br />SERVICE、<br />SYMMETRIC KEY、<br />SYNONYM、<br />TABLE、<br />TYPE、USER、<br />VIEW、および<br />XML SCHEMA COLLECTION|  
 |DELETE|オブジェクトのすべてのクラス (DATABASE SCOPED CONFIGURATION および SERVER を除く)。|  
 |EXECUTE|CLR 型、外部スクリプト、プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)、スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)、およびシノニム|  
 |IMPERSONATE|ログイン、ユーザー|  
@@ -122,7 +123,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 > [!CAUTION]  
 >  セットアップ時にシステム オブジェクトに付与された既定のアクセス許可は、発生する可能性のある脅威に対して慎重に評価されているため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールの際、セキュリティ強化の一部として変更する必要はありません。 システム オブジェクトのアクセス許可の変更はどのようなものであっても、機能を制限または中断する可能性があり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールがサポートされていない状態のままになる場合があります。  
   
-##  <a name="a-namepermissionsa-sql-server-permissions"></a><a name="_permissions"></a> SQL Server 権限  
+##  <a name="_permissions"></a> SQL Server Permissions  
  次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての権限の一覧を示します。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のアクセス許可は、サポートされている基本のセキュリティ保護可能なリソースにのみ使用できます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ではサーバー レベルのアクセス許可を付与することはできませんが、代わりにデータベースのアクセス許可を付与できる場合があります。  
   
 |セキュリティ保護可能な基本リソース|セキュリティ保護可能な基本リソースに対する粒度の細かい権限|権限の種類のコード|基本リソースを含んでいる別のセキュリティ保護可能なリソース|セキュリティ保護可能なコンテナーに対する権限 (基本リソースに対する粒度の細かい権限を暗示)|  
@@ -160,14 +161,14 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|ALTER ANY ASSEMBLY|ALAS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ASYMMETRIC KEY|ALAK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY CERTIFICATE|ALCF|SERVER|CONTROL SERVER|  
-|DATABASE|任意の列の暗号化キーを変更します。|ALCK<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|任意の列の暗号化キーを変更します。|ALCK<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY CONTRACT|ALSC|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
 |DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に適用されます。|SERVER|ALTER ANY EVENT SESSION|  
-|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|すべての外部データ ソースを変更します。|AEDS|SERVER|CONTROL SERVER|  
 |DATABASE|任意の外部のファイル形式を変更します。|AEFF|SERVER|CONTROL SERVER|  
@@ -178,7 +179,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|すべてのセキュリティ ポリシーを変更します。|ALSP<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|すべてのセキュリティ ポリシーを変更します。|ALSP<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -226,8 +227,8 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
 |DATABASE|マスク解除します。|UMSK<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)。|SERVER|CONTROL SERVER|  
 |DATABASE|UPDATE|UP|SERVER|CONTROL SERVER|  
-|DATABASE|列の暗号化キーの定義を表示します。|VWCK<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|VIEW SERVER STATE|  
-|DATABASE|任意の列のマスター_キーの定義の表示]|vWCM<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|VIEW SERVER STATE|  
+|DATABASE|列の暗号化キーの定義を表示します。|VWCK<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|VIEW SERVER STATE|  
+|DATABASE|任意の列のマスター_キーの定義の表示|vWCM<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DATABASE STATE|VWDS|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |DATABASE SCOPED CREDENTIAL|ALTER|AL|DATABASE|CONTROL|
@@ -364,7 +365,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="a-namealgorithma-summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> 権限チェック アルゴリズムの概要  
+##  <a name="_algorithm"></a> Summary of the Permission Check Algorithm  
  権限のチェックは複雑な場合があります。 権限チェック アルゴリズムには、グループ メンバーシップの重複、所有権の継承、明示的および暗黙的な権限が含まれます。また、セキュリティ保護可能なエンティティを含むセキュリティ保護可能なクラスに対する権限の影響を受けることもあります。 アルゴリズムの一般的な手順では、関連する権限がすべて収集されます。 ブロックする DENY が見つからない場合、十分なアクセス権を付与する GRANT が検索されます。 アルゴリズムには、不可欠な要素が 3 つあります。 **セキュリティ コンテキスト**、 **権限領域**、および **必要な権限**です。  
   
 > [!NOTE]  
@@ -426,7 +427,7 @@ GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 テーブルの DENY は、列の GRANT によりオーバーライドされます。 ただし、その後にテーブルの DENY があると、列の GRANT は削除されます。 
   
-##  <a name="a-nameexamplesa-examples"></a><a name="_examples"></a> 使用例  
+##  <a name="_examples"></a> Examples  
  このセクションでは、権限に関する情報を取得する例を示します。  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. 許可できる権限の完全な一覧を返す  
@@ -454,7 +455,7 @@ GO
 ```  
   
 ### <a name="d-returning-the-permissions-applicable-to-a-specified-object"></a>D. 指定したオブジェクトに適用できる権限を返す  
- 次の例は、 `Yttrium`と呼ばれるオブジェクトに適用できる権限を返します。 オブジェクト `OBJECT_ID` の ID を取得するために、組み込み関数 `Yttrium` が使用されていることに注意してください。  
+ 次の例は、 `Yttrium`と呼ばれるオブジェクトに適用できる権限を返します。 オブジェクト `OBJECT_ID` の ID を取得するために、組み込み関数 `Yttrium`が使用されていることに注意してください。  
   
 ```tsql  
 SELECT * FROM sys.database_permissions   
@@ -467,3 +468,4 @@ GO
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   
+

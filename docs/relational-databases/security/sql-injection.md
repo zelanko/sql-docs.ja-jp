@@ -1,28 +1,32 @@
 ---
 title: "SQL インジェクション | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL インジェクション"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-security
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Injection
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d415833c9a51fd9b7fcde0b2515183ecc4dfb235
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL インジェクション
+# <a name="sql-injection"></a>SQL インジェクション
   SQL インジェクションとは、後で SQL Server のインスタンスに渡され解析および実行が行われる文字列に、有害なコードを挿入するという攻撃です。 SQL Server では、構文的に有効であれば受信したクエリがすべて実行されるため、SQL ステートメントを構成するすべてのプロシージャにおいて、インジェクションに対する脆弱性を検証する必要があります。 高いスキルを持つ決然たる攻撃者は、パラメーター化されたデータであっても操作できるのです。  
   
-## SQL インジェクションのしくみ  
+## <a name="how-sql-injection-works"></a>SQL インジェクションのしくみ  
  SQL インジェクションは主に、SQL コマンドと連結されて実行されるユーザー入力変数にコードを直接挿入することにより行われます。 それほど直接的ではない攻撃では、悪意のあるコードが、テーブル内の記憶領域に格納される文字列に挿入されたり、メタデータとして挿入されたりします。 格納された文字列が動的な SQL コマンドに後で連結された場合、悪意のあるコードが実行されます。  
   
  インジェクション プロセスは、途中でテキスト文字列を終了し、新しいコマンドを追加することによって行われます。 挿入されたコマンドが実行される前に別の文字列が追加される可能性があるため、攻撃者は挿入する文字列をコメント記号 "--" で終了させます。 後続のテキストは実行時には無視されます。  
@@ -57,7 +61,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
   
  挿入された SQL コードが構文的に正しい限り、改ざんをプログラムによって検出するのは不可能です。 このため、すべてのユーザー入力を検証し、使用しているサーバーで作成された SQL コマンドを実行するコードを注意深く確認する必要があります。 このトピックの次のセクションでは、コーディングのベスト プラクティスについて説明します。  
   
-## すべての入力の検証  
+## <a name="validate-all-input"></a>すべての入力の検証  
  型、長さ、形式、および範囲をテストすることによってユーザー入力を必ず検証してください。 悪意のある入力を未然に防ぐには、アプリケーションのアーキテクチャおよび配置シナリオについて検討する必要があります。 セキュリティで保護された環境で実行するようにデザインされたプログラムでも、セキュリティで保護されていない環境にコピーされる可能性があることに注意してください。 次の提案をベスト プラクティスとして検討してください。  
   
 -   アプリケーションによって受信されるデータのサイズ、型、内容を推測で処理しない。 たとえば、次のような評価を行う必要があります。  
@@ -91,12 +95,12 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |---------------------|------------------------------|  
 |**;**|クエリの区切り記号。|  
 |**'**|文字データ文字列の区切り記号。|  
-|**--**|文字データ文字列の区切り記号。<br />」を参照してください。|  
+|**--**|文字データ文字列の区切り記号。<br />であるレコードをすべて選択します。|  
 |**/\*** ... **\*/**|コメントの区切り記号。 **/\*** と **\*/** の間にあるテキストについては、サーバーによる評価は行われません。|  
-|**xp_**|`xp_cmdshell` など、カタログ拡張ストアド プロシージャ名の先頭に使用します。|  
+|**xp_**|`xp_cmdshell`など、カタログ拡張ストアド プロシージャ名の先頭に使用します。|  
   
-### Type-Safe SQL パラメーターの使用  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **Parameters** コレクションは、型のチェックおよび長さの検証に使用できます。 **Parameters** コレクションを使用する場合、入力は実行可能コードとしてではなくリテラル値として扱われます。 **Parameters** コレクションを使用することのもう 1 つの利点は、型のチェックおよび長さのチェックを適用できることです。 範囲外の値が入力されると例外が発生します。 次のコード フラグメントは、 **Parameters** コレクションの使用方法を示しています。  
+### <a name="use-type-safe-sql-parameters"></a>Type-Safe SQL パラメーターの使用  
+ **の** Parameters [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コレクションは、型のチェックおよび長さの検証に使用できます。 **Parameters** コレクションを使用する場合、入力は実行可能コードとしてではなくリテラル値として扱われます。 **Parameters** コレクションを使用することのもう 1 つの利点は、型のチェックおよび長さのチェックを適用できることです。 範囲外の値が入力されると例外が発生します。 次のコード フラグメントは、 **Parameters** コレクションの使用方法を示しています。  
   
 ```  
 SqlDataAdapter myCommand = new SqlDataAdapter("AuthorLogin", conn);  
@@ -108,7 +112,7 @@ parm.Value = Login.Text;
   
  この例では、 `@au_id` パラメーターは実行可能コードとしてではなくリテラル値として扱われます。 この値は型および長さについてチェックされます。 `@au_id` の値が指定された型および長さの制約に従っていない場合は、例外がスローされます。  
   
-### ストアド プロシージャとパラメーター化された入力の使用  
+### <a name="use-parameterized-input-with-stored-procedures"></a>ストアド プロシージャとパラメーター化された入力の使用  
  ストアド プロシージャがフィルターされていない入力を使用する場合、このストアド プロシージャは SQL インジェクションの影響を受けやすくなります。 たとえば、次のコードには脆弱性があります。  
   
 ```  
@@ -119,7 +123,7 @@ new SqlDataAdapter("LoginStoredProcedure '" +
   
  ストアド プロシージャを使用する場合、パラメーターをストアド プロシージャの入力として使用する必要があります。  
   
-### 動的な SQL を使用した Parameters コレクションの使用  
+### <a name="use-the-parameters-collection-with-dynamic-sql"></a>動的な SQL を使用した Parameters コレクションの使用  
  ストアド プロシージャを使用できない場合でも、次のコード例に示すようにパラメーターを使用することができます。  
   
 ```  
@@ -130,7 +134,7 @@ SQLParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",
 Parm.Value = Login.Text;  
 ```  
   
-### 入力のフィルター  
+### <a name="filtering-input"></a>入力のフィルター  
  入力をフィルターすると、エスケープ文字が削除されることで SQL インジェクションの防御に役立ちます。 ただし、問題となり得る文字は数が多いため、信頼性の高い防御策にはなりません。 次の例では、文字の文字列区切り記号を検索しています。  
   
 ```  
@@ -140,7 +144,7 @@ private string SafeSqlLiteral(string inputSQL)
 }  
 ```  
   
-### LIKE 句  
+### <a name="like-clauses"></a>LIKE 句  
  `LIKE` 句を使用している場合、ワイルドカード文字もエスケープする必要があることに注意してください。  
   
 ```  
@@ -149,7 +153,7 @@ s = s.Replace("%", "[%]");
 s = s.Replace("_", "[_]");  
 ```  
   
-## SQL インジェクションのコードの確認  
+## <a name="reviewing-code-for-sql-injection"></a>SQL インジェクションのコードの確認  
  `EXECUTE`、 `EXEC`、または `sp_executesql`を呼び出すすべてのコードを確認する必要があります。 次のようなクエリを使用すると、これらのステートメントを含むプロシージャの識別に役立てることができます。 このクエリは、 `EXECUTE` または `EXEC`という語の後に 1 ～ 4 個のスペースがあるかどうかをチェックします。  
   
 ```  
@@ -165,7 +169,7 @@ OR UPPER(text) LIKE '%EXEC    (%'
 OR UPPER(text) LIKE '%SP_EXECUTESQL%';  
 ```  
   
-### QUOTENAME() および REPLACE() でのパラメーターのラップ  
+### <a name="wrapping-parameters-with-quotename-and-replace"></a>QUOTENAME() および REPLACE() でのパラメーターのラップ  
  選択された各ストアド プロシージャで、動的な Transact-SQL で使用されるすべての変数が正しく処理されることを確認します。 ストアド プロシージャの入力パラメーターから取得するデータ、またはテーブルから読み取るデータは、QUOTENAME() または REPLACE() でラップする必要があります。 QUOTENAME() に渡される @variable の値のデータ型は sysname であり、文字列の最大長は 128 文字であることに注意してください。  
   
 |@variable|推奨ラッパー|  
@@ -186,7 +190,7 @@ SET @temp = N'SELECT * FROM authors WHERE au_lname = '''
  + REPLACE(@au_lname,'''','''''') + N'''';  
 ```  
   
-### データの切り捨てによって有効になるインジェクション  
+### <a name="injection-enabled-by-data-truncation"></a>データの切り捨てによって有効になるインジェクション  
  変数に代入されるすべての動的な [!INCLUDE[tsql](../../includes/tsql-md.md)] は、その変数に割り当てられているバッファーよりも大きい場合は切り捨てられます。 予期しない長さの文字列をストアド プロシージャに渡すことで、強制的にステートメントの切り捨てを行うことができれば、攻撃者が結果を操作することも可能になります。 たとえば、次のスクリプトによって作成されるストアド プロシージャは、切り捨てによって有効になるインジェクションの影響を受けやすくなります。  
   
 ```  
@@ -226,7 +230,7 @@ EXEC sp_MySetPassword 'sa', 'dummy',
   
  このため、コマンド変数には大きなバッファーを使用するか、 [!INCLUDE[tsql](../../includes/tsql-md.md)] は直接 `EXECUTE` ステートメント内で動的に実行する必要があります。  
   
-### QUOTENAME(@variable, '''') および REPLACE() 使用時の切り捨て  
+### <a name="truncation-when-quotenamevariable--and-replace-are-used"></a>QUOTENAME(@variable, '''') および REPLACE() 使用時の切り捨て  
  QUOTENAME() および REPLACE() から返される文字列は、割り当てられている領域よりも大きくなると、暗黙に切り捨てられます。 次の例で作成されるストアド プロシージャは、行われる可能性がある処理を示しています。  
   
 ```  
@@ -307,7 +311,7 @@ EXEC (@command);
 GO  
 ```  
   
- QUOTENAME() と同様に、すべての場合に対して十分な大きさである一時変数を宣言することで、REPLACE() による文字列の切り捨てを回避できます。 可能であれば、動的な [!INCLUDE[tsql](../../includes/tsql-md.md)] 内で QUOTENAME() または REPLACE() を直接呼び出すことをお勧めします。 あるいは、必要なバッファー サイズを次のように計算できます。 `@outbuffer = QUOTENAME(@input)`の場合、 `@outbuffer` のサイズは `2*(len(@input)+1)`にする必要があります。 前の例のように、 `REPLACE()` を使用し、二重引用符を繰り返すときは、バッファー サイズは `2*len(@input)` で十分です。  
+ QUOTENAME() と同様に、すべての場合に対して十分な大きさである一時変数を宣言することで、REPLACE() による文字列の切り捨てを回避できます。 可能であれば、動的な [!INCLUDE[tsql](../../includes/tsql-md.md)]内で QUOTENAME() または REPLACE() を直接呼び出すことをお勧めします。 あるいは、必要なバッファー サイズを次のように計算できます。 `@outbuffer = QUOTENAME(@input)`の場合、 `@outbuffer` のサイズは `2*(len(@input)+1)`にする必要があります。 前の例のように、 `REPLACE()` を使用し、二重引用符を繰り返すときは、バッファー サイズは `2*len(@input)` で十分です。  
   
  次の計算は、すべての場合に対応します。  
   
@@ -317,8 +321,8 @@ ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)
  + (LEN(@input) % LEN(@find_string))  
 ```  
   
-### QUOTENAME(@variable, ']') 使用時の切り捨て  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ保護可能なリソースの名前が `QUOTENAME(@variable, ']')` という形式のステートメントに渡されると、切り捨てが発生する可能性があります。 次に例を示します。  
+### <a name="truncation-when-quotenamevariable--is-used"></a>QUOTENAME(@variable, ']') 使用時の切り捨て  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ保護可能なリソースの名前が `QUOTENAME(@variable, ']')`という形式のステートメントに渡されると、切り捨てが発生する可能性があります。 次に例を示します。  
   
 ```  
 CREATE PROCEDURE sp_MyProc  
@@ -336,7 +340,7 @@ GO
   
  型 sysname の値を連結する場合、値ごとに最大 128 文字を十分保持できる大きさの一時変数を使用する必要があります。 可能であれば、動的な `QUOTENAME()` 内で [!INCLUDE[tsql](../../includes/tsql-md.md)]を直接呼び出します。 あるいは、前述のように必要なバッファー サイズを計算できます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)   
  [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)   

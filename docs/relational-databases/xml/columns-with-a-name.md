@@ -1,24 +1,28 @@
 ---
 title: "名前のある列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "名前 [SQL Server], 列"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3cda571a6e30387ccf1764e94fe6e6a3f1625262
+ms.lasthandoff: 04/11/2017
+
 ---
-# 名前のある列
+# <a name="columns-with-a-name"></a>名前のある列
   行セット内の名前のある列が、大文字と小文字を区別して結果の XML にマップされる条件を次に示します。  
   
 -   列名がアット マーク (@) で始まる場合  
@@ -31,8 +35,8 @@ caps.handback.revision: 8
   
 -   名前の異なる列がある場合  
   
-## 列名がアット マーク (@) で始まる場合  
- 列名がアット マーク (@) で始まり、スラッシュ (/) を含んでいない場合は、<`row`> 要素の属性が作成され、対応する列値が値として設定されます。 たとえば、次のクエリは 2 列 (@PmId、Name) の行セットを返します。 結果の XML では、対応する <`row`> 要素に **PmId** 属性が追加され、この属性に ProductModelID の値が設定されます。  
+## <a name="column-name-starts-with-an-at-sign-"></a>列名がアット マーク (@) で始まる場合  
+ 列名がアット マーク (@) で始まり、スラッシュ (/) を含んでいない場合は、<`row`> 要素の属性が作成され、対応する列値が値として設定されます。 たとえば、次のクエリは 2 列 (@PmId, Name) の行セットを返します。 結果の XML では、対応する <`row`> 要素に **PmId** 属性が追加され、この属性に ProductModelID の値が設定されます。  
   
 ```  
   
@@ -64,7 +68,7 @@ FOR XML PATH
 go  
 ```  
   
-## 列名がアット マーク (@) で始まらない場合  
+## <a name="column-name-does-not-start-with-an-at-sign-"></a>列名がアット マーク (@) で始まらない場合  
  列名がアット マーク (@) で始まらず、XPath の任意のノード テストでもなく、スラッシュ (/) も含んでいない場合、行要素 (既定では <`row`>) のサブ要素になる XML 要素が作成されます。  
   
  次のクエリでは列名 result が指定されています。 したがって、<`row`> 要素には、<`result`> 子要素が追加されます。  
@@ -111,8 +115,8 @@ go
 </row>  
 ```  
   
-## 列名がアット マーク (@) で始まらず、スラッシュ (/) を含む場合  
- 列名がアット マーク (@) で始まらず、スラッシュ (/) を含んでいる場合、列名は XML 階層を示します。 たとえば、列名を "Name1/Name2/Name3.../Name***n***" とすると、Name***i*** は、i = 1 の場合は現在の行要素の入れ子である要素を表し、それ以外の場合は Name***i-1*** 要素の下にある要素を表します。 Name***n*** が '@' で始まる場合は、Name***n-1*** 要素の属性にマップされます。  
+## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>列名がアット マーク (@) で始まらず、スラッシュ (/) を含む場合  
+ 列名がアット マーク (@) で始まらず、スラッシュ (/) を含んでいる場合、列名は XML 階層を示します。 たとえば、列名を "Name1/Name2/Name3.../Name***n*** " とすると、Name***i*** は、i = 1 の場合は現在の行要素の入れ子である要素を表し、それ以外の場合は Name***i-1***要素の下にある要素を表します。 Name***n*** が '@' で始まる場合は、Name***n-1*** 要素の属性にマップされます。  
   
  たとえば次のクエリは、従業員の ID と名前を返します。従業員名は、First、Middle、および Last から構成される複合型の要素 EmpName で表現されます。  
   
@@ -198,10 +202,10 @@ FOR XML PATH
 </row>  
 ```  
   
-## 複数の列に同一のパス プレフィックスがある場合  
+## <a name="several-columns-share-the-same-path-prefix"></a>複数の列に同一のパス プレフィックスがある場合  
  連続した複数の列に同一のパス プレフィックスがある場合、これらの列は 1 つの名前でグループ化されます。 異なる名前空間プレフィックスが使用されている場合は、同一の名前空間にバインドされていても、パスは異なるものと見なされます。 上のクエリで、FirstName 列、MiddleName 列、および LastName 列にはいずれも EmpName プレフィックスがあるので、これらは <`EmpName`> 要素の子として追加されます。 このことは、上記の例の <`Address`> 要素の生成にも該当します。  
   
-## 名前の異なる列がある場合  
+## <a name="one-column-has-a-different-name"></a>名前の異なる列がある場合  
  変更を加えた次のクエリに示すように、異なる名前の列が間にある場合、グループは分割されます。 上のクエリで示した FirstName、MiddleName、および LastName から構成されるグループは、FirstName 列と MiddleName 列の間に住所列を追加すると分割されます。  
   
 ```  
@@ -238,7 +242,7 @@ FOR XML PATH
 </row>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [FOR XML での PATH モードの使用](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

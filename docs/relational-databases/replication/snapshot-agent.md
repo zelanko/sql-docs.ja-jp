@@ -1,32 +1,36 @@
 ---
 title: "スナップショット エージェント | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.snapshotagent.f1"
-helpviewer_keywords: 
-  - "[スナップショット エージェント] ダイアログ ボックス"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.snapshotagent.f1
+helpviewer_keywords:
+- Snapshot Agent dialog box
 ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77d1972719748124aedd5eb15cb7c0822745dc76
+ms.lasthandoff: 04/11/2017
+
 ---
-# スナップショット エージェント
+# <a name="snapshot-agent"></a>スナップショット エージェント
   **[スナップショット エージェント]** ダイアログ ボックスには、状態、履歴、情報メッセージ、およびすべてのエラー メッセージを含む、スナップショット エージェントの詳細情報が表示されます。  
   
-## オプション  
+## <a name="options"></a>オプション  
  表示するスナップショット エージェントのセッションを **[表示]** メニューで選択した後、 **[スナップショット エージェントのセッション]**というラベルのグリッドで特定のセッションを選択します。 このセッションの詳細情報は、 **[選択されたセッションのアクション]**というラベルのグリッドに表示されます。 選択したセッションがエラーで終了した場合は、 **[選択されたセッションのエラーの詳細またはメッセージ]** というラベルのテキスト領域も表示されます。  
   
- **表示**  
+ **[表示]**  
  表示するスナップショット エージェント セッションを選択します。  
   
  **[状態]**  
@@ -56,15 +60,15 @@ caps.handback.revision: 20
  選択したセッション中にスナップショット エージェントによって記録された、すべての情報メッセージとエラー メッセージです。  
   
  **[動作時間]**  
- アクションの記載を時間、 **アクション メッセージ** 列が実行されます。  
+ **[動作メッセージ]** 列で説明されたアクションが実行された時間です。  
   
  **[選択されたセッションのエラーの詳細またはメッセージ]**  
- 選択されたセッションの値を表示する場合にのみが表示されます **エラー** で、 **ステータス** 列です。 このテキスト領域では、エラーの詳細情報とエラーの発生時に試行されたコマンドが表示されます。 エラーに関連する追加コンテンツへのリンクも含まれます。  
+ 選択したセッションの **[状態]** 列に **[エラー]** の値が表示されている場合にのみ表示されます。 このテキスト領域では、エラーの詳細情報とエラーの発生時に試行されたコマンドが表示されます。 エラーに関連する追加コンテンツへのリンクも含まれます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [情報を表示し、パブリケーションと #40; に関連付けられているエージェントのタスクを実行レプリケーション モニターと #41 です。](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
+ [パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [レプリケーション エージェントの概要](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

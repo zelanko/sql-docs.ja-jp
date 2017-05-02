@@ -1,34 +1,38 @@
 ---
 title: "Transact-SQL コードのステップ実行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transact-SQL デバッガー, コードのデバッグ"
-  - "Transact-SQL デバッガー, ステップ オーバー"
-  - "Transact-SQL デバッガー, ステップ アウト"
-  - "Transact-SQL デバッガー, ステップ イン"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, debugging code
+- Transact-SQL debugger, step over
+- Transact-SQL debugger, step out
+- Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 68bc53fbfbe4db76e44042936642ad8541784b36
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transact-SQL コードのステップ実行
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーでは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウでどの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行するかを制御できます。 個々のステートメントでデバッガーを一時停止して、その時点のコード要素の状態を確認できます。  
+# <a name="step-through-transact-sql-code"></a>Transact-SQL コードのステップ実行
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディター ウィンドウでどの [!INCLUDE[ssDE](../../includes/ssde-md.md)] ステートメントを実行するかを制御できます。 個々のステートメントでデバッガーを一時停止して、その時点のコード要素の状態を確認できます。  
   
-## ブレークポイント  
- ブレークポイントは、特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで実行を一時停止することをデバッガーに指示するために使用します。 ブレークポイントの詳細については、「Transact-SQL ブレークポイントの使用」を参照してください。  
+## <a name="breakpoints"></a>ブレークポイント  
+ ブレークポイントは、特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで実行を一時停止することをデバッガーに指示するために使用します。 ブレークポイントの詳細については、「[Transact-SQL ブレークポイント](../../relational-databases/scripting/transact-sql-breakpoints.md)」を参照してください。  
   
-## ステートメントの実行の制御  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] コードの現在のステートメントからの実行について、次のオプションを指定できます。  
+## <a name="controlling-statement-execution"></a>ステートメントの実行の制御  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードの現在のステートメントからの実行について、次のオプションを指定できます。  
   
 -   次のブレークポイントまで実行する。  
   
@@ -53,10 +57,10 @@ caps.handback.revision: 18
 |現在のステートメントから次のブレークポイントまですべてのステートメントを実行する。|**[デバッグ]** メニューの **[続行]** をクリックする。<br /><br /> **[デバッグ]** ツール バーの **[続行]** ボタンをクリックする。|  
 |次のステートメントまたはモジュールにステップ インする。|**[デバッグ]** メニューの **[ステップ イン]** をクリックする。<br /><br /> **[デバッグ]** ツール バーの **[ステップ イン]** ボタンをクリックする。<br /><br /> F11 キーを押す。|  
 |次のステートメントまたはモジュールにステップ オーバーする。|**[デバッグ]** メニューの **[ステップ オーバー]** をクリックする。<br /><br /> **[デバッグ]** ツール バーの **[ステップ オーバー]** ボタンをクリックする。<br /><br /> F10 キーを押す。|  
-|モジュールからステップ アウトする。|**[デバッグ]** メニューの **[ステップ アウト]** をクリックする。<br /><br /> **[デバッグ]** ツール バーの **[ステップ アウト]** ボタンをクリックする。<br /><br /> Shift&lt;/localizedText&gt; + &lt;localizedText&gt;F11&lt;/localizedText&gt; キーを押す。|  
-|現在のカーソル位置まで実行する。|クエリ エディター ウィンドウ内で右クリックし、**[カーソルまで実行]** をクリックする。<br /><br /> Ctrl</localizedText> + <localizedText>F10</localizedText> キーを押す。|  
+|モジュールからステップ アウトする。|**[デバッグ]** メニューの **[ステップ アウト]** をクリックする。<br /><br /> **[デバッグ]** ツール バーの **[ステップ アウト]** ボタンをクリックする。<br /><br /> Shift + F11 キーを押す。|  
+|現在のカーソル位置まで実行する。|クエリ エディター ウィンドウ内で右クリックし、 **[カーソルまで実行]**をクリックする。<br /><br /> Ctrl + F10 キーを押す。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Transact-SQL デバッガー情報](../../relational-databases/scripting/transact-sql-debugger-information.md)  
   
   

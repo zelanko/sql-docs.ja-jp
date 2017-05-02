@@ -1,22 +1,26 @@
 ---
 title: "Microsoft Azure への SQL Server マネージ バックアップを有効にする | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 caps.latest.revision: 25
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de5d4d788520c9fd8addc98c19be11cf2361456d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Microsoft Azure への SQL Server マネージ バックアップを有効にする
+# <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージ バックアップを有効にする
   このトピックでは、データベース レベルとインスタンス レベルの両方で、既定の設定を使用して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にする方法について説明します。 また、電子メール通知を有効にする方法と、バックアップ処理を監視する方法についても説明します。  
   
  このチュートリアルでは、Azure PowerShell を使用します。 チュートリアルを開始する前に、 [Azure PowerShell をダウンロードしてインストールします](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/)。  
@@ -24,9 +28,9 @@ caps.handback.revision: 25
 > [!IMPORTANT]  
 >  また、高度なオプションを有効にする場合やカスタムのスケジュールを使用する場合、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にする前にまずその設定を構成します。 詳細については、「 [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。  
   
-## 既定の設定で [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にして構成する  
+## <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-with-default-settings"></a>既定の設定で [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にして構成する  
   
-#### Azure Blob コンテナーを作成する  
+#### <a name="create-the-azure-blob-container"></a>Azure Blob コンテナーを作成する  
   
 1.  **Azure にサインアップする:** 既に Azure サブスクリプションがある場合は、次の手順に進みます。 ない場合は、 [無料評価版](http://azure.microsoft.com/pricing/free-trial/) から始めるか、 [購入オプション](http://azure.microsoft.com/pricing/purchase-options/)を調べることができます。  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 25
     New-AzureStorageContainer -Name backupcontainer -Context $context  
     ```  
   
-4.  **Shared Access Signature (SAS) を生成する**: コンテナーにアクセスするには、SAS を作成する必要があります。 SAS は、いくつかのツール、コード、Azure PowerShell を使用して作成できます。 次の `New-AzureStorageContainerSASToken` コマンドを実行すると、1 年後に期限切れになる `backupcontainer` BLOB コンテナーの SAS トークンが作成されます。  
+4.  **Shared Access Signature (SAS) を生成する** : コンテナーにアクセスするには、SAS を作成する必要があります。 SAS は、いくつかのツール、コード、Azure PowerShell を使用して作成できます。 次の `New-AzureStorageContainerSASToken` コマンドを実行すると、1 年後に期限切れになる `backupcontainer` BLOB コンテナーの SAS トークンが作成されます。  
   
     ```powershell  
     $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
@@ -67,7 +71,7 @@ caps.handback.revision: 25
   
      SQL 資格情報の作成に使用するコンテナーの URL と SAS を記録します。 SAS の詳細については、「 [Shared Access Signature、第 1 部: SAS モデルについて](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)」を参照してください。  
   
-#### [有効化] [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+#### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>[有効化] [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
 1.  **SAS URL の SQL 資格情報を作成する** : SAS トークンを使用して、BLOB コンテナーの URL の SQL 資格情報を作成します。 SQL Server Management Studio で、次の Transact-SQL クエリを使用して、次の例に基づいて BLOB コンテナーの資格情報を作成します。  
   
@@ -81,10 +85,10 @@ caps.handback.revision: 25
   
 3.  **保有期間を決定する:** バックアップ ファイルに必要な保有期間を決定します。 保有期間は日数で指定し、その範囲は 1 ～ 30 になります。  
   
-4.  **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にして構成する:** SQL Server Management Studio を起動し、対象の SQL Server インスタンスに接続します。 要件に合わせて、データベース名、コンテナーの URL、および保有期間の値を変更した後、クエリ ウィンドウから次のステートメントを実行します。  
+4.  **Enable and configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にして構成する:** SQL Server Management Studio を起動し、対象の SQL Server インスタンスに接続します。 要件に合わせて、データベース名、コンテナーの URL、および保有期間の値を変更した後、クエリ ウィンドウから次のステートメントを実行します。  
   
     > [!IMPORTANT]  
-    >  インスタンス レベルで管理対象バックアップを有効にするには、`database_name` パラメーターに `NULL` を指定します。  
+    >  インスタンス レベルで管理対象バックアップを有効にするには、 `NULL` パラメーターに `database_name` を指定します。  
   
     ```tsql  
     Use msdb;  
@@ -105,9 +109,9 @@ caps.handback.revision: 25
     SELECT * FROM msdb.managed_backup.fn_get_current_xevent_settings()  
     ```  
   
-     管理、運用、および分析のチャネル イベントは既定で有効になっていて、無効にできないことに注意してください。 手動の介入を必要とするイベントを監視するには、これで十分です。  デバッグ イベントを有効にすることはできますが、デバッグ チャネルには、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]が問題の検出および解決に使用する情報イベントとデバッグ イベントが含まれています。  
+     管理、運用、および分析のチャネル イベントは既定で有効になっていて、無効にできないことに注意してください。 手動の介入を必要とするイベントを監視するには、これで十分です。  デバッグ イベントを有効にすることはできますが、デバッグ チャネルには、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] が問題の検出および解決に使用する情報イベントとデバッグ イベントが含まれています。  
   
-6.  **正常性状態の通知を有効化し、構成する:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] には、注意を要するエラーまたは警告の電子メール通知を送信するためにエージェント ジョブを作成するストアド プロシージャがあります。 次の手順では、電子メール通知を有効にして構成するためのプロセスを示します。  
+6.  **Enable and Configure Notification for Health Status:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] has a stored procedure that creates an agent job to send out e-mail notifications of errors or warnings that may require attention. 次の手順では、電子メール通知を有効にして構成するためのプロセスを示します。  
   
     1.  データベース メールがインスタンス上でまだ有効になっていない場合は設定します。 詳細については、「 [Configure Database Mail](../../relational-databases/database-mail/configure-database-mail.md)」を参照してください。  
   
@@ -124,7 +128,7 @@ caps.handback.revision: 25
   
 7.  **Microsoft Azure ストレージ アカウントでバックアップ ファイルを表示する:** SQL Server Management Studio または Azure 管理ポータルから、ストレージ アカウントに接続します。 指定したコンテナー内のすべてのバックアップが表示されます。 データベースに対して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にしてから 5 分以内のデータベースとログ バックアップが表示される場合があります。  
   
-8.  **正常性状態を監視する:** 前の手順で構成した電子メール通知から監視するか、ログに記録されているイベントをアクティブに監視することができます。 イベントを表示するための Transact-SQL ステートメントのいくつかの例を示します。  
+8.  **正常性状態を監視する:**  前の手順で構成した電子メール通知から監視するか、ログに記録されているイベントをアクティブに監視することができます。 イベントを表示するための Transact-SQL ステートメントのいくつかの例を示します。  
   
     ```  
     --  view all admin events  
@@ -171,9 +175,10 @@ caps.handback.revision: 25
   
     ```  
   
- このセクションで説明した手順は、データベースで初めて [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を構成するための特別な手順です。 同じシステム ストアド プロシージャを使用して既存の構成を変更し、新しい値を指定することができます。  
+ このセクションで説明した手順は、データベースで初めて [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を構成するための特別な手順です。 同じシステム ストアド プロシージャを使用して既存の構成を変更し、新しい値を指定することができます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Microsoft Azure への SQL Server マネージ バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   
+

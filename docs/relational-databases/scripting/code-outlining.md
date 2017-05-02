@@ -1,58 +1,62 @@
 ---
 title: "コードのアウトライン表示 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "クエリ エディター [SQL Server Management Studio], コードのアウトライン表示"
-  - "クエリ エディター [SQL Server Management Studio], コードの非表示"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Editor [SQL Server Management Studio], outlining code
+- Query Editor [SQL Server Management Studio], hiding code
 ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 65a303f3cc995daacc29260c6a7ab176414f773f
+ms.lasthandoff: 04/11/2017
+
 ---
-# コードのアウトライン表示
+# <a name="code-outlining"></a>コードのアウトライン表示
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターのアウトライン機能を使用して、クエリの編集時にコードを選択して非表示にすることができます。 これにより、特に大きなクエリ ファイルでは、作業中のコードを見やすくすることができます。  
   
-## アウトラインの概要  
+## <a name="outlining-overview"></a>アウトラインの概要  
  既定では、クエリ エディター ウィンドウを開くとすべてのコードが表示されます。 コード領域は折りたたんで非表示にすることができます。 エディター ウィンドウの左端にある垂直線では負符号 (-) の付いた正方形を使用して、折りたたむことができるコード領域の先頭をそれぞれ識別します。 負符号をクリックすると、コード領域のテキストが 3 つのピリオド ( ) の付いたボックスに置き換わり、負符号が正符号 (+) に変わります。 正符号をクリックすると、折りたたまれていたコードが表示され、正符号が負符号に変わります。 ポインターを 3 つのピリオドの付いたボックス上に移動すると、折りたたまれているセクションのコードを示すツールヒントが表示されます。  
   
-## システムのアウトライン領域  
+## <a name="system-outline-regions"></a>システムのアウトライン領域  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の各エディターでは、システム定義のアウトライン領域の既定のセットが生成されます。  
   
  MDX と DMX のコード エディターでは、複数行にわたるステートメントごとにアウトライン領域が作成されます。 これは、このようなエディターがサポートする唯一のアウトライン レベルです。  
   
-### Analysis Services の XMLA クエリ エディターの領域  
+### <a name="analysis-services-xmla-query-editor-regions"></a>Analysis Services の XMLA クエリ エディターの領域  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の XMLA クエリ エディターでは、複数行にわたる XML 属性ごとにアウトライン領域が生成されます。 エディターは、入れ子になったタグのアウトライン領域は入れ子にします。 たとえば、XMLA エディターでは次のドキュメントに対して 3 つのアウトライン領域を作成します。  
   
- ![アウトラインを示す XML コード](../../relational-databases/scripting/media/editoutlinexmlfull.gif "アウトラインを示す XML コード")  
+ ![XML コードのアウトライン表示](../../relational-databases/scripting/media/editoutlinexmlfull.gif "XML code showing outlining")  
   
  \<InnerTag> 行の負符号をクリックすると、次の図に示すように InnerTag だけが折りたたまれます。  
   
- ![内部ノードが非表示になっている XML コード](../../relational-databases/scripting/media/editoutlinexmlinnercol.png "内部ノードが非表示になっている XML コード")  
+ ![内部ノードが非表示の XML コード](../../relational-databases/scripting/media/editoutlinexmlinnercol.gif "XML code with inner node hidden")  
   
  ポインターを 3 つのピリオド ( ) の付いたボックス上に移動すると、次の図に示すように、折りたたまれた領域のコードがツールヒントに表示されます。  
   
- ![非表示コードを示すツールヒント付きの XML コード](../../relational-databases/scripting/media/editoutlinexmlmouse.gif "非表示コードを示すツールヒント付きの XML コード")  
+ ![非表示コードを示すツールヒント付きの XML コード](../../relational-databases/scripting/media/editoutlinexmlmouse.gif "XML code with tooltip showing hidden code")  
   
  \<MiddleTag> 行の負符号をクリックすると、次の図に示すように MiddleTag と InnerTag の両方が折りたたまれます。  
   
- ![内部および中間タグが非表示になっている XML コード](../../relational-databases/scripting/media/editoutlinexmlmiddlecol.png "内部および中間タグが非表示になっている XML コード")  
+ ![内部タグと中間タグが非表示の XML コード](../../relational-databases/scripting/media/editoutlinexmlmiddlecol.gif "XML code with inner and middle tags hidden")  
   
  \<OuterTag> 行の負符号をクリックすると、次の図に示すように 3 行すべてが折りたたまれます。  
   
- ![3 つのすべての非表示タグを示す XML コード](../../relational-databases/scripting/media/editoutlinexmloutercol.png "3 つのすべての非表示タグを示す XML コード")  
+ ![3 つのタグがすべて非表示の XML コード](../../relational-databases/scripting/media/editoutlinexmloutercol.gif "XML code showing all three tags hidden")  
   
-### データベース エンジンのクエリ エディターの領域  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]のクエリ エディターでは、次の階層で要素ごとにアウトライン領域が生成されます。  
+### <a name="database-engine-query-editor-regions"></a>データベース エンジンのクエリ エディターの領域  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターでは、次の階層で要素ごとにアウトライン領域が生成されます。  
   
 1.  バッチ。 最初のバッチは、ファイルの先頭から最初の GO コマンドまでのコードか、GO コマンドがなければファイルの末尾までのコードです。 最初の GO の後は、各 GO コマンドから次の GO コマンドまで、またはファイルの末尾までが 1 つのバッチです。  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 14
   
 3.  複数行にわたるステートメント。  
   
- たとえば、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のクエリ エディターでは、次のクエリに対して 3 つのアウトライン領域が作成されます。  
+ たとえば、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターでは、次のクエリに対して 3 つのアウトライン領域が作成されます。  
   
 ```  
 CREATE PROCEDURE Sales.SampleProc --Outline region 1  
@@ -80,6 +84,6 @@ END;
 GO  
 ```  
   
- `SELECT *` 行の負符号をクリックして、その `SELECT` ステートメントのみを折りたたむことができます。 `BEGIN - END` ブロック全体を折りたたむには、`BEGIN` 行の負符号をクリックします。 `GO` コマンドまでのバッチ全体を折りたたむには、`CREATE PROCEDURE` 行の負符号をクリックします。 `SELECT GETDATE()` 行または `SELECT @@VERSION` 行は、単一行のステートメントでアウトライン領域にはならないため、個別に折りたたむことはできません。  
+ `SELECT *` 行の負符号をクリックして、その `SELECT` ステートメントのみを折りたたむことができます。 `BEGIN - END` ブロック全体を折りたたむには、 `BEGIN` 行の負符号をクリックします。 `GO` コマンドまでのバッチ全体を折りたたむには、 `CREATE PROCEDURE` 行の負符号をクリックします。 `SELECT GETDATE()` 行または `SELECT @@VERSION` 行は、単一行のステートメントでアウトライン領域にはならないため、個別に折りたたむことはできません。  
   
   

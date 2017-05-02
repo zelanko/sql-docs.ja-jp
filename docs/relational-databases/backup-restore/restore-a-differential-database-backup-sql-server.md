@@ -1,28 +1,32 @@
 ---
 title: "データベースの差分バックアップの復元 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "完全な差分バックアップ [SQL Server]"
-  - "データベースの復元 [SQL Server], 完全な差分バックアップ"
-  - "データベース バックアップ [SQL Server]、完全な差分バックアップ"
-  - "データベースの復元 [SQL Server], 完全な差分バックアップ"
-  - "データベースのバックアップ [SQL Server]、完全な差分バックアップ"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full differential backups [SQL Server]
+- restoring databases [SQL Server], full differential backups
+- database backups [SQL Server], full differential backups
+- database restores [SQL Server], full differential backups
+- backing up databases [SQL Server], full differential backups
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c0a58f510ec12f0fbf8f635f9700275ce94b24b
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベースの差分バックアップの復元 (SQL Server)
+# <a name="restore-a-differential-database-backup-sql-server"></a>データベースの差分バックアップの復元 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、データベースの差分バックアップを復元する方法について説明します。  
@@ -57,24 +61,24 @@ caps.handback.revision: 46
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
--   完全復旧モデルまたは一括ログ復旧モデルを使用する場合は、データベースを復旧する前に、ログの末尾と呼ばれるアクティブ トランザクション ログをバックアップする必要があります。 詳細については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)」を参照してください.  
+-   完全復旧モデルまたは一括ログ復旧モデルを使用する場合は、データベースを復旧する前に、ログの末尾と呼ばれるアクティブ トランザクション ログをバックアップする必要があります。 詳細については、「 [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)でミラー データベースを準備する方法について説明します。  
   
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
  復元するデータベースが存在しない場合、ユーザーは RESTORE を実行できる CREATE DATABASE 権限を使用する必要があります。 データベースが存在する場合、既定では、RESTORE 権限は **sysadmin** 固定サーバー ロールおよび **dbcreator** 固定サーバー ロールのメンバーと、データベースの所有者 (**dbo**) に与えられています (FROM DATABASE_SNAPSHOT オプションを使用する場合、データベースは常に存在します)。  
   
- RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で損傷していないことが必ずしも保証されないため、**db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
+ RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で破損していないことが必ずしも保証されないため、 **db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### データベースの差分バックアップを復元するには  
+#### <a name="to-restore-a-differential-database-backup"></a>データベースの差分バックアップを復元するには  
   
-1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の適切なインスタンスに接続後、オブジェクト エクスプローラーでサーバー名をクリックして、サーバー ツリーを展開します。  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の適切なインスタンスに接続後、オブジェクト エクスプローラーでサーバー名をクリックして、サーバー ツリーを展開します。  
   
 2.  **[データベース]**を展開します。 復元するデータベースに応じて、ユーザー データベースを選択するか、 **[システム データベース]**を展開してシステム データベースを選択します。  
   
-3.  データベースを右クリックして **[タスク]** をポイントし、**[復元]** をポイントして、**[データベース]** をクリックします。  
+3.  データベースを右クリックして **[タスク]**をポイントし、 **[復元]**をポイントして、 **[データベース]**をクリックします。  
   
 4.  **[全般]** ページの **** 復元元のセクションを使用して、復元するバックアップ セットの復元元ファイルと場所を指定します。 以下のオプションの 1 つを選択します。  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 46
   
     -   **[デバイス]**  
   
-         参照ボタン (**[...]**) をクリックし、**[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]**をクリックします。  
+         参照ボタン (**[...]**) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]**をクリックします。  
   
          **[バックアップ メディア]** ボックスに目的のデバイスを追加したら、 **[OK]** をクリックして、 **[全般]** ページに戻ります。  
   
@@ -102,7 +106,7 @@ caps.handback.revision: 46
   
 6.  **[復元するバックアップ セット]** グリッドで、差分バックアップを通じて復元するバックアップを選択します。  
   
-     **[復元するバックアップ セット]** グリッドの列の詳細については、「[データベースの復元 &#40;[全般] ページ&#41;](../Topic/Restore%20Database%20\(General%20Page\).md)」を参照してください。  
+     **[復元するバックアップ セット]** グリッドの列の詳細については、「[データベースの復元 &#40;[全般] ページ&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)」を参照してください。  
   
 7.  **[オプション]** ページの **[復元オプション]** パネルでは、状況に応じて、次の任意のオプションを選択できます。  
   
@@ -114,17 +118,17 @@ caps.handback.revision: 46
   
     -   **[復元するデータベースへのアクセスを制限する (WITH RESTRICTED_USER)]**  
   
-     これらのオプションの詳細については、「[データベースの復元 &#40;[オプション] ページ&#41;](../Topic/Restore%20Database%20\(Options%20Page\).md)」を参照してください。  
+     これらのオプションの詳細については、「[データベースの復元 &#40;[オプション] ページ&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)」を参照してください。  
   
 8.  **[復旧状態]** ボックスのオプションを選択します。 このボックスの選択内容により、復元操作後のデータベースの状態が決まります。  
   
     -   **[RESTORE WITH RECOVERY]** : コミットされていないトランザクションをロールバックして、データベースを使用可能な状態にします。これが既定の動作です。 別のトランザクション ログは復元できません。 このオプションは、必要なバックアップをすべて復元する場合に選択します。  
   
-    -   **[RESTORE WITH NORECOVERY]**: データベースは操作不可状態のままとなり、コミットされていないトランザクションはロールバックされません。 別のトランザクション ログは復元できます  データベースは、復旧されるまで使用できません。  
+    -   **[RESTORE WITH NORECOVERY]** : データベースは操作不可状態のままとなり、コミットされていないトランザクションはロールバックされません。 別のトランザクション ログは復元できます データベースは、復旧されるまで使用できません。  
   
-    -   **[RESTORE WITH STANDBY]**: データベースを読み取り専用モードにします。 コミットされていないトランザクションは元に戻されますが、復旧結果を元に戻せるように元に戻す操作をスタンバイ ファイルに保存します。  
+    -   **[RESTORE WITH STANDBY]** : データベースを読み取り専用モードにします。 コミットされていないトランザクションは元に戻されますが、復旧結果を元に戻せるように元に戻す操作をスタンバイ ファイルに保存します。  
   
-     オプションの詳細については、「[データベースの復元 &#40;[オプション] ページ&#41;](../Topic/Restore%20Database%20\(Options%20Page\).md)」を参照してください。  
+     オプションの詳細については、「[データベースの復元 &#40;[オプション] ページ&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)」を参照してください。  
   
 9. データベースへのアクティブな接続がある場合、復元操作は失敗します。 **とデータベース間のすべてのアクティブな接続を閉じるには、** [既存の接続を閉じる] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] オプションをオンにします。  
   
@@ -136,7 +140,7 @@ caps.handback.revision: 46
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### データベースの差分バックアップを復元するには  
+#### <a name="to-restore-a-differential-database-backup"></a>データベースの差分バックアップを復元するには  
   
 1.  NORECOVERY 句を指定して RESTORE DATABASE ステートメントを実行し、データベースの差分バックアップの前に、データベースの完全バックアップを復元します。 詳細については、「 [完全バックアップを復元する方法 (Transact-SQL)](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)」を参照してください。  
   
@@ -152,7 +156,7 @@ caps.handback.revision: 46
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
   
-#### A. データベースの差分バックアップの復元  
+#### <a name="a-restoring-a-differential-database-backup"></a>A. データベースの差分バックアップの復元  
  この例では、 `MyAdvWorks` データベースのデータベース バックアップおよびデータベースの差分バックアップを復元します。  
   
 ```tsql  
@@ -172,7 +176,7 @@ RESTORE DATABASE MyAdvWorks
 GO  
 ```  
   
-#### B. データベース バックアップ、データベースの差分バックアップ、およびトランザクション ログ バックアップの復元  
+#### <a name="b-restoring-a-database-differential-database-and-transaction-log-backup"></a>B. データベース バックアップ、データベースの差分バックアップ、およびトランザクション ログ バックアップの復元  
  この例では、 `MyAdvWorks` データベースのデータベース バックアップ、データベースの差分バックアップ、およびトランザクション ログ バックアップを復元します。  
   
 ```tsql  
@@ -208,8 +212,8 @@ GO
   
 -   [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

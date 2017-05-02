@@ -1,22 +1,26 @@
 ---
 title: "メモリ最適化を使用した一時テーブルとテーブル変数の高速化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 01/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 98f4cf9519987f458c1f053ffe9368776b28cda9
+ms.lasthandoff: 04/11/2017
+
 ---
-# メモリ最適化を使用した一時テーブルとテーブル変数の高速化
+# <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>メモリ最適化を使用した一時テーブルとテーブル変数の高速化
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
@@ -30,7 +34,7 @@ caps.handback.revision: 19
 - メモリ最適化のパフォーマンスの利点を強調表示するコード サンプル
   
   
-## A. メモリ最適化テーブル変数の基本  
+## <a name="a-basics-of-memory-optimized-table-variables"></a>A. メモリ最適化テーブル変数の基本  
   
 メモリ最適化テーブル変数は、メモリ最適化テーブルで使用されるのと同じメモリ最適化アルゴリズムとデータ構造を使用して、優れた効率性を提供します。 テーブル変数がネイティブ コンパイル モジュール内からアクセスされる場合に、効率が最大限になります。  
   
@@ -42,11 +46,11 @@ caps.handback.revision: 19
 - tempdb の使用率または競合は関係しません。  
 - テーブル値パラメーター (TVP) としてストアド プロシージャに渡すことができます。  
 - ハッシュまたは非クラスター化の少なくとも 1 つのインデックスがある必要があります。  
-  - ハッシュ インデックスの場合、バケット数は予期される一意のインデックス キーの数の 1 ～ 2 倍にするのが理想的ですが、バケット数を多めに設定しても通常は問題ありません (最大 10 倍)。 詳細については、「[Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)」 (メモリ最適化テーブルのインデックス) をご覧ください。  
+  - ハッシュ インデックスの場合、バケット数は予期される一意のインデックス キーの数の 1 ～ 2 倍にするのが理想的ですが、バケット数を多めに設定しても通常は問題ありません (最大 10 倍)。 詳細については、「 [Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)」 (メモリ最適化テーブルのインデックス) をご覧ください。  
 
   
   
-#### オブジェクト型  
+#### <a name="object-types"></a>オブジェクト型  
   
 インメモリ OLTP では、メモリ最適化一時テーブルおよびテーブル変数に使用できる次のオブジェクトを提供します。  
   
@@ -55,10 +59,10 @@ caps.handback.revision: 19
 - メモリ最適化テーブル変数  
   - 次の 2 つの手順 (インラインでなく) で宣言する必要があります。  
     - `CREATE TYPE my_type AS TABLE ...;` 、その後  
-    - `DECLARE @mytablevariable my_type;`」を参照してください。  
+    - `DECLARE @mytablevariable my_type;`」 (メモリ最適化テーブルのインデックス) をご覧ください。  
   
   
-## B. シナリオ: グローバル tempdb &#x23;&#x23;table の置換  
+## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. シナリオ: グローバル tempdb &#x23;&#x23;table の置換  
   
 次のグローバル一時テーブルがあると想定します。  
   
@@ -91,7 +95,7 @@ DURABILITY = SCHEMA_ONLY を含む、次のメモリ最適化テーブルを使�
   
   
   
-#### B.1 手順  
+#### <a name="b1-steps"></a>B.1 手順  
   
 グローバル一時から SCHEMA_ONLY へ変換する手順は、次のとおりです。  
   
@@ -101,7 +105,7 @@ DURABILITY = SCHEMA_ONLY を含む、次のメモリ最適化テーブルを使�
 3. T-SQL で、**&#x23;&#x23;tempGlobalB** のすべてのメンションを **dbo.soGlobalB** に置き換えます。  
   
   
-## C. シナリオ: セッション tempdb &#x23;table の置換  
+## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. シナリオ: セッション tempdb &#x23;table の置換  
   
 セッションの一時テーブルを置換するための準備には、以前のグローバル一時テーブルのシナリオよりも多く T-SQL が含まれます。 追加の T-SQL で、変換を行うために必要な労力が増えるということではありません。  
   
@@ -119,7 +123,7 @@ DURABILITY = SCHEMA_ONLY を含む、次のメモリ最適化テーブルを使�
   
   
   
-最初に、次のテーブル値関数を作成して、**@@spid**にフィルターを適用します。 この関数は、セッションの一時テーブルから変換するすべての SCHEMA_ONLY テーブルで使用可能になります。  
+最初に、次のテーブル値関数を作成して、**@@spid** にフィルターを適用します。 この関数は、セッションの一時テーブルから変換するすべての SCHEMA_ONLY テーブルで使用可能になります。  
   
   
   
@@ -159,7 +163,7 @@ DURABILITY = SCHEMA_ONLY を含む、次のメモリ最適化テーブルを使�
         CONSTRAINT CHK_soSessionC_SpidFilter  
             CHECK ( SpidFilter = @@spid ),  
     )  
-        WITH  
+        のすべてのメンションを  
             (MEMORY_OPTIMIZED = ON,  
              DURABILITY = SCHEMA_ONLY);  
     go  
@@ -176,14 +180,16 @@ DURABILITY = SCHEMA_ONLY を含む、次のメモリ最適化テーブルを使�
   
 その次に、一般的な T-SQL コードで、  
   
-1. 古いセッションの一時テーブルのすべての CREATE TABLE ステートメントを消去します。  
-2. 古いテーブル名を新しい名前に置き換えます。  
-  - _旧:_ &#x23;tempSessionC  
-  - _新:_ dbo.soSessionC  
+1. Transact-SQL ステートメントの一時テーブルのすべての参照をメモリ最適化テーブルに変更します。
+    - _旧:_ &#x23;tempSessionC  
+    - _新:_ dbo.soSessionC  
+2. コードの `CREATE TABLE #tempSessionC` ステートメントを `DELETE FROM dbo.soSessionC` に置換し、同じ session_id の前のセッションにより挿入されるテーブル コンテンツにセッションが公開されないようにします。
+3. コードから `DROP TABLE #tempSessionC` ステートメントを削除します。メモリ サイズが問題となる可能性がある場合、任意で `DELETE FROM dbo.soSessionC` ステートメントを挿入できます。
   
   
   
-## D. シナリオ: テーブル変数を MEMORY_OPTIMIZED=ON にする  
+  
+## <a name="d-scenario-table-variable-can-be-memoryoptimizedon"></a>D. シナリオ: テーブル変数を MEMORY_OPTIMIZED=ON にする  
   
   
 従来のテーブル変数は、tempdb データベース内のテーブルを表します。 パフォーマンスが高速化するには、テーブル変数のメモリを最適化することができます。  
@@ -200,9 +206,9 @@ DURABILITY = SCHEMA_ONLY を含む、次のメモリ最適化テーブルを使�
   
   
   
-#### D.1 インラインを明示的に変換  
+#### <a name="d1-convert-inline-to-explicit"></a>D.1 インラインを明示的に変換  
   
-上記の構文は、テーブル変数 *inline* を作成すると考えられます。 インライン構文は、メモリ最適化をサポートしません。 そのため、インライン構文を TYPE の明示的な構文に変換します。  
+上記の構文は、テーブル変数 *inline*を作成すると考えられます。 インライン構文は、メモリ最適化をサポートしません。 そのため、インライン構文を TYPE の明示的な構文に変換します。  
   
 *スコープ:* 最初の go の区切り文字のバッチによって作成された TYPE 定義は、サーバーがシャット ダウンして再起動された後でも保持されます。 ただし、最初の go 区切り文字の後に、宣言されたテーブル @tvTableC は、次の go に到達してバッチが終了するまでのみ保持されます。  
   
@@ -228,7 +234,7 @@ DURABILITY = SCHEMA_ONLY を含む、次のメモリ最適化テーブルを使�
   
   
   
-#### D.2 ディスク上の明示的をメモリ最適化に変換  
+#### <a name="d2-convert-explicit-on-disk-to-memory-optimized"></a>D.2 ディスク上の明示的をメモリ最適化に変換  
   
 メモリ最適化テーブル変数は tempdb 内にありません。 通常、メモリ最適化で速度が 10 倍以上速くなります。  
   
@@ -246,7 +252,7 @@ DURABILITY = SCHEMA_ONLY を含む、次のメモリ最適化テーブルを使�
             Column1  INT   NOT NULL   INDEX ix1,  
             Column2  CHAR(10)  
         )  
-        WITH  
+        のすべてのメンションを  
             (MEMORY_OPTIMIZED = ON);  
   
   
@@ -255,9 +261,9 @@ DURABILITY = SCHEMA_ONLY を含む、次のメモリ最適化テーブルを使�
 完了しました。  
   
   
-## E. SQL Server の前提条件となる FILEGROUP  
+## <a name="e-prerequisite-filegroup-for-sql-server"></a>E. SQL Server の前提条件となる FILEGROUP  
   
-Microsoft SQL Server では、メモリ最適化機能を使用するために、データベースに **MEMORY_OPTIMIZED_DATA** で宣言された FILEGROUP がある必要があります。  
+Microsoft SQL Server では、メモリ最適化機能を使用するために、データベースに **MEMORY_OPTIMIZED_DATA**で宣言された FILEGROUP がある必要があります。  
   
 - Azure SQL Database では、この FILEGROUP を作成する必要はありません。  
   
@@ -290,15 +296,15 @@ Microsoft SQL Server では、メモリ最適化機能を使用するために�
     go  
   
   
-次のスクリプトでは、お客様のファイルグループを作成し、推奨されるデータベースの設定を構成します ([enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql))。
+次のスクリプトでは、お客様のファイルグループを作成し、推奨されるデータベースの設定を構成します ( [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql))。
   
 FILE と FILEGROUP の `ALTER DATABASE ... ADD` の詳細については、次を参照してください。  
   
-- [ALTER DATABASE の File および Filegroup オプション (Transact-SQL)](ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20(Transact-SQL).xml)  
+- [ALTER DATABASE の File および Filegroup オプション (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
 - [メモリ最適化ファイルグループ](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)    
   
   
-## F. 速度の向上を証明するための簡単なテスト  
+## <a name="f-quick-test-to-prove-speed-improvement"></a>F. 速度の向上を証明するための簡単なテスト  
   
   
 このセクションでは、使用しているメモリ最適化テーブル変数から、INSERT-DELETE の速度の向上をテストおよび比較するために実行できるように、Transact-SQL コードを提供します。 このコードは、前半のテーブル型がメモリ最適化である場合を除いて、2 つのほぼ同じ要素で構成されます。  
@@ -407,54 +413,56 @@ Azure SQL Database でスクリプトを実行している場合、同じリー�
   
   
   
-## G. アクティブなメモリ消費量の予測  
+## <a name="g-predict-active-memory-consumption"></a>G. アクティブなメモリ消費量の予測  
   
 次のリソースを使用して、メモリ最適化テーブルの必要なアクティブ メモリを予測する方法を学習できます。  
   
 - [メモリ最適化テーブルのメモリ必要量の推定](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
 - [メモリ最適化テーブルのテーブルと行のサイズ: 計算の例](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
-より大きなテーブル変数の場合、非クラスター化のインデックスは、メモリ最適化 "*テーブル*" よりも多くメモリを使用します。 行の数やインデックス キーが多くなるほど、その違いは大きくなります。  
+より大きなテーブル変数の場合、非クラスター化のインデックスは、メモリ最適化 " *テーブル*" よりも多くメモリを使用します。 行の数やインデックス キーが多くなるほど、その違いは大きくなります。  
   
 メモリ最適化テーブル変数がアクセスごとに正確なキー値でのみアクセスされる場合、非クラスター化インデックスよりもハッシュ インデックスを選択する方が望ましい可能性があります。 ただし、適切な BUCKET_COUNT を予想できない場合は、NONCLUSTERED インデックスを選択することをお勧めします。  
   
-## H. 参照  
+## <a name="h-see-also"></a>H. 参照  
   
-- [メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+- [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 - [メモリ最適化オブジェクトの持続性の定義](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
   
   
   
   
 \<!--  
-CAPS Title: "Faster temp table and table variable by using memory optimization"  
+CAPS タイトル: "メモリ最適化を使用した一時テーブルとテーブル変数の高速化"  
   
 https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/  
   
   
-[ALTER DATABASE File and Filegroup Options (Transact-SQL)](http://msdn.microsoft.com/library/bb522469.aspx)  
+[ALTER DATABASE の File および Filegroup オプション (Transact-SQL)](http://msdn.microsoft.com/library/bb522469.aspx)  
   
-[The Memory Optimized Filegroup](http://msdn.microsoft.com/library/dn639109.aspx)  
+[メモリ最適化ファイルグループ](http://msdn.microsoft.com/library/dn639109.aspx)  
   
-[Resource Governor Resource Pool](http://msdn.microsoft.com/library/hh510189.aspx)  
-  
-  
-[Memory Optimization Advisor](http://msdn.microsoft.com/library/dn284308.aspx)  
-  
-[Estimate Memory Requirements for Memory-Optimized Tables](http://msdn.microsoft.com/library/dn282389.aspx)  
-  
-[Table and Row Size in Memory-Optimized Tables: Example Calculation](http://msdn.microsoft.com/library/dn205318.aspx)  
+[リソース ガバナー リソース プール](http://msdn.microsoft.com/library/hh510189.aspx)  
   
   
-[Durability for Memory-Optimized Tables](http://msdn.microsoft.com/library/dn553125.aspx)  
+[メモリ最適化アドバイザー](http://msdn.microsoft.com/library/dn284308.aspx)  
   
-[Defining Durability for Memory-Optimized Objects](http://msdn.microsoft.com/library/dn553122.aspx)  
+[メモリ最適化テーブルのメモリ必要量の推定](http://msdn.microsoft.com/library/dn282389.aspx)  
+  
+[メモリ最適化テーブルのテーブルと行のサイズ: 計算の例](http://msdn.microsoft.com/library/dn205318.aspx)  
+  
+  
+[メモリ最適化テーブルの持続性](http://msdn.microsoft.com/library/dn553125.aspx)  
+  
+[メモリ最適化オブジェクトの持続性の定義](http://msdn.microsoft.com/library/dn553122.aspx)  
   
 [Memory-Optimized Table Variables](http://msdn.microsoft.com/library/dn535766.aspx)  
   
   
-GeneMi , 2016-05-02  Monday  18:40pm  
+GeneMi、2016-05-02 月曜日午後 18:40  
 -->  
   
   
   
+
+

@@ -1,47 +1,44 @@
 ---
 title: "バックアップ中および復元中に発生する可能性があるメディア エラー (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "メディア エラー [SQL Server]"
-  - "CONTINUE_AFTER_ERROR オプション"
-  - "エラー [SQL Server]、バックアップ"
-  - "バックアップ [SQL Server]、エラー"
-  - "RESTORE VERIFYONLY ステートメント"
-  - "バックアップ メディア [SQL Server], エラー管理"
-  - "ページ チェックサム [SQL Server]"
-  - "バックアップ チェックサム [SQL Server]"
-  - "バックアップ [SQL Server], メディア エラー"
-  - "RESTORE ステートメント, メディア エラー"
-  - "NO_CHECKSUM オプション"
-  - "チェックサム [SQL Server]"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- media errors [SQL Server]
+- CONTINUE_AFTER_ERROR option
+- errors [SQL Server], backups
+- backups [SQL Server], errors
+- RESTORE VERIFYONLY statement
+- backup media [SQL Server], error management
+- page checksums [SQL Server]
+- backup checksums [SQL Server]
+- backing up [SQL Server], media errors
+- RESTORE statement, media errors
+- NO_CHECKSUM option
+- checksums [SQL Server]
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 750aa24dcfae82a4e44a32de345299a964df0de8
+ms.lasthandoff: 04/11/2017
+
 ---
-# バックアップ中および復元中に発生する可能性があるメディア エラー (SQL Server)
+# <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>バックアップ中および復元中に発生する可能性があるメディア エラー (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、エラーが検出されてもデータベースを復旧するオプションを選択できるようになりました。 エラー検出の重要なメカニズムとして、バックアップ チェックサムを任意で作成できるようになりました。バックアップ チェックサムは、バックアップ操作で生成して、復元操作で検証できます。 操作中にエラーを検出するかどうかと、エラー発生時に操作を停止するか続行するかを制御できます。 バックアップにバックアップ チェックサムが含まれている場合、RESTORE ステートメントおよび RESTORE VERIFYONLY ステートメントでエラーを検査できます。  
   
 > [!NOTE]  
->  ミラー化バックアップでは、メディア セットのコピー (ミラー) が最大で 4 つ作成され、メディアの破損によるエラーから復旧するために使用する代替コピーが提供されます。 詳細については、「[ミラー化バックアップ メディア セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)」を参照してください。  
+>  ミラー化バックアップでは、メディア セットのコピー (ミラー) が最大で 4 つ作成され、メディアの破損によるエラーから復旧するために使用する代替コピーが提供されます。 詳細については、「 [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)」を参照してください。  
   
- **このトピックの内容**  
-  
--   [バックアップ チェックサム](#BckChecksums)  
-  
--   [バックアップまたは復元操作中のページ チェックサム エラーへの応答](#ResponsetoPageChecksumErrors)  
-  
--   [関連タスク](#RelatedTasks)  
   
 ##  <a name="BckChecksums"></a> バックアップ チェックサム  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされているチェックサムは、ページ チェックサム、ログ ブロック チェックサム、およびバックアップ チェックサムの 3 種類です。 バックアップ チェックサムの生成時には、データベースから読み取ったデータについて、データベース内に存在するチェックサムや破損ページ情報との整合性が BACKUP によって検証されます。  
@@ -59,15 +56,15 @@ caps.handback.revision: 36
      検証中にページ エラーが検出された場合、バックアップは失敗します。  
   
     > [!NOTE]  
-    >  ページ チェックサムおよび破損ページ検出の詳細については、ALTER DATABASE ステートメントの PAGE_VERIFY オプションを参照してください。 詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)」を参照してください。  
+    >  ページ チェックサムおよび破損ページ検出の詳細については、ALTER DATABASE ステートメントの PAGE_VERIFY オプションを参照してください。 詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。  
   
 2.  ページ チェックサムが存在するかどうかに関係なく、BACKUP によってバックアップ ストリームに個別のバックアップ チェックサムが生成されます。 復元操作でバックアップ チェックサムを使用し、バックアップが破損していないかどうかを検証することもできます。 バックアップ チェックサムは、データベース ページにではなくバックアップ メディアに格納されます。 バックアップ チェックサムは、復元時に使用することもできます。  
   
-3.  バックアップ セットは (**msdb..backupset** の **has_backup_checksums** 列に) バックアップ チェックサムがあるものとしてフラグが付けられます。 詳細については、「[backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)」を参照してください。  
+3.  バックアップ セットは ( **msdb..backupset** の **has_backup_checksums**列に) バックアップ チェックサムがあるものとしてフラグが付けられます。 詳細については、「 [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)」を参照してください。  
   
  復元操作中、バックアップ メディアにバックアップ チェックサムがある場合、既定では RESTORE ステートメントと RESTORE VERIFYONLY ステートメントの両方でバックアップ チェックサムとページ チェックサムが検証されます。 バックアップ チェックサムがない場合、いずれの復元操作も検証が行われずに続行されます。これは、バックアップ チェックサムがないと、ページ チェックサムの検証を確実に実行できないためです。  
   
-## バックアップまたは復元操作中のページ チェックサム エラーへの応答  
+## <a name="response-to-page-checksum-errors-during-a-backup-or-restore-operation"></a>バックアップまたは復元操作中のページ チェックサム エラーへの応答  
  既定では、ページ チェックサム エラーが発生した後、BACKUP 操作または RESTORE 操作は失敗し、RESTORE VERIFYONLY 操作が続行されます。 ただし、エラー発生時に特定の操作を失敗させるか、できる限り続行させるかを制御できます。  
   
  エラー発生後に BACKUP 操作を続行する場合は、次の手順が実行されます。  
@@ -76,7 +73,7 @@ caps.handback.revision: 36
   
 2.  SQL Server エラー ログにエラーを記録します。  
   
-3.  バックアップ セットに対し、この種類のエラーが存在するというマークを (**msdb.backupset** の **is_damaged** 列に) 付けます。 詳細については、「[backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)」を参照してください。  
+3.  バックアップ セットに対し、この種類のエラーが存在するというマークを ( **msdb.backupset** の **is_damaged**列に) 付けます。 詳細については、「 [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)」を参照してください。  
   
 4.  正常にバックアップが生成されたがページ エラーが含まれていることを示すメッセージを表示します。  
   
@@ -87,14 +84,14 @@ caps.handback.revision: 36
   
  **バックアップ操作中のエラーへの応答を制御するには**  
   
--   [バックアップまたは復元の操作をエラー発生後に続行するか停止するかを指定する &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify if backup or restore continues or stops after error.md)  
+-   [バックアップまたは復元の操作をエラー発生後に続行するか停止するかを指定する &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
   

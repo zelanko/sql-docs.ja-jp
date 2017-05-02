@@ -1,25 +1,29 @@
 ---
-title: "レッスン 8:  ログ バックアップから新しいデータベースとして復元する | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "レッスン 8: ログ バックアップから新しいデータベースとして復元する | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 281259fb737bbc41885a61e62a4fcc83b3001119
+ms.lasthandoff: 04/11/2017
+
 ---
-# レッスン 8:  ログ バックアップから新しいデータベースとして復元する
+# <a name="lesson-8-restore-as-new-database-from-log-backup"></a>レッスン 8: ログ バックアップから新しいデータベースとして復元する
 このレッスンでは、ファイル スナップショットのトランザクション ログ バックアップから、新しいデータベースとして AdventureWorks2014 データベースを復元します。  
   
 このシナリオでは、ビジネス分析やレポートのために、別の仮想マシン上の SQL Server インスタンスに復元を実行します。 別の仮想マシン上の別のインスタンスに復元することによって、この目的に合わせてサイズ調整された専用の仮想マシンにワークロードをオフロードし、トランザクション システムからリソース要件を削除することができます。  
@@ -33,7 +37,7 @@ caps.handback.revision: 12
 2.  新しいクエリ ウィンドウを開き、Azure 仮想マシン内にあるデータベース エンジンの SQL Server 2016 インスタンスに接続します。  
   
     > [!NOTE]  
-    > 前のレッスンで使用していたものとは別の Azure 仮想マシンを使用する場合は、「[レッスン 2: Shared Access Signature を使用して SQL Server 資格情報を作成する](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)」の手順に従っていることを確認します。 別のコンテナーに復元する場合は、新しいコンテナーについて、「[レッスン 1: Azure コンテナーに格納済みアクセス ポリシーと Shared Access Signature を作成する](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)」と「[レッスン 2: Shared Access Signature を使用して SQL Server 資格情報を作成する](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)」の手順を実行します。  
+    > 前のレッスンで使用していたものとは別の Azure 仮想マシンを使用する場合は、「 [レッスン 2: Shared Access Signature を使用して SQL Server 資格情報を作成する](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)」の手順に従っていることを確認します。 別のコンテナーに復元する場合は、新しいコンテナーについて、「 [レッスン 1: Azure コンテナーに格納済みアクセス ポリシーと Shared Access Signature を作成する](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md) 」と「 [レッスン 2: Shared Access Signature を使用して SQL Server 資格情報を作成する](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md) 」の手順を実行します。  
   
 3.  次の Transact-SQL スクリプトをコピーしてクエリ ウィンドウに貼り付けます。 使用するログ バックアップ ファイルを選択します。 レッスン 1 で指定したコンテナーとストレージ アカウント名に合わせて適宜 URL を変更し、ログ バックアップ ファイルの名前を指定して、次のスクリプトを実行します。  
   
@@ -55,9 +59,10 @@ caps.handback.revision: 12
   
 6.  [Containers] を展開します。レッスン 1 で作成したコンテナーを展開し (必要に応じて表示を更新して)、コンテナー内に新しいデータ ファイルとログ ファイルが、前のレッスンで生成された BLOB と共に表示されていることを確認します。  
   
-    ![Azure container showing the data and log files for the new database](../relational-databases/media/e9705083-86bc-4309-a0bf-92c15f174c0a.JPG "Azure container showing the data and log files for the new database")  
+    ![新しいデータベースのデータおよびログ ファイルを示す Azure コンテナー](../relational-databases/media/e9705083-86bc-4309-a0bf-92c15f174c0a.JPG "新しいデータベースのデータおよびログ ファイルを示す Azure コンテナー")  
   
 [レッスン 9: バックアップ セットとファイル スナップショット バックアップを管理する](../relational-databases/lesson-9-manage-backup-sets-and-file-snapshot-backups.md)  
   
   
   
+

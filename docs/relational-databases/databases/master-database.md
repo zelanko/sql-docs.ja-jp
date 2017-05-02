@@ -1,28 +1,32 @@
 ---
 title: "master データベース | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "master データベース [SQL Server]、概念"
-  - "master データベース [SQL Server]"
+ms.custom: 
+ms.date: 03/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- master database [SQL Server], about
+- master database [SQL Server]
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 caps.latest.revision: 50
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 778915dbe6c89b17520ca44b6d437862a882b078
+ms.lasthandoff: 04/11/2017
+
 ---
-# master データベース
-  **master** データベースには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムのシステム レベルの情報がすべて記録されます。 記録される情報には、ログオン アカウント、エンドポイント、リンク サーバー、システム構成設定など、インスタンス全体のメタデータが含まれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、システム オブジェクトが **master** データベースではなく、 [Resource データベース](../../relational-databases/databases/resource-database.md)に格納されるようになりました。 また、 **master** は、他のすべてのデータベースの存在、それらのデータベース ファイルの場所、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の初期化情報を記録するデータベースでもあります。 したがって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **データベースが使用できないと、** を開始できません。  
+# <a name="master-database"></a>master データベース
+  **master** データベースには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムのシステム レベルの情報がすべて記録されます。 記録される情報には、ログオン アカウント、エンドポイント、リンク サーバー、システム構成設定など、インスタンス全体のメタデータが含まれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、システム オブジェクトが **master** データベースではなく、 [Resource データベース](../../relational-databases/databases/resource-database.md)に格納されるようになりました。 また、 **master** は、他のすべてのデータベースの存在、それらのデータベース ファイルの場所、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の初期化情報を記録するデータベースでもあります。 したがって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **データベースが使用できないと、** を開始できません。  
   
-## master データベースの物理プロパティ  
+## <a name="physical-properties-of-master"></a>master データベースの物理プロパティ  
  \line 次の表は、 **master** のデータ ファイルとログ ファイルの初期構成値の一覧です。 これらのファイルのサイズは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエディションによって多少異なる場合があります。  
   
 |ファイル|論理名|物理名|ファイル拡張|  
@@ -30,9 +34,9 @@ caps.handback.revision: 50
 |プライマリ データ|master|master.mdf|ディスクがいっぱいになるまで 10% ずつ自動拡張|  
 |Log|mastlog|mastlog.ldf|最大 2 TB まで 10% ずつ自動拡張|  
   
- **master** のデータ ファイルとログ ファイルの移動方法の詳細については、「[システム データベースの移動](../../relational-databases/databases/move-system-databases.md)」を参照してください。  
+ **master** のデータ ファイルとログ ファイルの移動方法の詳細については、「 [システム データベースの移動](../../relational-databases/databases/move-system-databases.md)」を参照してください。  
   
-### データベース オプション  
+### <a name="database-options"></a>データベース オプション  
  **master** データベースの各データベース オプションの既定値とそのオプションを変更できるかどうかを次の表に示します。 これらのオプションの現在の設定を表示するには、 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューを使用します。  
   
 |データベース オプション|既定値|変更可否|  
@@ -69,7 +73,7 @@ caps.handback.revision: 50
   
  これらのデータベース オプションの説明は、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
-## 制限  
+## <a name="restrictions"></a>制限  
  **master** データベースでは、次の操作は実行できません。  
   
 -   ファイルまたはファイル グループの追加。  
@@ -98,7 +102,7 @@ caps.handback.revision: 50
   
 -   データベースまたはプライマリ ファイル グループの READ_ONLY への設定。  
   
-## 推奨事項  
+## <a name="recommendations"></a>推奨事項  
  **master** データベースで作業を行っているときは、次の推奨設定を考慮してください。  
   
 -   **master** データベースの現在のバックアップを、常に使用可能にする。  
@@ -115,7 +119,7 @@ caps.handback.revision: 50
   
 -   **master** データベースでは TRUSTWORTHY オプションを ON に設定しないでください。  
   
-## master が使用できない状態になった場合の対処方法  
+## <a name="what-to-do-if-master-becomes-unusable"></a>master が使用できない状態になった場合の対処方法  
  **master** が使用できない状態になった場合、このデータベースを次のいずれかの方法で使用できる状態に戻すことができます。  
   
 -   現在のデータベース バックアップから **master** を復元します。  
@@ -124,12 +128,12 @@ caps.handback.revision: 50
   
 -   **master** を完全に再構築します。  
   
-     **master** に深刻な破損があり、それが原因で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を起動できない場合、 **master**を再構築する必要があります。 詳細については、「[システム データベースの再構築](../../relational-databases/databases/rebuild-system-databases.md)」をご覧ください。  
+     **master** に深刻な破損があり、それが原因で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を起動できない場合、 **master**を再構築する必要があります。 詳細については、「 [システム データベースの再構築](../../relational-databases/databases/rebuild-system-databases.md)」を参照してください。  
   
     > [!IMPORTANT]  
     >  **master** を再構築すると、すべてのシステム データベースが再構築されます。  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
  [システム データベースの再構築](../../relational-databases/databases/rebuild-system-databases.md)  
   
  [システム データベース](../../relational-databases/databases/system-databases.md)  
@@ -141,3 +145,4 @@ caps.handback.revision: 50
  [データベース ファイルの移動](../../relational-databases/databases/move-database-files.md)  
   
   
+

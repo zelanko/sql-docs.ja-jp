@@ -1,31 +1,35 @@
 ---
 title: "ピア ツー ピア トランザクション レプリケーション | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "双方向のレプリケーション"
-  - "トランザクション レプリケーション, 双方向のレプリケーション"
-  - "双方向トランザクション レプリケーション"
-  - "トランザクション レプリケーション、ピアツーピア レプリケーション"
-  - "ピア ツー ピアのトランザクション レプリケーション"
+ms.custom: 
+ms.date: 08/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bidirectional replication
+- transactional replication, bidirectional replication
+- bidirectional transactional replication
+- transactional replication, peer-to-peer replication
+- peer-to-peer transactional replication
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 caps.latest.revision: 71
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 71
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73cba38d92983eb7e6650201a76c067e7f6de58f
+ms.lasthandoff: 04/11/2017
+
 ---
-# ピア ツー ピア トランザクション レプリケーション
+# <a name="peer-to-peer---transactional-replication"></a>ピア ツー ピア トランザクション レプリケーション
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ピア ツー ピア レプリケーションとも呼ば複数のサーバー インスタンス間でデータのコピーを維持することにより、スケール アウトと高可用性ソリューションを提供する *ノード*します。 ピア ツー ピア レプリケーションはトランザクション レプリケーションを基礎としており、トランザクション的に一貫性のある変更がほぼリアルタイムで反映されます。 これにより、読み取り操作のスケールアウトを必要とするアプリケーションで、クライアントからの読み取りを複数のノードに分散することができます。 また、データがほぼリアルタイムで複数のノードに保持されるため、データの冗長性が実現され、データの可用性が向上します。  
+  ピア ツー ピア レプリケーションは、データのコピーを複数のサーバー インスタンス ( *ノード*) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。 ピア ツー ピア レプリケーションはトランザクション レプリケーションを基礎としており、トランザクション的に一貫性のある変更がほぼリアルタイムで反映されます。 これにより、読み取り操作のスケールアウトを必要とするアプリケーションで、クライアントからの読み取りを複数のノードに分散することができます。 また、データがほぼリアルタイムで複数のノードに保持されるため、データの冗長性が実現され、データの可用性が向上します。  
   
  たとえば Web アプリケーションでは、 ピア ツー ピア レプリケーションを利用すると次のようなメリットがあります。  
   
@@ -41,15 +45,15 @@ caps.handback.revision: 71
   
 -   変更がレプリケートされるときには常にある程度の遅延が生じます。 最新の変更が直ちに反映される必要があるアプリケーションでは、複数のノードで動的に負荷を分散すると問題が発生する場合があります。  
   
- ピア ツー ピア レプリケーションには、ピア ツー ピア トポロジの競合の検出を有効にするオプションが含まれています。 このオプションは、検出されない競合によって引き起こされる問題 (アプリケーションの動作の矛盾や更新データの喪失など) の防止に役立ちます。 このオプションを有効にすると、競合する変更が、ディストリビューション エージェントの障害を引き起こす重大なエラーとして既定で扱われるようになります。 競合が発生した場合は、その競合が手動で解決されて、トポロジでデータの一貫性が確保されるまで、トポロジが一貫性のない状態のままになります。 詳細については、次を参照してください。 [ピア ツー ピア レプリケーションで競合検出](../../../relational-databases/replication/transactional/conflict-detection-in-peer-to-peer-replication.md)します。  
+ ピア ツー ピア レプリケーションには、ピア ツー ピア トポロジの競合の検出を有効にするオプションが含まれています。 このオプションは、検出されない競合によって引き起こされる問題 (アプリケーションの動作の矛盾や更新データの喪失など) の防止に役立ちます。 このオプションを有効にすると、競合する変更が、ディストリビューション エージェントの障害を引き起こす重大なエラーとして既定で扱われるようになります。 競合が発生した場合は、その競合が手動で解決されて、トポロジでデータの一貫性が確保されるまで、トポロジが一貫性のない状態のままになります。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。  
   
 > [!NOTE]  
->  データの不整合が生じないようにするため、競合の検出を有効にしている場合でも、ピア ツー ピア トポロジで競合を発生させないようにしてください。 特定の行の書き込み操作が 1 つのノードだけで行われるようにするには、データにアクセスしてそのデータを変更するアプリケーションで、挿入、更新、および削除の各操作をパーティション分割する必要があります。 これにより、1 つのノードの特定の行に対する変更は、トポロジ内の他のすべてのノードと同期されてから、別のノードでその行が変更されるようになります。 競合の検出と解決のための高度な機能がアプリケーションに必要な場合は、マージ レプリケーションを使用します。 詳細については、次を参照してください。 [マージ レプリケーション](../../../relational-databases/replication/merge/merge-replication.md) と [検出し、マージ レプリケーションの競合を解決するには](../../../relational-databases/replication/merge/detect-and-resolve-merge-replication-conflicts.md)です。  
+>  データの不整合が生じないようにするため、競合の検出を有効にしている場合でも、ピア ツー ピア トポロジで競合を発生させないようにしてください。 特定の行の書き込み操作が 1 つのノードだけで行われるようにするには、データにアクセスしてそのデータを変更するアプリケーションで、挿入、更新、および削除の各操作をパーティション分割する必要があります。 これにより、1 つのノードの特定の行に対する変更は、トポロジ内の他のすべてのノードと同期されてから、別のノードでその行が変更されるようになります。 競合の検出と解決のための高度な機能がアプリケーションに必要な場合は、マージ レプリケーションを使用します。 詳細については、「[Merge Replication](../../../relational-databases/replication/merge/merge-replication.md)」 (マージ レプリケーション) と「[Detect and Resolve Merge Replication Conflicts](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)」 (マージ レプリケーションの競合の検出と解決) を参照してください。  
   
-## ピア ツー ピア トポロジ  
+## <a name="peer-to-peer-topologies"></a>ピア ツー ピア トポロジ  
  次のシナリオは、ピア ツー ピア レプリケーションの典型的な使用方法を示しています。  
   
-### 2 つの参加データベースがあるトポロジ  
+### <a name="topology-that-has-two-participating-databases"></a>2 つの参加データベースがあるトポロジ  
  ![2 つのノードによるピア ツー ピア レプリケーション](../../../relational-databases/replication/transactional/media/repl-multinode-01.gif "2 つのノードによるピア ツー ピア レプリケーション")  
   
  上の図にはいずれも、2 つの参加データベースがあり、ユーザーのトラフィックは、アプリケーション サーバーを通じてデータベースに送信されています。 この構成は、Web サイトからワークグループ アプリケーションまでさまざまなアプリケーションに使用でき、次のような利点があります。  
@@ -62,11 +66,11 @@ caps.handback.revision: 71
   
 -   左側の図では、更新は 2 つのサーバー間でパーティション分割されています。 たとえば、データベースに製品カタログが含まれている場合、カスタム アプリケーションでは、A ～ M で始まる製品名についてはノード **A** に更新を送信し、N ～ Z で始まる製品名についてはノード **B** に更新を送信するようにできます。その後、更新は他のノードにレプリケートされます。  
   
--   ノードに、右側のすべての更新プログラムの指示 **B**します。そこから、更新はノードにレプリケート **A**します。場合 **B** がオフライン (たとえば、保守管理)、アプリケーション サーバーに対するすべてのアクティビティに直接送信できます **A**します。 **B** がオンラインに戻す場合、更新プログラムが流れることができるし、アプリケーション サーバーは、すべての更新プログラムを移動できますに **B** に指示を保持または **A**します。  
+-   右側の図では、すべての更新がノード **B** に送信されます。そこから、更新はノード **A** にレプリケートされます。**B** がメンテナンスなどの理由でオフラインになると、アプリケーション サーバーはすべての処理を **A** に送信できます。**B** がオンラインに戻ると、更新は B に送られて、アプリケーション サーバーはすべての更新を **B** に移動することも、**A** への送信を維持することもできます。  
   
  ピア ツー ピア レプリケーションはどちらの方法もサポートしますが、右側の図にある中央の更新例は、標準トランザクション レプリケーションでも頻繁に使用されます。  
   
-### 3 つ以上の参加データベースがあるトポロジ  
+### <a name="topologies-that-have-three-or-more-participating-databases"></a>3 つ以上の参加データベースがあるトポロジ  
  ![分散した場所へのピア ツー ピア レプリケーション](../../../relational-databases/replication/transactional/media/repl-multinode-02.gif "分散した場所へのピア ツー ピア レプリケーション")  
   
  この図は、ロサンゼルス、ロンドン、台北にオフィスを持つ、世界規模のソフトウェア サポート企業にデータを提供する 3 つの参加データベースを示しています。 各オフィスのサポート エンジニアはカスタマー コールを受けて、各カスタマー コールに関する情報を入力および更新します。 3 つのオフィスの時間帯は 8 時間の時差があるため、勤務時間が重なることはありません。 台北オフィスが閉まるときに、ロンドン オフィスが開きます。 1 つのオフィスが閉まっているときに 1 つのコールが進行している場合、コールは、次に開くオフィスの代表者に転送されます。  
@@ -87,21 +91,21 @@ caps.handback.revision: 71
   
  3 つおよび 4 つのノードで構成されるトポロジはどちらも、すべてのデータベースが他のすべてのデータベースにパブリッシュおよびサブスクライブしていることに注目してください。 これにより、1 つ以上のノードでメンテナンスが必要な場合や障害が発生した場合に、最大限の可用性が実現されます。 ノードを追加するときには、配置と管理のパフォーマンスおよび複雑さを考慮して可用性とスケーラビリティを調整する必要があります。  
   
-## ピア ツー ピア レプリケーションの構成  
+## <a name="configuring-peer-to-peer-replication"></a>ピア ツー ピア レプリケーションの構成  
  ピア ツー ピア レプリケーション トポロジの構成は、一連の標準トランザクション パブリケーションおよびサブスクリプションの構成とよく似ています。 次のトピックで説明する手順では、3 ノード システムの構成を説明しますが、これは上のピア ツー ピア トポロジを示す図の左側の構成と似ています。  
   
-## ピア ツー ピア レプリケーションの使用に関する注意点  
+## <a name="considerations-for-using-peer-to-peer-replication"></a>ピア ツー ピア レプリケーションの使用に関する注意点  
  ここでは、ピア ツー ピア レプリケーションを使用する際に考慮する必要がある情報とガイドラインを示します。  
   
-### 全般的な注意点  
+### <a name="general-considerations"></a>全般的な注意点  
   
--   ピア ツー ピア レプリケーションの Enterprise バージョンでのみ使用可能な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+-   ピア ツー ピア レプリケーションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の Enterprise バージョンでのみ使用できます。  
   
 -   ピア ツー ピア レプリケーションに参加するすべてのデータベースに、同一のスキーマとデータを含める必要があります。  
   
     -   オブジェクト名、オブジェクト スキーマ、およびパブリケーション名が同一である必要があります。  
   
-    -   パブリケーションで、スキーマ変更のレプリケートが許可されている (これは、設定の **1** パブリケーション プロパティ **replicate_ddl**, 、これは既定の設定です)。詳細については、次を参照してください。 [パブリケーション データベースでスキーマ変更を行う](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)します。  
+    -   パブリケーションで、スキーマ変更のレプリケートが許可されている (パブリケーション プロパティ **replicate_ddl** が既定の **1** に設定されている) 必要があります。詳細については、「[パブリケーション データベースでのスキーマの変更](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
   
     -   行と列のフィルター処理はサポートされません。  
   
@@ -111,11 +115,11 @@ caps.handback.revision: 71
   
 -   サブスクリプションを作成するには、パブリケーションをピア ツー ピア レプリケーションで有効にする必要があります。  
   
--   サブスクリプションは、バックアップを使用するか、 **[レプリケーションのサポートのみ]** オプションで初期化する必要があります。 詳細については、次を参照してください。 [、スナップショット トランザクション サブスクリプションなしの初期化](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)します。  
+-   サブスクリプションは、バックアップを使用するか、 **[レプリケーションのサポートのみ]** オプションで初期化する必要があります。 詳細については、「[Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)」 (スナップショットを使用しないトランザクション サブスクリプションの初期化) を参照してください。  
   
--   ID 列の使用はお勧めできません。 ID を使用する場合は、各参加データベースのテーブルに割り当てられた範囲を手動で管理する必要があります。 詳細については、「を割り当てる範囲の手動 Id 範囲管理」セクションを参照してください [Id 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)します。  
+-   ID 列の使用はお勧めできません。 ID を使用する場合は、各参加データベースのテーブルに割り当てられた範囲を手動で管理する必要があります。 詳細については、「[Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md)」 (ID 列のレプリケート) で、"Assigning Ranges for Manual Identity Range Management" (手動で ID 範囲を管理する場合の範囲の割り当て) セクションを参照してください。  
   
-### 機能の制限  
+### <a name="feature-restrictions"></a>機能の制限  
  ピア ツー ピア レプリケーションではトランザクション レプリケーションの主要な機能がサポートされていますが、次のオプションはサポートされていません。  
   
 -   スナップショットを使用した初期化および再初期化  
@@ -132,38 +136,38 @@ caps.handback.revision: 71
   
 -   部分サブスクリプション  
   
--   アタッチ可能なサブスクリプションと変換可能なサブスクリプション  (どちらも [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] では非推奨)  
+-   アタッチ可能なサブスクリプションと変換可能なサブスクリプション (どちらも [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]では非推奨)  
   
 -   共有ディストリビューション エージェント  
   
--   ディストリビューション エージェントのパラメーター **- SubscriptionStreams** し、ログ リーダー エージェント パラメーター **- MaxCmdsInTran**します。  
+-   ディストリビューション エージェントのパラメーター **-SubscriptionStreams** とログ リーダー エージェントのパラメーター **-MaxCmdsInTran**  
   
--   アーティクルのプロパティ **@destination_owner** と **@destination_table**します。
+-   アーティクルのプロパティ **@destination_owner** 」および「 **@destination_table**) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。
 
--   ピア ツー ピア トランザクション レプリケーションは、ピア ツー ピア パブリケーションへの一方向のトランザクション パブリケーションに対するサブスクリプションの作成をサポートしていません。   
+-   ピア ツー ピア トランザクション レプリケーションでは、ピア ツー ピア パブリケーションの一方向トランザクション サブスクリプションを作成できません   
   
  次のプロパティには特別な注意が必要です。  
   
--   パブリケーション プロパティ **@allow_initialize_from_backup** の値が必要です **true**します。  
+-   パブリケーションのプロパティ **@allow_initialize_from_backup** には値 **true**) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。  
   
--   アーティクルのプロパティで、 **@replicate_ddl** の値が必要です **true**; **@identityrangemanagementoption** の値が必要です **手動**; と **@status** そのオプションが必要です **24** が設定されます。  
+-   アーティクルのプロパティ **@replicate_ddl** には値 **true**が必要です。 **@identityrangemanagementoption** には値 **manual**が必要です。 **@status** にはオプション **24** を設定する必要があります。  
   
--   アーティクルのプロパティの値 **@ins_cmd**, 、**@del_cmd**, 、および **@upd_cmd** に設定することはできません **SQL**します。  
+-   アーティクルのプロパティ **@ins_cmd**、 **@del_cmd**、および **@upd_cmd** の値は **SQL**) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。  
   
--   サブスクリプション プロパティ **@sync_type** の値が必要です **none** または **自動**です。  
+-   サブスクリプションのプロパティ **@sync_type** には値 **none** または **automatic**) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。  
   
-### メンテナンスの注意事項  
+### <a name="maintenance-considerations"></a>メンテナンスの注意事項  
  いくつかのアクションを実行する場合は、システムを休止状態にする必要があります。 システムの停止を実行するには、すべてのノードのパブリッシュされたテーブルで処理を停止し、他のすべてのノードからのすべての変更を各ノードが受信しているかどうかを確認します。  
   
 ||SQL Server 2005 ピアのみ、または SQL Server 2005 ピアと SQL Server 2008 以降のピアの組み合わせ|SQL Server 2005 ピアのみ、または SQL Server 2005 ピアと SQL Server 2008 以降のピアの組み合わせ|SQL2008 以降のピア|SQL2008 以降のピア|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
 |トポロジへのノードの追加|完全なトポロジにおける 2 つのノード: 休止処理は必要ありません。 `sync_type = 'initialize with backup'`を使用します。|3 つ以上のノード: 休止処理が必要です。|`sync_type = 'replication support only'`: 休止処理が必要です。|`sync_type = 'initialize with backup'` および `'initialize from lsn'`: 休止処理は必要ありません。|  
   
- トポロジのスキーマを変更する場合 (アーティクルの追加または削除)、休止処理が必要です。 詳細については、次を参照してください [#40; (&)、ピア ツー ピア トポロジの管理。レプリケーション TRANSACT-SQL プログラミングと #41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)します。  
+ トポロジのスキーマを変更する場合 (アーティクルの追加または削除)、休止処理が必要です。 詳細については、「[Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)」 (ピア ツー ピア トポロジの管理 &#40;レプリケーション Transact-SQL プログラミング&#41;) を参照してください。  
   
  トポロジからノードを削除する場合、休止処理は必要ありません。  
   
- 使用してアーティクルのプロパティを変更する  [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 休止処理を必要としません。 (P2P) の使用可能な変更は、 `description`, 、`ins_cmd`, 、`upd_cmd`, 、および `del_cmd` プロパティです。  
+ [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) を使用してアーティクルのプロパティを変更する場合、休止処理は必要ありません。 (P2P に関して) 実行可能な変更は、 `description`、 `ins_cmd`、 `upd_cmd`、および `del_cmd` プロパティです。  
   
  アーティクルのスキーマを変更する場合 (列の追加または削除)、休止処理は必要ありません。  
   
@@ -171,15 +175,16 @@ caps.handback.revision: 71
   
 -   アーティクルの削除: すべてのノードで一貫性のある状態を保持するには、トポロジを休止させる必要があります。  
   
- 詳細については、次を参照してください。 [休止レプリケーション トポロジと #40 です。レプリケーション TRANSACT-SQL プログラミングと #41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)  [#40; (&)、ピア ツー ピア トポロジの管理レプリケーション TRANSACT-SQL プログラミングと #41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)します。  
+ 詳細については、「[Quiesce a Replication Topology &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)」と (レプリケーション トポロジの停止 (レプリケーション Transact-SQL プログラミング)) 「[Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)」 (ピア ツー ピア トポロジの管理 (レプリケーション Transact-SQL プログラミング)) を参照してください。  
   
--   ピア ツー ピア トポロジに新しいノードを追加する場合は、新しいノードが追加された後に作成されたバックアップからのみ復元する必要があります。  
+-   ピア ツー ピア トポロジに新しいノードを追加する場合は、新しいノードの追加後に作成されたバックアップのみを使用して復元する必要があります。  
   
 -   ピア ツー ピア トポロジでは、サブスクリプションの再初期化を実行できません。 ノードで新しいデータのコピーを確実に保持する必要がある場合は、そのノードでバックアップを復元してください。  
   
-## 参照  
- [#40; (&)、ピア ツー ピア トポロジを管理します。レプリケーション TRANSACT-SQL プログラミングと #41 です。](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+## <a name="see-also"></a>参照  
+ [ピア ツー ピア トポロジの管理 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [スナップショット レプリケーションおよびトランザクション レプリケーションのバックアップと復元の方式](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
  [トランザクション レプリケーションで使用するパブリケーションの種類](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)  
   
   
+

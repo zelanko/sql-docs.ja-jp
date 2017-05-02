@@ -1,53 +1,57 @@
 ---
 title: "包含データベース ユーザー - データベースの可搬性を確保する | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "包含データベース, ユーザー"
-  - "ユーザー [SQL Server], 包含データベース ユーザー"
+ms.custom: 
+ms.date: 08/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- contained database, users
+- user [SQL Server], about contained database users
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f6310afe6f8909a560fac0b7762c7aa94e3a1f3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 包含データベース ユーザー - データベースの可搬性を確保する
+# <a name="contained-database-users---making-your-database-portable"></a>包含データベース ユーザー - データベースの可搬性を確保する
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  包含データベース ユーザーを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のデータベース レベルでの接続が認証されます。 包含データベースは、他のデータベース、およびデータベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (および master データベース) のインスタンスから分離されたデータベースです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Windows 認証と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証の両方で包含データベース  ユーザーがサポートされます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] を使用して、包含データベース ユーザーとデータベース レベルのファイアウォール規則を結合します。 このトピックでは、従来のログイン/ユーザー モデルおよび Windows またはサーバー レベルのファイアウォール規則と比較して、包含データベース モデルの相違点とこれを使用する利点について説明します。 特定のシナリオ、管理の容易性、アプリケーションのビジネス ロジックでは、従来のログイン / ユーザー モデルとサーバー レベルのファイアウォール規則を引き続き使用する必要があります。  
+  包含データベース ユーザーを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のデータベース レベルでの接続が認証されます。 包含データベースは、他のデータベース、およびデータベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (および master データベース) のインスタンスから分離されたデータベースです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Windows 認証と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証の両方で包含データベース  ユーザーがサポートされます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]を使用して、包含データベース ユーザーとデータベース レベルのファイアウォール規則を結合します。 このトピックでは、従来のログイン/ユーザー モデルおよび Windows またはサーバー レベルのファイアウォール規則と比較して、包含データベース モデルの相違点とこれを使用する利点について説明します。 特定のシナリオ、管理の容易性、アプリケーションのビジネス ロジックでは、従来のログイン / ユーザー モデルとサーバー レベルのファイアウォール規則を引き続き使用する必要があります。  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] の [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サービスが向上し、SLA の保証が高度になると、包含データベース ユーザー モデルとデータベース用ファイアウォール規則に切り替え、特定のデータベースに対する SLA の可用性と最大ログイン レートをさらに高める必要があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] は、今すぐこのような変化に対応することをお勧めします。  
   
-## 従来のログイン / ユーザー モデル  
+## <a name="traditional-login-and-user-model"></a>従来のログイン / ユーザー モデル  
  従来の接続モデルでは、Windows ユーザーまたは Windows グループのメンバーが [!INCLUDE[ssDE](../../includes/ssde-md.md)] に接続する際、Windows によって認証されているユーザーまたはグループの資格情報を指定します。 または、名前とパスワードの両方を指定でき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して接続します。 どちらの場合も、接続ユーザーの資格情報に対応するログインが master データベースに格納されている必要があります。 通常、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で Windows 認証の資格情報が確認されるか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証の資格情報で本人性が確認されると、ユーザー データベースへの接続が試行されます。 ユーザー データベースに接続するには、そのデータベース内のユーザーに対してログインをマップ (関連付けることが) できなければなりません。 また、特定のデータベースへの接続を接続文字列で指定する方法もあります。この方法は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では任意ですが、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]では必須です。  
   
  重要なのは、(master データベース内の) ログインと (ユーザー データベース内の) ユーザーの両方が存在し、かつ相互に関連付けられていなければならない、ということです。 これは、ユーザー データベースへの接続が、master データベース内のログインに依存していることを意味します。そのことが、データベースのホストを別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] や [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] サーバーに切り替えることを困難にしています。 また、なんらかの理由で、master データベースへの接続が利用できないと (フェールオーバーが進行中であるなど)、全体的な接続時間が増えたり、接続がタイムアウトしたりする可能性もあります。 そのため、接続のスケーラビリティが低下します。  
   
-## 包含データベース ユーザー モデル  
+## <a name="contained-database-user-model"></a>包含データベース ユーザー モデル  
  包含データベース ユーザー モデルでは、ログインが master データベースには存在しません。 認証プロセスはユーザー データベースで実行されます。master データベースには、ユーザー データベース内のデータベース ユーザーに関連付けられたログインは存在しません。 包含データベース ユーザー モデルは Windows 認証と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証の両方をサポートしており、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDS](../../includes/sssds-md.md)]の両方で使用できます。 包含データベース ユーザーとして接続するには必ず、ユーザー データベースのパラメーターが接続文字列に含まれている必要があります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] はそれを基に、認証プロセスがどちらのデータベースで管理されるかを判別します。 包含データベース ユーザーのアクティビティは、そのユーザーを認証するデータベースに限定されます。そのため包含データベース ユーザーとして接続しているときは、そのユーザーが必要とする個々のデータベースに、ユーザー アカウントを別々に作成する必要があります。 データベースを切り替えるには、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ユーザー側で新しい接続を作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内の包含データベース ユーザーは、別のデータベースに同一ユーザーが存在する場合、データベースを切り替えることができます。  
   
-**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] および [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] は、包含データベース ユーザーとしての Azure Active Directory ID をサポートします。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] では、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 認証で包含データベース ユーザーがサポートされますが、[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] ではサポートされません。 詳細については、「 [Azure Active Directory 認証を使用して SQL Database に接続する](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)」を参照してください。 Azure Active Directory 認証を使用するとき、Active Directory ユニバーサル認証を使用し、SSMS から接続できます。  管理者は多要素認証を要求するようにユニバーサル認証を設定できます。多要素認証では、電話、テキスト メッセージ、PIN のあるスマート カード、モバイル アプリ通知を利用して ID を確認します。 詳細については、「[SQL Database と SQL Data Warehouse での Azure AD MFA のための SSMS のサポート](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)」をご覧ください。  
+**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] support Azure Active Directory identities as contained database users. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] では、 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 認証で包含データベース ユーザーがサポートされますが、 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] ではサポートされません。 詳細については、「 [Azure Active Directory 認証を使用して SQL Database に接続する](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)」を参照してください。 Azure Active Directory 認証を使用するとき、Active Directory ユニバーサル認証を使用し、SSMS から接続できます。  管理者は多要素認証を要求するようにユニバーサル認証を設定できます。多要素認証では、電話、テキスト メッセージ、PIN のあるスマート カード、モバイル アプリ通知を利用して ID を確認します。 詳細については、「 [SQL Database と SQL Data Warehouse での Azure AD MFA のための SSMS のサポート](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)」をご覧ください。  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] に関しては、接続文字列にはデータベース名が常に必要となるため、従来のモデルから包含データベース ユーザー モデルに切り替える際、接続文字列に対する変更は不要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続の場合は、データベースの名前を接続文字列に追加する必要があります (既に存在する場合は不要)。  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]に関しては、接続文字列にはデータベース名が常に必要となるため、従来のモデルから包含データベース ユーザー モデルに切り替える際、接続文字列に対する変更は不要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続の場合は、データベースの名前を接続文字列に追加する必要があります (既に存在する場合は不要)。  
   
 > [!IMPORTANT]  
 >  従来型のモデルを使用した場合、サーバー レベルのロールとサーバー レベルの権限ですべてのデータベースに対するアクセスを制限できます。 包含データベース モデルを使用した場合、データベース所有者と ALTER ANY USER 権限を持ったデータベース ユーザーとがデータベースに対するアクセス権を付与できます。 これにより高い権限を与えられたサーバー ログインのアクセス制御範囲は狭められ、高い権限を与えられたデータベース ユーザーのアクセス制御範囲は拡大します。  
   
-## ファイアウォール  
+## <a name="firewalls"></a>ファイアウォール  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Windows ファイアウォール ルールはすべての接続に適用され、ログイン (従来のモデルの接続) と包含データベース ユーザーに同じ影響を及ぼします。 Windows ファイアウォールの詳細については、「 [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)」を参照してください。  
   
-### [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ファイアウォール  
+### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] ファイアウォール  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、サーバー レベルの接続 (ログイン) 用とデータベース レベルの接続 (包含データベース ユーザー) 用にファイアウォール規則を切り離すことができます。 ユーザー データベースに接続すると、最初にデータベースのファイアウォール規則がチェックされます。 データベースへのアクセスを許可する規則が存在しない場合は、サーバー レベルのファイアウォール規則がチェックされます。これには、論理サーバーのマスター データベースへのアクセスが必要です。 データベース レベルのファイアウォール規則と包含データベース ユーザーを組み合わせることで、接続中にサーバーのマスター データベースにアクセスする必要がなくなり、接続のスケーラビリティが向上します。  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のファイアウォール規則の詳細については、次のトピックを参照してください。  
@@ -60,17 +64,17 @@ caps.handback.revision: 33
   
 -   [sp_set_database_firewall_rule &#40;Azure SQL データベース&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
   
-## 構文上の違い  
+## <a name="syntax-differences"></a>構文上の違い  
   
 |従来のモデル|包含データベース ユーザー モデル|  
 |-----------------------|-----------------------------------|  
-|master データベースに接続する場合: <br /><br /> `CREATE LOGIN login_name  WITH PASSWORD = 'strong_password';`<br /><br /> 次にユーザー データベースに接続する場合: <br /><br /> `CREATE USER 'user_name' FOR LOGIN 'login_name';`|ユーザー データベースにする場合: <br /><br /> `CREATE USER user_name  WITH PASSWORD = 'strong_password';`|  
+|master データベースに接続する場合:<br /><br /> `CREATE LOGIN login_name  WITH PASSWORD = 'strong_password';`<br /><br /> 次にユーザー データベースに接続する場合:<br /><br /> `CREATE USER 'user_name' FOR LOGIN 'login_name';`|ユーザー データベースにする場合:<br /><br /> `CREATE USER user_name  WITH PASSWORD = 'strong_password';`|  
   
 |従来のモデル|包含データベース ユーザー モデル|  
 |-----------------------|-----------------------------------|  
-|master データベースのコンテキストでパスワードを変更するには: <br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|ユーザー データベースのコンテキストでパスワードを変更するには: <br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
+|master データベースのコンテキストでパスワードを変更するには:<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|ユーザー データベースのコンテキストでパスワードを変更するには:<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
   
-## 解説  
+## <a name="remarks"></a>解説  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに対して包含データベース ユーザーを有効にする必要があります。 詳細については、「 [contained database authentication Server Configuration Option](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)」を参照してください。  
   
@@ -86,10 +90,11 @@ caps.handback.revision: 33
   
 -   通常のログインで使用するパスワードと同じ強度のパスワードを使用します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [包含データベース](../../relational-databases/databases/contained-databases.md)   
  [包含データベースでのセキュリティのベスト プラクティス](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [Azure Active Directory の認証を使用して、SQL データベースに接続します。](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)  
+ [Azure Active Directory 認証を使用して SQL Database に接続する](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)  
   
   
+

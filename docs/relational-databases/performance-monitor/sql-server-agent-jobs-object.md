@@ -1,25 +1,29 @@
 ---
 title: "SQL Server エージェントの Jobs オブジェクト | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLAgent:Jobs"
-  - "Jobs オブジェクト"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLAgent:Jobs
+- Jobs object
 ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8f2931c070c0ed3816fb348b4ca41f3705b19a0
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server エージェントの Jobs オブジェクト
+# <a name="sql-server-agent-jobs-object"></a>SQL Server エージェントの Jobs オブジェクト
   SQL Server エージェントの **Jobs** パフォーマンス オブジェクトには、SQL Server エージェントのジョブについての情報を報告するパフォーマンス カウンターが含まれています。 次の表は、このオブジェクトに含まれているカウンターを示します。  
   
  次の表には **SQLAgent:Jobs** カウンターが含まれています。  
@@ -39,12 +43,12 @@ caps.handback.revision: 21
 |--------------|-----------------|  
 |**_Total**|すべてのジョブの情報です。|  
 |**警告**|警告によって開始されたジョブの情報です。|  
-|**Others**|警告またはスケジュールによって開始されたジョブの情報です。 通常、これらのジョブは **sp_start_job** を使用して手動で開始されます。|  
+|**Others**|警告またはスケジュールによって開始されたジョブの情報です。 通常、これらのジョブは **sp_start_job**を使用して手動で開始されます。|  
 |**スケジュール**|スケジュールによって開始されたジョブの情報です。|  
   
-## 参照  
- [ジョブの実装](../../ssms/agent/implement-jobs.md)   
- [パフォーマンス オブジェクトの使用](../../ssms/agent/use-performance-objects.md)   
+## <a name="see-also"></a>参照  
+ [ジョブの実装](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
+ [パフォーマンス オブジェクトの使用](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
  [リソースの利用状況の監視 &#40;システム モニター&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

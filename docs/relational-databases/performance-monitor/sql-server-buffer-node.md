@@ -1,28 +1,32 @@
 ---
-title: "SQL Server: Buffer Node | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer: Buffer Node"
-  - "Buffer Node オブジェクト"
+title: SQL Server:Buffer Node | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Buffer Node
+- Buffer Node object
 ms.assetid: fd3f9f0f-7c38-4cfd-a0c5-ee93dd52d9a5
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dfa6d195bea68fbc4d2beed8ad74e51c89d57c71
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server: Buffer Node
-  **Buffer Node** オブジェクトは、 **Buffer Manager** オブジェクトで提供されるカウンターを補完するカウンターを提供します。 このオブジェクトを使用すると、各 NUMA (non-uniform memory access) ノードに対する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバッファー プール ページの配分を監視することができます。 使用中の NUMA ノードごとに **Buffer Node** オブジェクトのインスタンスがあります。 非 NUMA アーキテクチャでは、**Buffer Node** オブジェクトのインスタンスが 1 つあります。  
+# <a name="sql-serverbuffer-node"></a>SQL Server: Buffer Node
+  **Buffer Node** オブジェクトは、 **Buffer Manager** オブジェクトで提供されるカウンターを補完するカウンターを提供します。 このオブジェクトを使用すると、各 NUMA (non-uniform memory access) ノードに対する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバッファー プール ページの配分を監視することができます。 使用中の NUMA ノードごとに **Buffer Node** オブジェクトのインスタンスがあります。 非 NUMA アーキテクチャでは、 **Buffer Node** オブジェクトのインスタンスが 1 つあります。  
   
-## Buffer Node パフォーマンス オブジェクト  
+## <a name="buffer-node-performance-objects"></a>Buffer Node パフォーマンス オブジェクト  
  次の表で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Node** パフォーマンス オブジェクトについて説明します。  
   
 |SQL Server の Buffer Node カウンター|説明|  
@@ -32,14 +36,14 @@ caps.handback.revision: 20
 |**Local Node page lookups/sec**|このノードによって満たされた、このノードからの参照要求の数を示します。|  
 |**Remote Note page lookups/sec**|他のノードによって満たされた、このノードからの参照要求の数を示します。|  
   
- SQL Server が非 NUMA ハードウェアで動作している場合は、**Buffer Node** オブジェクトのカウンターと **Buffer Manager** オブジェクトのカウンターが一致します。  
+ SQL Server が非 NUMA ハードウェアで動作している場合は、 **Buffer Node** オブジェクトのカウンターと **Buffer Manager** オブジェクトのカウンターが一致します。  
   
  NUMA ハードウェアでは、すべての **Buffer Nodes** の各カウンターの合計は、対応する **Buffer Manager**のカウンターに一致します。  
   
 > [!NOTE]  
 >  カウンター値と合計が正確に一致しない場合があります。これは、カウンターが動的な性質を持っているためと、サンプリング精度によるものです。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server: Buffer Manager オブジェクト](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)   
  [サーバー メモリに関するサーバー構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [リソースの利用状況の監視 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   

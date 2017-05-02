@@ -1,25 +1,29 @@
 ---
 title: "データ コレクションを有効または無効にする方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データ コレクター [SQL Server]、無効化"
-  - "データ コレクター [SQL Server]、有効化"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data collector [SQL Server], disabling
+- data collector [SQL Server], enabling
 ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a69e9cee1b62ec953b3be3c984cc712a3f0e55d2
+ms.lasthandoff: 04/11/2017
+
 ---
-# データ コレクションを有効または無効にする方法
+# <a name="enable-or-disable-data-collection"></a>データ コレクションを有効または無効にする方法
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、データ コレクションを有効または無効にする方法を説明します。  
   
  **このトピックの内容**  
@@ -43,21 +47,21 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### データ コレクターを有効にするには  
+#### <a name="to-enable-the-data-collector"></a>データ コレクターを有効にするには  
   
 1.  オブジェクト エクスプローラーで、 **[管理]** ノードを展開します。  
   
-2.  **[データ コレクション]** を右クリックし、**[データ コレクションの有効化]** をクリックします。  
+2.  **[データ コレクション]**を右クリックし、 **[データ コレクションの有効化]**をクリックします。  
   
-#### データ コレクターを無効にするには  
+#### <a name="to-disable-the-data-collector"></a>データ コレクターを無効にするには  
   
 1.  オブジェクト エクスプローラーで、 **[管理]** ノードを展開します。  
   
-2.  **[データ コレクション]** を右クリックし、**[データ コレクションの無効化]** をクリックします。  
+2.  **[データ コレクション]**を右クリックし、 **[データ コレクションの無効化]**をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### データ コレクターを有効にするには  
+#### <a name="to-enable-the-data-collector"></a>データ コレクターを有効にするには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -71,7 +75,7 @@ GO
 EXEC dbo.sp_syscollector_enable_collector ;  
 ```  
   
-#### データ コレクターを無効にするには  
+#### <a name="to-disable-the-data-collector"></a>データ コレクターを無効にするには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -85,8 +89,8 @@ GO
 EXEC dbo.sp_syscollector_disable_collector;  
 ```  
   
-## 参照  
- [データ コレクション](../../relational-databases/data-collection/data-collection.md)   
+## <a name="see-also"></a>参照  
+ [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

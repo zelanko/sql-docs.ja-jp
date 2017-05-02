@@ -1,25 +1,29 @@
 ---
 title: "SQL Server エージェントの JobSteps オブジェクト | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "JobSteps オブジェクト"
-  - "SQLAgent:JobSteps"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- JobSteps object
+- SQLAgent:JobSteps
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61884b4353e065c60f9489eca33a8979cf7d782f
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server エージェントの JobSteps オブジェクト
+# <a name="sql-server-agent-jobsteps-object"></a>SQL Server エージェントの JobSteps オブジェクト
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの **JobSteps** パフォーマンス オブジェクトには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ステップについての情報を報告するパフォーマンス カウンターが含まれています。 次の表は、このオブジェクトに含まれているカウンターを示します。  
   
  次の表は、 **SQLAgent:JobSteps** カウンターの一覧です。  
@@ -46,11 +50,11 @@ caps.handback.revision: 23
 |**PowerShell**|**PowerShell** サブシステムを使用するジョブ ステップの情報です。|  
 |**QueueReader**|**QueueReader** サブシステムを使用するジョブ ステップの情報です。|  
 |**スナップショット**|**Snapshot** サブシステムを使用するジョブ ステップの情報です。|  
-|**TSQL**|[!INCLUDE[tsql](../../includes/tsql-md.md)] を実行するジョブ ステップの情報です。|  
+|**TSQL**|[!INCLUDE[tsql](../../includes/tsql-md.md)]を実行するジョブ ステップの情報です。|  
   
-## 参照  
- [ジョブ ステップの管理](../../ssms/agent/manage-job-steps.md)   
- [パフォーマンス オブジェクトの使用](../../ssms/agent/use-performance-objects.md)   
+## <a name="see-also"></a>参照  
+ [ジョブ ステップの管理](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)   
+ [パフォーマンス オブジェクトの使用](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
  [リソースの利用状況の監視 &#40;システム モニター&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

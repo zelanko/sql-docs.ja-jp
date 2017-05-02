@@ -1,25 +1,29 @@
 ---
 title: "トリガーのセキュリティの管理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "トリガー [SQL Server], セキュリティ"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- triggers [SQL Server], security
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d86813b142cbd85527fb1e4e1c11d87884258ecf
+ms.lasthandoff: 04/11/2017
+
 ---
-# トリガーのセキュリティの管理
-  既定では、DML トリガーも DDL トリガーも、トリガーを呼び出したユーザーのコンテキストで実行されます。 トリガーの呼び出し元は、トリガーが実行される原因となったステートメントを実行したユーザーです。 たとえば、ユーザー **Mary** が DELETE ステートメントを実行し、このために DML トリガー **DML_trigMary** が実行された場合、**DML_trigMary** 内のコードは、**Mary** のユーザー権限のコンテキストで実行されます。 この既定の動作は、悪意のあるコードをデータベースやサーバー インスタンスに組み込もうとするユーザーによって悪用される危険性があります。 たとえば、次の DDL トリガーがユーザー `JohnDoe` により作成されたとします。  
+# <a name="manage-trigger-security"></a>トリガーのセキュリティの管理
+  既定では、DML トリガーも DDL トリガーも、トリガーを呼び出したユーザーのコンテキストで実行されます。 トリガーの呼び出し元は、トリガーが実行される原因となったステートメントを実行したユーザーです。 たとえば、ユーザー **Mary** が DELETE ステートメントを実行し、このために DML トリガー **DML_trigMary** が実行された場合、 **DML_trigMary** 内のコードは、 **Mary**のユーザー権限のコンテキストで実行されます。 この既定の動作は、悪意のあるコードをデータベースやサーバー インスタンスに組み込もうとするユーザーによって悪用される危険性があります。 たとえば、次の DDL トリガーがユーザー `JohnDoe`により作成されたとします。  
   
  `CREATE TRIGGER DDL_trigJohnDoe`  
   
@@ -33,9 +37,9 @@ caps.handback.revision: 19
   
  `GO`  
   
- このトリガーの内容は、**sysadmin** 固定サーバー ロールのメンバーなど、`GRANT CONTROL SERVER` ステートメントを実行する権限を持ったユーザーが `ALTER TABLE` ステートメントを実行した直後に、`JohnDoe` に `CONTROL SERVER` 権限を付与するようにしています。 つまり、`JohnDoe` 自身は `CONTROL SERVER` 権限を自分に付与することはできませんが、トリガー コードを利用して、上位の特権の下での実行権限を獲得しています。 DML トリガーも DDL トリガーも、このようなセキュリティの脅威にさらされています。  
+ このトリガーの内容は、 `GRANT CONTROL SERVER` sysadmin **固定サーバー ロールのメンバーなど、** ステートメントを実行する権限を持ったユーザーが `ALTER TABLE` ステートメントを実行した直後に、 `JohnDoe` に `CONTROL SERVER` 権限を付与するようにしています。 つまり、 `JohnDoe` 自身は `CONTROL SERVER` 権限を自分に付与することはできませんが、トリガー コードを利用して、上位の特権の下での実行権限を獲得しています。 DML トリガーも DDL トリガーも、このようなセキュリティの脅威にさらされています。  
   
-## トリガーのセキュリティに関するベスト プラクティス  
+## <a name="trigger-security-best-practices"></a>トリガーのセキュリティに関するベスト プラクティス  
  次の方法を使用することで、トリガー コードが上位の特権の下で実行されないようにすることができます。  
   
 -   [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) カタログ ビューと [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) カタログ ビューをクエリし、データベースとサーバー インスタンスに存在する DML トリガーおよび DDL トリガーを認識します。 次のクエリは、現在のデータベースにあるすべての DML とデータベースレベルのすべての DDL トリガーと、サーバー インスタンスにあるすべてのサーバー レベルの DDL トリガーを返します。  
@@ -91,7 +95,7 @@ caps.handback.revision: 19
     DEALLOCATE trig_cur;  
     ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DML トリガー](../../relational-databases/triggers/dml-triggers.md)   
  [DDL トリガー](../../relational-databases/triggers/ddl-triggers.md)  

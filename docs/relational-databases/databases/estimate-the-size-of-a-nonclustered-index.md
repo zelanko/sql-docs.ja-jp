@@ -1,31 +1,35 @@
 ---
 title: "非クラスター化インデックスのサイズの算出 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "領域の割り当て [SQL Server], インデックスのサイズ"
-  - "テーブルのサイズ [SQL Server]"
-  - "テーブル サイズの予測 [SQL Server]"
-  - "テーブル サイズ [SQL Server]"
-  - "テーブル サイズの見積もり"
-  - "クラスター化インデックス, テーブル サイズ"
-  - "データベースの設計 [SQL Server], サイズの見積もり"
-  - "テーブル サイズの計算"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- space allocation [SQL Server], index size
+- size [SQL Server], tables
+- predicting table size [SQL Server]
+- table size [SQL Server]
+- estimating table size
+- clustered indexes, table size
+- designing databases [SQL Server], estimating size
+- calculating table size
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8302d2481e9fe2f6d47c87e2fbc9accd2e3c560d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 非クラスター化インデックスのサイズの算出
+# <a name="estimate-the-size-of-a-nonclustered-index"></a>非クラスター化インデックスのサイズの算出
   非クラスター化インデックスを格納するために必要な領域を算出するには、次の手順に従います。  
   
 1.  手順 2. および 3. で使用する変数を計算します。  
@@ -36,12 +40,12 @@ caps.handback.revision: 40
   
 4.  計算した値を合計します。  
   
-## 手順 1. 手順 2. および 3. で使用する変数を計算する  
+## <a name="step-1-calculate-variables-for-use-in-steps-2-and-3"></a>手順 1. 手順 2. および 3. で使用する変数を計算する  
  上位レベルのインデックスの格納に必要な領域を算出するために使用する変数は、次の手順で算出することができます。  
   
 1.  次のように、テーブル内の行数を指定します。  
   
-     ***Num_Rows*** = テーブル内の行数  
+     ***Num_Rows***  = テーブル内の行数  
   
 2.  次のように、インデックス キーの固定長列と可変長列の数を指定し、それらの列の格納に必要な領域を計算します。  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 40
   
      上記の式の計算結果は、整数部分だけを使用します。 小数部分は無視してください。  
   
-     NULL 値を許容するキー列が存在しない場合は、***Index_Null_Bitmap*** を 0 に設定します。  
+     NULL 値を許容するキー列が存在しない場合は、 ***Index_Null_Bitmap*** を 0 に設定します。  
   
 5.  可変長データ サイズを計算します。  
   
@@ -95,7 +99,7 @@ caps.handback.revision: 40
   
      ***Max_Var_Key_Size*** に追加されたバイトは、それぞれの可変長列を追跡するためのものです。この式は、すべての可変長列がいっぱいになることを前提としています。 可変長列の格納領域の使用率が少ないことが予想される場合、その使用率に基づいて ***Max_Var_Key_Size*** の値を調整し、テーブルの全体サイズをより正確に見積もることができます。  
   
-     可変長列が存在しない場合は、***Variable_Key_Size*** に 0 を設定します。  
+     可変長列が存在しない場合は、 ***Variable_Key_Size*** に 0 を設定します。  
   
 6.  次の式でインデックス行のサイズを計算します。  
   
@@ -107,16 +111,16 @@ caps.handback.revision: 40
   
      インデックス行は複数のページにまたがらないため、計算結果の端数は切り捨ててください。 上の式の 2 という値は、ページのスロット配列内にある行の入力用です。  
   
-## 手順 2. リーフ レベルのインデックス情報の格納に使用する領域を計算する  
+## <a name="step-2-calculate-the-space-used-to-store-index-information-in-the-leaf-level"></a>手順 2. リーフ レベルのインデックス情報の格納に使用する領域を計算する  
  インデックスのリーフ レベルを格納するために必要な領域は、次の手順で算出することができます。 この手順を完了するには、手順 1. で控えた値が必要になります。  
   
 1.  次のように、リーフ レベルの固定長列と可変長列の数を指定し、それらの列の格納に必要な領域を計算します。  
   
     > [!NOTE]  
-    >  インデックス キー列の他に非キー列を含めることにより、非クラスター化インデックスを拡張できます。 このように追加された列は、非クラスター化インデックスのリーフ レベルにしか格納されません。 詳細については、「[付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。  
+    >  インデックス キー列の他に非キー列を含めることにより、非クラスター化インデックスを拡張できます。 このように追加された列は、非クラスター化インデックスのリーフ レベルにしか格納されません。 詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。  
   
     > [!NOTE]  
-    >  定義済みのテーブルの合計サイズが 8,060 バイトを超える **varchar**、**nvarchar**、**varbinary**、または **sql_variant** 列の連結が可能です。 この場合も、**varchar**、**varbinary**、または **sql_variant** 列の場合は 8,000 バイトの制限内に、**nvarchar** 列の場合は 4,000 バイトの制限内に、各列のサイズを収める必要があります。 ただし、これらの列を連結したサイズは、テーブルの制限である 8,060 バイトを超過してもかまいません。 これは、既に付加列を含んでいる非クラスター化インデックスのリーフ行にも当てはまります。  
+    >  定義済みのテーブルの合計サイズが 8,060 バイトを超える **varchar**、 **nvarchar**、 **varbinary**、または **sql_variant** 列の連結が可能です。 この場合も、 **varchar**、 **varbinary**、または **sql_variant** 列の場合は 8,000 バイトの制限内に、 **nvarchar** 列の場合は 4,000 バイトの制限内に、各列のサイズを収める必要があります。 ただし、これらの列を連結したサイズは、テーブルの制限である 8,060 バイトを超過してもかまいません。 これは、既に付加列を含んでいる非クラスター化インデックスのリーフ行にも当てはまります。  
   
      非クラスター化インデックスに付加列が含まれていない場合は、手順 1.3. での変更を含め、手順 1. の値を使用します。  
   
@@ -164,7 +168,7 @@ caps.handback.revision: 40
   
 3.  次のように、NULL ビットマップのサイズを計算します。  
   
-     ***Leaf_Null_Bitmap*** = 2 + ((***Num_Leaf_Cols*** + 7) / 8)  
+     ***Leaf_Null_Bitmap***  = 2 + ((***Num_Leaf_Cols*** + 7) / 8)  
   
      上記の式の計算結果は、整数部分だけを使用します。 小数部分は無視してください。  
   
@@ -176,7 +180,7 @@ caps.handback.revision: 40
   
      ***Max_Var_Key_Size*** に追加されたバイトは、それぞれの可変長列を追跡するためのものです。この式は、すべての可変長列がいっぱいになることを前提としています。 可変長列の格納領域の使用率が少ないことが予想される場合、その使用率に基づいて ***Max_Var_Leaf_Size*** の値を調整し、テーブルの全体サイズをより正確に見積もることができます。  
   
-     可変長列が存在しない場合は、***Variable_Leaf_Size*** に 0 を設定します。  
+     可変長列が存在しない場合は、 ***Variable_Leaf_Size*** に 0 を設定します。  
   
 5.  次の式でインデックス行のサイズを計算します。  
   
@@ -204,7 +208,7 @@ caps.handback.revision: 40
   
      ***Leaf_Space_Used***  = 8192 x ***Num_Leaf_Pages***  
   
-## 手順 3. 非リーフ レベルのインデックス情報の格納に使用する領域を計算する  
+## <a name="step-3-calculate-the-space-used-to-store-index-information-in-the-non-leaf-levels"></a>手順 3. 非リーフ レベルのインデックス情報の格納に使用する領域を計算する  
  インデックスの中間レベルおよびルート レベルを格納するために必要な領域を算出するには、次の手順に従います。 この手順を完了するには、手順 2. および 3. で控えた値が必要になります。  
   
 1.  次の式で、インデックス内の非レベル数を計算します。  
@@ -217,7 +221,7 @@ caps.handback.revision: 40
   
      ***Num_Index_Pages***  = ∑Level (***Num_Leaf_Pages/Index_Rows_Per_Page***^Level) ここで 1 <= Level <= ***Levels*** になります。  
   
-     それぞれの値を最も近い整数に切り上げます。 簡単な例として、***Num_Leaf_Pages*** = 1000、***Index_Rows_Per_Page*** = 25 のインデックスを例に取ります。 リーフ レベルより上位の最初のインデックス レベルでは、1000 行のインデックス行が格納されます。リーフ ページあたり 1 行のインデックス行で、1 ページあたり 25 行のインデックス行を納めることができます。 つまり、1,000 行のインデックス行を格納するために 40 ページが必要になります。 次のレベルのインデックスでは、40 行のインデックス行を格納する必要があります。 つまり、2 ページが必要になります。 最上位レベルのインデックスでは、2 行のインデックス行を格納する必要があります。 つまり、1 ページが必要になります。 その結果、非リーフ インデックス ページは 43 ページとなります。 このような数値を前の式で使用すると、次のような結果になります。  
+     それぞれの値を最も近い整数に切り上げます。 簡単な例として、 ***Num_Leaf_Pages*** = 1000、 ***Index_Rows_Per_Page*** = 25 のインデックスを例に取ります。 リーフ レベルより上位の最初のインデックス レベルでは、1000 行のインデックス行が格納されます。リーフ ページあたり 1 行のインデックス行で、1 ページあたり 25 行のインデックス行を納めることができます。 つまり、1,000 行のインデックス行を格納するために 40 ページが必要になります。 次のレベルのインデックスでは、40 行のインデックス行を格納する必要があります。 つまり、2 ページが必要になります。 最上位レベルのインデックスでは、2 行のインデックス行を格納する必要があります。 つまり、1 ページが必要になります。 その結果、非リーフ インデックス ページは 43 ページとなります。 このような数値を前の式で使用すると、次のような結果になります。  
   
      ***Non-leaf_Levels***  = 1 + log(25) (1000 / 25) = 3  
   
@@ -227,7 +231,7 @@ caps.handback.revision: 40
   
      ***Index_Space_Used***  = 8192 x ***Num_Index_Pages***  
   
-## 手順 4.  計算した値を合計します。  
+## <a name="step-4-total-the-calculated-values"></a>手順 4. 計算した値を合計します。  
  次の式で、上記の 2 つの手順から取得した値を合計します。  
   
  非クラスター化インデックス サイズ (バイト) = ***Leaf_Space_Used*** + ***Index_Space_used***  
@@ -244,7 +248,7 @@ caps.handback.revision: 40
   
 -   ラージ オブジェクト (LOB) の値  
   
-     LOB データ型の **varchar(max)**、**varbinary(max)**、**nvarchar(max)**、**text**、**ntext**、**xml**、および **image** の値を格納するのに使用する領域を正確に特定するためのアルゴリズムは複雑です。 LOB データ型の値で使用される領域の計算は、想定される LOB 値の平均サイズを合計し、***Num_Rows*** で乗算し、非クラスター化インデックスの合計サイズに加算するだけで十分です。  
+     LOB データ型の **varchar(max)**、 **varbinary(max)**、 **nvarchar(max)**、 **text**、 **ntext**、 **xml**、および **image** の値を格納するのに使用する領域を正確に特定するためのアルゴリズムは複雑です。 LOB データ型の値で使用される領域の計算は、想定される LOB 値の平均サイズを合計し、 ***Num_Rows***で乗算し、非クラスター化インデックスの合計サイズに加算するだけで十分です。  
   
 -   圧縮  
   
@@ -252,9 +256,9 @@ caps.handback.revision: 40
   
 -   スパース列  
   
-     スパース列の領域要件については、「[スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。  
+     スパース列の領域要件については、「 [スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [クラスター化インデックスと非クラスター化インデックスの概念](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [非クラスター化インデックスの作成](../../relational-databases/indexes/create-nonclustered-indexes.md)   
  [クラスター化インデックスの作成](../../relational-databases/indexes/create-clustered-indexes.md)   

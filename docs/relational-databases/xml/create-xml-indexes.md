@@ -1,28 +1,32 @@
 ---
 title: "XML インデックスの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "インデックス [SQL Server の XML]"
-  - "作成する XML インデックス [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [XML in SQL Server]
+- XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e7dbb0a712f1edbe0234a68e2481915b76bec90a
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML インデックスの作成
+# <a name="create-xml-indexes"></a>XML インデックスの作成
   このトピックでは、プライマリ XML インデックスとセカンダリ XML インデックスの作成方法について説明します。  
   
-## プライマリ XML インデックスの作成  
+## <a name="creating-a-primary-xml-index"></a>プライマリ XML インデックスの作成  
  プライマリ XML インデックスを作成するには、[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL ステートメントを使用します。 XML インデックスでは、XML 以外のインデックスで使用できるオプションの一部しかサポートされません。  
   
  XML インデックスの作成時には、次の事項に注意します。  
@@ -43,18 +47,18 @@ caps.handback.revision: 19
   
 -   プライマリ XML インデックスの名前にはビュー名と同じ制限事項が適用されます。  
   
- ビューの **xml** 型の列、**xml** 型の列が含まれた **table** 値変数、または **xml** 型の変数には XML インデックスを作成することはできません。  
+ ビューの **xml** 型の列、 **xml** 型の列が含まれた **table** 値変数、または **xml** 型の変数には XML インデックスを作成することはできません。  
   
--   ALTER TABLE ALTER COLUMN オプションを使用して、**xml** 型の列を型指定されていない XML から型指定された XML に変更する場合、またはその逆の変更を行う場合は、その列に XML インデックスが存在してはいけません。 XML インデックスが存在する場合は、列の型を変更する前にその XML インデックスを削除する必要があります。  
+-   ALTER TABLE ALTER COLUMN オプションを使用して、 **xml** 型の列を型指定されていない XML から型指定された XML に変更する場合、またはその逆の変更を行う場合は、その列に XML インデックスが存在してはいけません。 XML インデックスが存在する場合は、列の型を変更する前にその XML インデックスを削除する必要があります。  
   
 -   XML インデックスを作成する場合は、ARITHABORT オプションが ON に設定されている必要があります。 XML データ型メソッドを使用して XML 列内の値のクエリ、挿入、削除、または更新を行うには、同じオプションがその接続に設定される必要があります。 異なるオプションが設定された場合、XML データ型のメソッドは失敗します。  
   
     > [!NOTE]  
-    >  XML インデックスについての情報は、カタログ ビューで参照できます。 ただし、**sp_helpindex** はサポートされません。 このトピックの後半に示す例では、カタログ ビューにクエリを実行して XML インデックスの情報を参照する方法を説明しています。  
+    >  XML インデックスについての情報は、カタログ ビューで参照できます。 ただし、 **sp_helpindex** はサポートされません。 このトピックの後半に示す例では、カタログ ビューにクエリを実行して XML インデックスの情報を参照する方法を説明しています。  
   
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、プライマリ XML インデックスを作成または再作成する XML データ型の列に、XML スキーマ型 **xs:date** または **xs:dateTime** (またはこれらのサブタイプ) で 1 未満の年の値が含まれていると、インデックスの作成が失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ではこれらの値が許可されていたため、この問題は、生成されたデータベースでインデックスを作成する際に発生する可能性があります。 詳細については、「[型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
+ **以降のバージョンでは、プライマリ XML インデックスを作成または再作成する XML データ型の列に、XML スキーマ型** xs:date **または** xs:dateTime [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (またはこれらのサブタイプ) で 1 未満の年の値が含まれていると、インデックスの作成が失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ではこれらの値が許可されていたため、この問題は、生成されたデータベースでインデックスを作成する際に発生する可能性があります。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
-### 例: プライマリ XML インデックスの作成  
+### <a name="example-creating-a-primary-xml-index"></a>例: プライマリ XML インデックスの作成  
  ここからはほとんどの例で、型指定されていない XML 列を含んだテーブル T (pk INT PRIMARY KEY, xCol XML) を使用します。 XML 列は、型指定された XML に簡単に拡張できます。 説明を簡単にするため、次に示す XML データ インスタンスに対するクエリについて説明します。  
   
 ```  
@@ -78,7 +82,7 @@ caps.handback.revision: 19
 CREATE PRIMARY XML INDEX idx_xCol on T (xCol)  
 ```  
   
-## セカンダリ XML インデックスの作成  
+## <a name="creating-a-secondary-xml-index"></a>セカンダリ XML インデックスの作成  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL ステートメントを使用して、セカンダリ XML インデックスを作成したり、必要なセカンダリ XML インデックスの種類を指定したりします。  
   
  セカンダリ XML インデックスの作成時には、次の事項に注意します。  
@@ -98,7 +102,7 @@ FROM    sys.xml_indexes;
   
  **secondary_type_desc** 列に返される値は、NULL、PATH、VALUE、または PROPERTY です。 プライマリ XML インデックスの場合、返される値は NULL です。  
   
-### 例: セカンダリ XML インデックスの作成  
+### <a name="example-creating-secondary-xml-indexes"></a>例: セカンダリ XML インデックスの作成  
  次の例では、セカンダリ XML インデックスの作成方法を示します。 また、作成した XML インデックスに関する情報も示します。  
   
 ```  
@@ -198,7 +202,7 @@ DROP TABLE T;
 Go  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [XML インデックス &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [XML データ &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

@@ -1,36 +1,40 @@
 ---
 title: "ネイティブ コンパイル ストアド プロシージャのパフォーマンスの監視 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01302febd187f0b39221a1443284334b8f961ca8
+ms.lasthandoff: 04/11/2017
+
 ---
-# ネイティブ コンパイル ストアド プロシージャのパフォーマンスの監視
+# <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャのパフォーマンスの監視
   このトピックでは、ネイティブ コンパイル ストアド プロシージャのパフォーマンスを監視する方法を説明します。  
   
-## 拡張イベントの使用  
- クエリの実行をトレースするには、**sp_statement_completed** 拡張イベントを使用します。 このイベントを使用して拡張イベント セッションを作成し、オプションで、特定のネイティブ コンパイル ストアド プロシージャに対応する object_id でフィルター処理を実行します。各クエリの実行後に、拡張イベントが生成されます。 拡張イベントによって報告された CPU 時間と期間は、クエリが使用した CPU 時間と実行時間の長さを示します。 多くの CPU 時間を使用しているネイティブ コンパイル ストアド プロシージャには、パフォーマンスの問題が存在している可能性があります。  
+## <a name="using-extended-events"></a>拡張イベントの使用  
+ クエリの実行をトレースするには、 **sp_statement_completed** 拡張イベントを使用します。 このイベントを使用して拡張イベント セッションを作成し、オプションで、特定のネイティブ コンパイル ストアド プロシージャに対応する object_id でフィルター処理を実行します。各クエリの実行後に、拡張イベントが生成されます。 拡張イベントによって報告された CPU 時間と期間は、クエリが使用した CPU 時間と実行時間の長さを示します。 多くの CPU 時間を使用しているネイティブ コンパイル ストアド プロシージャには、パフォーマンスの問題が存在している可能性があります。  
   
- 拡張イベント内の **line_number** と **object_id** を組み合わせて使用し、クエリを調査することができます。 次のクエリを使用して、プロシージャの定義を取得することができます。 行番号を使用して、定義内のクエリを特定できます:  
+ 拡張イベント内の**line_number**と **object_id** を組み合わせて使用し、クエリを調査することができます。 次のクエリを使用して、プロシージャの定義を取得することができます。 行番号を使用して、定義内のクエリを特定できます:  
   
 ```tsql  
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- **sp_statement_completed** 拡張イベントの詳細については、「[イベントの原因となったステートメントを取得する方法](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)」を参照してください。  
+ **sp_statement_completed** 拡張イベントの詳細については、「 [イベントの原因となったステートメントを取得する方法](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)」を参照してください。  
   
-## データ管理ビューの使用  
+## <a name="using-data-management-views"></a>データ管理ビューの使用  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、プロシージャ レベルとクエリ レベルの両方で、ネイティブ コンパイル ストアド プロシージャに関する実行の統計の収集をサポートしています。 パフォーマンスに与える影響が原因で、実行の統計の収集は既定では有効になっていません。  
   
  ネイティブ コンパイル ストアド プロシージャに対する統計コレクションは、[sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) を使用して有効化または無効化することができます。  
@@ -44,7 +48,7 @@ select [definition] from sys.sql_modules where object_id=object_id
  統計を収集した後、ネイティブ コンパイル ストアド プロシージャに関する実行の統計を要求するには、プロシージャに対して [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) を使用し、クエリに対して [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) を使用することが実行できます。  
   
 > [!NOTE]  
->  ネイティブ コンパイル ストアド プロシージャに対する統計コレクションが有効になっている場合は、ワーカー時間がミリ秒単位で収集されます。 クエリが 1 ミリ秒未満で実行された場合は、値は 0 になります。 ネイティブ コンパイル ストアド プロシージャに関して、多くの実行が 1 ミリ秒未満である場合は、**total_worker_time** は精度が高くない可能性があります。  
+>  ネイティブ コンパイル ストアド プロシージャに対する統計コレクションが有効になっている場合は、ワーカー時間がミリ秒単位で収集されます。 クエリが 1 ミリ秒未満で実行された場合は、値は 0 になります。 ネイティブ コンパイル ストアド プロシージャに関して、多くの実行が 1 ミリ秒未満である場合は、 **total_worker_time** は精度が高くない可能性があります。  
   
  次のクエリは、統計コレクションを有効にした後、現在のデータベース内で実行されたネイティブ コンパイル ストアド プロシージャに関するプロシージャ名と実行の統計を返します。  
   
@@ -112,7 +116,7 @@ GO
   
  ネイティブ コンパイル ストアド プロシージャに対応する推定実行プランでは、プロシージャ内に存在するクエリに関するクエリ演算子と式が表示されます。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、ネイティブ コンパイル ストアド プロシージャに対して、すべての SHOWPLAN_XML をサポートしているわけではありません。 たとえば、クエリ オプティマイザー コストに関連する属性は、プロシージャに対応する SHOWPLAN_XML の一部ではありません。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

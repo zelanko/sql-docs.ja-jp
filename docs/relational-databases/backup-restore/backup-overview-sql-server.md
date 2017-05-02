@@ -1,38 +1,42 @@
 ---
-title: "Backup Overview (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "テーブル [SQL Server], データのバックアップ"
-  - "バックアップ [SQL Server]"
-  - "データベース バックアップ [SQL Server]"
-  - "バックアップの種類 [SQL Server]"
-  - "データ バックアップ [SQL Server]"
-  - "テーブルのバックアップ [SQL Server]"
-  - "データベース復元 [SQL Server], バックアップ"
-  - "バックアップ [SQL Server], バックアップについて"
-  - "復元 [SQL Server], バックアップの種類"
-  - "バックアップ [SQL Server], 概要"
-  - "backups [SQL Server], table-level backups unsupported"
+title: "バックアップの概要 (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 07/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [SQL Server], backing up data
+- backups [SQL Server]
+- database backups [SQL Server]
+- backup types [SQL Server]
+- data backups [SQL Server]
+- backing up tables [SQL Server]
+- database restores [SQL Server], backups
+- backing up [SQL Server], about backing up
+- restoring [SQL Server], backup types
+- backups [SQL Server], about
+- backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 caps.latest.revision: 84
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 84
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6839d0474f1062f5dc0e247e9bb1fdbbf492c9c9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup Overview (SQL Server)
-  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ コンポーネントについて説明します。 データを保護するためには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをバックアップすることが不可欠です。 ここでは、バックアップの種類およびバックアップの制限事項について説明します。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ デバイスとバックアップ メディアについても取り上げます。  
+# <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
+  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ コンポーネントについて説明します。 データを保護するためには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをバックアップすることが不可欠です。 ここでは、バックアップの種類およびバックアップの制限事項について説明します。 また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ デバイスとバックアップ メディアについても取り上げます。  
   
   
-## 用語
+## <a name="terms"></a>用語
  
  **バックアップ (back up) (動詞)**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースまたはそのトランザクション ログからバックアップ デバイス (ディスクなど) にデータまたはログ レコードをコピーすることによって、データ バックアップまたはログ バックアップを作成します。  
@@ -46,7 +50,7 @@ caps.handback.revision: 84
  **[復元 (restore)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)**  
  データを直近の状態まで戻す複数フェーズから成る処理。指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップからすべてのデータおよびログ ページを指定されたデータベースにコピーするフェーズと、バックアップにログとして記録されているすべてのトランザクションをロールフォワード (ログに記録されている変更を適用) するフェーズとで構成されます。  
   
- ## バックアップの種類  
+ ## <a name="types-of-backups"></a>バックアップの種類  
   
  **[コピーのみのバックアップ (copy-only backup)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の通常のバックアップ シーケンスから独立した特殊な用途のバックアップ。  
@@ -58,7 +62,7 @@ caps.handback.revision: 84
  データベースのバックアップ。 データベースの完全バックアップは、バックアップが完了した時点のデータベース全体を表します。 差分データベース バックアップには、最新の完全バックアップ以降に行われたデータベースへの変更のみが含まれます。  
   
  **[差分バックアップ (differential backup)](../../relational-databases/backup-restore/full-database-backups-sql-server.md)**  
- データベース全体、データベースの一部、または一連のデータ ファイル (またはファイル グループ) の最新の完全バックアップ (*差分ベース*) をベースとし、その差分ベース以後に変更されたデータ エクステントのみを含んだデータ バックアップ。  
+ データベース全体、データベースの一部、または一連のデータ ファイル (またはファイル グループ) の最新の完全バックアップ ( *差分ベース*) をベースとし、その差分ベース以後に変更されたデータ エクステントのみを含んだデータ バックアップ。  
   
  部分的な差分バックアップでは、ファイル グループのデータのうち、前回の部分バックアップ以降に変更されたデータだけが記録されます。この前回の部分バックアップを差分に対するベースと呼びます。  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 84
  特定のデータベース (または一連のファイルやファイル グループ) 内のデータがすべて含まれ、さらに、データを復旧するために必要なログも含んだデータ バックアップ。  
   
 **[ログ バックアップ (log backup)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)**  
- 前回のログ バックアップでバックアップされなかったすべてのログ レコードを含むトランザクション ログのバックアップ  (完全復旧モデル)。  
+ 前回のログ バックアップでバックアップされなかったすべてのログ レコードを含むトランザクション ログのバックアップ (完全復旧モデル)。  
   
  **[ファイル バックアップ (file backup)](../../relational-databases/backup-restore/full-file-backups-sql-server.md)**  
  1 つ以上のデータベース ファイルまたはファイル グループから成るバックアップ。  
@@ -74,10 +78,10 @@ caps.handback.revision: 84
  **[部分バックアップ (partial backup)](../../relational-databases/backup-restore/partial-backups-sql-server.md)**  
  データベースの一部のファイル グループのデータのみを格納します。プライマリ ファイル グループ、すべての読み取り/書き込みファイル グループのほか、必要に応じて指定した読み取り専用ファイルが含まれます。  
   
-## バックアップ メディアの用語と定義  
+## <a name="backup-media-terms-and-definitions"></a>バックアップ メディアの用語と定義  
   
  **[バックアップ デバイス (backup device)](../../relational-databases/backup-restore/backup-devices-sql-server.md)**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップの書き込みと復元に使用されるディスクまたはテープ デバイス。 SQL Server のバックアップは、Windows Azure BLOB ストレージ サービスに書き込むことができます。バックアップ先とバックアップ ファイルの名前を指定するには **URL** 形式を使用します。 詳細については、「[Microsoft Azure Blob Storage サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップの書き込みと復元に使用されるディスクまたはテープ デバイス。 SQL Server のバックアップは、Windows Azure BLOB ストレージ サービスに書き込むことができます。バックアップ先とバックアップ ファイルの名前を指定するには **URL** 形式を使用します。 詳細については、「 [Microsoft Azure Blob Storage サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。  
   
  **[バックアップ メディア (backup media)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)**  
  バックアップの書き込み先となる 1 つまたは複数のテープまたはディスク ファイル。  
@@ -100,7 +104,7 @@ caps.handback.revision: 84
 ##  <a name="Restrictions"></a>  バックアップ操作の制限 
  オンラインでデータベースを使用中であってもバックアップを行うことができます。 ただし、次の制限事項があります。  
   
-### オフライン データをバックアップできません。  
+### <a name="cannot-back-up-offline-data"></a>オフライン データをバックアップできません。  
  オフライン データを暗黙的または明示的に参照するバックアップ操作は失敗します。 よく見られる例を次に示します。  
   
 -   データベースの完全バックアップを要求したが、データベースのいずれかのファイル グループがオフラインである場合。 データベースの完全バックアップにはすべてのファイル グループが暗黙的に含まれるため、この操作は失敗します。  
@@ -113,7 +117,7 @@ caps.handback.revision: 84
   
  通常、1 つ以上のデータ ファイルを使用できない状態でも、ログ バックアップは続行できます。 ただし、一括ログ復旧モデルで行われた一括ログ変更がいずれかのファイルに含まれている場合、バックアップを続行するにはすべてのファイルをオンラインにする必要があります。  
   
-### 同時実行の制限事項   
+### <a name="concurrency-restrictions"></a>同時実行の制限事項   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、オンライン バックアップを使って、使用中のデータベースをバックアップできます。 バックアップ中はほとんどの操作が可能です。たとえば、INSERT、UPDATE、または DELETE ステートメントはバックアップ操作中でも使用できます。 ただし、データベースの作成中または削除中にバックアップ操作を開始しようとすると、データベースの作成または削除操作が完了するまで、またはバックアップがタイムアウトするまで、バックアップ操作が待機します。  
   
  データベース バックアップやトランザクション ログ バックアップ中に、次の操作を実行することはできません。  
@@ -147,12 +151,12 @@ caps.handback.revision: 84
   
 -   [デバイスからのバックアップ復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
--   [チュートリアル: Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [チュートリアル: Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **バックアップを作成する**  
   
 > [!NOTE]  
->  部分バックアップまたはコピーのみのバックアップでは、[!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) ステートメントにそれぞれ PARTIAL オプションまたは COPY_ONLY オプションを使う必要があります。  
+>  部分バックアップまたはコピーのみのバックアップでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) ステートメントにそれぞれ PARTIAL オプションまたは COPY_ONLY オプションを使う必要があります。  
   
 -   [データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
@@ -166,13 +170,13 @@ caps.handback.revision: 84
   
 -   [バックアップ中または復元中にバックアップ チェックサムを有効または無効にする &#40;SQL Server&#41;](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   
--   [バックアップまたは復元の操作をエラー発生後に続行するか停止するかを指定する &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify if backup or restore continues or stops after error.md)  
+-   [バックアップまたは復元の操作をエラー発生後に続行するか停止するかを指定する &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
 -   [リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [チュートリアル: Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [チュートリアル: Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## その他 
+## <a name="and-more"></a>その他 
  [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [復元と復旧の概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)   
@@ -180,3 +184,4 @@ caps.handback.revision: 84
  [復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
+

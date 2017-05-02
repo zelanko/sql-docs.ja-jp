@@ -1,26 +1,30 @@
 ---
 title: "拡張イベントのツール | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "拡張イベント [SQL Server]、使用"
-  - "拡張イベント [SQL Server]、使用するオプション"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extended events [SQL Server], using
+- extended events [SQL Server], options for using
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 caps.latest.revision: 19
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 923b012345d18abb393479744a65b4572cb20a08
+ms.lasthandoff: 04/11/2017
+
 ---
-# 拡張イベントのツール
+# <a name="extended-events-tools"></a>拡張イベントのツール
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベント セッションの作成と管理には、次のツールを使用できます。  
@@ -31,13 +35,13 @@ caps.handback.revision: 19
   
 -   オブジェクト エクスプローラーの **[拡張イベント]** ノード。 セッションの開始、停止、削除のほか、セッション テンプレートのインポートとエクスポートを行うことができます。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell プロバイダー。 拡張イベント セッションの作成、変更、および管理に使用できる強力なツールです。 詳細については、「[拡張イベントへの PowerShell プロバイダーの使用](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)」を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell プロバイダー。 拡張イベント セッションの作成、変更、および管理に使用できる強力なツールです。 詳細については、「 [拡張イベントへの PowerShell プロバイダーの使用](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)」を参照してください。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]」を参照してください。 拡張イベントのトピックに用意されているコード サンプルを作成し、実行することができます。 詳細については、「[オブジェクト エクスプローラー](../../ssms/object/object-explorer.md)」を参照してください。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]」を参照してください。 拡張イベントのトピックに用意されているコード サンプルを作成し、実行することができます。 詳細については、「 [オブジェクト エクスプローラー](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)」を参照してください。  
   
- 自分が作成したセッション以外にも、サーバーには、既定のシステム正常性セッションが存在します。 このセッションは、パフォーマンスの問題をトラブルシューティングするのに役立つシステム データを収集します。 詳細については、「[system_health セッションの使用](../../relational-databases/extended-events/use-the-system-health-session.md)」を参照してください。  
+ 自分が作成したセッション以外にも、サーバーには、既定のシステム正常性セッションが存在します。 このセッションは、パフォーマンスの問題をトラブルシューティングするのに役立つシステム データを収集します。 詳細については、「 [system_health セッションの使用](../../relational-databases/extended-events/use-the-system-health-session.md)」を参照してください。  
   
-## DDL ステートメント  
+## <a name="ddl-statements"></a>DDL ステートメント  
  拡張イベント セッションを作成、変更、および削除するには、次の DDL ステートメントを使用します。  
   
 |名前|説明|  
@@ -46,7 +50,7 @@ caps.handback.revision: 19
 |[ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)|イベント セッションの開始および停止、またはイベント セッションの構成変更を行います。|  
 |[DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)|イベント セッションを削除します。|  
   
-## カタログ ビュー  
+## <a name="catalog-views"></a>カタログ ビュー  
  イベント セッションの作成時に作成されたメタデータを取得するには、次のカタログ ビューを使用します。  
   
 |名前|説明|  
@@ -57,7 +61,7 @@ caps.handback.revision: 19
 |[sys.server_event_session_fields &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-session-fields-transact-sql.md)|イベントおよびターゲットに明示的に設定されたカスタマイズ可能な列ごとに 1 行のデータを返します。|  
 |[sys.server_event_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-session-targets-transact-sql.md)|イベント セッションのイベント ターゲットごとに 1 行のデータを返します。|  
   
-## 動的管理ビュー  
+## <a name="dynamic-management-views"></a>動的管理ビュー  
  セッション メタデータおよびセッション データを取得するには、次の動的管理ビューを使用します。 メタデータはカタログ ビューから取得され、セッション データはイベント セッションの開始時と実行時に作成されます。  
   
 > [!NOTE]  
@@ -76,19 +80,20 @@ caps.handback.revision: 19
 |[sys.dm_xe_map_values &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-map-values-transact-sql.md)|内部数値キーをユーザーが判読できるテキストにマッピングします。|  
 |[sys.dm_xe_session_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-object-columns-transact-sql.md)|セッションにバインドされたオブジェクトの構成値を示します。|  
   
-## システム テーブル  
+## <a name="system-tables"></a>システム テーブル  
  次のシステム テーブルを使用して、SQL トレース イベントのクラスおよび列と等価な拡張イベントの情報を取得します。  
   
 |名前|説明|  
 |----------|-----------------|  
-|[trace_xe_event_map &#40;Transact-SQL&#41;](../Topic/trace_xe_event_map%20\(Transact-SQL\).md)|SQL トレース イベント クラスに割り当てられている拡張イベントのイベントごとに 1 行のデータを格納します。|  
-|[trace_xe_action_map &#40;Transact-SQL&#41;](../Topic/trace_xe_action_map%20\(Transact-SQL\).md)|SQL トレース列 ID に割り当てられている拡張イベントのアクションごとに 1 行のデータを格納します。|  
+|[trace_xe_event_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md)|SQL トレース イベント クラスに割り当てられている拡張イベントのイベントごとに 1 行のデータを格納します。|  
+|[trace_xe_action_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)|SQL トレース列 ID に割り当てられている拡張イベントのアクションごとに 1 行のデータを格納します。|  
   
-## 参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](../Topic/Dynamic%20Management%20Views%20and%20Functions%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>参照  
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [SQL Server 拡張イベント テーブル &#40;Transact-SQL&#41;](../Topic/SQL%20Server%20Extended%20Events%20Tables%20\(Transact-SQL\).md)   
+ [SQL Server 拡張イベント テーブル &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/6d52ff03-f5aa-4f0f-8c98-9b49dc76f94e)   
  [system_health セッションの使用](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [拡張イベントへの PowerShell プロバイダーの使用](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)  
   
   
+

@@ -1,27 +1,31 @@
 ---
 title: "プラン ガイドの有効化または無効化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プラン ガイド [SQL Server], 無効化"
-  - "プラン ガイドの有効化"
-  - "プラン ガイド [SQL Server], 有効化"
-  - "プラン ガイドの無効化"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- plan guides [SQL Server], disabling
+- enabling plan guides
+- plan guides [SQL Server], enabling
+- disabling plan guides
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1d76a7087ce1225c2ae3f4f685cb234b53dbf0b
+ms.lasthandoff: 04/11/2017
+
 ---
-# プラン ガイドの有効化または無効化
+# <a name="enable-or-disable-a-plan-guide"></a>プラン ガイドの有効化または無効化
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、プラン ガイドを無効化および有効化できます。 データベース内の 1 つのプラン ガイドまたはすべてのプラン ガイドを有効化または無効化できます。  
   
  **このトピックの内容**  
@@ -53,27 +57,27 @@ caps.handback.revision: 6
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### プラン ガイドを無効化または有効化するには  
+#### <a name="to-disable-or-enable-a-plan-guide"></a>プラン ガイドを無効化または有効化するには  
   
 1.  プラス記号をクリックして、無効化または有効化するプラン ガイドのあるデータベースを展開し、プラス記号をクリックして **[プログラミング]** フォルダーを展開します。  
   
 2.  プラス記号をクリックして **[プラン ガイド]** フォルダーを展開します。  
   
-3.  無効化または有効化するプラン ガイドを右クリックし、**[無効化]** または **[有効化]** を選択します。  
+3.  無効化または有効化するプラン ガイドを右クリックし、 **[無効化]** または **[有効化]**を選択します。  
   
 4.  **[プラン ガイドの無効化]** または **[プラン ガイドの有効化]** ダイアログ ボックスで、選択した動作が成功したことを確認し、 **[閉じる]**をクリックします。  
   
-#### データベース内のすべてのプラン ガイドを無効化または有効化するには  
+#### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>データベース内のすべてのプラン ガイドを無効化または有効化するには  
   
 1.  プラス記号をクリックして、無効化または有効化するプラン ガイドのあるデータベースを展開し、プラス記号をクリックして **[プログラミング]** フォルダーを展開します。  
   
-2.  **[プラン ガイド]** フォルダーを右クリックし、**[すべて有効化]** または **[すべて無効化]** を選択します。  
+2.  **[プラン ガイド]** フォルダーを右クリックし、 **[すべて有効化]** または **[すべて無効化]**を選択します。  
   
 3.  **[すべてのプラン ガイドを無効化]** または **[すべてのプラン ガイドを有効化]** ダイアログ ボックスで、選択した動作が成功したことを確認し、 **[閉じる]**をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### プラン ガイドを無効化または有効化するには  
+#### <a name="to-disable-or-enable-a-plan-guide"></a>プラン ガイドを無効化または有効化するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 6
   
     ```  
   
-#### データベース内のすべてのプラン ガイドを無効化または有効化するには  
+#### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>データベース内のすべてのプラン ガイドを無効化または有効化するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

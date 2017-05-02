@@ -1,27 +1,31 @@
 ---
-title: "SQL Server XTP Phantom Processor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: SQL Server XTP Phantom Processor | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 722137db4fdddd79f8ed4bfe8d5a7c3ed4531738
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server XTP Phantom Processor
+# <a name="sql-server-xtp-phantom-processor"></a>SQL Server XTP Phantom Processor
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   SQL Server XTP Phantom Processor パフォーマンス オブジェクトには、インメモリ OLTP エンジンのファントム処理サブシステムに関連するカウンターが含まれています。 このコンポーネントには、同時実行シナリオの制約検証の他に、SERIALIZABLE 分離レベルで実行されているトランザクション内のファントム行を検出する役割があります。  
   
- 次の表では、**SQL Server Phantom Processor** カウンターについて説明します。  
+ 次の表では、 **SQL Server Phantom Processor** カウンターについて説明します。  
   
 |カウンター|説明|  
 |-------------|-----------------|  
@@ -32,7 +36,7 @@ caps.handback.revision: 7
 |**Phantom rows touched/sec**|ファントム スキャンによって操作された行の数に関する 1 秒あたりの平均です。|  
 |**Phantom scans started/sec**|ファントム スキャンが開始された回数に関する 1 秒あたりの平均です。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server XTP &#40;インメモリ OLTP&#41; パフォーマンス カウンター](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   

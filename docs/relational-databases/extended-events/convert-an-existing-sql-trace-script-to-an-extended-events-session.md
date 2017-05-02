@@ -1,26 +1,30 @@
 ---
 title: "既存の SQL トレース スクリプトから拡張イベント セッションへの変換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL トレース, 拡張イベントへのスクリプトの変換"
-  - "拡張イベント [SQL Server], SQL トレース スクリプトの変換"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Trace, convert script to extended events
+- extended events [SQL Server], convert SQL Trace script
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
 caps.latest.revision: 21
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3817f8c3c5b3aaa50770b3734974e457a4e802e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 既存の SQL トレース スクリプトから拡張イベント セッションへの変換
+# <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>既存の SQL トレース スクリプトから拡張イベント セッションへの変換
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   拡張イベント セッションに変換する SQL トレース スクリプトが既に手元にある場合は、このトピックの手順を使用して、等価な拡張イベント セッションを作成できます。 変換を実行するために必要な情報は、trace_xe_action_map および trace_xe_event_map システム テーブル内の情報を使用して収集できます。  
@@ -35,7 +39,7 @@ caps.handback.revision: 21
   
 4.  拡張イベントにおける等価なイベント、アクション、および述語 (フィルター) を使用して、拡張イベント セッションを手動で作成します。  
   
-## トレース ID を取得するには  
+## <a name="to-obtain-the-trace-id"></a>トレース ID を取得するには  
   
 1.  クエリ エディターで SQL トレース スクリプトを開き、スクリプトを実行してトレース セッションを作成します。 この手順を実行するために必ずしもトレース セッションが実行されている必要はありません。  
   
@@ -49,9 +53,9 @@ caps.handback.revision: 21
     > [!NOTE]  
     >  トレース ID 1 は通常、既定のトレースを示します。  
   
-## 等価な拡張イベントを特定するには  
+## <a name="to-determine-the-extended-events-equivalents"></a>等価な拡張イベントを特定するには  
   
-1.  拡張イベントにおける等価なイベントとアクションを特定するには、次のクエリを実行します。*trace_id* は、前の手順で取得したトレース ID の値に設定されています。  
+1.  拡張イベントにおける等価なイベントとアクションを特定するには、次のクエリを実行します。 *trace_id* は、前の手順で取得したトレース ID の値に設定されています。  
   
     > [!NOTE]  
     >  この例では、既定のトレースの ID (1) が使用されます。  
@@ -79,7 +83,7 @@ caps.handback.revision: 21
   
          たとえば、イベント クラス SP:StmtCompleted を使用し、トレース列名 Duration に対するフィルターを指定したとします (SQL トレース イベント クラス ID が 45 で、SQL トレースの列 ID が 13)。 この場合、クエリの結果には、アクション名が NULL として表示されます。  
   
-    2.  前の手順で特定した SQL トレース イベント クラスごとに、拡張イベントにおける等価なイベント名を探します。 (等価なイベント名がわからない場合は、「[SQL トレースのイベント クラスと等価な拡張イベントを確認する](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)」のトピックに記載されているクエリを使用してください。)。  
+    2.  前の手順で特定した SQL トレース イベント クラスごとに、拡張イベントにおける等価なイベント名を探します。 (等価なイベント名がわからない場合は、「 [SQL トレースのイベント クラスと等価な拡張イベントを確認する](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)」のトピックに記載されているクエリを使用してください。)。  
   
     3.  次のクエリを使用して、前の手順で判明したイベントに使用する適切なデータ フィールドを特定します。 このクエリでは、拡張イベントのデータ フィールドが "event_field" 列に反映されます。 クエリ内の *<event_name>* は、前の手順で指定したイベントの名前に置き換えてください。  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 21
   
          たとえば、SP:StmtCompleted イベント クラスは、sp_statement_completed 拡張イベントに対応します。 クエリの中で、イベント名として sp_statement_completed を指定した場合、そのイベントに既定で含まれているフィールドが "event_field" 列に表示されます。 これらのフィールドを見ると、"duration" というフィールドが存在するのがわかります。 等価な拡張イベント セッションにフィルターを作成するには、"WHERE duration > 0" などの述語を追加します。 例については、このトピックの「拡張イベント セッションを作成するには」の手順を参照してください。  
   
-## 拡張イベント セッションを作成するには  
+## <a name="to-create-the-extended-events-session"></a>拡張イベント セッションを作成するには  
  クエリ エディターを使用して拡張イベント セッションを作成し、出力結果をファイル ターゲットに書き込みます。 以降の手順は、単一のクエリについて記述したものです。クエリの実際の作成方法を交えて説明しています。 クエリ全体の例については、このトピックの「使用例」のセクションを参照してください。  
   
 1.  イベント セッションを作成するためのステートメントを追加します。*session_name* の部分は、拡張イベント セッションに使用する名前に置き換えてください。  
@@ -164,7 +168,7 @@ caps.handback.revision: 21
        SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
   
-## 結果を表示するには  
+## <a name="to-view-the-results"></a>結果を表示するには  
   
 1.  出力結果は、sys.fn_xe_file_target_read_file 関数を使用して表示できます。 そのためには、次のクエリを実行します。ファイル パスは、実際に指定したパスに置き換えてください。  
   
@@ -213,7 +217,7 @@ caps.handback.revision: 21
        (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
   
-## 例  
+## <a name="example"></a>例  
   
 ```  
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -249,7 +253,7 @@ ADD TARGET package0.asynchronous_file_target
    (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL トレースのイベント クラスと等価な拡張イベントを確認する](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   

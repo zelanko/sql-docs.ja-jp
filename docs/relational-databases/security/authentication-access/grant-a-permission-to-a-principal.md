@@ -1,24 +1,28 @@
 ---
 title: "プリンシパルに対する権限の許可 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プリンシパルに対する権限の許可"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Grant permission to a principal
 ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 969f70df2cdb72c1fa47e645580ae723fb519864
+ms.lasthandoff: 04/11/2017
+
 ---
-# プリンシパルに対する権限の許可
+# <a name="grant-a-permission-to-a-principal"></a>プリンシパルに対する権限の許可
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)]でプリンシパルに権限を与える方法について説明します。  
   
  **このトピックの内容**  
@@ -51,7 +55,7 @@ caps.handback.revision: 12
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### プリンシパルに権限を与えるには  
+#### <a name="to-grant-permission-to-a-principal"></a>プリンシパルに権限を与えるには  
   
 1.  オブジェクト エクスプローラーで、権限を与えるオブジェクトが格納されているデータベースを展開します。  
   
@@ -62,15 +66,15 @@ caps.handback.revision: 12
   
 3.  **[ストアド プロシージャ]** フォルダーを展開します。  
   
-4.  ストアド プロシージャを右クリックし、**[プロパティ]** をクリックします。  
+4.  ストアド プロシージャを右クリックし、 **[プロパティ]**をクリックします。  
   
-5.  [**ストアド プロシージャのプロパティ – ***stored_procedure_name*] ダイアログ ボックスの [ページの選択] で、**[権限]** を選択します。 このページを使用して、ユーザーまたはロールをストアド プロシージャに追加し、追加したユーザーまたはロールが所有する権限を指定します。  
+5.  [ **ストアド プロシージャのプロパティ –***stored_procedure_name* ] ダイアログ ボックスの [ページの選択] で、 **[権限]**を選択します。 このページを使用して、ユーザーまたはロールをストアド プロシージャに追加し、追加したユーザーまたはロールが所有する権限を指定します。  
   
 6.  完了したら、 **[OK]**をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### プリンシパルに権限を与えるには  
+#### <a name="to-grant-permission-to-a-principal"></a>プリンシパルに権限を与えるには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 12
   
  詳細については、「[GRANT &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-transact-sql.md)」と「[GRANT Object Permissions &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-object-permissions-transact-sql.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [プリンシパル &#40;データベース エンジン&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

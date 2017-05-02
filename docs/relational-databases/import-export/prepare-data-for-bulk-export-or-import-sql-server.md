@@ -1,28 +1,32 @@
 ---
 title: "一括エクスポートまたは一括インポートのデータの準備 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "一括インポート [SQL Server]、計画"
-  - "一括インポート [SQL Server]、CSV ファイルから"
-  - "データ形式 [SQL Server]、操作の計画"
-  - "CSV ファイル [SQL Server]"
-  - "CSV ファイルの引用符で囲まれたフィールド [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bulk importing [SQL Server], planning
+- bulk importing [SQL Server], from a CSV file
+- data formats [SQL Server], planning operations
+- CSV files [SQL Server]
+- quoted fields in CSV files [SQL Server]
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: fbcca0ce4e711ba22215e9e6ff09389b02d6e80b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 一括エクスポートまたは一括インポートのデータの準備 (SQL Server)
+# <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>一括エクスポートまたは一括インポートのデータの準備 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   ここでは、一括エクスポート操作の計画に関する考慮事項と一括インポート操作の要件について説明します。  
@@ -30,22 +34,22 @@ caps.handback.revision: 51
 > [!NOTE]  
 >  一括インポート用にデータ ファイルの書式を設定する方法が不明確な場合は、 **bcp** ユーティリティを使用して、データをテーブルからデータ ファイルにエクスポートします。 このファイル内の各データ フィールドの書式設定では、データを対応するテーブル列に一括インポートする際に必要な書式設定が示されています。 データ ファイルのフィールドに同じデータの書式設定を使用してください。  
   
-## 一括エクスポートのデータ ファイル形式に関する注意点  
+## <a name="data-file-format-considerations-for-bulk-export"></a>一括エクスポートのデータ ファイル形式に関する注意点  
  **bcp** コマンドを使用して一括エクスポート操作を実行する前に、次のことを考慮してください:  
   
 -   データをファイルにエクスポートする際、 **bcp** コマンドにより、指定したファイル名のデータ ファイルが自動的に作成されます。 指定の名前が既に使用されている場合、そのファイルの既存のコンテンツは、そのデータ ファイルに一括コピーするデータで上書きされます。  
   
 -   テーブルまたはビューからデータを一括エクスポートする場合、一括コピーするテーブルまたはビューに SELECT 権限が必要になります。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データの取得に並列スキャンを使用できます。 そのため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスから一括エクスポートされるテーブル行は、通常、エクスポート先のデータ ファイルで特定の順序で表示されるとは保証されません。 一括エクスポートされたテーブル行がデータ ファイル内に特定の順序で表示されるようにするには、**queryout** オプションを使用してクエリから一括エクスポートを行い、ORDER BY 句を指定します。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データの取得に並列スキャンを使用できます。 そのため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスから一括エクスポートされるテーブル行は、通常、エクスポート先のデータ ファイルで特定の順序で表示されるとは保証されません。 一括エクスポートされたテーブル行がデータ ファイル内に特定の順序で表示されるようにするには、 **queryout** オプションを使用してクエリから一括エクスポートを行い、ORDER BY 句を指定します。  
   
-## 一括インポートのデータ ファイル形式の要件  
+## <a name="data-file-format-requirements-for-bulk-import"></a>一括インポートのデータ ファイル形式の要件  
  データ ファイルからデータをインポートするには、データ ファイルは以下の基本要件を満たしている必要があります。  
   
 -   データは、行と列の形式になっている必要があります。  
   
 > [!NOTE]  
->  一括インポート処理では、列がスキップされたり順番が再変更されることがあるため、データ ファイルの構造は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルの構造と同一である必要はありません。  
+>  一括インポート処理では、列がスキップされたり順番が再変更されることがあるため、データ ファイルの構造は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルの構造と同一である必要はありません。  
   
 -   データ ファイルのデータは、文字列形式やネイティブ形式など、サポートされている形式である必要があります。  
   
@@ -60,15 +64,15 @@ caps.handback.revision: 51
   
 -   固定長フィールドまたは固定幅フィールドを含むデータ ファイルからデータをインポートするには、フォーマット ファイルを使用します。 詳細については、「[XML フォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)」を参照してください。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の一括インポート操作では、コンマ区切り (CSV) ファイルがサポートされていません。 ただし、場合によっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対してデータを一括インポートする際、CSV ファイルをデータ ファイルとして使用できます。 CSV ファイルのフィールド ターミネータは必ずしもコンマである必要はありません。 一括インポートのデータ ファイルとして利用できるようにするには、CSV ファイルが次の条件を満たしている必要があります。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の一括インポート操作では、コンマ区切り (CSV) ファイルがサポートされていません。 ただし、場合によっては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対してデータを一括インポートする際、CSV ファイルをデータ ファイルとして使用できます。 CSV ファイルのフィールド ターミネータは必ずしもコンマである必要はありません。 一括インポートのデータ ファイルとして利用できるようにするには、CSV ファイルが次の条件を満たしている必要があります。  
   
     -   データ フィールドにフィールド ターミネータが含まれていないこと。  
   
     -   データ フィールドの値を囲む引用符 ("") の有無がすべての値で統一されていること。  
   
-     データを [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro や Visual FoxPro テーブル (.dbf) ファイル、または [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ワークシート (.xls) ファイルから一括インポートするには、前述の制限に準拠した CSV ファイルにデータを変換する必要があります。 通常、ファイル拡張子は .csv です。 そうすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一括インポート操作で .csv ファイルをデータ ファイルとして使用できます。  
+     データを [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro や Visual FoxPro テーブル (.dbf) ファイル、または [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ワークシート (.xls) ファイルから一括インポートするには、前述の制限に準拠した CSV ファイルにデータを変換する必要があります。 通常、ファイル拡張子は .csv です。 そうすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一括インポート操作で .csv ファイルをデータ ファイルとして使用できます。  
   
-     32 ビット システムでは、[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) を OLE DB Provider for Jet と共に使用することにより、一括インポートの最適化を使用せずに CSV データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにインポートできます。 Jet は、データ ソースと同じディレクトリ内にある schema.ini ファイルで定義されたスキーマを使用して、テキスト ファイルをテーブルとして扱います。  CSV データの場合、schema.ini ファイル内のパラメーターの 1 つが "FORMAT=CSVDelimited" となります。 この解決方法を使用するには、Jet Test IISAMm 操作、その接続文字列の構文、schema.ini の使用法、レジストリ設定オプションなどについて理解する必要があります。  この情報については、Microsoft Access ヘルプとサポート技術情報 (KB) の資料を参照することをお勧めします。 詳しくは、「 [テキスト データ ソース ドライバーを初期化する](http://go.microsoft.com/fwlink/?LinkId=128503)」、「 [HOWTO: セキュリティ設定された Access データベースへのリンク サーバーを指定した SQL Server 7.0 分散クエリ](http://go.microsoft.com/fwlink/?LinkId=128504)」、「 [Jet OLE DB プロバイダー 4.0 を使用して ISAM データベースに接続する方法](http://go.microsoft.com/fwlink/?LinkId=128505)」、「 [Jet プロバイダーの Text IIsam を使用して区切り記号付きテキスト ファイルを開く方法](http://go.microsoft.com/fwlink/?LinkId=128501)」をご覧ください。  
+     32 ビット システムでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [を OLE DB Provider for Jet と共に使用することにより、一括インポートの最適化を使用せずに CSV データを](../../t-sql/functions/openrowset-transact-sql.md) テーブルにインポートできます。 Jet は、データ ソースと同じディレクトリ内にある schema.ini ファイルで定義されたスキーマを使用して、テキスト ファイルをテーブルとして扱います。  CSV データの場合、schema.ini ファイル内のパラメーターの 1 つが "FORMAT=CSVDelimited" となります。 この解決方法を使用するには、Jet Test IISAMm 操作、その接続文字列の構文、schema.ini の使用法、レジストリ設定オプションなどについて理解する必要があります。  この情報については、Microsoft Access ヘルプとサポート技術情報 (KB) の資料を参照することをお勧めします。 詳しくは、「 [テキスト データ ソース ドライバーを初期化する](https://msdn.microsoft.com/library/office/ff834391.aspx)」、「 [HOWTO: セキュリティ設定された Access データベースへのリンク サーバーを指定した SQL Server 7.0 分散クエリ](http://go.microsoft.com/fwlink/?LinkId=128504)」、「 [Jet OLE DB プロバイダー 4.0 を使用して ISAM データベースに接続する方法](http://go.microsoft.com/fwlink/?LinkId=128505)」、「 [Jet プロバイダーの Text IIsam を使用して区切り記号付きテキスト ファイルを開く方法](http://go.microsoft.com/fwlink/?LinkId=128501)」をご覧ください。  
   
  また、データ ファイルのデータをテーブルに一括インポートするには、以下の要件も満たしている必要があります。  
   
@@ -79,18 +83,18 @@ caps.handback.revision: 51
 > [!NOTE]  
 >  パーティション ビューへのデータの一括インポートはサポートされません。パーティション ビューにデータを一括インポートするとエラーになります。  
   
-## 外部リソース  
+## <a name="external-resources"></a>外部リソース  
  [[HOWTO] DTS: Excel から SQL Server にデータをインポートする方法](http://support.microsoft.com/kb/321686)  
   
-## 変更履歴  
+## <a name="change-history"></a>変更履歴  
   
 |変更内容|  
 |---------------------|  
 |OLE DB Provider for Jet を使用した CSV データのインポートについての情報を追加しました。|  
   
-## 参照  
- [bcp ユーティリティ](../../tools/bcp-utility.md)   
- [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [bcp Utility](../../tools/bcp-utility.md)   
+ [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)   
  [ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  

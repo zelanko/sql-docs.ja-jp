@@ -1,44 +1,48 @@
 ---
 title: "変更の追跡の管理 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データの変更の追跡 [SQL Server]"
-  - "変更の追跡 [SQL Server], オーバーヘッド"
-  - "変更の追跡 [SQL Server]"
-  - "変更の追跡 [SQL Server], 管理"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tracking data changes [SQL Server]
+- change tracking [SQL Server], overhead
+- change tracking [SQL Server]
+- change tracking [SQL Server], managing
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e6a29f384995058da7b4beef3edc3dac37e3e616
+ms.lasthandoff: 04/11/2017
+
 ---
-# 変更の追跡の管理 (SQL Server)
+# <a name="manage-change-tracking-sql-server"></a>変更の追跡の管理 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   このトピックでは、変更の追跡を管理する方法について説明します。 また、セキュリティを構成する方法、および変更の追跡を使用する場合のストレージとパフォーマンスへの影響を判断する方法について説明します。  
   
-## 変更の追跡の管理  
+## <a name="managing-change-tracking"></a>変更の追跡の管理  
  ここでは、変更の追跡の管理に関連するカタログ ビュー、権限、および設定の一覧を示します。  
   
-### カタログ ビュー  
+### <a name="catalog-views"></a>カタログ ビュー  
  変更の追跡が有効になっているテーブルおよびデータベースを確認するには、次のカタログ ビューを使用します。  
   
--   [sys.change_tracking_databases &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)  
+-   [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)  
   
--   [sys.change_tracking_tables &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)  
+-   [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
   
- また、[sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) カタログ ビューには、ユーザー テーブルの変更の追跡を有効にしたときに作成された内部テーブルが表示されます。  
+ また、 [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) カタログ ビューには、ユーザー テーブルの変更の追跡を有効にしたときに作成された内部テーブルが表示されます。  
   
-### セキュリティ  
+### <a name="security"></a>セキュリティ  
  [変更追跡関数](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)を使用して変更追跡情報にアクセスするには、プリンシパルに次の権限が必要です。  
   
 -   少なくともクエリ対象テーブルへの変更の追跡対象テーブルの主キー列に対する SELECT 権限。  
@@ -49,7 +53,7 @@ caps.handback.revision: 9
   
     -   変更追跡情報には、更新操作によってどの列が変更されたかという情報が格納される場合があります。 プリンシパルは、機密情報を含む列に対する権限を拒否されている場合があります。 ただし、変更追跡情報は参照できるので、列の値が更新されたことは確認できますが、列の値を確認することはできません。  
   
-## 変更の追跡のオーバーヘッドについて  
+## <a name="understanding-change-tracking-overhead"></a>変更の追跡のオーバーヘッドについて  
  テーブルの変更の追跡を有効にすると、一部の管理操作が影響を受けます。 次の表に、考慮する必要がある操作と影響を示します。  
   
 |操作|変更の追跡が有効になっている場合|  
@@ -65,7 +69,7 @@ caps.handback.revision: 9
   
  変更の追跡を使用すると、DML 操作の一部として格納される変更追跡情報が原因で、DML 操作のオーバーヘッドが多少増加します。  
   
-### DML への影響  
+### <a name="effects-on-dml"></a>DML への影響  
  変更の追跡は、DML 操作のパフォーマンスのオーバーヘッドを最小限に抑えるように最適化されています。 テーブルに対する変更の追跡の使用に関連するパフォーマンスのオーバーヘッドの増加は、テーブルにインデックスを作成して維持する必要がある場合に発生するオーバーヘッドに似ています。  
   
  DML 操作で変更された行ごとに、行が内部変更追跡テーブルに追加されます。 DML 操作に関連するこの影響は、次のようなさまざまな要因によって異なります。  
@@ -78,7 +82,7 @@ caps.handback.revision: 9
   
  スナップショット分離を使用している場合も、変更の追跡が有効になっているかどうかに関係なく、すべての DML 操作のパフォーマンスに影響します。  
   
-### ストレージへの影響  
+### <a name="effects-on-storage"></a>ストレージへの影響  
  変更追跡データは、次の種類の内部テーブルに格納されます。  
   
 -   内部変更テーブル  
@@ -95,22 +99,23 @@ caps.handback.revision: 9
   
 -   トランザクションがコミットされるごとに、行が内部トランザクション テーブルに追加されます。  
   
- その他の内部テーブルと同様に、変更追跡テーブルに使用される領域は、[sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) ストアド プロシージャを使用して確認できます。 内部テーブルの名前は、次の例に示すように、[sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) カタログ ビューを使用して取得できます。  
+ その他の内部テーブルと同様に、変更追跡テーブルに使用される領域は、 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) ストアド プロシージャを使用して確認できます。 内部テーブルの名前は、次の例に示すように、 [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) カタログ ビューを使用して取得できます。  
   
 ```tsql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [[データベースのプロパティ] &#40;[変更の追跡] ページ&#41;](../Topic/Database%20Properties%20\(ChangeTracking%20Page\).md)   
- [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)   
- [sys.change_tracking_databases &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)   
- [sys.change_tracking_tables &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)   
+ [[データベースのプロパティ] &#40;[変更の追跡] ページ&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
+ [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   
+ [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)   
  [データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [変更の追跡について &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [変更データの処理 &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
   
+

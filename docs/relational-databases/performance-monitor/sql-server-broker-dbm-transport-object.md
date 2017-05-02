@@ -1,25 +1,29 @@
 ---
 title: "SQL Server: Broker - DBM Transport オブジェクト | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker / DBM Transport オブジェクト"
-  - "SQLServer:Broker/DBM Transport"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker / DBM Transport object
+- SQLServer:Broker/DBM Transport
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0bad82d13370dfba9e1067986d1f1789ecf006ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server: Broker - DBM Transport オブジェクト
+# <a name="sql-server-broker---dbm-transport-object"></a>SQL Server: Broker - DBM Transport オブジェクト
   **Broker / DBM Transport** パフォーマンス オブジェクトには、Service Broker とデータベース ミラーリングに関するネットワーク情報を報告するパフォーマンス カウンターが含まれています。 次の表は、このオブジェクトに含まれているカウンターを示します。  
   
 |SQL Server: Broker / DBM Transport カウンター|説明|  
@@ -61,7 +65,7 @@ caps.handback.revision: 34
 |**Send I/O Len Avg Base**|内部使用のみです。|
 |**Send I/Os/sec**|1 秒あたりに完了したトランスポート送信 I/O 操作の数を報告します。 1 つのトランスポート送信操作には、複数のメッセージ フラグメントが含まれている可能性があることに注意してください。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [sys.dm_broker_forwarded_messages &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql.md)   
  [SQL Server Service Broker (SQL Server Service Broker)](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [リソースの利用状況の監視 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

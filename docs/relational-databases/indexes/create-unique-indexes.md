@@ -1,29 +1,33 @@
 ---
-title: "一意のインデックスの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "一意なインデックス"
-  - "インデックスの設計 [SQL Server], 一意"
-  - "クラスター化インデックス, 一意"
-  - "インデックス [SQL Server], 一意"
-  - "非クラスター化インデックス [SQL Server], 一意"
-  - "一意なインデックス, 設計のガイドライン"
+title: "Unique インデックスの作成 | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unique indexes
+- designing indexes [SQL Server], unique
+- clustered indexes, unique
+- indexes [SQL Server], unique
+- nonclustered indexes [SQL Server], unique
+- unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad915ae7f113e7080f3fe5b7dbd9bb1c233f8bb4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 一意のインデックスの作成
+# <a name="create-unique-indexes"></a>一意のインデックスの作成
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、テーブルに一意のインデックスを作成する方法について説明します。 一意インデックスを使用すると、インデックス キーの値が重複することがないので、テーブルのすべての行を一意にすることができます。 UNIQUE 制約を作成することと、制約に依存しない一意インデックスを作成することの間に大きな違いはありません。 データ検証動作も同じ方式で行われます。また、クエリ オプティマイザーでは、制約によって作成された一意インデックスと手動で作成された一意インデックスは区別されません。 ただし、列に UNIQUE 制約を作成すると、インデックスの目的が明確になります。 UNIQUE 制約の詳細については、「 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)」を参照してください。  
@@ -82,44 +86,44 @@ caps.handback.revision: 29
   
 -   **インデックス付きビュー**  
   
-     インデックス付きビューを作成するには、1 つ以上のビュー列で一意のクラスター化インデックスを定義します。 このビューを実行すると、テーブル データがクラスター化インデックスに格納されるときと同じ方法で、結果セットがインデックスのリーフ レベルに格納されます。 詳細については、「[インデックス付きビューの作成](../../relational-databases/views/create-indexed-views.md)」を参照してください。  
+     インデックス付きビューを作成するには、1 つ以上のビュー列で一意のクラスター化インデックスを定義します。 このビューを実行すると、テーブル データがクラスター化インデックスに格納されるときと同じ方法で、結果セットがインデックスのリーフ レベルに格納されます。 詳細については、「 [インデックス付きビューの作成](../../relational-databases/views/create-indexed-views.md)」を参照してください。  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
 -   重複するキー値がデータに存在する場合は、一意インデックス、UNIQUE 制約、または PRIMARY KEY 制約を作成できません。  
   
--   一意非クラスター化インデックスには、付加非キー列を含めることができます。 詳細については、「[付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。  
+-   一意非クラスター化インデックスには、付加非キー列を含めることができます。 詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。  
   
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
- テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、**sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
+ テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### テーブル デザイナーを使用して一意のインデックスを作成するには  
+#### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>テーブル デザイナーを使用して一意のインデックスを作成するには  
   
 1.  オブジェクト エクスプローラーで、一意のインデックスを作成するテーブルが格納されているデータベースを展開します。  
   
 2.  **[テーブル]** フォルダーを展開します。  
   
-3.  一意のインデックスを作成するテーブルを右クリックし、**[デザイン]** を選択します。  
+3.  一意のインデックスを作成するテーブルを右クリックし、 **[デザイン]**を選択します。  
   
-4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]** を選択します。  
+4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]**を選択します。  
   
-5.  **[インデックス/キー]** ダイアログ ボックスで、**[追加]** をクリックします。  
+5.  **[インデックス/キー]** ダイアログ ボックスで、 **[追加]**をクリックします。  
   
 6.  **[選択された主/一意キーまたはインデックス]** ボックスで、新しいインデックスを選択します。  
   
-7.  メイン グリッドの **[(全般)]** で、**[種類]** を選択し、一覧から **[インデックス]** を選択します。  
+7.  メイン グリッドの **[(全般)]**で、 **[種類]** を選択し、一覧から **[インデックス]** を選択します。  
   
-8.  **[列]** を選択し、省略記号ボタン (**[...]**) をクリックします。  
+8.  **[列]**を選択し、省略記号ボタン ( **[...]**) をクリックします。  
   
 9. **[インデックスの列]** ダイアログ ボックスの **[列名]**で、インデックスを作成する列を選択します。 16 列まで選択できます。 ただし、最適なパフォーマンスを得るには、1 つのインデックスにつき 1 列または 2 列に抑えます。 選択した各列の値の並べ方を昇順または降順のどちらかに指定できます。  
   
 10. インデックスを作成するすべての列を選択したら、 **[OK]**をクリックします。  
   
-11. グリッドの **[(全般)]** で、**[一意である]** を選択し、一覧から **[はい]** を選択します。  
+11. グリッドの **[(全般)]**で、 **[一意である]** を選択し、一覧から **[はい]** を選択します。  
   
 12. 省略可能: メイン グリッドの **[テーブル デザイナー]**で、select **[重複するキーを無視]** を選択し、一覧から **[はい]** を選択します。 この操作は、一意のインデックスに重複キーが作成される可能性のあるデータを追加する操作を無視する場合に実行します。  
   
@@ -127,7 +131,7 @@ caps.handback.revision: 29
   
 14. **[ファイル]** メニューの [*table_name* **の保存**] をクリックします。  
   
-#### オブジェクト エクスプ ローラーを使用して一意のインデックスを作成する  
+#### <a name="create-a-unique-index-by-using-object-explorer"></a>オブジェクト エクスプ ローラーを使用して一意のインデックスを作成する  
   
 1.  オブジェクト エクスプローラーで、一意のインデックスを作成するテーブルが格納されているデータベースを展開します。  
   
@@ -135,15 +139,15 @@ caps.handback.revision: 29
   
 3.  一意のインデックスを作成するテーブルを展開します。  
   
-4.  **[インデックス]** フォルダーを右クリックし、**[新しいインデックス]** をポイントし、**[非クラスター化インデックス...]** を選択します。  
+4.  **[インデックス]** フォルダーを右クリックし、 **[新しいインデックス]**をポイントし、 **[非クラスター化インデックス...]**を選択します。  
   
 5.  **[新しいインデックス]** ダイアログ ボックスの **[全般]** ページで、 **[インデックス名]** ボックスに新しいインデックスの名前を入力します。  
   
-6.   **[一意]** チェック ボックスをオンにします。  
+6.  **[一意]** チェック ボックスをオンにします。  
   
 7.  **[インデックス キー列]**で、 **[追加]**をクリックします。  
   
-8.  **[*table_name*から列を選択]** ダイアログ ボックスで、一意のインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
+8.  **table_name***から列を選択* ダイアログ ボックスで、一意のインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
 9. クリックして **OK**です。  
   
@@ -151,7 +155,7 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### テーブルに一意のインデックスを作成するには  
+#### <a name="to-create-a-unique-index-on-a-table"></a>テーブルに一意のインデックスを作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -177,3 +181,4 @@ caps.handback.revision: 29
  詳細については、「[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)」を参照してください。  
   
   
+

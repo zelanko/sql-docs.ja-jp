@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG014151 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG014151 エラー"
+title: MSSQL_ENG014151 | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG014151 error
 ms.assetid: 54b45e70-46b3-4c7a-a5bf-06f6dd028ceb
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: deae227a4912b44b8118461334db64b9f58d7b82
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG014151
+# <a name="mssqleng014151"></a>MSSQL_ENG014151
     
-## メッセージの詳細  
+## <a name="message-details"></a>メッセージの詳細  
   
 |||  
 |-|-|  
@@ -31,33 +35,33 @@ caps.handback.revision: 17
 |シンボル名||  
 |メッセージ テキスト|レプリケーション-%s: エージェント %s は失敗しました。 %s|  
   
-## 説明  
+## <a name="explanation"></a>説明  
  このエラーは、すべてのレプリケーション エージェントのエラーに対して発生します。 メッセージの最後のテキストは、エラーのコンテキストに依存します。  
   
-## ユーザーの操作  
+## <a name="user-action"></a>ユーザーの操作  
  このエラーはさまざまな状況で発生します。必要に応じて、以下の方法を使用してください。  
   
--   失敗したエージェントを再起動し、問題なく実行されるかどうかを確認します。 詳細については、次を参照してください。 [の開始と停止のレプリケーション エージェントと #40 です。SQL Server Management Studio と #41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  [レプリケーション エージェント実行可能ファイルの概念](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)します。  
+-   失敗したエージェントを再起動し、問題なく実行されるかどうかを確認します。 詳細については、「[レプリケーション エージェントを起動および停止する &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)」および「[レプリケーション エージェント実行可能ファイルの概念](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)」を参照してください。  
   
 -   エージェント履歴およびジョブ履歴を参照し、同時期に発生したその他のエラーを確認します。 レプリケーション モニターにおけるエージェントの状態およびエラーの詳細の表示については、以下のトピックを参照してください。  
   
-    -   スナップショット エージェント、ログ リーダー エージェント、およびキュー リーダー エージェントを参照してください。 [情報を表示したりタスクを実行するエージェント関連付けられていると、パブリケーションと #40 です。レプリケーション モニターと #41;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)します。  
+    -   スナップショット エージェント、ログ リーダー エージェント、およびキュー リーダー エージェントについては、「[パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)」を参照してください。  
   
-    -   ディストリビューション エージェントおよびマージ エージェントでは、「 [情報を表示したりタスクを実行する、エージェント関連付けられているサブスクリプションに関連付け & #40 です。レプリケーション モニターと #41;](../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)します。  
+    -   ディストリビューション エージェントおよびマージ エージェントについては、「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
   
--   基本的な接続が、エージェントがアクセスするコンピューター間で動作していることを確認しのようなユーティリティを使用して各コンピューターに接続、 [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)します。 接続の際には、エージェントが接続に使用するものと同じアカウントを使用します。 各エージェント アカウントに必要なアクセス許可の詳細については、次を参照してください。 [レプリケーション エージェントのセキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)します。  
+-   エージェントがアクセスするコンピューター間で基本的な接続が機能していることを確認し、 [sqlcmd Utility](../../tools/sqlcmd-utility.md)などのユーティリティにより各コンピューターを接続します。 接続の際には、エージェントが接続に使用するものと同じアカウントを使用します。 各エージェント アカウントで必要な権限の詳細については、「 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
 -   スナップショットの作成中または適用中にエラーが発生した場合は、スナップショット ディレクトリのファイルにエラーがないかどうかを確認します。  
   
 -   エラーの発生が継続する場合は、エージェントのログ記録を増やし、ログの出力ファイルを指定します。 エラーのコンテキストによっては、エラーや他のエラー メッセージにつながる手順が示される可能性もあります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レプリケーション エージェントの管理](../../relational-databases/replication/agents/replication-agent-administration.md)   
- [エラーとイベントのリファレンスと #40 です。レプリケーションと #41 です。](../../relational-databases/replication/errors-and-events-reference-replication.md)   
+ [エラーとイベントのリファレンス &#40;レプリケーション&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [レプリケーション ディストリビューション エージェント](../../relational-databases/replication/agents/replication-distribution-agent.md)   
  [レプリケーション ログ リーダー エージェント](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [レプリケーション マージ エージェント](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [レプリケーション キュー リーダー エージェント](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [レプリケーション スナップショット エージェント](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

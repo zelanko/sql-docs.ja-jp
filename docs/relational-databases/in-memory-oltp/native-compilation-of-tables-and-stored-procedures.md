@@ -1,25 +1,29 @@
 ---
 title: "テーブルとストアド プロシージャのネイティブ コンパイル | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 caps.latest.revision: 23
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f2f56574dacf58e5c79e79e5540ce20ec83846a4
+ms.lasthandoff: 04/11/2017
+
 ---
-# テーブルとストアド プロシージャのネイティブ コンパイル
-  インメモリ OLTP により、ネイティブ コンパイルという概念が導入されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  はメモリ最適化テーブルにアクセスするストアド プロシージャをネイティブにコンパイルできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  はメモリ最適化テーブルをネイティブにコンパイルすることもできます。 ネイティブ コンパイルは、(従来の) 解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] よりも高速なデータ アクセスと効率的なクエリ実行を可能にします。 テーブルとストアド プロシージャのネイティブ コンパイルを実行すると DLL が生成されます。  
+# <a name="native-compilation-of-tables-and-stored-procedures"></a>テーブルとストアド プロシージャのネイティブ コンパイル
+  インメモリ OLTP により、ネイティブ コンパイルという概念が導入されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はメモリ最適化テーブルにアクセスするストアド プロシージャをネイティブにコンパイルできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はメモリ最適化テーブルをネイティブにコンパイルすることもできます。 ネイティブ コンパイルは、(従来の) 解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)]よりも高速なデータ アクセスと効率的なクエリ実行を可能にします。 テーブルとストアド プロシージャのネイティブ コンパイルを実行すると DLL が生成されます。  
   
- メモリ最適化テーブル型のネイティブ コンパイルもサポートされています。 詳細については、「[Faster temp table and table variable by using memory optimization](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)」 (メモリ最適化を使用した一時テーブルとテーブル変数の高速化) を参照してください。  
+ メモリ最適化テーブル型のネイティブ コンパイルもサポートされています。 詳細については、「 [Faster temp table and table variable by using memory optimization](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)」 (メモリ最適化を使用した一時テーブルとテーブル変数の高速化) を参照してください。  
   
  ネイティブ コンパイルとは、プログラミングの構造をネイティブ コードに変換する処理であり、追加のコンパイルまたは解釈を必要としないプロセッサ命令で構成されます。  
   
@@ -28,7 +32,7 @@ caps.handback.revision: 23
 > [!NOTE]  
 >  メモリ最適化テーブルは、サーバーの再起動中に再コンパイルされます。 データベースの復元を迅速に行うために、ネイティブ コンパイル ストアド プロシージャは、サーバーの再起動中に再コンパイルされず、最初の実行時にコンパイルされます。 このようにコンパイルが延期されるため、ネイティブ コンパイル ストアド プロシージャは、最初の実行後に [sys.dm_os_loaded_modules &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-loaded-modules-transact-sql.md) を呼び出した場合にのみ表示されます。  
   
-## インメモリ OLTP DLL のメンテナンス  
+## <a name="maintenance-of-in-memory-oltp-dlls"></a>インメモリ OLTP DLL のメンテナンス  
  次のクエリは、サーバーのメモリに現在読み込まれているすべてのテーブルとストアド プロシージャ DLL を示します。  
   
 ```tsql  
@@ -44,7 +48,7 @@ where description = 'XTP Native DLL'
 > [!NOTE]  
 >  SQL Server によってデータベースの復旧に必要なすべてのテーブルの DLL がコンパイルされます。 データベースを再起動する直前にテーブルが削除された場合、チェックポイント ファイルかトランザクション ログにテーブルの残存物が存在するため、データベースの起動中にテーブルの DLL が再コンパイルされる場合があります。 再起動後に DLL がアンロードされ、通常のクリーンアップ プロセスによってファイルが削除されます。  
   
-## テーブルのネイティブ コンパイル  
+## <a name="native-compilation-of-tables"></a>テーブルのネイティブ コンパイル  
  **CREATE TABLE** ステートメントを使用してメモリ最適化テーブルを作成すると、テーブル情報がデータベース メタデータに書き込まれ、テーブルとインデックス構造がメモリに作成されます。 また、テーブルは DLL にコンパイルされます。  
   
  データベースとメモリ最適化テーブルを作成する、次のサンプル スクリプトについて考えてみます。  
@@ -76,7 +80,7 @@ go
   
  テーブル DLL は、テーブルのインデックス構造と行形式を理解します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は DLL を使用してインデックスをスキャンし、行を取得し、行のコンテンツを格納します。  
   
-## ストアド プロシージャのネイティブ コンパイル  
+## <a name="native-compilation-of-stored-procedures"></a>ストアド プロシージャのネイティブ コンパイル  
  NATIVE_COMPILATION が設定されているストアド プロシージャはネイティブでコンパイルされます。 つまり、パフォーマンスが重要なビジネス ロジックの効率的な実行のために、プロシージャの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがすべてネイティブ コードにコンパイルされます。  
   
  ネイティブ コンパイル ストアド プロシージャの詳細については、「 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)」をご覧ください。  
@@ -108,17 +112,17 @@ go
   
  行をできる限り高速に挿入するために、native_sp の DLL は t1 の DLL およびインメモリ OLTP ストレージ エンジンと直接やり取りできます。  
   
- インメモリ OLTP コンパイラは、ストアド プロシージャの各クエリに有効な実行プランを作成するためにクエリ オプティマイザーを活用します。 テーブルのデータが変更された場合はネイティブ コンパイル ストアド プロシージャは自動的に再コンパイルされないことに注意してください。 インメモリ OLTP の統計とストアド プロシージャの管理の詳細については、「[メモリ最適化テーブルの統計](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)」を参照してください。  
+ インメモリ OLTP コンパイラは、ストアド プロシージャの各クエリに有効な実行プランを作成するためにクエリ オプティマイザーを活用します。 テーブルのデータが変更された場合はネイティブ コンパイル ストアド プロシージャは自動的に再コンパイルされないことに注意してください。 インメモリ OLTP の統計とストアド プロシージャの管理の詳細については、「 [メモリ最適化テーブルの統計](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)」を参照してください。  
   
-## ネイティブ コンパイルにおけるセキュリティの注意点  
+## <a name="security-considerations-for-native-compilation"></a>ネイティブ コンパイルにおけるセキュリティの注意点  
  テーブルおよびストアド プロシージャのネイティブ コンパイルでは、インメモリ OLTP コンパイラを使用します。 このコンパイラはファイルを生成し、そのファイルがディスクに書き込まれて、メモリに読み込まれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、これらのファイルへのアクセスを制限するために、次のメカニズムを使用しています。  
   
-### ネイティブ コンパイラ  
- コンパイラの実行可能ファイルと、ネイティブ コンパイルに必要なバイナリおよびヘッダー ファイルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの一部として MSSQL\Binn\Xtp フォルダー内にインストールされます。 このため、既定のインスタンスが C:\Program Files 内にインストールされている場合、コンパイラ ファイルは C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\Binn\Xtp にインストールされています。  
+### <a name="native-compiler"></a>ネイティブ コンパイラ  
+ コンパイラの実行可能ファイルと、ネイティブ コンパイルに必要なバイナリおよびヘッダー ファイルは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの一部として MSSQL\Binn\Xtp フォルダー内にインストールされます。 このため、既定のインスタンスが C:\Program Files 内にインストールされている場合、コンパイラ ファイルは C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\Binn\Xtp にインストールされています。  
   
- コンパイラへのアクセスを制限するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、バイナリ ファイルへのアクセスを制限するアクセス制御リスト (ACL) が使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのバイナリは、変更や改ざんが起こらないよう ACL で保護されています。 ネイティブ コンパイラの ACL では、コンパイラの使用も制限されます。ネイティブ コンパイラ ファイルに対する読み取り権限と実行権限を持っているのは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントとシステム管理者のみです。  
+ コンパイラへのアクセスを制限するために、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、バイナリ ファイルへのアクセスを制限するアクセス制御リスト (ACL) が使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのバイナリは、変更や改ざんが起こらないよう ACL で保護されています。 ネイティブ コンパイラの ACL では、コンパイラの使用も制限されます。ネイティブ コンパイラ ファイルに対する読み取り権限と実行権限を持っているのは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントとシステム管理者のみです。  
   
-### ネイティブ コンパイルによって生成されるファイル  
+### <a name="files-generated-by-a-native-compilation"></a>ネイティブ コンパイルによって生成されるファイル  
  テーブルまたはストアド プロシージャのコンパイル時に生成されるファイルには、DLL のほか、.c、.obj、.xml、.pdb などの拡張子を持つ中間ファイルがあります。 生成されたファイルは、既定のデータ フォルダーのサブフォルダーに保存されます。 サブフォルダーは Xtp と呼ばれます。 既定のデータ フォルダーを指定して既定のインスタンスをインストールした場合、生成されたファイルは C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\DATA\Xtp に配置されます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は 3 とおりの方法で、生成した DLL に対する改ざんを回避します。  
@@ -131,8 +135,8 @@ go
   
  これらのファイルの管理には、ユーザー操作は不要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、必要に応じてファイルの作成および削除が行われます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
- [ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
+ [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

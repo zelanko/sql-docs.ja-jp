@@ -1,41 +1,45 @@
 ---
-title: "[マージ エージェント セキュリティ] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.security.MA.f1"
-helpviewer_keywords: 
-  - "[マージ エージェント セキュリティ] ダイアログ ボックス"
+title: "マージ エージェント セキュリティ | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.security.MA.f1
+helpviewer_keywords:
+- Merge Agent Security dialog box
 ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 91b56fdfcd9865baf0063b15998572a228b83852
+ms.lasthandoff: 04/11/2017
+
 ---
-# [マージ エージェント セキュリティ]
+# <a name="merge-agent-security"></a>[マージ エージェント セキュリティ]
   **[マージ エージェント セキュリティ]** ダイアログ ボックスを使用すると、マージ エージェントの実行に使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントを指定できます。 マージ エージェントは、プッシュ サブスクリプションの場合はディストリビューターで実行され、プル サブスクリプションの場合はサブスクライバーで実行されます。 エージェント プロセスがこのアカウントで実行されるため、Windows アカウントは *プロセス アカウント*とも呼ばれます。 ダイアログ ボックスで使用できる追加オプションは、次に示すアクセスの方法によって異なります。  
   
 -   サブスクリプションの新規作成ウィザードからダイアログ ボックスを開いた場合は、マージ エージェントがプッシュ サブスクリプション用にサブスクライバーへの接続を作成するコンテキスト、またはプル サブスクリプション用にパブリッシャーおよびディストリビューターへの接続を作成するコンテキストを指定できます。 Windows アカウントを使用するか、指定した [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントのコンテキストにより、接続を作成できます。  
   
--   ダイアログ ボックスにアクセスすると、 **サブスクリプションのプロパティ** ] ダイアログ ボックスで、マージ エージェントが、[プロパティ] をクリックして接続を作成するコンテキストを指定 (**...**) で、 **サブスクライバー接続** または **パブリッシャー接続** そのダイアログ ボックスの行。 アクセスの詳細については、 **サブスクリプションのプロパティ** ダイアログ ボックスを参照してください [プッシュ サブスクリプション プロパティの変更を表示および](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) とする方法: [ビューとプル サブスクリプションのプロパティの変更](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)します。  
+-   **[サブスクリプションのプロパティ]** ダイアログ ボックスから開いた場合は、**[サブスクライバー接続]**行または **[パブリッシャー接続]** 行のプロパティ ボタン ( **[...]** ) をクリックして、マージ エージェントによる接続の作成のコンテキストを指定します。 **[サブスクリプションのプロパティ]** ダイアログ ボックスへのアクセスの詳細については、「[プッシュ サブスクリプションのプロパティの表示または変更](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)」および「[プル サブスクリプションのプロパティの表示または変更](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)」を参照してください。  
   
  各アカウントに正しいパスワードが指定され、すべてのアカウントが有効である必要があります。 アカウントとパスワードは、エージェントが実行されるまで検証されません。  
   
-## オプション  
- **[プロセス アカウント]**  
+## <a name="options"></a>オプション  
+ **Process Account**  
  マージ エージェントの実行に使用する Windows アカウントを入力します。  
   
 -   プッシュ サブスクリプションでは、アカウントには次のことが必要です。  
   
-    -   最低のメンバーである、 **db_owner** ディストリビューション データベースの固定データベース ロール。  
+    -   最低でも、ディストリビューション データベースで **db_owner** 固定データベース ロールのメンバーである。  
   
     -   PAL のメンバーである。  
   
@@ -43,22 +47,22 @@ caps.handback.revision: 24
   
     -   スナップショット共有の読み取り権限を持っている。  
   
--   プル サブスクリプションの場合、アカウントには少なくともメンバーであるは **db_owner** サブスクリプション データベースの固定データベース ロール。  
+-   プル サブスクリプションでは、アカウントは少なくとも、サブスクリプション データベースの **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
  接続を作成するときにプロセス アカウントを借用する場合、追加の権限が必要です。 **[パブリッシャーおよびディストリビューターに接続]** および **[サブスクライバーに接続]** を参照してください。  
   
- **プロセス アカウント** に対するプル サブスクリプションを指定できません [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], のインスタンスで、マージ エージェントが実行されないので、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]です。  
+ マージ エージェントは [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインスタンスで動作しないので、**[プロセス アカウント]** は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] に対するプル サブスクリプションに指定できません。  
   
- **パスワード** と **パスワードの確認**  
+ **[パスワード]** と **[パスワードの確認入力]**  
  Windows アカウントのパスワードを入力します。  
   
  **[パブリッシャーおよびディストリビューターに接続]**  
- プッシュ サブスクリプションの場合パブリッシャーおよびディストリビューターへの接続は常にで指定されたアカウントを借用して作成、 **プロセス アカウント** テキスト ボックスです。  
+ プッシュ サブスクリプションの場合、パブリッシャーおよびディストリビューターへの接続は、常に **[プロセス アカウント]** テキスト ボックスで指定されたアカウントを借用することによって行われます。  
   
  プル サブスクリプションの場合、マージ エージェントでパブリケーションおよびディストリビューターへの接続を作成するには、 **[プロセス アカウント]** テキスト ボックスで指定されたアカウントを借用するか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントの使用を選択した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインとパスワードを入力します。  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 使用するのではなく、Windows アカウントの借用を選択することをお勧めする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントです。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアカウントの使用ではなく、Windows アカウントの借用を選択することをお勧めします。  
   
  接続に使用する Windows アカウントまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントには次のことが必要です。  
   
@@ -71,16 +75,16 @@ caps.handback.revision: 24
 -   スナップショット共有の読み取り権限を持っている。  
   
  **[サブスクライバーに接続]**  
- プル サブスクリプションの場合、サブスクライバーへの接続は常にで指定されたアカウントを借用して作成、 **プロセス アカウント** テキスト ボックスです。  
+ プル サブスクリプションでは、サブスクライバーへの接続は常に **[プロセス アカウント]** テキスト ボックスに指定されたアカウントを借用することによって作成されます。  
   
  プッシュ サブスクリプションの場合、マージ エージェントでパブリケーションおよびディストリビューターへの接続を作成するには、 **[プロセス アカウント]** テキスト ボックスで指定されたアカウントを借用するか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントの使用を選択した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインとパスワードを入力します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントの使用ではなく、Windows アカウントの借用を選択することをお勧めします。  
   
- Windows アカウントまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーへの接続に使用するアカウントには少なくともメンバーであるは **db_owner** サブスクリプション データベースの固定データベース ロール。  
+ サブスクライバーへの接続に使用される Windows アカウントまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントは、少なくとも、サブスクリプション データベースの **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レプリケーションのログインとパスワードの管理](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
  [レプリケーション エージェントのセキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [レプリケーション エージェントの概要](../../relational-databases/replication/agents/replication-agents-overview.md)   

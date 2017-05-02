@@ -1,28 +1,32 @@
 ---
 title: "システム データベースの再構築 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/06/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "master データベース [SQL Server], 再構築"
-  - "REBUILDDATABASE パラメーター"
-  - "データベースの再構築, マスター"
-  - "システム データベース [SQL Server], 再構築"
+ms.custom: 
+ms.date: 06/06/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- master database [SQL Server], rebuilding
+- REBUILDDATABASE parameter
+- rebuilding databases, master
+- system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 116b8352b27400cf9d57d01e4d1c0a0f8a3a89d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# システム データベースの再構築
-  [master](../../relational-databases/databases/master-database.md)、[model](../../relational-databases/databases/model-database.md)、[msdb](../../relational-databases/databases/msdb-database.md)、または [resource](../../relational-databases/databases/resource-database.md) の各システム データベースの損傷による問題を解決するか、既定のサーバー レベルの照合順序を変更するには、システム データベースを再構築する必要があります。 このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でシステム データベースを再構築する手順について説明します。  
+# <a name="rebuild-system-databases"></a>システム データベースの再構築
+  [master](../../relational-databases/databases/master-database.md)、 [model](../../relational-databases/databases/model-database.md)、 [msdb](../../relational-databases/databases/msdb-database.md)、または [resource](../../relational-databases/databases/resource-database.md) の各システム データベースの損傷による問題を解決するか、既定のサーバー レベルの照合順序を変更するには、システム データベースを再構築する必要があります。 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でシステム データベースを再構築する手順について説明します。  
   
  **このトピックの内容**  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 39
   
 5.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがレプリケーション ディストリビューターとして構成されている場合は、ディストリビューション データベースの現在のバックアップを探します。  
   
-6.  システム データベースの再構築に必要な権限を持っていることを確認してください。 この操作を実行するには、 **sysadmin** 固定サーバー ロールのメンバーである必要があります。 詳細については、「[サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)」を参照してください。  
+6.  システム データベースの再構築に必要な権限を持っていることを確認してください。 この操作を実行するには、 **sysadmin** 固定サーバー ロールのメンバーである必要があります。 詳細については、「 [サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)」を参照してください。  
   
 7.  master、model、msdb のデータおよびログのテンプレート ファイルのコピーがローカル サーバーに存在することを確認します。 テンプレート ファイルの既定の場所は、C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Templates です。 これらのファイルは再構築プロセスで使用され、セットアップを成功させるにはこれらのファイルが存在する必要があります。 これらのファイルがない場合は、セットアップの修復機能を実行するか、インストール メディアからファイルを手動でコピーします。 インストール メディアのファイルを探すには、適切なプラットフォーム ディレクトリ (x86 または x64) に移動し、次に setup\sql_engine_core_inst_msi\Pfiles\SqlServr\MSSQL.X\MSSQL\Binn\Templates に移動します。  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 39
   
  この手順では resource データベースが再構築されません。 このトピックで後述する「resource データベースの再構築手順」セクションを参照してください。  
   
-#### SQL Server のインスタンスのシステム データベースを再構築するには  
+#### <a name="to-rebuild-system-databases-for-an-instance-of-sql-server"></a>SQL Server のインスタンスのシステム データベースを再構築するには  
   
 1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール メディアをディスク ドライブに挿入するか、コマンド プロンプトから、ディレクトリをローカル サーバーの setup.exe ファイルがある場所に変更します。 サーバーの既定の場所は C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\SQLServer2016 です。  
   
@@ -102,10 +106,10 @@ caps.handback.revision: 39
     |--------------------|-----------------|  
     |/QUIET または /Q|セットアップがユーザー インターフェイスなしで実行されるように指定します。|  
     |/ACTION=REBUILDDATABASE|セットアップでシステム データベースを再作成することを指定します。|  
-    |/INSTANCENAME=*InstanceName*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前を指定します。 既定のインスタンスには「MSSQLSERVER」と入力します。|  
-    |/SQLSYSADMINACCOUNTS=*accounts*|**sysadmin** 固定サーバー ロールに追加する Windows グループまたは個々のアカウントを指定します。 複数のアカウントを指定する場合、各アカウントを空白で区切ります。 たとえば、「**BUILTIN\Administrators MyDomain\MyUser**」と入力します。 アカウント名に空白を含むアカウントを指定する場合は、アカウントを二重引用符で囲みます。 たとえば、「**NT AUTHORITY\SYSTEM**」と入力します。|  
-    |[ /SAPWD=*StrongPassword* ]| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** アカウントのパスワードを指定します。 このパラメーターは、インスタンスが混合モード認証 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および Windows 認証) を使用する場合に必要になります。<br /><br /> **\*\* セキュリティ メモ \*\***  **sa** アカウントは、よく知られた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントで、悪意のあるユーザーの攻撃対象となることが少なくありません。 **sa** ログインには、複雑なパスワードを使用することが非常に重要です。<br /><br /> Windows 認証モードにはこのパラメーターを指定しないでください。|  
-    |[ /SQLCOLLATION=*CollationName* ]|新しいサーバー レベルの照合順序を指定します。 このパラメーターはオプションです。 これを指定しない場合は、サーバーの現在の照合順序が使用されます。<br /><br /> **\*\* 重要 \*\*** サーバー レベルの照合順序を変更しても、既存のユーザー データベースの照合順序は変更されません。 新しく作成されたすべてのユーザー データベースには、既定で新しい照合順序が使用されます。<br /><br /> 詳細については、「[サーバーの照合順序の設定または変更](../../relational-databases/collations/set-or-change-the-server-collation.md)」を参照してください。|  
+    |/INSTANCENAME=*InstanceName*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの名前を指定します。 既定のインスタンスには「MSSQLSERVER」と入力します。|  
+    |/SQLSYSADMINACCOUNTS=*accounts*|**sysadmin** 固定サーバー ロールに追加する Windows グループまたは個々のアカウントを指定します。 複数のアカウントを指定する場合、各アカウントを空白で区切ります。 たとえば、「 **BUILTIN\Administrators MyDomain\MyUser**」と入力します。 アカウント名に空白を含むアカウントを指定する場合は、アカウントを二重引用符で囲みます。 たとえば、「 **NT AUTHORITY\SYSTEM**」と入力します。|  
+    |[ /SAPWD=*StrongPassword* ]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** アカウントのパスワードを指定します。 このパラメーターは、インスタンスが混合モード認証 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および Windows 認証) を使用する場合に必要になります。<br /><br /> **\*\* セキュリティ メモ \*\***  **sa** アカウントは、よく知られた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントで、悪意のあるユーザーの攻撃対象となることが少なくありません。 **sa** ログインには、複雑なパスワードを使用することが非常に重要です。<br /><br /> Windows 認証モードにはこのパラメーターを指定しないでください。|  
+    |[ /SQLCOLLATION=*CollationName* ]|新しいサーバー レベルの照合順序を指定します。 このパラメーターはオプションです。 これを指定しない場合は、サーバーの現在の照合順序が使用されます。<br /><br /> **\*\* 重要 \*\***サーバー レベルの照合順序を変更しても、既存のユーザー データベースの照合順序は変更されません。 新しく作成されたすべてのユーザー データベースには、既定で新しい照合順序が使用されます。<br /><br /> 詳細については、「 [サーバーの照合順序の設定または変更](../../relational-databases/collations/set-or-change-the-server-collation.md)」を参照してください。|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|tempdb データ ファイルの数を設定します。 この値は 8 またはコアの数の、どちらか大きい方まで増やすことができます。<br /><br /> 既定値: 8 またはコアの数のうち、小さい方の値|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|各 tempdb データ ファイルの初期サイズを MB 単位で指定します。 最大 1024 MB まで指定できます。<br /><br /> 既定値: 8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|各 tempdb データ ファイルのファイル拡張増分値を MB 単位で指定します。 0 は、自動拡張がオフで、領域を追加できないことを示します。 最大 1024 MB まで指定できます。<br /><br /> 既定値：64|  
@@ -118,7 +122,7 @@ caps.handback.revision: 39
   
 4.  RebuildDatabase シナリオでは、システム データベースが削除され、クリーンな状態で再インストールされます。 tempdb ファイルの数の設定は保持されないため、tempdb ファイルの数の値はセットアップ中には不明です。 したがって、RebuildDatabase シナリオでは再度追加される tempdb ファイルの数を特定できません。 tempdb ファイルの数の値は、SQLTEMPDBFILECOUNT パラメーターで再度指定できます。 パラメーターが指定されていない場合、RebuildDatabase により、既定の数の tempdb ファイル、つまり CPU の数と 8 のうち少ない方の数の tempdb ファイルが追加されます。  
   
-## 再構築後の作業  
+## <a name="post-rebuild-tasks"></a>再構築後の作業  
  データベースを再構築した後は、次の追加作業の実行が必要になる場合があります。  
   
 -   master、model、および msdb の各データベースを最新の完全バックアップの状態に復元します。 詳細については、「[システム データベースのバックアップと復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)」を参照してください。  
@@ -126,23 +130,23 @@ caps.handback.revision: 39
     > [!IMPORTANT]  
     >  サーバー照合順序を変更した場合は、システム データベースを復元しないでください。 復元すると、新しい照合順序が元の照合順序の設定に置き換わります。  
   
-     バックアップが存在しないか、復元されたバックアップが最新のものでない場合は、存在しないエントリを再作成します。 たとえば、ユーザー データベース、バックアップ デバイス、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン、エンドポイントなどの存在しないエントリをすべて再作成します。 エントリを再作成する場合、エントリの作成時と同じスクリプトを実行してください。  
+     バックアップが存在しないか、復元されたバックアップが最新のものでない場合は、存在しないエントリを再作成します。 たとえば、ユーザー データベース、バックアップ デバイス、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン、エンドポイントなどの存在しないエントリをすべて再作成します。 エントリを再作成する場合、エントリの作成時と同じスクリプトを実行してください。  
   
 > [!IMPORTANT]  
 >  不正ユーザーによる変更を防ぐために、スクリプトを保護しておくことをお勧めします。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがレプリケーション ディストリビューターとして構成されている場合は、ディストリビューション データベースを復元する必要があります。 詳細については、「[レプリケートされたデータベースのバックアップと復元](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)」を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがレプリケーション ディストリビューターとして構成されている場合は、ディストリビューション データベースを復元する必要があります。 詳細については、「 [レプリケートされたデータベースのバックアップと復元](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)」を参照してください。  
   
--   システム データベースを記録した以前の場所に移動します。 詳細については、「[システム データベースの移動](../../relational-databases/databases/move-system-databases.md)」を参照してください。  
+-   システム データベースを記録した以前の場所に移動します。 詳細については、「 [システム データベースの移動](../../relational-databases/databases/move-system-databases.md)」を参照してください。  
   
 -   サーバー全体の構成値が記録した以前の値と一致することを確認します。  
   
 ##  <a name="Resource"></a> resource データベースの再構築  
  次の手順では、resource システム データベースを再構築します。 resource システム データベースを再構築する場合は、サービス パックと修正プログラムがすべて失われるため、再適用する必要があります。  
   
-#### resource システム データベースを再構築するには  
+#### <a name="to-rebuild-the-resource-system-database"></a>resource システム データベースを再構築するには  
   
-1.  配布メディアから、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ プログラム (setup.exe) を起動します。  
+1.  配布メディアから、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ プログラム (setup.exe) を起動します。  
   
 2.  左側のナビゲーション領域の **[メンテナンス]**をクリックし、 **[修復]**をクリックします。  
   
@@ -158,23 +162,23 @@ caps.handback.revision: 39
  **msdb** データベースが破損した場合に、 **msdb** データベースのバックアップがなければ、 **instmsdb** スクリプトを使用して新しい **msdb** データベースを作成することができます。  
   
 > [!WARNING]  
->  **instmsdb** スクリプトを使用して **msdb** データベースを再構築すると、ジョブ、警告、オペレーター、メンテナンス プラン、バックアップ履歴、ポリシー ベースの管理設定、データベース メール、パフォーマンス データ ウェアハウスなど、**msdb** に格納されていた情報がすべて消去されます。  
+>  **instmsdb** スクリプトを使用して **msdb** データベースを再構築すると、ジョブ、警告、オペレーター、メンテナンス プラン、バックアップ履歴、ポリシー ベースの管理設定、データベース メール、パフォーマンス データ ウェアハウスなど、 **msdb** に格納されていた情報がすべて消去されます。  
   
-1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)] エージェント、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、および [!INCLUDE[ssRS](../../includes/ssrs-md.md)] と、[!INCLUDE[ssIS](../../includes/ssis-md.md)] をデータ ストアとして使用しているすべてのアプリケーションを含め、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続しているすべてのサービスを停止します。  
+1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]エージェント、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、および [!INCLUDE[ssRS](../../includes/ssrs-md.md)]と、 [!INCLUDE[ssIS](../../includes/ssis-md.md)]をデータ ストアとして使用しているすべてのアプリケーションを含め、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続しているすべてのサービスを停止します。  
   
 2.  というコマンドを使用して、コマンド ラインから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を開始します。 `NET START MSSQLSERVER /T3608`  
   
-     詳細については、「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md)」を参照してください。  
+     詳細については、「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」を参照してください。  
   
-3.  別のコマンド ライン ウィンドウで、**msdb** データベースをデタッチします。これには、というコマンドを実行します (*\<servername>* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに置き換えます)。 `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  別のコマンド ライン ウィンドウで、**msdb** データベースをデタッチします。これには、`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"` というコマンドを実行します (*\<servername>* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに置き換えます)。  
   
 4.  Windows エクスプローラーを使用して、 **msdb** データベースの各ファイルの名前を変更します。 これらのファイルは、既定で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの DATA サブフォルダーにあります。  
   
-5.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスを通常の方法で停止および再起動します。  
+5.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスを通常の方法で停止および再起動します。  
   
 6.  コマンド ライン ウィンドウで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、コマンド `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o" C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
-     *\<servername>* は[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに置き換えます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのファイル システム パスを使用してください。  
+     *<servername\<* は [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに置き換えます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスのファイル システム パスを使用してください。  
   
 7.  Windows のメモ帳を使用して **instmsdb.out** ファイルを開き、エラーの出力を確認します。  
   
@@ -195,9 +199,10 @@ caps.handback.revision: 39
   
 -   構文に指定されていないコンマ (,) またはその他の文字の存在。  
   
- 再構築操作が完了した後で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログにエラーがないか調査します。 ログの既定の場所は C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Logs です。 再構築プロセスの結果を含むログ ファイルを探すには、ディレクトリをコマンド プロンプトから Logs フォルダーに変更し、`findstr /s RebuildDatabase summary*.*` を実行します。 この検索により、システム データベースの再構築結果を含むログ ファイルが検出されます。 ログ ファイルを開き、該当するエラー メッセージがないか調査します。  
+ 再構築操作が完了した後で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログにエラーがないか調査します。 ログの既定の場所は C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Logs です。 再構築プロセスの結果を含むログ ファイルを探すには、ディレクトリをコマンド プロンプトから Logs フォルダーに変更し、 `findstr /s RebuildDatabase summary*.*`を実行します。 この検索により、システム データベースの再構築結果を含むログ ファイルが検出されます。 ログ ファイルを開き、該当するエラー メッセージがないか調査します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [システム データベース](../../relational-databases/databases/system-databases.md)  
   
   
+

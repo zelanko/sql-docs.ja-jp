@@ -1,29 +1,33 @@
 ---
 title: "[トランザクション ログのバックアップの設定] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.settings.tlogback.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.logshipping.settings.tlogback.f1
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 50dfac45fd735de24fe432be2b5b833869c34b87
+ms.lasthandoff: 04/11/2017
+
 ---
-# [トランザクション ログのバックアップの設定]
+# <a name="log-shipping-transaction-log-backup-settings"></a>[トランザクション ログのバックアップの設定]
   このダイアログ ボックスを使用すると、ログ配布構成のトランザクション ログ バックアップ設定を構成および変更できます。  
   
- ログ配布の概念については、「[ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
+ ログ配布の概念については、「 [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[バックアップ フォルダーのネットワーク パス (例: \\\\primaryserver\\backup)]**  
  このボックスに、バックアップ フォルダーへのネットワーク共有を入力します。 トランザクション ログ バックアップが保存されるローカル フォルダーを共有することにより、ログ配布コピー ジョブでこれらのファイルをセカンダリ サーバーにコピーできます。 セカンダリ サーバー インスタンスでコピー ジョブを実行できるように、このネットワーク共有での読み取り権限をプロキシ アカウントに与えてください。 既定では、このアカウントは、セカンダリ サーバー インスタンスの SQLServer エージェント サービス アカウントですが、管理者はジョブに対して別のプロキシ アカウントを選択できます。  
   
@@ -45,9 +49,9 @@ caps.handback.revision: 27
  ログ配布用のトランザクション ログ バックアップを作成する際に使用される SQL Server エージェント ジョブの名前を表示します。 最初にジョブを作成するときに、ボックスに別の名前を入力して名前を変更できます。  
   
  **スケジュール**  
- プライマリ データベースのトランザクション ログのバックアップに関する現在のスケジュールを表示します。 バックアップ ジョブが作成される前に、**[スケジュール]** をクリックしてこのスケジュールを変更できます。 バックアップ ジョブが作成された後は、**[ジョブの編集]** をクリックしてこのスケジュールを変更できます。  
+ プライマリ データベースのトランザクション ログのバックアップに関する現在のスケジュールを表示します。 バックアップ ジョブが作成される前に、 **[スケジュール]**をクリックしてこのスケジュールを変更できます。 バックアップ ジョブが作成された後は、 **[ジョブの編集]**をクリックしてこのスケジュールを変更できます。  
   
-### バックアップ ジョブ  
+### <a name="backup-job"></a>バックアップ ジョブ  
  **[スケジュール]**  
  SQL Server エージェント ジョブの作成時に作成されたスケジュールを変更します。  
   
@@ -57,20 +61,20 @@ caps.handback.revision: 27
  **[このジョブを無効にする]**  
  SQL Server エージェント ジョブのトランザクション ログ バックアップ作成を無効にします。  
   
-### 圧縮  
- [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (またはそれ以降のバージョン) では、[バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)がサポートされています。  
+### <a name="compression"></a>圧縮  
+ [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (またはそれ以降のバージョン) では、 [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)がサポートされています。  
   
  **[バックアップの圧縮の設定]**  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (またはそれ以降のバージョン) で、このログ配布構成のログ バックアップについて、バックアップの圧縮の値を次の中から 1 つ選択します。  
   
 |||  
 |-|-|  
-|**[既定のサーバー設定を使用する]**|オンにすると、サーバー レベルの既定値が使用されます。<br /><br /> この既定値は、**backup compression default** サーバー構成オプションで設定されます。 このオプションの現在の設定を表示する方法については、「[backup compression default サーバー構成オプションの表示または構成](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)」を参照してください。|  
-|**[バックアップを圧縮する]**|オンにすると、サーバー レベルの既定値に関係なく、バックアップが圧縮されます。<br /><br /> **\*\* 重要 \*\*** 既定の設定では、圧縮によって CPU 使用率が著しく増加し、圧縮処理によって CPU がさらに消費されるために、同時に実行される操作が悪影響を受ける場合があります。 このため、[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)によって CPU 使用率が制限されるセッションで、優先度の低い圧縮バックアップを作成することができます。 詳細については、[「リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)」を参照してください。|  
+|**[既定のサーバー設定を使用する]**|オンにすると、サーバー レベルの既定値が使用されます。<br /><br /> この既定値は、 **backup compression default** サーバー構成オプションで設定されます。 このオプションの現在の設定を表示する方法については、「 [backup compression default サーバー構成オプションの表示または構成](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)」を参照してください。|  
+|**[バックアップを圧縮する]**|オンにすると、サーバー レベルの既定値に関係なく、バックアップが圧縮されます。<br /><br /> **\*\* 重要 \*\*** 既定の設定では、圧縮によって CPU 使用率が著しく増加し、圧縮処理によって CPU がさらに消費されるために、同時に実行される操作が悪影響を受ける場合があります。 このため、 [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)によって CPU 使用率が制限されるセッションで、優先度の低い圧縮バックアップを作成することができます。 詳細については、このトピックの「 [リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)によって CPU 使用率が制限されるセッションでは、優先度の低い圧縮バックアップを作成することができます。|  
 |**[バックアップを圧縮しない]**|オンにすると、サーバー レベルの既定値に関係なく、圧縮されていないバックアップが作成されます。|  
   
-## 参照  
- [SQL Server エージェント ジョブ ステップを作成および管理するユーザーの構成](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)   
+## <a name="see-also"></a>参照  
+ [SQL Server エージェント ジョブ ステップを作成および管理するユーザーの構成](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)   
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
   

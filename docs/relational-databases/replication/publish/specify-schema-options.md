@@ -1,31 +1,35 @@
 ---
 title: "スキーマ オプションの指定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "スキーマ [SQL Server レプリケーション]、オプション"
-  - "アーティクル [SQL Server レプリケーション]、トランザクション レプリケーション オプション"
-  - "アーティクル [SQL Server レプリケーション]、マージ レプリケーション オプション"
-  - "アーティクル [SQL Server レプリケーション]、スキーマ オプション"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- schemas [SQL Server replication], options
+- articles [SQL Server replication], transactional replication options
+- articles [SQL Server replication], merge replication options
+- articles [SQL Server replication], schema options
 ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ef7d237d005c8be5892125841de73084110f1e5e
+ms.lasthandoff: 04/11/2017
+
 ---
-# スキーマ オプションの指定
+# <a name="specify-schema-options"></a>スキーマ オプションの指定
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、スキーマのオプションを指定する方法について説明します。 テーブルまたはビューをパブリッシュするとき、パブリッシュされたオブジェクト用にレプリケートされるオブジェクトの作成オプションを制御できます。 アーティクルが作成されるときにこれらのオプションを設定することができ、後で変更することもできます。 アーティクルに対してオプションを明示的に指定しなかった場合、既定のオプションが定義されます。  
   
 > [!NOTE]  
->  レプリケーションのストアド プロシージャを使用した場合の既定のスキーマ オプションは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使ってアーティクルを追加するときの既定のオプションとは異なる場合があります。  
+>  レプリケーションのストアド プロシージャを使用した場合の既定のスキーマ オプションは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を使ってアーティクルを追加するときの既定のオプションとは異なる場合があります。  
   
  **このトピックの内容**  
   
@@ -49,77 +53,77 @@ caps.handback.revision: 39
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
--   スキーマ オプションの完全な一覧については、 **@schema_option** のパラメーター [sp_addarticle & #40 です。Transact SQL と #41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)  [sp_addmergearticle & #40 です。Transact SQL と #41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)します。  
+-   すべてのスキーマ オプションの一覧については、「[sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)」および「[sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)」の **@schema_option** パラメーターをご覧ください。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- 制約およびトリガーをサブスクライバーにコピーするかどうかなどのスキーマ オプションを指定、 **プロパティ** のタブ、 **アーティクルのプロパティ - \< 記事>** ] ダイアログ ボックス。 このタブはパブリケーションの新規作成ウィザードで表示され、 **パブリケーションのプロパティ - \< パブリケーション>** ] ダイアログ ボックス。 ウィザードを使用して、ダイアログ ボックスへのアクセスに関する詳細については、次を参照してください。 [パブリケーションを作成](../../../relational-databases/replication/publish/create-a-publication.md) と [パブリケーション プロパティの変更を表示および](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)です。  
+ スキーマ オプション (制約やトリガーをサブスクライバーにコピーするかどうかなど) は、**[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブで指定します。 このタブは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで使用できます。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)」および「[パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。  
   
-#### スキーマ オプションを指定するには  
+#### <a name="to-specify-schema-options"></a>スキーマ オプションを指定するには  
   
-1.   **記事** パブリケーションの新規作成ウィザードのページまたは **パブリケーションのプロパティ - \< パブリケーション>** ] ダイアログ ボックスでは、アーティクルを選択し、をクリックし、 **アーティクルのプロパティ**します。  
+1.  パブリケーションの新規作成ウィザードまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[アーティクル]** ページで、アーティクルを選択し、**[アーティクルのプロパティ]** をクリックします。  
   
 2.  スキーマ オプションの変更を適用するアーティクルを選択します。  
   
-    -   をクリックして **設定のプロパティの強調表示されている \< ObjectType> 記事** を起動する、 **アーティクルのプロパティ - \< ObjectName>** ] ダイアログ ボックス。 プロパティのオブジェクト ペインで強調表示されているオブジェクトだけにこのダイアログ ボックスで行われた変更が適用される、 **記事** ページです。  
+    -   **[反転表示された \<ObjectType> アーティクルのプロパティを設定]** をクリックし、**[アーティクルのプロパティ - \<ObjectName>]** ダイアログ ボックスを表示します。このダイアログ ボックスで行われたプロパティの変更は、**[アーティクル]** ページのオブジェクト ペインで反転表示されたオブジェクトのみに適用されます。  
   
-    -   をクリックして **プロパティをすべての設定 \< ObjectType> 記事** を起動する、 **すべてのプロパティ \< ObjectType> 記事** ] ダイアログ ボックス。 プロパティこのダイアログ ボックスで行った変更は、オブジェクト] ペインで、その種類のすべてのオブジェクトに適用されます、 **記事** ] ページで、パブリケーション用に選択されていないものなどです。  
+    -   **[すべての \<ObjectType> アーティクルのプロパティを設定]** をクリックし、**[すべての \<ObjectType> アーティクルのプロパティ]** ダイアログ ボックスを表示します。このダイアログ ボックスで行われたプロパティの変更は、パブリケーションが選択されていないオブジェクトも含めた、**[アーティクル]** ページのオブジェクト ペインにあるこの種類のすべてのオブジェクトに適用されます。  
   
         > [!NOTE]  
-        >  行われたプロパティの変更、 **すべてプロパティ \< ObjectType> 記事** ダイアログ ボックスの上書きで以前に行われた、 **アーティクルのプロパティ - \< ObjectName>** ] ダイアログ ボックス。 たとえば、あるオブジェクトの種類のすべてのアーティクルに対して複数の既定を設定し、かつそれぞれのオブジェクトに対してプロパティを設定する場合には、最初にすべてのアーティクルに対する既定を設定します。 次に、それぞれのオブジェクトに対してプロパティを設定します。  
+        >  **[すべての \<ObjectType> アーティクルのプロパティ]** ダイアログ ボックスで行われたプロパティの変更は、**[アーティクルのプロパティ - \<ObjectName>]** ダイアログ ボックスで以前に行われた変更のすべてを上書きします。 たとえば、あるオブジェクトの種類のすべてのアーティクルに対して複数の既定を設定し、かつそれぞれのオブジェクトに対してプロパティを設定する場合には、最初にすべてのアーティクルに対する既定を設定します。 次に、それぞれのオブジェクトに対してプロパティを設定します。  
   
-3.   **オブジェクトをコピーし、サブスクライバーに設定** と **対象オブジェクト** のセクションでは、 **プロパティ** のタブ、 **アーティクルのプロパティ - \< 記事>** ] ダイアログ ボックスで、オプションの値を指定します。  
+3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[サブスクライバーへのオブジェクトと設定のコピー]** および **[対象オブジェクト]** セクションで、オプションの値を設定します。  
   
 4.  必要に応じてプロパティを変更し、 **[OK]**をクリックします。  
   
-5.  場合は、 **パブリケーションのプロパティ - \< パブリケーション>** ] ダイアログ ボックスをクリックして **[ok]** を保存してダイアログ ボックスを閉じます。  
+5.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、**[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
- 16 進値であるスキーマのオプションが指定されている、 [|(ビット演算 OR)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) 1 つまたは複数のオプションの結果です。 詳細については、次を参照してください。 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) と [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)します。  
+ スキーマ オプションは、1 つまたは複数のオプションについて、 [| (ビット演算 OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) を実行した結果を 16 進数値で指定します。 詳細については、「 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 」および「 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
->  ビットごとの演算を実行する際は、あらかじめ、スキーマ オプションの値を **binary** から **int** に変換しておく必要があります。 詳細については、次を参照してください。 [CAST および CONVERT & #40 です。Transact SQL と #41;](../../../t-sql/functions/cast-and-convert-transact-sql.md)します。  
+>  ビットごとの演算を実行する際は、あらかじめ、スキーマ オプションの値を **binary** から **int** に変換しておく必要があります。 詳細については、「[CAST and CONVERT &#40;Transact-SQL&#41;](../../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。  
   
-#### スナップショット パブリケーションまたはトランザクション パブリケーションのアーティクルを定義するときにスキーマ オプションを指定するには  
+#### <a name="to-specify-schema-options-when-defining-an-article-for-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションのアーティクルを定義するときにスキーマ オプションを指定するには  
   
-1.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)します。 アーティクルが属しているパブリケーションの名前を指定 **@publication**, 、アーティクルの名前 **@article**, 用にパブリッシュされるデータベース オブジェクトを使用して **@source_object**, 、データベース オブジェクトの型 **@type**, 、および [|(ビット演算 OR)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) 結果の 1 つまたは複数のスキーマ オプションの **@schema_option**します。 詳しくは、「 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)を実行します。 **@publication** にアーティクルが属しているパブリケーションの名前、**@article** にアーティクル名、**@source_object** にパブリッシュするデータベース オブジェクト、**@type** にデータベース オブジェクトの型を指定し、さらに、1 つまたは複数のスキーマ オプションに対する [| (ビット演算 OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) の実行結果を **@schema_option** に指定します。 詳しくは、「 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
-#### マージ パブリケーションのアーティクルを定義するときにスキーマ オプションを指定するには  
+#### <a name="to-specify-schema-options-when-defining-an-article-for-a-merge-publication"></a>マージ パブリケーションのアーティクルを定義するときにスキーマ オプションを指定するには  
   
-1.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)します。 アーティクルが属しているパブリケーションの名前を指定 **@publication**, 、アーティクルの名前 **@article**, 用にパブリッシュされるデータベース オブジェクトを使用して **@source_object**, 、および [|(ビット演算 OR)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) 結果の 1 つまたは複数のスキーマ オプションの **@schema_option**します。 詳しくは、「 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)を実行します。 **@publication** にアーティクルが属しているパブリケーションの名前、**@article** にアーティクル名、**@source_object** にパブリッシュするデータベース オブジェクトを指定し、さらに、1 つまたは複数のスキーマ オプションに対する [| (ビット演算 OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) の実行結果を **@schema_option** に指定します。 詳しくは、「 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
-#### スナップショット パブリケーションまたはトランザクション パブリケーションの既存のアーティクルに設定されているスキーマ オプションを変更するには  
+#### <a name="to-change-schema-options-for-an-existing-article-in-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションの既存のアーティクルに設定されているスキーマ オプションを変更するには  
   
-1.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)します。 **@publication** と **@article**に、それぞれアーティクルが属しているパブリケーションの名前およびアーティクル名を指定します。 値に注意してください、 **schema_option** 結果セット内の列です。  
+1.  パブリッシャー側のパブリケーション データベースに対して [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)を実行します。 **@publication** と **@article** に、それぞれアーティクルが属しているパブリケーションの名前およびアーティクル名を指定します。 結果セットの **schema_option** 列の値を確認してください。  
   
-2.  実行、 [& (ビット演算 AND)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) 操作手順 1 と目的のスキーマから値を使用してオプションのかどうか、オプションは設定を決定する値。  
-  
-    -   実行結果が **0**の場合、オプションは設定されていません。  
-  
-    -   実行結果がオプションの値の場合、そのオプションは既に設定されています。  
-  
-3.  オプションが設定されていない場合、実行、 [|(ビット演算 OR)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) 手順 1. の値と目的のスキーマ オプションの値を使用して操作します。  
-  
-4.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)します。 アーティクルが属しているパブリケーションの名前を指定 **@publication**, のアーティクルの名前 **@article**, の値 **schema_option** の **@property**, 、手順 3 の 16 進数の結果と **@value**します。  
-  
-5.  スナップショット エージェントを実行して、新しいスナップショットを生成します。 詳細については、「 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」を参照してください。  
-  
-#### マージ パブリケーションの既存のアーティクルのスキーマ オプションを変更するには  
-  
-1.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)します。 **@publication** と **@article**に、それぞれアーティクルが属しているパブリケーションの名前およびアーティクル名を指定します。 値に注意してください、 **schema_option** 結果セット内の列です。  
-  
-2.  実行、 [& (ビット演算 AND)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) 操作手順 1 と目的のスキーマから値を使用してオプションのかどうか、オプションは設定を決定する値。  
+2.  手順 1 の値、および必要なスキーマ オプションの値を使って [& (ビット演算 AND)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) 演算を実行し、対象のオプションが設定されているかどうかを確認します。  
   
     -   実行結果が **0**の場合、オプションは設定されていません。  
   
     -   実行結果がオプションの値の場合、そのオプションは既に設定されています。  
   
-3.  オプションが設定されていない場合、実行、 [|(ビット演算 OR)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) 手順 1. の値と目的のスキーマ オプションの値を使用して操作します。  
+3.  オプションが設定されていなかった場合は、手順 1. の値と、必要なスキーマ オプション値を使って [| (ビット演算 OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 演算を実行します。  
   
-4.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)します。 アーティクルが属しているパブリケーションの名前を指定 **@publication**, のアーティクルの名前 **@article**, の値 **schema_option** の **@property**, 、手順 3 の 16 進数の結果と **@value**します。  
+4.  パブリッシャーのパブリケーション データベースで [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)を実行します。 **@publication** にアーティクルが属しているパブリケーションの名前を、**@article** にアーティクル名を、**@property** に **schema_option** を指定し、さらに、手順 3 で得られた 16 進数値を **@value** に指定します。  
   
 5.  スナップショット エージェントを実行して、新しいスナップショットを生成します。 詳細については、「 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」を参照してください。  
   
-## 参照  
+#### <a name="to-change-schema-options-for-an-existing-article-in-a-merge-publication"></a>マージ パブリケーションの既存のアーティクルのスキーマ オプションを変更するには  
+  
+1.  パブリッシャーのパブリケーション データベースで [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)を実行します。 **@publication** と **@article** に、それぞれアーティクルが属しているパブリケーションの名前およびアーティクル名を指定します。 結果セットの **schema_option** 列の値を確認してください。  
+  
+2.  手順 1 の値、および必要なスキーマ オプションの値を使って [& (ビット演算 AND)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) 演算を実行し、対象のオプションが設定されているかどうかを確認します。  
+  
+    -   実行結果が **0**の場合、オプションは設定されていません。  
+  
+    -   実行結果がオプションの値の場合、そのオプションは既に設定されています。  
+  
+3.  オプションが設定されていなかった場合は、手順 1. の値と、必要なスキーマ オプション値を使って [| (ビット演算 OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 演算を実行します。  
+  
+4.  パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 **@publication** にアーティクルが属しているパブリケーションの名前を、**@article** にアーティクル名を、**@property** に **schema_option** を指定し、さらに、手順 3 で得られた 16 進数値を **@value** に指定します。  
+  
+5.  スナップショット エージェントを実行して、新しいスナップショットを生成します。 詳細については、「 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」をご参照ください。  
+  
+## <a name="see-also"></a>参照  
  [データとデータベース オブジェクトのパブリッシュ](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [トランザクション レプリケーションのアーティクル オプション](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   

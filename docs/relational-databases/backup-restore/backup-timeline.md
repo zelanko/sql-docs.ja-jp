@@ -1,32 +1,36 @@
 ---
 title: "バックアップ タイムライン | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.SWB.POINTINTIMERESTORE.F1"
-  - "sql13.swb.backuptimeline.f1"
-helpviewer_keywords: 
-  - "バックアップ タイムライン"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.SWB.POINTINTIMERESTORE.F1
+- sql13.swb.backuptimeline.f1
+helpviewer_keywords:
+- Backup Timeline
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2acfacf611c712047591716da85a3e9f06d5630d
+ms.lasthandoff: 04/11/2017
+
 ---
-# バックアップ タイムライン
-  **[バックアップ タイムライン]** ダイアログ ボックスを使用して、特定の時点のデータベースを復元するためのバックアップを検索および指定します。 **[バックアップのタイムライン]** ダイアログ ボックスにアクセスするには、**[データベースの復元] ([全般] ページ)** ペイン上の **[タイムライン]** をクリックします。 このダイアログ ボックスで、データベースで実行される復元操作のタイムラインを表示できます。  
+# <a name="backup-timeline"></a>バックアップ タイムライン
+  **[バックアップ タイムライン]** ダイアログ ボックスを使用して、特定の時点のデータベースを復元するためのバックアップを検索および指定します。 **[バックアップのタイムライン]** ダイアログ ボックスにアクセスするには、 **[データベースの復元] ([全般] ページ)** ペイン上の **[タイムライン]** をクリックします。 このダイアログ ボックスで、データベースで実行される復元操作のタイムラインを表示できます。  
   
  データベース復旧アドバイザーによって、特定の時点に復元するために必要なバックアップだけが選択されます。 これらの選択されたバックアップは、復元操作用として推奨される復元プランを示しています。 選択されたバックアップのみを使用する必要があります。 データベースの復旧アドバイザーの詳細については、「[復元と復旧の概要&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)」を参照してください。  
   
-## [復元先]  
+## <a name="restore-to"></a>[復元先]  
  既定では、**[最後に作成されたバックアップ]** が選択されています。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] データベースを復元するための適切なバックアップを選択し、最後のバックアップの時点のデータベースを復元します。 **[特定の日付と時刻]** をクリックすると、手動で日時を設定できます (特定の時点を選択します)。  
   
  **[特定の日付と時刻]** では、選択した特定の日時で復元を停止できます。 タイムラインは、選択された日時の 24 時間の範囲で行われたバックアップ操作を表示します。  
@@ -40,7 +44,7 @@ caps.handback.revision: 24
  **[タイムラインの間隔]**  
  タイムラインに表示される間隔の種類のオプションを表示します。  
   
-## [タイムラインと凡例]  
+## <a name="timeline-and-legend"></a>[タイムラインと凡例]  
  タイムラインの下にあるスクロール バーを使用して、タイムラインに沿ってカーソルを前後に移動させます。 バックアップをクリックすると、そのバックアップの末尾にスクロール バーが移動します。 マウス ポインターをマーカーに重ねると、選択されたバックアップ セットの情報が画面に表示されます。 バックアップの情報は、以下のマーカーによってタイムラインに表示されます。  
   
  大きい三角形  
@@ -53,9 +57,9 @@ caps.handback.revision: 24
  トランザクション ログ バックアップの適用範囲を表します。  
   
  赤色の線  
- 復元が可能なタイムライン上にのみ表示されます。 タイムライン上で赤色の線を動かすと、**[日付]** および **[時刻]** ボックスに表示される日付と時刻が調整されます。  
+ 復元が可能なタイムライン上にのみ表示されます。 タイムライン上で赤色の線を動かすと、 **[日付]** および **[時刻]** ボックスに表示される日付と時刻が調整されます。  
   
-## 参照  
- [[データベースの復元] &#40;[全般] ページ&#41;](../Topic/Restore%20Database%20\(General%20Page\).md)  
+## <a name="see-also"></a>参照  
+ [[データベースの復元] &#40;[全般] ページ&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
   

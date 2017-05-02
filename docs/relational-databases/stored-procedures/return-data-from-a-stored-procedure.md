@@ -1,31 +1,35 @@
 ---
 title: "ストアド プロシージャからデータを返す | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ストアド プロシージャ [SQL Server], データの返却"
-  - "ストアド プロシージャからデータを返す処理"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stored procedures [SQL Server], returning data
+- returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 02f8701f04f1f19c12c6ed31e9fd0e2f0f8f6e83
+ms.lasthandoff: 04/11/2017
+
 ---
-# ストアド プロシージャからデータを返す
+# <a name="return-data-from-a-stored-procedure"></a>ストアド プロシージャからデータを返す
   結果セットやプロシージャからのデータを呼び出し元のプログラムに返す手段には、出力パラメーターとリターン コードの 2 つがあります。 このトピックでは、両方のアプローチについて説明します。  
   
-## 出力パラメーターを使用してデータを返す処理  
+## <a name="returning-data-using-an-output-parameter"></a>出力パラメーターを使用してデータを返す処理  
  プロシージャの定義でパラメーターに OUTPUT キーワードを指定すると、プロシージャの終了時に、そのパラメーターの現在値を呼び出し元のプログラムに返すことができます。 呼び出し元のプログラムで使用できる変数にパラメーターの値を保存するには、呼び出し元のプログラムがプロシージャを実行する際に OUTPUT キーワードを使用する必要があります。 出力パラメーターとして使用できるデータ型の詳細については、「[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)」を参照してください。  
   
-### 出力パラメーターの例  
+### <a name="examples-of-output-parameter"></a>出力パラメーターの例  
  次の例では、入力パラメーターと出力パラメーターを使用するプロシージャを示します。 `@SalesPerson` パラメーターは、呼び出し元のプログラムによって指定された入力値を受け取ります。 SELECT ステートメントは、入力パラメーターに渡された値を使用して、適切な `SalesYTD` 値を取得します。 また、SELECT ステートメントは、その値を `@SalesYTD` 出力パラメーターに代入します。これにより、プロシージャの終了時にその値が呼び出し元のプログラムに返されます。  
   
 ```  
@@ -65,17 +69,17 @@ GO
   
 ```  
   
- プロシージャを実行する際に、OUTPUT パラメーターに対する入力値を指定することもできます。 これにより、プロシージャは、呼び出し元のプログラムから値を受け取って、その値を変更するかその値を使用して操作を実行してから、新しい値を呼び出し元のプログラムに返すことができます。 前の例では、プログラムによって `Sales.uspGetEmployeeSalesYTD` プロシージャが呼び出される前に、`@SalesYTDBySalesPerson` 変数に値を代入できます。 実行ステートメントは、`@SalesYTDBySalesPerson` 変数の値を `@SalesYTD` OUTPUT パラメーターに渡します。 その後、プロシージャの本体で、新しい値を生成する計算にその値を使用できます。 新しい値は OUTPUT パラメーターを通じてプロシージャから戻され、プロシージャの終了時に `@SalesYTDBySalesPerson` 変数の値が更新されます。 これは通常、パラメーターの "参照渡し機能" と呼ばれます。  
+ プロシージャを実行する際に、OUTPUT パラメーターに対する入力値を指定することもできます。 これにより、プロシージャは、呼び出し元のプログラムから値を受け取って、その値を変更するかその値を使用して操作を実行してから、新しい値を呼び出し元のプログラムに返すことができます。 前の例では、プログラムによって `@SalesYTDBySalesPerson` プロシージャが呼び出される前に、 `Sales.uspGetEmployeeSalesYTD` 変数に値を代入できます。 実行ステートメントは、 `@SalesYTDBySalesPerson` 変数の値を `@SalesYTD` OUTPUT パラメーターに渡します。 その後、プロシージャの本体で、新しい値を生成する計算にその値を使用できます。 新しい値は OUTPUT パラメーターを通じてプロシージャから戻され、プロシージャの終了時に `@SalesYTDBySalesPerson` 変数の値が更新されます。 これは通常、パラメーターの "参照渡し機能" と呼ばれます。  
   
  プロシージャを呼び出す際にパラメーターに OUTPUT を指定した場合は、そのパラメーターがプロシージャの定義で OUTPUT を使用して定義されていないと、エラー メッセージが表示されます。 ただし、プロシージャに出力パラメーターを定義しておき、OUTPUT を指定せずにこのプロシージャを実行することも可能です。 エラーは返されませんが、呼び出し側のプログラムで出力値を使用することはできません。  
   
-### OUTPUT パラメーターでの cursor データ型の使用  
+### <a name="using-the-cursor-data-type-in-output-parameters"></a>OUTPUT パラメーターでの cursor データ型の使用  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャは、OUTPUT パラメーターにのみ **cursor** データ型を使用できます。 パラメーターに **cursor** データ型を指定する場合は、プロシージャの定義でそのパラメーターに対して VARYING キーワードと OUTPUT キーワードの両方を指定する必要があります。 ただし、パラメーター宣言で VARYING キーワードを指定する場合は、パラメーターを OUTPUT としてしか指定できません。また、データ型は **cursor** でなければならず、OUTPUT キーワードも指定する必要があります。  
   
 > [!NOTE]  
->  **cursor** データ型は OLE DB、ODBC、ADO、DB-Library などのデータベース API からアプリケーション変数にバインドすることができません。 アプリケーションでプロシージャを実行するには OUTPUT パラメーターがバインドされている必要があるので、**cursor** 型の OUTPUT パラメーターを指定したプロシージャはデータベース API から呼び出すことができません。 そのようなプロシージャは、**cursor** 型の OUTPUT 変数を [!INCLUDE[tsql](../../includes/tsql-md.md)] の **cursor** 型のローカル変数に代入したときのみ、[!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ、プロシージャ、またはトリガーから呼び出すことができます。  
+>  **cursor** データ型は OLE DB、ODBC、ADO、DB-Library などのデータベース API からアプリケーション変数にバインドすることができません。 アプリケーションでプロシージャを実行するには OUTPUT パラメーターがバインドされている必要があるので、 **cursor** 型の OUTPUT パラメーターを指定したプロシージャはデータベース API から呼び出すことができません。 そのようなプロシージャは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] cursor **型の OUTPUT 変数を** の [!INCLUDE[tsql](../../includes/tsql-md.md)] cursor **型のローカル変数に代入したときのみ、** バッチ、プロシージャ、またはトリガーから呼び出すことができます。  
   
-### cursor 出力パラメーターに関する規則  
+### <a name="rules-for-cursor-output-parameters"></a>cursor 出力パラメーターに関する規則  
  プロシージャの実行時には、次の規則が **cursor** 出力パラメーターに適用されます。  
   
 -   順方向専用カーソルの場合、カーソルの結果セットとして返される行は、プロシージャの実行が終了したときにカーソルがあった位置以降の行に限られます。たとえば、次のようになります。  
@@ -102,8 +106,8 @@ GO
     > [!NOTE]  
     >  カーソルがクローズしているかどうかが問題になるのは、結果セットが返される時点のみです。 たとえば、プロシージャの途中でカーソルを閉じ、その後で再び開いて、そのカーソルの結果セットを呼び出し元のバッチ、プロシージャ、またはトリガーに返すのは有効な操作です。  
   
-### cursor 出力パラメーターの例  
- 次の例では、**cursor** データ型の出力パラメーター `@currency`_`cursor` を指定したプロシージャを作成します。 作成したプロシージャはバッチで呼び出します。  
+### <a name="examples-of-cursor-output-parameters"></a>cursor 出力パラメーターの例  
+ 次の例では、 `@currency`cursor`cursor` データ型の出力パラメーター **_** を指定したプロシージャを作成します。 作成したプロシージャはバッチで呼び出します。  
   
  まず、Currency テーブルに対してカーソルを宣言し、そのカーソルを開くプロシージャを作成します。  
   
@@ -143,8 +147,8 @@ GO
   
 ```  
   
-## リターン コードを使用してデータを返す処理  
- プロシージャは、リターン コードという整数値を返してプロシージャの実行状態を表すことができます。 プロシージャのリターン コードを指定するには、RETURN ステートメントを使用します。 OUTPUT パラメーターと同様に、呼び出し元のプログラムでリターン コード値を使用するには、プロシージャの実行時にリターン コードを変数に保存する必要があります。 たとえば、次のように、**int** データ型の代入変数 `@result` を使用して、`my_proc` プロシージャからのリターン コードを格納します。  
+## <a name="returning-data-using-a-return-code"></a>リターン コードを使用してデータを返す処理  
+ プロシージャは、リターン コードという整数値を返してプロシージャの実行状態を表すことができます。 プロシージャのリターン コードを指定するには、RETURN ステートメントを使用します。 OUTPUT パラメーターと同様に、呼び出し元のプログラムでリターン コード値を使用するには、プロシージャの実行時にリターン コードを変数に保存する必要があります。 たとえば、次のように、 `@result` int **データ型の代入変数** を使用して、 `my_proc`プロシージャからのリターン コードを格納します。  
   
 ```  
 DECLARE @result int;  
@@ -153,7 +157,7 @@ EXECUTE @result = my_proc;
   
  リターン コードは、可能性のあるエラー状態ごとにリターン コードの値を設定するために、プロシージャのフロー制御ブロックの中でよく使用されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの後で @@ERROR 関数を使用すると、ステートメントの実行中にエラーが発生したかどうかを検出できます。  
   
-### リターン コードの例  
+### <a name="examples-of-return-codes"></a>リターン コードの例  
  次の例では、さまざまなエラーに特別なリターン コード値を設定するエラー処理を含む `usp_GetSalesYTD` プロシージャを示します。 次の表では、可能性のある各エラーに対してプロシージャによって割り当てられる整数値と、各値に相当する意味を示します。  
   
 |リターン コードの値|意味|  
@@ -222,7 +226,7 @@ PRINT N'Year-to-date sales for this employee is ' +
   
 ```  
   
- 次の例では、`usp_GetSalesYTD` プロシージャから返されるリターン コードを処理するプログラムを作成します。  
+ 次の例では、 `usp_GetSalesYTD` プロシージャから返されるリターン コードを処理するプログラムを作成します。  
   
 ```  
 -- Declare the variables to receive the output value and return code   
@@ -252,7 +256,7 @@ GO
   
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
  [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)   

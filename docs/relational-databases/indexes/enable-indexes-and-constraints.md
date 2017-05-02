@@ -1,29 +1,33 @@
 ---
 title: "インデックスと制約の有効化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "インデックス [SQL Server], 有効化"
-  - "非クラスター化インデックス [SQL Server], 無効なインデックスの有効化"
-  - "インデックスの有効化 [SQL Server]"
-  - "無効化されたインデックス [SQL Server], 有効にする方法"
-  - "制約 [SQL Server] を有効にします。"
-  - "クラスター化インデックス, 無効なインデックスの有効化"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [SQL Server], enabling
+- nonclustered indexes [SQL Server], enabling a disabled index
+- index enabling [SQL Server]
+- disabled indexes [SQL Server], how to enable
+- constraints [SQL Server], enabling
+- clustered indexes, enabling disabled indexes
 ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2e0e171e2cf2bdc35a3e9c3c7e5ed1077aabe4dc
+ms.lasthandoff: 04/11/2017
+
 ---
-# インデックスと制約の有効化
+# <a name="enable-indexes-and-constraints"></a>インデックスと制約の有効化
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   このトピックでは、無効にされている [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインデックスを、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して有効にする方法を説明します。 無効にされたインデックスは、再構築されるか削除されるまで無効な状態のままとなります。  
@@ -72,11 +76,11 @@ caps.handback.revision: 27
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
- テーブルまたはビューに対する ALTER 権限が必要です。 DBCC DBREINDEX を使用している場合、ユーザーはテーブルを所有しているか、**sysadmin** 固定サーバー ロールのメンバーであるか、**db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
+ テーブルまたはビューに対する ALTER 権限が必要です。 DBCC DBREINDEX を使用している場合、ユーザーはテーブルを所有しているか、 **sysadmin** 固定サーバー ロールのメンバーであるか、 **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### 無効なインデックスを有効にするには  
+#### <a name="to-enable-a-disabled-index"></a>無効なインデックスを有効にするには  
   
 1.  オブジェクト エクスプローラーで、インデックスを有効にするテーブルが格納されているデータベースをプラス記号をクリックして展開します。  
   
@@ -86,11 +90,11 @@ caps.handback.revision: 27
   
 4.  プラス記号をクリックして **[インデックス]** フォルダーを展開します。  
   
-5.  有効にするインデックスを右クリックし、**[再構築]** を選択します。  
+5.  有効にするインデックスを右クリックし、 **[再構築]**を選択します。  
   
 6.  **[インデックスの再構築]** ダイアログ ボックスで、 **[再構築するインデックス]** グリッドに目的のインデックスが表示されていることを確認し、 **[OK]**をクリックします。  
   
-#### テーブルのすべてのインデックスを有効にするには  
+#### <a name="to-enable-all-indexes-on-a-table"></a>テーブルのすべてのインデックスを有効にするには  
   
 1.  オブジェクト エクスプローラーで、インデックスを有効にするテーブルが格納されているデータベースをプラス記号をクリックして展開します。  
   
@@ -98,7 +102,7 @@ caps.handback.revision: 27
   
 3.  プラス記号をクリックして、インデックスを有効にするテーブルを展開します。  
   
-4.  **[インデックス]** フォルダーを右クリックし、**[すべて再構築]** を選択します。  
+4.  **[インデックス]** フォルダーを右クリックし、 **[すべて再構築]**を選択します。  
   
 5.  **[インデックスの再構築]** ダイアログ ボックスで、 **[再構築するインデックス]** グリッドに目的のインデックスが表示されていることを確認し、 **[OK]**をクリックします。 **[再構築するインデックス]** グリッドからインデックスを削除するには、インデックスを選択し、Del キーを押します。  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### 無効にされたインデックスを ALTER INDEX を使用して有効にするには  
+#### <a name="to-enable-a-disabled-index-using-alter-index"></a>無効にされたインデックスを ALTER INDEX を使用して有効にするには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### 無効にされたインデックスを CREATE INDEX を使用して有効にするには  
+#### <a name="to-enable-a-disabled-index-using-create-index"></a>無効にされたインデックスを CREATE INDEX を使用して有効にするには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -146,7 +150,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### 無効にされたインデックスを DBCC DBREINDEX を使用して有効にするには  
+#### <a name="to-enable-a-disabled-index-using-dbcc-dbreindex"></a>無効にされたインデックスを DBCC DBREINDEX を使用して有効にするには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -163,7 +167,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### テーブル上のすべてのインデックスを ALTER INDEX を使用して有効にするには  
+#### <a name="to-enable-all-indexes-on-a-table-using-alter-index"></a>テーブル上のすべてのインデックスを ALTER INDEX を使用して有効にするには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -181,7 +185,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### テーブル上のすべてのインデックスを DBCC DBREINDEX を使用して有効にするには  
+#### <a name="to-enable-all-indexes-on-a-table-using-dbcc-dbreindex"></a>テーブル上のすべてのインデックスを DBCC DBREINDEX を使用して有効にするには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -201,3 +205,4 @@ caps.handback.revision: 27
  詳細については、「[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)」、「[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)」、および「[DBCC DBREINDEX &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md)」を参照してください。  
   
   
+

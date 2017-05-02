@@ -1,42 +1,46 @@
 ---
 title: "サーバーのパフォーマンスと利用状況の監視 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "利用状況の監視 [SQL Server]"
-  - "トレース [SQL Server], 操作方法に関するトピック"
-  - "サーバー パフォーマンスの監視 [SQL Server], 利用状況の監視"
-  - "ストアド プロシージャ [SQL Server], トレース"
-  - "パフォーマンス [SQL Server], サーバー"
-  - "サーバー [SQL Server], パフォーマンス"
-  - "SQL Server Profiler, 操作方法に関するトピック"
-  - "SQL Server Management Studio [SQL Server], システムの監視"
-  - "Profiler [SQL Server Profiler], 操作方法に関するトピック"
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- activity monitoring [SQL Server]
+- traces [SQL Server], how-to topics
+- monitoring server performance [SQL Server], activity monitoring
+- stored procedures [SQL Server], traces
+- performance [SQL Server], servers
+- servers [SQL Server], performance
+- SQL Server Profiler, how-to topics
+- SQL Server Management Studio [SQL Server], monitoring system
+- Profiler [SQL Server Profiler], how-to topics
 ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a3f71afe41528eca49f37d5f81e30d3defa0d21
+ms.lasthandoff: 04/11/2017
+
 ---
-# サーバーのパフォーマンスと利用状況の監視
+# <a name="server-performance-and-activity-monitoring"></a>サーバーのパフォーマンスと利用状況の監視
   データベースを監視する目的は、サーバーのパフォーマンスを評価することです。 適切な監視には、現在のパフォーマンスのスナップショットを定期的にキャプチャして問題の原因となっているプロセスを特定したり、長期にわたって継続的にデータを採取してパフォーマンスの傾向を追跡する作業が必要です。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows オペレーティング システムでは、データベースの現在の状態を参照したり、状態の変化に伴うパフォーマンスを追跡するためのユーティリティが用意されています。  
   
- 次のセクションには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および Windows のパフォーマンスと利用状況の監視ツールの使用方法を説明するトピックが含まれています。 ここで説明する内容は次のとおりです。  
+ 次のセクションには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および Windows のパフォーマンスと利用状況の監視ツールの使用方法を説明するトピックが含まれています。 ここで説明する内容は次のとおりです。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
  **Windows ツールで監視タスクを実行するには**  
   
 -   [システム モニターの起動 &#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)  
   
--   [Windows アプリケーション ログの表示 &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows.md)  
+-   [Windows アプリケーション ログの表示 &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows-10.md)  
   
  **Windows ツールで SQL Server データベースの警告を作成するには**  
   
@@ -167,3 +171,4 @@ caps.handback.revision: 18
 -   [トレースと Windows パフォーマンス ログ データの関連付け &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   
+

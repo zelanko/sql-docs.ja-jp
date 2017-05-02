@@ -1,23 +1,27 @@
 ---
 title: "ユーザー定義関数の変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ab838367ccbe310bbb57220fdec695a46fd849c
+ms.lasthandoff: 04/11/2017
+
 ---
-# ユーザー定義関数の変更
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用してユーザー定義関数を変更できます。 以下に示す方法でユーザー定義関数を変更しても、関数の権限は変更されません。また、従属する関数、ストアド プロシージャ、またはトリガーにも影響はありません。  
+# <a name="modify-user-defined-functions"></a>ユーザー定義関数の変更
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してユーザー定義関数を変更できます。 以下に示す方法でユーザー定義関数を変更しても、関数の権限は変更されません。また、従属する関数、ストアド プロシージャ、またはトリガーにも影響はありません。  
   
  **このトピックの内容**  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 7
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### ユーザー定義関数を変更するには  
+#### <a name="to-modify-a-user-defined-function"></a>ユーザー定義関数を変更するには  
   
 1.  変更する関数を含むデータベースの横にあるプラス記号をクリックします。  
   
@@ -65,15 +69,15 @@ caps.handback.revision: 7
   
     -   集計関数  
   
-4.  変更する関数を右クリックし、**[変更]** を選択します。  
+4.  変更する関数を右クリックし、 **[変更]**を選択します。  
   
 5.  クエリ ウィンドウで、ALTER FUNCTION ステートメントに必要な変更を加えます。  
   
-6.  **[ファイル]** メニューの **[*function_name* の保存]** をクリックします。  
+6.  **ファイル** メニューの **function_name***の保存*をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### ユーザー定義関数を変更するには  
+#### <a name="to-modify-a-user-defined-function"></a>ユーザー定義関数を変更するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

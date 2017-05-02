@@ -1,22 +1,26 @@
 ---
 title: "メモリ最適化テーブルが含まれるデータベースのバックアップ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 43fa6642db8924195fa1291d74291c21d0b064d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# メモリ最適化テーブルが含まれるデータベースのバックアップ
+# <a name="backing-up-a-database-with-memory-optimized-tables"></a>メモリ最適化テーブルが含まれるデータベースのバックアップ
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   メモリ最適化されたテーブルは、通常のデータベースのバックアップの一部としてバックアップされます。 ディスク ベース テーブルについては、ストレージの破損を検出するために、データベース バックアップの一部としてデータのチェックサムおよびデルタ ファイルのペアが検証されます。  
@@ -26,9 +30,9 @@ caps.handback.revision: 18
 >   
 >  バックアップがない場合、データベースを削除して再作成した後に、メモリ最適化テーブルおよびディスク ベース テーブルからデータをエクスポートして再読み込みできます。  
   
- 1 つ以上のメモリ最適化されたテーブルを持つデータベースの完全バックアップには、メモリ最適化されたテーブルごとに、ディスク ベース テーブルに対して割り当てられているストレージ (存在する場合)、アクティブなトランザクション ログ、およびデータ ファイルとデルタ ファイルのペア (チェックポイント ファイル ペアとも呼びます) が含まれています。 ただし、「[メモリ最適化テーブルの持続性](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)」で説明されているように、メモリ最適化されたテーブルで使用されるストレージはメモリ内にあるときのサイズを大きく上回ることがあり、データベースのバックアップのサイズに影響します。  
+ 1 つ以上のメモリ最適化されたテーブルを持つデータベースの完全バックアップには、メモリ最適化されたテーブルごとに、ディスク ベース テーブルに対して割り当てられているストレージ (存在する場合)、アクティブなトランザクション ログ、およびデータ ファイルとデルタ ファイルのペア (チェックポイント ファイル ペアとも呼びます) が含まれています。 ただし、「 [メモリ最適化テーブルの持続性](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)」で説明されているように、メモリ最適化されたテーブルで使用されるストレージはメモリ内にあるときのサイズを大きく上回ることがあり、データベースのバックアップのサイズに影響します。  
   
-## データベースの完全バックアップ  
+## <a name="full-database-backup"></a>データベースの完全バックアップ  
  この説明では、持続性のあるメモリ最適化テーブルを持つデータベースに関するデータベース バックアップのみに注目します。ディスク ベース テーブルに関するバックアップも同じであるためです。 メモリ最適化されたファイル グループ内にあるチェックポイント ファイル ペアは、さまざまな状態をとることがあります。 ファイルのどの部分がバックアップされるかを次の表で説明します。  
   
 |チェックポイント ファイル ペアの状態|バックアップ|  
@@ -43,7 +47,7 @@ caps.handback.revision: 18
   
  1 つ以上のメモリ最適化されたテーブルを持つデータベースのバックアップのサイズは、通常はメモリ内にあるときのサイズより大きく、ディスク上ストレージに保存されているときのサイズより小さくなります。 サイズがどれだけ大きくなるかは、特に、削除された行の数に依存します。  
   
-### データベースの完全バックアップの推計サイズ  
+### <a name="estimating-size-of-full-database-backup"></a>データベースの完全バックアップの推計サイズ  
   
 > [!IMPORTANT]  
 >  BackupSizeInBytes 値を使用してインメモリ OLTP のバックアップのサイズを見積もることはお勧めしません。  
@@ -52,8 +56,8 @@ caps.handback.revision: 18
   
  2 番目のワークロードのシナリオは、挿入、削除、および更新操作が頻繁に実行される場合です。 最悪のケースでは、削除された行を考慮に入れた後、各チェックポイント ファイル ペアは 50% が読み込み済みになります。 データベースのバックアップのサイズは、メモリ内にあるデータのサイズの少なくとも 2 倍になります。  
   
-## メモリ最適化テーブルを含むデータベースの差分バックアップ  
- メモリ最適化テーブルのストレージは、「[メモリ最適化テーブルの持続性](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)」で説明しているようにデータ ファイルとデルタ ファイルで構成されます。 メモリ最適化テーブルが含まれるデータベースの差分バックアップには、次のデータが含まれています。  
+## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>メモリ最適化テーブルを含むデータベースの差分バックアップ  
+ メモリ最適化テーブルのストレージは、「 [メモリ最適化テーブルの持続性](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)」で説明しているようにデータ ファイルとデルタ ファイルで構成されます。 メモリ最適化テーブルが含まれるデータベースの差分バックアップには、次のデータが含まれています。  
   
 -   ディスク ベース テーブルを格納するファイル グループの差分バックアップは、メモリ最適化テーブルの存在による影響を受けません。  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 18
   
  データベース サイズの大部分がメモリ最適化テーブルである場合は、差分バックアップによってデータベース バックアップのサイズを大幅に削減することができます。 一般的な OLTP ワークロードの場合、差分バックアップは完全バックアップより非常に小さくなります。  
   
-## 参照  
- [メモリ最適化テーブルのバックアップ、復元、復旧](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+## <a name="see-also"></a>参照  
+ [メモリ最適化テーブルのバックアップ、復元、復旧](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

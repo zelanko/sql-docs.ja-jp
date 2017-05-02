@@ -1,46 +1,50 @@
 ---
 title: "パフォーマンスの監視とチューニング | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server のインスタンス, パフォーマンスの監視"
-  - "サーバー パフォーマンスの監視 [SQL Server]"
-  - "データベース エンジン [SQL Server], パフォーマンス"
-  - "パフォーマンスの監視 [SQL Server], パフォーマンスについて"
-  - "サーバー パフォーマンス [SQL Server]"
-  - "パフォーマンスの監視 [SQL Server]"
-  - "データベース パフォーマンス [SQL Server], パフォーマンスについて"
-  - "データベースのチューニング [SQL Server], パフォーマンスについて"
-  - "状態情報 [SQL Server], パフォーマンスの監視"
-  - "データベースの監視 [SQL Server], パフォーマンスについて"
-  - "監視 [SQL Server], クエリ パフォーマンス"
-  - "サーバー パフォーマンス [SQL Server], パフォーマンスについて"
-  - "データベースのチューニング [SQL Server]"
-  - "データベース パフォーマンス [SQL Server]"
-  - "監視 [SQL Server], サーバー パフォーマンス"
-  - "データベース監視 [SQL Server]"
-  - "サーバー パフォーマンスの監視 [SQL Server], サーバー パフォーマンスの監視について"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- instances of SQL Server, monitoring performance
+- monitoring server performance [SQL Server]
+- Database Engine [SQL Server], performance
+- monitoring performance [SQL Server], about performance
+- server performance [SQL Server]
+- monitoring performance [SQL Server]
+- database performance [SQL Server], about performance
+- tuning databases [SQL Server], about performance
+- status information [SQL Server], performance monitoring
+- database monitoring [SQL Server], about performance
+- monitoring [SQL Server], queries performance
+- server performance [SQL Server], about performance
+- tuning databases [SQL Server]
+- database performance [SQL Server]
+- monitoring [SQL Server], server performance
+- database monitoring [SQL Server]
+- monitoring server performance [SQL Server], about monitoring server performance
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c60b3ef8e0eb43ea64e898d8198c0a9fd725acc
+ms.lasthandoff: 04/11/2017
+
 ---
-# パフォーマンスの監視とチューニング
+# <a name="monitor-and-tune-for-performance"></a>パフォーマンスの監視とチューニング
   データベースを監視する目的は、サーバーのパフォーマンスを評価することです。 適切な監視には、現在のパフォーマンスのスナップショットを定期的にキャプチャして問題の原因となっているプロセスを特定したり、長期にわたって継続的にデータを採取してパフォーマンスの傾向を追跡する作業が必要です。  
   
  データベース パフォーマンスの継続的な評価は、応答時間を最小限にし、スループットを最大限にして、最適なパフォーマンスを実現するために役立ちます。 パフォーマンスを最大限に高めるには、効率的なネットワーク トラフィック、ディスク I/O、および CPU 使用が重要です。 アプリケーションの要件を十分に分析し、データの論理構造と物理構造を理解し、データベースの使用状況を評価し、競合する処理 (オンライン トランザクション処理 (OLTP) と意思決定支援など) の関係を調整する必要があります。  
   
-## パフォーマンスのためのデータベースの監視とチューニング  
+## <a name="monitoring-and-tuning-databases-for-performance"></a>パフォーマンスのためのデータベースの監視とチューニング  
  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および Microsoft Windows オペレーティング システムでは、データベースの現在の状態を参照したり、状態の変化に伴うパフォーマンスを追跡するためのユーティリティが用意されています。 さまざまなツールや技法を使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を監視できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の監視は、次のことに役立ちます。  
   
 -   パフォーマンスを向上できるかどうかの判断。 たとえば、頻繁に使用するクエリの応答時間を監視することで、テーブルに対するクエリまたはインデックスの変更が必要かどうかを判断できます。  
@@ -49,7 +53,7 @@ caps.handback.revision: 35
   
 -   問題のトラブルシューティングや、ストアド プロシージャなどのアプリケーション コンポーネントのデバッグ。  
   
-## 動的な環境での監視  
+## <a name="monitoring-in-a-dynamic-environment"></a>動的な環境での監視  
 条件を変更すると、パフォーマンスが変化します。 評価では、ユーザー数の増加によるパフォーマンスの変化、ユーザーのアクセス方法と接続方法の変化、データベース コンテンツの増加、クライアント アプリケーションの変化、アプリケーション内のデータの変化、クエリの複雑化、およびネットワーク トラフィックの増加を確認できます。 ツールを使用してパフォーマンスを監視することにより、パフォーマンスの変化を、変化する条件と複雑なクエリに関連付けることができます。 **例:**:  
   
 -   頻繁に使用されるクエリの応答時間を監視することによって、クエリを実行するテーブルに対するクエリまたはインデックスの変更が必要かどうかを判断できます。  
@@ -62,7 +66,7 @@ caps.handback.revision: 35
   
  ユーザーの数が増えるにつれて、サーバーのリソースの競合も増えます。その結果、応答時間が長くなり、全般的なスループットが減少します。  
   
-## 監視とパフォーマンス チューニングのタスク  
+## <a name="monitoring-and-performance-tuning-tasks"></a>監視とパフォーマンス チューニングのタスク  
   
 |トピック| タスク|  
 |-----------|----------------------|  
@@ -78,10 +82,11 @@ caps.handback.revision: 35
 |[インメモリ OLTP でのクエリ ストアの使用](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)|メモリ最適化テーブルに関する考慮事項。|  
 |[クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)|クエリ ストアの使用に関してアドバイスします。|  
   
-## 参照  
- [エンタープライズ全体の管理の自動化](../../ssms/agent/automated-administration-across-an-enterprise.md)   
+## <a name="see-also"></a>参照  
+ [エンタープライズ全体の管理の自動化](http://msdn.microsoft.com/library/44d8365b-42bd-4955-b5b2-74a8a9f4a75f)   
  [データベース エンジン チューニング アドバイザー](../../relational-databases/performance/database-engine-tuning-advisor.md)   
  [リソースの利用状況の監視 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
+

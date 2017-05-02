@@ -1,40 +1,44 @@
 ---
 title: "レプリケーションの全般的パフォーマンスの向上 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "パブリケーション [SQL Server レプリケーション], 設計とパフォーマンス"
-  - "データベースの設計 [SQL Server], レプリケーションのパフォーマンス"
-  - "スナップショット エージェント, パフォーマンス"
-  - "スナップショット [SQL Server レプリケーション], パフォーマンスに関する考慮事項"
-  - "マージ レプリケーションのパフォーマンス [SQL Server レプリケーション]"
-  - "スナップショット レプリケーション [SQL Server], パフォーマンス"
-  - "サブスクリプション [SQL Server レプリケーション], パフォーマンスに関する考慮事項"
-  - "エージェント [SQL Server レプリケーション], パフォーマンス"
-  - "パフォーマンス [SQL Server レプリケーション], 全般的な考慮事項"
-  - "トランザクション レプリケーション, パフォーマンス"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publications [SQL Server replication], design and performance
+- designing databases [SQL Server], replication performance
+- Snapshot Agent, performance
+- snapshots [SQL Server replication], performance considerations
+- merge replication performance [SQL Server replication]
+- snapshot replication [SQL Server], performance
+- subscriptions [SQL Server replication], performance considerations
+- agents [SQL Server replication], performance
+- performance [SQL Server replication], general considerations
+- transactional replication, performance
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 02f3e2ad2af0d11f5842bacc01ecb8cdf771bd56
+ms.lasthandoff: 04/11/2017
+
 ---
-# レプリケーションの全般的パフォーマンスの向上
+# <a name="enhance-general-replication-performance"></a>レプリケーションの全般的パフォーマンスの向上
   このトピックで解説するガイドラインに従うことによって、アプリケーションおよびネットワーク上にある全種類のレプリケーションの全般的なパフォーマンスを向上させることができます。  
   
-## サーバーおよびネットワーク  
+## <a name="server-and-network"></a>サーバーおよびネットワーク  
   
--    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]に割り当てるメモリの最大容量と最小容量を設定する。  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]に割り当てるメモリの最大容量と最小容量を設定する。  
   
-     既定では、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] は使用できるシステム リソースに基づいて、そのメモリ要求を動的に変更します。 レプリケーション作業中に使用できるメモリ容量が少なくなるのを防ぐには、 **min server memory** オプションを使用して最小メモリ容量を設定します。 オペレーティング システムによるディスクへのメモリ書き出しを防ぐために、 **max server memory** オプションを使用して最大メモリ容量を設定することもできます。 詳細については、次を参照してください。 [メモリ サーバー構成オプションのサーバー](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)です。  
+     既定では、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] は使用できるシステム リソースに基づいて、そのメモリ要求を動的に変更します。 レプリケーション作業中に使用できるメモリ容量が少なくなるのを防ぐには、 **min server memory** オプションを使用して最小メモリ容量を設定します。 オペレーティング システムによるディスクへのメモリ書き出しを防ぐために、 **max server memory** オプションを使用して最大メモリ容量を設定することもできます。 詳細については、「[サーバー メモリに関するサーバー構成オプション](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)」を参照してください。  
   
 -   データベースのデータ ファイルおよびログ ファイルを適切に配置する。 レプリケーションに関係するすべてのデータベースのトランザクション ログを、別のディスク ドライブに格納します。  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 45
   
      特にトランザクション レプリケーションでは、ネットワークがパフォーマンスの重大なボトルネックになる場合があります。 サブスクライバーへの変更の反映は、100 メガバイト/秒 (Mbps) 以上の高速ネットワークを使用することで大幅に高速化されます。 ネットワークが低速な場合は、適切なネットワーク設定とエージェント パラメーターを指定してください。  
   
-## データベースの設計  
+## <a name="database-design"></a>データベースの設計  
   
 -   データベース設計の推奨事項に従う。  
   
@@ -65,25 +69,25 @@ caps.handback.revision: 45
     SET READ_COMMITTED_SNAPSHOT ON  
     ```  
   
-     詳細については、次を参照してください。 [ALTER DATABASE & #40 です。Transact SQL と #41;](../../../t-sql/statements/alter-database-transact-sql.md)します。  
+     詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
 -   トリガーのアプリケーション ロジックに注意する。  
   
      サブスクライバーのユーザー定義トリガー内のビジネス ロジックによって、サブスクライバーへの変更のレプリケーション速度が低下する可能性があります。  
   
-    -   トランザクション レプリケーションでは、レプリケートされたコマンドの適用に使用されるカスタム ストアド プロシージャにこのようなロジックを含める方がより効率的です。 詳細については、次を参照してください。 [トランザクション アーティクルに変更を反映する方法を指定](../../../relational-databases/replication/transactional/specify-how-changes-are-propagated-for-transactional-articles.md)します。  
+    -   トランザクション レプリケーションでは、レプリケートされたコマンドの適用に使用されるカスタム ストアド プロシージャにこのようなロジックを含める方がより効率的です。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。  
   
-    -   マージ レプリケーションの場合には、ビジネス ロジック ハンドラーを使用する方がより効率的です。 詳細については、次を参照してください。 [マージ同期中にビジネス ロジックを実行](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)します。  
+    -   マージ レプリケーションの場合には、ビジネス ロジック ハンドラーを使用する方がより効率的です。 詳細については、「[マージ同期中のビジネス ロジックの実行](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)」を参照してください。  
   
-     マージ レプリケーションにパブリッシュされるテーブルの参照整合性を維持する目的でトリガーを使用する場合は、テーブルの処理順序を指定してマージ エージェントが必要とする再試行の回数を削減します。 詳細については、次を参照してください。 [アーティクルを指定して、処理順序のマージ](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)します。  
+     マージ レプリケーションにパブリッシュされるテーブルの参照整合性を維持する目的でトリガーを使用する場合は、テーブルの処理順序を指定してマージ エージェントが必要とする再試行の回数を削減します。 詳細については、「[マージ アーティクルの処理順序の指定](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)」を参照してください。  
   
 -   Large Object (LOB) データ型の使用を制限する。  
   
-     列の他のデータ型と比較して、LOB はより大きな記憶域とより多くの処理を必要とします。 アプリケーションで必要でない限り、LOB 型の列をアーティクルに含めないようにしてください。 **text**、 **ntext**、および **image** の各データ型は非推奨です。 データ型を使用することをお勧め Lob を含めた場合 **varchar (max)**, 、**nvarchar (max)**, 、**varbinary (max)**, 、それぞれします。  
+     列の他のデータ型と比較して、LOB はより大きな記憶域とより多くの処理を必要とします。 アプリケーションで必要でない限り、LOB 型の列をアーティクルに含めないようにしてください。 **text**、 **ntext**、および **image** の各データ型は非推奨です。 LOB が必要な場合は、 **varchar(max)**、 **nvarchar(max)**、および **varbinary(max)**の各データ型を使用することをお勧めします。  
   
      トランザクション レプリケーションの場合は、 **OLEDB ストリームのディストリビューション プロファイル**と呼ばれるディストリビューション エージェント プロファイルの使用を検討してください。 詳細については、「 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)」を参照してください。  
   
-## パブリケーションの設計  
+## <a name="publication-design"></a>パブリケーションの設計  
   
 -   必要なデータのみをパブリッシュする。  
   
@@ -95,29 +99,29 @@ caps.handback.revision: 45
   
      変更をパーティション分割するには、各サブスクライバーにデータのサブセットをパブリッシュするか、またはアプリケーションを使用して、指定した行の変更を所定のノードに転送します。  
   
-    -   マージ レプリケーションは、単一パブリケーションで、パラメーター化されたフィルターを使用したデータのサブセットのパブリッシュをサポートしています。 詳細については、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-row-filters.md)」を参照してください。  
+    -   マージ レプリケーションは、単一パブリケーションで、パラメーター化されたフィルターを使用したデータのサブセットのパブリッシュをサポートしています。 詳細については、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
   
-    -   トランザクション レプリケーションは、複数のパブリケーションで、静的フィルターを使用したデータのサブセットのパブリッシュをサポートしています。 詳細については、次を参照してください。 [パブリッシュされたデータのフィルター](../../../relational-databases/replication/publish/filter-published-data.md)します。  
+    -   トランザクション レプリケーションは、複数のパブリケーションで、静的フィルターを使用したデータのサブセットのパブリッシュをサポートしています。 詳細については、「[パブリッシュされたデータのフィルター選択](../../../relational-databases/replication/publish/filter-published-data.md)」を参照してください。  
   
 -   行フィルターの使用は慎重に行う。  
   
      トランザクション パブリケーションに行フィルターを使用したアーティクルが 1 つ以上格納されている場合、ログ リーダー エージェントはトランザクション ログをスキャンする際に、テーブルの更新の影響を受ける各行にフィルターを適用する必要があります。 このため、ログ リーダー エージェントのスループットが影響を受けます。  
   
-     同様に、マージ レプリケーションは、変更または削除された行を評価して、これらの行をどのサブスクライバーが受け取るかを決定する必要があります。 サブスクライバーで要求されるデータを減らすために行フィルターを使用する場合、この処理はテーブルのすべての行をパブリッシュする場合よりも複雑になり、速度が低下する可能性があります。 各サブスクライバーに必要な記憶域の削減と、最高スループット達成の間でのトレードオフを慎重に検討してください。 フィルターの詳細については、次を参照してください。 [パブリッシュされたデータのフィルター](../../../relational-databases/replication/publish/filter-published-data.md)します。  
+     同様に、マージ レプリケーションは、変更または削除された行を評価して、これらの行をどのサブスクライバーが受け取るかを決定する必要があります。 サブスクライバーで要求されるデータを減らすために行フィルターを使用する場合、この処理はテーブルのすべての行をパブリッシュする場合よりも複雑になり、速度が低下する可能性があります。 各サブスクライバーに必要な記憶域の削減と、最高スループット達成の間でのトレードオフを慎重に検討してください。 フィルター選択の詳細については、「[パブリッシュされたデータのフィルター選択](../../../relational-databases/replication/publish/filter-published-data.md)」を参照してください。  
   
-## サブスクリプションに関する注意点  
+## <a name="subscription-considerations"></a>サブスクリプションに関する注意点  
   
 -   サブスクライバーの数が多い場合はプル サブスクリプションを使用する。  
   
-     ディストリビューション エージェントとマージ エージェントは、プッシュ サブスクリプションの場合はディストリビューター側で、プル サブスクリプションの場合はサブスクライバー側で実行されます。 プル サブスクリプションを使用して、エージェントの処理をディストリビューターからサブスクライバーに移動すると、パフォーマンスを向上させることができます。 詳細については、次を参照してください。 [パブリケーションをサブスクライブ](../../../relational-databases/replication/subscribe-to-publications.md)します。  
+     ディストリビューション エージェントとマージ エージェントは、プッシュ サブスクリプションの場合はディストリビューター側で、プル サブスクリプションの場合はサブスクライバー側で実行されます。 プル サブスクリプションを使用して、エージェントの処理をディストリビューターからサブスクライバーに移動すると、パフォーマンスを向上させることができます。 詳細については、「[パブリケーションのサブスクライブ](../../../relational-databases/replication/subscribe-to-publications.md)」を参照してください。  
   
 -   サブスクライバーの処理が遅すぎる場合はサブスクリプションを再初期化する。  
   
-     大量の変更をサブスクライバーに送信する必要があるときには、サブスクライバーを新しいスナップショットで再初期化する方が、レプリケーションを使用して個々の変更を移動するよりも高速な場合があります。 詳細については、次を参照してください。 [サブスクリプションの再初期化](../../../relational-databases/replication/reinitialize-subscriptions.md)します。  
+     大量の変更をサブスクライバーに送信する必要があるときには、サブスクライバーを新しいスナップショットで再初期化する方が、レプリケーションを使用して個々の変更を移動するよりも高速な場合があります。 詳細については、「 [サブスクリプションの再初期化](../../../relational-databases/replication/reinitialize-subscriptions.md)」を参照してください。  
   
-     トランザクション レプリケーションの場合は、レプリケーション モニターの **[未配布のコマンド]** タブに、サブスクライバーにまだ配布されていないディストリビューション データベース内のトランザクションの数と、これらのトランザクションの予測配布時間が表示されます。 詳細については、次を参照してください。 [情報を表示したりタスクを実行する、エージェント関連付けられているサブスクリプションに関連付け & #40 です。レプリケーション モニターと #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)です。  
+     トランザクション レプリケーションの場合は、レプリケーション モニターの **[未配布のコマンド]** タブに、サブスクライバーにまだ配布されていないディストリビューション データベース内のトランザクションの数と、これらのトランザクションの予測配布時間が表示されます。 詳細については、「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
   
-## スナップショットに関する注意点  
+## <a name="snapshot-considerations"></a>スナップショットに関する注意点  
   
 -   必要に応じて、データベースの利用状況が少ないときにのみスナップショット エージェントを実行する。  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 45
   
 -   キャラクター モードのスナップショットが必要ない場合は、ネイティブ モードのスナップショットを使用する。  
   
-     すべてのサブスクライバーに対して既定のネイティブ モードのスナップショットを使用します。ただし、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーと [!INCLUDE[ssEW](../../../includes/ssew-md.md)] が動作しているサブスクライバーは除きます。これらのサブスクライバーでは、キャラクター モードのスナップショットを使用する必要があります。  
+     すべてのサブスクライバーに対して既定のネイティブ モードのスナップショットを使用します。ただし、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーと [!INCLUDE[ssEW](../../../includes/ssew-md.md)]が動作しているサブスクライバーは除きます。これらのサブスクライバーでは、キャラクター モードのスナップショットを使用する必要があります。  
   
 -   パブリケーションごとに単一のスナップショット フォルダーを使用する。  
   
@@ -135,7 +139,7 @@ caps.handback.revision: 45
   
      スナップショット エージェントは、スナップショット フォルダーに対してデータの順次書き込みを実行します。 データベースやログ ファイルとは別のドライブにスナップショット フォルダーを配置することによって、ディスク間の競合が減少し、スナップショット処理がより高速に実行されます。  
   
--   サブスクライバーにサブスクリプション データベースを作成する場合は、単純復旧モデルまたは一括ログ復旧モデルを指定する。 これによって、サブスクライバーでのスナップショットの適用中に実行される一括挿入のログを最小限に抑えることができます。 スナップショットがサブスクリプション データベースに適用されたら、必要に応じて別の復旧モデルに変更できます (レプリケートされたデータベースでは、すべての復旧モデルを使用できます)。 復旧モデルの選択の詳細については、次を参照してください。 [復元と復旧の概要と #40 です。SQL Server と #41;](../../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)です。  
+-   サブスクライバーにサブスクリプション データベースを作成する場合は、単純復旧モデルまたは一括ログ復旧モデルを指定する。 これによって、サブスクライバーでのスナップショットの適用中に実行される一括挿入のログを最小限に抑えることができます。 スナップショットがサブスクリプション データベースに適用されたら、必要に応じて別の復旧モデルに変更できます (レプリケートされたデータベースでは、すべての復旧モデルを使用できます)。 復旧モデルの選択の詳細については、「[復元と復旧の概要 (SQL Server)](../../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)」を参照してください。  
   
 -   低帯域ネットワークでは、リムーバブル メディア上での代替スナップショット フォルダーおよび圧縮スナップショットを使用する。  
   
@@ -145,24 +149,24 @@ caps.handback.revision: 45
   
 -   サブスクリプションを手作業で初期化する。  
   
-     巨大な初期データセットを扱うようなシナリオでは、スナップショット以外の方法を使用して、サブスクリプションを初期化することをお勧めします。 詳細については、次を参照してください。 [、スナップショット トランザクション サブスクリプションなしの初期化](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)します。  
+     巨大な初期データセットを扱うようなシナリオでは、スナップショット以外の方法を使用して、サブスクリプションを初期化することをお勧めします。 詳細については、「[スナップショットを使用しないトランザクション サブスクリプションの初期化](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)」を参照してください。  
   
-## エージェント パラメーター  
+## <a name="agent-parameters"></a>エージェント パラメーター  
   
 -   初期テスト、監視、またはデバッグの間を除いて、レプリケーション エージェントの冗長レベルを低く設定する。  
   
      ディストリビューション エージェントまたはマージ エージェントの **–HistoryVerboseLevel** パラメーターおよび **–OutputVerboseLevel** パラメーターを低く設定します。 これにより、エージェントの履歴および出力を追跡するために挿入される新しい行の数を減らすことができます。 代わりに、同じ状態の既存の履歴メッセージが、新しい履歴情報に更新されます。 テスト、監視、およびデバッグを行うときには、冗長レベルを高く設定して、エージェントの動作に関する情報をできるだけ多く得られるようにしてください。  
   
--   使用して、 **– MaxBCPThreads** スナップショット エージェント、マージ エージェントおよびディストリビューション エージェント (指定されたスレッドの数では、コンピューター上のプロセッサの数を超える必要があります) のパラメーターです。 このパラメーターには、スナップショットの作成および適用時に並列実行できる一括コピーの操作数を指定します。  
+-   スナップショット エージェント、マージ エージェント、およびディストリビューション エージェントの **–MaxBCPThreads** パラメーターを使用します (コンピューターのプロセッサ数を超えるスレッド数は指定できません)。 このパラメーターには、スナップショットの作成および適用時に並列実行できる一括コピーの操作数を指定します。  
   
--   使用して、 **– UseInprocLoader** ディストリビューション エージェントおよびマージ エージェントを (このパラメーターにはパブリッシュされたテーブルは XML 列を含める場合は使用できません) のパラメーターです。 このパラメーターを指定すると、スナップショットの適用時にエージェントが BULK INSERT コマンドを実行します。  
+-   ディストリビューション エージェントおよびマージ エージェントの **–UseInprocLoader** パラメーターを使用します (パブリッシュされたテーブルに XML 列が含まれる場合、このパラメーターは使用できません)。 このパラメーターを指定すると、スナップショットの適用時にエージェントが BULK INSERT コマンドを実行します。  
   
  エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、以下をご覧ください。  
   
--   [Work with Replication Agent Profiles](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
+-   [レプリケーション エージェント プロファイルの操作](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
--   [表示および変更のレプリケーション エージェント コマンド プロンプト パラメーターと #40 です。SQL Server Management Studio と #41 です。](../../../relational-databases/replication/agents/view and modify replication agent command prompt parameters.md)  
+-   [レプリケーション エージェント コマンド プロンプト パラメーターを表示および変更する &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)します。  
+-   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)に割り当てるメモリの最大容量と最小容量を設定する。  
   
   

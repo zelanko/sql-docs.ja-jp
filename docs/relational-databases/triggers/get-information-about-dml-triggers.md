@@ -1,29 +1,33 @@
 ---
 title: "DML トリガーに関する情報の取得 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "トリガーのメタデータ [SQL Server]"
-  - "DML トリガーの表示"
-  - "DML トリガー, メタデータ"
-  - "DML トリガーの確認"
-  - "状態情報 [SQL Server], トリガー"
-  - "DML トリガー, 表示"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metadata [SQL Server], triggers
+- viewing DML triggers
+- DML triggers, metadata
+- displaying DML triggers
+- status information [SQL Server], triggers
+- DML triggers, viewing
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8583bd2597f5107398a65df65dbe7f7eef53f4d
+ms.lasthandoff: 04/11/2017
+
 ---
-# DML トリガーに関する情報の取得
+# <a name="get-information-about-dml-triggers"></a>DML トリガーに関する情報の取得
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して DML トリガーに関する情報を取得する方法について説明します。 この情報には、テーブルに設定されたトリガーの種類、名前、所有者、および作成日または変更日を確認できます。 トリガーが作成時に暗号化されていない場合は、トリガーの定義を取得します。 定義は、トリガーを定義しているテーブルに対してそのトリガーがどのように作用するかを理解するのに役立ちます。 また、特定のトリガーが使用しているオブジェクトを見つけることもできます。 この情報を使用すると、データベースで変更または削除された場合にトリガーに影響を及ぼすオブジェクトを確認できます。  
   
  **このトピックの内容**  
@@ -43,36 +47,36 @@ caps.handback.revision: 31
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> 権限  
- **sys.sql.modules**、**sys.object**、**sys.triggers**、**sys.events**、**sys.trigger_events**  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「[Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+ **sys.sql.modules**、 **sys.object**、 **sys.triggers**、 **sys.events**、 **sys.trigger_events**  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
- OBJECT_DEFINITION、OBJECTPROPERTY、**sp_helptext**  
- ロール **public** のメンバーシップが必要です。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION のいずれかの権限を許可された人が表示できます。 これらの権限は **db_owner**、**db_ddladmin**、および **db_securityadmin** 固定データベース ロールのメンバーが暗黙的に保有します。  
+ OBJECT_DEFINITION、OBJECTPROPERTY、 **sp_helptext**  
+ ロール **public** のメンバーシップが必要です。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION のいずれかの権限を許可された人が表示できます。 これらの権限は **db_owner**、 **db_ddladmin**、および **db_securityadmin** 固定データベース ロールのメンバーが暗黙的に保有します。  
   
  **sys.sql_expression_dependencies**  
  データベースに対する VIEW DEFINITION 権限およびデータベースの **sys.sql_expression_dependencies** に対する SELECT 権限が必要です。 既定では、SELECT 権限は **db_owner** 固定データベース ロールのメンバーだけに与えられます。 SELECT 権限と VIEW DEFINITION 権限が別のユーザーに与えられている場合、権限が許可されているユーザーはデータベース内のすべての依存関係を表示できます。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### DML トリガーの定義を表示するには  
+#### <a name="to-view-the-definition-of-a-dml-trigger"></a>DML トリガーの定義を表示するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
 2.  目的のデータベースを展開し、 **[テーブル]**を展開します。次に、定義を表示するトリガーが格納されているテーブルを展開します。  
   
-3.  **[トリガー]** を展開します。目的のトリガーを右クリックし、**[変更]** をクリックします。 DML トリガーの定義がクエリ ウィンドウに表示されます。  
+3.  **[トリガー]**を展開します。目的のトリガーを右クリックし、 **[変更]**をクリックします。 DML トリガーの定義がクエリ ウィンドウに表示されます。  
   
-#### DML トリガーの依存関係を表示するには  
+#### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>DML トリガーの依存関係を表示するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  目的のデータベースを展開し、**[テーブル]**を展開します。次に、表示するトリガーとその依存関係が格納されているテーブルを展開します。  
+2.  目的のデータベースを展開し、 **[テーブル]**を展開します。次に、表示するトリガーとその依存関係が格納されているテーブルを展開します。  
   
-3.  **[トリガー]** を展開します。目的のトリガーを右クリックし、**[依存関係の表示]** をクリックします。  
+3.  **[トリガー]**を展開します。目的のトリガーを右クリックし、 **[依存関係の表示]**をクリックします。  
   
-4.  **[オブジェクトの依存関係]** ウィンドウで DML トリガーに依存するオブジェクトを表示するには、**[\<DML トリガー名> に依存するオブジェクト]** を選択します。 オブジェクトが **[依存関係]** 領域に表示されます。  
+4.  **[オブジェクトの依存関係]** ウィンドウで DML トリガーに依存するオブジェクトを表示するには、**[\<DML トリガー名 に依存するオブジェクト]** を選択します。 オブジェクトが **[依存関係]** 領域に表示されます。  
   
-     DML が依存するオブジェクトを表示するには、**[\<DML トリガー名> が依存するオブジェクト]** を選択します。 オブジェクトが **[依存関係]** 領域に表示されます。 すべてのオブジェクトを表示するには、各ノードを展開します。  
+     DML が依存するオブジェクトを表示するには、**[\<DML トリガー名 が依存するオブジェクト]** を選択します。 オブジェクトが **[依存関係]** 領域に表示されます。 すべてのオブジェクトを表示するには、各ノードを展開します。  
   
 5.  **[依存関係]** 領域に表示されたオブジェクトに関する情報を取得するには、そのオブジェクトをクリックします。 **[選択したオブジェクト]** フィールドの **[名前]**、 **[種類]**、および **[依存関係の種類]** の各ボックスに情報が表示されます。  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 31
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### DML トリガーの定義を表示するには  
+#### <a name="to-view-the-definition-of-a-dml-trigger"></a>DML トリガーの定義を表示するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -113,7 +117,7 @@ GO
   
 ```  
   
-#### DML トリガーの依存関係を表示するには  
+#### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>DML トリガーの依存関係を表示するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -139,7 +143,7 @@ GO
   
 ```  
   
-#### データベース内の DML トリガーに関する情報を表示するには  
+#### <a name="to-view-information-about-dml-triggers-in-the-database"></a>データベース内の DML トリガーに関する情報を表示するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -175,13 +179,13 @@ GO
   
 ```  
   
-#### DML トリガーを起動するイベントに関する情報を表示するには  
+#### <a name="to-view-information-about-events-that-fire-a-dml-trigger"></a>DML トリガーを起動するイベントに関する情報を表示するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
   
-3.  次のいずれかの例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 それぞれの例は、`iuPerson` トリガーを起動するイベントを表示する方法を示します。  
+3.  次のいずれかの例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 それぞれの例は、 `iuPerson` トリガーを起動するイベントを表示する方法を示します。  
   
 ```tsql  
 USE AdventureWorks2012;   
@@ -201,7 +205,7 @@ WHERE object_id = OBJECT_ID('Person.iuPerson');
 GO  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

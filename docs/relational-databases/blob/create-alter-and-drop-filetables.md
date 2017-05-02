@@ -1,32 +1,36 @@
 ---
 title: "FileTable の作成、変更、および削除 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], 変更"
-  - "FileTable [SQL Server], 削除"
-  - "FileTable [SQL Server], 作成"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], altering
+- FileTables [SQL Server], dropping
+- FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0445d1e3f300031a0154e253009a516364cd4fc3
+ms.lasthandoff: 04/11/2017
+
 ---
-# FileTable の作成、変更、および削除
+# <a name="create-alter-and-drop-filetables"></a>FileTable の作成、変更、および削除
   新しい FileTable の作成や、既存の FileTable の変更または削除を行う方法について説明します。  
   
 ##  <a name="BasicsCreate"></a> FileTable の作成  
  FileTable は、定義済みおよび固定のスキーマがある特殊なユーザー テーブルです。 このスキーマは、FILESTREAM データ、ファイルとディレクトリの情報、およびファイルの属性を格納します。 FileTable スキーマの詳細については、「 [FileTable Schema](../../relational-databases/blob/filetable-schema.md)」を参照してください。  
   
- Transact-SQL または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、新しい FileTable を作成することができます。 FileTable には固定スキーマがあるため、列の一覧を指定する必要はありません。 FileTable を作成するため、簡単な構文を指定することができます。  
+ Transact-SQL または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、新しい FileTable を作成することができます。 FileTable には固定スキーマがあるため、列の一覧を指定する必要はありません。 FileTable を作成するため、簡単な構文を指定することができます。  
   
 -   ディレクトリ名。 FileTable フォルダー階層において、このテーブル レベルのディレクトリは、データベース レベルで指定されたデータベース ディレクトリの子になると同時に、テーブルに格納されるファイルまたはデータベースの親になります。  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 25
   
 1.  **FILETABLE_DIRECTORY**。 FileTable に格納されたすべてのファイルおよびディレクトリのルート ディレクトリとなるディレクトリを指定します。 この名前は、データベース内のすべての FileTable ディレクトリ名の中で一意である必要があります。 一意性の比較では、現在の照合順序の設定とは関係なく、大文字と小文字は区別されません。  
   
-    -   この値は、**nvarchar(255)** のデータ型であり、**Latin1_General_CI_AS_KS_WS** の固定の照合順序を使用します。  
+    -   この値は、 **nvarchar(255)** のデータ型であり、 **Latin1_General_CI_AS_KS_WS**の固定の照合順序を使用します。  
   
     -   指定するディレクトリ名は、ファイル システムの有効なディレクトリ名に関する要件を満たしている必要があります。  
   
@@ -50,9 +54,9 @@ caps.handback.revision: 25
   
 2.  **FILETABLE_COLLATE_FILENAME**。 FileTable の **Name** 列に適用される照合順序の名前を指定します。  
   
-    1.  指定した照合順序は、Windows のファイル名のセマンティクスに準拠するために、**大文字と小文字を区別しない**設定にする必要があります。  
+    1.  指定した照合順序は、Windows のファイル名のセマンティクスに準拠するために、 **大文字と小文字を区別しない** 設定にする必要があります。  
   
-    2.  **FILETABLE_COLLATE_FILENAME** の値を指定しない場合、または、**database_default** を指定した場合は、現在のデータベースの照合順序が列に継承されます。 現在のデータベースの照合順序で大文字と小文字が区別される場合は、エラーが発生し、**CREATE TABLE** 操作は失敗します。  
+    2.  **FILETABLE_COLLATE_FILENAME**の値を指定しない場合、または、 **database_default**を指定した場合は、現在のデータベースの照合順序が列に継承されます。 現在のデータベースの照合順序で大文字と小文字が区別される場合は、エラーが発生し、 **CREATE TABLE** 操作は失敗します。  
   
 3.  自動的に作成される 3 つの主キーと一意の制約で使用する名前を指定することもできます。 名前を指定しなかった場合、このトピックで後述するように、システムで名前が自動生成されます。  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 25
   
  **使用例**  
   
- 次の例では、新しい FileTable を作成し、**FILETABLE_DIRECTORY** と **FILETABLE_COLLATE_FILENAME** の両方に対してユーザー定義の値を指定します。  
+ 次の例では、新しい FileTable を作成し、 **FILETABLE_DIRECTORY** と **FILETABLE_COLLATE_FILENAME**の両方に対してユーザー定義の値を指定します。  
   
 ```tsql  
 CREATE TABLE DocumentStore AS FileTable  
@@ -75,7 +79,7 @@ CREATE TABLE DocumentStore AS FileTable
 GO  
 ```  
   
- 次の例も、新しい FileTable を作成するものです。 ユーザー定義の値が指定されていないため、**FILETABLE_DIRECTORY** の値が FileTable の名前に、**FILETABLE_COLLATE_FILENAME** の値が database_default になります。また、主キーと一意の制約にはシステムで生成された名前が指定されます。  
+ 次の例も、新しい FileTable を作成するものです。 ユーザー定義の値が指定されていないため、 **FILETABLE_DIRECTORY** の値が FileTable の名前に、 **FILETABLE_COLLATE_FILENAME** の値が database_default になります。また、主キーと一意の制約にはシステムで生成された名前が指定されます。  
   
 ```tsql  
 CREATE TABLE DocumentStore AS FileTable;  
@@ -83,7 +87,7 @@ GO
 ```  
   
  **SQL Server Management Studio を使用して FileTable を作成する**  
- オブジェクト エクスプローラーで、選択したデータベースのオブジェクトを展開し、**[テーブル]** フォルダーを右クリックして **[新しい FileTable]** をクリックします。  
+ オブジェクト エクスプローラーで、選択したデータベースのオブジェクトを展開し、 **[テーブル]** フォルダーを右クリックして **[新しい FileTable]**をクリックします。  
   
  このオプションを選択すると、新しいスクリプト ウィンドウが開き、FileTable を作成するためにカスタマイズして実行できる Transact-SQL スクリプト テンプレートが表示されます。 **[クエリ]** メニューの **[テンプレート パラメーターの値の指定]** オプションを使用すると、スクリプトを簡単にカスタマイズできます。  
   
@@ -91,7 +95,7 @@ GO
   
 -   既存のテーブルは、変更して FileTable に変換することはできません。  
   
--   データベース レベルで前もって指定する親ディレクトリには、null ではない値を指定する必要があります。 データベースレベルのディレクトリを指定する方法については、「[FileTable の前提条件の有効化](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)」を参照してください。  
+-   データベース レベルで前もって指定する親ディレクトリには、null ではない値を指定する必要があります。 データベースレベルのディレクトリを指定する方法については、「 [FileTable の前提条件の有効化](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)」を参照してください。  
   
 -   FileTable には、FILESTREAM 列が含まれているため、有効な FILESTREAM ファイル グループが必要です。 必要に応じて、FileTable を作成する **CREATE TABLE** コマンドの一部として、FILESTREAM ファイル グループを指定することもできます。 ファイル グループが指定されていない場合、FileTable はデータベースの既定の FILESTREAM ファイル グループを使用します。 データベースに FILESTREAM ファイル グループがない場合は、エラーが発生します。  
   
@@ -104,7 +108,7 @@ GO
 ##  <a name="BasicsAlter"></a> FileTable の変更  
  FileTable は、定義済みおよび固定のスキーマがあるため、その列を追加または変更することはできません。 ただし、カスタム インデックス、トリガー、制約、およびその他のオプションを FileTable に追加することはできます。  
   
- ALTER TABLE ステートメントを使用して FileTable 名前空間 (システム定義の制約を含む) を有効または無効にする方法の詳細については、「[FileTable の管理](../../relational-databases/blob/manage-filetables.md)」を参照してください。  
+ ALTER TABLE ステートメントを使用して FileTable 名前空間 (システム定義の制約を含む) を有効または無効にする方法の詳細については、「 [FileTable の管理](../../relational-databases/blob/manage-filetables.md)」を参照してください。  
   
 ###  <a name="HowToChange"></a> 方法: FileTable のディレクトリを変更する  
  **Transact-SQL を使用して FileTable のディレクトリを変更する**  
@@ -119,11 +123,11 @@ GO
 ```  
   
  **SQL Server Management Studio を使用して FileTable のディレクトリを変更する**  
- オブジェクト エクスプローラーで、FileTable を右クリックし、**[プロパティ]** をクリックして、**[テーブルのプロパティ]** ダイアログ ボックスを開きます。 **[FileTable]** ページで、 **[FileTable ディレクトリ名]**に新しい値を入力します。  
+ オブジェクト エクスプローラーで、FileTable を右クリックし、 **[プロパティ]** をクリックして、 **[テーブルのプロパティ]** ダイアログ ボックスを開きます。 **[FileTable]** ページで、 **[FileTable ディレクトリ名]**に新しい値を入力します。  
   
 ###  <a name="ReqAlter"></a> FileTable を変更するための要件と制限  
   
--   **FILETABLE_COLLATE_FILENAME** の値を変更することはできません。  
+-   **FILETABLE_COLLATE_FILENAME**の値を変更することはできません。  
   
 -   FileTable のシステムで定義された列を変更、削除、または無効にすることはできません。  
   
@@ -138,7 +142,7 @@ GO
   
 -   FileTable ディレクトリと、その下位にあったサブディレクトリも、データベースの FILESTREAM ファイルとディレクトリ階層から消失します。  
   
- FileTable のファイルの名前空間内に開いているファイル ハンドルがある場合、DROP TABLE コマンドは失敗します。 開いているハンドルを閉じる方法の詳細については、「[FileTable の管理](../../relational-databases/blob/manage-filetables.md)」を参照してください。  
+ FileTable のファイルの名前空間内に開いているファイル ハンドルがある場合、DROP TABLE コマンドは失敗します。 開いているハンドルを閉じる方法の詳細については、「 [FileTable の管理](../../relational-databases/blob/manage-filetables.md)」を参照してください。  
   
 ##  <a name="BasicsOtherObjects"></a> FileTable を作成したときに作成されるその他のデータベース オブジェクト  
  新しい FileTable を作成すると、システム定義のインデックスと制約もいくつか作成されます。 これらのオブジェクトを変更または削除することはできません。これらは、FileTable 自体が削除されると一緒に削除されます。 これらのオブジェクトの一覧を表示するには、カタログ ビュー [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md) に対してクエリを実行します。  
@@ -178,9 +182,9 @@ GO
   
 -   *<constraint_type>* は CK (CHECK 制約)、DF (DEFAULT 制約)、FK (外部キー)、PK (主キー)、または UQ (一意制約) です。  
   
--   *<uniquifier>\>* は、名前を一意にする、システムによって生成された文字列です。 この文字列には、通常、FileTable の名前と一意の識別子が含まれています。  
+-   *\<uniquifier>* は、名前を一意にする、システムによって生成された文字列です。 この文字列には、通常、FileTable の名前と一意の識別子が含まれています。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [FileTable の管理](../../relational-databases/blob/manage-filetables.md)  
   
   

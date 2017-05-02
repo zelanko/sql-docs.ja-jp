@@ -1,29 +1,33 @@
 ---
 title: "アプリケーション レベルのパーティション分割 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f5e08e0a4d222cf98a7eb997019734d386f79fd4
+ms.lasthandoff: 04/11/2017
+
 ---
-# アプリケーション レベルのパーティション分割
-  このアプリケーションは注文を処理します。 最近の注文には多くの処理が行われます。 以前の注文には多くの処理は行われません。 最近の注文は、メモリ最適化テーブルにあります。 以前の注文は、ディスク ベース テーブルにあります。 *hotDate* より後の注文は、メモリ最適化テーブルにあります。 *hotDate* より前の注文は、ディスク ベース テーブルにあります。 多くの同時トランザクションが含まれる極端な OLTP ワークロードを前提とします。 複数の同時実行トランザクションが *hotDate* を変更しようとしている場合でも、このビジネス ルール (メモリ最適化テーブルの最近の注文) を適用する必要があります。  
+# <a name="application-level-partitioning"></a>アプリケーション レベルのパーティション分割
+  このアプリケーションは注文を処理します。 最近の注文には多くの処理が行われます。 以前の注文には多くの処理は行われません。 最近の注文は、メモリ最適化テーブルにあります。 以前の注文は、ディスク ベース テーブルにあります。 *hotDate* より後の注文は、メモリ最適化テーブルにあります。 *hotDate* より前の注文は、ディスク ベース テーブルにあります。 多くの同時トランザクションが含まれる極端な OLTP ワークロードを前提とします。 複数の同時実行トランザクションが *hotDate*を変更しようとしている場合でも、このビジネス ルール (メモリ最適化テーブルの最近の注文) を適用する必要があります。  
   
  このサンプルでは、ディスク ベース テーブルに対応するパーティション テーブルを使用せず、3 番目のテーブルを使用して 2 つのテーブルの間の明示的な分岐点を追跡します。 この分岐点を使用して、新しく挿入されるデータが日付に基づいて必ず適切なテーブルに挿入されることを保証できます。 また、どこでデータを検索するかを決定することもできます。 遅れて到着するデータも、引き続き適切なテーブルに配置されます。  
   
- 関連のサンプルについては、「[メモリ最適化テーブルのパーティション分割に関するアプリケーションのパターン](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)」をご覧ください。  
+ 関連のサンプルについては、「 [メモリ最適化テーブルのパーティション分割に関するアプリケーションのパターン](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)」をご覧ください。  
   
-## コード リスト  
+## <a name="code-listing"></a>コード リスト  
   
 ```tsql  
 USE MASTER  
@@ -213,7 +217,7 @@ select * from hot order by orderDate desc
 select * from cold order by orderDate desc  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [インメモリ OLTP のコード サンプル](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   

@@ -1,38 +1,42 @@
 ---
 title: "データベースの完全バックアップ (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "完全バックアップ [SQL Server]"
-  - "バックアップ [SQL Server]、データベース"
-  - "データベースのバックアップ [SQL Server]、完全バックアップ"
-  - "データベース バックアップ サイズの見積もり"
-  - "バックアップ [SQL Server]、バックアップのサイズ"
-  - "データベース バックアップ [SQL Server]、完全バックアップ"
-  - "サイズ [SQL Server]、バックアップ"
-  - "データベース バックアップ [SQL Server]、データベースのバックアップについて"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full backups [SQL Server]
+- backups [SQL Server], database
+- backing up databases [SQL Server], full backups
+- estimating database backup size
+- backing up [SQL Server], size of backup
+- database backups [SQL Server], full backups
+- size [SQL Server], backups
+- database backups [SQL Server], about backing up databases
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f5d2d58da7040d54d49ae9f6b3daae5c31024f65
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベースの完全バックアップ (SQL Server)
+# <a name="full-database-backups-sql-server"></a>データベースの完全バックアップ (SQL Server)
   データベースの完全バックアップでは、データベース全体をバックアップします。 このバックアップにはトランザクション ログの一部が含まれるため、データベースの完全バックアップを復元した後に、データベース全体を復旧することができます。 データベースの完全バックアップは、バックアップが完了した時点でのデータベースを表します。  
   
 > [!TIP]  
 >  データベース サイズが大きくなると、データベースの完全バックアップにかかる時間は長くなり、必要な記憶領域も増加します。 このため、大きなデータベースの場合は、データベースの完全バックアップを一連の *差分データベース バックアップ*で補完することができます。 詳細については、「[差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  データベースをバックアップすると、TRUSTWORTHY は OFF に設定されます。 TRUSTWORTHY を ON に設定する方法については「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)」を参照してください。  
+>  データベースをバックアップすると、TRUSTWORTHY は OFF に設定されます。 TRUSTWORTHY を ON に設定する方法については「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。  
   
  **このトピックの内容**  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 64
   
  ![データベース バックアップ間でのデータ損失の危険性](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "データベース バックアップ間でのデータ損失の危険性")  
   
-### 例 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example-includetsqlincludestsql-mdmd"></a>例 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  次の例では、WITH FORMAT を使用してデータベースの完全バックアップを作成することにより、既存のバックアップを上書きして新しいメディア セットを作成します。  
   
 ```  
@@ -67,7 +71,7 @@ GO
   
  ログのバックアップを作成する方法については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)」を参照してください。  
   
-### 例 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example-includetsqlincludestsql-mdmd"></a>例 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  次の例では、WITH FORMAT を使用してデータベースの完全バックアップを作成することにより、既存のバックアップを上書きして新しいメディア セットを作成します。 その後、トランザクション ログをバックアップします。 実際の状況では、一連の定期的なログ バックアップを実行する必要があります。 この例では、完全復旧モデルが使用されるように [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースを設定します。  
   
 ```  
@@ -100,7 +104,7 @@ GO
   
  [メンテナンス プラン ウィザードの使用](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Analysis Services データベースのバックアップと復元](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  

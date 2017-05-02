@@ -1,22 +1,26 @@
 ---
 title: "SQL Server での拡張イベントからのターゲット データの詳細表示 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/04/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/04/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 caps.latest.revision: 4
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9d7fcf086b0eb18db72c2d710c061ccee9c01aaf
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server での拡張イベントからのターゲット データの詳細表示
+# <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>SQL Server での拡張イベントからのターゲット データの詳細表示
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -29,7 +33,7 @@ caps.handback.revision: 4
 
 
 
-### 前提条件
+### <a name="prerequisites"></a>前提条件
 
 この記事では、イベント セッションを作成して開始する方法を既に知っていることを前提としています。 イベント セッションを作成する方法については、次の記事の初めの部分で説明されています。
 
@@ -42,7 +46,7 @@ caps.handback.revision: 4
 
 
 
-### Azure SQL Database との違い
+### <a name="differences-with-azure-sql-database"></a>Azure SQL Database との違い
 
 
 Microsoft SQL Server と Azure SQL Database の 2 つの製品における拡張イベントの実装と機能は、かなり類似しています。 ただし、SSMS UI (ユーザー インターフェイス) に影響を与えるいくつかの違いがあります。
@@ -54,7 +58,7 @@ Microsoft SQL Server と Azure SQL Database の 2 つの製品における拡張
 - SSMS UI で **[ライブ データの監視]** チェック ボックスがグレー表示されて無効になっている場合は、その機能を SQL Database に対して使用できないことが理由です。
 
 
-- いくつかの拡張イベントが SQL Server と共にインストールされます。 **[セッション]** ノードの下に、**AlwaysOn_health** とその他の項目がいくつか表示されます。 これらは、SQL Database では存在しないため、SQL Database に接続されているときは表示されません。
+- いくつかの拡張イベントが SQL Server と共にインストールされます。 **[セッション]** ノードの下に、 **AlwaysOn_health** とその他の項目がいくつか表示されます。 これらは、SQL Database では存在しないため、SQL Database に接続されているときは表示されません。
 
 
 この記事は、SQL Server の観点から書かれています。 この記事では、相違点の 1 つである event_file ターゲットを使用します。 その他の相違については、重要な相違または自明でない相違に限定して取り上げています。
@@ -66,20 +70,20 @@ Azure SQL Database に固有の拡張イベントに関するドキュメント�
 
 
 
-## A. [全般] オプション
+## <a name="a-general-options"></a>A. [全般] オプション
 
 
 一般に、拡張オプションは以下の方法でアクセスします。
 
 
 - 通常のメニューの **[ファイル]** > **[開く]** > **[ファイル]**。
-- **[管理]** > **[拡張イベント]** で **[オブジェクト エクスプローラー]** を右クリックする。
+- **[管理]** [拡張イベント] **で** > **[オブジェクト エクスプローラー]**を右クリックする。
 - 特別なメニュー **[拡張イベント]**、および拡張イベント用の特別なツール バー。
 - ターゲット データが表示されたタブ付きペインを右クリックする。
 
 
 
-## B. 表示するターゲット データを SSMS に取り込む
+## <a name="b-bring-target-data-into-ssms-for-display"></a>B. 表示するターゲット データを SSMS に取り込む
 
 
 event_file ターゲット データを SSMS UI に取り込むには、さまざまな方法があります。 event_file ターゲットを指定するときに、そのファイル パスと名前を設定します。
@@ -92,7 +96,7 @@ event_file ターゲット データを SSMS UI に取り込むには、さま�
 
 
 - .XEL の内容は、Notepad.exe で表示できるプレーン テキストではありません。
-  - いくつかの .XEL ファイルを一緒に追加する場合は、メニュー **[ファイル]** > **[開く]** > **[拡張イベント ファイルの結合]** を使用します。
+  - いくつかの .XEL ファイルを一緒に追加する場合は、メニュー **[ファイル]** > **[開く]** > **[拡張イベント ファイルの結合]**を使用します。
 
 
 
@@ -112,7 +116,7 @@ SSMS は、任意のターゲットからのデータを表示できます。 �
 
 
 
-### B.1 メニュー [ファイル] > [開く] > [ファイル] で .XEL を開く
+### <a name="b1-open-xel-with-menu-file--open--file"></a>B.1 メニュー [ファイル] > [開く] > [ファイル] で .XEL を開く
 
 
 標準メニュー **[ファイル]** > **[開く]** > **[ファイル]** を使用して、.XEL ファイルを個別に開くことができます。
@@ -121,7 +125,7 @@ SSMS UI のタブ バーに .XEL ファイルをドラッグ アンド ドロッ
 
 
 
-### B.2 ターゲット データの表示
+### <a name="b2-view-target-data"></a>B.2 ターゲット データの表示
 
 
 **[ターゲット データの表示]** オプションを選択すると、これまでにキャプチャされたデータが表示されます。
@@ -138,11 +142,12 @@ SSMS のタブ付きペインにターゲット データが表示されます�
 ![[対象のターゲット] > [ターゲット データの表示]](../../relational-databases/extended-events/media/xevents-ssms-ui20-viewtargetdata.png)
 
 
-> [AZURE.NOTE] **[ターゲット データの表示]** を選択すると、指定したイベント セッションでの*複数の .XEL ファイルからの蓄積データ*が表示されます。 **開始**-**停止**のサイクルごとにファイルが作成され、より新しい時刻から生成された整数がその名前に埋め込まれますが、各ファイルは同じルート名を共有します。
+> [!NOTE] 
+> **[ターゲット データの表示]** を選択すると、指定したイベント セッションでの*複数の .XEL ファイルからの蓄積データ*が表示されます。 **開始**-**停止** のサイクルごとにファイルが作成され、より新しい時刻から生成された整数がその名前に埋め込まれますが、各ファイルは同じルート名を共有します。
 
 
 
-#### B.3 ライブ データの監視
+#### <a name="b3-watch-live-data"></a>B.3 ライブ データの監視
 
 
 イベント セッションが現在アクティブであれば、ターゲットが受け取っているイベント データをリアルタイムで監視することもできます。
@@ -160,7 +165,7 @@ SSMS のタブ付きペインにターゲット データが表示されます�
 
 
 
-### B.4 sys.fn_xe_file_target_read_file 関数を使用して .XEL を表示する
+### <a name="b4-view-xel-with-sysfnxefiletargetreadfile-function"></a>B.4 sys.fn_xe_file_target_read_file 関数を使用して .XEL を表示する
 
 
 次のシステム関数は、.XEL ファイル内のレコードに対応する XML をバッチ処理で生成できます。
@@ -169,7 +174,7 @@ SSMS のタブ付きペインにターゲット データが表示されます�
 
 
 
-## C. ターゲット データのエクスポート
+## <a name="c-export-the-target-data"></a>C. ターゲット データのエクスポート
 
 
 SSMS にターゲット データがあれば、次のようにしてデータをさまざまな形式にエクスポートできます。
@@ -178,41 +183,41 @@ SSMS にターゲット データがあれば、次のようにしてデータ�
 1. データ表示にフォーカスを移動します。
     - 拡張イベント用の新しいツール バーと新しいメニュー項目が両方ともすぐに表示されます。
 
-    ![表示データのエクスポート: [拡張イベント] > [エクスポート先] > (.csv、または .xel、またはテーブルへ)](/Image/SQL%20Server/xevents-ssms-ui75-menuextevent-exportto-xel.png)
+    ![表示データのエクスポート: [拡張イベント] > [エクスポート先] > (.csv、または .xel、またはテーブルへ)](../../relational-databases/extended-events/media/xevents-ssms-ui75-menuextevent-exportto-xel.png)
 
 2. 新しいメニュー項目 **[拡張イベント]** をクリックします。
-3. **[エクスポート先]** をクリックして、形式を選択します。
+3. **[エクスポート先]**をクリックして、形式を選択します。
 
 
 
-## D. 表示内のデータの操作
+## <a name="d-manipulate-data-in-the-display"></a>D. 表示内のデータの操作
 
 
 SSMS UI には、単にデータをそのまま表示するだけでなく、データを操作する手段がいくつか用意されています。
 
 
 
-### D.1 データ表示内のコンテキスト メニュー
+### <a name="d1-context-menus-in-the-data-display"></a>D.1 データ表示内のコンテキスト メニュー
 
 
 データ表示内の右クリックする場所によって、表示されるコンテキスト メニューが異なります。
 
 
 
-#### D.1.1 データ セルを右クリックする
+#### <a name="d11-right-click-a-data-cell"></a>D.1.1 データ セルを右クリックする
 
 
-次のスクリーン ショットは、データ表示内のセルを右クリックすると表示されるコンテキスト メニューを示しています。 このスクリーン ショットは、**[コピー]** メニュー項目の展開も示しています。
+次のスクリーン ショットは、データ表示内のセルを右クリックすると表示されるコンテキスト メニューを示しています。 このスクリーン ショットは、 **[コピー]** メニュー項目の展開も示しています。
 
 
 ![データ表示内のセルを右クリックする](../../relational-databases/extended-events/media/xevents-ssms-ui25-rightclickcell.png)
 
 
 
-#### D.1.2 列ヘッダーを右クリックする
+#### <a name="d12-right-click-a-column-header"></a>D.1.2 列ヘッダーを右クリックする
 
 
-次のスクリーン ショットは、**timestamp** ヘッダーを右クリックしたときのコンテキスト メニューを示しています。
+次のスクリーン ショットは、 **timestamp** ヘッダーを右クリックしたときのコンテキスト メニューを示しています。
 
 
 ![データ表示内の列ヘッダーを右クリックする また、グリッドを詳細に示しています。](../../relational-databases/extended-events/media/xevents-ssms-ui40-toolbar.png)
@@ -222,7 +227,7 @@ SSMS UI には、単にデータをそのまま表示するだけでなく、デ
 
 
 
-### D.2 列の選択、列のマージ
+### <a name="d2-choose-columns-merge-columns"></a>D.2 列の選択、列のマージ
 
 
 **[列の選択]** オプションを使用して、データ列の表示/非表示を制御できます。 **[列の選択]** メニュー項目は、次のように異なる場所に表示されます。
@@ -232,14 +237,14 @@ SSMS UI には、単にデータをそのまま表示するだけでなく、デ
 - データ表示内のヘッダーのコンテキスト メニュー上。
 
 
-**[列の選択]** をクリックすると、同じ名前のダイアログが表示されます。
+**[列の選択]**をクリックすると、同じ名前のダイアログが表示されます。
 
 
-![[列の選択] ダイアログ ([列のマージ] オプションも含まれる)](/Image/SQL%20Server/xevents-ssms-ui35-choosecolumns.png)
+![[列の選択] ダイアログ ([列のマージ] オプションも含まれる)](../../relational-databases/extended-events/media/xevents-ssms-ui35-choosecolumns.png)
 
 
 
-#### D.2.1 列のマージ
+#### <a name="d21-merge-columns"></a>D.2.1 列のマージ
 
 
 **[列の選択]** ダイアログには、次の目的で複数の列を 1 つにマージするためのセクションがあります。
@@ -249,7 +254,7 @@ SSMS UI には、単にデータをそのまま表示するだけでなく、デ
 
 
 
-### D.3 フィルター
+### <a name="d3-filters"></a>D.3 フィルター
 
 
 拡張イベントの領域では、指定できるフィルターの主な種類として、次の 2 つがあります。
@@ -261,30 +266,30 @@ SSMS UI には、単にデータをそのまま表示するだけでなく、デ
 
 SSMS 表示フィルターは、次のとおりです。
 
-- *時間範囲*フィルター (**timestamp** 列をチェック)。
-- *列の値*フィルター。
+- *時間範囲* フィルター ( **timestamp** 列をチェック)。
+- *列の値* フィルター。
 
 
 時間フィルターと列フィルターの関係は、ブール値 '*AND*' です。
 
 
-![[フィルター] ダイアログの時間範囲フィルターと列フィルター](/Image/SQL%20Server/xevents-ssms-ui45-filters.png)
+![[フィルター] ダイアログの時間範囲フィルターと列フィルター](../../relational-databases/extended-events/media/xevents-ssms-ui45-filters.png)
 
 
 
-### D.4 グループ化と集計
+### <a name="d4-grouping-and-aggregation"></a>D.4 グループ化と集計
 
 
 ある特定の列の値を対応させることによって複数の行を 1 つにグループ化することは、データの概要集計に向けての第一歩です。
 
 
 
-#### D.4.1 グループ化
+#### <a name="d41-grouping"></a>D.4.1 グループ化
 
 
 拡張イベントのツール バーの **[グループ化]** ボタンをクリックすると、ある特定の列を基準に表示データをグループ化できるダイアログが開きます。 次のスクリーン ショットは、*name* 列によるグループ化に使用されているダイアログを示しています。
 
-![ツール バー > [グループ化] ボタンをクリックすると表示される [グループ化] ダイアログ](/Image/SQL%20Server/xevents-ssms-ui53-grouping.png)
+![ツール バー > [グループ化] ボタンをクリックすると表示される [グループ化] ダイアログ](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
 
 グループ化が完了すると、表示の外観が次のように新しくなります。
 
@@ -292,24 +297,26 @@ SSMS 表示フィルターは、次のとおりです。
 
 
 
-#### D.4.2 集計
+#### <a name="d42-aggregation"></a>D.4.2 集計
 
 
 表示データがグループ化されたら、他の列のデータを集計できるようになります。  次のスクリーン ショットは、グループ化されたデータが *count* を基準に集計されていることを示しています。
 
-![ツール バー > [集計] ボタンをクリックすると表示される [集計] ダイアログ](/Image/SQL%20Server/xevents-ssms-ui51-aggregdialogcount.png)
+![ツール バー > [集計] ボタンをクリックすると表示される [集計] ダイアログ](../../relational-databases/extended-events/media/xevents-ssms-ui51-aggregdialogcount.png)
 
 集計が完了すると、表示の外観が次のように新しくなります。
 
-![ツール バー > [集計] ボタンをクリックすると表示される [集計] ダイアログ](/Image/SQL%20Server/xevents-ssms-ui52-aggregnewdisplay.png)
+![ツール バー > [集計] ボタンをクリックすると表示される [集計] ダイアログ](../../relational-databases/extended-events/media/xevents-ssms-ui52-aggregnewdisplay.png)
 
 
 
-### D.5 ランタイム クエリ プランの表示
+### <a name="d5-view-run-time-query-plan"></a>D.5 ランタイム クエリ プランの表示
 
 
-**query_post_execution_showplan** イベントを使用すると、実際のクエリ プランを SSMS UI で調べることができます。 **[詳細]** ペインが表示されているときに、**[クエリ プラン]** タブでクエリ プランのグラフを確認できます。 クエリ プランのノードにカーソルを合わせると、そのノードのプロパティ名とその値の一覧が表示されます。
+**query_post_execution_showplan** イベントを使用すると、実際のクエリ プランを SSMS UI で調べることができます。 **[詳細]** ペインが表示されているときに、 **[クエリ プラン]** タブでクエリ プランのグラフを確認できます。 クエリ プランのノードにカーソルを合わせると、そのノードのプロパティ名とその値の一覧が表示されます。
 
 
 ![あるノードのプロパティの一覧が表示されているクエリ プラン](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
+
+
 

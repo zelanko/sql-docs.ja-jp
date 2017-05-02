@@ -1,28 +1,32 @@
 ---
 title: "XML スキーマ コレクションに対する権限の許可 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XML スキーマ コレクション [SQL Server] の権限の付与"
-  - "ALTER 権限"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- granting permissions [SQL Server], XML schema collections
+- ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c89c6a8322e8922a7d0a2d59ea686a2d703947a
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML スキーマ コレクションに対する権限の許可
+# <a name="grant-permissions-on-an-xml-schema-collection"></a>XML スキーマ コレクションに対する権限の許可
   XML スキーマ コレクションを作成する権限、および XML スキーマ コレクション オブジェクトに対する権限を許可できます。  
   
-## XML スキーマ コレクションを作成する権限の許可  
+## <a name="granting-permission-to-create-an-xml-schema-collection"></a>XML スキーマ コレクションを作成する権限の許可  
  XML スキーマ コレクションを作成するには、次の権限が必要です。  
   
 -   プリンシパルは、データベースレベルの CREATE XML SCHEMA COLLECTION 権限を必要とします。  
@@ -47,7 +51,7 @@ caps.handback.revision: 32
   
  リレーショナル スキーマの所有者は、そのスキーマで作成される XML スキーマ コレクションの所有者になります。 その結果、この所有者には XML スキーマ コレクションに対するフル コントロール権限が許可されます。 したがって、この所有者は XML スキーマ コレクションの変更も、xml 列の型指定も、XML スキーマ コレクションの削除も行えます。  
   
-## XML スキーマ コレクション オブジェクトの権限の許可  
+## <a name="granting-permissions-on-an-xml-schema-collection-object"></a>XML スキーマ コレクション オブジェクトの権限の許可  
  XML スキーマ コレクションに対して許可できる権限は次のとおりです。  
   
 -   ALTER 権限。ALTER XML SCHEMA COLLECTION ステートメントを使用して既存の XML スキーマ コレクションのコンテンツを変更する場合に必要です。  
@@ -60,13 +64,13 @@ caps.handback.revision: 32
   
 -   VIEW DEFINITION 権限。このコレクションに対する ALTER 権限、REFERENCES 権限、または CONTROL 権限のいずれかがあれば、XML_SCHEMA_NAMESPACE またはカタログ ビューのどちらかを使用して XML スキーマ コレクションの内容に対してクエリ実行できるようになります。  
   
--   EXECUTE 権限。**xml** 型の列、変数、およびパラメーターの型指定または制約を定義している XML スキーマ コレクションに対して、プリンシパルが挿入または更新した値を検証するために必要です。 また、これらの列や変数に格納されている XML に対してクエリを実行する場合にも必要な権限です。  
+-   EXECUTE 権限。 **xml** 型の列、変数、およびパラメーターの型指定または制約を定義している XML スキーマ コレクションに対して、プリンシパルが挿入または更新した値を検証するために必要です。 また、これらの列や変数に格納されている XML に対してクエリを実行する場合にも必要な権限です。  
   
-## 使用例  
+## <a name="examples"></a>使用例  
  次の例に示すシナリオでは、XML スキーマ権限のしくみを説明します。 各例では、必要なテスト データベース、リレーショナル スキーマ、およびログインを作成します。 それらのログインには、必要な XML スキーマ コレクション権限が許可されています。 各例の最後には、必要なクリーン アップを行います。  
   
-### A. XML スキーマ コレクションを作成する権限の許可  
- 次の例では、権限を許可することにより、プリンシパルが XML スキーマ コレクションを作成できるようにする方法を説明しています。 この例では、サンプル データベースとテスト ユーザー `TestLogin1` を作成します。 `TestLogin1` に、リレーショナル スキーマに対する `ALTER` 権限と、データベースに対する `CREATE XML SCHEMA COLLECTION` 権限を許可します。 これらの権限を使用して、`TestLogin1` はサンプルの XML スキーマ コレクションを正常に作成できます。  
+### <a name="a-granting-permissions-to-create-an-xml-schema-collection"></a>A. XML スキーマ コレクションを作成する権限の許可  
+ 次の例では、権限を許可することにより、プリンシパルが XML スキーマ コレクションを作成できるようにする方法を説明しています。 この例では、サンプル データベースとテスト ユーザー `TestLogin1`を作成します。 `TestLogin1` に、リレーショナル スキーマに対する `ALTER` 権限と、データベースに対する `CREATE XML SCHEMA COLLECTION` 権限を許可します。 これらの権限を使用して、 `TestLogin1` はサンプルの XML スキーマ コレクションを正常に作成できます。  
   
 ```  
 SETUSER  
@@ -119,10 +123,10 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### B. 既存の XML スキーマ コレクションを使用する権限の許可  
+### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>B. 既存の XML スキーマ コレクションを使用する権限の許可  
  次の例では、XML スキーマ コレクションの権限モデルを詳しく説明しています。 XML スキーマ コレクションの作成と使用には、各種の権限が必要であることがわかります。  
   
- この例では、テスト データベースとログイン `TestLogin1` を作成します。 `TestLogin1` で、データベースに XML スキーマ コレクションを作成します。 次に、テーブルを作成し、XML スキーマ コレクションを使用して、型指定された xml 列を作成します。 その後、データを挿入し、クエリを実行します。 次のコードに示すように、これらのどの手順でも正しいスキーマ権限を必要とします。  
+ この例では、テスト データベースとログイン `TestLogin1`を作成します。 `TestLogin1` で、データベースに XML スキーマ コレクションを作成します。 次に、テーブルを作成し、XML スキーマ コレクションを使用して、型指定された xml 列を作成します。 その後、データを挿入し、クエリを実行します。 次のコードに示すように、これらのどの手順でも正しいスキーマ権限を必要とします。  
   
 ```  
 SETUSER  
@@ -236,8 +240,8 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### C. XML スキーマ コレクションに対する ALTER 権限の許可  
- データベース内の既存の XML スキーマ コレクションを変更するには、ユーザーに ALTER 権限が必要です。 次の例では、`ALTER` 権限を許可する方法を示します。  
+### <a name="c-granting-alter-permission-on-an-xml-schema-collection"></a>C. XML スキーマ コレクションに対する ALTER 権限の許可  
+ データベース内の既存の XML スキーマ コレクションを変更するには、ユーザーに ALTER 権限が必要です。 次の例では、 `ALTER` 権限を許可する方法を示します。  
   
 ```  
 SETUSER  
@@ -311,20 +315,20 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### D. XML スキーマ コレクションに対する TAKE OWNERSHIP 権限の許可  
+### <a name="d-granting-take-ownership-permission-on-an-xml-schema-collection"></a>D. XML スキーマ コレクションに対する TAKE OWNERSHIP 権限の許可  
  次の例では、XML スキーマの所有権を特定のユーザーから別のユーザーに移す方法を説明しています。 より興味深い例にするために、この例の 2 人のユーザーは異なる既定リレーショナル スキーマを使用します。  
   
  この例の内容は次のとおりです。  
   
--   2 つのリレーショナル スキーマ `dbo` および `myOtherDBSchema` を備えた 1 つのデータベースを作成します。  
+-   2 つのリレーショナル スキーマ `dbo` および `myOtherDBSchema`を備えた 1 つのデータベースを作成します。  
   
--   `TestLogin1` と `TestLogin2` という 2 人のユーザーを作成します。 `TestLogin2` を、`myOtherDBSchema` リレーショナル スキーマの所有者にします。  
+-   `TestLogin1` と `TestLogin2`という 2 人のユーザーを作成します。 `TestLogin2` を、 `myOtherDBSchema` リレーショナル スキーマの所有者にします。  
   
--   `TestLogin1` は、`dbo` リレーショナル スキーマに XML スキーマ コレクションを作成します。  
+-   `TestLogin1` は、 `dbo` リレーショナル スキーマに XML スキーマ コレクションを作成します。  
   
--   `TestLogin1` はその XML スキーマ コレクションに対する `TAKE OWNERSHIP` 権限を `TestLogin2` に許可します。  
+-   `TestLogin1` はその XML スキーマ コレクションに対する `TAKE OWNERSHIP` 権限を `TestLogin2`に許可します。  
   
--   `TestLogin2` は、`myOtherDBSchema` の XML スキーマ コレクションの所有者になります。このとき、XML スキーマ コレクションのリレーショナル スキーマは変更されません。  
+-   `TestLogin2` は、 `myOtherDBSchema`の XML スキーマ コレクションの所有者になります。このとき、XML スキーマ コレクションのリレーショナル スキーマは変更されません。  
   
 ```  
 CREATE LOGIN TestLogin1 with password='SQLSvrPwd1'  
@@ -429,7 +433,7 @@ DROP LOGIN TestLogin2
 go   
 ```  
   
-### E. XML スキーマ コレクションに対する VIEW DEFINITION 権限の許可  
+### <a name="e-granting-view-definition-permission-on-an-xml-schema-collection"></a>E. XML スキーマ コレクションに対する VIEW DEFINITION 権限の許可  
  次の例では、XML スキーマ コレクションに対する VIEW DEFINITION 権限を許可する方法を示します。  
   
 ```  
@@ -501,7 +505,7 @@ SELECT XML_SCHEMA_NAMESPACE(N'dbo',N'MySC')
 GO  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [XML データ &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML スキーマ コレクション &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   

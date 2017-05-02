@@ -1,24 +1,28 @@
 ---
 title: "FileTable と他の SQL Server 機能の互換性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], 他の機能の使用"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f6dc92bd0a4af006b914a6f7af7e898c84c5957b
+ms.lasthandoff: 04/11/2017
+
 ---
-# FileTable と他の SQL Server 機能の互換性
+# <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable と他の SQL Server 機能の互換性
   FileTable と他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]機能との連携について説明します。  
   
 ##  <a name="alwayson"></a> AlwaysOn 可用性グループと FileTable  
@@ -26,7 +30,7 @@ caps.handback.revision: 19
   
 -   FileTable 機能は [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]で部分的にサポートされています。 フェールオーバー後、FileTable データはプライマリ レプリカ上でアクセスできますが、読み取り可能なセカンダリ レプリカ上ではアクセスできません。  
   
-    > **注:** フェールオーバー後はすべての FILESTREAM 機能がサポートされることに注意してください。 FILESTREAM データは読み取り可能なセカンダリ レプリカと新しいプライマリの両方でアクセスできます。  
+    > **注:**  フェールオーバー後はすべての FILESTREAM 機能がサポートされることに注意してください。 FILESTREAM データは読み取り可能なセカンダリ レプリカと新しいプライマリの両方でアクセスできます。  
   
 -   FILESTREAM および FileTable 関数は、コンピューター名ではなく仮想ネットワーク名 (VNN) のやり取りを行います。 関数の詳細については、「[Filestream および FileTable 関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md)」を参照してください。  
   
@@ -117,7 +121,8 @@ caps.handback.revision: 19
   
  包含データベースの特定の機能 (包含ユーザーなど) を使用する場合は、データベースの包含を PARTIAL に設定します。 ただし、この場合、一部のデータベース設定はデータベースに含まれないため、データベースを移動するときに自動的には移動されないことに注意してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [FileTable の管理](../../relational-databases/blob/manage-filetables.md)  
   
   
+

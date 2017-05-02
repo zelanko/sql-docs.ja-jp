@@ -1,37 +1,41 @@
 ---
 title: "ロックの大半を取得しているオブジェクトを見つける | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "オブジェクト [SQL Server], 拡張イベント"
-  - "xe"
-  - "拡張イベント [SQL Server], ロック"
-  - "オブジェクト [SQL Server], ロック"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- objects [SQL Server], extended events
+- xe
+- extended events [SQL Server], locks
+- objects [SQL Server], locks
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fd171596bf52ebc25887b378103ffe751955fd03
+ms.lasthandoff: 04/11/2017
+
 ---
-# ロックの大半を取得しているオブジェクトを見つける
+# <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>ロックの大半を取得しているオブジェクトを見つける
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   データベース管理者は、データベース パフォーマンスを低下させているロックのソースを特定しなければならないことがよくあります。  
   
  たとえば、実稼動サーバーのボトルネックを監視しているとします。 競合の多いリソースがあるため、それらのオブジェクトで取得されているロックの数を調べようと思います。 最も頻繁にロックされているオブジェクトを特定できれば、競合するオブジェクトへのアクセスを最適化する手順を実行できます。  
   
- そのためには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターを使用します。  
+ そのためには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディターを使用します。  
   
-### ロックの大半を取得しているオブジェクトを見つけるには  
+### <a name="to-find-the-objects-that-have-the-most-locks"></a>ロックの大半を取得しているオブジェクトを見つけるには  
   
 1.  クエリ エディターで、次のステートメントを実行します。  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 15
   
 -   lock_count  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   

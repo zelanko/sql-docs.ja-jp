@@ -1,33 +1,37 @@
 ---
 title: "データの同期 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "同期 [SQL Server レプリケーション], 同期について"
-  - "マージ レプリケーションの同期 [SQL Server レプリケーション]"
-  - "スクリプト [SQL Server レプリケーション], 同期および"
-  - "同期 [SQL Server レプリケーション]"
-  - "スナップショット レプリケーション [SQL Server], 同期"
-  - "トランザクション レプリケーション, 同期"
-  - "サブスクリプション [SQL Server レプリケーション], 同期"
-  - "要求時スクリプト実行"
-  - "レプリケーション [SQL Server], 同期"
-  - "スクリプト [SQL Server レプリケーション]"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- synchronization [SQL Server replication], about synchronization
+- merge replication synchronization [SQL Server replication]
+- scripts [SQL Server replication], synchronization and
+- synchronization [SQL Server replication]
+- snapshot replication [SQL Server], synchronization
+- transactional replication, synchronization
+- subscriptions [SQL Server replication], synchronizing
+- on demand script execution
+- replication [SQL Server], synchronization
+- scripts [SQL Server replication]
 ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccda32ba9e85f698a2a642d2dd52773e78ae6d06
+ms.lasthandoff: 04/11/2017
+
 ---
-# データの同期
+# <a name="synchronize-data"></a>データの同期
   データの同期とは、初期スナップショットをサブスクライバーで適用した後に、パブリッシャーとサブスクライバーの間でデータとスキーマ変更を反映する処理のことです。 同期は、次のように実行されます。  
   
 -   連続して実行。これは通常、トランザクション レプリケーションの場合です。  
@@ -46,28 +50,28 @@ caps.handback.revision: 36
   
 -   マージ レプリケーション。 同期とは、マージ エージェントがサブスクライバーからパブリッシャーに変更をアップロードし、パブリッシャーからサブスクライバーに変更をダウンロードすることを意味します。 競合が存在する場合は、検出されて解決されます。 データは集約され、最終的にパブリッシャーとすべてのサブスクライバーでデータ値が同じになります。 競合が検出されて解決された場合、一部のユーザーがコミットした作業は、定義されたポリシーに応じて、競合が解決するように変更されます。  
   
- スナップショット パブリケーションでは、同期が発生するたびに、サブスクライバーでスキーマが完全に更新されます。そのため、すべてのスキーマ変更がサブスクライバーに適用されます。 トランザクション レプリケーションとマージ レプリケーションでも、最も一般的なスキーマ変更がサポートされます。 詳細については、次を参照してください。 [パブリケーション データベースでスキーマ変更を行う](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)です。  
+ スナップショット パブリケーションでは、同期が発生するたびに、サブスクライバーでスキーマが完全に更新されます。そのため、すべてのスキーマ変更がサブスクライバーに適用されます。 トランザクション レプリケーションとマージ レプリケーションでも、最も一般的なスキーマ変更がサポートされます。 詳細については、「[パブリケーション データベースでのスキーマの変更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
   
- プッシュ サブスクリプションを同期するには、次を参照してください。 [プッシュ サブスクリプションを同期](../../relational-databases/replication/synchronize-a-push-subscription.md)です。  
+ プッシュ サブスクリプションを同期するには、「 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)」を参照してください。  
   
- プル サブスクリプションを同期するには、次を参照してください。 [プル サブスクリプションを同期](../../relational-databases/replication/synchronize-a-pull-subscription.md)です。  
+ プル サブスクリプションを同期するには、「 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)」を参照してください。  
   
- 同期スケジュールを設定するを参照してください。 [同期スケジュールの指定](../../relational-databases/replication/specify-synchronization-schedules.md)です。  
+ 同期のスケジュールを設定するには、「 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。  
   
  **同期の競合を表示および解決するには**  
   
--   [!含める [ssManStudioFull] (../Token/ssManStudioFull_md.md)]: [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view and resolve data conflicts for merge publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   [!含める [ssManStudioFull] (../Token/ssManStudioFull_md.md)]: [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
-## 同期中のコード実行  
+## <a name="executing-code-during-synchronization"></a>同期中のコード実行  
  レプリケーションでは、同期中にコードを実行する方法が 2 つサポートされています。  
   
--   要求時スクリプト実行は、トランザクション レプリケーションおよびマージ レプリケーションでサポートされています。 要求時スクリプト実行を使用すると、同期中に実行する SQL スクリプトを指定できます。 スクリプトが、サブスクライバーにコピーを使用して実行 **sqlcmd** 同期プロセスの開始時です。 スクリプトは、レプリケートされた変更をサブスクライバーに適用するときに、それらの変更へはアクセスしません。 詳細については、次を参照してください。 [同期中にスクリプトを実行する (&) #40 です。レプリケーション TRANSACT-SQL プログラミングと #41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)です。  
+-   要求時スクリプト実行は、トランザクション レプリケーションおよびマージ レプリケーションでサポートされています。 要求時スクリプト実行を使用すると、同期中に実行する SQL スクリプトを指定できます。 スクリプトはサブスクライバーにコピーされ、同期処理の開始時に **sqlcmd** を使用して実行されます。 スクリプトは、レプリケートされた変更をサブスクライバーに適用するときに、それらの変更へはアクセスしません。 詳細については、「[同期中のスクリプトの実行 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)」を参照してください。  
   
--   ビジネス ロジック ハンドラーは、マージ レプリケーションでサポートされています。 ビジネス ロジック ハンドラー フレームワークを使用すると、マネージ コードのアセンブリを記述して、マージ同期処理中に呼び出すことができます。 このアセンブリには、データの変更、競合、およびエラーなど、同期中に発生するさまざまな状況に対処するためのビジネス ロジックを記述できます。 詳細については、次を参照してください。 [マージ同期中にビジネス ロジックを実行](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)します。  
+-   ビジネス ロジック ハンドラーは、マージ レプリケーションでサポートされています。 ビジネス ロジック ハンドラー フレームワークを使用すると、マネージ コードのアセンブリを記述して、マージ同期処理中に呼び出すことができます。 このアセンブリには、データの変更、競合、およびエラーなど、同期中に発生するさまざまな状況に対処するためのビジネス ロジックを記述できます。 詳細については、「[Execute Business Logic During Merge Synchronization](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)」(マージ同期中のビジネス ロジックの実行) をご覧ください。  
   
-## 参照  
- [マージ レプリケーションの競合の検出と解決](../../relational-databases/replication/merge/detect-and-resolve-merge-replication-conflicts.md)  
+## <a name="see-also"></a>参照  
+ [マージ レプリケーションの競合の検出と解決](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
   
   

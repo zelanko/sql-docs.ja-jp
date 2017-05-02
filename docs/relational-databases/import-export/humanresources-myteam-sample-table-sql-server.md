@@ -1,30 +1,34 @@
 ---
 title: "HumanResources.myTeam サンプル テーブル (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "myTeam サンプル テーブル [SQL Server]"
-  - "一括インポート [SQL Server], 例"
-  - "一括エクスポート [SQL Server], 例"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- myTeam sample table [SQL Server]
+- bulk importing [SQL Server], examples
+- bulk exporting [SQL Server], examples
 ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dd4e971fa001faeafd26468a80e9a95f18dc261e
+ms.lasthandoff: 04/11/2017
+
 ---
-# HumanResources.myTeam サンプル テーブル (SQL Server)
-  「[一括データのインポートおよびエクスポート](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)」のコード例の大部分では、**myTeam** という名前の特殊なテスト用テーブルが必要になります。 これらのコード例を実行する前に、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの **HumanResources** スキーマに **myTeam** テーブルを作成する必要があります。  
+# <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam サンプル テーブル (SQL Server)
+  「 [一括データのインポートおよびエクスポート](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) 」のコード例の大部分では、 **myTeam**という名前の特殊なテスト用テーブルが必要になります。 これらのコード例を実行する前に、 **データベースの** HumanResources **スキーマに** myTeam [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルを作成する必要があります。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]  は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のサンプル データベースの 1 つです。  
+>  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のサンプル データベースの 1 つです。  
   
  **myTeam** には、次の列が含まれています。  
   
@@ -33,7 +37,7 @@ caps.handback.revision: 35
 |**EmployeeID**|**smallint**|不可|行の主キー。 チーム メンバーの従業員 ID。|  
 |**名前**|**nvarchar (50)**|不可|チーム メンバーの名前。|  
 |**[タイトル]**|**nvarchar (50)**|[可]|チームにおける従業員の肩書き。|  
-|**背景情報**|**nvarchar (50)**|不可|行が最後に更新された日時  (既定値)。|  
+|**背景情報**|**nvarchar (50)**|不可|行が最後に更新された日時 (既定値)。|  
   
  **HumanResources.myTeam テーブルを作成するには**  
   
@@ -68,9 +72,9 @@ caps.handback.revision: 35
     ```  
   
     > [!NOTE]  
-    >  これらのステートメントでは、4 番目の列 `Background` がスキップされます。 この行には既定値が設定されています。 この列をスキップすると、この `INSERT` ステートメントを実行した際に、この列が空欄のままになります。  
+    >  これらのステートメントでは、4 番目の列 `Background`がスキップされます。 この行には既定値が設定されています。 この列をスキップすると、この `INSERT` ステートメントを実行した際に、この列が空欄のままになります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データの一括インポートと一括エクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)  
   
   

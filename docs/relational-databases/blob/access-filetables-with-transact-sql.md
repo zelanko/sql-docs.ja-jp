@@ -1,24 +1,28 @@
 ---
 title: "Transact SQL を使用した FileTable へのアクセス | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], T-SQL を使用したファイルへのアクセス"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], accessing files with T-SQL
 ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 33eb3adc0489d8cb904fee0d47d0586a64b81445
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transact SQL を使用した FileTable へのアクセス
+# <a name="access-filetables-with-transact-sql"></a>Transact SQL を使用した FileTable へのアクセス
   [!INCLUDE[tsql](../../includes/tsql-md.md)] データ操作言語 (DML) コマンドによる FileTable の操作について説明します。  
   
 ##  <a name="BasicsInsert"></a> FileTable での INSERT 操作  
@@ -35,7 +39,7 @@ caps.handback.revision: 13
   
 -   すべてのユーザー定義データの更新が許可されます。  
   
--   INSERT ステートメントで **name**、**path_locator**、**parent_path_locator**、またはファイル属性を設定する場合、システム定義の制約が適用されます。  
+-   INSERT ステートメントで **name**、 **path_locator**、 **parent_path_locator**、またはファイル属性を設定する場合、システム定義の制約が適用されます。  
   
 -   **file_stream** 列の FILESTREAM データは、他の列 (timestamps を含む) に一切影響を及ぼさずに更新することができます。  
   
@@ -55,19 +59,19 @@ caps.handback.revision: 13
   
     -   親ディレクトリ内での名前の一意性が強制されます。  
   
--   **path_locator** あるいは **parent_path_locator** を設定または変更することによってファイル (またはディレクトリ) の場所を設定または変更した場合:  
+-   **path_locator** あるいは **parent_path_locator**を設定または変更することによってファイル (またはディレクトリ) の場所を設定または変更した場合:  
   
     -   一意性が適用されます。  
   
-    -   ディレクトリおよびファイルの階層ツリーの一貫性が強制されます (**path_locator** 値と **parent_path_locator** 値の一貫性を含む)。  
+    -   ディレクトリおよびファイルの階層ツリーの一貫性が強制されます ( **path_locator** 値と **parent_path_locator** 値の一貫性を含む)。  
   
--   **file_stream** 列が null の場合、**is_directory** の値を true に設定することはできません。 **file_stream** 列のデータは、その行がディレクトリではなくファイルを表していることを示します。  
+-   **file_stream** 列が null の場合、 **is_directory** の値を true に設定することはできません。 **file_stream** 列のデータは、その行がディレクトリではなくファイルを表していることを示します。  
   
 -   ファイル属性列は NULL にできません。 NOT NULL 制約が既定値で適用されます。  
   
--   **last_access_time** の値が **last_write_time** や **creation_time** よりも前に来ることはできません。  
+-   **last_access_time** の値が **last_write_time** や **creation_time**よりも前に来ることはできません。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [FileTable へのファイルの読み込み](../../relational-databases/blob/load-files-into-filetables.md)   
  [FileTable 内のディレクトリとパスの操作](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [ファイル I/O API を使用した FileTable へのアクセス](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)   

@@ -1,26 +1,30 @@
 ---
 title: "データの再パブリッシュ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データの再パブリッシュ"
-  - "パブリッシング [SQL Server レプリケーション], サブスクライバー"
-  - "サブスクライバー [SQL Server レプリケーション], データの再パブリッシュ"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- republishing data
+- publishing [SQL Server replication], Subscribers
+- Subscribers [SQL Server replication], republishing data
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9c3b9fb2eb0eb1b8051e37a46c4dcedcfbb8479d
+ms.lasthandoff: 04/11/2017
+
 ---
-# データの再パブリッシュ
+# <a name="republish-data"></a>データの再パブリッシュ
   再パブリッシュ モデルでは、パブリッシャーがデータをサブスクライバーに送信し、このサブスクライバーがそのデータを任意の数の他のサブスクライバーに再パブリッシュします。 これは、パブリッシャーが、低速、またはコストが高い通信リンクを使用してサブスクライバーにデータを送信する必要がある場合に役立ちます。 多数のサブスクライバーがそのリンクの端末に接続されている場合には、リパブリッシャーの使用によりディストリビューションの負荷の大部分がそのリンク側に移ります。  
   
  データの再パブリッシュを行うには、以下の手順を実行します。  
@@ -38,11 +42,11 @@ caps.handback.revision: 34
 6.  サブスクリプションを初期化します。  
   
 > [!NOTE]  
->  再パブリッシュ トポロジでマージ レプリケーションを使用する場合、すべての再パブリッシュ サブスクライバーはサーバー サブスクリプションを使用する必要があります。 サブスクリプションの種類の詳細については、次を参照してください。 [パブリケーションをサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)します。  
+>  再パブリッシュ トポロジでマージ レプリケーションを使用する場合、すべての再パブリッシュ サブスクライバーはサーバー サブスクリプションを使用する必要があります。 サブスクリプションの種類の詳細については、「[パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)」を参照してください。  
   
  以下の図では、パブリッシャーとリパブリッシャーの両方が、各自のローカル ディストリビューターとして動作します。 それぞれがリモート ディストリビューターを使用するように設定された場合は、各ディストリビューターは、低速またはコストが高い通信リンクの、それぞれのパブリッシャーと同じ側に置く必要があります。 パブリッシャーとリモート ディストリビューターは、信頼性の高い、高速通信リンクで接続する必要があります。  
   
- ![データの再パブリッシュ](../../relational-databases/replication/media/repl-06a.gif "データの再パブリッシュ")  
+ ![Republishing data](../../relational-databases/replication/media/repl-06a.gif "Republishing data")  
   
  どのサーバーも、パブリッシャーとサブスクライバーの両方として動作できます。 たとえば、以下の図では、ロンドンにあるテーブルを、シカゴ、ニューヨーク、サンディエゴ、シアトルの 4 つの米国の都市に配信する必要がある場合のパブリケーションを示しています。 この場合は、ニューヨークのサイトが以下の条件を満たしているので、ロンドンでパブリッシュされたテーブルをニューヨークにあるサーバーがサブスクライブするように選択します。  
   
@@ -63,9 +67,9 @@ caps.handback.revision: 34
 |マージ パブリケーション|マージ サブスクリプション/マージ パブリケーション|マージ サブスクリプション|  
 |マージ パブリケーション|マージ サブスクリプション/トランザクション パブリケーション|トランザクション サブスクリプション|  
   
- \*設定する必要があります、 **@published_in_tran_pub** マージ パブリケーションのプロパティです。 既定では、トランザクション レプリケーションにより、サブスクライバーでテーブルが読み取り専用として処理されることが予測されます。 マージ レプリケーションにより、トランザクション サブスクリプションのテーブルでデータの変更が行われる場合、データが集約できなくなる可能性があります。 このリスクを回避するため、マージ パブリケーションではこのようなテーブルをダウンロードのみとして指定することをお勧めします。 これはマージ サブスクライバーがテーブルにデータの変更をアップロードすることを防ぎます。 詳細については、次を参照してください。 [Download-Only アーティクルを使用したマージ レプリケーション パフォーマンスの最適化](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)します。  
+ \*マージ パブリケーションの **@published_in_tran_pub** プロパティを設定する必要があります。 既定では、トランザクション レプリケーションにより、サブスクライバーでテーブルが読み取り専用として処理されることが予測されます。 マージ レプリケーションにより、トランザクション サブスクリプションのテーブルでデータの変更が行われる場合、データが集約できなくなる可能性があります。 このリスクを回避するため、マージ パブリケーションではこのようなテーブルをダウンロードのみとして指定することをお勧めします。 これはマージ サブスクライバーがテーブルにデータの変更をアップロードすることを防ぎます。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ディストリビューションの構成](../../relational-databases/replication/configure-distribution.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)   

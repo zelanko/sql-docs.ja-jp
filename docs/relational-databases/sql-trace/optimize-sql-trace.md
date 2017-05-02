@@ -1,38 +1,42 @@
 ---
 title: "SQL トレースの最適化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "時間 [SQL Server], トレース"
-  - "SQL トレース, パフォーマンス"
-  - "トレース [SQL Server], パフォーマンス"
-  - "トレースのパフォーマンス [SQL Server]"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time [SQL Server], traces
+- SQL Trace, performance
+- traces [SQL Server], performance
+- performance [SQL Server], trace
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2eb701bd4ade246ebaf7b796a49c207b0f89e5e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL トレースの最適化
+# <a name="optimize-sql-trace"></a>SQL トレースの最適化
   SQL トレースを実行すると、データを収集するためにシステム リソースが使用されるのでパフォーマンス コストが発生しますが、このコストはさまざまな方法で最小限に抑えることができます。 トレースによって発生するパフォーマンス コストを最小限に抑えるには、次のようにしてください。  
   
 -   トレースの実行には、コマンド プロンプトを使用することを検討してください。 グラフィカル ユーザー インターフェイスを使用すると、パフォーマンスが低下します。 詳細については、「[sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)」を参照してください。  
   
 -   頻繁に発生するイベントは含めないようにします。 可能な場合は、特定のイベント クラスやフィルターを使用してトレースの範囲を狭くします。 収集するトレース イベントが少ないほど、トレースをサポートするために必要なシステム リソースも少なくて済みます。  
   
--   関連性のあるデータを提供するイベントだけを収集するようにトレースの焦点を絞ります。 たとえば、トレースでデッドロックを特定する場合は、**Lock:Acquired** イベント クラスではなく **Lock:Deadlock** イベント クラスを使用します。 これらのイベント クラスを両方含めると、取得したすべてのロックをトレースしなければならないため、実行コストが倍増します。  
+-   関連性のあるデータを提供するイベントだけを収集するようにトレースの焦点を絞ります。 たとえば、トレースでデッドロックを特定する場合は、 **Lock:Acquired** イベント クラスではなく **Lock:Deadlock** イベント クラスを使用します。 これらのイベント クラスを両方含めると、取得したすべてのロックをトレースしなければならないため、実行コストが倍増します。  
   
--   重複データは収集しないようにします。 たとえば、**SQL:BatchStarted** と **SQL:BatchCompleted** を収集する場合は、**SQL:BatchStarted** イベント クラスのテキスト データだけを収集することにより、結果セットのサイズを最小限に抑えることができます。  
+-   重複データは収集しないようにします。 たとえば、 **SQL:BatchStarted** と **SQL:BatchCompleted**を収集する場合は、 **SQL:BatchStarted** イベント クラスのテキスト データだけを収集することにより、結果セットのサイズを最小限に抑えることができます。  
   
--   トレース定義でフィルターを使用します。 たとえば、アドホック クエリの際のパフォーマンスの低下を報告しているユーザーがいる場合は、**LoginName** に対するフィルターを作成します。 **LoginName** がこのユーザー名と一致するイベントだけを含めるように、フィルターを設定します。  
+-   トレース定義でフィルターを使用します。 たとえば、アドホック クエリの際のパフォーマンスの低下を報告しているユーザーがいる場合は、 **LoginName**に対するフィルターを作成します。 **LoginName** がこのユーザー名と一致するイベントだけを含めるように、フィルターを設定します。  
   
  パフォーマンスに重大な影響を与えるイベントのトレースを実行する必要がある場合は、次のいずれかの方法に従って、サーバーのパフォーマンスに対する影響を最小限に抑えるようにしてください。  
   
@@ -40,9 +44,9 @@ caps.handback.revision: 25
   
 -   トレース結果のサイズの制限。 トレース結果のサイズの上限は、ファイルの最大サイズに設定できます。 この方法を採用すると、ファイル サイズの上限に達した時点でパフォーマンス コストが発生しなくなります (ファイル ロールオーバーが有効になっていない場合)。  
   
--   返されるイベントの数の制限。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用すると、トレースをテーブルに保存し、行の最大数を設定することにより、返されるイベントの数を制限することができます。 最大行数に達した後も、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の画面にはトレース結果が引き続き表示されますが、結果をテーブルに記録することによるコストは発生しなくなります。  
+-   返されるイベントの数の制限。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用すると、トレースをテーブルに保存し、行の最大数を設定することにより、返されるイベントの数を制限することができます。 最大行数に達した後も、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の画面にはトレース結果が引き続き表示されますが、結果をテーブルに記録することによるコストは発生しなくなります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [トレースへのフィルターの適用](../../relational-databases/sql-trace/filter-a-trace.md)  
   
   

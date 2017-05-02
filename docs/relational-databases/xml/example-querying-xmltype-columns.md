@@ -1,27 +1,31 @@
 ---
 title: "例 : XML 型の列のクエリ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RAW モード、XML のクエリの例"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RAW mode, querying XML example
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c4b6c214f3097fce58d3f2ac131642503c62641
+ms.lasthandoff: 04/11/2017
+
 ---
-# 例 : XML 型の列のクエリ
-  次のクエリには、**xml** 型の列が含まれています。 クエリでは、**xml** 型の `Instructions` 列から、製品モデル ID、名前、および最初の場所での製造手順を取得しています。  
+# <a name="example-querying-xmltype-columns"></a>例 : XML 型の列のクエリ
+  次のクエリには、 **xml** 型の列が含まれています。 クエリでは、 `Instructions` xml **型の** 列から、製品モデル ID、名前、および最初の場所での製造手順を取得しています。  
   
-## 例  
+## <a name="example"></a>例  
   
 ```  
 USE AdventureWorks2012;  
@@ -75,7 +79,7 @@ go
 </ProductModelData>  
 ```  
   
- 次のクエリでは、`ELEMENTS` ディレクティブが指定されています。 したがって、返される結果は要素中心になります。 `XSINIL` オプションを `ELEMENTS` ディレクティブと共に指定すると、行セット内の対応する列が NULL であっても、<`ManuSteps`> 要素が返されます。  
+ 次のクエリでは、 `ELEMENTS` ディレクティブが指定されています。 したがって、返される結果は要素中心になります。 `XSINIL` オプションを `ELEMENTS` ディレクティブと共に指定すると、行セット内の対応する列が NULL であっても、<`ManuSteps`> 要素が返されます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -112,7 +116,7 @@ go
 </MyRoot>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [FOR XML での RAW モードの使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

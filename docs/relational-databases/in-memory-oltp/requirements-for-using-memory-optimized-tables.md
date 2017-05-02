@@ -1,28 +1,32 @@
 ---
 title: "メモリ最適化テーブルを使用するための要件 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 caps.latest.revision: 65
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d30c5b808c13258e784187182eab23b0a50c76e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# メモリ最適化テーブルを使用するための要件
+# <a name="requirements-for-using-memory-optimized-tables"></a>メモリ最適化テーブルを使用するための要件
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  Azure DB でのインメモリ OLTP の使用については、「 [SQL Database でのインメモリ (プレビュー) の使用](http://azure.microsoft.com/documentation/articles/sql-database-in-memory/)」を参照してください。  
+  Azure DB でのインメモリ OLTP の使用については、「[SQL Database でのインメモリ (プレビュー) の使用](http://azure.microsoft.com/documentation/articles/sql-database-in-memory/)」を参照してください。  
   
- インメモリ OLTP を使用する場合、「 [SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)」に加え、以下も要件です。  
+ インメモリ OLTP を使用する場合、「 [SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」に加え、以下も要件です。  
   
 -   SQL Server 2016 SP1 (以降) のあらゆるエディション。 SQL Server 2014 と SQL Server 2016 RTM (SP1 前) の場合、Enterprise、Developer、または Evaluation エディションが必要です。
     - 注: インメモリ OLTP には、64 ビット版の SQL Server が必要です。  
@@ -41,7 +45,7 @@ caps.handback.revision: 65
   
      レポートの生成 (「[テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)」) と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーでインメモリ OLTP を管理する場合) をインストールするには、 [SQL Server Management Studio (SSMS) をダウンロード](https://msdn.microsoft.com/library/mt238290.aspx)します。  
   
-## <a name="important-notes-on-using-includehek2tokenhek2mdmd"></a>[!INCLUDE[hek_2](../../includes/hek-2-md.md)] の使用に関する重要な注意事項  
+## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>[!INCLUDE[hek_2](../../includes/hek-2-md.md)] の使用に関する重要な注意事項  
   
 -   SQL Server 2016 を起動する際に、メモリ最適化テーブルのサイズには、空きメモリのサイズ以外の制限はありません。 SQL Server 2014 データベースの場合、データベース内の持続性のあるすべてのテーブルのメモリ内サイズの合計は、250 GB を超えないようにする必要があります。 詳細については、「 [メモリ最適化テーブルのメモリ必要量の推定](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)」を参照してください。  
     - 注: SQL Server 2016 SP1 より、Standard エディションと Express エディションではインメモリ OLTP がサポートされていますが、所与のデータベースでメモリ最適化テーブルに利用できるメモリ量にクォータが課せられます。 Standard エディションの場合、これはデータベースごとに 32GB です。Express エディションの場合、データベースごとに 352MB です。 
@@ -52,3 +56,4 @@ caps.handback.revision: 65
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

@@ -1,33 +1,37 @@
 ---
 title: "拡張イベントを使用したシステムの使用状況の監視 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "xe"
-  - "拡張イベント [SQL Server], システムの使用状況の監視"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xe
+- extended events [SQL Server], monitoring system activity
 ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b586a05981139acd687aaf712f01665f1650ac59
+ms.lasthandoff: 04/11/2017
+
 ---
-# 拡張イベントを使用したシステムの使用状況の監視
+# <a name="monitor-system-activity-using-extended-events"></a>拡張イベントを使用したシステムの使用状況の監視
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   この手順は、拡張イベントを Event Tracing for Windows (ETW) と共に使用してシステムの使用状況を監視する方法を示します。 また、CREATE EVENT SESSION、ALTER EVENT SESSION、DROP EVENT SESSION の各ステートメントの使用方法についても説明します。  
   
- この作業には、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターを使用した次の手順の実行も含まれます。 この手順では、コマンド プロンプトを使用して ETW コマンドを実行することも必要です。  
+ この作業には、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターを使用した次の手順の実行も含まれます。 この手順では、コマンド プロンプトを使用して ETW コマンドを実行することも必要です。  
   
-### 拡張イベントを使用してシステムの使用状況を監視するには  
+### <a name="to-monitor-system-activity-using-extended-events"></a>拡張イベントを使用してシステムの使用状況を監視するには  
   
 1.  クエリ エディターで次のステートメントを実行してイベント セッションを作成し、2 つのイベントを追加します。 checkpoint_begin と checkpoint_end のイベントは、データベース チェックポイントの開始時と終了時に起動されます。  
   
@@ -96,7 +100,7 @@ caps.handback.revision: 20
 7.  コマンド プロンプトで、次のコマンドを実行すると ETW のデータが表示されます。  
   
     > [!NOTE]  
-    >  **tracerpt** コマンドのヘルプを表示するには、コマンド プロンプトで「`tracerpt /?`」と入力します。  
+    >  **tracerpt** コマンドのヘルプを表示するには、コマンド プロンプトで「 `tracerpt /?`」と入力します。  
   
     ```  
     logman query -ets --- List the ETW sessions. This is optional.  
@@ -117,12 +121,12 @@ caps.handback.revision: 20
     go  
     ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
  [Extended Events Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [拡張イベントの動的管理ビュー](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [SQL Server 拡張イベント ターゲット](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)  
+ [SQL Server 拡張イベント ターゲット](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

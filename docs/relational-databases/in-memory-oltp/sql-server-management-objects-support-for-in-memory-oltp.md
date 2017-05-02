@@ -1,22 +1,26 @@
 ---
 title: "インメモリ OLTP に対する SQL Server 管理オブジェクトのサポート | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8c0ed45fbf5da5c1c521ad52e25553a21c068a08
+ms.lasthandoff: 04/11/2017
+
 ---
-# インメモリ OLTP に対する SQL Server 管理オブジェクトのサポート
+# <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>インメモリ OLTP に対する SQL Server 管理オブジェクトのサポート
   このトピックでは、インメモリ OLTP 向けの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) の変更について説明します。  
   
  次の型およびメンバーは、インメモリ OLTP をサポートします。  
@@ -47,7 +51,7 @@ caps.handback.revision: 28
   
 -   <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>  
   
-## コード サンプル  
+## <a name="code-sample"></a>コード サンプル  
  このサンプルの内容は次のとおりです。  
   
 -   メモリ最適化ファイル グループとメモリ最適化ファイルが含まれるデータベースを作成します。  
@@ -164,7 +168,7 @@ public class A {
 }  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server によるインメモリ OLTP のサポート](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   

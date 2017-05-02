@@ -1,36 +1,40 @@
 ---
 title: "リソース ガバナー リソース プール | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "リソース ガバナー, リソース プール"
-  - "リソース プール [SQL Server], 概要"
-  - "リソース プール [SQL Server]"
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, resource pool
+- resource pool [SQL Server], overview
+- resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10b74a185e59a6b2973ea17fb4c68b61e781953f
+ms.lasthandoff: 04/11/2017
+
 ---
-# リソース ガバナー リソース プール
+# <a name="resource-governor-resource-pool"></a>リソース ガバナー リソース プール
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーのリソース プールは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]インスタンスの物理リソースのサブセットを表します。 リソース ガバナーを使用すると、受信するアプリケーション要求がリソース プール内で使用できる CPU、物理 IO、およびメモリの量に制限を指定できます。 各リソース プールは、1 つまたは複数のワークロード グループを含めることができます。 セッションの起動時に、リソース ガバナーの分類子によって、セッションは指定されたワークロード グループに割り当てられます。セッションの実行にはワークロード グループに割り当てられたリソースを使用する必要があります。  
   
-## リソース プールの概念  
+## <a name="resource-pool-concepts"></a>リソース プールの概念  
  リソース プール (プール) は、サーバーの物理リソースを表します。 プールは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内部の仮想 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスと考えることができます。 プールは 2 つの部分で構成されます。 1 つは他のプールと重複しない部分であり、最小限のリソース予約をサポートします。 もう 1 つは他のプールと共有される部分であり、最大限のリソース消費をサポートします。 プール リソースを定義するには、各リソース (CPU、メモリ、および物理 I/O) で次の設定の 1 つ以上を指定します。  
   
 -   **MIN_CPU_PERCENT および MAX_CPU_PERCENT**  
   
-     これらの設定は、CPU の競合がある場合にリソース プールのすべての要求に最大限および最小限保証される平均 CPU 帯域幅です。 これらの設定を使用すると、各ワークロードのニーズに基づく、複数のワークロードの予測可能な CPU リソース使用率を確立できます。 たとえば、会社の営業部門とマーケティング部門で同じデータベースを共有するとします。 営業部門には、優先度の高いクエリで CPU を集中的に使用するワークロードがあります。 マーケティング部門にも CPU を集中的に使用するワークロードがありますが、クエリの優先度は低くなっています。 各部門に個別のリソース プールを作成することにより、営業部門のリソース プールに対して CPU の割合の "最小値"* *70 を、マーケティング部門のリソース プールに対して CPU の割合の "最大値"* *30 を割り当てることができます。 これにより、営業部門のワークロードは必要な CPU リソースを受け取り、マーケティング部門のワークロードは営業部門のワークロードの CPU 要求から分離されるようになります。 CPU の最大使用率が便宜上の最大値であることに注意してください。 使用可能な CPU 容量がある場合、ワークロードではそれを最大 100% まで使用します。 最大値が適用されるのは、CPU リソースに競合が発生した場合のみです。 この例では、営業部門のワークロードがオフに切り替わると、マーケティング部門のワークロードは必要に応じて 100% の CPU を使用できます。  
+     これらの設定は、CPU の競合がある場合にリソース プールのすべての要求に最大限および最小限保証される平均 CPU 帯域幅です。 これらの設定を使用すると、各ワークロードのニーズに基づく、複数のワークロードの予測可能な CPU リソース使用率を確立できます。 たとえば、会社の営業部門とマーケティング部門で同じデータベースを共有するとします。 営業部門には、優先度の高いクエリで CPU を集中的に使用するワークロードがあります。 マーケティング部門にも CPU を集中的に使用するワークロードがありますが、クエリの優先度は低くなっています。 各部門に個別のリソース プールを作成することにより、営業部門のリソース プールに対して CPU の割合の "最小値" **  70 を、マーケティング部門のリソース プールに対して CPU の割合の "最大値"  ** 30 を割り当てることができます。 これにより、営業部門のワークロードは必要な CPU リソースを受け取り、マーケティング部門のワークロードは営業部門のワークロードの CPU 要求から分離されるようになります。 CPU の最大使用率が便宜上の最大値であることに注意してください。 使用可能な CPU 容量がある場合、ワークロードではそれを最大 100% まで使用します。 最大値が適用されるのは、CPU リソースに競合が発生した場合のみです。 この例では、営業部門のワークロードがオフに切り替わると、マーケティング部門のワークロードは必要に応じて 100% の CPU を使用できます。  
   
 -   **CAP_CPU_PERCENT**  
   
@@ -113,7 +117,7 @@ caps.handback.revision: 17
   
  ユーザー定義のリソース プールは、環境内の特定のワークロードに対して作成するリソース プールです。 リソース ガバナーには、リソース プールを作成、変更、および削除するための DDL ステートメントが用意されています。  
   
-## リソース プール タスク  
+## <a name="resource-pool-tasks"></a>リソース プール タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
@@ -121,7 +125,7 @@ caps.handback.revision: 17
 |リソース プールの設定を変更する方法について説明します。|[リソース プールの設定の変更](../../relational-databases/resource-governor/change-resource-pool-settings.md)|  
 |リソース プールを削除する方法について説明します。|[リソース プールの削除](../../relational-databases/resource-governor/delete-a-resource-pool.md)|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
  [リソース ガバナー ワークロード グループ](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [リソース ガバナーの分類子関数](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   
@@ -129,3 +133,4 @@ caps.handback.revision: 17
  [リソース ガバナー プロパティの表示](../../relational-databases/resource-governor/view-resource-governor-properties.md)  
   
   
+

@@ -1,52 +1,56 @@
 ---
 title: "パスワード ポリシー | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/25/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ALTER LOGIN ステートメント"
-  - "パスワード [SQL Server]、ポリシーの適用"
-  - "ログイン [SQL Server]、パスワード"
-  - "CHECK_EXPIRATION オプション"
-  - "複雑なパスワード [SQL Server]"
-  - "パスワード [SQL Server]、有効期限切れ"
-  - "手動による不正なパスワード カウントのリセット"
-  - "MUST_CHANGE オプション"
-  - "有効期限 [SQL Server]"
-  - "期限切れのパスワード [SQL Server]"
-  - "記号 [SQL Server]"
-  - "NetValidatePasswordPolicy() API"
-  - "パスワード [SQL Server]"
-  - "パスワード ポリシー [SQL Server]"
-  - "不正なパスワード カウントのリセット"
-  - "セキュリティ [SQL Server]、パスワード"
-  - "CHECK_POLICY オプション"
-  - "パスワード [SQL Server]、シンボル"
-  - "不正なパスワード カウント"
-  - "パスワード [SQL Server]、複雑性"
-  - "文字 [SQL Server]、パスワード ポリシー"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 09/25/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ALTER LOGIN statement
+- passwords [SQL Server], policy enforcement
+- logins [SQL Server], passwords
+- CHECK_EXPIRATION option
+- complex passwords [SQL Server]
+- passwords [SQL Server], expiration
+- manual bad password count resets
+- MUST_CHANGE option
+- expiration [SQL Server]
+- expired password [SQL Server]
+- symbols [SQL Server]
+- NetValidatePasswordPolicy() API
+- passwords [SQL Server]
+- password policy [SQL Server]
+- resetting bad password counts
+- security [SQL Server], passwords
+- CHECK_POLICY option
+- passwords [SQL Server], symbols
+- bad password counts
+- passwords [SQL Server], complexity
+- characters [SQL Server], password policies
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1843956926a6eb59efbc4dc14dc50f1dd3403d07
+ms.lasthandoff: 04/11/2017
+
 ---
-# パスワード ポリシー
+# <a name="password-policy"></a>パスワード ポリシー
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows のパスワード ポリシー メカニズムに対応しています。 パスワード ポリシーは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するログインに適用され、パスワードを持つ包含データベース ユーザーに適用されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部で使用されるパスワードに、Windows で使用されているものと同じ複雑性ポリシーおよび有効期限ポリシーを適用できます。 この機能は `NetValidatePasswordPolicy` API に依存します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内部で使用されるパスワードに、Windows で使用されているものと同じ複雑性ポリシーおよび有効期限ポリシーを適用できます。 この機能は `NetValidatePasswordPolicy` API に依存します。  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] パスワードの複雑性が適用されます。 パスワードの有効期限とポリシー適用のセクションは [!INCLUDE[ssSDS](../../includes/sssds-md.md)] に適用されません。  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] パスワードの複雑性が適用されます。 パスワードの有効期限とポリシー適用のセクションは [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に適用されません。  
   
-## パスワードの複雑性  
+## <a name="password-complexity"></a>パスワードの複雑性  
  パスワードの複雑性のポリシーは、使用可能なパスワードの数を増やすことにより、総当り攻撃を防ぐようにデザインされています。 パスワードの複雑性のポリシーが適用される場合、新しいパスワードは次のガイドラインを満たしている必要があります。  
   
 -   パスワードはユーザー アカウント名を含まない。  
@@ -65,10 +69,10 @@ caps.handback.revision: 41
   
  パスワードには最大 128 文字まで使用できます。 パスワードはできるだけ長く、複雑にすることをお勧めします。  
   
-## パスワードの有効期限  
+## <a name="password-expiration"></a>パスワードの有効期限  
  パスワードの有効期限のポリシーは、パスワードの寿命を管理します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってパスワードの有効期限が適用されている場合、ユーザーは古いパスワードを変更するよう通知され、有効期限が切れたパスワードを持つアカウントは無効になります。  
   
-## ポリシーの適用  
+## <a name="policy-enforcement"></a>ポリシーの適用  
  パスワード ポリシーの適用は、SQL Server ログインごとに個別に構成できます。 [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md) を使用して、SQL Server ログインのパスワード ポリシー オプションを構成します。 パスワード ポリシーの適用を構成する際に、次の規則が当てはまります。  
   
 -   CHECK_POLICY を ON に変更した場合、次の動作が行われます。  
@@ -77,7 +81,7 @@ caps.handback.revision: 41
   
     -   パスワードの履歴が、現在のパスワード ハッシュの値に初期化されます。  
   
-    -   **[アカウント ロックアウトの期間]**、**[アカウント ロックアウトのしきい値]**、および **[ロックアウト カウンターのリセット]** も有効になります。  
+    -   **[アカウント ロックアウトの期間]**、 **[アカウント ロックアウトのしきい値]**、および **[ロックアウト カウンターのリセット]** も有効になります。  
   
 -   CHECK_POLICY を OFF に変更した場合、次の動作が行われます。  
   
@@ -103,7 +107,7 @@ caps.handback.revision: 41
   
  セキュリティ ポリシーは、Windows で設定する場合も、ドメインから受け取る場合もあります。 コンピューターでパスワード ポリシーを表示するには、ローカル セキュリティ ポリシーの MMC スナップイン (**secpol.msc**) を使用します。  
   
-## 関連タスク  
+## <a name="related-tasks"></a>関連タスク  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)  
@@ -116,7 +120,8 @@ caps.handback.revision: 41
   
  [データベース ユーザーの作成](../../relational-databases/security/authentication-access/create-a-database-user.md)  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
  [強力なパスワード](../../relational-databases/security/strong-passwords.md)  
   
   
+

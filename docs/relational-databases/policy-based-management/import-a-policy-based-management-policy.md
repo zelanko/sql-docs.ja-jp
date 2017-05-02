@@ -1,25 +1,29 @@
 ---
 title: "ポリシー ベースの管理ポリシーのインポート | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ポリシー ベースの管理, ポリシーのインポート"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, import policy
 ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f55d3c5e57dfbd0d80e02d5c2fcb0fc6aa9ae81d
+ms.lasthandoff: 04/11/2017
+
 ---
-# ポリシー ベースの管理ポリシーのインポート
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でポリシー ベースの管理ポリシー インスタンスをインポートする方法について説明します。  
+# <a name="import-a-policy-based-management-policy"></a>ポリシー ベースの管理ポリシーのインポート
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でポリシー ベースの管理ポリシー インスタンスをインポートする方法について説明します。  
   
  **このトピックの内容**  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 12
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### ポリシー インスタンスをインポートするには  
+#### <a name="to-import-a-policy-instance"></a>ポリシー インスタンスをインポートするには  
   
 1.  **オブジェクト エクスプローラー**で、プラス記号をクリックして、新しくインポートするポリシー インスタンスを配置するサーバーを展開します。  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 12
   
 3.  プラス記号をクリックして **[ポリシー管理]**を展開します。  
   
-4.  **[ポリシー]** フォルダーを右クリックし、**[ポリシーのインポート]** をクリックします。  
+4.  **[ポリシー]** フォルダーを右クリックし、 **[ポリシーのインポート]**をクリックします。  
   
 5.  **[インポート]** ダイアログ ボックスで、ファイルのパスと名前を入力します。または、参照ボタン (**[...]**) を使用してポリシーを含んでいる XML ファイルを特定し、ファイルを選択します。 **[インポート]** ダイアログ ボックスで利用可能なオプションの詳細については、「 [Import Policies Dialog Box](../../relational-databases/policy-based-management/import-policies-dialog-box.md)」を参照してください。  
   

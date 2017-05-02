@@ -1,25 +1,29 @@
 ---
 title: "リモート BLOB ストア (RBS) [SQL Server] | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "リモート BLOB ストア (RBS) [SQL Server]"
-  - "RBS (リモート BLOB ストア) [SQL Server]"
+ms.custom: 
+ms.date: 11/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Remote Blob Store (RBS) [SQL Server]
+- RBS (Remote Blob Store) [SQL Server]
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5dd24af4232914ff6b86e036827364f1cb8c16a1
+ms.lasthandoff: 04/11/2017
+
 ---
-# リモート BLOB ストア (RBS) [SQL Server]
+# <a name="remote-blob-store-rbs-sql-server"></a>リモート BLOB ストア (RBS) [SQL Server]
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリモート BLOB ストア (RBS) はオプションのアドオン コンポーネントです。これを使用すると、データベース管理者は、バイナリ ラージ オブジェクトを、主なデータベース サーバーに直接格納するのではなく、汎用的なストレージ ソリューションに格納できます。  
@@ -48,7 +52,7 @@ caps.handback.revision: 19
  多数のサード パーティのストレージ ソリューション ベンダーが、これらの標準 API に準拠し、さまざまなストレージ プラットフォームで BLOB ストレージをサポートする RBS プロバイダーを開発しています。  
   
 ## <a name="rbs-requirements"></a>RBS 要件  
- RBS では、BLOB メタデータが格納されている主なデータベース サーバー用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise が必要です。  ただし、指定された FILESTREAM プロバイダーを使用する場合は、BLOB 自体を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard に格納できます。 RBS が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するには、[!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] の場合は ODBC ドライバー バージョン 11 以上、[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] の場合は ODBC ドライバー バージョン 13 以上が必要です。 ドライバーは、「[Download ODBC Driver for SQL Server](https://msdn.microsoft.com/library/mt703139.aspx)」(SQL Server 用の ODBC ドライバーをダウンロードする) で入手できます。   
+ RBS では、BLOB メタデータが格納されている主なデータベース サーバー用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise が必要です。  ただし、指定された FILESTREAM プロバイダーを使用する場合は、BLOB 自体を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard に格納できます。 RBS が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続するには、 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] の場合は ODBC ドライバー バージョン 11 以上、 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]の場合は ODBC ドライバー バージョン 13 以上が必要です。 ドライバーは、「 [Download ODBC Driver for SQL Server](https://msdn.microsoft.com/library/mt703139.aspx)」(SQL Server 用の ODBC ドライバーをダウンロードする) で入手できます。   
   
  RBS には、RBS を使用して BLOB を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで格納できる FILESTREAM プロバイダーが含まれています。 RBS を使用して BLOB を別のストレージ ソリューションに格納する場合は、そのストレージ ソリューション用に開発されたサード パーティの RBS プロバイダーを使用するか、RBS API を使用してカスタム RBS プロバイダーを開発する必要があります。 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190)には、NTFS ファイル システムに BLOB を格納するサンプル プロバイダーが学習用リソースとして用意されています。  
   
@@ -66,25 +70,25 @@ caps.handback.revision: 19
 -   RBS 2014 以前のバージョンでは、古い **TRIPLE_DES** 対称キー アルゴリズムを使用して暗号化されたシークレットを保持する資格情報ストアを使用します。 現在、**TRIPLE_DES** を使用している場合、[!INCLUDE[msCoName](../../includes/msconame-md.md)] では、より強力な暗号化方式を適用するためにこのトピックの手順に従ってキーをローテーションし、セキュリティを強化することをお勧めします。  
   
  RBS 資格情報ストアの対称キー プロパティは、RBS データベースで次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行して判別できます。   
-`SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';` このステートメントからの出力で、**TRIPLE_DES** がまだ使用されていることが分かった場合は、このキーのローテーションが必要です。  
+`SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';` このステートメントからの出力で、 **TRIPLE_DES** がまだ使用されていることが分かった場合は、このキーのローテーションが必要です。  
   
 ### <a name="rotating-the-symmetric-key"></a>対称キーのローテーション  
  RBS を使用する場合、資格情報ストアの対称キーを定期的にローテーションする必要があります。 これは、組織のセキュリティ ポリシーを満たすための一般的なセキュリティに関するベスト プラクティスです。  RBS 資格情報ストアの対称キーをローテーションする 1 つの方法は、RBS データベースで [後述のスクリプト](#Key_rotation) を使用することです。  このスクリプトを使用して、アルゴリズムやキーの長さなど、より強力な暗号化強度プロパティに移行することもできます。 キー ローテーションを行う前に、データベースをバックアップしておいてください。  スクリプトの最後に、確認手順がいくつかあります。  
 セキュリティ ポリシーで指定されたものとは異なるキー プロパティ (アルゴリズムやキーの長さなど) が求められている場合、スクリプトをテンプレートとして使用できます。 その場合、1) 一時キーの作成場所と 2) 永続キーの作成場所の 2 か所でキー プロパティを変更します。  
   
-##  <a name="a-namerbsresourcesa-rbs-resources"></a><a name="rbsresources"></a> RBS リソース  
+##  <a name="rbsresources"></a> RBS resources  
   
  **RBS サンプル**  
  [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190) で入手できる RBS サンプルでは、RBS アプリケーションの開発方法とカスタム RBS プロバイダーの開発およびインストール方法を示します。  
   
  **RBS ブログ**  
- [RBS ブログ](http://go.microsoft.com/fwlink/?LinkId=210315)には、RBS の理解、配置、および維持に役立つ追加情報が含まれています。  
+ [RBS ブログ](http://go.microsoft.com/fwlink/?LinkId=210315) には、RBS の理解、配置、および維持に役立つ追加情報が含まれています。  
   
-##  <a name="a-namekeyrotationa-key-rotation-script"></a><a name="Key_rotation"></a> キー ローテーションのスクリプト  
- この例では、`sp_rotate_rbs_symmetric_credential_key` というストアド プロシージャを作成し、現在使用している RBS 資格情報ストアの対称キーを、  
+##  <a name="Key_rotation"></a> Key rotation script  
+ この例では、 `sp_rotate_rbs_symmetric_credential_key` というストアド プロシージャを作成し、現在使用している RBS 資格情報ストアの対称キーを、  
 任意の対称キーに置き換えます。  セキュリティ ポリシーで定期的なキー ローテーションが求められている場合、または特定のアルゴリズム要件がある場合は、   
 この操作が必要になることがあります。  
- このストアド プロシージャでは、**AES_256** を使用する対称キーで現在の対称キーが置き換えられます。  対称キーが置き換えられたら、  
+ このストアド プロシージャでは、 **AES_256** を使用する対称キーで現在の対称キーが置き換えられます。  対称キーが置き換えられたら、  
 シークレットを新しいキーで再暗号化する必要があります。  このストアド プロシージャでは   
 シークレットの再暗号化も行います。  キー ローテーションの前にデータベースをバックアップする必要があります。  
   
@@ -232,3 +236,4 @@ SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
   
   
+

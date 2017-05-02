@@ -1,31 +1,35 @@
 ---
 title: "フィルター選択されたインデックスの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "フィルター選択されたインデックス [SQL Server], フィルター選択されたインデックスについて"
-  - "インデックスの設計 [SQL Server], フィルター選択された"
-  - "フィルター選択されたインデックス [SQL Server]"
-  - "非クラスター化インデックス [SQL Server], フィルター選択された"
-  - "インデックス [SQL Server], フィルター選択された"
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filtered indexes [SQL Server], about filtered indexes
+- designing indexes [SQL Server], filtered
+- filtered indexes [SQL Server]
+- nonclustered indexes [SQL Server], filtered
+- indexes [SQL Server], filtered
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 caps.latest.revision: 73
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 73
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de8d5ce869856d289b70b028ede2bc1009220a38
+ms.lasthandoff: 04/11/2017
+
 ---
-# フィルター選択されたインデックスの作成
+# <a name="create-filtered-indexes"></a>フィルター選択されたインデックスの作成
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、フィルター選択されたインデックスを作成する方法について説明します。 フィルター選択されたインデックスは、最適化された非クラスター化インデックスであり、適切に定義されたデータのサブセットから選択するクエリに対応する際に特に適しています。 フィルター選択されたインデックスは、フィルター述語を使用して、テーブル内の一部の行にインデックスを作成します。 フィルター選択されたインデックスを適切にデザインすると、クエリのパフォーマンスが向上するだけでなく、テーブル全体のインデックスと比較してインデックスのメンテナンス コストおよびストレージ コストを削減できます。  
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、フィルター選択されたインデックスを作成する方法について説明します。 フィルター選択されたインデックスは、最適化された非クラスター化インデックスであり、適切に定義されたデータのサブセットから選択するクエリに対応する際に特に適しています。 フィルター選択されたインデックスは、フィルター述語を使用して、テーブル内の一部の行にインデックスを作成します。 フィルター選択されたインデックスを適切にデザインすると、クエリのパフォーマンスが向上するだけでなく、テーブル全体のインデックスと比較してインデックスのメンテナンス コストおよびストレージ コストを削減できます。  
   
  フィルター選択されたインデックスは、テーブル全体のインデックスよりも次の点で優れています。  
   
@@ -96,11 +100,11 @@ caps.handback.revision: 73
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
- テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、**sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。 フィルター選択されたインデックスの式を変更するには、CREATE INDEX WITH DROP_EXISTING を使用します。  
+ テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。 フィルター選択されたインデックスの式を変更するには、CREATE INDEX WITH DROP_EXISTING を使用します。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### フィルター選択されたインデックスを作成するには  
+#### <a name="to-create-a-filtered-index"></a>フィルター選択されたインデックスを作成するには  
   
 1.  オブジェクト エクスプローラーで、フィルター選択されたインデックスを作成するテーブルが格納されているデータベースをプラス記号をクリックして展開します。  
   
@@ -108,13 +112,13 @@ caps.handback.revision: 73
   
 3.  プラス記号をクリックして、フィルター選択されたインデックスを作成するテーブルを展開します。  
   
-4.  **[インデックス]** フォルダーを右クリックし、**[新しいインデックス]** をポイントし、**[非クラスター化インデックス...]** を選択します。  
+4.  **[インデックス]** フォルダーを右クリックし、 **[新しいインデックス]**をポイントし、 **[非クラスター化インデックス...]**を選択します。  
   
 5.  **[新しいインデックス]** ダイアログ ボックスの **[全般]** ページで、 **[インデックス名]** ボックスに新しいインデックスの名前を入力します。  
   
 6.  **[インデックス キー列]**で、 **[追加]**をクリックします。  
   
-7.  **[*table_name*から列を選択]** ダイアログ ボックスで、一意のインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
+7.  **table_name***から列を選択* ダイアログ ボックスで、一意のインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
 8.  クリックして **OK**です。  
   
@@ -124,7 +128,7 @@ caps.handback.revision: 73
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### フィルター選択されたインデックスを作成するには  
+#### <a name="to-create-a-filtered-index"></a>フィルター選択されたインデックスを作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -166,7 +170,7 @@ caps.handback.revision: 73
     GO  
     ```  
   
-#### フィルター選択されたインデックスが SQL クエリで使用されるようにするには  
+#### <a name="to-ensure-that-a-filtered-index-is-used-in-a-sql-query"></a>フィルター選択されたインデックスが SQL クエリで使用されるようにするには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -186,3 +190,4 @@ caps.handback.revision: 73
  詳細については、「[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)」を参照してください。  
   
   
+

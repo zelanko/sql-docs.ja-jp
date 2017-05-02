@@ -1,29 +1,33 @@
 ---
 title: "SQL Server データベースを特定の時点に復元する方法 (完全復旧モデル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "STOPAT 句 [RESTORE LOG ステートメント]"
-  - "特定の時点への復旧 [SQL Server]"
-  - "データベースの復元 [SQL Server]、特定の時点"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- STOPAT clause [RESTORE LOG statement]
+- point in time recovery [SQL Server]
+- restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d20f1dbfd5cb21920ff323f8a09f33a9650c16a4
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server データベースを特定の時点に復元する方法 (完全復旧モデル)
+# <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>SQL Server データベースを特定の時点に復元する方法 (完全復旧モデル)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] のデータベースを特定の時点まで復元する方法について説明します。 このトピックは、完全復旧モデルまたは一括ログ復旧モデルを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにのみ関連しています。  
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のデータベースを特定の時点まで復元する方法について説明します。 このトピックは、完全復旧モデルまたは一括ログ復旧モデルを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにのみ関連しています。  
   
 > [!IMPORTANT]  
 >  一括ログ復旧モデルでは、ログ バックアップに一括ログ記録された変更内容が含まれていると、そのバックアップ内の特定の時点への復旧を行うことができません。 データベースは、トランザクション ログ バックアップの終了時点へ復旧する必要があります。  
@@ -53,7 +57,7 @@ caps.handback.revision: 50
 ####  <a name="Permissions"></a> アクセス許可  
  復元するデータベースが存在しない場合、ユーザーは RESTORE を実行できる CREATE DATABASE 権限を使用する必要があります。 データベースが存在する場合、既定では、RESTORE 権限は **sysadmin** 固定サーバー ロールおよび **dbcreator** 固定サーバー ロールのメンバーと、データベースの所有者 (**dbo**) に与えられています (FROM DATABASE_SNAPSHOT オプションを使用する場合、データベースは常に存在します)。  
   
- RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で損傷していないことが必ずしも保証されないため、**db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
+ RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で破損していないことが必ずしも保証されないため、 **db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **特定の時点にデータベースを復元するには**  
@@ -62,7 +66,7 @@ caps.handback.revision: 50
   
 2.  **[データベース]**を展開します。 復元するデータベースに応じて、ユーザー データベースを選択するか、 **[システム データベース]**を展開してシステム データベースを選択します。  
   
-3.  データベースを右クリックして **[タスク]** をポイントし、**[復元]** をポイントして、**[データベース]** をクリックします。  
+3.  データベースを右クリックして **[タスク]**をポイントし、 **[復元]**をポイントして、 **[データベース]**をクリックします。  
   
 4.  **[全般]** ページの **** 復元元のセクションを使用して、復元するバックアップ セットの復元元ファイルと場所を指定します。 以下のオプションの 1 つを選択します。  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 50
   
     -   **[デバイス]**  
   
-         参照ボタン (**[...]**) をクリックし、**[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]**をクリックします。  
+         参照ボタン (**[...]**) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]**をクリックします。  
   
          **[バックアップ メディア]** ボックスに目的のデバイスを追加したら、 **[OK]** をクリックして、 **[全般]** ページに戻ります。  
   
@@ -96,7 +100,7 @@ caps.handback.revision: 50
   
 9. 特定の時点を指定すると、データベース復旧アドバイザーによって、その特定の時点に復元するために必要なバックアップだけが **[復元するバックアップ セット]** グリッドの **[復元]** 列で選択されます。 これらの選択されたバックアップは、特定の時点への復元用として推奨される復元プランを示しています。 特定の時点への復元操作には選択されているバックアップのみを使用するようにします。  
   
-     **[復元するバックアップ セット]** グリッドの列の詳細については、「[データベースの復元 &#40;[全般] ページ&#41;](../Topic/Restore%20Database%20\(General%20Page\).md)」を参照してください。 データベースの復旧アドバイザーの詳細については、「[復元と復旧の概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)」を参照してください。  
+     **[復元するバックアップ セット]** グリッドの列の詳細については、「[データベースの復元 &#40;[全般] ページ&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)」を参照してください。 データベースの復旧アドバイザーの詳細については、「[復元と復旧の概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)」を参照してください。  
   
 10. **[オプション]** ページの **[復元オプション]** パネルでは、状況に応じて、次の任意のオプションを選択できます。  
   
@@ -106,17 +110,17 @@ caps.handback.revision: 50
   
     -   **[復元するデータベースへのアクセスを制限する (WITH RESTRICTED_USER)]**  
   
-     これらのオプションの詳細については、「[データベースの復元 &#40;[オプション] ページ&#41;](../Topic/Restore%20Database%20\(Options%20Page\).md)」を参照してください。  
+     これらのオプションの詳細については、「[データベースの復元 &#40;[オプション] ページ&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)」を参照してください。  
   
 11. **[復旧状態]** ボックスのオプションを選択します。 このボックスの選択内容により、復元操作後のデータベースの状態が決まります。  
   
     -   **[RESTORE WITH RECOVERY]** : コミットされていないトランザクションをロールバックして、データベースを使用可能な状態にします。これが既定の動作です。 別のトランザクション ログは復元できません。 このオプションは、必要なバックアップをすべて復元する場合に選択します。  
   
-    -   **[RESTORE WITH NORECOVERY]**: データベースは操作不可状態のままとなり、コミットされていないトランザクションはロールバックされません。 別のトランザクション ログは復元できます  データベースは、復旧されるまで使用できません。  
+    -   **[RESTORE WITH NORECOVERY]** : データベースは操作不可状態のままとなり、コミットされていないトランザクションはロールバックされません。 別のトランザクション ログは復元できます データベースは、復旧されるまで使用できません。  
   
-    -   **[RESTORE WITH STANDBY]**: データベースを読み取り専用モードにします。 コミットされていないトランザクションは元に戻されますが、復旧結果を元に戻せるように元に戻す操作をスタンバイ ファイルに保存します。  
+    -   **[RESTORE WITH STANDBY]** : データベースを読み取り専用モードにします。 コミットされていないトランザクションは元に戻されますが、復旧結果を元に戻せるように元に戻す操作をスタンバイ ファイルに保存します。  
   
-     オプションの詳細については、「[データベースの復元 &#40;[オプション] ページ&#41;](../Topic/Restore%20Database%20\(Options%20Page\).md)」を参照してください。  
+     オプションの詳細については、「[データベースの復元 &#40;[オプション] ページ&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)」を参照してください。  
   
 12. 選択した時点まで復元するために必要であれば、**[復元の前にログ末尾のバックアップを実行する]** が選択されます。 この設定を変更する必要はありません。ログの末尾をバックアップする必要がない場合でも、そのように選択してかまいません。  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 50
 14. 復元操作と復元操作の間に、その都度、確認のメッセージを表示するには、 **[各バックアップを復元する前に確認する]** をオンにします。 通常は、その必要はありません。データベースが大きく、復元操作のステータスを監視する必要がある場合にのみ使用します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
- **アンインストールの準備**  
+ **Before you begin**  
   
  指定した時点への復元は、常にログ バックアップから行われます。 復元シーケンスのすべての RESTORE ステートメントで、同一の STOPAT 句で目的の時点またはトランザクションを指定する必要があります。 特定の時点への復元の前提条件として、最初にエンド ポイントが目的の復元時点よりも前になっているデータベースの完全バックアップを復元する必要があります。 このデータベースの完全バックアップは、データベースの最新の完全バックアップより古くてもかまいません。ただし、これは、データベースの完全バックアップを復元した後で、目的の時点を含むログ バックアップまで後続のログ バックアップをすべて復元する場合に限ります。  
   
@@ -142,7 +146,7 @@ caps.handback.revision: 50
  **特定の時点にデータベースを復元するには**  
   
 > [!NOTE]  
->  この手順の例については、このセクションの後半の「[例 (Transact-SQL)](#TsqlExample)」を参照してください。  
+>  この手順の例については、このセクションの後半の「 [例 (Transact-SQL)](#TsqlExample)」を参照してください。  
   
 1.  データベースを復元するサーバー インスタンスに接続します。  
   
@@ -159,7 +163,7 @@ caps.handback.revision: 50
     >  RECOVERY オプションと STOPAT オプション。 トランザクション ログ バックアップに、要求した時点の情報が格納されていない場合、たとえば、指定した日時がトランザクション ログに記録されている時点より後の場合などに、警告が生成されます。この場合、データベースは復旧されません。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
- 次の例では、データベースを `12:00 AM` `April 15, 2020` の状態に復元し、複数のログ バックアップが関連する復元操作を行います。 バックアップ デバイス `AdventureWorksBackups` において、復元するデータベース全体のバックアップはデバイス上の 3 番目のバックアップ セット (`FILE = 3`)、最初のログ バックアップは 4 番目のバックアップ セット (`FILE = 4`)、2 番目のログ バックアップは 5 番目のバックアップ セット (`FILE = 5`) です。  
+ 次の例では、データベースを `12:00 AM` `April 15, 2020` の状態に復元し、複数のログ バックアップが関連する復元操作を行います。 バックアップ デバイス `AdventureWorksBackups`において、復元するデータベース全体のバックアップはデバイス上の 3 番目のバックアップ セット (`FILE = 3`)、最初のログ バックアップは 4 番目のバックアップ セット (`FILE = 4`)、2 番目のログ バックアップは 5 番目のバックアップ セット (`FILE = 5`) です。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースは、単純復旧モデルを使用しています。 ただし、ログ バックアップを可能にするために、データベースの完全バックアップを行う前に、 `ALTER DATABASE AdventureWorks SET RECOVERY FULL`を使用して、データベースが完全復旧モデルを使用するように設定されています。  
@@ -183,11 +187,11 @@ GO
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
--   [SSMS を使用したデータベース バックアップの復元](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [SSMS を使用してデータベース バックアップを復元する](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
 -   [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
--   [完全復旧モデルで障害発生時点までデータベースを復元する方法 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [完全復旧モデルで障害発生時点までデータベースを復元する方法 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [マークされたトランザクションへのデータベースの復元 &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
@@ -195,9 +199,9 @@ GO
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> (SMO)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
   

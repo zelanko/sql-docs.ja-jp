@@ -1,41 +1,45 @@
 ---
 title: "bcp を使用したデータ ファイルのプレフィックス長の指定 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "bcp ユーティリティ [SQL Server], プレフィックス長"
-  - "プレフィックス長 [SQL Server]"
-  - "長さ [SQL Server], プレフィックス文字"
-  - "データ形式 [SQL Server], プレフィックス長"
+ms.custom: 
+ms.date: 07/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bcp utility [SQL Server], prefix length
+- prefix length [SQL Server]
+- lengths [SQL Server], prefix characters
+- data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 62007ed26bf44480b40af09b40dbb8636de4a242
+ms.lasthandoff: 04/11/2017
+
 ---
-# bcp を使用したデータ ファイルのプレフィックス長の指定 (SQL Server)
+# <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>bcp を使用したデータ ファイルのプレフィックス長の指定 (SQL Server)
   **bcp** コマンドでは、ネイティブ形式のデータをデータ ファイルに一括エクスポートするためのファイル ストレージが最も少なくなるように、各フィールドの前にそのフィールドの長さを 1 文字以上の文字列で指定します。 このような文字列を、 *プレフィックス長文字列*と呼びます。  
   
-## プレフィックス長の bcp プロンプト  
- 対話型の **bcp** コマンドで、フォーマット ファイル スイッチ (**-f**) またはデータ形式スイッチ (**-n**、**-c**、**-w**、または **-N**) のどちらも付けずに **in** または **out** オプションを指定すると、次のように各データ フィールドのプレフィックス長を要求するプロンプトが表示されます。  
+## <a name="the-bcp-prompt-for-prefix-length"></a>プレフィックス長の bcp プロンプト  
+ 対話型の **bcp** コマンドで、フォーマット ファイル スイッチ ( **-f** ) またはデータ形式スイッチ ( **-n** 、**-c**、**-w**、または **-N**) のどちらも付けずに **in**または **out**オプションを指定すると、次のように各データ フィールドのプレフィックス長を要求するプロンプトが表示されます。  
   
  `Enter prefix length of field <field_name> [<default>]:`  
   
- 0 を指定すると、フィールドの長さ (文字データ型の場合) またはフィールド ターミネータ (文字以外のネイティブ型の場合) のいずれかが、**bcp** によって要求されます。  
+ 0 を指定すると、フィールドの長さ (文字データ型の場合) またはフィールド ターミネータ (文字以外のネイティブ型の場合) のいずれかが、 **bcp** によって要求されます。  
   
 > [!NOTE]  
 >  **bcp** コマンドですべてのフィールドを対話形式で指定すると、各フィールドへの応答を XML 形式以外のファイルに保存するように要求するプロンプトが表示されます。 XML 以外のフォーマット ファイルの詳細については、「[XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)」を参照してください。  
   
-## プレフィックス長の概要  
- フィールドのプレフィックス長を格納するには、フィールドの最大長を表すのに十分なバイト数が必要です。 必要なバイト数は、ファイル ストレージの型、列の NULL 値許容属性、およびデータがネイティブ形式または文字形式でデータ ファイルに格納されるかどうかによって異なります。 たとえば、 **text** データ型または **image** データ型では、フィールド長を格納するために 4 文字のプレフィックス文字列が必要ですが、 **varchar** データ型で必要なのは 2 文字です。 データ ファイルでは、このようなプレフィックス長文字列は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内部バイナリ データ形式で格納されます。  
+## <a name="overview-of-prefix-length"></a>プレフィックス長の概要  
+ フィールドのプレフィックス長を格納するには、フィールドの最大長を表すのに十分なバイト数が必要です。 必要なバイト数は、ファイル ストレージの型、列の NULL 値許容属性、およびデータがネイティブ形式または文字形式でデータ ファイルに格納されるかどうかによって異なります。 たとえば、 **text** データ型または **image** データ型では、フィールド長を格納するために 4 文字のプレフィックス文字列が必要ですが、 **varchar** データ型で必要なのは 2 文字です。 データ ファイルでは、このようなプレフィックス長文字列は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の内部バイナリ データ形式で格納されます。  
   
 > [!IMPORTANT]  
 >  ネイティブ形式を使用するときは、フィールド ターミネータではなくプレフィックス長を使用します。 ネイティブ形式のデータ ファイルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内部バイナリ データ形式で格納されるので、ネイティブ形式のデータがターミネータと競合することがあります。  
@@ -81,15 +85,15 @@ caps.handback.revision: 30
 |**XML**|8|8|8|8|  
 |**sql_variant**|8|8|8|8|  
   
- \***ntext**、**text**、および **image**データ型は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンで削除される予定です。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 代わりに、**nvarchar(max)**、**varchar(max)**、 **varbinary(max)** を使用してください。  
+ \***ntext**、 **text**、および **image** データ型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の将来のバージョンで削除される予定です。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 代わりに、 **nvarchar(max)**、 **varchar(max)**、 **varbinary(max)** を使用してください。  
   
 ##  <a name="PrefixLengthsImport"></a> 一括インポートのプレフィックス長  
  データが一括インポートされるときは、プレフィックス長はデータ ファイルが作成されたときに指定された値になります。 **bcp** コマンドでデータ ファイルが作成されなかった場合、プレフィックス長文字列が存在しない場合があります。 この場合は、プレフィックス長に 0 を指定します。  
   
 > [!NOTE]  
->  **bcp** を使用して、作成されなかったデータ ファイルのプレフィックス長を指定するには、このトピックの「[一括エクスポートのプレフィックス長](#PrefixLengthsExport)」に記載した長さを使用してください。  
+>  **bcp**を使用して、作成されなかったデータ ファイルのプレフィックス長を指定するには、このトピックの「 [一括エクスポートのプレフィックス長](#PrefixLengthsExport)」に記載した長さを使用してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [bcp を使用したフィールド長の指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   
@@ -97,3 +101,4 @@ caps.handback.revision: 30
  [bcp を使用したファイル ストレージ型の指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   
+

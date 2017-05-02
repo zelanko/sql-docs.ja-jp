@@ -1,30 +1,34 @@
 ---
-title: "サーバー監査の仕様およびデータベース監査の仕様を作成する方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.sqlaudit.dbaudit.general.f1"
-helpviewer_keywords: 
-  - "監査 [SQL Server], データベース仕様の作成"
-  - "データベース監査 [SQL Server]"
+title: "サーバー監査とデータベース監査の仕様を作成する方法 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.sqlaudit.dbaudit.general.f1
+helpviewer_keywords:
+- audits [SQL Server], creating database specification
+- database audit [SQL Server]
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d5beb8f3b18bd4dd99039b0f2b38ce731140726
+ms.lasthandoff: 04/11/2017
+
 ---
-# サーバー監査の仕様およびデータベース監査の仕様を作成する方法
+# <a name="create-a-server-audit-and-database-audit-specification"></a>サーバー監査の仕様およびデータベース監査の仕様を作成する方法
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]でサーバー監査とデータベース監査の仕様を作成する方法について説明します。  
   
- *のインスタンスや* データベースの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、システムで発生するイベントの追跡およびログ記録が行われます。 *SQL Server Audit* オブジェクトは、監視するサーバー レベルまたはデータベース レベルのアクションおよびアクションのグループの 1 つのインスタンスを収集します。 監査は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス レベルで行われます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスごとに複数の監査を使用できます。 "*データベース レベルの監査の仕様*" オブジェクトも、監査に属しています。 各監査では、SQL Server データベースごとに 1 つのデータベース監査の仕様を作成できます。 詳細については、「[SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
+ *のインスタンスや* データベースの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、システムで発生するイベントの追跡およびログ記録が行われます。 *SQL Server Audit* オブジェクトは、監視するサーバー レベルまたはデータベース レベルのアクションおよびアクションのグループの 1 つのインスタンスを収集します。 監査は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス レベルで行われます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスごとに複数の監査を使用できます。 " *データベース レベルの監査の仕様* " オブジェクトも、監査に属しています。 各監査では、SQL Server データベースごとに 1 つのデータベース監査の仕様を作成できます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
  **このトピックの内容**  
   
@@ -59,21 +63,21 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### サーバー監査を作成するには  
+#### <a name="to-create-a-server-audit"></a>サーバー監査を作成するには  
   
 1.  オブジェクト エクスプローラーで、 **[セキュリティ]** フォルダーを展開します。  
   
-2.  **[監査]** フォルダーを右クリックし、**[新しい監査]** を選択します。 詳しくは、「 [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)」をご覧ください。  
+2.  **[監査]** フォルダーを右クリックし、 **[新しい監査]**を選択します。 詳しくは、「 [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)」をご覧ください。  
   
 3.  オプションの選択が完了したら、 **[OK]**をクリックします。  
   
-#### データベース レベルの監査仕様を作成するには  
+#### <a name="to-create-a-database-level-audit-specification"></a>データベース レベルの監査仕様を作成するには  
   
 1.  オブジェクト エクスプローラーで、監査仕様を作成するデータベースを展開します。  
   
 2.  **[セキュリティ]** フォルダーを展開します。  
   
-3.  **[データベース監査の仕様]** フォルダーを右クリックし、**[新しいデータベース監査の仕様]** を選択します。  
+3.  **[データベース監査の仕様]** フォルダーを右クリックし、 **[新しいデータベース監査の仕様]**を選択します。  
   
      **[データベース監査の仕様の作成]** ダイアログ ボックスでは、次のオプションを使用できます。  
   
@@ -84,12 +88,12 @@ caps.handback.revision: 17
      既存のデータベース監査の名前。 監査の名前を入力するか、一覧から選択します。  
   
      **[監査アクションの種類]**  
-     キャプチャするデータベース レベルの監査アクション グループと監査アクションを指定します。 データベース レベルの監査アクション グループと監査アクションの一覧、およびそれらに含まれるイベントの説明については、「[SQL Server 監査のアクション グループとアクション](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)」をご覧ください。  
+     キャプチャするデータベース レベルの監査アクション グループと監査アクションを指定します。 データベース レベルの監査アクション グループと監査アクションの一覧、およびそれらに含まれるイベントの説明については、「 [SQL Server 監査のアクション グループとアクション](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)」をご覧ください。  
   
      **[オブジェクト スキーマ]**  
-     指定した **[オブジェクト名]** のスキーマを表示します。  
+     指定した **[オブジェクト名]**のスキーマを表示します。  
   
-     **Object Name**  
+     **[オブジェクト名]**  
      監査するオブジェクトの名前。 これは監査アクションにのみ使用できます。監査グループには適用されません。  
   
      **省略記号 [...]**  
@@ -105,7 +109,7 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### サーバー監査を作成するには  
+#### <a name="to-create-a-server-audit"></a>サーバー監査を作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -126,7 +130,7 @@ caps.handback.revision: 17
     WITH (STATE = ON) ;  
     ```  
   
-#### データベース レベルの監査仕様を作成するには  
+#### <a name="to-create-a-database-level-audit-specification"></a>データベース レベルの監査仕様を作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   

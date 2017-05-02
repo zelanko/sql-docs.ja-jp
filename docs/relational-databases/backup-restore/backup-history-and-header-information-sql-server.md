@@ -1,45 +1,49 @@
 ---
 title: "バックアップの履歴とヘッダーの情報 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "バックアップ ヘッダー [SQL Server]"
-  - "履歴テーブル [SQL Server]"
-  - "ファイルの復元 [SQL Server], 状態情報"
-  - "バックアップ セット [SQL Server], 状態情報"
-  - "バックアップされたデータベースの一覧"
-  - "状態情報 [SQL Server], バックアップ"
-  - "バックアップ [SQL Server], バックアップ セットの表示"
-  - "復元 [SQL Server], 履歴テーブル"
-  - "データベースの復元 [SQL Server], 状態情報"
-  - "バックアップ [SQL Server], 状態情報"
-  - "ヘッダー [SQL Server]"
-  - "メディア ヘッダー [SQL Server]"
-  - "バックアップ履歴テーブル [SQL Server]"
-  - "バックアップ情報の表示"
-  - "ファイルの復元 [SQL Server], バックアップ情報の表示"
-  - "データベースの復元 [SQL Server], 履歴テーブル"
-  - "バックアップ情報の確認"
-  - "ファイルの復元 [SQL Server], 状態情報"
-  - "履歴情報 [SQL Server], バックアップ"
-  - "データベースの復元 [SQL Server], 履歴テーブル"
-  - "復元履歴テーブル [SQL Server]"
-  - "一覧、バックアップ ファイル"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup headers [SQL Server]
+- history tables [SQL Server]
+- file restores [SQL Server], status information
+- backup sets [SQL Server], status information
+- listing backed up databases
+- status information [SQL Server], backups
+- backing up [SQL Server], viewing backup sets
+- restoring [SQL Server], history tables
+- restoring databases [SQL Server], status information
+- backups [SQL Server], status information
+- headers [SQL Server]
+- media headers [SQL Server]
+- backup history tables [SQL Server]
+- viewing backup information
+- restoring files [SQL Server], viewing backup information
+- restoring databases [SQL Server], history tables
+- displaying backup information
+- restoring files [SQL Server], status information
+- historical information [SQL Server], backups
+- database restores [SQL Server], history tables
+- restore history tables [SQL Server]
+- listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff9f48347c218dba37363dd1a983a66abbdc6372
+ms.lasthandoff: 04/11/2017
+
 ---
-# バックアップの履歴とヘッダーの情報 (SQL Server)
+# <a name="backup-history-and-header-information-sql-server"></a>バックアップの履歴とヘッダーの情報 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースには、サーバー インスタンスで行われた** のすべてのバックアップ操作および復元操作の完全な履歴が格納されます。 このトピックでは、バックアップと復元の履歴テーブルに加え、バックアップ履歴へのアクセスに使用する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントについても説明します。 また、データベース ファイルとトランザクション ログ ファイルの一覧表示が役立つ状況について説明し、メディア ヘッダー情報を使用する状況とバックアップ ヘッダー情報を使用する状況の比較についても説明します。  
   
 > [!IMPORTANT]  
@@ -88,9 +92,9 @@ caps.handback.revision: 54
   
 |情報ステートメント|バックアップ履歴テーブル|説明|  
 |---------------------------|--------------------------|-----------------|  
-|[RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|指定したバックアップ セットに含まれるデータベース ファイルとログ ファイルの一覧を含む結果セットを返します。<br /><br /> 詳細については、このトピックの「データベース ファイルとトランザクション ログ ファイルの一覧表示」を参照してください。|  
-|[RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|特定のバックアップ デバイス上のすべてのバックアップ セットについて、バックアップ ヘッダーに関するすべての情報を取得します。 RESTORE HEADERONLY を実行して得られる結果は、結果セットです。<br /><br /> 詳細については、このトピックの「バックアップ ヘッダー情報の表示」を参照してください。|  
-|[RESTORE LABELONLY](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)|[backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|指定したバックアップ デバイス上のバックアップ メディアに関する情報を含む結果セットを返します。<br /><br /> 詳細については、このトピックの「メディア ヘッダー情報の表示」を参照してください。|  
+|[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|指定したバックアップ セットに含まれるデータベース ファイルとログ ファイルの一覧を含む結果セットを返します。<br /><br /> 詳細については、このトピックの「データベース ファイルとトランザクション ログ ファイルの一覧表示」を参照してください。|  
+|[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|特定のバックアップ デバイス上のすべてのバックアップ セットについて、バックアップ ヘッダーに関するすべての情報を取得します。 RESTORE HEADERONLY を実行して得られる結果は、結果セットです。<br /><br /> 詳細については、このトピックの「バックアップ ヘッダー情報の表示」を参照してください。|  
+|[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|[backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|指定したバックアップ デバイス上のバックアップ メディアに関する情報を含む結果セットを返します。<br /><br /> 詳細については、このトピックの「メディア ヘッダー情報の表示」を参照してください。|  
   
 ##  <a name="ListDbTlogFiles"></a> データベース ファイルとトランザクション ログ ファイル  
  バックアップ内のデータベース ファイルおよびトランザクション ログ ファイルの一覧を表示すると、論理名、物理名、ファイルの種類 (データベースまたはログ)、ファイル グループのメンバーシップ、ファイルのサイズ (バイト単位)、ファイルの最大許容サイズ、および定義済みのファイル拡張サイズ (バイト単位) が表示されます。 この情報は、次のような場合に、データベース バックアップを復元する前にそのバックアップ内のファイルの名前を調べる際に役立ちます。  
@@ -109,17 +113,17 @@ caps.handback.revision: 54
 > [!NOTE]  
 >  メディア ヘッダーの表示にはごくわずかな時間しかかかりません。  
   
- 詳細については、このトピックの後の方の「[メディア ヘッダーとバックアップ ヘッダーの情報の比較](#CompareMediaHeaderBackupHeader)」を参照してください。  
+ 詳細については、このトピックの後の方の「 [メディア ヘッダーとバックアップ ヘッダーの情報の比較](#CompareMediaHeaderBackupHeader)」を参照してください。  
   
 ##  <a name="BackupHeader"></a> バックアップ ヘッダー情報  
- バックアップ ヘッダーを表示すると、メディア上のすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップ セットおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のバックアップ セットに関する情報が表示されます。 表示される情報には、使用しているバックアップ デバイスの種類、バックアップの種類 (データベース、トランザクション、ファイル、差分データベースなど)、およびバックアップの開始と終了の日時が含まれています。 この情報は、テープ上のどのバックアップ セットを復元するかを判断したり、メディアに書き込まれているバックアップを調べる場合に役立ちます。  
+ バックアップ ヘッダーを表示すると、メディア上のすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップ セットおよび[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のバックアップ セットに関する情報が表示されます。 表示される情報には、使用しているバックアップ デバイスの種類、バックアップの種類 (データベース、トランザクション、ファイル、差分データベースなど)、およびバックアップの開始と終了の日時が含まれています。 この情報は、テープ上のどのバックアップ セットを復元するかを判断したり、メディアに書き込まれているバックアップを調べる場合に役立ちます。  
   
 > [!NOTE]  
 >  メディア上の各バックアップに関する情報を表示するにはメディア全体をスキャンする必要があるため、大容量のテープの場合はバックアップ ヘッダー情報を表示するのに時間がかかることがあります。  
   
- 詳細については、このトピックの後の方の「[メディア ヘッダーとバックアップ ヘッダーの情報の比較](#CompareMediaHeaderBackupHeader)」を参照してください。  
+ 詳細については、このトピックの後の方の「 [メディア ヘッダーとバックアップ ヘッダーの情報の比較](#CompareMediaHeaderBackupHeader)」を参照してください。  
   
-### 復元するバックアップ セットの特定  
+### <a name="which-backup-set-to-restore"></a>復元するバックアップ セットの特定  
  バックアップ ヘッダーの情報を使用して、復元するバックアップ セットを識別できます。 バックアップ メディアの各バックアップ セットには、データベース エンジンによって番号が付けられます。 この番号を使用すると、復元するバックアップ セットをメディア内での位置によって識別できます。 たとえば、次のメディアには 3 つのバックアップ セットが含まれています。  
   
  ![SQL Server バックアップ セットを含むバックアップ メディア](../../relational-databases/backup-restore/media/bnr-media-backup-sets.gif "SQL Server バックアップ セットを含むバックアップ メディア")  
@@ -152,13 +156,13 @@ caps.handback.revision: 54
   
  **バックアップ セットに含まれているデータ ファイルおよびログ ファイルを表示するには**  
   
--   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)  
+-   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A> (SMO)  
   
  **メディア ヘッダー情報を表示するには**  
   
--   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
 -   [論理バックアップ デバイスのプロパティと内容の表示 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -168,7 +172,7 @@ caps.handback.revision: 54
   
  **バックアップ ヘッダー情報を表示するには**  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
 -   [バックアップ テープまたはバックアップ ファイルの内容の表示 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
@@ -186,7 +190,7 @@ caps.handback.revision: 54
   
  **メディア ヘッダー情報を表示するには**  
   
--   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
 -   [論理バックアップ デバイスのプロパティと内容の表示 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -196,7 +200,7 @@ caps.handback.revision: 54
   
  **バックアップ ヘッダー情報を表示するには**  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
 -   [バックアップ テープまたはバックアップ ファイルの内容の表示 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
@@ -208,15 +212,15 @@ caps.handback.revision: 54
   
 -   [バックアップ セットに含まれているデータ ファイルおよびログ ファイルの表示 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
  **バックアップを検証するには**  
   
--   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+-   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> (SMO)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   

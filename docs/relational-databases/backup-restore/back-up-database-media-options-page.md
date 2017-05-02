@@ -1,25 +1,29 @@
 ---
 title: "[データベースのバックアップ] ([メディア オプション] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "swb.backupdatabase.mediaoptions.f1"
-  - "sql13.swb.backupdatabase.mediaoptions.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- swb.backupdatabase.mediaoptions.f1
+- sql13.swb.backupdatabase.mediaoptions.f1
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e1fd480768d75f33793f7260eb2652a25c1cc77
+ms.lasthandoff: 04/11/2017
+
 ---
-# [データベースのバックアップ] ([メディア オプション] ページ)
+# <a name="back-up-database-media-options-page"></a>[データベースのバックアップ] ([メディア オプション] ページ)
   **[データベースのバックアップ]** ダイアログ ボックスの **[メディア オプション]** ページを使用すると、データベースのメディアのオプションを表示または変更できます。  
   
  **SQL Server Management Studio を使用してバックアップを作成するには**  
@@ -29,20 +33,20 @@ caps.handback.revision: 7
 -   [データベースの差分バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   
 > [!IMPORTANT]  
->  データベース メンテナンス プランを定義して、データベース バックアップを作成できます。 詳細については、「[メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)」および「[メンテナンス プラン ウィザードの使用](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)」を参照してください。  
+>  データベース メンテナンス プランを定義して、データベース バックアップを作成できます。 詳細については、「 [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md) 」および「 [メンテナンス プラン ウィザードの使用](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してバックアップ タスクを指定する場合、**[スクリプト]** ボタンをクリックしてスクリプトの保存先を選択することにより、対応する [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) スクリプトを生成できます。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してバックアップ タスクを指定する場合、 [!INCLUDE[tsql](../../includes/tsql-md.md)][[スクリプト]](../../t-sql/statements/backup-transact-sql.md) ボタンをクリックしてスクリプトの保存先を選択することにより、対応する **BACKUP** スクリプトを生成できます。  
   
-## オプション  
+## <a name="options"></a>オプション  
   
-### [メディアに上書きします]  
- **[メディアに上書きします]** パネルのオプションでは、バックアップをメディアに書き込む方法を制御します。 [データベースのバックアップ] ダイアログ ボックスの [全般] ページでバックアップ先として [URL] (Windows Azure ストレージ) を選択した場合、[メディアに上書きします] セクションのオプションは無効になります。 Transact-SQL の **BACKUP TO URL... WITH FORMAT** ステートメントを使用してバックアップを上書きすることもできます。 詳細については、「 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。  
+### <a name="overwrite-media"></a>[メディアに上書きします]  
+ **[メディアに上書きします]** パネルのオプションでは、バックアップをメディアに書き込む方法を制御します。 [データベースのバックアップ] ダイアログ ボックスの [全般] ページでバックアップ先として [URL] (Windows Azure ストレージ) を選択した場合、[メディアに上書きします] セクションのオプションは無効になります。 Transact-SQL の **BACKUP TO URL..WITH FORMAT** ステートメントを使用して、バックアップを上書きすることができます。 詳細については、「 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。  
   
- 暗号化オプションとの併用がサポートされているのは、**[新しいメディア セットにバックアップし、すべての既存のバックアップ セットを消去する]** オプションのみです。 **[既存のメディア セットにバックアップする]** セクションのオプションを選択すると、**[バックアップ オプション]** ページの暗号化オプションが無効になります。  
+ 暗号化オプションとの併用がサポートされているのは、 **[新しいメディア セットにバックアップし、すべての既存のバックアップ セットを消去する]** オプションのみです。 **[既存のメディア セットにバックアップする]** セクションのオプションを選択すると、**[バックアップ オプション]** ページの暗号化オプションが無効になります。  
   
 > [!NOTE]  
->  メディア セットの詳細については、[メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md) を参照してください。  
+>  メディア セットの詳細については、「 [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)のインスタンスが動作しているコンピューターにテープ ドライブが装着されている場合のみ使用できます。  
   
  **[既存のメディア セットにバックアップする]**  
  データベースを既存のメディア セットにバックアップします。 このオプション ボタンをクリックすると、3 つのオプションが有効になります。  
@@ -72,19 +76,19 @@ caps.handback.revision: 7
  **[新しいメディア セットの説明]**  
  必要に応じて、新しいメディア セットのわかりやすい説明を入力します。 この説明は、内容について正確に伝えられるだけの具体性が必要です。  
   
-### [信頼性]  
+### <a name="reliability"></a>[信頼性]  
  **[トランザクション ログ]** パネルのオプションでは、バックアップ操作によるエラー管理を制御します。  
   
  **[完了時にバックアップを検証する]**  
  バックアップ セットが完全で、すべてのボリュームが読み取り可能であることを検証します。  
   
  **[メディアに書き込む前にチェックサムを行う]**  
- バックアップ メディアに書き込む前にチェックサムを検証します。 このチェック ボックスをオンにすることは、[!INCLUDE[tsql](../../includes/tsql-md.md)] の BACKUP ステートメントで CHECKSUM オプションを指定することと同じです。 このオプションをオンにするとワークロードが増加し、バックアップ操作のバックアップ スループットが低下する可能性があります。 バックアップ チェックサムの詳細については、「[バックアップ中および復元中に発生する可能性があるメディア エラー &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)」を参照してください。  
+ バックアップ メディアに書き込む前にチェックサムを検証します。 このチェック ボックスをオンにすることは、 [!INCLUDE[tsql](../../includes/tsql-md.md)]の BACKUP ステートメントで CHECKSUM オプションを指定することと同じです。 このオプションをオンにするとワークロードが増加し、バックアップ操作のバックアップ スループットが低下する可能性があります。 バックアップ チェックサムの詳細については、「[バックアップ中および復元中に発生する可能性があるメディア エラー &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)」を参照してください。  
   
  **[エラーのまま続行する]**  
  エラーが 1 回以上発生しても、バックアップ操作を続行します。  
   
-### トランザクション ログ  
+### <a name="transaction-log"></a>[トランザクション ログ]  
  **[トランザクション ログ]** パネルのオプションでは、トランザクション ログ バックアップの動作を制御します。 これらのオプションは、完全復旧モデルと一括ログ復旧モデルにのみ適用されます。 これらのオプションは、**[データベースのバックアップ]** ダイアログ ボックスの [[全般]](../../relational-databases/backup-restore/back-up-database-general-page.md) ページにある **[バックアップの種類]** フィールドで **[トランザクション ログ]** を選択した場合のみアクティブになります。  
   
 > [!NOTE]  
@@ -94,11 +98,11 @@ caps.handback.revision: 7
  トランザクション ログをバックアップし、それを切り捨てることでログの領域を解放します。 データベースはオンラインを維持します。 既定のオプションです。  
   
  **[ログの末尾をバックアップし、データベースを復元中の状態にしておく]**  
- ログの末尾をバックアップし、データベースを復元中の状態にします。 このオプションでは、*ログ末尾のバックアップ*を作成します。このバックアップでは、データベースの復元に備えて、通常、まだバックアップされていないログ (アクティブなログ) をバックアップします。 復元が完了するまで、ユーザーはデータベースを使用できなくなります。  
+ ログの末尾をバックアップし、データベースを復元中の状態にします。 このオプションでは、 *ログ末尾のバックアップ*を作成します。このバックアップでは、データベースの復元に備えて、通常、まだバックアップされていないログ (アクティブなログ) をバックアップします。 復元が完了するまで、ユーザーはデータベースを使用できなくなります。  
   
  このオプションを選択することは、[BACKUP](../../t-sql/statements/backup-transact-sql.md) ステートメント ([!INCLUDE[tsql](../../includes/tsql-md.md)]) で WITH NO_TRUNCATE および NORECOVERY を指定することと同じです。 詳細については、「[ログ末尾のバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)」を参照してください。  
   
-### [テープ ドライブ]  
+### <a name="tape-drive"></a>[テープ ドライブ]  
  **[テープ ドライブ]** パネルのオプションでは、バックアップ操作時のテープ管理を制御します。 これらのオプションは、**[データベースのバックアップ]** ダイアログ ボックスの [[全般]](../../relational-databases/backup-restore/back-up-database-general-page.md) ページにある **[バックアップ先]** パネルで **[テープ]** を選択した場合のみアクティブになります。  
   
 > [!NOTE]  
@@ -108,9 +112,9 @@ caps.handback.revision: 7
  バックアップの完了後、テープをアンロードします。  
   
  **[アンロードの前にテープを巻き戻す]**  
- テープをアンロードする前にテープを解放し、巻き戻します。 このオプションは、**[バックアップ後にテープをアンロードする]** チェック ボックスをオンにした場合のみ有効になります。  
+ テープをアンロードする前にテープを解放し、巻き戻します。 このオプションは、 **[バックアップ後にテープをアンロードする]** チェック ボックスをオンにした場合のみ有効になります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [ファイルおよびファイル グループのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

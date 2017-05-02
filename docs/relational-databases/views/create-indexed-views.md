@@ -1,29 +1,33 @@
 ---
 title: "インデックス付きビューの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "インデックス付きビュー [SQL Server]、作成"
-  - "クラスター化インデックス、ビュー"
-  - "CREATE INDEX ステートメント"
-  - "large_value_types_out_of_row オプション"
-  - "インデックス付きビュー [SQL Server]"
-  - "インデックス付きビューのビュー [SQL Server]"
+ms.custom: 
+ms.date: 05/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexed views [SQL Server], creating
+- clustered indexes, views
+- CREATE INDEX statement
+- large_value_types_out_of_row option
+- indexed views [SQL Server]
+- views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 caps.latest.revision: 79
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 79
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 24b4e22249ec7a175dc3ae239dea329c4d18208f
+ms.lasthandoff: 04/11/2017
+
 ---
-# インデックス付きビューの作成
+# <a name="create-indexed-views"></a>インデックス付きビューの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用し、インデックス付きビューを作成する方法について説明します。 ビューに作成する最初のインデックスは、一意なクラスター化インデックスにする必要があります。 一意のクラスター化インデックスを作成した後は、非クラスター化インデックスを追加で作成できます。 ビューに一意のクラスター化インデックスを作成すると、そのビューは、クラスター化インデックスが定義されているテーブルと同じ方法でデータベースに格納されるので、クエリのパフォーマンスが向上します。 クエリ オプティマイザーではインデックス付きビューを使って、クエリの実行速度を高めることができます。 オプティマイザーでビューを代用するかどうかを判別するために、ビューがクエリで参照されている必要はありません。  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
@@ -40,9 +44,9 @@ caps.handback.revision: 79
 5.  ビューに一意のクラスター化インデックスを作成します。  
   
 ###  <a name="Restrictions"></a> インデックス付きビューに必要な SET オプション  
- クエリの実行時、異なる SET オプションがアクティブになっている場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は同じ式を評価しても異なる結果を生成することがあります。 たとえば、SET オプションの CONCAT_NULL_YIELDS_NULL を ON に設定した後、式 **'**abc**'** + NULL を実行すると NULL 値が返されます。 CONCAT_NULL_YIELDS_NULL を OFF に設定した後、同じ式を実行すると値 **'**abc**'** が返されます。  
+ クエリの実行時、異なる SET オプションがアクティブになっている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は同じ式を評価しても異なる結果を生成することがあります。 たとえば、SET オプションの CONCAT_NULL_YIELDS_NULL を ON に設定した後、式 **'**abc**'** + NULL を実行すると NULL 値が返されます。 CONCAT_NULL_YIELDS_NULL を OFF に設定した後、同じ式を実行すると値 **'**abc**'**が返されます。  
   
- ビューが正しく維持され、一貫性のある結果が返されるようにするには、インデックス付きビューで、いくつかの SET オプションに固定値が必要となります。 固定値の設定が必要な SET オプションと、その値 (**必要な値**の列を参照) を下の表に示します。この設定は次の条件に該当する場合に常に必要となります:  
+ ビューが正しく維持され、一貫性のある結果が返されるようにするには、インデックス付きビューで、いくつかの SET オプションに固定値が必要となります。 固定値の設定が必要な SET オプションと、その値 ( **必要な値** の列を参照) を下の表に示します。この設定は次の条件に該当する場合に常に必要となります:  
   
 -   ビューが作成され、そのビューのインデックスも作成されている。  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 79
 > [!IMPORTANT]  
 >  ARITHABORT ユーザー オプションは、そのサーバーのデータベースで初めてインデックス付きビューまたは計算列のインデックスが作成されたときすぐに、サーバー全体で ON に設定することを強くお勧めします。  
   
-### 決定的なビュー  
+### <a name="deterministic-views"></a>決定的なビュー  
  インデックス付きビューの定義は決定的である必要があります。 選択リストのすべての式と、WHERE 句および GROUP BY 句が決定的である場合、ビューは決定的であるといえます。 決定的な式では、特定の入力値セットで評価するとき常に同じ結果が返されます。 決定的な式には、決定的な関数のみを含めることができます。 たとえば、DATEADD 関数は、3 つのパラメーターの任意の引数値セットに対して常に同じ結果を返すため、決定的であるといえます。 GETDATE は、常に同じ引数で起動されるにもかかわらず、返す値は実行のたびに変化するため、非決定的であるといえます。  
   
  ビュー列が決定的かどうかを判断するには、 **COLUMNPROPERTY** 関数の [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) プロパティを使用します。 スキーマ バインドを含むビューの決定的な列が正確であるかどうかを判断するには、COLUMNPROPERTY 関数の **IsPrecise** プロパティを使用します。 COLUMNPROPERTY では、TRUE の場合は 1、FALSE の場合は 0、有効でない入力に対しては NULL が返されます。 これは、列が決定的でないか、正確でないことを表します。  
@@ -77,20 +81,20 @@ caps.handback.revision: 79
  式が決定的でも、浮動小数点式が含まれる場合は、正確な結果はプロセッサのアーキテクチャまたはマイクロコードのバージョンによって異なる可能性があります。 データの整合性を確保するため、このような式は、インデックス付きビューの非キー列としてのみ含めることができます。 浮動小数点式を含まない決定的な式は、正確な式です。 インデックス ビューのキー列と WHERE または GROUP BY 句には、正確で決定的な式だけを含めることができます。  
   
 > [!NOTE]  
->  テンポラル クエリ (**FOR SYSTEM_TIME** 句を使用するクエリ) 上では、インデックス付きビューはサポートされていません。  
+>  テンポラル クエリ ( **FOR SYSTEM_TIME** 句を使用するクエリ) 上では、インデックス付きビューはサポートされていません。  
   
-### その他の要件  
+### <a name="additional-requirements"></a>その他の要件  
  SET オプションと決定的な関数の要件に加えて、次の要件を満たす必要があります。  
   
 -   CREATE INDEX を実行するユーザーが、ビューの所有者であること。  
   
 -   インデックスを作成する場合は、IGNORE_DUP_KEY オプションを OFF に設定する必要があります (既定の設定)。  
   
--   ビュー定義では、*schema***.***tablename* という 2 つの部分から構成される名前でテーブルが参照されていること。  
+-   ビュー定義では、 *schema***.***tablename* という 2 つの部分から構成される名前でテーブルが参照されていること。  
   
 -   ビューで参照されているユーザー定義関数が、WITH SCHEMABINDING オプションを使用して作成されていること。  
   
--   ビューで参照されているユーザー定義関数が、*schema***.***function* という 2 つの部分から構成される名前で参照されていること。  
+-   ビューで参照されているユーザー定義関数が、 *schema***.***function*という 2 つの部分から構成される名前で参照されていること。  
   
 -   ユーザー定義関数のデータ アクセス プロパティが NO SQL に、外部アクセス プロパティが NO に設定されている必要があります。  
   
@@ -114,7 +118,7 @@ caps.handback.revision: 79
     ||||  
     |-|-|-|  
     |[COUNT]|行セット関数 (OPENDATASOURCE、OPENQUERY、OPENROWSET、および OPENXML)|外部結合 (LEFT、RIGHT、または FULL)|  
-    |派生テーブル (FROM 句で SELECT ステートメントを指定することで定義される)|自己結合|SELECT \* または SELECT *table_name* を使用して、列を指定します。*|  
+    |派生テーブル (FROM 句で SELECT ステートメントを指定することで定義される)|自己結合|SELECT \* または SELECT *table_name*を使用して、列を指定します。*|  
     |DISTINCT|STDEV、STDEVP、VAR、VARP、または AVG|共通テーブル式 (CTE)|  
     |**float**\*、 **text**、 **ntext**、 **image**、 **XML**、 or **filestream** の各列|サブクエリ|順位付け関数または集計関数が含まれている OVER 句|  
     |フルテキスト述語 (CONTAIN、FREETEXT)|NULL 値を許容する式を参照する SUM 関数|ORDER BY|  
@@ -131,16 +135,16 @@ caps.handback.revision: 79
 -   ビュー定義に GROUP BY 句を指定した場合、一意のクラスター化インデックスのキーでは、GROUP BY 句で指定した列のみを参照できること。  
   
 ###  <a name="Recommendations"></a> 推奨事項  
- インデックス付きビューで **datetime** 文字リテラルと **smalldatetime** 文字列リテラルを参照するときは、決定的な日付形式スタイルを使用して、そのリテラルを目的の日付型に明示的に変換することをお勧めします。 決定的な日付形式の一覧については、「[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。 **datetime** 型または **smalldatetime** 型への文字列の暗黙的な変換が必要な式は非決定的であると見なされます。 これは、サーバー セッションの LANGUAGE および DATEFORMAT の設定によって結果が異なるためです。 たとえば、式 `CONVERT (datetime, '30 listopad 1996', 113)` では、言語が異なると文字列 '`listopad`' が異なる月を意味するので、結果が LANGUAGE の設定によって異なります。 同様に、式 `DATEADD(mm,3,'2000-12-01')` の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では DATEFORMAT の設定に基づいて、文字列 `'2000-12-01'` が解釈されます。  
+ インデックス付きビューで **datetime** 文字リテラルと **smalldatetime** 文字列リテラルを参照するときは、決定的な日付形式スタイルを使用して、そのリテラルを目的の日付型に明示的に変換することをお勧めします。 決定的な日付形式の一覧については、「[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。 **datetime** 型または **smalldatetime** 型への文字列の暗黙的な変換が必要な式は非決定的であると見なされます。 これは、サーバー セッションの LANGUAGE および DATEFORMAT の設定によって結果が異なるためです。 たとえば、式 `CONVERT (datetime, '30 listopad 1996', 113)` では、言語が異なると文字列 '`listopad`' が異なる月を意味するので、結果が LANGUAGE の設定によって異なります。 同様に、式 `DATEADD(mm,3,'2000-12-01')`の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では DATEFORMAT の設定に基づいて、文字列 `'2000-12-01'` が解釈されます。  
   
  照合順序間で行われる Unicode 以外の文字データの暗黙的な変換も非決定的であると見なされます。  
   
 ###  <a name="Considerations"></a> 考慮事項  
- インデックス付きビューの列の **large_value_types_out_of_row** オプションの設定は、ベース テーブルの対応する列の設定が継承されます。 この値は、[sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md) を使用して設定します。 式から形成される列に対する既定の設定は 0 です。 つまり、大きい値の型は行内に格納されます。  
+ インデックス付きビューの列の **large_value_types_out_of_row** オプションの設定は、ベース テーブルの対応する列の設定が継承されます。 この値は、 [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)を使用して設定します。 式から形成される列に対する既定の設定は 0 です。 つまり、大きい値の型は行内に格納されます。  
   
  インデックス付きビューはパーティション分割されたテーブルに作成でき、インデックス付きビュー自体をパーティション分割できます。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]でインデックス付きビューが使用されないようにするには、クエリに OPTION (EXPAND VIEWS) ヒントを含めます。 これによって、オプションの 1 つが正しく設定されていない場合、オプティマイザーもビューのインデックスを使用できません。 OPTION (EXPAND VIEWS) ヒントの詳細については、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] でインデックス付きビューが使用されないようにするには、クエリに OPTION (EXPAND VIEWS) ヒントを含めます。 これによって、オプションの 1 つが正しく設定されていない場合、オプティマイザーもビューのインデックスを使用できません。 OPTION (EXPAND VIEWS) ヒントの詳細については、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
   
  ビューが削除されると、ビューのすべてのインデックスも削除されます。 クラスター化インデックスが削除されると、ビューのすべての非クラスター化インデックスと自動的に作成された統計も削除されます。 ユーザーが作成したビューの統計は、保持されます。 非クラスター化インデックスは、個別に削除できます。 ビュー上のクラスター化インデックスを削除すると、格納された結果セットも削除され、オプティマイザーは、ビューの処理を標準的なビューと同様の処理に戻します。  
   
@@ -153,7 +157,7 @@ caps.handback.revision: 79
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### インデックス付きビューを作成するには  
+#### <a name="to-create-an-indexed-view"></a>インデックス付きビューを作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -210,7 +214,7 @@ caps.handback.revision: 79
   
  詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
@@ -221,3 +225,4 @@ caps.handback.revision: 79
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
   
+

@@ -1,27 +1,31 @@
 ---
 title: "Event Tracing for Windows ターゲット | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Event Tracing for Windows ターゲット"
-  - "ETW ターゲット"
-  - "ターゲット [SQL Server 拡張イベント], Event Tracing for Windows ターゲット"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event tracing for windows target
+- ETW target
+- targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d69eb01f34774812aeaafbddcaa08b17f22ac097
+ms.lasthandoff: 04/11/2017
+
 ---
-# Event Tracing for Windows ターゲット
+# <a name="event-tracing-for-windows-target"></a>Event Tracing for Windows ターゲット
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Event Tracing for Windows (ETW) をターゲットとして使用する前に、ETW を活用するための知識を身に付けておくことをお勧めします。 ETW トレースは、拡張イベントと組み合わせて使用されるか、拡張イベントのイベント コンシューマーとして使用されます。 ETW の背景情報については、次の外部リンクを参照してください。  
@@ -33,20 +37,20 @@ caps.handback.revision: 13
  ETW ターゲットは、多くのセッションに追加できますが、シングルトン ターゲットです。 多くのセッションでイベントが発生した場合、イベントは、イベントの発生ごとに 1 回、ETW ターゲットのみに反映されます。 拡張イベント エンジンは、プロセスあたり 1 つのインスタンスに制限されます。  
   
 > [!IMPORTANT]  
->  ETW ターゲットを動作させるには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス開始アカウントが Performance Log Users グループのメンバーであることが必要です。  
+>  ETW ターゲットを動作させるには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス開始アカウントが Performance Log Users グループのメンバーであることが必要です。  
   
  ETW セッションに存在するイベントの構成は、拡張イベント エンジンがホストするプロセスによって制御されます。 拡張イベント エンジンは、どのイベントを発生させるか、どのような条件が満たされた場合にイベントを発生させるかを制御します。  
   
- 拡張イベント セッションへのバインド後、つまり、プロセスの有効期間中に初めて ETW ターゲットがアタッチされたとき、ETW ターゲットは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロバイダー上で単一の ETW セッションを開きます。 ETW セッションが既に存在していた場合、ETW ターゲットは、既存のセッションへの参照を取得します。 この ETW セッションは、特定のコンピューター上のすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス間で共有されます。 ETW ターゲットが割り当てられているセッションで発生したすべてのイベントは、この ETW セッションが受け取ることになります。  
+ 拡張イベント セッションへのバインド後、つまり、プロセスの有効期間中に初めて ETW ターゲットがアタッチされたとき、ETW ターゲットは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロバイダー上で単一の ETW セッションを開きます。 ETW セッションが既に存在していた場合、ETW ターゲットは、既存のセッションへの参照を取得します。 この ETW セッションは、特定のコンピューター上のすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス間で共有されます。 ETW ターゲットが割り当てられているセッションで発生したすべてのイベントは、この ETW セッションが受け取ることになります。  
   
  ETW では、プロバイダーがイベントを利用して、それを ETW に渡すことができるようになっている必要があります。そのため、セッションでは、すべての拡張イベント パッケージが有効化されます。 ETW ターゲットは、発生したイベントを、そのイベントのプロバイダーが有効になっているセッションへ送信します。  
   
  ETW ターゲットは、発生元スレッドでのイベントの同期発行をサポートします。 イベントの非同期発行はサポートしません。  
   
- ETW ターゲットは、外部 ETW コントローラー (たとえば Logman.exe) からのコントロールをサポートしません。 ETW トレースを生成するには、ETW ターゲットを使用してイベント セッションを作成する必要があります。 詳細については、「[CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)」を参照してください。   
+ ETW ターゲットは、外部 ETW コントローラー (たとえば Logman.exe) からのコントロールをサポートしません。 ETW トレースを生成するには、ETW ターゲットを使用してイベント セッションを作成する必要があります。 詳細については、「 [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
->  ETW ターゲットを有効にすると、XE_DEFAULT_ETW_SESSION という名前の ETW セッションが作成されます。 XE_DEFAULT_ETW_SESSION という名前のセッションが既に存在する場合は、既存のセッションのプロパティを変更せずに使用されます。 XE_DEFAULT_ETW_SESSION はすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス間で共有されます。 XE_DEFAULT_ETW_SESSION を開始した後に停止する場合は、Logman ツールなどの ETW コントローラーを使用する必要があります。 たとえば、コマンド プロンプトで **logman stop XE_DEFAULT_ETW_SESSION -ets** コマンドを実行できます。  
+>  ETW ターゲットを有効にすると、XE_DEFAULT_ETW_SESSION という名前の ETW セッションが作成されます。 XE_DEFAULT_ETW_SESSION という名前のセッションが既に存在する場合は、既存のセッションのプロパティを変更せずに使用されます。 XE_DEFAULT_ETW_SESSION はすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス間で共有されます。 XE_DEFAULT_ETW_SESSION を開始した後に停止する場合は、Logman ツールなどの ETW コントローラーを使用する必要があります。 たとえば、コマンド プロンプトで **logman stop XE_DEFAULT_ETW_SESSION -ets**コマンドを実行できます。  
   
  次の表では、ETW ターゲットの構成に使用できるオプションについて説明します。  
   
@@ -77,19 +81,19 @@ caps.handback.revision: 13
     > [!IMPORTANT]  
     >  最初のセッションの開始後にファイル パスを変更することはできません。  
   
--   マネージ オブジェクト形式 (MOF) のファイルは *\<インストール パス>*\Microsoft SQL Server\Shared に格納されます。 詳細については、MSDN の「[Managed Object Format](http://go.microsoft.com/fwlink/?LinkId=92851)」(マネージ オブジェクト形式) を参照してください。  
+-   マネージ オブジェクト形式 (MOF) のファイルは *\<インストール パス>*\Microsoft SQL Server\Shared に格納されます。 詳細については、MSDN の「 [Managed Object Format](http://go.microsoft.com/fwlink/?LinkId=92851) 」(マネージ オブジェクト形式) を参照してください。  
   
-## セッションへのターゲットの追加  
+## <a name="adding-the-target-to-a-session"></a>セッションへのターゲットの追加  
  ETW ターゲットを拡張イベント セッションに追加するには、イベント セッションの作成時または変更時に次のステートメントを含める必要があります。  
   
 ```  
 ADD TARGET package0.etw_classic_sync_target  
 ```  
   
- データの表示方法を含む、ETW ターゲットの使用法を示す完全な例の詳細については、「[拡張イベントを使用したシステムの使用状況の監視](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)」を参照してください。  
+ データの表示方法を含む、ETW ターゲットの使用法を示す完全な例の詳細については、「 [拡張イベントを使用したシステムの使用状況の監視](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)」を参照してください。  
   
-## 参照  
- [SQL Server 拡張イベント ターゲット](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)   
+## <a name="see-also"></a>参照  
+ [SQL Server 拡張イベント ターゲット](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  

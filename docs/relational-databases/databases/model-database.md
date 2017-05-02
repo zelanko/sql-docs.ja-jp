@@ -1,26 +1,30 @@
 ---
 title: "model データベース | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "テンプレート データベース [SQL Server]"
-  - "model データベース [SQL Server], model データベースについて"
-  - "model データベース [SQL Server]"
+ms.custom: 
+ms.date: 03/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- template databases [SQL Server]
+- model database [SQL Server], about model databases
+- model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a05d89ba953bf683a992a087be8e3c87777ae9c4
+ms.lasthandoff: 04/11/2017
+
 ---
-# model データベース
+# <a name="model-database"></a>model データベース
   **model** データベースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに作成するすべてのデータベースのテンプレートとして使用されるデータベースです。 **tempdb** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動するたびに作成されるので、 **model** データベースが常に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムに存在する必要があります。 **model** データベースの内容全体 (データベース オプションを含む) が新しいデータベースにコピーされます。 **model** の設定の一部は、スタートアップ中に新しい **tempdb** を作成するためにも使用されます。このため、 **model** データベースは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムに常に存在する必要があります。  
   
  新しく作成したユーザー データベースでは、model データベースと同じ [復旧モデル](../../relational-databases/backup-restore/recovery-models-sql-server.md) が使用されます。 既定値はユーザー構成可能です。 モデルの現在の復旧モデルを確認する方法については、「[データベースの復旧モデルの表示または変更 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)」を参照してください。  
@@ -28,12 +32,12 @@ caps.handback.revision: 52
 > [!IMPORTANT]  
 >  **model** データベースをユーザー固有のテンプレート情報で変更する場合は、**model** をバックアップしておくことをお勧めします。 詳細については、「[システム データベースのバックアップと復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)」を参照してください。  
   
-## model データベースの使用方法  
+## <a name="model-usage"></a>model データベースの使用方法  
  CREATE DATABASE ステートメントが発行されると、 **model** データベースの内容がコピーされて、データベースの最初の部分が作成されます。 その新しいデータベースの残りの部分は空のページで埋められます。  
   
  **model** データベースを変更すると、変更後に作成したすべてのデータベースにその変更が継承されます。 たとえば、権限やデータベース オプションを設定したり、テーブル、関数、ストアド プロシージャなどのオブジェクトを追加できます。 **model** データベースのファイル プロパティは例外で、データ ファイルの初期サイズを除き、無視されます。 model データベースのデータ ファイルとログ ファイルの既定の初期サイズは、8 MB です。  
   
-## model データベースの物理プロパティ  
+## <a name="physical-properties-of-model"></a>model データベースの物理プロパティ  
  **model** データベースのデータ ファイルとログ ファイルの初期構成値を次の表に示します。  
   
 |ファイル|論理名|物理名|ファイル拡張|  
@@ -41,11 +45,11 @@ caps.handback.revision: 52
 |プライマリ データ|modeldev|model.mdf|ディスクがいっぱいになるまで 64 MB ずつ自動拡張|  
 |Log|modellog|modellog.ldf|最大 2 TB まで 64 MB ずつ自動拡張|  
   
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] より前のバージョンでの既定のファイル拡張値については、「[model データベース](https://msdn.microsoft.com/library/ms186388\(v=sql.120\).aspx)」を参照してください。  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]より前のバージョンでの既定のファイル拡張値については、「 [model データベース](https://msdn.microsoft.com/library/ms186388\(v=sql.120\).aspx)」を参照してください。  
   
- **model** データベースまたはログ ファイルを移動するには、「[システム データベースの移動](../../relational-databases/databases/move-system-databases.md)」を参照してください。  
+ **model** データベースまたはログ ファイルを移動するには、「 [システム データベースの移動](../../relational-databases/databases/move-system-databases.md)」を参照してください。  
   
-### データベース オプション  
+### <a name="database-options"></a>データベース オプション  
  **model** データベースの各データベース オプションの既定値とそのオプションを変更できるかどうかを次の表に示します。 これらのオプションの現在の設定を表示するには、 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューを使用します。  
   
 |データベース オプション|既定値|変更可否|  
@@ -65,7 +69,7 @@ caps.handback.revision: 52
 |CONCAT_NULL_YIELDS_NULL|OFF|はい|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|はい|  
 |CURSOR_DEFAULT|GLOBAL|はい|  
-|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> 可<br /><br /> はい|  
+|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> はい<br /><br /> はい|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|はい|  
 |DB_CHAINING|OFF|いいえ|  
 |ENCRYPTION|OFF|いいえ|  
@@ -84,7 +88,7 @@ caps.handback.revision: 52
   
  これらのデータベース オプションの説明は、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
-## 制限  
+## <a name="restrictions"></a>制限  
  **model** データベースでは、次の操作を実行できません。  
   
 -   ファイルまたはファイル グループの追加。  
@@ -111,7 +115,7 @@ caps.handback.revision: 52
   
 -   WITH ENCRYPTION オプションを使用したプロシージャ、ビュー、またはトリガーの作成。 暗号化キーは、オブジェクトが作成されたデータベースに関連付けられています。 **model** データベースで作成された暗号化オブジェクトは、 **model**データベースのみで使用できます。  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
  [システム データベース](../../relational-databases/databases/system-databases.md)  
   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
@@ -121,3 +125,4 @@ caps.handback.revision: 52
  [データベース ファイルの移動](../../relational-databases/databases/move-database-files.md)  
   
   
+

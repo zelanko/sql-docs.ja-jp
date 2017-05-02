@@ -1,32 +1,36 @@
 ---
 title: "パラメーター ヒント (IntelliSense) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "パラメーター ヒント オプション [IntelliSense]"
-  - "ストアド関数パラメーターの完了 [Intellisense]"
-  - "言語リファレンス [SQL Server]"
-  - "IntelliSense [SQL Server], パラメーター ヒント オプション"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Parameter Info option [IntelliSense]
+- stored function parameter completion [Intellisense]
+- language references [SQL Server]
+- IntelliSense [SQL Server], Parameter Info option
 ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b76a63705473437b283e104414f3729166ce2338
+ms.lasthandoff: 04/11/2017
+
 ---
-# パラメーター ヒント (IntelliSense)
+# <a name="parameter-info-intellisense"></a>パラメーター ヒント (IntelliSense)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense の **[パラメーター ヒント]** オプションを使用すると、パラメーター リストが表示され、関数またはストアド プロシージャで必要とされるパラメーターの数、名前、およびデータ型について確認できます。 太字で表示されるパラメーターは、入力中の関数やストアド プロシージャで次に必要なパラメーターを示しています。  
   
  パラメーター リストは入れ子にされた関数についても表示されます。 他の関数のパラメーターとして関数を入力する場合、パラメーター リストには内部関数のパラメーターが表示されます。 内部関数のパラメーター リストが完了すると、パラメーター リストには再び外部関数のパラメーターが表示されます。  
   
-#### 関数またはストアド プロシージャのパラメーター ヒントを表示するには  
+#### <a name="to-view-parameter-info-for-functions-or-stored-procedures"></a>関数またはストアド プロシージャのパラメーター ヒントを表示するには  
   
 1.  関数の場合、名前の後に、通常と同じように左かっこを入力すると、パラメーター リストが表示されます。 ストアド プロシージャの場合、名前を入力した後に、通常と同じようにスペースを入力すると、プロシージャのパラメーターに関する情報が表示されます。  
   
@@ -38,15 +42,15 @@ caps.handback.revision: 33
   
      関数の場合、右かっこを入力するとパラメーター リストも閉じます。  
   
-#### パラメーター ヒントを手動で起動するには  
+#### <a name="to-manually-start-parameter-info"></a>パラメーター ヒントを手動で起動するには  
   
-1.  **[編集]** メニューの **[IntelliSense]** をポイントし、**[パラメーター ヒント]** をクリックします。  
+1.  **[編集]** メニューの **[IntelliSense]** をポイントし、 **[パラメーター ヒント]**をクリックします。  
   
-2.  Ctrl&lt;/localizedText&gt; キーと &lt;localizedText&gt;Shift&lt;/localizedText&gt; キーを押しながら &lt;localizedText&gt;Space&lt;/localizedText&gt; キーを押します。  
+2.  Ctrl キーと Shift キーを押しながら Space キーを押します。  
   
  詳細については、「[IntelliSense の構成 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md)」を参照してください。  
   
 > [!NOTE]  
->  [パラメーター ヒント]** オプションは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターと XML クエリ エディターでのみ使用できます。  
+>  **[パラメーター ヒント]** オプションは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターと XML クエリ エディターでのみ使用できます。  
   
   

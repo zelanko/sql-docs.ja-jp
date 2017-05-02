@@ -1,32 +1,36 @@
 ---
 title: "XML インデックスの削除 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "削除、インデックス"
-  - "破棄、インデックス"
-  - "XML インデックス [SQL Server] を削除します。"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing indexes
+- dropping indexes
+- XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1508a40b460939fc1aa4ddfa8271d28a10958bb9
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML インデックスの削除
+# <a name="drop-xml-indexes"></a>XML インデックスの削除
   [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用すると、XML インデックスと XML 以外のインデックスの両方を含め、既存のプライマリ インデックスまたはセカンダリ インデックスを削除できます。 ただし、DROP INDEX のオプションは XML インデックスに適用されません。 プライマリ XML インデックスを削除すると、存在するセカンダリ XML インデックスもすべて削除されます。  
   
  *TableName.IndexName* を指定する DROP 構文は廃止されるので、XML インデックスではサポートされません。  
   
-## 例 : プライマリ XML インデックスの作成と削除  
- 次の例では、**xml** 型の列に XML インデックスを作成します。  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>例 : プライマリ XML インデックスの作成と削除  
+ 次の例では、 **xml** 型の列に XML インデックスを作成します。  
   
 ```  
 DROP TABLE T  
@@ -50,7 +54,7 @@ DROP INDEX PIdx_T_XmlCol ON T
   
  テーブルを削除すると、テーブルのすべての XML インデックスも自動的に削除されます。 ただし、XML 列に XML インデックスが存在する場合、その XML 列はテーブルから削除できません。  
   
- 次の例では、**xml** 型の列に XML インデックスを作成します。 詳細については、「[型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
+ 次の例では、 **xml** 型の列に XML インデックスを作成します。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
 ```  
 CREATE TABLE TestTable(  
@@ -59,7 +63,7 @@ CREATE TABLE TestTable(
 GO  
 ```  
   
- これで次のように、`Co12` にプライマリ XML インデックスを作成できます。  
+ これで次のように、 `Co12`にプライマリ XML インデックスを作成できます。  
   
 ```  
 CREATE PRIMARY XML INDEX PIdx_TestTable_Col2   
@@ -67,7 +71,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## 例 : DROP_EXISTING インデックス オプションを使用した XML インデックスの作成  
+## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>例 : DROP_EXISTING インデックス オプションを使用した XML インデックスの作成  
  次の例では、列 (`XmlColx`) に XML インデックスを作成しています。 次に、同じ名前を使用して異なる列 (`XmlColy`) に別の XML インデックスを作成します。 `DROP_EXISTING` を指定しているので、列 (`XmlColx)` の既存の XML インデックスが削除されて、列 (`XmlColy`) に新しい XML インデックスが作成されます。  
   
 ```  
@@ -95,7 +99,7 @@ AND    si.object_id=object_id('T')
   
  このクエリからは、指定した XML インデックスを作成する対象の列名が返されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [XML インデックス &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   

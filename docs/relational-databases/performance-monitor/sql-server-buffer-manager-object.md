@@ -1,25 +1,29 @@
 ---
 title: "SQL Server: Buffer Manager オブジェクト | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Buffer Manager オブジェクト"
-  - "SQLServer: Buffer Manager"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Buffer Manager object
+- SQLServer:Buffer Manager
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29b1764e30fe28153f6f86731f5b6fc520dc9027
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server: Buffer Manager オブジェクト
+# <a name="sql-server-buffer-manager-object"></a>SQL Server: Buffer Manager オブジェクト
   **Buffer Manager** オブジェクトには、次に示す項目の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] による使用状況を監視するためのカウンターが用意されています。  
   
 -   データ ページを保存するメモリ。  
@@ -36,13 +40,13 @@ caps.handback.revision: 36
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がディスクからデータをどの程度の頻度で読み取る必要があるか。 メモリ アクセスなどの他の操作に比べて、物理 I/O には多くの時間がかかります。 物理 I/O をできる限り少なくすると、クエリのパフォーマンスが向上します。  
   
-## Buffer Manager パフォーマンス オブジェクト  
+## <a name="buffer-manager-performance-objects"></a>Buffer Manager パフォーマンス オブジェクト  
  次の表で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Manager** パフォーマンス オブジェクトについて説明します。  
   
 |SQL Server Buffer Manager カウンター|Description|  
 |----------------------------------------|-----------------|  
 |**1 秒あたりのバックグラウンド ライター ページ**|復旧間隔の設定を適用するためにフラッシュされたページ数。| 
-|**Buffer cache hit ratio**|バッファー キャッシュ内に存在し、ディスクから読み取る必要がないページの比率を示します。 この比率は、最近の数千のページ アクセスでのキャッシュ ヒットの総数を、キャッシュ参照の総数で割って算出します。 長い時間が経過すると、この比率はほとんど変化しなくなります。 キャッシュから読み取る方が、ディスクから読み取るよりもコストが低いので、この比率が高くなるようにします。 一般に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用できるメモリの量を増やすか、バッファー プール拡張機能を使用することで、バッファー キャッシュ ヒット率を増加させることができます。|  
+|**Buffer cache hit ratio**|バッファー キャッシュ内に存在し、ディスクから読み取る必要がないページの比率を示します。 この比率は、最近の数千のページ アクセスでのキャッシュ ヒットの総数を、キャッシュ参照の総数で割って算出します。 長い時間が経過すると、この比率はほとんど変化しなくなります。 キャッシュから読み取る方が、ディスクから読み取るよりもコストが低いので、この比率が高くなるようにします。 一般に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用できるメモリの量を増やすか、バッファー プール拡張機能を使用することで、バッファー キャッシュ ヒット率を増加させることができます。|  
 |**バッファー キャッシュ ヒット率ベース**|内部使用のみです。|
 |**Checkpoint pages/sec**|チェックポイントにより、またはすべてのダーティ ページをフラッシュする必要があるその他の操作により、ディスクにフラッシュされた 1 秒あたりのページ数を示します。|  
 |**Database pages**|データベースの内容が含まれたこのノード上のバッファー プール内のページの数を示します。|  
@@ -56,7 +60,7 @@ caps.handback.revision: 36
 |**Extension pages writes/sec**|1 秒あたりにバッファー プール拡張ファイルに書き込まれるページ数。|  
 |**Free list stalls/sec**|フリー ページを待機する必要があった要求の 1 秒あたりの数を示します。|  
 |**インテグラル コントローラーの傾き**|バッファー プールのインテグラル コントローラーが前回使用した傾きに -100 億を掛けた値。| 
-|**Lazy writes/sec**|バッファー マネージャーのレイジー ライターにより書き込まれたバッファーの 1 秒あたりの数を示します。 *レイジー ライター*とは、古いダーティ バッファー (異なるページのためにバッファーを再利用する前にディスクに書き戻す必要がある変更を含んでいるバッファー) をまとめてフラッシュし、ユーザー プロセスで使用できるようにするシステム プロセスです。 レイジー ライターを使用することで、使用可能なバッファーを作成するために頻繁にチェックポイントを実行する必要がなくなります。|  
+|**Lazy writes/sec**|バッファー マネージャーのレイジー ライターにより書き込まれたバッファーの 1 秒あたりの数を示します。 *レイジー ライター* とは、古いダーティ バッファー (異なるページのためにバッファーを再利用する前にディスクに書き戻す必要がある変更を含んでいるバッファー) をまとめてフラッシュし、ユーザー プロセスで使用できるようにするシステム プロセスです。 レイジー ライターを使用することで、使用可能なバッファーを作成するために頻繁にチェックポイントを実行する必要がなくなります。|  
 |**Page life expectancy**|ページが参照されないままバッファー プールに存在する秒数を示します。|  
 |**Page lookups/sec**|バッファー プールのページを検索する要求の 1 秒あたりの数を示します。|  
 |**Page reads/sec**|物理的なデータベース ページ読み取りが実行される 1 秒あたりの回数を示します。 すべてのデータベースのページの物理的な読み取りの総数が表示されます。 物理 I/O にはコストがかかるので、データ キャッシュを大きくしたり、高性能のインデックスや効率のよいクエリを使用したり、データベースのデザインを変更したりすることで、できる限りコストを抑えることができます。|  
@@ -66,7 +70,7 @@ caps.handback.revision: 36
 |**Target pages**|バッファー プール内の適切なページ数。|
 
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server: Buffer Node](../../relational-databases/performance-monitor/sql-server-buffer-node.md)   
  [サーバー メモリに関するサーバー構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [SQL Server の Plan Cache オブジェクト](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   

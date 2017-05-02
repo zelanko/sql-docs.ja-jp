@@ -1,25 +1,29 @@
 ---
 title: "統計の変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "統計 [SQL Server], 変更"
-  - "統計の変更"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- statistics [SQL Server], modifying
+- modifying statistics
 ms.assetid: b06299ca-ed52-411a-b245-45eac4628c99
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dc2ee0a2699bb9f1d2aad02e5777a208e842bef8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 統計の変更
+# <a name="modify-statistics"></a>統計の変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して既存の統計を変更できます。  
   
  **このトピックの内容**  
@@ -43,11 +47,11 @@ caps.handback.revision: 9
   
 -   ユーザーは、テーブルまたはビューに対する ALTER 権限が必要です。  
   
--   ユーザーがテーブルまたはインデックス付きビューの所有者であるか、**sysadmin** 固定サーバー ロール、**db_owner** 固定データベース ロール、または **db_ddladmin** 固定データベース ロールのメンバーである必要があります。  
+-   ユーザーがテーブルまたはインデックス付きビューの所有者であるか、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、または **db_ddladmin** 固定データベース ロールのメンバーである必要があります。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### 統計を変更するには  
+#### <a name="to-modify-statistics"></a>統計を変更するには  
   
 1.  **オブジェクト エクスプローラー**で、統計を変更するデータベースをプラス記号をクリックして展開します。  
   
@@ -57,9 +61,9 @@ caps.handback.revision: 9
   
 4.  プラス記号をクリックして **[統計]** フォルダーを展開します。  
   
-5.  変更する統計オブジェクトを右クリックし、**[プロパティ]** を選択します。  
+5.  変更する統計オブジェクトを右クリックし、 **[プロパティ]**を選択します。  
   
-6.  **[統計のプロパティ - ** *statistics_name*] ダイアログ ボックスの **[全般]** ページで **[追加]**、**[削除]**、**[上へ移動]**、**[下へ移動]**、あるいはその組み合わせをクリックして、統計のプロパティを変更します。 **[統計の列]** グリッド内の列の位置は、統計の使いやすさに影響する可能性があることに注意してください。  
+6.  **[統計のプロパティ -** *statistics_name* ] ダイアログ ボックスの **[全般]** ページで **[追加]**, **[削除]**, **[上へ移動]**、 **[下へ移動]**、 any combination, to alter the properties of the statistics. **[統計の列]** グリッド内の列の位置は、統計の使いやすさに影響する可能性があることに注意してください。  
   
 7.  クリックして **OK**です。  
   

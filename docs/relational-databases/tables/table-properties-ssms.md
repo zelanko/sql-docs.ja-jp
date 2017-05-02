@@ -1,31 +1,35 @@
 ---
-title: "Table Properties - SSMS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.tableproperties.storage.f1"
-  - "sql13.swb.tableproperties.changetracking.f1"
-  - "sql13.swb.tableproperties.general.f1"
-  - "sql12.SWB.SELECTCOLUMNS.F1"
-  - "sql13.swb.tableproperties.filetable.f1"
+title: "テーブルのプロパティ - SSMS | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.tableproperties.storage.f1
+- sql13.swb.tableproperties.changetracking.f1
+- sql13.swb.tableproperties.general.f1
+- sql12.SWB.SELECTCOLUMNS.F1
+- sql13.swb.tableproperties.filetable.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1bc425e913f88fe7becd220f2275bacf6b21340
+ms.lasthandoff: 04/11/2017
+
 ---
-# Table Properties - SSMS
+# <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [テーブルのプロパティ] ダイアログ ボックスに表示されるテーブルのプロパティについて説明します。 これらのプロパティの表示方法の詳細については、「[テーブル定義の表示](../../relational-databases/tables/view-the-table-definition.md)」を参照してください。  
+  このトピックでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [テーブルのプロパティ] ダイアログ ボックスに表示されるテーブルのプロパティについて説明します。 これらのプロパティの表示方法の詳細については、「 [テーブル定義の表示](../../relational-databases/tables/view-the-table-definition.md)」を参照してください。  
   
  **このトピックの内容**  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 43
  テーブルのロック エスカレーションの粒度を示します。 データベース エンジンのロックの詳細については、「 [SQL Server トランザクションのロックおよび行のバージョン管理ガイド](http://msdn.microsoft.com/library/jj856598.aspx)」をご覧ください。 有効な値は次のとおりです。  
   
  AUTO  
- このオプションを使用すると、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]は、テーブル スキーマに適したロック エスカレーションの粒度を選択します。  
+ このオプションを使用すると、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、テーブル スキーマに適したロック エスカレーションの粒度を選択します。  
   
 -   テーブルがパーティション分割されている場合は、ロック エスカレーションをヒープまたは B ツリー (HoBT) 粒度に設定できます。 ロックは HoBT レベルにエスカレートされると、後で TABLE 粒度にエスカレートされません。  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 43
  テーブルがパーティション分割されているかどうかに関係なく、ロック エスカレーションはテーブルレベルの粒度で行われます。 TABLE は既定値です。  
   
  DISABLE  
- ほとんどの場合でロック エスカレーションを禁止します。 テーブルレベルのロックは完全には禁止されません。 たとえば、SERIALIZABLE 分離レベルでクラスター化インデックスがないテーブルをスキャンしている場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]でテーブル ロックを実行して、データの整合性を保護します。  
+ ほとんどの場合でロック エスカレーションを禁止します。 テーブルレベルのロックは完全には禁止されません。 たとえば、SERIALIZABLE 分離レベルでクラスター化インデックスがないテーブルをスキャンしている場合は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] でテーブル ロックを実行して、データの整合性を保護します。  
   
  **[レプリケートされるテーブル]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションによってテーブルがいつ別のデータベースにレプリケートされるかを示します。 指定できる値は、 **[True]** または **[False]**です。  
@@ -93,7 +97,7 @@ caps.handback.revision: 43
  変更の追跡を有効にするには、テーブルに主キーが必要です。また、テーブルを変更する権限も必要です。 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)を使用して変更の追跡を構成できます。  
   
  **[更新された追跡列]**  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]が更新された列を追跡するかどうかを示します。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が更新された列を追跡するかどうかを示します。  
   
  変更の追跡の詳細については、「[変更の追跡について &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)」を参照してください。  
   
@@ -107,12 +111,12 @@ caps.handback.revision: 43
  FileTable のルート フォルダー。  
   
  **FileTable の名前空間の有効化**  
- **True** の場合、この値はテーブルが FileTable であることを示します。 この値を **False**に変更すると、FileTable が通常のユーザー テーブルに変更されます。 後でテーブルを FileTable に戻す場合は、変換時に FileTable 一貫性チェックを行い、テーブルに問題がないことを確認する必要があります。  
+ **True**の場合、この値はテーブルが FileTable であることを示します。 この値を **False**に変更すると、FileTable が通常のユーザー テーブルに変更されます。 後でテーブルを FileTable に戻す場合は、変換時に FileTable 一貫性チェックを行い、テーブルに問題がないことを確認する必要があります。  
   
 ##  <a name="Storage"></a> [ストレージ] ページ  
  選択されているテーブルのストレージに関連するプロパティを表示します。  
   
-### 圧縮  
+### <a name="compression"></a>圧縮  
  **[圧縮の種類]**  
  テーブルの圧縮の種類。 このプロパティは、パーティション分割されていないテーブルでのみ使用できます。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 43
  **[行の圧縮を使用したパーティション]**  
  行の圧縮を使用しているパーティション番号。 このプロパティは、パーティション分割されているテーブルでのみ使用できます。  
   
-### ファイル グループ  
+### <a name="filegroup"></a>ファイル グループ  
  **[テキスト ファイル グループ]**  
  テーブルのテキスト データを含むファイル グループの名前です。  
   
@@ -140,9 +144,9 @@ caps.handback.revision: 43
   
  テーブルに FILESTREAM データが含まれていない場合、フィールドは空白です。  
   
-### 全般  
+### <a name="general"></a>全般  
  **[VarDecimal ストレージ形式が有効]**  
- **[True]** の場合、この読み取り専用の値は、**10 進**および**数値**の各データ型が vardecimal ストレージ形式で格納されることを示します。 このオプションを変更するには、[sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md) の **vardecimal ストレージ形式**オプションを使用します。 Vardecimal ストレージ形式は推奨されません。 代わりに行の圧縮を使用してください。  
+ **[True]**の場合、この読み取り専用の値は、 **10 進** および **数値** の各データ型が vardecimal ストレージ形式で格納されることを示します。 このオプションを変更するには、 **sp_tableoption** の [vardecimal ストレージ形式](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)オプションを使用します。 Vardecimal ストレージ形式は推奨されません。 代わりに行の圧縮を使用してください。  
   
  **[インデックス領域]**  
  インデックスがテーブル内で占有する領域の容量をメガバイト単位で表示します。 この値には、テーブルの XML インデックスの領域使用状況は含まれません。 テーブルに XML インデックスが含まれている場合は、代わりに [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) を使用してください。  
@@ -153,7 +157,7 @@ caps.handback.revision: 43
  **[データ領域]**  
  データがテーブル内で占有する領域の容量をメガバイト単位で表示します。  
   
-### [パーティション分割]  
+### <a name="partitioning"></a>[パーティション分割]  
  このセクションは、テーブルがパーティション分割されている場合にのみ使用できます。 詳細については、「 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。  
   
  **[パーティション列]**  
@@ -170,8 +174,8 @@ caps.handback.revision: 43
   
  FILESTREAM パーティション構成は、 **[パーティション構成]** オプションで指定した構成と対称である必要があります。  
   
-## 参照  
- [テーブルの定義の表示](../../relational-databases/tables/view-the-table-definition.md)   
+## <a name="see-also"></a>参照  
+ [テーブル定義の表示](../../relational-databases/tables/view-the-table-definition.md)   
  [列の変更 &#40;データベース エンジン&#41;](../../relational-databases/tables/modify-columns-database-engine.md)  
   
   

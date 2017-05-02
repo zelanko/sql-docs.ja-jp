@@ -1,23 +1,27 @@
 ---
 title: "ユーザー定義関数名の変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c2695a5c-9cc5-4b18-8771-53027ca9a9af
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6af95b4d0b4bc3b8e652fd40fa1427cd156c1514
+ms.lasthandoff: 04/11/2017
+
 ---
-# ユーザー定義関数名の変更
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用してユーザー定義関数の名前を変更できます。  
+# <a name="rename-user-defined-functions"></a>ユーザー定義関数名の変更
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してユーザー定義関数の名前を変更できます。  
   
  **このトピックの内容**  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 7
   
 -   関数名は、 [識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
--   ユーザー定義関数の名前を変更しても、**sys.sql_modules** カタログ ビューの定義列にある、対応するオブジェクトの名前は変更されません。 したがって、このオブジェクトの種類の名前を変更しないことをお勧めします。 代わりに、ストアド プロシージャを削除して新しい名前で再作成してください。  
+-   ユーザー定義関数の名前を変更しても、 **sys.sql_modules** カタログ ビューの定義列にある、対応するオブジェクトの名前は変更されません。 したがって、このオブジェクトの種類の名前を変更しないことをお勧めします。 代わりに、ストアド プロシージャを削除して新しい名前で再作成してください。  
   
 -   ユーザー定義関数の名前または定義を変更すると、依存オブジェクトを更新してその関数に加えられた変更を反映しなければ、その依存オブジェクトが失敗する可能性があります。  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 7
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### ユーザー定義関数の名前を変更するには  
+#### <a name="to-rename-user-defined-functions"></a>ユーザー定義関数の名前を変更するには  
   
 1.  **オブジェクト エクスプローラー**で、名前を変更する関数が格納されているデータベースの横にあるプラス記号をクリックします。  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 7
   
     -   集計関数  
   
-4.  名前を変更する関数を右クリックし、**[名前の変更]** を選択します。  
+4.  名前を変更する関数を右クリックし、 **[名前の変更]**を選択します。  
   
 5.  関数の新しい名前を入力します。  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 7
   
  詳細については、「[CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)」および「[DROP FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [ユーザー定義関数の表示](../../relational-databases/user-defined-functions/view-user-defined-functions.md)  
   

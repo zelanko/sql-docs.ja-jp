@@ -1,29 +1,33 @@
 ---
 title: "入れ子になった FOR XML クエリを使用した XML の構造化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML クエリ"
-  - "クエリ [SQL Server の XML], 入れ子になった FOR XML"
-  - "XML [SQL Server], FOR XML クエリ"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML query
+- queries [XML in SQL Server], nested FOR XML
+- XML [SQL Server], FOR XML queries
 ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9dd8e345930a2e4ed7d036e9969ec8600f85853e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 入れ子になった FOR XML クエリを使用した XML の構造化
+# <a name="shape-xml-with-nested-for-xml-queries"></a>入れ子になった FOR XML クエリを使用した XML の構造化
   次の例では、`Production.Product` テーブルにクエリを実行し、特定の製品の `ListPrice` 値と `StandardCost` 値を取得します。 ここでは、例示を目的として、両方の価格を <`Price`> 要素に返します。各 <`Price`> 要素には、`PriceType` 属性があります。  
   
-## 例  
+## <a name="example"></a>例  
  次に、想定する XML の構造を示します。  
   
 ```  
@@ -96,7 +100,7 @@ FOR XML AUTO, TYPE
 </Production.Product>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [入れ子になった FOR XML クエリの使用](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

@@ -1,31 +1,35 @@
 ---
 title: "クラスター化インデックスの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "インデックス作成 [SQL Server], クラスター化インデックス"
-  - "クラスター化インデックスを作成します。"
-  - "クラスター化インデックス, PRIMARY KEY 制約"
-  - "クラスター化インデックス, UNIQUE 制約"
-  - "インデックス [SQL Server], クラスター化"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index creation [SQL Server], clustered indexes
+- clustered indexes, creating
+- clustered indexes, PRIMARY KEY constraint
+- clustered indexes, UNIQUE constraint
+- indexes [SQL Server], clustered
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 309d0fa2603bfa14dc305b73036867c084eab683
+ms.lasthandoff: 04/11/2017
+
 ---
-# クラスター化インデックスの作成
+# <a name="create-clustered-indexes"></a>クラスター化インデックスの作成
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、テーブルにクラスター化インデックスを作成できます。 クラスター化インデックスは、いくつかの例外を除くすべてのテーブルに必要です。 クラスター化インデックスは、クエリ パフォーマンスを向上するだけではなく、必要に応じて再構築または再構成してテーブルの断片化を制御することができます。 また、クラスター化インデックスをビューに作成することもできます。 (クラスター化インデックスの定義は「[クラスター化インデックスと非クラスター化インデックスの概念](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)」にあります。)  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、テーブルにクラスター化インデックスを作成できます。 クラスター化インデックスは、いくつかの例外を除くすべてのテーブルに必要です。 クラスター化インデックスは、クエリ パフォーマンスを向上するだけではなく、必要に応じて再構築または再構成してテーブルの断片化を制御することができます。 また、クラスター化インデックスをビューに作成することもできます。 (クラスター化インデックスの定義は「 [クラスター化インデックスと非クラスター化インデックスの概念](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)」にあります。)  
   
  **このトピックの内容**  
   
@@ -73,15 +77,15 @@ caps.handback.revision: 32
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
- テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、**sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
+ テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### オブジェクト エクスプ ローラーを使用してクラスター化インデックスを作成するには  
+#### <a name="to-create-a-clustered-index-by-using-object-explorer"></a>オブジェクト エクスプ ローラーを使用してクラスター化インデックスを作成するには  
   
 1.  オブジェクト エクスプローラーで、クラスター化インデックスを作成するテーブルを展開します。  
   
-2.  **[インデックス]** フォルダーを右クリックし、**[新しいインデックス]** をポイントし、**[クラスター化インデックス]** を選択します。  
+2.  **[インデックス]** フォルダーを右クリックし、 **[新しいインデックス]**をポイントし、 **[クラスター化インデックス]**を選択します。  
   
 3.  **[新しいインデックス]** ダイアログ ボックスの **[全般]** ページで、 **[インデックス名]** ボックスに新しいインデックスの名前を入力します。  
   
@@ -93,31 +97,31 @@ caps.handback.revision: 32
   
 7.  **[新しいインデックス]** ダイアログ ボックスで、 **[OK]**をクリックします。  
   
-#### テーブル デザイナーを使用してクラスター化インデックスを作成するには  
+#### <a name="to-create-a-clustered-index-by-using-the-table-designer"></a>テーブル デザイナーを使用してクラスター化インデックスを作成するには  
   
 1.  オブジェクト エクスプローラーで、クラスター化インデックスを含むテーブルを作成するデータベースを展開します。  
   
-2.  **[テーブル]** フォルダーを右クリックし、**[新しいテーブル]** をクリックします。  
+2.  **[テーブル]** フォルダーを右クリックし、 **[新しいテーブル]**をクリックします。  
   
 3.  通常どおりに新しいテーブルを作成します。 詳しくは、「[テーブルの作成 &#40;データベース エンジン&#41;](../../relational-databases/tables/create-tables-database-engine.md)」を参照してください。  
   
 4.  上の手順で作成した新しいテーブルを右クリックし、**[デザイン]** をクリックします。  
   
-5.  **[テーブル デザイナー]** メニューの **[インデックス/キー]** をクリックします。  
+5.  **[テーブル デザイナー]** メニューの **[インデックス/キー]**をクリックします。  
   
-6.  **[インデックス/キー]** ダイアログ ボックスで、**[追加]** をクリックします。  
+6.  **[インデックス/キー]** ダイアログ ボックスで、 **[追加]**をクリックします。  
   
 7.  **[選択された主/一意キーまたはインデックス]** ボックスで、新しいインデックスを選択します。  
   
-8.  グリッドで、**[CLUSTERED として作成]** を選択し、プロパティ右のドロップダウン リストの **[はい]** を選択します。  
+8.  グリッドで、 **[CLUSTERED として作成]**を選択し、プロパティ右のドロップダウン リストの **[はい]** を選択します。  
   
 9. **[閉じる]**をクリックします。  
   
-10. **[ファイル]** メニューの [*table_name* **の保存**] をクリックします。  
+10. **ファイル** メニューの **テーブル名***の保存*をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### クラスター化インデックスを作成するには  
+#### <a name="to-create-a-clustered-index"></a>クラスター化インデックスを作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -143,8 +147,9 @@ caps.handback.revision: 32
   
  詳細については、「[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [主キーの作成](../../relational-databases/tables/create-primary-keys.md)   
  [UNIQUE 制約の作成](../../relational-databases/tables/create-unique-constraints.md)  
   
   
+

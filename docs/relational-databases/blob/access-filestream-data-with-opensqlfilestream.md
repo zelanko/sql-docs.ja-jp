@@ -1,39 +1,43 @@
 ---
 title: "OpenSqlFilestream による FILESTREAM データへのアクセス | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "OpenSqlFilestream"
-apilocation: 
-  - "sqlncli11.dll"
-apitype: "DLLExport"
-helpviewer_keywords: 
-  - "OpenSqlFilestream"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- OpenSqlFilestream
+apilocation:
+- sqlncli11.dll
+apitype: DLLExport
+helpviewer_keywords:
+- OpenSqlFilestream
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6ce631c94bbc15ab1df2450a089c773a960b1401
+ms.lasthandoff: 04/11/2017
+
 ---
-# OpenSqlFilestream による FILESTREAM データへのアクセス
-  OpenSqlFilestream API は、ファイル システムに格納されている FILESTREAM バイナリ ラージ オブジェクト (BLOB) の Win32 互換ファイル ハンドルを取得します。 このハンドルは、Win32 API のうち [ReadFil](http://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423)、[TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424)、[SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425)、[SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)、[FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427) に渡すことができます。 このハンドルをその他の Win32 API に渡すと、ERROR_ACCESS_DENIED エラーが返されます。 このハンドルは、トランザクションをコミットまたはロールバックする前に Win32 [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) API に渡して閉じる必要があります。 ハンドルを閉じないと、サーバー側でリソースのリークが発生します。  
+# <a name="access-filestream-data-with-opensqlfilestream"></a>OpenSqlFilestream による FILESTREAM データへのアクセス
+  OpenSqlFilestream API は、ファイル システムに格納されている FILESTREAM バイナリ ラージ オブジェクト (BLOB) の Win32 互換ファイル ハンドルを取得します。 このハンドルは、Win32 API のうち [ReadFil](http://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)、 [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427)に渡すことができます。 このハンドルをその他の Win32 API に渡すと、ERROR_ACCESS_DENIED エラーが返されます。 このハンドルは、トランザクションをコミットまたはロールバックする前に Win32 [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) API に渡して閉じる必要があります。 ハンドルを閉じないと、サーバー側でリソースのリークが発生します。  
   
- FILESTREAM データ コンテナー アクセスはすべて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクションの中で実行する必要があります。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを同じトランザクションで実行することもできます。 これにより、SQL データと FILESTREAM BLOB データの一貫性が維持されます。  
+ FILESTREAM データ コンテナー アクセスはすべて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクションの中で実行する必要があります。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを同じトランザクションで実行することもできます。 これにより、SQL データと FILESTREAM BLOB データの一貫性が維持されます。  
   
- Win32 を使用して FILESTREAM BLOB にアクセスするには、[Windows 認証](../../relational-databases/security/choose-an-authentication-mode.md)を有効にする必要があります。  
+ Win32 を使用して FILESTREAM BLOB にアクセスするには、 [Windows 認証](../../relational-databases/security/choose-an-authentication-mode.md) を有効にする必要があります。  
   
 > [!IMPORTANT]  
 >  ファイルを書き込みアクセス用に開くと、トランザクションは FILESTREAM エージェントによって所有されます。 トランザクションが解放されるまで、Win32 ファイル I/O だけが許可されます。 トランザクションを解放するには、書き込みハンドルを閉じる必要があります。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -46,9 +50,9 @@ HANDLE OpenSqlFilestream (
     PLARGE_INTEGER AllocationSize);  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  *FilestreamPath*  
- [in] [PathName](../../relational-databases/system-functions/pathname-transact-sql.md) 関数から返される **nvarchar(max)** パスです。 PathName は、FILESTREAM のテーブルおよび列に対して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SELECT または UPDATE の権限を持つアカウントのコンテキストから呼び出す必要があります。  
+ [in] **PathName** 関数から返される [nvarchar(max)](../../relational-databases/system-functions/pathname-transact-sql.md) パスです。 PathName は、FILESTREAM のテーブルおよび列に対して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SELECT または UPDATE の権限を持つアカウントのコンテキストから呼び出す必要があります。  
   
  *DesiredAccess*  
  [in] FILESTREAM BLOB データへのアクセスに使用するモードを設定します。 この値は [DeviceIoControl 関数](http://go.microsoft.com/fwlink/?LinkId=105527)に渡されます。  
@@ -83,22 +87,22 @@ HANDLE OpenSqlFilestream (
  *AllocationSize*  
  [in] データ ファイルの初期割り当てサイズをバイト単位で指定します。 読み取りモードでは無視されます。 このパラメーターには NULL を指定できます。その場合、ファイル システムの既定の動作が使用されます。  
   
-## 戻り値  
+## <a name="return-value"></a>戻り値  
  この関数の実行が成功した場合の戻り値は、指定したファイルへのオープン ハンドルです。 失敗した場合の戻り値は、INVALID_HANDLE_VALUE です。 詳細なエラー情報を取得するには、GetLastError() を呼び出します。  
   
-## 使用例  
+## <a name="examples"></a>使用例  
  `OpenSqlFilestream` API を使用して Win32 ハンドルを取得する方法を次の例に示します。  
   
- [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/access-filestream-data-w_0_1.cs)]  
+ [!code-cs[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/access-filestream-data-w_0_1.cs)]  
   
  [!code-vb[FILESTREAM#FS_VB_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/visualbasic/access-filestream-data-w_0_2.vb)]  
   
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../relational-databases/blob/codesnippet/cpp/access-filestream-data-w_0_3.cpp)]  
   
-## 解説  
- この API を使用するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client をインストールする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアント ツールとともにインストールされます。 詳細については、「[SQL Server Native Client のインストール](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)」を参照してください。  
+## <a name="remarks"></a>解説  
+ この API を使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client をインストールする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアント ツールとともにインストールされます。 詳細については、「 [SQL Server Native Client のインストール](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [FILESTREAM データの部分的な更新](../../relational-databases/blob/make-partial-updates-to-filestream-data.md)   
  [FILESTREAM アプリケーションでのデータベース操作との競合の回避](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)  

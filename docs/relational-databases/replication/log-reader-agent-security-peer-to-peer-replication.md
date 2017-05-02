@@ -1,31 +1,35 @@
 ---
 title: "[ログ リーダー エージェントのセキュリティ] (ピア ツー ピア レプリケーション) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.p2pwizard.LRA.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.p2pwizard.LRA.f1
 ms.assetid: 6575e2a8-16bb-449c-bdca-4a4202d0972f
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7b670e48c6859dfaad38b9383fb3e2056fa47994
+ms.lasthandoff: 04/11/2017
+
 ---
-# [ログ リーダー エージェントのセキュリティ] (ピア ツー ピア レプリケーション)
-   **ログ リーダー エージェントのセキュリティ** ] ページを各ピアでログ リーダー エージェントが実行され、接続は、アカウントを指定することができます。 エージェントおよびレプリケーションのセキュリティのベスト プラクティスによって必要なアクセス許可については、次を参照してください。 [レプリケーション エージェントのセキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md) と [レプリケーション セキュリティのベスト プラクティス](../../relational-databases/replication/security/replication-security-best-practices.md)します。  
+# <a name="log-reader-agent-security-peer-to-peer-replication"></a>[ログ リーダー エージェントのセキュリティ] (ピア ツー ピア レプリケーション)
+  **[ログ リーダー エージェントのセキュリティ]** ページを使用すると、各ピアでログ リーダー エージェントが実行され、接続するときに使用されるアカウントを指定できます。 エージェントで必要とされる権限と、レプリケーション セキュリティの推奨事項については、「[レプリケーション エージェントのセキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)」および「[レプリケーション セキュリティの推奨事項](../../relational-databases/replication/security/replication-security-best-practices.md)」を参照してください。  
   
 > [!NOTE]  
->  トランザクション レプリケーションを使用してパブリッシュされるデータベースには、それぞれ 1 つのログ リーダー エージェントが存在します。 データベースにログ リーダー エージェントが既に設定されている場合 (このウィザードを以前に実行したときのパブリケーション、または同じデータベースにある他のトランザクション パブリケーションで)、使用されている資格情報をこのウィザードで変更することはできません。 新しい資格情報を指定した場合は無視されます。 資格情報を変更するには、使用、 **パブリケーションのプロパティ** ] ダイアログ ボックス。 詳細については、次を参照してください。 [ビューとレプリケーションのセキュリティ設定の変更](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)します。  
+>  トランザクション レプリケーションを使用してパブリッシュされるデータベースには、それぞれ 1 つのログ リーダー エージェントが存在します。 データベースにログ リーダー エージェントが既に設定されている場合 (このウィザードを以前に実行したときのパブリケーション、または同じデータベースにある他のトランザクション パブリケーションで)、使用されている資格情報をこのウィザードで変更することはできません。 新しい資格情報を指定した場合は無視されます。 資格情報を変更するには、 **[パブリケーションのプロパティ]** ダイアログ ボックスを使用します。 詳細については、「[レプリケーションのセキュリティ設定の表示および変更](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。  
   
-## オプション  
- [プロパティ] ボタンをクリックして (**...**) にアクセスするには、各ピアの行で、 **ログ リーダー エージェントのセキュリティ** ] ダイアログ ボックス。 をクリックして **ヘルプ** 上、 **ログ リーダー エージェントのセキュリティ** をエージェントで使用されるアカウントに必要なアクセス許可の詳細については起動したダイアログ ボックス。  
+## <a name="options"></a>オプション  
+ 各ピアの行にあるプロパティ ボタン (**[...]**) をクリックすると、 **[ログ リーダー エージェントのセキュリティ]** ダイアログ ボックスが開きます。 エージェントで使用されるアカウントに必要な権限の詳細については、 **[ログ リーダー エージェントのセキュリティ]** ダイアログ ボックスを開いて **[ヘルプ]** をクリックしてください。  
   
  このダイアログ ボックスに設定値を入力すると、サブスクライバーへの接続情報がグリッドに表示されます。  
   
@@ -36,13 +40,13 @@ caps.handback.revision: 17
  各ピアでパブリケーション データベースおよびサブスクリプション データベースとして機能するデータベースです。  
   
  **[ディストリビューターへの接続]**  
- ディストリビューターに接続するコンテキストを作成します。 コンテキストを使用して、ローカル ディストリビューターへの接続が常に作成、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 、エージェントが実行するため、このフィールドは常に表示されている Windows アカウント **Impersonate '\< ドメイン>\\< ログイン\>'** または **Impersonate '\< コンピューター>\\< ログイン\>'**します。  
+ ディストリビューターに接続するコンテキストを作成します。 ディストリビューターへのローカル接続は常に、エージェントの実行に使用される [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントのコンテキストを使用して作成されます。そのため、このフィールドには常に **['\<Domain>\\<Login\>' の権限を借用する]** または **['\<Computer>\\<Login\>' の権限を借用する]** と表示されます。  
   
  **[パブリッシャーへの接続]**  
- パブリッシャーへの接続が作成されるときのコンテキストです。 使用してパブリッシャーに接続を確立できる、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたはエージェントを実行する Windows アカウントのコンテキストを使用します。 フィールドには、次のいずれかが表示されます: **[ログイン '\< ログイン>'**, 、**Impersonate '\< ドメイン>\\< ログイン\>'** または **Impersonate '\< コンピューター>\\< ログイン\>'**します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントのコンテキストを使用してすべての接続が行われることをお勧めします。  
+ パブリッシャーへの接続が作成されるときのコンテキストです。 パブリッシャーへの接続は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン、またはエージェントが実行される Windows アカウントのコンテキストを使用して作成できます。 フィールドには、**[ログイン '\<Login>' を使用する]**、**['\<Domain>\\<Login\>' の権限を借用する]**、**['\<Computer>\\<Login\>' の権限を借用する]** のうちの 1 つが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、Windows アカウントのコンテキストを使用して、すべての接続を作成することをお勧めします。  
   
-## 参照  
- [#40; (&)、ピア ツー ピア トポロジを管理します。レプリケーション TRANSACT-SQL プログラミングと #41 です。](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+## <a name="see-also"></a>参照  
+ [ピア ツー ピア トポロジの管理 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [ピア ツー ピア トランザクション レプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

@@ -1,29 +1,33 @@
 ---
 title: "Security Audit イベント カテゴリ (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Security Audit イベント カテゴリ [SQL Server]"
-  - "イベント クラス [SQL Server], Security Audit イベント カテゴリ"
-  - "SQL Server イベント クラス, Security Audit イベント カテゴリ"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Security Audit event category [SQL Server]
+- event classes [SQL Server], Security Audit event category
+- SQL Server event classes, Security Audit event category
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eb5a25cf31ddd1581f2e0954d4b7fb78689fa115
+ms.lasthandoff: 04/11/2017
+
 ---
-# Security Audit イベント カテゴリ (SQL Server Profiler)
+# <a name="security-audit-event-category-sql-server-profiler"></a>Security Audit イベント カテゴリ (SQL Server Profiler)
   **Security Audit** イベント カテゴリには、セキュリティ監査イベントが含まれています。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
   
 |トピック|説明|  
 |-----------|-----------------|  
@@ -47,18 +51,18 @@ caps.handback.revision: 36
 |[Audit Database Operation イベント クラス](../../relational-databases/event-classes/audit-database-operation-event-class.md)|チェックポイント処理やクエリ通知のサブスクライブなど、さまざまな操作が行われたことを示します。|  
 |[Audit Database Principal Impersonation イベント クラス](../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md)|データベース スコープ内で権限の借用が行われたことを示します。|  
 |[Audit Database Principal Management イベント クラス](../../relational-databases/event-classes/audit-database-principal-management-event-class.md)|データベースのプリンシパルが作成、変更、または削除されたことを示します。|  
-|[Audit Database Scope GDR イベント クラス](../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のユーザーがステートメント権限に関して GRANT、REVOKE、DENY のいずれかを実行したことを示します。|  
+|[Audit Database Scope GDR イベント クラス](../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のユーザーがステートメント権限に関して GRANT、REVOKE、DENY のいずれかを実行したことを示します。|  
 |[Audit DBCC イベント クラス](../../relational-databases/event-classes/audit-dbcc-event-class.md)|DBCC コマンドが発行されたことを示します。|  
 |[Audit Fulltext イベント クラス](../../relational-databases/event-classes/audit-fulltext-event-class.md)|フルテキスト イベントが発生したことを示します。|  
 |[Audit Login Change Password イベント クラス](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|ユーザーが自身の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン パスワードを変更したことを示します。|  
-|[Audit Login Change Property イベント クラス](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|**sp_defaultdb**、**sp_defaultlanguage**、または ALTER LOGIN を使用してログインのプロパティが変更されたことを示します。|  
-|[Audit Login イベント クラス](../../relational-databases/event-classes/audit-login-event-class.md)|ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に正常にログインしたことを示します。|  
+|[Audit Login Change Property イベント クラス](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|**sp_defaultdb**、 **sp_defaultlanguage**、または ALTER LOGIN を使用してログインのプロパティが変更されたことを示します。|  
+|[Audit Login イベント クラス](../../relational-databases/event-classes/audit-login-event-class.md)|ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に正常にログインしたことを示します。|  
 |[Audit Login Failed イベント クラス](../../relational-databases/event-classes/audit-login-failed-event-class.md)|ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのログインを試みて失敗したことを示します。|  
 |[Audit Login GDR イベント クラス](../../relational-databases/event-classes/audit-login-gdr-event-class.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログインの権利が追加または削除されたことを示します。|  
-|[Audit Logout イベント クラス](../../relational-databases/event-classes/audit-logout-event-class.md)|ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からログアウトしたことを示します。|  
+|[Audit Logout イベント クラス](../../relational-databases/event-classes/audit-logout-event-class.md)|ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からログアウトしたことを示します。|  
 |[Audit Object Derived Permission イベント クラス](../../relational-databases/event-classes/audit-object-derived-permission-event-class.md)|オブジェクトに対して CREATE、ALTER、または DROP が発行されたことを示します。|  
 |[Audit Schema Object Access イベント クラス](../../relational-databases/event-classes/audit-schema-object-access-event-class.md)|オブジェクトの権限 (SELECT など) が使用されたことを示します。|  
-|[Audit Schema Object GDR イベント クラス](../../relational-databases/event-classes/audit-schema-object-gdr-event-class.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のユーザーがスキーマ オブジェクト権限に関して GRANT、REVOKE、DENY のいずれかを実行したことを示します。|  
+|[Audit Schema Object GDR イベント クラス](../../relational-databases/event-classes/audit-schema-object-gdr-event-class.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のユーザーがスキーマ オブジェクト権限に関して GRANT、REVOKE、DENY のいずれかを実行したことを示します。|  
 |[Audit Schema Object Management イベント クラス](../../relational-databases/event-classes/audit-schema-object-management-event-class.md)|サーバー オブジェクトが作成、変更、または削除されたことを示します。|  
 |[Audit Schema Object Take Ownership イベント クラス](../../relational-databases/event-classes/audit-schema-object-take-ownership-event-class.md)|スキーマ オブジェクトの所有者を変更する権限がチェックされたことを示します。|  
 |[Audit Server Alter Trace イベント クラス](../../relational-databases/event-classes/audit-server-alter-trace-event-class.md)|ALTER TRACE 権限がチェックされたことを示します。|  
@@ -72,7 +76,7 @@ caps.handback.revision: 36
 |[Audit Server Starts and Stops イベント クラス](../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの状態が変更されたことを示します。|  
 |[Audit Statement Permission イベント クラス](../../relational-databases/event-classes/audit-statement-permission-event-class.md)|ステートメント権限が使用されたことを示します。|  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)  
   
   

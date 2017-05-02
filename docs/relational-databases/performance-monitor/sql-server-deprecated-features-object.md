@@ -1,30 +1,34 @@
 ---
 title: "SQL Server:Deprecated Features オブジェクト | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Deprecated Features"
-  - "パフォーマンス カウンター [SQL Server], 非推奨機能"
-  - "廃止予定 [SQL Server], パフォーマンス カウンター"
-  - "Deprecated Features オブジェクト"
+ms.custom: 
+ms.date: 05/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Deprecated Features
+- performance counters [SQL Server], deprecated features
+- deprecation [SQL Server], performance counters
+- Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: 61
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1cbdf2dde41142d1b674e71df3a34756e8fcce99
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server:Deprecated Features オブジェクト
+# <a name="sql-server-deprecated-features-object"></a>SQL Server:Deprecated Features オブジェクト
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SQLServer:Deprecated Features オブジェクトには、非推奨に指定された機能を監視するためのカウンターがあります。 いずれの場合も、このカウンターは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が最後に起動してから非推奨機能が検出された回数を示す使用カウントを表示します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SQLServer:Deprecated Features オブジェクトには、非推奨に指定された機能を監視するためのカウンターがあります。 いずれの場合も、このカウンターは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が最後に起動してから非推奨機能が検出された回数を示す使用カウントを表示します。  
   
  これらのカウンターの値は、次のステートメントを実行して入手することもできます。  
   
@@ -41,10 +45,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
  次の表に、SQL Server Deprecated Features カウンター インスタンスの説明を示します。  
   
-|SQL Server Deprecated Features カウンター インスタンス|説明|  
+|SQL Server Deprecated Features カウンター インスタンス|Description|  
 |------------------------------------------------------|-----------------|  
 |'#' and '##' as the name of temporary tables and stored procedures|# 以外の文字を含んでいない識別子が見つかりました。 別の文字を少なくとも 1 文字は使用してください。 コンパイルごとに 1 回発生します。|  
-|'::' 関数呼び出し構文|テーブル値関数で :: 関数呼び出し構文が見つかりました。 `SELECT column_list FROM`*\< function_name>*`()` に置き換えてください。 たとえば、`SELECT * FROM ::fn_virtualfilestats(2,1)` は `SELECT * FROM sys.fn_virtualfilestats(2,1)` に置き換わります。 コンパイルごとに 1 回発生します。|  
+|'::' 関数呼び出し構文|テーブル値関数で :: 関数呼び出し構文が見つかりました。 `SELECT column_list FROM`*< function_name>*`()` に置き換えてください。 たとえば、`SELECT * FROM ::fn_virtualfilestats(2,1)` は `SELECT * FROM sys.fn_virtualfilestats(2,1)` に置き換わります。 コンパイルごとに 1 回発生します。|  
 |'@' and names that start with '@@' as [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers|@ または @@ で始まる識別子が見つかりました。 @、@@、または @@ で始まる名前を識別子として使用しないでください。 コンパイルごとに 1 回発生します。|  
 |ADDING TAPE DEVICE|非推奨機能 sp_addumpdevice'**tape**' が見つかりました。 代わりに、sp_addumpdevice'**disk**' を使用してください。 使用するごとに 1 回発生します。|  
 |ALL 権限|GRANT ALL、DENY ALL、または REVOKE ALL 構文が見つかった合計回数。 特定の権限を拒否するように構文を変更してください。 クエリごとに 1 回発生します。|  
@@ -60,7 +64,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |CREATE TRIGGER WITH APPEND|WITH APPEND 句を指定した CREATE TRIGGER ステートメントが見つかりました。 代わりに、トリガー全体を再作成してください。 DDL ステートメントで使用するごとに 1 回発生します。|  
 |CREATE_DROP_DEFAULT|CREATE DEFAULT または DROP DEFAULT 構文が見つかりました。 CREATE TABLE または ALTER TABLE の DEFAULT オプションを使用してコマンドを書き直してください。 コンパイルごとに 1 回発生します。|  
 |CREATE_DROP_RULE|CREATE RULE 構文が見つかりました。 制約を使用してコマンドを書き直してください。 コンパイルごとに 1 回発生します。|  
-|データ型 : text、ntext、または image|**text**、**ntext**、**image** データ型が見つかりました。 **varchar(max)** データ型を使うようにアプリケーションを書き直し、**text**、**ntext**、**image** データ型の構文は削除してください。 クエリごとに 1 回発生します。|  
+|データ型 : text、ntext、または image|**text**、 **ntext**、 **image** データ型が見つかりました。 **varchar(max)** データ型を使うようにアプリケーションを書き直し、 **text**、 **ntext**、 **image** データ型の構文は削除してください。 クエリごとに 1 回発生します。|  
 ||データベースが互換性レベル 80 に変更された合計回数。 次のリリースの前にデータベースおよびアプリケーションのアップグレードを計画してください。 互換性レベルが 80 のデータベースが起動されるときにも発生します。|  
 |データベース互換性レベル 100、110。 120|データベース互換性レベルが変更された合計回数。 今後のリリースでデータベースおよびアプリケーションのアップグレードを計画してください。 また、非推奨になった互換性レベルでデータベースが起動されたときにも発生します。|  
 |DATABASE_MIRRORING|データベース ミラーリング機能への参照が発生しました。 Always On 可用性グループにアップグレードすることを検討するか、Always On 可用性グループがサポートされないエディションの SQL Server を実行している場合は、ログ配布に移行するようにしてください。|  
@@ -85,7 +89,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |dm_fts_active_catalogs.worker_count|sys.dm_fts_active_catalogs 動的管理ビューの worker_count 列が見つかりました。 この列は使用しないでください。 サーバー インスタンスによって列への参照が検出されるたびに発生します。|  
 |dm_fts_memory_buffers|sys.dm_fts_memory_buffers ビューのほとんどの列が非推奨ではないので、dm_fts_memory_buffers カウンターは常に 0 のままです。 非推奨の列を監視するには、列固有のカウンター dm_fts_memory_buffers.row_count を使用してください。|  
 |dm_fts_memory_buffers.row_count|[sys.dm_fts_memory_buffers](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md) 動的管理ビューの row_count 列が見つかりました。 この列は使用しないでください。 サーバー インスタンスによって列への参照が検出されるたびに発生します。|  
-|2 部構成の名前が使用された DROP INDEX|DROP INDEX 構文で、DROP INDEX に *table_name.index_name* 形式の構文が含まれています。 DROP INDEX ステートメントで、*index_name* ON *table_name* 構文に置き換えてください。 コンパイルごとに 1 回発生します。|  
+|2 部構成の名前が使用された DROP INDEX|DROP INDEX 構文で、DROP INDEX に *table_name.index_name* 形式の構文が含まれています。 DROP INDEX ステートメントで、 *index_name* ON *table_name* 構文に置き換えてください。 コンパイルごとに 1 回発生します。|  
 |EXT_CREATE_ALTER_SOAP_ENDPOINT|FOR SOAP オプションを指定した CREATE または ALTER ENDPOINT ステートメントが見つかりました。 ネイティブ XML Web サービスは推奨されません。 代わりに Windows Communications Foundation (WCF) または ASP.NET を使用してください。|  
 |EXT_endpoint_webmethods|sys.endpoint_webmethods が見つかりました。 ネイティブ XML Web サービスは推奨されません。 代わりに Windows Communications Foundation (WCF) または ASP.NET を使用してください。|  
 |EXT_soap_endpoints|sys.soap_endpoints が見つかりました。 ネイティブ XML Web サービスは推奨されません。 代わりに Windows Communications Foundation (WCF) または ASP.NET を使用してください。|  
@@ -112,7 +116,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |COUNT_BIG(*) がないインデックス付きビューの選択リスト|集計インデックス付きビューの選択リストには、COUNT_BIG (*) を含める必要があります。|  
 |INDEX_OPTION|オプションがかっこで囲まれていない CREATE TABLE、ALTER TABLE、または CREATE INDEX 構文が見つかりました。 現在の構文を使用してステートメントを書き直してください。 クエリごとに 1 回発生します。|  
 |INDEXKEY_PROPERTY|INDEXKEY_PROPERTY 構文が見つかりました。 sys.index_columns をクエリするようにステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
-|間接的な TVF ヒント|ビュー経由で複数ステートメントのテーブル値関数 (TVF) を呼び出す、テーブル ヒントの間接アプリケーションは、今後のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。|  
+|間接的な TVF ヒント|ビュー経由で複数ステートメントのテーブル値関数 (TVF) を呼び出す、テーブル ヒントの間接アプリケーションは、今後のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では削除される予定です。|  
 |TIMESTAMP 列への INSERT NULL|TIMESTAMP 列に NULL 値が挿入されました。 代わりに既定値を使用してください。 コンパイルごとに 1 回発生します。|  
 |INSERT_HINTS||  
 |Korean_Wansung_Unicode|イベントは、データベースを起動するごとに 1 回、および照合順序を使用するごとに 1 回発生します。 この照合順序を使用するアプリケーションの変更を計画してください。|  
@@ -131,7 +135,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |アドホック接続の OLEDB|SQLOLEDB はサポートされないプロバイダーです。 アドホック接続には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を使用してください。|  
 |PERMISSIONS|PERMISSIONS 組み込み関数への参照が見つかりました。 代わりに sys.fn_my_permissions をクエリしてください。 クエリごとに 1 回発生します。|  
 |ProcNums|非推奨の ProcNums 構文が見つかりました。 参照を削除してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
-|READTEXT|READTEXT 構文が見つかりました。 **varchar(max)** データ型を使うようにアプリケーションを書き直し、**text** データ型の構文は削除してください。 クエリごとに 1 回発生します。|  
+|READTEXT|READTEXT 構文が見つかりました。 **varchar(max)** データ型を使うようにアプリケーションを書き直し、 **text** データ型の構文は削除してください。 クエリごとに 1 回発生します。|  
 |RESTORE DATABASE または LOG WITH DBO_ONLY|RESTORE … WITH DBO_ONLY 構文が見つかりました。 代わりに RESTORE … RESTRICTED_USER を使用してください。|  
 |RESTORE DATABASE または LOG WITH MEDIAPASSWORD|RESTORE … WITH MEDIAPASSWORD 構文が見つかりました。 WITH MEDIAPASSWORD を使用するとセキュリティが脆弱になるので、削除してください。|  
 |RESTORE DATABASE または LOG WITH PASSWORD|RESTORE … WITH PASSWORD 構文が見つかりました。 WITH PASSWORD を使用するとセキュリティが脆弱になるので、削除してください。|  
@@ -228,7 +232,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sp_unbindefault|sp_unbindefault プロシージャが見つかりました。 代わりに、CREATE TABLE または ALTER TABLE ステートメントで DEFAULT キーワードを使用してください。 コンパイルごとに 1 回発生します。|  
 |sp_unbindrule|sp_unbindrule プロシージャが見つかりました。 ルールの代わりに CHECK 制約を使用してください。 コンパイルごとに 1 回発生します。|  
 |SQL_AltDiction_CP1253_CS_AS|イベントは、データベースを起動するごとに 1 回、および照合順序を使用するごとに 1 回発生します。 この照合順序を使用するアプリケーションの変更を計画してください。|  
-|列の別名としての文字列リテラル|SELECT ステートメントで列の別名として使用されている文字列を含む構文が見つかりました (`'string' = expression` など)。 使用しないでください。 コンパイルごとに 1 回発生します。|  
+|列の別名としての文字列リテラル|SELECT ステートメントで列の別名として使用されている文字列を含む構文が見つかりました ( `'string' = expression`など)。 使用しないでください。 コンパイルごとに 1 回発生します。|  
 |sys.sql_dependencies|sys.sql_dependencies への参照が見つかりました。 代わりに sys.sql_expression_dependencies を使用してください。 コンパイルごとに 1 回発生します。|  
 |sysaltfiles|sysaltfiles への参照が見つかりました。 代わりに sys.master_files を使用してください。 コンパイルごとに 1 回発生します。|  
 |syscacheobjects|syscacheobjects への参照が見つかりました。 代わりに sys.dm_exec_cached_plans、sys.dm_exec_plan_attributes、および sys.dm_exec_sql_text を使用してください。 コンパイルごとに 1 回発生します。|  
@@ -264,10 +268,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sysusers|sysusers への参照が見つかりました。 代わりに sys.database_principals を使用してください。 コンパイルごとに 1 回発生します。|  
 |Table hint without WITH|テーブル ヒントを使用しているが WITH キーワードを使用していないステートメントが見つかりました。 WITH キーワードを含めるようにステートメントを変更してください。 コンパイルごとに 1 回発生します。|  
 |Text in row テーブル オプション|'text in row' テーブル オプションへの参照が見つかりました。 代わりに sp_tableoption 'large value types out of row' を使用してください。 クエリごとに 1 回発生します。|  
-|TEXTPTR|TEXTPTR 関数への参照が見つかりました。 **varchar(max)** データ型を使うようにアプリケーションを書き直し、**text**、**ntext**、**image** データ型の構文は削除してください。 クエリごとに 1 回発生します。|  
-|TEXTVALID|TEXTVALID 関数への参照が見つかりました。 **varchar(max)** データ型を使うようにアプリケーションを書き直し、**text**、**ntext**、**image** データ型の構文は削除してください。 クエリごとに 1 回発生します。|  
+|TEXTPTR|TEXTPTR 関数への参照が見つかりました。 **varchar(max)** データ型を使うようにアプリケーションを書き直し、 **text**、 **ntext**、 **image** データ型の構文は削除してください。 クエリごとに 1 回発生します。|  
+|TEXTVALID|TEXTVALID 関数への参照が見つかりました。 **varchar(max)** データ型を使うようにアプリケーションを書き直し、 **text**、 **ntext**、 **image** データ型の構文は削除してください。 クエリごとに 1 回発生します。|  
 |TIMESTAMP|非推奨の **timestamp** データ型が DDL ステートメントで見つかった合計回数。 代わりに **rowversion** データ型を使用してください。|  
-|UPDATETEXT または WRITETEXT|UPDATETEXT または WRITETEXT ステートメントが見つかりました。 **varchar(max)** データ型を使うようにアプリケーションを書き直し、**text**、**ntext**、**image** データ型の構文は削除してください。 クエリごとに 1 回発生します。|  
+|UPDATETEXT または WRITETEXT|UPDATETEXT または WRITETEXT ステートメントが見つかりました。 **varchar(max)** データ型を使うようにアプリケーションを書き直し、 **text**、 **ntext**、 **image** データ型の構文は削除してください。 クエリごとに 1 回発生します。|  
 |USER_ID|USER_ID 関数への参照が見つかりました。 代わりに、DATABASE_PRINCIPAL_ID 関数を使用してください。 コンパイルごとに 1 回発生します。|  
 |リンク サーバーに対する OLEDB の使用||  
 |vardecimal ストレージ形式|**vardecimal** ストレージ形式の使用が見つかりました。 代わりにデータ圧縮を使用してください。|  
@@ -277,13 +281,14 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |xp_loginconfig|xp_loginconfig プロシージャが見つかりました。 代わりに SERVERPROPERTY の IsIntegratedSecurityOnly 引数を使用してください。 クエリごとに 1 回発生します。|  
 |xp_revokelogin|xp_revokelogin プロシージャが見つかりました。 代わりに ALTER LOGIN DISABLE または DROP LOGIN を使用してください。 コンパイルごとに 1 回発生します。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server 2016 データベース エンジンの非推奨機能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [SQL Server 2016 の非推奨フルテキスト検索機能](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Deprecation Announcement イベント クラス](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Deprecation Final Support イベント クラス](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
  [SQL Server 2016 で廃止されたデータベース エンジンの機能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [SQL Server 2016 で廃止されたフルテキスト検索機能](../Topic/Discontinued%20Full-Text%20Search%20Features%20in%20SQL%20Server%202016.md)   
+ [SQL Server 2016 で廃止されたフルテキスト検索機能](http://msdn.microsoft.com/library/70587b3c-cc77-4681-924d-a1df7cdf1517)   
  [SQL Server オブジェクトの使用](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   
+

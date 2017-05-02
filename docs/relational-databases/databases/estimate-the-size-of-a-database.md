@@ -1,31 +1,35 @@
 ---
 title: "データベース サイズの見積もり | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "領域の割り当て [SQL Server], データベース サイズ"
-  - "データベース サイズの計算"
-  - "データベース サイズの拡大"
-  - "データベース サイズ [SQL Server], 見積もり"
-  - "データベース サイズの予測"
-  - "サイズ [SQL Server], データベース"
-  - "データベース サイズの見積もり"
-  - "データベースの設計 [SQL Server], サイズの見積もり"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- space allocation [SQL Server], database size
+- calculating database size
+- increasing database size
+- database size [SQL Server], estimating
+- predicting database size
+- size [SQL Server], databases
+- estimating database size
+- designing databases [SQL Server], estimating size
 ms.assetid: 5b240161-eba4-44b0-946c-61a8fc00fc8c
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d2d986d7e899e630429f431f040addb9076f081a
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベース サイズの見積もり
+# <a name="estimate-the-size-of-a-database"></a>データベース サイズの見積もり
   データベースをデザインするときは、データを格納したときにデータベースのサイズがどのくらい大きくなるかを見積もる必要性が生じる場合があります。 データベースのサイズを見積もると、次の目的に必要なハードウェア構成の決定に役立ちます。  
   
 -   アプリケーションが必要とするパフォーマンスの実現。  
@@ -36,7 +40,7 @@ caps.handback.revision: 20
   
  データベースのサイズを見積もるには、各テーブルのサイズを個別に見積もり、それぞれの値を合計します。 テーブルのサイズは、テーブルにインデックスが含まれているかどうかにより異なり、インデックスが含まれている場合はそのインデックスの種類によって異なります。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
   
 |トピック|説明|  
 |-----------|-----------------|  

@@ -1,34 +1,38 @@
 ---
 title: "ストアド プロシージャの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "新しいストアド プロシージャ"
-  - "作成するストアド プロシージャ [SQL Server]"
-  - "ストアド プロシージャの作成"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- new stored procedures
+- stored procedures [SQL Server], creating
+- creating stored procedures
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c0095707730da9b840ebf444bdf7500cb634ad3
+ms.lasthandoff: 04/11/2017
+
 ---
-# ストアド プロシージャの作成
+# <a name="create-a-stored-procedure"></a>ストアド プロシージャの作成
   このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] および [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の CREATE PROCEDURE ステートメントを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを作成する方法について説明します。  
   
 ##  <a name="Top"></a>   
--   **作業を開始する準備:**  [アクセス許可](#Permissions)  
+-   **Before you begin:**  [Permissions](#Permissions)  
   
--   **プロシージャの作成に使用するもの:**  [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **To create a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> 権限  
+##  <a name="Permissions"></a> アクセス許可  
  データベースの CREATE PROCEDURE 権限と、プロシージャを作成するスキーマに対する ALTER 権限が必要です。  
   
 ##  <a name="Procedures"></a> ストアド プロシージャを作成する方法  
@@ -45,7 +49,7 @@ caps.handback.revision: 37
   
 2.  **[データベース]**を展開し、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを展開して、 **[プログラミング]**を展開します。  
   
-3.  **[ストアド プロシージャ]** を右クリックし、**[新しいストアド プロシージャ]** をクリックします。  
+3.  **[ストアド プロシージャ]**を右クリックし、 **[新しいストアド プロシージャ]**をクリックします。  
   
 4.  **[クエリ]** メニューの **[テンプレート パラメーターの値の指定]**をクリックします。  
   
@@ -57,11 +61,11 @@ caps.handback.revision: 37
     |Create Date|*今日の日付*|  
     |説明|従業員のデータが返されます。|  
     |[Procedure_name]|HumanResources.uspGetEmployeesTest|  
-    |[@Param1]|@LastName|  
-    |[@Datatype_For_Param1]|**nvarchar**(50)|  
+    |@Param1|@LastName|  
+    |@Datatype_For_Param1|**nvarchar**(50)|  
     |[Default_Value_For_Param1]|NULL|  
-    |[@Param2]|@FirstName|  
-    |[@Datatype_For_Param2]|**nvarchar**(50)|  
+    |@Param2|@FirstName|  
+    |@Datatype_For_Param2|**nvarchar**(50)|  
     |[Default_Value_For_Param2]|NULL|  
   
 6.  クリックして **OK**です。  
@@ -79,9 +83,9 @@ caps.handback.revision: 37
   
 9. ストアド プロシージャを作成するには、 **[クエリ]** メニューの **[実行]**をクリックします。 プロシージャがデータベース内のオブジェクトとして作成されます。  
   
-10. オブジェクト エクスプローラーにリストされたプロシージャを確認するには、**[ストアド プロシージャ]** を右クリックして **[更新]** を選択します。  
+10. オブジェクト エクスプローラーにリストされたプロシージャを確認するには、 **[ストアド プロシージャ]** を右クリックして **[更新]**を選択します。  
   
-11. プロシージャを実行するには、オブジェクト エクスプローラーでストアド プロシージャ名 **HumanResources.uspGetEmployeesTest** を右クリックし、**[ストアド プロシージャの実行]** を選択します。  
+11. プロシージャを実行するには、オブジェクト エクスプローラーでストアド プロシージャ名 **HumanResources.uspGetEmployeesTest** を右クリックし、 **[ストアド プロシージャの実行]**を選択します。  
   
 12. **[プロシージャの実行]** ウィンドウでパラメーター @LastName の値に「Margheim」を、パラメーター @FirstName の値に「Diane」を入力します。  
   
@@ -128,7 +132,7 @@ caps.handback.revision: 37
     ```  
   
 ##  <a name="PowerShellProcedure"></a>   
-## 参照  
+## <a name="see-also"></a>参照  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   

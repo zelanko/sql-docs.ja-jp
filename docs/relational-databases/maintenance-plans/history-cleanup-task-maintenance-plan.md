@@ -1,31 +1,35 @@
 ---
 title: "[履歴クリーンアップ タスク] (メンテナンス プラン) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.historycleanup.f1"
-helpviewer_keywords: 
-  - "[履歴クリーンアップ タスク] ダイアログ ボックス"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.historycleanup.f1
+helpviewer_keywords:
+- History Cleanup Task dialog box
 ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fbf4cfd2254dbe3e5f482e603ca7535682102d80
+ms.lasthandoff: 04/11/2017
+
 ---
-# [履歴クリーンアップ タスク] (メンテナンス プラン)
-  **[履歴クリーンアップ タスク]** ダイアログ ボックスを使用すると、msdb データベースのテーブルに含まれる古い履歴情報を破棄できます。 このタスクでは、バックアップと復元の履歴、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ履歴、メンテナンス プランの履歴の削除がサポートされます。  
+# <a name="history-cleanup-task-maintenance-plan"></a>[履歴クリーンアップ タスク] (メンテナンス プラン)
+  **[履歴クリーンアップ タスク]** ダイアログ ボックスを使用すると、msdb データベースのテーブルに含まれる古い履歴情報を破棄できます。 このタスクでは、バックアップと復元の履歴、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ履歴、メンテナンス プランの履歴の削除がサポートされます。  
   
- このステートメントでは、**sp_purge_jobhistory** ステートメントおよび **sp_delete_backuphistory** ステートメントが使用されます。  
+ このステートメントでは、 **sp_purge_jobhistory** ステートメントおよび **sp_delete_backuphistory** ステートメントが使用されます。  
   
-## UI 要素の一覧  
+## <a name="uielement-list"></a>UI 要素の一覧  
  **接続**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  影響を受けるオブジェクトが大量にある場合は、表示にかなりの時間を要する場合があります。  
   
-## [新しい接続] ダイアログ ボックス  
+## <a name="new-connection-dialog-box"></a>[新しい接続] ダイアログ ボックス  
  **[接続名]**  
  新しい接続の名前を入力します。  
   
@@ -64,10 +68,10 @@ caps.handback.revision: 21
  サーバーの認証情報を指定します。  
   
  **[Windows NT の統合セキュリティを使用する]**  
- Microsoft Windows 認証を使用して、SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+ Microsoft Windows 認証を使用して、SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。  
   
  **[特定のユーザー名とパスワードを使用する]**  
- SQL Server 認証を使用して、SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。 このオプションは利用できません。  
+ SQL Server 認証を使用して、SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
   
  **ユーザー名**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  
@@ -75,7 +79,7 @@ caps.handback.revision: 21
  **Password**  
  認証に使用するパスワードを指定します。 このオプションは利用できません。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [sp_purge_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)  
   

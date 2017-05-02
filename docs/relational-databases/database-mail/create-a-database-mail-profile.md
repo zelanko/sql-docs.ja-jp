@@ -1,41 +1,45 @@
 ---
 title: "データベース メール プロファイルの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データベース メール [SQL Server], パブリック プロファイル"
-  - "プロファイル [SQL Server], データベース メール"
-  - "パブリック プロファイル [データベース メール]"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Database Mail [SQL Server], public profiles
+- profiles [SQL Server], Database Mail
+- public profiles [Database Mail]
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3dfeb39ffa1bba82e4f5782ef30621c8e57529de
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベース メール プロファイルの作成
+# <a name="create-a-database-mail-profile"></a>データベース メール プロファイルの作成
   **データベース メール構成ウィザード** または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、データベース メールのパブリック プロファイルとプライベート プロファイルを作成します。 メール プロファイルの詳細については、「[データベース メール プロファイル](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2)」をご覧ください。
   
--   **作業を開始する準備:** [前提条件、 [セキュリティ  
+-   **作業を開始する準備:** [前提条件](#Prerequisites)、[セキュリティ](#Security)  
   
 -   **データベース メールのプライベート プロファイルの作成:**  [データベース メール構成ウィザードの使用](#SSMSProcedure)、[Transact-SQL の使用](#PrivateProfile)  
   
--   **データベース メールのパブリック プロファイルの作成:**  [データベース メール構成ウィザードの使用](#SSMSProcedure)、[Transact-SQL の使用](#PublicProfile)  
+-   **To Create a Database Mail public profile using:**  [Database Mail Configuration Wizard](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
- プロファイルに対応する 1 つ以上のデータベース メール アカウントを作成します。 データベース メール アカウントの作成方法については、「[データベース メール アカウントの作成](../../relational-databases/database-mail/create-a-database-mail-account.md)」を参照してください。  
+ プロファイルに対応する 1 つ以上のデータベース メール アカウントを作成します。 データベース メール アカウントの作成方法については、「 [データベース メール アカウントの作成](../../relational-databases/database-mail/create-a-database-mail-account.md)」を参照してください。  
   
 ###  <a name="Security"></a> セキュリティ  
- パブリック プロファイルにより、**msdb** データベースにアクセスできるすべてのユーザーが、このプロファイルを使用して電子メールを送信できます。 プライベート プロファイルを使用できるのは、ユーザーまたはロールです。 プロファイルにロールのアクセス権を付与すると、保守が簡単なアーキテクチャを作成できます。 メールを送信するには、 **msdb** データベースの **DatabaseMailUserRole** のメンバーであることに加えて、少なくとも 1 つのデータベース メール プロファイルへのアクセス許可が必要です。  
+ パブリック プロファイルにより、 **msdb** データベースにアクセスできるすべてのユーザーが、このプロファイルを使用して電子メールを送信できます。 プライベート プロファイルを使用できるのは、ユーザーまたはロールです。 プロファイルにロールのアクセス権を付与すると、保守が簡単なアーキテクチャを作成できます。 メールを送信するには、 **msdb** データベースの **DatabaseMailUserRole** のメンバーであることに加えて、少なくとも 1 つのデータベース メール プロファイルへのアクセス許可が必要です。  
   
 ####  <a name="Permissions"></a> アクセス許可  
  プロファイル アカウントを作成し、ストアド プロシージャを実行するユーザーは、sysadmin 固定サーバー ロールのメンバーである必要があります。  
@@ -81,7 +85,7 @@ caps.handback.revision: 34
   
     -   **[ウィザードの完了]** ページで、実行される動作を確認し、 **[完了]** をクリックして、プロファイルの構成を完了します。  
   
-## Transact-SQL の使用  
+## <a name="using-transact-sql"></a>Transact-SQL の使用  
   
 ###  <a name="PrivateProfile"></a> データベース メールのプライベート プロファイルを作成するには  
   
@@ -224,3 +228,4 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
 ```  
   
   
+

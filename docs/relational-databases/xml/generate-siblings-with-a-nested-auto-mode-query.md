@@ -1,35 +1,39 @@
 ---
 title: "入れ子になった AUTO モードのクエリを使用した兄弟の生成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "クエリ [SQL Server の XML], 入れ子になった AUTO モード"
-  - "入れ子になった AUTO モード クエリ"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [XML in SQL Server], nested AUTO mode
+- nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d85a1b59656222cf07338d2eb98925e30a5c658
+ms.lasthandoff: 04/11/2017
+
 ---
-# 入れ子になった AUTO モードのクエリを使用した兄弟の生成
+# <a name="generate-siblings-with-a-nested-auto-mode-query"></a>入れ子になった AUTO モードのクエリを使用した兄弟の生成
   次の例では、入れ子になった AUTO モードのクエリを使用して兄弟を作成する方法を示します。 他の方法では、EXPLICIT モードを使用する以外に、このような XML を生成する方法はありません。 ただし、この方法は複雑になる場合があります。  
   
-## 例  
+## <a name="example"></a>例  
  このクエリでは、販売注文情報を提供する XML が構築されます。 これには、次の内容が含まれます。  
   
--   販売注文ヘッダー情報、`SalesOrderID`、`SalesPersonID`、および `OrderDate`。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] の `SalesOrderHeader` テーブルにこの情報が格納されています。  
+-   販売注文ヘッダー情報、 `SalesOrderID`、 `SalesPersonID`、および `OrderDate`。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] の `SalesOrderHeader` テーブルにこの情報が格納されています。  
   
 -   販売注文明細情報。 注文を受けた 1 つ以上の製品、単価、および受注数が含まれます。 この情報は `SalesOrderDetail` テーブルに格納されています。  
   
--   販売員情報。 これは注文を受けた販売員です。 `SalesPerson` は、`SalesPersonID` テーブルで提供されています。 このクエリでは、販売員の名前を検索するために、このテーブルと `Employee` テーブルを結合する必要があります。  
+-   販売員情報。 これは注文を受けた販売員です。 `SalesPerson` は、 `SalesPersonID`テーブルで提供されています。 このクエリでは、販売員の名前を検索するために、このテーブルと `Employee` テーブルを結合する必要があります。  
   
  次に示す 2 つの異なる `SELECT` クエリは、やや形式の異なる XML を生成します。  
   
@@ -65,13 +69,13 @@ FOR XML AUTO, TYPE
   
 -   `SalesOrder` 句で指定された行セット `FROM` に対してクエリを実行しています。 結果は、1 つ以上の <`SalesOrder`> 要素を含む XML になります。  
   
--   `AUTO` モードと `TYPE` ディレクティブが指定されています。 `AUTO` モードはクエリの結果を XML に変換し、`TYPE` ディレクティブは結果を **xml** 型で返します。  
+-   `AUTO` モードと `TYPE` ディレクティブが指定されています。 `AUTO` モードはクエリの結果を XML に変換し、 `TYPE` ディレクティブは結果を **xml** 型で返します。  
   
 -   2 つの `SELECT` ステートメントが含まれており、コンマで区切られ、入れ子構造になっています。 入れ子の最初の `SELECT` ステートメントで、販売注文情報、ヘッダー、および明細を取得し、入れ子の 2 番目の `SELECT` ステートメントで販売員情報を取得しています。  
   
-    -   `SELECT`、`SalesOrderID`、および `SalesPersonID` 自体を取得する `CustomerID` ステートメントには、販売注文明細情報を返す別の `SELECT ... FOR XML` ステートメント (`AUTO` モードと `TYPE` ディレクティブを指定) が入れ子として含まれています。  
+    -   `SELECT` 、 `SalesOrderID`、および `SalesPersonID`自体を取得する `CustomerID` ステートメントには、販売注文明細情報を返す別の `SELECT ... FOR XML` ステートメント ( `AUTO` モードと `TYPE` ディレクティブを指定) が入れ子として含まれています。  
   
- 販売員情報を取得する `SELECT` ステートメントは、`SalesPerson` 句で作成された行セット `FROM` に対してクエリを行います。 `FOR XML` クエリが機能するためには、`FROM` 句で生成される匿名の行セットに名前を付ける必要があります。 ここで指定されている名前は `SalesPerson` です。  
+ 販売員情報を取得する `SELECT` ステートメントは、 `SalesPerson`句で作成された行セット `FROM` に対してクエリを行います。 `FOR XML` クエリが機能するためには、 `FROM` 句で生成される匿名の行セットに名前を付ける必要があります。 ここで指定されている名前は `SalesPerson`です。  
   
  結果の一部を次に示します。  
   
@@ -139,11 +143,11 @@ FOR XML AUTO, TYPE
 </Sales.SalesOrderHeader>  
 ```  
   
- `TYPE` ディレクティブによってクエリの結果が **xml** 型で返されるので、各種の **xml** データ型メソッドを使用して結果の XML にクエリを実行できます。 詳細については、「[xml データ型のメソッド](../../t-sql/xml/xml-data-type-methods.md)」を参照してください。 次のクエリでは、次の点に注意してください。  
+ `TYPE` ディレクティブによってクエリの結果が **xml** 型で返されるので、各種の **xml** データ型メソッドを使用して結果の XML にクエリを実行できます。 詳細については、「 [xml データ型のメソッド](../../t-sql/xml/xml-data-type-methods.md)」を参照してください。 次のクエリでは、次の点に注意してください。  
   
 -   上記のクエリが `FROM` 句に追加されています。 クエリの結果はテーブルで返されます。 追加された `XmlCol` 別名に注意してください。  
   
--   `SELECT` 句では、`XmlCol` 句で返される `FROM` に対して XQuery を指定しています。 XQuery を指定するために、**xml** データ型の **query()** メソッドが使用されます。 詳細については、「[クエリ&#40;&#41; メソッド &#40;xml データ型&#41;](../../t-sql/xml/query-method-xml-data-type.md)」を参照してください。  
+-   `SELECT` 句では、 `XmlCol` 句で返される `FROM` に対して XQuery を指定しています。 XQuery を指定するために、**xml** データ型の **query()** メソッドが使用されます。 詳細については、「[クエリ&#40;&#41; メソッド &#40;xml データ型&#41;](../../t-sql/xml/query-method-xml-data-type.md)」を参照してください。  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  
@@ -164,7 +168,7 @@ FOR XML AUTO, TYPE
     FOR XML AUTO, TYPE ) as T(XmlCol)  
     ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [入れ子になった FOR XML クエリの使用](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

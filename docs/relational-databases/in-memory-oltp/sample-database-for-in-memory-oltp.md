@@ -1,52 +1,56 @@
 ---
 title: "インメモリ OLTP のサンプル データベース | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9f9957d4c83ce351e49224fcd2bc499a5aa777dd
+ms.lasthandoff: 04/11/2017
+
 ---
-# インメモリ OLTP のサンプル データベース
+# <a name="sample-database-for-in-memory-oltp"></a>インメモリ OLTP のサンプル データベース
     
 ## <a name="overview"></a>概要  
- このサンプルでは、 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 機能を紹介します。 このサンプルで取り上げるのは、メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャです。また、 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]のパフォーマンス上の利点も示します。  
+ このサンプルでは、インメモリ OLTP 機能を紹介します。 このサンプルで取り上げるのは、メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャです。また、インメモリ OLTP のパフォーマンス上の利点も示します。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のこのトピックを表示するには、「[メモリ内 OLTP を実証する AdventureWorks の拡張](https://msdn.microsoft.com/library/dn511655\(v=sql.120\).aspx)」をご覧ください。  
+>  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]のこのトピックを表示するには、「 [メモリ内 OLTP を実証する AdventureWorks の拡張](https://msdn.microsoft.com/library/dn511655\(v=sql.120\).aspx)」をご覧ください。  
   
- このサンプルは、AdventureWorks データベースの 5 つのテーブルをメモリ最適化テーブルに移行します。販売注文処理のデモ ワークロードも含まれています。 このデモ ワークロードを使用して、サーバーで [!INCLUDE[hek_2](../../includes/hek-2-md.md)] を使用するパフォーマンス上の利点を確認できます。  
+ このサンプルは、AdventureWorks データベースの 5 つのテーブルをメモリ最適化テーブルに移行します。販売注文処理のデモ ワークロードも含まれています。 このデモ ワークロードを使用して、サーバーでインメモリ OLTP を使用するパフォーマンス上の利点を確認できます。  
   
- サンプルの説明では、テーブルを [!INCLUDE[hek_2](../../includes/hek-2-md.md)] に移行することによって生じるトレードオフについて触れ、メモリ最適化テーブルでは (まだ) サポートされていない機能について記載しています。  
+ サンプルの説明では、テーブルをインメモリ OLTP に移行することによって生じるトレードオフについて触れ、メモリ最適化テーブルでは (まだ) サポートされていない機能について記載しています。  
   
  このサンプルのドキュメントは、次の内容で構成されています。  
   
--   サンプルをインストールしてデモ ワークロードを実行するための[前提条件](#Prerequisites)   
+-   サンプルをインストールしてデモ ワークロードを実行するための[前提条件](#Prerequisites)  
   
--    [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)する手順  
+-   [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)する手順  
   
--   [サンプル テーブルおよびプロシージャの説明](#Descriptionofthesampletablesandprocedures) – [!INCLUDE[hek_2](../../includes/hek-2-md.md)] サンプルによって AdventureWorks に追加されるテーブルおよびプロシージャの説明、オリジナルの AdventureWorks テーブルをメモリ最適化テーブルに移行する際の考慮事項が記載されています。  
+-   [サンプル テーブルおよびプロシージャの説明](#Descriptionofthesampletablesandprocedures) – インメモリ OLTP サンプルによって AdventureWorks に追加されるテーブルおよびプロシージャの説明、オリジナルの AdventureWorks テーブルをメモリ最適化テーブルに移行する際の考慮事項が記載されています。  
   
 -   [デモ ワークロードを使用したパフォーマンス測定](#PerformanceMeasurementsusingtheDemoWorkload) を実行する手順 - デモ ワークロード自体を実行する手順だけでなく、ワークロードを操作するツール、ostress をインストールして実行する手順も記載されています。  
   
 -   [サンプルにおけるメモリおよびディスク領域の使用率](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="a-nameprerequisitesa-prerequisites"></a><a name="Prerequisites"></a> の前提条件  
+##  <a name="Prerequisites"></a> Prerequisites  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   運用環境と仕様が似ているサーバー (パフォーマンス テスト用)。 このサンプルでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に使用できるメモリが 16 GB 以上必要です。  [!INCLUDE[hek_2](../../includes/hek-2-md.md)]のハードウェアに関する一般的なガイドラインについては、ブログ記事 ([http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)) をご覧ください。  
+-   運用環境と仕様が似ているサーバー (パフォーマンス テスト用)。 このサンプルでは、SQL Server に使用できるメモリが 16 GB 以上必要です。 インメモリ OLTP のハードウェアに関する一般的なガイドラインについては、ブログ記事 ([http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)) を参照してください。  
   
-##  <a name="a-nameinstallingthein-memoryoltpsamplebasedonadventureworksa-installing-the-includehek2tokenhek2mdmd-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>AdventureWorks に基づいて [!INCLUDE[hek_2](../../includes/hek-2-md.md)] サンプルをインストール  
+##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installing the In-Memory OLTP sample based on AdventureWorks  
  サンプルをインストールするには、次の手順を実行します。  
   
 1.  [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) にある AdventureWorks2016CTP3.bak と SQLServer2016CTP3Samples.zip をローカル フォルダー ('c:\temp' など) にダウンロードします。  
@@ -77,7 +81,7 @@ caps.handback.revision: 15
   
 3.  サンプル スクリプトとワークロードを表示するには、ファイル SQLServer2016CTP3Samples.zip をローカル フォルダーにアンパックします。 ワークロードを実行する手順については、インメモリ OLTP\readme.txt ファイルをご参照ください。  
   
-##  <a name="a-namedescriptionofthesampletablesandproceduresa-description-of-the-sample-tables-and-procedures"></a><a name="Descriptionofthesampletablesandprocedures"></a>サンプル テーブルおよびプロシージャの説明  
+##  <a name="Descriptionofthesampletablesandprocedures"></a> Description of the sample tables and procedures  
  サンプルでは、AdventureWorks の既存のテーブルに基づいて、製品および販売注文ごとに新しいテーブルを作成します。 新しいテーブルのスキーマは既存のテーブルと似ていますが、以下に示すように、異なる点がいくつかあります。  
   
  新しいメモリ最適化テーブルには、"_inmem" というサフィックスが付いています。 また、サンプルにはこれに対応するテーブルも含まれており、このテーブルには "_ondisk" というサフィックスが付いています。これらのテーブルを使用することで、システム上のメモリ最適化テーブルのパフォーマンスと、ディスク ベース テーブルのパフォーマンスを一対一で比較できます。  
@@ -90,7 +94,7 @@ caps.handback.revision: 15
   
  新しいスキーマ "Demo" には、デモ ワークロードを実行するためのヘルパー テーブルとストアド プロシージャが含まれます。  
   
- 具体的には、 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] サンプルでは、次のオブジェクトが AdventureWorks に追加されます。  
+ 具体的には、インメモリ OLTP サンプルでは、次のオブジェクトが AdventureWorks に追加されます。  
   
 ### <a name="tables-added-by-the-sample"></a>サンプルによって追加されるテーブル  
   
@@ -136,7 +140,7 @@ caps.handback.revision: 15
   
  Sales.SalesOrderHeader_inmem  
   
--   *既定の制約* はメモリ最適化テーブルでサポートされ、そのほとんどがそのまま移行されています。 ただし、元の Sales.SalesOrderHeader テーブルには、現在の日付を取得する既定の制約が 2 つあります。OrderDate 列の制約と ModifiedDate 列の制約です。 同時実行が多くスループットが高い注文処理ワークロードでは、グローバル リソースが競合ポイントになる可能性があります。 たとえば、このようなグローバル リソースにはシステム時刻があります。販売注文を挿入する [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ワークロードを実行しているとき、特に、販売注文ヘッダーおよび販売注文の詳細に含まれる複数の列に対して、システム時刻を取得する必要がある場合は、このシステム時刻がボトルネックになることがわかっています。 このサンプルでは、挿入された販売注文ごとに 1 度だけシステム時刻を取得することで問題に対処します。そして、ストアド プロシージャ Sales.usp_InsertSalesOrder_inmem で、SalesOrderHeader_inmem と SalesOrderDetail_inmem にある datetime 列に対して、その値を使用します。  
+-   *既定の制約* はメモリ最適化テーブルでサポートされ、そのほとんどがそのまま移行されています。 ただし、元の Sales.SalesOrderHeader テーブルには、現在の日付を取得する既定の制約が 2 つあります。OrderDate 列の制約と ModifiedDate 列の制約です。 同時実行が多くスループットが高い注文処理ワークロードでは、グローバル リソースが競合ポイントになる可能性があります。 たとえば、このようなグローバル リソースにはシステム時刻があります。販売注文を挿入するインメモリ OLTP ワークロードを実行しているとき、特に、販売注文ヘッダーおよび販売注文の詳細に含まれる複数の列に対して、システム時刻を取得する必要がある場合は、このシステム時刻がボトルネックになることがわかっています。 このサンプルでは、挿入された販売注文ごとに 1 度だけシステム時刻を取得することで問題に対処します。そして、ストアド プロシージャ Sales.usp_InsertSalesOrder_inmem で、SalesOrderHeader_inmem と SalesOrderDetail_inmem にある datetime 列に対して、その値を使用します。  
   
 -   *エイリアス UDT* - 元のテーブルでは、2 つのエイリアス ユーザー定義データ型 (UDT) が使用されます。1 つは dbo.OrderNumber で、これは PurchaseOrderNumber 列に対して使用されます。もう 1 つは dbo.AccountNumber で、AccountNumber 列に対して使用されます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、メモリ最適化テーブルに対してエイリアス UDT がサポートされていません。したがって、新しいテーブルでは、システム データ型 nvarchar(25) と nvarchar(15) が個別に使用されます。  
   
@@ -144,7 +148,7 @@ caps.handback.revision: 15
   
 -   *計算列* - [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] のメモリ最適化テーブルでは計算列がサポートされていないため、計算列である SalesOrderNumber および TotalDue は省略されます。 新しい Sales.vSalesOrderHeader_extended_inmem ビューには、SalesOrderNumber 列と TotalDue 列が反映されています。 したがって、これらの列が必要な場合は、このビューを使用します。  
 
-    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降、メモリ最適化テーブルとインデックスで計算列がサポートされています。
 
   
@@ -301,8 +305,8 @@ caps.handback.revision: 15
   
     -   これはヘルパー プロシージャ dbo.usp_GenerateCKCheck、dbo.usp_GenerateFKCheck、および dbo.GenerateUQCheck を使用して、整合性チェックの実行に必要な T-SQL を生成します。  
   
-##  <a name="a-nameperformancemeasurementsusingthedemoworkloada-performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a> デモ ワークロードを使用したパフォーマンス測定  
- ostress は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] の CSS [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サポート チームによって開発されたコマンド ライン ツールです。 このツールを使用すると、クエリやストアド プロシージャを並列実行できます。 指定された T-SQL ステートメントが並列実行されるようにスレッドの数を構成できるほか、そのスレッドでステートメントを実行する回数を指定できます。ostress はスレッドをスピン アップし、すべてのスレッド内のステートメントを並列実行します。 すべてのスレッドに対する実行が完了したら、その実行が完了するまでの所要時間を報告します。  
+##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Performance Measurements using the Demo Workload  
+ ostress は、Microsoft CSS SQL Server サポート チームによって開発されたコマンド ライン ツールです。 このツールを使用すると、クエリやストアド プロシージャを並列実行できます。 指定された T-SQL ステートメントが並列実行されるようにスレッドの数を構成できるほか、そのスレッドでステートメントを実行する回数を指定できます。ostress はスレッドをスピン アップし、すべてのスレッド内のステートメントを並列実行します。 すべてのスレッドに対する実行が完了したら、その実行が完了するまでの所要時間を報告します。  
   
 ### <a name="installing-ostress"></a>ostress のインストール  
  ostress は、RML ユーティリティの一部としてインストールされます。ostress のスタンドアロン インストールはありません。  
@@ -324,9 +328,9 @@ caps.handback.revision: 15
   
  コマンド ライン オプションを指定せずに ostress.exe を実行すると、ostress のコマンド ライン オプションを確認できます。 このサンプルで ostress を実行するときに使用できる主なオプションを次に示します。  
   
--   -S 接続先の [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前  
+-   -S 接続する Microsoft SQL Server インスタンスの名前  
   
--   -E Windows 認証を使用して接続 (既定)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、オプションとして –U および -P を使用して、ユーザー名とパスワードをそれぞれ指定  
+-   -E Windows 認証を使用して接続 (既定)。SQL Server 認証を使用する場合は、オプションとして -U および -P を使用して、ユーザー名とパスワードをそれぞれ指定  
   
 -   -d データベースの名前。この例では AdventureWorks2014  
   
@@ -410,7 +414,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
   
  合計 8 個の物理 (16 個の論理) コアを備えたテスト サーバーでの所要時間は 41 分 25 秒でした。 合計 24 個の物理 (48 個の論理) コアを備えた 2 台目のテスト サーバーでの所要時間は 52 分 16 秒でした。  
   
- ディスク ベース テーブルを使用していると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では CPU をフルに活用できません。これが主な要因となり、このテストでは、メモリ最適化テーブルとディスク ベース テーブルのパフォーマンスに差が生じました。 CPU をフル活用できない原因はラッチ競合です。同時実行トランザクションは同じデータ ページに書き込もうとしますが、ラッチにより、一度に 1 つのトランザクションしかページに書き込むことができなくなります。 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] エンジンはラッチ フリーで、データ行はページ単位で整理されていません。 このため、同時実行トランザクションが挿入をブロックし合うことはなく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は CPU をフル活用できます。  
+ ディスク ベース テーブルを使用していると、SQL Server では CPU をフルに活用できません。これが主な要因となり、このテストでは、メモリ最適化テーブルとディスク ベース テーブルのパフォーマンスに差が生じました。 CPU をフル活用できない原因はラッチ競合です。同時実行トランザクションは同じデータ ページに書き込もうとしますが、ラッチにより、一度に 1 つのトランザクションしかページに書き込むことができなくなります。 インメモリ OLTP エンジンはラッチ フリーで、データ行はページ単位で整理されていません。 このため、同時実行トランザクションが挿入をブロックし合うことはなく、SQL Server は CPU をフル活用できます。  
   
  ワークロードの実行中、タスク マネージャーなどを使用して、CPU の使用率を確認できます。 ディスク ベース テーブルの CPU 使用率が、100% からはかけ離れていることがわかります。 16 個の論理プロセッサを備えたテスト構成では、使用率は 24% 前後で推移します。  
   
@@ -427,26 +431,26 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
  デモの実行が完了するたびに、リセットすることをお勧めします。 このワークロードは挿入のみであるため、実行のたびに多くのメモリを消費します。このため、メモリ不足が発生しないようにリセットが必要です。 実行後に消費されるメモリ量について、セクション「 [ワークロード実行後のメモリ使用率](#Memoryutilizationafterrunningtheworkload)」で説明しています。  
   
-###  <a name="a-nametroubleshootingslow-runningtestsa-troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a> 実行速度の遅いテストのトラブルシューティング  
+###  <a name="Troubleshootingslow-runningtests"></a> Troubleshooting slow-running tests  
  テスト結果は、通常、ハードウェアと、テスト実行で使用された同時実行のレベルによって変わります。 期待した結果を得られない場合に確認することをいくつか次に示します。  
   
--   同時実行トランザクションの数: 1 つのスレッドでワークロードを実行すると、 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] によるパフォーマンス向上が 2 倍に満たない場合があります。 高レベルの同時実行がある場合、唯一大きな問題になるのがラッチ競合です。  
+-   同時実行トランザクションの数: 1 つのスレッドでワークロードを実行すると、インメモリ OLTP によるパフォーマンス向上が 2 倍に満たない場合があります。 高レベルの同時実行がある場合、唯一大きな問題になるのがラッチ競合です。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で使用できるコアが少ない: つまり、低レベルの同時実行がシステムに存在することになります。これは、SQL で使用できるコアの数しか、トランザクションを同時実行できないからです。  
+-   SQL Server で使用できるコアが少ない: つまり、低レベルの同時実行がシステムに存在することになります。これは、SQL で使用できるコアの数しか、トランザクションを同時実行できないからです。  
   
     -   現象: ディスク ベース テーブルでワークロードを実行しているときに CPU 使用率が高い場合、競合の数はそれほど多くありません。これは、同時実行が不足していることを示します。  
   
--   ログ ドライブの速度: ログ ドライブが、システム内のトランザクション スループット レベルに対応できない場合、ワークロードはログ IO でボトルネックになります。 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]でのログ記録は効率的ですが、ログ IO がボトルネックになっていると、パフォーマンス向上の可能性は限られます。  
+-   ログ ドライブの速度: ログ ドライブが、システム内のトランザクション スループット レベルに対応できない場合、ワークロードはログ IO でボトルネックになります。 インメモリ OLTP でのログ記録は効率的ですが、ログ IO がボトルネックになっていると、パフォーマンス向上の可能性は限られます。  
   
     -   現象: メモリ最適化テーブルでワークロードを実行しているとき、CPU 使用率が 100% からかけ離れている場合、または、その変動が激しい場合は、ログ IO ボトルネックが存在する可能性があります。 これを確認するには、リソース モニターを開き、ログ ドライブのキュー長を確認します。  
   
-##  <a name="a-namememoryanddiskspaceutilizationinthesamplea-memory-and-disk-space-utilization-in-the-sample"></a><a name="MemoryandDiskSpaceUtilizationintheSample"></a> サンプルにおけるメモリおよびディスク領域の使用率  
+##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> サンプルにおけるメモリおよびディスク領域の使用率  
  ここでは、サンプル データベースのメモリおよびディスク領域の使用率に関して期待すべき事項について説明します。 また、16 個の論理コアを備えたテスト サーバーでの結果も示します。  
   
-###  <a name="a-namememoryutilizationforthememory-optimizedtablesa-memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a> メモリ最適化テーブルのメモリ使用率  
+###  <a name="Memoryutilizationforthememory-optimizedtables"></a> Memory utilization for the memory-optimized tables  
   
 #### <a name="overall-utilization-of-the-database"></a>データベースの全体的な使用率  
- 次のクエリを使用すると、システムの [!INCLUDE[hek_2](../../includes/hek-2-md.md)] の合計メモリ使用率を取得できます。  
+ 次のクエリを使用すると、システムのインメモリ OLTP の合計メモリ使用率を取得できます。  
   
 ```  
 SELECT type  
@@ -496,7 +500,7 @@ WHERE t.type='U'
   
  ここで印象的なのは、インデックスに割り当てられているメモリのサイズです (テーブル データのサイズと比較)。 このサイズになるのは、サンプルのハッシュ インデックスが、大きなデータ サイズに合わせて事前にサイズ調整されているためです。 ハッシュ インデックスのサイズは固定されているため、テーブルのデータのサイズに合わせて大きくなることはありません。  
   
-####  <a name="a-namememoryutilizationafterrunningtheworkloada-memory-utilization-after-running-the-workload"></a><a name="Memoryutilizationafterrunningtheworkload"></a> ワークロード実行後のメモリ使用率  
+####  <a name="Memoryutilizationafterrunningtheworkload"></a> Memory utilization after running the workload  
  1,000 万個の販売注文を挿入した後の全体的なメモリ使用率は次のようになります。  
   
 ```  
@@ -514,7 +518,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 |MEMORYCLERK_XTP|既定値|0|  
 |MEMORYCLERK_XTP|既定値|0|  
   
- このように、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がサンプル データベースのメモリ最適化テーブルおよびインデックスに対して使用しているビットは 8 GB を下回ります。  
+ このように、SQL Server がサンプル データベースのメモリ最適化テーブルおよびインデックスに対して使用しているビットは 8 GB を下回ります。  
   
  サンプルを 1 回実行した後のテーブルごとの詳細なメモリ使用量を確認します。  
   
@@ -543,7 +547,7 @@ WHERE t.type='U'
 #### <a name="after-demo-reset"></a>デモのリセット後  
  ストアド プロシージャ Demo.usp_DemoReset を使用すると、デモをリセットできます。 これにより SalesOrderHeader_inmem テーブルと SalesOrderDetail_inmem テーブルのデータが削除され、元の SalesOrderHeader テーブルと SalesOrderDetail テーブルからデータが再送信されます。  
   
- この時点でテーブルの行は削除されていますが、メモリはすぐに再利用されるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、メモリは、メモリ最適化テーブルの削除された行から、必要に応じてバックグラウンドで再利用されます。 デモのリセット後すぐにこれがわかります。システムにトランザクション ワークロードがない場合、削除された行のメモリはまだ再利用されていません。  
+ この時点でテーブルの行は削除されていますが、メモリはすぐに再利用されるわけではありません。 SQL Server では、メモリはメモリ最適化テーブルの削除された行から、必要に応じてバックグラウンドで再利用されます。 デモのリセット後すぐにこれがわかります。システムにトランザクション ワークロードがない場合、削除された行のメモリはまだ再利用されていません。  
   
 ```  
 SELECT type  
@@ -636,7 +640,7 @@ ORDER BY state, file_type
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
   
- 領域のほとんどが、事前作成されたデータとデルタ ファイルによって使用されていることがわかります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、1 組のファイル ペア (データとデルタ) が論理プロセッサごとに事前作成されます。 また、さらに効率よくデータを挿入できるように、データ ファイルは 128 MB に、デルタ ファイルは 8 MB に事前にサイズ調整されています。  
+ 領域のほとんどが、事前作成されたデータとデルタ ファイルによって使用されていることがわかります。 SQL Server では、1 組のファイル ペア (データとデルタ) が論理プロセッサごとに事前作成されます。 また、さらに効率よくデータを挿入できるように、データ ファイルは 128 MB に、デルタ ファイルは 8 MB に事前にサイズ調整されています。  
   
  メモリ最適化テーブルの実際のデータは、1 つのデータ ファイルにあります。  
   
@@ -766,6 +770,8 @@ ORDER BY state, file_type
  この場合、"under construction" 状態のチェックポイント ファイルのペアが 2 組あります。これは、複数のファイル ペアが、おそらくワークロードにおける高レベルの同時実行が原因で、"under construction" 状態に移行されたことを意味します。 一方、複数の同時実行スレッドには新しいファイル ペアが必要だったため、ペアの状態が "precreated" から "under construction" に移行されました。  
   
 ## <a name="see-also"></a>参照  
- [インメモリ OLTP &#40;インメモリ最適化&#41;](../Topic/In-Memory%20OLTP%20\(In-Memory%20Optimization\).md)  
+ [インメモリ OLTP &#40;インメモリ最適化&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+
+

@@ -1,29 +1,33 @@
 ---
 title: "テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "分析, 移行, レポート"
-  - "AMR"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Analyze, Migrate, Report
+- AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 caps.latest.revision: 39
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a6f70a5be224219a572df858e37ecbfe5f9fde07
+ms.lasthandoff: 04/11/2017
+
 ---
-# テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認
+# <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のトランザクション パフォーマンス分析レポートは、インメモリ OLTP によりデータベース アプリケーションのパフォーマンスが向上するかどうかを評価するために役立ちます。 また、このレポートを使用すると、アプリケーションでインメモリ OLTP を有効にするために必要な作業量が示されます。 インメモリ OLTP に移植するディスク ベース テーブルを特定した後で[メモリ最適化アドバイザー](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)を使用すると、テーブルを移行しやすくなります。 同様に、 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) は、ストアド プロシージャをネイティブ コンパイル ストアド プロシージャに移植するために役立ちます。 移行方法については、「[インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項](https://msdn.microsoft.com/library/dn673538.aspx)」を参照してください。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のトランザクション パフォーマンス分析レポートは、インメモリ OLTP によりデータベース アプリケーションのパフォーマンスが向上するかどうかを評価するために役立ちます。 また、このレポートを使用すると、アプリケーションでインメモリ OLTP を有効にするために必要な作業量が示されます。 インメモリ OLTP に移植するディスク ベース テーブルを特定した後で [メモリ最適化アドバイザー](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)を使用すると、テーブルを移行しやすくなります。 同様に、 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) は、ストアド プロシージャをネイティブ コンパイル ストアド プロシージャに移植するために役立ちます。 移行方法については、「 [インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項](https://msdn.microsoft.com/library/dn673538.aspx)」を参照してください。  
   
  トランザクション パフォーマンス分析レポートは、実稼働データベースに対して、または実稼働ワークロードに類似したアクティブなワークロードを持つテスト データベースに対して直接実行されます。  
   
@@ -38,10 +42,10 @@ caps.handback.revision: 39
     > [!IMPORTANT]  
     >  データベース システムのパフォーマンスはさまざまな要因に左右されますが、そのすべてをトランザクション パフォーマンス コレクターで観察および測定できるわけではありません。 したがって、トランザクション パフォーマンス分析レポートは、作成した予測が実際のパフォーマンスの向上と一致することを保証するものではありません。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインストール時に **[管理ツール - 基本]** または **[管理ツール - 詳細]** を選択するか、または [SQL Server Management Studio をダウンロード](https://msdn.microsoft.com/library/mt238290.aspx)すると、トランザクション パフォーマンス分析レポートと移行アドバイザーが SQL Server Management Studio (SSMS) の一部としてインストールされます。  
+ **のインストール時に** [管理ツール - 基本] **または** [管理ツール - 詳細] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を選択するか、または [SQL Server Management Studio をダウンロード](https://msdn.microsoft.com/library/mt238290.aspx)すると、トランザクション パフォーマンス分析レポートと移行アドバイザーが SQL Server Management Studio (SSMS) の一部としてインストールされます。  
   
-## トランザクション パフォーマンス分析レポート  
- **オブジェクト エクスプローラー**でトランザクション パフォーマンス分析レポートを生成するには、データベースを右クリックし、**[レポート]**、**[標準レポート]**、**[トランザクション パフォーマンス分析の概要]** の順にクリックします。 有意義な分析レポートを生成するには、データベースにアクティブなワークロード、または最近実行されたワークロードがある必要があります。  
+## <a name="transaction-performance-analysis-reports"></a>トランザクション パフォーマンス分析レポート  
+ **オブジェクト エクスプローラー** でトランザクション パフォーマンス分析レポートを生成するには、データベースを右クリックし、 **[レポート]**、 **[標準レポート]**、 **[トランザクション パフォーマンス分析の概要]**の順にクリックします。 有意義な分析レポートを生成するには、データベースにアクティブなワークロード、または最近実行されたワークロードがある必要があります。  
   
  テーブルの詳細なレポートは、3 つのセクションで構成されています。  
   
@@ -97,16 +101,16 @@ caps.handback.revision: 39
   
  ストアド プロシージャをネイティブ コンパイル ストアド プロシージャに変換する方法の詳細については、「ネイティブ コンパイル アドバイザー」を参照してください。  
   
-## In-Memory OLTP 移行チェックリストの生成  
+## <a name="generating-in-memory-oltp-migration-checklists"></a>In-Memory OLTP 移行チェックリストの生成  
  移行チェックリストは、メモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャでサポートされていないすべてのテーブルまたはストアド プロシージャ機能を特定するものです。 メモリ最適化アドバイザーとネイティブ コンパイル アドバイザーは、単一のディスク ベース テーブルまたは解釈された T-SQL ストアド プロシージャに対してチェックリストを生成できます。 また、データベース内の複数のテーブルおよびストアド プロシージャに対して移行チェックリストを生成することもできます。  
   
- **[インメモリ OLTP 移行チェックリストの生成]** コマンドまたは PowerShell を使用して、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で移行チェックリストを生成できます。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [インメモリ OLTP 移行チェックリストの生成] **コマンドまたは PowerShell を使用して、** で移行チェックリストを生成できます。  
   
  **UI コマンドを使用して移行チェックリストを生成するには**  
   
-1.  **オブジェクト エクスプ ローラー**で、システム データベース以外のデータベースを右クリックし、**[タスク]** をクリックしてから、**[インメモリ OLTP 移行チェックリストの生成]** をクリックします。  
+1.  **オブジェクト エクスプ ローラー**で、システム データベース以外のデータベースを右クリックし、 **[タスク]**をクリックしてから、 **[インメモリ OLTP 移行チェックリストの生成]**をクリックします。  
   
-2.  [インメモリ OLTP 移行チェックリストの生成] ダイアログ ボックスで [次へ] をクリックし、**[チェックリスト生成オプションの構成]** ページに移動します。 このページで、次の操作を行います。  
+2.  [インメモリ OLTP 移行チェックリストの生成] ダイアログ ボックスで [次へ] をクリックし、 **[チェックリスト生成オプションの構成]** ページに移動します。 このページで、次の操作を行います。  
   
     1.  **[チェックリストの保存先]** ボックスに、フォルダー パスを入力します。  
   
@@ -169,7 +173,7 @@ caps.handback.revision: 39
   
     -   <object_name> の移行チェックリスト レポートが、folder_path2 で指定された場所にある唯一のレポートである。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [インメモリ OLTP への移行](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

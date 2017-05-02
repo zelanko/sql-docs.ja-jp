@@ -1,27 +1,31 @@
 ---
 title: "例 : ELEMENTS ディレクティブで XSINIL を指定する | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RAW モード, XSINIL の指定の例"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RAW mode, specifying XSINIL example
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e16ba9c8328bf170976ba60d3e789117a3a7e37e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 例 : ELEMENTS ディレクティブで XSINIL を指定する
-  次のクエリでは、`ELEMENTS` ディレクティブを指定し、クエリ結果から要素中心の XML を生成します。  
+# <a name="example-specifying-xsinil-with-the-elements-directive"></a>例 : ELEMENTS ディレクティブで XSINIL を指定する
+  次のクエリでは、 `ELEMENTS` ディレクティブを指定し、クエリ結果から要素中心の XML を生成します。  
   
-## 例  
+## <a name="example"></a>例  
   
 ```  
 USE AdventureWorks2012;  
@@ -73,7 +77,7 @@ FOR XML RAW, ELEMENTS XSINIL ;
 </row>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [FOR XML での RAW モードの使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

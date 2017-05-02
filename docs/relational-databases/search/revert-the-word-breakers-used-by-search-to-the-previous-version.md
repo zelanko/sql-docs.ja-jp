@@ -1,35 +1,39 @@
 ---
 title: "検索で使用するワード ブレーカーを以前のバージョンに戻す | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2549481c3e09e4b052e0eea40c993ccf191f38ba
+ms.lasthandoff: 04/11/2017
+
 ---
-# 検索で使用するワード ブレーカーを以前のバージョンに戻す
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  では、フルテキスト検索でサポートされているすべての言語 (韓国語を除く) 用のワード ブレーカーおよびステマーのバージョンがインストールされ、有効になります。 このトピックでは、これらのコンポーネントのこのバージョンを前のバージョンに切り替えたり、前のバージョンから新しいバージョンに切り替えたりする方法について説明します。  
+# <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>検索で使用するワード ブレーカーを以前のバージョンに戻す
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、フルテキスト検索でサポートされているすべての言語 (韓国語を除く) 用のワード ブレーカーおよびステマーのバージョンがインストールされ、有効になります。 このトピックでは、これらのコンポーネントのこのバージョンを前のバージョンに切り替えたり、前のバージョンから新しいバージョンに切り替えたりする方法について説明します。  
   
  このトピックでは、次の言語については説明しません。  
   
 -   **英語**。 英語のコンポーネントに戻す、または英語のコンポーネントを復元するには、「 [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)」を参照してください。  
   
--   **デンマーク語、ポーランド語、およびトルコ語**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のリリースに含まれていたデンマーク語、ポーランド語、およびトルコ語向けのサードパーティ製のワード ブレーカーは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] コンポーネントに置き換えられました。  
+-   **デンマーク語、ポーランド語、およびトルコ語**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のリリースに含まれていたデンマーク語、ポーランド語、およびトルコ語向けのサードパーティ製のワード ブレーカーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] コンポーネントに置き換えられました。  
   
 -   **チェコ語とギリシャ語**。 チェコ語とギリシャ語向けの新しいワード ブレーカーがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フルテキスト検索の以前のリリースでは、これらの 2 つの言語のサポートは含まれていません。  
   
 -   **韓国語**。 韓国語向けのワード ブレーカーとステマーは、このリリースではアップグレードされていません。  
   
- ワード ブレーカーとステマーの全般的な情報については、「[検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)」を参照してください。  
+ ワード ブレーカーとステマーの全般的な情報については、「 [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)」を参照してください。  
   
 ##  <a name="overview"></a> ワード ブレーカーとステマーの切り替えと復元の概要  
  ワード ブレーカーとステマーの切り替えと復元の手順は、言語によって異なります。 次の表は、以前のバージョンのコンポーネントに戻す場合に必要な 3 組の操作をまとめたものです。  
@@ -100,12 +104,12 @@ caps.handback.revision: 13
   
 2.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの NaturalLanguage6.dll を別の場所にバックアップします。  
   
-3.  以前のバージョンの NaturalLanguage6.dll を、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のインスタンスの Binn フォルダーから [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスの Binn フォルダーにコピーします。  
+3.  以前のバージョンの NaturalLanguage6.dll を、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のインスタンスの Binn フォルダーから [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスの Binn フォルダーにコピーします。  
   
     > [!WARNING]  
     >  この変更は、現在と以前のバージョンの両方で NaturalLanguage6.dll を使用するすべての言語に影響します。  
   
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動します。  
+4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
   
 ###  <a name="nl6nl6restore"></a> 現在のコンポーネントを復元するには  
   
@@ -116,7 +120,7 @@ caps.handback.revision: 13
     > [!WARNING]  
     >  この変更は、現在と以前のバージョンの両方で NaturalLanguage6.dll を使用するすべての言語に影響します。  
   
-3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動します。  
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
   
 ##  <a name="newnl6"></a> 以前のワード ブレーカーのファイル名のみが NaturalLanguage6.dll である言語  
  次の表に示す言語では、以前のワード ブレーカーのファイル名が新しいバージョンのファイル名とは異なります。 以前のファイル名は NaturalLanguage6.dll です。 以前のバージョンに戻すには、現在のバージョンの NaturalLanguage6.dll を同じファイルの以前のバージョンで上書きする必要があります。 また、以前または現在のバージョンのコンポーネントを指定するようにレジストリ エントリのセットを変更する必要があります。  
@@ -146,12 +150,12 @@ caps.handback.revision: 13
   
 3.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの NaturalLanguage6.dll を別の場所にバックアップします。  
   
-4.  以前のバージョンの NaturalLanguage6.dll を、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のインスタンスの Binn フォルダーから [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスの Binn フォルダーにコピーします。  
+4.  以前のバージョンの NaturalLanguage6.dll を、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のインスタンスの Binn フォルダーから [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスの Binn フォルダーにコピーします。  
   
     > [!WARNING]  
     >  この変更は、現在と以前のバージョンの両方で NaturalLanguage6.dll を使用するすべての言語に影響します。  
   
-5.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
+5.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID** ノードに移動します。  
   
 6.  次の手順に従って、選択した言語の以前のワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
@@ -163,7 +167,7 @@ caps.handback.revision: 13
   
     4.  選択した言語でステマーを使用する場合は、そのキー値の (既定) データを、表に示す以前のステマーのファイル名に更新します。  
   
-7.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** ノードに移動します。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
+7.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** ノードに移動します。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
   
 8.  **WBreakerClass** キー値を、表に示す現在のワード ブレーカーの値に更新します。  
   
@@ -180,7 +184,7 @@ caps.handback.revision: 13
     > [!WARNING]  
     >  この変更は、現在と以前のバージョンの両方で NaturalLanguage6.dll を使用するすべての言語に影響します。  
   
-3.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
+3.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID** ノードに移動します。  
   
 4.  次のキーが存在しない場合は、次の手順に従って、選択した言語の現在のワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
@@ -192,7 +196,7 @@ caps.handback.revision: 13
   
     4.  選択した言語でステマーを使用する場合は、そのキー値の (既定) データを、表に示す現在のステマーのファイル名に更新します。  
   
-5.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** ノードに移動します。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
+5.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** ノードに移動します。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
   
 6.  **WBreakerClass** キー値を、表に示す以前のワード ブレーカーの値に更新します。  
   
@@ -221,7 +225,7 @@ caps.handback.revision: 13
 |以前の CLSID|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |以前のファイル名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |現在の CLSID|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|現在のファイル名|MsWb7.dll|MsWb7.dll|  
+|現在のファイル名|MSWB7.dll|MSWB7.dll|  
   
  **日本語 (jpn)、LCID 1041**  
   
@@ -239,7 +243,7 @@ caps.handback.revision: 13
 |以前の CLSID|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |以前のファイル名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |現在の CLSID|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|現在のファイル名|MsWb7.dll|MsWb7.dll|  
+|現在のファイル名|MSWB7.dll|MSWB7.dll|  
   
  **ロシア語 (rus)、LCID 1049**  
   
@@ -248,7 +252,7 @@ caps.handback.revision: 13
 |以前の CLSID|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |以前のファイル名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |現在の CLSID|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|現在のファイル名|MsWb7.dll|MsWb7.dll|  
+|現在のファイル名|MSWB7.dll|MSWB7.dll|  
   
 ##  <a name="newnew"></a> 以前と現在のファイル名がどちらも NaturalLanguage6.dll でない言語  
  次の表に示す言語では、以前のワード ブレーカーとステマーのファイル名が新しいバージョンのファイル名とは異なります。 以前と現在のファイル名はどちらも NaturalLanguage6.dll ではありません。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のセットアップでは、現在と以前の両方のバージョンのコンポーネントを Binn フォルダーにコピーするため、ファイルを置き換える必要はありません。 ただし、以前または現在のバージョンのコンポーネントを指定するようにレジストリ エントリのセットを変更する必要があります。  
@@ -272,7 +276,7 @@ caps.handback.revision: 13
   
 1.  現在のバージョンのコンポーネントのファイルを Binn フォルダーから削除しないでください。  
   
-2.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
+2.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID** ノードに移動します。  
   
 3.  次の手順に従って、選択した言語の以前のワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
@@ -284,7 +288,7 @@ caps.handback.revision: 13
   
     4.  選択した言語でステマーを使用する場合は、そのキー値の (既定) データを、表に示す以前のステマーのファイル名に更新します。  
   
-4.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** ノードに移動します。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
+4.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** ノードに移動します。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
   
 5.  **WBreakerClass** キー値を、表に示す現在のワード ブレーカーの値に更新します。  
   
@@ -296,7 +300,7 @@ caps.handback.revision: 13
   
 1.  以前のバージョンのコンポーネントのファイルを Binn フォルダーから削除しないでください。  
   
-2.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
+2.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID** ノードに移動します。  
   
 3.  次のキーが存在しない場合は、次の手順に従って、選択した言語の現在のワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
@@ -308,7 +312,7 @@ caps.handback.revision: 13
   
     4.  選択した言語でステマーを使用する場合は、そのキー値の (既定) データを、表に示す現在のステマーのファイル名に更新します。  
   
-4.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** ノードに移動します。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
+4.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** ノードに移動します。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
   
 5.  **WBreakerClass** キー値を、表に示す以前のワード ブレーカーの値に更新します。  
   
@@ -375,8 +379,8 @@ caps.handback.revision: 13
 |現在の CLSID|E0831C90-BAB0-4ca5-B9BD-EA254B538DAC|  
 |現在のファイル名|MsWb70804.dll|  
   
-## 参照  
- [米国英語と英国英語に使用されるワード ブレーカーの変更](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
- [フルテキスト検索の動作の変更](../Topic/Behavior%20Changes%20to%20Full-Text%20Search.md)  
+## <a name="see-also"></a>参照  
+ [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [フルテキスト検索の動作の変更](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   

@@ -1,46 +1,50 @@
 ---
 title: "プラン ガイド | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TEMPLATE プラン ガイド"
-  - "SQL プラン ガイド"
-  - "OPTIMIZE FOR クエリ ヒント"
-  - "RECOMPILE クエリ ヒント"
-  - "OBJECT プラン ガイド"
-  - "プラン ガイド [SQL Server]、プラン ガイドについて"
-  - "OPTION 句"
-  - "プラン ガイド [SQL Server]"
-  - "USE PLAN クエリ ヒント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TEMPLATE plan guide
+- SQL plan guides
+- OPTIMIZE FOR query hint
+- RECOMPILE query hint
+- OBJECT plan guide
+- plan guides [SQL Server], about plan guides
+- OPTION clause
+- plan guides [SQL Server]
+- USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e3c1733219769d0a2d08996db9a25e3dd08a1e86
+ms.lasthandoff: 04/11/2017
+
 ---
-# プラン ガイド
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の実際のクエリのテキストを直接変更することが不可能な場合や望ましくない場合に、プラン ガイドを使用してクエリのパフォーマンスを最適化することができます。 プラン ガイドは、クエリ ヒントまたは固定クエリ プランをクエリにアタッチすることにより、クエリの最適化を促します。 プラン ガイドは、サード パーティ ベンダーが提供するデータベース アプリケーションのクエリの小さなサブセットで、期待どおりのパフォーマンスが得られない場合に役に立ちます。 プラン ガイドでは、最適化する Transact-SQL ステートメントのほか、使用するクエリ ヒントを含む OPTION 句またはクエリの最適化に使用する特定のクエリ プランのいずれかを指定します。 クエリが実行されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により Transact-SQL ステートメントがプラン ガイドと照合され、実行時にクエリに OPTION 句がアタッチされるか、指定されたクエリ プランが使用されます。  
+# <a name="plan-guides"></a>プラン ガイド
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の実際のクエリのテキストを直接変更することが不可能な場合や望ましくない場合に、プラン ガイドを使用してクエリのパフォーマンスを最適化することができます。 プラン ガイドは、クエリ ヒントまたは固定クエリ プランをクエリにアタッチすることにより、クエリの最適化を促します。 プラン ガイドは、サード パーティ ベンダーが提供するデータベース アプリケーションのクエリの小さなサブセットで、期待どおりのパフォーマンスが得られない場合に役に立ちます。 プラン ガイドでは、最適化する Transact-SQL ステートメントのほか、使用するクエリ ヒントを含む OPTION 句またはクエリの最適化に使用する特定のクエリ プランのいずれかを指定します。 クエリが実行されると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により Transact-SQL ステートメントがプラン ガイドと照合され、実行時にクエリに OPTION 句がアタッチされるか、指定されたクエリ プランが使用されます。  
   
  作成できるプラン ガイドの総数の上限は、使用可能なシステム リソースによって決まります。 ただし、プラン ガイドは、ミッションクリティカルなクエリのパフォーマンスの向上と安定化を図る目的にのみ使用する必要があります。 プラン ガイドの使用により配置済みのアプリケーションのクエリ負荷の多くが影響を受けることがないようにしてください。  
   
 > [!NOTE]  
->  プラン ガイドは、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2016 の各エディションでサポートされる機能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)」を参照してください。 プラン ガイドはどのエディションでも表示できます。 また、プラン ガイドを含むデータベースは、どのエディションに対してもアタッチできます。 アップグレード済みのバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にデータベースを復元またはアタッチした場合、プラン ガイドはまったく影響を受けません。  
+>  プラン ガイドは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。 プラン ガイドはどのエディションでも表示できます。 また、プラン ガイドを含むデータベースは、どのエディションに対してもアタッチできます。 アップグレード済みのバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にデータベースを復元またはアタッチした場合、プラン ガイドはまったく影響を受けません。  
   
-## プラン ガイドの種類  
+## <a name="types-of-plan-guides"></a>プラン ガイドの種類  
  次の種類のプラン ガイドを作成できます。  
   
  OBJECT プラン ガイド  
- OBJECT プラン ガイドでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ、スカラー ユーザー定義関数、複数ステートメント テーブル値ユーザー定義関数、および DML トリガーのコンテキストで実行されるクエリが照合されます。  
+ OBJECT プラン ガイドでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ、スカラー ユーザー定義関数、複数ステートメント テーブル値ユーザー定義関数、および DML トリガーのコンテキストで実行されるクエリが照合されます。  
   
- `@Country`_`region` パラメーターを受け取る次のストアド プロシージャが、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに対して配置されたデータベース アプリケーションに存在するとします。  
+ `@Country`_`region` パラメーターを受け取る次のストアド プロシージャが、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに対して配置されたデータベース アプリケーションに存在するとします。  
   
 ```  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
@@ -55,9 +59,9 @@ BEGIN
 END;  
 ```  
   
- このストアド プロシージャは `@Country`_`region = N'AU'` (オーストラリア) 用にコンパイルおよび最適化されているものとします。 ただし、オーストラリアでは比較的少数の販売注文しか発生していないため、多くの販売注文が発生している国のパラメーター値を使用してクエリを実行するとパフォーマンスが低下します。 販売注文数が最も多いのは米国なので、`@Country`\_`region = N'US'` 用に生成されたクエリ プランのパフォーマンスは、`@Country`\_`region` パラメーターにどの値を使用しても低下しません。  
+ このストアド プロシージャは `@Country`_`region = N'AU'` (オーストラリア) 用にコンパイルおよび最適化されているものとします。 ただし、オーストラリアでは比較的少数の販売注文しか発生していないため、多くの販売注文が発生している国のパラメーター値を使用してクエリを実行するとパフォーマンスが低下します。 販売注文数が最も多いのは米国なので、 `@Country`\_`region = N'US'` 用に生成されたクエリ プランのパフォーマンスは、 `@Country`\_`region` パラメーターにどの値を使用しても低下しません。  
   
- ストアド プロシージャを変更して `OPTIMIZE FOR` クエリ ヒントをクエリに追加することで、この問題に対処できます。 ただし、ストアド プロシージャは配置済みアプリケーション内にあるので、アプリケーション コードを直接変更することはできません。 代わりに、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに次のプラン ガイドを作成できます。  
+ ストアド プロシージャを変更して `OPTIMIZE FOR` クエリ ヒントをクエリに追加することで、この問題に対処できます。 ただし、ストアド プロシージャは配置済みアプリケーション内にあるので、アプリケーション コードを直接変更することはできません。 代わりに、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに次のプラン ガイドを作成できます。  
   
 ```  
 sp_create_plan_guide   
@@ -74,7 +78,7 @@ sp_create_plan_guide
 @hints = N'OPTION (OPTIMIZE FOR (@Country_region = N''US''))';  
 ```  
   
- `sp_create_plan_guide` ステートメントの指定したクエリが実行されると、そのクエリは最適化される前に変更され、`OPTIMIZE FOR (@Country = N''US'')` 句が含められます。  
+ `sp_create_plan_guide` ステートメントの指定したクエリが実行されると、そのクエリは最適化される前に変更され、 `OPTIMIZE FOR (@Country = N''US'')` 句が含められます。  
   
  SQL プラン ガイド  
  SQL プラン ガイドでは、データベース オブジェクトの一部ではないスタンドアロン [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとスタンドアロン バッチのコンテキストで実行されるクエリが照合されます。 また、SQL ベースのプラン ガイドを使用して、指定した形式にパラメーター化されたクエリを照合することもできます。 SQL プラン ガイドは、スタンドアロン [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとスタンドアロン バッチに適用されます。 これらのステートメントは、よく [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) システム ストアド プロシージャを使用してアプリケーションから送信されます。 たとえば、次のスタンドアロン バッチについて考えてみましょう。  
@@ -83,7 +87,7 @@ sp_create_plan_guide
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
- このクエリに並列実行プランが生成されないようにするには、次のプラン ガイドを作成し、`MAXDOP` パラメーターで `1` クエリ ヒントを `@hints` に設定します。  
+ このクエリに並列実行プランが生成されないようにするには、次のプラン ガイドを作成し、 `MAXDOP` パラメーターで `1` クエリ ヒントを `@hints` に設定します。  
   
 ```  
 sp_create_plan_guide   
@@ -96,7 +100,7 @@ sp_create_plan_guide
 ```  
   
 > [!IMPORTANT]  
->  `@module_or_batch` ステートメントの `@params` 引数と `sp_create_plan guide` 引数に指定する値は、実際のクエリで送信される、対応するテキストと一致している必要があります。 詳細については、「[sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)」および「[SQL Server Profiler を使用したプラン ガイドの作成とテスト](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)」を参照してください。  
+>  `@module_or_batch` ステートメントの `@params` 引数と `sp_create_plan guide` 引数に指定する値は、実際のクエリで送信される、対応するテキストと一致している必要があります。 詳細については、「 [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) ステートメントの [SQL Server Profiler を使用したプラン ガイドの作成とテスト](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)の実際のクエリのテキストを直接変更することが不可能な場合や望ましくない場合に、プラン ガイドを使用してクエリのパフォーマンスを最適化することができます。  
   
  PARAMETERIZATION データベース オプションを FORCED に設定するか、またはクエリのクラスをパラメーター化するように指定して TEMPLATE プラン ガイドを作成すると、同じ形式にパラメーター化されるクエリに SQL プラン ガイドを作成することもできます。  
   
@@ -109,32 +113,32 @@ sp_create_plan_guide
   
 -   PARAMETERIZATION データベース オプションを SIMPLE (既定値) に設定したが、特定のクラスのクエリについて強制パラメーター化が必要である場合。  
   
-## プラン ガイドの照合要件  
- プラン ガイドの範囲は、そのガイドが作成されているデータベースです。 したがって、クエリの実行時に使用されているデータベース内に存在するプラン ガイドだけをクエリと照合できます。 たとえば、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] が現在のデータベースの場合に次のクエリを実行するとします。  
+## <a name="plan-guide-matching-requirements"></a>プラン ガイドの照合要件  
+ プラン ガイドの範囲は、そのガイドが作成されているデータベースです。 したがって、クエリの実行時に使用されているデータベース内に存在するプラン ガイドだけをクエリと照合できます。 たとえば、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] が現在のデータベースの場合に次のクエリを実行するとします。  
   
  `SELECT FirstName, LastName FROM Person.Person;`  
   
- この場合、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内のプラン ガイドだけがこのクエリと照合されます。 ただし、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] が現在のデータベースの場合に、次のステートメントを実行すると結果が異なります。  
+ この場合、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内のプラン ガイドだけがこのクエリと照合されます。 ただし、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] が現在のデータベースの場合に、次のステートメントを実行すると結果が異なります。  
   
  `USE DB1;`  
   
  `SELECT FirstName, LastName FROM Person.Person;`  
   
- この場合、`DB1` のコンテキストでこのクエリが実行されているので、`DB1` 内のプラン ガイドがこのクエリと照合されます。  
+ この場合、 `DB1` のコンテキストでこのクエリが実行されているので、 `DB1`内のプラン ガイドがこのクエリと照合されます。  
   
- SQL ベースのプラン ガイドまたは TEMPLATE ベースのプラン ガイドでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、@module_or_batch 引数と @params 引数の値が文字単位で比較されてクエリと照合されます。 つまり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で受け取られる実際のバッチ テキストと厳密に同じテキストを指定する必要があります。  
+ SQL ベースのプラン ガイドまたは TEMPLATE ベースのプラン ガイドでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、引数 @module_or_batch と引数 @params の値が文字単位で比較されてクエリと照合されます。 つまり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で受け取られる実際のバッチ テキストと厳密に同じテキストを指定する必要があります。  
   
- @type = 'SQL' で、@module_or_batch が NULL に設定されている場合、@module_or_batch の値は @stmt の値に設定されます。 つまり、*statement_text* の値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信するときと同一の形式で、同じ文字で指定する必要があります。 この適合を容易にするために内部変換は実行されません。  
+ @type = 'SQL' で、@module_or_batch が NULL に設定されている場合、@module_or_batch の値は @stmt の値に設定されます。 つまり、 *statement_text* の値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に送信するときと同一の形式で、同じ文字で指定する必要があります。 この適合を容易にするために内部変換は実行されません。  
   
  通常の (SQL または OBJECT) プラン ガイドと TEMPLATE プラン ガイドの両方をステートメントに適用可能な場合、通常のプラン ガイドのみが使用されます。  
   
 > [!NOTE]  
 >  プラン ガイドの作成対象のステートメントを含むバッチには、USE *database* ステートメントを含めることはできません。  
   
-## プラン キャッシュに対するプラン ガイドの効果  
+## <a name="plan-guide-effect-on-the-plan-cache"></a>プラン キャッシュに対するプラン ガイドの効果  
  モジュールにプラン ガイドを作成すると、そのモジュールのクエリ プランがプラン キャッシュから削除されます。 バッチに OBJECT 型または SQL 型のプラン ガイドを作成すると、同じハッシュ値を持つバッチのクエリ プランが削除されます。 TEMPLATE 型のプラン ガイドを作成すると、単一ステートメントのバッチがデータベース内のプラン キャッシュからすべて削除されます。  
   
-## 関連タスク  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスク|トピック|  
 |----------|-----------|  
@@ -147,7 +151,7 @@ sp_create_plan_guide
 |プラン ガイドを作成およびテストするために SQL Server Profiler を使用する方法について説明します。|[SQL Server Profiler を使用したプラン ガイドの作成とテスト](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)|  
 |プラン ガイドを検証する方法について説明します。|[アップグレード後のプラン ガイドの検証](../../relational-databases/performance/validate-plan-guides-after-upgrade.md)|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
@@ -155,3 +159,4 @@ sp_create_plan_guide
  [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)  
   
   
+

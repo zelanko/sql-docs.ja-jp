@@ -1,28 +1,32 @@
 ---
 title: "トランザクションの持続性の制御 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-transaction-log"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "遅延持続性"
-  - "低速コミット"
+ms.custom: 
+ms.date: 09/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-transaction-log
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- delayed durability
+- Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 956e9f95b95aa0ecb99477714e70ac61d29c45e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# トランザクションの持続性の制御
+# <a name="control-transaction-durability"></a>トランザクションの持続性の制御
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] におけるトランザクションのコミットには、完全持続性、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定値、または遅延持続性 (低速コミットとも呼ばれます) が適用されます。    
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] におけるトランザクションのコミットには、完全持続性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定値、または遅延持続性 (低速コミットとも呼ばれます) が適用されます。    
     
  完全持続性トランザクションのコミットは同期的であり、トランザクションのログ レコードがディスクに書き込まれてからコミットが正常完了として報告され、制御がクライアントに返されます。 遅延持続性トランザクションのコミットは非同期的であり、トランザクションのログ レコードがディスクに書き込まれる前にコミットが正常完了として報告されます。 トランザクションを持続可能にするためには、トランザクション ログ エントリをディスクに書き込む必要があります。 遅延持続性トランザクションは、トランザクション ログ エントリがディスクにフラッシュされる時点で持続的になります。    
     
@@ -35,7 +39,7 @@ caps.handback.revision: 27
  完全持続性トランザクションは、クライアントに制御を返す前に、トランザクション ログをディスクに書き込みます。 次のような場合には、完全持続性トランザクションを使用する必要があります。    
     
 -   システムで、データの損失が許容されない場合。     
-    データの一部が失われるケースについては、「[データが失われるケース](../../relational-databases/logs/control-transaction-durability.md#bkmk_DataLoss)」のセクションを参照してください。    
+    データの一部が失われるケースについては、「 [データが失われるケース](../../relational-databases/logs/control-transaction-durability.md#bkmk_DataLoss) 」のセクションを参照してください。    
     
 -   ボトルネックの原因がトランザクション ログの書き込み待機時間ではない場合。    
     
@@ -82,13 +86,13 @@ caps.handback.revision: 27
     
         完全持続性トランザクションまたは sp_flush_log によって正常コミットされた場合、それより前にコミットされた遅延持続性トランザクションはすべて、持続可能な状態になっていることを保証されます。
         
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、すべてのトランザクションが遅延持続性であっても、ログ生成とタイミングの両方に基づいて、ディスクへのログのフラッシュを試みます。 通常、IO デバイスが稼働状態を保っている場合、これは成功します。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では持続性トランザクションおよび sp_flush_log 以外にハード持続性は保証されません。      
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、すべてのトランザクションが遅延持続性であっても、ログ生成とタイミングの両方に基づいて、ディスクへのログのフラッシュを試みます。 通常、IO デバイスが稼働状態を保っている場合、これは成功します。 ただし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では持続性トランザクションおよび sp_flush_log 以外にハード持続性は保証されません。      
     
   
     
 ## <a name="how-to-control-transaction-durability"></a>トランザクションの持続性を制御する方法    
     
-###  <a name="a-namebkmkdbcontrola-database-level-control"></a><a name="bkmk_DbControl"></a> データベース レベルの制御    
+###  <a name="bkmk_DbControl"></a> Database level control    
  DBA は次のステートメントを使用して、トランザクションの遅延持続性をデータベースに対してユーザーが使用できるかどうかを制御できます。 遅延持続性の設定は ALTER DATABASE で設定する必要があります。    
     
 ```tsql    
@@ -99,12 +103,12 @@ ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  [既定値] この設定では、コミット レベルの設定 (DELAYED_DURABILITY=[ON | OFF]) に関係なく、データベースに対してコミットされたトランザクションにはすべて完全持続性が適用されます。 ストアド プロシージャの変更および再コンパイルの必要はありません。 この設定により、遅延持続性によるリスクを負うことなく、すべてのデータを持続可能にできます。    
     
  **ALLOWED**    
- この設定では、各トランザクションの持続性がトランザクション レベル (DELAYED_DURABILITY = { *OFF* | ON }) で決定されます。 詳細については、「[ATOMIC ブロック レベルの制御 – ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl)」と「[COMMIT レベルの制御 – Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl)」を参照してください。    
+ この設定では、各トランザクションの持続性がトランザクション レベル (DELAYED_DURABILITY = { *OFF* | ON }) で決定されます。 詳細については、「 [ATOMIC ブロック レベルの制御 – ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl) 」と「 [COMMIT レベルの制御 – Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl) 」を参照してください。    
     
  **FORCED**    
  この設定では、データベースにコミットされるすべてのトランザクションに遅延持続性が適用されます。 トランザクションで完全持続性 (DELAYED_DURABILITY = OFF) が指定された場合も、指定がまったく行われていない場合も、遅延持続性トランザクションになります。 データベースに対してトランザクションの遅延持続性が役立ち、アプリケーション コードの変更を行わない場合に、この設定を使用できます。    
     
-###  <a name="a-namecompiledproccontrola-atomic-block-level-control-natively-compiled-stored-procedures"></a><a name="CompiledProcControl"></a> ATOMIC ブロック レベルの制御 – ネイティブ コンパイル ストアド プロシージャ    
+###  <a name="CompiledProcControl"></a> Atomic block level control – Natively Compiled Stored Procedures    
  次のコードは、ATOMIC ブロック内で使用します。    
     
 ```tsql    
@@ -112,10 +116,10 @@ DELAYED_DURABILITY = { OFF | ON }
 ```    
     
  **OFF**    
- [既定値] トランザクションに完全持続性が適用されます。ただし、データベース オプション DELAYED_DURABLITY = FORCED が有効であれば、コミットは非同期的であり、遅延持続性が適用されます。 詳細については、「[データベース レベルの制御](../../relational-databases/logs/control-transaction-durability.md#bkmk_DbControl)」を参照してください。    
+ [既定値] トランザクションに完全持続性が適用されます。ただし、データベース オプション DELAYED_DURABLITY = FORCED が有効であれば、コミットは非同期的であり、遅延持続性が適用されます。 詳細については、「 [データベース レベルの制御](../../relational-databases/logs/control-transaction-durability.md#bkmk_DbControl) 」を参照してください。    
     
  **ON**    
- トランザクションに遅延持続性が適用されます。ただし、データベース オプション DELAYED_DURABLITY = DISABLED が有効であれば、コミットは同期的であり、完全持続性が適用されます。  詳細については、「[データベース レベルの制御](../../relational-databases/logs/control-transaction-durability.md#bkmk_DbControl)」を参照してください。    
+ トランザクションに遅延持続性が適用されます。ただし、データベース オプション DELAYED_DURABLITY = DISABLED が有効であれば、コミットは同期的であり、完全持続性が適用されます。  詳細については、「 [データベース レベルの制御](../../relational-databases/logs/control-transaction-durability.md#bkmk_DbControl) 」を参照してください。    
     
  **コード例:**    
     
@@ -139,7 +143,7 @@ END
 |**DELAYED_DURABILITY = OFF**|ATOMIC ブロックで、新しい完全持続性トランザクションが開始されます。|ATOMIC ブロックで、既存のトランザクションにセーブポイントが作成され、新しいトランザクションが開始されます。|    
 |**DELAYED_DURABILITY = ON**|ATOMIC ブロックで、新しい遅延持続性トランザクションが開始されます。|ATOMIC ブロックで、既存のトランザクションにセーブポイントが作成され、新しいトランザクションが開始されます。|    
     
-###  <a name="a-namebkmkt-sqlcontrola-commit-level-control-includetsqltokentsqlmdmd"></a><a name="bkmk_T-SQLControl"></a> COMMIT レベルの制御 –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
+###  <a name="bkmk_T-SQLControl"></a> COMMIT level control –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  COMMIT 構文は、トランザクションの遅延持続性を適用できるように拡張されています。 DELAYED_DURABILITY がデータベース レベルで DISABLED または FORCED に設定されている場合 (上記を参照)、この COMMIT オプションは無視されます。    
     
 ```tsql    
@@ -148,10 +152,10 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ```    
     
  **OFF**    
- [既定値] トランザクションの COMMIT に完全持続性が適用されます。ただし、データベース オプション DELAYED_DURABLITY = FORCED が有効であれば、COMMIT は非同期的であり、遅延持続性が適用されます。 詳細については、「[データベース レベルの制御](../../relational-databases/logs/control-transaction-durability.md#bkmk_DbControl)」を参照してください。    
+ [既定値] トランザクションの COMMIT に完全持続性が適用されます。ただし、データベース オプション DELAYED_DURABLITY = FORCED が有効であれば、COMMIT は非同期的であり、遅延持続性が適用されます。 詳細については、「 [データベース レベルの制御](../../relational-databases/logs/control-transaction-durability.md#bkmk_DbControl) 」を参照してください。    
     
  **ON**    
- トランザクションの COMMIT に遅延持続性が適用されます。ただし、データベース オプション DELAYED_DURABLITY = DISABLED が有効であれば、COMMIT は同期的であり、完全持続性が適用されます。 詳細については、「[データベース レベルの制御](../../relational-databases/logs/control-transaction-durability.md#bkmk_DbControl)」を参照してください。    
+ トランザクションの COMMIT に遅延持続性が適用されます。ただし、データベース オプション DELAYED_DURABLITY = DISABLED が有効であれば、COMMIT は同期的であり、完全持続性が適用されます。 詳細については、「 [データベース レベルの制御](../../relational-databases/logs/control-transaction-durability.md#bkmk_DbControl) 」を参照してください。    
     
 ### <a name="summary-of-options-and-their-interactions"></a>オプションとその作用の概要    
  このテーブルは、データベース レベルの遅延持続性設定とコミット レベルの設定の相互作用をまとめたものです。 データベース レベルの設定はコミット レベルの設定よりも常に優先されます。    
@@ -168,9 +172,9 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
     
 -   同じデータベースを変更する完全持続性トランザクションを実行する。 これにより、それまでにコミット済みの遅延持続性トランザクションのログ レコードがすべて強制的にディスクにフラッシュされます。    
     
--   システム ストアド プロシージャ `sp_flush_log` を実行する。 このプロシージャにより、それまでにコミット済みの遅延持続性トランザクションのログ レコードがすべて強制的にディスクにフラッシュされます。 詳細については、「[sys.sp_flush_log &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql.md)」を参照してください。    
+-   システム ストアド プロシージャ `sp_flush_log`を実行する。 このプロシージャにより、それまでにコミット済みの遅延持続性トランザクションのログ レコードがすべて強制的にディスクにフラッシュされます。 詳細については、「[sys.sp_flush_log &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql.md)」を参照してください。    
     
-##  <a name="a-namebkmkothersqlfeaturesa-delayed-durability-and-other-includessnoversiontokenssnoversionmdmd-features"></a><a name="bkmk_OtherSQLFeatures"></a> 遅延持続性とその他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能    
+##  <a name="bkmk_OtherSQLFeatures"></a> 遅延持続性とその他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能    
  **変更の追跡と変更データ キャプチャ**    
  変更の追跡を有効にしたすべてのトランザクションには、完全持続可能性が適用されます。 変更の追跡が有効なテーブルに対して書き込み操作を行うトランザクションには、変更追跡プロパティがあります。 変更データ キャプチャ (CDC) を使用するデータベースの場合、遅延持続は使用できません。    
     
@@ -195,16 +199,17 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **ログ バックアップ**    
  バックアップに含まれるのは、持続可能な状態になったトランザクションのみです。    
     
-##  <a name="a-namebkmkdatalossa-when-can-i-lose-data"></a><a name="bkmk_DataLoss"></a> データが失われるケース    
+##  <a name="bkmk_DataLoss"></a> When can I lose data?    
  遅延持続性をテーブルに実装する場合、状況によってはデータが失われる可能性があることを理解する必要があります。 一切のデータ損失を許容できない場合は、テーブルに対して遅延持続性は使用しないでください。    
     
 ### <a name="catastrophic-events"></a>重大なイベント    
- サーバー クラッシュなどの重大なイベントが発生すると、ディスクに保存されていないすべてのコミット済みトランザクションのデータが失われます。 遅延持続性トランザクションは、データベース内のいずれかのテーブル (持続性のあるメモリ最適化テーブルまたはディスク ベース テーブル) に対して完全持続性トランザクションが実行されるか、`sp_flush_log` が呼び出されるたびに、ディスクに保存されます。 遅延持続性トランザクションを使用している場合、定期的に更新するか定期的に `sp_flush_log` を呼び出すことができる小さいテーブルをデータベース内に作成して、未処理のコミット済みトランザクションすべてを保存できます。 トランザクション ログもいっぱいになるたびにフラッシュされますが、それを予測するのは難しく、制御は不可能です。    
+ サーバー クラッシュなどの重大なイベントが発生すると、ディスクに保存されていないすべてのコミット済みトランザクションのデータが失われます。 遅延持続性トランザクションは、データベース内のいずれかのテーブル (持続性のあるメモリ最適化テーブルまたはディスク ベース テーブル) に対して完全持続性トランザクションが実行されるか、 `sp_flush_log` が呼び出されるたびに、ディスクに保存されます。 遅延持続性トランザクションを使用している場合、定期的に更新するか定期的に `sp_flush_log` を呼び出すことができる小さいテーブルをデータベース内に作成して、未処理のコミット済みトランザクションすべてを保存できます。 トランザクション ログもいっぱいになるたびにフラッシュされますが、それを予測するのは難しく、制御は不可能です。    
     
-### <a name="includessnoversiontokenssnoversionmdmd-shutdown-and-restart"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシャットダウンと再起動    
- 遅延持続性の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の予期しないシャットダウンと予期されたシャットダウン/再起動に違いはありません。 重大なイベントと同様に、データ損失に対する計画を立てる必要があります。 計画されたシャットダウン/再起動では、ディスクに書き込まれていない一部のトランザクションが最初にディスクに保存される場合がありますが、それを予期することはできません。 計画されているかどうかに関係なく、シャットダウン/再起動によって重大なイベントと同様にデータが失われるものとして計画してください。    
+### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシャットダウンと再起動    
+ 遅延持続性の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の予期しないシャットダウンと予期されたシャットダウン/再起動に違いはありません。 重大なイベントと同様に、データ損失に対する計画を立てる必要があります。 計画されたシャットダウン/再起動では、ディスクに書き込まれていない一部のトランザクションが最初にディスクに保存される場合がありますが、それを予期することはできません。 計画されているかどうかに関係なく、シャットダウン/再起動によって重大なイベントと同様にデータが失われるものとして計画してください。    
     
 ## <a name="see-also"></a>参照    
  [メモリ最適化テーブルでのトランザクション](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)    
     
   
+

@@ -1,45 +1,49 @@
 ---
 title: "SQL Server データベースのバックアップと復元 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "障害復旧 [SQL Server]、復元を参照 [SQL Server]"
-  - "バックアップ [SQL Server]"
-  - "復元、データベース [SQL Server]"
-  - "バックアップ [SQL Server]、バックアップを参照 [SQL Server]"
-  - "データベース [SQL Server]、復元"
-  - "バックアップ、データベース [SQL Server]"
-  - "復元 [SQL Server]、復元を参照 [SQL Server]"
-  - "障害復旧 [SQL Server]、バックアップを参照 [SQL Server]"
-  - "バックアップ [SQL Server]"
-  - "データベース エンジン [SQL Server]、バックアップ"
-  - "データベース [SQL Server]、バックアップ"
+ms.custom: 
+ms.date: 07/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- disaster recovery [SQL Server], see restoring [SQL Server]
+- backups [SQL Server]
+- restoring databases [SQL Server]
+- backup [SQL Server], see backing up [SQL Server]
+- databases [SQL Server], restoring
+- backing up databases [SQL Server]
+- restore [SQL Server], see restoring [SQL Server]
+- disaster recovery [SQL Server], see backing up [SQL Server]
+- backing up [SQL Server]
+- Database Engine [SQL Server], backups
+- databases [SQL Server], backups
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 caps.latest.revision: 91
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 91
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 79c3074c9a6e56434fd7241828f02966c31da521
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server データベースのバックアップと復元
+# <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server データベースのバックアップと復元
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをバックアップする利点、バックアップと復元に関する基本的な用語、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元の方法を紹介します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元のセキュリティに関する考慮事項についても取り上げます。 
+  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをバックアップする利点、バックアップと復元に関する基本的な用語、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元の方法を紹介します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元のセキュリティに関する考慮事項についても取り上げます。 
   
-> **ステップ バイ ステップの指示が必要な場合** このトピックでは**バックアップを実行する具体的な手順は説明されていません**。 バックアップの具体的な手順については、このページの最後にあるバックアップ タスク別および SSMS/T-SQL 別のリンク セクションを参照してください。  
+> **ステップ バイ ステップの指示が必要な場合** このトピックでは **バックアップを実行する具体的な手順は説明されていません**。 バックアップの具体的な手順については、このページの最後にあるバックアップ タスク別および SSMS/T-SQL 別のリンク セクションを参照してください。  
   
- SQL Server のバックアップと復元コンポーネントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納されている大切なデータを保護するうえで不可欠な保護対策を提供します。 致命的なデータ損失のリスクを最小限に抑えるには、データベースをバックアップして、データに対する変更内容を定期的に保存しておく必要があります。 バックアップと復元方法を十分に計画することで、さまざまな障害に起因するデータの損失からデータベースを保護できます。 バックアップを復元し、データベースを復旧するテストを実施することで、障害発生時に適切に対応できるようになります。  
+ SQL Server のバックアップと復元コンポーネントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納されている大切なデータを保護するうえで不可欠な保護対策を提供します。 致命的なデータ損失のリスクを最小限に抑えるには、データベースをバックアップして、データに対する変更内容を定期的に保存しておく必要があります。 バックアップと復元方法を十分に計画することで、さまざまな障害に起因するデータの損失からデータベースを保護できます。 バックアップを復元し、データベースを復旧するテストを実施することで、障害発生時に適切に対応できるようになります。  
   
- バックアップを格納するローカル ストレージに加えて、SQL Server では、バックアップおよび Windows Azure BLOB ストレージ サービスからの復元がサポートされます。 詳細については、「[Microsoft Azure Blob Storage サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 Microsoft Azure BLOB ストレージ サービスを使用して格納したデータベース ファイルの場合、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、Azure スナップショットを使用してほぼ瞬時にバックアップし、より迅速に復元するためのオプションが提供されます。 詳細については、「[Azure でのデータベース ファイルのファイル スナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。  
+ バックアップを格納するローカル ストレージに加えて、SQL Server では、バックアップおよび Windows Azure BLOB ストレージ サービスからの復元がサポートされます。 詳細については、「 [Microsoft Azure Blob Storage サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 Microsoft Azure BLOB ストレージ サービスを使用して格納したデータベース ファイルの場合、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、Azure スナップショットを使用してほぼ瞬時にバックアップし、より迅速に復元するためのオプションが提供されます。 詳細については、「 [Azure でのデータベース ファイルのファイル スナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。  
   
-##  バックアップする理由  
+##  <a name="why-back-up"></a>バックアップする理由  
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをバックアップしたり、既存のバックアップの復元テストを実行したりできるほか、離れた安全な場所にバックアップのコピーを保管することによって、致命的な損失からデータを保護することができます。 **バックアップは、データを保護できる唯一の方法です。**
 
      データベースの有効なバックアップがあれば、次に示したようなさまざまな障害からデータを復旧することができます。  
@@ -52,17 +56,17 @@ caps.handback.revision: 91
   
     -   自然災害。 Windows Azure BLOB ストレージ サービスへの SQL Server バックアップを使用すると、内部設置環境に影響する自然災害が発生した場合に使用できるように、内部設置の場所とは異なる地域にオフサイト バックアップを作成できます。  
   
--   また、データベースのバックアップは、サーバー間でのデータベースのコピー、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]やデータベース ミラーリングのセットアップ、およびアーカイブなど、日常的な管理作業を行ううえでも便利です。  
+-   また、データベースのバックアップは、サーバー間でのデータベースのコピー、 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] やデータベース ミラーリングのセットアップ、およびアーカイブなど、日常的な管理作業を行ううえでも便利です。  
   
-##  バックアップの用語集
- **バックアップ (back up) **(動詞)  
+##  <a name="glossary-of-backup-terms"></a>バックアップの用語集
+ **バックアップ (back up)** (動詞)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースまたはそのトランザクション ログからバックアップ デバイス (ディスクなど) にデータまたはログ レコードをコピーすることによって、データ バックアップまたはログ バックアップを作成します。  
   
  **バックアップ (backup)** (名詞)  
  障害の発生後、データの復元と復旧に使用できるデータのコピー。 データベースのバックアップを使用して、コピー (データベース) を新しい場所に復元することもできます。  
   
 **バックアップ デバイス (backup device)**  
- SQL Server のバックアップの書き込みと復元に使用されるディスクまたはテープ デバイス。 SQL Server のバックアップは、Windows Azure BLOB ストレージ サービスに書き込むことができます。バックアップ先とバックアップ ファイルの名前を指定するには **URL** 形式を使用します。 詳細については、「[Microsoft Azure Blob Storage サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。  
+ SQL Server のバックアップの書き込みと復元に使用されるディスクまたはテープ デバイス。 SQL Server のバックアップは、Windows Azure BLOB ストレージ サービスに書き込むことができます。バックアップ先とバックアップ ファイルの名前を指定するには **URL** 形式を使用します。 詳細については、「 [Microsoft Azure Blob Storage サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。  
   
 **バックアップ メディア (backup media)**  
  バックアップの書き込み先となる 1 つまたは複数のテープまたはディスク ファイル。  
@@ -80,7 +84,7 @@ caps.handback.revision: 91
  特定のデータベース (または一連のファイルやファイル グループ) 内のデータがすべて含まれ、さらに、データを復旧するために必要なログも含んだデータ バックアップ。  
   
 **ログ バックアップ (log backup)**  
- 前回のログ バックアップでバックアップされなかったすべてのログ レコードを含むトランザクション ログのバックアップ  (完全復旧モデル)。  
+ 前回のログ バックアップでバックアップされなかったすべてのログ レコードを含むトランザクション ログのバックアップ (完全復旧モデル)。  
   
 **復元 (recover)**  
  安定し一貫した状態にデータベースを戻すこと。  
@@ -94,11 +98,11 @@ caps.handback.revision: 91
 **復元 (restore)**  
  データを直近の状態まで戻す複数フェーズから成る処理。指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップからすべてのデータおよびログ ページを指定されたデータベースにコピーするフェーズと、バックアップにログとして記録されているすべてのトランザクションをロールフォワード (ログに記録されている変更を適用) するフェーズとで構成されます。  
   
- ##  バックアップと復元の方法  
+ ##  <a name="backup-and-restore-strategies"></a>バックアップと復元の方法  
  データのバックアップと復元は、特定の環境向けにカスタマイズし、使用可能なリソースと連動させる必要があります。 したがって、信頼性が確保された状態でバックアップと復元を使用して復旧するには、バックアップと復元のストラテジが必要です。 バックアップと復元のストラテジ設計が良ければ、特定のビジネス要件を考慮しながら、データの可用性を最大にし、データ損失を最小限に抑えることができます。  
   
-#### 重要: 
-**データベースとバックアップは異なるデバイスに置いてください。 そうしないと、データベースを置いているデバイスに障害が発生した場合、バックアップも使用できなくなります。 データとバックアップを異なるデバイスに置くと、バックアップの書き込みでもデータベースの運用でも I/O パフォーマンスが向上します。**  
+#### <a name="important"></a>重要: 
+**データベースとバックアップは異なるデバイスに置いてください。そうしないと、データベースを置いているデバイスに障害が発生した場合、バックアップも使用できなくなります。データとバックアップを異なるデバイスに置くと、バックアップの書き込みでもデータベースの運用でも I/O パフォーマンスが向上します。**  
   
  バックアップと復元のストラテジには、バックアップに関する部分と復元に関する部分があります。 ストラテジで扱うバックアップ部分では、バックアップの種類と頻度、バックアップに必要なハードウェアの性質と速度、バックアップのテスト方法、およびバックアップ メディアの保管場所と保管方法 (セキュリティ上の考慮事項も含む) を定義します。 ストラテジで扱う復元部分では、復元の実行責任者と、データベースの可用性とデータ損失の最小化という目標を達成するためにどのように復元を実行するのかを定義します。 バックアップと復元の手順をドキュメント化し、そのドキュメントを運用手順書に含めて保管することをお勧めします。  
   
@@ -110,12 +114,12 @@ caps.handback.revision: 91
   
 -   リソースについての制約。ハードウェア、スタッフ、バックアップ メディアを保管する場所、保管されたメディアの物理的なセキュリティなど。  
 
-### バックアップおよび復元に対する復旧モデルの影響  
- バックアップ操作および復元操作は、復旧モデルのコンテキストで発生します。 復旧モデルは、トランザクション ログの管理方法を制御するデータベース プロパティです。 また、データベースの復旧モデルでは、そのデータベースでサポートされるバックアップの種類および復元シナリオが判断されます。 通常、データベースは単純復旧モデルまたは完全復旧モデルを使用します。 完全復旧モデルを補完するには、一括操作を行う前に一括ログ復旧モデルに切り替えます。 これらの復旧モデルの概要とトランザクション ログの管理への影響については、「[トランザクション ログ (SQL Server)](https://msdn.microsoft.com/library/ms190925(SQL.130).aspx)」を参照してください。  
+### <a name="impact-of-the-recovery-model-on-backup-and-restore"></a>バックアップおよび復元に対する復旧モデルの影響  
+ バックアップ操作および復元操作は、復旧モデルのコンテキストで発生します。 復旧モデルは、トランザクション ログの管理方法を制御するデータベース プロパティです。 また、データベースの復旧モデルでは、そのデータベースでサポートされるバックアップの種類および復元シナリオが判断されます。 通常、データベースは単純復旧モデルまたは完全復旧モデルを使用します。 完全復旧モデルを補完するには、一括操作を行う前に一括ログ復旧モデルに切り替えます。 これらの復旧モデルの概要とトランザクション ログの管理への影響については、「 [トランザクション ログ (SQL Server)](https://msdn.microsoft.com/library/ms190925(SQL.130).aspx)」を参照してください。  
   
- データベースに対する復旧モデルの最善の選択は、ビジネス要件によって異なります。 トランザクション ログの管理を不要にし、バックアップと復元を簡単にするには、単純復旧モデルを使用します。 作業損失の可能性を最小に抑えるには、管理のオーバーヘッドが発生するという犠牲を払っても、完全復旧モデルを使用します。 バックアップおよび復元に対する復旧モデルの影響については、「[バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)」を参照してください。  
+ データベースに対する復旧モデルの最善の選択は、ビジネス要件によって異なります。 トランザクション ログの管理を不要にし、バックアップと復元を簡単にするには、単純復旧モデルを使用します。 作業損失の可能性を最小に抑えるには、管理のオーバーヘッドが発生するという犠牲を払っても、完全復旧モデルを使用します。 バックアップおよび復元に対する復旧モデルの影響については、「 [バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)」を参照してください。  
   
-### バックアップ戦略を設計する  
+### <a name="design-your-backup-strategy"></a>バックアップ戦略を設計する  
  特定のデータベースに対するビジネス要件を満たす復旧モデルを選択した後、対応するバックアップ ストラテジを計画して実装する必要があります。 最適なバックアップ ストラテジはさまざまな要因に依存しますが、その中でも以下の要因が特に重要です。  
   
 -   アプリケーションがデータベースにアクセスする必要があるのは 1 日に何時間か。  
@@ -136,29 +140,29 @@ caps.handback.revision: 91
   
 -   データベースの完全バックアップにはどの程度のディスク領域が必要か。  
   
- ### データベースの完全バックアップのサイズの推計  
+ ### <a name="estimate-the-size-of-a-full-database-backup"></a>データベースの完全バックアップのサイズの推計  
  バックアップと復元のストラテジを実装する前に、データベースの完全バックアップで使用するディスク領域を推計する必要があります。 バックアップ操作では、データベース内のデータをバックアップ ファイルにコピーします。 バックアップにはデータベース内の実際のデータだけが入っており、未使用の領域は入っていません。 そのため、通常、バックアップはデータベースそのものよりも小さくなります。 データベースの完全バックアップのサイズは、**sp_spaceused** システム ストアド プロシージャを使用して推計することができます。 詳細については、「[sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)」を参照してください。  
   
-### バックアップのスケジュール  
+### <a name="schedule-backups"></a>バックアップのスケジュール  
  バックアップの実行によって、実行中のトランザクションが受ける影響はわずかです。したがってバックアップは、通常の運用時に実行できます。 実稼働ワークロードへの影響は最小限にとどめて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを実行できます。  
    
->  バックアップ中の同時実行の制限については、「[バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)」を参照してください。  
+>  バックアップ中の同時実行の制限については、「 [バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)」を参照してください。  
   
  必要なバックアップの種類、および各種類のバックアップを実行する必要のある頻度を決定した後、データベースに対するデータベース メンテナンス プランの一部として、定期的なバックアップをスケジュールすることをお勧めします。 メンテナンス プランと、データベース バックアップおよびログ バックアップ用のメンテナンス プランの作成方法については、「 [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)」を参照してください。  
   
-### バックアップのテスト  
+### <a name="test-your-backups"></a>バックアップのテスト  
  バックアップをテストするまでは、復元ストラテジが完成したことにはなりません。 データベースのコピーをテスト システムに復元することで、各データベースに対するバックアップ ストラテジを十分にテストすることが重要です。 使用するすべての種類のバックアップの復元をテストする必要があります。  
   
  データベースごとに操作マニュアルを用意しておくことをお勧めします。 この操作マニュアルには、バックアップの場所、バックアップ デバイス名 (ある場合)、およびテスト バックアップの復元に必要な時間を記載しておきます。  
   
-## バックアップ タスクの詳細  
+## <a name="more-about-backup-tasks"></a>バックアップ タスクの詳細  
 -   [メンテナンス プランの作成](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   
--   [ジョブの作成](../../ssms/agent/create-a-job.md)  
+-   [ジョブの作成](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
   
--   [ジョブのスケジュール設定](../../ssms/agent/schedule-a-job.md)  
+-   [ジョブのスケジュール設定](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)  
   
-## バックアップ デバイスとバックアップ メディアの操作  
+## <a name="working-with-backup-devices-and-backup-media"></a>バックアップ デバイスとバックアップ メディアの操作  
 -   [ディスク ファイルの論理バックアップ デバイスの定義 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
 -   [テープ ドライブの論理バックアップ デバイスの定義 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
@@ -177,10 +181,10 @@ caps.handback.revision: 91
   
 -   [デバイスからのバックアップ復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
-## バックアップの作成  
-**注:** 部分バックアップまたはコピーのみのバックアップでは、[!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) ステートメントにそれぞれ PARTIAL オプションまたは COPY_ONLY オプションを使う必要があります。  
+## <a name="creating-backups"></a>バックアップの作成  
+**注:** 部分バックアップまたはコピーのみのバックアップでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) ステートメントにそれぞれ PARTIAL オプションまたは COPY_ONLY オプションを使う必要があります。  
   
- ### SSMS の使用   
+ ### <a name="using-ssms"></a>SSMS の使用   
 -   [データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
 -   [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
@@ -189,17 +193,17 @@ caps.handback.revision: 91
   
 -   [データベースの差分バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   
- ### T-SQL の使用  
+ ### <a name="using-t-sql"></a>T-SQL の使用  
 -   [リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
 -   [データベースが破損したときのトランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   
 -   [バックアップ中または復元中にバックアップ チェックサムを有効または無効にする &#40;SQL Server&#41;](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   
--   [バックアップまたは復元の操作をエラー発生後に続行するか停止するかを指定する &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify if backup or restore continues or stops after error.md)  
+-   [バックアップまたは復元の操作をエラー発生後に続行するか停止するかを指定する &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
-## データのバックアップを復元する 
-### SSMS の使用 
+## <a name="restore-data-backups"></a>データのバックアップを復元する 
+### <a name="using-ssms"></a>SSMS の使用 
 -   [SSMS を使用したデータベース バックアップの復元](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
 -   [データベースを新しい場所に復元する &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
@@ -208,10 +212,10 @@ caps.handback.revision: 91
   
 -   [ファイルおよびファイル グループの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   
-### T-SQL の使用
+### <a name="using-t-sql"></a>T-SQL の使用
 -   [単純復旧モデルでのデータベース バックアップの復元 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
--   [完全復旧モデルで障害発生時点までデータベースを復元する方法 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [完全復旧モデルで障害発生時点までデータベースを復元する方法 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [既存のファイルにファイルとファイル グループを復元する &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-over-existing-files-sql-server.md)  
   
@@ -219,26 +223,26 @@ caps.handback.revision: 91
   
 -   [master データベースの復元 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md)  
 
-## トランザクション ログを復元する (完全復旧モデル)
-### SSMS の使用  
+## <a name="restore-transaction-logs-full-recovery-model"></a>トランザクション ログを復元する (完全復旧モデル)
+### <a name="using-ssms"></a>SSMS の使用  
 -   [マークされたトランザクションへのデータベースの復元 &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
 -   [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
 -   [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
- ### T-SQL の使用 
+ ### <a name="using-t-sql"></a>T-SQL の使用 
 -   [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
  
 -   [中断された復元操作の再開 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
   
 -   [データを復元しないデータベースの復旧 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)  
  
-## 詳細情報とリソース
+## <a name="more-information-and-resources"></a>詳細情報とリソース
  [バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [復元と復旧の概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Analysis Services データベースのバックアップと復元](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)   
  [フルテキスト カタログとフルテキスト インデックスのバックアップおよび復元](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [レプリケートされたデータベースのバックアップと復元](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
@@ -247,3 +251,4 @@ caps.handback.revision: 91
  [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   
   
+

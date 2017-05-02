@@ -1,30 +1,34 @@
 ---
 title: "SQL Server PowerShell プロバイダーでのインスタンスの指定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9373de68-fd43-45f2-b9a6-149c96610aeb
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 514ea6e1125e1563f9afe16db4db87e5f17ee6c2
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server PowerShell プロバイダーでのインスタンスの指定
+# <a name="specify-instances-in-the-sql-server-powershell-provider"></a>SQL Server PowerShell プロバイダーでのインスタンスの指定
   SQL Server PowerShell プロバイダーに指定するパスでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスと、それが実行されているコンピューターを示す必要があります。 コンピューターおよびインスタンスを指定する構文は、SQL Server 識別子と Windows PowerShell パスの両方の規則に準拠している必要があります。  
   
-1.  **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)  
+1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
   
-2.  **インスタンスの指定方法:**  [使用例](#Examples)  
+2.  **To specify an instance:**  [Examples](#Examples)  
   
-## はじめに  
- SQL Server プロバイダーのパスで SQLSERVER:\SQL に続く最初のノードは、たとえば次のような、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスが実行されているコンピューターの名前です。  
+## <a name="before-you-begin"></a>はじめに  
+ SQL Server プロバイダーのパスで SQLSERVER:\SQL に続く最初のノードは、たとえば次のような、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスが実行されているコンピューターの名前です。  
   
 ```  
 SQLSERVER:\SQL\MyComputer  
@@ -32,7 +36,7 @@ SQLSERVER:\SQL\MyComputer
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスと同じコンピューター上で Windows PowerShell を実行している場合は、コンピューター名の代わりに localhost または (local) を使用できます。 localhost または (local) が使用されたスクリプトは、異なるコンピューター名を反映するための変更を加えることなく、すべてのコンピューター上で実行できます。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]の実行可能プログラムの複数のインスタンスを、同じコンピューターで実行できます。 SQL Server プロバイダーのパスでコンピューター名に続くノードは、たとえば次のように、インスタンスを識別します。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] の実行可能プログラムの複数のインスタンスを、同じコンピューターで実行できます。 SQL Server プロバイダーのパスでコンピューター名に続くノードは、たとえば次のように、インスタンスを識別します。  
   
 ```  
 SQLSERVER:\SQL\MyComputer\MyInstance  
@@ -74,7 +78,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT
     Set-Location SQLSERVER:\SQL\%28local%29\DEFAULT  
     ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [PowerShell での SQL Server 識別子](../../relational-databases/scripting/sql-server-identifiers-in-powershell.md)   
  [SQL Server PowerShell プロバイダー](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  

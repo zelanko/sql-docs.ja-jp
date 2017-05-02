@@ -1,24 +1,28 @@
 ---
 title: "SQL Server、FileTable オブジェクト | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:FileTable"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:FileTable
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 caps.latest.revision: 3
-author: "dagiro"
-ms.author: "v-dagir"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: dagiro
+ms.author: v-dagir
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 321ed2db9195a957f10982fe07f1da7b8cb01c25
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server、FileTable オブジェクト
+# <a name="sql-server-filetable-object"></a>SQL Server、FileTable オブジェクト
 **SQLServer:FileTable** パフォーマンス オブジェクトは、FileTable および非トランザクション アクセスに関連する統計カウンターを提供します。
 
 次の表では、SQL Server **FileTable** パフォーマンス オブジェクトについて説明します。
@@ -55,5 +59,6 @@ caps.handback.revision: 3
 |**Time to get FileTable item BASE**|内部使用のみです。|
 |**Time update FileTable item BASE**|内部使用のみです。| 
  
-## 参照  
+## <a name="see-also"></a>参照  
 [リソースの利用状況の監視 (システム モニター)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)
+

@@ -1,23 +1,27 @@
 ---
 title: "メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャの作成 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cf291b900f61590446776dab273d2fcc14509234
+ms.lasthandoff: 04/11/2017
+
 ---
-# メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャの作成
+# <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャの作成
   このトピックでは、インメモリ OLTP の構文を紹介する例を示します。  
   
  アプリケーションでインメモリ OLTP を使用するには、次のタスクを実行しておく必要があります。  
@@ -26,13 +30,13 @@ caps.handback.revision: 35
   
 -   メモリ最適化テーブルおよびインデックスを作成する。 詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。  
   
--   データをメモリ最適化テーブルに読み込み、データの読み込み後およびコンパイル済みのストアド プロシージャの作成前に統計を更新します。 詳細については、「[メモリ最適化テーブルの統計](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)」を参照してください。  
+-   データをメモリ最適化テーブルに読み込み、データの読み込み後およびコンパイル済みのストアド プロシージャの作成前に統計を更新します。 詳細については、「 [メモリ最適化テーブルの統計](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)」を参照してください。  
   
 -   メモリ最適化テーブルのデータにアクセスするために、ネイティブ コンパイル ストアド プロシージャを作成する。 詳細については、「[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)」を参照してください。 メモリ最適化テーブルのデータへのアクセスには、従来の解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] も使用できます。  
   
 -   必要に応じて、既存のテーブルからメモリ最適化テーブルにデータを移行する。  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してメモリ最適化テーブルを作成する方法の詳細については、「[SQL Server Management Studio によるインメモリ OLTP のサポート](../../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md)」を参照してください。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してメモリ最適化テーブルを作成する方法の詳細については、「 [SQL Server Management Studio によるインメモリ OLTP のサポート](../../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md)」を参照してください。  
   
  次のコード サンプルでは、c:\Data というディレクトリが必要です。  
   
@@ -233,7 +237,7 @@ ORDER BY so.so_id, sod.lineitem_id
   
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [インメモリ OLTP のコード サンプル](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   

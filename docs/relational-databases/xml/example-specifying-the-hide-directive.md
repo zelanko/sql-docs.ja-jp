@@ -1,24 +1,28 @@
 ---
 title: "例 : HIDE ディレクティブの指定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "HIDE ディレクティブ"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- HIDE directive
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f76513d7db83b1b24f3fd5964689c47f5b96133b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 例 : HIDE ディレクティブの指定
+# <a name="example-specifying-the-hide-directive"></a>例 : HIDE ディレクティブの指定
   この例では、 **HIDE** ディレクティブの使用方法を示します。 クエリから返されたユニバーサル テーブル内の行を並べ替える目的でクエリから属性を返し、最終的な結果の XML ドキュメントにはその属性を含めない場合に、このディレクティブが役立ちます。  
   
  このクエリでは、次の XML を生成します。  
@@ -35,7 +39,7 @@ caps.handback.revision: 11
   
  このクエリでは、求める XML を生成しています。 Tag 列に値 1 と 2 を持つ 2 つの列グループが識別されます。  
   
- このクエリでは、xml データ型の [query()](../../t-sql/xml/query-method-xml-data-type.md) メソッド (**xml** データ型) を使用し、**xml** 型の CatalogDescription 列に対するクエリを実行して、概要情報を取得します。 また、このクエリでは、**xml** データ型の [value() メソッド (xml データ型)](../../t-sql/xml/value-method-xml-data-type.md) を使用して、CatalogDescription 列から ProductModelID 値を取得します。 この値は、結果の行セットを並べ替えるために必要ですが、結果の XML ドキュメントでは必要ありません。 そのため、列名 `[Summary!2!ProductModelID!HIDE]`には、 **HIDE** ディレクティブが含まれています。 この列が SELECT ステートメントに含まれていなければ、 `[ProductModel!1!ProdModelID]` xml `[Summary!2!SummaryDescription]` 型の **列と** 列で行セットを並べ替える必要がありますが、ORDER BY 句では **xml** 型を使用することはできません。 このため、 `[Summary!2!ProductModelID!HIDE]` 列を追加し、これを ORDER BY 句で指定しています。  
+ このクエリでは、xml データ型の [query()](../../t-sql/xml/query-method-xml-data-type.md) メソッド ( **xml** データ型) を使用し、 **xml** 型の CatalogDescription 列に対するクエリを実行して、概要情報を取得します。 また、このクエリでは、 [xml](../../t-sql/xml/value-method-xml-data-type.md) データ型の **value() メソッド (xml データ型)** を使用して、CatalogDescription 列から ProductModelID 値を取得します。 この値は、結果の行セットを並べ替えるために必要ですが、結果の XML ドキュメントでは必要ありません。 そのため、列名 `[Summary!2!ProductModelID!HIDE]`には、 **HIDE** ディレクティブが含まれています。 この列が SELECT ステートメントに含まれていなければ、 `[ProductModel!1!ProdModelID]` xml `[Summary!2!SummaryDescription]` 型の **列と** 列で行セットを並べ替える必要がありますが、ORDER BY 句では **xml** 型を使用することはできません。 このため、 `[Summary!2!ProductModelID!HIDE]` 列を追加し、これを ORDER BY 句で指定しています。  
   
 ```  
 USE AdventureWorks2012;  
@@ -80,7 +84,7 @@ go
 </ProductModel>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [FOR XML での EXPLICIT モードの使用](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

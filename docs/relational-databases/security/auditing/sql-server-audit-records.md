@@ -1,33 +1,37 @@
 ---
 title: "SQL Server 監査レコード | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "監査レコード [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- audit records [SQL Server]
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 21e4ed91a72a564ec39632899f81131fa4e7caf5
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 監査レコード
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査機能を使用すると、サーバー レベルおよびデータベース レベルのイベントのグループおよびイベントを監査することができます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」をご覧ください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]」を参照してください。  
+# <a name="sql-server-audit-records"></a>SQL Server 監査レコード
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査機能を使用すると、サーバー レベルおよびデータベース レベルのイベントのグループおよびイベントを監査することができます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]」をご覧ください。  
   
- 監査は、監査 *対象* に記録される 0 個以上の監査アクション項目で構成されます。 監査ターゲットには、バイナリ ファイル、Windows アプリケーション イベント ログ、または Windows セキュリティ イベント ログを使用できます。 ターゲットに送信されるレコードに含まれる可能性がある要素を次の表に示します。  
+ 監査は、監査 *対象*に記録される 0 個以上の監査アクション項目で構成されます。 監査ターゲットには、バイナリ ファイル、Windows アプリケーション イベント ログ、または Windows セキュリティ イベント ログを使用できます。 ターゲットに送信されるレコードに含まれる可能性がある要素を次の表に示します。  
   
 |列名|説明|型|常に使用可能かどうか|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|監査可能なアクションが発生した日付/時刻。|**datetime2**|はい|  
 |**sequence_no**|大きすぎて監査の書き込みバッファーに収まらなかった 1 つの監査レコード内のレコードの順序を追跡します。|**int**|はい|  
-|**action_id**|アクションの ID。<br /><br /> ヒント: **action_id** を述語として使用するには、文字列から数値に変換する必要があります。 詳細については、「[Filter SQL Server Audit on action_id / class_type predicate (action_id/class_type 述語での SQL Server 監査のフィルター選択) ](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)」を参照してください。|**varchar (4)**|はい|  
+|**action_id**|アクションの ID。<br /><br /> ヒント: **action_id** を述語として使用するには、文字列から数値に変換する必要があります。 詳細については、「 [Filter SQL Server Audit on action_id / class_type predicate (action_id/class_type 述語での SQL Server 監査のフィルター選択)](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)」を参照してください。|**varchar (4)**|はい|  
 |**succeeded**|イベントを発生させたアクションが成功したかどうかを示します。|**bit** – 1 = 成功、0 = 失敗|はい|  
 |**permission_bitmask**|権限の許可、拒否、または取り消しを示します (該当する場合)。|**bigint**|いいえ|  
 |**is_column_permission**|列レベル権限を示すフラグ。|**bit** – 1 = True、0 = False|いいえ|  
@@ -52,10 +56,10 @@ caps.handback.revision: 19
 |**statement**|TSQL ステートメント (あれば)|**nvarchar (4000)**|いいえ|  
 |**additional_information**|XML として格納されるイベントに関する追加情報。|**nvarchar (4000)**|いいえ|  
   
-## 解説  
+## <a name="remarks"></a>解説  
  アクションに該当しないために列の値が設定されない場合もあります。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査は、監査レコードの文字フィールドに 4,000 文字のデータを格納します。 監査可能なアクションから返される **additional_information** と **statement** の値が 4,000 文字を超えていた場合は、そのデータを記録するために、**sequence_no** 列を使用して 1 つの監査アクションの監査レポートに複数のレコードが書き込まれます。 このプロセスは次のとおりです。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査は、監査レコードの文字フィールドに 4,000 文字のデータを格納します。 監査可能なアクションから返される **additional_information** と **statement** の値が 4,000 文字を超えていた場合は、そのデータを記録するために、 **sequence_no** 列を使用して 1 つの監査アクションの監査レポートに複数のレコードが書き込まれます。 このプロセスは次のとおりです。  
   
 -   **statement** 列が 4,000 文字に分割されます。  
   
@@ -65,9 +69,9 @@ caps.handback.revision: 19
   
 -   すべてのデータが記録されるまでこのプロセスが繰り返されます。  
   
- このデータに接続するには、**sequence_no** の値を使用して行を順番に読み取ります。アクションを識別するには、**event_Time**、**action_id**、および **session_id** の各列を使用します。  
+ このデータに接続するには、 **sequence_no** の値を使用して行を順番に読み取ります。アクションを識別するには、 **event_Time**、 **action_id** 、および **session_id** の各列を使用します。  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-server-audit-transact-sql.md)  
   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-audit-transact-sql.md)  

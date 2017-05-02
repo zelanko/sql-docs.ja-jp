@@ -1,24 +1,28 @@
 ---
 title: "[パブリケーションのプロパティ - &lt;パブリケーション&gt;] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "[パブリケーションのプロパティ] ダイアログ ボックス"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Publication Properties dialog box
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31f80253fe7e0fa562e67c9bbf8d685fa72ec37d
+ms.lasthandoff: 04/11/2017
+
 ---
-# [パブリケーションのプロパティ - &lt;パブリケーション&gt;]
+# <a name="publication-properties----ltpublicationgt"></a>[パブリケーションのプロパティ - &lt;パブリケーション&gt;]
   ここでは、 **[パブリケーションのプロパティ]** ダイアログ ボックスのすべてのページについて紹介します。  
   
 -   [[パブリケーションのプロパティ]、[全般]](../../relational-databases/replication/publication-properties-general.md)  
@@ -37,12 +41,12 @@ caps.handback.revision: 19
   
 -   [[パブリケーションのプロパティ]、[エージェント セキュリティ]](../../relational-databases/replication/publication-properties-agent-security.md)  
   
--   [[パブリケーションのプロパティ], [データ パーティション]](../../relational-databases/replication/publication-properties-data-partitions.md)  
+-   [[パブリケーションのプロパティ]、[データ パーティション]](../../relational-databases/replication/publication-properties-data-partitions.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [プロパティのリファレンスと #40 です。レプリケーションと #41 です。](../../relational-databases/replication/properties-reference-replication.md)  
+ [プロパティ リファレンス &#40;レプリケーション&#41;](../../relational-databases/replication/properties-reference-replication.md)  
   
   

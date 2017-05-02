@@ -1,42 +1,46 @@
 ---
 title: "トレースの作成 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "トレース [SQL Server], 例"
-  - "トレース [SQL Server], 作成"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], example
+- traces [SQL Server], creating
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b765401c07820ed80a92a2393544253106abb512
+ms.lasthandoff: 04/11/2017
+
 ---
-# トレースの作成 (Transact-SQL)
+# <a name="create-a-trace-transact-sql"></a>トレースの作成 (Transact-SQL)
   このトピックでは、ストアド プロシージャを使用してトレースを作成する方法について説明します。  
   
-### トレースを作成するには  
+### <a name="to-create-a-trace"></a>トレースを作成するには  
   
 1.  必要なパラメーターを指定して **sp_trace_create** を実行し、新しいトレースを作成します。 新しいトレースは停止状態 (*status* の値が **0**) になります。  
   
 2.  必要なパラメーターを指定して **sp_trace_setevent** を実行し、トレースするイベントおよび列を選択します。  
   
-3.  必要に応じて、**sp_trace_setfilter** を実行し、フィルターまたはフィルターの組み合わせを設定します。  
+3.  必要に応じて、 **sp_trace_setfilter** を実行し、フィルターまたはフィルターの組み合わせを設定します。  
   
      **sp_trace_setevent** と **sp_trace_setfilter** は、停止状態の既存のトレースに対してのみ実行できます。  
   
     > [!IMPORTANT]  
     >  通常のストアド プロシージャとは異なり、すべての SQL Server Profiler ストアド プロシージャ (**sp_trace_*xx***) のパラメーターでは、データ型が厳密に定義されており、データ型の自動変換はサポートされていません。 これらのパラメーターが、引数の説明で指定されている正しいデータ型で呼び出されないと、このストアド プロシージャではエラーが返されます。  
   
-## 例  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用してトレースを作成するコードを次に示します。 トレースの作成、トレース ファイルの設定、およびトレースの停止の、3 つのセクションで構成されています。 トレースするイベントを追加して、トレースをカスタマイズしてください。 イベントと列の一覧については、「[sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)」を参照してください。  
+## <a name="example"></a>例  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してトレースを作成するコードを次に示します。 トレースの作成、トレース ファイルの設定、およびトレースの停止の、3 つのセクションで構成されています。 トレースするイベントを追加して、トレースをカスタマイズしてください。 イベントと列の一覧については、「 [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)を使用してトレースを作成するコードを次に示します。  
   
  次のコードでは、トレースを作成してイベントを追加し、トレースを開始します。  
   
@@ -70,7 +74,7 @@ GO
   
 ```  
   
-## 例  
+## <a name="example"></a>例  
  トレースが作成および開始されたので、次のコードを実行して、トレースにアクティビティを設定します。  
   
 ```  
@@ -81,7 +85,7 @@ GO
   
 ```  
   
-## 例  
+## <a name="example"></a>例  
  トレースは、いつでも停止および再開できます。 この例では次のコードを実行して、トレースを停止し、閉じ、トレース定義を削除します。  
   
 ```  
@@ -97,10 +101,10 @@ EXEC sp_trace_setstatus @TraceID, 2
   
 ```  
   
-## 例  
- トレース ファイルを調べるには、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して SampleTrace.trc ファイルを開きます。  
+## <a name="example"></a>例  
+ トレース ファイルを調べるには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して SampleTrace.trc ファイルを開きます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server Profiler のストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

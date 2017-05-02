@@ -1,31 +1,35 @@
 ---
 title: "[オペレーターへの通知タスク] (メンテナンス プラン) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.notifyoperator.f1"
-helpviewer_keywords: 
-  - "[オペレーターへの通知タスク] ダイアログ ボックス"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.notifyoperator.f1
+helpviewer_keywords:
+- Notify Operator Task dialog box
 ms.assetid: 39c0797c-ad2b-4591-85c9-a23a7f902895
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d42a033466178830694ea4bd7f43aee8d781e224
+ms.lasthandoff: 04/11/2017
+
 ---
-# [オペレーターへの通知タスク] (メンテナンス プラン)
+# <a name="notify-operator-task-maintenance-plan"></a>[オペレーターへの通知タスク] (メンテナンス プラン)
   **[オペレーターへの通知タスク]** ダイアログ ボックスを使用すると、このメンテナンス プランに自動通知を追加できます。 このタスクを使用するには、[データベース メール] が有効になっていて、MSDB がメール ホスト データベースとして適切に構成され、有効な電子メール アドレスを持つ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのオペレーターが存在している必要があります。  
   
  このタスクでは、sp_notify_operator ストアド プロシージャを使用します。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **接続**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 32
 > [!NOTE]  
 >  影響を受けるオブジェクトが大量にある場合は、表示にかなりの時間を要する場合があります。  
   
-## [新しい接続] ダイアログ ボックス  
+## <a name="new-connection-dialog-box"></a>[新しい接続] ダイアログ ボックス  
  **[接続名]**  
  新しい接続の名前を入力します。  
   
@@ -61,10 +65,10 @@ caps.handback.revision: 32
  サーバーの認証情報を指定します。  
   
  **[Windows NT の統合セキュリティを使用する]**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] のインスタンスに接続します。  
   
  **[特定のユーザー名とパスワードを使用する]**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
   
  **ユーザー名**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  
@@ -72,7 +76,7 @@ caps.handback.revision: 32
  **Password**  
  認証に使用するパスワードを指定します。 このオプションは利用できません。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [sp_notify_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-notify-operator-transact-sql.md)  
   

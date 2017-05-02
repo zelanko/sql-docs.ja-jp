@@ -1,26 +1,30 @@
 ---
 title: "アプリケーション ロールの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.approle.general.f1"
-helpviewer_keywords: 
-  - "作成するアプリケーション ロール [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.approle.general.f1
+helpviewer_keywords:
+- application roles [SQL Server], creating
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0778c9ac00e6d9c06161ccc8429e0eb9ae4d846d
+ms.lasthandoff: 04/11/2017
+
 ---
-# アプリケーション ロールの作成
+# <a name="create-an-application-role"></a>アプリケーション ロールの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]でアプリケーション ロールを作成する方法について説明します。 アプリケーション ロールは、特定のアプリケーションを使用する場合を除き、データベースへのユーザー アクセスを制限します。 アプリケーション ロールにはユーザーが含まれないため、 **[アプリケーション ロール]** が選択されている場合には、 **[ロール メンバー]** の一覧は表示されません。  
   
 > [!IMPORTANT]  
@@ -47,7 +51,7 @@ caps.handback.revision: 27
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-##### アプリケーション ロールを作成するには  
+##### <a name="to-create-an-application-role"></a>アプリケーション ロールを作成するには  
   
 1.  オブジェクト エクスプローラーで、アプリケーション ロールを作成するデータベースを展開します。  
   
@@ -55,11 +59,11 @@ caps.handback.revision: 27
   
 3.  **[ロール]** フォルダーを展開します。  
   
-4.  **[アプリケーション ロール]** フォルダーを右クリックし、**[新しいアプリケーション ロール]** をクリックします。  
+4.  **[アプリケーション ロール]** フォルダーを右クリックし、 **[新しいアプリケーション ロール]**をクリックします。  
   
 5.  **[アプリケーション ロール – 新規]** ダイアログ ボックスの **[全般]**ページで、 **[ロール名]** ボックスに、新しいアプリケーション ロールの名前を入力します。  
   
-6.  **[既定のスキーマ]** ボックスで、オブジェクト名の入力によってこのロールが作成するオブジェクトを所有するスキーマを指定します。 または、省略記号 **[...]** をクリックして、**[スキーマの検索]** ダイアログ ボックスを開きます。  
+6.  **[既定のスキーマ]** ボックスで、オブジェクト名の入力によってこのロールが作成するオブジェクトを所有するスキーマを指定します。 または、省略記号 **[...]** をクリックして、 **[スキーマの検索]** ダイアログ ボックスを開きます。  
   
 7.  **[パスワード]** ボックスに、新しいロールのパスワードを入力します。 **[パスワードの確認]** ボックスに、パスワードを再度入力します。  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 27
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### 追加オプション  
+### <a name="additional-options"></a>追加オプション  
  **[アプリケーション ロール – 新規]** ダイアログ ボックスには、 **[セキュリティ保護可能なリソース]** と **[拡張プロパティ]**という 2 つのページもあり、それぞれにオプションが用意されています。  
   
 -   **[セキュリティ保護可能なリソース]** ページには、すべてのセキュリティ保護可能なリソースと、ログインに付与できる、セキュリティ保護可能なリソースに対する権限が一覧表示されます。  
@@ -76,7 +80,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### アプリケーション ロールを作成するには  
+#### <a name="to-create-an-application-role"></a>アプリケーション ロールを作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   

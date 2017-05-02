@@ -1,24 +1,28 @@
 ---
 title: "メンテナンス プランの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "メンテナンス プラン [SQL Server], 作成"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- maintenance plans [SQL Server], creating
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: adab1fc3a3a009a4a6fe74ddbe9ee97f8c128bdf
+ms.lasthandoff: 04/11/2017
+
 ---
-# メンテナンス プランの作成
+# <a name="create-a-maintenance-plan"></a>メンテナンス プランの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でメンテナンス プランを作成する方法には、メンテナンス プラン ウィザードを使用する方法とデザイン画面を使用する方法の 2 とおりがあります。 基本的なメンテナンス プランを作成する場合は、ウィザードが最適です。それに対して、デザイン画面を使用してプランを作成すると、高度なワークフローを利用できます。  
   
  **このトピックの内容**  
@@ -43,7 +47,7 @@ caps.handback.revision: 31
  マルチサーバー メンテナンス プランを作成するには、1 台のマスター サーバーと 1 台以上の対象サーバーを含むマルチサーバー環境を構成する必要があります。 マルチサーバー メンテナンス プランは、マスター サーバー上で作成および管理する必要があります。 このプランは対象サーバー上でも表示できますが、対象サーバーでは管理できません。 
  
 ###  <a name="Prerequisite"></a> 前提条件  
-[Agent XP サーバー構成オプション](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)を有効にする必要があります。
+[Agent XP サーバー構成オプション](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) を有効にする必要があります。
   
 ###  <a name="Security"></a> Security  
   
@@ -52,17 +56,17 @@ caps.handback.revision: 31
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### メンテナンス プラン ウィザードを使用してメンテナンス プランを作成するには  
+#### <a name="to-create-a-maintenance-plan-using-the-maintenance-plan-wizard"></a>メンテナンス プラン ウィザードを使用してメンテナンス プランを作成するには  
   
 1.  オブジェクト エクスプローラーで、プラス記号をクリックして、メンテナンス プランを作成するサーバーを展開します。  
   
 2.  プラス記号をクリックして **[管理]** フォルダーを展開します。  
   
-3.  **[メンテナンス プラン]** フォルダーを右クリックし、**[メンテナンス プラン ウィザード]** をクリックします。  
+3.  **[メンテナンス プラン]** フォルダーを右クリックし、 **[メンテナンス プラン ウィザード]**をクリックします。  
   
 4.  ウィザードの手順に従って、メンテナンス プランを作成します。 詳細については、「 [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)」をご覧ください。  
   
-#### デザイン画面を使用してメンテナンス プランを作成するには  
+#### <a name="to-create-a-maintenance-plan-using-the-design-surface"></a>デザイン画面を使用してメンテナンス プランを作成するには  
   
 1.  オブジェクト エクスプローラーで、プラス記号をクリックして、メンテナンス プランを作成するサーバーを展開します。  
   
@@ -74,7 +78,7 @@ caps.handback.revision: 31
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### メンテナンス プランを作成するには  
+#### <a name="to-create-a-maintenance-plan"></a>メンテナンス プランを作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -150,3 +154,4 @@ caps.handback.revision: 31
 -   [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   
+

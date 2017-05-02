@@ -1,26 +1,30 @@
 ---
 title: "トランザクション レプリケーションにおけるパブリッシング ストアド プロシージャの実行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "パブリッシュ [SQL Server レプリケーション]、ストアド プロシージャの実行"
-  - "アーティクル [SQL Server レプリケーション], ストアド プロシージャと"
-  - "トランザクション レプリケーション パブリッシング ストアド プロシージャの実行"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publishing [SQL Server replication], stored procedure execution
+- articles [SQL Server replication], stored procedures and
+- transactional replication, publishing stored procedure execution
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3417818eb5ff6f9f5afce213457828844d2912a8
+ms.lasthandoff: 04/11/2017
+
 ---
-# トランザクション レプリケーションにおけるパブリッシング ストアド プロシージャの実行
+# <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>トランザクション レプリケーションにおけるパブリッシング ストアド プロシージャの実行
   パブリッシャー側で実行され、パブリッシュされたテーブルに影響を与えるストアド プロシージャがある場合、それらのストアド プロシージャをストアド プロシージャ実行アーティクルとしてパブリケーションに含めることを検討してください。 プロシージャの定義 (CREATE PROCEDURE ステートメント) はサブスクリプションが初期化されるときにサブスクライバーにレプリケートされます。プロシージャがパブリッシャーで実行されるときに、レプリケーションは対応するプロシージャをサブスクライバーで実行します。 これにより、各行の個別の変更のレプリケーションが回避されてプロシージャの実行のみがレプリケートされるため、大量のバッチ操作が実行される場合にはパフォーマンスが著しく向上します。 たとえば、パブリケーション データベースで次のストアド プロシージャを作成するとします。  
   
 ```  
@@ -49,17 +53,17 @@ EXEC give_raise
   
  **ストアド プロシージャの実行をパブリッシュするには**  
   
--   SQL Server Management Studio: [#40; (&)、トランザクション パブリケーションでストアド プロシージャの実行を発行します。SQL Server Management Studio と #41 です。](../../../relational-databases/replication/publish/publish execution of stored procedure in transactional publication.md)  
+-   SQL Server Management Studio: [トランザクション パブリケーションでストアド プロシージャの実行をパブリッシュする方法 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   レプリケーション TRANSACT-SQL プログラミング: 実行 [sp_addarticle & #40 です。Transact SQL と #41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 'serializable proc exec' (推奨) または 'proc exec' のパラメーターの値を指定して **@type**します。 詳細については、アーティクルを定義する、次を参照してください。 [アーティクルを定義](../../../relational-databases/replication/publish/define-an-article.md)します。  
+-   レプリケーション Transact-SQL プログラミング: [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) を実行し、パラメーター **@type** に対して「serializable proc exec」(推奨) または「proc exec」の値を指定します。 アーティクルの定義の詳細については、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義) を参照してください。  
   
-## サブスクライバーでのプロシージャの変更  
- 既定では、パブリッシャー上のストアド プロシージャの定義は各サブスクライバーに反映されます。 ただし、サブスクライバーでストアド プロシージャを変更することもできます。 これは、パブリッシャーとサブスクライバーで異なるロジックを実行する場合に便利です。 たとえば、 **sp_big_delete**, 、ストアド プロシージャを 2 つの関数を持つパブリッシャーで: レプリケートされたテーブルから 100万行を削除 **big_table1** レプリケートされていないテーブルを更新し、 **big_table2**します。 ネットワーク リソースに対する負荷を減らすためには、反映する 100万行の削除、ストアド プロシージャとして発行して **sp_big_delete**です。 サブスクライバーで変更できます **sp_big_delete** を 100万行のみを削除しを後続の更新を実行できません **big_table2**です。  
+## <a name="modifying-the-procedure-at-the-subscriber"></a>サブスクライバーでのプロシージャの変更  
+ 既定では、パブリッシャー上のストアド プロシージャの定義は各サブスクライバーに反映されます。 ただし、サブスクライバーでストアド プロシージャを変更することもできます。 これは、パブリッシャーとサブスクライバーで異なるロジックを実行する場合に便利です。 たとえば、2 つの関数を持つパブリッシャー上のストアド プロシージャ、 **sp_big_delete**を考えてみます。このストアド プロシージャはレプリケートされたテーブル **big_table1** から 100 万行を削除し、レプリケートされていないテーブル **big_table2**を更新します。 ネットワーク リソースの需要を削減するには、 **sp_big_delete**をパブリッシュすることによって、100 万行の削除をストアド プロシージャとして反映する方が効率的です。 サブスクライバーでは、100 万行だけを削除し、 **big_table2** への更新を実行しないように **sp_big_delete**を変更できます。  
   
 > [!NOTE]  
->  既定では、パブリッシャーで ALTER PROCEDURE を使用して行われたすべての変更はサブスクライバーに反映されます。 これを防ぐには、ALTER PROCEDURE を実行する前に、スキーマの変更の反映を無効にしてください。 スキーマの変更については、次を参照してください。 [パブリケーション データベースでスキーマ変更を行う](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)します。  
+>  既定では、パブリッシャーで ALTER PROCEDURE を使用して行われたすべての変更はサブスクライバーに反映されます。 これを防ぐには、ALTER PROCEDURE を実行する前に、スキーマの変更の反映を無効にしてください。 スキーマ変更の詳細については、「[パブリケーション データベースでのスキーマの変更](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
   
-## ストアド プロシージャ実行アーティクルの種類  
+## <a name="types-of-stored-procedure-execution-articles"></a>ストアド プロシージャ実行アーティクルの種類  
  ストアド プロシージャの実行をパブリッシュするには、シリアル化可能なプロシージャ実行アーティクルとプロシージャ実行アーティクルの 2 種類の方法があります。  
   
 -   シリアル化可能オプションでは、プロシージャがシリアル化可能なトランザクションのコンテキスト内で実行される場合にのみ、プロシージャの実行がレプリケートされるため、このオプションをお勧めします。 ストアド プロシージャがシリアル化可能なトランザクションの外から実行される場合、パブリッシュされたテーブルのデータに対する変更は一連の DML ステートメントとしてレプリケートされます。 この動作により、サブスクライバー上のデータとパブリッシャー上のデータの一貫性が保たれます。 これは、たとえば大規模なクリーンアップ操作などの、バッチ操作に特に便利です。  
@@ -87,12 +91,12 @@ COMMIT TRANSACTION T2
   
  シリアル化可能なトランザクション内でプロシージャを実行するときにはロックがより長く保持されるので、同時実行が少なくなることもあります。  
   
-## XACT_ABORT の設定  
- ストアド プロシージャの実行をレプリケートする場合、ストアド プロシージャを実行するセッションの設定では XACT_ABORT を ON に指定する必要があります。 XACT_ABORT が OFF に設定されていて、パブリッシャーでプロシージャの実行中にエラーが発生した場合、サブスクライバーでも同じエラーが発生し、ディストリビューション エージェントは失敗します。 XACT_ABORT を  ON に指定すると、パブリッシャーでプロシージャの実行中にエラーが発生した場合、実行全体がロールバックされ、ディストリビューション エージェントの失敗を回避できます。 XACT_ABORT の設定の詳細については、次を参照してください。 [SET XACT_ABORT & #40 です。Transact SQL と #41;](../../../t-sql/statements/set-xact-abort-transact-sql.md)です。  
+## <a name="the-xactabort-setting"></a>XACT_ABORT の設定  
+ ストアド プロシージャの実行をレプリケートする場合、ストアド プロシージャを実行するセッションの設定では XACT_ABORT を ON に指定する必要があります。 XACT_ABORT が OFF に設定されていて、パブリッシャーでプロシージャの実行中にエラーが発生した場合、サブスクライバーでも同じエラーが発生し、ディストリビューション エージェントは失敗します。 XACT_ABORT を  ON に指定すると、パブリッシャーでプロシージャの実行中にエラーが発生した場合、実行全体がロールバックされ、ディストリビューション エージェントの失敗を回避できます。 XACT_ABORT 設定の詳細については、「[SET XACT_ABORT &#40;Transact-SQL&#41;](../../../t-sql/statements/set-xact-abort-transact-sql.md)」を参照してください。  
   
- XACT_ABORT を off 設定が必要な場合は、指定、 **-skiperrors** ディストリビューション エージェントのパラメーターです。 これで、エラーが発生した場合でも、エージェントは引き続きサブスクライバーに変更を適用できます。  
+ XACT_ABORT を OFF に設定する必要がある場合は、ディストリビューション エージェントの **-SkipErrors** パラメーターを指定してください。 これで、エラーが発生した場合でも、エージェントは引き続きサブスクライバーに変更を適用できます。  
   
-## 参照  
- [トランザクション レプリケーションのアーティクル オプション](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
+## <a name="see-also"></a>参照  
+ [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   

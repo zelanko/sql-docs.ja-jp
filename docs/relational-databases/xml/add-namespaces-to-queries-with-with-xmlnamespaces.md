@@ -1,40 +1,44 @@
 ---
 title: "WITH XMLNAMESPACES を使用したクエリへの名前空間の追加 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ELEMENTS XSINIL ディレクティブ"
-  - "名前空間の追加"
-  - "XSINIL ディレクティブ"
-  - "既定の名前空間"
-  - "クエリ [SQL Server の XML], WITH XMLNAMESPACES 句"
-  - "事前定義された名前空間 [SQL Server の XML]"
-  - "FOR XML 句, WITH XMLNAMESPACES 句"
-  - "名前空間 [SQL Server の XML]"
-  - "xml データ型 [SQL Server], WITH XMLNAMESPACES 句"
-  - "WITH XMLNAMESPACES 句"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ELEMENTS XSINIL directive
+- adding namespaces
+- XSINIL directive
+- default namespaces
+- queries [XML in SQL Server], WITH XMLNAMESPACES clause
+- predefined namespaces [XML in SQL Server]
+- FOR XML clause, WITH XMLNAMESPACES clause
+- namespaces [XML in SQL Server]
+- xml data type [SQL Server], WITH XMLNAMESPACES clause
+- WITH XMLNAMESPACES clause
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 63cc371d0a4b1c19971fe7f9e614f10d5c04765f
+ms.lasthandoff: 04/11/2017
+
 ---
-# WITH XMLNAMESPACES を使用したクエリへの名前空間の追加
-  [WITH XMLNAMESPACES (Transact-SQL)](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md) は、次の方法で名前空間 URI のサポートを提供します。  
+# <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>WITH XMLNAMESPACES を使用したクエリへの名前空間の追加
+  [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md) は、次の方法で名前空間 URI のサポートを提供します。  
   
--   [FOR XML クエリを使用した XML の構築](../../relational-databases/xml/for-xml-sql-server.md)の際に、URI マッピングの名前空間プレフィックスを使用できるようにします。  
+-   [FOR XML クエリを使用した XML の構築](../../relational-databases/xml/for-xml-sql-server.md) の際に、URI マッピングの名前空間プレフィックスを使用できるようにします。  
   
 -   [xml データ型メソッド](../../t-sql/xml/xml-data-type-methods.md)の静的な名前空間コンテキストに、URI マッピングの名前空間を使用できるようにします。  
   
-## FOR XML クエリでの WITH XMLNAMESPACES の使用  
+## <a name="using-with-xmlnamespaces-in-the-for-xml-queries"></a>FOR XML クエリでの WITH XMLNAMESPACES の使用  
  WITH XMLNAMESPACES を使用すると、FOR XML クエリに XML 名前空間を含めることができます。 たとえば、次の FOR XML クエリについて考えてみます。  
   
 ```  
@@ -95,7 +99,7 @@ FOR XML RAW ('ns1:Prod'), ELEMENTS
     INSERT INTO T VALUES('<myNS:root/>')  
     ```  
   
-## XSINIL ディレクティブの使用  
+## <a name="using-the-xsinil-directive"></a>XSINIL ディレクティブの使用  
  ELEMENTS XSINIL ディレクティブを使用している場合は、WITH XMLNAMESPACES 句に xsi プレフィックスは定義できません。 代わりに、ELEMENTS XSINIL を使用すると、自動的に xsi プレフィックスが追加されます。 次のクエリは、要素中心型の XML を生成する ELEMENTS XSINIL を使用しています。生成された XML では、NULL 値が **xsi:nil** 属性が True に設定されている要素にマップされます。  
   
 ```  
@@ -118,7 +122,7 @@ FOR XML RAW, ELEMENTS XSINIL
 </row>  
 ```  
   
-## 既定の名前空間の指定  
+## <a name="specifying-default-namespaces"></a>既定の名前空間の指定  
  名前空間プレフィックスを宣言する代わりに、DEFAULT キーワードを使用して既定の名前空間を宣言することもできます。 DEFAULT キーワードは、FOR XML クエリ中で、既定の名前空間を結果の XML の XML ノードにバインドします。 次の例では、WITH XMLNAMESPACES によって、2 つの名前空間プレフィックスを同時に 1 つの既定の名前空間に定義しています。  
   
 ```  
@@ -161,7 +165,7 @@ WHERE ProductID=316 or ProductID=317
 FOR XML AUTO, ROOT('ns2:root'), ELEMENTS  
 ```  
   
-## 事前定義された名前空間の使用  
+## <a name="using-predefined-namespaces"></a>事前定義された名前空間の使用  
  事前定義された名前空間を使用する場合は、ELEMENTS XSINIL 使用時の xml 名前空間と xsi 名前空間を除き、WITH XMLNAMESPACES を使用して名前空間のバインドを明示的に指定する必要があります。 次のクエリは、事前定義された名前空間 (`urn:schemas-microsoft-com:xml-sql`) 用に、URI の名前空間プレフィックスのバインドを明示的に定義しています。  
   
 ```  
@@ -170,7 +174,7 @@ SELECT 'SELECT * FROM Customers FOR XML AUTO, ROOT("a")' AS "sql:query"
 FOR XML PATH('sql:root')  
 ```  
   
- 結果は次のとおりです。 SQLXML では、この XML テンプレートがよく使用されます。 詳細については、「[SQLXML 4.0 のプログラミング概念](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)」を参照してください。  
+ 結果は次のとおりです。 SQLXML では、この XML テンプレートがよく使用されます。 詳細については、「 [SQLXML 4.0 のプログラミング概念](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)」を参照してください。  
   
 ```  
 <sql:root xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -200,8 +204,8 @@ go
 </Translation>  
 ```  
   
-## xml データ型メソッドでの WITH XMLNAMESPACES の使用  
- SELECT クエリ (**modify()** メソッドを使用している場合は UPDATE クエリ) に指定された [xml データ型メソッド](../../t-sql/xml/xml-data-type-methods.md)は、それぞれのプロローグの中で名前空間の宣言を個別に行う必要があります。 この作業には時間のかかる場合があります。 たとえば、次のクエリでは、カタログの説明に仕様が含まれる製品モデル ID を取得します。 つまり、<`Specifications`> 要素が含まれます。  
+## <a name="using-with-xmlnamespaces-with-the-xml-data-type-methods"></a>xml データ型メソッドでの WITH XMLNAMESPACES の使用  
+ SELECT クエリ ( [modify()](../../t-sql/xml/xml-data-type-methods.md) メソッドを使用している場合は UPDATE クエリ) に指定された **xml データ型メソッド** は、それぞれのプロローグの中で名前空間の宣言を個別に行う必要があります。 この作業には時間のかかる場合があります。 たとえば、次のクエリでは、カタログの説明に仕様が含まれる製品モデル ID を取得します。 つまり、<`Specifications`> 要素が含まれます。  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -223,7 +227,7 @@ WHERE CatalogDescription.exist('
 declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
 ```  
   
- 代わりに、WITH XMLNAMESPACES を最初に宣言して、名前空間プレフィックスをクエリで使用することもできます。 この場合は、**query()** メソッドと **exist()** メソッドでは、それぞれのプロローグに名前空間の宣言を含める必要はありません。  
+ 代わりに、WITH XMLNAMESPACES を最初に宣言して、名前空間プレフィックスをクエリで使用することもできます。 この場合は、 **query()** メソッドと **exist()** メソッドでは、それぞれのプロローグに名前空間の宣言を含める必要はありません。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
@@ -241,10 +245,10 @@ Go
   
  XQuery プロローグの明示的な宣言が、WITH 句で定義されている名前空間プレフィックスと既定の要素名前空間よりも優先されることに注意してください。  
   
-## 参照  
- [xml データ型のメソッド](../../t-sql/xml/xml-data-type-methods.md)   
+## <a name="see-also"></a>参照  
+ [xml データ型メソッド](../../t-sql/xml/xml-data-type-methods.md)   
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)   
- [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md)   
+ [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)   
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

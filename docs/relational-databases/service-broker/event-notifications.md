@@ -1,25 +1,29 @@
 ---
 title: "イベント通知 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "イベント通知, 概要"
-  - "通知のイベント [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications, about
+- events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01d42e113fabb39353971749462c144374e470fe
+ms.lasthandoff: 04/11/2017
+
 ---
-# イベント通知
+# <a name="event-notifications"></a>イベント通知
   イベント通知を使用すると、イベントについての情報を [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスに送信できます。 イベント通知は、さまざまな [!INCLUDE[tsql](../../includes/tsql-md.md)] データ定義言語 (DDL) ステートメントおよび SQL トレースのイベントに応答して実行されます。イベント通知は、これらのイベントに関する情報を [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスに送信することで実行されます。  
   
  イベント通知を使用できるのは、次のような作業を行う場合です。  
@@ -30,12 +34,12 @@ caps.handback.revision: 18
   
  イベント通知により、DDL トリガーおよび SQL トレースに代わるプログラミングを提供できます。  
   
-## イベント通知の利点  
+## <a name="event-notifications-benefits"></a>イベント通知の利点  
  イベント通知は、トランザクションのスコープの外部で非同期に実行されます。 そのため、DDL トリガーとは異なり、イベント通知をデータベース アプリケーション内部で使用して、即時トランザクションで定義されるリソースを使用しないでイベントに応答することができます。  
   
- SQL トレースとは異なり、イベント通知は、SQL トレース イベントに応答して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で操作を実行するために使用できます。  
+ SQL トレースとは異なり、イベント通知は、SQL トレース イベントに応答して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で操作を実行するために使用できます。  
   
- イベント データは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と共に実行されているアプリケーションで使用して、進行状況を追跡したり判断を下したりすることができます。 たとえば、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースで `ALTER TABLE` ステートメントが実行されるたびに、次のイベント通知により、特定のサービスに情報が送信されます。  
+ イベント データは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と共に実行されているアプリケーションで使用して、進行状況を追跡したり判断を下したりすることができます。 たとえば、 `ALTER TABLE` サンプル データベースで [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ステートメントが実行されるたびに、次のイベント通知により、特定のサービスに情報が送信されます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -47,12 +51,12 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
     '8140a771-3c4b-4479-8ac0-81008ab17984';  
 ```  
   
-## イベント通知の概念  
- イベント通知が作成されると、[!INCLUDE[ssSB](../../includes/sssb-md.md)] のインスタンスと指定した対象サービスの間で、1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メッセージ交換が開かれます。 メッセージ交換は通常、イベント通知がサーバー インスタンス上のオブジェクトとして存在する限り、開いたままになります。 一部のエラーでは、イベント通知が削除される前にメッセージ交換が終了する場合があります。 このようなメッセージ交換がイベント通知間で共有されることはありません。 イベント通知ごとに、独自の排他的なメッセージ交換が確立されます。 メッセージ交換を明示的に終了すると、対象のサービスがこれ以上メッセージを受信しなくなります。また、次回イベント通知が起動されてもメッセージ交換は再度開かれません。  
+## <a name="event-notifications-concepts"></a>イベント通知の概念  
+ イベント通知が作成されると、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] のインスタンスと指定した対象サービスの間で、1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メッセージ交換が開かれます。 メッセージ交換は通常、イベント通知がサーバー インスタンス上のオブジェクトとして存在する限り、開いたままになります。 一部のエラーでは、イベント通知が削除される前にメッセージ交換が終了する場合があります。 このようなメッセージ交換がイベント通知間で共有されることはありません。 イベント通知ごとに、独自の排他的なメッセージ交換が確立されます。 メッセージ交換を明示的に終了すると、対象のサービスがこれ以上メッセージを受信しなくなります。また、次回イベント通知が起動されてもメッセージ交換は再度開かれません。  
   
  イベント発生時の情報、影響を受けるデータベース オブジェクトの情報、関係する [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ ステートメント、およびその他の情報を提供するイベント情報が、**xml** 型の変数として [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスに配信されます。 イベント通知によって生成された XML スキーマの詳細については、「[EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)」を参照してください。  
   
-### イベント通知とトリガー  
+### <a name="event-notifications-vs-triggers"></a>イベント通知とトリガー  
  次の表では、トリガーとイベント通知の比較対照を示します。  
   
 |トリガー|イベント通知|  
@@ -66,10 +70,10 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |DML トリガー名はスキーマ スコープです。 DDL トリガー名は、データベースまたはサーバーによってスコープが設定されます。|イベント通知名は、サーバーまたはデータベースによってスコープが設定されます。 QUEUE_ACTIVATION イベントのイベント通知は、特定のキューにスコープが設定されます。|  
 |DML トリガーは、トリガーが適用されるテーブルと同じ所有者に所有されます。|キュー上のイベント通知の所有者は、イベント通知が適用されるオブジェクトとは所有者が異なる場合があります。|  
 |トリガーでは、EXECUTE AS 句がサポートされます。|イベント通知では、EXECUTE AS 句はサポートされません。|  
-|DDL トリガー イベント情報を、EVENTDATA 関数を使用してキャプチャできます。EVENTDATA 関数では **xml** データ型が返されます。|イベント通知では、**xml** イベント情報が Service Broker サービスに送信されます。 情報は、EVENTDATA 関数と同じスキーマにフォーマットされます。|  
+|DDL トリガー イベント情報を、EVENTDATA 関数を使用してキャプチャできます。EVENTDATA 関数では **xml** データ型が返されます。|イベント通知では、 **xml** イベント情報が Service Broker サービスに送信されます。 情報は、EVENTDATA 関数と同じスキーマにフォーマットされます。|  
 |**sys.triggers** カタログ ビューと **sys.server_triggers** カタログ ビューに、トリガーに関するメタデータがあります。|**sys.event_notifications** カタログ ビューと **sys.server_event_notifications** カタログ ビューに、イベント通知に関するメタデータがあります。|  
   
-### イベント通知とSQL トレース (SQL Trace)  
+### <a name="event-notifications-vs-sql-trace"></a>イベント通知とSQL トレース (SQL Trace)  
  次の表では、サーバー イベントを監視する場合のイベント通知と SQL トレースの使用を比較します。  
   
 |SQL トレース (SQL Trace)|イベント通知|  
@@ -83,18 +87,18 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |トレースを開始すると、それ以後は起動を制御できません。 停止時間とフィルター時間を使用して、開始時点を指定できます。 対応するトレース ファイルにポーリングすることで、トレースにアクセスできます。|イベント通知によって生成されたメッセージを受信するキューに対して WAITFOR ステートメントを使用することで、イベント通知を制御できます。 キューにポーリングすることで、イベント通知にアクセスできます。|  
 |トレースを作成するために必要最低限の権限は、ALTER TRACE 権限です。 対応するコンピューター上にトレース ファイルを作成する場合にも、権限が必要です。|最低限の権限は、作成するイベント通知の種類によって異なります。 対応するキューでは、RECEIVE 権限も必要です。|  
 |トレースはリモートで受信できます。|イベント通知はリモートで受信できます。|  
-|トレース イベントは、システム ストアド プロシージャを使用して実装されます。|イベント通知は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] および [!INCLUDE[ssSB](../../includes/sssb-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを組み合わせて実装されます。|  
+|トレース イベントは、システム ストアド プロシージャを使用して実装されます。|イベント通知は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] および [!INCLUDE[ssSB](../../includes/sssb-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを組み合わせて実装されます。|  
 |プログラムからトレース イベント データにアクセスするには、対応するトレース テーブルへのクエリを実行するか、トレース ファイルを解析するか、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) TraceReader クラスを使用します。|プログラムからイベント データにアクセスするには、XML 形式のイベント データに対して XQuery を発行するか、SMO イベント クラスを使用します。|  
   
-## イベント通知タスク  
+## <a name="event-notification-tasks"></a>イベント通知タスク  
   
 |タスク|トピック|  
 |----------|-----------|  
 |イベント通知を作成して実装する方法について説明します。|[イベント通知の実装](../../relational-databases/service-broker/implement-event-notifications.md)|  
-|リモート サーバー上の Service Broker にメッセージを送信するイベント通知に対し、[!INCLUDE[ssSB](../../includes/sssb-md.md)] ダイアログ セキュリティを構成する方法について説明します。|[イベント通知のダイアログ セキュリティの構成](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)|  
+|リモート サーバー上の Service Broker にメッセージを送信するイベント通知に対し、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] ダイアログ セキュリティを構成する方法について説明します。|[イベント通知のダイアログ セキュリティの構成](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)|  
 |イベント通知に関する情報を取得する方法について説明します。|[イベント通知に関する情報の取得](../../relational-databases/service-broker/get-information-about-event-notifications.md)|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [DDL トリガー](../../relational-databases/triggers/ddl-triggers.md)   
  [DML トリガー](../../relational-databases/triggers/dml-triggers.md)   
  [SQL トレース (SQL Trace)](../../relational-databases/sql-trace/sql-trace.md)  

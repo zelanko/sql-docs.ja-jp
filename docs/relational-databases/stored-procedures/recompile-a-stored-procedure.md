@@ -1,28 +1,32 @@
 ---
-title: "ストアド プロシージャの再コンパイル | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sp_recompile"
-  - "WITH RECOMPILE 句"
-  - "ストアド プロシージャの再コンパイル"
-  - "ストアド プロシージャ [SQL Server], 再コンパイﾙ"
+title: "ストアド プロシージャの再コンパイル| Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sp_recompile
+- WITH RECOMPILE clause
+- recompiling stored procedures
+- stored procedures [SQL Server], recompiling
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e2c8f7940c224d22fc93eea4d2c269658e97f266
+ms.lasthandoff: 04/11/2017
+
 ---
-# ストアド プロシージャの再コンパイル
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] でストアド プロシージャを再コンパイルする方法について説明します。 これには、プロシージャ定義内またはプロシージャの呼び出し時に **WITH RECOMPILE** オプションを使用する方法、個々のステートメントで **RECOMPILE** クエリ ヒントを使用する方法、および **sp_recompile** システム ストアド プロシージャを使用する方法の 3 つがあります。 このトピックでは、プロシージャ定義の作成時および既存のプロシージャの実行時に WITH RECOMPILE オプションを使用する方法について説明します。 さらに、sp_recompile システム ストアド プロシージャを使用して既存のプロシージャを再コンパイルする方法についても説明します。  
+# <a name="recompile-a-stored-procedure"></a>ストアド プロシージャの再コンパイル
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャを再コンパイルする方法について説明します。 これには、プロシージャ定義内またはプロシージャの呼び出し時に **WITH RECOMPILE** オプションを使用する方法、個々のステートメントで **RECOMPILE** クエリ ヒントを使用する方法、および **sp_recompile** システム ストアド プロシージャを使用する方法の 3 つがあります。 このトピックでは、プロシージャ定義の作成時および既存のプロシージャの実行時に WITH RECOMPILE オプションを使用する方法について説明します。 さらに、sp_recompile システム ストアド プロシージャを使用して既存のプロシージャを再コンパイルする方法についても説明します。  
   
  **このトピックの内容**  
   
@@ -48,7 +52,7 @@ caps.handback.revision: 37
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、プロシージャをステートメント レベルで再コンパイルする機能が備わっています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でストアド プロシージャを再コンパイルすると、プロシージャ全体ではなく、再コンパイルが必要なステートメントだけがコンパイルされます。  
   
--   プロシージャの特定のクエリで通常使用される値が非定型の値や一時的な値である場合は、それらのクエリ内で RECOMPILE クエリ ヒントを使用することにより、プロシージャのパフォーマンスを向上させることができます。 再コンパイルされるのは、プロシージャ全体ではなく、クエリ ヒントを使用したクエリのみであるため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のステートメント レベルの再コンパイル動作を模倣できます。 ただし、RECOMPILE クエリ ヒントを使用した場合、ステートメントをコンパイルするときに、プロシージャの現在のパラメーター値に加えてストアド プロシージャ内の任意のローカル変数の値も使用されます。 詳細については、「[クエリ ヒント (Transact-SQL)](../Topic/Query%20Hints%20\(Transact-SQL\).md)」を参照してください。  
+-   プロシージャの特定のクエリで通常使用される値が非定型の値や一時的な値である場合は、それらのクエリ内で RECOMPILE クエリ ヒントを使用することにより、プロシージャのパフォーマンスを向上させることができます。 再コンパイルされるのは、プロシージャ全体ではなく、クエリ ヒントを使用したクエリのみであるため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のステートメント レベルの再コンパイル動作を模倣できます。 ただし、RECOMPILE クエリ ヒントを使用した場合、ステートメントをコンパイルするときに、プロシージャの現在のパラメーター値に加えてストアド プロシージャ内の任意のローカル変数の値も使用されます。 詳細については、「 [クエリ ヒント (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 37
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### WITH RECOMPILE オプションを使用してストアド プロシージャを実行するには  
+#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>WITH RECOMPILE オプションを使用してストアド プロシージャを実行するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -94,7 +98,7 @@ AS
   
 ```  
   
-#### WITH RECOMPILE オプションを使用してストアド プロシージャを実行するには  
+#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>WITH RECOMPILE オプションを使用してストアド プロシージャを実行するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -112,7 +116,7 @@ GO
   
 ```  
   
-#### sp_recompile を使用してストアド プロシージャを実行するには  
+#### <a name="to-recompile-a-stored-procedure-by-using-sprecompile"></a>sp_recompile を使用してストアド プロシージャを実行するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -130,7 +134,7 @@ GO
   
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ストアド プロシージャの作成](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [ストアド プロシージャの変更](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [ストアド プロシージャの名前の変更](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)   

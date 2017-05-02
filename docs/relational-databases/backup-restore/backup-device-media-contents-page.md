@@ -1,24 +1,28 @@
 ---
 title: "[バックアップ デバイス] ([メディアの内容] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backupdevice.contents.f1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backupdevice.contents.f1
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4bfa385cab6527c16e62e2e631b9ffa1b96e0d10
+ms.lasthandoff: 04/11/2017
+
 ---
-# [バックアップ デバイス] ([メディアの内容] ページ)
+# <a name="backup-device-media-contents-page"></a>[バックアップ デバイス] ([メディアの内容] ページ)
   **[バックアップ デバイス]** ダイアログ ボックスを使用すると、バックアップの情報が表示されます。 ここでは、デバイス、メディア、メディア セット、バックアップ セットの情報が得られます。  
   
  **SQL Server Management Studio を使用してバックアップ デバイスの内容を表示するには**  
@@ -27,7 +31,7 @@ caps.handback.revision: 38
   
 -   [論理バックアップ デバイスのプロパティと内容の表示 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## オプション  
+## <a name="options"></a>オプション  
  個々のメディア、メディア セット、バックアップ セットに関する情報を表示します。  
   
  **[メディア]**  
@@ -87,7 +91,7 @@ caps.handback.revision: 38
   
 -   [デバイスからのバックアップ復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

@@ -1,41 +1,45 @@
 ---
 title: "[キュー リーダー エージェントのセキュリティ] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.security.QRA.f1"
-helpviewer_keywords: 
-  - "[キュー リーダー エージェントのセキュリティ] ダイアログ ボックス"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.security.QRA.f1
+helpviewer_keywords:
+- Queue Reader Agent Security dialog box
 ms.assetid: 77938da0-2afd-4455-8826-f4a6a9440cb3
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58afa56e66377ea4ac00bd9296128bbe7483719c
+ms.lasthandoff: 04/11/2017
+
 ---
-# [キュー リーダー エージェントのセキュリティ]
-   **キュー リーダー エージェントのセキュリティ** ] ダイアログ ボックスでは、指定することができます、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントをキュー リーダー エージェントが実行され、ディストリビューターへのローカル接続を作成します。 エージェントで指定されたアカウントを使用してパブリッシャーに接続、 **パブリッシャーのプロパティ** ] ダイアログ ボックス (から利用可能な **ディストリビューターのプロパティ** ] ダイアログ ボックス) は、エージェント、ディストリビューション エージェントと同じコンテキストを使用して、サブスクリプションのサブスクライバーに接続します。 詳細については、次を参照してください。 [ビューとレプリケーションのセキュリティ設定の変更](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)です。  
+# <a name="queue-reader-agent-security"></a>[キュー リーダー エージェントのセキュリティ]
+  **[キュー リーダー エージェントのセキュリティ]** ダイアログ ボックスを使用すると、キュー リーダー エージェントを実行したり、ディストリビューターへのローカル接続を行ったりするための [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントを指定できます。 エージェントは、( **[ディストリビューターのプロパティ]** ダイアログ ボックスから呼び出される) **[パブリッシャーのプロパティ]** ダイアログ ボックスで指定されたアカウントを使用してパブリッシャーに接続します。エージェントは、同じコンテキストを使用して、サブスクリプションのディストリビューション エージェントとしてサブスクライバーに接続します。 詳細については、「[レプリケーションのセキュリティ設定の表示および変更](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。  
   
  アカウントは、適切なパスワードが指定された有効なアカウントである必要があります。 アカウントとパスワードは、エージェントが実行されるまで検証されません。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[プロセス アカウント]**  
- ディストリビューターでキュー リーダー エージェントを実行するための Windows アカウントを入力します。 最小値にする必要があります。 を指定する Windows アカウントのメンバーである、 **db_owner** ディストリビューション データベースの固定データベース ロール。  
+ ディストリビューターでキュー リーダー エージェントを実行するための Windows アカウントを入力します。 指定した Windows アカウントは少なくともディストリビューション データベースで **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
- **パスワード** と **パスワードの確認入力**  
+ **[パスワード]** と **[パスワードの確認入力]**  
  Windows アカウントのパスワードを入力します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レプリケーションのログインとパスワードの管理](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
  [レプリケーション エージェントのセキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [レプリケーション エージェントの概要](../../relational-databases/replication/agents/replication-agents-overview.md)   
- [レプリケーション セキュリティの推奨事項](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

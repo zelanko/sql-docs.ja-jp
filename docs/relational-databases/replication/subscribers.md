@@ -1,41 +1,45 @@
 ---
 title: "[サブスクライバー] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.newsubwizard.subscribers.f1"
-helpviewer_keywords: 
-  - "サブスクライバー [SQL Server レプリケーション]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.newsubwizard.subscribers.f1
+helpviewer_keywords:
+- Subscribers [SQL Server replication]
 ms.assetid: 43fb2454-c220-4d25-a826-83c332eb00d2
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1a7a3174c0eab10b0a05dd4844e214f3ab70ee75
+ms.lasthandoff: 04/11/2017
+
 ---
-# [サブスクライバー]
-  指定の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または非-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、選択したパブリケーションに対するサブスクリプションを受信するサブスクライバー。  
+# <a name="subscribers"></a>[サブスクライバー]
+  選択したパブリケーションへのサブスクリプションを受け取る [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバー、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーを指定します。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[サブスクライバー]**  
- グリッドを使用して、対応するチェック ボックスをオンに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または非-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で選択したパブリケーションに対するサブスクライバーとしてデータ ソース、 **パブリケーション** ページです。 サブスクライバーが一覧にない場合、 **[サブスクライバーの追加]** または **[SQL Server サブスクライバーの追加]**をクリックします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [パブリケーション][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページで選択したパブリケーションへのサブスクライバーとして、 **のデータ ソースまたは** 以外のデータ ソースを有効にするには、グリッド内の対応するチェック ボックスをオンにします。 サブスクライバーが一覧にない場合、 **[サブスクライバーの追加]** または **[SQL Server サブスクライバーの追加]**をクリックします。  
   
  **サブスクリプション データベース**  
- 情報が表示され、このコラムで使用できるアクションに表示されているサブスクライバーの種類によって異なります。、 **サブスクライバー** 列。  
+ この列で表示される情報と実行できる操作は、 **[サブスクライバー]** 列に表示されているサブスクライバーの種類によって変わります。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーの場合、 **[サブスクリプション データベース]** の一覧からサブスクリプション データベースを選択するか、同じ一覧から **[新しいデータベース]** コマンドを選択して新しいデータベースを作成します。  
   
     > [!NOTE]  
     >  パブリッシャーをサブスクライバーとして有効にする場合、サブスクリプション データベースはパブリケーション データベースとは別にする必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーの場合、サブスクリプション データベースは表示されません。 データベースおよびその他の接続情報を指定する、 **データ ソース名** のフィールド、 **非 SQL Server の追加** ] ダイアログ ボックス。 クリックして、このダイアログ ボックスは使用可能な **のサブスクライバーの追加** クリックし、 **非 SQL Server サブスクライバーの追加**します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーの場合、サブスクリプション データベースは表示されません。 **[SQL Server 以外のサブスクライバーの追加]** ダイアログ ボックスの **[データ ソース名]** フィールドで、データベースおよび他の接続情報を指定します。 このダイアログ ボックスを開くには、 **[サブスクライバーの追加]** をクリックして **[SQL Server 以外のサブスクライバーの追加]**をクリックします。  
   
  **[サブスクライバーの追加]**  
  サブスクライバーとして有効にできるサーバーの一覧に、サーバーを追加します。 このボタンは、次に示す条件がすべて満たされた場合に表示されます。  
@@ -49,7 +53,7 @@ caps.handback.revision: 26
   
 -   選択したパブリケーションのパブリッシャーが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンである。  
   
- クリックすると **のサブスクライバーの追加** 2 つの選択肢のメニューを示しています: **[SQL Server サブスクライバー** と **非 SQL Server サブスクライバーの追加**します。 クリックして **非 SQL Server サブスクライバーの追加** Oracle または IBM DB2 サブスクライバーを追加します。  
+ **[サブスクライバーの追加]** をクリックすると、 **[SQL Server サブスクライバーの追加]** と **[SQL Server 以外のサブスクライバーの追加]**という 2 つの選択肢を持つメニューが表示されます。 Oracle または IBM DB2 のサブスクライバーを追加するには、 **[SQL Server 以外のサブスクライバーの追加]** をクリックします。  
   
  **[SQL Server サブスクライバーの追加]**  
  サブスクライバーとして有効にできるサーバーの一覧に、サーバーを追加します。 このボタンは、次のいずれかの条件が満たされた場合に表示されます。  
@@ -66,9 +70,9 @@ caps.handback.revision: 26
   
     -   パブリケーションで匿名サブスクリプションが許可されている。  
   
-## 参照  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+## <a name="see-also"></a>参照  
+ [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [SQL Server 以外のサブスクライバー](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
  [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)  
   

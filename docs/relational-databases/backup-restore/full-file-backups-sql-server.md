@@ -1,41 +1,45 @@
 ---
 title: "ファイルの完全バックアップ (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "完全バックアップ [SQL Server]"
-  - "バックアップ [SQL Server], ファイルまたはファイル グループ"
-  - "バックアップ [SQL Server], ファイルまたはファイル グループ"
-  - "完全復旧モデル [SQL Server], ファイルの完全バックアップ"
-  - "ファイル バックアップ [SQL Server], 完全"
-  - "ファイル [SQL Server], バックアップ"
-  - "ファイル グループ [SQL Server], バックアップ"
-  - "ファイル バックアップ [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full backups [SQL Server]
+- backing up [SQL Server], files or filegroups
+- backups [SQL Server], files or filegroups
+- full recovery model [SQL Server], full file backups
+- file backups [SQL Server], full
+- files [SQL Server], backing up
+- filegroups [SQL Server], backing up
+- file backups [SQL Server]
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 62
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10cdcff6b30fc1c71943cca5c0675473ea81d0ae
+ms.lasthandoff: 04/11/2017
+
 ---
-# ファイルの完全バックアップ (SQL Server)
+# <a name="full-file-backups-sql-server"></a>ファイルの完全バックアップ (SQL Server)
   このトピックは、複数のファイルまたはファイル グループが含まれている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに適用されます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内のファイルは、個別にバックアップおよび復元できます。 また、構成する各ファイルを個別に指定する代わりにファイル グループ全体を指定できます。 ファイル グループにオフラインのファイルが含まれている場合 (たとえば、ファイルが復元中である場合)、ファイル グループ全体がオフラインになり、バックアップできないことに注意してください。  
   
  読み取り専用ファイル グループのファイル バックアップは、部分バックアップと組み合わせることができます。 部分バックアップには、読み取りと書き込みが可能なファイル グループすべて、および必要に応じて 1 つ以上の読み取り専用ファイル グループが含まれます。 詳細については、「[部分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md)」を参照してください。  
   
- ファイル バックアップは、ファイルの差分バックアップの *差分ベース* として使用できます。 詳細については、「[差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)」を参照してください。  
+ ファイル バックアップは、ファイルの差分バックアップの *差分ベース* として使用できます。 詳細については、「 [差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)」を参照してください。  
   
 > [!NOTE]  
->  ファイルの完全バックアップは、通常、*ファイルの差分バックアップ*と明確に区別する場合を除き、*ファイル バックアップ*と呼ばれます。  
+>  ファイルの完全バックアップは、通常、 *ファイルの差分バックアップ*と明確に区別する場合を除き、 *ファイル バックアップ*と呼ばれます。  
   
  **このトピックの内容**  
   
@@ -72,10 +76,10 @@ caps.handback.revision: 62
 > [!NOTE]  
 >  個別のファイルは、データベース バックアップから復元できますが、データベース バックアップからファイルの検索と復元を行うと、ファイル バックアップから行う場合よりも時間がかかります。  
   
-### ファイル バックアップと単純復旧モデル  
+### <a name="file-backups-and-the-simple-recovery-model"></a>ファイル バックアップと単純復旧モデル  
  単純復旧モデルでは、読み取りと書き込みが可能なファイルはすべてまとめてバックアップする必要があります。 これにより、データベースを一貫性のある時点に復元できます。 読み取りと書き込みが可能なファイルまたはファイル グループを個別に指定するのではなく、READ_WRITE_FILEGROUPS オプションを使用します。 このオプションにより、読み取りと書き込みが可能なすべてのファイル グループがデータベースにバックアップされます。 READ_WRITE_FILEGROUPS を指定して作成されたファイル グループは、部分バックアップと呼ばれます。 詳細については、「[部分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md)」を参照してください。  
   
-### ファイル バックアップと完全復旧モデル  
+### <a name="file-backups-and-the-full-recovery-model"></a>ファイル バックアップと完全復旧モデル  
  完全復旧モデルでは、バックアップ ストラテジの残りの部分に関係なく、トランザクション ログをバックアップする必要があります。 ファイルの完全バックアップの完全なセットと、ファイル バックアップのすべての範囲に対応したログ バックアップを併用することで、データベースの完全バックアップに等しくなります。  
   
  ファイル バックアップとログ バックアップだけを使用したデータベースの復元は、複雑になることがあります。 したがって、可能であれば、データベースの完全バックアップを実行して、最初のファイル バックアップの前にログ バックアップを開始することをお勧めします。 次の図は、データベースが作成された直後 (時間 t0) に、データベースの完全バックアップを行う (時間 t1) という方法を示しています。 この最初のデータベース バックアップによって、トランザクション ログのバックアップを開始できるようになります。 トランザクション ログのバックアップは、設定された間隔で実行するようにスケジュールが設定されています。 ファイル バックアップは、データベースに対するビジネス要件を最もよく満たす間隔で実行されます。 この図は、一度に 1 つずつバックアップされる 4 つのファイル グループのそれぞれを示します。 バックアップされる順序 (A、C、B、A) は、データベースのビジネス要件を反映しています。  
@@ -83,7 +87,7 @@ caps.handback.revision: 62
  ![データベース、ファイル、ログのバックアップを結合する方法](../../relational-databases/backup-restore/media/bnr-rmfull-3-fulldb-filegrps-log-backups.gif "データベース、ファイル、ログのバックアップを結合する方法")  
   
 > [!NOTE]  
->  完全復旧モデルで読み取り/書き込みファイルのバックアップを復元する際には、そのファイルとデータベースのそれ以外の部分との一貫性を確保するために、トランザクション ログをロールフォワードする必要があります。 トランザクション ログのバックアップをロールフォワードする数が多くなりすぎないようにするには、ファイルの差分バックアップの使用を検討してください。 詳細については、「[差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)」を参照してください。  
+>  完全復旧モデルで読み取り/書き込みファイルのバックアップを復元する際には、そのファイルとデータベースのそれ以外の部分との一貫性を確保するために、トランザクション ログをロールフォワードする必要があります。 トランザクション ログのバックアップをロールフォワードする数が多くなりすぎないようにするには、ファイルの差分バックアップの使用を検討してください。 詳細については、「 [差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)」を参照してください。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **ファイルまたはファイル グループのバックアップを作成するには**  
@@ -95,7 +99,7 @@ caps.handback.revision: 62
 > [!NOTE]  
 >  ファイル バックアップはメンテナンス プラン ウィザードでサポートされません。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [バックアップと復元: 相互運用性と共存 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   

@@ -1,30 +1,34 @@
 ---
 title: "インライン XSD スキーマの生成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XSD スキーマ [SQL Server]"
-  - "XMLSCHEMA オプション"
-  - "XML のスキーマ [SQL Server]"
-  - "XDR スキーマ"
-  - "FOR XML 句, インライン XSD スキーマの生成"
-  - "インライン XSD スキーマの生成 [SQL Server]"
-  - "XMLDATA オプション"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XSD schemas [SQL Server]
+- XMLSCHEMA option
+- schemas [SQL Server], XML
+- XDR schemas
+- FOR XML clause, inline XSD schema generation
+- inline XSD schema generation [SQL Server]
+- XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8290d7fe8b7900291d4afe3c944564d8f2aef608
+ms.lasthandoff: 04/11/2017
+
 ---
-# インライン XSD スキーマの生成
+# <a name="generate-an-inline-xsd-schema"></a>インライン XSD スキーマの生成
   FOR XML 句では、クエリからクエリ結果と共にインライン スキーマを返すように要求できます。 XDR スキーマが必要な場合は、FOR XML 句に XMLDATA キーワードを指定します。 XSD スキーマが必要な場合は、XMLSCHEMA キーワードを指定します。  
   
  このトピックでは、XMLSCHEMA キーワードとこのキーワードで生成されるインライン XSD スキーマについて説明します。 次に、インライン スキーマを要求するときの制限事項を示します。  
@@ -66,7 +70,7 @@ caps.handback.revision: 34
   
  型指定された **xml** データ型がクエリ結果に含まれている場合は、それらの型指定された **xml** データ型に関連付けられたスキーマも含まれます。  
   
- FOR XML クエリ結果の構造が記述されたスキーマ ドキュメントの対象の名前空間には、固定部分と自動的に値が増加する数値部分があります。 この名前空間の形式を次に示します。*n* は正の整数です。 たとえば、上記のクエリでは urn:schemas-microsoft-com:sql:SqlRowSet1 が対象の名前空間です。  
+ FOR XML クエリ結果の構造が記述されたスキーマ ドキュメントの対象の名前空間には、固定部分と自動的に値が増加する数値部分があります。 この名前空間の形式を次に示します。 *n* は正の整数です。 たとえば、上記のクエリでは urn:schemas-microsoft-com:sql:SqlRowSet1 が対象の名前空間です。  
   
 ```  
 urn:schemas-microsoft-com:sql:SqlRowSetn  
@@ -81,10 +85,10 @@ WHERE ProductModelID=1
 FOR XML AUTO, XMLSCHEMA ('MyURI')  
 ```  
   
-## エンティティ要素  
+## <a name="entity-elements"></a>エンティティ要素  
  クエリ結果として生成される XSD スキーマ構造の詳細を説明するには、まずエンティティ要素について説明する必要があります。  
   
- FOR XML クエリで返される XML データのエンティティ要素は、列ではなくテーブルから生成される要素です。 たとえば、次の FOR XML クエリを実行すると、`Person` データベースの `AdventureWorks2012` テーブルから連絡先に関する情報が返されます。  
+ FOR XML クエリで返される XML データのエンティティ要素は、列ではなくテーブルから生成される要素です。 たとえば、次の FOR XML クエリを実行すると、 `Person` データベースの `AdventureWorks2012` テーブルから連絡先に関する情報が返されます。  
   
 ```  
 SELECT BusinessEntityID, FirstName  
@@ -157,10 +161,10 @@ FOR XML AUTO, ELEMENTS, XMLSCHEMA
   
 -   このクエリ結果では、<`SalesOrderHeader`> と <`SalesOrderDetail`> がエンティティ要素です。 したがって、これらの要素はスキーマ内でグローバルに宣言されます。 つまり、宣言は <`Schema`> 要素内の最上位レベルに記述されます。  
   
--   <`SalesOrderID`>、<`ProductID`>、および <`OrderQty`> は列にマップされるので、エンティティ要素ではありません。 ELEMENTS ディレクティブを指定したので、列データは XML の要素として返されます。 これらの要素は、エンティティ要素の複合型のローカル要素にマップされます。 ELEMENTS ディレクティブを指定しないと、`SalesOrderID`、`ProductID`、および `OrderQty` の各値は、対応するエンティティ要素の複合型のローカル属性にマップされることに注意してください。  
+-   <`SalesOrderID`>、<`ProductID`>、および <`OrderQty`> は列にマップされるので、エンティティ要素ではありません。 ELEMENTS ディレクティブを指定したので、列データは XML の要素として返されます。 これらの要素は、エンティティ要素の複合型のローカル要素にマップされます。 ELEMENTS ディレクティブを指定しないと、 `SalesOrderID`、 `ProductID` 、および `OrderQty` の各値は、対応するエンティティ要素の複合型のローカル属性にマップされることに注意してください。  
   
-## 属性名の競合  
- 次の説明は、`CustOrder` テーブルと `CustOrderDetail` テーブルに基づいています。 次のサンプルをテストするには、これらのテーブルを作成し、独自のサンプル データを追加してください。  
+## <a name="attribute-name-clashes"></a>属性名の競合  
+ 次の説明は、 `CustOrder` テーブルと `CustOrderDetail` テーブルに基づいています。 次のサンプルをテストするには、これらのテーブルを作成し、独自のサンプル データを追加してください。  
   
 ```  
 CREATE TABLE CustOrder (OrderID int primary key, CustomerID int)  
@@ -217,10 +221,10 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
   
  `</xsd:schema>`  
   
-## 要素名の競合  
+## <a name="element-name-clashes"></a>要素名の競合  
  FOR XML では、同じ名前で 2 つのサブ要素を示すことができます。 たとえば、次のクエリでは製品の ListPrice と DealerPrice の値が取得されますが、これら 2 つの列に Price という同じ別名が指定されます。 したがって、返される行セットには同じ名前の列が 2 つ含まれます。  
   
-### ケース 1 : 2 つのサブ要素が同じ型の非キー列でどちらも NULL 値が許容される場合  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>ケース 1 : 2 つのサブ要素が同じ型の非キー列でどちらも NULL 値が許容される場合  
  次のクエリの 2 つのサブ要素は同じ型の非キー列で、どちらも NULL 値が許容されます。  
   
 ```  
@@ -312,7 +316,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### ケース 2 : 同じ型でも一方がキー列で他方が非キー列の場合  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>ケース 2 : 同じ型でも一方がキー列で他方が非キー列の場合  
  次のクエリでは、型が同じ型でも一方がキー列で他方が非キー列の場合について説明します。  
   
 ```  
@@ -390,7 +394,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  インライン XSD スキーマで、Col2 に対応する <`Col`> 要素の minOccurs が 0 に設定されていることに注意してください。  
   
-### ケース 3 : 2 つの要素の型が異なり、対応する列で NULL 値が許容される場合  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>ケース 3 : 2 つの要素の型が異なり、対応する列で NULL 値が許容される場合  
  ケース 2 で示したサンプル テーブルに対して、次のクエリを指定します。  
   
 ```  

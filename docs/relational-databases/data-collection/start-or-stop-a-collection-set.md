@@ -1,25 +1,29 @@
 ---
 title: "コレクション セットの開始または停止 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "コレクション セット [SQL Server]、停止"
-  - "コレクション セット [SQL Server]、開始"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collection sets [SQL Server], stopping
+- collection sets [SQL Server], starting
 ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 91f96d4ac8b7403e0d214625925403950e386dc2
+ms.lasthandoff: 04/11/2017
+
 ---
-# コレクション セットの開始または停止
+# <a name="start-or-stop-a-collection-set"></a>コレクション セットの開始または停止
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でコレクション セットを開始または停止する方法について説明します。  
   
  **このトピックの内容**  
@@ -54,7 +58,7 @@ caps.handback.revision: 20
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
--   コレクション セットに関する情報を取得するには、[syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) カタログ ビューのクエリを実行します。  
+-   コレクション セットに関する情報を取得するには、 [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) カタログ ビューのクエリを実行します。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -63,31 +67,31 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### コレクション セットを開始するには  
+#### <a name="to-start-a-collection-set"></a>コレクション セットを開始するには  
   
 1.  オブジェクト エクスプローラーで、 **[管理]** ノード、 **[データ コレクション]**、 **[システム データ コレクション セット]**の順に展開します。  
   
-2.  開始するコレクション セットを右クリックして **[データ コレクション セットの開始]** をクリックします。  
+2.  開始するコレクション セットを右クリックして **[データ コレクション セットの開始]**をクリックします。  
   
      メッセージ ボックスにはこのアクションの結果が表示され、コレクション セットのアイコンに緑色の矢印が付いている場合は、コレクション セットが開始されていることを示します。  
   
-#### コレクション セットを停止するには  
+#### <a name="to-stop-a-collection-set"></a>コレクション セットを停止するには  
   
 1.  オブジェクト エクスプローラーで、 **[管理]** ノード、 **[データ コレクション]**、 **[システム データ コレクション セット]**の順に展開します。  
   
-2.  停止するコレクション セットを右クリックして **[データ コレクション セットの停止]** をクリックします。  
+2.  停止するコレクション セットを右クリックして **[データ コレクション セットの停止]**をクリックします。  
   
      メッセージ ボックスにはこのアクションの結果が表示され、コレクション セットのアイコンに赤い丸が付いている場合は、コレクション セットが停止していることを示します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### コレクション セットを開始するには  
+#### <a name="to-start-a-collection-set"></a>コレクション セットを開始するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、[sp_syscollector_start_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md) を使用して、ID が `1` であるコレクション セットを開始します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 [sp_syscollector_start_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md) を使用して、ID が `1`であるコレクション セットを開始します。  
   
 ```tsql  
 USE msdb;  
@@ -95,13 +99,13 @@ GO
 EXEC sp_syscollector_start_collection_set @collection_set_id = 1;  
 ```  
   
-#### コレクション セットを停止するには  
+#### <a name="to-stop-a-collection-set"></a>コレクション セットを停止するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、[sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md) を使用して、ID が `1` であるコレクション セットを停止します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md) を使用して、ID が `1`であるコレクション セットを停止します。  
   
 ```tsql  
 USE msdb;  
@@ -109,8 +113,8 @@ GO
 EXEC sp_syscollector_stop_collection_set @collection_set_id = 1;  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データ コレクターのビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [データ コレクション](../../relational-databases/data-collection/data-collection.md)  
+ [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
   
   

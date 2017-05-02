@@ -1,31 +1,35 @@
 ---
 title: "ストアド プロシージャの実行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.executeprocedure.general.f1"
-  - "sql13.swb.executeprocedure.f1"
-helpviewer_keywords: 
-  - "ストアド プロシージャ [SQL Server], パラメーター"
-  - "拡張を実行するストアド プロシージャ [SQL Server]"
-  - "システム ストアド プロシージャ [SQL Server], 実行"
-  - "実行するストアド プロシージャ [SQL Server]"
-  - "ユーザー定義ストアド プロシージャ [SQL Server]"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.executeprocedure.general.f1
+- sql13.swb.executeprocedure.f1
+helpviewer_keywords:
+- stored procedures [SQL Server], parameters
+- extended stored procedures [SQL Server], executing
+- system stored procedures [SQL Server], executing
+- stored procedures [SQL Server], executing
+- user-defined stored procedures [SQL Server]
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1e76212425f01aba20c8a0d0fdb548415559be1
+ms.lasthandoff: 04/11/2017
+
 ---
-# ストアド プロシージャの実行
+# <a name="execute-a-stored-procedure"></a>ストアド プロシージャの実行
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャを実行する方法について説明します。  
   
  ストアド プロシージャを実行するには、2 つの方法があります。 1 つ目の最も一般的な方法は、アプリケーションまたはユーザーがプロシージャを呼び出す方法です。 2 番目の方法は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの起動時にプロシージャが自動的に実行されるように設定する方法です。 アプリケーションまたはユーザーによってプロシージャが呼び出される場合は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] の EXECUTE または EXEC キーワードが呼び出しの中に明示的に指定されています。 または、プロシージャが [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ内の最初のステートメントである場合は、このキーワードを使用せずにストアド プロシージャを呼び出すことができます。  
@@ -40,7 +44,7 @@ caps.handback.revision: 38
   
      [セキュリティ](#Security)  
   
--   **ストアド プロシージャを実行するために使用するもの: **  
+-   **ストアド プロシージャを実行するために使用するもの:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 38
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
     ```  
   
-     正確なシステム ストアド プロシージャ名を表示するには、[sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) カタログ ビューおよび [sys.system_parameters](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md) カタログ ビューをクエリします。  
+     正確なシステム ストアド プロシージャ名を表示するには、 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) カタログ ビューおよび [sys.system_parameters](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md) カタログ ビューをクエリします。  
   
 -   システム プロシージャと同じ名前を持つユーザー定義プロシージャは、実行されない可能性があります。  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 38
   
 -   システム ストアド プロシージャの実行  
   
-     システム ストアド プロシージャは、**sp_** というプレフィックスで始まります。 システム ストアド プロシージャは、論理的にすべてのユーザー定義データベースおよびシステム定義データベースに表示されるため、プロシージャ名を完全修飾する必要なく、任意のデータベースから実行できます。 ただし、名前の競合を回避するためには、すべてのシステム プロシージャ名を **sys** スキーマ名でスキーマ修飾することをお勧めします。 次の例は、システム ストアド プロシージャの呼び出しに関して推奨されている方法を示しています。  
+     システム ストアド プロシージャは、 **sp_**というプレフィックスで始まります。 システム ストアド プロシージャは、論理的にすべてのユーザー定義データベースおよびシステム定義データベースに表示されるため、プロシージャ名を完全修飾する必要なく、任意のデータベースから実行できます。 ただし、名前の競合を回避するためには、すべてのシステム プロシージャ名を **sys** スキーマ名でスキーマ修飾することをお勧めします。 次の例は、システム ストアド プロシージャの呼び出しに関して推奨されている方法を示しています。  
   
     ```tsql  
     EXEC sys.sp_who;  
@@ -72,9 +76,9 @@ caps.handback.revision: 38
   
 -   ユーザー定義のストアド プロシージャの実行  
   
-     ユーザー定義のプロシージャを実行する場合は、プロシージャ名をスキーマ名で修飾することをお勧めします。 これにより、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が複数のスキーマに対して検索を実行する必要がなくなるため、パフォーマンスが多少向上します。 また、複数のスキーマに同じ名前のプロシージャがあるデータベースで誤ったプロシージャが実行されることを防止できます。  
+     ユーザー定義のプロシージャを実行する場合は、プロシージャ名をスキーマ名で修飾することをお勧めします。 これにより、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] が複数のスキーマに対して検索を実行する必要がなくなるため、パフォーマンスが多少向上します。 また、複数のスキーマに同じ名前のプロシージャがあるデータベースで誤ったプロシージャが実行されることを防止できます。  
   
-     次の例は、ユーザー定義のプロシージャを実行するために推奨されている方法を示しています。 このプロシージャは 1 つの入力パラメーターを受け取ります。 入力パラメーターと出力パラメーターを指定する方法の詳細については、「[パラメーターの指定](../../relational-databases/stored-procedures/specify-parameters.md)」を参照してください。  
+     次の例は、ユーザー定義のプロシージャを実行するために推奨されている方法を示しています。 このプロシージャは 1 つの入力パラメーターを受け取ります。 入力パラメーターと出力パラメーターを指定する方法の詳細については、「 [パラメーターの指定](../../relational-databases/stored-procedures/specify-parameters.md)」を参照してください。  
   
     ```tsql  
     USE AdventureWorks2012;  
@@ -89,7 +93,7 @@ caps.handback.revision: 38
     GO  
     ```  
   
-     修飾されていないユーザー定義のプロシージャを指定した場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では次の順序でプロシージャが検索されます。  
+     修飾されていないユーザー定義のプロシージャを指定した場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では次の順序でプロシージャが検索されます。  
   
     1.  現在のデータベースの **sys** スキーマ。  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 38
   
 -   ストアド プロシージャの自動実行  
   
-     自動実行用にマークされたプロシージャは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動するたびに実行されます。スタートアップ プロセス中に、 **master** データベースが復旧されます。 データベースのメンテナンス操作を実行する場合や、バックグラウンド プロセスとしてプロシージャを連続実行する場合は、自動実行するようにプロシージャを設定すると便利です。 プロシージャの自動実行は、グローバル一時テーブルの作成など、 **tempdb**のシステム タスクまたはメンテナンス タスクを行う場合にも使用できます。 このようにすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタートアップ時に **tempdb** が再作成されても、一時テーブルの存在が保証されます。  
+     自動実行用にマークされたプロシージャは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動するたびに実行されます。スタートアップ プロセス中に、 **master** データベースが復旧されます。 データベースのメンテナンス操作を実行する場合や、バックグラウンド プロセスとしてプロシージャを連続実行する場合は、自動実行するようにプロシージャを設定すると便利です。 プロシージャの自動実行は、グローバル一時テーブルの作成など、 **tempdb**のシステム タスクまたはメンテナンス タスクを行う場合にも使用できます。 このようにすると、 **のスタートアップ時に** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再作成されても、一時テーブルの存在が保証されます。  
   
      自動実行されるプロシージャは、固定サーバー ロール **sysadmin** と同じ権限で操作を行います。 これらのプロシージャが生成するエラー メッセージは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー ログに書き込まれます。  
   
@@ -112,7 +116,7 @@ caps.handback.revision: 38
   
      自動実行されるようにプロシージャを設定できるのは、システム管理者 (**sa**) だけです。 また、このプロシージャは、 **master** データベースに格納されていて、 **sa**により所有されている必要があり、入出力パラメーターを受け渡すことはできません。  
   
-     次の操作を実行するには、[sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) を使用します。  
+     次の操作を実行するには、 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) を使用します。  
   
     1.  既存のプロシージャをスタートアップ プロシージャとして指定する。  
   
@@ -121,18 +125,18 @@ caps.handback.revision: 38
 ###  <a name="Security"></a> セキュリティ  
  詳細については、「[EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)」および「[EXECUTE AS 句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)」を参照してください。  
   
-####  <a name="Permissions"></a> 権限  
- 詳細については、「[EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)」の「権限」を参照してください。  
+####  <a name="Permissions"></a> アクセス許可  
+ 詳細については、「 [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)でストアド プロシージャを実行する方法について説明します。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### ストアド プロシージャを実行するには  
+#### <a name="to-execute-a-stored-procedure"></a>ストアド プロシージャを実行するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続して、そのインスタンスを展開します。次に、 **[データベース]**を展開します。  
   
 2.  目的のデータベースを展開し、 **[プログラミング]**を展開します。次に、 **[ストアド プロシージャ]**を展開します。  
   
-3.  目的のユーザー定義のストアド プロシージャを右クリックし、**[ストアド プロシージャの実行]** をクリックします。  
+3.  目的のユーザー定義のストアド プロシージャを右クリックし、 **[ストアド プロシージャの実行]**をクリックします。  
   
 4.  **[プロシージャの実行]** ダイアログ ボックスで、各パラメーターの値と、null 値を渡すかどうかを指定します。  
   
@@ -155,7 +159,7 @@ caps.handback.revision: 38
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### ストアド プロシージャを実行するには  
+#### <a name="to-execute-a-stored-procedure"></a>ストアド プロシージャを実行するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -170,13 +174,13 @@ EXEC dbo.uspGetEmployeeManagers 6;
 GO  
 ```  
   
-#### プロシージャの自動実行を設定または解除するには  
+#### <a name="to-set-or-clear-a-procedure-for-executing-automatically"></a>プロシージャの自動実行を設定または解除するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例は、[sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) を使用してプロシージャの自動実行を設定する方法を示しています。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例は、 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) を使用してプロシージャの自動実行を設定する方法を示しています。  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -186,13 +190,13 @@ EXEC sp_procoption @ProcName = '<procedure name>'
     , @OptionValue = 'on';  
 ```  
   
-#### プロシージャの自動実行を解除するには  
+#### <a name="to-stop-a-procedure-from-executing-automatically"></a>プロシージャの自動実行を解除するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例は、[sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) を使用して、プロシージャの自動実行を解除する方法を示しています。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例は、 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) を使用して、プロシージャの自動実行を解除する方法を示しています。  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -203,7 +207,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [パラメーターの指定](../../relational-databases/stored-procedures/specify-parameters.md)   
  [scan for startup procs サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

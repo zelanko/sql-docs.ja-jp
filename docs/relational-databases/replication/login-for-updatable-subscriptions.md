@@ -1,29 +1,33 @@
 ---
 title: "[更新可能なサブスクリプション] のログイン | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.newsubwizard.updatablesubscriptionslogin.f1"
+ms.custom: 
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.newsubwizard.updatablesubscriptionslogin.f1
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8a8e5888afba843d601f6dc85395c52b08b9b597
+ms.lasthandoff: 04/11/2017
+
 ---
-# [更新可能なサブスクリプション] のログイン
-  選択した場合、即時更新プログラムの **レプリケート** 上、 **更新可能なサブスクリプション** ページこのウィザードのサブスクライバーがパブリッシャーへの接続が確立されると、アカウントを指定する必要があります。 
+# <a name="login-for-updatable-subscriptions"></a>[更新可能なサブスクリプション] のログイン
+  即時更新するために、このウィザードの **[更新可能なサブスクリプション]** ページで **[レプリケート]** を選択した場合は、パブリッシャーへの接続に使用する、サブスクライバーでのアカウントを指定する必要があります。 
   
- 接続は、サブスクライバーで発生し、パブリッシャーに変更を反映するトリガーで使用されます。 このアカウントは、選択した場合でも、必要 **キューに変更して、コミット可能であれば** 上、 **更新可能なサブスクリプション** ページです。 既定ではサブスクリプションの新規作成ウィザードでは、必要な場合は、即時更新に切り替えることによるキュー更新を構成します。  
+ 接続はサブスクライバーで起動されるトリガーによって使用され、サブスクライバーに変更を反映します。 このアカウントは、[**更新可能なサブスクリプション**] ページで [**変更をキューに登録し、可能な場合はコミット**] を選択している場合でも必要です。 サブスクリプションの新規作成ウィザードでは、必要に応じて即時更新に切り替えることができるキュー更新が既定で構成されます。  
   
-> **重要!!** 接続にする必要がありますのみに対して指定されたアカウントは、パブリケーション データベース内に作成、挿入、更新、およびビューのデータのレプリケーションを削除する権限を許可します。 その他の権限が与えられません必要があります。 パブリケーション データベースの形式で名前付きのビューに対する権限を与える **syncobj _***\< HexadecimalNumber>* サブスクライバーごとに構成したアカウントにします。  
+> **重要!!** 接続用に指定するアカウントには、レプリケーションによってパブリケーション データベース内に作成されるビューのデータの挿入、更新、および削除だけを実行できる権限を与える必要があります。 それ以外の権限は与えないでください。 各サブスクライバーで構成したアカウントに、**syncobj_***\<HexadecimalNumber>* の形式で名前が指定されたパブリケーション データベース内のビューに対する権限を与えます。  
   
  接続の種類として、3 つのオプションがあります。  
   
@@ -33,25 +37,26 @@ caps.handback.revision: 18
   
 -   レプリケーションによって作成されるリンク サーバー。サブスクライバーで変更を行うユーザーの資格情報を使用して接続を行います。  
   
- 最初の 2 つのオプションは、このウィザードで指定できます。 使用して、最後のオプションを指定することのみ [sp_link_publication & #40 です。Transact SQL と #41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md)です。値を指定して **1** パラメーター **@security_mode**します。  
+ 最初の 2 つのオプションは、このウィザードで指定できます。 最後のオプションは、[sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) を使用した場合にだけ指定できます。**@security_mode** パラメーターに値 **1** を指定します。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[SQL Server 認証を使用して接続するリンク サーバーを作成する]**  
- レプリケーションで指定された資格情報を使用してリンク サーバーの作成、 **ログイン** と **パスワード** フィールドです。  
+ レプリケーションにより、 **[ログイン]** フィールドおよび **[パスワード]** フィールドに指定された資格情報に基づいてリンク サーバーが作成されます。  
   
- **Login**  
- 入力、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をこのトピックで説明されているアクセス許可のみを持つログインします。  
+ **[ログイン]**  
+ このトピックに記載された権限だけを持つ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを入力します。  
   
- **Password**  
- 指定されたログインの強力なパスワードを入力 **ログイン**します。  
+ **[パスワード]**  
+ **[ログイン]**に指定したログインに使用する複雑なパスワードを入力します。  
     
  **[定義済みのリンク サーバーまたはリモート サーバーを使用する]**  
- このオプションを使用するには、定義済みのリンク サーバーまたはリモート サーバーが必要です。 詳細については、次を参照してください。 [リンク サーバーと #40; データベース エンジン、&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md) と [リモート サーバー](../../database-engine/configure-windows/remote-servers.md)します。 リンク サーバーまたはリモート サーバーに使用するログインに対して複雑なパスワードが設定されていて、このトピックに記載された権限だけが設定されていることを確認してください。  
+ このオプションを使用するには、定義済みのリンク サーバーまたはリモート サーバーが必要です。 詳細については、「[リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)」および「[リモート サーバー](../../database-engine/configure-windows/remote-servers.md)」を参照してください。 リンク サーバーまたはリモート サーバーに使用するログインに対して複雑なパスワードが設定されていて、このトピックに記載された権限だけが設定されていることを確認してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [トランザクション パブリケーションの更新可能なサブスクリプションの作成](https://msdn.microsoft.com/library/ms152769.aspx)   
  [レプリケーションのセキュリティ設定の表示および変更](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [トランザクション レプリケーションの更新可能なサブスクリプション](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)  
   
   
+

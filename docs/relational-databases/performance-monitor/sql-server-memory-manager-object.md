@@ -1,32 +1,36 @@
 ---
 title: "SQL Server: Memory Manager オブジェクト | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Memory Manager"
-  - "Memory Manager オブジェクト"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Memory Manager
+- Memory Manager object
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 884e6d05db70f9978b84a3423bdfad748f50b29c
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server: Memory Manager オブジェクト
+# <a name="sql-server-memory-manager-object"></a>SQL Server: Memory Manager オブジェクト
   Microsoft **の** Memory Manager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトには、全体的なサーバー メモリの使用状況を監視するためのカウンターが用意されています。 全体的なサーバー メモリの使用状況を監視して、ユーザーの利用状況やリソースの使用状況を計測すると、パフォーマンスのボトルネックを突き止めるのに役立つ可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで使用されるメモリを監視すると、次のことを判断する際に役立ちます。  
   
 -   ボトルネックの発生原因が、頻繁にアクセスされるデータをキャッシュに格納するための物理メモリ不足によるものかどうか。 メモリが不足している場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではディスクからデータを取得する必要があります。  
   
 -   メモリを増設したり、データ キャッシュや [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内部構造により多くのメモリを使用できるように設定することで、クエリのパフォーマンスを向上できるかどうか。  
   
-## Memory Manager カウンター  
+## <a name="memory-manager-counters"></a>Memory Manager カウンター  
  次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Manager** カウンターについて説明します。  
   
 |SQL Server Memory Manager カウンター|説明|  
@@ -46,13 +50,13 @@ caps.handback.revision: 29
 |**Memory Grants Outstanding**|ワークスペース メモリを取得できたプロセスの総数を指定します。|  
 |**Memory Grants Pending**|ワークスペース メモリ許可を待機しているプロセスの総数を指定します。|  
 |**Optimizer Memory (KB)**|サーバーがクエリの最適化のために使用している動的メモリの合計サイズを指定します。|  
-|**Reserved Server Memory (KB)**|将来の使用のためにサーバーが予約しているメモリの量を示します。 このカウンターは、**[Granted Workspace Memory (KB)]** に表示される、最初に許可された現在の未使用メモリ量を示します。|  
+|**Reserved Server Memory (KB)**|将来の使用のためにサーバーが予約しているメモリの量を示します。 このカウンターは、 **[Granted Workspace Memory (KB)]**に表示される、最初に許可された現在の未使用メモリ量を示します。|  
 |**SQL Cache Memory (KB)**|サーバーが動的 SQL キャッシュのために使用している動的メモリの合計サイズを指定します。|  
 |**Stolen Server Memory (KB)**|サーバーがデータベース ページ以外に使用しているメモリの量を指定します。|  
 |**Target Server Memory (KB)**|サーバーが使用できるメモリの最適な量を示します。|  
 |**Total Server Memory (KB)**|Memory Manager を使用してサーバーがコミットしたメモリの量を指定します。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [リソースの利用状況の監視 &#40;システム モニター&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server: Buffer Manager オブジェクト](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)   
 [sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  

@@ -1,36 +1,40 @@
 ---
-title: "セキュリティ保護可能 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.roleproperties.selectobject.f1"
-helpviewer_keywords: 
-  - "セキュリティ保護可能なリソース [SQL Server]"
-  - "スキーマ [SQL Server]、セキュリティ保護可能"
-  - "セキュリティ保護可能なデータベース リソース [SQL Server]"
-  - "階層 [SQL Server], セキュリティ保護可能"
-  - "セキュリティ保護可能なサーバー リソース [SQL Server]"
+title: "[セキュリティ保護可能なリソース] | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.roleproperties.selectobject.f1
+helpviewer_keywords:
+- securables [SQL Server]
+- schemas [SQL Server], securables
+- database securables [SQL Server]
+- hierarchies [SQL Server], securables
+- server securables [SQL Server]
 ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 51db5d7a36569601e7d21d5fc50d16230b85ea5d
+ms.lasthandoff: 04/11/2017
+
 ---
-# セキュリティ保護可能
+# <a name="securables"></a>[セキュリティ保護可能なリソース]
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   セキュリティ保護可能なリソースは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の承認システムによりアクセスが制限されたリソースです。 たとえば、テーブルはセキュリティ保護可能です。 セキュリティ保護可能なリソースの中には他のセキュリティ保護可能なリソースに含まれているものがあります。これらは "スコープ" と呼ばれ、それ自体をセキュリティで保護できる入れ子構造の階層を形成しています。 セキュリティ保護可能なスコープは、 **サーバー**、 **データベース**、および **スキーマ**です。  
   
-## セキュリティ保護可能なスコープ: サーバー  
+## <a name="securable-scope-server"></a>セキュリティ保護可能なスコープ: サーバー  
  **サーバー** セキュリティ保護可能なスコープには、次のセキュリティ保護可能なリソースが含まれています。  
   
 -   可用性グループ  
@@ -43,7 +47,7 @@ caps.handback.revision: 41
   
 -   データベース  
   
-## セキュリティ保護可能なスコープ: データベース  
+## <a name="securable-scope-database"></a>セキュリティ保護可能なスコープ: データベース  
  **データベース** セキュリティ保護可能なスコープには、次のセキュリティ保護可能なリソースが含まれています。  
   
 -   アプリケーション ロール  
@@ -78,7 +82,7 @@ caps.handback.revision: 41
   
 -   ユーザー  
   
-## セキュリティ保護可能なスコープ: スキーマ  
+## <a name="securable-scope-schema"></a>セキュリティ保護可能なスコープ: スキーマ  
  **スキーマ** セキュリティ保護可能なスコープには、次のセキュリティ保護可能なリソースが含まれています。  
   
 -   型  
@@ -103,13 +107,13 @@ caps.handback.revision: 41
     
     -   外部テーブル 
   
-## セキュリティ保護可能なものへのアクセスの制御  
+## <a name="controlling-access-to-a-securable"></a>セキュリティ保護可能なものへのアクセスの制御  
  セキュリティ保護可能なものに対する権限を受け取るエンティティは、プリンシパルと呼ばれます。 最も一般的なプリンシパルは、ログインとデータベース ユーザーです。 セキュリティ保護可能なものへのアクセスは、権限を許可または拒否することや、アクセスが可能なロールにログインおよびユーザーを追加することによって制御されます。 アクセス許可を制御する方法の詳細については、「[GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)」、「[REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)」、「[DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)」、「[sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)」および「[sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)」を参照してください。  
   
 > [!CAUTION]  
 >  セットアップ時にシステム オブジェクトに付与された既定のアクセス許可は、発生する可能性のある脅威に対して慎重に評価されているため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールの際、セキュリティ強化の一部として変更する必要はありません。 システム オブジェクトのアクセス許可の変更はどのようなものであっても、機能を制限または中断する可能性があり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールがサポートされていない状態のままになる場合があります。  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
  [データベース エンジンの権限の概要](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
   
  [SQL Server の保護](../../relational-databases/security/securing-sql-server.md)  
@@ -125,3 +129,4 @@ caps.handback.revision: 41
  [sys.sql_logins &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md)  
   
   
+

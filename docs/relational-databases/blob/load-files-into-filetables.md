@@ -1,26 +1,30 @@
 ---
 title: "FileTable へのファイルの読み込み | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Filetable [SQL Server]、ファイルの移行"
-  - "FileTable [SQL Server]、一括読み込み"
-  - "Filetable [SQL Server]、ファイルの読み込み"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], migrating files
+- FileTables [SQL Server], bulk loading
+- FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aea5bf6d2bbdb455735c589d46ac76f0e587cda3
+ms.lasthandoff: 04/11/2017
+
 ---
-# FileTable へのファイルの読み込み
+# <a name="load-files-into-filetables"></a>FileTable へのファイルの読み込み
   FileTable にファイルを読み込むまたは移行する方法について説明します。  
   
 ##  <a name="BasicsLoadNew"></a> FileTable へのファイルの読み込みまたは移行  
@@ -43,7 +47,7 @@ caps.handback.revision: 23
 ###  <a name="HowToMigrateFiles"></a> 例: ファイルをファイル システムから FileTable に移行する  
  このシナリオでは、ファイルはファイル システムに格納されていて、このファイルへのポインターを含むメタデータのテーブルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に配置されています。 ここでは、ファイルを FileTable に移動した後、メタデータ内の各ファイルの元の UNC パスを FileTable の UNC パスに置き換えます。 この操作を行うには、[GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) 関数を使用します。  
   
- この例では、写真に関するデータが含まれている **PhotoMetadata**という名前の既存のデータベース テーブルがあると仮定しています。 このテーブルには、.jpg ファイルへの実際の UNC パスを含む **varchar** (512) 型の列 **UNCPath** があります。  
+ この例では、写真に関するデータが含まれている **PhotoMetadata**という名前の既存のデータベース テーブルがあると仮定しています。 このテーブルには、.jpg ファイルへの実際の UNC パスを含む **varchar** (512) 型の列 **UNCPath**があります。  
   
  画像ファイルをファイル システムから FileTable に移行するには、次の操作を実行する必要があります。  
   
@@ -103,26 +107,26 @@ UPDATE PhotoMetadata
   
     -   **CHECK_CONSTRAINTS** 句を指定して呼び出します。  
   
-    -   FileTable 名前空間を無効にし、**CHECK_CONSTRAINTS** 句を指定せずに呼び出します。 次に、FileTable 名前空間を再有効化します。  
+    -   FileTable 名前空間を無効にし、 **CHECK_CONSTRAINTS** 句を指定せずに呼び出します。 次に、FileTable 名前空間を再有効化します。  
   
 -   **BULK INSERT**  
   
     -   **CHECK_CONSTRAINTS** 句を指定して呼び出します。  
   
-    -   FileTable 名前空間を無効にし、**CHECK_CONSTRAINTS** 句を指定せずに呼び出します。 次に、FileTable 名前空間を再有効化します。  
+    -   FileTable 名前空間を無効にし、 **CHECK_CONSTRAINTS** 句を指定せずに呼び出します。 次に、FileTable 名前空間を再有効化します。  
   
--   **INSERT INTO … SELECT \* FROM OPENROWSET(BULK...)**  
+-   **INSERT INTO … SELECT \* FROM OPENROWSET(BULK …)**  
   
     -   **IGNORE_CONSTRAINTS** 句を指定して呼び出します。  
   
-    -   FileTable 名前空間を無効にし、**IGNORE_CONSTRAINTS** 句を指定せずに呼び出します。 次に、FileTable 名前空間を再有効化します。  
+    -   FileTable 名前空間を無効にし、 **IGNORE_CONSTRAINTS** 句を指定せずに呼び出します。 次に、FileTable 名前空間を再有効化します。  
   
- FileTable 制約の無効化の詳細については、「[FileTable の管理](../../relational-databases/blob/manage-filetables.md)」を参照してください。  
+ FileTable 制約の無効化の詳細については、「 [FileTable の管理](../../relational-databases/blob/manage-filetables.md)」を参照してください。  
   
 ###  <a name="disabling"></a> 方法: 一括読み込みのための FileTable の制約を無効化する  
- システム定義の制約を一時的に無効化すると、制約の適用というオーバーヘッドなしで、FileTable へのファイルの一括読み込みを行うことができます。 詳細については、「[FileTable の管理](../../relational-databases/blob/manage-filetables.md)」を参照してください。  
+ システム定義の制約を一時的に無効化すると、制約の適用というオーバーヘッドなしで、FileTable へのファイルの一括読み込みを行うことができます。 詳細については、「 [FileTable の管理](../../relational-databases/blob/manage-filetables.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Transact SQL を使用した FileTable へのアクセス](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [ファイル I/O API を使用した FileTable へのアクセス](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   

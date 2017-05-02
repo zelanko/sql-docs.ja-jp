@@ -1,26 +1,30 @@
 ---
 title: "例 : ELEMENT ディレクティブとエンティティのエンコードを指定する | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ELEMENT ディレクティブ"
-  - "エンティティのエンコード [XML]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ELEMENT directive
+- entity encoding [XML]
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d2ddb67aee711a217bd9f75b62ef14067e4aac55
+ms.lasthandoff: 04/11/2017
+
 ---
-# 例 : ELEMENT ディレクティブとエンティティのエンコードを指定する
-  この例では、 **ELEMENT** ディレクティブと **XML** ディレクティブの違いを説明します。 **ELEMENT** ディレクティブを指定した場合はデータがエンティティとしてエンコードされますが、 **XML** ディレクティブを指定した場合はその処理が行われません。 このクエリでは、\> 要素に、`<Summary>This is summary description</Summary>` のように XML が割り当てられています。  
+# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>例 : ELEMENT ディレクティブとエンティティのエンコードを指定する
+  この例では、 **ELEMENT** ディレクティブと **XML** ディレクティブの違いを説明します。 **ELEMENT** ディレクティブを指定した場合はデータがエンティティとしてエンコードされますが、 **XML** ディレクティブを指定した場合はその処理が行われません。 このクエリでは、\<Summary> 要素に、`<Summary>This is summary description</Summary>` のように XML が割り当てられています。  
   
  次のクエリについて考えてみます。  
   
@@ -67,7 +71,7 @@ FOR XML EXPLICIT
 </ProductModel>  
 ```  
   
- 次のクエリでは、静的な XML 値を割り当てる代わりに、**xml** 型の **query()** メソッドを使用して、**xml** 型の CatalogDescription 列から製品モデルの概要情報を取得します。 この場合、結果は **xml** 型であることがわかっているので、エンコード処理が適用されません。  
+ 次のクエリでは、静的な XML 値を割り当てる代わりに、 **xml** 型の **query()** メソッドを使用して、 **xml** 型の CatalogDescription 列から製品モデルの概要情報を取得します。 この場合、結果は **xml** 型であることがわかっているので、エンコード処理が適用されません。  
   
 ```  
 SELECT  1 as Tag,  
@@ -91,7 +95,7 @@ ORDER BY [ProductModel!1!ProdModelID],Tag
 FOR XML EXPLICIT  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [FOR XML での EXPLICIT モードの使用](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

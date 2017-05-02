@@ -1,28 +1,32 @@
 ---
 title: "ページの圧縮の実装 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ページの圧縮 [データベース エンジン]"
-  - "圧縮 [SQL Server], ページ"
+ms.custom: 
+ms.date: 06/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-compression
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- page compression [Database Engine]
+- compression [SQL Server], page
 ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20038dcaae2d0d33e2a38e1d0fcd1567b2520c03
+ms.lasthandoff: 04/11/2017
+
 ---
-# ページの圧縮の実装
+# <a name="page-compression-implementation"></a>ページの圧縮の実装
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  このトピックでは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]に実装されているページの圧縮方法の概要を説明します。 この概要では、データに必要なストレージ領域の計画に役立つ基本的な情報を提供します。  
+  このトピックでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] に実装されているページの圧縮方法の概要を説明します。 この概要では、データに必要なストレージ領域の計画に役立つ基本的な情報を提供します。  
   
  ページの圧縮は、テーブル、テーブル パーティション、インデックス、およびインデックス パーティションに対して同じような方法で行われます。 テーブルについてのページの圧縮に関する次の説明は、すべての種類のオブジェクトについてのページの圧縮に当てはまります。 次の例では文字列を圧縮しますが、プレフィックスの圧縮とディクショナリの圧縮の両方において、他のデータ型に同じ原則が当てはまります。  
   
@@ -34,9 +38,9 @@ caps.handback.revision: 21
   
 3.  ディクショナリの圧縮  
   
- ページの圧縮を使用する場合、行の圧縮のみを使用して、リーフ レベル以外のページのインデックスが圧縮されます。 行の圧縮の詳細については、[「行の圧縮の実装」](../../relational-databases/data-compression/row-compression-implementation.md)を参照してください。  
+ ページの圧縮を使用する場合、行の圧縮のみを使用して、リーフ レベル以外のページのインデックスが圧縮されます。 行の圧縮の詳細については、 [「行の圧縮の実装」](../../relational-databases/data-compression/row-compression-implementation.md)を参照してください。  
   
-## プレフィックスの圧縮  
+## <a name="prefix-compression"></a>プレフィックスの圧縮  
  圧縮される各ページに対して、プレフィックスの圧縮では次の手順が実行されます。  
   
 1.  列ごとに、各列の値についてストレージ領域の削減に使用できる値が識別されます。  
@@ -55,20 +59,21 @@ caps.handback.revision: 21
   
  1 行目の最初の列にある値 4b は、その行にプレフィックスの最初の 4 文字 (aaab) に加え、文字 b が存在することを示します。 これにより、結果の値は aaabb (元の値) になります。  
   
-## ディクショナリの圧縮  
+## <a name="dictionary-compression"></a>ディクショナリの圧縮  
  プレフィックスの圧縮が完了した後、ディクショナリの圧縮が適用されます。 ディクショナリの圧縮では、ページ上の任意の場所で繰り返される値を検索し、それらの値を CI 領域に格納します。 プレフィックスの圧縮とは異なり、ディクショナリの圧縮は 1 つの列に制限されません。 ディクショナリの圧縮では、ページ上の任意の場所で繰り返し現れる値を置き換えることができます。 次の図に、ディクショナリの圧縮後の同じページを示します。  
   
  ![ディクショナリの圧縮後のページ](../../relational-databases/data-compression/media/tblcompression3.gif "ディクショナリの圧縮後のページ")  
   
  値 4b がページのさまざまな列から参照されていることに注意してください。  
   
-## ページの圧縮が行われるタイミング  
+## <a name="when-page-compression-occurs"></a>ページの圧縮が行われるタイミング  
  ページの圧縮を含む新しいテーブルを作成した場合、圧縮は行われません。 ただし、テーブルのメタデータで、ページの圧縮を使用する必要があることが示されます。 データが最初のデータ ページに追加されると、データに対して行の圧縮が行われます。 このページはいっぱいではないため、ページの圧縮による利点は得られません。 ページがいっぱいになると、次の行を追加することによって、ページの圧縮操作が開始されます。 ページ全体が確認され、各列でプレフィックスの圧縮が評価された後、すべての列でディクショナリの圧縮が評価されます。 ページの圧縮により、ページ上に行を追加するための十分な領域が作成されると、行が追加され、行とページの両方でデータが圧縮されます。 ページの圧縮によって確保される領域から、CI 構造体に必要な領域を引いた領域が小さい場合は、そのページに対してページの圧縮は使用されません。 それ以降に追加される行はこの新しいページ内に格納されます。行が収まらない場合は、別の新しいページがテーブルに追加されます。 最初のページと同様に、新しいページでは最初にページの圧縮は行われません。  
   
  データが含まれる既存のテーブルがページの圧縮対象に変わると、各ページは再構築され、評価されます。 すべてのページが再構築されると、テーブル、インデックス、またはパーティションも再構築されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データの圧縮](../../relational-databases/data-compression/data-compression.md)   
- [行の圧縮の実装](../../relational-databases/data-compression/row-compression-implementation.md)  
+ [「行の圧縮の実装」](../../relational-databases/data-compression/row-compression-implementation.md)  
   
   
+

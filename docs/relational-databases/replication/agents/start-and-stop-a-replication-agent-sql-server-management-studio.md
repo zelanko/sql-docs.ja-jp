@@ -1,26 +1,30 @@
 ---
 title: "レプリケーション エージェントを起動および停止する (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "エージェント [SQL Server レプリケーション], 停止"
-  - "エージェント [SQL Server レプリケーション], 起動"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- agents [SQL Server replication], stopping
+- agents [SQL Server replication], starting
 ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6af13f3427ae5787e1c1e4872c8f75f247e8c6b1
+ms.lasthandoff: 04/11/2017
+
 ---
-# レプリケーション エージェントを起動および停止する (SQL Server Management Studio)
-  起動し、エージェントからの停止、 **ジョブ** フォルダーおよび **レプリケーション** フォルダーに [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] およびレプリケーション モニターからです。 以下のエージェントおよびジョブの開始と停止を行うことができます。  
+# <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>レプリケーション エージェントを起動および停止する (SQL Server Management Studio)
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の **[ジョブ]** フォルダーと **[レプリケーション]** フォルダーおよびレプリケーション モニターからエージェントを開始および停止します。 以下のエージェントおよびジョブの開始と停止を行うことができます。  
   
 -   すべてのパブリケーションで使用されるスナップショット エージェント  
   
@@ -34,39 +38,39 @@ caps.handback.revision: 42
   
 -   レプリケーション メンテナンス ジョブ。  
   
- マージ エージェントおよびディストリビューション エージェントを開始する方法の詳細については、次を参照してください。 [プッシュ サブスクリプションを同期する](../../../relational-databases/replication/synchronize-a-push-subscription.md) と [プル サブスクリプションを同期する](../../../relational-databases/replication/synchronize-a-pull-subscription.md)です。 メンテナンス ジョブの詳細については、次を参照してください。 [レプリケーション メンテナンス ジョブの実行と #40 です。SQL Server Management Studio と #41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)です。  
+ マージ エージェントとディストリビューション エージェントの開始について詳しくは、「[プッシュ サブスクリプションの同期](../../../relational-databases/replication/synchronize-a-push-subscription.md)」および「[プル サブスクリプションの同期](../../../relational-databases/replication/synchronize-a-pull-subscription.md)」をご覧ください。 メンテナンス ジョブについて詳しくは、「[レプリケーション メンテナンス ジョブの実行 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)」をご覧ください。  
   
- レプリケーション モニターの起動方法については、次を参照してください。 [レプリケーション モニターを起動](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)します。  
+ レプリケーション モニターの開始の詳細については、「[レプリケーション モニターの開始](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)」を参照してください。  
   
-### Management Studio からスナップショット エージェントまたはログ リーダー エージェントを開始および停止するには  
+### <a name="to-start-and-stop-a-snapshot-agent-or-log-reader-agent-from-management-studio"></a>Management Studio からスナップショット エージェントまたはログ リーダー エージェントを開始および停止するには  
   
-1.  パブリッシャーに接続 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], 、サーバー ノードを展開し、 **レプリケーション** フォルダーです。  
+1.  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]でパブリッシャーに接続して、サーバー ノードと **[レプリケーション]** フォルダーを展開します。  
   
-2.  展開、 **ローカル パブリケーション** フォルダー、およびし、パブリケーションを右クリックします。  
+2.  **[ローカル パブリケーション]** フォルダーを展開し、パブリケーションを右クリックします。  
   
-3.  クリックして **スナップショット エージェントの状態を表示** または **ログ リーダー エージェントの状態を表示**します。  
+3.  **[スナップショット エージェントの状態の表示]** または **[ログ リーダー エージェントの状態の表示]**をクリックします。  
   
-4.  クリックして **開始** または **停止**です。  
+4.  **[開始]** または **[停止]**をクリックします。  
   
-### Management Studio からキュー リーダー エージェントを開始および停止するには  
+### <a name="to-start-and-stop-a-queue-reader-agent-from-management-studio"></a>Management Studio からキュー リーダー エージェントを開始および停止するには  
   
 1.  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]でディストリビューターに接続して、サーバー ノードを展開します。  
   
 2.  **[SQL Server エージェント]** フォルダーを展開して、 **[ジョブ]** フォルダーを展開します。  
   
-3.  エージェントは、ジョブを右クリックし、をクリックし、 **ジョブの開始** または **ジョブの停止**です。 キュー リーダー エージェントのジョブの名前が、 **[\< ディストリビューター>] です。 \< 整数>**です。  
+3.  エージェントのジョブを右クリックして **[ジョブの開始]** または **[ジョブの停止]**をクリックします。 キュー リーダー エージェントのジョブの名前は、**[\<ディストリビューター>].\<整数>** という形式になっています。  
   
-### レプリケーション モニターからスナップショット エージェント、ログ リーダー エージェント、またはキュー リーダー エージェントを開始および停止するには  
+### <a name="to-start-and-stop-a-snapshot-agent-log-reader-agent-or-queue-reader-agent-from-replication-monitor"></a>レプリケーション モニターからスナップショット エージェント、ログ リーダー エージェント、またはキュー リーダー エージェントを開始および停止するには  
   
 1.  左ペインでパブリッシャー グループを展開し、パブリッシャーを展開して、パブリケーションをクリックします。  
   
-2.  クリックして、 **エージェント** ] タブをクリックします。  
+2.  **[エージェント]** タブをクリックします。  
   
-3.  エージェントを右クリックし、をクリックし、 **エージェントの開始** または **エージェントの停止**します。  
+3.  エージェントを右クリックして **[エージェントの開始]** または **[エージェントの停止]**をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レプリケーションの監視](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
  [レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
- [レプリケーション エージェントの概要](../../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

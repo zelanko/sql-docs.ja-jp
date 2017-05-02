@@ -1,65 +1,69 @@
 ---
 title: "[データベースの復元] ([オプション] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restoredb.options.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 caps.latest.revision: 68
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 68
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 698c8658d2a3d6779a8800c23e5c508351a05d12
+ms.lasthandoff: 04/11/2017
+
 ---
-# [データベースの復元] ([オプション] ページ)
+# <a name="restore-database-options-page"></a>[データベースの復元] ([オプション] ページ)
   **[データベースの復元]** ダイアログ ボックスの **[オプション]** ページを使用して、復元操作の動作と結果を変更します。  
   
  **SQL Server Management Studio を使用してデータベース バックアップを復元するには**  
   
--   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
 -   [テープ ドライブの論理バックアップ デバイスの定義 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 > [!NOTE]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して復元タスクを指定するときに、この復元操作の RESTORE ステートメントを含む、対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを生成できます。 このスクリプトを生成するには、 **[スクリプト]** をクリックし、スクリプトの保存先を選択します。 RESTORE 構文については、「[RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)」を参照してください。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して復元タスクを指定するときに、この復元操作の RESTORE ステートメントを含む、対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを生成できます。 このスクリプトを生成するには、 **[スクリプト]** をクリックし、スクリプトの保存先を選択します。 RESTORE 構文については、「 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)」を参照してください。  
   
-## オプション  
+## <a name="options"></a>[データベースの復元]  
   
-### [復元オプション]  
- 復元操作の動作の特徴を変更するには、**[復元オプション]** パネルのオプションを使用します。  
+### <a name="restore-options"></a>[復元オプション]  
+ 復元操作の動作の特徴を変更するには、 **[復元オプション]** パネルのオプションを使用します。  
   
  **[既存のデータベースを上書きする [WITH REPLACE]]**  
- データベースの名前が、**[データベースの復元]** ダイアログ ボックスの [[全般]](../../relational-databases/backup-restore/restore-database-general-page.md) ページにある **[復元先]** フィールドで指定した名前と同じ場合は、そのデータベースのファイルが上書きされます。 別のデータベースのバックアップを既存のデータベース名に復元する場合でも、既存のデータベースのファイルが上書きされます。 このオプションを選択することは、[RESTORE](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md) ステートメント ([!INCLUDE[tsql](../../includes/tsql-md.md)]) で REPLACE オプションを使用することと同じです。  
+ データベースの名前が、 **[データベースの復元]**ダイアログ ボックスの [[全般]](../../relational-databases/backup-restore/restore-database-general-page.md) ページにある **[復元先]** フィールドで指定した名前と同じ場合は、そのデータベースのファイルが上書きされます。 別のデータベースのバックアップを既存のデータベース名に復元する場合でも、既存のデータベースのファイルが上書きされます。 このオプションを選択することは、 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ステートメント ([!INCLUDE[tsql](../../includes/tsql-md.md)]) で REPLACE オプションを使用することと同じです。  
   
 > [!CAUTION]  
->  このオプションは、十分な検討を行った場合に限り使用してください。 詳細については、「[RESTORE の引数 &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)」を参照してください。  
+>  このオプションは、十分な検討を行った場合に限り使用してください。 詳細については、「[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)」を参照してください。  
   
  **[レプリケーションの設定を保存する [WITH KEEP_REPLICATION]]**  
  パブリッシュされたデータベースを、そのデータベースが作成されたサーバー以外のサーバーに復元するときに、レプリケーションの設定を保存します。 このオプションは、バックアップ作成時にデータベースがレプリケートされた場合にのみ使用します。  
   
  このオプションは、この表で後に説明する **[コミットされていないトランザクションをロールバックして、データベースを使用可能な状態にする。別のトランザクション ログは復元できません。]** オプションをクリックした場合だけ使用できます。これは、RECOVERY オプションを指定してバックアップを復元するのと同じです。  
   
- このオプションを選択することは、[RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) ステートメントで KEEP_REPLICATION オプションを使用することと同じです。  
+ このオプションを選択することは、 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントで KEEP_REPLICATION オプションを使用することと同じです。  
   
- 詳細については、「[レプリケートされたデータベースのバックアップと復元](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)」を参照してください。  
+ 詳細については、「 [レプリケートされたデータベースのバックアップと復元](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)」を参照してください。  
   
  **[復元するデータベースへのアクセスを制限する [WITH RESTRICTED_USER]]**  
- 復元するデータベースの使用を **db_owner**、**dbcreator**、または **sysadmin** のメンバーだけに制限します。  
+ 復元するデータベースの使用を **db_owner**、 **dbcreator**、または **sysadmin**のメンバーだけに制限します。  
   
  このオプションを選択することは、RESTORE ステートメントで RESTRICTED_USER オプションを使用することと同じです。  
   
-### [復旧状態]  
- 復元操作後にデータベースの状態を確認するには、**[復旧状態]** パネルのいずれかのオプションを選択する必要があります。  
+### <a name="recovery-state"></a>[復旧状態]  
+ 復元操作後にデータベースの状態を確認するには、 **[復旧状態]** パネルのいずれかのオプションを選択する必要があります。  
   
  **RESTORE WITH RECOVERY**  
- [[全般]](../../relational-databases/backup-restore/restore-database-general-page.md) ページの **[復元するバックアップ セット]** グリッドでチェック ボックスがオンになっている最後のバックアップを復元した後に、データベースを復旧します。 これは既定のオプションで、[RESTORE](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md) ステートメント ([!INCLUDE[tsql](../../includes/tsql-md.md)]) で WITH RECOVERY を指定することと同じです。  
+ **[全般]**ページの [[復元するバックアップ セット]](../../relational-databases/backup-restore/restore-database-general-page.md)グリッドでチェック ボックスがオンになっている最後のバックアップを復元した後に、データベースを復旧します。 これは既定のオプションで、 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ステートメント ([!INCLUDE[tsql](../../includes/tsql-md.md)]) で WITH RECOVERY を指定することと同じです。  
   
 > [!NOTE]  
 >  完全復旧モデルまたは一括ログ復旧モデルでは、すべてのログ ファイルを復元する場合にのみこのオプションを選択してください。  
@@ -74,12 +78,12 @@ caps.handback.revision: 68
  **RESTORE WITH STANDBY**  
  データベースをスタンバイ状態のままにします。この状態では、データベースは、制限付きの読み取り専用アクセスで使用できます。 このオプションを選択することは、RESTORE ステートメントで WITH STANDBY を使用することと同じです。  
   
- このオプションを選択するには、**[スタンバイ ファイル]** ボックスにスタンバイ ファイルを指定する必要があります。 スタンバイ ファイルを使用すると、復旧結果を元に戻すことができます。  
+ このオプションを選択するには、 **[スタンバイ ファイル]** ボックスにスタンバイ ファイルを指定する必要があります。 スタンバイ ファイルを使用すると、復旧結果を元に戻すことができます。  
   
  **[スタンバイ ファイル]**  
  スタンバイ ファイルを指定します。 スタンバイ ファイルは、参照して指定するか、テキスト ボックスにパス名を直接入力します。  
   
-### [ログ末尾のバックアップ]  
+### <a name="tail-log-backup"></a>[ログ末尾のバックアップ]  
  データベースの復元と共にログ末尾のバックアップを実行するように指定できます。  
   
  **[復元の前にログ末尾のバックアップを行う]**  
@@ -91,32 +95,32 @@ caps.handback.revision: 68
  **[バックアップ ファイル]**  
  ログ末尾のバックアップ ファイルを指定します。 バックアップ ファイルは、参照して指定するか、テキスト ボックスに名前を直接入力します。  
   
-### サーバー接続  
+### <a name="server-connections"></a>サーバー接続  
  既存のデータベース接続を閉じることができます。  
   
  **[既存の接続を閉じる]**  
  データベースへのアクティブな接続がある場合、復元操作は失敗する可能性があります。 **とデータベース間のすべてのアクティブな接続を閉じるには、** [既存の接続を閉じる] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] オプションをオンにします。 このチェック ボックスをオンにすると、データベースは復元操作の実行前にシングル ユーザー モードに設定され、復元操作の完了後にマルチユーザー モードに設定されます。  
   
-### [プロンプト]  
+### <a name="prompt"></a>[プロンプト]  
  **[各バックアップを復元する前に確認する]**  
  各バックアップが復元された後、復元シーケンスを続行するかどうかを確認する **[復元の続行]** ダイアログ ボックスを表示することを指定します。 このダイアログ ボックスには、次のメディア セットの名前 (既知の場合) および次のバックアップ セットの名前と説明が表示されます。  
   
- このオプションを使用すると、バックアップの復元後に復元シーケンスを一時停止できます。 メディア セットごとにテープを交換する必要がある場合 (サーバーにテープ デバイスが 1 台しかない場合など) に特に便利です。 続行する準備ができたら、**[OK]** をクリックします。  
+ このオプションを使用すると、バックアップの復元後に復元シーケンスを一時停止できます。 メディア セットごとにテープを交換する必要がある場合 (サーバーにテープ デバイスが 1 台しかない場合など) に特に便利です。 続行する準備ができたら、 **[OK]**をクリックします。  
   
- **[いいえ]** をクリックすると、復元シーケンスを中断できます。 これにより、データベースが復元状態のままになります。 その後、都合のよいときに、**[復元の続行]** ダイアログ ボックスに表示されている次のバックアップから再開することで、復元シーケンスを続行できます。 次のバックアップを復元する方法は、そのバックアップに含まれているのがデータかトランザクション ログかによって、次のように異なります。  
+ **[いいえ]**をクリックすると、復元シーケンスを中断できます。 これにより、データベースが復元状態のままになります。 その後、都合のよいときに、 **[復元の続行]** ダイアログ ボックスに表示されている次のバックアップから再開することで、復元シーケンスを続行できます。 次のバックアップを復元する方法は、そのバックアップに含まれているのがデータかトランザクション ログかによって、次のように異なります。  
   
--   次のバックアップが完全バックアップまたは差分バックアップの場合は、**[データベースの復元]** タスクを再度使用します。  
+-   次のバックアップが完全バックアップまたは差分バックアップの場合は、 **[データベースの復元]** タスクを再度使用します。  
   
 -   次のバックアップがファイル バックアップの場合は、**[ファイルおよびファイル グループの復元]** タスクを使用します。 詳細については、「[ファイルとファイル グループの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)」を参照してください。  
   
--   次のバックアップがログ バックアップの場合は、 **[トランザクション ログの復元]** タスクを使用します。 トランザクション ログの復元による復元シーケンスの再開については、「[トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)」を参照してください。  
+-   次のバックアップがログ バックアップの場合は、 **[トランザクション ログの復元]** タスクを使用します。 トランザクション ログの復元による復元シーケンスの再開については、「 [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)」を参照してください。  
   
-## 参照  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>参照  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [デバイスからのバックアップ復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)   
  [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   
  [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [[データベースの復元] &#40;[全般] ページ&#41;](../Topic/Restore%20Database%20\(General%20Page\).md)  
+ [[データベースの復元] &#40;[全般] ページ&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
   

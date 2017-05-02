@@ -1,27 +1,31 @@
 ---
 title: "その他の SQL Server 以外のサブスクライバー | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server 以外のサブスクライバー, 他の種類"
+ms.custom: 
+ms.date: 03/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- non-SQL Server Subscribers, other types
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d7002d1aeae61b16976b9a8230c58fb12f882042
+ms.lasthandoff: 04/11/2017
+
 ---
-# その他の SQL Server 以外のサブスクライバー
-  以外の一覧については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でサポートされているサブスクライバー [!INCLUDE[msCoName](../../../includes/msconame-md.md)], を参照してください [非 SQL Server サブスクライバー](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)します。 ここでは、ODBC ドライバーと OLE DB プロバイダーの要件について説明します。  
+# <a name="other-non-sql-server-subscribers"></a>その他の SQL Server 以外のサブスクライバー
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] がサポートしている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーの一覧については、「[SQL Server 以外のサブスクライバー](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。 ここでは、ODBC ドライバーと OLE DB プロバイダーの要件について説明します。  
   
-## ODBC ドライバーの要件  
+## <a name="odbc-driver-requirements"></a>ODBC ドライバーの要件  
  ODBC ドライバーは、以下の要件を満たす必要があります。  
   
 -   ODBC Level-1 に準拠している  
@@ -34,22 +38,22 @@ caps.handback.revision: 31
   
 -   読み取り専用にはできない  
   
--   など、長いテーブル名をサポートする必要があります **MSreplication_subscriptions**します。  
+-   **MSreplication_subscriptions**などの長いテーブル名をサポートしている  
   
-## OLE DB インターフェイスを使用するレプリケーション  
+## <a name="replicating-using-ole-db-interfaces"></a>OLE DB インターフェイスを使用するレプリケーション  
  トランザクション レプリケーションを行うには、OLE DB プロバイダーが以下のオブジェクトをサポートする必要があります。  
   
--   **データ ソース** オブジェクト  
+-   **DataSource** オブジェクト  
   
--   **セッション** オブジェクト  
+-   **Session** オブジェクト  
   
--   **コマンド** オブジェクト  
+-   **Command** オブジェクト  
   
--   **行セット** オブジェクト  
+-   **Rowset** オブジェクト  
   
--   **エラー** オブジェクト  
+-   **Error** オブジェクト  
   
-### DataSource オブジェクト インターフェイス  
+### <a name="datasource-object-interfaces"></a>DataSource オブジェクト インターフェイス  
  データ ソースに接続するためには、以下のインターフェイスが必要です。  
   
 -   **IDBInitialize**  
@@ -58,9 +62,9 @@ caps.handback.revision: 31
   
 -   **IDBProperties**  
   
- プロバイダーがサポートされている場合、 **IDBInfo** インターフェイス、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引用符で囲まれた識別子の文字、SQL ステートメントの最大長、およびテーブルおよび列名の文字の最大数などの情報を取得するインターフェイスを使用します。  
+ プロバイダーが **IDBInfo** インターフェイスをサポートしている場合、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はこのインターフェイスを使用して、引用符で囲まれた識別子、SQL ステートメントの最大長、テーブル名と列名の最大文字数などの情報を取得します。  
   
-### Session オブジェクト インターフェイス  
+### <a name="session-object-interfaces"></a>Session オブジェクト インターフェイス  
  以下のインターフェイスが必要です。  
   
 -   **IDBCreateCommand**  
@@ -71,7 +75,7 @@ caps.handback.revision: 31
   
 -   **IDBSchemaRowset**  
   
-### Command オブジェクト インターフェイス  
+### <a name="command-object-interfaces"></a>Command オブジェクト インターフェイス  
  以下のインターフェイスが必要です。  
   
 -   **ICommand**  
@@ -88,9 +92,9 @@ caps.handback.revision: 31
   
 -   **ICommandWithParameters**  
   
- **IAccessor** パラメーター アクセサーを作成する必要があります。 プロバイダーがサポートされている場合 **IColumnRowset**, 、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] そのインターフェイスを使用して、列が id 列であるかどうかを確認します。  
+ **IAccessor** は、パラメーター アクセサーを作成するために必要です。 プロバイダーが **IColumnRowset**をサポートしている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はこのインターフェイスを使用して列が ID 列であるかどうかを判断します。  
   
-### Rowset オブジェクト インターフェイス  
+### <a name="rowset-object-interfaces"></a>Rowset オブジェクト インターフェイス  
  以下のインターフェイスが必要です。  
   
 -   **IRowset**  
@@ -99,20 +103,21 @@ caps.handback.revision: 31
   
 -   **IColumnsInfo**  
   
- アプリケーションは、サブスクリプション データベース内に作成された、レプリケートされるテーブル上の行セットを開く必要があります。 **IColumnsInfo** と **IAccessor** 行セット内のデータにアクセスするために必要なです。  
+ アプリケーションは、サブスクリプション データベース内に作成された、レプリケートされるテーブル上の行セットを開く必要があります。 **IColumnsInfo** と **IAccessor** は、その行セット内のデータにアクセスするために必要です。  
   
-### Error オブジェクト インターフェイス  
+### <a name="error-object-interfaces"></a>Error オブジェクト インターフェイス  
  エラーの管理には、以下のインターフェイスを使用します。  
   
 -   **IErrorRecords**  
   
 -   **IErrorInfo**  
   
- 使用 **ISQLErrorInfo** OLE DB プロバイダーによってサポートされている場合。  
+ **ISQLErrorInfo** は、OLE DB プロバイダーが ISQLErrorInfo をサポートしている場合に使用します。  
   
  OLE DB プロバイダーの詳細については、OLE DB プロバイダー付属のマニュアルを参照してください。  
   
-## 参照  
- [SQL Server 以外のサブスクライバー](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
+## <a name="see-also"></a>参照  
+ [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
   
   
+

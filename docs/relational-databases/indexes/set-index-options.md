@@ -1,35 +1,39 @@
 ---
 title: "インデックス オプションの設定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ALLOW_ROW_LOCKS オプション"
-  - "SORT_IN_TEMPDB オプション"
-  - "DROP_EXISTING 句"
-  - "大きなデータ, インデックス"
-  - "PAD_INDEX"
-  - "STATISTICS_NORECOMPUTE"
-  - "MAXDOP インデックス オプション, 設定"
-  - "インデックス オプション [SQL Server]"
-  - "MAXDOP インデックス オプション"
-  - "IGNORE_DUP_KEY オプション"
-  - "ALLOW_PAGE_LOCKS オプション"
-  - "ONLINE"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ALLOW_ROW_LOCKS option
+- SORT_IN_TEMPDB option
+- DROP_EXISTING clause
+- large data, indexes
+- PAD_INDEX
+- STATISTICS_NORECOMPUTE
+- MAXDOP index option, setting
+- index options [SQL Server]
+- MAXDOP index option
+- IGNORE_DUP_KEY option
+- ALLOW_PAGE_LOCKS option
+- ONLINE
 ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6cd0050887729a84dfa637ce86e51b5edcc8ee45
+ms.lasthandoff: 04/11/2017
+
 ---
-# インデックス オプションの設定
+# <a name="set-index-options"></a>インデックス オプションの設定
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] におけるインデックスのプロパティを、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して変更する方法について説明します。  
@@ -63,15 +67,15 @@ caps.handback.revision: 44
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### インデックスのプロパティをテーブル デザイナーで変更するには  
+#### <a name="to-modify-the-properties-of-an-index-in-table-designer"></a>インデックスのプロパティをテーブル デザイナーで変更するには  
   
 1.  オブジェクト エクスプローラーで、インデックスのプロパティの変更対象となるテーブルが格納されているデータベースをプラス記号をクリックして展開します。  
   
 2.  プラス記号をクリックして **[テーブル]** フォルダーを展開します。  
   
-3.  インデックスのプロパティを変更するテーブルを右クリックし、**[デザイン]** を選択します。  
+3.  インデックスのプロパティを変更するテーブルを右クリックし、 **[デザイン]**を選択します。  
   
-4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]** をクリックします。  
+4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]**をクリックします。  
   
 5.  変更するインデックスを選択します。 対応するプロパティがメイン グリッドに表示されます。  
   
@@ -79,9 +83,9 @@ caps.handback.revision: 44
   
 7.  **[閉じる]**をクリックします。  
   
-8.  **[ファイル]** メニューの [*table_name*** を保存**] を選びます。  
+8.  **[ファイル]** メニューの [ **table_name***を保存*] を選びます。  
   
-#### インデックスのプロパティをオブジェクト エクスプローラーで変更するには  
+#### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>インデックスのプロパティをオブジェクト エクスプローラーで変更するには  
   
 1.  オブジェクト エクスプローラーで、インデックスのプロパティの変更対象となるテーブルが格納されているデータベースをプラス記号をクリックして展開します。  
   
@@ -91,17 +95,17 @@ caps.handback.revision: 44
   
 4.  プラス記号をクリックして **[インデックス]** フォルダーを展開します。  
   
-5.  プロパティを変更するインデックスを右クリックし、**[プロパティ]** を選択します。  
+5.  プロパティを変更するインデックスを右クリックし、 **[プロパティ]**を選択します。  
   
 6.  **[ページの選択]**の **[オプション]**を選択します。  
   
 7.  該当するプロパティの設定を変更してインデックスをカスタマイズします。  
   
-8.  インデックス列の位置を追加、削除、または変更するには、[**インデックスのプロパティ -** *index_name*] ダイアログ ボックスの **[全般]** ページをクリックします。 詳細については、「 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)」をご覧ください。  
+8.  インデックス列の位置を追加、削除、または変更するには、 **インデックスのプロパティ -**  **全般** *全般* ページをクリックします。 詳細については、「 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)」をご覧ください。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### テーブル内のすべてのインデックスのプロパティを表示するには  
+#### <a name="to-see-the-properties-of-all-the-indexes-in-a-table"></a>テーブル内のすべてのインデックスのプロパティを表示するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -135,7 +139,7 @@ caps.handback.revision: 44
   
     ```  
   
-#### インデックスのプロパティを設定するには  
+#### <a name="to-set-the-properties-of-an-index"></a>インデックスのプロパティを設定するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -150,3 +154,4 @@ caps.handback.revision: 44
  詳細については、「[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。  
   
   
+

@@ -1,24 +1,28 @@
 ---
 title: "ポリシー カテゴリへのデータベースのサブスクライブまたはアンサブスクライブ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.groupsubscription.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.groupsubscription.f1
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56ad4058339f59a69409ef1c0319f9b41354823c
+ms.lasthandoff: 04/11/2017
+
 ---
-# ポリシー カテゴリへのデータベースのサブスクライブまたはアンサブスクライブ
+# <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>ポリシー カテゴリへのデータベースのサブスクライブまたはアンサブスクライブ
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、ポリシー カテゴリにデータベースをサブスクライブまたはアンサブスクライブする方法について説明します。  
   
  **このトピックの内容**  
@@ -42,13 +46,13 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### ポリシー カテゴリにデータベースをサブスクライブまたはアンサブスクライブするには  
+#### <a name="to-subscribe-or-unsubscribe-a-database-to-a-policy-category"></a>ポリシー カテゴリにデータベースをサブスクライブまたはアンサブスクライブするには  
   
 1.  **オブジェクト エクスプローラー**で、カテゴリのサブスクリプションを管理するデータベースが格納されているサーバーをプラス記号をクリックして展開します。  
   
 2.  プラス記号をクリックして **[データベース]** フォルダーを展開します。  
   
-3.  カテゴリのサブスクリプションを管理するデータベースを右クリックし、**[ポリシー]** をポイントし、**[カテゴリ]** をクリックします。  
+3.  カテゴリのサブスクリプションを管理するデータベースを右クリックし、 **[ポリシー]**をポイントし、 **[カテゴリ]**をクリックします。  
   
      **[カテゴリ]** ダイアログ ボックスでは、次のオプションを使用できます。  
   
@@ -73,13 +77,13 @@ caps.handback.revision: 20
      **履歴**  
      ログ ファイル ビューアーを開いてポリシー履歴を確認するには、[履歴の表示] ハイパーリンクをクリックします。  
   
-4.  ポリシー ベースの管理カテゴリにサブスクライブするには、**[サブスクライブ済み]** 列の下のカテゴリのチェック ボックスをオンにします。 カテゴリからアンサブスクライブするには、チェック ボックスをオフにします。  
+4.  ポリシー ベースの管理カテゴリにサブスクライブするには、 **[サブスクライブ済み]** 列の下のカテゴリのチェック ボックスをオンにします。 カテゴリからアンサブスクライブするには、チェック ボックスをオフにします。  
   
 5.  完了したら、 **[OK]**をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### ポリシー カテゴリにデータベースをサブスクライブするには  
+#### <a name="to-subscribe-a-database-to-a-policy-category"></a>ポリシー カテゴリにデータベースをサブスクライブするには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -96,7 +100,7 @@ caps.handback.revision: 20
   
  詳細については、「[sp_syspolicy_subscribe_to_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-subscribe-to-policy-category-transact-sql.md)」を参照してください。  
   
-#### ポリシー カテゴリからデータベースをアンサブスクライブするには  
+#### <a name="to-unsubscribe-a-database-to-a-policy-category"></a>ポリシー カテゴリからデータベースをアンサブスクライブするには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

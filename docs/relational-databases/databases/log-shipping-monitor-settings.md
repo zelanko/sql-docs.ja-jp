@@ -1,29 +1,33 @@
 ---
 title: "[ログ配布モニターの設定] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.settings.monitor.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.logshipping.settings.monitor.f1
 ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e93dde0e413ab7f7303d0f8404cdc4311edf8aa7
+ms.lasthandoff: 04/11/2017
+
 ---
-# [ログ配布モニターの設定]
+# <a name="log-shipping-monitor-settings"></a>[ログ配布モニターの設定]
   このページを使用すると、ログ配布監視サーバーのプロパティを構成および変更できます。  
   
  ログ配布の概念については、「[ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[監視サーバー インスタンス]**  
  ログ配布構成の監視サーバーとして現在構成されているサーバー インスタンスの名前を表示します。  
   

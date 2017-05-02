@@ -1,38 +1,42 @@
 ---
 title: "ミラー化バックアップ メディア セット (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "復旧 [SQL Server], ミラー化バックアップ"
-  - "ミラー化メディア セット [SQL Server]"
-  - "バックアップ ミラー [SQL Server]"
-  - "重複バックアップ コピー"
-  - "交換可能なバックアップ コピー [SQL Server]"
-  - "メディア セット [SQL Server], ミラー化バックアップ メディア セット"
-  - "バックアップ メディア [SQL Server], ミラー化メディア"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recovery [SQL Server], mirrored backups
+- mirrored media sets [SQL Server]
+- backup mirrors [SQL Server]
+- duplicate backup copies
+- interchangeable backup copies [SQL Server]
+- media sets [SQL Server], mirrored backup media sets
+- backup media [SQL Server], mirrored media
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c6bd8f73f549b7869f30576a03f9d90e874398a
+ms.lasthandoff: 04/11/2017
+
 ---
-# ミラー化バックアップ メディア セット (SQL Server)
+# <a name="mirrored-backup-media-sets-sql-server"></a>ミラー化バックアップ メディア セット (SQL Server)
     
 > [!NOTE]  
->  ミラー化バックアップ メディア セットは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Enterprise Edition のみでサポートされています。  
+>  ミラー化バックアップ メディア セットは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の Enterprise Edition のみでサポートされています。  
   
  メディア セットをミラー化すると、バックアップ デバイスの誤動作の影響が小さくなるため、バックアップの信頼性が向上します。 バックアップはデータ損失に対する最後の防護策なので、このような誤動作は非常に深刻です。 データベースが大きくなるにつれて、バックアップ デバイスやメディアの障害によってバックアップを復元できなくなる可能性が高くなります。 バックアップ メディアをミラー化すると、冗長性によってバックアップの信頼性が向上します。  
   
 > [!NOTE]  
->  メディア セットの概要については、「[メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)」をご覧ください。  
+>  メディア セットの概要については、「 [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)の Enterprise Edition のみでサポートされています。  
   
  **このトピックの内容**  
   
@@ -43,13 +47,13 @@ caps.handback.revision: 38
 -   [関連タスク](#RelatedTasks)  
   
 ##  <a name="OverviewofMirroredMediaSets"></a> ミラー化メディア セットの概要  
- メディアのミラー化は、メディア セットのプロパティです。 *ミラー化メディア セット*は、メディア セットの複数のコピー (*ミラー*) で構成されています。 メディア セットには、1 つ以上のメディア ファミリが含まれており、各メディア ファミリが 1 つのバックアップ デバイスに対応します。 たとえば、BACKUP DATABASE ステートメントの TO 句に 3 つのデバイスを指定する場合、BACKUP によって 1 つのデバイスにつき 3 つのメディア ファミリにデータが分散されます。 メディア ファミリとミラーの数は、メディア セットを作成するときに定義します (BACKUP DATABASE ステートメントで WITH FORMAT を指定します)。  
+ メディアのミラー化は、メディア セットのプロパティです。 *ミラー化メディア セット* は、メディア セットの複数のコピー (*ミラー*) で構成されています。 メディア セットには、1 つ以上のメディア ファミリが含まれており、各メディア ファミリが 1 つのバックアップ デバイスに対応します。 たとえば、BACKUP DATABASE ステートメントの TO 句に 3 つのデバイスを指定する場合、BACKUP によって 1 つのデバイスにつき 3 つのメディア ファミリにデータが分散されます。 メディア ファミリとミラーの数は、メディア セットを作成するときに定義します (BACKUP DATABASE ステートメントで WITH FORMAT を指定します)。  
   
  ミラー化メディア セットには、2 ～ 4 つのミラーがあります。 各ミラーには、メディア セットのすべてのメディア ファミリが含まれます。 ミラーには、メディア ファミリ 1 つにつき、同数のデバイスが必要です。 各ミラーには、メディア ファミリごとに別のバックアップ デバイスが必要です。 たとえば、3 つのミラーを持つ 4 つのメディア ファミリで構成されるミラー化メディア セットには、12 台のバックアップ デバイスが必要です。 これらのデバイスはすべて同等であることが必要です。 たとえば、同じ製造元で同じモデル番号のテープ ドライブなどです。  
   
  次の図は、2 つのミラーを持つ 2 つのメディア ファミリで構成されるミラー化メディア セットの例を示しています。 各メディア ファミリには 3 つのメディア ボリュームがあり、ミラーごとに 1 回ずつバックアップされます。  
   
- ![ミラー化されたメディア セット:2 つのミラーから成る 2 つのファミリ](../../relational-databases/backup-restore/media/bnr-backup-media-mirror.gif "ミラー化されたメディア セット:2 つのミラーから成る 2 つのファミリ")  
+ ![ミラー化メディア セット: 2 つのミラーから成る 2 つのファミリ](../../relational-databases/backup-restore/media/bnr-backup-media-mirror.gif "ミラー化メディア セット: 2 つのミラーから成る 2 つのファミリ")  
   
  ミラーの対応するボリュームは、同じ内容です。 これにより、復元時にボリュームを交換できます。 たとえば、上の図では、テープ 2 の 3 番目のボリュームは、テープ 0 の 3 番目のボリュームと交換可能です。  
   
@@ -70,9 +74,9 @@ caps.handback.revision: 38
   
 -   [ミラー化メディア セットへのバックアップ &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [バックアップ中および復元中に発生する可能性があるメディア エラー &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
- [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)   
+ [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

@@ -1,26 +1,30 @@
 ---
 title: "ストアド プロシージャ (データベース エンジン) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ストアド プロシージャとしてのプログラムの格納"
-  - "ストアド プロシージャ [SQL Server], ストアド プロシージャについて"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- storing programs as stored procedures
+- stored procedures [SQL Server], about stored procedures
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14cb04aa946bed3cace30379ca2d78b3cd045b4b
+ms.lasthandoff: 04/11/2017
+
 ---
-# ストアド プロシージャ (データベース エンジン)
-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のストアド プロシージャは、1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) メソッドの参照のグループです。 プロシージャは、以下ができるために、他のプログラミング言語の構造に似ています。  
+# <a name="stored-procedures-database-engine"></a>ストアド プロシージャ (データベース エンジン)
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のストアド プロシージャは、1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) メソッドの参照のグループです。 プロシージャは、以下ができるために、他のプログラミング言語の構造に似ています。  
   
 -   入力パラメーターを受け取り、呼び出し元のプログラムに出力パラメーターの形式で複数の値を返す。  
   
@@ -92,6 +96,6 @@ caps.handback.revision: 35
 |ストアド プロシージャでパラメーターを使用する方法について説明します。|[パラメーター](../../relational-databases/stored-procedures/parameters.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [CLR ストアド プロシージャ](../Topic/CLR%20Stored%20Procedures.md)  
+ [CLR ストアド プロシージャ](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
   
   

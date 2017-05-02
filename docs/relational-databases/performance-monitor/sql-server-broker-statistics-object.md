@@ -1,31 +1,35 @@
 ---
 title: "SQL Server: Broker Statistics オブジェクト | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Broker Statistics"
-  - "Broker Statistics オブジェクト"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Broker Statistics
+- Broker Statistics object
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6f2372e2cc641919957f14145a1e7ff0c96bb74a
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server: Broker Statistics オブジェクト
-  SQLServer:Broker Statistics パフォーマンス オブジェクトには、[!INCLUDE[ssSB](../../includes/sssb-md.md)]のインスタンスに関する [!INCLUDE[ssDE](../../includes/ssde-md.md)] の一般的な情報を報告するパフォーマンス カウンターが含まれています。 次の表は、このオブジェクトに含まれているカウンターの一覧です。  
+# <a name="sql-server-broker-statistics-object"></a>SQL Server: Broker Statistics オブジェクト
+  SQLServer:Broker Statistics パフォーマンス オブジェクトには、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] のインスタンスに関する [!INCLUDE[ssDE](../../includes/ssde-md.md)]の一般的な情報を報告するパフォーマンス カウンターが含まれています。 次の表は、このオブジェクトに含まれているカウンターの一覧です。  
   
 |SQL Server Broker Statistics カウンター|説明|  
 |-------------------------------------------|-----------------|  
 |**Activation Errors Total**|[!INCLUDE[ssSB](../../includes/sssb-md.md)] アクティブ化ストアド プロシージャがエラーで終了した回数。|  
-|**Broker Transaction Rollbacks**|SEND や RECEIVE など [!INCLUDE[ssSB](../../includes/sssb-md.md)] に関連する DML ステートメントを含んでいるトランザクションのうち、ロールバックされたトランザクションの数。|  
+|**Broker Transaction Rollbacks**|SEND や RECEIVE など [!INCLUDE[ssSB](../../includes/sssb-md.md)]に関連する DML ステートメントを含んでいるトランザクションのうち、ロールバックされたトランザクションの数。|  
 |**Corrupted Messages Total**|インスタンスが受信した破損メッセージの数。|  
 |**Dequeued Transmission Msgs/sec**|1 秒あたりに [!INCLUDE[ssSB](../../includes/sssb-md.md)] 転送キューから削除されたメッセージの数。|  
 |**Dialog Timer Event Count**|ダイアログ プロトコル層内でアクティブなタイマーの行数。 この数はアクティブなダイアログの数と同じです。|  
@@ -62,8 +66,8 @@ caps.handback.revision: 32
 |**SQL SEND Total**|実行された [!INCLUDE[tsql](../../includes/tsql-md.md)] の SEND ステートメントの総数。|  
 |**SQL SENDs/sec**|1 秒あたりに実行された [!INCLUDE[tsql](../../includes/tsql-md.md)] の SEND ステートメントの数。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server Service Broker (SQL Server Service Broker)](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [リソースの利用状況の監視 &#40;システム モニター&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [リソースの利用状況の監視 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

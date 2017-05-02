@@ -1,24 +1,28 @@
 ---
 title: "デバイス コンテンツ (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.bnrdevicecontents.f1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.bnrdevicecontents.f1
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3a9d57f3c21ffc663d87d10eacaaca183d38ec9
+ms.lasthandoff: 04/11/2017
+
 ---
-# デバイス コンテンツ (SQL Server)
+# <a name="device-contents-sql-server"></a>デバイス コンテンツ (SQL Server)
   このダイアログ ボックスは、バックアップ情報の表示に使用します。 ここでは、デバイス、メディア、メディア セット、バックアップ セットの情報が得られます。  
   
  **SQL Server Management Studio を使用してバックアップ デバイスの内容を表示するには**  
@@ -27,7 +31,7 @@ caps.handback.revision: 31
   
 -   [論理バックアップ デバイスのプロパティと内容の表示 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[メディア]**  
  バックアップ情報が保存されるディスク、またはテープのセットです。  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 31
 |**[ユーザー名]**|バックアップ操作を実行したユーザーの名前。|  
 |**[有効期限]**|バックアップ セットの期限が切れる日付と時刻。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   
   

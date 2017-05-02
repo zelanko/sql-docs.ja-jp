@@ -1,29 +1,33 @@
 ---
 title: "DML トリガー | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "トリガー [SQL Server], トリガーについて"
-  - "DML トリガー, DML トリガーについて"
-  - "トリガー [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- triggers [SQL Server], about triggers
+- DML triggers, about DML triggers
+- triggers [SQL Server]
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 49e88050bea0405d8801a5b53faafcb644a6b62d
+ms.lasthandoff: 04/11/2017
+
 ---
-# DML トリガー
+# <a name="dml-triggers"></a>DML トリガー
   DML トリガーとは、そこに定義されているテーブルまたはビューに影響するようなデータ操作言語 (DML) イベントが発生すると自動的に実行される特殊なストアド プロシージャです。 DML イベントには、INSERT、UPDATE、または DELETE のステートメントが含まれます。 DML トリガーを使用して、ビジネス ルールやデータの整合性を強制的に適用したり、他のテーブルを照会したりできるほか、複雑な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用することもできます。 トリガーとそのトリガーを起動するステートメントは単一のトランザクションとして扱われ、このトランザクションはトリガー内からロールバックできます。 ディスクの空き容量の不足などの重大なエラーが検出されると、このトランザクション全体が自動的にロールバックされます。  
   
-## DML トリガーの利点  
+## <a name="dml-trigger-benefits"></a>DML トリガーの利点  
  エンティティの整合性またはドメインの整合性を適用できるという点で、DML トリガーは制約に似ています。 一般に、PRIMARY KEY 制約と UNIQUE 制約の一部であるインデックス、またはこれらの制約とは無関係に作成されたインデックスの最下位レベルで、エンティティの整合性を常に確保する必要があります。 ドメインの整合性の確保には CHECK 制約を使用し、参照整合性 (RI) の確保には FOREIGN KEY 制約を使用する必要があります。 DML トリガーは、制約でサポートされている機能がアプリケーションの機能要件を満たすことができない場合に最も役立ちます。  
   
  以下に DML トリガーと制約を比較し、どのような場合に DML トリガーが有利となるかを示します。  
@@ -44,7 +48,7 @@ caps.handback.revision: 27
   
 -   トリガー テーブルに制約が存在する場合、これらの制約は、INSTEAD OF トリガーが実行されてから、AFTER トリガーが実行されるまでの間にチェックされます。 制約違反の場合は、INSTEAD OF トリガー動作がロールバックされ、AFTER トリガーは実行されません。  
   
-## DML トリガーの種類  
+## <a name="types-of-dml-triggers"></a>DML トリガーの種類  
  AFTER トリガー  
  AFTER トリガーは、INSERT、UPDATE、MERGE、または DELETE ステートメントの動作が実行された後に実行されます。 制約違反が発生した場合は、AFTER トリガーは実行されません。したがってこのトリガーは、制約違反を防ぐための処理には使用できません。 MERGE ステートメントで指定されたすべての INSERT、UPDATE、または DELETE 操作について、対応するトリガーが各 DML 操作に対して実行されます。  
   
@@ -58,15 +62,15 @@ caps.handback.revision: 27
 |適用範囲|テーブル|テーブルとビュー|  
 |テーブルまたはビューごとの数|トリガーを起動する動作 (UPDATE、DELETE、および INSERT) ごとに複数指定できます。|トリガーを起動する動作 (UPDATE、DELETE、および INSERT) ごとに 1 つしか指定できません。|  
 |連鎖参照|制限はありません。|INSTEAD OF UPDATE トリガーと DELETE トリガーは、参照整合性制約の連鎖の対象となっているテーブルでは許可されません。|  
-|実行|次の処理の後<br /><br /> 制約処理<br /><br /> 宣言参照動作<br /><br /> **inserted** テーブルと **deleted** テーブルの作成<br /><br /> トリガーを起動する動作|次の処理の前: 制約処理<br /><br /> 次の処理の代わり: トリガーを起動する動作<br /><br /> 次の処理の後: **inserted** テーブルと **deleted** テーブルの作成|  
+|実行|次の処理の後<br /><br /> 制約処理<br /><br /> 宣言参照動作<br /><br /> **inserted** テーブルと **deleted** テーブルの作成<br /><br /> トリガーを起動する動作|次の処理の前: 制約処理<br /><br /> 次の処理の代わり: トリガーを起動する動作<br /><br /> 次の処理の後:  **inserted** テーブルと **deleted** テーブルの作成|  
 |実行の順序|最初と最後の実行内容を指定できます。|適用なし|  
-|**inserted** テーブルと **deleted** テーブル内の **varchar(max)**、**nvarchar(max)**、および **varbinary(max)** の列参照|Allowed|Allowed|  
-|**inserted** テーブルと **deleted** テーブル内の **text**、**ntext**、および **image** の列参照|使用不可|Allowed|  
+|**inserted**テーブルと **deleted**テーブル内の **varchar(max)** 、 **nvarchar(max)** 、および **varbinary(max)** の列参照|Allowed|Allowed|  
+|**inserted**テーブルと **deleted**テーブル内の **text** 、 **ntext** 、および **image** の列参照|使用不可|Allowed|  
   
  CLR トリガー  
- CLR トリガーは、AFTER トリガーと INSTEAD OF トリガーのいずれかにすることができます。 また、CLR トリガーは DDL トリガーにすることもできます。 CLR トリガーは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを実行するのではなく、.NET Framework で作成され、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でアップロードされたアセンブリのメンバーであるマネージ コードに記述されている、1 つ以上のメソッドを実行します。  
+ CLR トリガーは、AFTER トリガーと INSTEAD OF トリガーのいずれかにすることができます。 また、CLR トリガーは DDL トリガーにすることもできます。 CLR トリガーは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを実行するのではなく、.NET Framework で作成され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でアップロードされたアセンブリのメンバーであるマネージ コードに記述されている、1 つ以上のメソッドを実行します。  
   
-## 関連タスク  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスク|トピック|  
 |----------|-----------|  
@@ -81,7 +85,7 @@ caps.handback.revision: 27
 |DML トリガーを削除または無効化する方法について説明します。|[DML トリガーの削除または無効化](../../relational-databases/triggers/delete-or-disable-dml-triggers.md)|  
 |トリガーのセキュリティを管理する方法について説明します。|[トリガーのセキュリティの管理](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

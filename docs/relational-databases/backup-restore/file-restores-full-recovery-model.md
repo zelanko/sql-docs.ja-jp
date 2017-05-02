@@ -1,31 +1,35 @@
 ---
 title: "ファイル復元 (完全復旧モデル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ファイル復元 [SQL Server]"
-  - "完全復旧モデル [SQL Server]、復元の実行"
-  - "ファイルの復元 [SQL Server]、Transact-SQL の復元シーケンス"
-  - "ファイルの復元 [SQL Server]"
-  - "ファイル復元 [SQL Server]、完全復旧モデル"
-  - "ファイルの復元 [SQL Server]、完全復旧モデル"
-  - "Transact-SQL の復元シーケンス"
-  - "ファイル復元 [SQL Server]、Transact-SQL の復元シーケンス"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- file restores [SQL Server]
+- full recovery model [SQL Server], performing restores
+- restoring files [SQL Server], Transact-SQL restore sequence
+- restoring files [SQL Server]
+- file restores [SQL Server], full recovery model
+- restoring files [SQL Server], full recovery model
+- Transact-SQL restore sequence
+- file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 686d6473f247f5b71764c1b4529bdf30c2f2efc1
+ms.lasthandoff: 04/11/2017
+
 ---
-# ファイル復元 (完全復旧モデル)
+# <a name="file-restores-full-recovery-model"></a>ファイル復元 (完全復旧モデル)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   このトピックは、複数のファイルまたはファイル グループが含まれている、完全復旧モデルまたは一括読み込み復旧モデルを使用するデータベースだけに関連しています。  
@@ -48,20 +52,15 @@ caps.handback.revision: 41
   
      *オンライン ファイル復元*では、復元中にデータベースがオンラインであれば、データベースをオンラインにしたままファイル復元を実行できます。 ただし、復元操作時は、ファイルが復元される各ファイル グループがオフラインになります。 オフライン ファイル グループ内のすべてのファイルが復旧されると、そのファイル グループは自動的にオンラインになります。  
   
-     オンライン ページおよびファイルの復元に対するサポートの詳細については、「[SQL Server 2016 の各エディションでサポートされる機能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)」を参照してください。 オンライン復元の詳細については、「[オンライン復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)」を参照してください。  
+     オンライン ページおよびファイルの復元に対するサポートの詳細については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 の各エディションとサポートされる機能) を参照してください。 オンライン復元の詳細については、「[Online Restore (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)」 (オンライン復元 (SQL Server)) を参照してください。
   
     > [!TIP]  
-    >  ファイル復元のためにデータベースをオフラインにする場合は、[ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) ステートメントの ALTER DATABASE *database_name* SET OFFLINE を実行することにより、データベースをオフラインにしてから復元シーケンスを開始します。  
+    >  ファイル復元のためにデータベースをオフラインにする場合は、 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) ステートメントの ALTER DATABASE *database_name* SET OFFLINE を実行することにより、データベースをオフラインにしてから復元シーケンスを開始します。  
   
- **このトピックの内容**  
-  
--   [破損したファイルのファイル バックアップからの復元](#Overview)  
-  
--   [関連タスク](#RelatedTasks)  
   
 ##  <a name="Overview"></a> 破損したファイルのファイル バックアップからの復元  
   
-1.  1 つ以上の破損したファイルを復元するには、[ログ末尾のバックアップ](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)を作成してください。  
+1.  1 つ以上の破損したファイルを復元するには、 [ログ末尾のバックアップ](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)を作成してください。  
   
      ログが破損したためにログ末尾のバックアップを作成できない場合は、データベース全体を復元する必要があります。  
   
@@ -83,12 +82,12 @@ caps.handback.revision: 41
 > [!NOTE]  
 >  ファイル バックアップを使用して、データベースを以前の時点の状態に復元することもできます。 この操作を行うには、ファイル バックアップの完全なセットを復元してから、一番最近に復元されたファイル バックアップの後の時点までのトランザクション ログ バックアップを順番に復元する必要があります。 特定の時点への復旧の詳細については、「[SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。  
   
-## オフラインのファイル復元用の Transact-SQL 復元シーケンス (完全復旧モデル)  
+## <a name="transact-sql-restore-sequence-for-an-offline-file-restore-full-recovery-model"></a>オフラインのファイル復元用の Transact-SQL 復元シーケンス (完全復旧モデル)  
  ファイル復元シナリオは、適切なデータをコピーし、ロールフォワードして、復旧する単一の復元シーケンスで構成されます。  
   
- ここでは、ファイル復元シーケンスに必要な [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) オプションを示しています。 説明の目的に関係しない構文や詳細は、省略しています。  
+ ここでは、ファイル復元シーケンスに必要な [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) オプションを示しています。 説明の目的に関係しない構文や詳細は、省略しています。  
   
- このサンプル復元シーケンスでは、WITH NORECOVERY を使用した 2 つのセカンダリ ファイル (`A` と `B`) のオフライン復元を示します。 次に、NORECOVERY を使用して 2 つのログ バックアップを適用してから、WITH RECOVERY を使用してログ末尾のバックアップを復元します。  
+ このサンプル復元シーケンスでは、WITH NORECOVERY を使用した 2 つのセカンダリ ファイル ( `A` と `B`) のオフライン復元を示します。 次に、NORECOVERY を使用して 2 つのログ バックアップを適用してから、WITH RECOVERY を使用してログ末尾のバックアップを復元します。  
   
 > [!NOTE]  
 >  このサンプル復元シーケンスでは、まず、ファイルをオフラインにしてからログ末尾のバックアップを作成します。  
@@ -117,7 +116,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
    WITH RECOVERY;  
 ```  
   
-## 使用例  
+## <a name="examples"></a>使用例  
   
 -   [例: 読み取り/書き込みファイルのオンライン復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
@@ -134,15 +133,14 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A> (SMO)  
   
- [&#91;先頭に戻る&#93;](#Top)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [バックアップと復元: 相互運用性と共存 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [ファイルの完全バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   
  [バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [復元と復旧の概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [データベースの全体復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   

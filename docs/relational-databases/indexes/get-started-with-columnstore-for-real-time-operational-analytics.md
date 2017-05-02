@@ -1,28 +1,32 @@
 ---
 title: "列ストアを使用したリアルタイム運用分析の概要 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 caps.latest.revision: 40
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e032da9604178eb356de35448eb5d53a9d663214
+ms.lasthandoff: 04/11/2017
+
 ---
-# 列ストアを使用したリアルタイム運用分析の概要
+# <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>列ストアを使用したリアルタイム運用分析の概要
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   SQL Server 2016 にはリアルタイム運用分析が導入されており、同じデータベース テーブル上で分析ワークロードと OLTP ワークロードの両方を同時に実行できます。 分析をリアルタイムで実行するだけでなく、ETL やデータ ウェアハウスも不要になります。  
   
-## 説明されているリアルタイム運用分析  
+## <a name="real-time-operational-analytics-explained"></a>説明されているリアルタイム運用分析  
  従来、企業は運用 (OLTP) ワークロードと分析ワークロード用に別個のシステムを保有していました。 このようなシステムでは、抽出、変換、読み込み (ETL) ジョブにより、データを運用ストアから分析ストアに定期的に移動します。 分析データは通常、分析クエリを専門的に実行するデータ ウェアハウスやデータ マートに格納されています。 今まではこのソリューションが標準でしたが、主に 3 つの課題を抱えています。  
   
 -   **複雑さ。** ETL の実装には、修正された行を読み込むだけでも大量のコーディングを必要とする場合があります。 変更された行を識別するのが困難なこともあります。  
@@ -31,7 +35,7 @@ caps.handback.revision: 39
   
 -   **データ待機時間。** ETL の実装により、分析の実行に時間遅延が発生します。 たとえば、ETL ジョブを各営業日の最後に実行する場合、分析クエリは少なくとも 1 日前のデータに対して実行されます。 多くの企業にとって、ビジネスの基盤はリアルタイムでデータを分析することにあるため、この遅延は許容されません。 たとえば、不正行為の検出には運用データに対するリアルタイムの分析が必要です。  
   
- ![real-time operational analytics overview](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "real-time operational analytics overview")  
+ ![リアルタイム運用分析の概要](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "リアルタイム運用分析の概要")  
   
  リアルタイム運用分析は、これらの課題を解決します。   
         分析ワークロードと OLTP ワークロードの実行の基になるテーブルが同じであるため、時間遅延は発生しません。   リアルタイム分析を使用できるシナリオでは、ETL が不要になり、別個のデータ ウェアハウスを購入して維持する必要がなくなるため、コストと複雑さが大幅に軽減されます。  
@@ -41,7 +45,7 @@ caps.handback.revision: 39
   
  リアルタイム分析は、行ストア テーブル上の更新可能な列ストア インデックスを使用します。  列ストア インデックスは、OLTP ワークロードと分析ワークロードが同じデータの別のコピーに対して実行されるように、データのコピーを管理します。 これにより、両方のワークロードを同時に実行してもパフォーマンス上の影響を最小限に抑えます。  SQL Server はインデックスの変更を自動的に管理するため、OLTP の変更が分析のために常に最新の状態に保たれます。 この設計により、最新のデータに対するリアルタイム分析を実現しています。 これは、ディスク ベース テーブルとメモリ最適化テーブルの両方で機能します。  
   
-## 作業開始の例  
+## <a name="get-started-example"></a>作業開始の例  
  リアルタイム分析を開始するには、次の手順に従います。  
   
 1.  分析に必要なデータを含む、運用スキーマ内のテーブルを識別します。  
@@ -85,7 +89,7 @@ caps.handback.revision: 39
   
  アプリケーションに変更を加えることがなく、リアルタイム運用分析を実行する準備が整いました。  分析クエリは列ストア インデックスに対して実行され、OLTP 操作は OLTP BTree インデックスに対して継続的に実行されます。 OLTP ワークロードは引き続き実行されますが、列ストア インデックスの管理に追加のオーバーヘッドが発生します。 次のセクションでパフォーマンスの最適化について説明します。  
   
-## ブログ記事  
+## <a name="blog-posts"></a>ブログ記事  
  リアルタイム運用分析については、Sunil Agarwal のブログ記事をご覧ください。  パフォーマンス ヒントのセクションが理解しやすくなるように、まずこちらのブログ記事を読むことをお勧めします。  
   
 -   [リアルタイム運用分析のビジネス ケース](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)  
@@ -108,7 +112,7 @@ caps.handback.revision: 39
   
 -   [列ストア インデックスと行グループのマージ ポリシー](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
-## パフォーマンス ヒント 1: フィルター処理されたインデックスを使用したクエリ パフォーマンスの改善  
+## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>パフォーマンス ヒント 1: フィルター処理されたインデックスを使用したクエリ パフォーマンスの改善  
  リアルタイム分析の運用を実行すると、OLTP ワークロードのパフォーマンスに影響を及ぼすことがあります。  この影響は最小限に抑える必要があります。 次の例では、分析をリアルタイムで実行しつつ、フィルター処理されたインデックスを使用してトランザクション ワークロード上の非クラスター化列ストア インデックスの影響を最小限に抑える方法を示します。  
   
  運用ワークロード上で非クラスター化列ストア インデックスを管理するために必要なオーバーヘッドを最小限に抑えるには、フィルター処理条件を使用して *ウォーム* データ (緩やかに変化するデータ) 対してのみ非クラスター化列ストア インデックスを作成します。 たとえば、注文管理アプリケーションの場合、既に出荷されている注文に対して非クラスター化列ストア インデックスを作成できます。 注文が出荷された後はほとんど変化しないため、ウォーム データと捉えることができます。 フィルター処理されたインデックスを使用すると、非クラスター化列ストア インデックスのデータに必要な更新プログラムの数が少なくなるため、トランザクション ワークロードへの影響が少なくなります。  
@@ -118,10 +122,10 @@ caps.handback.revision: 39
 > [!NOTE]  
 >  フィルター処理された非クラスター化列ストア インデックスは、ディスク ベースのテーブルに対してのみサポートされます。 メモリ最適化テーブルではサポートされていません。  
   
-### 例 A: BTree インデックスからホット データ、列ストア インデックスからウォーム データにアクセスする  
+### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>例 A: BTree インデックスからホット データ、列ストア インデックスからウォーム データにアクセスする  
  この例では、フィルター処理条件 (accountkey > 0) を使用して、列ストア インデックスに含まれる行を確立します。 目標は、フィルター処理条件と後続のクエリを設計し、頻繁に変化する BTree インデックスからの「ホット」データにアクセスする、およびより安定した列ストア インデックスからの「ウォーム」データにアクセスすることです。  
   
- ![Combined indexes for warm and hot data](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Combined indexes for warm and hot data")  
+ ![ウォーム データとホット データの結合インデックス](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "ウォーム データとホット データの結合インデックス")  
   
 > [!NOTE]  
 >  クエリ オプティマイザーはクエリ プランの列ストア インデックスを考慮しますが、常に選択するわけではありません。 クエリ オプティマイザーがフィルター処理された列ストア インデックスを選択すると、列ストア インデックスからの行とフィルター処理条件を満たしていない行を透過的に結合され、リアルタイム分析を実現します。 これは、通常のフィルター処理された非クラスター インデックスとは異なり、インデックスに存在する行に限定されたクエリでのみ使用できます。  
@@ -164,14 +168,14 @@ Group By customername
   
  分析クエリは、次のクエリ プランで実行されます。 フィルター処理条件を満たしていない行には、クラスター化 BTree インデックスを通じてアクセスされます。  
   
- ![Query plan](../../relational-databases/indexes/media/query-plan-columnstore.png "Query plan")  
+ ![クエリ プラン](../../relational-databases/indexes/media/query-plan-columnstore.png "クエリ プラン")  
   
-  [フィルター処理された非クラスター化列ストア インデックス](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)の詳細については、ブログを参照してください。  
+ [フィルター処理された非クラスター化列ストア インデックス](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)の詳細については、ブログを参照してください。  
   
-## パフォーマンス ヒント 2: AlwaysOn 読み取り可能セカンダリに対する分析の負荷を軽減する  
+## <a name="performance-tip-2-offload-analytics-to-always-on-readable-secondary"></a>パフォーマンス ヒント 2: AlwaysOn 読み取り可能セカンダリに対する分析の負荷を軽減する  
  列ストア インデックスのメンテナンスはフィルター処理された列ストア インデックスを使用して最小限に抑えることはできますが、それでも分析クエリには多大なコンピューティング リソース (CPU、IO、メモリ) が必要であり、運用ワークロードのパフォーマンスに影響します。 ほとんどのミッション クリティカルなワークロードについては、AlwaysOn 構成を使用することをお勧めします。 この構成では、負荷を読み取り可能セカンダリにオフロードすることで、実行中の分析の影響を除去できます。  
   
-## パフォーマンス ヒント 3: ホット データを DELTA 行グループに保持することでインデックスの断片化を削減する  
+## <a name="performance-tip-3-reducing-index-fragmentation-by-keeping-hot-data-in-delta-rowgroups"></a>パフォーマンス ヒント 3: ホット データを DELTA 行グループに保持することでインデックスの断片化を削減する  
  列ストア インデックスのあるテーブルは、圧縮された行をワークロードが更新/削除する場合に、(削除された行によって) 大幅に断片化されることがあります。 断片化された列ストア インデックスは、メモリと記憶域の非効率的な使用につながります。 リソースの非効率的な使用だけでなく、余分な IO と結果セットから削除された行をフィルター処理する必要があるため、分析クエリのパフォーマンスにも悪影響を及ぼします。  
   
  削除された行は、REORGANIZE コマンドを使用してインデックスのデフラグを実行するか、テーブル全体または影響を受けているパーティションの列ストア インデックスを再構築するまで、物理的には削除されません。 REORGANIZE とインデックスの REBUILD は高コストな操作であり、ワークロードに使用されるリソースを取り除きます。 さらに、行の圧縮が早すぎる場合は、更新により何度も再圧縮する必要性が出てくるため、無駄な圧縮によるオーバーヘッドにつながる可能性があります。  
@@ -194,11 +198,11 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 ;  
 ```  
   
-  [圧縮遅延](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)の詳細については、ブログを参照してください。  
+ [圧縮遅延](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)の詳細については、ブログを参照してください。  
   
  推奨されているベスト プラクティスを次に示します。  
   
--   **挿入/クエリ ワークロード:** ワークロードで主にデータを挿入してクエリを実行する場合、COMPRESSION_DELAY オプションは既定の 0 のままにすることをお勧めします。 単一の DELTA 行グループに 100 万行が挿入されると、新しく挿入された行が圧縮されます。  
+-   **挿入/クエリ ワークロード:**ワークロードで主にデータを挿入してクエリを実行する場合、COMPRESSION_DELAY オプションは既定の 0 のままにすることをお勧めします。 単一の DELTA 行グループに 100 万行が挿入されると、新しく挿入された行が圧縮されます。  
     このようなワークロードの例としては、(a) 従来の DW ワークロード (b) クリック ストリーム分析 (Web アプリケーションのクリック パターンの分析) が挙げられます。  
   
 -   **OLTP ワークロード:** ワークロードに大量の DML (更新、削除、挿入が混在) がある場合、DMV の sys. dm_db_column_store_row_group_physical_stats を分析することで列ストア インデックスの断片化が見られることがあります。 10% を上回る行が最近圧縮された行グループで削除済みとマークされている場合、行を圧縮できるタイミングで COMPRESSION_DELAY オプションを使用して時間遅延を追加できます。 たとえば、ワークロードで新しく挿入された行が 60 分間「ホット」な状態にある (複数回更新される) 場合は、COMPRESSION_DELAY を 60 にすることをお勧めします。  
@@ -218,12 +222,12 @@ ORDER BY created_time DESC
   
  圧縮された行グループで削除された行の数が 20% を超える場合、それより前の行グループを 5% 以下のバリエーション (コールド グループと呼ばれます) で平坦化することで、COMPRESSION_DELAY = (youngest_rowgroup_created_time –  current_time) に設定します。 このアプローチは、安定性が高く比較的同種のワークロードに最適です。  
   
-## 参照  
- [列ストア インデックス ガイド](../Topic/Columnstore%20Indexes%20Guide.md)   
- [列ストア インデックス データの読み込み](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [列ストア インデックスのバージョン管理機能の概要](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
+## <a name="see-also"></a>参照  
+ [列ストア インデックス ガイド](../../relational-databases/indexes/columnstore-indexes-overview.md)   
+ [列ストア インデックス データの読み込み](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [列ストア インデックスのクエリ パフォーマンス](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
- [データ ウェアハウスの列ストア インデックス](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
+ [データ ウェアハウスの列ストア インデックス](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
  [列ストア インデックスの最適化](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

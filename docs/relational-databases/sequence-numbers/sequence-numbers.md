@@ -1,37 +1,41 @@
 ---
 title: "シーケンス番号 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "シーケンス番号オブジェクト, 概要"
-  - "シーケンス [データベース エンジン]"
-  - "オート ナンバー, シーケンス"
-  - "シーケンス番号 [SQL Server]"
-  - "シーケンス番号オブジェクト"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sequence number object, overview
+- sequence [Database Engine]
+- autonumbers, sequences
+- sequence numbers [SQL Server]
+- sequence number object
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be2100277326fafec2dd32609b977de0f72cb9b4
+ms.lasthandoff: 04/11/2017
+
 ---
-# シーケンス番号
+# <a name="sequence-numbers"></a>シーケンス番号
   シーケンスは、シーケンスが作成された仕様に従って数値のシーケンスを生成するユーザー定義のスキーマ バインド オブジェクトです。 数値のシーケンスは、定義された間隔で昇順または降順に生成され、要求に応じて繰り返されます。 ID 列とは異なり、シーケンスはテーブルには関連付けられていません。 アプリケーションは、シーケンス オブジェクトを参照して、次の値を受け取ります。 シーケンスとテーブルの関係は、アプリケーションによって制御されます。 ユーザー アプリケーションは、シーケンス オブジェクトを参照し、複数の行およびテーブルにわたって値キーを調整できます。  
   
- シーケンスは、テーブルとは別に、**CREATE SEQUENCE** ステートメントを使用して作成されます。 オプションを使用することにより、増分、最大値、最小値、始点、自動再開機能、およびパフォーマンスを向上させるためのキャッシュ動作を制御できます。 オプションの詳細については、[「CREATE SEQUENCE」](../../t-sql/statements/create-sequence-transact-sql.md)を参照してください。  
+ シーケンスは、テーブルとは別に、 **CREATE SEQUENCE** ステートメントを使用して作成されます。 オプションを使用することにより、増分、最大値、最小値、始点、自動再開機能、およびパフォーマンスを向上させるためのキャッシュ動作を制御できます。 オプションの詳細については、 [「CREATE SEQUENCE」](../../t-sql/statements/create-sequence-transact-sql.md)を参照してください。  
   
- 行の挿入時に生成される ID 列値とは異なり、アプリケーションは、[NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md) 関数を呼び出すことにより、行を挿入する前に次のシーケンス番号を取得できます。 番号がテーブルに挿入されない場合でも、シーケンス番号は、NEXT VALUE FOR が呼び出されたときに割り当てられます。 NEXT VALUE FOR 関数は、テーブル定義内の列の既定値として使用できます。 一度に複数のシーケンス番号の範囲を取得するには、[sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) を使用します。  
+ 行の挿入時に生成される ID 列値とは異なり、アプリケーションは、 [NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md) 関数を呼び出すことにより、行を挿入する前に次のシーケンス番号を取得できます。 番号がテーブルに挿入されない場合でも、シーケンス番号は、NEXT VALUE FOR が呼び出されたときに割り当てられます。 NEXT VALUE FOR 関数は、テーブル定義内の列の既定値として使用できます。 一度に複数のシーケンス番号の範囲を取得するには、 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) を使用します。  
   
- シーケンスは、任意の整数データ型として定義できます。 シーケンスのデータ型を指定しなかった場合、既定で **bigint** 型が使用されます。  
+ シーケンスは、任意の整数データ型として定義できます。 シーケンスのデータ型を指定しなかった場合、既定で **bigint**型が使用されます。  
   
-## シーケンスの使用  
+## <a name="using-sequences"></a>シーケンスの使用  
  シーケンスは、次のシナリオで ID 列の代わりに使用します。  
   
 -   テーブルへの挿入を行う前に、アプリケーションが数値を必要とする。  
@@ -46,16 +50,16 @@ caps.handback.revision: 31
   
 -   増分値など、シーケンスの仕様を変更する必要がある。  
   
-## 制限事項  
+## <a name="limitations"></a>制限事項  
  値を変更できない ID 列とは異なり、シーケンス値はテーブルへの挿入後に自動的に保護されません。 シーケンス値が変更されるのを防止するには、テーブルで更新トリガーを使用して、変更をロールバックします。  
   
  シーケンス値に対して、一意性は自動的には適用されません。 シーケンス値を再利用する機能は仕様です。 テーブルのシーケンス値が一意の値になる必要がある場合は、列に一意なインデックスを作成します。 テーブルのグループ全体でテーブルのシーケンス値が一意になる必要がある場合は、更新ステートメントやシーケンス番号の循環によって発生する重複を防ぐためのトリガーを作成します。  
   
  シーケンス オブジェクトは、定義に従って番号を生成しますが、その番号がどのように使用されるかについては制御しません。 トランザクションがロールバックされたとき、シーケンス オブジェクトが複数のテーブルで共有されているとき、またはテーブルのシーケンス番号を使用することなくシーケンス番号が割り当てられたときは、非連続的なシーケンス番号がテーブルに挿入される可能性があります。 CACHE オプションを使用してシーケンス番号を作成する際に予期しないシャットダウン (電源障害など) が発生すると、キャッシュ内のシーケンス番号が失われる可能性があります。  
   
- 1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント内で同じシーケンス ジェネレーターを指定する **NEXT VALUE FOR** 関数のインスタンスが複数ある場合、これらすべてのインスタンスは、その [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントによって処理される特定の行について同じ値を返します。 この動作は、ANSI 標準と一貫性があります。  
+ 1 つの **ステートメント内で同じシーケンス ジェネレーターを指定する** NEXT VALUE FOR [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数のインスタンスが複数ある場合、これらすべてのインスタンスは、その [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントによって処理される特定の行について同じ値を返します。 この動作は、ANSI 標準と一貫性があります。  
   
-## 一般的な使用方法  
+## <a name="typical-use"></a>一般的な使用方法  
  -2,147,483,648 ～ 2,147,483,647 まで 1 ずつ増分される整数のシーケンス番号を作成するには、次のステートメントを使用します。  
   
 ```  
@@ -74,13 +78,13 @@ CREATE SEQUENCE Schema.SequenceName
   
 ```  
   
-## シーケンスの管理  
- シーケンスの詳細については、「[sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)」を参照してください。  
+## <a name="managing-sequences"></a>シーケンスの管理  
+ シーケンスの詳細については、「 [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)」を参照してください。  
   
-## 使用例  
+## <a name="examples"></a>使用例  
  関連する例については、「[CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)」、「[NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)」、および「[sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)」を参照してください。  
   
-### A. 1 つのテーブルでシーケンス番号を使用する  
+### <a name="a-using-a-sequence-number-in-a-single-table"></a>A. 1 つのテーブルでシーケンス番号を使用する  
  次の例では、Test という名前のスキーマ、Orders という名前のテーブル、および CountBy1 という名前のシーケンスを作成した後、NEXT VALUE FOR 関数を使用してテーブルに行を挿入します。  
   
 ```  
@@ -125,8 +129,8 @@ GO
   
  `3        Brake   1`  
   
-### B. 行を挿入する前に NEXT VALUE FOR を呼び出す  
- 次の例では、例 A で作成した `Orders` テーブルを使用して、`@nextID` という名前の変数を宣言します。次に、NEXT VALUE FOR 関数を使用して、この変数を、次に使用できるシーケンス番号に設定します。 アプリケーションは、潜在的な注文の `OrderID` 番号を顧客に提示した後、注文を確認するなど、注文に関する処理を行うものと考えられます。 この処理にどれだけの時間がかかろうとも、またこの処理中に他の注文がいくつ追加されようとも、この接続によって元の番号は保持されます。 最後に、`INSERT` ステートメントによって注文が `Orders` テーブルに追加されます。  
+### <a name="b-calling-next-value-for-before-inserting-a-row"></a>B. 行を挿入する前に NEXT VALUE FOR を呼び出す  
+ 次の例では、例 A で作成した `Orders` テーブルを使用して、 `@nextID`という名前の変数を宣言します。次に、NEXT VALUE FOR 関数を使用して、この変数を、次に使用できるシーケンス番号に設定します。 アプリケーションは、潜在的な注文の `OrderID` 番号を顧客に提示した後、注文を確認するなど、注文に関する処理を行うものと考えられます。 この処理にどれだけの時間がかかろうとも、またこの処理中に他の注文がいくつ追加されようとも、この接続によって元の番号は保持されます。 最後に、 `INSERT` ステートメントによって注文が `Orders` テーブルに追加されます。  
   
 ```  
 DECLARE @NextID int ;  
@@ -138,8 +142,8 @@ GO
   
 ```  
   
-### C. 複数のテーブルでシーケンス番号を使用する  
- 次の例では、生産ラインの監視プロセスが、ワークショップ全体で発生するイベントの通知を受信すると仮定します。 各イベントは、単調に増加する一意な `EventID` 番号を受け取ります。 すべてのイベントは、同じ `EventID` シーケンス番号を使用します。したがって、すべてのイベントが集約されたレポートで、それぞれのイベントを一意に識別できます。 ただし、イベント データは、イベントの種類に応じて、3 つの異なるテーブルに格納されます。 このコード例では、`Audit` という名前のスキーマ、`EventCounter` という名前のシーケンス、およびそれぞれが `EventCounter` シーケンスを既定値として使用する 3 つのテーブルを作成します。 次に、3 つのテーブルに行を追加し、クエリを実行して結果を取得します。  
+### <a name="c-using-a-sequence-number-in-multiple-tables"></a>C. 複数のテーブルでシーケンス番号を使用する  
+ 次の例では、生産ラインの監視プロセスが、ワークショップ全体で発生するイベントの通知を受信すると仮定します。 各イベントは、単調に増加する一意な `EventID` 番号を受け取ります。 すべてのイベントは、同じ `EventID` シーケンス番号を使用します。したがって、すべてのイベントが集約されたレポートで、それぞれのイベントを一意に識別できます。 ただし、イベント データは、イベントの種類に応じて、3 つの異なるテーブルに格納されます。 このコード例では、 `Audit`という名前のスキーマ、 `EventCounter`という名前のシーケンス、およびそれぞれが `EventCounter` シーケンスを既定値として使用する 3 つのテーブルを作成します。 次に、3 つのテーブルに行を追加し、クエリを実行して結果を取得します。  
   
 ```  
 CREATE SCHEMA Audit ;  
@@ -228,7 +232,7 @@ GO
   
  `7        2009-11-02 15:00:51.180  Central feed in bypass mode.`  
   
-### D. 結果セットで循環するシーケンス番号を生成する  
+### <a name="d-generating-repeating-sequence-numbers-in-a-result-set"></a>D. 結果セットで循環するシーケンス番号を生成する  
  次の例は、シーケンス番号に関する 2 つの機能を示しています。これらは、サイクル処理の機能と、SELECT ステートメントで `NEXT VALUE FOR` を使用した機能です。  
   
 ```  
@@ -245,8 +249,8 @@ SELECT NEXT VALUE FOR CountBy5 AS SurveyGroup, Name FROM sys.objects ;
 GO  
 ```  
   
-### E. OVER 句を使用して結果セットのシーケンス番号を生成する  
- 次の例では、結果セットをシーケンス番号列に追加する前に、`OVER` 句を使用して `Name` の順に並べ替えます。  
+### <a name="e-generating-sequence-numbers-for-a-result-set-by-using-the-over-clause"></a>E. OVER 句を使用して結果セットのシーケンス番号を生成する  
+ 次の例では、結果セットをシーケンス番号列に追加する前に、 `OVER` 句を使用して `Name` の順に並べ替えます。  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -265,7 +269,7 @@ SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, 
 WHERE Name LIKE '%nut%' ;  
 ```  
   
-### F. シーケンス番号をリセットする  
+### <a name="f-resetting-the-sequence-number"></a>F. シーケンス番号をリセットする  
  例 E では、`Samples.IDLabel` のシーケンス番号の最初の 79 個の番号が使用されました  (`AdventureWorks2012` のバージョンによっては結果の数が異なる場合があります)。次のコードを実行すると、後続の 79 個のシーケンス番号 (80 ～ 158) が使用されます。  
   
 ```  
@@ -280,14 +284,14 @@ ALTER SEQUENCE Samples.IDLabel
 RESTART WITH 1 ;  
 ```  
   
- 再び SELECT ステートメントを実行して、`Samples.IDLabel` シーケンス番号が 1 から開始されていることを確認します。  
+ 再び SELECT ステートメントを実行して、 `Samples.IDLabel` シーケンス番号が 1 から開始されていることを確認します。  
   
 ```  
 SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, Name, ProductNumber FROM Production.Product  
 WHERE Name LIKE '%nut%' ;  
 ```  
   
-### G. ID からシーケンスにテーブルを変更する  
+### <a name="g-changing-a-table-from-identity-to-sequence"></a>G. ID からシーケンスにテーブルを変更する  
  次の例では、1 つのスキーマと、サンプルの 3 つの行が含まれたテーブルを作成します。 次に、新しい列を追加し、古い列を削除します。  
   
 ```  
@@ -386,15 +390,15 @@ GO
   
 ```  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] `SELECT *` を使用するステートメントは、最初の列としてではなく最後の列として、新しい列を受け取ります。 この動作を許容できない場合は、新しいテーブルを作成してデータをそこに移動した後、新しいテーブルに対する権限を再作成する必要があります。  
+ `SELECT *` を使用する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、最初の列としてではなく最後の列として、新しい列を受け取ります。 この動作を許容できない場合は、新しいテーブルを作成してデータをそこに移動した後、新しいテーブルに対する権限を再作成する必要があります。  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)  
   
  [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)  
   
  [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)  
   
- [IDENTITY &#40;プロパティ&#41; &#40;Transact-SQL&#41;](../Topic/IDENTITY%20\(Property\)%20\(Transact-SQL\).md)  
+ [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
   
   

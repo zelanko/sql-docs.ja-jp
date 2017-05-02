@@ -1,25 +1,29 @@
 ---
 title: "サービス マスター キーの復元 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "サービス マスター_キー [SQL Server] のインポート"
-  - "サービス マスター キー [SQL Server], 復元"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- service master key [SQL Server], importing
+- service master key [SQL Server], restoring
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 341662ff65d44b63738b869999ab78191f991a6f
+ms.lasthandoff: 04/11/2017
+
 ---
-# サービス マスター キーの復元
+# <a name="restore-the-service-master-key"></a>サービス マスター キーの復元
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)]でサービス マスター キーを復元する方法について説明します。  
   
 > [!WARNING]  
@@ -55,7 +59,7 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> Transact-SQL の使用  
   
-#### サービス マスター キーを復元するには  
+#### <a name="to-restore-the-service-master-key"></a>サービス マスター キーを復元するには  
   
 1.  バックアップしたサービス マスター キーのコピーを、物理バックアップ メディアまたはローカル ファイル システム上のディレクトリから取得します。  
   

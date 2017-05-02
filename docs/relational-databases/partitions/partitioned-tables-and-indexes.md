@@ -1,28 +1,32 @@
 ---
 title: "パーティション テーブルとパーティション インデックス | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "パーティション テーブル [SQL Server], パーティション テーブルの概要"
-  - "パーティション インデックス [SQL Server], アーキテクチャ"
-  - "パーティション テーブル [SQL Server], アーキテクチャ"
-  - "パーティション インデックス [SQL Server], パーティション インデックスの概要"
+ms.custom: 
+ms.date: 01/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partitioned tables [SQL Server], about partitioned tables
+- partitioned indexes [SQL Server], architecture
+- partitioned tables [SQL Server], architecture
+- partitioned indexes [SQL Server], about partitioned indexes
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 00d990aa777630847e0993631ee1c7bbce781d54
+ms.lasthandoff: 04/11/2017
+
 ---
-# パーティション テーブルとパーティション インデックス
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブルおよびインデックスのパーティション分割をサポートします。 パーティション テーブルとパーティション インデックスのデータは、データベース内の複数のファイル グループに分散できるように、複数の単位に分割されます。 行のグループが各パーティションにマップされるように、データは行方向にパーティション分割されます。 1 つのインデックスまたはテーブルのすべてのパーティションは、同じデータベース内に存在する必要があります。 データに対するクエリまたは更新の実行時は、テーブルやインデックスが 1 つの論理エンティティとして扱われます。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 より前では、パーティション テーブルとパーティション インデックスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)」を参照してください。  
+# <a name="partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックス
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブルおよびインデックスのパーティション分割をサポートします。 パーティション テーブルとパーティション インデックスのデータは、データベース内の複数のファイル グループに分散できるように、複数の単位に分割されます。 行のグループが各パーティションにマップされるように、データは行方向にパーティション分割されます。 1 つのインデックスまたはテーブルのすべてのパーティションは、同じデータベース内に存在する必要があります。 データに対するクエリまたは更新の実行時は、テーブルやインデックスが 1 つの論理エンティティとして扱われます。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 より前では、パーティション テーブルとパーティション インデックスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、既定で最大 15,000 個のパーティションをサポートします。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]より前のバージョンでは、パーティションの数は既定で 1,000 個に限られていました。x86 ベースのシステムでは、パーティション数が 1,000 個を超えるテーブルまたはインデックスを作成できますが、それはサポートされていません。  
@@ -117,10 +121,11 @@ caps.handback.revision: 46
   
 -   [パーティション テーブルの一括読み込み](http://msdn.microsoft.com/library/cc966380.aspx)  
   
--   [プロジェクト REAL: データ ライフ サイクル - パーティション分割](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
+-   [プロジェクト REAL: データ ライフ サイクル - パーティション分割](https://technet.microsoft.com/library/cc966424.aspx)  
   
 -   [パーティション テーブルとパーティション インデックスに対するクエリ処理の機能強化](http://msdn.microsoft.com/library/ms345599.aspx)  
   
 -   [大規模なリレーショナル データ ウェアハウスを構築するためのトップ 10 のベスト プラクティス](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   
   
+

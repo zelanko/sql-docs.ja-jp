@@ -1,31 +1,35 @@
 ---
 title: "データベースを新しい場所に復元する (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データベースを復元する [SQL Server], 移動"
-  - "データベースの復元 [SQL Server], 新しいデータベースの作成"
-  - "復元 [SQL Server], 移動"
-  - "データベースを復元する [SQL Server], 新しいデータベースの作成"
-  - "データベースのバックアップ [SQL Server], 新しいデータベースの作成"
-  - "データベースをバックアップする [SQL Server], 新しいデータベースの作成"
-  - "データベースを復元する [SQL Server], 名前の変更"
-  - "データベースの作成 [SQL Server], 移動を伴う復元"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring databases [SQL Server], moving
+- database restores [SQL Server], creating new databases
+- restoring [SQL Server], with move
+- restoring databases [SQL Server], creating new databases
+- database backups [SQL Server], creating new database from
+- backing up databases [SQL Server], creating new database from
+- restoring databases [SQL Server], renaming
+- database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 caps.latest.revision: 71
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 71
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 23023f6f4d8fe277bfee15c467be88aaa04a5723
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベースを新しい場所に復元する (SQL Server)
+# <a name="restore-a-database-to-a-new-location-sql-server"></a>データベースを新しい場所に復元する (SQL Server)
   このトピックでは、SQL Server Management Studio(SSMS) または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを新しい場所に復元し、必要に応じてデータベースの名前を変更する方法について説明します。 新しいディレクトリ パスにデータベースを移動できるほか、同じサーバー インスタンスまたは別のサーバー インスタンスにデータベースのコピーを作成できます。  
     
 ##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
@@ -36,15 +40,15 @@ caps.handback.revision: 71
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
--   完全復旧モデルまたは一括ログ復旧モデルを使用する場合は、データベースを復元する前に、アクティブ トランザクション ログをバックアップする必要があります。 詳細については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)」を参照してください.  
+-   完全復旧モデルまたは一括ログ復旧モデルを使用する場合は、データベースを復元する前に、アクティブ トランザクション ログをバックアップする必要があります。 詳細については、「 [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)データベースを新しい場所に復元し、必要に応じてデータベースの名前を変更する方法について説明します。  
 
--   暗号化されたデータベースを復元するには、**データベースを暗号化するために使用した証明書や非対称キーにアクセスする必要があります**。 証明書または非対称キーがないと、データベースを復元することはできません。 バックアップが必要な間は、データベースの暗号化キーの暗号化に使用した証明書を保持する必要があります。 詳細については、「 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」を参照してください。  
+-   暗号化されたデータベースを復元するには、 **データベースを暗号化するために使用した証明書や非対称キーにアクセスする必要があります**。 証明書または非対称キーがないと、データベースを復元することはできません。 バックアップが必要な間は、データベースの暗号化キーの暗号化に使用した証明書を保持する必要があります。 詳細については、「 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」を参照してください。  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
--   データベースの移行に関するその他の考慮事項については、「[バックアップと復元によるデータベースのコピー](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)」を参照してください。  
+-   データベースの移行に関するその他の考慮事項については、「 [バックアップと復元によるデータベースのコピー](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)」を参照してください。  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のデータベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に復元すると、データベースが自動的にアップグレードされます。 通常、データベースは直ちに使用可能になります。 ただし、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースにフルテキスト インデックスがある場合、アップグレード プロセスでは、**upgrade_option** サーバー プロパティの設定に応じて、インポート、リセット、または再構築が行われます。 アップグレード オプションがインポート (**upgrade_option** = 2) または再構築 (**upgrade_option** = 0) に設定されている場合、アップグレード中はフルテキスト インデックスを使用できなくなります。 インデックスを作成するデータ量によって、インポートには数時間、再構築には最大でその 10 倍の時間がかかることがあります。 また、アップグレード オプションがインポートに設定されており、フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。 **upgrade_option** サーバー プロパティの設定を変更するには、[sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md) を使用します。  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のデータベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に復元すると、データベースが自動的にアップグレードされます。 通常、データベースは直ちに使用可能になります。 ただし、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースにフルテキスト インデックスがある場合、アップグレード プロセスでは、  **upgrade_option** サーバー プロパティの設定に応じて、インポート、リセット、または再構築が行われます。 アップグレード オプションがインポート (**upgrade_option** = 2) または再構築 (**upgrade_option** = 0) に設定されている場合、アップグレード中はフルテキスト インデックスを使用できなくなります。 インデックスを作成するデータ量によって、インポートには数時間、再構築には最大でその 10 倍の時間がかかることがあります。 また、アップグレード オプションがインポートに設定されており、フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。 **upgrade_option** サーバー プロパティの設定を変更するには、 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)を使用します。  
   
 ###  <a name="Security"></a> セキュリティ  
  セキュリティを確保するため、不明なソースや信頼されていないソースからのデータベースは、アタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、運用サーバー以外のサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。  
@@ -52,15 +56,15 @@ caps.handback.revision: 71
 ####  <a name="Permissions"></a> 権限  
  復元するデータベースが存在しない場合、ユーザーは RESTORE を実行できる CREATE DATABASE 権限を使用する必要があります。 データベースが存在する場合、既定では、RESTORE 権限は **sysadmin** 固定サーバー ロールおよび **dbcreator** 固定サーバー ロールのメンバーと、データベースの所有者 (**dbo**) に与えられています。  
   
- RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で損傷していないことが必ずしも保証されないため、**db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
+ RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で損傷していないことが必ずしも保証されないため、 **db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
   
   
-## 新しい場所にデータベースを復元し、必要に応じて SSMS を使用してデータベースの名前を変更する 
+## <a name="restore-a-database-to-a-new-location-optionally-rename-the-database-using-ssms"></a>新しい場所にデータベースを復元し、必要に応じて SSMS を使用してデータベースの名前を変更する 
 
   
 1.  適切な [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、オブジェクト エクスプローラーでサーバー名をクリックしてサーバー ツリーを展開します。  
   
-2.  **[データベース]** を右クリックし、**[データベースの復元]** をクリックします。 **[データベースの復元]** ダイアログ ボックスが表示されます。  
+2.  **[データベース]**を右クリックし、 **[データベースの復元]**をクリックします。 **[データベースの復元]** ダイアログ ボックスが表示されます。  
   
 3.  **[全般]** ページの **** 復元元のセクションを使用して、復元するバックアップ セットの復元元ファイルと場所を指定します。 以下のオプションの 1 つを選択します。  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 71
   
     1.  **[デバイス]**  
   
-         参照ボタン (**[...]**) をクリックし、**[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]**をクリックします。  
+         参照ボタン (**[...]**) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]**をクリックします。  
   
          **[バックアップ メディア]** ボックスに目的のデバイスを追加したら、 **[OK]** をクリックして、 **[全般]** ページに戻ります。  
   
@@ -86,24 +90,24 @@ caps.handback.revision: 71
   
 6.  **[復元するバックアップ セット]** グリッドで、復元するバックアップを選択します。 このグリッドには、指定された場所に対して使用可能なバックアップが表示されます。 既定では、復旧計画が推奨されています。 推奨された復元計画を変更するには、グリッドの選択を変更します。 以前のバックアップの選択を解除すると、以前のバックアップの復元に依存するバックアップは自動的に選択が解除されます。  
   
-     **[復元するバックアップ セット]** グリッドの列の詳細については、「[データベースの復元 &#40;[全般] ページ&#41;](../Topic/Restore%20Database%20\(General%20Page\).md)」を参照してください。  
+     **[復元するバックアップ セット]** グリッドの列の詳細については、「[データベースの復元 &#40;[全般] ページ&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)」を参照してください。  
   
-7.  データベース ファイルの新しい場所を指定するには、 **[ファイル]** ページを選択し、 **[すべてのファイルをフォルダーに移動する]**をクリックします。 **[データ ファイルのフォルダー]** および **[ログ ファイルのフォルダー]**の新しい場所を指定します。 このグリッドの詳細については、「[データベースの復元 &#40;[ファイル] ページ&#41;](../Topic/Restore%20Database%20\(Files%20Page\).md)」を参照してください。  
+7.  データベース ファイルの新しい場所を指定するには、 **[ファイル]** ページを選択し、 **[すべてのファイルをフォルダーに移動する]**をクリックします。 **[データ ファイルのフォルダー]** および **[ログ ファイルのフォルダー]**の新しい場所を指定します。 このグリッドの詳細については、「[データベースの復元 &#40;[ファイル] ページ&#41;](../../relational-databases/backup-restore/restore-database-files-page.md)」を参照してください。  
   
-8.  **[オプション]** ページで必要に応じてオプションを調整します。 これらのオプションの詳細については、「[データベースの復元 &#40;[オプション] ページ&#41;](../Topic/Restore%20Database%20\(Options%20Page\).md)」を参照してください。  
+8.  **[オプション]** ページで必要に応じてオプションを調整します。 これらのオプションの詳細については、「[データベースの復元 &#40;[オプション] ページ&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)」を参照してください。  
 
- ## 新しい場所にデータベースを復元し、必要に応じて T-SQL を使用してデータベースの名前を変更する
+ ## <a name="restore-database-to-a-new-location-optionally-rename-the-database-using-t-sql"></a>新しい場所にデータベースを復元し、必要に応じて T-SQL を使用してデータベースの名前を変更する
  
  
 1.  必要に応じて、復元するデータベースの完全バックアップを含んでいるバックアップ セット内のファイルの論理名と物理名を判断します。 このステートメントは、バックアップ セットに保存されているデータベースとログ ファイルのリストを返します。 基本構文は次のとおりです。  
   
      RESTORE FILELISTONLY FROM *<backup_device>* WITH FILE = *backup_set_file_number* 
   
-     この *backup_set_file_number* は、メディア セット内のバックアップの位置を示します。 バックアップ セットの位置は、 [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md) ステートメントを使用して取得できます。 詳細については、「[RESTORE の引数 &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)」の「バックアップ セットの指定」を参照してください。  
+     この *backup_set_file_number* は、メディア セット内のバックアップの位置を示します。 バックアップ セットの位置は、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) ステートメントを使用して取得できます。 詳細については、「[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)」の「バックアップ セットの指定」を参照してください。  
   
-     このステートメントは、多くの WITH オプションもサポートします。 詳細については、[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md) を参照してください。  
+     このステートメントは、多くの WITH オプションもサポートします。 詳細については、[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md) を参照してください。  
   
-2.  [RESTORE DATABASE](../Topic/RESTORE%20\(Transact-SQL\).md) ステートメントを使用し、データベースの完全バックアップを復元します。 既定で、データとログ ファイルが元の場所に復元されます。 データベースを再配置するには、MOVE オプションを使用して、各データベース ファイルを再配置し、既存ファイルとの衝突が発生するのを防ぎます。  
+2.  [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントを使用し、データベースの完全バックアップを復元します。 既定で、データとログ ファイルが元の場所に復元されます。 データベースを再配置するには、MOVE オプションを使用して、各データベース ファイルを再配置し、既存ファイルとの衝突が発生するのを防ぎます。  
   
      データベースを新しい場所と新しい名前に復元するための基本的な [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文は以下のとおりです。  
   
@@ -125,9 +129,9 @@ caps.handback.revision: 71
   
      ;  
   
-    > **注: ** データベースを別のディスクに再配置する準備をする場合は、容量が十分あるかどうか、および既存のファイルと衝突する可能性がないかどうかを確認してください。 この作業は、 [RESTORE VERIFYONLY](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md) ステートメントを使用して、RESTORE DATABASE ステートメントで使用するのと同じ MOVE パラメーターを指定する必要があります。  
+    > **注:** データベースを別のディスクに再配置する準備をする場合は、容量が十分あるかどうか、および既存のファイルと衝突する可能性がないかどうかを確認してください。 この作業は、 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) ステートメントを使用して、RESTORE DATABASE ステートメントで使用するのと同じ MOVE パラメーターを指定する必要があります。  
   
-     次の表で、データベースを新しい場所に復元するという点で、この RESTORE ステートメントの引数を説明します。 これらの引数の詳細については、「[RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)」を参照してください。  
+     次の表で、データベースを新しい場所に復元するという点で、この RESTORE ステートメントの引数を説明します。 これらの引数の詳細については、「 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)データベースを新しい場所に復元し、必要に応じてデータベースの名前を変更する方法について説明します。  
   
      *new_database_name*  
      データベースの新しい名前。  
@@ -147,23 +151,23 @@ caps.handback.revision: 71
      そうでない場合は、既定の RECOVERY オプションを使用します。  
   
      FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
-     復元するバックアップ セットを特定します。 たとえば、**1** の *backup_set_file_number* は、バックアップ 目での最初のバックアップ セットを示し、2 の *backup_set_file_number* は **2** 番目のバックアップ セットを示します。 バックアップ セットの *backup_set_file_number* を取得するには、[RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md) ステートメントを使用します。  
+     復元するバックアップ セットを特定します。 たとえば、 *1* の **backup_set_file_number** は、バックアップ 目での最初のバックアップ セットを示し、2 の *backup_set_file_number* は **2** 番目のバックアップ セットを示します。 バックアップ セットの *backup_set_file_number* を取得するには、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) ステートメントを使用します。  
   
      このオプションを指定しない場合、既定ではバックアップ デバイスの 1 番目のバックアップ セットを使用します。  
   
-     詳細については、「[RESTORE の引数 &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)」の「バックアップ セットの指定」を参照してください。  
+     詳細については、「[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)」の「バックアップ セットの指定」を参照してください。  
   
      MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name***'** [ **,**...*n* ]  
-     *logical_file_name_in_backup* で指定されるデータまたはログ ファイルが、*operating_system_file_name* で指定される位置に復元されることを指定します。 バックアップ セットから新しい位置に復元する論理ファイルごとに、MOVE ステートメントを指定してください。  
+     *logical_file_name_in_backup* で指定されるデータまたはログ ファイルが、 *operating_system_file_name*で指定される位置に復元されることを指定します。 バックアップ セットから新しい位置に復元する論理ファイルごとに、MOVE ステートメントを指定してください。  
   
     |オプション|説明|  
     |------------|-----------------|  
-    |*logical_file_name_in_backup*|バックアップ セット内のデータまたはログ ファイルの論理名を指定します。 バックアップ セット内のデータ ファイルまたはログ ファイルの論理ファイル名は、バックアップ セットが作成されたときのデータベース内における論理名と同じです。<br /><br /> <br /><br /> 注: バックアップ セットに含まれる論理ファイルの一覧を取得するには、 [RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)を使用します。|  
-    |*operating_system_file_name*|*logical_file_name_in_backup* で指定したファイルの新しい場所を指定します。 ファイルはこの場所に復元されます。<br /><br /> 必要に応じて、*operating_system_file_name* に復元するファイルの新しいファイル名を指定します。 これは、同じサーバー インスタンスで既存のデータベースのコピーを作成する場合に必要です。|  
+    |*logical_file_name_in_backup*|バックアップ セット内のデータまたはログ ファイルの論理名を指定します。 バックアップ セット内のデータ ファイルまたはログ ファイルの論理ファイル名は、バックアップ セットが作成されたときのデータベース内における論理名と同じです。<br /><br /> <br /><br /> 注: バックアップ セットに含まれる論理ファイルの一覧を取得するには、 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)を使用します。|  
+    |*operating_system_file_name*|*logical_file_name_in_backup*で指定したファイルの新しい場所を指定します。 ファイルはこの場所に復元されます。<br /><br /> 必要に応じて、 *operating_system_file_name* に復元するファイルの新しいファイル名を指定します。 これは、同じサーバー インスタンスで既存のデータベースのコピーを作成する場合に必要です。|  
     |*n*|追加の MOVE ステートメントを指定できることを示すプレースホルダーです。|  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
- この例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースのバックアップを復元して、`MyAdvWorks` という名前の新しいデータベースを作成します。このデータベースには、2 つのファイル、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data と [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log が含まれます。 このデータベースは、単純復旧モデルを使用しています。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースはサーバー インスタンスに既に存在するため、バックアップ内のファイルを新しい場所に復元する必要があります。 RESTORE FILELISTONLY ステートメントは、復元するデータベース内のファイル数と名前を判断するために使用します。 データベース バックアップは、バックアップ デバイスの 1 番目のバックアップ セットです。  
+ この例では、 `MyAdvWorks` サンプル データベースのバックアップを復元して、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] という名前の新しいデータベースを作成します。このデータベースには、2 つのファイル、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data と [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log が含まれます。 このデータベースは、単純復旧モデルを使用しています。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースはサーバー インスタンスに既に存在するため、バックアップ内のファイルを新しい場所に復元する必要があります。 RESTORE FILELISTONLY ステートメントは、復元するデータベース内のファイル数と名前を判断するために使用します。 データベース バックアップは、バックアップ デバイスの 1 番目のバックアップ セットです。  
   
 > **注:** 特定日時への復元を含む、トランザクション ログのバックアップと復元の例では、次の `MyAdvWorks` の例と同様、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] から作成した `MyAdvWorks_FullRM` データベースを使用します。 ただし、作成された `MyAdvWorks_FullRM` データベースは、ALTER DATABASE <database_name> SET RECOVERY FULL という [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使って、完全復旧モデルを使用するように変更する必要があります。  
   
@@ -186,7 +190,7 @@ GO
   
  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの完全データベース バックアップを作成する方法の例については、「[データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)」を参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="RelatedTasks"></a> Related tasks  
   
 -   [データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
@@ -196,9 +200,10 @@ GO
   
 -   [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-## 参照  
- [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>参照  
+ [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [バックアップと復元によるデータベースのコピー](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)  
   
   
+

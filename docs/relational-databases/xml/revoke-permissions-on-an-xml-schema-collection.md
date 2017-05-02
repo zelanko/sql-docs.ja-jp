@@ -1,24 +1,28 @@
 ---
 title: "XML スキーマ コレクションに対する権限の取り消し | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "取り消し、権限 [SQL Server]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- revoking permissions [SQL Server]
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3f0db25e7283b594357638bd832c982de0569e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML スキーマ コレクションに対する権限の取り消し
+# <a name="revoke-permissions-on-an-xml-schema-collection"></a>XML スキーマ コレクションに対する権限の取り消し
   XML スキーマ コレクションを作成する権限は、次のいずれかの方法で取り消すことができます。  
   
 -   リレーショナル スキーマの ALTER 権限を取り消します。 その結果、プリンシパルはリレーショナル スキーマで XML スキーマ コレクションを作成できなくなります。 ただし、同じデータベースの他のリレーショナル スキーマでは作成できます。  
@@ -27,7 +31,7 @@ caps.handback.revision: 25
   
 -   プリンシパルのデータベースの CREATE XML SCHEMA COLLECTION 権限または ALTER XML SCHEMA COLLECTION 権限を取り消します。 これにより、プリンシパルはデータベース内に XML スキーマ コレクションをインポートできなくなります。 データベースの ALTER 権限または CONTROL 権限を取り消しても、同じ効果があります。  
   
-## 既存の XML スキーマ コレクション オブジェクトに対する権限の取り消し  
+## <a name="revoking-permissions-on-an-existing-xml-schema-collection-object"></a>既存の XML スキーマ コレクション オブジェクトに対する権限の取り消し  
  次に、XML スキーマ コレクションで取り消し可能な権限と権限を取り消した結果を示します。  
   
 -   ALTER 権限を取り消すと、XML スキーマ コレクションのコンテンツを変更するプリンシパルの権限が取り消されます。  
@@ -40,10 +44,10 @@ caps.handback.revision: 25
   
 -   EXECUTE 権限を取り消すと、XML コレクションによって型指定または制約された列、変数、およびパラメーターの値を挿入または更新するプリンシパルの権限が取り消されます。 これにより、そのような **xml** 型の列、変数、またはパラメーターにクエリする権限も取り消されます。  
   
-## 使用例  
+## <a name="examples"></a>使用例  
  次の例に示すシナリオでは、XML スキーマ権限のしくみを説明します。 各例では、必要なテスト データベース、リレーショナル スキーマ、およびログインを作成します。 それらのログインには、必要な XML スキーマ コレクション権限が許可されています。 最後に必要なクリーンアップを行います。  
   
-### A. XML スキーマ コレクションを作成するための権限の取り消し  
+### <a name="a-revoking-permissions-to-create-an-xml-schema-collection"></a>A. XML スキーマ コレクションを作成するための権限の取り消し  
  この例では、ログインとサンプル データベースを作成します。 データベースにはリレーショナル スキーマも追加します。 最初に、ログインに両方のリレーショナル スキーマの ALTER 権限を許可し、XML スキーマ コレクションを作成するのに必要なその他の権限を許可します。 次に、データベースのリレーショナル スキーマのいずれかの ALTER 権限を取り消します。 これにより、このログインは XML スキーマ コレクションを作成できなくなります。  
   
 ```  
@@ -140,7 +144,7 @@ DROP LOGIN TestLogin1
 Go  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [XML データ &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML スキーマ コレクション &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   

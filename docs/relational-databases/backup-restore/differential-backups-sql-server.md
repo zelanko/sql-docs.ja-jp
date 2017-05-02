@@ -1,38 +1,33 @@
 ---
 title: "差分バックアップ (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "差分バックアップ"
-  - "差分バックアップ、概要"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- differential backups
+- differential backups, about
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 caps.latest.revision: 60
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: cd2ac098f25c8d6bd883255c35c42e937ee10190
+ms.lasthandoff: 04/11/2017
+
 ---
-# 差分バックアップ (SQL Server)
+# <a name="differential-backups-sql-server"></a>差分バックアップ (SQL Server)
   このトピックで取り上げるバックアップと復元は、すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに当てはまります。  
   
  差分バックアップは、最新の完全データ バックアップに基づいて行われます。 差分バックアップでは、その完全バックアップの作成後に変更されたデータのみがキャプチャされます。 差分バックアップの基になる完全バックアップを差分の *ベース* といいます。 完全バックアップ (コピーのみのバックアップを除く) は、データベース バックアップ、部分バックアップ、ファイル バックアップなど、一連の差分バックアップのベースとなります。 ファイルの差分バックアップのベース バックアップは、完全バックアップ、ファイル バックアップ、または部分バックアップ内に格納できます。  
   
- **このトピックの内容**  
-  
--   [利点](#Benefits)  
-  
--   [差分バックアップの概要](#Overview)  
-  
--   [読み取り専用データベースの差分バックアップ](#ReadOnlyDbs)  
-  
--   [関連タスク](#RelatedTasks)  
   
 ##  <a name="Benefits"></a> 利点  
   
@@ -43,7 +38,7 @@ caps.handback.revision: 58
 -   完全復旧モデルでは、差分バックアップを使用することによって、復元する必要のあるログ バックアップの数を減らすことができます。  
   
 ##  <a name="Overview"></a> 差分バックアップの概要  
- 差分バックアップは、差分ベースが作成されてから差分バックアップが作成されるまでの間に変更されたすべての*エクステント* (物理的に連続する 8 ページ分のまとまり) の状態をキャプチャします。 したがって、差分バックアップのサイズは、ベースの作成後に変更されたデータの量に依存します。 通常、ベースが古いほど、新しい差分バックアップの量は多くなります。 一連の差分バックアップにおいて、更新頻度の高いエクステントは、差分バックアップごとに異なるデータを格納している可能性が高くなります。  
+ 差分バックアップは、差分ベースが作成されてから差分バックアップが作成されるまでの間に変更されたすべての *エクステント* (物理的に連続する 8 ページ分のまとまり) の状態をキャプチャします。 したがって、差分バックアップのサイズは、ベースの作成後に変更されたデータの量に依存します。 通常、ベースが古いほど、新しい差分バックアップの量は多くなります。 一連の差分バックアップにおいて、更新頻度の高いエクステントは、差分バックアップごとに異なるデータを格納している可能性が高くなります。  
   
  次の図に差分バックアップの動作を示します。 この図では、24 個のデータ エクステントがあり、そのうちの 6 個が変更されています。 差分バックアップには、これら 6 個のデータ エクステントのみが含まれます。 差分バックアップ操作は、エクステントごとに 1 つのビットを含むビットマップ ページに依存します。 ベース以降に更新されたエクステントそれぞれにつき、ビットマップ内のビットが 1 に設定されます。  
   
@@ -58,16 +53,16 @@ caps.handback.revision: 58
   
  復元時には、差分バックアップを復元する前に、ベースを復元する必要があります。 次に、最新の差分バックアップのみを復元して、データベースをその差分バックアップが作成されたときの状態にします。 通常は、最新の完全バックアップを復元してから、その完全バックアップを基にした最新の差分バックアップを復元します。  
   
-## メモリ最適化テーブルを含むデータベースの差分バックアップ  
- 差分バックアップおよびメモリ最適化テーブルを含むデータベースの詳細については、「[メモリ最適化テーブルが含まれるデータベースのバックアップ](../../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md)」をご覧ください。  
+## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>メモリ最適化テーブルを含むデータベースの差分バックアップ  
+ 差分バックアップおよびメモリ最適化テーブルを含むデータベースの詳細については、「 [メモリ最適化テーブルが含まれるデータベースのバックアップ](../../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md)」をご覧ください。  
   
 ##  <a name="ReadOnlyDbs"></a> 読み取り専用データベースの差分バックアップ  
- 読み取り専用データベースの場合は、完全バックアップと差分バックアップを組み合わせて使用するよりも、完全バックアップを単独で使用する方が管理が容易になります。 データベースが読み取り専用の場合は、ファイルに含まれるメタデータをバックアップやその他の操作で変更することはできません。 このため、差分バックアップに必要な、差分バックアップを開始するログ シーケンス番号 (差分のベース LSN) などのメタデータは **master** データベースに格納されます。 データベースが読み取り専用のときに差分ベースを作成した場合、ベース バックアップ以降に実際に発生した変更よりも多くの変更内容が差分ビットマップに示されます。 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) システム テーブルに格納されている **differential_base_lsn** は、ベースの作成以降にデータが実際に変更されたかどうかの判断に使用されるため、この余分なデータは読み取られますが、バックアップには書き込まれません。  
+ 読み取り専用データベースの場合は、完全バックアップと差分バックアップを組み合わせて使用するよりも、完全バックアップを単独で使用する方が管理が容易になります。 データベースが読み取り専用の場合は、ファイルに含まれるメタデータをバックアップやその他の操作で変更することはできません。 このため、差分バックアップに必要な、差分バックアップを開始するログ シーケンス番号 (差分のベース LSN) などのメタデータは **master** データベースに格納されます。 データベースが読み取り専用のときに差分ベースを作成した場合、ベース バックアップ以降に実際に発生した変更よりも多くの変更内容が差分ビットマップに示されます。 **backupset** システム テーブルに格納されている [differential_base_lsn](../../relational-databases/system-tables/backupset-transact-sql.md) は、ベースの作成以降にデータが実際に変更されたかどうかの判断に使用されるため、この余分なデータは読み取られますが、バックアップには書き込まれません。  
   
  読み取り専用データベースの再構築、復元、またはデタッチとアタッチが行われると、差分ベースの情報が失われます。 このことは、 **master** データベースがユーザー データベースと同期されないために発生します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] で、この問題を検出または防止することはできません。 以降の差分バックアップはどれも、最新の完全バックアップに基づいていないことになり、予期しない結果になる可能性があります。 新しい差分ベースを確立するには、データベースの完全バックアップを作成することをお勧めします。  
   
-### 読み取り専用データベースで差分バックアップを使用する場合のベスト プラクティス  
- 読み取り専用データベースの完全バックアップを作成した後、引き続き差分バックアップを作成することを予定している場合は、**master** データベースをバックアップします。  
+### <a name="best-practices-for-using-differential-backups-with-a-read-only-database"></a>読み取り専用データベースで差分バックアップを使用する場合のベスト プラクティス  
+ 読み取り専用データベースの完全バックアップを作成した後、引き続き差分バックアップを作成することを予定している場合は、 **master** データベースをバックアップします。  
   
  **master** データベースが失われた場合は、まず、このデータベースを復元してから、ユーザー データベースの任意の差分バックアップを復元します。  
   
@@ -79,9 +74,8 @@ caps.handback.revision: 58
   
 -   [データベースの差分バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)  
   
- [&#91;先頭に戻る&#93;](#Top)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [データベースの完全バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)   
  [データベースの全体復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

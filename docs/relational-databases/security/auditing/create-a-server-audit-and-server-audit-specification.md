@@ -1,30 +1,34 @@
 ---
 title: "サーバー監査およびサーバー監査の仕様を作成する方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.SWB.SQLAUDIT.FILTER.F1"
-  - "sql13.swb.sqlaudit.general.f1"
-  - "sql13.swb.sqlaudit.srvaudit.general.f1"
-helpviewer_keywords: 
-  - "サーバー監査 [SQL Server]"
-  - "仕様の監査 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.SWB.SQLAUDIT.FILTER.F1
+- sql13.swb.sqlaudit.general.f1
+- sql13.swb.sqlaudit.srvaudit.general.f1
+helpviewer_keywords:
+- server audit [SQL Server]
+- audits [SQL Server], specification
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e33a4ff076039b03c399a0f7868bf697ca1cd8d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# サーバー監査およびサーバー監査の仕様を作成する方法
-  このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、サーバー監査またはサーバー監査仕様を作成する方法について説明します。 *のインスタンスや* データベースの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、システムで発生するイベントの追跡およびログ記録が行われます。 *SQL Server Audit* オブジェクトは、監視するサーバー レベルまたはデータベース レベルのアクションおよびアクションのグループの 1 つのインスタンスを収集します。 監査は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス レベルで行われます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスごとに複数の監査を使用できます。 *サーバー監査の仕様* オブジェクトは監査に属しています。 サーバー監査の仕様は監査ごとに 1 つ作成できます。これは、サーバー監査の仕様も監査も [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのスコープで作成されるためです。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」をご覧ください。  
+# <a name="create-a-server-audit-and-server-audit-specification"></a>サーバー監査およびサーバー監査の仕様を作成する方法
+  このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、サーバー監査またはサーバー監査仕様を作成する方法について説明します。 *のインスタンスや* データベースの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、システムで発生するイベントの追跡およびログ記録が行われます。 *SQL Server Audit* オブジェクトは、監視するサーバー レベルまたはデータベース レベルのアクションおよびアクションのグループの 1 つのインスタンスを収集します。 監査は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス レベルで行われます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスごとに複数の監査を使用できます。 *サーバー監査の仕様* オブジェクトは監査に属しています。 サーバー監査の仕様は監査ごとに 1 つ作成できます。これは、サーバー監査の仕様も監査も [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのスコープで作成されるためです。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
  **このトピックの内容**  
   
@@ -60,11 +64,11 @@ caps.handback.revision: 21
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### サーバー監査を作成するには  
+#### <a name="to-create-a-server-audit"></a>サーバー監査を作成するには  
   
 1.  オブジェクト エクスプローラーで、 **[セキュリティ]** フォルダーを展開します。  
   
-2.  **[監査]** フォルダーを右クリックし、**[新しい監査]** をクリックします。  
+2.  **[監査]** フォルダーを右クリックし、 **[新しい監査]**をクリックします。  
   
      **[監査の作成]** ダイアログ ボックスの **[全般]** ページでは、次のオプションを使用できます。  
   
@@ -88,7 +92,7 @@ caps.handback.revision: 21
     >  監査が失敗状態のとき、専用管理者接続は、監査イベントの実行を継続できます。  
   
      **[監査の出力先]** の一覧  
-     監査データの出力先を指定します。 バイナリ ファイル、Windows アプリケーション ログ、または Windows セキュリティ ログを指定できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、Windows で追加の設定を行わないと Windows セキュリティ ログに書き込むことができません。 詳細については、「[セキュリティ ログへの SQL サーバー監査イベントの書き込み](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)」を参照してください。  
+     監査データの出力先を指定します。 バイナリ ファイル、Windows アプリケーション ログ、または Windows セキュリティ ログを指定できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、Windows で追加の設定を行わないと Windows セキュリティ ログに書き込むことができません。 詳細については、「 [セキュリティ ログへの SQL サーバー監査イベントの書き込み](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)」を参照してください。  
   
      **[ファイル パス]**  
      **[監査の出力先]** にファイルが指定されている場合に、監査データが書き込まれるフォルダーの場所を指定します。  
@@ -119,11 +123,11 @@ caps.handback.revision: 21
   
 4.  オプションの選択が完了したら、 **[OK]**をクリックします。  
   
-#### サーバー監査仕様を作成するには  
+#### <a name="to-create-a-server-audit-specification"></a>サーバー監査仕様を作成するには  
   
 1.  オブジェクト エクスプローラーで、プラス記号をクリックして **[セキュリティ]** フォルダーを展開します。  
   
-2.  **[サーバー監査の仕様]** フォルダーを右クリックし、**[新しいサーバー監査の仕様]** を選択します。  
+2.  **[サーバー監査の仕様]** フォルダーを右クリックし、 **[新しいサーバー監査の仕様]**を選択します。  
   
      **[サーバー監査の仕様の作成]** ダイアログ ボックスで、次のオプションを使用できます。  
   
@@ -134,12 +138,12 @@ caps.handback.revision: 21
      既存のサーバー監査の名前。 監査の名前を入力するか、一覧から選択します。  
   
      **[監査アクションの種類]**  
-     キャプチャするサーバー レベルの監査アクション グループと監査アクションを指定します。 サーバー レベルの監査アクション グループと監査アクションの一覧、およびそれらに含まれるイベントの説明については、「[SQL Server 監査のアクション グループとアクション](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)」を参照してください。  
+     キャプチャするサーバー レベルの監査アクション グループと監査アクションを指定します。 サーバー レベルの監査アクション グループと監査アクションの一覧、およびそれらに含まれるイベントの説明については、「 [SQL Server 監査のアクション グループとアクション](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)」を参照してください。  
   
      **[オブジェクト スキーマ]**  
-     指定した **[オブジェクト名]** のスキーマを表示します。  
+     指定した **[オブジェクト名]**のスキーマを表示します。  
   
-     **Object Name**  
+     **[オブジェクト名]**  
      監査するオブジェクトの名前。 これは監査アクションにのみ使用できます。監査グループには適用されません。  
   
      **省略記号 [...]**  
@@ -155,7 +159,7 @@ caps.handback.revision: 21
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### サーバー監査を作成するには  
+#### <a name="to-create-a-server-audit"></a>サーバー監査を作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -169,7 +173,7 @@ caps.handback.revision: 21
         TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
     ```  
   
-#### サーバー監査仕様を作成するには  
+#### <a name="to-create-a-server-audit-specification"></a>サーバー監査仕様を作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   

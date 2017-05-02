@@ -1,27 +1,31 @@
 ---
 title: "部分バックアップ (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "完全バックアップ [SQL Server]"
-  - "部分バックアップ [SQL Server]"
-  - "READ_WRITE_FILEGROUPS オプション"
-  - "データベース バックアップ [SQL Server]、データベースのバックアップについて"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full backups [SQL Server]
+- partial backups [SQL Server]
+- READ_WRITE_FILEGROUPS option
+- database backups [SQL Server], about backing up databases
 ms.assetid: fe6b6bb1-38d0-46c4-bab8-31df14e8999c
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7d0cb11ab284db2b79be1bea7dc4de4b81a6799a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 部分バックアップ (SQL Server)
+# <a name="partial-backups-sql-server"></a>部分バックアップ (SQL Server)
   すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 復旧モデルで部分バックアップがサポートされるため、このトピックの内容はすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに適用されます。 ただし、部分バックアップは、1 つ以上の読み取り専用のファイル グループを含む非常に大きなデータベースをバックアップする場合の柔軟性を向上するために、単純復旧モデルで使用することを目的としています。  
   
  読み取り専用のファイル グループを除外する場合は、部分バックアップが有効です。 *部分バックアップ* はデータベースの完全バックアップに似ていますが、部分バックアップには一部のファイル グループが含まれません。 部分バックアップに含まれるデータは、読み取り/書き込み可能なデータベースの場合、プライマリ ファイル グループのデータ、読み取りと書き込みが可能なすべてのファイル グループのデータ、および必要に応じて指定された読み取り専用ファイルのデータです。 読み取り専用データベースの部分バックアップには、プライマリ ファイル グループのみが含まれます。  
@@ -31,12 +35,12 @@ caps.handback.revision: 46
   
  読み取り専用ファイル グループのファイル バックアップは、部分バックアップと組み合わせることができます。 ファイルのバックアップの詳細については、「[ファイルの完全バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)」を参照してください。  
   
- 部分バックアップは、部分的な差分バックアップの *差分ベース* として使用できます。 詳細については、「[差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)」を参照してください。  
+ 部分バックアップは、部分的な差分バックアップの *差分ベース* として使用できます。 詳細については、「 [差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)」を参照してください。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
 > [!NOTE]  
->  部分バックアップは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] またはメンテナンス プラン ウィザードではサポートされません。  
+>  部分バックアップは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] またはメンテナンス プラン ウィザードではサポートされません。  
   
  **部分バックアップを作成するには**  
   
@@ -48,7 +52,7 @@ caps.handback.revision: 46
   
 -   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [ファイル復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  

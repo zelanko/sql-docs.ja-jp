@@ -1,30 +1,34 @@
 ---
 title: "リソース ガバナーの分類子関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "リソース ガバナー, 分類子関数"
-  - "ユーザー定義関数 [SQL Server], 分類子関数"
-  - "分類子関数 [SQL Server]"
-  - "分類子関数 [SQL Server], 概要"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, classifier function
+- user-defined functions [SQL Server], classifier function
+- classifier function [SQL Server]
+- classifier function [SQL Server], overview
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 284ee7a05af7ab73e78dd827269db49c7d3f1e00
+ms.lasthandoff: 04/11/2017
+
 ---
-# リソース ガバナーの分類子関数
+# <a name="resource-governor-classifier-function"></a>リソース ガバナーの分類子関数
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーの分類プロセスにより、着信セッションがセッションの特性に基づいてワークロード グループに割り当てられます。 分類ロジックは、分類子関数と呼ばれるユーザー定義関数を記述することで調整できます。  
   
-## 分類  
+## <a name="classification"></a>分類  
  リソース ガバナーでは、着信セッションの分類がサポートされます。 分類は、関数に含まれているユーザーが記述した一連の基準に基づいて行われます。 この関数ロジックの結果を使用して、リソース ガバナーは、セッションを既存のワークロード グループに分類します。  
   
 > [!NOTE]  
@@ -62,9 +66,9 @@ caps.handback.revision: 7
 -   分類関数から返されたワークロード グループは、スキーマ バインド制限の対象外です。 たとえば、テーブルを削除することはできませんが、ワークロード グループは削除できます。  
   
 > [!IMPORTANT]  
->  サーバー上で専用管理者接続 (DAC) を有効にすることをお勧めします。 DAC は、リソース ガバナーの分類の対象ではなく、分類関数の監視とトラブルシューティングに使用できます。 詳細については、「[データベース管理者用の診断接続](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)」を参照してください。 トラブルシューティングに DAC を使用できない場合は、システムをシングル ユーザー モードで再起動します。 シングル ユーザー モードは分類の対象となりませんが、実行中のリソース ガバナーによる分類をこのモードで診断することはできません。  
+>  サーバー上で専用管理者接続 (DAC) を有効にすることをお勧めします。 DAC は、リソース ガバナーの分類の対象ではなく、分類関数の監視とトラブルシューティングに使用できます。 詳細については、「 [データベース管理者用の診断接続](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)」を参照してください。 トラブルシューティングに DAC を使用できない場合は、システムをシングル ユーザー モードで再起動します。 シングル ユーザー モードは分類の対象となりませんが、実行中のリソース ガバナーによる分類をこのモードで診断することはできません。  
   
-### 分類処理  
+### <a name="classification-process"></a>分類処理  
  リソース ガバナーのコンテキストでは、セッションのログイン プロセスが次の手順で実行されます。  
   
 1.  ログイン認証  
@@ -76,16 +80,16 @@ caps.handback.revision: 7
  分類が開始されると、リソース ガバナーは分類子関数を実行し、関数から返された値を使用して適切なワークロード グループに要求を送信します。  
   
 > [!NOTE]  
->  分類関数および LOGON トリガーの実行に関する情報は、[sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) および [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)」で公開されます。  
+>  分類関数および LOGON トリガーの実行に関する情報は、 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) および [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)」で公開されます。  
   
-## 分類関数のタスク  
+## <a name="classification-function-tasks"></a>分類関数のタスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |ユーザー定義の分類子関数を作成およびテストする方法について説明します。|[ユーザー定義の分類子関数の作成とテスト](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)|  
   
-## 参照  
- [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="see-also"></a>参照  
+ [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
  [リソース ガバナーの有効化](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [リソース ガバナー ワークロード グループ](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

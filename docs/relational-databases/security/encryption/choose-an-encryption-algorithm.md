@@ -1,36 +1,40 @@
 ---
 title: "暗号化アルゴリズムの選択 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "暗号化 [SQL Server], アルゴリズム"
-  - "暗号化 [SQL Server], アルゴリズム"
-  - "セキュリティ [SQL Server], 暗号化"
-  - "アルゴリズム [SQL Server の暗号化]"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cryptography [SQL Server], algorithms
+- encryption [SQL Server], algorithms
+- security [SQL Server], encryption
+- algorithms [SQL Server encryption]
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3cb1a59db35025eda9cf6ea68f0897aaecc9caf
+ms.lasthandoff: 04/11/2017
+
 ---
-# 暗号化アルゴリズムの選択
-  暗号化は多層防御の 1 つであり、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに対するセキュリティ対策として利用することができます。  
+# <a name="choose-an-encryption-algorithm"></a>暗号化アルゴリズムの選択
+  暗号化は多層防御の 1 つであり、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスに対するセキュリティ対策として利用することができます。  
   
  暗号化アルゴリズムによって定義されるデータ変換は、未承認ユーザーが容易に復元できないものです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] DES、Triple DES、TRIPLE_DES_3KEY、RC2、RC4、128 ビット RC4、DESX、128 ビット AES、192 ビット AES、256 ビット AES など、複数のアルゴリズムがサポートされ、管理者および開発者が必要に応じて選択できるようになっています。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 以降、AES_128、AES_192、AES_256 以外のすべてのアルゴリズムが使用されなくなりました。 古いアルゴリズムを使用する場合は (推奨されません)、データベース互換性レベルを 120 以下に設定する必要があります。  
+>  [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]以降、AES_128、AES_192、AES_256 以外のすべてのアルゴリズムが使用されなくなりました。 古いアルゴリズムを使用する場合は (推奨されません)、データベース互換性レベルを 120 以下に設定する必要があります。  
   
- 理想的なアルゴリズムは状況によって異なります。また、個々のアルゴリズムの利点についても、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックでは扱っていません。 ただし、一般論としては、次のような原則があります。  
+ 理想的なアルゴリズムは状況によって異なります。また、個々のアルゴリズムの利点についても、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックでは扱っていません。 ただし、一般論としては、次のような原則があります。  
   
 -   通常、強力な暗号化では、弱い暗号化よりも多くの CPU リソースを消費します。  
   
@@ -49,9 +53,9 @@ caps.handback.revision: 36
 > [!IMPORTANT]  
 >  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 以降では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。  
 >   
->  異なるデータ ブロックに対して同じ RC4 または RC4_128 KEY_GUID を繰り返し使用すると、同一の RC4 キーが生成されます。これは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が自動的に salt を提供しないためです。 同一の RC4 キーを繰り返し使用することは、暗号強度を著しく低下させる周知の間違いです。 そのため、RC4 キーワードおよび RC4_128 キーワードは使用しないことをお勧めします。 [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]  
+>  異なるデータ ブロックに対して同じ RC4 または RC4_128 KEY_GUID を繰り返し使用すると、同一の RC4 キーが生成されます。これは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が自動的に salt を提供しないためです。 同一の RC4 キーを繰り返し使用することは、暗号強度を著しく低下させる周知の間違いです。 そのため、RC4 キーワードおよび RC4_128 キーワードは使用しないことをお勧めします。 [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]  
   
- 暗号化アルゴリズムおよび暗号化テクノロジの詳細については、MSDN の『.NET Framework 開発者ガイド』で、「[セキュリティの基本概念](http://go.microsoft.com/fwlink/?LinkId=62082)」を参照してください。  
+ 暗号化アルゴリズムおよび暗号化テクノロジの詳細については、MSDN の『.NET Framework 開発者ガイド』で、「 [セキュリティの基本概念](http://go.microsoft.com/fwlink/?LinkId=62082) 」を参照してください。  
   
  **DES アルゴリズムに関する説明:**  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 36
   
 -   ALGORITHM = TRIPLE_DES を使用して作成された対称キーでは、128 ビット キーを使用した TRIPLE DES が使用されます。  
   
-## 関連タスク  
+## <a name="related-tasks"></a>関連タスク  
   
 |||  
 |-|-|  
@@ -71,8 +75,9 @@ caps.handback.revision: 36
 |透過的なデータ暗号化を使用するデータベース ファイルの暗号化|[透過的なデータ暗号化 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)|  
 |テーブルの 1 つの列を暗号化する方法|[データの列の暗号化](../../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server の暗号化](../../../relational-databases/security/encryption/sql-server-encryption.md)   
  [暗号化階層](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
+

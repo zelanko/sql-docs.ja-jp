@@ -1,33 +1,37 @@
 ---
 title: "レプリケーション ディストリビューション エージェント | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ディストリビューション エージェント, 実行可能ファイル"
-  - "エージェント [SQL Server レプリケーション], ディストリビューション エージェント"
-  - "ディストリビューション エージェント, パラメーター リファレンス"
-  - "コマンド ライン プロンプト [SQL Server レプリケーション]"
+ms.custom: 
+ms.date: 02/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Distribution Agent, executables
+- agents [SQL Server replication], Distribution Agent
+- Distribution Agent, parameter reference
+- command prompt [SQL Server replication]
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 caps.latest.revision: 64
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed4deeaf1b608410977ba5d5bbe14a09d379020f
+ms.lasthandoff: 04/11/2017
+
 ---
-# レプリケーション ディストリビューション エージェント
+# <a name="replication-distribution-agent"></a>レプリケーション ディストリビューション エージェント
   レプリケーション ディストリビューション エージェントは、ディストリビューション データベース テーブルに登録されたスナップショット (スナップショット レプリケーションの場合) とトランザクション (トランザクション レプリケーションの場合) を、サブスクライバーのレプリケーション先のテーブルに移動する実行可能ファイルです。  
   
 > [!NOTE]  
 >  パラメーターは任意の順序で指定できます。 省略可能なパラメーターを省略する場合、ローカル コンピューターであらかじめ定義されているレジストリ設定の値が使用されます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -85,23 +89,23 @@ distrib [-?]
 [-UseOledbStreaming]  
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  **-?**  
  使用できるすべてのパラメーターを表示します。  
   
- **-パブリッシャー** *server_name*[**\\***は**nstance_name*]  
- パブリッシャーの名前です。 指定 *server_name* の既定のインスタンスの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] そのサーバーにします。 指定 *server_name***\\***instance_name* の名前付きインスタンスの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] そのサーバー上です。  
+ **-Publisher** *server_name*[**\\***i**nstance_name*]  
+ パブリッシャーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
   
- **-Publisherdb** *publisher_database*  
+ **-PublisherDB** *publisher_database*  
  パブリッシャー データベースの名前です。  
   
- **-サブスクライバー** *server_name*[**\\***instance_name*]  
- サブスクライバーの名前です。 指定 *server_name* の既定のインスタンスの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] そのサーバー上です。 指定 *server_name***\\***instance_name* の名前付きインスタンスの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] そのサーバー上です。  
+ **-Subscriber** *server_name*[**\\***instance_name*]  
+ サブスクライバーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
   
  **-SubscriberDB** *subscriber_database*  
  サブスクライバー データベースの名前です。  
   
- **-Altsnapshotfolder** *alt_snapshot_folder_path*  
+ **-AltSnapshotFolder** *alt_snapshot_folder_path*  
  サブスクリプションの初期スナップショットが含まれるフォルダーへのパスです。  
   
  **-BcpBatchSize** *bcp_batch_size*  
@@ -116,22 +120,22 @@ distrib [-?]
  **-Continuous**  
  エージェントがレプリケートされたトランザクションの呼び出しを継続的に試みるかどうかを指定します。 このパラメーターを指定する場合、保留されているトランザクションがなくても、エージェントはポーリング間隔でレプリケートされたトランザクションをソースから呼び出します。  
   
- **-Definitionfile** *def_path_and_file_name*  
+ **-DefinitionFile** *def_path_and_file_name*  
  エージェント定義ファイルのパスです。 エージェント定義ファイルには、エージェントのコマンド プロンプト引数が含まれます。 ファイルの内容は実行可能ファイルとして解析されます。 二重引用符 (") を使用して、任意の文字を含む引数値を指定します。  
   
- **-ディストリビューター** *ディストリビューター*  
+ **-Distributor** *distributor*  
  ディストリビューターの名前です。 ディストリビューター (プッシュ) ディストリビューションの場合、既定値はローカル ディストリビューターの名前になります。  
   
- **-Distributorlogin** *distributor_login*  
+ **-DistributorLogin** *distributor_login*  
  ディストリビューターのログイン名です。  
   
- **-Distributorpassword** *distributor_password 用途*  
+ **-DistributorPassword** *distributor_password*  
  ディストリビューターのパスワードです。  
   
- **-Distributorsecuritymode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**| **1**]  
  ディストリビューターのセキュリティ モードを指定します。 値 0 は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モードを指定し、値 1 は Windows 認証モード (既定値) を指定します。  
   
- **-Encryptionlevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [ **0** | **1** | **2** ]  
  接続確立時にディストリビューション エージェントが使用する SSL (Secure Sockets Layer) の暗号化レベルです。  
   
 |EncryptionLevel の値|説明|  
@@ -140,16 +144,16 @@ distrib [-?]
 |**1**|SSL は使用されますが、信頼できる発行者によって SSL サーバー証明が署名されているかどうかを検証しません。|  
 |**2**|SSL が使用され、証明書の確認が行われます。|  
   
- 詳細については、次を参照してください。 [セキュリティの概要と #40 です。レプリケーションと #41;](../../../relational-databases/replication/security/security-overview-replication.md)します。  
+ 詳細については、「[Security Overview &#40;Replication&#41;](../../../relational-databases/replication/security/security-overview-replication.md)」(セキュリティの概要 (レプリケーション)) を参照してください。  
   
- **エラー-ファイル** *error_path_and_file_name*  
+ **-ErrorFile** *error_path_and_file_name*  
  ディストリビューション エージェントが作成するエラー ファイルのパスとファイル名です。 このファイルは、サブスクライバーでレプリケーション トランザクションを適用しているときに、エラーが発生すると生成されます。パブリッシャーまたはディストリビューターで発生したエラーについては、このファイルには記録されません。 このファイルには、障害が発生したレプリケーション トランザクションおよび関連するエラー メッセージが含まれます。 指定しない場合は、エラー ファイルはディストリビューション エージェントの現在のディレクトリに作成されます。 エラー ファイル名は、ディストリビューション エージェントの名前に .err 拡張子を付けた名前です。 指定したファイル名が既存の場合、エラー メッセージはこのファイルに追加されます。 このパラメーターには最大 256 個の Unicode 文字を指定できます。  
   
  **-ExtendedEventConfigFile** *configuration_path_and_file_name*  
  拡張イベントの XML 構成ファイルのパスとファイル名を指定します。 拡張イベントの構成ファイルによって、追跡に必要なセッションを構成し、イベントを有効にすることができます。  
   
  **-FileTransferType** [ **0**| **1**]  
- ファイル転送の種類を指定します。 値 **0** UNC (汎用名前付け規則)、およびの値を示す **1** FTP (ファイル転送プロトコル) を示します。  
+ ファイル転送の種類を指定します。 **0** の値は UNC (汎用名前付け規則) を示し、 **1** の値は FTP (ファイル転送プロトコル) を示します。  
   
  **-FtpAddress** *ftp_address*  
  ディストリビューター用の FTP サービスのネットワーク アドレスです。 このパラメーターを指定しない場合、 **DistributorAddress** が使用されます。 **DistributorAddress** が指定されていない場合、 **Distributor** が使用されます。  
@@ -163,7 +167,7 @@ distrib [-?]
  **-FtpUserName**  *ftp_user_name*  
  FTP サービスに接続するときに使用するユーザー名です。 指定しない場合、 **anonymous** が使用されます。  
   
- **-Historyverboselevel** [ **0** | **1** | **2** | **3** ]  
+ **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
  ディストリビューション操作中にログに記録する履歴の量を指定します。 **1**を選択すれば、ログへの履歴の記録がパフォーマンスに与える影響を最小限に抑えることができます。  
   
 |HistoryVerboseLevel の値|説明|  
@@ -179,19 +183,19 @@ distrib [-?]
  **-KeepAliveMessageInterval** *keep_alive_message_interval_seconds*  
  既存の接続がサーバーからの応答を待機しているかどうかを、履歴スレッドがチェックするまでの秒数です。 この値を小さくすれば、ディストリビューション エージェントが時間のかかるバッチを実行しているとき、照合エージェントによって SUSPECT とマークされるのを防ぐことができます。 既定値は **300** 秒です。  
   
- **-Logintimeout** *login_time_out_seconds*  
+ **-LoginTimeOut** *login_time_out_seconds*  
  ログインがタイムアウトになるまでの秒数です。 既定値は **15** 秒です。  
   
- **-Maxbcpthreads** *number_of_threads*  
- 並列実行できる一括コピーの操作数を指定します。 同時に存在するスレッドと ODBC 接続の最大数は、 **MaxBcpThreads** の値と、ディストリビューション データベースの同期トランザクションに示されている一括コピー要求の数の小さい方の値になります。 **MaxBcpThreads** より大きい値を持つ必要があります **0** ハード コーディングされた上限がないです。 既定値は、プロセッサ数の **2** 倍の値です。最大値は、 **8**になります。 パブリッシャー側で同時実行スナップショット オプションを使って生成されたスナップショットを適用する場合は、 **MaxBcpThreads**に指定した値に関係なく、単一のスレッドが使用されます。  
+ **-MaxBcpThreads** *number_of_threads*  
+ 並列実行できる一括コピーの操作数を指定します。 同時に存在するスレッドと ODBC 接続の最大数は、 **MaxBcpThreads** の値と、ディストリビューション データベースの同期トランザクションに示されている一括コピー要求の数の小さい方の値になります。 **MaxBcpThreads** は **0** よりも大きくする必要がありますが、上限はありません。 既定値は、プロセッサ数の **2** 倍の値です。最大値は、 **8**になります。 パブリッシャー側で同時実行スナップショット オプションを使って生成されたスナップショットを適用する場合は、 **MaxBcpThreads**に指定した値に関係なく、単一のスレッドが使用されます。  
   
- **-Maxdeliveredtransactions** *number_of_transactions*  
+ **-MaxDeliveredTransactions** *number_of_transactions*  
  1 回の同期でサブスクライバーに適用するプッシュまたはプル トランザクションの最大数です。 値 **0** は、トランザクション数に制限がないことを示します。 その他の値は、サブスクライバーがパブリッシャーからプルする同期の経過時間を短縮するときに使用できます。  
   
 > [!NOTE]  
 >  -MaxDeliveredTransactions と -Continuous を両方とも指定すると、ディストリビューション エージェントは、指定した数のトランザクションを配信してから、停止します (-Continuous が指定されている場合であっても)。 ジョブが完了した後、ディストリビューション エージェントを再起動してください。  
   
- **-Messageinterval**  *message_interval*  
+ **-MessageInterval**  *message_interval*  
  履歴をログに記録する間隔です。 次のいずれかの場合、履歴イベントはログに記録されます。  
   
 -   最後の履歴イベントをログに記録した後、 **TransactionsPerHistory** の値が経過した場合  
@@ -200,14 +204,14 @@ distrib [-?]
   
  ソースに利用可能なレプリケートされたトランザクションがない場合、エージェントはディストリビューターに対してトランザクションなしのメッセージを報告します。 このオプションは、エージェントが次にトランザクションなしのメッセージを報告するまでの待ち時間を指定します。 前回レプリケートされたトランザクションを処理した後で、ソースに利用可能なトランザクションがないことを検出すると、エージェントは必ずトランザクションなしのメッセージを報告します。 既定値は 60 秒です。  
   
- **-Oledbstreamthreshold** *oledb_stream_threshold*  
+ **-OledbStreamThreshold** *oledb_stream_threshold*  
  BLOB データの最小バイト サイズを指定します。この値を超えると、データはストリームとしてバインドされます。 このパラメーターを使用するためには、 **–UseOledbStreaming** を指定する必要があります。 400 バイトから 1048576 バイトまでの値を指定できます。既定値は 16384 バイトです。  
   
- **-出力** *output_path_and_file_name*  
+ **-Output** *output_path_and_file_name*  
  エージェントの出力ファイルのパスです。 ファイル名が指定されていない場合、出力はコンソールに送られます。 指定された名前のファイルが存在する場合、出力はそのファイルに追加されます。  
   
- **-Outputverboselevel** [ **0**| **1**| **2**]  
- 出力を詳細表示にするかどうかを指定します。 詳細レベルが **0**の場合、エラー メッセージだけが出力されます。 詳細レベルが **1**の場合、すべての実行状況報告メッセージが出力されます。 詳細レベルが場合 **2** (既定)、すべてのエラー メッセージと進行状況レポート メッセージが出力されます。 これはデバッグに役立ちます。  
+ **-OutputVerboseLevel** [ **0**| **1**| **2**]  
+ 出力を詳細表示にするかどうかを指定します。 詳細レベルが **0**の場合、エラー メッセージだけが出力されます。 詳細レベルが **1**の場合、すべての実行状況報告メッセージが出力されます。 詳細レベルが **2** (既定値) の場合、すべてのエラー メッセージと実行状況報告メッセージが出力されます。これはデバッグ時に便利です。  
   
  **-PacketSize** *packet_size*  
  パケット サイズをバイト単位で指定します。 既定値は 4096 (バイト) です。  
@@ -216,33 +220,33 @@ distrib [-?]
  レプリケートされたトランザクションに関してディストリビューション データベースをクエリする間隔を秒単位で示します。 既定値は 5 秒です。  
   
  **-ProfileName** *profile_name*  
- エージェント パラメーターに使用するエージェント プロファイルを指定します。 **ProfileName** が NULL の場合、このエージェント プロファイルは無効になります。 **ProfileName** を指定しない場合、エージェントの種類に応じた既定のプロファイルが使われます。 詳細については、次を参照してください。 [レプリケーション エージェント プロファイル](../../../relational-databases/replication/agents/replication-agent-profiles.md)します。  
+ エージェント パラメーターに使用するエージェント プロファイルを指定します。 **ProfileName** が NULL の場合、このエージェント プロファイルは無効になります。 **ProfileName** を指定しない場合、エージェントの種類に応じた既定のプロファイルが使われます。 詳細については、「[レプリケーション エージェント プロファイル](../../../relational-databases/replication/agents/replication-agent-profiles.md)」を参照してください。  
   
- **-パブリケーション**  *パブリケーション*  
+ **-Publication**  *publication*  
  パブリケーションの名前です。 このパラメーターは、新規または再初期化されたサブスクリプションのスナップショットを常に利用できるようにパブリケーションを設定している場合にのみ有効です。  
   
- **-Querytimeout** *query_time_out_seconds*  
+ **-QueryTimeOut** *query_time_out_seconds*  
  クエリがタイムアウトになるまでの秒数です。 既定値は 1800 秒です。  
   
  **-QuotedIdentifier** *quoted_identifier*  
  使用する引用符で囲まれた識別子を指定します。 値の最初の文字は、ディストリビューション エージェントが使用する値を示します。 値を指定せずに **QuotedIdentifier** を使用する場合、ディストリビューション エージェントはスペースを使用します。 **QuotedIdentifier** を使用しない場合には、ディストリビューション エージェントはサブスクライバーがサポートしている引用符で囲まれた識別子を使用します。  
   
- **-Skiperrors** *native_error_id* [**:***.. .n*]  
+ **-SkipErrors** *native_error_id* [**:***...n*]  
  このエージェントでスキップされる一連のエラー番号をコロンで区切って指定します。  
   
  **-SubscriberDatabasePath** *subscriber_database_path*  
- Jet データベース (.mdb ファイル) へのパスは、場合 **SubscriberType** は **2** (Jet データベースせず、ODBC データ ソース名 (DSN) への接続を許可する)。  
+ **SubscriberType** が **2** の場合、Jet データベース (.mdb) ファイルへのパスを指定します。この指定では、ODBC データ ソース名 (DSN) なしで Jet データベースに接続することができます。  
   
  **-SubscriberLogin** *subscriber_login*  
- サブスクライバーのログイン名です。 場合 **SubscriberSecurityMode** は **0** (の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証)、このパラメーターを指定する必要があります。  
+ サブスクライバーのログイン名です。 **SubscriberSecurityMode** が **0** ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モード) の場合は、このパラメーターを指定しなければなりません。  
   
  **-SubscriberPassword** *subscriber_password*  
- サブスクライバーのパスワードです。 場合 **SubscriberSecurityMode** は **0** (の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証)、このパラメーターを指定する必要があります。  
+ サブスクライバーのパスワードです。 **SubscriberSecurityMode** が **0** ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モード) の場合は、このパラメーターを指定しなければなりません。  
   
- **-Subscribersecuritymode** [ **0**| **1**]  
- サブスクライバーのセキュリティ モードを指定します。 値 **0** 示す [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証、および値の **1** Windows 認証モード (既定値) を示します。  
+ **-SubscriberSecurityMode** [ **0**| **1**]  
+ サブスクライバーのセキュリティ モードを指定します。 値 **0** は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モードを指定し、値 **1** は Windows 認証モード (既定値) を指定します。  
   
- **-Subscribertype** [ **0**| **1**| **3**]  
+ **-SubscriberType** [ **0**| **1**| **3**]  
  ディストリビューション エージェントが使用するサブスクライバー接続の種類を指定します。  
   
 |サブスクライバーの種類|説明|  
@@ -258,43 +262,44 @@ distrib [-?]
 >  いずれかの接続が実行またはコミットに失敗した場合、進行中のバッチがすべての接続について中止されます。その場合、エージェントは、単一のストリームを使用して、失敗したバッチを再試行します。 この再試行フェーズが完了するまでは、サブスクライバー側に、トランザクションの一時的な不整合が存在する可能性があります。 サブスクライバーのトランザクション一貫性は、前回失敗したバッチが正常にコミットされた後で復元されます。  
   
 > [!IMPORTANT]  
->  に対して 2 以上の値を指定すると **- SubscriptionStreams**, 、トランザクションがサブスクライバーで受信される順序が、パブリッシャー側で行われた順序と異なる場合があります。 この動作が原因で同期中に制約違反が発生する場合は、NOT FOR REPLICATION オプションを使用して同期中の制約の適用を無効にする必要があります。 詳細については、次を参照してください [トリガー動作および同期中に制約 & #40; の制御。レプリケーション TRANSACT-SQL プログラミングと #41;](../../../relational-databases/replication/control behavior of triggers and constraints in synchronization.md)します。  
+>  **-SubscriptionStreams**に対して 2 以上の値を指定すると、サブスクライバー側でトランザクションが受信される順序が、パブリッシャー側でトランザクションが作成された順序と異なる場合があります。 この動作が原因で同期中に制約違反が発生する場合は、NOT FOR REPLICATION オプションを使用して同期中の制約の適用を無効にする必要があります。 詳細については、「[同期中にトリガと制約の動作を制御する方法 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md)」を参照してください。  
   
 > [!NOTE]  
 >  Subscriptionstreams は、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]を渡すように構成されたアーティクルでは使用できません。 subscriptionstreams を使用するには、代わりにストアド プロシージャの呼び出しを渡すようにアーティクルを構成します。  
   
  **-SubscriptionTableName** *subscription_table*  
- 指定したサブスクライバーで作成または使用するサブスクリプション テーブルの名前です。 指定されていない場合、 [MSreplication_subscriptions & #40 です。Transact SQL と #41;](../../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) テーブルが使用されます。 長いファイル名をサポートしないデータベース管理システム (DBMS) にはこのオプションを使用します。  
+ 指定したサブスクライバーで作成または使用するサブスクリプション テーブルの名前です。 指定しない場合、[MSreplication_subscriptions &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) テーブルが使用されます。 長いファイル名をサポートしないデータベース管理システム (DBMS) にはこのオプションを使用します。  
   
- **-Subscriptiontype** [ **0**| **1**| **2**]  
+ **-SubscriptionType** [ **0**| **1**| **2**]  
  ディストリビューションのサブスクリプションの種類を指定します。 値 **0** はプッシュ サブスクリプションを、値 **1** はプル サブスクリプションを、値 **2** は匿名サブスクリプションを示します。  
   
- **-TransactionsPerHistory** [ **0**| **1**|.**10000**]  
- 履歴をログに記録するトランザクション間隔を指定します。 最後に履歴をログに記録してからコミットしたトランザクションの数がこのオプションより多い場合、履歴メッセージがログに記録されます。 既定値は、100 です。 値 **0** は、 **TransactionsPerHistory**が無制限であることを指定します。 上記の **-MessageInterval**パラメーターを参照してください。  
+ **-TransactionsPerHistory** [ **0**| **1**|...**10000**]  
+ 履歴をログに記録するトランザクション間隔を指定します。 最後に履歴をログに記録してからコミットしたトランザクションの数がこのオプションより多い場合、履歴メッセージがログに記録されます。 既定値は、100 です。 値 **0** は、 **TransactionsPerHistory**が無制限であることを指定します。 See the preceding **–MessageInterval**parameter.  
   
  **-UseDTS**  
  データ変換を許可するパブリケーションでは、このパラメーターを指定する必要があります。  
   
  **-UseInprocLoader**  
- ディストリビューション エージェントがスナップショット ファイルをサブスクライバーに適用するときに、BULK INSERT コマンドが使用され、初期スナップショットのパフォーマンスが向上します。 このパラメーターは XML データ型との互換性がないため推奨されません。 XML データをレプリケートしない場合にのみ、このパラメーターを使用できます。 このパラメーターを、キャラクター モードのスナップショットや、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーで使用することはできません。 このパラメーターを使用する場合は、サブスクライバー側の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントに、スナップショットの .bcp データ ファイルが格納されたディレクトリの読み取り権限が必要です。 このパラメーターを使用しない場合、これらのファイルが、エージェント ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーの場合) またはエージェントが読み込む ODBC ドライバー ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーの場合) によって読み取られるため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントのセキュリティ コンテキストは使用されません。  
+ ディストリビューション エージェントがスナップショット ファイルをサブスクライバーに適用するときに、BULK INSERT コマンドが使用され、初期スナップショットのパフォーマンスが向上します。 このパラメーターは XML データ型との互換性がないため推奨されません。 XML データをレプリケートしない場合にのみ、このパラメーターを使用できます。 このパラメーターを、キャラクター モードのスナップショットや、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーで使用することはできません。 このパラメーターを使用する場合は、サブスクライバー側の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントに、スナップショットの .bcp データ ファイルが格納されたディレクトリの読み取り権限が必要です。 このパラメーターを使用しない場合、これらのファイルが、エージェント ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーの場合) またはエージェントが読み込む ODBC ドライバー ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーの場合) によって読み取られるため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントのセキュリティ コンテキストは使用されません。  
   
  **-UseOledbStreaming**  
- 指定した場合、BLOB データをストリームとしてバインドできるようになります。 使用 **-oledbstreamthreshold** を上回り、ストリームが使用されるバイト数で、サイズを指定します。 **UseOledbStreaming** は既定で有効になっています。 **UseOledbStreaming** に書き込み、 **C:\Program files \microsoft SQL Server\\< バージョン\>\COM** フォルダーです。  
+ 指定した場合、BLOB データをストリームとしてバインドできるようになります。 ストリームが使用されるしきい値 (バイト サイズ) を指定するには、 **-OledbStreamThreshold** を使用します。 **UseOledbStreaming** は既定で有効になっています。 **UseOledbStreaming** は、**C:\Program Files\Microsoft SQL Server\\<version\>\COM** フォルダーに書き込みます。  
   
-## 解説  
+## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]  
 >  ドメイン ユーザー アカウント (既定値) ではなくローカル システム アカウントで実行するように [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントをインストールした場合、サービスはローカル コンピューターにのみアクセスできます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスへのログイン時に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]エージェントの下で実行するディストリビューション エージェントで、Windows 認証モードを使用するように構成すると、ディストリビューション エージェントは失敗します。 既定の設定は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証です。 セキュリティ アカウント変更の詳細については、「 [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。  
   
- ディストリビューション エージェントを起動するには、コマンド プロンプトから **distrib.exe** を実行します。 詳細については、次を参照してください。 [レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)です。  
+ ディストリビューション エージェントを起動するには、コマンド プロンプトから **distrib.exe** を実行します。 詳細については、「[レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)」を参照してください。  
   
-## 変更履歴  
+## <a name="change-history"></a>変更履歴  
   
 |変更内容|  
 |---------------------|  
-|追加、 **- ExtendedEventConfigFile** パラメーター。|  
+|**-ExtendedEventConfigFile** パラメーターを追加しました。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レプリケーション エージェントの管理](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   
+

@@ -1,33 +1,37 @@
 ---
 title: "SQL Server 監査のアクション グループとアクション | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "audit"
-helpviewer_keywords: 
-  - "監査アクション [SQL Server]"
-  - "監査 [SQL Server], グループ"
-  - "サーバー レベルの監査アクション [SQL Server]"
-  - "SQL Server Audit"
-  - "監査レベルの監査アクション [SQL Server]"
-  - "データベース レベルの監査アクション [SQL Server]"
-  - "監査アクション グループ [SQL Server]"
-  - "監査 [SQL Server], アクション"
+ms.custom: 
+ms.date: 10/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- audit
+helpviewer_keywords:
+- audit actions [SQL Server]
+- audits [SQL Server], groups
+- server-level audit actions [SQL Server]
+- SQL Server Audit
+- audit-level audit actions [SQL Server]
+- database-level audit actions [SQL Server]
+- audit action groups [SQL Server]
+- audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3eb276c9571a168a746e0e422adf426292cfad2
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 監査のアクション グループとアクション
+# <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 監査のアクション グループとアクション
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 機能を使用すると、サーバー レベルおよびデータベース レベルのイベントのグループおよび個別のイベントを監査することができます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の監査は、0 個以上の監査アクション項目で構成されます。 これらの監査アクション項目には、アクションのグループ (Server_Object_Change_Group など) を使用することも、個別のアクション (テーブルに対する SELECT 操作など) を使用することもできます。  
@@ -65,7 +69,7 @@ caps.handback.revision: 46
   
  監査はすべて、最初の作成時には無効になります。  
   
-## サーバー レベルの監査アクション グループ  
+## <a name="server-level-audit-action-groups"></a>サーバー レベルの監査アクション グループ  
  サーバー レベルの監査アクション グループは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セキュリティ監査イベント クラスに似ています。 詳しくは、「 [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md)」をご覧ください。  
   
  サーバー レベルの監査アクション グループと、同等の SQL Server イベント クラス (存在する場合) を次の表に示します。  
@@ -115,12 +119,12 @@ caps.handback.revision: 46
 |USER_CHANGE_PASSWORD_GROUP|このイベントは、包含データベースのユーザーのパスワードが USER ALTER ステートメントを使用して変更されるたびに発生します。|  
 |USER_DEFINED_AUDIT_GROUP|このグループは、[sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md) の使用によって発生するイベントを監視します。 通常、トリガーまたはストアド プロシージャには、重要なイベントを監査できるようにするために、**sp_audit_write** への呼び出しが含まれています。|  
   
-### 考慮事項  
+### <a name="considerations"></a>考慮事項  
  サーバー レベルのアクション グループは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス全体のアクションを対象とします。 たとえば、該当するアクション グループをサーバー監査の仕様に追加すると、任意のデータベースの任意のスキーマ オブジェクトのアクセス確認が記録されます。 データベース監査の仕様では、そのデータベースのスキーマ オブジェクト アクセスのみが記録されます。  
   
  サーバー レベルのアクションでは、データベース レベルのアクションに対する詳細なフィルタリングは使用できません。 Employee グループのログインの Customers テーブルに対する SELECT アクションの監査などのデータベース レベルの監査では、アクションの詳細なフィルタリングを実装する必要があります。 ユーザーのデータベース監査の仕様に、システム ビューなどのサーバー スコープ オブジェクトは含めないでください。  
   
-## データベース レベルの監査アクション グループ  
+## <a name="database-level-audit-action-groups"></a>データベース レベルの監査アクション グループ  
  データベース レベルの監査アクション グループは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セキュリティ監査イベント クラスに似ています。 イベント クラスの詳細については、「 [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md)」を参照してください。  
   
  データベース レベルの監査アクション グループと、同等の SQL Server イベント クラス (存在する場合) を次の表に示します。  
@@ -152,7 +156,7 @@ caps.handback.revision: 46
 |USER_CHANGE_PASSWORD_GROUP|このイベントは、包含データベースのユーザーのパスワードが USER ALTER ステートメントを使用して変更されるたびに発生します。|  
 |USER_DEFINED_AUDIT_GROUP|このグループは、[sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md) の使用によって発生するイベントを監視します。|  
   
-## データベース レベルの監査アクション  
+## <a name="database-level-audit-actions"></a>データベース レベルの監査アクション  
  データベース レベルのアクションを使用すると、データベース、スキーマ、およびスキーマ オブジェクト (テーブル、ビュー、ストアド プロシージャ、関数、拡張ストアド プロシージャ、キュー、シノニムなど) で特定のアクションを直接監査することができます。 型、XML スキーマ コレクション、データベース、およびスキーマは監査されません。 スキーマ オブジェクトの監査をスキーマおよびデータベースに構成できます。これは、指定したスキーマまたはデータベースに含まれるすべてのスキーマ オブジェクトのイベントが監査されることを意味します。 データベース レベルの監査アクションを次の表に示します。  
   
 |操作|説明|  
@@ -165,21 +169,21 @@ caps.handback.revision: 46
 |RECEIVE|このイベントは、RECEIVE が実行されるたびに発生します。|  
 |REFERENCES|このイベントは、REFERENCES 権限の確認が行われるたびに発生します。|  
   
-### 考慮事項  
+### <a name="considerations"></a>考慮事項  
 *  データベース レベルの監査アクションは列には適用されません。  
   
 *  クエリ プロセッサによってクエリをパラメーター化すると、パラメーターがクエリの列値の代わりに監査イベント ログに表示されます。 
  
 *  RPC ステートメントは記録されません。 
   
-## 監査レベルの監査アクション グループ  
+## <a name="audit-level-audit-action-groups"></a>監査レベルの監査アクション グループ  
  監査プロセス内のアクションを監査することもできます。 この監査は、サーバー スコープで行うことも、データベース スコープで行うこともできます。 データベース スコープでは、データベース監査の仕様についてのみ監査が行われます。 監査レベルの監査アクション グループを次の表に示します。  
   
 |アクション グループ名|説明|  
 |-----------------------|-----------------|  
 |AUDIT_ CHANGE_GROUP|このイベントは、次のいずれかのコマンドが実行されるたびに発生します。<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
  [サーバー監査およびサーバー監査の仕様を作成する方法](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
  [サーバー監査の仕様およびデータベース監査の仕様を作成する方法](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
@@ -225,3 +229,4 @@ caps.handback.revision: 46
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
   
   
+

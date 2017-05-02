@@ -1,43 +1,47 @@
 ---
-title: "例: 読み取り/書き込みファイルのオンライン復元 (完全復旧モデル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "完全復旧モデル [SQL Server], RESTORE の例"
-  - "オンライン復元 [SQL Server], 完全復旧モデル"
-  - "復元シーケンス [SQL Server], オンライン"
+title: "例 : 読み取り/書き込みファイルのオンライン復元 (完全復旧モデル) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full recovery model [SQL Server], RESTORE example
+- online restores [SQL Server], full recovery model
+- restore sequences [SQL Server], online
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4be86c808d1af35a04b10c88d5cecdd919416137
+ms.lasthandoff: 04/11/2017
+
 ---
-# 例: 読み取り/書き込みファイルのオンライン復元 (完全復旧モデル)
+# <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>例: 読み取り/書き込みファイルのオンライン復元 (完全復旧モデル)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   このトピックは、複数のファイルやファイル グループを含む、完全復旧モデルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連しています。  
   
- この例では、完全復旧モデルを使用する `adb` というデータベースに 3 つのファイル グループが含まれているとします。 ファイル グループ `A` は読み取り/書き込みが可能で、ファイル グループ `B` とファイル グループ `C` は読み取り専用です。 最初は、すべてのファイル グループがオンラインです。  
+ この例では、完全復旧モデルを使用する `adb`というデータベースに 3 つのファイル グループが含まれているとします。 ファイル グループ `A` は読み取り/書き込みが可能で、ファイル グループ `B` とファイル グループ `C` は読み取り専用です。 最初は、すべてのファイル グループがオンラインです。  
   
- ファイル グループ `A` のファイル `a1` が損傷していると思われるので、データベース管理者は、データベースをオンライン状態のままで復元することにします。  
+ ファイル グループ `a1` のファイル `A` が損傷していると思われるので、データベース管理者は、データベースをオンライン状態のままで復元することにします。  
   
 > [!NOTE]  
 >  単純復旧モデルでは、読み取り/書き込みデータをオンライン復元することはできません。  
   
-## 復元シーケンス  
+## <a name="restore-sequences"></a>復元シーケンス  
   
 > [!NOTE]  
 >  オンライン復元シーケンスでは、オフライン復元シーケンスと同じ構文を使用します。  
   
-1.  ファイル `a1` をオンライン復元します。  
+1.  ファイル `a1`をオンライン復元します。  
   
     ```  
     RESTORE DATABASE adb FILE='a1' FROM backup   
@@ -54,7 +58,7 @@ caps.handback.revision: 33
   
 3.  ログ バックアップをオンライン復元します。  
   
-     復元したファイル バックアップ以降、最新のログ バックアップ (手順 2. で作成した *log_backup3*) までのすべてのログ バックアップを、管理者が復元します。 最後のバックアップを復元した後、データベースを復旧します。  
+     復元したファイル バックアップ以降、最新のログ バックアップ (手順 2. で作成した*log_backup3*) までのすべてのログ バックアップを、管理者が復元します。 最後のバックアップを復元した後、データベースを復旧します。  
   
     ```  
     RESTORE LOG adb FROM log_backup1 WITH NORECOVERY;  
@@ -65,13 +69,13 @@ caps.handback.revision: 33
   
      ファイル `a1` がオンラインになります。  
   
-## その他の例  
+## <a name="additional-examples"></a>その他の例  
   
--   [例: データベースの段階的な部分復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [例: データベースの段階的な部分復元 &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
--   [例 : 読み取り専用ファイルのオンライン復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [例: 読み取り専用ファイルのオンライン復元 &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
 -   [例: データベースの段階的な部分復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
@@ -79,12 +83,12 @@ caps.handback.revision: 33
   
 -   [例 : 読み取り専用ファイルのオンライン復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Online Restore &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [復元と復旧の概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

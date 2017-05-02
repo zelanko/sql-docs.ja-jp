@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG014114 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG014114 エラー"
+title: MSSQL_ENG014114 | Microsoft Docs
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG014114 error
 ms.assetid: f5f04590-e1c6-40d8-ab2b-98c791a0fc44
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e2f6a83763be1e01adfb8ed08147cc1fb4905d2
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG014114
+# <a name="mssqleng014114"></a>MSSQL_ENG014114
     
-## メッセージの詳細  
+## <a name="message-details"></a>メッセージの詳細  
   
 |||  
 |-|-|  
@@ -31,14 +35,14 @@ caps.handback.revision: 18
 |シンボル名||  
 |メッセージ テキスト|'%s' はディストリビューターとして構成されていません。|  
   
-## 説明  
+## <a name="explanation"></a>説明  
  エラー メッセージで 'NULL' ではない特定のインスタンスが指定されている場合、指定されたインスタンスはディストリビューターとして認識されるように正しく構成されていません。  
   
- メッセージで 'null' がディストリビューターとして指定されている場合、**master** データベースのローカル サーバーにエントリがないか、エントリが正しくありません (おそらくコンピューターの名前が変更されたことが原因です)。 レプリケーションでは、コンピューター名とオプションのインスタンス名 (クラスター化されたインスタンスの場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仮想サーバー名とオプションのインスタンス名) を使用して、トポロジのすべてのサーバーを登録する必要があります。 レプリケーションが正しく機能するためには、トポロジの各サーバーに対して `SELECT @@SERVERNAME` によって返された値が、コンピューター名または仮想サーバー名と、オプションのインスタンス名で一致している必要があります。  
+ メッセージで 'NULL' がディストリビューターとして指定されている場合、 **master** データベースのローカル サーバーにエントリがないか、エントリが正しくありません (おそらくコンピューターの名前が変更されたことが原因です)。 レプリケーションでは、コンピューター名とオプションのインスタンス名 (クラスター化されたインスタンスの場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仮想サーバー名とオプションのインスタンス名) を使用して、トポロジのすべてのサーバーを登録する必要があります。 レプリケーションが正しく機能するためには、トポロジの各サーバーに対して `SELECT @@SERVERNAME` によって返された値が、コンピューター名または仮想サーバー名と、オプションのインスタンス名で一致している必要があります。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのいずれかを IP アドレスまたは完全修飾ドメイン名 (FQDN) で登録している場合、レプリケーションはサポートされません。 レプリケーションの構成時に、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 内に IP アドレスまたは FQDN で登録された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスがあった場合、このエラーが発生する可能性があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのいずれかを IP アドレスまたは完全修飾ドメイン名 (FQDN) で登録している場合、レプリケーションはサポートされません。 レプリケーションの構成時に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内に IP アドレスまたは FQDN で登録された [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] インスタンスがあった場合、このエラーが発生する可能性があります。  
   
-## ユーザーの操作  
+## <a name="user-action"></a>ユーザーの操作  
  エラー メッセージで特定のインスタンスが指定されている場合、サーバーをディストリビューターとして構成してください。 詳細については、「[ディストリビューションの構成](../../relational-databases/replication/configure-distribution.md)」を参照してください。  
   
  エラー メッセージで特定のインスタンスが指定されていない (つまり 'NULL' である) 場合、ディストリビューター インスタンスが正しく登録されていることを確認してください。 コンピューターのネットワーク名と SQL Server インスタンスの名前が異なる場合は、次のいずれかを実行してください。  
@@ -60,9 +64,10 @@ caps.handback.revision: 18
   
      [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) ストアド プロシージャを実行したら、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを再起動し、@@SERVERNAME への変更を有効にする必要があります。  
   
-     @@SERVERNAME の値がクラスター化されたインスタンスに対して適切でない場合は、クラスター アドミニストレーターを使用して名前を変更する必要があります。 詳細については、次を参照してください。 [常にのフェールオーバー クラスター インスタンス (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)します。  
+     @@SERVERNAME の値がクラスター化されたインスタンスに対して適切でない場合は、クラスター アドミニストレーターを使用して名前を変更する必要があります。 詳細については、「[Always On フェールオーバー クラスター インスタンス (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   
+

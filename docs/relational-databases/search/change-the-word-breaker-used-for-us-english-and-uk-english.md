@@ -1,23 +1,27 @@
 ---
 title: "米国英語と英国英語に使用されるワード ブレーカーの変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be3d7e956f6ed89f14fc63c36d97974cc9218933
+ms.lasthandoff: 04/11/2017
+
 ---
-# 米国英語と英国英語に使用されるワード ブレーカーの変更
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、英語用のワード ブレーカーおよびステマーの新しいバージョン (バージョン 14.0.4999.1038) がインストールされて、前のバージョン (バージョン 12.0.6828.0) が置き換えられます。 新しいコンポーネントで変更された動作の詳細については、「[フルテキスト検索の動作の変更](../Topic/Behavior%20Changes%20to%20Full-Text%20Search.md)」を参照してください。 このトピックでは、これらのコンポーネントの新しいバージョンを前のバージョンに切り替えたり、前のバージョンから新しいバージョンに切り替えたりする方法について説明します。 クラスターのインストールでは、これらの変更を、すべてのプライマリ ノードとパッシブ ノードで行う必要があります。  
+# <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>米国英語と英国英語に使用されるワード ブレーカーの変更
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、英語用のワード ブレーカーおよびステマーの新しいバージョン (バージョン 14.0.4999.1038) がインストールされて、前のバージョン (バージョン 12.0.6828.0) が置き換えられます。 新しいコンポーネントで変更された動作の詳細については、「 [フルテキスト検索の動作の変更](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)」を参照してください。 このトピックでは、これらのコンポーネントの新しいバージョンを前のバージョンに切り替えたり、前のバージョンから新しいバージョンに切り替えたりする方法について説明します。 クラスターのインストールでは、これらの変更を、すべてのプライマリ ノードとパッシブ ノードで行う必要があります。  
   
  前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、米国英語 (LCID 1033) と英国英語 (LCID 2057) に対し、異なる CLSID で表される異なるワード ブレーカーが使用されていました。 このリリースでは、次の表に示すように、両方の LCID で同じ CLSID を持つ同じコンポーネントが使用されます。  
   
@@ -26,13 +30,13 @@ caps.handback.revision: 10
 |1033<br />(米国英語)|188D6CC5-CB03-4C01-912E-47D21295D77E|EEED4C20-7F1B-11CE-BE57-00AA0051FE20|9faed859-0b30-4434-ae65-412e14a16fb8|e1e5ef84-c4a6-4e50-8188-99aef3de2659|  
 |2057<br />(英国英語)|173C97E2-AEBE-437C-9445-01B237ABF2F6|D99F7670-7F1A-11CE-BE57-00AA0051FE20|9faed859-0b30-4434-ae65-412e14a16fb8|e1e5ef84-c4a6-4e50-8188-99aef3de2659|  
   
- このトピックで説明するコンポーネントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの `MSSQL\Binn` フォルダーにインストールされる DLL ファイルです。 通常、完全なパスは `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn` です。  
+ このトピックで説明するコンポーネントは、 `MSSQL\Binn` インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フォルダーにインストールされる DLL ファイルです。 通常、完全なパスは `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`です。  
   
- ワード ブレーカーとステマーの詳細については、「[検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)」を参照してください。  
+ ワード ブレーカーとステマーの詳細については、「 [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)」を参照してください。  
   
-## 現在の英語用ワード ブレーカーから前の英語用ワード ブレーカーへの切り替え  
+## <a name="switching-from-the-current-english-word-breaker-to-the-previous-english-word-breakers"></a>現在の英語用ワード ブレーカーから前の英語用ワード ブレーカーへの切り替え  
   
-#### 米国英語用のワード ブレーカーを現在のバージョンから前のバージョンに切り替えるには  
+#### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>米国英語用のワード ブレーカーを現在のバージョンから前のバージョンに切り替えるには  
   
 1.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 10
   
     1.  前のワード ブレーカー用に値が **{188D6CC5-CB03-4C01-912E-47D21295D77E}** の新しいキーを追加します。  
   
-    2.  このキー値の [(既定)] のデータを **langwrbk.dll** に更新します。  
+    2.  このキー値の [(既定)] のデータを **langwrbk.dll**に更新します。  
   
     3.  前のステマー用に値が **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}** の新しいキーを追加します。  
   
@@ -50,11 +54,11 @@ caps.handback.revision: 10
   
 4.  **WBreakerClass** キー値を **{188D6CC5-CB03-4C01-912E-47D21295D77E}** に更新します。  
   
-5.  **StemmerClass** キー値を **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}** に更新します。  
+5.  **StemmerClass** キー値を **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}**に更新します。  
   
-6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動します。  
+6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
   
-#### 英国英語用のワード ブレーカーを現在のバージョンから前のバージョンに切り替えるには  
+#### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>英国英語用のワード ブレーカーを現在のバージョンから前のバージョンに切り替えるには  
   
 1.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 10
   
     1.  前のワード ブレーカー用に値が **{173C97E2-AEBE-437C-9445-01B237ABF2F6}** の新しいキーを追加します。  
   
-    2.  このキー値の [(既定)] のデータを **langwrbk.dll** に更新します。  
+    2.  このキー値の [(既定)] のデータを **langwrbk.dll**に更新します。  
   
     3.  前のステマー用に値が **{D99F7670-7F1A-11CE-BE57-00AA0051FE20}** の新しいキーを追加します。  
   
@@ -72,13 +76,13 @@ caps.handback.revision: 10
   
 4.  **WBreakerClass** キー値を **{173C97E2-AEBE-437C-9445-01B237ABF2F6}** に更新します。  
   
-5.  **StemmerClass** キー値を **{D99F7670-7F1A-11CE-BE57-00AA0051FE20}** に更新します。  
+5.  **StemmerClass** キー値を **{D99F7670-7F1A-11CE-BE57-00AA0051FE20}**に更新します。  
   
-6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動します。  
+6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
   
-## 前の英語用ワード ブレーカーから現在の英語用ワード ブレーカーへの切り替え  
+## <a name="switching-back-from-the-previous-english-word-breakers-to-the-current-english-word-breaker"></a>前の英語用ワード ブレーカーから現在の英語用ワード ブレーカーへの切り替え  
   
-#### 米国英語用のワード ブレーカーを前のバージョンから現在のバージョンに切り替えるには  
+#### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>米国英語用のワード ブレーカーを前のバージョンから現在のバージョンに切り替えるには  
   
 1.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
   
@@ -86,7 +90,7 @@ caps.handback.revision: 10
   
     1.  現在のワード ブレーカー用に値が **{9faed859-0b30-4434-ae65-412e14a16fb8}** の新しいキーを追加します。  
   
-    2.  このキー値の [(既定)] のデータを **MsWb7.dll** に更新します。  
+    2.  このキー値の [(既定)] のデータを **MsWb7.dll**に更新します。  
   
     3.  現在のステマー用に値が **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** の新しいキーを追加します。  
   
@@ -96,11 +100,11 @@ caps.handback.revision: 10
   
 4.  **WBreakerClass** キー値を **{9faed859-0b30-4434-ae65-412e14a16fb8}** に更新します。  
   
-5.  **StemmerClass** キー値を **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** に更新します。  
+5.  **StemmerClass** キー値を **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}**に更新します。  
   
-6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動します。  
+6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
   
-#### 英国英語用のワード ブレーカーを前のバージョンから現在のバージョンに切り替えるには  
+#### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>英国英語用のワード ブレーカーを前のバージョンから現在のバージョンに切り替えるには  
   
 1.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
   
@@ -108,7 +112,7 @@ caps.handback.revision: 10
   
     1.  現在のワード ブレーカー用に値が **{9faed859-0b30-4434-ae65-412e14a16fb8}** の新しいキーを追加します。  
   
-    2.  このキー値の [(既定)] のデータを **MsWb7.dll** に更新します。  
+    2.  このキー値の [(既定)] のデータを **MsWb7.dll**に更新します。  
   
     3.  現在のステマー用に値が **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** の新しいキーを追加します。  
   
@@ -118,12 +122,12 @@ caps.handback.revision: 10
   
 4.  **WBreakerClass** キー値を **{9faed859-0b30-4434-ae65-412e14a16fb8}** に更新します。  
   
-5.  **StemmerClass** キー値を **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** に更新します。  
+5.  **StemmerClass** キー値を **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}**に更新します。  
   
-6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動します。  
+6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [検索で使用するワード ブレーカーを以前のバージョンに戻す](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
- [フルテキスト検索の動作の変更](../Topic/Behavior%20Changes%20to%20Full-Text%20Search.md)  
+ [フルテキスト検索の動作の変更](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   

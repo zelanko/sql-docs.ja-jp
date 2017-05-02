@@ -1,32 +1,36 @@
 ---
 title: "スナップショット レプリケーションおよびトランザクション レプリケーションのバックアップと復元の方式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "バックアップ [SQL Server レプリケーション], スナップショット レプリケーション"
-  - "復元 [SQL Server レプリケーション], トランザクション レプリケーション"
-  - "スナップショット レプリケーション [SQL Server], バックアップと復元"
-  - "復元 [SQL Server レプリケーション], スナップショット レプリケーション"
-  - "復旧 [SQL Server レプリケーション], トランザクション レプリケーション"
-  - "トランザクション レプリケーション, バックアップと復元"
-  - "復旧 [SQL Server レプリケーション], スナップショット レプリケーション"
-  - "sync with backup [SQL Server レプリケーション]"
-  - "バックアップ [SQL Server レプリケーション], トランザクション レプリケーション"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backups [SQL Server replication], snapshot replication
+- restoring [SQL Server replication], transactional replication
+- snapshot replication [SQL Server], backup and restore
+- restoring [SQL Server replication], snapshot replication
+- recovery [SQL Server replication], transactional replication
+- transactional replication, backup and restore
+- recovery [SQL Server replication], snapshot replication
+- sync with backup [SQL Server replication]
+- backups [SQL Server replication], transactional replication
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 caps.latest.revision: 59
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58cc3e019838c102405191b25ef734b011915244
+ms.lasthandoff: 04/11/2017
+
 ---
-# スナップショット レプリケーションおよびトランザクション レプリケーションのバックアップと復元の方式
+# <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>スナップショット レプリケーションおよびトランザクション レプリケーションのバックアップと復元の方式
   スナップショット レプリケーションおよびトランザクション レプリケーションのバックアップと復元の方式を計画する場合には、以下の 3 点を考慮する必要があります。  
   
 -   バックアップ対象のデータベース  
@@ -35,9 +39,9 @@ caps.handback.revision: 59
   
 -   データベースを復元するために必要な手順。 この手順は、レプリケーションの種類と選択したオプションによって異なります。  
   
- このトピックでは、これらの各項目について、以下の 3 つのセクションで説明します。 Oracle パブリッシングのバックアップと復元については、次を参照してください。 [Oracle パブリッシャーのバックアップと復元](../../../relational-databases/replication/non-sql/backup-and-restore-for-oracle-publishers.md)します。  
+ このトピックでは、これらの各項目について、以下の 3 つのセクションで説明します。 Oracle パブリッシングのバックアップと復元については、「[Oracle パブリッシャーのバックアップと復元](../../../relational-databases/replication/non-sql/backup-and-restore-for-oracle-publishers.md)」を参照してください。  
   
-## データベースのバックアップ  
+## <a name="backing-up-databases"></a>データベースのバックアップ  
  スナップショット レプリケーションおよびトランザクション レプリケーションの場合は、以下のデータベースを定期的にバックアップする必要があります。  
   
 -   パブリッシャーにあるパブリケーション データベース  
@@ -50,14 +54,14 @@ caps.handback.revision: 59
   
  定期的なログ バックアップを実行する場合は、レプリケーション関連の変更をログ バックアップでキャプチャする必要があります。 ログ バックアップを実行しない場合は、レプリケーションに関連する設定を変更するたびに、バックアップを実行する必要があります。 詳細については、「 [Common Actions Requiring an Updated Backup](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md)」を参照してください。  
   
-## トランザクション レプリケーションのバックアップ設定  
+## <a name="backup-settings-for-transactional-replication"></a>トランザクション レプリケーションのバックアップ設定  
  トランザクション レプリケーションには " **sync with backup** " オプションが用意されており、ディストリビューション データベースおよびパブリケーション データベースで設定できます。  
   
 -   ディストリビューション データベースでは、常にこのオプションを設定することをお勧めします。  
   
      ディストリビューション データベースでこのオプションを設定すると、パブリケーション データベースのログに記録されたトランザクションは、ディストリビューション データベース内のバックアップが終了するまで切り捨てられることはありません。 ディストリビューション データベースは前回のバックアップに復元できます。失われたトランザクションは、パブリケーション データベースからディストリビューション データベースに配信されます。 レプリケーションは影響を受けることなく継続されます。  
   
-     ディストリビューション データベースでこのオプションを設定しても、レプリケーションの待機時間には影響しません。 ただし、ディストリビューション データベース内の対応するトランザクションがバックアップされるまで、パブリケーション データベースでのログの切り捨てが遅延されます  (この結果、パブリケーション データベースのトランザクション ログのサイズが増加する可能性があります)。  
+     ディストリビューション データベースでこのオプションを設定しても、レプリケーションの待機時間には影響しません。 ただし、ディストリビューション データベース内の対応するトランザクションがバックアップされるまで、パブリケーション データベースでのログの切り捨てが遅延されます (この結果、パブリケーション データベースのトランザクション ログのサイズが増加する可能性があります)。  
   
 -   アプリケーションがレプリケーションの待機時間の延長を許容できる場合は、パブリケーション データベースでこのオプションを設定することをお勧めします。  
   
@@ -70,14 +74,14 @@ caps.handback.revision: 59
   
  **"sync with backup" オプションを設定するには**  
   
--   レプリケーション [!INCLUDE[tsql](../../../includes/tsql-md.md)] プログラミング: [#40; (&)、トランザクション レプリケーションの連携バックアップを有効にします。レプリケーション TRANSACT-SQL プログラミングと #41 です。](../../../relational-databases/replication/administration/enable coordinated backups for transactional replication.md)  
+-   レプリケーション [!INCLUDE[tsql](../../../includes/tsql-md.md)] プログラミング: [トランザクション レプリケーションの連携バックアップの有効化 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)  
   
-## レプリケーションに関連するデータベースの復元  
+## <a name="restoring-databases-involved-in-replication"></a>レプリケーションに関連するデータベースの復元  
  最新のバックアップが利用可能で適切な手順が実行された場合、レプリケーション トポロジ内のすべてのデータベースを復元できます。 パブリケーション データベースの復元手順は、使用するレプリケーションの種類とオプションによって異なります。ただし、パブリケーション データベース以外のデータベースの復元手順は、レプリケーションの種類とオプションに依存しません。  
   
  レプリケーションでは、レプリケートされたデータベースをバックアップ作成元のサーバーおよびデータベースに復元する操作がサポートされます。 レプリケートされたデータベースのバックアップを別のサーバーまたはデータベースに復元する場合は、レプリケーションの設定は保存できません。 この場合、バックアップの復元後にすべてのパブリケーションおよびサブスクリプションを再作成する必要があります。  
   
-### パブリッシャー  
+### <a name="publisher"></a>パブリッシャー  
  以下の種類のレプリケーションについては、復元手順が用意されています。  
   
 -   スナップショット レプリケーション  
@@ -90,7 +94,7 @@ caps.handback.revision: 59
   
  **msdb** データベースおよび **master** データベースの復元方法についてもこのセクションで説明しますが、上記の 4 種類のレプリケーションについてはすべて同じ方法です。  
   
-#### パブリケーション データベース : スナップショット レプリケーション  
+#### <a name="publication-database-snapshot-replication"></a>パブリケーション データベース : スナップショット レプリケーション  
   
 1.  パブリケーション データベースの最新バックアップを復元します。 手順 2 に進みます。  
   
@@ -98,9 +102,9 @@ caps.handback.revision: 59
   
 3.  パブリッシャー、ディストリビューター、およびサブスクライバーで、レプリケーション構成を削除した後、再作成を行います。 復元が完了します。  
   
-     レプリケーションを削除する方法の詳細については、次を参照してください。 [sp_removedbreplication & #40 です。Transact SQL と #41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)します。  
+     レプリケーションを削除する方法の詳細については、「[sp_removedbreplication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)」を参照してください。  
   
-#### パブリケーション データベース : 読み取り専用トランザクション レプリケーション  
+#### <a name="publication-database-read-only-transactional-replication"></a>パブリケーション データベース : 読み取り専用トランザクション レプリケーション  
   
 1.  パブリケーション データベースの最新バックアップを復元します。 手順 2 に進みます。  
   
@@ -112,15 +116,15 @@ caps.handback.revision: 59
   
 4.  復元されたパブリケーション データベースの構成情報が最新ではありません。 このため、サブスクライバーで未実行のコマンドがすべてディストリビューション データベースに存在することを確認し、レプリケーション構成の削除と再作成を行う必要があります。  
   
-    1.  すべてのサブスクライバーがディストリビューション データベース内の未実行のコマンドと同期するまで、ディストリビューション エージェントを実行します。 使用してすべてのコマンドがサブスクライバーに配信されたことを確認、 **[未配布のコマンド** タブまたは [レプリケーション モニターでクエリを実行して、 [MSdistribution_status](../../../relational-databases/system-views/msdistribution-status-transact-sql.md) ディストリビューション データベースで表示します。 手順 b. に進みます。  
+    1.  すべてのサブスクライバーがディストリビューション データベース内の未実行のコマンドと同期するまで、ディストリビューション エージェントを実行します。 レプリケーション モニターの **[未配布のコマンド]** タブを使用するか、またはディストリビューション データベース内の [MSdistribution_status](../../../relational-databases/system-views/msdistribution-status-transact-sql.md) ビューでクエリを実行して、すべてのコマンドがサブスクライバーに配信されたことを確認します。 手順 b. に進みます。  
   
-         ディストリビューション エージェントを実行する方法の詳細については、次を参照してください。 [の開始と停止のレプリケーション エージェントと #40 です。SQL Server Management Studio と #41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  [レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)します。  
+         ディストリビューション エージェントの実行方法の詳細については、「[レプリケーション エージェントを起動および停止する &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)」および「[レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)」を参照してください。  
   
-         コマンドを確認する方法の詳細については、次を参照してください [ビューのレプリケートされたコマンドとディストリビューション データベースと #40; でのその他の情報。レプリケーション TRANSACT-SQL プログラミングと #41;](../../../relational-databases/replication/monitor/view replicated commands and information in distribution database.md)  [情報を表示し、サブスクリプションと #40; に関連付けられているエージェントのタスクを実行レプリケーション モニターと #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)します。  
+         コマンドを確認する方法の詳細については、「[レプリケートされたコマンドなどディストリビューション データベースに格納されている情報を表示する &#40;レプリケーション Transact-SQL プログラミング&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md)」および「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
   
     2.  パブリッシャー、ディストリビューター、およびサブスクライバーで、レプリケーション構成を削除した後、再作成を行います。 サブスクリプションを再作成するときには、サブスクライバーにデータが格納済みであることを指定します。 復元が完了します。  
   
-         レプリケーションを削除する方法の詳細については、次を参照してください。 [sp_removedbreplication & #40 です。Transact SQL と #41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)します。  
+         レプリケーションを削除する方法の詳細については、「[sp_removedbreplication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)」を参照してください。  
   
          サブスクライバーにデータが格納済みであることを指定する方法の詳細については、「 [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md)」を参照してください。  
   
@@ -129,126 +133,126 @@ caps.handback.revision: 59
     > [!IMPORTANT]  
     >  この処理を実行することによって、復元対象のパブリッシュされたテーブルを、バックアップから復元されたパブリッシュされていないテーブルよりも新しい状態にすることができます。  
   
-    1.  すべてのサブスクライバーがディストリビューション データベース内の未実行のコマンドと同期するまで、ディストリビューション エージェントを実行します。 使用してすべてのコマンドがサブスクライバーに配信されたことを確認、 **[未配布のコマンド** タブまたは [レプリケーション モニターでクエリを実行して、 [MSdistribution_status](../../../relational-databases/system-views/msdistribution-status-transact-sql.md) ディストリビューション データベースで表示します。 手順 b. に進みます。  
+    1.  すべてのサブスクライバーがディストリビューション データベース内の未実行のコマンドと同期するまで、ディストリビューション エージェントを実行します。 レプリケーション モニターの **[未配布のコマンド]** タブを使用するか、またはディストリビューション データベース内の [MSdistribution_status](../../../relational-databases/system-views/msdistribution-status-transact-sql.md) ビューでクエリを実行して、すべてのコマンドがサブスクライバーに配信されたことを確認します。 手順 b. に進みます。  
   
-         ディストリビューション エージェントを実行する方法の詳細については、次を参照してください。 [の開始と停止のレプリケーション エージェントと #40 です。SQL Server Management Studio と #41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  [レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)します。  
+         ディストリビューション エージェントの実行方法の詳細については、「[レプリケーション エージェントを起動および停止する &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)」および「[レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)」を参照してください。  
   
-         コマンドを確認する方法の詳細については、次を参照してください [ビューのレプリケートされたコマンドとディストリビューション データベースと #40; でのその他の情報。レプリケーション TRANSACT-SQL プログラミングと #41;](../../../relational-databases/replication/monitor/view replicated commands and information in distribution database.md)  [情報を表示し、サブスクリプションと #40; に関連付けられているエージェントのタスクを実行レプリケーション モニターと #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)します。  
+         コマンドを確認する方法の詳細については、「[レプリケートされたコマンドなどディストリビューション データベースに格納されている情報を表示する &#40;レプリケーション Transact-SQL プログラミング&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md)」および「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
   
     2.  [tablediff ユーティリティ](../../../tools/tablediff-utility.md) またはその他のツールを使用して、パブリッシャーとサブスクライバーを手動で同期します。 これにより、パブリケーション データベースのバックアップに含まれていなかったサブスクリプション データベースのデータを復旧できます。 手順 c. に進みます。  
   
-         詳細については、 **tablediff** ユーティリティを参照してください [相違点と #40; のレプリケートされたテーブルの比較レプリケーション プログラミングと #41;](../../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)します。  
+         **tablediff** ユーティリティの詳細については、「[レプリケートされたテーブルを比較して相違があるかどうかを確認する &#40;レプリケーション プログラミング&#41;](../../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)」を参照してください。  
   
-    3.  復元されたバックアップは完全かつ最新ですか。 すべてのパブリケーションおよびサブスクリプションに対する最新の構成がこのバックアップに含まれていますか。 実行する場合は、実行、 [sp_replrestart](../../../relational-databases/system-stored-procedures/sp-replrestart-transact-sql.md) ストアド プロシージャをディストリビューターのメタデータを持つパブリッシャーのメタデータを再同期します。 復元が完了します。 答えが「いいえ」の場合は、手順 d. に進みます。  
+    3.  復元されたバックアップは完全かつ最新ですか。 すべてのパブリケーションおよびサブスクリプションに対する最新の構成がこのバックアップに含まれていますか。 答えが「はい」の場合は、 [sp_replrestart](../../../relational-databases/system-stored-procedures/sp-replrestart-transact-sql.md) ストアド プロシージャを実行して、パブリッシャーのメタデータをディストリビューターのメタデータと再同期します。 復元が完了します。 答えが「いいえ」の場合は、手順 d. に進みます。  
   
     4.  パブリッシャー、ディストリビューター、およびサブスクライバーで、レプリケーション構成を削除した後、再作成を行います。 サブスクリプションを再作成するときには、サブスクライバーにデータが格納済みであることを指定します。 復元が完了します。  
   
-         レプリケーションを削除する方法の詳細については、次を参照してください。 [sp_removedbreplication & #40 です。Transact SQL と #41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)します。  
+         レプリケーションを削除する方法の詳細については、「[sp_removedbreplication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)」を参照してください。  
   
          サブスクライバーにデータが格納済みであることを指定する方法の詳細については、「 [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md)」を参照してください。  
   
-#### パブリケーション データベース : 更新サブスクリプションを使用するトランザクション レプリケーション  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>パブリケーション データベース : 更新サブスクリプションを使用するトランザクション レプリケーション  
   
 1.  パブリケーション データベースの最新バックアップを復元します。 手順 2 に進みます。  
   
-2.  すべてのサブスクライバーがディストリビューション データベース内の未実行のコマンドと同期するまで、ディストリビューション エージェントを実行します。 使用してすべてのコマンドがサブスクライバーに配信されたことを確認、 **[未配布のコマンド** タブまたは [レプリケーション モニターでクエリを実行して、 [MSdistribution_status](../../../relational-databases/system-views/msdistribution-status-transact-sql.md) ディストリビューション データベースで表示します。 手順 3. に進みます。  
+2.  すべてのサブスクライバーがディストリビューション データベース内の未実行のコマンドと同期するまで、ディストリビューション エージェントを実行します。 レプリケーション モニターの **[未配布のコマンド]** タブを使用するか、またはディストリビューション データベース内の [MSdistribution_status](../../../relational-databases/system-views/msdistribution-status-transact-sql.md) ビューでクエリを実行して、すべてのコマンドがサブスクライバーに配信されたことを確認します。 手順 3. に進みます。  
   
-     ディストリビューション エージェントを実行する方法の詳細については、次を参照してください。 [の開始と停止のレプリケーション エージェントと #40 です。SQL Server Management Studio と #41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  [レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)します。  
+     ディストリビューション エージェントの実行方法の詳細については、「[レプリケーション エージェントを起動および停止する &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)」および「[レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)」を参照してください。  
   
-     コマンドを確認する方法の詳細については、次を参照してください [ビューのレプリケートされたコマンドとディストリビューション データベースと #40; でのその他の情報。レプリケーション TRANSACT-SQL プログラミングと #41;](../../../relational-databases/replication/monitor/view replicated commands and information in distribution database.md)  [情報を表示し、サブスクリプションと #40; に関連付けられているエージェントのタスクを実行レプリケーション モニターと #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)します。  
+     コマンドを確認する方法の詳細については、「[レプリケートされたコマンドなどディストリビューション データベースに格納されている情報を表示する &#40;レプリケーション Transact-SQL プログラミング&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md)」および「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
   
-3.  使用している場合キュー更新サブスクリプションを各サブスクライバーに接続し、すべての行を削除、 [MSreplication_queue & #40 です。Transact SQL と #41;](../../../relational-databases/system-tables/msreplication-queue-transact-sql.md) サブスクリプション データベース内のテーブル。 手順 4 に進みます。  
+3.  キュー更新サブスクリプションを使用している場合は、各サブスクライバーに接続して、サブスクリプション データベースの [MSreplication_queue &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msreplication-queue-transact-sql.md) テーブルからすべての行を削除します。 手順 4 に進みます。  
   
     > [!NOTE]  
-    >  キュー更新サブスクリプションおよび ID 列を含むテーブルを使用している場合は、復元後に正しい ID 範囲が割り当てられていることを確認する必要があります。 詳細については、次を参照してください。 [Id 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)します。  
+    >  キュー更新サブスクリプションおよび ID 列を含むテーブルを使用している場合は、復元後に正しい ID 範囲が割り当てられていることを確認する必要があります。 詳細については、「[ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)」を参照してください。  
   
 4.  サブスクライバーで未実行のコマンドがすべてディストリビューション データベースに存在することを確認し、復元されたバックアップに含まれないすべてのトランザクションをパブリケーション データベースに手動で適用する必要があります。  
   
     > [!IMPORTANT]  
     >  この処理を実行することによって、復元対象のパブリッシュされたテーブルを、バックアップから復元されたパブリッシュされていないテーブルよりも新しい状態にすることができます。  
   
-    1.  すべてのサブスクライバーがディストリビューション データベース内の未実行のコマンドと同期するまで、ディストリビューション エージェントを実行します。 レプリケーション モニターを使用するか、クエリを実行して、すべてのコマンドがサブスクライバーに配信されたことを確認、 [MSdistribution_status](../../../relational-databases/system-views/msdistribution-status-transact-sql.md) ディストリビューション データベースで表示します。 手順 b. に進みます。  
+    1.  すべてのサブスクライバーがディストリビューション データベース内の未実行のコマンドと同期するまで、ディストリビューション エージェントを実行します。 レプリケーション モニターを使用するか、またはディストリビューション データベース内の [MSdistribution_status](../../../relational-databases/system-views/msdistribution-status-transact-sql.md) ビューでクエリを実行して、すべてのコマンドがサブスクライバーに配信されたことを確認します。 手順 b. に進みます。  
   
-    2.   [tablediff Utility](../../../tools/tablediff-utility.md) またはその他のツールを使用して、パブリッシャーとサブスクライバーを手動で同期します。 これにより、パブリケーション データベースのバックアップに含まれていなかったサブスクリプション データベースのデータを復旧できます。 手順 c. に進みます。  
+    2.  [tablediff Utility](../../../tools/tablediff-utility.md) またはその他のツールを使用して、パブリッシャーとサブスクライバーを手動で同期します。 これにより、パブリケーション データベースのバックアップに含まれていなかったサブスクリプション データベースのデータを復旧できます。 手順 c. に進みます。  
   
-         詳細については、 **tablediff** ユーティリティを参照してください [相違点と #40; のレプリケートされたテーブルの比較レプリケーション プログラミングと #41;](../../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)します。  
+         **tablediff** ユーティリティの詳細については、「[レプリケートされたテーブルを比較して相違があるかどうかを確認する &#40;レプリケーション プログラミング&#41;](../../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)」を参照してください。  
   
-    3.  復元されたバックアップは完全かつ最新ですか。 すべてのパブリケーションおよびサブスクリプションに対する最新の構成がこのバックアップに含まれていますか。 実行する場合は、実行、 [sp_replrestart](../../../relational-databases/system-stored-procedures/sp-replrestart-transact-sql.md) ストアド プロシージャをディストリビューターのメタデータを持つパブリッシャーのメタデータを再同期します。 復元が完了します。 答えが「いいえ」の場合は、手順 d. に進みます。  
+    3.  復元されたバックアップは完全かつ最新ですか。 すべてのパブリケーションおよびサブスクリプションに対する最新の構成がこのバックアップに含まれていますか。 答えが「はい」の場合は、 [sp_replrestart](../../../relational-databases/system-stored-procedures/sp-replrestart-transact-sql.md) ストアド プロシージャを実行して、パブリッシャーのメタデータをディストリビューターのメタデータと再同期します。 復元が完了します。 答えが「いいえ」の場合は、手順 d. に進みます。  
   
     4.  パブリッシャー、ディストリビューター、およびサブスクライバーで、レプリケーション構成を削除した後、再作成を行います。 サブスクリプションを再作成するときには、サブスクライバーにデータが格納済みであることを指定します。 復元が完了します。  
   
-         レプリケーションを削除する方法の詳細については、次を参照してください。 と [sp_removedbreplication & #40 です。Transact SQL と #41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)します。  
+         レプリケーションを削除する方法の詳細については、「[sp_removedbreplication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)」を参照してください。  
   
          サブスクライバーにデータが格納済みであることを指定する方法の詳細については、「 [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md)」を参照してください。  
   
-#### パブリケーション データベース : ピア ツー ピア トランザクション レプリケーション  
- 次の手順では、パブリケーション データベースで **A**, 、**B**, 、および **C** 、ピア ツー ピア トランザクション レプリケーション トポロジにします。 データベース **A** およびデータベース **C** はオンラインで正常に動作しています。データベース **B** は復元対象のデータベースです。 ここで説明する処理、特に手順 7、10、および 11 は、ピア ツー ピア トポロジにノードを追加するために必要な処理とよく似ています。 これらの手順を最も簡単に実行する方法は、ピア ツー ピア トポロジ構成ウィザードを使用することです。ただし、ストアド プロシージャも使用できます。  
+#### <a name="publication-database-peer-to-peer-transactional-replication"></a>パブリケーション データベース : ピア ツー ピア トランザクション レプリケーション  
+ 以下の手順では、パブリケーション データベース **A**、 **B**、および **C** は、ピア ツー ピア トランザクション レプリケーション トポロジ内にあります。 データベース **A** およびデータベース **C** はオンラインで正常に動作しています。データベース **B** は復元対象のデータベースです。 ここで説明する処理、特に手順 7、10、および 11 は、ピア ツー ピア トポロジにノードを追加するために必要な処理とよく似ています。 これらの手順を最も簡単に実行する方法は、ピア ツー ピア トポロジ構成ウィザードを使用することです。ただし、ストアド プロシージャも使用できます。  
   
-1.  サブスクリプション データベースを同期するディストリビューション エージェントを実行 **A** と **C**します。手順 2 に進みます。  
+1.  ディストリビューション エージェントを実行して、データベース **A** およびデータベース **C** のサブスクリプションを同期します。手順 2 に進みます。  
   
-     ディストリビューション エージェントを実行する方法の詳細については、次を参照してください。 [の開始と停止のレプリケーション エージェントと #40 です。SQL Server Management Studio と #41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  [レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)します。  
+     ディストリビューション エージェントの実行方法の詳細については、「[レプリケーション エージェントを起動および停止する &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)」および「[レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)」を参照してください。  
   
-2.  ディストリビューション データベースにある場合 **B** 使用は引き続き使用でき、データベース間のサブスクリプションを同期するディストリビューション エージェントを実行 **B** と **A** 、データベース、および B と **C**します。手順 3. に進みます。  
+2.  **B** が使用するディストリビューション データベースがまだ利用可能な場合は、ディストリビューション エージェントを実行して、データベース **B** とデータベース **A** の間のサブスクリプション、およびデータベース B とデータベース **C** の間のサブスクリプションを同期します。手順 3. に進みます。  
   
-3.  メタデータを削除して、配布からをデータベースにある **B** を実行すると、 [sp_removedistpublisherdbreplication](../../../relational-databases/system-stored-procedures/sp-removedistpublisherdbreplication-transact-sql.md) のディストリビューション データベースで **B**します。手順 4 に進みます。  
+3.  **B** のディストリビューション データベースで [sp_removedistpublisherdbreplication](../../../relational-databases/system-stored-procedures/sp-removedistpublisherdbreplication-transact-sql.md) を実行して、**B** が使用するディストリビューション データベースからメタデータを削除します。手順 4 に進みます。  
   
-4.  データベースで **A** と **C**, 、データベースのパブリケーションに対するサブスクリプションを削除 **B**します。手順 5 に進みます。  
+4.  データベース **A** およびデータベース **C** で、データベース **B** のパブリケーションに対するサブスクリプションを削除します。手順 5 に進みます。  
   
      サブスクリプションを削除する方法の詳細については、「 [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)」を参照してください。  
   
-5.  ログのバックアップまたはデータベースの完全バックアップを実行 **A**します。手順 6 に進みます。  
+5.  データベース **A** のログ バックアップまたは完全バックアップを実行します。手順 6 に進みます。  
   
-6.  データベースのバックアップを復元 **A** データベースで **B**します。データベース **B** データベースからのデータが **A**, が、レプリケーションの構成ではありません。 別のサーバーにバックアップを復元するときにレプリケーションは削除されます。そのため、レプリケーションは、データベースから削除されている **B**します。手順 7 に進みます。  
+6.  データベース **A** のバックアップをデータベース **B** で復元します。この場合、データベース **B** にはデータベース **A** のデータが格納されますが、レプリケーション構成は含まれません。 バックアップを別のサーバーに復元すると、レプリケーションは削除されます。データベース **B** からレプリケーションが削除されたのはそのためです。手順 7 に進みます。  
   
-7.  データベースでパブリケーションを再作成 **B**, 、データベース間のサブスクリプションを再作成して **A** と **B**します。(サブスクリプション データベースが関係する **C** 後の段階で処理されます。)。  
+7.  データベース **B** でパブリケーションを再作成し、その後にデータベース **A** とデータベース **B** の間のサブスクリプションを再作成します (データベース **C** 関連のサブスクリプションについては後の段階で処理します)。  
   
-    1.  データベースでパブリケーションを再作成 **B**します。手順 b. に進みます。  
+    1.  データベース **B** でパブリケーションを再作成します。手順 b. に進みます。  
   
-    2.  データベースでサブスクリプションを再作成 **B** データベースのパブリケーションに対する **A**, 、バックアップを含む、サブスクリプションを初期化することを指定する (値の **バックアップを使用して初期化** の **@sync_type** のパラメーター [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md))。 手順 c. に進みます。  
+    2.  データベース **B** のパブリケーションに対するサブスクリプションをデータベース **A**で再作成します。その際に、バックアップを使用してサブスクリプションを初期化するように指定します ( **sp_addsubscription** の **@sync_type** パラメーターの値を " [initialize with backup](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)" に指定します)。 手順 c. に進みます。  
   
-    3.  データベースでサブスクリプションを再作成 **A** データベースのパブリケーションに対する **B**, 、サブスクライバーがデータを既に持っているを指定する (値の **レプリケーションのサポートのみ** の **@sync_type** のパラメーター [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md))。 手順 8 に進みます。  
+    3.  データベース **A** のパブリケーションに対するサブスクリプションをデータベース **B**で再作成します。その際に、サブスクライバーにデータが格納済みであることを指定します ( **sp_addsubscription** の **@sync_type** パラメーターの値を " [initialize with backup](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)" に指定します)。 手順 8 に進みます。  
   
-8.  サブスクリプション データベースを同期するディストリビューション エージェントを実行 **A** と **B**します。パブリッシュされたテーブルに ID 列がある場合は、手順 9. に進みます。 それ以外の場合は、手順 10 に進みます。  
+8.  ディストリビューション エージェントを実行して、データベース **A** およびデータベース **B** のサブスクリプションを同期します。パブリッシュされたテーブルに ID 列がある場合は、手順 9. に進みます。 それ以外の場合は、手順 10 に進みます。  
   
-9. 復元後、データベース内の各テーブル用に割り当てた id 範囲 **A** データベース内でも使用されます **B**します。確認して、復元されたデータベース **B** 障害が発生したデータベースからすべての変更を受信 **B** が伝達されたデータベースに **A** とデータベース **C**; 各テーブルの id 範囲を再シードされます。  
+9. 復元後、データベース **A** の各テーブルに割り当てた ID 範囲は、データベース **B** でも使用されます。データベース **B** の障害発生後、データベース **A** およびデータベース **C** に反映されたすべての変更を復元されたデータベース **B** に適用し、その後、各テーブルの ID 範囲を再作成します。  
   
-    1.  実行 [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) データベースで **B** 出力パラメーターを取得および **@request_id**します。 手順 b. に進みます。  
+    1.  データベース [B](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) のバックアップをデータベース **B** を実行し、出力パラメーター **@request_id**」を参照してください。 手順 b. に進みます。  
   
-    2.  既定では、ディストリビューション エージェントが連続的に実行されるように設定されているため、すべてのノードに自動的にトークンが送信されます。 ディストリビューション エージェントが連続モードで実行されていない場合は、エージェントを実行します。 詳細については、次を参照してください。 [レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md) または [の開始と停止のレプリケーション エージェントと #40 です。SQL Server Management Studio と #41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)します。 手順 c. に進みます。  
+    2.  既定では、ディストリビューション エージェントが連続的に実行されるように設定されているため、すべてのノードに自動的にトークンが送信されます。 ディストリビューション エージェントが連続モードで実行されていない場合は、エージェントを実行します。 詳細については、「[レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)」または「[レプリケーション エージェントを起動および停止する &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)」を参照してください。 手順 c. に進みます。  
   
-    3.  実行 [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md), 、提供する、 **@request_id** 手順 b. で値を取得します。 すべてのノードがピア要求を受信するまで待機します。 手順 d. に進みます。  
+    3.  データベース [@request_id](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)値を指定して **@request_id** を実行します。 すべてのノードがピア要求を受信するまで待機します。 手順 d. に進みます。  
   
     4.  [DBCC CHECKIDENT](../../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md) を使用してデータベース **B** の各テーブルを再作成し、適切な範囲が使用されていることを確認します。 手順 10 に進みます。  
   
-     Id 範囲を管理する方法の詳細については、「手動で id 範囲管理の範囲の割り当て」セクションを参照してください。 [Id 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)します。  
+     ID 範囲を管理する方法の詳細については、「[ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)」の「手動で ID 範囲を管理する場合の範囲の割り当て」を参照してください。  
   
-10. この時点では、データベース **B** とデータベース **C** 直接接続されていませんが、データベースを使用して変更を **A**します。[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] を実行しているノードがトポロジに含まれている場合は手順 11. に進み、それ以外の場合は手順 12. に進みます。  
+10. この時点では、データベース **B** とデータベース **C** は直接接続されていませんが、両者はデータベース **A** を介して変更を受信します。[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] を実行しているノードがトポロジに含まれている場合は手順 11. に進み、それ以外の場合は手順 12. に進みます。  
   
-11. システムを停止し、データベース間のサブスクリプションを再作成 **B** と **C**します。システムを停止するときには、パブリッシュされたテーブルの利用をすべてのノードで停止し、各ノードが他のすべてのノードの変更を受け取っていることを確認します。  
+11. システムを停止し、データベース **B** とデータベース **C** の間のサブスクリプションを再作成します。システムを停止するときには、パブリッシュされたテーブルの利用をすべてのノードで停止し、各ノードが他のすべてのノードの変更を受け取っていることを確認します。  
   
     1.  ピア ツー ピア トポロジ内のパブリッシュされたテーブルの処理をすべて停止します。 手順 b. に進みます。  
   
-    2.  実行 [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) データベースで **B** 出力パラメーターを取得および **@request_id**します。 手順 c. に進みます。  
+    2.  データベース [B](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) のバックアップをデータベース **B** を実行し、出力パラメーター **@request_id**」を参照してください。 手順 c. に進みます。  
   
     3.  既定では、ディストリビューション エージェントが連続的に実行されるように設定されているため、すべてのノードに自動的にトークンが送信されます。 ディストリビューション エージェントが連続モードで実行されていない場合は、エージェントを実行します。 手順 d. に進みます。  
   
-    4.  実行 [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md), 、提供する、 **@request_id** 手順 b. で値を取得します。 すべてのノードがピア要求を受信するまで待機します。 手順 e. に進みます。  
+    4.  データベース [@request_id](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)値を指定して **@request_id** を実行します。 すべてのノードがピア要求を受信するまで待機します。 手順 e. に進みます。  
   
-    5.  データベースでサブスクリプションを再作成 **B** データベースのパブリケーションに対する **C**, 、サブスクライバーがデータを既に持っているかを指定します。 手順 b. に進みます。  
+    5.  データベース **C** のパブリケーションに対するサブスクリプションをデータベース **B**で再作成します。その際に、サブスクライバーにデータが格納済みであることを指定します。 手順 b. に進みます。  
   
-    6.  データベースでサブスクリプションを再作成 **C** データベースのパブリケーションに対する **B**, 、サブスクライバーがデータを既に持っているかを指定します。 手順 13 に進みます。  
+    6.  データベース **B** のパブリケーションに対するサブスクリプションをデータベース **C**で再作成します。その際に、サブスクライバーにデータが格納済みであることを指定します。 手順 13 に進みます。  
   
-12. データベース間でサブスクリプションを再作成 **B** と **C**:  
+12. データベース **B** とデータベース **C**の間のサブスクリプションを再作成します。  
   
-    1.  データベースで **B**, 、クエリ、 [MSpeer_lsns](../../../relational-databases/system-tables/mspeer-lsns-transact-sql.md) 最新のトランザクションのデータベースをログ シーケンス番号 (LSN) を取得するテーブル **B** がデータベースから受信した **C**します。  
+    1.  データベース **B**で [MSpeer_lsns](../../../relational-databases/system-tables/mspeer-lsns-transact-sql.md) テーブルにクエリを実行して、データベース **B** がデータベース **C**から受信した最新のトランザクションのログ シーケンス番号 (LSN) を取得します。  
   
-    2.  データベースでサブスクリプションを再作成 **B** データベースのパブリケーションに対する **C**, 、LSN に基づいてサブスクリプションを初期化することを指定する (値の **lsn からの初期化** の **@sync_type** のパラメーター [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md))。 手順 b. に進みます。  
+    2.  データベース **B** のパブリケーションに対するサブスクリプションをデータベース **C**で再作成します。その際に、LSN に基づいてサブスクリプションを初期化するように指定します ( **sp_addsubscription** の **@sync_type** パラメーターの値を " [initialize with backup](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)" に指定します)。 手順 b. に進みます。  
   
-    3.  データベースでサブスクリプションを再作成 **C** データベースのパブリケーションに対する **B**, 、サブスクライバーがデータを既に持っているかを指定します。 手順 13 に進みます。  
+    3.  データベース **B** のパブリケーションに対するサブスクリプションをデータベース **C**で再作成します。その際に、サブスクライバーにデータが格納済みであることを指定します。 手順 13 に進みます。  
   
-13. サブスクリプション データベースを同期するディストリビューション エージェントを実行 **B** と **C**します。復元が完了します。  
+13. ディストリビューション エージェントを実行して、データベース **B** およびデータベース **C** のサブスクリプションを同期します。復元が完了します。  
   
-#### msdb データベース (パブリッシャー)  
+#### <a name="msdb-database-publisher"></a>msdb データベース (パブリッシャー)  
   
 1.  **msdb** データベースの最新バックアップを復元します。  
   
@@ -256,15 +260,15 @@ caps.handback.revision: 59
   
 3.  レプリケーション スクリプトを使用して、サブスクリプションのクリーンアップ ジョブを再作成します。 復元が完了します。  
   
-#### master データベース (パブリッシャー)  
+#### <a name="master-database-publisher"></a>master データベース (パブリッシャー)  
   
 1.  **master** データベースの最新バックアップを復元します。  
   
 2.  データベースのレプリケーション構成および設定が、パブリケーション データベースと一致していることを確認します。  
   
-### ディストリビューターにあるデータベース  
+### <a name="databases-at-the-distributor"></a>ディストリビューターにあるデータベース  
   
-#### ディストリビューション データベース  
+#### <a name="distribution-database"></a>ディストリビューション データベース  
   
 1.  ディストリビューション データベースの最新バックアップを復元します。  
   
@@ -274,19 +278,19 @@ caps.handback.revision: 59
   
 3.  復元されたバックアップは完全かつ最新ですか。 すべてのパブリケーションおよびサブスクリプションに対する最新の構成がこのバックアップに含まれていますか。 答えが「はい」の場合、復元は完了です。 「いいえ」の場合は、手順 4 に進みます。  
   
-4.  復元されたディストリビューション データベースの構成情報が最新では、または **バックアップと同期** ディストリビューション データベースのオプションが設定されませんでした。 (復元後に、パブリッシャーでコミットされた後にサブスクライバーに配信されていないトランザクションは、ディストリビューション データベースで見つからない可能性があります)。レプリケーションの削除および再作成を行ってから検証を実行します。  
+4.  復元されたディストリビューション データベースの構成情報が最新でないか、またはディストリビューション データベースで " **sync with backup** " オプションが設定されていませんでした (復元後に、パブリッシャーでコミットされた後にサブスクライバーに配信されていないトランザクションは、ディストリビューション データベースで見つからない可能性があります)。レプリケーションの削除および再作成を行ってから検証を実行します。  
   
     1.  パブリッシャー、ディストリビューター、およびサブスクライバーで、レプリケーション構成を削除した後、再作成を行います。 サブスクリプションを再作成するときには、サブスクライバーにデータが格納済みであることを指定します。 手順 b. に進みます。  
   
-         レプリケーションを削除する方法の詳細については、次を参照してください。 [sp_removedbreplication & #40 です。Transact SQL と #41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)します。  
+         レプリケーションを削除する方法の詳細については、「[sp_removedbreplication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)」を参照してください。  
   
          サブスクライバーにデータが格納済みであることを指定する方法の詳細については、「 [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md)」を参照してください。  
   
     2.  検証を行うすべてのパブリケーションにマークを付けます。 検証に失敗したサブスクリプションを再初期化します。 復元が完了します。  
   
-         検証の詳細については、「 [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md)」を参照してください。 再初期化の詳細については、次を参照してください。 [サブスクリプションの再初期化](../../../relational-databases/replication/reinitialize-subscriptions.md)します。  
+         検証の詳細については、「 [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md)」を参照してください。 再初期化の詳細については、「[サブスクリプションの再初期化](../../../relational-databases/replication/reinitialize-subscriptions.md)」を参照してください。  
   
-#### msdb データベース (ディストリビューター)  
+#### <a name="msdb-database-distributor"></a>msdb データベース (ディストリビューター)  
   
 1.  **msdb** データベースの最新バックアップを復元します。  
   
@@ -294,27 +298,27 @@ caps.handback.revision: 59
   
 3.  パブリッシャー、ディストリビューター、およびサブスクライバーで、レプリケーション構成を削除した後、再作成を行います。 サブスクリプションを再作成するときには、サブスクライバーにデータが格納済みであることを指定します。 手順 4 に進みます。  
   
-     レプリケーションを削除する方法の詳細については、次を参照してください。 [sp_removedbreplication & #40 です。Transact SQL と #41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)します。  
+     レプリケーションを削除する方法の詳細については、「[sp_removedbreplication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)」を参照してください。  
   
      サブスクライバーにデータが格納済みであることを指定する方法の詳細については、「 [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md)」を参照してください。  
   
 4.  検証を行うすべてのパブリケーションにマークを付けます。 検証に失敗したサブスクリプションを再初期化します。 復元が完了します。  
   
-     検証の詳細については、「 [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md)」を参照してください。 再初期化の詳細については、次を参照してください。 [サブスクリプションの再初期化](../../../relational-databases/replication/reinitialize-subscriptions.md)します。  
+     検証の詳細については、「 [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md)」を参照してください。 再初期化の詳細については、「[サブスクリプションの再初期化](../../../relational-databases/replication/reinitialize-subscriptions.md)」を参照してください。  
   
-#### master データベース (ディストリビューター)  
+#### <a name="master-database-distributor"></a>master データベース (ディストリビューター)  
   
 1.  **master** データベースの最新バックアップを復元します。  
   
 2.  データベースのレプリケーション構成および設定が、パブリケーション データベースと一致していることを確認します。  
   
-### サブスクライバーにあるデータベース  
+### <a name="databases-at-the-subscriber"></a>サブスクライバーにあるデータベース  
   
-#### サブスクリプション データベース  
+#### <a name="subscription-database"></a>サブスクリプション データベース  
   
-1.  サブスクリプション データベースの最新バックアップは、ディストリビューション データベースにおけるディストリビューションの最小保有期間の設定よりも新しいですか  (これにより、サブスクライバーを最新状態にするために必要なすべてのコマンドがディストリビューターに存在しているかどうかを判断できます)。答えが「はい」の場合は、手順 2. に進みます。 「いいえ」の場合は、サブスクリプションを再初期化します。 復元が完了します。  
+1.  サブスクリプション データベースの最新バックアップは、ディストリビューション データベースにおけるディストリビューションの最小保有期間の設定よりも新しいですか (これにより、サブスクライバーを最新状態にするために必要なすべてのコマンドがディストリビューターに存在しているかどうかを判断できます)。答えが「はい」の場合は、手順 2. に進みます。 「いいえ」の場合は、サブスクリプションを再初期化します。 復元が完了します。  
   
-     最大ディストリビューション保有期間の設定を確認するのには、実行 [sp_helpdistributiondb](../../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md) から値を取得し、 **max_distretention** 列 (この値は時間単位)。  
+     ディストリビューションの最大保有期間を確認するには、 [sp_helpdistributiondb](../../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md) を実行し、 **max_distretention** 列から値 (時間単位) を取得します。  
   
      サブスクリプションを再初期化する方法の詳細については、「 [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md)」を参照してください。  
   
@@ -324,9 +328,9 @@ caps.handback.revision: 59
   
 4.  サブスクライバーを同期するには、ディストリビューション エージェントを実行します。 復元が完了します。  
   
-     ディストリビューション エージェントを実行する方法の詳細については、次を参照してください。 [の開始と停止のレプリケーション エージェントと #40 です。SQL Server Management Studio と #41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  [レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)します。  
+     ディストリビューション エージェントの実行方法の詳細については、「[レプリケーション エージェントを起動および停止する &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)」および「[レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)」を参照してください。  
   
-#### msdb データベース (サブスクライバー)  
+#### <a name="msdb-database-subscriber"></a>msdb データベース (サブスクライバー)  
   
 1.  **msdb** データベースの最新バックアップを復元します。 このサブスクライバーでプル サブスクリプションが使用されていますか。 答えが「いいえ」の場合、復元は完了です。 答えが「はい」の場合は、手順 2. に進みます。  
   
@@ -338,18 +342,18 @@ caps.handback.revision: 59
   
      サブスクライバーにデータが格納済みであることを指定する方法の詳細については、「 [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md)」を参照してください。  
   
-#### master データベース (サブスクライバー)  
+#### <a name="master-database-subscriber"></a>master データベース (サブスクライバー)  
   
 1.  **master** データベースの最新バックアップを復元します。  
   
 2.  データベースのレプリケーション構成および設定が、パブリケーション データベースと一致していることを確認します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server データベースのバックアップと復元](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [レプリケートされたデータベースのバックアップと復元](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [ディストリビューションの構成](../../../relational-databases/replication/configure-distribution.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [パブリケーションのサブスクライブ](../../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
  [サブスクリプションの初期化](../../../relational-databases/replication/initialize-a-subscription.md)   
  [データの同期](../../../relational-databases/replication/synchronize-data.md)  
   

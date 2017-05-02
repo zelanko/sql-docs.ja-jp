@@ -1,26 +1,30 @@
 ---
 title: "列の変更 (データベース エンジン) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データ型の変更"
-  - "列のデータ型 [SQL Server]"
-  - "データ型 [SQL Server], 列"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying data types
+- column data types [SQL Server]
+- data types [SQL Server], columns
 ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 736b83dffa241040cf08e7f7d9410eaab80649af
+ms.lasthandoff: 04/11/2017
+
 ---
-# 列の変更 (データベース エンジン)
+# <a name="modify-columns-database-engine"></a>列の変更 (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して列のデータ型を変更できます。  
@@ -49,15 +53,15 @@ caps.handback.revision: 16
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### 列のデータ型を変更するには  
+#### <a name="to-modify-the-data-type-of-a-column"></a>列のデータ型を変更するには  
   
-1.  **オブジェクト エクスプローラー**で、有効桁数を変更する列が含まれているテーブルを右クリックし、**[デザイン]** をクリックします。  
+1.  **オブジェクト エクスプローラー**で、有効桁数を変更する列が含まれているテーブルを右クリックし、 **[デザイン]**をクリックします。  
   
 2.  データ型を変更する列を選択します。  
   
-3.  **[列のプロパティ]** タブで、**[データ型]** プロパティのグリッド セルをクリックし、ドロップダウン リストから新しいデータ型を選択します。  
+3.  **[列のプロパティ]** タブで、 **[データ型]** プロパティのグリッド セルをクリックし、ドロップダウン リストから新しいデータ型を選択します。  
   
-4.  **[ファイル]** メニューの **table name***の保存]*をクリックします。  
+4.  **ファイル** メニューの **table name***の保存*をクリックします。  
   
 > [!NOTE]  
 >  列のデータ型を変更すると、テーブル デザイナーでは選択したデータ型の既定の長さが適用されます。これは既に別の長さを選択していた場合でも同じです。 データ型の指定後、必要な値を格納できるようにするために、データ型に適切な長さを設定してください。  
@@ -67,7 +71,7 @@ caps.handback.revision: 16
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### 列のデータ型を変更するには  
+#### <a name="to-modify-the-data-type-of-a-column"></a>列のデータ型を変更するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

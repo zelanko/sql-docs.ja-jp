@@ -1,25 +1,29 @@
 ---
 title: "SQL Server: Wait Statistics オブジェクト | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Wait Statistics オブジェクト"
-  - "SQLServer: Wait Statistics"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Wait Statistics object
+- SQLServer:Wait Statistics
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e81641439bc17a678f7713e6b8088495b09db618
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server: Wait Statistics オブジェクト
+# <a name="sql-server-wait-statistics-object"></a>SQL Server: Wait Statistics オブジェクト
   **SQLServer:Wait Statistics** パフォーマンス オブジェクトには、待機状態に関する情報を報告するパフォーマンス カウンターが含まれています。  
   
  Wait Statistics オブジェクトに含まれるカウンターを次の表に示します。  
@@ -48,7 +52,7 @@ caps.handback.revision: 15
 |**待機中**|次の種類で現在待機しているプロセスの数。|  
 |**1 秒あたりに開始された待機回数**|選択した待機の種類の 1 秒あたりに開始された待機の回数。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [リソースの利用状況の監視 &#40;システム モニター&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

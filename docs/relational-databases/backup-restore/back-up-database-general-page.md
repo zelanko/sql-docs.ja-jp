@@ -1,24 +1,28 @@
 ---
 title: "[データベースのバックアップ] ([全般] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backupdatabase.general.f1"
+ms.custom: 
+ms.date: 07/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 038fa003ad819d89d8739f8cfaac53582f93932a
+ms.lasthandoff: 04/11/2017
+
 ---
-# [データベースのバックアップ] ([全般] ページ)
+# <a name="back-up-database-general-page"></a>[データベースのバックアップ] ([全般] ページ)
   **[データベースのバックアップ]** ダイアログ ボックスの **[全般]** ページでは、データベースのバックアップ操作の設定を表示または変更できます。  
   
  バックアップの基本的な概念については、「[バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)」を参照してください。  
@@ -39,9 +43,9 @@ caps.handback.revision: 64
   
 -   部分バックアップを作成するには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) ステートメントで PARTIAL オプションを使用する必要があります。  
   
-## オプション  
+## <a name="options"></a>オプション  
   
-### ソース  
+### <a name="source"></a>ソース  
  **[ソース]** パネルのオプションでは、データベースを特定し、バックアップ操作のバックアップの種類とコンポーネントを指定します。  
   
  **データベース**  
@@ -75,7 +79,7 @@ caps.handback.revision: 64
 |**データベース**|データベース全体がバックアップされるように指定します。|  
 |**[ファイルおよびファイル グループ]**|指定したファイルやファイル グループがバックアップされるように指定します。<br /><br /> このオプションをクリックすると、 **[ファイルおよびファイル グループの選択]** ダイアログ ボックスが表示されます。 バックアップするファイル グループまたはファイルを選択して **[OK]**をクリックすると、選択した項目が **[ファイルおよびファイル グループ]** ボックスに表示されます。|  
   
-### 転送先  
+### <a name="destination"></a>転送先  
  **[バックアップ先]** パネルのオプションでは、バックアップ操作で使用するバックアップ デバイスの種類を指定して、既存の論理バックアップ デバイスまたは物理バックアップ デバイスを検索できます。  
   
 > [!NOTE]  
@@ -87,13 +91,13 @@ caps.handback.revision: 64
 |||  
 |-|-|  
 |**[ディスク]**|ディスクにバックアップします。 データベース用に作成されたシステム ファイルやディスク ベースの論理バックアップ デバイスを指定する場合もあります。 現在選択されているディスクが、 **[バックアップ先]** 一覧に表示されます。 バックアップ操作には最大 64 台のディスク デバイスを選択できます。|  
-|**Tape**|テープにバックアップします。 データベース用に作成されたローカル テープ ドライブやテープ ベースの論理バックアップ デバイスを指定する場合もあります。 現在選択されているテープが、 **[バックアップ先]** リストに表示されます。 最大数は 64 です。 サーバーにテープ デバイスが接続されていない場合、このオプションは無効になります。 選択したテープが **[バックアップ先]** 一覧に表示されます。<br /><br /> 注: テープ バックアップ デバイスは、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされなくなる予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
+|**Tape**|テープにバックアップします。 データベース用に作成されたローカル テープ ドライブやテープ ベースの論理バックアップ デバイスを指定する場合もあります。 現在選択されているテープが、 **[バックアップ先]** リストに表示されます。 最大数は 64 です。 サーバーにテープ デバイスが接続されていない場合、このオプションは無効になります。 選択したテープが **[バックアップ先]** 一覧に表示されます。<br /><br /> 注: テープ バックアップ デバイスは、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でサポートされなくなる予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
 |**[URL]**|Microsoft Azure Blob ストレージにバックアップします。|  
   
  次に示すオプションの表示は、選択したバックアップ先の種類によって異なります。 [ディスク] または [テープ] を選択すると、次のオプションが表示されます。  
   
  **[追加]**  
- ファイルまたはデバイスを **[バックアップ先]** 一覧に追加します。 ローカル ディスクまたはリモート ディスクの最大 64 個のデバイスで同時にバックアップできます。 リモート ディスクのファイルを指定するには、完全修飾の汎用名前付け規則 (UNC) 名を使用してください。 詳細については、「[バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。  
+ ファイルまたはデバイスを **[バックアップ先]** 一覧に追加します。 ローカル ディスクまたはリモート ディスクの最大 64 個のデバイスで同時にバックアップできます。 リモート ディスクのファイルを指定するには、完全修飾の汎用名前付け規則 (UNC) 名を使用してください。 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md))。  
  
  
   
@@ -103,7 +107,7 @@ caps.handback.revision: 64
  **目次**  
 選択したデバイスにメディア コンテンツがある場合、これを表示します。  **URL** が指定されている場合は、機能が実行されません。 
    
-**[バックアップ先の選択]** ダイアログ ボックス **[バックアップ先の選択]** ダイアログ ボックスは、**[追加]** を選択すると表示されます。   オプションの表示は、選択したバックアップ先の種類によって異なります。 
+**[バックアップ先の選択]** ダイアログ ボックス **[バックアップ先の選択]** ダイアログ ボックスは、 **[追加]**を選択すると表示されます。   オプションの表示は、選択したバックアップ先の種類によって異なります。 
 
 バックアップ先として **[ディスク]** または **[テープ]** を選択すると、次のオプションが表示されます。  
 
@@ -126,9 +130,9 @@ caps.handback.revision: 64
 
 *
   **新しいコンテナー:**  
-Shared Access Signature がない既存のコンテナーを登録するために使用します。  「[Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)」(Microsoft Azure Subscription への接続) を参照してください。
+Shared Access Signature がない既存のコンテナーを登録するために使用します。  「 [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)」(Microsoft Azure Subscription への接続) を参照してください。
   
-## 参照  
+## <a name="see-also"></a>参照  
  [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [ファイルおよびファイル グループのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [ディスク ファイルの論理バックアップ デバイスの定義 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
@@ -136,3 +140,4 @@ Shared Access Signature がない既存のコンテナーを登録するため�
  [復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
+

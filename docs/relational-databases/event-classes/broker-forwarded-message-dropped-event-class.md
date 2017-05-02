@@ -1,35 +1,39 @@
 ---
 title: "Broker:Forwarded Message Dropped イベント クラス | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker:Forwarded Message Dropped イベント クラス"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Forwarded Message Dropped event class
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d63f05d5f476dcb03398872759b92e21d04c99c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Broker:Forwarded Message Dropped イベント クラス
+# <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Service Broker が転送予定のメッセージを削除すると Broker:Forwarded Message Dropped イベントが生成されます。  
   
-## Broker:Forwarded Message Dropped イベント クラスのデータ列  
+## <a name="brokerforwarded-message-dropped-event-class-data-columns"></a>Broker:Forwarded Message Dropped イベント クラスのデータ列  
   
 |データ列|型|説明|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |BigintData1|**bigint**|メッセージのシーケンス番号。|52|いいえ|  
 |ClientProcessID|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターによって割り当てられた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  
-|DatabaseID|**int**|USE *database* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database* ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、ServerName データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|可|  
-|DatabaseName|**nvarchar**|ユーザーのステートメントが実行されているデータベースの名前。|35|可|  
+|DatabaseID|**int**|USE *database* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database*ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、ServerName データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
+|DatabaseName|**nvarchar**|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
 |DBUserName|**nvarchar**|このメッセージの送信元であるブローカー インスタンスの ID。|40|いいえ|  
 |[エラー]|**int**|イベント内のテキストの、sys.messages 内でのメッセージ ID 番号。|31|いいえ|  
 |EventClass|**int**|キャプチャされたイベント クラスの種類。 Broker:Forwarded Message Dropped の場合は、常に 191 です。|27|いいえ|  
@@ -39,13 +43,13 @@ caps.handback.revision: 26
 |HostName|**nvarchar**|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |IndexID|**int**|転送されるメッセージに残っているホップの数。|24|いいえ|  
 |IntegerData|**int**|転送されるメッセージのフラグメント番号。|25|いいえ|  
-|LoginSid|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|可|  
+|LoginSid|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |NTDomainName|**nvarchar**|ユーザーが属している Windows ドメイン。|7|はい|  
 |NTUserName|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  
 |ObjectId|**int**|転送されるメッセージの有効期限の値。|22|いいえ|  
 |ObjectName|**nvarchar**|転送されたメッセージのメッセージ ID。|34|いいえ|  
 |OwnerName|**nvarchar**|このメッセージの送信先のブローカー インスタンス ID。|37|いいえ|  
-|RoleName|**nvarchar**|メッセージ交換ハンドルのロール。 次のいずれかです。<br /><br /> -Initiator:  このブローカーがメッセージ交換の発信側です。<br /><br /> -Target:  このブローカーがメッセージ交換の発信先です。|38|いいえ|  
+|RoleName|**nvarchar**|メッセージ交換ハンドルのロール。 次のいずれかです。<br /><br /> -Initiator: このブローカーがメッセージ交換の発信側です。<br /><br /> -Target: このブローカーがメッセージ交換の発信先です。|38|いいえ|  
 |ServerName|**nvarchar**|トレースされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |Severity|**int**|イベントのテキストの重大度を表す数値。|29|いいえ|  
 |SPID|**int**|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  
@@ -57,9 +61,9 @@ caps.handback.revision: 26
 |TextData|**ntext**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がメッセージを削除した理由の説明。|1|はい|  
 |Transaction ID|**bigint**|トランザクションに対してシステムが割り当てた ID。|4|いいえ|  
   
- このイベントの TextData 列に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がメッセージを削除した理由の説明が格納されます。  
+ このイベントの TextData 列に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がメッセージを削除した理由の説明が格納されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server Service Broker (SQL Server Service Broker)](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

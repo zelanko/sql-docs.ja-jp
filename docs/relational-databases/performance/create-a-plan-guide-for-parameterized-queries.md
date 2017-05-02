@@ -1,28 +1,32 @@
 ---
 title: "パラメーター化クエリのプラン ガイドの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "パラメーター化クエリ、プラン ガイド"
-  - "プラン ガイド [SQL Server]、パラメーター化クエリ"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parameterized queries, plan guides for
+- plan guides [SQL Server], parameterized queries
 ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3d5c980047d9c84a1eea6e48d6070ca704377a9
+ms.lasthandoff: 04/11/2017
+
 ---
-# パラメーター化クエリのプラン ガイドの作成
+# <a name="create-a-plan-guide-for-parameterized-queries"></a>パラメーター化クエリのプラン ガイドの作成
   TEMPLATE プラン ガイドでは、指定した形式にパラメーター化されたスタンドアロン クエリが照合されます。  
   
- 次の例では、指定されたフォームにパラメーター化されるクエリに適合するプラン ガイドを作成し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対してクエリのパラメーター化を強制的に実行させます。 次の 2 つのクエリは構文的には同じですが、定数リテラル値のみが異なります。  
+ 次の例では、指定されたフォームにパラメーター化されるクエリに適合するプラン ガイドを作成し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対してクエリのパラメーター化を強制的に実行させます。 次の 2 つのクエリは構文的には同じですが、定数リテラル値のみが異なります。  
   
 ```  
 SELECT * FROM AdventureWorks2012.Sales.SalesOrderHeader AS h  
@@ -51,7 +55,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION(PARAMETERIZATION FORCED)';  
 ```  
   
- この例では、`@stmt` パラメーターの値は、パラメーター化形式のクエリになっています。 この値を取得して sp_create_plan_guide で使用できるようにするには、[sp_get_query_template](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md) システム ストアド プロシージャを使用するのが唯一信頼できる方法です。 次のスクリプトを使用すると、パラメーター化クエリを取得してそのクエリに対してプラン ガイドを作成することができます。  
+ この例では、 `@stmt` パラメーターの値は、パラメーター化形式のクエリになっています。 この値を取得して sp_create_plan_guide で使用できるようにするには、 [sp_get_query_template](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md) システム ストアド プロシージャを使用するのが唯一信頼できる方法です。 次のスクリプトを使用すると、パラメーター化クエリを取得してそのクエリに対してプラン ガイドを作成することができます。  
   
 ```  
 DECLARE @stmt nvarchar(max);  
@@ -72,7 +76,7 @@ EXEC sp_create_plan_guide N'TemplateGuide1',
 ```  
   
 > [!IMPORTANT]  
->  `sp_get_query_template` に渡される `@stmt` パラメーターの定数リテラルの値は、リテラルを置き換えるパラメーターで選択されるデータ型に影響する場合があります。 この値は、プラン ガイドの適合にも影響します。 場合によっては、異なるパラメーター値範囲に対応する複数のプラン ガイドを作成する必要があります。  
+>  `@stmt` に渡される `sp_get_query_template` パラメーターの定数リテラルの値は、リテラルを置き換えるパラメーターで選択されるデータ型に影響する場合があります。 この値は、プラン ガイドの適合にも影響します。 場合によっては、異なるパラメーター値範囲に対応する複数のプラン ガイドを作成する必要があります。  
   
  TEMPLATE プラン ガイドを SQL プラン ガイドと併用することもできます。 たとえば、TEMPLATE プラン ガイドを作成することで、特定のクラスのクエリについて確実にパラメーター化を行うことができます。 これにより、そのパラメーター化された形式のクエリに対して SQL プラン ガイドを作成できます。  
   

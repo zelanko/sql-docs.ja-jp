@@ -1,29 +1,33 @@
 ---
 title: "SQL Server 拡張イベント パッケージ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "拡張イベント [SQL Server], パッケージ"
-  - "xe"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extended events [SQL Server], packages
+- xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 caps.latest.revision: 21
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: afb2140445252ca5b3a27f5ec9bf33219e3eef0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 拡張イベント パッケージ
+# <a name="sql-server-extended-events-packages"></a>SQL Server 拡張イベント パッケージ
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  パッケージは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベント オブジェクトのコンテナーです。 拡張イベント パッケージには、次の 3 種類があります。  
+  パッケージは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベント オブジェクトのコンテナーです。 拡張イベント パッケージには、次の 3 種類があります。  
   
 -   package0 : 拡張イベント システム オブジェクト。 既定のパッケージです。  
   
@@ -50,15 +54,15 @@ caps.handback.revision: 21
   
 -   マップ  
   
- 1 つのイベント セッションに異なるパッケージのオブジェクトを混在させることもできます。 詳細については、「[SQL Server 拡張イベント セッション](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)」を参照してください。  
+ 1 つのイベント セッションに異なるパッケージのオブジェクトを混在させることもできます。 詳細については、「 [SQL Server 拡張イベント セッション](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)」を参照してください。  
   
-## パッケージの内容  
+## <a name="package-contents"></a>パッケージの内容  
  次の図は、パッケージ内に存在することのできるオブジェクトを示しています。これらは、モジュール内に格納されます。 モジュールは、実行可能ファイルかダイナミック リンク ライブラリ (DLL) です。  
   
- ![モジュール、パッケージ、およびオブジェクトの関係](../../relational-databases/extended-events/media/xepackagesobjects.gif "モジュール、パッケージ、およびオブジェクトの関係")  
+ ![モジュール、パッケージ、オブジェクトの関係](../../relational-databases/extended-events/media/xepackagesobjects.gif "モジュール、パッケージ、オブジェクトの関係")  
   
-### イベント  
- イベントは、プログラム ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] など) の実行パスにおける、監視対象となる地点です。 イベントは、監視対象の地点まで到達したという事実のほか、イベントが生成された時点の状態情報を伴って発生します。  
+### <a name="events"></a>イベント  
+ イベントは、プログラム ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]など) の実行パスにおける、監視対象となる地点です。 イベントは、監視対象の地点まで到達したという事実のほか、イベントが生成された時点の状態情報を伴って発生します。  
   
  イベントは、トレースを行う目的、またはアクションのトリガーを起動する目的でのみ使用できます。 これらのアクションは同期的に実行される場合と非同期的に実行される場合とがあります。  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 21
   
  すべてのイベントは、その内容を定義するバージョン管理されたスキーマを持ちます。 このスキーマは、適切に定義された型を持つイベント列で構成されます。 特定の型のイベントは、常にそのデータを、スキーマで指定された順序とまったく同じ順序で提供する必要があります。 ただし、イベント ターゲットは、必ずしも提供されたすべてのデータを利用する必要はありません。  
   
-#### イベントの分類  
+#### <a name="event-categorization"></a>イベントの分類  
  拡張イベントには、Event Tracing for Windows (ETW) に似たイベント分類モデルが使用されます。 分類には、チャネルとキーワードという 2 つのイベント プロパティが使用されます。 これらのプロパティを使用することにより、拡張イベントを ETW やそのツールと連携させることができます。  
   
  **Channel**  
@@ -95,10 +99,10 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  キーワードを使用すると、現在の SQL トレース イベントのグループを緊密に対応付けることができます。  
   
-### 対象サーバー  
- ターゲットは、イベントのコンシューマーです。 ターゲットは、イベントを開始したスレッド上で同期的に、またはシステムによって提供されたスレッド上で非同期的に、イベントを処理します。 拡張イベントには、複数のターゲットが用意されており、イベント出力を転送する目的で必要に応じて使用できます。 詳細については、「[SQL Server 拡張イベント ターゲット](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)」を参照してください。  
+### <a name="targets"></a>対象サーバー  
+ ターゲットは、イベントのコンシューマーです。 ターゲットは、イベントを開始したスレッド上で同期的に、またはシステムによって提供されたスレッド上で非同期的に、イベントを処理します。 拡張イベントには、複数のターゲットが用意されており、イベント出力を転送する目的で必要に応じて使用できます。 詳細については、「 [SQL Server 拡張イベント ターゲット](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)」を参照してください。  
   
-### アクション  
+### <a name="actions"></a>アクション  
  アクションは、プログラムがイベントに呼応して実行する特定の (または一連の) 応答です。 アクションはイベントに関連付けられます。各イベントには、それぞれ異なる一連のアクションが関連付けられる場合もあります。  
   
 > [!NOTE]  
@@ -126,17 +130,17 @@ where name = 'keyword_map'
   
 -   例外時のユーザー入力の収集  
   
-### 述語  
+### <a name="predicates"></a>述語  
  述語は、処理するイベントを評価するために使用される一連の論理規則です。 拡張イベントのユーザーは、特定の条件に基づいてイベント データを選択的にキャプチャできます。  
   
- 述語ではデータをローカル コンテキストに保存できます。そのデータを使って、*n* 分ごと、またはイベントが *n* 回発生するたびに true を返す述語を作成できます。 さらに、このローカル コンテキストの格納域を使用して述語を動的に更新することにより、イベントに同様のデータが格納されていた場合に、それ以上のイベントの発生を抑制することもできます。  
+ 述語ではデータをローカル コンテキストに保存できます。そのデータを使って、 *n* 分ごと、またはイベントが *n* 回発生するたびに true を返す述語を作成できます。 さらに、このローカル コンテキストの格納域を使用して述語を動的に更新することにより、イベントに同様のデータが格納されていた場合に、それ以上のイベントの発生を抑制することもできます。  
   
  述語には、イベント固有のデータに加え、スレッド ID などのコンテキスト情報を取得する機能があります。 述語は完全なブール式として評価され、式全体が false であると判明した時点ですぐに結果を返すことができます。  
   
 > [!NOTE]  
 >  二次的に作用する述語は、先行する述語が false と判定された場合、評価されない可能性があります。  
   
-### 型  
+### <a name="types"></a>型  
  データは一連のバイトの集合であるため、そのバイト集合の長さと特性がわからなければ、データを解釈することはできません。 この情報は、Type オブジェクトにカプセル化されています。 パッケージ オブジェクトには、次の型が用意されています。  
   
 -   イベント  
@@ -153,7 +157,7 @@ where name = 'keyword_map'
   
  詳細については、「[sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)」を参照してください。  
   
-### マップ  
+### <a name="maps"></a>マップ  
  内部値はマップ テーブルによって文字列に対応付けられます。これにより、ユーザーは、その値が何を表しているのかを知ることができます。 内部値について単に数値を取得できるだけでなく、意味のある説明を取得できます。 次のクエリは、マップ値の取得方法を示しています。  
   
 ```  
@@ -215,9 +219,9 @@ where name = 'lock_mode'
   
  たとえば、このテーブルに mode という名前の列があり、その値が 5 であると仮定します。 このテーブルによると、5 は X に対応しており、そこからロックの種類が Exclusive であることがわかります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server 拡張イベント セッション](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [SQL Server 拡張イベント エンジン](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [SQL Server 拡張イベント ターゲット](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)  
+ [SQL Server 拡張イベント ターゲット](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

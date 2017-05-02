@@ -1,28 +1,32 @@
 ---
 title: "トレースへのフィルターの適用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "フィルター [SQL Server], イベント"
-  - "イベント [SQL Server], フィルター"
-  - "フィルター [SQL Server]"
-  - "トレースのフィルター [SQL Server]"
-  - "トレース [SQL Server], フィルター"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filters [SQL Server], events
+- events [SQL Server], filters
+- filters [SQL Server]
+- filters [SQL Server], traces
+- traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6315705010a41afb985682e63338cc95237b5e78
+ms.lasthandoff: 04/11/2017
+
 ---
-# トレースへのフィルターの適用
+# <a name="filter-a-trace"></a>トレースへのフィルターの適用
   フィルターを使用すると、トレースに出力するイベントを制限することができます。 フィルターが設定されていない場合は、選択したイベント クラスのすべてのイベントがトレースに出力されます。 たとえば、トレースに出力する Windows ユーザーとして特定のユーザー名を指定すると、それらのユーザーのデータのみが出力されます。  
   
  トレースのフィルター設定は必須ではありません。 ただし、フィルターを設定すると、トレース中に発生するオーバーヘッドを低減できます。 フィルターによって、データを絞り込むことができ、パフォーマンス分析および監査が簡略化されます。  
@@ -34,7 +38,7 @@ caps.handback.revision: 28
   
  たとえば、クエリを監視して、実行に長時間かかるバッチを調べる場合、イベントのトレース条件を設定することで、実行時間が 30 秒を超えるバッチだけを監視できます (CPU 時間の最小値は 30,000 ミリ秒です)。  
   
-## フィルター作成のガイドライン  
+## <a name="filter-creation-guidelines"></a>フィルター作成のガイドライン  
  トレースにフィルターを適用するには、次の手順を実行します。  
   
 1.  トレースの対象とするイベントを決めます。  
@@ -43,7 +47,7 @@ caps.handback.revision: 28
   
 3.  必要なデータのサブセットを決め、そのデータのサブセットに基づいてフィルターを設定します。  
   
- たとえば、ある一定の時間よりも長くかかるイベントをトレースで出力するとします。 その場合、**Duration** データ列が 300 ミリ秒よりも長いイベントを出力するトレースを作成できます。 300 ミリ秒以内に完了したイベントはトレースから除外されます。  
+ たとえば、ある一定の時間よりも長くかかるイベントをトレースで出力するとします。 その場合、 **Duration** データ列が 300 ミリ秒よりも長いイベントを出力するトレースを作成できます。 300 ミリ秒以内に完了したイベントはトレースから除外されます。  
   
  フィルターは、SQL Server Profiler または Transact-SQL ストアド プロシージャを使用して作成できます。  
   
@@ -61,8 +65,8 @@ caps.handback.revision: 28
   
 |関係演算子|演算子記号|説明|  
 |-------------------------|---------------------|-----------------|  
-|Like|LIKE|イベントのトレース データが入力したテキストと同じでなければならないことを指定します。 複数の値を指定できます。|  
-|パターンに一致しない|NOT LIKE|イベントのトレース データが入力したテキストと同じであってはならないことを指定します。 複数の値を指定できます。|  
+|Like|Like|イベントのトレース データが入力したテキストと同じでなければならないことを指定します。 複数の値を指定できます。|  
+|パターンに一致しない|パターンに一致しない|イベントのトレース データが入力したテキストと同じであってはならないことを指定します。 複数の値を指定できます。|  
 |[等しい]|=|イベントのトレース データが入力した値と等しくなければならないことを指定します。 複数の値を指定できます。|  
 |等しくない|<>|イベントのトレース データが入力した値と等しくあってはならないことを指定します。 複数の値を指定できます。|  
 |より大きい|>|イベントのトレース データが入力した値よりも大きくなければならないことを指定します。|  
@@ -77,7 +81,7 @@ caps.handback.revision: 28
 |**ApplicationName**|LIKE、NOT LIKE|  
 |**BigintData1**|=、<>、>=、<=|  
 |**BigintData2**|=、<>、>=、<=|  
-|**BinaryData**|このデータ列のイベントにフィルターを適用するには、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 詳細については、「[SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)」を参照してください。|  
+|**BinaryData**|このデータ列のイベントにフィルターを適用するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 詳細については、「 [SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)」を参照してください。|  
 |**ClientProcessID**|=、<>、>=、<=|  
 |**ColumnPermissions**|=、<>、>=、<=|  
 |**CPU**|=、<>、>=、<=|  
@@ -89,7 +93,7 @@ caps.handback.revision: 28
 |**[エラー]**|=、<>、>=、<=|  
 |**EventSubClass**|=、<>、>=、<=|  
 |**FileName**|LIKE、NOT LIKE|  
-|**GUID**|このデータ列のイベントにフィルターを適用するには、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 詳細については、「[SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)」を参照してください。|  
+|**GUID**|このデータ列のイベントにフィルターを適用するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 詳細については、「 [SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)」を参照してください。|  
 |**Handle**|=、<>、>=、<=|  
 |**HostName**|LIKE、NOT LIKE|  
 |**IndexID**|=、<>、>=、<=|  
@@ -99,13 +103,13 @@ caps.handback.revision: 28
 |**LineNumber**|=、<>、>=、<=|  
 |**LinkedServerName**|LIKE、NOT LIKE|  
 |**LoginName**|LIKE、NOT LIKE|  
-|**LoginSid**|このデータ列のイベントにフィルターを適用するには、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 詳細については、「[SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)」を参照してください。|  
+|**LoginSid**|このデータ列のイベントにフィルターを適用するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 詳細については、「 [SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)」を参照してください。|  
 |**MethodName**|LIKE、NOT LIKE|  
 |**モード**|=、<>、>=、<=|  
 |**NestLevel**|=、<>、>=、<=|  
 |**NTDomainName**|LIKE、NOT LIKE|  
 |**NTUserName**|LIKE、NOT LIKE|  
-|**ObjectID**|=、<>、>=、<=|  
+|**Exchange Spill**|=、<>、>=、<=|  
 |**ObjectID2**|=、<>、>=、<=|  
 |**ObjectName**|LIKE、NOT LIKE|  
 |**ObjectType**|=、<>、>=、<=|  
@@ -123,12 +127,12 @@ caps.handback.revision: 28
 |**Severity**|=、<>、>=、<=|  
 |**SourceDatabaseID**|=、<>、>=、<=|  
 |**SPID**|=、<>、>=、\<=|  
-|**SqlHandle**|このデータ列のイベントにフィルターを適用するには、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 詳細については、「[SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)」を参照してください。|  
+|**SqlHandle**|このデータ列のイベントにフィルターを適用するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 詳細については、「 [SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)」を参照してください。|  
 |**StartTime**|>=、<=|  
 |**状態**|=、<>、>=、<=|  
-|**Success**|=、<>、>=、<=|  
+|**成功**|=、<>、>=、<=|  
 |**TargetLoginName**|LIKE、NOT LIKE|  
-|**TargetLoginSid**|このデータ列のイベントにフィルターを適用するには、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 詳細については、「[SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)」を参照してください。|  
+|**TargetLoginSid**|このデータ列のイベントにフィルターを適用するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 詳細については、「 [SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)」を参照してください。|  
 |**TargetUserName**|LIKE、NOT LIKE|  
 |**TextData** *|LIKE、NOT LIKE|  
 |**TransactionID**|=、<>、>=、<=|  
@@ -136,11 +140,11 @@ caps.handback.revision: 28
 |**Writes**|=、<>、>=、<=|  
 |**XactSequence**|=、<>、>=、<=|  
   
- \* **osql** ユーティリティまたは **sqlcmd** ユーティリティからイベントをトレースしている場合は必ず、**%** を **TextData** データ列のフィルターに付加します。  
+ \***osql** ユーティリティまたは **sqlcmd** ユーティリティからイベントをトレースしている場合は必ず、 **%** を **TextData** データ列のフィルターに付加します。  
   
- セキュリティ対策として、SQL トレースは、パスワードに影響を与えるセキュリティ関連ストアド プロシージャの情報をトレースの対象から自動的に除外します。 このセキュリティ メカニズムは変更不可能で、常に有効な状態になっています。 これにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上でのすべての動作状況をトレースする権限を持たないユーザーがパスワードを取得するのを防ぎます。  
+ セキュリティ対策として、SQL トレースは、パスワードに影響を与えるセキュリティ関連ストアド プロシージャの情報をトレースの対象から自動的に除外します。 このセキュリティ メカニズムは変更不可能で、常に有効な状態になっています。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上でのすべての動作状況をトレースする権限を持たないユーザーがパスワードを取得するのを防ぎます。  
   
- 監視されるのは次のセキュリティ関連ストアド プロシージャですが、**TextData** データ列には出力されません。  
+ 監視されるのは次のセキュリティ関連ストアド プロシージャですが、 **TextData** データ列には出力されません。  
   
  [sp_addapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)  
   

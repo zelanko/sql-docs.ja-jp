@@ -1,32 +1,36 @@
 ---
 title: "ログ末尾のバックアップ (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "バックアップ [SQL Server], ログ末尾"
-  - "トランザクション ログ バックアップ [SQL Server], ログ末尾のバックアップ"
-  - "NO_TRUNCATE 句"
-  - "バックアップ [SQL Server], ログ バックアップ"
-  - "ログ末尾のバックアップ"
-  - "バックアップ [SQL Server], ログ末尾のバックアップ"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backing up [SQL Server], tail of log
+- transaction log backups [SQL Server], tail-log backups
+- NO_TRUNCATE clause
+- backups [SQL Server], log backups
+- tail-log backups
+- backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 caps.latest.revision: 55
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1b6a1f1ec700325de57742261e5b8911f9c90c27
+ms.lasthandoff: 04/11/2017
+
 ---
-# ログ末尾のバックアップ (SQL Server)
+# <a name="tail-log-backups-sql-server"></a>ログ末尾のバックアップ (SQL Server)
   このトピックは、完全復旧モデルまたは一括ログ復旧モデルを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのバックアップと復元のみに関連しています。  
   
- *ログ末尾のバックアップ*は、まだバックアップされていないすべてのログ レコード (*ログの末尾*) をキャプチャし、作業内容の消失を防いで、ログ チェーンの完全性を維持します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをその最新の時点まで復元するには、トランザクション ログの末尾をあらかじめバックアップしておく必要があります。 ログ末尾のバックアップは、データベースの復旧プランの対象になる最後のバックアップとなります。  
+ *ログ末尾のバックアップ* は、まだバックアップされていないすべてのログ レコード ( *ログの末尾*) をキャプチャし、作業内容の消失を防いで、ログ チェーンの完全性を維持します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをその最新の時点まで復元するには、トランザクション ログの末尾をあらかじめバックアップしておく必要があります。 ログ末尾のバックアップは、データベースの復旧プランの対象になる最後のバックアップとなります。  
   
 > **注:** ログ末尾のバックアップは、すべての復元シナリオで必要となるわけではありません。 復旧ポイントが、それより前のログ バックアップに含まれているのであれば、ログ末尾のバックアップは不要です。 また、データベースを移動するか置き換えて (上書きして) いる場合、ログ末尾のバックアップは不要であり、最新のバックアップ以降の特定の時点に復元する必要もありません。  
   
@@ -46,12 +50,12 @@ caps.handback.revision: 55
 |BACKUP LOG オプション|コメント|  
 |-----------------------|--------------|  
 |NORECOVERY|データベースの復元操作を続行する場合は、必ず NORECOVERY を使用します。 NORECOVERY を指定すると、データベースは復元中の状態になります。 これにより、ログ末尾のバックアップの後にデータベースが変化しないことが保障されます。 これと併せて、NO_TRUNCATE オプションまたは COPY_ONLY オプションを指定しない限り、ログは切り捨てられます。<br /><br /> **\*\* 重要 \*\*** データベースが破損している場合を除き、NO_TRUNCATE を使用しないでください。|  
-|CONTINUE_AFTER_ERROR|破損したデータベースの末尾をバックアップする場合に限り、CONTINUE_AFTER_ERROR を使用します。<br /><br /> 破損したデータベースにログ末尾のバックアップを適用する場合、通常であればログ バックアップにキャプチャされるメタデータの一部を使用できない場合があります。 詳細については、このトピックの「[不完全なバックアップ メタデータが含まれたログ末尾のバックアップ](#IncompleteMetadata)」を参照してください。|  
+|CONTINUE_AFTER_ERROR|破損したデータベースの末尾をバックアップする場合に限り、CONTINUE_AFTER_ERROR を使用します。<br /><br /> 破損したデータベースにログ末尾のバックアップを適用する場合、通常であればログ バックアップにキャプチャされるメタデータの一部を使用できない場合があります。 詳細については、このトピックの「 [不完全なバックアップ メタデータが含まれたログ末尾のバックアップ](#IncompleteMetadata)」を参照してください。|  
   
 ##  <a name="IncompleteMetadata"></a> 不完全なバックアップ メタデータが含まれたログ末尾のバックアップ  
- データベースがオフラインである場合、データベースが破損している場合、またはデータ ファイルが欠落している場合でも、ログ末尾のバックアップではログの末尾がキャプチャされます。 これが原因で、復元情報コマンドや **msdb** のメタデータが不完全になる場合があります。 ただし、メタデータが不完全なだけで、キャプチャされたログは完全であり、使用できます。  
+ データベースがオフラインである場合、データベースが破損している場合、またはデータ ファイルが欠落している場合でも、ログ末尾のバックアップではログの末尾がキャプチャされます。 これが原因で、復元情報コマンドや **msdb**のメタデータが不完全になる場合があります。 ただし、メタデータが不完全なだけで、キャプチャされたログは完全であり、使用できます。  
   
- ログ末尾のバックアップに不完全なメタデータが含まれている場合は、[backupset](../../relational-databases/system-tables/backupset-transact-sql.md) テーブルの **has_incomplete_metadata** が **1** に設定されます。 また、[RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md) の出力で **HasIncompleteMetadata** が **1** に設定されます。  
+ ログ末尾のバックアップに不完全なメタデータが含まれている場合は、 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) テーブルの **has_incomplete_metadata** が **1**に設定されます。 また、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)の出力で **HasIncompleteMetadata** が **1**に設定されます。  
   
  ログ末尾のバックアップのメタデータが不完全な場合、ログ末尾のバックアップ時に、ファイル グループに関する情報の大部分が [backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md) テーブルから欠落します。 **backupfilegroup** テーブルのほとんどの列は NULL になり、意味を持つ列は次の列のみです。  
   
@@ -70,12 +74,13 @@ caps.handback.revision: 55
   
  トランザクション ログ バックアップを復元するには、「[トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)」をご覧ください。  
     
-## 参照  
+## <a name="see-also"></a>参照  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [コピーのみのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
  [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
   
   
+

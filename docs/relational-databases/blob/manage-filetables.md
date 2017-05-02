@@ -1,25 +1,29 @@
 ---
 title: "FileTable の管理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], セキュリティ"
-  - "FileTable [SQL Server], アクセスの管理"
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], security
+- FileTables [SQL Server], managing access
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ec52f5b4ebdb3fdd61fda320316186d220b6b53
+ms.lasthandoff: 04/11/2017
+
 ---
-# FileTable の管理
+# <a name="manage-filetables"></a>FileTable の管理
   FileTable を管理するための一般的な管理タスクについて説明します。  
   
 ##  <a name="HowToEnumerate"></a> 方法: FileTable と関連オブジェクトの一覧を取得する  
@@ -55,7 +59,7 @@ GO
   
     -   アクセスを **NONE**に設定している場合は、すべての開いているファイル ハンドル。  
   
-    -   アクセスを **READ_ONLY** に設定している場合は、書き込みアクセスで開かれているすべてのファイル ハンドル。  
+    -   アクセスを **READ_ONLY**に設定している場合は、書き込みアクセスで開かれているすべてのファイル ハンドル。  
   
      開いているファイル ハンドルを終了する方法の詳細については、このトピックの「 [FileTable に関連付けられた開いているファイル ハンドルの終了](#BasicsKilling) 」を参照してください。  
   
@@ -72,17 +76,17 @@ GO
   
 -   アクセスを **NONE**に設定した場合、すべての FileTable ディレクトリとそのコンテンツはアクセスも表示もできなくなります。  
   
--   アクセスを **READ_ONLY** に設定した場合、すべての FileTable ディレクトリとそのコンテンツも読み取り専用になります。  
+-   アクセスを **READ_ONLY**に設定した場合、すべての FileTable ディレクトリとそのコンテンツも読み取り専用になります。  
   
  インスタンス レベルで FILESTREAM を無効化した場合、そのインスタンスのデータベース レベルのディレクトリと、その下の FileTable ディレクトリに、次の影響が及びます。  
   
 -   FILESTREAM がインスタンス レベルで無効化された場合、そのインスタンスのデータベース レベルのディレクトリはすべて表示されません。  
   
 ###  <a name="HowToDisable"></a> 方法: データベース レベルで非トランザクション アクセスを無効化および再有効化する  
- 詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)」を参照してください。  
+ 詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。  
   
  **完全な非トランザクション アクセスを無効化するには**  
- **ALTER DATABASE** ステートメントを呼び出し、**NON_TRANSACTED_ACCESS** の値を **READ_ONLY** または **OFF** に設定します。  
+ **ALTER DATABASE** ステートメントを呼び出し、 **NON_TRANSACTED_ACCESS** の値を **READ_ONLY** または **OFF**に設定します。  
   
 ```tsql  
 -- Disable write access.  
@@ -97,7 +101,7 @@ GO
 ```  
   
  **完全な非トランザクション アクセスを再有効化するには**  
- **ALTER DATABASE** ステートメントを呼び出し、**NON_TRANSACTED_ACCESS** の値を **FULL** に設定します。  
+ **ALTER DATABASE** ステートメントを呼び出し、 **NON_TRANSACTED_ACCESS** の値を **FULL**に設定します。  
   
 ```tsql  
 ALTER DATABASE database_name  
@@ -169,7 +173,7 @@ GO
 ```  
   
 ###  <a name="HowToKill"></a> 方法: FileTable に関連付けられた開いているファイル ハンドルを終了する  
- データベースまたは FileTable のすべての開いているファイル ハンドルを終了するか、特定のハンドルを終了するための適切な引数を指定して、[sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../Topic/sp_kill_filestream_non_transacted_handles%20\(Transact-SQL\).md) ストアド プロシージャを呼び出します。  
+ データベースまたは FileTable のすべての開いているファイル ハンドルを終了するか、特定のハンドルを終了するための適切な引数を指定して、[sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) ストアド プロシージャを呼び出します。  
   
 ```  
 USE database_name;  
@@ -230,8 +234,9 @@ GO
 ##  <a name="OtherDBCC"></a> DBCC と FileTable  
  DBCC CHECKCONSTRAINTS を使用すると、システム定義の制約を含む FileTable に対する制約を検証できます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [FileTable と他の SQL Server 機能の互換性](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)   
  [FileTable DDL、関数、ストアド プロシージャ、およびビュー](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
+

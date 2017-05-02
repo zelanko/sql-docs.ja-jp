@@ -1,34 +1,38 @@
 ---
 title: "クラスター化インデックスのサイズの見積もり | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "領域の割り当て [SQL Server], インデックスのサイズ"
-  - "テーブルのサイズ [SQL Server]"
-  - "ディスク領域 [SQL Server], インデックス"
-  - "テーブル サイズの予測 [SQL Server]"
-  - "テーブル サイズ [SQL Server]"
-  - "テーブル サイズの見積もり"
-  - "領域 [SQL Server], インデックス"
-  - "クラスター化インデックス, テーブル サイズ"
-  - "非クラスター化インデックス [SQL Server], テーブル サイズ"
-  - "データベースの設計 [SQL Server], サイズの見積もり"
-  - "テーブル サイズの計算"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- space allocation [SQL Server], index size
+- size [SQL Server], tables
+- disk space [SQL Server], indexes
+- predicting table size [SQL Server]
+- table size [SQL Server]
+- estimating table size
+- space [SQL Server], indexes
+- clustered indexes, table size
+- nonclustered indexes [SQL Server], table size
+- designing databases [SQL Server], estimating size
+- calculating table size
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 caps.latest.revision: 49
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ecae889b68740652ab237201bfad2cde58dd39b5
+ms.lasthandoff: 04/11/2017
+
 ---
-# クラスター化インデックスのサイズの見積もり
+# <a name="estimate-the-size-of-a-clustered-index"></a>クラスター化インデックスのサイズの見積もり
   クラスター化インデックスにデータを格納するために必要な領域を見積もるには、次の手順を実行します。  
   
 1.  クラスター化インデックスのリーフ レベルにデータを格納するために使用する領域を計算します。  
@@ -37,7 +41,7 @@ caps.handback.revision: 49
   
 3.  計算した値を合計します。  
   
-## 手順 1. リーフ レベルにデータを格納するために使用する領域を計算する  
+## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>手順 1. リーフ レベルにデータを格納するために使用する領域を計算する  
   
 1.  次のように、テーブル内の行数を指定します。  
   
@@ -49,11 +53,11 @@ caps.handback.revision: 49
   
      ***Num_Cols***  = 列 (固定長および可変長) の総数  
   
-     ***Fixed_Data_Size*** = すべての固定長列の合計バイト サイズ  
+     ***Fixed_Data_Size***  = すべての固定長列の合計バイト サイズ  
   
-     ***Num_Variable_Cols*** = 可変長列の数  
+     ***Num_Variable_Cols***  = 可変長列の数  
   
-     ***Max_Var_Size*** = すべての可変長列の最大バイト サイズ  
+     ***Max_Var_Size***  = すべての可変長列の最大バイト サイズ  
   
 3.  クラスター化インデックスが一意でない場合、次のように *uniqueifier* 列を計上します。  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 49
   
 4.  NULL ビットマップと呼ばれる行の部分は、列の NULL 値の許容を管理するために予約されています。 このサイズは次のように計算します。  
   
-     ***Null_Bitmap*** = 2 + ((***Num_Cols*** + 7) / 8)  
+     ***Null_Bitmap***  = 2 + ((***Num_Cols*** + 7) / 8)  
   
      上記の式の計算結果の整数部分だけを使用し、小数部分は無視してください。  
   
@@ -77,14 +81,14 @@ caps.handback.revision: 49
   
      テーブル内に可変長列が存在する場合、次の式を使用して、行内でそれらの列を格納するために使用する領域を計算します。  
   
-     ***Variable_Data_Size*** = 2 + (***Num_Variable_Cols*** x 2) + ***Max_Var_Size***  
+     ***Variable_Data_Size***  = 2 + (***Num_Variable_Cols*** x 2) + ***Max_Var_Size***  
   
      ***Max_Var_Size*** に追加されたバイトは、それぞれの可変長列を追跡するためのものです。 この式は、すべての可変長列がいっぱいになることを前提としています。 可変長列の格納領域の使用率が 100% 以下になることが予想される場合、その使用率に基づいて ***Max_Var_Size*** の値を調整し、テーブルの全体サイズをより正確に見積もることができます。  
   
     > [!NOTE]  
-    >  定義済みのテーブルの合計サイズが 8,060 バイトを超える **varchar**、**nvarchar**、**varbinary**、または **sql_variant** 列の連結が可能です。 この場合も、**varchar**、**varbinary**、または **sql_variant** 列の場合は 8,000 バイトの制限内に、**nvarchar** 列の場合は 4,000 バイトの制限内に、各列のサイズを収める必要があります。 ただし、これらの列を連結したサイズは、テーブルの制限である 8,060 バイトを超過してもかまいません。  
+    >  定義済みのテーブルの合計サイズが 8,060 バイトを超える **varchar**、 **nvarchar**、 **varbinary**、または **sql_variant** 列の連結が可能です。 この場合も、 **varchar**、 **varbinary**、または **sql_variant** 列の場合は 8,000 バイトの制限内に、 **nvarchar** 列の場合は 4,000 バイトの制限内に、各列のサイズを収める必要があります。 ただし、これらの列を連結したサイズは、テーブルの制限である 8,060 バイトを超過してもかまいません。  
   
-     可変長列が存在しない場合は、***Variable_Data_Size*** に 0 を設定します。  
+     可変長列が存在しない場合は、 ***Variable_Data_Size*** に 0 を設定します。  
   
 6.  次の式で行サイズの合計を計算します。  
   
@@ -94,7 +98,7 @@ caps.handback.revision: 49
   
 7.  次の式で、1 ページあたりの行数を計算します (1 ページあたりの空きバイト数は 8,096 です)。  
   
-     ***Rows_Per_Page*** = 8096 / (***Row_Size*** + 2)  
+     ***Rows_Per_Page***  = 8096 / (***Row_Size*** + 2)  
   
      行は複数のページにまたがらないので、計算結果の端数は切り捨ててください。 上記の式の 2 という値は、ページのスロット配列内の行のエントリのためのものです。  
   
@@ -114,7 +118,7 @@ caps.handback.revision: 49
   
      ***Leaf_space_used***  = 8192 x ***Num_Leaf_Pages***  
   
-## 手順 2. インデックス情報を格納するために使用する領域を計算する  
+## <a name="step-2-calculate-the-space-used-to-store-index-information"></a>手順 2. インデックス情報を格納するために使用する領域を計算する  
  次の手順を実行して、上位レベルのインデックスを格納するために必要な領域を見積もることができます。  
   
 1.  次のように、インデックス キーの固定長列と可変長列の数を指定し、それらの列の格納に必要な領域を計算します。  
@@ -149,7 +153,7 @@ caps.handback.revision: 49
   
      上記の式の計算結果は、整数部分だけを使用します。 小数部分は無視してください。  
   
-     NULL 値を許容するキー列が存在しない場合は、***Index_Null_Bitmap*** を 0 に設定します。  
+     NULL 値を許容するキー列が存在しない場合は、 ***Index_Null_Bitmap*** を 0 に設定します。  
   
 4.  次の式で、可変長のデータ サイズを計算します。  
   
@@ -159,7 +163,7 @@ caps.handback.revision: 49
   
      ***Max_Var_Key_Size*** に追加されたバイトは、それぞれの可変長列を追跡するためのものです。 この式は、すべての可変長列がいっぱいになることを前提としています。 可変長列の格納領域の使用率が 100% 以下になることが予想される場合、その使用率に基づいて ***Max_Var_Key_Size*** の値を調整し、テーブルの全体サイズをより正確に見積もることができます。  
   
-     可変長列が存在しない場合は、***Variable_Key_Size*** に 0 を設定します。  
+     可変長列が存在しない場合は、 ***Variable_Key_Size*** に 0 を設定します。  
   
 5.  次の式でインデックス行のサイズを計算します。  
   
@@ -183,7 +187,7 @@ caps.handback.revision: 49
   
      ここで、1 <= Level <= ***Non-leaf_Levels***  
   
-     それぞれの値を最も近い整数に切り上げます。 簡単な例として、***Num_Leaf_Pages*** = 1000、***Index_Rows_Per_Page*** = 25 のインデックスを例に取ります。 リーフ レベルより上位の最初のインデックス レベルでは、1000 行のインデックス行が格納されます。リーフ ページあたり 1 行のインデックス行で、1 ページあたり 25 行のインデックス行を納めることができます。 つまり、1,000 行のインデックス行を格納するために 40 ページが必要になります。 次のレベルのインデックスでは、40 行のインデックス行を格納する必要があります。 つまり、2 ページが必要になります。 最上位レベルのインデックスでは、2 行のインデックス行を格納する必要があります。 つまり、1 ページが必要になります。 その結果、非リーフ インデックス ページは 43 ページとなります。 このような数値を前の式で使用すると、次のような結果になります。  
+     それぞれの値を最も近い整数に切り上げます。 簡単な例として、 ***Num_Leaf_Pages*** = 1000、 ***Index_Rows_Per_Page*** = 25 のインデックスを例に取ります。 リーフ レベルより上位の最初のインデックス レベルでは、1000 行のインデックス行が格納されます。リーフ ページあたり 1 行のインデックス行で、1 ページあたり 25 行のインデックス行を納めることができます。 つまり、1,000 行のインデックス行を格納するために 40 ページが必要になります。 次のレベルのインデックスでは、40 行のインデックス行を格納する必要があります。 つまり、2 ページが必要になります。 最上位レベルのインデックスでは、2 行のインデックス行を格納する必要があります。 つまり、1 ページが必要になります。 その結果、非リーフ インデックス ページは 43 ページとなります。 このような数値を前の式で使用すると、次のような結果になります。  
   
      ***Non-leaf_Levels***  = 1 + log(25) (1000 / 25) = 3  
   
@@ -193,7 +197,7 @@ caps.handback.revision: 49
   
      ***Index_Space_Used***  = 8192 x ***Num_Index_Pages***  
   
-## 手順 3. 計算した値を合計します。  
+## <a name="step-3-total-the-calculated-values"></a>手順 3. 計算した値を合計します。  
  次の式で、上記の 2 つの手順から取得した値を合計します。  
   
  クラスター化インデックス サイズ (バイト) = ***Leaf_Space_Used*** + ***Index_Space_used***  
@@ -210,7 +214,7 @@ caps.handback.revision: 49
   
 -   ラージ オブジェクト (LOB) の値  
   
-     LOB データ型の **varchar(max)**、**varbinary(max)**、**nvarchar(max)**、**text**、**ntext**、**xml**、および **image** の値を格納するのに使用する領域を正確に特定するためのアルゴリズムは複雑です。 LOB データ型の値で使用される領域の計算は、必要な LOB 値の平均サイズを合計し、***Num_Rows*** で乗算し、クラスター化インデックスの合計サイズに加算するだけで十分です。  
+     LOB データ型の **varchar(max)**、 **varbinary(max)**、 **nvarchar(max)**、 **text**、 **ntext**、 **xml**、および **image** の値を格納するのに使用する領域を正確に特定するためのアルゴリズムは複雑です。 LOB データ型の値で使用される領域の計算は、必要な LOB 値の平均サイズを合計し、 ***Num_Rows***で乗算し、クラスター化インデックスの合計サイズに加算するだけで十分です。  
   
 -   圧縮  
   
@@ -218,9 +222,9 @@ caps.handback.revision: 49
   
 -   スパース列  
   
-     スパース列の領域要件については、「[スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。  
+     スパース列の領域要件については、「 [スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [クラスター化インデックスと非クラスター化インデックスの概念](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [テーブル サイズの見積もり](../../relational-databases/databases/estimate-the-size-of-a-table.md)   
  [クラスター化インデックスの作成](../../relational-databases/indexes/create-clustered-indexes.md)   

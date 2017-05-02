@@ -1,37 +1,41 @@
 ---
-title: "バックアップ デバイス (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "テープ バックアップ デバイス、テープ バックアップ デバイスについて"
-  - "バックアップ デバイス [SQL Server]"
-  - "ディスク バックアップ デバイス [SQL Server]"
-  - "データベース バックアップ [SQL Server]、バックアップ デバイス"
-  - "論理デバイス [SQL Server]"
-  - "バックアップ デバイス [SQL Server]、バックアップ デバイスについて"
-  - "バックアップ [SQL Server]、バックアップ デバイス"
-  - "リムーバブル メディア [SQL Server]"
-  - "ネットワーク共有 [SQL Server]"
-  - "バックアップ [SQL Server]、バックアップ デバイス"
-  - "テープ バックアップ デバイス"
-  - "物理デバイス [SQL Server]"
-  - "データベースのバックアップ [SQL Server]、バックアップ デバイス"
-  - "デバイス [SQL Server]"
+title: "バックアップ デバイス [SQL Server] | Microsoft Docs"
+ms.custom: 
+ms.date: 08/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tape backup devices, about tape backup devices
+- backup devices [SQL Server]
+- disk backup devices [SQL Server]
+- database backups [SQL Server], backup devices
+- logical devices [SQL Server]
+- backup devices [SQL Server], about backup devices
+- backing up [SQL Server], backup devices
+- removable media [SQL Server]
+- network shares [SQL Server]
+- backups [SQL Server], backup devices
+- tape backup devices
+- physical devices [SQL Server]
+- backing up databases [SQL Server], backup devices
+- devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 caps.latest.revision: 93
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 93
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 49a10147e48ece974a5ac64bead3b626556ad29c
+ms.lasthandoff: 04/11/2017
+
 ---
-# バックアップ デバイス (SQL Server)
+# <a name="backup-devices-sql-server"></a>バックアップ デバイス (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース上でのバックアップ操作中、バックアップ対象のデータ (*backup*) は、物理バックアップ デバイスに書き込まれます。 この物理バックアップ デバイスは、メディア セットの最初のバックアップが書き込まれるときに初期化されます。 単一または一連のバックアップ デバイス上にあるバックアップによって、1 つのメディア セットが構成されます。  
    
 ##  <a name="TermsAndDefinitions"></a> 用語と定義  
@@ -39,7 +43,7 @@ caps.handback.revision: 93
  1 つ以上のバックアップ ファイルを含むハード ディスクまたはその他のディスク記憶メディア。 バックアップ ファイルは正規のオペレーティング システム ファイルです。  
   
  メディア セット (media set)  
- テープやディスク ファイルなどのバックアップ メディアに順序を付けてまとめたもの。決まった種類のバックアップ デバイスが複数使用されます。 メディア セットの詳細については、「[メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)」をご覧ください。  
+ テープやディスク ファイルなどのバックアップ メディアに順序を付けてまとめたもの。決まった種類のバックアップ デバイスが複数使用されます。 メディア セットの詳細については、「 [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)」をご覧ください。  
   
  物理バックアップ デバイス (physical backup device)  
  オペレーティング システムによって提供されるテープ ドライブまたはディスク ファイル。 バックアップは 1 ～ 64 個のバックアップ デバイスに書き込むことができます。 バックアップに複数のバックアップ デバイスが必要な場合、デバイスはすべて 1 種類のデバイス (ディスクまたはテープ) に対応する必要があります。  
@@ -55,7 +59,7 @@ caps.handback.revision: 93
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理ツールを使用すると、タイムスタンプの付いた名前がディスク ファイルに対して自動的に生成されるため、ディスク バックアップ デバイスの操作を柔軟に行うことができます。  
   
-> **重要: ** バックアップ ディスクには、データベースのデータ ディスクやログ ディスクとは別のディスクを使用することをお勧めします。 これは、データ ディスクやログ ディスクで障害が発生した場合に確実にバックアップにアクセスできるようにするために必要です。 
+> **重要:** バックアップ ディスクには、データベースのデータ ディスクやログ ディスクとは別のディスクを使用することをお勧めします。 これは、データ ディスクやログ ディスクで障害が発生した場合に確実にバックアップにアクセスできるようにするために必要です。 
 >
 >データベース ファイルとバックアップ ファイルが同じデバイスにある場合、デバイスに障害が発生すると、データベースとバックアップの両方が使用できなくなります。 また、データベースとバックアップ ファイルを異なるデバイスに置くと、データベースの運用でもバックアップの書き込みでも I/O パフォーマンスが最適化されます。
   
@@ -74,7 +78,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
- [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) ステートメントで物理ディスク デバイスを指定するための基本構文は次のとおりです。  
+ [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントで物理ディスク デバイスを指定するための基本構文は次のとおりです。  
   
  RESTORE { DATABASE | LOG } *database_name*  
   
@@ -89,9 +93,9 @@ RESTORE DATABASE AdventureWorks2012
   
   
 ##  <a name="BackupFileDiskPath"></a> ディスク バックアップ ファイルのパスを指定する 
- バックアップ ファイルを指定する場合、その完全パスとファイル名を入力する必要があります。 ファイルへのバックアップ時にファイル名または相対パスだけを指定すると、バックアップ ファイルは既定のバックアップ ディレクトリに配置されます。 既定のバックアップ ディレクトリは、C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup です (*n* はサーバー インスタンスの番号です)。 したがって、既定のサーバー インスタンスの場合、既定のバックアップ ディレクトリは C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup になります。  
+ バックアップ ファイルを指定する場合、その完全パスとファイル名を入力する必要があります。 ファイルへのバックアップ時にファイル名または相対パスだけを指定すると、バックアップ ファイルは既定のバックアップ ディレクトリに配置されます。 既定のバックアップ ディレクトリは、C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup です ( *n* はサーバー インスタンスの番号です)。 したがって、既定のサーバー インスタンスの場合、既定のバックアップ ディレクトリは C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup になります。  
   
- 指定があいまいになる状態を避けるために、特にスクリプトでは、バックアップ ディレクトリのパスを各 DISK 句で明示的に指定することをお勧めします。 ただし、これは、クエリ エディターを使用している場合はそれほど重要ではありません。 この場合、バックアップ ファイルが既定のバックアップ ディレクトリに存在することがわかっていれば、DISK 句からパスを省略できます。 たとえば、次の `BACKUP` ステートメントでは、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースが、既定のバックアップ ディレクトリにバックアップされます。  
+ 指定があいまいになる状態を避けるために、特にスクリプトでは、バックアップ ディレクトリのパスを各 DISK 句で明示的に指定することをお勧めします。 ただし、これは、クエリ エディターを使用している場合はそれほど重要ではありません。 この場合、バックアップ ファイルが既定のバックアップ ディレクトリに存在することがわかっていれば、DISK 句からパスを省略できます。 たとえば、次の `BACKUP` ステートメントでは、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースが、既定のバックアップ ディレクトリにバックアップされます。  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -99,7 +103,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-> **注:** 既定の場所は、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer** の **BackupDirectory** レジストリ キーに格納されます。  
+> **注:** 既定の場所は、 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer** の **BackupDirectory**レジストリ キーに格納されます。  
   
    
 ###  <a name="NetworkShare"></a> ネットワーク共有ファイルにバックアップする  
@@ -111,10 +115,10 @@ GO
   
 -   ドメイン ユーザーではなくコンピューター アカウントを使用することにより、ネットワーク サービス アカウントで接続できます。 特定のコンピューターから共有ドライブへのバックアップを可能にするには、そのコンピューター アカウントにアクセス権を与えます。 バックアップを書き込んでいる Sqlservr.exe のプロセスにアクセス権がある限り、BACKUP コマンドを送信するユーザーにアクセス権があるかどうかが問題になることはありません。  
   
-    > **重要: ** ネットワーク経由でデータをバックアップすると、ネットワーク エラーの影響を受ける場合があります。そのため、リモート ディスクを使用する際はバックアップ操作を終了後に検証することをお勧めします。 詳細については、「[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)」を参照してください。  
+    > **重要:** ネットワーク経由でデータをバックアップすると、ネットワーク エラーの影響を受ける場合があります。そのため、リモート ディスクを使用する際はバックアップ操作を終了後に検証することをお勧めします。 詳細については、「[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)」を参照してください。  
   
-## UNC (汎用名前付け規則) 名を指定する  
- バックアップ コマンドや復元コマンドでネットワーク共有を指定するには、ファイルの完全修飾 UNC (汎用名前付け規則) 名をバックアップ デバイスに使用します。 UNC 名の形式は、**\\\\***Systemname***\\***ShareName***\\***Path***\\***FileName* です。  
+## <a name="specify-a-universal-naming-convention-unc-name"></a>UNC (汎用名前付け規則) 名を指定する  
+ バックアップ コマンドや復元コマンドでネットワーク共有を指定するには、ファイルの完全修飾 UNC (汎用名前付け規則) 名をバックアップ デバイスに使用します。 UNC 名の形式は、 **\\\\***Systemname***\\***ShareName***\\***Path***\\***FileName*です。  
   
  例:  
   
@@ -127,7 +131,7 @@ GO
  
 ##  <a name="TapeDevices"></a> テープ デバイスの使用  
   
-> **注:** テープ バックアップ デバイスは、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされなくなる予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。  
+> **注:** テープ バックアップ デバイスは、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でサポートされなくなる予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。  
    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データをテープにバックアップするには、テープ ドライブが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows オペレーティング システムでサポートされている必要があります。 また、特定のテープ ドライブでは、ドライブの製造元で推奨されているテープのみを使用することをお勧めします。 テープ ドライブのインストール方法の詳細については、Windows オペレーティング システムのマニュアルを参照してください。  
   
@@ -137,7 +141,7 @@ GO
   
 -   テープ デバイスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスが動作しているコンピューターに物理的に接続する必要があります。 リモートのテープ デバイスへのバックアップはサポートされません。  
   
--   バックアップ操作中にテープ バックアップ デバイスがいっぱいになっても、まだデータを書き込む必要がある場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は新しいテープを挿入するように要求するメッセージを表示し、新しいテープが挿入された後にバックアップ操作を続行します。  
+-   バックアップ操作中にテープ バックアップ デバイスがいっぱいになっても、まだデータを書き込む必要がある場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は新しいテープを挿入するように要求するメッセージを表示し、新しいテープが挿入された後にバックアップ操作を続行します。  
   
 ##  <a name="BackupTapeUsingPhysicalName"></a> 物理名を使用してバックアップ テープを指定する (Transact-SQL)  
  テープ ドライブの物理デバイス名を使用してバックアップ テープを指定するための基本的な [BACKUP](../../t-sql/statements/backup-transact-sql.md) 構文は次のとおりです。  
@@ -154,7 +158,7 @@ BACKUP LOG AdventureWorks2012
 GO  
 ```  
   
- [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) ステートメントで物理テープ デバイスを指定するための基本構文は次のとおりです。  
+ [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントで物理テープ デバイスを指定するための基本構文は次のとおりです。  
   
  RESTORE { DATABASE | LOG } *database_name*  
   
@@ -171,25 +175,25 @@ GO
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がバックアップ操作や復元操作の後にテープを開いたままにするかどうか、またはその操作が失敗した後にテープを解放して巻き戻すかどうかを制御できます。 既定の動作では、テープを巻き戻します (REWIND)。  
   
-> **注:** BACKUP 構文および引数の詳細については、「[BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)」をご覧ください。 RESTORE 構文および引数の詳細については、それぞれ「[RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)」と「[RESTORE の引数 &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)」をご覧ください。  
+> **注:** BACKUP 構文および引数の詳細については、「[BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)」をご覧ください。 RESTORE 構文および引数の詳細については、それぞれ「[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)」と「[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)」をご覧ください。  
   
 ###  <a name="OpenTapes"></a> 開いているテープの管理  
- 開いているテープ デバイスの一覧と、マウント要求の状態を確認するには、[sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) 動的管理ビューに対してクエリを実行します。 このビューでは、開いているすべてのテープが表示されます。 これには、次の BACKUP 操作または RESTORE 操作を待機して一時的にアイドル状態になっている使用中のテープも含まれます。  
+ 開いているテープ デバイスの一覧と、マウント要求の状態を確認するには、 [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) 動的管理ビューに対してクエリを実行します。 このビューでは、開いているすべてのテープが表示されます。 これには、次の BACKUP 操作または RESTORE 操作を待機して一時的にアイドル状態になっている使用中のテープも含まれます。  
   
- テープが誤って開いたままになっている場合、最も迅速にテープを解放するには、RESTORE REWINDONLY FROM TAPE **=***backup_device_name* コマンドを使用します。 詳細については、「[RESTORE REWINDONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20REWINDONLY%20\(Transact-SQL\).md)」を参照してください。  
+ テープが誤って開いたままになっている場合、最も迅速にテープを解放するには、RESTORE REWINDONLY FROM TAPE **=***backup_device_name* コマンドを使用します。 詳細については、「[RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)」を参照してください。  
   
   
-## Microsoft Azure Blob Storage サービスの使用  
- SQL Server のバックアップを Microsoft Azure BLOB ストレージ サービスに書き込むことができます。  Microsoft Azure BLOB ストレージ サービスを使用したバックアップについては、「[Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」をご覧ください。  
+## <a name="using-the-windows-azure-blob-storage-service"></a>Microsoft Azure Blob Storage サービスの使用  
+ SQL Server のバックアップを Microsoft Azure BLOB ストレージ サービスに書き込むことができます。  Microsoft Azure BLOB ストレージ サービスを使用したバックアップについては、「 [Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」をご覧ください。  
   
 ##  <a name="LogicalBackupDevice"></a> 論理バックアップ デバイスを使用する  
- "*論理バックアップ デバイス*" とは、特定の物理バックアップ デバイス (ディスク ファイルやテープ ドライブ) を示す、省略可能なユーザー定義名です。 論理バックアップ デバイスにより、対応する物理バックアップ デバイスを参照する際に間接指定を使用できます。  
+ " *論理バックアップ デバイス* " とは、特定の物理バックアップ デバイス (ディスク ファイルやテープ ドライブ) を示す、省略可能なユーザー定義名です。 論理バックアップ デバイスにより、対応する物理バックアップ デバイスを参照する際に間接指定を使用できます。  
   
  論理バックアップ デバイスの定義には、物理デバイスへの論理名の割り当てが含まれます。 たとえば、論理デバイス AdventureWorksBackups が Z:\SQLServerBackups\AdventureWorks2012.bak ファイルまたは \\\\.\tape0 テープ ドライブを指すように定義されたとします。 その後のバックアップ コマンドおよび復元コマンドでは、DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' や TAPE = '\\\\.\tape0' ではなく、AdventureWorksBackups をバックアップ デバイスとして指定できます。  
   
- 論理デバイス名は、サーバー インスタンス上のすべての論理バックアップ デバイスで一意になる必要があります。 既存の論理デバイス名を表示するには、[sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) カタログ ビューに対してクエリを実行します。 このビューでは、各論理バックアップ デバイスの名前が表示され、対応する物理バックアップ デバイスの種類と物理的なファイル名またはパスが示されます。  
+ 論理デバイス名は、サーバー インスタンス上のすべての論理バックアップ デバイスで一意になる必要があります。 既存の論理デバイス名を表示するには、 [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) カタログ ビューに対してクエリを実行します。 このビューでは、各論理バックアップ デバイスの名前が表示され、対応する物理バックアップ デバイスの種類と物理的なファイル名またはパスが示されます。  
   
- 論理バックアップ デバイスを定義した後、BACKUP コマンドまたは RESTORE コマンドでは、デバイスの物理名ではなく論理バックアップ デバイスを指定できます。 たとえば、次のステートメントでは、`AdventureWorks2012` データベースが `AdventureWorksBackups` 論理バックアップ デバイスにバックアップされます。  
+ 論理バックアップ デバイスを定義した後、BACKUP コマンドまたは RESTORE コマンドでは、デバイスの物理名ではなく論理バックアップ デバイスを指定できます。 たとえば、次のステートメントでは、 `AdventureWorks2012` データベースが `AdventureWorksBackups` 論理バックアップ デバイスにバックアップされます。  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -209,15 +213,15 @@ GO
   
   
 ##  <a name="MirroredMediaSets"></a> ミラー化バックアップ メディア セット  
- バックアップ メディア セットをミラー化すると、バックアップ デバイスの誤動作の影響を軽減できます。 バックアップはデータ損失に対する最後の防護策なので、このような誤動作は非常に深刻です。 データベースのサイズが大きくなるにつれて、バックアップ デバイスやメディアの障害によってバックアップを復元できなくなる可能性が高くなります。 バックアップ メディアをミラー化すると、物理バックアップ デバイスの冗長性が実現され、バックアップの信頼性が向上します。 詳細については、「[ミラー化バックアップ メディア セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)」を参照してください。  
+ バックアップ メディア セットをミラー化すると、バックアップ デバイスの誤動作の影響を軽減できます。 バックアップはデータ損失に対する最後の防護策なので、このような誤動作は非常に深刻です。 データベースのサイズが大きくなるにつれて、バックアップ デバイスやメディアの障害によってバックアップを復元できなくなる可能性が高くなります。 バックアップ メディアをミラー化すると、物理バックアップ デバイスの冗長性が実現され、バックアップの信頼性が向上します。 詳細については、「 [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)」をご覧ください。  
   
-> **注:** ミラー化バックアップ メディア セットは、[!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] 以降のバージョンのみでサポートされています。  
+> **注:** ミラー化バックアップ メディア セットは、 [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] 以降のバージョンのみでサポートされています。  
   
   
 ##  <a name="Archiving"></a> SQL Server のバックアップをアーカイブする  
  ファイル システム バックアップ ユーティリティを使用してディスクのバックアップをアーカイブし、アーカイブをオフサイトに保存することをお勧めします。 ディスクを使用することには、アーカイブしたバックアップをネットワーク経由でオフサイトのディスクに書き込めるという利点があります。 Microsoft Azure BLOB ストレージ サービスは、オフサイト保存のオプションとして使用できます。  ディスク バックアップをアップロードするか、Microsoft Azure BLOB ストレージ サービスにバックアップを直接書き込むことができます。  
   
- もう 1 つの一般的なアーカイブ方法は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップをローカルのバックアップ ディスクに書き込み、そのバックアップをテープにアーカイブして、そのテープをオフサイトで保存するという形態です。  
+ もう 1 つの一般的なアーカイブ方法は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップをローカルのバックアップ ディスクに書き込み、そのバックアップをテープにアーカイブして、そのテープをオフサイトで保存するという形態です。  
 
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
@@ -247,7 +251,7 @@ GO
   
 -   [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
--   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  **バックアップ デバイスの情報を表示するには**  
   
@@ -263,15 +267,16 @@ GO
   
 -   [バックアップ デバイスの削除 &#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server: Backup Device オブジェクト](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)   
  [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [sys.dm_io_backup_tapes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)   
  [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)  
   
   
+

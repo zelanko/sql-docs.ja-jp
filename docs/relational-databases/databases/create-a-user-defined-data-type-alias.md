@@ -1,28 +1,32 @@
 ---
 title: "ユーザー定義データ型の別名の作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.userdefineddatatype.general.f1"
-  - "sql13.swb.new.datatype.properties.general.f1"
-helpviewer_keywords: 
-  - "作成する別名データ型 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.userdefineddatatype.general.f1
+- sql13.swb.new.datatype.properties.general.f1
+helpviewer_keywords:
+- alias data types [SQL Server], creating
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9646e838fa2d1c8e7f22fd8b53287060a871a686
+ms.lasthandoff: 04/11/2017
+
 ---
-# ユーザー定義データ型の別名の作成
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] にユーザー定義データ型の別名を新しく作成する方法について説明します。  
+# <a name="create-a-user-defined-data-type-alias"></a>ユーザー定義データ型の別名の作成
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]にユーザー定義データ型の別名を新しく作成する方法について説明します。  
   
  **このトピックの内容**  
   
@@ -47,13 +51,13 @@ caps.handback.revision: 27
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> 権限  
- 現在のデータベース内の CREATE TYPE 権限、および *schema_name* に対する ALTER 権限が必要です。 *schema_name* を指定しなかった場合は、現在のユーザーのスキーマを判断するための既定の名前解決ルールが適用されます。  
+ 現在のデータベース内の CREATE TYPE 権限、および *schema_name*に対する ALTER 権限が必要です。 *schema_name* を指定しなかった場合は、現在のユーザーのスキーマを判断するための既定の名前解決ルールが適用されます。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### ユーザー定義データ型を作成するには  
+#### <a name="to-create-a-user-defined-data-type"></a>ユーザー定義データ型を作成するには  
   
-1.  オブジェクト エクスプローラーで、**[データベース]** を展開し、データベースを展開します。次に、**[プログラミング]**、**[種類]** を順に展開し、**[ユーザー定義データ型]** を右クリックして、**[新しいユーザー定義データ型]** をクリックします。  
+1.  オブジェクト エクスプローラーで、 **[データベース]**を展開し、データベースを展開します。次に、 **[プログラミング]**、 **[種類]**を順に展開し、 **[ユーザー定義データ型]**を右クリックして、 **[新しいユーザー定義データ型]**をクリックします。  
   
      **[NULL を許容]**  
      ユーザー定義データ型が NULL 値を受け入れるかどうかを指定します。 既存のユーザー定義データ型に対する NULL 値の許容/非許容は編集できません。  
@@ -65,9 +69,9 @@ caps.handback.revision: 27
      必要に応じて、ユーザー定義データ型の別名にバインドするルールまたは既定値を選択します。  
   
      **[長さ]/[有効桁数]**  
-     データ型の長さまたは有効桁数を表示します (適用可能な場合)。 **[長さ]** は、文字ベースのユーザー定義データ型に適用されます。**[有効桁数]** は、数値に基づくユーザー定義データ型にのみ適用されます。 ラベルは、先に選択されたデータ型によって変わります。 選択されているデータ型の長さまたは有効桁数が固定されている場合、このボックスは変更できません。  
+     データ型の長さまたは有効桁数を表示します (適用可能な場合)。 **[長さ]** は、文字ベースのユーザー定義データ型に適用されます。 **[有効桁数]** は、数値に基づくユーザー定義データ型にのみ適用されます。 ラベルは、先に選択されたデータ型によって変わります。 選択されているデータ型の長さまたは有効桁数が固定されている場合、このボックスは変更できません。  
   
-     長さは、**nvarchar (max)**、**varchar (max)**、**varbinary (max)** の各データ型に対しては表示されません。  
+     長さは、 **nvarchar (max)**、 **varchar (max)**、 **varbinary (max)** の各データ型に対しては表示されません。  
   
      **名前**  
      ユーザー定義データ型の別名を新規に作成する場合、ユーザー定義データ型を表すためにデータベース全体で使用する一意の名前を入力します。 文字の最大数は、システム **sysname** データ型に一致する必要があります。 既存のユーザー定義データ型の別名は編集できません。  
@@ -93,9 +97,9 @@ caps.handback.revision: 27
   
      **nchar** データ型および **nvarchar** データ型の場合、ストレージ値は常に **[長さ]**の値の 2 倍です。  
   
-     ストレージは、**nvarchar (max)**、**varchar (max)**、**varbinary (max)** の各データ型に対しては表示されません。  
+     ストレージは、 **nvarchar (max)**、 **varchar (max)**、 **varbinary (max)** の各データ型に対しては表示されません。  
   
-2.  **[新しいユーザー定義データ型]** ダイアログ ボックスで、**[スキーマ]** ボックスに、このデータ型の別名を所有するスキーマを入力するか、参照ボタン [...] を使用してスキーマを選択します。  
+2.  **[新しいユーザー定義データ型]** ダイアログ ボックスで、 **[スキーマ]** ボックスに、このデータ型の別名を所有するスキーマを入力するか、参照ボタン [...] を使用してスキーマを選択します。  
   
 3.  **[名前]** ボックスに新しいデータ型の別名を入力します。  
   
@@ -109,7 +113,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### ユーザー定義データ型の別名を作成するには  
+#### <a name="to-create-a-user-defined-data-type-alias"></a>ユーザー定義データ型の別名を作成するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -122,7 +126,7 @@ CREATE TYPE ssn
 FROM varchar(11) NOT NULL ;  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データベース識別子](../../relational-databases/databases/database-identifiers.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)  
   

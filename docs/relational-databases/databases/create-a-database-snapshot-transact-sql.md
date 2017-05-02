@@ -1,24 +1,28 @@
 ---
 title: "データベース スナップショットの作成 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データベース スナップショット [SQL Server], 作成"
+ms.custom: 
+ms.date: 08/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database snapshots [SQL Server], creating
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 caps.latest.revision: 56
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b3f980ff1cdf0dd08b0970887988eafa245e9622
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベース スナップショットの作成 (Transact-SQL)
+# <a name="create-a-database-snapshot-transact-sql"></a>データベース スナップショットの作成 (Transact-SQL)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース スナップショットを作成する唯一の方法は、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用することです。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、データベース スナップショットの作成はサポートされません。  
   
   
@@ -27,18 +31,18 @@ caps.handback.revision: 56
 ###  <a name="Prerequisites"></a> 前提条件  
  任意の復旧モデルを使用できるソース データベースは、次の前提条件を満たす必要があります。  
   
--   サーバー インスタンスで、データベース スナップショットをサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディションが実行されている必要があります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でのデータベース スナップショットのサポートについては、「[SQL Server 2016 の各エディションでサポートされる機能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)」を参照してください。  
+-   サーバー インスタンスで、データベース スナップショットをサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディションが実行されている必要があります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でのデータベース スナップショットのサポートについては、「 [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
 -   ソース データベースは、データベース ミラーリング セッション内のミラー データベースである場合を除き、オンラインである必要があります。  
   
--   ミラー データベースにデータベース スナップショットを作成するには、データベースは同期済みの[ミラーリング状態](../../database-engine/database-mirroring/mirroring-states-sql-server.md)になっている必要があります。  
+-   ミラー データベースにデータベース スナップショットを作成するには、データベースは同期済みの [ミラーリング状態](../../database-engine/database-mirroring/mirroring-states-sql-server.md)になっている必要があります。  
   
 -   ソース データベースは、スケーラブルな共有データベースとして構成できません。  
 
-- ソース データベースに MEMORY_OPTIMIZED_DATA ファイルグループを含めることはできません。 詳細については、「[インメモリ OLTP に対してサポートされていない SQL Server の機能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)」を参照してください 。
+- ソース データベースに MEMORY_OPTIMIZED_DATA ファイルグループを含めることはできません。 詳細については、「 [インメモリ OLTP に対してサポートされていない SQL Server の機能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)」を参照してください 。
 
 >  [!IMPORTANT]
-> その他の重要な考慮事項については、「[データベース スナップショット &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)」を参照してください。  
+> その他の重要な考慮事項については、「 [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)を使用することです。  
   
 ##  <a name="Recommendations"></a> 推奨事項  
  このセクションでは、次のベスト プラクティスについて説明します。  
@@ -58,7 +62,7 @@ caps.handback.revision: 56
   
 -   任意のデータベース上のシーケンシャル スナップショットを区別するための、スナップショットの作成日や作成時刻、シーケンス番号、日時などの他のいくつかの情報  
   
- たとえば、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの一連のスナップショットについて考えてみます。 24 時間形式のクロックに基づいて、午前 6 時から午後 6 時までの間に、 6 時間間隔で毎日 3 つのスナップショットが作成されます。 毎日の各スナップショットは、24 時間保持された後削除され、同じ名前の新しいスナップショットに置き換えられます。 各スナップショット名は、次のように時刻を示しますが、日付は示しません。  
+ たとえば、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの一連のスナップショットについて考えてみます。 24 時間形式のクロックに基づいて、午前 6 時から午後 6 時までの間に、 6 時間間隔で毎日 3 つのスナップショットが作成されます。 毎日の各スナップショットは、24 時間保持された後削除され、同じ名前の新しいスナップショットに置き換えられます。 各スナップショット名は、次のように時刻を示しますが、日付は示しません。  
   
 ```  
 AdventureWorks_snapshot_0600  
@@ -81,7 +85,7 @@ AdventureWorks_snapshot_evening
 **注:** データベース スナップショットに戻すには、そのデータベースから他のすべてのスナップショットを削除する必要があります。  
   
 ####  <a name="Client_Connections"></a> ベスト プラクティス: データベース スナップショットへのクライアント接続  
- データベース スナップショットを使用するには、クライアントはそのスナップショットを見つける場所を認識している必要があります。 ユーザーは、あるデータベース スナップショットが作成または削除されている間でも、他のデータベース スナップショットから読み取ることができます。 ただし、既存のスナップショットを新しいスナップショットに置き換えるときに、クライアントを新しいスナップショットにリダイレクトする必要があります。 ユーザーは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、データベース スナップショットに手動で接続できます。 ただし、実稼働環境をサポートするには、ユーザーが意識しないうちにレポート作成クライアントをデータベースの最新のデータベース スナップショットにリダイレクトするような、プログラム ソリューションを作成する必要があります。  
+ データベース スナップショットを使用するには、クライアントはそのスナップショットを見つける場所を認識している必要があります。 ユーザーは、あるデータベース スナップショットが作成または削除されている間でも、他のデータベース スナップショットから読み取ることができます。 ただし、既存のスナップショットを新しいスナップショットに置き換えるときに、クライアントを新しいスナップショットにリダイレクトする必要があります。 ユーザーは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、データベース スナップショットに手動で接続できます。 ただし、実稼働環境をサポートするには、ユーザーが意識しないうちにレポート作成クライアントをデータベースの最新のデータベース スナップショットにリダイレクトするような、プログラム ソリューションを作成する必要があります。  
   
 
   
@@ -91,7 +95,7 @@ AdventureWorks_snapshot_evening
 ##  <a name="TsqlProcedure"></a> データベース スナップショットの作成方法 (Transact-SQL の使用)  
  **データベース スナップショットを作成するには**  
   
->  この手順の例については、このセクションの後半の「[例 (Transact-SQL)](#TsqlExample)」を参照してください。  
+>  この手順の例については、このセクションの後半の「 [例 (Transact-SQL)](#TsqlExample)」を参照してください。  
   
 1.  ソース データベースの現在のサイズに基づいて、データベース スナップショットを格納するのに十分なディスク領域があることを確認します。 データベース スナップショットの最大サイズは、スナップショット作成時におけるソース データベースのサイズです。 詳細については、「[データベース スナップショットのスパース ファイルのサイズを表示する方法 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)」を参照してください。  
   
@@ -113,7 +117,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     *source_**database_name* はソース データベース、*logical_file_name* はファイルを参照するときに SQL Server で使用される論理名、*os_file_name* はファイルを作成する際にオペレーティング システムが使用するパスとファイル名、*database_snapshot_name* はデータベースを戻す対象になるスナップショットの名前です。 この構文の詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
+     *source_**database_name* はソース データベース、 *logical_file_name*はファイルを参照するときに SQL Server で使用される論理名、 *os_file_name* はファイルを作成する際にオペレーティング システムが使用するパスとファイル名、 *database_snapshot_name* はデータベースを戻す対象になるスナップショットの名前です。 この構文の詳細については、「 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)を使用することです。  
   
     > [!NOTE]  
     >  データベース スナップショットを作成する場合、ログ ファイル、オフラインのファイル、復元中のファイル、および機能していないファイルを CREATE DATABASE ステートメントで使用することはできません。  
@@ -130,7 +134,7 @@ AdventureWorks_snapshot_evening
 -   B. [Sales データベースのスナップショットを作成する](#Creating_on_Sales)  
   
 ####  <a name="Creating_on_AW"></a> A. AdventureWorks データベースのスナップショットを作成する  
- この例では、`AdventureWorks` データベースのデータベース スナップショットを作成します。 スナップショット名 `AdventureWorks_dbss_1800` と、そのスパース ファイルの名前 `AdventureWorks_data_1800.ss` は、作成時間が午後 6 時 (1,800 時間) であることを示しています。  
+ この例では、 `AdventureWorks` データベースのデータベース スナップショットを作成します。 スナップショット名 `AdventureWorks_dbss_1800`と、そのスパース ファイルの名前 `AdventureWorks_data_1800.ss`は、作成時間が午後 6 時 (1,800 時間) であることを示しています。  
   
 ```  
 CREATE DATABASE AdventureWorks_dbss1800 ON  
@@ -141,7 +145,7 @@ GO
 ```  
   
 ####  <a name="Creating_on_Sales"></a> B. Sales データベースのスナップショットを作成する  
- この例では、`sales_snapshot1200` データベースのデータベース スナップショット `Sales` を作成します。 このデータベースは [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md). の例「ファイル グループのあるデータベースを作成する」で作成したものです。  
+ この例では、 `sales_snapshot1200`データベースのデータベース スナップショット `Sales` を作成します。 このデータベースは [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md). の例「ファイル グループのあるデータベースを作成する」で作成したものです。  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  
@@ -171,8 +175,10 @@ GO
   
 -   [データベース スナップショットの削除 &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   
+
+

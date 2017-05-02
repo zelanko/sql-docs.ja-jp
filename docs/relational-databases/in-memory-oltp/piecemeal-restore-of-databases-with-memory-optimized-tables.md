@@ -1,23 +1,27 @@
 ---
 title: "メモリ最適化テーブルを持つデータベースの段階的な部分復元 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b540d4b491980a57ec88d7a7717821a4e38b76a9
+ms.lasthandoff: 04/11/2017
+
 ---
-# メモリ最適化テーブルを持つデータベースの段階的な部分復元
-  段階的な部分復元は、次に説明する 1 つの制限を除き、メモリ最適化テーブルを持つデータベースでサポートされています。 段階的なバックアップと部分復元の詳細については、「[RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)」および「 [段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)」を参照してください。  
+# <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>メモリ最適化テーブルを持つデータベースの段階的な部分復元
+  段階的な部分復元は、次に説明する 1 つの制限を除き、メモリ最適化テーブルを持つデータベースでサポートされています。 段階的なバックアップと部分復元の詳細については、「[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)」および「 [段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)」を参照してください。  
   
  メモリ最適化ファイル グループは、プライマリ ファイル グループと共にバックアップおよび復元する必要があります。  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 16
   
     -   ページ修復機能を使用して、特定のページを復元することにより、ページ破損を修正することもできます。 詳細については、「[ページ復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)」を参照してください。  
   
-## サンプル  
+## <a name="samples"></a>サンプル  
  次の例では、以下のスキーマを使用します。  
   
 ```  
@@ -61,7 +65,7 @@ ALTER DATABASE imoltp ADD FILE (name='imoltp_mod2', filename='c:\data\imoltp_mod
 GO  
 ```  
   
-### バックアップ  
+### <a name="backup"></a>バックアップ  
  このサンプルでは、プライマリ ファイル グループとメモリ最適化ファイル グループをバックアップする方法を示します。 プライマリ ファイル グループとメモリ最適化ファイル グループの両方を共に指定する必要があります。  
   
 ```  
@@ -74,7 +78,7 @@ backup database imoltp filegroup='primary', filegroup='imoltp_mod' to disk='c:\d
 backup database imoltp filegroup='imoltp_secondary' to disk='c:\data\imoltp_secondary.dmp' with init  
 ```  
   
-### 復元  
+### <a name="restore"></a>復元  
  次のサンプルでは、プライマリ ファイル グループとメモリ最適化ファイル グループを共に復元する方法を示します。  
   
 ```  
@@ -94,7 +98,7 @@ FROM  DISK = N'c:\data\imoltp_secondary.dmp' WITH  FILE = 1,  RECOVERY,  NOUNLOA
 GO  
 ```  
   
-## 参照  
- [メモリ最適化テーブルのバックアップ、復元、復旧](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+## <a name="see-also"></a>参照  
+ [メモリ最適化テーブルのバックアップ、復元、復旧](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

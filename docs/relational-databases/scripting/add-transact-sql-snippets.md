@@ -1,35 +1,39 @@
 ---
 title: "Transact-SQL スニペットの追加 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2498e15c9927adde026e426ead756be389ce08d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transact-SQL スニペットの追加
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、定義済みの Transact-SQL コード スニペット一式が同梱されていますが、それ以外にも、独自のスニペットを追加することができます。  
+# <a name="add-transact-sql-snippets"></a>Transact-SQL スニペットの追加
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、定義済みの Transact-SQL コード スニペット一式が同梱されていますが、それ以外にも、独自のスニペットを追加することができます。  
   
-## Transact-SQL スニペット ファイルの作成  
+## <a name="creating-a-transact-sql-snippet-file"></a>Transact-SQL スニペット ファイルの作成  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] コード スニペットを作成するには、まず、目的のコード スニペットのテキストを含んだ XML ファイルを作成します。 このファイルは、拡張子を .snippet とし、 [コード スニペット スキーマ](http://go.microsoft.com/fwlink/?LinkId=207504)の要件を満たしている必要があります。 スニペットの言語は SQL に設定します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に付属する定義済みのスニペットが参考になります。 定義済みのスニペットを探すには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開いて **[ツール]** メニューを選択し、**[コード スニペット マネージャー]** をクリックします。 **[言語]** ボックスの一覧の **[SQL]** をクリックすると、 [!INCLUDE[tsql](../../includes/tsql-md.md)] スニペットのパスが **[場所]** ボックスに表示されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に付属する定義済みのスニペットが参考になります。 定義済みのスニペットを探すには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を開いて **[ツール]** メニューを選択し、 **[コード スニペット マネージャー]**をクリックします。 **[言語]** ボックスの一覧の **[SQL]** をクリックすると、 [!INCLUDE[tsql](../../includes/tsql-md.md)] スニペットのパスが **[場所]** ボックスに表示されます。  
   
-## コード スニペットの登録  
+## <a name="registering-the-code-snippet"></a>コード スニペットの登録  
  スニペット ファイルを作成したら、コード スニペット マネージャーを使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]にスニペットを登録します。 複数のスニペットを含んだフォルダーを追加するか、個々のスニペットを **[マイ コード スニペット]** フォルダーにインポートすることができます。  
   
-## 手順  
+## <a name="procedures"></a>手順  
   
-#### スニペット フォルダーの追加  
+#### <a name="adding-a-snippet-folder"></a>スニペット フォルダーの追加  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を開きます。  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 9
   
 4.  コード スニペットがあるフォルダーに移動し、 **[フォルダーの選択]** をクリックします。  
   
-#### スニペットのインポート  
+#### <a name="importing-a-snippet"></a>スニペットのインポート  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を開きます。  
   
@@ -49,8 +53,8 @@ caps.handback.revision: 9
   
 4.  スニペットがあるフォルダーに移動し、.snippet ファイルをクリックして、 **[開く]** をクリックします。  
   
-## 使用例  
- 次の例では、**TRY-CATCH** ブロックの挿入スニペットを作成し、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] にインポートします。  
+## <a name="examples"></a>使用例  
+ 次の例では、 **TRY-CATCH** ブロックの挿入スニペットを作成し、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]にインポートします。  
   
 1.  次のコードをメモ帳に貼り付け、TryCatch.snippet というファイル名で保存します。  
   
@@ -109,7 +113,7 @@ caps.handback.revision: 9
   
 5.  TryCatch.snippet があるフォルダーに移動し、TryCatch.snippet ファイルをクリックして、 **[開く]** をクリックします。 **[マイ コード スニペット]** フォルダーに既存の TryCatch スニペットがないことが前提になります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ブロックの挿入 Transact-SQL スニペットの挿入](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
   
   

@@ -1,30 +1,34 @@
 ---
 title: "クエリ ストアがデータを収集するしくみ | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/13/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "クエリ ストア, データ コレクション"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 09/13/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, data collection
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58db786512aa1ed167df55831c6a7cc3c53224bd
+ms.lasthandoff: 04/11/2017
+
 ---
-# クエリ ストアがデータを収集するしくみ
+# <a name="how-query-store-collects-data"></a>クエリ ストアがデータを収集するしくみ
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   クエリ ストアは継続的に **フライト データ レコーダー** の役割を果たし、クエリおよびプランに関連するコンパイルおよびランタイムの情報を収集します。 クエリ関連のデータは内部テーブルに保存され、一連のビューでユーザーに表示されます。  
   
-## ビュー  
+## <a name="views"></a>ビュー  
  次の図は、クエリ ストアのビューとその論理関係を示しています。コンパイル時間の情報は青のエンティティで表しています。  
   
  ![query-store-process-1views](../../relational-databases/performance/media/query-store-process-1views.png "query-store-process-1views")  
@@ -37,12 +41,12 @@ caps.handback.revision: 10
 |**sys.query_context_settings**|クエリが実行される設定に影響するプランの一意の組み合わせを表示します。 `context_settings_id` はクエリ キーの一部であるため、設定に影響する異なるプランで実行された同じクエリ テキストが、クエリ ストアでは個別のクエリ エントリを生成します。|  
 |**sys.query_store_query**|クエリ ストアで個別に追跡され、強制されるクエリ エントリです。 1 つのクエリ テキストが異なるコンテキスト設定で実行される場合、または異なる [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュール (ストアド プロシージャ、トリガーなど) の外側と内側で実行される場合は、複数のクエリ エントリが生成される場合があります。|  
 |**sys.query_store_plan**|コンパイル時間の統計を含むクエリの見積もりプランを表示します。 保存されたプランは `SET SHOWPLAN_XML ON`で得られるものと同じです。|  
-|**sys.query_store_runtime_stats_interval**|クエリ ストアは、自動的に生成される時間枠 (間隔) ごとに時間を分割し、すべての実行済みプランにその間隔で集計された統計を格納します。 間隔のサイズは、([!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の) 構成オプションの統計収集間隔、または [ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) を使用する `INTERVAL_LENGTH_MINUTES` によって制御されます。|  
+|**sys.query_store_runtime_stats_interval**|クエリ ストアは、自動的に生成される時間枠 (間隔) ごとに時間を分割し、すべての実行済みプランにその間隔で集計された統計を格納します。 間隔のサイズは、([!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の) 構成オプションの統計収集間隔、または [ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) を使用する `INTERVAL_LENGTH_MINUTES` によって制御されます。|  
 |**sys.query_store_runtime_stats**|実行済みプランで集計されたランタイム統計です。 キャプチャされたすべてのメトリックが平均、最小、最大、標準偏差の 4 つの統計関数の形式で表されます。|  
   
  クエリ ストアのビューの詳細は、「 **クエリのストアを使用した、パフォーマンスの監視** 」の「 [関連するビュー、関数、プロシージャ](https://msdn.microsoft.com/library/dn817826.aspx)」のセクションを参照してください。  
   
-## クエリ処理  
+## <a name="query-processing"></a>クエリ処理  
  クエリ ストアは次の重要な点についてクエリ処理のパイプラインと対話します。  
   
 1.  クエリを初めてコンパイルすると、クエリ テキストと初期プランがクエリ ストアに送信されます。  
@@ -57,7 +61,7 @@ caps.handback.revision: 10
   
  ![query-store-process-2processor](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor")  
   
- I/O のオーバーヘッドを最小限に抑えるため、新しいデータはメモリ内にキャプチャされます。 書き込み操作はキューに登録され、その後、ディスクにフラッシュされます。 クエリとプランの情報 (下図のプラン ストア) は最小の待機時間でフラッシュされます。 `SET QUERY_STORE` ステートメントの `DATA_FLUSH_INTERVAL_SECONDS` オプションで定義された一定期間、ランタイム統計 (Runtime Stats) がメモリに保存されます。 [SSMS Query Store (SSMS クエリ ストア)] ダイアログ ボックスで [**データのフラッシュ間隔 (分)**] を入力できます。これは秒に変換されます。  
+ I/O のオーバーヘッドを最小限に抑えるため、新しいデータはメモリ内にキャプチャされます。 書き込み操作はキューに登録され、その後、ディスクにフラッシュされます。 クエリとプランの情報 (下図のプラン ストア) は最小の待機時間でフラッシュされます。 `DATA_FLUSH_INTERVAL_SECONDS` ステートメントの `SET QUERY_STORE` オプションで定義された一定期間、ランタイム統計 (Runtime Stats) がメモリに保存されます。 [SSMS Query Store (SSMS クエリ ストア)] ダイアログ ボックスで [ **データのフラッシュ間隔 (分)**] を入力できます。これは秒に変換されます。  
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   
@@ -68,9 +72,10 @@ caps.handback.revision: 10
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
   
-## 参照  
- [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+## <a name="see-also"></a>参照  
+ [関連するビュー、関数、プロシージャ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [クエリ ストアのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
+

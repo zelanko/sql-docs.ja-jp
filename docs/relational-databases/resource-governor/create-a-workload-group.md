@@ -1,32 +1,36 @@
 ---
 title: "ワークロード グループの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "リソース ガバナー, ワークロード グループの作成"
-  - "ワークロード グループ [SQL Server], 作成"
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, workload group create
+- workload groups [SQL Server], create
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 510473a5e51a911d4a642dcc78bc3a3408f65b87
+ms.lasthandoff: 04/11/2017
+
 ---
-# ワークロード グループの作成
+# <a name="create-a-workload-group"></a>ワークロード グループの作成
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ワークロード グループを作成するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。  
   
--   **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)、 [権限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **ワークロード グループの作成に使用するもの:** [SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
+-   **To create a workload group, using:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 15
   
  インデックス作成では、パフォーマンスを向上させるため、最初に許可されたメモリ量を超えるメモリ ワークスペースの使用が許可されます。 この特別な処理はリソース ガバナーでサポートされていますが、最初のメモリ許可も追加のメモリ許可も、ワークロード グループ設定およびリソース プール設定によって制限されます。  
   
-###  <a name="Permissions"></a> アクセス許可  
+###  <a name="Permissions"></a> 権限  
  ワークロード グループを作成するには、CONTROL SERVER 権限が必要です。  
   
 ##  <a name="CreRPProp"></a> SQL Server Management Studio を使用してワークロード グループを作成する  
@@ -45,7 +49,7 @@ caps.handback.revision: 15
   
 1.  オブジェクト エクスプローラーで、変更するワークロード グループを含むリソース プールまで **[管理]** ノードを再帰的に展開します。  
   
-2.  **[ワークロード グループ]** フォルダーを右クリックし、**[新しいワークロード グループ]** をクリックします。  
+2.  **[ワークロード グループ]** フォルダーを右クリックし、 **[新しいワークロード グループ]**をクリックします。  
   
 3.  **[リソース プール]** グリッドに、ワークロード グループを追加するリソース プールが強調表示されていることを確認します。  
   
@@ -64,8 +68,8 @@ caps.handback.revision: 15
   
 2.  ALTER RESOURCE GOVERNOR RECONFIGURE ステートメントを実行します。  
   
-### 例 (Transact-SQL)  
- 次の例では、`groupAdhoc` という名前のリソース プール内に `poolAdhoc` という名前のワークロード グループを作成します。  
+### <a name="example-transact-sql"></a>例 (Transact-SQL)  
+ 次の例では、 `groupAdhoc` という名前のリソース プール内に `poolAdhoc`という名前のワークロード グループを作成します。  
   
 ```  
 CREATE WORKLOAD GROUP groupAdhoc  
@@ -75,8 +79,8 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 参照  
- [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="see-also"></a>参照  
+ [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
  [リソース ガバナーの有効化](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [リソース プールの作成](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [ワークロード グループの設定の変更](../../relational-databases/resource-governor/change-workload-group-settings.md)   
@@ -86,3 +90,4 @@ GO
  [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)  
   
   
+

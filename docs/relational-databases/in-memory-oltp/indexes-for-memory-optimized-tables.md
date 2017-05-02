@@ -1,25 +1,29 @@
 ---
 title: "メモリ最適化テーブルのインデックス | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- MSDN content
+- MSDN - SQL DB
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.service: sql-database
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f55708bc9eaf8e94cf33ead19cf62cbc319e8e63
+ms.lasthandoff: 04/11/2017
+
 ---
-# メモリ最適化テーブルのインデックス
+# <a name="indexes-for-memory-optimized-tables"></a>メモリ最適化テーブルのインデックス
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   
@@ -30,13 +34,13 @@ caps.handback.revision: 14
 - 各種のメモリ最適化インデックスが最適な状況について説明します。  
   
   
-*ハッシュ* インデックスについては、[密接に関連する記事](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) で詳細を説明します。  
+*ハッシュ* インデックスについては、 [密接に関連する記事](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)で詳細を説明します。  
   
   
-*列ストア* インデックスについては、[別の記事](Columnstore%20Indexes%20Guide.xml) で説明します。  
+*列ストア* インデックスについては、 [別の記事](~/relational-databases/indexes/columnstore-indexes-overview.md)で説明します。  
   
   
-## A. メモリ最適化インデックスの構文  
+## <a name="a-syntax-for-memory-optimized-indexes"></a>A. メモリ最適化インデックスの構文  
   
 メモリ最適化テーブルの各 CREATE TABLE ステートメントには、インデックスを宣言する 1 つから 8 つの句を含める必要があります。 インデックスは、次のいずれかにする必要があります。  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 14
   
   
   
-### A.1 構文のコード例  
+### <a name="a1-code-sample-for-syntax"></a>A.1 構文のコード例  
   
 ここには、メモリ最適化テーブルのさまざまなインデックスを作成する構文を示す Transact-SQL コード ブロックが含まれています。 コードは、次の操作を示しています。  
   
@@ -118,7 +122,7 @@ caps.handback.revision: 14
   
   
   
-## B. メモリ最適化インデックスの性質  
+## <a name="b-nature-of-memory-optimized-indexes"></a>B. メモリ最適化インデックスの性質  
   
 メモリ最適化テーブルでは、すべてのインデックスもメモリ最適化されます。 メモリ最適化インデックスのインデックスと、ディスク ベース テーブルの従来のインデックスとはさまざまな点で違いがあります。  
   
@@ -139,13 +143,13 @@ SQL UPDATE ステートメントでメモリ最適化テーブルのデータが
   
 - それらはページ内で断片化の従来の種類を計上しないため、fillfactor を持ちません。  
   
-## C. 重複するインデックス キー値
+## <a name="c-duplicate-index-key-values"></a>C. 重複するインデックス キー値
 
 重複するインデックス キーの値は、メモリ最適化テーブルに対する操作のパフォーマンスに影響します。 重複するチェーンはほとんどのインデックス操作についてスキャンされる必要があるため、多数の重複 (たとえば、100+) はインデックスを維持するジョブを非効率にします。 メモリ最適化テーブルでの INSERT、UPDATE、および DELETE の操作において影響が見られます。 この問題は、ハッシュ インデックスの場合、より顕著になります。これは、ハッシュ インデックスの操作あたりのコスト削減と、ハッシュ競合チェーンを持つ大規模な重複チェーンの干渉の両方に起因します。 インデックス内の重複を減らすために、非クラスター化インデックスを使用し、重複の数を減らすために (たとえば、主キーから) インデックス キーの末尾に列を追加します。
 
 例として、主キーが CustomerId に、インデックスが CustomerCategoryID 列に設定された Customers テーブルを考えます。 通常は特定のカテゴリに顧客の多くが含まれるため、CustomerCategoryID のインデックスに含まれる特定のキーに対して多くの値が重複すると考えられます。 こうしたシナリオでは、(CustomerCategoryID, CustomerId) で非クラスター化インデックスを使用することをお勧めします。 このインデックスを使用して、CustomerCategoryID を含む述語を使用したクエリを実行できます。また重複がないため、インデックスのメンテナンスでムダが生じることはありません。
 
-次のクエリでは、[WideWorldImporters](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx) サンプル データベースの `Sales.Customers` テーブルに含まれる `CustomerCategoryID` 上のインデックスについて、インデックス キー値の平均重複数がわかります。
+次のクエリでは、 `CustomerCategoryID` WideWorldImporters `Sales.Customers`サンプル データベースの [テーブルに含まれる](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)上のインデックスについて、インデックス キー値の平均重複数がわかります。
 
 ```Transact-SQL
     SELECT AVG(row_count) FROM
@@ -154,9 +158,9 @@ SQL UPDATE ステートメントでメモリ最適化テーブルのデータが
         GROUP BY CustomerCategoryID) a
 ```
 
-ご使用のテーブルとインデックスについてインデックス キーの平均重複数を調べるには、`Sales.Customers` をテーブル名、`CustomerCategoryID` をインデックス キー列のリストで置き換えてください。
+ご使用のテーブルとインデックスについてインデックス キーの平均重複数を調べるには、 `Sales.Customers` をテーブル名、 `CustomerCategoryID` をインデックス キー列のリストで置き換えてください。
 
-## D. 各種のインデックスを使用する状況の比較  
+## <a name="d-comparing-when-to-use-each-index-type"></a>D. 各種のインデックスを使用する状況の比較  
   
   
 どの種類のインデックスが最善の選択であるかは、特定のクエリの性質によって決まります。  
@@ -164,7 +168,7 @@ SQL UPDATE ステートメントでメモリ最適化テーブルのデータが
 既存のアプリケーションでメモリ最適化テーブルを実装するときは、非クラスター化インデックスから開始することが一般的に推奨されます。その機能が、ディスクベースのテーブルにおける、従来のクラスター化インデックスおよび非クラスター化インデックスの機能により近くなるためです。 
   
   
-### D.1 非クラスター化インデックスの強み  
+### <a name="d1-strengths-of-nonclustered-indexes"></a>D.1 非クラスター化インデックスの強み  
   
   
 非クラスター化インデックスは、次に該当する場合にハッシュ インデックスよりも適しています。  
@@ -196,7 +200,7 @@ SQL UPDATE ステートメントでメモリ最適化テーブルのデータが
   
   
   
-### D.2 ハッシュ インデックスの強み  
+### <a name="d2-strengths-of-hash-indexes"></a>D.2 ハッシュ インデックスの強み  
   
   
 [ハッシュ インデックス](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) は、次に該当する場合に非クラスター化インデックスよりも適しています。  
@@ -210,7 +214,7 @@ SQL UPDATE ステートメントでメモリ最適化テーブルのデータが
   
   
   
-### D.3 インデックスの強みを比較する概要表  
+### <a name="d3-summary-table-to-compare-index-strengths"></a>D.3 インデックスの強みを比較する概要表  
   
   
 次の表は、異なるインデックスの種類でサポートされるすべての操作を示しています。  
@@ -218,11 +222,11 @@ SQL UPDATE ステートメントでメモリ最適化テーブルのデータが
   
 | 操作 | メモリ最適化、 <br/> ハッシュ | メモリ最適化、 <br/> 非クラスター化 | ディスク ベース、 <br/> (非) クラスター化 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
-| インデックス スキャン、すべてのテーブルの行を取得する。 | はい | [ユーザー アカウント制御] | 可 |  
-| 等値述語 (=) でのインデックス シーク。 | はい <br/> (フル キーが必要です。) | 可  | 可 |  
-| 非等値述語と範囲述語でのインデックス シーク  <br/> (>, <, \<=, >=, BETWEEN)。 | いいえ <br/> (インデックス スキャンが実行される) | 可 | 可 |  
-| インデックス定義と一致する行を並べ替え順序で取得する。 | いいえ | [ユーザー アカウント制御] | はい |  
-| インデックス定義の反対と一致する行を並べ替え順序で取得する。 | いいえ | いいえ | 可 |  
+| インデックス スキャン、すべてのテーブルの行を取得する。 | はい | はい | はい |  
+| 等値述語 (=) でのインデックス シーク。 | はい <br/> (フル キーが必要です。) | はい  | はい |  
+| 非等値述語と範囲述語でのインデックス シーク <br/> (>, <, \<=, >=, BETWEEN)。 | 不可 <br/> (インデックス スキャンが実行される) | はい | はい |  
+| インデックス定義と一致する行を並べ替え順序で取得する。 | いいえ | はい | はい |  
+| インデックス定義の反対と一致する行を並べ替え順序で取得する。 | いいえ | いいえ | はい |  
   
   
 この表では、可はインデックスが要求に十分に対応できることを意味し、不可はインデックスが要求に十分に対応できないことを意味します。  
@@ -248,3 +252,6 @@ GeneMi  ,  2016-05-05  Thursday  17:25pm  (Hash content moved to new child artic
   
   
   
+
+
+

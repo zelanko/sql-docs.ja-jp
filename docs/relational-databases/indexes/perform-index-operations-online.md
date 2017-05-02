@@ -1,32 +1,36 @@
 ---
 title: "オンラインでのインデックス操作の実行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "インデックスのオンライン操作 [SQL Server]"
-  - "オンラインのインデックス操作"
-  - "ONLINE オプション"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index online operations [SQL Server]
+- online index operations
+- ONLINE option
 ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7be8dd139a8c377d67259df538b097f1337821ca
+ms.lasthandoff: 04/11/2017
+
 ---
-# オンラインでのインデックス操作の実行
+# <a name="perform-index-operations-online"></a>オンラインでのインデックス操作の実行
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、インデックスをオンラインで作成、再構築、または削除する方法について説明します。 ONLINE オプションにより、このようなインデックス操作中に、基になるテーブルやクラスター化インデックス データ、および関連付けられた任意の非クラスター化インデックスへの同時ユーザー アクセスが可能になります。 たとえば、あるユーザーがクラスター化インデックスを再構築している最中に、そのユーザーと他のユーザーが基になるデータの更新やクエリを続行できます。 クラスター化インデックスの構築や再構築などのデータ定義言語 (DDL) 操作をオフラインで実行するときは、これらの操作により、基になるデータや関連付けられたインデックスに排他ロックがかけられます。 このため、インデックス操作が完了するまで、基になるデータの変更やクエリを実行できません。  
   
 > [!NOTE]  
->  オンラインでのインデックス操作は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 詳細については、「[SQL Server 2016 の各エディションがサポートする機能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)」を参照してください。  
+>  オンラインでのインデックス操作は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 詳細については、「SQL Server 2016 の各エディションがサポートする機能」を参照してください。  
   
  **このトピックの内容**  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 31
   
     -   [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) (CLUSTERED インデックス オプションが指定されている UNIQUE 制約または PRIMARY KEY 制約を追加または削除するため)  
   
--   オンラインでのインデックスの作成、再構築、または削除に関する制限と制約については、「[オンライン インデックス操作のガイドライン](../../relational-databases/indexes/guidelines-for-online-index-operations.md)」を参照してください。  
+-   オンラインでのインデックスの作成、再構築、または削除に関する制限と制約については、「 [オンライン インデックス操作のガイドライン](../../relational-databases/indexes/guidelines-for-online-index-operations.md)」を参照してください。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 31
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### インデックスをオンラインで再構築するには  
+#### <a name="to-rebuild-an-index-online"></a>インデックスをオンラインで再構築するには  
   
 1.  オブジェクト エクスプローラーで、インデックスをオンラインで再構築するテーブルが格納されているデータベースをプラス記号をクリックして展開します。  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 31
   
 4.  **[インデックス]** フォルダーを展開します。  
   
-5.  オンラインで再構築するインデックスを右クリックし、**[プロパティ]** を選択します。  
+5.  オンラインで再構築するインデックスを右クリックし、 **[プロパティ]**を選択します。  
   
 6.  **[ページの選択]**の **[オプション]**を選択します。  
   
@@ -85,13 +89,13 @@ caps.handback.revision: 31
   
 8.  クリックして **OK**です。  
   
-9. オンラインで再構築するインデックスを右クリックし、**[再構築]** を選択します。  
+9. オンラインで再構築するインデックスを右クリックし、 **[再構築]**を選択します。  
   
 10. **[インデックスの再構築]** ダイアログ ボックスで、 **[再構築するインデックス]** グリッドに目的のインデックスが表示されていることを確認し、 **[OK]**をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### インデックスをオンラインで作成、再構築、または削除するには  
+#### <a name="to-create-rebuild-or-drop-an-index-online"></a>インデックスをオンラインで作成、再構築、または削除するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -107,10 +111,11 @@ caps.handback.revision: 31
     GO  
     ```  
   
-     次の例では、クラスター化インデックスをオンラインで削除し、`NewGroup` 句を使用することで、結果のテーブル (ヒープ) をファイル グループ `MOVE TO` に移動します。 移動の前後で `sys.indexes`、 `sys.tables`、および `sys.filegroups` カタログ ビューを参照し、ファイル グループ内のインデックスとテーブルの配置を確認します。  
+     次の例では、クラスター化インデックスをオンラインで削除し、 `NewGroup` 句を使用することで、結果のテーブル (ヒープ) をファイル グループ `MOVE TO` に移動します。 移動の前後で `sys.indexes`、 `sys.tables`、および `sys.filegroups` カタログ ビューを参照し、ファイル グループ内のインデックスとテーブルの配置を確認します。  
   
      [!code-sql[IndexDDL#DropIndex4](../../relational-databases/indexes/codesnippet/tsql/perform-index-operations_1.sql)]  
   
  詳細については、「[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。  
   
   
+

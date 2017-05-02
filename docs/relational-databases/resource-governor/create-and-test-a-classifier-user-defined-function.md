@@ -1,28 +1,32 @@
 ---
 title: "ユーザー定義の分類子関数の作成とテスト | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "リソース ガバナー, 分類子関数の作成"
-  - "分類子関数 [SQL Server], テスト"
-  - "分類子関数 [SQL Server], 作成"
-  - "リソース ガバナー, 分類子関数のテスト"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, classifier function create
+- classifier function [SQL Server], test
+- classifier function [SQL Server], create
+- Resource Governor, classifier function test
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 097b7e93a82b8f1cc20767c57788eebe8162729a
+ms.lasthandoff: 04/11/2017
+
 ---
-# ユーザー定義の分類子関数の作成とテスト
-  このトピックでは、ユーザー定義 (UDF) の分類子関数を作成してテストする方法について説明します。 この手順では、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ エディターで [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。  
+# <a name="create-and-test-a-classifier-user-defined-function"></a>ユーザー定義の分類子関数の作成とテスト
+  このトピックでは、ユーザー定義 (UDF) の分類子関数を作成してテストする方法について説明します。 この手順では、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディターで [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ステートメントを実行します。  
   
  次の手順で紹介する例のように、ユーザー定義の分類子関数の作成はかなり複雑になる場合があります。  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 25
   
  分類子関数を使用するとログイン時間が長くなります。 関数が複雑すぎると、ログインがタイムアウトになったり、接続速度が低下したりすることがあります。  
   
-### ユーザー定義の分類子関数を作成するには  
+### <a name="to-create-the-classifier-user-defined-function"></a>ユーザー定義の分類子関数を作成するには  
   
 1.  新しいリソース プールとワークロード グループを作成して構成します。 各ワークロード グループを適切なリソース プールに割り当てます。  
   
@@ -150,7 +154,7 @@ caps.handback.revision: 25
     GO  
     ```  
   
-### リソース プール、ワークロード グループ、およびユーザー定義の分類子関数を確認するには  
+### <a name="to-verify-the-resource-pools-workload-groups-and-the-classifier-user-defined-function"></a>リソース プール、ワークロード グループ、およびユーザー定義の分類子関数を確認するには  
   
 1.  次のクエリを使用して、リソース プールとワークロード グループの構成を取得します。  
   
@@ -228,7 +232,7 @@ caps.handback.revision: 25
     GO  
     ```  
   
-### 分類子関数に参照テーブルを使用する際のベスト プラクティス  
+### <a name="best-practices-for-using-lookup-tables-in-a-classifier-function"></a>分類子関数に参照テーブルを使用する際のベスト プラクティス  
   
 1.  どうしても必要である場合を除き、参照テーブルは使用しないでください。 使用する必要がある場合は、関数そのものに参照テーブルをハードコーディングすることができます。ただし、そのためには、分類子関数に伴う複雑さや動的な変化とのバランスを考慮する必要があります。  
   
@@ -246,9 +250,9 @@ caps.handback.revision: 25
   
 3.  参照テーブルでのブロックを回避します。  
   
-    1.  `NOLOCK` ヒントを使用してブロックを回避するか、`SET LOCK_TIMEOUT` (最大値は 1000 ミリ秒) を関数に使用します。  
+    1.  `NOLOCK` ヒントを使用してブロックを回避するか、 `SET LOCK_TIMEOUT` (最大値は 1000 ミリ秒) を関数に使用します。  
   
-    2.  テーブルは、master データベース内に存在している必要があります  (クライアント コンピューターの接続試行時に復旧が保証されるデータベースは、master データベースだけです)。  
+    2.  テーブルは、master データベース内に存在している必要があります (クライアント コンピューターの接続試行時に復旧が保証されるデータベースは、master データベースだけです)。  
   
     3.  テーブル名は必ずスキーマ付きで完全修飾します。 master データベースであることがわかっているため、データベース名は不要です。  
   
@@ -261,8 +265,8 @@ caps.handback.revision: 25
         > [!WARNING]  
         >  以上のベスト プラクティスに従うことを強くお勧めします。 ベスト プラクティスに従うことのできない事情がある場合は、問題の発生を事前に防ぐためにも、Microsoft サポートにお問い合わせいただくことをお勧めします。  
   
-## 参照  
- [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="see-also"></a>参照  
+ [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
  [リソース ガバナーの有効化](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [リソース ガバナー ワークロード グループ](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

@@ -1,32 +1,36 @@
 ---
 title: "レプリケーション エージェントの監視 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "パフォーマンスの監視 [SQL Server レプリケーション], エージェント"
-  - "ログ リーダー エージェント, 監視"
-  - "レプリケーション モニター, エージェント"
-  - "マージ エージェント, 監視"
-  - "キュー リーダー エージェント、監視"
-  - "スナップショット エージェント, 監視"
-  - "エージェント [SQL Server レプリケーション], 監視"
-  - "ディストリビューション エージェント, 監視"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring performance [SQL Server replication], agents
+- Log Reader Agent, monitoring
+- Replication Monitor, agents
+- Merge Agent, monitoring
+- Queue Reader Agent, monitoring
+- Snapshot Agent, monitoring
+- agents [SQL Server replication], monitoring
+- Distribution Agent, monitoring
 ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 90cb8e5af3fa8e3e86639e7cffa3f9fb97368c45
+ms.lasthandoff: 04/11/2017
+
 ---
-# レプリケーション エージェントの監視
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターはレプリケーションの利用状況の体系的なビューを提供しますも容易に特定のエージェントの情報を検索します。 次の一覧に、各エージェント、各エージェントを利用できるレプリケーション モニターのタブ、およびそれらのタブへのアクセス方法について説明しているトピックへのリンクを示します。  
+# <a name="monitor-replication-agents"></a>レプリケーション エージェントの監視
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor provides a systemic view of replication activity, but also makes it straightforward to find information on a specific agent. 次の一覧に、各エージェント、各エージェントを利用できるレプリケーション モニターのタブ、およびそれらのタブへのアクセス方法について説明しているトピックへのリンクを示します。  
   
 -   以下のエージェントは、レプリケーション モニターでパブリケーションと関連付けられています。  
   
@@ -36,46 +40,46 @@ caps.handback.revision: 17
   
     -   キュー リーダー エージェント (Queue Reader Agent)  
   
-     情報と、次のタブを通じてこれらのエージェントに関連付けられているタスクへのアクセス: **エージェント** (各パブリッシャーおよびパブリケーションで使用可能) と **警告** (パブリケーションごとに使用できます)。 詳細については、次を参照してください。 [情報を表示したりタスクを実行するエージェント関連付けられていると、パブリケーションと #40 です。レプリケーション モニターと #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)します。  
+     これらのエージェントに関連付けられている情報およびタスクにアクセスするには、 **[エージェント]** タブ (各パブリッシャーおよびパブリケーションで利用可能) または **[警告]** タブ (各パブリケーションで利用可能) を使用します。 詳細については、「[パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &amp;#40;レプリケーション モニター&amp;#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)」を参照してください。  
   
 -   以下のエージェントは、レプリケーション モニターでサブスクリプションと関連付けられています。  
   
     -   ディストリビューション エージェント  
   
-    -   [マージ エージェント]  
+    -   マージ エージェント  
   
-     情報と、次のタブを通じてこれらのエージェントに関連付けられているタスクへのアクセス: **サブスクリプション ウォッチ リスト** (出版社ごとの使用可能)、または **すべてのサブスクリプション** ] タブ (パブリケーションごとに利用できます)。 詳細については、次を参照してください。 [情報を表示したりタスクを実行する、エージェント関連付けられているサブスクリプションに関連付け & #40 です。レプリケーション モニターと #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)します。  
+     これらのエージェントに関連付けられている情報およびタスクにアクセスするには、 **[サブスクリプション ウォッチ リスト]** タブ (各パブリッシャーで利用可能) または **[すべてのサブスクリプション]** タブ (各パブリケーションで利用可能) を使用します。 詳細については、「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
   
-## SQL Server Management Studio を使用してレプリケーション エージェントを監視する  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] レプリケーション エージェントを監視するには、次のダイアログ ボックスを提供します。  
+## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>SQL Server Management Studio を使用してレプリケーション エージェントを監視する  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] provides the following dialog boxes for monitoring replication agents:  
   
--   **スナップショット エージェントの状態を表示** (すべてのパブリケーション用)  
+-   **[スナップショット エージェントの状態の表示]** ダイアログ ボックス (すべてのパブリケーション用)  
   
--   **ログ リーダー エージェントの状態を表示** (すべてのトランザクション パブリケーション)  
+-   **[ログ リーダー エージェントの状態の表示]** ダイアログ ボックス (すべてのトランザクション パブリケーション用)  
   
--   **同期の状態を表示** (すべてのサブスクリプションのこのダイアログ ボックスで、ディストリビューション エージェントおよびマージ エージェントへのアクセス)  
+-   **[同期の状態の表示]** ダイアログ ボックス (すべてのサブスクリプション用。このダイアログ ボックスからディストリビューション エージェントおよびマージ エージェントにアクセスできます)  
   
- レプリケーション モニターでは、各エージェントに関する追加情報が表示され、キュー リーダー エージェントが使用されている場合はその監視機能も提供されます。 詳細については、次を参照してください。 [情報を表示したりタスクを実行するエージェント関連付けられていると、パブリケーションと #40 です。レプリケーション モニターと #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md), 、[情報を表示し、パブリケーションと #40; に関連付けられているエージェントのタスクを実行レプリケーション モニターと #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md), 、および [情報を表示し、サブスクリプションと #40; に関連付けられているエージェントのタスクを実行レプリケーション モニターと #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)します。  
+ レプリケーション モニターでは、各エージェントに関する追加情報が表示され、キュー リーダー エージェントが使用されている場合はその監視機能も提供されます。 詳細については、「[パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)」、「[パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)」および「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
   
-#### スナップショット エージェントおよびログ リーダー エージェントを監視するには  
+#### <a name="to-monitor-the-snapshot-agent-and-log-reader-agent"></a>スナップショット エージェントおよびログ リーダー エージェントを監視するには  
   
 1.  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]でパブリッシャーに接続し、サーバー ノードを展開します。  
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
   
-3.  パブリケーションを右クリックし、をクリックして **[ログ リーダー エージェントの状態** または **[スナップショット エージェントの状態**します。  
+3.  パブリケーションを右クリックし、 **[ログ リーダー エージェントの状態の表示]** または **[スナップショット エージェントの状態の表示]**をクリックします。  
   
-4.   **[ログ リーダー エージェントの状態** または **[スナップショット エージェントの状態** ] ダイアログ ボックス。  
+4.  **[ログ リーダー エージェントの状態の表示]** または **[スナップショット エージェントの状態の表示]** ダイアログ ボックスで、以下の操作を行います。  
   
     -   エージェントの状態を表示します。  
   
     -   必要に応じてエージェントを開始または停止します。  
   
-    -   クリックして **モニター** を起動する **レプリケーション モニター**します。  
+    -   **[監視]** をクリックして **レプリケーション モニター**を起動します。  
   
 5.  **[閉じる]**をクリックします。  
   
-#### ディストリビューション エージェントおよびマージ エージェントを監視するには (パブリッシャー側から)  
+#### <a name="to-monitor-the-distribution-agent-and-merge-agent-from-the-publisher"></a>ディストリビューション エージェントおよびマージ エージェントを監視するには (パブリッシャー側から)  
   
 1.  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]でパブリッシャーに接続し、サーバー ノードを展開します。  
   
@@ -83,40 +87,40 @@ caps.handback.revision: 17
   
 3.  監視するサブスクリプションのパブリケーションを展開します。  
   
-4.  サブスクリプションの場合を右クリックし、をクリックし、 **[同期の状態**します。  
+4.  サブスクリプションを右クリックし、 **[同期の状態の表示]**をクリックします。  
   
-5.   **[同期の状態** ] ダイアログ ボックス。  
+5.  **[同期の状態の表示]** ダイアログ ボックスで、以下の操作を行います。  
   
     -   エージェントの状態を表示します。  
   
     -   必要に応じてエージェントを開始または停止します。  
   
-    -   プッシュ サブスクリプションをクリックして **モニター** を起動する **レプリケーション モニター**します。  
+    -   プッシュ サブスクリプションの場合、 **[監視]** をクリックして **レプリケーション モニター**を起動します。  
   
-    -   プル サブスクリプションをクリックして **ジョブ履歴の表示** を起動する、 **ログ ファイル ビューアー**, 、エージェント ログからの出力が表示されます。  
+    -   プル サブスクリプションの場合、 **[ジョブ履歴の表示]** をクリックして **ログ ファイル ビューアー**を起動します。エージェント ログからの出力が表示されます。  
   
 6.  **[閉じる]**をクリックします。  
   
-#### ディストリビューション エージェントおよびマージ エージェントを監視するには (サブスクライバー側から)  
+#### <a name="to-monitor-the-distribution-agent-and-merge-agent-from-the-subscriber"></a>ディストリビューション エージェントおよびマージ エージェントを監視するには (サブスクライバー側から)  
   
 1.  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]でサブスクライバーに接続して、サーバー ノードを展開します。  
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル サブスクリプション]** フォルダーを展開します。  
   
-3.  クリックして、監視するサブスクリプションを右クリックして **[同期の状態**します。  
+3.  監視するサブスクリプションを右クリックして **[同期の状態の表示]**をクリックします。  
   
-4.   **[同期の状態** ] ダイアログ ボックス。  
+4.  **[同期の状態の表示]** ダイアログ ボックスで、以下の操作を行います。  
   
     -   エージェントの状態を表示します。  
   
     -   必要に応じてエージェントを開始または停止します。  
   
-    -   クリックして **ジョブ履歴の表示** を起動する、 **ログ ファイル ビューアー**, 、エージェント ログからの出力が表示されます。  
+    -   **[ジョブ履歴の表示]** をクリックして **ログ ファイル ビューアー**を起動します。エージェント ログからの出力が表示されます。  
   
 5.  **[閉じる]**をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レプリケーションの監視](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [レプリケーション エージェントの概要](../../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

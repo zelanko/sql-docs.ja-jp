@@ -1,22 +1,26 @@
 ---
-title: "データ ウェアハウスの列ストア インデックス | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "列ストア インデックス - データ ウェアハウス | Microsoft Docs"
+ms.custom: 
+ms.date: 01/27/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 caps.latest.revision: 15
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ba866cdea9d6158affc31e74572bb9610ab94489
+ms.lasthandoff: 04/11/2017
+
 ---
-# データ ウェアハウスの列ストア インデックス
+# <a name="columnstore-indexes---data-warehouse"></a>列ストア インデックス - データ ウェアハウス
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   列ストア インデックスは、パーティション分割と共に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ウェアハウスの構築に不可欠な機能です。  
@@ -45,7 +49,7 @@ caps.handback.revision: 14
 -   データベース互換性レベル 130 でのスナップショット分離  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>非クラスター化インデックスと列ストア インデックスを組み合わせてパフォーマンスを改善する  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、クラスター化列ストア インデックスに非クラスター化インデックスを定義できます。  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降では、クラスター化列ストア インデックスに非クラスター化インデックスを定義できます。  
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>例: 非クラスター化インデックスを使用してテーブルの検索効率を改善する  
  データ ウェアハウスでのテーブルの検索効率を改善するために、テーブルの検索でクエリが最高のパフォーマンスを発揮するように設計された非クラスター化インデックスを作成できます。 たとえば、一致する値を見つけるクエリや、値の小さな範囲を返すクエリは、列ストア インデックスではなく B ツリー インデックスに対して実行したほうが高いパフォーマンスを発揮します。 このようなクエリでは、列ストア インデックスを介したテーブル全体のスキャンは必要ありません。B ツリー インデックスを介したバイナリ検索を実行すると、よりすばやく正しい結果が返されます。  
@@ -137,11 +141,12 @@ END TRAN
  列ストア インデックスのクエリに対し、トランザクションの一貫性を保証するにはスナップショット分離 (SI) を使用し、ステートメント レベルの一貫性を保証するには Read Committed スナップショット分離 (RCSI) を使用します。 これにより、データ ライターをブロックすることなくクエリを実行できるようになります。 この非ブロッキング動作によって、複雑なトランザクションがデッドロックする可能性も大幅に減少します。 詳細については、MSDN の「 [SQL Server でのスナップショット分離](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) 」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [列ストア インデックス ガイド](../Topic/Columnstore%20Indexes%20Guide.md)   
- [列ストア インデックス データの読み込み](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [列ストア インデックスのバージョン管理機能の概要](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
+ 列ストア インデックス ガイド   
+ 列ストア インデックス データの読み込み   
+ 列ストア インデックスのバージョン管理機能の概要   
  [列ストア インデックスのクエリ パフォーマンス](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [列ストアを使用したリアルタイム運用分析の概要](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [列ストア インデックスの最適化](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

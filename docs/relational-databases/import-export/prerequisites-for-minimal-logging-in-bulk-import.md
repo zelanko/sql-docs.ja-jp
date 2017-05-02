@@ -1,29 +1,33 @@
 ---
 title: "一括インポートで最小ログ記録を行うための前提条件 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "最小ログ [SQL Server]"
-  - "ログの一括コピー [SQL Server]"
-  - "ログ [SQL Server], 最小ログ記録"
-  - "最小ログ記録操作 [SQL Server]"
-  - "一括インポート [SQL Server], 最小ログ記録"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- minimal logging [SQL Server]
+- logged bulk copy [SQL Server]
+- logs [SQL Server], minimal logging
+- minimally logged operations [SQL Server]
+- bulk importing [SQL Server], minimal logging
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 caps.latest.revision: 48
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1f64cc4fc8ab747d137777e7a14c17ac796eb9ee
+ms.lasthandoff: 04/11/2017
+
 ---
-# 一括インポートで最小ログ記録を行うための前提条件
+# <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>一括インポートで最小ログ記録を行うための前提条件
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   完全復旧モデルのデータベースの場合、一括インポート中に実行されるすべての行挿入操作が、トランザクション ログに完全に記録されます。 完全復旧モデルを使用する場合、大きなデータをインポートするとトランザクション ログがすぐにいっぱいになってしまいます。 これとは対照的に、単純復旧モデルまたは一括ログ復旧モデルでは、一括インポート操作の最小ログ記録を行うと、一括インポート操作によってログ領域がいっぱいになる可能性が少なくなります。 最小ログ記録は完全ログ記録よりも効率的です。  
@@ -31,7 +35,7 @@ caps.handback.revision: 47
 > [!NOTE]  
 >  一括ログ復旧モデルは、大量の一括操作中に完全復旧モデルの代わりとして一時的に使用するためのものです。  
   
-## 一括インポート操作の最小ログ記録のためのテーブルの要件  
+## <a name="table-requirements-for-minimally-logging-bulk-import-operations"></a>一括インポート操作の最小ログ記録のためのテーブルの要件  
  最小ログ記録を行うテーブルは、次の条件を満たしている必要があります。  
   
 -   テーブルがレプリケート中でないこと。  
@@ -39,7 +43,7 @@ caps.handback.revision: 47
 -   (TABLOCK を使用して) テーブル ロックが指定されていること。 クラスター化列ストア インデックスを持つテーブルでは、最小ログ記録に TABLOCK は不要です。  さらに、バッチ サイズが 102400 以上の圧縮された行グループに対するデータ ロードでのみ最小ログ記録が行われます。  
   
     > [!NOTE]  
-    >  最小限のログ記録しか行われない一括インポート操作では、データを挿入してもトランザクション ログに記録されませんが、新しいエクステントがテーブルに割り当てられるたびに、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によりエクステントの割り当てがログに記録されます。  
+    >  最小限のログ記録しか行われない一括インポート操作では、データを挿入してもトランザクション ログに記録されませんが、新しいエクステントがテーブルに割り当てられるたびに、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によりエクステントの割り当てがログに記録されます。  
   
 -   テーブルは、メモリ最適化テーブルではありません。  
   
@@ -68,16 +72,15 @@ caps.handback.revision: 47
   
 -   [データベースの復旧モデルの表示または変更 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [&#91;先頭に戻る&#93;](#Top)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [テーブル ヒント &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md)   
+ [テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)  
   
   

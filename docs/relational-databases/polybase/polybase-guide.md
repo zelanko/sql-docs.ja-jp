@@ -1,45 +1,49 @@
 ---
 title: "PolyBase ガイド | Microsoft Docs"
-ms.date: "12/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-f1_keywords: 
-  - "PolyBase"
-  - "PolyBase, guide"
-helpviewer_keywords: 
-  - "PolyBase"
-  - "PolyBase、概要"
-  - "Hadoop インポート ×"
-  - "Hadoop エクスポート"
-  - "Hadoop エクスポート、PolyBase 概要"
-  - "Hadoop インポート、PolyBase 概要"
+ms.date: 12/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-polybase
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+f1_keywords:
+- PolyBase
+- PolyBase, guide
+helpviewer_keywords:
+- PolyBase
+- PolyBase, overview
+- "Hadoop import ×"
+- Hadoop export
+- Hadoop export, PolyBase overview
+- Hadoop import, PolyBase overview
 ms.assetid: b42b7d48-328a-4046-abe9-f73fd83212dc
 caps.latest.revision: 26
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 627fdce2e1c294343680b119e9b0c36fc3d8665d
+ms.lasthandoff: 04/11/2017
+
 ---
-# PolyBase ガイド
+# <a name="polybase-guide"></a>PolyBase ガイド
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  PolyBase は、非リレーショナル データとリレーショナル データの両方にすべて SQL Server 内からアクセスし、それらを結合するためのテクノロジです。   Hadoop または Azure BLOB ストレージ内の外部データに対してクエリを実行できます。   クエリは Hadoop に計算をプッシュするように最適化されます。  
+  PolyBase は、非リレーショナル データとリレーショナル データの両方にすべて SQL Server 内からアクセスし、それらを結合するためのテクノロジです。  SQL Server 2016 では、Hadoop または Azure BLOB ストレージ内の外部データに対してクエリを実行できます。 クエリは Hadoop に計算をプッシュするように最適化されます。 Azure SQL データ ウェアハウスでは、Azure BLOB ストレージと Azure Data Lake Store からデータをインポートできます。
   
- Transact-SQL (T-SQL) ステートメントを使用するだけで、SQL Server 内のリレーショナル テーブルと Hadoop または Azure BLOB ストレージに格納された非リレーショナル データとの間でデータをインポートしたりエクスポートしたりできます。 T-SQL クエリ内から外部データを照会して、それをリレーショナル データと結合することもできます。  
+Transact-SQL (T-SQL) ステートメントを使用し、SQL Server 内のリレーショナル テーブルと Hadoop または Azure BLOB ストレージに格納されている非リレーショナル データとの間でデータをインポートしたり、エクスポートしたりできます。 T-SQL クエリ内から外部データを照会して、それをリレーショナル データと結合することもできます。  
   
- PolyBase を使用するには、「[PolyBase の概要](../../relational-databases/polybase/get-started-with-polybase.md)」を参照してください。  
+ PolyBase を使用するには、「 [PolyBase の概要](../../relational-databases/polybase/get-started-with-polybase.md)」を参照してください。  
   
- ![PolyBase logical](../../relational-databases/polybase/media/polybase-logical.png "PolyBase logical")  
+ ![PolyBase 論理](../../relational-databases/polybase/media/polybase-logical.png "PolyBase 論理")  
   
-## PolyBase を使用する理由  
- 的確な意思決定を行うには、リレーショナル データと、テーブルとして構造化されていない他のデータ (特に Hadoop などの NoSQL テクノロジ) の両方を、ビジネス上の意思決定者が分析する必要があります。 これは、種類の異なるデータ ストア間でデータを転送する手段がない限り、実行するのは困難です。 PolyBase は、SQL Server にとって外部のデータに対する操作により、このようなギャップを埋めます。  
+## <a name="why-use-polybase"></a>PolyBase を使用する理由  
+的確な意思決定を行うには、リレーショナル データとテーブルとして構造化されていない他のデータ (特に Hadoop) の両方を分析します。 これは、種類の異なるデータ ストア間でデータを転送する手段がない限り、実行するのは困難です。 PolyBase は、SQL Server にとって外部のデータに対する操作により、このようなギャップを埋めます。  
   
- 単純にしておくために、PolyBase を使用するうえで Hadoop 環境や Azure 環境に追加のソフトウェアをインストールする必要はありません。         外部データの照会では、データベース テーブルの照会と同じ構文が使用されます。 これはすべてに透過的に行われます。 PolyBase は詳細をすべてバックグラウンドで処理するので、PolyBase を正しく使用するうえで Hadoop や Azure に関する知識は不要です。  
+単純にしておくために、PolyBase を使用するうえで Hadoop 環境や Azure 環境に追加のソフトウェアをインストールする必要はありません。 外部データの照会では、データベース テーブルの照会と同じ構文が使用されます。 これはすべてに透過的に行われます。 PolyBase は詳細をすべてバックグラウンドで処理するので、PolyBase を正しく使用するうえで Hadoop や Azure に関する知識は不要です。 
   
  PolyBase には、以下の機能があります。  
   
@@ -47,19 +51,20 @@ caps.handback.revision: 24
   
 -   **Azure BLOB ストレージに格納されたデータを照会する。** Azure BLOB ストレージは、Azure サービスによって使用されるデータを格納するのに便利な場所です。  PolyBase を使用すると、T-SQL で簡単にデータにアクセスできます。  
   
--   **Hadoop または Azure BLOB ストレージからデータをインポートする。** Hadoop または Azure BLOB ストレージのデータをリレーショナル テーブルにインポートすることで、Microsoft SQL の列ストア テクノロジと分析機能の速度を活用できます。 ETL ツールやインポート ツールを個別に用意する必要はありません。  
+-   **Hadoop、Azure BLOB ストレージ、Azure Data Lake Store からデータをインポートする。** Hadoop、Azure BLOB ストレージ、Azure Data Lake Store のデータをリレーショナル テーブルにインポートすることで、Microsoft SQL の列ストア テクノロジと分析機能の速度を活用できます。 ETL ツールやインポート ツールを個別に用意する必要はありません。  
+
   
--   **Hadoop または Azure BLOB ストレージにデータをエクスポートする。** データを Hadoop または Azure BLOB ストレージにアーカイブすることで、コスト効果の高いストレージを実現し、アクセスしやすいようにそのストレージをオンライン状態にしておくことができます。  
+-   **Hadoop、Azure BLOB ストレージ、Azure Data Lake Store にデータをエクスポートする。** データを Hadoop、Azure BLOB ストレージ、Azure Data Lake Store にアーカイブすることで、コスト効果の高いストレージを実現し、アクセスしやすいようにそのストレージをオンライン状態にしておくことができます。  
   
 -   **BI ツールと統合される。** PolyBase を Microsoft のビジネス インテリジェンスや分析スタックと一緒に使用したり、SQL Server と互換性のあるサード パーティ ツールを使用したりすることができます。  
   
-## パフォーマンス  
+## <a name="performance"></a>パフォーマンス  
   
 -   **計算を Hadoop にプッシュする。**クエリ オプティマイザーは、クエリ パフォーマンスが向上するのであれば、Hadoop に計算をプッシュすることをコストに基づいて決定します。  コスト ベースの決定には、外部テーブルの統計が使用されます。   計算のプッシュでは、MapReduce ジョブが作成され、Hadoop の分散コンピューティング リソースが活用されます。  
   
 -   **コンピューティング リソースをスケーリングする。** クエリのパフォーマンスを向上させるために、SQL Server [PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md)を使用できます。 これにより、SQL Server インスタンスと Hadoop ノードの間の並列データ転送が可能になります。また、外部データに対する操作のためのコンピューティング リソースが追加されます。  
   
-## PolyBase ガイドに関するトピック  
+## <a name="polybase-guide-topics"></a>PolyBase ガイドに関するトピック  
  このガイドには、効率的かつ効果的に PolyBase を使用するためのトピックが含まれています。  
   
 |||  
@@ -75,3 +80,4 @@ caps.handback.revision: 24
 |[PolyBase のトラブルシューティング](../../relational-databases/polybase/polybase-troubleshooting.md)|PolyBase クエリを管理するための手法。 動的管理ビュー (DMV) を使用して PolyBase クエリを監視できます。また、PolyBase クエリ プランを読み解いてパフォーマンス上のボトルネックを見つける方法を説明しています。|  
   
   
+

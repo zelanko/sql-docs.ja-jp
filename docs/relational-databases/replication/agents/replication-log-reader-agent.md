@@ -1,33 +1,37 @@
 ---
 title: "レプリケーション ログ リーダー エージェント | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ログ リーダー エージェント, 実行可能ファイル"
-  - "ログ リーダー エージェント, パラメーター参照"
-  - "エージェント [SQL Server レプリケーション], ログ リーダー エージェント"
-  - "コマンド ライン プロンプト [SQL Server レプリケーション]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Log Reader Agent, executables
+- Log Reader Agent, parameter reference
+- agents [SQL Server replication], Log Reader Agent
+- command prompt [SQL Server replication]
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 caps.latest.revision: 51
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3107bcd2f7490c9583c0c8e9355ecc9ff9e20bd7
+ms.lasthandoff: 04/11/2017
+
 ---
-# レプリケーション ログ リーダー エージェント
+# <a name="replication-log-reader-agent"></a>レプリケーション ログ リーダー エージェント
   レプリケーション ログ リーダー エージェントは、トランザクション レプリケーション用に構成した各データベースのトランザクション ログを監視し、レプリケーションのマークが付けられたトランザクションをトランザクション ログからディストリビューション データベースにコピーする実行可能ファイルです。  
   
 > [!NOTE]  
 >  パラメーターは任意の順序で指定できます。 オプション パラメーターを指定しなかった場合、既定のエージェント プロファイルの定義済みの値が使用されます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -63,35 +67,35 @@ logread [-?]
 [-RecoverFromDataErrors]  
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  **-?**  
  使用方法についての情報を表示します。  
   
- **-パブリッシャー** *server_name*[**\\***instance_name*]  
- パブリッシャーの名前です。 指定 *server_name* の既定のインスタンスの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] そのサーバーにします。 指定 *server_name***\\***instance_name* の名前付きインスタンスの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] そのサーバーにします。  
+ **-Publisher** *server_name*[**\\***instance_name*]  
+ パブリッシャーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
   
- **-Publisherdb** *publisher_database*  
+ **-PublisherDB** *publisher_database*  
  パブリッシャー データベースの名前です。  
   
  **-Continuous**  
  エージェントがレプリケートされたトランザクションの呼び出しを継続的に試みるかどうかを指定します。 このパラメーターを指定する場合は、保留されているトランザクションがなくても、エージェントはポーリング間隔でレプリケートされたトランザクションをソースから呼び出します。  
   
- **-Definitionfile** *def_path_and_file_name*  
+ **-DefinitionFile** *def_path_and_file_name*  
  エージェント定義ファイルのパスです。 エージェント定義ファイルには、エージェントのコマンド ライン引数が含まれます。 ファイルの内容は実行可能ファイルとして解析されます。 二重引用符 (") を使用して、任意の文字を含む引数値を指定します。  
   
- **-ディストリビューター** *server_name*[**\\***instance_name*]  
- ディストリビューターの名前です。 指定 *server_name* の既定のインスタンスの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] そのサーバーにします。 指定 *server_name***\\***instance_name* の名前付きインスタンスの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] そのサーバーにします。  
+ **-Distributor** *server_name*[**\\***instance_name*]  
+ ディストリビューターの名前です。 サーバー上の *の既定のインスタンスの場合は、* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
   
- **-Distributorlogin** *distributor_login*  
+ **-DistributorLogin** *distributor_login*  
  ディストリビューターのログイン名です。  
   
- **-Distributorpassword** *distributor_password 用途*  
+ **-DistributorPassword** *distributor_password*  
  ディストリビューターのパスワードです。  
   
- **-Distributorsecuritymode** [ **0**| **1**]  
- ディストリビューターのセキュリティ モードを指定します。 値 **0** 示す [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モード (既定)、および値の **1** を示します [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 認証モードです。  
+ **-DistributorSecurityMode** [ **0**| **1**]  
+ ディストリビューターのセキュリティ モードを指定します。 **0** の値は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モード (既定値) を示し、 **1** の値は [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 認証モードを示します。  
   
- **-Encryptionlevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [ **0** | **1** | **2** ]  
  ログ リーダー エージェントが接続を行うときに使用する SSL (Secure Sockets Layer) 暗号化レベルです。  
   
 |EncryptionLevel の値|説明|  
@@ -100,12 +104,12 @@ logread [-?]
 |**1**|SSL は使用されますが、信頼できる発行者によって SSL サーバー証明が署名されているかどうかを検証しません。|  
 |**2**|SSL が使用され、証明書の確認が行われます。|  
   
- 詳細については、次を参照してください。 [セキュリティの概要と #40 です。レプリケーションと #41;](../../../relational-databases/replication/security/security-overview-replication.md)します。  
+ 詳細については、「[Security Overview &#40;Replication&#41;](../../../relational-databases/replication/security/security-overview-replication.md)」(セキュリティの概要 (レプリケーション)) を参照してください。  
   
  **-ExtendedEventConfigFile** *configuration_path_and_file_name*  
  拡張イベントの XML 構成ファイルのパスとファイル名を指定します。 拡張イベントの構成ファイルによって、追跡に必要なセッションを構成し、イベントを有効にすることができます。  
   
- **-Historyverboselevel** [ **0**| **1**| **2**]  
+ **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
  ログ リーダー操作中にログに記録する履歴の量を指定します。 **1**を選択すれば、ログへの履歴の記録がパフォーマンスに与える影響を最小限に抑えることができます。  
   
 |HistoryVerboseLevel の値|説明|  
@@ -117,7 +121,7 @@ logread [-?]
  **-KeepAliveMessageInterval** *keep_alive_message_interval_seconds*  
  既存の接続がサーバーからの応答を待機しているかどうかを、履歴スレッドがチェックするまでの秒数です。 長時間実行のときに、照合エージェントによってログ リーダー エージェントに SUSPECT とマークされないようにするには、この値を小さくします。 既定では 300 秒です。  
   
- **-Logintimeout** *login_time_out_seconds*  
+ **-LoginTimeOut** *login_time_out_seconds*  
  ログインがタイムアウトになるまでの秒数です。 既定値は 15 秒です。  
   
  **-LogScanThreshold** *scan_threshold*  
@@ -127,17 +131,17 @@ logread [-?]
  ログ リーダーがディストリビューション データベースにコマンドを書き込む際に、トランザクションにグループ化されるステートメントの最大数を指定します。 このパラメーターを使用すると、ログ リーダー エージェントおよびディストリビューション エージェントは、サブスクライバーでコマンドを適用するときに、パブリッシャーで (多数のコマンドで構成される) 大きなトランザクションを複数の小さなトランザクションに分割できます。 このパラメーターを指定すると、ディストリビューターでの競合を減らし、パブリッシャーとサブスクライバーの間の待機時間を減らすことができます。 元のトランザクションはより小さな単位で適用されるため、サブスクライバーは元のトランザクションが終了する前に、大きな論理パブリッシャー トランザクションの行にアクセスし、トランザクションの厳密な原子性を損なうことがあります。 既定値は **0**です。この場合、パブリッシャーのトランザクション境界が保護されます。  
   
 > [!NOTE]  
->  このパラメーターは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パブリケーション以外では無視されます。 詳細については、「構成トランザクション セット ジョブの」セクションを参照してください [Oracle パブリッシャーのパフォーマンス チューニング](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)します。  
+>  このパラメーターは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パブリケーション以外では無視されます。 詳細については、「 [Performance Tuning for Oracle Publishers](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)」の「トランザクション セット ジョブの構成」を参照してください。  
   
- **-Messageinterval** *message_interval*  
- 履歴をログに記録する間隔です。 履歴イベントがログに記録時に、 **MessageInterval** 値に達した後、最後の履歴イベントがログに記録します。  
+ **-MessageInterval** *message_interval*  
+ 履歴をログに記録する間隔です。 最後の履歴イベントがログに記録された後で **MessageInterval** 値に到達すると、次の履歴イベントがログに記録されます。  
   
  ソースに利用可能なレプリケートされたトランザクションがない場合、エージェントはディストリビューターに対してトランザクションなしのメッセージを報告します。 このオプションは、エージェントが次にトランザクションなしのメッセージを報告するまでの待ち時間を指定します。 前回レプリケートされたトランザクションを処理した後で、ソースに利用可能なトランザクションがないことを検出すると、エージェントは必ずトランザクションなしのメッセージを報告します。 既定値は 60 秒です。  
   
- **-出力** *output_path_and_file_name*  
+ **-Output** *output_path_and_file_name*  
  エージェントの出力ファイルのパスです。 ファイル名が指定されていない場合、出力はコンソールに送られます。 指定された名前のファイルが存在する場合、出力はそのファイルに追加されます。  
   
- **-Outputverboselevel** [ **0**| **1**| **2** | **3** | **4** ]  
+ **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
  出力を詳細表示にするかどうかを指定します。  
   
 |値|説明|  
@@ -157,46 +161,46 @@ logread [-?]
  ログを対象としてレプリケートされたトランザクションをクエリする間隔を表す秒単位の値です。 既定値は 5 秒です。  
   
  **-ProfileName** *profile_name*  
- エージェント パラメーターに使用するエージェント プロファイルを指定します。 **ProfileName** が NULL の場合、このエージェント プロファイルは無効になります。 **ProfileName** を指定しない場合、エージェントの種類に応じた既定のプロファイルが使われます。 詳細については、次を参照してください。 [レプリケーション エージェント プロファイル](../../../relational-databases/replication/agents/replication-agent-profiles.md)します。  
+ エージェント パラメーターに使用するエージェント プロファイルを指定します。 **ProfileName** が NULL の場合、このエージェント プロファイルは無効になります。 **ProfileName** を指定しない場合、エージェントの種類に応じた既定のプロファイルが使われます。 詳細については、「[レプリケーション エージェント プロファイル](../../../relational-databases/replication/agents/replication-agent-profiles.md)」を参照してください。  
   
  **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
- パブリケーション データベースとのデータベース ミラーリング セッションに参加する、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー パートナー インスタンスを指定します。 詳細については、次を参照してください。 [データベース ミラーリングとレプリケーション/#40 です。SQL Server と #41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)します。  
+ パブリケーション データベースとのデータベース ミラーリング セッションに参加する、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー パートナー インスタンスを指定します。 詳細については、「[データベース ミラーリングとレプリケーション &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)」を参照してください。  
   
- **-Publishersecuritymode** [ **0**| **1**]  
- パブリッシャーのセキュリティ モードを指定します。 値 **0** 示す [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証 (既定値) と値の **1** Windows 認証モードを示します。  
+ **-PublisherSecurityMode** [ **0**| **1**]  
+ パブリッシャーのセキュリティ モードを指定します。 値 **0** は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モード (既定値) を示し、値 **1** は Windows 認証モードを示します。  
   
- **-Publisherlogin** *publisher_login*  
+ **-PublisherLogin** *publisher_login*  
  パブリッシャーのログイン名です。  
   
  **-PublisherPassword** *publisher_password*  
  パブリッシャーのパスワードです。  
   
- **-Querytimeout** *query_time_out_seconds*  
+ **-QueryTimeOut** *query_time_out_seconds*  
  クエリがタイムアウトになるまでの秒数です。 既定値は 1800 秒です。  
   
- **-Readbatchsize** *number_of_transactions*  
+ **-ReadBatchSize** *number_of_transactions*  
  パブリッシング データベースのトランザクション ログから読み取られるトランザクションの処理サイクルあたりの最大数であり、既定値は 500 です。 エージェントは、すべてのトランザクションをログから読み取るまで、トランザクションの読み取りをバッチ処理で継続します。 このパラメーターは、Oracle パブリッシャーに対してサポートされていません。  
   
  **-ReadBatchThreshold** *number_of_commands*  
- ディストリビューション エージェントによってサブスクライバーに発行される前に、トランザクション ログから読み取られるレプリケーション コマンドの数です。 既定値は 0 です。 指定した数値またはログの末尾にこのパラメーターが指定されていない場合、ログ リーダー エージェントを読み取り **-readbatchsize** (トランザクションの数)。  
+ ディストリビューション エージェントによってサブスクライバーに発行される前に、トランザクション ログから読み取られるレプリケーション コマンドの数です。 既定値は 0 です。 このパラメーターが指定されていない場合、ログ リーダー エージェントは、ログの最後まで読み取るか、または **-ReadBatchSize** (トランザクション数) で指定された数だけ読み取ります。  
   
  **-RecoverFromDataErrors**  
- SQL Server 以外のパブリッシャーからパブリッシュされる列データでエラーが発生しても、ログ リーダー エージェントを継続して実行することを指定します。 既定では、このようなエラーが発生するとログ リーダー エージェントは失敗します。 使用すると **- RecoverFromDataErrors**, 、NULL または適切な null 以外の値として、エラーのある列のデータがレプリケートされ、警告メッセージがログに記録されます、 [MSlogreader_history](../../../relational-databases/system-tables/mslogreader-history-transact-sql.md) テーブルです。 このパラメーターは、Oracle パブリッシャーに対してのみサポートされます。  
+ SQL Server 以外のパブリッシャーからパブリッシュされる列データでエラーが発生しても、ログ リーダー エージェントを継続して実行することを指定します。 既定では、このようなエラーが発生するとログ リーダー エージェントは失敗します。 **-RecoverFromDataErrors**を使用する場合、エラーのある列データは NULL または適切な NULL 以外の値としてレプリケートされ、警告メッセージが [MSlogreader_history](../../../relational-databases/system-tables/mslogreader-history-transact-sql.md) テーブルに記録されます。 このパラメーターは、Oracle パブリッシャーに対してのみサポートされます。  
   
-## 解説  
+## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]  
->  ドメイン ユーザー アカウント (既定値) ではなくローカル システム アカウントで実行するように [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントをインストールした場合、サービスはローカル コンピューターにのみアクセスできます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントから実行されるログ リーダー エージェントで、Windows 認証モードを使用するように構成すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] へのログイン時にログ リーダー エージェントは異常終了します。 既定の設定は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証です。 セキュリティ アカウントを変更する方法の詳細については、次を参照してください。 [ビューとレプリケーションのセキュリティ設定の変更](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)します。  
+>  ドメイン ユーザー アカウント (既定値) ではなくローカル システム アカウントで実行するように [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントをインストールした場合、サービスはローカル コンピューターにのみアクセスできます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントから実行されるログ リーダー エージェントで、Windows 認証モードを使用するように構成すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]へのログイン時にログ リーダー エージェントは異常終了します。 既定の設定は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証です。 セキュリティ アカウント変更の詳細については、「 [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。  
   
- ログ リーダー エージェントを開始するには、実行 **logread.exe** コマンド プロンプトからです。 詳細については、次を参照してください。 [レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)します。  
+ ログ リーダー エージェントを開始するには、コマンド プロンプトから **logread.exe** を実行します。 詳細については、「[レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)」を参照してください。  
   
-## 変更履歴  
+## <a name="change-history"></a>変更履歴  
   
 |変更内容|  
 |---------------------|  
-|追加、 **- ExtendedEventConfigFile** パラメーター。|  
+|**-ExtendedEventConfigFile** パラメーターを追加しました。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レプリケーション エージェントの管理](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

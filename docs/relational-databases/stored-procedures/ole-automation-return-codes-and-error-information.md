@@ -1,31 +1,35 @@
 ---
 title: "OLE オートメーションのリターン コードとエラー情報 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "リターン コード [SQL Server]"
-  - "OLE オートメーション [SQL Server], リターン コード"
-  - "OLE オートメーション [SQL Server], エラー"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ole
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- return codes [SQL Server]
+- OLE Automation [SQL Server], return codes
+- OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1a64e9ca8e9999411edf97c76c50f577790af27
+ms.lasthandoff: 04/11/2017
+
 ---
-# OLE オートメーションのリターン コードとエラー情報
-  OLE オートメーション システム ストアド プロシージャでは、**int** のリターン コードが返されます。これは、基になる OLE オートメーション操作から返される HRESULT です。 HRESULT 0 は成功を示しています。 0 以外の HRESULT は、0x800*nnnnn* という 16 進数形式の OLE エラー コードですが、ストアド プロシージャのリターン コードで **int** 値として返された場合、HRESULT の形式は 214*nnnnnnn* になります。  
+# <a name="ole-automation-return-codes-and-error-information"></a>OLE オートメーションのリターン コードとエラー情報
+  OLE オートメーション システム ストアド プロシージャでは、 **int** のリターン コードが返されます。これは、基になる OLE オートメーション操作から返される HRESULT です。 HRESULT 0 は成功を示しています。 0 以外の HRESULT は、0x800*nnnnn*という 16 進数形式の OLE エラー コードですが、ストアド プロシージャのリターン コードで **int** 値として返された場合、HRESULT の形式は 214*nnnnnnn*になります。  
   
  たとえば、sp_OACreate に SQLDMO.Xyzzy などの無効なオブジェクト名を渡すと、このプロシージャでは HRESULT が **int** 値 2147221005 として返されます。これは、16 進数形式では 0x800401f3 です。  
   
- `CONVERT(binary(4), @hresult)` を使用すると、**int** 値の HRESULT を **binary** 値に変換できます。 ただし、`CONVERT(char(10), CONVERT(binary(4), @hresult))` を使用すると HRESULT の各バイトが 1 文字の ASCII 文字に変換されるので、読みにくい文字列になります。 次のサンプル ストアド プロシージャ HexToChar を使用すると、**int** 値の HRESULT を、文字として読み取れる 16 進数文字列を保持する **char** 値に変換できます。  
+ `CONVERT(binary(4), @hresult)` を使用すると、 **int** 値の HRESULT を **binary** 値に変換できます。 ただし、 `CONVERT(char(10), CONVERT(binary(4), @hresult))` を使用すると HRESULT の各バイトが 1 文字の ASCII 文字に変換されるので、読みにくい文字列になります。 次のサンプル ストアド プロシージャ HexToChar を使用すると、 **int** 値の HRESULT を、文字として読み取れる 16 進数文字列を保持する **char** 値に変換できます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -75,7 +79,7 @@ SELECT @BinVariable AS BinaryValue,
 GO  
 ```  
   
- 次のサンプル ストアド プロシージャ **sp_displayoaerrorinfo** を使用すると、いずれかの OLE オートメーション プロシージャから 0 以外の HRESULT リターン コードが返された場合に OLE オートメーション エラー情報を表示できます。 このサンプル ストアド プロシージャでは **HexToChar** を使用しています。  
+ 次のサンプル ストアド プロシージャ **sp_displayoaerrorinfo** を使用すると、いずれかの OLE オートメーション プロシージャから 0 以外の HRESULT リターン コードが返された場合に OLE オートメーション エラー情報を表示できます。 このサンプル ストアド プロシージャでは **HexToChar**を使用しています。  
   
 ```  
 CREATE PROCEDURE dbo.sp_DisplayOAErrorInfo  
@@ -111,7 +115,7 @@ AS
 GO  
 ```  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
  [sp_OAGetErrorInfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oageterrorinfo-transact-sql.md)  
   
   

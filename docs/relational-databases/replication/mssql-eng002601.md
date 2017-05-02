@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG002601 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG002601 エラー"
+title: MSSQL_ENG002601 | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG002601 error
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2454732812315b948f11f3a78fcc531bf87fbf0b
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG002601
+# <a name="mssqleng002601"></a>MSSQL_ENG002601
     
-## メッセージの詳細  
+## <a name="message-details"></a>メッセージの詳細  
   
 |||  
 |-|-|  
@@ -29,9 +33,9 @@ caps.handback.revision: 15
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |シンボル名|なし|  
-|メッセージ テキスト|オブジェクトが重複するキー行を挿入できません '. * '%.*ls' に一意のインデックス' %\*。%ls '。|  
+|メッセージ テキスト|一意インデックス '%.\*ls' を含むオブジェクト '%.*ls' には重複するキー行を挿入できません。|  
   
-## 説明  
+## <a name="explanation"></a>説明  
  このエラーは、データベースがレプリケートされたかどうかにかかわらず発生する一般エラーです。 レプリケートされたデータベースでは、このエラーは、一般に主キーがトポロジ間で適切に管理されなかった場合に発生します。 分散環境では、主キー列などの一意の列に複数のノードで同じ値が挿入されないようにすることが不可欠です。 以下のような原因が考えられます。  
   
 -   行の挿入と更新が複数のノードで行われた。 マージ レプリケーションとトランザクション レプリケーションの更新可能なサブスクリプションには、どちらも競合を検出して解決する機能がありますが、それでも行を 1 つのノード上だけで挿入または更新することが推奨されます。 ピア ツー ピアのトランザクション レプリケーションでは、競合を検出し解決する機能はありません。挿入と更新をパーティション分割する必要があります。  
@@ -40,14 +44,14 @@ caps.handback.revision: 15
   
 -   ID 列を持つテーブルが使用されているが、列が正しく管理されていない。  
   
--   マージ レプリケーションでは、このエラーも発生する可能性が挿入の際、システム テーブルに **MSmerge_contents**; エラーの発生と似ています一意インデックス 'ucl1SycContents' を持つオブジェクト 'MSmerge_contents' に重複するキー行を挿入することはできません。  
+-   マージ レプリケーションで、システム テーブル **MSmerge_contents**への挿入を行った。この場合、"一意なインデックス 'ucl1SycContents' を含むオブジェクト 'MSmerge_contents' には重複するキー列を挿入できません。" のようにエラーが表示されます。  
   
-## ユーザーの操作  
+## <a name="user-action"></a>ユーザーの操作  
  必要なアクションは、エラーが発生した原因によって異なります。  
   
 -   行の挿入と更新が複数のノードで行われた。  
   
-     使用するレプリケーションの種類にかかわらず、できる限り挿入と更新をパーティション分割することをお勧めします。これにより、競合の検出と対処に必要な処理を減らすことができます。 ピア ツー ピアのトランザクション レプリケーションの場合は、挿入と更新のパーティション分割は必須です。 詳細については、次を参照してください。 [ピア ツー ピア トランザクション レプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)します。  
+     使用するレプリケーションの種類にかかわらず、できる限り挿入と更新をパーティション分割することをお勧めします。これにより、競合の検出と対処に必要な処理を減らすことができます。 ピア ツー ピアのトランザクション レプリケーションの場合は、挿入と更新のパーティション分割は必須です。 詳細については、「 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。  
   
 -   読み取り専用のサブスクライバーで行が挿入された。  
   
@@ -55,13 +59,13 @@ caps.handback.revision: 15
   
 -   ID 列を持つテーブルが使用されているが、列が正しく管理されていない。  
   
-     マージ レプリケーションおよび更新可能なサブスクリプションを使用したトランザクション レプリケーションの場合は、ID 列はレプリケーションで自動的に管理してください。 ピア ツー ピアのトランザクション レプリケーションの場合は、手動で管理する必要があります。 詳細については、次を参照してください。 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)します。  
+     マージ レプリケーションおよび更新可能なサブスクリプションを使用したトランザクション レプリケーションの場合は、ID 列はレプリケーションで自動的に管理してください。 ピア ツー ピアのトランザクション レプリケーションの場合は、手動で管理する必要があります。 詳細については、「[ID 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)」を参照してください。  
   
--   システム テーブルに挿入中にエラーが発生した **MSmerge_contents**します。  
+-   システム テーブル **MSmerge_contents**への挿入時にエラーが発生する。  
   
-     このエラーは、結合フィルター プロパティの値が正しくないため発生 **join_unique_key**します。 このプロパティは、親テーブルの結合列が一意である場合にのみ、TRUE に設定する必要があります。 このプロパティが TRUE に設定されているにもかかわらず、結合列が一意でない場合は、このエラーが発生します。 このプロパティを設定する方法の詳細については、次を参照してください。 [定義および変更、結合フィルターの間でマージ アーティクル](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)します。  
+     このエラーは、結合フィルター プロパティ **join_unique_key**の値が不適切なために発生します。 このプロパティは、親テーブルの結合列が一意である場合にのみ、TRUE に設定する必要があります。 このプロパティが TRUE に設定されているにもかかわらず、結合列が一意でない場合は、このエラーが発生します。 このプロパティの設定の詳細については、「 [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)」を参照してください。  
   
-## 参照  
- [エラーとイベントのリファレンスと #40 です。レプリケーションと #41 です。](../../relational-databases/replication/errors-and-events-reference-replication.md)  
+## <a name="see-also"></a>参照  
+ [エラーとイベントのリファレンス &#40;レプリケーション&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

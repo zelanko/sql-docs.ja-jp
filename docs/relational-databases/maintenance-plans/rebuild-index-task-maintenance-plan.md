@@ -1,32 +1,36 @@
 ---
 title: "[インデックスの再構築タスク] (メンテナンス プラン) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "reindex"
-  - "sql13.swb.maint.reindex.f1"
-helpviewer_keywords: 
-  - "[インデックスの再構築タスク] ダイアログ ボックス"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- reindex
+- sql13.swb.maint.reindex.f1
+helpviewer_keywords:
+- Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3d8dd428e1aded14e6e75c338b12c8b04cf722a8
+ms.lasthandoff: 04/11/2017
+
 ---
-# [インデックスの再構築タスク] (メンテナンス プラン)
+# <a name="rebuild-index-task-maintenance-plan"></a>[インデックスの再構築タスク] (メンテナンス プラン)
   **[インデックスの再構築タスク]** ダイアログ ボックスを使用すると、データベースのテーブルに新しい FILL FACTOR でインデックスを再作成できます。 FILL FACTOR は、後で拡張できるように、インデックスの各ページの空き領域の量を決定します。 FILL FACTOR が適用されるのはインデックスの作成時だけであるため、テーブルにデータが追加されるにつれて、各ページの空き容量は徐々に減少します。 データ ページおよびインデックス ページを再編成すると、再び空き領域を確保できます。  
   
- **[インデックスの再構築タスク]** では、ALTER INDEX ステートメントが使用されます。 このページで説明するオプションの詳細については、「[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。  
+ **[インデックスの再構築タスク]** では、ALTER INDEX ステートメントが使用されます。 このページで説明するオプションの詳細については、「 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **接続**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 42
  **オブジェクト**  
  **[選択]** グリッドでテーブル、ビュー、または両方を表示するように制限します。  
   
- **選択**  
+ **[選択]**  
  このタスクの対象とするテーブルまたはインデックスを指定します。 [オブジェクト] ボックスで **[テーブルとビュー]** が選択されている場合は、このオプションは利用できません。  
   
  **[ページごとの既定の空き領域]**  
@@ -77,7 +81,7 @@ caps.handback.revision: 42
  `ONLINE` オプションを使用すると、インデックス操作の実行中に、ユーザーは基になるテーブルまたはクラスター化インデックス データ、および任意の関連付けられた非クラスター化インデックスにアクセスできます。  
   
 > [!NOTE]  
->  オンラインでのインデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2016 の各エディションがサポートする機能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)」を参照してください。  
+>  オンラインでのインデックス操作は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
  **[インデックスを再構築しない] | [オフラインでインデックスを再構築する]**  
  インデックスの種類がオンラインでは再構築できない場合の処理を指定します。  
@@ -100,7 +104,7 @@ caps.handback.revision: 42
 > [!NOTE]  
 >  影響を受けるオブジェクトが大量にある場合は、表示にかなりの時間を要する場合があります。  
   
-## [新しい接続] ダイアログ ボックス  
+## <a name="new-connection-dialog-box"></a>[新しい接続] ダイアログ ボックス  
  **[接続名]**  
  新しい接続の名前を入力します。  
   
@@ -114,10 +118,10 @@ caps.handback.revision: 42
  サーバーの認証情報を指定します。  
   
  **[Windows NT の統合セキュリティを使用する]**  
- Windows 認証を使用して [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続します。  
+ Windows 認証を使用して [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続します。  
   
  **[特定のユーザー名とパスワードを使用する]**  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続します。 このオプションは利用できません。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
   
  **ユーザー名**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  
@@ -125,7 +129,7 @@ caps.handback.revision: 42
  **Password**  
  認証に使用するパスワードを指定します。 このオプションは利用できません。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [DBCC DBREINDEX &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
@@ -135,3 +139,4 @@ caps.handback.revision: 42
  [オンラインでのインデックス操作の実行](../../relational-databases/indexes/perform-index-operations-online.md)  
   
   
+

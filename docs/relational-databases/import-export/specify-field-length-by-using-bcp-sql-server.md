@@ -1,31 +1,35 @@
 ---
 title: "bcp を使用したフィールド長の指定 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ネイティブのデータ形式 [SQL Server]"
-  - "既定のフィールド長"
-  - "フィールド長 [SQL Server]"
-  - "データ形式 [SQL Server], フィールド長"
-  - "bcp ユーティリティ [SQL Server], フィールド長"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- native data format [SQL Server]
+- default field lengths
+- field length [SQL Server]
+- data formats [SQL Server], field length
+- bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 772ed44be6795e676b18fcfc915f851e4ce24e97
+ms.lasthandoff: 04/11/2017
+
 ---
-# bcp を使用したフィールド長の指定 (SQL Server)
-  フィールド長は、文字形式でデータを表現するために必要な文字の最大数を示します。 データがネイティブ形式で格納されている場合、フィールド長は既にわかっています。たとえば、 **int** データ型では 4 バイトになります。 プレフィックス長に 0 を指定した場合、**bcp** コマンドを実行すると、フィールド長、既定のフィールド長、**char** データを含むデータ ファイル内のデータ ストレージに対するフィールド長の影響を確認するプロンプトが表示されます。  
+# <a name="specify-field-length-by-using-bcp-sql-server"></a>bcp を使用したフィールド長の指定 (SQL Server)
+  フィールド長は、文字形式でデータを表現するために必要な文字の最大数を示します。 データがネイティブ形式で格納されている場合、フィールド長は既にわかっています。たとえば、 **int** データ型では 4 バイトになります。 プレフィックス長に 0 を指定した場合、 **bcp** コマンドを実行すると、フィールド長、既定のフィールド長、 **char** データを含むデータ ファイル内のデータ ストレージに対するフィールド長の影響を確認するプロンプトが表示されます。  
   
-## フィールド長を要求する bcp プロンプト  
+## <a name="the-bcp-prompt-for-field-length"></a>フィールド長を要求する bcp プロンプト  
  対話型の **bcp** コマンドで、フォーマット ファイル スイッチ (**-f**) またはデータ形式スイッチ (**-n**、**-c**、**-w** または **-N**) のどちらも付けずに **in** または **out** オプションを指定すると、次のように各データ フィールドの長さを要求するプロンプトが表示されます。  
   
  `Enter length of field <field_name> [<default>]:`  
@@ -41,17 +45,17 @@ caps.handback.revision: 27
   
 -   非文字データを文字データに変換するとき、 **bcp** によってデータの保存に十分な長さの既定フィールド長が提示されます。  
   
--   ファイル保存形式が非文字である場合、 **bcp** コマンドによってフィールド長を要求するプロンプトは表示されません。 データは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のネイティブ データ表現 (ネイティブ形式) で保存されます。  
+-   ファイル保存形式が非文字である場合、 **bcp** コマンドによってフィールド長を要求するプロンプトは表示されません。 データは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のネイティブ データ表現 (ネイティブ形式) で保存されます。  
   
-## 既定のフィールド長の使用  
- 通常、[!INCLUDE[msCoName](../../includes/msconame-md.md)] では、**bcp** によって提示された既定値をフィールド長に使用することをお勧めします。 キャラクター モードのデータ ファイルが作成された場合、既定のフィールド長を使用することによって、データの切り捨てや数値オーバーフロー エラーの発生を防止できます。  
+## <a name="using-default-field-lengths"></a>既定のフィールド長の使用  
+ 通常、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、 **bcp**によって提示された既定値をフィールド長に使用することをお勧めします。 キャラクター モードのデータ ファイルが作成された場合、既定のフィールド長を使用することによって、データの切り捨てや数値オーバーフロー エラーの発生を防止できます。  
   
  不適切なフィールド長を指定すると、問題が発生する場合があります。 たとえば、数値データをコピーするときに、そのデータに対して短すぎるフィールド長を指定すると、 **bcp** ユーティリティによってオーバーフロー エラー メッセージが出力され、データはコピーされません。 また、 **datetime** データをエクスポートするときに、その文字列に対して 26 バイトよりも短いフィールド長を指定すると、 **bcp** ユーティリティによってデータが切り捨てられ、エラー メッセージも表示されません。  
   
 > [!IMPORTANT]  
->  既定のサイズ オプションを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は文字列全体を読み取ります。 場合によっては、既定のフィールド長を使用すると、"予期しないファイルの終了" エラーが発生することもあります。 通常、このエラーは、予期されるフィールドの一部のみがデータ ファイル内にある場合に **money** データ型および **datetime** データ型で発生します。たとえば、*mm*/*dd*/*yy* 形式の **datetime** 値が時刻要素なしで指定された場合、**char** 形式の **datetime** 値の長さは、予期される 24 文字よりも短くなります。 この種類のエラーを防止するには、フィールド ターミネータまたは固定長データ フィールドを使用するか、既定のフィールド長を別の値に変更します。  
+>  既定のサイズ オプションを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は文字列全体を読み取ります。 場合によっては、既定のフィールド長を使用すると、"予期しないファイルの終了" エラーが発生することもあります。 通常、このエラーは、予期されるフィールドの一部のみがデータ ファイル内にある場合に **money** データ型および **datetime** データ型で発生します。たとえば、 **mm** dd *yy*/*形式の*/*datetime* 値が時刻要素なしで指定された場合、 **char** 形式の **datetime** 値の長さは、予期される 24 文字よりも短くなります。 この種類のエラーを防止するには、フィールド ターミネータまたは固定長データ フィールドを使用するか、既定のフィールド長を別の値に変更します。  
   
-### 文字ファイル保存の既定のフィールド長  
+### <a name="default-field-lengths-for-character-file-storage"></a>文字ファイル保存の既定のフィールド長  
  次の表は、文字ファイル保存形式として保存されるデータの既定のフィールド長を示しています。 NULL 値を使用できるデータの長さは、NULL 値を使用できないデータの長さと同じです。  
   
 |データ型|既定の長さ (文字数)|  
@@ -91,7 +95,7 @@ caps.handback.revision: 27
 > [!NOTE]  
 >  **tinyint** 型の列には、0 ～ 255 の値を入力できます。この範囲の任意の数を表現するために必要な最大文字数は 3 です。これは、100 ～ 255 の値に相当します。  
   
-### ネイティブ ファイル保存の既定のフィールド長  
+### <a name="default-field-lengths-for-native-file-storage"></a>ネイティブ ファイル保存の既定のフィールド長  
  次の表は、ネイティブ ファイル保存形式として保存されるデータの既定のフィールド長を示しています。 NULL 値を使用できるデータの長さは、NULL 値を使用できないデータの長さと同じです。また、文字データは常に文字形式で保存されます。  
   
 |データ型|既定の長さ (文字数)|  
@@ -119,7 +123,7 @@ caps.handback.revision: 27
   
  前述のすべての場合に、後で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に再読み込みするためにデータ ファイルを作成して、保存領域を最小限に抑えるには、既定のファイル保存形式と既定のフィールド長と共に、フィールド長プレフィックスを使用します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)   

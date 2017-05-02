@@ -1,61 +1,65 @@
 ---
-title: "[ディストリビューション エージェント セキュリティ] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.security.DA.f1"
-helpviewer_keywords: 
-  - "[ディストリビューション エージェント セキュリティ] ダイアログ ボックス"
+title: "ディストリビューション エージェント セキュリティ | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.security.DA.f1
+helpviewer_keywords:
+- Distribution Agent Security dialog box
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 44bbfd608ad2511c95a872f07eac657ae7616e6d
+ms.lasthandoff: 04/11/2017
+
 ---
-# [ディストリビューション エージェント セキュリティ]
-   **ディストリビューション エージェント セキュリティ** ] ダイアログ ボックスでは、ディストリビューション エージェントを実行する Windows アカウントを指定することができます。 ディストリビューション エージェントは、プッシュ サブスクリプションのディストリビューターと、プル サブスクリプションのサブスクライバーで動作します。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントとも呼ばれる、 *プロセス アカウント*, エージェント プロセスがこのアカウントで実行されるので、します。 ダイアログ ボックスで使用できる追加オプションは、次に示すアクセスの方法によって異なります。  
+# <a name="distribution-agent-security"></a>[ディストリビューション エージェント セキュリティ]
+  **[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスを使用すると、ディストリビューション エージェントを実行する Windows アカウントを指定できます。 ディストリビューション エージェントは、プッシュ サブスクリプションのディストリビューターと、プル サブスクリプションのサブスクライバーで動作します。 エージェント プロセスはこのアカウントで実行されるため、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントは、 *プロセス アカウント*としても参照されます。 ダイアログ ボックスで使用できる追加オプションは、次に示すアクセスの方法によって異なります。  
   
--   サブスクリプションの新規作成ウィザードからこのダイアログ ボックスにアクセスする場合、サブスクライバー (プッシュ サブスクリプション) またはディストリビューター (プル サブスクリプション) への接続を作成するディストリビューション エージェントのコンテキストを指定することもできます。 Windows アカウントを借用するかのコンテキストでは、接続を確立できる、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の指定したアカウントです。  
+-   サブスクリプションの新規作成ウィザードからこのダイアログ ボックスにアクセスする場合、サブスクライバー (プッシュ サブスクリプション) またはディストリビューター (プル サブスクリプション) への接続を作成するディストリビューション エージェントのコンテキストを指定することもできます。 接続は、Windows アカウントの権限を借用するか、指定した [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントのコンテキストで作成します。  
   
--   ダイアログ ボックスにアクセスすると、 **サブスクリプションのプロパティ** ] ダイアログ ボックスで、ディストリビューション エージェントが、[プロパティ] をクリックして接続を作成するコンテキストを指定 (**...**) で、 **サブスクライバー接続** または **ディストリビューター接続** そのダイアログ ボックスの行。 アクセスの詳細については、 **サブスクリプションのプロパティ** ダイアログ ボックスを参照してください [プッシュ サブスクリプション プロパティの変更を表示および](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) とする方法: [ビューとプル サブスクリプションのプロパティの変更](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)します。  
+-   **[サブスクリプションのプロパティ]** ダイアログ ボックスからこのダイアログ ボックスにアクセスする場合、**[サブスクライバー接続]**行または **[ディストリビューター接続]** 行のプロパティ ボタン ( **[...]** ) をクリックして、ディストリビューション エージェントが接続を作成するコンテキストを指定します。 **[サブスクリプションのプロパティ]** ダイアログ ボックスへのアクセスの詳細については、「[プッシュ サブスクリプションのプロパティの表示または変更](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)」および「[プル サブスクリプションのプロパティの表示または変更](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)」を参照してください。  
   
  各アカウントに正しいパスワードが指定され、すべてのアカウントが有効である必要があります。 アカウントとパスワードは、エージェントが実行されるまで検証されません。  
   
-## オプション  
- **[プロセス アカウント]**  
+## <a name="options"></a>オプション  
+ **Process Account**  
  ディストリビューション エージェントが実行される Windows アカウントを入力します。  
   
 -   プッシュ サブスクリプションでは、アカウントには次のことが必要です。  
   
-    -   最低のメンバーである、 **db_owner** ディストリビューション データベースの固定データベース ロール。  
+    -   最低でも、ディストリビューション データベースで **db_owner** 固定データベース ロールのメンバーである。  
   
     -   パブリケーション アクセス リスト (PAL) のメンバーになれる。  
   
     -   スナップショット共有の読み取り権限を持っている。  
   
-    -   サブスクリプションが非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーの場合、サブスクライバーの OLE DB プロバイダーのインストール ディレクトリへの読み取り権限を持つ。  
+    -   サブスクリプションが非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーの場合、サブスクライバーの OLE DB プロバイダーのインストール ディレクトリへの読み取り権限を持つ。  
   
--   プル サブスクリプションの場合、アカウントには少なくともメンバーであるは **db_owner** サブスクリプション データベースの固定データベース ロール。  
+-   プル サブスクリプションでは、アカウントは少なくとも、サブスクリプション データベースの **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
- 接続を作成するときにプロセス アカウントを借用する場合、追加の権限が必要です。 参照してください、 **ディストリビューターへの接続** と **サブスクライバーへの接続** 以下のセクションでします。  
+ 接続を作成するときにプロセス アカウントを借用する場合、追加の権限が必要です。 後述の **[ディストリビューターに接続]** と **[サブスクライバーに接続]** を参照してください。  
   
- **プロセス アカウント** に対するプル サブスクリプションを指定できません [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], のインスタンスで、ディストリビューション エージェントが実行されないので、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]です。  
+ ディストリビューション エージェントは [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインスタンスでは実行できないため、**[プロセス アカウント]** は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] へのプル サブスクリプションには指定できません。  
   
- **パスワード** と **パスワードの確認**  
+ **[パスワード]** と **[パスワードの確認入力]**  
  Windows アカウントのパスワードを入力します。  
   
  **[ディストリビューターに接続]**  
- プッシュ サブスクリプションの場合、ディストリビューターへの接続は常にで指定されたアカウントを借用して作成、 **プロセス アカウント** テキスト ボックスです。  
+ プッシュ サブスクリプションでは、ディストリビューターへの接続は常に **[プロセス アカウント]** テキスト ボックスに指定されたアカウントを借用することによって作成されます。  
   
- プル サブスクリプションの場合、ディストリビューション エージェントは、ディストリビューターに接続で指定されたアカウントを偽装することによって作成するかどうかを選択して、 **プロセス アカウント** テキスト ボックスまたはを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントの使用を選択した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインとパスワードを入力します。  
+ プル サブスクリプションでは、ディストリビューション エージェントが、 **[プロセス アカウント]** テキスト ボックスに指定されたアカウントを借用するか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアカウントを使用してディストリビューターへの接続を作成する必要があるかどうかを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントの使用を選択した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインとパスワードを入力します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントの使用ではなく、Windows アカウントの借用を選択することをお勧めします。  
@@ -67,21 +71,21 @@ caps.handback.revision: 25
 -   スナップショット共有の読み取り権限を持っている。  
   
  **[サブスクライバーに接続]**  
- プル サブスクリプションの場合、サブスクライバーへの接続は常にで指定されたアカウントを借用して作成、 **プロセス アカウント** テキスト ボックスです。  
+ プル サブスクリプションでは、サブスクライバーへの接続は常に **[プロセス アカウント]** テキスト ボックスに指定されたアカウントを借用することによって作成されます。  
   
- プッシュ サブスクリプションでは、次のように、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーと非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーのオプションが異なります。  
+ プッシュ サブスクリプションでは、次のように、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーと非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーのオプションが異なります。  
   
--    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバー: ディストリビューション エージェントはで指定されたアカウントを偽装することによって、サブスクライバーへ接続を作成する必要があるかどうかを選択して、 **プロセス アカウント** テキスト ボックスまたはを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントの使用を選択した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインとパスワードを入力します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーでは、ディストリビューション エージェントが、 **[プロセス アカウント]** テキスト ボックスに指定されたアカウントを借用するか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアカウントを使用してサブスクライバーへの接続を作成する必要があるかどうかを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントの使用を選択した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインとパスワードを入力します。  
   
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントの使用ではなく、Windows アカウントの借用を選択することをお勧めします。  
   
-     Windows アカウントまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーへの接続に使用するアカウントには少なくともメンバーであるは **db_owner** サブスクリプション データベースの固定データベース ロール。  
+     サブスクライバーへの接続に使用される Windows アカウントまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントは、少なくとも、サブスクリプション データベースの **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
--   非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーでは、ディストリビューション エージェントがサブスクライバーに接続するときに使用する必要のあるサブスクライバーでデータベース ログインを指定します。 ログインは、サブスクリプション データベースにオブジェクトを作成するための十分な権限を持つ必要があります。 以外の構成の詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーを参照してください [非 SQL Server サブスクライバーのサブスクリプションを作成](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)します。  
+-   非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーでは、ディストリビューション エージェントがサブスクライバーに接続するときに使用する必要のあるサブスクライバーでデータベース ログインを指定します。 ログインは、サブスクリプション データベースにオブジェクトを作成するための十分な権限を持つ必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバの詳細については、「[SQL Server 以外のサブスクライバーのサブスクリプションの作成](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)」を参照してください。  
   
  **[追加の接続オプション]**  
- 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーのみです。 接続文字列の形式で、サブスクライバーの任意の接続オプションを指定します (Oracle では追加のオプションは不要)。 各オプションはセミコロンで区切る必要があります。 次は、IBM DB2 接続文字列の例です (読みやすくするために改行されています)。  
+ 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーのみです。 接続文字列の形式で、サブスクライバーの任意の接続オプションを指定します (Oracle では追加のオプションは不要)。 各オプションはセミコロンで区切る必要があります。 次は、IBM DB2 接続文字列の例です (読みやすくするために改行されています)。  
   
 ```  
 Provider=DB2OLEDB;Initial Catalog=MY_SUBSCRIBER_DB;Network Transport Library=TCP;Host CCSID=1252;  
@@ -90,9 +94,9 @@ Default Schema=MY_SCHEMA;Process Binary as Character=False;Units of Work=RUW;DBM
 Persist Security Info=False;Connection Pooling=True;  
 ```  
   
- 文字列内のオプションの多くは、接続する DB2 サーバーに固有のものですが、 **Process Binary as Character** オプションは常に **False**に設定する必要があります。 サブスクリプション データベースを識別するため、 **Initial Catalog** オプションに値が必要です。 詳細については、次を参照してください。 [IBM DB2 サブスクライバー](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)します。  
+ 文字列内のオプションの多くは、接続する DB2 サーバーに固有のものですが、 **Process Binary as Character** オプションは常に **False**に設定する必要があります。 サブスクリプション データベースを識別するため、 **Initial Catalog** オプションに値が必要です。 詳細については、「 [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レプリケーションのログインとパスワードの管理](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
  [レプリケーション エージェントのセキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [レプリケーション エージェントの概要](../../relational-databases/replication/agents/replication-agents-overview.md)   

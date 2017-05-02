@@ -1,41 +1,45 @@
 ---
 title: "Broker:Message Classify イベント クラス | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker:Message Classify イベント クラス"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Message Classify event class
 ms.assetid: e51f3351-1239-4c41-b87c-1dd86968e027
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2bf30690ffcd48df2aedf00bad6c1124c0a555f0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Broker:Message Classify イベント クラス
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、Service Broker によりメッセージのルーティングが決定されると、**Broker:Message Classify** イベントを生成します。  
+# <a name="brokermessage-classify-event-class"></a>Broker:Message Classify イベント クラス
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、Service Broker によりメッセージのルーティングが決定されると、 **Broker:Message Classify** イベントを生成します。  
   
-## Broker:Message Classify イベント クラスのデータ列  
+## <a name="brokermessage-classify-event-class-data-columns"></a>Broker:Message Classify イベント クラスのデータ列  
   
 |データ列|データ型|説明|列番号|フィルターの適用|  
 |-----------------|---------------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターによって割り当てられた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  
-|**DatabaseID**|**int**|USE *database* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database* ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|可|  
-|**EventClass**|**int**|キャプチャされたイベント クラスの種類。 **Broker:Message Classify** の場合は、常に **141** です。|27|いいえ|  
-|**EventSequence**|**int**|このイベントのシーケンス番号。|51|不可|  
+|**DatabaseID**|**int**|USE *database* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database* ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
+|**EventClass**|**int**|キャプチャされたイベント クラスの種類。 **Broker:Message Classify** の場合は、常に **141**です。|27|いいえ|  
+|**EventSequence**|**int**|このイベントのシーケンス番号。|51|いいえ|  
 |**EventSubClass**|**nvarchar**|イベント サブクラスの種類です。各イベント クラスについての詳細な情報を提供します。 この列は次の値を含むことができます。<br /><br /> **Local**: 選択されるルートには LOCAL アドレスが含まれます。<br /><br /> **Remote**: 選択されるルートには、LOCAL 以外のアドレスが含まれます。<br /><br /> **Delayed**: 転送が無効か、一致するルートが存在しないので、メッセージが遅延されます。|21|はい|  
 |**FileName**|**nvarchar**|メッセージ送信先のサービス名。|36|いいえ|  
 |**GUID**|**uniqueidentifier**|ダイアログのメッセージ交換 ID。 この ID はメッセージの一部として転送され、メッセージ交換の両側で共有されます。|54|いいえ|  
-|**HostName**|**nvarchar**|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|可|  
+|**HostName**|**nvarchar**|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|いいえ|  
-|**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|可|  
+|**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|**nvarchar**|ユーザーが属している Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  
 |**OwnerName**|**nvarchar**|メッセージ送信先のブローカー ID。|37|いいえ|  
@@ -46,7 +50,7 @@ caps.handback.revision: 25
 |**TargetUserName**|**nvarchar**|次のホップ ブローカーのネットワーク アドレス。|39|いいえ|  
 |**TransactionID**|**bigint**|トランザクションに対してシステムが割り当てた ID。|4|いいえ|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server Service Broker (SQL Server Service Broker)](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

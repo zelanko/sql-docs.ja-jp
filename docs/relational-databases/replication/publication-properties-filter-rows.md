@@ -1,24 +1,28 @@
 ---
 title: "[パブリケーションのプロパティ]、[行のフィルター選択] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.newpubwizard.pubproperties.filterrows.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.newpubwizard.pubproperties.filterrows.f1
 ms.assetid: 2c5fdbed-9b10-4818-98cc-cc6b01351318
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c04e2b5b5eeb90ab45416ea8c6d7a64f81d2c9c
+ms.lasthandoff: 04/11/2017
+
 ---
-# [パブリケーションのプロパティ]、[行のフィルター選択]
+# <a name="publication-properties-filter-rows"></a>[パブリケーションのプロパティ]、[行のフィルター選択]
   **[パブリケーションのプロパティ]** ダイアログ ボックスの **[行のフィルター選択]** ページを使用すると、次のフィルターを追加、編集、または削除できます。  
   
 -   静的行フィルターをスナップショット パブリケーション、トランザクション パブリケーション、およびマージ パブリケーションのテーブル アーティクルに適用します。  
@@ -27,7 +31,7 @@ caps.handback.revision: 21
   
 -   結合フィルターを使用して、マージ テーブル アーティクルのフィルターを関連テーブル アーティクルに拡張します。  
   
- フィルター オプションの詳細については、次を参照してください。 [パブリッシュされたデータのフィルター](../../relational-databases/replication/publish/filter-published-data.md)します。  
+ フィルター オプションの詳細については、「[パブリッシュされたデータのフィルター選択](../../relational-databases/replication/publish/filter-published-data.md)」を参照してください。  
   
 > [!NOTE]  
 >  フィルターの追加、編集、または削除を行うには、パブリケーションのための新しいスナップショットが必要であり、すべてのサブスクリプションを再初期化する必要があります。  
@@ -42,14 +46,14 @@ caps.handback.revision: 21
   
 -   サブスクライバーがデータを更新する場合に、異なるデータ パーティションを異なるサブスクライバーに送信できるので (2 つのサブスクライバーが同一のデータ値を更新することはない)、競合をなくす、または減らすことができます。  
   
--   機密データの送信を回避できます。 行フィルターと列フィルターを使用して、サブスクライバーによるデータへのアクセスを制限できます。 マージ レプリケーションにおいて HOST_NAME() を含むパラメーター化されたフィルターを使用する場合は、セキュリティ上の留意事項があります。 詳細については、「HOST_NAME() によるフィルター選択」のセクションを参照してください [パラメーター化された行フィルター](../../relational-databases/replication/merge/parameterized-row-filters.md)します。  
+-   機密データの送信を回避できます。 行フィルターと列フィルターを使用して、サブスクライバーによるデータへのアクセスを制限できます。 マージ レプリケーションにおいて HOST_NAME() を含むパラメーター化されたフィルターを使用する場合は、セキュリティ上の留意事項があります。 詳細については、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」の「HOST_NAME() によるフィルター選択」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[フィルター選択されたテーブル]**  
  このペインには、パブリケーションのテーブル アーティクルに追加したフィルターが表示されます。 行フィルターが設定されているテーブルは、ペイン内で最上位レベルのノードとして表示されます。 マージ パブリケーションの場合、結合フィルターを介してフィルター選択が拡張されているテーブルは、子ノードとして表示されます。  
   
  **[追加]**  
- クリックして **追加** テーブル アーティクルをフィルター処理することができます] ダイアログ ボックスを起動します。 スナップショット パブリケーションまたはトランザクション パブリケーションに対して **[追加]** をクリックすると、ダイアログ ボックスが即座に表示されます。 マージ パブリケーションに対して **[追加]** をクリックすると、 **[フィルターの追加]**、 **[選択したフィルターを拡張するために結合を追加する]**、 **[フィルターを自動的に生成]**の 3 つのオプションが表示されます。  
+ **[追加]** をクリックすると、テーブル アーティクルをフィルター選択するためのダイアログ ボックスが表示されます。 スナップショット パブリケーションまたはトランザクション パブリケーションに対して **[追加]** をクリックすると、ダイアログ ボックスが即座に表示されます。 マージ パブリケーションに対して **[追加]** をクリックすると、 **[フィルターの追加]**、 **[選択したフィルターを拡張するために結合を追加する]**、 **[フィルターを自動的に生成]**の 3 つのオプションが表示されます。  
   
 -   **[フィルターの追加]** をクリックすると、 **[フィルターの追加]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、行フィルターをテーブル アーティクルに適用できます。 たとえば、 **[フィルターの追加]** ダイアログ ボックスを使用して、顧客データ テーブルをサブスクライバーにレプリケートするときにフランスの顧客に関するデータだけを格納するように指定できます。  
   
@@ -64,29 +68,29 @@ caps.handback.revision: 21
     >  レプリケーションによってフィルターを自動的に生成した場合、パブリケーションの既存のフィルターは削除されます。 自動生成したフィルターと手動で指定したフィルターの両方を含めるには、フィルターの生成を最初に行います。 自動生成したフィルターは、1 つのパブリケーションにつき 1 セットしか指定できません。  
   
  **[編集]**  
- フィルター ペインで行フィルターまたは結合フィルターを選択し、をクリックして **編集** を起動する、 **フィルターの編集** または **結合の編集** ] ダイアログ ボックス。  
+ フィルター ペインで行フィルターまたは結合フィルターを選択し、 **[編集]** をクリックすると、 **[フィルターの編集]** ダイアログ ボックスまたは **[結合の編集]** ダイアログ ボックスが表示されます。  
   
  **Del**  
- フィルター ペインで行フィルターまたは結合フィルターを選択し、をクリックして **削除** フィルターを削除します。  
+ フィルター ペインで行フィルターまたは結合フィルターを選択し、 **[削除]** をクリックすると、フィルターを削除できます。  
   
  **[テーブルの検索]**  
  マージ パブリケーションのみです。 **[テーブルの検索]** をクリックすると、複雑なフィルター ツリー内でテーブルを検索できます。 複雑なリレーションシップを持つデータベースでは、1 つのテーブルを複数のテーブルに結合できます。その場合、テーブルはフィルター ツリー内で複数の場所に表示されます。  
   
- 実際のテーブルはツリー内の 1 つの場所に表示されます。他の場所では、テーブルがショートカットによって表されます。 テーブルのショートカットはテーブルの単なる参照であり、テーブルの子ノードを示すものではありません。 ショートカット ノードはショートカット矢印でマークされ、テキストを表示するノードを展開する **テーブルを表示するテーブルの検索] をクリックして \< tablename>**します。  
+ 実際のテーブルはツリー内の 1 つの場所に表示されます。他の場所では、テーブルがショートカットによって表されます。 テーブルのショートカットはテーブルの単なる参照であり、テーブルの子ノードを示すものではありません。 ショートカット ノードはショートカット矢印付きで示されます。このノードを展開すると、**[\<tablename> のテーブルを表示するには、[テーブルの検索]** をクリックします。] というテキストが表示されます。  
   
  ペイン内でショートカット ノードを選択し、 **[テーブルの検索]** をクリックすると、ペインが展開され、テーブルが強調表示されます。 ショートカット ノードを選択せずに **[テーブルの検索]** をクリックすると、 **[テーブルの検索]** ダイアログ ボックスが表示されます。  
   
- **Assert**  
+ **[フィルター]**  
  フィルター ペインで選択されたフィルターの [!INCLUDE[tsql](../../includes/tsql-md.md)] 定義を含みます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [初期スナップショットの作成および適用](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [パブリッシュされたデータのフィルター選択](../../relational-databases/replication/publish/filter-published-data.md)   
  [結合フィルター](../../relational-databases/replication/merge/join-filters.md)   
- [パラメーター化された行フィルター](../../relational-databases/replication/merge/parameterized-row-filters.md)   
+ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

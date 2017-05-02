@@ -1,33 +1,37 @@
 ---
 title: "ビューに関する情報の取得 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.viewproperties.general.f1"
-helpviewer_keywords: 
-  - "ビュー [SQL Server]、状態情報"
-  - "ビューのメタデータ [SQL Server]"
-  - "依存関係 [SQL Server]、ビュー"
-  - "ビュー情報の表示"
-  - "ビュー [SQL Server]、メタデータ"
-  - "ビュー情報の表示"
-  - "状態情報 [SQL Server]、ビュー"
-  - "ビューの依存関係"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.viewproperties.general.f1
+helpviewer_keywords:
+- views [SQL Server], status information
+- metadata [SQL Server], views
+- dependencies [SQL Server], views
+- displaying view information
+- views [SQL Server], metadata
+- viewing view information
+- status information [SQL Server], views
+- view dependencies
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f2a981d28720713387dd5b593f037662b9b6b654
+ms.lasthandoff: 04/11/2017
+
 ---
-# ビューに関する情報の取得
+# <a name="get-information-about-a-view"></a>ビューに関する情報の取得
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のビューの定義またはプロパティに関する情報は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して取得できます。 ビューのデータが元のテーブルからどのように抽出されているのかを理解したり、ビューで定義されているデータを確認するために、ビューの定義を調べたい場合があります。  
   
 > [!IMPORTANT]  
@@ -54,11 +58,11 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### オブジェクト エクスプローラーを使用してビューのプロパティを取得する  
+#### <a name="get-view-properties-by-using-object-explorer"></a>オブジェクト エクスプローラーを使用してビューのプロパティを取得する  
   
 1.  **オブジェクト エクスプローラー**で、プロパティを表示するビューを含むデータベースの横にあるプラス記号をクリックします。次に、プラス記号をクリックして **[ビュー]** フォルダーを展開します。  
   
-2.  プロパティを表示するビューを右クリックし、**[プロパティ]** を選択します。  
+2.  プロパティを表示するビューを右クリックし、 **[プロパティ]**を選択します。  
   
      **[ビューのプロパティ]** ダイアログ ボックスに次のプロパティが表示されます。  
   
@@ -95,13 +99,13 @@ caps.handback.revision: 30
      **[スキーマ バインド]**  
      ビューがスキーマ バインドされているかどうかを指定します。 値は True と False です。 スキーマ バインド ビューの詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」の SCHEMABINDING のトピックを参照してください。  
   
-#### ビュー デザイナー ツールを使用したビューのプロパティの取得  
+#### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>ビュー デザイナー ツールを使用したビューのプロパティの取得  
   
 1.  **オブジェクト エクスプローラー**で、プロパティを表示するビューを含むデータベースを展開します。次に、 **[ビュー]** フォルダーを展開します。  
   
-2.  プロパティを表示するビューを右クリックし、**[デザイン]** を選択します。  
+2.  プロパティを表示するビューを右クリックし、 **[デザイン]**を選択します。  
   
-3.  ダイアグラム ペインの空白領域を右クリックし、**[プロパティ]** をクリックします。  
+3.  ダイアグラム ペインの空白領域を右クリックし、 **[プロパティ]**をクリックします。  
   
      **[プロパティ]** ウィンドウに次のプロパティが表示されます。  
   
@@ -136,25 +140,25 @@ caps.handback.revision: 30
      選択したビューによってすべての列が返されるかどうかを示します。 これは、ビューの作成時に設定されます。  
   
      **[SQL コメント]**  
-     SQL ステートメントの説明を表示します。 説明全体を表示したり、説明を編集したりするには、説明をクリックして、プロパティの右側にある省略記号 (**[...]**) をクリックします。 ビューの使用者やビューをいつ使用するかなどの情報をコメントに含めることもできます。  
+     SQL ステートメントの説明を表示します。 説明全体を表示したり、説明を編集したりするには、説明をクリックして、プロパティの右側にある省略記号 ( **[...]** ) をクリックします。 ビューの使用者やビューをいつ使用するかなどの情報をコメントに含めることもできます。  
   
      **[TOP の指定]**  
-     展開すると、**[TOP]**、**[式]**、**[パーセント]**、および **[With Ties]** の各プロパティのプロパティが表示されます。  
+     展開すると、 **[TOP]**、 **[式]**、 **[パーセント]**、および **[With Ties]** の各プロパティのプロパティが表示されます。  
   
      **[(Top)]**  
      ビューに TOP 句が含まれるように指定します。この場合、最初の n 行または最初の n% の行だけが結果セットに返されます。 既定では、ビューは最初の 10 行を結果セットに返します。 返される行数を変更するか、異なるパーセントを指定する場合に使用します。  
   
-     **式**  
-     ビューによって返されるパーセント (**[パーセント]** が **[はい]** に設定されている場合) またはレコード数 (**[パーセント]** が **[いいえ]** に設定されている場合) を示します。  
+     **[式]**  
+     ビューによって返されるパーセント ( **[パーセント]** が **[はい]**に設定されている場合) またはレコード数 ( **[パーセント]** が **[いいえ]**に設定されている場合) を示します。  
   
-     **パーセント**  
+     **[パーセント]**  
      クエリに **TOP** 句が含まれるように指定します。この場合、最初の n% の行だけが結果セットに返されます。  
   
      **[With Ties]**  
      ビューに **WITH TIES** 句が含まれるように指定します。 **WITH TIES** は、ビューに **ORDER BY** 句とパーセンテージに基づく **TOP** 句が含まれる場合に便利です。 このオプションを設定すると、 **ORDER BY** 句の列で同一の値を持つ行がセットになり、セットの一部の行がパーセンテージによる制限で切り捨てられてしまう場合は、すべての行が含まれるように、ビューで指定されるパーセンテージが増やされます。  
   
      **[更新の指定]**  
-     展開すると、**[表示ルールを使用して更新]** プロパティと **[オプションのチェック]** プロパティのプロパティが表示されます。  
+     展開すると、 **[表示ルールを使用して更新]** プロパティと **[オプションのチェック]** プロパティのプロパティが表示されます。  
   
      **(表示ルールを使用して更新)**  
      Microsoft Data Access Components (MDAC) によって、すべての更新およびビューへの挿入は、ビューのベース テーブルを直接参照する SQL ステートメントではなく、ビューを参照する SQL ステートメントに変換されます。  
@@ -162,21 +166,21 @@ caps.handback.revision: 30
      MDAC マニフェストは、更新およびビューの挿入操作を、ビューの基になるベース テーブルに対する更新および挿入操作として見なす場合があります。 **[表示ルールを使用して更新]**を選択することにより、MDAC がビュー自体に対する更新および挿入操作を生成することが保証されます。  
   
      **[オプションのチェック]**  
-     このビューを開き、**[結果]** ウィンドウを変更すると、データ ソースによって、追加または変更されたデータがビュー定義の **WHERE** 句を満たすかどうかがチェックされます。 変更内容が **WHERE** 句を満たさない場合、エラーが詳細情報と共に表示されます。  
+     このビューを開き、 **[結果]** ウィンドウを変更すると、データ ソースによって、追加または変更されたデータがビュー定義の **WHERE** 句を満たすかどうかがチェックされます。 変更内容が **WHERE** 句を満たさない場合、エラーが詳細情報と共に表示されます。  
   
-#### ビューの依存関係を取得するには  
+#### <a name="to-get-dependencies-on-the-view"></a>ビューの依存関係を取得するには  
   
 1.  **オブジェクト エクスプローラー**で、プロパティを表示するビューを含むデータベースを展開します。次に、 **[ビュー]** フォルダーを展開します。  
   
-2.  プロパティを表示するビューを右クリックし、**[依存関係の表示]** を選択します。  
+2.  プロパティを表示するビューを右クリックし、 **[依存関係の表示]**を選択します。  
   
-3.  ビューを参照するオブジェクトを表示するには、**[[ビュー名] に依存するオブジェクト]** を選択します。  
+3.  ビューを参照するオブジェクトを表示するには、 **[[ビュー名] に依存するオブジェクト]** を選択します。  
   
-4.  ビューによって参照されるオブジェクトを表示するには、**[[ビュー名] が依存するオブジェクト]** を選択します。  
+4.  ビューによって参照されるオブジェクトを表示するには、 **[[ビュー名] が依存するオブジェクト]** を選択します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### ビューの定義およびプロパティを取得するには  
+#### <a name="to-get-the-definition-and-properties-of-a-view"></a>ビューの定義およびプロパティを取得するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -206,7 +210,7 @@ caps.handback.revision: 30
   
  詳細については、「[sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)」、「[OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)」、および「[sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)」を参照してください。  
   
-#### ビューの依存関係を取得するには  
+#### <a name="to-get-the-dependencies-of-a-view"></a>ビューの依存関係を取得するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

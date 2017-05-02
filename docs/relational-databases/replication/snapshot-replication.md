@@ -1,25 +1,29 @@
 ---
 title: "スナップショット レプリケーション | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "snapshot replication [SQL Server], about snapshot replication"
-  - "スナップショット レプリケーション [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snapshot replication [SQL Server], about snapshot replication
+- snapshot replication [SQL Server]
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6c99d91ab0209eb08c04488ce27043b2ad714781
+ms.lasthandoff: 04/11/2017
+
 ---
-# スナップショット レプリケーション
+# <a name="snapshot-replication"></a>スナップショット レプリケーション
   スナップショット レプリケーションでは、特定の時間に表示されていた状態のデータを配信します。データに対する更新は監視されません。 同期が発生するとデータ全体のスナップショットが作成され、サブスクライバーに送信されます。  
   
 > [!NOTE]  
@@ -59,7 +63,7 @@ caps.handback.revision: 34
  ![スナップショット レプリケーション コンポーネントとデータ フロー](../../relational-databases/replication/media/snapshot.gif "スナップショット レプリケーション コンポーネントとデータ フロー")  
   
 ##  <a name="SnapshotAgent"></a> スナップショット エージェント  
- マージ レプリケーションの場合は、スナップショット エージェントが起動するたびにスナップショットが生成されます。 トランザクション レプリケーションでは、スナップショットの生成がパブリケーションのプロパティの設定に依存 **immediate_sync**します。 プロパティが TRUE に設定されていると (パブリケーションの新規作成ウィザードを使用する際の既定の設定)、スナップショット エージェントを実行するたびにスナップショットが生成され、いつでもスナップショットをサブスクライバーに適用できます。 プロパティが FALSE に設定されている場合 (既定値を使用する場合 **sp_addpublication**)、最後のスナップショット エージェントを実行します以降、新しいサブスクリプションが追加された場合にのみ、スナップショットを生成。サブスクライバーは、スナップショット エージェントを同期する前に、完了を待つ必要があります。  
+ マージ レプリケーションの場合は、スナップショット エージェントが起動するたびにスナップショットが生成されます。 トランザクション レプリケーションでは、スナップショットの生成はパブリケーション プロパティ **immediate_sync**の設定で決まります。 プロパティが TRUE に設定されていると (パブリケーションの新規作成ウィザードを使用する際の既定の設定)、スナップショット エージェントを実行するたびにスナップショットが生成され、いつでもスナップショットをサブスクライバーに適用できます。 プロパティが FALSE に設定されていると ( **sp_addpublication**を使用する場合の既定の設定)、最後にスナップショット エージェントを実行してから新しいサブスクリプションが追加された場合にのみスナップショットが生成されます。サブスクライバーは、スナップショット エージェントが完了するまで同期することはできません。  
   
  スナップショット エージェントは以下の手順を実行します。  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 34
   
 3.  パブリッシュされたテーブルのデータをパブリッシャーでコピーし、スナップショット フォルダーにデータを書き込みます。 スナップショットは、一連の一括コピー プログラム (BCP) ファイルとして生成されます。  
   
-4.  スナップショット レプリケーションおよびトランザクション パブリケーション、スナップショット エージェントが行を追加、 **MSrepl_commands** と **MSrepl_transactions** ディストリビューション データベース内のテーブルです。 内のエントリ、 **MSrepl_commands** テーブルは、.sch と .bcp ファイル、その他のスナップショット ファイルの場合は、および任意の前または後のスナップショット スクリプトへの参照の場所を示すコマンドを示します。 内のエントリ、 **MSrepl_transactions** テーブルは、サブスクライバーの同期に関連するコマンドです。  
+4.  スナップショット パブリケーションとトランザクション パブリケーションの場合、ディストリビューション データベース内の **MSrepl_commands** テーブルと **MSrepl_transactions** テーブルに行を追加します。 **MSrepl_commands** テーブル中のエントリは、.sch ファイルと .bcp ファイル、その他のスナップショット ファイルの場所を示すコマンドと、スナップショットの作成前後に実行するスクリプトへの参照です。 **MSrepl_transactions** テーブル内のエントリは、サブスクライバーの同期に関連するコマンドです。  
   
      マージ パブリケーションの場合は、スナップショット エージェントで実行する手順が追加されます。  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 34
   
 1.  ディストリビューターへの接続を確立します。  
   
-2.  調べ、 **MSrepl_commands** と **MSrepl_transactions** 、ディストリビューター側のディストリビューション データベース内のテーブルです。 最初のテーブルからスナップショット ファイルの位置を読み取り、両方のテーブルからサブスクライバー同期コマンドを読み取ります。  
+2.  ディストリビューターのディストリビューション データベースにある **MSrepl_commands** テーブルと **MSrepl_transactions** テーブルを調査します。 最初のテーブルからスナップショット ファイルの位置を読み取り、両方のテーブルからサブスクライバー同期コマンドを読み取ります。  
   
 3.  スキーマとコマンドをサブスクリプション データベースに適用します。  
   

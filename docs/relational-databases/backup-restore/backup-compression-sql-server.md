@@ -1,30 +1,34 @@
 ---
 title: "バックアップの圧縮 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ログ配布 [SQL Server]、バックアップの圧縮"
-  - "バックアップの圧縮 [SQL Server]、バックアップの圧縮について"
-  - "圧縮 [SQL Server]、バックアップの圧縮"
-  - "バックアップ [SQL Server]、圧縮"
-  - "バックアップ [SQL Server]、バックアップの圧縮"
-  - "バックアップの圧縮 [SQL Server]"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], backup compression
+- backup compression [SQL Server], about backup compression
+- compression [SQL Server], backup compression
+- backups [SQL Server], compression
+- backing up [SQL Server], backup compression
+- backup compression [SQL Server]
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 caps.latest.revision: 51
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08936c44013d5494c72500f3230a1c90da1e4325
+ms.lasthandoff: 04/11/2017
+
 ---
-# バックアップの圧縮 (SQL Server)
-  このトピックでは、バックアップの圧縮の制限、パフォーマンス面のトレードオフ、バックアップの圧縮の構成、圧縮比率など、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップの圧縮について説明します。  バックアップの圧縮は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] エディションの Enterprise、Standard、および Developer でサポートされています。  圧縮されたバックアップは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降の各エディションで復元できます。 
+# <a name="backup-compression-sql-server"></a>バックアップの圧縮 (SQL Server)
+  このトピックでは、バックアップの圧縮の制限、パフォーマンス面のトレードオフ、バックアップの圧縮の構成、圧縮比率など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップの圧縮について説明します。  バックアップの圧縮は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] エディションの Enterprise、Standard、および Developer でサポートされています。  圧縮されたバックアップは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降の各エディションで復元できます。 
  
   
 ##  <a name="Benefits"></a> 利点  
@@ -45,21 +49,21 @@ caps.handback.revision: 51
   
   
 ##  <a name="PerfImpact"></a> バックアップの圧縮がパフォーマンスに与える影響  
- 既定の設定では、圧縮によって CPU 使用率が著しく増加し、圧縮処理によって CPU がさらに消費されるために、同時に実行される操作が悪影響を受ける場合があります。 このため、[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)によって CPU 使用率が制限されるセッションでは、優先度の低い圧縮バックアップを作成することができます。 詳細については、[「リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 &#40;Transact-SQL&#41;」](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)を参照してください。  
+ 既定の設定では、圧縮によって CPU 使用率が著しく増加し、圧縮処理によって CPU がさらに消費されるために、同時に実行される操作が悪影響を受ける場合があります。 このため、[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)によって CPU 使用率が制限されるセッションでは、優先度の低い圧縮バックアップを作成することができます。 詳細については、このトピックの「 [リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)によって CPU 使用率が制限されるセッションでは、優先度の低い圧縮バックアップを作成することができます。  
   
  バックアップ I/O パフォーマンスの実態を把握するためには、次のようなパフォーマンス カウンターを評価することで、デバイスに対するバックアップ I/O を特定できます。  
   
 -   物理ディスク カウンターなどの Windows I/O パフォーマンス カウンター  
   
--   [SQLServer:Backup Device](../../relational-databases/performance-monitor/sql-server-backup-device-object.md) オブジェクトの **Device Throughput Bytes/sec** カウンター  
+-   **SQLServer:Backup Device** オブジェクトの [Device Throughput Bytes/sec](../../relational-databases/performance-monitor/sql-server-backup-device-object.md) カウンター  
   
--   [SQLServer:Databases](../../relational-databases/performance-monitor/sql-server-databases-object.md) オブジェクトの **Backup/Restore Throughput/sec** カウンター  
+-   **SQLServer:Databases** オブジェクトの [Backup/Restore Throughput/sec](../../relational-databases/performance-monitor/sql-server-databases-object.md) カウンター  
   
- Windows カウンターの詳細については、Windows ヘルプを参照してください。 SQL Server カウンターの使用方法の詳細については、「[SQL Server オブジェクトの使用](../../relational-databases/performance-monitor/use-sql-server-objects.md)」をご覧ください。  
+ Windows カウンターの詳細については、Windows ヘルプを参照してください。 SQL Server カウンターの使用方法の詳細については、「 [SQL Server オブジェクトの使用](../../relational-databases/performance-monitor/use-sql-server-objects.md)」をご覧ください。  
   
    
 ##  <a name="CompressionRatio"></a> 圧縮されたバックアップの圧縮比率の計算  
- バックアップの圧縮比率を計算するには、[backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 履歴テーブルの **backup_size** 列と **compressed_backup_size** 列にある値を次のように使用します。  
+ バックアップの圧縮比率を計算するには、 **backupset** 履歴テーブルの **backup_size** 列と [compressed_backup_size](../../relational-databases/system-tables/backupset-transact-sql.md) 列にある値を次のように使用します。  
   
  **backup_size**:**compressed_backup_size**  
   
@@ -105,8 +109,9 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 -   [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
- [トレース フラグ &#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md)  
+ [トレース フラグ &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
   
+

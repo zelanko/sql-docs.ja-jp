@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG021797 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG021797 エラー"
+title: MSSQL_ENG021797 | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG021797 error
 ms.assetid: 54d83a1e-43fd-449c-a2b2-fdda2609a534
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8ce190c55129af7f48dc8a4ab8f6c8cf16819436
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG021797
+# <a name="mssqleng021797"></a>MSSQL_ENG021797
     
-## メッセージの詳細  
+## <a name="message-details"></a>メッセージの詳細  
   
 |||  
 |-|-|  
@@ -31,29 +35,29 @@ caps.handback.revision: 14
 |シンボル名||  
 |メッセージ テキスト|'%s' は次の形式の有効な Windows ログインにしてください: 'MACHINE\Login' または 'DOMAIN\Login'。 '%s' については、マニュアルを参照してください。|  
   
-## 説明  
- 値が指定されている場合、次のレプリケーションのストアド プロシージャでこのエラーが発生、 **@job_login** パラメーターが null または有効ではありません。 このエラーは、メンバーの場合に発生する可能性が、 **db_owner** 固定データベース ロールの以前のバージョンからのスクリプトを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ではセキュリティ モデルが変更されたため、これらのスクリプトは更新する必要があります。  
+## <a name="explanation"></a>説明  
+ このエラーは、 **@job_login** パラメーターに指定された値が NULL または無効の場合に、以下のレプリケーション ストアド プロシージャにより発生します。 このエラーは、 **db_owner** 固定データベース ロールのメンバーが、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのスクリプトを実行すると発生する場合があります。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ではセキュリティ モデルが変更されたため、これらのスクリプトは更新する必要があります。  
   
--   [sp_addlogreader_agent & #40 です。Transact SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
+-   [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
   
--   [sp_addqreader_agent & #40 です。Transact SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md)  
+-   [sp_addqreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md)  
   
--   [sp_addpublication_snapshot & #40 です。Transact SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)  
+-   [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)  
   
--   [sp_addpushsubscription_agent & #40 です。Transact SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)  
+-   [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)  
   
--   [sp_addpullsubscription_agent & #40 です。Transact SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)  
+-   [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)  
   
--   [sp_addmergepushsubscription_agent & #40 です。Transact SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)  
+-   [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)  
   
--   [sp_addmergepullsubscription_agent & #40 です。Transact SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)  
+-   [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)  
   
- メンバーがこれらのストアド プロシージャを実行できる、 **sysadmin** 固定サーバー ロールのメンバーか、適切なサーバーを **db_owner** 適切なデータベースの固定データベース ロール。 ストアド プロシージャはそれぞれエージェント ジョブを作成します。これにより、エージェントの実行に使用される [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントを指定できます。 内のユーザーに対して、 **sysadmin** ロール、エージェント ジョブが暗黙的に作成される Windows アカウントが指定されていない場合でも (アカウントが指定されている場合) でなければ無効です。 エージェントのコンテキストで実行、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 適切なサーバーでエージェント サービス アカウント。 アカウントは必要ありませんが、セキュリティ上、エージェントごとに異なるアカウントを指定することをお勧めします。 詳しくは、「 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)」をご覧ください。  
+ これらのストアド プロシージャは、適切なサーバー上の **sysadmin** 固定サーバー ロールのメンバー、または適切なデータベース内の **db_owner** 固定データベース ロールのメンバーにより実行されます。 ストアド プロシージャはそれぞれエージェント ジョブを作成します。これにより、エージェントの実行に使用される [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントを指定できます。 **sysadmin** ロールのユーザーに対し、エージェント ジョブは、Windows アカウントが指定されていなくても (アカウントが指定されている場合、そのアカウントは有効である必要があります)、暗黙的に作成されます。エージェントは、適切なサーバーでの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントのコンテキストの下で実行されます。 アカウントは必要ありませんが、セキュリティ上、エージェントごとに異なるアカウントを指定することをお勧めします。 詳細については、「 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
-## ユーザーの操作  
- 有効な Windows アカウントを指定してください、 **@job_login** 各プロシージャのパラメーターです。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からのレプリケーション スクリプトがある場合は、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] に必要なストアド プロシージャやパラメーターをこれらのスクリプトに含めるように更新します。 詳細については、次を参照してください。 [レプリケーション スクリプトのアップグレード、および #40 です。レプリケーション TRANSACT-SQL プログラミングと #41;](../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)します。  
+## <a name="user-action"></a>ユーザーの操作  
+ 各プロシージャの **@job_login** パラメーターに対し、有効な Windows アカウントが指定されていることを確認します。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのレプリケーション スクリプトがある場合は、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]に必要なストアド プロシージャやパラメーターをこれらのスクリプトに含めるように更新します。 詳細については、「[レプリケーション スクリプトのアップグレード &#40;レプリケーション Transact-SQL プログラミング&#41;](../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)」を参照してください。  
   
-## 参照  
- [エラーとイベントのリファレンスと #40 です。レプリケーションと #41 です。](../../relational-databases/replication/errors-and-events-reference-replication.md)  
+## <a name="see-also"></a>参照  
+ [エラーとイベントのリファレンス &#40;レプリケーション&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

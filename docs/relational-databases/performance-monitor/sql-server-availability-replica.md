@@ -1,27 +1,31 @@
 ---
 title: "SQL Server、Availability Replica | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "監視の可用性グループ [SQL Server]"
-  - "パフォーマンス カウンター [SQL Server]、AlwaysOn 可用性グループ"
-  - "SQL Server:可用性レプリカ"
-  - "可用性グループ [SQL Server]、パフォーマンス カウンター"
+ms.custom: 
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], monitoring
+- performance counters [SQL Server], AlwaysOn Availability Groups
+- SQLServer:Availability Replica
+- Availability Groups [SQL Server], performance counters
 ms.assetid: e402f996-c1fb-484a-b804-45c49972f2e0
 caps.latest.revision: 25
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 327b70f445a9f794152073a39059165f75fd3cad
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server、Availability Replica
+# <a name="sql-server-availability-replica"></a>SQL Server、Availability Replica
   **SQLServer:Availability Replica** パフォーマンス オブジェクトには、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の AlwaysOn 可用性グループの可用性レプリカに関する情報を報告するパフォーマンス カウンターが含まれています。 可用性レプリカのパフォーマンス カウンターはすべてプライマリ レプリカとセカンダリ レプリカの両方に適用され、送信/受信カウンターによってローカル レプリカの状態が示されます。 ほとんどの場合、プライマリ レプリカがデータの大部分を送信し、セカンダリ レプリカがデータを受信します。 ただし、セカンダリ レプリカは、ACK と他のバックグラウンド トラフィックをプライマリ レプリカに送信します。 可用性レプリカでは、ローカル レプリカの現在のロール (プライマリまたはセカンダリ) に応じて一部のカウンターが値 0 を示します。  
   
 |カウンター名|説明|  
@@ -36,9 +40,10 @@ caps.handback.revision: 25
 |**レプリカへの送信/秒**|この可用性レプリカに 1 秒あたりに送信された AlwaysOn メッセージの数。|  
 |**トランスポートへの送信/秒**|リモート可用性レプリカにネットワーク経由で 1 秒あたりに送信された実際の AlwaysOn メッセージ数。 プライマリ レプリカの場合、これはセカンダリ レプリカに送信されたメッセージ数です。 セカンダリ レプリカの場合、これはプライマリ レプリカに送信されたメッセージ数です。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [リソースの利用状況の監視 &#40;システム モニター&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server、Database Replica](../../relational-databases/performance-monitor/sql-server-database-replica.md)   
  [AlwaysOn 可用性グループ (SQL Server)](https://msdn.microsoft.com/library/hh510230.aspx)  
   
   
+

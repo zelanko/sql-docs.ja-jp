@@ -1,28 +1,32 @@
 ---
 title: "バックアップと復元: 相互運用性と共存 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ファイル復元 [SQL Server], 関連機能"
-  - "復元 [SQL Server], ファイル"
-  - "ファイルの復元 [SQL Server], 関連機能"
-  - "バックアップ [SQL Server], ファイルまたはファイル グループ"
-  - "ファイル バックアップ [SQL Server], 関連機能"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- file restores [SQL Server], related features
+- restoring [SQL Server], files
+- restoring files [SQL Server], related features
+- backups [SQL Server], files or filegroups
+- file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aadb21aaaf4d71cd4a22c3642d2e9a02db7008b
+ms.lasthandoff: 04/11/2017
+
 ---
-# バックアップと復元: 相互運用性と共存 (SQL Server)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>バックアップと復元: 相互運用性と共存 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のいくつかの機能のバックアップと復元に関する考慮事項について説明します。 このような機能には、ファイル復元とデータベースの起動、オンライン復元と無効化されたインデックス、データベース ミラーリング、段階的な部分復元、およびフルテキスト インデックスが含まれます。  
@@ -64,19 +68,19 @@ caps.handback.revision: 45
  ここで説明する内容は、複数のファイル グループを含む完全復旧モデルのデータベースだけに関連しています。  
   
 > [!NOTE]  
->  データベース ミラーリング機能は、将来のバージョンの Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用します。  
+>  データベース ミラーリング機能は、将来のバージョンの Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用します。  
   
  データベース ミラーリングは、データベースの可用性を高めるためのソリューションです。 ミラーリングはデータベースごとに実装され、完全復旧モデルを使用するデータベースでのみ機能します。 詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
   
 > [!NOTE]  
->  データベースのファイル グループのサブセットのコピーを配布するには、レプリケーションを使用します。ファイル グループ内のオブジェクトのうち、他のサーバーにコピーしたいものだけをレプリケートします。 レプリケーションの詳細については、「[SQL Server のレプリケーション](../../relational-databases/replication/sql-server-replication.md)」を参照してください。  
+>  データベースのファイル グループのサブセットのコピーを配布するには、レプリケーションを使用します。ファイル グループ内のオブジェクトのうち、他のサーバーにコピーしたいものだけをレプリケートします。 レプリケーションの詳細については、「 [SQL Server のレプリケーション](../../relational-databases/replication/sql-server-replication.md)」を参照してください。  
   
-### ミラー データベースの作成  
- WITH NORECOVERY を指定してプリンシパル データベースのバックアップをミラー サーバーに復元すると、ミラー データベースが作成されます。 この復元したデータベースの名前は、元のデータベースと同じ名前のままにする必要があります。 詳細については、「[ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)」を参照してください。  
+### <a name="creating-the-mirror-database"></a>ミラー データベースの作成  
+ WITH NORECOVERY を指定してプリンシパル データベースのバックアップをミラー サーバーに復元すると、ミラー データベースが作成されます。 この復元したデータベースの名前は、元のデータベースと同じ名前のままにする必要があります。 詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)のいくつかの機能のバックアップと復元に関する考慮事項について説明します。  
   
  段階的な部分復元シーケンスの使用がサポートされている場合は、これを使用してミラー データベースを作成できます。 ただし、ミラーリングを開始できるのは、すべてのファイル グループを復元し、通常はログ バックアップを復元して、ミラー データベースの状態をプリンシパル データベースの状態に十分近づけてからです。 詳細については、「[段階的な部分復元の実行 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)」を参照してください。  
   
-### ミラーリング中のバックアップおよび復元の制限  
+### <a name="restrictions-on-backup-and-restore-during-mirroring"></a>ミラーリング中のバックアップおよび復元の制限  
  データベース ミラーリング セッションがアクティブの場合は、次の制限があります。  
   
 -   ミラー データベースのバックアップおよび復元は実行できません。  
@@ -91,9 +95,9 @@ caps.handback.revision: 45
  フルテキスト インデックスは、データベース ファイル グループに格納され、段階的な部分復元による影響を受ける可能性があります。 関連するテーブル データのいずれかと同じファイル グループにフルテキスト インデックスが格納されている場合、段階的な部分復元は想定どおりに機能します。  
   
 > [!NOTE]  
->  フルテキスト インデックスが格納されているファイル グループのファイル グループ ID を表示するには、[sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) の data_space_id 列を選択します。  
+>  フルテキスト インデックスが格納されているファイル グループのファイル グループ ID を表示するには、 [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)の data_space_id 列を選択します。  
   
-### ファイル グループが異なるフルテキスト インデックスとテーブル  
+### <a name="full-text-indexes-and-tables-in-separate-filegroups"></a>ファイル グループが異なるフルテキスト インデックスとテーブル  
  フルテキスト インデックスが、関連するテーブル データのいずれとも異なるファイル グループに格納されている場合、先にどちらのファイル グループを復元しオンラインにするかによって段階的な部分復元の動作が異なります。  
   
 -   関連するテーブル データを含むファイル グループより先に、フルテキスト インデックスを含むファイル グループが復元され、オンラインになる場合は、フルテキスト インデックスがオンラインになるとすぐ、フルテキスト検索が想定どおりに機能します。  
@@ -106,14 +110,14 @@ caps.handback.revision: 45
   
     -   変更の追跡の状態にかかわらず、インデックスが使用できないので、フルテキスト クエリは失敗します。 フルテキスト クエリの実行時に、フルテキスト インデックスを含むファイル グループがオフラインだった場合、エラーが返されます。  
   
-    -   状態関数 (FULLTEXTCATALOGPROPERTY など) は、フルテキスト インデックスにアクセスする必要がない場合にのみ成功します。 たとえば、オンラインのフルテキスト メタデータへのアクセスは成功しますが、**uniquekeycount、itemcount** は失敗します。  
+    -   状態関数 (FULLTEXTCATALOGPROPERTY など) は、フルテキスト インデックスにアクセスする必要がない場合にのみ成功します。 たとえば、オンラインのフルテキスト メタデータへのアクセスは成功しますが、 **uniquekeycount、itemcount** は失敗します。  
   
      フルテキスト インデックスのファイル グループが復元され、オンラインになった後は、インデックス データとテーブル データの整合性が保たれています。  
   
  ベース テーブルのファイル グループとフルテキスト インデックスのファイル グループの両方がオンラインになるとすぐに、一時停止中のフルテキスト作成がすべて再開されます。  
   
 ##  <a name="FileBnRandCompression"></a> ファイル バックアップと復元と圧縮  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  では、読み取り専用ファイル グループや読み取り専用データベースの NTFS ファイル システム データ圧縮がサポートされます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、読み取り専用ファイル グループや読み取り専用データベースの NTFS ファイル システム データ圧縮がサポートされます。  
   
  圧縮された NTFS ファイルでは、読み取り専用ファイル グループのファイルの復元がサポートされます。 このようなファイル グループのバックアップや復元は、基本的には読み取り専用ファイル グループと同様に機能しますが、次の例外があります。  
   
@@ -130,9 +134,10 @@ caps.handback.revision: 45
   
 -   [フルテキスト カタログとフルテキスト インデックスのバックアップおよび復元](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [レプリケートされたデータベースのバックアップと復元](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
 [アクティブなセカンダリ: セカンダリ レプリカでのバックアップ \(AlwaysOn 可用性グループ\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   
+

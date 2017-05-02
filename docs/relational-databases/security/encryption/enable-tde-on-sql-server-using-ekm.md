@@ -1,30 +1,34 @@
 ---
 title: "EKM の使用による TDE の有効化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "暗号化 [SQL Server], EKM の使用による TDE"
-  - "TDE, EKM 操作方法"
-  - "EKM, TDE 操作方法"
-  - "Transparent Data Encryption, EKM の使用"
+ms.custom: 
+ms.date: 04/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], TDE using an EKM
+- TDE, EKM how to
+- EKM, TDE how to
+- Transparent Data Encryption, using EKM
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8c98c5335ab148d1d36f56c1375ec1f89219908
+ms.lasthandoff: 04/11/2017
+
 ---
-# EKM の使用による TDE の有効化
-  このトピックでは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で、[!INCLUDE[tsql](../../../includes/tsql-md.md)] の拡張キー管理 (EKM) モジュールに格納されている非対称キーを使用してデータベース暗号化キーを保護する透過的なデータ暗号化 (TDE) を可能にする方法について説明します。  
+# <a name="enable-tde-on-sql-server-using-ekm"></a>EKM の使用による TDE の有効化
+  このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]の拡張キー管理 (EKM) モジュールに格納されている非対称キーを使用してデータベース暗号化キーを保護する透過的なデータ暗号化 (TDE) を可能にする方法について説明します。  
   
- TDE では、データベース暗号化キーという対称キーを使用してデータベース全体のストレージを暗号化します。 データベース暗号化キーは、master データベースのデータベース マスター キーによって保護される証明書を使用して保護することもできます。 データベース マスター キーを使用してデータベース暗号化キーを保護する方法の詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が Azure 仮想マシンで実行されているときに TDE を構成する方法については、「[Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)」を参照してください。 Azure Key Vault でキーを使用して TDE を構成する方法の詳細については、「[SQL 暗号化機能への SQL Server コネクタの使用](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)」を参照してください。 
+ TDE では、データベース暗号化キーという対称キーを使用してデータベース全体のストレージを暗号化します。 データベース暗号化キーは、master データベースのデータベース マスター キーによって保護される証明書を使用して保護することもできます。 データベース マスター キーを使用してデータベース暗号化キーを保護する方法の詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が Azure 仮想マシンで実行されているときに TDE を構成する方法については、「[Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)」を参照してください。 Azure Key Vault でキーを使用して TDE を構成する方法の詳細については、「 [SQL 暗号化機能への SQL Server コネクタの使用](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)」を参照してください。 
 
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
@@ -56,9 +60,9 @@ caps.handback.revision: 26
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### EKM を使用して TDE を有効にするには  
+#### <a name="to-enable-tde-using-ekm"></a>EKM を使用して TDE を有効にするには  
   
-1.  EKM プロバイダーによって提供されるファイルを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンピューターの適切な場所にコピーします。 この例では、**C:\EKM** フォルダーを使用します。  
+1.  EKM プロバイダーによって提供されるファイルを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンピューターの適切な場所にコピーします。 この例では、 **C:\EKM** フォルダーを使用します。  
   
 2.  EKM プロバイダーの要件に従ってコンピューターに証明書をインストールします。  
   
@@ -155,7 +159,8 @@ caps.handback.revision: 26
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Azure SQL Database での Transparent Data Encryption](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md)  
   
   
+

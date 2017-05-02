@@ -1,30 +1,34 @@
 ---
 title: "コレクション アイテムをコレクション セットに追加する (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "コレクション アイテム [SQL Server]"
-  - "コレクション セット [SQL Server], アイテムの追加"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collection items [SQL Server]
+- collection sets [SQL Server], adding items
 ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 90261ca03da94b15b003da029f07d8804aaa1805
+ms.lasthandoff: 04/11/2017
+
 ---
-# コレクション アイテムをコレクション セットに追加する (Transact-SQL)
+# <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>コレクション アイテムをコレクション セットに追加する (Transact-SQL)
   データ コレクターに備わっているストアド プロシージャを使用して、コレクション アイテムを既存のコレクション セットに追加できます。  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターを使用して、次の手順を実行します。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディターを使用して、次の手順を実行します。  
   
-### コレクション アイテムのコレクション セットへの追加  
+### <a name="add-a-collection-item-to-a-collection-set"></a>コレクション アイテムのコレクション セットへの追加  
   
 1.  **sp_syscollector_stop_collection_set** ストアド プロシージャを実行して、アイテムを追加するコレクション セットを停止します。 たとえば、"Test Collection Set" という名前のコレクション セットを停止するには、次のステートメントを実行します。  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 21
     ```  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でオブジェクト エクスプローラーを使用してコレクション セットを停止することもできます。 詳細については、「[コレクション セットの開始または停止](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)」を参照してください。  
+    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを使用してコレクション セットを停止することもできます。 詳細については、「 [コレクション セットの開始または停止](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)」を参照してください。  
   
 2.  コレクション アイテムを追加するコレクション セットを宣言します。 次のコードは、コレクション セット ID を宣言する例です。  
   
@@ -94,10 +98,10 @@ caps.handback.revision: 21
     GO  
     ```  
   
-     コレクション セットとそのコレクション アイテムは、**[結果]** タブに表示されます。  
+     コレクション セットとそのコレクション アイテムは、 **[結果]** タブに表示されます。  
   
-## 参照  
- [ジェネリック T-SQL Query コレクター型を使用するカスタム コレクション セットの作成 &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create custom collection set - generic t-sql query collector type.md)   
+## <a name="see-also"></a>参照  
+ [ジェネリック T-SQL Query コレクター型を使用するカスタム コレクション セットの作成 &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
  [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   
   

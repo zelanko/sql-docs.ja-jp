@@ -1,24 +1,28 @@
 ---
 title: "部分的包含データベースへの移行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "包含データベース, 移行"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- contained database, migrating to
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7d2228b3a1baf08376e1cb5ec862bf89f8a4e2d8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 部分的包含データベースへの移行
+# <a name="migrate-to-a-partially-contained-database"></a>部分的包含データベースへの移行
   このトピックでは、部分的包含データベース モデルへの変更を準備する方法を説明し、移行手順を示します。  
   
  **このトピックの内容:**  
@@ -34,7 +38,7 @@ caps.handback.revision: 17
 ##  <a name="prepare"></a> データベースを移行する準備  
  データベースを部分的包含データベース モデルに移行することを検討している場合は、次の点を確認してください。  
   
--   部分的包含データベース モデルを理解している。 詳細については、「[包含データベース](../../relational-databases/databases/contained-databases.md)」を参照してください。  
+-   部分的包含データベース モデルを理解している。 詳細については、「 [包含データベース](../../relational-databases/databases/contained-databases.md)」を参照してください。  
   
 -   部分的包含データベースに固有のリスクを理解している。 詳しくは、「 [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)」をご覧ください。  
   
@@ -49,8 +53,8 @@ caps.handback.revision: 17
 ##  <a name="enable"></a> 包含データベースの有効化  
  包含データベースを作成するためには、あらかじめ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスで包含データベースを有効にしておく必要があります。  
   
-### Transact SQL を使用して包含データベースを有効にする  
- 次の例では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスで包含データベースを有効にします。  
+### <a name="enabling-contained-databases-using-transact-sql"></a>Transact SQL を使用して包含データベースを有効にする  
+ 次の例では、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスで包含データベースを有効にします。  
   
 ```tsql  
 sp_configure 'contained database authentication', 1;  
@@ -59,20 +63,20 @@ RECONFIGURE ;
 GO  
 ```  
   
-#### Management Studio を使用して包含データベースを有効にする  
- 次の例では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスで包含データベースを有効にします。  
+#### <a name="enabling-contained-databases-using-management-studio"></a>Management Studio を使用して包含データベースを有効にする  
+ 次の例では、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスで包含データベースを有効にします。  
   
-1.  オブジェクト エクスプローラーでサーバー名を右クリックし、**[プロパティ]** をクリックします。  
+1.  オブジェクト エクスプローラーでサーバー名を右クリックし、 **[プロパティ]**をクリックします。  
   
-2.  **[詳細設定]** ページの **[包含]** セクションで、**[包含データベースを有効にする]** オプションを **True** に設定します。  
+2.  **[詳細設定]** ページの **[包含]** セクションで、 **[包含データベースを有効にする]** オプションを **True**に設定します。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="convert"></a> 部分的包含へのデータベースの変換  
- データベースを包含データベースに変換するには、**CONTAINMENT** オプションを変更します。  
+ データベースを包含データベースに変換するには、 **CONTAINMENT** オプションを変更します。  
   
-### Transact-SQL を使用してデータベースを部分的包含に変換する  
- 次の例では、`Accounting` という名前のデータベースを部分的包含データベースに変換します。  
+### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Transact-SQL を使用してデータベースを部分的包含に変換する  
+ 次の例では、 `Accounting` という名前のデータベースを部分的包含データベースに変換します。  
   
 ```tsql  
 USE [master]  
@@ -81,17 +85,17 @@ ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL
 GO  
 ```  
   
-### Management Studio を使用してデータベースを部分的包含に変換する  
+### <a name="converting-a-database-to-partially-contained-using-management-studio"></a>Management Studio を使用してデータベースを部分的包含に変換する  
  次の例では、データベースを部分的包含データベースに変換します。  
   
-1.  オブジェクト エクスプローラーで、**[データベース]** を展開し、変換するデータベースを右クリックして、**[プロパティ]** をクリックします。  
+1.  オブジェクト エクスプローラーで、 **[データベース]**を展開し、変換するデータベースを右クリックして、 **[プロパティ]**をクリックします。  
   
-2.  **[オプション]** ページで、**[包含の種類]** オプションを **[部分]** に変更します。  
+2.  **[オプション]** ページで、 **[包含の種類]** オプションを **[部分]**に変更します。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="users"></a> 包含データベース ユーザーへのユーザーの移行  
- 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインに基づくすべてのユーザーを、パスワードを持つ包含データベース ユーザーに移行します。 有効になっていないログインは除外します。 この例は、包含データベースで実行する必要があります。  
+ 次の例では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインに基づくすべてのユーザーを、パスワードを持つ包含データベース ユーザーに移行します。 有効になっていないログインは除外します。 この例は、包含データベースで実行する必要があります。  
   
 ```tsql  
 DECLARE @username sysname ;  
@@ -116,7 +120,7 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [包含データベース](../../relational-databases/databases/contained-databases.md)   
  [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
  [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  

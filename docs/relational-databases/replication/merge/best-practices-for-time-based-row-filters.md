@@ -1,35 +1,39 @@
 ---
 title: "時間ベースの行フィルターの推奨事項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ベスト プラクティス"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20d358387ae5eb342519c3f6e388fe77279bbe26
+ms.lasthandoff: 04/11/2017
+
 ---
-# 時間ベースの行フィルターの推奨事項
-  アプリケーションのユーザーは、テーブルに対して時間ベースのデータ サブセットを要求することがよくあります。 たとえば、販売員が先週の注文データを必要としたり、イベント プランナーが次週のイベントのデータを必要とする場合などです。 アプリケーションを多くの場合にを含むクエリを使用して、 **GETDATE()** これを実現する関数。 次の行フィルター ステートメントについて考えてみましょう。  
+# <a name="best-practices-for-time-based-row-filters"></a>時間ベースの行フィルターの推奨事項
+  アプリケーションのユーザーは、テーブルに対して時間ベースのデータ サブセットを要求することがよくあります。 たとえば、販売員が先週の注文データを必要としたり、イベント プランナーが次週のイベントのデータを必要とする場合などです。 多くの場合、アプリケーションでは、 **GETDATE()** 関数を含むクエリを使用して、この処理を実行します。 次の行フィルター ステートメントについて考えてみましょう。  
   
 ```  
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- このタイプのフィルターを使用すると、マージ エージェントの実行時には、2 つの処理 (このフィルターに適合する行をサブスクライバーにレプリケートする処理と、このフィルターに適合しない行をサブスクライバー側でクリーンアップする処理) が常に発生すると推測するのが普通です  (によるフィルター処理の詳細については **HOST_NAME()**, を参照してください [パラメーター化された行フィルター](../../../relational-databases/replication/merge/parameterized-row-filters.md).)ところがマージ レプリケーションでは、データに対して行フィルターをどのように定義したかに関係なく、前回の同期以降に変更されたデータのレプリケートおよびクリーンアップのみが行われます。  
+ このタイプのフィルターを使用すると、マージ エージェントの実行時には、2 つの処理 (このフィルターに適合する行をサブスクライバーにレプリケートする処理と、このフィルターに適合しない行をサブスクライバー側でクリーンアップする処理) が常に発生すると推測するのが普通です (**HOST_NAME()** によるフィルター処理の詳細については、「[パラメーター化された行フィルター](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。)ところがマージ レプリケーションでは、データに対して行フィルターをどのように定義したかに関係なく、前回の同期以降に変更されたデータのレプリケートおよびクリーンアップのみが行われます。  
   
- マージ レプリケーションで行を処理するには、行内のデータが行フィルターに適合していて、前回の同期以降にデータが変更されている必要があります。 場合、 **SalesOrderHeader** テーブル **OrderDate** 行が挿入されるときに入力します。 挿入はデータ変更なので、行は、期待どおりにサブスクライバーにレプリケートされます。 ただし、フィルターに適合しなくなった行 (7 日前以前の注文の行) がサブスクライバー側にある場合、他のなんらかの理由で更新されていない限り、その行はサブスクライバーから削除されません。  
+ マージ レプリケーションで行を処理するには、行内のデータが行フィルターに適合していて、前回の同期以降にデータが変更されている必要があります。 **SalesOrderHeader** テーブルでは、行が挿入されると **OrderDate** が入力されます。 挿入はデータ変更なので、行は、期待どおりにサブスクライバーにレプリケートされます。 ただし、フィルターに適合しなくなった行 (7 日前以前の注文の行) がサブスクライバー側にある場合、他のなんらかの理由で更新されていない限り、その行はサブスクライバーから削除されません。  
   
- イベント プランナーの事例では、このようなフィルター処理に伴う問題がさらに強く浮き彫りになります。 次のフィルターを検討してください、 **イベント** テーブル。  
+ イベント プランナーの事例では、このようなフィルター処理に伴う問題がさらに強く浮き彫りになります。 **Events** テーブルに対する次のフィルターについて考えてみましょう。  
   
 ```  
 WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)  
@@ -43,18 +47,18 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 -   パブリケーションが事前計算済みパーティションを使用していない場合、マージ エージェントの実行時に、フィルターが評価されます。  
   
- 事前計算済みパーティションの詳細については、次を参照してください。 [事前計算済みパーティションを持つパラメーター化されたフィルター パフォーマンスの最適化](../../../relational-databases/replication/merge/optimize-parameterized-filter-performance-with-precomputed-partitions.md)します。 フィルターが評価されるタイミングは、どのデータがフィルターに適合するかということに影響します。 たとえば、パブリケーション側で事前計算済みパーティションが使用されており、2 日ごとにデータを同期する場合、販売員のデータのサブセットには、予期した日付よりも最高 2 日分古い行が含まれている可能性があります。  
+ 事前計算済みパーティションの詳細については、[事前計算済みパーティションによるパラメーター化されたフィルター パフォーマンスの最適化](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)に関するページを参照してください。 フィルターが評価されるタイミングは、どのデータがフィルターに適合するかということに影響します。 たとえば、パブリケーション側で事前計算済みパーティションが使用されており、2 日ごとにデータを同期する場合、販売員のデータのサブセットには、予期した日付よりも最高 2 日分古い行が含まれている可能性があります。  
   
-## 時間ベースの行フィルターを使用するための推奨事項  
+## <a name="recommendations-for-using-time-based-row-filters"></a>時間ベースの行フィルターを使用するための推奨事項  
  次に示す方法は、時間に基づいてフィルター処理を行う際の強力でわかりやすいアプローチです。  
   
--   データ型のテーブルに列を追加 **ビット**します。 この列は、行をレプリケートするかどうかを示すために使用します。  
+-   テーブルに、データ型 **bit**の列を追加する。 この列は、行をレプリケートするかどうかを示すために使用します。  
   
 -   時間ベースの列ではなく新しい列を参照する行フィルターを使用する。  
   
 -   スケジュールでマージ エージェントが実行される前に列を更新する SQL Server エージェント ジョブ (または別のメカニズムでスケジュールされたジョブ) を作成する。  
   
- このアプローチを使用する欠点を補い、 **GETDATE()** または別の時間ベースのメソッドをパーティションのフィルターが評価されるタイミングを決めるの問題を回避できます。 次の例を考えて、 **イベント** テーブル。  
+ この方法を使用すると、 **GETDATE()** などの時間ベースの方法を使用した場合の欠点を補い、パーティションに対してフィルターが評価されるタイミングを決める問題を回避できます。 **Events** テーブルの次の例を考えてみましょう。  
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**[レプリケート]**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
@@ -69,7 +73,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND Replicate = 1  
 ```  
   
-  SQL Server エージェント ジョブは、各マージ エージェントを実行する前に、次のような [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを実行できます。  
+ SQL Server エージェント ジョブは、各マージ エージェントを実行する前に、次のような [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを実行できます。  
   
 ```  
 UPDATE Events SET Replicate = 0 WHERE Replicate = 1  
@@ -78,7 +82,7 @@ UPDATE Events SET Replicate = 1 WHERE EventDate <= GETDATE()+6
 GO  
 ```  
   
- 最初の行のリセット、 **レプリケート** 列を **0**, 、2 行目では、列を設定 **1** 次の 7 日間に発生するイベントのです。 この [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントが 2006 年 10 月 7 日に実行されると、テーブルが次のように更新されます。  
+ 1 行目では、 **Replicate** 列を **0**に再設定しています。2 行目では、今後 7 日以内に発生するイベントの列を **1** に設定しています。 この [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントが 2006 年 10 月 7 日に実行されると、テーブルが次のように更新されます。  
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**[レプリケート]**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
@@ -89,9 +93,9 @@ GO
   
  次週のイベントは、レプリケート準備済みとしてフラグが付けられています。 イベント コーディネーター 112 が使用するサブスクリプションでマージ エージェントが次に実行されると、1 行目以外の行がサブスクライバーにダウンロードされ、1 行目がサブスクライバーから削除されます。  
   
-## 参照  
- [GETDATE (&) #40 です。Transact SQL と #41 です。](../../../t-sql/functions/getdate-transact-sql.md)   
- [ジョブの実装](../../../ssms/agent/implement-jobs.md)   
- [パラメーター化された行フィルター](../../../relational-databases/replication/merge/parameterized-row-filters.md)  
+## <a name="see-also"></a>参照  
+ [GETDATE (Transact-SQL)](../../../t-sql/functions/getdate-transact-sql.md)   
+ [ジョブの実装](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
+ [パラメーター化された行フィルター](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

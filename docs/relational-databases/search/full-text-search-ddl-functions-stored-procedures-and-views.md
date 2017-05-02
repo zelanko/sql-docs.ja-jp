@@ -1,22 +1,26 @@
 ---
 title: "フルテキスト検索の DDL、関数、ストアド プロシージャ、およびビュー | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 98c36715-4195-482e-a4a3-d93ff65b75f1
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d632e025a0a9fe18dbf42d773ff0e943263f4851
+ms.lasthandoff: 04/11/2017
+
 ---
-# フルテキスト検索の DDL、関数、ストアド プロシージャ、およびビュー
+# <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>フルテキスト検索の DDL、関数、ストアド プロシージャ、およびビュー
   プロパティ検索機能を含むフルテキスト検索をサポートする Transact-SQL ステートメントおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトの一覧を示します。  
   
  非推奨化されたオブジェクトは含まれていません。  

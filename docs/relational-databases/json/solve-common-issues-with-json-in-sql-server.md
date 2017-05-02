@@ -1,37 +1,41 @@
 ---
-title: "SQL Server での JSON に関してよく寄せられる質問 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/07/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-json"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "JSON、FAQ"
+title: "SQL Server での JSON に関する一般的な問題を解決する | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/07/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-json
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- JSON, FAQ
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: abae3fc5a3d8edab6e4b465ce4cae038e45222d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server での JSON に関してよく寄せられる質問
+# <a name="solve-common-issues-with-json-in-sql-server"></a>SQL Server での JSON に関する一般的な問題を解決する
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
  SQL Server での組み込み JSON サポートに関する一般的な質問に対する回答をこちらで見つけることができます。  
  
-## FOR JSON および JSON 出力
+## <a name="for-json-and-json-output"></a>FOR JSON および JSON 出力
 
-### FOR JSON PATH または FOR JSON AUTO?  
+### <a name="for-json-path-or-for-json-auto"></a>FOR JSON PATH または FOR JSON AUTO?  
  **質問** 単一のテーブル上の単純な SQL クエリから JSON テキストの結果を作成する必要があります。 FOR JSON PATH および FOR JSON AUTO は、同じ出力を生成します。 これら 2 つのオプションのどちらを使用する必要がありますか。  
   
  **回答** FOR JSON PATH を使用します。 JSON の出力に違いはありませんが、AUTO モードには、列を入れ子にするかどうかを確認する追加のロジックがあります。 PATH を既定のオプションと見なします。  
 
-### 入れ子になった JSON 構造の作成  
+### <a name="create-a-nested-json-structure"></a>入れ子になった JSON 構造の作成  
  **質問** 同じレベルで複数の配列を持つ複雑な JSON を生成する必要があります。 FOR JSON PATH では、パスを使用して入れ子になったオブジェクトを作成できます。また、FOR JSON AUTO では、テーブルごとに追加の入れ子になったレベルを作成します。 これら 2 つのオプションのどちらを使用しても、目的の出力を生成することができます。 既存のオプションが直接サポートしていないカスタムの JSON 形式を作成する方法はありますか。  
   
  **回答** 次の例で示すように、JSON テキストを返す列式として FOR JSON クエリを追加し、任意のデータ構造を作成するか、または JSON_QUERY 関数を使用して手動で JSON を作成することができます。  
@@ -48,7 +52,7 @@ FOR JSON PATH
   
 FOR JSON クエリまたは列式の JSON_QUERY 関数のすべての結果は、個別の入れ子になった JSON サブオブジェクトとして書式設定され、メインの結果に含まれます。  
 
-### FOR JSON 出力内のダブルエスケープが指定された JSON を防ぐ  
+### <a name="prevent-double-escaped-json-in-for-json-output"></a>FOR JSON 出力内のダブルエスケープが指定された JSON を防ぐ  
  **質問** JSON テキストをテーブルの列に保存しました。 このテキストを FOR JSON の出力に含める必要があります。 FOR JSON では JSON 内のすべての文字をエスケープするため、次の例で示すように、入れ子になったオブジェクトではなく、JSON 文字列を取得しています。  
   
 ```tsql  
@@ -74,7 +78,7 @@ FOR JSON PATH
   
  省略可能な 2 番目のパラメーターのない JSON_QUERY は、結果として 1 番目の引数のみを返します。 JSON_QUERY は有効な JSON を返すため、FOR JSON は、この結果をエスケープする必要がないと認識します。
 
-### WITHOUT_ARRAY_WRAPPER 句を使用して生成された JSON は、FOR JSON の出力でエスケープされます。  
+### <a name="json-generated-with-the-withoutarraywrapper-clause-is-escaped-in-for-json-output"></a>WITHOUT_ARRAY_WRAPPER 句を使用して生成された JSON は、FOR JSON の出力でエスケープされます。  
  **質問** FOR JSON と WITHOUT_ARRAY_WRAPPER オプションを使用して、列式の書式設定を行おうとしています。  
   
 ```tsql  
@@ -93,9 +97,9 @@ SELECT 'Text' as myText,
 FOR JSON PATH    
 ```  
 
-## OPENJSON および JSON 入力
+## <a name="openjson-and-json-input"></a>OPENJSON および JSON 入力
 
-### OPENJSON のある JSON テキストから入れ子になった JSON サブオブジェクトを返す  
+### <a name="return-a-nested-json-sub-object-from-json-text-with-openjson"></a>OPENJSON のある JSON テキストから入れ子になった JSON サブオブジェクトを返す  
  **質問** 明示的なスキーマを持つ OPENJSON を使用して、スカラー値、オブジェクトおよび配列の両方を含む、複雑な JSON オブジェクトの配列を開くことができません。 WITH 句内のキーを参照する場合、スカラー値のみが返されます。 オブジェクトと配列は、null 値として返されます。 オブジェクトまたは JSON オブジェクトの配列を抽出する方法はありますか。  
   
  **回答** 列としてオブジェクトまたは配列を返す場合、次の例で示すように、列定義で AS JSON オプションを使用します。  
@@ -110,7 +114,7 @@ FROM OPENJSON(@json)
                           arr1 NVARCHAR(MAX) AS JSON)  
 ```  
 
-### 長いテキストの値を返すには、JSON_VALUE ではなく OPENJSON を使用します。  
+### <a name="use-openjson-instead-of-jsonvalue-to-return-long-text-values"></a>長いテキストの値を返すには、JSON_VALUE ではなく OPENJSON を使用します。  
  **質問** 長いテキストを含む JSON テキストに説明キーがあります。 `JSON_VALUE(@json, '$.description')` が、値の代わりに NULL を返します。  
   
  **回答** JSON_VALUE は小さいスカラー値を返すように設計されています。 一般的に、この関数はオーバーフロー エラーの代わりに NULL を返します。 より長い値を返す場合は、次の例のように、NVARCHAR(MAX) 値をサポートする OPENJSON を使用します。  
@@ -119,7 +123,7 @@ FROM OPENJSON(@json)
 SELECT myText FROM OPENJSON(@json) WITH (myText NVARCHAR(MAX) '$.description')  
 ```  
 
-### 重複するキーを処理するには、JSON_VALUE ではなく OPENJSON を使用します。  
+### <a name="use-openjson-instead-of-jsonvalue-to-handle-duplicate-keys"></a>重複するキーを処理するには、JSON_VALUE ではなく OPENJSON を使用します。  
  **質問** JSON テキストに重複するキーがあります。 JSON_VALUE は、パス上で見つかる最初のキーのみを返します。 同じ名前を持つすべてのキーを取得する方法はありますか。  
   
  **回答** JSON の組み込みスカラー関数は、最初に出現する参照先のオブジェクトのみを返します。 複数のキーが必要な場合は、次の例で示すように、OPENJSON テーブル値関数を使用します。  
@@ -129,17 +133,18 @@ SELECT value FROM OPENJSON(@json, '$.info.settings')
 WHERE [key] = 'color'  
 ```  
 
-### OPENJSON には、互換性レベル 130 が必要です。  
+### <a name="openjson-requires-compatibility-level-130"></a>OPENJSON には、互換性レベル 130 が必要です。  
  **質問** SQL Server 2016 で OPENJSON を実行しようとしていて、次のエラーが発生しています。  
   
  `Msg 208, Level 16, State 1 ‘Invalid object name OPENJSON’`  
   
  **回答** OPENJSON 関数は、互換性レベル 130 でのみ使用できます。 DB の互換性レベルが 130 より下の場合、OPENJSON は非表示になります。 他の JSON 関数は、すべての互換性レベルで使用できます。  
  
-## その他の質問
+## <a name="other-questions"></a>その他の質問
 
-### JSON テキストに英数字以外の文字を含む参照キー  
+### <a name="reference-keys-that-contain-non-alphanumeric-characters-in-json-text"></a>JSON テキストに英数字以外の文字を含む参照キー  
  **質問** JSON テキストのキーに英数字以外の文字があります。 これらのプロパティを参照する方法はありますか。  
   
- **回答** JSON パスでその文字を引用符で囲む必要があります。 たとえば、`JSON_VALUE(@json, '$."$info"."First Name".value')` のようにします。
+ **回答** JSON パスでその文字を引用符で囲む必要があります。 たとえば、 `JSON_VALUE(@json, '$."$info"."First Name".value')`のようにします。
  
+

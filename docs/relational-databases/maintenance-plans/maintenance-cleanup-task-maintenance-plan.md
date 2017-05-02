@@ -1,32 +1,36 @@
 ---
 title: "[メンテナンス クリーンアップ タスク] (メンテナンス プラン) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.cleanup.f1"
-helpviewer_keywords: 
-  - "[メンテナンス クリーンアップ タスク] ダイアログ ボックス"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.cleanup.f1
+helpviewer_keywords:
+- Maintenance Cleanup Task dialog box
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47b569e7d8c486de044d9784af2cb6adbab50b4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# [メンテナンス クリーンアップ タスク] (メンテナンス プラン)
+# <a name="maintenance-cleanup-task-maintenance-plan"></a>[メンテナンス クリーンアップ タスク] (メンテナンス プラン)
   **[メンテナンス クリーンアップ タスク]** を使用すると、メンテナンス プランで作成されたテキスト レポートやデータベースのバックアップ ファイルなど、メンテナンス プランに関連する古いファイルを削除できます。  
   
 > [!NOTE]  
->  メンテナンス クリーンアップ タスクでは、指定したディレクトリのサブフォルダーにあるファイルは自動的に削除されません。 この機能によって、メンテナンス クリーンアップ タスクを使ってファイルを削除するなど、悪意のある攻撃を受ける危険性を最小限に抑えることができます。 直下のサブフォルダーにあるファイルを削除する場合は、**[直下のサブフォルダーを含める]** を選択する必要があります。  
+>  メンテナンス クリーンアップ タスクでは、指定したディレクトリのサブフォルダーにあるファイルは自動的に削除されません。 この機能によって、メンテナンス クリーンアップ タスクを使ってファイルを削除するなど、悪意のある攻撃を受ける危険性を最小限に抑えることができます。 直下のサブフォルダーにあるファイルを削除する場合は、 **[直下のサブフォルダーを含める]**を選択する必要があります。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **接続**  
  現在の接続を表示します。  
   
@@ -42,7 +46,7 @@ caps.handback.revision: 26
  **[特定のファイルを削除する]**  
  **[ファイル名]** ボックスに指定した特定のファイルを削除します。  
   
- **ファイル名**  
+ **[ファイル名]**  
  削除するファイルのパスと名前です。  
   
  **[フォルダーを検索し、拡張子に基づいてファイルを削除する]**  
@@ -55,7 +59,7 @@ caps.handback.revision: 26
  削除するファイルのファイル拡張子を指定します。  
   
  **[直下のサブフォルダーを含める]**  
- **[ファイル拡張子]** に指定された拡張子を持つファイルを、**[フォルダー]** の直下のサブフォルダーから削除します。  
+ **[ファイル拡張子]** に指定された拡張子を持つファイルを、 **[フォルダー]**の直下のサブフォルダーから削除します。  
   
  **[タスク実行時にファイルの経過期間に基づいてファイルを削除する]**  
  **[次の期間経過したファイルを削除]** ボックスに数値と時間単位を指定して、削除するファイルの最小経過期間を指定します。  
@@ -69,7 +73,7 @@ caps.handback.revision: 26
 > [!NOTE]  
 >  影響を受けるオブジェクトが大量にある場合は、表示にかなりの時間を要する場合があります。  
   
-## [新しい接続] ダイアログ ボックス  
+## <a name="new-connection-dialog-box"></a>[新しい接続] ダイアログ ボックス  
  **[接続名]**  
  新しい接続の名前を入力します。  
   
@@ -83,10 +87,10 @@ caps.handback.revision: 26
  サーバーの認証情報を指定します。  
   
  **[Windows NT の統合セキュリティを使用する]**  
- Microsoft Windows 認証を使用して [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続します。  
+ Microsoft Windows 認証を使用して [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続します。  
   
  **[特定のユーザー名とパスワードを使用する]**  
- SQL Server 認証を使用して [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続します。 このオプションは利用できません。  
+ SQL Server 認証を使用して [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
   
  **ユーザー名**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  
@@ -94,7 +98,7 @@ caps.handback.revision: 26
  **Password**  
  認証に使用するパスワードを指定します。 このオプションは利用できません。  
   
-## 参照  
- [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+## <a name="see-also"></a>参照  
+ [のオブジェクト エクスプローラーの](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

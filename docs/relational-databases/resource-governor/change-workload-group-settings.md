@@ -1,32 +1,36 @@
 ---
 title: "ワークロード グループの設定の変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ワークロード グループ [SQL Server], 変更"
-  - "リソース ガバナー, ワークロード グループの変更"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- workload groups [SQL Server], alter
+- Resource Governor, workload group alter
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ee33f07052addb06e1dd2fe56f6153498fdbc9b
+ms.lasthandoff: 04/11/2017
+
 ---
-# ワークロード グループの設定の変更
+# <a name="change-workload-group-settings"></a>ワークロード グループの設定の変更
   ワークロード グループの設定を変更するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用します。  
   
--   **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)、 [権限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **ワークロード グループの設定変更に使用するもの:** [SQL Server Management Studio](#ChgWGProp)、[Transact-SQL](#ChgWGTSQL)  
+-   **To change the settings for a workload group, using:**  [SQL Server Management Studio](#ChgWGProp), [Transact-SQL](#ChgWGTSQL)  
   
-## はじめに  
+## <a name="before-you-begin"></a>はじめに  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  既定のワークロード グループとユーザー定義のワークロード グループの設定を変更することができます。  
@@ -37,7 +41,7 @@ caps.handback.revision: 15
   
  インデックス作成では、パフォーマンスを向上させるため、最初に許可されたメモリ量を超えるメモリ ワークスペースの使用が許可されます。 この特別な処理はリソース ガバナーでサポートされていますが、最初のメモリ許可も追加のメモリ許可も、ワークロード グループ設定およびリソース プール設定によって制限されます。  
   
-###  <a name="Permissions"></a> アクセス許可  
+###  <a name="Permissions"></a> 権限  
  ワークロード グループの設定を変更するには、CONTROL SERVER 権限が必要です。  
   
 ##  <a name="ChgWGProp"></a> SQL Server Management Studio を使用してワークロード グループの設定を変更する  
@@ -45,7 +49,7 @@ caps.handback.revision: 15
   
 1.  オブジェクト エクスプローラーで、変更するワークロード グループを含む **ワークロード グループ** フォルダーまで **[管理]** ノードを再帰的に展開します。  
   
-2.  変更するワークロード グループを右クリックし、**[プロパティ]** をクリックします。  
+2.  変更するワークロード グループを右クリックし、 **[プロパティ]**をクリックします。  
   
 3.  **[リソース ガバナーのプロパティ]** ページで、自動的に **[リソース プールのワークロード グループ]** グリッドの対象ワークロード グループの行が選択されない場合は、その行を選択します。  
   
@@ -60,8 +64,8 @@ caps.handback.revision: 15
   
 2.  ALTER RESOURCE GOVERNOR RECONFIGURE ステートメントを実行します。  
   
-### 例 (Transact-SQL)  
- 次の例では、`groupAdhoc` という名前のワークロード グループに割り当てられたメモリ許可の割合の最大値を変更します。  
+### <a name="example-transact-sql"></a>例 (Transact-SQL)  
+ 次の例では、 `groupAdhoc`という名前のワークロード グループに割り当てられたメモリ許可の割合の最大値を変更します。  
   
 ```  
 ALTER WORKLOAD GROUP groupAdhoc  
@@ -71,7 +75,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
  [ワークロード グループの作成](../../relational-databases/resource-governor/create-a-workload-group.md)   
  [リソース プールの作成](../../relational-databases/resource-governor/create-a-resource-pool.md)   

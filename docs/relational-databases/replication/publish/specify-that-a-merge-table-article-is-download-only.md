@@ -1,27 +1,31 @@
 ---
 title: "マージ テーブル アーティクルをダウンロード専用に指定する | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "merge replication [SQL Server replication], download-only articles"
-  - "articles [SQL Server replication], download-only"
-  - "ダウンロード専用アーティクル"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- merge replication [SQL Server replication], download-only articles
+- articles [SQL Server replication], download-only
+- download-only articles
 ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 83d7383aff0ccc5ab8f6716135d07c3642e6c9d6
+ms.lasthandoff: 04/11/2017
+
 ---
-# マージ テーブル アーティクルをダウンロード専用に指定する
-  このトピックでは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して、マージ テーブル アーティクルをダウンロード専用に指定する方法について説明します。 ダウンロード専用のアーティクルは、サブスクライバーで更新されないデータを含むアプリケーション用に設計されています。 詳細については、次を参照してください。 [Download-Only アーティクルを使用したマージ レプリケーション パフォーマンスの最適化](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)です。  
+# <a name="specify-that-a-merge-table-article-is-download-only"></a>マージ テーブル アーティクルをダウンロード専用に指定する
+  このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、マージ テーブル アーティクルをダウンロード専用に指定する方法について説明します。 ダウンロード専用のアーティクルは、サブスクライバーで更新されないデータを含むアプリケーション用に設計されています。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。  
   
  **このトピックの内容**  
   
@@ -39,58 +43,58 @@ caps.handback.revision: 40
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
--   サブスクリプションが初期化された後でアーティクルをダウンロードのみに指定する場合は、そのアーティクルを受信したすべてのクライアント サブスクリプションを再初期化する必要があります。 サーバー サブスクリプションは再初期化する必要はありません。 プロパティの変更の影響の詳細については、次を参照してください。 [変更パブリケーションとアーティクルのプロパティ](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)します。  
+-   サブスクリプションが初期化された後でアーティクルをダウンロードのみに指定する場合は、そのアーティクルを受信したすべてのクライアント サブスクリプションを再初期化する必要があります。 サーバー サブスクリプションは再初期化する必要はありません。 プロパティ変更の影響の詳細については、「[パブリケーションおよびアーティクルのプロパティの変更](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」を参照してください。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- アーティクルは、ダウンロード専用に指定、 **記事** パブリケーションの新規作成ウィザードのページまたは **プロパティ** のタブ、 **アーティクルのプロパティ - \< 記事>** ] ダイアログ ボックス。 このダイアログ ボックスはパブリケーションの新規作成ウィザードで使用できる、 **パブリケーションのプロパティ - \< パブリケーション>** ] ダイアログ ボックス。 ウィザードを使用して、ダイアログ ボックスへのアクセスに関する詳細については、次を参照してください。 [パブリケーションを作成](../../../relational-databases/replication/publish/create-a-publication.md) と [パブリケーション プロパティの変更を表示および](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)です。  
+ アーティクルをダウンロードのみに指定するには、パブリケーションの新規作成ウィザードの **[アーティクル]** ページまたは **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブを使用します。 このダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで使用できます。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)」および「[パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。  
   
-#### [アーティクル] ページでアーティクルをダウンロードのみに指定するには  
+#### <a name="to-specify-that-an-article-is-download-only-on-the-articles-page"></a>[アーティクル] ページでアーティクルをダウンロードのみに指定するには  
   
--    **記事** 、テーブル、パブリケーションの新規作成ウィザードを選択し、チェック ボックスを選択のページ **反転表示されたテーブルはダウンロードのみ**します。  
+-   パブリケーションの新規作成ウィザードの **[アーティクル]** ページでテーブルを選択し、 **[反転表示されたテーブルはダウンロードのみである]**チェック ボックスをオンにします。  
   
-#### アーティクルがダウンロード専用のアーティクルのプロパティ - [プロパティ] タブのことを指定する \< 記事> ] ダイアログ ボックス  
+#### <a name="to-specify-that-an-article-is-download-only-on-the-properties-tab-of-the-article-properties---article-dialog-box"></a>[アーティクルのプロパティ - \<Article>] ダイアログ ボックスの [プロパティ] タブでアーティクルをダウンロードのみに指定するには  
   
-1.   **記事** パブリケーションの新規作成ウィザードのページまたは **パブリケーションのプロパティ - \< パブリケーション>** ] ダイアログ ボックスでは、テーブルを選択し、をクリックして **アーティクルのプロパティ**します。  
+1.  パブリケーションの新規作成ウィザードの **[アーティクル]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスでテーブルを選択し、**[アーティクルのプロパティ]** をクリックします。  
   
 2.  **[反転表示されたテーブル アーティクルのプロパティを設定]** または **[すべてのテーブル アーティクルのプロパティを設定]**をクリックします。  
   
-3.   **対象オブジェクト** のセクションで、 **プロパティ** のタブ、 **アーティクルのプロパティ - \< 記事>** ] ダイアログ ボックスで、次の値のいずれかを指定 **同期の方向**:  
+3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[対象オブジェクト]** セクションで、**[同期の方向]** に対して以下のいずれかの値を指定します。  
   
     -   **[サブスクライバーへのダウンロードのみを実行し、サブスクライバーの変更を禁止する]**  
   
     -   **[サブスクライバーへのダウンロードのみを実行し、サブスクライバーの変更を許可する]**  
   
-4.  場合は、 **パブリケーションのプロパティ - \< パブリケーション>** ] ダイアログ ボックスをクリックして **[ok]** を保存してダイアログ ボックスを閉じます。  
+4.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、**[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### 新しいマージ テーブル アーティクルをダウンロード専用に指定するには  
+#### <a name="to-specify-that-a-new-merge-table-article-is-download-only"></a>新しいマージ テーブル アーティクルをダウンロード専用に指定するには  
   
-1.  実行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), の値を指定する **1** または **2** パラメーター **@subscriber_upload_options**します。 各数値は次の動作に対応します。  
+1.  パラメーター [@subscriber_upload_options](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)に **1** または **2** を指定し、 **@subscriber_upload_options**を使用して、マージ テーブル アーティクルをダウンロード専用に指定する方法について説明します。 各数値は次の動作に対応します。  
   
-    -   **0** -制限なし (既定)。 サブスクライバー側で行われた変更は、パブリッシャーにアップロードされます。  
+    -   **0** - 制限なし (既定)。 サブスクライバー側で行われた変更は、パブリッシャーにアップロードされます。  
   
-    -   **1** - 変更は、サブスクライバーで許可されても、パブリッシャーにアップロードされません。  
+    -   **1** - サブスクライバーでの変更は許可されますが、パブリッシャーにはアップロードされません。  
   
-    -   **2** -サブスクライバーの変更は許可されません。  
+    -   **2** - サブスクライバーでの変更は許可されません。  
   
         > [!NOTE]  
-        >  アーティクルのソース テーブルが別のパブリケーションの値で既にパブリッシュされている場合 **@subscriber_upload_options** の両方のアーティクルで同じである必要があります。  
+        >  アーティクルのソース テーブルが別のパブリケーションで既にパブリッシュされている場合、 **@subscriber_upload_options** の値は、両方のアーティクルで同じであることが必要です。  
   
-#### 既存のマージ テーブル アーティクルをダウンロード専用に変更するには  
+#### <a name="to-modify-an-existing-merge-table-article-to-be-download-only"></a>既存のマージ テーブル アーティクルをダウンロード専用に変更するには  
   
-1.  アーティクルをダウンロード専用のかどうかを確認するのには、実行 [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)です。 値に注意してください **upload_options** 結果内のアーティクルに対して設定します。  
+1.  アーティクルがダウンロード専用であるかどうかを確認するには、 [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)を実行します。 結果セットのアーティクルの **upload_options** の値を確認します。  
   
-2.  手順 1 ではの値が返された場合 **0**, 、実行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), の値を指定する **subscriber_upload_options** の **@property**, の値 **1** の **@force_invalidate_snapshot** と **@force_reinit_subscription**, の値との **1** または **2** の **@value**, 、次の動作に対応します。  
+2.  手順 1. で返された値が **0**である場合は、 [@property](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)に **subscriber_upload_options** を、 **@property**および **1** を、 **@force_invalidate_snapshot** 」および「 **@force_reinit_subscription**には次の動作に対応する **1** または **2** を、 **@value**を実行します。  
   
-    -   **1** - 変更は、サブスクライバーで許可されても、パブリッシャーにアップロードされません。  
+    -   **1** - サブスクライバーでの変更は許可されますが、パブリッシャーにはアップロードされません。  
   
-    -   **2** -サブスクライバーの変更は許可されません。  
+    -   **2** - サブスクライバーでの変更は許可されません。  
   
         > [!NOTE]  
         >  アーティクルのソース テーブルが別のパブリケーションで既にパブリッシュされている場合、ダウンロード専用の動作は、両方のアーティクルで同じであることが必要です。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)   
  [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)   
  [アーティクルのプロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  

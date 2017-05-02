@@ -1,23 +1,27 @@
 ---
 title: "システム バージョン管理されたテンポラル テーブルの履歴データの保有期間管理 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/31/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 caps.latest.revision: 23
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c8237dfcc25045fb0fec915c942ea7968e02a13
+ms.lasthandoff: 04/11/2017
+
 ---
-# システム バージョン管理されたテンポラル テーブルの履歴データの保有期間管理
+# <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>システム バージョン管理されたテンポラル テーブルの履歴データの保有期間管理
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   テンポラル テーブルがシステム バージョン管理されているとき、履歴データによりデータベースのサイズが通常のテーブルより増えることがあります。特に、次の条件下で当てはまります。  
@@ -28,7 +32,7 @@ caps.handback.revision: 23
   
  大量の履歴データが増加を続けると、ストレージ費用と一時的なクエリ実行による負荷の両方に起因し、問題が引き起こされる可能性があります。 そのため、履歴テーブルのデータを管理するためのデータ保有期間ポリシーを作成することが、あらゆるテンポラル テーブルのライフサイクルを計画し、管理する上で、重要な側面となります。  
   
-## 履歴テーブルのデータ保有期間管理  
+## <a name="data-retention-management-for-history-table"></a>履歴テーブルのデータ保有期間管理  
  テンポラル テーブルのデータ保有期間の管理は、テンポラル テーブルごとに必要な保有期間を決定することから始まります。 ほとんどの場合、保有期間ポリシーは、テンポラル テーブルを利用する用途のビジネス ロジックの不可欠要素であると見なすべきです。 たとえば、データ監査やタイム トラベルのシナリオでは、オンライン クエリ実行のために履歴データを利用できる期間について、要件が確定されます。  
   
  データの保有期間を決定したら、次に、履歴データの保存方法、保存場所、保有期間を超えた履歴データの削除方法など、履歴データを管理するための計画を立てます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、次の 3 つの手法で一時的な履歴テーブルの履歴データを管理できます。  
@@ -41,13 +45,13 @@ caps.handback.revision: 23
   
  いずれの手法でも、履歴データを移行またはクリーンアップするためのロジックは、現在のテーブルの期間終了に相当する列に基づきます。 各行の期間終了値により、そのバージョンの行が “閉じられる”、つまり、履歴テーブルに入るタイミングが決定されます。 たとえば、条件 `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` では、1 か月以上経過した履歴データは履歴テーブルから削除されます。  
   
-> **注:** このトピックの例では、この[テンポラル テーブル例](https://msdn.microsoft.com/library/mt590957.aspx)を使用しています。  
+> **注:**  このトピックの例では、この [テンポラル テーブル例](https://msdn.microsoft.com/library/mt590957.aspx)を使用しています。  
   
-## Stretch Database 手法の利用  
+## <a name="using-stretch-database-approach"></a>Stretch Database 手法の利用  
   
-> **注:** Stretch Database 手法の使用は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にのみ適用され、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] には適用されません。  
+> **注:**  Stretch Database 手法の使用は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にのみ適用され、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]には適用されません。  
   
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md) の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、履歴データが Azure に透過的に移行されます。 セキュリティ強化のために、SQL Server の [Always Encrypted](https://msdnstage.redmond.corp.microsoft.com/library/mt163865.aspx) 機能で移行中のデータを暗号化できます。 また、[行レベルのセキュリティ](../../relational-databases/security/row-level-security.md)やその他の高度な SQL Server セキュリティ機能を Temporal/Stretch Database と共に使用し、データを保護できます。  
+ [Stretch Database](../../sql-server/stretch-database/stretch-database.md) の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、履歴データが Azure に透過的に移行されます。 セキュリティ強化のために、SQL Server の [Always Encrypted](https://msdnstage.redmond.corp.microsoft.com/library/mt163865.aspx) 機能で移行中のデータを暗号化できます。 また、 [行レベルのセキュリティ](../../relational-databases/security/row-level-security.md) やその他の高度な SQL Server セキュリティ機能を Temporal/Stretch Database と共に使用し、データを保護できます。  
   
  Stretch Database 手法の利用では、一時的な履歴テーブルの一部または全部を Azure にストレッチできます。SQL Server は履歴データを Azure に通知なしで移行します。 履歴テーブルのストレッチを有効にしても、データ変更や一時的なクエリ実行で、テンポラル テーブルの操作が変わることはありません。  
   
@@ -56,32 +60,32 @@ caps.handback.revision: 23
   
 -   **履歴テーブルの一部をストレッチ:** 主なシナリオが最近の履歴データにクエリを実行することであるが、必要なときに古い履歴データにもクエリを実行できて、しかも、そのデータを離れた場所に低いコストで保管する場合、履歴テーブルの一部にのみ Stretch Database を構成し、性能を上げます。 Transact-SQL を利用すればそれが可能です。すべての行を移行するのではなく、述語関数を指定し、履歴テーブルから移行する行を選択します。  テンポラル テーブルを利用するとき、時間条件 (履歴テーブルの行バージョンの経過時間) に基づいてデータを移行すると効果的です。    
     決定性の述語関数を利用することで、現行データと同じデータベースに履歴の一部を保有できます。残りは Azure に移行されます。    
-    例と制限については、「[フィルター関数を使用して移行する行を選択する (Stretch Database)](https://msdn.microsoft.com/library/mt613432.aspx)」を参照してください。 非決定性の関数は有効ではないため、スライディング ウィンドウで履歴データを転送する場合、ローカルで保有する行の時間枠が経過時間において変わらないように、インライン述語関数の定義を定期的に変更する必要性が生じることがあります。 スライディング ウィンドウでは、1 か月以上経過した履歴データを Azure に継続的に移動できます。 この手法の例は次のようになります。  
+    例と制限については、「 [フィルター関数を使用して移行する行を選択する (Stretch Database)](https://msdn.microsoft.com/library/mt613432.aspx)」を参照してください。 非決定性の関数は有効ではないため、スライディング ウィンドウで履歴データを転送する場合、ローカルで保有する行の時間枠が経過時間において変わらないように、インライン述語関数の定義を定期的に変更する必要性が生じることがあります。 スライディング ウィンドウでは、1 か月以上経過した履歴データを Azure に継続的に移動できます。 この手法の例は次のようになります。  
   
-> **注:** Stretch Database はデータを Azure に移行します。 そのため、Azure アカウントとサブスクリプションを請求のために用意する必要があります。 無料の試用版 Azure アカウントを入手する場合ハードウェア、[1 か月間の無料試用版](https://azure.microsoft.com/pricing/free-trial/)をクリックしてください。  
+> **注:** Stretch Database はデータを Azure に移行します。 そのため、Azure アカウントとサブスクリプションを請求のために用意する必要があります。 無料の試用版 Azure アカウントを入手する場合ハードウェア、 [1 か月間の無料試用版](https://azure.microsoft.com/pricing/free-trial/)をクリックしてください。  
   
- 一時的な履歴テーブルの Stretch は Stretch ウィザードまたは Transact-SQL で構成できます。システム バージョン管理を**オン**に設定しているとき、一時的な履歴テーブルのストレッチを有効にできます。 現行テーブルはストレッチできません。ストレッチする意味がないためです。  
+ 一時的な履歴テーブルの Stretch は Stretch ウィザードまたは Transact-SQL で構成できます。システム バージョン管理を **オン**に設定しているとき、一時的な履歴テーブルのストレッチを有効にできます。 現行テーブルはストレッチできません。ストレッチする意味がないためです。  
   
-### Stretch ウィザードを利用し、履歴テーブル全体をストレッチする  
- 初心者にとって最も簡単な方法は、Stretch ウィザードを利用して、データベース全体でストレッチを有効にし、Stretch ウィザード内で一時的な履歴テーブルを選択することです (この例では、本来であれば空のデータベースで、Department テーブルをシステム バージョン管理のテンポラル テーブルとして構成しているものと想定しています)。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では一時的な履歴テーブル自体を右クリックし、[Stretch] をクリックすることはできません。  
+### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>Stretch ウィザードを利用し、履歴テーブル全体をストレッチする  
+ 初心者にとって最も簡単な方法は、Stretch ウィザードを利用して、データベース全体でストレッチを有効にし、Stretch ウィザード内で一時的な履歴テーブルを選択することです (この例では、本来であれば空のデータベースで、Department テーブルをシステム バージョン管理のテンポラル テーブルとして構成しているものと想定しています)。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]では一時的な履歴テーブル自体を右クリックし、[Stretch] をクリックすることはできません。  
   
-1.  データベースを右クリックし、**[タスク]** をポイントし、**[Stretch]** をポイントします。それから、**[有効化]** をクリックしてウィザードを起動します。  
+1.  データベースを右クリックし、 **[タスク]**をポイントし、 **[Stretch]**をポイントします。それから、 **[有効化]** をクリックしてウィザードを起動します。  
   
 2.  **[テーブルの選択]** ウィンドウで、一時的な履歴テーブルのチェック ボックスを選択し、[次へ] をクリックします。  
   
-     ![Selecting the history table on the Select tables page](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Selecting the history table on the Select tables page")  
+     ![[テーブルの選択] ページで履歴テーブルを選択する](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "[テーブルの選択] ページで履歴テーブルを選択する")  
   
 3.  **[Azure の構成]** ウィンドウで、ログイン資格情報を指定します。 Microsoft Azure にサインインするか、アカウントを作成します。 使用するサブスクリプションを選択し、Azure 領域を選択します。 次に、新しいサーバーを作成するか、既存のサーバーを選択します。 **[次へ]**をクリックします。  
   
-     ![Create new Azure server - Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-4.png "Create new Azure server - Stretch Database wizard")  
+     ![新しい Azure サーバーを作成 - Stretch Database ウィザード](../../relational-databases/tables/media/stretch-wizard-4.png "新しい Azure サーバーを作成 - Stretch Database ウィザード")  
   
 4.  **[セキュリティで保護された資格情報]** ウィンドウで、ソース SQL Server データベースの資格情報を保護するためのデータベース マスターキーのパスワードを入力し、[次へ] をクリックします。  
   
-     ![Secure credentials page of the Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-6.png "Secure credentials page of the Stretch Database wizard")  
+     ![Stretch Database ウィザードの [セキュリティで保護された資格情報] ページ](../../relational-databases/tables/media/stretch-wizard-6.png "Stretch Database ウィザードの [セキュリティで保護された資格情報] ページ")  
   
 5.  **[IP アドレスの選択]** ウィンドウで、Azure サーバーで SQL Server と通信するために、SQL Server の IP アドレス範囲を入力します (ファイアウォール ルールが既に設定されている既存のサーバーを選択する場合、ここで [次へ] をクリックし、既存のファイアウォール ルールを使用します)。 **[次へ]** をクリックして **[完了]** をクリックし、Stretch Database を有効にして一時的な履歴テーブルをストレッチします。  
   
-     ![Select IP address page of the Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-7.png "Select IP address page of the Stretch Database wizard")  
+     ![Stretch Database ウィザードの [IP アドレスの選択] ページ](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database ウィザードの [IP アドレスの選択] ページ")  
   
 6.  ウィザードが終わったら、データベースのストレッチが有効になっていることを確認してください。 データベースがストレッチされたことは、オブジェクト エクスプローラーのアイコンに示されるので注目してください。  
   
@@ -95,16 +99,16 @@ caps.handback.revision: 23
   
 -   [テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
-### Transact-SQL を利用して履歴テーブル全体をストレッチする  
- Transact-SQL を使用して、ローカル サーバー上で Stretch を有効にすることや、[データベースに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)こともできます。 それから、[Transact-SQL を使用して、テーブルで Stretch Database を有効にする](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1)ことができます。 以前に、データベースの Stretch Database を有効にした場合、次の TRANSACT-SQL スクリプトを実行して、既存のシステム バージョン管理の一時的な履歴テーブルをストレッチできます。  
+### <a name="using-transact-sql-to-stretch-the-entire-history-table"></a>Transact-SQL を利用して履歴テーブル全体をストレッチする  
+ Transact-SQL を使用して、ローカル サーバー上で Stretch を有効にすることや、 [データベースに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)こともできます。 それから、  [Transact-SQL を使用して、テーブルで Stretch Database を有効にする](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1)ことができます。 以前に、データベースの Stretch Database を有効にした場合、次の TRANSACT-SQL スクリプトを実行して、既存のシステム バージョン管理の一時的な履歴テーブルをストレッチできます。  
   
 ```  
 ALTER TABLE <history table name>   
 SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));  
 ```  
   
-### Transact-SQL を利用して履歴テーブルの一部をストレッチする  
- 履歴テーブルの一部のみをストレッチするには、最初に[インライン述語関数](https://msdn.microsoft.com/library/mt613432.aspx)を作成します。 たとえば、2015 年 12 月 1 日に初めてインライン述語関数を構成していて、2015 年 11 月 1 日より前のすべての履歴データを Azure にストレッチすると想定します。 この場合、最初に次の関数を作成します。  
+### <a name="using-transact-sql-to-stretch-a-portion-of-the-history-table"></a>Transact-SQL を利用して履歴テーブルの一部をストレッチする  
+ 履歴テーブルの一部のみをストレッチするには、最初に [インライン述語関数](https://msdn.microsoft.com/library/mt613432.aspx)を作成します。 たとえば、2015 年 12 月 1 日に初めてインライン述語関数を構成していて、2015 年 11 月 1 日より前のすべての履歴データを Azure にストレッチすると想定します。 この場合、最初に次の関数を作成します。  
   
 ```  
 CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151101(@systemEndTime datetime2)   
@@ -157,7 +161,7 @@ COMMIT ;
   
  述語関数の定義が常に有効になるように、SQL Server Agent またはその他のスケジュール作成メカニズムを利用します。  
   
-## テーブル パーティション分割手法の利用  
+## <a name="using-table-partitioning-approach"></a>テーブル パーティション分割手法の利用  
  [テーブル パーティション分割](https://msdn.microsoft.com/library/ms188730.aspx) を利用すると、大規模なテーブルが管理しやすくなり、拡張性が上がります。 テーブルのパーティション分割手法では、履歴テーブルのパーティションを利用し、時間条件を基準にカスタム データ クリーンアップやオフライン アーカイブを実行できます。 テーブル パーティション分割では、パーティション解消を利用し、データ履歴のサブセットについてテンポラル テーブルにクエリを実行するとき、パフォーマンス上の利点もあります。  
   
  テーブル パーティション分割では、スライディング ウィンドウ手法を実行し、経過時間に基づき、履歴テーブルから古い履歴データを除外し、保有部分のサイズを一定に維持できます。必須保有期間に相当するデータを履歴テーブルで維持します。 履歴テーブルからデータをスイッチ アウトする操作は、SYSTEM_VERSIONING がオンになっているときにサポートされます。つまり、保守管理ウィンドウを導入したり、通常の作業負荷をブロックしたりしなくても履歴データの一部をクリーンアップできます。  
@@ -176,7 +180,7 @@ COMMIT ;
   
  次はデータを 6 か月維持する初回パーティション分割構成の図です。  
   
- ![Partitioning](../../relational-databases/tables/media/partitioning.png "Partitioning")  
+ ![パーティション分割](../../relational-databases/tables/media/partitioning.png "パーティション分割")  
   
 > **注:** パーティション分割を構成する際に RANGE LEFT を使用する場合と RANGE RIGHT を使用する場合のパフォーマンス上の違いについては、下の「テーブル パーティション分割におけるパフォーマンス上の考慮事項」を参照してください。  
   
@@ -185,7 +189,7 @@ COMMIT ;
   
  次の図は、定期パーティション保守管理タスクの例です (下に詳しい手順があります)。  
   
- ![Partitioning2](../../relational-databases/tables/media/partitioning2.png "Partitioning2")  
+ ![パーティション分割 2](../../relational-databases/tables/media/partitioning2.png "パーティション分割 2")  
   
  定期パーティション保守管理タスクの詳しい手順:  
   
@@ -201,7 +205,7 @@ COMMIT ;
   
 3.  SPLIT RANGE: [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md) と SPLIT RANGE を利用し、新しい空のパーティション 7 を作成します (例 A を参照)。 この関数で上位の境界を新しく追加することで、翌月のために別個のパーティションを効果的に作成します。  
   
-### Transact-SQL を利用し、履歴テーブルでパーティションを作成する  
+### <a name="use-transact-sql-to-create-partitions-on-history-table"></a>Transact-SQL を利用し、履歴テーブルでパーティションを作成する  
  下のコード ウィンドウでは、Transact-SQL を利用し、パーティション関数とパーティション スキーマを作成します。また、クラスター化インデックスを再作成し、パーティションをパーティション スキーマに合わせて調整します。 この例では、月単位のパーティションが 2015 年 9 月に開始する 6 か月のスライディング ウィンドウ手法を作成します。  
   
 ```  
@@ -243,7 +247,7 @@ COMMIT TRANSACTION;
   
 ```  
   
-### Transact-SQL を利用し、スライディング ウィンドウ シナリオのパーティションを維持する  
+### <a name="using-transact-sql-to-maintain-partitions-in-sliding-window-scenario"></a>Transact-SQL を利用し、スライディング ウィンドウ シナリオのパーティションを維持する  
  下のコード ウィンドウでは Transact-SQL スクリプトを利用し、スライディング ウィンドウ シナリオのパーティションを維持します。 この例では、MERGE RANGE を利用して 2015 年 9 月にパーティションをスイッチ アウトし、SPLIT RANGE を利用して 2016 年 3 月に新しいパーティションを追加します。  
   
 ```  
@@ -320,18 +324,18 @@ COMMIT TRANSACTION
   
 3.  手順 (4) では、パーティション 1 を新しく作成したステージング テーブルに切り替えます。  
   
-4.  手順 (6) では、10 月のデータを移した後に、下位の境界を結合し、パーティション関数を変更します。`MERGE RANGE(N'2015-10-31T23:59:59.999'` です。  
+4.  手順 (6) では、10 月のデータを移した後に、下位の境界を結合し、パーティション関数を変更します。 `MERGE RANGE(N'2015-10-31T23:59:59.999'` です。  
   
-5.  手順 (7) では、10 月のデータを移した後に、上位の境界を新しく作成し、パーティション関数を分割します。`SPLIT RANGE (N'2016-04-30T23:59:59.999'` です。  
+5.  手順 (7) では、10 月のデータを移した後に、上位の境界を新しく作成し、パーティション関数を分割します。 `SPLIT RANGE (N'2016-04-30T23:59:59.999'` です。  
   
- ただし、最適なソリューションは、スクリプトを変更しなくても、毎月、適切なアクションを実行できる汎用 Transact-SQL スクリプトを定期的に実行することでしょう。 指定されたパラメーター (マージする必要がある下位の境界とパーティション分割で作成する新しい境界) に基づいて動作するように上記のスクリプトを汎用化できます。 毎月のステージング テーブル作成を避けるために、1 つのステージング テーブルを事前に作成し、スイッチ アウトされるパーティションに一致するようにチェック制約を変更して再利用できます。 Transact-SQL スクリプトを使用した[スライディング ウィンドウの完全自動化](https://msdn.microsoft.com/library/aa964122.aspx)については、後続のページを参照することで理解できます。  
+ ただし、最適なソリューションは、スクリプトを変更しなくても、毎月、適切なアクションを実行できる汎用 Transact-SQL スクリプトを定期的に実行することでしょう。 指定されたパラメーター (マージする必要がある下位の境界とパーティション分割で作成する新しい境界) に基づいて動作するように上記のスクリプトを汎用化できます。 毎月のステージング テーブル作成を避けるために、1 つのステージング テーブルを事前に作成し、スイッチ アウトされるパーティションに一致するようにチェック制約を変更して再利用できます。 Transact-SQL スクリプトを使用した [スライディング ウィンドウの完全自動化](https://msdn.microsoft.com/library/aa964122.aspx) については、後続のページを参照することで理解できます。  
   
-### テーブル パーティション分割に関するパフォーマンス上の考慮事項  
+### <a name="performance-considerations-with-table-partitioning"></a>テーブル パーティション分割に関するパフォーマンス上の考慮事項  
  パフォーマンス上、データ移動は大幅なオーバーヘッドを引き起こす可能性があるため、MERGE 操作と SPLIT RANGE 操作を実行し、あらゆるデータ移動を回避することが重要です。 詳細については、「[パーティション関数の変更](../../relational-databases/partitions/modify-a-partition-function.md)」を参照してください。これは、[CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md) の実行時に、RANGE RIGHT ではなく、RANGE LEFT で実現します。  
   
  最初に RANGE LEFT オプションと RANGE RIGHT オプションの意味を図で説明します。  
   
- ![Partitioning3](../../relational-databases/tables/media/partitioning3.png "Partitioning3")  
+ ![パーティション分割 3](../../relational-databases/tables/media/partitioning3.png "パーティション分割 3")  
   
  パーティション関数を RANGE LEFT として定義すると、指定値はパーティションの上位境界になります。 RANGE RIGHT を利用するとき、指定値はパーティションの下位境界になります。 MERGE RANGE 操作でパーティション関数定義から境界を削除するとき、基礎となる実装は、境界を含むパーティションも削除します。 そのパーティションが空ではない場合、MERGE RANGE 操作の結果となるパーティションにデータが移動します。  
   
@@ -343,8 +347,8 @@ COMMIT TRANSACTION
   
  結論: スライディング パーティションに RANGE LEFT を利用することはパーティション管理としてずっと簡単であり、データ移動が回避されます。 RANGE RIGHT でパーティション境界を定義する場合、日時タイム ティック問題を扱う必要がなく、少しばかり簡単になります。  
   
-## カスタム クリーンアップ スクリプト手法の利用  
- Stretch Database とテーブル パーティション分割を利用する手法が実行できない場合、3 番目の手法は、カスタム クリーンアップ スクリプトを利用して履歴テーブルからデータを削除することになります。 履歴テーブルからデータを削除することは、**SYSTEM_VERSIONING = OFF** のときにのみ可能です。 データの不整合を回避するために、保守管理の時間枠内 (データを変更するワークロードがアクティブではないとき) か、トランザクション (他のワークロードが効果的にブロックされる) 内でクリーンアップを実行します。  この操作には、現行テーブルと履歴テーブルの **CONTROL** 権限が必要になります。  
+## <a name="using-custom-cleanup-script-approach"></a>カスタム クリーンアップ スクリプト手法の利用  
+ Stretch Database とテーブル パーティション分割を利用する手法が実行できない場合、3 番目の手法は、カスタム クリーンアップ スクリプトを利用して履歴テーブルからデータを削除することになります。 履歴テーブルからデータを削除することは、 **SYSTEM_VERSIONING = OFF**のときにのみ可能です。 データの不整合を回避するために、保守管理の時間枠内 (データを変更するワークロードがアクティブではないとき) か、トランザクション (他のワークロードが効果的にブロックされる) 内でクリーンアップを実行します。  この操作には、現行テーブルと履歴テーブルの **CONTROL** 権限が必要になります。  
   
  通常のアプリケーションとユーザー クエリを最小限ブロックするには、トランザクション内でクリーンアップ スクリプトを実行するとき、遅延ありで、データの小規模なまとまりを削除します。 このデータのまとまりのサイズについては、あらゆるシナリオに適用できる最適なサイズというものはありませんが、1 回のトランザクションで 10,000 行以上を削除すると、大幅な影響が現れる可能性があります。  
   
@@ -421,7 +425,7 @@ BEGIN TRAN
 COMMIT;  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)   
  [システム バージョン管理されたテンポラル テーブルの概要](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [テンポラル テーブルのシステム一貫性のチェック](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
@@ -432,3 +436,4 @@ COMMIT;
  [テンポラル テーブル メタデータのビューおよび関数](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

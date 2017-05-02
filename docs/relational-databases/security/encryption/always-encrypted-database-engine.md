@@ -1,34 +1,38 @@
 ---
-title: "Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン)) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "暗号化 [SQL Server], Always Encrypted"
-  - "Always Encrypted"
-  - "TCE Always Encrypted"
-  - "Always Encrypted, 概要"
-  - "SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1"
+title: "Always Encrypted (データベース エンジン) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], Always Encrypted
+- Always Encrypted
+- TCE Always Encrypted
+- Always Encrypted, about
+- SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 caps.latest.revision: 58
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f848c5ebf1233d6b34dcf00bb7084adcebc95ea1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))
+# <a name="always-encrypted-database-engine"></a>Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
- Always Encrypted は、[!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータベースに格納されたクレジット カード番号や身分登録番号 (アメリカの社会保障番号など) などの機微なデータを保護するために設計された機能です。 Always Encrypted を使用すると、クライアントは [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) に暗号化キーを開示することなく、クライアント アプリケーション内の機微なデータを暗号化することができます。 結果として、Always Encrypted は、データを所有 (および表示できる) 人とデータを管理する (ただし、アクセス権を与えない) 人を分離します。 Always Encrypted は、オンプレミスのデータベース管理者やクラウド データベース オペレーターなどを含む、高い特権を持つものの無許可のユーザーによる暗号化データへのアクセスを無効にすることで、顧客が機微なデータを直接管理することなく安心して格納できます。 これにより、組織は保存データと実行データを暗号化して Azure に格納し、オンプレミスのデータベースの管理をサード パーティに委任するか、自社の DBA スタッフによる取り扱い許可の要件を緩和できます。  
+ Always Encrypted は、 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータベースに格納されたクレジット カード番号や身分登録番号 (アメリカの社会保障番号など) などの機微なデータを保護するために設計された機能です。 Always Encrypted を使用すると、クライアントは [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) に暗号化キーを開示することなく、クライアント アプリケーション内の機微なデータを暗号化することができます。 結果として、Always Encrypted は、データを所有 (および表示できる) 人とデータを管理する (ただし、アクセス権を与えない) 人を分離します。 Always Encrypted は、オンプレミスのデータベース管理者やクラウド データベース オペレーターなどを含む、高い特権を持つものの無許可のユーザーによる暗号化データへのアクセスを無効にすることで、顧客が機微なデータを直接管理することなく安心して格納できます。 これにより、組織は保存データと実行データを暗号化して Azure に格納し、オンプレミスのデータベースの管理をサード パーティに委任するか、自社の DBA スタッフによる取り扱い許可の要件を緩和できます。  
   
  Always Encrypted は、アプリケーションに対して暗号化を透過的に実行します。 クライアント コンピューターにインストールされている、Always Encrypted が有効のドライバーは、クライアント アプリケーション内の機微なデータを自動的に暗号化および暗号化解除することで、この処理を実行します。 ドライバーは、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]にデータを渡す前に機微な列のデータを暗号化し、アプリケーションに対するセマンティクスが維持されるように自動的にクエリを書き換えます。 同様に、ドライバーはクエリ結果に含まれている暗号化されたデータベース列に格納されているデータを透過的に暗号化解除します。  
   
@@ -37,10 +41,10 @@ caps.handback.revision: 57
 ## <a name="typical-scenarios"></a>標準のシナリオ  
   
 ### <a name="client-and-data-on-premises"></a>クライアントとデータの両方がオンプレミスにある  
- 顧客はオンプレミスのクライアント アプリケーションと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の両方を社内で運用しています。 外部ベンダーを雇用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の管理を委任することを考えています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に格納された機微なデータを保護するために、顧客は Always Encrypted を使用してデータベース管理者とアプリケーション管理者の役割分担を明確にしています。 顧客は Always Encrypted のキーのプレーンテキスト値を、クライアント アプリケーションがアクセスできる信頼できるキー ストアに格納しています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の管理者はキーにアクセスできないため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に格納された機微なデータを暗号化解除できません。  
+ 顧客はオンプレミスのクライアント アプリケーションと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の両方を社内で運用しています。 外部ベンダーを雇用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の管理を委任することを考えています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に格納された機微なデータを保護するために、顧客は Always Encrypted を使用してデータベース管理者とアプリケーション管理者の役割分担を明確にしています。 顧客は Always Encrypted のキーのプレーンテキスト値を、クライアント アプリケーションがアクセスできる信頼できるキー ストアに格納しています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の管理者はキーにアクセスできないため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に格納された機微なデータを暗号化解除できません。  
   
 ### <a name="client-on-premises-with-data-in-azure"></a>クライアントがオンプレミス、データが Azure 内にある  
- 顧客はオンプレミスのクライアント アプリケーションを社内で運用しています。 アプリケーションは、Azure にホストされたデータベース (Microsoft Azure の仮想マシンで実行されている [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) に格納された機微なデータを元に運用しています。 顧客は Always Encrypted を使用して、Always Encrypted のキーをオンプレミスにホストされた信頼できるキー ストアに格納することで、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] クラウドの管理者が機微なデータにアクセスできないようにします。  
+ 顧客はオンプレミスのクライアント アプリケーションを社内で運用しています。 アプリケーションは、Azure にホストされたデータベース (Microsoft Azure の仮想マシンで実行されている[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ) に格納された機微なデータを元に運用しています。 顧客は Always Encrypted を使用して、Always Encrypted のキーをオンプレミスにホストされた信頼できるキー ストアに格納することで、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] クラウドの管理者が機微なデータにアクセスできないようにします。  
   
 ### <a name="client-and-data-in-azure"></a>クライアントとデータの両方が Azure 内にある  
  顧客には、(ワーカー ロールや Web ロールなどで) Microsoft Azure でホストされているクライアント アプリケーションがあります。このアプリケーションは、Azure でホストされているデータベースに格納されている機密データに影響があります。 Always Encrypted には、クラウド管理者からのデータの完全な分離機能がありませんが、データとキーの両方がクライアント層をホストするプラットフォームのクラウド管理者に公開されているので、セキュリティ攻撃の対象となる領域を減らすという利点が顧客にあります (データベース内のデータは常に暗号化されています)。  
@@ -59,7 +63,7 @@ caps.handback.revision: 57
 
  クライアント ドライバーは、列マスター キー ストア プロバイダーを使用して、列マスター キーを含むキー ストアに接続します。このプロバイダーは、列マスター キーを含むキー ストアをカプセル化するクライアント側ソフトウェア コンポーネントです。 キー ストアの一般的な種類のプロバイダーは、Microsoft からのクライアント側ドライバーのライブラリで、またはスタンドアロンのダウンロードとして入手できます。 独自のプロバイダーを実装することもできます。 組み込みの列マスター キー ストア プロバイダーを含む Always Encrypted の機能は、ドライバー ライブラリとそのバージョンによって異なります。 
 
-特定のクライアント ドライバーで Always Encrypted を使用してアプリケーションを開発する方法の詳細については、「[Always Encrypted (client development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)」(Always Encrypted (クライアント開発)) を参照してください。
+特定のクライアント ドライバーで Always Encrypted を使用してアプリケーションを開発する方法の詳細については、「 [Always Encrypted (client development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)」(Always Encrypted (クライアント開発)) を参照してください。
 
   
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>明確な暗号化またはランダム化された暗号化の選択  
@@ -70,7 +74,7 @@ caps.handback.revision: 57
 - ランダム化された暗号化は低い予測可能な方法でデータを暗号化するためのメソッドを使用します。 ランダム化された暗号化は安全性が上がりますが、暗号化された列に対して検索、グループ化、インデックス作成、結合ができなくなります。
 
 パラメーター (身分登録番号など) の検索またはグループ化に使用される列については、明確な暗号化を使用します。 他のレコードとグループ化されておらず、テーブルの結合に使用されていない信用調査情報などのデータについては、ランダム化された暗号化を使用します。
-Always Encrypted による暗号化アルゴリズムの詳細については、「[Always Encrypted による暗号化](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)」を参照してください。 
+Always Encrypted による暗号化アルゴリズムの詳細については、「 [Always Encrypted による暗号化](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)」を参照してください。 
 
 
 ## <a name="configuring-always-encrypted"></a>Always Encrypted の構成
@@ -80,8 +84,8 @@ Always Encrypted による暗号化アルゴリズムの詳細については、
 |タスク|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
 |対応する列マスター キーを使用した列マスター キー、列暗号化キー、暗号化された列の暗号化キーをプロビジョニングする。|はい|可|いいえ|
-|データベース内にキー メタデータを作成する。|はい|可|はい|
-|暗号化された列がある新しいテーブルを作成する|はい|可|はい|
+|データベース内にキー メタデータを作成する。|はい|はい|はい|
+|暗号化された列がある新しいテーブルを作成する|はい|はい|はい|
 |選択されたデータベース列内にあるデータを暗号化する|はい|可|いいえ|
 
 > [!NOTE]
@@ -96,17 +100,17 @@ Always Encrypted の構成の詳細については、以下を参照してくだ
 [Always Encrypted Wizard](../../../relational-databases/security/encryption/always-encrypted-wizard.md) を使用すると、Always Encrypted ですぐに作業を開始できます。 このウィザードで必要なキーがプロビジョニングされ、選択した列の暗号化が構成されます。 暗号化を設定している列に、既に何らかのデータが含まれている場合、そのデータは暗号化されます。 次の例は、列を暗号化するプロセスを示します。
 
 > [!NOTE]  
->  ウィザードの利用方法については、「[Getting Started with Always Encrypted with SSMS](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS)」(SSMS での Always Encrypted の作業の開始) の動画をご覧ください。
+>  ウィザードの利用方法については、「 [Getting Started with Always Encrypted with SSMS](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS)」(SSMS での Always Encrypted の作業の開始) の動画をご覧ください。
 
-1.  Management Studio の**オブジェクト エクスプローラー**を使用して暗号化する列があるテーブルを含む既存のデータベースに接続するか、新しいデータベースを作成し、暗号化する列がある 1 つ以上のテーブルを作成し、接続します。
-2.  データベースを右クリックして **[タスク]** をポイントし、**[列の暗号化]** をクリックして **Always Encrypted Wizard** を開きます。
-3.  **[概要]** ページの内容を確認し、 **[次へ]**をクリックします。
-4.  **[列の選択]** ページで、テーブルを展開して暗号化する列を選択します。
-5.  暗号化する選択した各列で、**[暗号化の種類]** を *[明確]* または *[ランダム化]* のいずれかに設定します。
-6.  暗号化する選択した各列で、 **[暗号化キー]**を選択します。 以前にこのデータベースに対して暗号化キーを作成していない場合は、新しく自動作成されたキーの既定の選択肢を選び、**[次へ]** をクリックします。
-7.  **[マスター キーの構成]** ページで、新しいキーを格納する場所を選択し、マスター キー ソースを選択し、**[次へ]** をクリックします。
-8.  **[検証]** ページで、スクリプトをすぐに実行するか PowerShell スクリプトを作成するかを選択し、 **[次へ]**をクリックします。
-9.  **[概要]** ページで、選択したオプションを確認し、 **[完了]**をクリックします。 完了したらウィザードを閉じます。
+1.    Management Studio の **オブジェクト エクスプローラー** を使用して暗号化する列があるテーブルを含む既存のデータベースに接続するか、新しいデータベースを作成し、暗号化する列がある 1 つ以上のテーブルを作成し、接続します。
+2.    データベースを右クリックして **[タスク]** をポイントし、[**列の暗号化**] をクリックして **Always Encrypted ウィザード**を開きます。
+3.    **[概要]** ページの内容を確認し、 **[次へ]**をクリックします。
+4.    **[列の選択]** ページで、テーブルを展開して暗号化する列を選択します。
+5.    暗号化する選択した各列で、 **[暗号化の種類]** を *[明確]* または *[ランダム化]*のいずれかに設定します。
+6.    暗号化する選択した各列で、 **[暗号化キー]**を選択します。 以前にこのデータベースに対して暗号化キーを作成していない場合は、新しく自動作成されたキーの既定の選択肢を選び、 **[次へ]**をクリックします。
+7.    **[マスター キーの構成]** ページで、新しいキーを格納する場所を選択し、マスター キー ソースを選択し、 **[次へ]**をクリックします。
+8.    **[検証]** ページで、スクリプトをすぐに実行するか PowerShell スクリプトを作成するかを選択し、 **[次へ]**をクリックします。
+9.    **[概要]** ページで、選択したオプションを確認し、 **[完了]**をクリックします。 完了したらウィザードを閉じます。
 
   
 ## <a name="feature-details"></a>機能の詳細  
@@ -117,11 +121,13 @@ Always Encrypted の構成の詳細については、以下を参照してくだ
 
 -   列の暗号化キーには、それぞれ異なる列のマスター キーで暗号化された値を最大で 2 つ設定できます。 2 つ設定すると、列マスター キーの交換が容易になります。  
   
--   明確な暗号化には、列に[*バイナリ 2* 照合順序](../../../relational-databases/collations/collation-and-unicode-support.md)の 1 つが必要です。  
+-   明確な暗号化には、列に [*バイナリ 2* 照合順序](../../../relational-databases/collations/collation-and-unicode-support.md)の 1 つが必要です。  
+
+-   暗号化されたオブジェクトの定義を変更した後、[sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) を実行して、オブジェクトに対する Always Encrypted のメタデータを更新します。
   
- Always Encrypted は、以下の特性を持つ列に対してはサポートされません (例: 次の条件のいずれかが列に適用される場合、列の **CREATE TABLE/ALTER TABLE** で *Encrypted WITH* 句は使用できません)。  
+ Always Encrypted は、以下の特性を持つ列に対してはサポートされません (例: 次の条件のいずれかが列に適用される場合、列の *CREATE TABLE/ALTER TABLE* で **Encrypted WITH** 句は使用できません)。  
   
--   次のデータ型のいずれかを使用する列: **xml**、**timestamp**/**rowversion**、**image**、**ntext**、**text**、**sql_variant**、**hierarchyid**、**geography**、**geometry**、alias、ユーザー定義型。  
+-   次のデータ型のいずれかを使用する列: **xml**、 **timestamp**/**rowversion**、 **image**、 **ntext**、 **text**、 **sql_variant**、 **hierarchyid**、 **geography**、 **geometry**、alias、ユーザー定義型。  
   
 - FILESTREAM 列  
   
@@ -159,9 +165,9 @@ Always Encrypted の構成の詳細については、以下を参照してくだ
 
 ツールの要件
 
-- SQL Server Management Studio は、**[サーバーへの接続]** ダイアログの **[追加のプロパティ]** タブで *column encryption setting=enabled* に接続している場合、暗号化された列から取得した結果を復号化できます。 暗号化された列の挿入、更新、フィルター処理には、SQL Server Management Studio バージョン 17 以降が必要です。
+- SQL Server Management Studio は、 *[サーバーへの接続]* ダイアログの **[追加のプロパティ]** タブで **column encryption setting=enabled** に接続している場合、暗号化された列から取得した結果を復号化できます。 暗号化された列の挿入、更新、フィルター処理には、SQL Server Management Studio バージョン 17 以降が必要です。
 
-- `sqlcmd` からの暗号化された接続には、バージョン 13.1 以上が必要です。これは[ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=825643)から入手できます。
+- `sqlcmd` からの暗号化された接続には、バージョン 13.1 以上が必要です。これは [ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=825643)から入手できます。
 
   
 ## <a name="database-permissions"></a>データベース権限  
@@ -188,9 +194,9 @@ Always Encrypted の構成の詳細については、以下を参照してくだ
   
 -   2 つの *VIEW* アクセス許可は、ユーザーが列を復号化するアクセス許可を持っていない場合でも、暗号化された列を選択する場合に必要です。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、`public` 固定データベース ロールに対して、両方の *VIEW* アクセス許可が既定で付与されます。 データベース管理者は、`public` ロールに対する *VIEW* アクセス許可を失効 (または拒否) し、特定のロールまたはユーザーに付与して、より制限が大きい制御を実装することができます。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、 *固定データベース ロールに対して、両方の* VIEW `public` アクセス許可が既定で付与されます。 データベース管理者は、 *ロールに対する* VIEW `public` アクセス許可を失効 (または拒否) し、特定のロールまたはユーザーに付与して、より制限が大きい制御を実装することができます。  
   
--   [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] では、`public` 固定データベース ロールに対して、*VIEW* アクセス許可が既定で付与されません。 これによって、(旧バージョンの DacFx を使用する) 一部の既存のレガシ ツールが正常に動作するようになります。 最終的に、暗号化された列を操作する場合 (復号化しない場合でも)、データベース管理者は 2 つの *VIEW* アクセス許可を明示的に付与する必要があります。  
+-   [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]では、 *固定データベース ロールに対して、* VIEW `public` アクセス許可が既定で付与されません。 これによって、(旧バージョンの DacFx を使用する) 一部の既存のレガシ ツールが正常に動作するようになります。 最終的に、暗号化された列を操作する場合 (復号化しない場合でも)、データベース管理者は 2 つの *VIEW* アクセス許可を明示的に付与する必要があります。  
 
   
 ## <a name="example"></a>例  
@@ -230,19 +236,21 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
-*  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
-*  [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
-*  [CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   
-*  [column_definition &#40;Transact-SQL&#41;](../Topic/column_definition%20\(Transact-SQL\).md)   
-*  [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
-*  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
-*  [sys.column_master_keys &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
-*  [sys.columns &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
-*  [Always Encrypted ウィザード](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
-*  [Always Encrypted で保護された機微なデータの移行](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)   
-*  [Always Encrypted &#40;クライアント開発&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)   
-*  [Always Encrypted による暗号化](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)   
-* [SSMS を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-* [PowerShell を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
+[CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
+[CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
+[CREATE TABLE (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql.md)   
+[column_definition (Transact-SQL)](../../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
+[sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
+[sys.column_encryption_key_values (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
+[sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
+[sys.columns (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+[Always Encrypted ウィザード](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
+[Always Encrypted で保護された機微なデータの移行](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)   
+[Always Encrypted (クライアント開発)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)   
+[Always Encrypted による暗号化](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)   
+[SSMS を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
+[PowerShell を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   
+[sp_refresh_parameter_encryption (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
   
   
+

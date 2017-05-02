@@ -1,48 +1,52 @@
 ---
-title: "パブリケーションでのアーティクルの追加または削除 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "アーティクル [SQL Server レプリケーション]、ドロップ"
-  - "アーティクルの削除"
-  - "アーティクルのドロップ"
-  - "アーティクルの追加"
-  - "アーティクル [SQL Server レプリケーション]、追加"
+title: "パブリケーションでのアーティクルの追加および削除 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- articles [SQL Server replication], dropping
+- deleting articles
+- dropping articles
+- adding articles
+- articles [SQL Server replication], adding
 ms.assetid: d5a3e536-62d2-4473-a178-877ba52f7d7f
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: de313d511ec5d7827756256e3a79f21af9885d72
+ms.lasthandoff: 04/11/2017
+
 ---
-# パブリケーションでのアーティクルの追加または削除 (SQL Server Management Studio)
-  パブリケーションの新規作成ウィザードでパブリケーションを作成する場合は、最初にアーティクルを追加します。 このウィザードの使用に関する詳細については、次を参照してください。 [パブリケーションを作成](../../../relational-databases/replication/publish/create-a-publication.md)します。  
+# <a name="add-articles-to-and-drop-articles-from-a-publication"></a>パブリケーションでのアーティクルの追加および削除
+  パブリケーションの新規作成ウィザードでパブリケーションを作成する場合は、最初にアーティクルを追加します。 このウィザードの使用の詳細については、「[パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)」を参照してください。  
   
- 追加しにアーティクルを削除するパブリケーションを作成した後、 **記事** のページ、 **パブリケーションのプロパティ - \< パブリケーション>** ] ダイアログ ボックス。 このダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。 についての追加と削除に関する注意点は、次を参照してください。 [にアーティクルを追加し、既存のパブリケーションからアーティクルを削除](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)します。  
+ パブリケーションの作成後、**[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[アーティクル]** ページでアーティクルを追加または削除します。 このダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。 アーティクルの追加と削除に関する注意点については、「[既存のパブリケーションでのアーティクルの追加および削除](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)」を参照してください。  
   
-### パブリケーションの作成後にアーティクルを追加するには  
+### <a name="to-add-an-article-after-a-publication-is-created"></a>パブリケーションの作成後にアーティクルを追加するには  
   
-1.   **記事** のページ、 **パブリケーションのプロパティ - \< パブリケーション>** 、ダイアログ ボックスをオフ、 **ショー、リスト内のオブジェクトにのみチェック** チェック ボックスをオンします。 これにより、パブリケーション データベース内のパブリッシュされていないオブジェクトも表示されるようになります。  
+1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[アーティクル]** ページで、**[チェック ボックスがオンのオブジェクトのみ一覧に表示する]** チェック ボックスをオフにします。 これにより、パブリケーション データベース内のパブリッシュされていないオブジェクトも表示されるようになります。  
   
 2.  追加する各アーティクルの隣にあるチェック ボックスをオンにします。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### アーティクルを削除するには  
+### <a name="to-delete-an-article"></a>アーティクルを削除するには  
   
-1.   **記事** のページ、 **パブリケーションのプロパティ - \< パブリケーション>** ダイアログ ボックスで、チェック ボックスをオフの横のチェック ボックスを削除する各アーティクルです。  
+1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[アーティクル]** ページで、削除するアーティクルの隣にあるチェック ボックスをオフにします。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-## 参照  
- [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)   
+## <a name="see-also"></a>参照  
+ [アーティクルの定義](../../../relational-databases/replication/publish/define-an-article.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

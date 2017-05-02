@@ -1,22 +1,26 @@
 ---
 title: "SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 06e3118f67db6f01dad0344b42024534081433fb
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング
+# <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   このトピックには、Windows Azure BLOB サービスとの間の SQL Server のバックアップと復元に関するベスト プラクティスとトラブルシューティングのヒントを示しています。  
@@ -25,9 +29,9 @@ caps.handback.revision: 26
   
 -   [Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [チュートリアル: Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [チュートリアル: Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## バックアップの管理  
+## <a name="managing-backups"></a>バックアップの管理  
  バックアップを管理するための一般的な推奨事項を次に示します。  
   
 -   BLOB を誤って上書きしないように、各バックアップに一意なファイル名を付けることをお勧めします。  
@@ -40,16 +44,16 @@ caps.handback.revision: 26
   
 -   バックアップ中に **WITH COMPRESSION** オプションを使用すると、ストレージ コストとストレージのトランザクション コストを最小限に抑えることができます。 また、バックアップ プロセスが完了するまでにかかる時間を短縮することもできます。  
   
-## 大きなファイルの処理  
+## <a name="handling-large-files"></a>大きなファイルの処理  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ操作では、複数のスレッドを使用して、Windows Azure BLOB ストレージ サービスへのデータ転送を最適化します。  ただし、パフォーマンスは ISV の帯域幅やデータベースのサイズなどのさまざまな要因によって異なります。 内部設置型の SQL Server データベースから大きなデータベースまたはファイル グループをバックアップする場合は、最初にスループットのテストを行うことをお勧めします。 [SLA for Storage](http://azure.microsoft.com/support/legal/sla/storage/v1_0/) には BLOB の最大処理時間が示されているため、考慮に入れておくことができます。  
   
 -   「 **バックアップの管理** 」セクションで推奨している方法で **WITH COMPRESSION** オプションを使用することは、大きなファイルをバックアップするときに非常に重要です。  
   
-## BACKUP TO URL または RESTORE FROM URL のトラブルシューティング  
+## <a name="troubleshooting-backup-to-or-restore-from-url"></a>BACKUP TO URL または RESTORE FROM URL のトラブルシューティング  
  ここでは、Windows Azure BLOB ストレージ サービスへのバックアップまたは Windows Azure BLOB ストレージ サービスからの復元を実行する際に発生するエラーを簡単にトラブルシューティングする方法をいくつか示します。  
   
- サポートされないオプションまたは制限事項によるエラーを回避するには、「[Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」の記事で、制限事項の一覧および BACKUP コマンドと RESTORE コマンドのサポート情報を確認してください。  
+ サポートされないオプションまたは制限事項によるエラーを回避するには、「 [Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 」の記事で、制限事項の一覧および BACKUP コマンドと RESTORE コマンドのサポート情報を確認してください。  
   
  **認証エラー:**  
   
@@ -78,7 +82,7 @@ caps.handback.revision: 26
   
     -   トレース フラグ 3051 を設定して、次の形式の特定のエラー ログへの記録を有効にします。  
   
-         BackupToUrl-\<instname>-\<dbname>-action-\<PID>.log。ここで、\<action> には次のいずれかを指定します:  
+         BackupToUrl-\<instname>-\<dbname>-action-\<PID>.log。ここで、\<action> には次のいずれかを指定します。  
   
         -   **DB (DB)**  
   
@@ -94,10 +98,10 @@ caps.handback.revision: 26
   
 -   圧縮されたバックアップから復元するときに、次のエラーが表示される場合があります。  
   
-    -   **SqlException 3284 が発生しました。SqlException 3284 occurred. 重大度: 16、状態: 5**  
-        **メッセージ: デバイス 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' のファイルマークがそろっていません。 バックアップセットの作成に使用したのと同じブロック サイズを指定して RESTORE ステートメントを再実行してください。使用した可能性のある値は '65536' です。**  
+    -   **SqlException 3284 が発生しました。重大度: 16、状態: 5**  
+        **メッセージ: デバイス 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' のファイルマークがそろっていません。バックアップセットの作成に使用したのと同じブロック サイズを指定して RESTORE ステートメントを再実行してください。使用した可能性のある値は '65536' です。**  
   
-         このエラーを解決するには、**BLOCKSIZE = 65536** を指定した **BACKUP** ステートメントを再実行してください。  
+         このエラーを解決するには、 **BLOCKSIZE = 65536** を指定した **BACKUP** ステートメントを再実行してください。  
   
 -   アクティブなリースを保持している BLOB が原因でバックアップ中に発生するエラー: バックアップ処理に失敗すると、アクティブなリースを保持する BLOB が生成されます。  
   
@@ -111,7 +115,7 @@ caps.handback.revision: 26
   
      このようなエラーが発生した場合は、BLOB ファイルを削除する必要があります。 このシナリオの詳細とこの問題の解決方法については、「 [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md)」を参照してください。  
   
-## プロキシ エラー  
+## <a name="proxy-errors"></a>プロキシ エラー  
  インターネットへのアクセスにプロキシ サーバーを使用している場合、以下の問題が発生することがあります。  
   
  **プロキシ サーバーによる接続数の設定:**  
@@ -141,21 +145,22 @@ caps.handback.revision: 26
 1.  次の xml を使用して、BackuptoURL.exe.config という名前の構成ファイルを作成します。  
   
     ```  
-    <?xml version ="1.0"?>  
+    \<?xml version ="1.0"?>  
     <configuration>   
-                    <system.net>   
+                    \<system.net>   
                                     <defaultProxy enabled="true" useDefaultCredentials="true">   
                                                     <proxy usesystemdefault="true" />   
                                     </defaultProxy>   
-                    </system.net>  
+                    \</system.net>  
     </configuration>  
   
     ```  
   
 2.  SQL Server インスタンスの Binn フォルダーに構成ファイルを配置します。 たとえば、SQL Server がコンピューターの C ドライブにインストールされている場合は、構成ファイルを *C:\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Binn* に配置します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Microsoft Azure に格納されたバックアップからの復元](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
-[RESTORE (Transact-SQL)](RESTORE%20\(Transact-SQL\).md)
+[RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
   
+

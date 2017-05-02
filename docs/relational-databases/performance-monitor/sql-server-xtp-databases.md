@@ -1,24 +1,28 @@
 ---
-title: "SQL Server XTP Databases | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server 2016 XTP Databases"
+title: SQL Server XTP Databases | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server 2016 XTP Databases
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 caps.latest.revision: 3
-author: "dagiro"
-ms.author: "v-dagir"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: dagiro
+ms.author: v-dagir
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e2839d276956db1b82bf6b1f236ceae74b973477
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server XTP Databases
+# <a name="sql-server-xtp-databases"></a>SQL Server XTP Databases
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 **SQL Server XTP Databases** パフォーマンス オブジェクトは、インメモリ OLTP データベース固有のカウンターを提供します。
@@ -26,7 +30,7 @@ caps.handback.revision: 3
 > [!NOTE]
 >  現在、SQL Server XTP Databases カウンターは、sys.dm_os_performance_counters からは表示できません。  [システム モニター](../../relational-databases/performance/start-system-monitor-windows.md)で表示することはできます。
 
-次の表では、**SQL Server XTP Databases** カウンターについて説明します。
+次の表では、 **SQL Server XTP Databases** カウンターについて説明します。
 
 |カウンター|Description| 
 |-------------|-----------------|  
@@ -64,5 +68,5 @@ caps.handback.revision: 3
 |**Tail Cache Page Count Peak**|テール キャッシュに割り当てられたページの最大数。 これは非常に低レベルのカウンターであり、お客様による使用は想定されていません。|
 
 
-## 参照  
+## <a name="see-also"></a>参照  
 [SQL Server XTP &#40;インメモリ OLTP&#41; パフォーマンス カウンター](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)

@@ -1,24 +1,28 @@
 ---
 title: "ファイル I/O API を使用した FileTable へのアクセス | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], ファイル API を使用したファイルへのアクセス"
+ms.custom: 
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fee941d70d60091034abfd77998616508fedd611
+ms.lasthandoff: 04/11/2017
+
 ---
-# ファイル I/O API を使用した FileTable へのアクセス
+# <a name="access-filetables-with-file-input-output-apis"></a>ファイル I/O API を使用した FileTable へのアクセス
   FileTable でファイル システム I/O が動作するしくみについて説明します。  
   
 ##  <a name="accessing"></a> FileTable でのファイル I/O API の使用  
@@ -37,12 +41,12 @@ caps.handback.revision: 16
   
 -   ファイルの場合、ストリーム データが **file_stream** 列に格納されます。ディレクトリの場合、この列は null になります。  
   
--   ファイルの場合、**is_directory** 列に **false** が格納されます。 ディレクトリの場合、この列に **true**が格納されます。  
+-   ファイルの場合、 **is_directory** 列に **false**が格納されます。 ディレクトリの場合、この列に **true**が格納されます。  
   
 -   複数のファイル I/O 操作または [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作が同時に行われ、その影響が階層内の同じファイルまたはディレクトリに及ぶ場合、アクセスの共有と同時実行制御が適用されます。  
   
 ##  <a name="read"></a> FileTable 内のファイルおよびディレクトリの読み取り  
- ストリームおよび属性データに対するすべてのファイル I/O アクセス操作に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Read Committed 分離セマンティクスが適用されます。  
+ ストリームおよび属性データに対するすべてのファイル I/O アクセス操作に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Read Committed 分離セマンティクスが適用されます。  
   
 ##  <a name="write"></a> FileTable 内のファイルおよびディレクトリへの書き込みおよび更新  
   
@@ -80,18 +84,18 @@ caps.handback.revision: 16
  FILESTREAM データまたは FileTable データを格納するデータベースが Always On 可用性グループに属する場合、ファイル システム API を介した FILESTREAM データまたは FileTable データへのすべてのアクセスではコンピューター名ではなく仮想ネットワーク名 (VNN) を使用する必要があります。 詳細については、「[FILESTREAM および FileTable と AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)」を参照してください。  
   
 ###  <a name="partial"></a> 部分更新  
- FileTable 内の FILESTREAM データ用に [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 関数を使用して取得された書き込み可能なハンドルは、FILESTREAM コンテンツのインプレース部分更新を実行するために使用できます。 この操作は、トランザクション FILESTREAM アクセスとは異なります。トランザクション FILESTREAM アクセスでは、**OpenSQLFILESTREAM()** を呼び出して明示的なトランザクション コンテキストを渡すことによって取得されたハンドルが使用されます。  
+ FileTable 内の FILESTREAM データ用に [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 関数を使用して取得された書き込み可能なハンドルは、FILESTREAM コンテンツのインプレース部分更新を実行するために使用できます。 この操作は、トランザクション FILESTREAM アクセスとは異なります。トランザクション FILESTREAM アクセスでは、 **OpenSQLFILESTREAM()** を呼び出して明示的なトランザクション コンテキストを渡すことによって取得されたハンドルが使用されます。  
   
 ###  <a name="trans"></a> トランザクション セマンティクス  
  ファイル I/O API を使用して FileTable 内のファイルにアクセスする場合、このような操作はユーザー トランザクションと関連付けされず、次のような特徴を持ちます。  
   
--   FileTable 内の FILESTREAM データの非トランザクション アクセスは、いずれのトランザクションにも関連付けられていないため、特定の分離セマンティクスがありません。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では内部トランザクションを使用して、FileTable データに対してロックまたは同時実行のセマンティクスを適用することができます。 このタイプの内部トランザクションは、すべて READ COMMITTED 分離によって実行されます。  
+-   FileTable 内の FILESTREAM データの非トランザクション アクセスは、いずれのトランザクションにも関連付けられていないため、特定の分離セマンティクスがありません。 ただし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では内部トランザクションを使用して、FileTable データに対してロックまたは同時実行のセマンティクスを適用することができます。 このタイプの内部トランザクションは、すべて READ COMMITTED 分離によって実行されます。  
   
 -   FILESTREAM データの非トランザクション操作に対する ACID 保証はありません。 一貫性の保証は、ファイル システム内のアプリケーションで行われるファイル更新の場合と類似します。  
   
 -   このような変更はロールバックできません。  
   
- ただし、FileTable 内の FILESTREAM 列は、**OpenSqlFileStream()** の呼び出しによるトランザクション FILESTREAM アクセスによって、アクセスすることもできます。 この種のアクセスは完全にトランザクション アクセスであり、現在サポートされている全レベルのトランザクション一貫性を保持します。  
+ ただし、FileTable 内の FILESTREAM 列は、 **OpenSqlFileStream()**の呼び出しによるトランザクション FILESTREAM アクセスによって、アクセスすることもできます。 この種のアクセスは完全にトランザクション アクセスであり、現在サポートされている全レベルのトランザクション一貫性を保持します。  
   
 ###  <a name="concurrency"></a> 同時実行制御  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ファイル システム アプリケーション間の FileTable アクセス、およびファイル システム アプリケーションと [!INCLUDE[tsql](../../includes/tsql-md.md)] アプリケーション間の FileTable アクセスに対して、同時実行制御が適用されます。 この同時実行制御は、FileTable の行に適切なロックを設定することによって実現されます。  
@@ -120,14 +124,15 @@ caps.handback.revision: 16
 |**ディレクトリ変更の通知**|いいえ||  
 |**バイト範囲ロック**|はい|バイト範囲ロックの要求は、NTFS ファイル システムに渡されます。|  
 |**メモリ マップ ファイル**|いいえ||  
-|**キャンセル I/O**|可||  
+|**キャンセル I/O**|はい||  
 |**セキュリティ**|いいえ|Windows 共有レベルのセキュリティと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルおよび列レベルのセキュリティが適用されます。|  
 |**USN ジャーナル**|いいえ|FileTable 内のファイルおよびディレクトリに対するメタデータの変更は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの DML 操作です。 したがって、これらの操作は対応するデータベース ログ ファイルに記録されます。 ただし、(サイズの変更を除き) NTFS USN ジャーナルには記録されません。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変更の追跡機能を使用して、同様の情報をキャプチャします。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [FileTable へのファイルの読み込み](../../relational-databases/blob/load-files-into-filetables.md)   
- [FileTable 内のディレクトリとパスの操作](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Transact SQL を使用した FileTable へのアクセス](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [FileTable DDL、関数、ストアド プロシージャ、およびビュー](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
+

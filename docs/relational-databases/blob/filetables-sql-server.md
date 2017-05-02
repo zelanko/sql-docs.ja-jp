@@ -1,28 +1,32 @@
 ---
-title: "FileTables (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], 概要"
-  - "FileTable [SQL Server]"
-  - "FileTable [SQL Server], FileTables [SQL Server]"
-  - "FileTable [SQL Server]"
+title: FileTables (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], overview
+- FileTables [SQL Server]
+- FileTable [SQL Server], see FileTables [SQL Server]
+- FileTable [SQL Server]
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 605875c9ed6e60861f899ec88e465c636a5976d6
+ms.lasthandoff: 04/11/2017
+
 ---
-# FileTables (SQL Server)
-  FileTable 機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納されているファイル データに対して Windows ファイル名前空間のサポートと Windows アプリケーションとの互換性を提供します。 FileTable により、アプリケーションは、ストレージとデータ管理コンポーネントを統合し、非構造化データおよびメタデータに対する統合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス (フルテキスト検索、セマンティック検索など) を提供できます。  
+# <a name="filetables-sql-server"></a>FileTables (SQL Server)
+  FileTable 機能は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納されているファイル データに対して Windows ファイル名前空間のサポートと Windows アプリケーションとの互換性を提供します。 FileTable により、アプリケーションは、ストレージとデータ管理コンポーネントを統合し、非構造化データおよびメタデータに対する統合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス (フルテキスト検索、セマンティック検索など) を提供できます。  
   
  つまり、ファイルおよびドキュメントを FileTable と呼ばれる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特殊なテーブルに保存しておき、ファイル システムに格納されているかのように、Windows アプリケーションからこれらのファイルおよびドキュメントにアクセスできるということです。このとき、クライアント アプリケーションに変更を加える必要はありません。  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 20
   
 -   Windows API の操作は、本質的には非トランザクションであり、ユーザー トランザクションに関連しません。 ただし、通常のテーブルの FILESTREAM 列の場合のように、FileTable に格納されている FILESTREAM データへのトランザクション アクセスは、完全にサポートされます。  
   
--   FileTable に対して、通常の [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスによってクエリおよび更新を実行することもできます。 また、FileTable は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理ツールや、バックアップなどの機能と統合されています。  
+-   FileTable に対して、通常の [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスによってクエリおよび更新を実行することもできます。 また、FileTable は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理ツールや、バックアップなどの機能と統合されています。  
   
 ##  <a name="additional"></a> FileTable の使用に関するその他の考慮事項  
   
@@ -132,3 +136,4 @@ caps.handback.revision: 20
  FileTable 機能をサポートするために追加または変更された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトの一覧を示します。  
   
   
+

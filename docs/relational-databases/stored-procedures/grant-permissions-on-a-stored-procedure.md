@@ -1,24 +1,28 @@
 ---
 title: "ストアド プロシージャに対する権限の許可 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ストアド プロシージャ [SQL Server], 権限"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stored procedures [SQL Server], permissions
 ms.assetid: a7d15816-a788-4099-ad91-dc4b26618299
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c18a425db4969c7ca75a02737c8b64e3360557c5
+ms.lasthandoff: 04/11/2017
+
 ---
-# ストアド プロシージャに対する権限の許可
+# <a name="grant-permissions-on-a-stored-procedure"></a>ストアド プロシージャに対する権限の許可
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、ストアド プロシージャに対する権限を許可する方法について説明します。 権限は、データベース内の既存のユーザー、データベース ロール、またはアプリケーション ロールに許可することができます。  
   
  **このトピックの内容**  
@@ -44,17 +48,17 @@ caps.handback.revision: 23
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
- 権限の許可者 (または AS オプションで指定されたプリンシパル) は、GRANT OPTION によって与えられた権限を保持しているか、権限が暗黙的に与えられる上位の権限を保持している必要があります。 プロシージャが属しているスキーマに対する ALTER 権限、またはプロシージャに対する CONTROL 権限が必要です。 詳細については、「[GRANT (オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)」を参照してください。  
+ 権限の許可者 (または AS オプションで指定されたプリンシパル) は、GRANT OPTION によって与えられた権限を保持しているか、権限が暗黙的に与えられる上位の権限を保持している必要があります。 プロシージャが属しているスキーマに対する ALTER 権限、またはプロシージャに対する CONTROL 権限が必要です。 詳細については、「 [GRANT (オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)を使用して、ストアド プロシージャに対する権限を許可する方法について説明します。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### ストアド プロシージャに対して権限を許可するには  
+#### <a name="to-grant-permissions-on-a-stored-procedure"></a>ストアド プロシージャに対して権限を許可するには  
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] に接続し、そのインスタンスを展開します。  
   
 2.  **[データベース]**を展開し、プロシージャが属するデータベースを展開し、 **[プログラミング]**を展開します。  
   
-3.  **[ストアド プロシージャ]** を展開し、権限を許可するプロシージャを右クリックして、**[プロパティ]** をクリックします。  
+3.  **[ストアド プロシージャ]**を展開し、権限を許可するプロシージャを右クリックして、 **[プロパティ]**をクリックします。  
   
 4.  **[ストアド プロシージャのプロパティ]**で、 **[権限]** ページを選択します。  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 23
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### ストアド プロシージャに対して権限を許可するには  
+#### <a name="to-grant-permissions-on-a-stored-procedure"></a>ストアド プロシージャに対して権限を許可するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -85,7 +89,7 @@ GRANT EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo
 GO  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [GRANT (オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)   
  [ストアド プロシージャの作成](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   

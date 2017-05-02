@@ -1,30 +1,34 @@
 ---
 title: "カーソル | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "結果 [SQL Server], カーソル"
-  - "Transact-SQL カーソル、カーソルについて"
-  - "カーソル [SQL Server]"
-  - "データ アクセス [SQL Server], カーソル"
-  - "結果セット [SQL Server], カーソル"
-  - "カーソルの要求"
-  - "カーソル [SQL Server], カーソルについて"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- results [SQL Server], cursors
+- Transact-SQL cursors, about cursors
+- cursors [SQL Server]
+- data access [SQL Server], cursors
+- result sets [SQL Server], cursors
+- requesting cursors
+- cursors [SQL Server], about cursors
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 305a84696e0677ef3058b89e83ba73e96188607a
+ms.lasthandoff: 04/11/2017
+
 ---
-# カーソル
+# <a name="cursors"></a>カーソル
   リレーショナル データベースで操作を実行する場合、行の完全なセットが操作の対象になります。 たとえば、SELECT ステートメントでは、WHERE 句で指定した条件を満たすすべての行のセットが返されます。 このステートメントが返す行の完全なセットを結果セットと呼びます。 アプリケーション、特に対話型のオンライン アプリケーションでは、必ずしも、結果セット全体をひとまとめに使用して作業することが効率的であるとは限りません。 そのため、このようなアプリケーションでは、一度に 1 行または少数の行のブロックを使用するためのメカニズムが必要になります。 カーソルはそのメカニズムを提供する結果セットの拡張機能です。  
   
  カーソルでは、次のように結果の処理が拡張されます。  
@@ -39,7 +43,7 @@ caps.handback.revision: 29
   
 -   スクリプト、ストアド プロシージャ、およびトリガー内の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントから、結果セット内のデータにアクセスできます。  
   
-## 概念  
+## <a name="concepts"></a>概念  
  カーソルの実装  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、3 つのカーソルの実装がサポートされています。  
   
@@ -47,10 +51,10 @@ caps.handback.revision: 29
  DECLARE CURSOR 構文に基づいていて、主に [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト、ストアド プロシージャ、およびトリガーで使用されます。 [!INCLUDE[tsql](../includes/tsql-md.md)] カーソルはサーバー上で実装され、クライアントからサーバーに送信される [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントによって管理されます。 また、バッチ、ストアド プロシージャ、またはトリガーにも含まれている場合があります。  
   
  アプリケーション プログラミング インターフェイス (API) サーバー カーソル  
- OLE DB および ODBC の API カーソル関数をサポートします。 API サーバー カーソルはサーバー上に実装されます。 クライアント アプリケーションから API カーソル関数が呼び出されるたびに、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client の OLE DB プロバイダーまたは ODBC ドライバーによって、API サーバー カーソルに対するアクションの要求がサーバーに送信されます。  
+ OLE DB および ODBC の API カーソル関数をサポートします。 API サーバー カーソルはサーバー上に実装されます。 クライアント アプリケーションから API カーソル関数が呼び出されるたびに、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client の OLE DB プロバイダーまたは ODBC ドライバーによって、API サーバー カーソルに対するアクションの要求がサーバーに送信されます。  
   
  クライアント カーソル  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client の ODBC ドライバーおよび ADO API を実装する DLL によって、内部的に実装されます。 クライアント カーソルは、結果セットのすべての行をクライアント上でキャッシュすることによって実装されます。 クライアント アプリケーションによって API カーソル関数が呼び出されるたびに、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client の ODBC ドライバーまたは ADO DLL によって、クライアント上にキャッシュされた結果セットの行に対してカーソル操作が実行されます。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client の ODBC ドライバーおよび ADO API を実装する DLL によって、内部的に実装されます。 クライアント カーソルは、結果セットのすべての行をクライアント上でキャッシュすることによって実装されます。 クライアント アプリケーションによって API カーソル関数が呼び出されるたびに、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client の ODBC ドライバーまたは ADO DLL によって、クライアント上にキャッシュされた結果セットの行に対してカーソル操作が実行されます。  
   
  カーソルの種類  
  順方向専用  
@@ -58,7 +62,7 @@ caps.handback.revision: 29
   
  カーソルは後方にスクロールできないので、データベース内の行のフェッチ後にその行に対して行われた変更内容の大部分は、カーソル内で確認できません。 クラスター化インデックスに含まれる列の更新など、結果セット内の行の位置の判定に使用する値が変更されるような場合は、変更された値がカーソル内で表示されます。  
   
- データベース API カーソル モデルでは、順方向専用カーソルが特殊な種類のカーソルと見なされますが、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では違います。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、順方向専用とスクロールの両方が静的カーソル、キーセット ドリブン カーソル、および動的カーソルに適用できるオプションと見なされます。 [!INCLUDE[tsql](../includes/tsql-md.md)] カーソルは、順方向専用の静的カーソル、キーセット ドリブン カーソル、および動的カーソルをサポートします。 データベース API カーソル モデルでは、静的カーソル、キーセット ドリブン カーソル、および動的カーソルが常にスクロール可能であることを前提としています。 データベース API カーソルの属性またはプロパティを順方向専用に設定すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] により、カーソルは順方向専用の動的カーソルとして実装されます。  
+ データベース API カーソル モデルでは、順方向専用カーソルが特殊な種類のカーソルと見なされますが、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では違います。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、順方向専用とスクロールの両方が静的カーソル、キーセット ドリブン カーソル、および動的カーソルに適用できるオプションと見なされます。 [!INCLUDE[tsql](../includes/tsql-md.md)] カーソルは、順方向専用の静的カーソル、キーセット ドリブン カーソル、および動的カーソルをサポートします。 データベース API カーソル モデルでは、静的カーソル、キーセット ドリブン カーソル、および動的カーソルが常にスクロール可能であることを前提としています。 データベース API カーソルの属性またはプロパティを順方向専用に設定すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] により、カーソルは順方向専用の動的カーソルとして実装されます。  
   
  静的  
  静的カーソルを開くと、そのカーソルの完全な結果セットが **tempdb** に作成されます。 静的カーソルは常に、カーソルを開いた時点の結果セットの状態を表示します。 静的カーソルは変更をほとんど検出しませんが、スクロール中に消費するリソースは比較的少なくなります。  
@@ -67,7 +71,7 @@ caps.handback.revision: 29
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の静的カーソルは常に読み取り専用です。  
   
- 静的カーソルの結果セットは **tempdb** の作業テーブルに格納されるので、結果セット内の行のサイズを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルの最大行サイズよりも大きくすることはできません。  
+ 静的カーソルの結果セットは **tempdb**の作業テーブルに格納されるので、結果セット内の行のサイズを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルの最大行サイズよりも大きくすることはできません。  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] では、静的カーソルは非反映型カーソルとも呼ばれます。 一部のデータベース API ではスナップショット カーソルとも呼びます。  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 29
  動的  
  動的カーソルは静的カーソルと対照的です。 動的カーソルは、スクロールされるときに、結果セット内の行に対して行われたすべての変更を反映します。 結果セット内の行のデータ値、順序、およびメンバーシップは、フェッチを実行するたびに変化する可能性があります。 UPDATE、INSERT、および DELETE ステートメントをどのユーザーが実行しても、その実行結果はすべてカーソルに表示されます。 更新が **SQLSetPos** などの API 関数または [!INCLUDE[tsql](../includes/tsql-md.md)] の WHERE CURRENT OF 句のいずれかを使用してカーソルによって行われた場合、それらの更新結果はすぐに表示されます。 カーソルの外部から行った更新は、コミットされるまで表示されません。ただし、カーソルのトランザクション分離レベルが READ UNCOMMITTED に設定されている場合は、その限りではありません。 動的カーソル プランが空間インデックスを使用することはありません。  
   
-## カーソルの要求  
+## <a name="requesting-a-cursor"></a>カーソルの要求  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、カーソルの要求方法として、次の 2 つの方法がサポートされます。  
   
 -   [!INCLUDE[tsql](../includes/tsql-md.md)]  
@@ -94,12 +98,12 @@ caps.handback.revision: 29
   
     -   ODBC (Open Database Connectivity)  
   
- アプリケーションでは、カーソルを要求するこれら 2 つの方法を混在して使用しないでください。 また、API を使用してカーソル動作を指定するアプリケーションでは、[!INCLUDE[tsql](../includes/tsql-md.md)] の DECLARE CURSOR ステートメントを実行して [!INCLUDE[tsql](../includes/tsql-md.md)] カーソルを要求しないでください。 アプリケーションで DECLARE CURSOR ステートメントを実行できるのは、API カーソル属性をすべて既定値に戻した場合だけです。  
+ アプリケーションでは、カーソルを要求するこれら 2 つの方法を混在して使用しないでください。 また、API を使用してカーソル動作を指定するアプリケーションでは、 [!INCLUDE[tsql](../includes/tsql-md.md)] の DECLARE CURSOR ステートメントを実行して [!INCLUDE[tsql](../includes/tsql-md.md)] カーソルを要求しないでください。 アプリケーションで DECLARE CURSOR ステートメントを実行できるのは、API カーソル属性をすべて既定値に戻した場合だけです。  
   
- [!INCLUDE[tsql](../includes/tsql-md.md)] カーソルも API カーソルも要求されない場合、既定では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によって既定の結果セットと呼ばれる完全な結果セットがアプリケーションに返されます。  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] カーソルも API カーソルも要求されない場合、既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によって既定の結果セットと呼ばれる完全な結果セットがアプリケーションに返されます。  
   
-## カーソル処理  
- [!INCLUDE[tsql](../includes/tsql-md.md)] カーソルと API カーソルでは構文が異なりますが、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のどのカーソルでも、以下の一般的な処理を行います。  
+## <a name="cursor-process"></a>カーソル処理  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] カーソルと API カーソルでは構文が異なりますが、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のどのカーソルでも、以下の一般的な処理を行います。  
   
 1.  カーソルを [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの結果セットに関連付け、カーソル内の行を更新可能にするかどうかなど、そのカーソルの特性を定義します。  
   
@@ -111,10 +115,10 @@ caps.handback.revision: 29
   
 5.  カーソルを閉じます。  
   
-## 関連コンテンツ  
- [カーソル動作](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md) [カーソルの実装方法](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
+## <a name="related-content"></a>関連コンテンツ  
+ [Cursor Behaviors](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md) [How Cursors Are Implemented](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [カーソル &#40;Transact-SQL&#41;](../t-sql/language-elements/cursors-transact-sql.md)   
  [カーソル関数 &#40;Transact-SQL&#41;](../t-sql/functions/cursor-functions-transact-sql.md)   

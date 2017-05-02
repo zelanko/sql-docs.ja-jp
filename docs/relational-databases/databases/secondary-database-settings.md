@@ -1,29 +1,33 @@
 ---
 title: "[セカンダリ データベースの設定] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.settings.dest.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ec30a94c58a94d2afad050eab06ecc60432c7b1
+ms.lasthandoff: 04/11/2017
+
 ---
-# [セカンダリ データベースの設定]
+# <a name="secondary-database-settings"></a>[セカンダリ データベースの設定]
   このダイアログ ボックスを使用すると、ログ配布構成におけるセカンダリ データベースのプロパティを構成および変更できます。  
   
- ログ配布の概念については、「[ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
+ ログ配布の概念については、「 [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[セカンダリ サーバー インスタンス]**  
  ログ配布構成において、現在、セカンダリ サーバーとして構成されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前が表示されます。  
   
@@ -44,7 +48,7 @@ caps.handback.revision: 32
   
  このボタンをクリックすると、 **[復元オプション]** ダイアログ ボックスが開きます。 このダイアログ ボックスで、セカンダリ データベースおよびそのログを保存する既定以外のフォルダーのパスを指定します。 どちらかのフォルダーを指定した場合は、もう一方のフォルダーも指定する必要があります。  
   
- パスでは、セカンダリ サーバーに対してローカルなドライブを参照する必要があります。 また、パスは、ローカル ドライブ名とコロンで始まっている必要があります (たとえば、`C:`)。 マップされたドライブ名およびネットワーク パスは無効です。  
+ パスでは、セカンダリ サーバーに対してローカルなドライブを参照する必要があります。 また、パスは、ローカル ドライブ名とコロンで始まっている必要があります (たとえば、 `C:`)。 マップされたドライブ名およびネットワーク パスは無効です。  
   
  **[復元オプション]** ボタンをクリックした後で既定のフォルダーを使用することにした場合は、 **[復元オプション]** ダイアログ ボックスを取り消すことをお勧めします。 既定以外の場所を既に指定した後で既定の場所を使用することにした場合は、 **[復元オプション]** をもう一度クリックし、テキスト ボックスを消去し、[OK] をクリックします。  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 32
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で、プライマリ データベースの既存のバックアップを使用して、セカンダリ データベースを初期化します。 対象のバックアップの場所を **[バックアップ ファイル]** ボックスに入力します。 [セカンダリ データベース] ボックスに新しいデータベースの名前を入力した場合、データベースは復元操作の一部として作成されます。  
   
  **[バックアップ ファイル]**  
- **[はい、プライマリ データベースの既存のバックアップをセカンダリ データベースに復元します]** を選択した場合は、セカンダリ データベースを初期化するために使用する、データベースの完全バックアップのパスとファイル名を入力します。  
+ **[はい、プライマリ データベースの既存のバックアップをセカンダリ データベースに復元します]**を選択した場合は、セカンダリ データベースを初期化するために使用する、データベースの完全バックアップのパスとファイル名を入力します。  
   
  **[復元オプション]**  
  このトピックで既に説明したこのボタンに関する記述を参照してください。  
@@ -70,7 +74,7 @@ caps.handback.revision: 32
  コピーされたトランザクション ログ バックアップ ファイルを削除する前に、コピー先フォルダーに保持する期間を選択します。  
   
  **ジョブ名**  
- トランザクション ログ バックアップ ファイルをプライマリ サーバーからセカンダリ サーバーにコピーするときに使用する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの名前が表示されます。 このジョブを作成しているときは、ボックスに入力することで名前を変更できます。  
+ トランザクション ログ バックアップ ファイルをプライマリ サーバーからセカンダリ サーバーにコピーするときに使用する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの名前が表示されます。 このジョブを作成しているときは、ボックスに入力することで名前を変更できます。  
   
  **スケジュール**  
  トランザクション ログ バックアップを、プライマリ サーバーからセカンダリ サーバーにコピーする、SQL Server エージェントのコピー ジョブの現在のスケジュールを表示します。 **[スケジュール]**をクリックすると、このスケジュールを変更できます。  
@@ -94,7 +98,7 @@ caps.handback.revision: 32
  セカンダリ データベースを STANDBY モードで保持します。 このモードでは、データベースに対して読み取り専用の操作を実行できます。  
   
 > [!IMPORTANT]  
->  既存のセカンダリ データベースの復旧モードを、たとえば、**[復旧モードなし]** から **[スタンバイ モード]** に変更した場合、この変更は、次のログのバックアップがデータベースに復元されるまで有効になりません。  
+>  既存のセカンダリ データベースの復旧モードを、たとえば、 **[復旧モードなし]** から **[スタンバイ モード]**に変更した場合、この変更は、次のログのバックアップがデータベースに復元されるまで有効になりません。  
   
  **[バックアップの復元を最低限次の期間遅延する]**  
  トランザクション ログ バックアップがセカンダリ データベースに復元されるまでの遅延を選択します。  
@@ -114,7 +118,7 @@ caps.handback.revision: 32
  **[このジョブを無効にする]**  
  セカンダリ データベースへの復元操作を中断します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

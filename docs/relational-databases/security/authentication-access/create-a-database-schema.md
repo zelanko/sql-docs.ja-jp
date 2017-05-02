@@ -1,29 +1,33 @@
 ---
 title: "データベース スキーマの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.schemas.general.f1"
-helpviewer_keywords: 
-  - "Management Studio を使用したスキーマの作成"
-  - "CREATE SCHEMA [Management Studio]"
-  - "データベース スキーマ"
-  - "作成するスキーマ [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.schemas.general.f1
+helpviewer_keywords:
+- creating schemas with Management Studio
+- CREATE SCHEMA [Management Studio]
+- database schemas
+- schemas [SQL Server], creating
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fe54e464e4aabc53eb8645c1fbf20f509f427978
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベース スキーマの作成
+# <a name="create-a-database-schema"></a>データベース スキーマの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、スキーマを作成する方法について説明します。  
   
  **このトピックの内容**  
@@ -44,7 +48,7 @@ caps.handback.revision: 11
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
--   新しいスキーマは、データベース ユーザー、データベース ロール、またはアプリケーション ロールのいずれかのデータベース レベルのプリンシパルが所有します。 スキーマ内に作成されるオブジェクトはスキーマの所有者が所有し、**sys.objects** 内の **principal_id** は NULL になります。 スキーマが含まれるオブジェクトの所有権は、データベース レベルのプリンシパルに譲渡できますが、スキーマ内のオブジェクトに対する CONTROL 権限は常にスキーマ所有者が保持します。  
+-   新しいスキーマは、データベース ユーザー、データベース ロール、またはアプリケーション ロールのいずれかのデータベース レベルのプリンシパルが所有します。 スキーマ内に作成されるオブジェクトはスキーマの所有者が所有し、 **sys.objects** 内の **principal_id**は NULL になります。 スキーマが含まれるオブジェクトの所有権は、データベース レベルのプリンシパルに譲渡できますが、スキーマ内のオブジェクトに対する CONTROL 権限は常にスキーマ所有者が保持します。  
   
 -   データベース オブジェクトを作成する場合に、有効なドメイン プリンシパル (ユーザーまたはグループ) をオブジェクト所有者として指定すると、ドメイン プリンシパルがスキーマとしてデータベースに追加されます。 新しいスキーマは、そのドメイン プリンシパルが所有します。  
   
@@ -58,21 +62,21 @@ caps.handback.revision: 11
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-##### スキーマを作成するには  
+##### <a name="to-create-a-schema"></a>スキーマを作成するには  
   
 1.  オブジェクト エクスプローラーで、 **[データベース]** フォルダーを展開します。  
   
 2.  新しいデータベース スキーマを作成するデータベースを展開します。  
   
-3.  **[セキュリティ]** フォルダーを右クリックし、**[新規作成]** をポイントして、**[スキーマ]** をクリックします。  
+3.  **[セキュリティ]** フォルダーを右クリックし、 **[新規作成]**をポイントして、 **[スキーマ]**をクリックします。  
   
-4.  **[スキーマ - 新規作成]** ダイアログ ボックスの **[全般]** ページで、**[スキーマ名]** ボックスに新しいスキーマの名前を入力します。  
+4.  **[スキーマ - 新規作成]** ダイアログ ボックスの **[全般]** ページで、 **[スキーマ名]** ボックスに新しいスキーマの名前を入力します。  
   
 5.  **[スキーマの所有者]** ボックスに、スキーマを所有するデータベース ユーザーまたはロールの名前を入力します。 または、 **[検索]** をクリックして **[ロールとユーザーの検索]** ダイアログ ボックスを開きます。  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### 追加オプション  
+### <a name="additional-options"></a>追加オプション  
  **[スキーマ – 新規作成]** ダイアログ ボックスには、 **[権限]** と **[拡張プロパティ]**という 2 つのページもあり、それぞれにオプションが用意されています。  
   
 -   **[権限]** ページには、すべてのセキュリティ保護可能なリソースと、ログインに付与できる、セキュリティ保護可能なリソースに対する権限が一覧表示されます。  
@@ -81,7 +85,7 @@ caps.handback.revision: 11
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### スキーマを作成するには  
+#### <a name="to-create-a-schema"></a>スキーマを作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   

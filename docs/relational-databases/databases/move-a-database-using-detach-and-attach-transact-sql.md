@@ -1,39 +1,43 @@
 ---
 title: "デタッチとアタッチを使用してデータベースを移動する方法 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データベース アタッチ [SQL Server]"
-  - "データベースの移動 [SQL Server]"
-  - "データベースのデタッチ [SQL Server]"
-  - "データベースの再配置 [SQL Server]"
-  - "データベースのデタッチ [SQL Server]"
-  - "データベースのインポート [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database attaching [SQL Server]
+- moving databases [SQL Server]
+- database detaching [SQL Server]
+- relocating databases [SQL Server]
+- detaching databases [SQL Server]
+- attaching databases [SQL Server]
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e4604a9d4da9360607e31d31b3f160bc0bff2eac
+ms.lasthandoff: 04/11/2017
+
 ---
-# デタッチとアタッチを使用してデータベースを移動する方法 (Transact-SQL)
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でデタッチしたデータベースを別の場所に移動し、同じまたは異なるサーバー インスタンスに再アタッチする方法について説明します。 ただし、データベースを移動するときは、デタッチとアタッチではなく、ALTER DATABASE による計画的再配置手順を使用することをお勧めします。 詳細については、「[ユーザー データベースの移動](../../relational-databases/databases/move-user-databases.md)」を参照してください。  
+# <a name="move-a-database-using-detach-and-attach-transact-sql"></a>デタッチとアタッチを使用してデータベースを移動する方法 (Transact-SQL)
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でデタッチしたデータベースを別の場所に移動し、同じまたは異なるサーバー インスタンスに再アタッチする方法について説明します。 ただし、データベースを移動するときは、デタッチとアタッチではなく、ALTER DATABASE による計画的再配置手順を使用することをお勧めします。 詳細については、「 [ユーザー データベースの移動](../../relational-databases/databases/move-user-databases.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、運用サーバー以外のサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。  
   
-## 手順  
+## <a name="procedure"></a>手順  
   
-#### デタッチとアタッチを使用してデータベースを移動するには  
+#### <a name="to-move-a-database-by-using-detach-and-attach"></a>デタッチとアタッチを使用してデータベースを移動するには  
   
-1.  データベースをデタッチします。 詳細については、「[データベースのデタッチ](../../relational-databases/databases/detach-a-database.md)」を参照してください。  
+1.  データベースをデタッチします。 詳細については、「 [データベースのデタッチ](../../relational-databases/databases/detach-a-database.md)」を参照してください。  
   
 2.  Windows エクスプローラーまたは Windows コマンド プロンプト ウィンドウで、デタッチされたデータベース ファイルとログ ファイルを新しい場所に移動します。  
   
@@ -47,8 +51,8 @@ caps.handback.revision: 47
   
 3.  コピーしたファイルをアタッチします。 詳細については、「 [Attach a Database](../../relational-databases/databases/attach-a-database.md)」を参照してください。  
   
-## 例  
- 次の例では、`MyAdventureWorks` という [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースのコピーを作成しています。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、アタッチするサーバー インスタンスに接続されたクエリ エディター ウィンドウで実行しています。  
+## <a name="example"></a>例  
+ 次の例では、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] という `MyAdventureWorks`データベースのコピーを作成しています。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、アタッチするサーバー インスタンスに接続されたクエリ エディター ウィンドウで実行しています。  
   
 1.  次の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ステートメントを実行して [!INCLUDE[tsql](../../includes/tsql-md.md)] データベースをデタッチします。  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 47
     > [!IMPORTANT]  
     >  実稼動データベースの場合は、データベースとトランザクション ログを別のディスクに配置します。  
   
-     ファイルをネットワーク経由でリモート コンピューターのディスクにコピーするには、そのリモート コンピューターの UNC (Universal Naming Convention) 名を使用します。 UNC 名の形式は、**\\\\***Servername***\\***Sharename***\\***Path***\\***Filename* です。 ローカル ハード ディスクにファイルを書き込む場合と同様、リモート ディスクでのファイルの読み取りや書き込みに必要な適切な権限が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで使用するユーザー アカウントに許可されている必要があります。  
+     ファイルをネットワーク経由でリモート コンピューターのディスクにコピーするには、そのリモート コンピューターの UNC (Universal Naming Convention) 名を使用します。 UNC 名の形式は、 **\\\\***Servername***\\***Sharename***\\***Path***\\***Filename*です。 ローカル ハード ディスクにファイルを書き込む場合と同様、リモート ディスクでのファイルの読み取りや書き込みに必要な適切な権限が、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用するユーザー アカウントに許可されている必要があります。  
   
 3.  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、移動したデータベースとログをアタッチします (ログのアタッチは省略できます)。  
   
@@ -78,9 +82,9 @@ caps.handback.revision: 47
     GO  
     ```  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、新しくアタッチされたデータベースはオブジェクト エクスプローラーにすぐに表示されません。 このデータベースを表示するには、オブジェクト エクスプローラーで、 **[表示]** をクリックし、 **[最新の情報に更新]**をクリックします。 オブジェクト エクスプローラーの **[データベース]** ノードを展開すると、データベースの一覧に新しくアタッチされたデータベースが表示されるようになります。  
+     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では、新しくアタッチされたデータベースはオブジェクト エクスプローラーにすぐに表示されません。 このデータベースを表示するには、オブジェクト エクスプローラーで、 **[表示]** をクリックし、 **[最新の情報に更新]**をクリックします。 オブジェクト エクスプローラーの **[データベース]** ノードを展開すると、データベースの一覧に新しくアタッチされたデータベースが表示されるようになります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
   
   

@@ -1,26 +1,30 @@
 ---
-title: "SQLServer:Workload Group Stats オブジェクト | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "12/04/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Workload Group Stats オブジェクト"
-  - "SQLServer:Workload Group Stats"
+title: "SQL Server:Workload Group Stats オブジェクト | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 12/04/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Workload Group Stats object
+- 'SQLServer: Workload Group Stats'
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 668f0f7cf7b38fb18144e58cccbc7e4902a39f75
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQLServer:Workload Group Stats オブジェクト
+# <a name="sql-server-workload-group-stats-object"></a>SQLServer:Workload Group Stats オブジェクト
   SQLServer:Workload Group Stats オブジェクトには、リソース ガバナーのワークロード グループ統計に関する情報を報告するパフォーマンス カウンターが含まれています。  
   
  アクティブな各ワークロード グループでは、リソース ガバナー ワークロード グループ名と同じインスタンス名を持つ SQLServer:Workload Group Stats パフォーマンス オブジェクトのインスタンスが作成されます。 次の表では、このインスタンスでサポートされるカウンターについて説明します。  
@@ -34,7 +38,7 @@ caps.handback.revision: 14
 |**CPU delayed % base**|内部使用のみです。| 
 |**CPU effective %**|パフォーマンス オブジェクトの指定されたインスタンス内のすべての要求に対するシステム CPU の使用率 (アクティブ時間の合計に対する割合)| 
 |**CPU effective % base**|内部使用のみです。| 
-|**CPU usage %**|このワークロード グループのすべての要求による CPU 帯域幅の使用率。コンピューターを基準に測定され、システムのすべての CPU を基準に正規化されます。 この値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスで使用できる CPU の量によって変化します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスに割り当てられた内容を基準にして正規化されるのではありません。| 
+|**CPU usage %**|このワークロード グループのすべての要求による CPU 帯域幅の使用率。コンピューターを基準に測定され、システムのすべての CPU を基準に正規化されます。 この値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスで使用できる CPU の量によって変化します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスに割り当てられた内容を基準にして正規化されるのではありません。| 
 |**CPU usage % base**|内部使用のみです。| 
 |**CPU violated %**|CPU 予約と有効なスケジュール割合の差。|  
 |**Max request CPU time (ms)**|ワークロード グループの現在実行中の要求で使用される最大 CPU 時間 (ミリ秒単位)。|  
@@ -45,9 +49,10 @@ caps.handback.revision: 14
 |**Requests completed/sec**|このワークロード グループの完了した要求の数。 この数は累積数です。|  
 |**Suboptimal plans/sec**|1 秒間にこのワークロード グループで生成された最適ではないプランの数。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [リソースの利用状況の監視 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQLServer:Resource Pool Stats オブジェクト](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)   
  [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)  
   
   
+

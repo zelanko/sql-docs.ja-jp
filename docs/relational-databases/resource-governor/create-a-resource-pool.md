@@ -1,32 +1,36 @@
 ---
 title: "リソース プールの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "リソース プール [SQL Server], 作成"
-  - "リソース ガバナー, リソース プールの作成"
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resource pools [SQL Server], create
+- Resource Governor, resource pool create
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3d5262087e05342256bb46c28ea7fd5d2ce1bf54
+ms.lasthandoff: 04/11/2017
+
 ---
-# リソース プールの作成
+# <a name="create-a-resource-pool"></a>リソース プールの作成
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  リソース プールを作成するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用します。 リソース プールの原則については、「[リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)」を参照してください。  
+  リソース プールを作成するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。 リソース プールの原則については、「 [リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)」を参照してください。  
   
--   **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)、 [権限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **リソース プールの作成に使用するもの:** [SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
+-   **To create a resource pool, using:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 19
   
  すべてのリソース プールの CPU の割合の最小値の合計およびメモリの割合の最小値の合計が、それぞれ 100 を超えないようにしてください。  
   
-###  <a name="Permissions"></a> アクセス許可  
+###  <a name="Permissions"></a> 権限  
  リソース プールを作成するには、CONTROL SERVER 権限が必要です。  
   
 ##  <a name="CreRPProp"></a> SQL Server Management Studio を使用してリソース プールを作成する  
@@ -43,7 +47,7 @@ caps.handback.revision: 19
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]**ノードまで再帰的に展開します。  
   
-2.  **[リソース ガバナー]** を右クリックし、**[プロパティ]** をクリックします。  
+2.  **[リソース ガバナー]**を右クリックし、 **[プロパティ]**をクリックします。  
   
 3.  **[リソース プール]** グリッドで、空白行の最初の列をクリックします。 この列にアスタリスク (*) がラベルとして付加されます。  
   
@@ -60,8 +64,8 @@ caps.handback.revision: 19
   
 2.  **ALTER RESOURCE GOVERNOR RECONFIGURE** ステートメントを実行します。  
   
-### 例 (Transact-SQL)  
- 次の例では、`poolAdhoc` というリソース プールを作成します。  
+### <a name="example-transact-sql"></a>例 (Transact-SQL)  
+ 次の例では、 `poolAdhoc`というリソース プールを作成します。  
   
 ```  
 CREATE RESOURCE POOL poolAdhoc  
@@ -71,8 +75,8 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 参照  
- [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="see-also"></a>参照  
+ [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
  [リソース ガバナーの有効化](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [リソース プールの設定の変更](../../relational-databases/resource-governor/change-resource-pool-settings.md)   
@@ -86,3 +90,4 @@ GO
  [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)  
   
   
+

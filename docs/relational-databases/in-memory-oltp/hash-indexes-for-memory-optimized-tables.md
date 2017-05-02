@@ -1,25 +1,29 @@
 ---
 title: "メモリ最適化テーブルのハッシュ インデックス | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "08/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- MSDN content
+- MSDN - SQL DB
+ms.date: 08/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.service: sql-database
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de23d5625c883792f5c99de75dc90ccd1cabe326
+ms.lasthandoff: 04/11/2017
+
 ---
-# メモリ最適化テーブルのハッシュ インデックス
+# <a name="hash-indexes-for-memory-optimized-tables"></a>メモリ最適化テーブルのハッシュ インデックス
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   
@@ -31,7 +35,7 @@ caps.handback.revision: 7
 - ハッシュ インデックスの設計と管理方法について説明します。  
   
   
-#### 前提条件  
+#### <a name="prerequisite"></a>前提条件  
   
 この記事を理解するための重要なコンテキスト情報は、次の記事に収められています。  
   
@@ -39,10 +43,10 @@ caps.handback.revision: 7
   
   
   
-## A. メモリ最適化インデックスの構文  
+## <a name="a-syntax-for-memory-optimized-indexes"></a>A. メモリ最適化インデックスの構文  
   
   
-### A.1 構文のコード例  
+### <a name="a1-code-sample-for-syntax"></a>A.1 構文のコード例  
   
 ここには、メモリ最適化テーブルのハッシュ インデックスを作成する際に使用できる構文を示す Transact-SQL コード ブロックが含まれています。  
   
@@ -73,23 +77,23 @@ caps.handback.revision: 7
     go  
   
 
-データの適切な `BUCKET_COUNT` を決定するには、「[ハッシュ インデックスのバケット数の構成](#configuring_bucket_count)」を参照してください。 
+データの適切な `BUCKET_COUNT` を決定するには、「 [ハッシュ インデックスのバケット数の構成](#configuring_bucket_count)」を参照してください。 
   
-## B. ハッシュ インデックス  
+## <a name="b-hash-indexes"></a>B. ハッシュ インデックス  
   
   
-### B.1 パフォーマンスの基礎  
+### <a name="b1-performance-basics"></a>B.1 パフォーマンスの基礎  
   
 ハッシュ インデックスのパフォーマンスは次のようになります。  
   
-- WHERE 句がハッシュ インデックス キーの各列の*正確な*値を指定する場合は、極めて良好です。  
-- WHERE 句がインデックス キーで値の*範囲*を探す場合は、よくありません。  
+- WHERE 句がハッシュ インデックス キーの各列の *正確な* 値を指定する場合は、極めて良好です。  
+- WHERE 句がインデックス キーで値の *範囲* を探す場合は、よくありません。  
 - WHERE 句が 2 列のハッシュ インデックス キーの最初の列の特定の値を指定するが、キーの *2* 番目の列の値を指定しない場合は、よくありません。  
   
   
 <a name="h3-b2-declaration-limitations"></a>  
   
-### B.2 宣言の制限  
+### <a name="b2-declaration-limitations"></a>B.2 宣言の制限  
   
 ハッシュ インデックスは、メモリ最適化テーブルにのみ存在できます。 ディスク ベース テーブルには存在できません。  
   
@@ -108,9 +112,9 @@ CREATE TABLE ステートメント外でハッシュ インデックスを作成
   
   
   
-### B.3 バケットとハッシュ関数  
+### <a name="b3-buckets-and-hash-function"></a>B.3 バケットとハッシュ関数  
   
-ハッシュ インデックスでは、*バケット*配列と呼ばれるものの中に、そのキー値を固定します。  
+ハッシュ インデックスでは、 *バケット* 配列と呼ばれるものの中に、そのキー値を固定します。  
   
 - 各バケットは 8 バイトであり、キー エントリのリンク リストのメモリ アドレスを格納するために使用されます。  
 - 各エントリは、インデックス キーの値と、基になるメモリ最適化テーブル内の対応する行のアドレスです。  
@@ -119,7 +123,7 @@ CREATE TABLE ステートメント外でハッシュ インデックスを作成
   
 ハッシュ アルゴリズムはすべての一意キー値または個別キー値をそのバケット間に均等に分散しようとしますが、完全に均等になることは現実にはありえません。 ある特定のキー値のすべてのインスタンスは、同じバケットにチェーンされます。 そのバケットに別のキー値のすべてのインスタンスが混在する場合もあります。  
   
-- この混在は*ハッシュの競合*と呼ばれます。 競合は一般的ですが、理想的ではありません。  
+- この混在は *ハッシュの競合*と呼ばれます。 競合は一般的ですが、理想的ではありません。  
 - 現実的な目標は、バケットの 30% に 2 つの異なるキー値が含まれていることです。  
   
   
@@ -138,11 +142,11 @@ SQL Server には、すべてのハッシュ インデックスで使用する�
 ハッシュ インデックスとバケットの関係をまとめると、次の図のようになります。  
   
   
-![hekaton_tables_23d](../../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "Index keys, input into hash function, output is address of a hash bucket, which points to head of chain.")  
+![hekaton_tables_23d](../../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "インデックス キーがハッシュ関数に入力され、ハッシュ バケットのアドレスが出力されます。これはチェーンの先頭を示します。")  
   
   
   
-### B.4 行のバージョンとガベージ コレクション  
+### <a name="b4-row-versions-and-garbage-collection"></a>B.4 行のバージョンとガベージ コレクション  
   
   
 メモリ最適化テーブルでは、行が SQL UPDATE による影響を受ける場合、テーブルで行の更新バージョンが作成されます。 更新トランザクションの間、他のセッションは行の前のバージョンを読み取ることができるため、行ロックに関連するパフォーマンスの低下を回避することができます。  
@@ -153,32 +157,33 @@ SQL Server には、すべてのハッシュ インデックスで使用する�
   
 <a name="configuring_bucket_count"></a>
   
-## C. ハッシュ インデックスのバケット数の構成  
+## <a name="c-configuring-the-hash-index-bucket-count"></a>C. ハッシュ インデックスのバケット数の構成  
   
 ハッシュ インデックスのバケット数はインデックス作成時に指定しますが、ALTER TABLE...ALTER INDEX REBUILD 構文を使用して変更することができます。  
   
 ほとんどの場合、バケット数は、理想的にはインデックス キーの個別の値の数の 1 から 2 倍の範囲内にします。   
 特定のインデックス キーに値がどれぐらいあるかは、予測できないこともあります。 **BUCKET_COUNT** 値がキー値の実際の数の 10 倍以内であれば、パフォーマンスは通常まだ良好であり、低く見積もるよりは多く見積もりすぎるほうが一般的によい結果が得られます。  
   
-*少なすぎる*バケットには、次の短所があります。  
+*少なすぎる* バケットには、次の短所があります。  
   
 - 個別のキー値のハッシュの競合の増加。  
   - 個別の値が、異なる個別の値を持つバケットの共有を強いられます。  
   - パケットごとの平均チェーン長が増えます。  
   - バケット チェーンが長ければ長いほど、インデックスでの等値検索の速度が遅くなります。  
   
-*多すぎる*バケットには、次の短所があります。  
+*多すぎる* バケットには、次の短所があります。  
   
 - バケット数が高すぎると、空のバケットを増やす結果になることがあります。  
   - 空のバケットは、フル インデックス スキャンのパフォーマンスに影響を与えます。 フル インデックス スキャンが普通に行われる場合は、インデックス キーの個別の値の数に近いバケット数を選択することを検討してください。  
   - 空のバケットは、それぞれが使用するのはわずか 8 バイトですが、メモリを使用します。  
     
   
-> [AZURE.NOTE] バケットを追加しても、重複する値を共有するエントリのチェーンが短くなることはありません。 値の重複の割合は、ハッシュが適切なインデックスの種類であるかどうかを決定するために使用され、バケット数を計算するために使用されることはありません。  
+> [!NOTE]
+> バケットを追加しても、重複する値を共有するエントリのチェーンが短くなることはありません。 値の重複の割合は、ハッシュが適切なインデックスの種類であるかどうかを決定するために使用され、バケット数を計算するために使用されることはありません。  
   
   
   
-### C.1 実際的な数値  
+### <a name="c1-practical-numbers"></a>C.1 実際的な数値  
   
 **BUCKET_COUNT** が推奨される範囲を多少逸脱している場合でも、ハッシュ インデックスのパフォーマンスは、許容できるか容認できる可能性があります。 危機は発生しません。  
   
@@ -193,11 +198,11 @@ SQL Server には、すべてのハッシュ インデックスで使用する�
   
 - バケット数 2,000,000 は、容認できるほぼ最低の値です。 パフォーマンスの低下の度合いは、許容できる可能性があります。  
   
-### C.2 インデックス内の重複する値が多すぎる  
+### <a name="c2-too-many-duplicate-values-in-the-index"></a>C.2 インデックス内の重複する値が多すぎる  
   
 ハッシュ インデックス値の重複率が高いと、ハッシュ バケットのチェーンが長くなります。  
   
-前の T-SQL 構文のコード ブロックと同じ SupportEvent テーブルがあると仮定します。 次の T-SQL コードは、*すべての*値の*一意の*値に対する比率を検出して表示する方法を示しています。  
+前の T-SQL 構文のコード ブロックと同じ SupportEvent テーブルがあると仮定します。 次の T-SQL コードは、 *すべての* 値の *一意の* 値に対する比率を検出して表示する方法を示しています。  
   
         -- Calculate ratio of:  Rows / Unique_Values.  
     DECLARE @allValues float(8) = 0.0, @uniqueVals float(8) = 0.0;  
@@ -214,13 +219,13 @@ SQL Server には、すべてのハッシュ インデックスで使用する�
   
 - 比率 10.0 以上は、インデックスの種類としてハッシュは適していないことを意味します。 代わりに非クラスター化インデックスを使用することを検討してください。   
   
-## D. ハッシュ インデックスのバケット数のトラブルシューティング  
+## <a name="d-troubleshooting-hash-index-bucket-count"></a>D. ハッシュ インデックスのバケット数のトラブルシューティング  
   
 このセクションでは、ハッシュ インデックスのバケット数のトラブルシューティング方法について説明します。  
   
-### D.1 チェーンと空のバケットの統計を監視する  
+### <a name="d1-monitor-statistics-for-chains-and-empty-buckets"></a>D.1 チェーンと空のバケットの統計を監視する  
   
-次の T-SQL SELECT を実行することで、ハッシュ インデックスの統計を監視できます。 この SELECT では、**sys.dm_db_xtp_hash_index_stats** という名前のデータ管理ビュー (DMV) を使用します。  
+次の T-SQL SELECT を実行することで、ハッシュ インデックスの統計を監視できます。 この SELECT では、 **sys.dm_db_xtp_hash_index_stats**という名前のデータ管理ビュー (DMV) を使用します。  
   
   
 ```t-sql
@@ -260,17 +265,17 @@ SELECT の結果を、次の統計ガイドラインと比較します。
   
 
   
-### D.2 チェーンと空のバケットのデモンストレーション  
+### <a name="d2-demonstration-of-chains-and-empty-buckets"></a>D.2 チェーンと空のバケットのデモンストレーション  
   
   
-次の T-SQL コード ブロックを使用すると、`SELECT * FROM sys.dm_db_xtp_hash_index_stats;` を簡単にテストできます。 このコード ブロックは 1 分で完了します。 次のコード ブロックのフェーズを以下に示します。  
+次の T-SQL コード ブロックを使用すると、 `SELECT * FROM sys.dm_db_xtp_hash_index_stats;`を簡単にテストできます。 このコード ブロックは 1 分で完了します。 次のコード ブロックのフェーズを以下に示します。  
   
   
 1. いくつかのハッシュ インデックスがあるメモリ最適化テーブルを作成します。  
 2. テーブルに数千行を設定します。  
-    a. モジュロ演算子を使用して、StatusCode 列の重複する値の割合を構成します。  
-    b. INSERT ループは、262144 行を約 1 分間で挿入します。  
-3. PRINT は、前述の SELECT を **sys.dm_db_xtp_hash_index_stats** から実行することを指示するメッセージを出力します。  
+    A. モジュロ演算子を使用して、StatusCode 列の重複する値の割合を構成します。  
+    B. INSERT ループは、262144 行を約 1 分間で挿入します。  
+3. PRINT は、前述の SELECT を **sys.dm_db_xtp_hash_index_stats**から実行することを指示するメッセージを出力します。  
   
   
 ```t-sql
@@ -330,7 +335,7 @@ SELECT の結果を、次の統計ガイドラインと比較します。
 - 主キー インデックスと ix_OrderSequence に一意の値を挿入します。  
 - StatusCode の 8 つのみの個別の値を表す 20 ～ 30 万の行を挿入します。 したがって、ix_StatusCode インデックスの値は高い割合で重複しています。  
   
-バケット数が最適でない場合のトラブルシューティングを行うために、**sys.dm_db_xtp_hash_index_stats** からの SELECT の次の出力を確認します。 これらの結果を得るために、セクション D.1 からコピーした SELECT に `WHERE Object_Name(h.object_id) = 'SalesOrder_Mem'` を追加しています。  
+バケット数が最適でない場合のトラブルシューティングを行うために、 **sys.dm_db_xtp_hash_index_stats**からの SELECT の次の出力を確認します。 これらの結果を得るために、セクション D.1 からコピーした SELECT に `WHERE Object_Name(h.object_id) = 'SalesOrder_Mem'` を追加しています。  
   
   
   
@@ -381,7 +386,7 @@ SELECT の結果をコードの後に示しています。見やすくするた�
 - 平均チェーン長は 1 であり、これも適切な値です。 変更は不要です。  
   
   
-### D.3 トレードオフのバランスを考慮する  
+### <a name="d3-balancing-the-trade-off"></a>D.3 トレードオフのバランスを考慮する  
   
 OLTP ワークロードは、個々の行に注目します。 フル テーブル スキャンは、通常は OLTP ワークロードのパフォーマンスのクリティカル パスではありません。 したがって、トレードオフのバランスを考慮する必要があるのは、次の項目の間です。  
   
@@ -405,7 +410,7 @@ OLTP ワークロードは、個々の行に注目します。 フル テーブ�
   
   
   
-## E. ハッシュ インデックスの強み  
+## <a name="e-strengths-of-hash-indexes"></a>E. ハッシュ インデックスの強み  
   
   
 ハッシュ インデックスは、次に該当する場合に非クラスター化インデックスよりも適しています。  
@@ -419,7 +424,7 @@ OLTP ワークロードは、個々の行に注目します。 フル テーブ�
   
   
   
-### E.1 複数列のハッシュ インデックス キー  
+### <a name="e1-multi-column-hash-index-keys"></a>E.1 複数列のハッシュ インデックス キー  
   
   
 2 列のインデックスは、非クラスター化インデックスにすることも、ハッシュ インデックスにすることもできます。 インデックスの列が col1 と col2 であるとします。 次の SQL SELECT ステートメントの場合、クエリ オプティマイザーにとって役立つのは、非クラスター化インデックスのみになります。  
@@ -437,9 +442,9 @@ OLTP ワークロードは、個々の行に注目します。 フル テーブ�
   
   
 \<!--   
-Hash_Indexes_for_Memory-Optimized_Tables.md , which is....  
+Hash_Indexes_for_Memory-Optimized_Tables.md、その内容は....  
 CAPS guid: {e922cc3a-3d6e-453b-8d32-f4b176e98488}  
-CAPS guid of parent is: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
+親の CAPS guid: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
   
   
   
@@ -453,8 +458,10 @@ CAPS guid of parent is: {eecc5821-152b-4ed5-888f-7c0e6beffed9}
   
   
   
-GeneMi  ,  2016-05-05  Thursday  15:01pm  
+GeneMi、2016-05-05 木曜日午後 15:01  
 -->  
   
   
   
+
+

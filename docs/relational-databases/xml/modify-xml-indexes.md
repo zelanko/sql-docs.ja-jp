@@ -1,25 +1,29 @@
 ---
 title: "XML インデックスの変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "変更する XML インデックス [SQL Server]"
-  - "変更、インデックス"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XML indexes [SQL Server], modifying
+- modifying indexes
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2605bd79960ff302a89cdbb88f24ae1c36882d5f
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML インデックスの変更
+# <a name="modify-xml-indexes"></a>XML インデックスの変更
   [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL ステートメントを使用すると、既存の XML インデックスや XML 以外のインデックスを変更できます。 ただし、一部の ALTER INDEX オプションは XML インデックスに使用できません。 次のオプションは、XML インデックスの変更時には無効です。  
   
 -   再構築と設定オプションの IGNORE_DUP_KEY は XML インデックスでは無効です。 再構築オプション ONLINE は、セカンダリ XML インデックスでは OFF に設定されている必要があります。 オプション DROP_EXISTING は、ALTER INDEX ステートメントでは使用できません。  
@@ -28,8 +32,8 @@ caps.handback.revision: 12
   
 -   ALTER INDEX ALL を指定すると、このオプションは XML 以外のインデックスと XML インデックスの両方に適用されます。 一方の種類のインデックスでは無効なインデックス オプションが指定される場合があります。 その場合、ステートメント全体が失敗します。  
   
-## 例 : XML インデックスの変更  
- 次の例では、XML インデックスを作成後、`ALLOW_ROW_LOCKS` オプションを `OFF` に設定してインデックスを変更します。 `ALLOW_ROW_LOCKS` が `OFF` の場合、行はロックされないので、ページレベルおよびテーブルレベルのロックを使用して、指定したインデックスにアクセスできます。  
+## <a name="example-modifying-an-xml-index"></a>例 : XML インデックスの変更  
+ 次の例では、XML インデックスを作成後、 `ALLOW_ROW_LOCKS` オプションを `OFF`に設定してインデックスを変更します。 `ALLOW_ROW_LOCKS` が `OFF`の場合、行はロックされないので、ページレベルおよびテーブルレベルのロックを使用して、指定したインデックスにアクセスできます。  
   
 ```  
 CREATE TABLE T (Col1 INT PRIMARY KEY, XmlCol XML)  
@@ -49,8 +53,8 @@ ALTER INDEX PIdx_T_XmlCol on T
 SET (ALLOW_ROW_LOCKS = OFF)  
 ```  
   
-## 例 : XML インデックスの無効化と有効化  
- 既定では、XML インデックスは有効です。 XML インデックスが無効になっている場合、その XML 列に実行されるクエリでは XML インデックスが使用されません。 XML インデックスを有効にするには、`ALTER INDEX` オプションを指定した `REBUILD` を使用します。  
+## <a name="example-disabling-and-enabling-an-xml-index"></a>例 : XML インデックスの無効化と有効化  
+ 既定では、XML インデックスは有効です。 XML インデックスが無効になっている場合、その XML 列に実行されるクエリでは XML インデックスが使用されません。 XML インデックスを有効にするには、 `ALTER INDEX` オプションを指定した `REBUILD` を使用します。  
   
 ```  
 CREATE TABLE T (Col1 INT PRIMARY KEY, XmlCol XML)  
@@ -69,7 +73,7 @@ ALTER INDEX PIdx_T_XmlCol on T REBUILD
 Go  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [XML インデックス &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   

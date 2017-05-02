@@ -1,29 +1,33 @@
 ---
 title: "パブリッシャーのセキュリティ保護 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "logins [SQL Server replication], publication access list"
-  - "publications [SQL Server replication], publication access lists"
-  - "publication access list (PAL)"
-  - "PAL (パブリケーション アクセス リスト)"
-  - "パブリッシャー [SQL Server レプリケーション], セキュリティ"
-  - "パブリケーション [SQL Server レプリケーション], セキュリティ"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logins [SQL Server replication], publication access list
+- publications [SQL Server replication], publication access lists
+- publication access list (PAL)
+- PAL (publication access list)
+- Publishers [SQL Server replication], security
+- publications [SQL Server replication], security
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56e04431c75b87188f6b476b9d23e5b482730881
+ms.lasthandoff: 04/11/2017
+
 ---
-# パブリッシャーのセキュリティ保護
+# <a name="secure-the-publisher"></a>パブリッシャーのセキュリティ保護
   次のレプリケーション エージェントはパブリッシャーに接続します。  
   
 -   ログ リーダー エージェント (Log Reader Agent)  
@@ -34,45 +38,45 @@ caps.handback.revision: 48
   
 -   マージ エージェント  
   
- 最低限必要な権限のみを与え、かつ、すべてのパスワードの格納を保護するという原則に従って、これらの各エージェントに対し適切なログインを提供することをお勧めします。 各エージェントに必要な権限については、次を参照してください。 [レプリケーション エージェントのセキュリティ モデル](../../../relational-databases/replication/security/replication-agent-security-model.md)します。  
+ 最低限必要な権限のみを与え、かつ、すべてのパスワードの格納を保護するという原則に従って、これらの各エージェントに対し適切なログインを提供することをお勧めします。 各エージェントに必要な権限の詳細については、「 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
  ログインとパスワードの適切な管理以外にも、パブリケーション アクセス リスト (PAL) の役割を理解しておく必要があります。 PAL は、パブリッシャーのデータベースへのアドホック アクセスを制限すると同時に、ログインしてパブリケーション データへのアクセスを可能にするために使用されます。  
   
-## パブリケーション アクセス リスト  
- PAL は、パブリッシャーでパブリケーションの安全を確保する主要なメカニズムです。 PAL は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows のアクセス制御リストによく似た機能を備えています。 パブリケーションを作成すると、レプリケーションによってそのパブリケーションから PAL が作成されます。 PAL は、パブリケーションへのアクセスを許可されているログインとグループのリストを含めるように構成できます。 エージェントがパブリッシャーまたはディストリビューターに接続し、パブリケーションへのアクセスを要求すると、PAL 内の認証情報が、エージェントによって提供されるパブリッシャー ログインと比較されます。 このプロセスでは、クライアント ツールがパブリッシャーとディストリビューターのログインを使用してパブリッシャー側で直接変更を行う危険性を回避できるので、パブリッシャーのセキュリティを向上できます。  
+## <a name="publication-access-list"></a>パブリケーション アクセス リスト  
+ PAL は、パブリッシャーでパブリケーションの安全を確保する主要なメカニズムです。 PAL は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows のアクセス制御リストによく似た機能を備えています。 パブリケーションを作成すると、レプリケーションによってそのパブリケーションから PAL が作成されます。 PAL は、パブリケーションへのアクセスを許可されているログインとグループのリストを含めるように構成できます。 エージェントがパブリッシャーまたはディストリビューターに接続し、パブリケーションへのアクセスを要求すると、PAL 内の認証情報が、エージェントによって提供されるパブリッシャー ログインと比較されます。 このプロセスでは、クライアント ツールがパブリッシャーとディストリビューターのログインを使用してパブリッシャー側で直接変更を行う危険性を回避できるので、パブリッシャーのセキュリティを向上できます。  
   
 > [!NOTE]  
->  PAL のメンバーに含めるため、レプリケーションによって、各パブリケーションに対してパブリッシャー上にロールが作成されます。 ロールは、フォームの名前を持って **Msmerge_***\< PublicationID>* マージ レプリケーションと **msreplpal _***\< PublicationDatabaseID>***_***\< PublicationID>* トランザクション レプリケーションとスナップショット レプリケーション。  
+>  PAL のメンバーに含めるため、レプリケーションによって、各パブリケーションに対してパブリッシャー上にロールが作成されます。 ロールには、マージ レプリケーションの場合は **Msmerge_***\<PublicationID>* という形式、トランザクション レプリケーションとスナップショット レプリケーションの場合は **MSReplPAL_***\<PublicationDatabaseID>***_***\<PublicationID>* という形式で名前が付けられます。  
   
- 既定では、以下のログインが PAL に含まれる: のメンバー、 **sysadmin** 固定サーバー ロールは、パブリケーションの作成時と文書の作成に使用されるログイン。 既定では、すべてのログイン メンバーであるは **sysadmin** 固定サーバー ロールまたは **db_owner** パブリケーション データベースの固定データベース ロールが明示的に PAL に追加しなくても、パブリケーションにサブスクライブできます。  
+ 既定で PAL に含まれるログインは、パブリケーションが作成された時点の **sysadmin** 固定サーバー ロールのメンバー、およびパブリケーションを作成するために使用されるログインです。 既定で、パブリケーション データベース上の **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのメンバーであるすべてのログインは、明示的に PAL に追加しなくても、パブリケーションに対してサブスクライブできます。  
   
  PAL を使用する場合は、次のガイドラインを考慮してください。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインを PAL に追加する前に、そのログインをパブリケーション データベースのデータベース ユーザーに関連付ける必要があります。  
   
--   最小特権の原則に従って、PAL 内のログインに、レプリケーション タスクを実行するために必要な権限のみを許可します。 レプリケーションに必要のない固定データベース ロールやサーバー ロールに、ログインを追加しないでください。 必要なアクセス許可の詳細については、次を参照してください。 [レプリケーション エージェントのセキュリティ モデル](../../../relational-databases/replication/security/replication-agent-security-model.md) と [レプリケーション セキュリティのベスト プラクティス](../../../relational-databases/replication/security/replication-security-best-practices.md)します。  
+-   最小特権の原則に従って、PAL 内のログインに、レプリケーション タスクを実行するために必要な権限のみを許可します。 レプリケーションに必要のない固定データベース ロールやサーバー ロールに、ログインを追加しないでください。 必要な権限の詳細については、「 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md) 」および「 [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)」を参照してください。  
   
 -   リモート ディストリビューターを使用する場合、PAL 内のアカウントは、パブリッシャーとディストリビューターの両方で使用できる必要があります。 このアカウントは、どちらのサーバーでも定義されているドメイン アカウントまたはローカル アカウントにする必要があります。 両方のログインに関連付けられているパスワードは、同じにする必要があります。  
   
--   PAL に Windows アカウントが含まれており、ドメインで Active Directory が使用されている場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行する際に使用するアカウントが Active Directory から読み取りを行う権限を持っている必要があります。 Windows アカウントに関する問題が発生した場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行する際に使用するアカウントが十分な権限を持っていることを確認します。 詳細については、Windows のマニュアルを参照してください。  
+-   PAL に Windows アカウントが含まれており、ドメインで Active Directory が使用されている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行する際に使用するアカウントが Active Directory から読み取りを行う権限を持っている必要があります。 Windows アカウントに関する問題が発生した場合は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行する際に使用するアカウントが十分な権限を持っていることを確認します。 詳細については、Windows のマニュアルを参照してください。  
   
- PAL を管理するには、次を参照してください。 [パブリケーション アクセス リストのログインを管理](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)します。  
+ PAL を管理する場合は、「[パブリケーション アクセス リストのログインの管理](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)」を参照してください。  
   
-## スナップショット エージェント  
- パブリケーションごとに 1 つのスナップショット エージェントがあります。 詳しくは、「 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
+## <a name="snapshot-agent"></a>スナップショット エージェント  
+ パブリケーションごとに 1 つのスナップショット エージェントがあります。 詳細については、「 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
   
-## FTP スナップショット配信  
- UNC 共有ではなく FTP 共有によりスナップショットを使用できるように指定する場合、FTP アクセスの構成時にログインおよびパスワードを指定する必要があります。 詳細については、次を参照してください。 [FTP 経由のスナップショットを配信](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)します。  
+## <a name="ftp-snapshot-delivery"></a>FTP スナップショット配信  
+ UNC 共有ではなく FTP 共有によりスナップショットを使用できるように指定する場合、FTP アクセスの構成時にログインおよびパスワードを指定する必要があります。 詳細については、「[FTP でのスナップショットの配信](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)」を参照してください。  
   
-## ログ リーダー エージェント (Log Reader Agent)  
- トランザクション レプリケーション用にパブリッシュされるデータベースには、それぞれ 1 つのログ リーダー エージェントがあります。 詳しくは、「 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
+## <a name="log-reader-agent"></a>ログ リーダー エージェント (Log Reader Agent)  
+ トランザクション レプリケーション用にパブリッシュされるデータベースには、それぞれ 1 つのログ リーダー エージェントがあります。 詳細については、「 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
   
-## キュー リーダー エージェント (Queue Reader Agent)  
- あるディストリビューターに関連付けられたすべてのパブリッシャーおよびパブリケーション (キュー更新サブスクリプションを許可するパブリケーション) に対し、1 つのキュー リーダー エージェントがあります。 詳細については、次を参照してください。 [トランザクション パブリケーションのサブスクリプションの更新を有効にする](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)です。  
+## <a name="queue-reader-agent"></a>キュー リーダー エージェント (Queue Reader Agent)  
+ あるディストリビューターに関連付けられたすべてのパブリッシャーおよびパブリケーション (キュー更新サブスクリプションを許可するパブリケーション) に対し、1 つのキュー リーダー エージェントがあります。 詳細については、「[トランザクション パブリケーションの更新可能なサブスクリプションの有効化](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)」を参照してください。  
   
-## 参照  
- [データベース エンジンと #40; への暗号化接続を有効にします。SQL Server 構成マネージャーと #41 です。](../../../database-engine/configure-windows/enable encrypted connections to the database engine.md)   
- [レプリケーション セキュリティの推奨事項](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [セキュリティと保護と #40 です。レプリケーションと #41 です。](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+## <a name="see-also"></a>参照  
+ [データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
+ [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [セキュリティと保護 &#40;レプリケーション&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   

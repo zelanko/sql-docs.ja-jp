@@ -1,44 +1,31 @@
 ---
 title: "バックアップの暗号化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 30654c4f7950f188cf08608cf946f4fe42e6d3e4
+ms.lasthandoff: 04/11/2017
+
 ---
-# バックアップの暗号化
-  このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップの暗号化オプションについて概説します。 バックアップ時の暗号化の使用、利点、および推奨される操作の詳細が含まれています。  
+# <a name="backup-encryption"></a>バックアップの暗号化
+  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップの暗号化オプションについて概説します。 バックアップ時の暗号化の使用、利点、および推奨される操作の詳細が含まれています。  
   
- **このトピックの内容**  
-  
--   [概要](../../relational-databases/backup-restore/backup-encryption.md#Overview)  
-  
--   [利点](#Benefits)  
-  
--   [前提条件](../../relational-databases/backup-restore/backup-encryption.md#Prerequisites)  
-  
--   [制限](#Restrictions)  
-  
--   [権限](../../relational-databases/backup-restore/backup-encryption.md#Permissions)  
-  
--   [バックアップの暗号化方法](../../relational-databases/backup-restore/backup-encryption.md#Methods)  
-  
--   [推奨される操作](../../relational-databases/backup-restore/backup-encryption.md#RecommendedPractices)  
-  
--   [関連タスク](#RelatedTasks)  
   
 ##  <a name="Overview"></a> 概要  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降では、バックアップの作成時に SQL Server がデータを暗号化する機能があります。 バックアップの作成時に暗号化アルゴリズムと暗号化機能 (証明書または非対称キー) を指定することにより、暗号化されたバックアップ ファイルを作成することができます。 あらゆるバックアップ先ストレージ、つまり内部設置型のストレージも Window Azure ストレージもサポートされます。 また、暗号化オプションは、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] で導入された新機能である [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]の操作用に構成できます。  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]以降では、バックアップの作成時に SQL Server がデータを暗号化する機能があります。 バックアップの作成時に暗号化アルゴリズムと暗号化機能 (証明書または非対称キー) を指定することにより、暗号化されたバックアップ ファイルを作成することができます。 あらゆるバックアップ先ストレージ、つまり内部設置型のストレージも Window Azure ストレージもサポートされます。 また、暗号化オプションは、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] で導入された新機能である [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]の操作用に構成できます。  
   
  バックアップ時に暗号化を行うには、暗号化アルゴリズムを指定し、暗号化キーを保護するための暗号化機能を指定する必要があります。 サポートされている暗号化オプションは次のとおりです。  
   
@@ -65,7 +52,6 @@ caps.handback.revision: 16
   
 5.  暗号化キーは拡張キー管理 (EKM) プロバイダーと統合できます。  
   
- [&#91;先頭に戻る&#93;](#Top)  
   
 ##  <a name="Prerequisites"></a> 前提条件  
  バックアップを暗号化するための前提条件は次のとおりです。  
@@ -88,27 +74,26 @@ caps.handback.revision: 16
   
 -   [既存のバックアップ セットに追加する] オプションは、暗号化されたバックアップに対してはサポートされません。  
   
- [&#91;先頭に戻る&#93;](#Top)  
   
 ##  <a name="Permissions"></a> 権限  
  **バックアップの暗号化または暗号化されたバックアップからの復元を行うには:**  
   
- データベース バックアップの暗号化に使用する証明書または非対称キーに対する **VIEW DEFINITION** 権限。  
+ データベース バックアップの暗号化に使用する証明書または非対称キーに対する**VIEW DEFINITION** 権限。  
   
 > [!NOTE]  
 >  TDE で保護されたデータベースをバックアップまたは復元する場合、TDE 証明書へのアクセスは必要ありません。  
   
 ##  <a name="Methods"></a> バックアップの暗号化方法  
- 以下のセクションでは、バックアップ時にデータを暗号化する手順の概要を説明します。 Transact-SQL を使用して既存のバックアップを暗号化するためのさまざまな手順を示した完全なチュートリアルについては、「[暗号化されたバックアップの作成](../../relational-databases/backup-restore/create-an-encrypted-backup.md)」を参照してください。  
+ 以下のセクションでは、バックアップ時にデータを暗号化する手順の概要を説明します。 Transact-SQL を使用して既存のバックアップを暗号化するためのさまざまな手順を示した完全なチュートリアルについては、「 [暗号化されたバックアップの作成](../../relational-databases/backup-restore/create-an-encrypted-backup.md)」を参照してください。  
   
-### SQL Server Management Studio の使用  
+### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio の使用  
  次のいずれかのダイアログ ボックスを使用して、データベース バックアップの作成時にバックアップを暗号化することができます。  
   
-1.  [データベースのバックアップ &#40;[バックアップ オプション] ページ&#41;](../Topic/Back%20Up%20Database%20\(Backup%20Options%20Page\).md): **[バックアップ オプション]** ページで、**[暗号化]** を選択し、暗号化に使用する暗号化アルゴリズムと証明書または非対称キーを指定します。  
+1.  [データベースのバックアップ &#40;[バックアップ オプション] ページ&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md): **[バックアップ オプション]** ページで、**[暗号化]** を選択し、暗号化に使用する暗号化アルゴリズムと証明書または非対称キーを指定します。  
   
 2.  [メンテナンス プラン ウィザードの使用](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure): **[データベースのバックアップ () タスクの定義]** ページの **[オプション]** タブでバックアップ タスクを選択する場合は、**[バックアップの暗号化]** を選択し、暗号化に使用する暗号化アルゴリズムと証明書またはキーを指定することができます。  
   
-### Transact-SQL の使用  
+### <a name="using-transact-sql"></a>Transact-SQL の使用  
  バックアップ ファイルを暗号化するためのサンプル Transact-SQL ステートメントを次に示します。  
   
 ```  
@@ -128,7 +113,7 @@ GO
   
  Transact-SQL ステートメントの完全な構文については、「[BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)」を参照してください。  
   
-### PowerShell の使用  
+### <a name="using-powershell"></a>PowerShell の使用  
  この例では、暗号化オプションを作成し、それを **Backup-SqlDatabase** コマンドレットのパラメーター値として使用して暗号化されたバックアップを作成します。  
   
 ```  
@@ -155,7 +140,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
 |[暗号化されたバックアップの作成](../../relational-databases/backup-restore/create-an-encrypted-backup.md)|暗号化されたバックアップを作成するために必要な基本手順について説明します。|  
 |[Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Azure Key Vault のキーで保護される暗号化されたバックアップを作成する例を示します。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
   
   

@@ -1,25 +1,29 @@
 ---
 title: "テーブル間での列のコピー (データベース エンジン) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "列のコピー"
-  - "列 [SQL Server], コピー"
+ms.custom: 
+ms.date: 09/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- copying columns
+- columns [SQL Server], copying
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 27f2f6ae3af99a9c76934ab4c875d3c2c9746f40
+ms.lasthandoff: 04/11/2017
+
 ---
-# テーブル間での列のコピー (データベース エンジン)
+# <a name="copy-columns-from-one-table-to-another-database-engine"></a>テーブル間での列のコピー (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]で列の定義のみ、または定義とデータの両方をコピーすることで、あるテーブルから別のテーブルに列をコピーする方法について説明します。  
@@ -50,9 +54,9 @@ caps.handback.revision: 23
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### テーブル間で列の定義をコピーするには  
+#### <a name="to-copy-column-definitions-from-one-table-to-another"></a>テーブル間で列の定義をコピーするには  
   
-1.  コピーする列を含むテーブルおよびコピー先のテーブルを右クリックして **[デザイン]** をクリックし、それらのテーブルを開きます。  
+1.  コピーする列を含むテーブルおよびコピー先のテーブルを右クリックして **[デザイン]**をクリックし、それらのテーブルを開きます。  
   
 2.  コピーする列を含むテーブルのタブをクリックして、コピーする列を選択します。  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 23
   
 5.  コピーした列を挿入する列を選択し、 **[編集]** メニューの **[貼り付け]**をクリックします。  
   
-#### テーブル間でデータをコピーするには  
+#### <a name="to-copy-data-from-one-table-to-another"></a>テーブル間でデータをコピーするには  
   
 1.  前述の列定義のコピーの指示に従います。  
   
@@ -71,11 +75,11 @@ caps.handback.revision: 23
   
 2.  新しいクエリ エディター ウィンドウを開きます。 
 
-3.  クエリ エディターを右クリックし、**[エディターでクエリをデザイン]** をクリックします。 
+3.  クエリ エディターを右クリックし、 **[エディターでクエリをデザイン]**をクリックします。 
 
-4.  **[テーブルの追加]** ダイアログ ボックスで、コピー元テーブルとコピー先テーブルを選択し、**[追加]** をクリックして **[テーブルの追加]** ダイアログ ボックスを閉じます。 
+4.  **[テーブルの追加]** ダイアログ ボックスで、コピー元テーブルとコピー先テーブルを選択し、 **[追加]**をクリックして **[テーブルの追加]** ダイアログ ボックスを閉じます。 
 
-5.  クエリ エディターの空いている領域を右クリックし、**[変更の種類]** をポイントして **[結果の挿入]** をクリックします。  
+5.  クエリ エディターの空いている領域を右クリックし、 **[変更の種類]**をポイントして **[結果の挿入]**をクリックします。  
 
 6.  **[結果の挿入先テーブルの選択]** ダイアログ ボックスで、コピー先テーブルを選択します。 
 
@@ -88,11 +92,11 @@ caps.handback.revision: 23
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### テーブル間で列の定義をコピーするには  
+#### <a name="to-copy-column-definitions-from-one-table-to-another"></a>テーブル間で列の定義をコピーするには  
   
-1.  Transact-SQL ステートメントを使用して、個々の列をあるテーブルから別の既存のテーブルにコピーすることはできません。 ただし、SELECT INTO を使用して、既定のファイル グループに新しいテーブルを作成し、クエリの結果得られた行をそのテーブルに挿入することができます。 詳細については、「[INTO 句 &#40;Transact-SQL&#41;](../Topic/INTO%20Clause%20\(Transact-SQL\).md)」を参照してください。  
+1.  Transact-SQL ステートメントを使用して、個々の列をあるテーブルから別の既存のテーブルにコピーすることはできません。 ただし、SELECT INTO を使用して、既定のファイル グループに新しいテーブルを作成し、クエリの結果得られた行をそのテーブルに挿入することができます。 詳細については、「[INTO 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-into-clause-transact-sql.md)」を参照してください。  
   
-#### テーブル間でデータをコピーするには  
+#### <a name="to-copy-data-from-one-table-to-another"></a>テーブル間でデータをコピーするには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -115,3 +119,4 @@ caps.handback.revision: 23
     ```  
   
   
+

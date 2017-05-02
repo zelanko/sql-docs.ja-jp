@@ -1,26 +1,30 @@
 ---
 title: "レプリケーションに対して外部キー制約を無効にする方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "制約 [SQL Server]、外部キー"
-  - "外部キー [SQL Server]、制約の無効化"
-  - "制約の無効化"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- constraints [SQL Server], foreign keys
+- foreign keys [SQL Server], disabling constraints
+- disabling constraints
 ms.assetid: 4211f2fd-d16a-4081-995c-43f1f0827f0b
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e16bd86b4a8b0d333b9b88752d702d783ba180cc
+ms.lasthandoff: 04/11/2017
+
 ---
-# レプリケーションに対して外部キー制約を無効にする方法
+# <a name="disable-foreign-key-constraints-for-replication"></a>レプリケーションに対して外部キー制約を無効にする方法
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、レプリケーションに対する外部キー制約を無効にできます。 これは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのデータをパブリッシュする場合に便利です。  
@@ -49,11 +53,11 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### レプリケーションに対して外部キー制約を無効にするには  
+#### <a name="to-disable-a-foreign-key-constraint-for-replication"></a>レプリケーションに対して外部キー制約を無効にするには  
   
 1.  **オブジェクト エクスプローラー**で、変更する外部キー制約が含まれているテーブルを展開し、 **[キー]** フォルダーを展開します。  
   
-2.  外部キー制約を右クリックし、**[変更]** をクリックします。  
+2.  外部キー制約を右クリックし、 **[変更]**をクリックします。  
   
 3.  **[外部キーのリレーションシップ]** ダイアログ ボックスで、 **[レプリケーションに対して適用]** の値として **[いいえ]**を選択します。  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 20
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### レプリケーションに対して外部キー制約を無効にするには  
+#### <a name="to-disable-a-foreign-key-constraint-for-replication"></a>レプリケーションに対して外部キー制約を無効にするには  
   
 1.  [!INCLUDE[tsql](../../includes/tsql-md.md)]でこの作業を実行するには、外部キー制約を削除します。 次に、新しい外部キー制約を追加し、NOT FOR REPLICATION オプションを指定します。  
   

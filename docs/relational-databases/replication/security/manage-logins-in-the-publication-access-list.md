@@ -1,28 +1,32 @@
 ---
 title: "パブリケーション アクセス リストのログインの管理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "logins [SQL Server replication], publication access list"
-  - "publications [SQL Server replication], publication access lists"
-  - "publication access list (PAL)"
-  - "PAL (publication access list)"
-  - "ログイン [SQL Server レプリケーション], 管理"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logins [SQL Server replication], publication access list
+- publications [SQL Server replication], publication access lists
+- publication access list (PAL)
+- PAL (publication access list)
+- logins [SQL Server replication], managing
 ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 37eda878d5d67b697ae69d8e81d025c3629033b5
+ms.lasthandoff: 04/11/2017
+
 ---
-# パブリケーション アクセス リストのログインの管理
+# <a name="manage-logins-in-the-publication-access-list"></a>パブリケーション アクセス リストのログインの管理
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、パブリケーション アクセス リストのログインを管理する方法について説明します。 パブリケーションへのアクセスは、パブリケーション アクセス リスト (PAL) によって制御されます。 ログインおよびグループの PAL への追加および PAL からの削除を実行できます。  
   
  **このトピックの内容**  
@@ -44,11 +48,11 @@ caps.handback.revision: 45
 -   PAL にログインを追加する前に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインをパブリケーション データベースのデータベース ユーザーに関連付ける必要があります。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- パブリケーション アクセス リスト (PAL) を使用して、 **パブリケーション アクセス リスト** のページ、 **パブリケーションのプロパティ - \< パブリケーション>** ログインを管理する] ダイアログ ボックス。 このダイアログ ボックスにアクセスする方法の詳細については、次を参照してください。 [パブリケーション プロパティの変更を表示および](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)です。  
+ **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[パブリケーション アクセス リスト]** ページでパブリケーション アクセス リスト (PAL) を使用します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。  
   
-#### PAL のログインを管理するには  
+#### <a name="to-manage-logins-in-the-pal"></a>PAL のログインを管理するには  
   
-1.   **パブリケーション アクセス リスト** のページ、 **パブリケーションのプロパティ - \< パブリケーション>** ダイアログ ボックスで、使用、 **追加**, 、**削除**, 、および **すべて削除** ボタンを追加および PAL のログインおよびグループを削除します。 削除しないでください **distributor_admin** PAL からです。 このアカウントはレプリケーションで使用されます。  
+1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[パブリケーション アクセス リスト]** ページでは、**[追加]**、**[削除]**、および **[すべて削除]** の各ボタンを使用して、PAL のログインやグループを追加および削除します。 PAL から **distributor_admin** を削除しないでください。 このアカウントはレプリケーションで使用されます。  
   
     > [!NOTE]  
     >  リモート ディストリビューターを使用する場合、PAL 内のアカウントは、パブリッシャーとディストリビューターの両方で使用できる必要があります。 このアカウントは、どちらのサーバーでも定義されているドメイン アカウントまたはローカル アカウントにする必要があります。 両方のログインに関連付けられているパスワードは、同じにする必要があります。  
@@ -57,20 +61,20 @@ caps.handback.revision: 45
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### PAL に登録されているグループおよびログインを表示するには  
+#### <a name="to-view-groups-and-logins-that-belong-to-the-pal"></a>PAL に登録されているグループおよびログインを表示するには  
   
-1.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)します。 **@publication**には、パブリケーション名を指定します。 これで、PAL のグループおよびログインに関する情報が表示されます。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)を実行します。 **@publication** には、パブリケーション名を指定します。 これで、PAL のグループおよびログインに関する情報が表示されます。  
   
-#### グループおよびログインを PAL に追加するには  
+#### <a name="to-add-groups-and-logins-to-the-pal"></a>グループおよびログインを PAL に追加するには  
   
-1.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)します。 **@publication**には、パブリケーション名を指定します、 **@login**には、追加するログインまたはグループの名前を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)を実行します。 **@publication** には、パブリケーション名を指定し、**@login** には、追加するログインまたはグループの名前を指定します。  
   
-#### グループおよびログインを PAL から削除するには  
+#### <a name="to-remove-groups-and-logins-from-the-pal"></a>グループおよびログインを PAL から削除するには  
   
-1.  パブリッシャー、パブリケーション データベースで、次のように実行します。 [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)します。 **@publication**には、パブリケーション名を指定します、 **@login**には、削除するログインまたはグループの名前を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)を実行します。 **@publication** には、パブリケーション名を指定し、**@login** には、削除するログインまたはグループの名前を指定します。  
   
-## 参照  
- [Manage Logins in the Publication Access List](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)   
+## <a name="see-also"></a>参照  
+ [パブリケーション アクセス リストのログインの管理](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)   
  [レプリケーション エージェントのセキュリティ モデル](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [レプリケーション トポロジのセキュリティ保護](../../../relational-databases/replication/security/secure-a-replication-topology.md)   
  [パブリッシャーのセキュリティ保護](../../../relational-databases/replication/security/secure-the-publisher.md)  

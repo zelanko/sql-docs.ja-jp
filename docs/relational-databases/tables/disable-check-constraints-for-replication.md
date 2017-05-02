@@ -1,33 +1,37 @@
 ---
 title: "レプリケーションの CHECK 制約の無効化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CHECK 制約、無効化"
-  - "無効にすると制約 [SQL Server]"
-  - "制約の無効化"
-  - "制約 [SQL Server]、CHECK"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CHECK constraints, disabling
+- constraints [SQL Server], disabling
+- disabling constraints
+- constraints [SQL Server], check
 ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2f8ff552993defe940576ea5cf0a35943a417b1b
+ms.lasthandoff: 04/11/2017
+
 ---
-# レプリケーションの CHECK 制約の無効化
+# <a name="disable-check-constraints-for-replication"></a>レプリケーションの CHECK 制約の無効化
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して CHECK 制約を無効にできます。 CHECK 制約はレプリケーションに対して明示的に無効にすることもできます。これは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのデータをパブリッシュする場合に便利です。  
   
 > [!NOTE]  
->  レプリケーションを使用してテーブルをパブリッシュした場合、レプリケーション エージェントが実行する操作に対しては CHECK 制約が自動的に無効になります。 レプリケーション エージェントがサブスクライバー側で挿入、更新、または削除を実行した場合、制約のチェックは行われません。ユーザーが挿入、更新、または削除を実行した場合は、制約のチェックが行われます。 制約がレプリケーション エージェントに対して無効になるのは、データが最初に挿入、更新、または削除された際に、発行者側で既に制約がチェックされているためです。 詳細については、「[スキーマ オプションの指定](../../relational-databases/replication/publish/specify-schema-options.md)」を参照してください。  
+>  レプリケーションを使用してテーブルをパブリッシュした場合、レプリケーション エージェントが実行する操作に対しては CHECK 制約が自動的に無効になります。 レプリケーション エージェントがサブスクライバー側で挿入、更新、または削除を実行した場合、制約のチェックは行われません。ユーザーが挿入、更新、または削除を実行した場合は、制約のチェックが行われます。 制約がレプリケーション エージェントに対して無効になるのは、データが最初に挿入、更新、または削除された際に、発行者側で既に制約がチェックされているためです。 詳細については、「 [スキーマ オプションの指定](../../relational-databases/replication/publish/specify-schema-options.md)」を参照してください。  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -38,11 +42,11 @@ caps.handback.revision: 19
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### レプリケーションに対して CHECK 制約を無効にするには  
+#### <a name="to-disable-a-check-constraint-for-replication"></a>レプリケーションに対して CHECK 制約を無効にするには  
   
 1.  **オブジェクト エクスプローラー**で、変更する CHECK 制約が設定されているテーブルを展開し、 **[制約]** フォルダーを展開します。  
   
-2.  変更する CHECK 制約を右クリックし、**[変更]** をクリックします。  
+2.  変更する CHECK 制約を右クリックし、 **[変更]**をクリックします。  
   
 3.  **[CHECK 制約]** ダイアログ ボックスで、 **[テーブル デザイナー]**の **[レプリケーションに対して適用]** の値として **[いいえ]**を選択します。  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### レプリケーションに対して CHECK 制約を無効にするには  
+#### <a name="to-disable-a-check-constraint-for-replication"></a>レプリケーションに対して CHECK 制約を無効にするには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -74,7 +78,7 @@ caps.handback.revision: 19
  詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
   
 ###  <a name="TsqlExample"></a>   
-## 参照  
+## <a name="see-also"></a>参照  
  [スキーマ オプションの指定](../../relational-databases/replication/publish/specify-schema-options.md)  
   
   

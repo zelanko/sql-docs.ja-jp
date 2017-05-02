@@ -1,35 +1,39 @@
 ---
 title: "インデックスと制約の無効化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.disableindexes.f1"
-helpviewer_keywords: 
-  - "無効化されたインデックス [SQL Server], インデックス操作"
-  - "非クラスター化インデックス [SQL Server], 無効化"
-  - "無効化されたインデックス [SQL Server], ガイドライン"
-  - "クラスター化インデックス, 無効化"
-  - "無効にすると制約 [SQL Server]"
-  - "無効化されたインデックス [SQL Server], 表示"
-  - "FOREIGN KEY 制約, 無効化"
-  - "統計情報 [SQL Server], インデックス"
-  - "インデックスの無効化 [SQL Server]"
-  - "インデックス付きビュー [SQL Server], 無効化されたインデックス"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.disableindexes.f1
+helpviewer_keywords:
+- disabled indexes [SQL Server], index operations
+- nonclustered indexes [SQL Server], disabling
+- disabled indexes [SQL Server], guidelines
+- clustered indexes, disabling
+- constraints [SQL Server], disabling
+- disabled indexes [SQL Server], viewing
+- FOREIGN KEY constraints, disabling
+- statistical information [SQL Server], indexes
+- index disabling [SQL Server]
+- indexed views [SQL Server], disabled indexes
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 02ec61b5f3342ba8c5abd6e5044cd9f6863f6145
+ms.lasthandoff: 04/11/2017
+
 ---
-# インデックスと制約の無効化
+# <a name="disable-indexes-and-constraints"></a>インデックスと制約の無効化
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、インデックスまたは制約を無効にする方法について説明します。 インデックスを無効にすると、ユーザーはそのインデックスにアクセスできなくなります。クラスター化インデックスの場合は、基になるテーブルのデータにもアクセスできなくなります。 ただし、インデックス定義はメタデータに残り、インデックス統計は非クラスター化インデックス上に保持されます。 ビュー上で非クラスター化インデックスまたはクラスター化インデックスを無効にすると、インデックス データが物理的に削除されます。 テーブルのクラスター化インデックスを無効にすると、データにアクセスできなくなります。つまり、データはテーブルに残りますが、そのインデックスを削除するか再構築するまでは、データ操作言語 (DML) 操作で使用できなくなります。  
@@ -70,7 +74,7 @@ caps.handback.revision: 28
   
 -   無効化されたクラスター化インデックスのデータ行には、クラスター化インデックスを削除または再構築する場合以外はアクセスできません。  
   
--   無効化された非クラスター化インデックスは、無効化されたクラスター化インデックスがテーブルに存在しなければオンラインで再構築できます。 ただし、ALTER INDEX REBUILD ステートメントまたは CREATE INDEX WITH DROP_EXISTING ステートメントのいずれかを使用している場合は常に、無効化されたクラスター化インデックスをオフラインで再構築する必要があります。 オンラインでのインデックス操作の詳細については、「[オンラインでのインデックス操作の実行](../../relational-databases/indexes/perform-index-operations-online.md)」を参照してください。  
+-   無効化された非クラスター化インデックスは、無効化されたクラスター化インデックスがテーブルに存在しなければオンラインで再構築できます。 ただし、ALTER INDEX REBUILD ステートメントまたは CREATE INDEX WITH DROP_EXISTING ステートメントのいずれかを使用している場合は常に、無効化されたクラスター化インデックスをオフラインで再構築する必要があります。 オンラインでのインデックス操作の詳細については、「 [オンラインでのインデックス操作の実行](../../relational-databases/indexes/perform-index-operations-online.md)」を参照してください。  
   
 -   クラスター化インデックスが無効になっているテーブルに対して、CREATE STATISTICS ステートメントを正常に実行することはできません。  
   
@@ -93,7 +97,7 @@ caps.handback.revision: 28
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### インデックスを無効にするには  
+#### <a name="to-disable-an-index"></a>インデックスを無効にするには  
   
 1.  オブジェクト エクスプローラーで、インデックスを無効にするテーブルが格納されているデータベースをプラス記号をクリックして展開します。  
   
@@ -103,11 +107,11 @@ caps.handback.revision: 28
   
 4.  プラス記号をクリックして **[インデックス]** フォルダーを展開します。  
   
-5.  無効にするインデックスを右クリックし、**[無効化]** を選択します。  
+5.  無効にするインデックスを右クリックし、 **[無効化]**を選択します。  
   
 6.  **[インデックスの無効化]** ダイアログ ボックスで、 **[無効にするインデックス]** グリッドに目的のインデックスが表示されていることを確認し、 **[OK]**をクリックします。  
   
-#### テーブルのすべてのインデックスを無効にするには  
+#### <a name="to-disable-all-indexes-on-a-table"></a>テーブルのすべてのインデックスを無効にするには  
   
 1.  オブジェクト エクスプローラーで、インデックスを無効にするテーブルが格納されているデータベースをプラス記号をクリックして展開します。  
   
@@ -115,7 +119,7 @@ caps.handback.revision: 28
   
 3.  プラス記号をクリックして、インデックスを無効にするテーブルを展開します。  
   
-4.  **[インデックス]** フォルダーを右クリックし、**[すべて無効にする]** を選択します。  
+4.  **[インデックス]** フォルダーを右クリックし、 **[すべて無効にする]**を選択します。  
   
 5.  **[インデックスの無効化]** ダイアログ ボックスで、 **[無効にするインデックス]** グリッドに目的のインデックスが表示されていることを確認し、 **[OK]**をクリックします。 **[無効にするインデックス]** グリッドからインデックスを削除するには、インデックスを選択し、Del キーを押します。  
   
@@ -128,7 +132,7 @@ caps.handback.revision: 28
  インデックスが作成されているテーブルまたはビューの名前を表示します。  
   
  **[インデックスの種類]**  
- インデックスの種類 (**[クラスター化]**、**[非クラスター化]**、**[空間]**、または **[XML]**) を表示します。  
+ インデックスの種類 ( **[クラスター化]**、 **[非クラスター化]**、 **[空間]**、または **[XML]**) を表示します。  
   
  **[状態]**  
  無効化操作の状態を表示します。 実行後の値は、次のいずれかになります。  
@@ -162,7 +166,7 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### インデックスを無効にするには  
+#### <a name="to-disable-an-index"></a>インデックスを無効にするには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -179,7 +183,7 @@ caps.handback.revision: 28
     DISABLE;  
     ```  
   
-#### テーブルのすべてのインデックスを無効にするには  
+#### <a name="to-disable-all-indexes-on-a-table"></a>テーブルのすべてのインデックスを無効にするには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -198,3 +202,4 @@ caps.handback.revision: 28
  詳細については、「[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。  
   
   
+

@@ -1,29 +1,33 @@
 ---
 title: "オンライン インデックス操作のガイドライン | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "クラスター化インデックス, オンライン操作"
-  - "オンラインのインデックス操作"
-  - "インデックス [SQL Server], オンライン操作"
-  - "ディスク領域 [SQL Server], インデックス"
-  - "非クラスター化インデックス [SQL Server], オンライン操作"
-  - "トランザクション ログ [SQL Server], インデックス"
+ms.custom: 
+ms.date: 04/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clustered indexes, online operations
+- online index operations
+- indexes [SQL Server], online operations
+- disk space [SQL Server], indexes
+- nonclustered indexes [SQL Server], online operations
+- transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 caps.latest.revision: 64
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 44ef45ea5831186a3b6b7218111444d79ceef128
+ms.lasthandoff: 04/11/2017
+
 ---
-# オンライン インデックス操作のガイドライン
+# <a name="guidelines-for-online-index-operations"></a>オンライン インデックス操作のガイドライン
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   インデックス操作をオンラインで実行するときは、次のガイドラインに従ってください。  
@@ -32,14 +36,14 @@ caps.handback.revision: 60
   
 -   テーブルに LOB データ型が含まれていても、そのデータ型の列がキー列または非キー (付加) 列としてインデックス定義で使用されていない場合は、一意ではない非クラスター化インデックスをオンラインで作成できます。  
   
--   ローカル一時テーブルのインデックスの作成、再構築、または削除は、オンラインでは実行できません。 この制限は、グローバル一時テーブルのインデックスには当てはまりません。  
-  
+-   ローカル一時テーブルのインデックスの作成、再構築、または削除は、オンラインでは実行できません。 この制限は、グローバル一時テーブルのインデックスには当てはまりません。
+
 > [!NOTE]  
->  オンラインでのインデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)」を参照してください。  
+>  オンラインでのインデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、[各エディションがサポートする機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)に関するページを参照してください。  
   
- 次の表に、オンラインで実行可能なインデックス操作と、これらのオンライン操作対象から除外されるインデックスを示します。 また、その他の制限についても記載します。  
+ 次の表に、オンラインで実行可能なインデックス操作、これらのオンライン操作対象から除外されるインデックス、再開可能なインデックスの制限を示します。 また、その他の制限についても記載します。  
   
-|オンラインのインデックス操作|操作対象外のインデックス|その他の制限事項|  
+| オンラインのインデックス操作 | 操作対象外のインデックス | その他の制限事項 |  
 |----------------------------|----------------------|------------------------|  
 |ALTER INDEX REBUILD|無効化されたクラスター化インデックスまたは無効化されたインデックス付きビュー<br /><br /> XML インデックス<br /><br />列ストア インデックス <br /><br /> ローカル一時テーブルのインデックス|テーブルに操作対象外のインデックスが含まれている場合、キーワード ALL を指定すると操作が失敗する可能性があります。<br /><br /> 無効化されたインデックスの再構築には、他にも制限があります。 詳細については、「 [インデックスと制約の無効化](../../relational-databases/indexes/disable-indexes-and-constraints.md)」を参照してください。|  
 |CREATE INDEX|XML インデックス<br /><br /> ビューの最初の一意クラスター化インデックス<br /><br /> ローカル一時テーブルのインデックス||  
@@ -61,7 +65,12 @@ caps.handback.revision: 60
  インデックスにラージ オブジェクト型の列が含まれていて、同じトランザクション内でオンライン操作の前に更新操作がある場合は、このオンライン操作を実行できません。 この問題を回避するには、オンライン操作をトランザクションの外部に配置するか、トランザクション内で更新操作の前に配置してください。  
   
 ## <a name="disk-space-considerations"></a>ディスク領域に関する注意点  
- 基本的に、オンラインとオフラインのインデックス操作間で、必要なディスク領域に違いはありません。 一時マッピング インデックスに追加のディスク領域が必要になる場合だけは例外です。 この一時インデックスは、クラスター化インデックスを作成、再構築、または削除する、オンライン インデックス操作で使用されます。 クラスター化インデックスをオンラインで削除する場合と、クラスター化インデックスをオンラインで作成する場合は同じ量の領域が必要になります。 詳細については、「 [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)」をご参照ください。  
+ オンライン インデックス操作には、オフライン インデックス操作より多くのディスク容量が必要になります。 
+ - インデックス作成操作やインデックス再構築操作の間、作成または再構築されるインデックスのために追加の領域が必要になります。 
+ - また、仮のマッピング インデックス操作にもディスク容量が必要になります。 この一時インデックスは、クラスター化インデックスを作成、再構築、または削除する、オンライン インデックス操作で使用されます。
+- クラスター化インデックスをオンラインで削除する場合と、クラスター化インデックスをオンラインで作成または再構築する場合は同じ量の領域が必要になります。 
+
+詳細については、「 [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)」をご参照ください。  
   
 ## <a name="performance-considerations"></a>パフォーマンスに関する考慮事項  
  オンラインのインデックス操作では、同時実行ユーザーによる更新操作は許可されていますが、その更新操作の負荷が非常に高いと、インデックス操作の処理時間が長くなります。 通常、オンラインのインデックス操作は、同時実行更新操作の負荷レベルに関係なく、同じインデックス操作をオフラインで行った場合よりも時間がかかります。  
@@ -70,7 +79,7 @@ caps.handback.revision: 60
   
  オンラインでの操作を推奨しますが、実際の環境と特定の要件を評価してください。 オフラインでインデックス操作を実行することが最適な場合もあります。 この場合、操作中にユーザーからのデータ アクセスは制限されますが、操作をより短時間で完了でき、使用するリソースも軽減できます。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を実行するマルチプロセッサ コンピューターでは、他のクエリと同様に、インデックスのステートメントがこのステートメントに関連付けられているスキャン操作や並べ替え操作の実行に、より多くのプロセッサを使用する場合があります。 MAXDOP インデックス オプションを使用して、オンラインでのインデックス操作専用に使用するプロセッサ数を制御できます。 このようにすることで、インデックス操作が使用するリソースと他の同時実行ユーザーが使用するリソースのバランスをとることができます。 詳細については、「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。 並列インデックス操作をサポートする SQL Server のエディションの詳細については、「 [SQL Server 2016 の各エディションがサポートする機能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)」を参照してください。  
+ SQL Server 2016 を実行するマルチプロセッサ コンピューターでは、他のクエリと同様に、インデックスのステートメントがこのステートメントに関連付けられているスキャン操作や並べ替え操作の実行に、より多くのプロセッサを使用する場合があります。 MAXDOP インデックス オプションを使用して、オンラインでのインデックス操作専用に使用するプロセッサ数を制御できます。 このようにすることで、インデックス操作が使用するリソースと他の同時実行ユーザーが使用するリソースのバランスをとることができます。 詳細については、「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。 並列インデックス操作をサポートする SQL Server のエディションの詳細については、[各エディションがサポートする機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)に関するページを参照してください。  
   
  S-Lock または Sch-M ロックはインデックス操作の最後のフェーズで保持されるので、BEGIN TRANSACTION...COMMIT ブロックなど、明示的なユーザー トランザクション内でのオンラインのインデックス操作を実行する場合は十分に注意してください。 この場合、ロックがトランザクションの最後まで保持され、その結果ユーザーの同時実行性が損なわれます。  
   
@@ -78,7 +87,7 @@ caps.handback.revision: 60
   
 ## <a name="transaction-log-considerations"></a>トランザクション ログに関する注意点  
  オフライン、オンラインを問わず、大規模なインデックス操作を行うと、大量のデータ読み込みが発生し、トランザクション ログがすぐにいっぱいになってしまうことがあります。 インデックス操作をロールバックできるようにするため、インデックス操作が完了するまでは、トランザクション ログを切り捨てることはできません。ただし、インデックス操作中にログをバックアップすることはできます。 したがって、トランザクション ログには、インデックス操作中にインデックス操作によるトランザクションと、同時実行ユーザーによるトランザクションの両方を格納できるだけの十分な領域が割り当てられている必要があります。 詳細については、「 [インデックス操作用のトランザクション ログのディスク領域](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)」を参照してください。  
-  
+
 ## <a name="related-content"></a>関連コンテンツ  
  [オンライン インデックス操作の動作原理](../../relational-databases/indexes/how-online-index-operations-work.md)  
   
@@ -89,3 +98,4 @@ caps.handback.revision: 60
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   
+

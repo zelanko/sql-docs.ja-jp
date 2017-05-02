@@ -1,28 +1,32 @@
 ---
 title: "Microsoft Azure への SQL Server マネージ バックアップを無効にする | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: caf1e311db9cc0844294417dfd06e4a384265a4b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Microsoft Azure への SQL Server マネージ バックアップを無効にする
+# <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージ バックアップを無効にする
   このトピックでは、データベース レベルとインスタンス レベルの両方で、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を無効または一時停止する方法について説明します。  
   
-##  <a name="DatabaseDisable"></a> データベースに対して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を無効にする  
- システム ストアド プロシージャの [managed_backup.sp_backup_config_basic &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) を使用し、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 設定を無効にできます。 特定のデータベースの [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の構成を有効または無効にするには、*@enable_backup* を使用します。構成設定を有効にする場合は 1、無効にする場合は 0 を指定します。  
+##  <a name="DatabaseDisable"></a> データベースに対して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を無効にする  
+ システム ストアド プロシージャの [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) を使用し、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 設定を無効にできます。 特定のデータベースの *@enable_backup* @enable_backup [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を使用します。構成設定を有効にする場合は 1、無効にする場合は 0 を指定します。  
   
-#### 特定のデータベースに対して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を無効にするには  
+#### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmd-for-a-specific-database"></a>特定のデータベースに対して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を無効にするには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -41,13 +45,13 @@ GO
 ##  <a name="DatabaseAllDisable"></a> インスタンス上のすべてのデータベースについて [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を無効にする  
  インスタンスで現在 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] が有効になっているすべてのデータベースから [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] の構成設定を無効にするための手順を次に示します。  ストレージ URL、保有期間、SQL 資格情報などの構成設定はメタデータに残るため、後で [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] をデータベースに対して有効にした場合に使用できます。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] サービスを一時的に停止するだけの場合は、このトピックの以降のセクションで説明するマスターの切り替えを使用できます。  
   
-#### すべてのデータベースについて [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を無効にするには:  
+#### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmd-for-all-the-databases"></a>すべてのデータベースについて [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を無効にするには:  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 次の例では、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]がインスタンス レベルで構成され、インスタンスのすべてのデータベースで [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]が有効になっているかどうかを識別し、システム ストアド プロシージャ **sp_backup_config_basic** を実行して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を無効にします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 次の例では、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] がインスタンス レベルで構成され、インスタンスのすべてのデータベースで [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] が有効になっているかどうかを識別し、システム ストアド プロシージャ **sp_backup_config_basic** を実行して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を無効にします。  
   
 ```  
 -- Create a working table to store the database names  
@@ -106,9 +110,9 @@ GO
 ```  
   
 ##  <a name="InstanceDisable"></a> インスタンスについて [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] の既定設定を無効にする  
- インスタンス レベルの既定の設定は、そのインスタンスに作成されたすべての新しいデータベースに適用されます。  既定の設定が必要なくなった場合は、**managed_backup.sp_backup_config_basic** システム ストアド プロシージャを使用し、*@database_name* パラメーターを NULL に設定して、この構成を無効にすることができます。 無効にしても、ストレージ URL、保有期間の設定、SQL 資格情報名など、その他の構成設定は削除されません。 これらの設定は、後でインスタンスに対して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にする場合に使用されます。  
+ インスタンス レベルの既定の設定は、そのインスタンスに作成されたすべての新しいデータベースに適用されます。  既定の設定が必要なくなった場合は、 **managed_backup.sp_backup_config_basic** システム ストアド プロシージャを使用し、 *@database_name* パラメーターを NULL に設定して、この構成を無効にすることができます。 無効にしても、ストレージ URL、保有期間の設定、SQL 資格情報名など、その他の構成設定は削除されません。 これらの設定は、後でインスタンスに対して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にする場合に使用されます。  
   
-#### [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] の既定の構成設定を無効にするには  
+#### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmd-default-configuration-settings"></a>[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] の既定の構成設定を無効にするには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -125,9 +129,9 @@ GO
     ```  
   
 ##  <a name="InstancePause"></a> インスタンス レベルで [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を一時停止する  
- 一時的に少しの間 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] サービスを停止する必要が生じる場合があります。  マスターを切り替えるための **managed_backup.sp_backup_master_switch** システム ストアド プロシージャを使用すると、インスタンス レベルで [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] サービスを無効にできます。  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を再開するには、同じストアド プロシージャを使用します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を無効にするか有効にするかを定義するには、@state パラメーターが使用されます。  
+ 一時的に少しの間 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] サービスを停止する必要が生じる場合があります。  マスターを切り替えるための **managed_backup.sp_backup_master_switch** システム ストアド プロシージャを使用すると、インスタンス レベルで [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] サービスを無効にできます。  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を再開するには、同じストアド プロシージャを使用します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を無効にするか有効にするかを定義するには、@state パラメーターが使用されます。  
   
-#### Transact-SQL を使用して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] サービスを一時停止するには  
+#### <a name="to-pause-includesssmartbackupincludesss-smartbackup-mdmd-services-using-transact-sql"></a>Transact-SQL を使用して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] サービスを一時停止するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -143,7 +147,7 @@ Go
   
 ```  
   
-#### Transact-SQL を使用して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を再開するには  
+#### <a name="to-resume-includesssmartbackupincludesss-smartbackup-mdmd-using-transact-sql"></a>Transact-SQL を使用して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を再開するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -159,7 +163,7 @@ GO
   
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Microsoft Azure への SQL Server マネージ バックアップを有効にする](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)  
   
   

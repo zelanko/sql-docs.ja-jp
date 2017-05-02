@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG014117 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG014117 エラー"
+title: MSSQL_ENG014117 | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG014117 error
 ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b53e204550ce8f48b14e2b76667eb74fadc86346
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG014117
+# <a name="mssqleng014117"></a>MSSQL_ENG014117
     
-## メッセージの詳細  
+## <a name="message-details"></a>メッセージの詳細  
   
 |||  
 |-|-|  
@@ -31,18 +35,18 @@ caps.handback.revision: 17
 |シンボル名||  
 |メッセージ テキスト|'%s' はディストリビューション データベースとして構成されていません。|  
   
-## 説明  
+## <a name="explanation"></a>説明  
  このエラーは、次のいずれかまたは両方に該当する場合に発生する可能性があります。  
   
--   指定されたディストリビューション データベースのエントリが表示されない **msdb.MSdistributiondbs**します。  
+-   指定したディストリビューション データベースのエントリが、 **msdb..MSdistributiondbs**に存在しない場合。  
   
--   ローカル サーバーのエントリがない、 **マスター** データベース、またはエントリをあるが正しくありません。  
+-   **master** データベース内にローカル サーバーのエントリがない場合、またはエントリは存在するが正しくない場合。  
   
-     レプリケーションでは、コンピューター名とオプションのインスタンス名 (クラスター化されたインスタンスの場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仮想サーバー名とオプションのインスタンス名) を使用して、トポロジのすべてのサーバーを登録する必要があります。 レプリケーションが正しく機能するためには、トポロジの各サーバーに対して `SELECT @@SERVERNAME` によって返された値が、コンピューター名または仮想サーバー名と、オプションのインスタンス名で一致している必要があります。  
+     レプリケーションでは、コンピューター名とオプションのインスタンス名 (クラスター化されたインスタンスの場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仮想サーバー名とオプションのインスタンス名) を使用して、トポロジのすべてのサーバーを登録する必要があります。 レプリケーションが正しく機能するためには、トポロジの各サーバーに対して `SELECT @@SERVERNAME` によって返された値が、コンピューター名または仮想サーバー名と、オプションのインスタンス名で一致している必要があります。  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのいずれかを IP アドレスまたは完全修飾ドメイン名 (FQDN) で登録している場合、レプリケーションはサポートされません。 レプリケーションの構成時に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内に IP アドレスまたは FQDN で登録された [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] インスタンスがあった場合、このエラーが発生する可能性があります。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのいずれかを IP アドレスまたは完全修飾ドメイン名 (FQDN) で登録している場合、レプリケーションはサポートされません。 レプリケーションの構成時に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内に IP アドレスまたは FQDN で登録された [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] インスタンスがあった場合、このエラーが発生する可能性があります。  
   
-## ユーザーの操作  
+## <a name="user-action"></a>ユーザーの操作  
  ディストリビューター インスタンスが正しく登録されているかどうかを確認します。 コンピューターのネットワーク名と SQL Server インスタンスの名前が異なる場合は、次のいずれかを実行してください。  
   
 -   SQL Server インスタンス名を有効なネットワーク名として追加します。 代替ネットワーク名を設定する 1 つの方法は、その名前をローカル ホスト ファイルに追加することです。 ローカル ホスト ファイルは、既定では、WINDOWS\system32\drivers\etc または WINNT\system32\drivers\etc にあります。詳細については、Windows のマニュアルを参照してください。  
@@ -60,17 +64,17 @@ caps.handback.revision: 17
     go  
     ```  
   
-     実行した後、 [sp_addserver & #40 です。Transact SQL と #41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) 再起動が必要なストアド プロシージャ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変更 @@SERVERNAME を有効にするにはサービスです。  
+     [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) ストアド プロシージャを実行したら、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを再起動し、@@SERVERNAME への変更を有効にする必要があります。  
   
-     @@SERVERNAME の値がクラスター化されたインスタンスに対して適切でない場合は、クラスター アドミニストレーターを使用して名前を変更する必要があります。 詳細については、次を参照してください。 [AlwaysOn フェールオーバー クラスター インスタンスと #40 です。SQL Server と #41;](../Topic/AlwaysOn%20Failover%20Cluster%20Instances%20\(SQL%20Server\).md)します。  
+     @@SERVERNAME の値がクラスター化されたインスタンスに対して適切でない場合は、クラスター アドミニストレーターを使用して名前を変更する必要があります。 詳細については、「[Always On フェールオーバー クラスター インスタンス (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。  
   
- ディストリビューター インスタンスが正しく登録されていることを確認した後にディストリビューション データベースが表示されることを確認します **msdb.MSdistributiondbs**します。 表示されていない場合は、次の手順を実行します。  
+ ディストリビューター インスタンスが正しく登録されていることを確認したら、ディストリビューション データベースが **msdb..MSdistributiondbs**の一覧に表示されているかどうかを確認します。 表示されていない場合は、次の手順を実行します。  
   
-1.  ディストリビューション構成のスクリプトを作成します。 詳しくは、「 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)」をご覧ください。  
+1.  ディストリビューション構成のスクリプトを作成します。 詳細については、「 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)」を参照してください。  
   
-2.  ディストリビューションを無効化してから、再度有効化します。 詳細については、次を参照してください。 [ディストリビューションの構成](../../relational-databases/replication/configure-distribution.md)します。  
+2.  ディストリビューションを無効化してから、再度有効化します。 詳細については、「[ディストリビューションの構成](../../relational-databases/replication/configure-distribution.md)」を参照してください。  
   
-## 参照  
- [エラーとイベントのリファレンスと #40 です。レプリケーションと #41 です。](../../relational-databases/replication/errors-and-events-reference-replication.md)  
+## <a name="see-also"></a>参照  
+ [エラーとイベントのリファレンス &#40;レプリケーション&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

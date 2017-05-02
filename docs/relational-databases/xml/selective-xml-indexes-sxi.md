@@ -1,22 +1,26 @@
 ---
 title: "選択的 XML インデックス (SXI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9c9821e721ce4fdc9187bb69c75cf05c74ff3f40
+ms.lasthandoff: 04/11/2017
+
 ---
-# 選択的 XML インデックス (SXI)
+# <a name="selective-xml-indexes-sxi"></a>選択的 XML インデックス (SXI)
   選択的 XML インデックスは、通常の XML インデックスに加えて使用できる、別の種類の XML インデックスです。 選択的 XML インデックス機能の目標を次に示します。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納された XML データに対するクエリのパフォーマンスを向上させる。  
@@ -42,7 +46,6 @@ caps.handback.revision: 8
   
 4.  選択的 XML インデックスを使用するためにアプリケーションを更新する必要はありません。  
   
- [このトピックの内容](#top)  
   
 ##  <a name="compare"></a> 選択的 XML インデックスとプライマリ XML インデックス  
   
@@ -55,7 +58,6 @@ caps.handback.revision: 8
   
 -   ドキュメント構造内の不明な要素または不明な位置にある要素のクエリをサポートする。  
   
- [このトピックの内容](#top)  
   
 ##  <a name="example"></a> 選択的 XML インデックスの単純な例  
  次の XML フラグメントを、約 500,000 行ある表形式の XML ドキュメントと考えてください。  
@@ -98,12 +100,11 @@ FOR
   
  これらの要素の詳細については、「 [関連タスク](#reltasks)」を参照してください。  
   
- [このトピックの内容](#top)  
   
-## サポートされる機能、前提条件、および制限事項  
+## <a name="supported-features-prerequisites-and-limitations"></a>サポートされる機能、前提条件、および制限事項  
   
 ###  <a name="features"></a> サポートされる XML 機能  
- 選択的 XML インデックスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって exist()、value()、および nodes() メソッドの中でサポートされる XQuery をサポートします。  
+ 選択的 XML インデックスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって exist()、value()、および nodes() メソッドの中でサポートされる XQuery をサポートします。  
   
 -   exist()、value()、および nodes() メソッドでは、式全体を変換するための十分な情報が選択的 XML インデックスに含まれます。  
   
@@ -113,7 +114,6 @@ FOR
   
 -   modify() メソッドでは、選択的 XML インデックスを使用して XML ドキュメントを更新することはありません。  
   
- [このトピックの内容](#top)  
   
 ###  <a name="unsupported"></a> サポートされない XML 機能  
  選択的 XML インデックスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の XML の実装でサポートされている次の機能はサポートしません。  
@@ -130,7 +130,6 @@ FOR
   
 -   id() 関数の使用によるノードの識別子の指定と取得。  
   
- [このトピックの内容](#top)  
   
 ###  <a name="prereq"></a> 前提条件  
  ユーザー テーブルの XML 列に対して選択的 XML インデックスを作成する前に、次の前提条件を満たす必要があります。  
@@ -141,7 +140,6 @@ FOR
   
 -   選択的 XML インデックスで使用する場合、ユーザー テーブルのクラスター化キーのサイズは 15 バイトに制限されます。  
   
- [このトピックの内容](#top)  
   
 ###  <a name="limits"></a> 制限事項  
  **一般的な要件と制限事項**  
@@ -174,9 +172,9 @@ FOR
   
  特定の行でサポートされる NULL 以外の列の最大数は、列内のデータのサイズによって決まります。  
   
--   最良の場合、すべての列の型が **bit** のとき、1024 の NULL 以外の列がサポートされます。  
+-   最良の場合、すべての列の型が **bit**のとき、1024 の NULL 以外の列がサポートされます。  
   
--   最悪の場合、すべての列が **varchar** 型のラージ オブジェクトのとき、236 の NULL 以外の列のみがサポートされます。  
+-   最悪の場合、すべての列が **varchar**型のラージ オブジェクトのとき、236 の NULL 以外の列のみがサポートされます。  
   
  選択的 XML インデックスは、インデックスが設定されているすべてのノード パスに対して、内部的に 1 列から 4 列を使用します。 インデックスを設定できるノードの総数は、インデックス付きパス内のデータの実際のサイズに応じて、60 から数千になります。  
   
@@ -194,7 +192,6 @@ FOR
   
 -   選択的 XML インデックスとセカンダリ選択的 XML インデックスは、データベース チューニング アドバイザーではサポートされません。  
   
- [このトピックの内容](#top)  
   
 ##  <a name="reltasks"></a> 関連タスク  
   
@@ -205,6 +202,5 @@ FOR
 |選択的 XML インデックスを作成、変更、または削除する。|[選択的 XML インデックスの作成、変更、および削除](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)|  
 |セカンダリ選択的 XML インデックスを作成、変更、または削除する。|[選択的セカンダリ XML インデックスの作成、変更、および削除](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)|  
   
- [このトピックの内容](#top)  
   
   

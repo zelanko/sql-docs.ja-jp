@@ -1,33 +1,37 @@
 ---
 title: "[ログ ファイルの表示] の F1 ヘルプ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.swb.configurelogs.errorlog.f1"
-helpviewer_keywords: 
-  - "ログ ファイルの表示"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.swb.configurelogs.errorlog.f1
+helpviewer_keywords:
+- Log File Viewer
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 74f75dddf710244e52115612b99483237ce3d7b5
+ms.lasthandoff: 04/11/2017
+
 ---
-# [ログ ファイルの表示] の F1 ヘルプ
+# <a name="log-file-viewer-f1-help"></a>[ログ ファイルの表示] の F1 ヘルプ
   [ログ ファイルの表示] には、さまざまなコンポーネントのログ情報が表示されます。 [ログ ファイルの表示] が開いているときに **[ログの選択]** ペインを使用して、表示するログを選択します。 各ログには、そのログの種類に適した列が表示されます。  
   
- 表示できるログ ファイルは、[ログ ファイルの表示] を開いたときの状況に応じて変わります。 詳細については、「[[ログ ファイルの表示] を開く](../Topic/Open%20Log%20File%20Viewer.md)」を参照してください。  
+ 表示できるログ ファイルは、[ログ ファイルの表示] を開いたときの状況に応じて変わります。 詳細については、「 [[ログ ファイルの表示] を開く](../../relational-databases/logs/open-log-file-viewer.md)」を参照してください。  
   
  監査ログの表示行数は、**[ツール] メニューから開く [オプション]** ダイアログ ボックスの **[SQL Server オブジェクト エクスプローラー]/[コマンド]** ページで構成できます。 監査ログの表示列の詳細については、「[sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[ログの読み込み]**  
  読み込むログ ファイルを指定できるダイアログ ボックスが開きます。  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 38
  選択されたログの表示を更新します。 **[更新]** ボタンをクリックすると、選択したログが対象サーバーから再度読み込まれ、それと同時にすべてのフィルター設定が適用されます。  
   
  **[フィルター]**  
- **[接続]** や **[日付]** などの **[全般]** フィルター基準を含め、ログ ファイルのフィルター選択に使用する設定を指定できるダイアログ ボックスが開きます。  
+ **[接続]**や **[日付]**などの **[全般]** フィルター基準を含め、ログ ファイルのフィルター選択に使用する設定を指定できるダイアログ ボックスが開きます。  
   
  **検索**  
  ログ ファイル内で特定のテキストを検索します。 ワイルドカード文字を使用した検索はサポートされません。  
@@ -53,10 +57,10 @@ caps.handback.revision: 38
  行を選択すると、選択されたイベント行の詳細情報がページの下部に表示されます。 列をグリッド内の別の場所にドラッグすることで、列を並べ替えることができます。 グリッドのヘッダーで列のセパレーター バーを左右にドラッグすると、列の幅を変更できます。 グリッドのヘッダーで列のセパレーター バーをダブルクリックすると、内容の長さに合わせて自動的に列の幅が調整されます。  
   
  **インスタンス**  
- イベントが発生したインスタンスの名前です。 これは、*computer name*\\*instance name* と表示されます。  
+ イベントが発生したインスタンスの名前です。 これは、 *computer name*\\*instance name*と表示されます。  
   
-## 表示頻度の高い列  
- **日付**  
+## <a name="frequently-displayed-columns"></a>表示頻度の高い列  
+ **[日付]**  
  イベントの日付が表示されます。  
   
  **ソース**  
@@ -71,14 +75,14 @@ caps.handback.revision: 38
  **[ログ ソース]**  
  イベントがキャプチャされているソース ログの説明が表示されます。  
   
-## 権限  
+## <a name="permissions"></a>権限  
  オンラインの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのログ ファイルにアクセスするには、securityadmin 固定サーバー ロールのメンバーシップが必要です。  
   
- オフラインの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのログ ファイルにアクセスするには、**Root\Microsoft\SqlServer\ComputerManagement10** WMI 名前空間、およびログ ファイルの保存されているフォルダーの両方に対する読み取りアクセス権が必要です。 詳細については、「[オフライン ログ ファイルの表示](../../relational-databases/logs/view-offline-log-files.md)」トピックの「セキュリティ」セクションを参照してください。  
+ オフラインの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのログ ファイルにアクセスするには、 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 名前空間、および、ログ ファイルの保存されているフォルダーの両方に対する読み取りアクセス権が必要です。 詳細については、「 [オフライン ログ ファイルの表示](../../relational-databases/logs/view-offline-log-files.md)」トピックの「セキュリティ」セクションを参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ログ ファイルの表示](../../relational-databases/logs/log-file-viewer.md)   
- [[ログ ファイルの表示] を開く](../Topic/Open%20Log%20File%20Viewer.md)   
+ [[ログ ファイルの表示] を開く](../../relational-databases/logs/open-log-file-viewer.md)   
  [オフライン ログ ファイルの表示](../../relational-databases/logs/view-offline-log-files.md)  
   
   

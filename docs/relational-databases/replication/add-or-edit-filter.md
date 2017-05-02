@@ -1,34 +1,38 @@
 ---
 title: "フィルターの追加または編集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.newpubwizard.addeditfilter.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.newpubwizard.addeditfilter.f1
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7647baaaf9e567ada31eb468b6c48844676659f2
+ms.lasthandoff: 04/11/2017
+
 ---
-# フィルターの追加または編集
+# <a name="add-or-edit-filter"></a>フィルターの追加または編集
   **[フィルターの追加]** ダイアログ ボックスと **[フィルターの編集]** ダイアログ ボックスを使用すると、静的行フィルターおよびパラメーター化された行フィルターを追加したり編集したりできます。  
   
 > [!NOTE]  
->  既存のパブリケーション内のフィルターを編集するには、パブリケーション用の新しいスナップショットが必要です。 パブリケーションにサブスクリプションがある場合は、サブスクリプションを再度初期化する必要があります。 プロパティの変更に関する詳細については、次を参照してください。 [変更パブリケーションとアーティクルのプロパティ](../../relational-databases/replication/publish/change-publication-and-article-properties.md)します。  
+>  既存のパブリケーション内のフィルターを編集するには、パブリケーション用の新しいスナップショットが必要です。 パブリケーションにサブスクリプションがある場合は、サブスクリプションを再度初期化する必要があります。 プロパティ変更の詳細については、「[パブリケーションおよびアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)」を参照してください。  
   
- すべての種類のパブリケーションに静的フィルターを含めることができ、マージ パブリケーションにはパラメーター化されたフィルターも含めることができます。 静的フィルターは、パブリケーションが作成されたときに評価されます。パブリケーションに対するすべてのサブスクライバーは、同じデータを受け取ります。 パラメーター化されたフィルターは、レプリケーションの同期中に評価されます。サブスクライバーごとのログインまたはコンピューター名に基づいて、異なるサブスクライバーが異なるデータのパーティションを受け取ることができます。 ダイアログ ボックスの **[サンプル ステートメント]** リンクをクリックして、フィルターの種類ごとのサンプルを参照します。 フィルター オプションの詳細については、次を参照してください。 [パブリッシュされたデータのフィルター](../../relational-databases/replication/publish/filter-published-data.md)します。  
+ すべての種類のパブリケーションに静的フィルターを含めることができ、マージ パブリケーションにはパラメーター化されたフィルターも含めることができます。 静的フィルターは、パブリケーションが作成されたときに評価されます。パブリケーションに対するすべてのサブスクライバーは、同じデータを受け取ります。 パラメーター化されたフィルターは、レプリケーションの同期中に評価されます。サブスクライバーごとのログインまたはコンピューター名に基づいて、異なるサブスクライバーが異なるデータのパーティションを受け取ることができます。 ダイアログ ボックスの **[サンプル ステートメント]** リンクをクリックして、フィルターの種類ごとのサンプルを参照します。 フィルター オプションの詳細については、「[パブリッシュされたデータのフィルター処理](../../relational-databases/replication/publish/filter-published-data.md)」を参照してください。  
   
  行フィルターを使用すれば、テーブルからパブリッシュの対象となる行のサブセットを指定できます。 行フィルターを使用して、ユーザーにとって必要のない行 (機密性の高い情報など) を削除したり、さまざまなサブスクライバーに送られるさまざまなデータのパーティションを作成したりできます。 さまざまなデータのパーティションをさまざまなサブスクライバーにパブリッシュすると、複数のサブスクライバーが同じデータを更新することによって発生する可能性のある競合を回避するためにも役立ちます。  
   
-## オプション  
+## <a name="options"></a>オプション  
  このダイアログ ボックスには、トランザクション パブリケーションとスナップショット アプリケーション用の 2 段階のプロセスと、マージ パブリケーション用の 3 段階のプロセスがあります。 すべての種類のパブリケーションで、フィルター対象のテーブルと、フィルターに含む 1 つまたは複数の列を選択する必要があります。フィルターは、標準の WHERE 句として定義されます。  
   
 1.  **[フィルターを適用するテーブルを選択します。]**  
@@ -50,20 +54,20 @@ caps.handback.revision: 27
      このテキストは変更できません。標準の [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文を使用して、WHERE キーワードの後にフィルター句を入力します。 パブリッシャーが Oracle パブリッシャーの場合は、WHERE 句は Oracle クエリ構文に準拠する必要があります。 可能であれば、複雑なフィルターの使用は避けます。 静的フィルターとパラメーター化されたフィルターは、両方ともパブリケーションの処理時間を増加させます。したがって、フィルター ステートメントは可能な限り簡潔にしてください。  
   
     > [!IMPORTANT]  
-    >  パフォーマンスの理由により、マージ パブリケーションの場合は、パラメーター化された行フィルター句の列名に、 `LEFT([MyColumn]) = SUSER_SNAME()`などの関数を適用しないことをお勧めします。 フィルター句で HOST_NAME を使用していて、HOST_NAME 値を上書きする場合は、CONVERT を使用するデータ型の変換が必要になる可能性があります。 この場合のベスト プラクティスについての詳細については、」の「HOST_NAME() 値のオーバーライド」セクションを参照してください。 [パラメーター化された行フィルター](../../relational-databases/replication/merge/parameterized-row-filters.md)です。  
+    >  パフォーマンスの理由により、マージ パブリケーションの場合は、パラメーター化された行フィルター句の列名に、 `LEFT([MyColumn]) = SUSER_SNAME()`などの関数を適用しないことをお勧めします。 フィルター句で HOST_NAME を使用していて、HOST_NAME 値を上書きする場合は、CONVERT を使用するデータ型の変換が必要になる可能性があります。 このようなケースの推奨事項の詳細については、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」の「HOST_NAME() 値の上書き」をご覧ください。  
   
 3.  **[このテーブルからデータを取得するサブスクリプションの数を指定します。]**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみで、マージ レプリケーションのみです。 マージ レプリケーションを使用して、お使いのデータとアプリケーションに最適なパーティションの種類を指定できます。 **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]**を選択すると、マージ レプリケーションでは、重複しないパーティションのオプションが設定されます。 重複しないパーティションを事前計算済みパーティションと共に使用することで、パフォーマンスが向上します。事前計算済みパーティションに関連するアップロードの負担が、重複しないパーティションによって最小限に抑えられるためです。 重複しないパーティションのパフォーマンス上の利点は、使用するパラメーター化されたフィルターと結合フィルターが複雑になるほど明確になります。 このオプションを選択する場合は、データのパーティション分割によって、1 つの行が複数のサブスクライバーにレプリケートされないことを確認する必要があります。 詳細については、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-row-filters.md)」トピックの「[パーティションのオプション] の設定」をご覧ください。  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only; merge replication only. マージ レプリケーションを使用して、お使いのデータとアプリケーションに最適なパーティションの種類を指定できます。 **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]**を選択すると、マージ レプリケーションでは、重複しないパーティションのオプションが設定されます。 重複しないパーティションを事前計算済みパーティションと共に使用することで、パフォーマンスが向上します。事前計算済みパーティションに関連するアップロードの負担が、重複しないパーティションによって最小限に抑えられるためです。 重複しないパーティションのパフォーマンス上の利点は、使用するパラメーター化されたフィルターと結合フィルターが複雑になるほど明確になります。 このオプションを選択する場合は、データのパーティション分割によって、1 つの行が複数のサブスクライバーにレプリケートされないことを確認する必要があります。 詳細については、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」トピックの「[パーティションのオプション] の設定」をご覧ください。  
   
  フィルターを追加または編集した後に、 **[OK]** をクリックして変更を保存し、ダイアログ ボックスを閉じます。 指定したフィルターは、SELECT 句のテーブルに対して解析され、実行されます。 フィルター ステートメントに構文エラーが含まれるか、他の問題がある場合は、通知されるため、フィルター ステートメントを編集することができます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [パブリッシュされたデータのフィルター選択](../../relational-databases/replication/publish/filter-published-data.md)   
+ [パブリッシュされたデータのフィルター処理](../../relational-databases/replication/publish/filter-published-data.md)   
  [結合フィルター](../../relational-databases/replication/merge/join-filters.md)   
- [パラメーター化された行フィルター](../../relational-databases/replication/merge/parameterized-row-filters.md)   
+ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

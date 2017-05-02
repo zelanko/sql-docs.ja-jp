@@ -1,31 +1,35 @@
 ---
 title: "資格情報の作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資格情報 [SQL Server], 作成"
-  - "資格情報の認証 [SQL Server]"
-  - "ログイン [SQL Server], 資格情報"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- credentials [SQL Server], creating
+- authentication [SQL Server], credentials
+- logins [SQL Server], credentials
 ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80dba3f156735179c0fb016e39f3065acd6f5ac1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 資格情報の作成
+# <a name="create-a-credential"></a>資格情報の作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、資格情報を作成する方法について説明します。  
   
- 資格情報によって、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証ユーザーは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 外部の ID を持つことができます。 これは、主に EXTERNAL_ACCESS 権限セットを使用してアセンブリのコードを実行するために使用されます。 また、バックアップを格納するファイルの場所などのドメイン リソースに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証ユーザーがアクセスする必要がある場合にも、資格情報が使用されます。  
+ 資格情報によって、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証ユーザーは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]外部の ID を持つことができます。 これは、主に EXTERNAL_ACCESS 権限セットを使用してアセンブリのコードを実行するために使用されます。 また、バックアップを格納するファイルの場所などのドメイン リソースに、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証ユーザーがアクセスする必要がある場合にも、資格情報が使用されます。  
   
- 資格情報は、複数の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインに同時にマップできます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインは、一度に 1 つの資格情報にのみマップできます。 資格情報を作成したら、**[ログインのプロパティ] ([全般] ページ)** を使用してログインを資格情報にマップします。  
+ 資格情報は、複数の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインに同時にマップできます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインは、一度に 1 つの資格情報にのみマップできます。 資格情報を作成したら、 **[ログインのプロパティ] ([全般] ページ)** を使用してログインを資格情報にマップします。  
   
  **このトピックの内容**  
   
@@ -56,15 +60,15 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### 資格情報を作成するには  
+#### <a name="to-create-a-credential"></a>資格情報を作成するには  
   
 1.  オブジェクト エクスプローラーで、 **[セキュリティ]** フォルダーを展開します。  
   
-2.  **[資格情報]** フォルダーを右クリックし、**[新しい資格情報]** をクリックします。  
+2.  **[資格情報]** フォルダーを右クリックし、 **[新しい資格情報]**をクリックします。  
   
 3.  **[新しい資格情報]** ダイアログ ボックスで、 **[資格情報名]** ボックスに資格情報の名前を入力します。  
   
-4.  **[ID]** ボックスに、送信用の接続に使用するアカウントの名前を入力します ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のコンテキストが適用されない場合)。 通常、これは Windows ユーザー アカウントですが、ID を別の種類のアカウントにすることができます。  
+4.  **[ID]** ボックスに、送信用の接続に使用するアカウントの名前を入力します ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のコンテキストが適用されない場合)。 通常、これは Windows ユーザー アカウントですが、ID を別の種類のアカウントにすることができます。  
   
      または、省略記号 **[…]** をクリックして **[ユーザーまたはグループの選択]** ダイアログ ボックスを開きます。  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### 資格情報を作成するには  
+#### <a name="to-create-a-credential"></a>資格情報を作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   

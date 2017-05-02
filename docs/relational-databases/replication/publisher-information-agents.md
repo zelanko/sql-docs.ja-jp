@@ -1,24 +1,28 @@
 ---
 title: "パブリッシャー情報、[エージェント] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.publisherinfo.commonjobs.f1"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.publisherinfo.commonjobs.f1
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 78e8493ca92ce2877d5fb6cb29fa46c6287dd56a
+ms.lasthandoff: 04/11/2017
+
 ---
-# パブリッシャー情報、[エージェント]
+# <a name="publisher-information-agents"></a>パブリッシャー情報、[エージェント]
   **[エージェント]** タブには、パブリッシャーに関連するエージェントおよびメンテナンス ジョブに関する詳細情報が表示されます。  
   
 -   すべてのパブリケーションで表示されるスナップショット エージェント  
@@ -41,10 +45,10 @@ caps.handback.revision: 26
   
     -   有効期限が切れたサブスクリプションのクリーンアップ  
   
- これらのジョブの詳細については、次を参照してください。 [レプリケーション エージェントの管理](../../relational-databases/replication/agents/replication-agent-administration.md)します。  
+ これらのジョブの詳細については、「[Replication Agent Administration](../../relational-databases/replication/agents/replication-agent-administration.md)」 (レプリケーション エージェントの管理) を参照してください。  
   
-## オプション  
- エージェントまたはジョブに関する情報を表示する [、 **エージェントとジョブの種類** ボックスの一覧です。 エージェントまたはジョブに関する詳細情報やタスクを調べるには、対象のエージェントまたはジョブの行を右クリックし、ショートカット メニューのオプションをクリックします。 グリッドにデータを表示する方法を変更するには、グリッドを右クリックし、次のいずれかのオプションをクリックします。  
+## <a name="options"></a>オプション  
+ エージェントまたはジョブに関する情報を表示するには、 **[エージェントとジョブの種類]** メニューから選択します。 エージェントまたはジョブに関する詳細情報やタスクを調べるには、対象のエージェントまたはジョブの行を右クリックし、ショートカット メニューのオプションをクリックします。 グリッドにデータを表示する方法を変更するには、グリッドを右クリックし、次のいずれかのオプションをクリックします。  
   
 -   **[並べ替え]**: **[列の並べ替え]** ダイアログ ボックスで、1 つ以上の列を基準にして並べ替えを行います。  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 26
   
  この後のセクションでは、このタブでエージェントまたはジョブごとに表示されるデータについて説明します。  
   
-### スナップショット エージェント  
+### <a name="snapshot-agent"></a>スナップショット エージェント  
  **[状態]**  
  エージェントの状態です。 表示される状態の種類を、次に示します。  
   
@@ -85,13 +89,13 @@ caps.handback.revision: 26
  **[配信率]**  
  エージェントが最後に実行されたときにディストリビューション データベースで初期化コマンドがコミットされた頻度 (1 秒あたりのコマンド数) です。  
   
- **#トランザクション**  
+ **[#Trans]**  
  エージェントが最後に実行されたときにディストリビューション データベースでコミットされたトランザクションの数です。  
   
- **#コマンド**  
+ **[#Cmds]**  
  エージェントが最後に実行されたときにディストリビューション データベースでコミットされたコマンドの数です。 更新などのデータ変更がコマンドに相当します。  
   
-### ログ リーダー エージェント (Log Reader Agent)  
+### <a name="log-reader-agent"></a>ログ リーダー エージェント (Log Reader Agent)  
  **[状態]**  
  エージェントの状態です。 表示される状態の種類を、次に示します。  
   
@@ -121,16 +125,16 @@ caps.handback.revision: 26
  **[待機時間]**  
  パブリケーション データベースで最新の変更がコミットされてから、ディストリビューション データベースで対応するコマンドがコミットされるまでに経過した時間 (秒単位) です。  
   
- **#トランザクション**  
+ **[#Trans]**  
  エージェントが最後に実行されたときにディストリビューション データベースでコミットされたトランザクションの数です。  
   
- **#コマンド**  
+ **[#Cmds]**  
  エージェントが最後に実行されたときにディストリビューション データベースでコミットされたコマンドの数です。 更新などのデータ変更がコマンドに相当します。  
   
- **Avg. #コマンド**  
+ **[Avg. #Cmds]**  
  エージェントが最後に実行されたときの 1 トランザクションあたりの平均コマンド数です。  
   
-### キュー リーダー エージェント (Queue Reader Agent)  
+### <a name="queue-reader-agent"></a>キュー リーダー エージェント (Queue Reader Agent)  
  **[状態]**  
  エージェントの状態です。 表示される状態の種類を、次に示します。  
   
@@ -160,16 +164,16 @@ caps.handback.revision: 26
  **[待機時間]**  
  サブスクリプション データベースで最新の変更がコミットされてから、パブリケーション データベースで対応するコマンドがコミットされるまでに経過した時間 (秒単位) です。  
   
- **#トランザクション**  
+ **[#Trans]**  
  エージェントが最後に実行されたときにパブリケーション データベースでコミットされたトランザクションの数です。  
   
- **#コマンド**  
+ **[#Cmds]**  
  エージェントが最後に実行されたときにパブリケーション データベースでコミットされたコマンドの数です。 更新などのデータ変更がコマンドに相当します。  
   
- **Avg. #コマンド**  
+ **[Avg. #Cmds]**  
  エージェントが最後に実行されたときの 1 トランザクションあたりの平均コマンド数です。  
   
-### メンテナンス ジョブ  
+### <a name="maintenance-jobs"></a>メンテナンス ジョブ  
  **[状態]**  
  それぞれのジョブの状態。 表示される状態の種類を、次に示します。  
   
@@ -193,10 +197,10 @@ caps.handback.revision: 26
  **[最後のアクション]**  
  ジョブが最後に実行されたときに最後に実行されたアクションです。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [情報を表示し、パブリッシャーおよび #40; のタスクを実行レプリケーション モニターと #41 です。](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [情報を表示し、パブリケーションと #40; に関連付けられているエージェントのタスクを実行レプリケーション モニターと #41 です。](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
+ [パブリッシャーの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

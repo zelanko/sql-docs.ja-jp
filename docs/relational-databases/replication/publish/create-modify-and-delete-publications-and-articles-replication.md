@@ -1,32 +1,36 @@
 ---
 title: "パブリケーションとアーティクルの作成、変更、および削除 (レプリケーション) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "パブリケーション [SQL Server レプリケーション]、作成"
-  - "アーティクル [SQL Server レプリケーション]、定義"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publications [SQL Server replication], creating
+- articles [SQL Server replication], defining
 ms.assetid: e66d06ec-a12b-444d-875b-77f958af2f21
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e839ec6da57577fb9a6f759989ca110a1b426dea
+ms.lasthandoff: 04/11/2017
+
 ---
-# パブリケーションとアーティクルの作成、変更、および削除 (レプリケーション)
+# <a name="create-modify-and-delete-publications-and-articles-replication"></a>パブリケーションとアーティクルの作成、変更、および削除 (レプリケーション)
   ここでは、パブリケーションの作成とアーティクルの定義に関連する作業の手順について説明します。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
   
 -   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
   
--   [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)  
+-   [アーティクルの定義](../../../relational-databases/replication/publish/define-an-article.md)  
   
 -   [パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
   
@@ -34,39 +38,39 @@ caps.handback.revision: 36
   
 -   [パブリケーションの削除](../../../relational-databases/replication/publish/delete-a-publication.md)  
   
--   [Delete an Article](../../../relational-databases/replication/publish/delete-an-article.md)  
+-   [アーティクルの削除](../../../relational-databases/replication/publish/delete-an-article.md)  
   
--   [Create a Publication from an Oracle Database](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)  
+-   [Oracle データベースからのパブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)  
   
 -   [サブスクリプションの有効期限の設定](../../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md)  
   
 -   [スキーマ オプションの指定](../../../relational-databases/replication/publish/specify-schema-options.md)  
   
--   [Replicate Schema Changes](../../../relational-databases/replication/publish/replicate-schema-changes.md)  
+-   [スキーマ変更のレプリケート](../../../relational-databases/replication/publish/replicate-schema-changes.md)  
   
 -   [ID 列の管理](../../../relational-databases/replication/publish/manage-identity-columns.md)  
   
--   [Set the Compatibility Level for Merge Publications](../../../relational-databases/replication/publish/set-the-compatibility-level-for-merge-publications.md)  
+-   [マージ パブリケーションの互換性レベルの設定](../../../relational-databases/replication/publish/set-the-compatibility-level-for-merge-publications.md)  
   
-## スナップショット オプション  
+## <a name="snapshot-options"></a>スナップショット オプション  
   
--   [指定のスナップショットの形式と #40 です。SQL Server Management Studio と #41 です。](../../../relational-databases/replication/publish/specify-snapshot-format-sql-server-management-studio.md)  
+-   [スナップショットの形式の指定 (SQL Server Management Studio)](../../../relational-databases/replication/publish/specify-snapshot-format-sql-server-management-studio.md)  
   
--   [代替スナップショット フォルダーの場所と #40; を指定します。SQL Server Management Studio と #41 です。](../../../relational-databases/replication/publish/specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md)  
+-   [代替スナップショット フォルダーの場所の指定 (SQL Server Management Studio)](../../../relational-databases/replication/publish/specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md)  
   
--   [スナップショット ファイルを圧縮する (&) #40 です。SQL Server Management Studio と #41 です。](../../../relational-databases/replication/publish/compress-snapshot-files-sql-server-management-studio.md)  
+-   [スナップショット ファイルの圧縮 (SQL Server Management Studio)](../../../relational-databases/replication/publish/compress-snapshot-files-sql-server-management-studio.md)  
   
--   [スナップショットのプロパティと #40; 構成します。レプリケーション TRANSACT-SQL プログラミングと #41 です。](../../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
+-   [スナップショットのプロパティの構成 (レプリケーション Transact-SQL プログラミング)](../../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   
--   [スナップショットが適用される前後にスクリプトの実行 (& a) #40 です。SQL Server Management Studio と #41 です。](../../../relational-databases/replication/execute scripts before and after a snapshot is applied.md)  
+-   [スナップショット適用前および適用後のスクリプトの実行 (SQL Server Management Studio)](../../../relational-databases/replication/execute-scripts-before-and-after-a-snapshot-is-applied.md)  
   
--   [Deliver a Snapshot Through FTP](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)  
+-   [FTP でのスナップショットの配信](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)  
   
-## データのフィルター処理  
+## <a name="filtering-data"></a>データのフィルター処理  
   
--   [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)  
+-   [列フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)  
   
--   [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)  
+-   [静的行フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)  
   
 -   [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
   
@@ -74,35 +78,35 @@ caps.handback.revision: 36
   
 -   [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)  
   
--   [マージ アーティクルと #40; の間の結合フィルターのセットを自動的に生成します。SQL Server Management Studio と #41 です。](../../../relational-databases/replication/publish/automatically generate join filters between merge articles.md)  
+-   [マージ アーティクル間の一連の結合フィルターを自動的に生成する (SQL Server Management Studio)](../../../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md)  
   
-## トランザクション レプリケーション オプション  
+## <a name="transactional-replication-options"></a>トランザクション レプリケーション オプション  
   
--   [Set the Propagation Method for Data Changes to Transactional Articles](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)  
+-   [データの変更をトランザクション アーティクルに反映する方法の設定](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)  
   
--   [Enable Updating Subscriptions for Transactional Publications](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   [トランザクション パブリケーションの更新可能なサブスクリプションの有効化](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
--   [更新の競合解決オプションはキューに置かれた & #40; 設定します。SQL Server Management Studio と #41 です。](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
+-   [キュー更新の競合解決オプションの設定 (SQL Server Management Studio)](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
   
--   [トランザクション パブリケーションと #40; ストアド プロシージャの実行を発行します。SQL Server Management Studio と #41 です。](../../../relational-databases/replication/publish/publish execution of stored procedure in transactional publication.md)  
+-   [トランザクション パブリケーションでのストアド プロシージャの実行のパブリッシュ (SQL Server Management Studio)](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
-## マージ レプリケーション オプション  
+## <a name="merge-replication-options"></a>マージ レプリケーション オプション  
   
--   [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)  
+-   [マージ テーブル アーティクル間に論理レコード リレーションシップを定義する](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)  
   
--   [マージ テーブル アーティクルと #40; の処理順序を指定します。レプリケーション TRANSACT-SQL プログラミングと #41 です。](../../../relational-databases/replication/publish/specify the processing order of merge table articles.md)  
+-   [マージ テーブル アーティクルの処理順序の指定 (レプリケーション Transact-SQL プログラミング)](../../../relational-databases/replication/publish/specify-the-processing-order-of-merge-table-articles.md)  
   
--   [Specify That a Merge Table Article is Download-Only](../../../relational-databases/replication/publish/specify-that-a-merge-table-article-is-download-only.md)  
+-   [マージ テーブル アーティクルをダウンロード専用に指定する](../../../relational-databases/replication/publish/specify-that-a-merge-table-article-is-download-only.md)  
   
--   [#40; (&)、マージ アーティクルに対して削除を追跡しないことを指定します。レプリケーション TRANSACT-SQL プログラミングと #41 です。](../../../relational-databases/replication/publish/specify that deletes should not be tracked for merge articles.md)  
+-   [マージ アーティクルに対して削除を追跡しないように指定する (レプリケーション Transact-SQL プログラミング)](../../../relational-databases/replication/publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
   
--   [Specify the Conflict Tracking and Resolution Level for Merge Articles](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md)  
+-   [マージ アーティクルの競合追跡と競合解決のレベルの指定](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md)  
   
 -   [マージ アーティクル競合回避モジュールの指定](../../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)  
   
 -   [マージ アーティクルのインタラクティブな競合回避の指定](../../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データとデータベース オブジェクトのパブリッシュ](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

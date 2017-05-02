@@ -1,32 +1,36 @@
 ---
 title: "データ コレクションの管理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "データ コレクション"
-helpviewer_keywords: 
-  - "データ コレクション [SQL Server]"
-  - "データ コレクター [SQL Server], Transact-SQL"
-  - "データ コレクター [SQL Server], SQL Server Management Studio"
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- "データ コレクション"
+helpviewer_keywords:
+- data collection [SQL Server]
+- data collector [SQL Server], Transact-SQL
+- data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3501375e366cd5c84dd4544d4af0c11f00f2dbb1
+ms.lasthandoff: 04/11/2017
+
 ---
-# データ コレクションの管理
+# <a name="manage-data-collection"></a>データ コレクションの管理
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] のストアド プロシージャと関数を使用して、データ コレクションの有効化または無効化、コレクション セットの構成の変更、管理データ ウェアハウスのデータの表示など、データ コレクションのさまざまな側面を管理します。  
   
-## SSMS を使用したデータ コレクションの管理  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーを使用することで、次のデータ コレクター関連のタスクを実行します。  
+## <a name="manage-data-collection-using-ssms"></a>SSMS を使用したデータ コレクションの管理  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーを使用することで、次のデータ コレクター関連のタスクを実行します。  
   
 -   [管理データ ウェアハウスの構成 &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 26
   
 -   [コレクション セットの開始または停止](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
--   [SQL Server Profiler を使用して SQL トレース コレクション セットを作成する &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/use sql server profiler to create a sql trace collection set.md)  
+-   [SQL Server Profiler を使用して SQL トレース コレクション セットを作成する &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)  
   
 -   [コレクション セット ログの表示 &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-collection-set-logs-sql-server-management-studio.md)  
   
@@ -44,8 +48,8 @@ caps.handback.revision: 26
   
 -   [コレクション セット レポートの表示 &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)  
   
-## Transact-SQL を使用したデータ コレクションの管理  
- データ コレクターにはストアド プロシージャの豊富なコレクションがあり、それらを使用してデータ コレクターの関連タスクを実行することができます。 たとえば、[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用すると、次のタスクを実行できます。  
+## <a name="manage-data-collection-using-transact-sql"></a>Transact-SQL を使用したデータ コレクションの管理  
+ データ コレクターにはストアド プロシージャの豊富なコレクションがあり、それらを使用してデータ コレクターの関連タスクを実行することができます。 たとえば、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用すると、次のタスクを実行できます。  
   
 -   [データ コレクションのパラメーターの構成 &#40;Transact-SQL&#41;](../../relational-databases/data-collection/configure-data-collection-parameters-transact-sql.md)  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 26
   
 -   [コレクション セットの開始または停止](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
--   [ジェネリック T-SQL Query コレクター型を使用するカスタム コレクション セットの作成 &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create custom collection set - generic t-sql query collector type.md)  
+-   [ジェネリック T-SQL Query コレクター型を使用するカスタム コレクション セットの作成 &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)  
   
 -   [コレクション アイテムをコレクション セットに追加する &#40;Transact-SQL&#41;](../../relational-databases/data-collection/add-a-collection-item-to-a-collection-set-transact-sql.md)  
   
@@ -63,9 +67,9 @@ caps.handback.revision: 26
   
 >**[重要です!]** 通常のストアド プロシージャとは異なり、データ コレクターで使用するストアド プロシージャではパラメーターのデータ型が厳密に定義されており、データ型の自動変換はサポートされていません。 これらのパラメーターが、引数の説明で指定されている正しいデータ型で呼び出されないと、このストアド プロシージャではエラーが返されます。  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、付属のコード サンプルを作成して実行します。 詳細については、「[オブジェクト エクスプローラー](../../ssms/object/object-explorer.md)」を参照してください。 また、任意のエディターでクエリを作成し、.sql というファイル名拡張子を持つテキスト ファイルに保存することもできます。 このクエリは、Windows コマンド プロンプトから **sqlcmd** ユーティリティを使用して実行できます。 詳細については、「[sqlcmd Utility の使用](../../relational-databases/scripting/use-the-sqlcmd-utility.md)」を参照してください。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、付属のコード サンプルを作成して実行します。 詳細については、「 [オブジェクト エクスプローラー](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)」を参照してください。 また、任意のエディターでクエリを作成し、.sql というファイル名拡張子を持つテキスト ファイルに保存することもできます。 このクエリは、Windows コマンド プロンプトから **sqlcmd** ユーティリティを使用して実行できます。 詳細については、「 [sqlcmd Utility の使用](../../relational-databases/scripting/sqlcmd-use-the-utility.md)」を参照してください。  
   
-### ストアド プロシージャとビュー  
+### <a name="stored-procedures-and-views"></a>ストアド プロシージャとビュー  
  **データ コレクターの操作**  
   
  次の表に、データ コレクターの操作に使用できるストアド プロシージャを示します。  
@@ -161,7 +165,7 @@ caps.handback.revision: 26
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql.md)|実行ログからコレクション セットのエントリを削除します。|  
   
-### 関数  
+### <a name="functions"></a>関数  
  次の表に、実行情報とトレース情報の取得に使用できる関数を示します。  
   
 |関数名|説明|  
@@ -170,9 +174,10 @@ caps.handback.revision: 26
 |[fn_syscollector_get_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|コレクション セットまたはパッケージの実行統計を取得します。 この情報には、ログに記録されたエラーが含まれます。|  
 |[snapshots.fn_trace_getdata &#40;Transact-SQL&#41;](../../relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql.md)|ジェネリック SQL トレース コレクター型を使用したデータ収集時にログに記録されたイベントを取得します。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ストアド プロシージャの実行](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
- [SQL Server Management Studio の使用 [SQL Server]](../../ssms/use-sql-server-management-studio.md)   
+ [SQL Server Management Studio の使用 [SQL Server]](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
  [データ コレクション](../../relational-databases/data-collection/data-collection.md)  
   
   
+

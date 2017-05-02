@@ -1,35 +1,39 @@
 ---
 title: "PolyBase の概要 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "PolyBase"
-  - "PolyBase, 概要"
-  - "Hadoop インポート"
-  - "Hadoop エクスポート"
-  - "Azure BLOB ストレージ インポート"
-  - "Azure BLOB ストレージ エクスポート"
-  - "Hadoop インポート, PolyBase の概要"
-  - "Hadoop エクスポート, Polybase の概要"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-polybase
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- PolyBase
+- PolyBase, getting started
+- Hadoop import
+- Hadoop export
+- Azure blob storage import
+- Azure blob storage export
+- Hadoop import, PolyBase getting started
+- Hadoop export, Polybase getting started
 ms.assetid: c71ddc50-b4c7-416c-9789-264671bd9ecb
 caps.latest.revision: 78
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 73
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 13d43201a92c729dd3405d2d436942316ebad0e4
+ms.lasthandoff: 04/11/2017
+
 ---
-# PolyBase の概要
+# <a name="get-started-with-polybase"></a>PolyBase の概要
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  このトピックには、PolyBase の実行に関する基本事項が記載されています。 詳細については、「[PolyBase ガイド](../../relational-databases/polybase/polybase-guide.md)」を参照してください。  
+  このトピックには、PolyBase の実行に関する基本事項が記載されています。 詳細については、「 [PolyBase ガイド](../../relational-databases/polybase/polybase-guide.md)」を参照してください。  
   
  次の手順を実行すると、次の結果が得られます。  
   
@@ -42,29 +46,31 @@ caps.handback.revision: 73
 -   PolyBase オブジェクトを使用するクエリの例を確認できる  
   
 ## <a name="prerequisites"></a>前提条件  
- [SQL Server (64 ビット)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) のインスタンス。  
+ [SQL Server (64 ビット)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)のインスタンス。  
   
 -   Microsoft .NET Framework 4.5。  
   
--   Oracle Java SE RunTime Environment (JRE) バージョン 7.51 以上 (64 ビット)。 ([JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) または [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) を使用できます)。 [Java SE ダウンロード](http://www.oracle.com/technetwork/java/javase/downloads/index.html)に移動します。 JRE が存在しない場合、インストーラーは失敗します。   
+-   Oracle Java SE RunTime Environment (JRE) バージョン 7.51 以上 (64 ビット)。 ( [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) または [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) を使用できます)。 [Java SE ダウンロード](http://www.oracle.com/technetwork/java/javase/downloads/index.html)に移動します。 JRE が存在しない場合、インストーラーは失敗します。   
   
 -   最小メモリ: 4 GB。  
   
 -   最小ハード ディスク容量: 2 GB。  
   
--   TCP/IP 接続を有効にする必要があります。 (「[サーバー ネットワーク プロトコルを有効または無効にする](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)」を参照してください。)  
+-   TCP/IP 接続を有効にする必要があります。 (「 [サーバー ネットワーク プロトコルを有効または無効にする](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)」を参照してください。)  
   
  次のいずれかの外部データ ソース:  
   
--   Hadoop クラスター。 サポートされているバージョンについては、「[PolyBase を構成する](#supported)」を参照してください。  
-  
+-   Hadoop クラスター。 サポートされているバージョンについては、「 [PolyBase を構成する](#supported)」を参照してください。  
+
 -   Azure BLOB ストレージ。 
+
+-   Hadoop に対して計算プッシュダウン機能を使用する予定の場合、ターゲットの Hadoop クラスターに HDFS のコア コンポーネントの Yarn/MapReduce があり、Jobhistory サーバーが有効であることを確認する必要があります。 PolyBase から MapReduce 経由でプッシュダウン クエリを送信し、JobHistory Server からステータスをプルします。 いずれかのコンポーネントがない場合、クエリはエラー メッセージで失敗します。 
 
 > [!NOTE]
 > HDInsight クラスターは、永続的なストレージのファイル システムとして Azure BLOB ストレージを使用します。 PolyBase を使用して、HDInsight クラスターで管理されているファイルをクエリできます。 この場合、外部データ ソースを作成して、HDInsight クラスター用ストレージとして構成されている BLOB を参照します。 
   
 ## <a name="install-polybase"></a>PolyBase のインストール  
- SQL Server インストールの一部として PolyBase をインストールします。 詳細については、[PolyBase のインストール](../../relational-databases/polybase/polybase-installation.md) を参照してください。  
+ PolyBase をインストールしていない場合は、「[PolyBaseinstallation](../../relational-databases/polybase/polybase-installation.md)」を参照してください。  
   
 ### <a name="how-to-confirm-installation"></a>インストールの確認方法  
  インストールが完了したら、次のコマンドを実行して、PolyBase が正常にインストールされていることを確認します。 PolyBase がインストールされている場合は 1 を返し、それ以外の場合は 0 を返します。  
@@ -73,7 +79,7 @@ caps.handback.revision: 73
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
-##  <a name="a-namesupporteda-configure-polybase"></a><a name="supported"></a> PolyBase を構成する  
+##  <a name="supported"></a> Configure PolyBase  
  インストールが完了したら、Hadoop バージョンと Azure BLOB ストレージのどちらかを使用するように SQL Server を構成する必要があります。 PolyBase では、2 つの Hadoop プロバイダー: Hortonworks Data Platform (HDP) と Cloudera CDH がサポートされています。 Hortonworks は Windows マシンまたは Linux マシンで実行でき、これは構成の一部でもあります。  サポートされている外部データ ソースは次のとおりです。  
   
 -   Linux/Windows Server 上の Hortonworks HDP 1.3  
@@ -84,13 +90,16 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Linux 上の Cloudera CDH 4.3  
   
--   Linux 上の Cloudera CDH 5.1 - 5.5、5.9  
+-   Linux 上の Cloudera CDH 5.1 – 5.5、5.9、5.10  
   
 -   Azure BLOB ストレージ  
   
+>  [!NOTE]
+> Azure Data Lake Store 接続は、Azure SQL Data Warehouse でのみサポートされています。
+  
 ### <a name="external-data-source-configuration"></a>外部データ ソースの構成  
   
-1.  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ‘hadoop connectivity’ を実行し、適切な値を設定します。  値を見つけるには、「[PolyBase 接続構成 &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)」を参照してください。  
+1.  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ‘hadoop connectivity’ を実行し、適切な値を設定します。 既定で、hadoop connectivity は 7 に設定されています。 値を見つけるには、「[PolyBase 接続構成 &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)」を参照してください。  
   
     ```tsql  
     -- Values map to various external data sources.  
@@ -108,7 +117,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
     -   SQL Server PolyBase エンジン  
   
- ![stop and start PolyBase services in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "stop and start PolyBase services in services.msc")  
+ ![services.msc での PolyBase サービスの停止と開始](../../relational-databases/polybase/media/polybase-stop-start.png "services.msc での PolyBase サービスの停止と開始")  
   
 ### <a name="pushdown-configuration"></a>プッシュダウンの構成  
  クエリ パフォーマンスを高めるには、Hadoop クラスターへのプッシュダウン計算を有効にします。  
@@ -125,6 +134,9 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 3.  SQL Server コンピューターで、 **yarn.site.xml ファイル** 内の **yarn.application.classpath** プロパティを検索します。 Hadoop コンピューターからこの値要素に値を貼り付けます。  
   
+4. すべての CDH 5.X バージョンで、yarn.site.xml file の最後か mapred-site.xml file に mapreduce.application.classpath 構成パラメーターを追加する必要があります。 HortonWorks では、yarn.application.classpath 構成内にこれらの構成が含まれます。 例については、「[PolyBase の構成](../../relational-databases/polybase/polybase-configuration.md)」を参照してください。
+
+ 
 ## <a name="scale-out-polybase"></a>PolyBase をスケール アウトする  
  PolyBase グループ機能では、外部データ ソースからの大量のデータ セットを、クエリ パフォーマンスの向上のためにスケールアウト形式で処理するために、SQL Server インスタンスのクラスターを作成することができます。  
   
@@ -132,7 +144,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 2.  1 つの SQL Server をヘッド ノードとして選択します。  
   
-3.  [sp_polybase_join_group](../Topic/sp_polybase_join_group.md) を実行して、他のインスタンスをコンピューティング ノードとして追加します。  
+3.  [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)を実行して、他のインスタンスをコンピューティング ノードとして追加します。  
   
     ```  
     -- Enter head node details:   
@@ -143,7 +155,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 4.  コンピューティング ノードで PolyBase Data Movement Service を再起動します。  
   
- 詳細については、「[PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md)」を参照してください。  
+ 詳細については、「 [PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md)」を参照してください。  
   
 ## <a name="create-t-sql-objects"></a>T-SQL オブジェクトの作成  
  Hadoop または Azure Storage のいずれかの外部データ ソースに依存するオブジェクトを作成します。  
@@ -337,22 +349,23 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ## <a name="managing-polybase-objects-in-ssms"></a>SSMS での PolyBase オブジェクトの管理  
  SSMS では、外部テーブルが別のフォルダー **[外部テーブル]**に表示されます。 外部データ ソースおよび外部ファイル形式は、 **[外部リソース]**の下のサブフォルダーにあります。  
   
- ![PolyBase objects in SSMS](../../relational-databases/polybase/media/polybase-management.png "PolyBase objects in SSMS")  
+ ![SSMS の PolyBase オブジェクト](../../relational-databases/polybase/media/polybase-management.png "SSMS の PolyBase オブジェクト")  
   
 ## <a name="troubleshooting"></a>トラブルシューティング  
- DMV を使用して、パフォーマンスおよびクエリをトラブルシューティングします。 詳細については、「[PolyBase のトラブルシューティング](../../relational-databases/polybase/polybase-troubleshooting.md)」を参照してください。  
+ DMV を使用して、パフォーマンスおよびクエリをトラブルシューティングします。 詳細については、「 [PolyBase のトラブルシューティング](../../relational-databases/polybase/polybase-troubleshooting.md)」を参照してください。  
   
- SQL Server 2016 RC1 から RC2 または RC3 にアップグレードすると、クエリは失敗する場合があります。 詳細と救済方法については、「[SQL Server 2016 リリース ノート](../../sql-server/sql-server-2016-release-notes.md)」を参照し、"PolyBase" を検索してください。  
+ SQL Server 2016 RC1 から RC2 または RC3 にアップグレードすると、クエリは失敗する場合があります。 詳細と救済方法については、「 [SQL Server 2016 リリース ノート](../../sql-server/sql-server-2016-release-notes.md) 」を参照し、"PolyBase" を検索してください。  
   
 ## <a name="next-steps"></a>次の手順  
- スケールアウト機能の詳細については、「[PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md)」を参照してください。  PolyBase を監視するには、「[PolyBase のトラブルシューティング](../../relational-databases/polybase/polybase-troubleshooting.md)」を参照してください。 PolyBase パフォーマンスのトラブルシューティングについては、「 [PolyBase troubleshooting with dynamic management views](../Topic/PolyBase%20troubleshooting%20with%20dynamic%20management%20views.md)」を参照してください。  
+ スケールアウト機能の詳細については、「 [PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md)」を参照してください。  PolyBase を監視するには、「 [PolyBase のトラブルシューティング](../../relational-databases/polybase/polybase-troubleshooting.md)」を参照してください。 PolyBase パフォーマンスのトラブルシューティングについては、「 [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [PolyBase ガイド](../../relational-databases/polybase/polybase-guide.md)   
  [PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md)   
- [PolyBase ストアド プロシージャ](../Topic/PolyBase%20stored%20procedures.md)   
+ [PolyBase ストアド プロシージャ](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
   
+

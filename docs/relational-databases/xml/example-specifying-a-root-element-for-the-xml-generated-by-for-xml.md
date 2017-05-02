@@ -1,28 +1,32 @@
 ---
 title: "例 : FOR XML で生成される XML のルート要素の指定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RAW モード、ルート要素例の指定"
-  - "RAW モード、FOR XML の例"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RAW mode, specifying root element example
+- RAW mode, with FOR XML example
 ms.assetid: bcc54b11-0713-4e43-8dbe-d6f3ad1993b5
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b29b195a3bff00b3c277767df4d18a0d001eb9ed
+ms.lasthandoff: 04/11/2017
+
 ---
-# 例 : FOR XML で生成される XML のルート要素の指定
-  次のクエリに示すように、`ROOT` クエリで `FOR XML` オプションを指定することにより、結果の XML に 1 つのトップレベル要素を要求できます。 `ROOT` ディレクティブに指定した引数で、ルート要素名を指定します。  
+# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>例 : FOR XML で生成される XML のルート要素の指定
+  次のクエリに示すように、 `ROOT` クエリで `FOR XML` オプションを指定することにより、結果の XML に 1 つのトップレベル要素を要求できます。 `ROOT` ディレクティブに指定した引数で、ルート要素名を指定します。  
   
-## 例  
+## <a name="example"></a>例  
   
 ```  
 USE AdventureWorks2012;  
@@ -44,7 +48,7 @@ go
 </MyRoot>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [FOR XML での RAW モードの使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

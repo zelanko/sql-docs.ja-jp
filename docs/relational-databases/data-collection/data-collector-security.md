@@ -1,42 +1,46 @@
 ---
 title: "データ コレクターのセキュリティ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データ コレクション [SQL Server]"
-  - "セキュリティ [データ コレクター]"
-  - "データ コレクター [SQL Server]、セキュリティ"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data collection [SQL Server]
+- security [data collector]
+- data collector [SQL Server], security
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d5b90faa09f6185ffe5e273e43707bc9dc2dc1c0
+ms.lasthandoff: 04/11/2017
+
 ---
-# データ コレクターのセキュリティ
-  データ コレクターは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって実装されるロールベースのセキュリティ モデルを使用します。 このモデルを使用すると、データベース管理者は、データ コレクターのさまざまなタスクをそのタスクの実行に必要な権限だけがあるセキュリティ コンテキスト内で実行できます。 この方法は、ストアド プロシージャかビューを使用しないとアクセスできない内部テーブルに関係する操作に対しても使用されます。 内部テーブルに対する権限は与えられず、 テーブルへのアクセスに使用されるストアド プロシージャやビューのユーザーに対して権限がチェックされます。  
+# <a name="data-collector-security"></a>データ コレクターのセキュリティ
+  データ コレクターは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって実装されるロールベースのセキュリティ モデルを使用します。 このモデルを使用すると、データベース管理者は、データ コレクターのさまざまなタスクをそのタスクの実行に必要な権限だけがあるセキュリティ コンテキスト内で実行できます。 この方法は、ストアド プロシージャかビューを使用しないとアクセスできない内部テーブルに関係する操作に対しても使用されます。 内部テーブルに対する権限は与えられず、 テーブルへのアクセスに使用されるストアド プロシージャやビューのユーザーに対して権限がチェックされます。  
   
 > [!IMPORTANT]  
->  このセキュリティ モデルのもう 1 つの重要な側面は、同心構造権限です。 同心構造権限では、オブジェクト (警告、オペレーター、ジョブ、スケジュール、プロキシなど) に対して、高いレベルの特権を持つロールは、低いレベルの特権を持つロールの権限を継承します。 詳しくは、「 [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」をご覧ください。  
+>  このセキュリティ モデルのもう 1 つの重要な側面は、同心構造権限です。 同心構造権限では、オブジェクト (警告、オペレーター、ジョブ、スケジュール、プロキシなど) に対して、高いレベルの特権を持つロールは、低いレベルの特権を持つロールの権限を継承します。 詳しくは、「 [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)」をご覧ください。  
   
  ここでは、データ コレクションの全般的なセキュリティと、ユーザーがデータ コレクターを構成および使用したり、管理データ ウェアハウスに関連するタスクを実行したりするために必要なロールについて説明します。  
   
-## 全般的なセキュリティ  
+## <a name="general-security"></a>全般的なセキュリティ  
  データ コレクターは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の文書化されている標準に従ってインストールされます。  
   
-### ネットワーク セキュリティ  
+### <a name="network-security"></a>ネットワーク セキュリティ  
  対象のインスタンス、構成サーバーに関連付けられているリレーショナル インスタンス、実行中のコレクション セット、および管理データ ウェアハウスをホストするサーバーの間で、秘密情報がやり取りされる可能性があります。  
   
  ネットワークで送信されるデータを保護するために、標準のセキュリティ メカニズム ( [!INCLUDE[tsql](../../includes/tsql-md.md)]のプロトコル暗号化など) が実装されています。  
   
-## データ コレクターの構成および使用のための権限  
+## <a name="permissions-for-configuring-and-using-the-data-collector"></a>データ コレクターの構成および使用のための権限  
  タスクによっては、ユーザーが、データ コレクターのために用意されている 1 つ以上の固定データベース ロールのメンバーである必要があります。 特権レベルの高いロールから順に、次に示します。  
   
 -   **dc_admin**  
@@ -50,9 +54,9 @@ caps.handback.revision: 32
  固定サーバー ロール **sysadmin** のメンバーであるユーザーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント オブジェクトとデータ コレクター ビューへのフル アクセスを許可されています。 しかし、これらのユーザーも、データ コレクターのロールに明示的に追加する必要があります。  
   
 > [!IMPORTANT]  
->  db_ssisadmin ロールおよび dc_admin ロールのメンバーは、特権を sysadmin に昇格できる可能性があります。 このような特権の昇格が発生するのは、それらのロールが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを変更でき、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エージェントの sysadmin セキュリティ コンテキストを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージを実行できるためです。 メンテナンス プラン、データ コレクション セット、およびその他の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行時にこの特権の昇格を防ぐには、特権が制限されたプロキシ アカウントを使用するようにパッケージを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを構成するか、db_ssisadmin ロールおよび dc_admin ロールには sysadmin メンバーのみを追加するようにします。  
+>  db_ssisadmin ロールおよび dc_admin ロールのメンバーは、特権を sysadmin に昇格できる可能性があります。 このような特権の昇格が発生するのは、それらのロールが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを変更でき、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エージェントの sysadmin セキュリティ コンテキストを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージを実行できるためです。 メンテナンス プラン、データ コレクション セット、およびその他の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行時にこの特権の昇格を防ぐには、特権が制限されたプロキシ アカウントを使用するようにパッケージを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを構成するか、db_ssisadmin ロールおよび dc_admin ロールには sysadmin メンバーのみを追加するようにします。  
   
-### dc_admin ロール  
+### <a name="dcadmin-role"></a>dc_admin ロール  
  **dc_admin** ロールに割り当てられたユーザーには、サーバー インスタンス上のデータ コレクターの構成への完全な管理者アクセス権 (作成、読み取り、更新、および削除) が与えられます。 このロールのメンバーが実行できる操作を以下に示します。  
   
 -   コレクター レベルのプロパティの設定  
@@ -68,11 +72,11 @@ caps.handback.revision: 32
 -   **SQLAgentUserRole**。 スケジュールを作成したりジョブを実行したりするために必要です。  
   
     > [!NOTE]  
-    >  データ コレクターのために作成されるプロキシでは、**dc_admin** にアクセスを許可して、プロキシを必要とするジョブ ステップでプロキシを作成したり使用したりできるようにする必要があります。  
+    >  データ コレクターのために作成されるプロキシでは、 **dc_admin** にアクセスを許可して、プロキシを必要とするジョブ ステップでプロキシを作成したり使用したりできるようにする必要があります。  
   
--   **dc_operator**。 **dc_admin** のメンバーは、**dc_operator** に与えられている権限を継承します。  
+-   **dc_operator**。 **dc_admin** のメンバーは、 **dc_operator**に与えられている権限を継承します。  
   
-### dc_operator ロール  
+### <a name="dcoperator-role"></a>dc_operator ロール  
  **dc_operator** ロールのメンバーには、読み取りと更新のアクセス権が与えられます。 このロールは、コレクション セットの実行と構成に関連する操作タスクをサポートします。 このロールのメンバーが実行できる操作を以下に示します。  
   
 -   コレクション セットの開始または停止  
@@ -93,7 +97,7 @@ caps.handback.revision: 32
   
  詳細については、「[Integration Services のロール &#40;SSIS サービス&#41;](../../integration-services/service/integration-services-roles-ssis-service.md)」を参照してください。  
   
-### dc_proxy ロール  
+### <a name="dcproxy-role"></a>dc_proxy ロール  
  **dc_proxy** ロールのメンバーには、データ コレクターのコレクション セットとコレクター レベルのプロパティへの読み取りアクセス権が与えられます。 自身が所有するジョブを実行したり、既存のプロキシ アカウントとして実行するジョブ ステップを作成したりすることもできます。  
   
  このロールのメンバーが実行できる操作を以下に示します。  
@@ -112,7 +116,7 @@ caps.handback.revision: 32
   
  詳細については、「[Integration Services のロール &#40;SSIS サービス&#41;](../../integration-services/service/integration-services-roles-ssis-service.md)」を参照してください。  
   
-## 管理データ ウェアハウスの構成および使用のための権限  
+## <a name="permissions-for-configuring-and-using-the-management-data-warehouse"></a>管理データ ウェアハウスの構成および使用のための権限  
  タスクによっては、ユーザーが、管理データ ウェアハウスへのアクセスのために用意されている 1 つ以上の固定データベース ロールのメンバーである必要があります。 特権レベルの高いロールから順に、次に示します。  
   
 -   **mdw_admin**  
@@ -125,7 +129,7 @@ caps.handback.revision: 32
   
  固定サーバー ロール **sysadmin** のメンバーであるユーザーは、データ コレクター ビューへのフル アクセスを許可されています。 しかし、その他の操作を実行するには、明示的にデータベース ロールに追加する必要があります。  
   
-### mdw_admin ロール  
+### <a name="mdwadmin-role"></a>mdw_admin ロール  
  **mdw_admin** ロールのメンバーには、管理データ ウェアハウスへの読み取り、書き込み、更新、および削除のアクセス権が与えられます。  
   
  このロールのメンバーが実行できる操作を以下に示します。  
@@ -137,13 +141,13 @@ caps.handback.revision: 32
   
 -   管理データ ウェアハウスのメンテナンス ジョブ (アーカイブやクリーンアップなど) を実行する  
   
-### mdw_writer ロール  
+### <a name="mdwwriter-role"></a>mdw_writer ロール  
  **mdw_writer** ロールのメンバーは、管理データ ウェアハウスへのデータのアップロードや書き込みを行うことができます。 管理データ ウェアハウスにデータを格納するデータ コレクターはすべてこのロールのメンバーである必要があります。  
   
-### mdw_reader ロール  
+### <a name="mdwreader-role"></a>mdw_reader ロール  
  **mdw_reader** ロールのメンバーには、管理データ ウェアハウスへの読み取りアクセス権が与えられます。 このロールの目的は、履歴データへのアクセスを提供してトラブルシューティングをサポートすることであるため、このロールのメンバーは、管理データ ウェアハウスのスキーマのその他の要素を表示することはできません。  
   
-## 参照  
- [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)  
+## <a name="see-also"></a>参照  
+ [SQL Server エージェントのセキュリティの実装](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
   
   

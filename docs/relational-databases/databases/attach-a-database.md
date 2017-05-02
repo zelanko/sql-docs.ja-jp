@@ -1,27 +1,31 @@
 ---
 title: "データベースのインポート | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.attachdatabase.f1"
-helpviewer_keywords: 
-  - "データベース アタッチ [SQL Server]"
-  - "データベースのインポート [SQL Server]"
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.attachdatabase.f1
+helpviewer_keywords:
+- database attaching [SQL Server]
+- attaching databases [SQL Server]
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 50e55a131e303a5303059a51797730f8bfab2581
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベースのインポート
+# <a name="attach-a-database"></a>データベースのインポート
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のデータベースをアタッチする方法について説明します。 この機能は、SQL Server データベースのコピー、移動、またはアップグレードに使用できます。  
@@ -42,18 +46,18 @@ caps.handback.revision: 52
 バックアップおよび回復でのデタッチとアタッチの使用は推奨されません。 トランザクション ログのバックアップが存在しないだけでなく、ファイルが誤って削除される可能性があります。
   
 ###  <a name="Security"></a> セキュリティ  
- ファイル アクセス許可は、データベースのデタッチやアタッチなど、さまざまなデータベース操作中に設定されます。 データベースのデタッチおよびアタッチ時に設定されるファイル アクセス許可の詳細については、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] オンライン ブックの「[データ ファイルとログ ファイルのセキュリティ保護](http://technet.microsoft.com/library/ms189128.aspx)」を参照してください。この記事は旧バージョンを対象としたものですが、本バージョンにも有効です。 
+ ファイル アクセス許可は、データベースのデタッチやアタッチなど、さまざまなデータベース操作中に設定されます。 データベースのデタッチおよびアタッチ時に設定されるファイル アクセス許可の詳細については、 [オンライン ブックの「](http://technet.microsoft.com/library/ms189128.aspx) データ ファイルとログ ファイルのセキュリティ保護 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 」を参照してください。この記事は旧バージョンを対象としたものですが、本バージョンにも有効です。 
   
- 不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、実稼働用ではないサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。 データベースのアタッチ、およびデータベースのアタッチ時にメタデータに対して行われる変更の詳細については、「[データベースのデタッチとアタッチ (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)」を参照してください。  
+ 不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、実稼働用ではないサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。 データベースのアタッチ、およびデータベースのアタッチ時にメタデータに対して行われる変更の詳細については、「 [データベースのデタッチとアタッチ (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)」を参照してください。  
   
 ####  <a name="Permissions"></a> Permissions  
  CREATE DATABASE、CREATE ANY DATABASE、または ALTER ANY DATABASE の各権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### データベースをアタッチするには  
+#### <a name="to-attach-a-database"></a>データベースをアタッチするには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーで [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続して、SSMS でそのインスタンスのビューを展開します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーで [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続して、SSMS でそのインスタンスのビューを展開します。  
   
 2.  **[データベース]** を右クリックし、 **[アタッチ]**をクリックします。  
   
@@ -67,13 +71,13 @@ caps.handback.revision: 52
      **[アタッチするデータベース]**  
      選択されたデータベースに関する情報を表示します。  
   
-     \<no column header>  
+     \<空白の列ヘッダー>  
      アタッチ操作の状態を示すアイコンが表示されます。 表示されるアイコンの種類は、下の **[状態]** の説明に示します。  
   
      **[MDF ファイルの場所]**  
      選択した MDF ファイルのパスとファイル名が表示されます。  
   
-     **[データベース名]**  
+     **Database Name**  
      データベースの名前が表示されます。  
   
      **[次の名前でアタッチ]**  
@@ -103,7 +107,7 @@ caps.handback.revision: 52
      **[削除]**  
      選択したファイルを **[アタッチするデータベース]** グリッドから削除します。  
   
-     **"** *<database_name>* **" データベースの詳細]**  
+     **"** *<database_name>* **" データベースの詳細**  
      デタッチするファイルの名前を表示します。 ファイルのパス名を確認または変更するには、 **参照** ボタン (**[...]**) をクリックしてください。  
   
     > [!NOTE]  
@@ -123,7 +127,7 @@ caps.handback.revision: 52
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### データベースをアタッチするには  
+#### <a name="to-attach-a-database"></a>データベースをアタッチするには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -147,7 +151,7 @@ caps.handback.revision: 52
 ##  <a name="FollowUp"></a> 補足情報: SQL Server データベースのアップグレード後  
  アタッチする方法によってデータベースをアップグレードした後は、データベースが直ちに使用可能となり、自動的にアップグレードされます。 データベースにフルテキスト インデックスがある場合、アップグレード プロセスでは、 **[フルテキストのアップグレード オプション]** サーバー プロパティの設定に応じて、インポート、リセット、または再構築が行われます。 アップグレード オプションが **[インポート]** または **[再構築]**に設定されている場合、アップグレード中はフルテキスト インデックスを使用できなくなります。 インデックスを作成するデータ量によって、インポートには数時間、再構築には最大でその 10 倍の時間がかかることがあります。 なお、アップグレード オプションが **[インポート]**に設定されており、フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。  
   
- アップグレード前のユーザー データベースの互換性レベルが 100 以上の場合は、アップグレード後も互換性レベルは変わりません。 アップグレード前の互換性レベルが 90 の場合、アップグレードされたデータベースの互換性レベルは 100 に設定されます。これは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でサポートされている下限の互換性レベルです。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)」を参照してください。  
+ アップグレード前のユーザー データベースの互換性レベルが 100 以上の場合は、アップグレード後も互換性レベルは変わりません。 アップグレード前の互換性レベルが 90 の場合、アップグレードされたデータベースの互換性レベルは 100 に設定されます。これは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でサポートされている下限の互換性レベルです。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
   
   > [!NOTE]
   > Change Data Capture (CDC) が有効な SQL Server 2014 以下を実行するインスタンスからデータベースをアタッチする場合は、次のコマンドを実行して Change Data Capture (CDC) メタデータをアップグレードする必要もあります。
@@ -156,8 +160,9 @@ caps.handback.revision: 52
   EXEC sys.sp_cdc_vupgrade  
   ``` 
   
-## 参照  
+## <a name="see-also"></a>参照  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [データベースのデタッチ](../../relational-databases/databases/detach-a-database.md)  
   
   
+

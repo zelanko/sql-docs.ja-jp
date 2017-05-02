@@ -1,34 +1,38 @@
 ---
 title: "グラフ、警告、ログ、およびレポートの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "システム モニター [SQL Server], グラフとレポート"
-  - "グラフ [SQL Server]"
-  - "レポート [SQL Server]"
-  - "レポート [SQL Server], 作成"
-  - "Windows システム モニター [SQL Server], グラフとレポート"
-  - "ログ [SQL Server], システム モニター"
-  - "システム モニター [SQL Server], ログ"
-  - "Windows システム モニター [SQL Server], ログ"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- System Monitor [SQL Server], charts and reports
+- charts [SQL Server]
+- reports [SQL Server]
+- reports [SQL Server], creating
+- Windows System Monitor [SQL Server], charts and reports
+- logs [SQL Server], System Monitor
+- System Monitor [SQL Server], logs
+- Windows System Monitor [SQL Server], logs
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4350582f3a798a4543f84a09c089976e4d18f712
+ms.lasthandoff: 04/11/2017
+
 ---
-# グラフ、警告、ログ、およびレポートの作成
-  システム モニターを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを監視するためのグラフ、警告、ログ、およびレポートを作成できます。  
+# <a name="create-charts-alerts-logs-and-reports"></a>グラフ、警告、ログ、およびレポートの作成
+  システム モニターを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを監視するためのグラフ、警告、ログ、およびレポートを作成できます。  
   
-## グラフ  
+## <a name="charts"></a>グラフ  
  グラフを使用すると、CPU 使用率やディスク I/O など、選択したオブジェクトとカウンターの現在のパフォーマンスを監視できます。 システム モニターのオブジェクトやカウンターのさまざまな組み合わせをグラフに追加できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のオブジェクトやカウンターをグラフに追加することもできます。  
   
  各グラフは、監視する情報のサブセットを示します。 たとえば、1 つのグラフでメモリ使用率の統計を追跡して、もう 1 つのグラフでディスク I/O 統計を追跡できます。  
@@ -47,20 +51,20 @@ caps.handback.revision: 21
   
  現在発生しているイベントを監視する場合など、ローカル コンピューターまたはリモート コンピューターを短い時間、リアルタイムで監視するのにグラフは便利です。  
   
-## 警告  
- システム モニターで警告を使用すると、特定のイベントを追跡して、要求に応じてそのイベントを通知できます。 警告ログは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のオブジェクトに対して選択したカウンターとインスタンスについて現在のパフォーマンスを監視できます。 カウンターが指定した値を超えたときに、ログはそのイベントの日付と時刻を記録します。 イベントはネットワーク警告を生成することもできます。 また、イベントが初めて発生したとき、またはイベントが発生するたびに、特定のプログラムを実行できます。 たとえば、警告はすべてのシステム管理者に対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのディスク容量が不足していることを示すネットワーク メッセージを送信できます。  
+## <a name="alerts"></a>警告  
+ システム モニターで警告を使用すると、特定のイベントを追跡して、要求に応じてそのイベントを通知できます。 警告ログは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のオブジェクトに対して選択したカウンターとインスタンスについて現在のパフォーマンスを監視できます。 カウンターが指定した値を超えたときに、ログはそのイベントの日付と時刻を記録します。 イベントはネットワーク警告を生成することもできます。 また、イベントが初めて発生したとき、またはイベントが発生するたびに、特定のプログラムを実行できます。 たとえば、警告はすべてのシステム管理者に対して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのディスク容量が不足していることを示すネットワーク メッセージを送信できます。  
   
-## ログ  
+## <a name="logs"></a>ログ  
  ログを使用すると、選択したオブジェクトとコンピューターの現在の利用状況について情報を記録し、後にその情報を表示および分析することができます。 複数のシステムからデータを収集して、1 つのログ ファイルに記録することもできます。 たとえば、さまざまなコンピューターで選択したオブジェクトのパフォーマンスについて情報を蓄積するために、さまざまなログを作成して、後に分析のために使用できます。 ファイル名を付けて選択した設定を保存すれば、比較のために同様の情報についてもう 1 つのログを作成するときに再使用できます。  
   
  ログ ファイルには、トラブルシューティングやプランニングに役立つ豊富な情報が記録されています。 現在の利用状況に関するグラフ、警告、およびレポートが即時のフィードバックを与えるのに対して、ログ ファイルは、長期間にわたってカウンターを追跡できます。 このため、情報をより徹底的に検査し、システムのパフォーマンスを文書化することができます。  
   
-## レポート  
+## <a name="reports"></a>レポート  
  レポートを使用すると、選択したオブジェクトに対して、絶えず変化し続けるカウンター値とインスタンス値を表示できます。 値は、各インスタンスの列に表示されます。 レポート間隔を調整したり、スナップショットを印刷したり、データをエクスポートすることもできます。 raw 番号を表示する必要がある場合には、レポートを使用します。  
   
  グラフ、警告、ログ、およびレポートの作成、または Windows オブジェクトとカウンターの詳細については、Windows のマニュアルを参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [リソースの利用状況の監視 &#40;システム モニター&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

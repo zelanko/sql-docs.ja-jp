@@ -1,54 +1,58 @@
 ---
 title: "[パブリケーションのプロパティ]、[スナップショット] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.newpubwizard.pubproperties.snapshotformat.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.newpubwizard.pubproperties.snapshotformat.f1
 ms.assetid: 8e9133b1-fc37-4a85-8a7c-d5eaf172fbef
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0357c3a55855bbc1e9a0b6a86582dcd104de663c
+ms.lasthandoff: 04/11/2017
+
 ---
-# [パブリケーションのプロパティ]、[スナップショット]
-   **スナップショット** のページ、 **パブリケーションのプロパティ** ] ダイアログ ボックスでは、スナップショットの形式、スナップショット フォルダーの場所、およびスナップショットの適用の前後に実行するためのスクリプトを設定することができます。 スナップショット フォルダーは、共有として指定する必要があり、エージェントがフォルダーでファイルを読み書きするための十分な権限を持っている必要があります。 詳細については、フォルダーを適切にセキュリティで保護する、次を参照してください。 [スナップショット フォルダーをセキュリティで保護された](../../relational-databases/replication/security/secure-the-snapshot-folder.md)します。  
+# <a name="publication-properties-snapshot"></a>[パブリケーションのプロパティ]、[スナップショット]
+  **[パブリケーションのプロパティ]** ダイアログ ボックスの **[スナップショット]** ページを使用すると、スナップショット形式、スナップショット フォルダーの場所、およびスナップショットのアプリケーションの前後に実行するスクリプトを設定できます。 スナップショット フォルダーは、共有として指定する必要があり、エージェントがフォルダーでファイルを読み書きするための十分な権限を持っている必要があります。 フォルダーの適切なセキュリティ保護の詳細については、「[スナップショット フォルダーのセキュリティ保護](../../relational-databases/replication/security/secure-the-snapshot-folder.md)」を参照してください。  
   
 > [!NOTE]  
->  変更する場合は、パブリケーションの新しいスナップショットが必要です。 詳細については、次を参照してください。 [変更パブリケーションとアーティクルのプロパティ](../../relational-databases/replication/publish/change-publication-and-article-properties.md)します。  
+>  変更する場合は、パブリケーションの新しいスナップショットが必要です。 詳細については、「[Change Publication and Article Properties](../../relational-databases/replication/publish/change-publication-and-article-properties.md)」 (パブリケーションおよびアーティクルのプロパティの変更) を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[スナップショットの形式]**  
  スナップショットの形式にネイティブ モードまたはキャラクター モードを選択します。  
   
--   選択 **ネイティブ SQL Server - すべてのサブスクライバーは SQL Server を実行しているサーバーである必要があります** のインスタンスである場合 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]します。 ネイティブ スナップショットの形式によってパフォーマンスが最適化されます。  
+-   すべてのサブスクライバーが **** 以外の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスである場合は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]. ネイティブ スナップショットの形式によってパフォーマンスが最適化されます。  
   
--   選択 **文字のかどうかパブリッシャーまたはサブスクライバーが実行されていない SQL Server は必須** すべてのサブスクライバーが実行されている場合 [!INCLUDE[ssEW](../../includes/ssew-md.md)] または非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーです。  
+-   いずれかのサブスクライバーが **を実行している場合、または** 以外のバージョンのサブスクライバーである場合は、 [!INCLUDE[ssEW](../../includes/ssew-md.md)] [文字 - パブリッシャーまたはサブスクライバーで SQL Server が実行されていない場合は必須][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を選択します。  
   
  **[スナップショット ファイルの場所]**  
  スナップショット ファイルを格納する場所を選択します。 既定の場所に格納するか、既定の場所ではなく代替位置に格納したり、既定の場所と代替位置の両方に格納したりできます。 代替位置に格納されたファイルは圧縮できます。  
   
--   選択 **既定のフォルダーにファイルを配置** パブリッシャーの既定のスナップショット フォルダーを使用します。 スナップショット フォルダーの場所は、このダイアログ ボックスでは読み取り専用でパブリッシャーにのみ変更できるため、 **ディストリビューターのプロパティ** ] ダイアログ ボックス。 詳細については、次を参照してください。 [指定、既定のスナップショットの場所と #40 です。SQL Server Management Studio と #41;](../../relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md)します。  
+-   パブリッシャーに既定のスナップショット フォルダーを使用する場合は、 **[ファイルを既定のフォルダーに保存する]** を選択します。 このダイアログ ボックスでは、スナップショット フォルダーの場所は読み取り専用です。パブリッシャーのスナップショット フォルダーの場所の変更は、 **[ディストリビューターのプロパティ]** ダイアログ ボックスのみで行うことができます。 詳細については、「[既定のスナップショットの場所の指定 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md)」を参照してください。  
   
--   選択 **次のフォルダーにファイルを配置** の代わりに、または既定の場所に加えて別の場所を指定します。 テキスト ボックスにパスを入力またはクリックして **参照** 場所に移動します。 選択 **このフォルダー内のスナップショット ファイルを圧縮** スナップショットの代替の場所にファイルを圧縮します。 他のサーバー、ネットワーク ドライブ、または CD-ROM やリムーバブル ディスクなどのリムーバブル メディアに代替位置を設定できます。 詳細については、「 [Alternate Snapshot Folder Locations](../../relational-databases/replication/alternate-snapshot-folder-locations.md) 」および「 [Compressed Snapshots](../../relational-databases/replication/compressed-snapshots.md)」を参照してください。  
+-   既定の場所の代わり、または既定の場所に加えて代替位置を指定する場合は、 **[ファイルを次のフォルダーに保存する]** を選択します。 テキスト ボックスにパスを入力するか、 **[参照]** をクリックしてその場所に移動します。 スナップショットの代替場所のファイルを圧縮する場合は、 **[スナップショット ファイルをこのフォルダーに圧縮]** を選択します。 他のサーバー、ネットワーク ドライブ、または CD-ROM やリムーバブル ディスクなどのリムーバブル メディアに代替位置を設定できます。 詳細については、「 [Alternate Snapshot Folder Locations](../../relational-databases/replication/alternate-snapshot-folder-locations.md) 」および「 [Compressed Snapshots](../../relational-databases/replication/compressed-snapshots.md)」を参照してください。  
   
  **[追加スクリプトの実行]**  
- サブスクライバーでスナップショットが適用される前後で実行するスクリプトを指定します。 スクリプトを指定できません **スナップショット形式** は **文字**します。  
+ サブスクライバーでスナップショットが適用される前後で実行するスクリプトを指定します。 **[スナップショットの形式]** が **[文字]**である場合は、スクリプトを指定できません。  
   
- スクリプトはオプションです。スクリプトを使用すると、サブスクライバーでのコマンドの実行や管理上の変更の適用を容易に行うことができます。 詳細については、スクリプトを実行して、次を参照してください。 [スクリプトの実行前と後のスナップショットが適用される](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)します。  
+ スクリプトはオプションです。スクリプトを使用すると、サブスクライバーでのコマンドの実行や管理上の変更の適用を容易に行うことができます。 スクリプトの実行の詳細については、「[スナップショットが適用される前および後のスクリプトの実行](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)」を参照してください。  
   
--   パスを入力、 **スナップショットを適用する前に、以下のスクリプトを実行** やテキスト ボックスをクリックして **参照** スクリプトの場所を指定します。  
+-   **[スクリプトをスナップショットの適用前に以下のスクリプトを実行]** テキスト ボックスにパスを入力するか、 **[参照]** をクリックしてスクリプトの場所を指定します。  
   
--   パスを入力、 **スナップショットを適用すると、以下のスクリプトを実行** やテキスト ボックスをクリックして **参照** スクリプトの場所を指定します。  
+-   **[スナップショットの適用後に以下のスクリプトを実行]** テキスト ボックスにパスを入力するか、 **[参照]** をクリックしてスクリプトの場所を指定します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [初期スナップショットの作成および適用](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   

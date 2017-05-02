@@ -1,47 +1,51 @@
 ---
 title: "レプリケーション エージェント プロファイル | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ディストリビューション エージェント, プロファイル"
-  - "レプリケーション [SQL Server], エージェントおよびプロファイル"
-  - "レプリケーション エージェント プロファイル [SQL Server]"
-  - "マージ エージェント, プロファイル"
-  - "エージェント [SQL Server レプリケーション], プロファイル"
-  - "キュー リーダー エージェント, プロファイル"
-  - "プロファイル [SQL Server], レプリケーション エージェント"
-  - "スナップショット エージェント, プロファイル"
-  - "ログ リーダー エージェント, プロファイル"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Distribution Agent, profiles
+- replication [SQL Server], agents and profiles
+- replication agent profiles [SQL Server]
+- Merge Agent, profiles
+- agents [SQL Server replication], profiles
+- Queue Reader Agent, profiles
+- profiles [SQL Server], replication agents
+- Snapshot Agent, profiles
+- Log Reader Agent, profiles
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a11a7821231d4c7fa3a8719a05bdd1a7bc49ff47
+ms.lasthandoff: 04/11/2017
+
 ---
-# レプリケーション エージェント プロファイル
+# <a name="replication-agent-profiles"></a>レプリケーション エージェント プロファイル
   レプリケーションを構成すると、エージェント プロファイルのセットがディストリビューターにインストールされます。 エージェント プロファイルには、エージェントが実行されるたびに使用されるパラメーターのセットが含まれています。スタートアップ処理中に各エージェントはディストリビューターにログインし、各エージェントのプロファイルのパラメーターをクエリします。 Web 同期を使用するマージ サブスクリプションの場合、プロファイルはダウンロードされてサブスクライバーに格納されます。 プロファイルが変更されると、次回マージ エージェントが実行されたときにサブスクライバーのプロファイルが更新されます。 Web 同期の詳細については、「 [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)」を参照してください。  
   
- レプリケーションでは、各エージェント用の既定のプロファイルの他に、ログ リーダー エージェント、ディストリビューション エージェント、およびマージ エージェント用の追加の定義済みプロファイルが利用できます。 提供されているプロファイルに加えて、アプリケーションの要件に合わせてプロファイルを作成することもできます。 エージェント プロファイルを利用すると、そのプロファイルに関連付けられたすべてのエージェントの主要なパラメーターを簡単に変更できます。 たとえば、20 個のスナップショット エージェントがあるし、クエリのタイムアウト値を変更する必要があります (、 **-querytimeout** パラメーター)、スナップショット エージェントが使用するプロファイルを更新することができ、その型のすべてのエージェントは自動的に次回に実行する際の新しい値を使用を開始します。  
+ レプリケーションでは、各エージェント用の既定のプロファイルの他に、ログ リーダー エージェント、ディストリビューション エージェント、およびマージ エージェント用の追加の定義済みプロファイルが利用できます。 提供されているプロファイルに加えて、アプリケーションの要件に合わせてプロファイルを作成することもできます。 エージェント プロファイルを利用すると、そのプロファイルに関連付けられたすべてのエージェントの主要なパラメーターを簡単に変更できます。 たとえば、20 個のスナップショット エージェントがあり、クエリのタイムアウト値 ( **-QueryTimeout** パラメーター) を変更する場合は、スナップショット エージェントが使用するプロファイルを更新すれば、関連付けられたすべてのエージェントが次回の実行時から自動的に新しい値を使用します。  
   
- 1 つのエージェントの別々のインスタンスに対して、別々のプロファイルを設定することもできます。 たとえば、ダイヤルアップ接続を介してパブリッシャーおよびディストリビューターに接続するマージ エージェントで使用して、低速通信リンクに適したパラメーターのセットを使用して、 **低速リンク** プロファイル。  
+ 1 つのエージェントの別々のインスタンスに対して、別々のプロファイルを設定することもできます。 たとえば、ダイヤルアップ接続を介してパブリッシャーおよびディストリビューターに接続するマージ エージェントは、 **低速リンク** プロファイルを使用して低速の通信リンクに適したパラメーター セットを使用することができます。  
   
 > [!NOTE]  
 >  コマンド ラインでエージェント パラメーターの値を指定した場合、その値はエージェント プロファイルの同じパラメーターの設定値より優先されます。  
   
  **エージェント プロファイルを使用および変更するには**  
   
--   [Work with Replication Agent Profiles](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
+-   [レプリケーション エージェント プロファイルの操作](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
-## スナップショット エージェント プロファイル  
- 次の表は、スナップショット エージェントの既定のプロファイルに定義されているパラメーターを示しています。 これらのパラメーターの詳細については、次を参照してください。 [レプリケーション スナップショット エージェント](../../../relational-databases/replication/agents/replication-snapshot-agent.md)します。  
+## <a name="snapshot-agent-profiles"></a>スナップショット エージェント プロファイル  
+ 次の表は、スナップショット エージェントの既定のプロファイルに定義されているパラメーターを示しています。 これらのパラメーターの詳細については、「 [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)」を参照してください。  
   
 ||既定値 (default)|  
 |-|-------------|  
@@ -50,8 +54,8 @@ caps.handback.revision: 44
 |**-LoginTimeout**|15|  
 |**-QueryTimeout**|1800|  
   
-## ログ リーダー エージェント プロファイル  
- 次の表は、ログ リーダー エージェントのプロファイルに定義されているパラメーターを示しています。 表の各列は名前付きプロファイルを表しています。 これらのパラメーターの詳細については、次を参照してください。 [レプリケーション ログ リーダー エージェント](../../../relational-databases/replication/agents/replication-log-reader-agent.md)します。  
+## <a name="log-reader-agent-profiles"></a>ログ リーダー エージェント プロファイル  
+ 次の表は、ログ リーダー エージェントのプロファイルに定義されているパラメーターを示しています。 表の各列は名前付きプロファイルを表しています。 これらのパラメーターの詳細については、「 [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)」を参照してください。  
   
 ||既定値 (default)|詳細履歴|  
 |-|-------------|---------------------|  
@@ -62,8 +66,8 @@ caps.handback.revision: 44
 |**-QueryTimeout**|1800|1800|  
 |**-ReadBatchSize**|500|500|  
   
-## ディストリビューション エージェント プロファイル  
- 次の表は、ディストリビューション エージェントのプロファイルに定義されているパラメーターを示しています。 表の各列は名前付きプロファイルを表しています。 これらのパラメーターの詳細については、次を参照してください。 [レプリケーション ディストリビューション エージェント](../../../relational-databases/replication/agents/replication-distribution-agent.md)します。  
+## <a name="distribution-agent-profiles"></a>ディストリビューション エージェント プロファイル  
+ 次の表は、ディストリビューション エージェントのプロファイルに定義されているパラメーターを示しています。 表の各列は名前付きプロファイルを表しています。 これらのパラメーターの詳細については、「 [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)」を参照してください。  
   
 ||既定値 (default)|詳細履歴|Windows 同期マネージャー|データ一貫性エラー時続行|OLE DB ストリーム用ディストリビューション プロファイル|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
@@ -79,12 +83,12 @@ caps.handback.revision: 44
 |**-PacketSize**|NULL|NULL|NULL|NULL|32768|  
 |**-PollingInterval**|5|5|5|5|5|  
 |**-QueryTimeout**|1800|1800|1800|1800|1800|  
-|**-SkipErrors**|NULL|NULL|NULL|**-Skiperrors** 2601:2627:20598|NULL|  
+|**-SkipErrors**|NULL|NULL|NULL|**-SkipErrors** 2601:2627:20598|NULL|  
 |**-TransactionsPerHistory**|100|100|100|100|100|  
 |**-UseOledbStreaming**|NULL|NULL|NULL|NULL|**-UseOledbStreaming**|  
   
-## マージ エージェント プロファイル  
- 次の表は、マージ エージェントのプロファイルに定義されているパラメーターを示しています。 表の各列は名前付きプロファイルを表しています。 これらのパラメーターの詳細については、次を参照してください。 [レプリケーション マージ エージェント](../../../relational-databases/replication/agents/replication-merge-agent.md)します。  
+## <a name="merge-agent-profiles"></a>マージ エージェント プロファイル  
+ 次の表は、マージ エージェントのプロファイルに定義されているパラメーターを示しています。 表の各列は名前付きプロファイルを表しています。 これらのパラメーターの詳細については、「 [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)」を参照してください。  
   
 ||既定値 (default)|詳細履歴|Windows 同期マネージャー|行数検証|行数とチェックサム検証|低速リンク|高ボリューム サーバー間|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
@@ -114,8 +118,8 @@ caps.handback.revision: 44
 |**-Validate**|0|0|0|1|3|0|0|  
 |**-ValidateInterval**|60|60|60|60|60|60|60|  
   
-## キュー リーダー エージェント プロファイル  
- 次の表は、キュー リーダー エージェントの既定のプロファイルに定義されているパラメーターを示しています。 これらのパラメーターの詳細については、次を参照してください。 [レプリケーション キュー リーダー エージェント](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)します。  
+## <a name="queue-reader-agent-profiles"></a>キュー リーダー エージェント プロファイル  
+ 次の表は、キュー リーダー エージェントの既定のプロファイルに定義されているパラメーターを示しています。 これらのパラメーターの詳細については、「 [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)」を参照してください。  
   
 ||既定値 (default)|  
 |-|-------------|  
@@ -124,9 +128,9 @@ caps.handback.revision: 44
 |**-PollingInterval**|5|  
 |**-QueryTimeout**|1800|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レプリケーション エージェントの管理](../../../relational-databases/replication/agents/replication-agent-administration.md)   
- [表示および変更のレプリケーション エージェント コマンド プロンプト パラメーターと #40 です。SQL Server Management Studio と #41 です。](../../../relational-databases/replication/agents/view and modify replication agent command prompt parameters.md)   
- [レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+ [レプリケーション エージェント コマンド プロンプト パラメーターを表示および変更する &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)   
+ [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

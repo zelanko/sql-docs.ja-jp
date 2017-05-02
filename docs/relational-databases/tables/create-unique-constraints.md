@@ -1,28 +1,32 @@
 ---
 title: "UNIQUE 制約の作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "UNIQUE_TSQL"
-helpviewer_keywords: 
-  - "作成する一意の制約 [SQL Server]"
-  - "制約 [SQL Server], 作成"
-  - "制約 [SQL Server], 一意"
+ms.custom: 
+ms.date: 10/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- UNIQUE_TSQL
+helpviewer_keywords:
+- UNIQUE constraints [SQL Server], creating
+- constraints [SQL Server], creating
+- constraints [SQL Server], unique
 ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8721056ce88631e4f86c71d8e557e0badcf13c48
+ms.lasthandoff: 04/11/2017
+
 ---
-# UNIQUE 制約の作成
+# <a name="create-unique-constraints"></a>UNIQUE 制約の作成
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して UNIQUE 制約を作成し、主キー以外の特定の列に重複した値が入力されないようにします。 UNIQUE 制約を作成すると、対応する一意なインデックスが自動的に作成されます。  
@@ -48,21 +52,21 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### UNIQUE 制約を作成するには  
+#### <a name="to-create-a-unique-constraint"></a>UNIQUE 制約を作成するには  
   
-1.  **オブジェクト エクスプローラー**で、UNIQUE 制約を追加するテーブルを右クリックし、**[デザイン]** をクリックします。  
+1.  **オブジェクト エクスプローラー**で、UNIQUE 制約を追加するテーブルを右クリックし、 **[デザイン]**をクリックします。  
   
-2.  **[テーブル デザイナー]** メニューの **[インデックス/キー]** をクリックします。  
+2.  **[テーブル デザイナー]** メニューの **[インデックス/キー]**をクリックします。  
   
-3.  **[インデックス/キー]** ダイアログ ボックスで、**[追加]** をクリックします。  
+3.  **[インデックス/キー]** ダイアログ ボックスで、 **[追加]**をクリックします。  
   
-4.  **[全般]** の下のグリッドで、**[型]** をクリックし、プロパティの右にあるドロップダウン リスト ボックスの **[一意キー]** をクリックします。  
+4.  **[全般]**の下のグリッドで、 **[型]** をクリックし、プロパティの右にあるドロップダウン リスト ボックスの **[一意キー]** をクリックします。  
   
-5.  **[ファイル]** メニューの **table name***の保存]*をクリックします。  
+5.  **ファイル** メニューの **table name***の保存*をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### UNIQUE 制約を作成するには  
+#### <a name="to-create-a-unique-constraint"></a>UNIQUE 制約を作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -82,7 +86,7 @@ caps.handback.revision: 18
   
     ```  
   
-#### 既存のテーブルに UNIQUE 制約を作成するには  
+#### <a name="to-create-a-unique-constraint-on-an-existing-table"></a>既存のテーブルに UNIQUE 制約を作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 18
   
     ```  
   
-#### 新しいテーブルに UNIQUE 制約を作成するには  
+#### <a name="to-create-a-unique-constraint-in-an-new-table"></a>新しいテーブルに UNIQUE 制約を作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -119,6 +123,7 @@ caps.handback.revision: 18
   
     ```  
   
-     詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」、および「[table_constraint &#40;Transact-SQL&#41;](../Topic/table_constraint%20\(Transact-SQL\).md)」を参照してください。  
+     詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」、および「[table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)」を参照してください。  
   
 ###  <a name="TsqlExample"></a>  
+

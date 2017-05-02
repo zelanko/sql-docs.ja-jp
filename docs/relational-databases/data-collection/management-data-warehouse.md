@@ -1,26 +1,30 @@
 ---
 title: "管理データ ウェアハウス | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データ コレクター [SQL Server], 管理データ ウェアハウス"
-  - "データ ウェアハウス (data warehouse)"
-  - "管理データ ウェアハウス (management data warehouse)"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data collector [SQL Server], management data warehouse
+- data warehouse
+- management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0430b88308cb3ebc07b1addfb2e34575150fa41e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 管理データ ウェアハウス
+# <a name="management-data-warehouse"></a>管理データ ウェアハウス (management data warehouse)
   管理データ ウェアハウスは、データ コレクションの対象であるサーバーから収集されたデータを格納するリレーショナル データベースです。 このデータは、システム データ コレクション セットのレポートを生成するために使用され、カスタム レポートを作成する際にも使用できます。  
   
  データベース管理者が定義した保有ポリシーを実装するために必要なジョブやメンテナンス プランは、データ コレクターのインフラストラクチャによって定義されます。  
@@ -28,12 +32,12 @@ caps.handback.revision: 43
 > [!IMPORTANT]  
 >  このリリースのデータ コレクターでは、ログ記録を最小限に抑えるため、単純復旧モデルを使用して管理データ ウェアハウスが作成されます。 組織に適した復旧モデルを実装する必要があります。  
   
-## データ ウェアハウスの配置と使用  
+## <a name="deploying-and-using-the-data-warehouse"></a>データ ウェアハウスの配置と使用  
  管理データ ウェアハウスは、データ コレクターを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスと同じインスタンスにインストールできます。 ただし、監視中のサーバーでサーバー リソースやパフォーマンスが問題となっている場合は、別のコンピューターに管理データ ウェアハウスをインストールできます。  
   
  事前に定義されたシステム コレクション セットに必要なスキーマとそのオブジェクトは、管理データ ウェアハウス作成時に作成されます。 作成されるスキーマは、core と snapshots です。3 つ目のスキーマである custom_snapshots は、ジェネリック T-SQL Query コレクター型を使用するコレクション アイテムを含んだユーザー定義のコレクション セットの作成時に作成されます。  
   
-###### core スキーマ  
+###### <a name="core-schema"></a>core スキーマ  
  core スキーマでは、収集したデータの編成と識別に使用するテーブル、ストアド プロシージャ、およびビューが記述されます。 これらのテーブルは、個々のコレクター型ごとに作成されるすべてのデータ テーブルで共有されます。 このスキーマはロックされており、変更できるのは管理データ ウェアハウスのデータベースの所有者だけです。 このスキーマに記述されるテーブルは、名前の先頭に "core" が付加されます。  
   
  次の表では、core スキーマ内のデータベース テーブルについて説明します。 データ コレクターは、これらのデータベース テーブルで、データの出所、挿入者、データ ウェアハウスにアップロードされた時刻を追跡できます。  
@@ -59,7 +63,7 @@ caps.handback.revision: 43
   
 -   snapshots.trace_data  
   
-###### snapshots スキーマ  
+###### <a name="snapshots-schema"></a>snapshots スキーマ  
  snapshots スキーマでは、提供されているコレクター型で収集されるデータの格納と保持に必要なオブジェクトが記述されます。 このスキーマのテーブルは固定であり、コレクター型の有効期間中に変更する必要はありません。 変更が必要な場合、スキーマを変更できるのは mdw_admin ロールのメンバーだけです。 このテーブルは、システム データ コレクション セットによって収集されたデータを格納するために作成されます。  
   
  次の表は、管理データ ウェアハウス スキーマの、サーバー利用状況コレクション セットとクエリ統計情報コレクション セットに必要な部分を示しています。  
@@ -108,7 +112,7 @@ caps.handback.revision: 43
   
  データベース テーブルの列のデータ型とコンテンツの詳細情報については、各テーブルに適したデータ コレクターのストアド プロシージャに関するマニュアルの記述を参照してください。  
   
-### ベスト プラクティス  
+### <a name="best-practices"></a>ベスト プラクティス  
  管理データ ウェアハウスの操作に関して推奨するベスト プラクティスを次に示します。  
   
 -   新しいコレクター型を追加する場合を除き、管理データ ウェアハウスのテーブルのメタデータは変更しないでください。  
@@ -117,14 +121,14 @@ caps.handback.revision: 43
   
 -   インスタンスとアプリケーション データにアクセスするには、テーブルを直接使用する代わりに、データ コレクターで提供される、ドキュメントに記載のストアド プロシージャと関数を使用してください。 テーブル名と定義は変更できます。これらは、アプリケーションを更新するときには必ず変更してください。テーブル名と定義は、将来のリリースでは変更される可能性がある情報です。  
   
-## 変更履歴  
+## <a name="change-history"></a>変更履歴  
   
 |変更内容|  
 |---------------------|  
 |「core スキーマ」セクションに core.performance_counter_report_group_items テーブルを追加しました。|  
 |「snapshots スキーマ」セクションのテーブルの一覧を更新しました。 snapshots.os_memory_clerks、snapshots.sql_process_and_system_memory、および snapshots.io_virtual_file_stats を追加しました。 snapshots.os_process_memory および snapshots.distinct_query_stats を削除しました。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [管理データ ウェアハウスのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)   
  [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [データ コレクション](../../relational-databases/data-collection/data-collection.md)   

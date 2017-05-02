@@ -1,28 +1,32 @@
 ---
 title: "xml データ型に対する FOR XML サポート | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ユーザー定義関数 [SQL Server], XML"
-  - "xml データ型 [SQL Server], FOR XML 句"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-defined functions [SQL Server], XML
+- xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9fcd42a40be7da666ed66dc7eb05600b081457ea
+ms.lasthandoff: 04/11/2017
+
 ---
-# xml データ型に対する FOR XML サポート
+# <a name="for-xml-support-for-the-xml-data-type"></a>xml データ型に対する FOR XML サポート
   FOR XML クエリによって SELECT 句で **xml** 型の列が指定された場合、ELEMENTS ディレクティブを指定したかどうかにかかわらず、返された XML では列の値が要素としてマップされます。 **xml** 型の列内の XML 宣言はシリアル化されません。  
   
- たとえば、次のクエリは、`BusinessEntityID`、`FirstName`、および `LastName` 列、および **xml** 型の `AdditionalContactInfo` 列からの電話番号など、顧客の連絡先の情報を取得します。  
+ たとえば、次のクエリは、 `BusinessEntityID`、 `FirstName`、および `LastName` 列、および `AdditionalContactInfo` xml **型の** 列からの電話番号など、顧客の連絡先の情報を取得します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -39,7 +43,7 @@ declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-
 FOR XML AUTO, TYPE;  
 ```  
   
- クエリでは ELEMENTS ディレクティブが指定されていないため、**xml** 型の列から取得された追加の連絡先の情報の値を除き、列の値が属性として返されます。 これらは要素として返されます。  
+ クエリでは ELEMENTS ディレクティブが指定されていないため、 **xml** 型の列から取得された追加の連絡先の情報の値を除き、列の値が属性として返されます。 これらは要素として返されます。  
   
  結果の一部を次に示します。  
   
@@ -116,7 +120,7 @@ FOR XML AUTO, TYPE;
   
  クエリで ELEMENTS ディレクティブを指定した場合、結果の XML では、BusinessEntityID、LastName、および FirstName が要素として返されます。  
   
- 次に、**xml** 型の列の XML データでは、FOR XML の処理ロジックによって XML 宣言がシリアル化されない例を示します。  
+ 次に、 **xml** 型の列の XML データでは、FOR XML の処理ロジックによって XML 宣言がシリアル化されない例を示します。  
   
 ```  
 create table t(i int, x xml)  
@@ -140,14 +144,14 @@ for xml auto;
 </root>  
 ```  
   
-## ユーザー定義関数から XML を返す  
+## <a name="returning-xml-from-a-user-defined-function"></a>ユーザー定義関数から XML を返す  
  FOR XML クエリを使用して、次のいずれかを返すユーザー定義関数から XML を返すことができます。  
   
 -   1 つの **xml** 型の列を持つテーブル  
   
 -   **xml** 型のインスタンス  
   
- たとえば、次のユーザー定義関数は、**xml** 型の 1 つの列を持つテーブルを返します。  
+ たとえば、次のユーザー定義関数は、 **xml**型の 1 つの列を持つテーブルを返します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -169,7 +173,7 @@ declare namespace PD="http://www.adventure-works.com/schemas/products/descriptio
 END;  
 ```  
   
- ユーザー定義関数を実行して、その関数から返されたテーブルにクエリを実行することができます。 この例では、そのテーブルのクエリの結果として返された XML が、**xml** 型の変数に代入されます。  
+ ユーザー定義関数を実行して、その関数から返されたテーブルにクエリを実行することができます。 この例では、そのテーブルのクエリの結果として返された XML が、 **xml** 型の変数に代入されます。  
   
 ```  
 declare @x xml;  
@@ -177,7 +181,7 @@ set @x = (SELECT * FROM MyUDF(19));
 select @x;  
 ```  
   
- 次に、別のユーザー定義関数の例を示します。 このユーザー定義関数は、**xml** 型のインスタンスを返します。 この例では、スキーマの名前空間が指定されているため、ユーザー定義関数は型指定された XML インスタンスを返します。  
+ 次に、別のユーザー定義関数の例を示します。 このユーザー定義関数は、 **xml** 型のインスタンスを返します。 この例では、スキーマの名前空間が指定されているため、ユーザー定義関数は型指定された XML インスタンスを返します。  
   
 ```  
 DROP FUNCTION dbo.MyUDF;  
@@ -202,7 +206,7 @@ SELECT @x= dbo.MyUDF4 (19) ;
 select @x;  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [各種 SQL Server データ型の FOR XML サポート](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   

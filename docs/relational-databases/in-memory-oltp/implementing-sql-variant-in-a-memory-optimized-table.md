@@ -1,22 +1,26 @@
 ---
 title: "メモリ最適化テーブルへの SQL_VARIANT の実装 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
 caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3726302ad367aea494b75ec1562732d367800925
+ms.lasthandoff: 04/11/2017
+
 ---
-# メモリ最適化テーブルへの SQL_VARIANT の実装
+# <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>メモリ最適化テーブルへの SQL_VARIANT の実装
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   例として **SQL_VARIANT** 列を含むテーブルを考えてみます。  
@@ -25,7 +29,7 @@ caps.handback.revision: 9
 CREATE TABLE [dbo].[T1]([Key] [sql_variant] NOT NULL)  
 ```  
   
- キー列が **BIGINT** または **NVARCHAR(300)** のどちらかであると仮定します。 このテーブルを次のように作成できます。  
+ キー列が **BIGINT** または **NVARCHAR(300)**のどちらかであると仮定します。 このテーブルを次のように作成できます。  
   
 ```tsql  
 -- original disk-based table  
@@ -121,7 +125,7 @@ case [Key_enum] when 1 then convert(sql_variant, [Key_bi])
                        end  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [インメモリ OLTP への移行](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

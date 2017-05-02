@@ -1,24 +1,28 @@
 ---
-title: "ビューの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "作成するビュー [SQL Server]"
+title: "ビューの作成 |Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- views [SQL Server], creating
 ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f8cf0bdceabcdb5959572ca45406d5c53833c3f2
+ms.lasthandoff: 04/11/2017
+
 ---
-# ビューの作成
+# <a name="create-views"></a>ビューの作成
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、ビューを作成できます。 ビューは、次の目的で使用できます。  
   
 -   各ユーザーのデータベースに対する認識を特化、簡素化、およびカスタマイズする。  
@@ -55,11 +59,11 @@ caps.handback.revision: 16
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### クエリおよびビュー デザイナーを使用してビューを作成するには  
+#### <a name="to-create-a-view-by-using-the-query-and-view-designer"></a>クエリおよびビュー デザイナーを使用してビューを作成するには  
   
 1.  **オブジェクト エクスプローラー**で、新しいビューを作成するデータベースを展開します。  
   
-2.  **[ビュー]** を右クリックし、**[新しいビュー]** をクリックします。  
+2.  **[ビュー]** を右クリックし、 **[新しいビュー]**をクリックします。  
   
 3.  **[テーブルの追加]** ダイアログ ボックスで、新しいビューに含める 1 つまたは複数の要素を、[テーブル]、[ビュー]、[関数]、および [シノニム] のいずれかのタブから選択します。  
   
@@ -69,15 +73,15 @@ caps.handback.revision: 16
   
 6.  **抽出条件ペイン**で、列の追加の並べ替え条件またはフィルター条件を選択します。  
   
-7.  **[ファイル]** メニューの **view name***の保存]*をクリックします。  
+7.  **ファイル** メニューの **view name***の保存*をクリックします。  
   
 8.  **[名前の選択]** ダイアログ ボックスで、新しいビューの名前を入力し、 **[OK]**をクリックします。  
   
-     クエリおよびビュー デザイナーの詳細については、「[クエリおよびビュー デザイナー &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)」を参照してください。  
+     クエリおよびビュー デザイナーの詳細については、「[クエリおよびビュー デザイナー &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f)」を参照してください。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### ビューを作成するには  
+#### <a name="to-create-a-view"></a>ビューを作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

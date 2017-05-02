@@ -1,59 +1,63 @@
 ---
 title: "スナップショット フォルダーのセキュリティ保護 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "スナップショット [SQL Server レプリケーション], セキュリティ"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snapshots [SQL Server replication], security
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 190f5cb081710100927ef837a09699cfc6c78f11
+ms.lasthandoff: 04/11/2017
+
 ---
-# スナップショット フォルダーのセキュリティ保護
+# <a name="secure-the-snapshot-folder"></a>スナップショット フォルダーのセキュリティ保護
   スナップショット フォルダーは、スナップショット ファイルが格納されるディレクトリです。このディレクトリは、スナップショットの格納専用に使用することをお勧めします。 スナップショット エージェントにこのフォルダーへの書き込み権限を許可し、マージ エージェントまたはディストリビューション エージェントがこのフォルダーへのアクセスに使用する Windows アカウントにのみ読み取り権限を許可します。 リモート コンピューターのスナップショット フォルダーにアクセスするには、エージェントに関連付けられている Windows アカウントがドメイン アカウントである必要があります。  
   
 > [!NOTE]  
->  ユーザー アカウント制御 (UAC) により、管理者は、管理者特権でのユーザーの権限の管理 (とも呼ばれる *特権*)。 UAC が有効になっているオペレーティング システムで実行する場合は、管理者は管理者自身の管理権限を使用しません。 代わりに、標準ユーザー (管理者以外のユーザー) としてほとんどの操作を実行し、必要な場合にのみ一時的に管理権限を使用します。 UAC により、スナップショット共有への管理アクセスが妨げられる場合があります。 このため、スナップショット エージェント、ディストリビューション エージェント、およびマージ エージェントによって使用される Windows アカウントに、スナップショット共有の権限を明示的に与える必要があります。 この操作は、Windows アカウントが Administrators グループのメンバーである場合にも必要です。  
+>  管理者はユーザー アカウント制御 (UAC) を使用して、自身の昇格したユーザーの権利 ( *権限*とも呼ばれる) を管理できます。 UAC が有効になっているオペレーティング システムで実行する場合は、管理者は管理者自身の管理権限を使用しません。 代わりに、標準ユーザー (管理者以外のユーザー) としてほとんどの操作を実行し、必要な場合にのみ一時的に管理権限を使用します。 UAC により、スナップショット共有への管理アクセスが妨げられる場合があります。 このため、スナップショット エージェント、ディストリビューション エージェント、およびマージ エージェントによって使用される Windows アカウントに、スナップショット共有の権限を明示的に与える必要があります。 この操作は、Windows アカウントが Administrators グループのメンバーである場合にも必要です。  
   
- スナップショット フォルダーのローカル パスに既定ディストリビューションの構成ウィザードまたはパブリケーションの新規作成ウィザードを使用してディストリビューターを構成する場合: X:\Program files \microsoft SQL Server\\*\< インスタンス>*\MSSQL\ReplData します。 リモート ディストリビューターやプル サブスクリプションを使用している場合は、UNC ネットワーク共有を指定する必要があります (たとえば \\\\<*computername >*\snapshot) のローカル パスではなく。  
+ ディストリビューションの構成ウィザードまたはパブリケーションの新規作成ウィザードを使用してディストリビューターを構成すると、スナップショット フォルダーの既定の場所は、X:\Program Files\Microsoft SQL Server\\*\<instance>*\MSSQL\ReplData というローカル パスになります。 リモート ディストリビューターやプル サブスクリプションを使用する場合は、ローカル パスではなく UNC ネットワーク共有 (\\\\<*computername>*\snapshot など) を指定する必要があります。  
   
  スナップショット フォルダーへのアクセス許可を付与する方法は、フォルダーへのアクセス方法によって異なります。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Server 2003 では、次のダイアログ ボックス タブを使用します。  
   
--   ローカル パスを指定する場合からのアクセス許可を与える、 **セキュリティ** のタブ、 **プロパティ** フォルダーのダイアログ ボックス。  
+-   ローカル パスを指定する場合は、フォルダーの **[プロパティ]** ダイアログ ボックスの **[セキュリティ]** タブを使用してアクセス許可を付与します。  
   
--   ネットワーク共有を指定する場合は、を介してアクセス許可を付与、 **共有** のタブ、 **プロパティ** フォルダーのダイアログ ボックス。  
+-   ネットワーク共有を指定する場合は、フォルダーの **[プロパティ]** ダイアログ ボックスの **[共有]** タブを使用してアクセス許可を付与します。  
   
     > [!NOTE]  
-    >  レプリケーション エージェントがディストリビューターで実行している場合に使用して、 **セキュリティ** のタブ、 **プロパティ** エージェントを実行するために使用する Windows アカウントへのアクセス許可を付与するフォルダーのダイアログ ボックス。 ネットワーク共有を使用する場合も、この操作を行います。 また、パブリッシャーとディストリビューターが同じコンピューター上にある場合は、プッシュ サブスクリプションのマージ エージェントとディストリビューション エージェント、およびスナップショット エージェントに対してもこの操作を行ってください。  
+    >  ディストリビューター上でレプリケーション エージェントを実行する場合は、フォルダーの **[プロパティ]** ダイアログ ボックスの **[セキュリティ]** タブを使用して、エージェントの実行に使用する Windows アカウントにアクセス許可を付与してください。 ネットワーク共有を使用する場合も、この操作を行います。 また、パブリッシャーとディストリビューターが同じコンピューター上にある場合は、プッシュ サブスクリプションのマージ エージェントとディストリビューション エージェント、およびスナップショット エージェントに対してもこの操作を行ってください。  
   
  ローカル パスおよびネットワーク共有のアクセス許可の設定の詳細については、Windows のマニュアルを参照してください。  
   
 > [!NOTE]  
->  パブリケーションが削除された場合、レプリケーションは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントのセキュリティ コンテキストでスナップショット フォルダーを削除しようとします。 このアカウントに十分な権限がない場合は、十分な権限を持つアカウントでログインして、手動でフォルダーを削除してください。 フォルダーを削除する必要があります、 **変更** 特権のフォルダーがローカル パスである場合、または **フル コントロール** 特権の場合は、フォルダーはネットワーク パスです。  
+>  パブリケーションが削除された場合、レプリケーションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントのセキュリティ コンテキストでスナップショット フォルダーを削除しようとします。 このアカウントに十分な権限がない場合は、十分な権限を持つアカウントでログインして、手動でフォルダーを削除してください。 フォルダーを削除するには、ローカル パスの場合は **変更** 特権が、ネットワーク共有の場合は **フル コントロール** 特権が必要です。  
   
-## FTP によるスナップショットの配信  
+## <a name="delivering-snapshots-through-ftp"></a>FTP によるスナップショットの配信  
  セキュリティの観点から、スナップショットは UNC 共有に格納することをお勧めします。ただし、スナップショットを FTP 共有に格納して、FTP を使ってサブスクライバーに配信することもできます。 FTP サーバーを構成する際には、仮想ディレクトリが公開する UNC 共有で、パブリケーションのスナップショット エージェントによる書き込みアクセスが許可されていることを確認してください。  
   
  FTP でスナップショットを取得するようにサブスクライバーを構成するには、まず FTP サーバーで FTP のログインとパスワードを設定し、スナップショット ファイルをダウンロードできるようにサブスクライバーに読み取りアクセス ("get") を許可します。  
   
- FTP でスナップショットを配信する、次を参照してください。 [FTP 経由のスナップショットを配信](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)します。  
+ FTP でスナップショットを配信する場合は、「[FTP でのスナップショットの配信](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)」を参照してください。  
   
- 設定して FTP でスナップショットにアクセス用のパスワードを変更する方法については、」のセクション「FTP スナップショット配信」を参照してください。 [パブリッシャーのセキュリティ保護](../../../relational-databases/replication/security/secure-the-publisher.md)します。  
+ FTP でスナップショットにアクセスするためのパスワードの設定と変更については、「 [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)」の「FTP スナップショット配信」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [スナップショット フォルダーの代替位置](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
  [スナップショットを使用したサブスクリプションの初期化](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [レプリケーション セキュリティの推奨事項](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [セキュリティと保護と #40 です。レプリケーションと #41 です。](../../../relational-databases/replication/security/security-and-protection-replication.md)   
+ [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [セキュリティと保護 &#40;レプリケーション&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
  [FTP によるスナップショットの転送](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)  
   
   

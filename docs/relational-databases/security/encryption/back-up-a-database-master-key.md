@@ -1,25 +1,29 @@
 ---
 title: "データベース マスター キーのバックアップ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データベース マスター_キー [SQL Server] のエクスポート"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database master key [SQL Server], exporting
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 52f4f75fe2a48302fb7383ce445f47e23366910d
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベース マスター キーのバックアップ
-  このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用してデータベース マスター キーをバックアップする方法について説明します。 データベース マスター キーは、データベース内の他のキーや証明書を暗号化する際に使用します。 データベース マスター キーが削除されるか破損すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、暗号化されたキーの暗号化を解除できなくなる場合があります。さらに、そのキーを使用して暗号化されたデータは事実上失われます。 このため、データベース マスター キーはバックアップして、安全な別の場所に保存しておく必要があります。  
+# <a name="back-up-a-database-master-key"></a>データベース マスター キーのバックアップ
+  このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用してデータベース マスター キーをバックアップする方法について説明します。 データベース マスター キーは、データベース内の他のキーや証明書を暗号化する際に使用します。 データベース マスター キーが削除されるか破損すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、暗号化されたキーの暗号化を解除できなくなる場合があります。さらに、そのキーを使用して暗号化されたデータは事実上失われます。 このため、データベース マスター キーはバックアップして、安全な別の場所に保存しておく必要があります。  
   
  **このトピックの内容**  
   
@@ -46,9 +50,9 @@ caps.handback.revision: 20
   
 ##  <a name="Procedure"></a> Transact-SQL を備えた SQL Server Management Studio の使用  
   
-#### データベース マスター キーをバックアップするには  
+#### <a name="to-back-up-the-database-master-key"></a>データベース マスター キーをバックアップするには  
   
-1.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] で、バックアップするデータベース マスター キーが格納されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続します。  
+1.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で、バックアップするデータベース マスター キーが格納されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続します。  
   
 2.  バックアップ メディアでデータベース マスター キーの暗号化に使用するパスワードを指定します。 このパスワードに対しては、複雑性がチェックされます。  
   

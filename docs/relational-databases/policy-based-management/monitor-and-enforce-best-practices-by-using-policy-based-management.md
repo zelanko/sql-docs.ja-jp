@@ -1,37 +1,41 @@
 ---
 title: "ポリシー ベースの管理を使用したベスト プラクティスの監視と実行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ベスト プラクティス [データベース エンジン]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8e343ee942845bda5c874a3a238a4450ec391aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# ポリシー ベースの管理を使用したベスト プラクティスの監視と実行
-  ポリシー ベースの管理では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のベスト プラクティスを監視できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はベスト プラクティス ポリシーとしてインポートできる一連のポリシー ファイルを提供し、インスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを含む対象セットに対してポリシーを評価します。 ポリシーを手動で評価したり、スケジュールまたはイベントに従って対象セットを評価するようにポリシーを設定したりできます。 条件と各ファセットおよびポリシーとの関係の詳細については、「[ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)」を参照してください。  
+# <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>ポリシー ベースの管理を使用したベスト プラクティスの監視と実行
+  ポリシー ベースの管理では、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のベスト プラクティスを監視できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はベスト プラクティス ポリシーとしてインポートできる一連のポリシー ファイルを提供し、インスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを含む対象セットに対してポリシーを評価します。 ポリシーを手動で評価したり、スケジュールまたはイベントに従って対象セットを評価するようにポリシーを設定したりできます。 条件と各ファセットおよびポリシーとの関係の詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)」を参照してください。  
   
-## データベース エンジンのポリシーとルール  
- 次の表に、インストールした [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に用意されているポリシーと、各ポリシーで評価するベスト プラクティス ルールに関する情報を示します。 ポリシーは XML ファイルとして格納され、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にインポートする必要があります。 ポリシーのインポート方法については、「[ポリシー ベースの管理ポリシーのインポート](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)」を参照してください。  
+## <a name="policy-and-rules-for-database-engine"></a>データベース エンジンのポリシーとルール  
+ 次の表に、インストールした [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に用意されているポリシーと、各ポリシーで評価するベスト プラクティス ルールに関する情報を示します。 ポリシーは XML ファイルとして格納され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にインポートする必要があります。 ポリシーのインポート方法については、「 [ポリシー ベースの管理ポリシーのインポート](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)」を参照してください。  
   
 |ポリシー名|ベスト プラクティス ルール|  
 |-----------------|------------------------|  
 |非対称キーの暗号化アルゴリズム|[非対称キー暗号化の強度](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|バックアップ ファイルとデータ ファイルの場所|[バックアップ ファイルはデータベース ファイルとは別のデバイスに配置する](../Topic/Backup%20Files%20Must%20Be%20on%20Separate%20Devices%20from%20the%20Database%20Files.md)|  
+|バックアップ ファイルとデータ ファイルの場所|[バックアップ ファイルはデータベース ファイルとは別のデバイスに配置する](http://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
 |データ ファイルとログ ファイルの場所|[別々のドライブへのデータ ファイルとログ ファイルの配置](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |データベースの自動終了|[AUTO_CLOSE データベース オプションを OFF に設定](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |データベースの自動圧縮|[AUTO_SHRINK データベース オプションを OFF に設定](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
-|データベースの照合順序|[ユーザー定義データベースの照合順序が master データベースおよび model データベースの照合順序と一致するように設定](../Topic/Set%20the%20Collation%20of%20User-defined%20Databases%20to%20Match%20Those%20of%20the%20master%20and%20model%20Databases.md)|  
+|データベースの照合順序|[ユーザー定義データベースの照合順序が master データベースおよび model データベースの照合順序と一致するように設定](http://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
 |データベースのページ検証|[PAGE_VERIFY データベース オプションを CHECKSUM に設定](../../relational-databases/policy-based-management/set-the-page-verify-database-option-to-checksum.md)|  
 |データベースのページの状態|[問題のあるページを含むデータベースの整合性のチェック](../../relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md)|  
 |guest の権限|[ユーザー データベースに対する guest の権限](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
@@ -65,7 +69,7 @@ caps.handback.revision: 27
 |Windows イベント ログのストレージ システム I_O タイムアウト エラー|[ストレージ システムの入出力のタイムアウト](../../relational-databases/policy-based-management/storage-system-input-output-time-out.md)|  
 |Windows イベント ログのシステム障害エラー|[予期しないシステム障害](../../relational-databases/policy-based-management/unexpected-system-failures.md)|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ポリシー ベースの管理ファセットの操作](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
   
   

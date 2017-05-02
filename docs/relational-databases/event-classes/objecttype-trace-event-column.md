@@ -1,30 +1,34 @@
 ---
 title: "ObjectType トレース イベント列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server イベント クラス, オブジェクト型列の値"
-  - "イベント [SQL Server], オブジェクト型列の値"
-  - "イベント クラス [SQL Server], オブジェクト型列の値"
-  - "Object Type 列の値 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, Object Type column values
+- events [SQL Server], Object Type column values
+- event classes [SQL Server], Object Type column values
+- Object Type column values [SQL Server]
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f4870fdd355f03c7f1e5c4fee15cf410f5794411
+ms.lasthandoff: 04/11/2017
+
 ---
-# ObjectType トレース イベント列
+# <a name="objecttype-trace-event-column"></a>ObjectType トレース イベント列
   Object Type トレース イベント列は、さまざまなトレース イベントで使用されます。 このトピックでは、この列の値と、その値に関連付けられている定義について説明します。  
   
-## ObjectType 列の値  
+## <a name="object-type-column-values"></a>ObjectType 列の値  
   
 |値|定義|  
 |-----------|----------------|  
@@ -100,7 +104,7 @@ caps.handback.revision: 17
 |22611|XMLSchema|  
 |22868|型|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

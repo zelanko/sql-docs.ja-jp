@@ -1,33 +1,37 @@
 ---
 title: "レッスン 2: Shared Access Signature を使用して SQL Server 資格情報を作成する | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f6e88b211fc2a053ffeadb038298a28179a94d88
+ms.lasthandoff: 04/11/2017
+
 ---
-# レッスン 2: Shared Access Signature を使用して SQL Server 資格情報を作成する
-このレッスンでは、[「レッスン 1: Azure コンテナーに格納済みアクセス ポリシーと Shared Access Signature を作成する」](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md) で作成した Azure コンテナーに対して読み書きを行うために SQL Server で使用するセキュリティ情報を格納するための資格情報を作成します。  
+# <a name="lesson-2-create-a-sql-server-credential-using-a-shared-access-signature"></a>レッスン 2: Shared Access Signature を使用して SQL Server 資格情報を作成する
+このレッスンでは、 [「レッスン 1: Azure コンテナーに格納済みアクセス ポリシーと Shared Access Signature を作成する」](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)で作成した Azure コンテナーに対して読み書きを行うために SQL Server で使用するセキュリティ情報を格納するための資格情報を作成します。  
   
 SQL Server 資格情報は、SQL Server の外部にあるリソースへの接続に必要な認証情報を保存するために使用されるオブジェクトです。 資格情報には、ストレージ コンテナーの URI パスと、このコンテナーの Shared Access Signature が格納されます。  
   
 > [!NOTE]  
-> この Azure コンテナーに SQL Server 2012 SP1 CU2 以降のデータベースまたは SQL Server 2014 データベースをバックアップする場合、[こちら](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) に記載されている非推奨構文を使用すれば、ストレージ アカウント キーに基づいて SQL Server 資格情報を作成することができます。  
+> この Azure コンテナーに SQL Server 2012 SP1 CU2 以降のデータベースまたは SQL Server 2014 データベースをバックアップする場合、 [こちら](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) に記載されている非推奨構文を使用すれば、ストレージ アカウント キーに基づいて SQL Server 資格情報を作成することができます。  
   
-## SQL Server 資格情報の作成  
+## <a name="create-sql-server-credential"></a>SQL Server 資格情報の作成  
 SQL Server 資格情報を作成するには、次の手順を実行します。  
   
 1.  SQL Server Management Studio に接続します。  
@@ -64,8 +68,10 @@ SQL Server 資格情報を作成するには、次の手順を実行します。
   
 [レッスン 3: URL へのデータベースのバックアップ](../relational-databases/lesson-3-database-backup-to-url.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
 [資格情報 &#40;データベース エンジン&#41;](../relational-databases/security/authentication-access/credentials-database-engine.md)  
 [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-credential-transact-sql.md)  
 [sys.credentials &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   
+
+

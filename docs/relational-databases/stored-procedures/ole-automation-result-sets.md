@@ -1,29 +1,33 @@
 ---
 title: "OLE オートメーションの結果セット | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データ型 [SQL Server], OLE オートメーション"
-  - "2 次元配列"
-  - "1 次元配列"
-  - "結果セット [SQL Server], OLE オートメーション"
-  - "OLE オートメーション [SQL Server], 結果セット"
-  - "配列 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ole
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data types [SQL Server], OLE Automation
+- two-dimensional arrays
+- one-dimensional arrays
+- result sets [SQL Server], OLE Automation
+- OLE Automation [SQL Server], result sets
+- arrays [SQL Server]
 ms.assetid: b2f99e33-2303-427c-94b9-9d55f8e2a6ab
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b3cf49bb4116a3cbf8bf58c327cdb6af5c11468
+ms.lasthandoff: 04/11/2017
+
 ---
-# OLE オートメーションの結果セット
+# <a name="ole-automation-result-sets"></a>OLE オートメーションの結果セット
   OLE オートメーションのプロパティまたはメソッドがデータを 1 次元か 2 次元の配列で返す場合、その配列は、次のように結果セットとしてクライアントに返されます。  
   
 -   1 次元の配列の場合は、配列内の要素数と同数の列を持つ 1 行の結果セットとしてクライアントに返されます。 たとえば、array(10) は 10 個の列から成る 1 つの行として返されます。  
@@ -44,7 +48,7 @@ caps.handback.revision: 21
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
  [OLE オートメーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
   
  [Ole Automation Procedures サーバー構成オプション](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)  

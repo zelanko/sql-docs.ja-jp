@@ -1,22 +1,26 @@
 ---
 title: "パーティション関数の変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b55aa8c92aaf469aa2ef7945a84068301124641
+ms.lasthandoff: 04/11/2017
+
 ---
-# パーティション関数の変更
+# <a name="modify-a-partition-function"></a>パーティション関数の変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用してパーティション テーブルまたはパーティション インデックスのパーティション関数で、指定するパーティションの数を 1 つずつ増減させることにより、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でのテーブルまたはインデックスのパーティション分割方法を変更できます。 パーティションを追加するには、既存のパーティションを 2 つのパーティションに分割し、新しいパーティションの境界を再定義します。 パーティションを削除するには、2 つのパーティションの境界を 1 つのパーティションにマージします。 この最後の操作により、1 つのパーティションが再作成され、もう 1 つのパーティションは未割り当てのままになります。  
   
 > [!CAUTION]  
@@ -62,7 +66,7 @@ caps.handback.revision: 11
 ####  <a name="Permissions"></a> アクセス許可  
  次の権限のいずれかを使用すると、ALTER PARTITION FUNCTION を実行できます。  
   
--   ALTER ANY DATASPACE 権限。 この権限は、既定では **sysadmin** 固定サーバー ロール、**db_owner** 固定データベース ロール、および **db_ddladmin** 固定データベース ロールのメンバーに与えられています。  
+-   ALTER ANY DATASPACE 権限。 この権限は、既定では **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_ddladmin** 固定データベース ロールのメンバーに与えられています。  
   
 -   パーティション関数が作成されたデータベースでの CONTROL または ALTER 権限。  
   
@@ -73,19 +77,19 @@ caps.handback.revision: 11
   
  この操作は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では実行できません。 パーティション関数を変更するには、最初にパーティション関数を削除し、パーティションの作成ウィザードを使用して必要なプロパティを持つ新しいパーティション関数を作成する必要があります。 詳細については、「  
   
-#### パーティション関数を削除するには  
+#### <a name="to-delete-a-partition-function"></a>パーティション関数を削除するには  
   
 1.  パーティション関数を削除するデータベースを展開し、 **ストレージ** フォルダーを展開します。  
   
 2.  **パーティション関数** フォルダーを展開します。  
   
-3.  削除するパーティション関数を右クリックして、**[削除]** をクリックします。  
+3.  削除するパーティション関数を右クリックして、 **[削除]**をクリックします。  
   
 4.  **[オブジェクトの削除]** ダイアログ ボックスで、正しいパーティション関数が選択されていることを確認し、 **[OK]**をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### 1 つのパーティションを 2 つのパーティションに分割するには  
+#### <a name="to-split-a-single-partition-into-two-partitions"></a>1 つのパーティションを 2 つのパーティションに分割するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -110,7 +114,7 @@ caps.handback.revision: 11
     SPLIT RANGE (500);  
     ```  
   
-#### 2 つのパーティションを 1 つのパーティションにマージするには  
+#### <a name="to-merge-two-partitions-into-one-partition"></a>2 つのパーティションを 1 つのパーティションにマージするには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

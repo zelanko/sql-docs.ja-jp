@@ -1,34 +1,38 @@
 ---
 title: "ディストリビューター情報、エージェント | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.Distributor.commonjobs..f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.Distributor.commonjobs..f1
 ms.assetid: 5d601a64-6af0-42f9-81b1-cf0087f1c50d
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5b1db16b9faf24e2255857203ac4a685d5326ca3
+ms.lasthandoff: 04/11/2017
+
 ---
-# ディストリビューター情報、エージェント
+# <a name="distributor-information-agents"></a>ディストリビューター情報、エージェント
   **[エージェント]** タブには、パブリッシャーおよびサブスクライバーに関連するエージェントおよびメンテナンス ジョブに関する詳細情報が表示されます。  
   
  ディストリビューター ビューのディストリビューターの **[エージェント]** タブで利用可能なエージェントには、パブリッシャーの **[エージェント]** タブで利用可能なすべてのエージェントが含まれています。 ただし、ディストリビューター ビューのディストリビューターの **[エージェント]** タブには、ディストリビューター エージェントおよびマージ エージェントも含まれています。  
   
  スナップショット エージェント、ログ リーダー エージェント、キュー リーダー エージェント、およびメンテナンス ジョブの詳細については、「 [Publisher Information, Agents](../../relational-databases/replication/publisher-information-agents.md)」を参照してください。 ディストリビューターの **[エージェント]** タブでエージェント情報を表示する場合は、スナップショット エージェントおよびログ リーダー エージェントのパブリッシャー情報があることに注意してください ただし、ディストリビューター ビューのディストリビューターの **[エージェント]** タブでは、 **[ディストリビューター エージェント]** および **[マージ エージェント]**も選択できます。  
   
-## オプション  
+## <a name="options"></a>オプション  
  この後のセクションでは、このタブで表示されるディストリビューター エージェントおよびマージ エージェントのデータについて説明します。  
   
-### ディストリビューター エージェント  
+### <a name="distributor-agent"></a>[ディストリビューター エージェント]  
  **[状態]**  
  エージェントの状態です。 表示される状態の種類を、次に示します。  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 13
  エージェントが関連付けられているパブリケーションの名前です。  
   
  **サブスクリプション**  
- フォームでは、サブスクリプションの名前: [*SubscriberName*]. [*データベース*] です。  
+ [*SubscriberName*].[*Database*] という形式のサブスクリプションの名前です。  
   
  **型**  
  レプリケーションの種類 (プッシュ、プル、または匿名) です。  
@@ -69,16 +73,16 @@ caps.handback.revision: 13
  **[待機時間]**  
  パブリケーション データベースで最新の変更がコミットされてから、ディストリビューション データベースで対応するコマンドがコミットされるまでに経過した時間 (秒単位) です。  
   
- **#トランザクション**  
+ **[#Trans]**  
  エージェントが最後に実行されたときにディストリビューション データベースでコミットされたトランザクションの数です。  
   
- **#コマンド**  
+ **[#Cmds]**  
  エージェントが最後に実行されたときにディストリビューション データベースでコミットされたコマンドの数です。 更新などのデータ変更がコマンドに相当します。  
   
- **Avg. #コマンド**  
+ **[コマンド数の平均]**  
  エージェントが最後に実行されたときの 1 トランザクションあたりの平均コマンド数です。  
   
-### マージ エージェント  
+### <a name="merge-agent"></a>[マージ エージェント]  
  **[状態]**  
  エージェントの状態です。 表示される状態の種類を、次に示します。  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 13
  エージェントが関連付けられているパブリケーションの名前です。  
   
  **サブスクリプション**  
- フォームでは、サブスクリプションの名前: [*SubscriberName*]. [*データベース*] です。  
+ [*SubscriberName*].[*Database*] という形式のサブスクリプションの名前です。  
   
  **型**  
  レプリケーションの種類 (プッシュ、プル、または匿名) です。  
@@ -140,10 +144,10 @@ caps.handback.revision: 13
  **[サブスクライバーの競合]**  
  マージ プロセス中にサブスクライバー側で発生した競合の数です。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [情報を表示し、パブリッシャーおよび #40; のタスクを実行レプリケーション モニターと #41 です。](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [情報を表示し、パブリケーションと #40; に関連付けられているエージェントのタスクを実行レプリケーション モニターと #41 です。](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
+ [パブリッシャーの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

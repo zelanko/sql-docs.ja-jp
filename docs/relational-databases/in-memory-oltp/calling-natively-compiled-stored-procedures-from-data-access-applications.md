@@ -1,22 +1,26 @@
 ---
 title: "データ アクセス アプリケーションからのネイティブ コンパイル ストアド プロシージャの呼び出し | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fce8ff8377ee7da4ff7c9d9e57ec01872702abc
+ms.lasthandoff: 04/11/2017
+
 ---
-# データ アクセス アプリケーションからのネイティブ コンパイル ストアド プロシージャの呼び出し
+# <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>データ アクセス アプリケーションからのネイティブ コンパイル ストアド プロシージャの呼び出し
   このトピックでは、データ アクセス アプリケーションからのネイティブ コンパイル ストアド プロシージャの呼び出しに関するガイダンスを示します。  
   
  カーソルは、ネイティブ コンパイル ストアド プロシージャに対して繰り返し処理できません。  
@@ -35,19 +39,19 @@ caps.handback.revision: 10
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client で ODBC ドライバーを使用したネイティブ コンパイル ストアド プロシージャの呼び出しに関して、次の推奨事項が適用されます。  
   
- 1 回だけストアド プロシージャを呼び出すのに最も効率的な方法は、**SQLExecDirect** と ODBC CALL 句を使用して直接 RPC を呼び出す方法です。 [!INCLUDE[tsql](../../includes/tsql-md.md)]**EXECUTE** ステートメントを使用しないでください。 ストアド プロシージャを複数回呼び出す場合は、準備実行が効率的です。  
+ 1 回だけストアド プロシージャを呼び出すのに最も効率的な方法は、 **SQLExecDirect** と ODBC CALL 句を使用して直接 RPC を呼び出す方法です。 [!INCLUDE[tsql](../../includes/tsql-md.md)]**EXECUTE** ステートメントを使用しないでください。 ストアド プロシージャを複数回呼び出す場合は、準備実行が効率的です。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャを複数回呼び出すのに最も効率的な方法は、準備された RPC プロシージャ呼び出しを使用する方法です。 準備された RPC 呼び出しは、次のように、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の ODBC ドライバーを使用して実行されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャを複数回呼び出すのに最も効率的な方法は、準備された RPC プロシージャ呼び出しを使用する方法です。 準備された RPC 呼び出しは、次のように、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の ODBC ドライバーを使用して実行されます。  
   
 -   データベースへの接続を開きます。  
   
--   **SQLBindParameter** を使用してパラメーターをバインドします。  
+-   **SQLBindParameter**を使用してパラメーターをバインドします。  
   
--   **SQLPrepare** を使用してプロシージャ呼び出しを準備します。  
+-   **SQLPrepare**を使用してプロシージャ呼び出しを準備します。  
   
--   **SQLExecute** を使用してストアド プロシージャを複数回実行します。  
+-   **SQLExecute**を使用してストアド プロシージャを複数回実行します。  
   
- 次のコードに、注文に行アイテムを追加するためのストアド プロシージャの準備実行を示します。 **SQLPrepare** は、1 回だけ呼び出されます。**SQLExecute** は、プロシージャの実行ごとに複数回呼び出されます。  
+ 次のコードに、注文に行アイテムを追加するためのストアド プロシージャの準備実行を示します。 **SQLPrepare** は、1 回だけ呼び出されます。 **SQLExecute** は、プロシージャの実行ごとに複数回呼び出されます。  
   
 ```  
 // Bind parameters  
@@ -79,14 +83,14 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
 }  
 ```  
   
-## ODBC を使用したネイティブ コンパイル ストアド プロシージャの実行  
- このサンプルでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを使用してパラメーターをバインドし、ストアド プロシージャを実行する方法について説明します。  このサンプルは、直接実行を使用して単一の注文を挿入し、準備実行を使用して注文の明細を挿入するコンソール アプリケーションにコンパイルされます。  
+## <a name="using-odbc-to-execute-a-natively-compiled-stored-procedure"></a>ODBC を使用したネイティブ コンパイル ストアド プロシージャの実行  
+ このサンプルでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを使用してパラメーターをバインドし、ストアド プロシージャを実行する方法について説明します。  このサンプルは、直接実行を使用して単一の注文を挿入し、準備実行を使用して注文の明細を挿入するコンソール アプリケーションにコンパイルされます。  
   
  このサンプルを実行するには:  
   
-1.  メモリ最適化データ ファイル グループが含まれるサンプル データベースを作成します。 メモリ最適化データ ファイルグループが含まれるデータベースを作成する方法については、「[メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャの作成](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)」を参照してください。  
+1.  メモリ最適化データ ファイル グループが含まれるサンプル データベースを作成します。 メモリ最適化データ ファイルグループが含まれるデータベースを作成する方法については、「 [メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャの作成](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)」を参照してください。  
   
-2.  データベースを参照する PrepExecSample という ODBC データ ソースを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ドライバーを使用します。 また、サンプルを変更して [Microsoft ODBC Driver for SQL Server](http://msdn.microsoft.com/library/jj730314.aspx) を使用できます。  
+2.  データベースを参照する PrepExecSample という ODBC データ ソースを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ドライバーを使用します。 また、サンプルを変更して [Microsoft ODBC Driver for SQL Server](http://msdn.microsoft.com/library/jj730314.aspx)を使用できます。  
   
 3.  サンプル データベースに [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト (下記) を実行します。  
   
@@ -391,7 +395,7 @@ int _tmain() {
 }  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

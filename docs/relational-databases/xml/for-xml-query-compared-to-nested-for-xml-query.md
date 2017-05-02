@@ -1,29 +1,33 @@
 ---
 title: "FOR XML クエリと入れ子になった FOR XML クエリの比較 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML クエリ"
-  - "クエリ [SQL Server の XML], クエリの種類の比較"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML query
+- queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2e83d836d3cf5e736847c5ebbb1934e8cde5374a
+ms.lasthandoff: 04/11/2017
+
 ---
-# FOR XML クエリと入れ子になった FOR XML クエリの比較
+# <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML クエリと入れ子になった FOR XML クエリの比較
   ここでは、単一レベルの FOR XML クエリと入れ子になった FOR XML クエリを比較します。 入れ子になった FOR XML クエリを使用すると、たとえば、属性中心の XML と要素中心の XML の組み合わせをクエリの結果に指定できるなどの利点があります。 次の例はこのことを示しています。  
   
-## 例  
- 次の `SELECT` クエリでは、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの製品カテゴリとサブカテゴリの情報を取得します。 このクエリには入れ子になった FOR XML はありません。  
+## <a name="example"></a>例  
+ 次の `SELECT` クエリでは、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの製品カテゴリとサブカテゴリの情報を取得します。 このクエリには入れ子になった FOR XML はありません。  
   
 ```  
 USE AdventureWorks2012;  
@@ -117,7 +121,7 @@ FOR XML AUTO, TYPE
   
 -   内側の `FOR XML` クエリは、製品サブカテゴリの情報を取得しています。 要素中心の XML を生成するために、内側の `ELEMENTS` に `FOR XML` ディレクティブを追加しています。ここで生成した XML は外側のクエリで生成される XML に追加されます。 既定では、外側のクエリで属性中心の XML が生成されます。  
   
--   結果を **xml** 型にするために、内側のクエリに `TYPE` ディレクティブを指定しています。 `TYPE` ディレクティブを指定しないと、結果は **nvarchar(max)** 型で返され、XML データはエンティティ化されます。  
+-   結果を `TYPE` xml **型にするために、内側のクエリに** ディレクティブを指定しています。 `TYPE` ディレクティブを指定しないと、結果は **nvarchar(max)** 型で返され、XML データはエンティティ化されます。  
   
 -   外側のクエリでも `TYPE` ディレクティブを指定しています。 そのため、このクエリの結果は **xml** 型でクライアントに返されます。  
   
@@ -135,7 +139,7 @@ FOR XML AUTO, TYPE
 </ProductCategory>  
 ```  
   
- 次のクエリは単に上記のクエリを拡張したものです。 これによって、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに格納されている完全な製品階層が示されます。 これには、次の内容が含まれます。  
+ 次のクエリは単に上記のクエリを拡張したものです。 これによって、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに格納されている完全な製品階層が示されます。 これには、次の内容が含まれます。  
   
 -   製品カテゴリ  
   
@@ -199,7 +203,7 @@ FOR XML AUTO, TYPE
   
  製品サブカテゴリを生成している入れ子構造の `ELEMENTS` クエリから `FOR XML` ディレクティブを削除すると、結果全体が属性中心になります。 このクエリは入れ子にしないでも記述できます。 `ELEMENTS` を追加することで、結果として一部が属性中心で、一部が要素中心の XML が得られます。 この結果は単一レベルの FOR XML クエリでは生成できません。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [入れ子になった FOR XML クエリの使用](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

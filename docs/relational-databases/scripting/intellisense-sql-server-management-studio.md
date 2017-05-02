@@ -1,28 +1,32 @@
 ---
-title: "IntelliSense (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: IntelliSense (SQL Server Management Studio) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 145fd074c9c84ce704ba43c9ad3591a324fea507
+ms.lasthandoff: 04/11/2017
+
 ---
-# IntelliSense (SQL Server Management Studio)
+# <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のエディターは [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense オプションをサポートしているので、入力操作を減らし、構文情報をすばやく提示し、複合式の区切りをわかりやすく表示できます。  
   
-## IntelliSense の利点  
+## <a name="benefits-of-intellisense"></a>IntelliSense の利点  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense には、言語リファレンスに簡単にアクセスするためのオプションが用意されています。 コーディング時に言語要素を検索する場合でも、エディターでの作業を中断する必要はありません。 コンテキストを保持したまま、必要な情報を探し、言語要素を直接コードに挿入できます。IntelliSense で入力を補完することもできます。  
   
-## IntelliSense のタスク  
+## <a name="intellisense-tasks"></a>IntelliSense のタスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
@@ -33,7 +37,7 @@ caps.handback.revision: 7
 |IntelliSense が区切り記号のペアの両端を識別する方法と、ペアの片方の端からもう一方の端へ移動する方法を説明します。|[構文ペアの自動照合](../../relational-databases/scripting/automatic-matching-of-syntax-pairs.md)|  
 |IntelliSense が動作しない状況について説明します。|IntelliSense のトラブルシューティング (SQL Server Management Studio)|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

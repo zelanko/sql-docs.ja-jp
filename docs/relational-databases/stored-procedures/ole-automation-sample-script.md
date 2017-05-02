@@ -1,25 +1,29 @@
 ---
 title: "OLE オートメーションのサンプル スクリプト | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "OLE オートメーション [SQL Server], 例"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ole
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLE Automation [SQL Server], examples
 ms.assetid: e59f75a9-ed41-4f12-888e-ffc57f9b3882
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9db090a1bf5d4cf53896bb0de2e7390f426bdb5b
+ms.lasthandoff: 04/11/2017
+
 ---
-# OLE オートメーションのサンプル スクリプト
-  このトピックでは、OLE オートメーション ストアド プロシージャを使用して、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のローカル インスタンスに SQL-DMO SQLServer オブジェクトを作成および使用する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント バッチの例について説明します。 このコードの一部は、OLE オートメーション システム ストアド プロシージャのリファレンス トピックで例として使用されています。  
+# <a name="ole-automation-sample-script"></a>OLE オートメーションのサンプル スクリプト
+  このトピックでは、OLE オートメーション ストアド プロシージャを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のローカル インスタンスに SQL-DMO SQLServer オブジェクトを作成および使用する [!INCLUDE[ssDE](../../includes/ssde-md.md)]ステートメント バッチの例について説明します。 このコードの一部は、OLE オートメーション システム ストアド プロシージャのリファレンス トピックで例として使用されています。  
   
 ```  
 USE AdventureWorks2012;  
@@ -137,7 +141,7 @@ RETURN;
 GO  
 ```  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
  [Transact-SQL での OLE オートメーション オブジェクト](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  
   
  [sp_OACreate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md)  

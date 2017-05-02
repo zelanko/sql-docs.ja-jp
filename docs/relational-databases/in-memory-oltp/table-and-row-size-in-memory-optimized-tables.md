@@ -1,25 +1,29 @@
 ---
 title: "メモリ最適化テーブルのテーブルと行のサイズ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 caps.latest.revision: 28
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57d2a22fc535f3613ce680156a0a6bb55ec62fa1
+ms.lasthandoff: 04/11/2017
+
 ---
-# メモリ最適化テーブルのテーブルと行のサイズ
+# <a name="table-and-row-size-in-memory-optimized-tables"></a>メモリ最適化テーブルのテーブルと行のサイズ
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  メモリ最適化テーブルは、行のコレクションと、行へのポインターを格納するインデックスで構成されています。 メモリ最適化テーブルでは、行内のデータの上限が 8,060 バイトとなっています。 ただし、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、データ サイズの大きい複数の列 (複数の varbinary(8000) 列など) や、LOB 列 (varbinary(max)、varchar(max)、および nvarchar(max)) を含むテーブルを作成することができます。 行内データの最大サイズを超える列は、行外の、特別な内部テーブルに配置されます。  内部テーブルの詳細については、 「[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)」を参照してください。
+  メモリ最適化テーブルは、行のコレクションと、行へのポインターを格納するインデックスで構成されています。 メモリ最適化テーブルでは、行内のデータの上限が 8,060 バイトとなっています。 ただし、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、データ サイズの大きい複数の列 (複数の varbinary(8000) 列など) や、LOB 列 (varbinary(max)、varchar(max)、および nvarchar(max)) を含むテーブルを作成することができます。 行内データの最大サイズを超える列は、行外の、特別な内部テーブルに配置されます。  内部テーブルの詳細については、 「[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)」を参照してください。
   
  テーブルと行のサイズを計算する理由は 2 つあります。  
   
@@ -33,11 +37,11 @@ caps.handback.revision: 28
   
 -   行のデータ サイズと、そのデータ サイズが行サイズの上限である 8,060 バイト以下であるかどうか。 これを調べるには、以降に説明する行本文サイズ (row body size) の計算を使用します。  
 
-行サイズの上限である 8060 バイトを超える列は、行外の、個別の内部テーブルに配置されます。  行外の列ごとに対応する内部テーブルがあり、 それぞれの内部テーブルには非クラスター化インデックスが 1 つ含まれます。 行外の列に使用される内部テーブルの詳細については、 「[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)」を参照してください。 
+行サイズの上限である 8060 バイトを超える列は、行外の、個別の内部テーブルに配置されます。 行外の列ごとに対応する内部テーブルがあり、 それぞれの内部テーブルには非クラスター化インデックスが 1 つ含まれます。 行外の列に使用される内部テーブルの詳細については、 「[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)」を参照してください。 
   
  次の図は、インデックスと行を含むテーブルを示しています。行には行ヘッダーと行本文が含まれています。  
   
- ![メモリ最適化テーブル。](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "メモリ最適化テーブル。")  
+ ![メモリ最適化テーブル。](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
 インデックスと行で構成されたメモリ最適化テーブル。  
   
  テーブルのメモリ内サイズ (バイト単位) は、次のように計算されます。  
@@ -52,7 +56,7 @@ caps.handback.revision: 28
 [hash index size] = 8 * [actual bucket count]  
 ```  
 
- 非クラスター化インデックスのサイズは `[row count] * [index key size]` と同程度です。
+ 非クラスター化インデックスのサイズは `[row count] * [index key size]`と同程度です。
   
  行サイズは、ヘッダーと本文のサイズを合計して算出されます。  
   
@@ -98,7 +102,7 @@ caps.handback.revision: 28
   
  ![2 つのインデックスがあるテーブルの行構造。](../../relational-databases/in-memory-oltp/media/hekaton-tables-4.gif "2 つのインデックスがあるテーブルの行構造。")  
   
- 開始タイムスタンプおよび終了タイムスタンプは、特定の行バージョンが有効である期間を示します。 この間隔で開始されるトランザクションで、この行バージョンが使用されることがあります。 詳細については、「[Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)」(メモリ最適化テーブルでのトランザクション) を参照してください。  
+ 開始タイムスタンプおよび終了タイムスタンプは、特定の行バージョンが有効である期間を示します。 この間隔で開始されるトランザクションで、この行バージョンが使用されることがあります。 詳細については、「 [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)」(メモリ最適化テーブルでのトランザクション) を参照してください。  
   
  インデックス ポインターは、ハッシュ バケットに属しているチェーン内の次の行を参照します。 次の図は、(名前と都市の) 2 列があり、名前の列用と都市の列用にそれぞれ 1 つのインデックスを備えたテーブルの構造を示しています。  
   
@@ -227,7 +231,7 @@ select * from sys.dm_db_xtp_table_memory_stats
 where object_id = object_id('dbo.Orders')  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

@@ -1,34 +1,38 @@
 ---
 title: "オンライン インデックス操作の動作原理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "オンラインのインデックス操作"
-  - "ソース インデックス [SQL Server]"
-  - "既存のインデックス [SQL Server]"
-  - "ターゲット インデックス [SQL Server]"
-  - "一時マッピング インデックス [SQL Server]"
-  - "インデックス一時マッピング [SQL Server]"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online index operations
+- source indexes [SQL Server]
+- preexisting indexes [SQL Server]
+- target indexes [SQL Server]
+- temporary mapping index [SQL Server]
+- index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 838a02643b47162d767e8f3b4191e5e3796adf57
+ms.lasthandoff: 04/11/2017
+
 ---
-# オンライン インデックス操作の動作原理
+# <a name="how-online-index-operations-work"></a>オンライン インデックス操作の動作原理
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   このトピックでは、オンライン インデックスの操作中に存在する構造を定義し、これらの構造に関連した利用方法について説明します。  
   
-## オンライン インデックスの構造  
+## <a name="online-index-structures"></a>オンライン インデックスの構造  
  インデックス DDL (データ定義言語) の操作中に同時ユーザー操作を可能にするために、オンライン インデックスの操作中に、ソースと既存のインデックス、ターゲット、(ヒープを再構築したりクラスター化インデックスをオンラインで削除したりする場合) 一時マッピング インデックスなどの構造が使用されます。  
   
 -   **ソースと既存のインデックス**  
@@ -39,7 +43,7 @@ caps.handback.revision: 28
   
 -   **移行先**  
   
-     ターゲットとは、作成または再構築される、新しいインデックス (または、ヒープ) です。 ユーザーによるソースへの挿入、更新、削除の各操作は、インデックス操作中、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]によってターゲットに適用されます。 たとえば、オンライン インデックス操作によってクラスター化インデックスが再構築される場合、ターゲットは再構築されるクラスター化インデックスです。[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、クラスター化インデックスが再構築されるときは、非クラスター化インデックスは再構築されません。  
+     ターゲットとは、作成または再構築される、新しいインデックス (または、ヒープ) です。 ユーザーによるソースへの挿入、更新、削除の各操作は、インデックス操作中、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] によってターゲットに適用されます。 たとえば、オンライン インデックス操作によってクラスター化インデックスが再構築される場合、ターゲットは再構築されるクラスター化インデックスです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、クラスター化インデックスが再構築されるときは、非クラスター化インデックスは再構築されません。  
   
      SELECT ステートメントの処理中には、インデックス操作がコミットされるまでターゲット インデックスは検索されません。 内部的には、インデックスは書き込み専用に設定されます。  
   
@@ -47,14 +51,14 @@ caps.handback.revision: 28
   
      クラスター化インデックスを作成、削除、または再構築するオンライン インデックス操作では、一時マッピング インデックスも必要になります。 基になるテーブルの行が更新または削除されるときに、構築される新しいインデックスのどのレコードを削除するかを決めるために、同時実行トランザクションによってこの一時インデックスが使用されます。 新しいクラスター化インデックス (またはヒープ) と同じ手順で、この非クラスター化インデックスが作成されます。また、個別の並べ替え操作は必要ありません。 同時実行トランザクションでは、挿入、更新、削除の各操作のすべての一時マッピング インデックスもメンテナンスされます。  
   
-## オンライン インデックスでの処理  
+## <a name="online-index-activities"></a>オンライン インデックスでの処理  
  インデックスが設定されていないテーブル (ヒープ) にクラスター化インデックスを作成する場合など、単純なオンライン インデックス操作中は、ソースとターゲットは準備、構築、最終工程の 3 つのフェーズで処理されます。  
   
  次の図に、初期クラスター化インデックスをオンラインで作成する処理を示します。 ソース オブジェクト (ヒープ) には、他のインデックスはありません。 各フェーズでのソースとターゲットの利用状況が示されています。また、同時実行ユーザーによる選択、挿入、更新、削除の各操作についても示されています。 準備、構築、最終工程の各フェーズは、フェーズで使用されるロック モードと共に示されています。  
   
  ![オンライン インデックスの操作中に行われる処理](../../relational-databases/indexes/media/online-index.gif "オンライン インデックスの操作中に行われる処理")  
   
-## ソース構造での処理  
+## <a name="source-structure-activities"></a>ソース構造での処理  
  次の表に、インデックス操作と対応するロック操作の各フェーズ中に、ソース構造に関係する処理を一覧します。  
   
 |フェーズ|ソースでの処理|ソースのロック|  
@@ -69,7 +73,7 @@ caps.handback.revision: 28
   
  上記の表は、1 つのインデックスに関係するオンライン インデックス操作の構築フェーズ中に 1 つの共有 (S) ロックが取得されることを示しています。 クラスター化インデックスや非クラスター化インデックスが構築されるときは、構築フェーズ中に 1 つのオンライン インデックス操作 (たとえば、1 つ以上の非クラスター化インデックスを含むテーブルでの最初のクラスター化インデックスの作成中など) で、短期間 2 つの共有 (S) ロックが取得された後、長期間インテント共有 (IS) ロックが取得されます。 最初に、クラスター化インデックスの作成のために 1 つの S ロックが取得され、クラスター化インデックスの作成完了時に、非クラスター化インデックスの作成のために 2 番目の S ロックが短期間取得されます。 非クラスター化インデックスが作成された後、オンライン インデックス操作の最終フェーズまで、S ロックが IS ロックにダウングレードされます。  
   
-### ターゲット構造での処理  
+### <a name="target-structure-activities"></a>ターゲット構造での処理  
  次の表に、インデックス操作と対応するロック操作の各フェーズ中に、ターゲット構造に関係する処理を一覧します。  
   
 |フェーズ|ターゲットでの処理|ターゲットのロック|  
@@ -84,9 +88,10 @@ caps.handback.revision: 28
   
  オンライン インデックス操作に関係するテーブルで宣言されたカーソルの有効期間は、オンライン インデックス フェーズによって制限されます。 更新カーソルは各フェーズで無効になります。 読み取り専用カーソルは、最終工程フェーズの後にのみ無効になります。  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
  [オンラインでのインデックス操作の実行](../../relational-databases/indexes/perform-index-operations-online.md)  
   
  [オンライン インデックス操作のガイドライン](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
   
+

@@ -1,28 +1,32 @@
 ---
 title: "トランザクション ログ バックアップの適用 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/13/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "復元 [SQL Server], ログ バックアップ"
-  - "トランザクション ログ バックアップ [SQL Server], バックアップの適用"
-  - "オンライン復元 [SQL Server], ログ バックアップ"
-  - "トランザクション ログ バックアップ [SQL Server], 復元シーケンスに必要な量"
-  - "バックアップ [SQL Server], ログ バックアップ"
+ms.custom: 
+ms.date: 08/13/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring [SQL Server], log backups
+- transaction log backups [SQL Server], applying backups
+- online restores [SQL Server], log backups
+- transaction log backups [SQL Server], quantity needed for restore sequence
+- backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 60f9ef5bcf12be3b4a16f6ed56a21da2a2b54501
+ms.lasthandoff: 04/11/2017
+
 ---
-# トランザクション ログ バックアップの適用 (SQL Server)
+# <a name="apply-transaction-log-backups-sql-server"></a>トランザクション ログ バックアップの適用 (SQL Server)
   このトピックは完全復旧モデルと一括ログ復旧モデルのみに関連します。  
   
  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの復元の一環として行う、トランザクション ログ バックアップの適用について説明します。  
@@ -31,7 +35,7 @@ caps.handback.revision: 38
 ##  <a name="Requirements"></a> トランザクション ログ バックアップを復元するための要件  
  トランザクション ログ バックアップを適用するには、次の要件を満たしている必要があります。  
   
--   **復元シーケンスに必要なログ バックアップの保持:** 復元シーケンスを完了できるだけのログ レコードがバックアップされている必要があります。 復元シーケンスを開始する前に、必要なログ バックアップ (必要な場合は[ログ末尾のバックアップ](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)も含む) が用意されている必要があります。  
+-   **復元シーケンスに必要なログ バックアップの保持:** 復元シーケンスを完了できるだけのログ レコードがバックアップされている必要があります。 復元シーケンスを開始する前に、必要なログ バックアップ (必要な場合は [ログ末尾のバックアップ](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) も含む) が用意されている必要があります。  
   
 -   **正しい復元順序:**  先に、データベースの前回の完全バックアップまたは差分バックアップを復元する必要があります。 次に、その完全バックアップまたは差分バックアップの後に作成されたすべてのトランザクション ログを日時順に復元する必要があります。 このログ チェーン内のトランザクション ログ バックアップが失われたかまたは損傷している場合は、失われたトランザクション ログよりも前のトランザクション ログのみを復元できます。  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 38
   
  **代替手順 2: データベースの以前の完全バックアップを使用したデータベースの復元**  
   
-> **注:** この代替手順は、問題が生じて午後 6 時の完全バックアップが使用できない場合に 役立ちます。 この方法では、午後 6 時のデータベースの完全バックアップからの 復元よりも処理に時間がかかります。  
+> **注:** この代替手順は、問題が生じて午後 6 時の完全バックアップが使用できない場合に 復元よりも処理に時間がかかります。 この方法では、午後 6 時のデータベースの完全バックアップからの 復元よりも処理に時間がかかります。  
   
 1.  障害発生時点にアクティブなトランザクション ログのログ末尾のバックアップを作成します。  
   
@@ -78,7 +82,7 @@ caps.handback.revision: 38
   
      この代替手順は、一連のデータベースの完全バックアップにまたがるトランザクション ログ バックアップのチェーンを保持することにより、冗長性を伴うセキュリティが提供されることになります。  
   
-> **注:** 場合によっては、トランザクション ログを使用して特定の時点までデータベースを復元することもできます。 詳細については、「[SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。  
+> **注:** 場合によっては、トランザクション ログを使用して特定の時点までデータベースを復元することもできます。 詳細については、「 [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)と呼びます。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **トランザクション ログのバックアップを適用するには**  
@@ -87,9 +91,9 @@ caps.handback.revision: 38
   
  **復旧ポイントまで復元するには**  
   
--   [完全復旧モデルで障害発生時点までデータベースを復元する方法 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [完全復旧モデルで障害発生時点までデータベースを復元する方法 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
--   [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A> (SMO)  
   
@@ -101,7 +105,8 @@ caps.handback.revision: 38
   
 -   [データを復元しないデータベースの復旧 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   
+

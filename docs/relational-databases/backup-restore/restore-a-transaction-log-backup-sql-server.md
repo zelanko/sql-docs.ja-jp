@@ -1,31 +1,35 @@
 ---
 title: "トランザクション ログ バックアップの復元 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restoretlog.general.f1"
-  - "sql13.swb.restoretlog.options.f1"
-helpviewer_keywords: 
-  - "ログの復元"
-  - "トランザクション ログのバックアップ [SQL Server], 復元"
-  - "トランザクション ログ バックアップ [SQL Server], 復元"
-  - "トランザクション ログの復元 [SQL Server], バックアップの復元"
-  - "トランザクション ログの復元 [SQL Server]、SQL Server Management Studio"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restoretlog.general.f1
+- sql13.swb.restoretlog.options.f1
+helpviewer_keywords:
+- restore log
+- backing up transaction logs [SQL Server], restoring
+- transaction log backups [SQL Server], restoring
+- restoring transaction logs [SQL Server], restoring backups
+- transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58f0b1ab65e812e778d630a2a95db8539e1b47eb
+ms.lasthandoff: 04/11/2017
+
 ---
-# トランザクション ログ バックアップの復元 (SQL Server)
+# <a name="restore-a-transaction-log-backup-sql-server"></a>トランザクション ログ バックアップの復元 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、トランザクション ログ バックアップを復元する方法について説明します。  
@@ -61,20 +65,20 @@ caps.handback.revision: 36
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
- RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で損傷していないことが必ずしも保証されないため、**db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
+ RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で破損していないことが必ずしも保証されないため、 **db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 > [!WARNING]  
->  通常の復元処理では、データ バックアップおよび差分バックアップと共に、**[データベースの復元]** ダイアログ ボックスでログ バックアップを選択します。  
+>  通常の復元処理では、データ バックアップおよび差分バックアップと共に、 **[データベースの復元]** ダイアログ ボックスでログ バックアップを選択します。  
   
-#### トランザクション ログ バックアップを復元するには  
+#### <a name="to-restore-a-transaction-log-backup"></a>トランザクション ログ バックアップを復元するには  
   
 1.  オブジェクト エクスプローラーで適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
   
 2.  **[データベース]**を展開します。さらに、そのデータベースに応じて、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。  
   
-3.  データベースを右クリックして **[タスク]** をポイントし、**[復元]** をポイントします。次に、**[トランザクション ログ]** をクリックし、**[トランザクション ログの復元]** ダイアログ ボックスを開きます。  
+3.  データベースを右クリックして **[タスク]**をポイントし、 **[復元]**をポイントします。次に、 **[トランザクション ログ]**をクリックし、 **[トランザクション ログの復元]** ダイアログ ボックスを開きます。  
   
     > [!NOTE]  
     >  **[トランザクション ログ]** がグレーで表示される場合は、最初に完全バックアップまたは差分バックアップを復元する必要があります。 **[データベース]** バックアップ ダイアログ ボックスを使用してください。  
@@ -89,7 +93,7 @@ caps.handback.revision: 36
   
     -   **[ファイルまたはテープから]**  
   
-         参照ボタン (**[...]**) をクリックし、**[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]**をクリックします。  
+         参照ボタン (**[...]**) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]**をクリックします。  
   
          **[バックアップ メディア]** ボックスに目的のデバイスを追加したら、 **[OK]** をクリックして、 **[全般]** ページに戻ります。  
   
@@ -99,14 +103,14 @@ caps.handback.revision: 36
   
     |[ヘッダー]|値|  
     |------------|-----------|  
-    |**復元**|チェック ボックスをオンにしたバックアップ セットが復元されます。|  
+    |**[復元]**|チェック ボックスをオンにしたバックアップ セットが復元されます。|  
     |**名前**|バックアップ セットの名前。|  
-    |**コンポーネント**|バックアップされるコンポーネント。**[データベース]**、**[ファイル]**、\<空白> (トランザクション ログ用) のいずれかを指定します。|  
+    |**コンポーネント**|バックアップされるコンポーネント。**[データベース]**、**[ファイル]**、[\<空白>] (トランザクション ログ用) のいずれかを指定します。|  
     |**データベース**|バックアップ操作に関係するデータベース名。|  
     |**[開始日]**|バックアップ操作の開始日時 (クライアントの地域設定に準拠)。|  
     |**完了日**|バックアップ操作の完了日時 (クライアントの地域設定に準拠)。|  
-    |**最初の LSN**|バックアップ セット内の先頭のトランザクションのログ シーケンス番号。 ファイル バックアップの場合は空白。|  
-    |**最後の LSN**|バックアップ セット内の最後のトランザクションのログ シーケンス番号。 ファイル バックアップの場合は空白。|  
+    |**[最初の LSN]**|バックアップ セット内の先頭のトランザクションのログ シーケンス番号。 ファイル バックアップの場合は空白。|  
+    |**[最後の LSN]**|バックアップ セット内の最後のトランザクションのログ シーケンス番号。 ファイル バックアップの場合は空白。|  
     |**チェックポイントの LSN**|バックアップが作成された時点における最新チェックポイントのログ シーケンス番号。|  
     |**全 LSN**|データベース全体の最新バックアップのログ シーケンス番号。|  
     |**[サーバー]**|バックアップ操作を実行したデータベース エンジン インスタンスの名前。|  
@@ -133,7 +137,7 @@ caps.handback.revision: 36
         |------------|-----------|  
         |\<空白>|マークを選択するためのチェック ボックスを表示します。|  
         |**トランザクション マーク**|トランザクションがコミットされたときにユーザーによって指定された、マークされたトランザクションの名前。|  
-        |**日付**|トランザクションがコミットされた日時。 トランザクションの日付と時刻は、クライアント コンピューターの日付と時刻ではなく、**msdbgmarkhistory** テーブルに記録されたとおりに表示されます。|  
+        |**日付**|トランザクションがコミットされた日時。 トランザクションの日付と時刻は、クライアント コンピューターの日付と時刻ではなく、 **msdbgmarkhistory** テーブルに記録されたとおりに表示されます。|  
         |**説明**|トランザクションがコミットされたときにユーザーが指定したマークされたトランザクションの説明 (該当する場合)。|  
         |**LSN (LSN)**|マークされたトランザクションのログ シーケンス番号。|  
         |**データベース**|マークされたトランザクションがコミットされたデータベースの名前。|  
@@ -147,9 +151,9 @@ caps.handback.revision: 36
   
          パブリッシュされたデータベースを、そのデータベースが作成されたサーバー以外のサーバーに復元するときに、レプリケーションの設定を保存します。  
   
-         このオプションは、**[コミットされていないトランザクションをロールバックして、データベースを使用可能な状態にする...]** オプション (後述) でのみ使用可能です。**RECOVERY** オプションを指定してバックアップを復元する場合と同じになります。  
+         このオプションは、 **[コミットされていないトランザクションをロールバックして、データベースを使用可能な状態にする...]** オプション (後述) でのみ使用可能です。 **RECOVERY** オプションを指定してバックアップを復元する場合と同じになります。  
   
-         このオプションをチェックすることは、[!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** ステートメントで **KEEP_REPLICATION** オプションを使用することと同じです。  
+         このオプションをチェックすることは、 **RESTORE** ステートメントで [!INCLUDE[tsql](../../includes/tsql-md.md)]**KEEP_REPLICATION** オプションを使用することと同じです。  
   
     -   **[各バックアップを復元する前に確認する]**  
   
@@ -161,19 +165,19 @@ caps.handback.revision: 36
   
     -   **[復元するデータベースへのアクセスを制限する (WITH RESTRICTED_USER)]**  
   
-         復元するデータベースの使用を **db_owner**、**dbcreator**、または **sysadmin** のメンバーだけに制限します。  
+         復元するデータベースの使用を **db_owner**、 **dbcreator**、または **sysadmin**のメンバーだけに制限します。  
   
-         このオプションをチェックすることは、[!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** ステートメントで **RESTRICTED_USER** オプションを使用することと同じです。  
+         このオプションをチェックすることは、 **RESTORE** ステートメントで [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTRICTED_USER** オプションを使用することと同じです。  
   
 10. **[復旧状態]** オプションでは、復元操作後のデータベースの状態を指定します。  
   
-    -   **[コミットされていないトランザクションをロールバックして、データベースを使用可能な状態にする。 別のトランザクション ログは復元できません。 (RESTORE WITH RECOVERY)]**  
+    -   **[コミットされていないトランザクションをロールバックして、データベースを使用可能な状態にする。別のトランザクション ログは復元できません。(RESTORE WITH RECOVERY)]**  
   
          データベースを復旧します。 このオプションは、 **RESTORE** ステートメントの [!INCLUDE[tsql](../../includes/tsql-md.md)]**RECOVERY** オプションと同じです。  
   
          このオプションは、復元するログ ファイルがない場合にのみ選択します。  
   
-    -   **[データベースは操作不可状態のままで、コミットされていないトランザクションはロールバックしない。 別のトランザクション ログは復元できます  (RESTORE WITH NORECOVERY)]**  
+    -   **[データベースは操作不可状態のままで、コミットされていないトランザクションはロールバックしない。別のトランザクション ログは復元できます。(RESTORE WITH NORECOVERY)]**  
   
          データベースを **RESTORING** 状態で未復旧のままにします。 このオプションは、 **RESTORE** ステートメントで [!INCLUDE[tsql](../../includes/tsql-md.md)]**NORECOVERY** オプションを使用することと同じです。  
   
@@ -182,7 +186,7 @@ caps.handback.revision: 36
         > [!IMPORTANT]  
         >  ミラー データベースまたはセカンダリ データベースの場合は、常にこのオプションを選択します。  
   
-    -   **[データベースを読み取り専用モードにする。 コミットされていないトランザクションは元に戻されますが、復旧結果を元に戻せるように元に戻す操作をファイルに保存します。 (RECOVERY WITH STANDBY)]**  
+    -   **[データベースを読み取り専用モードにする。コミットされていないトランザクションは元に戻されますが、復旧結果を元に戻せるように元に戻す操作をファイルに保存します。(RESTORE WITH STANDBY)]**  
   
          データベースをスタンバイ状態のままにします。 このオプションは、 **RESTORE** ステートメントで [!INCLUDE[tsql](../../includes/tsql-md.md)]**STANDBY** オプションを使用することと同じです。  
   
@@ -195,7 +199,7 @@ caps.handback.revision: 36
 > [!IMPORTANT]  
 >  指定があいまいにならないよう、すべての RESTORE ステートメントにおいて WITH NORECOVERY または WITH RECOVERY を常に明示的に指定することをお勧めします。 これは、スクリプトを作成するときに特に重要です。  
   
-#### トランザクション ログ バックアップを復元するには  
+#### <a name="to-restore-a-transaction-log-backup"></a>トランザクション ログ バックアップを復元するには  
   
 1.  次の項目を指定して RESTORE LOG ステートメントを実行し、トランザクション ログ バックアップを適用します。  
   
@@ -236,13 +240,13 @@ caps.handback.revision: 36
     >  ミラー データベースを作成している場合は、復旧ステップを省略します。 ミラー データベースは、RESTORING 状態のままにする必要があります。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
- 既定では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースは単純復旧モデルを使用します。 以下の例では、次に示すように、完全復旧モデルが使用されるようにデータベースを変更する必要があります。  
+ 既定では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースは単純復旧モデルを使用します。 以下の例では、次に示すように、完全復旧モデルが使用されるようにデータベースを変更する必要があります。  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
-#### A. 1 つのトランザクション ログ バックアップの適用  
+#### <a name="a-applying-a-single-transaction-log-backup"></a>A. 1 つのトランザクション ログ バックアップの適用  
  次の例では、まず [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] というバックアップ デバイスに存在するデータベースの完全バックアップを使用して `AdventureWorks2012_1`データベースを復元します。 次に、 `AdventureWorks2012_log`というバックアップ デバイスにある最初のトランザクション ログ バックアップを適用します。 最後に、データベースを復旧します。  
   
 ```tsql  
@@ -260,7 +264,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### B. 複数のトランザクション ログ バックアップの適用  
+#### <a name="b-applying-multiple-transaction-log-backups"></a>B. 複数のトランザクション ログ バックアップの適用  
  次の例では、まず [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] というバックアップ デバイスに存在するデータベースの完全バックアップを使用して `AdventureWorks2012_1`データベースを復元します。 次に、 `AdventureWorks2012_log`という名前のバックアップ デバイスにある最初の 3 つのトランザクション ログ バックアップを、1 つずつ適用します。 最後に、データベースを復旧します。  
   
 ```tsql  
@@ -294,14 +298,14 @@ GO
   
 -   [SSMS を使用したデータベース バックアップの復元](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
--   [完全復旧モデルで障害発生時点までデータベースを復元する方法 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [完全復旧モデルで障害発生時点までデータベースを復元する方法 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 -   [マークされたトランザクションへのデータベースの復元 &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
-## 参照  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>参照  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
   
   

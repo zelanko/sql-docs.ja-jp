@@ -1,28 +1,32 @@
 ---
 title: "システム バージョン管理されたテンポラル テーブルのスキーマを変更する | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
 caps.latest.revision: 13
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97eadf63fb8332ef55d8ccb699241a5e5f0e19d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# システム バージョン管理されたテンポラル テーブルのスキーマを変更する
+# <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルのスキーマを変更する
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   **ALTER TABLE** ステートメントを使用して、列を追加、変更、または削除します。  
   
-## 使用例  
+## <a name="examples"></a>使用例  
  ここでは、テンポラル テーブルのスキーマを変更する例をいくつか示します。  
   
 ```  
@@ -52,7 +56,7 @@ ALTER TABLE dbo.Department
   
 ```  
   
-### 重要な解説  
+### <a name="important-remarks"></a>重要な解説  
   
 -   テンポラル テーブルのスキーマを変更するには、現在のテーブルおよび履歴テーブルの**CONTROL** 権限が必要です。  
   
@@ -62,7 +66,7 @@ ALTER TABLE dbo.Department
   
 -   NULL 値を許容しない列を追加する、または既存の列を NULL 値を許容しない列に変更する場合、既存の行に既定値を指定する必要があります。 システムは同じ値で追加の既定値を生成し、その既定値を履歴テーブルに適用します。 **DEFAULT** を空でないテーブルに追加すると、(メタデータの操作がある) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 以外のすべてのエディション上でのデータ操作のサイズは 1 つになります。  
   
--   varchar(max)、nvarchar(max)、varbinary(max)、または既定値のある XML 列を追加すると、すべてのエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上のデータ操作を更新することになります。  
+-   varchar(max)、nvarchar(max)、varbinary(max)、または既定値のある XML 列を追加すると、すべてのエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上のデータ操作を更新することになります。  
   
 -   列の追加後の行サイズが行サイズの上限を超えた場合、新しい列をオンラインで追加することはできません。  
   
@@ -72,19 +76,19 @@ ALTER TABLE dbo.Department
   
 -   **ALTER COLUMN** を使用して、期間の列の **IsHidden** プロパティを変更できます。  
   
--   次のスキーマ変更の **ALTER** を直接使用することはできません。 これらの種類の変更には、**SYSTEM_VERSIONING = OFF** を設定します。  
+-   次のスキーマ変更の **ALTER** を直接使用することはできません。 これらの種類の変更には、 **SYSTEM_VERSIONING = OFF**を設定します。  
   
     -   計算列を追加する  
   
     -   **IDENTITY** 列を追加する  
   
-    -   履歴テーブルが **DATA_COMPRESSION = PAGE** または **DATA_COMPRESSION = ROW** (履歴テーブルの既定値) に設定されている場合に、**SPARSE** 列を追加する、または既存の列を **SPARSE** に変更する  
+    -   履歴テーブルが **DATA_COMPRESSION = PAGE** または **DATA_COMPRESSION = ROW**(履歴テーブルの既定値) に設定されている場合に、 **SPARSE** 列を追加する、または既存の列を **SPARSE**に変更する  
   
-    -   **COLUMN_SET** を追加する  
+    -   **COLUMN_SET**を追加する  
   
-    -    **ROWGUIDCOL** 列を追加する、または既存の列を **ROWGUIDCOL**に変更する  
+    -   **ROWGUIDCOL** 列を追加する、または既存の列を **ROWGUIDCOL**に変更する  
   
-         **SYSTEM_VERSIONING = OFF** の設定が継続して必要な場合に (**IDENTITY** 列を追加して)、スキーマを変更する例を次に示します。   
+         **SYSTEM_VERSIONING = OFF** の設定が継続して必要な場合に ( **IDENTITY** 列を追加して)、スキーマを変更する例を次に示します。   
         この例では、データの整合性チェックを無効にしています。 同時実行データの変更が発生しないときに、トランザクション内でスキーマ変更が行われる場合、このチェックは必要ありません。  
   
         ```  
@@ -101,10 +105,10 @@ ALTER TABLE dbo.Department
   
         ```  
   
-## この記事は役に立ちましたか? フィードバックをお待ちしております。  
- どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツ改善のため、フィードバックをお待ちしています。  [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Changing%20the%20Schema%20of%20a%20System-Versioned%20Temporal%20Table%20page)にコメントを送信してください  
+## <a name="did-this-article-help-you-were-listening"></a>この記事は役に立ちましたか? フィードバックをお待ちしております。  
+ どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツ改善のため、フィードバックをお待ちしています。 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Changing%20the%20Schema%20of%20a%20System-Versioned%20Temporal%20Table%20page) にコメントをお送りください  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)   
  [システム バージョン管理されたテンポラル テーブルの概要](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [システム バージョン管理されたテンポラル テーブルの履歴データの保有期間管理](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)   
@@ -116,3 +120,4 @@ ALTER TABLE dbo.Department
  [システム バージョン管理されたテンポラル テーブルでシステム バージョン管理を停止する](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
+

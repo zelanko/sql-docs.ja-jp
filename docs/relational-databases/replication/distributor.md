@@ -1,24 +1,28 @@
 ---
 title: "ディストリビューター | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.replicationutilities.selectdistributor.f1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.replicationutilities.selectdistributor.f1
 ms.assetid: 787f0e9c-09dd-438a-bc04-5b8f99c127b8
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 76289f77a007d5349f6517dc0751bdeb6335cc1e
+ms.lasthandoff: 04/11/2017
+
 ---
-# ディストリビューター
+# <a name="distributor"></a>ディストリビューター
   **[ディストリビューター]** ページは、ディストリビューションの構成ウィザードとパブリケーションの新規作成ウィザードで表示されます。 ディストリビューターは、ディストリビューション データベースを備え、あらゆる種類のレプリケーションのメタデータおよび履歴データを格納するサーバーです。 ディストリビューターは、トランザクション レプリケーションのトランザクションも格納します。 ディストリビューターは、パブリッシャーと同じサーバーであっても、別のサーバーであってもかまいません。前者の場合はローカル ディストリビューターで、後者の場合はリモート ディストリビューターになります。 ディストリビューターの役割は、実装するレプリケーションの種類によって異なります。 一般に、マージ レプリケーションやスナップショット レプリケーションに比べて、トランザクション レプリケーションに対するディストリビューターの役割は大きくなります。 マージ レプリケーションおよびスナップショット レプリケーションではローカル ディストリビューターを使用するのが一般的です。ただし、非常に稼働率が高いシステムでのトランザクション レプリケーションの場合は、リモート ディストリビューターを利用すると効果的です。  
   
  サーバーがディストリビューターとして指定されると、次のようなリソースが新たに消費されることになります。  
@@ -31,21 +35,21 @@ caps.handback.revision: 22
   
  ディストリビューターとして指定するサーバーには、サーバー上でさまざまな機能を果たしながら、レプリケーションの処理を実行できるだけの十分なディスク容量とプロセッサ パワーが必要です。  
   
-## オプション  
- **'\< ServerName>' 独自のディストリビューターとして機能します。SQL Server はディストリビューション データベースとログを作成します。**  
+## <a name="options"></a>オプション  
+ **['\<ServerName>' を独自のディストリビューターとする (SQL Server はディストリビューション データベースとログを作成します)]**  
  このオプションを選択すると、ディストリビューターとして接続するサーバーを構成できます。  
   
  **[以下のサーバーをディストリビューターとして使用する (選択するサーバーはディストリビューターとして構成されている必要があります)]**  
  別のサーバーをディストリビューターとして構成するには、このオプションを選択し、以下のサーバーの名前をクリックします。  
   
  **[追加]**  
- ディストリビューターが一覧にないとして使用するサーバーをクリックして場合 **追加** をサーバーを識別し、一覧に追加します。  
+ ディストリビューターとして構成するサーバーが表示されていない場合は、 **[追加]** をクリックし、目的のサーバーを識別して一覧に追加します。  
   
 > [!NOTE]  
 >  リモート サーバーをディストリビューターとして使用するには、リモート サーバーがディストリビューターとして構成されている必要があります。 このウィザードの実行の対象となるサーバーは、そのディストリビューター上でパブリッシャーとして有効に設定されている必要があります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ディストリビューションの構成](../../relational-databases/replication/configure-distribution.md)   
- [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)  
+ [パブリッシングおよびディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)  
   
   

@@ -1,31 +1,35 @@
 ---
 title: "[列のプロパティ] ([全般] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.columnproperties.general.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.columnproperties.general.f1
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 478dc0e10767f9e4e10c5c3ede74aec5ddaddef4
+ms.lasthandoff: 04/11/2017
+
 ---
-# [列のプロパティ] ([全般] ページ)
+# <a name="column-properties-general-page"></a>[列のプロパティ] ([全般] ページ)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   このページを使用すると、選択されている列のプロパティを表示できます。  
   
- このページの情報は読み取り専用です。 列を変更するには、**[列のプロパティ]** ダイアログ ボックスを閉じて、オブジェクト エクスプローラーでそのテーブルを展開して [列] を展開します。次に、列を右クリックして、**[デザイン]** をクリックします。  
+ このページの情報は読み取り専用です。 列を変更するには、 **[列のプロパティ]** ダイアログ ボックスを閉じて、オブジェクト エクスプローラーでそのテーブルを展開して [列] を展開します。次に、列を右クリックして、 **[デザイン]**をクリックします。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **名前**  
  列の名前です。  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 27
  列が保持できるデータ型です。 データ型がシステム データ型である場合は、システム データ型が表示されます。 データ型がユーザー定義型である場合は、ユーザー定義データ型を形成するシステム データ型が表示されます。  
   
  **主キー**  
- 列が主キーであるかどうかを示します。 指定できる値は、**[True]** および **[False]** です。  
+ 列が主キーであるかどうかを示します。 指定できる値は、 **[True]**および **[False]**です。  
   
  **Null を許容**  
  列が NULL 値を許容するかどうかを示します。 指定できる値は、 **[True]** および **[False]**です。  
@@ -45,7 +49,7 @@ caps.handback.revision: 27
  列の値が、計算された式の結果であるかどうかを示します。  
   
  **[計算されたテキスト]**  
- 列テキストの計算に使用されたステートメントを示します。 詳細については、「[テーブルの計算列の指定](../../relational-databases/tables/specify-computed-columns-in-a-table.md)」を参照してください。  
+ 列テキストの計算に使用されたステートメントを示します。 詳細については、「 [テーブルの計算列の指定](../../relational-databases/tables/specify-computed-columns-in-a-table.md)」を参照してください。  
   
  **Identity**  
  列がテーブルの ID 列であるかどうかを示します。 指定できる値は、 **[True]** および **[False]**です。  
@@ -54,7 +58,7 @@ caps.handback.revision: 27
  ID 列の最初の行の値を示します。  
   
  **[IDENTITY インクリメント]**  
- **[ID の増分値]** プロパティは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で挿入される行の ID 値が生成されるときに、既存の行の最大 ID 値に追加される値を指定します。  
+ **[ID の増分値]** プロパティは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で挿入される行の ID 値が生成されるときに、既存の行の最大 ID 値に追加される値を指定します。  
   
  **[既定のバインド]**  
  列にバインドされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定値です。 既定値がバインドされていない場合、このオプションは空白になります。  
@@ -90,10 +94,10 @@ caps.handback.revision: 27
 >  一般にスキーマという語にはいくつかの異なる意味があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベース オブジェクトを編成する場合にスキーマを使用します。 これは所有権に似ています。 XML は、スキーマを使用して XML 情報の編成を一連の名前空間に定義します。 このスキーマは、XML コードをまとめてグループ化する方法です。  
   
  **[スパース]**  
- 列がスパース列であるかどうかを示します。 指定できる値は、 **[True]** および **[False]**です。 詳細については、「[スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。  
+ 列がスパース列であるかどうかを示します。 指定できる値は、 **[True]** および **[False]**です。 詳細については、「 [スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。  
   
  **[列セット]**  
- 列が列セットであるかどうかを示します。 指定できる値は、 **[True]** および **[False]**です。 詳細については、「[列セットの使用](../../relational-databases/tables/use-column-sets.md)」を参照してください。  
+ 列が列セットであるかどうかを示します。 指定できる値は、 **[True]** および **[False]**です。 詳細については、「 [列セットの使用](../../relational-databases/tables/use-column-sets.md)」を参照してください。  
   
  **[ANSI PADDING の状態]**  
  ANSI PADDING が有効かどうかを示します。 詳細については、「[SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)」を参照してください。  

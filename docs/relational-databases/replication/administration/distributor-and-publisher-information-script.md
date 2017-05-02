@@ -1,30 +1,34 @@
 ---
 title: "ディストリビューターおよびパブリッシャーの情報スクリプト | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "パブリッシャー [SQL Server レプリケーション], 情報スクリプト"
-  - "ディストリビューター [SQL Server レプリケーション], 情報スクリプト"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Publishers [SQL Server replication], information scripts
+- Distributors [SQL Server replication], information scripts
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dec278a7a34d1e6f3c056dcd6ea8ec65d0acdfc5
+ms.lasthandoff: 04/11/2017
+
 ---
-# ディストリビューターおよびパブリッシャーの情報スクリプト
+# <a name="distributor-and-publisher-information-script"></a>ディストリビューターおよびパブリッシャーの情報スクリプト
   このスクリプトは、システム テーブルとレプリケーションのストアド プロシージャを使用して、ディストリビューターおよびパブリッシャーのオブジェクトについての一般的な質問に回答します。 このスクリプトはそのまま使用することもできますし、スクリプトをカスタマイズする雛形として使用することもできます。 ユーザーの環境でこのスクリプトを実行するためには、以下の 2 つの修正を行う必要があります。  
   
 -   `use AdventureWorks2012` の行を、使用するパブリケーション データベース名に変更します。  
   
--   コメントを解除して (`--`) 行から `exec sp_helparticle @publication='<PublicationName>'` と置換 \< PublicationName> 、パブリケーションの名前に置き換えます。  
+-   `exec sp_helparticle @publication='<PublicationName>'` 行のコメント (`--`) を削除して、\<PublicationName> をパブリケーション名に置き換えます。  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  
@@ -94,23 +98,23 @@ SELECT object_name(object_id) AS tran_published_table, name AS published_column 
 SELECT object_name(object_id) AS merge_published_table, name AS published_column FROM sys.columns WHERE is_merge_published = 1;  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レプリケーションの管理者に関してよく寄せられる質問](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
- [sp_get_distributor & #40 です。Transact SQL と #41 です。](../../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md)   
- [sp_helparticle & #40 です。Transact SQL と #41 です。](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sp_helpdistributiondb & #40 です。Transact SQL と #41 です。](../../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [sp_helpdistpublisher & #40 です。Transact SQL と #41 です。](../../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
- [sp_helpdistributor & #40 です。Transact SQL と #41 です。](../../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpmergearticle & #40 です。Transact SQL と #41 です。](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
- [sp_helpmergepublication & #40 です。Transact SQL と #41 です。](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
- [sp_helppublication & #40 です。Transact SQL と #41 です。](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
- [sp_helpreplicationdboption & #40 です。Transact SQL と #41 です。](../../../relational-databases/system-stored-procedures/sp-helpreplicationdboption-transact-sql.md)   
- [sp_helpsubscriberinfo & #40 です。Transact SQL と #41 です。](../../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
- [sys.columns & #40 です。Transact SQL と #41 です。](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.databases と #40 です。Transact SQL と #41 です。](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.procedures と #40 です。Transact SQL と #41 です。](../../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
- [sys.servers & #40 です。Transact SQL と #41 です。](../../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)   
- [sys.tables & #40 です。Transact SQL と #41 です。](../../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
- [sys.views & #40 です。Transact SQL と #41 です。](../../../relational-databases/system-catalog-views/sys-views-transact-sql.md)  
+ [sp_get_distributor &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md)   
+ [sp_helparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+ [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
+ [sp_helpdistributor &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_helpmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [sp_helpmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
+ [sp_helppublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
+ [sp_helpreplicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpreplicationdboption-transact-sql.md)   
+ [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
+ [sys.columns &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys.procedures &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
+ [sys.servers &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)   
+ [sys.tables &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
+ [sys.views &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-views-transact-sql.md)  
   
   

@@ -1,24 +1,28 @@
 ---
 title: "テーブルの作成 (データベース エンジン) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "テーブルの作成 [SQL Server], Visual Database Tools"
+ms.custom: 
+ms.date: 09/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table creation [SQL Server], Visual Database Tools
 ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57e54a247e190cdf6e52746ca591af5cc4de8507
+ms.lasthandoff: 04/11/2017
+
 ---
-# テーブルの作成 (データベース エンジン)
+# <a name="create-tables-database-engine"></a>テーブルの作成 (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して新しいテーブルを作成して名前を付け、それを既存のデータベースに追加できます。  
@@ -35,13 +39,13 @@ caps.handback.revision: 19
  CREATE TABLE ステートメント内の列に XML スキーマ コレクションが関連付けられている場合は、その XML スキーマ コレクションの所有権か、そのスキーマ コレクションに対する REFERENCES 権限が必要です。  
   
  
-## テーブル デザイナーを使用する  
+## <a name="using-table-designer"></a>テーブル デザイナーを使用する  
   
 1.  SSMS の **オブジェクト エクスプローラー**で、変更するデータベースを含む [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。  
   
 2.  **オブジェクト エクスプローラー**で、 **[データベース]** ノードを展開し、新しいテーブルを格納するデータベースを展開します。  
   
-3.  オブジェクト エクスプローラーで、データベースの **[テーブル]** ノードを右クリックし、**[新しいテーブル]** をクリックします。  
+3.  オブジェクト エクスプローラーで、データベースの **[テーブル]** ノードを右クリックし、 **[新しいテーブル]**をクリックします。  
   
 4.  次の図に示すように、列名を入力し、データ型を選択した後、各列で null 値を許可するかどうかを選択します。  
   
@@ -55,15 +59,15 @@ caps.handback.revision: 19
   
      ![AddTableObjects](../../relational-databases/tables/media/addtableobjects.gif "AddTableObjects")  
   
-     これらのオブジェクトの詳細については、「 [Create Foreign Key Relationships](../../relational-databases/tables/外部キーのリレーションシップの作成.md)」、「 [Create Check Constraints](../../relational-databases/tables/create-check-constraints.md) 」、および「 [Indexes](../../relational-databases/indexes/indexes.md)」を参照してください。  
+     これらのオブジェクトの詳細については、「 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)」、「 [Create Check Constraints](../../relational-databases/tables/create-check-constraints.md) 」、および「 [Indexes](../../relational-databases/indexes/indexes.md)」を参照してください。  
   
-8.  既定では、テーブルは **dbo** スキーマに含まれています。 テーブルに対して別のスキーマを指定するには、テーブル デザイナー ペイン内で右クリックし、次の図に示すように、**[プロパティ]** を選択します。 **[スキーマ]** ボックスの一覧で、適切なスキーマを選択します。  
+8.  既定では、テーブルは **dbo** スキーマに含まれています。 テーブルに対して別のスキーマを指定するには、テーブル デザイナー ペイン内で右クリックし、次の図に示すように、 **[プロパティ]** を選択します。 **[スキーマ]** ボックスの一覧で、適切なスキーマを選択します。  
   
      ![Specifyatableschema](../../relational-databases/tables/media/specifyatableschema.gif "Specifyatableschema")  
   
      スキーマの詳細については、「 [Create a Database Schema](../../relational-databases/security/authentication-access/create-a-database-schema.md)」を参照してください。  
   
-9. **[ファイル]** メニューの **table name** *を保存]*をクリックします。  
+9. **ファイル** メニューの **を保存** *を保存*をクリックします。  
   
 10. **[名前の選択]** ダイアログ ボックスで、テーブルの名前を入力し、 **[OK]**をクリックします。  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-## クエリ エディターを使用する  
+## <a name="using-query-editor"></a>クエリ エディターを使用する  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -96,3 +100,4 @@ caps.handback.revision: 19
  詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。  
   
   
+

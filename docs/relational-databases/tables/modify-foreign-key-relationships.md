@@ -1,28 +1,32 @@
 ---
 title: "外部キー リレーションシップの変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vdtsql.chm:65538"
-  - "vdt.ppg.relationships"
-helpviewer_keywords: 
-  - "外部キー [SQL Server], 変更"
-  - "外部キーの変更"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vdtsql.chm:65538
+- vdt.ppg.relationships
+helpviewer_keywords:
+- foreign keys [SQL Server], modifying
+- modifying foreign keys
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d938937ff7d4009ec874ebc9bbd33b2e87960def
+ms.lasthandoff: 04/11/2017
+
 ---
-# 外部キー リレーションシップの変更
+# <a name="modify-foreign-key-relationships"></a>外部キー リレーションシップの変更
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、リレーションシップの外部キー側を変更できます。 テーブルの外部キーを変更すると、主キー テーブルの列に関連付けられる列が変更されます。  
@@ -59,11 +63,11 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### 外部キーを変更するには  
+#### <a name="to-modify-a-foreign-key"></a>外部キーを変更するには  
   
 1.  **オブジェクト エクスプローラー**で、外部キーが含まれているテーブルを展開し、 **[キー]**を展開します。  
   
-2.  変更する外部キーを右クリックし、**[変更]** を選択します。  
+2.  変更する外部キーを右クリックし、 **[変更]**を選択します。  
   
 3.  **[外部キー リレーションシップ]** ダイアログ ボックスでは、次の変更を行うことができます。  
   
@@ -77,9 +81,9 @@ caps.handback.revision: 20
      **[選択されたリレーションシップ]** ボックスの一覧で選択したリレーションシップを削除します。 追加したリレーションシップを取り消すには、このボタンを使用してリレーションシップを削除します。  
   
      **[全般] カテゴリ**  
-     展開して **[作成時または再度有効化するときに既存データを確認]** および **[テーブルと列の指定]** を表示します。  
+     展開して **[作成時または再度有効化するときに既存データを確認]** および **[テーブルと列の指定]**を表示します。  
   
-     **[作成時または再度有効化するときに既存データを確認]**  
+     **Check Existing Data on Creation or Re-Enabling**  
      制約を作成した時点、または制約を再度有効にした時点よりも前からテーブルに存在しているすべてのデータについて、その制約に対して検証します。  
   
      **[テーブルと列の指定] カテゴリ**  
@@ -98,18 +102,18 @@ caps.handback.revision: 20
      選択したリレーションシップで、どの列が主キー (一意キー) として機能しているかを示します。  
   
      **[IDENTITY] カテゴリ**  
-     展開して **[オブジェクト名]** および **[説明]** のプロパティ フィールドを表示します。  
+     展開して **[オブジェクト名]** および **[説明]**のプロパティ フィールドを表示します。  
   
-     **名前**  
+     **[オブジェクト名]**  
      リレーションシップの名前を表示します。 新しいリレーションシップを作成した場合、このプロパティには、 **テーブル デザイナー**のアクティブ ウィンドウのテーブルに基づいて、既定の名前が設定されます。 名前はいつでも変更できます。  
   
-     **説明**  
-     リレーションシップの説明です。 より詳細な説明を記述する場合は、**[説明]** をクリックしてから、プロパティ フィールドの右に表示される省略記号 (**[...]**) をクリックします。 これにより、テキストを書くことができる領域が大きくなります。  
+     **[説明]**  
+     リレーションシップの説明です。 より詳細な説明を記述する場合は、 **[説明]** をクリックしてから、プロパティ フィールドの右に表示される省略記号 ( **[...]** ) をクリックします。 これにより、テキストを書くことができる領域が大きくなります。  
   
      **[テーブル デザイナー] カテゴリ**  
-     展開して **[作成時または再度有効化するときに既存データを確認]** および **[レプリケーションに対して適用]** に関する情報を表示します。  
+     展開して **[作成時または再度有効化するときに既存データを確認]** および **[レプリケーションに対して適用]**に関する情報を表示します。  
   
-     **[レプリケーションに対して適用]**  
+     **Enforce For Replication**  
      レプリケーション エージェントがこのテーブルに対して挿入、更新、または削除操作を行うときに制約を適用するかどうかを示します。  
   
      **[外部キーの制約を適用]**  
@@ -121,9 +125,9 @@ caps.handback.revision: 20
      **[DeleteRule の設定]**  
      外部キー リレーションシップに関連するデータを持つ行をユーザーが削除しようとした場合の処理を指定します。  
   
-    -   **[動作なし]** &amp;#xA0;&amp;#xA0;&amp;#xA0;削除操作が許可されていないことをユーザーに通知するエラー メッセージが出力され、DELETE がロールバックされます。  
+    -   **[動作なし]** &nbsp;&nbsp;&nbsp;削除操作が許可されていないことをユーザーに通知するエラー メッセージが出力され、DELETE がロールバックされます。  
   
-    -   **[重ねて表示]** &amp;#xA0;&amp;#xA0;&amp;#xA0;外部キー リレーションシップに関係するデータを含む行がすべて削除されます。 論理レコードを使用するマージ パブリケーションにテーブルを含める場合、CASCADE は使用しないでください。  
+    -   **[重ねて表示]** &nbsp;&nbsp;&nbsp;外部キー リレーションシップに関係するデータを含む行がすべて削除されます。 論理レコードを使用するマージ パブリケーションにテーブルを含める場合、CASCADE は使用しないでください。  
   
     -   **[Null に設定]** テーブルのすべての外部キー列が null 値を使用できる場合、null 値が設定されます。  
   
@@ -132,19 +136,19 @@ caps.handback.revision: 20
      **[UpdateRule の設定]**  
      外部キー リレーションシップに関連するデータを持つ行をユーザーが更新しようとした場合の処理を指定します。  
   
-    -   **[動作なし]** &amp;amp;#xA0;&amp;amp;#xA0;&amp;amp;#xA0;更新操作が許可されていないことをユーザーに通知するエラー メッセージを出力し、UPDATE がロールバックします。  
+    -   **[動作なし]** &nbsp;&nbsp;&nbsp;更新操作が許可されていないことをユーザーに通知するエラー メッセージを出力し、UPDATE がロールバックします。  
   
-    -   **[重ねて表示]** &amp;amp;#xA0;&amp;amp;#xA0;&amp;amp;#xA0;外部キー リレーションシップに関係するデータを含む行がすべて更新されます。 論理レコードを使用するマージ パブリケーションにテーブルを含める場合、CASCADE は使用しないでください。  
+    -   **[重ねて表示]** &nbsp;&nbsp;&nbsp;外部キー リレーションシップに関係するデータを含む行がすべて更新されます。 論理レコードを使用するマージ パブリケーションにテーブルを含める場合、CASCADE は使用しないでください。  
   
     -   **[Null に設定]** テーブルのすべての外部キー列が null 値を使用できる場合、null 値が設定されます。  
   
-    -   **[既定値の設定]** &amp;amp;#xA0;&amp;amp;#xA0;テーブルのすべての外部キー列に既定値が定義されている場合、その列に定義されている既定値が設定されます。  
+    -   **[既定値の設定]** &nbsp;&nbsp;テーブルのすべての外部キー列に既定値が定義されている場合、その列に定義されている既定値が設定されます。  
   
-4.  **[ファイル]** メニューの **table name***の保存]*をクリックします。  
+4.  **ファイル** メニューの **table name***の保存*をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  **外部キーを変更するには**  
   
- Transact-SQL を使用して FOREIGN KEY 制約を変更するには、まず既存の FOREIGN KEY 制約を削除してから、新しい定義を使用して再作成する必要があります。 詳細については、「 [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) 」および「 [Create Foreign Key Relationships](../../relational-databases/tables/外部キーのリレーションシップの作成.md)」を参照してください。  
+ Transact-SQL を使用して FOREIGN KEY 制約を変更するには、まず既存の FOREIGN KEY 制約を削除してから、新しい定義を使用して再作成する必要があります。 詳細については、「 [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) 」および「 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)」を参照してください。  
   
 ###  <a name="TsqlExample"></a>  

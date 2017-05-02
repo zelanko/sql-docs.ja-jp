@@ -1,35 +1,39 @@
 ---
 title: "データベースのターゲットの復旧時間の変更 (SQL Server) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6daed0f65622cd6a0533db68441021cb8c8f0a1c
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベースのターゲットの復旧時間の変更 (SQL Server)
-  このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [!INCLUDE[tsql](../../includes/tsql-md.md)] データベースのターゲットの復旧時間を変更する方法について説明します。 既定では、ターゲットの復旧時間は 60 秒です。データベースで*間接チェックポイント*が使用されます。 ターゲットの復旧時間により、このデータベースの復旧時間に上限が設定されます。  
+# <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>データベースのターゲットの復旧時間の変更 (SQL Server)
+  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [!INCLUDE[tsql](../../includes/tsql-md.md)]データベースのターゲットの復旧時間を変更する方法について説明します。 既定では、ターゲットの復旧時間は 60 秒です。データベースで *間接チェックポイント*が使用されます。 ターゲットの復旧時間により、このデータベースの復旧時間に上限が設定されます。  
   
 > [!NOTE]  
 >  ターゲットの復旧時間の設定によって特定のデータベースに対して指定された上限は、実行時間の長いトランザクションによって UNDO が過度に繰り返される場合には超過することがあります。  
   
--   **作業を開始する準備:** [制限事項と制約事項](#Restrictions)、[セキュリティ](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
--   **ターゲットの復旧時間の変更に使用するもの:** [SQL Server Management Studio](#SSMSProcedure) または [Transact-SQL](#TsqlProcedure)  
+-   **To change the target recovery time, using:**  [SQL Server Management Studio](#SSMSProcedure) or [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a>  
+###  <a name="Restrictions"></a> 制限事項と制約事項 
   
 > [!CAUTION]  
 >  間接チェックポイントが構成されたデータベースでオンライン トランザクション ワークロードが生じると、パフォーマンスが低下することがあります。 間接チェックポイントは、ターゲットの復旧時間内でデータベースの回復が完了するように、ダーティ ページの数が特定のしきい値を下回るようにします。 復旧間隔構成オプションは、ダーティ ページ数を使用する間接チェックポイントとは異なり、トランザクション数を使用して復旧時間を決定します。 DML 操作の受信数が多いデータベースで間接チェックポイントが有効な場合、バックグラウンド ライターは積極的にディスクにダーティ バッファーのフラッシュを開始し、回復を実行するのに必要な時間をデータベースのターゲット復旧時間内にすることができます。 これにより、ディスクのサブシステムが I/O のしきい値よりも高い動作をするかまたはその値に近づいた場合、パフォーマンス ボトルネックの原因となる追加の I/O アクティビティが特定のシステムで発生する可能性があります。  
@@ -44,7 +48,7 @@ caps.handback.revision: 15
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  変更するデータベースを右クリックし、**[プロパティ]** をクリックします。  
+2.  変更するデータベースを右クリックし、 **[プロパティ]** をクリックします。  
   
 3.  **[データベースのプロパティ]** ダイアログ ボックスで、 **[オプション]** ページをクリックします。  
   
@@ -55,12 +59,12 @@ caps.handback.revision: 15
   
 1.  データベースがある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。  
   
-2.  次の [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)ステートメントを、次のように使用します。  
+2.  次の [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md)ステートメントを、次のように使用します。  
   
      TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
   
      *target_recovery_time*  
-     [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] より、既定値は 1 分です。 0 (旧バージョンの既定値) より大きい値の場合は、指定されたデータベースでクラッシュが発生したときの復旧時間に上限を指定します。  
+     [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]より、既定値は 1 分です。 0 (旧バージョンの既定値) より大きい値の場合は、指定されたデータベースでクラッシュが発生したときの復旧時間に上限を指定します。  
   
      SECONDS  
      *target_recovery_time* が秒単位で表されていることを示します。  
@@ -68,14 +72,15 @@ caps.handback.revision: 15
      MINUTES  
      *target_recovery_time* が分単位で表されていることを示します。  
   
-     次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースのターゲットの復旧時間を `60` 秒に設定します。  
+     次の例では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースのターゲットの復旧時間を `60` 秒に設定します。  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET TARGET_RECOVERY_TIME = 60 SECONDS;  
     ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データベース チェックポイント &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
- [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)  
+ [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
   
+

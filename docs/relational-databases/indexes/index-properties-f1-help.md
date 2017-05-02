@@ -1,30 +1,34 @@
 ---
 title: "[インデックスのプロパティ] の F1 ヘルプ | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.swb.indexproperties.filter.f1"
-  - "sql13.swb.indexproperties.partitions.f1"
-  - "sql13.swb.indexproperties.general.f1"
-  - "sql13.swb.indexproperties.storage.f1"
-  - "sql13.swb.indexproperties.columns.f1"
-  - "sql13.swb.indexproperties.options.f1"
-  - "sql13.swb.indexproperties.spatial.f1"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.swb.indexproperties.filter.f1
+- sql13.swb.indexproperties.partitions.f1
+- sql13.swb.indexproperties.general.f1
+- sql13.swb.indexproperties.storage.f1
+- sql13.swb.indexproperties.columns.f1
+- sql13.swb.indexproperties.options.f1
+- sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d646d06bd41ce4db35011d65ecab45109326c15
+ms.lasthandoff: 04/11/2017
+
 ---
-# [インデックスのプロパティ] の F1 ヘルプ
+# <a name="index-properties-f1-help"></a>[インデックスのプロパティ] の F1 ヘルプ
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   このトピックのセクションでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のダイアログを使用して取得できる各種のインデックス プロパティを参照しています。  
@@ -33,7 +37,7 @@ caps.handback.revision: 38
   
  [[インデックスのプロパティ] の [全般] ページ](#General)  
   
- [[<table name> から (インデックス) 列を選択] ダイアログ ボックス](#Columns)  
+ [[&lt;table name&gt; から (インデックス) 列を選択] ダイアログ ボックス](#Columns)  
   
  [[インデックスのプロパティ] の [ストレージ] ページ](#Storage)  
   
@@ -67,22 +71,22 @@ caps.handback.revision: 38
   
  1 つの複合インデックスを構成できる列は最大で 16 個です。 列が 16 より多い場合については、このトピックの最後にある付加列の説明をご覧ください。  
   
- 空間インデックスを定義できるのは、空間データ型を含む単一の列 (*空間列*) だけです。  
+ 空間インデックスを定義できるのは、空間データ型を含む単一の列 ( *空間列*) だけです。  
   
  **名前**  
  インデックス キーを構成する列の名前を表示します。  
   
  **並べ替え順序**  
- 選択されているインデックス列の並べ替え方向として、**[昇順]** または **[降順]** を指定します。  
+ 選択されているインデックス列の並べ替え方向として、 **[昇順]** または **[降順]**を指定します。  
   
 > [!NOTE]  
->  インデックスの種類が **[プライマリ XML]** または **[空間]** の場合、この列はテーブルに表示されません。  
+>  インデックスの種類が **[プライマリ XML]** または **[空間]**の場合、この列はテーブルに表示されません。  
   
  **データ型**  
  データ型情報を表示します。  
   
 > [!NOTE]  
->  テーブル列が計算列の場合、**[データ型]** に "計算列" と表示されます。  
+>  テーブル列が計算列の場合、 **[データ型]** に "計算列" と表示されます。  
   
  **サイズ**  
  列データ型を格納するために必要な最大バイト数を表示します。 空間列または XML 列の場合は、ゼロ (0) が表示されます。  
@@ -94,7 +98,7 @@ caps.handback.revision: 38
  NULL 値をテーブルまたはビュー列に格納することがインデックス キーを構成する列で許容されるかどうかを表示します。  
   
  **[追加]**  
- 列をインデックス キーに追加します。 **[追加]** をクリックすると表示される [*\<table name>* **から列を選択**] ダイアログ ボックスからテーブル列を選択します。 空間インデックスの場合は、1 つの列を選択した後、このボタンが淡色表示になります。  
+ 列をインデックス キーに追加します。 **[追加]** をクリックすると表示される **[** *\<table name> から列を選択]* ダイアログ ボックスからテーブル列を選択します。 空間インデックスの場合は、1 つの列を選択した後、このボタンが淡色表示になります。  
   
  **[削除]**  
  選択されている列をインデックス キーから削除します。  
@@ -106,12 +110,12 @@ caps.handback.revision: 38
  選択されている列をインデックス キー グリッド内で下へ移動します。  
   
  **[列ストア列]**  
- 列ストア インデックスの列を選択するには、**[追加]** をクリックします。 列ストア インデックスに関する制限事項は、「[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)」を参照してください。  
+ 列ストア インデックスの列を選択するには、 **[追加]** をクリックします。 列ストア インデックスに関する制限事項は、「[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)」を参照してください。  
   
  **[付加列]**  
- 非キー列を非クラスター化インデックスに含めます。 このオプションを選択すると、列を非キー列として非クラスター化インデックスのリーフ レベルに追加することにより、インデックス キーの合計サイズに対する現在のインデックス制限、およびインデックス キーを構成する列の最大数の制限を無視できます。 詳細については、「[付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。  
+ 非キー列を非クラスター化インデックスに含めます。 このオプションを選択すると、列を非キー列として非クラスター化インデックスのリーフ レベルに追加することにより、インデックス キーの合計サイズに対する現在のインデックス制限、およびインデックス キーを構成する列の最大数の制限を無視できます。 詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。  
   
-##  <a name="Columns"></a> [<table name> から (インデックス) 列を選択] ダイアログ ボックス  
+##  <a name="Columns"></a> [&lt;table name&gt; から (インデックス) 列を選択] ダイアログ ボックス  
  このページを使用すると、インデックスを作成または変更するときに **[インデックスのプロパティ] ([全般] ページ)** に列を追加できます。  
   
  **チェック ボックス**  
@@ -129,7 +133,7 @@ caps.handback.revision: 38
  **Identity**  
  列が ID 列の場合は **[はい]** が表示され、列が ID 列でない場合は **[いいえ]** が表示されます。  
   
- **Null を許容**  
+ **Allow Nulls**  
  テーブル定義において列の NULL 値が許容される場合は **[はい]** が表示されます。 テーブル定義において列の NULL 値が許容されない場合は **[いいえ]** が表示されます。  
   
 ##  <a name="Storage"></a> [ストレージ] ページのオプション  
@@ -139,7 +143,7 @@ caps.handback.revision: 38
  指定したファイル グループのインデックスを格納します。 一覧には、標準 (ROW) ファイル グループのみが表示されます。 既定で選択されているのは、データベースのプライマリ ファイル グループです。 詳細については、「 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)」を参照してください。  
   
  **[Filestream ファイル グループ]**  
- FILESTREAM データのファイル グループを指定します。 この一覧には FILESTREAM ファイル グループのみが表示されます。 既定で選択されているのは、PRIMARY FILESTREAM ファイル グループです。 詳細については、「[FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)」を参照してください。  
+ FILESTREAM データのファイル グループを指定します。 この一覧には FILESTREAM ファイル グループのみが表示されます。 既定で選択されているのは、PRIMARY FILESTREAM ファイル グループです。 詳細については、「[FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)」をご覧ください。  
   
  **パーティション構成**  
  パーティション構成のインデックスを格納します。 **[パーティション構成]** をクリックすると、下のグリッドが有効になります。 既定で選択されているのは、テーブルのデータを格納するために使用されるパーティション構成です。 一覧にある他のパーティション構成を選択すると、グリッドに表示される情報が更新されます。 詳しくは、「 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)」をご覧ください。  
@@ -161,7 +165,7 @@ caps.handback.revision: 38
  列のデータ型情報を表示します。  
   
 > [!NOTE]  
->  テーブルの列が計算列の場合、**[列データ型]** には "計算列" と表示されます。  
+>  テーブルの列が計算列の場合、 **[列データ型]** には "計算列" と表示されます。  
   
  **[インデックスの移動中に DML ステートメントのオンライン処理を許可する]**  
  インデックス操作中に、基本となるテーブルやクラスター化インデックス データ、および関連する非クラスター化インデックスにユーザーがアクセスできるようにします。 詳しくは、「 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)」をご覧ください。  
@@ -178,24 +182,24 @@ caps.handback.revision: 38
 ##  <a name="Spatial"></a> [空間] ページのインデックス オプション  
  **[空間]** ページを使用して、空間プロパティの値を表示または指定します。 詳細については、「[空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)」を参照してください。  
   
-### [境界ボックス]  
- *境界ボックス*は、幾何平面の最上位レベルのグリッドの境界です。 境界ボックスのパラメーターは、ジオメトリ グリッド テセレーションにのみ存在します。 **[テセレーション スキーム]** が **[地理グリッド]**である場合、これらのパラメーターは使用できません。  
+### <a name="bounding-box"></a>[境界ボックス]  
+ *境界ボックス* は、幾何平面の最上位レベルのグリッドの境界です。 境界ボックスのパラメーターは、ジオメトリ グリッド テセレーションにのみ存在します。 **[テセレーション スキーム]** が **[地理グリッド]**である場合、これらのパラメーターは使用できません。  
   
  パネルには、境界ボックスの座標 **(***X-min***,***Y-min***)** と **(***X-max***,***Y-max***)** が表示されます。 座標の既定値はありません。 そのため、 **geometry** 型の列に新しい空間インデックスを作成する場合は、座標の値を指定する必要があります。  
   
- **[X の最小値]**  
+ **X-min**  
  境界ボックスの左下隅の X 座標。  
   
- **[Y の最小値]**  
+ **Y-min**  
  境界ボックスの左下隅の Y 座標。  
   
- **[X の最大値]**  
+ **X-max**  
  境界ボックスの右上隅の X 座標。  
   
- **[Y の最大値]**  
+ **Y-max**  
  境界ボックスの右上隅の Y 座標。  
   
-### 全般  
+### <a name="general"></a>全般  
  **[テセレーション スキーム]**  
  インデックスのテセレーション スキームを示します。 サポートされているテセレーション スキームは次のとおりです。  
   
@@ -203,23 +207,23 @@ caps.handback.revision: 38
  **geometry** データ型の列に適用される、ジオメトリ グリッド テセレーション スキームを指定します。  
   
  **[ジオメトリ自動グリッド]**  
- このオプションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、データベース互換性レベルが 110 以上に設定されている場合に利用できます。  
+ このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、データベース互換性レベルが 110 以上に設定されている場合に利用できます。  
   
  **[地理グリッド]**  
  **geography** データ型の列に適用される、地理グリッド テセレーション スキームを指定します。  
   
  **[地理自動グリッド]**  
- このオプションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、データベース互換性レベルが 110 以上に設定されている場合に利用できます。  
+ このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、データベース互換性レベルが 110 以上に設定されている場合に利用できます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がテセレーションを実装するしくみについては、「[空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)」を参照してください。  
   
  **[オブジェクトごとのセル数]**  
  インデックスの単一の空間オブジェクトに使用できるオブジェクトごとのテセレーション セル数を示します。 1 ～ 8192 の整数を指定できます。 既定値は 16 ですが、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でデータベース互換性レベルが 110 以上に設定されている場合、既定値は 8 です。  
   
- オブジェクトがセルで指定された数よりについて説明している場合は、最上位レベルに *n*、数のセルに応じて使用して完全な最上位レベルのテセレーションを提供する、インデックスを作成します。 その場合、オブジェクトには指定されたセル数よりも多くのセルが割り当てられることがあります。 このとき、最大数は、**[レベル 1]** の密度に応じて最上位レベルのグリッドで生成されたセルの数となります。  
+ オブジェクトがセルで指定された数よりについて説明している場合は、最上位レベルに *n*、数のセルに応じて使用して完全な最上位レベルのテセレーションを提供する、インデックスを作成します。 その場合、オブジェクトには指定されたセル数よりも多くのセルが割り当てられることがあります。 このとき、最大数は、 **[レベル 1]** の密度に応じて最上位レベルのグリッドで生成されたセルの数となります。  
   
-### [グリッド]  
- このパネルには、テセレーション スキームの各レベルにおけるグリッド密度が表示されます。 密度は、 **[低]**、 **[中]**、または **[高]**で指定されます。 既定値は **[中]**です。 **[低]** は 4 × 4 のグリッド (16 個のセル)、**[中]** は 8 × 8 のグリッド (64 個のセル)、**[高]** は 16 × 16 のグリッド (256 個のセル) を表します。 これらのオプションは、 **[ジオメトリ自動グリッド]** または **[地理自動グリッド]** テセレーション オプションが選択されている場合には使用できません。  
+### <a name="grids"></a>[グリッド]  
+ このパネルには、テセレーション スキームの各レベルにおけるグリッド密度が表示されます。 密度は、 **[低]**、 **[中]**、または **[高]**で指定されます。 既定値は **[中]**です。 **[低]** は 4 × 4 のグリッド (16 個のセル)、 **[中]** は 8 × 8 のグリッド (64 個のセル)、 **[高]** は 16 × 16 のグリッド (256 個のセル) を表します。 これらのオプションは、 **[ジオメトリ自動グリッド]** または **[地理自動グリッド]** テセレーション オプションが選択されている場合には使用できません。  
   
  **[レベル 1]**  
  第 1 レベル (最上位) グリッドの密度です。  
@@ -239,9 +243,10 @@ caps.handback.revision: 38
  **[フィルター式]**  
  フィルター処理されたインデックスにどのデータ行を含めるかを定義します。 例を次に示します。 `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [インデックス オプションの設定](../../relational-databases/indexes/set-index-options.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   
+

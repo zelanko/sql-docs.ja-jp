@@ -1,26 +1,30 @@
 ---
 title: "DDL トリガーに関する情報の取得 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "トリガーのメタデータ [SQL Server]"
-  - "状態情報 [SQL Server], DDL トリガー"
-  - "DDL トリガー, メタデータ"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metadata [SQL Server], triggers
+- status information [SQL Server], DDL triggers
+- DDL triggers, metadata
 ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a0ce4e36a1b396311938b8d57c6d44bf922ca56
+ms.lasthandoff: 04/11/2017
+
 ---
-# DDL トリガーに関する情報の取得
+# <a name="get-information-about-ddl-triggers"></a>DDL トリガーに関する情報の取得
   ここに記載されているカタログ ビューを使用すると、DDL トリガーに関する情報を取得できます。  
   
  **DDL トリガーを起動できるイベントまたはイベント グループに関する情報を取得するには**  
@@ -35,7 +39,7 @@ caps.handback.revision: 31
   
 -   [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
-## データベース スコープの DDL トリガー  
+## <a name="database-scoped-ddl-triggers"></a>データベース スコープの DDL トリガー  
  **データベース スコープのトリガーに関する情報を取得するには**  
   
 -   [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)  
@@ -52,7 +56,7 @@ caps.handback.revision: 31
   
 -   [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)  
   
-## サーバー スコープの DDL トリガー  
+## <a name="server-scoped-ddl-triggers"></a>サーバー スコープの DDL トリガー  
  **サーバー スコープのトリガーに関する情報を取得するには**  
   
 -   [sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)  
@@ -69,7 +73,7 @@ caps.handback.revision: 31
   
 -   [sys.server_assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [DDL トリガー](../../relational-databases/triggers/ddl-triggers.md)  
   
   

@@ -1,31 +1,35 @@
 ---
 title: "ファイルの圧縮 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.shrinkfile.f1"
-helpviewer_keywords: 
-  - "圧縮、ファイル"
-  - "ファイル サイズの縮小"
-  - "データベース [SQL Server]、圧縮"
-  - "ファイル サイズの削減"
-  - "サイズ [SQL Server]、ファイル"
-  - "ファイル サイズ [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.shrinkfile.f1
+helpviewer_keywords:
+- shrinking files
+- decreasing file size
+- databases [SQL Server], shrinking
+- reducing file size
+- size [SQL Server], files
+- file size [SQL Server]
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aaa485184202b4edb301d3c2429f09625e854771
+ms.lasthandoff: 04/11/2017
+
 ---
-# ファイルの圧縮
+# <a name="shrink-a-file"></a>ファイルの圧縮
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のデータ ファイルまたはログ ファイルを圧縮する方法について説明します。  
   
  ファイルの末尾にあるデータのページを、ファイルの先頭に近い占有されていない領域に移動することにより、データ ファイルが圧縮され、領域が回復されます。 ファイル末尾に十分な空き領域が作成された場合は、ファイル末尾のデータ ページの割り当てを解除して、ファイル システムに戻すことができます。  
@@ -63,9 +67,9 @@ caps.handback.revision: 25
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### データ ファイルまたはログ ファイルを圧縮するには  
+#### <a name="to-shrink-a-data-or-log-file"></a>データ ファイルまたはログ ファイルを圧縮するには  
   
-1.  オブジェクト エクスプローラーで、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
+1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
 2.  **[データベース]** を展開し、圧縮するデータベースを右クリックします。  
   
@@ -124,7 +128,7 @@ caps.handback.revision: 25
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### データ ファイルまたはログ ファイルを圧縮するには  
+#### <a name="to-shrink-a-data-or-log-file"></a>データ ファイルまたはログ ファイルを圧縮するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -134,7 +138,7 @@ caps.handback.revision: 25
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../relational-databases/databases/codesnippet/tsql/shrink-a-file_1.sql)]  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)   
  [データベースの圧縮](../../relational-databases/databases/shrink-a-database.md)   
  [データまたはログ ファイルのデータベースからの削除](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)   

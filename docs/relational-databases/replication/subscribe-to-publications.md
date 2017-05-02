@@ -1,36 +1,40 @@
 ---
 title: "パブリケーションのサブスクライブ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.conc.subtopubs.f1"
-helpviewer_keywords: 
-  - "サブスクリプション [SQL Server レプリケーション], サブスクリプションについて"
-  - "プル サブスクリプション [SQL Server レプリケーション]"
-  - "サブスクリプション [SQL Server レプリケーション]"
-  - "プッシュ サブスクリプション [SQL Server レプリケーション], プッシュ サブスクリプションについて"
-  - "マージ レプリケーションのサブスクライブ [SQL Server レプリケーション]"
-  - "マージ レプリケーションのサブスクライブ [SQL Server レプリケーション]、サブスクライブについて"
-  - "パブリケーション [SQL Server レプリケーション], サブスクライブ"
-  - "プッシュ サブスクリプション [SQL Server レプリケーション]"
-  - "プル サブスクリプション [SQL Server レプリケーション], プル サブスクリプションについて"
-  - "スナップショット レプリケーション [SQL Server]、サブスクライブ"
-  - "トランザクション レプリケーション、サブスクライブ"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.conc.subtopubs.f1
+helpviewer_keywords:
+- subscriptions [SQL Server replication], about subscriptions
+- pull subscriptions [SQL Server replication]
+- subscriptions [SQL Server replication]
+- push subscriptions [SQL Server replication], about push subscriptions
+- merge replication subscribing [SQL Server replication]
+- merge replication subscribing [SQL Server replication], about subscribing
+- publications [SQL Server replication], subscribing
+- push subscriptions [SQL Server replication]
+- pull subscriptions [SQL Server replication], about pull subscriptions
+- snapshot replication [SQL Server], subscribing
+- transactional replication, subscribing
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 640c90e4f58c0dc09a732eb26a03808be2097999
+ms.lasthandoff: 04/11/2017
+
 ---
-# パブリケーションのサブスクライブ
+# <a name="subscribe-to-publications"></a>パブリケーションのサブスクライブ
   サブスクリプションとは、パブリケーションのデータとデータベース オブジェクトのコピーを要求することです。 サブスクリプションでは、受信するパブリケーションおよびパブリケーションの受信場所と受信時間が定義されます。 サブスクリプションを設計する場合は、エージェント処理を実行する場所を考慮してください。 選択するサブスクリプションの種類によって、エージェントが実行される場所が決まります。 プッシュ サブスクリプションではマージ エージェントまたはディストリビューション エージェントがディストリビューターで実行されるのに対し、プル サブスクリプションではサブスクライバーでエージェントが実行されます。 サブスクリプションの作成後にその種類を変更することはできません。  
   
 |サブスクリプション|特性|いつ使用するか|  
@@ -38,13 +42,13 @@ caps.handback.revision: 44
 |プッシュ サブスクリプション|プッシュ サブスクリプションでは、サブスクライバーからの要求なしにパブリッシャーが変更をサブスクライバーに反映します。 変更は、要求時、連続的、スケジュールのいずれかの方法に基づいて、サブスクライバーにプッシュできます。 ディストリビューション エージェントまたはマージ エージェントはディストリビューターで実行されます。|連続的に、または定期的なスケジュールで頻繁にデータの同期をとる場合<br /><br /> パブリケーションがほぼリアルタイムのデータの移動を必要とする場合<br /><br /> ディストリビューターのプロセッサのオーバーヘッドが高くなってもパフォーマンスに影響しない場合<br /><br /> スナップショット レプリケーションとトランザクション レプリケーションで最も頻繁に使用する場合|  
 |プル サブスクリプション|プル サブスクリプションでは、パブリッシャーで変更を行うようにサブスクライバーが要求します。 プル サブスクリプションでは、サブスクライバーのユーザーがデータの変更をいつ同期するかを指定できます。 ディストリビューション エージェントまたはマージ エージェントはサブスクライバーで実行されます。|連続的ではなく、要求時またはスケジュールに基づいてデータを同期する場合<br /><br /> パブリケーションに多くのサブスクライバーがある場合、またはリソースの消費が大きすぎてディストリビューターですべてのエージェントを実行できない場合 (またはその両方)<br /><br /> サブスクライバーが独立しているか、接続解除されているか、またはモバイルである場合。 サブスクライバーでは、いつ接続して変更を同期するかが決定されます。<br /><br /> マージ レプリケーションで最も頻繁に使用する場合|  
   
-## マージ レプリケーション サブスクリプションの種類  
+## <a name="merge-replication-subscription-types"></a>マージ レプリケーション サブスクリプションの種類  
  すべての種類のレプリケーションでプッシュ サブスクリプションとプル サブスクリプションが使用できます。 マージ レプリケーションでは、2 つのサブスクリプションを区別するために、クライアント サブスクリプションとサーバー サブスクリプションという語を使用します。 クライアント サブスクリプションとサーバー サブスクリプションのどちらの種類も、プッシュ サブスクリプションとプル サブスクリプションで使用できます。 クライアント サブスクリプションはほとんどのサブスクライバーに適していますが、サーバー サブスクリプションは通常、データを他のサブスクライバーに再パブリッシュするサブスクライバーで使用されます。 サブスクリプションの選択は、競合の解決にも影響します。  
   
-## SQL Server 以外のサブスクライバー  
- Oracle および IBM DB2 は、プッシュ サブスクリプションを使用してスナップショット パブリケーションとトランザクション パブリケーションをサブスクライブできます。 詳細については、次を参照してください。 [非 SQL Server サブスクライバー](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)します。  
+## <a name="non-sql-server-subscribers"></a>SQL Server 以外のサブスクライバー  
+ Oracle および IBM DB2 は、プッシュ サブスクリプションを使用してスナップショット パブリケーションとトランザクション パブリケーションをサブスクライブできます。 詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。  
   
-## サブスクリプションの作成  
+## <a name="creating-subscriptions"></a>サブスクリプションの作成  
  サブスクリプションを作成するには、次の情報を指定します。  
   
 -   パブリケーションの名前を指定します。  
@@ -67,29 +71,29 @@ caps.handback.revision: 44
   
  **プッシュ サブスクリプションのプロパティを表示または変更するには**  
   
- [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)  
+ [プッシュ サブスクリプションのプロパティの表示または変更](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)  
   
  **プッシュ サブスクリプションを削除するには**  
   
- [!含める [ssManStudioFull] (../Token/ssManStudioFull_md.md)]: [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)  
   
 > [!NOTE]  
 >  サブスクリプションを削除しても、パブリッシュされたオブジェクトはサブスクライバーから削除されません。  
   
  **プル サブスクリプションを作成するには**  
   
- [!含める [ssManStudioFull] (../Token/ssManStudioFull_md.md)]: [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)  
   
  **プル サブスクリプションのプロパティを表示または変更するには**  
   
- [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)  
+ [プル サブスクリプションのプロパティの表示または変更](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)  
   
  **プル サブスクリプションを削除するには**  
   
- [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)  
+ [プル サブスクリプションの削除](../../relational-databases/replication/delete-a-pull-subscription.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [サブスクライバーのセキュリティ保護](../../relational-databases/replication/security/secure-the-subscriber.md)   
- [サブスクリプションの有効期限と非アクティブ化](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
+ [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
   

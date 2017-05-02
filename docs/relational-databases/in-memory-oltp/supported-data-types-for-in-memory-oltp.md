@@ -1,22 +1,26 @@
 ---
 title: "インメモリ OLTP に対してサポートされるデータ型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 05/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 caps.latest.revision: 26
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a928c1f77586198fd0d33cafa445ea406a437c6b
+ms.lasthandoff: 04/11/2017
+
 ---
-# インメモリ OLTP に対してサポートされるデータ型
+# <a name="supported-data-types-for-in-memory-oltp"></a>インメモリ OLTP に対してサポートされるデータ型
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   この記事では、次のインメモリ OLTP 機能でサポートされていないデータ型の一覧を示します。  
@@ -25,16 +29,16 @@ caps.handback.revision: 26
   
 -   ネイティブ コンパイル ストアド プロシージャ  
   
-## サポートされていないデータ型  
+## <a name="unsupported-data-types"></a>サポートされていないデータ型  
  次のデータ型はサポートされません。  
   
 ||||  
 |-|-|-|  
-|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)|[geography &#40;Transact-SQL&#41;](../Topic/geography%20\(Transact-SQL\).md)|[geometry &#40;Transact-SQL&#41;](../Topic/geometry%20\(Transact-SQL\).md)|  
-|[hierarchyid &#40;Transact-SQL&#41;](../Topic/hierarchyid%20\(Transact-SQL\).md)|[rowversion &#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md)|[xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md)|  
+|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)|[geography &#40;Transact-SQL&#41;](../../t-sql/spatial-geography/spatial-types-geography.md)|[geometry &#40;Transact-SQL&#41;](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)|  
+|[hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)|[rowversion &#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md)|[xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md)|  
 |[sql_variant &#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)|ユーザー定義型|」を参照してください。|  
   
-## サポートされる重要なデータ型  
+## <a name="notable-supported-data-types"></a>サポートされる重要なデータ型  
  インメモリ OLTP の機能では、ほとんどのデータ型がサポートされています。 次のデータ型は特に重要です。  
   
 |文字列型とバイナリ型|詳細情報|  
@@ -45,18 +49,18 @@ caps.handback.revision: 26
   
 上記の文字列データ型とバイナリ データ型については、SQL Server 2016 以降は次のようになります。  
   
-- 個々のメモリ最適化テーブルには、それらの長さが 8,060 バイトの物理行サイズを超えることがあっても、`nvarchar(4000)` などの複数の長い列が含まれている場合があります。  
+- 個々のメモリ最適化テーブルには、それらの長さが 8,060 バイトの物理行サイズを超えることがあっても、 `nvarchar(4000)`などの複数の長い列が含まれている場合があります。  
   
-- メモリ最適化テーブルには、`varchar(max)` などのデータ型の最大長の文字列やバイナリ列がある場合があります。  
+- メモリ最適化テーブルには、 `varchar(max)`などのデータ型の最大長の文字列やバイナリ列がある場合があります。  
 
 
-### 行外の LOB 列およびその他の列の特定
+### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>行外の LOB 列およびその他の列の特定
 
-次の Transact-SQL SELECT ステートメントにより、メモリ最適化テーブルの行外のすべての列のレポートが生成されます。  次の点に注意してください。
+次の Transact-SQL SELECT ステートメントにより、メモリ最適化テーブルの行外のすべての列のレポートが生成されます。 次の点に注意してください。
 
 - インデックス キー列はすべて行内に格納されます。
   - メモリ最適化テーブルでは、一意ではないインデックス キーが、NULL 値を許容する列を含むことができるようになりました。
-  - メモリ最適化テーブルでは、インデックスを UNIQUE として宣言できます。 
+  - メモリ最適化テーブルでは、インデックスを UNIQUE として宣言できます。
 - すべての LOB 列は行外に格納されます。
 - max_length の -1 は、ラージ オブジェクト (LOB) 列を表します。
 
@@ -76,7 +80,7 @@ SELECT
 ```
 
 
-#### ネイティブ コンパイル モジュールでの LOB のサポート
+#### <a name="natively-compiled-modules-support-for-lobs"></a>ネイティブ コンパイル モジュールでの LOB のサポート
 
 
 組み込み文字列関数をネイティブ  コンパイル モジュール (ネイティブ プロシージャなど) で使用すると、関数により LOB 型の文字列が受け入れられます。 たとえば、ネイティブ プロシージャで LTrim 関数を使用すると、nvarchar(max) 型や varbinary(max) 型のパラメーターを入力することができます。
@@ -84,16 +88,17 @@ SELECT
 これらの LOB は、ネイティブ コンパイル スカラー UDF (ユーザー定義関数) からの戻り値を指定することもできます。
 
 
-### その他のデータ型
+### <a name="other-data-types"></a>その他のデータ型
 
 
 |その他の型|詳細情報|  
 |-----------------|--------------------------|  
-|テーブル型|[メモリ最適化テーブル変数](../Topic/Memory-Optimized%20Table%20Variables.md)|  
+|テーブル型|[メモリ最適化テーブル変数](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Transact-SQL によるインメモリ OLTP のサポート](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
- [メモリ最適化テーブルへの LOB 列の実装](http://msdn.microsoft.com/ja-jp/bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e)   
+ [メモリ最適化テーブルへの LOB 列の実装](http://msdn.microsoft.com/en-us/bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e)   
  [メモリ最適化テーブルへの SQL_VARIANT の実装](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
   
   
+

@@ -1,29 +1,33 @@
 ---
 title: "ロックを保持しているクエリの特定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "クエリ [SQL Serve ]、拡張イベント"
-  - "クエリ [SQL Server]、ロックの保持"
-  - "xe"
-  - "拡張イベント [SQL Server]、ロック"
-  - "拡張イベント [SQL Server]、ロックの保持"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [SQL Server], extended events
+- queries [SQL Server], holding locks
+- xe
+- extended events [SQL Server], locks
+- extended events [SQL Server], holding locks
 ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 291043a0e143f876db5091a18c655bcd78a9857f
+ms.lasthandoff: 04/11/2017
+
 ---
-# ロックを保持しているクエリの特定
+# <a name="determine-which-queries-are-holding-locks"></a>ロックを保持しているクエリの特定
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   データベース管理者は、データベース パフォーマンスを低下させているロックのソースを特定しなければならないことがよくあります。  
@@ -34,12 +38,12 @@ caps.handback.revision: 15
   
  次の例では、ロックが取得されたときのクエリ、クエリのプラン、および [!INCLUDE[tsql](../../includes/tsql-md.md)] スタックを特定する方法を示します。 さらに、拡張イベント セッションでのペアリング ターゲットの使用法も示します。  
   
- この作業には、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターを使用した次の手順の実行も含まれます。  
+ この作業には、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターを使用した次の手順の実行も含まれます。  
   
 > [!NOTE]  
 >  この例では、AdventureWorks データベースを使用します。  
   
-### ロックを保持しているクエリを特定するには  
+### <a name="to-determine-which-queries-are-holding-locks"></a>ロックを保持しているクエリを特定するには  
   
 1.  クエリ エディターで、次のステートメントを実行します。  
   
@@ -153,7 +157,7 @@ caps.handback.revision: 15
     DROP EVENT SESSION FindBlockers ON SERVER  
     ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   

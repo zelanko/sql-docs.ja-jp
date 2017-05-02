@@ -1,33 +1,37 @@
 ---
 title: "データ層アプリケーション | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DAC の設計"
-  - "操作方法 [DAC]"
-  - "データ層アプリケーション [SQL Server], 設計"
-  - "ウィザード [DAC]"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- designing DACs
+- How to [DAC]
+- data-tier application [SQL Server], designing
+- wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 319f0adb5f8f537b697caa401efcb3e0054d79ee
+ms.lasthandoff: 04/11/2017
+
 ---
-# データ層アプリケーション
+# <a name="data-tier-applications"></a>データ層アプリケーション
   データ層アプリケーション (DAC) は、テーブル、ビュー、インスタンス オブジェクト (ログインを含む) など、ユーザーのデータベースに関連付けられたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを定義する論理的なデータベース管理エンティティです。 DAC は、データ層の開発者とデータベース管理者が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを DAC パッケージ (DACPAC とも呼ばれます) という移植可能なアーティファクトにパッケージ化できるようにする自己完結型の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース配置単位です。  
   
  BACPAC は、データベース スキーマおよびデータベースに格納されているデータをカプセル化する関連アーティファクトです。  
   
-## データ層アプリケーションの利点  
+## <a name="benefits-of-data-tier-applications"></a>データ層アプリケーションの利点  
  ほとんどのデータベース アプリケーションのライフサイクルでは、開発者と DVA が共有および交換するスクリプトと、アプリケーションの更新およびメンテナンス アクティビティ用のアドホック統合メモが使用されます。 これは少数のデータベースでは許容されますが、データベースの数、サイズ、および複雑さが増大するとすぐにスケーラブルでなくなります。  
   
  DAC は、宣言的なデータベース開発で配置と管理を簡略化できるようにするデータベース ライフ サイクル管理および生産性ツールです。 開発者は、SQL Server データ ツール データベース プロジェクトでデータベースを作成してから、DBA に渡すためにデータベースを DACPAC に構築できます。 DBA は、SQL Server Management Studio を使用して DAC を配置して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]のテスト インスタンスまたは実稼働インスタンスをテストできます。 また、DBA は DACPAC を使用して、SQL Server Management Studio で以前に配置したデータベースをアップグレードできます。 ライフサイクルを完了するために、DBA はデータベースを DACPAC に抽出し、開発者に渡して、テストまたは実稼働の調整を反映したり、アプリケーションの変更に応じたデータベース デザインの変更を可能にしたりできます。  
@@ -36,7 +40,7 @@ caps.handback.revision: 31
   
  DAC では、開発者と DBA がデータベースのライフサイクルにわたってデータベース系列をメンテナンスおよび管理するのに役立つバージョン管理もサポートされます。  
   
-## DAC の概念  
+## <a name="dac-concepts"></a>DAC の概念  
  DAC を使用すると、次のような点で、アプリケーションをサポートするデータ層要素の開発、配置、および管理が容易になります。  
   
 -   データ層アプリケーション (DAC) は、テーブル、ビュー、インスタンス オブジェクトなど、ユーザーのデータベースに関連付けられたすべての SQL Server オブジェクトを定義する論理的なデータベース管理エンティティです。 データ層の開発者と DBA が SQL Server オブジェクトを DAC パッケージまたは .dacpac ファイルと呼ばれる移植可能なアーティファクトにパッケージ化できるようにする自己完結型の SQL Server データベース配置単位です。  
@@ -55,7 +59,7 @@ caps.handback.revision: 31
   
 -   ユーザーがデータベースを作成 (DAC パッケージを配置することによるデータベースの作成を含む) するには、dbmanager ロールのメンバーであるか、CREATE DATABASE 権限が割り当てられている必要があります。 ユーザーがデータベースを削除するには、dbmanager ロールのメンバーであるか、DROP DATABASE 権限を割り当てられている必要があります。  
   
-## DAC ツール  
+## <a name="dac-tools"></a>DAC ツール  
  DACPAC は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に付属の複数のツール間でシームレスに使用できます。 これらのツールは、相互運用性の単位として DACPAC を使用して、異なるユーザーの要件に対処します。  
   
 -   アプリケーション開発者:  
@@ -66,7 +70,7 @@ caps.handback.revision: 31
   
 SQL Server データ ツールでは、接続されていないクライアント側データベース アプリケーション配置用のローカル DB もサポートされます。 開発者は、このローカル データベースのスナップショットを作成して、.dacpac ファイルに含まれる DACPAC を作成できます。  
   
-    -   Independently, the developer can publish a database project directly to a database without even generating a DACPAC. The publish operation follows similar behavior as the deploy operation from other tools.  
+    -   それとは別に、開発者は、DACPAC を生成しなくても、データベースにデータベース プロジェクトを直接パブリッシュできます。 パブリッシュ操作の後に、他のツールからの配置操作などの同様の動作が続きます。  
   
 -   データベース管理者:  
   
@@ -82,7 +86,7 @@ SQL Server データ ツールでは、接続されていないクライアン�
   
     -   IT システム インテグレーターと管理者は、DAC 操作に SqlPackage.exe コマンド ライン ツールを使用できます。  
   
-## DAC 操作  
+## <a name="dac-operations"></a>DAC 操作  
  DAC では、以下のオブジェクトがサポートされています。  
   
 -   **EXTRACT** : ユーザーはデータベースを DACPAC に抽出できます。  
@@ -95,7 +99,7 @@ SQL Server データ ツールでは、接続されていないクライアン�
   
 -   **UPGRADE** : DACPAC を使用してデータベースをアップグレードできます。 アップグレードは、データ層アプリケーションとして登録されていないデータベースでもサポートされますが、アップグレードの結果として、データベースが暗黙的に登録されます。  
   
-## BACPAC  
+## <a name="bacpac"></a>BACPAC  
  BACPAC は .bacpac 拡張子を持つ Windows ファイルで、データベースのスキーマとデータをカプセル化します。 BACPAC の基本的なユース ケースは、あるサーバーから別のサーバーにデータベースを移動、または[ローカル サーバーからクラウドにデータベースを移行](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)し、既存のデータベースをオープン フォーマットでアーカイブすることです。  
   
  DACPAC と同様に、BACPAC ファイル形式は公開されており、BACPAC のスキーマ コンテンツは DACPAC のスキーマ コンテンツと同じです。 BACPAC 内のデータは JSON 形式で格納されます。  
@@ -110,10 +114,10 @@ SQL Server データ ツールでは、接続されていないクライアン�
   
  この両方の機能が、データベース管理ツール (SQL Server Management Studio、Azure ポータル、DACFx API) でサポートされます。  
   
-## アクセス許可  
+## <a name="permissions"></a>アクセス許可  
  データベースを作成 (DAC パッケージを配置することによるデータベースの作成を含む) するには、 **dbmanager** ロールのメンバーであるか、 **CREATE DATABASE** 権限が割り当てられている必要があります。 データベースを削除するには、 **dbmanager** ロールのメンバーであるか、 **DROP DATABASE** 権限が割り当てられている必要があります。  
   
-## データ層アプリケーションのタスク  
+## <a name="data-tier-application-tasks"></a>データ層アプリケーションのタスク  
   
 |タスク|トピック|  
 |----------------------|-----------|  
@@ -129,7 +133,8 @@ SQL Server データ ツールでは、接続されていないクライアン�
 |DAC パッケージの内容をフォルダーに配置し、そのフォルダーで、DAC を実稼働サーバーに配置する前に DAC の動作内容をデータベース管理者が確認できるようにする方法について説明します。|[DAC パッケージのアンパック](../../relational-databases/data-tier-applications/unpack-a-dac-package.md)|  
 |ウィザードを使用して既存のデータベースを配置する方法について説明します。 ウィザードでは DAC を使用して配置を実行します。|[DAC を使用したデータベースの配置](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server オブジェクトとバージョンの DAC サポート](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
   
   
+

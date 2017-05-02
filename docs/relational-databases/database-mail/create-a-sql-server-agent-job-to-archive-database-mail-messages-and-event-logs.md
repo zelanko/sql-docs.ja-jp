@@ -1,32 +1,36 @@
 ---
 title: "データベース メール メッセージやイベント ログをアーカイブする SQL Server エージェント ジョブの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "メール メッセージと添付ファイルのアーカイブ [SQL Server]"
-  - "メール メッセージと添付ファイルの削除"
-  - "データベース メール [SQL Server]、アーカイブ"
-  - "メール メッセージと添付ファイルの保存"
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- archiving mail messages and attachments [SQL Server]
+- removing mail messages and attachements
+- Database Mail [SQL Server], archiving
+- saving mail messages and attachments
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfba800ce9266e7a27c6e27e8e3ea9dfc2f2b08e
+ms.lasthandoff: 04/11/2017
+
 ---
-# データベース メール メッセージやイベント ログをアーカイブする SQL Server エージェント ジョブの作成
+# <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>データベース メール メッセージやイベント ログをアーカイブする SQL Server エージェント ジョブの作成
   データベース メール メッセージと添付ファイルのコピーは、データベース メール イベント ログに記録されると同時に、 **msdb** のテーブルに保持されます。 このテーブルのサイズを縮小するためには、不要になったメッセージやイベントを定期的にアーカイブする必要があります。 次の手順では、この処理を自動化する SQL Server エージェント ジョブを作成します。  
   
 -   **作業を開始する準備:**  、 [前提条件](#Prerequisites)、 [推奨事項](#Recommendations)、 [権限](#Permissions)  
   
--   **データベース メール メッセージおよびログをアーカイブする方法:**  [SQL Server エージェント](#Process_Overview)  
+-   **To Archive Database Mail messages and logs using :**  [SQL Server Agent](#Process_Overview)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 19
  運用環境では、詳細なエラー チェックを追加したり、ジョブが失敗した場合には電子メール メッセージをオペレーターに送信したりする必要があるでしょう。  
   
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 権限  
  このトピックで説明したストアド プロシージャを実行するには、 **sysadmin** 固定サーバー ロールのメンバーである必要があります。  
   
   
@@ -45,11 +49,11 @@ caps.handback.revision: 19
   
 -   まず、次のステップから構成される "データベース メールのアーカイブ" という名前のジョブを作成します。  
   
-    1.  すべてのメッセージをデータベース メールのテーブルから新しいテーブルにコピーします。新しいテーブルには、**DBMailArchive_***\<年_月>* の形式で、前の月を表す文字列を付加した名前を付けます。  
+    1.  すべてのメッセージをデータベース メールのテーブルから新しいテーブルにコピーします。新しいテーブルには、**DBMailArchive_***<年_月>* の形式で、前の月を表す文字列を付加した名前を付けます。  
   
-    2.  最初のステップでコピーしたメッセージに関連する添付ファイルをデータベース メールのテーブルから新しいテーブルにコピーします。新しいテーブルには、**DBMailArchive_Attachments_***\<年_月>* の形式で、前の月を表す文字列を付加した名前を付けます。  
+    2.  最初のステップでコピーしたメッセージに関連する添付ファイルをデータベース メールのテーブルから新しいテーブルにコピーします。新しいテーブルには、**DBMailArchive_Attachments_***<年_月>* の形式で、前の月を表す文字列を付加した名前を付けます。  
   
-    3.  最初のステップでコピーしたメッセージに関連するデータベース メール イベント ログからのイベントを、データベース メールのテーブルから新しいテーブルにコピーします。新しいテーブルには、**DBMailArchive_Log_***\<年_月>* の形式で、前の月を表す文字列を付加した名前を付けます。  
+    3.  最初のステップでコピーしたメッセージに関連するデータベース メール イベント ログからのイベントを、データベース メールのテーブルから新しいテーブルにコピーします。新しいテーブルには、**DBMailArchive_Log_***<年_月>* の形式で、前の月を表す文字列を付加した名前を付けます。  
   
     4.  移し変えたメール アイテムのレコードをデータベース メールのテーブルから削除します。  
   
@@ -58,9 +62,9 @@ caps.handback.revision: 19
 -   ジョブが定期的に実行されるようにスケジュールを設定します。  
   
   
-## SQL Server エージェントのジョブを作成するには  
+## <a name="to-create-a-sql-server-agent-job"></a>SQL Server エージェントのジョブを作成するには  
   
-1.  オブジェクト エクスプローラーで [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント] を展開し、**[ジョブ]** を右クリックして、**[新しいジョブ]** をクリックします。  
+1.  オブジェクト エクスプローラーで [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント] を展開し、 **[ジョブ]**を右クリックして、 **[新しいジョブ]**をクリックします。  
   
 2.  **[新しいジョブ]** ダイアログ ボックスで、 **[名前]** ボックスに「 **データベース メールのアーカイブ**」と入力します。  
   
@@ -72,13 +76,13 @@ caps.handback.revision: 19
   
  [概要](#Process_Overview)  
   
-## データベース メールのメッセージをアーカイブするステップを作成するには  
+## <a name="to-create-a-step-to-archive-the-database-mail-messages"></a>データベース メールのメッセージをアーカイブするステップを作成するには  
   
 1.  **[ステップ]** ページで **[新規作成]**をクリックします。  
   
 2.  **[ステップ名]** ボックスに「 **データベース メール アイテムのコピー**」と入力します。  
   
-3.  **[種類]** ボックスで **[Transact-SQL スクリプト (T-SQL)]** をクリックします。  
+3.  **[種類]** ボックスで **[Transact-SQL スクリプト (T-SQL)]**をクリックします。  
   
 4.  **[データベース]** ボックスで **[msdb]**をクリックします。  
   
@@ -98,13 +102,13 @@ caps.handback.revision: 19
   
  [概要](#Process_Overview)  
   
-## データベース メールの添付ファイルをアーカイブするステップを作成するには  
+## <a name="to-create-a-step-to-archive-the-database-mail-attachments"></a>データベース メールの添付ファイルをアーカイブするステップを作成するには  
   
 1.  **[ステップ]** ページで **[新規作成]**をクリックします。  
   
 2.  **[ステップ名]** ボックスに「 **データベース メール添付ファイルのコピー**」と入力します。  
   
-3.  **[種類]** ボックスで **[Transact-SQL スクリプト (T-SQL)]** をクリックします。  
+3.  **[種類]** ボックスで **[Transact-SQL スクリプト (T-SQL)]**をクリックします。  
   
 4.  **[データベース]** ボックスで **[msdb]**をクリックします。  
   
@@ -125,13 +129,13 @@ caps.handback.revision: 19
   
  [概要](#Process_Overview)  
   
-## データベース メールのログをアーカイブするステップを作成するには  
+## <a name="to-create-a-step-to-archive-the-database-mail-log"></a>データベース メールのログをアーカイブするステップを作成するには  
   
 1.  **[ステップ]** ページで **[新規作成]**をクリックします。  
   
 2.  **[ステップ名]** ボックスに「 **データベース メール ログのコピー**」と入力します。  
   
-3.  **[種類]** ボックスで **[Transact-SQL スクリプト (T-SQL)]** をクリックします。  
+3.  **[種類]** ボックスで **[Transact-SQL スクリプト (T-SQL)]**をクリックします。  
   
 4.  **[データベース]** ボックスで **[msdb]**をクリックします。  
   
@@ -152,13 +156,13 @@ caps.handback.revision: 19
   
  [概要](#Process_Overview)  
   
-## データベース メールからアーカイブされた行を削除するステップを作成するには  
+## <a name="to-create-a-step-to-remove-the-archived-rows-from-database-mail"></a>データベース メールからアーカイブされた行を削除するステップを作成するには  
   
 1.  **[ステップ]** ページで **[新規作成]**をクリックします。  
   
 2.  **[ステップ名]** ボックスに「 **データベース メールからの行の削除**」と入力します。  
   
-3.  **[種類]** ボックスで **[Transact-SQL スクリプト (T-SQL)]** をクリックします。  
+3.  **[種類]** ボックスで **[Transact-SQL スクリプト (T-SQL)]**をクリックします。  
   
 4.  **[データベース]** ボックスで **[msdb]**をクリックします。  
   
@@ -174,13 +178,13 @@ caps.handback.revision: 19
   
  [概要](#Process_Overview)  
   
-## データベース メール イベント ログからアーカイブされたアイテムを削除するステップを作成するには  
+## <a name="to-create-a-step-to-remove-the-archived-items-from-database-mail-event-log"></a>データベース メール イベント ログからアーカイブされたアイテムを削除するステップを作成するには  
   
 1.  **[ステップ]** ページで **[新規作成]**をクリックします。  
   
 2.  **[ステップ名]** ボックスに「 **データベース メール イベント ログからの行の削除**」と入力します。  
   
-3.  **[種類]** ボックスで **[Transact-SQL スクリプト (T-SQL)]** をクリックします。  
+3.  **[種類]** ボックスで **[Transact-SQL スクリプト (T-SQL)]**をクリックします。  
   
 4.  **[コマンド]** ボックスに次のステートメントを入力します。このステートメントでは、データベース メールのイベント ログから今月よりも古い行が削除されます。  
   
@@ -194,7 +198,7 @@ caps.handback.revision: 19
   
  [概要](#Process_Overview)  
   
-## ジョブが定期的に実行されるようにスケジュールを設定するには  
+## <a name="to-schedule-the-job-to-run-periodically"></a>ジョブが定期的に実行されるようにスケジュールを設定するには  
   
 1.  **[新しいジョブ]** ダイアログ ボックスで **[スケジュール]**をクリックします。  
   
@@ -206,7 +210,7 @@ caps.handback.revision: 19
   
 5.  **[頻度]** 領域で、たとえば毎月 1 回など、定期的にジョブを実行するオプションを選択します。  
   
-6.  **[一日のうちの頻度]** 領域で、**[Occurs once at \<time>]** (\<時刻> に 1 度実行) を選びます。  
+6.  **[一日のうちの頻度]** 領域で、**[Occurs once at <time\<]** (<時刻> に 1 度実行) を選びます。  
   
 7.  その他のオプションが目的どおりに構成されていることを確認し、 **[OK]** をクリックしてスケジュールを保存します。  
   
@@ -215,3 +219,4 @@ caps.handback.revision: 19
  [概要](#Process_Overview)  
   
   
+

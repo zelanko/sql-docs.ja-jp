@@ -1,22 +1,26 @@
 ---
 title: "メモリ最適化テーブルのパーティション分割に関するアプリケーションのパターン | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 30bcdf16b27cf4f85fca86c8daeeeec210798c07
+ms.lasthandoff: 04/11/2017
+
 ---
-# メモリ最適化テーブルのパーティション分割に関するアプリケーションのパターン
+# <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>メモリ最適化テーブルのパーティション分割に関するアプリケーションのパターン
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] は、限られた量のアクティブなデータがメモリ最適化テーブルに保持される一方、アクセス頻度の低いデータはディスクで処理される、というパターンをサポートします。 通常、これはデータが **datetime** キーに基づいて格納されるシナリオです。  
@@ -35,14 +39,14 @@ caps.handback.revision: 20
   
 -   アクティブなパーティションを追加します。  
   
- ![Partition switch.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Partition switch.")  
+ ![パーティションの切り替え](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Partition switch.")  
 アクティブなデータの管理  
   
  ActiveOrders の削除で始まる操作は、データの削除とステージング テーブルでの切り替えの間のクエリのデータ欠落を回避するために、メンテナンス期間中に実行する必要があります。  
   
- 関連サンプルについては、「[アプリケーション レベルのパーティション分割](../../relational-databases/in-memory-oltp/application-level-partitioning.md)」を参照してください。  
+ 関連サンプルについては、「 [アプリケーション レベルのパーティション分割](../../relational-databases/in-memory-oltp/application-level-partitioning.md)」を参照してください。  
   
-## コード サンプル  
+## <a name="code-sample"></a>コード サンプル  
  次の例は、メモリ最適化テーブルとディスク ベースのパーティション テーブルの使用方法を示しています。 頻繁に使用されるデータはメモリに格納されます。 ディスクにデータを保存するには、新しいパーティションを作成し、パーティション テーブルにデータをコピーします。  
   
  このサンプルの最初の部分では、データベースおよび必要なオブジェクトを作成します。 サンプルの 2 番目の部分では、メモリ最適化テーブルからパーティション テーブルにデータを移動する方法を示します。  
@@ -210,7 +214,7 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
   WHERE object_id = OBJECT_ID( 'dbo.SalesOrders_cold') AND index_id = 1;  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

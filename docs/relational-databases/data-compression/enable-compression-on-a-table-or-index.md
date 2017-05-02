@@ -1,34 +1,38 @@
 ---
 title: "テーブルまたはインデックスの圧縮の有効化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.compwiz.compressiontype.f1"
-  - "sql13.swb.compwiz.outputoptions.f1"
-  - "sql13.swb.compwiz.summary.f1"
-  - "sql13.swb.compwiz.scriptfileoption.f1"
-  - "sql13.swb.compwiz.progress.f1"
-  - "sql13.swb.compwiz.welcome.f1"
-  - "sql13.swb.compwiz.createjob.f1"
-  - "sql13.swb.compwiz.selectaction.f1"
-helpviewer_keywords: 
-  - "データ圧縮ウィザード"
-  - "圧縮 [SQL Server], 有効化"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-compression
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.compwiz.compressiontype.f1
+- sql13.swb.compwiz.outputoptions.f1
+- sql13.swb.compwiz.summary.f1
+- sql13.swb.compwiz.scriptfileoption.f1
+- sql13.swb.compwiz.progress.f1
+- sql13.swb.compwiz.welcome.f1
+- sql13.swb.compwiz.createjob.f1
+- sql13.swb.compwiz.selectaction.f1
+helpviewer_keywords:
+- data compression wizard
+- compression [SQL Server], enable
 ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7eb93de0ce823f0f7efe02dc1c69b590a317237f
+ms.lasthandoff: 04/11/2017
+
 ---
-# テーブルまたはインデックスの圧縮の有効化
+# <a name="enable-compression-on-a-table-or-index"></a>テーブルまたはインデックスの圧縮の有効化
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、テーブルまたはインデックスで圧縮を有効にする方法について説明します。  
   
  **このトピックの内容**  
@@ -51,7 +55,7 @@ caps.handback.revision: 10
   
 -   システム テーブルで圧縮を有効にすることはできません。  
   
--   テーブルがヒープの場合、ONLINE モードでは、再構築操作がシングル スレッドになります。 マルチスレッドのヒープの再構築操作では、OFFLINE モードを使用してください。 データ圧縮の詳細については、「[データの圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
+-   テーブルがヒープの場合、ONLINE モードでは、再構築操作がシングル スレッドになります。 マルチスレッドのヒープの再構築操作では、OFFLINE モードを使用してください。 データ圧縮の詳細については、「 [データの圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
   
 -   固定されていないインデックスがテーブルにある場合、そのパーティションの圧縮設定を変更できません。  
   
@@ -62,13 +66,13 @@ caps.handback.revision: 10
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### テーブルまたはインデックスの圧縮を有効にするには  
+#### <a name="to-enable-compression-on-a-table-or-index"></a>テーブルまたはインデックスの圧縮を有効にするには  
   
 1.  オブジェクト エクスプローラーで、圧縮するテーブルを含むデータベースを展開します。次に、 **[テーブル]** フォルダーを展開します。  
   
 2.  インデックスを圧縮するには、圧縮するインデックスを含むテーブルを展開します。次に、 **[インデックス]** フォルダーを展開します。  
   
-3.  圧縮するテーブルまたはインデックスを右クリックし、**[ストレージ]** をポイントして、**[圧縮の管理]** をクリックします。  
+3.  圧縮するテーブルまたはインデックスを右クリックし、 **[ストレージ]** をポイントして、 **[圧縮の管理]**をクリックします。  
   
 4.  データ圧縮ウィザードの **[データ圧縮ウィザードへようこそ]** ページで、 **[次へ]**をクリックします。  
   
@@ -95,7 +99,7 @@ caps.handback.revision: 10
      このパーティションが占有する現在の領域をメガバイト (MB) 単位で表示します。 この列は読み取り専用です。  
   
      **[要求された圧縮の領域]**  
-     **[計算]** をクリックした場合に、**[圧縮の種類]** 列で指定された設定を使用して圧縮した後の、各パーティションの推定サイズがこの列に表示されます。 この列は読み取り専用です。  
+     **[計算]**をクリックした場合に、 **[圧縮の種類]** 列で指定された設定を使用して圧縮した後の、各パーティションの推定サイズがこの列に表示されます。 この列は読み取り専用です。  
   
      **[計算]**  
      **[圧縮の種類]** 列で指定された設定を使用して圧縮した後の、各パーティションのサイズを推定する場合にクリックします。  
@@ -141,19 +145,19 @@ caps.handback.revision: 10
   
                 -   **[日]**を選択した場合は、ジョブ スケジュールを実行する日付と、ジョブ スケジュールを繰り返す頻度を月単位で指定します。 たとえば、隔月の 15 日にジョブ スケジュールを実行する場合は、 **[月単位]** を選択し、1 番目のボックスに「15」と入力し、2 番目のボックスに「2」と入力します。 2 番目のボックスで使用できる最大の値は 99 であることに注意してください。  
   
-                -   **[曜日]**を選択した場合は、ジョブ スケジュールを実行する曜日と、ジョブ スケジュールを繰り返す頻度を月単位で指定します。 たとえば、隔月の最後の平日にジョブ スケジュールを実行する場合は、 **[日]**を選択し、リストから **[最終]** を選択します。次に 2 番目のリストから **[平日]** を選択し、最後のボックスに「2」と入力します。 最初の 2 つのリストでは、特定の平日 (たとえば、日曜日や水曜日) に加えて、**[第 1]**、**[第 2]**、**[第 3]**、または **[第 4]** を選択できます。 最後のボックスで使用できる最大の値は 99 であることに注意してください。  
+                -   **[曜日]**を選択した場合は、ジョブ スケジュールを実行する曜日と、ジョブ スケジュールを繰り返す頻度を月単位で指定します。 たとえば、隔月の最後の平日にジョブ スケジュールを実行する場合は、 **[日]**を選択し、リストから **[最終]** を選択します。次に 2 番目のリストから **[平日]** を選択し、最後のボックスに「2」と入力します。 最初の 2 つのリストでは、特定の平日 (たとえば、日曜日や水曜日) に加えて、 **[第 1]**、 **[第 2]**、 **[第 3]**、または **[第 4]**を選択できます。 最後のボックスで使用できる最大の値は 99 であることに注意してください。  
   
         2.  **[一日のうちの頻度]**で、頻度、ジョブ スケジュールを実行する当日にジョブ スケジュールを繰り返す頻度を指定します。  
   
             -   **[1 回]**を選択した場合は、ジョブ スケジュールを実行する特定の時刻を **[1 回]** ボックスに入力します。 間、分、秒に加え、午前か午後かを入力します。  
   
-            -   **[間隔]**を選択した場合は、 **[頻度]**で選択した日にジョブ スケジュールを実行する頻度を指定します。 たとえば、ジョブ スケジュールを実行する当日に 2 時間おきにジョブ スケジュールを実行する場合は、**[間隔]** を選択し、1 番目のボックスに「2」と入力し、**[時間]** を選択します。 このリストでは、**[分]** と **[秒]** を選択することもできます。 1 番目のボックスで使用できる最大の値は 100 であることに注意してください。  
+            -   **[間隔]**を選択した場合は、 **[頻度]**で選択した日にジョブ スケジュールを実行する頻度を指定します。 たとえば、ジョブ スケジュールを実行する当日に 2 時間おきにジョブ スケジュールを実行する場合は、 **[間隔]**を選択し、1 番目のボックスに「2」と入力し、 **[時間]** を選択します。 このリストでは、 **[分]** と **[秒]**を選択することもできます。 1 番目のボックスで使用できる最大の値は 100 であることに注意してください。  
   
                  **[開始]** ボックスに、ジョブ スケジュールの実行を開始する時刻を入力します。 **[終了]** ボックスに、ジョブ スケジュールの実行を終了する時刻を入力します。 間、分、秒に加え、午前か午後かを入力します。  
   
         3.  **[期間]**で、 **[開始日]**に、ジョブ スケジュールの実行を開始する日付を入力します。 **[終了日]** を選択します。ジョブ スケジュールの実行を停止するタイミングを指定しない場合は、 **[終了日なし]** を選択します。 **[終了日]**を選択した場合は、ジョブ スケジュールの実行を停止する日付を入力します。  
   
-    5.  **[指定日時]** を選択した場合は、**[指定日時に発生] ** の **[日付]** ボックスに、ジョブ スケジュールを実行する日付を入力します。 **[時刻]** ボックスに、ジョブ スケジュールを実行する時刻を入力します。 間、分、秒に加え、午前か午後かを入力します。  
+    5.  **[指定日時]**を選択した場合は、 **[指定日時に発生]**の **[日付]** ボックスに、ジョブ スケジュールを実行する日付を入力します。 **[時刻]** ボックスに、ジョブ スケジュールを実行する時刻を入力します。 間、分、秒に加え、午前か午後かを入力します。  
   
     6.  **[概要]**の **[説明]**で、すべてのジョブ スケジュール設定が適切であることを確認します。  
   
@@ -174,7 +178,7 @@ caps.handback.revision: 10
      各アクションの種類と名前を指定します。  
   
      **[状態]**  
-     全体としてウィザードのアクションが **[成功]** または **[失敗]** のいずれの値を返したかを示します。  
+     全体としてウィザードのアクションが **[成功]** または **[失敗]**のいずれの値を返したかを示します。  
   
      **メッセージ**  
      プロセスから返されたすべてのエラー メッセージまたは警告メッセージを提供します。  
@@ -198,7 +202,7 @@ caps.handback.revision: 10
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### テーブルで圧縮を有効にするには  
+#### <a name="to-enable-compression-on-a-table"></a>テーブルで圧縮を有効にするには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -216,7 +220,7 @@ caps.handback.revision: 10
     GO  
     ```  
   
-#### インデックスで圧縮を有効にするには  
+#### <a name="to-enable-compression-on-an-index"></a>インデックスで圧縮を有効にするには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -244,7 +248,7 @@ caps.handback.revision: 10
   
  詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」および「[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データの圧縮](../../relational-databases/data-compression/data-compression.md)   
  [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)  
   

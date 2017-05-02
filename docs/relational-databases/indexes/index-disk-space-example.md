@@ -1,29 +1,33 @@
 ---
 title: "インデックスのディスク領域の例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "オンライン インデックス ディスク領域"
-  - "ディスク領域 [SQL Server], インデックス"
-  - "インデックス ディスク領域 [SQL Server]"
-  - "領域 [SQL Server], インデックス"
-  - "インデックス [SQL Server], ディスク領域の要件"
-  - "オフライン インデックス ディスク領域 [SQL Server]"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online index disk space
+- disk space [SQL Server], indexes
+- index disk space [SQL Server]
+- space [SQL Server], indexes
+- indexes [SQL Server], disk space requirements
+- offline index disk space [SQL Server]
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bbc1a254df5ff696cb99c9090aae37da70e8fbbf
+ms.lasthandoff: 04/11/2017
+
 ---
-# インデックスのディスク領域の例
+# <a name="index-disk-space-example"></a>インデックスのディスク領域の例
   インデックスを作成、再構築、または削除する場合は、古い (基になる) 構造と新しい (対象となる) 構造の両方を格納するディスク領域が、それぞれ適切なファイルとファイル グループで必要になります。 古い構造の割り当ては、インデックス作成トランザクションがコミットされるまで解除されません。 並べ替え操作用に一時ディスク領域が追加で必要になる場合もあります。 詳細については、「 [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)」をご参照ください。  
   
  この例では、クラスター化インデックスを作成するために必要なディスク領域を判断します。  
@@ -43,26 +47,26 @@ caps.handback.revision: 30
     > [!NOTE]  
     >  クラスター化インデックスを作成した結果、行インジケーターを新しいクラスター化インデックス キーに置き換えるために、2 つの非クラスター化インデックスを再構築する必要があります。  
   
-## オフライン インデックス操作に必要なディスク領域の計算  
+## <a name="disk-space-calculations-for-an-offline-index-operation"></a>オフライン インデックス操作に必要なディスク領域の計算  
  以下の手順では、インデックス操作中に使用する一時ディスク領域と、新しいインデックスを格納する永続的なディスク領域を計算します。 ここでの計算は概算です。結果は切り上げ、インデックスのリーフ レベルのサイズしか計算しません。 概算値には、チルダ (~) を付けています。  
   
 1.  基になる構造のサイズを判断します。  
   
-     ヒープ : 100 万行 * 200 バイト ~ 200 MB   
+     ヒープ : 100 万行 * 200 バイト ~ 200 MB  
   
-     非クラスター化インデックス A : 100 万行 * 50 バイト / 80% ~ 63 MB    
+     非クラスター化インデックス A : 100 万行 * 50 バイト / 80% ~ 63 MB  
   
-     非クラスター化インデックス B : 100 万行 * 80 バイト / 80% ~ 100 MB    
+     非クラスター化インデックス B : 100 万行 * 80 バイト / 80% ~ 100 MB  
   
      既存の構造の合計サイズ : 363 MB  
   
 2.  対象となるインデックス構造のサイズを判断します。 新しいクラスター化キーは、uniqueifier も含めて 24 バイトとします。 どちらの非クラスター化インデックスの行インジケーター (8 バイト長) も、このクラスター化キーに置き換えられます。  
   
-     クラスター化インデックス : 100 万行 * 200 バイト / 80% ~ 250 MB    
+     クラスター化インデックス : 100 万行 * 200 バイト / 80% ~ 250 MB  
   
-     非クラスター化インデックス A : 100 万行 * (50 – 8 + 24) バイト / 80% ~ 83 MB    
+     非クラスター化インデックス A : 100 万行 * (50 – 8 + 24) バイト / 80% ~ 83 MB  
   
-     非クラスター化インデックス B : 100 万行 * (80 – 8 + 24) バイト / 80% ~ 120 MB    
+     非クラスター化インデックス B : 100 万行 * (80 – 8 + 24) バイト / 80% ~ 120 MB  
   
      新しい構造の合計サイズ : 453 MB  
   
@@ -72,38 +76,38 @@ caps.handback.revision: 30
   
      **tempdb** での並べ替え (SORT_IN_TEMPDB を ON に設定) と、対象の場所での並べ替え (SORT_IN_TEMPDB を OFF に設定) に必要な領域を示します。  
   
-    1.  SORT_IN_TEMPDB が ON の場合、**tempdb** には最大のインデックス (100 万行 * 200 バイト ～ 200 MB) を格納できるだけのディスク領域が必要です。 並べ替え操作では、FILL FACTOR については考慮されません。  
+    1.  SORT_IN_TEMPDB が ON の場合、 **tempdb** には最大のインデックス (100 万行 * 200 バイト ～ 200 MB) を格納できるだけのディスク領域が必要です。 並べ替え操作では、FILL FACTOR については考慮されません。  
   
-         追加のディスク領域 (**tempdb** の場所内) は [index create memory サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)の値 (= 2 MB) と同じです。  
+         追加のディスク領域 ( **tempdb** の場所内) は [index create memory サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) の値 (= 2 MB) と同じです。  
   
          SORT_IN_TEMPDB が ON の場合の一時ディスク領域の合計サイズは ~ 202 MB です。  
   
     2.  SORT_IN_TEMPDB が OFF (既定値) の場合、手順 2. で新しいインデックス用に算出した 250 MB のディスク領域が、並べ替えに使用されます。  
   
-         追加のディスク領域 (対象の場所内) は [index create memory サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)の値 (= 2 MB) と同じです。  
+         追加のディスク領域 (対象の場所内) は [index create memory サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) の値 (= 2 MB) と同じです。  
   
          SORT_IN_TEMPDB が OFF の場合の一時ディスク領域の合計サイズは 2 MB です。  
   
- **tempdb** を使用すると、合計で 1,018 MB (816 + 202) がクラスター化インデックスと非クラスター化インデックスの作成用に必要になります。 **tempdb** を使用することで、インデックスの作成に使用する一時ディスク領域は増えますが、**tempdb** がユーザー データベースとは異なるディスク セットにある場合、インデックスの作成に必要な時間を短縮できることがあります。 **tempdb** の使用の詳細については、「[インデックスの SORT_IN_TEMPDB オプション](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)」を参照してください。  
+ **tempdb**を使用すると、合計で 1,018 MB (816 + 202) がクラスター化インデックスと非クラスター化インデックスの作成用に必要になります。 **tempdb** を使用することで、インデックスの作成に使用する一時ディスク領域は増えますが、 **tempdb** がユーザー データベースとは異なるディスク セットにある場合、インデックスの作成に必要な時間を短縮できることがあります。 **tempdb**の使用の詳細については、「 [インデックスの SORT_IN_TEMPDB オプション](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)」を参照してください。  
   
- **tempdb** を使用しない場合は、合計で 818 MB (816 + 2) がクラスター化インデックスと非クラスター化インデックスの作成に必要になります。  
+ **tempdb**を使用しない場合は、合計で 818 MB (816 + 2) がクラスター化インデックスと非クラスター化インデックスの作成に必要になります。  
   
-## オンライン クラスター化インデックス操作に必要なディスク領域の計算  
+## <a name="disk-space-calculations-for-an-online-clustered-index-operation"></a>オンライン クラスター化インデックス操作に必要なディスク領域の計算  
  クラスター化インデックスをオンラインで作成、削除、または再構築する場合、一時マッピング インデックスを構築および保持するために追加のディスク領域が必要になります。 一時マッピング インデックスには、テーブルの行ごとに 1 つのレコードが格納されます。レコードの内容は、古いブックマーク列と新しいブックマーク列を組み合わせたものです。  
   
  オンライン クラスター化インデックス操作に必要なディスク領域を計算するには、上記のオフライン インデックス操作用の手順を実行し、その結果と次の手順で得られる結果とを加算します。  
   
 -   一時マッピング インデックスに必要な領域を判断します。  
   
-     この例では、古いブックマークはヒープの行 ID (RID) (8 バイト) で、新しいブックマークはクラスター化キー (**uniqueifier** も含め、24 バイト) であるとします。 古いブックマークと新しいブックマーク間で重複する列はありません。  
+     この例では、古いブックマークはヒープの行 ID (RID) (8 バイト) で、新しいブックマークはクラスター化キー ( **uniqueifier**も含め、24 バイト) であるとします。 古いブックマークと新しいブックマーク間で重複する列はありません。  
   
      一時マッピング インデックスのサイズは、100 万行 * (8 バイト + 24 バイト) / 80% ~ 40 MB です。  
   
      SORT_IN_TEMPDB が OFF の場合は対象となる場所に必要なディスク領域に、SORT_IN_TEMPDB が ON の場合は **tempdb** に必要なディスク領域に、このディスク領域を加算する必要があります。  
   
- 一時マッピング インデックスの詳細については、「[インデックス DDL 操作に必要なディスク領域](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)」をご参照ください。  
+ 一時マッピング インデックスの詳細については、「 [インデックス DDL 操作に必要なディスク領域](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)」をご参照ください。  
   
-## ディスク領域のまとめ  
+## <a name="disk-space-summary"></a>ディスク領域のまとめ  
  次の表は、ディスク領域の計算結果をまとめたものです。  
   
 |インデックス操作|構造の場所と必要なディスク領域|  
@@ -117,8 +121,8 @@ caps.handback.revision: 30
   
  この例では、同時実行ユーザーの更新操作や削除操作により作成されるバージョン レコード用に **tempdb** に必要な追加の一時ディスク領域については、計算していません。  
   
-## 関連コンテンツ  
- [インデックス DDL 操作に必要なディスク領域](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+## <a name="related-content"></a>関連コンテンツ  
+ [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
  [インデックス操作用のトランザクション ログのディスク領域](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   

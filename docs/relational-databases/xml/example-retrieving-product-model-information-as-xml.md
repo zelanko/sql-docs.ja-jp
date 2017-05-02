@@ -1,27 +1,31 @@
 ---
 title: "例 : XML での製品モデル情報の取得 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RAW モード, XML 情報の取得の例"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RAW mode, retrieving XML information example
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31022f0351f09c226b5da65455ce5a327b955364
+ms.lasthandoff: 04/11/2017
+
 ---
-# 例 : XML での製品モデル情報の取得
-  次の クエリでは、出力モデル情報が返されます。 `RAW` モードは、`FOR XML` 句で指定します。  
+# <a name="example-retrieving-product-model-information-as-xml"></a>例 : XML での製品モデル情報の取得
+  次の クエリでは、出力モデル情報が返されます。 `RAW` モードは、 `FOR XML` 句で指定します。  
   
-## 例  
+## <a name="example"></a>例  
   
 ```  
 USE AdventureWorks2012;  
@@ -64,7 +68,7 @@ GO
 </row>  
 ```  
   
- 結果を **xml** 型で取得するために、必要に応じて `TYPE` ディレクティブを指定できます。 `TYPE` ディレクティブを指定しても、結果の内容は変更されません。 結果のデータ型のみが変更されます。  
+ 結果を `TYPE` xml **型で取得するために、必要に応じて** ディレクティブを指定できます。 `TYPE` ディレクティブを指定しても、結果の内容は変更されません。 結果のデータ型のみが変更されます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -76,7 +80,7 @@ FOR XML RAW, TYPE ;
 GO  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [FOR XML での RAW モードの使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

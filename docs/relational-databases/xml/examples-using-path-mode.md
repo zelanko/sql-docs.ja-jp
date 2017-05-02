@@ -1,27 +1,31 @@
 ---
 title: "例 : PATH モードの使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PATH FOR XML モード, 例"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01caa2a86cde9fc2d8e857f1fd04486008d5886c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 例 : PATH モードの使用
+# <a name="examples-using-path-mode"></a>例 : PATH モードの使用
   次の例では、PATH モードで SELECT クエリから XML を生成する方法を示します。 これらのクエリの多くは、ProductModel テーブルの Instructions 列に格納されている、自転車製造手順の XML ドキュメントに対して指定されています。  
   
-## PATH モードの単純なクエリの指定  
+## <a name="specifying-a-simple-path-mode-query"></a>PATH モードの単純なクエリの指定  
  次のクエリには FOR XML PATH モードが指定されています。  
   
 ```  
@@ -120,7 +124,7 @@ GO
   
  `<Name>Bike Wash</Name>`  
   
-## XPath 形式の列名の指定  
+## <a name="specifying-xpath-like-column-names"></a>XPath 形式の列名の指定  
  次のクエリでは、`ProductModelID` 列に指定した名前が '@' で始まり、スラッシュ ('/') を含んでいません。 したがって、結果の XML では、<`row`> 要素の属性が生成され、対応する列値が設定されます。  
   
 ```  
@@ -148,7 +152,7 @@ GO
   
  `</ ProductModelData >`  
   
- `root` で `FOR XML` オプションを指定すると、単一の最上位要素を追加できます。  
+ `root` で `FOR XML`オプションを指定すると、単一の最上位要素を追加できます。  
   
 ```  
 SELECT ProductModelID AS "@id",  
@@ -159,7 +163,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- 階層を生成するには、PATH 形式の構文を使用できます。 たとえば、`Name` 列の列名を "SomeChild/ModelName" に変更すると、次に示すように階層を伴う XML が返されます。  
+ 階層を生成するには、PATH 形式の構文を使用できます。 たとえば、 `Name` 列の列名を "SomeChild/ModelName" に変更すると、次に示すように階層を伴う XML が返されます。  
   
  `<Root>`  
   
@@ -185,7 +189,7 @@ GO
   
  `</Root>`  
   
- 次のクエリは、指定した製品モデルの ID および名前以外に、その製品モデルに対応する製造手順書の場所を返します。 Instructions 列が **xml** 型なので、**xml** データ型の **query()** メソッドを指定して場所を取得します。  
+ 次のクエリは、指定した製品モデルの ID および名前以外に、その製品モデルに対応する製造手順書の場所を返します。 Instructions 列が **xml** 型なので、 **xml** データ型の **query()** メソッドを指定して場所を取得します。  
   
 ```  
 SELECT ProductModelID AS "@id",  
@@ -223,7 +227,7 @@ GO
   
  `</Root>`  
   
- 上記の FOR XML クエリで、<`Root`> 要素と <`ProductModelData`> 要素に対応する名前空間を含めることができます。 そのためには、WITH XMLNAMESPACES で名前空間のバインドのためのプレフィックスを定義しておき、FOR XML クエリで使用します。 詳細については、「[WITH XMLNAMESPACES を使用したクエリへの名前空間の追加](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)」を参照してください。  
+ 上記の FOR XML クエリで、<`Root`> 要素と <`ProductModelData`> 要素に対応する名前空間を含めることができます。 そのためには、WITH XMLNAMESPACES で名前空間のバインドのためのプレフィックスを定義しておき、FOR XML クエリで使用します。 詳細については、「 [WITH XMLNAMESPACES を使用したクエリへの名前空間の追加](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)」を参照してください。  
   
 ```  
 USE AdventureWorks2012;  
@@ -243,7 +247,7 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- `MI` では `WITH XMLNAMESPACES` プレフィックスも定義されています。 従って、指定された **xml** 型の **query()** メソッドにおいて、クエリ プロローグでこのプレフィックスは定義されていません。 結果を次に示します。  
+ `MI` では `WITH XMLNAMESPACES`プレフィックスも定義されています。 従って、指定された **xml** 型の **query()** メソッドにおいて、クエリ プロローグでこのプレフィックスは定義されていません。 結果を次に示します。  
   
  `<ns1:root xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   
@@ -273,7 +277,7 @@ GO
   
  `</ns1:root>`  
   
-## PATH モードを使用した値リストの生成  
+## <a name="generating-a-value-list-using-path-mode"></a>PATH モードを使用した値リストの生成  
  次のクエリは、製品モデルごとに製品 ID の値リストを生成します。 また、次の XML フラグメントで示すように製品 ID ごとに <`ProductName`> 子要素が生成されます。  
   
  `<ProductModelData ProductModelID="7" ProductModelName="..."`  
@@ -312,7 +316,7 @@ FOR XML PATH('ProductModelData');
   
  上のクエリに関して、次の点に注意してください。  
   
--   最初の `SELECT` サブクエリは、列名として `data()` を使用することで ProductID の一覧を返しています。 `FOR XML PATH` の行要素名として空文字列が指定されているので、要素は生成されません。 代わりに、値リストが `ProductID` 属性に割り当てられています。  
+-   最初の `SELECT` サブクエリは、列名として `data()` を使用することで ProductID の一覧を返しています。 `FOR XML PATH`の行要素名として空文字列が指定されているので、要素は生成されません。 代わりに、値リストが `ProductID` 属性に割り当てられています。  
   
 -   2 番目の `SELECT` サブクエリは、該当する製品モデルに含まれる製品名を取得します。 列名として `ProductNames` を指定しているので、生成した <`ProductName`> 要素は <`ProductNames`> 要素に囲まれた状態で返しています。  
   
@@ -354,7 +358,7 @@ FOR XML PATH('ProductModelData');
   
  `</ProductModelData>`  
   
- 製品名を構成するサブクエリは、結果として返す文字列をエンティティ表記に変換してから XML に追加しています。 TYPE ディレクティブ `FOR XML PATH (''), type` を追加した場合、結果は **xml** 型で返され、エンティティ表記への変換は行われません。  
+ 製品名を構成するサブクエリは、結果として返す文字列をエンティティ表記に変換してから XML に追加しています。 TYPE ディレクティブ `FOR XML PATH (''), type`を追加した場合、結果は **xml** 型で返され、エンティティ表記への変換は行われません。  
   
 ```  
 USE AdventureWorks2012;  
@@ -380,8 +384,8 @@ WHERE ProductModelID= 7 OR ProductModelID=9
 FOR XML PATH('ProductModelData');  
 ```  
   
-## 結果の XML への名前空間の追加  
- 「[WITH XMLNAMESPACES を使用した名前空間の追加](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)」で説明したように、WITH XMLNAMESPACES を使用すると PATH モードのクエリに名前空間を含めることができます。 たとえば、SELECT 句で指定する名前に名前空間のプレフィックスを追加できます。 次の `PATH` モードのクエリを実行すると、名前空間を伴った XML が生成されます。  
+## <a name="adding-namespaces-in-the-resulting-xml"></a>結果の XML への名前空間の追加  
+ 「 [WITH XMLNAMESPACES を使用した名前空間の追加](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)」で説明したように、WITH XMLNAMESPACES を使用すると PATH モードのクエリに名前空間を含めることができます。 たとえば、SELECT 句で指定する名前に名前空間のプレフィックスを追加できます。 次の `PATH` モードのクエリを実行すると、名前空間を伴った XML が生成されます。  
   
 ```  
 SELECT 'en'    as "English/@xml:lang",  
@@ -404,7 +408,7 @@ GO
   
  `</Translation>`  
   
- 次のクエリは例 C と似ていますが、結果の XML に名前空間を含めるために `WITH XMLNAMESPACES` を使用している点が異なります。 詳細については、「[WITH XMLNAMESPACES を使用したクエリへの名前空間の追加](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)」を参照してください。  
+ 次のクエリは例 C と似ていますが、結果の XML に名前空間を含めるために `WITH XMLNAMESPACES` を使用している点が異なります。 詳細については、「 [WITH XMLNAMESPACES を使用したクエリへの名前空間の追加](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)」を参照してください。  
   
 ```  
 USE AdventureWorks2012;  
@@ -463,7 +467,7 @@ FOR XML PATH('ProductModelData'), root('root');
   
  `</root>`  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [FOR XML での PATH モードの使用](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

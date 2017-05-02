@@ -1,23 +1,27 @@
 ---
 title: "SQL Server コンポーネントの監視 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server コンポーネントの監視
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では動的な環境でサービスを提供しているため、監視することは重要です。 アプリケーションのデータは変化します。 ユーザーが必要とするアクセスの種類は変化します。 ユーザーの接続方法も変化します。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアクセスするアプリケーションの種類が変わる可能性もあります。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、手動によるシステム レベルのチューニングを必要最低限に抑えるために、メモリやディスク領域などシステム レベルのリソースが自動的に管理されています。 管理者は、SQL Server を監視することにより、パフォーマンスの傾向を特定して、変更が必要かどうかを判断することができます。  
+# <a name="monitor-sql-server-components"></a>SQL Server コンポーネントの監視
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では動的な環境でサービスを提供しているため、監視することは重要です。 アプリケーションのデータは変化します。 ユーザーが必要とするアクセスの種類は変化します。 ユーザーの接続方法も変化します。 また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアクセスするアプリケーションの種類が変わる可能性もあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、手動によるシステム レベルのチューニングを必要最低限に抑えるために、メモリやディスク領域などシステム レベルのリソースが自動的に管理されています。 管理者は、SQL Server を監視することにより、パフォーマンスの傾向を特定して、変更が必要かどうかを判断することができます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンポーネントを効果的に監視するには、次の手順に従います。  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 8
   
  これらの手順を順番に説明します。  
   
-## 監視目的の決定  
+## <a name="determine-your-monitoring-goals"></a>監視目的の決定  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を効果的に監視するには、監視する理由を明確にする必要があります。 監視する理由には、次のようなものがあります。  
   
 -   パフォーマンスのベースラインを設定する。  
@@ -60,7 +64,7 @@ caps.handback.revision: 8
   
 -   ハードウェア構成の変更時期を判断する。  
   
-## 適切なツールの選択  
+## <a name="select-the-appropriate-tool"></a>適切なツールの選択  
  監視の理由が決まったら、監視に適切なツールを選択する必要があります。 Windows オペレーティング システムおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、トランザクションを集中的に使用する環境のサーバーを監視できる、ツールの完全なセットが用意されています。 これらのツールを使用すると、SQL Server データベース エンジンのインスタンスや SQL Server Analysis Services のインスタンスの状態を明確に把握することができます。  
   
  Windows で提供されている、サーバーで実行中のアプリケーションを監視するためのツールは次のとおりです。  
@@ -73,7 +77,7 @@ caps.handback.revision: 8
   
  Windows Server または Windows ツールの詳細については、Windows のマニュアルを参照してください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で提供されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンポーネントを監視するためのツールは、次のとおりです。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で提供されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のコンポーネントを監視するためのツールは、次のとおりです。  
   
 -   SQL トレース (SQL Trace)  
   
@@ -93,18 +97,18 @@ caps.handback.revision: 8
   
 -   トレース フラグ  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監視ツールを使用する方法の詳細については、「[パフォーマンス監視およびチューニング ツール](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監視ツールを使用する方法の詳細については、「 [パフォーマンス監視およびチューニング ツール](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)」を参照してください。  
   
-## 監視するコンポーネントの決定  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス監視の 3 つ目の手順は、監視するコンポーネントを決定することです。 たとえば、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してサーバーをトレースする場合、特定のイベントに関するデータを収集するようにトレースを定義することができます。 また、状況に適用しないイベントをトレースの対象から除外することもできます。  
+## <a name="identify-the-components-to-monitor"></a>監視するコンポーネントの決定  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス監視の 3 つ目の手順は、監視するコンポーネントを決定することです。 たとえば、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してサーバーをトレースする場合、特定のイベントに関するデータを収集するようにトレースを定義することができます。 また、状況に適用しないイベントをトレースの対象から除外することもできます。  
   
-## 監視するコンポーネントのメトリックの選択  
+## <a name="select-metrics-for-monitored-components"></a>監視するコンポーネントのメトリックの選択  
  監視するコンポーネントが決定したら、監視するコンポーネントのメトリックを決めます。 たとえば、トレースに含めるイベントを選択したら、それらのイベントの特定のデータのみを含めるように選択することができます。 トレースに関連のあるデータのみに制限すると、トレースを実行するのに必要なシステム リソースを最小限に抑えられます。  
   
-## サーバーの監視  
+## <a name="monitor-the-server"></a>サーバーの監視  
  サーバーを監視するには、データを収集するように構成した監視ツールを実行します。 たとえば、トレースを定義したら、トレースを実行して、サーバーで発生したイベントのデータを収集できます。  
   
-## データの分析  
+## <a name="analyze-the-data"></a>データの分析  
  トレースが終了したら、データを分析して、監視の目的を達成できたかどうかを判断します。 達成できていない場合は、サーバーの監視に使用したコンポーネントやメトリックを変更します。  
   
  イベント データのキャプチャおよびその使用に関するプロセスは、次のとおりです。  
@@ -115,11 +119,11 @@ caps.handback.revision: 8
   
 2.  イベントを監視 (キャプチャ) します。  
   
-     監視機能を有効にすると、指定したアプリケーション、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス、またはオペレーティング システムのデータのキャプチャがすぐに開始されます。 たとえば、システム モニターでディスクの使用状況を監視している場合、ディスクの読み取りや書き込みなどのイベント データがキャプチャされ、そのデータが画面に表示されます。 詳細については、「[リソースの利用状況の監視 &#40;システム モニター&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)」を参照してください。  
+     監視機能を有効にすると、指定したアプリケーション、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス、またはオペレーティング システムのデータのキャプチャがすぐに開始されます。 たとえば、システム モニターでディスクの使用状況を監視している場合、ディスクの読み取りや書き込みなどのイベント データがキャプチャされ、そのデータが画面に表示されます。 詳細については、「[リソースの利用状況の監視 &#40;システム モニター&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)」を参照してください。  
   
 3.  キャプチャしたイベント データを保存します。  
   
-     キャプチャしたイベント データを保存すると、後で、そのデータを解析したり、Distributed Replay Utility または [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して再生することができます。 キャプチャしたイベント データは、データの生成元ツールで、再度読み込んで解析することができるファイルに保存されます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにイベント データを保存することができます。 パフォーマンス ベースラインを作成する際は、キャプチャしたイベント データを保存することが重要です。 最近キャプチャしたイベント データを比較して、パフォーマンスが最適かどうかを判断する場合、保存したパフォーマンス ベースライン データを使用します。 詳細については、「[SQL Server プロファイラーのテンプレートと権限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)」を参照してください。  
+     キャプチャしたイベント データを保存すると、後で、そのデータを解析したり、Distributed Replay Utility または [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して再生することができます。 キャプチャしたイベント データは、データの生成元ツールで、再度読み込んで解析することができるファイルに保存されます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにイベント データを保存することができます。 パフォーマンス ベースラインを作成する際は、キャプチャしたイベント データを保存することが重要です。 最近キャプチャしたイベント データを比較して、パフォーマンスが最適かどうかを判断する場合、保存したパフォーマンス ベースライン データを使用します。 詳細については、「 [SQL Server プロファイラーのテンプレートと権限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)」を参照してください。  
   
 4.  イベントをキャプチャするように指定された設定を含むトレース テンプレートを作成します。  
   
@@ -127,12 +131,12 @@ caps.handback.revision: 8
   
 5.  キャプチャしたイベント データを分析します。  
   
-     分析するには、キャプチャして保存したイベント データを、データのキャプチャに使用したアプリケーションで読み込みます。 たとえば、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] でキャプチャしたトレースは、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] で再度読み込んで、参照および分析することができます。 詳細については、「[SQL Server Profiler を使用したトレースの表示と分析](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)」をご覧ください。  
+     分析するには、キャプチャして保存したイベント データを、データのキャプチャに使用したアプリケーションで読み込みます。 たとえば、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] でキャプチャしたトレースは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] で再度読み込んで、参照および分析することができます。 詳細については、「 [SQL Server Profiler を使用したトレースの表示と分析](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)」をご覧ください。  
   
-     イベント データの分析では、どのようなイベントがなぜ発生したのかを判断します。 分析した情報に基づいて、メモリを増設する、インデックスを変更する、Transact-SQL ステートメントやストアド プロシージャのコードの問題を解決するなど、行った分析の種類に応じてパフォーマンスの向上を実現する変更を加えることができます。 たとえば、[!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーを使用して、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] でキャプチャしたトレースを分析し、その結果に基づいてインデックスの推奨設定を作成できます。  
+     イベント データの分析では、どのようなイベントがなぜ発生したのかを判断します。 分析した情報に基づいて、メモリを増設する、インデックスを変更する、Transact-SQL ステートメントやストアド プロシージャのコードの問題を解決するなど、行った分析の種類に応じてパフォーマンスの向上を実現する変更を加えることができます。 たとえば、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーを使用して、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] でキャプチャしたトレースを分析し、その結果に基づいてインデックスの推奨設定を作成できます。  
   
 6.  キャプチャしたイベント データを再生します。  
   
-     イベントの再生では、データをキャプチャしたデータベース環境のテスト コピーを設定して、キャプチャしたイベントを実際のシステムで発生したとおりに再生できます。 この機能は、Distributed Replay Utility または [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] でのみ提供されます。 イベントの再生速度は、実際に発生したときと同じ速度にすることができます。また、システムに負荷を与えるためにできる限り高速にしたり、多くの場合に行われるように、一度に 1 ステップずつ再生して、各イベントの発生後にシステムを分析することもできます。 テスト環境で実稼動システムとまったく同じイベントを分析できるので、実稼動システムへの悪影響を防ぐことができます。 詳細については、「[トレースの再生](../../tools/sql-server-profiler/replay-traces.md)」を参照してください。  
+     イベントの再生では、データをキャプチャしたデータベース環境のテスト コピーを設定して、キャプチャしたイベントを実際のシステムで発生したとおりに再生できます。 この機能は、Distributed Replay Utility または [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]でのみ提供されます。 イベントの再生速度は、実際に発生したときと同じ速度にすることができます。また、システムに負荷を与えるためにできる限り高速にしたり、多くの場合に行われるように、一度に 1 ステップずつ再生して、各イベントの発生後にシステムを分析することもできます。 テスト環境で実稼動システムとまったく同じイベントを分析できるので、実稼動システムへの悪影響を防ぐことができます。 詳細については、「 [トレースの再生](../../tools/sql-server-profiler/replay-traces.md)」を参照してください。  
   
   

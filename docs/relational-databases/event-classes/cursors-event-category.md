@@ -1,29 +1,33 @@
 ---
 title: "Cursors イベント カテゴリ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Cursors イベント カテゴリ [SQL Server]"
-  - "イベント クラス [SQL Server], Cursors イベント カテゴリ"
-  - "SQL Server イベント クラス, Cursors イベント カテゴリ"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Cursors event category [SQL Server]
+- event classes [SQL Server], Cursors event category
+- SQL Server event classes, Cursors event category
 ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bb543d97fb6e5a879bde56591e19a558a1781759
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cursors イベント カテゴリ
+# <a name="cursors-event-category"></a>Cursors イベント カテゴリ
   **Cursors** イベント カテゴリには、カーソルの動作の監視に使用するイベント クラスが含まれています。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
   
 |トピック|説明|  
 |-----------|-----------------|  
@@ -35,7 +39,7 @@ caps.handback.revision: 23
 |[CursorRecompile イベント クラス](../../relational-databases/event-classes/cursorrecompile-event-class.md)|API のカーソルで発生する、カーソルを再コンパイルするイベントについて説明します。|  
 |[CursorUnprepare イベント クラス](../../relational-databases/event-classes/cursorunprepare-event-class.md)|API のカーソルで発生する、カーソルの準備を解除するイベントについて説明します。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)  
   
   

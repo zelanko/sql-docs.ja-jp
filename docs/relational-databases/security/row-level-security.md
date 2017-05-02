@@ -1,65 +1,48 @@
 ---
 title: "行レベルのセキュリティ | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/29/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "アクセス制御の述語"
-  - "行レベルのセキュリティ"
-  - "セキュリティ [SQL Server], 述語ベースのアクセス制御"
-  - "説明されている行レベルのセキュリティ"
-  - "述語ベースのセキュリティ"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/29/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- access control predicates
+- row level security
+- security [SQL Server], predicate based access control
+- row level security described
+- predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0141c681779c12bf63162751f93dcd6495fb1a94
+ms.lasthandoff: 04/11/2017
+
 ---
-# 行レベルのセキュリティ
+# <a name="row-level-security"></a>行レベルのセキュリティ
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  ![Row level security graphic](../../relational-databases/security/media/row-level-security-graphic.png "Row level security graphic")  
+  ![行レベルのセキュリティの図](../../relational-databases/security/media/row-level-security-graphic.png "行レベルのセキュリティの図")  
   
- Row-Level Security を使用すると、クエリを実行するユーザーの特性に基づき、データベース テーブルの行へのアクセスを制御できます (たとえば、グループのメンバーシップや実行コンテキストなど)。   
+ Row-Level Security を使用すると、クエリを実行するユーザーの特性に基づき、データベース テーブルの行へのアクセスを制御できます (たとえば、グループのメンバーシップや実行コンテキストなど)。  
   
  Row-Level Security (RLS) は、アプリケーションでセキュリティの設計やコーディングを簡略化します。 RLS では、データ行アクセスの制限を実装できます。 たとえば、作業者が自分が所属する部署関連するデータ行のみにアクセスできること、または顧客のデータ アクセスをその会社に関連するデータのみに制限することを確認できます。  
   
  アクセスの制限のロジックは、別のアプリケーション層のデータから離れてではなく、データベース層にあります。 任意の層からデータへのアクセスが試行されるたびに、データベース システムにはアクセス制限が適用されます。 これにより、セキュリティ システムの表層領域を減少することで、セキュリティ システムはより信頼性の高い堅牢なものになります。  
   
- [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して RLS を実装すると、[インライン テーブル値関数](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)として述語が作成されます。  
+ [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して RLS を実装すると、 [インライン テーブル値関数](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)として述語が作成されます。  
   
-||  
-|-|  
-|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([入手](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([入手](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。  
   
-##  <a name="Top"></a> このトピックの内容  
-  
--   [説明](#Description)  
-  
--   [例](#UseCases)  
-  
--   [アクセス許可](#Permissions)  
-  
--   [ベスト プラクティス](#Best)  
-  
--   [セキュリティに関する注意: サイドチャネル攻撃](#SecNote)  
-  
--   [機能間の互換性](#Limitations)  
-  
--   [コード例](#CodeExamples)  
-  
-    -   [A. 直接接続しているユーザーのシナリオ](#Typical)  
-  
-    -   [B. 中間層アプリケーションのシナリオ](#MidTier)  
-  
+
 ##  <a name="Description"></a> 説明  
  RLS では、2 種類のセキュリティ述語をサポートしています。  
   
@@ -69,7 +52,7 @@ caps.handback.revision: 47
   
  テーブルの行レベルのデータへのアクセスは、インライン テーブル値関数として定義されたセキュリティ述語によって制限されます。 関数が呼び出され、セキュリティ ポリシーによって適用されます。 フィルター述語の場合、結果セットから行がフィルター処理されていることはアプリケーションには通知されません。すべての行がフィルター処理されると、null セットが返されます。 ブロック述語の場合、その述語に違反するすべての操作がエラーで失敗します。  
   
- フィルター述語は、ベース テーブルからのデータの読み取り中に適用され、次のすべての get 操作に影響します。**SELECT**、**DELETE** (つまり、 ユーザーはフィルター処理されている行を削除できません) そして **UPDATE** (つまり、 ユーザーはフィルター処理されている行を更新することもできませんが、後でフィルター処理されるようにすれば行を更新できます。 ブロック述語はすべての書き込み操作に影響します。  
+ フィルター述語は、ベース テーブルからのデータの読み取り中に適用され、次のすべての get 操作に影響します。 **SELECT**、 **DELETE** (つまり、 ユーザーはフィルター処理されている行を削除できません) そして **UPDATE** (つまり、 ユーザーはフィルター処理されている行を更新することもできませんが、後でフィルター処理されるようにすれば行を更新できます。 ブロック述語はすべての書き込み操作に影響します。  
   
 -   AFTER INSERT と AFTER UPDATE の各述語は、ユーザーが行を述語に違反する値に更新できないようにします。  
   
@@ -79,13 +62,13 @@ caps.handback.revision: 47
   
  フィルター述語とブロック述語およびセキュリティ ポリシーの動作は次のとおりです。  
   
--   別のテーブルとの結合や関数の呼び出しを実行する述語関数を定義できます。 `SCHEMABINDING = ON` でセキュリティ ポリシーが作成された場合、結合または関数にはクエリからアクセスでき、追加のアクセス許可の確認を必要とせず、期待どおりに動作します。 `SCHEMABINDING = OFF` でセキュリティ ポリシーが作成された場合、ユーザーには、対象テーブルに対してクエリを実行するために、これらの追加のテーブルと関数に対する **SELECT** 権限または **EXECUTE** 権限が必要です。  
+-   別のテーブルとの結合や関数の呼び出しを実行する述語関数を定義できます。 `SCHEMABINDING = ON`でセキュリティ ポリシーが作成された場合、結合または関数にはクエリからアクセスでき、追加のアクセス許可の確認を必要とせず、期待どおりに動作します。 `SCHEMABINDING = OFF`でセキュリティ ポリシーが作成された場合、ユーザーには、対象テーブルに対してクエリを実行するために、これらの追加のテーブルと関数に対する **SELECT** 権限または **EXECUTE** 権限が必要です。  
   
      別のテーブルとの結合や関数の呼び出しを実行する述語関数を定義できます。 結合関数にはクエリからアクセスでき、追加のアクセス許可の確認を必要とせず、期待どおりに動作します。  
   
 -   セキュリティ述語は定義されているが無効になっているテーブルに対してクエリを発行できます。 フィルター処理またはブロックされている行には影響しません。  
   
--   dbo ユーザー、**db_owner** ロールのメンバー、またはテーブルの所有者が、セキュリティ ポリシーが定義され有効になっているテーブルに対してクエリを実行すると、セキュリティ ポリシーでの定義に従って行がフィルター処理またはブロックされます。  
+-   dbo ユーザー、 **db_owner** ロールのメンバー、またはテーブルの所有者が、セキュリティ ポリシーが定義され有効になっているテーブルに対してクエリを実行すると、セキュリティ ポリシーでの定義に従って行がフィルター処理またはブロックされます。  
   
 -   スキーマ バインドされたセキュリティ ポリシーによってバインドされているテーブルのスキーマを変更しようとすると、エラーが発生します。 ただし、述語で参照されていない列は変更できます。  
   
@@ -97,7 +80,7 @@ caps.handback.revision: 47
   
  フィルター述語の動作は次のとおりです。  
   
--   テーブルの行をフィルター処理するセキュリティ ポリシーを定義します。 アプリケーションでは、すべての行がフィルターされた状態であっても、行が **SELECT**、**UPDATE**、**DELETE** 操作に対してフィルター処理されたことを認識しません。 アプリケーションでは、他の操作中にフィルター処理されるかどうかにかかわらず、どの行でも **INSERT** できます。  
+-   テーブルの行をフィルター処理するセキュリティ ポリシーを定義します。 アプリケーションでは、すべての行がフィルターされた状態であっても、行が **SELECT**、 **UPDATE**、 **DELETE** 操作に対してフィルター処理されたことを認識しません。 アプリケーションでは、他の操作中にフィルター処理されるかどうかにかかわらず、どの行でも **INSERT** できます。  
   
  ブロック述語の動作は次のとおりです。  
   
@@ -107,7 +90,6 @@ caps.handback.revision: 47
   
 -   BULK INSERT などの Bulk API は変更されていません。 つまり、AFTER INSERT ブロック述語は、通常の挿入操作と同様に一括挿入操作に適用されます。  
   
- [このページのトップへ](#Top)  
   
 ##  <a name="UseCases"></a> 例  
  RLS をどのように使用するかの設計例を次に示します。  
@@ -118,28 +100,26 @@ caps.handback.revision: 47
   
 -   マルチ テナント アプリケーションでは、他のすべてのテナントの行から各テナントのデータ行を論理的に分離するポリシーを作成できます。 1 つのテーブルで多くのテナントのデータを保存することで効率性が高まります。 もちろん、各テナントはそのデータ行のみ表示できます。  
   
- RLS フィルター述語は機能的には **WHERE** 句の追加と同等です。 述語はビジネス プラクティスの規定と同じくらいに洗練されたものであり、句は `WHERE TenantId = 42` と同じくらいに簡単です。  
+ RLS フィルター述語は機能的には **WHERE** 句の追加と同等です。 述語はビジネス プラクティスの規定と同じくらいに洗練されたものであり、句は `WHERE TenantId = 42`と同じくらいに簡単です。  
   
  より形式的に表現すると、RLS はアクセス制御に基づく述語を採用しています。 RLS では、管理者が適切に決定したメタデータや他の条件を考慮に入れることができる、柔軟で、集中管理された、述語ベースの評価を備えています。 述語は、ユーザーがその属性に基づいて適切にデータにアクセスできるかどうかを決定する条件として使用されます。 ラベルに基づくアクセス制御は、述語に基づくアクセス制御を使用して実装できます。  
   
- [このページのトップへ](#Top)  
   
-##  <a name="Permissions"></a> 権限  
- セキュリティ ポリシーの作成、変更、削除には、**ALTER ANY SECURITY POLICY** 権限が必要です。 セキュリティ ポリシーの作成か削除には、スキーマ上で **ALTER** 権限が必要です。  
+##  <a name="Permissions"></a> アクセス許可  
+ セキュリティ ポリシーの作成、変更、削除には、 **ALTER ANY SECURITY POLICY** 権限が必要です。 セキュリティ ポリシーの作成か削除には、スキーマ上で **ALTER** 権限が必要です。  
   
  また、追加される各述語に関しては次のアクセス許可も必要になります。  
   
--   述語として使用している関数に関する **SELECT** および **REFERENCES** 権限。  
+-   述語として使用している関数に関する**SELECT** および **REFERENCES** 権限。  
   
--   ポリシーにバインドしているターゲット テーブルに対する **REFERENCES** 権限。  
+-   ポリシーにバインドしているターゲット テーブルに対する**REFERENCES** 権限。  
   
--   引数として使用しているターゲット テーブルのすべての列に対する **REFERENCES** 権限。  
+-   引数として使用しているターゲット テーブルのすべての列に対する**REFERENCES** 権限。  
   
  セキュリティ ポリシーは、データベースの dbo ユーザーを含めてすべてのユーザーに適用されます。 dbo ユーザーはセキュリティ ポリシーを変更したり削除したりできますが、セキュリティ ポリシーに加えた変更は監査することができます。 高い権限を持つユーザー (sysadmin や db_owner など) がトラブルシューティングやデータ検証のためにすべての行を表示する必要がある場合は、これを許可するセキュリティ ポリシーを作成する必要があります。  
   
- `SCHEMABINDING = OFF` でセキュリティ ポリシーが作成された場合、ユーザーは、対象テーブルにクエリを実行するために、述語関数とその述語関数で使用される追加のテーブル、ビュー、または関数に対する **SELECT** 権限または **EXECUTE** 権限が必要です。 `SCHEMABINDING = ON` (既定) でセキュリティ ポリシーが作成された場合、ユーザーが対象テーブルに対してクエリを実行すると、これらの権限チェックは迂回されます。  
+ `SCHEMABINDING = OFF`でセキュリティ ポリシーが作成された場合、ユーザーは、対象テーブルにクエリを実行するために、述語関数とその述語関数で使用される追加のテーブル、ビュー、または関数に対する  **SELECT** 権限または **EXECUTE** 権限が必要です。 `SCHEMABINDING = ON` (既定) でセキュリティ ポリシーが作成された場合、ユーザーが対象テーブルに対してクエリを実行すると、これらの権限チェックは迂回されます。  
   
- [このページのトップへ](#Top)  
   
 ##  <a name="Best"></a> ベスト プラクティス  
   
@@ -162,18 +142,16 @@ caps.handback.revision: 47
 -   述語関数は、エラー (オーバーフローやゼロ除算など) が発生した場合に **NULL** を返す算術式や集計式に依存しないようにする必要があります。この動作は [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)、[SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md)、[SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md) の各オプションの影響を受けるためです。  
   
 -   述語関数では、連結文字列を **NULL** と比較しないようにする必要があります。この動作は、[SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md) オプションの影響を受けるためです。  
-  
- [このページのトップへ](#Top)  
+   
   
 ##  <a name="SecNote"></a> セキュリティに関する注意: サイドチャネル攻撃  
  **悪意のあるセキュリティ ポリシー マネージャー:** 悪意のあるセキュリティ ポリシー マネージャーを監視することが重要です。セキュリティ ポリシー マネージャーには機密性の高い列にセキュリティ ポリシーを作成する十分な権限があり、インライン テーブル値関数を作成または変更する権限もあります。テーブルに対する選択権限を持つ別のユーザーと共謀し、サイドチャネル攻撃を使ってデータを推測することを目的としたインライン テーブル値関数を悪意を持って作成して、データを流出させるおそれがあります。 このような攻撃では、共謀が必要で (または過剰な権限を悪意のあるユーザーに与える)、 ポリシーの変更が何度も必要になる可能性が高く (スキーマ バインドを解除するために述語を削除する権限を要求する)、インライン テーブル値関数が変更され、対象のテーブルに対して select ステートメントが繰り返し実行されることになります。 Row-level security に関連するポリシーやインライン テーブルが何度も変更されるなどの疑わしいアクティビティを監視するため、権限を必要な程度まで制限することを強くお勧めします。  
   
- **慎重に作成されたクエリ:** 慎重に作成されたクエリによって、情報漏洩が発生する可能性があります。 たとえば、`SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` というクエリで、悪意のあるユーザーに John doe さんの給与が 100,000 ドルであることが知らされました。 悪意のあるユーザーが他のユーザーの給与を直接照会するような事態を防ぐため、セキュリティ述語がある場合でも、ゼロ除算の例外がクエリ結果として返されることで、悪意のあるユーザーによって知られてしまいます。  
-  
- [このページのトップへ](#Top)  
+ **慎重に作成されたクエリ:** 慎重に作成されたクエリによって、情報漏洩が発生する可能性があります。 たとえば、 `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` というクエリで、悪意のあるユーザーに John doe さんの給与が 100,000 ドルであることが知らされました。 悪意のあるユーザーが他のユーザーの給与を直接照会するような事態を防ぐため、セキュリティ述語がある場合でも、ゼロ除算の例外がクエリ結果として返されることで、悪意のあるユーザーによって知られてしまいます。  
+   
   
 ##  <a name="Limitations"></a> 機能間の互換性  
- 一般に、行レベルのセキュリティは機能間で予想どおりに機能します。 ただし、例外がいくつかあります。 ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他の特定の機能で行レベルのセキュリティを使用する場合の注意事項について説明します。  
+ 一般に、行レベルのセキュリティは機能間で予想どおりに機能します。 ただし、例外がいくつかあります。 ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の他の特定の機能で行レベルのセキュリティを使用する場合の注意事項について説明します。  
   
 -   **DBCC SHOW_STATISTICS** は、フィルター処理されていないデータの統計を報告するため、セキュリティ ポリシーによって保護されていない場合に情報が漏洩する可能性があります。 そのため、行レベルのセキュリティ ポリシーが適用されたテーブルの統計オブジェクトを表示するには、そのテーブルを所有しているか、sysadmin 固定サーバー ロール、db_owner 固定データベース ロール、または db_ddladmin 固定データベース ロールのメンバーである必要があります。  
   
@@ -181,23 +159,22 @@ caps.handback.revision: 47
   
 -   **Polybase** RLS は Polybase と互換性がありません。  
   
--   **メモリ最適化テーブル:** メモリ最適化テーブルでセキュリティ述語として使用されるインライン テーブル値関数は、`WITH NATIVE_COMPILATION` オプションを使用して定義する必要があります。 このオプションを使用すると、メモリ最適化テーブルでサポートされていない言語機能が禁止され、作成時に該当するエラーが発行されます。 詳細については、「[メモリ最適化テーブルの概要](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)」の「**メモリ最適化テーブルの行レベルのセキュリティ**」をご覧ください。  
+-   **メモリ最適化テーブル:**メモリ最適化テーブルでセキュリティ述語として使用されるインライン テーブル値関数は、 `WITH NATIVE_COMPILATION` オプションを使用して定義する必要があります。 このオプションを使用すると、メモリ最適化テーブルでサポートされていない言語機能が禁止され、作成時に該当するエラーが発行されます。 詳細については、「 **メモリ最適化テーブルの概要** 」の「 [メモリ最適化テーブルの行レベルのセキュリティ](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)」をご覧ください。  
   
 -   **インデックス付きビュー:** 一般に、セキュリティ ポリシーはビューに対して作成でき、ビューはセキュリティ ポリシーによってバインドされたテーブルに作成できます。 ただし、インデックスによる行の参照はポリシーを回避するため、セキュリティ ポリシーが適用されたテーブルにインデックス付きビューを作成することはできません。  
   
--   **Change Data Capture:** Change Data Capture では、**db_owner** のメンバーまたはテーブルで CDC が有効になっているときに指定された "ゲーティング" ロールのメンバーであるユーザーに、フィルター処理する必要があるすべての行が漏洩する可能性があります (注: これを明示的に **NULL** に設定すると、すべてのユーザーが変更データにアクセスできるようになります)。 実際には、**db_owner** と、このゲーティング ロールのメンバーは、テーブルにセキュリティ ポリシーが存在する場合でも、テーブルのすべてのデータ変更を表示できます。  
+-   **Change Data Capture:** Change Data Capture では、 **db_owner** のメンバーまたはテーブルで CDC が有効になっているときに指定された "ゲーティング" ロールのメンバーであるユーザーに、フィルター処理する必要があるすべての行が漏洩する可能性があります (注: これを明示的に **NULL** に設定すると、すべてのユーザーが変更データにアクセスできるようになります)。 実際には、 **db_owner** と、このゲーティング ロールのメンバーは、テーブルにセキュリティ ポリシーが存在する場合でも、テーブルのすべてのデータ変更を表示できます。  
   
--   **変更の追跡:** 変更の追跡では、**SELECT** と **VIEW CHANGE TRACKING** の両方の権限を持つユーザーに、フィルター処理する必要がある行の主キーが漏洩する可能性があります。 実際のデータ値は漏洩しません。漏洩するのは、主キー B を持つ行の列 A が更新/挿入/削除されたという事実だけです。 これは、主キーに社会保障番号などの機密要素が含まれている場合に問題になります。 ただし、実際には、この **CHANGETABLE** は、最新のデータを取得するために、ほとんどの場合、元のテーブルと結合されます。  
+-   **変更の追跡:** 変更の追跡では、 **SELECT** と **VIEW CHANGE TRACKING** の両方の権限を持つユーザーに、フィルター処理する必要がある行の主キーが漏洩する可能性があります。 実際のデータ値は漏洩しません。漏洩するのは、主キー B を持つ行の列 A が更新/挿入/削除されたという事実だけです。 これは、主キーに社会保障番号などの機密要素が含まれている場合に問題になります。 ただし、実際には、この **CHANGETABLE** は、最新のデータを取得するために、ほとんどの場合、元のテーブルと結合されます。  
   
--   **フルテキスト検索:** フルテキスト検索関数やセマンティック検索関数 (**CONTAINSTABLE**、**FREETEXTTABLE**、semantickeyphrasetable、semanticsimilaritydetailstable、semanticsimilaritytable) を使用したクエリでは、行レベルのセキュリティを適用し、フィルター処理する必要のある行の主キーの漏洩を防ぐために余分な結合が発生するため、パフォーマンスが低下することが予想されます。  
+-   **フルテキスト検索:** フルテキスト検索関数やセマンティック検索関数 ( **CONTAINSTABLE**、 **FREETEXTTABLE**、semantickeyphrasetable、semanticsimilaritydetailstable、semanticsimilaritytable) を使用したクエリでは、行レベルのセキュリティを適用し、フィルター処理する必要のある行の主キーの漏洩を防ぐために余分な結合が発生するため、パフォーマンスが低下することが予想されます。  
   
 -   **列ストア インデックス:** RLS は、クラスター化列ストア インデックスと非クラスター化列ストア インデックスの両方と互換性があります。 ただし、行レベルのセキュリティが関数に適用されるため、オプティマイザーはバッチ モードを使用しないようにクエリ プランを変更する可能性があります。  
   
 -   **パーティション ビュー:** パーティション ビューでブロック述語を定義することはできません。また、ブロック述語を使用するテーブルにパーティション ビューを作成することはできません。 フィルター述語はパーティション ビューと互換性があります。  
   
--   **テンポラル テーブル**は RLS と互換性があります。 ただし、現在のテーブルのセキュリティ述語は、履歴テーブルに自動的にはレプリケートされません。 現在のテーブルと履歴テーブルの両方にセキュリティ ポリシーを適用するには、テーブルごとにセキュリティ述語を個別に追加する必要があります。  
+-   **テンポラル テーブル** は RLS と互換性があります。 ただし、現在のテーブルのセキュリティ述語は、履歴テーブルに自動的にはレプリケートされません。 現在のテーブルと履歴テーブルの両方にセキュリティ ポリシーを適用するには、テーブルごとにセキュリティ述語を個別に追加する必要があります。  
   
- [このページのトップへ](#Top)  
   
 ##  <a name="CodeExamples"></a> 使用例  
   
@@ -206,7 +183,7 @@ caps.handback.revision: 47
   
  別のアクセス機能を示す 3 つのユーザー アカウントを作成します。  
   
-```  
+```sql  
 CREATE USER Manager WITHOUT LOGIN;  
 CREATE USER Sales1 WITHOUT LOGIN;  
 CREATE USER Sales2 WITHOUT LOGIN;  
@@ -296,10 +273,9 @@ WITH (STATE = OFF);
   
  これで、Sales1 と Sales2 のユーザーに 6 つの行すべてが表示されます。  
   
- [このページのトップへ](#Top)  
   
 ###  <a name="MidTier"></a> B. 中間層アプリケーションからデータベースに接続するユーザーのシナリオ  
- この例では、アプリケーション ユーザー (またはテナント) が同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー (アプリケーション) を共有している場合、中間層のアプリケーションが接続フィルタリングを実装する方法を示します。 アプリケーションは、データベースに接続した後、[SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) で現在のアプリケーション ユーザー ID を設定します。その後、セキュリティ ポリシーによって、この ID に対して表示しない行が透過的にフィルター処理されます。また、ユーザーが間違ったユーザー ID の行を挿入できないようにします。 アプリケーションのその他の変更は不要です。  
+ この例では、アプリケーション ユーザー (またはテナント) が同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー (アプリケーション) を共有している場合、中間層のアプリケーションが接続フィルタリングを実装する方法を示します。 アプリケーションは、データベースに接続した後、 [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) で現在のアプリケーション ユーザー ID を設定します。その後、セキュリティ ポリシーによって、この ID に対して表示しない行が透過的にフィルター処理されます。また、ユーザーが間違ったユーザー ID の行を挿入できないようにします。 アプリケーションのその他の変更は不要です。  
   
  データを保持する単純なテーブルを作成します。  
   
@@ -352,7 +328,7 @@ AS
 GO  
 ```  
   
- `Sales` のフィルター述語およびブロック述語としてこの関数を追加するセキュリティ ポリシーを作成します。 **BEFORE UPDATE** と **BEFORE DELETE** は既にフィルター処理されているため、ブロック述語に必要なのは **AFTER INSERT** だけです。また、以前に設定した列権限により、`AppUserId` 列は他の値に更新できないため、**AFTER UPDATE** は不要です。  
+ `Sales`のフィルター述語およびブロック述語としてこの関数を追加するセキュリティ ポリシーを作成します。 **BEFORE UPDATE**と **BEFORE DELETE** は既にフィルター処理されているため、ブロック述語に必要なのは **AFTER INSERT** だけです。また、以前に設定した列権限により、 **列は他の値に更新できないため、** AFTER UPDATE `AppUserId` は不要です。  
   
 ```  
 CREATE SECURITY POLICY Security.SalesFilter  
@@ -363,7 +339,7 @@ CREATE SECURITY POLICY Security.SalesFilter
     WITH (STATE = ON);  
 ```  
   
- **SESSION_CONTEXT** でさまざまなユーザー ID を設定した後、`Sales` テーブルから選択することで、接続フィルタリングをシミュレートできます。 実際には、アプリケーションが、接続を開いた後に **SESSION_CONTEXT** で現在のユーザー ID を設定します。  
+ `Sales` SESSION_CONTEXT **でさまざまなユーザー ID を設定した後、**テーブルから選択することで、接続フィルタリングをシミュレートできます。 実際には、アプリケーションが、接続を開いた後に **SESSION_CONTEXT** で現在のユーザー ID を設定します。  
   
 ```  
 EXECUTE AS USER = 'AppUser';  
@@ -385,7 +361,7 @@ REVERT;
 GO  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [ALTER SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   
@@ -397,3 +373,4 @@ GO
  [ユーザー定義関数の作成 &#40;データベース エンジン&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)  
   
   
+

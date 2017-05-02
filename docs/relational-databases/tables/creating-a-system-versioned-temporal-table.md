@@ -1,23 +1,27 @@
 ---
 title: "システム バージョン管理されたテンポラル テーブルの作成 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "05/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 caps.latest.revision: 20
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a75bde97eddb1b99546ec4d5ff0dbb33340e19e4
+ms.lasthandoff: 04/11/2017
+
 ---
-# システム バージョン管理されたテンポラル テーブルの作成
+# <a name="creating-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルの作成
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   システム バージョン管理されたテンポラル テーブルを作成する場合、履歴テーブルの指定方法に関して 3 つの方法があります。  
@@ -28,8 +32,8 @@ caps.handback.revision: 20
   
 -   あらかじめ作成してあるユーザー定義履歴テーブルでのテンポラル テーブル: ニーズに最適な履歴テーブルをユーザーが作成し、テンポラル テーブルの作成時にそのテーブルを参照します。  
   
-## 匿名履歴テーブルによるテンポラル テーブルの作成  
- "匿名" 履歴テーブルを使用したテンポラル テーブルの作成は、すばやくオブジェクトを作成するための便利なオプションであり、プロトタイプおよびテスト環境で特に有効です。 また、**SYSTEM_VERSIONING** 句でパラメーターを指定する必要がないため、テンポラル テーブルを作成する最も簡単な方法でもあります。 次の例では、システム バージョン管理が有効な新しいテーブルを、履歴テーブルの名前を定義することなく作成しています。  
+## <a name="creating-a-temporal-table-with-an-anonymous-history-table"></a>匿名履歴テーブルによるテンポラル テーブルの作成  
+ "匿名" 履歴テーブルを使用したテンポラル テーブルの作成は、すばやくオブジェクトを作成するための便利なオプションであり、プロトタイプおよびテスト環境で特に有効です。 また、 **SYSTEM_VERSIONING** 句でパラメーターを指定する必要がないため、テンポラル テーブルを作成する最も簡単な方法でもあります。 次の例では、システム バージョン管理が有効な新しいテーブルを、履歴テーブルの名前を定義することなく作成しています。  
   
 ```  
 CREATE TABLE Department   
@@ -46,11 +50,11 @@ WITH (SYSTEM_VERSIONING = ON)
 ;  
 ```  
   
-### 重要な解説  
+### <a name="important-remarks"></a>重要な解説  
   
--   システム バージョン管理されたテンポラル テーブルには、主キーと、**GENERATED ALWAYS AS ROW START / END** として宣言された 2 つの datetime2 列で定義された厳密に 1 つの **PERIOD FOR SYSTEM_TIME** が必要です。  
+-   システム バージョン管理されたテンポラル テーブルには、主キーと、 **PERIOD FOR SYSTEM_TIME** として宣言された 2 つの datetime2 列で定義された厳密に 1 つの **PERIOD FOR SYSTEM_TIME**が必要です。  
   
--   **PERIOD** 列は、null 値許容性が指定されていない場合でも、常に null 値非許容と見なされます。 **PERIOD** 列が明示的に null 値許容と定義されている場合、**CREATE TABLE** ステートメントは失敗します。  
+-   **PERIOD** 列は、null 値許容性が指定されていない場合でも、常に null 値非許容と見なされます。 **PERIOD** 列が明示的に null 値許容と定義されている場合、 **CREATE TABLE** ステートメントは失敗します。  
   
 -   履歴テーブルは、列の数、列名、順序、データ型に関して、現在のテーブルまたはテンポラル テーブルと常にスキーマが整合している必要があります。  
   
@@ -62,9 +66,9 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   履歴テーブルの既定のクラスター化インデックスは、*IX_<history_table_name>* という形式の自動生成される名前で作成されます。 クラスター化インデックスには、 **PERIOD** 列 (終了、開始) が含まれます。  
   
--   メモリ最適化テーブルとして現在のテーブルを作成する場合は、「[メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)」を参照してください。  
+-   メモリ最適化テーブルとして現在のテーブルを作成する場合は、「 [メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)」を参照してください。  
   
-## 既定の履歴テーブルによるテンポラル テーブルの作成  
+## <a name="creating-a-temporal-table-with-a-default-history-table"></a>既定の履歴テーブルによるテンポラル テーブルの作成  
  既定の履歴テーブルによるテンポラル テーブルの作成は、名前付けを制御しながら、一方で既定の構成による履歴テーブルの作成はシステムに任せたい場合に、便利なオプションです。 次の例では、システム バージョン管理が有効な新しいテーブルを、履歴テーブルの名前を明示的に定義して作成しています。  
   
 ```  
@@ -85,16 +89,16 @@ WITH
 ;  
 ```  
   
-### 重要な解説  
+### <a name="important-remarks"></a>重要な解説  
  履歴テーブルは "匿名" 履歴テーブルの作成に適用されるのと同じ規則を使用して作成されますが、以下の規則は名前付き履歴テーブルだけに適用されます。  
   
 -   **HISTORY_TABLE** パラメーターにはスキーマ名が必須です。  
   
 -   指定したスキーマが存在しない場合、 **CREATE TABLE** ステートメントは失敗します。  
   
--   **HISTORY_TABLE** パラメーターによって指定されているテーブルが既に存在する場合、新しく作成されるテンポラル テーブルに対して、[スキーマの整合性およびテンポラル データの整合性](http://msdn.microsoft.com/library/dn935015.aspx)が検証されます。 無効な履歴テーブルが指定された場合、 **CREATE TABLE** ステートメントは失敗します。  
+-   **HISTORY_TABLE** パラメーターによって指定されているテーブルが既に存在する場合、新しく作成されるテンポラル テーブルに対して、 [スキーマの整合性およびテンポラル データの整合性](http://msdn.microsoft.com/library/dn935015.aspx)が検証されます。 無効な履歴テーブルが指定された場合、 **CREATE TABLE** ステートメントは失敗します。  
   
-## ユーザー定義の履歴テーブルによるテンポラル テーブルの作成  
+## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>ユーザー定義の履歴テーブルによるテンポラル テーブルの作成  
  ユーザー定義の履歴テーブルによるテンポラル テーブルの作成は、ユーザーが特定のストレージ オプションと追加インデックスで履歴テーブルを指定したい場合に便利なオプションです。 次の例では、作成されるテンポラル テーブルと整合するスキーマで、ユーザー定義の履歴テーブルを作成します。 このユーザー定義の履歴テーブルに対して、クラスター化列ストア インデックスおよびその他の非クラスター化行ストア (B ツリー) インデックスが、ポイント参照用に作成されます。 このユーザー定義の履歴テーブルを作成した後、ユーザー定義の履歴テーブルを既定の履歴テーブルとして指定して、システム バージョン管理されたテンポラル テーブルを作成します。  
   
 ```  
@@ -127,7 +131,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))
 ;  
 ```  
   
-### 重要な解説  
+### <a name="important-remarks"></a>重要な解説  
   
 -   集計関数またはウィンドウ関数を使用する分析クエリを履歴データに対して実行する予定の場合は、圧縮とクエリ パフォーマンスを考慮し、プライマリ インデックスとしてクラスター化列ストアを作成することを強くお勧めします。  
   
@@ -135,7 +139,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))
   
 -   履歴テーブルは、主キー、外部キー、一意なインデックス、テーブル制約、トリガーを持つことはできません。 変更データ キャプチャ、変更追跡、トランザクション レプリケーション、またはマージ レプリケーション用に構成することはできません。  
   
-## 非テンポラル テーブルをシステム バージョン管理されたテンポラル テーブルに変更する  
+## <a name="alter-non-temporal-table-to-be-system-versioned-temporal-table"></a>非テンポラル テーブルをシステム バージョン管理されたテンポラル テーブルに変更する  
  カスタム テンポラル ソリューションを組み込みサポートに移行する場合など、既存のテーブルを使用してシステム バージョン管理を有効にする必要がある場合があります。   
 たとえば、一連のテーブルにトリガーを使用してバージョン管理を実装できます。 テンポラル システム バージョン管理を使用すると、それほど複雑ではなく、次のような利点もあります。  
   
@@ -149,8 +153,8 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))
   
  既存のテーブルを変換するときは、新しい列を処理するように設計されていない既存のアプリケーションに影響しないように、 **HIDDEN** 句を使用して新しい **PERIOD** 列を非表示にすることを検討します。  
   
-### 非テンポラル テーブルへのバージョン管理の追加  
- データを含む非テンポラル テーブルの変更の追跡を開始する場合は、**PERIOD** 定義を追加する必要があり、必要に応じて、SQL Server で作成される空の履歴テーブルの名前を指定します。  
+### <a name="adding-versioning-to-non-temporal-tables"></a>非テンポラル テーブルへのバージョン管理の追加  
+ データを含む非テンポラル テーブルの変更の追跡を開始する場合は、 **PERIOD** 定義を追加する必要があり、必要に応じて、SQL Server で作成される空の履歴テーブルの名前を指定します。  
   
 ```  
 CREATE SCHEMA History;   
@@ -168,7 +172,7 @@ ALTER TABLE InsurancePolicy
 ;  
 ```  
   
-#### 重要な解説  
+#### <a name="important-remarks"></a>重要な解説  
   
 -   データが含まれる既存のテーブルに既定値のある null 非許容列を追加することは、SQL Server Enterprise Edition 以外のすべてのエディションではデータ サイズ操作 (Enterprise Edition ではメタデータ操作) となります。 SQL Server Standard Edition では、データが含まれる既存の大規模な履歴テーブルの場合、非 null 列の追加はコストのかかる操作になることがあります。  
   
@@ -180,9 +184,9 @@ ALTER TABLE InsurancePolicy
   
 -   期間を追加すると、現在のテーブルでデータ整合性チェックが実行されて、期間列の既定値が有効であることが確認されます。  
   
--   **SYSTEM_VERSIONING** を有効にするときに既存の履歴テーブルを指定すると、現在のテーブルと履歴テーブルの両方に対してデータの整合性チェックが行われます。 **DATA_CONISTENCY_CHECK = OFF** を追加パラメーターとして指定した場合は、スキップできます。  
+-   **SYSTEM_VERSIONING**を有効にするときに既存の履歴テーブルを指定すると、現在のテーブルと履歴テーブルの両方に対してデータの整合性チェックが行われます。 **DATA_CONISTENCY_CHECK = OFF** を追加パラメーターとして指定した場合は、スキップできます。  
   
-### 既存のテーブルを組み込みサポートに移行する  
+### <a name="migrate-existing-tables-to-built-in-support"></a>既存のテーブルを組み込みサポートに移行する  
  この例では、トリガーに基づく既存のソリューションを組み込みのテンポラル サポートに移行する方法を示します。 この例では、現在のカスタム ソリューションによって現在および過去のデータが 2 つの異なるユーザー テーブル (**ProjectTaskCurrent** と **ProjectTaskHistory**) に分割されるものとします。 既存のソリューションが 1 つのテーブルを使用して実際の行と過去の行を格納している場合は、この例に示す移行手順を実行する前に、データを 2 つのテーブルに分割する必要があります。  
   
 ```  
@@ -200,7 +204,7 @@ ALTER TABLE ProjectTaskCurrent
 ;  
 ```  
   
-#### 重要な解説  
+#### <a name="important-remarks"></a>重要な解説  
   
 -   **PERIOD** 定義の既存の列を参照すると、generated_always_type がこれらの列の **AS_ROW_START** および **AS_ROW_END** に暗黙的に変更されます。  
   
@@ -208,10 +212,10 @@ ALTER TABLE ProjectTaskCurrent
   
 -   **DATA_CONSISTENCY_CHECK = ON** で **SYSTEM_VERSIONING** を設定し、既存データに対するデータ整合性チェックを強制的に行うことを強くお勧めします。  
   
-## この記事は役に立ちましたか? フィードバックをお待ちしております。  
- どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツ改善のため、フィードバックをお待ちしています。  [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Creating%20a%20System-Versioned%20Temporal%20Table%20page)にコメントをお送りください  
+## <a name="did-this-article-help-you-were-listening"></a>この記事は役に立ちましたか? フィードバックをお待ちしております。  
+ どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツ改善のため、フィードバックをお待ちしています。 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Creating%20a%20System-Versioned%20Temporal%20Table%20page) にコメントをお送りください  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)   
  [システム バージョン管理されたテンポラル テーブルの概要](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [システム バージョン管理されたテンポラル テーブルの履歴データの保有期間管理](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)   
@@ -223,3 +227,4 @@ ALTER TABLE ProjectTaskCurrent
  [システム バージョン管理されたテンポラル テーブルでシステム バージョン管理を停止する](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
+

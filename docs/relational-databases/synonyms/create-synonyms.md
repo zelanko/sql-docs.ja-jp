@@ -1,27 +1,31 @@
 ---
-title: "シノニムの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-f1_keywords: 
-  - "sql13.swb.synonym.general.f1"
-helpviewer_keywords: 
-  - "シノニムの作成"
-  - "作成するシノニム [SQL Server]"
+title: "シノニムの作成 |Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+f1_keywords:
+- sql13.swb.synonym.general.f1
+helpviewer_keywords:
+- creating synonyms
+- synonyms [SQL Server], creating
 ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a3180e86333a329e2f86a45f2728630ce6cf526
+ms.lasthandoff: 04/11/2017
+
 ---
-# シノニムの作成
+# <a name="create-synonyms"></a>シノニムの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、シノニムを作成する方法について説明します。  
   
  **このトピックの内容**  
@@ -45,11 +49,11 @@ caps.handback.revision: 7
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### シノニムを作成するには  
+#### <a name="to-create-a-synonym"></a>シノニムを作成するには  
   
 1.  **オブジェクト エクスプローラー**で、新しいビューを作成するデータベースを展開します。  
   
-2.  **[シノニム]** フォルダーを右クリックし、**[新しいシノニム]** をクリックします。  
+2.  **[シノニム]** フォルダーを右クリックし、 **[新しいシノニム]**をクリックします。  
   
 3.  **[シノニムの追加]** ダイアログ ボックスで、次の情報を入力します。  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 7
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### シノニムを作成するには  
+#### <a name="to-create-a-synonym"></a>シノニムを作成するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 7
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
- 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内の既存のテーブルに対してシノニムを作成します。 このシノニムは、その後の例で使用されます。  
+ 次の例では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内の既存のテーブルに対してシノニムを作成します。 このシノニムは、その後の例で使用されます。  
   
 ```  
 USE tempdb;  

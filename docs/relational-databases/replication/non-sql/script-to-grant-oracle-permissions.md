@@ -1,30 +1,34 @@
 ---
 title: "Oracle の権限を許可するためのスクリプト | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Oracle パブリッシング [SQL Server レプリケーション], 権限を許可するためのスクリプト"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], script to grant permissions
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dd6d7d2d41813cd3a6748aa6e8bb31e2a09363a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Oracle の権限を許可するためのスクリプト
-  このトピックで示されているスクリプトを使用してデータを公開する Oracle データベースの構成中に使用される [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション。 このスクリプトは、インストール後は、ディレクトリで使用ではまた: *\< ドライブ>*:\\\Program Files\Microsoft SQL Server\\*\< InstanceName>*\MSSQL\Install\oracleadmin.sql します。 Oracle データベースの構成の詳細については、次を参照してください。 [Oracle パブリッシャーを構成する](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)です。  
+# <a name="script-to-grant-oracle-permissions"></a>Oracle の権限を許可するためのスクリプト
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーションを使用してデータをパブリッシュする Oracle データベースを構成する際には、このトピックに示すスクリプトを使用します。 このスクリプトは、インストール後に、*\<drive>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>*\MSSQL\Install\oracleadmin.sql ディレクトリで使用することもできます。 Oracle データベースの構成の詳細については、「[Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」を参照してください。  
   
 > [!NOTE]  
->  このスクリプトには、ステートメント `GRANT CREATE ANY TRIGGER TO &&AdminLogin;` が含まれています。これは、トランザクション レプリケーションで使用するトリガーで必要です。 スナップショット レプリケーションしか使用しない場合は、スクリプトからこの行を削除してください。  
+>  このスクリプトには、ステートメント `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`が含まれています。これは、トランザクション レプリケーションで使用するトリガーで必要です。 スナップショット レプリケーションしか使用しない場合は、スクリプトからこの行を削除してください。  
   
- **Oracle SQL スクリプトを実行する\*Plus ユーティリティ**  
+ **Oracle SQL\*Plus ユーティリティからスクリプトを実行するには**  
   
 1.  SQL Server ディストリビューターで、コマンド プロンプト ウィンドウを開きます。  
   
@@ -34,7 +38,7 @@ caps.handback.revision: 37
     sqlplus system/P@$$W0rd@orcl @"c:\Program Files\Microsoft SQL Server\<InstanceName>\MSSQL\Install\oracleadmin.sql"  
     ```  
   
-     この例では、ビルトイン Oracle アカウント **システム** "orcl"というのネットワーク名を持つ Oracle データベースに接続するために使用します。  
+     この例では、ビルトイン Oracle アカウント **system** を使用して、"orcl" というネットワーク名の Oracle データベースに接続しています。  
   
 3.  プロンプトが表示されたら、ユーザー名、ユーザー パスワード、および既定のテーブル スペースを指定します。  
   
@@ -123,7 +127,7 @@ GRANT CREATE VIEW TO &&ReplLogin;
 GRANT CREATE ANY TRIGGER TO &&ReplLogin;  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)  
   
   

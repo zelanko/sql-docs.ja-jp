@@ -1,34 +1,38 @@
 ---
 title: "ディストリビューターの設定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.DistributorSettings.f1"
-helpviewer_keywords: 
-  - "[ディストリビューターの設定] ダイアログ ボックス"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.DistributorSettings.f1
+helpviewer_keywords:
+- Distributor Settings dialog box
 ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f86500a4461bc2da64c7f3a3d8906bb919b28628
+ms.lasthandoff: 04/11/2017
+
 ---
-# ディストリビューターの設定
+# <a name="distributor-settings"></a>ディストリビューターの設定
   **[ディストリビューターの設定]** ダイアログ ボックスを使用すると、レプリケーション モニターの左ペインに追加されているディストリビューターの設定を変更できます。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[レプリケーション モニターが起動したときに自動的に接続する]**  
  レプリケーション モニターでディストリビューターに接続して状態情報を取得する場合に選択します。  
   
  **接続**  
- クリックすると表示、 **サーバーへの接続** ] ダイアログ ボックス。 このダイアログ ボックスでは、レプリケーション モニターがディストリビューターに接続するときに使用する接続プロパティおよび資格情報を表示および変更できます。  
+ クリックすると、 **[サーバーへの接続]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、レプリケーション モニターがディストリビューターに接続するときに使用する接続プロパティおよび資格情報を表示および変更できます。  
   
  **[このディストリビューターとパブリケーションのステータスを自動的に更新する]**  
  レプリケーション モニターでディストリビューターのステータスを自動的に更新する場合に選択します。 このオプションがオンの場合、レプリケーション モニターは、 **[更新頻度]** オプションにより設定されたポーリング間隔に基づき、状態情報についてディストリビューターをポーリングします。 レプリケーション モニターでの更新については、「 [Caching, Refresh, and Replication Monitor Performance](../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md)」を参照してください。  
@@ -42,7 +46,7 @@ caps.handback.revision: 10
  **[新しいグループ]**  
  クリックすると、新しいパブリッシャー グループを作成できます。 パブリッシャー グループを利用すると、レプリケーション モニター内でパブリッシャーを容易に整理できます。 グループは、データのレプリケーションや、レプリケーション トポロジ内のサーバー間のリレーションシップには影響を与えません。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   

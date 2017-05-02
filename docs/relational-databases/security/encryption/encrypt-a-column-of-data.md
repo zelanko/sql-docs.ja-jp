@@ -1,30 +1,34 @@
 ---
 title: "データの列の暗号化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "暗号化 [SQL Server], 列"
-  - "暗号 [SQL Server], 列"
-  - "列レベルの暗号化"
-  - "セル レベルの暗号化"
+ms.custom: 
+ms.date: 03/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], columns
+- cryptography [SQL Server], columns
+- column level encryption
+- cell level encryption
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1451071485e8994dd90ea447e28d9b32e511dd1a
+ms.lasthandoff: 04/11/2017
+
 ---
-# データの列の暗号化
+# <a name="encrypt-a-column-of-data"></a>データの列の暗号化
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  このトピックでは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)] で対称暗号化を使用してデータ列を暗号化する方法について説明します。 これは、列レベルの暗号化、またはセル レベルの暗号化とも呼ばれます。  
+  このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)]で対称暗号化を使用してデータ列を暗号化する方法について説明します。 これは、列レベルの暗号化、またはセル レベルの暗号化とも呼ばれます。  
   
  **このトピックの内容**  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### 単純な対称暗号化を使用してデータ列を暗号化するには  
+#### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>単純な対称暗号化を使用してデータ列を暗号化するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -114,7 +118,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### 認証子を含む対称暗号化を使用して列を暗号化するには  
+#### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>認証子を含む対称暗号化を使用して列を暗号化するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -188,3 +192,4 @@ caps.handback.revision: 27
 -   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-symmetric-key-transact-sql.md)  
   
   
+

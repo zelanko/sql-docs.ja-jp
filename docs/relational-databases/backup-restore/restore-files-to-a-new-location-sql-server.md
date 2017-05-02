@@ -1,29 +1,33 @@
 ---
 title: "新しい場所へのファイルの復元 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ファイルの復元 [SQL Server]、操作方法に関するトピック"
-  - "データベースの復元 [SQL Server]、移動"
-  - "ファイルの復元 [SQL Server]、手順"
-  - "ファイルの復元 [SQL Server]、操作方法に関するトピック"
-  - "ファイル グループ [SQL Server]、復元"
-  - "ファイル グループの復元 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring files [SQL Server], how-to topics
+- restoring databases [SQL Server], moving
+- restoring files [SQL Server], steps
+- file restores [SQL Server], how-to topics
+- filegroups [SQL Server], restoring
+- restoring filegroups [SQL Server]
 ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ab3848bfaca90609138cacb7493a52b00251cac3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 新しい場所へのファイルの復元 (SQL Server)
+# <a name="restore-files-to-a-new-location-sql-server"></a>新しい場所へのファイルの復元 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]で新しい場所にファイルを復元する方法について説明します。  
@@ -50,7 +54,7 @@ caps.handback.revision: 26
   
 -   RESTORE は、明示的または暗黙的なトランザクションでは使用できません。  
   
--   完全復旧モデルまたは一括ログ復旧モデルを使用する場合は、ファイルを復元する前に、ログの末尾と呼ばれるアクティブ トランザクション ログをバックアップする必要があります。 詳細については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)」を参照してください。  
+-   完全復旧モデルまたは一括ログ復旧モデルを使用する場合は、ファイルを復元する前に、ログの末尾と呼ばれるアクティブ トランザクション ログをバックアップする必要があります。 詳細については、「 [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)でファイルとファイル グループを復元する方法について説明します。  
   
 -   暗号化されたデータベースを復元するには、データベースの暗号化に使用された証明書または非対称キーにアクセスできることが必要です。 証明書または非対称キーがないと、データベースは復元できません。 このため、バックアップが必要である間は、データベース暗号化キーの暗号化に使用する証明書を保持しておく必要があります。 詳細については、「 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」を参照してください。  
   
@@ -59,15 +63,15 @@ caps.handback.revision: 26
 ####  <a name="Permissions"></a> アクセス許可  
  復元するデータベースが存在しない場合、ユーザーは RESTORE を実行できる CREATE DATABASE 権限を使用する必要があります。 データベースが存在する場合、既定では、RESTORE 権限は **sysadmin** 固定サーバー ロールおよび **dbcreator** 固定サーバー ロールのメンバーと、データベースの所有者 (**dbo**) に与えられています (FROM DATABASE_SNAPSHOT オプションを使用する場合、データベースは常に存在します)。  
   
- RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で破損していないことが必ずしも保証されないため、**db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
+ RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で破損していないことが必ずしも保証されないため、 **db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### ファイルを新しい場所に復元するには  
+#### <a name="to-restore-files-to-a-new-location"></a>ファイルを新しい場所に復元するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続して、そのインスタンスを展開します。次に、 **[データベース]**を展開します。  
   
-2.  目的のデータベースを右クリックし、**[タスク]**、**[復元]** の順にポイントし、**[ファイルおよびファイル グループ]** をクリックします。  
+2.  目的のデータベースを右クリックし、 **[タスク]**、 **[復元]**の順にポイントし、 **[ファイルおよびファイル グループ]**をクリックします。  
   
 3.  **[全般]** ページの **[復元先データベース]** ボックスに、復元するデータベースの名前を入力します。 新しいデータベースを入力するか、ドロップダウン リストから既存のデータベースを選択します。 このリストには、システム データベース **master** および **tempdb**を除いた、サーバー上のすべてのデータベースが表示されます。  
   
@@ -87,9 +91,9 @@ caps.handback.revision: 26
   
     |列見出し|値|  
     |-----------------|------------|  
-    |**復元**|このチェック ボックスをオンにすると、バックアップ セットが復元されます。|  
+    |**[復元]**|このチェック ボックスをオンにすると、バックアップ セットが復元されます。|  
     |**名前**|バックアップ セットの名前です。|  
-    |**[ファイルの種類]**|バックアップに含まれるデータの種類として、 **データ**、 **ログ**、 **FILESTREAM データ**のいずれかを指定します。 テーブルに含まれるデータの種類は、 **データ** ファイルです。 トランザクション ログ データの種類は、 **ログ** ファイルです。 ファイル システムに格納されたバイナリ ラージ オブジェクト (BLOB) データの種類は、**FILESTREAM データ** ファイルです。|  
+    |**[ファイルの種類]**|バックアップに含まれるデータの種類として、 **データ**、 **ログ**、 **FILESTREAM データ**のいずれかを指定します。 テーブルに含まれるデータの種類は、 **データ** ファイルです。 トランザクション ログ データの種類は、 **ログ** ファイルです。 ファイル システムに格納されたバイナリ ラージ オブジェクト (BLOB) データの種類は、 **FILESTREAM データ** ファイルです。|  
     |**型**|実行するバックアップの種類です。 **[完全]**、 **[差分]**、または **[トランザクション ログ]**のいずれかを指定します。|  
     |**[サーバー]**|バックアップ操作を実行するデータベース エンジン インスタンスの名前です。|  
     |**[ファイルの論理名]**|ファイルの論理名です。|  
@@ -106,14 +110,14 @@ caps.handback.revision: 26
     |列見出し|値|  
     |-----------------|------------|  
     |**[元のファイル名]**|ソース バックアップ ファイルの完全なパスです。|  
-    |**[ファイルの種類]**|バックアップに含まれるデータの種類として、 **データ**、 **ログ**、 **FILESTREAM データ**のいずれかを指定します。 テーブルに含まれるデータの種類は、 **データ** ファイルです。 トランザクション ログ データの種類は、 **ログ** ファイルです。 ファイル システムに格納されたバイナリ ラージ オブジェクト (BLOB) データの種類は、**FILESTREAM データ** ファイルです。|  
+    |**[ファイルの種類]**|バックアップに含まれるデータの種類として、 **データ**、 **ログ**、 **FILESTREAM データ**のいずれかを指定します。 テーブルに含まれるデータの種類は、 **データ** ファイルです。 トランザクション ログ データの種類は、 **ログ** ファイルです。 ファイル システムに格納されたバイナリ ラージ オブジェクト (BLOB) データの種類は、 **FILESTREAM データ** ファイルです。|  
     |**[復元先]**|復元されるデータベース ファイルのフル パスです。 新しい復元ファイルを指定するには、テキスト ボックスをクリックして、指定されているパスおよびファイル名を編集します。 **[復元先]** 列でパスまたはファイル名を変更することは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE ステートメントで MOVE オプションを使用することと同じです。|  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### ファイルを新しい場所に復元するには  
+#### <a name="to-restore-files-to-a-new-location"></a>ファイルを新しい場所に復元するには  
   
 1.  必要に応じて、RESTORE FILELISTONLY ステートメントを実行し、データベースの完全バックアップ内のファイル数とファイル名を特定します。  
   
@@ -165,9 +169,9 @@ RESTORE LOG MyNwind
 GO  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SSMS を使用してデータベース バックアップを復元する](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [バックアップと復元によるデータベースのコピー](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
  [ファイルおよびファイル グループの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   

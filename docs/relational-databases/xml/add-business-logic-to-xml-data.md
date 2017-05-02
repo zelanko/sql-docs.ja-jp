@@ -1,24 +1,28 @@
 ---
 title: "XML データへのビジネス ロジックの追加 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ビジネス ロジック [XML]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fcb398dc1cd451f55446efee763d7d33891b7ca4
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML データへのビジネス ロジックの追加
+# <a name="add-business-logic-to-xml-data"></a>XML データへのビジネス ロジックの追加
   XML データにはいくつかの方法でビジネス ロジックを追加できます。  
   
 -   XML データの挿入や変更のときに領域固有の制約を強制する行制約または列制約を記述できます。  
@@ -29,7 +33,7 @@ caps.handback.revision: 18
   
 -   ビジネス ニーズに合わせて XML 列の処理を開始する Transact-SQL ストアド プロシージャや関数を記述できます。  
   
-## 例 : XSL 変換の適用  
+## <a name="example-applying-xsl-transformation"></a>例 : XSL 変換の適用  
  **xml** データ型のインスタンスおよびファイルに保存されている XSL 変換を受け取り、XML データに変換を適用し、変換後の XML を結果として返す CLR 関数 **TransformXml()** を考えてみます。 次に示すのは、C# で記述した関数の骨組みです。  
   
 ```  
@@ -50,7 +54,7 @@ public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {
 }   
 ```  
   
- アセンブリを登録し、**TransformXml()** に対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] のユーザー定義関数 **SqlXslTransform()** を作成すると、次のクエリに示すように Transact-SQL からその関数を呼び出すことができます。  
+ アセンブリを登録し、 [!INCLUDE[tsql](../../includes/tsql-md.md)] TransformXml() **に対応する** のユーザー定義関数 **SqlXslTransform()**を作成すると、次のクエリに示すように Transact-SQL からその関数を呼び出すことができます。  
   
 ```  
 SELECT SqlXslTransform (xCol, 'C:\MyFile\xsltransform.xsl')  

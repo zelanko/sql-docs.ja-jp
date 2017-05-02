@@ -1,29 +1,33 @@
 ---
 title: "組み込みの XML スキーマ コレクション (sys) の参照 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sys XML スキーマ コレクション [SQL Server]"
-  - "スキーマ コレクション [SQL Server], 定義済み"
-  - "定義済みの XML スキーマ コレクション [SQL Server]"
-  - "XML スキーマ コレクション [SQL Server], 定義済み"
-  - "組み込みの XML スキーマ コレクション [SQL Server]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sys XML schema collections [SQL Server]
+- schema collections [SQL Server], predefined
+- predefined XML schema collections [SQL Server]
+- XML schema collections [SQL Server], predefined
+- built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fa2b103a4c846e52c9af999980bb3c8080a4f6d5
+ms.lasthandoff: 04/11/2017
+
 ---
-# 組み込みの XML スキーマ コレクション (sys) の参照
-  作成したどのデータベースでも、**sys** リレーショナル スキーマに **sys** XML スキーマ コレクションが事前に定義されています。 各データベースはこれらの事前定義されたスキーマを保持します。また、これらのスキーマは、ユーザーが作成した他の XML スキーマ コレクションからアクセスできます。 このような事前定義されたスキーマに使われているプレフィックスは、XQuery で意味があるものとして扱われます。 **xml** のみが、予約されているプレフィックスです。  
+# <a name="reference-the-built-in-xml-schema-collection-sys"></a>組み込みの XML スキーマ コレクション (sys) の参照
+  作成したどのデータベースでも、 **sys** リレーショナル スキーマに **sys** XML スキーマ コレクションが事前に定義されています。 各データベースはこれらの事前定義されたスキーマを保持します。また、これらのスキーマは、ユーザーが作成した他の XML スキーマ コレクションからアクセスできます。 このような事前定義されたスキーマに使われているプレフィックスは、XQuery で意味があるものとして扱われます。 **xml** のみが、予約されているプレフィックスです。  
   
 ```  
 xml = http://www.w3.org/XML/1998/namespace  
@@ -36,11 +40,11 @@ xdt = http://www.w3.org/2004/07/xpath-datatypes
 (no prefix) = http://schemas.microsoft.com/sqlserver/2004/SOAP  
 ```  
   
- **sqltypes** 名前空間には、ユーザーが作成したどの XML スキーマ コレクションからでも参照できるコンポーネントが含まれます。 **sqltypes** スキーマは、[Microsoft Web サイト](http://go.microsoft.com/fwlink/?linkid=31850) からダウンロードできます。 組み込みのコンポーネントには、次のものが含まれます。  
+ **sqltypes** 名前空間には、ユーザーが作成したどの XML スキーマ コレクションからでも参照できるコンポーネントが含まれます。 **sqltypes** スキーマは、 [Microsoft Web サイト](http://go.microsoft.com/fwlink/?linkid=31850)からダウンロードできます。 組み込みのコンポーネントには、次のものが含まれます。  
   
 -   XSD 型  
   
--   XML 属性 **lang**、**base**、および **space**  
+-   XML 属性 **lang**、 **base**、および **space**  
   
 -   **sqltypes** 名前空間のコンポーネント  
   
@@ -56,7 +60,7 @@ AND (SC.schema_id = 4))
 GO  
 ```  
   
- 次の例は、これらのコンポーネントをユーザー スキーマで参照する方法を示しています。 `CREATE XML SCHEMA COLLECTION`  は、`sqltypes` 名前空間で定義されている `varchar` 型を参照する XML スキーマ コレクションを作成します。 この例では、`lang` 名前空間で定義されている `xml` 属性も参照します。  
+ 次の例は、これらのコンポーネントをユーザー スキーマで参照する方法を示しています。 `CREATE XML SCHEMA COLLECTION` は、 `varchar` 名前空間で定義されている `sqltypes` 型を参照する XML スキーマ コレクションを作成します。 この例では、 `lang` 名前空間で定義されている `xml` 属性も参照します。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
@@ -148,7 +152,7 @@ GO
   
  `@var` 変数に関連付けられているスキーマに従うと、<`root`> 要素の値の型が **varchar** 型の派生型であるため、`instance of sqltypes:varchar?` 式は TRUE を返します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [XML スキーマ コレクション &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

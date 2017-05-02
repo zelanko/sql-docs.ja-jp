@@ -1,57 +1,61 @@
 ---
 title: "例: OPENXML の使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ColPattern [SQL Server の XML]"
-  - "XML [SQL Server], データのマッピング"
-  - "OPENXML ステートメント, OPENXML ステートメントについて"
-  - "XML ドキュメントのオーバーフロー [SQL Server]"
-  - "XML データのマッピング [SQL Server]"
-  - "属性中心のマッピングと要素中心のマッピングの組み合わせ"
-  - "未使用データ"
-  - "属性中心のマッピング"
-  - "列パターン [SQL Server の XML]"
-  - "XML [SQL Server], オーバーフロー処理"
-  - "行パターン [SQL Server の XML]"
-  - "rowpattern [SQL Server の XML]"
-  - "flags パラメーター"
-  - "要素中心のマッピング [SQL Server]"
-  - "エッジ テーブル"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ColPattern [XML in SQL Server]
+- XML [SQL Server], mapping data
+- OPENXML statement, about OPENXML statement
+- overflow in XML document [SQL Server]
+- mapping XML data [SQL Server]
+- combining attribute-centric and element centric mapping
+- unconsumed data
+- attribute-centric mapping
+- column patterns [XML in SQL Server]
+- XML [SQL Server], overflow handling
+- row patterns [XML in SQL Server]
+- rowpattern [XML in SQL Server]
+- flags parameter
+- element-centric mapping [SQL Server]
+- edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a559fe0e900d3c4e0ffd70b454f995292169880
+ms.lasthandoff: 04/11/2017
+
 ---
-# 例: OPENXML の使用
-  このトピックの例では、OPENXML を使用して XML ドキュメントの行セット ビューを作成する方法を示します。 OPENXML の構文の詳細については、「[OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)」を参照してください。 ここに示す例では、OPENXML でのメタプロパティの指定を除く OPENXML のすべての側面を示します。 OPENXML のメタプロパティの指定方法の詳細については、「[OPENXML 内でのメタプロパティの指定](../../relational-databases/xml/specify-metaproperties-in-openxml.md)」を参照してください。  
+# <a name="examples-using-openxml"></a>例: OPENXML の使用
+  このトピックの例では、OPENXML を使用して XML ドキュメントの行セット ビューを作成する方法を示します。 OPENXML の構文の詳細については、「 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)」を参照してください。 ここに示す例では、OPENXML でのメタプロパティの指定を除く OPENXML のすべての側面を示します。 OPENXML のメタプロパティの指定方法の詳細については、「 [OPENXML 内でのメタプロパティの指定](../../relational-databases/xml/specify-metaproperties-in-openxml.md)」を参照してください。  
   
-## 使用例  
- データを取得する際に、*rowpattern* を使用して、XML ドキュメント内の行を決定するノードを識別します。 また、*rowpattern* は、MSXML XPath の実装で使用される XPath パターン言語で表現されます。 たとえば、パターンが要素や属性になる場合、*rowpattern* で選択される要素や属性のノードごとに行が作成されます。  
+## <a name="examples"></a>使用例  
+ データを取得する際に、 *rowpattern* を使用して、XML ドキュメント内の行を決定するノードを識別します。 また、 *rowpattern* は、MSXML XPath の実装で使用される XPath パターン言語で表現されます。 たとえば、パターンが要素や属性になる場合、 *rowpattern*で選択される要素や属性のノードごとに行が作成されます。  
   
- *flags* 値は、既定のマッピングを指定します。 *SchemaDeclaration* で *ColPattern* が指定されていない場合、*flags* で指定されたマッピングが想定されます。 *SchemaDeclaration* で *ColPattern* が指定されている場合、*flags* の値は無視されます。 指定された *ColPattern* により、マッピング、属性中心か要素中心か、さらにオーバーフロー データと未使用データを処理するときの動作が決まります。  
+ *flags* 値は、既定のマッピングを指定します。 *SchemaDeclaration* で *ColPattern*が指定されていない場合、 *flags* で指定されたマッピングが想定されます。 *SchemaDeclaration* で *ColPattern* が指定されている場合、 *flags*の値は無視されます。 指定された *ColPattern* により、マッピング、属性中心か要素中心か、さらにオーバーフロー データと未使用データを処理するときの動作が決まります。  
   
-### A. OPENXML を使用した単純な SELECT ステートメントの実行  
+### <a name="a-executing-a-simple-select-statement-with-openxml"></a>A. OPENXML を使用した単純な SELECT ステートメントの実行  
  この例の XML ドキュメントは、<`Customer`> 要素、<`Order`> 要素、および <`OrderDetail`> 要素で構成されます。 OPENXML ステートメントでは、XML ドキュメントから顧客情報が 2 列の行セット (**CustomerID** と **ContactName**) で取得されます。  
   
- 最初に、**sp_xml_preparedocument** ストアド プロシージャを呼び出してドキュメント ハンドルを取得します。 このドキュメント ハンドルを OPENXML に渡します。  
+ 最初に、 **sp_xml_preparedocument** ストアド プロシージャを呼び出してドキュメント ハンドルを取得します。 このドキュメント ハンドルを OPENXML に渡します。  
   
  この OPENXML ステートメントは、次のことを表します。  
   
 -   *rowpattern* (/ROOT/Customer) により、処理する <`Customer`> ノードが識別されます。  
   
--   *flags* パラメーター値を **1** に設定し、属性中心のマッピングを示します。 その結果、XML 属性は *SchemaDeclaration* で定義される行セットの列にマップされます。  
+-   *flags* パラメーター値を **1** に設定し、属性中心のマッピングを示します。 その結果、XML 属性は *SchemaDeclaration*で定義される行セットの列にマップされます。  
   
--   WITH 句の *SchemaDeclaration* では、指定された *ColName* 値は対応する XML 属性の名前と一致します。 したがって、*SchemaDeclaration* では *ColPattern* パラメーターが指定されていません。  
+-   WITH 句の *SchemaDeclaration*では、指定された *ColName* 値は対応する XML 属性の名前と一致します。 したがって、 *SchemaDeclaration* では *ColPattern*パラメーターが指定されていません。  
   
  次に、SELECT ステートメントにより、OPENXML で提供される行セット内のすべての列が取得されます。  
   
@@ -139,20 +143,20 @@ LILAS      Carlos Gonzlez
   
  **sp_xml_preparedocument** から返されたドキュメント ハンドルは、セッション内ではなく、バッチが実行されている間は有効であることに注意してください。  
   
-### B. 行セットの列と XML の属性や要素の間でマッピングを行うための ColPattern の指定  
+### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>B. 行セットの列と XML の属性や要素の間でマッピングを行うための ColPattern の指定  
  この例では、省略可能な *ColPattern* パラメーターに XPath パターンを指定して、行セットの列と XML の属性や要素の間でマッピングを行う方法を示します。  
   
  この例の XML ドキュメントは、<`Customer`> 要素、<`Order`> 要素、および <`OrderDetail`> 要素で構成されます。 OPENXML ステートメントにより、XML ドキュメントから顧客情報と注文情報が 1 つの行セット (**CustomerID**、**OrderDate**、**ProdID**、および **Qty**) として取得されます。  
   
- 最初に、**sp_xml_preparedocument** ストアド プロシージャを呼び出してドキュメント ハンドルを取得します。 このドキュメント ハンドルを OPENXML に渡します。  
+ 最初に、 **sp_xml_preparedocument** ストアド プロシージャを呼び出してドキュメント ハンドルを取得します。 このドキュメント ハンドルを OPENXML に渡します。  
   
  この OPENXML ステートメントは、次のことを表します。  
   
 -   *rowpattern* (/ROOT/Customer/Order/OrderDetail) により、処理する <`OrderDetail`> ノードが識別されます。  
   
- ここでは説明のために、*flags* パラメーター値を **2** に設定して、要素中心のマッピングを示しています。 ただし、このマッピングは *ColPattern* に指定したマッピングによって上書きされます。 つまり、*ColPattern* に指定した XPath パターンにより、行セットの列が属性にマップされます。 この結果、属性中心のマッピングになります。  
+ ここでは説明のために、*flags* パラメーター値を **2** に設定して、要素中心のマッピングを示しています。 ただし、このマッピングは *ColPattern* に指定したマッピングによって上書きされます。 つまり、 *ColPattern* に指定した XPath パターンにより、行セットの列が属性にマップされます。 この結果、属性中心のマッピングになります。  
   
- WITH 句の *SchemaDeclaration* では、*ColName* パラメーターと *ColType* パラメーターを使用して *ColPattern* も指定されています。 省略可能な *ColPattern* は指定された XPath パターンで、次のことを示します。  
+ WITH 句の *SchemaDeclaration*では、 *ColName* パラメーターと *ColType* パラメーターを使用して *ColPattern* も指定されています。 省略可能な *ColPattern* は指定された XPath パターンで、次のことを示します。  
   
 -   行セットの **OrderID** 列、**CustomerID** 列、および **OrderDate** 列は *rowpattern* によって識別されたノードの親の属性にマップされ、*rowpattern* によって <`OrderDetail`> ノードが識別されます。 したがって、**CustomerID** 列と **OrderDate** 列は <`Order`> 要素の **CustomerID** 属性と **OrderDate** 属性にマップされます。  
   
@@ -237,8 +241,8 @@ WITH (CustomerID  varchar(10)   '../CustomerID',
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
-### C. 属性中心のマッピングと要素中心のマッピングの組み合わせ  
- この例では、*flags* パラメーターを **3** に設定し、属性中心のマッピングと要素中心のマッピングの両方が適用されることを示します。 この場合、まだ処理されていないすべての列に対して、まず属性中心のマッピングが適用されてから、次に要素中心のマッピングが適用されます。  
+### <a name="c-combining-attribute-centric-and-element-centric-mapping"></a>C. 属性中心のマッピングと要素中心のマッピングの組み合わせ  
+ この例では、 *flags* パラメーターを **3** に設定し、属性中心のマッピングと要素中心のマッピングの両方が適用されることを示します。 この場合、まだ処理されていないすべての列に対して、まず属性中心のマッピングが適用されてから、次に要素中心のマッピングが適用されます。  
   
 ```  
 DECLARE @docHandle int  
@@ -282,7 +286,7 @@ LILAS      Carlos Gonzlez
   
  **CustomerID** に属性中心のマッピングが適用されます。 <`Customer`> 要素には **ConzｘtactName** 属性がありません。 そのため、要素中心のマッピングが適用されます。  
   
-### D. ColPattern としての text() XPath 関数の指定  
+### <a name="d-specifying-the-text-xpath-function-as-colpattern"></a>D. ColPattern としての text() XPath 関数の指定  
  この例の XML ドキュメントは、<`Customer`> 要素および <`Order`> 要素で構成されます。 OPENXML ステートメントにより、<`Order`> 要素の **oid** 属性、*rowpattern* で識別されるノードの親の ID、および要素のコンテンツのリーフ値の文字列で構成される行セットが取得されます。  
   
  最初に、**sp_xml_preparedocument** ストアド プロシージャを呼び出してドキュメント ハンドルを取得します。 このドキュメント ハンドルを OPENXML に渡します。  
@@ -291,9 +295,9 @@ LILAS      Carlos Gonzlez
   
 -   *rowpattern* (/root/Customer/Order) により、処理する <`Order`> ノードが識別されます。  
   
--   *flags* パラメーター値を **1** に設定し、属性中心のマッピングを示します。 その結果、XML 属性は *SchemaDeclaration* で定義される行セットの列にマップされます。  
+-   *flags* パラメーター値を **1** に設定し、属性中心のマッピングを示します。 その結果、XML 属性は *SchemaDeclaration*で定義される行セットの列にマップされます。  
   
--   WITH 句の *SchemaDeclaration* では、行セットの列名である **oid** と **amount** が対応する XML 属性の名前と一致します。 したがって、*ColPattern* パラメーターは指定されません。 行セット内の **comment** 列では、XPath 関数 **text()** が *ColPattern* に指定されています。 これにより、*flags* に指定された属性中心のマッピングが上書きされ、列には要素コンテンツのリーフ値の文字列が含まれます。  
+-   WITH 句の *SchemaDeclaration* では、行セットの列名である **oid** と **amount** が対応する XML 属性の名前と一致します。 したがって、 *ColPattern* パラメーターは指定されません。 行セット内の **comment** 列では、XPath 関数 **text()**が *ColPattern*に指定されています。 これにより、 *flags*に指定された属性中心のマッピングが上書きされ、列には要素コンテンツのリーフ値の文字列が含まれます。  
   
  次に、SELECT ステートメントにより、OPENXML で提供される行セット内のすべての列が取得されます。  
   
@@ -339,12 +343,12 @@ O3    100.0         Happy Customer.
 O4    10000.0       NULL  
 ```  
   
-### E. WITH 句での TableName の指定  
- この例では、WITH 句に *SchemaDeclaration* ではなく *TableName* を指定します。 この指定は、目的の構造のテーブルがあり、列パターンの *ColPattern* パラメーターが必要ない場合に役立ちます。  
+### <a name="e-specifying-tablename-in-the-with-clause"></a>E. WITH 句での TableName の指定  
+ この例では、WITH 句に *SchemaDeclaration* ではなく *TableName*を指定します。 この指定は、目的の構造のテーブルがあり、列パターンの *ColPattern* パラメーターが必要ない場合に役立ちます。  
   
  この例の XML ドキュメントは、<`Customer`> 要素および <`Order`> 要素で構成されます。 OPENXML ステートメントでは、XML ドキュメントから注文情報が 3 列の行セット (**oid**、**date**、および **amount**) に取得されます。  
   
- 最初に、**sp_xml_preparedocument** ストアド プロシージャを呼び出してドキュメント ハンドルを取得します。 このドキュメント ハンドルを OPENXML に渡します。  
+ 最初に、 **sp_xml_preparedocument** ストアド プロシージャを呼び出してドキュメント ハンドルを取得します。 このドキュメント ハンドルを OPENXML に渡します。  
   
  この OPENXML ステートメントは、次のことを表します。  
   
@@ -352,7 +356,7 @@ O4    10000.0       NULL
   
 -   WITH 句には *SchemaDeclaration* がありません。 代わりに、テーブル名が指定されています。 そのため、行セット スキーマとしてテーブル スキーマが使用されます。  
   
--   *flags* パラメーター値を **1** に設定し、属性中心のマッピングを示します。 したがって、*rowpattern* で識別される要素の属性は、同じ名前の行セット列にマップされます。  
+-   *flags* パラメーター値を **1** に設定し、属性中心のマッピングを示します。 したがって、 *rowpattern*で識別される要素の属性は、同じ名前の行セット列にマップされます。  
   
  次に、SELECT ステートメントにより、OPENXML で提供される行セット内のすべての列が取得されます。  
   
@@ -399,7 +403,7 @@ O3    1999-07-14 00:00:00.000     100.0
 O4    1996-01-20 00:00:00.000     10000.0  
 ```  
   
-### F. エッジ テーブル形式での結果の取得  
+### <a name="f-obtaining-the-result-in-an-edge-table-format"></a>F. エッジ テーブル形式での結果の取得  
  この例では、OPENXML ステートメントに WITH 句が指定されていません。 その結果、OPENXML で生成される行セットがエッジ テーブル形式になります。 SELECT ステートメントにより、エッジ テーブル内のすべての列が返されます。  
   
  この例のサンプル XML ドキュメントは、<`Customer`> 要素、<`Order`> 要素、および <`OrderDetail`> 要素で構成されます。  
@@ -460,18 +464,18 @@ EXEC sp_xml_removedocument @docHandle
     ORDER BY localname  
     ```  
   
-### G. 属性で終了する rowpattern の指定  
+### <a name="g-specifying-rowpattern-ending-with-an-attribute"></a>G. 属性で終了する rowpattern の指定  
  この例の XML ドキュメントは、<`Customer`> 要素、<`Order`> 要素、および <`OrderDetail`> 要素で構成されます。 OPENXML ステートメントにより、XML ドキュメントから注文明細の情報が 3 列の行セット (**ProductID**、**Quantity**、および **OrderID**) で取得されます。  
   
- 最初に、**sp_xml_preparedocument** を呼び出してドキュメント ハンドルを取得します。 このドキュメント ハンドルを OPENXML に渡します。  
+ 最初に、 **sp_xml_preparedocument** を呼び出してドキュメント ハンドルを取得します。 このドキュメント ハンドルを OPENXML に渡します。  
   
  この OPENXML ステートメントは、次のことを表します。  
   
--   *rowpattern* (/ROOT/Customer/Order/OrderDetail/@ProductID) は、XML 属性 **ProductID** で終了します。 結果の行セットでは、XML ドキュメント内で選択した属性ノードごとに行が作成されます。  
+-   *rowpattern* (/ROOT/Customer/Order/OrderDetail/@ProductID) は XML 属性、**ProductID** で終わります。 結果の行セットでは、XML ドキュメント内で選択した属性ノードごとに行が作成されます。  
   
--   この例では、*flags* パラメーターは指定されていません。 代わりに、*ColPattern* パラメーターによってマッピングを指定します。  
+-   この例では、 *flags* パラメーターは指定されていません。 代わりに、 *ColPattern* パラメーターによってマッピングを指定します。  
   
- WITH 句の *SchemaDeclaration* では、*ColName* パラメーターと *ColType* パラメーターを使用して *ColPattern* も指定されています。 省略可能な *ColPattern* は、次のことを示すために指定する XPath パターンです。  
+ WITH 句の *SchemaDeclaration* では、 *ColName* パラメーターと *ColType* パラメーターを使用して *ColPattern* も指定されています。 省略可能な *ColPattern* は、次のことを示すために指定する XPath パターンです。  
   
 -   行セット内の **ProdID** 列の *ColPattern* に指定された XPath パターン (**.**) により、コンテキスト ノード (現在のノード) が識別されます。 指定された *rowpattern* によって、これは、<`OrderDetail`> 要素の **ProductID** 属性となります。  
   
@@ -521,8 +525,8 @@ ProdID      Qty         OID
 72          3           10283  
 ```  
   
-### H. 複数のテキスト ノードを含む XML ドキュメントの指定  
- XML ドキュメント内に複数のテキスト ノードがある場合、*ColPattern* である **text()** が指定された SELECT ステートメントにより、すべてのテキスト ノードではなく最初のテキスト ノードだけが返されます。 例:  
+### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. 複数のテキスト ノードを含む XML ドキュメントの指定  
+ XML ドキュメント内に複数のテキスト ノードがある場合、 *ColPattern*である **text()**が指定された SELECT ステートメントにより、すべてのテキスト ノードではなく最初のテキスト ノードだけが返されます。 例:  
   
 ```  
 DECLARE @h int  
@@ -539,10 +543,10 @@ SELECT * FROM openxml(@h, '/root/b:Elem')
 EXEC sp_xml_removedocument @h  
 ```  
   
- SELECT ステートメントでは、結果として **TaU** ではなく **T** が返されます。  
+ SELECT ステートメントでは、結果として **TaU** ではなく **T**が返されます。  
   
-### I. WITH 句での xml データ型の指定  
- WITH 句では、**xml** データ型の列にマップされる列パターンが型指定されているかどうかにかかわらず、この列パターンから、空のシーケンスまたは要素のシーケンス、処理命令、テキスト ノード、およびコメントが返されます。 データは **xml** データ型にキャストされます。  
+### <a name="i-specifying-the-xml-data-type-in-the-with-clause"></a>I. WITH 句での xml データ型の指定  
+ WITH 句では、 **xml** データ型の列にマップされる列パターンが型指定されているかどうかにかかわらず、この列パターンから、空のシーケンスまたは要素のシーケンス、処理命令、テキスト ノード、およびコメントが返されます。 データは **xml** データ型にキャストされます。  
   
  次の例では、WITH 句のテーブル スキーマ宣言に **xml** 型の列が含まれています。  
   
@@ -575,7 +579,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- 具体的には、**xml** 型の変数 (@x) を **sp_xml_preparedocument()** 関数に渡しています。  
+ 具体的には、 **xml** 型の変数 (@x) を **sp_xml_preparedocument()** 関数に渡しています。  
   
  結果を次に示します。  
   
@@ -602,18 +606,18 @@ id  lname   xmlname                   OverFlow
   
 -   WITH 句の列が型指定された XML 列で、XML インスタンスがスキーマに準拠しない場合、エラーが返されます。  
   
-### J.  複数の値の属性から個別の値の取得  
- XML ドキュメントには、複数の値を指定できる属性を含めることができます。 たとえば、**IDREFS** 属性には複数の値を指定できます。 XML ドキュメントでは、複数の値の属性値を、各値をスペースで区切った文字列として指定します。 次の XML ドキュメントでは、\<Student> 要素の **attends** 属性と \<Class> 要素の **attendedBy** 属性に複数の値を指定できます。 複数の値を指定できる XML 属性から値を個別に取得し、各値をデータベース内の別々の行に格納するには、新たな作業が必要です。 この例ではその処理を示します。  
+### <a name="j-retrieving-individual-values-from-multivalued-attributes"></a>J. 複数の値の属性から個別の値の取得  
+ XML ドキュメントには、複数の値を指定できる属性を含めることができます。 たとえば、 **IDREFS** 属性には複数の値を指定できます。 XML ドキュメントでは、複数の値の属性値を、各値をスペースで区切った文字列として指定します。 次の XML ドキュメントでは、\<Student> 要素の **attends** 属性と \<Class> 要素の **attendedBy** 属性に複数の値を指定できます。 複数の値を指定できる XML 属性から値を個別に取得し、各値をデータベース内の別々の行に格納するには、新たな作業が必要です。 この例ではその処理を示します。  
   
  このサンプル XML ドキュメントは、次の要素で構成されます。  
   
 -   \<Student>  
   
-     **id** (学生 ID) 属性、**name** 属性、および **attends** 属性。 **attends** 属性には複数の値を指定できます。  
+     **id** (学生 ID) 属性、 **name**属性、および **attends** 属性。 **attends** 属性には複数の値を指定できます。  
   
 -   \<Class>  
   
-     **id** (クラス ID) 属性、**name** 属性、および **attendedBy** 属性。 **attendedBy** 属性には複数の値を指定できます。  
+     **id** (クラス ID) 属性、 **name**属性、および **attendedBy** 属性。 **attendedBy** 属性には複数の値を指定できます。  
   
  \<Student> の **attends** 属性と \<Class> の **attendedBy** 属性は、Student テーブルと Class テーブル間の **m:n** リレーションシップを表します。 学生は多くのクラスを受講でき、クラスは多くの学生を受け入れることができます。  
   
@@ -756,7 +760,7 @@ SELECT * FROM CourseAttendance
 EXECUTE sp_xml_removedocument @h  
 ```  
   
-### K. XML 内の base64 エンコードされたデータからのバイナリ データの取得  
+### <a name="k-retrieving-binary-from-base64-encoded-data-in-xml"></a>K. XML 内の base64 エンコードされたデータからのバイナリ データの取得  
  多くの場合、バイナリ データは base64 エンコードを使用して XML に含められます。 OPENXML を使用してこの XML を細分化するときに、base64 エンコードされたデータを受け取ります。 この例では、base64 エンコードされたデータをバイナリ データに変換する方法を示します。  
   
 -   サンプル バイナリ データを含むテーブルを作成します。  
@@ -799,7 +803,7 @@ Col1        BinaryCol
 1           0x1234567890  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
  [sp_xml_removedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   

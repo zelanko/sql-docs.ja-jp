@@ -1,26 +1,30 @@
 ---
 title: "SQL Server: General Statistics オブジェクト | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:General Statistics"
-  - "General Statistics オブジェクト"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:General Statistics
+- General Statistics object
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e179c0523d8d406f9413f98a0a5a7acbc7e714a1
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server: General Statistics オブジェクト
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **SQLServer:General Statistics** オブジェクトには、現在の接続数や、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行しているコンピューターとの間で接続または切断を行っている 1 秒あたりのユーザー数など、一般的なサーバー全体の利用状況を監視するためのカウンターがあります。 これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスとの間で接続と切断を行うクライアントの数が多い、大規模オンライン トランザクション処理 (OLTP) で作業している場合に便利です。  
+# <a name="sql-server-general-statistics-object"></a>SQL Server: General Statistics オブジェクト
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **SQLServer:General Statistics** オブジェクトには、現在の接続数や、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行しているコンピューターとの間で接続または切断を行っている 1 秒あたりのユーザー数など、一般的なサーバー全体の利用状況を監視するためのカウンターがあります。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスとの間で接続と切断を行うクライアントの数が多い、大規模オンライン トランザクション処理 (OLTP) で作業している場合に便利です。  
   
  次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **General Statistics** カウンターについて説明します。  
   
@@ -30,7 +34,7 @@ caps.handback.revision: 26
 |**Connection resets/sec**|接続プールから開始されたログインの総数。|  
 |**Event Notifications Delayed Drop**|システム スレッドによって削除されるのを待機しているイベント通知の数。|  
 |**HTTP Authenticated Requests**|秒単位で開始された認証済み HTTP 要求の数。|  
-|**Logical Connections**|システムへの論理接続の数。<br /><br /> 論理接続の主な目的は、複数のアクティブな結果セット (MARS) の要求を処理することです。 MARS 要求の場合、アプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するたびに、1 つの物理接続に複数の論理接続が対応します。<br /><br /> MARS を使用しない場合、物理接続と論理接続の比率は 1:1 です。 したがって、アプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するたびに、論理接続は 1 つずつ増えます。|  
+|**Logical Connections**|システムへの論理接続の数。<br /><br /> 論理接続の主な目的は、複数のアクティブな結果セット (MARS) の要求を処理することです。 MARS 要求の場合、アプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続するたびに、1 つの物理接続に複数の論理接続が対応します。<br /><br /> MARS を使用しない場合、物理接続と論理接続の比率は 1:1 です。 したがって、アプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続するたびに、論理接続は 1 つずつ増えます。|  
 |**Logins/sec**|開始されるログインの秒単位の総数。 これには、プールされた接続は含まれません。|  
 |**Logouts/sec**|開始されるログアウトの秒単位の総数。|  
 |**Mars Deadlocks**|検出された Mars Deadlock の数。|  
@@ -51,7 +55,7 @@ caps.handback.revision: 26
 |**トランザクション**|参加中のトランザクションの数 (ローカル、DTC、およびバインド済みのすべてのトランザクション)。|  
 |**User Connections**|SQL Server に現在接続しているユーザー数。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [リソースの利用状況の監視 &#40;システム モニター&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

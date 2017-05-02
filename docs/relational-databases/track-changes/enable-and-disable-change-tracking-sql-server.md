@@ -1,35 +1,39 @@
 ---
 title: "変更の追跡の有効化と無効化 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "変更の追跡 [SQL Server], 無効化"
-  - "データの変更 [SQL Server]"
-  - "変更の追跡 [SQL Server], 有効化"
-  - "データの変更の追跡 [SQL Server]"
-  - "変更の追跡 [SQL Server], 構成"
-  - "データ [SQL Server], 変更"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- change tracking [SQL Server], disabling
+- data changes [SQL Server]
+- change tracking [SQL Server], enabling
+- tracking data changes [SQL Server]
+- change tracking [SQL Server], configuring
+- data [SQL Server], changing
 ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 156e5514169d9b4ca9f8cca9e5f06a46187211aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# 変更の追跡の有効化と無効化 (SQL Server)
+# <a name="enable-and-disable-change-tracking-sql-server"></a>変更の追跡の有効化と無効化 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   このトピックでは、データベースとテーブルに対する変更の追跡を有効または無効にする方法について説明します。  
   
-## データベースの変更の追跡を有効にする  
- 変更の追跡を使用するには、あらかじめデータベース レベルで変更の追跡を有効にしておく必要があります。 次の例では、[ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) を使用して変更の追跡を有効にする方法を示します。  
+## <a name="enable-change-tracking-for-a-database"></a>データベースの変更の追跡を有効にする  
+ 変更の追跡を使用するには、あらかじめデータベース レベルで変更の追跡を有効にしておく必要があります。 次の例では、 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md)を使用して変更の追跡を有効にする方法を示します。  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012  
@@ -37,7 +41,7 @@ SET CHANGE_TRACKING = ON
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
 ```  
   
- 変更の追跡は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で [[データベースのプロパティ] &#40;[変更の追跡] ページ&#41;](../Topic/Database%20Properties%20\(ChangeTracking%20Page\).md) ダイアログ ボックスを使用して有効にすることもできます。  
+ 変更の追跡は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で [[データベースのプロパティ] &#40;[変更の追跡] ページ&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) ダイアログ ボックスを使用して有効にすることもできます。  
   
  変更の追跡を有効にするときに、CHANGE_RETENTION および AUTO_CLEANUP オプションを指定できます。これらの値は、変更の追跡を有効にした後いつでも変更できます。  
   
@@ -51,10 +55,10 @@ SET CHANGE_TRACKING = ON
   
 -   スナップショット分離を使用すると、すべての変更追跡情報の一貫性を最も簡単に確保できます。 このため、データベースのスナップショット分離を ON に設定することを強くお勧めします。 詳細については、「[変更の追跡のしくみ &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)」を参照してください。  
   
-## テーブルの変更の追跡を有効にする  
+## <a name="enable-change-tracking-for-a-table"></a>テーブルの変更の追跡を有効にする  
  変更の追跡は、追跡するテーブルごとに有効にする必要があります。 変更の追跡を有効にすると、DML 操作の影響を受けるテーブル内のすべての行に関する変更追跡情報が保持されます。  
   
- 次の例では、[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) を使用してテーブルの変更の追跡を有効にする方法を示します。  
+ 次の例では、 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)を使用してテーブルの変更の追跡を有効にする方法を示します。  
   
 ```tsql  
 ALTER TABLE Person.Contact  
@@ -62,35 +66,36 @@ ENABLE CHANGE_TRACKING
 WITH (TRACK_COLUMNS_UPDATED = ON)  
 ```  
   
- テーブルの変更の追跡は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で [[データベースのプロパティ] &#40;[変更の追跡] ページ&#41;](../Topic/Database%20Properties%20\(ChangeTracking%20Page\).md) ダイアログ ボックスを使用して有効にすることもできます。  
+ テーブルの変更の追跡は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で [[データベースのプロパティ] &#40;[変更の追跡] ページ&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) ダイアログ ボックスを使用して有効にすることもできます。  
   
- TRACK_COLUMNS_UPDATED オプションが ON に設定されている場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]によって、どの列が更新されたかという追加情報が内部変更追跡テーブルに格納されます。 列追跡を行うと、アプリケーションは更新された列のみを同期できます。 これにより、効率とパフォーマンスが向上します。 ただし、列追跡情報を保持すると追加のストレージ オーバーヘッドがかかるので、このオプションは既定では OFF に設定されています。  
+ TRACK_COLUMNS_UPDATED オプションが ON に設定されている場合、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] によって、どの列が更新されたかという追加情報が内部変更追跡テーブルに格納されます。 列追跡を行うと、アプリケーションは更新された列のみを同期できます。 これにより、効率とパフォーマンスが向上します。 ただし、列追跡情報を保持すると追加のストレージ オーバーヘッドがかかるので、このオプションは既定では OFF に設定されています。  
   
-## データベースまたはテーブルに対する変更の追跡を無効にする  
- まず変更の追跡の対象になっているすべてのテーブルの変更の追跡を無効にして、次にデータベースの変更の追跡を OFF に設定する必要があります。 データベース内で変更の追跡が有効になっているテーブルを確認するには、[sys.change_tracking_tables](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md) カタログ ビューを使用します。  
+## <a name="disable-change-tracking-for-a-database-or-table"></a>データベースまたはテーブルに対する変更の追跡を無効にする  
+ まず変更の追跡の対象になっているすべてのテーブルの変更の追跡を無効にして、次にデータベースの変更の追跡を OFF に設定する必要があります。 データベース内で変更の追跡が有効になっているテーブルを確認するには、 [sys.change_tracking_tables](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md) カタログ ビューを使用します。  
   
- データベース内のテーブルで変更が追跡されていなければ、データベースの変更の追跡を無効にすることができます。 次の例では、[ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) を使用してデータベースの変更の追跡を無効にする方法を示します。  
+ データベース内のテーブルで変更が追跡されていなければ、データベースの変更の追跡を無効にすることができます。 次の例では、 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md)を使用してデータベースの変更の追跡を無効にする方法を示します。  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012  
 SET CHANGE_TRACKING = OFF  
 ```  
   
- 次の例では、[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) を使用してテーブルの変更の追跡を無効にする方法を示します。  
+ 次の例では、 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)を使用してテーブルの変更の追跡を無効にする方法を示します。  
   
 ```tsql  
 ALTER TABLE Person.Contact  
 DISABLE CHANGE_TRACKING;  
 ```  
   
-## 参照  
- [[データベースのプロパティ] &#40;[変更の追跡] ページ&#41;](../Topic/Database%20Properties%20\(ChangeTracking%20Page\).md)   
- [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)   
- [sys.change_tracking_databases &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)   
- [sys.change_tracking_tables &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>参照  
+ [[データベースのプロパティ] &#40;[変更の追跡] ページ&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
+ [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   
+ [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)   
  [データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [変更の追跡について &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [変更データの処理 &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   
  [変更の追跡の管理 &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)  
   
   
+

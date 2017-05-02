@@ -1,23 +1,27 @@
 ---
 title: "SQL Server の拡張イベントに対するシステム ビューからの SELECT と JOIN | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 08/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b9a3f027fddc3ab7094b2ca82ae1f9ad3190a886
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server の拡張イベントに対するシステム ビューからの SELECT と JOIN
+# <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントに対するシステム ビューからの SELECT と JOIN
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -32,16 +36,16 @@ caps.handback.revision: 6
 
 
 
-## A. 基礎的な情報
+## <a name="a-foundational-information"></a>A. 基礎的な情報
 
 
 拡張イベントには 2 セットのシステム ビューがあります。
 
 
-#### カタログ ビュー:
+#### <a name="catalog-views"></a>カタログ ビュー:
 
-- カタログ ビューには、[CREATE EVENT SESSION](../../t-sql/statements/create-event-session-transact-sql.md) または SSMS の同等の UI によって作成された各イベント セッションの*定義*についての情報が格納されます。 ただし、これらのビューでは、セッションの実行が開始しているかどうかはわかりません。
-    - たとえば場合は、SSMS の**オブジェクト エクスプローラー**でイベント セッションが定義されていないことが示されている場合、ビュー *sys.server_event_session_targets* に対する SELECT からは行が返りません。
+- カタログ ビューには、 *CREATE EVENT SESSION* または SSMS の同等の UI によって作成された各イベント セッションの [定義](../../t-sql/statements/create-event-session-transact-sql.md)についての情報が格納されます。 ただし、これらのビューでは、セッションの実行が開始しているかどうかはわかりません。
+    - たとえば場合は、SSMS の **オブジェクト エクスプローラー** でイベント セッションが定義されていないことが示されている場合、ビュー *sys.server_event_session_targets* に対する SELECT からは行が返りません。
 
 
 - 名前プレフィックス:
@@ -49,11 +53,11 @@ caps.handback.revision: 6
     - *sys.database\_event\_session\** は、SQL Database での名前プレフィックスです。
 
 
-#### 動的管理ビュー (DMV):
+#### <a name="dynamic-management-views-dmvs"></a>動的管理ビュー (DMV):
 
-- 実行中のイベント セッションの*現在のアクティビティ*に関する情報が格納されます。 ただし、これらの DMV はセッションの定義に関してはほとんどわかりません。
+- 実行中のイベント セッションの *現在のアクティビティ* に関する情報が格納されます。 ただし、これらの DMV はセッションの定義に関してはほとんどわかりません。
     - 現在すべてのイベント セッションが停止されていても、さまざまなパッケージがサーバー起動時にアクティブなメモリに読み込まれるので、ビュー *sys.dm_xe_packages* に対する SELECT からは行が返ります。
-    - 同じ理由から、*sys.dm_xe_objects* および *sys.dm_xe_object_columns* からも行が返ります。
+    - 同じ理由から、 *sys.dm_xe_objects* *sys.dm_xe_object_columns* would also still return rows.
 
 
 - 拡張イベント DMV の名前プレフィックス:
@@ -61,7 +65,7 @@ caps.handback.revision: 6
     - *sys.dm\_xe\_database\_\** は、一般に SQL Database での名前プレフィックスです。
 
 
-#### 権限:
+#### <a name="permissions"></a>権限:
 
 
 システム ビューの SELECT を行うには、次の権限が必要です。
@@ -72,22 +76,22 @@ caps.handback.revision: 6
 
 <a name="section_B_catalog_views"></a>
 
-## B. カタログ ビュー
+## <a name="b-catalog-views"></a>B. カタログ ビュー
 
 
-このセクションでは、同じ定義済みイベント セッションを 3 つの異なる技術で示して関連付けます。 セッションは定義されていて SQL Server Management Studio (SSMS.exe) の**オブジェクト エクスプローラー**に表示されますが、現在は実行していません。
+このセクションでは、同じ定義済みイベント セッションを 3 つの異なる技術で示して関連付けます。 セッションは定義されていて SQL Server Management Studio (SSMS.exe) の **オブジェクト エクスプローラー** に表示されますが、現在は実行していません。
 
-予期しない障害を防ぐため、[SSMS の最新の更新プログラムを毎月インストール](http://msdn.microsoft.com/library/mt238290.aspx)してください。
+予期しない障害を防ぐため、 [SSMS の最新の更新プログラムを毎月インストール](http://msdn.microsoft.com/library/mt238290.aspx)してください。
 
 
-拡張イベントのカタログ ビューに関するリファレンス ドキュメントについては、「[拡張イベント カタログ ビュー (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)」をご覧ください。
+拡張イベントのカタログ ビューに関するリファレンス ドキュメントについては、「 [拡張イベント カタログ ビュー (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)」をご覧ください。
 
 
 &nbsp;
 
 
 
-#### このセクション B のシーケンス:
+#### <a name="the-sequence-in-this-section-b"></a>このセクション B のシーケンス:
 
 
 - [B.1 SSMS UI パースペクティブ](#section_B_1_SSMS_UI_perspective)
@@ -99,7 +103,7 @@ caps.handback.revision: 6
 
 
 - [B.3 カタログ ビュー SELECT JOIN UNION パースペクティブ](#section_B_3_Catalog_view_S_J_UNION)
-    - イベント セッションに対してシステム カタログ ビューから T-SQL の SELECT ステートメントを実行します。 結果は、**CREATE EVENT SESSION** ステートメントでの指定と一致します。
+    - イベント セッションに対してシステム カタログ ビューから T-SQL の SELECT ステートメントを実行します。 結果は、 **CREATE EVENT SESSION** ステートメントでの指定と一致します。
 
 
 &nbsp;
@@ -108,33 +112,33 @@ caps.handback.revision: 6
 
 <a name="section_B_1_SSMS_UI_perspective"></a>
 
-### B.1 SSMS UI パースペクティブ
+### <a name="b1-ssms-ui-perspective"></a>B.1 SSMS UI パースペクティブ
 
 
-SSMS の**オブジェクト エクスプローラー** で、**[管理]**、**[拡張イベント]** の順に展開し、**[セッション]** を右クリックして **[新しいセッション]** を選択することで、**[新しいセッション]** ダイアログ ボックスを開きます。
+SSMS の **オブジェクト エクスプローラー**で、 **[管理]** 、 **[拡張イベント]** > **[セッション]**を右クリックして **[新しいセッション]** > **[管理]**」をご覧ください。
 
 大きい **[新しいセッション]** ダイアログの最初の **[全般]** セクションで、**[サーバーの起動時にイベント セッションを開始する]** がオンになっています。
 
 ![[新しいセッション] > [全般]、[サーバーの起動時にイベント セッションを開始する]](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
 
-次に、**[イベント]** セクションでは **[lock_deadlock]** イベントが選択されています。 このイベントに対して、3 つの**アクション**が選択されています。 これは **[構成]** ボタンがクリックされたことを意味し、クリックされた後でボタンはグレーになっています。
+次に、**[イベント]** セクションでは **[lock_deadlock]** イベントが選択されています。 このイベントに対して、3 つの **アクション** が選択されています。 これは **[構成]** ボタンがクリックされたことを意味し、クリックされた後でボタンはグレーになっています。
 
 ![[新しいセッション] > [イベント]、[グローバル フィールド (アクション)]](../../relational-databases/extended-events/media/xevents-ssms-ac110-actions-global.png)
 
 
 <a name="resource_type_PAGE_cat_view"></a>
 
-次に、同じ **[イベント]** の **[構成]** セクションで、[**[resource_type]** が **[PAGE]** に設定](#resource_type_dmv_actual_row)されています。 これは、**resource_type** の値が **PAGE** 以外の場合はイベント データがイベント エンジンからターゲットに送信されないことを意味します。
+次に、同じ **[イベント]** > **[構成]** セクションでは、[**resource_type** が **PAGE**](#resource_type_dmv_actual_row) に設定されています。 これは、**resource_type** の値が **PAGE** 以外の場合はイベント データがイベント エンジンからターゲットに送信されないことを意味します。
 
 データベース名とカウンターの述語フィルターを確認します。
 
-![[新しいセッション] > [イベント]、[フィルター (述語)] フィールド (アクション)](/Image/SQL%20Server/xevents-ssms-ac115-predicate-db.png)
+![[新しいセッション] > [イベント]、[フィルター (述語)] フィールド (アクション)](../../relational-databases/extended-events/media/xevents-ssms-ac115-predicate-db.png)
 
 
 次に、**[データ ストレージ]** セクションでは、**[event_file]** がターゲットとして選択されています。 さらに、**[ファイル ロールオーバーを有効にする]** オプションがオンになっています。
 
-![[新しいセッション] > [データ ストレージ]、eventfile_enablefileroleover](/Image/SQL%20Server/xevents-ssms-ac120-target-eventfile.png)
+![[新しいセッション] > [データ ストレージ]、eventfile_enablefileroleover](../../relational-databases/extended-events/media/xevents-ssms-ac120-target-eventfile.png)
 
 
 最後に、**[詳細]** セクションでは、**[ディスパッチの最大待機時間]** の値が 4 秒に短縮されています。
@@ -147,12 +151,12 @@ SSMS の**オブジェクト エクスプローラー** で、**[管理]**、**[
 
 <a name="section_B_2_TSQL_perspective"></a>
 
-### B.2 Transact-SQL パースペクティブ
+### <a name="b2-transact-sql-perspective"></a>B.2 Transact-SQL パースペクティブ
 
 
 イベント セッション定義の作成方法にかかわらず、SSMS UI では、セッションを完全に一致する Transact-SQL スクリプトにリバース エンジニアリングできます。 前に示した [新しいセッション] のスクリーンショットで示されている指定と、次に示す生成された T-SQL **CREATE EVENT SESSION** スクリプトの句を比較してください。
 
-イベント セッションをリバース エンジニアリングするには、**オブジェクト エクスプローラー**でセッション ノードを右クリックし、**[セッションをスクリプト化]**、**[CREATE]**、**[クリップボード]** の順に選択します。
+イベント セッションをリバース エンジニアリングするには、 **オブジェクト エクスプローラー** でセッション ノードを右クリックし、 **[セッションをスクリプト化]** > **[CREATE]** > **[クリップボード]**」をご覧ください。
 
 SSMS でリバース エンジニアリングすることにより、次の T-SQL スクリプトが作成されます。 次のスクリプトは空白のみを使用して手作業で整形されています。
 
@@ -205,7 +209,7 @@ T-SQL パースペクティブは以上です。
 
 <a name="section_B_3_Catalog_view_S_J_UNION"></a>
 
-### B.3 カタログ ビュー SELECT JOIN UNION パースペクティブ
+### <a name="b3-catalog-view-select-join-union-perspective"></a>B.3 カタログ ビュー SELECT JOIN UNION パースペクティブ
 
 
 次に示す T-SQL の SELECT ステートメントは長いですが、複数の小さい SELECT が UNION でまとめられているためです。 どの小さい SELECT もそれだけで実行できます。 小さい SELECT は、さまざまなシステム カタログ ビューを JOIN する方法を示しています。
@@ -343,7 +347,7 @@ ORDER BY
 ```
 
 
-#### 出力
+#### <a name="output"></a>出力
 
 
 次に示すのは、前の SELECT JOIN UNION を実行した実際の出力です。 出力のパラメーターの名前と値は、前の CREATE EVENT SESSION ステートメントと対応します。
@@ -373,13 +377,13 @@ event_session_test3   7_WITH_STARTUP_STATE   startup_state                   1
 
 <a name="section_C_DMVs"></a>
 
-## C. 動的管理ビュー (DMV)
+## <a name="c-dynamic-management-views-dmvs"></a>C. 動的管理ビュー (DMV)
 
 
 次に DMV について説明します。 ここでは、それぞれが特定の目的でビジネスに役立つ Transact-SQL SELECT ステートメントをいくつか示します。 さらに、新しい用途のために DMV を JOIN する方法を示します。
 
 
-DMV のリファレンス ドキュメントについては、「[拡張イベントの動的管理ビュー](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)」をご覧ください。
+DMV のリファレンス ドキュメントについては、「 [拡張イベントの動的管理ビュー](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)」をご覧ください。
 
 
 特に記述していない限り、以下の SELECT からの実際の出力行は SQL Server 2016 のものです。
@@ -400,7 +404,7 @@ DMV のリファレンス ドキュメントについては、「[拡張イベ�
 
 <a name="section_C_1_list_packages"></a>
 
-### C.1 すべてのパッケージのリスト
+### <a name="c1-list-of-all-packages"></a>C.1 すべてのパッケージのリスト
 
 
 拡張イベントの領域で使用できるすべてのオブジェクトは、システムに読み込まれるパッケージから取得されます。 次の SELECT はすべてのパッケージとその説明をリストします。
@@ -417,7 +421,7 @@ SELECT  --C.1
 ```
 
 
-#### 出力
+#### <a name="output"></a>出力
 
 パッケージのリストです。
 
@@ -456,7 +460,7 @@ XtpRuntime     Extended events for the XTP Runtime
 
 <a name="section_C_2_count_object_type"></a>
 
-### C.2 すべてのオブジェクト タイプの数
+### <a name="c2-count-of-every-object-type"></a>C.2 すべてのオブジェクト タイプの数
 
 
 このセクションの SELECT は、イベント パッケージに含まれるオブジェクトのタイプを表示します。 *sys.dm\_xe\_objects* に含まれるすべてのオブジェクト タイプとそれぞれの数のリストが表示されます。
@@ -475,7 +479,7 @@ SELECT  --C.2
 ```
 
 
-#### 出力
+#### <a name="output"></a>出力
 
 オブジェクト タイプごとのオブジェクトの数です。 約 1915 個のオブジェクトがあります。
 
@@ -499,7 +503,7 @@ Count-of-Type   object_type
 
 <a name="section_C_3_select_all_available_objects"></a>
 
-### C.3 使用可能なすべてのアイテムをタイプ別に並べ替える SELECT
+### <a name="c3-select-all-available-items-sorted-by-type"></a>C.3 使用可能なすべてのアイテムをタイプ別に並べ替える SELECT
 
 
 次の SELECT は、オブジェクトごとに 1 行ずつ、約 1915 行を返します。
@@ -530,7 +534,7 @@ SELECT  --C.3
 ```
 
 
-#### 出力
+#### <a name="output"></a>出力
 
 次に示すのは上の SELECT によって返されるオブジェクトの例です。
 
@@ -566,13 +570,13 @@ type           package0       xml                           Well formed XML frag
 
 <a name="section_C_4_data_fields"></a>
 
-### C.4 イベントに使用できるデータ フィールド
+### <a name="c4-data-fields-available-for-your-event"></a>C.4 イベントに使用できるデータ フィールド
 
 
 次の SELECT は、イベント タイプに固有のすべてのデータ フィールドを返します。
 
-- WHERE 句の項目 *column_type = 'data'* に注意してください。
-- また、*o.name =* の WHERE 句の値を編集する必要があります。
+- WHERE 句の項目 *column_type = 'data'*に注意してください。
+- また、 *o.name =*の WHERE 句の値を編集する必要があります。
 
 
 ```tsql
@@ -595,7 +599,7 @@ SELECT  -- C.4
         AND
         o.object_type = 'event'
         AND
-        o.name        = '<EVENT-NAME-HERE!>'  --'lock_deadlock'
+        o.name        = '\<EVENT-NAME-HERE!>'  --'lock_deadlock'
     ORDER BY
         [Package],
         [Event],
@@ -603,11 +607,11 @@ SELECT  -- C.4
 ```
 
 
-#### 出力
+#### <a name="output"></a>出力
 
-前の SELECT、WHERE `o.name = 'lock_deadlock'` では次の行が返されます。
+前の SELECT、WHERE `o.name = 'lock_deadlock'`では次の行が返されます。
 
-- 各行は、*sqlserver.lock_deadlock* イベントのオプションのフィルターを表します。
+- 各行は、 *sqlserver.lock_deadlock* イベントのオプションのフィルターを表します。
 - 次の表示では *\[Column-Description\]* 列は省略されています。 その値は多くの場合 NULL です。
 
 
@@ -642,10 +646,10 @@ sqlserver   lock_deadlock   transaction_id
 
 <a name="section_C_5_map_values_fields"></a>
 
-### C.5 *sys.dm_xe_map_values* とイベント フィールド
+### <a name="c5-sysdmxemapvalues-and-event-fields"></a>C.5 *sys.dm_xe_map_values* とイベント フィールド
 
 
-次の SELECT には、*sys.dm_xe_map_values* という名前の巧妙なビューに対する JOIN が含まれます。
+次の SELECT には、 *sys.dm_xe_map_values*という名前の巧妙なビューに対する JOIN が含まれます。
 
 この SELECT の目的は、イベント セッションから選択できるさまざまなフィールドを表示することです。 イベント フィールドは、2 つの方法で使用できます。
 
@@ -682,7 +686,7 @@ SELECT  --C.5
     WHERE
         do.object_type = 'event'
         AND
-        do.name        = '<YOUR-EVENT-NAME-HERE!>'  --'lock_deadlock'
+        do.name        = '\<YOUR-EVENT-NAME-HERE!>'  --'lock_deadlock'
     ORDER BY
         [Package],
         [Object],
@@ -691,11 +695,11 @@ SELECT  --C.5
 ```
 
 
-#### 出力
+#### <a name="output"></a>出力
 
 <a name="resource_type_dmv_actual_row"></a>
 
-次に示すのは、実際には 153 行ある前記の T-SQL SELECT からの出力のサンプルです。 **resource_type** の行は、この記事の **event_session_test3** の例で使用されている述語のフィルター処理に[関連](#resource_type_PAGE_cat_view)しています。
+次に示すのは、実際には 153 行ある前記の T-SQL SELECT からの出力のサンプルです。 **resource_type** の行は、この記事の [event_session_test3](#resource_type_PAGE_cat_view) の例で使用されている述語のフィルター処理に **関連** しています。
 
 
 ```
@@ -719,13 +723,13 @@ you could put:
 
 <a name="section_C_6_parameters_targets"></a>
 
-### C.6 ターゲットのパラメーター
+### <a name="c6-parameters-for-targets"></a>C.6 ターゲットのパラメーター
 
 
 次の SELECT は、ターゲットのすべてのパラメーターを返します。 各パラメーターには、必須かどうかを示すタグが付けられます。 パラメーターに割り当てる値によって、ターゲットの動作が変わります。
 
-- WHERE 句の項目 *object_type = 'customizable'* に注意してください。
-- また、*o.name =* の WHERE 句の値を編集する必要があります。
+- WHERE 句の項目 *object_type = 'customizable'*に注意してください。
+- また、 *o.name =*の WHERE 句の値を編集する必要があります。
 
 
 ```tsql
@@ -754,7 +758,7 @@ SELECT  --C.6
     WHERE
         o.object_type = 'target'
         AND
-        o.name     LIKE '%'    -- Or '<YOUR-TARGET-NAME-HERE!>'.
+        o.name     LIKE '%'    -- Or '\<YOUR-TARGET-NAME-HERE!>'.
     ORDER BY
         [Package],
         [Target],
@@ -763,7 +767,7 @@ SELECT  --C.6
 ```
 
 
-#### 出力
+#### <a name="output"></a>出力
 
 次のパラメーター行は、SQL Server 2016 で前の SELECT で返された結果の一部です。
 
@@ -784,13 +788,13 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 
 <a name="section_C_7_dmv_select_target_data_column"></a>
 
-### C.7 target_data 列を XML にキャストする DMV SELECT
+### <a name="c7-dmv-select-casting-targetdata-column-to-xml"></a>C.7 target_data 列を XML にキャストする DMV SELECT
 
 
 この DMV SELECT は、アクティブなイベント セッションのターゲットからデータ行を返します。 データは XML にキャストされており、返されたセルをクリックして SSMS で簡単に表示できます。
 
 - イベント セッションが停止すると、この SELECT はゼロ行を返します。
-- *s.name =* の WHERE 句の値を編集する必要があります。
+- *s.name =*の WHERE 句の値を編集する必要があります。
 
 
 ```tsql
@@ -804,19 +808,19 @@ SELECT  --C.7
 
             ON s.address = t.event_session_address
     WHERE
-        s.name = '<Your-Session-Name-Here!>';
+        s.name = '\<Your-Session-Name-Here!>';
 ```
 
 
-#### XML セルを含む唯一の出力行
+#### <a name="output-the-only-row-including-its-xml-cell"></a>XML セルを含む唯一の出力行
 
 次に示すのは、上記の SELECT から出力される唯一の行です。 列 *XML-Cast* には、SSMS が認識する XML の文字列が含まれます。 したがって、SSMS は XML-Cast セルをクリック可能にします。
 
 
 次のように設定されています。
 
-- *s.name =* の値には、*checkpoint_begin* イベントのイベント セッションが設定されています。
-- ターゲットは *ring_buffer* です。
+- *s.name =* の値には、 *checkpoint_begin* イベントのイベント セッションが設定されています。
+- ターゲットは *ring_buffer*です。
 
 
 ```XML
@@ -826,7 +830,7 @@ checkpoint_session_ring_buffer2   ring_buffer   <RingBufferTarget truncated="0" 
 ```
 
 
-#### セルをクリックすると XML で表示される出力
+#### <a name="output-xml-displayed-pretty-when-cell-is-clicked"></a>セルをクリックすると XML で表示される出力
 
 
 XML-Cast セルをクリックすると、次の出力が表示されます。
@@ -852,10 +856,10 @@ XML-Cast セルをクリックすると、次の出力が表示されます。
 
 <a name="section_C_8_select_function_disk"></a>
 
-### C.8 ディスク ドライブから event_file データを取得する関数の SELECT
+### <a name="c8-select-from-a-function-to-retrieve-eventfile-data-from-disk-drive"></a>C.8 ディスク ドライブから event_file データを取得する関数の SELECT
 
 
-イベント セッションがデータを収集した後で停止されたものとします。 セッションが event_file ターゲットを使用するように定義されている場合でも、関数 *sys.fn_xe_target_read_file* を呼び出すことによってデータを取得できます。
+イベント セッションがデータを収集した後で停止されたものとします。 セッションが event_file ターゲットを使用するように定義されている場合でも、関数 *sys.fn_xe_target_read_file*を呼び出すことによってデータを取得できます。
 
 - この SELECT を実行する前に、関数呼び出しのパスとファイル名のパラメーターを編集する必要があります。
     - セッションを再起動するたびに SQL システムが実際の .XEL ファイル名に埋め込む余分な桁に注意する必要はありません。 通常のルート名と拡張子を指定するだけです。
@@ -872,7 +876,7 @@ SELECT  --C.8
     FROM
         sys.fn_xe_file_target_read_file(
 
-            '<YOUR-PATH-FILE-NAME-ROOT-HERE!>*.xel',
+            '\<YOUR-PATH-FILE-NAME-ROOT-HERE!>*.xel',
             --'C:\Junk\Checkpoint_Begins_ES*.xel',  -- Example.
 
             NULL, NULL, NULL
@@ -880,7 +884,7 @@ SELECT  --C.8
 ```
 
 
-#### 関数の SELECT FROM によって返される出力行
+#### <a name="output-rows-returned-by-select-from-the-function"></a>関数の SELECT FROM によって返される出力行
 
 
 次に示すのは、前記の関数の SELECT FROM によって返される行です。 右端の XML 列には、イベント発生についての具体的なデータが含まれます。
@@ -896,7 +900,7 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   ch
 ```
 
 
-#### 出力、1 個の XML セル
+#### <a name="output-one-xml-cell"></a>出力、1 個の XML セル
 
 
 次に示すのは、上記の返された行セットの最初の XML セルの内容です。
@@ -915,4 +919,6 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   ch
   </action>
 </event>
 ```
+
+
 

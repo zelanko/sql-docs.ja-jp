@@ -1,36 +1,40 @@
 ---
 title: "メモリ最適化テーブル サブスクライバーへのレプリケーション | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38b426bdc8e0485bdbada8c9dbd7371b63612465
+ms.lasthandoff: 04/11/2017
+
 ---
-# メモリ最適化テーブル サブスクライバーへのレプリケーション
+# <a name="replication-to-memory-optimized-table-subscribers"></a>メモリ最適化テーブル サブスクライバーへのレプリケーション
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   スナップショットとトランザクション レプリケーション サブスクライバーとして機能するテーブルは、ピア ツー ピア トランザクション レプリケーションを除き、メモリ最適化テーブルとして構成できます。 その他のレプリケーション構成はメモリ最適化テーブルとは互換性がありません。 この機能は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降のバージョンで使用できます。  
   
 ## <a name="two-configurations-are-required"></a>必要な 2 つの構成  
   
--   **メモリ最適化テーブルへのレプリケーションをサポートするためにサブスクライバー データベースを構成します。**  
+-   **メモリ最適化テーブルへのレプリケーションがサポートされるように、サブスクライバー データベースを構成する**  
   
-     設定、 **@memory_optimized** プロパティを **true**, を使用して [sp_addsubscription & #40 です。Transact SQL と #41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) または [sp_changesubscription & #40 です。Transact SQL と #41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)します。  
+     [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) または [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) を使用して、**@memory_optimized** プロパティを **true** に設定します。  
   
--   **メモリ最適化テーブルへのレプリケーションをサポートするアーティクルを構成します。**  
+-   **メモリ最適化テーブルへのレプリケーションがサポートされるように、アーティクルを構成する**  
   
-     設定、 `@schema_option = 0x40000000000` オプションを使用してアーティクルの [sp_addarticle & #40 です。Transact SQL と #41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) または [sp_changearticle & #40 です。Transact SQL と #41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)します。  
+     [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) または [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) を使用して、アーティクルに `@schema_option = 0x40000000000` オプションを設定します。  
   
 #### <a name="to-configure-a-memory-optimized-table-as-a-subscriber"></a>メモリ最適化テーブルをサブスクライバーとして構成するには  
   
@@ -38,8 +42,8 @@ caps.handback.revision: 23
   
 2.  パブリケーションにアーティクルを追加します。 詳しくは、「 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
-     使用して構成する場合は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 設定、 **@schema_option** のパラメーター、 **sp_addarticle** ストアド プロシージャを   
-    **0x40000000000**以降のバージョンで使用できます。  
+     [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して構成している場合は、**sp_addarticle** ストアド プロシージャの **@schema_option** パラメーターを    
+    **0x40000000000** に設定します。  
   
 3.  [アーティクルのプロパティ] ウィンドウで **[Enable Memory optimization]** (メモリ最適化を有効にする) を **true**に設定します。  
   
@@ -53,16 +57,16 @@ caps.handback.revision: 23
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のサブスクリプションのプロパティに移動して、 **[Memory Optimized Subscription]** (メモリ最適化サブスクリプション) を **true**に設定します。 サブスクリプションを再初期化するまで変更は適用されません。  
   
-     使用して構成する場合は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 設定、新しい **@memory_optimized** のパラメーター、 **sp_addsubscription** ストアド プロシージャを true にします。  
+     [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して構成している場合は、**sp_addsubscription** ストアド プロシージャの新しい **@memory_optimized** パラメーターを true に設定します。  
   
 2.  	[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でパブリケーションのアーティクルのプロパティに移動して、 **[Enable Memory optimization]** (メモリ最適化を有効にする) を true に設定します。  
   
-     使用して構成する場合は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 設定、 **@schema_option** のパラメーター、 **sp_addarticle** ストアド プロシージャを   
-    **0x40000000000**以降のバージョンで使用できます。  
+     [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して構成している場合は、**sp_addarticle** ストアド プロシージャの **@schema_option** パラメーターを    
+    **0x40000000000** に設定します。  
   
 3.  クラスター化インデックスは、メモリ最適化テーブルでサポートされていません。 レプリケーションにこれを処理させるには、変換先で非クラスター化インデックスに変換します。そのためには、 **[Convert clustered index to nonclustered for memory optimized article]** (クラスター化インデックスをメモリ最適化アーティクル向けに非クラスター化インデックスに変換する) を true に設定します。  
   
-     使用して構成する場合は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 設定、 **@schema_option** のパラメーター、 **sp_addarticle** ストアド プロシージャを  **0x0000080000000000**します。  
+     [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して構成している場合は、**sp_addarticle** ストアド プロシージャの **@schema_option** パラメーターを **0x0000080000000000** に設定します。  
   
 4.  スナップショットを再生成します。  
   
@@ -81,9 +85,9 @@ caps.handback.revision: 23
  
 -   サブスクライバーのメモリ最適化テーブルにレプリケートされるテーブルは、メモリ最適化テーブルに使用できるデータ型に制限されます。 詳細については、「 [サポートされるデータ型](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)」を参照してください。  
   
--   メモリ最適化テーブルでは、すべての TRANSACT-SQL 機能がサポートされています。 参照してください [Transact SQL を構築、インメモリ OLTP でサポートされていない](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) 詳細です。  
+-   メモリ最適化テーブルでは、すべての Transact-SQL 機能がサポートされているわけではありません。 詳細については、「[インメモリ OLTP でサポートされていない Transact-SQL の構造](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)」を参照してください。  
   
-##  <a name="a-nameschemaa-modifying-a-schema-file"></a><a name="Schema"></a> スキーマ ファイルの変更  
+##  <a name="Schema"></a> スキーマ ファイルの変更  
   
 -   メモリ最適化テーブルのオプション `DURABILITY = SCHEMA_AND_DATA` を使用する場合、テーブルには非クラスター化主キー インデックスが必要です。  
   
@@ -93,3 +97,4 @@ caps.handback.revision: 23
  [レプリケーション機能とタスク](../../relational-databases/replication/replication-features-and-tasks.md)  
   
   
+

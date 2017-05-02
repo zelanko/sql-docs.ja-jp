@@ -1,22 +1,26 @@
 ---
 title: "パーティション構成の変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 685eb349ecbd054ed37b77e6a8472ee47db78e0b
+ms.lasthandoff: 04/11/2017
+
 ---
-# パーティション構成の変更
+# <a name="modify-a-partition-scheme"></a>パーティション構成の変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、パーティション テーブルに追加される次のパーティションを保持するファイル グループを指定することにより、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でパーティション構成を変更できます。 この操作は、NEXT USED プロパティをファイル グループに割り当てることで実行できます。 NEXT USED プロパティは、空のファイル グループか、またはパーティションを既に保持しているファイル グループに割り当てることができます。 つまり、ファイル グループでは、複数のパーティションを保持することができます。  
   
  **このトピックの内容**  
@@ -43,7 +47,7 @@ caps.handback.revision: 10
 ####  <a name="Permissions"></a> アクセス許可  
  次の権限を使って ALTER PARTITION SCHEME を実行できます。  
   
--   ALTER ANY DATASPACE 権限。 この権限は、既定では **sysadmin** 固定サーバー ロール、**db_owner** 固定データベース ロール、および **db_ddladmin** 固定データベース ロールのメンバーに与えられています。  
+-   ALTER ANY DATASPACE 権限。 この権限は、既定では **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_ddladmin** 固定データベース ロールのメンバーに与えられています。  
   
 -   パーティション構成が作成されたデータベースに対する CONTROL または ALTER 権限。  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 10
   
  この操作は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では実行できません。 パーティション構成を変更するには、最初にパーティション構成を削除し、パーティションの作成ウィザードを使用して必要なプロパティを持つ新しいパーティション構成を作成する必要があります。 詳細については、「[**パーティション テーブルとパーティション インデックスの作成**](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)」の「[SQL Server Management Studio の使用](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md#SSMSProcedure)」を参照してください。  
   
-#### パーティション構成を削除するには  
+#### <a name="to-delete-a-partition-scheme"></a>パーティション構成を削除するには  
   
 1.  プラス記号をクリックして、パーティション構成を削除するデータベースを展開します。  
   
@@ -62,13 +66,13 @@ caps.handback.revision: 10
   
 3.  プラス記号をクリックして **[パーティション構成]** フォルダーを展開します。  
   
-4.  削除するパーティション構成を右クリックして、**[削除]** をクリックします。  
+4.  削除するパーティション構成を右クリックして、 **[削除]**をクリックします。  
   
 5.  **[オブジェクトの削除]** ダイアログ ボックスで、正しいパーティション構成が選択されていることを確認し、 **[OK]**をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### パーティション構成を変更するには  
+#### <a name="to-modify-a-partition-scheme"></a>パーティション構成を変更するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   

@@ -1,27 +1,31 @@
 ---
 title: "例 : AUTO モードの使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "AUTO FOR XML モード, 例"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd35722bc0392701813ad17877c19c8ef0583988
+ms.lasthandoff: 04/11/2017
+
 ---
-# 例 : AUTO モードの使用
-  次の例では、AUTO モードの使用方法を示します。 クエリの多くは、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースの ProductModel テーブルの Instructions 列に格納されている、自転車の製造手順の XML ドキュメントに対して指定されています。  
+# <a name="examples-using-auto-mode"></a>例 : AUTO モードの使用
+  次の例では、AUTO モードの使用方法を示します。 クエリの多くは、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースの ProductModel テーブルの Instructions 列に格納されている、自転車の製造手順の XML ドキュメントに対して指定されています。  
   
-## 例 : 顧客情報、注文情報、および注文明細情報の取得  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>例 : 顧客情報、注文情報、および注文明細情報の取得  
  このクエリでは、特定の顧客の顧客情報、注文情報、および注文明細情報を取得しています。  
   
 ```  
@@ -46,7 +50,7 @@ ORDER BY OrderHeader.CustomerID,
 FOR XML AUTO;  
 ```  
   
- クエリでは `Cust` テーブル、`OrderHeader` テーブル、`Detail` テーブル、および `Product` テーブルの別名が識別されるので、`AUTO` モードにより対応する要素が生成されます。 さらに、`SELECT` 句で指定した列でテーブルが識別される順序に基づいて、これらの要素の階層が決定されます。  
+ クエリでは `Cust`テーブル、 `OrderHeader`テーブル、 `Detail`テーブル、および `Product` テーブルの別名が識別されるので、 `AUTO` モードにより対応する要素が生成されます。 さらに、 `SELECT` 句で指定した列でテーブルが識別される順序に基づいて、これらの要素の階層が決定されます。  
   
  次に結果の一部を示します。  
   
@@ -92,7 +96,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## 例 : GROUP BY と集計関数の指定  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>例 : GROUP BY と集計関数の指定  
  次のクエリにより、各顧客の ID と顧客が要求した注文数が返されます。  
   
 ```  
@@ -112,7 +116,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## 例 : AUTO モードでの計算列の指定  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>例 : AUTO モードでの計算列の指定  
  このクエリでは、各顧客の連結された名前と注文情報が返されます。 計算列はその時点で見つかった最も内側のレベルに割り当てられるので、この例では <`SOH`> 要素に割り当てられます。 連結された顧客名は、<`SOH`> 要素の属性として結果に追加されます。  
   
 ```  
@@ -137,7 +141,7 @@ FOR XML AUTO;
   
  サブ要素としてそれぞれの販売注文ヘッダー情報を含む `Name` 属性を持つ <`IndividualCustomer`> 要素を取得するには、サブ選択を使用してクエリを書き直します。 内部選択により、`IndividualCustomer` 一時テーブルが作成されます。このテーブルには、各顧客の名前を含む計算列があります。 次に、このテーブルを `SalesOrderHeader` テーブルに結合して、結果を取得します。  
   
- `Sales.Customer` テーブルには、顧客の `PersonID` 値など、各顧客の情報が格納されていることに注意してください。 次に、`PersonID` を使用して `Person.Person` テーブルから連絡担当者名を見つけます。  
+ `Sales.Customer` テーブルには、顧客の `PersonID` 値など、各顧客の情報が格納されていることに注意してください。 次に、 `PersonID` を使用して `Person.Person` テーブルから連絡担当者名を見つけます。  
   
 ```  
 SELECT IndividualCustomer.Name, SOH.SalesOrderID  
@@ -165,8 +169,8 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## 例 : バイナリ データを返す  
- 次のクエリでは、`ProductPhoto` テーブルから製品の写真が返されます。 `ThumbNailPhoto` は、`ProductPhoto` テーブルの **varbinary(max)** 列です。 既定では、`AUTO` モードにより、バイナリ データへの参照、つまりクエリが実行されるデータベースの仮想ルートからの相対 URL が返されます。 画像を識別するには、`ProductPhotoID` キー属性を指定する必要があります。 この例で示すように、画像の参照を取得する場合、`SELECT` 句でテーブルの主キーを指定して行を一意に識別する必要もあります。  
+## <a name="example-returning-binary-data"></a>例 : バイナリ データを返す  
+ 次のクエリでは、 `ProductPhoto` テーブルから製品の写真が返されます。 `ThumbNailPhoto` は、 **テーブルの** varbinary(max) `ProductPhoto` 列です。 既定では、 `AUTO` モードにより、バイナリ データへの参照、つまりクエリが実行されるデータベースの仮想ルートからの相対 URL が返されます。 画像を識別するには、 `ProductPhotoID` キー属性を指定する必要があります。 この例で示すように、画像の参照を取得する場合、 `SELECT` 句でテーブルの主キーを指定して行を一意に識別する必要もあります。  
   
 ```  
 SELECT ProductPhotoID, ThumbNailPhoto  
@@ -221,7 +225,7 @@ FOR XML AUTO;
   
  このことは、特に、大文字と小文字が区別されるデータベースに対して dbobject クエリが実行されるときに問題になる可能性があります。 この問題を回避するには、クエリで指定するテーブル名や列名での大文字と小文字の区別の方法が、データベース内のテーブル名や列名での大文字と小文字の区別の方法と一致している必要があります。  
   
-## 例 : エンコードについて  
+## <a name="example-understanding-the-encoding"></a>例 : エンコードについて  
  この例では、結果に表示されるさまざまなエンコードを示します。  
   
  次のテーブルを作成します。  
@@ -266,9 +270,9 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   要素や属性の値に 5 つの標準 XML 文字エンティティ ('、""、\<、>、および &) のいずれかが含まれている場合、これらの特殊な XML 文字は必ず XML 文字エンコードを使用してエンコードされます。 上記の結果では、属性 <`Col1`> の値の `&` という値は `&` とエンコードされています。 ただし、# 文字は特殊な XML 文字ではなく有効な XML 文字なので、# のままです。  
   
--   要素や属性の値に URL で特別な意味を持つ任意の特殊な URL 文字が含まれている場合、それらの文字は、DBOBJECT URL 値であるとき、および特殊文字がテーブル名や列名の一部であるときにのみエンコードされます。 この結果、テーブル名 `Col#&2` の一部である文字 `#` は、`_x0023_ in the DBOJBECT URL` としてエンコードされます。  
+-   要素や属性の値に URL で特別な意味を持つ任意の特殊な URL 文字が含まれている場合、それらの文字は、DBOBJECT URL 値であるとき、および特殊文字がテーブル名や列名の一部であるときにのみエンコードされます。 この結果、テーブル名 `#` の一部である文字 `Col#&2` は、 `_x0023_ in the DBOJBECT URL`としてエンコードされます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [FOR XML での AUTO モードの使用](../../relational-databases/xml/use-auto-mode-with-for-xml.md)  
   
   

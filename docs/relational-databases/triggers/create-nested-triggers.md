@@ -1,32 +1,36 @@
 ---
 title: "入れ子になったトリガーの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "再帰 DML トリガー [SQL Server]"
-  - "DML トリガー, 入れ子"
-  - "トリガー [SQL Server], 入れ子"
-  - "直接再帰 [SQL Server]"
-  - "トリガー [SQL Server], 再帰"
-  - "DML トリガー, 再帰"
-  - "RECURSIVE_TRIGGERS オプション"
-  - "間接再帰 [SQL Server]"
-  - "入れ子になった DML トリガー"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recursive DML triggers [SQL Server]
+- DML triggers, nested
+- triggers [SQL Server], nested
+- direct recursion [SQL Server]
+- triggers [SQL Server], recursive
+- DML triggers, recursive
+- RECURSIVE_TRIGGERS option
+- indirect recursion [SQL Server]
+- nested DML triggers
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed1505ace274659400d797ae5ba8b27dcdf80557
+ms.lasthandoff: 04/11/2017
+
 ---
-# 入れ子になったトリガーの作成
+# <a name="create-nested-triggers"></a>入れ子になったトリガーの作成
   あるトリガーが別のトリガーを起動する操作を実行するときは、DML トリガーと DDL トリガーの両方が入れ子になります。 このような操作では、他のトリガーを順次開始できます。 DML トリガーと DDL トリガーは、32 レベルまで入れ子にできます。 **nested triggers** サーバー構成オプションにより、AFTER トリガーを入れ子にできるかどうかを制御できます。 INSTEAD OF トリガーは、このサーバー オプションの設定とは無関係に入れ子にできます。INSTEAD OF トリガーにできるのは DML トリガーだけです。  
   
 > [!NOTE]  
@@ -34,7 +38,7 @@ caps.handback.revision: 32
   
  トリガーを入れ子にできる場合に、トリガーのチェーンのどれかが無限ループを開始すると、入れ子階層の上限を超えることになり、トリガーは終了します。  
   
- 入れ子になったトリガーを使用して、前のトリガーの影響を受けた行のバックアップ コピーを保存するなど、システムの運用上有益な機能を実行することができます。 たとえば、`PurchaseOrderDetail` トリガーが削除した `PurchaseOrderDetail` 行のバックアップ コピーを保存するトリガーを `delcascadetrig` に作成することができます。 `delcascadetrig` トリガーが有効な場合、`PurchaseOrderID` から `PurchaseOrderHeader` 1965 が削除されると、`PurchaseOrderDetail` から対応する行が削除されます。 このデータを保存するには、`PurchaseOrderDetail` に DELETE トリガーを作成します。このトリガーでは削除されたデータが、別に作成されたテーブル `del_save` に保存されます。 例:  
+ 入れ子になったトリガーを使用して、前のトリガーの影響を受けた行のバックアップ コピーを保存するなど、システムの運用上有益な機能を実行することができます。 たとえば、 `PurchaseOrderDetail` トリガーが削除した `PurchaseOrderDetail` 行のバックアップ コピーを保存するトリガーを `delcascadetrig` に作成することができます。 `delcascadetrig` トリガーが有効な場合、 `PurchaseOrderID` から `PurchaseOrderHeader` 1965 が削除されると、 `PurchaseOrderDetail`から対応する行が削除されます。 このデータを保存するには、 `PurchaseOrderDetail` に DELETE トリガーを作成します。このトリガーでは削除されたデータが、別に作成されたテーブル `del_save`に保存されます。 例:  
   
 ```  
 CREATE TRIGGER Purchasing.savedel  
@@ -50,25 +54,25 @@ AS
 > [!NOTE]  
 >  トリガーはトランザクション内で実行されるので、入れ子になったトリガーのいずれかのレベルで障害が発生すると、トランザクション全体が取り消され、すべてのデータ修正がロールバックされます。 どこで障害が発生したかを判断できるように、トリガーに PRINT ステートメントを含めてください。  
   
-## 再帰トリガー  
+## <a name="recursive-triggers"></a>再帰トリガー  
  RECURSIVE_TRIGGERS データベース オプションが ON になっている場合を除いて、AFTER トリガーが自分自身を再帰呼び出しすることはありません。  
   
  再帰には、次の 2 種類があります。  
   
 -   直接再帰  
   
-     起動されたトリガーによる処理が、同じトリガーを再び起動する場合にこの再帰が発生します。 たとえば、アプリケーションで **T3** テーブルが更新され、これにより **Trig3** トリガーが起動されたとします。 **Trig3** がテーブル **T3** を更新するトリガーだとすると、テーブルが再度更新され、**Trig3** が再び起動されることになります。  
+     起動されたトリガーによる処理が、同じトリガーを再び起動する場合にこの再帰が発生します。 たとえば、アプリケーションで **T3**テーブルが更新され、これにより **Trig3** トリガーが起動されたとします。 **Trig3** がテーブル **T3** を更新するトリガーだとすると、テーブルが再度更新され、 **Trig3** が再び起動されることになります。  
   
-     別の種類 (AFTER または INSTEAD OF) のトリガーが呼び出された後で、同じトリガーが呼び出されても、直接再帰が発生します。 つまり、同じ INSTEAD OF トリガーが 2 回呼び出されると、その間に AFTER トリガーが 1 回以上呼び出されていたとしても、INSTEAD OF トリガーの直接再帰が発生します。 同様に、同じ AFTER トリガーが 2 回呼び出されると、その間に INSTEAD OF トリガーが 1 回以上呼び出されていたとしても、AFTER トリガーの直接再帰が発生します。 たとえば、アプリケーションがテーブル **T4** を更新します。 この更新により、INSTEAD OF トリガー **Trig4** が起動します。 **Trig4** はテーブル **T5** を更新します。 この更新により、AFTER トリガー **Trig5** が起動します。 **Trig5** がテーブル **T4** を更新し、これにより INSTEAD OF トリガー **Trig4** が再び起動されます。 このようなイベントの連鎖は、**Trig4** に対する直接再帰と見なされます。  
+     別の種類 (AFTER または INSTEAD OF) のトリガーが呼び出された後で、同じトリガーが呼び出されても、直接再帰が発生します。 つまり、同じ INSTEAD OF トリガーが 2 回呼び出されると、その間に AFTER トリガーが 1 回以上呼び出されていたとしても、INSTEAD OF トリガーの直接再帰が発生します。 同様に、同じ AFTER トリガーが 2 回呼び出されると、その間に INSTEAD OF トリガーが 1 回以上呼び出されていたとしても、AFTER トリガーの直接再帰が発生します。 たとえば、アプリケーションがテーブル **T4**を更新します。 この更新により、INSTEAD OF トリガー **Trig4** が起動します。 **Trig4** はテーブル **T5**を更新します。 この更新により、AFTER トリガー **Trig5** が起動します。 **Trig5** がテーブル **T4**を更新し、これにより INSTEAD OF トリガー **Trig4** が再び起動されます。 このようなイベントの連鎖は、 **Trig4**に対する直接再帰と見なされます。  
   
 -   間接再帰  
   
-     起動されたトリガーが実行した処理によって、同じ種類 (AFTER または INSTEAD OF) の別のトリガーが起動する場合、この再帰が発生します。 この 2 番目のトリガーにより、最初のトリガーを再度起動する操作が実行されます。 つまり、ある INSTEAD OF トリガーが 2 回呼び出され、その間に別の INSTEAD OF トリガーが呼び出されていると、間接再帰が発生します。 同様に、ある AFTER トリガーが 2 回呼び出され、その間に別の AFTER トリガーが呼び出されていると、間接再帰が発生します。 たとえば、アプリケーションがテーブル **T1** を更新します。 この更新により、AFTER トリガー **Trig1** が起動します。 **Trig1** がテーブル **T2** を更新し、これにより AFTER トリガー **Trig2** が起動します。 次に、**Trig2** がテーブル **T1** を更新し、これにより AFTER トリガー **Trig1** が再び起動します。  
+     起動されたトリガーが実行した処理によって、同じ種類 (AFTER または INSTEAD OF) の別のトリガーが起動する場合、この再帰が発生します。 この 2 番目のトリガーにより、最初のトリガーを再度起動する操作が実行されます。 つまり、ある INSTEAD OF トリガーが 2 回呼び出され、その間に別の INSTEAD OF トリガーが呼び出されていると、間接再帰が発生します。 同様に、ある AFTER トリガーが 2 回呼び出され、その間に別の AFTER トリガーが呼び出されていると、間接再帰が発生します。 たとえば、アプリケーションがテーブル **T1**を更新します。 この更新により、AFTER トリガー **Trig1** が起動します。 **Trig1** がテーブル **T2**を更新し、これにより AFTER トリガー **Trig2** が起動します。 次に、**Trig2** がテーブル **T1** を更新し、これにより AFTER トリガー **Trig1** が再び起動します。  
   
- RECURSIVE_TRIGGERS データベース オプションが OFF の場合は、AFTER トリガーの直接再帰呼び出しのみが回避されます。 AFTER トリガーの間接再帰を無効にするには、**nested triggers** サーバー オプションを **0** に設定します。  
+ RECURSIVE_TRIGGERS データベース オプションが OFF の場合は、AFTER トリガーの直接再帰呼び出しのみが回避されます。 AFTER トリガーの間接再帰を無効にするには、 **nested triggers** サーバー オプションを **0**に設定します。  
   
-## 使用例  
- 次の例では、再帰トリガーを使用して、自己参照型リレーションシップ (トランジティブ クロージャとも呼ばれます) を解決する方法を示しています。 たとえば、`emp_mgr` テーブルで、次のものが定義されているとします。  
+## <a name="examples"></a>使用例  
+ 次の例では、再帰トリガーを使用して、自己参照型リレーションシップ (トランジティブ クロージャとも呼ばれます) を解決する方法を示しています。 たとえば、 `emp_mgr` テーブルで、次のものが定義されているとします。  
   
 -   会社内の従業員 (`emp`)  
   
@@ -181,9 +185,9 @@ Paul                           Alice                          0
   
  **RECURSIVE_TRIGGERS データベース オプションを設定するには**  
   
--   [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)  
+-   [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [nested triggers サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)  
   

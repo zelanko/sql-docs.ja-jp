@@ -1,33 +1,37 @@
 ---
 title: "PolyBase のトラブルシューティング | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PolyBase, monitoring"
-  - "PolyBase, performance monitoring"
-helpviewer_keywords: 
-  - "PolyBase, トラブルシューティング"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-polybase
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- PolyBase, monitoring
+- PolyBase, performance monitoring
+helpviewer_keywords:
+- PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 caps.latest.revision: 22
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: bef55c15906ea76d2993d41e3eb7cbfd4bac9a4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# PolyBase のトラブルシューティング
+# <a name="polybase-troubleshooting"></a>PolyBase のトラブルシューティング
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   PolyBase のトラブルシューティングを行うには、このトピックに記載されている手法を使用してください。  
   
-## カタログ ビュー  
+## <a name="catalog-views"></a>カタログ ビュー  
  PolyBase の操作を管理するには、次に示すカタログ ビューを使用します。  
   
 |||  
@@ -37,7 +41,7 @@ caps.handback.revision: 18
 |[sys.external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|外部のデータ ソースを識別します。|  
 |[sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|外部のファイル形式を識別します。|  
   
-## 動的管理ビュー  
+## <a name="dynamic-management-views"></a>動的管理ビュー  
   
 |||  
 |-|-|  
@@ -47,7 +51,18 @@ caps.handback.revision: 18
 |[sys.dm_exec_dms_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-services-transact-sql.md)|[sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |[sys.dm_exec_external_operations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-operations-transact-sql.md)|[sys.dm_exec_external_work &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)|  
   
-## DMV を使用し PolyBase のクエリを監視するには  
+  PolyBase クエリは、sys.dm_exec_distributed_request_steps 内で一連のステップに分割されます。 次の表は、ステップ名と関連 DMV のマッピングになっています。
+  
+ |PolyBase ステップ|関連 DMV|  
+ |-|-| 
+ |HadoopJobOperation | sys.dm_exec_external_operations|
+ |RandomIdOperation | sys.dm_exec_distributed_request_steps|
+ |HadoopRoundRobinOperation | sys.dm_exec_dms_workers|
+ |StreamingReturnOperation | sys.dm_exec_dms_workers|
+ |OnOperation | sys.dm_exec_distributed_sql_requests |
+  
+  
+## <a name="to-monitor-polybase-queries-using-dmvs"></a>DMV を使用し PolyBase のクエリを監視するには  
  PolyBase のクエリを監視およびトラブルシューティングするには、次の DMV を使用します。  
   
 1.  **実行時間が最長のクエリを検索する**  
@@ -125,13 +140,13 @@ caps.handback.revision: 18
   
     ```  
   
-## PolyBase クエリ プランを参照するには  
+## <a name="to-view-the--polybase-query-plan"></a>PolyBase クエリ プランを参照するには  
   
 1.  SSMS で、[ **実際の実行プランを含める** ] (Ctrl + M) を有効にし、クエリを実行します。  
   
 2.  [ **実行プラン** ] タブをクリックします。  
   
-     ![PolyBase query plan](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase query plan")  
+     ![PolyBase クエリ プラン](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase クエリ プラン")  
   
 3.  [ **Remote Query 操作** ] を右クリックし、[ **プロパティ**] を選択します。  
   
@@ -196,7 +211,7 @@ caps.handback.revision: 18
     </dsql_query>  
     ```  
   
-## PolyBase グループ内のノードを監視するには  
+## <a name="to-monitor-nodes-in-a-polybase-group"></a>PolyBase グループ内のノードを監視するには  
  PolyBase スケール アウト グループの一部として一連のコンピューターを構成すると、マシンの状態を監視できます。 スケール アウト グループの作成の詳細については、「 [PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md)」を参照してください。  
   
 1.  グループのヘッド ノードの SQL Server に接続します。  
@@ -205,12 +220,15 @@ caps.handback.revision: 18
   
 3.  DMV [sys.dm_exec_compute_node_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md) を実行し、PolyBase グループのすべてのノードの状態を表示します。  
   
- ## 既知の制限事項
+ ## <a name="known-limitations"></a>既知の制限事項
  
  PolyBase には次の制限事項があります。 
- - 可変長列の全長を含め、最大行サイズは 32,767 バイト以下にする必要があります。
+ - 可変長列の全長を含め、最大行サイズは 1 MB 以下にする必要があります。 
  - PolyBase では、Hive 0.12 以降のデータ型 (つまり、Char(), VarChar()) はサポートされません。   
+ - SQL Server または Azure SQL データ ウェアハウスから ORC ファイル形式にデータをエクスポートするとき、java のメモリ不足エラーに起因し、テキストでいっぱいの列はわずか 50 列に制限されることがあります。 この問題を回避するには、列の一部だけをエクスポートします。
+- [SQL Server 2016 の フェールオーバー クラスターにノードを追加すると、PolyBase の機能をインストールできません](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
   
-## エラー メッセージと考えられる解決策
+## <a name="error-messages-and-possible-solutions"></a>エラー メッセージと考えられる解決策
 
 外部テーブルのエラーのトラブルシューティングについては、Murshed Zaman のブログ [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions")を参照してください。
+

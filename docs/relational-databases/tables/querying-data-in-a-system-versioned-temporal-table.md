@@ -1,28 +1,32 @@
 ---
 title: "システム バージョン管理されたテンポラル テーブルのデータのクエリ | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 caps.latest.revision: 7
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9cc4156eccf9dd642e53ec2aeea967d9dcf016af
+ms.lasthandoff: 04/11/2017
+
 ---
-# システム バージョン管理されたテンポラル テーブルのデータのクエリ
+# <a name="querying-data-in-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルのデータのクエリ
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   テンポラル テーブルのデータの最新 (実際) の状態を取得するときは、テンポラル以外のテーブルをクエリするときとまったく同じ方法でクエリできます。 PERIOD 列が非表示ではない場合は、それらの値が SELECT \* クエリで表示されます。 **PERIOD** 列が非表示として指定されている場合は、それらの値は SELECT \* クエリでは表示されません。 **PERIOD** 列が非表示の場合は、SELECT 句で **PERIOD** 列を明示的に参照すると、これらの列の値が返されます。  
   
- 任意の種類の時間ベースの分析を実行するには、新しい **FOR SYSTEM_TIME** 句を使用し、テンポラル固有の 4 つのサブ句を指定して、現在のテーブルと履歴テーブルのデータをクエリします。 これらの句の詳細については、「[テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)」と「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
+ 任意の種類の時間ベースの分析を実行するには、新しい  **FOR SYSTEM_TIME** 句を使用し、テンポラル固有の 4 つのサブ句を指定して、現在のテーブルと履歴テーブルのデータをクエリします。 これらの句の詳細については、「[テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)」と「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
   
 -   AS OF <date_time>  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 7
   
  **FOR SYSTEM_TIME** は、クエリで各テーブルに対して個別に指定できます。 共通テーブル式、テーブル値関数、ストアド プロシージャの中で使用できます。  
   
-## AS OF サブ句を使用した特定時点のクエリ  
+## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>AS OF サブ句を使用した特定時点のクエリ  
  過去の特定時点におけるデータの状態を再構築する必要がある場合は、**AS OF** サブ句を使用します。  **PERIOD** 列の定義で指定されている datetime2 型の精度でデータを再構築できます。    
 **AS OF** サブ句を定数リテラルまたは変数と共に使用して、時間条件を動的に指定できます。 指定した値は UTC 時刻として解釈されます。  
   
@@ -65,11 +69,11 @@ JOIN [Department] AS D ON  D_1_Ago.[DeptID] = [D].[DeptID]
 AND D_1_Ago.[DeptID] BETWEEN 1 and 5 ;  
 ```  
   
-### テンポラル クエリにおける AS-OF 句でのビューの使用  
+### <a name="using-views-with-as-of-sub-clause-in-temporal-queries"></a>テンポラル クエリにおける AS-OF 句でのビューの使用  
  複雑な特定時点分析が必要なときは、ビューが非常に役に立ちます。   
 一般的な例は、過去 1 か月の値を使用して今日のビジネス レポートを生成する場合です。   
 通常、ユーザーは外部キー リレーションシップを持つ多数のテーブルを含む正規化されたデータベース モデルを使用します。 すべてのテーブルは個別に独立したパターンで変化するので、その正規化されたモデルのデータが過去の特定の時点においてどのようなものになるかは簡単にはわかりません。   
-このような場合に最善の方法は、ビューを作成し、**AS OF** サブ句をビュー全体に適用することです。 この方法を使用すると、SQL Server はビューの定義に含まれるすべてのテンポラル テーブルに **AS OF** 句を透過的に適用するので、特定時点分析からデータ アクセス層のモデルを切り離すことができます。 さらに、テンポラル テーブルと非テンポラル テーブルを同じビューに含めることができます。**AS OF** はテンポラル テーブルに対してのみ適用されます。 ビューでテンポラル テーブルが 1 つも参照されていない場合、テンポラル クエリ句をテーブルに適用するとエラーで失敗します。  
+このような場合に最善の方法は、ビューを作成し、 **AS OF** サブ句をビュー全体に適用することです。 この方法を使用すると、SQL Server はビューの定義に含まれるすべてのテンポラル テーブルに **AS OF** 句を透過的に適用するので、特定時点分析からデータ アクセス層のモデルを切り離すことができます。 さらに、テンポラル テーブルと非テンポラル テーブルを同じビューに含めることができます。 **AS OF** はテンポラル テーブルに対してのみ適用されます。 ビューでテンポラル テーブルが 1 つも参照されていない場合、テンポラル クエリ句をテーブルに適用するとエラーで失敗します。  
   
 ```  
 /* Create view that joins three temporal tables: Department, CompanyLocation, LocationDepartments */   
@@ -93,12 +97,12 @@ FOR SYSTEM_TIME AS OF '2015-09-01 T10:00:00.7230011' ;
   
 ```  
   
-## 一定期間における特定の行への変更のクエリ  
- テンポラル サブ句 **FROM...TO**、**BETWEEN...AND**、**CONTAINED IN** は、データの監査を実行するとき、つまり現在のテーブル内の特定の行に対するすべての変更履歴を取得する必要がある場合に、役に立ちます。   
+## <a name="query-for-changes-to-specific-rows-over-time"></a>一定期間における特定の行への変更のクエリ  
+ テンポラル サブ句 **FROM...TO**、 **BETWEEN...AND** 、 **CONTAINED IN** は、データの監査を実行するとき、つまり現在のテーブル内の特定の行に対するすべての変更履歴を取得する必要がある場合に、役に立ちます。   
 最初の 2 つのサブ句は指定された期間と重なる行のバージョンを返します (つまり、指定された期間より前に開始し、期間の後で終了するバージョン) が、CONTAINED IN は指定された期間の範囲内に存在するものだけを返します。  
   
 > [!IMPORTANT]  
->  現在ではない行のバージョンのみを検索する場合は、**CONTAINED IN** を使用することをお勧めします。この構文は履歴テーブルのみを処理し、クエリのパフォーマンスが最高になります。 何の制限もなしに現在と履歴のデータをクエリする必要がある場合は、 **ALL** を使用します。  
+>  現在ではない行のバージョンのみを検索する場合は、 **CONTAINED IN** を使用することをお勧めします。この構文は履歴テーブルのみを処理し、クエリのパフォーマンスが最高になります。 何の制限もなしに現在と履歴のデータをクエリする必要がある場合は、 **ALL** を使用します。  
   
 ```  
 /* Query using BETWEEN...AND sub-clause*/  
@@ -132,10 +136,10 @@ ORDER BY [DeptID], [SysStartTime] Desc
   
 ```  
   
-## この記事は役に立ちましたか? フィードバックをお待ちしております。  
- どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツ改善のため、フィードバックをお待ちしています。  [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Queryinging%20a%20System-Versioned%20Temporal%20Table%20page)にコメントをお送りください  
+## <a name="did-this-article-help-you-were-listening"></a>この記事は役に立ちましたか? フィードバックをお待ちしております。  
+ どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツ改善のため、フィードバックをお待ちしています。 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Queryinging%20a%20System-Versioned%20Temporal%20Table%20page) にコメントをお送りください  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [システム バージョン管理されたテンポラル テーブルの作成](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)   
@@ -144,3 +148,4 @@ ORDER BY [DeptID], [SysStartTime] Desc
  [システム バージョン管理されたテンポラル テーブルでシステム バージョン管理を停止する](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
+

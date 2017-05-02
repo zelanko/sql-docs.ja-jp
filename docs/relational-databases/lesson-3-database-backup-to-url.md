@@ -1,29 +1,33 @@
 ---
 title: "レッスン 3: URL へのデータベースのバックアップ | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 83414948fcd1f8db58f2e6a66f948a5427d0c999
+ms.lasthandoff: 04/11/2017
+
 ---
-# レッスン 3: URL へのデータベースのバックアップ
-このレッスンでは、[「レッスン 1: Azure コンテナーに格納済みアクセス ポリシーと Shared Access Signature を作成する」](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)で作成した Azure コンテナーに、オンプレミスの SQL Server 2016 インスタンス内の AdventureWorks2014 データベースをバックアップします。  
+# <a name="lesson-3-database-backup-to-url"></a>レッスン 3: URL へのデータベースのバックアップ
+このレッスンでは、 [「レッスン 1: Azure コンテナーに格納済みアクセス ポリシーと Shared Access Signature を作成する」](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)で作成した Azure コンテナーに、オンプレミスの SQL Server 2016 インスタンス内の AdventureWorks2014 データベースをバックアップします。  
   
 > [!NOTE]  
-> この Azure コンテナーに SQL Server 2012 SP1 CU2 以降のデータベースまたは SQL Server 2014 データベースをバックアップする場合、[こちら](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) に記載されている非推奨構文を使用すれば、WITH CREDENTIAL 構文で URL へのバックアップを行うことができます。  
+> この Azure コンテナーに SQL Server 2012 SP1 CU2 以降のデータベースまたは SQL Server 2014 データベースをバックアップする場合、 [こちら](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) に記載されている非推奨構文を使用すれば、WITH CREDENTIAL 構文で URL へのバックアップを行うことができます。  
   
 BLOB ストレージにデータベースをバックアップするには、次の手順に従います。  
   
@@ -50,9 +54,10 @@ BLOB ストレージにデータベースをバックアップするには、次
   
 5.  コンテナーの展開。レッスン 1 で作成されたコンテナーを展開し、前述の手順 3 で作成されたバックアップがこのコンテナー内に表示されているかどうかを確認します。  
   
-    ![On-premises backup file appears as blob in Azure container](../relational-databases/media/0d060e51-012f-4c61-ab8d-16d461d0ffad.JPG "On-premises backup file appears as blob in Azure container")  
+    ![オンプレミスのバックアップ ファイルが Azure コンテナーに blob として表示される](../relational-databases/media/0d060e51-012f-4c61-ab8d-16d461d0ffad.JPG "オンプレミスのバックアップ ファイルが Azure コンテナーに blob として表示される")  
   
 **次のレッスン:**  
   
 [レッスン 4: URL から仮想マシンにデータベースを復元する](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
+

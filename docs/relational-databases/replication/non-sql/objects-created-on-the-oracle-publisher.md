@@ -1,30 +1,34 @@
 ---
 title: "Oracle パブリッシャー上で作成されたオブジェクト | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Oracle パブリッシング [SQL Server レプリケーション], 作成されたオブジェクト"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], objects created
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97a45c8f524f81d01dceda7a616932b18e799d82
+ms.lasthandoff: 04/11/2017
+
 ---
-# Oracle パブリッシャー上で作成されたオブジェクト
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションでは、変更の追跡と転送を有効にする Oracle パブリッシャーにデータベース オブジェクトがインストールされます ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Oracle パブリッシャーにバイナリ ファイルがインストールされません)。 次の表に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターで Oracle パブリッシャーがパブリッシャーとして認識されたときに、Oracle パブリッシャーで作成されるオブジェクトの一覧を示します。 オブジェクトの説明は、情報の提供のみを目的としています。 これらのオブジェクトは変更しないでください。  
+# <a name="objects-created-on-the-oracle-publisher"></a>Oracle パブリッシャー上で作成されたオブジェクト
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication installs database objects on the Oracle Publisher to enable change tracking and forwarding ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not install any binary files on the Oracle Publisher). 次の表に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターで Oracle パブリッシャーがパブリッシャーとして認識されたときに、Oracle パブリッシャーで作成されるオブジェクトの一覧を示します。 オブジェクトの説明は、情報の提供のみを目的としています。 これらのオブジェクトは変更しないでください。  
   
 |Object Name|[オブジェクトの種類]|説明|  
 |-----------------|-----------------|-----------------|  
 |HREPL_ArticleNlog_V|テーブル|パブリッシュされたテーブルが変更されたときに情報を格納するために使用する変更追跡テーブル。 変更追跡テーブルは、パブリッシュされたテーブルごとに作成されます。|  
-|HREPL_Changes|テーブル|トランザクション セットに割り当てられるのを待機している変更の数を判断するために、Xactset ジョブによって内部的に使用されるテーブル。 このジョブに関する詳細については、次を参照してください。 [Oracle パブリッシャーのパフォーマンス チューニング](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)です。|  
+|HREPL_Changes|テーブル|トランザクション セットに割り当てられるのを待機している変更の数を判断するために、Xactset ジョブによって内部的に使用されるテーブル。 このジョブの詳細については、「[Oracle パブリッシャーのパフォーマンス チューニング](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)」を参照してください。|  
 |HREPL_Distributor|テーブル|Oracle パブリッシャーに関連付けられた [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターに関する情報を保持するディストリビューター状態テーブル。|  
 |HREPL_Event|テーブル|スナップショットと行数要求とを同期するために使用されるイベント テーブル。|  
 |HREPL_Mutex|テーブル|ログ リーダー エージェントとデータベース ジョブが、Oracle パッケージ プロシージャ PopulatePollTable を同時に実行しないようにするために使われるテーブル。|  
@@ -47,9 +51,9 @@ caps.handback.revision: 33
 |HREPL_Article_I_J|表示|パブリッシュされたテーブルごとに作成されるビューで、パブリッシュされたテーブルにクエリを実行するために使用されます。|  
 |HREPL_Log_I_J_K|表示|パブリッシュされたテーブルごとに作成されるビューで、変更追跡テーブルにクエリを実行するために使用されます。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Oracle パブリッシングの用語](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
- [Oracle パブリッシングの概要](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

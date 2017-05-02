@@ -1,32 +1,36 @@
 ---
 title: "ストアド プロシージャの変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "変更、ストアド プロシージャ"
-  - "ストアド プロシージャの編集"
-  - "変更ストアド プロシージャ [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying stored procedures
+- editing stored procedures
+- stored procedures [SQL Server], modifying
 ms.assetid: 13396239-6100-48ce-aa34-461358d99c92
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6eb24cf562396f61af07735fa741e50d447a4b50
+ms.lasthandoff: 04/11/2017
+
 ---
-# ストアド プロシージャの変更
+# <a name="modify-a-stored-procedure"></a>ストアド プロシージャの変更
     
-##  <a name="Top"></a> このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] でストアド プロシージャを変更する方法について説明します。  
+##  <a name="Top"></a> このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャを変更する方法について説明します。  
   
--   **作業を開始する準備:** [制限事項と制約事項](#Restrictions)、[セキュリティ](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
--   **プロシージャの変更に使用するもの:** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **To alter a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 30
   
 2.  **[データベース]**を展開し、プロシージャが属するデータベースを展開し、 **[プログラミング]**を展開します。  
   
-3.  **[ストアド プロシージャ]** を展開し、変更するプロシージャを右クリックして、**[変更]** をクリックします。  
+3.  **[ストアド プロシージャ]**を展開し、変更するプロシージャを右クリックして、 **[変更]**をクリックします。  
   
 4.  ストアド プロシージャのテキストを変更します。  
   
@@ -145,7 +149,7 @@ caps.handback.revision: 30
   
     ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)  
   
   
