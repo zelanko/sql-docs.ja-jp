@@ -1,70 +1,75 @@
 ---
 title: "データベース ユーザーの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.user.securables.f1"
-  - "SQL13.SWB.DATABASEUSER.GENERAL.F1"
-helpviewer_keywords: 
-  - "データベース ユーザー, 作成"
-  - "Management Studio を使用したユーザーの作成"
-  - "ユーザーのマッピング"
-  - "ユーザー [SQL Server], 作成"
-  - "データベース ユーザーの追加 [SQL Server]"
-  - "データベース ユーザー, mapping\"
-  - "CREATE USER [Management Studio]"
-  - "ユーザー [SQL Server], 追加"
-  - "データベース ユーザーのマッピング"
+ms.custom: 
+ms.date: 04/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.user.securables.f1
+- SQL13.SWB.DATABASEUSER.GENERAL.F1
+helpviewer_keywords:
+- database users, creating
+- creating users with Management Studio
+- mapping users
+- users [SQL Server], creating
+- database user additions [SQL Server]
+- database users, mapping
+- CREATE USER [Management Studio]
+- users [SQL Server], adding
+- mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
----
-# データベース ユーザーの作成
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 29621ffb4694c725024b6fee7220f6b2e76d305a
+ms.lasthandoff: 05/03/2017
+
+---   
+
+# <a name="create-a-database-user"></a>データベース ユーザーの作成
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   このトピックでは、最も一般的な種類のデータベース ユーザーを作成する方法について説明します。 ユーザーには、次の 7 種類があります。 完全な一覧については、「[CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)」を参照してください。 すべての種類の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ではデータベース ユーザーがサポートされますが、すべての種類のユーザーがサポートされているとは限りません。  
   
  データベース ユーザーを作成するには、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用します。  
   
-##  <a name="Understanding"></a> ユーザーの種類について  
+##  <a name="Understanding"></a>ユーザーの種類について  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] は、データベース ユーザーを作成するときに 6 つのオプションを表示します。 次の図に、6 つのオプションを緑色のボックスに示し、それらが何を表すかを示します。  
   
  ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
   
-### ユーザーの種類の選択  
+### <a name="selecting-the-type-of-user"></a>ユーザーの種類の選択  
  **ログインまたはログインにマップされていないユーザー**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を初めて使用する場合は、作成するユーザーの種類を決定するのが難しい可能性があります。 まず、データベースにアクセスする必要があるユーザーまたはグループがログインを持っているかどうかを確認します。 master データベース内のログインは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を管理するユーザー、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスで複数またはすべてのデータベースにアクセスする必要があるユーザーにとっては一般的です。 ここでは、 **ログインを持つ SQL ユーザー**を作成します。 データベース ユーザーは、ログインの ID として、データベースへの接続時に使用されます。 データベース ユーザーとログインには同じ名前を使用できますが、必ずしもその必要はありません。 このトピックは、既存のログインが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に存在することを前提としています。 ログインの作成方法の詳細については、「[ログインの作成](../../../relational-databases/security/authentication-access/create-a-login.md)」を参照してください。  
   
- データベースにアクセスする必要があるユーザーまたはグループがログインを持っていない場合、かつ 1 つまたは複数のデータベースにだけアクセスする必要がある場合は、 **Windows ユーザー** または **パスワードを持つ SQL ユーザー**を作成します。 このユーザーは包含データベース ユーザーとも呼ばれ、master データベース内のログインに関連付けられません。 これは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス間でデータベースを簡単に移動できるようにするときに最適な選択肢です。 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]でこのオプションを使用するには、管理者は最初に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用の包含データベースを有効にし、データベースの包含を有効にする必要があります。 詳細については、「[包含データベース ユーザー - データベースの可搬性を確保する](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
+ データベースにアクセスする必要があるユーザーまたはグループがログインを持っていない場合、かつ 1 つまたは複数のデータベースにだけアクセスする必要がある場合は、 **Windows ユーザー** または **パスワードを持つ SQL ユーザー**を作成します。 このユーザーは包含データベース ユーザーとも呼ばれ、master データベース内のログインに関連付けられません。 これは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス間でデータベースを簡単に移動できるようにするときに最適な選択肢です。 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]でこのオプションを使用するには、管理者は最初に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用の包含データベースを有効にし、データベースの包含を有効にする必要があります。 詳細については、「 [包含データベース ユーザー - データベースの可搬性を確保する](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
   
-> **重要: ** 包含データベース ユーザーとして接続するときには、接続文字列の一部としてデータベースの名前を指定する必要があります。 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]でデータベースを指定するには、 **[接続先]** ダイアログ ボックスで **[オプション]**をクリックし、 **[接続プロパティ]** タブをクリックします。  
+> **重要:** 包含データベース ユーザーとして接続するときには、接続文字列の一部としてデータベースの名前を指定する必要があります。 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]でデータベースを指定するには、 **[接続先]** ダイアログ ボックスで **[オプション]**をクリックし、 **[接続プロパティ]** タブをクリックします。  
   
  接続するユーザーが Windows で認証できない場合は、 **SQL Server 認証ログイン** に基づいて **[パスワードを持つ SQL ユーザー]** または **[ログインを持つ SQL ユーザー]**を選択します。 これは、組織外のユーザー (例えば、顧客など) が組織の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続するときに一般的です。  
   
-> **ヒント:** 組織内のユーザーの場合は、Windows 認証の方が適切です。これは、別のパスワードを覚える必要がないため、および Windows 認証は Kerberos などの他のセキュリティ機能を提供するためです。  
+> **ヒント!** 組織内のユーザーの場合は、Windows 認証の方が適切です。これは、別のパスワードを覚える必要がないため、および Windows 認証は Kerberos などの他のセキュリティ機能を提供するためです。  
   
 ##  <a name="Restrictions"></a> 背景情報  
  ユーザーは、データベース レベルのセキュリティ プリンシパルです。 データベースに接続するためには、データベース ユーザーにログインをマップする必要があります。 異なるデータベースには、1 つのログインを異なるユーザーとしてマップすることができますが、各データベースでは 1 人のユーザーとしてのみマップできます。 部分的包含データベースでは、ログインを持たないユーザーを作成できます。 包含データベース ユーザーの詳細については、「[CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)」を参照してください。 データベースで guest ユーザーが有効になっている場合は、データベース ユーザーにマップされていないログインでも、guest ユーザーとしてそのデータベースにアクセスすることができます。  
   
-> **重要: ** guest ユーザーは無効にするのが一般的です。 必要な場合を除き、guest ユーザーは有効にしないでください。  
+> **重要:** guest ユーザーは無効にするのが一般的です。 必要な場合を除き、guest ユーザーは有効にしないでください。  
   
  セキュリティ プリンシパルとして、ユーザーには権限を許可することができます。 ユーザーのスコープはデータベースです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス上の特定のデータベースに接続するには、データベース ユーザーにログインをマップする必要があります。 データベース内の権限を許可したり拒否したりする際に、その対象となるのは、ログインではなく、データベース ユーザーです。  
   
 ##  <a name="Permissions"></a> アクセス許可  
  データベースに対する **ALTER ANY USER** 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SSMS でユーザーを作成する  
+##  <a name="SSMSProcedure"></a>SSMS でユーザーを作成する  
   
  
 1.  オブジェクト エクスプローラーで、 **[データベース]** フォルダーを展開します。  
@@ -98,10 +103,10 @@ caps.handback.revision: 31
      **[パスワード]** と **[パスワードの確認入力]**  
      データベースで認証するユーザーのパスワードを入力します。  
   
-     **既定の言語**  
+     **[既定の言語]**  
      ユーザーの既定の言語を入力します。  
   
-     **既定のスキーマ**  
+     **[既定のスキーマ]**  
      このユーザーが作成したオブジェクトを所有するスキーマを入力します。 または、省略記号 **[...]** をクリックして **[スキーマの選択]** ダイアログ ボックスを開きます。 **[既定のスキーマ]** は、 **[ユーザーの種類]**で一覧から **[ログインを持つ SQL ユーザー]**、 **[ログインを持たない SQL ユーザー]** 、または **[Windows ユーザー]** を選択した場合に使用できます。  
   
      **[証明書名]**  
@@ -112,7 +117,7 @@ caps.handback.revision: 31
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### 追加オプション  
+### <a name="additional-options"></a>追加オプション  
  **[データベース ユーザー - 新規]** ダイアログ ボックスでは、 **[所有されているスキーマ]**、 **[メンバーシップ]**、 **[セキュリティ保護可能なリソース]**、 **[拡張プロパティ]**という 4 つの追加ページにもオプションが提供されます。  
   
 -   **[所有されているスキーマ]** ページには、新しいデータベース ユーザーが所有できるすべてのスキーマが一覧表示されます。 データベース ユーザーのスキーマを追加または削除するには、 **[このユーザーが所有するスキーマ]**で、スキーマの横のチェック ボックスをオンまたはオフにします。  
@@ -138,7 +143,7 @@ caps.handback.revision: 31
      **Del**  
      選択されている拡張プロパティを削除します。  
   
-##  <a name="TsqlProcedure"></a> T-SQL を使用してユーザーを作成する  
+##  <a name="TsqlProcedure"></a>T-SQL を使用してユーザーを作成する  
     
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -159,9 +164,10 @@ caps.handback.revision: 31
   
  詳細については、「[CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)」を参照してください。この記事には、さらに多くの [!INCLUDE[tsql](../../../includes/tsql-md.md)] の例が掲載されています。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [プリンシパル &#40;データベース エンジン&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [ログインの作成](../../../relational-databases/security/authentication-access/create-a-login.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  
   
   
+
