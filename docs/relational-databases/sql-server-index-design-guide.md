@@ -26,9 +26,9 @@ ms.lasthandoff: 04/11/2017
 # <a name="sql-server-index-design-guide"></a>SQL Server インデックス デザイン ガイド
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  不完全なデザインのインデックスやインデックスの不備は、データベース アプリケーションのボトルネックの主な原因となります。 効率的なインデックスのデザインは、データベースとアプリケーションの高パフォーマンスを実現するための最優先事項です。 この SQL Server インデックス デザイン ガイドには、効果的なインデックスをデザインしてアプリケーションのニーズを満たすために役立つ情報および推奨事項が含まれています。  
+不完全なデザインのインデックスやインデックスの不備は、データベース アプリケーションのボトルネックの主な原因となります。 効率的なインデックスのデザインは、データベースとアプリケーションの高パフォーマンスを実現するための最優先事項です。 この SQL Server インデックス デザイン ガイドには、効果的なインデックスをデザインしてアプリケーションのニーズを満たすために役立つ情報および推奨事項が含まれています。  
     
- このガイドでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で使用できるインデックスの種類に関して一般的な知識があることを前提としています。 インデックスの種類に関する全般的な説明については、「 [インデックス](http://msdn.microsoft.com/library/ms175049.aspx)」を参照してください。  
+このガイドでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で使用できるインデックスの種類に関して一般的な知識があることを前提としています。 インデックスの種類に関する全般的な説明については、「 [インデックス](http://msdn.microsoft.com/library/ms175049.aspx)」を参照してください。  
   
   
 ##  <a name="Basics"></a> インデックスのデザインの基礎  
@@ -82,7 +82,7 @@ ms.lasthandoff: 04/11/2017
   
 -   複数のクエリを使用して同じ行を更新するよりも、1 つのステートメントでできるだけ多くの行を挿入または変更するクエリを作成します。 ステートメントを 1 つだけ使用することで、インデックスのメンテナンスを最適化できます。  
   
--   クエリの種類とクエリ内での列の使用方法を評価します。 たとえば、完全一致検索クエリで使用される列は、非クラスター化インデックスまたはクラスター化インデックスにする適切な候補になります。  
+-   クエリの種類とクエリ内での列の使用方法を評価します。 たとえば、完全一致検索クエリで使用される列は、非クラスター化インデックスまたはクラスター化インデックスにする適切な候補になります。
   
 ### <a name="column-considerations"></a>列に関する注意点  
  インデックスをデザインするときは、次の列のガイドラインを考慮してください。  
@@ -588,9 +588,8 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
   
 ##  <a name="Additional_Reading"></a> その他の情報  
- [SQL Server 2008 のインデックス付きビューによるパフォーマンスの向上](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
-  
- [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+[SQL Server 2008 のインデックス付きビューによるパフォーマンスの向上](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+[Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   
 
