@@ -18,9 +18,10 @@ caps.latest.revision: 46
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2fd833eaeb6d1473f508967f740ad4ba331ae5e8
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/11/2017
   
  詳細については、「[管理タスクの自動化 &#40;SQL Server エージェント&#41;](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)」を参照してください。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]([!INCLUDE[ssIS](../../includes/ssis-md.md)]) は、個々のデータ プロバイダーからデータを収集するパッケージを実行するために使用されます。 以下の [!INCLUDE[ssIS](../../includes/ssis-md.md)] ツールと概念を理解しておく必要があります。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) は、個々のデータ プロバイダーからデータを収集するパッケージを実行するために使用されます。 以下の [!INCLUDE[ssIS](../../includes/ssis-md.md)] ツールと概念を理解しておく必要があります。  
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ  
   
