@@ -20,9 +20,10 @@ caps.latest.revision: 84
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dd78349c495ceb9b653ae3b44915da327c489152
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/11/2017
   このトピックでは、サーバーやデータベースの可用性を向上する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の高可用性ソリューションをいくつか紹介します。 高可用性ソリューションは、ハードウェアやソフトウェアで問題が発生した場合でもその影響が現れないようにし、アプリケーションの可用性を維持しながら、ユーザーに影響するダウンタイムを最小限に抑えます。    
     
    
->  **メモ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のどのエディションで特定の高可用性ソリューションがサポートされているかについては、 「 [[!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)SQL Server 2016 の各エディションでサポートされる機能」の「高可用性 (Always On)」のセクションを参照してください。    
+>  **メモ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のどのエディションで特定の高可用性ソリューションがサポートされているかについては、 「[SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」の「高可用性 (AlwaysOn)」セクションを参照してください。     
      
     
 ##  <a name="TermsAndDefinitions"></a> SQL Server の高可用性ソリューションの概要    
