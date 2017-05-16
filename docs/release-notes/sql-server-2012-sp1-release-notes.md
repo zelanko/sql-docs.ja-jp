@@ -13,9 +13,10 @@ caps.latest.revision: 49
 author: byham
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 47cba5e99626a7b378c29a9dde4923963fae09da
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -121,7 +122,7 @@ SQL Server 2012 SP1 をインストールする前に、次のことを考慮し
   
 -   "値 'SharePoint Principal' は、接続文字列プロパティ 'User Identity' ではサポートされていません。"  
   
-**回避策:** SharePoint Server 2013 に PowerPivot for SharePoint 2013 インストーラー パッケージ (**spPowerPivot.msi**) をインストールします。 インストーラー パッケージは、 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 機能パックに付属しています。 この機能パックは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] ダウンロード センターの [SQL Server 2012 SP1 機能パック](http://go.microsoft.com/fwlink/p/?LinkID=268266)(http://go.microsoft.com/fwlink/p/?LinkID=268266) からダウンロードできます。  
+**回避策:** SharePoint Server 2013 に PowerPivot for SharePoint 2013 インストーラー パッケージ (**spPowerPivot.msi**) をインストールします。 インストーラー パッケージは、 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 機能パックに付属しています。 この機能パックは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] ダウンロード センターの [SQL Server 2012 SP1 機能パック](http://go.microsoft.com/fwlink/p/?LinkID=268266)からダウンロードできます。  
   
 ### <a name="33-power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>3.3 定期データ更新の後で、PowerPivot ブックの Power View シートが削除される  
 **問題点**: PowerPivot for SharePoint アドインでは、Power View が含まれたブックで **定期データ更新** を使用すると、すべての Power View シートが削除されます。  
