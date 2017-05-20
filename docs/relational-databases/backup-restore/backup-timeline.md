@@ -19,14 +19,15 @@ caps.latest.revision: 24
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2acfacf611c712047591716da85a3e9f06d5630d
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="backup-timeline"></a>バックアップ タイムライン
-  **[バックアップ タイムライン]** ダイアログ ボックスを使用して、特定の時点のデータベースを復元するためのバックアップを検索および指定します。 **[バックアップのタイムライン]** ダイアログ ボックスにアクセスするには、 **[データベースの復元] ([全般] ページ)** ペイン上の **[タイムライン]** をクリックします。 このダイアログ ボックスで、データベースで実行される復元操作のタイムラインを表示できます。  
+  **[バックアップ タイムライン]** ダイアログ ボックスを使用して、特定の時点のデータベースを復元するためのバックアップを検索および指定します。 **[バックアップのタイムライン]** ダイアログ ボックスにアクセスするには、 **[データベースの復元]\([全般] ページ)** ペイン上の **[タイムライン]** をクリックします。 このダイアログ ボックスで、データベースで実行される復元操作のタイムラインを表示できます。  
   
  データベース復旧アドバイザーによって、特定の時点に復元するために必要なバックアップだけが選択されます。 これらの選択されたバックアップは、復元操作用として推奨される復元プランを示しています。 選択されたバックアップのみを使用する必要があります。 データベースの復旧アドバイザーの詳細については、「[復元と復旧の概要&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)」を参照してください。  
   

@@ -16,9 +16,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 12c0849728ab63ccc806e0ca2de2d8b98fd7c110
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -48,10 +49,10 @@ ms.lasthandoff: 04/11/2017
 **Parent**  
 **[フォルダー一覧]** で選択したフォルダーをフォルダー階層内で 1 レベル上にします。  
   
-**[&gt;] (追加)**  
+**[&gt;]\(追加)**  
 **[フォルダー一覧]** で選択したフォルダーを **[選択されたフォルダー]** の一覧に追加します。  
   
-**[&lt;] (削除)**  
+**[&lt;]\(削除)**  
 **[選択されたフォルダー]** の一覧から選択したフォルダーを削除します。  
   
 **[選択されたフォルダー]**  

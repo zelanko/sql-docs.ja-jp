@@ -17,16 +17,17 @@ caps.latest.revision: 5
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2a0aad98c302e55b3edc76b01fc0c5eae4e249ac
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="configure-properties-of-a-data-collector"></a>データ コレクターのプロパティの構成
   ここでは、データ コレクターのプロパティを構成する方法について説明します。  
   
-## <a name="data-collection-properties-general-tab"></a>[データ コレクションのプロパティ] ([全般] タブ)  
+## <a name="data-collection-properties-general-tab"></a>[データ コレクションのプロパティ]\([全般] タブ)  
  このページを使用すると、管理データ ウェアハウスの設定を構成し、収集したデータをデータ ウェアハウスにアップロードするまで格納しておく場所を指定できます。  
   
  **[データ コレクションの有効化]**  
@@ -44,7 +45,7 @@ ms.lasthandoff: 04/11/2017
  **[キャッシュ ディレクトリ]**  
  収集したデータを管理データ ウェアハウスにアップロードするまで格納しておく、データを収集したシステム上のディレクトリを指定します。 **キャッシュ ディレクトリ** が指定されていない場合、データ コレクターは %TEMP% 環境変数と %TMP% 環境変数を探し、これらの場所を一時ストレージの既定の場所として使用しようとします。 これらの環境変数が構成されていない場合はエラーが発生し、キャッシュ ディレクトリを作成するよう求めるメッセージが表示されます。  
   
-## <a name="data-collection-properties-advanced-tab"></a>[データ コレクションのプロパティ] ([詳細設定] タブ)  
+## <a name="data-collection-properties-advanced-tab"></a>[データ コレクションのプロパティ]\([詳細設定] タブ)  
  このページを使用すると、管理データ ウェアハウスへの接続の再試行の設定を構成できます。  
   
  **[アップロード失敗時の再試行回数]**  

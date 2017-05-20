@@ -18,9 +18,10 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 41900a350fe7d9524216da616043eacbfc2a9e43
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/11/2017
  **型**  
  プロファイルの種類です。 **[ユーザー]** (ユーザー定義) または **[システム]** (定義済み) を選択します。  
   
- **[プロパティ] (...)**  
+ **[プロパティ]\(...)**  
  クリックすると、エージェント プロファイルの各パラメーターに使用されている値が表示されます。  
   
  **新規**  

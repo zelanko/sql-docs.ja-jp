@@ -19,9 +19,10 @@ caps.latest.revision: 24
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ad37935a63e55d949aaad8b3792e3180e78be5c3
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -62,10 +63,10 @@ ms.lasthandoff: 04/11/2017
  **[インデックスを含める]**  
  すべてのインデックス ページおよびテーブル データ ページの整合性を確認します。  
   
- **[Physical only] (物理のみ)**  
+ **[Physical only]\(物理のみ)**  
  ページの物理構造の整合性、レコード ヘッダー、およびデータベースの割り当ての一貫性にチェックを限定します。 このオプションは、大規模なデータベースの DBCC CHECKDB の実行時間を大幅に短縮することがあるため、実稼働システムで頻繁に使用する場合にお勧めします。  
   
- **[Tablock] (Tablock)**  
+ **[Tablock]\(Tablock)**  
  DBCC CHECKDB が、内部データベースのスナップショットを使用せずに、ロックを取得します。 これにはデータベースの短期の排他 (X) ロックも含まれます。 このオプションを使用すると、負荷の高いデータベースでの DBCC CHECKDB の実行速度が速くなることがありますが、DBCC CHECKDB の実行中はデータベースでの同時実行性が低下します。  
   
  **[T-SQL の表示]**  

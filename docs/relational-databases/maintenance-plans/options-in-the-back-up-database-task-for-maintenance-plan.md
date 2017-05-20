@@ -19,9 +19,10 @@ caps.latest.revision: 52
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 190b77647ebce66f7cf7af006f3b817605969bae
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -45,10 +46,10 @@ ms.lasthandoff: 04/11/2017
  **[すべてのデータベース]**  
  すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを対象として、メンテナンス タスクを実行するメンテナンス プランを生成します。  
   
- **[すべてのシステム データベース] (master、msdb、model)**  
+ **[すべてのシステム データベース]\(master、msdb、model)**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各システム データベースを対象として、メンテナンス タスクを実行するメンテナンス プランを生成します。 ユーザーが作成したデータベースではメンテナンス タスクは実行されません。  
   
- **[すべてのユーザー データベース] (master、model、msdb、tempdb は対象外)**  
+ **[すべてのユーザー データベース]\(master、model、msdb、tempdb は対象外)**  
  ユーザーが作成したすべてのデータベースを対象として、メンテナンス タスクを実行するメンテナンス プランを生成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム データベースではメンテナンス タスクは実行されません。  
   
  **[これらのデータベース]**  

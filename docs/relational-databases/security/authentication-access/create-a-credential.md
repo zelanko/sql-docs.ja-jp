@@ -18,9 +18,10 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 80dba3f156735179c0fb016e39f3065acd6f5ac1
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -29,7 +30,7 @@ ms.lasthandoff: 04/11/2017
   
  資格情報によって、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証ユーザーは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]外部の ID を持つことができます。 これは、主に EXTERNAL_ACCESS 権限セットを使用してアセンブリのコードを実行するために使用されます。 また、バックアップを格納するファイルの場所などのドメイン リソースに、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証ユーザーがアクセスする必要がある場合にも、資格情報が使用されます。  
   
- 資格情報は、複数の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインに同時にマップできます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインは、一度に 1 つの資格情報にのみマップできます。 資格情報を作成したら、 **[ログインのプロパティ] ([全般] ページ)** を使用してログインを資格情報にマップします。  
+ 資格情報は、複数の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインに同時にマップできます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインは、一度に 1 つの資格情報にのみマップできます。 資格情報を作成したら、 **[ログインのプロパティ]\([全般] ページ)** を使用してログインを資格情報にマップします。  
   
  **このトピックの内容**  
   
