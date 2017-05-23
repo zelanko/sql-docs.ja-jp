@@ -14,9 +14,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f431174986975cc5b5d6f25c6e9aa89469ee94b4
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  対象サーバーを変更するジョブを右クリックし、 **[プロパティ]**を選択します。  
   
-5.  [**ジョブのプロパティ –***job_name*] ダイアログ ボックスで、**[ページの選択]** の **[対象サーバー]** を選択します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([対象サーバー] ページ)](../../ssms/agent/job-properties-new-job-targets-page.md)」を参照してください。  
+5.  [**ジョブのプロパティ –** *job_name*] ダイアログ ボックスで、**[ページの選択]** の **[対象サーバー]** を選択します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([対象サーバー] ページ)](../../ssms/agent/job-properties-new-job-targets-page.md)」を参照してください。  
   
 6.  完了したら、 **[OK]**をクリックします。  
   
