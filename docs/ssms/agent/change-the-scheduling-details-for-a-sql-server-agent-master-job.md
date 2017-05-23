@@ -14,9 +14,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 68153141215e5cad8310f02cb93d96266e82bb8e
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  スケジュールを編集するジョブを右クリックして、 **[プロパティ]**をクリックします。  
   
-5.  **[ジョブのプロパティ –***job_name]* ダイアログ ボックスで、**[ページの選択]** の **[スケジュール]** を選択します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([スケジュール] ページ)](../../ssms/agent/job-properties-new-job-schedules-page.md)」をご覧ください。  
+5.  **[ジョブのプロパティ –** *job_name]* ダイアログ ボックスで、**[ページの選択]** の **[スケジュール]** を選択します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([スケジュール] ページ)](../../ssms/agent/job-properties-new-job-schedules-page.md)」をご覧ください。  
   
 6.  完了したら、 **[OK]**をクリックします。  
   
