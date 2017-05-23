@@ -22,9 +22,10 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0d646d06bd41ce4db35011d65ecab45109326c15
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -116,7 +117,7 @@ ms.lasthandoff: 04/11/2017
  非キー列を非クラスター化インデックスに含めます。 このオプションを選択すると、列を非キー列として非クラスター化インデックスのリーフ レベルに追加することにより、インデックス キーの合計サイズに対する現在のインデックス制限、およびインデックス キーを構成する列の最大数の制限を無視できます。 詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。  
   
 ##  <a name="Columns"></a> [&lt;table name&gt; から (インデックス) 列を選択] ダイアログ ボックス  
- このページを使用すると、インデックスを作成または変更するときに **[インデックスのプロパティ] ([全般] ページ)** に列を追加できます。  
+ このページを使用すると、インデックスを作成または変更するときに **[インデックスのプロパティ]\([全般] ページ)** に列を追加できます。  
   
  **チェック ボックス**  
  列を選択する場合にオンにします。  
