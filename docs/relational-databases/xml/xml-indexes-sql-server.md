@@ -37,9 +37,10 @@ caps.latest.revision: 59
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5b905c48770f83d3b77e2549466eb2513d270b30
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -135,7 +136,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   パス式を使用して個々の XML インスタンスから複数の値を取得する場合、PROPERTY インデックスで各 XML インスタンス内のパスをクラスター化すると効果が得られる可能性があります。 このシナリオは、主キーの値がわかっていてオブジェクトのプロパティをフェッチするプロパティ バッグ シナリオで主に発生します。  
   
--   XML インスタンスの値を、要素名または属性名がわからないままクエリで取得する場合、VALUE インデックスを作成できます。 //author[last-name="Howard"] (\<author> 要素が階層のどのレベルにあってもよい) のように、descendant 軸を参照する場合がその典型です。 また、ワイルドカードを使用するクエリ (いずれかの属性に値 "novel" が指定された \<book> 要素をクエリで検索する /book [@* = "novel"] など) もこれに該当します。  
+-   XML インスタンスの値を、要素名または属性名がわからないままクエリで取得する場合、VALUE インデックスを作成できます。 //author[last-name="Howard"]\(\<author> 要素が階層のどのレベルにあってもよい) のように、descendant 軸を参照する場合がその典型です。 また、ワイルドカードを使用するクエリ (いずれかの属性に値 "novel" が指定された \<book> 要素をクエリで検索する /book [@* = "novel"] など) もこれに該当します。  
   
 ### <a name="path-secondary-xml-index"></a>PATH セカンダリ XML インデックス  
  クエリで **xml** 型列のパス式をよく指定している場合、PATH セカンダリ インデックスにより検索速度を向上できる場合があります。 このトピックで既に説明したように、WHERE 句に **exist()** メソッドを指定するクエリを使用する場合には、プライマリ インデックスが役に立ちます。 PATH セカンダリ インデックスを追加することでも、そのようなクエリの検索パフォーマンスが向上する場合があります。  
