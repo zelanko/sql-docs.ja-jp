@@ -16,9 +16,10 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 89d782e0fa62c2b4b4332e9818b93f87f797710f
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,11 +50,11 @@ ms.lasthandoff: 04/11/2017
  クエリのストアに割り当てられた合計領域を取得、および設定します。  
   
  Query Store Capture Mode (クエリ ストアのキャプチャ モード)  
- -   [None] (なし) に設定すると、新しいクエリがキャプチャされません。  
+ -   [None]\(なし) に設定すると、新しいクエリがキャプチャされません。  
   
--   [All] (すべて) に設定すると、すべてのクエリがキャプチャされます。  
+-   [All]\(すべて) に設定すると、すべてのクエリがキャプチャされます。  
   
--   [Auto] (自動) に設定すると、リソースの消費量に基づいてクエリがキャプチャされます。  
+-   [Auto]\(自動) に設定すると、リソースの消費量に基づいてクエリがキャプチャされます。  
   
  古いクエリのしきい値 (日)  
  古いクエリのしきい値を取得、および設定します。 STALE_QUERY_THRESHOLD_DAYS 引数を構成して、クエリのストア内にデータを保持する日数を指定します。  

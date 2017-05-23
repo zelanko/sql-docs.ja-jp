@@ -14,9 +14,10 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 57d2a22fc535f3613ce680156a0a6bb55ec62fa1
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/11/2017
   
     -   テーブルで使用されるメモリの量は、正確に計算することはできません。 使用されるメモリの量には、多くの要因が影響します。 たとえば、ページ単位のメモリ割り当て、局所性、キャッシュ、余白などの要因です。 また、アクティブなトランザクションが関連付けられている行や、ガベージ コレクションを待機している行には複数のバージョンが存在します。  
   
-    -   テーブル内のデータとインデックスに必要な最小サイズは、後で説明する [テーブル サイズ] (table size) の計算によって得られます。  
+    -   テーブル内のデータとインデックスに必要な最小サイズは、後で説明する [テーブル サイズ]\(table size) の計算によって得られます。  
   
     -   メモリ使用量の計算で得られる値は、最善でも近似値です。配置プランにキャパシティ プランニングを含めることをお勧めします。  
   

@@ -23,9 +23,10 @@ caps.latest.revision: 8
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 46b3d92d8c1f6a720eb39a701aca50a8bc2733b9
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -169,15 +170,15 @@ ms.lasthandoff: 04/11/2017
   
 -   [配置日]  
   
--   [Trustworthy] ([True] または [False])  
+-   [Trustworthy]\([True] または [False])  
   
 -   [照合順序]  
   
--   [互換性レベル] ([Version100] など)  
+-   [互換性レベル]\([Version100] など)  
   
--   [暗号化有効] ([True] または [False])  
+-   [暗号化有効]\([True] または [False])  
   
--   [復旧モデル] ([単純]、[完全]、または [一括ログ])  
+-   [復旧モデル]\([単純]、[完全]、または [一括ログ])  
   
 -   [最終報告日時] - この列には、UCP のローカル日時が datetime データ型で表示されます。 詳細については、「 [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
   
@@ -246,15 +247,15 @@ ms.lasthandoff: 04/11/2017
   
 -   [配置日]  
   
--   [Trustworthy] ([True] または [False])  
+-   [Trustworthy]\([True] または [False])  
   
 -   [照合順序]  
   
--   [互換性レベル] ([Version100] など)  
+-   [互換性レベル]\([Version100] など)  
   
--   [暗号化有効] ([True] または [False])  
+-   [暗号化有効]\([True] または [False])  
   
--   [復旧モデル] ([単純]、[完全]、または [一括ログ])  
+-   [復旧モデル]\([単純]、[完全]、または [一括ログ])  
   
 -   [最終報告日時] - この列には、UCP のローカル日時が datetime データ型で表示されます。 詳細については、「 [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。
 
