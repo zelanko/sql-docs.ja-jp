@@ -175,7 +175,7 @@ ms.lasthandoff: 04/11/2017
 >  XML インデックスの場合、またはインデックスが無効なクラスター化インデックスの場合、このオプションは使用できません。  
   
  **[並列処理の最大限度の設定]**  
- 並列実行プランの実行中に使用されるプロセッサ数を制限します。 既定値は 0 です。0 の場合、実際に使用可能な CPU 数が使用されます。 値を 1 に設定すると、並列実行プランが生成されなくなります。値を 1 よりも大きな数値に設定すると、1 つのクエリ実行で使用されるプロセッサの最大数が限定されます。 このオプションは、ダイアログ ボックスが **再構築** または **再作成** 状態のときにのみ使用できます。 詳しくは、「 [Set the Max Degree of Parallelism Option for Optimal Performance](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)」をご覧ください。  
+ 並列実行プランの実行中に使用されるプロセッサ数を制限します。 既定値は 0 です。0 の場合、実際に使用可能な CPU 数が使用されます。 値を 1 に設定すると、並列実行プランが生成されなくなります。値を 1 よりも大きな数値に設定すると、1 つのクエリ実行で使用されるプロセッサの最大数が限定されます。 このオプションは、ダイアログ ボックスが **再構築** または **再作成** 状態のときにのみ使用できます。 詳しくは、「 [最適なパフォーマンスを実現するための max degree of parallelism オプションの設定](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)」をご覧ください。  
   
 > [!NOTE]  
 >  使用可能な CPU 数よりも多い値を指定すると、実際に使用可能な CPU 数が使用されます。  

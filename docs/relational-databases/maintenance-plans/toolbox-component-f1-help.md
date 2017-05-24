@@ -18,14 +18,15 @@ caps.latest.revision: 22
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c90dcc58ef2f84d6a2611cda85ef6580df8e174
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="toolbox-component-f1-help"></a>ツールボックス コンポーネントの F1 ヘルプ
-  **Toolbox** displays a variety of items for use in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] projects. **[ツールボックス]** は、 **[表示]** メニューから開くことができます。このウィンドウは自由にドッキングできます。 ドッキングするときに、 **[ツールボックス]** を固定して開くように設定したり、使用していないときは **[自動的に隠す]** を適用したりできます。  
+  **[ツールボックス]** には、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] プロジェクトで使用するさまざまなアイテムが表示されます。 **[ツールボックス]** は、 **[表示]** メニューから開くことができます。このウィンドウは自由にドッキングできます。 ドッキングするときに、 **[ツールボックス]** を固定して開くように設定したり、使用していないときは **[自動的に隠す]** を適用したりできます。  
   
  コード エディターまたは**内のデザイン ビュー画面に、** [ツールボックス] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のアイテムをドラッグしてドロップするか、コピーして貼り付けることができます。  
   
