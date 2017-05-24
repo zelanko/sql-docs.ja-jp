@@ -3,9 +3,10 @@ layout: HubPage
 hide_bc: true
 title: "Microsoft SQL ドキュメント |Microsoft Docs"
 description: "SQL について"
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ecdaa3efa8c5de65a249413f987b8d4af197b8e1
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---

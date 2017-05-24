@@ -21,7 +21,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Change the Scheduling Details for a SQL Server Agent Master Job
+# <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブのスケジューリングの詳細の変更
 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql_md.md)]でジョブ定義のスケジューリングの詳細を変更する方法について説明します。  
   
 **このトピックの内容**  

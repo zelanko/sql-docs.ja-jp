@@ -23,9 +23,10 @@ caps.latest.revision: 36
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 58f0b1ab65e812e778d630a2a95db8539e1b47eb
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -105,7 +106,7 @@ ms.lasthandoff: 04/11/2017
     |------------|-----------|  
     |**[復元]**|チェック ボックスをオンにしたバックアップ セットが復元されます。|  
     |**名前**|バックアップ セットの名前。|  
-    |**コンポーネント**|バックアップされるコンポーネント。**[データベース]**、**[ファイル]**、[\<空白>] (トランザクション ログ用) のいずれかを指定します。|  
+    |**コンポーネント**|バックアップされるコンポーネント。**[データベース]**、**[ファイル]**、[\<空白>]\(トランザクション ログ用) のいずれかを指定します。|  
     |**データベース**|バックアップ操作に関係するデータベース名。|  
     |**[開始日]**|バックアップ操作の開始日時 (クライアントの地域設定に準拠)。|  
     |**完了日**|バックアップ操作の完了日時 (クライアントの地域設定に準拠)。|  

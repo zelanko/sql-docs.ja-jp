@@ -23,9 +23,10 @@ caps.latest.revision: 67
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1cdf13c937ecdaa54c31831625dc6fc41b35be70
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -121,7 +122,7 @@ ms.lasthandoff: 04/11/2017
 3.  データベースを右クリックし、 **[タスク]**、 **[復元]**の順にポイントし、 **[ページ]**をクリックします。 **[ページの復元]** ダイアログ ボックスが開きます。  
   
      **[復元]**  
-     このセクションでは、 **[データベースの復元] ([全般] ページ)** の [[復元先]](../../relational-databases/backup-restore/restore-database-general-page.md)と同じ機能を実行します。  
+     このセクションでは、 **[データベースの復元]\([全般] ページ)** の [[復元先]](../../relational-databases/backup-restore/restore-database-general-page.md)と同じ機能を実行します。  
   
      **データベース**  
      復元するデータベースを指定します。 新しいデータベースを入力するか、ドロップダウン リストから既存のデータベースを選択します。 このリストには、システム データベース **master** および **tempdb**を除いた、サーバー上のすべてのデータベースが表示されます。  
