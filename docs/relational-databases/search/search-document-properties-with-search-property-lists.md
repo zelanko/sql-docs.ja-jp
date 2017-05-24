@@ -22,9 +22,10 @@ caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e408a414ec070cdef39b69bf535ceb0d45f73435
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -127,7 +128,7 @@ ms.lasthandoff: 04/11/2017
   
  **Transact-SQL を使用してプロパティを検索プロパティ リストに追加するには**  
   
- [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) ステートメントを、「[Find Property Set GUIDs and Property Integer IDs for Search Properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)」に説明されているいずれかの方法を使用して取得した値と共に使用します。  
+ [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) ステートメントを、「[検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)」に説明されているいずれかの方法を使用して取得した値と共に使用します。  
   
  次の例では、これらの値を使用してプロパティを検索プロパティ リストに追加する方法を示しています。  
   
