@@ -17,9 +17,10 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ce278d494e2d5ab7dfc82e244a9d6b8821099cc0
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -107,7 +108,7 @@ ms.lasthandoff: 04/11/2017
   
  ![query-store-usage-3](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
   
- さらに、インデックス作成の前と後のプランを並べて表示して、それらを比較できます (ツールバーの赤い四角形でマークされている[Compare the plans for the selected query in a separate window] (別のウィンドウで選択したクエリのプランの比較) ツールバー オプションを選択します)。  
+ さらに、インデックス作成の前と後のプランを並べて表示して、それらを比較できます (ツールバーの赤い四角形でマークされている[Compare the plans for the selected query in a separate window]\(別のウィンドウで選択したクエリのプランの比較) ツールバー オプションを選択します)。  
   
  ![query-store-usage-4](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
   

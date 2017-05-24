@@ -22,9 +22,10 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3e37e75379dc4fd1722dd660b2c6145c9540732e
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -75,7 +76,7 @@ ms.lasthandoff: 04/11/2017
   
          別のサーバーがディストリビューターとして機能するように指定する場合は、パブリッシャーからディストリビューターへの接続のため、 **[管理パスワード]** ページでパスワードを入力する必要があります。 このパスワードは、リモート ディストリビューターでパブリッシャーを有効にしたときに指定したパスワードと一致する必要があります。  
   
-         詳しくは、「 [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)」を参照してください。  
+         詳細については、「[ディストリビューションの構成](../../../relational-databases/replication/configure-distribution.md)」を参照してください。  
   
     -   パブリケーション データベースを選択します。  
   
@@ -95,22 +96,22 @@ ms.lasthandoff: 04/11/2017
   
          \-更新サブスクリプションを許可するトランザクション パブリケーションのキュー リーダー エージェント。  
   
-         詳細については、「 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md) 」および「 [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)」を参照してください。  
+         詳細については、「 [レプリケーション エージェント セキュリティ モデル](../../../relational-databases/replication/security/replication-agent-security-model.md) 」および「 [レプリケーション セキュリティの推奨事項](../../../relational-databases/replication/security/replication-security-best-practices.md)」を参照してください。  
   
-    -   必要に応じて、パブリケーションのスクリプトを作成します。 詳しくは、「 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)」をご覧ください。  
+    -   必要に応じて、パブリケーションのスクリプトを作成します。 詳しくは、「 [スクリプトの複製](../../../relational-databases/replication/scripting-replication.md)」をご覧ください。  
   
     -   パブリケーションの名前を指定します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
- パブリケーションが作成された後、プログラムでレプリケーション ストアド プロシージャを使用してアーティクルを作成できます。 アーティクルの作成に使用するストアド プロシージャは、定義するアーティクルのパブリケーションの種類によって決まります。 詳しくは、「 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
+ パブリケーションが作成された後、プログラムでレプリケーション ストアド プロシージャを使用してアーティクルを作成できます。 アーティクルの作成に使用するストアド プロシージャは、定義するアーティクルのパブリケーションの種類によって決まります。 詳しくは、「 [パブリケーションを作成](../../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションのアーティクルを定義するには  
   
 1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)を実行します。 アーティクルが属しているパブリケーションの名前を **@publication**に、アーティクルの名前を **@article**に、パブリッシュされるデータベース オブジェクトを **@source_object**に指定し、さらにその他のオプション パラメーターを指定します。 **dbo** 以外の場合は、**@source_owner** を使用してオブジェクトのスキーマ所有権を指定します。 アーティクルがログベースのテーブル アーティクルでない場合は、アーティクルの種類を **@type** に指定します。詳細については、「[Specify Article Types &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)」(アーティクルの種類の指定 (レプリケーション Transact-SQL プログラミング)) をご覧ください。  
   
-2.  テーブル内の行を行方向にフィルター選択する場合、またはアーティクルを表示する場合は、 [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) を使用してフィルター句を定義します。 詳しくは、「 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)」をご覧ください。  
+2.  テーブル内の行を行方向にフィルター選択する場合、またはアーティクルを表示する場合は、 [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) を使用してフィルター句を定義します。 詳しくは、「 [静的行フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)」をご覧ください。  
   
-3.  テーブル内の列を列方向にフィルター選択する場合、またはアーティクルを表示する場合は、 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)を使用します。 詳しくは、「 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)」をご覧ください。  
+3.  テーブル内の列を列方向にフィルター選択する場合、またはアーティクルを表示する場合は、 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)を使用します。 詳しくは、「 [列フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)」をご覧ください。  
   
 4.  アーティクルをフィルター選択する場合、 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) を実行します。  
   
@@ -123,11 +124,11 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>マージ パブリケーションのアーティクルを定義するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)を実行します。 パブリケーションの名前を **@publication**に、アーティクルの名前を **@article**に、パブリッシュするオブジェクトを **@source_object**」を参照してください。 テーブル行を行方向にフィルター選択する場合は、 **@subset_filterclause**」を参照してください。 詳細については、「 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 」および「 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)」を参照してください。 アーティクルがテーブル アーティクルでない場合、 **@type**」を参照してください。 詳細については、「[Specify Article Types &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)」(アーティクルの種類の指定 (レプリケーション Transact-SQL プログラミング)) をご覧ください。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)を実行します。 パブリケーションの名前を **@publication**に、アーティクルの名前を **@article**に、パブリッシュするオブジェクトを **@source_object**」を参照してください。 テーブル行を行方向にフィルター選択する場合は、 **@subset_filterclause**」を参照してください。 詳細については、「 [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 」および「 [静的行フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)」を参照してください。 アーティクルがテーブル アーティクルでない場合、 **@type**」を参照してください。 詳細については、「[Specify Article Types &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)」(アーティクルの種類の指定 (レプリケーション Transact-SQL プログラミング)) をご覧ください。  
   
-2.  (省略可) パブリッシャー側のパブリケーション データベースに対して [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) を実行し、2 つのアーティクル間に結合フィルターを定義します。 詳しくは、「 [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)」をご覧ください。  
+2.  (省略可) パブリッシャー側のパブリケーション データベースに対して [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) を実行し、2 つのアーティクル間に結合フィルターを定義します。 詳しくは、「 [マージ アーティクル間の結合フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)」をご覧ください。  
   
-3.  (省略可) パブリッシャー側のパブリケーション データベースに対して [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) を実行し、テーブル列をフィルター選択します。 詳しくは、「 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)」をご覧ください。  
+3.  (省略可) パブリッシャー側のパブリケーション データベースに対して [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) を実行し、テーブル列をフィルター選択します。 詳しくは、「 [列フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)」をご覧ください。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  この例では、 `Product` テーブルに基づいてトランザクション パブリケーションにアーティクルを定義します。アーティクルは行方向および列方向にフィルター選択されます。  
@@ -155,12 +156,12 @@ ms.lasthandoff: 04/11/2017
  [!code-vb[HowTo#rmo_vb_CreateMergeArticles](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergearticles)]  
   
 ## <a name="see-also"></a>参照  
- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)   
- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)   
+ [レプリケーション システム ストアド プロシージャの概念](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [既存のパブリケーションでのアーティクルの追加と削除](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [パブリッシュされたデータのフィルター処理](../../../relational-databases/replication/publish/filter-published-data.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
+ [レプリケーション システム ストアド プロシージャの概念](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   
   
 
