@@ -18,9 +18,10 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 975801baee969fa3afea20be96606a816083260c
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/11/2017
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
--   パラメーター化されたフィルターを使用してマージ パブリケーションのスナップショットを生成する際には、最初にすべてのパブリッシュ済みデータとサブスクリプションのサブスクライバー メタデータを含む標準 (スキーマ) スナップショットを生成する必要があります。 詳しくは、「 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」をご覧ください。 スキーマ スナップショットを作成した後で、パブリッシュ済みデータのサブスクライバー固有のパーティションを含むスナップショットを作成できます。  
+-   パラメーター化されたフィルターを使用してマージ パブリケーションのスナップショットを生成する際には、最初にすべてのパブリッシュ済みデータとサブスクリプションのサブスクライバー メタデータを含む標準 (スキーマ) スナップショットを生成する必要があります。 詳しくは、「 [初期スナップショットの作成および適用](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」をご覧ください。 スキーマ スナップショットを作成した後で、パブリッシュ済みデータのサブスクライバー固有のパーティションを含むスナップショットを作成できます。  
   
 -   パブリケーション内の 1 つ以上のアーティクルにフィルターを適用して、各サブスクリプション固有の重複しないパーティションが得られる場合、マージ エージェントが実行されるたびにメタデータがクリーンアップされます。 これは、パーティション スナップショットの有効期間が短時間で切れてしまうことを意味します。 このオプションを使用する場合は、サブスクライバーに対してスナップショットの生成と配信を許可することを検討する必要があります。 フィルター オプションの詳細については、「[Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)」(パラメーター化されたフィルターを使用したマージ パブリケーションのスナップショット) の「Setting 'partition options」(パーティション オプションの設定) を参照してください。  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/11/2017
   
  1 つ以上のパーティションに対してスナップショットを生成する前に、以下の作業を行う必要があります。  
   
-1.  新規パブリーケーション ウィザードを使用してマージ パブリケーションを作成し、ウィザードの **[フィルターの追加]** ページで 1 つ以上のパラメーター化された行フィルターを指定します。 詳しくは、「 [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」をご覧ください。  
+1.  新規パブリーケーション ウィザードを使用してマージ パブリケーションを作成し、ウィザードの **[フィルターの追加]** ページで 1 つ以上のパラメーター化された行フィルターを指定します。 詳しくは、「 [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」をご覧ください。  
   
 2.  パブリケーションのスキーマ スナップショットを生成します。 既定では、新規パブリケーション ウィザードが完了すると、スキーマ スナップショットが生成されます。また、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]からスキーマ スナップショットを生成することもできます。  
   
@@ -116,29 +117,29 @@ ms.lasthandoff: 04/11/2017
   
     -   (省略可) **@max_concurrent_dynamic_snapshots**」をご覧ください。 最大限の数のプロセスが実行しているときに、サブスクライバーがスナップショットを生成しようとすると、そのプロセスはキューに格納されます。 既定では、同時プロセスの数に限度はありません。  
   
-2.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 手順 1. で使用したパブリケーション名を **@publication** に指定し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] を実行するときに使用される [msCoName](../../relational-databases/replication/agents/replication-snapshot-agent.md) Windows 資格情報を **@job_login** と **@password**」をご覧ください。 エージェントがパブリッシャーに接続する際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合、さらに **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** に指定し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password**」をご覧ください。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。 初期スナップショットの作成と、スナップショット エージェントのカスタム スケジュールの定義については、「 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」を参照してください。  
+2.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 手順 1. で使用したパブリケーション名を **@publication** に指定し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] を実行するときに使用される [msCoName](../../relational-databases/replication/agents/replication-snapshot-agent.md) Windows 資格情報を **@job_login** と **@password**」をご覧ください。 エージェントがパブリッシャーに接続する際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合、さらに **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** に指定し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password**」をご覧ください。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。 初期スナップショットの作成と、スナップショット エージェントのカスタム スケジュールの定義については、「 [初期スナップショットの作成および適用](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」を参照してください。  
   
     > [!IMPORTANT]  
     >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
-3.  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行して、パブリケーションにアーティクルを追加します。 このストアド プロシージャは、パブリケーション内の各アーティクルについて 1 回ずつ実行する必要があります。 パラメーター化されたフィルターを使用する場合には、 **@subset_filterclause** パラメーターを使用して 1 つ以上のアーティクルにパラメーター化された行フィルターを指定する必要があります。 詳しくは、「 [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」をご覧ください。  
+3.  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行して、パブリケーションにアーティクルを追加します。 このストアド プロシージャは、パブリケーション内の各アーティクルについて 1 回ずつ実行する必要があります。 パラメーター化されたフィルターを使用する場合には、 **@subset_filterclause** パラメーターを使用して 1 つ以上のアーティクルにパラメーター化された行フィルターを指定する必要があります。 詳しくは、「 [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」をご覧ください。  
   
-4.  他のアーティクルがパラメーター化された行フィルターに基づいてフィルター選択される場合、[sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) を実行して、アーティクル間の結合レコード リレーションシップまたは論理レコード リレーションシップを定義します。 このストアド プロシージャは、定義する各リレーションシップにつき 1 回ずつ実行する必要があります。 詳しくは、「 [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)」をご覧ください。  
+4.  他のアーティクルがパラメーター化された行フィルターに基づいてフィルター選択される場合、[sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) を実行して、アーティクル間の結合レコード リレーションシップまたは論理レコード リレーションシップを定義します。 このストアド プロシージャは、定義する各リレーションシップにつき 1 回ずつ実行する必要があります。 詳しくは、「 [マージ アーティクル間の結合フィルターの定義および変更](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)」をご覧ください。  
   
 5.  マージ エージェントでサブスクライバーを初期化するためにスナップショットが必要な場合、要求側のサブスクリプションのパーティションのスナップショットが自動的に生成されます。  
   
 #### <a name="to-create-a-publication-and-pre-generate-or-automatically-refresh-snapshots"></a>パブリケーションを作成し、スナップショットを事前に生成、または自動更新するには  
   
-1.  [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) を実行して、パブリケーションを作成します。 詳細については、「 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
+1.  [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) を実行して、パブリケーションを作成します。 詳しくは、「 [パブリケーションを作成](../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
   
-2.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 手順 1. で使用したパブリケーション名を **@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **@job_login** と **@password**」をご覧ください。 エージェントがパブリッシャーに接続する際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合、さらに **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** に指定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password**」をご覧ください。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。 初期スナップショットの作成と、スナップショット エージェントのカスタム スケジュールの定義については、「 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」を参照してください。  
+2.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 手順 1. で使用したパブリケーション名を **@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **@job_login** と **@password**」をご覧ください。 エージェントがパブリッシャーに接続する際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合、さらに **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** に指定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password**」をご覧ください。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。 初期スナップショットの作成と、スナップショット エージェントのカスタム スケジュールの定義については、「 [初期スナップショットの作成および適用](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」を参照してください。  
   
     > [!IMPORTANT]  
     >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
-3.  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行して、パブリケーションにアーティクルを追加します。 このストアド プロシージャは、パブリケーション内の各アーティクルについて 1 回ずつ実行する必要があります。 パラメーター化されたフィルターを使用する場合には、 **@subset_filterclause** パラメーターを使用して 1 つ以上のアーティクルにパラメーター化された行フィルターを指定する必要があります。 詳しくは、「 [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」をご覧ください。  
+3.  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行して、パブリケーションにアーティクルを追加します。 このストアド プロシージャは、パブリケーション内の各アーティクルについて 1 回ずつ実行する必要があります。 パラメーター化されたフィルターを使用する場合には、 **@subset_filterclause** パラメーターを使用して 1 つ以上のアーティクルにパラメーター化された行フィルターを指定する必要があります。 詳しくは、「 [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」をご覧ください。  
   
-4.  他のアーティクルがパラメーター化された行フィルターに基づいてフィルター選択される場合、[sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) を実行して、アーティクル間の結合レコード リレーションシップまたは論理レコード リレーションシップを定義します。 このストアド プロシージャは、定義する各リレーションシップにつき 1 回ずつ実行する必要があります。 詳しくは、「 [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)」をご覧ください。  
+4.  他のアーティクルがパラメーター化された行フィルターに基づいてフィルター選択される場合、[sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) を実行して、アーティクル間の結合レコード リレーションシップまたは論理レコード リレーションシップを定義します。 このストアド プロシージャは、定義する各リレーションシップにつき 1 回ずつ実行する必要があります。 詳しくは、「 [マージ アーティクル間の結合フィルターの定義および変更](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)」をご覧ください。  
   
 5.  パブリケーション データベースのパブリッシャーで [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) を実行し、手順 1 の **@publication** の値を指定します。 結果セットの **snapshot_jobid** の値を確認します。  
   
@@ -161,18 +162,18 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-create-a-publication-and-manually-create-snapshots-for-each-partition"></a>パブリケーションを作成し、各パーティションのスナップショットを手動で作成するには  
   
-1.  [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) を実行して、パブリケーションを作成します。 詳細については、「 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
+1.  [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) を実行して、パブリケーションを作成します。 詳しくは、「 [パブリケーションを作成](../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
   
-2.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 手順 1. で使用したパブリケーション名を **@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **@job_login** と **@password**」をご覧ください。 エージェントがパブリッシャーに接続する際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合、さらに **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** に指定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password**」をご覧ください。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。 初期スナップショットの作成と、スナップショット エージェントのカスタム スケジュールの定義については、「 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」を参照してください。  
+2.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 手順 1. で使用したパブリケーション名を **@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **@job_login** と **@password**」をご覧ください。 エージェントがパブリッシャーに接続する際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合、さらに **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** に指定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password**」をご覧ください。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。 初期スナップショットの作成と、スナップショット エージェントのカスタム スケジュールの定義については、「 [初期スナップショットの作成および適用](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」を参照してください。  
   
     > [!IMPORTANT]  
     >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
-3.  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行して、パブリケーションにアーティクルを追加します。 このストアド プロシージャは、パブリケーション内の各アーティクルについて 1 回ずつ実行する必要があります。 パラメーター化されたフィルターを使用する場合には、 **@subset_filterclause** パラメーターを使用して 1 つ以上のアーティクルにパラメーター化された行フィルターを指定する必要があります。 詳しくは、「 [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」をご覧ください。  
+3.  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行して、パブリケーションにアーティクルを追加します。 このストアド プロシージャは、パブリケーション内の各アーティクルについて 1 回ずつ実行する必要があります。 パラメーター化されたフィルターを使用する場合には、 **@subset_filterclause** パラメーターを使用して 1 つ以上のアーティクルにパラメーター化された行フィルターを指定する必要があります。 詳しくは、「 [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」をご覧ください。  
   
-4.  他のアーティクルがパラメーター化された行フィルターに基づいてフィルター選択される場合、[sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) を実行して、アーティクル間の結合レコード リレーションシップまたは論理レコード リレーションシップを定義します。 このストアド プロシージャは、定義する各リレーションシップにつき 1 回ずつ実行する必要があります。 詳しくは、「 [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)」をご覧ください。  
+4.  他のアーティクルがパラメーター化された行フィルターに基づいてフィルター選択される場合、[sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) を実行して、アーティクル間の結合レコード リレーションシップまたは論理レコード リレーションシップを定義します。 このストアド プロシージャは、定義する各リレーションシップにつき 1 回ずつ実行する必要があります。 詳しくは、「 [マージ アーティクル間の結合フィルターの定義および変更](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)」をご覧ください。  
   
-5.  スナップショット ジョブを開始するか、コマンド プロンプトからレプリケーション スナップショット エージェントを実行して、標準のスナップショット スキーマおよびその他のファイルを生成します。 詳しくは、「 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」をご覧ください。  
+5.  スナップショット ジョブを開始するか、コマンド プロンプトからレプリケーション スナップショット エージェントを実行して、標準のスナップショット スキーマおよびその他のファイルを生成します。 詳しくは、「 [初期スナップショットの作成および適用](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」をご覧ください。  
   
 6.  再びコマンド プロンプトからレプリケーション スナップショット エージェントを実行し、一括コピー (.bcp) ファイルを生成します。パーティション スナップショットの場所を **-DynamicSnapshotLocation** に指定し、次の 2 つのプロパティを指定して、パーティションを定義します。  
   
@@ -273,7 +274,7 @@ PAUSE
 -   スナップショット エージェントを実行してサブスクライバーごとにスナップショットを手動で生成できます。  
   
 > [!NOTE]  
->  アーティクルをフィルター選択して、サブスクリプションごとに一意の重複しないパーティションを取得する場合 (マージ アーティクルの作成時、 F:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription の値に P:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption を指定した場合)、マージ エージェントの実行時に常にメタデータがクリーンアップされます。 これは、パーティション スナップショットの有効期間が短時間で切れてしまうことを意味します。 このオプションを使用する場合は、サブスクライバーからスナップショットの生成を要求できるようにする必要があります。 詳細については、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」の「適切なフィルター選択オプションの使用」を参照してください。  
+>  アーティクルをフィルター選択して、サブスクリプションごとに一意の重複しないパーティションを取得する場合 (マージ アーティクルの作成時、 F:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription の値に P:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption を指定した場合)、マージ エージェントの実行時に常にメタデータがクリーンアップされます。 これは、パーティション スナップショットの有効期間が短時間で切れてしまうことを意味します。 このオプションを使用する場合は、サブスクライバーからスナップショットの生成を要求できるようにする必要があります。 詳細については、「 [パラメーター化された行フィルター](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」の「適切なフィルター選択オプションの使用」を参照してください。  
   
 > [!IMPORTANT]  
 >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET Framework に用意されている](http://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  
@@ -301,18 +302,18 @@ PAUSE
     -   <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> の <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> フィールドに、スナップショット エージェント ジョブの実行に使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントの資格情報を指定します。  
   
         > [!NOTE]  
-        >  パブリケーションが固定サーバー ロール **sysadmin** のメンバーによって作成された場合、<xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> を設定することをお勧めします。 詳細については、「 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
+        >  パブリケーションが固定サーバー ロール **sysadmin** のメンバーによって作成された場合、<xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> を設定することをお勧めします。 詳細については、「 [レプリケーション エージェントのセキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
 5.  <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> メソッドを呼び出して、パブリケーションを作成します。  
   
     > [!IMPORTANT]  
     >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、<xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> を含むすべてのプロパティに指定された値がディストリビューターにプレーンテキストとして送信されます。 <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> メソッドを呼び出す前に、パブリッシャーとリモート ディストリビューター間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
-6.  <xref:Microsoft.SqlServer.Replication.MergeArticle> プロパティを使用して、アーティクルをパブリケーションに追加します。 パラメーター化されたフィルターを定義する <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> プロパティを少なくとも 1 つのアーティクルについて指定します。 (省略可) アーティクル間の結合フィルターを定義する <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> オブジェクトを作成します。 詳しくは、「 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+6.  <xref:Microsoft.SqlServer.Replication.MergeArticle> プロパティを使用して、アーティクルをパブリケーションに追加します。 パラメーター化されたフィルターを定義する <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> プロパティを少なくとも 1 つのアーティクルについて指定します。 (省略可) アーティクル間の結合フィルターを定義する <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> オブジェクトを作成します。 詳しくは、「 [アーティクルを定義](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
 7.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> の値が **false** の場合は、<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> を呼び出して、このパブリケーション用の初期スナップショット エージェント ジョブを作成します。  
   
-8.  手順 4 で作成した <xref:Microsoft.SqlServer.Replication.MergePublication> オブジェクトの <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> メソッドを呼び出します。 これにより、初期スナップショットを生成するエージェント ジョブが開始されます。 初期スナップショットの作成と、スナップショット エージェントのカスタム スケジュールの定義については、「 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」を参照してください。  
+8.  手順 4 で作成した <xref:Microsoft.SqlServer.Replication.MergePublication> オブジェクトの <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> メソッドを呼び出します。 これにより、初期スナップショットを生成するエージェント ジョブが開始されます。 初期スナップショットの作成と、スナップショット エージェントのカスタム スケジュールの定義については、「 [初期スナップショットの作成および適用](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」を参照してください。  
   
 9. (省略可) 初期スナップショットが使用できる状態にあるかを調べるには、<xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> プロパティの値が **true** であることを確認します。  
   
@@ -320,13 +321,13 @@ PAUSE
   
 #### <a name="to-create-a-publication-and-pregenerate-or-automatically-refresh-snapshots"></a>パブリケーションを作成し、スナップショットを事前に生成したり、自動的に更新するには  
   
-1.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを使用して、マージ パブリケーションを定義します。 詳細については、「 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
+1.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを使用して、マージ パブリケーションを定義します。 詳しくは、「 [パブリケーションを作成](../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
   
-2.  <xref:Microsoft.SqlServer.Replication.MergeArticle> プロパティを使用して、アーティクルをパブリケーションに追加します。 パラメーター化されたフィルターを定義する <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> プロパティを少なくとも 1 つのアーティクルについて指定し、さらに、必要に応じて、アーティクル間の結合フィルターを定義する <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> オブジェクトを作成します。 詳しくは、「 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+2.  <xref:Microsoft.SqlServer.Replication.MergeArticle> プロパティを使用して、アーティクルをパブリケーションに追加します。 パラメーター化されたフィルターを定義する <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> プロパティを少なくとも 1 つのアーティクルについて指定し、さらに、必要に応じて、アーティクル間の結合フィルターを定義する <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> オブジェクトを作成します。 詳しくは、「 [アーティクルを定義](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
 3.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> の値が **false** の場合は、<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> を呼び出して、このパブリケーション用のスナップショット エージェント ジョブを作成します。  
   
-4.  手順 1 で作成した <xref:Microsoft.SqlServer.Replication.MergePublication> オブジェクトの <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> メソッドを呼び出します。 このメソッドにより、初期スナップショットを生成するエージェント ジョブが開始されます。 初期スナップショットを生成する方法、およびスナップショット エージェントのカスタム スケジュールを定義する方法については、「 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」を参照してください。  
+4.  手順 1 で作成した <xref:Microsoft.SqlServer.Replication.MergePublication> オブジェクトの <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> メソッドを呼び出します。 このメソッドにより、初期スナップショットを生成するエージェント ジョブが開始されます。 初期スナップショットを生成する方法、およびスナップショット エージェントのカスタム スケジュールを定義する方法については、「 [初期スナップショットの作成および適用](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」を参照してください。  
   
 5.  初期スナップショットが使用できる状態にあるかを調べるには、<xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> プロパティの値が **true** であることを確認します。  
   
@@ -360,11 +361,11 @@ PAUSE
   
 #### <a name="to-create-a-publication-and-manually-create-snapshots-for-each-partition"></a>パブリケーションを作成し、各パーティションのスナップショットを手動で作成するには  
   
-1.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを使用して、マージ パブリケーションを定義します。 詳細については、「 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
+1.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを使用して、マージ パブリケーションを定義します。 詳しくは、「 [パブリケーションを作成](../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
   
-2.  <xref:Microsoft.SqlServer.Replication.MergeArticle> プロパティを使用して、パブリケーションにアーティクルを追加します。パラメーター化されたフィルターを定義する <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> プロパティを少なくとも 1 つのアーティクルについて指定し、さらに、必要に応じて、アーティクル間の結合フィルターを定義する <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> オブジェクトを作成します。 詳しくは、「 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+2.  <xref:Microsoft.SqlServer.Replication.MergeArticle> プロパティを使用して、パブリケーションにアーティクルを追加します。パラメーター化されたフィルターを定義する <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> プロパティを少なくとも 1 つのアーティクルについて指定し、さらに、必要に応じて、アーティクル間の結合フィルターを定義する <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> オブジェクトを作成します。 詳しくは、「 [アーティクルを定義](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
-3.  初期スナップショットを生成します。 詳細については、「 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」を参照してください。  
+3.  初期スナップショットを生成します。 詳しくは、「 [初期スナップショットの作成および適用](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」をご覧ください。  
   
 4.  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> クラスのインスタンスを作成し、次の必須プロパティを設定します。  
   
@@ -412,8 +413,8 @@ PAUSE
  [!code-vb[HowTo#rmo_vb_GenerateFilteredSnapshot](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_generatefilteredsnapshot)]  
   
 ## <a name="see-also"></a>参照  
- [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
- [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [パラメーター化された行フィルター](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
+ [レプリケーション システム ストアド プロシージャの概念](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [パラメーター化されたフィルターを使用したマージ パブリケーションのスナップショット](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   

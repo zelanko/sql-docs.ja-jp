@@ -19,9 +19,10 @@ caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4bfd021048962cb632a2d5e553ea9d6bb35a8c20
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -101,7 +102,7 @@ ms.lasthandoff: 04/11/2017
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の **FullGlobe** は、球全体を覆う特殊な多角形です。 **FullGlobe** には領域がありますが、境界や頂点はありません。  
   
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>geography データ型では外部リングと内部リングは重要ではない  
- OGC Simple Features for SQL Specification では外部リングと内部リングが取り上げられていますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type; any ring of a polygon can be taken to be the outer ring.  
+ OGC Simple Features for SQL Specification では外部リングと内部リングが取り上げられていますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** データ型ではこの区別はほとんど意味を持ちません。ポリゴンのリングはすべて外部リングと見なすことができます。  
   
  OGC の仕様の詳細については、以下を参照してください。  
   

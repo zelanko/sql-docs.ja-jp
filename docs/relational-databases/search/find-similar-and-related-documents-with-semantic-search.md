@@ -16,9 +16,10 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: cf6a2042a33da89c453c278b1beb1950bfb96e61
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/11/2017
 > [!IMPORTANT]  
 >  対象の列では、フルテキスト インデックスとセマンティック インデックスが有効になっている必要があります。  
   
-###  <a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
+###  <a name="HowToIdentifySimilar"></a> 例: 別のドキュメントとの類似性が高い複数のドキュメントを見つける  
  次の例では、AdventureWorks2012 サンプル データベースの HumanResources.JobCandidate テーブルから、 *@CandidateID* で指定した候補に類似する上位 10 件の候補を取得します。  
   
 ```scr  
@@ -62,7 +63,7 @@ GO
 > [!IMPORTANT]  
 >  対象の列では、フルテキスト インデックスとセマンティック インデックスが有効になっている必要があります。  
   
-###  <a name="HowToSimilarPhrases"></a> Example: Find the top key phrases that are similar between documents  
+###  <a name="HowToSimilarPhrases"></a> 例: ドキュメント間で類似性が高い上位のキー フレーズを見つける  
  次の例では、AdventureWorks2012 サンプル データベースの **HumanResources.JobCandidate** テーブル内の指定された候補間で最も類似スコアが高い 5 つのキー フレーズを取得します。  
   
 ```tsql  
