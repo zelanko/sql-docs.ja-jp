@@ -20,9 +20,10 @@ caps.latest.revision: 47
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e4e8eb9804660085223e0845adeb093511871316
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -67,11 +68,11 @@ ms.lasthandoff: 04/11/2017
   
 2.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[エージェント セキュリティ]** ページ。 このダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。  
   
-3.  **[サブスクリプションのプロパティ - \<Subscription>]** ダイアログ ボックス。 このダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 」および「 [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)」を参照してください。  
+3.  **[サブスクリプションのプロパティ - \<Subscription>]** ダイアログ ボックス。 このダイアログ ボックスへのアクセスの詳細については、「 [プッシュ サブスクリプションのプロパティの表示または変更](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 」および「 [プル サブスクリプションのプロパティの表示または変更](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)」を参照してください。  
   
-4.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスと **[ディストリビューション データベースのプロパティ - \<Database>]** ダイアログ ボックス。 これらのダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)」を参照してください。  
+4.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスと **[ディストリビューション データベースのプロパティ - \<Database>]** ダイアログ ボックス。 これらのダイアログ ボックスへのアクセスの詳細については、「 [ディストリビューターとパブリッシャーのプロパティの表示および変更](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)」を参照してください。  
   
-5.  **[パブリッシャーのプロパティ - \<Publisher>]** ダイアログ ボックス。 このダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)」を参照してください。  
+5.  **[パブリッシャーのプロパティ - \<Publisher>]** ダイアログ ボックス。 このダイアログ ボックスへのアクセスの詳細については、「 [ディストリビューターとパブリッシャーのプロパティの表示および変更](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)」を参照してください。  
   
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>1 つ以上のエージェントによって使用されるアカウントのパスワードを変更するには  
   
