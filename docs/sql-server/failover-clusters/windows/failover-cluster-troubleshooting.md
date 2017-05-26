@@ -19,9 +19,10 @@ caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0cc4118a2cfc722ad89ca4b66a6afe403c2967d4
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -92,11 +93,11 @@ ms.lasthandoff: 04/11/2017
  **解決策 1**: **/qn** スイッチの代わりに **/qb** スイッチを使用します。 **/qb** スイッチを使用すると、各ステップでは、エラー メッセージなどの基本的な UI が表示されます。  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>問題 : SQL Server を別のノードに移行した後、ネットワークにログオンできない  
- **Issue 1:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service accounts are unable to contact a domain controller.  
+ **現象 1** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントがドメイン コントローラーと通信できません。  
   
  **解決策 1**: アダプターの障害、DNS の問題など、ネットワークに関する問題の徴候をイベント ログで確認します。 ドメイン コントローラーに対して ping を実行できることを確認します。  
   
- **Issue 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account passwords are not identical on all cluster nodes, or the node does not restart a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service that has migrated from a failed node.  
+ **現象 2** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントのパスワードがすべてのクラスター ノードで同一でないか、障害が発生したノードから移行した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスがノードで再起動されません。  
   
  **解決策 2** : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントのパスワードを変更します。 この操作を行わず、1 つのノードで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントのパスワードを変更した場合、他のすべてのノードでもパスワードを変更する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーを使用すると、この操作が自動的に行われます。  
   
@@ -126,7 +127,7 @@ ms.lasthandoff: 04/11/2017
   
  **解決策 2** : NBTSTAT を使用して重複する名前を検索し、問題を修正します。  
   
- **Issue 3:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is not connecting using Named Pipes.  
+ **現象 3** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の接続に名前付きパイプが使用されていません。  
   
  **解決策 3** : 名前付きパイプで接続するには、SQL Server 構成マネージャーを使用して別名を作成し、適切なコンピューターに接続します。 たとえば、2 つのノード (**Node A** および **Node B**) から成るクラスター、および既定のインスタンスを使用するフェールオーバー クラスター インスタンス (**Virtsql**) がある場合、次の手順に従って、オフラインのネットワーク名リソースがあるサーバーに接続できます。  
   
