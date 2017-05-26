@@ -24,9 +24,10 @@ caps.latest.revision: 69
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c16383cadde524f23f8a6b94a14c282666856780
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/11/2017
   
  パラメーター化されたフィルターは単一のテーブルで使用し、通常は関連するテーブルに対するフィルター選択を拡張するために結合フィルターと組み合わせて使用します。 詳細については、「 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)」を参照してください。  
   
- パラメーター化された行フィルターを定義または変更するには、「 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」を参照してください。  
+ パラメーター化された行フィルターを定義または変更するには、「 [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」を参照してください。  
   
 ## <a name="how-parameterized-filters-work"></a>パラメーター化されたフィルターの動作  
  パラメーター化された行フィルターでは、WHERE 句を使用して、パブリッシュする適切なデータを選択します。 静的行フィルターのようにこの句でリテラル値を指定するのではなく、システム関数 SUSER_SNAME() および HOST_NAME() のいずれかまたは両方を指定します。 ユーザー定義関数も使用できますが、その場合はユーザー定義関数の本体に SUSER_SNAME() または HOST_NAME() を含めるか、または `MyUDF(SUSER_SNAME()`のように、ユーザー定義関数でこれらのシステム関数のいずれかを評価する必要があります。 ユーザー定義関数の本体に SUSER_SNAME() または HOST_NAME() を含める場合、その関数にパラメーターを渡すことはできません。  
