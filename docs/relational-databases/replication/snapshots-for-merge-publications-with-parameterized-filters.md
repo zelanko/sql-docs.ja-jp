@@ -20,9 +20,10 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 246e2e5db5c3e64973c165be8b03e03b7c8226a5
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/11/2017
   
  各店舗に在庫を配送する移動営業部署のある [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]について考えてみましょう。 各営業担当者は、各自のログインに基づいてサブスクリプションを受信し、各自が担当する店舗についてのデータを取得します。 管理者は、スナップショットを事前に生成し、毎週日曜日に更新するように選択しています。 場合によっては、新しいユーザーがシステムに追加され、スナップショットを使用できないパーティションのデータが必要になります。 管理者の選択により、サブスクライバーが開始するスナップショットで、スナップショットがまだ使用できないためにサブスクライバーがパブリケーションをサブスクライブできない状況を回避することもできます。 新しいサブスクライバーが初めて接続すると、指定されたパーティションに対してスナップショットが生成され、サブスクライバーで適用されます (スナップショットを生成できるようにするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがパブリッシャーで実行されている必要があります)。  
   
- パラメーター化されたフィルターを使用してパブリケーションのスナップショットを作成するには、「 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」を参照してください。  
+ パラメーター化されたフィルターを使用してパブリケーションのスナップショットを作成するには、「 [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」を参照してください。  
   
 ## <a name="security-settings-for-the-snapshot-agent"></a>スナップショット エージェントに対するセキュリティの設定  
  スナップショット エージェントは各パーティションのスナップショットを作成します。 事前に生成されるスナップショットとサブスクライバーによって要求されるスナップショットの場合、エージェントが実行され、パブリケーションのスナップショット エージェント ジョブ作成時に指定された資格情報に基づいて接続が作成されます (このジョブは、パブリケーションの新規作成ウィザードまたは **sp_addpublication_snapshot**によって作成されます)。 資格情報を変更するには、 **sp_changedynamicsnapshot_job**を使用します。 詳しくは、「[sp_changedynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md)」をご覧ください。  

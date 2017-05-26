@@ -16,9 +16,10 @@ caps.latest.revision: 48
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 22e745406fe58c38e44e42395844a55efff3f57a
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/11/2017
   
  既定では、トランザクション レプリケーションが、各サブスクライバーにインストールされているストアド プロシージャのセットを使用して、変更をサブスクライバーに伝達します。 パブリッシャーでテーブルに挿入、更新、または削除が発生した場合、各操作はサブスクライバーでのストアド プロシージャへの呼び出しに翻訳されます。 ストアド プロシージャは、テーブル内の列にマップされるパラメーターを受け入れ、それらの列がサブスクライバーで変更されることを許可します。  
   
- データの変更をトランザクション アーティクルに反映する方法を設定するには、「 [Set the Propagation Method for Data Changes to Transactional Articles](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)」を参照してください。  
+ データの変更をトランザクション アーティクルに反映する方法を設定するには、「 [データの変更をトランザクション アーティクルに反映する方法の設定](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)」を参照してください。  
   
 ## <a name="default-and-custom-stored-procedures"></a>既定のストアド プロシージャとカスタム ストアド プロシージャ  
  各テーブル アーティクルに対して、既定でレプリケーションによって作成されるのは、次の 3 つのプロシージャです。  
