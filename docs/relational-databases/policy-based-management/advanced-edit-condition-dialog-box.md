@@ -16,13 +16,14 @@ caps.latest.revision: 44
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 553e8aece3969407a818d98cf69c20bf922d3601
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="advanced-edit-condition-dialog-box"></a>[高度な編集] (条件) ダイアログ ボックス
+# <a name="advanced-edit-condition-dialog-box"></a>[高度な編集] \(条件) ダイアログ ボックス
   **[高度な編集]** ダイアログ ボックスでは、ポリシー ベースの管理条件に使用する複雑な式を作成できます。  
   
 ## <a name="options"></a>オプション  

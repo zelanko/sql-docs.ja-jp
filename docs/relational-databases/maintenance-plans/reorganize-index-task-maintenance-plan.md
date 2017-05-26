@@ -18,13 +18,14 @@ caps.latest.revision: 33
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9b9be64710acf299e601582127fa2e326061c5e2
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="reorganize-index-task-maintenance-plan"></a>[インデックスの再構成タスク] (メンテナンス プラン)
+# <a name="reorganize-index-task-maintenance-plan"></a>[インデックスの再構成タスク] \(メンテナンス プラン)
   **[インデックスの再構成タスク]** ダイアログを使用すると、インデックス ページを効率的な検索順になるように移動できます。 このタスクでは、 `ALTER INDEX REORGANIZE` データベースに [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ステートメントを使用します。  
   
 ## <a name="options"></a>オプション  

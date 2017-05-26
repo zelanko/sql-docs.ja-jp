@@ -16,13 +16,14 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7daa9798a9a56093d58664f79e8d42841b62df93
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="job-properties---new-job-targets-page"></a>[ジョブのプロパティ] - [新しいジョブ] ([対象サーバー] ページ)
+# <a name="job-properties---new-job-targets-page"></a>[ジョブのプロパティ] - [新しいジョブ] \([対象サーバー] ページ)
 このページを使用すると、ジョブの対象サーバーを管理できます。  
   
 ## <a name="options"></a>オプション  

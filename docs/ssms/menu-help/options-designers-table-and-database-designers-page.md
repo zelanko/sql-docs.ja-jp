@@ -16,13 +16,14 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 79e728f7cf2c300338e202b3e9cae27226f70a50
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="options-designers---table-and-database-designers-page"></a>[オプション] ([デザイナー]/[テーブルおよびデータベース デザイナー] ページ)
+# <a name="options-designers---table-and-database-designers-page"></a>[オプション] \([デザイナー]/[テーブルおよびデータベース デザイナー] ページ)
 このページを使用すると、デザイナーの既定の動作を設定できます。 この設定にアクセスするには、 **[ツール]** メニューの **[オプション]**をクリックし、 **[デザイナー]** フォルダーを展開して、 **[テーブル デザイナー]**をクリックします。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  

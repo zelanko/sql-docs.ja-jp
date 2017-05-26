@@ -17,13 +17,14 @@ caps.latest.revision: 30
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1ab703fcc2c29fae271b7484495cacf47bbcfd67
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="database-properties-general-page"></a>[データベースのプロパティ] ([全般] ページ)
+# <a name="database-properties-general-page"></a>[データベースのプロパティ] \([全般] ページ)
   このページを使用すると、選択されているデータベースのプロパティを表示または変更できます。  
   
 ## <a name="options"></a>オプション  

@@ -16,13 +16,14 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 334a1025cca8100f1ba6bcc0855712a7e5fe0ef0
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="sql-server-agent-properties-alert-system-page"></a>[SQL Server エージェントのプロパティ] ([警告システム] ページ)
+# <a name="sql-server-agent-properties-alert-system-page"></a>[SQL Server エージェントのプロパティ] \([警告システム] ページ)
 このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの警告によって送信されるメッセージの設定を表示および変更できます。  
   
 ## <a name="options"></a>オプション  

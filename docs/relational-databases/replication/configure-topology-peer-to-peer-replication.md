@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="configure-topology-peer-to-peer-replication"></a>[トポロジの構成] (ピア ツー ピア レプリケーション)
+# <a name="configure-topology-peer-to-peer-replication"></a>[トポロジの構成] \(ピア ツー ピア レプリケーション)
   **[トポロジの構成]** ページを使用すると、新しいノードの追加、ノードの削除、既存のノード間の新しい接続の追加など、一般的な構成タスクを実行できます。 このウィザードの **[パブリケーション]** ページで選択したノードがデザイン画面に表示されます。 構成オプションを指定するには、ノード、接続、またはデザイン画面を右クリックします。  
   
 > [!NOTE]  

@@ -16,13 +16,14 @@ caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a616e9fafab7a881795675bd1eaf4bd01e718105
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="agent-security-new-publication-wizard"></a>[エージェント セキュリティ] (パブリケーションの新規作成ウィザード)
+# <a name="agent-security-new-publication-wizard"></a>[エージェント セキュリティ] \(パブリケーションの新規作成ウィザード)
   **[エージェント セキュリティ]** ページを使用すると、次のエージェントを実行したり、レプリケーション トポロジ内のコンピューターに接続したりする際のアカウントを指定できます。  
   
 -   すべてのパブリケーションに対応する、スナップショット エージェント。  

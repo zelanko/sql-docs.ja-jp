@@ -16,13 +16,14 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ecf66a1c4340e8fdce75ed20100f68af85671488
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="job-properties---new-job-steps-page"></a>[ジョブのプロパティ]/[新しいジョブ] ([ステップ] ページ)
+# <a name="job-properties---new-job-steps-page"></a>[ジョブのプロパティ]/[新しいジョブ] \([ステップ] ページ)
 このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブのジョブ ステップを表示したり整理したりできます。  
   
 ## <a name="options"></a>オプション  

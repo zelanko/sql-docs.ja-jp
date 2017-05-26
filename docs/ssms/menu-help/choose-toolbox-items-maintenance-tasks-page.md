@@ -19,13 +19,14 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9002551a59ec21f0572906f256577e7157503414
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="choose-toolbox-items-maintenance-tasks-page"></a>[ツールボックス アイテムの選択] ([メンテナンス タスク] ページ)
+# <a name="choose-toolbox-items-maintenance-tasks-page"></a>[ツールボックス アイテムの選択] \([メンテナンス タスク] ページ)
 **[ツールボックス アイテムの選択]** ダイアログ ボックスのこのタブには、コンピューターに登録されているメンテナンス タスク コンポーネントがすべて一覧表示され、ツールボックスに表示されているメンテナンス タスクを変更できます。 **[ツールボックス アイテムの選択]** ダイアログ ボックスは、 **[ツール]** メニューから開けます。 コンポーネントの一覧を並べ替えるには、列見出しを選択します。  
   
 ## <a name="options"></a>オプション  

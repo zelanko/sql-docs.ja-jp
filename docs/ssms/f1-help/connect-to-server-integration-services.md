@@ -16,13 +16,14 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 4d7f292d113fb3d9bc8197f7be3134524e8116af
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="connect-to-server-integration-services"></a>[サーバーへの接続] (Integration Services)
+# <a name="connect-to-server-integration-services"></a>[サーバーへの接続] \(Integration Services)
 このダイアログを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] に接続するときのオプションを表示または指定できます。  
   
 ## <a name="options"></a>オプション  

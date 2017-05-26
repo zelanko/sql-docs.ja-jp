@@ -16,13 +16,14 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f40b8600316b6093f25342c6d507cff5f44fbe82
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="proxy-account-properties---new-proxy-account-principals-tab"></a>[プロキシ アカウントのプロパティ] - [新しいプロキシ アカウント] ([プリンシパル] タブ)
+# <a name="proxy-account-properties---new-proxy-account-principals-tab"></a>[プロキシ アカウントのプロパティ] - [新しいプロキシ アカウント] \([プリンシパル] タブ)
 このページを使用すると、ジョブ ステップで [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのプロキシ アカウントを使用できるプリンシパルを、表示または変更できます。  
   
 ## <a name="options"></a>オプション  

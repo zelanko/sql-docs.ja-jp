@@ -16,13 +16,14 @@ caps.latest.revision: 86
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b0c43ec3f97cdf1ddfc325c3a2f7ca75400a54c1
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="database-properties-mirroring-page"></a>[データベースのプロパティ] ([ミラーリング] ページ)
+# <a name="database-properties-mirroring-page"></a>[データベースのプロパティ] \([ミラーリング] ページ)
   このページにはプリンシパル データベースからアクセスし、データベース ミラーリングのプロパティを構成および変更します。 また、データベース ミラーリング セキュリティ構成ウィザードを起動し、ミラーリング セッションの状態の確認やデータベース ミラーリング セッションの一時停止または削除を行うこともできます。  
   
 > **重要!!!** ミラーリングを開始する前に、セキュリティを構成しておく必要があります。 ミラーリングが開始されていない場合、このウィザードを使用して開始する必要があります。 ウィザードが終了するまで、 **[ミラーリング]** ページのテキスト ボックスは使用できません。  

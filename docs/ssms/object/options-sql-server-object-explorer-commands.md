@@ -16,13 +16,14 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: da27431ddc8718e711bc4c4a0d0ced4fca1106c8
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="options-sql-server-object-explorer---commands"></a>[オプション] ([SQL Server オブジェクト エクスプローラー]/[コマンド])
+# <a name="options-sql-server-object-explorer---commands"></a>[オプション] \([SQL Server オブジェクト エクスプローラー]/[コマンド])
 オブジェクト エクスプローラーでテーブルまたはビューを右クリックすると、テーブルでの行の表示に関する次の 2 つのオプションが表示されます。  
   
 -   **[上位 1000 行を選択]**  

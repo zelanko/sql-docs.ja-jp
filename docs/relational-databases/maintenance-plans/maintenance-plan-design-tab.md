@@ -18,13 +18,14 @@ caps.latest.revision: 27
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 18b12faae420e8294dc79c15e1e0f168faaa5395
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="maintenance-plan-design-tab"></a>[メンテナンス プラン] ([デザイン] タブ)
+# <a name="maintenance-plan-design-tab"></a>[メンテナンス プラン] \([デザイン] タブ)
   **[メンテナンス プラン]** ([デザイン] タブ) では、メンテナンス プランとそのサブプランのプロパティを指定します。 ツールボックスのタスクをプラン デザイナーにドラッグします。 タスクのグループを右クリックし、分岐する実行パスを作成します。 メンテナンス プランは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エージェント ジョブで実行される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージとして保存されます。  
   
 ## <a name="options"></a>オプション  

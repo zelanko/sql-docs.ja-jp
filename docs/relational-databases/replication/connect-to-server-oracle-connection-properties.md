@@ -18,13 +18,14 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f65a185a723debd6ff1e8d2d240409521fe4c50f
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="connect-to-server-oracle-connection-properties"></a>[サーバーへの接続] (Oracle)、[接続プロパティ]
+# <a name="connect-to-server-oracle-connection-properties"></a>[サーバーへの接続] \(Oracle)、[接続プロパティ]
   **[サーバーへの接続]** ダイアログ ボックスの **[接続プロパティ]** タブを使用すると、 **[ゲートウェイ]** または **[完全]**のパブリッシュ オプションを指定できます。 パブリッシャーを識別した後は、パブリッシャーをいったん削除して再構成しない限り、このオプションは変更できません。 詳細については、「[Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」をご覧ください。  
   
 ## <a name="options"></a>オプション  

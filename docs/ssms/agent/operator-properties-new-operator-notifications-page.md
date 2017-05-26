@@ -16,13 +16,14 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a8d182c3e434bfc05831922f0a214b58efbecd48
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="operator-properties---new-operator-notifications-page"></a>オペレーターのプロパティ - [新しいオペレーター] ([通知] ページ)
+# <a name="operator-properties---new-operator-notifications-page"></a>オペレーターのプロパティ - [新しいオペレーター] \([通知] ページ)
 このページを使用すると、オペレーターに通知する警告およびジョブを設定できます。  
   
 ## <a name="options"></a>オプション  

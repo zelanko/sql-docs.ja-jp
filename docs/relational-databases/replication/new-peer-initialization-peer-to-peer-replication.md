@@ -16,13 +16,14 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b365d21c3754b9bb175dd8c47baedbc8318ef391
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="new-peer-initialization-peer-to-peer-replication"></a>[新しいピアの初期化] (ピア ツー ピア レプリケーション)
+# <a name="new-peer-initialization-peer-to-peer-replication"></a>[新しいピアの初期化] \(ピア ツー ピア レプリケーション)
   **[新しいピアの初期化]** ページを使用すると、ピア データベースを初期化する方法を指定できます (ピアはこのウィザードが完了する前に初期化する必要があります)。ピアは、手動、またはトランザクション レプリケーションが提供する " **バックアップを使用した初期化** " 機能を使用して初期化されます (ピア ツー ピア トランザクション レプリケーションは、スナップショットを使用するピアの初期化をサポートしません)。異なるピアを個別の手段で初期化する必要がある場合は、ウィザードを複数回実行してピアを個別に追加する必要があります。  
   
 ## <a name="options"></a>オプション  

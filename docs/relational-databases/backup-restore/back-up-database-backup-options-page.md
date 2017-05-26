@@ -17,13 +17,14 @@ caps.latest.revision: 62
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 593d725942bb3c049bb71a0a8f1ad8975863c3fb
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="back-up-database-backup-options-page"></a>[データベースのバックアップ] ([バックアップ オプション] ページ)
+# <a name="back-up-database-backup-options-page"></a>[データベースのバックアップ] \([バックアップ オプション] ページ)
   **[データベースのバックアップ]** ダイアログ ボックスの **[バックアップ オプション]** ページを使用すると、データベースのバックアップのオプションを表示または変更できます。  
   
  **SQL Server Management Studio を使用してバックアップを作成するには**  

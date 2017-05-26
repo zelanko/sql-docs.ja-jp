@@ -18,13 +18,14 @@ caps.latest.revision: 32
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d42a033466178830694ea4bd7f43aee8d781e224
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="notify-operator-task-maintenance-plan"></a>[オペレーターへの通知タスク] (メンテナンス プラン)
+# <a name="notify-operator-task-maintenance-plan"></a>[オペレーターへの通知タスク] \(メンテナンス プラン)
   **[オペレーターへの通知タスク]** ダイアログ ボックスを使用すると、このメンテナンス プランに自動通知を追加できます。 このタスクを使用するには、[データベース メール] が有効になっていて、MSDB がメール ホスト データベースとして適切に構成され、有効な電子メール アドレスを持つ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのオペレーターが存在している必要があります。  
   
  このタスクでは、sp_notify_operator ストアド プロシージャを使用します。  

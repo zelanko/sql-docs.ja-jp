@@ -16,13 +16,14 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7eb7232103562f5196c7f3f5b83017b8060fdaf4
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="microsoft-replication-conflict-viewer-merge-replication"></a>[Microsoft レプリケーション競合表示モジュール] (マージ レプリケーション)
+# <a name="microsoft-replication-conflict-viewer-merge-replication"></a>[Microsoft レプリケーション競合表示モジュール] \(マージ レプリケーション)
   レプリケーション競合表示モジュールを使用すると、レプリケーション同期中に発生した競合を表示できます。 競合が発生するのは、同一のデータの変更が、2 つの異なるサーバー、たとえば、パブリッシャーとサブスクライバー、または 2 つの異なるサブスクライバーで行われたときです。 競合は、レプリケーションがアーティクルの作成時に選択された競合回避モジュールを使用することで自動的に解決されます。 ただし、レプリケーション競合表示モジュールを使用すると、必要な場合に、競合を回避するための別の解決方法を選択することができます。 発生する可能性がある競合は、次のとおりです。  
   
 -   更新競合。 更新競合は、同一のデータが 2 つの異なる場所で変更された場合に発生します。 一方の変更が競合の優先データとなり、他方は非優先データとなります。 既存のデータ (競合の優先データ) を保持する、競合したデータ (競合の非優先データ) で既存のデータを上書きする、または優先データと非優先データをマージして既存のデータを更新するオプションがあります。  

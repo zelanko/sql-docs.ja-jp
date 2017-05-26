@@ -16,13 +16,14 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 360fc93c7f1e8cf7194637b7f5cffb20cb772c3c
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="alert-properties---new-alert-options-page"></a>[警告のプロパティ] - [新しい警告] ([オプション] ページ)
+# <a name="alert-properties---new-alert-options-page"></a>[警告のプロパティ] - [新しい警告] \([オプション] ページ)
 このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの警告のオプションを表示および変更できます。  
   
 ## <a name="options"></a>オプション  

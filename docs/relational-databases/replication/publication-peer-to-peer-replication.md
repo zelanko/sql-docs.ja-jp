@@ -16,13 +16,14 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c5e0b5d87a843b2711d9d1b008ec966b3070d4ad
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="publication-peer-to-peer-replication"></a>[パブリケーション] (ピア ツー ピア レプリケーション)
+# <a name="publication-peer-to-peer-replication"></a>[パブリケーション] \(ピア ツー ピア レプリケーション)
   **[パブリケーション]** ページでは、ピア ツー ピア レプリケーションに対して有効になっているトランザクション パブリケーションを表示します。 パブリケーションは、 **[パブリケーションのプロパティ]** ダイアログ ボックスの **[サブスクリプション オプション]** ページで有効になっています。  
   
 ## <a name="options"></a>オプション  

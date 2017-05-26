@@ -16,13 +16,14 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0dfaef0364cf72e994b0fe5de778adc8a18bd715
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="browse-for-servers-network-servers"></a>[サーバーの参照] ([ネットワーク サーバー])
+# <a name="browse-for-servers-network-servers"></a>[サーバーの参照] \([ネットワーク サーバー])
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] コンポーネントに接続する際に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] インスタンスの正確な名前がわからない場合は、**[サーバー名]** ボックスで **[参照]** をクリックして **[サーバーの参照]** ダイアログ ボックスを開きます。  
   
 サーバー コンピューターの [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Browser サービスによって、このダイアログ ボックスの内容が自動入力されます。 インスタンス名が一覧に表示されない場合は、次のような原因が考えられます。  

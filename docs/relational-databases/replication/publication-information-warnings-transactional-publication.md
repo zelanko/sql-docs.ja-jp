@@ -16,13 +16,14 @@ caps.latest.revision: 30
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 94f7f4e75a06fdf924053b7077ce4aa28545d2ff
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="publication-information-warnings-transactional-publication"></a>パブリケーション情報、[警告] (トランザクション パブリケーション)
+# <a name="publication-information-warnings-transactional-publication"></a>パブリケーション情報、[警告] \(トランザクション パブリケーション)
   **以降を実行しているディストリビューターでは、** [警告] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] タブを使用できます。 **[警告]** タブでは、選択されているパブリケーションに対して次の操作を実行できます。  
   
 -   レプリケーション モニターに警告を表示します。  

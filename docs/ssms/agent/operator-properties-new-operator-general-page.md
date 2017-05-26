@@ -16,13 +16,14 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a81af1f5c93629929059838a2925e9bd67a600e0
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="operator-properties---new-operator-general-page"></a>[オペレーターのプロパティ]/[新しいオペレーター] ([全般] ページ)
+# <a name="operator-properties---new-operator-general-page"></a>[オペレーターのプロパティ]/[新しいオペレーター] \([全般] ページ)
 このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント オペレーターの全般プロパティを表示および変更できます。  
   
 ## <a name="options"></a>オプション  

@@ -17,13 +17,14 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1556c7facc4a671767fe2d6c061b4f6655ba521b
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="connect-to-server-login-page-database-engine"></a>[サーバーへの接続] ([ログイン] ページ) (データベース エンジン)
+# <a name="connect-to-server-login-page-database-engine"></a>[サーバーへの接続] \([ログイン] ページ) (データベース エンジン)
 このタブを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]に接続するときのオプションを表示または指定できます。  
   
 > [!NOTE]  

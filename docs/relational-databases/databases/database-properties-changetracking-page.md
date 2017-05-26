@@ -16,13 +16,14 @@ caps.latest.revision: 13
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2aab898a267244d585d1d09bc66eaca4814895a1
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="database-properties-changetracking-page"></a>[データベースのプロパティ] ([変更の追跡] ページ)
+# <a name="database-properties-changetracking-page"></a>[データベースのプロパティ] \([変更の追跡] ページ)
   このページを使用すると、選択されているデータベースの変更の追跡設定を表示または変更できます。 このページで使用可能なオプションの詳細については、「[変更の追跡の有効化と無効化 &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  

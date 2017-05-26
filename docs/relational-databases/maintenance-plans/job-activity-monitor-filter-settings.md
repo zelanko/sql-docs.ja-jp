@@ -16,13 +16,14 @@ caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d5e707f42591b1f2255735e16de9c9eda22ad7f3
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="job-activity-monitor-filter-settings"></a>[ジョブの利用状況モニター] ([フィルターの設定])
+# <a name="job-activity-monitor-filter-settings"></a>[ジョブの利用状況モニター] \([フィルターの設定])
   このページを使用すると、ジョブの利用状況モニターに表示される行数を削減できます。 1 つまたは複数の利用可能なボックスに基準を入力すると、指定した値に一致する行のみが表示されます。 一部のボックス ( **[状態]** や **[ブロッキングの種類]** ) は指定できる有効な値が決まっており、ドロップダウン リストによって提供されます。 他のボックス ( **[アプリケーション]** など) は、任意の値をコンマ区切りのリストにして必要な数だけ入力できます。 ツール バーのアイコンを使用すると、利用可能なボックスをカテゴリ別またはアルファベット順に並べ替えることができます。 基準をクリックすると、それぞれの簡単な説明が表示されます。  
   
  ジョブの利用状況モニターをフィルタリングするには、必要な数のフィルター基準を指定し、 **[フィルターの適用]**をクリックしてから **[OK]**をクリックします。  

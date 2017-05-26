@@ -18,13 +18,14 @@ caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 39bb4179c7869d9a9fe0cbbb26263f9e3a91f1ec
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>[SQL Server エージェント ジョブの実行タスク] (メンテナンス プラン)
+# <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>[SQL Server エージェント ジョブの実行タスク] \(メンテナンス プラン)
   **[SQL Server エージェント ジョブの実行タスク]** ダイアログを使用すると、メンテナンス プラン内で Microsoft SQL Server エージェント ジョブを実行できます。 選択されている接続に SQL Server エージェント ジョブが存在しない場合は、このオプションを利用できません。  
   
  このタスクでは、 **.sp_start_job** ステートメントを使用します。  

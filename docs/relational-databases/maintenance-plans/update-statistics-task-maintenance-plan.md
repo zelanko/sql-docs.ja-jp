@@ -18,13 +18,14 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 774fe7654f9a67ae7e149b80b05e047ac958c10b
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="update-statistics-task-maintenance-plan"></a>[統計の更新タスク] (メンテナンス プラン)
+# <a name="update-statistics-task-maintenance-plan"></a>[統計の更新タスク] \(メンテナンス プラン)
   **[統計の更新タスク]** ダイアログ ボックスを使用して、テーブルおよびインデックスのデータに関する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 情報を更新します。 このタスクでは、データベース内のユーザー テーブルに定義されている各インデックスの分布統計のサンプル データを取り直します。 分布統計は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを処理する際のテーブル内の移動の最適化に使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、分布統計を自動的に作成するために、各インデックスに対応するテーブルのデータを定期的にサンプリングしています。 サンプリングするサイズは、テーブルに含まれる行数とデータ更新の頻度に基づいて決められます。 このオプションを使用すると、サンプリングされるテーブル データの比率を指定して、サンプリングを追加実行することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、この情報を使用してより適切なクエリ プランを作成します。  
   
  このタスクでは、UPDATE STATISTICS ステートメントが実行されます。  

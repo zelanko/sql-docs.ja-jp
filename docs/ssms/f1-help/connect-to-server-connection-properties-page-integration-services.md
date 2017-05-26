@@ -17,13 +17,14 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 734f14076b65d0ea7e4c26c95c463a3554828587
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="connect-to-server-connection-properties-page-integration-services"></a>[サーバーへの接続] ([接続プロパティ] ページ) (Integration Services)
+# <a name="connect-to-server-connection-properties-page-integration-services"></a>[サーバーへの接続] \([接続プロパティ] ページ) (Integration Services)
 このタブを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] に接続するとき、または [!INCLUDE[ssIS](../../includes/ssis_md.md)] を**登録済みサーバー**に登録するときに、オプションを表示または指定できます。 接続時には、**[接続]** および **[オプション]** のみがこのダイアログ ボックスに表示されます。 **を登録するときには、** [テスト] **および** [保存] [!INCLUDE[ssIS](../../includes/ssis_md.md)]のみがこのダイアログ ボックスに表示されます。  
   
 ## <a name="options"></a>[オプション]  

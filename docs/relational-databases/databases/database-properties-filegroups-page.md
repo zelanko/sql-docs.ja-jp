@@ -16,13 +16,14 @@ caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 977464bddc01eaa5559962808e9cee4b39651b8f
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="database-properties-filegroups-page"></a>[データベースのプロパティ] ([ファイル グループ] ページ)
+# <a name="database-properties-filegroups-page"></a>[データベースのプロパティ] \([ファイル グループ] ページ)
   このページを使用すると、ファイル グループを表示したり、選択したデータベースに新しいファイル グループを追加したりできます。 ファイル グループの種類は、 *Row* ファイル グループ、FILESTREAM データ、およびメモリ最適化ファイル グループに分けられます。  
   
  ROW ファイル グループには、通常のデータおよびログ ファイルが含まれます。 FILESTREAM データ ファイル グループには、FILESTREAM データ ファイルが含まれます。 これらのデータ ファイルには、FILESTREAM ストレージを使用する場合に、バイナリ ラージ オブジェクト (BLOB) データをファイル システムに対してどのように格納するかという情報が格納されます。 どちらのファイル グループもオプションは同じです。  

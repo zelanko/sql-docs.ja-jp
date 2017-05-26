@@ -16,13 +16,14 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7239a45e4c3761919503a50f64168e266c58a0f5
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="sql-server-agent-properties-advanced-page"></a>[SQL Server エージェントのプロパティ] ([詳細設定] ページ)
+# <a name="sql-server-agent-properties-advanced-page"></a>[SQL Server エージェントのプロパティ] \([詳細設定] ページ)
 このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスの詳細プロパティを表示および変更できます。  
   
 ## <a name="options"></a>オプション  

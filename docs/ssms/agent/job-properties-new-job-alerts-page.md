@@ -16,13 +16,14 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3945ca56482d1b5d98d70abcf5915089052a0002
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="job-properties---new-job-alerts-page"></a>[ジョブのプロパティ] - [新しいジョブ] ([警告] ページ)
+# <a name="job-properties---new-job-alerts-page"></a>[ジョブのプロパティ] - [新しいジョブ] \([警告] ページ)
 このページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブの警告を表示および整理できます。  
   
 ## <a name="options"></a>オプション  

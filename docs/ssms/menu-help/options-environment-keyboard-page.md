@@ -17,13 +17,14 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b19b72a2359af1a08ddaa3d2d01715483fd29533
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="options-environment---keyboard-page"></a>[オプション] ([環境]/[キーボード] ページ)
+# <a name="options-environment---keyboard-page"></a>[オプション] \([環境]/[キーボード] ページ)
 **[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] のキーボード スキームをカスタマイズできます。 このオプションを使用して、キーボード スキームを選択します。 このページにアクセスするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを選択して、 **[キーボード]**をクリックします。  
   
 **[キーボード スキーム]** ドロップダウン リストに、使用できるショートカット キーのコレクションが表示されます。 一覧からスキームを選択すると、特定のスキームが読み込まれます。 **[オプション]** ダイアログ ボックスの操作が終わったら、 **[OK]**をクリックします。 選択したスキームが [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]に読み込まれます。  

@@ -16,13 +16,14 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 73451189bc401a4167c65261f3adcc5aabb6627c
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="connect-to-server-analysis-services"></a>[サーバーへの接続] (Analysis Services)
+# <a name="connect-to-server-analysis-services"></a>[サーバーへの接続] \(Analysis Services)
 このダイアログを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] に接続するときのオプションを表示または指定できます。  
   
 ## <a name="options"></a>オプション  

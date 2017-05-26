@@ -16,13 +16,14 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8714981cdc2c8135597a253a15753730c0e523c0
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="alert-properties---new-alert-response-page"></a>[警告のプロパティ] - [新しい警告] ([応答] ページ)
+# <a name="alert-properties---new-alert-response-page"></a>[警告のプロパティ] - [新しい警告] \([応答] ページ)
 このページを使用すると、実行するジョブや、オペレーターの一覧を取得するジョブを指定できます。この一覧のオペレーターは、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの警告に関する通知を受け取ります。  
   
 ## <a name="options"></a>オプション  

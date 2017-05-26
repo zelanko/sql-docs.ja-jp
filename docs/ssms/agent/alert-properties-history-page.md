@@ -16,13 +16,14 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ebacb7a14c17d78eb39e135b907507a233ec8cae
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="alert-properties-history-page"></a>[警告のプロパティ] ([履歴] ページ)
+# <a name="alert-properties-history-page"></a>[警告のプロパティ] \([履歴] ページ)
 このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの警告の履歴を表示および変更できます。  
   
 ## <a name="options"></a>オプション  

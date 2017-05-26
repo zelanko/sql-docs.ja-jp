@@ -16,13 +16,14 @@ caps.latest.revision: 64
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 038fa003ad819d89d8739f8cfaac53582f93932a
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="back-up-database-general-page"></a>[データベースのバックアップ] ([全般] ページ)
+# <a name="back-up-database-general-page"></a>[データベースのバックアップ] \([全般] ページ)
   **[データベースのバックアップ]** ダイアログ ボックスの **[全般]** ページでは、データベースのバックアップ操作の設定を表示または変更できます。  
   
  バックアップの基本的な概念については、「[バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)」を参照してください。  

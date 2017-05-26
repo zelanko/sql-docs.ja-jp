@@ -16,13 +16,14 @@ caps.latest.revision: 89
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ac731905f16f406cafd6402ebb647cddbae83005
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="restore-database-general-page"></a>[データベースの復元] ([全般] ページ)
+# <a name="restore-database-general-page"></a>[データベースの復元] \([全般] ページ)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   **[全般]** ページを使用すると、データベースの復元操作における対象データベースとソース データベースに関する情報を指定できます。  

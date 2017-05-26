@@ -18,13 +18,14 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 18ee84388c584423bc7f5b416d1540d1a287a0ba
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="options-environment---general-page"></a>[オプション] ([環境]/[全般] ページ)
+# <a name="options-environment---general-page"></a>[オプション] \([環境]/[全般] ページ)
 **[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] スタートアップ アクション、全般的なウィンドウ管理オプション、およびその他の全般設定を構成できます。 **[ツール]** メニューの **[オプション]**をクリックし、 **[環境]** フォルダーを展開して **[全般]**をクリックします。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  

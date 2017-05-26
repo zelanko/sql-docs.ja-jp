@@ -17,13 +17,14 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e85facb982aa8d7bea852051bbe4e9b37811c4c5
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="customize-commands-page"></a>[カスタマイズ] ([コマンド] ページ)
+# <a name="customize-commands-page"></a>[カスタマイズ] \([コマンド] ページ)
 このダイアログ ボックスでは、ツール バーおよびメニューのコマンドを追加したり、削除したりできます。また、ツール バー ボタンやメニュー コマンドに使用されているイメージを変更できます。 **[コマンド]** ページにアクセスするには、 **[ツール]** メニューの **[カスタマイズ]** をクリックし、次に **[コマンド]**をクリックします。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  

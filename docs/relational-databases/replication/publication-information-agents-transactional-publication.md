@@ -16,13 +16,14 @@ caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a1e666793719f1a277fffe23d02d4a6630585f61
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="publication-information-agents-transactional-publication"></a>パブリケーション情報、[エージェント] (トランザクション パブリケーション)
+# <a name="publication-information-agents-transactional-publication"></a>パブリケーション情報、[エージェント] \(トランザクション パブリケーション)
   **[エージェント]** タブには、選択したパブリケーションにおけるエージェントの要約情報が表示されます。 すべてのトランザクション パブリケーションのスナップショット エージェントとログ リーダー エージェントの情報が表示されます。 キュー更新サブスクリプション用に有効になっているトランザクション パブリケーションについては、キュー リーダー エージェントに関する情報が表示されます。  
   
 ## <a name="options"></a>オプション  

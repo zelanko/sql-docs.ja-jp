@@ -16,13 +16,14 @@ caps.latest.revision: 68
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 698c8658d2a3d6779a8800c23e5c508351a05d12
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="restore-database-options-page"></a>[データベースの復元] ([オプション] ページ)
+# <a name="restore-database-options-page"></a>[データベースの復元] \([オプション] ページ)
   **[データベースの復元]** ダイアログ ボックスの **[オプション]** ページを使用して、復元操作の動作と結果を変更します。  
   
  **SQL Server Management Studio を使用してデータベース バックアップを復元するには**  

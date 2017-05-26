@@ -20,13 +20,14 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dfd26bcff6aa621967ab9295ac65a92718db9f8c
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="column-properties-visual-database-tools"></a>[列のプロパティ] (Visual Database Tools)
+# <a name="column-properties-visual-database-tools"></a>[列のプロパティ] \(Visual Database Tools)
 列のプロパティのセットには、テーブル デザイナーの **[列のプロパティ]** タブに表示される完全なセット ([!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースでのみ使用可能) と、サーバー エクスプローラーで [プロパティ] ウィンドウに表示されるサブセットの 2 種類があります。  
   
 > [!NOTE]  

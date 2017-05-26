@@ -16,13 +16,14 @@ caps.latest.revision: 38
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4bfa385cab6527c16e62e2e631b9ffa1b96e0d10
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="backup-device-media-contents-page"></a>[バックアップ デバイス] ([メディアの内容] ページ)
+# <a name="backup-device-media-contents-page"></a>[バックアップ デバイス] \([メディアの内容] ページ)
   **[バックアップ デバイス]** ダイアログ ボックスを使用すると、バックアップの情報が表示されます。 ここでは、デバイス、メディア、メディア セット、バックアップ セットの情報が得られます。  
   
  **SQL Server Management Studio を使用してバックアップ デバイスの内容を表示するには**  

@@ -18,13 +18,14 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e0edd5dbed47243ef0d13f352ec525be43d6f0c7
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="open-with-new-file"></a>[ファイルを開くアプリケーションの選択] ([新しいファイル])
+# <a name="open-with-new-file"></a>[ファイルを開くアプリケーションの選択] \([新しいファイル])
 1 つ以上のエディターでドキュメントを開くには、**[ファイル]** メニューの **[開く]** をクリックし、次に **[ファイル]** をクリックします。 **[ファイルを開く]** ダイアログ ボックスでファイルを選択し、 **[開く]** の横の矢印をクリックし、次に **[ファイルを開くアプリケーションの選択]**をクリックします。 **[ファイルを開くアプリケーションの選択]** ダイアログ ボックスの **[このファイルを開くのに使用するプログラムを選択してください]** の一覧で、目的のプログラムをクリックし、次に **[開く]**をクリックします。  
   
 ## <a name="options"></a>オプション  

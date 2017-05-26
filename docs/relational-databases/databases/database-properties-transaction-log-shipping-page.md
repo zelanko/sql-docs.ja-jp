@@ -16,13 +16,14 @@ caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 11d0b9d1cde11ab1f3a0944c313d4d800e5039b0
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="database-properties-transaction-log-shipping-page"></a>[データベースのプロパティ] ([トランザクション ログの配布] ページ)
+# <a name="database-properties-transaction-log-shipping-page"></a>[データベースのプロパティ] \([トランザクション ログの配布] ページ)
   このページを使用すると、データベースのログ配布のプロパティを構成および変更できます。  
   
  ログ配布の概念については、「[ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  

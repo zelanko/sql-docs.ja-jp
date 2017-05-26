@@ -17,16 +17,17 @@ caps.latest.revision: 32
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6e8b64c8196394624e142d04609e014afcc17dd9
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>マージ レプリケーションの競合の詳細 - 論理レコードの解決
-  ここでは、論理レコードの使用時に利用できる、競合検出および競合解決方法のさまざまな組み合わせを紹介します。 マージ レプリケーションでの競合は、複数のノードが同じデータを変更したとき、またはマージ レプリケーションが変更をレプリケートするときに制約違反などの特定の種類のエラーに遭遇したときに発生します。 競合の検出および解決の詳細については、「 [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
+  ここでは、論理レコードの使用時に利用できる、競合検出および競合解決方法のさまざまな組み合わせを紹介します。 マージ レプリケーションでの競合は、複数のノードが同じデータを変更したとき、またはマージ レプリケーションが変更をレプリケートするときに制約違反などの特定の種類のエラーに遭遇したときに発生します。 競合の検出および解決の詳細については、「 [マージ レプリケーションの競合検出および解決の詳細](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
   
- アーティクルに対して競合の追跡と競合解決のレベルを指定するには、「 [Specify the Conflict Tracking and Resolution Level for Merge Articles](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md)」を参照してください。  
+ アーティクルに対して競合の追跡と競合解決のレベルを指定するには、「 [マージ アーティクルの競合追跡と競合解決のレベルの指定](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md)」を参照してください。  
   
 ## <a name="conflict-detection"></a>競合検出  
  論理レコードの競合検出方法は、 **column_tracking** と **logical_record_level_conflict_detection**の 2 つのアーティクル プロパティによって決定されます。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンでは、論理レコード レベルの検出もサポートしています。  

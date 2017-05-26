@@ -16,13 +16,14 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 884ed5fdf244272e5f46dc3d2faf0a8d1ee8a9b2
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="job-properties---new-job-general-page"></a>ジョブのプロパティ - [新しいジョブ] ([全般] ページ)
+# <a name="job-properties---new-job-general-page"></a>ジョブのプロパティ - [新しいジョブ] \([全般] ページ)
 このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブの全般プロパティを表示したり、変更したりできます。  
   
 ## <a name="options"></a>オプション  

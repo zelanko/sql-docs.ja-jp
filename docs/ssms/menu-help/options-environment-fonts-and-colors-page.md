@@ -17,13 +17,14 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 864b7b243eba260b8f381bc62fc1d915e07c2db1
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="options-environment---fonts-and-colors-page"></a>[オプション] ([環境] - [フォントおよび色] ページ)
+# <a name="options-environment---fonts-and-colors-page"></a>[オプション] \([環境] - [フォントおよび色] ページ)
 **[オプション]** ダイアログ ボックスを使用して、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] のさまざまなユーザー インターフェイス要素にカスタム フォントや配色を設定できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを展開して、 **[フォントおよび色]**を選択します。  
   
 配色を変更するセッション中は、変更は適用されません。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] の別のインスタンスを開き、変更が適用されると思われる条件を作ることで、色の変更を確認できます。  

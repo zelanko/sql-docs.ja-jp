@@ -17,13 +17,14 @@ caps.latest.revision: 13
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc478edecbc7f64655d9fefe0943e99080b3ebde
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="stored-procedure-properties-general-page"></a>[ストアド プロシージャのプロパティ] ([全般] ページ)
+# <a name="stored-procedure-properties-general-page"></a>[ストアド プロシージャのプロパティ] \([全般] ページ)
   ストアド プロシージャに関する情報を表示します。 すべての情報は読み取り専用です。  
   
 ## <a name="options"></a>オプション  

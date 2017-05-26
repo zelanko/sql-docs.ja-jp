@@ -18,13 +18,14 @@ caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fbf4cfd2254dbe3e5f482e603ca7535682102d80
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="history-cleanup-task-maintenance-plan"></a>[履歴クリーンアップ タスク] (メンテナンス プラン)
+# <a name="history-cleanup-task-maintenance-plan"></a>[履歴クリーンアップ タスク] \(メンテナンス プラン)
   **[履歴クリーンアップ タスク]** ダイアログ ボックスを使用すると、msdb データベースのテーブルに含まれる古い履歴情報を破棄できます。 このタスクでは、バックアップと復元の履歴、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ履歴、メンテナンス プランの履歴の削除がサポートされます。  
   
  このステートメントでは、 **sp_purge_jobhistory** ステートメントおよび **sp_delete_backuphistory** ステートメントが使用されます。  

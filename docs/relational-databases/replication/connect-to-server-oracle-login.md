@@ -18,13 +18,14 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 180122568df0cdffe7e9f011194ac54d7bf01dc4
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="connect-to-server-oracle-login"></a>[サーバーへの接続] (Oracle)、[ログイン]
+# <a name="connect-to-server-oracle-login"></a>[サーバーへの接続] \(Oracle)、[ログイン]
   **[サーバーへの接続]** ダイアログ ボックスの **[ログイン]** タブを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディストリビューターから Oracle パブリッシャーへの接続を確立するためのアカウントを指定できます。 パブリッシャーの構成時にレプリケーション管理ユーザー スキーマ用に指定したものと同じアカウントを使用する必要があります。 詳細については、「[Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  

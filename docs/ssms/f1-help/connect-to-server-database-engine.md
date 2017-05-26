@@ -22,13 +22,14 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d421bcb09ec7ebde28b5d1cce6eca2263cfb1c48
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="connect-to-server-database-engine"></a>[サーバーへの接続] (データベース エンジン)
+# <a name="connect-to-server-database-engine"></a>[サーバーへの接続] \(データベース エンジン)
 このダイアログを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] に接続するときのオプションを表示または指定できます。 ほとんどの場合、 **[サーバー名]** ボックスにデータベース サーバーのコンピューター名を入力し、 **[接続]**をクリックすることで接続できます。 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]に接続している場合、コンピューター名の後に **\sqlexpress**を付けて使用します。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に接続する機能に影響する要因は多数あります。  

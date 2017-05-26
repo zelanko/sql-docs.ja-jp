@@ -16,13 +16,14 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 278c9c6b9f883554feffc1b886e47b03b95faa60
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="connect-to-server-login-page-analysis-services"></a>[サーバーへの接続] ([ログイン] ページ) (Analysis Services)
+# <a name="connect-to-server-login-page-analysis-services"></a>[サーバーへの接続] \([ログイン] ページ) (Analysis Services)
 このタブは、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] に接続するときに以下のオプションを表示または指定する場合に使用します。  
   
 ## <a name="options"></a>オプション  

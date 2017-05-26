@@ -16,13 +16,14 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fc4741f03b147904d1c6010bcb4d1f0621d21cf3
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="configure-sql-server-agent-error-logs-general-page"></a>[SQL Server エージェント エラー ログの構成] ([全般] ページ)
+# <a name="configure-sql-server-agent-error-logs-general-page"></a>[SQL Server エージェント エラー ログの構成] \([全般] ページ)
 この画面を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのエラー ログ設定の表示と更新を行うことができます。  
   
 ## <a name="options"></a>オプション  

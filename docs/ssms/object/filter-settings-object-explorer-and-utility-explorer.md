@@ -17,13 +17,14 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 68c03b5f5fd4fc9a4ca371331309e971dcc540c0
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="filter-settings-object-explorer-and-utility-explorer"></a>[フィルターの設定] (オブジェクト エクスプローラーおよびユーティリティ エクスプローラー)
+# <a name="filter-settings-object-explorer-and-utility-explorer"></a>[フィルターの設定] \(オブジェクト エクスプローラーおよびユーティリティ エクスプローラー)
 このダイアログ ボックスを使用すると、フィルターを指定できます。 フィルターを使用すると、特定の条件を満たす項目だけを表示するようにオブジェクト エクスプローラーとユーティリティ エクスプローラーを構成できます。 たとえば、フィルターを使用して、"Maintenance" という単語を含む名前のジョブだけを表示できます。 **[フィルターの設定]** ダイアログ ボックスのヘッダーにはサーバーの名前が含まれ、場合によってはデータベースの名前が含まれます。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  

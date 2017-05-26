@@ -16,13 +16,14 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7befc61bcf4a973aa0593e476bcce76f5751f40b
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="connect-to-server-additional-connection-parameters-page"></a>[サーバーへの接続] ([追加の接続パラメーター] ページ)
+# <a name="connect-to-server-additional-connection-parameters-page"></a>[サーバーへの接続] \([追加の接続パラメーター] ページ)
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] の **[接続先]** ダイアログ ボックスには、オプションとして最も一般的な接続文字列値が表示されます。 **[追加の接続パラメーター]** ページを使用すると、接続文字列に接続パラメーターをさらに追加できます。  
   
 -   追加の接続パラメーターには、任意の ODBC 接続パラメーターを使用できます。  

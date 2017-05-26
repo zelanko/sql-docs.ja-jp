@@ -16,13 +16,14 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bfa27cecd7ab1d63b01befc051fc142d4de72165
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="connect-to-server-connection-properties-page-reporting-services"></a>[サーバーへの接続] ([接続プロパティ] ページ) Reporting Services
+# <a name="connect-to-server-connection-properties-page-reporting-services"></a>[サーバーへの接続] \([接続プロパティ] ページ) Reporting Services
 このタブを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] に接続するとき、または [!INCLUDE[ssRS](../../includes/ssrs_md.md)] を**登録済みサーバー**に登録するときに、オプションを表示または指定できます。 接続時には、**[接続]** および **[オプション]** のみがこのダイアログ ボックスに表示されます。 **を登録するときには、** [テスト] **および** [保存] [!INCLUDE[ssRS](../../includes/ssrs_md.md)]のみがこのダイアログ ボックスに表示されます。  
   
 ## <a name="options"></a>[オプション]  

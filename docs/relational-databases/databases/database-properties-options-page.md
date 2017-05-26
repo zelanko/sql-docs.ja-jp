@@ -17,13 +17,14 @@ caps.latest.revision: 67
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 49b5572874fd642d738b8ffee362cc84540709ea
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="database-properties-options-page"></a>[データベースのプロパティ] ([オプション] ページ)
+# <a name="database-properties-options-page"></a>[データベースのプロパティ] \([オプション] ページ)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   このページを使用すると、選択されているデータベースのオプションを表示または変更できます。 このページで利用できるオプションの詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」と「[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」をご覧ください。  

@@ -16,13 +16,14 @@ caps.latest.revision: 34
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 603986631591c86fa2b4559d016e36dd754e3d42
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="publisher-information-subscription-watch-list-transactional"></a>パブリッシャー情報、[サブスクリプション ウォッチ リスト] (トランザクション)
+# <a name="publisher-information-subscription-watch-list-transactional"></a>パブリッシャー情報、[サブスクリプション ウォッチ リスト] \(トランザクション)
   SQL Server 2005 以降を実行しているディストリビューターでは、 **[サブスクリプション ウォッチ リスト]** タブを使用できます。このタブは、選択されているパブリッシャーで使用できるすべてのパブリケーションのサブスクリプションについて情報を表示するために用意されています。 サブスクリプションの一覧にフィルターをかけて、エラー、警告、および動作に問題があるサブスクリプションを確認できます。 このタブは、パブリッシャーにおけるすべてのレプリケーション動作を管理者が一元的に監視できる場所です。レプリケーション モニターは、選択されているレプリケーションの種類と **[表示]** ボックスで選択されたオプションに基づいて、注意が必要なすべてのサブスクリプションを表示します。 このタブに表示されるアイテムは現在の状態およびパフォーマンスに基づいているので、現時点での **[表示]** ボックスのオプションに一致する場合にのみ、このページにサブスクリプションが表示されます。  
   
 ## <a name="options"></a>オプション  

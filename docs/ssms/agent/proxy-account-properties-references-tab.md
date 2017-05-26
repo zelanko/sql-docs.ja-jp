@@ -16,13 +16,14 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d8c7fda047880cfbe79109a2c63e640b2e4f2b6c
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="proxy-account-properties-references-tab"></a>[プロキシ アカウントのプロパティ] ([参照設定] タブ)
+# <a name="proxy-account-properties-references-tab"></a>[プロキシ アカウントのプロパティ] \([参照設定] タブ)
 この読み取り専用ページには、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのプロキシ アカウントを参照するジョブ ステップが一覧表示されます。  
   
 ## <a name="options"></a>オプション  

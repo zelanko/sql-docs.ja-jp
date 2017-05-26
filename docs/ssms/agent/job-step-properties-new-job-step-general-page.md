@@ -16,13 +16,14 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fbe2a44b573d05bbf4b9b1eed79595e3a771bcf4
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="job-step-properties---new-job-step-general-page"></a>[ジョブ ステップのプロパティ] - [新しいジョブ ステップ] ([全般] ページ)
+# <a name="job-step-properties---new-job-step-general-page"></a>[ジョブ ステップのプロパティ] - [新しいジョブ ステップ] \([全般] ページ)
 このページでは、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブ ステップのプロパティを表示または変更します。新しいジョブ ステップを定義することもできます。  
   
 このページに移動するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] のオブジェクト エクスプローラーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを展開します。次に **[ジョブ]**を右クリックし、 **[新しいジョブ]**をクリックして **[ステップ]** ページを選択し、 **[新規作成]**をクリックします。 または、オブジェクト エクスプローラーでジョブを右クリックし、 **[プロパティ]**をクリックして **[ステップ]** ページを選択し、 **[新規作成]**、 **[挿入]**、または **[編集]**をクリックします。  

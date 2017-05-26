@@ -16,13 +16,14 @@ caps.latest.revision: 34
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4cca5d50abc9aad1babf20cdbb8566e437aa9236
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="backup-device-general-page"></a>[バックアップ デバイス] ([全般] ページ)
+# <a name="backup-device-general-page"></a>[バックアップ デバイス] \([全般] ページ)
   **[全般]** ページを使用すると、論理バックアップ デバイスの全般プロパティを指定したり、表示したりできます。  
   
  **SQL Server Management Studio を使用してバックアップ デバイスの内容を表示するには**  

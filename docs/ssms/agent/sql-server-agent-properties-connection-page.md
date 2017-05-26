@@ -16,13 +16,14 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bfc821d303f7da943a39e18fe8221aefeaefceab
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="sql-server-agent-properties-connection-page"></a>[SQL Server エージェントのプロパティ] ([接続] ページ)
+# <a name="sql-server-agent-properties-connection-page"></a>[SQL Server エージェントのプロパティ] \([接続] ページ)
 このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスから [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] への接続の設定を表示および変更できます。  
   
 ## <a name="options"></a>オプション  

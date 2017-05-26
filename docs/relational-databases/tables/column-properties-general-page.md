@@ -16,13 +16,14 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 478dc0e10767f9e4e10c5c3ede74aec5ddaddef4
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="column-properties-general-page"></a>[列のプロパティ] ([全般] ページ)
+# <a name="column-properties-general-page"></a>[列のプロパティ] \([全般] ページ)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   このページを使用すると、選択されている列のプロパティを表示できます。  
