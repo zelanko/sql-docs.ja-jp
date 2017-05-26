@@ -20,9 +20,10 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 666ad0200e8429c470772fc68110d14a7809d12a
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/11/2017
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
   
--   レプリケーション Transact-SQL プログラミング : [Enable Updating Subscriptions for Transactional Publications](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   レプリケーション Transact-SQL プログラミング : [トランザクション パブリケーションの更新可能なサブスクリプションの有効化](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **データの競合を表示するには**  
   
@@ -81,6 +82,6 @@ ms.lasthandoff: 04/11/2017
  サブスクライバー優先の方法による競合の検出は、パブリッシャー優先を更新した前回のサブスクライバー トランザクションを意味します。 この場合、競合が検出されても、サブスクライバーによって送信されたトランザクションは引き続き使用され、パブリッシャーが更新されます。 そのような変更によってもデータの整合性が失われない場合には、サブスクライバー優先の方法が適しています。  
   
 ## <a name="see-also"></a>参照  
- [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [トランザクション レプリケーションの更新可能なサブスクリプション](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   
