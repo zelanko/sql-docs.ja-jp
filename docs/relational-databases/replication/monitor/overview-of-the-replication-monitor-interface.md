@@ -17,14 +17,15 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 85b3b97fa9dc219012727b01a0d8013e0481a85c
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>レプリケーション モニターのインターフェイスの概要
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor presents a Publisher-focused view or Distributor-focused view of all replication activity in a two pane format. 左ペインにパブリッシャーを追加すると、パブリッシャーとそのパブリケーション、パブリケーションのサブスクリプション、およびさまざまなレプリケーション エージェントに関する情報が右ペインに表示されます。 レプリケーション モニターでは、レプリケーション トポロジに関する情報の表示に加えて、エージェントの開始や停止、データの検証などさまざまなタスクを実行できます。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターでは、レプリケーションのすべての利用状況について、パブリッシャー関連の情報またはディストリビューター関連の情報が 2 つのペインで表示されます。 左ペインにパブリッシャーを追加すると、パブリッシャーとそのパブリケーション、パブリケーションのサブスクリプション、およびさまざまなレプリケーション エージェントに関する情報が右ペインに表示されます。 レプリケーション モニターでは、レプリケーション トポロジに関する情報の表示に加えて、エージェントの開始や停止、データの検証などさまざまなタスクを実行できます。  
   
 ## <a name="viewing-information-for-the-entire-topology"></a>トポロジ全体の情報を表示  
  レプリケーション モニターの左ペインに表示される情報  
