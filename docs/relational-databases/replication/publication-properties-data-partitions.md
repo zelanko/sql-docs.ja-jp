@@ -16,14 +16,15 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 50ef9df48b07e6be66798ac2bd5f33dc57fe6a84
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="publication-properties-data-partitions"></a>[パブリケーションのプロパティ], [データ パーティション]
-  **[パブリケーションのプロパティ]** ダイアログ ボックスの **[データ パーティション]** ページを使用すると、パラメーター化されたフィルタリングを使用するマージ パブリケーションのデータ パーティションを定義できます。 これらのパーティションを定義した後で、パーティションのスナップショットを生成して、サブスクライバーの接続プロパティ (ログイン名やコンピューター名) に基づいて複数のサブスクライバーの初期データセットを提供することができます。 また、サブスクライバーが最初に同期するときにパーティション用のスナップショットがない場合に、スナップショットの配布および生成をサブスクライバーが要求できるように設定することもできます。 詳しくは、「 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
+  **[パブリケーションのプロパティ]** ダイアログ ボックスの **[データ パーティション]** ページを使用すると、パラメーター化されたフィルタリングを使用するマージ パブリケーションのデータ パーティションを定義できます。 これらのパーティションを定義した後で、パーティションのスナップショットを生成して、サブスクライバーの接続プロパティ (ログイン名やコンピューター名) に基づいて複数のサブスクライバーの初期データセットを提供することができます。 また、サブスクライバーが最初に同期するときにパーティション用のスナップショットがない場合に、スナップショットの配布および生成をサブスクライバーが要求できるように設定することもできます。 詳しくは、「 [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
   
 ## <a name="options"></a>オプション  
  **[追加]**  
