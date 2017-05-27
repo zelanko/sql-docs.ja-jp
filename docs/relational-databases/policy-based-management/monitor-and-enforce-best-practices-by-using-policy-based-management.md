@@ -16,9 +16,10 @@ caps.latest.revision: 27
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a8e343ee942845bda5c874a3a238a4450ec391aa
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -41,7 +42,7 @@ ms.lasthandoff: 04/11/2017
 |guest の権限|[ユーザー データベースに対する guest の権限](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
 |最後にバックアップが正常終了した日付|[期限切れのバックアップ](../../relational-databases/policy-based-management/outdated-backup.md)|  
 |パブリックに許可されていないサーバー権限|[サーバーのパブリック権限](../../relational-databases/policy-based-management/server-public-permissions.md)|  
-|SQL Server 64 ビットの関係マスクの重複|[Correct Affinity Mask and Affinity Input and Output Mask Overlap](../../relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|SQL Server 64 ビットの関係マスクの重複|[affinity mask と affinity I/O mask の重複の修正](../../relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |SQL Server 関係マスク|[関係マスクの既定値の保持](../../relational-databases/policy-based-management/keep-the-affinity-mask-default-value.md)|  
 |SQL Server のブロック対象プロセスのしきい値|[blocked process threshold の増加または無効化](../../relational-databases/policy-based-management/increase-or-disable-blocked-process-threshold.md)|  
 |SQL Server の既定のトレース|[既定のトレース ログ ファイルの無効化](../../relational-databases/policy-based-management/default-trace-log-files-disabled.md)|  

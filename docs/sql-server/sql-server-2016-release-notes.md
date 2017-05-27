@@ -16,9 +16,10 @@ caps.latest.revision: 276
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0447dd94774287a71028252723508ebc5e2e50f8
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,11 +32,11 @@ ms.lasthandoff: 04/11/2017
     
 [![Azure Virtual Machine のアイコン](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Azure アカウントをすでにお持ちですか?  **[こちら](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** にアクセスして、SQL Server 2016 SP1 がインストール済みの仮想マシンをすぐにご利用いただけます。
     
-[![Download SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **SSMS:** To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)**.   
+[![SSMS をダウンロードする](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **SSMS:** 最新版の SQL Server Management Studio を入手するには、「**[SQL Server Management Studio (SSMS) のダウンロード](https://msdn.microsoft.com/library/mt238290.aspx)**」をご覧ください。   
     
  新機能については、「 [SQL Server 2016 の新機能](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708)」をご覧ください。
     
-##  <a name="bkmk_top"></a> Sections In this topic:    
+##  <a name="bkmk_top"></a> このトピックのセクション:    
 
 -   [SQL Server 2016 Service Pack 1 (SP1) を使用できる](#bkmk_2016sp1)    
 -   [SQL Server 2016 の一般公開 (GA)](#bkmk_2016_ga) 
