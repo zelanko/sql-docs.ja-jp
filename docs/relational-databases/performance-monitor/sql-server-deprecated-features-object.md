@@ -19,9 +19,10 @@ caps.latest.revision: 61
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1cbdf2dde41142d1b674e71df3a34756e8fcce99
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,7 +50,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |------------------------------------------------------|-----------------|  
 |'#' and '##' as the name of temporary tables and stored procedures|# 以外の文字を含んでいない識別子が見つかりました。 別の文字を少なくとも 1 文字は使用してください。 コンパイルごとに 1 回発生します。|  
 |'::' 関数呼び出し構文|テーブル値関数で :: 関数呼び出し構文が見つかりました。 `SELECT column_list FROM`*< function_name>*`()` に置き換えてください。 たとえば、`SELECT * FROM ::fn_virtualfilestats(2,1)` は `SELECT * FROM sys.fn_virtualfilestats(2,1)` に置き換わります。 コンパイルごとに 1 回発生します。|  
-|'@' and names that start with '@@' as [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers|@ または @@ で始まる識別子が見つかりました。 @、@@、または @@ で始まる名前を識別子として使用しないでください。 コンパイルごとに 1 回発生します。|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 識別子としての '@' と '@@' で始まる名前|@ または @@ で始まる識別子が見つかりました。 @、@@、または @@ で始まる名前を識別子として使用しないでください。 コンパイルごとに 1 回発生します。|  
 |ADDING TAPE DEVICE|非推奨機能 sp_addumpdevice'**tape**' が見つかりました。 代わりに、sp_addumpdevice'**disk**' を使用してください。 使用するごとに 1 回発生します。|  
 |ALL 権限|GRANT ALL、DENY ALL、または REVOKE ALL 構文が見つかった合計回数。 特定の権限を拒否するように構文を変更してください。 クエリごとに 1 回発生します。|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|サーバー インスタンスの起動後に、ALTER DATABASE の非推奨機能 TORN_PAGE_DETECTION オプションが使用された合計回数。 代わりに、PAGE_VERIFY 構文を使用してください。 DDL ステートメントで使用するごとに 1 回発生します。|  

@@ -14,9 +14,10 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: de5d4d788520c9fd8addc98c19be11cf2361456d
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -26,7 +27,7 @@ ms.lasthandoff: 04/11/2017
  このチュートリアルでは、Azure PowerShell を使用します。 チュートリアルを開始する前に、 [Azure PowerShell をダウンロードしてインストールします](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/)。  
   
 > [!IMPORTANT]  
->  また、高度なオプションを有効にする場合やカスタムのスケジュールを使用する場合、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にする前にまずその設定を構成します。 詳細については、「 [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。  
+>  また、高度なオプションを有効にする場合やカスタムのスケジュールを使用する場合、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にする前にまずその設定を構成します。 詳細については、「 [Microsoft Azure への SQL Server マネージ バックアップの詳細設定オプションの構成](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。  
   
 ## <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-with-default-settings"></a>既定の設定で [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にして構成する  
   
