@@ -19,9 +19,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 57fe0392adfb1e290491815acd216fd356e20f3e
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -43,7 +44,7 @@ ms.lasthandoff: 04/11/2017
 対象サーバーは、マスター サーバーの登録済みサーバーである必要があります。 このトピックに説明されている手順は、マスター サーバーから実行する必要があります。  
   
 ### <a name="Security"></a>セキュリティ  
-詳細については、「 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md) 」および「 [Choose the Right SQL Server Agent Service Account for Multiserver Environments](../../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)」を参照してください。  
+詳細については、「 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md) 」および「 [マルチサーバー環境に適した SQL Server エージェント サービス アカウントの選択](../../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)」を参照してください。  
   
 ## <a name="SSMS"></a>SQL Server Management Studio の使用  
 **対象サーバーからマスター サーバーにポーリングさせるには**  

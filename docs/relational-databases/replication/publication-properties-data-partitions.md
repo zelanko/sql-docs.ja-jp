@@ -46,10 +46,10 @@ ms.lasthandoff: 04/11/2017
  スナップショットの生成および適用をサブスクライバーで要求できるようにする場合は、このオプションを選択します。 サブスクライバーが最初に同期するときに、パーティションに使用できるスナップショットを持っていない場合は、このオプションの選択が必要になることがあります。  
   
 ## <a name="see-also"></a>参照  
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
+ [パブリケーションの作成](../../relational-databases/replication/publish/create-a-publication.md)   
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
+ [パラメーター化された行フィルター](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [パラメーター化されたフィルターを使用したマージ パブリケーションのスナップショット](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   
