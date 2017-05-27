@@ -37,9 +37,10 @@ caps.latest.revision: 43
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f4fa73a78b9f6e32edcf8395b344f1bcb7e8f5cc
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -164,7 +165,7 @@ ms.lasthandoff: 04/11/2017
   
   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tempdb **およびユーザーが作成したデータベースを除く** システム データベースを対象として、このタスクを実行するメンテナンス プランを生成します。  
   
- **[すべてのユーザー データベース] (master、model、msdb、tempdb は対象外)**  
+ **[すべてのユーザー データベース] \(master、model、msdb、tempdb は対象外)**  
   
  - ユーザーが作成したすべてのデータベースを対象として、このタスクを実行するメンテナンス プランを生成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム データベースではメンテナンス タスクは実行されません。  
   
@@ -175,10 +176,10 @@ ms.lasthandoff: 04/11/2017
 **[インデックスを含める]** チェック ボックス  
  - すべてのインデックス ページおよびテーブル データ ページの整合性を確認します。  
   
-**[Physical only] (物理のみ)**  
+**[Physical only] \(物理のみ)**  
  - ページの物理構造の整合性、レコード ヘッダー、およびデータベースの割り当ての一貫性にチェックを限定します。 このオプションは、大規模なデータベースの DBCC CHECKDB の実行時間を大幅に短縮することがあるため、実稼働システムで頻繁に使用する場合にお勧めします。  
   
-**[Tablock] (Tablock)**  
+**[Tablock] \(Tablock)**  
  - DBCC CHECKDB が、内部データベースのスナップショットを使用せずに、ロックを取得します。 これにはデータベースの短期の排他 (X) ロックも含まれます。 このオプションを使用すると、負荷の高いデータベースでの DBCC CHECKDB の実行速度が速くなることがありますが、DBCC CHECKDB の実行中はデータベースでの同時実行性が低下します。  
   
 ## <a name="define-database-shrink-tasks"></a>データベースの圧縮タスクを定義する  
