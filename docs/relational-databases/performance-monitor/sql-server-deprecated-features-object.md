@@ -48,7 +48,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 |SQL Server Deprecated Features カウンター インスタンス|Description|  
 |------------------------------------------------------|-----------------|  
-|'#' and '##' as the name of temporary tables and stored procedures|# 以外の文字を含んでいない識別子が見つかりました。 別の文字を少なくとも 1 文字は使用してください。 コンパイルごとに 1 回発生します。|  
+|'#' および ' ##' 一時テーブルおよびストアド プロシージャの名前として|# 以外の文字を含んでいない識別子が見つかりました。 別の文字を少なくとも 1 文字は使用してください。 コンパイルごとに 1 回発生します。|  
 |'::' 関数呼び出し構文|テーブル値関数で :: 関数呼び出し構文が見つかりました。 `SELECT column_list FROM`*< function_name>*`()` に置き換えてください。 たとえば、`SELECT * FROM ::fn_virtualfilestats(2,1)` は `SELECT * FROM sys.fn_virtualfilestats(2,1)` に置き換わります。 コンパイルごとに 1 回発生します。|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 識別子としての '@' と '@@' で始まる名前|@ または @@ で始まる識別子が見つかりました。 @、@@、または @@ で始まる名前を識別子として使用しないでください。 コンパイルごとに 1 回発生します。|  
 |ADDING TAPE DEVICE|非推奨機能 sp_addumpdevice'**tape**' が見つかりました。 代わりに、sp_addumpdevice'**disk**' を使用してください。 使用するごとに 1 回発生します。|  

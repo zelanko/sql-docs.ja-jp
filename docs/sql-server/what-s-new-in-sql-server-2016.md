@@ -22,9 +22,10 @@ caps.latest.revision: 224
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a702ff8995bc7d4ad7b67c1e7a9d12299afb068f
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/11/2017
     
 [![Azure Virtual Machine のアイコン](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Azure アカウントをすでにお持ちですか?  **[こちら](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** にアクセスして、SQL Server 2016 SP1 がインストール済みの仮想マシンをすぐにご利用いただけます。  
 
- [![Download from Evaluation Center](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) [**Download the latest version of SQL Server Management Studio (SSMS)**](https://msdn.microsoft.com/library/mt238290.aspx).   
+ [![Evaluation Center からダウンロードする](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) [**最新バージョンの SQL Server Management Studio (SSMS)**](https://msdn.microsoft.com/library/mt238290.aspx) をダウンロードする。   
 
     
  ## <a name="whats-new-in-sql-server"></a>SQL Server の新機能
