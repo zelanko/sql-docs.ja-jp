@@ -16,9 +16,10 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 40724f35684d4da590d02163028a14ef711e392d
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -29,7 +30,7 @@ ms.lasthandoff: 04/11/2017
   
 ##  <a name="BasicEnabling"></a> セマンティック インデックスを作成する  
   
-###  <a name="reqenable"></a> Requirements and restrictions for creating a semantic index  
+###  <a name="reqenable"></a> セマンティック インデックスの作成の要件と制限  
   
 -   インデックスは、フルテキスト インデックス作成でサポートされる、テーブルおよびインデックス付きビューを含むいずれかのデータベース オブジェクトに作成できます。  
   
@@ -150,7 +151,7 @@ GO
 
 ## <a name="alter-a-semantic-index"></a>セマンティック インデックスを変更する
   
-###  <a name="addreq"></a> Requirements and restrictions for altering an existing index  
+###  <a name="addreq"></a> 既存のインデックスを変更するための要件と制限  
   
 -   インデックスの作成の進行中は既存のインデックスを変更できません。 インデックスの作成の進行状況を監視する方法の詳細については、「 [セマンティクス検索の管理および監視](../../relational-databases/search/manage-and-monitor-semantic-search.md)」をご覧ください。  
   
@@ -187,7 +188,7 @@ GO
  ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>SQL Server Management Studio を使用してセマンティック インデックスを削除する  
  **[フルテキスト インデックスのプロパティ]** ダイアログ ボックスの **[フルテキスト インデックスの列]** ページで、セマンティック インデックス作成とフルテキスト インデックス作成が有効な列を変更できます。 詳細については、「 [フルテキスト インデックスの管理](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)」をご覧ください。  
   
-###  <a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
+###  <a name="dropreq"></a> セマンティック インデックスの削除の要件と制限  
   
 -   セマンティック インデックス作成を保持しているときに列からフルテキスト インデックス作成を削除することはできません。 セマンティック インデックス作成は、ドキュメントの類似性の結果に関してフルテキスト インデックス作成に依存します。  
   
@@ -276,7 +277,7 @@ GO
   
  インデックスの対象とするドキュメントの種類が、サポートされている種類の一覧に含まれていない場合は、追加のフィルターを探してダウンロードし、インストールしなければならない場合があります。 詳細については、「 [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)」を参照してください。  
   
-##  <a name="BestPracticeFilegroup"></a> Best practice: Consider creating a separate filegroup for the full-text and semantic indexes  
+##  <a name="BestPracticeFilegroup"></a> ベスト プラクティス: フルテキスト インデックスとセマンティック インデックスに対して別個のファイル グループを作成することを検討する  
  ディスク領域の割り当てが問題となる場合は、フルテキスト インデックスとセマンティック インデックスに対して別個のファイル グループを作成することを検討してください。 セマンティック インデックスは、フルテキスト インデックスと同じファイル グループに作成されます。 完全に作成されたセマンティック インデックスには大量のデータが含まれる可能性があります。  
  
 ##  <a name="IssueNoResults"></a> 問題点: 特定の列の検索で結果が返されない  

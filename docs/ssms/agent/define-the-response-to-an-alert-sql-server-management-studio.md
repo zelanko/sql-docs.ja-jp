@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>Define the Response to an Alert (SQL Server Management Studio)
+# <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>警告への応答の定義 (SQL Server Management Studio)
 このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] または [!INCLUDE[tsql](../../includes/tsql_md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの警告に対して [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] がどのように応答するかを定義する方法について説明します。  
   
 **このトピックの内容**  

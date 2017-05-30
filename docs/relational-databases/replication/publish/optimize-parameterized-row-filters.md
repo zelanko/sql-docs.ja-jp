@@ -146,7 +146,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  パブリケーションの各アーティクルに対し、手順 3. を実行します。  
   
-5.  (省略可) パブリッシャー側のパブリケーション データベースに対して [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) を実行し、2 つのアーティクル間に結合フィルターを定義します。 詳しくは、「 [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)」をご覧ください。  
+5.  (省略可) パブリッシャー側のパブリケーション データベースに対して [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) を実行し、2 つのアーティクル間に結合フィルターを定義します。 詳しくは、「 [マージ アーティクル間の結合フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)」をご覧ください。  
   
 #### <a name="to-view-and-modify-merge-filter-behaviors-for-an-existing-publication"></a>既存のパブリケーションに対するマージ フィルターの動作を表示して変更するには  
   
