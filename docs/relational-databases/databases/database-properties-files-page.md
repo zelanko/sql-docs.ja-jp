@@ -1,5 +1,5 @@
 ---
-title: "[データベースのプロパティ] ([ファイル] ページ) | Microsoft Docs"
+title: "「データベースのプロパティ」 ([ファイル] ページ) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-server-2016
@@ -16,14 +16,15 @@ caps.latest.revision: 42
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 96e789d47140459475bdd3b6f36500d0d24492ce
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="database-properties-files-page"></a>[データベースのプロパティ] ([ファイル] ページ)
-  このページを使用すると、新しいデータベースを作成したり、選択したデータベースのプロパティを表示または変更したりできます。 このトピックは、既存のデータベースの **[データベースのプロパティ] ([ファイル] ページ)** 、および **[新しいデータベース] ([全般] ページ)**に該当します。  
+# <a name="database-properties-files-page"></a>「データベースのプロパティ」 ([ファイル] ページ)
+  このページを使用すると、新しいデータベースを作成したり、選択したデータベースのプロパティを表示または変更したりできます。 このトピックは、既存のデータベースの **「データベースのプロパティ」 ([ファイル] ページ)** 、および **「新しいデータベース」 ([全般] ページ)**に該当します。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **データベース名**  

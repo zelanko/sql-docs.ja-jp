@@ -1,5 +1,5 @@
 ---
-title: "[エージェント プロファイル] (単独のエージェント) | Microsoft Docs"
+title: "「エージェント プロファイル」 (単独のエージェント) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -18,13 +18,14 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 16dd8b8f48927c74afc929f62e13339c23df9b05
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="agent-profiles-single-agent"></a>[エージェント プロファイル] (単独のエージェント)
+# <a name="agent-profiles-single-agent"></a>「エージェント プロファイル」 (単独のエージェント)
   **[エージェント プロファイル]** ダイアログ ボックスを使用すると、エージェントのプロファイルを管理できます。 エージェント プロファイルを利用すると、各エージェントの実行時パラメーターを容易に管理できます。 それぞれのエージェントは既定のプロファイルを持ちます。一部のエージェントには、追加の定義済みプロファイルが用意されています。 たとえば、マージ エージェントには、低帯域幅接続の "低速リンク" プロファイルが用意されています。 ほとんどのアプリケーションでは定義済みのプロファイルで十分ですが、ユーザー定義プロファイルを作成して、エージェントの動作をカスタマイズすることもできます。  
   
 ## <a name="options"></a>オプション  
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/11/2017
  **型**  
  プロファイルの種類です。 **[ユーザー]** (ユーザー定義) または **[システム]** (定義済み) を選択します。  
   
- **[プロパティ] (...)**  
+ **「プロパティ」 (...)**  
  クリックすると、エージェント プロファイルの各パラメーターに使用されている値が表示されます。  
   
  **新規**  
