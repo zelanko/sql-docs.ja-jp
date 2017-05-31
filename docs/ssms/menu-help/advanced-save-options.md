@@ -18,14 +18,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6f4ea7bfac8a9f8ed532f35588eecbc0e5761fc7
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="advanced-save-options"></a>[保存オプションの詳細設定]
-このダイアログ ボックスを使用すると、言語エンコード方式を選択したり、各行の末尾に挿入する文字を指定したりできます。 **[保存オプションの詳細設定]** ダイアログ ボックスを表示するには、**[ファイル]** メニューの **[名前を付けて**<query name>**.sql を保存]** をクリックします。**[名前を付けてファイルを保存]** ダイアログ ボックスが開くので、**[保存]** ボタンにある下矢印をクリックして、**[エンコード付きで保存]** をクリックします。  
+このダイアログ ボックスを使用すると、言語エンコード方式を選択したり、各行の末尾に挿入する文字を指定したりできます。 **[保存オプションの詳細設定]** ダイアログ ボックスを表示するには、**[ファイル]** メニューの **[名前を付けて** <query name>**.sql を保存]** をクリックします。**[名前を付けてファイルを保存]** ダイアログ ボックスが開くので、**[保存]** ボタンにある下矢印をクリックして、**[エンコード付きで保存]** をクリックします。  
   
 ## <a name="options"></a>オプション  
 **[エンコード]**  
