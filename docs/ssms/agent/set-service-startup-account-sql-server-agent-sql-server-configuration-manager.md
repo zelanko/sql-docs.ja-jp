@@ -18,9 +18,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ca20cf42839419f5d40826ef992087623dbc3059
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -76,7 +77,7 @@ ms.lasthandoff: 04/11/2017
   
 6.  詳細ペインで、サービス開始アカウントを変更する **[SQL Server エージェント *(server_name)*]** (*server_name* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント インスタンスの名前) を右クリックし、**[プロパティ]** をクリックします。  
   
-7.  **[SQL Server エージェント***(server_name)***のプロパティ]** ダイアログ ボックスの **[ログオン]** タブで、**[次のアカウントでログオン]** から以下のいずれかのオプションを選択します。  
+7.  **[SQL Server エージェント** *(server_name)* **のプロパティ]** ダイアログ ボックスの **[ログオン]** タブで、**[次のアカウントでログオン]** から以下のいずれかのオプションを選択します。  
   
     -   **[ビルトイン アカウント]**: ジョブがローカル サーバーのリソースだけを必要とする場合はこのオプションを選択します。 Windows ビルトイン アカウントの選択方法については、「 [SQL Server エージェント サービスのアカウントの選択](http://msdn.microsoft.com/library/ms191543.aspx)」をご覧ください。  
   
