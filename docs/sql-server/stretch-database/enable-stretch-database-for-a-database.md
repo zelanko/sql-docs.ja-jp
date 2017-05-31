@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
+# <a name="enable-stretch-database-for-a-database"></a>データベースに対して Stretch Database を有効にする
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Stretch Database 用にデータベースを構成するには、SQL Server Management Studio でデータベースに対して **[タスク]、[ストレッチ]、[有効にする]** の順に選択し、**[データベースのストレッチの有効化]** ウィザードを開きます。 Transact-SQL を使用してデータベースの Stretch Database を有効にすることもできます。  

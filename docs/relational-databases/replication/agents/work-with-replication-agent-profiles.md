@@ -19,9 +19,10 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d47140507a42084ddf60fa9c54ef6abe43c6f8b6
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -139,7 +140,7 @@ ms.lasthandoff: 04/11/2017
   
 ###  <a name="Create_tsql"></a> 新しいエージェント プロファイルを作成するには  
   
-1.  ディストリビューターで、[sp_add_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md) を実行します。 **@name** に名前、**@profile_type に**値 **1**、および **@agent_type** に次のいずれかの値を指定します。  
+1.  ディストリビューターで、[sp_add_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md) を実行します。 **@name** に名前、**@profile_type に** 値 **1**、および **@agent_type** に次のいずれかの値を指定します。  
   
     -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
