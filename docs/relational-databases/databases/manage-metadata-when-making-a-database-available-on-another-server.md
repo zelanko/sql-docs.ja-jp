@@ -99,7 +99,7 @@ ms.lasthandoff: 04/11/2017
   
 -   [トリガー (サーバー レベル)](#triggers)  
   
-##  <a name="server_configuration_settings"></a> Server Configuration Settings  
+##  <a name="server_configuration_settings"></a> サーバー構成の設定  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンでは、主要なサービスや機能のインストールと開始を選択的に行います。 これにより、外部からのアクセスを制限し、攻撃を防ぐことができます。 新規インストール時の既定の構成では、多くの機能が有効化されていません。 データベースが、既定で無効になっているサービスまたは機能に依存している場合、対象のサーバー インスタンスでそのサービスまたは機能を有効にする必要があります。  
   
  これらの設定、およびその有効化と無効化に関する詳細については、「[サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。  
