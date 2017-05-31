@@ -26,7 +26,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="rename-a-sql-server-agent-error-log-sql-server-management-studio"></a>Rename a SQL Server Agent Error Log (SQL Server Management Studio)
+# <a name="rename-a-sql-server-agent-error-log-sql-server-management-studio"></a>SQL Server エージェントのエラー ログの名前の変更 (SQL Server Management Studio)
 このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント エラーが書き込まれるファイルの名前を変更する方法について説明します。  
   
 **このトピックの内容**  
