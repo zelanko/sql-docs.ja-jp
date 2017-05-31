@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **現在のテーブル:**  
   
-    -   **SWITCH IN** to the current table can be used to facilitate data loading and querying while **SYSTEM_VERSIONING** is **ON**  
+    -   **SYSTEM_VERSIONING** が **ON** の場合、現在のテーブルへの **SWITCH IN** を使用してデータの読み込みとクエリの実行を容易に行うことができます。  
   
     -   **SWITCH OUT** is not permitted while **SYSTEM_VERSIONING** is **ON**  
   

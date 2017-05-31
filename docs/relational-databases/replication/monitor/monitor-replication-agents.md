@@ -31,7 +31,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="monitor-replication-agents"></a>レプリケーション エージェントの監視
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor provides a systemic view of replication activity, but also makes it straightforward to find information on a specific agent. 次の一覧に、各エージェント、各エージェントを利用できるレプリケーション モニターのタブ、およびそれらのタブへのアクセス方法について説明しているトピックへのリンクを示します。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターを使用すると、レプリケーションの利用状況を体系的に表示でき、特定のエージェントに関する情報を簡単に見つけることもできます。 次の一覧に、各エージェント、各エージェントを利用できるレプリケーション モニターのタブ、およびそれらのタブへのアクセス方法について説明しているトピックへのリンクを示します。  
   
 -   以下のエージェントは、レプリケーション モニターでパブリケーションと関連付けられています。  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/11/2017
   
     -   キュー リーダー エージェント (Queue Reader Agent)  
   
-     これらのエージェントに関連付けられている情報およびタスクにアクセスするには、 **[エージェント]** タブ (各パブリッシャーおよびパブリケーションで利用可能) または **[警告]** タブ (各パブリケーションで利用可能) を使用します。 詳細については、「[パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &amp;#40;レプリケーション モニター&amp;#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)」を参照してください。  
+     これらのエージェントに関連付けられている情報およびタスクにアクセスするには、 **[エージェント]** タブ (各パブリッシャーおよびパブリケーションで利用可能) または **[警告]** タブ (各パブリケーションで利用可能) を使用します。 詳細については、「[パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)」を参照してください。  
   
 -   以下のエージェントは、レプリケーション モニターでサブスクリプションと関連付けられています。  
   

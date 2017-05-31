@@ -51,7 +51,7 @@ ms.lasthandoff: 04/11/2017
 [table size] = [size of index 1] + … + [size of index n] + ([row size] * [row count])  
 ```  
   
- ハッシュ インデックスのサイズはテーブルの作成時に固定され、実際のバケット数によって決まります。 インデックスの仕様で指定された bucket_count は、[実際のバケット数] (actual bucket count) を取得するために、最も近い 2 のべき乗の値に切り上げられます。 たとえば、指定された bucket_count が 100,000 の場合、インデックスの [実際のバケット数] (actual bucket count) は 131,072 になります。  
+ ハッシュ インデックスのサイズはテーブルの作成時に固定され、実際のバケット数によって決まります。 インデックスの仕様で指定された bucket_count は、[実際のバケット数]\ (actual bucket count) を取得するために、最も近い 2 のべき乗の値に切り上げられます。 たとえば、指定された bucket_count が 100,000 の場合、インデックスの [実際のバケット数]\ (actual bucket count) は 131,072 になります。  
   
 ```  
 [hash index size] = 8 * [actual bucket count]  
