@@ -113,7 +113,7 @@ ms.lasthandoff: 04/11/2017
 > **注:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントでは資格情報を使用します。 プロキシ アカウントの資格情報 ID については、 [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) システム テーブルを使用してください。  
   
   
-##  <a name="cross_database_queries"></a> Cross-Database Queries  
+##  <a name="cross_database_queries"></a> 複数データベースにまたがるクエリ  
  DB_CHAINING データベース オプションと TRUSTWORTHY データベース オプションは、既定では OFF になっています。 これらのオプションのいずれかが元のデータベースで ON に設定されていると、対象のサーバー インスタンスのデータベースで、これらの設定を有効にする必要がある場合があります。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
  アタッチおよびデタッチ操作により、複数データベースにまたがる組み合わせ所有権が無効になります。 チェーンを有効にする方法については、「[cross db ownership chaining サーバー構成オプション](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)」を参照してください。  
@@ -121,14 +121,14 @@ ms.lasthandoff: 04/11/2017
  詳細については、「[TRUSTWORTHY プロパティを使用するようにミラー データベースを設定する方法 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)」も参照してください  
   
   
-##  <a name="database_ownership"></a> Database Ownership  
+##  <a name="database_ownership"></a> データベースの所有権  
  データベースを別のコンピューターに復元すると、復元操作を開始した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン ユーザーまたは Windows ユーザーが自動的に新しいデータベースの所有者になります。 復元されたデータベースのシステム管理者または新しいデータベース所有者は、そのデータベースの所有権を変更できます。  
   
 ##  <a name="distributed_queries_and_linked_servers"></a> 分散クエリおよびリンク サーバー  
  分散クエリおよびリンク サーバーは OLE DB アプリケーションでサポートされます。 分散クエリは、同一コンピューター上または異なるコンピューター上の複数の異種データ ソースのデータにアクセスします。 リンク サーバーを構成すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はリモート サーバー上の OLE DB データ ソースに対してコマンドを実行できます。 詳しくは、「[リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)」を参照してください。  
   
   
-##  <a name="encrypted_data"></a> Encrypted Data  
+##  <a name="encrypted_data"></a> 暗号化データ  
  別のサーバー インスタンスで使用できるようにするデータベースに暗号化データが含まれていて、データベース マスター キーが、元のサーバーのサービス マスター キーによって保護されている場合、そのサービス マスター キーを再度暗号化することが必要になる場合があります。 *データベース マスター キー* は対称キーで、証明書の秘密キーや暗号化されたデータベース内の非対称キーを保護するときに使用します。 データベース マスター キーを作成するときには、トリプル DES アルゴリズムとユーザー指定のパスワードを使用してデータベース マスター キーを暗号化します。  
   
  サーバー インスタンスでデータベース マスター キーの暗号化を自動的に解除できるようにするには、サービス マスター キーを使用してデータベース マスター キーのコピーを暗号化します。 この暗号化されたコピーをデータベースと **master**データベースの両方に格納します。 通常、 **master** に格納されたコピーは、マスター キーが変更されるたびに暗黙的に更新されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、インスタンスのサービス マスター キーを使用して、データベース マスター キーの暗号化解除が最初に試行されます。 暗号化解除が失敗した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では資格情報ストア内で、マスター キーが必要なデータベースと同じファミリ GUID のマスター キー資格情報が検索されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次に、一致した資格情報を順に使用してデータベースのマスター キーの暗号化解除が試行されます。これは暗号化解除が成功するか、資格情報がなくなった時点で終了します。 サービス マスター キーによって暗号化されていないマスター キーは、OPEN MASTER KEY ステートメントとパスワードを使用して開かれている必要があります。  
@@ -178,7 +178,7 @@ ms.lasthandoff: 04/11/2017
 -   発信側サービスがミラー化されたデータベースにある場合、発信先に、受信確認や応答の配信のために発信側サービスに戻るミラー化されたルートがあること。 ただし、発信側は通常のルートで発信先に戻れること。  
   
   
-##  <a name="extended_stored_procedures"></a> Extended Stored Procedures  
+##  <a name="extended_stored_procedures"></a> 拡張ストアド プロシージャ  
   
 > **重要:** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [CLR 統合](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) を使用してください。  
   
@@ -191,7 +191,7 @@ ms.lasthandoff: 04/11/2017
  詳細については、「[GRANT (オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)」、「[DENY (オブジェクトの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)」、および「[REVOKE (オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)」を参照してください。  
   
   
-##  <a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
+##  <a name="ifts_service_properties"></a> Full-Text Engine for SQL Server プロパティ  
  Full-Text Engine のプロパティは、 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)によって設定されます。 対象のサーバー インスタンスで、これらのプロパティに必要な設定が行われていることを確認してください。 これらのプロパティの詳細については、「[FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)」を参照してください。  
   
  さらに、[ワード ブレーカーとステマー](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)のコンポーネント、または[フルテキスト検索フィルター](../../relational-databases/search/configure-and-manage-filters-for-search.md) コンポーネントのバージョンが、元のサーバー インスタンスと対象のサーバー インスタンスで異なると、フルテキスト インデックスおよびクエリの動作が異なる場合があります。 また、 [類義語辞典](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) はインスタンス固有のファイルに格納されています。 それらのファイルのコピーを対象のサーバー インスタンスの該当する場所にコピーするか、新しいインスタンス上でこれらのファイルを再作成する必要があります。  
@@ -312,21 +312,21 @@ ms.lasthandoff: 04/11/2017
  証明書および非対称キーの詳細については、「 [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)」を参照してください。  
   
   
-##  <a name="replication_settings"></a> Replication Settings  
+##  <a name="replication_settings"></a> レプリケーションの設定  
  レプリケートされたデータベースのバックアップを別のサーバーまたはデータベースに復元する場合は、レプリケーションの設定は保存できません。 この場合、バックアップの復元後にすべてのパブリケーションおよびサブスクリプションを再作成する必要があります。 この処理を簡単にするには、現在のレプリケーションの設定を行うスクリプトと、レプリケーションの有効化および無効化を行うスクリプトを作成します。 レプリケーションの設定の再作成を容易にするには、これらのスクリプトをコピーし、対象のサーバー インスタンスで動作するようにサーバー名の参照を変更します。  
   
  詳細については、「[レプリケートされたデータベースのバックアップと復元](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)」、「[データベース ミラーリングとレプリケーション &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)」、および「[ログ配布とレプリケーション &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)」を参照してください。  
   
   
-##  <a name="sb_applications"></a> Service Broker Applications  
+##  <a name="sb_applications"></a> Service Broker アプリケーション  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] アプリケーションに関連する多くの要素は、データベースに伴って使用できます。 ただし、アプリケーションの一部の要素は、新しい場所で再作成または再構成する必要があります。  
   
   
-##  <a name="startup_procedures"></a> Startup Procedures  
+##  <a name="startup_procedures"></a> スタートアップ プロシージャ  
  スタートアップ プロシージャは、自動的に実行するように設定され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動するたびに実行されるストアド プロシージャです。 データベースがスタートアップ プロシージャに依存している場合、それらのスタートアップ プロシージャを対象のサーバー インスタンスで定義し、スタートアップ時に自動的に実行されるように構成する必要があります。  
 
   
-##  <a name="triggers"></a> Triggers (at Server Level)  
+##  <a name="triggers"></a> トリガー (サーバー レベル)  
  DDL トリガーにより、さまざまなデータ定義言語 (DDL) イベントに応答してストアド プロシージャが起動されます。 これらのイベントは、主にキーワード CREATE、ALTER、および DROP で始まる [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに対応します。 DDL と同様の操作を実行する特定のシステム ストアド プロシージャも DDL トリガーを起動できます。  
   
  この機能の詳細については、「 [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md)」を参照してください。  
