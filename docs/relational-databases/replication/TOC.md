@@ -97,8 +97,8 @@
 #### [[パブリケーションのプロパティ]、[パブリケーション アクセス リスト]](publication-properties-publication-access-list.md)  
 #### [[パブリケーションのプロパティ]、[エージェント セキュリティ]](publication-properties-agent-security.md)  
 #### [[パブリケーションのプロパティ], [データ パーティション]](publication-properties-data-partitions.md)  
-### [[アーティクルのプロパティ - <Article>](article-properties-article.md)]  
-### [[サブスクリプションのプロパティ - <Subscription>](subscription-properties-subscription.md)]  
+### [アーティクルのプロパティ - <Article>](article-properties-article.md)  
+### [サブスクリプションのプロパティ - <Subscription>](subscription-properties-subscription.md)  
 #### [[サブスクリプションのプロパティ - サブスクライバー]](subscription-properties-subscriber.md)  
 #### [[サブスクリプションのプロパティ - パブリッシャー]](subscription-properties-publisher.md)  
 ## [ツール リファレンス](tools-reference-replication.md)  
