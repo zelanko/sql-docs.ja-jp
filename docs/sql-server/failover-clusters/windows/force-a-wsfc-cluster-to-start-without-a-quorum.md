@@ -27,11 +27,11 @@ ms.lasthandoff: 04/11/2017
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>クォーラムを使用せずに WSFC クラスターを強制的に起動する
   このトピックでは、クォーラムを使用せずに Windows Server フェールオーバー クラスタリング (WSFC) クラスター ノードを強制的に起動する方法について説明します。  この処理が必要になるのは、災害復旧とマルチサブネットのシナリオにおいて、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのデータを復旧し、高可用性を完全に再確立する場合です。  
   
--   **Before you start:**  [Recommendations](#Recommendations), [Security](#Security)  
+-   **開始前の準備:**  [推奨事項](#Recommendations)、[セキュリティ](#Security)  
   
--   **To force a cluster to start without a quorum using:**  [Using Failover Cluster Manager](#FailoverClusterManagerProcedure), [Using Powershell](#PowerShellProcedure), [Using Net.exe](#CommandPromptProcedure)  
+-   **使用して、クォーラムなしで開始するのには、クラスターを強制的に:**  [フェールオーバー クラスター マネージャーを使用して](#FailoverClusterManagerProcedure)、[Powershell を使用した](#PowerShellProcedure), [を使用して Net.exe](#CommandPromptProcedure)  
   
--   **Follow up:**  [Follow Up: After Forcing Cluster to Start without a Quorum](#FollowUp)  
+-   **補足情報:**  [補足情報: クォーラムを使用せずにクラスターを強制的に起動した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始前の準備  
   

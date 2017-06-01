@@ -1,5 +1,5 @@
 ---
-title: "[メンテナンス プラン] ([サブプランのプロパティ]) | Microsoft Docs"
+title: "「メンテナンス プラン」 (サブプランのプロパティ) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,14 +17,15 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b8adb2a4c6f1ddbf04d11413284b500629b911d4
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="maintenance-plan-subplan-properties"></a>[メンテナンス プラン] ([サブプランのプロパティ])
-  **[メンテナンス プラン] ([サブプランのプロパティ])** ダイアログ ボックスでは、メンテナンス プランのサブプランの名前、説明、およびスケジュールを指定します。 このダイアログ ボックスを表示するには、メンテナンス プランの **[デザイン]** タブで **[サブプランのプロパティ]** をクリックするか、デザイナー グリッドでサブプランをダブルクリックします。  
+# <a name="maintenance-plan-subplan-properties"></a>「メンテナンス プラン」 (サブプランのプロパティ)
+  **「メンテナンス プラン」 (サブプランのプロパティ)** ダイアログ ボックスでは、メンテナンス プランのサブプランの名前、説明、およびスケジュールを指定します。 このダイアログ ボックスを表示するには、メンテナンス プランの **[デザイン]** タブで **[サブプランのプロパティ]** をクリックするか、デザイナー グリッドでサブプランをダブルクリックします。  
   
 ## <a name="options"></a>オプション  
  **名前**  
