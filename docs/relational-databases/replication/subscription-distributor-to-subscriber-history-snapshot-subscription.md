@@ -1,5 +1,5 @@
 ---
-title: "サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴] (スナップショット サブスクリプション) | Microsoft Docs"
+title: "サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴](スナップショット サブスクリプション) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -16,13 +16,14 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 409f016332f43ec339732d1613830e2e2fe2e21d
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴] (スナップショット サブスクリプション)
+# <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴]\(スナップショット サブスクリプション)
   **[ディストリビューターからサブスクライバーまでの履歴]** タブでは、ステータス、履歴、情報メッセージ、およびすべてのエラー メッセージを含む、ディストリビューション エージェントの詳細情報が表示されます。  
   
 ## <a name="options"></a>オプション  

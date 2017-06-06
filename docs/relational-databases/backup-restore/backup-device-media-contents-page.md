@@ -1,5 +1,5 @@
 ---
-title: "[バックアップ デバイス] ([メディアの内容] ページ) | Microsoft Docs"
+title: "[バックアップ デバイス]([メディアの内容] ページ) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016

@@ -1,5 +1,5 @@
 ---
-title: "パブリッシャー情報、[サブスクリプション ウォッチ リスト] (マージ パブリケーション) | Microsoft Docs"
+title: "パブリッシャー情報、[サブスクリプション ウォッチ リスト](マージ パブリケーション) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016

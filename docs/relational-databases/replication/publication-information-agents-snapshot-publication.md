@@ -1,5 +1,5 @@
 ---
-title: "パブリケーション情報、[エージェント] (スナップショット パブリケーション) | Microsoft Docs"
+title: "パブリケーション情報、[エージェント](スナップショット パブリケーション) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016

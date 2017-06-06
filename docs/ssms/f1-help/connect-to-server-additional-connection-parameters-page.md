@@ -1,5 +1,5 @@
 ---
-title: "[サーバーへの接続] ([追加の接続パラメーター] ページ) | Microsoft Docs"
+title: "[サーバーへの接続]([追加の接続パラメーター] ページ) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified

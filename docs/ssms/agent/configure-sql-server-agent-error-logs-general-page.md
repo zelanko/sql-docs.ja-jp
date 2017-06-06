@@ -1,5 +1,5 @@
 ---
-title: "[SQL Server エージェント エラー ログの構成] ([全般] ページ) | Microsoft Docs"
+title: "[SQL Server エージェント エラー ログの構成]([全般] ページ) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified

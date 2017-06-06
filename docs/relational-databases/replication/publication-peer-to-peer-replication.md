@@ -1,5 +1,5 @@
 ---
-title: "[パブリケーション] (ピア ツー ピア レプリケーション) | Microsoft Docs"
+title: "[パブリケーション](ピア ツー ピア レプリケーション) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016

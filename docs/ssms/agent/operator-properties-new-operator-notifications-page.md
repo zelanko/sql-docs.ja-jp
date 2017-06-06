@@ -1,5 +1,5 @@
 ---
-title: "オペレーターのプロパティ - [新しいオペレーター] ([通知] ページ) | Microsoft Docs"
+title: "オペレーターのプロパティ - [新しいオペレーター]([通知] ページ) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified

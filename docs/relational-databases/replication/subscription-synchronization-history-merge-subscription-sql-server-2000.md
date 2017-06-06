@@ -1,5 +1,5 @@
 ---
-title: "サブスクリプション、[同期の履歴] (マージ サブスクリプション、SQL Server 2000) | Microsoft Docs"
+title: "サブスクリプション、[同期の履歴](マージ サブスクリプション、SQL Server 2000) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -16,13 +16,14 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 123e24637af841b90398d707d36abbbc457098d1
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="subscription-synchronization-history-merge-subscription-sql-server-2000"></a>サブスクリプション、[同期の履歴] (マージ サブスクリプション、SQL Server 2000)
+# <a name="subscription-synchronization-history-merge-subscription-sql-server-2000"></a>サブスクリプション、[同期の履歴]\(マージ サブスクリプション、SQL Server 2000)
   **[同期の履歴]** タブには、マージ エージェントの状態、履歴、情報メッセージ、エラー メッセージなどの詳細情報が表示されます。  
   
 ## <a name="options"></a>オプション  

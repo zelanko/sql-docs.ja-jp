@@ -1,5 +1,5 @@
 ---
-title: "[サーバーへの接続] ([ログイン] ページ) (データベース エンジン) | Microsoft Docs"
+title: "[サーバーへの接続]([ログイン] ページ) (データベース エンジン) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 01/30/2017

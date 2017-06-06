@@ -1,5 +1,5 @@
 ---
-title: "[新しいピアの初期化] (ピア ツー ピア レプリケーション) | Microsoft Docs"
+title: "[新しいピアの初期化](ピア ツー ピア レプリケーション) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016

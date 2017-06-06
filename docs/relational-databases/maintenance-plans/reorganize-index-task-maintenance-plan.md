@@ -1,5 +1,5 @@
 ---
-title: "[インデックスの再構成タスク] (メンテナンス プラン) | Microsoft Docs"
+title: "[インデックスの再構成タスク](メンテナンス プラン) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016

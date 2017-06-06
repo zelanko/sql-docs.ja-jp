@@ -1,5 +1,5 @@
 ---
-title: "サブスクリプション、[未配布のコマンド] (トランザクション サブスクリプション) | Microsoft Docs"
+title: "サブスクリプション、[未配布のコマンド](トランザクション サブスクリプション) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -16,13 +16,14 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3986838ebcbb9f5ed787c974b82e9a87f2a43a29
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="subscription-undistributed-commands-transactional-subscription"></a>サブスクリプション、[未配布のコマンド] (トランザクション サブスクリプション)
+# <a name="subscription-undistributed-commands-transactional-subscription"></a>サブスクリプション、[未配布のコマンド]\(トランザクション サブスクリプション)
   **[未配布のコマンド]** タブには、ディストリビューション データベース内のコマンドで、選択したサブスクライバーにまだ配布されていないコマンドの数や、これらのコマンドを配布するのに要すると推定される時間についての情報が表示されます。 ディストリビューション データベース内のコマンドを表示する方法については、「[sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  

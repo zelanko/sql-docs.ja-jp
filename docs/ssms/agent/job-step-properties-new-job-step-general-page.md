@@ -1,5 +1,5 @@
 ---
-title: "[ジョブ ステップのプロパティ] - [新しいジョブ ステップ] ([全般] ページ) | Microsoft Docs"
+title: "[ジョブ ステップのプロパティ] - [新しいジョブ ステップ]([全般] ページ) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified

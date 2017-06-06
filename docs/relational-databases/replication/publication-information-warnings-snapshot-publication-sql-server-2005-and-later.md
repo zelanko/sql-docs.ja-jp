@@ -1,5 +1,5 @@
 ---
-title: "パブリケーション情報、[警告] (スナップショット パブリケーション、SQL Server 2005 以降) | Microsoft Docs"
+title: "パブリケーション情報、[警告](スナップショット パブリケーション、SQL Server 2005 以降) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-server-2016

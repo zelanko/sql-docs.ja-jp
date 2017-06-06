@@ -1,5 +1,5 @@
 ---
-title: "[SSRS サーバーに接続] ([接続プロパティ]) | Microsoft Docs"
+title: "[SSRS サーバーに接続]([接続プロパティ]) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified

@@ -1,5 +1,5 @@
 ---
-title: "[メンテナンス プラン] ([接続の管理]) | Microsoft Docs"
+title: "[メンテナンス プラン]([接続の管理]) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016

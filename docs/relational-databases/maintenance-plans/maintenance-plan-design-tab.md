@@ -1,5 +1,5 @@
 ---
-title: "[メンテナンス プラン] ([デザイン] タブ) | Microsoft Docs"
+title: "[メンテナンス プラン]([デザイン] タブ) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016

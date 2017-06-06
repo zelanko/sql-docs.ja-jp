@@ -1,5 +1,5 @@
 ---
-title: "[データベースの復元] ([オプション] ページ) | Microsoft Docs"
+title: "[データベースの復元]([オプション] ページ) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
