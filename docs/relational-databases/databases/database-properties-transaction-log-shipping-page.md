@@ -1,5 +1,5 @@
 ---
-title: "[データベースのプロパティ] ([トランザクション ログの配布] ページ) | Microsoft Docs"
+title: "[データベースのプロパティ]([トランザクション ログの配布] ページ) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-server-2016

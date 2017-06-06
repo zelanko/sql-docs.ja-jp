@@ -1,5 +1,5 @@
 ---
-title: "[SQL スクリプトの生成] (レプリケーション オブジェクト) | Microsoft Docs"
+title: "[SQL スクリプトの生成](レプリケーション オブジェクト) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016

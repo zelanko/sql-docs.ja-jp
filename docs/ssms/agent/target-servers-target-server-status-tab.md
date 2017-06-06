@@ -1,5 +1,5 @@
 ---
-title: "[対象サーバー] ([対象サーバーの状態] タブ) | Microsoft Docs"
+title: "[対象サーバー]([対象サーバーの状態] タブ) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="target-servers-target-server-status-tab"></a>[対象サーバー]  ([対象サーバーの状態] タブ)
+# <a name="target-servers-target-server-status-tab"></a>[対象サーバー]\([対象サーバーの状態] タブ)
 このページを使用すると、このマスター サーバーの対象サーバーの状態を表示できます。  
   
 ## <a name="options"></a>オプション  

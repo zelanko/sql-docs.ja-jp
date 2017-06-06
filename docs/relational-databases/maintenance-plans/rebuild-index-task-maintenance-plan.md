@@ -1,5 +1,5 @@
 ---
-title: "[インデックスの再構築タスク] (メンテナンス プラン) | Microsoft Docs"
+title: "[インデックスの再構築タスク](メンテナンス プラン) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -19,13 +19,14 @@ caps.latest.revision: 42
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3d8dd428e1aded14e6e75c338b12c8b04cf722a8
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="rebuild-index-task-maintenance-plan"></a>[インデックスの再構築タスク] (メンテナンス プラン)
+# <a name="rebuild-index-task-maintenance-plan"></a>[インデックスの再構築タスク]\(メンテナンス プラン)
   **[インデックスの再構築タスク]** ダイアログ ボックスを使用すると、データベースのテーブルに新しい FILL FACTOR でインデックスを再作成できます。 FILL FACTOR は、後で拡張できるように、インデックスの各ページの空き領域の量を決定します。 FILL FACTOR が適用されるのはインデックスの作成時だけであるため、テーブルにデータが追加されるにつれて、各ページの空き容量は徐々に減少します。 データ ページおよびインデックス ページを再編成すると、再び空き領域を確保できます。  
   
  **[インデックスの再構築タスク]** では、ALTER INDEX ステートメントが使用されます。 このページで説明するオプションの詳細については、「 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 04/11/2017
  **インデックスを埋め込む (Pad index)**  
  インデックスの埋め込みを指定します。  
   
- **[Keep index online] (オンラインのインデックスを保持する)**  
+ **[Keep index online]\(オンラインのインデックスを保持する)**  
  `ONLINE` オプションを使用すると、インデックス操作の実行中に、ユーザーは基になるテーブルまたはクラスター化インデックス データ、および任意の関連付けられた非クラスター化インデックスにアクセスできます。  
   
 > [!NOTE]  
@@ -89,10 +90,10 @@ ms.lasthandoff: 04/11/2017
  **MAXDOP**  
  並列プランの実行で使用されるプロセッサ数を制限する値を指定します。  
   
- **[Low Priority Used] (低優先度の使用)**  
+ **[Low Priority Used]\(低優先度の使用)**  
  優先度の低いロックを待機するには、このオプションを選択します。  
   
- **[Abort after Wait] (待機後に中止)**  
+ **[Abort after Wait]\(待機後に中止)**  
  **[最長期間]** で指定した時間が経過した後に行う処理を指定します。  
   
  **[最長期間]**  

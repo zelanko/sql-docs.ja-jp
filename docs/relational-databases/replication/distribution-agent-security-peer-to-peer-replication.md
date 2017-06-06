@@ -1,5 +1,5 @@
 ---
-title: "[ディストリビューション エージェント セキュリティ] (ピア ツー ピア レプリケーション) | Microsoft Docs"
+title: "[ディストリビューション エージェント セキュリティ](ピア ツー ピア レプリケーション) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016

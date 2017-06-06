@@ -1,5 +1,5 @@
 ---
-title: "[ジョブの利用状況モニター] ([フィルターの設定]) | Microsoft Docs"
+title: "[ジョブの利用状況モニター]([フィルターの設定]) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016

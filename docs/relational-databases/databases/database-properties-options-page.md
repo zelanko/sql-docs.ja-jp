@@ -1,5 +1,5 @@
 ---
-title: "[データベースのプロパティ] ([オプション] ページ) | Microsoft Docs"
+title: "[データベースのプロパティ]([オプション] ページ) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/29/2016

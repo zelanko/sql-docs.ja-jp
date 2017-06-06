@@ -1,5 +1,5 @@
 ---
-title: "[データベースのプロパティ] ([ミラーリング] ページ) | Microsoft Docs"
+title: "[データベースのプロパティ]([ミラーリング] ページ) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2016
 ms.prod: sql-server-2016
