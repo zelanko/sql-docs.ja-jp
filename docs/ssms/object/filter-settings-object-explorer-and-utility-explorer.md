@@ -1,5 +1,5 @@
 ---
-title: "[フィルターの設定] (オブジェクト エクスプローラーおよびユーティリティ エクスプローラー) | Microsoft Docs"
+title: "[フィルターの設定](オブジェクト エクスプローラーおよびユーティリティ エクスプローラー) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
