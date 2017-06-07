@@ -34,7 +34,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="example---use-the-with-clause-to-format-the-output"></a>例 - WITH 句を使用し、出力を書式設定する  
  次のクエリでは、次の表に示すように結果を返します。 JSON の AS 句が col5 および array_element でスカラー値ではなく、JSON オブジェクトとして返される値がどのように発生する方法に注意してください。  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX) =
 N'{"someObject":   
     {"someArray":  
@@ -70,7 +70,7 @@ WITH ( k1 int,
 ## <a name="example---load-json-into-a-includessnoversionincludesssnoversion-mdmd-table"></a>例 - JSON を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに読み込む。  
  次の例では、全体の JSON オブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルです。  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX) = '{  
   "id" : 2,  
   "firstName": "John",  

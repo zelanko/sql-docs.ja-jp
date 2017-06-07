@@ -48,7 +48,7 @@ JSON オブジェクトの各プロパティ、または配列の各要素は、
 これは、既定のスキーマを使って **OPENJSON** を使用した簡単な例です。この例では JSON オブジェクトのプロパティごとに 1 つの行が返されています。  
  
 **例**
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 
 SET @json='{"name":"John","surname":"Doe","age":45,"skills":["SQL","C#","MVC"]}';
@@ -80,7 +80,7 @@ FROM OPENJSON(@json);
   
 **例**
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json =   
   N'[  

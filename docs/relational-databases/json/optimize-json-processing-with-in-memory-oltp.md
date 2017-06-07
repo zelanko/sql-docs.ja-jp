@@ -29,7 +29,7 @@ SQL Server と Azure SQL Database では、JSON 形式のテキストを使用�
 ## <a name="store-json-in-memory-optimized-tables"></a>メモリ最適化テーブルへの JSON の格納
 次に、`Tags` と `Data` という 2 つの JSON 列があるメモリ最適化 `Product` テーブルの例を示します。
 
-```tsql
+```sql
 CREATE SCHEMA xtp;
 GO
 CREATE TABLE xtp.Product(
@@ -54,7 +54,7 @@ SQL Server と Azure SQL Database の新機能を使用すると、既存のイ�
 ## <a name="validate-json-columns"></a>JSON の列の検証
 SQL Server と Azure SQL Database では、次の例のように、文字列の列に格納された JSON ドキュメントの内容を検証するネイティブ コンパイルの CHECK 制約を追加できます。
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -72,7 +72,7 @@ CREATE TABLE xtp.Product(
 
 ネイティブ コンパイルの CHECK 制約は、JSON の列がある作成済みのテーブルに追加できます。
 
-```tsql
+```sql
 ALTER TABLE xtp.Product
     ADD CONSTRAINT [Data should be JSON]
         CHECK (ISJSON(Data)=1)
@@ -87,7 +87,7 @@ ALTER TABLE xtp.Product
 -   製品の製造国。
 -   製品の製造コスト。
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -108,7 +108,7 @@ CREATE TABLE xtp.Product(
 ## <a name="index-values-in-json-columns"></a>JSON の列のインデックス値
 SQL Server と Azure SQL Database では、メモリ最適化インデックスを使用して JSON の列の値にインデックスを作成できます。 インデックスが作成されている JSON 値は、次の例のように、計算列を使用して公開され、型が厳密に指定されている必要があります。
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -136,7 +136,7 @@ JSON の列の値には、標準の非クラスター化インデックスとハ
 ## <a name="native-compilation-of-json-queries"></a>JSON クエリのネイティブ コンパイル
 最後に、JSON 関数が使用されたクエリを含む TRANSACT-SQL プロシージャ、関数、およびトリガーのネイティブ コンパイルは、クエリのパフォーマンスを向上し、プロシージャの実行に必要な CPU サイクルを短縮します。 次に、JSON_VALUE、OPENJSON、JSON_MODIFY の JSON 関数をいくつか使用するネイティブ コンパイル プロシージャの例を示します。
 
-```tsql
+```sql
 CREATE PROCEDURE xtp.ProductList(@ProductIds nvarchar(100))
 WITH SCHEMABINDING, NATIVE_COMPILATION
 AS BEGIN

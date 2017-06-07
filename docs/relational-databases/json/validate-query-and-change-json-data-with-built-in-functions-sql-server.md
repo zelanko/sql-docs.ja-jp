@@ -63,7 +63,7 @@ SET @jsonInfo=N'{
   
  次の例は、列には、有効な JSON が含まれている場合に、JSON テキストを返します。  
   
-```tsql  
+```sql  
 SELECT id,json_col
 FROM tab1
 WHERE ISJSON(json_col)>0 
@@ -76,7 +76,7 @@ WHERE ISJSON(json_col)>0
   
  次の例では、ローカル変数に JSON のプロパティの値を抽出します。  
   
-```tsql  
+```sql  
 SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')  
 ```  
   
@@ -87,7 +87,7 @@ SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')
  
  次の例では、クエリの結果には JSON フラグメントを返す方法を示します。  
   
-```tsql  
+```sql  
 SELECT FirstName,LastName,JSON_QUERY(jsonInfo,'$.info.address') AS Address
 FROM Person.Person
 ORDER BY LastName
@@ -126,7 +126,7 @@ ORDER BY LastName
 ### <a name="example-1---return-both-standard-columns-and-json-data"></a>例 1: 標準の列と JSON データの両方を返す  
  次のクエリは、標準のリレーショナル列と JSON 列の値の両方を返します。  
   
-```tsql  
+```sql  
 SELECT SalesOrderNumber,OrderDate,Status,ShipDate,Status,AccountNumber,TotalDue,
  JSON_QUERY(Info,'$.ShippingInfo') ShippingInfo,
  JSON_QUERY(Info,'$.BillingInfo') BillingInfo,
@@ -141,7 +141,7 @@ WHERE ISJSON(Info)>0
 ### <a name="example-2--aggregate-and-filter-json-values"></a>例 2: JSON 値の集計とフィルター  
  次のクエリは、(JSON に格納されている) 顧客名と (通常の列に格納されている) 状態別に小計を集計します。 次に、(JSON に格納されている) 市区町村と (通常の列に格納されている) OrderDate で結果をフィルターします。  
   
-```tsql  
+```sql  
 DECLARE @territoryid INT;
 DECLARE @city NVARCHAR(32);
 
@@ -163,7 +163,7 @@ HAVING SUM(SubTotal)>1000
   
  次の例では、JSON を格納する変数のプロパティの値を更新します。  
   
-```tsql  
+```sql  
 SET @info=JSON_MODIFY(@jsonInfo,"$.info.address[0].town",'London')    
 ```  
   
