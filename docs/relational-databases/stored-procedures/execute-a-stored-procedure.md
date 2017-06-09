@@ -24,13 +24,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1e76212425f01aba20c8a0d0fdb548415559be1
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: 75e4f9647c7d19c82fd74caa15775fc3d8a97b12
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="execute-a-stored-procedure"></a>ストアド プロシージャの実行
+
+ > 以前のバージョンの SQL Server に関連するコンテンツについては、「[ストアド プロシージャの実行](https://msdn.microsoft.com/en-US/library/ms189915(SQL.120).aspx)」を参照してください。
+
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャを実行する方法について説明します。  
   
  ストアド プロシージャを実行するには、2 つの方法があります。 1 つ目の最も一般的な方法は、アプリケーションまたはユーザーがプロシージャを呼び出す方法です。 2 番目の方法は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの起動時にプロシージャが自動的に実行されるように設定する方法です。 アプリケーションまたはユーザーによってプロシージャが呼び出される場合は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] の EXECUTE または EXEC キーワードが呼び出しの中に明示的に指定されています。 または、プロシージャが [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ内の最初のステートメントである場合は、このキーワードを使用せずにストアド プロシージャを呼び出すことができます。  

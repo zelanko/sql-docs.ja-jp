@@ -1,7 +1,7 @@
 ---
 title: "SQL Server のアクセスを許可するための Windows ファイアウォールの構成 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/13/2016
+ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,18 +28,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fb4cb189914d6636b76816490e9d38f9f4240101
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: 5849c0c3d38756795a7aef83b04e95eb0ffcc305
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  ファイアウォール システムは、コンピューター リソースへの不正アクセスを防ぐのに役立ちます。 ファイアウォールがオンになっているが、正しく構成されていない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続の試行がブロックされる可能性があります。  
+ > 以前のバージョンの SQL Server に関連するコンテンツについては、「[SQL Server のアクセスを許可するための Windows ファイアウォールの構成](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx)」を参照してください。
+
+ファイアウォール システムは、コンピューター リソースへの不正アクセスを防ぐのに役立ちます。 ファイアウォールがオンになっているが、正しく構成されていない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続の試行がブロックされる可能性があります。  
   
- ファイアウォールを経由して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにアクセスするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターで、アクセスを許可するようにファイアウォールを構成する必要があります。 ファイアウォールは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のコンポーネントです。 他社製のファイアウォール プログラムをインストールすることもできます。 このトピックでは、Windows ファイアウォールを構成する方法について説明しますが、基本的な原則は他のファイアウォール プログラムにも適用されます。  
+ファイアウォールを経由して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにアクセスするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターでファイアウォールを構成する必要があります。 ファイアウォールは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のコンポーネントです。 他社製のファイアウォール プログラムをインストールすることもできます。 このトピックでは、Windows ファイアウォールを構成する方法について説明しますが、基本的な原則は他のファイアウォール プログラムにも適用されます。  
   
 > [!NOTE]  
 >  このトピックでは、ファイアウォール構成の概要について説明し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者を対象とした情報がまとめられています。 ファイアウォールの詳細および管理ファイアウォール情報については、「 [セキュリティが強化された Windows ファイアウォールの設計ガイド](http://go.microsoft.com/fwlink/?LinkID=116904)」などのファイアウォールのマニュアルを参照してください。  
@@ -51,35 +53,6 @@ ms.lasthandoff: 04/11/2017
 -   [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
 -   [レポート サーバー アクセスに対するファイアウォールの構成](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
-  
-## <a name="in-this-topic"></a>このトピックの内容  
- このトピックには次のセクションがあります。  
-  
- [ファイアウォールに関する基本情報](#BKMK_basic)  
-  
- [既定のファイアウォール設定](#BKMK_default)  
-  
- [ファイアウォールを構成するためのプログラム](#BKMK_programs)  
-  
- [データベース エンジンで使用されるポート](#BKMK_ssde)  
-  
- [Analysis Services で使用されるポート](#BKMK_ssas)  
-  
- [Reporting Services で使用されるポート](#BKMK_ssrs)  
-  
- [Integration Services で使用されるポート](#BKMK_ssis)  
-  
- [追加のポートとサービス](#BKMK_additional_ports)  
-  
- [その他のファイアウォール ルールの操作](#BKMK_other_rules)  
-  
- [ファイアウォール プロファイルの概要](#BKMK_profiles)  
-  
- [コントロール パネルの [Windows ファイアウォール] を使用した追加のファイアウォール設定](#BKMK_additional_settings)  
-  
- [セキュリティが強化された Windows ファイアウォールのスナップインの使用](#BKMK_WF_msc)  
-  
- [ファイアウォール設定のトラブルシューティング](#BKMK_troubleshooting)  
   
 ##  <a name="BKMK_basic"></a> ファイアウォールに関する基本情報  
  ファイアウォールは、受信パケットを調べて一連のルールと比較することによって機能します。 ルールでパケットの使用が許可されている場合、パケットはファイアウォールを通過して TCP/IP プロトコルに渡され、さらに処理が行われます。 ルールでパケットの使用が許可されていない場合は、ファイアウォールでパケットが破棄され、ログ記録が有効になっている場合は、ファイアウォール ログ ファイルにエントリが作成されます。  
@@ -105,34 +78,9 @@ ms.lasthandoff: 04/11/2017
 >  ファイアウォールをオンにすると、ファイルとプリンターの共有やリモート デスクトップ接続など、このコンピューターにアクセスする他のプログラムに影響を与えます。 管理者はファイアウォール設定を調整する前に、コンピューターで実行されているすべてのアプリケーションについて検討する必要があります。  
   
 ##  <a name="BKMK_programs"></a> ファイアウォールを構成するためのプログラム  
- Windows ファイアウォールの設定を構成するには、次の 3 つの方法があります。  
-  
--   **コントロール パネルの [Windows ファイアウォール]**  
-  
-     **[Windows ファイアウォール]** は、コントロール パネルから開くことができます。  
-  
-    > [!IMPORTANT]  
-    >  コントロール パネルの **[Windows ファイアウォール]** で行った変更は、現在のプロファイルにのみ影響を与えます。 ラップトップなどのモバイル デバイスでは、別の設定で接続されるときにプロファイルが変更される可能性があるので、コントロール パネルの **[Windows ファイアウォール]** は使用しないでください。 以前に構成されたプロファイルには影響を及ぼしません。 プロファイルの詳細については、「 [セキュリティが強化された Windows ファイアウォール ファースト ステップ ガイド](http://go.microsoft.com/fwlink/?LinkId=116080)」を参照してください。  
-  
-     コントロール パネルの **[Windows ファイアウォール]** で基本的なオプションを構成できます。 その一部を次に示します。  
-  
-    -   コントロール パネルの **[Windows ファイアウォール]** のオンとオフを切り替える  
-  
-    -   ルールを有効または無効にする  
-  
-    -   ポートおよびプログラムの例外を許可する  
-  
-    -   一部のスコープの制限を設定する  
-  
-     コントロール パネルの **[Windows ファイアウォール]** は、ファイアウォールの構成に慣れていないユーザーや、モバイル デバイスでないコンピューターに基本的なファイアウォール オプションを構成するユーザーに最適です。 次の手順を使用して **run** コマンドでコントロール パネルの **[Windows ファイアウォール]** を開くこともできます。  
-  
-    #### <a name="to-open-the-windows-firewall-item"></a>[Windows ファイアウォール] を開くには  
-  
-    1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]**をクリックして、「 `firewall.cpl`」と入力します。  
-  
-    2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
--   **Microsoft 管理コンソール (MMC)**  
+**Microsoft 管理コンソール**または **netsh** のいずれかを使用して Windows ファイアウォール設定を構成します。  
+
+-  **Microsoft 管理コンソール (MMC)**  
   
      セキュリティが強化された Windows ファイアウォールの MMC スナップインを使用して、詳細なファイアウォール設定を構成できます。 このスナップインは、ほとんどのファイアウォール オプションが使いやすい形式で表示され、すべてのファイアウォール プロファイルが提供されます。 詳細については、後の「 [セキュリティが強化された Windows ファイアウォールのスナップインの使用](#BKMK_WF_msc) 」を参照してください。  
   
@@ -185,18 +133,29 @@ ms.lasthandoff: 04/11/2017
   
  固定ポートでリッスンするように名前付きインスタンスを構成する代わりに、**sqlservr.exe** ([!INCLUDE[ssDE](../../includes/ssde-md.md)]) などの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プログラムを対象としてファイアウォールで例外を作成することもできます。 この方法が有効な場合もありますが、セキュリティが強化された Windows ファイアウォールの MMC スナップインを使用しているときは、 **[受信の規則]** ページの **[ローカル ポート]** 列にポート番号が表示されません。 そのため、どのポートが開いているかを調べるのが難しくなる可能性があります。 もう 1 つの注意事項は、Service Pack または累積された更新によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行可能ファイルへのパスが変更され、ファイアウォールのルールが無効になる可能性があるということです。  
   
-> [!NOTE]  
->  次の手順では、コントロール パネルの **[Windows ファイアウォール]** を使用します。 セキュリティが強化された Windows ファイアウォールの MMC スナップインを使用して、より複雑なルールを構成できます。 その場合は、サービスの例外の設定も行います。これは、多層防御を実装する場合に有効です。 後の「 [セキュリティが強化された Windows ファイアウォールのスナップインの使用](#BKMK_WF_msc) 」を参照してください。  
+##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-firewall-with-advanced-security"></a>セキュリティが強化された Windows ファイアウォールを使用して、ファイアウォールにプログラムの例外を追加するには
   
-###### <a name="to-add-a-program-exception-to-the-firewall-using-the-windows-firewall-item-in-control-panel"></a>コントロール パネルの [Windows ファイアウォール] を使用して、ファイアウォールにプログラムの例外を追加するには  
-  
-1.  コントロール パネルの **[Windows ファイアウォール]** の **[例外]** タブをクリックし、 **[プログラムの追加]**をクリックします。  
-  
-2.  ファイアウォールを通過することを許可する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの場所 (たとえば、**C:\Program Files\Microsoft SQL Server\MSSQL13.<インスタンス名>\MSSQL\Binn**) を参照し、**sqlservr.exe** を選んで **[開く]** をクリックします。  
-  
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
- エンドポイントの詳細については、「[複数の TCP ポートでリッスンするデータベース エンジンの構成](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md)」と「[エンドポイントのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)」を参照してください。  
+1. [スタート] メニューから「*wf.msc*」と入力します。 **[セキュリティが強化された Windows ファイアウォール]** をクリックします。
+
+1. 左側のペインで、**[受信の規則]** をクリックします。
+
+1. 右側のペインの **[操作]** の **[新しい規則]** をクリックします。 **新規の受信の規則ウィザード**が開きます。
+
+1. **[規則の種類]** で、**[プログラム]** をクリックします。 **[次へ]**をクリックします。
+
+1. **[プログラム]** で **[このプログラムのパス]** をクリックします。 **[参照]** をクリックして SQL Server のインスタンスを検索します。 sqlservr.exe というプログラムです。 通常は以下の場所にあります。
+
+   `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
+
+   **[次へ]**をクリックします。
+
+1. **[操作]** で、**[接続を許可する]**をクリックします。  
+
+1. [プロファイル] に 3 つのプロフィールすべてを含めます。 **[次へ]**をクリックします。
+
+1. **[名前]** に規則の名前を入力します。 **[完了]**をクリックします。
+
+エンドポイントの詳細については、「[複数の TCP ポートでリッスンするデータベース エンジンの構成](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md)」と「[エンドポイントのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)」を参照してください。 
   
 ###  <a name="BKMK_ssas"></a> Analysis Services で使用されるポート  
  次の表に、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で頻繁に使用されるポートの一覧を示します。  
@@ -213,14 +172,14 @@ ms.lasthandoff: 04/11/2017
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で Windows ファイアウォールを構成する詳細な手順については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」を参照してください。  
   
 ###  <a name="BKMK_ssrs"></a> Reporting Services で使用されるポート  
- 次の表に、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で頻繁に使用されるポートの一覧を示します。  
+次の表に、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で頻繁に使用されるポートの一覧を示します。  
   
 |機能|ポート|コメント|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web サービス|TCP ポート 80|URL を使用した [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] への HTTP 接続に使用されます。 **[World Wide Web サービス (HTTP)]**のあらかじめ構成されたルールは使用しないことをお勧めします。 詳細については、後の「 [その他のファイアウォール ルールの操作](#BKMK_other_rules) 」を参照してください。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] HTTPS 経由で使用するように構成された|TCP ポート 443|URL を使用した HTTPS 接続に使用されます。 HTTPS は、Secure Sockets Layer (SSL) を使用した HTTP 接続です。 **[セキュア World Wide Web サービス (HTTPS)]**のあらかじめ構成されたルールは使用しないことをお勧めします。 詳細については、後の「 [その他のファイアウォール ルールの操作](#BKMK_other_rules) 」を参照してください。|  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] から [!INCLUDE[ssDE](../../includes/ssde-md.md)] または [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続する場合、そのサービス用の適切なポートを開く必要もあります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で Windows ファイアウォールを構成する詳細な手順については、「 [レポート サーバー アクセスに対するファイアウォールの構成](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)」を参照してください。  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] から [!INCLUDE[ssDE](../../includes/ssde-md.md)] または [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続する場合、そのサービス用の適切なポートを開く必要もあります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で Windows ファイアウォールを構成する詳細な手順については、「 [レポート サーバー アクセスに対するファイアウォールの構成](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)」を参照してください。  
   
 ###  <a name="BKMK_ssis"></a> Integration Services で使用されるポート  
  次の表に、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスで使用されるポートの一覧を示します。  
@@ -229,10 +188,10 @@ ms.lasthandoff: 04/11/2017
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] リモート プロシージャ呼び出し (MS RPC)<br /><br /> [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ランタイムで使用されます。|TCP ポート 135<br /><br /> 「 [ポート 135 に関する注意事項](#BKMK_port_135)」を参照してください。|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスでは、ポート 135 で DCOM を使用します。 サービス コントロール マネージャーではポート 135 を使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの開始と停止、実行中のサービスに対する制御要求の転送などのタスクを実行します。 ポート番号を変更することはできません。<br /><br /> このポートは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] またはカスタム アプリケーションから [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] サービスのリモート インスタンスに接続する場合にのみ、開く必要があります。|  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で Windows ファイアウォールを構成する詳細な手順については、[Integration Services サービス、SSIS サービス](../../integration-services/service/integration-services-service-ssis-service.md)に関するページをご覧ください。  
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で Windows ファイアウォールを構成する詳細な手順については、[Integration Services サービス、SSIS サービス](../../integration-services/service/integration-services-service-ssis-service.md)に関するページをご覧ください。  
   
 ###  <a name="BKMK_additional_ports"></a> 追加のポートとサービス  
- 次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が依存している可能性があるポートとサービスの一覧を示します。  
+次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が依存している可能性があるポートとサービスの一覧を示します。  
   
 |Scenario|ポート|コメント|  
 |--------------|----------|--------------|  
@@ -289,7 +248,7 @@ ms.lasthandoff: 04/11/2017
 > [!NOTE]  
 >  コントロール パネルの **[Windows ファイアウォール]** では、現在のファイアウォール プロファイルのみを構成できます。  
   
-#### <a name="to-change-the-scope-of-a-firewall-exception-using-the-windows-firewall-item-in-control-panel"></a>コントロール パネルの [Windows ファイアウォール] を使用して、ファイアウォールの例外のスコープを変更するには  
+### <a name="to-change-the-scope-of-a-firewall-exception-using-the-windows-firewall-item-in-control-panel"></a>コントロール パネルの [Windows ファイアウォール] を使用して、ファイアウォールの例外のスコープを変更するには  
   
 1.  コントロール パネルの **[Windows ファイアウォール]** の **[例外]** タブでプログラムまたはポートを選択し、 **[プロパティ]** または **[編集]**をクリックします。  
   
@@ -328,7 +287,7 @@ ms.lasthandoff: 04/11/2017
   
 -   着信接続用に IPsec を要求する  
   
-#### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>新しい規則ウィザードを使用して、新しいファイアウォール ルールを作成するには  
+### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>新しい規則ウィザードを使用して、新しいファイアウォール ルールを作成するには  
   
 1.  [スタート] ボタンをクリックし、 **[ファイル名を指定して実行]**をクリックして「 **WF.msc**」と入力し、 **[OK]**をクリックします。  
   
@@ -351,7 +310,7 @@ ms.lasthandoff: 04/11/2017
   
     2.  コマンド プロンプトで、「 **netstat -n -a**」と入力します。  
   
-         **-n** スイッチは、 **netstat** に対して、アクティブな TCP 接続のアドレスおよびポート番号を数字で表示するように指示します。 **-a** スイッチは、 **netstat** に対して、コンピューターがリッスンしている TCP ポートおよび UDP ポートを表示するように指示します。  
+         **-n** スイッチは、**netstat** に対して、アクティブな TCP 接続のアドレスおよびポート番号を数字で表示するように指示します。 **-a** スイッチは、 **netstat** に対して、コンピューターがリッスンしている TCP ポートおよび UDP ポートを表示するように指示します。  
   
 -   **PortQry** ユーティリティを使用して、TCP/IP ポートのステータスを LISTENING、NOT LISTENING、FILTERED としてレポートできます。 (FILTERED ステータスは、ポートが、LISTENING、NOT LISTENING のどちらか不明で、ユーティリティがポートからの応答を受信していないことを示します)。**PortQry** ユーティリティは、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=28590)からダウンロードできます。  
   

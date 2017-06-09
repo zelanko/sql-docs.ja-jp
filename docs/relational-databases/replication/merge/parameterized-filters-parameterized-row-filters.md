@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c16383cadde524f23f8a6b94a14c282666856780
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>パラメーター化されたフィルター - パラメーター化された行フィルター
@@ -104,7 +104,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  以下のいずれかの方法で、HOST_NAME() 値をオーバーライドします。  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: specify a value on the **HOST\_NAME\(\) Values** page of the New Subscription Wizard. For more information about creating subscriptions, see [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md).  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: サブスクリプションの新規作成ウィザードの **HOST\_NAME\(\) 値** ページで値を指定します。 サブスクリプションの作成については、「[パブリケーションのサブスクライブ](../../../relational-databases/replication/subscribe-to-publications.md)」を参照してください。  
   
 -   レプリケーション [!INCLUDE[tsql](../../../includes/tsql-md.md)] プログラミング: (プッシュ サブスクリプション用に) [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) または、(プルサブスクリプション用に) [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) の **@hostname** パラメーターの値を指定します。  
   
@@ -191,6 +191,6 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ## <a name="see-also"></a>参照  
  [時間ベースの行フィルターの推奨事項](../../../relational-databases/replication/merge/best-practices-for-time-based-row-filters.md)   
  [パブリッシュされたデータのフィルター選択](../../../relational-databases/replication/publish/filter-published-data.md)   
- [マージ レプリケーション用にパブリッシュされたデータのフィルター選択](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  
+ [マージ レプリケーション用にパブリッシュされたデータのフィルター処理](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  
   
   
