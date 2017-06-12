@@ -1,5 +1,5 @@
 ---
-title: "[バックアップ デバイス] ([全般] ページ) | Microsoft Docs"
+title: "[バックアップ デバイス]([全般] ページ) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="backup-device-general-page"></a>[バックアップ デバイス] \([全般] ページ)
+# <a name="backup-device-general-page"></a>[バックアップ デバイス]\([全般] ページ)
   **[全般]** ページを使用すると、論理バックアップ デバイスの全般プロパティを指定したり、表示したりできます。  
   
  **SQL Server Management Studio を使用してバックアップ デバイスの内容を表示するには**  

@@ -1,5 +1,5 @@
 ---
-title: "[データベースのプロパティ] ([変更の追跡] ページ) | Microsoft Docs"
+title: "[データベースのプロパティ]([変更の追跡] ページ) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/07/2016
 ms.prod: sql-server-2016

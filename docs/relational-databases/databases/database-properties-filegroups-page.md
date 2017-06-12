@@ -1,5 +1,5 @@
 ---
-title: "[データベースのプロパティ] ([ファイル グループ] ページ) | Microsoft Docs"
+title: "[データベースのプロパティ]([ファイル グループ] ページ) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016

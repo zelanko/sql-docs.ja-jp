@@ -1,5 +1,5 @@
 ---
-title: "[ユーザー設定] ([ツール バー] ページ) | Microsoft Docs"
+title: "[ユーザー設定]([ツール バー] ページ) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified

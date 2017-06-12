@@ -1,5 +1,5 @@
 ---
-title: "[オブジェクトの参照] (オブジェクト エクスプローラー) | Microsoft Docs"
+title: "[オブジェクトの参照](オブジェクト エクスプローラー) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified

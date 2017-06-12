@@ -1,5 +1,5 @@
 ---
-title: "「ストアド プロシージャのプロパティ」 ([全般] ページ) | Microsoft Docs"
+title: "[ストアド プロシージャのプロパティ]([全般] ページ) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -24,7 +24,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="stored-procedure-properties-general-page"></a>「ストアド プロシージャのプロパティ」 ([全般] ページ)
+# <a name="stored-procedure-properties-general-page"></a>[ストアド プロシージャのプロパティ]\([全般] ページ)
   ストアド プロシージャに関する情報を表示します。 すべての情報は読み取り専用です。  
   
 ## <a name="options"></a>オプション  

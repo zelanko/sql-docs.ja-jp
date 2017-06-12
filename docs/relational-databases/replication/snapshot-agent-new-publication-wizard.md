@@ -1,5 +1,5 @@
 ---
-title: "[スナップショット エージェント] (パブリケーションの新規作成ウィザード) | Microsoft Docs"
+title: "[スナップショット エージェント](パブリケーションの新規作成ウィザード) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016

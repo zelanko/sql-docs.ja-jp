@@ -1,5 +1,5 @@
 ---
-title: "[サーバーへの接続] ([ログイン] ページ) (Integration Services) | Microsoft Docs"
+title: "[サーバーへの接続]([ログイン] ページ) (Integration Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -24,7 +24,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="connect-to-server-login-page-integration-services"></a>[サーバーへの接続] \([ログイン] ページ) (Integration Services)
+# <a name="connect-to-server-login-page-integration-services"></a>[サーバーへの接続]\([ログイン] ページ) (Integration Services)
 このタブは、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] に接続するときに以下のオプションを表示または指定する場合に使用します。  
   
 ## <a name="options"></a>オプション  

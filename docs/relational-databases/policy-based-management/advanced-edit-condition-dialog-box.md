@@ -1,5 +1,5 @@
 ---
-title: "[高度な編集] (条件) ダイアログ ボックス | Microsoft Docs"
+title: "[高度な編集](条件) ダイアログ ボックス | Microsoft Docs"
 ms.custom: 
 ms.date: 08/12/2016
 ms.prod: sql-server-2016

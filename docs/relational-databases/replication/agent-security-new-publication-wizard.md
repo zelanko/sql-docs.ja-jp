@@ -1,5 +1,5 @@
 ---
-title: "[エージェント セキュリティ] (パブリケーションの新規作成ウィザード) | Microsoft Docs"
+title: "[エージェント セキュリティ](パブリケーションの新規作成ウィザード) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016

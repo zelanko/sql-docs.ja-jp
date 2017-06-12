@@ -1,5 +1,5 @@
 ---
-title: "[サーバーへの接続] (Oracle)、[接続プロパティ] | Microsoft Docs"
+title: "[サーバーへの接続](Oracle)、[接続プロパティ] | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
