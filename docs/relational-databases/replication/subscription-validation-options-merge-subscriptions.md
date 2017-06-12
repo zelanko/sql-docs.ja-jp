@@ -1,5 +1,5 @@
 ---
-title: "[サブスクリプションの検証オプション] (マージ サブスクリプション) | Microsoft Docs"
+title: "[サブスクリプションの検証オプション](マージ サブスクリプション) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,13 +18,14 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f946728b0512ac4db66a3b6abb1182a0ac8706fa
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="subscription-validation-options-merge-subscriptions"></a>[サブスクリプションの検証オプション] (マージ サブスクリプション)
+# <a name="subscription-validation-options-merge-subscriptions"></a>[サブスクリプションの検証オプション]\(マージ サブスクリプション)
   **[サブスクリプションの検証オプション]** ダイアログ ボックスを使用すると、検証の際に行数だけを使用するか、行数とバイナリ チェックサムを使用するかを指定できます。  
   
 ## <a name="options"></a>オプション  
