@@ -1,29 +1,34 @@
 ---
-title: "式で使用される演算子 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "式 (レポート ビルダーおよび SSRS) の演算子 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 35e702d0d1944cd5e7f2b7120da07e272f30cf70
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# 式で使用される演算子 (レポート ビルダーおよび SSRS)
+# <a name="operators-in-expressions-report-builder-and-ssrs"></a>式で使用される演算子 (レポート ビルダーおよび SSRS)
   演算子は、式に含まれる 1 つ以上の項に適用される操作を表す記号です。 式でサポートされている演算子のカテゴリには、算術、比較、連結、論理 (ビット)、およびビット シフトがあります。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 算術  
+### <a name="arithmetic"></a>算術  
  算術演算子は、1 つの式に含まれる 2 つの項に対して数学的な操作を実行します。  
   
 |演算子|Description|  
@@ -36,7 +41,7 @@ caps.handback.revision: 8
 |+|2 つの数値を加算します。|  
 |-|2 つの数式の差を返すか、項が負の値であることを示します。|  
   
-### 比較  
+### <a name="comparison"></a>比較  
  比較演算子は、2 つの式が同じかどうかをテストします。  
   
 |演算子|Description|  
@@ -50,7 +55,7 @@ caps.handback.revision: 8
 |Like|指定された文字列が指定されたパターンと一致するかどうかを判断します。 パターンは、標準の文字とワイルドカード文字を含むことができます。 パターン検索時に、標準の文字は文字列に指定された文字と正確に一致する必要があります。 しかし、ワイルドカード文字は文字列の任意の部分と一致することができます。 = や != などの文字列比較演算子を使用する場合と比べて、ワイルドカード文字を使用する方がより柔軟に LIKE 演算子を使用できます。<br /><br /> 次の表に、ワイルドカードとして使用できる文字を示します。<br /><br /> %: 0 個以上の文字で構成される任意の文字列です。<br /><br /> _: 任意の 1 文字です。<br /><br /> [ ]: 指定した範囲 (たとえば [a-f]) またはセット (たとえば [aeiou]) 内の任意の 1 文字です。<br /><br /> [^]: 指定した範囲 (たとえば [^a-f]) またはセット (たとえば [^aeiou]) 内にない任意の 1 文字です。|  
 |Is|2 つのオブジェクト参照を比較します。|  
   
-### 文字列連結  
+### <a name="string-concatenation"></a>文字列連結  
  文字列連結では、式に含まれる 2 番目の文字列が 1 番目の文字列の最後に追加されます。 その他の文字列操作では、組み込み関数を使用してください。  
   
 |演算子|Description|  
@@ -58,7 +63,7 @@ caps.handback.revision: 8
 |&|2 つの文字列を連結します。|  
 |+|2 つの文字列を連結します。|  
   
-### 論理演算子とビット演算子  
+### <a name="logical-and-bitwise"></a>論理演算子とビット演算子  
  論理演算子およびビット演算子は、式に含まれる 2 つの整数項の間の論理操作を実行します。  
   
 |演算子|Description|  
@@ -70,7 +75,7 @@ caps.handback.revision: 8
 |AndAlso|2 つの式の論理積を求めます。|  
 |OrElse|2 つの式の論理和を求めます。|  
   
-### ビット シフト  
+### <a name="bit-shift"></a>ビット シフト  
  ビットごとの演算子は、式に含まれる 2 つの整数項の間のビット操作を実行します。  
   
 |演算子|Description|  
@@ -78,11 +83,11 @@ caps.handback.revision: 8
 |<\<|ビット パターン上で算術左シフトを実行します。|  
 |>>|ビット パターン上で算術右シフトを実行します。|  
   
-## 参照  
- [[式] ダイアログ ボックス](../Topic/Expression%20Dialog%20Box.md)   
+## <a name="see-also"></a>参照  
+ [[式] ダイアログ ボックス](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [[式] ダイアログ ボックス &#40;レポート ビルダー&#41;](../Topic/Expression%20Dialog%20Box%20\(Report%20Builder\).md)  
+ [[式] ダイアログ ボックス &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)  
   
   

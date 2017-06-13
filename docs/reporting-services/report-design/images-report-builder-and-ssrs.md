@@ -1,23 +1,28 @@
 ---
-title: "画像 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "画像 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b50d53f5b7ba102454f53646dec8cf1897df52f9
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# 画像 (レポート ビルダーおよび SSRS)
+# <a name="images-report-builder-and-ssrs"></a>画像 (レポート ビルダーおよび SSRS)
   画像は、レポート内に埋め込まれている画像、データベースに格納されている画像、レポート サーバー上に格納されている画像、または Web 上の他の場所に格納されている画像への参照を保持するレポート アイテムです。 画像は、行データとして繰り返し使用されるピクチャである場合もあります。 画像は、任意のレポート アイテムの背景としても使用できます。  
   
  サーバーにロゴを保存すると、多くのレポートで同じロゴを使用できるので効果的です。  
@@ -34,19 +39,16 @@ caps.handback.revision: 9
   
  ![rs_DataboundBikes](../../reporting-services/report-design/media/rs-databoundbikes.gif "rs_DataboundBikes")  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="ImagesReportParts"></a> レポート パーツとしての画像  
  画像は、レポート パーツとしてレポートとは別に保存できます。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="EmbedImages"></a> 埋め込み画像  
  レポートに画像を埋め込み、すべての画像データがレポート定義内に格納されるようにすることができます。 画像を埋め込む場合は、画像が MIME でエンコードされ、テキストとしてレポート定義に格納されます。 埋め込み画像を使用すると、常に確実に画像がレポートで利用できるようになりますが、レポート定義のサイズが大きくなります。  
   
- 画像の埋め込みの詳細については、「[レポートへの画像の埋め込み &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)」を参照してください。  
+ 画像の埋め込みの詳細については、「 [レポートへの画像の埋め込み &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)」を参照してください。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="ExternalImages"></a> 外部の画像  
  画像に URL を指定することにより、レポートに格納された画像を含めることができます。 レポートで外部の画像を使用する場合、画像ソースは **[外部]** に設定され、この画像の値は画像の URL アドレスまたはパスになります。  
@@ -55,9 +57,8 @@ caps.handback.revision: 9
   
  レポート ビルダーまたはレポート デザイナーでレポートを実行すると、ユーザーの資格情報を使用して画像が表示されます。 レポート サーバーでレポートを実行する場合、画像にアクセスするための十分なサーバー資格情報がないとレポートの画像を表示することはできません。 その場合は、システム管理者に問い合わせてください。  
   
- 外部の画像をレポートに追加する方法について詳しくは、「[外部の画像の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)」を参照してください。  
+ 外部の画像をレポートに追加する方法について詳しくは、「 [外部の画像の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)」を参照してください。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="BackgroundImages"></a> 背景画像  
  画像は、レポート本文や四角形、テキスト ボックス、一覧、マトリックス、テーブルの背景画像としても使用できます。 背景画像と画像には、同じようなプロパティがあります。 アイテムの背景を埋めるために、画像を繰り返す方法も指定できます。  
@@ -65,14 +66,12 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  HTML 表示拡張機能などのいくつかの表示拡張機能では、レポート本文用の背景画像が本文、ページ ヘッダー、ページ フッター内に表示されます。 ページ ヘッダーおよびページ フッター用にそれぞれ別の背景画像を定義できますが、画像を定義しない場合は、本文の背景画像が使用されます。 画像表示拡張機能などの他の表示拡張機能では、ページ ヘッダーおよびページ フッターに本文の背景画像は表示されません。  
   
- 背景画像を追加する方法について詳しくは、「[背景画像の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md)」を参照してください。  
+ 背景画像を追加する方法について詳しくは、「 [背景画像の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md)」を参照してください。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="DataboundImages"></a> データバインド画像  
- データベースに格納されている画像をレポートに追加することができます。 静的画像に使用したものと同じ画像レポート アイテムを使用しますが、画像がデータベースに格納されていることを示すプロパティ セットと共に使用します。 データバインド画像の処理については、「[データバインド画像の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)」を参照してください。  
+ データベースに格納されている画像をレポートに追加することができます。 静的画像に使用したものと同じ画像レポート アイテムを使用しますが、画像がデータベースに格納されていることを示すプロパティ セットと共に使用します。 データバインド画像の処理については、「 [データバインド画像の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)」を参照してください。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="HowTo"></a> 操作方法に関するトピック  
  [外部の画像の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)  
@@ -83,9 +82,8 @@ caps.handback.revision: 9
   
  [データバインド画像の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [画像ファイルへのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
  [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   

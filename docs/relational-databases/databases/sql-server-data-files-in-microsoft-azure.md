@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f04f47c6230a65140c405db039ce737ad3aa7762
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: c105f4fae3b3fffb61ef892cecbbe75754ccfd28
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 内の SQL Server データ ファイル
@@ -126,7 +126,7 @@ ON
  ここでは、Azure 機能で SQL Server データ ファイルを使用する場合に使用可能なツールとプログラミング リファレンス ライブラリについて説明します。  
   
 ### <a name="powershell-support"></a>PowerShell のサポート  
- ファイル パスの代わりに BLOB ストレージの URL パスを参照することにより、SQL Server データ ファイルを Azure BLOB ストレージ サービスに格納するには、PowerShell コマンドレットを使用します。 BLOB には、`: http://storageaccount.blob.core.windows.net/<container>/<blob>` という URL 形式を使用してアクセスします。  
+ ファイル パスの代わりに BLOB ストレージの URL パスを参照することにより、SQL Server データ ファイルを Azure BLOB ストレージ サービスに格納するには、PowerShell コマンドレットを使用します。 次の URL 形式を使用して Blob にアクセスします。`http://storageaccount.blob.core.windows.net/<container>/<blob>`です。  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>SQL Server オブジェクトとパフォーマンス カウンターのサポート  
  SQL Server 2014 以降では、Azure Storage 機能内の SQL Server データ ファイルと組み合わせて使用する目的で、1 つの新しい SQL Server オブジェクトが追加されました。 新しい SQL Server オブジェクトは [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) と呼ばれます。これをシステム モニターで使用すると、SQL Server を Microsoft Azure Storage と共に使用する場合のアクティビティを監視できます。  

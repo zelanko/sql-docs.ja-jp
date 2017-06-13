@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80239c8fbf3111d0161dece677b369aea30d9060
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: ecc4752f5bf52931df9c7af62b5828b92f8f0123
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Web 同期用の IIS 7 の構成
@@ -286,7 +286,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
     4.  プロキシ サーバーを使用している場合は、 **[LAN にプロキシ サーバーを使用する]** と **[ローカル アドレスにはプロキシ サーバーを使用しない]**チェック ボックスをオンにして、 **[OK]**をクリックします。  
   
-2.  サブスクライバー側の Internet Explorer から診断モードでサーバーに接続します。診断モードで接続するには、replisapi.dll のアドレスの後に「 `?diag` 」を追加します。 たとえば、**https://server.domain.com/directory/replisapi.dll?diag** です。  
+2.  サブスクライバー側の Internet Explorer から診断モードでサーバーに接続します。診断モードで接続するには、replisapi.dll のアドレスの後に「 `?diag` 」を追加します。 たとえば、 `https://server.domain.com/directory/replisapi.dll?diag`のようにします。  
   
     > [!NOTE]  
     >  上の例の **server.domain.com** は、IIS マネージャーの **[サーバー証明書]** セクションに表示される **[発行先]** の正確な名前に置き換える必要があります。  

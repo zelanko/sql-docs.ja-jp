@@ -1,50 +1,55 @@
 ---
-title: "[ジョブのプロパティ] (Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.jobproperties.f1"
+title: "ジョブのプロパティ (Management Studio) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.jobproperties.f1
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 13
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# [ジョブのプロパティ] (Management Studio)
+# <a name="job-properties-management-studio"></a>[ジョブのプロパティ] (Management Studio)
   **[ジョブのプロパティ]** ページを使用して、進行中のレポートまたはサブスクリプションを取り消す前にそれらの情報を表示できます。  
   
- このページを開くには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を起動して、レポート サーバーに接続し、 **[ジョブ]** フォルダーを開きます。 実行中のジョブを右クリックし、**[プロパティ]** をクリックします。  
+ このページを開くには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を起動して、レポート サーバーに接続し、 **[ジョブ]** フォルダーを開きます。 実行中のジョブを右クリックし、 **[プロパティ]**をクリックします。  
   
 > [!NOTE]  
 >  この機能は、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services ではサポートされません。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]を実行している場合、このページは表示されません。  
   
-## 処理手順  
+## <a name="tasks"></a>処理手順  
  ジョブに関する情報を表示する前に、ページを更新してレポート サーバーで現在実行されているジョブに関する情報を取得します。  
   
 1.  レポート サーバーのフォルダーを開きます。  
   
-2.  **[ジョブ]** を右クリックし、**[更新]** をクリックします。  
+2.  **[ジョブ]**を右クリックし、 **[更新]**をクリックします。  
   
-3.  ジョブが表示されたら、ジョブを右クリックして、**[プロパティ]** をクリックします。  
+3.  ジョブが表示されたら、ジョブを右クリックして、 **[プロパティ]**をクリックします。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[ジョブ ID]**  
  処理中にジョブに割り当てられる GUID。 この値は、レポートまたはサブスクリプションが実行されるたびにランダムに生成されます。  
   
  **[ジョブの状態]**  
- 有効な値は、**[新規]** および **[実行中]** です。 ジョブの開始時の状態は常に **[新規]** です。 60 秒後に、状態は **[実行中]**に変わります。 変更を確認するには、ページを更新する必要があります。  
+ 有効な値は、 **[新規]** および **[実行中]**です。 ジョブの開始時の状態は常に **[新規]** です。 60 秒後に、状態は **[実行中]**に変わります。 変更を確認するには、ページを更新する必要があります。  
   
  **ジョブの種類**  
- 有効な値は、**[ユーザー]** および **[システム]** です。 ユーザー ジョブは、各ユーザーによって開始される任意のジョブです。 このジョブには、要求時のレポートの実行、レポート履歴スナップショットの手動生成、またはレポート実行スナップショットの手動作成が含まれます。 実行中の標準サブスクリプションも、ユーザー ジョブです。 システム ジョブは、レポート サーバーで開始されるジョブです。 システム ジョブには、スケジュールでトリガーされるレポートの処理が含まれます。  
+ 有効な値は、 **[ユーザー]** および **[システム]**です。 ユーザー ジョブは、各ユーザーによって開始される任意のジョブです。 このジョブには、要求時のレポートの実行、レポート履歴スナップショットの手動生成、またはレポート実行スナップショットの手動作成が含まれます。 実行中の標準サブスクリプションも、ユーザー ジョブです。 システム ジョブは、レポート サーバーで開始されるジョブです。 システム ジョブには、スケジュールでトリガーされるレポートの処理が含まれます。  
   
  **ジョブの操作**  
  レポートの場合、この列には実行中のレポート実行処理が表示されます。 この値は常に **[表示]**です。  
@@ -67,7 +72,7 @@ caps.handback.revision: 13
  **[ユーザー名]**  
  ユーザーによって開始された処理の場合、この列には処理を開始したユーザーの名前が表示されます。 システム ジョブの場合は、レポート サーバーの名前になります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Management Studio のレポート サーバーの F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Management Studio でレポート サーバーに接続する](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Manage a Running Process](../../reporting-services/subscriptions/manage-a-running-process.md)  

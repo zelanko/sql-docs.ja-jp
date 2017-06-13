@@ -2,7 +2,7 @@
 title: "データベース レベルのロール | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 12/16/2016
+ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -43,10 +43,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ccfe7ee55e50f0530b33855f4ad57549a1da712
+ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
+ms.openlocfilehash: 411da6974090c9ccad6aa6184c248537bfdebe79
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/25/2017
 
 ---
 # <a name="database-level-roles"></a>データベース レベルのロール
@@ -71,7 +71,7 @@ ms.lasthandoff: 04/11/2017
 
 ## <a name="fixed-database-roles"></a>固定データベース ロール
   
- 次の表に、固定データベース ロールとその機能を示します。 これらのロールは、すべてのデータベースに存在します。 固定データベース ロールに割り当てられている権限を変更することはできません。   
+ 次の表に、固定データベース ロールとその機能を示します。 これらのロールは、すべてのデータベースに存在します。 を除き、**パブリック**データベース ロール、固定データベース ロールに割り当てられたアクセス許可を変更することはできません。   
   
 |固定データベース ロールの名前|Description|  
 |-------------------------------|-----------------|  
@@ -87,7 +87,7 @@ ms.lasthandoff: 04/11/2017
 
 固定データベース ロールに割り当てられている権限を変更することはできません。 次の図は、固定データベース ロールに割り当てられている権限を示しています。
 
-![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/fixed-database-role-permissions.jpg)
+![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
 ## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>特別なロール - [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 04/11/2017
   
 |msdb ロール名|Description|  
 |--------------------|-----------------|  
-|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|これらのデータベース ロールのメンバーは、 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]を管理および使用できます。 以前のバージョンからアップグレードされた [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスには、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] ではなくデータ変換サービス (DTS) を使用して名前が付けられた古いバージョンのロールが含まれている場合があります。 詳細については、「[Integration Services のロール &#40;SSIS サービス&#40;](../../../integration-services/service/integration-services-roles-ssis-service.md)」を参照してください。|  
+|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|これらのデータベース ロールのメンバーは、 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]を管理および使用できます。 以前のバージョンからアップグレードされた [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスには、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] ではなくデータ変換サービス (DTS) を使用して名前が付けられた古いバージョンのロールが含まれている場合があります。 詳細については、「[Integration Services のロール &#40;SSIS サービス&#40;](../../../integration-services/security/integration-services-roles-ssis-service.md)」を参照してください。|  
 |**dc_admin**<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|これらのデータベース ロールのメンバーは、データ コレクターを管理および使用できます。 詳細については、「 [Data Collection](../../../relational-databases/data-collection/data-collection.md)」を参照してください。|  
 |**PolicyAdministratorRole**|**PolicyAdministratorRole** データベース ロールのメンバーは、ポリシー ベースの管理のポリシーと条件で、すべての構成作業とメンテナンス作業を実行できます。 詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](../../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)」を参照してください。|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|これらのデータベース ロールのメンバーは、登録済みサーバーのグループを管理および使用できます。|  

@@ -1,28 +1,36 @@
 ---
-title: "レポート ビルダー チュートリアル | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "レポート ビルダー チュートリアル |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 0db221b65dff8a531893657c47c776dc350c4aef
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# レポート ビルダー チュートリアル
-以下のレポート ビルダー チュートリアルでは、基本的な[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]のページネーションのあるレポートを作成する方法について学習できます。  
+# <a name="report-builder-tutorials"></a>レポート ビルダー チュートリアル
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
+以下のレポート ビルダー チュートリアルでは、基本的な [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページネーションのあるレポートを作成する方法について学習できます。  
   
 [チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/prerequisites-for-tutorials-report-builder.md)  
-チュートリアルを使用するには、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] データベースに対する読み取り専用アクセスと、[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] レポート サーバーにアクセスするための権限が必要です。  
+これらのチュートリアルを使用するのには、SQL Server データベースへのアクセス許可を読み取り専用のアクセスが必要な[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]レポート サーバー。  
   
 これらの前提条件については、レポート サーバー管理者に問い合わせてください。  
   
@@ -33,7 +41,7 @@ caps.handback.revision: 11
 レポートを初めて作成する場合は、このチュートリアルの手順に従ってください。 このチュートリアルでは、レポート ビルダーを使用してデータ ソース接続を作成する方法、簡単なクエリを定義する方法、データを格納するレイアウトを構築する方法、レポートの書式を設定する方法、およびグループと合計を追加する方法について説明します。  
   
 [チュートリアル: マトリックス レポートの作成 (レポート ビルダー)](../reporting-services/tutorial-creating-a-matrix-report-report-builder.md)  
-マトリックスを追加して構成するには、このチュートリアルの手順に従ってください。 テーブルまたはマトリックス ウィザードを使用してレポート データソース、データセット、およびレイアウトを作成し、レポート ビルダーの**デザイン** ビューからマトリックスの体裁を整えます。  
+マトリックスを追加して構成するには、このチュートリアルの手順に従ってください。 テーブルまたはマトリックス ウィザードを使用してレポート データソース、データセット、およびレイアウトを作成し、レポート ビルダーの **デザイン** ビューからマトリックスの体裁を整えます。  
   
 [チュートリアル: 自由形式のレポートの作成 (レポート ビルダー)](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)  
 自由形式のレポートを一から作成するには、このチュートリアルの手順に従ってください。 これは、ニュースレター形式のレポートになります。  
@@ -67,11 +75,11 @@ Analysis Services キューブに基づくドリルスルー シナリオのレ�
   
 [チュートリアル: 式の概要](../reporting-services/tutorial-introducing-expressions.md)  
 このチュートリアルの手順に従い、式を使用してフィールド値を連結、計算、および参照し、レポートに表示する方法を学習します。 また、式を使用して、条件によって異なる画像およびインジケーターの状態を表示する方法も学習します。  
-  
-## 参照  
-[レポート デザイン ビュー (レポート ビルダー)](../reporting-services/report-builder/report-design-view-report-builder.md)  
+
+## <a name="next-steps"></a>次の手順
+
+[レポート デザイン ビュー](../reporting-services/report-builder/report-design-view-report-builder.md)  
 [SQL Server 2016 のレポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-[チュートリアル: オフラインでのクイック グラフ レポートの作成 (レポート ビルダー)](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
-  
-  
-  
+[チュートリアル: オフラインでのクイック グラフ レポートを作成します。](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+
+他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

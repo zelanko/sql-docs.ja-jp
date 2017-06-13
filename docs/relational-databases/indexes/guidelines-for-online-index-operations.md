@@ -1,7 +1,7 @@
 ---
 title: "オンライン インデックス操作のガイドライン | Microsoft Docs"
 ms.custom: 
-ms.date: 04/09/2017
+ms.date: 04/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 44ef45ea5831186a3b6b7218111444d79ceef128
+ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
+ms.openlocfilehash: 508440b3e6cd15d4fb70f933c380e958dad74d56
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>オンライン インデックス操作のガイドライン
@@ -38,6 +38,7 @@ ms.lasthandoff: 04/11/2017
 -   テーブルに LOB データ型が含まれていても、そのデータ型の列がキー列または非キー (付加) 列としてインデックス定義で使用されていない場合は、一意ではない非クラスター化インデックスをオンラインで作成できます。  
   
 -   ローカル一時テーブルのインデックスの作成、再構築、または削除は、オンラインでは実行できません。 この制限は、グローバル一時テーブルのインデックスには当てはまりません。
+- インデックスは、予期しないエラーが発生、データベースのフェールオーバー後に停止したところから再開できますまたは**PAUSE**コマンド。 参照してください[Alter Index](../../t-sql/statements/alter-index-transact-sql.md)です。 この機能は、SQL Server 2017 のパブリック プレビューでです。
 
 > [!NOTE]  
 >  オンラインでのインデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、[各エディションがサポートする機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)に関するページを参照してください。  
@@ -89,6 +90,30 @@ ms.lasthandoff: 04/11/2017
 ## <a name="transaction-log-considerations"></a>トランザクション ログに関する注意点  
  オフライン、オンラインを問わず、大規模なインデックス操作を行うと、大量のデータ読み込みが発生し、トランザクション ログがすぐにいっぱいになってしまうことがあります。 インデックス操作をロールバックできるようにするため、インデックス操作が完了するまでは、トランザクション ログを切り捨てることはできません。ただし、インデックス操作中にログをバックアップすることはできます。 したがって、トランザクション ログには、インデックス操作中にインデックス操作によるトランザクションと、同時実行ユーザーによるトランザクションの両方を格納できるだけの十分な領域が割り当てられている必要があります。 詳細については、「 [インデックス操作用のトランザクション ログのディスク領域](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)」を参照してください。  
 
+## <a name="resumable-index-rebuild-considerations"></a>再開可能なインデックス再構築に関する考慮事項
+
+> [!NOTE]
+> 参照してください[Alter Index](../../t-sql/statements/alter-index-transact-sql.md)です。 この機能は、SQL Server 2017 のパブリック プレビューでです。
+>
+
+再開可能なオンライン インデックス再構築を実行すると、次のガイドラインが適用されます。
+-    目的の管理、計画と、インデックスのメンテナンス ウィンドウの拡張します。 一時停止し、メンテナンス期間を合わせてインデックス再構築操作複数回を再起動します。
+- (データベースのフェールオーバーやディスク領域が不足する) などのインデックス再構築の障害から回復しています。
+- インデックス操作が一時停止しているときに、元の両方のインデックスとディスク領域と DML 操作中に更新する必要があります、新しく作成されたものが必要とします。
+
+- (この操作を通常のオンライン インデックス操作を実行できません)、インデックスの再構築操作中に切り捨てのログの切り捨てを有効にします。
+- SORT_IN_TEMPDB = ON オプションがサポートされていません
+
+> [!IMPORTANT]
+> 再開可能な状態の再構築では、この操作より優れたログ領域の管理中にログの切り捨てを許可する実行時間の長い切り捨てを開いたままにする必要はありません。 新しいデザインは、再開可能な操作を再開するために必要なすべての参照と共にデータベースに必要なデータを保持する管理されています。
+>
+
+一般に、再開可能な状態と再開不可のオンライン インデックス再構築のパフォーマンスの違いはありません。 再開可能なインデックスを更新すると、インデックスの再構築操作中には一時停止します。
+- 通常は読み取り専用のワークロードのパフォーマンスに与える影響は大きくありません。 
+- 更新プログラムの量が多いワークロードでいくつかのスループットの低下 (当社テスト 10% 未満の番組の低下) があります。
+
+一般に、最適化の品質の再開し、再開不可のオンライン インデックス再構築の間の違いはありません。
+ 
 ## <a name="related-content"></a>関連コンテンツ  
  [オンライン インデックス操作の動作原理](../../relational-databases/indexes/how-online-index-operations-work.md)  
   

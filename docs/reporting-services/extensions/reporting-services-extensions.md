@@ -1,0 +1,61 @@
+---
+title: "Reporting Services 拡張機能 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- docset-sql-devref
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: reference
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- SQL Server Reporting Services, extending
+- extensions [Reporting Services], about extensions
+- SSIS, extending
+- Reporting Services, extending
+- extensions [Reporting Services]
+ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
+caps.latest.revision: 45
+author: sabotta
+ms.author: carlasab
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: cd4cd15bf03648329dab8bc7ef55314ece7cf9a2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
+---
+# <a name="reporting-services-extensions"></a>Reporting Services の拡張機能
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のモジュール式アーキテクチャは、拡張性を考慮して設計されています。 マネージ コード API を使用して、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の多くのコンポーネントで使用される拡張機能を容易に開発、インストール、および管理できます。 プライベートを作成することができますまたは共有アセンブリを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]新規追加および[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]をビジネスのニーズを満たすように機能します。  
+  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のユニークな拡張可能アーキテクチャによって、開発者は、製品とそのコンポーネントの特定の機能を拡張できます。 現在では、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のデータ処理機能を拡張するために幅広いサポートがあります。 データ処理 API では、使い慣れた [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーのコンストラクトと規約が採用されているので、開発者は、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に新しいデータ処理を追加することができます。 これらのデータ処理拡張機能によって、レポート サーバーとレポート デザイナーの両方に機能を追加し、カスタム データをレポートにシームレスに統合できます。  
+  
+ 配信拡張機能もサポートされています。 配信 API は [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アーキテクチャと完全に統合されているので、さまざまな配信メカニズムを使用して、レポート通知をユーザーに送信できます。 レポート サーバーを拡張してカスタム配信をユーザーに提供できます。レポート マネージャーのサブスクリプション管理ページを拡張して、カスタム配信拡張機能を使用したサブスクリプションを可能にします。  
+  
+ 別のレポート サーバー拡張機能であるレポート定義カスタマイズ拡張機能 (RDCE) では、レポート定義を処理エンジンに渡す前に動的にカスタマイズできます。 レポートは、ユーザーや言語などの要因に基づいてカスタマイズできます。 たとえば、部署のマネージャーやメンバーなどのユーザーごとに異なるビューを実装したり、フランス語やアラビア語では異なるレイアウトで表示されるようにレポートをカスタマイズしたりできます。  
+  
+## <a name="in-this-section"></a>このセクションの内容  
+ [セキュリティ拡張機能に関する考慮事項](../../reporting-services/extensions/security-considerations-for-extensions.md)  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 拡張機能の開発と配置に関連するセキュリティ上の問題について説明します。  
+  
+ [データ処理拡張機能の実装](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のデータ処理拡張機能を実装するための要件と手順について説明します。  
+  
+ [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の配信拡張機能を実装するための要件と手順について説明します。  
+  
+ [表示拡張機能を実装します。](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)  
+ 表示拡張機能の開発の概要が記載されています。  
+  
+ [セキュリティ拡張機能の実装](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のセキュリティ拡張機能を実装するための要件と手順について説明します。  
+  
+ [Reporting Services 拡張機能ライブラリ](../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張可能な機能を対象とした拡張機能 API ライブラリのプログラミング リファレンスです。  
+  
+  

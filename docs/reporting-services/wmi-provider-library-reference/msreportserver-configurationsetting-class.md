@@ -1,36 +1,41 @@
 ---
-title: "MSReportServer_ConfigurationSetting クラス | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "MSReportServer_ConfigurationSetting Class"
-apilocation: 
-  - "reportingservices.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "WMI プロバイダー [Reporting Services]、MSReportServer_ConfigurationSetting クラス"
-  - "MSReportServer_ConfigurationSetting クラス"
+title: "MSReportServer_ConfigurationSetting クラス |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- MSReportServer_ConfigurationSetting Class
+apilocation:
+- reportingservices.mof
+apitype: MOFDef
+helpviewer_keywords:
+- WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
+- MSReportServer_ConfigurationSetting class
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 caps.latest.revision: 39
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 39
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c9a364ca856fef827afee604f64893ce20d21a1
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# MSReportServer_ConfigurationSetting クラス
+# <a name="msreportserverconfigurationsetting-class"></a>MSReportServer_ConfigurationSetting クラス
   レポート サーバー インスタンスのインストール パラメーターとランタイム パラメーターを表します。 これらのパラメーターはレポート サーバーの構成ファイルに格納されています。  
   
- この種類の全メンバーの一覧については、「[MSReportServer_ConfigurationSetting メンバー](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)」を参照してください。  
+ この種類の全メンバーの一覧については、「 [MSReportServer_ConfigurationSetting メンバー](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)」を参照してください。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```vb  
 Public Class MSReportServer_ConfigurationSetting  
@@ -40,11 +45,11 @@ Public Class MSReportServer_ConfigurationSetting
 public class MSReportServer_ConfigurationSetting  
 ```  
   
-## スレッド セーフ  
- この型の public static ([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] では **Shared**) のすべてのメンバーは、マルチスレッド操作で安全に使用できます。 インスタンスのメンバーは、スレッドセーフであるとは限りません。  
+## <a name="thread-safety"></a>スレッド セーフ  
+ この型の public static (**では** Shared [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) のすべてのメンバーは、マルチスレッド操作で安全に使用できます。 インスタンスのメンバーは、スレッドセーフであるとは限りません。  
   
-## 例  
- このコードを実行するには、\<*servername*> を実際のサーバー名に置き換えます。 インストールの場所が既定でない場合は、その場所を指すようにパスを更新します。 次のコード例は、*MSReportServer_ConfigurationSetting* クラスの各プロパティを反復処理し、各プロパティの名前とその値をコンソールに出力します。  
+## <a name="example"></a>例  
+ 次のコードを実行するには、それぞれの代わりに、サーバー名を追加\< *servername*>。 インストールの場所が既定でない場合は、その場所を指すようにパスを更新します。 次のコード例は、 *MSReportServer_ConfigurationSetting* クラスの各プロパティを反復処理し、各プロパティの名前とその値をコンソールに出力します。  
   
 ```vb  
 Imports System  
@@ -168,12 +173,12 @@ class Class1
 }  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
  **プラットフォーム:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

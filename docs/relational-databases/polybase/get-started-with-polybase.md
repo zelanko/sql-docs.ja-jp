@@ -2,7 +2,7 @@
 title: "PolyBase の概要 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 10/25/2016
+ms.date: 5/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -25,16 +25,16 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 13d43201a92c729dd3405d2d436942316ebad0e4
+ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
+ms.openlocfilehash: 59bf4021617603f0720c23ca192f4ddb65aa6834
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="get-started-with-polybase"></a>PolyBase の概要
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  このトピックには、PolyBase の実行に関する基本事項が記載されています。 詳細については、「 [PolyBase ガイド](../../relational-databases/polybase/polybase-guide.md)」を参照してください。  
+  このトピックには、SQL Server インスタンス上の PolyBase の実行に関する基本事項が含まれています。
   
  次の手順を実行すると、次の結果が得られます。  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 04/11/2017
 -   PolyBase オブジェクトを使用するクエリの例を確認できる  
   
 ## <a name="prerequisites"></a>前提条件  
- [SQL Server (64 ビット)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)のインスタンス。  
+ インスタンス[SQL Server (64 ビット)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)次。  
   
 -   Microsoft .NET Framework 4.5。  
   
@@ -55,23 +55,21 @@ ms.lasthandoff: 04/11/2017
   
 -   最小メモリ: 4 GB。  
   
--   最小ハード ディスク容量: 2 GB。  
-  
+-   最小ハード ディスク容量: 2 GB。    
 -   TCP/IP 接続を有効にする必要があります。 (「 [サーバー ネットワーク プロトコルを有効または無効にする](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)」を参照してください。)  
   
+ 
  次のいずれかの外部データ ソース:  
   
 -   Hadoop クラスター。 サポートされているバージョンについては、「 [PolyBase を構成する](#supported)」を参照してください。  
 
--   Azure BLOB ストレージ。 
-
--   Hadoop に対して計算プッシュダウン機能を使用する予定の場合、ターゲットの Hadoop クラスターに HDFS のコア コンポーネントの Yarn/MapReduce があり、Jobhistory サーバーが有効であることを確認する必要があります。 PolyBase から MapReduce 経由でプッシュダウン クエリを送信し、JobHistory Server からステータスをプルします。 いずれかのコンポーネントがない場合、クエリはエラー メッセージで失敗します。 
+-   Azure Blob ストレージ
 
 > [!NOTE]
-> HDInsight クラスターは、永続的なストレージのファイル システムとして Azure BLOB ストレージを使用します。 PolyBase を使用して、HDInsight クラスターで管理されているファイルをクエリできます。 この場合、外部データ ソースを作成して、HDInsight クラスター用ストレージとして構成されている BLOB を参照します。 
-  
+>   Hadoop に対して計算プッシュダウン機能を使用する予定の場合、ターゲットの Hadoop クラスターに HDFS のコア コンポーネントの Yarn/MapReduce があり、Jobhistory サーバーが有効であることを確認する必要があります。 PolyBase から MapReduce 経由でプッシュダウン クエリを送信し、JobHistory Server からステータスをプルします。 コンポーネントのいずれかがない場合は、クエリは失敗します。 
+
 ## <a name="install-polybase"></a>PolyBase のインストール  
- PolyBase をインストールしていない場合は、「[PolyBaseinstallation](../../relational-databases/polybase/polybase-installation.md)」を参照してください。  
+ PolyBase をインストールしていない場合は、次を参照してください。 [PolyBase インストール](../../relational-databases/polybase/polybase-installation.md)です。  
   
 ### <a name="how-to-confirm-installation"></a>インストールの確認方法  
  インストールが完了したら、次のコマンドを実行して、PolyBase が正常にインストールされていることを確認します。 PolyBase がインストールされている場合は 1 を返し、それ以外の場合は 0 を返します。  
@@ -81,17 +79,17 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
 ```  
   
 ##  <a name="supported"></a> Configure PolyBase  
- インストールが完了したら、Hadoop バージョンと Azure BLOB ストレージのどちらかを使用するように SQL Server を構成する必要があります。 PolyBase では、2 つの Hadoop プロバイダー: Hortonworks Data Platform (HDP) と Cloudera CDH がサポートされています。 Hortonworks は Windows マシンまたは Linux マシンで実行でき、これは構成の一部でもあります。  サポートされている外部データ ソースは次のとおりです。  
+ をインストールしたら、Hadoop バージョンのいずれかを使用する SQL Server または Azure Blob ストレージを構成する必要があります。 PolyBase には、Hortonworks Data Platform (HDP) と Cloudera Distributed Hadoop (CDH) の 2 つの Hadoop プロバイダーがサポートしています。  サポートされている外部データ ソースは次のとおりです。  
   
 -   Linux/Windows Server 上の Hortonworks HDP 1.3  
   
--   Linux 上の Hortonworks HDP 2.1 – 2.5
+-   Linux 上の Hortonworks HDP 2.1 – 2.6
 
 -   Windows Server 上の Hortonworks HDP 2.1 - 2.3  
   
 -   Linux 上の Cloudera CDH 4.3  
   
--   Linux 上の Cloudera CDH 5.1 – 5.5、5.9、5.10  
+-   Cloudera CDH 5.1-5.5、Linux 上の 5.9 5.11  
   
 -   Azure BLOB ストレージ  
   
@@ -101,8 +99,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
 ### <a name="external-data-source-configuration"></a>外部データ ソースの構成  
   
 1.  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ‘hadoop connectivity’ を実行し、適切な値を設定します。 既定で、hadoop connectivity は 7 に設定されています。 値を見つけるには、「[PolyBase 接続構成 &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)」を参照してください。  
-  
-    ```tsql  
+      ```tsql  
     -- Values map to various external data sources.  
     -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
     sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
@@ -159,7 +156,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
  詳細については、「 [PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md)」を参照してください。  
   
 ## <a name="create-t-sql-objects"></a>T-SQL オブジェクトの作成  
- Hadoop または Azure Storage のいずれかの外部データ ソースに依存するオブジェクトを作成します。  
+ 外部データ ソース、Hadoop または Azure ストレージのいずれかによってオブジェクトを作成します。  
   
 ### <a name="hadoop"></a>Hadoop  
   
@@ -189,8 +186,7 @@ CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (
 );  
   
 -- 4: Create an external file format.  
--- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
-  
+-- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).    
 CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
         FORMAT_TYPE = DELIMITEDTEXT,   
         FORMAT_OPTIONS (FIELD_TERMINATOR ='|',   

@@ -1,30 +1,35 @@
 ---
-title: "Reporting Services レポート (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "Reporting Services, レポートの作成"
+title: "Reporting Services レポート (SSRS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 06/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- Reporting Services, report creation
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 caps.latest.revision: 54
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 54
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fae0916939061f7e0206d749c9232691bca31f9d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services レポート (SSRS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートは、レポート データ要素とレポート レイアウト要素を含む XML ベースのレポート定義です。 クライアント ファイル システムでは、レポート定義に .rdl というファイル拡張子が付きます。 改ページ調整されたレポートをパブリッシュすると、そのレポートによって、レポート サーバーまたは SharePoint サイトに格納されたレポート アイテムが使用されます。 改ページ調整されたレポートは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によって提供されるサーバー ベースのレポート プラットフォームの一部です。 また、 [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)操作も可能です。  
+# <a name="reporting-services-reports-ssrs"></a>Reporting Services レポート (SSRS)
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートは、レポート データ要素とレポート レイアウト要素を含む XML ベースのレポート定義です。 クライアント ファイル システムでは、レポート定義に .rdl というファイル拡張子が付きます。 改ページ調整されたレポートをパブリッシュすると、そのレポートによって、レポート サーバーまたは SharePoint サイトに格納されたレポート アイテムが使用されます。 改ページ調整されたレポートは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]によって提供されるサーバー ベースのレポート プラットフォームの一部です。 また、 [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)操作も可能です。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を初めて使用する場合は、必ず「[Reporting Services Concepts (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)」(Reporting Services の概念 (SSRS)) を参照してください。  
   
-## Reporting Services の改ページ調整されたレポートの利点  
+## <a name="benefits-of-reporting-services-paginated-reports"></a>Reporting Services の改ページ調整されたレポートの利点  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート ソリューションは、次の目的に使用できます。  
   
 -   1 つのバージョンのファクトを提供する 1 つのデータ ソース セットを使用する。 レポートの基本をこれらのデータ ソースにして、ビジネス上の意思決定に役立つ統合データ表示を行うことができます。  
@@ -45,7 +50,7 @@ caps.handback.revision: 54
   
 -   レポート データのフィルター方法、グループ化方法、および並べ替え方法をカスタマイズする機能を提供するための式を定義する。  
   
- ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.gif "rs_GettingStartedReport")  
+ ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
 ##  <a name="bkmk_StagesSummary"></a> レポート処理の段階  
  レポートを作成するときは、XML 形式でレポート定義ファイル (.rdl) を定義します。 このファイルには、レポート プロセッサでレポート データとレポート レイアウトを組み合わせるために必要なすべての情報が含まれます。 レポートを表示すると、次の段階に従ってレポートが処理されます。  
@@ -60,22 +65,22 @@ caps.handback.revision: 54
   
  詳細については、「[Reporting Services Concepts (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)」(Reporting Services の概念 (SSRS)) の「[Stages of reports](../../reporting-services/reporting-services-concepts-ssrs.md#bkmk_StagesofReports)」(レポートの段階) を参照してください。  
   
-## 改ページ調整されたレポートの作成  
+## <a name="create-paginated-reports"></a>改ページ調整されたレポートの作成  
  改ページ調整されたレポートを作成するには:  
   
 -   **レポートの目的を決定します。** レポートを使用する対象ユーザーのためにレポートの目的を確認します。 適切にデザインされたレポートでは、レポートを表示するユーザーの理解を助け具体的な行動につながる情報が得られます。 この段階で行われたデザイン上の決定によって、後で選択するレポート パラメーター、レポート レイアウトのデザイン、およびレポートの表示方法が決まります。 詳細については、「[Planning a Report (Report Builder)](../../reporting-services/report-design/planning-a-report-report-builder.md)」(レポートの計画 (レポート ビルダー)) と「[Report Design Tips (Report Builder and SSRS)](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)」(レポート デザインに関するヒント (レポート ビルダーおよび SSRS)) を参照してください。  
   
 -   **クエリの種類を選択します。** 一般的な共有データセット クエリまたはレポート セットに固有のデータセット クエリのどちらを使用するかを決定します。 一般的なクエリの共有データセットは複数のレポートに使用する場合に維持しやすい一方で、各レポート デザイナーが特定のレポート セットの必要性に応じてデータをフィルターする必要があります。 詳細については、「[Report Data (SSRS)](../../reporting-services/report-data/report-data-ssrs.md)」(レポート データ (SSRS)) を参照してください。  
   
--   **関連データの表示を計画します。** レポートを表示するユーザーのための表示方法を計画します。 詳細データをドリル ダウンできる集計レポートは、大量のデータを処理するときに有益なアプローチです。 詳細については、「[ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/drillthrough, drilldown, subreports, and nested data regions.md)」を参照してください。  
+-   **関連データの表示を計画します。** レポートを表示するユーザーのための表示方法を計画します。 詳細データをドリル ダウンできる集計レポートは、大量のデータを処理するときに有益なアプローチです。 詳細については、「 [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)」を参照してください。  
   
 -   **権限を構成します。** 適切なレベルの権限を許可するための方法を計画します。 一般的には、レポート サーバーにフォルダー構造を作成し、レポートおよびレポート関連アイテムをベースとするロールとフォルダーのセキュリティにアクセスを許可します。 詳細については、「 [レポートのセキュリティ保護](#bkmk_SecureReportsSummary)」を参照してください。  
   
--   **作成環境を選択します。** 各作成ツールは異なる機能をサポートしています。 詳細については、「[Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)」を参照してください。  
+-   **作成環境を選択します。** 各作成ツールは異なる機能をサポートしています。 詳細については、「 [Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)」を参照してください。  
   
 -   各レポートに対して:  
   
-    -   **データのソースを特定します。** データの各ソースに対して、1 つのレポート データ ソースを定義します。 詳細については、「[データ接続、データ ソース、接続文字列 (レポート ビルダーと SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。  
+    -   **データのソースを特定します。** データの各ソースに対して、1 つのレポート データ ソースを定義します。 詳細については、「 [データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。  
   
     -   **各ソースから使用するデータを選択します。** 各データ ソースに対して、レポート データセットを定義します。 各データセットには、使用するデータを指定するためのクエリが含まれます。 レポート パラメーターがある場合、データセットを定義して各パラメーターに使用できる値リストを設定します。 詳細については、「[レポートへのデータの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)」と「[Report Parameters (Report Builder and Report Designer)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」(レポート パラメーター (レポート ビルダーおよびレポート デザイナー)) を参照してください。  
   
@@ -83,7 +88,7 @@ caps.handback.revision: 54
   
         -   [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
-        -   [グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+        -   [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
         -   [スパークラインとデータ バー (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -115,18 +120,18 @@ caps.handback.revision: 54
   
 -   **再利用できるコンポーネントを検討します。**  再利用のために共有できるデータ ソースまたはデータセット クエリがあるかどうかを確認します。 再利用できる場合は、レポート サーバーまたは SharePoint サイトで共有データ ソースと共有データセットを作成します。 データ領域がレポート パーツとして再利用するために適しているかどうかを確認します。 詳細については、「[レポート デザイナーでのレポート パーツ (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)」を参照してください。  
   
-## レポートのプレビュー  
- 各レポート作成ツールでは、レポートのプレビューがサポートされています。 詳細については、「[レポート デザイナーを使用してレポートをデザインする (SSRS)](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md)」の「[プレビュー](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md#bkmk_Preview)」セクションと、「[Previewing Reports in Report Builder](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)」(レポート ビルダーでのレポートのプレビュー) を参照してください。  
+## <a name="preview-reports"></a>レポートのプレビュー  
+ 各レポート作成ツールでは、レポートのプレビューがサポートされています。 詳細については、「[レポート デザイナーを使用してレポートをデザインする (SSRS)](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)」の「[プレビュー](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview)」セクションと、「[Previewing Reports in Report Builder](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)」(レポート ビルダーでのレポートのプレビュー) を参照してください。  
   
-## レポートの保存またはパブリッシュ  
- 各レポート作成ツールでは、レポートのローカル保存またはレポート サーバーか SharePoint サイトへのレポートのパブリッシュがサポートされています。 詳細については、「[レポート デザイナーを使用してレポートをデザインする (SSRS)](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md)」の「[保存と配置](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy)」セクションと、「[Saving Reports (Report Builder)](../../reporting-services/report-builder/saving-reports-report-builder.md)」(レポートの保存 (レポート ビルダー)) を参照してください。  
+## <a name="save-or-publish-reports"></a>レポートの保存またはパブリッシュ  
+ 各レポート作成ツールでは、レポートのローカル保存またはレポート サーバーか SharePoint サイトへのレポートのパブリッシュがサポートされています。 詳細については、「[レポート デザイナーを使用してレポートをデザインする (SSRS)](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)」の「[保存と配置](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy)」セクションと、「[Saving Reports (Report Builder)](../../reporting-services/report-builder/saving-reports-report-builder.md)」(レポートの保存 (レポート ビルダー)) を参照してください。  
   
-## レポートの表示  
+## <a name="view-reports"></a>レポートの表示  
  ローカル保存されたレポートやレポート サーバーにパブリッシュされたレポートのプレビューに加えて、ユーザーのためにさまざまなレポート表示方法を提供できます。 レポートを表示するには:  
   
--   **ブラウザー。**  レポート サーバー Web サービスまたは SharePoint サイトを使用してパブリッシュされたレポートを表示します。 SharePoint サイトでは、Web パーツを構成してパブリッシュされたレポートを表示することもできます。 詳細については、「[Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」(Reporting Services と Power View のブラウザー サポート)、「[Report Manager  (SSRS Native Mode)](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)」(Report Manager (SSRS Native Mode))、「[URL Access (SSRS)](../../reporting-services/url-access-ssrs.md)」(URL のアクセス (SSRS)) を参照してください。  
+-   **ブラウザー。**  レポート サーバー Web サービスまたは SharePoint サイトを使用してパブリッシュされたレポートを表示します。 SharePoint サイトでは、Web パーツを構成してパブリッシュされたレポートを表示することもできます。 詳細については、「[Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」(Reporting Services と Power View のブラウザー サポート)、「[Report Manager  (SSRS Native Mode)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)」(Report Manager (SSRS Native Mode))、「[URL Access (SSRS)](../../reporting-services/url-access-ssrs.md)」(URL のアクセス (SSRS)) を参照してください。  
   
--   **配信。**  サブスクリプションを構成して、レポートを電子メールでレポートのユーザーに配信するか、共有ファイル フォルダーに配信します。  詳細については「[Subscriptions and Delivery (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)」(サブスクリプションと配信 (Reporting Services)) を参照してください。  
+-   **配信。**  サブスクリプションを構成して、レポートを電子メールでレポートのユーザーに配信するか、共有ファイル フォルダーに配信します。  詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
   
 -   **エクスポート。**  レポートを表示するユーザーは、レポート ビューアー ツール バーからレポートを異なるファイル形式にエクスポートできます。 エクスポートするファイル形式は、レポート サーバー管理者が構成できます。 詳細については、「[Export Reports (Report Builder and SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」(レポートのエクスポート(レポート ビルダーと SSRS)) を参照してください。  
   
@@ -134,7 +139,7 @@ caps.handback.revision: 54
   
 -   **Web または Windows フォーム アプリケーション。**  Visual Studio を使用して、レポート ビューアー コントロールをホストする ASP.NET AJAX アプリケーションまたは Windows フォーム アプリケーションを開発します。 このコントロールは、レポート サーバー上にパブリッシュされたレポートを指すことができます。 詳細については、「 [Microsoft レポート](http://go.microsoft.com/fwlink/?LinkID=205399)」を参照してください。  
   
-## レポートの管理  
+## <a name="manage-reports"></a>レポートの管理  
  パブリッシュされたレポートを管理するには:  
   
 -   **データ ソース:** 共有データ ソースと埋め込みデータ ソースはレポート定義とは別に管理されます。  
@@ -158,26 +163,27 @@ caps.handback.revision: 54
   
 -   レポート サーバー管理者に、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインストールに使用されている承認システムと認証システムを確認します。 既定では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は Windows 認証、統合セキュリティ、およびロールの割り当てを使用してパブリッシュされたレポートへのアクセスを制御しています。 詳細については、「[ロールと権限 (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md)」と「[Reporting Services Security and Protection](../../reporting-services/security/reporting-services-security-and-protection.md)」(Reporting Services のセキュリティと保護) を参照してください。  
   
-## レポート データに基づく通知の作成  
+## <a name="create-notifications-based-on-report-data"></a>レポート データに基づく通知の作成  
  SharePoint サイトにパブリッシュされたレポートのデータ警告を作成できます。 データ警告は、レポートのデータ領域からのデータ フィードに基づきます。 既定では、データ領域に自動的に名前が付けられます。 レポート作成者は、ビジネス用途に基づいてデータ領域に名前を付けることで、レポートのデータ警告を作成しやすくすることができます。 データ警告を作成すると、データが指定した条件を満たす場合に、電子メールで通知を受信します。 詳細については、「[Generating Data Feeds from Reports (Report Builder and SSRS)](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)」(複数のレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS))、「[データ警告デザイナーでのデータ警告の作成](../../reporting-services/create-a-data-alert-in-data-alert-designer.md)」、「[Reporting Services Data Alerts](../../reporting-services/reporting-services-data-alerts.md)」を参照してください。  
   
-## レポートのアップグレード  
+## <a name="upgrade-reports"></a>レポートのアップグレード  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、複数バージョンのレポート定義、レポート サーバー、および SharePoint サイトがサポートされています。 レポートをアップグレードするには:  
   
 -   レポート サーバーのインストールをアップグレードします。 レポート サーバー上に格納されたコンパイル済みレポートは、初めて使用するときに自動的にアップグレードされます。 レポート定義 (.rdl) は変更されません。 詳細については、「 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)」を参照してください。  
   
 -   レポート作成環境でレポートを開きます。 多くの場合、レポート定義がアップグレードされます。 詳細については、「[レポートのアップグレード](../../reporting-services/install-windows/upgrade-reports.md)」と「[Deployment and Version Support in SQL Server Data Tools (SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)」(SQL Server データ ツールの配置およびバージョン サポート (SSRS)) を参照してください。  
   
-## レポートのトラブルシューティング  
+## <a name="troubleshoot-reports"></a>レポートのトラブルシューティング  
  レポートのトラブルシューティングを行うには:  
   
--   **問題の発生場所を確認します。** 「[Stages of a Report](#bkmk_StagesSummary)」(レポートの段階) の情報を確認します。  
+-   **問題の発生場所を確認します。** 「 [Stages of a Report](#bkmk_StagesSummary)」(レポートの段階) の情報を確認します。  
   
 -   **詳細情報の情報源を確認します。** たとえば、式を含むレポート デザインの場合、レポート ビルダー ツールよりもレポート デザイナー ツールで式の評価問題に関する詳細情報が得られます。 レポートの処理エラーの場合は、ログ ファイルに詳細情報が記録されています。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)   
  [拡張機能 (SSRS)](../../reporting-services/extensions-ssrs.md)   
  [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
   
+

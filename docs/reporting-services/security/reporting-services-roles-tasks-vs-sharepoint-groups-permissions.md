@@ -1,31 +1,36 @@
 ---
-title: "Reporting Services のロールおよびタスクと SharePoint のグループおよび権限の比較 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "permissions [Reporting Services], SharePoint integrated mode"
-  - "security [Reporting Services], tasks"
-  - "roles [Reporting Services], predefined"
-  - "SharePoint integration [Reporting Services], permissions"
-  - "permissions [Reporting Services], native mode"
-  - "security [Reporting Services], predefined roles"
-  - "セキュリティ [Reporting Services]、SharePoint 統合モード"
+title: "レポート サービス ロール タスクとします。SharePoint グループのアクセス許可 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- security [Reporting Services], tasks
+- roles [Reporting Services], predefined
+- SharePoint integration [Reporting Services], permissions
+- permissions [Reporting Services], native mode
+- security [Reporting Services], predefined roles
+- security [Reporting Services], SharePoint integrated mode
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 caps.latest.revision: 19
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 19
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 779105655150aae2f1397865c67f8e835fd99646
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services のロールおよびタスクと SharePoint のグループおよび権限の比較
+# <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>レポート サービス ロール タスクとします。SharePoint グループの権限
   このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードのロール ベースおよびタスク ベースの承認機能を、SharePoint 製品のセキュリティ機能と比較します。 このトピックでは、ロール、タスク、SharePoint グループ、権限レベル、および権限の用語と特徴を比較します。  
   
 ||  
@@ -41,9 +46,9 @@ caps.handback.revision: 19
 -   [ネイティブ モード タスクと SharePoint の権限の比較](#bkmk_compare_tasks_permissions)  
   
 ##  <a name="bkmk_compare_tools_terms"></a> 権限ツールと用語の比較  
- **ネイティブ モード:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードの権限オブジェクト (ロールおよびタスク) は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 内で作成し、レポート マネージャー内で個々のユーザーに対して構成します。  
+ **ネイティブ モード:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードの権限オブジェクト (ロールおよびタスク) は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 内で作成し、レポート マネージャー内で個々のユーザーに対して構成します。  
   
- **SharePoint モード:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードでは、SharePoint の権限の機能を活用します。 SharePoint のグループと権限は、次の **[サイトの設定]** ページで管理します。  
+ **SharePoint mode:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode utilizes the SharePoint permission features. SharePoint のグループと権限は、次の **[サイトの設定]** ページで管理します。  
   
  次の表では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードと SharePoint の間で、権限に関連するオブジェクトと概念を比較します。  
   
@@ -66,7 +71,7 @@ caps.handback.revision: 19
 |**コンテンツ マネージャー**<br /><br /> セキュリティを設定する権限を含めて、あらゆるアイテムおよびアイテムレベルの操作に対する完全な権限。|SharePoint サイト上のレポート サーバー アイテムに対するフル コントロールを許可するには、 **所有者** グループを使用します。 **所有者** グループにはフル コントロール権限が与えられるので、グループ メンバーは、サイトのコンテンツ、ページ、または機能に変更を加えることができます。 フル コントロールのアクセスは、サイト管理者のみに制限する必要があります。|  
 |**個人用レポート**|これに相当するグループはありません。 **個人用レポート** は、SharePoint モードで動作するレポート サーバーではサポートされません。 同等の機能が必要な場合は、 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] で個人用サイト機能を使用できます。|  
 |**パブリッシャー**<br /><br /> レポート、レポート モデル、共有データ ソース、およびリソースの追加、更新、表示、および削除を行います。|アイテムの追加と編集、および SharePoint サイト上の依存アイテムへの参照の更新を行う権限を許可するには、 **メンバー** グループを使用します。 **メンバー** グループには投稿レベルの権限が与えられます。グループ メンバーは、ページを表示してアイテムの追加または更新を行った後に、変更内容を送信して承認を求めることができます。|  
-|**レポート ビルダー**<br /><br /> レポートを表示し、個々のサブスクリプションを自己管理し、レポート ビルダーでレポートを開きます。|レポート ビルダーのレポート定義に相当するような定義済みの権限レベルまたは SharePoint グループはありません。 既定では、 **メンバー** グループまたは **所有者** グループに属するユーザーには、レポート ビルダーを使用する権限があります。 もっと多くのユーザーがレポート ビルダーを使用できるようにするには、レポート ビルダー ロールと同等の権限レベルが提供されるカスタム セキュリティ設定を作成する必要があります。 詳細については、「[SharePoint サイト上のレポート サーバー アイテムに対する権限の設定 (Reporting Services の SharePoint 統合モード)](../../reporting-services/security/set permissions for report server items on a sharepoint site.md)」を参照してください。|  
+|**レポート ビルダー**<br /><br /> レポートを表示し、個々のサブスクリプションを自己管理し、レポート ビルダーでレポートを開きます。|レポート ビルダーのレポート定義に相当するような定義済みの権限レベルまたは SharePoint グループはありません。 既定では、 **メンバー** グループまたは **所有者** グループに属するユーザーには、レポート ビルダーを使用する権限があります。 もっと多くのユーザーがレポート ビルダーを使用できるようにするには、レポート ビルダー ロールと同等の権限レベルが提供されるカスタム セキュリティ設定を作成する必要があります。 詳細については、「 [SharePoint サイト上のレポート サーバー アイテムに対する権限の設定 (Reporting Services の SharePoint 統合モード)](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)」を参照してください。|  
 |-|表示されたレポートを閲覧する権限を許可するには、 **閲覧者** グループを使用します。 **閲覧者** グループは、レポート アイテムのコンテンツをダウンロードすることも表示することもできません。<br /><br /> **注:** SQL Server 2012 以降の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、 **閲覧者** グループには、サブスクリプションを作成する権限がなくなりました。|  
 |**システム ユーザー** および **システム管理者**|これらのロールは、SharePoint モードで動作するレポート サーバーでは必要ありません。 **システム ユーザー** と **システム管理者** は、SharePoint ファーム レベルまたは Web アプリケーション レベルの権限に対応します。 レポート サーバーでは、これらのレベルでの承認が必要となる機能が提供されません。|  
   
@@ -102,11 +107,11 @@ caps.handback.revision: 19
 |レポート サーバーのプロパティを表示|システム|なし (該当しません)。 レポート サーバーでは、サーバーの全体管理で統合設定を表示する権限をユーザーに与えるかどうかは制御されません。|  
 |共有スケジュールの表示|システム|アイテムを開きます。|  
   
-## 参照  
- [SharePoint サイト上のレポート サーバー アイテムに対する権限の設定 (Reporting Services の SharePoint 統合モード)](../../reporting-services/security/set permissions for report server items on a sharepoint site.md)   
+## <a name="see-also"></a>参照  
+ [SharePoint サイト上のレポート サーバー アイテムに対する権限の設定 (Reporting Services の SharePoint 統合モード)](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [SharePoint Web アプリケーションのレポート サーバー操作に対する権限を設定する](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [ロールの定義](../../reporting-services/security/role-definitions.md)   
- [Predefined Roles](../../reporting-services/security/predefined-roles.md)  
+ [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   

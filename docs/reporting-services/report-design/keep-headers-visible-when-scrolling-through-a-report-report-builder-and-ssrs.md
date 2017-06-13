@@ -1,23 +1,28 @@
 ---
-title: "レポートのスクロール時にヘッダーを表示したままにする (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "(レポート ビルダーおよび SSRS) レポートのスクロール時にヘッダーを表示したまま |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f2fac57fe0e898a1ccbfbe33fb271eae76da1389
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# レポートのスクロール時にヘッダーを表示したままにする (レポート ビルダーおよび SSRS)
+# <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>レポートのスクロール時にヘッダーを表示したままにする (レポート ビルダーおよび SSRS)
   レポートを表示した後に、スクロールによって行ラベルや列ラベルが隠れないようにするために、行見出しまたは列見出しを固定できます。  
   
  行と列を制御する方法は、テーブルとマトリックスのどちらを使用しているかによって異なります。 テーブルを使用している場合は、静的メンバー (行見出しと列見出し) を表示したままにするよう構成します。 マトリックスを使用している場合は、行と列のグループ ヘッダーを表示したままにするよう構成します。  
@@ -38,15 +43,15 @@ caps.handback.revision: 10
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### スクロール中もマトリックス グループ ヘッダーを表示したままにするには  
+### <a name="to-keep-matrix-group-headers-visible-while-scrolling"></a>スクロール中もマトリックス グループ ヘッダーを表示したままにするには  
   
-1.  Tablix データ領域の行、列、またはコーナー ハンドルを右クリックし、**[Tablix のプロパティ]** をクリックします。  
+1.  Tablix データ領域の行、列、またはコーナー ハンドルを右クリックし、 **[Tablix のプロパティ]**をクリックします。  
   
 2.  **[全般]** タブの **[行のヘッダー]** または **[列のヘッダー]**で、 **[スクロール中もヘッダーを表示したままにする]**チェック ボックスをオンにします。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### スクロール中も静的 Tablix メンバー (行または列) を表示したままにするには  
+### <a name="to-keep-a-static-tablix-member-row-or-column-visible-while-scrolling"></a>スクロール中も静的 Tablix メンバー (行または列) を表示したままにするには  
   
 1.  デザイン画面でテーブル内の任意の場所をクリックし、グループ化ペインにグループと静的メンバーを表示します。  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 10
   
 3.  スクロール中も表示したままにする静的メンバー (行または列) をクリックします。 プロパティ ペインに **[Tablix メンバー]** プロパティが表示されます。  
   
-     ![Tablix メンバー プロパティ](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "Tablix メンバー プロパティ")  
+     ![Tablix メンバー プロパティ](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "Tablix メンバーのプロパティ")  
   
 4.  プロパティ ペインで、 **[FixedData]** を **True**に設定します。  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 10
   
  レポートを下方向または横方向にスクロールしたときに、静的な Tablix メンバーが表示されたままになります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Tablix データ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [レポートのエクスポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   

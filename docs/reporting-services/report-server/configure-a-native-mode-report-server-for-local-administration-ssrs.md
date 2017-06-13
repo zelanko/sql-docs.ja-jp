@@ -1,31 +1,36 @@
 ---
-title: "ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UAC"
-  - "installing Reporting Services"
-  - "Windows Vista"
-  - "Localhost"
-  - "windows server 2008"
-  - "Vista"
+title: "ローカルの管理 (SSRS) のネイティブ モード レポート サーバーの構成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UAC
+- installing Reporting Services
+- Windows Vista
+- Localhost
+- windows server 2008
+- Vista
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 caps.latest.revision: 20
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 20
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9939a592288fb5bc031dc53b94ac21c3809d0314
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成
-  レポート サーバー インスタンスをローカルに管理しようとする場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーを次のオペレーティング システムのいずれかに配置するには、追加の構成手順が必要です。 このトピックでは、レポート サーバーをローカル管理用に構成する方法を説明します。 レポート サーバーのインストールまたは構成をまだ行っていない場合は、[「インストール ウィザードからの SQL Server 2016 のインストール (セットアップ)」](../../database-engine/install-windows/install-sql-server-2016-from-the-installation-wizard-setup.md) および [「Reporting Services ネイティブ モードのレポート サーバーの管理」](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md) を参照してください。  
+# <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成
+  レポート サーバー インスタンスをローカルに管理しようとする場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーを次のオペレーティング システムのいずれかに配置するには、追加の構成手順が必要です。 このトピックでは、レポート サーバーをローカル管理用に構成する方法を説明します。 レポート サーバーのインストールまたは構成をまだ行っていない場合は、[「インストール ウィザードからの SQL Server 2016 のインストール (セットアップ)」](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) および [「Reporting Services ネイティブ モードのレポート サーバーの管理」](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md) を参照してください。  
   
 ||  
 |-|  
@@ -62,7 +67,7 @@ caps.handback.revision: 20
 ##  <a name="bkmk_configuraiton_overview"></a> 構成変更の概要  
  以下に示す構成変更でサーバーを構成することにより、標準ユーザーの権限を使用してレポート サーバーのコンテンツや操作を管理できます。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL を信頼済みサイトに追加します。 既定では、記載されているオペレーティング システムで動作している Internet Explorer は**保護モード**で実行されます。保護モードとは、同じコンピューターで実行されている高レベルのプロセスにブラウザーの要求が到達するのを防ぐ機能です。 レポート サーバー アプリケーションを信頼済みサイトに追加することで、それらのアプリケーションに対して保護モードを無効にすることができます。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL を信頼済みサイトに追加します。 既定では、記載されているオペレーティング システムで動作している Internet Explorer は **保護モード**で実行されます。保護モードとは、同じコンピューターで実行されている高レベルのプロセスにブラウザーの要求が到達するのを防ぐ機能です。 レポート サーバー アプリケーションを信頼済みサイトに追加することで、それらのアプリケーションに対して保護モードを無効にすることができます。  
   
 -   Internet Explorer で **[管理者として実行]** 機能を使用しなくてもコンテンツや操作を管理できる権限をレポート サーバー管理者に与えるロールの割り当てを作成します。 Windows ユーザー アカウントに対してロールの割り当てを作成することにより、Reporting Services が作成するあらかじめ定義された組み込みのロールの割り当てを置き換える明示的なロールの割り当てを使用して、コンテンツ マネージャーおよびシステム管理者の権限でレポート サーバーにアクセスできるようになります。  
   
@@ -73,11 +78,11 @@ caps.handback.revision: 20
   
 ###  <a name="bkmk_site_settings"></a> ブラウザー内の信頼済みサイトの設定  
   
-1.  [管理者として実行] の権限を使用してブラウザー ウィンドウを開きます。 **[スタート]** メニューの **[すべてのプログラム]** をクリックし、**[Internet Explorer]** を右クリックして **[管理者として実行]** をクリックします。  
+1.  [管理者として実行] の権限を使用してブラウザー ウィンドウを開きます。 **[スタート]** メニューの **[すべてのプログラム]**をクリックし、 **[Internet Explorer]**を右クリックして **[管理者として実行]**をクリックします。  
   
 2.  **[許可]** をクリックして続行します。  
   
-3.  URL アドレスにレポート マネージャーの URL を入力します。 手順については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの [「レポート マネージャー (SSRS ネイティブ モード)」](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md) を参照してください。  
+3.  URL アドレスにレポート マネージャーの URL を入力します。 手順については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの [「レポート マネージャー (SSRS ネイティブ モード)」](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を参照してください。  
   
 4.  **[ツール]**をクリックします。  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 20
   
 9. `http://<your-server-name>`を追加します。  
   
-10. 既定のサイトに HTTPS を使用していない場合は、**[ゾーンのすべてのサイトにサーバー証明書 (https:) を必要とする]** チェック ボックスをオフにします。  
+10. 既定のサイトに HTTPS を使用していない場合は、 **[ゾーンのすべてのサイトにサーバー証明書 (https:) を必要とする]** チェック ボックスをオフにします。  
   
 11. **[追加]**をクリックします。  
   
@@ -132,20 +137,20 @@ caps.handback.revision: 20
   
 8.  レポート マネージャーを閉じます。  
   
-9. **[管理者として実行]** を使用せずに再び Internet Explorer でレポート マネージャーを開きます。  
+9. **[管理者として実行]**を使用せずに再び Internet Explorer でレポート マネージャーを開きます。  
   
 ##  <a name="bkmk_configure_ssms"></a> ローカル レポート サーバー管理を行う目的で SQL Server Management Studio (SSMS) を構成するには  
  既定では、管理者権限を使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開始した場合以外は、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で使用できるレポート サーバー プロパティのいずれにもアクセスできません。  
   
- 高度な権限で [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を毎回起動しなくても済むように **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ロール プロパティとロールの割り当てを構成するには**、以下の手順を実行します。  
+ **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** ロール プロパティとロールの割り当てを構成して、高度な権限で [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を毎回起動する必要をなくすには、以下の手順を実行します。  
   
--   **[スタート]** メニューの **[すべてのプログラム]** をクリックし、**[SQL Server 2014]** をクリックし、**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]** を右クリックして **[管理者として実行]** をクリックします。  
+-   **[スタート]** メニューの **[すべてのプログラム]**をクリックし、 **[SQL Server 2014]**をクリックし、 **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**を右クリックして **[管理者として実行]**をクリックします。  
   
 -   ローカル [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバーへの接続  
   
 -   **[セキュリティ]** ノードで、 **[システム ロール]**をクリックします。  
   
--   **[システム管理者]** を右クリックし、**[プロパティ]** をクリックします。  
+-   **[システム管理者]** を右クリックし、 **[プロパティ]**をクリックします。  
   
 -   **[システム ロールのプロパティ]** ページで、 **[レポート サーバーのプロパティを表示]**を選択します。 システム管理者ロールを持つメンバーに割り当てる他のすべてのプロパティを選択します。  
   
@@ -158,7 +163,7 @@ caps.handback.revision: 20
  これで、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を開くときに **[管理者として実行]** を明示的に選択しなくても、レポート サーバーのプロパティにアクセスできるようになりました。  
   
 ##  <a name="bkmk_configure_ssdt"></a> ローカル レポート サーバー管理を行う目的で SQL Server データ ツール (SSDT) を構成するには  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を、このトピックの最初のセクションに記載したオペレーティング システムのいずれかにインストールした状況で、SSDT を使用してローカルのネイティブ モード レポート サーバーを操作する場合は、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を高度な権限で開くか、レポート サービス ロールを構成しない限り、権限エラーが発生します。 たとえば、十分な権限がない場合には次のような問題が発生します。  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を、このトピックの最初のセクションに記載したオペレーティング システムのいずれかにインストールした状況で、SSDT を使用してローカルのネイティブ モード レポート サーバーを操作する場合は、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を高度な権限で開くか、レポート サービス ロールを構成しない限り、権限エラーが発生します。 たとえば、十分な権限がない場合には次のような問題が発生します。  
   
 -   ローカル レポート サーバーにレポート アイテムを配置しようとすると、 **[エラー一覧]** ウィンドウに次のようなエラー メッセージが表示されます。  
   
@@ -166,7 +171,7 @@ caps.handback.revision: 20
   
  **SSDT を開くときに高度な権限を毎回使用するには:**  
   
-1.  スタート画面から「**sql server**」と入力し、**[SQL Server Data Tools]** を右クリックします。  **[管理者として実行]**をクリックします  
+1.  スタート画面から「 **sql server** 」と入力し、 **[SQL Server Data Tools]**を右クリックします。 **[管理者として実行]**をクリックします  
   
 2.  **[続行]**をクリックします。  
   
@@ -181,7 +186,7 @@ caps.handback.revision: 20
 ##  <a name="bkmk_addiitonal_informaiton"></a> 追加情報  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の管理に関連する追加の一般的な手順は、Windows ファイアウォールでポート 80 を開いてレポート サーバー コンピューターへのアクセスを許可することです。 手順については、「 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)」を参照してください。  
   
-## 参照  
- [Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+## <a name="see-also"></a>参照  
+ [「Reporting Services ネイティブ モードのレポート サーバーの管理」](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

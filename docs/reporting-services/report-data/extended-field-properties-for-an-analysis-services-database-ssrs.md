@@ -1,37 +1,42 @@
 ---
-title: "Analysis Services データベースに対する拡張フィールド プロパティ (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Analysis Services データベース (SSRS) の拡張フィールド プロパティ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2a73370c0ae9f3d405a185d53754aa0620d593e3
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# Analysis Services データベースに対する拡張フィールド プロパティ (SSRS)
+# <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services データベースに対する拡張フィールド プロパティ (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ処理拡張機能では、拡張フィールド プロパティがサポートされています。 拡張フィールド プロパティとは、データ ソースにありデータ処理拡張機能でサポートされるフィールド プロパティ **Value** および **IsMissing** に加えて使用するプロパティです。 拡張プロパティは、レポート データセットのフィールド コレクションの一部としてレポート データ ペインには表示されません。 拡張フィールド プロパティ値をレポートに含めるには、組み込み **Fields** コレクションを使用して名前で拡張フィールド プロパティ値を指定する式を記述します。  
   
  拡張プロパティには、定義済みプロパティとカスタム プロパティがあります。 定義済みプロパティとは、特定のフィールド プロパティ名にマップされ、組み込み **Fields** コレクションを介して名前でアクセスできる、複数のデータ ソースに共通のプロパティです。 カスタム プロパティは、各データ プロバイダーに固有であり、拡張プロパティ名を文字列として扱う構文のみを使用して、組み込み **Fields** コレクションを介してアクセスできます。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX クエリ デザイナーをグラフィカル モードで使用してクエリを定義する場合、定義済みの一連のセル プロパティおよびディメンション プロパティが自動的に MDX クエリに追加されます。 レポート内では、MDX クエリに明記されている拡張プロパティのみを使用できます。 レポートによっては、既定の MDX コマンド テキストを変更して、キューブに定義されている他のディメンションまたはカスタム プロパティを含めることができます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースで使用できる拡張フィールドの詳細については、「[プロパティ値の作成および使用 (MDX)](../Topic/Creating%20and%20Using%20Property%20Values%20\(MDX\).md)」を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX クエリ デザイナーをグラフィカル モードで使用してクエリを定義する場合、定義済みの一連のセル プロパティおよびディメンション プロパティが自動的に MDX クエリに追加されます。 レポート内では、MDX クエリに明記されている拡張プロパティのみを使用できます。 レポートによっては、既定の MDX コマンド テキストを変更して、キューブに定義されている他のディメンションまたはカスタム プロパティを含めることができます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースで使用できる拡張フィールドの詳細については、「[プロパティ値の作成および使用 (MDX)](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)」を参照してください。  
   
-## レポートのフィールド プロパティの操作  
- 拡張フィールド プロパティには、定義済みプロパティとデータ プロバイダー固有のプロパティがあります。 フィールド プロパティは、データセット用に作成されたクエリに存在しますが、**レポート データ** ペインのフィールド一覧に表示されません。したがって、フィールド プロパティをレポートのデザイン画面にドラッグすることはできません。 その代わり、フィールドをレポートにドラッグし、フィールドの **Value** プロパティを、使用するプロパティに変更します。 たとえば、キューブからのセル データが既に書式設定されている場合は、`=Fields!FieldName.FormattedValue` の式を使用することで、FormattedValue フィールド プロパティを使用できます。  
+## <a name="working-with-field-properties-in-a-report"></a>レポートのフィールド プロパティの操作  
+ 拡張フィールド プロパティには、定義済みプロパティとデータ プロバイダー固有のプロパティがあります。 フィールド プロパティは、データセット用に作成されたクエリに存在しますが、 **レポート データ** ペインのフィールド一覧に表示されません。したがって、フィールド プロパティをレポートのデザイン画面にドラッグすることはできません。 その代わり、フィールドをレポートにドラッグし、フィールドの **Value** プロパティを、使用するプロパティに変更します。 たとえば、キューブからのセル データが既に書式設定されている場合は、 `=Fields!FieldName.FormattedValue`の式を使用することで、FormattedValue フィールド プロパティを使用できます。  
   
  事前に定義されていない拡張プロパティを参照するには、式で次の構文を使用します。  
   
 -   *Fields!FieldName("PropertyName")*  
   
-## 定義済みフィールド プロパティ  
+## <a name="predefined-field-properties"></a>定義済みフィールド プロパティ  
  ほとんどの場合、定義済みフィールド プロパティはメジャー、レベル、またはディメンションに適用されます。 定義済みフィールド プロパティは、対応する値が [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに格納されている必要があります。 値が存在しない場合、または、レベルにメジャーのみのフィールド プロパティを指定する場合、プロパティは NULL 値を返します。  
   
  次の構文のいずれかを使用して、式から定義済みプロパティを参照できます。  
@@ -44,7 +49,7 @@ caps.handback.revision: 7
   
 |**プロパティ**|**型**|**説明/有効値**|  
 |------------------|--------------|---------------------------------------|  
-|**値**|**オブジェクト**|フィールドのデータ値を指定します。|  
+|**Value**|**オブジェクト**|フィールドのデータ値を指定します。|  
 |**IsMissing**|**ブール値**|フィールドが結果データセットに存在するかどうかを示します。|  
 |**UniqueName**|**文字列**|レベルの完全修飾名を返します。 たとえば、従業員の **UniqueName** 値は *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]* のようになります。|  
 |**BackgroundColor**|**文字列**|データベースで定義されたフィールドの背景色を返します。|  
@@ -54,18 +59,18 @@ caps.handback.revision: 7
 |**フォント太さ**|**文字列**|データベースで定義されたアイテムのフォントの太さを返します。|  
 |**FontStyle**|**文字列**|データベースで定義されたアイテムのフォントのスタイルを返します。|  
 |**TextDecoration**|**文字列**|データベースで定義されたアイテムの特殊なテキストの書式設定を返します。|  
-|**FormattedValue**|**文字列**|メジャーまたは主要データに対して書式設定した値を返します。 たとえば、**Sales Amount Quota** の **FormattedValue** プロパティは、$1,124,400.00 などの通貨形式を返します。|  
+|**FormattedValue**|**文字列**|メジャーまたは主要データに対して書式設定した値を返します。 たとえば、 **Sales Amount Quota** の **FormattedValue** プロパティは、$1,124,400.00 などの通貨形式を返します。|  
 |**[キー]**|**オブジェクト**|レベルのキーを返します。|  
 |**LevelNumber**|**Integer**|親子階層の場合は、レベル番号またはディメンション番号を返します。|  
 |**ParentUniqueName**|**文字列**|親子階層の場合は、親レベルの完全修飾名を返します。|  
   
 > [!NOTE]  
->  レポートが実行されてそのデータセットのデータを取得する際にデータ ソース ([!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブなど) によってこれらの値が提供される場合にのみ、これらの拡張フィールド プロパティに対応する値が存在します。 その場合、次のセクションに示す構文を使用して、すべての式からこれらのフィールド プロパティ値を参照できます。 ただし、これらのフィールドはこのデータ プロバイダーに固有であるため、これらの値に加えた変更はレポート定義には保存されません。  
+>  レポートが実行されてそのデータセットのデータを取得する際にデータ ソース ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブなど) によってこれらの値が提供される場合にのみ、これらの拡張フィールド プロパティに対応する値が存在します。 その場合、次のセクションに示す構文を使用して、すべての式からこれらのフィールド プロパティ値を参照できます。 ただし、これらのフィールドはこのデータ プロバイダーに固有であるため、これらの値に加えた変更はレポート定義には保存されません。  
   
-### 拡張プロパティの例  
+### <a name="example-extended-properties"></a>拡張プロパティの例  
  拡張プロパティの例として、次の MDX クエリおよび結果セットには、キューブに対して定義されているディメンション属性で使用できるいくつかのメンバー プロパティが含まれています。 含まれているメンバー プロパティは、MEMBER_CAPTION、UNIQUENAME、Properties("Day Name")、MEMBER_VALUE、PARENT_UNIQUE_NAME、および MEMBER_KEY です。  
   
- この MDX クエリは、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースに付属している [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] DW データベース内の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] キューブに対して実行されます。  
+ この MDX クエリは、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースに付属している [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] DW データベース内の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] キューブに対して実行されます。  
   
 ```  
 WITH MEMBER [Measures].[DateCaption]   
@@ -101,7 +106,7 @@ FROM [Adventure Works]
 |2-Jul-01|[Date].[Date].&[2]|月曜日|7/2/2001|[Date].[Date].[All Periods]|2|  
 |3-Jul-01|[Date].[Date].&[3]|火曜日|7/3/2001|[Date].[Date].[All Periods]|3|  
   
- MDX クエリ デザイナーのグラフィカル モードを使用して作成される既定の MDX クエリに、ディメンション プロパティとして含まれるのは MEMBER_CAPTION と UNIQUENAME のみです。 既定では、これらの値は常に **String** データ型です。  
+ MDX クエリ デザイナーのグラフィカル モードを使用して作成される既定の MDX クエリに、ディメンション プロパティとして含まれるのは MEMBER_CAPTION と UNIQUENAME のみです。 既定では、これらの値は常に **String**データ型です。  
   
  メンバー プロパティの元のデータ型を保持する必要がある場合は、テキスト ベースのクエリ デザイナーで既定の MDX ステートメントを変更することによって、追加のプロパティ MEMBER_VALUE を含めることができます。 次の単純な MDX ステートメントでは、取得するディメンション プロパティのリストに MEMBER_VALUE が追加されています。  
   
@@ -126,12 +131,12 @@ CELL PROPERTIES
 |March|2,749|  
 |April|2,739|  
   
- プロパティは MDX の SELECT ステートメントに含まれていますが、結果セット列には表示されません。 そこで、拡張プロパティ機能を使用すると、データをレポートに使用することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の MDX クエリ結果ペインで、セルをダブルクリックすると、セルのプロパティ値が表示されます (キューブ内で設定されている場合)。 1,379 という値が格納されている最初の Order Count セルをダブルクリックすると、ポップアップ ウィンドウに次のセル プロパティが表示されます。  
+ プロパティは MDX の SELECT ステートメントに含まれていますが、結果セット列には表示されません。 そこで、拡張プロパティ機能を使用すると、データをレポートに使用することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の MDX クエリ結果ペインで、セルをダブルクリックすると、セルのプロパティ値が表示されます (キューブ内で設定されている場合)。 1,379 という値が格納されている最初の Order Count セルをダブルクリックすると、ポップアップ ウィンドウに次のセル プロパティが表示されます。  
   
-|プロパティ|値|  
+|プロパティ|Value|  
 |--------------|-----------|  
 |CellOrdinal|0|  
-|VALUE|2481|  
+|Value|2481|  
 |BACK_COLOR|(null)|  
 |FORE_COLOR|(null)|  
 |FORMATTED_VALUE|2,481|  
@@ -148,9 +153,9 @@ CELL PROPERTIES
   
  これにより、データ ソースの元の整数データ型に基づいてフィールドの値が並べ替えられます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [式で使用される組み込みコレクション (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder-and-ssrs.md)   
+ [式で使用される組み込みコレクション (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
  [データセット フィールド コレクション (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

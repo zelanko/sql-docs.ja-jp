@@ -1,29 +1,34 @@
 ---
-title: "Modify a Reporting Services Configuration File (RSreportserver.config) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Reporting Services の構成ファイル (RSreportserver.config) の変更 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: f5862f4faec4784aac678d578c155ac5992a55f6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# Modify a Reporting Services Configuration File (RSreportserver.config)
+# <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Reporting Services の構成ファイル (RSreportserver.config) の変更
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、一連の構成ファイルにアプリケーション設定を格納します。 構成ファイルはセットアップ時に作成され、インストールしたレポート サーバー インスタンスごとに存在します。 各ファイル内の値は、インストール中に設定されるか、ツールやアプリケーションを使用してサーバーの動作を構成したときに設定されます。 場合によっては、高度な設定を追加したり構成したりするために、ファイルを直接変更する必要があります。 構成設定は、XML 要素または XML 属性のいずれかとして指定されます。 XML ファイルおよび構成ファイルを理解している場合は、テキスト エディターまたはコード エディターを使用して、ユーザーが定義可能な設定を変更できます。  
   
  一部の構成設定は、ツールを使ってのみ設定できます。 暗号化された値を含んだ設定は、Reporting Services 構成ツール、セットアップ プログラム、または **rsconfig** コマンド ライン ユーティリティで変更する必要があります。 これらのツールを実行するには、ローカルの Administrators グループのメンバーである必要があります。  
   
 > [!IMPORTANT]  
->  構成ファイルを変更する場合は注意が必要です。 内部で使用するために予約されている設定を変更すると、インストールが無効になることがあります。 一般的に、特定の問題を解決しようとしている場合を除いて、構成設定を変更することはお勧めしません。 安全に変更できる設定の詳細については、「[RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)」または「[RSReportDesigner 構成ファイル](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)」を参照してください。 構成ファイルの詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の製品ドキュメントを参照してください。  
+>  構成ファイルを変更する場合は注意が必要です。 内部で使用するために予約されている設定を変更すると、インストールが無効になることがあります。 一般的に、特定の問題を解決しようとしている場合を除いて、構成設定を変更することはお勧めしません。 安全に変更できる設定の詳細については、「 [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 」または「 [RSReportDesigner 構成ファイル](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)」を参照してください。 構成ファイルの詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の製品ドキュメントを参照してください。  
   
  このトピックの内容:  
   
@@ -59,13 +64,24 @@ caps.handback.revision: 7
     -   **RSReportServer.config** は次のフォルダーにあります。  
   
         ```  
-        C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer  
+        C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
         ```  
+        
+        ||  
+        |-|  
+        |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SQL Server Reporting Services での Power BI レポートの技術プレビュー (2017 年 1 月)|
+        
+        ```  
+        C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer
+        ```
   
     -   **RSReportServerServices.exe.config** は次のフォルダーにあります。  
+    
+        > [!NOTE] 
+        > これは、2017 年 1 月 1 日で使用可能ではありませんテクニカル プレビューの Power BI の SQL Server Reporting Services レポートします。
   
         ```  
-        C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer\bin  
+        C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer\bin  
         ```  
   
     -   **RSReportDesigner.config** は次のフォルダーにあります。  
@@ -82,22 +98,22 @@ caps.handback.revision: 7
   
     -   [レポート サーバーでの認証](../../reporting-services/security/authentication-with-the-report-server.md)  
   
-    -   [カスタム認証クッキーを送信するようにレポート マネージャーを構成する](../Topic/Configure%20Report%20Manager%20to%20Pass%20Custom%20Authentication%20Cookies.md)  
+    -   [カスタム認証クッキーを渡すため Web ポータルを構成します。](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
     -   [RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
 5.  ファイルを保存します。  
   
-6.  トレース ログ ファイルを見て、エラーが発生していないことを確認します。 エラー状態が記録されていた場合は、設定またはその値が正しく指定されていません。 「[RSReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)」を参照し、エラーの原因となっている設定について有効な値を確認してください。 トレース ログの表示方法の詳細については、「[レポート サーバー サービスのトレース ログ](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。  
+6.  トレース ログ ファイルを見て、エラーが発生していないことを確認します。 エラー状態が記録されていた場合は、設定またはその値が正しく指定されていません。 「 [RSReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 」を参照し、エラーの原因となっている設定について有効な値を確認してください。 トレース ログの表示方法の詳細については、「 [レポート サーバー サービスのトレース ログ](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [ReportingServicesService 構成ファイル](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
  [RSReportDesigner 構成ファイル](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [データ処理拡張機能の配置](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [配信拡張機能の配置](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [表示拡張機能の配置](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [カスタム レポート アイテムを配置する方法](../Topic/How%20to:%20Deploy%20a%20Custom%20Report%20Item.md)   
  [Reporting Services 構成ファイル](../../reporting-services/report-server/reporting-services-configuration-files.md)  
   
   
+

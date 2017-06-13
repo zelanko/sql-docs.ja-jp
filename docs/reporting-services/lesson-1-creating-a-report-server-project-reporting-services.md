@@ -1,25 +1,33 @@
 ---
-title: "レッスン 1 : レポート サーバー プロジェクトの作成 (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "レッスン 1: 作成、レポート サーバー プロジェクト (Reporting Services) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 caps.latest.revision: 57
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 55
----
-# レッスン 1 : レポート サーバー プロジェクトの作成 (Reporting Services)
-このレッスンで、*レポート サーバー プロジェクト* と *レポート定義 (.rdl)* ファイルを [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] Visual Studio 内に作成します。 
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: bead48dd2f32047b2782a54204bf06a145a7d71d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
 
-[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] でレポートを作成するには、まず、レポート定義ファイル (.rdl) やレポートに必要なその他のリソース ファイルを格納できる、レポート サーバー プロジェクトが必要です。 
+---
+# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>レッスン 1 : レポート サーバー プロジェクトの作成 (Reporting Services)
+
+ > SQL Server の以前のバージョンに関連するコンテンツでは、次を参照してください。[レッスン 1: レポート サーバー プロジェクト (Reporting Services) を作成する](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx)です。
+
+このレッスンで、 *レポート サーバー プロジェクト* と *レポート定義 (.rdl)* ファイルを [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] Visual Studio 内に作成します。 
+
+[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]でレポートを作成するには、まず、レポート定義ファイル (.rdl) やレポートに必要なその他のリソース ファイルを格納できる、レポート サーバー プロジェクトが必要です。 
 
 次のレッスンでは、実際のレポート定義ファイルを作成し、レポートのデータ ソース、データセット、レイアウトを定義します。 作成したレポートを実行すると、データが取得され、レイアウト定義に従って画面上に表示されます。 その状態からエクスポート、印刷、保存を行うことができます。  
   
@@ -29,19 +37,19 @@ caps.handback.revision: 55
   
 1.  [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)]を開きます。  
   
-2.  **[ファイル]** メニューの **[新規] ** > **[プロジェクト]** をクリックします。  
+2.  **[ファイル]** メニューの **[新規]**  > **[プロジェクト]** をクリックします。  
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
-3.  **[インストール済み]** > **[テンプレート]** > **[ビジネス インテリジェンス]** で、**[Reporting Services]** をクリックします。
+3.  **[インストール済み]** > **[テンプレート]** > **[ビジネス インテリジェンス]**で、 **[Reporting Services]**をクリックします。
 
     ![ssrs-ssdt-01-new-rs-project](../reporting-services/media/ssrs-ssdt-01-new-rs-project.png)
 
 5. **[レポート サーバー プロジェクト]** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png)でレポート サーバー プロジェクトを作成する方法を学習します。 
 
-   >**注**: **[ビジネス インテリジェンス]** または **[レポート サーバー プロジェクト]** オプションが表示されない場合、ビジネス インテリジェンス テンプレートを使用して SSDT を更新する必要があります。 「 [SQL Server Data Tools (SSDT) のダウンロード](https://msdn.microsoft.com/library/mt204009.aspx)」を参照してください。  
+   >**注**: が表示されない場合、 **Business Intelligence**または**レポート サーバー プロジェクト**オプション、ビジネス インテリジェンス テンプレートで SSDT を更新する必要があります。 「 [SQL Server Data Tools (SSDT) のダウンロード](https://msdn.microsoft.com/library/mt204009.aspx)」を参照してください。  
   
-5.  **[名前]**に「**utorial**」と入力します。  
+5.  **[名前]**に「 **utorial**」と入力します。  
 
     既定では、新しいディレクトリの Visual Studio 2015\Projects フォルダーに作成されます。
     
@@ -53,9 +61,9 @@ caps.handback.revision: 55
   
 ## <a name="to-create-a-new-report-definition-file"></a>新しいレポート定義ファイルを作成するには  
   
-1.  **[ソリューション エクスプローラー]** ウィンドウで、**[レポート] を右クリックし、** > **[追加]** > **[新しいアイテム]** の順に選択します。 
+1.  **[ソリューション エクスプローラー]** ウィンドウで、 **[レポート] を右クリックし、** > **[追加]** > **[新しいアイテム]**の順に選択します。 
 
-    >**ヒント**: **[ソリューション エクスプローラー]** ウィンドウが表示されない場合は、**[表示]** メニューの **[ソリューション エクスプローラー]** をクリックします。 
+    >**ヒント**: **[ソリューション エクスプローラー]** ウィンドウが表示されない場合は、 **[表示]** メニューの **[ソリューション エクスプローラー]**をクリックします。 
 
     ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
   
@@ -77,3 +85,5 @@ caps.handback.revision: 55
 ## <a name="see-also"></a>参照  
 [基本的なテーブル レポートの作成 &#40;SSRS チュートリアル&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
+
+

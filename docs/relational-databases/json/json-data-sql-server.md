@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3daaaa3dc2fb53344b009a5b3ab3d1cfbdd19350
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: e2a427682aebeeccc82a1b7f6521399b8a0b6fe8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="json-data-sql-server"></a>JSON データ (SQL Server)
@@ -70,15 +70,15 @@ SQL Server がその組み込みの JSON サポートで提供する主な機能
 
 **例**
   
- 次の例のクエリでは、テーブルからリレーショナル データと (jsonCol 列に格納された) JSON データの両方を使用しています。  
+ 次の例では、クエリで使用して両方のリレーショナル データと JSON データ (という名前の列に格納されている`jsonCol`) テーブルから。  
   
-```tsql  
+```sql  
 SELECT Name,Surname,
  JSON_VALUE(jsonCol,'$.info.address.PostCode') AS PostCode,
  JSON_VALUE(jsonCol,'$.info.address."Address Line 1"')+' '
   +JSON_VALUE(jsonCol,'$.info.address."Address Line 2"') AS Address,
  JSON_QUERY(jsonCol,'$.info.skills') AS Skills
-FROM PeopleCollection
+FROM People
 WHERE ISJSON(jsonCol)>0
  AND JSON_VALUE(jsonCol,'$.info.address.Town')='Belgrade'
  AND Status='Active'
@@ -92,7 +92,7 @@ ORDER BY JSON_VALUE(jsonCol,'$.info.address.PostCode')
 ### <a name="change-json-values"></a>JSON 値の変更
 JSON テキストの一部を修正する必要がある場合は、**JSON_MODIFY** 関数を使用して JSON 文字列のプロパティの値を更新し、更新された JSON 文字列を返します。 次の例では、JSON を格納する変数のプロパティの値を更新します。  
   
-```tsql  
+```sql  
 DECLARE @jsonInfo NVARCHAR(MAX)
 
 SET @jsonInfo=JSON_MODIFY(@jsonInfo,'$.info.address[0].town','London') 
@@ -103,7 +103,7 @@ SQL Server で JSON のクエリを実行するのにカスタム クエリ言�
   
  次の例では、**OPENJSON** を呼び出し、`@json` 変数に格納されたオブジェクトの配列を、標準の **SELECT** ステートメントを使用してクエリを実行できる行セットに変換します。  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json =  
 N'[  
@@ -140,7 +140,7 @@ FROM OPENJSON(@json)
   
  次の例では、PATH モードを FOR JSON 句とともに使用しています。  
   
-```tsql  
+```sql  
 SELECT id, firstName AS "info.name", lastName AS "info.surname", age, dateOfBirth as dob  
 FROM People  
 FOR JSON PATH  
@@ -190,7 +190,7 @@ JSON テキストは通常、varchar 列または nvarchar 列に格納されて
   
  この OData URL は、ID が 1 のプロダクトの Product ID 列と ProductName 列に対する要求を表します。 **FOR JSON** を使用して、出力を SQL Server で求められている形式に設定できます。  
   
-```tsql  
+```sql  
 SELECT 'http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
  AS '@odata.context',   
  ProductID, Name as ProductName   
@@ -204,7 +204,7 @@ FOR JSON AUTO
 ## <a name="analyze-json-data-with-sql-queries"></a>SQL クエリで JSON データを分析する  
  レポート作成のために JSON データをフィルター処理または集計する必要がある場合は、**OPENJSON** を使用して JSON をリレーショナル形式に変換できます。 その後、標準の [!INCLUDE[tsql](../../includes/tsql-md.md)] と組み込み関数を使用してレポートを用意します。  
   
-```tsql  
+```sql  
 SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date  
 FROM   SalesOrderRecord AS Tab  
           CROSS APPLY  
@@ -225,7 +225,7 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 ## <a name="import-json-data-into-sql-server-tables"></a>SQL Server に JSON データをインポートする  
  JSON データを外部サービスから SQL Server に読み込む必要がある場合は、アプリケーション レイヤー内でデータを解析する代わりに、**OPENJSON** を使用してデータを SQL Server にインポートできます。  
   
-```tsql  
+```sql  
 DECLARE @jsonVariable NVARCHAR(MAX)
 
 SET @jsonVariable = N'[  
@@ -321,7 +321,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
   
 ### <a name="microsoft-blog-posts"></a>マイクロソフトのブログ記事  
   
--   [マイクロソフトのプログラム マネージャー Jovan Popovic によるブログ記事](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)  
+-   特定のソリューションの多くは、ケース、および推奨事項を使用して、参照してください、[組み込みの JSON サポートに関するブログの投稿](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)SQL Server および Microsoft のプログラム マネージャー Jovan Popovic による Azure SQL データベースでします。  
   
 ### <a name="reference-topics"></a>参照トピック  
   

@@ -15,15 +15,13 @@ author: sabotta
 ms.author: carlasab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fd0753457b002558f164f1e5f1c16730463ca25f
+ms.sourcegitcommit: a8ed3f4dd6f3f7b3ec8b6b8679cd78cacfea10a4
+ms.openlocfilehash: 1bac5ba2fc3158d0b84e7e7015cf19e86927bc7f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
-# <a name="microsoft-white-papers"></a>Microsoft ホワイト ペーパー
-[データの保存、移動および変換に関する Microsoft テクノロジの概要](https://msdn.microsoft.com/library/mt639326.aspx)  
-[AlwaysOn 環境でのマスター データ サービスのインストール](https://msdn.microsoft.com/library/mt761778.aspx)  
+# <a name="microsoft-white-papers"></a>Microsoft ホワイト ペーパー 
 [SQL Server 2016 の SQL Server インメモリ OLTP 内部](https://msdn.microsoft.com/library/mt764316.aspx)
   
   

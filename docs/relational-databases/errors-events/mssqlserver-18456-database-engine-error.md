@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_18456 | Microsoft Docs
 ms.custom: 
-ms.date: 04/04/2017
+ms.date: 06/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8985dc2e2715758797eb253aee8382d68f0f2dd6
+ms.sourcegitcommit: 45f30fa7d1153f4ee70a9cfcb7c7e891bc15fec1
+ms.openlocfilehash: 53733118cf5fcf0b2b29544d64ebac6622425d56
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
@@ -76,6 +76,11 @@ ms.lasthandoff: 04/11/2017
 |11|ログインは有効ですが、サーバー アクセスに失敗しました。 このエラーで考えられる原因の 1 つは、Windows ユーザーがローカル管理者グループのメンバーとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアクセス権限を持っている一方で、Windows から管理者資格情報が提供されないことです。 接続するには、[**管理者として実行**] オプションを使用して接続プログラムを開始してから、その Windows ユーザーを特定のログインとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に追加します。|  
 |12|ログインは有効なログインですが、サーバー アクセスに失敗しました。|  
 |18|パスワードを変更する必要があります。|  
+|38, 46|ユーザーによって要求されたデータベースを見つけることができませんでした。|
+|102 - 111|AAD に失敗しました。|
+|122 - 124|空のユーザー名またはパスワードのために失敗しました。|
+|126|ユーザーによって要求されたデータベースが存在しません。|
+|132 - 133|AAD に失敗しました。|
   
 エラー状態は他にも存在し、予期しない内部処理エラーを示します。  
   

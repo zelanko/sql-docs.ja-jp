@@ -1,30 +1,35 @@
 ---
-title: "Reporting Services Report Server (Native Mode) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "administering Reporting Services"
-  - "administering [Reporting Services]"
-  - "Reporting Services, 管理"
+title: "Reporting Services レポート サーバー (ネイティブ モード) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- administering Reporting Services
+- administering [Reporting Services]
+- Reporting Services, administration
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 caps.latest.revision: 24
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 24
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 004db2495533a1155b58a49ac0af96943a997181
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services Report Server (Native Mode)
+# <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   ネイティブ モード用に構成されたレポート サーバーは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]コンポーネントのみを通じてすべての処理機能と管理機能を提供するアプリケーション サーバーとして実行されます。  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] またはレポート マネージャーを使用して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートを管理できます。 レポート サーバーをネイティブ モードで管理するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] またはレポート マネージャーを使用して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートを管理できます。 レポート サーバーをネイティブ モードで管理するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用します。  
   
  レポート サーバーを SharePoint モード用に構成した場合、レポートや共有データ ソースなどのレポート サーバー アイテムを管理するには、SharePoint サイトのコンテンツ管理のページを使用する必要があります。  
   
@@ -59,11 +64,11 @@ caps.handback.revision: 24
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、コンテンツ管理はレポート、モデル、フォルダー、リソース、および共有データ ソースの管理を指します。 これらのすべてのアイテムは、プロパティおよびセキュリティの設定をとおして、個別に管理できます。 アイテムは、レポート サーバー フォルダー名前空間内のさまざまな場所に移動できます。 アイテムを効率的に管理するには、コンテンツ マネージャーで実行されるタスクを理解しておく必要があります。  
   
 > [!NOTE]  
->  コンテンツ管理はレポート サーバー管理とは異なります。 レポート サーバーを実行する環境の管理方法について詳しくは、「[レポート サーバーの構成と管理 &#40;Reporting Services SharePoint モード&#41;](../../reporting-services/report-server-sharepoint/configuration and administration of a report server.md)」をご覧ください。  
+>  コンテンツ管理はレポート サーバー管理とは異なります。 レポート サーバーを実行する環境の管理方法について詳しくは、「[レポート サーバーの構成と管理 &#40;Reporting Services SharePoint モード&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)」をご覧ください。  
   
  コンテンツ管理には、次のタスクが含まれます。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で提供されるロールベースのセキュリティを適用することにより、レポート サーバー サイトおよびアイテムをセキュリティで保護します。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で提供されるロールベースのセキュリティを適用することにより、レポート サーバー サイトおよびアイテムをセキュリティで保護します。  
   
 -   フォルダーを追加、変更、および削除することにより、レポート サーバーのフォルダー階層を構造化します。  
   
@@ -106,7 +111,7 @@ caps.handback.revision: 24
   
  レポートに画像リソースを使用するには、画像ファイルをプロジェクトに追加し、そのプロジェクトをレポートと一緒にパブリッシュします。 画像がパブリッシュされたら、レポート内の画像参照がレポート サーバー上のリソースを指定するように更新した後で、そのレポートのみを再パブリッシュして変更を保存します。 以後、リソースを再パブリッシュすることで、レポートと関係なく画像を更新できるようになります。 レポートでは、レポート サーバー上にある最新バージョンの画像が使用されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レポート サーバーを構成および管理する &#40;SSRSネイティブ モード&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Reporting Services インストール時の問題解決](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   

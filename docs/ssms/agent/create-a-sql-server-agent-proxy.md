@@ -1,7 +1,7 @@
 ---
 title: "SQL Server エージェント プロキシの作成 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 05/04/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dc46da89f0cc905c743da8900e0a1b58feb478fc
+ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
+ms.openlocfilehash: 2853583d3902f9b0da32e2b0e1c5a55b696d34e0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/06/2017
 
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>SQL Server エージェント プロキシの作成
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/11/2017
   
 -   資格情報を用意していない場合は、プロキシを作成する前に、まず資格情報を作成する必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント プロキシは、資格情報を使用して Windows ユーザー アカウントに関する情報を格納します。 資格情報で指定されているユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] を実行しているコンピューターで "バッチ ジョブとしてログオン" するためのアクセス許可が必要です。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント プロキシは、資格情報を使用して Windows ユーザー アカウントに関する情報を格納します。 資格情報で指定されたユーザーに対する権限が必要「ネットワーク経由でコンピューターへアクセス」(SeNetworkLogonRight) コンピューターを[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]が実行されています。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントは、ジョブ ステップを実行するごとに、プロキシからサブシステムへのアクセス許可を確認し、アクセスを確立します。 プロキシにサブシステムへのアクセス許可がない場合、ジョブ ステップは失敗します。 プロキシにアクセス許可がある場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントはプロキシで指定されているユーザーの権限を借用してジョブ ステップを実行します。  
   

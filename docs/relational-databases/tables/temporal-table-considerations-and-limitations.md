@@ -2,7 +2,7 @@
 title: "テンポラル テーブルの考慮事項と制約 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/24/2017
+ms.date: 05/22/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 22bab0bc2c039e68a336ac827a3e2d028ca77c78
+ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
+ms.openlocfilehash: 5ee3aa9223ae8ab832eff23a1da1755278e86d0b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>テンポラル テーブルの考慮事項と制約
@@ -57,7 +57,9 @@ ms.lasthandoff: 04/11/2017
   
 -   履歴テーブルのデータを直接変更することはできません。  
   
--   現在のテーブルでは、**ON DELETE CASCADE** と **ON UPDATE CASCADE** は許可されません。 つまり、テンポラル テーブルが外部キー リレーションシップの参照元テーブル (sys.foreign_keys の *parent_object_id* に対応) である場合、CASCADE オプションは使用できません。 この制約を回避するには、アプリケーション ロジックまたは AFTER トリガーを使用して、主キー テーブル (sys.foreign_keys の  *referenced_object_id* に対応) での削除の一貫性を維持します。 主キー テーブルがテンポラルで、参照元テーブルが非テンポラルである場合、このような制約はありません。  
+-   現在のテーブルでは、**ON DELETE CASCADE** と **ON UPDATE CASCADE** は許可されません。 つまり、テンポラル テーブルが外部キー リレーションシップの参照元テーブル (sys.foreign_keys の *parent_object_id* に対応) である場合、CASCADE オプションは使用できません。 この制約を回避するには、アプリケーション ロジックまたは AFTER トリガーを使用して、主キー テーブル (sys.foreign_keys の  *referenced_object_id* に対応) での削除の一貫性を維持します。 主キー テーブルがテンポラルで、参照元テーブルが非テンポラルである場合、このような制約はありません。 
+
+    **注:**この制限は SQL Server 2016 にのみ適用されます。 CASCADE オプションはサポート[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]と SQL Server 2017 年 1 CTP 2.0 から開始します。  
   
 -   DML ロジックが無効になるのを防ぐために、**INSTEAD OF** トリガーは現在のテーブルでも履歴テーブルでも許可されません。 **AFTER** トリガーは、現在のテーブルでのみ許可されます。 DML ロジックが無効になるのを防ぐために、このトリガーは履歴テーブルではブロックされます。  
   

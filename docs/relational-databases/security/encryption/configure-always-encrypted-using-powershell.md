@@ -1,7 +1,7 @@
 ---
 title: "PowerShell を使用した Always Encrypted の構成 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/29/2016
+ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7e3971933bb32cc47f761d18ba8c0dd57b139636
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: dcd6c2dc9c489a888c647a77c27ce9694d154699
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>PowerShell を使用した Always Encrypted の構成
@@ -26,18 +26,16 @@ ms.lasthandoff: 04/11/2017
 
 SqlServer PowerShell モジュールは、Azure SQL Database および SQL Server 2016 両方で [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) を構成するコマンドレットを提供します。
 
-SqlServer モジュールの Always Encrypted 用コマンドレットのほとんどは、Always Encrypted キーまたは暗号化された列に格納されている機密データを操作するので、安全なコンピューターでコマンドレットを実行することが重要です。 Always Encrypted を管理するときは、SQL Server インスタンスをホストするコンピューターとは異なるコンピューターからコマンドレットを実行します。 
+常に SqlServer モジュールのコマンドレットは暗号化を使用キーまたは機密データは、セキュリティで保護されたコンピューターでコマンドレットを実行することが重要であるようにします。 Always Encrypted を管理する場合は、SQL Server インスタンスをホストするコンピューターと別のコンピューターからコマンドレットを実行します。
 
-Always Encrypted の主な目的は、データベース システムが侵害されても、暗号化された機密データが確実に保護されるようにすることにあるので、SQL Server コンピューター上でキーまたは機密データを処理する PowerShell スクリプトが実行されると、機能の効果が低下したり無効になったりするおそれがあります。 セキュリティ関連のその他の推奨事項については、 [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)(キー管理でのセキュリティに関する考慮事項) をご覧ください。
+Always Encrypted の主な目的は、ことを確認するため、データベース システムが侵害された、キーを処理する PowerShell スクリプトを実行したり、SQL Server コンピューター上の機密データを削減したり、機能の利点が損なわため場合でも暗号化された機密データは安全でです。 セキュリティ関連のその他の推奨事項については、 [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)(キー管理でのセキュリティに関する考慮事項) をご覧ください。
 
 個々のコマンドレットに関する記事へのリンクは [このページの下](#aecmdletreference)にあります。
 
 ## <a name="prerequisites"></a>前提条件
 
-SQL Server インスタンスをホストしているコンピューターではない安全なコンピューターに [SqlServer モジュール](https://msdn.microsoft.com/library/mt740629.aspx) をインストールします。 
+SQL Server インスタンスをホストしているコンピューターではない安全なコンピューターに [SqlServer モジュール](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) をインストールします。 モジュールは、PowerShell ギャラリーから直接インストールできます。  参照してください、[ダウンロード](../../../ssms/download-sql-server-ps-module.md)の詳細については、します。
 
-SqlServer モジュールをインストールするには、 [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)の最新版をインストールします。
-*SqlServer* モジュールは *sqlps* モジュールとは異なることに注意してください。sqlps モジュールは Always Encrypted をサポートしていません。 詳細については、チームのブログ投稿「 [SQL PowerShell - July 2016 Update](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) 」 (SQL PowerShell - 2016 年 7 月更新プログラム) をご覧ください。
 
 ## <a name="importsqlservermodule"></a> SqlServer モジュールをインポートする 
 
@@ -63,7 +61,7 @@ Import-Module "SqlServer"
 
 この方法は SQL Server の場合にのみ使用できます (Azure SQL Database では使用できません)。
 
-SQL Server PowerShell では、ファイル システムのパスの操作に一般的に使用されているコマンドと同様の Windows PowerShell の別名を使用して、パスを操作できます。 ターゲットのインスタンスおよびデータベースに移動した後、後続のコマンドレットは次の例で示すようにそのデータベースをターゲットにします。
+SQL Server PowerShell では、ファイル システムのパスの操作に一般的に使用されているコマンドと同様の Windows PowerShell の別名を使用して、パスを操作できます。 ターゲット インスタンスおよびデータベースに移動した後、後続のコマンドレットは、次の例で示すように、そのデータベースを対象します。
 
 ```
 # Import the SqlServer module.
@@ -130,24 +128,24 @@ Always Encrypted では次の PowerShell コマンドレットを使用できま
 
 |コマンドレット    |説明
 |:---|:---
-|**[Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx)**    |Azure への認証を実行し、認証トークンを取得します。
-|**[Add-SqlColumnEncryptionKeyValue](https://msdn.microsoft.com/library/mt759817.aspx)**    |データベースの既存の列暗号化キー オブジェクトに新しく暗号化された値を追加します。
-|**[Complete-SqlColumnMasterKeyRotation](https://msdn.microsoft.com/library/mt759791.aspx)**    |列マスター キーのローテーションを完了します。
-|**[Get-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759814.aspx)**    |データベースで定義されているすべての列暗号化キー オブジェクトを返すか、指定された名前の特定の列暗号化キー オブジェクトを返します。
-|**[Get-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759782.aspx)**    |データベースで定義されている列マスター キー オブジェクトを返すか、指定された名前の特定の列マスター キー オブジェクトを返します。
-|**[Invoke-SqlColumnMasterKeyRotation](https://msdn.microsoft.com/library/mt759810.aspx)**    |列マスター キーのローテーションを開始します。
-|**[New-SqlAzureKeyVaultColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759795.aspx)**    |Azure Key Vault に格納されている非対称キーを記述する SqlColumnMasterKeySettings オブジェクトを作成します。
-|**[New-SqlCngColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759818.aspx)**    |Cryptography Next Generation (CNG) API をサポートするキー ストアに格納されている非対称キーを記述する SqlColumnMasterKeySettings オブジェクトを作成します。
-|**[New-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759808.aspx)**    |データベースに新しい列暗号化キー オブジェクトを作成します。
-|**[New-SqlColumnEncryptionKeyEncryptedValue](https://msdn.microsoft.com/library/mt759794.aspx)**    |列暗号化キーの暗号化された値を生成します。
-|**[New-SqlColumnEncryptionSettings](https://msdn.microsoft.com/library/mt759825.aspx)**    |1 つの列の暗号化に関する情報をカプセル化する新しい SqlColumnEncryptionSettings オブジェクトを作成します。CEK と暗号化の種類を含みます。
-|**[New-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759813.aspx)**    |データベースに新しい列マスター キー オブジェクトを作成します。
-|**New-SqlColumnMasterKeySettings**|指定されたプロバイダーとキーのパスを使用して、列マスター キーの SqlColumnMasterKeySettings オブジェクトを作成します。
-|**[New-SqlCspColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759784.aspx)**    |Cryptography API (CAPI) をサポートする暗号化サービス プロバイダー (CSP) によってキー ストアに格納されている非対称キーを記述する SqlColumnMasterKeySettings オブジェクトを作成します。
-|**[Remove-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759786.aspx)**    |データベースから列暗号化キー オブジェクトを削除します。
-|**[Remove-SqlColumnEncryptionKeyValue](https://msdn.microsoft.com/library/mt759783.aspx)**    |データベースの既存の列暗号化キー オブジェクトから暗号化された値を削除します。
-|**[Remove-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759800.aspx)**    |データベースから列マスター キー オブジェクトを削除します。
-|**[Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx)**    |データベースの指定された列を暗号化、復号化、または再暗号化します。
+|**[Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)**    |Azure への認証を実行し、認証トークンを取得します。
+|**[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)**    |データベースの既存の列暗号化キー オブジェクトに新しく暗号化された値を追加します。
+|**[Complete-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/complete-sqlcolumnmasterkeyrotation)**    |列マスター キーのローテーションを完了します。
+|**[Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey)**    |データベースで定義されているすべての列暗号化キー オブジェクトを返すか、指定された名前の特定の列暗号化キー オブジェクトを返します。
+|**[Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey)**    |データベースで定義されている列マスター キー オブジェクトを返すか、指定された名前の特定の列マスター キー オブジェクトを返します。
+|**[Invoke-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/invoke-sqlcolumnmasterkeyrotation)**    |列マスター キーのローテーションを開始します。
+|**[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)**    |Azure Key Vault に格納されている非対称キーを記述する SqlColumnMasterKeySettings オブジェクトを作成します。
+|**[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)**    |Cryptography Next Generation (CNG) API をサポートするキー ストアに格納されている非対称キーを記述する SqlColumnMasterKeySettings オブジェクトを作成します。
+|**[New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)**    |データベース内の列の暗号化キー オブジェクトを作成します。
+|**[New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)**    |列暗号化キーの暗号化された値を生成します。
+|**[New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings)**    |CEK と暗号化の種類を含め、1 つの列の暗号化に関する情報をカプセル化する SqlColumnEncryptionSettings オブジェクトを作成します。
+|**[New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)**    |データベース内の列マスター キー オブジェクトを作成します。
+|**[新しい SqlColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkeysettings)**|指定されたプロバイダーとキーのパスを使用して、列マスター キーの SqlColumnMasterKeySettings オブジェクトを作成します。
+|**[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)**    |Cryptography API (CAPI) をサポートする暗号化サービス プロバイダー (CSP) によってキー ストアに格納されている非対称キーを記述する SqlColumnMasterKeySettings オブジェクトを作成します。
+|**[Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey)**    |データベースから列暗号化キー オブジェクトを削除します。
+|**[Remove-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkeyvalue)**    |データベースの既存の列暗号化キー オブジェクトから暗号化された値を削除します。
+|**[Remove-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnmasterkey)**    |データベースから列マスター キー オブジェクトを削除します。
+|**[Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)**    |データベースの指定された列を暗号化、復号化、または再暗号化します。
 
 
 

@@ -1,27 +1,32 @@
 ---
-title: "パフォーマンス、スナップショット、キャッシュ (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "パフォーマンス [Reporting Services]"
-  - "Reporting Services, パフォーマンス"
+title: "パフォーマンス、スナップショット、キャッシュ (Reporting Services) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- performance [Reporting Services]
+- Reporting Services, performance
 ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 caps.latest.revision: 20
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 20
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c752ea8a5f05a1dc861b0297b7a1c0eaca5cfc88
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# パフォーマンス、スナップショット、キャッシュ (Reporting Services)
-  レポート サーバーのパフォーマンスには、ハードウェア、レポートに同時にアクセスするユーザー数、レポートのデータ量、出力形式など、さまざまな要因が絡み合って影響を与えます。 環境に固有のパフォーマンス要因を把握し、期待した結果を得るための対策を講じるには、ベースライン データを用意し、テストを実行する必要があります。 ツールとガイドラインの詳細については、MSDN の資料「[Reporting Services のパフォーマンスの最適化](http://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx)」および「[Visual Studio 2005 を使用した SQL Server 2005 Reporting Services レポート サーバーのロード テスト](http://go.microsoft.com/fwlink/?LinkID=77519)」を参照してください。  
+# <a name="performance-snapshots-caching-reporting-services"></a>パフォーマンス、スナップショット、キャッシュ (Reporting Services)
+  レポート サーバーのパフォーマンスには、ハードウェア、レポートに同時にアクセスするユーザー数、レポートのデータ量、出力形式など、さまざまな要因が絡み合って影響を与えます。 環境に固有のパフォーマンス要因を把握し、期待した結果を得るための対策を講じるには、ベースライン データを用意し、テストを実行する必要があります。 ツールとガイドラインの詳細については、MSDN の資料「 [Reporting Services のパフォーマンスの最適化](http://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) 」および「 [Visual Studio 2005 を使用した SQL Server 2005 Reporting Services レポート サーバーのロード テスト](http://go.microsoft.com/fwlink/?LinkID=77519)」を参照してください。  
   
  考慮する必要がある一般的な原則は次のとおりです。  
   
@@ -35,11 +40,11 @@ caps.handback.revision: 20
   
 -   特定の形式のすべてのレポートの処理速度が低下している場合 (PDF 形式で表示している場合など)、ファイル共有配信を検討するか、メモリを増設する、または、異なる形式を選択するようにします。  
   
--   レポート処理の所要時間など、使用状況のメトリックを調べるには、レポート サーバーの実行ログを参照します。 詳細については、「[レポート サーバー ExecutionLog と ExecutionLog3 ビュー](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)」を参照してください。  
+-   レポート処理の所要時間など、使用状況のメトリックを調べるには、レポート サーバーの実行ログを参照します。 詳細については、「 [レポート サーバー ExecutionLog と ExecutionLog3 ビュー](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)」を参照してください。  
   
--   メモリ管理構成設定をチューニングすることによってパフォーマンスの問題を緩和する方法の詳細については、「[レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。  
+-   メモリ管理構成設定をチューニングすることによってパフォーマンスの問題を緩和する方法の詳細については、「 [レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
  [レポート サーバーのパフォーマンスの監視](../../reporting-services/report-server/monitoring-report-server-performance.md)  
  サーバー上の処理負荷を追跡する際に使用できるパフォーマンス オブジェクトについて説明します。  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 20
  [レポートおよび共有データセット処理のタイムアウト値の設定 &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
  クエリとレポート処理にタイムアウトを設定する方法について説明します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Manage a Running Process](../../reporting-services/subscriptions/manage-a-running-process.md)   
  [レポート実行の確認](../../reporting-services/report-server/verifying-a-report-run.md)  
   

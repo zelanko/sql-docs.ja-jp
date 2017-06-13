@@ -1,33 +1,36 @@
 ---
-title: "SQL Server 2016 のレポート ビルダー | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-f1_keywords: 
-  - "10428"
-helpviewer_keywords: 
-  - "レポート ビルダーの概要"
-  - "使い方"
+title: "レポート ビルダーで SQL Server 2016 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+f1_keywords:
+- "10428"
+helpviewer_keywords:
+- overview of Report Builder
+- getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 caps.latest.revision: 35
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 35
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c2a8702fcee392936451e4a55a4b97327de2b97d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# SQL Server 2016 のレポート ビルダー
+# <a name="report-builder-in-sql-server-2016"></a>SQL Server 2016 のレポート ビルダー
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] は、Visual Studio のレポート デザイナーよりもスタンドアロン環境での作業を好むビジネス ユーザー向けの、改ページ調整されたレポートを作成するためのツールです。  改ページ調整されたレポートをデザインすることは、データの取得場所、取得するデータ、およびデータの表示方法を指定するレポート定義を作成することです。 レポートを実行するとき、レポート プロセッサは、指定されたレポート定義を受け取り、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] でレポートをプレビューすることも、ネイティブ モードまたは SharePoint 統合モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーにレポートをパブリッシュして、他のユーザーがそこからレポートを実行できるようにすることもできます。  
   
- [レポート ビルダーの起動](../../reporting-services/report-builder/start-report-builder.md)  
-  
- ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.gif "rs_GettingStartedReport")  
+ ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
  この改ページ調整されたレポートでは、行グループ、列グループ、スパークライン、インジケーター、およびコーナー セルの概要円グラフが含まれたマトリックスが使用されています。色と円サイズで表される 2 組の地理データが含まれた地図も使用されています。  
   
@@ -47,13 +50,13 @@ caps.handback.revision: 35
   
 -   **さまざまなデータ ソースからレポートを作成します。** [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] マネージ データ プロバイダー、OLE DB プロバイダー、ODBC データ ソースのいずれかを含む任意のデータ ソースの種類のデータを使用してレポートを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、Oracle、Hyperion、およびその他のデータベースのリレーショナル データおよび多次元データを使用するレポートを作成できます。 XML データ処理拡張機能を使用すると、任意の XML データ ソースからデータを取得できます。 テーブル値関数を使用すると、カスタム データ ソースをデザインできます。  
   
--   **既存のレポートを変更します。** [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]を使用すると、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーで作成されたレポートをカスタマイズおよび更新できます。  
+-   **既存のレポートを変更します。** [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]を使用すると、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーで作成されたレポートをカスタマイズおよび更新できます。  
   
 -   データのフィルター選択、グループ化と並べ替え、または数式や式の追加によって、**データを変更します。**   
   
 -   データをビジュアルな形式でまとめ、大量の集計情報がひとめでわかるようにするため、**グラフ、ゲージ、スパークライン、およびインジケーターを追加します。**   
   
--   ドキュメント マップ、表示/非表示を切り替えるボタン、サブレポートおよび詳細レポートへのドリルスルー リンクなど、**対話機能を追加します**。 パラメーターとフィルターを使用すると、カスタマイズされたビューのデータをフィルター処理できます。  
+-   ドキュメント マップ、表示/非表示を切り替えるボタン、サブレポートおよび詳細レポートへのドリルスルー リンクなど、**対話機能を追加します** 。 パラメーターとフィルターを使用すると、カスタマイズされたビューのデータをフィルター処理できます。  
   
 -   外部コンテンツなど、**画像やその他のリソースを埋め込んだり参照したりします。**   
   
@@ -70,18 +73,21 @@ caps.handback.revision: 35
 > [!NOTE]  
 >  パブリッシュされたレポートは、レポート サーバー上または SharePoint 統合モードのレポート サーバー上で、レポート サーバー管理者が管理します。 レポート サーバー管理者は、セキュリティの定義、プロパティの設定、および操作 (レポート履歴や電子メールによるレポート配信など) のスケジュール設定を行うことができます。 共有スケジュールおよび共有データ ソースを作成し、それらを一般的な用途で使用できます。 管理者はさらに、レポート サーバーのすべてのフォルダーの管理も行います。 実行できる管理タスクは、ユーザー権限により異なります。  
   
-##  <a name="InThisSection"></a> このセクションの内容  
- [SQL Server 2016 の Reporting Services とレポート ビルダーの新機能](What's%20New%20in%20Reporting%20Services%20\(SSRS\).md)  
-  このバージョンの [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] および[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]の新機能について説明します。  
+## <a name="see-also"></a>参照  
+  [レポート ビルダーの起動](../../reporting-services/report-builder/start-report-builder.md)  
   
- [チュートリアル: オフラインでのクイック グラフ レポートの作成](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]とレポートの作成に使用できるウィザードを紹介します。 このチュートリアルには、作業用の一連のデータが用意されているため、データ ソースに接続せずに実習を開始できます。  
+  [レポート ビルダーをインストールする](../../reporting-services/install-windows/install-report-builder.md)
+
+  [SQL Server 2016 の Reporting Services とレポート ビルダーの新機能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+  このバージョンの [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] および [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]の新機能について説明します。   
+  [チュートリアル: オフラインでのクイック グラフ レポートを作成します。](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] とレポートの作成に使用できるウィザードを紹介します。 このチュートリアルには、作業用の一連のデータが用意されているため、データ ソースに接続せずに実習を開始できます。  
   
  [レポートの計画 (レポート ビルダー)](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  レポートを作成する前の考慮事項について説明します。  
   
  [レポート作成の概念 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]のドキュメント全体で使用する主要な概念について説明します。  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] のドキュメント全体で使用する主要な概念について説明します。  
   
  [レポート デザイン ビュー (レポート ビルダー)](../../reporting-services/report-builder/report-design-view-report-builder.md)  
  レポート デザイン ビューの各ペインと領域について説明します。  
@@ -92,7 +98,5 @@ caps.handback.revision: 35
  [キーボード ショートカット (レポート ビルダー)](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]でレポートのナビゲーションとデザインに使用できるショートカット キーについて説明します。  
   
-## 参照  
- [レポート ビルダーの起動](../../reporting-services/report-builder/start-report-builder.md)  
-  
-  
+
+

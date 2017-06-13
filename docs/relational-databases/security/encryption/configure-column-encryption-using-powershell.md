@@ -1,7 +1,7 @@
 ---
 title: "PowerShell を使用した列の暗号化の構成 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/10/2017
+ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 65fa326c931ed4a4bd534e7f70ca4e93811ee44d
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: d4a5651f3ef4f8d848253711ed93721f387c016a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="configure-column-encryption-using-powershell"></a>PowerShell を使用して列の暗号化の構成
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-この記事では、(*SqlServer* PowerShell モジュールで) [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx) コマンドレットを使用して、データベース列にターゲット Always Encrypted 構成を設定する手順を説明します。 **Set-SqlColumnEncryption** コマンドレットは、ターゲット データベースと選択した列に格納されたデータの両方のスキーマを変更します。 列に格納されたデータは、その列に指定されたターゲットの暗号化設定と現在の暗号化の構成に応じて、暗号化、再暗号化、または復号化できます。
+この記事では、(*SqlServer* PowerShell モジュールで) [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) コマンドレットを使用して、データベース列にターゲット Always Encrypted 構成を設定する手順を説明します。 **Set-SqlColumnEncryption** コマンドレットは、ターゲット データベースと選択した列に格納されたデータの両方のスキーマを変更します。 列に格納されたデータは、その列に指定されたターゲットの暗号化設定と現在の暗号化の構成に応じて、暗号化、再暗号化、または復号化できます。
 SqlServer PowerShell モジュールでの Always Encrypted のサポートの詳細については、「 [PowerShell を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)」を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
@@ -41,7 +41,7 @@ SqlServer PowerShell モジュールでの Always Encrypted のサポートの�
 
 オフライン アプローチの場合、ターゲット テーブル (およびターゲット テーブルに関連するすべてのテーブル。たとえば、ターゲット テーブルと外部キー リレーションシップがあるテーブルなど) は、操作中にトランザクションを書き込むことはできません。 外部キー制約のセマンティクス (**CHECK** または **NOCHECK**) は、オフライン アプローチの場合は常に保持されます。
 
-オンライン アプローチ (SSMS 17.0 以降のバージョンの SqlServer PowerShell モジュールが必要) では、データのコピーと暗号化、暗号化の解除、再暗号化の操作が段階的に実行されます。 アプリケーションは、データの移動操作中にターゲット テーブルに対してデータの読み取りと書き込みを実行できます。ただし、最後の繰り返しを除きます。期間は **MaxDownTimeInSeconds** パラメーターで制限されます (ユーザーが定義可能)。 データのコピー中にアプリケーションが実行できる変更を検出して処理するために、コマンドレットはターゲット データベースでの[変更の追跡](https://msdn.microsoft.com/library/bb964713.aspx)を有効にします。 そのため、オフライン アプローチの場合よりサーバー側で使用するリソース量が多くなる可能性があります。 また、オンライン アプローチの場合、操作にかなり時間がかかることがあります。特に、データベースに対して負荷の高い書き込みが実行される場合です。 オンライン アプローチを使用できるのは一度に 1 つのテーブルを暗号化する場合です。テーブルには主キーになります。 既定では、外部キー制約は **NOCHECK** オプションで再作成され、アプリケーションへの影響を最小限に抑えます。 **KeepCheckForeignKeyConstraints** オプションを指定して、外部キー制約のセマンティックを強制的に保持できます。
+アプローチではオンライン (SqlServer PowerShell モジュールのバージョンを必要と 21.x またはそれ以降)、コピー、暗号化し復号化、またはデータを再度暗号化の操作が段階的に実行します。 アプリケーションは、データの移動操作中にターゲット テーブルに対してデータの読み取りと書き込みを実行できます。ただし、最後の繰り返しを除きます。期間は **MaxDownTimeInSeconds** パラメーターで制限されます (ユーザーが定義可能)。 データのコピー中にアプリケーションが実行できる変更を検出して処理するために、コマンドレットはターゲット データベースでの[変更の追跡](../../track-changes/enable-and-disable-change-tracking-sql-server.md)を有効にします。 そのため、オフライン アプローチの場合よりサーバー側で使用するリソース量が多くなる可能性があります。 また、オンライン アプローチの場合、操作にかなり時間がかかることがあります。特に、データベースに対して負荷の高い書き込みが実行される場合です。 オンライン アプローチを使用できるのは一度に 1 つのテーブルを暗号化する場合です。テーブルには主キーになります。 既定では、外部キー制約は **NOCHECK** オプションで再作成され、アプリケーションへの影響を最小限に抑えます。 **KeepCheckForeignKeyConstraints** オプションを指定して、外部キー制約のセマンティックを強制的に保持できます。
 
 ここでは、オフラインとオンラインのいずれかのアプローチを選択する場合のガイドラインを示します。
 
@@ -61,9 +61,9 @@ SqlServer PowerShell モジュールでの Always Encrypted のサポートの�
 ---|---|---|---
 手順 1. PowerShell 環境を起動し、Sql Server のモジュールをインポートします。 | [SqlServer モジュールのインポート](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | いいえ | いいえ
 手順 2. サーバーとデータベースに接続します。 | [データベースへの接続](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | いいえ | はい
-手順 3. (列暗号化キーを保護する、交換される) 列マスター キーが Azure Key Vault に格納されている場合は、Azure に対して認証します。 | [Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx) | はい | いいえ
-手順 4. 暗号化、再暗号化または復号化するデータベースの各列に 1 つずつ SqlColumnEncryptionSettings オブジェクトの配列を構築します。 SqlColumnMasterKeySettings は、メモリ (PowerShell) に存在するオブジェクトです。 列のターゲット暗号化方式を指定します。 | [New-SqlColumnEncryptionSettings](https://msdn.microsoft.com/library/mt759825.aspx) | いいえ | いいえ
-手順 5. 前の手順で作成した SqlColumnMasterKeySettings オブジェクトの配列で指定された、目的の暗号化構成を設定します。 指定したターゲットの設定と列の現在の暗号化の構成に応じて、列が暗号化、再暗号化、または復号化されます。| [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx)<br><br>**注:** この手順の実行には時間がかかる場合があります。 アプリケーションは、選択されたアプローチ (オンラインまたはオフライン) に応じて、操作全体または一部の操作でテーブルにアクセスできなくなります。 | はい | はい
+手順 3. (列暗号化キーを保護する、交換される) 列マスター キーが Azure Key Vault に格納されている場合は、Azure に対して認証します。 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | はい | いいえ
+手順 4. 暗号化、再暗号化または復号化するデータベースの各列に 1 つずつ SqlColumnEncryptionSettings オブジェクトの配列を構築します。 SqlColumnMasterKeySettings は、メモリ (PowerShell) に存在するオブジェクトです。 列のターゲット暗号化方式を指定します。 | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | いいえ | いいえ
+手順 5. 前の手順で作成した SqlColumnMasterKeySettings オブジェクトの配列で指定された、目的の暗号化構成を設定します。 指定したターゲットの設定と列の現在の暗号化の構成に応じて、列が暗号化、再暗号化、または復号化されます。| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**注:** この手順の実行には時間がかかる場合があります。 アプリケーションは、選択されたアプローチ (オンラインまたはオフライン) に応じて、操作全体または一部の操作でテーブルにアクセスできなくなります。 | はい | はい
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>オフライン アプローチを使用した列の暗号化 - 例
 

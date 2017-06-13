@@ -1,32 +1,37 @@
 ---
-title: "拡張機能 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "拡張機能 (SSRS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8ec3b39a36a6020a6655e7c7e7c2a589266f3fc
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# 拡張機能 (SSRS)
+# <a name="extensions-ssrs"></a>拡張機能 (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート サーバーでは、拡張機能を使用して、認証、データ処理、レポート表示、およびレポート配信で使用できる入力または出力の種類をモジュール化します。 これにより、既存の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] インストールで、業界の新しいソフトウェア標準 (新しい認証方法やカスタム データ ソースの種類など) を簡単に利用できます。 レポート サーバーは、カスタム認証拡張機能、データ処理拡張機能、レポート処理拡張機能、表示拡張機能、配信拡張機能、およびユーザーが RSReportServer.config 構成ファイルで構成できる拡張機能をサポートします。 たとえば、レポート ビューアーで使用できるエクスポート形式を制限できます。 レポート サーバーには、少なくとも 1 つの認証拡張機能、データ処理拡張機能、および表示拡張機能が必要です。 配信拡張機能とレポート処理拡張機能は省略可能ですが、レポートの配信またはカスタム コントロールをサポートする場合は必須です。  
   
- このトピックでは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] で簡単に使用できる拡張機能について説明します。  
+ このトピックでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]で簡単に使用できる拡張機能について説明します。  
   
-## セキュリティ拡張機能  
+## <a name="security-extensions"></a>セキュリティ拡張機能  
  セキュリティ拡張機能は、レポート サーバーに対してユーザーおよびグループを認証および承認するために使用します。 既定のセキュリティ拡張機能は、Windows 認証に基づいています。 配置モデルで別の認証方法が必要な場合 (たとえば、インターネットまたはエクストラネット用にフォームベースの認証が必要な場合) は、カスタム セキュリティ拡張機能を作成し、既定のセキュリティを置き換えることができます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の単一のインストールで使用できるセキュリティ拡張機能は 1 つだけです。 既定の Windows 認証セキュリティ拡張機能を置き換えることは可能ですが、カスタム セキュリティ拡張機能と併用することはできません。  
   
-## データ処理拡張機能  
- データ処理拡張機能は、データ ソースへのクエリを実行し、フラット化された行セットを返すために使用します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 各種の拡張機能を使用して、さまざまな種類のデータ ソースと対話します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] に含まれている拡張機能を使用することも、独自の拡張機能を開発することも可能です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、Oracle、[!INCLUDE[SAP_DPE_BW_1](../includes/sap-dpe-bw-1-md.md)]、Hyperion Essbase、Teradata、OLE DB、ODBC の各データ ソース用のデータ処理拡張機能が用意されています。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] どのような [!INCLUDE[vstecado](../includes/vstecado-md.md)] データ プロバイダーも使用できます。 データ処理拡張機能は、次のタスクを実行することにより、レポート プロセッサ コンポーネントからのクエリ要求を処理します。  
+## <a name="data-processing-extensions"></a>データ処理拡張機能  
+ データ処理拡張機能は、データ ソースへのクエリを実行し、フラット化された行セットを返すために使用します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 各種の拡張機能を使用して、さまざまな種類のデータ ソースと対話します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]に含まれている拡張機能を使用することも、独自の拡張機能を開発することも可能です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、Oracle、 [!INCLUDE[SAP_DPE_BW_1](../includes/sap-dpe-bw-1-md.md)]、Hyperion Essbase、Teradata、OLE DB、ODBC の各データ ソース用のデータ処理拡張機能が用意されています。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] どのような [!INCLUDE[vstecado](../includes/vstecado-md.md)] データ プロバイダーも使用できます。 データ処理拡張機能は、次のタスクを実行することにより、レポート プロセッサ コンポーネントからのクエリ要求を処理します。  
   
 -   データ ソースへの接続を開きます。  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 7
   
 -   行を反復処理し、補助メタデータを取得します。  
   
-## 表示拡張機能  
+## <a name="rendering-extensions"></a>表示拡張機能  
  表示拡張機能は、レポート プロセッサのデータとレイアウト情報をデバイス固有の形式に変換します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTML、Excel、CSV、XML、Image、PDF、および [!INCLUDE[msCoName](../includes/msconame-md.md)] Word の 7 つの表示拡張機能が含まれています。  
   
 -   **HTML 表示拡張機能** Web ブラウザーを使用してレポート サーバーのレポートを要求すると、レポート サーバーは HTML 表示拡張機能を使用してレポートを表示します。 HTML 表示拡張機能では、すべての HTML が UTF-8 エンコードを使用して生成されます。 詳細については、「[HTML での表示 (レポート ビルダーおよび SSRS)](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)」および「[Reporting Services と Power View のブラウザー サポート](../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。  
@@ -69,10 +74,10 @@ caps.handback.revision: 7
   
 -   **Word 表示拡張機能** [!INCLUDE[msCoName](../includes/msconame-md.md)] Word 表示拡張機能は、[!INCLUDE[msCoName](../includes/msconame-md.md)] Office Word 2000 以降と互換性のある Word 文書としてレポートを表示します。 詳細については、「[Microsoft Word へのエクスポート (レポート ビルダーおよび SSRS)](../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)」を参照してください。  
   
-## レポート処理拡張機能  
- レポート処理拡張機能を追加すると、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] に含まれていないレポート アイテム用のカスタム レポート処理を提供できます。 既定では、レポート サーバーはテーブル、グラフ、マトリックス、一覧、テキスト ボックス、画像、およびその他すべてのレポート アイテムを処理できます。 レポートの実行中にカスタム処理を必要とする特別な機能をレポートに追加する場合 (たとえば、[!INCLUDE[msCoName](../includes/msconame-md.md)] MapPoint の地図を埋め込む場合)、その処理を実行するレポート処理拡張機能を作成できます。  
+## <a name="report-processing-extensions"></a>レポート処理拡張機能  
+ レポート処理拡張機能を追加すると、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]に含まれていないレポート アイテム用のカスタム レポート処理を提供できます。 既定では、レポート サーバーはテーブル、グラフ、マトリックス、一覧、テキスト ボックス、画像、およびその他すべてのレポート アイテムを処理できます。 レポートの実行中にカスタム処理を必要とする特別な機能をレポートに追加する場合 (たとえば、 [!INCLUDE[msCoName](../includes/msconame-md.md)] MapPoint の地図を埋め込む場合)、その処理を実行するレポート処理拡張機能を作成できます。  
   
-## 配信拡張機能  
+## <a name="delivery-extensions"></a>配信拡張機能  
  バックグラウンド処理アプリケーションは、配信拡張機能を使用して、さまざまな場所にレポートを配信します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 電子メールの配信拡張機能とファイル共有の配信拡張機能があります。 電子メール配信拡張機能は、簡易メール転送プロトコル (SMTP) を使用して、レポートそのものまたはレポートへの URL リンクのいずれかを含む電子メール メッセージを送信できます。 URL リンクやレポートを含まない短い通知を、ポケットベル、電話、またはその他のデバイスに送信することもできます。 ファイル共有配信拡張機能は、ネットワークの共有フォルダーにレポートを保存します。 作成したファイルには、場所、表示形式、ファイル名、および上書きオプションを指定できます。 表示したレポートをアーカイブしたり、非常に大きいレポートを扱うための方法の一部として、ファイル共有配信を使用できます。 配信拡張機能はサブスクリプションと共に機能します。 ユーザーはサブスクリプションを作成するときに、利用可能な配信拡張機能のいずれかを選択して、レポートの配信方法を決定します。  
   
   

@@ -1,31 +1,36 @@
 ---
-title: "Work Around the Excel 2003 Row Limitation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Excel 2003 の行制限を回避 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 8533cd39c8a3d5efde78fee3e045eb744d562a97
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# Work Around the Excel 2003 Row Limitation
+# <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
   このトピックでは、ページ分割されたレポートを Excel にエクスポートするときに Excel 2003 の行制限を回避する方法について説明します。 回避策は、テーブルのみを含むレポート向けのものです。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 (.xls) 表示拡張機能の使用は推奨されません。 詳細については、「[SQL Server 2016 における SQL Server Reporting Services の非推奨機能](../Topic/Deprecated%20Features%20in%20SQL%20Server%20Reporting%20Services%20in%20SQL%20Server%202016.md)」を参照してください。  
+>  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 (.xls) 表示拡張機能の使用は推奨されません。 詳細については、「 [SQL Server 2016 における SQL Server Reporting Services の非推奨機能](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)」を参照してください。  
   
  Excel 2003 でサポートされる行数は、ワークシートあたり最大 65,536 行です。 この制限を回避するには、特定の行数の後に明示的な改ページを適用します。 Excel レンダラーでは、それぞれの明示的な改ページごとに、新しいワークシートが作成されます。  
   
-### 明示的な改ページを作成するには  
+### <a name="to-create-an-explicit-page-break"></a>明示的な改ページを作成するには  
   
 1.  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルでレポートを開きます。  
   
@@ -41,21 +46,21 @@ caps.handback.revision: 10
   
      外部テーブルのグループを追加すると、レポートにグループ列が追加されます。  
   
-4.  グループ列を削除するには、列ヘッダーを右クリックし、**[列の削除]** をクリックして、**[列のみの削除]** を選択します。その後で、**[OK]** をクリックします。  
+4.  グループ列を削除するには、列ヘッダーを右クリックし、 **[列の削除]**をクリックして、 **[列のみの削除]**を選択します。その後で、 **[OK]**をクリックします。  
   
      ![グループ列の削除](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "グループ列の削除")  
   
 5.  **[行グループ]** の **[グループ 1]** を右クリックし、 **[グループ プロパティ]**をクリックします。  
   
-     ![グループのプロパティの表示](../../reporting-services/report-builder/media/groupproperties-updated.png "グループのプロパティの表示")  
+     ![グループのプロパティを表示](../../reporting-services/report-builder/media/groupproperties-updated.png "グループのプロパティを表示")  
   
 6.  **[グループ プロパティ]** ダイアログ ボックスの **[並べ替え]** ページで、既定の並べ替えオプションを選択し、 **[削除]**をクリックします。  
   
-     ![既定の並べ替えの削除](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "既定の並べ替えの削除")  
+     ![既定の並べ替えを削除](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "既定の並べ替えを削除")  
   
 7.  **[改ページ]** ページで、 **[グループの各インスタンスの間]** をクリックし、 **[OK]**をクリックします。  
   
-     ![改ページの設定](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "改ページの設定")  
+     ![改ページ設定](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "改ページを設定")  
   
 8.  レポートを保存します。 Excel にレポートをエクスポートするとき、複数のワークシートへのエクスポートが行われ、各ワークシートには最大で 65,000 行が含まれます。  
   

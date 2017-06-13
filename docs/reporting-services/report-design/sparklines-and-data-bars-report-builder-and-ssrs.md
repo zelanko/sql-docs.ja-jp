@@ -1,33 +1,38 @@
 ---
-title: "スパークラインとデータ バー (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.sparklines.f1"
-  - "10544"
+title: "スパーク ラインとデータ バー (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.sparklines.f1
+- "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6021dec1c7d072041710c62a533d4e19ead4aa53
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# スパークラインとデータ バー (レポート ビルダーおよび SSRS)
+# <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>スパークラインとデータ バー (レポート ビルダーおよび SSRS)
   スパークラインとデータ バーは、小さい領域で多くの情報を伝達する小さい単純なグラフで、多くの場合、インライン テキストが含まれています。   
     
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] レポートでは、スパークラインとデータ バーはテーブルやマトリックスでよく使用されます。 その効果は、それらを個々に表示するのではなく、同時に上下に表示して簡単に比較できることにあります。 この機能によって、他の値と動作の異なる行である外れ値を把握しやすくなります。 これらは小さいですが、各スパークラインは長期にわたる複数のデータ ポイントを表す場合が多く、 データ バーは複数のデータ ポイントを表すこともできますが、通常は 1 つのデータ ポイントのみを示します。 各スパークラインは通常 1 つの系列を表します。 スパークラインをテーブル内の詳細グループに追加することはできません。 スパークラインは集計データを表示するため、グループに関連付けられているセル内に含める必要があります。 スパークラインとデータ バーには、カテゴリ、系列、および値という同じ基本グラフ要素がありますが、凡例、軸線、ラベル、目盛りはありません。  
   
  ![rs_SparklineExample](../../reporting-services/report-design/media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- スパークラインをすぐに使用するには、「[チュートリアル: レポートへのスパークラインの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)」、「[テーブルにスパークラインを作成する方法 (ビデオ)](http://go.microsoft.com/fwlink/?LinkId=197092)」、および「[レポート ビルダーのスパークライン、横棒グラフ、およびインジケーター (ビデオ)](http://technet.microsoft.com/bi/video/ff877165)」を参照してください。  
+ スパークラインをすぐに使用するには、「 [チュートリアル: レポートへのスパークラインの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) 」、「 [テーブルにスパークラインを作成する方法 (ビデオ)](http://go.microsoft.com/fwlink/?LinkId=197092) 」、および「 [レポート ビルダーのスパークライン、横棒グラフ、およびインジケーター (ビデオ)](http://technet.microsoft.com/bi/video/ff877165) 」を参照してください。  
   
 > [!NOTE]  
 >  親テーブル、マトリックス、または一覧を含むスパークラインとデータ バーは、レポート パーツとしてレポートとは別にパブリッシュできます。 [レポート パーツ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)の詳細を参照してください。  
@@ -59,7 +64,7 @@ caps.handback.revision: 11
 -   [縦棒グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md): 縦棒グラフ、積み上げ縦棒グラフ、および 100% 積み上げ縦棒グラフ。 縦棒グラフはスパークラインまたはデータ バーのどちらにも変換できます。  
   
 ##  <a name="AlignDatainTableMatrix"></a> テーブルまたはマトリックス内でのスパークライン データの整列  
- スパークラインをテーブルまたはマトリックスに挿入する場合、通常は、各スパークラインのデータ ポイントを対象の列にある他のスパークラインのデータ ポイントに揃えることが重要です。 そうしないと、異なる行内のデータを比較することが難しくなります。 たとえば、社内の複数の販売員の月ごとの売上データを比較する場合は、月を揃えます。 従業員が 4 月に欠勤した場合、その従業員の 4 月分のデータはありません。 その月は空白にし、後続の月のデータを他の従業員のデータと揃えて表示することができます。 これを行うには、横軸を揃えます。 詳細については、「[合計、集計、および組み込みコレクションの式のスコープ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression scope for totals, aggregates, and built-in collections.md)」のスパーク ラインに関するセクションと、「[テーブル内のグラフまたはマトリックスでのデータの整列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)」を参照してください。  
+ スパークラインをテーブルまたはマトリックスに挿入する場合、通常は、各スパークラインのデータ ポイントを対象の列にある他のスパークラインのデータ ポイントに揃えることが重要です。 そうしないと、異なる行内のデータを比較することが難しくなります。 たとえば、社内の複数の販売員の月ごとの売上データを比較する場合は、月を揃えます。 従業員が 4 月に欠勤した場合、その従業員の 4 月分のデータはありません。 その月は空白にし、後続の月のデータを他の従業員のデータと揃えて表示することができます。 これを行うには、横軸を揃えます。 詳細については、「[合計、集計、および組み込みコレクションの式のスコープ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)」のスパーク ラインに関するセクションと、「[テーブル内のグラフまたはマトリックスでのデータの整列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)」を参照してください。  
   
  同様に、行全体を比較できるようにするには、データを縦に揃える必要があります。つまり、1 つのスパークラインまたはデータ バーにある棒または折れ線の高さが、他のすべてのスパークラインまたはデータ バーにある棒と折れ線の高さに相対的である必要があります。 そうしないと、行を他の行と比較することはできません。  
   
@@ -68,10 +73,10 @@ caps.handback.revision: 11
  次の画像には、各従業員の毎日の売り上げが縦棒グラフで示されています。 売り上げのない日にはグラフが空白になり、後続の日が整列されていることに注意してください。 これは、横方向の配置の例を示しています。 また、一部の従業員では、各縦棒が短く、縦棒がセルの最上部に届いていません。 これは、縦方向の配置の例を示しています。そうでない場合、高い縦棒のない行では、短い縦棒がセル全体の高さまで拡張されます。  
   
 ##  <a name="UnderstandScope"></a> スパークラインまたはデータ バーに渡されるデータについて  
- スパークラインまたはデータ バーをテーブルまたはマトリックスに追加する場合、この操作をあるデータ領域を別のデータ領域に*入れ子にする*といいます。 入れ子とは、スパークラインまたはデータ バーに渡されたデータが、テーブルまたはマトリックスを構成するデータセットと、テーブルまたはマトリックス内の配置場所によって制御されることを指します。 詳細については、「[入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)」 を参照してください。  
+ スパークラインまたはデータ バーをテーブルまたはマトリックスに追加する場合、この操作をあるデータ領域を別のデータ領域に *入れ子にする* といいます。 入れ子とは、スパークラインまたはデータ バーに渡されたデータが、テーブルまたはマトリックスを構成するデータセットと、テーブルまたはマトリックス内の配置場所によって制御されることを指します。 詳細については、[「入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;」](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md) を参照してください。  
   
 ##  <a name="ConvertSparklinetoChart"></a> スパークラインまたはデータ バーの完全なグラフへの変換  
- スパークラインとデータ バーはグラフの一種であるため、完全なグラフの機能を使用する必要がある場合は、それらを右クリックし、**[完全なグラフに変換]** をクリックすると、完全なグラフに変換できます。 この変換を行うと、軸の線、ラベル、目盛り、および凡例が自動的に追加されます。  
+ スパークラインとデータ バーはグラフの一種であるため、完全なグラフの機能を使用する必要がある場合は、それらを右クリックし、 **[完全なグラフに変換]**をクリックすると、完全なグラフに変換できます。 この変換を行うと、軸の線、ラベル、目盛り、および凡例が自動的に追加されます。  
   
 > [!NOTE]  
 >  1 回のクリックで、完全なグラフをスパークラインまたはデータ バーに変換することはできません。 しかし、スパークラインまたはデータ バーにないグラフ要素をすべて削除すれば、完全なグラフからスパークラインまたはデータ バーを作成できます。  
@@ -81,7 +86,7 @@ caps.handback.revision: 11
   
  [テーブル内のグラフまたはマトリックスでのデータの整列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
-### グラフの使用法に関するその他のトピック  
+### <a name="other-how-to-topics-for-charts"></a>グラフの使用法に関するその他のトピック  
  スパークラインとデータ バーはグラフの一種であるため、次に紹介するグラフの使用法に関するトピックにも役立つ関連情報が記載されています。  
   
  [レポートへのグラフの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
@@ -102,7 +107,7 @@ caps.handback.revision: 11
   
  [複数の図形グラフでの色の統一 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [チュートリアル: レポートへのスパークラインの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
   

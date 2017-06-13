@@ -1,24 +1,29 @@
 ---
-title: "マップ レポートの計画 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "マップ レポート (レポート ビルダーおよび SSRS) の計画 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 78f69746e290ea004d28edf8a0a90aeabfb9151d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# マップ レポートの計画 (レポート ビルダーおよび SSRS)
-優れたレポートは、具体的な行動や洞察につながる情報をもたらします。 地理的背景上に売上合計や人口統計などの分析データを表現するには、[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートにマップを追加します。 マップには、複数のレイヤーを含めることができます。各レイヤーには、特定の種類の空間データ (場所を表すポイント、ルートを表す線、または領域を表す多角形) によって定義されたマップ要素が表示されます。 各レイヤー上でマップ要素に分析データを関連付けることができます。  
+# <a name="plan-a-map-report-report-builder-and-ssrs"></a>マップ レポートの計画 (レポート ビルダーおよび SSRS)
+優れたレポートは、具体的な行動や洞察につながる情報をもたらします。 地理的背景上に売上合計や人口統計などの分析データを表現するには、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートにマップを追加します。 マップには、複数のレイヤーを含めることができます。各レイヤーには、特定の種類の空間データ (場所を表すポイント、ルートを表す線、または領域を表す多角形) によって定義されたマップ要素が表示されます。 各レイヤー上でマップ要素に分析データを関連付けることができます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -51,7 +56,7 @@ caps.handback.revision: 9
   
  必要な空間データが明らかになったら、そのソースを探す必要があります。  
   
-### 空間データのソースを探す  
+### <a name="find-a-source-for-spatial-data"></a>空間データのソースを探す  
  マップに使用する空間データを探すには、次のソースを利用できます。  
   
 -   ESRI シェープファイル (インターネットで一般公開されているシェープファイルなど)。  
@@ -70,18 +75,18 @@ caps.handback.revision: 9
   
  必要なデータが見つかったら、そのデータをレポート定義に埋め込むか、レポートの処理時にデータを動的に取得することができます。 詳細については、このトピックの後半にある「 [レポート定義のサイズとレポート処理にかかる時間のバランスを考える](#Embedding) 」を参照してください。  
   
-### 空間データとその対応フィールドを決める  
+### <a name="determine-the-spatial-data-and-the-spatial-data-match-fields"></a>空間データとその対応フィールドを決める  
  マップ上に分析データを表示したり、サイズ、色、マーカーの種類などを変更したりするには、空間データと分析データとを関連付けるフィールドを指定する必要があります。  
   
  空間データには、次のフィールドが存在する必要があります。  
   
--   **空間データとして提供しているサードパーティのサイト。** 空間データ フィールドには、ポイント、線、または多角形をそれぞれ定義する座標セットが格納されます。  
+-   **Spatial data.** 空間データ フィールドには、ポイント、線、または多角形をそれぞれ定義する座標セットが格納されます。  
   
 -   **対応フィールド :** 個々の空間データ フィールドを一意に識別する 1 つまたは複数のフィールドです。 たとえば、店舗所在地を表すポイントの場合は、その店舗の名前を使用します。 その空間データに重複する店舗名が存在する場合は、店舗名に市区町村の名前も含めるなどして対処します。  
   
  対応フィールドは、空間データと分析データを関連付けるために使用します。  
   
-### 分析データとその対応フィールドを決める  
+### <a name="determine-the-analytical-data-and-the-analytical-data-match-fields"></a>分析データとその対応フィールドを決める  
  空間データを指定したら、分析データを指定する必要があります。 分析データのソースには、次のようなものがあります。  
   
 -   既存のレポート データセット。 フィールドは、[Sales]、=Fields!Sales.Value など、単純なフィールド式として指定されます。  
@@ -107,18 +112,18 @@ caps.handback.revision: 9
   
 |ウィザード アイコン|レイヤー スタイル|レイヤーの種類|説明およびオプション|  
 |-----------------|-----------------|----------------|-----------------------------|  
-|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.png "rs_MapType_Polygon_Basic")|基本マップ|多角形|領域のみ (販売地域など) を表示するマップ。<br /><br /> オプション : パレットで色を使い分けるか、単色を使用する。 パレットには、一連の色があらかじめ定義されています。 パレットのすべての色を割り当てた場合、色の濃淡が割り当てられます。|  
-|![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.png "rs_MapType_Polygon_ColorAnalytical")|色分析マップ|多角形|分析データを地域ごとの売上データなどで色分けして表示するマップ。|  
-|![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.png "rs_MapType_Polygon_Bubble")|バブル マップ|多角形|領域に中央揃えで表示されるバブルのサイズを、地域ごとの売上データなどに基づいて変化させながら分析データを表示するマップ。<br /><br /> オプション : 第 2 分析フィールドに基づいて領域の色を変え、色ルールを指定する。|  
-|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.png "rs_MapType_Line_Basic")|基本線マップ|線|線のみ (配達ルートなど) を表示するマップ。<br /><br /> オプション : パレットで色を使い分けるか、単色を使用する。|  
-|![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.png "rs_MapType_Line_Analytical")|分析線マップ|線|配達済みの荷物の数や、ルートごとの時間指定の達成率などに基づいて、線の色や幅を変化させるマップ。<br /><br /> オプション : 一方の分析フィールドでは線の幅を変化させ、別の分析フィールドでは線の色を変化させて、色ルールを指定する。|  
-|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.png "rs_MapType_Marker_Basic")|基本マーカー マップ|ポイント|それぞれの場所 (市区町村など) にマーカーを表示するマップ。<br /><br /> オプション : パレットで色を使い分けるか、単色を使用して、マーカーのスタイルを変更する。|  
-|![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.png "rs_MapType_Marker_Bubble")|バブル マーカー マップ|ポイント|場所ごとにバブルを表示するマップ。市区町村ごとの売上データなど、特定の分析データ フィールドによってバブルのサイズが変化します。<br /><br /> オプション : 第 2 分析フィールドに基づいてバブルの色を変え、色ルールを指定する。|  
-|![rs_MapType_Marker_Analytical](../../reporting-services/report-design/media/rs-maptype-marker-analytical.png "rs_MapType_Marker_Analytical")|分析マーカー マップ|ポイント|場所ごとにマーカーを表示するマップ。分析データ (販売が好調な製品、利益率、ディスカウント戦略など) に基づいて、マーカーの色、サイズ、種類などが変化します。<br /><br /> オプション : マーカーの種類を第 1 の分析フィールドで変化させ、マーカーのサイズを第 2 分析フィールドで変化させ、マーカーの色を第 3 の分析フィールドで変化させて、色ルールを指定する。|  
+|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|基本マップ|多角形|領域のみ (販売地域など) を表示するマップ。<br /><br /> オプション : パレットで色を使い分けるか、単色を使用する。 パレットには、一連の色があらかじめ定義されています。 パレットのすべての色を割り当てた場合、色の濃淡が割り当てられます。|  
+|![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|色分析マップ|多角形|分析データを地域ごとの売上データなどで色分けして表示するマップ。|  
+|![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|バブル マップ|多角形|領域に中央揃えで表示されるバブルのサイズを、地域ごとの売上データなどに基づいて変化させながら分析データを表示するマップ。<br /><br /> オプション : 第 2 分析フィールドに基づいて領域の色を変え、色ルールを指定する。|  
+|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|基本線マップ|線|線のみ (配達ルートなど) を表示するマップ。<br /><br /> オプション : パレットで色を使い分けるか、単色を使用する。|  
+|![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|分析線マップ|線|配達済みの荷物の数や、ルートごとの時間指定の達成率などに基づいて、線の色や幅を変化させるマップ。<br /><br /> オプション : 一方の分析フィールドでは線の幅を変化させ、別の分析フィールドでは線の色を変化させて、色ルールを指定する。|  
+|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|基本マーカー マップ|ポイント|それぞれの場所 (市区町村など) にマーカーを表示するマップ。<br /><br /> オプション : パレットで色を使い分けるか、単色を使用して、マーカーのスタイルを変更する。|  
+|![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|バブル マーカー マップ|ポイント|場所ごとにバブルを表示するマップ。市区町村ごとの売上データなど、特定の分析データ フィールドによってバブルのサイズが変化します。<br /><br /> オプション : 第 2 分析フィールドに基づいてバブルの色を変え、色ルールを指定する。|  
+|![rs_MapType_Marker_Analytical](../../reporting-services/report-design/media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|分析マーカー マップ|ポイント|場所ごとにマーカーを表示するマップ。分析データ (販売が好調な製品、利益率、ディスカウント戦略など) に基づいて、マーカーの色、サイズ、種類などが変化します。<br /><br /> オプション : マーカーの種類を第 1 の分析フィールドで変化させ、マーカーのサイズを第 2 分析フィールドで変化させ、マーカーの色を第 3 の分析フィールドで変化させて、色ルールを指定する。|  
   
  マップ ウィザードでマップを追加した後、レイヤー ウィザードを使用して、追加レイヤーを作成したり、レイヤーのオプションを変更したりできます。 ウィザードの詳細については、「[マップ ウィザードおよびマップ レイヤー ウィザード &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)」をご覧ください。  
   
- 表示オプションまたはデータ オプションはレイヤーごとにカスタマイズできます。 ウィザードの実行後にマップをカスタマイズする方法の詳細については、「[マップまたはマップ レイヤーのデータと表示のカスタマイズ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)」をご覧ください。  
+ 表示オプションまたはデータ オプションはレイヤーごとにカスタマイズできます。 ウィザードの実行後にマップをカスタマイズする方法の詳細については、「 [マップまたはマップ レイヤーのデータと表示のカスタマイズ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)) を参照してください。  
   
 ##  <a name="Legend"></a> 凡例について検討する  
  見やすいマップにするために、各種の凡例、カラー スケール、距離スケールなどを追加することができます。 マップをデザインする際は、凡例の表示位置を検討します。 それぞれの凡例には、次の情報を指定できます。  
@@ -135,7 +140,7 @@ caps.handback.revision: 9
   
  既定では、すべてのレイヤーのルールの結果がマップの最初の凡例に表示されます。 複数の凡例を作成し、ルールごとに結果の表示先として使用する凡例を割り当てます。  
   
- 詳細については、「[ルールおよび分析データを使用した多角形、線、およびポイントの表示の変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md)」および「[マップの凡例、カラー スケール、および関連付けられているルールの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)」をご覧ください。  
+ 詳細については、「[ルールおよび分析データを使用した多角形、線、およびポイントの表示の変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)」および「[マップの凡例、カラー スケール、および関連付けられているルールの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)」をご覧ください。  
   
 ##  <a name="Embedding"></a> レポート定義のサイズとレポート処理にかかる時間のバランスを考える  
  マップ用のレポートをデザインする際に重要なことは、レポートのパフォーマンスを制御するオプションと、レポート定義のサイズを制御するオプションのバランスです。 空間データを使用したマップ要素や Bing マップのタイルは、静的なデータとしてレポート定義に埋め込むか、動的データとしてレポート処理時にその都度作成することができます。 静的なマップ データまたは動的なマップ データのトレードオフを評価し、環境に合わせてバランスを調整する必要があります。 次の点を考慮して判断してください。  
@@ -150,7 +155,7 @@ caps.handback.revision: 9
   
  動的な空間データを使用するには、空間データ ソースをレポート サーバーに置く必要があります。 レポートのデザインに [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用する場合、空間データ ソースをプロジェクトに追加し、レポート定義と併せてレポート サーバーにパブリッシュすることができます。 レポート ビルダーを使用してレポートをデザインする場合は、まず空間データをレポート サーバーにアップロードし、その後、ウィザードまたはレイヤーのプロパティで、そのマップ レイヤーに使用する空間データのソースを指定する必要があります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [マップまたはマップ レイヤーのデータと表示のカスタマイズ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [チュートリアル: マップ レポート &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
  [マップ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   

@@ -1,7 +1,7 @@
 ---
 title: "PolyBase の構成 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/08/2016
+ms.date: 06/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8486b55e306c7463551184cdd2334d629f5df135
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 7ac4f40e66a0bb82f811aa75a3d69e14a3a97188
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="polybase-configuration"></a>PolyBase の構成
@@ -30,6 +30,8 @@ ms.lasthandoff: 04/11/2017
  SQL Server から外部データ ソースへの接続を確立する必要があります。 接続の種類は、予想されるクエリ パフォーマンスに大きな影響を与えます。 たとえば、10 ギガ ビットのイーサネット リンクは、1 ギガ ビットのイーサネット リンクよりも PolyBase クエリのクエリ応答時間が短くなります。  
   
  **sp_configure**を使用して、Hadoop バージョンと Azure BLOB ストレージのどちらかに接続するように SQL Server を構成する必要があります。 PolyBase は、Hortonworks Data Platform (HDP) と Cloudera Distributed Hadoop (CDH) の 2 つの Hadoop ディストリビューションをサポートしています。  サポートされている外部データ ソースの一覧については、「[PolyBase Connectivity Configuration &#40;Transact-SQL&#41; (PolyBase 接続性構成 &#40;Transact-SQL&#41;)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)」を参照してください。  
+ 
+ 注意してください: PolyBase は Cloudera 暗号化ゾーンをサポートしていません。 
   
 ### <a name="run-spconfigure"></a>sp_configure の実行  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 04/11/2017
     -   SQL Server PolyBase エンジン  
   
 ## <a name="pushdown-configuration"></a>プッシュダウンの構成  
- クエリ パフォーマンスを高めるには、Hadoop クラスターへのプッシュダウン計算を有効にします。お使いの Hadoop 環境に固有の構成パラメーターを SQL Server でいくつか指定する必要があります。  
+ クエリのパフォーマンスを向上させるのには、いくつかの構成パラメーターを Hadoop 環境に固有の SQL Server を提供する必要があります、Hadoop クラスターへのプッシュ ダウン計算を有効にします。  
   
 1.  SQL Server のインストール パスで **yarn-site.xml** というファイルを検索します。 通常、このパスは次のとおりです。  
   
@@ -66,15 +68,15 @@ ms.lasthandoff: 04/11/2017
 
 4. すべての CDH 5.X バージョンで、**yarn.site.xml file** の最後か **mapred-site.xml file** に **mapreduce.application.classpath** 構成パラメーターを追加する必要があります。 HortonWorks では、**yarn.application.classpath** 構成内にこれらの構成が含まれます。
 
-## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>CDH 5.X クラスターの Yarn-site.xml ファイルと mapred-site.xml ファイルの例。
+## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>例 yarn-site.xml のファイルと mapred-site.xml ファイル CDH 5.X クラスター。
 
 
 
-yarn.application.classpath と Mapreduce.application.classpath で構成される Yarn-site.xml。
+Yarn site.xml yarn.application.classpath と mapreduce.application.classpath の構成にします。
 ```
-\<?xml version="1.0" encoding="utf-8"?>
-\<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-\<!-- Put site-specific property overrides in this file. -->
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
  <configuration>
   <property>
      <name>yarn.resourcemanager.connect.max-wait.ms</name>
@@ -84,11 +86,11 @@ yarn.application.classpath と Mapreduce.application.classpath で構成され�
      <name>yarn.resourcemanager.connect.retry-interval.ms</name>
      <value>30000</value>
   </property>
-\<!-- Applications' Configuration-->
+<!-- Applications' Configuration-->
   <property>
     <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
-     \<!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
-     \<!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
+     <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
+     <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
      <name>yarn.application.classpath</name>
      <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/,$HADOOP_MAPRED_HOME/*,$HADOOP_MAPRED_HOME/lib/*,$MR2_CLASSPATH*</value>
   </property>
@@ -106,9 +108,9 @@ yarn.application.classpath と Mapreduce.application.classpath で構成され�
 
 **yarn-site.xml**
 ```
-\<?xml version="1.0" encoding="utf-8"?>
-\<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-\<!-- Put site-specific property overrides in this file. -->
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
  <configuration>
   <property>
      <name>yarn.resourcemanager.connect.max-wait.ms</name>
@@ -118,11 +120,11 @@ yarn.application.classpath と Mapreduce.application.classpath で構成され�
      <name>yarn.resourcemanager.connect.retry-interval.ms</name>
      <value>30000</value>
   </property>
-\<!-- Applications' Configuration-->
+<!-- Applications' Configuration-->
   <property>
     <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
-     \<!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
-     \<!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
+     <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
+     <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
      <name>yarn.application.classpath</name>
      <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/*</value>
   </property>
@@ -140,11 +142,11 @@ yarn.application.classpath と Mapreduce.application.classpath で構成され�
 
 プロパティ mapreduce.application.classpath が追加されています。 CDH 5.x では、Ambari の同じ命名規則に構成値があります。
 
-  ```
-  \<?xml version="1.0"?>
-\<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-\<!-- Put site-specific property overrides in this file. -->
-\<configuration xmlns:xi="http://www.w3.org/2001/XInclude">
+```
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
+<configuration xmlns:xi="http://www.w3.org/2001/XInclude">
   <property>
     <name>mapred.min.split.size</name>
       <value>1073741824</value>
@@ -171,7 +173,7 @@ yarn.application.classpath と Mapreduce.application.classpath で構成され�
 -->
 </configuration>
   
-  ```
+```
   
 ## <a name="kerberos-configuration"></a>Kerberos の構成  
 Kerberos でセキュリティが強化されているクラスターに PolyBase が認証するとき、hadoop.rpc.protection を認証に設定する必要があります。 それにより、Hadoop ノード間のデータ通信が暗号化されません。 

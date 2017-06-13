@@ -1,24 +1,31 @@
 ---
-title: "1 つのレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "(レポート ビルダーおよび SSRS) レポートからデータ フィードの生成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b49b80de8516e14972b05d7ae91f4f72e765803a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# 1 つのレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)
-  ページ分割されたレポートから Atom 準拠のデータ フィードを作成してから、そのデータ フィードを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クライアントなど、データ フィードを処理するアプリケーションで使用できます。  
+
+# <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>1 つのレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)
+
+改ページ調整されたレポートから Atom 準拠のデータ フィードを生成して Power Pivot など、アプリケーションでデータ フィードを使用またはフィードの Power BI でデータを利用することができます。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom 表示拡張機能では、レポートで使用可能なデータ フィードを一覧表示する Atom サービス ドキュメントが生成されます。 このドキュメントには、レポート内の各データ領域について 1 つ以上のデータ フィードが一覧表示されます。 データ領域の種類およびデータ領域に表示されるデータによっては、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、1 つのデータ領域から複数のデータ フィードを生成することがあります。  
   
@@ -29,7 +36,7 @@ caps.handback.revision: 11
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Atom サービス ドキュメントを生成するには  
+### <a name="to-generate-an-atom-service-document"></a>Atom サービス ドキュメントを生成するには  
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルで、データ フィードを生成するレポートに移動します。  
   
@@ -37,7 +44,7 @@ caps.handback.revision: 11
   
      レポートが実行されます。  
   
-3.  ツール バーで、**[データ フィードへエクスポート]** アイコンをクリックします。  
+3.  ツール バーで、 **[データ フィードへエクスポート]** アイコンをクリックします。  
   
      データ フィードを含む Atom ドキュメントを保存するか開くかを確認するメッセージが表示されます。  
   
@@ -54,7 +61,7 @@ caps.handback.revision: 11
   
 8.  必要に応じて、ブラウザーで、またはテキスト エディターか XML エディターで、.atomsvc ファイルを開きます。  
   
-### Atom 準拠のデータ フィードを表示するには  
+### <a name="to-view-an-atom-compliant-data-feed"></a>Atom 準拠のデータ フィードを表示するには  
   
 1.  Atom サービス ドキュメントがまだ開かれていない場合は、そのサービス ドキュメントを検索し、Internet Explorer などのブラウザーで開きます。  
   
@@ -80,8 +87,9 @@ caps.handback.revision: 11
 7.  ドキュメントの種類が、 **ATOM ファイル**であることを確認し、 **[保存]**をクリックします。  
   
 8.  必要に応じて、ブラウザーで、またはテキスト エディターか XML エディターで、.atom ファイルを開きます。  
-  
-## 参照  
- [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
-  
-  
+
+## <a name="next-steps"></a>次の手順
+
+[レポートのエクスポート](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
+
+他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

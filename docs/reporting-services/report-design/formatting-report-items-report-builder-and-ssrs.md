@@ -1,25 +1,30 @@
 ---
-title: "レポート アイテムの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10444"
+title: "レポート アイテム (レポート ビルダーおよび SSRS) の書式設定 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 993571d2e5d70ba0553a0ed747caccfcadb3a0da
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)
+# <a name="formatting-report-items-report-builder-and-ssrs"></a>レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)
   レポート内のアイテムを書式設定すると、レポートの見栄えがよくなって読みやすくなります。 レポート デザイン モードでは、テキスト ボックスや、テキスト ボックスの個々のアイテム、画像、式、およびデータを書式設定できます。  
   
  ![rs_FormattingReporttItems](../../reporting-services/report-design/media/rs-formattingreporttitems.gif "rs_FormattingReporttItems")  
@@ -30,14 +35,14 @@ caps.handback.revision: 7
   
  C. テキスト ラベルとプレースホルダーが設定されたテキスト ボックス。  
   
- 書式設定するアイテムを選択し、そのアイテムの [プロパティ] ダイアログ ボックスを開くと、書式設定オプションを変更できます。 たとえば、テキスト ボックス全体のコンテンツやテキスト ボックスの選択した単語の書式を設定するには、アイテムを右クリックして、**[テキスト ボックスのプロパティ]** を選択します。 次に、書式設定するスタイルを適用することができます。  
+ 書式設定するアイテムを選択し、そのアイテムの [プロパティ] ダイアログ ボックスを開くと、書式設定オプションを変更できます。 たとえば、テキスト ボックス全体のコンテンツやテキスト ボックスの選択した単語の書式を設定するには、アイテムを右クリックして、 **[テキスト ボックスのプロパティ]**を選択します。 次に、書式設定するスタイルを適用することができます。  
   
  すぐに使用するには、「[チュートリアル: テキストの書式設定 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-format-text-report-builder.md)」をご覧ください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
  [テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  テキストの書式設定方法と、テキスト ボックス内の異なるテキスト ブロックの書式設定オプションのカスタマイズ方法について説明します。  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 7
  レポートに HTML を挿入して使用する方法について説明します。  
   
  [数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によりサポートされる標準書式指定文字列とカスタム書式指定文字列の使用方法について説明します。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]によりサポートされる標準書式指定文字列とカスタム書式指定文字列の使用方法について説明します。  
   
  [線、色、および画像の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)  
  レポート アイテムとデータ領域内の線、グリッド線、色、および画像の書式設定方法について説明します。  
@@ -53,7 +58,7 @@ caps.handback.revision: 7
  [レポートまたはテキスト ボックスのロケールの設定 &#40;Reporting Services&#41;](../../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  日付、通貨、数値など、言語や地域ごとに異なるデータの表示形式の設定を変更する方法について説明します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [グラフの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   

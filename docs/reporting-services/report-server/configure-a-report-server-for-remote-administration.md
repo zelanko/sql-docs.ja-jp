@@ -1,29 +1,34 @@
 ---
-title: "リモート管理用のレポート サーバーの構成 | Microsoft Docs"
-ms.date: "09/14/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Reporting Services 構成ツール"
-  - "WMI プロバイダー [Reporting Services], リモート構成"
-  - "構成管理 [WMI]"
-  - "レポート サーバー [Reporting Services], 構成"
-  - "リモート サーバーの管理 [Reporting Services]"
+title: "リモート管理のレポート サーバーの構成 |Microsoft ドキュメント"
+ms.date: 09/14/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services Configuration tool
+- WMI provider [Reporting Services], remote configuration
+- configuration management [WMI]
+- report servers [Reporting Services], configuring
+- remote server administration [Reporting Services]
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 caps.latest.revision: 11
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 11
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 69e4b50bdfd9dcffd285dbd7a37e095efdca621c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# リモート管理用のレポート サーバーの構成
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、レポート サーバー インスタンスをローカルでもリモートでも構成できます。 リモートのレポート サーバー インスタンスを構成するには、Reporting Services 構成ツールを使用するか、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI (Windows Management Instrumentation) プロバイダーを利用するカスタム コードを作成します。 Reporting Services 構成ツールには WMI プロバイダーのグラフィカル インターフェイスが用意されているので、コードを記述しなくてもレポート サーバーの構成を行えます。 このツールを起動する際に、接続先のリモート サーバーを指定できます。  
+# <a name="configure-a-report-server-for-remote-administration"></a>リモート管理用のレポート サーバーの構成
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、レポート サーバー インスタンスをローカルでもリモートでも構成できます。 リモートのレポート サーバー インスタンスを構成するには、Reporting Services 構成ツールを使用するか、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI (Windows Management Instrumentation) プロバイダーを利用するカスタム コードを作成します。 Reporting Services 構成ツールには WMI プロバイダーのグラフィカル インターフェイスが用意されているので、コードを記述しなくてもレポート サーバーの構成を行えます。 このツールを起動する際に、接続先のリモート サーバーを指定できます。  
   
  ツールを使用してリモートのレポート サーバーを構成するには、このトピックの説明に従って Windows ファイアウォールでポートを有効にし、リモート接続とリモート WMI 要求も有効にしておく必要があります。  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 11
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  ファイアウォールの設定を変更するには、ローカルの Administrators グループのメンバーとして、ローカルでログオンする必要があります。 リモート接続を経由してリモート コンピューターの Windows のファイアウォール設定を変更することはできません。  
   
  管理者以外のユーザーがリモート管理を実行できるようにするには、DCOM (Distributed Component Object Model) の "リモートからのアクティブ化" アクセス許可をアカウントに与える必要があります。 管理者以外のユーザーがアクセスできるようにサーバーを構成する手順は、このトピックで説明します。  
@@ -42,7 +47,7 @@ caps.handback.revision: 11
   
  詳細については、MSDN のプラットフォーム SDK ドキュメントの「 [Windows ファイアウォールを使用した接続](http://go.microsoft.com/fwlink/?LinkId=63615) 」を参照してください。  
   
-## 処理手順  
+## <a name="tasks"></a>処理手順  
  リモートのレポート サーバー構成を有効にするタスクは次のとおりです。  
   
 -   Windows ファイアウォールでポートを有効にし、レポート サーバーおよび SQL Server データベース エンジン インスタンスによって使用されるポートで要求が許可されるようにします。  「 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) 」および「 [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)」を参照してください。  
@@ -57,15 +62,15 @@ caps.handback.revision: 11
   
  このトピックでは、これらのタスクを実行する方法について説明します。  
   
-### レポート サーバー データベースへのリモート接続を構成するには  
+### <a name="to-configure-remote-connections-to-the-report-server-database"></a>レポート サーバー データベースへのリモート接続を構成するには  
   
 1.  **[スタート]**ボタンをクリックし、 **[プログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]**の順にポイントして、 **[SQL Server 構成マネージャー]**をクリックします。  
   
 2.  左側のペインで、 **[SQL Server ネットワークの構成]**を展開し、 **のインスタンスの** [プロトコル] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をクリックします。  
   
-3.  詳細ペインで TCP/IP プロトコルおよび名前付きパイプ プロトコルを有効にし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを再起動します。  
+3.  詳細ペインで TCP/IP プロトコルおよび名前付きパイプ プロトコルを有効にし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを再起動します。  
   
-### Windows ファイアウォールでリモート管理を有効にするには  
+### <a name="to-enable-remote-administration-in-windows-firewall"></a>Windows ファイアウォールでリモート管理を有効にするには  
   
 1.  リモート管理を有効にするコンピューターに、ローカル管理者としてログオンします。  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 11
   
 5.  コンピューターを再起動します。  
   
-### DCOM 権限を設定して管理者以外のユーザーによるリモート WMI アクセスを有効にするには  
+### <a name="to-set-dcom-permissions-to-enable-remote-wmi-access-for-non-administrators"></a>DCOM 権限を設定して管理者以外のユーザーによるリモート WMI アクセスを有効にするには  
   
 1.  [スタート] メニューで、 **[管理ツール]**をポイントし、 **[コンポーネント サービス]**をクリックします。  
   
@@ -109,15 +114,15 @@ caps.handback.revision: 11
   
 9. 自分のアカウントの名前を入力して、 **[OK]**をクリックします。  
   
-10. **[\<ユーザーまたはグループ> のアクセス許可]** で、**[許可]** 列の **[リモートからの起動]** と **[リモートからのアクティブ化]** をオンにして、**[OK]** をクリックします。  
+10. **のアクセス許可\<ユーザーまたはグループ >**で、**許可**列で、選択**リモートからの起動**と**リモート アクティブ化**、クリックして**[ok]**です。  
   
-### 管理者以外のユーザーにレポート サーバーの WMI 名前空間に対する権限を設定するには  
+### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>管理者以外のユーザーにレポート サーバーの WMI 名前空間に対する権限を設定するには  
   
 1.  [スタート] メニューで、 **[管理ツール]**をポイントし、 **[コンピューターの管理]**をクリックします。  
   
 2.  [サービスとアプリケーション] フォルダーを開きます。  
   
-3.  **[WMI コントロール]** を右クリックし、**[プロパティ]** をクリックします。  
+3.  **[WMI コントロール]**を右クリックし、 **[プロパティ]**をクリックします。  
   
 4.  **[セキュリティ]**をクリックします。  
   
@@ -139,7 +144,8 @@ caps.handback.revision: 11
   
 13. **[許可]** 列の **[アカウントの有効化]**、 **[リモートの有効化]**、 **[セキュリティの読み取り]**をオンにして、 **[OK]**をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   
+

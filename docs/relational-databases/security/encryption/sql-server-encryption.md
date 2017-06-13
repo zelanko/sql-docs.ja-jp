@@ -2,7 +2,7 @@
 title: "SQL Server の暗号化 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/03/2016
+ms.date: 05/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,24 +20,24 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 441968f81086a875ee526d31dcaf753c1e103868
+ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
+ms.openlocfilehash: c7aee6098b6cf8eca74dd3f34b9ed9a836bb9d20
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/16/2017
 
 ---
 # <a name="sql-server-encryption"></a>SQL Server の暗号化
   暗号化は、キーまたはパスワードを使用してデータを難読化するプロセスです。 暗号化によって、データは対応する暗号化解除キーまたはパスワードがないと使用できなくなります。 暗号化では、アクセス コントロールの問題は解決されません。 ただし、暗号化を使用すると、アクセス コントロールがバイパスされる場合でもデータ損失のリスクが限定されるので、セキュリティが強化されます。 たとえば、データベース ホスト コンピューターの構成が適切でない場合に、機密データをハッカーが入手したとしても、その情報が暗号化されていれば、ハッカーはその情報を使用できません。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、接続、データ、およびストアド プロシージャに対して暗号化を使用できます。 次の表に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]での暗号化の詳細を示します。  
-  
+
 > [!IMPORTANT]  
 >  暗号化は、セキュリティの強化に役立つ便利なツールですが、すべてのデータまたは接続に対して考慮すべきものではありません。 暗号化を実装するかどうかを検討する際は、ユーザーがデータにどのようにアクセスするかを考慮する必要があります。 ユーザーがパブリック ネットワーク経由でデータにアクセスする場合は、セキュリティを強化するためにデータの暗号化が必要になると考えられます。 一方、すべてのアクセスにセキュリティで保護されたイントラネット構成が使用される場合には、暗号化は必ずしも必要ありません。 暗号化を使用する場合は、それに伴ってパスワード、キー、および証明書のメンテナンス計画が必要になります。  
   
 > [!NOTE]  
 >  トランスポート層セキュリティ (TLS1.2) に関する最新情報は、「 [Microsoft SQL Server 用の TLS 1.2 サポート](https://support.microsoft.com/kb/3135244)」から入手できます。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
+
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、接続、データ、およびストアド プロシージャに対して暗号化を使用できます。 次のトピックには、暗号化の詳細についてにが含まれて[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+
  [暗号化階層](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の暗号化階層について説明します。  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 04/11/2017
  証明書を使用してデータを暗号化する方法について説明します。  
   
 ## <a name="external-resources"></a>外部リソース  
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 - セキュリティと保護](https://msdn.microsoft.com/sqlserver/bb895847.aspx)  
+ [Microsoft TechNet: SQL Server TechCenter: SQL Server 2012 のセキュリティと保護](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のセキュリティに関する最新情報が掲載されています。  
   
 ## <a name="see-also"></a>参照  

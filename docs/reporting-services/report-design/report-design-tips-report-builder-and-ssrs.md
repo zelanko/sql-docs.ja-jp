@@ -1,24 +1,29 @@
 ---
-title: "レポート デザインに関するヒント (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "レポート デザインに関するヒント (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d30cf6d4ad8e2a4903172230469f1ba41bab360
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# レポート デザインに関するヒント (レポート ビルダーおよび SSRS)
-  ここでは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートをデザインする際のヒントを紹介します。  
+# <a name="report-design-tips-report-builder-and-ssrs"></a>レポート デザインに関するヒント (レポート ビルダーおよび SSRS)
+  ここでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートをデザインする際のヒントを紹介します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -55,7 +60,7 @@ caps.handback.revision: 12
   
         2.  **データ フィードとしてのデータ領域:** 適切な権限を持ったレポート閲覧者は、データ領域から ATOM データ フィードを作成することができます。  
   
--   レポート名には、スペースではなくアンダースコアを使用します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]からレポートをダウンロードすると、スペースがアンダースコアに置換されます。 ダウンロード機能を使用してレポートをローカルに保存してから、そのレポートを [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に含めると、アンダースコアの使用により、サブレポートとドリルスルー リンクのレポート依存関係が正確に維持されます。  
+-   レポート名には、スペースではなくアンダースコアを使用します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] からレポートをダウンロードすると、スペースがアンダースコアに置換されます。 ダウンロード機能を使用してレポートをローカルに保存してから、そのレポートを [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に含めると、アンダースコアの使用により、サブレポートとドリルスルー リンクのレポート依存関係が正確に維持されます。  
   
 ##  <a name="Data"></a> データの処理  
   
@@ -101,7 +106,7 @@ caps.handback.revision: 12
   
     -   Tablix データ領域の行グループと列グループを操作するには、グループ化ペインからグループを選択します。  
   
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] のレポート デザイナーでは、プロパティ ペインのツール バーにあるオブジェクトのドロップダウン リストから選択できるほか、[ドキュメント アウトライン] ウィンドウのレポート アイテムの階層ビューから選択することもできます。 このペインでアイテムを選択すると、デザイン画面に選択したアイテムを表示できます。 [ドキュメント アウトライン] ウィンドウ開くには、 **[表示]** メニューの **[その他のウィンドウ]**をポイントし、 **[ドキュメント アウトライン]**をクリックします。  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]のレポート デザイナーでは、プロパティ ペインのツール バーにあるオブジェクトのドロップダウン リストから選択できるほか、[ドキュメント アウトライン] ウィンドウのレポート アイテムの階層ビューから選択することもできます。 このペインでアイテムを選択すると、デザイン画面に選択したアイテムを表示できます。 [ドキュメント アウトライン] ウィンドウ開くには、 **[表示]** メニューの **[その他のウィンドウ]**をポイントし、 **[ドキュメント アウトライン]**をクリックします。  
   
 ##  <a name="ReportItems"></a> 特定の種類のレポート アイテムの操作  
   
@@ -157,7 +162,7 @@ caps.handback.revision: 12
   
  このような操作の組み合わせ、レポート アイテムの幅と高さのプロパティ、レポート本文のサイズ、ページの高さと幅の定義、親レポートの余白の設定、およびレンダラー固有の改ページ調整のすべてが総合されて、表示されるページでのレポート アイテムのレイアウトが決まります。 詳細については、「[Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server 2016 のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Reporting Services チュートリアル &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)  

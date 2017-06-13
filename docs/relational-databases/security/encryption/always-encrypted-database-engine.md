@@ -2,7 +2,7 @@
 title: "Always Encrypted (データベース エンジン) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/13/2017
+ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f848c5ebf1233d6b34dcf00bb7084adcebc95ea1
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))
@@ -126,33 +126,32 @@ Always Encrypted の構成の詳細については、以下を参照してくだ
 
 -   暗号化されたオブジェクトの定義を変更した後、[sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) を実行して、オブジェクトに対する Always Encrypted のメタデータを更新します。
   
- Always Encrypted は、以下の特性を持つ列に対してはサポートされません (例: 次の条件のいずれかが列に適用される場合、列の *CREATE TABLE/ALTER TABLE* で **Encrypted WITH** 句は使用できません)。  
+Always Encrypted は、以下の特性を持つ列に対してはサポートされません (例: 次の条件のいずれかが列に適用される場合、列の *CREATE TABLE/ALTER TABLE* で **Encrypted WITH** 句は使用できません)。  
   
 -   次のデータ型のいずれかを使用する列: **xml**、 **timestamp**/**rowversion**、 **image**、 **ntext**、 **text**、 **sql_variant**、 **hierarchyid**、 **geography**、 **geometry**、alias、ユーザー定義型。  
-  
 - FILESTREAM 列  
-  
-- ROWGUIDCOL プロパティを持つ列
-- 非 BIN2 照合順序を持つ文字列 (varchar、char など)
-- ランダム化された暗号化によって暗号化された列をキー列として使用する、非クラスター化インデックスのキーとなる列 (明確な暗号化によって暗号化された列は問題ありません)
-- ランダム化された暗号化によって暗号化された列をキー列として使用する、クラスター化インデックスのキーとなる列 (明確な暗号化によって暗号化された列は問題ありません)
-- ランダム化および明確な暗号化により暗号化された列の両方を含む、フルテキスト インデックスのキーとなる列
-- 計算列によって参照される列 (式が Always Encrypted でサポート外の演算を実行するとき)
-- スパース列セット
-- 統計情報によって参照される列
-- 別名型を使用する列
-- パーティション分割列
-- 既定の制約を含む列
-- ランダムな暗号化を使用するときに UNIQUE 制約によって参照される列 (明確な暗号化はサポートされます)
-- ランダムな暗号化を使用するときの主キー列 (明確な暗号化はサポートされます)
-- ランダム化された暗号化または明確な暗号化を使用する際の、外部キー制約での列の参照 (参照元および参照先の列が異なるキーまたはアルゴリズムを使用する場合)
-- CHECK 制約によって参照される列
-- 変更データ キャプチャを使用するテーブル内の列
-- 変更の追跡を持つテーブル上の主キー列
-- マスキングされている列 (動的なデータ マスキングを使用)
-- Stretch Database テーブル内の列。 (Always Encrypted で暗号化された列を持つテーブルは Stretch で有効にできます)。
-- 外部 (PolyBase) テーブルの列 (注: 外部テーブルと暗号化された列を持つテーブルを同じクエリで使用することはサポートされています)
-- 暗号化された列を対象にしたテーブル値パラメーターはサポートされていません。
+- IDENTITY プロパティを持つ列  
+- ROWGUIDCOL プロパティを持つ列  
+- 非 BIN2 照合順序を持つ文字列 (varchar、char など)  
+- ランダム化された暗号化によって暗号化された列をキー列として使用する、非クラスター化インデックスのキーとなる列 (明確な暗号化によって暗号化された列は問題ありません)  
+- ランダム化された暗号化によって暗号化された列をキー列として使用する、クラスター化インデックスのキーとなる列 (明確な暗号化によって暗号化された列は問題ありません)  
+- ランダム化および明確な暗号化により暗号化された列の両方を含む、フルテキスト インデックスのキーとなる列  
+- 計算列によって参照される列 (式が Always Encrypted でサポート外の演算を実行するとき)  
+- スパース列セット  
+- 統計情報によって参照される列  
+- 別名型を使用する列  
+- パーティション分割列  
+- 既定の制約を含む列  
+- ランダムな暗号化を使用するときに UNIQUE 制約によって参照される列 (明確な暗号化はサポートされます)  
+- ランダムな暗号化を使用するときの主キー列 (明確な暗号化はサポートされます)  
+- ランダム化された暗号化または明確な暗号化を使用する際の、外部キー制約での列の参照 (参照元および参照先の列が異なるキーまたはアルゴリズムを使用する場合)  
+- CHECK 制約によって参照される列  
+- 変更データ キャプチャを使用するテーブル内の列  
+- 変更の追跡を持つテーブル上の主キー列  
+- マスキングされている列 (動的なデータ マスキングを使用)  
+- Stretch Database テーブル内の列。 (Always Encrypted で暗号化された列を持つテーブルは Stretch で有効にできます)。  
+- 外部 (PolyBase) テーブルの列 (注: 外部テーブルと暗号化された列を持つテーブルを同じクエリで使用することはサポートされています)  
+- 暗号化された列を対象にしたテーブル値パラメーターはサポートされていません。  
 
 次の句は、暗号化された列では使用できません。
 

@@ -1,25 +1,30 @@
 ---
-title: "Maps in Reporting Services mobile reports | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Reporting Services モバイル レポートでマップ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: dcac784ffea9845be91f35f03fb45e2ca6a6e530
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# Maps in Reporting Services mobile reports
+# <a name="maps-in-reporting-services-mobile-reports"></a>Maps in Reporting Services mobile reports
 マップは、地理的データを視覚化するための優れた方法です。 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] は、3 種類のマップの視覚エフェクト、および大陸と多数の個々の国の組み込みのマップを提供します。 [カスタム マップをアップロードして使用する](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)こともできます。   
   
-## マップの種類  
+## <a name="types-of-maps"></a>マップの種類  
   
 SQL Server モバイル レポートでは、さまざまな状況に役立つ、3 種類のマップを用意しています。  
   
@@ -31,7 +36,7 @@ SQL Server モバイル レポートでは、さまざまな状況に役立つ�
   
 **範囲停止ヒート マップ** ターゲットに相対的に値を表示します。 **ターゲット** プロパティは [比較] フィールドと [値] フィールド間のデルタを決定します。 結果のデルタによって、緑から黄色と赤までのマップの関連領域を塗りつぶす色が決まります。 **[値の方向]** ボックスで、高い値と低い値のどちらを緑色にするかを設定できます。  
   
-## マップの種類と領域の選択  
+## <a name="select-the-map-type-and-region"></a>マップの種類と領域の選択  
   
 1. [**レイアウト**] タブで、マップの種類を選択して、それをデザイン画面にドラッグし、必要なサイズにします。  
   
@@ -43,7 +48,7 @@ SQL Server モバイル レポートでは、さまざまな状況に役立つ�
   
 7. バブル マップの場合、 **[表示プロパティ]** で、 **[異なる色を使う]** を **[オン]** または **[オフ]** にして、バブルをすべて同じ色にするか、すべて異なる色にします。  
   
-## マップ データの選択  
+## <a name="select-the-map-data"></a>マップ データの選択  
 最初にレポートにマップを追加すると、 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] によって、シミュレート済みの地理データが入力されます。  
   
 ![SSMRP_MapsData](../../reporting-services/mobile-reports/media/ssmrp-mapsdata.png)  
@@ -53,13 +58,13 @@ SQL Server モバイル レポートでは、さまざまな状況に役立つ�
 * **[値]** プロパティは、選択されたキー フィールドと同じテーブル内の数値フィールドです。 これらの値は、マップごとに異なる方法で表示されます。 **グラデーション マップ** では、これらの値が、値の範囲に基づいたさまざまな網掛けで各領域に色を付けるために使われます。 **バブル マップ** では、各地域のバブル視覚エフェクトのサイズが値プロパティに基づきます。   
 * 範囲停止ヒート マップの場合は、 **[ターゲット]** プロパティも設定する必要があります。  
   
-### マップ データ プロパティの設定  
+### <a name="set-map-data-properties"></a>マップ データ プロパティの設定  
   
 1. 左上隅にある **[データ]** タブを選択します。  
   
-2. **[データの追加]** を選択し、次に **ローカル Excel** または **[SSRS サーバー]** を選択します。  
+2. 選択**データ追加**、し、いずれか**ローカル Excel**または**SSRS サーバー**です。  
   
-   > **ヒント**: データが[モバイル レポートに適した形式](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)であることを確認してください。  
+   > **ヒント**: データが [モバイル レポートに適した形式](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)であることを確認してください。  
   
 3. 目的のワークシートを選択し、 **[インポート]**を選択します。  
    [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] でデータを確認します。  
@@ -78,8 +83,9 @@ SQL Server モバイル レポートでは、さまざまな状況に役立つ�
      
 8. 左上隅の **[保存]** アイコンを選択して、コンピューターに **[ローカルに保存]** するか、または **[サーバーに保存]**します。  
   
-### 参照  
--  [Reporting Services モバイル レポートのカスタム マップ](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
+### <a name="see-also"></a>参照  
+-  [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (SQL Server Mobile Report Publisher でモバイル レポートを作成し発行する)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   
+

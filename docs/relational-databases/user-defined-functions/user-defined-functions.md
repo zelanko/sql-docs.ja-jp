@@ -18,10 +18,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f4c8c44b4c07b26676fd424acb36ea7ccce19df3
+ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
+ms.openlocfilehash: 12297570eae81459949b6c910fba26525e27d9ed
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/05/2017
 
 ---
 # <a name="user-defined-functions"></a>ユーザー定義関数
@@ -44,7 +44,8 @@ ms.lasthandoff: 04/11/2017
   
      1 つのスカラー式で表現できない複雑な制約に基づいてデータをフィルター選択する操作を、1 つの関数として表現できます。 このような関数を WHERE 句で使用すれば、クライアントに送信される数や行を削減できます。  
   
-> **注:** クエリの [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数は、1 つのスレッドでのみ実行できます (直列実行プラン)。  
+> [!NOTE]
+> クエリの [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数は、1 つのスレッドでのみ実行できます (直列実行プラン)。  
   
 ##  <a name="FunctionTypes"></a> 関数の種類  
 **スカラー関数**  
@@ -62,12 +63,13 @@ ms.lasthandoff: 04/11/2017
   
  BEGIN...END ブロック内のステートメントは、副作用を伴いません。 関数の副作用とは、データベース テーブルの変更など、その関数の有効範囲外のリソースの状態を永続的に変更してしまうことです。 関数内のステートメントが変更できる内容は、ローカル カーソルまたはローカル変数など、その関数に対してローカルなオブジェクトの変更のみです。 データベース テーブルの変更、関数に対してローカルではないカーソルの操作、電子メールの送信、カタログ変更、ユーザーへ返す結果セットの生成などの操作は、関数では実行できません。  
   
-> **注:** CREATE FUNCTION ステートメントの実行時に、存在しないリソースに対する副作用がもたらされる場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってステートメントが実行されます。 ただし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では関数は呼び出されても実行されません。  
+> [!NOTE]
+> CREATE FUNCTION ステートメントの実行時に、存在しないリソースに対する副作用がもたらされる場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってステートメントが実行されます。 ただし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では関数は呼び出されても実行されません。  
   
  クエリで指定した関数が実際に実行される回数は、オプティマイザーで作成された実行プランによって異なります。 WHERE 句のサブクエリによって起動された関数がその一例です。 サブクエリとその関数が実行された回数は、オプティマイザーが選択したアクセス パスの違いによって変わります。  
   
 ##  <a name="ValidStatements"></a> 関数で有効なステートメント  
- 関数では、次の種類のステートメントが有効です。  
+関数では、次の種類のステートメントが有効です。  
   
 -   関数に対してローカルなデータ変数やカーソルを定義するために使用できる DECLARE ステートメント。  
   
@@ -110,7 +112,7 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="SchemaBound"></a> スキーマ バインド関数  
  CREATE FUNCTION は、SCHEMABINDING 句をサポートしています。この句は、テーブル、ビュー、およびその他のユーザー定義関数など、参照対象オブジェクトのスキーマにその関数をバインドします。 スキーマ バインド関数によって参照されるオブジェクトを変更または削除しようとすると、失敗します。  
   
- [CREATE FUNCTION](https://msdn.microsoft.com/library/ms186755.aspx) に SCHEMABINDING を指定するには、次の条件を満たしている必要があります。  
+ [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) に SCHEMABINDING を指定するには、次の条件を満たしている必要があります。  
   
 -   CREATE 関数が参照するすべてのビューとユーザー定義関数が、スキーマにバインドされている必要があります。  
   
@@ -138,7 +140,4 @@ ms.lasthandoff: 04/11/2017
 |ユーザー定義関数の定義を表示する方法について説明します。|[ユーザー定義関数の表示](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
-
-
-
 

@@ -1,7 +1,7 @@
 ---
 title: "ネイティブ コンパイル T-SQL モジュールでサポートされる機能 | Microsoft Docs"
 ms.custom: 
-ms.date: 12/16/2016
+ms.date: 04/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 16f09bada7bbf3ae964ecfa09aa33208aa2f3acf
+ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
+ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>ネイティブ コンパイル T-SQL モジュールでサポートされる機能
@@ -51,19 +51,29 @@ ms.lasthandoff: 04/11/2017
 
 次のクエリ構造がサポートされます。  
 
+CASE 式: 任意のステートメントや、有効な式の句で CASE を使用できます。
+   - **適用されます:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]です。  
+    以降で[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]、CASE ステートメントはネイティブ コンパイル T-SQL モジュールに対してはサポートされています。
+
 SELECT 句:  
 
 -   列と名前のエイリアス (AS または = 構文を使用)。  
 
--   スカラー サブクエリ  
+-   スカラー サブクエリ
+    - **適用されます:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]です。
+      以降で[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]、スカラー サブクエリがネイティブ コンパイル モジュールでサポートされるようになりました。
 
 -   TOP*  
 
 -   SELECT DISTINCT  
+    - **適用されます:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]です。
+      以降で[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]、DISTINCT 演算子は、ネイティブ コンパイル モジュールでサポートされています。
 
               DISTINCT aggregates are not supported.  
 
 -   UNION および UNION ALL
+    - **適用されます:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]です。
+      以降で[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]、UNION および UNION ALL 演算子がネイティブ コンパイル モジュールでサポートされています。
 
 -   変数割り当て  
 
@@ -73,15 +83,22 @@ FROM 句:
 
 -   FROM \<ネイティブ コンパイル インライン TVF>  
 
--   LEFT OUTER JOIN、RIGHT OUTER JOIN、CROSS JOIN、INNER JOIN。  
+-   LEFT OUTER JOIN、RIGHT OUTER JOIN、CROSS JOIN、INNER JOIN。
+    - **適用されます:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]です。
+      以降で[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]結合がネイティブ コンパイル モジュールでサポートされています。
 
--   サブクエリ `[AS] table_alias`。 詳細については、「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
+-   サブクエリ `[AS] table_alias`。 詳細については、「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。 
+    - **適用されます:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]です。
+      以降で[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]サブクエリがネイティブ コンパイル モジュールでサポートされるようになりました。
 
 WHERE 句:  
 
 -   フィルター述語 IS [NOT] NULL  
 
--   AND、OR、NOT、IN、EXISTS、BETWEEN  
+-   および、  
+-   OR、NOT、では、次のように存在します。
+    - **適用されます:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]です。
+      以降で[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]OR、NOT、IN/EXISTS 演算子がネイティブ コンパイル モジュールでサポートされています。
 
 
 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 句:

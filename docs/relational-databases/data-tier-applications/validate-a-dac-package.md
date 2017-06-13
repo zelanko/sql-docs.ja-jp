@@ -22,10 +22,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 036df2b92a90337202eb84adb6284169a8f54f76
+ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
+ms.openlocfilehash: b821b7c7aa037467bfe2607267faa6aed0a47859
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="validate-a-dac-package"></a>DAC パッケージの検証
@@ -140,7 +140,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
 ### <a name="view-upgrade-actions-example-powershell"></a>アップグレード処理の表示の例 (PowerShell)  
  **アップグレード処理の表示の例 (PowerShell)**  
   
- 次の例は、MyApplicaiton という名前の DAC を MyApplicationVNext.dacpac ファイルで定義されているスキーマにアップグレードするために実行される Transact-SQL ステートメントのレポートを生成します。  
+ 次の例では、MyApplicaiton を MyApplication2017.dacpac ファイルで定義されたスキーマにという名前の DAC をアップグレードする場合に実行される TRANSACT-SQL ステートメントを報告します。  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -153,7 +153,7 @@ $serverconnection.Connect()
 $dacstore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverconnection)  
   
 ## Load the DAC package file.  
-$dacpacPath = "C:\MyDACs\MyApplicationVNext.dacpac"  
+$dacpacPath = "C:\MyDACs\MyApplication2017.dacpac"  
 $fileStream = [System.IO.File]::Open($dacpacPath,[System.IO.FileMode]::OpenOrCreate)  
 $dacType = [Microsoft.SqlServer.Management.Dac.DacType]::Load($fileStream)  
   

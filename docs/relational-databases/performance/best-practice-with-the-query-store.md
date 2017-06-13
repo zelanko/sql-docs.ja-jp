@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
-ms.openlocfilehash: 9cd813b72eda096f780ed7140b6691f528251a30
+ms.sourcegitcommit: f9debfb35bdf0458a34dfc5933fd3601e731f037
+ms.openlocfilehash: 3a11180d35ec0a67eed18e03cfe5f0e82d0cc180
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>クエリ ストアを使用するときの推奨事項
@@ -56,7 +56,7 @@ ms.lasthandoff: 04/29/2017
   
  既定値は 100 MB ですが、ワークロードが多数のクエリとプランを生成する場合や、クエリ履歴を長期間保持する必要がある場合は、より大きなサイズが必要になる可能性があります。 クエリ ストアが読み取り専用モードに移行しないよう、現在の使用量を追跡して最大サイズ (MB) を増やしてください。  クエリ ストアのサイズに関する最新の情報を取得するには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用するか、次のスクリプトを実行します。  
   
-```  
+```tsql 
 USE [QueryStoreDB];  
 GO  
   
@@ -67,14 +67,14 @@ FROM sys.database_query_store_options;
   
  次のスクリプトは、新しい最大サイズ (MB) を設定します。  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
   
  **統計情報の収集間隔:** 実行時統計情報を収集する間隔を定義します (既定値は 1 時間)。 この間隔を短くして、問題を検出して軽減するまでの時間を短縮したい場合は、値を小さくすることを検討してください。ただし、クエリ ストアのデータのサイズに直接影響があるので注意が必要です。 統計情報の収集間隔に別の値を設定するには、SSMS または TRANSACT-SQL を使用します。  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);  
 ```  
   
@@ -83,7 +83,7 @@ ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);
   
  使用予定のない履歴データは保持しないようにしてください。 そうすることで、クエリ ストアが読み取り専用モードになる可能性を減らせます。 また、クエリ ストアのデータのサイズと、問題を検出して軽減するまでの時間を予測しやすくなります。 時間ベースのクリーンアップ ポリシーを構成するには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] または次のスクリプトを使用します。  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));  
 ```  
@@ -92,7 +92,7 @@ SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));
   
  クエリ ストアが常に読み取り/書き込みモードで実行して最新のデータを収集するよう、サイズ ベースのクリーンアップを有効にすることを強くお勧めします。  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
@@ -107,7 +107,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  次のスクリプトは、クエリ キャプチャ モードを Auto に設定します。  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
@@ -119,7 +119,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
   
  前のセクションで説明したように、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用してクエリ ストアを有効にするか、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。  
   
-```  
+```tsql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
   
@@ -140,19 +140,30 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |SSMS ビュー|Scenario|  
 |---------------|--------------|  
 |機能低下したクエリ|実行メトリックが最近低下した (悪化した) クエリを特定します。 <br />このビューを使用して、アプリケーションで確認されたパフォーマンスの問題と、実際に修正や改善の必要があるクエリを関連付けます。|  
-|最もリソースを消費するクエリ|対象となる実行メトリックを選択し、対象期間内で最も極端な値を持つクエリを特定します。 <br />このビューを使用して、データベースのリソース消費量に最も大きな影響を与えているクエリに焦点を絞ります。|  
-|追跡対象のクエリ|最も重要なクエリの実行をリアルタイムで追跡します。 このビューは通常、強制適用されたプランを持つクエリがあり、クエリのパフォーマンスを安定させる必要がある場合に使用します。|  
 |全体的なリソース消費量|実行メトリックのいずれかについて、データベースの全体的なリソース消費量を分析します。<br />このビューを使用して、リソースのパターン (日中または夜間のワークロード) を特定し、データベースの全体的な消費量を最適化します。|  
+|最もリソースを消費するクエリ|対象となる実行メトリックを選択し、対象期間内で最も極端な値を持つクエリを特定します。 <br />このビューを使用して、データベースのリソース消費量に最も大きな影響を与えているクエリに焦点を絞ります。|  
+|強制プランを持つクエリ|以前のクエリ ストアを使用してプランを強制的に一覧が表示されます。 <br />現在強制適用されたすべてのプランを簡単にアクセスするのにには、このビューを使用します。|  
+|高バリエーションを持つクエリ|希望する時間間隔の期間、CPU 時間、IO、およびメモリの使用率など、使用可能なディメンションのいずれかに関連する、高の実行のバリエーションを持つクエリを分析します。<br />このビューを使用して、アプリケーション間でユーザー エクスペリエンスに影響することが広くバリアントのパフォーマンスでクエリを特定します。|  
+|追跡対象のクエリ|最も重要なクエリの実行をリアルタイムで追跡します。 このビューは通常、強制適用されたプランを持つクエリがあり、クエリのパフォーマンスを安定させる必要がある場合に使用します。|
   
 > [!TIP]  
 >  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して最もリソースを消費するクエリを特定し、プラン変更により機能低下したクエリを修正する方法の詳細については、[クエリ ストアに関する @Azure ブログの記事](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)を参照してください。  
   
- パフォーマンスが低下したクエリを特定する際に必要なアクションは、問題の性質によって異なります。  
+ 準最適なパフォーマンスでクエリを特定するときに、アクションは、問題の性質によって異なります。  
   
 -   クエリの実行プランが複数あり、最後のプランのパフォーマンスが前のプランよりも大幅に悪いような場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が今後は常に最適なプランを使用するよう、プランの強制適用メカニズムを使用することができます。  
   
      ![クエリ ストアのプランの強制](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
-  
+
+> [!NOTE]  
+> 上記の図は、考えられる各状態の意味は次の特定のクエリ プランのさまざまな図形を機能可能性があります。<br />  
+> |図形|意味|  
+> |-------------------|-------------|
+> |Circle|クエリ完了 (通常の実行が正常に終了しました)|
+> |Square|キャンセル (が開始したクライアントは、実行を中止)|
+> |Triangle|失敗した (中止例外の実行)|
+> また、図形のサイズは、実行の大きい番号のサイズを大きく、指定した時間間隔内でクエリ実行の数を反映します。  
+
 -   クエリが最適に実行するために必要なインデックスが欠落している場合があります。 この情報は、クエリの実行プラン内で確認できます。 クエリ ストアを使用して欠落しているインデックスを作成し、クエリのパフォーマンスを確認します。  
   
      ![クエリ ストアのプラン表示](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")  
@@ -166,7 +177,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 ##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
  クエリ ストアの操作モードは、通知なしに変更されることがあります。 クエリ ストアの状態を定期的に監視して、クエリ ストアが問題なく動作していることを確認し、回避できたはずのエラーが発生しないようにしてください。 操作モードを確認して最も重要なパラメーターを表示するには、次のクエリを実行します。  
   
-```  
+```tsql
 USE [QueryStoreDB];  
 GO  
   
@@ -187,13 +198,13 @@ FROM sys.database_query_store_options;
   
 -   次のステートメントを使用して、クエリ ストアのデータをクリーンアップする。  
   
-    ```  
+    ```tsql  
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
  操作モードを明示的に読み取り/書き込みモードに戻す次のステートメントを実行することで、これらの手順のいずれか (または両方) を適用できます。  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);  
 ```  
@@ -209,7 +220,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 ### <a name="error-state"></a>エラー状態  
  クエリ ストアを復旧するには、明示的に読み取り/書き込みモードに設定し、実際の状態を再度確認します。  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);    
 GO  
@@ -221,9 +232,13 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
- それでも問題が解決しない場合、ディスクに破損したクエリ ストア データが存在しています。 読み取り/書き込みモードを要求する前に、クエリ ストアをクリアする必要があります。  
+ 問題が解決しない場合は、データがディスクに永続化されるクエリのストアの破損を示します。
+ 
+ クエリ ストアが実行することによって回復可能**sp_query_store_consistency_check**影響を受けたデータベース内のプロシージャを格納します。
+ 
+ 役立たなかった場合読み取り/書き込みモードを要求する前にクエリ ストアをクリアしようとすることができます。  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE CLEAR;  
 GO  
@@ -285,7 +300,7 @@ FROM sys.database_query_store_options;
 ##  <a name="CheckForced"></a> Check the Status of Forced Plans Regularly  
  プランの強制適用は、重要なクエリのパフォーマンスを修正してより正確な予測を可能にするための便利なメカニズムです。 ただし、プラン ヒントやプラン ガイドと同様に、強制的に適用されたプランがその後の実行でも確実に使用されるとは限りません。 通常、実行プランによって参照されるオブジェクトが変更または削除されたことによってデータベース スキーマが変更された場合、プランを強制的に適用できなくます。 その場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はクエリの再コンパイルに戻りますが、強制適用が失敗した実際の理由は [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) に示されます。 次のクエリは、強制適用されたプランに関する情報を返します。  
   
-```  
+```tsql  
 USE [QueryStoreDB];  
 GO  
   
@@ -307,6 +322,5 @@ WHERE is_forced_plan = 1;
  [クエリ ストアのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [インメモリ OLTP でのクエリ ストアの使用](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
-  
   
 

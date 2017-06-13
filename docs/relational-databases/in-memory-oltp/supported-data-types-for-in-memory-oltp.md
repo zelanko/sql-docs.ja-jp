@@ -1,7 +1,7 @@
 ---
 title: "インメモリ OLTP に対してサポートされるデータ型 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/27/2016
+ms.date: 06/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a928c1f77586198fd0d33cafa445ea406a437c6b
+ms.sourcegitcommit: 1d363db8e8bd0e1460cdea3c3a7add68e48714c9
+ms.openlocfilehash: 0095d4e8ab9f3dc48e9414dc888213b79b3c34c6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>インメモリ OLTP に対してサポートされるデータ型
@@ -28,7 +28,7 @@ ms.lasthandoff: 04/11/2017
   
 -   メモリ最適化テーブル  
   
--   ネイティブ コンパイル ストアド プロシージャ  
+-   ネイティブ コンパイル T-SQL モジュールで  
   
 ## <a name="unsupported-data-types"></a>サポートされていないデータ型  
  次のデータ型はサポートされません。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/11/2017
 
 ### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>行外の LOB 列およびその他の列の特定
 
-次の Transact-SQL SELECT ステートメントにより、メモリ最適化テーブルの行外のすべての列のレポートが生成されます。 次の点に注意してください。
+SQL Server 2016 以降では、メモリ最適化テーブルは行外列は、1 つのテーブルの行を 8,060 バイトより大きくすることを許可するをサポートします。 次の Transact-SQL SELECT ステートメントにより、メモリ最適化テーブルの行外のすべての列のレポートが生成されます。 次の点に注意してください。
 
 - インデックス キー列はすべて行内に格納されます。
   - メモリ最適化テーブルでは、一意ではないインデックス キーが、NULL 値を許容する列を含むことができるようになりました。
@@ -81,24 +81,15 @@ SELECT
 ```
 
 
-#### <a name="natively-compiled-modules-support-for-lobs"></a>ネイティブ コンパイル モジュールでの LOB のサポート
-
-
-組み込み文字列関数をネイティブ  コンパイル モジュール (ネイティブ プロシージャなど) で使用すると、関数により LOB 型の文字列が受け入れられます。 たとえば、ネイティブ プロシージャで LTrim 関数を使用すると、nvarchar(max) 型や varbinary(max) 型のパラメーターを入力することができます。
-
-これらの LOB は、ネイティブ コンパイル スカラー UDF (ユーザー定義関数) からの戻り値を指定することもできます。
-
-
 ### <a name="other-data-types"></a>その他のデータ型
 
 
 |その他の型|詳細情報|  
 |-----------------|--------------------------|  
-|テーブル型|[メモリ最適化テーブル変数](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|  
+|テーブル型|[メモリ最適化テーブル変数](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)|  
   
 ## <a name="see-also"></a>参照  
  [Transact-SQL によるインメモリ OLTP のサポート](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
- [メモリ最適化テーブルへの LOB 列の実装](http://msdn.microsoft.com/en-us/bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e)   
  [メモリ最適化テーブルへの SQL_VARIANT の実装](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
   
   

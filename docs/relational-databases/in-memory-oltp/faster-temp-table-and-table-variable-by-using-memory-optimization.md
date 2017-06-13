@@ -1,7 +1,7 @@
 ---
 title: "メモリ最適化を使用した一時テーブルとテーブル変数の高速化 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/17/2017
+ms.date: 06/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 98f4cf9519987f458c1f053ffe9368776b28cda9
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 4e2fb53cbb1d9a8999a9260b6907f5319c0fe203
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>メモリ最適化を使用した一時テーブルとテーブル変数の高速化
@@ -430,40 +430,4 @@ Azure SQL Database でスクリプトを実行している場合、同じリー�
 - [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 - [メモリ最適化オブジェクトの持続性の定義](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
   
-  
-  
-  
-\<!--  
-CAPS タイトル: "メモリ最適化を使用した一時テーブルとテーブル変数の高速化"  
-  
-https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/  
-  
-  
-[ALTER DATABASE の File および Filegroup オプション (Transact-SQL)](http://msdn.microsoft.com/library/bb522469.aspx)  
-  
-[メモリ最適化ファイルグループ](http://msdn.microsoft.com/library/dn639109.aspx)  
-  
-[リソース ガバナー リソース プール](http://msdn.microsoft.com/library/hh510189.aspx)  
-  
-  
-[メモリ最適化アドバイザー](http://msdn.microsoft.com/library/dn284308.aspx)  
-  
-[メモリ最適化テーブルのメモリ必要量の推定](http://msdn.microsoft.com/library/dn282389.aspx)  
-  
-[メモリ最適化テーブルのテーブルと行のサイズ: 計算の例](http://msdn.microsoft.com/library/dn205318.aspx)  
-  
-  
-[メモリ最適化テーブルの持続性](http://msdn.microsoft.com/library/dn553125.aspx)  
-  
-[メモリ最適化オブジェクトの持続性の定義](http://msdn.microsoft.com/library/dn553122.aspx)  
-  
-[Memory-Optimized Table Variables](http://msdn.microsoft.com/library/dn535766.aspx)  
-  
-  
-GeneMi、2016-05-02 月曜日午後 18:40  
--->  
-  
-  
-  
-
 

@@ -1,26 +1,31 @@
 ---
-title: "PDF デバイス情報の設定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "device information settings [Reporting Services], PDF rendering"
-  - "PDF [Reporting Services]"
+title: "PDF デバイス情報設定 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- device information settings [Reporting Services], PDF rendering
+- PDF [Reporting Services]
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 caps.latest.revision: 41
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 41
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e02ae92cfb973c7287fde080628fcc26cb784276
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# PDF デバイス情報の設定
+# <a name="pdf-device-information-settings"></a>PDF デバイス情報の設定
   次の表は、PDF 形式のレポートを表示するデバイス情報の設定を示しています。  
   
 |設定|値|  
@@ -30,7 +35,7 @@ caps.handback.revision: 41
 |**DpiX**|出力デバイスの x 方向の解像度。|  
 |**DpiY**|出力デバイスの y 方向の解像度。|  
 |**EndPage**|表示するレポートの最後のページ。 既定値は **StartPage**の値です。|  
-|**HumanReadablePDF**|PDF を圧縮するかどうかを示します。圧縮することにより、ソースをより見やすくすることができます。 既定値は **false** です。|  
+|**HumanReadablePDF**|PDF を圧縮するかどうかを示します。圧縮することにより、ソースをより見やすくすることができます。 既定値は **false**です。|  
 |**MarginBottom**|レポートに設定する下余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、1in)。 この値により、レポートの元の設定は上書きされます。|  
 |**MarginLeft**|レポートに設定する左余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、1in)。 この値により、レポートの元の設定は上書きされます。|  
 |**MarginRight**|レポートに設定する右余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、1in)。 この値により、レポートの元の設定は上書きされます。|  
@@ -39,7 +44,7 @@ caps.handback.revision: 41
 |**PageWidth**|レポートに設定するページの幅 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、8.5in)。 この値により、レポートの元の設定は上書きされます。|  
 |**StartPage**|表示するレポートの最初のページ。 値 **0** はすべてのページを表示することを示します。 既定値は **1**です。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [表示拡張機能にデバイス情報設定を渡す](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [テクニカル リファレンス &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  

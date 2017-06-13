@@ -1,32 +1,37 @@
 ---
-title: "ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ゲージ (レポート ビルダーおよび SSRS) のスケールの書式設定 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4a25ea1cb8702758096118371c4261e8189c2e91
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS)
+# <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートでは、ゲージのスケールは、最小値と最大値で決められた範囲の数値であり、ゲージ上に表示されます。 通常、ゲージのスケールにはゲージ ラベルと目盛りがあり、ゲージ ポインターによって示された値を正確に読み取れるようになっています。 1 つのゲージ スケールに 1 つまたは複数のゲージ ポインターが関連付けられているのが普通です。 同じゲージに複数のスケールを指定できます。  
   
- ![ゲージ スケールの要素の概要](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "ゲージ スケールの要素の概要")  
+ ![ゲージのスケール上の要素の概要](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "ゲージのスケール上の要素の概要")  
   
  複数のグループが定義されるグラフとは異なり、ゲージには 1 つの値しか表示されません。 スケールの最小値と最大値を定義する必要があります。 間隔の数は、最小値と最大値として指定された値に基づいて自動的に計算されます。  
   
  既に 1 つのスケールがあるゲージに 2 番目のスケールを追加すると、最初のスケールの外観プロパティが 2 番目のスケールに複製されます。  
   
- スケールのプロパティを設定するには、スケールのラベルまたは目盛りを右クリックし、**[放射状スケールのプロパティ]** または **[線形スケールのプロパティ]** を選択します。 それぞれの種類のゲージには、同じプロパティ セットを持つスケールが少なくとも 1 つ含まれます。 また、それぞれの種類のゲージに固有のプロパティもあります。  
+ スケールのプロパティを設定するには、スケールのラベルまたは目盛りを右クリックし、 **[放射状スケールのプロパティ]** または **[線形スケールのプロパティ]**を選択します。 それぞれの種類のゲージには、同じプロパティ セットを持つスケールが少なくとも 1 つ含まれます。 また、それぞれの種類のゲージに固有のプロパティもあります。  
   
 -   放射状ゲージでは、放射状スケールの半径、開始角度、および掃引角度を指定できます。  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 8
   
  スケールの半径は、ゲージの中心からスケール バーの中央までの距離です。 スケールの半径の値は、ゲージの直径に対する比率として計測されます。 スケールの半径は、35 より小さな値にすることをお勧めします。 35 よりも大きな値を指定した場合は、スケールがゲージの境界の外側に表示される場合があります。 次の図は、スケールの半径がスケール バー上でゲージの直径を基準にしてどのように計測されるかを示しています。  
   
- ![ゲージの直径を基準にしたスケールの半径](../../reporting-services/report-design/media/scaleradiusdiagram.gif "ゲージの直径を基準にしたスケールの半径")  
+ ![スケールの半径をゲージの直径を基準とした](../../reporting-services/report-design/media/scaleradiusdiagram.gif "スケールの半径をゲージの直径を基準としました。")  
   
  開始角度は、スケールが開始される回転角度で、0 ～ 360 の間です。 ゼロ (0) の位置はゲージの一番下で、開始角度は時計回りに回転した角度です。 たとえば、開始角度が 90 度であれば、スケールは 9 時の位置から始まります。  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 8
   
 -   線形ゲージのゲージの高さまたは幅の最小値の 1%。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ゲージの範囲の書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [ゲージのポインターの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [日付または通貨として軸ラベルを書式設定する (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   

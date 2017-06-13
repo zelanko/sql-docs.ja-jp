@@ -15,70 +15,35 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2da0c759864e746414f8bf17388463c9a4bfdf88
+ms.sourcegitcommit: cf69aa2c57e86aab11974b5874039ae7f72b9917
+ms.openlocfilehash: 3384d962c3765bf4feb00f957ad56a668f8d92e4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>PolyBase のバージョン管理機能の概要
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  SQL Server の製品やサービスで利用可能な PolyBase 機能の概要です。  
+SQL Server の製品やサービスの使用可能な PolyBase 機能の概要です。  
   
 ## <a name="feature-summary-for-product-releases"></a>製品リリースの機能の概要  
  PolyBase の主な機能と、これらの機能を利用できる製品をまとめた表を次に示します。  
   
-### [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
- これらの機能は、オンプレミスまたは Azure 仮想マシンで実行されている [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] に適用されます。  PolyBase は、SQL Server 2014 以前のバージョンでは使用できません。  
-  
-|||  
-|-|-|  
-|**機能**|**可用性**|  
-|で Hadoop データのクエリを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)]|はい|  
-|で Azure blob ストレージのクエリを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)]|はい|  
-|Hadoop からデータをインポートする|はい|  
-|Azure blob ストレージからデータをインポートする|可| 
-|Azure Data Lake Store からデータをインポートする|いいえ|   
-|データを Hadoop にエクスポートする|はい|  
-|Azure blob ストレージにデータをエクスポートする|可|  
-|Azure Data Lake Store からデータをエクスポートする|いいえ|
-|Microsoft BI ツールから PolyBase クエリを実行する|はい|  
-|クエリの計算を Hadoop にプッシュダウンする|はい|  
-  
-### [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
- これらの機能は [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]に適用されます。  
-  
-|||  
-|-|-|  
-|**機能**|**可用性**|  
-|で Hadoop データのクエリを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)]|いいえ|  
-|で Azure blob ストレージのクエリを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)]|はい|  
-|Hadoop からデータをインポートする|いいえ|  
-|Azure blob ストレージからデータをインポートする|可|
-|Azure Data Lake Store からデータをインポートする|可|     
-|データを Hadoop にエクスポートする|いいえ|  
-|Azure blob ストレージにデータをエクスポートする|可|  
-|Azure Data Lake Store にデータをエクスポートする|可|
-|Microsoft BI ツールから PolyBase クエリを実行する|はい|  
-|クエリの計算を Hadoop にプッシュダウンする|いいえ|  
-  
-### [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- これらの機能は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]に適用されます。  
-  
-|||  
-|-|-|  
-|**機能**|**可用性**|  
-|で Hadoop データのクエリを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)]|はい|  
-|で Azure blob ストレージのクエリを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)]|はい|  
-|Hadoop からデータをインポートする|はい|  
-|Azure blob ストレージからデータをインポートする|可|  
-|Azure Data Lake Store からデータをインポートする|いいえ|   
-|データを Hadoop にエクスポートする|はい|  
-|Azure blob ストレージにデータをエクスポートする|可|  
-|Azure Data Lake Store にデータをエクスポートする|いいえ|
-|Microsoft BI ツールから PolyBase クエリを実行する|はい|  
-|クエリの計算を Hadoop にプッシュダウンする|はい|  
+||||||
+|-|-|-|-|-|   
+|**機能**|**SQL Server 2016**|**Azure SQL データベース**|**Azure SQL データ ウェアハウス**|**Parallel Data Warehouse**| 
+|で Hadoop データのクエリを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)]|可|いいえ|いいえ|可|
+|Hadoop からデータをインポートする|可|いいえ|いいえ|可|
+|データを Hadoop にエクスポートする  |可|いいえ|いいえ| 可|
+|クエリの計算を Hadoop にプッシュダウンする|可|いいえ|いいえ|可|  
+|Azure blob ストレージからデータをインポートする|はい|いいえ|はい|可| 
+|Azure blob ストレージにデータをエクスポートする|はい|いいえ|はい|可|  
+|Azure Data Lake Store からデータをインポートする|いいえ|いいえ|はい|いいえ|    
+|Azure Data Lake Store からデータをエクスポートする|いいえ|いいえ|はい|いいえ|
+|Microsoft BI ツールから PolyBase クエリを実行する|可|いいえ|はい|可|   
+
+
+
   
 ## <a name="see-also"></a>参照  
  [PolyBase ガイド](../../relational-databases/polybase/polybase-guide.md)  

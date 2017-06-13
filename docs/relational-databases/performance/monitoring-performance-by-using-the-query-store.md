@@ -19,10 +19,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5785d0283be2fe40b5010f6f9373f9a2ea81554a
+ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
+ms.openlocfilehash: 19da2d9b81da6ec2886d7da3c5189607b0a60b16
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
@@ -127,7 +127,10 @@ JOIN sys.query_store_query_text AS Txt
   
  max_plans_per_query  
  各クエリに対して保持の計画の最大数を表す整数。 既定値は 200 です。  
-  
+ 
+ WAIT_STATS_CAPTURE_MODE  
+ コントロールがクエリのストアのキャプチャした場合は、統計情報を待機します。 OFF = 0 または = 1 (既定)  
+ 
  **sys.database_query_store_options** ビューにクエリを実行し、クエリ ストアの現在のオプションを確認します。 値に関する詳細については、「 [sys」を参照してください。database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)」を参照してください。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用してオプションを設定する方法の詳細については、「 [オプション管理](#OptionMgmt)」をご覧ください。  
@@ -152,7 +155,9 @@ JOIN sys.query_store_query_text AS Txt
 -   [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)  
   
 -   [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)  
-  
+
+-   [sys.query_store_wait_stats & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md) 
+
 -   [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)  
   
 ### <a name="query-store-stored-procedures"></a>クエリのストアのストアド プロシージャ  

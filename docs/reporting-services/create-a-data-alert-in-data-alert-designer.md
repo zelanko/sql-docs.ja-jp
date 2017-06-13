@@ -1,27 +1,38 @@
 ---
-title: "データ警告デザイナーでのデータ警告の作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "データ警告デザイナーでデータ アラートを作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 05/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 13
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 5203aab062888ca40ee83ee3f00521d6661defba
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# データ警告デザイナーでのデータ警告の作成
-  データ警告の定義は、データ警告デザイナーで作成します。 作成した警告定義は、保存後、再度データ警告デザイナーで開いて編集し、保存し直すことができます。 警告定義の編集の詳細については、「[データ警告マネージャーでのデータ警告の管理](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)」および「[警告デザイナーでのデータ警告の編集](../reporting-services/edit-a-data-alert-in-alert-designer.md)」を参照してください。  
-  
-### データ警告の定義を作成するには  
-  
+# <a name="create-a-data-alert-in-data-alert-designer"></a>データ警告デザイナーでのデータ警告の作成
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+データ警告の定義は、データ警告デザイナーで作成します。 作成した警告定義は、保存後、再度データ警告デザイナーで開いて編集し、保存し直すことができます。 警告定義の編集の詳細については、「 [データ警告マネージャーでのデータ警告の管理](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) 」および「 [警告デザイナーでのデータ警告の編集](../reporting-services/edit-a-data-alert-in-alert-designer.md)」を参照してください。
+
+> [!NOTE]
+> SQL Server 2016 より後に、SharePoint と reporting Services の統合を使用できなくします。
+
+## <a name="create-a-data-alert-definition"></a>データ警告定義を作成します。
+ 
 1.  データ警告定義の作成対象となるレポートを含んだ SharePoint ライブラリを探します。  
   
 2.  レポートをクリックします。  
@@ -31,22 +42,22 @@ caps.handback.revision: 13
     > [!NOTE]  
     >  レポートの実行用に選択したパラメーター値は、警告定義内に保存され、レポートが返される際に、警告定義の処理中のステップとして使用されます。 異なるパラメーター値を使用するには、新しい警告定義を作成する必要があります。  
   
-3.  **[アクション]** メニューの **[新しいデータの警告]** をクリックします。  
+3.  **[アクション]** メニューの **[新しいデータの警告]**をクリックします。  
   
      **[アクション]** メニューを次の図に示します。  
   
-     ![Open Alert Designer from SharePoint library](../reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
+     ![SharePoint ライブラリから警告デザイナーを開く](../reporting-services/media/rs-openalertdesigneriw.gif "SharePoint ライブラリから警告デザイナーを開く")  
   
      データ警告デザイナーが開き、レポートによって生成された最初のデータ フィードの先頭 100 行がテーブルに表示されます。  
   
     > [!NOTE]  
-    >  **[新しいデータの警告]** オプションが表示されない場合は、警告サービスが SharePoint サイト上に構成されていない、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディションにデータ警告が含まれていません。 詳細については、「[Reporting Services の SharePoint サービスとサービス アプリケーション](../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)｣を参照してください。  
+    >  **[新しいデータの警告]** オプションが表示されない場合は、警告サービスが SharePoint サイト上に構成されていない、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディションにデータ警告が含まれていません。 詳細については、「 [Reporting Services の SharePoint サービスとサービス アプリケーション](../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)｣を参照してください。  
     >   
     >  **[新しいデータの警告]** オプションがグレーで表示されている場合は、レポート データ ソースが、統合セキュリティ資格情報を使用するか、または資格情報の入力を求めるように構成されています。 **[新しいデータの警告]** オプションを利用可能にするには、データ ソースを更新して、保存された資格情報を使用するようにするか、または資格情報を使用しないようにする必要があります。  
   
-     データ フィードの名前は、**[レポート データ名]** ボックスの一覧に表示されます。  
+     データ フィードの名前は、 **[レポート データ名]** ボックスの一覧に表示されます。  
   
-4.  必要に応じて、**[レポート データ名]** ボックスの一覧から異なるデータ フィードを選択します。  
+4.  必要に応じて、 **[レポート データ名]** ボックスの一覧から異なるデータ フィードを選択します。  
   
      レポートからデータ フィードが生成されない場合、そのレポートに対して警告定義を作成することはできません。 各データ フィードの内容は、レポートのレイアウトによって決まります。 詳細については、「[複数のレポートからのデータ フィードの生成 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -54,9 +65,9 @@ caps.handback.revision: 13
   
      レポートの名前が、警告定義の既定の名前として使用されます。 警告定義名は必ずしも一意である必要はありませんが、後でデータ警告マネージャーで警告の一覧を表示したときに区別しづらくなる可能性はあります。 警告定義には、一意でわかりやすい名前を使用することをお勧めします。  
   
-6.  必要に応じて、既定のデータ オプションを **[データ フィード内のいずれかのデータに次が含まれる]** から **[データ フィード内のどのデータにも次のものが含まれていません]** に変更します。  
+6.  必要に応じて、既定のデータ オプションを **[データ フィード内のいずれかのデータに次が含まれる]** から **[データ フィード内のどのデータにも次のものが含まれていません]**に変更します。  
   
-7.  **[ルールの追加]** をクリックします。  
+7.  **[ルールの追加]**をクリックします。  
   
      データ フィード内の列の一覧が表示されます。  
   
@@ -64,21 +75,21 @@ caps.handback.revision: 13
   
      一覧表示される比較演算子は、選択した列のデータ型によって異なります。 日付データ型の列の場合、ルールのしきい値の横にカレンダーのアイコンが表示されます。 カレンダーの日付をクリックするか日付を入力してデータを入力できます。  
   
-     データ警告デザイナーでは、**[値入力モード]** と **[フィールドの選択モード]** の 2 つの比較モードが提供されます。 既定のモードは **[値入力モード]** です。 OR 句は、**[値入力モード]** で **is** 比較を使用している場合にのみ追加できます。  
+     データ警告デザイナーでは、 **[値入力モード]** と **[フィールドの選択モード]**の 2 つの比較モードが提供されます。 既定のモードは **[値入力モード]**です。 OR 句は、 **[値入力モード]** で **is** 比較を使用している場合にのみ追加できます。  
   
-9. OR 句を追加するには、下矢印をクリックし、**[値入力モード]** をクリックします。  
+9. OR 句を追加するには、下矢印をクリックし、 **[値入力モード]**をクリックします。  
   
 10. 比較値を入力します。  
   
-11. 必要に応じて、参照ボタン (**[...]**) を再度クリックします。  
+11. 必要に応じて、参照ボタン ( **[...]** ) を再度クリックします。  
   
-     参照ボタン (**[...]**) は、最初の句を含んでいる行に表示されます。  
+     参照ボタン ( **[...]** ) は、最初の句を含んでいる行に表示されます。  
   
      OR 句は、AND ルール内および下に追加されます。  
   
-12. 必要に応じて、下矢印をクリックし、**[フィールドの選択モード]** を選択して、一覧内の列を選択します。  
+12. 必要に応じて、下矢印をクリックし、 **[フィールドの選択モード]**を選択して、一覧内の列を選択します。  
   
-     OR 句を追加するためにクリックする参照ボタン (**[…]**) が非表示になります。  
+     OR 句を追加するためにクリックする参照ボタン ( **[…]** ) が非表示になります。  
   
 13. 必要に応じて、再度 **[ルールの追加]** をクリックし、ルールを追加します。  
   
@@ -86,38 +97,39 @@ caps.handback.revision: 13
   
 14. 定期的なパターンの一覧でオプションを選択します。 定期的なパターンの種類に応じた間隔を入力してください。  
   
-15. 必要に応じて、**[詳細設定]** をクリックします。  
+15. 必要に応じて、 **[詳細設定]**をクリックします。  
   
 16. 必要に応じて、警告メッセージの開始日付を変更します。異なる日付を入力するか、カレンダーを開いて目的の日付をクリックします。  
   
      現在の日付が既定の開始日になります。  
   
-17. 必要に応じて、**[警告の停止日時]** の横にあるチェック ボックスをオンにし、警告メッセージを停止する日付を選択します。  
+17. 必要に応じて、 **[警告の停止日時]**の横にあるチェック ボックスをオンにし、警告メッセージを停止する日付を選択します。  
   
      既定では、警告メッセージに停止日はありません。  
   
     > [!NOTE]  
-    >  通知メッセージを停止しても、警告定義は削除されません。 停止した警告メッセージは、開始日と停止日を更新することで再度開始できます。 警告定義の削除の詳細については、「[データ警告マネージャーでのデータ警告の管理](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)」を参照してください。  
+    >  通知メッセージを停止しても、警告定義は削除されません。 停止した警告メッセージは、開始日と停止日を更新することで再度開始できます。 警告定義の削除の詳細については、「 [データ警告マネージャーでのデータ警告の管理](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)」を参照してください。  
   
-18. 必要に応じて、**[結果が変更された場合にのみメッセージを送信]** チェック ボックスをオフにします。  
+18. 必要に応じて、 **[結果が変更された場合にのみメッセージを送信]** チェック ボックスをオフにします。  
   
      警告メッセージを頻繁に送信する場合、冗長な情報は好ましくない可能性があるため、このチェック ボックスをオフにしないことをお勧めします。  
   
 19. 警告メッセージの受信者の電子メール アドレスを入力します。 複数のアドレスはセミコロンで区切って入力してください。  
   
-     警告定義の作成者の電子メール アドレスが利用できる場合は、**[受信者]** ボックスに追加されます。  
+     警告定義の作成者の電子メール アドレスが利用できる場合は、 **[受信者]** ボックスに追加されます。  
   
-20. 必要に応じて、**[件名]** ボックスで、警告メッセージの件名行を更新します。  
+20. 必要に応じて、 **[件名]** ボックスで、警告メッセージの件名行を更新します。  
   
-     既定の件名は、**\<データ警告名> に関するデータの警告**です。  
+     既定の件名は**データ アラート\<データ警告名 >**です。  
   
-21. 必要に応じて、**[説明]** ボックスに警告メッセージの説明を入力します。  
+21. 必要に応じて、 **[説明]** ボックスに警告メッセージの説明を入力します。  
   
 22. **[保存]**をクリックします。  
-  
-## 参照  
- [データ警告デザイナー](../reporting-services/data-alert-designer.md)   
- [警告管理者用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
-  
-  
+
+## <a name="see-also"></a>参照
+
+[データ警告デザイナー](../reporting-services/data-alert-designer.md)   
+[警告管理者用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Reporting Services のデータ警告](../reporting-services/reporting-services-data-alerts.md)  
+
+他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

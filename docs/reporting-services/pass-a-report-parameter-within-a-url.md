@@ -1,32 +1,37 @@
 ---
-title: "URL 内でレポート パラメーターを渡す | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "URL アクセス [Reporting Services], パラメーターの引き渡し"
-  - "パラメーターの引き渡し [Reporting Services]"
+title: "URL 内でレポート パラメーターを渡す |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- URL access [Reporting Services], passing parameters
+- passing parameters [Reporting Services]
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 caps.latest.revision: 36
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 36
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e3b076b74a6082e34dc9c489c0383fd6a5c3bd4f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# URL 内でレポート パラメーターを渡す
+# <a name="pass-a-report-parameter-within-a-url"></a>URL 内でレポート パラメーターを渡す
   レポート パラメーターはレポート URL に含めることでレポートに渡すことができます。 このような URL パラメーターにはプレフィックスを付けません。パラメーターはレポート処理エンジンに直接渡されるためです。  
   
 > [!IMPORTANT]  
->  SharePoint および [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP プロキシ経由で要求をルーティングする `_vti_bin` プロキシ構文を URL に含めることは重要です。 プロキシによって、HTTP 要求にいくつかのコンテキストが追加されます。これは、SharePoint モード レポート サーバーに対してレポートを適切に実行するために必要なコンテキストです。  
+>  SharePoint および `_vti_bin` HTTP プロキシ経由で要求をルーティングする [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] プロキシ構文を URL に含めることは重要です。 プロキシによって、HTTP 要求にいくつかのコンテキストが追加されます。これは、SharePoint モード レポート サーバーに対してレポートを適切に実行するために必要なコンテキストです。  
 >   
->  プロキシ構文を含めない場合は、パラメーターの先頭に *rp:* を付ける必要があります。  
+>  プロキシ構文を含めない場合は、パラメーターの先頭に *rp:*を付ける必要があります。  
   
  すべてのクエリ パラメーターには、対応するレポート パラメーターを指定できます。 クエリ パラメーターをレポートに渡すには、対応するレポート パラメーターを渡します。 詳しくは、「[リレーショナル クエリ デザイナーでのクエリの作成 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)」をご覧ください。  
   
@@ -54,7 +59,7 @@ parameter=value
 http://myrshost/ReportServer?/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2&ReportMonth=3&ReportYear=2008  
 ```  
   
- たとえば、レポートで定義されている同じ 2 つのパラメーターを指定するには、SharePoint 統合モードのレポート サーバーで次の URL を使用します。 `/_vti_bin` に注意してください。  
+ たとえば、レポートで定義されている同じ 2 つのパラメーターを指定するには、SharePoint 統合モードのレポート サーバーで次の URL を使用します。 `/_vti_bin`に注意してください。  
   
 ```  
 http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl&ReportMonth=3&ReportYear=2008  
@@ -78,7 +83,7 @@ SalesOrderNumber:isnull=true
  **Boolean** 値を渡す場合、False には 0 を、True には 1 を使用します。 **Float** 値を渡すには、サーバー ロケールに応じた小数点の記号を指定します。  
   
 > [!NOTE]  
->  既定値を持つレポート パラメーターがレポートに含まれており、**Prompt** プロパティの値が **false** である場合 (つまりレポート マネージャーで Prompt User プロパティが選択されていない場合)、URL 内でそのレポート パラメーターに値を渡すことはできません。 管理者はこの方法を使用して、エンド ユーザーが特定のレポート パラメーターの値を追加したり変更したりすることを禁止できます。  
+>  既定値を持つレポート パラメーターがレポートに含まれており、 **Prompt** プロパティの値が **false** である場合 (つまりレポート マネージャーで Prompt User プロパティが選択されていない場合)、URL 内でそのレポート パラメーターに値を渡すことはできません。 管理者はこの方法を使用して、エンド ユーザーが特定のレポート パラメーターの値を追加したり変更したりすることを禁止できます。  
   
 ##  <a name="bkmk_examples"></a> その他の例  
  次の URL の例には、空白や複数のパラメーターが含まれています。  
@@ -105,7 +110,7 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [URL アクセス &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [URL アクセス パラメーター リファレンス](../reporting-services/url-access-parameter-reference.md)  
   

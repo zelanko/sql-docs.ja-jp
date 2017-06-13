@@ -1,28 +1,33 @@
 ---
-title: "XML の接続の種類 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "XML 接続の種類 (SSRS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a95a6e93bb34674003530e094e9d4544a8aabfec
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# XML の接続の種類 (SSRS)
+# <a name="xml-connection-type-ssrs"></a>XML の接続の種類 (SSRS)
   XML データ ソースのデータをレポートに含めるには、種類が XML のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、XML データ拡張機能に基づいています。 このデータ ソースの種類を使用して、XML ドキュメント、Web サービス、またはクエリに埋め込まれた XML に接続し、データを取得します。  
   
  このデータ拡張機能は、接続文字列とは別に管理される資格情報およびパラメーターをサポートしています。  
   
- このトピックの情報を使用して、データ ソースを構築してください。 手順については、「[データ接続を追加および確認する (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)」を参照してください。  
+ このトピックの情報を使用して、データ ソースを構築してください。 手順については、「 [データ接続またはデータ ソースの追加および確認 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)のレポート データ ソースに基づいたデータセットが必要です。  
   
 ##  <a name="Connection"></a> 接続文字列  
  接続文字列を、HTTP 経由でアクセス可能な Web サービス、Web ベース アプリケーション、または XML ドキュメントを指す URL に設定する必要があります。 XML ドキュメントの拡張子は XML にする必要があります。 データセット クエリに埋め込まれた XML データに対し、空の接続文字列を使用することもできます。  
@@ -35,7 +40,7 @@ caps.handback.revision: 9
 |XML ドキュメント|`http://localhost/XML/Customers.xml`|  
 |埋め込み XML ドキュメント|*空*|  
   
- 接続文字列の例の詳細については、「[レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)」を参照してください。  
+ 接続文字列の例の詳細については、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)」を参照してください。  
   
 ##  <a name="Credentials"></a> [資格情報]  
  クエリの実行、ローカルでのレポートのプレビュー、およびレポート サーバーからのレポートのプレビューには、資格情報が必要です。  
@@ -50,7 +55,7 @@ caps.handback.revision: 9
   
  保存された資格情報や要求された資格情報はサポートされていません。 Windows 統合セキュリティが無効になっていると、データの取得に Windows 統合セキュリティを使用できないので注意してください。 保存された資格情報や要求された資格情報を指定すると、実行時にエラーが発生します。  
   
- 詳細については、「[データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」または「[レポート ビルダーでの資格情報の指定](../Topic/Specify%20Credentials%20in%20Report%20Builder.md)」を参照してください。  
+ 詳細については、「[データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」または「[レポート ビルダーでの資格情報の指定](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)」を参照してください。  
   
 ##  <a name="Query"></a> クエリ  
  クエリでは、レポート データセット用に取得するデータを指定します。 クエリの結果セットの列には、データセットのフィールド コレクションが設定されます。 レポートによって処理されるのは、クエリから取得された最初の結果セットだけです。  
@@ -119,12 +124,12 @@ caps.handback.revision: 9
   
  例については、「 [Reporting Services: XML と Web サービス データ ソースの使用](http://go.microsoft.com/fwlink/?LinkId=81654)」を参照してください。  
   
-### XML Web サービスのデータを取得するための要件  
+### <a name="requirements-for-retrieving-xml-web-service-data"></a>XML Web サービスのデータを取得するための要件  
  これらは XML データ処理拡張機能では検出されません。 そのため、必要なデータを取得する SOAP メソッドを検索するための、なんらかの手段が必要です。 また、Web サービスがそのデータに対して使用するアドレス指定スキームや名前空間を把握しておく必要もあります。  
   
- Web サービスの場合、\<**Query**> 要素を使って、呼び出すメソッドや SOAP アクションを指定できます。 XML データ ソースが、レポートに必要なデータを取得できるような階層構造になっていれば、クエリを空にして、既定のクエリを使用することもできます。 クエリの実行時に取得される XML 要素ノードの値および属性は、レポートに使用されているデータセットのフィールドにマップされます。  
+ Web サービスで使用できる、 \<**クエリ**> メソッドの呼び出しまたは SOAP アクションを指定する要素。 XML データ ソースが、レポートに必要なデータを取得できるような階層構造になっていれば、クエリを空にして、既定のクエリを使用することもできます。 クエリの実行時に取得される XML 要素ノードの値および属性は、レポートに使用されているデータセットのフィールドにマップされます。  
   
-### XML ドキュメントのデータを取得するための要件  
+### <a name="requirements-for-retrieving-xml-document-data"></a>XML ドキュメントのデータを取得するための要件  
  サーバーから HTTP プロトコルを使って XML データを取得するか、XML データを XML **Query** 要素に埋め込む必要があります。 XML ドキュメントを HTTP プロトコルを使って直接参照する場合、拡張子を .xml にする必要があります。  
   
  必要なすべてのデータを取得するための XML クエリの作成方法を理解しておく必要があります。 要素パスを指定しない場合、XML ドキュメントを解析するときの既定の動作では、XML ドキュメントのリーフノード コレクションへの使用可能な最初のパスが選択されます。 XML ドキュメントに他の兄弟リーフノード コレクションへのパスが含まれている場合、クエリでパスを指定しない限り、それらのノードは無視されます。  
@@ -136,7 +141,7 @@ caps.handback.revision: 9
 ##  <a name="Parameters"></a> パラメーター  
  クエリの解析時にパラメーターは識別されません。  
   
- パラメーターを追加するには、[[データセットのプロパティ]](../Topic/Dataset%20Properties%20Dialog%20Box,%20Parameters%20\(Report%20Builder\).md) ダイアログ ボックスの **[パラメーター]** ページを使用して手動で作成する必要があります。  
+ パラメーターを追加するには、 **[データセットのプロパティ]** ダイアログ ボックスの [[パラメーター]](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) ページを使用して手動で作成する必要があります。  
   
 ##  <a name="Remarks"></a> 解説  
  XML データ拡張機能は、階層構造でない表形式の XML データからのレポート作成をサポートしています。 詳細については、「[外部データ ソースのデータを追加する (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)」を参照してください。  
@@ -146,33 +151,33 @@ caps.handback.revision: 9
 ##  <a name="HowTo"></a> 操作方法に関するトピック  
  データ接続、データ ソース、およびデータセットを操作する手順について説明します。  
   
- [データ接続を追加および確認する (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [データ接続またはデータ ソースの追加および確認 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
- [共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+ [共有データセットまたは埋め込みデータセットの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [データセットへのフィルターの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [データセットへのフィルターの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
 ##  <a name="Related"></a> 関連項目  
- 次に示すセクションでは、レポート データの概念が詳細に説明されているほか、データに関連するレポートのパーツを定義し、カスタマイズし、使用する方法が説明されています。  
+ 次に示すセクションでは、レポート データの概念が詳細に説明されているほか、データに関連するレポートのパーツを定義、カスタマイズ、および使用する手順が説明されています。  
   
- [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
+ [レポート データセット &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  レポートのデータへのアクセスの概要について説明します。  
   
- [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)  
+ [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  データ接続とデータ ソースについて説明します。  
   
- [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  埋め込みデータセットと共有データセットについて説明します。  
   
- [データセット フィールド コレクション (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  クエリによって生成されるデータセット フィールド コレクションについて説明します。  
   
  [Reporting Services でサポートされるデータ ソース (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?linkid=121312)の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメント)  
  各データ拡張機能のプラットフォームおよびバージョン サポートに関する詳細な情報です。  
   
-## 参照  
- [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>参照  
+ [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

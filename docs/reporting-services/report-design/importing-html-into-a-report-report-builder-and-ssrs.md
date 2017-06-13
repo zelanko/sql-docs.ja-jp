@@ -1,23 +1,28 @@
 ---
-title: "レポートへの HTML のインポート (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "(レポート ビルダーおよび SSRS) レポートへの HTML のインポート |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5ccab26863c41430de2987c9c4573cd1ad53b173
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# レポートへの HTML のインポート (レポート ビルダーおよび SSRS)
+# <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>レポートへの HTML のインポート (レポート ビルダーおよび SSRS)
   テキスト ボックスを使用すると、データセットのフィールドから取得した HTML 形式のテキストをレポートに挿入できます。 正しい形式の HTML に評価される単純型または複合型の式のテキストを使用できます。 書式付きのテキストは、PDF などのサポートされている出力形式すべてにレンダリングできます。  
   
  ![rs_HTMLFormatting](../../reporting-services/report-design/media/rs-htmlformatting.gif "rs_HTMLFormatting")  
@@ -32,18 +37,18 @@ caps.handback.revision: 10
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## サポートされる HTML タグ  
+## <a name="supported-html-tags"></a>サポートされる HTML タグ  
  以下は、プレースホルダー テキストとして定義された場合に HTML として表示されるタグの全リストです。  
   
--   ハイパーリンク: \<A HREF>  
+-   ハイパーリンク: \<A HREF >  
   
--   フォント: \<FONT>  
+-   フォント:\<フォント >  
   
--   ヘッダー、スタイル、およびブロック要素: \<H{n}>、\<DIV>、\<SPAN>、\<P>、\<DIV>、\<LI>、\<HN>  
+-   ヘッダー、スタイル、およびブロック要素: \<H {n} >、 \<DIV >、 \<SPAN >、\<P >、 \<DIV >、 \<LI >、 \<HN >  
   
--   テキスト形式: \<B>、\<I>、\<U>、\<S>  
+-   テキスト形式: \<B >、 \<I >、 \<U >、 \<S >  
   
--   リストの処理: \<OL>、\<UL>、\<LI>  
+-   リストの処理: \<OL >、 \<UL >、 \<LI >  
   
  レポートの処理中、その他の HTML マークアップ タグはすべて無視されます。 プレースホルダー テキスト内の式で表される HTML が整形式でない場合、プレースホルダーはプレーン テキストに変換されます。 HTML タグの大文字と小文字は区別されません。  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 10
   
  詳細については、「[レポートへの HTML の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md)」をご覧ください。  
   
-## カスケード スタイル シート属性の制限  
+## <a name="limitations-of-cascading-style-sheet-attributes"></a>カスケード スタイル シート属性の制限  
  カスケード スタイル シート (CSS) 属性を使用する場合、基本的なタグ セットのみが定義されます。 サポートされている属性の一覧を次に示します。  
   
 -   テキストの配置、テキストのインデント  
@@ -66,7 +71,7 @@ caps.handback.revision: 10
   
     -   CSS の相対的な長さ単位はサポートされず、無視されます。 サポートされない単位は、em、ex、px、%、rem などです。  
   
-     CSS の単位の詳細については、「[CSS の値と単位のリファレンス](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx)」(http://msdn.microsoft.com/library/ms531211(VS.85).aspx) をご覧ください。  
+     CSS の単位の詳細については、「 [CSS の値と単位のリファレンス](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) 」(http://msdn.microsoft.com/library/ms531211(VS.85).aspx) をご覧ください。  
   
 -   color  
   
@@ -78,11 +83,11 @@ caps.handback.revision: 10
   
 -   不正な HTML と同様に不正な CSS 値は無視されます。  
   
--   同じタグに属性と CSS スタイル属性の両方がある場合は、CSS プロパティの方が優先順位が高くなります。 たとえば、テキストが **\<p style="text-align: right" align="left">** の場合、text-align 属性のみが適用され、テキストは右揃えになります。  
+-   同じタグに属性と CSS スタイル属性の両方がある場合は、CSS プロパティの方が優先順位が高くなります。 たとえば、テキストが **\<p style ="テキスト配置: 右"整列 ="left">**、text-align 属性のみが適用され、テキストは右揃えになります。  
   
--   属性と CSS スタイルでは、プロパティが 2 回以上指定されている場合、最後のインスタンスのみが適用されます。 たとえば、テキストが **\<p align="left" align="right">** の場合、テキストは右揃えになります。  
+-   属性と CSS スタイルでは、プロパティが 2 回以上指定されている場合、最後のインスタンスのみが適用されます。 たとえば、テキストが **\<p 整列 ="left"整列 =「右」>**テキストが右揃えになります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [HTML での表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   

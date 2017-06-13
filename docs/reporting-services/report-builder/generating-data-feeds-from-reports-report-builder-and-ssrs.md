@@ -1,30 +1,37 @@
 ---
-title: "複数のレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "データ フィードの生成 (レポート ビルダーおよび SSRS) レポートから |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 190c45d5ec0deeff6d71ce06e4c66872ca3253d2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# 複数のレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom 表示拡張機能は、改ページ調整されたレポートから利用できるデータ フィードおよびレポート内のデータ領域からのデータ フィードを一覧表示する Atom サービス ドキュメントを生成します。 この拡張機能を使用すると、レポートから生成されたデータ フィードを使用できるアプリケーションで読み取りおよび交換が可能な、Atom に準拠したデータ フィードを生成できます。 たとえば、Atom 表示拡張機能を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クライアントで使用できるデータ フィードを生成できます。  
+
+# <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>複数のレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)
+
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom 表示拡張機能は、改ページ調整されたレポートから利用できるデータ フィードおよびレポート内のデータ領域からのデータ フィードを一覧表示する Atom サービス ドキュメントを生成します。 この拡張機能を使用すると、レポートから生成されたデータ フィードを使用できるアプリケーションで読み取りおよび交換が可能な、Atom に準拠したデータ フィードを生成できます。 たとえば、Power Pivot や Power BI で行うこともできますし、生成されたデータ フィードを Atom 表示拡張機能を使用することができます。  
   
  Atom サービス ドキュメントには、レポート内の各データ領域について 1 つ以上のデータ フィードが一覧表示されます。 データ領域の種類およびデータ領域に表示されるデータによっては、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、1 つのデータ領域から複数のデータ フィードを生成することがあります。 たとえば、マトリックスまたはグラフでは、複数のデータ フィードを提供できます。 Atom 表示拡張機能によって Atom サービス ドキュメントが作成されると、各データ フィードに対して一意な識別子が作成されます。URL 内でこの識別子を使用することで、データ フィードの内容にアクセスできます。  
   
  Atom 表示拡張機能でデータ フィード用のデータを生成する方法は、コンマ区切り値 (CSV) 表示拡張機能でデータから CSV ファイルを提供する方法に似ています。 CSV ファイルと同様に、データ フィードは、レポート データのフラット化された表現です。 たとえば、グループ内の売上を合計する行グループを含むテーブルでは、すべてのデータ行で合計が繰り返され、合計のみを含む独立した行がありません。  
   
- Atom サービス ドキュメントおよびデータ フィードは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポート サーバー、または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と統合された SharePoint サイトを使用して生成できます。  
+ Atom サービス ドキュメントおよびデータ フィードは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー、または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]と統合された SharePoint サイトを使用して生成できます。  
   
  Atom は、一式の関連標準に適用されます。 Atom サービス ドキュメントは RFC 5023 Atom パブリッシング プロトコル仕様に準拠し、データ フィードは RFC 4287 Atom 配信形式プロトコル仕様に準拠します。  
   
@@ -39,7 +46,6 @@ caps.handback.revision: 11
   
  詳細については、「[1 つのレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)」を参照してください。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="AtomServiceDocument"></a> Atom サービス ドキュメント (.atomsvc ファイル)  
  Atom サービス ドキュメントは、1 つまたは複数のデータ フィードへの接続を指定します。 接続は、少なくとも、フィードを生成するデータ サービスへの単純な URL です。  
@@ -60,14 +66,13 @@ caps.handback.revision: 11
   
  ![RS_Atom_PeerDynamicDataFeeds](../../reporting-services/report-builder/media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="DataFeeds"></a> データ フィード  
  データ フィードは、時間が経過しても変化しない一貫した表形式と、レポートを実行するたびに変化する可能性のある可変データから成る、XML ファイルです。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によって生成されるデータ フィードは、ADO.NET Data Services によって生成されるデータ フィードと同じ形式です。  
   
  データ フィードには、ヘッダー セクションとデータ セクションの 2 つのセクションが含まれます。 Atom 仕様には、各セクションの要素が定義されています。 ヘッダーには、データ フィードで使用する文字エンコード スキーマなどの情報が含まれています。  
   
-### ヘッダー セクション  
+### <a name="header-section"></a>ヘッダー セクション  
  次の XML コードは、データ フィードのヘッダー セクションを示しています。  
   
  `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">`  
@@ -78,14 +83,14 @@ caps.handback.revision: 11
   
  `<updated>2009-05-08T23:09:58Z</updated>`  
   
-### データ セクション  
- データ フィードのデータ セクションには、Atom 表示拡張機能によって生成されたフラット化された行セット内の行ごとに 1 つの \<**entry**> 要素が含まれています。  
+### <a name="data-section"></a>データ セクション  
+ データ フィードのデータ セクションは、1 つを含む\<**エントリ**> Atom 表示拡張機能によって生成されたフラットな行セットの行ごとの要素。  
   
  次の図に、グループと合計を使用するレポートを示します。  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../../reporting-services/report-builder/media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- 次の XML は、データ フィード内のレポートの \<**entry**> 要素を示しています。 \<**entry**> 要素には、グループの売上および注文の合計と、すべてのグループの売上および注文の合計が含まれています。 \<**entry**> 要素には、レポート上のすべての値が含まれます。  
+ 次の XML に示します、 \<**エントリ**> からそのレポート データ フィードの要素。 注意して、 \<**エントリ**> 要素には、売上およびグループの注文の合計と売上および注文のすべてのグループの合計が含まれています。 \<**エントリ**> 要素には、レポートのすべての値が含まれています。  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -107,24 +112,23 @@ caps.handback.revision: 11
   
  `</entry>`  
   
-### データ フィードの操作  
- レポートによって生成されるすべてのデータ フィードには、データ フィードを生成するデータ領域の親のスコープ内のレポート アイテムが含まれます。 」を参照してください。 複数のテーブルと 1 つのグラフが含まれているレポートを想像してください。 レポート本文のテキスト ボックスは、各データ領域の説明テキストを提供します。 レポートによって生成されるすべてのデータ フィードのすべてのエントリには、テキスト ボックスの値が含まれます。 たとえば、テキストが "販売地域別の月次売上の平均を示すグラフ" の場合、3 つのすべてのデータ フィードの各行にこのテキストが含まれます。  
+### <a name="working-with-data-feeds"></a>データ フィードの操作  
+ レポートによって生成されるすべてのデータ フィードには、データ フィードを生成するデータ領域の親のスコープ内のレポート アイテムが含まれます。 と統合された SharePoint サイトを使用して生成できます。 複数のテーブルと 1 つのグラフが含まれているレポートを想像してください。 レポート本文のテキスト ボックスは、各データ領域の説明テキストを提供します。 レポートによって生成されるすべてのデータ フィードのすべてのエントリには、テキスト ボックスの値が含まれます。 たとえば、テキストが "販売地域別の月次売上の平均を示すグラフ" の場合、3 つのすべてのデータ フィードの各行にこのテキストが含まれます。  
   
  入れ子になったデータ領域のような階層データ リレーションシップがレポート レイアウトに含まれている場合、これらのリレーションシップは、レポート データのフラット化された行セットに含まれます。  
   
  一般に、入れ子になったデータ領域のデータ行は幅が広くなります。入れ子になったテーブルおよびマトリックスにグループや合計が含まれる場合は特にそうです。 期待どおりのデータが生成されるかどうかを確認するには、レポートをデータ フィードにエクスポートした後でデータ フィードを表示すると便利です。  
   
- Atom 表示拡張機能によって Atom サービス ドキュメントが作成されると、データ フィードに対して一意な識別子が作成されます。URL 内でこの識別子を使用することで、データ フィードの内容を確認できます。 上に示すサンプルの Atom サービス ドキュメントには、http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1" という URL が含まれています。 この URL は、レポート (Product Sales Summary)、Atom 表示形式 (ATOM)、およびデータ フィードの名前 (xAx0x1) を識別します。  
+ Atom 表示拡張機能によって Atom サービス ドキュメントが作成されると、データ フィードに対して一意な識別子が作成されます。URL 内でこの識別子を使用することで、データ フィードの内容を確認できます。 上に示した、サンプルの Atom サービス ドキュメントには、URL が含まれています。`http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`です。 この URL は、レポート (Product Sales Summary)、Atom 表示形式 (ATOM)、およびデータ フィードの名前 (xAx0x1) を識別します。  
   
  レポート アイテムの名前には、直感的でなく覚えにくい、レポート アイテムのレポート定義言語 (RDL) 要素の名前が既定で使用されます。 たとえば、レポートに配置された最初のマトリックスの既定の名前は Tablix 1 となります。 データ フィードでは、これらの名前が使用されます。  
   
- データ領域の DataElementName プロパティを使用してわかりやすい名前を付けることで、データ フィードの操作を容易にすることができます。 DataElementName の値を設定した場合、データ フィードのサブ要素 \<**d**> でこの値が既定のデータ領域名の代わりに使用されます。 たとえば、データ領域の既定の名前が Tablix1 である場合、DataElementName に SalesByTerritoryYear を設定すると、データ フィードの \<**d**> では SalesByTerritoryYear が使用されます。 上で説明したマトリックス レポートのようにデータ領域に 2 つのデータ フィードがある場合、データ フィードで使用される名前は、SalesByTerritoryYear _Territory と SalesByTerritoryYear _Year となります。  
+ データ領域の DataElementName プロパティを使用してわかりやすい名前を付けることで、データ フィードの操作を容易にすることができます。 DataElementName の値を指定する場合、データ フィードのサブ要素\< **d**> が使用するが、既定のデータ領域の名前ではなく、します。 たとえば、データ領域の既定の名前が Tablix1 と DataElementName SalesByTerritoryYear を設定する場合、 \< **d**> SalesByTerritoryYear を使用して、データ フィードです。 上で説明したマトリックス レポートのようにデータ領域に 2 つのデータ フィードがある場合、データ フィードで使用される名前は、SalesByTerritoryYear _Territory と SalesByTerritoryYear _Year となります。  
   
  レポート上に表示されたデータとデータ フィード内のデータを比較した場合、いくつかの相違があります。 通常、レポートに表示される数値データや日時データは書式設定されていますが、データ フィードには書式設定されていないデータが含まれます。  
   
  データ フィードは、拡張子が .atom のファイル名で保存されます。 テキスト エディターまたは XML エディター (たとえば、メモ帳や XML Editor) を使用して、ファイルの構造および内容を確認できます。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="FlatteningReportData"></a> レポート データのフラット化  
  Atom レンダラーは、XML 形式のフラット化された行セットとしてレポート データを提供します。 データ テーブルをフラット化する場合のルールは、いくつかの例外を除き、CSV レンダラーに適用されるルールと同じです。  
@@ -145,9 +149,8 @@ caps.handback.revision: 11
   
 -   ピア データ領域は、一般的なデータ領域または動的な先祖を共有する、データ領域または動的グループです。 ピア データがフラットなツリーの分岐で識別されます。  
   
- 詳細については、「[テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)を返します。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="AtomRendering"></a> Atom 表示ルール  
  Atom 表示拡張機能は、データ フィードを表示するときに次の情報を無視します。  
@@ -185,15 +188,13 @@ caps.handback.revision: 11
 |インジケーター|アクティブな状態名、使用可能な状態、およびデータ値を持つ単一のレコードとして表示されます。|  
 |マップ|各マップ データ領域にデータ フィードを生成します。 複数のマップ レイヤーが同じデータ領域を使用している場合、データ フィードにはすべてのマップ レイヤーが含まれます。 データ フィードには、マップ レイヤーのマップ メンバーごとにラベルと値を持つレコードが含まれます。|  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="DeviceInfo"></a> デバイス情報設定  
  使用するエンコード スキーマなど、このレンダラーのいくつかの既定の設定は変更することができます。 詳細については、「 [ATOM Device Information Settings](../../reporting-services/atom-device-information-settings.md)」を参照してください。  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
-## 参照  
- [CSV ファイルへのエクスポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
- [レポートのエクスポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
-  
-  
+
+## <a name="next-steps"></a>次の手順
+
+[CSV ファイルにエクスポートします。](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
+[レポートのエクスポート](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
+
+他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

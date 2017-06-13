@@ -1,24 +1,29 @@
 ---
-title: "チュートリアル: レポートへの円グラフの追加 (レポート ビルダー) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "チュートリアル: レポート (レポート ビルダー) への円グラフの追加 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 06/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e28719a7ee1f1610e8e673711958592837198046
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)
 このチュートリアルでは、Reporting Services の改ページ調整されたレポートに円グラフを作成します。 パーセンテージを追加し、小さいスライスを 1 つのスライスに結合します。
 
 円グラフおよびドーナツ グラフは、データを全体に対する比率として表示します。 これらのグラフには軸はありません。 円グラフに数値フィールドを追加すると、それぞれの値の全体に占める比率が計算されます。  
@@ -28,37 +33,20 @@ caps.handback.revision: 13
 ![report-builder-pie-chart-final](../reporting-services/media/report-builder-pie-chart-final.png)
   
 円グラフのデータ ポイントが多すぎると、データ ポイント ラベルが過密状態になって見づらくなる場合があります。 その場合は、複数の小さいスライスを組み合わせて 1 つの大きなスライスにすることを検討してください。 円グラフは、データを少数のデータ ポイントに集計すると見やすくなります。  
-  
-## <a name="BackToTop"></a>学習する内容  
-このチュートリアルでは、次の内容を説明します。  
-  
-1.  [グラフ ウィザードから円グラフを作成する](#Chart)  
-  
-2.  [グラフの種類を選択する](#ChartType)  
-  
-3.  [各スライスにパーセンテージを表示する](#Percentages)  
-  
-4.  [小さな複数のスライスを 1 つのスライスにまとめる](#CombineSlices)  
-  
-5.  [円グラフの値の開始位置を円の最上部にする](#DrawingEffect)  
-  
-6.  [レポート タイトルを追加する](#Title)  
-  
-7.  [レポートを保存する](#Save)  
-  
+ 
 > [!NOTE]  
 > このチュートリアルでは、ウィザードに関する手順を 2 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアル ([「チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)」](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)) を参照してください。  
   
 このチュートリアルの推定所要時間: 10 分  
   
-## 必要条件  
+## <a name="requirements"></a>必要条件  
 要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/prerequisites-for-tutorials-report-builder.md) を参照してください。  
   
 ## <a name="Chart"></a>1.グラフ ウィザードから円グラフを作成する  
 このセクションでは、グラフ ウィザードを使用して埋め込みデータセットを作成し、共有データ ソースを選択して、円グラフを作成します。  
 
   
-1.  コンピューター、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web ポータル、SharePoint 統合モードのいずれかから[レポート ビルダーを起動します](../reporting-services/report-builder/start-report-builder.md)。  
+1.  コンピューター、[Web ポータル、SharePoint 統合モードのいずれかから](../reporting-services/report-builder/start-report-builder.md) レポート ビルダーを起動します [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 。  
   
     **[新しいレポートまたはデータセット]** ダイアログ ボックスが開きます。  
   
@@ -66,11 +54,11 @@ caps.handback.revision: 13
   
 2.  左ペインで、 **[新しいレポート]** が選択されていることを確認します。  
   
-3.  右ペインで、**[グラフ ウィザード]** をクリックします。  
+3.  右ペインで、 **[グラフ ウィザード]**をクリックします。  
   
-4.  **[データセットの選択]** ページで **[データセットを作成する]** をクリックし、**[次へ]** をクリックします。  
+4.  **[データセットの選択]** ページで **[データセットを作成する]**をクリックし、 **[次へ]**をクリックします。  
   
-5.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択し、**[次へ]** をクリックします。 ユーザー名とパスワードの入力が必要な場合があります。  
+5.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択し、 **[次へ]**をクリックします。 ユーザー名とパスワードの入力が必要な場合があります。  
   
     > [!NOTE]  
     > 適切な権限を持っている限り、選択するデータ ソースは重要ではありません。 データ ソースからはデータを取得しません。 詳細については、[「別の方法でデータ接続を取得する (レポート ビルダー)」](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)を参照してください。  
@@ -105,7 +93,7 @@ caps.handback.revision: 13
   
     **[グラフのフィールドの配置]** ページで、Product フィールドを **[カテゴリ]** ペインにドラッグします。 カテゴリは円グラフのスライスの数を定義します。 この例では、各製品に 1 つずつ、合計 8 個のスライスになります。  
   
-2.  Sales フィールドを **[値]** ペインにドラッグします。 Sales は、サブカテゴリの売上高を表します。 各販売員の集計がグラフに表示されるため、**[値]** ペインには "`[Sum(Sales)]`" と表示されます。  
+2.  Sales フィールドを **[値]** ペインにドラッグします。 Sales は、サブカテゴリの売上高を表します。 各販売員の集計がグラフに表示されるため、 **[値]** ペインには " `[Sum(Sales)]` " と表示されます。  
   
 3.  **次へ** をクリックしてプレビューを表示します。  
   
@@ -129,15 +117,15 @@ caps.handback.revision: 13
   
 1.  レポート デザイン ビューに切り替えます。  
   
-2.  円グラフを右クリックし、**[データ ラベルの表示]** をクリックします。 グラフにデータ ラベルが表示されます。  
+2.  円グラフを右クリックし、 **[データ ラベルの表示]**をクリックします。 グラフにデータ ラベルが表示されます。  
   
-3.  ラベルを右クリックし、**[系列ラベルのプロパティ]** をクリックします。  
+3.  ラベルを右クリックし、 **[系列ラベルのプロパティ]**をクリックします。  
   
-4.  **[ラベル データ]** ボックスで、**[#PERCENT]** を選択します。  
+4.  **[ラベル データ]** ボックスで、 **[#PERCENT]**を選択します。  
     
-5.  (省略可) ラベルに表示する小数点以下桁数を指定するには、**[ラベル データ]** ボックスで、**#PERCENT** の後に「**{Pn}**」と入力します。ここで、*n* は、表示する小数点以下桁数を表します。 たとえば、小数点以下を表示しない場合は「**#PERCENT{P0}**」と入力します。  
+5.  (省略可能)小数点以下桁数、ラベルを指定するを示していますで、**データ ラベル**後ボックス**#PERCENT**、型**{pn}**場所 *n* を表示する小数点以下桁数の数です。 たとえば、小数点以下を表示しない場合は「 **#PERCENT{P0}**」と入力します。  
 
-6.  値をパーセンテージとして表示するには、UseValueAsLabel プロパティを false に設定する必要があります。 **[アクションの確認]** ダイアログでこの値の設定を求めるメッセージが表示されたら、**[はい]** をクリックします。  
+6.  値をパーセンテージとして表示するには、UseValueAsLabel プロパティを false に設定する必要があります。 **[アクションの確認]** ダイアログでこの値の設定を求めるメッセージが表示されたら、 **[はい]**をクリックします。  
   
     > [!NOTE]  
     > **[系列ラベルのプロパティ]** ダイアログ ボックスの **[数値書式]** は、パーセンテージの表示形式には影響しません。 この場合、ラベルの表示形式がパーセンテージに設定されるだけで、円グラフに対する各スライスのパーセンテージが計算されるわけではありません。  
@@ -159,15 +147,15 @@ caps.handback.revision: 13
   
 3.  デザイン画面で、円グラフの任意のスライスをクリックします。 系列のプロパティが [プロパティ] ペインに表示されます。  
   
-4.  **[全般]** セクションで、**[CustomAttributes]** ノードを展開します。  
+4.  **[全般]** セクションで、 **[CustomAttributes]** ノードを展開します。  
   
-5.  **[CollectedStyle]** プロパティを **[SingleSlice]** に設定します。  
+5.  **[CollectedStyle]** プロパティを **[SingleSlice]**に設定します。  
 
     ![report-builder-pie-chart-single-slice-property](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
  
 6.  **[CollectedThreshold]** プロパティが 5 に設定されていることを確認します。  
   
-7.  **[CollectedThresholdUsePercent]** プロパティが **True** に設定されていることを確認します。  
+7.  **[CollectedThresholdUsePercent]** プロパティが **True**に設定されていることを確認します。  
   
 8.  **[ホーム]** タブで **[実行]** をクリックして、レポートをプレビューします。  
   
@@ -185,7 +173,7 @@ caps.handback.revision: 13
 
 2. 円グラフを選択します。
 
-3. プロパティ ペインの **[カスタム属性]** で、[PieStartAngle] を **0** から **270** に変更します。
+3. プロパティ ペインの **[カスタム属性]**で、[PieStartAngle] を **0** から **270**に変更します。
 
 4. **[実行]** をクリックして、レポートをプレビューします。
 
@@ -199,9 +187,9 @@ caps.handback.revision: 13
   
 1.  グラフで、[グラフのタイトル] ボックスを選択し、Del キーを押します。
 
-2. デザイン画面で、**[クリックしてタイトルを追加]** をクリックします。  
+2. デザイン画面で、 **[クリックしてタイトルを追加]**をクリックします。  
   
-2.  「**Camera and Camcorder Sales**」と入力して Enter キーを押し、さらに「**As a Percentage of Total Sales**」と入力します。次のように表示されます。  
+2.  「 **Camera and Camcorder Sales**」と入力して Enter キーを押し、さらに「 **As a Percentage of Total Sales**」と入力します。次のように表示されます。  
   
     **Camera and Camcorder Sales**  
   
@@ -219,22 +207,24 @@ caps.handback.revision: 13
   
 ## <a name="Save"></a>7.レポートを保存する  
   
-### レポートを保存するには  
+### <a name="to-save-the-report"></a>レポートを保存するには  
   
 1.  レポート デザイン ビューに切り替えます。  
   
-2.  **[ファイル]** メニューの **[保存]** をクリックします。  
+2.  **[ファイル]** メニューの **[保存]**をクリックします。  
   
-3.  **[名前]** に「**Sales Pie Chart**」と入力します。  
+3.  **[名前]**に「 **Sales Pie Chart**」と入力します。  
   
 4.  **[保存]**をクリックします。  
   
 レポートがレポート サーバーに保存されます。  
   
-## 次の手順  
+## <a name="next-steps"></a>次の手順  
 これで、「レポートへの円グラフの追加」チュートリアルを終了します。 グラフの詳細については、「[グラフ (レポート ビルダーおよび SSRS)](../reporting-services/report-design/charts-report-builder-and-ssrs.md)」と「[スパークラインとデータ バー (レポート ビルダーおよび SSRS)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
 [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016 のレポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

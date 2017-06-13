@@ -1,23 +1,28 @@
 ---
-title: "RDL サンドボックスの有効化と無効化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "有効にして、RDL サンド ボックス化を無効化 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2a435c6f6b5dc2d9df676f504837393d448820a4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# RDL サンドボックスの有効化と無効化
+# <a name="enable-and-disable-rdl-sandboxing"></a>RDL サンドボックスの有効化と無効化
   RDL (レポート定義言語) サンドボックス機能を使用すると、複数のテナントが 1 つのレポート サーバー Web ファームを使用している環境で、個々のテナントによる特定の種類のリソースの使用を検出および制限できるようになります。 このような例として、複数のテナントまたは複数の企業によって使用される単一のレポート サーバー Web ファームを管理するホスティング サービスのシナリオがあります。 レポート サーバー管理者は、次の目的を達成するためにこの機能を有効にできます。  
   
 -   外部リソースのサイズを制限する。 外部リソースには、画像、.xslt ファイル、およびマップ データが含まれます。  
@@ -28,16 +33,16 @@ caps.handback.revision: 9
   
  RDL サンドボックスが有効になると、次の機能は無効になります。  
   
--   レポート定義の **\<Code>** 要素内のカスタム コード。  
+-   カスタム コード、 **\<コード >**レポート定義の要素。  
   
 -   [!INCLUDE[ssRSversion2005](../../includes/ssrsversion2005-md.md)] カスタム レポート アイテムに対する RDL の下位互換性モード。  
   
 -   式での名前付きパラメーター。  
   
- このトピックでは、RSReportServer.Config ファイルの \<**RDLSandboxing**> 要素内の各要素について説明します。 このファイルの編集の詳細については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 RDL サンドボックス機能に関連した操作は、サーバー トレース ログに記録されます。 トレース ログの詳細については、「[Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。  
+ このトピック内の各要素の説明、 \< **RDLSandboxing**>、RSReportServer.Config ファイル内の要素。 このファイルの編集の詳細については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 RDL サンドボックス機能に関連した操作は、サーバー トレース ログに記録されます。 トレース ログの詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。  
   
-## 構成例  
- RSReportServer.Config ファイルの \<**RDLSandboxing**> 要素の設定および値の例を次に示します。  
+## <a name="example-configuration"></a>構成例  
+ 次の例の設定および値の例を示しています、 \< **RDLSandboxing**>、RSReportServer.Config ファイル内の要素。  
   
 ```  
 <RDLSandboxing>  
@@ -56,7 +61,7 @@ caps.handback.revision: 9
 </RDLSandboxing>  
 ```  
   
-## 構成設定  
+## <a name="configuration-settings"></a>構成設定  
  次の表では、構成設定に関する情報を示します。 構成ファイルに出現する順に、設定を示します。  
   
 |設定|Description|  
@@ -68,12 +73,12 @@ caps.handback.revision: 9
 |**型**|RDL 式内で許可されるメンバーの一覧です。|  
 |**Allow**|RDL 式で許可される型または型のセットです。|  
 |**名前空間**|**Allow** の属性の 1 つであり、Value に適用される 1 つ以上の型を含む名前空間です。 このプロパティでは、大文字と小文字が区別されません。|  
-|**AllowNew**|**Allow** のブール属性であり、RDL 式内または RDL の **\<Class>** 要素内でその型の新しいインスタンスを作成できるかどうかを制御します。<br /><br /> 注: **RDLSandboxing** が有効であるときは、**AllowNew** の設定に関係なく、RDL 式に新しい配列を作成できません。|  
+|**AllowNew**|ブール属性**許可**または、RDL で RDL 式で作成する型の新しいインスタンスが許可されているかどうかを制御する**\<クラス >**要素。<br /><br /> 注: **RDLSandboxing** が有効であるときは、 **AllowNew**の設定に関係なく、RDL 式に新しい配列を作成できません。|  
 |**値**|**Allow** に対する値であり、RDL 式で許可される型の名前を示します。 値が **\*** の場合は、名前空間内のすべての型が許可されることを意味します。 このプロパティでは、大文字と小文字が区別されません。|  
-|**メンバー**|**\<Types>** 要素に含まれる型の一覧に対する、RDL 式で許可されないメンバー名の一覧です。|  
+|**メンバー**|含まれる型の一覧については、 **\<型 >**要素、RDL 式で許可されていないメンバー名の一覧です。|  
 |**Deny**|RDL 式で許可されないメンバーの名前です。 このプロパティでは、大文字と小文字が区別されません。<br /><br /> 注: メンバーに対して **Deny** が指定されている場合、この名前を持つすべての型のメンバーがすべて許可されません。|  
   
-## RDL サンドボックスが有効なときの式の操作  
+## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>RDL サンドボックスが有効なときの式の操作  
  式で使用されるリソースの管理を容易にするために、RDL サンドボックス機能を次のような方法で変更できます。  
   
 -   式に使用する文字数を制限する。  
@@ -91,14 +96,14 @@ caps.handback.revision: 9
   
  RDL 式の結果は、実行時に検証されます。 RDL 式は、レポートのパブリッシュ時にレポート定義で検証されます。 レポート サーバーのトレース ログで、違反がないかどうかを確認できます。 詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。  
   
-### 型の操作  
+### <a name="working-with-types"></a>型の操作  
  許可一覧に型を追加することで、RDL 式にアクセスする次のエントリ ポイントを制御できます。  
   
 -   型の静的メンバー  
   
--   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の **New** メソッド  
+-   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** method.  
   
--   レポート定義の **\<Classes>** 要素  
+-   **\<クラス >**レポート定義内の要素。  
   
 -   許可一覧に含まれる型に対してブロック一覧に追加したメンバー  
   
@@ -112,7 +117,7 @@ caps.handback.revision: 9
   
  1 つの型のメンバーを有効にして、別の型では同じ名前のメンバーを拒否するには、次の手順を実行する必要があります。  
   
--   そのメンバー名に対して **\<Deny>** 要素を追加します。  
+-   追加、  **\<Deny >**メンバー名の要素。  
   
 -   有効にするメンバーに対して、カスタム アセンブリのクラスに異なる名前のプロキシ メンバーを作成します。  
   
@@ -120,7 +125,7 @@ caps.handback.revision: 9
   
  許可一覧に [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework の関数を追加するには、Microsoft.VisualBasic 名前空間の対応する型を許可一覧に追加します。  
   
- 許可一覧に [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework の型キーワードを追加するには、対応する CLR 型を許可一覧に追加します。 たとえば、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework のキーワード **Integer** を使用するには、**\<RDLSandboxing>** 要素に次の XML フラグメントを追加します。  
+ 許可一覧に [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework の型キーワードを追加するには、対応する CLR 型を許可一覧に追加します。 たとえば、使用するため、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework のキーワード**整数**には、次の XML フラグメントを追加、  **\<RDLSandboxing >**要素。  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  
@@ -132,9 +137,9 @@ caps.handback.revision: 9
   
 -   そのプロキシ型を許可一覧に追加します。  
   
- カスタム アセンブリから許可一覧に型を追加しても、アセンブリに対して暗黙に実行権限が付与されることはありません。 コード アクセス セキュリティ ファイルを具体的に変更して、アセンブリに実行権限を提供する必要があります。 詳細については、「[Reporting Services のコード アクセス セキュリティ](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)」を参照してください。  
+ カスタム アセンブリから許可一覧に型を追加しても、アセンブリに対して暗黙に実行権限が付与されることはありません。 コード アクセス セキュリティ ファイルを具体的に変更して、アセンブリに実行権限を提供する必要があります。 詳細については、「 [Reporting Services のコード アクセス セキュリティ](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)」を参照してください。  
   
-#### メンバーの \<Deny> 一覧の管理  
+#### <a name="maintaining-the-deny-list-of-members"></a>保守、\<拒否 > のメンバーの一覧  
  許可一覧に新しい型を追加するときには、次に示す場合に、メンバーのブロック一覧の更新が必要となります。  
   
 -   新しい型を導入するバージョンでカスタム アセンブリを更新する場合。  
@@ -143,12 +148,12 @@ caps.handback.revision: 9
   
 -   レポート サーバー上で [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を更新する場合。  
   
--   レポート サーバーを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の新しいバージョンにアップグレードする場合。  
+-   レポート サーバーを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の新しいバージョンにアップグレードする場合。  
   
 -   RDL 型に新しいメンバーが追加された可能性があるため、新しい RDL スキーマを処理できるようにレポート サーバーを更新する場合  
   
-### 演算子と New の操作  
- 既定では、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework の言語演算子は、**New** を除いて常に許可されます。 **New** 演算子は、**\<Allow>** 要素の **AllowNew** 属性によって制御されます。 既定のコレクション アクセサー演算子 **!** や [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework のキャスト マクロ (**CInt** など) のような、他の言語演算子は常に許可されます。  
+### <a name="working-with-operators-and-new"></a>演算子と New の操作  
+ 既定では、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework の言語演算子は、 **New**を除いて常に許可されます。 **新規**によって演算子が制御されます、 **AllowNew**属性を**\<許可 >**要素。 既定のコレクション アクセサー演算子 **!** や [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework のキャスト マクロ ( **CInt**など) のような、他の言語演算子は常に許可されます。  
   
  カスタム演算子を含め、ブロック一覧への演算子の追加はサポートされていません。 特定の型に対して演算子を除外するには、次の手順を実行する必要があります。  
   
@@ -164,7 +169,7 @@ caps.handback.revision: 9
   
 -   このクラスを許可一覧に追加します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)  
   

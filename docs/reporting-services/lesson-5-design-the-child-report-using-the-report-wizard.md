@@ -1,37 +1,42 @@
 ---
-title: "レッスン 5: レポート ウィザードを使用して子レポートを設計する | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "レッスン 5: レポート ウィザードを使用して、子レポートのデザイン |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 05/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 285ade0eaf63fee0733fcfcb9e8f627e8c666a6b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# レッスン 5: レポート ウィザードを使用して子レポートを設計する
-子レポートのデータ接続とデータ テーブルを作成した後は、レポート デザイナーのレポート ウィザードを使用して子レポートを設計します。 レポート デザイナーの詳細については、[「レポート デザイナーを使用してレポートをデザインする (SSRS)」](../reporting-services/tools/design-reports-with-report-designer-ssrs.md) を参照してください。  
+# <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>レッスン 5: レポート ウィザードを使用して子レポートを設計する
+子レポートのデータ接続とデータ テーブルを作成した後は、レポート デザイナーのレポート ウィザードを使用して子レポートを設計します。 レポート デザイナーの詳細については、[「レポート デザイナーを使用してレポートをデザインする (SSRS)」](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) を参照してください。  
   
-### レポート ウィザードを使用して子レポートを設計するには  
+### <a name="to-design-the-child-report-using-the-report-wizard"></a>レポート ウィザードを使用して子レポートを設計するには  
   
 1.  **ソリューション エクスプローラー**でトップレベル Web サイトが選択されていることを確認します。  
   
-2.  Web サイトを右クリックし、**[新しい項目の追加]** を選択します。  
+2.  Web サイトを右クリックし、 **[新しい項目の追加]**を選択します。  
   
-3.  **[新しい項目の追加]** ダイアログ ボックスで、**[レポート ウィザード]** をクリックします。レポート ファイルの名前を入力し、**[追加]** を選択します。  
+3.  **[新しい項目の追加]** ダイアログ ボックスで、 **[レポート ウィザード]**をクリックします。レポート ファイルの名前を入力し、 **[追加]**を選択します。  
   
     これにより、レポート ウィザードが起動します。  
   
-4.  **[データセットのプロパティ]** ページで、**[データ ソース]** ボックスの **[DataSet2]** を選択します。  
+4.  **[データセットのプロパティ]** ページで、 **[データ ソース]** ボックスの **[DataSet2]**を選択します。  
   
     作成した DataTable で **[使用できるデータセット]** ボックスが自動的に更新されます。  
   
@@ -39,17 +44,17 @@ caps.handback.revision: 8
   
 6.  **[フィールドの配置]** ページで、次の操作を行います。  
   
-    1.  **[ProductID]**、**[PurchaseOrderID]**、**[PurchaseOrderDetailID]**、**[OrderQty]**、**[ReceivedQty]**、**[RejectedQty]**、および **[StockedQty]** を、**[使用できるフィールド]** から **[値]** ボックスにドラッグします。  
+    1.  **[ProductID]**、 **[PurchaseOrderID]**、 **[PurchaseOrderDetailID]**、 **[OrderQty]**、 **[ReceivedQty]**、 **[RejectedQty]**、および **[StockedQty]** を、 **[使用できるフィールド]** から **[値]** ボックスにドラッグします。  
   
-    2.  **[Sum(ProductID)]**、**[Sum(PurchaseOrderID)]**、**[Sum(PurchaseOrderDetailID)]**、**[Sum(OrderQty)]**、**[Sum(ReceivedQty)]**、**[Sum(RejectedQty)]**、および **[Sum(StockedQty)]** の横の矢印を選択して、**[Sum]** の選択を解除します。  
+    2.  **[Sum(ProductID)]**、 **[Sum(PurchaseOrderID)]**、 **[Sum(PurchaseOrderDetailID)]**、 **[Sum(OrderQty)]**、 **[Sum(ReceivedQty)]**、 **[Sum(RejectedQty)]**、および **[Sum(StockedQty)]** の横の矢印を選択して、 **[Sum]** の選択を解除します。  
   
-7.  **[次へ]** を 2 回選択し、**[完了]** を選択して**レポート ウィザード**を閉じます。  
+7.  **[次へ]** を 2 回選択し、 **[完了]** を選択して **レポート ウィザード**を閉じます。  
   
     これで、.rdlc ファイルが作成されました。 このファイルはレポート デザイナーで開くことができます。 設計した Tablix がデザイン画面に表示されます。  
   
 8.  .rdlc ファイルが開かれた状態で、次の手順を実行してパラメーターを追加します。  
   
-    1.  **レポート データ** ペインの **[パラメーター]** を右クリックし、**[パラメーターの追加]** を選択します。  
+    1.  **レポート データ** ペインの **[パラメーター]** を右クリックし、 **[パラメーターの追加]**を選択します。  
   
     2.  **[名前]** ボックスに **productid** を入力します。  
   
@@ -59,8 +64,10 @@ caps.handback.revision: 8
   
 9. .rdlc ファイルを保存します。  
   
-## 次の作業  
-これで、レポート ウィザードを使用して子レポートを設計できました。 次は、Web サイト アプリケーションに ReportViewer コントロールを追加します。 [「レッスン 6: アプリケーションに ReportViewer コントロールを追加する」](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md) を参照してください。  
+## <a name="next-task"></a>次の作業  
+これで、レポート ウィザードを使用して子レポートを設計できました。 次は、Web サイト アプリケーションに ReportViewer コントロールを追加します。 [「レッスン 6: アプリケーションに ReportViewer コントロールを追加する」](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)を参照してください。  
   
   
   
+
+

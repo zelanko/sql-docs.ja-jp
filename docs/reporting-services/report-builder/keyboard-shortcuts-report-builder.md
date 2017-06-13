@@ -1,26 +1,31 @@
 ---
-title: "キーボード ショートカット (レポート ビルダー) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "キーボード ショートカット"
-  - "ショートカット"
+title: "キーボード ショートカット (レポート ビルダー) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- keyboard shortcuts
+- shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 caps.latest.revision: 20
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 20
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a9b6a8f5eb6238fac6b0588ecf6c79227e9ec7d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# キーボード ショートカット (レポート ビルダー)
+# <a name="keyboard-shortcuts-report-builder"></a>キーボード ショートカット (レポート ビルダー)
   レポート ビルダーで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートを作成および編集する際には、Windows 環境が提供しているナビゲーション用ショートカット キーのすべてにアクセスできます。 複数ある標準キーボード マッピング スキームから選択できます。  
   
  レポート ビルダー ウィンドウでの移動や、ダイアログ ボックスでのオプション選択や変更を、マウスを使用せずに行うことができます。  
@@ -28,9 +33,9 @@ caps.handback.revision: 20
  レポート ビルダーには多数の右クリック メニューがあり、よく使うダイアログ ボックスやコマンドにすばやくアクセスできます。 右クリック メニューは動的なので、ユーザー設定や現在操作中のオブジェクトに応じて表示されるオプションが異なる場合があります。 レポート ビルダーの使用に徐々に慣れながら、オブジェクトを右クリックしてメニュー オプションを調べ、これらのショートカットを覚えるようにしてください。  
   
 > [!NOTE]  
->  キーボード ショートカットには、<localizedText>Shift</localizedText>、<localizedText>Alt</localizedText>、<localizedText>Ctrl</localizedText> などのキーとアルファベット キーの組み合わせや、ファンクション キーを使用できます。 たとえば、&lt;localizedText&gt;F1&lt;/localizedText&gt; キーを押すと、レポート ビルダーのヘルプ ファイルが開きます。  
+>  キーボード ショートカットには、Shift、Alt、Ctrl などのキーとアルファベット キーの組み合わせや、ファンクション キーを使用できます。 たとえば、F1 キーを押すと、レポート ビルダーのヘルプ ファイルが開きます。  
   
-## レポート ビルダーでのキーボード ショートカット  
+## <a name="keyboard-shortcuts-in-report-builder"></a>レポート ビルダーでのキーボード ショートカット  
   
 |Description|キーの組み合わせ|  
 |-----------------|---------------------|  
@@ -38,21 +43,21 @@ caps.handback.revision: 20
 |レポートを作成する。|Ctrl + N|  
 |レポートを開きます。|Ctrl + O|  
 |レポートを保存する。|Ctrl + S、Alt + S|  
-|レポート ビルダーの領域 (リボン、デザイン画面、グループ化ペイン、プロパティ ペイン、データ ペイン) 間を移動する。|F6&lt;/localizedText&gt;、&lt;localizedText&gt;Shift&lt;/localizedText&gt; + &lt;localizedText&gt;F6|  
+|レポート ビルダーの領域 (リボン、デザイン画面、グループ化ペイン、プロパティ ペイン、データ ペイン) 間を移動する。|F6、 Shift + F6|  
 |リボンに移動する。|Alt|  
-|リボンの [ホーム] タブに移動する。|Alt&lt;/localizedText&gt; + &lt;localizedText&gt;H|  
-|リボンの [挿入] タブに移動する。|Alt&lt;/localizedText&gt; + &lt;localizedText&gt;I|  
-|リボンの [表示] タブに移動する。|Alt&lt;/localizedText&gt; + &lt;localizedText&gt;V|  
+|リボンの [ホーム] タブに移動する。|Alt + H|  
+|リボンの [挿入] タブに移動する。|Alt + I|  
+|リボンの [表示] タブに移動する。|Alt + V|  
 |領域間の境界線 (グループ化ペインとデザイン画面の境界線など) をアクティブ化する。|Tab|  
 |領域間の境界線を移動する。|任意の方向キー。 グループ化ペインとデザイン画面の境界線を移動するには上方向キーと下方向キーを使用します。 レポート データ ペインとデザイン画面の境界線を移動するには右方向キーと左方向キーを使用します。|  
-|レポート ビルダーの領域内で移動する (リボン タブ内での移動など)。|Tab</localizedText>、<localizedText>Shift</localizedText> + <localizedText>Tab|  
+|レポート ビルダーの領域内で移動する (リボン タブ内での移動など)。|Tab、Shift + Tab|  
 |リボン タブ間を移動する。|右方向キー、左方向キー|  
 |ドロップダウン メニュー内を移動する。|任意の方向キー|  
-|デザイン画面でアイテムを選択する。|Tab</localizedText>、<localizedText>Shift</localizedText> + <localizedText>Tab|  
+|デザイン画面でアイテムを選択する。|Tab、Shift + Tab|  
 |デザイン画面で選択したアイテムを移動する。|任意の方向キー|  
-|デザイン画面で選択したアイテムを少しずつ移動する。|Ctrl</localizedText> + 方向キー|  
-|デザイン画面で選択したアイテムのサイズを変更する。|Shift&lt;/localizedText&gt; + 方向キー|  
-|デザイン画面で選択したアイテムのサイズを少しずつ変更する。|Ctrl</localizedText> + <localizedText>Shift</localizedText> + 方向キー|  
+|デザイン画面で選択したアイテムを少しずつ移動する。|Ctrl + 方向キー|  
+|デザイン画面で選択したアイテムのサイズを変更する。|Shift + 方向キー|  
+|デザイン画面で選択したアイテムのサイズを少しずつ変更する。|Ctrl + Shift + 方向キー|  
 |選択した複数の項目の端を合わせる。|Alt + H + A|  
 |レポートを実行します。|F5、Alt + H + R|  
 |デザイン モードに切り替える。|F8|  
@@ -84,14 +89,14 @@ caps.handback.revision: 20
 |線を挿入する。|Alt + I + N|  
 |四角形を挿入する。|Alt + I + E|  
 |サブレポートを挿入する。|Alt + I + S|  
-|レポート ヘッダーを挿入する。|Alt&lt;/localizedText&gt; + &lt;localizedText&gt;I&lt;/localizedText&gt; + &lt;localizedText&gt;H|  
-|レポート フッターを挿入する。|Alt&lt;/localizedText&gt; + &lt;localizedText&gt;I&lt;/localizedText&gt; + &lt;localizedText&gt;F|  
-|マップ ビューポートが選択されている場合に、マップ ビュー領域をパンする。|Ctrl</localizedText> + 方向キー|  
-|マップ ビューポートが選択されている場合に、マップ ビュー領域を拡大する。|Ctrl&lt;/localizedText&gt; + 正符号 (+) キー|  
-|マップ ビューポートが選択されている場合に、マップ ビュー領域を縮小する。|Ctrl&lt;/localizedText&gt; + 負符号 (-) キー|  
-|マップ ビューポートが選択されている場合に、マップ ビュー領域を高速でパンおよび拡大する。|Ctrl&lt;/localizedText&gt; + 左クリック|  
+|レポート ヘッダーを挿入する。|Alt + I + H|  
+|レポート フッターを挿入する。|Alt + I + F|  
+|マップ ビューポートが選択されている場合に、マップ ビュー領域をパンする。|Ctrl + 方向キー|  
+|マップ ビューポートが選択されている場合に、マップ ビュー領域を拡大する。|Ctrl + 正符号 (+) キー|  
+|マップ ビューポートが選択されている場合に、マップ ビュー領域を縮小する。|Ctrl + 負符号 (-) キー|  
+|マップ ビューポートが選択されている場合に、マップ ビュー領域を高速でパンおよび拡大する。|Ctrl + 左クリック|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server 2016 のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [レポート デザイン ビュー (レポート ビルダー)](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [用語集 (レポート ビルダー)](../../reporting-services/report-builder/glossary-report-builder.md)  

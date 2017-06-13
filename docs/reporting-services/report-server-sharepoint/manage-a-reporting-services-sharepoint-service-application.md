@@ -1,23 +1,28 @@
 ---
-title: "Manage a Reporting Services SharePoint Service Application | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Reporting Services SharePoint サービス アプリケーションの管理 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 caps.latest.revision: 18
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 18
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0930c8f5d3b0af4460c3deac2b8aa780e1f2568
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# Manage a Reporting Services SharePoint Service Application
+# <a name="manage-a-reporting-services-sharepoint-service-application"></a>Manage a Reporting Services SharePoint Service Application
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションは、SharePoint サーバーの全体管理で管理されます。 管理ページとプロパティ ページを使用して、サービス アプリケーションや一般的な管理タスクの構成を更新できます。  
   
  このトピックの内容は次のとおりです。  
@@ -36,14 +41,14 @@ caps.handback.revision: 18
   
 -   [サブスクリプションと警告の準備](#bkmk_provisionsubscriptions)  
   
-## サービス アプリケーションのプロパティ ページを開くには  
+## <a name="to-open-service-application-properties-page"></a>サービス アプリケーションのプロパティ ページを開くには  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションのプロパティ ページを開くには、次の手順を実行します。  
   
 1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]**をクリックします。  
   
 2.  サービス アプリケーションの名前の近くか、または **[種類]** 列をクリックして列全体を選択し、SharePoint リボンで **[プロパティ]** をクリックします。  
   
- サービス アプリケーション プロパティの詳細については、「[ 3: Reporting Services サービス アプリケーションの作成](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)」を参照してください。  
+ サービス アプリケーション プロパティの詳細については、「 [3: Reporting Services サービス アプリケーションの作成](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)」を参照してください。  
   
 ##  <a name="bkmk_openpages"></a> サービス アプリケーションの管理ページを開くには  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの管理ページを開くには、次の手順を実行します。  
@@ -90,10 +95,10 @@ caps.handback.revision: 18
   
 |設定|コメント|  
 |-------------|--------------|  
-|実行のログ記録を有効にする|既定値は TRUE です。<br /><br /> レポート サーバーでトレース ログを生成するかどうかと、ログの保持日数を指定します。 」を参照してください。 ログは、レポート サーバー コンピューターの \Microsoft SQL Server\MSSQL.n\ReportServer\Log フォルダーに格納されます。 サービスを再起動するたび、新しいログ ファイルが生成されます。 ログ ファイルの詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。|  
+|実行のログ記録を有効にする|既定値は TRUE です。<br /><br /> レポート サーバーでトレース ログを生成するかどうかと、ログの保持日数を指定します。 をクリックします。 ログは、レポート サーバー コンピューターの \Microsoft SQL Server\MSSQL.n\ReportServer\Log フォルダーに格納されます。 サービスを再起動するたび、新しいログ ファイルが生成されます。 ログ ファイルの詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。|  
 |実行ログの保持日数|既定の日数は 60 日です。|  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はすべて、SharePoint ULS ログをサポートしています。  詳細については、「[SharePoint トレース ログの Reporting Services イベントをオンにする &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)」を参照してください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はすべて、SharePoint ULS ログをサポートしています。  詳細については、「 [SharePoint トレース ログの Reporting Services イベントをオンにする (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ###  <a name="bkmk_security_settings_section"></a> セキュリティ設定  
   
@@ -109,7 +114,7 @@ caps.handback.revision: 18
 |設定|コメント|  
 |-------------|--------------|  
 |レポート ビルダーのダウンロードを有効にする|既定値は TRUE です。<br /><br /> レポート ビルダー アプリケーションのダウンロード ボタンをクライアントに表示するかどうかを指定します。|  
-|レポート ビルダーの起動 URL|レポート サーバーで既定のレポート ビルダー URL を使用しない場合に、カスタムの URL を指定します。 この設定は省略可能です。 この値を指定しなかった場合は、レポート ビルダーを起動する既定の URL が使用されます。 レポート ビルダー 3.0 を ClickOnce アプリケーションとして起動するには、「http://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application」と入力します。|  
+|レポート ビルダーの起動 URL|レポート サーバーで既定のレポート ビルダー URL を使用しない場合に、カスタムの URL を指定します。 この設定は省略可能です。 この値を指定しなかった場合は、レポート ビルダーを起動する既定の URL が使用されます。 クリックすると、レポート ビルダー 3.0 を起動する-アプリケーションは、次の値を入力してください: http://\<コンピューター名 >/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application です。|  
 |クライアントの印刷を有効にする|既定値は TRUE です。<br /><br /> ユーザーがクライアント側のコントロール (印刷オプションを提供します) をダウンロードできるかどうかを指定します。|  
 |セッション タイムアウトの編集|既定値は 7200 秒です。|  
 |セッション キャッシュ制限の編集|既定値は 5 です。|  
@@ -117,7 +122,7 @@ caps.handback.revision: 18
 ##  <a name="bkmk_managejobs"></a> ジョブの管理  
  レポート サブスクリプションおよびデータ ドリブン サブスクリプションによって作成されたジョブなど、実行中のジョブを表示および削除できます。 ページはサブスクリプションの管理には使用されるのではなく、サブスクリプションによってトリガーされるジョブです。 たとえば、1 時間に 1 回実行するようにスケジュールされているサブスクリプションは、 **[ジョブの管理]** ページに 1 時間に 1 回表示されるジョブを生成します。  
   
- ![実行中のジョブの管理](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "実行中のジョブの管理")  
+ ![実行中のジョブを管理](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "実行中のジョブの管理")  
   
 ##  <a name="bkmk_keymgt"></a> キー管理  
  次の表は、キー管理ページをまとめたものです。  
@@ -127,10 +132,10 @@ caps.handback.revision: 18
   
 |ページ|Description|  
 |----------|-----------------|  
-|暗号化キーのバックアップ|1) **[パスワード]** ボックスと **[パスワードの確認入力]** ボックスにパスワードを入力し、**[エクスポート]** をクリックします。 入力したパスワードがドメイン ポリシーの複雑さの要件を満たしていない場合は、警告が表示されます。<br /><br /> 2) キー ファイルを保存する場所を指定するよう求められます。 キー ファイルは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を実行しているコンピューターとは別のコンピューター上に保存することをお勧めします。 既定のファイル名は、サービス アプリケーションと同じ名前です。|  
+|暗号化キーのバックアップ|1) **[パスワード]** ボックスと **[パスワードの確認入力]** ボックスにパスワードを入力し、 **[エクスポート]**をクリックします。 入力したパスワードがドメイン ポリシーの複雑さの要件を満たしていない場合は、警告が表示されます。<br /><br /> 2) キー ファイルを保存する場所を指定するよう求められます。 キー ファイルは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を実行しているコンピューターとは別のコンピューター上に保存することをお勧めします。 既定のファイル名は、サービス アプリケーションと同じ名前です。|  
 |暗号化キーの復元|1) キー ファイルを入力するか、または **[ファイルの場所]** ボックスでファイルの場所を参照します。<br /><br /> 2) **[パスワード]** ボックスで、暗号化ファイルのバックアップに使用されたパスワードを入力します。<br /><br /> 3) **[OK]**をクリックします。|  
 |暗号化キーの変更|この操作を行うと、新しいキーが作成され、暗号化されたコンテンツが再暗号化されます。 コンテンツの量が多い場合は、この操作は数時間かかります。<br /><br /> 暗号化キーの変更操作が完了したら、新しいキーのバックアップを作成することをお勧めします。|  
-|削除された暗号化されたコンテンツ|削除されたコンテンツを復旧することはできません。<br /><br /> **\*\*重要:\*\*** 対称キーの削除と再作成の操作は、取り消したり元に戻したりすることはできません。 キーを削除または再作成すると、現在のインストールに重大な影響を及ぼす可能性があります。 対称キーを削除すると、その対称キーを使用して暗号化されている既存のデータも削除されます。 たとえば、外部のレポート データ ソースへの接続文字列、保存されている接続文字列、サブスクリプション情報の一部が削除されることがあります。|  
+|削除された暗号化されたコンテンツ|削除されたコンテンツを復旧することはできません。<br /><br /> **\*\* 重要: \*\*** 対称キーの削除と再作成の操作は、取り消したり元に戻したりすることはできません。 キーを削除または再作成すると、現在のインストールに重大な影響を及ぼす可能性があります。 対称キーを削除すると、その対称キーを使用して暗号化されている既存のデータも削除されます。 たとえば、外部のレポート データ ソースへの接続文字列、保存されている接続文字列、サブスクリプション情報の一部が削除されることがあります。|  
   
 ##  <a name="bkmk_executionaccount"></a> 実行アカウント  
  このページを使用すると、自動処理に使用するアカウントを構成できます。 このアカウントは、他に使用できる資格情報のソースがないという特殊な状況で使用されます。  
@@ -145,7 +150,7 @@ caps.handback.revision: 18
   
  任意の Windows ユーザー アカウントを使用できます。 最適な結果を得るには、読み取り権限とネットワーク ログオン権限のあるアカウントを選択し、他のコンピューターへの接続がサポートされるようにします。 アカウントには、レポートで使用する外部画像またはデータ ファイルに対する読み取り権限が必要です。 すべてのレポート データ ソースと外部画像がレポート サーバー コンピューターに格納されていない場合は、ローカル アカウントを指定しないでください。 アカウントは自動レポート処理専用に使用してください。  
   
- ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.png "PowerShell 関連コンテンツ")  
+ ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")  
   
  UEAccount プロパティを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの一覧を返す PowerShell コマンドの例を次に示します。  
   
@@ -153,14 +158,14 @@ caps.handback.revision: 18
 Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
 ```  
   
- 詳細については、「[Reporting Services SharePoint モード用の PowerShell コマンドレット](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)」をご覧ください。  
+ 詳細については、「 [Reporting Services SharePoint モード用の PowerShell コマンドレット](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)」をご覧ください。  
   
-### オプション  
+### <a name="options"></a>オプション  
  **[実行アカウントの指定]**  
  アカウントを指定します。  
   
  **アカウント**  
- Windows のドメイン ユーザー アカウントを入力します。 *\< ドメイン >\\< ユーザー アカウント \>* の形式を使用します。  
+ Windows のドメイン ユーザー アカウントを入力します。 この形式を使用: *\<ドメイン >\\< ユーザー アカウント\>*です。  
   
  **Password**  
  パスワードを入力します。  
@@ -171,7 +176,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 ##  <a name="bkmk_email"></a> 電子メールの設定  
  このページを使用すると、レポート サーバーからのレポート サーバー電子メール配信を有効にする簡易メール転送プロトコル (SMTP) の設定を指定できます。 レポート サーバーの電子メール配信拡張機能により、電子メール サブスクリプションを通じてレポートやレポート処理通知を配信できます。 レポート サーバーの電子メール配信拡張機能を使用するには、SMTP サーバーと、差出人フィールドに使用する電子メール アドレスが必要です。  
   
-### オプション  
+### <a name="options"></a>オプション  
  **[SMTP サーバーの使用]**  
  レポート サーバー電子メールが SMTP サーバーによってルーティングされるように指定します。  
   
@@ -184,7 +189,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 ##  <a name="bkmk_provisionsubscriptions"></a> サブスクリプションと警告の準備  
  このページは、SQL Server エージェントが実行中かどうかを確認したり、レポート サービスが SQL Server エージェントを使用するためのアクセス権を準備するために使用します。 SQL Server エージェントは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサブスクリプション、スケジュール、およびデータ警告に必要です。 [SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
-## プロキシの関連付け  
+## <a name="proxy-association"></a>プロキシの関連付け  
  Reporting Services サービス アプリケーションを作成した際に、Reporting Services サービス アプリケーションからのアクセス用に準備する Web アプリケーションを選択し、関連付けを行いました。 この関連付けを行わないか、または変更する場合は、次の手順を実行します。  
   
 1.  SharePoint サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの関連付けの構成]**をクリックします。  

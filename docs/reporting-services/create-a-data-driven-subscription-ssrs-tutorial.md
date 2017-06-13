@@ -1,28 +1,33 @@
 ---
-title: "データ ドリブン サブスクリプションの作成 (SSRS チュートリアル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "サブスクリプション [Reporting Services], チュートリアル"
-  - "チュートリアル [Reporting Services]"
-  - "データ ドリブン サブスクリプション"
+title: "データ ドリブン サブスクリプション (SSRS チュートリアル) を作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 05/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- subscriptions [Reporting Services], tutorials
+- walkthroughs [Reporting Services]
+- data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 caps.latest.revision: 50
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 50
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ca542c75d289b79284c5affeea5095ac032e1e0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)
+# <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)
 この [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] チュートリアルでは、データ ドリブン サブスクリプションを作成し、フィルター処理されたレポート出力を生成してファイル共有に保存する簡単な例の手順を示すことで、データ ドリブン サブスクリプションの概念を説明します。 
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のデータ ドリブン サブスクリプションを使用すると、動的なサブスクライバー データに基づいてレポートの配信をカスタマイズおよび自動化できます。 データ ドリブン サブスクリプションには次のような用途があります。  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 50
 -   定義済みの条件に基づく特定の受信者グループへのレポート配信。 たとえば、社内のすべての営業責任者に販売実績レポートを送信する場合など。
 + .xlsx や .pdf などのさまざまな形式のレポートの生成の自動化。  
   
-## 学習する内容  
+## <a name="what-you-will-learn"></a>学習する内容  
  このチュートリアルは、次の 3 つのレッスンで構成されています。  
  レッスン | コメント
  ------- | --------------
@@ -52,30 +57,32 @@ caps.handback.revision: 50
  
    ![ssrs_tutorial_datadriven_flow](../reporting-services/media/ssrs-tutorial-datadriven-flow.png) 
   
-## 必要条件  
+## <a name="requirements"></a>必要条件  
 通常、データ ドリブン サブスクリプションはレポート サーバー管理者が作成し、保守します。 データ ドリブン サブスクリプションを作成するには、クエリ作成の専門知識、サブスクライバー データを持つデータ ソースに関する知識、およびレポート サーバーへの高度なアクセス権が必要です。  
   
-このチュートリアルでは、チュートリアル「[基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)」で作成した *Sales Order* レポートと、サンプル データベース **AdventureWorks2014** のデータを使用します。  
+このチュートリアルでは、チュートリアル「 *基本的なテーブル レポートの作成 (SSRS チュートリアル)* 」で作成した [基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) レポートと、サンプル データベース **AdventureWorks2014**のデータを使用します。  
   
 このチュートリアルを使用するには、コンピューターに次のコンポーネントがインストールされている必要があります。  
   
--   データ ドリブン サブスクリプションをサポートするエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 詳細については、「[SQL Server 2016 のエディションとコンポーネント](../sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。  
+-   データ ドリブン サブスクリプションをサポートするエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 詳細については、「 [SQL Server 2016 のエディションとコンポーネント](../sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。  
   
 -   レポート サーバー (ネイティブ モードで実行)。 このチュートリアルで説明するユーザー インターフェイスは、ネイティブ モードのレポート サーバーに基づいています。 サブスクリプションは SharePoint モードのレポート サーバーでサポートされていますが、ユーザー インターフェイスはこのチュートリアルで説明されているものとは異なります。  
   
 -   SQL Server エージェント サービス (実行された状態)。  
   
--   パラメーターを含むレポート。 このチュートリアルでは、チュートリアル「[基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)」を使用して作成したサンプル レポート `Sales Orders` の使用を前提とします。  
+-   パラメーターを含むレポート。 このチュートリアルでは、チュートリアル「 `Sales Orders` 基本的なテーブル レポートの作成 (SSRS チュートリアル) [基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)のデータを使用します。  
   
 -   サンプル レポートにデータを提供する **AdventureWorks2014** サンプル データベース。  
   
--   サンプル レポートでのすべてのサブスクリプションを管理タスクを含む [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]ロールの割り当て。 データ ドリブン サブスクリプションを定義するには、この作業が必要です。 コンピューター管理者の場合は、ローカル管理者用の既定のロール割り当てで、データ ドリブン サブスクリプションの作成に必要な権限が与えられます。 詳細については、「 [Granting Permissions on a Native Mode Report Server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)」をご覧ください。  
+-   サンプル レポートでのすべてのサブスクリプションを管理タスクを含む [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ロールの割り当て。 データ ドリブン サブスクリプションを定義するには、この作業が必要です。 コンピューター管理者の場合は、ローカル管理者用の既定のロール割り当てで、データ ドリブン サブスクリプションの作成に必要な権限が与えられます。 詳細については、「 [Granting Permissions on a Native Mode Report Server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)」をご覧ください。  
   
 -   書き込み権限のある共有フォルダー。 共有フォルダーはネットワーク接続経由でアクセス可能になっている必要があります。  
   
 **このチュートリアルの推定所要時間:** 30 分。 基本的なレポートのチュートリアルを完了していない場合は追加で 30 分かかります。  
   
-## 参照  
-[データ ドリブン サブスクリプション](../reporting-services/subscriptions/data-driven-subscriptions.md)  
+## <a name="see-also"></a>参照  
+[Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  
+
+

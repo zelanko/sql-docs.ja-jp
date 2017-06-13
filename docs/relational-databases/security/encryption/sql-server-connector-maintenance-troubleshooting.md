@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7d93dd0a6eae5fead834526e86455717c6ed97e6
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: 0218298a95d1e7df242b3ca7cbae657effead719
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server コネクタのメンテナンスとトラブルシューティング
@@ -166,7 +166,7 @@ Key Vault は定期的にバックアップする必要があります。 資格
  Key Vault 内の非対称キーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化キーを保護するために使用されます。 資格情報コンテナーから出て行くのは非対称キーの公開部分だけで、秘密の部分がコンテナーからエクスポートされることはありません。 非対称キーを使用するすべての暗号化操作は、Azure Key Vault サービス内で実行され、このサービスのセキュリティによって保護されます。  
   
  **キーの URI とは何ですか。**  
- Azure Key Vault 内のすべてのキーに、Uniform Resource Identifier (URI) が割り当てられます。アプリケーションからこの URI を使用してキーを参照できます。 常に最新のバージョンを取得するには **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey** の形式、特定のバージョンを取得するには **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87** の形式を使用します。  
+ Azure Key Vault 内のすべてのキーに、Uniform Resource Identifier (URI) が割り当てられます。アプリケーションからこの URI を使用してキーを参照できます。 形式を使用して`https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey`を現在のバージョンを取得し、形式を使用して`https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87`を特定のバージョンを取得します。  
   
 ### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>構成について [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 

@@ -1,24 +1,31 @@
 ---
-title: "ドキュメント マップの作成 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ドキュメント マップ (レポート ビルダーおよび SSRS) を作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 3abd0b8ce2b463cf793b6b75c908a69308cb68a8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# ドキュメント マップの作成 (レポート ビルダーおよび SSRS)
-  ドキュメント マップは、表示レポート内のレポート アイテムへのナビゲーション リンクのセットを提供します。 ドキュメント マップを含むレポートを表示すると、別のサイド ペインがレポートの横に表示されます。 ドキュメント マップ内のリンクをクリックすると、そのアイテムが表示されているレポート ページに移動できます。 レポート セクションとグループは、リンクの階層として配置されます。 ドキュメント マップ内のアイテムをクリックすると、レポートが更新され、ドキュメント マップのアイテムに対応したレポートの領域が表示されます。  
+
+# <a name="create-a-document-map-report-builder-and-ssrs"></a>ドキュメント マップの作成 (レポート ビルダーおよび SSRS)
+
+ドキュメント マップは、表示レポート内のレポート アイテムへのナビゲーション リンクのセットを提供します。 ドキュメント マップを含むレポートを表示すると、別のサイド ペインがレポートの横に表示されます。 ドキュメント マップ内のリンクをクリックすると、そのアイテムが表示されているレポート ページに移動できます。 レポート セクションとグループは、リンクの階層として配置されます。 ドキュメント マップ内のアイテムをクリックすると、レポートが更新され、ドキュメント マップのアイテムに対応したレポートの領域が表示されます。  
   
  ドキュメント マップにリンクを追加するには、レポート アイテムの **DocumentMapLabel** プロパティを、作成したテキストに設定するか、またはドキュメント マップに表示するテキストになる式に設定します。 テーブル グループやマトリックス グループの一意の値を、ドキュメント マップに追加することもできます。 たとえば、色別に分けられたグループの場合、それぞれの色は、その色のグループ インスタンスが表示されているレポート ページへのリンクとなります。  
   
@@ -38,10 +45,10 @@ caps.handback.revision: 13
   
 -   Atom、TIFF、XML、および CSV では、ドキュメント マップは無視されます。  
   
- 詳細については、「[さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)」を参照してください。  
+ 詳細については、「[さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)」を参照してください。  
   
 ##  <a name="AddRptItemToMap"></a>   
-#### ドキュメント マップにレポート アイテムを追加するには  
+#### <a name="to-add-a-report-item-to-a-document-map"></a>ドキュメント マップにレポート アイテムを追加するには  
   
 1.  デザイン ビューで、テーブル、マトリックス、ゲージなど、ドキュメント マップに追加するレポート アイテムを選択します。 プロパティ ペインにレポート アイテム プロパティが表示されます。  
   
@@ -51,7 +58,7 @@ caps.handback.revision: 13
 2.  プロパティ ペインで、ドキュメント マップに表示するテキストを **DocumentMapLabel** プロパティに入力するか、ラベルになる式を入力します。 たとえば、「 **Sales Chart**」のように入力します。  
   
     > [!NOTE]  
-    >  [プロパティ] ペインが表示されない場合は、**[表示]** タブの **[表示/非表示]** グループで、**[プロパティ]** を選択します。  
+    >  [プロパティ] ペインが表示されない場合は、 **[表示]** タブの **[表示/非表示]** グループで、 **[プロパティ]**を選択します。  
   
 3.  ドキュメント マップに表示するレポート アイテムごとに手順 1. と手順 2. を繰り返します。  
   
@@ -59,11 +66,11 @@ caps.handback.revision: 13
 
   
 ##  <a name="AddUniqueValuesToMap"></a>   
-#### ドキュメント マップに一意のグループ値を追加するには  
+#### <a name="to-add-unique-group-values-to-a-document-map"></a>ドキュメント マップに一意のグループ値を追加するには  
   
 1.  デザイン ビューで、ドキュメント マップに表示するグループを格納するテーブル、マトリックス、または一覧を選択します。 グループ化ペインに行グループと列グループが表示されます。  
   
-2.  行グループ ペインで、グループを右クリックし、**[グループの編集]** をクリックします。 **[Tablix グループのプロパティ]** ダイアログ ボックスの **[全般]** ページが開きます。  
+2.  行グループ ペインで、グループを右クリックし、 **[グループの編集]**をクリックします。 **[Tablix グループのプロパティ]** ダイアログ ボックスの **[全般]** ページが開きます。  
   
 3.  **[詳細設定]**をクリックします。  
   
@@ -76,7 +83,7 @@ caps.handback.revision: 13
 7.  **[実行]**をクリックします。 レポートが実行され、グループ値がドキュメント マップに表示されます。 任意のリンクをクリックすると、このレポート アイテムが配置されたレポート ページに移動します。  
   
 ##  <a name="HideMapWhenViewRpt"></a>   
-#### レポートを表示する場合にドキュメント マップを非表示にするには  
+#### <a name="to-hide-the-document-map-when-you-view-a-report"></a>レポートを表示する場合にドキュメント マップを非表示にするには  
   
 1.  レポート マネージャーで、ドキュメント マップのあるレポートを参照します。  
   
@@ -106,13 +113,12 @@ caps.handback.revision: 13
   
      この URL を使用するには、コピーし、すべての改行を削除します。  
   
-4.  レポート マネージャーで URL を貼り付け、&lt;localizedText&gt;Enter&lt;/localizedText&gt; キーを押します。 レポートが実行され、ドキュメント マップが非表示になります。  
+4.  レポート マネージャーで URL を貼り付け、Enter キーを押します。 レポートが実行され、ドキュメント マップが非表示になります。  
   
 > [!NOTE]  
->  サンプル レポートをダウンロードする方法の詳細については、「 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][レポート ビルダーおよびレポート デザイナーのサンプル レポート](http://go.microsoft.com/fwlink/?LinkId=198283)」を参照してください。  
+>  サンプル レポートのダウンロードの詳細については、次を参照してください。[レポート ビルダーおよびレポート デザイナーのサンプル レポート](http://go.microsoft.com/fwlink/?LinkId=198283)です。  
 >   
 >  詳細については、 [Reporting Services のドキュメント](http://go.microsoft.com/fwlink/?linkid=121312) (SQL Server オンライン ブック) の「URL アクセス」を参照してください。  
-  
 
-  
-  
+
+他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

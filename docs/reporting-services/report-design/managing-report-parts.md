@@ -1,50 +1,55 @@
 ---
-title: "レポート パーツの管理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "レポート パーツの管理 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 310cad57050dba44c5303b78ea33e5b3f42d309c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# レポート パーツの管理
+# <a name="managing-report-parts"></a>レポート パーツの管理
   ページネーションのあるレポート内のレポート パーツは、複数のユーザーが複数のレポート内で再利用できます。 ユーザーはサーバー上のレポート パーツを検索し、それらをレポートに追加できます。  また、ユーザーはサーバー上のレポート パーツの更新について通知を受け、レポート パーツの新しいバージョンを再パブリッシュすることもできます。 これらのレポート作成アクションは、Reporting Services のセキュリティ権限によって管理および制御されます。  このトピックでは、既にサーバー上に配置されているレポート パーツのプロパティと動作について説明します。  
   
-## レポート パーツの管理  
+## <a name="managing-report-parts"></a>レポート パーツの管理  
  レポート パーツを管理するには、ネイティブ モードのレポート サーバーの場合は [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルを使用し、SharePoint 統合モードのレポート サーバーの場合はアプリケーション ページを使用します。  
   
-### サーバー側における操作と検索  
- レポート パーツは、ネイティブ モードまたは SharePoint 統合モードのレポート サーバーにパブリッシュできます。 ユーザーは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レポート ビルダーなどのレポート作成アプリケーションでレポート パーツ ギャラリー機能を使用して、レポート パーツを検索し、それらを各自のレポートに追加できます。 ユーザーがレポート パーツを検索する場合は、レポート サーバーがインストールされたモードにかかわらず、レポート サーバー カタログでパーツが検索されます。  
+### <a name="server-side-interaction-and-search"></a>サーバー側における操作と検索  
+ レポート パーツは、ネイティブ モードまたは SharePoint 統合モードのレポート サーバーにパブリッシュできます。 ユーザーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レポート ビルダーなどのレポート作成アプリケーションでレポート パーツ ギャラリー機能を使用して、レポート パーツを検索し、それらを各自のレポートに追加できます。 ユーザーがレポート パーツを検索する場合は、レポート サーバーがインストールされたモードにかかわらず、レポート サーバー カタログでパーツが検索されます。  
   
  レポート ビルダーなどのレポート作成アプリケーションから SharePoint 統合モードのレポート サーバーにレポート パーツがパブリッシュされると、レポート サーバー カタログも更新されて、ギャラリーから検索するときに新しいレポート パーツまたは更新されたレポート パーツが正確に反映されるようになります。  
   
-#### SharePoint フォルダーへのレポート パーツの直接アップロード  
+#### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>SharePoint フォルダーへのレポート パーツの直接アップロード  
  レポート パーツが、レポート作成アプリケーションからパブリッシュされるのではなく、SharePoint ドキュメント フォルダーに直接アップロードされた場合は、レポート サーバー カタログは更新されません。 レポート パーツ ギャラリーから検索しても、アップロードされたレポート パーツは見つかりません。 SharePoint フォルダーとレポート サーバー カタログの同期を維持するには、SharePoint サーバー上で [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ファイル同期機能をアクティブ化します。 詳しくは、「 [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)」をご覧ください。  
   
  ファイルは、GetProperties や SetProperties などの、一部の Reporting Services 管理 API を呼び出すことによって同期することもできます。  
   
-### レポート パーツの整理と移動  
+### <a name="organizing-and-moving-report-parts"></a>レポート パーツの整理と移動  
  レポート パーツ、共有データセット、共有データ ソースをチームがどのように使用および整理するかについて事前に検討して計画する必要があります。 後からレポート パーツを移動することもできますが、問題が起きる可能性があります。  
   
-#### ネイティブ モードのレポート サーバー  
+#### <a name="native-mode-report-server"></a>ネイティブ モードのレポート サーバー  
  ネイティブ モードのレポート サーバー上のレポート パーツを同一サーバー上の他のフォルダーに移動しても、引き続きレポート作成アプリケーションからレポート パーツの更新を検索したりダウンロードしたりできます。 これは、サーバーが一意の ComponentID によって管理されているためです。 ただし、ユーザーが権限を持たないフォルダーにレポート パーツが移動された場合、そのユーザーはレポート パーツを検索できなくなり、レポート パーツが更新された場合でもレポートへの通知は行われなくなります。  
   
-#### SharePoint 統合モードのレポート サーバー  
+#### <a name="report-server-in-sharepoint-integrated-mode"></a>SharePoint 統合モードのレポート サーバー  
  レポート パーツを異なるドキュメント ライブラリやフォルダーに移動すると、レポート パーツを SharePoint サーバーに直接アップロードした場合と同様、レポート サーバー カタログは同期されません。 この問題を回避するには、SharePoint サーバー上でレポート サーバー ファイル同期機能をアクティブ化する必要があります。  
   
  ただし、サブフォルダーへの移動は例外です。 検索では常にサブフォルダーも検索されるため、手動でレポート パーツをサブフォルダーに移動しても、レポート ギャラリーからレポート パーツを検索することができます。 また、レポート パーツ ギャラリーからの検索でも検出されます。  
   
-### レポート サーバー カタログのプロパティ  
+### <a name="report-server-catalog-properties"></a>レポート サーバー カタログのプロパティ  
  次の表では、既存のレポート サーバー カタログのフィールドとレポート パーツとの関係、およびレポート パーツのカタログに追加された新規フィールドについて説明します。 これらは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータル、SharePoint ライブラリ、およびレポート ビルダーなどのレポート作成アプリケーションで公開されます。  
   
  (*) は、このリリースでの新規フィールドを示しています。  
@@ -60,10 +65,10 @@ caps.handback.revision: 8
 |SubType (*)|SubType は検索するレポート パーツの種類を示す "Tablix" や "Chart" などの文字列です。|可|  
 |ComponentID (*)|ComponentID はレポート パーツの一意の識別子です。 これは、カタログに新たに追加されたフィールドであり、サーバー側、およびレポート ビルダーなどのレポート作成アプリケーションの両方で表示されます。<br /><br /> このフィールドは、レポート パーツの更新がないかどうかをサーバーでチェックする場合に、クライアント アプリケーションで使用されます。 クライアント アプリケーションは、現在のクライアント側レポートにある ComponentID をサーバーで検索します。 ComponentID が一致すると、ModifiedDate がレポート アイテムのクライアント側 SyncDate と比較されます。|N0|  
   
-## レポート パーツへのアクセスの制御  
+## <a name="controlling-access-to-report-parts"></a>レポート パーツへのアクセスの制御  
  次の表では、既定のロールの割り当て、および各割り当てにおいてどの操作を実行できるかについて説明します。 ロールの割り当ての名前は、使用するレポート サーバーの種類に応じて異なります。  
   
-### ネイティブ モードのサーバー  
+### <a name="server-in-native-mode"></a>ネイティブ モードのサーバー  
   
 |アクション|ロール|  
 |-------------|-----------|  
@@ -71,7 +76,7 @@ caps.handback.revision: 8
 |レポート パーツの追加、削除、およびダウンロード|パブリッシャー|  
 |検索および再利用|ブラウザー<br /><br /> レポート ビルダー|  
   
-### SharePoint 統合モードのサーバー  
+### <a name="server-in-sharepoint-integrated-mode"></a>SharePoint 統合モードのサーバー  
   
 |アクション|ロール|  
 |-------------|----------|  
@@ -79,7 +84,7 @@ caps.handback.revision: 8
 |アイテム プロパティの追加、削除、編集、およびレポート パーツのダウンロード|デザイン<br /><br /> 投稿|  
 |検索および再利用|読み取り<br /><br /> 表示のみ|  
   
-### セキュリティに関する考慮事項  
+### <a name="security-considerations"></a>セキュリティに関する考慮事項  
   
 -   レポート パーツ定義をレポート内で再利用すると、一意の ComponentID およびレポート パーツ定義全体がレポート定義にコピーされます。 サーバー上でレポート パーツが更新された場合、ユーザーは更新されたレポート パーツをレポートにダウンロードできます。 更新されたものもレポート パーツの完全なコピーであり、これによってレポート内にある既存のバージョンのレポート パーツが置き換えられます。  
   
@@ -88,10 +93,10 @@ caps.handback.revision: 8
   
 -   レポート パーツでは、既存のアイテムの種類である "リソース" と同じ権限ポリシーが使用されます。 フォルダー内では、セキュリティ継承の観点からは、従来のリソース アイテムとレポート パーツとの区別はありません。 レポート パーツは、同じフォルダー内にある画像と同じ権限ポリシーを継承します。 この区別が必要な場合は、レポート パーツに対してアイテム レベルのセキュリティを構成できます。 または、適切な権限が構成されている別々のフォルダーにレポート パーツを保存することができます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レポート ビルダーのレポート パーツおよびデータセット](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [レポート パーツのトラブルシューティング (レポート ビルダーおよび SSRS)](http://msdn.microsoft.com/ja-jp/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [レポート パーツのトラブルシューティング (レポート ビルダーおよび SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [レポート デザイナーでのレポート パーツ (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   

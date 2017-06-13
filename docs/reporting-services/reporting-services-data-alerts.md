@@ -1,30 +1,37 @@
 ---
-title: "Reporting Services Data Alerts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Reporting Services のデータ警告 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 05/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 caps.latest.revision: 33
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 33
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 86cf02b246cc8ca11e7ed490cfb6082c2c6c7760
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services Data Alerts
+# <a name="reporting-services-data-alerts"></a>Reporting Services Data Alerts
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の "データ警告" は、関心のある、または重要なレポート データを適切なタイミングで把握できるよう補助する、データ駆動型の警告ソリューションです。 データ警告を使用することで、情報を探し出す必要がなくなり、情報が自動的に通知されるようになります。  
   
  データ警告メッセージは電子メールで送信されます。 情報の重要性に応じて、メッセージの送信頻度を選択したり、結果が変更された場合にのみメッセージが送信されるようにすることができます。 複数の電子メール受信者を指定して、この方法で他のユーザーに通知し、効率性とコラボレーションを強化することができます。  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint モード|  
+
+> [!NOTE]
+> SQL Server 2016 より後に、SharePoint と reporting Services の統合を使用できなくします。
   
 ##  <a name="AlertingWF"></a> データ警告のアーキテクチャとワークフロー  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] データ警告は、大きく次の機能に分けることができます。  
@@ -47,7 +54,7 @@ caps.handback.revision: 33
   
  ![Reporting Services 警告内のワークフロー](../reporting-services/media/rs-alertingworkflow.gif "Reporting Services 警告内のワークフロー")  
   
-### データ警告によってサポートされるレポート  
+### <a name="reports-supported-by-data-alerts"></a>データ警告によってサポートされるレポート  
  データ警告は、レポート定義言語 (RDL) で記述され、レポート デザイナーまたはレポート ビルダーで作成された、あらゆる種類の業務用レポートに対して作成できます。 データ領域 (テーブルやグラフなど) を含んだレポート、サブレポートを含んだレポート、さらには、複数のパラレルな列グループと入れ子になったデータ領域を含んだ複雑なレポートがサポートされます。 要件は、レポートに任意の種類のデータ領域が少なくとも 1 つ含まれていることと、レポート データ ソースが保存済みの資格情報を使用するか、または資格情報を使用しないように構成されていることだけです。 データ領域がないレポートに対しては警告を作成できません。  
   
  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]で作成されたレポートに対してデータ警告を作成することはできません。  
@@ -62,29 +69,29 @@ caps.handback.revision: 33
   
 -   [レポート サーバーでの認証](../reporting-services/security/authentication-with-the-report-server.md)  
   
-### レポートの実行  
+### <a name="run-reports"></a>レポートの実行  
  データ警告定義を作成する最初の手順は、SharePoint ライブラリ内にある目的のレポートの場所を特定し、レポートを実行することです。 レポートを実行するとき、そこにデータがないと、その時点でそのレポートについての警告を作成することはできません。  
   
  レポートがパラメーター化されている場合は、レポートの実行時に使用するパラメーター値を指定します。 パラメーター値は、レポートに対して作成するデータ警告定義内に保存されます。 これらの値は、レポートがデータ警告定義の処理の 1 つの手順として再実行される際に使用されます。 パラメーター値を変更する場合は、それらのパラメーター値を使用してレポートを再実行し、そのバージョンのレポートに対する警告定義を作成する必要があります。  
   
-### データ警告定義の作成  
+### <a name="create-data-alert-definitions"></a>データ警告定義の作成  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のデータ警告機能には、データ警告定義を作成するためのデータ警告デザイナーが用意されています。  
   
  データ警告定義を作成するには、レポートを実行し、SharePoint レポート ビューアーの **[アクション]** メニューからデータ警告デザイナーを開きます。 レポートのデータ フィードが生成され、データ警告デザイナーのデータ プレビュー テーブルにデータ フィードの先頭 100 行が表示されます。 レポートから取得されたすべてのデータ フィードは、データ警告デザイナーで警告の定義を行っている間キャッシュされます。 このキャッシュによって、複数のデータ フィードをすばやく切り替えることができます。 データ警告デザイナーで警告の定義を再度開くと、データ フィードが最新の情報に更新されます。  
   
  データ警告定義は、データ警告メッセージをトリガーするためにレポート データが満たす必要のあるルールと句、警告メッセージの送信頻度を定義するスケジュール、警告メッセージの送信開始/終了日 (オプション)、警告メッセージに含める情報 (件名行や説明など)、およびメッセージの受信者で構成されます。 作成した警告の定義は、SQL Server 警告データベースに保存します。  
   
-### データ警告定義と警告メタデータの保存  
+### <a name="save-data-alert-definitions-and-alerting-metadata"></a>データ警告定義と警告メタデータの保存  
  SharePoint モードで [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] をインストールすると、SQL Server 警告データベースが自動的に作成されます。  
   
- データ警告定義と警告メタデータは、警告データベースに保存されます。 このデータベースの既定の名前は ReportingServices\<GUID>_Alerting です。  
+ データ警告定義と警告メタデータは、警告データベースに保存されます。 既定では、この名前は ReportingServices\<GUID > _Alerting です。  
   
  データ警告定義を保存すると、警告定義のための SQL Server エージェント ジョブが自動的に作成されます。 このジョブには、ジョブ スケジュールが含まれます。 このスケジュールは、警告定義で定義した定期的なパターンに基づくものです。 ジョブを実行すると、データ警告定義の処理が開始されます。  
   
-### データ警告定義の処理  
+### <a name="process-data-alert-definitions"></a>データ警告定義の処理  
  SQL Server エージェント ジョブのスケジュールが警告定義の処理を開始すると、レポートが実行されてレポート データ フィードが更新されます。 警告サービスは、データ フィードを読み取り、そのデータ値に対し、データ警告定義によって指定されたルールを適用します。 ルールに合致するデータ値が 1 つでもあった場合は、データ警告インスタンスが作成され、警告結果を含むデータ警告メッセージがすべての受信者に電子メールで送信されます。 結果には、警告インスタンスの作成時点ですべてのルールを満たしていたレポート データの行が含まれます。 同じ結果を含む警告メッセージが複数生成されるのを防ぎたい場合は、結果が変更された場合にのみメッセージが送信されるように指定することもできます。 この場合、警告インスタンスは作成されて警告データベースに保存されますが、警告メッセージは生成されません。 エラーが発生した場合は、やはり警告インスタンスが警告データベースに保存され、エラーの詳細情報を含んだ警告メッセージが受信者に送信されます。 後の「診断とログ」のセクションでは、ログ記録とトラブルシューティングについてより詳しく説明しています。  
   
-### データ警告メッセージの送信  
+### <a name="send-data-alert-messages"></a>データ警告メッセージの送信  
  データ警告メッセージは電子メールで送信されます。  
   
  **"差出人"** 行には、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の電子メール配信構成によって指定された値が表示されます。 **"宛先"** 行には、データ警告デザイナーで警告を作成するときに指定した一連の受信者が表示されます。  
@@ -112,14 +119,14 @@ caps.handback.revision: 33
 ##  <a name="InstallAlerting"></a> データ警告のインストール  
  データ警告機能は、SharePoint モードで [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] がインストールされている場合にのみ使用できます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールすると、データ警告定義および警告メタデータを格納する警告データベースと、警告を管理するための 2 つの SharePoint ページとがセットアップによって自動的に作成され、SharePoint サイトにデータ警告デザイナーが追加されます。 警告機能に関して、インストール中に設定する特別な手順やオプションはありません。  
   
- SharePoint モードの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のインストール ([!INCLUDE[ssSQL11](../includes/sssql11-md.md)] で新たに導入された [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共有サービスや、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能を使用する前に作成および構成する必要のある [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションを含む) に関する詳細については、MSDN ライブラリの「[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](http://msdn.microsoft.com/ja-jp/47efa72e-1735-4387-8485-f8994fb08c8c)」を参照してください。  
+ SharePoint モードの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のインストール ( [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] で新たに導入された [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 共有サービスや、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能を使用する前に作成および構成する必要のある [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションを含む) に関する詳細については、MSDN ライブラリの「 [SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c) 」を参照してください。  
   
- このトピックの冒頭の図に示したように、データ警告には SQL Server エージェント ジョブが使用されます。 このジョブを作成するには、SQL Server エージェントが実行されている必要があります。 SQL Server エージェントは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]をインストールした際に、自動的に開始されるよう構成されている可能性があります。 そのように構成されていない場合は、SQL Server エージェントを手動で開始できます。 詳細については、「[SQL Server エージェントの構成](../ssms/agent/configure-sql-server-agent.md)」および「[データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md)」を参照してください。  
+ このトピックの冒頭の図に示したように、データ警告には SQL Server エージェント ジョブが使用されます。 このジョブを作成するには、SQL Server エージェントが実行されている必要があります。 SQL Server エージェントは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]をインストールした際に、自動的に開始されるよう構成されている可能性があります。 そのように構成されていない場合は、SQL Server エージェントを手動で開始できます。 詳細については、「 [SQL Server エージェントの構成](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) 」および「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」を参照してください。  
   
  SharePoint サーバーの全体管理の **[サブスクリプションと警告の準備]** ページでは、SQL Server エージェントが実行されているかどうかを確認し、SQL Server エージェントへのアクセス権を付与するために実行するカスタムの [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプトを作成およびダウンロードできます。 また、PowerShell を使用して [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプトを生成することもできます。 詳細については、「 [Provision Subscriptions and Alerts for SSRS Service Applications](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)」を参照してください。  
   
 ##  <a name="ConfigAlert"></a> データ警告の構成  
- [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降では、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールする場合は必ず、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能 (データ警告を含む) の設定が、レポート サーバー構成ファイル (rsreportserver.config) と SharePoint 構成データベースの間で分散されます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]のインストールおよび構成の 1 つの手順としてサービス アプリケーションを作成すると、SharePoint 構成データベースが自動的に作成されます。 詳細については、「[RsReportServer.config 構成ファイル](../reporting-services/report-server/rsreportserver-config-configuration-file.md)」および「[Reporting Services 構成ファイル](../reporting-services/report-server/reporting-services-configuration-files.md)」を参照してください。  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降では、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールする場合は必ず、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能 (データ警告を含む) の設定が、レポート サーバー構成ファイル (rsreportserver.config) と SharePoint 構成データベースの間で分散されます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]のインストールおよび構成の 1 つの手順としてサービス アプリケーションを作成すると、SharePoint 構成データベースが自動的に作成されます。 詳細については、「 [RsReportServer.config 構成ファイル](../reporting-services/report-server/rsreportserver-config-configuration-file.md) 」および「 [Reporting Services 構成ファイル](../reporting-services/report-server/reporting-services-configuration-files.md)」を参照してください。  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] データ警告の設定には、警告データおよびメタデータのクリーンアップ間隔と、データ警告メッセージを電子メールで送信する際の再試行回数が含まれます。 構成ファイルと構成データベースを更新して、データ警告設定に異なる値を使用することもできます。  
   
@@ -138,7 +145,7 @@ caps.handback.revision: 33
   
  既定では、MaxRetries と SecondsBeforeRetry の設定は、データ警告をトリガーするすべてのイベントに適用されます。 再試行の実行と遅延をより細かく制御したい場合は、異なる MaxRetries 値と SecondsBeforeRetry 値を指定するすべてのイベント ハンドラーに対して要素を追加できます。  
   
-### イベント ハンドラーと再試行  
+### <a name="event-handlers-and-retry"></a>イベント ハンドラーと再試行  
  イベント ハンドラーには次のものがあります。  
   
 |イベント ハンドラー|Description|  
@@ -197,7 +204,7 @@ caps.handback.revision: 33
   
 -   [複数のレポートからのデータ フィードの生成 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
--   [SharePoint サイト上のレポート サーバー アイテムに対する権限の設定 &#40;Reporting Services の SharePoint 統合モード&#41;](../reporting-services/security/set permissions for report server items on a sharepoint site.md)  
+-   [SharePoint サイト上のレポート サーバー アイテムに対する権限の設定 &#40;Reporting Services の SharePoint 統合モード&#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のデータ警告は、インフォメーション ワーカーと警告管理者という 2 つの権限レベルをサポートします。 次の表は、関連する SharePoint 権限とユーザー タスクの一覧です。  
   
@@ -209,7 +216,7 @@ caps.handback.revision: 33
 ##  <a name="DiagnosticsLogging"></a> 診断とログ  
  データ警告では、インフォメーション ワーカーおよび管理者が、さまざまな方法で警告を追跡し、警告に失敗した理由を特定することができます。また、管理者は、警告メッセージがだれに送信され、警告インスタンスがいくつ送信されたかなどを、ログを使用して把握できます。  
   
-### データ警告マネージャー  
+### <a name="data-alert-manager"></a>データ警告マネージャー  
  失敗した理由をインフォメーション ワーカーと警告管理者が把握しやすいように、データ警告マネージャーには、警告の定義とエラー情報が一覧表示されます。 エラーの一般的な理由は、次のとおりです。  
   
 -   レポート データ フィードが変更され、データ警告定義のルールに使用されていた列が、現在はデータ フィードに存在しない。  
@@ -218,12 +225,12 @@ caps.handback.revision: 33
   
 -   基になるデータ ソースのデータ型が変更され、警告の定義が無効になった。  
   
-### ログ  
+### <a name="logs"></a>ログ  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、データ警告定義の処理時に実行されるレポートや、作成されるデータ警告インスタンスの詳細を把握するのに役立つ、多数のログが提供されます。 特によく使用されるログは、警告実行ログ、レポート サーバー実行ログ、およびレポート サーバー トレース ログの 3 つです。  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の他のログについては、「[Reporting Services のログ ファイルとソース](../reporting-services/report-server/reporting-services-log-files-and-sources.md)」を参照してください。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の他のログについては、「 [Reporting Services のログ ファイルとソース](../reporting-services/report-server/reporting-services-log-files-and-sources.md)」を参照してください。  
   
-#### 警告実行ログ  
+#### <a name="alerting-execution-log"></a>警告実行ログ  
  警告機能のランタイム サービスは、警告データベースの ExecutionLogView テーブルにエントリを書き込みます。 このテーブルに対してクエリを実行するか、次のストアド プロシージャを実行すると、警告データベースに保存されたデータ警告に関して、より詳細な診断情報を取得できます。  
   
 -   ReadAlertData  
@@ -242,12 +249,12 @@ caps.handback.revision: 33
   
 -   ReadSentAlerts  
   
- SQL エージェントを使用すると、ストアド プロシージャをスケジュールに従って実行することができます。 詳しくは、「 [SQL Server Agent](../ssms/agent/sql-server-agent.md)」をご覧ください。  
+ SQL エージェントを使用すると、ストアド プロシージャをスケジュールに従って実行することができます。 詳しくは、「 [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)」をご覧ください。  
   
-#### レポート サーバー実行ログ  
- レポートは、データ警告定義の作成対象であるデータ フィードを生成するために実行されます。 レポート サーバー データベース内のレポート サーバー実行ログは、レポートが実行されるたびに情報を取得します。 データベース内の ExecutionLog2 ビューに対してクエリを実行し、詳細な情報を取得することもできます。 詳細については、「[レポート サーバー実行ログと ExecutionLog3 ビュー](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)」を参照してください。  
+#### <a name="report-server-execution-log"></a>レポート サーバー実行ログ  
+ レポートは、データ警告定義の作成対象であるデータ フィードを生成するために実行されます。 レポート サーバー データベース内のレポート サーバー実行ログは、レポートが実行されるたびに情報を取得します。 データベース内の ExecutionLog2 ビューに対してクエリを実行し、詳細な情報を取得することもできます。 詳細については、「 [レポート サーバー実行ログと ExecutionLog3 ビュー](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)」を参照してください。  
   
-#### レポート サーバー トレース ログ  
+#### <a name="report-server-trace-log"></a>レポート サーバー トレース ログ  
  レポート サーバーのトレース ログには、レポート サーバー Web サービスおよびバックグラウンド処理によって実行された操作を含め、レポート サーバー サービスの操作に関するきわめて詳細な情報が記録されます。 トレース ログ情報は、レポート サーバーを含むアプリケーションをデバッグしている場合、またはイベント ログや実行ログに書き込まれた特定の問題を調査している場合に役立ちます。 詳細については、「 [Report Server Service Trace Log](../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。  
   
 ##  <a name="PerformanceCounters"></a> パフォーマンス カウンター  
@@ -264,7 +271,7 @@ caps.handback.revision: 33
 |GenerateAlert|Alerting: events processed - GenerateAlert|  
 |DeliverAlert|Alerting: events processed - DeliverAlert|  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、その他の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能用のパフォーマンス カウンターも用意されています。 詳細については、「[Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects](../reporting-services/report-server/performance counters - reportserver service, performance objects.md)」(ReportServer:Service と ReportServerSharePoint:Service パフォーマンス オブジェクトのパフォーマンス カウンター)、「[MSRS 2011 Web Service と MSRS 2011 Windows Service パフォーマンス オブジェクトのパフォーマンス カウンター &#40;ネイティブ モード&#41;](../reporting-services/report-server/performance counters msrs 2011 web service, performance objects.md)」、「[Performance Counters for the MSRS 2011 Web Service SharePoint Mode and MSRS 2011 Windows Service SharePoint Mode Performance Objects &#40;SharePoint Mode&#41;](../reporting-services/report-server/performance counters msrs 2011 sharepoint mode performance objects.md)」(MSRS 2011 Web Service SharePoint Mode と MSRS 2011 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンター &#40;SharePoint モード&#41;) を参照してください。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、その他の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能用のパフォーマンス カウンターも用意されています。 詳細については、「[Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects](../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)」(ReportServer:Service と ReportServerSharePoint:Service パフォーマンス オブジェクトのパフォーマンス カウンター)、「[MSRS 2011 Web Service と MSRS 2011 Windows Service パフォーマンス オブジェクトのパフォーマンス カウンター &#40;ネイティブ モード&#41;](../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)」、「[Performance Counters for the MSRS 2011 Web Service SharePoint Mode and MSRS 2011 Windows Service SharePoint Mode Performance Objects &#40;SharePoint Mode&#41;](../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)」(MSRS 2011 Web Service SharePoint Mode と MSRS 2011 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンター &#40;SharePoint モード&#41;) を参照してください。  
   
 ##  <a name="SupportForSSL"></a> SSL のサポート  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、HTTP SSL (Secure Sockets Layer) サービスを使用して、レポート サーバーまたは SharePoint サイトへの暗号化接続を確立できます。  
@@ -276,13 +283,13 @@ caps.handback.revision: 33
 ##  <a name="UserInterface"></a> データ警告のユーザー インターフェイス  
  データ警告では、警告を管理するための SharePoint ページと、データ警告定義の作成と編集を行うためのデザイナーが用意されています。  
   
--   **データ警告デザイナー** は、データ警告定義を作成または編集する際に使用します。 詳細については、「[データ警告デザイナー](../reporting-services/data-alert-designer.md)」、「[データ警告デザイナーでのデータ警告の作成](../reporting-services/create-a-data-alert-in-data-alert-designer.md)」および「[警告デザイナーでのデータ警告の編集](../reporting-services/edit-a-data-alert-in-alert-designer.md)」を参照してください。  
+-   **データ警告デザイナー** は、データ警告定義を作成または編集する際に使用します。 詳細については、「 [データ警告デザイナー](../reporting-services/data-alert-designer.md)」、「 [データ警告デザイナーでのデータ警告の作成](../reporting-services/create-a-data-alert-in-data-alert-designer.md) 」および「 [警告デザイナーでのデータ警告の編集](../reporting-services/edit-a-data-alert-in-alert-designer.md)」を参照してください。  
   
 -   **データ警告マネージャー** では、データ警告を一覧表示して警告を削除できるほか、警告を開いて編集することができます。 データ警告マネージャーには、2 つのバージョンがあります。1 つはユーザー用です。ユーザーが自分で作成した警告を管理する目的で使用します。もう 1 つは管理者用です。サイト ユーザーが所有する警告を管理者が管理する目的で使用します。  
   
-     作成したデータ警告の管理に関する詳細については、「[SharePoint ユーザー用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-sharepoint-users.md)」および「[データ警告マネージャーでのデータ警告の管理](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)」を参照してください。  
+     作成したデータ警告の管理に関する詳細については、「 [SharePoint ユーザー用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-sharepoint-users.md) 」および「 [データ警告マネージャーでのデータ警告の管理](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)」を参照してください。  
   
-     サイト上のすべてのデータ警告の管理に関する詳細については、「[警告管理者用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-alerting-administrators.md)」および「[データ警告マネージャーで SharePoint サイトのすべてのデータ警告を管理する](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)」を参照してください。  
+     サイト上のすべてのデータ警告の管理に関する詳細については、「 [警告管理者用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-alerting-administrators.md) 」および「 [データ警告マネージャーで SharePoint サイトのすべてのデータ警告を管理する](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)」を参照してください。  
   
 -   **サブスクリプションとデータ警告の準備** では、Reporting Services がデータ警告に SQL Server エージェントを使用できるかどうかを確認したり、SQL Server エージェントへのアクセス権を付与するためのスクリプトをダウンロードすることができます。 詳細については、「 [Provision Subscriptions and Alerts for SSRS Service Applications](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)」を参照してください。  
   
@@ -311,9 +318,10 @@ caps.handback.revision: 33
   
 -   [ユーザーおよび警告管理者に権限を付与する](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
-## 参照  
- [データ警告デザイナー](../reporting-services/data-alert-designer.md)   
- [警告管理者用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [SharePoint ユーザー用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
-  
-  
+## <a name="see-also"></a>参照
+
+[データ警告デザイナー](../reporting-services/data-alert-designer.md)   
+[警告管理者用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[データ警告の SharePoint ユーザーのマネージャー](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
+
+他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

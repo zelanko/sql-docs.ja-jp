@@ -1,6 +1,6 @@
 ---
 title: "PolyBase ガイド | Microsoft Docs"
-ms.date: 12/08/2016
+ms.date: 5/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -24,18 +24,17 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 627fdce2e1c294343680b119e9b0c36fc3d8665d
+ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
+ms.openlocfilehash: f9fe99ddd630b8444819c94111f6a363e96105f5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="polybase-guide"></a>PolyBase ガイド
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  PolyBase は、非リレーショナル データとリレーショナル データの両方にすべて SQL Server 内からアクセスし、それらを結合するためのテクノロジです。  SQL Server 2016 では、Hadoop または Azure BLOB ストレージ内の外部データに対してクエリを実行できます。 クエリは Hadoop に計算をプッシュするように最適化されます。 Azure SQL データ ウェアハウスでは、Azure BLOB ストレージと Azure Data Lake Store からデータをインポートできます。
+  PolyBase は、t-sql で言語を使用してデータベースの外部データにアクセスするテクノロジです。  SQL Server 2016 で Hadoop の外部データに対してクエリを実行するか、Azure Blob ストレージからデータをインポート/エクスポートできます。 クエリは Hadoop に計算をプッシュするように最適化されます。 Azure SQL Data Warehouse にすることができますインポート/エクスポートのデータを Azure Blob ストレージと Azure Data Lake Store です。
   
-Transact-SQL (T-SQL) ステートメントを使用し、SQL Server 内のリレーショナル テーブルと Hadoop または Azure BLOB ストレージに格納されている非リレーショナル データとの間でデータをインポートしたり、エクスポートしたりできます。 T-SQL クエリ内から外部データを照会して、それをリレーショナル データと結合することもできます。  
   
  PolyBase を使用するには、「 [PolyBase の概要](../../relational-databases/polybase/get-started-with-polybase.md)」を参照してください。  
   
@@ -44,17 +43,16 @@ Transact-SQL (T-SQL) ステートメントを使用し、SQL Server 内のリレ
 ## <a name="why-use-polybase"></a>PolyBase を使用する理由  
 的確な意思決定を行うには、リレーショナル データとテーブルとして構造化されていない他のデータ (特に Hadoop) の両方を分析します。 これは、種類の異なるデータ ストア間でデータを転送する手段がない限り、実行するのは困難です。 PolyBase は、SQL Server にとって外部のデータに対する操作により、このようなギャップを埋めます。  
   
-単純にしておくために、PolyBase を使用するうえで Hadoop 環境や Azure 環境に追加のソフトウェアをインストールする必要はありません。 外部データの照会では、データベース テーブルの照会と同じ構文が使用されます。 これはすべてに透過的に行われます。 PolyBase は詳細をすべてバックグラウンドで処理するので、PolyBase を正しく使用するうえで Hadoop や Azure に関する知識は不要です。 
+シンプルにを PolyBase は必要ありません、Hadoop 環境に追加のソフトウェアをインストールします。 外部データの照会では、データベース テーブルの照会と同じ構文が使用されます。 これはすべてに透過的に行われます。 PolyBase ハンドル舞台裏、すべての詳細と Hadoop に関する知識が外部テーブルを照会する、エンドユーザーが必要です。 
   
  PolyBase には、以下の機能があります。  
   
--   **Hadoop に格納されたデータを照会する。** ユーザーは、たとえば Hadoop など、コスト効果の高いスケーラブルな分散システムにデータを格納しています。 PolyBase を使用すると、T-SQL で簡単にデータを照会できます。  
+-   **SQL Server の PDW Hadoop に格納されたデータのクエリを実行します。** ユーザーは、たとえば Hadoop など、コスト効果の高いスケーラブルな分散システムにデータを格納しています。 PolyBase を使用すると、T-SQL で簡単にデータを照会できます。  
   
--   **Azure BLOB ストレージに格納されたデータを照会する。** Azure BLOB ストレージは、Azure サービスによって使用されるデータを格納するのに便利な場所です。  PolyBase を使用すると、T-SQL で簡単にデータにアクセスできます。  
+-   **Azure Blob ストレージに格納されたデータのクエリを実行します。** Azure BLOB ストレージは、Azure サービスによって使用されるデータを格納するのに便利な場所です。  PolyBase を使用すると、T-SQL で簡単にデータにアクセスできます。  
   
--   **Hadoop、Azure BLOB ストレージ、Azure Data Lake Store からデータをインポートする。** Hadoop、Azure BLOB ストレージ、Azure Data Lake Store のデータをリレーショナル テーブルにインポートすることで、Microsoft SQL の列ストア テクノロジと分析機能の速度を活用できます。 ETL ツールやインポート ツールを個別に用意する必要はありません。  
+-   **Hadoop や Azure Blob ストレージ、Azure Data Lake Store からデータをインポート**Hadoop や Azure Blob ストレージ、Azure Data Lake Store からリレーショナル テーブルにデータをインポートして Microsoft SQL の列ストア テクノロジと分析機能の速度を活用します。 ETL ツールやインポート ツールを個別に用意する必要はありません。  
 
-  
 -   **Hadoop、Azure BLOB ストレージ、Azure Data Lake Store にデータをエクスポートする。** データを Hadoop、Azure BLOB ストレージ、Azure Data Lake Store にアーカイブすることで、コスト効果の高いストレージを実現し、アクセスしやすいようにそのストレージをオンライン状態にしておくことができます。  
   
 -   **BI ツールと統合される。** PolyBase を Microsoft のビジネス インテリジェンスや分析スタックと一緒に使用したり、SQL Server と互換性のあるサード パーティ ツールを使用したりすることができます。  

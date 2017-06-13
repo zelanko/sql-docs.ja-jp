@@ -1,37 +1,44 @@
 ---
-title: "SQL Server データ ツールの Reporting Services (SSDT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Business Intelligence Development Studio, Reporting Services"
+title: "Reporting Services の SQL Server Data Tools (SSDT) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 caps.latest.revision: 76
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 75
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ee41ccb35aef5f0ab94c663a1556aad07bb85faa
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# SQL Server データ ツールの Reporting Services (SSDT)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]  は、ビジネス インテリジェンス ソリューションを作成するための [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境です。 SSDT は、レポート デザイナー作成環境を標準装備しています。この環境では、[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポート定義、共有データ ソース、共有データセット、およびレポート パーツを開けるほか、変更、プレビュー、保存、配置ができます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]  は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には含まれていません。 [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714) をダウンロードします。 
+
+# <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの Reporting Services (SSDT)
+
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT は、レポート デザイナー作成環境を標準装備しています。この環境では、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポート定義、共有データ ソース、共有データセット、およびレポート パーツを開けるほか、変更、プレビュー、保存、配置ができます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]SQL Server に含まれていません。 [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714) をダウンロードします。 
   
  このトピックでは、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] に使用される [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のソリューション、プロジェクト、プロジェクト テンプレート、および構成と、レポート デザイナーで使用できるビュー、メニュー、ツール バー、およびショートカットについて説明します。  
   
- レポートのデザインを開始するには、「[レポート デザイナーを使用してレポートをデザインする (SSRS)](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md)」を参照してください。  
+ レポートのデザインを開始するには、「[レポート デザイナーを使用してレポートをデザインする (SSRS)](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)」を参照してください。  
   
 ##  <a name="bkmk_SolutionsandProjects"></a> ソリューションとプロジェクト  
  レポート プロジェクトは、レポート定義およびリソースのコンテナーの役割を果たします。 レポート プロジェクト内の各ファイルは、プロジェクトが配置されるときに、レポート サーバーにパブリッシュされます。 プロジェクトを初めて作成する場合は、プロジェクトのコンテナーとしてソリューションも作成されます。 複数のプロジェクトを 1 つのソリューションに追加することができます。  
   
   
 ##  <a name="bkmk_Configurations"></a> 構成  
- 企業のテスト用レポート サーバーや実稼働レポート サーバーなど、さまざまな種類の配置に対して複数のプロジェクト プロパティのセットを作成するには、構成マネージャーを使用します。 詳細については、「 [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)に付属しています。  
+ 企業のテスト用レポート サーバーや実稼働レポート サーバーなど、さまざまな種類の配置に対して複数のプロジェクト プロパティのセットを作成するには、構成マネージャーを使用します。 詳細については、「 [SQL Server データ ツールの配置およびバージョン サポート (SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)には含まれていません。  
   
 ##  <a name="bkmk_ReportServerProjects"></a> レポート サーバープロジェクト  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]をインストールすると、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で次のプロジェクト テンプレートを使用できるようになります。  
@@ -40,7 +47,7 @@ caps.handback.revision: 75
   
 -   **レポート サーバー プロジェクト ウィザード。** レポート サーバー プロジェクト ウィザードを選択すると、レポート サーバー プロジェクトが自動的に作成され、レポート ウィザードが開きます。 このウィザードでは、各ページの手順に従ってレポートを作成し、データ ソースへの接続文字列の作成、データ ソースの資格情報の設定、クエリのデザイン、テーブルまたはマトリックス データ領域の追加、レポート データやグループの指定、フォントや色のスタイルの選択、レポート サーバーへのレポートのパブリッシュ、およびローカルでのレポートのプレビューを行うことができます。 ウィザードを使用してレポートを作成した後で、レポート サーバー プロジェクトでレポート デザイナーを使用して、レポート データおよびレポート デザイナーを変更できます。  
   
- ![SSDT の新しいプロジェクト テンプレート](../../analysis-services/media/ssdt-biprojects.png "SSDT の新しいプロジェクト テンプレート")  
+ ![SSDT で新しいプロジェクト テンプレート](../../analysis-services/media/ssdt-biprojects.png "SSDT で新しいプロジェクト テンプレート")  
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> レポート デザイナーのウィンドウとペイン  
@@ -57,7 +64,7 @@ caps.handback.revision: 75
   
 -   **データセット** 各データセットには、データ ソースから取得するデータを指定するクエリが含まれています。 データセット クエリで指定されたフィールドのコレクションを表示するには、データセットを展開します。  
   
-     多次元データセット用のクエリ デザイナーの中には、[フィルター] ペインでフィルターを指定して、レポート パラメーターを作成するかどうかを指定できるものがあります。 レポート パラメーター オプションを指定した場合は、そのパラメーターの有効な値の一覧を設定する特別なデータセットが自動的に作成されます。  既定では、データセットは [レポート データ] ペインに表示されません。 詳細については、「[多次元データのパラメーター値の非表示データセットの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/show hidden datasets for parameter values - multidimensional data.md)」を参照してください。  
+     多次元データセット用のクエリ デザイナーの中には、[フィルター] ペインでフィルターを指定して、レポート パラメーターを作成するかどうかを指定できるものがあります。 レポート パラメーター オプションを指定した場合は、そのパラメーターの有効な値の一覧を設定する特別なデータセットが自動的に作成されます。  既定では、データセットは [レポート データ] ペインに表示されません。 詳細については、「[多次元データのパラメーター値の非表示データセットの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)」を参照してください。  
   
 -   **レポート パラメーター** レポート パラメーターの一覧です。 データセット クエリにクエリ パラメーターが含まれている場合は、パラメーターを手動または自動で作成できます。  
   
@@ -94,7 +101,7 @@ caps.handback.revision: 75
   
  次の場合、[プロパティ] ペインを使用します。  
   
--   デザイン画面で現在選択されている項目のプロパティを設定します。 プロパティによっては、値のドロップダウン リストが表示されます。 セルに値を直接入力することもできます。 一部のプロパティには値のコレクションが含まれており、**[(コレクション)]** という値で示されます。 ほとんどのプロパティでは式を使用できます。複雑な式は **\<式>** という値で示されます。 **[式]** ダイアログ ボックスを開くには、**\<式>** をクリックします。 詳細については、「[[式] ダイアログ ボックス](../Topic/Expression%20Dialog%20Box.md)」を参照してください。  
+-   デザイン画面で現在選択されている項目のプロパティを設定します。 プロパティによっては、値のドロップダウン リストが表示されます。 セルに値を直接入力することもできます。 一部のプロパティには値のコレクションが含まれており、 **[(コレクション)]**という値で示されます。 ほとんどのプロパティは、式を使用できます。複雑な式が値によって示される**\<式 >**です。 をクリックして**\<式 >**を開くには、**式** ダイアログ ボックス。 詳細については、「 [[式] ダイアログ ボックス](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)」を参照してください。  
   
 -   グリッドをカテゴリ別の表示からアルファベット順の表示に変更するには、[プロパティ] ペインのツール バー ボタンを使用します。 カテゴリ別の表示では、カテゴリのすべてのプロパティを表示するには、そのカテゴリを展開する必要があります。 アイテムの [プロパティ] ダイアログ ボックスを開くには、ツール バーの **[プロパティ ページ]** ボタンをクリックするか、アイテムを右クリックして **[プロパティ]**をクリックします。  
   
@@ -218,7 +225,7 @@ caps.handback.revision: 75
   
 -   **[プロジェクト ツールボックス アイテムを最新の情報に更新]** 新しいカスタム レポート アイテムをプロジェクトにインストールするときにツールボックスのキャッシュを更新します。  
   
--   **[プロパティ]** このプロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「 [[プロパティ ページ] ダイアログ ボックス](../Topic/Project%20Property%20Pages%20Dialog%20Box.md)」を参照してください。  
+-   **[プロパティ]** このプロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「 [[プロパティ ページ] ダイアログ ボックス](../../reporting-services/tools/project-property-pages-dialog-box.md)」を参照してください。  
   
   
 ##  <a name="bkmk_ReportDesignerToolbars"></a> レポート デザイナーのツール バー  
@@ -247,7 +254,7 @@ caps.handback.revision: 75
   
   
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> SQL Server データ ツールのコマンド ライン サポート  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] および基になる devenv.exe アプリケーションに基づいています。 これらのオプションを使用するには、次の 2 つの項目に対して有効な値を設定しておく必要があります。  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]基づく[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]と基になる devenv.exe アプリケーションです。 これらのオプションを使用するには、次の 2 つの項目に対して有効な値を設定しておく必要があります。  
   
 -   OverwriteDataSources、TargetDataSourceFolder、TargetReportFolder、および TargetServerURL のプロジェクト プロパティ。  
   
@@ -295,20 +302,21 @@ caps.handback.revision: 75
     |あるレポート アイテムから次のレポート アイテムにフォーカスを移動する|Tab|  
     |選択したレポート アイテムを移動する|方向キー|  
     |選択したレポート アイテムを微調整する|Ctrl + 方向キー|  
-    |選択したレポート アイテムのサイズを増減する|Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;Shift&lt;/localizedText&gt; + 方向キー|  
-    |テキスト ボックスで、表示されているテキストの先頭にカーソルを移動する|Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;Home|  
-    |テキスト ボックスで、表示されているテキストの末尾にカーソルを移動する|Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;End|  
-    |テキストボックスで、現在のカーソル位置から表示されているテキストの先頭までのテキストを選択する|Shift</localizedText> + <localizedText>Home|  
-    |テキストボックスで、現在のカーソル位置から表示されているテキストの末尾までのテキストを選択する|Shift</localizedText> + <localizedText>End|  
-    |テキスト ボックスで、現在のカーソル位置から表現の先頭までのテキストを選択する|Ctrl</localizedText> + <localizedText>Shift</localizedText> + <localizedText>Home|  
-    |テキスト ボックスで、現在のカーソル位置から表現の末尾までのテキストを選択する|Ctrl</localizedText> + <localizedText>Shift</localizedText> + <localizedText>End|  
+    |選択したレポート アイテムのサイズを増減する|Ctrl + Shift + 方向キー|  
+    |テキスト ボックスで、表示されているテキストの先頭にカーソルを移動する|Ctrl + Home|  
+    |テキスト ボックスで、表示されているテキストの末尾にカーソルを移動する|Ctrl + End|  
+    |テキストボックスで、現在のカーソル位置から表示されているテキストの先頭までのテキストを選択する|Shift + Home|  
+    |テキストボックスで、現在のカーソル位置から表示されているテキストの末尾までのテキストを選択する|Shift + End|  
+    |テキスト ボックスで、現在のカーソル位置から表現の先頭までのテキストを選択する|Ctrl + Shift + Home|  
+    |テキスト ボックスで、現在のカーソル位置から表現の末尾までのテキストを選択する|Ctrl + Shift + End|  
     |選択したレポート アイテムのコンテキスト メニューを開く|Shift + F10 + 新しいキーボードのプロパティ キー|
   
-## 参照  
+## <a name="next-steps"></a>次の手順
+
 [SQL Server Data Tools のダウンロード](http://go.microsoft.com/fwlink/?LinkID=616714)
- [ソリューション エクスプローラー](../../ssms/solution/solution-explorer.md)   
- [Reporting Services レポート (SSRS)](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
- [レポート定義言語 (SSRS)](../../reporting-services/reports/report-definition-language-ssrs.md)   
- [SQL Server データ ツールの配置およびバージョン サポート (SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
-  
-  
+[ソリューション エクスプ ローラー](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
+[Reporting Services レポート](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
+[レポート定義言語](../../reporting-services/reports/report-definition-language-ssrs.md)   
+[Deployment and Version Support in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+
+他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

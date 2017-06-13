@@ -1,26 +1,31 @@
 ---
-title: "共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "共有データセットまたは埋め込みデータセット (レポート ビルダーおよび SSRS) を作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 10/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 25caf057e8d75fd3ed463f4165b3259331d18182
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# 共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)
+# <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)
 埋め込みデータセットは、単一の [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] レポートで使用されます。 レポート サーバーの共有データセットはモバイルとページ分割があるタイプの、複数のレポートで使用できます。 データセットを作成するには、埋め込みデータ ソースまたは共有データ ソースが必要です。  
   
- **レポート ビルダー**を使用して、次の作業を行います。  
+ **レポート ビルダー** を使用して、次の作業を行います。  
   
 1.  データセットのデザイン ビューで共有データセットを作成します。 共有データセットには、パブリッシュされた共有データ ソースを使用する必要があります。  
   
@@ -28,7 +33,7 @@ caps.handback.revision: 9
   
 3.   レポート サーバーまたは SharePoint サイトにデータセットを直接保存します。  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の**レポート デザイナー**を使用して、次の作業を行います。  
+ **の** レポート デザイナー [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用して、次の作業を行います。  
   
 1.  ソリューション エクスプローラーで共有データセットを作成します。 共有データセットには、ソリューション エクスプローラーの [共有データ ソース] フォルダーのデータ ソースを使用する必要があります。  
   
@@ -36,19 +41,19 @@ caps.handback.revision: 9
   
 3.  必要に応じて、共有データセットと共有データ ソースをレポートと一緒に配置します。 アイテムの種類ごとに、プロジェクトのプロパティを使用して、レポート サーバーまたは SharePoint サイト上のフォルダーへのパスを指定します。  
   
- 詳細については、「[レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## レポート ビルダーを開き、共有データセットを作成するには  
+## <a name="to-open-report-builder-and-create-a-shared-dataset"></a>レポート ビルダーを開き、共有データセットを作成するには  
   
 1.  レポート ビルダーを開きます。 次の図のように、 **[新しいレポートまたはデータセット]** ペインが開きます。  
   
      ![rs_NewSharedDataset](../../reporting-services/report-data/media/rs-newshareddataset.gif "rs_NewSharedDataset")  
   
     > [!NOTE]  
-    >  **[新しいレポートまたはデータセット]** ペインが表示されない場合は、レポート ビルダーのボタンの **[新規作成]** をクリックします。  
+    >  **[新しいレポートまたはデータセット]** ペインが表示されない場合は、レポート ビルダーのボタンの **[新規作成]**をクリックします。  
   
 2.  左側のペインの **[データセットを作成する]**にある **[共有データセット]**をクリックします。  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 9
   
 7.  レポート ビルダーを終了するには、 **[レポート ビルダー]**をクリックして、 **[レポート ビルダーの終了]**をクリックします。 レポートを使用するには、 **[レポート ビルダー]**をクリックして、 **[新規作成]** または **[開く]**をクリックします。  
   
-## クエリ パラメーター オプションを設定するには  
+## <a name="to-set-query-parameter-options"></a>クエリ パラメーター オプションを設定するには  
   
 1.  レポート ビルダーを開きます。  
   
@@ -70,20 +75,20 @@ caps.handback.revision: 9
   
 3.  レポート サーバーを参照して共有データ ソースのフォルダーを選択します。  
   
-4.  **[アイテムの種類]** で、ドロップダウン リストの [データセット (*.rsd)] をクリックします。  
+4.  **[アイテムの種類]**で、ドロップダウン リストの [データセット (*.rsd)] をクリックします。  
   
 5.  共有データセットを選択し、 **[開く]**をクリックします。 関連付けられているクエリ デザイナーが開きます。  
   
 6.  リボンの **[データセットのプロパティ]**をクリックします。  
   
-7.  **[パラメーター]**をクリックします。 このページで、定数または式に既定値を設定し、パラメーターを読み取り専用、Null 値許容、または **[クエリから省略]** としてマークします。 詳細については、「[レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+7.  **[パラメーター]**をクリックします。 このページで、定数または式に既定値を設定し、パラメーターを読み取り専用、Null 値許容、または **[クエリから省略]**としてマークします。 詳細については、「 [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
   
-## SQL Server リレーショナル データベースからデータセットを作成するには  
+## <a name="to-create-a-dataset-from-a-sql-server-relational-database"></a>SQL Server リレーショナル データベースからデータセットを作成するには  
   
-1.  レポート データ ペインでデータ ソース名を右クリックし、**[データセットの追加]** をクリックします。 **[データセットのプロパティ]** ダイアログ ボックスの **[クエリ]** ページが表示されます。  
+1.  レポート データ ペインでデータ ソース名を右クリックし、 **[データセットの追加]**をクリックします。 **[データセットのプロパティ]** ダイアログ ボックスの **[クエリ]** ページが表示されます。  
   
 2.  **[名前]**にデータセットの名前を入力するか、既定の名前をそのまま使用します。  
   
@@ -100,7 +105,7 @@ caps.handback.revision: 9
   
     -   名前を指定してストアド プロシージャを実行するには、 **[ストアド プロシージャ]** を選択します。  
   
-5.  **[クエリ]**には、クエリ、ストアド プロシージャ、またはテーブル名を入力します。 あるいは、**[クエリ デザイナー]** をクリックしてグラフィカルまたはテキストベースのクエリ デザイナー ツールを開くか、**[インポート]** をクリックして既存のレポートからクエリをインポートします。  
+5.  **[クエリ]**には、クエリ、ストアド プロシージャ、またはテーブル名を入力します。 あるいは、 **[クエリ デザイナー]** をクリックしてグラフィカルまたはテキストベースのクエリ デザイナー ツールを開くか、 **[インポート]** をクリックして既存のレポートからクエリをインポートします。  
   
      ただし、データ ソースでクエリを実行することによってしか、クエリによって指定されたフィールド コレクションを決定できない場合もあります。 たとえば、ストアド プロシージャは結果セットのフィールドの変数セットを返す場合があります。 **[フィールドの更新]** をクリックしてデータ ソースでクエリを実行し、レポート データ ペインのデータセット フィールド コレクションを設定するのに必要なフィールド名を取得します。 **[データセットのプロパティ]** ダイアログ ボックスを閉じると、フィールド コレクションがデータセット ノードの下に表示されます。  
   
@@ -110,11 +115,12 @@ caps.handback.revision: 9
   
      データセットとそのフィールド コレクションがレポート データ ペインのデータ ソース ノードの下に表示されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [レポート データセット &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)   
+ [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
+
