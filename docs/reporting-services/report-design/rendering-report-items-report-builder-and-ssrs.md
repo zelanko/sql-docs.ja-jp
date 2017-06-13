@@ -1,29 +1,34 @@
 ---
-title: "レポート アイテムのレンダリング (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "レポート アイテム (レポート ビルダーおよび SSRS) のレンダリング |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3a254c48e1639c95b1d93f180f1fdd00326a79ae
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# レポート アイテムのレンダリング (レポート ビルダーおよび SSRS)
+# <a name="rendering-report-items-report-builder-and-ssrs"></a>レポート アイテムのレンダリング (レポート ビルダーおよび SSRS)
   レポート アイテムの数、サイズ、および位置は、レポート本文の改ページに影響します。 以降、各種のレポート アイテムがどのようにレンダリングされるかについて説明します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 重なり合うレポート アイテム  
+## <a name="overlapping-report-items"></a>重なり合うレポート アイテム  
  HTML、MHTML、Word、Excel、プレビュー、およびレポート ビューアーでは、レポート アイテムの重なりがサポートされません。 重なり合うアイテムは移動されます。 重なり合うレポート アイテムには、次の規則が適用されます。  
   
 -   レポート アイテムの縦方向の重なりの方が大きい場合、重なり合ういずれかのアイテムが右方向に移動されます。 左端に最も近いアイテムは、元の位置に保たれます。  
@@ -36,7 +41,7 @@ caps.handback.revision: 7
   
  印刷を含め、ハード改ページ形式では、レポート アイテムの重なりがサポートされます。  
   
-## 可視性とレポート アイテム  
+## <a name="visibility-and-report-items"></a>可視性とレポート アイテム  
  レポート アイテムの表示と非表示を既定の設定のままにすることもできますが、式を使用して、条件によって表示と非表示を切り替えることもできます。 必要に応じて、別のレポート アイテムをクリックすることによって、可視性を切り替えることもできます。  
   
  レポート アイテムのレンダリング時には、可視性に関して次の規則が適用されます。  
@@ -47,7 +52,7 @@ caps.handback.revision: 7
   
 -   レポート アイテムとその内容の表示/非表示を、別のレポート アイテムのクリックによって切り替えることができる場合、最初に表示したときのみ、レポート アイテムとその内容が収まるように改ページが調整されます。  
   
-## レポート アイテムをまとめて 1 ページに収める  
+## <a name="keeping-report-items-together-on-a-single-page"></a>レポート アイテムをまとめて 1 ページに収める  
  グループとして維持したり 1 つにまとめるためのプロパティを暗黙的または明示的に設定することにより、レポート内の複数のレポート アイテムをまとめて 1 ページに収めることができます。 レポート アイテムに論理改ページが含まれず、また、そのサイズが使用可能なページ領域よりも小さければ、レポート アイテムは常に同じページにレンダリングされます。 レポート アイテム全体を本来あるべきページに収めることができない場合、そのレポート アイテムの前にハード改ページが挿入され、強制的に次のページに移動されます。 ソフト改ページ レンダラーの場合は、レポート アイテムが収まるようにページが拡大されます。  
   
  レポート アイテムが常に非表示になっている場合、アイテムを 1 つにまとめるための規則は無視されます。  
@@ -68,7 +73,7 @@ caps.handback.revision: 7
   
 -   Tablix データ領域で表示と非表示の切り替えができるレポート アイテム。  
   
-### 優先順位  
+### <a name="priority-order"></a>優先順位  
  ページ サイズの制限により、レポート アイテムを 1 つにまとめるための規則どうしが競合する場合があります。 競合が生じた場合、レンダリング時のアイテムのまとまりを保つために、次の優先順位が使用されます。  
   
 -   線、グラフ、および画像。  
@@ -79,13 +84,13 @@ caps.handback.revision: 7
   
      ヘッダーはフッターよりも優先されます。 繰り返し表示されるグループが入れ子になっている場合は、内側のグループの方が、外側のグループよりも優先されます。 **RepeatWith** プロパティが設定されたアイテムでは、対象となるデータ領域に近い方のアイテムが、遠い方のアイテムよりも優先されます。  
   
--   KeepTogether プロパティが明示的に **true** に設定された小さなレポート アイテム (テキスト ボックス、四角形など)。  
+-   KeepTogether プロパティが明示的に **true**に設定された小さなレポート アイテム (テキスト ボックス、四角形など)。  
   
--   KeepTogether プロパティが明示的に **true** に設定された大きなレポート アイテム (サブレポート、最も内側のものを除く Tablix メンバー)。  
+-   KeepTogether プロパティが明示的に **true**に設定された大きなレポート アイテム (サブレポート、最も内側のものを除く Tablix メンバー)。  
   
--   KeepTogether プロパティが明示的に **true** に設定された Tablix データ領域。  
+-   KeepTogether プロパティが明示的に **true**に設定された Tablix データ領域。  
   
-### サブレポート  
+### <a name="subreports"></a>サブレポート  
  サブレポートは、別途レポート (.rdl) ファイルに定義された他のレポートを含んだ四角形としてレンダリングされます。 親レポートからアクセスできるようにするには、あらかじめサブレポート ファイルをレポート サーバーにパブリッシュしておく必要があります。  
   
  サブレポートのレンダリングには、次の規則が適用されます。  
@@ -104,10 +109,10 @@ caps.handback.revision: 7
   
  サブレポートの詳細については、「[サブレポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)」を参照してください。  
   
-## 参照  
- [Reporting Services のページ分割 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>参照  
+ [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

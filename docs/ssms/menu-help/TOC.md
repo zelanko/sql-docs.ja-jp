@@ -1,3 +1,4 @@
+# [SQL Server Management Studio メニュー ヘルプ](sql-server-management-studio-menu-help.md)
 # [[プロパティ] ウィンドウの F1 ヘルプ (Management Studio)](properties-window-f1-help-management-studio.md)
 # [[オプション] ([環境] - [フォントおよび色] ページ)](options-environment-fonts-and-colors-page.md)
 # [オプション (環境 - ヘルプ - [全般] ページ)](options-environment-help-general-page.md)
@@ -14,7 +15,6 @@
 # [[ウィンドウ] ダイアログ ボックス (Microsoft Document Explorer ヘルプ)](windows-dialog-box-microsoft-document-explorer-help.md)
 # [[保存オプションの詳細設定]](advanced-save-options.md)
 # [[名前を付けて保存]](save-as.md)
-# [SQL Server Management Studio メニュー ヘルプ](sql-server-management-studio-menu-help.md)
 # [[ユーザー設定] ([ツール バー] ページ)](customize-toolbars-page.md)
 # [[オプション] ([デザイナー] - [メンテナンス プラン] ページ)](options-designers-maintenance-plans-page.md)
 # [[検索フォルダーの選択] ダイアログ ボックス (Visual Studio)](choose-search-folders-dialog-box-visual-studio.md)

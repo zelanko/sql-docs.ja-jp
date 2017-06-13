@@ -1,7 +1,7 @@
 ---
 title: "SQL Server エージェント サービスのアカウントの選択 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 05/04/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b8ea899dbbf5b94205ba7cfa0afee4aad262d79a
+ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
+ms.openlocfilehash: 3050dc3fc207f2154a70c68770ca266d2d47ce92
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/05/2017
 
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>SQL Server エージェント サービスのアカウントの選択
@@ -60,7 +60,7 @@ ms.lasthandoff: 04/11/2017
   
     -   プロセスに対してメモリ クォータを調整する権限 (SeIncreaseQuotaPrivilege)  
   
-    -   バッチ ログオンの種類を使用してログオンする権限 (SeBatchLogonRight)  
+    -   ネットワーク (SeNetworkLogonRight) からこのコンピューターにアクセスする権限  
   
 > [!NOTE]  
 > アカウントにプロキシのサポートに必要な権限がない場合は、 **sysadmin** 固定サーバー ロールのメンバーのみがジョブを作成できます。  

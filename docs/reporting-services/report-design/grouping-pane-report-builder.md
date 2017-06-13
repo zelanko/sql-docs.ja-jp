@@ -1,27 +1,32 @@
 ---
-title: "グループ化ペイン (レポート ビルダー) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10033"
-helpviewer_keywords: 
-  - "[グループ化ペイン] ダイアログ ボックス"
+title: "グループ化ペイン (レポート ビルダー) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10033"
+helpviewer_keywords:
+- Grouping Pane dialog box
 ms.assetid: 983ee5a4-944c-491e-8720-7cd9f3881961
 caps.latest.revision: 16
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f8017dd30a085519f9dd5d3593aaa3d59329f8c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# グループ化ペイン (レポート ビルダー)
+# <a name="grouping-pane-report-builder"></a>グループ化ペイン (レポート ビルダー)
   グループ化ペインには、現在選択されている Tablix データ領域の行グループと列グループが表示されます。 グラフおよびゲージのデータ領域では、グループ化ペインは使用できません。 グループ化ペインには、行グループ ペインと列グループ ペインが含まれています。 グループ化ペインには、既定モードと詳細設定モードの 2 つのモードがあります。 既定モードでは、行グループおよび列グループの動的メンバーの階層ビューが表示されます。 詳細設定モードでは、行グループと列グループの動的メンバーと静的メンバーの両方が表示されます。 グループは、データ領域に表示されるレポート データセットの名前付きセットです。 グループは、静的および動的なメンバーを含む階層で構成されます。 詳細については、「[グループについて &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
@@ -33,26 +38,26 @@ caps.handback.revision: 16
   
 -   **既定値です。** グループの追加、編集、削除を行うには、既定モードを使用します。 レポート データ ペインからフィールドをドラッグし、グループ階層に挿入することによって、親グループ、子グループ、および詳細グループを追加できます。 隣接するグループを追加するには、**[グループの追加]** ショートカットを使用する必要があります。 詳細については、「[データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
--   **詳細設定**。 行グループと列グループのすべてのメンバーを表示し、静的メンバーのプロパティを設定するには、**詳細設定モード**を使用します。 グループを作成したり合計を追加したりすると、Tablix データ領域で各レポート ページの行と列の表示方法を制御するプロパティが自動的に設定されます。 これらのプロパティを手動で調整するには、Tablix メンバーのプロパティを設定する必要があります。 詳細については、「[レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/controlling the tablix data region display on a report page.md)」を参照してください。  
+-   **詳細設定**。 行グループと列グループのすべてのメンバーを表示し、静的メンバーのプロパティを設定するには、 **詳細設定モード** を使用します。 グループを作成したり合計を追加したりすると、Tablix データ領域で各レポート ページの行と列の表示方法を制御するプロパティが自動的に設定されます。 これらのプロパティを手動で調整するには、Tablix メンバーのプロパティを設定する必要があります。 詳細については、「[レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)」を参照してください。  
   
-## 既定モード  
+## <a name="default-mode"></a>既定モード  
  既定モードでは、行グループ ペインと列グループ ペインにすべての親グループ、子グループ、および隣接グループの階層ビューが表示されます。 子グループは親グループの下にインデント表示されます。 隣接グループは、その兄弟グループと同じインデント レベルに表示されます。 次の図に、行グループと隣接列グループが入れ子になった Tablix データ領域を示します。  
   
- ![Tablix、入れ子になった隣接する行と列のグループ](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix、入れ子になった隣接する行と列のグループ")  
+ ![Tablix、入れ子になった隣接する行と列グループ](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix、入れ子になった隣接する行と列グループ")  
   
  グループ化ペインには、対応する行グループと列グループが表示されます。 次の図では、サブカテゴリに基づくグループが行グループ ペインで選択され、[Subcat] グループ化セルが Tablix データ領域で選択されています。  
   
- ![入れ子になった行と列のグループのグループ化ペイン](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "入れ子になった行と列のグループのグループ化ペイン")  
+ ![入れ子になった行および列グループのグループ化ペイン](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "入れ子になった行および列グループのグループ化ペイン")  
   
  行グループ ペインでは、サブカテゴリに基づくグループは、カテゴリに基づくグループの子になります。 列グループ ペインでは、国/地域グループは地理グループの子になります。 年度グループと国/地域グループは、隣接するグループです。  
   
  詳細については、「[Tablix データ領域のセル、行、および列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)」を参照してください。  
   
-## 詳細設定モード  
+## <a name="advanced-mode"></a>詳細設定モード  
  詳細設定モードでは、行グループ ペインと列グループ ペインに、静的メンバーと動的メンバーを含む、すべてのグループの階層ビューが表示されます。 メンバーを選択すると、現在選択されている Tablix メンバーのプロパティが [プロパティ] ペインに表示されます。  
   
 > [!NOTE]  
->  **詳細設定モード**に切り替えるには、列グループ ペインの横の下向き矢印を右クリックして **[詳細設定モード]** をクリックします。  
+>  **詳細設定モード**に切り替えるには、列グループ ペインの横の下向き矢印を右クリックして **[詳細設定モード]**をクリックします。  
   
  ほとんどの場合、静的および動的グループ行とグループ列の表示を制御するプロパティは、グループの作成時または合計の追加時に自動設定されます。 既定値を編集するには、行グループ ペインまたは列グループ ペインでグループ メンバーを選択し、[プロパティ] ウィンドウでプロパティ値を変更する必要があります。 使用できるプロパティは次のとおりです。  
   
@@ -62,15 +67,15 @@ caps.handback.revision: 16
   
 -   **KeepTogether**。 Boolean です。 可能な場合、Tablix メンバー全体および入れ子になっているすべてのメンバーを 1 ページにまとめるように指定します。  
   
--   **KeepWithGroup**。 Boolean です。 静的行メンバーにのみ使用します。 可能な場合、非表示でなければ、この行が前の動的な兄弟メンバーまたは次の動的な兄弟メンバーに付随するようにします。 行ヘッダーをその関連グループと一緒に表示するには KeepWithGroup を **After** に設定します。  
+-   **KeepWithGroup**。 Boolean です。 静的行メンバーにのみ使用します。 可能な場合、非表示でなければ、この行が前の動的な兄弟メンバーまたは次の動的な兄弟メンバーに付随するようにします。 行ヘッダーをその関連グループと一緒に表示するには KeepWithGroup を **After**に設定します。  
   
--   **RepeatOnNewPage**。 Boolean です。 静的行メンバー専用であり、KeepWithGroup の値が [なし] 以外の場合に使用します。 可能な場合、KeepWithGroup で指定された動的メンバーのインスタンスが少なくとも 1 つ含まれるページごとに、この静的行を繰り返します。 行ヘッダーをその関連グループと一緒に表示するには RepeatOnNewPage を **True** に設定します。  
+-   **RepeatOnNewPage**。 Boolean です。 静的行メンバー専用であり、KeepWithGroup の値が [なし] 以外の場合に使用します。 可能な場合、KeepWithGroup で指定された動的メンバーのインスタンスが少なくとも 1 つ含まれるページごとに、この静的行を繰り返します。 行ヘッダーをその関連グループと一緒に表示するには RepeatOnNewPage を **True**に設定します。  
   
 -   **Hidden**。 Boolean です。 行または列を初期設定で非表示にしておくかどうかを示します。  
   
 -   **ToggleItem。** 文字列です。 切り替えイメージを追加するテキスト ボックスの名前。 テキスト ボックスは、同じグループのスコープまたはコンテナー スコープに存在する必要があります。  
   
- 詳細については、「[レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/controlling the tablix data region display on a report page.md)」、「[グループ単位でのヘッダーとフッターの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)」、「[複数のページへの行および列ヘッダーの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「[レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)」、「[グループ単位でのヘッダーとフッターの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)」、「[複数のページへの行および列ヘッダーの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)」を参照してください。  
   
  すべての静的メンバーにデザイン画面のセルに対応するヘッダーがあるわけではありません。 グループ化ペインでは、次の規則を使用して静的メンバーにヘッダーがあるかどうかを示します。  
   
@@ -78,8 +83,8 @@ caps.handback.revision: 16
   
 -   **(Static)** 静的メンバーにはヘッダー セルがなく、非表示静的と呼ばれます。  
   
-## 参照  
- [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](http://msdn.microsoft.com/ja-jp/2da24891-0b6d-4d3c-8b18-81b98752642f)   
+## <a name="see-also"></a>参照  
+ [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
  [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

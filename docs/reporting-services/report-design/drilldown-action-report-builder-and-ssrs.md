@@ -1,54 +1,59 @@
 ---
-title: "ドリルダウン アクション (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10249"
-  - "10186"
-  - "10092"
-  - "10167"
-  - "10174"
-  - "sql13.rtp.rptdesigner.charttitleproperties.visibility.f1"
-  - "10155"
-  - "sql13.rtp.rptdesigner.chartproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.pictureproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.majorgridlineproperties.visibility.f1"
-  - "10123"
-  - "10425"
-  - "sql13.rtp.rptdesigner.axisproperties.visibility.f1"
-  - "10217"
-  - "10161"
-  - "10215"
-  - "sql13.rtp.rptdesigner.legendproperties.visibility.f1"
-  - "10258"
-  - "10144"
-  - "sql13.rtp.rptdesigner.subreportproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.textboxproperties.visibility.f1"
-  - "10062"
-  - "sql13.rtp.rptdesigner.serieslabelproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.rectangleproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.calculatedseriesproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.chartareaproperties.visibility.f1"
-  - "10053"
-  - "sql13.rtp.rptdesigner.minorgridlineproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.seriesproperties.visibility.f1"
+title: "ドリルダウン アクション (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10249"
+- "10186"
+- "10092"
+- "10167"
+- "10174"
+- sql13.rtp.rptdesigner.charttitleproperties.visibility.f1
+- "10155"
+- sql13.rtp.rptdesigner.chartproperties.visibility.f1
+- sql13.rtp.rptdesigner.pictureproperties.visibility.f1
+- sql13.rtp.rptdesigner.majorgridlineproperties.visibility.f1
+- "10123"
+- "10425"
+- sql13.rtp.rptdesigner.axisproperties.visibility.f1
+- "10217"
+- "10161"
+- "10215"
+- sql13.rtp.rptdesigner.legendproperties.visibility.f1
+- "10258"
+- "10144"
+- sql13.rtp.rptdesigner.subreportproperties.visibility.f1
+- sql13.rtp.rptdesigner.textboxproperties.visibility.f1
+- "10062"
+- sql13.rtp.rptdesigner.serieslabelproperties.visibility.f1
+- sql13.rtp.rptdesigner.rectangleproperties.visibility.f1
+- sql13.rtp.rptdesigner.calculatedseriesproperties.visibility.f1
+- sql13.rtp.rptdesigner.chartareaproperties.visibility.f1
+- "10053"
+- sql13.rtp.rptdesigner.minorgridlineproperties.visibility.f1
+- sql13.rtp.rptdesigner.seriesproperties.visibility.f1
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10cbda042d03d5405c136894017418e341665c99
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# ドリルダウン アクション (レポート ビルダーおよび SSRS)
-  テキスト ボックスに正符号と負符号のアイコンを組み込むことによって、アイテムの表示/非表示をユーザーが対話的に切り替えられるように設定できます。 これを*ドリルダウン* アクションと呼びます。 テーブルまたはマトリックスの場合、静的な行や列、またはグループに関連付けられている行や列の表示と非表示を切り替えることができます。  
+# <a name="drilldown-action-report-builder-and-ssrs"></a>ドリルダウン アクション (レポート ビルダーおよび SSRS)
+  テキスト ボックスに正符号と負符号のアイコンを組み込むことによって、アイテムの表示/非表示をユーザーが対話的に切り替えられるように設定できます。 これを *ドリルダウン* アクションと呼びます。 テーブルまたはマトリックスの場合、静的な行や列、またはグループに関連付けられている行や列の表示と非表示を切り替えることができます。  
   
  ![rs_drilldown](../../reporting-services/report-design/media/rs-drilldown.gif "rs_drilldown")  
   
@@ -70,10 +75,10 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## ドリルダウン レポートと詳細レポートの比較  
- ドリルダウン レポートでは、ユーザーが正符号または負符号のボタンをクリックすると、レポートのセクションが展開または折りたたまれ、詳細データがその場所に表示されます。 詳細レポートでは、ユーザーが集計値のリンクをクリックすると、別の関連レポートが開き、詳細データが表示されます。 詳細データは、詳細レポートの実行時にのみ取得されます。 通常詳細レポートには、ドリルダウン レポートほどリソースが必要ありません。 詳細については、「[ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/drillthrough, drilldown, subreports, and nested data regions.md)」を参照してください。  
+## <a name="comparing-drilldown-and-drillthrough-reports"></a>ドリルダウン レポートと詳細レポートの比較  
+ ドリルダウン レポートでは、ユーザーが正符号または負符号のボタンをクリックすると、レポートのセクションが展開または折りたたまれ、詳細データがその場所に表示されます。 詳細レポートでは、ユーザーが集計値のリンクをクリックすると、別の関連レポートが開き、詳細データが表示されます。 詳細データは、詳細レポートの実行時にのみ取得されます。 通常詳細レポートには、ドリルダウン レポートほどリソースが必要ありません。 詳細については、「 [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)」を参照してください。  
   
-## 非表示レポート アイテムに対する表示拡張機能のサポート  
+## <a name="rendering-extension-support-for-hidden-report-items"></a>非表示レポート アイテムに対する表示拡張機能のサポート  
  レポート アイテムの表示と非表示の切り替えは、レポート ビルダーやレポート マネージャーでレポートを実行するときに使用する HTML 表示拡張機能など、ユーザー対話機能をサポートする表示拡張機能でのみサポートされます。 一部の表示拡張機能では非表示アイテムが表示されます。 条件に応じて表示/非表示を切り替えるレポート アイテムのサポートは、次のようになります。  
   
 -   HTML では、非表示に設定されている場合、アイテムは HTML ソース内に表示されません。  
@@ -84,8 +89,8 @@ caps.handback.revision: 9
   
  詳細については、「[レンダリングの動作 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)」を参照してください。  
   
-## 参照  
- [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/drillthrough, drilldown, subreports, and nested data regions.md)   
+## <a name="see-also"></a>参照  
+ [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)   
  [対話的な並べ替え、ドキュメント マップ、およびリンク (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   

@@ -1,30 +1,35 @@
 ---
-title: "SharePoint Web アプリケーションのレポート サーバー操作に対する権限を設定する | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "権限 [Reporting Services]、SharePoint 統合モード"
-  - "SharePoint 統合 [Reporting Services]、権限"
-  - "SharePoint 統合 [レポート ビルダー]"
-  - "セキュリティ [Reporting Services]、SharePoint 統合モード"
-  - "レポート ビルダー 1.0、SharePoint 統合"
-  - "モデル アイテムのセキュリティ [Reporting Services]"
+title: "SharePoint Web アプリケーションのレポート サーバー操作に対する権限を設定する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- SharePoint integration [Reporting Services], permissions
+- SharePoint integration [Report Builder]
+- security [Reporting Services], SharePoint integrated mode
+- Report Builder 1.0, SharePoint integration
+- model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 caps.latest.revision: 17
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 17
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d6d0c434fbac82990ad43e0b631cc7e418e47db8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# SharePoint Web アプリケーションのレポート サーバー操作に対する権限を設定する
+# <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>SharePoint Web アプリケーションのレポート サーバー操作に対する権限を設定する
   SharePoint 統合モードで動作しているレポート サーバーの場合、レポート、レポート モデル、および共有データ ソースの表示と管理の方法は、SharePoint サイトで定義されたセキュリティ設定で決定されます。 既定の SharePoint グループ、権限レベル、および権限の割り当てを使用している場合は、現在のセキュリティ設定を使用して、レポートやその他のドキュメントを操作できます。  
   
  必要とするアクセスのレベルが既定のセキュリティ設定で提供されない場合は、特定の操作に必要な権限の情報を以下のセクションで参照してください。  
@@ -51,7 +56,7 @@ caps.handback.revision: 17
   
  あらかじめ定義された権限レベルを使用する場合、フル コントロール、デザイン、投稿、読み取り、および制限付きアクセスには既に上記の権限が含まれているので、必要な操作はありません。 ただし、カスタム権限レベルを使用したり、特定のユーザーまたはグループに割り当てた権限を編集したりする場合は、権限を手動で追加する必要があります。  
   
- "ユーザー情報の参照" 権限があると、レポート サーバーは、アイテムの作成者やそのアイテムを最後に変更したユーザーに関する情報を返すことができます。 この権限がないと、レポート サーバーは次のエラーを返します。 "参照操作におけるエラー : "レポート サーバーに SharePoint エラーが発生しました。 ---> System.UnauthorizedAccessException: アクセスは拒否されました” パブリッシュ操作におけるエラー: "ユーザー '\<domain>\\<user\>' には、この操作を行うのに必要な権限が与えられていません。"  
+ "ユーザー情報の参照" 権限があると、レポート サーバーは、アイテムの作成者やそのアイテムを最後に変更したユーザーに関する情報を返すことができます。 この権限がないと、レポート サーバーは次のエラーを返します。 "参照操作におけるエラー : "レポート サーバーに SharePoint エラーが発生しました。 ---> System.UnauthorizedAccessException: アクセスは拒否されました” パブリッシュ操作における、エラー:"ユーザーに与えられるアクセス許可 '\<ドメイン >\\< ユーザー\>' 不十分なため、この操作を実行します"。  
   
 ##  <a name="permissionReports"></a> レポートの表示と管理の権限  
  レポート定義の権限は、レポートが含まれているライブラリのリスト権限によって定義されますが、個々のレポートに対して権限を設定してアクセスを制限することもできます。 次の表に、作業の一覧と、それぞれの作業をサポートする権限を示します。  
@@ -81,12 +86,12 @@ caps.handback.revision: 17
   
 |タスク|権限|  
 |----------|----------------|  
-|レポート ビルダーを起動する。|レポート ビルダーへのアクセスを制御するために明示的に使用される権限はありません。 レポート サーバー統合が構成されており、アイテムをライブラリに追加する権限があれば、レポート ビルダーは利用可能です。 レポート ビルダーをライブラリの **[新規作成]** メニューから起動するには、コンテンツの種類としてレポート ビルダーを登録する必要があります。 詳細については、「[SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」を参照してください。|  
+|レポート ビルダーを起動する。|レポート ビルダーへのアクセスを制御するために明示的に使用される権限はありません。 レポート サーバー統合が構成されており、アイテムをライブラリに追加する権限があれば、レポート ビルダーは利用可能です。 レポート ビルダーをライブラリの **[新規作成]** メニューから起動するには、コンテンツの種類としてレポート ビルダーを登録する必要があります。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」を参照してください。|  
 |モデルまたは共有データ ソースをアップロードする。|ファイルの格納先となるライブラリに対する "**アイテムの追加** "。|  
 |モデルまたは依存する共有データ ソースを表示する。|ファイルが含まれているライブラリに対する "**アイテムの表示** "。<br /><br /> モデルにモデル アイテム セキュリティが含まれている場合、ユーザーには対象モデルに対する " **権限の列挙** " 権限も必要になります。|  
-|モデルを共有データ ソースから生成する。|モデルを生成する基になる共有データ ソース (.rsds) ファイルが含まれているライブラリに対する "**アイテムの追加**"。|  
-|モデル内で特定のモデル アイテムに対する権限を設定する。|ライブラリおよびレポート モデル (.smdl) ファイルが含まれているサイトに対する "**権限の管理**"。|  
-|レポート ビルダーにモデルを読み込む。|レポート モデル (.smdl) ファイルに対する "**アイテムの編集**"。|  
+|モデルを共有データ ソースから生成する。|モデルを生成する基になる共有データ ソース (.rsds) ファイルが含まれているライブラリに対する "**アイテムの追加** "。|  
+|モデル内で特定のモデル アイテムに対する権限を設定する。|ライブラリおよびレポート モデル (.smdl) ファイルが含まれているサイトに対する "**権限の管理** "。|  
+|レポート ビルダーにモデルを読み込む。|レポート モデル (.smdl) ファイルに対する "**アイテムの編集** "。|  
 |レポート ビルダーでレポート定義を作成し、レポートをライブラリに保存する。|ファイルをライブラリに保存するための "**アイテムの追加** "。|  
 |レポート ビルダーでレポートを編集する。|レポート定義ファイルに対する "**アイテムの編集** "。|  
   
@@ -120,18 +125,18 @@ caps.handback.revision: 17
   
 |処理手順|権限|  
 |-----------|----------------|  
-|共有データ ソースを作成する。|共有データ ソースが含まれているライブラリに対する "**アイテムの追加** "。 ライブラリの [新規作成] メニューから新しい共有データ ソースを作成できます。 そのためには、コンテンツの種類としてレポート データ ソースをライブラリに登録する必要があります。 詳細については、「[SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」を参照してください。|  
+|共有データ ソースを作成する。|共有データ ソースが含まれているライブラリに対する "**アイテムの追加** "。 ライブラリの [新規作成] メニューから新しい共有データ ソースを作成できます。 そのためには、コンテンツの種類としてレポート データ ソースをライブラリに登録する必要があります。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」を参照してください。|  
 |共有データ ソースを編集する。|共有データ ソースが含まれているライブラリまたは共有データ ソース自体に対する "**アイテムの編集** "。|  
 |共有データ ソースを削除する。|共有データ ソースが含まれているライブラリまたは共有データ ソース自体に対する "**アイテムの削除** "。|  
 |レポートに共有データ ソース (.rsds) を使用する。|レポート、またはレポートが含まれているライブラリに対する "**アイテムの編集** "。 レポートのデータ ソース プロパティを設定する一環として、共有データ ソースを選択します。|  
 |共有データ ソースからレポート モデルを生成する。|レポート モデルの格納先となるライブラリに対する "**アイテムの追加** "。|  
 |レポート モデルを削除する。|レポート モデルが含まれているライブラリまたはレポート モデル自体に対する "**アイテムの削除** "。|  
-|モデル内で特定のモデル アイテムに対する権限を設定する。|ライブラリおよびレポート モデル (.smdl) ファイルが含まれているサイトに対する "**権限の管理**"。|  
+|モデル内で特定のモデル アイテムに対する権限を設定する。|ライブラリおよびレポート モデル (.smdl) ファイルが含まれているサイトに対する "**権限の管理** "。|  
   
 > [!NOTE]  
 >  レポート モデルを編集するための権限はありません。 レポート モデルを生成または削除することはできますが、SharePoint サイト内から編集することはできません。 レポート モデルを編集するには、SharePoint で設定した権限の影響を受けないクライアント作成ツールのモデル デザイナーが必要です。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   

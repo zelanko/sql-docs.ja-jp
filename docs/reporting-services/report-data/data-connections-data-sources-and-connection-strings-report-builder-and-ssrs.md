@@ -1,38 +1,42 @@
 ---
-title: "データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "接続 [Reporting Services]、データ ソース"
-  - "レポート [Reporting Services]、データ"
-  - "式 [Reporting Services]、データ ソース"
-  - "データ ソース [Reporting Services]、接続"
-  - "接続文字列 [Reporting Services]"
-  - "共有データ ソース [Reporting Services]"
-  - "Reporting Services、データ ソース"
-  - "ログイン [Reporting Services]"
+title: "データ接続、データ ソース、接続文字列レポート ビルダー SSRS |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 05/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connections [Reporting Services], data sources
+- reports [Reporting Services], data
+- expressions [Reporting Services], data sources
+- data sources [Reporting Services], connections
+- connection strings [Reporting Services]
+- shared data sources [Reporting Services]
+- Reporting Services, data sources
+- logins [Reporting Services]
 ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 caps.latest.revision: 118
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 116
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 51be2879461864ce67992e12d7cfd95014e03e40
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] および  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートにデータを含めるには、最初に *データ ソース* および *データセット*を作成する必要があります。 このトピックでは、データ ソースの種類、データ ソースの作成方法、およびデータ ソースの資格情報に関連する重要な情報について説明します。 データ ソースには、データ ソースの種類、接続情報、および使用する資格情報の種類が含まれています。 データ ソースには、埋め込みと共有の 2 種類があります。 埋め込みデータ ソースは、レポート内で定義され、そのレポートでのみ使用されます。 共有データ ソースは、レポートとは別のアイテムとして定義され、複数のレポートで使用できます。 詳細については、「[埋め込みおよび共有のデータ接続またはデータ ソース (レポート ビルダーおよび SSRS)](../Topic/Embedded%20and%20Shared%20Data%20Connections%20or%20Data%20Sources%20\(Report%20Builder%20and%20SSRS\).md)」および「[埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード|  
-  
+# <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)][!INCLUDE [ssrs-appliesto-sharepoint-2013-2016i]./../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] および  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートにデータを含めるには、最初に *データ ソース* および *データセット*を作成する必要があります。 このトピックでは、データ ソースの種類、データ ソースの作成方法、およびデータ ソースの資格情報に関連する重要な情報について説明します。 データ ソースには、データ ソースの種類、接続情報、および使用する資格情報の種類が含まれています。 データ ソースには、埋め込みと共有の 2 種類があります。 埋め込みデータ ソースは、レポート内で定義され、そのレポートでのみ使用されます。 共有データ ソースは、レポートとは別のアイテムとして定義され、複数のレポートで使用できます。 詳細については、「[埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。  
+
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
   
@@ -47,7 +51,7 @@ caps.handback.revision: 116
   
      システム管理者は、別のデータ処理拡張機能および .NET Framework データ プロバイダーをインストールおよび設定できます。 詳細については、「[データ処理拡張機能と .NET Framework データ プロバイダー (SSRS)](../../reporting-services/report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md)」を参照してください。  
   
-     <xref:Microsoft.ReportingServices.DataProcessing> API を使用してデータ処理拡張機能を作成すると、その他の種類のデータ ソースもサポートできます。  
+     開発者が使用できる、 <xref:Microsoft.ReportingServices.DataProcessing> API を他の種類のデータ ソースをサポートするためにデータ処理拡張機能を作成します。  
   
 -   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]で、レポート サーバーまたは SharePoint サイト上の保存先を参照して共有データ ソースを選択するか、または、レポートに埋め込みデータ ソースを作成します。 共有データ ソースは、 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]で作成することはできません。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]でカスタム データ拡張機能を使用することはできません。  
   
@@ -55,16 +59,16 @@ caps.handback.revision: 116
   
 |Description|埋め込み<br /><br /> [データ ソース]|Shared<br /><br /> [データ ソース]|  
 |-----------------|------------------------------|----------------------------|  
-|データ接続がレポート定義に埋め込まれる|![使用可能](../../reporting-services/report-data/media/greencheck.png "使用可能")||  
-|レポート サーバー上のデータ接続へのポインターがレポート定義に埋め込まれる||![使用可能](../../reporting-services/report-data/media/greencheck.png "使用可能")|  
-|レポート サーバー上で管理|![使用可能](../../reporting-services/report-data/media/greencheck.png "使用可能")|![使用可能](../../reporting-services/report-data/media/greencheck.png "使用可能")|  
-|共有データセットに必要||![使用可能](../../reporting-services/report-data/media/greencheck.png "使用可能")|  
-|コンポーネントに必要||![使用可能](../../reporting-services/report-data/media/greencheck.png "使用可能")|  
+|データ接続がレポート定義に埋め込まれる|![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")||  
+|レポート サーバー上のデータ接続へのポインターがレポート定義に埋め込まれる||![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")|  
+|レポート サーバー上で管理|![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")|![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")|  
+|共有データセットに必要||![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")|  
+|コンポーネントに必要||![使用可能な](../../reporting-services/report-data/media/greencheck.gif "使用可能な")|  
   
 ##  <a name="bkmk_DataConnections"></a> 組み込みデータ拡張機能  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の既定のデータ拡張機能には、次の種類のデータ接続が含まれます。  
   
--   Microsoft SQL Server  
+-   Microsoft SQL Server と Microsoft Azure SQL Database
   
 -   Microsoft SQL Server Analysis Services  
   
@@ -92,7 +96,7 @@ caps.handback.revision: 116
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でサポートされるデータ ソースおよびバージョンの一覧については、「[Reporting Services でサポートされるデータ ソース (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」を参照してください。  
   
-## データ:  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
+## <a name="data-in-includessrbnoversionincludesssrbnoversion-mdmd"></a>データ: [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
  ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
   
 1.  **レポート データ ペインのデータ ソース** 埋め込みデータ ソースを作成するか、共有データ ソースを追加すると、レポート データ ペインにデータ ソースが表示されます。  
@@ -103,7 +107,7 @@ caps.handback.revision: 116
   
 4.  **資格情報** 資格情報は、接続文字列とは別個に管理されます。  
   
-5.  **データ拡張機能/データ プロバイダー**データへの接続は、複数のデータ アクセス レイヤーを通じて行われる場合があります。  
+5.  **データ拡張機能/データ プロバイダー** データへの接続は、複数のデータ アクセス レイヤーを通じて行われる場合があります。  
   
 6.  **外部データ ソース** リレーショナル データベース、多次元データベース、SharePoint リスト、Web サービス、またはレポート モデルからデータを取得します。  
   
@@ -113,13 +117,12 @@ caps.handback.revision: 116
  > [!NOTE]  
 >  [Connectionstrings.com](http://www.connectionstrings.com/) では、接続文字列の別の例を見ることができます。 
   
-|**データ ソース**|**例**|**Description**|  
+|**Data source**|**例**|**Description**|  
 |---------------------|-----------------|---------------------|  
-|ローカル サーバーの SQL Server データベース|`data source="(local)";initial catalog=AdventureWorks`|データ ソースの種類を **Microsoft SQL Server**に設定します。 詳細については、「[SQL Server の接続の種類 (SSRS)](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)」を参照してください。|  
-|ローカル サーバーの SQL Server データベース|`data source="(local)";initial catalog=AdventureWorks`|データ ソースの種類を **Microsoft SQL Server**に設定します。|  
+|ローカル サーバーの SQL Server データベース|`data source="(local)";initial catalog=AdventureWorks`|データ ソースの種類を **Microsoft SQL Server**に設定します。 詳細については、「[SQL Server の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)」を参照してください。|  
 |SQL Server インスタンス<br /><br /> データベース (database)|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|データ ソースの種類を **Microsoft SQL Server**に設定します。|  
 |SQL Server Express データベース|`Data Source=localhost\MSSQL13.SQLEXPRESS; Initial Catalog=AdventureWorks`|データ ソースの種類を **Microsoft SQL Server**に設定します。|  
-|[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (クラウド内)|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|データ ソースの種類を **Windows Azure SQL Database**に設定します。 詳細については、「[SQL Azure の接続の種類 (SSRS)](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)」を参照してください。|  
+|Azure SQL データベース|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|データ ソースの種類 'éý' **Microsoft Azure SQL Database**です。 詳細については、「[SQL Azure の接続の種類 (SSRS)](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)」を参照してください。|  
 |SQL Server 並列データ ウェアハウス|`HOST=<IP address>;database= AdventureWorks; port=<port>`|データ ソースの種類を **Microsoft SQL Server Parallel Data Warehouse**に設定します。 詳細については、「[SQL Server 並列データ ウェアハウスの接続の種類 (SSRS)](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)」を参照してください。|  
 |ローカル サーバーの Analysis Services データベース|`data source=localhost;initial catalog=Adventure Works DW`|データ ソースの種類を **Microsoft SQL Server Analysis Services**に設定します。 詳細については、「[MDX のための Analysis Services の接続の種類 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)」または「[DMX のための Analysis Services の接続の種類 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)」を参照してください。|  
 |Sales パースペクティブを持つ Analysis Services テーブル モデル データベース|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|データ ソースの種類を **Microsoft SQL Server Analysis Services**に設定します。 cube= 設定にパースペクティブの名前を指定します。 詳細については、「[パースペクティブ (SSAS テーブル)](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)」を参照してください。|  
@@ -129,14 +132,14 @@ caps.handback.revision: 116
 |Oracle サーバー|`data source=myserver`|データ ソースの種類を **Oracle**に設定します。 レポート デザイナーがインストールされているコンピューターとレポート サーバーに、Oracle クライアント ツールがインストールされている必要があります。 詳細については、「[Oracle の接続の種類 (SSRS)](../../reporting-services/report-data/oracle-connection-type-ssrs.md)」を参照してください。|  
 |SAP NetWeaver BI データ ソース|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|データ ソースの種類を **SAP NetWeaver BI**に設定します。 詳細については、「[SAP NetWeaver BI の接続の種類 (SSRS)](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md)」を参照してください。|  
 |Hyperion Essbase データ ソース|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|データ ソースの種類を **Hyperion Essbase**に設定します。 詳細については、「[Hyperion Essbase の接続の種類 (SSRS)](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md)」を参照してください。|  
-|Teradata データ ソース|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|データ ソースの種類を **Teradata**に設定します。 接続文字列は、各フィールドが 1 ～ 3 桁の 4 つのフィールドで構成されるインターネット プロトコル (IP) アドレスです。 詳細については、「[Teradata の接続の種類 (SSRS)](../../reporting-services/report-data/teradata-connection-type-ssrs.md)」を参照してください。|  
-|Teradata データ ソース|`Database=` *\<データベース名>* `; data source=` *\<NN*N*>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|前の例と同様に、データ ソースの種類を **Teradata**に設定します。 Database タグで指定した既定のデータベースのみを使用して、データ間の関係を自動的に検出しないようにしてください。|  
+|Teradata データ ソース|`data source=`\<NNN >。\<NNN >。\<NNN >。\<NNN >`;`|データ ソースの種類を **Teradata**に設定します。 接続文字列は、各フィールドが 1 ～ 3 桁の 4 つのフィールドで構成されるインターネット プロトコル (IP) アドレスです。 詳細については、「[Teradata の接続の種類 (SSRS)](../../reporting-services/report-data/teradata-connection-type-ssrs.md)」を参照してください。|  
+|Teradata データ ソース|`Database=`*\<database name>* `; data source=` *\<NN*N*>.\<NNN >。\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|前の例と同様に、データ ソースの種類を **Teradata**に設定します。 Database タグで指定した既定のデータベースのみを使用して、データ間の関係を自動的に検出しないようにしてください。|  
 |XML データ ソース、Web サービス|`data source=http://adventure-works.com/results.aspx`|データ ソースの種類を **XML**に設定します。 接続文字列は、Web サービス記述言語 (WSDL) をサポートする Web サービスの URL です。 詳細については、「[ の接続の種類 (SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md)」を参照してください。|  
 |XML データ ソース、XML ドキュメント|`http://localhost/XML/Customers.xml`|データ ソースの種類を **XML**に設定します。 接続文字列は XML ドキュメントへの URL です。|  
 |XML データ ソース、埋め込み XML ドキュメント|*空*|データ ソースの種類を **XML**に設定します。 XML データはレポート定義に埋め込まれています。|  
 |SharePoint リスト|`data source=http://MySharePointWeb/MySharePointSite/`|データ ソースの種類を **SharePoint List**に設定します。|  
   
- **localhost** を使用してレポート サーバーに接続できない場合は、TCP/IP プロトコルのネットワーク プロトコルが有効になっていることを確認します。 詳細については、「 [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md)」を参照してください。  
+ **localhost**を使用してレポート サーバーに接続できない場合は、TCP/IP プロトコルのネットワーク プロトコルが有効になっていることを確認します。 詳細については、「 [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md)」を参照してください。  
   
  これらの種類のデータ ソースへの接続に必要な設定の詳細については、「[外部データ ソースのデータを追加する (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)」または「[Reporting Services でサポートされるデータ ソース (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」で、目的のデータ接続のトピックを参照してください。  
   
@@ -165,11 +168,12 @@ caps.handback.revision: 116
 -   データ ソースの一覧が同じデータベース スキーマを共有するようにする。 すべてのレポートのデザインは、スキーマ情報から始まります。 レポートの定義で使用されているスキーマと、実行時にレポートが使用する実際のスキーマが一致しないと、レポートが実行されない場合があります。  
   
 -   レポートをパブリッシュする前に、静的な接続文字列を式で置き換える。 レポートのデザインが完了するまでは、静的な接続文字列を式で置き換えません。 式を使用すると、レポート デザイナー内でクエリを実行できなくなります。 さらに、レポート データ ペイン内のフィールド一覧と、[パラメーター] の一覧が、自動的に更新されなくなります。  
-  
-## 参照  
- [共有データ ソースを作成、変更、および削除する (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
- [埋め込みデータ ソースを作成および変更する](../../reporting-services/report-data/create-and-modify-embedded-data-sources.md)   
- [配置プロパティを設定する (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
- [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
-  
-  
+
+## <a name="next-steps"></a>次の手順
+
+[作成、変更、および共有データ ソースを削除します。](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+[作成し、埋め込みデータ ソースの変更](../../reporting-services/report-data/create-and-modify-embedded-data-sources.md)   
+[配置プロパティを設定します。](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
+[レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+
+他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

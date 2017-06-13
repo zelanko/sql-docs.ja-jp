@@ -1,55 +1,40 @@
 ---
-title: "チュートリアル: レポートへのスパークラインの追加 (レポート ビルダー) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "チュートリアル: レポート (レポート ビルダー) へのスパーク ラインの追加 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c4cc42eaf9862f2154f598d6f91dafffa906c799
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# チュートリアル: レポートへのスパークラインの追加 (レポート ビルダー)
-[!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] のこのチュートリアルでは、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポート内にスパークライン グラフを含む基本的なテーブルを作成します。   
+
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>チュートリアル: レポートへのスパークラインの追加 (レポート ビルダー)
+
+[!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)]のこのチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポート内にスパークライン グラフを含む基本的なテーブルを作成します。   
   
-スパークラインとデータ バーは、小さい領域で多くの情報を伝達する小さい単純なグラフで、多くの場合、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] レポートで使用されます。 次の図に、ここで作成するレポートと同様のレポートを示します。  
+スパークラインとデータ バーは、小さい領域で多くの情報を伝達する小さい単純なグラフで、多くの場合、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] レポートで使用されます。 次の図に、ここで作成するレポートと同様のレポートを示します。  
   
 ![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
-   
-## <a name="BackToTop"></a>学習する内容  
-このチュートリアルでは、次の方法を学習します。  
-  
-1. [テーブルを使用したレポートを作成する](#CreateTable)  
-  
-2. [テーブルまたはマトリックス ウィザードでクエリおよびテーブル レイアウトを作成する](#Query)
- 
-    2a. (省略可能) [データに通貨の書式を設定する](#FormatCurrency)  
-  
-    2b. (省略可能) [データに日付の書式を設定する](#FormatDates)  
-  
-3. [スパークラインをテーブルに追加する](#Sparkline)  
-  
-4. [スパークラインを垂直方向および水平方向に揃える](#AlignSparklines)  
-  
-### その他のオプションの手順  
-7. [列幅を変更する](#Width)  
-  
-8. [レポート タイトルを追加する](#Title)  
-  
-9. [レポートを保存する](#Save)  
-  
+     
 このチュートリアルの推定所要時間: 30 分。  
   
-## 必要条件  
+## <a name="requirements"></a>必要条件  
 要件に関する詳細については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/prerequisites-for-tutorials-report-builder.md)」を参照してください。  
   
 ## <a name="CreateTable"></a>1.テーブルを使用したレポートを作成する  
@@ -62,32 +47,32 @@ caps.handback.revision: 16
   
 2.  左ペインで、 **[新しいレポート]** が選択されていることを確認します。  
   
-3.  右ペインで、**[テーブルまたはマトリックス ウィザード]** をクリックします。  
+3.  右ペインで、 **[テーブルまたはマトリックス ウィザード]**をクリックします。  
   
-4.  **[データセットの選択]** ページで、**[データセットを作成する]** > **[次へ]** の順に選択します。 **[データ ソースへの接続の選択]** ページが開きます。  
+4.  **[データセットの選択]** ページで、 **[データセットを作成する]** > **[次へ]**の順に選択します。 **[データ ソースへの接続の選択]** ページが開きます。  
   
     > [!NOTE]  
-    > このチュートリアルでは、特定のデータは必要ありません。[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] データベースへの接続だけが必要です。 **[データ ソース接続]** の一覧に既にデータ ソース接続が表示されている場合は、データ ソース接続を選択して手順 10 に進みます。 詳細については、[「別の方法でデータ接続を取得する (レポート ビルダー)」](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)を参照してください。  
+    > このチュートリアルは、特定のデータを必要がないです。SQL Server データベースへの接続だけが必要です。 **[データ ソース接続]**の一覧に既にデータ ソース接続が表示されている場合は、データ ソース接続を選択して手順 10 に進みます。 詳細については、[「別の方法でデータ接続を取得する (レポート ビルダー)」](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)を参照してください。  
   
 5.  **[新規作成]**をクリックします。 **[データ ソースのプロパティ]** ダイアログ ボックスが表示されます。  
   
-6.  **[名前]** に、データ ソースの名前として「**Product Sales**」と入力します。  
+6.  **[名前]**に、データ ソースの名前として「 **Product Sales**」と入力します。  
   
-7.  **[接続の種類の選択]** で、**[Microsoft SQL Server]** が選択されていることを確認します。  
+7.  **[接続の種類の選択]**で、 **[Microsoft SQL Server]** が選択されていることを確認します。  
   
-8.  **[接続文字列]** に次のテキストを入力します。  
+8.  **[接続文字列]**に次のテキストを入力します。  
   
     `Data Source\=<servername>`  
   
-    式 `<servername>` には、たとえば Report001 など、SQL Server データベース エンジンのインスタンスがインストールされているコンピューターを指定します。 レポート データは SQL Server のデータベースから抽出されるのではないので、データベース名を含める必要はありません。 指定したサーバー上の既定のデータベースを使用して、クエリが解析されます。  
+    式 `<servername>`には、たとえば Report001 など、SQL Server データベース エンジンのインスタンスがインストールされているコンピューターを指定します。 レポート データは SQL Server のデータベースから抽出されるのではないので、データベース名を含める必要はありません。 指定したサーバー上の既定のデータベースを使用して、クエリが解析されます。  
   
-9. **[資格情報]** をクリックします。 外部データ ソースへのアクセスに必要な資格情報を入力します。  
+9. **[資格情報]**をクリックします。 外部データ ソースへのアクセスに必要な資格情報を入力します。  
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
     **[データ ソースへの接続の選択]** ページに戻ります。  
   
-11. データ ソースに接続できることを確認するために、**[接続テスト]** をクリックします。  
+11. データ ソースに接続できることを確認するために、[ **接続テスト**] をクリックします。  
   
     "接続が正常に作成されました" というメッセージが表示されます。  
   
@@ -101,13 +86,13 @@ caps.handback.revision: 16
 > [!NOTE]  
 > このチュートリアルのクエリにはデータ値が含まれているため、外部のデータ ソースを必要としません。 このため、クエリが非常に長くなっています。 ビジネス環境でクエリにデータを含めることはありません。 これは、学習に使用することのみを目的としています。  
   
-### テーブル ウィザードでクエリおよびテーブル レイアウトを作成するには 
+### <a name="to-create-a-query-and-table-layout-in-the-table-wizard"></a>テーブル ウィザードでクエリおよびテーブル レイアウトを作成するには 
   
 1.  **[クエリのデザイン]** ページでは、リレーショナル クエリ デザイナーが開きます。 このチュートリアルでは、テキスト ベースのクエリ デザイナーを使用します。  
   
-2.  **[テキストとして編集]** をクリックします。 テキスト ベースのクエリ デザイナーは、クエリ ペインと結果ペインで構成されています。  
+2.  **[テキストとして編集]**をクリックします。 テキスト ベースのクエリ デザイナーは、クエリ ペインと結果ペインで構成されています。  
   
-3.  **[クエリ]** ボックスに、次の [!INCLUDE[tsql](../includes/tsql-md.md)] クエリを貼り付けます。  
+3.  [!INCLUDE[tsql](../includes/tsql-md.md)] [クエリ] **ボックスに、次の** クエリを貼り付けます。  
   
     ```  
     SELECT CAST('2015-01-04' AS date) as SalesDate, 'Accessories' as Subcategory,   
@@ -144,23 +129,23 @@ caps.handback.revision: 16
   
 4.  クエリ デザイナーのツール バーで、[実行] (**!**) をクリックします。  
   
-    **SalesDate**、**Subcategory**、**Product**、**Sales**、および **Quantity** の各フィールドを取得するクエリが実行され、結果セットが表示されます。  
+    **SalesDate**、 **Subcategory**、 **Product**、 **Sales**、および **Quantity**の各フィールドを取得するクエリが実行され、結果セットが表示されます。  
   
 5.  **[次へ]**をクリックします。  
   
-6.  **[フィールドの配置]** ページで、**Sales** を **[値]** にドラッグします。  
+6.  **[フィールドの配置]** ページで、 **Sales** を **[値]**にドラッグします。  
   
     **Sales** は Sum 関数を使用して集計されます。 値は [Sum(Sales)] です。  
   
-7.  **Product** を **[行グループ]** にドラッグします。  
+7.  **Product** を **[行グループ]**にドラッグします。  
   
-8.  **SalesDate** を **[列グループ]** にドラッグします。  
+8.  **SalesDate** を **[列グループ]**にドラッグします。  
 
     ![report-builder-sparkline-arrange-fields](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
   
 9. **[次へ]**をクリックします。  
   
-10. **[レイアウトの選択]** ページの **[オプション]** で、**[小計と総計を表示]** が選択されていることを確認します。  
+10. **[レイアウトの選択]** ページの **[オプション]**で、 **[小計と総計を表示]** が選択されていることを確認します。  
   
     ウィザードのプレビュー ペインに、3 行を含むテーブルが表示されます。 レポートを実行すると、各行は次のように表示されます。  
   
@@ -178,18 +163,18 @@ caps.handback.revision: 16
   
 14. テーブルがデザイン画面に追加されます。 テーブルには 3 列および 5 行が含まれています。  
   
-    グループ化ペインを確認します。 グループ化ペインが表示されない場合、**[表示]** メニューの **[グループ化]** をクリックします。 行グループ ペインに行グループ **Product** が表示されます。 列グループ ペインに列グループ **SalesDate** が表示されます。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
+    グループ化ペインを確認します。 グループ化ペインが表示されない場合、 **[表示]** メニューの **[グループ化]**をクリックします。 行グループ ペインに行グループ **Product**が表示されます。 列グループ ペインに列グループ **SalesDate**が表示されます。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
     
     ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
 15. **[実行]** をクリックして、レポートをプレビューします。  
 
 ### <a name="FormatCurrency"></a>2a. データに通貨の書式を設定する  
-既定では、**Sales** フィールドの集計データは通常の数値として表示されます。 このフィールドを書式設定して、数値を通貨として表示します。 書式設定したテキスト ボックスおよびプレースホルダー テキストのサンプル値を表示するには、**[プレースホルダーのスタイル]** の設定を切り替えます。  
+既定では、 **Sales** フィールドの集計データは通常の数値として表示されます。 このフィールドを書式設定して、数値を通貨として表示します。 書式設定したテキスト ボックスおよびプレースホルダー テキストのサンプル値を表示するには、 **[プレースホルダーのスタイル]** の設定を切り替えます。  
   
 1.  **[デザイン]** をクリックしてデザイン ビューに切り替えます。  
   
-2.  **SalesDate** 列の 2 行目 (列見出しの次の行) のセルをクリックします。 Ctrl キーを押しながら、`[Sum(Sales)]` を含むすべてのセルを選択します。 
+2.  **SalesDate** 列の 2 行目 (列見出しの次の行) のセルをクリックします。 Ctrl キーを押しながら、 `[Sum(Sales)]`を含むすべてのセルを選択します。 
 
     ![report-builder-select-sum-sales](../reporting-services/media/report-builder-select-sum-sales.png) 
   
@@ -197,12 +182,12 @@ caps.handback.revision: 16
 
     ![report-builder-placeholder-currency](../reporting-services/media/report-builder-placeholder-currency.png)
   
-    地域設定が英語 (米国) の場合、既定のサンプル テキストは [**$12,345.00**] です。 通貨値の例が表示されない場合は、**[数値]** グループで、**[プレースホルダーのスタイル]** > **[サンプルの値]** の順にクリックします。  
+    地域設定が英語 (米国) の場合、既定のサンプル テキストは [**$12,345.00**] です。 通貨値の例が表示されない場合は、 **[数値]** グループで、 **[プレースホルダーのスタイル]** > **[サンプルの値]**の順にクリックします。  
     
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
    
 ### <a name="FormatDates"></a>2b. (オプション) データに日付の書式を設定する  
-既定では、**SalesDate** フィールドには日付と時刻の情報が表示されます。 このフィールドを書式設定して、日付のみを表示できます。  
+既定では、 **SalesDate** フィールドには日付と時刻の情報が表示されます。 このフィールドを書式設定して、日付のみを表示できます。  
   
 1.  `[SalesDate]` が格納されたセルをクリックします。  
   
@@ -212,7 +197,7 @@ caps.handback.revision: 16
      
 4.  **[実行]** をクリックして、レポートをプレビューします。  
   
-**SalesDate** の値は既定の日付形式で表示され、**Sales** の集計値は通貨の形式で表示されます。   
+**SalesDate** の値は既定の日付形式で表示され、 **Sales** の集計値は通貨の形式で表示されます。   
   
 ## <a name="Sparkline"></a>3.スパークラインを追加する    
   
@@ -220,7 +205,7 @@ caps.handback.revision: 16
   
 2.  テーブルの合計列を選択します。  
   
-3.  右クリックして表示される **[列の挿入]** を選択してから、**[左]** をクリックします。  
+3.  右クリックして表示される **[列の挿入]**を選択してから、 **[左]**をクリックします。  
 
     ![report-builder-add-column-left](../reporting-services/media/report-builder-add-column-left.png)
   
@@ -228,17 +213,17 @@ caps.handback.revision: 16
 
     ![report-builder-insert-sparkline](../reporting-services/media/report-builder-insert-sparkline.png)
   
-5.  **[スパークラインの種類を選択]** で、**[列]** 行の最初のスパークラインが選択されていることを確認してから、**[OK]** をクリックします。  
+5.  **[スパークラインの種類を選択]** で、 **[列]** 行の最初のスパークラインが選択されていることを確認してから、 **[OK]**をクリックします。  
   
 6.  スパークラインをクリックして、グラフ データ ペインを表示します。  
   
-7.  [値] ボックスのプラス記号 (+) をクリックしてから、**Sales** をクリックします。 
+7.  [値] ボックスのプラス記号 (+) をクリックしてから、 **Sales**をクリックします。 
 
     ![report-builder-sparkline-values](../reporting-services/media/report-builder-sparkline-values.png) 
   
     **Sales** フィールドの値がスパークラインの値になります。  
   
-8.  [カテゴリ グループ] ボックスのプラス記号 (+) をクリックしてから、**SalesDate** をクリックします。  
+8.  [カテゴリ グループ] ボックスのプラス記号 (+) をクリックしてから、 **SalesDate**をクリックします。  
   
 9. **[実行]** をクリックして、レポートをプレビューします。  
   
@@ -253,7 +238,7 @@ caps.handback.revision: 16
    
 1.  **[デザイン]** をクリックしてデザイン ビューに戻ります。  
   
-2.  スパークラインを右クリックし、**[縦軸のプロパティ]** をクリックします。  
+2.  スパークラインを右クリックし、 **[縦軸のプロパティ]**をクリックします。  
   
 3.  **[軸を整列する]** チェック ボックスをオンにします。 Tablix1 は、リスト内の唯一のオプションです。  
   
@@ -261,7 +246,7 @@ caps.handback.revision: 16
   
 4.  **[OK]**をクリックします。  
   
-5.  スパークラインを右クリックし、**[横軸のプロパティ]** をクリックします。  
+5.  スパークラインを右クリックし、 **[横軸のプロパティ]**をクリックします。  
   
 6.  **[軸を整列する]** チェック ボックスをオンにします。 Tablix1 は、リスト内の唯一のオプションです。 
   
@@ -280,7 +265,7 @@ caps.handback.revision: 16
   
 各行の垂直方向の領域を小さくするには、列の幅を広げ、列で想定されるテキスト ボックスの内容が 1 行に収まるようにします。  
   
-### 列の幅を変更するには  
+### <a name="to-change-the-width-of-columns"></a>列の幅を変更するには  
   
 1.  **[デザイン]** をクリックしてデザイン ビューに戻ります。  
   
@@ -295,24 +280,24 @@ caps.handback.revision: 16
   
 テキストの語句や文字のフォントのスタイル、サイズ、および色を変更して、テキストをさらに強調することもできます。 詳細については、「[テキスト ボックス内のテキストの書式設定 (レポート ビルダーおよび SSRS)](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)」を参照してください。  
   
-### レポート タイトルを追加するには  
+### <a name="to-add-a-report-title"></a>レポート タイトルを追加するには  
   
-1.  デザイン画面で、**[クリックしてタイトルを追加]** をクリックします。  
+1.  デザイン画面で、 **[クリックしてタイトルを追加]**をクリックします。  
   
-2.  「**Sales by Date**」と入力し、テキスト ボックスの外側をクリックします。  
+2.  「 **Sales by Date**」と入力し、テキスト ボックスの外側をクリックします。  
   
 3.  **Product Sales** を含むテキスト ボックスを選択します。  
   
 4.  [ホーム] タブで、**[フォント]** グループ、**[色]** の順に進み、**[青緑]** を選択します。  
   
-7.  **[太字]** を選択します。  
+7.  **[太字]**を選択します。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Save"></a>9.レポートを保存する  
-レポートをレポート サーバーまたは自分のコンピューターに保存します。 レポート サーバーに保存しない場合は、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のいくつかの機能 (レポート パーツ、サブレポートなど) が使用できなくなります。  
+レポートをレポート サーバーまたは自分のコンピューターに保存します。 レポート サーバーに保存しない場合は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のいくつかの機能 (レポート パーツ、サブレポートなど) が使用できなくなります。  
   
-### レポート サーバーにレポートを保存するには  
+### <a name="to-save-the-report-on-a-report-server"></a>レポート サーバーにレポートを保存するには  
   
 1.  **レポート ビルダー** のボタンの **[名前を付けて保存]**をクリックします。  
   
@@ -322,26 +307,27 @@ caps.handback.revision: 16
   
     "レポート サーバーに接続しています" というメッセージが表示されます。 接続が完了すると、レポート サーバー管理者がレポートの既定の場所として指定したレポート フォルダーのコンテンツが表示されます。  
   
-4.  **[名前]** に入力されている既定の名前を「**Product Sales**」に置き換えます。  
+4.  **[名前]**に入力されている既定の名前を「 **Product Sales**」に置き換えます。  
   
 5.  **[保存]**をクリックします。  
   
 レポートがレポート サーバーに保存されます。 接続しているレポート サーバーの名前がウィンドウ下部のステータス バーに表示されます。  
   
-### コンピューターにレポートを保存するには  
+### <a name="to-save-the-report-on-your-computer"></a>コンピューターにレポートを保存するには  
   
 1.  **レポート ビルダー** のボタンの **[名前を付けて保存]**をクリックします。  
   
-2.  **[デスクトップ]**、**[マイ ドキュメント]**、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
+2.  **[デスクトップ]**、 **[マイ ドキュメント]**、または **[マイ コンピューター]**をクリックして、レポートを保存するフォルダーを参照します。  
   
-3.  **[名前]** に入力されている既定の名前を「**Product Sales**」に置き換えます。  
+3.  **[名前]**に入力されている既定の名前を「 **Product Sales**」に置き換えます。  
   
 4.  **[保存]**をクリックします。  
   
-## 次の手順  
-これで、スパークライン グラフを使ったテーブル レポートを作成するチュートリアルを終了します。 スパークラインの詳細については、[「スパークラインとデータ バー (レポート ビルダーおよび SSRS)」](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md) を参照してください。  
+## <a name="next-steps"></a>次の手順  
+
+これで、スパークライン グラフを使ったテーブル レポートを作成するチュートリアルを終了します。 スパーク ラインの詳細については、次を参照してください。[スパーク ラインとデータ バー](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)です。  
   
-## 参照  
 [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md) 
 [SQL Server 2016 のレポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
+
+他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

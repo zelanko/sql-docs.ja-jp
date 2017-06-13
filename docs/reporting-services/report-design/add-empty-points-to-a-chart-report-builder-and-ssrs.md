@@ -1,23 +1,28 @@
 ---
-title: "空のポイントのグラフへの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "空のポイント、グラフを追加 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: acc67d54c387097785317456b70a5936abf05d43
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# 空のポイントのグラフへの追加 (レポート ビルダーおよび SSRS)
+# <a name="add-empty-points-to-a-chart-report-builder-and-ssrs"></a>空のポイントのグラフへの追加 (レポート ビルダーおよび SSRS)
 NULL 値は、系列内のデータ ポイント間の空白 (すきま) としてグラフに表示されます。 改ページ調整された [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートの空のポイントとは、NULL 値によって作成された空白に挿入できるデータ ポイントのことです。  
   
  既定では、空のポイントは、値が含まれている前のデータ ポイントと次のデータ ポイントの平均値を求めることによって計算されます。 この既定の動作を変更して、すべての空のポイントが値ゼロのデータ ポイントとして挿入されるようにすることもできます。  
@@ -27,7 +32,7 @@ NULL 値は、系列内のデータ ポイント間の空白 (すきま) とし�
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 空のポイントをグラフ上で指定するには  
+## <a name="to-specify-empty-points-on-a-chart"></a>空のポイントをグラフ上で指定するには  
   
 1.  プロパティ ペインを開きます。  
   
@@ -37,7 +42,7 @@ NULL 値は、系列内のデータ ポイント間の空白 (すきま) とし�
   
 4.  Color プロパティの色の値を選択します。  
   
-5.  **[EmptyPoint]**ノードで [Marker] ノードを展開します。  
+5.  **[EmptyPoint]** ノードで [Marker] ノードを展開します。  
   
 6.  MarkerType プロパティのマーカーの種類を選択します。  
   
@@ -48,10 +53,10 @@ NULL 値は、系列内のデータ ポイント間の空白 (すきま) とし�
   
     1.  プロパティ ペインで、 **[CustomAttributes]** ノードを展開します。  
   
-    2.  EmptyPointValue プロパティを設定します。 前のデータ ポイントと次のデータ ポイントの平均値で空のポイントを挿入するには、**[Average]** を選択します。 値ゼロのデータ ポイントとして空のポイントを挿入するには、**[Zero]** を選択します。  
+    2.  EmptyPointValue プロパティを設定します。 前のデータ ポイントと次のデータ ポイントの平均値で空のポイントを挿入するには、 **[Average]**を選択します。 値ゼロのデータ ポイントとして空のポイントを挿入するには、 **[Zero]**を選択します。  
   
-## 「  
- [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+## <a name="see-also"></a>「  
+ [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [グラフの種類 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [グラフへのスケール区切りの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-scale-breaks-to-a-chart-report-builder-and-ssrs.md)   
  [グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  

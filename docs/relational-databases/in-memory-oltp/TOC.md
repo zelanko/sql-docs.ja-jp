@@ -1,6 +1,7 @@
 # [概要](in-memory-oltp-in-memory-optimization.md)  
 # [クイック スタート 1: Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](survey-of-initial-areas-in-in-memory-oltp.md)  
-# [概要と使用シナリオ](overview-and-usage-scenarios.md)  
+# [概要と使用シナリオ](overview-and-usage-scenarios.md)
+# [SQL Server 2016 のホワイト ペーパーの内部構造](sql-server-in-memory-oltp-internals-for-sql-server-2016.md) 
 # [SQL Server でのインメモリ OLTP 機能の採用計画](plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
 # [メモリ最適化テーブルを使用するための要件](requirements-for-using-memory-optimized-tables.md)  
 # [インメモリ OLTP のコード サンプル](in-memory-oltp-code-samples.md)  
@@ -74,4 +75,5 @@
 ## [計算列の移行](migrating-computed-columns.md)  
 ## [トリガーの移行](migrating-triggers.md)  
 ## [複数データベースにまたがるクエリ](cross-database-queries.md)  
-## [メモリ最適化テーブルへの IDENTITY の実装](implementing-identity-in-a-memory-optimized-table.md)  
+## [メモリ最適化テーブルへの IDENTITY の実装](implementing-identity-in-a-memory-optimized-table.md)
+  

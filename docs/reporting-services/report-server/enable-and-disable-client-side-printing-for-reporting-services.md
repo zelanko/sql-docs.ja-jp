@@ -1,45 +1,44 @@
 ---
-title: "Reporting Services のクライアント側印刷機能の有効化と無効化 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/14/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pdf"
-  - "ビューアー"
-  - "レポート ビューアー"
-  - "ツール バー●つーるばー○"
+title: "有効にして、Reporting Services のクライアント側印刷機能を無効にする |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pdf
+- viewer
+- reportviewer
+- toolbar
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 14
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ee650a09b57ae92abda378fea6fc780b550fbac4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services のクライアント側印刷機能の有効化と無効化
+
+# <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Reporting Services のクライアント側印刷機能の有効化と無効化
+
   レポート ビューアーのツールバーにある印刷ボタンをクリックすると、ブラウザーに表示される [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートのクライアント側印刷機能で Portable Document Format (PDF) 形式が使用されます。 新しいリモート印刷の動作では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に含まれている PDF 表示拡張機能を使用して、レポートを PDF 形式で表示します。 PDF 形式のレポートはダウンロードできます。また、PDF ファイルを表示するためのアプリケーションがインストールされている場合は、印刷ボタンをクリックすると、PDF ファイルのページ サイズ、印刷の向き、プレビュー画像など、ページに共通の設定項目が印刷ダイアログ ボックスに表示されます。 クライアント側印刷機能は既定で有効になっていますが、無効にして使用できないようにすることもできます。  
   
- 以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で使用されていた ActiveX コントロールは、レポート サーバーからクライアント コンピューターにダウンロードする必要がありました。 レポート サーバーを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードしても、この印刷コントロールはレポート サーバーまたはクライアント コンピューターから削除されません。  
-  
-##  <a name="bkmk_top"></a> このトピックの内容  
-  
--   [印刷時の動作](#bkmk_clientside_printexpereince)  
-  
--   [クライアント側印刷機能のトラブルシューティング](#bkmk_troubleshoot_clientsideprinting)  
-  
--   [クライアント側印刷機能を有効または無効にする](#bkmk_enable)  
-  
+ 以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で使用されていた ActiveX コントロールは、レポート サーバーからクライアント コンピューターにダウンロードする必要がありました。 レポート サーバーを SQL Server 2016 にアップグレードする場合、印刷コントロールは、レポート サーバーまたはクライアント コンピューターからは削除されません。  
+
 ##  <a name="bkmk_clientside_printexpereince"></a> 印刷時の動作  
- レポート ビューアーのツールバーで印刷 ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") ボタンをクリックしたときの動作は、クライアント コンピューターにインストールされている PDF 閲覧アプリケーションの種類と、使用しているブラウザーの種類によって異なります。   クライアント コンピューターの環境に応じて、PDF ファイルのダウンロード、ダイアログ ボックスでの印刷オプションの設定、またはその両方を行うことができます。  
+ 印刷をクリックすると![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print")ボタン、レポート ビューアー ツールバーでのエクスペリエンスは新機能によって異なります。PDF 閲覧アプリケーションがクライアント コンピューターにインストールされているブラウザーを使用しています。   クライアント コンピューターの環境に応じて、PDF ファイルのダウンロード、ダイアログ ボックスでの印刷オプションの設定、またはその両方を行うことができます。  
   
- ![レポート ツール バー](../../reporting-services/media/ssrs-htmlviewer-toolbar.gif "レポート ツール バー")  
+ ![レポート ツールバー](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "レポート ツールバー")  
   
 |||  
 |-|-|  
@@ -51,7 +50,7 @@ caps.handback.revision: 14
 ##  <a name="bkmk_troubleshoot_clientsideprinting"></a> クライアント側印刷機能のトラブルシューティング  
  レポート ビューアーのツールバーで印刷ボタンが無効になっている場合は、次のことを確認します。  
   
--   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のレポート サーバーでクライアント側印刷機能が無効になっています。 このセクションの「[クライアント側印刷機能を有効または無効にする](#bkmk_enable)」セクションを参照してください。  
+-   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のレポート サーバーでクライアント側印刷機能が無効になっています。 このセクションの「  [クライアント側印刷機能を有効または無効にする](#bkmk_enable) 」セクションを参照してください。  
   
 -   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] の PDF 表示拡張機能が無効になっています。 `<Extension Name="PDF"` rsreportserver.config **ファイルの** セクションを確認してください。  
   
@@ -68,7 +67,7 @@ caps.handback.revision: 14
   
     2.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でレポート サーバー インスタンスに接続します。  
   
-    3.  レポート サーバー ノードを右クリックして、**[プロパティ]** をクリックします。 **[プロパティ]** オプションが無効になっている場合は、管理者特権を使用して [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を開始したことを確認してください。  
+    3.  レポート サーバー ノードを右クリックして、 **[プロパティ]**をクリックします。 **[プロパティ]** オプションが無効になっている場合は、管理者特権を使用して [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を開始したことを確認してください。  
   
     4.  **[詳細設定]**をクリックします。  
   
@@ -96,7 +95,7 @@ caps.handback.revision: 14
   
  次のサンプル スクリプトは、クライアント側印刷機能を無効にする方法の一例を示しています。 この [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] コードをコンパイルして実行すると、 **EnableClientPrinting** プロパティが **False**に設定されます。 コードの実行後、IIS を再起動してください。  
   
-### サンプル スクリプト  
+### <a name="sample-script"></a>サンプル スクリプト  
   
 ```  
 Imports System  
@@ -119,6 +118,7 @@ Dim rs As New ReportingService()
         End Try  
     End Sub 'Main  
 End Class 'Sample  
-```  
-  
-  
+```
+
+他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+

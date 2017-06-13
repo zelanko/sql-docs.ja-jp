@@ -1,31 +1,36 @@
 ---
-title: "フォルダーへのファイルのアップロード | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "レポートのパブリッシュ [Reporting Services], ファイルのアップロード"
-  - "レポート [Reporting Services], パブリッシュ"
-  - "レポートのアップロード [Reporting Services]"
-  - "ファイルのアップロード [Reporting Services]"
-  - "ファイル [Reporting Services], アップロード"
-  - "ファイル [Reporting Services]"
-  - "フォルダー [Reporting Services], ファイルのアップロード"
+title: "フォルダーにファイルをアップロード |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publishing reports [Reporting Services], uploading files
+- reports [Reporting Services], publishing
+- uploading reports [Reporting Services]
+- uploading files [Reporting Services]
+- files [Reporting Services], uploading
+- files [Reporting Services]
+- folders [Reporting Services], uploading files to
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 caps.latest.revision: 42
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 42
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b4a7d4a5babf6789baa551f808b840c469dfa31a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# フォルダーへのファイルのアップロード
+# <a name="upload-files-to-a-folder"></a>フォルダーへのファイルのアップロード
   ファイル システムからファイルをアップロードし、それらを管理対象アイテムとしてレポート サーバー データベースに格納できます。 ファイルのアップロード時に行われる処理は、ファイルの種類によって異なります。  
   
 -   .rdl ファイルのアップロードは、レポートのパブリッシュと同等です。  
@@ -35,17 +40,17 @@ caps.handback.revision: 42
 > [!NOTE]  
 >  レポート データ ソース (.rds) ファイルをアップロードして共有データ ソースを作成することはできません。 .rds ファイルは、レポート デザイナーでのみ使用されます。 レポート マネージャーで定義および管理する共有データ ソース アイテムのコンテンツを、このファイルから提供することはできません。 アップロードする代わりに、.rds ファイルを基に共有データ ソースを作成するスクリプトを記述することができます。  
   
- アップロードするアイテムの最大ファイル サイズは [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] によって決まります。 既定の最大サイズは 4 MB です。  
+ アップロードするアイテムの最大ファイル サイズは [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]によって決まります。 既定の最大サイズは 4 MB です。  
   
  視覚的には、レポート サーバー データベースにアップロードしたファイルは、以下のアイコンでフォルダー階層に表示されます。  
   
- ![レポート アイコン](../../reporting-services/report-server/media/hlp-16doc.png "レポート アイコン")  
+ ![Report icon](../../reporting-services/report-server/media/hlp-16doc.gif "Report icon")  
 レポート アイコン  
   
- ![モデル アイコン](../../reporting-services/report-server/media/model-icon.png "モデル アイコン")  
+ ![モデル アイコン](../../reporting-services/report-server/media/model-icon.gif "Model icon")  
 レポート モデル アイコン  
   
- ![汎用リソース アイコン](../../reporting-services/report-server/media/hlp-16file.png "汎用リソース アイコン")  
+ ![汎用リソース アイコン](../../reporting-services/report-server/media/hlp-16file.gif "generic resource icon")  
 汎用リソース アイコン  
   
  ファイルをアップロードすると、ファイルは常に、現在選択しているフォルダーに格納されます。 最初に、アイテムを含めるフォルダーに移動できます。また、ファイルをアップロードしてから最終的な場所にファイルを移動することもできます。  
@@ -58,8 +63,8 @@ caps.handback.revision: 42
 |任意のファイルをバイナリ オブジェクトとしてアップロード|リソースの管理|  
 |フォルダーのコンテンツの表示|リソースの表示、レポートの表示|  
   
-## 参照  
- [レポート マネージャー (SSRS ネイティブ モード)](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+## <a name="see-also"></a>参照  
+ [レポート マネージャー (SSRS ネイティブ モード)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [タスクと権限](../../reporting-services/security/tasks-and-permissions.md)   
  [ファイルまたはレポートをアップロードする (レポート マネージャー)](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  

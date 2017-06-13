@@ -1,23 +1,28 @@
 ---
-title: "Reporting Services のツリー マップとサンバースト グラフ | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/31/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ツリー マップとサンバースト グラフ Reporting Services の |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/31/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services のツリー マップとサンバースト グラフ
+# <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Reporting Services のツリー マップとサンバースト グラフ
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリー マップおよびサンバースト視覚エフェクトは、階層データを視覚的に表現する上で非常に効果的です。   このトピックでは、ツリー マップまたはサンバースト グラフを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートに追加する方法の概要を説明します。 また、使い始めるにあたって役に立つ Adventureworks クエリのサンプルも紹介します。  
@@ -31,12 +36,12 @@ caps.handback.revision: 16
   
  ![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
   
-### ツリー マップ グラフを挿入し、Adventureworks のサンプル データに対して構成するには  
+### <a name="to-insert-a-tree-map-chart-and-configure-for-the-sample-adventureworks-data"></a>ツリー マップ グラフを挿入し、Adventureworks のサンプル データに対して構成するには  
  **注:** レポートにグラフを追加する前に、データ ソースとデータセットを作成します。  サンプル データとサンプル クエリについては、このトピックのセクション「 [AdventureWorks データのサンプル](#bkmk_sample_data) 」を参照してください。  
   
-1.  デザイン画面を右クリックし、**[挿入]**、**[グラフ]** の順にクリックします。  
+1.  デザイン画面を右クリックし、 **[挿入]**、 **[グラフ]** の順にクリックします。  
   
-     [ツリー マップ] ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") を選択します。  
+     ツリー マップを選択して![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")です。  
   
      ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 16
   
 4.  ツリー マップの全般的な形式に合わせてページ サイズを最適化するには、凡例を下部に配置します。  
   
-5.  サブカテゴリと行の合計を表示するツールヒントを追加するには、**[LineTotal]** を右クリックし、**[系列のプロパティ]** をクリックします。  
+5.  サブカテゴリと行の合計を表示するツールヒントを追加するには、 **[LineTotal]** を右クリックし、 **[系列のプロパティ]**をクリックします。  
   
      ![ssrs_visualization_seriesproperties](../../reporting-services/report-design/media/ssrs-visualization-seriesproperties.png "ssrs_visualization_seriesproperties")  
   
@@ -60,13 +65,12 @@ caps.handback.revision: 16
     =Fields!SubcategoryName.Value &": " &Format(Sum(Fields!LineTotal.Value),"C")  
     ```  
   
-     詳細については、「[系列へのツールヒントの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)」を参照してください。  
+     詳細については、「 [系列へのツールヒントの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)の順にクリックします。  
   
 6.  既定のグラフ タイトルを "区域別の売上" に変更します。  
   
 7.  表示されるラベル値の数は、フォントのサイズ、グラフ領域全体のサイズ、および特定の四角形のサイズにより変わります。  より多くのラベルを表示するには、LineTotal の [ラベル フォント] プロパティを既定の 10 pt から 8 pt に変更します。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [このトピックの内容](#bkmk_top)  
   
 ##  <a name="bkmk_sunburst_chart"></a> サンバースト グラフ  
  ![ssrs_sunburst_icon](../../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon")  
@@ -75,12 +79,12 @@ caps.handback.revision: 16
   
  ![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
   
-### サンバースト グラフを挿入し、Adventureworks のサンプル データに対して構成するには  
+### <a name="to-insert-a-sunburst-chart-and-configure-for-the-sample-adventureworks-data"></a>サンバースト グラフを挿入し、Adventureworks のサンプル データに対して構成するには  
  **注:** レポートにグラフを追加する前に、データ ソースとデータセットを作成します。  サンプル データとサンプル クエリについては、このトピックのセクション「 [AdventureWorks データのサンプル](#bkmk_sample_data) 」を参照してください。  
   
-1.  デザイン画面を右クリックし、**[挿入]**、**[グラフ]** の順にクリックします。  
+1.  デザイン画面を右クリックし、 **[挿入]**、 **[グラフ]** の順にクリックします。  
   
-     [サンバースト] ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") を選択します。  
+     サンバーストの選択![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")です。  
   
      ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   
@@ -98,13 +102,12 @@ caps.handback.revision: 16
   
 6.  |||  
     |-|-|  
-    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|サンバーストにラベルとしてカテゴリ グループの値を追加するには、ラベルのプロパティ **[Visible]** を true に設定し、**[UseValueAsLabel]** を false に設定します。<br /><br /> 表示されるラベル値は、フォントのサイズ、グラフ領域全体のサイズ、および特定の四角形のサイズに影響されます。  より多くのラベルを表示するには、LineTotal の [ラベル フォント] プロパティを既定の 10 pt から 8 pt に変更します。|  
+    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|サンバーストにラベルとしてカテゴリ グループの値を追加するには、ラベルのプロパティ **[Visible]** を true に設定し、 **[UseValueAsLabel]**を false に設定します。<br /><br /> 表示されるラベル値は、フォントのサイズ、グラフ領域全体のサイズ、および特定の四角形のサイズに影響されます。  より多くのラベルを表示するには、LineTotal の [ラベル フォント] プロパティを既定の 10 pt から 8 pt に変更します。|  
   
 7.  色の範囲を変更する場合は、グラフの **[パレット]** プロパティを変更します。  
   
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [このトピックの内容](#bkmk_top)  
   
 ##  <a name="bkmk_sample_data"></a> AdventureWorks データのサンプル  
  このセクションでは、サンプル クエリを紹介すると共に、 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]でデータ ソースとデータセットを作成するための基本的な手順について説明します。 レポートにデータ ソースとデータセットが既に存在する場合、このセクションは省略できます。  
@@ -119,7 +122,7 @@ caps.handback.revision: 16
   
 2.  **データ ソースの作成**  
   
-    1.  **[レポート データ]** ウィンドウで、**[データ ソース]** を右クリックし、**[データ ソースの追加]** をクリックします。  
+    1.  **[レポート データ]** ウィンドウで、 **[データ ソース]** を右クリックし、 **[データ ソースの追加]**をクリックします。  
   
     2.  **[レポートに埋め込まれた接続を使用する]**を選択します。  
   
@@ -137,7 +140,7 @@ caps.handback.revision: 16
   
 3.  **データセットの作成**  
   
-    -   **[レポート データ]** ウィンドウで、**[データセット]** を右クリックし、**[データセットの追加]** をクリックします。  
+    -   **[レポート データ]** ウィンドウで、 **[データセット]** を右クリックし、 **[データセットの追加]**をクリックします。  
   
     -   **[レポートに埋め込まれたデータセットを使用します]**を選択します。  
   
@@ -172,9 +175,8 @@ caps.handback.revision: 16
   
      データセットの作成の詳細については、「[共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)」を参照してください。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [このトピックの内容](#bkmk_top)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [共有データセット デザイン ビュー (レポート ビルダー)](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
  [系列へのツールヒントの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)   
  [チュートリアル: Power BI でのツリー マップ](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)   
@@ -182,3 +184,5 @@ caps.handback.revision: 16
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+

@@ -1,31 +1,36 @@
 ---
-title: "スケジュール | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "schedules [Reporting Services]"
-  - "schedules [Reporting Services], about schedules"
-  - "published reports [Reporting Services], schedules"
-  - "reports [Reporting Services], scheduling"
-  - "subscriptions [Reporting Services], scheduling"
-  - "automatic report processing"
+title: "スケジュール |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 07/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- schedules [Reporting Services]
+- schedules [Reporting Services], about schedules
+- published reports [Reporting Services], schedules
+- reports [Reporting Services], scheduling
+- subscriptions [Reporting Services], scheduling
+- automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 caps.latest.revision: 51
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 51
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a49274f347768a1a213c9a0010917e9e1d1376a5
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# スケジュール
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  には、レポートの処理および配信の制御を支援する**共有スケジュール**と**レポート固有スケジュール**が用意されています。 これら 2 種類のスケジュールでは、定義、格納、管理の方法が異なります。 2 種類のスケジュールの内部の構成は同じです。 すべてのスケジュールでは、毎月、毎週、または毎日という定期実行の種類を指定します。 定期実行の種類では、イベントが発生する頻度を表す間隔と範囲を設定します。 定期的な実行パターンの種類とパターンの指定方法は、共有スケジュールとレポート固有スケジュールのいずれを作成する場合でも同じです。
+# <a name="schedules"></a>スケジュール
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポートの処理および配信の制御を支援する **共有スケジュール** と **レポート固有スケジュール** が用意されています。 これら 2 種類のスケジュールでは、定義、格納、管理の方法が異なります。 2 種類のスケジュールの内部の構成は同じです。 すべてのスケジュールでは、毎月、毎週、または毎日という定期実行の種類を指定します。 定期実行の種類では、イベントが発生する頻度を表す間隔と範囲を設定します。 定期的な実行パターンの種類とパターンの指定方法は、共有スケジュールとレポート固有スケジュールのいずれを作成する場合でも同じです。
   
   -   共有スケジュールは、個別のアイテムとして作成されます。 共有スケジュールは、作成後、サブスクリプションまたは他のスケジュール操作を定義するときに参照します。  
   
@@ -56,12 +61,12 @@ caps.handback.revision: 51
  スケジュールを作成および管理する方法の詳細については、「 [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)」を参照してください。  
   
 > [!NOTE]  
->  スケジュール操作は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2016 の各エディションがサポートする機能](Features%20Supported%20by%20Edition%20of%20SQL%20Server_deleted.md)」を参照してください。  
+>  スケジュール操作は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](http://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454)」を参照してください。  
   
 ##  <a name="bkmk_compare"></a> 共有スケジュールとレポート固有スケジュールの比較  
  どちらの種類のスケジュールも同じ出力を返します。  
   
--   **共有スケジュール**は、すぐに使用できる状態のスケジュール情報を含む、移植可能で多目的に使用できるアイテムです。 共有スケジュールは、システムレベルのアイテムなので、共有スケジュールを作成するにはシステムレベルの権限が必要です。 そのため、通常、レポート サーバー管理者またはコンテンツ管理者がレポート サーバー上で使用可能な共有スケジュールを作成します。 共有スケジュールは、Web ポータルまたは SharePoint サイトの設定を使用して、レポート サーバー上に格納して管理します。  
+-   **共有スケジュール** は、すぐに使用できる状態のスケジュール情報を含む、移植可能で多目的に使用できるアイテムです。 共有スケジュールは、システムレベルのアイテムなので、共有スケジュールを作成するにはシステムレベルの権限が必要です。 そのため、通常、レポート サーバー管理者またはコンテンツ管理者がレポート サーバー上で使用可能な共有スケジュールを作成します。 共有スケジュールは、Web ポータルまたは SharePoint サイトの設定を使用して、レポート サーバー上に格納して管理します。  
   
      レポート、共有データセット、またはサブスクリプションのプロパティを使って定義する特定のスケジュールと比較すると、次のような特徴を持つ共有スケジュールは、管理と維持を容易に行えます。  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 51
   
     -   共有スケジュールのみを使用する場合、スケジュール設定された操作がいつ実行されるのかを正確に把握できます。 これにより、パフォーマンスの問題が発生する前に、容易にサーバーの負荷を予測して対応することができます。 たとえば、コンピューターのバックアップを特定の時間に行うようにスケジュール設定した場合、共有スケジュールを別の時間に実行するように調整できます。  
   
--   **レポート固有スケジュール**は、各レポート、サブスクリプション、またはレポート実行操作のコンテキスト内で定義され、キャッシュの有効期限やスナップショットの更新を決定します。 これらのスケジュールは、サブスクリプションを定義するとき、またはレポート実行のプロパティを設定するときに、インラインで作成されます。 共有スケジュールで必要な頻度または反復パターンが指定されていない場合に、レポート固有スケジュールを作成することができます。 レポートを実行しないようにするには、レポート固有スケジュールを手動で編集する必要があります。 レポート固有スケジュールは、各ユーザーが作成できます。  
+-   **レポート固有スケジュール** は、各レポート、サブスクリプション、またはレポート実行操作のコンテキスト内で定義され、キャッシュの有効期限やスナップショットの更新を決定します。 これらのスケジュールは、サブスクリプションを定義するとき、またはレポート実行のプロパティを設定するときに、インラインで作成されます。 共有スケジュールで必要な頻度または反復パターンが指定されていない場合に、レポート固有スケジュールを作成することができます。 レポートを実行しないようにするには、レポート固有スケジュールを手動で編集する必要があります。 レポート固有スケジュールは、各ユーザーが作成できます。  
   
 ##  <a name="bkmk_configuredatasources"></a> データ ソースの構成  
  レポートのデータ処理またはサブスクリプション処理のスケジュールを設定するには、保存された資格情報または自動レポート処理アカウントが使用されるようにレポートのデータ ソースを構成しておく必要があります。 保存されている資格情報を使用する場合、保存できる資格情報は 1 組のみです。レポートを実行するすべてのユーザーに対してこの資格情報が使用されます。 資格情報には、Windows ユーザー アカウントまたはデータベース ユーザー アカウントを指定できます。  
@@ -90,7 +95,7 @@ caps.handback.revision: 51
 |ユーザー定義サブスクリプションでのレポート固有スケジュールの作成、変更、または削除|個別のサブスクリプションを管理|閲覧者、レポート ビルダー、個人用レポート、コンテンツ マネージャー|閲覧者、メンバー|  
 |その他すべてのスケジュール設定された操作用のレポート固有スケジュールの作成、変更、または削除|レポート履歴の管理、すべてのサブスクリプションの管理、レポートの管理|コンテンツ マネージャー|所有者|  
   
- ネイティブ モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のセキュリティの詳細については、「[定義済みロール](../../reporting-services/security/predefined-roles.md)」、「[ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)」、および「[タスクと権限](../../reporting-services/security/tasks-and-permissions.md)」を参照してください。 SharePoint モードについては、「 [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)」を参照してください。  
+ ネイティブ モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のセキュリティの詳細については、「 [定義済みロール](../../reporting-services/security/role-definitions-predefined-roles.md)」、「 [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) 」、および「 [タスクと権限](../../reporting-services/security/tasks-and-permissions.md)」を参照してください。 SharePoint モードについては、「 [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)」を参照してください。  
   
 ##  <a name="bkmk_how_scheduling_works"></a> スケジュール処理および配信処理のしくみ  
  スケジュールおよび配信のプロセッサは、次の機能を提供します。  
@@ -115,7 +120,7 @@ caps.handback.revision: 51
   
      イベントの処理前に、スケジュールおよび配信のプロセッサは認証の手順を実行し、サブスクリプション所有者にレポート表示の権限があるかどうかを確認します。  
   
- Reporting Services では、すべてのスケジュールされた操作のイベント キューを管理します。 定期的にキューをポーリングし、新しいイベントがないかどうかを確認します。 既定では、10 秒間隔でキューがスキャンされます。 間隔を変更するには、RSReportServer.config ファイルで **PollingInterval**、 **IsNotificationService**、および **IsEventService** の構成設定を変更します。 また、SharePoint モードでは、これらの設定に RSreporserver.config を使用するため、値はすべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションに適用されます。 詳細については、「[RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)」を参照してください。  
+ Reporting Services では、すべてのスケジュールされた操作のイベント キューを管理します。 定期的にキューをポーリングし、新しいイベントがないかどうかを確認します。 既定では、10 秒間隔でキューがスキャンされます。 間隔を変更するには、RSReportServer.config ファイルで **PollingInterval**、 **IsNotificationService**、および **IsEventService** の構成設定を変更します。 また、SharePoint モードでは、これらの設定に RSreporserver.config を使用するため、値はすべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションに適用されます。 詳細については、「 [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)」を参照してください。  
   
 ##  <a name="bkmk_serverdependencies"></a> サーバーの依存関係  
  スケジュールおよび配信のプロセッサでは、レポート サーバー サービスと SQL Server エージェントが開始されている必要があります。 ポリシー ベースの管理の **[Reporting Services のセキュリティ構成]** ファセットの **ScheduleEventsAndReportDeliveryEnabled** プロパティにより、スケジュールおよび配信処理機能を有効にする必要があります。 スケジュールされた操作を実行するには、SQL Server エージェントおよびレポート サーバー サービスの両方が実行されている必要があります。  
@@ -132,7 +137,7 @@ caps.handback.revision: 51
 ###  <a name="bkmk_stoppingservice"></a> レポート サーバー サービスの停止の影響  
  レポート サーバー サービスを停止しても、SQL Server エージェントは引き続きレポート処理要求をキューに追加します。 SQL Server エージェントからの状態情報は、ジョブが成功したことを示します。 ただし、レポート サーバー サービスが停止しているため、実際にはレポート処理は実行されません。 レポート サーバー サービスを再起動するまで、要求はキューに蓄積され続けます。 レポート サーバー サービスを再起動すると、キューにあるすべてのレポート処理要求が順番に処理されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レポート履歴のスナップショットの作成、変更および削除](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [データ ドリブン サブスクリプション](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
@@ -141,3 +146,4 @@ caps.handback.revision: 51
  [共有データセットのキャッシュ &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   
   
+

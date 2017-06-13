@@ -1,28 +1,33 @@
 ---
-title: "共有データセット アイテムをセキュリティで保護する | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "共有データセット アイテムのセキュリティで保護された |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 6
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8f5d95f21c220a5039945a06204fd2a0e9a3c66
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# 共有データセット アイテムをセキュリティで保護する
+# <a name="secure-shared-dataset-items"></a>共有データセット アイテムをセキュリティで保護する
   レポート サーバーでは、複数のレポートで共有データセット アイテムを使用できます。 共有データセットをセキュリティ保護することによって、共有データセットにユーザーがアクセスする度合いを制御できます。 既定では、あらかじめ登録された **Administrators** グループのメンバーであるユーザーのみが、共有データセットの表示、プロパティの変更、キャッシュの有効化、キャッシュ更新計画の作成、およびアイテムの削除を行えます。 他のすべてのユーザーについては、共有データセットへのアクセスを許可するロールの割り当てを作成する必要があります。  
   
  セキュリティを設定するには、共有データセットへのアクセス権を付与されたユーザー アカウントまたはグループ アカウントを指定するロールの割り当てを作成します。  
   
-## 共有データセットへのロールベースのアクセス  
+## <a name="role-based-access-to-shared-datasets"></a>共有データセットへのロールベースのアクセス  
  共有データセットへのアクセスを許可するために、既存のロールの割り当てを親フォルダーからユーザーに継承させることも、アイテム自体に新しいロールの割り当てを作成することもできます。  
   
  アイテム プロパティの追加、削除、編集、および共有データセットの関連レポートや共有データ ソースの表示が可能な既定のロールの割り当ては、コンテンツ マネージャー、個人用レポート、およびパブリッシャーです。 共有データセット定義を編集するには、既定のロールの割り当てであるレポート ビルダーまたはコンテンツ マネージャーを使用します。  
@@ -31,12 +36,12 @@ caps.handback.revision: 6
   
  共有データセットおよびそのクエリ結果をより詳細に制御するためには、共有データセット アイテムに対してアイテム レベルのセキュリティを構成するか、または共有データセットを保存しているフォルダーに対してアイテム レベルのセキュリティを構成します。  
   
-## 共有データセット パラメーター  
+## <a name="shared-dataset-parameters"></a>共有データセット パラメーター  
  共有データセット パラメーターを使用して、特定のユーザーに対してデータを制限することはできません。 共有データセット パラメーターの目的は、共有データセットの処理時に含めるデータを指定する方法を用意することです。 レポート サーバーでは、共有データセット パラメーターの値をセキュリティ保護することはできません。  
   
  共有データセット定義では、パラメーターを読み取り専用としてマークしたり、既定値を指定したりできます。 読み取り専用としてマークされたパラメーターは、サーバー上で上書きできません。 たとえば、共有データセットのキャッシュ更新計画では、読み取り専用パラメーターに値を指定することはできません。 共有データセット パラメーターに、User グローバル コレクションを参照する式や、ユーザーに関連するその他の依存関係が含まれている場合は、その共有データセットに対してキャッシュ更新計画を作成することはできません。  
   
-## タスク、アイテムへのアクセス、および既定のロール  
+## <a name="tasks-access-to-items-and-default-roles"></a>タスク、アイテムへのアクセス、および既定のロール  
  共有データセットは、レポートと同じセキュリティ モデルに準拠しています。 特定のアクションを実行できる権限をユーザーに対して付与するには、そのアクションを実行可能なタスクを含むロールを選択します。 次の表に、タスクとそのタスクに含まれているアクションを示します。  
   
 |使用するタスク|ユーザーに権限を与える操作|タスクを含む既定のロール|  
@@ -46,9 +51,9 @@ caps.handback.revision: 6
 |レポートの使用|共有データセット定義を表示します。|コンテンツ マネージャー<br /><br /> レポート ビルダー|  
 |アイテムへのセキュリティの設定|共有データセットへのアクセスを制御するロールの割り当てを作成および変更します。 このタスクは、"レポートの表示" または "レポートの管理" のいずれかのタスクと併用する必要があります。 それ以外の場合、ユーザーはアイテムを選択できないので効果がありません。|コンテンツ マネージャー|  
   
- 詳細については、「[アイテムレベルのタスク](../../reporting-services/security/item-level-tasks.md)」と「[定義済みロール](../../reporting-services/security/predefined-roles.md)」を参照してください。  
+ 詳細については、「 [アイテムレベルのタスク](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md) 」と「 [定義済みロール](../../reporting-services/security/role-definitions-predefined-roles.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [共有データセットを管理する](../../reporting-services/report-data/manage-shared-datasets.md)   
  [フォルダーをセキュリティで保護する](../../reporting-services/security/secure-folders.md)   
  [レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)   

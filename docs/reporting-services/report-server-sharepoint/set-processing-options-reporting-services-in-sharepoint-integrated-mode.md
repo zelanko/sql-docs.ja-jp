@@ -1,26 +1,31 @@
 ---
-title: "処理オプションの設定 (Reporting Services の SharePoint 統合モード) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SharePoint integration [Reporting Services], content management"
-  - "スナップショット [Reporting Services], 作成"
+title: "処理オプション (SharePoint 統合モードで Reporting Services) を設定 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SharePoint integration [Reporting Services], content management
+- snapshots [Reporting Services], creating
 ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8f2a5c52f4fa9b04026490c1e66243bf0d660c13
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# 処理オプションの設定 (Reporting Services の SharePoint 統合モード)
+# <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>処理オプションの設定 (Reporting Services の SharePoint 統合モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートの処理オプションを設定することにより、データ処理のタイミングを決定することができます。 また、レポート処理のタイムアウト値や、現在のレポートでレポート履歴を有効にするかどうかを決定するオプションも設定できます。  
   
 -   レポートが予定外に (たとえば、スケジュールされたバックアップ中に) 実行されないように、レポートをレポート スナップショットとして実行することができます。 レポート スナップショットは、通常はスケジュールに従って作成され、その後更新されます。これによって、正確な時間でレポートとデータ処理を行うことができます。 レポートが実行に長時間かかるクエリに基づいている場合や、クエリに使用されているデータのデータ ソースが、ある一定時間の間アクセスを避けたいものである場合は、レポートをスナップショットとして実行してください。  
@@ -36,7 +41,7 @@ caps.handback.revision: 15
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード:|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode|  
   
  **このトピックの内容:**  
   
@@ -88,7 +93,7 @@ caps.handback.revision: 15
   
 2.  下矢印をクリックし、 **[処理の管理のオプション]**をクリックします。  
   
-3.  レポート サーバー レベルで指定された値を使用する必要がある場合は、**[処理のタイムアウト]** で **[サイトの既定の設定を使用する]** をクリックします。 タイムアウトなしにするか、別のタイムアウト値に上書きする必要がある場合は、**[レポート処理をタイムアウトしない]** または **[レポート処理を次の時間 (秒) に制限する]** を選択します。  
+3.  レポート サーバー レベルで指定された値を使用する必要がある場合は、 **[処理のタイムアウト]**で **[サイトの既定の設定を使用する]** をクリックします。 タイムアウトなしにするか、別のタイムアウト値に上書きする必要がある場合は、 **[レポート処理をタイムアウトしない]** または **[レポート処理を次の時間 (秒) に制限する]** を選択します。  
   
 ##  <a name="bkmk_set_report_history"></a> レポート履歴のオプションと制限を設定するには  
   
@@ -104,7 +109,7 @@ caps.handback.revision: 15
   
 1.  Windows PowerShell を使用すると、SharePoint レポート サーバーのデータベースのタイムアウト値を設定できます。 詳細については、 [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)の「レポートするサービス アプリケーション データベースのプロパティの取得と設定」セクションを参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レポート処理プロパティの設定](../../reporting-services/report-server/set-report-processing-properties.md)   
  [レポートのキャッシュ (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)   
  [レポートおよび共有データセット処理のタイムアウト値の設定 (SSRS)](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  

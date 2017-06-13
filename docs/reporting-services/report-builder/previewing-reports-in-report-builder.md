@@ -1,23 +1,28 @@
 ---
-title: "レポート ビルダーでのレポートのプレビュー | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "レポート ビルダーでレポートのプレビュー |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 1635c00223ae559c703a56e528f8e4f74f5a67ef
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# レポート ビルダーでのレポートのプレビュー
+# <a name="previewing-reports-in-report-builder"></a>レポート ビルダーでのレポートのプレビュー
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページページ分割されたレポートを作成する際は、レポートが思いどおりに表示されるかどうかを確認するために、レポートをたびたびプレビューすると効果的です。 レポートをプレビューするには、 **[実行]**をクリックします。 レポートがプレビュー モードで表示されます。  
   
  レポート ビルダーのプレビュー エクスペリエンスは、レポート サーバーとの接続時に編集セッションを使用することによって改善されています。 編集セッションによってデータのキャッシュが作成され、レポートを繰り返しプレビューする際は、キャッシュ内のデータセットが利用されます。 編集セッションの機能を直接操作することはできません。しかし、キャッシュ済みのデータセットがいつ最新の状態に更新されるか、という知識は、プレビューのパフォーマンス向上や、レポートのレンダリングが遅い (または速い) 理由を把握するために役立てることができます。  
@@ -25,9 +30,9 @@ caps.handback.revision: 7
  また、埋め込みデータ ソースが使われているレポートや、レポート サーバーに保存されているアイテム (画像やサブレポートなど) を参照するレポートを編集できるのも編集セッションの利点です。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+> レポート ビルダーでプレビューして、ブラウザーで表示するいくつか違いがあります。 たとえば、日付/時刻型のパラメーターを指定すると、レポートに追加される、予定表コントロールは、ブラウザーとレポート ビルダーでは、異なるです。 
   
-## プレビュー パフォーマンスの向上  
+## <a name="improving-preview-performance"></a>プレビュー パフォーマンスの向上  
  レポート プレビュー時のレンダリング速度は、レポートをどのように作成し、どのように更新するかによって異なります。 サーバー上のアイテムを参照するレポートを初めてプレビューすると、編集セッションが自動的に作成され、レポートの実行時に使用されるデータがレポート サーバー上のデータ キャッシュに追加されます。 そのデータに影響を及ぼさない範囲でレポートに変更が加えられた場合、レポートには、データのキャッシュ コピーが使用されます。 つまり、レポートをプレビューするたびに最新のデータが表示されるわけではありません。 新しいデータを表示するには、リボン上の **[更新]** ボタンをクリックします。  
   
  次のような操作を行うとキャッシュが更新され、次回レポートをプレビューしたときのレンダリング速度が低下します。  
@@ -67,15 +72,15 @@ caps.handback.revision: 7
   
  既定では、データ キャッシュに最大 5 つのデータセットを保持できます。 パラメーターの値の組み合わせを変えながら、さまざまなパターンでプレビューする場合は、それだけ多くのデータが必要になります。 結果的に、キャッシュを更新する必要が生じ、次回プレビュー時にレポートのレンダリング速度が低下します。 キャッシュ内のエントリ数は、レポート サーバーの管理者が変更できます。  
   
-## レポートの更新の同時実行性  
+## <a name="concurrency-of-report-updates"></a>レポートの更新の同時実行性  
  レポートを更新してからレポート サーバーに保存する際の 1 つの手順としてレポートをプレビューすることがよくあります。 自分がレポートを更新しているときに、他のだれかがそのレポートを更新し、同時に保存する可能性もあります。 将来、閲覧と更新に使用できるレポートのバージョンは、最後に保存されたレポートです。 つまり、プレビューしたレポートのバージョンと、再度開いたときに表示されるバージョンとが必ずしも一致するとは限りません。 レポート ビルダー メニューの **[名前を付けて保存]** オプションを使用すると、レポートに新しい名前を付けて保存することができます。  
   
-## 外部のレポート アイテム  
+## <a name="external-report-items"></a>外部のレポート アイテム  
  レポートには、そのレポートとは別に保存されているアイテム (サブレポート、共有データ ソース、外部の画像など) が含まれている場合があります。 アイテムが別々に保存されているということは、当然、レポート サーバー上の別の場所に移動されたり、削除されたりする可能性があります。 この場合、レポートをプレビューすることはできません。 アイテムの最新の場所を指定するか、(アイテムが削除されている場合は) 既存のアイテムに置き換えるか、または、そのアイテムへの参照をレポートから削除するなどして、レポートを更新する必要があります。  
   
  レポートに使用されているサブレポートが、編集セッションの作成後に変更された場合、レポートをプレビューできません。 レポートを正常にプレビューするには、レポートを保存するか、 **[更新]** をクリックして最新のデータを取得する必要があります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レポート データセット &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [レポート アイテムの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
@@ -84,3 +89,4 @@ caps.handback.revision: 7
  [レポートの保存 &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
   
   
+

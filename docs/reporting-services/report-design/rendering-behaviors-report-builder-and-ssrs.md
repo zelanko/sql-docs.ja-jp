@@ -1,23 +1,28 @@
 ---
-title: "レンダリングの動作 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "レンダリングの動作 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 518b74abc3238fcebee1e8b5356315e49f35db01
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# レンダリングの動作 (レポート ビルダーおよび SSRS)
+# <a name="rendering-behaviors-report-builder--and-ssrs"></a>レンダリングの動作 (レポート ビルダーおよび SSRS)
   選択したレンダラーによっては、レポートをレンダリングする際に、レポート本文とそのコンテンツに特定の規則が適用されます。 レポート アイテムが 1 ページにまとめられる際の方法は、次に示す要因の組み合わせによって決まります。  
   
 -   レンダリングの規則。  
@@ -35,7 +40,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## HTML、MHTML、Word、および Excel の一般的な動作 (ソフト改ページ レンダラー)  
+## <a name="general-behaviors-for-html-mhtml-word-and-excel-soft-page-break-renderers"></a>HTML、MHTML、Word、および Excel の一般的な動作 (ソフト改ページ レンダラー)  
  HTML 形式や MHTML 形式でエクスポートされたレポートは、コンピューター画面での操作性を重視して最適化され、ページの長さは固定的ではありません。 改ページは、レポート本文内のおおよその位置に、垂直方向にのみ挿入されます。 おおよその位置は、[プロパティ] ペインにある対話的な高さ設定によって決まります。 たとえば、対話的な高さが 5 インチに設定されているとします。 レポートをレンダリングすると、このページの高さは約 5 インチになります。 Word および Excel の改ページは論理的な改ページによって調整されるため、対話的な高さの設定は無視されます。  
   
 > [!NOTE]  
@@ -47,7 +52,7 @@ caps.handback.revision: 7
   
 -   ページの高さとレポート アイテムの出現回数に基づいて、おおよそのレイアウトが作成されます。 たとえば、テキスト ボックスの高さが 0.5 インチで、繰り返し 5 回出現する場合、2.5 インチが確保されます。  
   
--   対話的な高さの設定に基づいて、複数のソフト改ページが挿入されます。 HTML および ReportViewer コントロールでこの動作を抑制し、明示的な改ページでのみ制御するようにする場合は、**対話的な高さ**の値を 0 または極端に大きな値に設定します。  
+-   対話的な高さの設定に基づいて、複数のソフト改ページが挿入されます。 HTML および ReportViewer コントロールでこの動作を抑制し、明示的な改ページでのみ制御するようにする場合は、 **対話的な高さ** の値を 0 または極端に大きな値に設定します。  
   
     > [!NOTE]  
     >  ソフト改ページ レンダラーでは、対話的な幅の設定は使用されません。  
@@ -58,7 +63,7 @@ caps.handback.revision: 7
   
 -   ページ余白は適用されません。  
   
-## PDF、画像、および印刷の一般的な動作 (ハード改ページ レンダラー)  
+## <a name="general-behaviors-for-pdf-image-and-print-hard-page-break-renderers"></a>PDF、画像、および印刷の一般的な動作 (ハード改ページ レンダラー)  
  PDF および画像を使ってエクスポートされたレポートでは、書籍のように、常に一定のページ サイズで閲覧される印刷物としての見やすさが重視されます。 改ページは、レポート本文内の特定の位置に、垂直方向および水平方向に挿入されます。 その位置は、ページの幅と高さの設定によって決まります。  
   
 > [!NOTE]  
@@ -79,12 +84,12 @@ caps.handback.revision: 7
     > [!NOTE]  
     >  ハード改ページ レンダラーでは、対話的な幅の設定は使用されません。  
   
-## レポート アイテム間の最小間隔  
+## <a name="minimum-spacing-between-report-items"></a>レポート アイテム間の最小間隔  
  レポート本文内のレポート アイテムは、その内容に合わせて拡大されます。 たとえば、マトリックス データ領域は通常、レポートのレンダリング時にページの境界を越えて拡大されます。また、テキスト ボックスの高さは、式から返されたデータに応じて調整されます。  
   
  レポート レイアウトで定義された、レポート アイテム間の最小間隔は維持されます。 レポート レイアウト上で、あるレポート アイテムを別のレポート アイテムに隣接するように配置した場合、レポート アイテム間の距離には最小距離が適用され、レポートが上下左右に拡大されても、この距離が保たれます。 たとえば、レポートにマトリックス データ領域を追加した後、そのマトリックスの 0.25 インチ右側に四角形を追加した場合、マトリックスのサイズが大きくなっても、その間隔が維持されます。 各アイテムは、左側にあるアイテムとの間の最小距離が維持されるように右に移動します。  
   
-## ページ ヘッダーとページ フッター  
+## <a name="page-headers-and-footers"></a>ページ ヘッダーとページ フッター  
  ページ ヘッダーとページ フッターは、レンダリングされた各ページの最上部と最下部に表示されます。 ページ ヘッダーとページ フッターには、罫線の色、罫線のスタイル、および罫線の幅を定義できます。 背景色や背景画像を追加することもできます。 選択した形式によっては、これらの書式設定オプションがすべてレンダリングされます。  
   
  HTML 形式または MHTML 形式でレンダリングした場合、ページ ヘッダーおよびページ フッターには次の規則が適用されます。  
@@ -112,7 +117,7 @@ caps.handback.revision: 7
   
 -   レポートをサブレポートとしてレンダリングした場合、元の RDL ファイル内で定義されたヘッダーおよびフッターはレンダリングされません。  
   
-## 論理的な改ページ  
+## <a name="logical-page-breaks"></a>論理的な改ページ  
  論理的な改ページとは、ユーザーによってレポート アイテムやレポート グループの前または後に挿入される改ページをいいます。 改ページを使用することにより、レポートのレンダリング時またはエクスポート時に最も見やすくなるような形で、その内容をレポート ページに収めることができます。  
   
  論理的な改ページのレンダリングには、次の規則が適用されます。  
@@ -127,8 +132,8 @@ caps.handback.revision: 7
   
 -   テーブル セルまたはマトリックス セル内のアイテムで定義された論理的な改ページは保持されません。 これは、一覧にあるアイテムには当てはまりません。  
   
-## 参照  
- [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+## <a name="see-also"></a>参照  
+ [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [HTML での表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
  [ページ レイアウトとレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   

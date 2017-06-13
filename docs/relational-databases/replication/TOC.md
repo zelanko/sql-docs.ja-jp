@@ -73,7 +73,7 @@
 ### [サブスクライバーでのデータの検証](validate-data-at-the-subscriber.md)  
 ## [レプリケーションのスクリプト作成](scripting-replication.md)  
 
-# [開発者の概念](concepts/index.md)
+# [開発者の概念](../../relational-databases/replication/concepts/developer-s-guide-how-to-topics-replication.md)
 
 # [テクニカル リファレンス](technical-reference-replication.md)  
 ## [プロパティ リファレンス](properties-reference-replication.md)  
@@ -140,9 +140,9 @@
 #### [列の並べ替え](sort-columns.md)  
 ### [ディストリビューションの構成ウィザード](configure-distribution-wizard.md)  
 #### [ディストリビューター](distributor.md)  
-#### [スナップショット フォルダー](snapshot-folder.md)  
+#### [[スナップショット フォルダー]](snapshot-folder.md)  
 #### [ディストリビューション データベース](distribution-database.md)  
-#### [パブリッシャー](publishers.md)  
+#### [[パブリッシャー]](publishers.md)  
 #### [ディストリビューター パスワード](distributor-password.md)  
 ### [パブリケーションの新規作成ウィザード](new-publication-wizard.md)  
 #### [Oracle パブリッシャー](oracle-publisher.md)  

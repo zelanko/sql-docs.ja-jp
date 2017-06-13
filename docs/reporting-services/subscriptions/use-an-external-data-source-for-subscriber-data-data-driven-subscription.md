@@ -1,33 +1,38 @@
 ---
-title: "サブスクライバー データに対して外部データ ソースを使用する (データ ドリブン サブスクリプション) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "サブスクライバー データ ソース [Reporting Services]"
-  - "サブスクリプション [Reporting Services], 外部データ ソース"
-  - "クエリ ベース サブスクリプション [Reporting Services]"
-  - "外部データ ソース [Reporting Services]"
-  - "データ ドリブン サブスクリプション"
-  - "データ ソース [Reporting Services], サブスクリプション"
+title: "サブスクライバー データ (データ ドリブン サブスクリプション) の外部データ ソースを使用して |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscriber data sources [Reporting Services]
+- subscriptions [Reporting Services], external data sources
+- query-based subscriptions [Reporting Services]
+- external data sources [Reporting Services]
+- data-driven subscriptions
+- data sources [Reporting Services], subscriptions
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 caps.latest.revision: 43
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 43
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a337202cea263001fe810c91a607fa1746219bd6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# サブスクライバー データに対して外部データ ソースを使用する (データ ドリブン サブスクリプション)
+# <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>サブスクライバー データに対して外部データ ソースを使用する (データ ドリブン サブスクリプション)
   データ ドリブン サブスクリプションでは、外部データ ソースからデータを取得するクエリまたはコマンドによって、動的サブスクリプション データが提供されます。 サブスクリプション データは、データ ドリブン サブスクリプション処理の要件を満たす、サポートされているデータ ソースから取得できます。 クエリまたはコマンドの構文は、レポート サーバーと一緒にインストールされたデータ処理拡張機能に対して有効である必要があります。  
   
-## データ処理の要件  
+## <a name="data-processing-requirements"></a>データ処理の要件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、データ処理拡張機能を使用して、サブスクリプション データを取得します。 推奨されているデータ ソースには、次の種類があります。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース  
@@ -48,9 +53,9 @@ caps.handback.revision: 43
   
 -   レポート モデル  
   
- データ ドリブン サブスクリプションでカスタム データ処理拡張機能を使用する場合は、<xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> および <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> インターフェイスを実装する必要があります。 データ処理拡張機能では、スキーマのみのクエリ実行をサポートする必要があります。 このクエリは、デザイン時に列のメタデータを取得するために使用します。これにより、サブスクリプション定義の配信オプションおよびレポート パラメーターにユーザーが列をマップできるようになります。 スキーマのみのクエリ実行は、ユーザーによるサブスクリプション定義の初期段階に使用されます。  
+ データ ドリブン サブスクリプションで使用する、カスタム データ処理拡張機能があれば、する必要がありますを実装して、<xref:Microsoft.ReportingServices.DataProcessing.IDbCommand>と<xref:Microsoft.ReportingServices.DataProcessing.IDataReader>インターフェイスです。 データ処理拡張機能では、スキーマのみのクエリ実行をサポートする必要があります。 このクエリは、デザイン時に列のメタデータを取得するために使用します。これにより、サブスクリプション定義の配信オプションおよびレポート パラメーターにユーザーが列をマップできるようになります。 スキーマのみのクエリ実行は、ユーザーによるサブスクリプション定義の初期段階に使用されます。  
   
-## クエリの要件  
+## <a name="query-requirements"></a>クエリの要件  
  サブスクリプション データを取得するクエリを作成する場合は、次の点に注意してください。  
   
 -   サブスクリプションに対して作成できるクエリは 1 つのみです。  
@@ -59,15 +64,15 @@ caps.handback.revision: 43
   
 -   レポート サーバーでは、結果セットの行ごとにレポート配信が作成されます。 結果セットが 300 行の場合、レポート サーバーでは、300 個のレポートについて配信が試行されます。  
   
-## サブスクライバー データベースの変数データを使用した配信オプションの設定  
- サブスクライバー データベースのデータを使用して、各受信者に関する配信オプションをカスタマイズできます。 利用可能なオプションは、使用している配信拡張機能の種類によって決まります。 レポート サーバーの電子メール配信拡張機能を使用している場合、クエリは、各サブスクライバーの電子メール エイリアスを含む必要があります。 ファイル共有配信を使用している場合、サブスクライバー固有のレポート ファイルの作成や配信先の指定に使用できる値をサブスクライバー データに含める必要があります。 詳細については、「[Reporting Services の電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)」を参照してください。  
+## <a name="setting-delivery-options-using-variable-data-from-a-subscriber-database"></a>サブスクライバー データベースの変数データを使用した配信オプションの設定  
+ サブスクライバー データベースのデータを使用して、各受信者に関する配信オプションをカスタマイズできます。 利用可能なオプションは、使用している配信拡張機能の種類によって決まります。 レポート サーバーの電子メール配信拡張機能を使用している場合、クエリは、各サブスクライバーの電子メール エイリアスを含む必要があります。 ファイル共有配信を使用している場合、サブスクライバー固有のレポート ファイルの作成や配信先の指定に使用できる値をサブスクライバー データに含める必要があります。 詳細については、「 [Reporting Services の電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)」を参照してください。  
   
-## サブスクライバー データベースからレポートへのパラメーター値の受け渡し  
+## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>サブスクライバー データベースからレポートへのパラメーター値の受け渡し  
  パラメーター化されたレポート用のデータ ドリブン サブスクリプションを作成する場合、変数パラメーター値を使用して、各レポートの出力をカスタマイズできます。 たとえば、サブスクライバー データベースには、レポート データのフィルター処理に使用できる従業員 ID 番号、雇用日、職種、および勤務地情報が含まれていることがあります。 これらの列データまたは他の使用可能な列データに基づいたパラメーターをレポートが受け取ると、そのパラメーターを適切な列にマップすることができます。  
   
  サブスクライバー フィールドをレポート パラメーターにマップするときは、データ型および列の長さに互換性があることを確認してください。 データ型に不一致がある場合、サブスクリプションの処理中にエラーが発生します。 パラメーター化したレポートでのサブスクライバー データの使用については、「[データドリブン サブスクリプションの作成 (SSRS チュートリアル)](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)」を参照してください。  
   
-## サブスクライバー データ ソースの変更  
+## <a name="modifying-the-subscriber-data-source"></a>サブスクライバー データ ソースの変更  
  サブスクライバー データ ソースに以下の変更を加えると、サブスクリプションの実行を防ぐことができます。  
   
 -   サブスクリプションで参照されている列の削除  
@@ -78,9 +83,9 @@ caps.handback.revision: 43
   
  これらの変更のいずれかを行う場合は、サブスクリプションを更新する必要があります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データ ドリブン サブスクリプションを作成、変更、および削除する](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [データ ドリブン サブスクリプション](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [サブスクリプションと配信 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

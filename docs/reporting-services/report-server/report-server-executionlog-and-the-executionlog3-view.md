@@ -1,29 +1,34 @@
 ---
-title: "レポート サーバー ExecutionLog と ExecutionLog3 ビュー | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ログ [Reporting Services], 実行"
-  - "実行ログ [Reporting Services]"
+title: "レポート サーバー ExecutionLog と ExecutionLog3 ビュー |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [Reporting Services], execution
+- execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 caps.latest.revision: 41
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 41
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f54e9b1c9aa0a17634048f91932c4aad2d69888b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# レポート サーバー ExecutionLog と ExecutionLog3 ビュー
+# <a name="report-server-executionlog-and-the-executionlog3-view"></a>レポート サーバー ExecutionLog と ExecutionLog3 ビュー
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポート サーバー実行ログには、サーバー上で実行するレポート、またはネイティブ モードのスケールアウト配置や SharePoint ファーム内の複数のサーバー上で実行するレポートに関する情報が含まれます。 レポート実行ログを使用して、レポートを要求する頻度、最も多く使用される出力形式、および各処理フェーズでかかる処理時間 (単位はミリ秒) を調査できます。 このログには、レポートのデータセット クエリの実行にかかった時間とデータの処理にかかった時間に関する情報が記録されます。 レポート サーバー管理者は、ログの情報を確認して実行時間が長いタスクを特定し、レポート作成者に対して改善の余地があるレポートの領域 (データセットや処理) について提案することができます。  
   
- SharePoint モード用に構成されたレポート サーバーでは、SharePoint ULS ログも利用できます。 詳細については、「[SharePoint トレース ログの Reporting Services イベントをオンにする (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)」を参照してください。  
+ SharePoint モード用に構成されたレポート サーバーでは、SharePoint ULS ログも利用できます。 詳細については、「 [SharePoint トレース ログの Reporting Services イベントをオンにする (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ##  <a name="bkmk_top"></a> ログ情報の表示  
  レポート サーバーは、レポート実行に関するデータのログを内部データベース テーブルに記録します。 このテーブルの情報は SQL Server ビューで参照できます。  
@@ -67,7 +72,7 @@ caps.handback.revision: 41
   
  前の手順の説明に従ってログ記録を有効にしてから、次の手順を実行する必要があります。  
   
-1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの **[システム設定]** ページで、**[ユーザー定義]** セクションを探します。  
+1.  **サービス アプリケーションの** [システム設定] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ページで、 **[ユーザー定義]** セクションを探します。  
   
 2.  **ExecutionLogLevel** を **verbose**に変更します。 このフィールドはテキスト入力フィールドで、有効な値は **verbose** と **normal**の 2 つです。  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 41
   
 2.  目的のレポート サーバーに接続します。  
   
-3.  サーバー名を右クリックし、**[プロパティ]** をクリックします。 [プロパティ] オプションが無効になっている場合は、SQL Server Management Studio を管理者特権で実行したことを確認してください。  
+3.  サーバー名を右クリックし、 **[プロパティ]**をクリックします。 [プロパティ] オプションが無効になっている場合は、SQL Server Management Studio を管理者特権で実行したことを確認してください。  
   
 4.  **[ログ記録]** ページをクリックします。  
   
@@ -96,7 +101,7 @@ caps.handback.revision: 41
   
 1.  **[サーバーのプロパティ]** ダイアログ ボックスで、 **[詳細設定]** ページをクリックします。  
   
-2.  **[ユーザー定義]** セクションで、**ExecutionLogLevel** を **verbose** に変更します。 このフィールドはテキスト入力フィールドで、有効な値は **verbose** と **normal**の 2 つです。  
+2.  **[ユーザー定義]** セクションで、 **ExecutionLogLevel** を **verbose**に変更します。 このフィールドはテキスト入力フィールドで、有効な値は **verbose** と **normal**の 2 つです。  
   
 ##  <a name="bkmk_executionlog3"></a> ログのフィールド (ExecutionLog3)  
  このビューの XML ベースの **AdditionalInfo** 列内に追加のパフォーマンス診断ノードが追加されました。 AdditionalInfo 列には、他の 1 つ以上の情報のフィールドから成る XML 構造が格納されています。 ExecutionLog3 ビューから行を取得する Transact-SQL ステートメントの例を次に示します。 この例では、レポート サーバー データベースの名前が **ReportServer**であることを前提にしています。  
@@ -262,7 +267,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 -   **ExternalImages**  
   
-     追加されたバージョン:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+     追加されたバージョン: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
      値の単位はミリ秒です。 このデータはパフォーマンスに関する問題の診断に使用できます。 外部 Web サーバーからイメージを取得するのに時間がかかり、レポートの実行全体が遅くなる場合があります。  
   
@@ -276,7 +281,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 -   **接続**  
   
-     追加されたバージョン:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+     追加されたバージョン: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
      複数のレベルから成る構造体  
   
@@ -338,8 +343,8 @@ select * from ExecutionLog2 order by TimeStart DESC
 |TimeDataRetrieval|データの取得、レポートの処理、レポートの表示にかかった時間 (単位はミリ秒)。|  
 |TimeProcessing||  
 |TimeRendering||  
-|ソース|レポート実行のソース (1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴)。|  
-|[状態]|状態 (rsSuccess またはエラー コード。複数のエラーが発生する場合は、最初のエラーのみ記録)。|  
+|Source|レポート実行のソース (1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴)。|  
+|Status|状態 (rsSuccess またはエラー コード。複数のエラーが発生する場合は、最初のエラーのみ記録)。|  
 |ByteCount|表示されるレポートのサイズ (バイト単位)。|  
 |RowCount|クエリから返される行数。|  
 |AdditionalInfo|実行に関する追加情報を格納する XML プロパティ バッグ。|  
@@ -369,11 +374,11 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeProcessing||  
 |TimeRendering||  
 |Source|レポート実行のソース。 有効値: 1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴、5 = アドホック、6 = セッション、7 = RDCE。|  
-|[状態]|有効値: rsSuccess、rsProcessingAborted、またはエラー コード。 複数のエラーが発生した場合は、最初のエラーだけが記録されます。|  
+|Status|有効値: rsSuccess、rsProcessingAborted、またはエラー コード。 複数のエラーが発生した場合は、最初のエラーだけが記録されます。|  
 |ByteCount|表示されるレポートのサイズ (バイト単位)。|  
 |RowCount|クエリから返される行数。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SharePoint トレース ログの Reporting Services イベントをオンにする (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Reporting Services のログ ファイルとソース](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [エラーとイベントのリファレンス (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

@@ -1,31 +1,36 @@
 ---
-title: "SharePoint リストのクエリ デザイナー (レポート ビルダー) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10016"
+title: "SharePoint リストのクエリ デザイナー (レポート ビルダー) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 957ddf233fbbf41f468f8c981c3e8303a3672d9b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# SharePoint リストのクエリ デザイナー (レポート ビルダー)
+# <a name="sharepoint-list-query-designer-report-builder"></a>SharePoint リストのクエリ デザイナー (レポート ビルダー)
   レポート ビルダーおよびレポート デザイナーには、グラフィカル クエリ デザイナーとテキストベースのクエリ デザイナーが用意されており、レポート データセット用に SharePoint サイトから取得するデータを指定するクエリの作成に使用できます。 SharePoint リスト メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。 グラフィカル クエリ デザイナーで作成されたクエリの表示、クエリの変更、またはクエリ コマンドの入力を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
   
 > [!IMPORTANT]  
 >  ユーザーは、クエリを作成して実行する際にデータ ソースにアクセスします。 したがって、データ ソースに対する最小限の権限 (読み取り専用権限など) を付与する必要があります。  
   
-## グラフィカル クエリ デザイナー  
+## <a name="graphical-query-designer"></a>グラフィカル クエリ デザイナー  
  グラフィカル クエリ デザイナーでは、SharePoint サイトを検索し、データセットの SharePoint リスト データを取得するコマンドを対話的に作成できます。 データセットに含めるフィールドを選択し、必要に応じて、データセットのデータを制限するフィルターを指定します。 フィルターをパラメーターとして使用することを指定すると、フィルターの値を実行時に提供できます。  
   
  SharePoint リストには、レポートに含めるには適さない大量の SharePoint 固有フィールドが含まれています。 クエリ デザイナーには、使用するフィールドを見つけやすいようにフィールドを非表示にするオプションが用意されています。  
@@ -75,7 +80,7 @@ caps.handback.revision: 7
   
 -   **[値]** フィルター式で使用する値を表示します。  
   
--   **[パラメーター]** クエリ パラメーターをクエリに追加するオプションを表示します。 [データセットのプロパティ] を使用すると、クエリ パラメーターとレポート パラメーターの関係を表示できます。  
+-   **パラメーター** : クエリ パラメーターをクエリに追加するオプションを表示します。 [データセットのプロパティ] を使用すると、クエリ パラメーターとレポート パラメーターの関係を表示できます。  
   
 ###  <a name="QueryResults"></a> クエリ結果ペイン  
  クエリ結果ペインには、その他のペインの選択内容によって指定されている自動的に生成されたクエリの結果が表示されます。 結果セットの列は選択されたフィールド ペインで指定したフィールドで、行データは適用されたフィルター ペインで指定したフィルターによって制限されます。  
@@ -84,7 +89,7 @@ caps.handback.revision: 7
   
  結果セットの並べ替え順序は、データがデータ ソースから取得された順序によって決まります。 並べ替え順序は、クエリの修正によって変更することも、レポートのデータが取得された後に変更することもできます。  
   
-### グラフィカル クエリ デザイナーのツール バー  
+### <a name="graphical-query-designer-toolbar"></a>グラフィカル クエリ デザイナーのツール バー  
  リレーショナル クエリ デザイナーのツール バーにある次のボタンを使用すると、クエリを指定したりその結果を表示したりすることができます。  
   
 |ボタン|Description|  
@@ -94,7 +99,7 @@ caps.handback.revision: 7
 |**[クエリの実行]**|クエリを実行します。 クエリ結果ペインに結果セットが表示されます。|  
 |**[非表示フィールドの表示]**|SharePoint リンク アイテムの ProgID やレベルなど、SharePoint で自動的に生成されたが、レポートでは通常使用されないフィールドの表示と非表示を切り替えます。 これらのフィールドを非表示にすると、フィールド一覧が簡略化され、使いやすくなります。|  
   
-## 参照  
- [クエリ デザイナー &#40;レポート ビルダー&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+## <a name="see-also"></a>参照  
+ [クエリ デザイナー &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

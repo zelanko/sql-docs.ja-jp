@@ -1,21 +1,29 @@
 ---
-title: "Reporting Services で KPI を使用する | Microsoft Docs"
-ms.date: "02/24/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Reporting Services で Kpi を操作する |Microsoft ドキュメント"
+ms.date: 05/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b451b1773d97d490c0021cdf8cfcfb14c07117b4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services で KPI を使用する
+# <a name="working-with-kpis-in-reporting-services"></a>Reporting Services で KPI を使用する
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 主要業績評価指標 (KPI) は、目標に対する達成度の伝達を視覚化したものです。  主要業績評価指標は、チーム、マネージャー、およびビジネスにとって、測定可能な目標に対する進捗度をすばやく評価するうえで重要です。   
   
 SQL Server 2016 Reporting Services で KPI を使用することで、以下の質問に対する回答を簡単に視覚化できます。  
@@ -26,22 +34,22 @@ SQL Server 2016 Reporting Services で KPI を使用することで、以下の�
   
 -   最低限完了したことは何か。  
   
-## データセットの作成  
+## <a name="creating-a-dataset"></a>データセットの作成  
 KPI は、共有データセットの最初の行のデータのみを使用します。 使用したいデータがその最初の行にあることを確認します。 共有データセットを作成するには、レポート ビルダーまたは SQL Server Data Tools のいずれかを使用することができます。  
   
 > **注**: Dataset は、KPI と同じフォルダーに配置する必要はありません。  
   
-## KPI の配置  
+## <a name="placement-of-kpis"></a>KPI の配置  
   
 KPI は、レポート サーバーの任意のフォルダーに作成できます。  KPI を作成する前に、それを配置する適切な場所について検討する必要があります。 他のレポートおよびそれに関する KPI に関係があり、ユーザーが参照できるフォルダーに配置する必要があります。  
   
-## KPI を追加する  
+## <a name="adding-a-kpi"></a>KPI を追加する  
   
 KPI の場所を決定したら、そのフォルダーに移動して、トップ メニューから [ **新規** > **KPI** ] を選択します。  
   
 ![rsCreateKPI1](../reporting-services/media/rscreatekpi1.png)  
   
-これにより、[**新しい KPI**] 画面が表示されます。  
+これにより、[ **新しい KPI** ] 画面が表示されます。  
   
 ![rsCreateKPI2](../reporting-services/media/rscreatekpi2.png)  
   
@@ -55,81 +63,53 @@ KPI の場所を決定したら、そのフォルダーに移動して、トッ�
 |[状態]|KPI タイルの色を決定するために使用される数値。 有効な値は 1 (緑)、0 (黄色) および-1 (赤です)。|  
 |トレンド セット|グラフを視覚化するために使用されるコンマ区切りの数値。 これは、傾向を表す値を含むデータセットの列にも設定できます。|  
   
-> **警告**: 設計時には [**ステータス**] フィールドに文字値を使用できますが、データセットを更新する場合、数値を使用する必要があります。 数値ではなく文字値を含むデータセットを更新すると、サーバー上の KPI が破損する可能性があります。  
+> **警告**: 設計時には [ **ステータス** ] フィールドに文字値を使用できますが、データセットを更新する場合、数値を使用する必要があります。 数値ではなく文字値を含むデータセットを更新すると、サーバー上の KPI が破損する可能性があります。  
   
-> **注**: [**値**]、[**目標**]、[**状態**] の各フィールドの値は、データセットの結果の最初の行からのみ選択できます。 ただし、[**トレンド セット**] フィールドでは、傾向を反映する列を選択できます。  
+> **注**: [ **値**]、[ **目標** ]、[ **状態** ] の各フィールドの値は、データセットの結果の最初の行からのみ選択できます。 ただし、[ **トレンド セット** ] フィールドでは、傾向を反映する列を選択できます。  
   
 共有データセットのデータを使用するには、次の操作を実行します。  
   
-1.  [フィールド] ドロップダウン ボックスを [**手動設定**] または [**未設定**] から [**データセット フィールド**] に変更します。  
+1.  [フィールド] ドロップダウン ボックスを [ **手動設定**] または [ **未設定**] から [ **データセット フィールド**] に変更します。  
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2.  データ ボックスで [**省略記号 (…)**] を選択します。 これにより、[**データセットの選択**] 画面が表示されます。  
+2.  選択、**省略記号 (...)**データ ボックスにします。 これにより、[ **データセットの選択** ] 画面が表示されます。  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
 3.  表示するデータを含むデータセットを選択します。  
   
-4.  使用するフィールドを選択します。 [**OK**] を選択します。  
+4.  使用するフィールドを選択します。 [ **OK**] を選択します。  
   
     ![rsCreateKPI5](../reporting-services/media/rscreatekpi5.png)  
   
-5.  値の形式と一致するように [**値の表示形式**] を変更します。 この例では、値は通貨です。  
+5.  値の形式と一致するように [ **値の表示形式** ] を変更します。 この例では、値は通貨です。  
   
     ![rsCreateKPI6](../reporting-services/media/rscreatekpi6.png)  
   
-6.  [**適用**] を選択します。  
+6.  [ **適用**] を選択します。  
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)  
   
-## KPI を削除する  
+## <a name="removing-a-kpi"></a>KPI を削除する  
   
 KPI を削除するには、次の操作を実行します。  
   
-1.  削除する KPI の [**省略記号 (...)**] を選択します。 [**管理**] を選択します。  
+1.  選択、**省略記号 (...)**を削除する KPI のです。 [ **管理**] を選択します。  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
-2.  [**削除**] を選択します。 確認ダイアログで [**削除**] を再度選択します。  
+2.  [ **削除**] を選択します。 確認ダイアログで [ **削除** ] を再度選択します。  
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   
-## KPI を更新する  
+## <a name="refreshing-a-kpi"></a>KPI を更新する  
   
-KPI を更新するには、共有データセットの [**キャッシュ更新計画**] を構成する必要があります。 現在、web ポータルからキャッシュ更新計画を構成することはできません。 構成するには、古いレポート マネージャーに切り替える必要があります。   
+KPI を更新するには、共有データセットのキャッシュを構成する必要があります。 更新計画のキャッシュに関する詳細についてを参照してください[共有データセットを操作](../reporting-services/work-with-shared-datasets-web-portal.md)です。  
   
-ここでは、いくつかの基本的な設定を使用してキャッシュ更新計画をセットアップする手順について説明します。 キャッシュ更新計画の詳細については、「[キャッシュ更新オプション (レポート マネージャー)](Cache%20Refresh%20Options%20(Report%20Manager).xml)」を参照してください。  
+## <a name="next-steps"></a>次の手順
   
-1.  レポート マネージャーを開いて、キャッシュ更新計画のプロパティを構成する共有データセットを探します。   
-  
-2.  レポートまたは共有データセットの上にマウス ポインターを移動し、下矢印を選択します。  
-  
-3.  ドロップダウン リストで、[**管理**] を選択します。 [**全般プロパティ**] ページが開きます。  
-  
-4.  [**キャッシュ更新オプション**] タブを選択します。  
-  
-5.  新しいキャッシュ計画を作成するには、[**新しいキャッシュ更新計画**] を選択します。  
-  
-    ![rsRefreshKPI1](../reporting-services/media/rsrefreshkpi1.png)  
-  
-6.  既定のオプションを使用して、このアイテムのキャッシュを有効にするかどうかを尋ねるメッセージが表示されます。 [**OK**] を選択します。  
-  
-    > **注**: キャッシュ更新計画を作成するには、SQL Server エージェント サービスを有効にし、開始する必要があります。  
-  
-7.  特定のスケジュールを選択するか、共有スケジュールがあれば、それを選択することができます。  
-  
-8.  キャッシュ更新プランのスケジュールが実行されると、KPI の値が更新されます。  
-  
-    ![rsRefreshKPI2](../reporting-services/media/rsrefreshkpi2.png)  
-  
-## 参照  
-  
-- [Web ポータル (SSRS ネイティブ モード)](../reporting-services/web-portal-ssrs-native-mode.md)  
-  
-- [[キャッシュ更新オプション] (レポート マネージャー)](Cache%20Refresh%20Options%20(Report%20Manager).xml)  
-  
-    
-  
-  
-  
+[Web ポータル](../reporting-services/web-portal-ssrs-native-mode.md)  
+[共有データセットを操作します。](../reporting-services/work-with-shared-datasets-web-portal.md)
+
+他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,61 +1,39 @@
 ---
-title: "Reporting Services SharePoint モードの PowerShell コマンドレット | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Reporting Services SharePoint モード用の PowerShell コマンドレット |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 caps.latest.revision: 32
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 31
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: d68de45f8514de03e9804996da00d5f63d211311
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services SharePoint モードの PowerShell コマンドレット
-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードをインストールすると、SharePoint モードのレポート サーバーをサポートするために PowerShell コマンドレットがインストールされます。 コマンドレットは 3 つのカテゴリの機能をサポートしています。  
+# <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint モードの PowerShell コマンドレット
+
+SQL Server 2016 Reporting Services SharePoint モードをインストールするときに、PowerShell コマンドレットは、SharePoint モードでレポート サーバーをサポートするためにインストールされます。 コマンドレットは 3 つのカテゴリの機能をサポートしています。  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 共有サービスおよびプロキシのインストール。  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションおよび関連付けられたプロキシのプロビジョニングと管理。  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能 (拡張機能や暗号化キーなど) の管理。  
-  
-||  
-|-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード|  
-  
- **このトピックの内容は次のとおりです。**  
-  
--   [コマンドレットの概要](#bkmk_cmdlet_sum)  
-  
--   [共有サービスとプロキシ コマンドレット](#bkmk_sharedservice_cmdlets)  
-  
--   [サービス アプリケーションとプロキシ コマンドレット](#bkmk_serviceapp_cmdlets)  
-  
--   [Reporting Services カスタム機能コマンドレット](#bkmk_ssrsfeatures_cmdlets)  
-  
--   [Reporting Services PowerShell の基本的なサンプル](#bkmk_basic_samples)  
-  
--   [Reporting Services PowerShell の高度なサンプル](#bkmk_detailedsamples)  
-  
-    -   [Reporting Services サービス アプリケーションとプロキシの作成](#bkmk_example_create_service_application)  
-  
-    -   [Reporting Services 配信拡張機能の確認と更新](#bkmk_example_delivery_extension)  
-  
-    -   [Reporting Service アプリケーション データベースのプロパティの取得と設定](#bkmk_example_db_properties)  
-  
-    -   [Reporting Services データ拡張機能の一覧表示](#bkmk_example_list_data_extensions)  
-  
-    -   [Reporting Services サブスクリプション所有者の変更と一覧表示](#bkmk_change_subscription_owner)  
-  
+
 ##  <a name="bkmk_cmdlet_sum"></a> コマンドレットの概要  
- コマンドレットを実行するには、SharePoint 管理シェルを開く必要があります。 Microsoft Windows に付属しているグラフィカル ユーザー インターフェイス エディター (**Windows PowerShell Integrated Scripting Environment (ISE)**) を使用することもできます。 詳細については、「[Windows Server での Windows PowerShell の開始](http://technet.microsoft.com/library/hh847814.aspx)」(http://technet.microsoft.com/library/hh847814.aspx) を参照してください。 次のコマンドレット概要では、サービス アプリケーション "データベース" への参照は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションによって作成および使用されたすべてのデータベースを参照します。 これには、構成、警告、および一時データベースが含まれます。  
+ コマンドレットを実行するには、SharePoint 管理シェルを開く必要があります。 Microsoft Windows に付属しているグラフィカル ユーザー インターフェイス エディター ( **Windows PowerShell Integrated Scripting Environment (ISE)**) を使用することもできます。 詳細については、次を参照してください。 [Windows サーバー上の Windows PowerShell の開始](http://technet.microsoft.com/library/hh847814.aspx)です。 次のコマンドレット概要では、サービス アプリケーション "データベース" への参照は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションによって作成および使用されたすべてのデータベースを参照します。 これには、構成、警告、および一時データベースが含まれます。  
   
  PowerShell の例を入力すると、次のようなエラー メッセージが表示されます。  
   
@@ -72,9 +50,9 @@ caps.handback.revision: 31
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- 詳細については、「[Windows PowerShell を使用して SharePoint 2013 を管理する](http://technet.microsoft.com/library/ee806878.aspx)」 (http://technet.microsoft.com/library/ee806878.aspx) を参照してください。  
+ 詳細については、次を参照してください。 [SharePoint 2013 を管理する Windows PowerShell を使用して](http://technet.microsoft.com/library/ee806878.aspx)です。  
   
-#### SharePoint 管理シェルを開いてコマンドレットを実行するには  
+#### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>SharePoint 管理シェルを開いてコマンドレットを実行するには  
   
 1.  **[スタート]** ボタンをクリックします。  
   
@@ -113,7 +91,7 @@ caps.handback.revision: 31
 |Mount-SPRSDatabase|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーション用のデータベースをマウントします。|  
 |New-SPRSDatabase|指定した [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーション用の新しいサービス アプリケーション データベースを作成します。|  
 |Get-SPRSDatabaseCreationScript|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーション用に、データベース作成スクリプトを画面に出力します。 その後、SQL Server Management Studio でスクリプトを実行できます。|  
-|Get-SPRSDatabase|1 つ以上の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーション データベースを取得します。 Set-SPRSDatabase コマンドレットを使用して `querytimeout` などのプロパティを変更できるように、コマンドを使用してサービス アプリケーション データベースの ID を取得します。 このトピックの例「[Reporting Service アプリケーション データベースのプロパティの取得と設定](#bkmk_example_db_properties)」を参照してください。|  
+|Get-SPRSDatabase|1 つ以上の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーション データベースを取得します。 Set-SPRSDatabase コマンドレットを使用して `querytimeout`などのプロパティを変更できるように、コマンドを使用してサービス アプリケーション データベースの ID を取得します。 このトピックの例「 [Reporting Service アプリケーション データベースのプロパティの取得と設定](#bkmk_example_db_properties)」を参照してください。|  
 |Get-SPRSDatabaseRightsScript|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーション用に、データベース権限スクリプトを画面に出力します。 これを実行すると、対象のユーザーとデータベースの入力を求めるプロンプトが表示され、権限を変更するための Transact-SQL が返されます。 その後、SQL Server Management Studio でこのスクリプトを実行できます。|  
 |Get-SPRSDatabaseUpgradeScript|データベース アップグレード スクリプトを画面に出力します。 このスクリプトは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーション データベースを、現在の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インストールのデータベース バージョンにアップグレードします。|  
   
@@ -167,7 +145,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
 ```  
   
 ##  <a name="bkmk_detailedsamples"></a> Reporting Services PowerShell の高度なサンプル  
- 次のサンプルに加えて、「[手順 1 ～ 4 に対応する Windows PowerShell スクリプト](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_full_script)」の「Windows PowerShell スクリプト」を参照してください。  
+ 次のサンプルに加えて、「 [手順 1 ～ 4 に対応する Windows PowerShell スクリプト](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_full_script)」の「Windows PowerShell スクリプト」を参照してください。  
   
 ###  <a name="bkmk_example_create_service_application"></a> Reporting Services サービス アプリケーションとプロキシの作成  
  このサンプル スクリプトは次のタスクを完了します。  
@@ -176,7 +154,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 2.  作成したプロキシを既定のプロキシ グループに追加する。  
   
-3.  ポート 80 の Web アプリケーションのコンテンツ データベースに、サービス アプリケーション アクセス権を付与する。 このスクリプトは、サイト "http://sitename" が既に存在することを前提としています。  
+3.  ポート 80 の Web アプリケーションのコンテンツ データベースに、サービス アプリケーション アクセス権を付与する。 スクリプトには、サイトが前提としています`http://sitename`既に存在します。  
   
 ```  
 # Create service application and service application proxy  
@@ -195,7 +173,7 @@ $webApp.GrantAccessToProcessIdentity($appPoolAccountName)
 ```  
   
 ###  <a name="bkmk_example_delivery_extension"></a> Reporting Services 配信拡張機能の確認と更新  
- 次の PowerShell スクリプトの例では、`My RS Service App` という名前のサービス アプリケーションについて、レポート サーバーの電子メール配信拡張機能の構成を更新します。 SMTP サーバー (`<email server name>`) と差出人の電子メール別名 (`<your FROM email address>`) の値を更新します。  
+ 次の PowerShell スクリプトの例では、 `My RS Service App`という名前のサービス アプリケーションについて、レポート サーバーの電子メール配信拡張機能の構成を更新します。 SMTP サーバー (`<email server name>`) と差出人の電子メール別名 (`<your FROM email address>`) の値を更新します。  
   
 ```  
 $app=get-sprsserviceapplication -Name "My RS Service App"  
@@ -297,13 +275,13 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
      `SHAREPOINTLIST          Data`  
   
 ###  <a name="bkmk_change_subscription_owner"></a> Reporting Services サブスクリプション所有者の変更と一覧表示  
- 「 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md)」を参照してください。  
+ 「 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)」を参照してください。  
   
-## 参照  
- [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md)   
- [チェック リスト: PowerShell を使用して PowerPivot for SharePoint を確認する](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
- [SQL Server PowerShell のヘルプの参照](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
- [CodePlex SharePoint 管理 PowerShell スクリプト](http://sharepointpsscripts.codeplex.com/)   
- [PowerShell を使用して SSRS を管理する方法](https://curatedviews.cloudapp.net/13107/how-to-administer-ssrs-using-powershell)  
-  
-  
+## <a name="next-steps"></a>次の手順
+
+[Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
+[チェックリスト: PowerShell を使用して、SharePoint の Power Pivot を確認するには](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+[SQL Server powershell のヘルプ](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
+[CodePlex SharePoint 管理 PowerShell スクリプト](http://sharepointpsscripts.codeplex.com/)   
+
+他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

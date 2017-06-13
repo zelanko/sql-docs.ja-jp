@@ -1,38 +1,36 @@
 ---
-title: "Web ポータルのブランド化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Web ポータルをブランド化 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 05/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6dac97f7-02a6-4711-81a3-e850a6b40bf1
 caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 19742f59b104d18633a954dc2f8bc9824b58ef21
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# Web ポータルのブランド化
+
+# <a name="branding-the-web-portal"></a>Web ポータルのブランド化
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 ビジネスのブランドを設定することで Web ポータルの外観を変更できます。 これにはブランド パッケージを使用します。 CSS (カスケーディング スタイル シート) に詳しくなくても作成できるようにブランド パッケージは設計されています。  
   
-このトピックの内容:  
-  
--   [ブランド パッケージを作成する](#create)  
-  
--   [Web ポータルにブランド パッケージを適用する](#apply)  
-  
--   [metadata.xml 例](#metadata)  
-  
--   [colors.json 例](#colors)  
-  
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
-  
-<a name="create">  
-## ブランド パッケージを作成する  
+   
+## <a name="creating-the-brand-package"></a>ブランド パッケージを作成する  
   
 Reporting Services のブランド パッケージは 3 つのアイテムから構成されており、zip ファイルとしてパッケージされています。   
   
@@ -42,7 +40,7 @@ Reporting Services のブランド パッケージは 3 つのアイテムから
   
 ファイルには上記の名前を与える必要があります。 ただし、zip ファイルの名前は自由に設定できます。  
   
-### metadata.xml  
+### <a name="metadataxml"></a>metadata.xml  
   
 metadata.xml ファイルにより、ブランド パッケージの名前を設定できます。また、このファイルには、colors.json ファイルと logo.png ファイルの両方の参照エントリが含まれています。  
   
@@ -65,7 +63,7 @@ metadata.xml ファイルにより、ブランド パッケージの名前を設
       <Item key="logo" path="logo.png" />  
     </Contents>  
   
-### Colors.json  
+### <a name="colorsjson"></a>Colors.json  
   
 ブランド パッケージがアップロードされると、サーバーは colors.json ファイルから名前/値のペアを抽出し、それをマスター LESS スタイルシートである、brand.less と結合します。 この LESS ファイルが処理され、結果的に生成された CSS ファイルがクライアントに提供されます。 スタイルシートのすべての色を 6 文字の 16 進数で表現します。  
   
@@ -77,7 +75,7 @@ metadata.xml ファイルにより、ブランド パッケージの名前を設
         background-color:@primaryButtonBg;   
     }  
   
-これは CSS 構文に似ていますが、@ 記号が接頭辞として付く色値は LESS に固有のものです。 値が json ファイルにより設定される変数です。  
+これは、CSS 構文に似ていますは、色の値が付いて、@symbolは LESS に固有です。 値が json ファイルにより設定される変数です。  
   
 たとえば、colors.json ファイルに次の値が含まれていたとします。  
   
@@ -116,14 +114,13 @@ Mobile Report Publisher で初めてサーバーに接続するとき、それ�
   
 その後、作成したあらゆるモバイル レポートにこのテーマを利用できます。テーマを配置した同じサーバーでなくても構いません。   
   
-### ロゴを使用する  
+### <a name="using-a-logo"></a>ロゴを使用する  
   
 ブランド パッケージでロゴを追加する場合、Web ポータルの [サイト設定] メニューに設定した名前の代わりに Web ポータルに表示されます。  
   
 ロゴのために追加するファイルには PNG ファイル形式を使用する必要があります。 ファイルの寸法はサーバーにアップロードした後に拡大されます。 約 290px x 60px になるはずです。  
-  
-<a name="apply">  
-## Web ポータルにブランド パッケージを適用する  
+   
+## <a name="applying-the-brand-package-to-the-web-portal"></a>Web ポータルにブランド パッケージを適用する  
   
 次の手順でブランド パッケージを追加、ダウンロード、削除します。  
   
@@ -143,8 +140,7 @@ Mobile Report Publisher で初めてサーバーに接続するとき、それ�
   
 パッケージを **[ダウンロード]** したり、 **[削除]** したりすることもできます。 パッケージを削除すると、直後に Web ポータルが既定のブランドにリセットされます。  
   
-<a name="metadata">  
-## metadata.xml 例  
+## <a name="metadataxml-example"></a>metadata.xml 例  
   
     \<?xml version="1.0" encoding="utf-8"?>  
     <SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
@@ -157,9 +153,8 @@ Mobile Report Publisher で初めてサーバーに接続するとき、それ�
             <Item key="logo" path="logo.png" />  
         </Contents>  
     </SystemResourcePackage>  
-  
-<a name="colors">  
-## Colors.json 例  
+   
+## <a name="colorsjson-example"></a>colors.json 例  
   
     {  
         "name":"Multicolored example brand",  
@@ -252,12 +247,5 @@ Mobile Report Publisher で初めてサーバーに接続するとき、それ�
             "altTableAccent":"#fdc336"  
         }  
     }  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

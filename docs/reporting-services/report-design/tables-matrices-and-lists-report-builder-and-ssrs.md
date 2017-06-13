@@ -1,51 +1,56 @@
 ---
-title: "テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.tablixgroup.f1"
-  - "10045"
-  - "sql13.rtp.rptdesigner.tablix.visibility.f1"
-  - "10039"
-  - "sql13.rtp.rptdesigner.groupproperties.visibility.f1"
-  - "10104"
-  - "10047"
-  - "sql13.rtp.rptdesigner.groupproperties.advanced.f1"
-  - "10044"
-  - "sql13.rtp.rptdesigner.groupproperties.filters.f1"
-  - "sql13.rtp.rptdesigner.tablix.sort.f1"
-  - "sql13.rtp.rptdesigner.tablix.general.f1"
-  - "sql13.rtp.rptdesigner.groupproperties.general.f1"
-  - "sql13.rtp.rptdesigner.groupproperties.variables.f1"
-  - "10046"
-  - "10101"
-  - "sql13.rtp.rptdesigner.tablix.filter.f1"
-  - "sql13.rtp.rptdesigner.groupproperties.sort.f1"
-  - "10042"
-  - "10041"
-  - "10102"
-  - "10103"
-  - "10043"
-  - "sql13.rtp.rptdesigner.groupproperties.pagebreaks.f1"
+title: "テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.tablixgroup.f1
+- "10045"
+- sql13.rtp.rptdesigner.tablix.visibility.f1
+- "10039"
+- sql13.rtp.rptdesigner.groupproperties.visibility.f1
+- "10104"
+- "10047"
+- sql13.rtp.rptdesigner.groupproperties.advanced.f1
+- "10044"
+- sql13.rtp.rptdesigner.groupproperties.filters.f1
+- sql13.rtp.rptdesigner.tablix.sort.f1
+- sql13.rtp.rptdesigner.tablix.general.f1
+- sql13.rtp.rptdesigner.groupproperties.general.f1
+- sql13.rtp.rptdesigner.groupproperties.variables.f1
+- "10046"
+- "10101"
+- sql13.rtp.rptdesigner.tablix.filter.f1
+- sql13.rtp.rptdesigner.groupproperties.sort.f1
+- "10042"
+- "10041"
+- "10102"
+- "10103"
+- "10043"
+- sql13.rtp.rptdesigner.groupproperties.pagebreaks.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: aa7d5ba489e0f23c6802a1d6596a22f2263decd8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)
- [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のテーブル、マトリックス、および一覧は、行と列で構成されたセルにページ分割されたレポート データを表示する*データ領域*です。 セルには通常、テキスト、日付、数字などのテキスト データが含まれていますが、ゲージ、グラフ、または画像などのレポート アイテムも含めることができます。 テーブル、マトリックス、および一覧をまとめて *Tablix* データ領域と呼ぶことがあります。  
+# <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)
+ [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]のテーブル、マトリックス、および一覧は、行と列で構成されたセルにページ分割されたレポート データを表示する *データ領域* です。 セルには通常、テキスト、日付、数字などのテキスト データが含まれていますが、ゲージ、グラフ、または画像などのレポート アイテムも含めることができます。 テーブル、マトリックス、および一覧をまとめて *Tablix* データ領域と呼ぶことがあります。  
   
- テーブル、マトリックス、および一覧のテンプレートは、セルにデータを表示できる柔軟なグリッドである Tablix データ領域に基づいて構築されます。 テーブルおよびマトリックスのテンプレートでは、セルは行と列で構成されます。 テンプレートは基になる汎用の Tablix データ領域の一種であるため、レポートの作成時に、テンプレート形式を組み合わせてデータを表示し、テーブル、マトリックス、または一覧を変更して別のデータ領域の機能を含めることができます。 たとえば、追加したテーブルがニーズに合わない場合は、列グループを追加してテーブルをマトリックスに変更できます。  
+ テーブル、マトリックス、および一覧のテンプレートは、セルにデータを表示できる柔軟なグリッドである Tablix データ領域に基づいて構築されます。 テーブルおよびマトリックスのテンプレートでは、セルは行と列で構成されます。 テンプレートは基になる汎用の tablix データ領域の一種であるため、テンプレート形式の組み合わせでデータを表示し、レポートの作成と、別のデータ領域の機能を含めるでテーブル、マトリックス、または一覧を変更できます。 たとえば、追加したテーブルがニーズに合わない場合は、列グループを追加してテーブルをマトリックスに変更できます。  
   
  テーブルとマトリックスのデータ領域では、入れ子になったテーブル、マトリックス、一覧、グラフ、およびゲージを含めることで、データの複雑なリレーションシップを表示できます。 テーブルとマトリックスには表形式のレイアウトがあり、各データは 1 つのデータ ソースに基づいて構築された 1 つのデータセットから取得されます。 テーブルとマトリックスの重要な違いとして、テーブルに含めることができるのは行グループのみであるのに対し、マトリックスには行グループと列グループを含めることができます。  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 10
 ##  <a name="Table"></a> Table  
  テーブルを使用すると詳細データの表示やデータの行グループへの編成、またはその両方が可能です。 テーブル テンプレートには、テーブル ヘッダー行およびデータの詳細行と共に、3 つの列が含まれます。 次の図では、デザイン画面で初期のテーブル テンプレートが選択されています。  
   
- ![デザイン画面上のテーブル テンプレート、選択](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "デザイン画面上のテーブル テンプレート、選択")  
+ ![テーブル テンプレートのデザイン画面で選択した](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "テーブル テンプレートのデザイン画面で選択されています。")  
   
  データは、1 つのフィールドまたは複数のフィールドでグループ化することも、独自の式を記述してグループ化することもできます。 入れ子になったグループや独立した隣接するグループの作成、グループ化されたデータの集計値の表示、グループへの合計の追加などを行うことができます。 たとえば、テーブルに [Category] という名前の行グループがある場合は、各グループの小計とレポートの総計を追加できます。 テーブルを見やすくし、強調するデータを強調表示するには、セルを結合し、書式をデータとテーブルの見出しに適用します。  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 10
 ##  <a name="Matrix"></a> マトリックス  
  PivotTable またはクロス集計と同様に、マトリックスは、行と列にグループ化した集計データ サマリの表示に使用します。 グループの行と列の数は、各行グループおよび列グループに含まれている一意の値の数によって決定します。 次の図では、デザイン画面で初期のマトリックス テンプレートが選択されています。  
   
- ![ツールボックスから追加された新しいマトリックス、選択](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "ツールボックスから追加された新しいマトリックス、選択")  
+ ![選択したツールボックスから追加されたマトリックスの新規作成](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "選択ツールボックスから追加されたマトリックスの新規作成")  
   
  データは、複数のフィールドまたは式によって、行グループと列グループにグループ化できます。 実行時にレポート データとデータ領域が組み合わされると、列グループに列、行グループに行がそれぞれ追加され、マトリックスはページ上で縦横に拡大されます。 マトリックス セルには、そのセルが所属する行グループと列グループの交差部分にスコープを設定した集計値が表示されます。 たとえば、マトリックスに行グループ (Category) と売上の合計を表示する 2 つの列グループ (Territory および Year) がある場合、レポートには Category グループ内の各値に対して売上の合計を含む 2 つのセルが表示されます。 セルのスコープは 2 つの交差部分 (Category および Territory と Category および Year) です。 マトリックスには、入れ子になったグループと隣接するグループを含めることができます。 入れ子になったグループには親子リレーションシップ、隣接するグループにはピア リレーションシップがあります。 マトリックス内には、入れ子になった行および列グループの任意のレベルの小計や、すべてのレベルの小計が追加できます。  
   
@@ -82,12 +87,12 @@ caps.handback.revision: 10
   
  ドリルダウン トグルを含めて、最初は詳細データを非表示にすることもできます。ユーザーは、トグルをクリックすることにより、表示するデータの量を調整できます。  
   
- 詳細については、[マトリックスの作成に関するページ](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)を参照してください。  
+ 詳細については、 [マトリックスの作成に関するページ](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)を参照してください。  
   
 ##  <a name="List"></a> 一覧  
  一覧は、自由形式のレイアウトの作成に使用します。 グリッド レイアウトのみに制限されず、フィールドは一覧内に自由に配置できます。 一覧は、多数のデータセット フィールドを表示するフォームの設計に使用したり、グループ化されたデータの場合は、複数のデータ領域を並列に表示するコンテナーとして使用したりすることができます。 たとえば、一覧にグループを定義し、テーブル、グラフ、およびイメージを追加し、従業員や患者のレコードを表示する際と同様に、各グループ値についてテーブルまたはグラフィック形式で値を表示することができます。  
   
- ![ツールボックスから追加された新しい一覧、選択](../../reporting-services/report-design/media/rs-listtemplatenewselected.png "ツールボックスから追加された新しい一覧、選択")  
+ ![選択したツールボックスから追加された新しいリスト](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "ツールボックスから追加された新しいリストを選択")  
   
  詳細については、「一覧がある請求書とフォームを作成する」を参照してください。  
   
@@ -110,7 +115,7 @@ caps.handback.revision: 10
   
  Tablix 機能を追加することで、テーブル、マトリックス、または一覧の改良を続けることができます。 Tablix 機能には、詳細データやグループ化されたデータの集計を行および列に表示する機能が含まれます。 入れ子構造のグループ、独立した隣接するグループ、または再帰的なグループを作成できます。 グループ データのフィルター処理や並べ替えが可能なほか、複数のグループ式をグループ定義に含めることにより、グループを簡単に組み合わせることができます。  
   
- さらに、グループの合計、またはデータ領域の総合計を追加することもできます。 行や列を非表示にしてレポートを簡潔化し、ドリルダウン レポートのように非表示のデータ表示をユーザーが切り替えることができるようにすることができます。 詳細については、「[レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/controlling the tablix data region display on a report page.md)」を参照してください。  
+ さらに、グループの合計、またはデータ領域の総合計を追加することもできます。 行や列を非表示にしてレポートを簡潔化し、ドリルダウン レポートのように非表示のデータ表示をユーザーが切り替えることができるようにすることができます。 詳細については、「 [レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)」を参照してください。  
   
 ##  <a name="HowTo"></a> 操作方法に関するトピック  
  このセクションでは、レポートでテーブル、マトリックス、および一覧を使用する手順について説明しているトピックの一覧を紹介します。具体的には、行と列のデータの表示、列の追加と削除、セルの結合、および行および列グループの小計を含める方法を示します。  
@@ -148,7 +153,7 @@ caps.handback.revision: 10
  [Tablix データ領域へのデータの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
  Tablix データ領域に詳細データ、グループ化されたデータ、小計と総計、およびラベルを追加する方法について詳しく説明します。  
   
- [レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/controlling the tablix data region display on a report page.md)  
+ [レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)  
  レポートに表示したときの Tablix データ領域の表示方法を変更するための Tablix データ領域のプロパティについて説明します。  
   
  [行見出しと列見出しの制御 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/controlling-row-and-column-headings-report-builder-and-ssrs.md)  
@@ -160,8 +165,8 @@ caps.handback.revision: 10
  [グループについて &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)  
  グループの概要、グループを使用する状況、およびさまざまな Tablix データ領域に使用できるグループについて説明します。  
   
-## 参照  
- [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+## <a name="see-also"></a>参照  
+ [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
  [同じデータセットへの複数のデータ領域のリンク &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   

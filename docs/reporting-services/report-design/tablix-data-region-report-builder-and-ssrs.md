@@ -1,24 +1,29 @@
 ---
-title: "Tablix データ領域 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Tablix データ領域 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cbe2dd936369c89b52302b1d244829dcb12744bc
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tablix データ領域 (レポート ビルダーおよび SSRS)
-  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の Tablix データ領域は、行と列で構成されたセルにページ分割されたレポート データを表示する、汎用のレイアウト レポート アイテムです。 レポート データには、データ ソースから取得される詳細データや、指定したグループに分類される集計詳細データなどがあります。 各 Tablix セルには、テキスト ボックスや画像、Tablix 領域などの他のデータ領域、グラフ、ゲージなど、任意のレポート アイテムを含めることができます。 複数のレポート アイテムをセルに追加するには、まず、コンテナーとして機能する四角形を追加します。 次に、四角形にレポート アイテムを追加します。  
+# <a name="tablix-data-region-report-builder-and-ssrs"></a>Tablix データ領域 (レポート ビルダーおよび SSRS)
+  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]の Tablix データ領域は、行と列で構成されたセルにページ分割されたレポート データを表示する、汎用のレイアウト レポート アイテムです。 レポート データには、データ ソースから取得される詳細データや、指定したグループに分類される集計詳細データなどがあります。 各 Tablix セルには、テキスト ボックスや画像、Tablix 領域などの他のデータ領域、グラフ、ゲージなど、任意のレポート アイテムを含めることができます。 複数のレポート アイテムをセルに追加するには、まず、コンテナーとして機能する四角形を追加します。 次に、四角形にレポート アイテムを追加します。  
   
  テーブル、マトリックス、一覧などのデータ領域は、基になる Tablix データ領域のテンプレートによってリボン上に表されます。 これらのテンプレートのいずれかをレポートに追加すると、実際には、特定のデータ レイアウトに最適化された Tablix データ領域が追加されます。 既定では、テーブル テンプレートはグリッド レイアウトに詳細データを表示し、マトリックスはグリッド レイアウトにグループ データを表示し、一覧は自由な形式のレイアウトに詳細データを表示します。  
   
@@ -41,17 +46,17 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 詳細データとグループ化されたデータについて  
+## <a name="understanding-detail-and-grouped-data"></a>詳細データとグループ化されたデータについて  
  詳細データとは、データ ソースから取得されたレポート データセットのすべてのデータです。 通常、詳細データは、データセット クエリを実行する際にクエリ デザイナーの結果ペインに表示されます。 実際の詳細データには、作成した計算フィールドが含まれており、データセット、データ領域、および詳細グループで設定されているフィルターによって制限されます。 [Quantity] などの簡単な式を使用して、詳細行に詳細データを表示できます。 レポートを実行すると、実行時にクエリ結果の行ごとに詳細行が 1 回繰り返されます。  
   
  グループ化されたデータとは、[SalesOrder] などのグループ定義で指定する値によって分類された詳細データです。 グループ化されたデータをグループ行およびグループ列に表示するには、[Sum(Quantity)] など、グループ化されたデータを集計する簡単な式を使用します。 詳細については、「[グループについて &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
   
-## グループ階層について  
+## <a name="understanding-group-hierarchies"></a>グループ階層について  
  グループは、グループ階層のメンバーとして構成されます。 行グループと列グループの階層は、異なる軸に沿った同一の構造です。 行グループはページを垂直に展開したもの、列グループはページを水平に展開したものと考えることができます。  
   
  ツリー構造は、親子リレーションシップを持つ入れ子になった行および列グループを表します。カテゴリとサブカテゴリなどがその例です。 親グループはツリーのルートであり、子グループはその分岐です。 区域別の売上高や年度別の売上高など、グループには、独立した隣接するリレーションシップが存在する場合もあります。 関連しない複数のツリー階層をフォレストと呼びます。 Tablix データ領域の場合、行グループと列グループはそれぞれ、独立したフォレストとして表されます。 詳細については、「[グループについて &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
   
-## Tablix データ領域部分について  
+## <a name="understanding-tablix-data-region-areas"></a>Tablix データ領域部分について  
  Tablix データ領域には 4 つのセル領域 (Tablix コーナー、Tablix 行グループ階層、Tablix 列グループ階層、Tablix 本体) があります。 Tablix 本体は常に存在します。 その他の領域は省略可能です。  
   
  Tablix 本体領域のセルには、詳細データとグループ データが表示されます。  
@@ -64,7 +69,7 @@ caps.handback.revision: 7
   
  詳細については、「[Tablix データ領域部分 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)」を参照してください。  
   
-## 静的および動的な行と列について  
+## <a name="understanding-static-and-dynamic-rows-and-columns"></a>静的および動的な行と列について  
  Tablix データ領域では、セルが、グループに関連付けられた行と列に分類されます。 行グループと列グループのグループ構造は同じです。 この例では行グループを使用しますが、同じ概念を列グループにも適用できます。  
   
  行には静的なものと動的なものがあります。 静的な行は、グループに関連付けられていません。 レポートを実行すると、静的な行は 1 回表示されます。 テーブル ヘッダーとテーブル フッターは静的な行です。 静的な行にはラベルや合計が表示されます。 静的な行のセルのスコープは、データ領域に設定されます。  
@@ -77,9 +82,9 @@ caps.handback.revision: 7
   
  [合計の追加] 機能によって、そのグループにスコープが設定されている値を表示するための行が、現在のグループの外側に自動的に作成されます。 静的な行および動的な行は、手動で追加することもできます。 視覚インジケーターは、静的な行と動的な行を見分けるのに便利です。 詳細については、「[Tablix データ領域のセル、行、および列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [同じデータセットへの複数のデータ領域のリンク &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/controlling the tablix data region display on a report page.md)   
+ [レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
  [Tablix データ領域の柔軟性について &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

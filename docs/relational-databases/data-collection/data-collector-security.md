@@ -19,10 +19,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d5b90faa09f6185ffe5e273e43707bc9dc2dc1c0
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 62b958f5a1c032e11b5aaef37692b5de21a0bec4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="data-collector-security"></a>データ コレクターのセキュリティ
@@ -96,7 +96,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **db_ssisoperator**  
   
- 詳細については、「[Integration Services のロール &#40;SSIS サービス&#41;](../../integration-services/service/integration-services-roles-ssis-service.md)」を参照してください。  
+ 詳細については、「[Integration Services のロール &#40;SSIS サービス&#41;](../../integration-services/security/integration-services-roles-ssis-service.md)」を参照してください。  
   
 ### <a name="dcproxy-role"></a>dc_proxy ロール  
  **dc_proxy** ロールのメンバーには、データ コレクターのコレクション セットとコレクター レベルのプロパティへの読み取りアクセス権が与えられます。 自身が所有するジョブを実行したり、既存のプロキシ アカウントとして実行するジョブ ステップを作成したりすることもできます。  
@@ -115,7 +115,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **db_ssisoperator**  
   
- 詳細については、「[Integration Services のロール &#40;SSIS サービス&#41;](../../integration-services/service/integration-services-roles-ssis-service.md)」を参照してください。  
+ 詳細については、「[Integration Services のロール &#40;SSIS サービス&#41;](../../integration-services/security/integration-services-roles-ssis-service.md)」を参照してください。  
   
 ## <a name="permissions-for-configuring-and-using-the-management-data-warehouse"></a>管理データ ウェアハウスの構成および使用のための権限  
  タスクによっては、ユーザーが、管理データ ウェアハウスへのアクセスのために用意されている 1 つ以上の固定データベース ロールのメンバーである必要があります。 特権レベルの高いロールから順に、次に示します。  

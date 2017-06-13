@@ -20,10 +20,10 @@ author: sabotta
 ms.author: carlasab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 229b4aac242bc8be7e2058bad708f0bdee604796
+ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
+ms.openlocfilehash: c4f53b76e5f01a639cb15f95f28a8d7118178783
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="sql-server-resources"></a>SQL Server リソース
@@ -31,7 +31,7 @@ ms.lasthandoff: 04/11/2017
   
  SQL Server の新機能の詳細
  - [SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)。
- - [SQL Server vNext の新機能](../sql-server/what-s-new-in-sql-server-vnext.md)  
+ - [SQL Server 2017 年 1 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)  
   
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] はリアルタイム運用分析、モバイル デバイスでの豊富な視覚化、組み込みの高度な分析、新しい高度なセキュリティ テクノロジ、新しいハイブリッド クラウド シナリオにより、マイクロソフトのデータ プラットフォーム史上最も飛躍的な前進を遂げました。 その他のメリットとしては、インメモリ パフォーマンスの改善、Microsoft Azure への OLTP データの拡張、リレーショナルおよび非リレーショナル データの管理の簡略化が挙げられます。  
   

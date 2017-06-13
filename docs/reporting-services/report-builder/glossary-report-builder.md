@@ -1,23 +1,28 @@
 ---
-title: "用語集 (レポート ビルダー) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "用語集 (レポート ビルダー) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 69a348a8f2f2d44dbe17f5500557db03b95e5b04
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# 用語集 (レポート ビルダー)
+# <a name="glossary-report-builder"></a>用語集 (レポート ビルダー)
   
   
 |項目|定義|  
@@ -76,7 +81,7 @@ caps.handback.revision: 8
 |色ルール (color rules)|色をマップ レイヤー上の各マップ要素に自動的に割り当てるアルゴリズム。|  
 |カラー スケール (color scale)|マップ上で表される色の表現に使用される、マップの凡例の一種。|  
 |共通言語ランタイム (common language runtime)|マネージ コードを実行する際に中核となるエンジン。 このランタイムにより、言語間の統合、コード アクセス セキュリティ、オブジェクトの有効期間の管理、デバッグとプロファイルのサポートなどのサービスがマネージ コードに提供されます。|  
-|複合式 (complex expression)|単一の組み込みフィールド参照として表現できず、デザイン画面に <\<Expr>> として表示される式。|  
+|複合式 (complex expression)|1 つの組み込みフィールド参照として表されることはできませんし、としてデザイン画面に表示される式 <\<Expr >> です。|  
 |連結 (concatenation)|2 つ以上の文字列や式を結合して、1 つの文字列や式にすること。または、2 つ以上のバイナリ文字列やバイナリ式を結合して、1 つのバイナリ文字列やバイナリ式にすること。|  
 |同時実行 (concurrency)|複数のユーザーが共有データに同時にアクセスや変更を行うことができるようにする処理。 SQL Server ではロックを使用して、複数のユーザーが互いに競合することなく共有データに同時にアクセスや変更を行うことができます。|  
 |構成ファイル (config file)|「構成ファイル (configuration file)」を参照。|  
@@ -134,7 +139,7 @@ caps.handback.revision: 8
 |編集セッション (edit session)|レポート サーバーで作成され、レポート ビルダーなどのクライアント アプリケーションで使用される一時コンテナー。  編集セッションにより、レポート ビルダーの複数のレポート プレビューでレポートを再利用できます。|  
 |埋め込みデータ ソース (embedded data source)|レポート定義ファイルに格納されるデータ ソース定義。 埋め込みデータ ソースは、レポート固有のデータ ソースです。|  
 |埋め込みデータ ソース (embedded data sources)|埋め込みデータ ソースは、データ接続を表す XML 要素で、単一のレポート定義に含まれており、この定義で使用されます。|  
-|埋め込みデータセット (embedded dataset) |レポート データセットは、単一のレポート定義または単一のレポート パーツ定義に格納されます。|  
+|埋め込みデータセット (embedded dataset)|レポート データセットは、単一のレポート定義または単一のレポート パーツ定義に格納されます。|  
 |暗号化 (encryption)|データを判読できない形式に変更することで機密情報を保護する方法。|  
 |エンティティ (entity)|1.Reporting Services において、ソース フィールド、ロール、フォルダーや式などのモデル アイテムの論理的な集まりを表すビジネス用語。 2. Master Data Services において、エンティティはモデル内のオブジェクトです。 各エンティティには、属性によって定義される関連するメンバーが含まれています。|  
 |列挙体|特定のプロパティの値を指定するために使用する固定の整数値または文字列定数。|  
@@ -210,7 +215,7 @@ caps.handback.revision: 8
 |マーカー (marker)|各ポイントの位置でマップ ポイント レイヤーに表示される記号。|  
 |master データベース (master database)|SQL Server のインスタンスに関するシステムレベルのすべての情報を記録するシステム データベース。|  
 |master ファイル (master file)|旧バージョンの SQL Server でインストールされるファイル。master、model、および tempdb システム データベースとトランザクション ログの格納に使用します。さらに、pubs サンプル データベースとトランザクション ログも格納します。|  
-|対応フィールド (match fields) |分析データと空間データ間の関係を構築するために使用される一連のフィールド。|  
+|対応フィールド (match fields)|分析データと空間データ間の関係を構築するために使用される一連のフィールド。|  
 |マトリックス データ領域 (matrix data region)|クロス集計表や PivotTable レポートと同様の機能があるレポート レイアウト上のデータ領域。 実行時にレポート データとデータ領域が組み合わされると、マトリックスはページ上で縦横に拡大します。 マトリックス セルには、そのセルが所属する行グループと列グループの交差部分にスコープを設定した集計値が表示されます。|  
 |MDX (MDX)|「多次元式 (MDX) (Multidimensional Expressions (MDX))」を参照。|  
 |メルカトル図法 (Mercator projection)|マップ レポート アイテムで、1569 年にゲラルドゥス メルカトルにより考案された円筒マップ投影法。|  
@@ -233,7 +238,7 @@ caps.handback.revision: 8
 |オブジェクト ID (object identifier)|1.オブジェクトに付けられる一意名。 2. Meta Data Services では、GUID (グローバル一意識別子) と内部識別子から構成される一意識別子。|  
 |ODBC データ ソース (ODBC data source)|1.ODBC ドライバーを使用してアクセスできるデータのセットがある場所。 2. ODBC アプリケーションからデータ ソースに接続するために必要なすべての接続情報が含まれた、保存されている定義。|  
 |ODBC ドライバー (ODBC driver)|Excel などの ODBC 対応のアプリケーションから ODBC データ ソースにアクセスできるようにする DLL (ダイナミック リンク ライブラリ)。|  
-|OGC (OGC)|Open Geospatial Consortium |  
+|OGC (OGC)|Open Geospatial Consortium|  
 |OLAP (OLAP)|「オンライン分析処理 (online analytical processing)」を参照。|  
 |OLE DB (OLE DB)|COM をベースとした、データ アクセス用の API (アプリケーション プログラミング インターフェイス)。 OLE DB では、OLE DB プロバイダーを使用できるあらゆる形式で格納されたデータへのアクセスがサポートされます。|  
 |OLE DB for OLAP (OLE DB for OLAP)|以前は、OLE DB に対する OLAP 拡張機能を処理する別の仕様でした。 OLE DB 2.0 以降では、OLAP 拡張機能は OLE DB 仕様に組み込まれています。|  
@@ -252,7 +257,7 @@ caps.handback.revision: 8
 |権限 (permission)|オブジェクトに関連付けられる規則。どのユーザーがどのような形でそのオブジェクトにアクセスできるかを制御します。|  
 |ピボット (pivot)|1.クロス集計のデータ ブラウザーで、行を列にまたは列を行に入れ替えること。 2. クロス集計の表形式の行と列に表示するために、使用可能な一連の多次元データ構造のディメンションからディメンションを選択すること。|  
 |プレースホルダー (placeholder)|実際の値、テキスト、またはオブジェクトの代わりに使用される文字または記号。 プレースホルダーは、実際の値が現時点では不明であるか、利用できないか、またはセキュリティ上の理由から表示されないことを示します。 テキスト ボックス内に単純型または複合型の式が定義されている場合、デザイン ビューでこの式の結果として表示されるものをプレースホルダーと呼んでいます。|  
-|平面データ (planar data) |平坦な幾何平面のポイント、線、または領域を指定するデータ。|  
+|平面データ (planar data)|平坦な幾何平面のポイント、線、または領域を指定するデータ。|  
 |多角形レイヤー (polygon layer)|マップ レポート アイテムで、国などの地理的領域として空間データを表示するレイヤー。|  
 |有効桁数 (precision)|小数点の右側と左側に保持できる桁数を合計した、10 進数の最大桁数。|  
 |主キー (primary key)|テーブル内のすべての行を一意に識別する 1 つの列または列の集合。|  
@@ -358,7 +363,7 @@ caps.handback.revision: 8
 |ユーザー インスタンス (user instance)|ユーザーに代わって親インスタンスによって生成される SQL Server Express のインスタンス。|  
 |値 (y) 軸 (value (y) axis)|グラフで数値データの値を表示する軸。 通常は縦軸です。 例外として、横棒グラフでは軸が逆になるため、y 軸でデータがグループ化されます。|  
 |値式 (value expression)|値を返す MDX (多次元式) の式。 値式は、集合、組、メンバー、レベル、数値、または文字列に対して実行されます。|  
-|変数 (variable)|1.Integration Services では、変数は、列の値やパッケージ オブジェクトのプロパティを設定するためにスクリプト、式、プロパティ式で使用される値を格納します。 <br />2.値が代入される定義されたエンティティ。 ローカル変数は、DECLARE@localvariable ステートメントで定義され、SELECT ステートメントまたは SET@localvariable ステートメントで宣言されているステートメント バッチ内で初期値が代入されます。|  
+|変数 (variable)|1.Integration Services では、変数は、列の値やパッケージ オブジェクトのプロパティを設定するためにスクリプト、式、プロパティ式で使用される値を格納します。 <br />2.値が代入される定義されたエンティティ。 ローカル変数が定義されている、DECLARE@localvariableステートメントとそれが宣言されているいずれかで、SELECT ステートメントのバッチ内で最初に値を割り当てまたはSET@localvariableステートメントです。|  
 |可変間隔 (variable interval)|Reporting Services のグラフで指定できるオプションの 1 つ。軸に配置できる最適な数のラベルが、グラフの幅または高さに基づいて自動的に計算されます。|  
 |視覚エフェクト (visualization)|マップ、グラフ、およびゲージで、分析データの視覚化のために選択できる方法。|  
 |Web サービス|Reporting Services において、SOAP (Simple Object Access Protocol) over HTTP を使用し、クライアント プログラムとレポート サーバー間の通信インターフェイスとして機能するサービス。|  
@@ -369,7 +374,7 @@ caps.handback.revision: 8
 |x 軸 (x-axis)|「カテゴリ (x) 軸 (category (x) axis)」を参照。|  
 |y 軸 (y-axis)|「値 (y) 軸 (value (y) axis)」を参照。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レポート作成の概念 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

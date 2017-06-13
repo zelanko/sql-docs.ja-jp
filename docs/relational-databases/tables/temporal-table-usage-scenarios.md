@@ -2,7 +2,7 @@
 title: "テンポラル テーブルの使用シナリオ | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/13/2017
+ms.date: 05/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,27 +16,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bb6a2865838df1d66119f68c6d8cd19809a8f86c
+ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
+ms.openlocfilehash: 007b40b36317a67c6b9714b89aac0d3324312f30
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="temporal-table-usage-scenarios"></a>テンポラル テーブルの使用シナリオ
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   テンポラル テーブルは、データの変更履歴を追跡する必要のあるシナリオに一般的に便利です。    
-生産性が非常に高まるので、次の用途にテンポラル テーブルを使用することをお勧めします。  
-  
--   [データの監査](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_0)  
-  
--   [特定の時点の分析 (タイム トラベル)](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_1)  
-  
--   [異常検出](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_2)  
-  
--   [緩やかに変化するディメンション](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_3)  
-  
--   [データの行レベルでの破損の修復](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_4)  
+主要な生産性が次の用途にテンポラル テーブルを検討することをお勧めします。  
   
 ## <a name="data-audit"></a>データの監査  
  何が変更されたか、いつ変更されたかを追跡する必要のある重要な情報が保存されている、また任意の時点のデータ フォレンジクスを実行する必要のあるテーブルには、システム バージョン管理されたテンポラル テーブルを使用します。    

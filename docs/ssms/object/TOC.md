@@ -1,3 +1,4 @@
+# [オブジェクト エクスプローラー](object-explorer.md)
 # [SQL Server エージェントのマスター ジョブへのステップの追加](add-steps-to-a-sql-server-agent-master-job.md)
 # [オブジェクト エクスプローラーを使用したオブジェクトの管理](manage-objects-by-using-object-explorer.md)
 # [カスタム レポートでのオブジェクト エクスプローラー ノード プロパティの使用](use-custom-reports-with-object-explorer-node-properties.md)
@@ -13,7 +14,6 @@
 # [オプション (SQL Server オブジェクト エクスプローラー - [スクリプト作成] ページ)](options-sql-server-object-explorer-scripting-page.md)
 # [[フィルターの設定] (オブジェクト エクスプローラーおよびユーティリティ エクスプローラー)](filter-settings-object-explorer-and-utility-explorer.md)
 # [オブジェクトの削除](delete-objects.md)
-# [オブジェクト エクスプローラー](object-explorer.md)
 # [Management Studio へのカスタム レポートの追加](add-a-custom-report-to-management-studio.md)
 # [Management Studio におけるカスタム レポート](custom-reports-in-management-studio.md)
 # [オブジェクトの追加](add-objects.md)

@@ -1,28 +1,33 @@
 ---
-title: "URL アクセス パラメーター リファレンス | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/09/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "レポート [Reporting Services]、表示オプション"
-  - "URL アクセス [Reporting Services]、レポート表示パラメーター"
+title: "URL アクセス パラメーター リファレンス |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 09/09/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reports [Reporting Services], display options
+- URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 caps.latest.revision: 48
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 48
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e79341b1988e43d27ac35d46fcba482de0ab371
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# URL アクセス パラメーター リファレンス
-  次のパラメーターを URL の一部として使用すると、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]レポートのルック アンド フィールを構成できます。 ここでは、最も一般的なパラメーターについて説明します。 パラメーターは大文字と小文字が区別されます。レポート サーバーに出力する場合は *rs:*、HTML ビューアーに出力する場合は *rc:* をパラメーターの先頭に追加します。 デバイスや表示拡張機能に固有のパラメーターを指定することもできます。 デバイスに固有のパラメーターの詳細については、「[URL でデバイス情報設定を指定する](../reporting-services/specify-device-information-settings-in-a-url.md)」を参照してください。  
+# <a name="url-access-parameter-reference"></a>URL アクセス パラメーター リファレンス
+  次のパラメーターを URL の一部として使用すると、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]レポートのルック アンド フィールを構成できます。 ここでは、最も一般的なパラメーターについて説明します。 パラメーターは大文字と小文字が区別されます。レポート サーバーに出力する場合は *rs:* 、HTML ビューアーに出力する場合は *rc:* をパラメーターの先頭に追加します。 デバイスや表示拡張機能に固有のパラメーターを指定することもできます。 デバイスに固有のパラメーターの詳細については、「 [URL でデバイス情報設定を指定する](../reporting-services/specify-device-information-settings-in-a-url.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  SharePoint モード レポート サーバーの場合、SharePoint および `_vti_bin` HTTP プロキシ経由で要求をルーティングする [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] プロキシ構文を URL に含めることは重要です。 プロキシによって、HTTP 要求にコンテキストが追加されます。これは、SharePoint モード レポート サーバーに対してレポートを適切に実行するために必要なコンテキストです。 例については、「 [Access Report Server Items Using URL Access](../reporting-services/access-report-server-items-using-url-access.md)」を参照してください。  
@@ -38,7 +43,7 @@ caps.handback.revision: 48
 -   [レポート ビューアー Web パーツのコマンド (rv:)](#bkmk_webpart)  
   
 ##  <a name="bkmk_htmlviewer"></a> HTML ビューアーのコマンド (rc:)  
- HTML ビューアー コマンドは HTML ビューアーを対象として使用されます (たとえば、レポート マネージャーから)。接頭辞として *rc:* が付きます。  
+ HTML ビューアー コマンドは HTML ビューアーを対象として使用されます (たとえば、レポート マネージャーから)。接頭辞として *rc:*が付きます。  
   
 -   *[ツール バー]* :  
                   ツール バーの表示と非表示を切り替えます。 このパラメーターの値が **false**の場合、残りのオプションすべてが無視されます。 このパラメーターを省略すると、サポートされている表示形式でツール バーが自動的に表示されます。 このパラメーターの既定値は **true**です。  
@@ -60,7 +65,7 @@ caps.handback.revision: 48
     http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
--   *Zoom* : レポート ズーム値を整数のパーセンテージまたは文字列定数として設定します。 標準的な文字列値には **Page Width** と **Whole Page**などがあります。 Internet Explorer 5.0 よりも前のバージョンの Internet Explorer および [!INCLUDE[msCoName](../includes/msconame-md.md)] 以外のすべてのブラウザーでは、このパラメーターが無視されます。 このパラメーターの既定値は **100**です。  
+-   *Zoom* : レポート ズーム値を整数のパーセンテージまたは文字列定数として設定します。 標準的な文字列値には **Page Width** と **Whole Page**などがあります。 Internet Explorer 5.0 よりも前のバージョンの Internet Explorer および[!INCLUDE[msCoName](../includes/msconame-md.md)] 以外のすべてのブラウザーでは、このパラメーターが無視されます。 このパラメーターの既定値は **100**です。  
   
      **Native** モードの例。  
   
@@ -104,7 +109,7 @@ caps.handback.revision: 48
   
 -   *StartFind* : 検索する最後のセクションを指定します。 このパラメーターの既定値は、レポートの最終ページです。  
   
-     Product Catalog サンプル レポートの 1 ～ 5 ページを検索し、最初に出現する "Mountain-400" という文字列を探す、**ネイティブ** モードの例。  
+     Product Catalog サンプル レポートの 1 ～ 5 ページを検索し、最初に出現する "Mountain-400" という文字列を探す、 **ネイティブ** モードの例。  
   
     ```  
     http://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
@@ -120,7 +125,7 @@ caps.handback.revision: 48
   
 -   *Stylesheet*: HTML ビューアーに適用するスタイル シートを指定します。  
   
--   デバイス情報設定: `rc:tag=value` の形式でデバイス情報設定を指定します。*tag* は、現在使用されている表示拡張機能に固有のデバイス情報設定の名前です (*Format* パラメーターの説明を参照してください)。 たとえば、IMAGE 表示拡張機能の *OutputFormat* デバイス情報設定を使用すると、URL アクセス文字列に `…&rs:Format=IMAGE&rc:OutputFormat=JPEG` パラメーターを指定することで、レポートを JPEG 画像で表示できます。 拡張機能に固有のすべてのデバイス情報設定の詳細については、「[表示拡張機能のデバイス情報設定 (Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)」を参照してください。  
+-   デバイス情報設定: `rc:tag=value`の形式でデバイス情報設定を指定します。 *tag* は、現在使用されている表示拡張機能に固有のデバイス情報設定の名前です ( *Format* パラメーターの説明を参照してください)。 たとえば、IMAGE 表示拡張機能の *OutputFormat* デバイス情報設定を使用すると、URL アクセス文字列に `…&rs:Format=IMAGE&rc:OutputFormat=JPEG` パラメーターを指定することで、レポートを JPEG 画像で表示できます。 拡張機能に固有のすべてのデバイス情報設定の詳細については、「[表示拡張機能のデバイス情報設定 (Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)」を参照してください。  
   
 ##  <a name="bkmk_reportserver"></a> レポート サーバー コマンド (rs:)  
  レポート サーバー コマンドには接頭辞として *rs:* が付き、レポート サーバーを対象として使用されます。  
@@ -200,7 +205,7 @@ caps.handback.revision: 48
   
     -   **GetComponentDefinition** : パブリッシュ済みレポート アイテムに関連付けられた XML 定義を表示します。 この値を使用するには、パブリッシュ済みレポート アイテムに対する **Read Contents** 権限が必要です。  
   
--   *Format*:  
+-   *Format* :  
                   レポートをレンダリングし、表示する形式を指定します。 一般的な値:  
   
     -   **[HTML5]**  
@@ -225,9 +230,9 @@ caps.handback.revision: 48
   
     -   **XML**  
   
-     既定値は **HTML5**です。 詳細については、「[URL アクセスを使用してレポートをエクスポート](../reporting-services/export-a-report-using-url-access.md)」を参照してください。  
+     既定値は **HTML5**です。 詳細については、「 [URL アクセスを使用してレポートをエクスポート](../reporting-services/export-a-report-using-url-access.md)」を参照してください。  
   
-     完全な一覧が必要な場合、レポート サーバー rsreportserver.config ファイルの **\<Render>** 拡張セクションを参照してください。  ファイルの場所については、「 [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md)」を参照してください。  
+     完全な一覧についてを参照してください。、 **\<レンダリング >** 、レポート サーバーの rsreportserver.config ファイルの拡張セクションです。  ファイルの場所については、「 [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md)」を参照してください。  
   
      **Native** モード レポート サーバーからレポートの PDF コピーを直接取得する例:  
   
@@ -242,7 +247,7 @@ caps.handback.revision: 48
     ```  
   
 -   *ParameterLanguage*:  
-                  ブラウザーの言語とは関係なく、URL で渡されるパラメーターの言語を指定します。 既定値は、ブラウザーの言語です。 値は、**en-us** や **de-de** などのカルチャ値に設定できます。  
+                  ブラウザーの言語とは関係なく、URL で渡されるパラメーターの言語を指定します。 既定値は、ブラウザーの言語です。 値は、 **en-us** や **de-de**などのカルチャ値に設定できます。  
   
      **ネイティブ** モードで、ブラウザーの言語をオーバーライドし、de-DE というカルチャ値を指定する例:  
   
@@ -250,7 +255,7 @@ caps.handback.revision: 48
     http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
     ```  
   
--   *Snapshot* : レポート履歴スナップショットに基づいたレポートを表示します。 詳細については、「[URL アクセスを使用してレポート履歴スナップショットを表示する](../reporting-services/render-a-report-history-snapshot-using-url-access.md)」を参照してください。  
+-   *Snapshot* : レポート履歴スナップショットに基づいたレポートを表示します。 詳細については、「 [URL アクセスを使用してレポート履歴スナップショットを表示する](../reporting-services/render-a-report-history-snapshot-using-url-access.md)」を参照してください。  
   
      **ネイティブ** モードで、日付が 2003-04-07 でタイムスタンプが 13:40:02 のレポート履歴スナップショットを取得する例:  
   
@@ -343,7 +348,7 @@ caps.handback.revision: 48
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
--   *ToolBarItemsDisplayMode*: 表示するツール バー項目を制御します。 これはビットごとの列挙値です。 ツール バー項目を含めるには、項目の値を合計値に加算します。 たとえば、[アクション] メニューが表示されない場合は、rv:ToolBarItemsDisplayMode=63 (または 0x3F) を使用します。これは 1+2+4+8+16+32 を表します。[アクション] メニュー項目のみを表示する場合は、rv:ToolBarItemsDisplayMode=960 (または 0x3C0) を使用します。 既定値は **-1** です。すべてのツール バー項目を表示します。 以下の値が有効です。  
+-   *ToolBarItemsDisplayMode*: 表示するツール バー項目を制御します。 これはビットごとの列挙値です。 ツール バー項目を含めるには、項目の値を合計値に加算します。 たとえば、[アクション] メニューが表示されない場合は、rv:ToolBarItemsDisplayMode=63 (または 0x3F) を使用します。これは 1+2+4+8+16+32 を表します。[アクション] メニュー項目のみを表示する場合は、rv:ToolBarItemsDisplayMode=960 (または 0x3C0) を使用します。 既定値は **-1**です。すべてのツール バー項目を表示します。 以下の値が有効です。  
   
     -   1 (0x1): **[戻る]** ボタン  
   
@@ -357,15 +362,15 @@ caps.handback.revision: 48
   
     -   32 (0x20): **[Atom フィード]** ボタン  
   
-    -   64 (0x40): **[アクション]** の **[印刷]** メニュー オプション  
+    -   64 (0x40): **[アクション]** の **[印刷]**メニュー オプション  
   
-    -   128 (0x80): **[アクション]** の **[エクスポート]** サブメニュー  
+    -   128 (0x80): **[アクション]** の **[エクスポート]**サブメニュー  
   
-    -   256 (0x100): **[アクション]** の **[レポート ビルダーで開く]** メニュー オプション  
+    -   256 (0x100): **[アクション]** の **[レポート ビルダーで開く]**メニュー オプション  
   
-    -   512 (0x200): **[アクション]** の **[サブスクライブ]** メニュー オプション  
+    -   512 (0x200): **[アクション]** の **[サブスクライブ]**メニュー オプション  
   
-    -   1024 (0x400): **[アクション]** の **[新しいデータの警告]** メニュー オプション  
+    -   1024 (0x400): **[アクション]** の **[新しいデータの警告]**メニュー オプション  
   
      **SharePoint** モードで、 **[戻る]** ボタン、テキスト検索コントロール、ページ ナビゲーション コントロール、 **[更新]** ボタンのみを表示する例。  
   
@@ -373,8 +378,9 @@ caps.handback.revision: 48
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
     ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [URL アクセス (SSRS)](../reporting-services/url-access-ssrs.md)   
- [URL アクセスを使用してレポートをエクスポートする](../reporting-services/export-a-report-using-url-access.md)  
+ [URL アクセスを使用して、レポートをエクスポートします。](../reporting-services/export-a-report-using-url-access.md)  
   
   
+

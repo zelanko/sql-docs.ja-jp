@@ -1,25 +1,30 @@
 ---
-title: "チュートリアル: レポートへの縦棒グラフの追加 (レポート ビルダー) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "チュートリアル: レポート (レポート ビルダー) への縦棒グラフの追加 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 09/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# チュートリアル: レポートへの縦棒グラフの追加 (レポート ビルダー)
-このチュートリアルでは、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートを作成します。レポートには、カテゴリでグループ化された一連の縦棒として連続を表示する棒グラフを含めます。 
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>チュートリアル: レポートへの縦棒グラフの追加 (レポート ビルダー)
+このチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートを作成します。レポートには、カテゴリでグループ化された一連の縦棒として連続を表示する棒グラフを含めます。 
 
 縦棒グラフは次に役立ちます。  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 16
   
 このチュートリアルの推定所要時間: 15 分。  
   
-## 必要条件  
+## <a name="requirements"></a>必要条件  
 要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/prerequisites-for-tutorials-report-builder.md) を参照してください。  
   
 ## <a name="Chart"></a>1.グラフ ウィザードからグラフ レポートを作成する  
@@ -44,9 +49,9 @@ caps.handback.revision: 16
 > [!NOTE]  
 > このチュートリアルのクエリにはデータ値が含まれているため、外部のデータ ソースを必要としません。 このため、クエリが非常に長くなっています。 ビジネス環境でクエリにデータを含めることはありません。 これは、学習に使用することのみを目的としています。  
   
-### グラフ レポートを作成するには  
+### <a name="to-create-a-chart-report"></a>グラフ レポートを作成するには  
   
-1.  コンピューター、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web ポータル、SharePoint 統合モードのいずれかから[レポート ビルダーを起動します](../reporting-services/report-builder/start-report-builder.md)。  
+1.  コンピューター、[Web ポータル、SharePoint 統合モードのいずれかから](../reporting-services/report-builder/start-report-builder.md) レポート ビルダーを起動します [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 。  
   
     **[新しいレポートまたはデータセット]** ダイアログ ボックスが開きます。  
   
@@ -54,11 +59,11 @@ caps.handback.revision: 16
   
 2.  左ペインで、 **[新しいレポート]** が選択されていることを確認します。  
   
-3.  右ペインで、**[グラフ ウィザード]** をクリックします。  
+3.  右ペインで、 **[グラフ ウィザード]**をクリックします。  
   
-4.  **[データセットの選択]** ページで **[データセットを作成する]** をクリックし、**[次へ]** をクリックします。  
+4.  **[データセットの選択]**ページで **[データセットを作成する]**をクリックし、 **[次へ]**をクリックします。  
   
-5.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択し、**[次へ]** をクリックします。 ユーザー名とパスワードの入力が必要な場合があります。  
+5.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択し、 **[次へ]**をクリックします。 ユーザー名とパスワードの入力が必要な場合があります。  
   
     > [!NOTE]  
     > 適切な権限を持っている限り、選択するデータ ソースは重要ではありません。 データ ソースからはデータを取得しません。 詳細については、[「別の方法でデータ接続を取得する (レポート ビルダー)」](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)を参照してください。  
@@ -93,13 +98,13 @@ caps.handback.revision: 16
 ## <a name="ChartType"></a>2.グラフの種類を選択する  
 事前定義されたグラフの種類から選択し、ウィザードの完了後にグラフを修正できます。  
   
-### 縦棒グラフを追加するには  
+### <a name="to-add-a-column-chart"></a>縦棒グラフを追加するには  
   
 1.  **[グラフの種類の選択]** ページでは、縦棒グラフが既定のグラフの種類です。 **[次へ]**をクリックします。  
   
-2.  **[グラフのフィールドの配置]** ページで、SalesDate フィールドを **[カテゴリ]** にドラッグします。 カテゴリは横軸に表示されます。  
+2.  **[グラフのフィールドの配置]** ページで、SalesDate フィールドを **[カテゴリ]**にドラッグします。 カテゴリは横軸に表示されます。  
   
-3.  Sales フィールドを **[値]** にドラッグします。 販売の合計値の総計が 1 日ごとに集計されるので、**[値]** ボックスには Sum(Sales) が表示されます。 値は縦軸に表示されます。  
+3.  Sales フィールドを **[値]**にドラッグします。 販売の合計値の総計が 1 日ごとに集計されるので、 **[値]** ボックスには Sum(Sales) が表示されます。 値は縦軸に表示されます。  
   
 4.  **[次へ]**をクリックします。  
  
@@ -126,7 +131,7 @@ caps.handback.revision: 16
   
 3.  **[数値]** タブの **[カテゴリ]** で **[日付]** を選択します。  
   
-5.  **[型]** ボックスで **[2000 年 1 月 31 日]** を選択します。  
+5.  **[型]** ボックスで **[2000 年 1 月 31 日]**を選択します。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -138,17 +143,17 @@ caps.handback.revision: 16
   
 ラベルを回転して間隔を指定することによってラベル表示をカスタマイズできます。  
   
-## 4.横軸の軸ラベルを回転させます。  
+## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4.横軸の軸ラベルを回転させます。  
   
 1.  レポート デザイン ビューに切り替えます。  
   
-2.  横軸のタイトルを右クリックし、**[軸のタイトルの表示]** をクリックしてタイトルを削除します。 横軸には日付が表示されるので、タイトルは必要ありません。  
+2.  横軸のタイトルを右クリックし、 **[軸のタイトルの表示]** をクリックしてタイトルを削除します。 横軸には日付が表示されるので、タイトルは必要ありません。  
   
 3.  横軸を右クリックし、**[横軸のプロパティ]** をクリックします。  
   
 5.  **[ラベル]** タブの **[軸ラベル自動調整のオプションを変更します]** で **[自動調整を無効にする]** を選択します。  
   
-7.  **[ラベルの回転角度]** で **[-90]** を選択します。  
+7.  **[ラベルの回転角度]**で **[-90]**を選択します。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -183,7 +188,7 @@ caps.handback.revision: 16
     
 1.  レポート デザイン ビューに切り替えます。  
   
-2.  グラフ上部の **[グラフのタイトル]** というテキストを選択し、「**Store Sales Order Totals**」と入力します。  
+2.  グラフ上部の **[グラフのタイトル]** というテキストを選択し、「 **Store Sales Order Totals**」と入力します。  
   
 3.  **[実行]** をクリックして、レポートをプレビューします。  
   
@@ -202,7 +207,7 @@ caps.handback.revision: 16
   
 6.  **[数値]** タブの **[カテゴリ]** ボックスでは **[通貨]** が既に選択されており、**[小数点以下桁数]** は **[0]** (ゼロ) になっています。  
   
-7.  **[値の表示単位]** を確認します。 **[千]** が既に選択されています。  
+7.  **[値の表示単位]**を確認します。 **[千]** が既に選択されています。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -218,7 +223,7 @@ caps.handback.revision: 16
 
     ![report-builder-column-chart-format-y-axis](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
-## 8.横軸 (x) にすべてのラベルを表示する
+## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8.横軸 (x) にすべてのラベルを表示する
 
 x 軸では一部のラベルのみが表示されています。 このセクションでは、プロパティ ペインでプロパティを設定し、ラベルをすべて表示します。
 
@@ -244,23 +249,23 @@ x 軸では一部のラベルのみが表示されています。 このセク�
   
 1.  レポート デザイン ビューに切り替えます。  
   
-2.  グラフをダブルクリックして、**グラフ データ** ペインを表示します。  
+2.  グラフをダブルクリックして、 **グラフ データ** ペインを表示します。  
   
-3.  **[値]** 領域の **[Sum(Sales)]** フィールドを右クリックし、**[計算系列の追加]** をクリックします。  
+3.  **[値]** 領域の **[Sum(Sales)]** フィールドを右クリックし、 **[計算系列の追加]**をクリックします。  
 
      ![report-builder-column-chart-add-calculated-series](../reporting-services/media/report-builder-column-chart-add-calculated-series.png)
   
-4.  **[数式]** で、**[移動平均]** が選択されていることを確認します。  
+4.  **[数式]**で、 **[移動平均]** が選択されていることを確認します。  
   
-5.  **[数式パラメーターの設定]** の **[期間]** で、**[4]** を選択します。  
+5.  **[数式パラメーターの設定]**の **[期間]**で、 **[4]**を選択します。  
   
-6.  **[罫線]** タブの **[線の幅]** で **[3pt]** を選択します。  
+6.  **[罫線]** タブの **[線の幅]**で **[3pt]**を選択します。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 9. **[実行]** をクリックして、レポートをプレビューします。  
   
-グラフに、4 日ごとに平均値を求めた日付別の売上合計の移動平均を示す線が表示されます。 グラフに移動平均を追加する方法の詳細は、[グラフへの移動平均の追加](../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md) に関する記事をご覧ください。 
+グラフに、4 日ごとに平均値を求めた日付別の売上合計の移動平均を示す線が表示されます。 グラフに移動平均を追加する方法の詳細は、 [グラフへの移動平均の追加](../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)に関する記事をご覧ください。 
 
 ![report-builder-column-chart-moving-average](../reporting-services/media/report-builder-column-chart-moving-average.png)
   
@@ -268,9 +273,9 @@ x 軸では一部のラベルのみが表示されています。 このセク�
   
 1.  レポート デザイン ビューに切り替えます。  
   
-2.  デザイン画面で、**[クリックしてタイトルを追加]** をクリックします。  
+2.  デザイン画面で、 **[クリックしてタイトルを追加]**をクリックします。  
   
-3.  「**Sales Chart**」と入力して Enter キーを押し、さらに「**January to December 2015**」と入力します。次のように表示されます。  
+3.  「 **Sales Chart**」と入力して Enter キーを押し、さらに「 **January to December 2015**」と入力します。次のように表示されます。  
   
     **Sales Chart**  
   
@@ -288,22 +293,24 @@ x 軸では一部のラベルのみが表示されています。 このセク�
   
 ## <a name="Save"></a>11.レポートを保存する  
   
-### レポートを保存するには  
+### <a name="to-save-the-report"></a>レポートを保存するには  
   
 1.  レポート デザイン ビューに切り替えます。  
   
-2.  レポート ビルダーのボタンの **[名前を付けて保存]** をクリックします。  
+2.  レポート ビルダーのボタンの **[名前を付けて保存]**をクリックします。  
 
     コンピューターまたはレポート サーバーに保存できます。
   
-3.  **[名前]** に「**Sales Order Column Chart**」と入力します。  
+3.  **[名前]**に「 **Sales Order Column Chart**」と入力します。  
   
 4.  **[保存]**をクリックします。  
   
-## 次の手順  
+## <a name="next-steps"></a>次の手順  
 これで、「レポートへの縦棒グラフの追加」チュートリアルを終了します。 グラフの詳細については、「[グラフ (レポート ビルダーおよび SSRS)](../reporting-services/report-design/charts-report-builder-and-ssrs.md)」と「[スパークラインとデータ バー (レポート ビルダーおよび SSRS)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
 -    [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md) 
 -    [SQL Server 2016 のレポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

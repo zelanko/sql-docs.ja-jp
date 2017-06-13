@@ -1,36 +1,41 @@
 ---
-title: "レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "アイテム [Reporting Services]、式"
-  - "データ [Reporting Services]、式"
-  - "式 [Reporting Services]、式について"
-  - "式 [Reporting Services]"
-  - "SSRS、式"
-  - "数式 [Reporting Services]"
-  - "データ操作 [Reporting Services]"
-  - "SQL Server Reporting Services、式"
+title: "カスタム コードやアセンブリ参照の式でレポート デザイナー (SSRS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- items [Reporting Services], expressions
+- data [Reporting Services], expressions
+- expressions [Reporting Services], about expressions
+- expressions [Reporting Services]
+- SSRS, expressions
+- formulas [Reporting Services]
+- data manipulation [Reporting Services]
+- SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 caps.latest.revision: 77
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 77
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dc8491006425de79f8e96be1affb10687a1553f9
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)
+# <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)
   レポート内に埋め込まれたカスタム コードや、ビルドして自分のコンピューターに保存 (またはレポート サーバーに配置) したカスタム アセンブリは、レポート内から参照することができます。 カスタム定数、複雑な関数、または 1 レポート内で何度も使用される関数には、埋め込みコードを使用します。 コードを 1 か所で管理し、そのコードを複数のレポートで共有する場合は、カスタム コード アセンブリを使用します。 カスタム コードには、新しいカスタム定数、変数、関数、またはサブルーチンを含めることができます。 Parameters コレクションなど、組み込みコレクションへの読み取り専用の参照を含めることが可能です。 ただし、レポート データ値セットをカスタム関数に渡すことはできません。特に、カスタム集計はサポートされていません。  
   
 > [!IMPORTANT]  
->  実行時にいったん評価し、レポート処理全体で同じ値を保持しておく必要のある、タイミングに依存するような計算の場合は、レポート変数とグループ変数のどちらを使用するかを検討してください。 詳細については、「[レポート変数コレクションとグループ変数コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-and-group-variables-collections-references-report-builder-and-ssrs.md)」を参照してください。  
+>  実行時にいったん評価し、レポート処理全体で同じ値を保持しておく必要のある、タイミングに依存するような計算の場合は、レポート変数とグループ変数のどちらを使用するかを検討してください。 詳細については、「[レポート変数コレクションとグループ変数コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)」を参照してください。  
   
  カスタム コードをレポートに追加するための作成環境としては、レポート デザイナーの使用をお勧めします。 レポート ビルダーでサポートされるのは、有効な式を含んだレポートの処理、またはレポート サーバー上のカスタム アセンブリへの参照を含んだレポートの処理です。 カスタム アセンブリへの参照を追加する手段は、レポート ビルダーには用意されていません。  
   
@@ -50,14 +55,14 @@ caps.handback.revision: 77
 2.  カスタム アセンブリへの参照を含んだレポートをローカル モードでプレビューする。  
   
 ##  <a name="Common"></a> 使用頻度の高い関数への参照の追加  
- **[式]** ダイアログ ボックスを使用すると、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に組み込まれている共通の関数の一覧がカテゴリ別に表示されます。 **[共通の関数]** を展開してカテゴリをクリックすると、式に含める関数の一覧が **[アイテム]** ペインに表示されます。 共通の関数には、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> 名前空間と <xref:System.Convert> 名前空間のクラス、および [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ランタイム ライブラリ関数が含まれています。 便宜上、最もよく使用される関数が **[式]** ダイアログ ボックスで表示されます。このダイアログ ボックスでは、これらの関数は、テキスト、日付と時刻、数学、検査、プログラム フロー、集計、財務、変換、その他というカテゴリごとに表示されます。 使用頻度の低い関数は、一覧に表示されませんが、式で使用することはできます。  
+ **[式]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に組み込まれている共通の関数の一覧がカテゴリ別に表示されます。 **[共通の関数]** を展開してカテゴリをクリックすると、式に含める関数の一覧が **[アイテム]** ペインに表示されます。 共通の関数がからクラスを含める、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math>と<xref:System.Convert>名前空間と[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]ランタイム ライブラリ関数。 便宜上、最もよく使用される関数が **[式]** ダイアログ ボックスで表示されます。このダイアログ ボックスでは、これらの関数は、テキスト、日付と時刻、数学、検査、プログラム フロー、集計、財務、変換、その他というカテゴリごとに表示されます。 使用頻度の低い関数は、一覧に表示されませんが、式で使用することはできます。  
   
  組み込み関数を使用するには、[アイテム] ペインで関数名をダブルクリックします。 関数の説明が説明ペインに表示され、関数呼び出しの例がサンプル ペインに表示されます。 コード ペインで、関数名の後に左かっこ **(**を入力すると、IntelliSense により、関数呼び出しの有効な各構文が表示されます。 たとえば、テーブルの `Quantity` という名前のフィールドの最大値を計算するには、 `=Max(` という単純な式をコード ペインに追加した後、スマート タグを使用して、関数呼び出しに使用できる有効な構文をすべて表示します。 この例を完成させるには、「 `=Max(Fields!Quantity.Value)`」と入力します。  
   
- 各関数の詳細については、MSDN の「<xref:System.Math>」、「<xref:System.Convert>」、および「[Visual Basic ランタイム ライブラリのメンバー](http://go.microsoft.com/fwlink/?LinkId=198941)」を参照してください。  
+ 各関数の詳細については、次を参照してください。 <xref:System.Math>、 <xref:System.Convert>、および[Visual Basic ランタイム ライブラリ メンバー](http://go.microsoft.com/fwlink/?LinkId=198941) msdn です。  
   
 ##  <a name="NotCommon"></a> 使用頻度の低い関数への参照の追加  
- 使用頻度の低い、その他の CLR 名前空間への参照を含めるには、<xref:System.Text.StringBuilder> など、完全修飾参照を使用する必要があります。 このような使用頻度の低い関数については、 **[式]** ダイアログ ボックスのコード ペインで IntelliSense がサポートされていません。  
+ 一般的に使用される CLR 名前空間以下を他の参照を含めるにする必要があります参照を使用する完全修飾、たとえば、<xref:System.Text.StringBuilder>です。 このような使用頻度の低い関数については、 **[式]** ダイアログ ボックスのコード ペインで IntelliSense がサポートされていません。  
   
  各関数の詳細については、MSDN の「 [Visual Basic ランタイム ライブラリのメンバー](http://go.microsoft.com/fwlink/?LinkId=198941) 」を参照してください。  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 77
  外部アセンブリ内のクラスへの参照を含めるには、レポート プロセッサのアセンブリを特定する必要があります。 レポートに追加するアセンブリの完全修飾名を指定するには、 **[レポートのプロパティ]** ダイアログ ボックスの **[参照]** ページを使用します。 式では、アセンブリ内のクラスの完全修飾名を使用する必要があります。 外部アセンブリ内のクラスは、 **[式]** ダイアログ ボックスに表示されません。そのため、クラスの正しい名前を指定する必要があります。 完全修飾名には、名前空間、クラス名、およびメンバー名が含まれます。  
   
 ##  <a name="Embedded"></a> 埋め込みコードの追加  
- 埋め込みコードをレポートに追加するには、 **[レポートのプロパティ]** ダイアログ ボックスの [コード] タブを使用します。 作成したコード ブロックでは、複数のメソッドを使用できます。 埋め込みコード内のメソッドは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で記述されており、インスタンス ベースである必要があります。 レポート プロセッサは、System.Convert 名前空間および System.Math 名前空間の参照を自動的に追加します。 他のアセンブリ参照を追加するには、 **[レポートのプロパティ]** ダイアログ ボックスの **[参照]** ページを使用します。 詳細については、「[レポートにアセンブリへの参照を追加する &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)」を参照してください。  
+ 埋め込みコードをレポートに追加するには、 **[レポートのプロパティ]** ダイアログ ボックスの [コード] タブを使用します。 作成したコード ブロックでは、複数のメソッドを使用できます。 埋め込みコード内のメソッドは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で記述されており、インスタンス ベースである必要があります。 レポート プロセッサは、System.Convert 名前空間および System.Math 名前空間の参照を自動的に追加します。 他のアセンブリ参照を追加するには、 **[レポートのプロパティ]** ダイアログ ボックスの **[参照]** ページを使用します。 詳細については、「 [レポートにアセンブリへの参照を追加する &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)」を参照してください。  
   
  埋め込みコード内のメソッドは、グローバルに定義されている **Code** メンバーを介して利用できます。 **Code** メンバーとメソッド名を参照することで、これらのメソッドにアクセスできます。 次の例では、 **ToUSD**メソッドを呼び出します。これにより、 `StandardCost` フィールドの値が米ドル単位に変換されます。  
   
@@ -114,14 +119,14 @@ Public Function FixSpelling(ByVal s As String) As String
 End Function  
 ```  
   
- 組み込みのオブジェクト コレクションと初期化の詳細については、「[組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-globals-and-users-references-report-builder-and-ssrs.md)」および「[カスタム アセンブリ オブジェクトの初期化](../../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md)」を参照してください。  
+ 組み込みのオブジェクト コレクションと初期化の詳細については、「[組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)」および「[カスタム アセンブリ オブジェクトの初期化](../../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md)」を参照してください。  
   
 ##  <a name="Parameters"></a> パラメーターへの参照の追加 (コード経由)  
  レポート定義のコード ブロックまたはユーザーが指定したカスタム アセンブリのカスタム コードを経由してグローバル パラメーター コレクションを参照できます。 パラメーター コレクションは読み取り専用で、パブリック反復子がありません。 コレクションのステップ実行に [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **For Each** 構造体を使用することはできません。 レポート定義内で定義されたパラメーターの名前をコード内で参照する前に、その名前を確認しておく必要があります。 ただし、複数の値を持つパラメーターのすべての値は、繰り返し処理することができます。  
   
  次の表には、カスタム コードから組み込みコレクション `Parameters` を参照する例を示しています。  
   
- **グローバル パラメーター コレクション全体をカスタム コードに渡します。**この関数は、特定のレポート パラメーター *MyParameter* の値を返します。  
+ **グローバル パラメーター コレクション全体をカスタム コードに渡します。**この関数は、特定のレポート パラメーター *MyParameter*の値を返します。  
   
  式での参照 `=Code.DisplayAParameterValue(Parameters)`  
   
@@ -160,7 +165,7 @@ End Function
 ##  <a name="Custom"></a> コードへの参照の追加 (カスタム アセンブリ経由)  
  レポートでカスタム アセンブリを使用するには、まずアセンブリを作成して、これをレポート デザイナーが利用できるようにし、アセンブリへの参照をレポートに追加してから、レポート内の式を使用してこのアセンブリ内のメソッドを参照します。 レポートがレポート サーバーに配置される場合は、カスタム アセンブリもレポート サーバーに配置する必要があります。  
   
- カスタム アセンブリを作成して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で利用できるようにする方法については、「[レポートでのカスタム アセンブリの使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)」を参照してください。  
+ カスタム アセンブリを作成して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で利用できるようにする方法については、「 [レポートでのカスタム アセンブリの使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)」を参照してください。  
   
  式の中でカスタム コードを参照するには、アセンブリ内のクラスのメンバーを呼び出す必要があります。 呼び出す方法は、メソッドが静的であるかインスタンス ベースであるかにより異なります。 カスタム アセンブリ内の静的メソッドは、レポート内でグローバルに利用できます。 静的メソッドには、名前空間、クラス、メソッド名を指定することによって、式からアクセスできます。 次の例では、 **ToGBP**メソッドを呼び出し、 **StandardCost** フィールドの値をドルからポンドに変換しています。  
   
@@ -180,7 +185,7 @@ End Function
  コードへのアクセスの詳細については、「 [Accessing Custom Assemblies Through Expressions](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md)」を参照してください。  
   
 ##  <a name="collections"></a> カスタム アセンブリへの組み込みコレクションの引き渡し  
- 組み込みコレクション (*Globals* コレクションや *Parameters* コレクションなど) をカスタム アセンブリ内に渡して処理する場合は、コード プロジェクト内のアセンブリ参照を組み込みコレクションを定義するアセンブリに追加し、正しい名前空間にアクセスする必要があります。 開発しているカスタム アセンブリが、レポート サーバー上で実行されるレポート (サーバー レポート) 用のものなのか、それとも .NET アプリケーション内でローカルに実行されるレポート (ローカル レポート) 用のものなのかによって、参照する必要があるアセンブリは異なります。 詳細については、以下を参照してください。  
+ 組み込みコレクション ( *Globals* コレクションや *Parameters* コレクションなど) をカスタム アセンブリ内に渡して処理する場合は、コード プロジェクト内のアセンブリ参照を組み込みコレクションを定義するアセンブリに追加し、正しい名前空間にアクセスする必要があります。 開発しているカスタム アセンブリが、レポート サーバー上で実行されるレポート (サーバー レポート) 用のものなのか、それとも .NET アプリケーション内でローカルに実行されるレポート (ローカル レポート) 用のものなのかによって、参照する必要があるアセンブリは異なります。 詳細については、以下を参照してください。  
   
 -   **名前空間:** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
   
@@ -190,7 +195,7 @@ End Function
   
  *Fields* コレクションおよび *ReportItems* コレクションの内容は実行時に動的に変更されるので、カスタム アセンブリ内への呼び出し間でそれらを保持することは避けてください (たとえば、メンバー変数内など)。 この推奨事項は、すべての組み込みコレクションについて共通に該当します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レポートにコードを追加する &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
  [レポートでのカスタム アセンブリの使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [レポートにアセンブリへの参照を追加する &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   

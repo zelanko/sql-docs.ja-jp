@@ -1,26 +1,31 @@
 ---
-title: "データ領域でのグループの追加または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "追加または削除 (レポート ビルダーおよび SSRS) は、データ領域のグループ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a28d250be3c4fe43b16825bf033e86836a036db0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# データ領域でのグループの追加または削除 (レポート ビルダーおよび SSRS)
+# <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>データ領域でのグループの追加または削除 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 改ページ調整されたレポートで、計算や表示の対象として、特定の値または式のセットによってデータを整理する場合は、グループをデータ領域に追加します。 グループには、データセットのどのデータがそのグループに含まれるかを示す名前と式を割り当てます。 グループの詳細については、「[グループについて (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
   
- Tablix データ領域で、テーブル、マトリックス、または一覧をクリックすると、グループ化ペインが表示されます。 親グループまたは子グループを作成するには、データセット フィールドを [列グループと行グループ] ペインにドラッグします。 既存のグループを右クリックして、隣接するグループを追加します。 定義上、詳細グループは最も内側のグループで、子グループとしてのみ追加できます。 既存のグループを削除するには、右クリックします。 グループ値が表示される行および列が自動的に追加されます。 詳細については、「[テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)」を参照してください。  
+ Tablix データ領域で、テーブル、マトリックス、または一覧をクリックすると、グループ化ペインが表示されます。 親グループまたは子グループを作成するには、データセット フィールドを [列グループと行グループ] ペインにドラッグします。 既存のグループを右クリックして、隣接するグループを追加します。 定義上、詳細グループは最も内側のグループで、子グループとしてのみ追加できます。 既存のグループを削除するには、右クリックします。 グループ値が表示される行および列が自動的に追加されます。 詳細については、「 [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)」を参照してください。  
   
  グラフ データ領域で、グラフをクリックすると、ドロップ ゾーンが表示されます。 データセット フィールドをカテゴリ ドロップ ゾーンと系列ドロップ ゾーンにドラッグすると、グループが作成されます。 入れ子になったグループを追加するには、複数のフィールドをドロップ ゾーンに追加します。  
   
@@ -29,32 +34,32 @@ caps.handback.revision: 10
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 親行、子行、または列グループを Tablix データ領域に追加するには  
+## <a name="to-add-a-parent-or-child-row-or-column-group-to-a-tablix-data-region"></a>親行、子行、または列グループを Tablix データ領域に追加するには  
   
-1.  フィールドを、**[レポート データ]** ペインから **[行グループ]** ペインまたは **[列グループ]** ペインにドラッグします。  
+1.  フィールドを、 **[レポート データ]** ペインから **[行グループ]** ペインまたは **[列グループ]** ペインにドラッグします。  
   
     > [!NOTE]  
-    >  グループ化ペインが表示されない場合は、[表示] タブの **[グループ化]** をクリックします。  
+    >  グループ化ペインが表示されない場合は、[表示] タブの **[グループ化]**をクリックします。  
   
 2.  グループを既存のグループの親グループまたは子グループとして配置するには、ガイド バーを使用してグループの上位または下位の階層にフィールドをドロップします。  
   
      既定の名前、グループ式、およびフィールド名に基づく並べ替え式がグループに追加されます。  
   
-## 隣接する行または列グループを Tablix データ領域に追加するには  
+## <a name="to-add-an-adjacent-row-or-column-group-to-a-tablix-data-region"></a>隣接する行または列グループを Tablix データ領域に追加するには  
   
-1.  グループ化ペインで、追加するグループを右クリックします。 **[グループの追加]** をクリックし、**[前に隣接]** または **[後に隣接]** をクリックして、グループを追加する場所を指定します。 **[Tablix のグループ]** ダイアログ ボックスが表示されます。  
+1.  グループ化ペインで、追加するグループを右クリックします。 **[グループの追加]**をクリックし、 **[前に隣接]** または **[後に隣接]** をクリックして、グループを追加する場所を指定します。 **[Tablix のグループ]** ダイアログ ボックスが表示されます。  
   
-2.  **[名前]** に、グループの名前を入力します。  
+2.  **[名前]**に、グループの名前を入力します。  
   
-3.  **[グループ式]** で、式を入力するか式ボタン (**[fx]**) をクリックして、式を作成します。  
+3.  **[グループ式]**で、式を入力するか式ボタン (**[fx]**) をクリックして、式を作成します。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      新しいグループがグループ化ペインに追加され、グループ値を表示する行または列がデザイン画面の Tablix データ領域に表示されます。  
   
-## 詳細グループを Tablix データ領域に追加するには  
+## <a name="to-add-a-details-group-to-a-tablix-data-region"></a>詳細グループを Tablix データ領域に追加するには  
   
-1.  グループ化ペインで、最も内側の子グループであり、**詳細**グループではないグループを右クリックします。 **[グループの追加]**をクリックし、 **[子グループ]**をクリックします。 **[Tablix のグループ]** ダイアログ ボックスが表示されます。  
+1.  グループ化ペインで、最も内側の子グループであり、 **詳細** グループではないグループを右クリックします。 **[グループの追加]**をクリックし、 **[子グループ]**をクリックします。 **[Tablix のグループ]** ダイアログ ボックスが表示されます。  
   
 2.  **[グループ式]**で式を空白のままにします。 詳細グループには式がありません。  
   
@@ -64,15 +69,15 @@ caps.handback.revision: 10
   
      グループ化ペインで新しい詳細グループが子グループとして追加され、手順 1. で選択したグループの行ハンドルに詳細グループ アイコンが表示されます。 Tablix データ領域に関する詳細については、「[Tablix データ領域のセル、行、および列 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)」を参照してください。  
   
-## Tablix データ領域の行または列グループを編集するには  
+## <a name="to-edit-a-row-or-column-group-in-a-tablix-data-region"></a>Tablix データ領域の行または列グループを編集するには  
   
 1.  レポート デザイン画面で、Tablix データ領域の任意の場所をクリックして選択します。 グループ化ペインに行グループと列グループが表示されます。  
   
-2.  グループを右クリックし、**[グループのプロパティ]** をクリックします。  
+2.  グループを右クリックし、 **[グループのプロパティ]**をクリックします。  
   
-3.  **[名前]** ボックスに、グループの名前を入力します。  
+3.  **[名前]**ボックスに、グループの名前を入力します。  
   
-4.  **[グループ式]** で、単純な式を入力または選択するか、式ボタン (**[fx]**) をクリックして、グループ式を作成します。  
+4.  **[グループ式]**で、単純な式を入力または選択するか、式ボタン (**[fx]**) をクリックして、グループ式を作成します。  
   
 5.  **[追加]** をクリックして追加の式を作成します。 指定するすべての式が論理 AND を使用して結合され、このグループのデータを指定します。  
   
@@ -88,27 +93,27 @@ caps.handback.revision: 10
   
 11. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Tablix データ領域からグループを削除するには  
+## <a name="to-delete-a-group-from-a-tablix-data-region"></a>Tablix データ領域からグループを削除するには  
   
-1.  グループ化ペインで、グループを右クリックし、**[グループの削除]** をクリックします。  
+1.  グループ化ペインで、グループを右クリックし、 **[グループの削除]**をクリックします。  
   
 2.  **[グループの削除]** ダイアログ ボックスで、次のいずれかのオプションを選択します。  
   
     -   **[グループおよび関連する行と列を削除する]** グループ定義およびグループ データを表示するすべての関連する行を削除する場合は、このオプションを選択します。 詳細グループでは、同じ行が詳細データとグループ データの両方に属している場合、詳細データ行のみが削除されます。  
   
-    -   **[グループのみを削除]**Tablix データ領域の構造を変えずにグループ定義のみを削除する場合は、このオプションを選択します。  
+    -   **[グループのみを削除]** Tablix データ領域の構造を変えずにグループ定義のみを削除する場合は、このオプションを選択します。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Tablix データ領域から詳細グループを削除するには  
+## <a name="to-delete-a-details-group-from-a-tablix-data-region"></a>Tablix データ領域から詳細グループを削除するには  
   
-1.  グループ化ペインで、詳細グループを右クリックし、**[グループの削除]** をクリックします。  
+1.  グループ化ペインで、詳細グループを右クリックし、 **[グループの削除]**をクリックします。  
   
 2.  **[グループの削除]** ダイアログ ボックスで、次のいずれかのオプションを選択します。  
   
     -   **[グループおよび関連する行と列を削除する]** グループ定義およびグループ データを表示するすべての関連する行を削除する場合は、このオプションを選択します。 詳細グループでは、同じ行が詳細データとグループ データの両方に属している場合、詳細データ行のみが削除されます。  
   
-    -   **[グループのみを削除]**Tablix データ領域の構造を変えずにグループ定義のみを削除する場合は、このオプションを選択します。  
+    -   **[グループのみを削除]** Tablix データ領域の構造を変えずにグループ定義のみを削除する場合は、このオプションを選択します。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -117,14 +122,14 @@ caps.handback.revision: 10
     > [!NOTE]  
     >  詳細行を削除したら、各セルの式には適切な集計式が指定されていることを確認します。 必要に応じて、式を編集して集計関数を指定します。  
   
-## 参照  
- [レポート変数コレクションとグループ変数コレクションの参照 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-and-group-variables-collections-references-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>参照  
+ [レポート変数コレクションとグループ変数コレクションの参照 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
  [グループ式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Tablix データ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [テーブル (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [マトリックス (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [テーブル &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [マトリックス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

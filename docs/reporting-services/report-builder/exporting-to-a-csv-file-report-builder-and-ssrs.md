@@ -1,26 +1,31 @@
 ---
-title: "CSV ファイルへのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "CSV ファイル (レポート ビルダーおよび SSRS) へのエクスポート |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 60c8d93cd6901e6a18337212f8906ccbbf0f5522
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# CSV ファイルへのエクスポート (レポート ビルダーおよび SSRS)
+# <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>CSV ファイルへのエクスポート (レポート ビルダーおよび SSRS)
   CSV (コンマ区切り値) 表示拡張機能では、レポートのデータを平面的に表して、標準化されたプレーンテキスト形式でページ分割されたレポートを表示します。プレーンテキスト形式のレポートは、多くのアプリケーションで簡単に読み取ったり変換したりすることができます。  
   
- CSV 表示拡張機能は、文字による区切り記号を使用してフィールドと行を分けます。この区切り記号には、コンマ以外の文字を使用するように構成できます。 エクスポートされたファイルは、 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] などのスプレッドシート プログラムで開いたり、他のプログラムのインポート形式として使用できます。 エクスポートされたレポートは .csv ファイルとなり、MIME の種類として **text/csv** を返します。  
+ CSV 表示拡張機能は、文字による区切り記号を使用してフィールドと行を分けます。この区切り記号には、コンマ以外の文字を使用するように構成できます。 エクスポートされたファイルは、 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] などのスプレッドシート プログラムで開いたり、他のプログラムのインポート形式として使用できます。 エクスポートされたレポートは .csv ファイルとなり、MIME の種類として **text/csv**を返します。  
   
  グラフ、データ バー、スパークライン、ゲージ、インジケーターに関連するデータを [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]で操作する場合は、レポートを CSV ファイルにエクスポートし、そのファイルを [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel で開きます。  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  フィールド区切り記号を任意の文字 (タブなど) に変更するには、デバイス情報設定を変更します。 詳細については、「 [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md)」を参照してください。  
   
--   レコード区切り記号は、キャリッジ リターンとライン フィードの組み合わせ (\<cr>\<lf>) です。  
+-   レコード区切り記号がキャリッジ リターンとライン フィード (\<cr >\<lf >)。  
   
 -   テキスト修飾子は、二重引用符 (") です。  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 8
 |インジケーター|アクティブな状態名、使用可能な状態、およびデータ値を持つ単一のレコードとして表示されます。|  
 |マップ|マップ レイヤーのマップ メンバーごとにラベルと値のある行を表示します。<br /><br /> マップに複数のレイヤーがある場合、同じマップ データ領域を使用しているか、異なるマップ データ領域を使用しているかによって行の値が変化します。 複数のマップ レイヤーが同じデータ領域を使用している場合、行にはすべてのレイヤーからのデータが含まれます。|  
   
-### 階層データとグループ化データ  
+### <a name="hierarchical-and-grouped-data"></a>階層データとグループ化データ  
  階層データとグループ化データは、CSV 形式で表示するためにフラット化する必要があります。  
   
  表示拡張機能では、レポートをフラット化して、データ領域内で入れ子になっているグループを表すツリー構造にします。 レポートをフラット化する手順は次のとおりです。  
@@ -94,14 +99,13 @@ caps.handback.revision: 8
   
 -   ピア データ領域は、一般的なデータ領域または動的な先祖を共有する、データ領域または動的グループです。 ピア データがフラットなツリーの分岐で識別されます。  
   
- 詳細については、「[テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)を返します。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="RenderingModes"></a> 表示モード  
  CSV 表示拡張機能は 2 つのモードで操作できます。1 つは Excel に最適なモード、もう 1 つは、RFC 4180 の CSV 仕様に厳密に準拠することが要求されるサードパーティのアプリケーションに最適なモードです。 使用するモードによって、ピア データ領域の処理は異なります。  
   
-### 既定モード  
+### <a name="default-mode"></a>既定モード  
  既定のモードは Excel 向けに最適化されたモードです。 既定のモードで表示された場合、CSV 表示データの複数のセクションが含まれた CSV ファイルとしてレポートが表示されます。 各ピア データ領域は空の行で区切られます。 レポート本文内のピア データ領域は、CSV ファイル内で個別のデータ ブロックとして表示されます。 その結果、CSV ファイル内は次のようになります。  
   
 -   レポート本文内の個々のテキスト ボックスは、CSV ファイル内の最初のデータ ブロックとして 1 回表示されます。  
@@ -110,16 +114,16 @@ caps.handback.revision: 8
   
 -   入れ子になったデータ領域は、同じデータ ブロックで対角線上に表示されます。  
   
-#### 書式設定  
+#### <a name="formatting"></a>書式設定  
  数値は、書式設定された状態で表示されます。 Excel は、通貨、パーセンテージ、日付などの書式設定された数値を認識できます。また、CSV ファイルをインポートする場合、セルの書式を適切に設定します。  
   
-### 準拠モード  
+### <a name="compliant-mode"></a>準拠モード  
  準拠モードでは、サードパーティのアプリケーション向けにデータの形式が最適化されます。  
   
-#### データ領域  
+#### <a name="data-regions"></a>データ領域  
  ファイルの最初の行のみに列ヘッダーが含まれます。また、各行の列数は同じになります。  
   
-#### 書式設定  
+#### <a name="formatting"></a>書式設定  
  値の書式は設定されていません。  
   
 ##  <a name="Interactivity"></a> 対話性  
@@ -139,18 +143,16 @@ caps.handback.revision: 8
   
 -   ブックマーク  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="DeviceInfo"></a> デバイス情報設定  
  このレンダラーでは、デバイス情報設定を変更することで既定の設定の一部を変更できます。たとえば、表示モード、区切り記号として使用する文字、テキスト修飾子の既定の文字として使用する文字などを変更できます。 詳細については、「 [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md)」を参照してください。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
-## 参照  
- [Reporting Services の改ページ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [レンダリングの動作 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [さまざまなレポート表示拡張機能の対話機能 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
- [レポート アイテムのレンダリング (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>参照  
+ [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [レポート アイテムのレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

@@ -1,30 +1,35 @@
 ---
-title: "Reporting Services エラーの原因と解決方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "メッセージ [Reporting Services]"
-  - "エラー [Reporting Services]"
-  - "トラブルシューティング [Reporting Services], エラー"
+title: "原因と Reporting Services エラーの解決策 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- messages [Reporting Services]
+- errors [Reporting Services]
+- troubleshooting [Reporting Services], errors
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
 caps.latest.revision: 17
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 17
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 653001080c8ede72abf608c7b8b982558d55c46b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services エラーの原因と解決方法
-  このトピックでは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に関連するさまざまなエラーの原因と解決方法について説明します。 このセクションのエラー メッセージ トピックでは、エラー メッセージとその原因、および問題を解決するための対策について説明します。  
+# <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services エラーの原因と解決方法
+  このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に関連するさまざまなエラーの原因と解決方法について説明します。 このセクションのエラー メッセージ トピックでは、エラー メッセージとその原因、および問題を解決するための対策について説明します。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
   
 |[エラー]|メッセージ|  
 |-----------|-------------|  
@@ -36,7 +41,7 @@ caps.handback.revision: 17
 |[rrRenderingError - Reporting Services エラー](../../reporting-services/troubleshooting/rrrenderingerror-reporting-services-error.md)|レポートの表示中にエラーが発生しました。 (rrRenderingError) %1。|  
 |[レポート サーバー Windows サービス (MSSQLServer) 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|レポート サーバー Windows サービス (MSSQLSERVER) はレポート サーバー データベースに接続できません。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Reporting Services のログ ファイルとソース](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [エラーとイベントのリファレンス (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   

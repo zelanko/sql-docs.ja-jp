@@ -1,35 +1,40 @@
 ---
-title: "レポートへのブックマークの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "(レポート ビルダーおよび SSRS) レポートにブックマークを追加 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b63dc6993525970f131b89ac6aea79f8a9c6e72
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# レポートへのブックマークの追加 (レポート ビルダーおよび SSRS)
+# <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>レポートへのブックマークの追加 (レポート ビルダーおよび SSRS)
   カスタマイズされた目次を指定したり、レポートにカスタマイズされた内部ナビゲーション リンクを指定したりする場合は、レポートにブックマークおよびブックマーク リンクを追加します。 通常、各テーブルやグラフ、テーブルやマトリックスに表示される固有のグループ値など、ユーザーが直接アクセスするレポート内の場所にブックマークを追加します。 ブックマークとして使用する独自の文字列を作成できます。また、グループの場合はブックマークをグループ式に設定できます。  
   
  ブックマークを作成すると、ユーザーがクリックして各ブックマークに移動できるレポート アイテムを追加できます。 これらの項目は通常、テキスト ボックスまたはイメージです。  
   
  たとえば、レポートに色別にグループ化されたテーブルが表示される場合、グループ ヘッダーにグループ式に基づくブックマークを追加します。 次に、色の値が表示されたレポートの先頭に単一のテキスト ボックスのあるテーブルを追加し、そのテキスト ボックスにブックマーク リンクを設定します。 色をクリックすると、レポートはその色のグループ ヘッダー行が表示されるページにジャンプします。  
   
- 任意のレポート アイテムにブックマークを追加したり、グラフのテキスト ボックス、画像、計算系列など、 **Action** プロパティのある任意のアイテムへのブックマーク リンクを追加したりできます。 詳細については、「[[アクション プロパティ] ダイアログ ボックス (レポート ビルダーおよび SSRS)](../Topic/Action%20Properties%20Dialog%20Box%20\(Report%20Builder%20and%20SSRS\).md)」を参照してください。  
+ 任意のレポート アイテムにブックマークを追加したり、グラフのテキスト ボックス、画像、計算系列など、 **Action** プロパティのある任意のアイテムへのブックマーク リンクを追加したりできます。 詳細については、「[[アクション プロパティ] ダイアログ ボックス (レポート ビルダーおよび SSRS)](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### ブックマークを追加するには  
+### <a name="to-add-a-bookmark"></a>ブックマークを追加するには  
   
 1.  レポート デザイン ビューで、ブックマークを追加するテキスト ボックス、画像、グラフ、または他のレポート アイテムを選択します。 選択したアイテムのプロパティがプロパティ ペインに表示されます。  
   
@@ -38,9 +43,9 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  ブックマークには任意の文字列を使用できますが、レポート内で一意である必要があります。 ブックマークが一意でない場合、そのブックマークへのリンクは、最初に一致したブックマークを参照します。  
   
-### ブックマーク リンクを追加するには  
+### <a name="to-add-a-bookmark-link"></a>ブックマーク リンクを追加するには  
   
-1.  [デザイン] ビューで、リンクを追加するテキスト ボックス、画像、またはグラフを右クリックし、**[プロパティ]** をクリックします。  
+1.  [デザイン] ビューで、リンクを追加するテキスト ボックス、画像、またはグラフを右クリックし、 **[プロパティ]**をクリックします。  
   
 2.  そのレポート アイテムの **[プロパティ]** ダイアログ ボックスで、 **[アクション]**をクリックします。  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 8
   
 7.  リンクをテストするには、 **[実行]** をクリックしてレポートをプレビューし、リンクを設定したレポート アイテムをクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [対話的な並べ替え、ドキュメント マップ、およびリンク &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

@@ -1,69 +1,71 @@
 ---
-title: "グラフ (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.seriesproperties.seriesdata.f1"
-  - "10256"
-  - "10166"
-  - "sql13.rtp.rptdesigner.charttitleproperties.general.f1"
-  - "sql13.rtp.rptdesigner.chartproperties.general.f1"
-  - "sql13.rtp.rptdesigner.seriesproperties.axesandchartarea.f1"
-  - "10251"
-  - "10172"
-  - "sql13.rtp.rptdesigner.chartareaproperties.3doptions.f1"
+title: "グラフ (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.seriesproperties.seriesdata.f1
+- "10256"
+- "10166"
+- sql13.rtp.rptdesigner.charttitleproperties.general.f1
+- sql13.rtp.rptdesigner.chartproperties.general.f1
+- sql13.rtp.rptdesigner.seriesproperties.axesandchartarea.f1
+- "10251"
+- "10172"
+- sql13.rtp.rptdesigner.chartareaproperties.3doptions.f1
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: d7c46a132a6d559e6299910d6b2e4e117e650f45
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# グラフ (レポート ビルダーおよび SSRS)
-  データをビジュアル形式でまとめるには、グラフ データ領域を使用します。 グラフを使用すると、大量の集計情報がひとめでわかります。 グラフを作成する前に、データを慎重に準備および理解することが重要です。これにより、グラフをすばやく効率的にデザインできます。 詳細については、「[レポートへのグラフの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)」を参照してください。 今すぐグラフを使い始めるには、「[レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)」の横棒グラフ、縦棒グラフ、スパークライン グラフ、および円グラフのチュートリアルまたは「[Reporting Services チュートリアル &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)」の横棒グラフおよび円グラフのチュートリアルを参照してください。  
+# <a name="charts-report-builder-and-ssrs"></a>グラフ (レポート ビルダーおよび SSRS)
+読者の皆様にグラフ データ領域の使用について、[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]改ページ調整されたレポートは、大量の集計されたデータの概要を理解します。  
+
+詳細時間慎重に準備して、グラフを作成する前に、データを理解することが容易になります迅速かつ効率的にグラフをデザインします。 使用するには、どのグラフの選択については、次を参照してください。[グラフの種類](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)をグラフでの試みをすぐに開始するには、バー、列、スパーク ライン、および円グラフのチュートリアルを参照してください[レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)です。  
   
  次の図は、グラフで使用されるさまざまな要素を示しています。  
   
  ![グラフ要素の図](../../reporting-services/report-design/media/rs-chartelementsc.gif "グラフ要素の図")  
   
- グラフは、レポート パーツとしてレポートとは別にパブリッシュできます。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
+ グラフとしてレポートから個別にパブリッシュできます*レポート パーツ*です。 詳細については、次を参照してください。[レポート パーツ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)です。
   
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
-  
+ 
 ##  <a name="DesigningChart"></a> グラフのデザイン  
- グラフ データ領域をデザイン画面に追加したら、グラフのグラフ データ ペインに数値データおよび非数値データのレポート データセット フィールドをドラッグします。 デザイン画面でグラフをクリックすると、カテゴリ グループ、系列グループ、および値の 3 つの領域を持つグラフ データ ペインが表示されます。 レポートに共有データセットまたは埋め込みデータセットが含まれている場合、データセットのフィールドがレポート データ ペインに表示されます。 データセットからフィールドを適切な領域にドラッグします。 既定では、フィールドがグラフのいずれかの領域に追加されると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によってフィールドの集計が計算されます。 系列グループを使用して系列を動的に生成することもできます。 グラフは、マトリックスとも緊密な関係にあります。  
+ グラフ データ領域をデザイン画面に追加したら、グラフのグラフ データ ペインに数値データおよび非数値データのレポート データセット フィールドをドラッグします。 デザイン画面でグラフをクリックすると、カテゴリ グループ、系列グループ、および値の 3 つの領域を持つグラフ データ ペインが表示されます。 レポートに共有データセットまたは埋め込みデータセットが含まれている場合、データセットのフィールドがレポート データ ペインに表示されます。 データセットからフィールドをグラフ データ ペインの適切な領域にドラッグします。 既定では、フィールドがグラフのいずれかの領域に追加されると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によってフィールドの集計が計算されます。 系列グループを使用して系列を動的に生成することもできます。 グラフは[行列のような編成](#SimilarMatrix)です。  
   
  ![rs_chartwSeriesCategories](../../reporting-services/report-design/media/rs-chartwseriescategories.gif "rs_chartwSeriesCategories")  
   
 > [!NOTE]  
 >  デザイン時のグラフ内のデータは、レポートが処理されるときのグラフ内のデータとは異なります。 デザイン時のデータは、実際のデータではありません。 デザイン時に作成されるデータは、グラフの概要を把握してグラフを設計するために追加された生成データです。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
-##  <a name="SimilarMatrix"></a> マトリックスとの類似点  
+##  <a name="SimilarMatrix"></a>グラフをマトリックスなどの方法  
  グラフがどのように動作するかについての考え方の 1 つは、グラフをマトリックスと比較することです。  
   
- ![ツールボックスから追加された新しいマトリックス、選択](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "ツールボックスから追加された新しいマトリックス、選択")  
+ ![選択したツールボックスから追加されたマトリックスの新規作成](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "選択ツールボックスから追加されたマトリックスの新規作成")  
   
  概念的には、グラフとマトリックスの組織は次のように同じです。  
   
--   マトリックスの [列] グループは、グラフの [カテゴリ グループ] 領域と同じです。  
+-   マトリックスの列グループは、グラフのカテゴリ グループ 領域に似ています。  
   
--   マトリックスの [行] グループは、グラフの [系列グループ] 領域と同じです。  
+-   マトリックスの行グループは、グラフの系列グループ 領域に似ています。  
   
--   マトリックスの [データ] 領域は、グラフの [値] 領域と同じです。  
+-   マトリックス内のデータ領域は、グラフの [値] 領域に似ています。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
+ 
 ##  <a name="AddingData"></a> グラフへのデータの追加  
  名前別売上を示すレポートがあるとします。 氏名フィールドを [カテゴリ グループ] 領域にドロップし、売上フィールドを [値] 領域にドロップします。  
   
@@ -73,27 +75,24 @@ caps.handback.revision: 10
   
  [系列グループ] 領域が空のままの場合、系列の数はデザイン時に固定されます。 この例では、売上は、グラフに表示される唯一の系列です。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
+ 
 ##  <a name="GroupsInChart"></a> グラフのカテゴリ グループと系列グループ  
  グラフでは、入れ子になったカテゴリ グループと系列グループがサポートされています。 グラフには詳細データは表示されません。 選択したグラフのカテゴリ ドロップ ゾーン、および系列ドロップ ゾーンにデータセット フィールドをドラッグして、グラフにグループを追加します。  
   
  円グラフなどの図形グラフでは、カテゴリ グループと入れ子になったカテゴリ グループがサポートされています。 棒グラフなどその他のグラフでは、カテゴリ グループと系列グループがサポートされています。 グループは入れ子にできますが、カテゴリまたは系列の数のためにグラフの情報の表示が見えにくくならないように確認してください。  
   
-### グラフへの系列グループの追加  
+### <a name="adding-series-grouping-to-a-chart"></a>グラフへの系列グループの追加  
  フィールドを [系列グループ] 領域に追加する場合、系列の数は、フィールドに格納されているデータに応じて決定します。 前述の例で、年フィールドを [系列グループ] 領域に追加するとします。 年フィールドの数値によって、グラフに表示される系列の数が決定します。 年フィールドに 2004 年、2005 年、および 2006 年が含まれている場合、グラフでは [値] 領域のフィールドごとに 3 つの系列が表示されます。  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="DatasetConsiderations"></a> グラフを作成する前のデータセットに関する注意点  
  グラフを使用すると、データの概要を表示できます。 ただし、大きなデータセットの場合、グラフの情報がわかりにくくなったり、読み取れなくなったりする可能性があります。 存在しないデータ ポイントや NULL データ ポイント、グラフの種類に適さないデータ型、およびグラフとテーブルの組み合わせなどの詳細設定の適用はすべて、グラフの読みやすさに影響します。 グラフをデザインする前に、データを慎重に準備し、理解しておく必要があります。これにより、短時間で効率的にグラフをデザインできます。  
   
  レポートには、必要な数だけグラフを作成することができます。 グラフは、マトリックスやテーブルなど他のデータ領域と同様に、1 つのデータセットにバインドされます。 複数のデータセットを同じグラフに表示する場合は、SQL クエリで JOIN ステートメントまたは UNION ステートメントを使用する追加のデータセットを作成した後、データをグラフに追加します。 JOIN ステートメントおよび UNION ステートメントの詳細については、オンライン ブックまたは SQL のその他のリファレンスを参照してください。  
   
- 詳細データが不要な場合や有用ではない場合は、データセット クエリでデータを事前に集計することを検討してください。 各データ ポイントをより明確に表示するには、データセット内のカテゴリの数を減らします。 データセットをフィルター選択したり、返される行数を少なくする条件をクエリに追加したりすることができます。 ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン")[トップに戻る](#BackToTop)  
+ 詳細データが不要な場合や有用ではない場合は、データセット クエリでデータを事前に集計することを検討してください。 各データ ポイントをより明確に表示するには、データセット内のカテゴリの数を減らします。 データセットをフィルター選択したり、返される行数を少なくする条件をクエリに追加したりすることができます。 
   
 ##  <a name="BestPractices"></a> グラフにデータを表示する際の推奨事項  
- グラフが最も効果を発揮するのは、表示される要素の数によって、基になっている情報のイメージが明確に表現できる場合です。 散布図など一部のグラフはデータ ポイントの数が多い場合に効果的ですが、円グラフなどの他のグラフはデータ ポイントが少ない場合に効果的です。 データセット内の値とその情報の表示方法に基づいて、慎重にグラフの種類を選択してください。 詳細については、「[グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)」を参照してください。  
+ グラフが最も効果を発揮するのは、表示される要素の数によって、基になっている情報のイメージが明確に表現できる場合です。 散布図など一部のグラフはデータ ポイントの数が多い場合に効果的ですが、円グラフなどの他のグラフはデータ ポイントが少ない場合に効果的です。 データセット内の値とその情報の表示方法に基づいて、慎重にグラフの種類を選択してください。 詳細については、「 [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)」を参照してください。  
   
  グラフ上のデータを整理するには、いくつかの方法があります。  
   
@@ -103,25 +102,21 @@ caps.handback.revision: 10
   
 -   不要なデータや無関係なデータをフィルター処理します。 これにより、グラフに表示する主要なデータを強調することができます。 グラフ内のデータ ポイントをフィルター処理するには、カテゴリ グループまたは系列グループに対するフィルターを設定します。 既定では、組み込み関数 Sum を使って、同じグループに属する値が系列内の個々のデータ ポイントとして集計されます。 系列の集計関数を変更する場合は、フィルター式の集計関数を変更する必要もあります。 詳細については、「[データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
   
--   テーブルやマトリックスのテンプレートに比率データを表示する場合は、横棒グラフではなく線形ゲージの使用を検討してください。 セル内にある 1 つの値を表示するには、ゲージの方が適しています。 詳細については、「[入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)」 を参照してください。  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
+-   テーブルやマトリックスのテンプレートに比率データを表示する場合は、横棒グラフではなく線形ゲージの使用を検討してください。 セル内にある 1 つの値を表示するには、ゲージの方が適しています。 詳細については、「 [入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)」を参照してください。  
+   
 ##  <a name="AggregateValues"></a> グラフのデータ フィールドの値の集計  
  既定では、フィールドがグラフの [値] 領域に追加されると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によってフィールドの集計が計算されます。 フィールドを特定の領域にドロップせずにグラフ上にドラッグすると、グラフでは、フィールドのデータ型に基づいて、このフィールドがカテゴリ軸 (x 軸) または値軸 (y 軸) のいずれに属するかが判断されます。 [値] 領域にドロップされた数値フィールドは、SUM 関数を使用して集計されます。 [値] 領域で値フィールドのデータ型が String の場合、フィールドに数値が存在する場合でも、グラフに数値は表示されず、COUNT 関数が表示されます。 この動作を回避するには、フィールドに、書式設定された数値を格納した文字列ではなく、数値データ型を設定してください。 Visual Basic の式を使用して文字列値を数値データ型に変換するには、 **CDbl** 定数または **CInt** 定数を使用します。 たとえば、次の複合式を使用すると、文字列として書式設定された数値を格納する `MyField` という名前のフィールドを変換できます。  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
- 集計式の詳細については、「[集計関数リファレンス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/aggregate-functions-reference-report-builder-and-ssrs.md)」を参照してください。  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
-##  <a name="InThisSection"></a> このセクションの内容  
+ 集計式の詳細については、「[集計関数リファレンス (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)」を参照してください。  
+   
+##  <a name="InThisSection"></a> トピックの内容  
  [レポートへのグラフの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
  レポートにグラフを追加する最初の手順について説明します。  
   
  [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で使用できるすべてのグラフの種類とサブタイプについて説明します。また、さまざまな種類のグラフを使用する際の注意事項およびベスト プラクティスについても説明します。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で使用できるすべてのグラフの種類とサブタイプについて説明します。また、さまざまな種類のグラフを使用する際の注意事項およびベスト プラクティスについても説明します。  
   
  [グラフの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
  全体の見た目を向上させる書式設定を使用し、グラフの主要なデータ ポイントを強調表示します。  
@@ -147,7 +142,7 @@ caps.handback.revision: 10
  [グラフのトラブルシューティング &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/troubleshoot-charts-report-builder-and-ssrs.md)  
  グラフを操作する際に役立つヒントについて説明します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [画像、テキスト ボックス、四角形、および罫線 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
  [対話的な並べ替え、ドキュメント マップ、およびリンク &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   

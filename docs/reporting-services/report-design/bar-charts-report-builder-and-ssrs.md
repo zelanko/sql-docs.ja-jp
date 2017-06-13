@@ -1,26 +1,31 @@
 ---
-title: "横棒グラフ (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "横棒グラフ (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c4b3521ce8485561df5fec6a9cd468732cfbc52b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# 横棒グラフ (レポート ビルダーおよび SSRS)
+# <a name="bar-charts-report-builder-and-ssrs"></a>横棒グラフ (レポート ビルダーおよび SSRS)
   横棒グラフでは、横棒のセットとして系列が表示されます。 一般的な横棒グラフは、縦棒グラフおよび範囲横棒グラフと密接な関係にあります。縦棒グラフでは、縦棒のセットとして系列が表示され、範囲横棒グラフでは、始点と終点が異なる横棒のセットとして系列が表示されます。  
   
- 横棒グラフは、データを水平方向に表示する唯一のグラフの種類です。 このため、開始日と終了日が限定された状態で、時間の経過と共に発生するデータを表す際によく使用されます。 また、カテゴリを水平方向に表示できるため、カテゴリ情報を示す際にもよく使用されます。 折れ線グラフにデータを追加する方法の詳細については、「[グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)」をご覧ください。  
+ 横棒グラフは、データを水平方向に表示する唯一のグラフの種類です。 このため、開始日と終了日が限定された状態で、時間の経過と共に発生するデータを表す際によく使用されます。 また、カテゴリを水平方向に表示できるため、カテゴリ情報を示す際にもよく使用されます。 折れ線グラフにデータを追加する方法の詳細については、「 [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)」をご覧ください。  
   
  次の図は、横棒グラフを示しています。 3 つの系列では共通の期間が共有され、有効な比較が可能になるため、このデータには横棒グラフが適しています。  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 横棒グラフの種類  
+## <a name="variations-of-the-bar-chart"></a>横棒グラフの種類  
   
 -   **積み上げ**: 複数の系列が水平方向に積み上げられた横棒グラフ。 グラフに系列が 1 つしかない場合、積み上げ横棒グラフでも、横棒グラフと同じように表示されます。  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 7
   
 -   **3-D 円柱**: 3-D グラフで棒が円柱のような形をしている横棒グラフ。  
   
-## 横棒グラフのデータに関する注意点  
+## <a name="data-considerations-for-bar-charts"></a>横棒グラフのデータに関する注意点  
   
 -   横棒グラフでは、軸が反転しています。 カテゴリ軸が縦軸 ("Y 軸") で、値軸が横軸 ("X 軸") です。 つまり、横棒グラフでは、上から下に表示される一覧として Y 軸にカテゴリ ラベルを表示するために十分な領域があります。  
   
@@ -49,15 +54,15 @@ caps.handback.revision: 7
   
 -   レポート内のテーブルやマトリックスに横棒を追加する場合、横棒グラフの代わりに線形ゲージの使用を検討してください。 線形ゲージは、複数のグループではなく 1 つの値を表示するようにデザインされています。そのため、一覧またはテーブルのデータ領域内でより柔軟に使用できます。 詳細については、「[ゲージ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)」をご覧ください。  
   
--   横棒グラフの各棒に特殊な描画スタイルを追加して、視覚的な効果を高めることができます。 描画スタイルには、くさび形、エンボス、円柱、およびグラデーションがあります。 これらの効果は、2D グラフを見やすくするためにデザインされています。 3D グラフを使用している場合でも描画スタイルを適用できますが、同じ効果を得られないことがあります。 横棒グラフに描画スタイルを追加する方法の詳細については、「[グラフへの傾斜、エンボス、およびテクスチャのスタイルの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs.md)」をご覧ください。  
+-   横棒グラフの各棒に特殊な描画スタイルを追加して、視覚的な効果を高めることができます。 描画スタイルには、くさび形、エンボス、円柱、およびグラデーションがあります。 これらの効果は、2D グラフを見やすくするためにデザインされています。 3D グラフを使用している場合でも描画スタイルを適用できますが、同じ効果を得られないことがあります。 横棒グラフに描画スタイルを追加する方法の詳細については、「 [グラフへの傾斜、エンボス、およびテクスチャのスタイルの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)」をご覧ください。  
   
 -   積み上げ横棒グラフでは、複数の系列が相互に重なって 1 つの積み上げ横棒が作成されます。 積み上げ横棒グラフは、カテゴリごとに積み上げ横棒の複数のセットに分割できます。 グループ化された積み上げグラフは、横に並んで表示されます。 グラフには、グループ化された積み上げグラフをいくつでも含めることができます。  
   
 -   横棒グラフにデータ ポイント ラベルが表示されている場合、ラベルはそれぞれの横棒の外側に配置されます。 そのため、グラフ領域内の割り当てられた領域が横棒でいっぱいになると、ラベルが重なって表示されます。 それぞれの横棒に表示されるデータ ポイント ラベルの位置を変更するには、プロパティ ペインで **BarLabelStyle** プロパティを設定します。  
   
--   グラフのサイズに対してデータセット内のデータ ポイントの数が多い場合は、列または横棒のサイズおよびその間隔が小さくなります。 グラフ内の列の幅を手動で設定するには、**PointWidth** プロパティを変更して列の幅をピクセル単位で変更します。 既定では、このプロパティの値は 0.8 です。 グラフの列または横棒の幅を大きくすると、各列または横棒の間隔は小さくなります。  
+-   グラフのサイズに対してデータセット内のデータ ポイントの数が多い場合は、列または横棒のサイズおよびその間隔が小さくなります。 グラフ内の列の幅を手動で設定するには、 **PointWidth** プロパティを変更して列の幅をピクセル単位で変更します。 既定では、このプロパティの値は 0.8 です。 グラフの列または横棒の幅を大きくすると、各列または横棒の間隔は小さくなります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [グラフ内の空のデータ ポイントおよび NULL データ ポイント &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
@@ -65,8 +70,8 @@ caps.handback.revision: 7
  [範囲グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
  [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [グラフの軸ラベルの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [グラフの凡例の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-the-legend-on-a-chart-report-builder-and-ssrs.md)   
- [グラフへの傾斜、エンボス、およびテクスチャのスタイルの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs.md)   
+ [グラフの凡例の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [グラフへの傾斜、エンボス、およびテクスチャのスタイルの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー)](http://go.microsoft.com/fwlink/?LinkId=198052)   
  [チュートリアル : レポートへの横棒グラフの追加](http://go.microsoft.com/fwlink/?LinkId=198042)  
   

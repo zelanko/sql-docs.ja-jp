@@ -1,23 +1,28 @@
 ---
-title: "セキュリティ (レポート ビルダー) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "セキュリティ (レポート ビルダー) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 7e6f09ff050246777e307f73280c764dd6da3ad7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# セキュリティ (レポート ビルダー)
+# <a name="security-report-builder"></a>セキュリティ (レポート ビルダー)
   レポート ビルダーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーと連携するように設計されたレポート作成クライアント アプリケーションです。 レポート サーバーは、ネイティブ モードでスタンドアロン サーバーとして動作するように構成したり、SharePoint 統合モードで SharePoint サイト上のレポートをサポートするように構成したりすることができます。  
   
  レポート ビルダーでは、レポート、共有データセット、および再利用可能なレポート パーツを作成できます。 レポート サーバーまたは SharePoint サイトから、レポートの編集や共有データ ソース、共有データセット、および共有レポート パーツの追加を実行できます。  
@@ -45,7 +50,7 @@ caps.handback.revision: 10
   
      レポート サーバーのアイテムを表示またはパブリッシュするために、レポート関連アイテムおよび操作に適用される権限セットがロールに分類されています。 レポート サーバー管理者が 1 つ以上のロールへの割り当てを行います。 たとえば、定義済みロール "閲覧者" に割り当てられると、レポート、フォルダー、モデル、およびリソースを表示できるようになります。  
   
-     レポート サーバーに接続したりレポート サーバーを参照したりすることができない場合は、レポート サーバー管理者に問い合わせてください。 詳細については、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のドキュメント ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?linkid=121312)) の「[Reporting Services のセキュリティと保護](../../reporting-services/security/reporting-services-security-and-protection.md)」を参照してください。  
+     レポート サーバーに接続したりレポート サーバーを参照したりすることができない場合は、レポート サーバー管理者に問い合わせてください。 詳細については、 [のドキュメント (](../../reporting-services/security/reporting-services-security-and-protection.md)  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オンライン ブック [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 -   SharePoint 統合モードで構成されたレポート サーバー  
   
@@ -55,7 +60,6 @@ caps.handback.revision: 10
   
      SharePoint サイトまたはサブサイトに接続したりそれらのサイトを参照したりすることができない場合は、SharePoint サイト管理者に問い合わせてください。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="Reports"></a> パブリッシュされたレポートとレポート関連アイテムのセキュリティについて  
  レポートとレポート関連アイテムのセキュリティは、レポート サーバー管理者が管理します。 レポート関連アイテムには、埋め込みデータ ソースおよび共有データ ソース (資格情報を含む)、共有データセット、パラメーター、レポート パーツ、モデルなどがあります。  
@@ -68,22 +72,21 @@ caps.handback.revision: 10
   
  共有するためにパブリッシュしたアイテムを他のユーザーが参照して見つけることができるようにするには、レポート サーバー管理者と共に、ユーザーがアクセスできるフォルダー編成を設定する必要があります。 アクセスは、レポートの作成とパブリッシュされたレポートの実行に利用できる必要があります。  
   
- 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?linkid=121312)にある [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメントの次のトピックを参照してください。  
+ 詳細については、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [ロールと権限 &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
 -   [共有データセットを管理する](../../reporting-services/report-data/manage-shared-datasets.md)  
   
-### レポート パーツの通知の更新  
+### <a name="update-notifications-for-report-parts"></a>レポート パーツの通知の更新  
  レポート パーツは、レポート サーバーにパブリッシュして他のユーザーが共有できるようにします。 仕様上、レポート パーツのパブリッシュ先を指定します。  
   
  レポート パーツをレポートに含めるユーザーは、更新機能を有効にすることができます。 この機能が有効になっていると、レポート サーバー上でレポート パーツに変更が加えられたときにユーザーに通知が送信されます。  
   
  レポート パーツが元の場所から移動した場合、更新通知にはレポート パーツの現在の場所と以前の場所の両方が示されます。 信頼できる場所からの更新のみを受け入れてください。  
   
- 詳細については、「[レポート パーツ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [レポート パーツ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)」を参照してください。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="Data"></a> レポート データと外部データ ソースのセキュリティについて  
  レポートで各外部データ ソースのデータにアクセスするには、埋め込みデータ ソースを作成するか、共有データ ソースまたは共有データセットへの参照をレポートに追加します。  
@@ -92,36 +95,33 @@ caps.handback.revision: 10
   
  資格情報は、レポート定義に保存されません。 レポート サーバーまたは SharePoint サイトおよびレポート作成クライアントでレポートとは別に管理されます。  
   
- レポートのデザイン時は、データセット クエリの実行とレポートのプレビューに資格情報が使用されます。 実行時は、レポートの実行とクエリ結果のキャッシュに資格情報が使用されます。 共有データセット クエリ結果を個別にキャッシュすることもできます。 デザイン時の資格情報と実行時の資格情報は異なる場合があります。 詳細については、「[レポート ビルダーでの資格情報の指定](../Topic/Specify%20Credentials%20in%20Report%20Builder.md)」を参照してください。  
+ レポートのデザイン時は、データセット クエリの実行とレポートのプレビューに資格情報が使用されます。 実行時は、レポートの実行とクエリ結果のキャッシュに資格情報が使用されます。 共有データセット クエリ結果を個別にキャッシュすることもできます。 デザイン時の資格情報と実行時の資格情報は異なる場合があります。 詳細については、「 [レポート ビルダーでの資格情報の指定](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)」を参照してください。  
   
- データのセキュリティ保護の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?linkid=121312)にある [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメントの次のトピックを参照してください。  
+ データのセキュリティ保護の詳細については、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
- データ ソースの詳細については、「[レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)」を参照してください。  
+ データ ソースの詳細については、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)」を参照してください。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="Models"></a> モデルとセキュリティ フィルターについて  
  外部データに基づくレポート モデルからデータが取得される場合、モデルでセキュリティ フィルターを適用できます。レポートを実行する各ユーザーが表示権限を持つデータだけを見ることができるよう、データをセキュリティで保護することができます。  
   
  レポート パラメーターは行レベルのセキュリティには使用されません。ユーザーまたはユーザー グループは特定のデータ行を参照できます。 レポート内に表示されるデータにセキュリティを適用するには、セキュリティ フィルターまたはモデル アイテム セキュリティを使用する必要があります。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="Interactive"></a> レポート作成における対話機能のセキュリティについて  
  レポートでは、ユーザーがレポートの表示を対話形式でカスタマイズできるようにするためにパラメーターが頻繁に使用されます。 次のヒントを参考にして、推奨されるレポートをデザインしてください。  
   
 -   有効な値を提供する場合を除き、クエリ パラメーターに基づいた、型が **Text** のパラメーターは使用しないでください。 使用可能な値の一覧を使用すると、ユーザーが有効な値しか選択できないようにするのに役立ちます。 使用可能な値の一覧を使用しない場合は、ユーザーが入力できる値を制限できません。  
   
--   個人データをセキュリティで保護するためにグローバルな [&UserID] を使用しないでください。 この値は、レポート パラメーターとして、URL アクセスの構文を使用してレポート URL で指定できます。 この値を共有データセットの式で使用すると、データセットがキャッシュされなくなります。 詳細については、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のドキュメント ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [ オンライン ブック](http://go.microsoft.com/fwlink/?linkid=121312)) の「[URL アクセス パラメーター リファレンス](../../reporting-services/url-access-parameter-reference.md)」を参照してください。  
+-   個人データをセキュリティで保護するためにグローバルな [&UserID] を使用しないでください。 この値は、レポート パラメーターとして、URL アクセスの構文を使用してレポート URL で指定できます。 この値を共有データセットの式で使用すると、データセットがキャッシュされなくなります。 詳細については、 [のドキュメント (](../../reporting-services/url-access-parameter-reference.md)  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オンライン ブック [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
- アイテムがレポート サーバーにパブリッシュされた後に、レポート サーバー管理者は、ロールベースのセキュリティまたはフォルダーおよびアイテム レベルのセキュリティを割り当てることでアイテムをセキュリティで保護できます。 詳細については、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のドキュメント ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [ オンライン ブック](http://go.microsoft.com/fwlink/?linkid=121312)) の「[レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)」を参照してください。  
+ アイテムがレポート サーバーにパブリッシュされた後に、レポート サーバー管理者は、ロールベースのセキュリティまたはフォルダーおよびアイテム レベルのセキュリティを割り当てることでアイテムをセキュリティで保護できます。 詳細については、 [のドキュメント (](../../reporting-services/security/secure-reports-and-resources.md)  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オンライン ブック [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
-## 参照  
- [レポート ビルダーのインストールとアンインストール](../Topic/Install%20and%20Uninstall%20Report%20Builder.md)   
+## <a name="see-also"></a>参照  
+ [レポート ビルダーのインストールとアンインストール](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

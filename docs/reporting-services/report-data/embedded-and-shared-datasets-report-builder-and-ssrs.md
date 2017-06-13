@@ -1,23 +1,28 @@
 ---
-title: "埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "埋め込みデータ ソースと共有データセット (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fb2ff6fdeb8f4d05866c09e87cd899a5dd2bb7ad
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# 埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)
+# <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)
   レポートにおけるデータセットとは、外部データ ソースに対してクエリを実行することによって返されるレポート データをいいます。 外部データ ソースに関する情報はデータ接続に含まれており、データセットは、そのデータ接続によって異なります。 レポート定義にデータそのものは含まれていません。 データセットには、クエリ コマンド、フィールド コレクション、パラメーター、フィルター、および大文字と小文字の区別と照合順序を含むデータ オプションがあります。 データセットには次の 2 種類があります。  
   
 -   **共有データセット:** 共有データセットはレポート サーバー上でパブリッシュされ、複数のレポートで使用できます。 共有データセットは共有データ ソースに基づく必要があります。 キャッシュ更新計画を作成することによって、共有データセットをキャッシュおよびスケジュールできます。  
@@ -29,7 +34,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 共有データセット  
+## <a name="shared-datasets"></a>共有データセット  
  共有データセットは、複数のレポートで使用できるクエリを作成するために使用します。 共有データセットはレポート サーバー上に格納され、レポートまたは共有データ ソースとは別に管理されます。 たとえば、レポート サーバー管理者は、パフォーマンスの高いインデックス作成や他のクエリのパフォーマンスの最適化を実施するために、クエリを更新することができます。  
   
  可能な限り共有データセットを使用することをお勧めします。 クエリを最適化するか、クエリ結果をキャッシュすると、レポートのパフォーマンスを向上できます。 データへのアクセスが管理しやすくなり、レポートやレポートからアクセスするデータセットの安全性とパフォーマンスを高めることができます。  
@@ -53,17 +58,17 @@ caps.handback.revision: 7
     |フィールド|クエリ コマンドのフィールド<br /><br /> データセット定義の一部を構成しない計算フィールド|フィールドの表示 (変更は不可)<br /><br /> フィールド コレクションは静的で、共有データセットをレポートに追加したときのクエリに基づきます。 更新するには、 **[データセットのプロパティ]** ダイアログ ボックスの **[フィールドの更新]** をクリックします。 定義内の現在のクエリから返されるコレクションが、実際のフィールド コレクションです。<br /><br /> 計算フィールドの追加|  
     |データセット|大文字と小文字の区別などのデータ オプション|インスタンスのデータ オプションの上書き|  
   
-## 埋め込みデータセット  
+## <a name="embedded-datasets"></a>埋め込みデータセット  
  埋め込みデータセットは、1 つのレポートのみに使用するデータを外部データ ソースから取得する場合に使用します。 埋め込みデータセットは、その他の依存関係がなく、複数のレポートに使用する必要のないクエリを作成する場合に役立ちます。  
   
- 埋め込みデータセットを作成または編集するには、[レポート データ] ペインを使用します。 データセットを作成した後は、**[データセットのプロパティ]** ダイアログ ボックスでプロパティを構成できます。  
+ 埋め込みデータセットを作成または編集するには、[レポート データ] ペインを使用します。 データセットを作成した後は、 **[データセットのプロパティ]** ダイアログ ボックスでプロパティを構成できます。  
   
-## 参照  
- [埋め込みおよび共有のデータ接続またはデータ ソース &#40;レポート ビルダーおよび SSRS&#41;](../Topic/Embedded%20and%20Shared%20Data%20Connections%20or%20Data%20Sources%20\(Report%20Builder%20and%20SSRS\).md)   
+## <a name="see-also"></a>参照  
+ [埋め込みおよび共有のデータ接続またはデータ ソース &#40;レポート ビルダーおよび SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
  [共有データセットまたは埋め込みデータセットの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [レポート データセット &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)   
+ [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

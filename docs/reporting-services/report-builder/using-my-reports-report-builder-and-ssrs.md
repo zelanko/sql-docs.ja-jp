@@ -1,38 +1,43 @@
 ---
-title: "個人用レポートの使用 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "個人用レポート (レポート ビルダーおよび SSRS) の使用 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 49c3c1da-b106-41f6-9173-16ff225bade8
 caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f394a1ad055276cc7f0a6d28f923215dde8e437a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# 個人用レポートの使用 (レポート ビルダーおよび SSRS)
+# <a name="using-my-reports-report-builder-and-ssrs"></a>個人用レポートの使用 (レポート ビルダーおよび SSRS)
   [個人用レポート] フォルダーは、ネイティブ モードで構成されたレポート サーバーにおいて、所有しているレポートを保存したり、操作することができる作業領域です。 他のレポート サーバー フォルダーはパブリック フォルダーであり、通常、フォルダーのコンテンツの追加や変更を行うには高度な権限が必要になります。 一方、[個人用レポート] フォルダーは、ユーザーが管理する作業領域です。 個々のユーザーが独自の設定を基にレポートやフォルダーの追加や削除を行い、リンク レポートを保存することができます。  
   
  概念的には、[個人用レポート] フォルダーは、Windows ファイル システムの [マイ ドキュメント] フォルダーに似ています。 すべてのユーザーに [個人用レポート] というフォルダーがありますが、各ユーザーがアクセスする [個人用レポート] フォルダーは、他のすべてのユーザーが使用するフォルダーとは異なる [個人用レポート] フォルダーです。 ある特定のユーザーが所有する [個人用レポート] フォルダーのコンテンツに対し、レポート サーバー管理者を除く他のユーザーがアクセスすることはできません。  
   
  個人用レポート機能は、必須機能ではなく、レポート サーバー管理者が無効にすることができます。 有効になっている場合、[ホーム] フォルダー内に [個人用レポート] フォルダーが表示されます。[個人用レポート] フォルダーには、レポート マネージャーまたは Web ブラウザーを使用してアクセスすることができます。 詳細については、「[レポート マネージャーを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/library/dd255286.aspx)」を参照してください。  
   
- SharePoint 統合モードで構成されたレポート サーバーには、個人用レポート フォルダーに相当するフォルダーは存在しません。 詳細については、「[レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)」を参照してください。  
+ SharePoint 統合モードで構成されたレポート サーバーには、個人用レポート フォルダーに相当するフォルダーは存在しません。 詳細については、「 [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 個人用レポートの使用方法  
+## <a name="ways-to-use-my-reports"></a>個人用レポートの使用方法  
  [個人用レポート] フォルダーは、ユーザーがレポートやフォルダー、その他のアイテムを追加するまでは空になっています。 [個人用レポート] フォルダーにコンテンツを追加する方法は次のとおりです。  
   
--   個人のリンク レポートを作成し、これを [個人用レポート] に保存します。 すべてのレポートから、リンク レポートを作成できるわけではありません。 詳細については、「[リンク レポートを作成する](../../reporting-services/reports/create-a-linked-report.md)」を参照してください。  
+-   個人のリンク レポートを作成し、これを [個人用レポート] に保存します。 すべてのレポートから、リンク レポートを作成できるわけではありません。 詳細については、「 [リンク レポートを作成する](../../reporting-services/reports/create-a-linked-report.md)」を参照してください。  
   
 -   レポート定義 (.rdl) ファイル、レポート モデル (.smdl) ファイルなどのファイルをファイル システムからアップロードします。 どんなファイルでもアップロードできますが、レポート サーバーで処理できるのは、ファイル拡張子が .rdl または .smdl のレポート ファイルのみです。 詳細については、SQL Server オンライン ブックの [Reporting Services ドキュメント](http://go.microsoft.com/fwlink/?linkid=121312)の「レポート定義」と「[ファイルまたはレポートをアップロード (レポート マネージャー)](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)」を参照してください。  
   
@@ -40,10 +45,10 @@ caps.handback.revision: 8
   
  通常、[個人用レポート] フォルダーには、ユーザー自身によるフォルダーの管理を許可する権限が設定されています。 ただし、最終的には、レポート サーバー管理者により、ユーザーが実行できる作業が決定されます。 権限が十分でないために [個人用レポート] フォルダーでの作業が行えない場合は、レポート サーバー管理者に問い合わせてください。  
   
-## [個人用レポート] の検索  
+## <a name="searching-my-reports"></a>[個人用レポート] の検索  
  レポート サーバー データベースを検索する場合、検索を行うユーザーの [個人用レポート] フォルダーのコンテンツは検索対象になりますが、他のユーザーの [個人用レポート] フォルダーのコンテンツは検索対象から除外されます。 検索結果には、アクセス権が与えられているレポートのみが表示されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

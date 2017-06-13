@@ -1,29 +1,34 @@
 ---
-title: "サイズの大きなレポートの処理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "レポート処理 [Reporting Services]、大規模なレポート"
-  - "改ページ [Reporting Services]"
-  - "大規模なレポート"
-  - "サイズ [SQL Server], レポート"
-  - "レポートの配信 [Reporting Services]、大規模なレポート"
+title: "サイズの大きなレポートの処理 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- report processing [Reporting Services], large reports
+- page breaks [Reporting Services]
+- large reports
+- size [SQL Server], reports
+- distributing reports [Reporting Services], large reports
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 caps.latest.revision: 42
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 42
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 065902778339650fcd123556acdeabfe8504224f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# サイズの大きなレポートの処理
+# <a name="process-large-reports"></a>サイズの大きなレポートの処理
   サイズの大きなレポートは、処理が困難となる場合があり、正常に実行するには特定の構成が必要です。 サイズの大きなレポートは、ページ割り当てをサポートするように構成されている場合以外は、要求時に実行しないでください。  
   
 > [!NOTE]  
@@ -33,12 +38,12 @@ caps.handback.revision: 42
   
  変化しやすいデータを含むレポートの場合、レポートのサイズはレポートを実行するたびに大きく変化する可能性があります。 この場合、データ ソースを監視し、データの変化がレポートへ及ぼす影響を見極めた上で、このトピックに記載されている手順に従う必要があるかどうかを判断する必要があります。  
   
- タイムアウト エラーやメモリ不足エラーを診断する方法の詳細とヒントについては、blogs.msdn.com の記事「[レポート サーバーでのレポート実行の問題を診断する方法](http://go.microsoft.com/fwlink/?LinkId=85634)」を参照してください。  
+ タイムアウト エラーやメモリ不足エラーを診断する方法の詳細とヒントについては、blogs.msdn.com の記事「 [レポート サーバーでのレポート実行の問題を診断する方法](http://go.microsoft.com/fwlink/?LinkId=85634) 」を参照してください。  
   
-## 構成に関する推奨事項  
+## <a name="configuration-recommendations"></a>構成に関する推奨事項  
  レポートの実行、レポートの表示、およびレポートのアクセスに関する推奨事項としては、次の事項が挙げられます。  
   
--   ページ割り当てをサポートするようにレポートをデザインします。 レポート サーバーはレポートを一度に 1 ページずつ送信します。 レポートにページ割り当てがある場合は、ブラウザーにストリーム送信されるデータ量を制御できます。 詳細については、「[キャッシュの事前読み込み &#40;レポート マネージャー&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)」を参照してください。  
+-   ページ割り当てをサポートするようにレポートをデザインします。 レポート サーバーはレポートを一度に 1 ページずつ送信します。 レポートにページ割り当てがある場合は、ブラウザーにストリーム送信されるデータ量を制御できます。 詳細については、「 [キャッシュの事前読み込み &#40;レポート マネージャー&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)」を参照してください。  
   
 -   レポートは、要求時に実行されることを防ぐため、スケジュールされたレポート スナップショットとして実行するように構成します。 レポートの実行にタイムアウト値は設定しないでください。 レポートは、オフピーク時間中に実行してください。  
   
@@ -50,12 +55,12 @@ caps.handback.revision: 42
   
      既定では、ユーザーはフォルダー階層に表示されているレポートをすべて開くことができます。 レポートをスナップショットとして実行するように構成していても、フォルダー内にあるそのレポート アイテムを表示できるユーザーがレポートを開いてしまう可能性があります。 レポートのサイズが非常に大きい場合、ユーザーがレポート マネージャーでそのレポートを開いた際に、ブラウザーが応答しなくなる可能性があります。  
   
-## 表示に関する推奨事項  
+## <a name="rendering-recommendations"></a>表示に関する推奨事項  
  レポートの配信の構成に先立ち、どの表示クライアントでサイズの大きなドキュメントを処理できるかを把握しておくことが重要です。 推奨される形式は、ソフト改ページを使用する既定の HTML 表示拡張機能ですが、ページ割り当てをサポートする形式であれば、任意の形式を選択できます。  
   
  パフォーマンスとメモリの使用量は、表示形式ごとに異なります。 選択した形式によって、同じレポートがさまざまなパフォーマンス レートで表示され、必要なメモリの容量も変わります。 最も高速でメモリの使用量が少ない形式は、CSV、XML、および HTML です。 最もパフォーマンスが低いのは PDF と Excel ですが、理由はそれぞれ異なります。 PDF は CPU を集中的に使用しますが、Excel は RAM を集中的に使用します。 画像の表示は、2 つのグループの中間に分類されます。 形式は、レポートの配信方法を定義する際に、指定することができます。  
   
-## 配置および配信に関する推奨事項  
+## <a name="deployment-and-distribution-recommendations"></a>配置および配信に関する推奨事項  
  改ページを使用してレポートの表示を制御している場合は、サイズの大きなレポートを、通常のレポートと同じ方法で配置することができます。 レポートへのアクセスは、レポート マネージャー、SharePoint Web パーツ、またはポータルや Web サイトに追加した URL を使用することで提供できます。 これらのすべての配置オプションは、以前に実行したレポートのスナップショットだけでなく、要求時アクセスもサポートします。  
   
  これらの配置方法とは別に、レポートを個々のユーザーに配信する方法もあります。 配信オプションを慎重に構成した上で、サブスクリプションを通じてサイズの大きなレポートを配信することができます。 レポートの配信には、標準のサブスクリプションまたはデータ ドリブン サブスクリプションのいずれかを使用できます。 サブスクリプションおよび配信の推奨事項は、次のとおりです。  
@@ -64,11 +69,11 @@ caps.handback.revision: 42
   
 -   PDF または Excel を使用する場合は、ファイル共有配信を使用するようにサブスクリプションを構成します。 レポートが配信されたら、ユーザーはデスクトップ アプリケーションを使用して、レポートを扱うことができます。 ファイル共有には、レポートを表示できるユーザーを指定するアクセス権を設定する必要があります。  
   
-     レポートがファイル共有に配信されると、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] による制御や保護は行えなくなることに注意してください。 レポートが更新された時点で通知されるようにするには、電子メール配信を使用して通知のみを送信する第 2 のサブスクリプションを作成します。  
+     レポートがファイル共有に配信されると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]による制御や保護は行えなくなることに注意してください。 レポートが更新された時点で通知されるようにするには、電子メール配信を使用して通知のみを送信する第 2 のサブスクリプションを作成します。  
   
  レポートを電子メールで配信する場合は、リンクを含むようにサブスクリプションを構成します。 レポートを添付ファイルとして送信することは避けてください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [レポート処理プロパティの設定](../../reporting-services/report-server/set-report-processing-properties.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   

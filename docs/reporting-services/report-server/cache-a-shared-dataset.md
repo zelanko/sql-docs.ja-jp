@@ -1,36 +1,41 @@
 ---
-title: "共有データセットのキャッシュ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "共有データセットのキャッシュ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b80d9627570c00b68fd0728377053f4bba6b2031
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# 共有データセットのキャッシュ
+# <a name="cache-a-shared-dataset"></a>共有データセットのキャッシュ
   パフォーマンスを向上させる方法の 1 つに、共有データセットのキャッシュ プロパティを構成するという方法があります。 共有データセットをキャッシュに格納した場合、クエリ結果のコピーが指定の時間、保存されます。 共有データセットを使用するレポートを要求した 1 人目のユーザーは、クエリ結果とすべての処理が完了しないとレポートを閲覧できません。 それ以降、同じレポートを要求したユーザーは、キャッシュの保持時間内であれば、クエリと処理が既に完了しているため、すぐにレポートを閲覧できます。 キャッシュ更新計画を指定してクエリを実行し、指定したキャッシュ有効期限まで結果をキャッシュしておくこともできます。  
   
  共有データセットまたはキャッシュ更新計画に基づいてレポートを実行するユーザーは、クエリ キャッシュを作成します。どちらの場合も、キャッシュ有効期限オプションに基づいてキャッシュを使用できます。  
   
  キャッシュできる共有データセットの種類には制限があります。 たとえば、データがユーザー ID によって異なる場合や、レポートを要求したユーザーのセキュリティ トークンを使ってデータが取得される場合、クエリ結果をキャッシュすることはできません。 詳細については、「[共有データセットのキャッシュ &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)」と「[レポートのキャッシュ &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)」を参照してください。  
   
-### キャッシュされたレポートの有効期限をスケジュールするには  
+### <a name="to-schedule-the-expiration-of-a-cached-report"></a>キャッシュされたレポートの有効期限をスケジュールするには  
   
-1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md) を開始します。  
+1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
   
 2.  レポート マネージャーで、キャッシュ プロパティを設定する共有データセットに移動し、アイテムの上にマウス ポインターを移動して、下矢印をクリックします。  
   
-3.  ドロップダウン メニューの **[管理]** をクリックします。  
+3.  ドロップダウン メニューの **[管理]**をクリックします。  
   
 4.  左フレームの **[キャッシュ]**をクリックします。  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 7
   
 7.  **[適用]**をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [共有データセットを管理する](../../reporting-services/report-data/manage-shared-datasets.md)  
   
   

@@ -1,47 +1,42 @@
 ---
-title: "RS.exe Utility (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "automatic report server tasks"
-  - "rs utility"
-  - "command prompt utilities [Reporting Services]"
-  - "report servers [Reporting Services], automating tasks"
-  - "command prompt utilities [SQL Server], rs"
-  - "scripts [Reporting Services], command prompt"
-  - "レポートの配置 [Reporting Services]"
+title: "RS.exe ユーティリティ (SSRS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- automatic report server tasks
+- rs utility
+- command prompt utilities [Reporting Services]
+- report servers [Reporting Services], automating tasks
+- command prompt utilities [SQL Server], rs
+- scripts [Reporting Services], command prompt
+- deploying reports [Reporting Services]
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 caps.latest.revision: 56
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 56
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 70f9afea9e9fe495c66ac98ea8ec4f3e9b1e3a6d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# RS.exe Utility (SSRS)
+# <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe ユーティリティは入力ファイル内に指定したスクリプトを処理します。 このユーティリティを使用して、レポート サーバーの配置と管理タスクを自動化します。  
   
 > [!NOTE]  
->  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以降では、**rs** ユーティリティは、SharePoint 統合モード用に構成されているレポート サーバー、およびネイティブ モードで構成されているレポート サーバーで使用できます。 以前のバージョンでは、ネイティブ モードの構成のみがサポートされていました。  
+>  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]以降では、 **rs** ユーティリティは、SharePoint 統合モード用に構成されているレポート サーバー、およびネイティブ モードで構成されているレポート サーバーで使用できます。 以前のバージョンでは、ネイティブ モードの構成のみがサポートされていました。  
   
- **このトピックの内容:**  
-  
--   [ファイルの場所](#bkmk_filelocation)  
-  
--   [引数](#bkmk_arguments)  
-  
--   [Permissions](#bkmk_permissions)  
-  
--   [使用例](#bkmk_examples)  
-  
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -58,7 +53,7 @@ rs {-?}
 ```  
   
 ##  <a name="bkmk_filelocation"></a> ファイルの場所  
- **RS.exe** は **\Program Files\Microsoft SQL Server\110\Tools\Binn** にあります。 このユーティリティは、ファイル システム上の任意のフォルダーから実行できます。  
+ **RS.exe** は **\Program Files\Microsoft SQL Server\110\Tools\Binn**にあります。 このユーティリティは、ファイル システム上の任意のフォルダーから実行できます。  
   
 ##  <a name="bkmk_arguments"></a> 引数  
  **-?**  
@@ -74,7 +69,7 @@ rs {-?}
  (省略可) レポート サーバーへの接続に使用するユーザー アカウントを指定します。 **-u** および **-p** を省略した場合、現在の Windows ユーザー アカウントが使用されます。  
   
  **-p** *password*  
- (**-u** を指定した場合は必須) **-u** 引数で使用するパスワードを指定します。 この値は、大文字と小文字が区別されます。  
+ ( **-u** を指定した場合は必須) **-u** 引数で使用するパスワードを指定します。 この値は、大文字と小文字が区別されます。  
   
  **-e**  
  (省略可) スクリプトを実行する SOAP エンドポイントを指定します。 有効な値は次のとおりです。  
@@ -102,15 +97,15 @@ rs {-?}
   
  `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- 指定した値に設定された名前を使用して、グローバル変数を作成します。 たとえば、**-v a=**"**1**" **-v b=**"**2**" は、"**1**" の値を持つ **a** という名前の変数と、"**2**" の値を持つ **b** という変数を表します。  
+ 指定した値に設定された名前を使用して、グローバル変数を作成します。 たとえば、 **-v a=**"**1**" **-v b=**"**2**" は、" **1** " の値を持つ**a**という名前の変数と、" **2** " の値を持つ**b**という変数を表します。  
   
- グローバル変数は、スクリプト内のすべての関数で使用できます。 円記号と引用符 (**\\"**) は、二重引用符と解釈されます。 引用符は、文字列にスペースが含まれている場合のみ必要です。 変数名は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で有効な名前であることが必要です。また変数名は、アルファベットやアンダースコアで始まり、アルファベット文字、数字、およびアンダースコアを含めることができます。 予約語は、変数名として使用できません。 グローバル変数の使用の詳細については、「[式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder-and-ssrs.md)」を参照してください。  
+ グローバル変数は、スクリプト内のすべての関数で使用できます。 円記号と引用符 (**\\"**) は、二重引用符と解釈されます。 引用符は、文字列にスペースが含まれている場合のみ必要です。 変数名は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で有効な名前であることが必要です。また変数名は、アルファベットやアンダースコアで始まり、アルファベット文字、数字、およびアンダースコアを含めることができます。 予約語は、変数名として使用できません。 グローバル変数の使用の詳細については、「[式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  
   
  **-t**  
  (省略可) エラー メッセージをトレース ログに出力します。 この引数は値を取りません。 詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。  
   
 ##  <a name="bkmk_permissions"></a> Permissions  
- ツールを実行するには、スクリプトの実行対象であるレポート サーバー インスタンスに接続するための権限が必要です。 スクリプトを実行して、ローカル コンピューターまたはリモート コンピューターに変更を加えることができます。 リモート コンピューターにインストールしたレポート サーバーを変更するには、**-s** 引数でリモート コンピューターを指定します。  
+ ツールを実行するには、スクリプトの実行対象であるレポート サーバー インスタンスに接続するための権限が必要です。 スクリプトを実行して、ローカル コンピューターまたはリモート コンピューターに変更を加えることができます。 リモート コンピューターにインストールしたレポート サーバーを変更するには、 **-s** 引数でリモート コンピューターを指定します。  
   
 ##  <a name="bkmk_examples"></a> 使用例  
  次の例では、実行する [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET スクリプト、および Web サービス メソッドを含むスクリプト ファイルの指定方法を示しています。  
@@ -119,22 +114,22 @@ rs {-?}
 rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
 ```  
   
- 詳細な例については、「[レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
+ 詳細な例については、「 [レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
   
- その他の例については、「[Reporting Services スクリプト ファイルを実行する](../../reporting-services/tools/run-a-reporting-services-script-file.md)」を参照してください。  
+ その他の例については、「 [Reporting Services スクリプト ファイルを実行する](../../reporting-services/tools/run-a-reporting-services-script-file.md)」を参照してください。  
   
-## 解説  
+## <a name="remarks"></a>解説  
  スクリプトを定義して、システム プロパティの設定、レポートのパブリッシュなどが行えます。 作成したスクリプトには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API の任意のメソッドを含めることができます。 使用可能なメソッドおよびプロパティの詳細については、「 [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)」を参照してください。  
   
- スクリプトは、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET のコードで記述し、.rss ファイル名拡張子が付いた Unicode または UTF-8 テキスト ファイルとして保存する必要があります。 **rs** ユーティリティを使用して、スクリプトをデバッグすることはできません。 スクリプトをデバッグするには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]内でコードを実行します。  
+ スクリプトは、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET のコードで記述し、.rss ファイル名拡張子が付いた Unicode または UTF-8 テキスト ファイルとして保存する必要があります。 **rs** ユーティリティを使用して、スクリプトをデバッグすることはできません。 スクリプトをデバッグするには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]内でコードを実行します。  
   
 > [!TIP]  
->  詳細な例については、「[レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
+>  詳細な例については、「 [レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
   
-## 参照  
- [Reporting Services スクリプト ファイルを実行する](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
- [配置タスクおよび管理タスクのスクリプト作成](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
- [rs.exe ユーティリティと Web サービスを使用したスクリプト](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
- [レポート サーバーのコマンド プロンプト ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
+## <a name="see-also"></a>参照  
+- [Reporting Services スクリプト ファイルを実行します。](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
+- [スクリプトを展開および管理タスク](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
+- [Rs.exe ユーティリティと Web サービスのスクリプト](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
+- [レポート サーバーのコマンド プロンプト ユーティリティ & #40 です。SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
   
   

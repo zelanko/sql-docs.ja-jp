@@ -1,1 +1,1 @@
-**適用対象:**![X](media/no.png)SQL Server 2016![○](media/yes.png)SQL Server Reporting Services での Power BI レポートの技術プレビュー (2017 年 1 月)
+**このトピックに適用されます**![ありません](media/no.png)SQL Server 2016![はい](media/yes.png)Power BI のレポート サーバー。

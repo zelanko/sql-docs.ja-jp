@@ -1,23 +1,28 @@
 ---
-title: "XML へのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "XML (レポート ビルダーおよび SSRS) へのエクスポート |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e3bbe7d68c378bd74e70ceb0c6d219da427db099
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# XML へのエクスポート (レポート ビルダーおよび SSRS)
+# <a name="exporting-to-xml-report-builder-and-ssrs"></a>XML へのエクスポート (レポート ビルダーおよび SSRS)
   XML 表示拡張機能では、改ページ調整されたレポートが XML 形式で返されます。 レポート XML のスキーマは、レポート固有のものであり、データのみを含んでいます。 XML 表示拡張機能では、レイアウト情報はレンダリングされません。また、改ページ位置も維持されません。 この拡張機能で生成された XML は、データベースにインポートしたり、XML データ メッセージとして使用したり、カスタム アプリケーションに送信することができます。  
   
 > [!NOTE]  
@@ -51,36 +56,34 @@ caps.handback.revision: 8
   
 -   表示/非表示を切り替えても表示できない非表示アイテムはレンダリングされません。 最初に表示されているアイテムと、表示/非表示を切り替えると表示できる非表示アイテムは表示されます。  
   
--   **画像、線、およびカスタム レポート アイテム**は無視されます。  
+-   **画像、線、およびカスタム レポート アイテム** は無視されます。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="DataTypes"></a> データ型  
  テキスト ボックスの要素または属性には、テキスト ボックスに表示される値に基づいた XSD データ型が割り当てられます。  
   
 |テキスト ボックスの値|割り当てられるデータ型|  
 |--------------------------------|---------------------------|  
-|**Int16**、**Int32**、**Int64**、**UInt16**、**UInt32**、**UInt64**、**Byte**、**SByte**|**xsd:integer**|  
+|**Int16**、 **Int32**、 **Int64**、 **UInt16**、 **UInt32**、 **UInt64**、 **Byte**、 **SByte**|**xsd:integer**|  
 |**Decimal** (または **Decimal** と任意の整数かバイト データ型)|**xsd:decimal**|  
 |**Float** (または **Decimal** と任意の整数かバイト データ型)|**xsd:float**|  
 |**Double** (または **Decimal** と任意の整数かバイト データ型)|**xsd:double**|  
 |**DateTime または DateTime Offset**|**xsd:dateTime**|  
 |**[時刻]**|**xsd:string**|  
 |**ブール値**|**xsd:boolean**|  
-|**String**、**Char**|**xsd:string**|  
+|**String**、 **Char**|**xsd:string**|  
 |その他|**xsd:string**|  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="XMLSpecificRenderingRules"></a> XML 固有の表示規則  
  次のセクションでは、レポート内のアイテムが XML 表示拡張機能によってどのように解釈されるかについて説明します。  
   
-### レポート本文  
+### <a name="report-body"></a>レポート本文  
  レポートは、XML ドキュメントのルート要素としてレンダリングされます。 要素の名前は、プロパティ ペインで設定された DataElementName プロパティから取得されます。  
   
  レポート要素には、XML 名前空間の定義とスキーマ参照属性も含まれます。 以下の例では、変数が太字で示されています。  
   
- \<**Report** xmlns=”**SchemaName**” xmlns:xsi=”http://www.w3.org/2001/XMLSchema-instance” xsi:**schemaLocation**=”**SchemaNameReportURL**&amp;rc%3aSchema=true” Name=”ReportName”>  
+ <**レポート**xmlns ="**SchemaName**"xmlns:xsi ="http://www.w3.org/2001/XMLSchema-instance"xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc %3aschema = true"名前 ="ReportName">  
   
  それぞれの変数の値は次のとおりです。  
   
@@ -91,48 +94,47 @@ caps.handback.revision: 8
 |SchemaName|Report.SchemaName。 NULL の場合は、Report.Name になります。 Report.Name が使用された場合、まず XmlConvert.EncodeLocalName でエンコードされます。|  
 |ReportName|レポートの名前です。|  
   
-### テキスト ボックス  
+### <a name="text-boxes"></a>テキスト ボックス  
  テキスト ボックスは、DataElementStyle RDL プロパティに応じて、要素または属性としてレンダリングされます。 要素名または属性名は TextBox.DataElementName RDL プロパティから取得されます。  
   
-### グラフ、データ バー、およびスパークライン  
+### <a name="charts-data-bars-and-sparklines"></a>グラフ、データ バー、およびスパークライン  
  グラフ、データ バー、およびスパークラインは XML でレンダリングされます。 データは構造化されます。  
   
-### ゲージとインジケーター  
+### <a name="gauges-and-indicators"></a>ゲージとインジケーター  
  ゲージとインジケーターは XML でレンダリングされます。 データは構造化されます。  
   
-### サブレポート  
+### <a name="subreports"></a>サブレポート  
  サブレポートは要素としてレンダリングされます。 要素名は DataElementName RDL プロパティから取得されます。 レポートの TextBoxesAsElements プロパティ設定は、サブレポートのプロパティ設定に優先します。 サブレポート要素に名前空間および XSLT 属性は追加されません。  
   
-### 四角形  
+### <a name="rectangles"></a>四角形  
  四角形は要素としてレンダリングされます。 要素名は DataElementName RDL プロパティから取得されます。  
   
-### カスタム レポート アイテム  
+### <a name="custom-report-items"></a>カスタム レポート アイテム  
  表示拡張機能は、CustomReportItems (CRI) を認識しません。 レポートにカスタム レポート アイテムが存在した場合は、標準的なレポート アイテムとしてレンダリングされます。  
   
-### 画像  
+### <a name="images"></a>画像  
  画像はレンダリングされません。  
   
-### 線  
+### <a name="lines"></a>線  
  線はレンダリングされません。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
-### テーブル、マトリックス、および一覧  
+### <a name="tables-matrices-and-lists"></a>テーブル、マトリックス、および一覧  
  テーブル、マトリックス、および一覧は要素としてレンダリングされます。 要素の名前は、Tablix の DataElementName RDL プロパティから取得されます。  
   
-#### 行および列  
+#### <a name="rows-and-columns"></a>行および列  
  列は行内にレンダリングされます。  
   
-#### Tablix コーナー  
+#### <a name="tablix-corner"></a>Tablix コーナー  
  コーナーはレンダリングされません。 レンダリングされるのは、コーナーの内容のみです。  
   
-#### Tablix セル  
+#### <a name="tablix-cells"></a>Tablix セル  
  Tablix セルは、要素としてレンダリングされます。 要素名は、セルの DataElementName RDL プロパティから取得されます。  
   
-#### 自動集計  
+#### <a name="automatic-subtotals"></a>自動集計  
  Tablix 自動集計はレンダリングされません。  
   
-#### グループ単位で繰り返し表示されることのない行アイテムと列アイテム  
+#### <a name="row-and-column-items-that-do-not-repeat-with-a-group"></a>グループ単位で繰り返し表示されることのない行アイテムと列アイテム  
  ラベル、小計、合計など、グループ単位で繰り返し表示されることのないアイテムは、要素としてレンダリングされます。 要素の名前は、TablixMember.DataElementName RDL プロパティから取得されます。  
   
  非繰り返しアイテムがレンダリングされるかどうかは、TablixMember.DataElementOutput RDL プロパティによって制御されます。  
@@ -147,24 +149,21 @@ caps.handback.revision: 8
   
  非繰り返しメンバーに対応する Tablix セルが存在しない場合、そのメンバーはレンダリングされません。 このようなケースとしては、複数の列にまたがる Tablix セルなどが考えられます。  
   
-#### グループ単位で繰り返し表示される行と列  
+#### <a name="rows-and-columns-that-repeat-with-a-group"></a>グループ単位で繰り返し表示される行と列  
  グループ単位で繰り返し表示される行および列は、Tablix.DataElementOutput の規則に従ってレンダリングされます。 要素名は DataElementName プロパティから取得されます。  
   
  グループ内の一意の値は、それぞれ、そのグループの子要素としてレンダリングされます。 要素名は Group.DataElementName プロパティから取得されます。  
   
  DataElementOutput プロパティの値が Output と等しい場合、繰り返しアイテムのヘッダーが、detail 要素の子としてレンダリングされます。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="CustomFormatsXSLTransformations"></a> カスタム形式および XSL 変換  
  XML 表示拡張機能で生成した XML ファイルは、XSL 変換 (XSLT) を使用してほとんどすべての形式に変換できます。 この機能を使用すると、既存の表示拡張機能ではサポートされていない形式でデータを生成できます。 独自の表示拡張機能の作成を試みる前に、XML 表示拡張機能および XSLT を使用することを検討してください。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="DuplicateName"></a> 重複する名前  
  同じスコープ内に重複するデータ要素名が存在する場合、レンダラーからエラー メッセージが表示されます。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="XSLTTransformations"></a> XSLT 変換  
  XML レンダラーでは、元の XML データに対し、サーバー側で XSLT 変換を適用できます。 XSLT が適用された場合、元の XML データの代わりに、変換済みのコンテンツが出力されます。 変換はクライアント側ではなく、サーバー側で実行されます。  
@@ -173,7 +172,6 @@ caps.handback.revision: 8
   
  DataTransform 定義プロパティおよびデバイス情報設定の両方で XSLT ファイルを指定した場合は、最初に DataTransform で指定された XSLT が適用され、続けて、デバイス情報設定による XSLT が適用されます。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ###  <a name="DeviceInfo"></a> デバイス情報設定  
  デバイス情報設定を変更することによって、このレンダラーの既定の設定の一部を変更することができます。変更できる設定には、次のようなものがあります。  
@@ -192,15 +190,14 @@ caps.handback.revision: 8
   
 -   XML ドキュメントのファイル拡張子  
   
- 詳細については、「[XML デバイス情報設定](../../reporting-services/xml-device-information-settings.md)」を参照してください。  
+ 詳細については、「 [XML デバイス情報設定](../../reporting-services/xml-device-information-settings.md)」を参照してください。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
-## 参照  
- [Reporting Services の改ページ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [レンダリングの動作 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [さまざまなレポート表示拡張機能の対話機能 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
- [レポート アイテムのレンダリング (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>参照  
+ [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [レポート アイテムのレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

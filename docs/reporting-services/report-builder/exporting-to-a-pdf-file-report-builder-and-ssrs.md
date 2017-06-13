@@ -1,24 +1,29 @@
 ---
-title: "PDF ファイルへのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "PDF ファイル (レポート ビルダーおよび SSRS) へのエクスポート |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 69c8be9ba7c2994928a992325e565f1af802b852
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# PDF ファイルへのエクスポート (レポート ビルダーおよび SSRS)
-  PDF 表示拡張機能を使用すると、[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] ページ分割レポートを、Adobe Acrobat および PDF 1.3 をサポートするその他のサードパーティ製 PDF ビューアーで開くことが可能なファイルとして表示できます。 PDF 1.3 は Adobe Acrobat 4.0 以降のバージョンと互換性がありますが、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でサポートされるのは Adobe Acrobat 11.0 以降です。 この表示拡張機能では、レポートの表示処理に Adobe 製のソフトウェアは必要ありません。 ただし、レポートを PDF 形式で表示または印刷するには、Adobe Acrobat などの PDF ビューアーが必要です。  
+# <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>PDF ファイルへのエクスポート (レポート ビルダーおよび SSRS)
+  PDF 表示拡張機能を使用すると、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] ページ分割レポートを、Adobe Acrobat および PDF 1.3 をサポートするその他のサードパーティ製 PDF ビューアーで開くことが可能なファイルとして表示できます。 PDF 1.3 は Adobe Acrobat 4.0 以降のバージョンと互換性がありますが、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でサポートされるのは Adobe Acrobat 11.0 以降です。 この表示拡張機能では、レポートの表示処理に Adobe 製のソフトウェアは必要ありません。 ただし、レポートを PDF 形式で表示または印刷するには、Adobe Acrobat などの PDF ビューアーが必要です。  
   
  PDF 表示拡張機能では ANSI 文字がサポートされ、日本語、韓国語、繁体字中国語、簡体字中国語、キリル文字、ヘブライ語、アラビア語の Unicode 文字を変換できます (一部制限事項があります)。 制限事項について詳しくは、「[レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」をご覧ください。  
   
@@ -43,14 +48,13 @@ caps.handback.revision: 12
 > [!NOTE]  
 >  ただし、条件が満たされていても、フォントが PDF ファイルに埋め込まれないという状況が発生する場合があります。 使用されているフォントが、一般に標準の Type 1 フォントまたは Base 14 フォントとして知られている PDF 仕様のフォントの場合、フォントは ANSI コンテンツには埋め込まれません。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
-### クライアント コンピューター上のフォント  
+### <a name="fonts-on-the-client-computer"></a>クライアント コンピューター上のフォント  
  フォントが PDF ファイルに埋め込まれている場合、レポートを閲覧するコンピューター (クライアント コンピューター) にフォントがインストールされている必要はありません。フォントがインストールされていなくても、レポートは正しく表示されます。  
   
  フォントが PDF ファイルに埋め込まれていない場合、レポートを正しく表示するためには、クライアント コンピューターに適切なフォントがインストールされている必要があります。 クライアント コンピューターにフォントがインストールされていなかった場合、PDF ファイルには、サポートされていない文字の代わりに疑問符 (?) が表示されます。  
   
-### PDF ファイル内のフォントの検証  
+### <a name="verifying-fonts-in-a-pdf-file"></a>PDF ファイル内のフォントの検証  
  PDF 出力に差異が発生することが最も多い状況は、ラテン文字以外の文字をサポートしないフォントがレポートで使用されているときに、ラテン文字以外の文字がレポートに追加された場合です。 PDF 表示出力をレポート サーバーとクライアント コンピューターの両方でテストし、レポートが正しく表示されることを確認してください。  
   
  レポートのプレビュー表示やエクスポートした HTML 表示を過信しないでください。プレビューの場合はグラフィカル デザイン インターフェイスによって、HTML の場合は Microsoft Internet Explorer によって、それぞれフォントが自動的に置き換えられるため、レポートが正しく表示されているように見えます。 Unicode グリフがサーバーに存在しない場合、文字は疑問符 (?) で置き換えられることがあります。 フォントがクライアントに存在しない場合、文字は四角形 ( ) で置き換えられることがあります。  
@@ -69,29 +73,27 @@ caps.handback.revision: 12
 |**Producer**|表示拡張機能の名前とバージョンです。|  
 |**CreationDate**|PDF **datetime** 形式でのレポートの実行時間です。|  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="Interactivity"></a> 対話性  
  PDF では、いくつかの対話型要素がサポートされています。 具体的な動作について説明します。  
   
-### 表示/非表示  
+### <a name="show-and-hide"></a>表示/非表示  
  PDF では、動的な表示/非表示要素がサポートされていません。 PDF ドキュメントは、レポート内にあるすべてのアイテムの現在の状態に合わせて表示されます。 たとえば、レポートを最初に実行したときにアイテムが表示されている場合、そのアイテムが表示されます。 切り替え可能な画像は、レポートのエクスポート時に非表示になっている場合、表示されません。  
   
-### ドキュメント マップ  
+### <a name="document-map"></a>ドキュメント マップ  
  ドキュメント マップ ラベルがレポートに存在する場合、PDF ファイルにドキュメント アウトラインが追加されます。 各ドキュメント マップ ラベルは、ドキュメント アウトラインのエントリとして、レポートに表示される順番で表示されます。 Acrobat で、対象のブックマークがドキュメント アウトラインに追加されるのは、そのブックマークが存在するページが表示されている場合のみです。  
   
  1 ページしか表示されていない場合、ドキュメント アウトラインは追加されません。 ドキュメント マップは、レポート内の入れ子レベルを反映するために階層状に配置されます。 ドキュメント アウトラインは、Acrobat の [しおり] タブからアクセスできます。 ドキュメント アウトライン内のエントリをクリックすると、ドキュメントでブックマークが設定された場所に移動できます。  
   
-### ブックマーク  
+### <a name="bookmarks"></a>ブックマーク  
  PDF 表示では、ブックマークはサポートされていません。  
   
-### ドリルスルー リンク  
+### <a name="drillthrough-links"></a>ドリルスルー リンク  
  PDF 表示では、ドリルスルー リンクはサポートされていません。 ドリルスルー リンクはクリック可能なリンクとして表示されず、詳細レポートはドリルスルーの対象に接続できません。  
   
-### ハイパーリンク  
+### <a name="hyperlinks"></a>ハイパーリンク  
  レポート内のハイパーリンクは、PDF ファイル内でクリック可能なリンクとして表示されます。 クリックすると、Acrobat により、既定のクライアント ブラウザーが起動し、ハイパーリンクの URL に移動できます。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="Compression"></a> 圧縮  
  画像の圧縮は、画像の元のファイルの種類に基づいて行われます。 PDF 表示拡張機能は、既定で PDF ファイルを圧縮します。  
@@ -101,18 +103,17 @@ caps.handback.revision: 12
 > [!NOTE]  
 >  PDF ファイルは PNG 画像の埋め込みをサポートしていません。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="DeviceInfo"></a> デバイス情報設定  
  デバイス情報設定を変更することによって、このレンダラーの既定の設定の一部を変更することができます。 詳細については、「 [PDF Device Information Settings](../../reporting-services/pdf-device-information-settings.md)」を参照してください。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [レポート アイテムのレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
+

@@ -1,23 +1,28 @@
 ---
-title: "Tablix データ領域部分 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Tablix データ領域部分 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1f264426872fea87eec1da8ab17243bbe82ae76
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tablix データ領域部分 (レポート ビルダーおよび SSRS)
+# <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Tablix データ領域部分 (レポート ビルダーおよび SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートの Tablix データ領域には、Tablix セルを含む 4 つの領域があります。   
 * コーナー  
 * 行グループ領域  
@@ -28,7 +33,7 @@ caps.handback.revision: 7
   
 デザイン画面では、選択した Tablix データ領域の 4 つの部分が点線で示されます。 次の図に Tablix 領域の部分を示します。入れ子になった行グループはカテゴリとサブカテゴリに基づいており、入れ子になった列グループは地理と国/地域に基づいており、隣接する列グループは年に基づいています。  
   
- ![Tablix データ領域部分](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix データ領域部分")  
+ ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
   
  次の一覧では、各領域について説明します。  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 7
   
  行グループ領域には、Clothing と Components の 2 つのカテゴリ グループ インスタンスが表示されます。 列グループ領域には、北米の地理グループ インスタンスと、カナダ (CA) および米国 (US) の入れ子になった 2 つの国/地域グループ インスタンスが表示されます。 さらに、隣接した列には 2003 年と 2004 年の 2 つの年度グループのインスタンスが表示されます。 合計列の行には行の合計が表示されます。カテゴリ グループで繰り返す合計行にはサブカテゴリの合計が表示され、総計行にはデータ領域のカテゴリ合計が 1 回表示されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)   
  [テーブル &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   

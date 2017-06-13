@@ -1,27 +1,32 @@
 ---
-title: "SharePoint モード レポート サーバーのサブスクリプションの作成と管理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "subscriptions [Reporting Services], creating"
-  - "subscriptions [Reporting Services], deleting"
-  - "サブスクリプション [Reporting Services], 管理"
+title: "作成し、SharePoint モードのレポート サーバーのサブスクリプションの管理 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscriptions [Reporting Services], creating
+- subscriptions [Reporting Services], deleting
+- subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 caps.latest.revision: 19
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 19
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56e19fe33a42086ef25001f605220f970d8b226a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# SharePoint モード レポート サーバーのサブスクリプションの作成と管理
+# <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>SharePoint モード レポート サーバーのサブスクリプションの作成と管理
   SharePoint モードのレポート サーバーと統合されている SharePoint Web アプリケーションから、レポートを配信する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを作成することができます。 サブスクリプションは、ドキュメント ライブラリやファイル フォルダーに対して、または電子メールとしてレポートを配信できます。 このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを作成するための要件と手順についてまとめます。  
   
 ||  
@@ -88,7 +93,7 @@ caps.handback.revision: 19
   
 9. **[配信イベント]**では、サブスクリプションを実行するスケジュールまたはイベントを指定します。 カスタム スケジュールを作成するか、使用可能であれば共有スケジュールを選択できます。または、スナップショット データを使って実行されるレポートのデータが更新された場合に、その都度サブスクリプションを実行することもできます。 スケジュールとデータ処理の詳細については、「[処理オプションの設定 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)」を参照してください。  
   
-10. **[パラメーター]**では、パラメーター化されたレポートに対するサブスクリプションを作成している場合に、サブスクリプション処理時にレポートと共に使用する値を指定します。 選択したレポートにパラメーターが含まれていない場合、パラメーター セクションはこのページに表示されません。 パラメーターの詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-design/set parameters on a published report - sharepoint integrated mode.md)」を参照してください。  
+10. **[パラメーター]**では、パラメーター化されたレポートに対するサブスクリプションを作成している場合に、サブスクリプション処理時にレポートと共に使用する値を指定します。 選択したレポートにパラメーターが含まれていない場合、パラメーター セクションはこのページに表示されません。 パラメーターの詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)」を参照してください。  
   
 ###  <a name="bkmk_subscription_for_sharedfolder"></a> 共有フォルダーへの配信のサブスクリプションを作成するには  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 19
   
 5.  **[ファイル名]**に、共有フォルダー内に作成するファイルの名前を入力します。  
   
-6.  **[パス]** に、コンピューターのネットワーク名を含むフォルダー パスを汎用名前付け規則 (UNC) 形式で入力します。 フォルダー パスの末尾には円記号 (バックスラッシュ) を含めないでください。 たとえば、 `\\ComputerName01\Public\MyReports`のようにパスを入力できます。Public と MyReports は共有フォルダーです。  
+6.  **[パス]**に、コンピューターのネットワーク名を含むフォルダー パスを汎用名前付け規則 (UNC) 形式で入力します。 フォルダー パスの末尾には円記号 (バックスラッシュ) を含めないでください。 たとえば、 `\\ComputerName01\Public\MyReports`のようにパスを入力できます。Public と MyReports は共有フォルダーです。  
   
 7.  **[表示形式]**では、レポートのアプリケーション形式を選択します。  
   
@@ -114,7 +119,7 @@ caps.handback.revision: 19
   
 11. **[配信イベント]**では、サブスクリプションを実行するスケジュールまたはイベントを指定します。 カスタム スケジュールを作成するか、使用可能であれば共有スケジュールを選択できます。または、スナップショット データを使って実行されるレポートのデータが更新された場合に、その都度サブスクリプションを実行することもできます。 スケジュールとデータ処理の詳細については、「[処理オプションの設定 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)」を参照してください。  
   
-12. **[パラメーター]**では、パラメーター化されたレポートに対するサブスクリプションを作成している場合に、サブスクリプション処理時にレポートと共に使用する値を指定します。 パラメーターの詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-design/set parameters on a published report - sharepoint integrated mode.md)」を参照してください。  
+12. **[パラメーター]**では、パラメーター化されたレポートに対するサブスクリプションを作成している場合に、サブスクリプション処理時にレポートと共に使用する値を指定します。 パラメーターの詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)」を参照してください。  
   
 ###  <a name="bkmk_subscription_for_email"></a> レポート サーバー電子メール配信のサブスクリプションを作成するには  
   
@@ -124,9 +129,9 @@ caps.handback.revision: 19
   
 3.  **[サブスクリプションの追加]**をクリックします。  
   
-4.  **[配信拡張機能]** で、**[電子メール]** をクリックします。  
+4.  **[配信拡張機能]**で、 **[電子メール]**をクリックします。  
   
-5.  **[配信オプション]** で、レポートの送信先電子メール アドレスを指定します。  
+5.  **[配信オプション]**で、レポートの送信先電子メール アドレスを指定します。  
   
 6.  必要に応じて、件名行を変更できます。 件名行では、レポート名とレポートの処理時刻を取得するための組み込みのパラメーターが使用されています。 使用できる組み込みパラメーターはこれらのみです。 これらのパラメーターは、件名行に表示されるテキストをカスタマイズするためのプレースホルダーですが、静的テキストで置き換えることもできます。  
   
@@ -138,7 +143,7 @@ caps.handback.revision: 19
   
 9. **[配信イベント]**では、サブスクリプションを実行するスケジュールまたはイベントを指定します。 カスタム スケジュールを作成するか、使用可能であれば共有スケジュールを選択できます。または、スナップショット データを使って実行されるレポートのデータが更新された場合に、その都度サブスクリプションを実行することもできます。 スケジュールとデータ処理の詳細については、「[処理オプションの設定 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)」を参照してください。  
   
-10. **[パラメーター]**では、パラメーター化されたレポートに対するサブスクリプションを作成している場合に、サブスクリプション処理時にレポートと共に使用する値を指定します。 パラメーターの詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-design/set parameters on a published report - sharepoint integrated mode.md)」を参照してください。  
+10. **[パラメーター]**では、パラメーター化されたレポートに対するサブスクリプションを作成している場合に、サブスクリプション処理時にレポートと共に使用する値を指定します。 パラメーターの詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)」を参照してください。  
   
 ###  <a name="bkmk_to_modify_subscription"></a> サブスクリプションを表示または変更するには  
   
@@ -156,11 +161,11 @@ caps.handback.revision: 19
   
 3.  削除するサブスクリプションの横にあるチェック ボックスをオンにし、 **[削除]**をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [サブスクリプションと配信 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Reporting Services の電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Reporting Services でのファイル共有の配信](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [Reporting Services での SharePoint ライブラリへの配信](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
- [電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](http://msdn.microsoft.com/ja-jp/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   

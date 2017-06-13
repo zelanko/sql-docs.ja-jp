@@ -1,28 +1,33 @@
 ---
-title: "Reporting Services モバイル レポート用にデータを準備する | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Reporting Services モバイル レポート用データの準備 |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 caps.latest.revision: 15
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 15
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfde173f8848326fba857808e15448385f8c8322
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services モバイル レポート用にデータを準備する
+# <a name="prepare-data-for-reporting-services-mobile-reports"></a>Reporting Services モバイル レポート用にデータを準備する
   
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] は、フィルター処理、集計、タイムスライスを含む、多くの複雑なデータ操作をサポートしています。 この記事では、データを準備するときに考慮する必要があるいくつかの点について説明します。 あらかじめデータを集計することで、モバイル レポートの作成と使用の両方を最適化できます。一部のモバイル レポートのデザインではこれが必要です。   
   
-## 日付および時刻の形式 
-モバイル レポートで使用する日付と時間の間隔を扱うときには (特に TimeNavigator を使用する場合)、[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] が識別できるように日付/時刻列の書式を正しく設定することが重要です。 次に、有効な日付/時刻形式の例を示します。  
+## <a name="date-and-time-formats"></a>日付および時刻の形式 
+モバイル レポートで使用する日付と時間の間隔を扱うときには (特に TimeNavigator を使用する場合)、 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] が識別できるように日付/時刻列の書式を正しく設定することが重要です。 次に、有効な日付/時刻形式の例を示します。  
   
     05/01/2009    
     2009-05-01    
@@ -35,9 +40,9 @@ caps.handback.revision: 15
   
 日付と時刻に基づくデータセットは、ほとんどの場合、1 つまたは複数の日付/時間間隔 (時間単位、日単位、月単位、四半期単位、年単位など) によって記述できます。 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] では、異なる粒度の複数のテーブルを結合し、それらを 1 つのモバイル レポートに表示できます。 ただし、元のデータセットと関連する間隔を覚えておいてください。これらは、どのような日付/時刻フィルター オプションで最終的なモバイル レポートでユーザーに提示するかを決定するときに役立ちます。  
 
-[!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] の多次元モデルと表形式モデルの日付フィールドでは、共有データセットで日付の書式設定が失われる可能性があります。 書式設定を維持するための方法については、「[Retain date formatting for Analysis Services in mobile reports](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)」(モバイル レポートで Analysis Services の日付の書式設定を保持する) を参照してください。
+[!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] の多次元モデルと表形式モデルの日付フィールドでは、共有データセットで日付の書式設定が失われる可能性があります。 書式設定を維持するための方法については、「 [Retain date formatting for Analysis Services in mobile reports](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md) 」(モバイル レポートで Analysis Services の日付の書式設定を保持する) を参照してください。
   
-## フィルター データを準備する ##  
+## <a name="preparing-filter-data"></a>フィルター データを準備する ##  
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] は、日付/時刻フィールドとキー フィールドの両方に基づいてデータをフィルター処理できます。 キー フィールドの値は数値にすることもできますが、ほとんどの場合、ID または文字列値のいずれかです。 選択リストなどのナビゲーター要素で使用するためにフィルター フィールドを準備するには、フィルター キーがデータ テーブル内の 1 つの列である必要があります。 このようにすることで、フィルター列の値に基づいてテーブル行をグループ化できます。 複数の列が存在し、各列に異なるフィルター キー、つまりフィルタ条件が含まれている場合は、複数のフィルター ナビゲーターを同時に階層的に、または個別に使用してモバイル レポートを作成できます。  
   
 | Industry  | Country   | Region    |  
@@ -83,10 +88,12 @@ caps.handback.revision: 15
 | テクノロジ ハードウェアおよび機器   | 情報技術 |  
 | 電気通信サービス |情報技術 |  
   
-### 参照  
+### <a name="see-also"></a>参照  
 - [Reporting Services モバイル レポート用に Excel データを準備する](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)  
-- [モバイル レポートで Analysis Services の日付の書式設定を保持する](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)
+- [Retain date formatting for Analysis Services in mobile reports](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)
 - [SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
   
   
   
+
+

@@ -1,42 +1,47 @@
 ---
-title: "パレットを使用したグラフの色の定義 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "(レポート ビルダーおよび SSRS) のパレットを使用してグラフの色の定義 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c244f75603ae96dad15c98411bffe223b2857b56
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# パレットを使用したグラフの色の定義 (レポート ビルダーおよび SSRS)
+# <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>パレットを使用したグラフの色の定義 (レポート ビルダーおよび SSRS)
   グラフの色パレットは、定義済みのパレットを選択するかカスタム パレットを定義すると、変更できます。 カスタム パレットはレポート固有です。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 組み込みの色パレットを使用してグラフの色を変更するには  
+### <a name="to-change-the-colors-on-the-chart-using-a-built-in-color-palette"></a>組み込みの色パレットを使用してグラフの色を変更するには  
   
 1.  プロパティ ペインを開きます。  
   
 2.  デザイン画面で、グラフをクリックします。 グラフ オブジェクトのプロパティがプロパティ ペインに表示されます。  
   
-     プロパティ ペインの上部のドロップダウン リストに、オブジェクト名 (既定では **Chart1**) が表示されます。  
+     プロパティ ペインの上部のドロップダウン リストに、オブジェクト名 (既定では**Chart1** ) が表示されます。  
   
 3.  **[グラフ]** セクションの Palette プロパティで、ドロップダウン リストから新しいパレットを選択します。  
   
     > [!NOTE]  
     >  定義済みのパレットでは、色および順序を変更することはできません。  
   
-### カスタムの色パレットを使用してグラフの色を独自に定義するには  
+### <a name="to-define-your-own-colors-on-the-chart-using-a-custom-color-palette"></a>カスタムの色パレットを使用してグラフの色を独自に定義するには  
   
 1.  プロパティ ペインを開きます。  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 6
   
  カスタム パレットを使用している場合は、色の順序を変更して、グラフ内の各系列の色を変更することができます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [複数の図形グラフでの色の統一 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  

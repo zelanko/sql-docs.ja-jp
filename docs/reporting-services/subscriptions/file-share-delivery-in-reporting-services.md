@@ -1,27 +1,32 @@
 ---
-title: "Reporting Services でのファイル共有の配信 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "サブスクリプション [Reporting Services], ファイル共有の配信"
-  - "ファイル共有配信 [Reporting Services]"
+title: "Reporting Services で共有の配信をファイル |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscriptions [Reporting Services], file share delivery
+- file share delivery [Reporting Services]
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 caps.latest.revision: 54
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 54
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e33585c625c49967304ca36ad91ccc1ebac32f1
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services でのファイル共有の配信
-  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、フォルダーへのレポートの配信を可能にするファイル共有配信拡張機能が用意されています。 ファイル共有配信拡張機能は既定で使用できるため、追加で構成する必要はありません。 ファイルの配信を正常に実行するためには、共有フォルダーに書き込みアクセス権を設定する必要があります。 ライター権限を必要とするアカウントには、サブスクリプションに構成された資格情報またはレポート サーバー用に構成された **ファイル共有アカウント** を使用できます。 ファイル共有アカウントの詳細については、「[サブスクリプション設定とファイル共有アカウント &#40;構成マネージャー&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)」を参照してください。 また、レポートへのアクセスを要求するユーザーは、共有フォルダーの読み取り権限を持っている必要があります。  
+# <a name="file-share-delivery-in-reporting-services"></a>Reporting Services でのファイル共有の配信
+  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、フォルダーへのレポートの配信を可能にするファイル共有配信拡張機能が用意されています。 ファイル共有配信拡張機能は既定で使用できるため、追加で構成する必要はありません。 ファイルの配信を正常に実行するためには、共有フォルダーに書き込みアクセス権を設定する必要があります。 ライター権限を必要とするアカウントには、サブスクリプションに構成された資格情報またはレポート サーバー用に構成された **ファイル共有アカウント** を使用できます。 ファイル共有アカウントの詳細については、「 [サブスクリプション設定とファイル共有アカウント &#40;構成マネージャー&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)」を参照してください。 また、レポートへのアクセスを要求するユーザーは、共有フォルダーの読み取り権限を持っている必要があります。  
   
  ファイル共有にレポートを配信するには、標準のサブスクリプションまたはデータ ドリブン サブスクリプションを定義します。 データ ドリブン サブスクリプションでファイル共有配信を使用する方法については、「[データ ドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)」を参照してください。 また、リモート ファイル共有サブスクリプションを実行するアカウントには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンピューターに対するローカル ログオン権限が必要です。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 54
   
 -   レポートにグラフが含まれている場合は、既定の表示方法が使用されます。 レポートが別のレポートへリンクしている場合は、リンクは静的なテキストとして表示されます。  
   
--   配信したレポートで対話機能を保持するには、代わりに電子メール配信を使用します。 電子メールには、レポート サーバー上のレポートへのリンクが含まれます。これにより、ユーザーは、対話機能を使用できます。 詳細については、「[Reporting Services の電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)」を参照してください。  
+-   配信したレポートで対話機能を保持するには、代わりに電子メール配信を使用します。 電子メールには、レポート サーバー上のレポートへのリンクが含まれます。これにより、ユーザーは、対話機能を使用できます。 詳細については、「 [Reporting Services の電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)」を参照してください。  
   
 ##  <a name="bkmk_target_folders"></a> 対象フォルダー  
  ファイル共有の配信を使用するサブスクリプションを定義する場合には、対象フォルダーとして既存のフォルダーを指定する必要があります。 レポート サーバーでは、ファイル システムにフォルダーを作成しません。 指定するフォルダーは、ネットワーク接続を使用してアクセス可能である必要があります。  
@@ -74,13 +79,13 @@ caps.handback.revision: 54
   
  **上書き:** 上書きオプションを指定すると、毎回のレポート配信または新規ファイルの作成時に同じファイル名を再利用できます。 ファイルを上書きするには、同じファイル名と拡張子を使用する必要があります。  
   
- 配信ごとに一意のファイルを作成するための別の方法として、ファイル名にタイムスタンプを含める方法があります。 これを行うには、**@timestamp** 変数をファイル名に追加します (例 : *CompanySales@timestamp*)。 この方法を使用すると、一意のファイル名が生成されるので、上書きされることはありません。  
+ 配信ごとに一意のファイルを作成するための別の方法として、ファイル名にタイムスタンプを含める方法があります。 これを行うには、 **@timestamp** 変数をファイル名に追加します (例 : *CompanySales@timestamp*)。 この方法を使用すると、一意のファイル名が生成されるので、上書きされることはありません。  
   
  ファイル共有配信用に構成されたサブスクリプションのファイルの設定の例を次の図に示します。  
   
- ![file share subscription](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "file share subscription")  
+ ![ファイル共有サブスクリプション](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "ファイル共有サブスクリプション")  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [サブスクリプション設定とファイル共有アカウント &#40;構成マネージャー&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
   

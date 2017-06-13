@@ -1,28 +1,33 @@
 ---
-title: "分析用とレポート用の Microsoft Business Intelligence (BI) ツールの選択 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "分析のための Microsoft Business Intelligence (BI) ツールを選択して、レポート |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 09/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
 caps.latest.revision: 16
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 16
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1545eb448d447b17721e145aaa5942119d17b447
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# 分析用とレポート用の Microsoft Business Intelligence (BI) ツールの選択
+# <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>Microsoft Business Intelligence (BI) ツール分析やレポートを選択します。
 適切なビジネス インテリジェンス ツールを選択することは困難な場合があります。 さまざまな Microsoft 製品を確認し、ニーズに最も合う製品を見つけてください。
 
 次の表は、データ分析とレポートに対応するワークロードを、これらのワークロードに最も適した Microsoft BI ツールに関連付けます。 製品に関する詳細については、表内の製品リンクをクリックしてください。  
   
- ツールの概要を確認し、どのツールが適しているかを判断するには、「[Microsoft Business Intelligence (BI) ツールの概要](http://msdn.microsoft.com/library/dn655131.aspx)」を参照してください。  
+ ツールの概要を確認し、どのツールが適しているかを判断するには、「 [Microsoft Business Intelligence (BI) ツールの概要](http://msdn.microsoft.com/library/dn655131.aspx)」を参照してください。  
   
 |ワークロード|ユーザー|||BI ツール|||  
 |---------------|----------|-|-|--------------|-|-|  
@@ -33,7 +38,7 @@ caps.handback.revision: 16
 |セルフサービスの予測分析の実行||||||[Excel 用データ マイニング アドイン](http://msdn.microsoft.com/library/dn282385.aspx) (Excel 2016 対応)|  
 |データの視覚化と探索||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [3D マップ](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |自然言語クエリを使用した問い合わせの実施|||||[Q & A](https://powerbi.microsoft.com/documentation/powerbi-service-q-and-a/)||  
-|モバイル デバイスを使用したレポートのアクセス||||[HTML 5 (< 10 MB ファイルの表示をサポート)](http://go.microsoft.com/fwlink/?LinkId=391853)|[HTML 5 (< 1 GB ファイルの表示をサポート)](http://go.microsoft.com/fwlink/?LinkId=799619)<br /><br /> [モバイル デバイス用 Power BI アプリ](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/)|[Reporting Services](https://msdn.microsoft.com/library/ms159106.aspx)<br/>(モバイル デバイス用 Power BI アプリを使用)|  
+|モバイル デバイスを使用したレポートのアクセス||||[HTML 5 (&lt; 10 MB ファイルの表示をサポート)](http://go.microsoft.com/fwlink/?LinkId=391853)|[HTML 5 (&lt; 1 GB ファイルの表示をサポート)](http://go.microsoft.com/fwlink/?LinkId=799619)<br /><br /> [モバイル デバイス用 Power BI アプリ](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/)|[Reporting Services](https://msdn.microsoft.com/library/ms159106.aspx)<br/>(モバイル デバイス用 Power BI アプリを使用)|  
 |コラボレーションと共有|||[SharePoint サイト](http://go.microsoft.com/fwlink/?LinkId=391849)|[SharePoint チーム サイト](http://go.microsoft.com/fwlink/?LinkId=391850)|||  
 |**企業 BI**|IT プロフェッショナル||||||  
 |多次元/表形式ビジネス モデルの作成||||||[Analysis Services](https://msdn.microsoft.com/library/bb522607.aspx)|  
@@ -48,3 +53,4 @@ caps.handback.revision: 16
  *Reporting Services には改ページされた最新レポートの配信をサポートする多数の機能があります。  
   
   
+

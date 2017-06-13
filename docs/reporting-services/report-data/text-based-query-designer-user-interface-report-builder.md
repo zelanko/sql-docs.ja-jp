@@ -1,27 +1,32 @@
 ---
-title: "テキストベースのクエリ デザイナーのユーザー インターフェイス (レポート ビルダー) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10010"
-helpviewer_keywords: 
-  - "クエリ デザイナー, テキストベース"
+title: "テキスト ベースのクエリ デザイナーのユーザー インターフェイス (レポート ビルダー) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10010"
+helpviewer_keywords:
+- query designers, text-based
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1640b0536b6e206afbd2aff5ea8dd11349277f12
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# テキストベースのクエリ デザイナーのユーザー インターフェイス (レポート ビルダー)
+# <a name="text-based-query-designer-user-interface-report-builder"></a>テキストベースのクエリ デザイナーのユーザー インターフェイス (レポート ビルダー)
   デザイン時に、データ ソースでサポートされているクエリ言語でクエリを指定し、クエリを実行し、結果を表示するには、テキスト ベースのクエリ デザイナーを使用します。 複数の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、カスタム データ処理拡張機能のクエリまたはコマンド構文、および式としてのクエリを指定できます。 テキスト ベースのクエリ デザイナーはクエリを前処理せず、あらゆる種類のクエリ構文に対応できるため、これは多くの種類のデータ ソースで既定のクエリ デザイナー ツールになっています。  
   
 > [!IMPORTANT]  
@@ -33,29 +38,29 @@ caps.handback.revision: 15
   
 -   **[結果]** デザイン時にクエリの実行結果が表示されます。  
   
-## テキスト ベースのクエリ デザイナーのツール バー  
+## <a name="text-based-query-designer-toolbar"></a>テキスト ベースのクエリ デザイナーのツール バー  
  テキスト ベースのクエリ デザイナーで使用できるツール バーは、コマンドの種類に関係なく 1 つだけです。 次の表は、ツール バーの各ボタンとその機能を示しています。  
   
 |ボタン|Description|  
 |------------|-----------------|  
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。 すべての種類のデータ ソースでグラフィカル クエリ デザイナーがサポートされているとは限りません。|  
 |**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は sql と rdl だけです。|  
-|![クエリの実行](../../reporting-services/report-data/media/rsqdicon-run.png "クエリの実行")|クエリを実行し、その結果セットを結果ペインに表示します。|  
+|![クエリを実行](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリを実行")|クエリを実行し、その結果セットを結果ペインに表示します。|  
 |**[コマンドの種類]**|**[Text]**、 **[StoredProcedure]**、または **[TableDirect]**を選択します。 パラメーターを受け取るストアド プロシージャの場合、ツール バーの **[実行]** をクリックすると、 **[クエリ パラメーターの定義]** ダイアログ ボックスが表示され、必要な値を入力できます。 サポートされるコマンドの種類は、データ ソースの種類によって異なります。 たとえば、 **[TableDirect]**がサポートされるのは、OLE DB と ODBC だけです。<br /><br /> 注: ストアド プロシージャから複数の結果セットが返された場合、最初の結果セットのみを使ってデータセットが設定されます。|  
   
-### コマンドの種類 (Text)  
+### <a name="command-type-text"></a>コマンドの種類 (Text)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データセットを作成するとき、既定ではリレーショナル クエリ デザイナーが表示されます。 テキスト ベースのクエリ デザイナーに切り替えるには、ツール バーの **[テキストとして編集]** 切り替えボタンをクリックします。 テキスト ベースのクエリ デザイナーは、クエリ ペインと結果ペインの 2 つのペインで構成されています。 次の図に各ペインの名称を示します。  
   
- ![リレーショナル データのクエリに使用する汎用クエリ デザイナー](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "リレーショナル データのクエリに使用する汎用クエリ デザイナー")  
+ ![リレーショナル データのクエリの汎用クエリ デザイナー](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "リレーショナル データのクエリの汎用クエリ デザイナー")  
   
  次の表に各ペインの機能を示します。  
   
 |ペイン|機能|  
 |----------|--------------|  
-|クエリ|[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ テキストを表示します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを記述または編集する際に、このペインを使用します。|  
-|[結果]|クエリの結果を表示します。 クエリを実行するには、任意のペインで右クリックして、**[実行]** をクリックするか、ツール バーの **[実行]** ボタンをクリックします。|  
+|[クエリ]|[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ テキストを表示します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを記述または編集する際に、このペインを使用します。|  
+|[結果]|クエリの結果を表示します。 クエリを実行するには、任意のペインで右クリックして、 **[実行]**をクリックするか、ツール バーの **[実行]** ボタンをクリックします。|  
   
-#### 例  
+#### <a name="example"></a>例  
  次のクエリは、 **Person** スキーマの AdventureWorks2014 データベースの **ContactType** テーブルから名前の一覧を取得します。  
   
 ```  
@@ -64,21 +69,21 @@ SELECT Name FROM Person.ContactType
   
  ツール バーの **[実行]** をクリックすると、 **クエリ** ペインのコマンドが実行され、その結果が **結果** ペインに表示されます。 結果セットには、所有者や販売担当者など 20 種類の連絡先の一覧が表示されます。  
   
-### コマンドの種類 (StoredProcedure)  
- **[コマンドの種類] で [StoredProcedure]** を選択した場合、テキスト ベースのクエリ デザイナーには、クエリ ペインと結果ペインの 2 つのペインが表示されます。 ストアド プロシージャ名をクエリ ペインに入力し、ツール バーの **[実行]** をクリックします。 ストアド プロシージャでパラメーターを使用する場合、 **[クエリ パラメーターの定義]** ダイアログ ボックスが表示されます。 ストアド プロシージャのパラメーター値を入力します。 すべてのストアド プロシージャの入力パラメーターについて、レポート パラメーターが作成されます。  
+### <a name="command-type-storedprocedure"></a>コマンドの種類 (StoredProcedure)  
+ **[コマンドの種類] で [StoredProcedure]**を選択した場合、テキスト ベースのクエリ デザイナーには、クエリ ペインと結果ペインの 2 つのペインが表示されます。 ストアド プロシージャ名をクエリ ペインに入力し、ツール バーの **[実行]** をクリックします。 ストアド プロシージャでパラメーターを使用する場合、 **[クエリ パラメーターの定義]** ダイアログ ボックスが表示されます。 ストアド プロシージャのパラメーター値を入力します。 すべてのストアド プロシージャの入力パラメーターについて、レポート パラメーターが作成されます。  
   
  次の図に、ストアド プロシージャを実行したときのクエリ ペインと結果ペインを示します。 この場合、入力パラメーターは定数です。  
   
- ![テキスト ベースのクエリ デザイナーのストアド プロシージャ](../../reporting-services/report-data/media/rs-relational-text-sp.gif "テキスト ベースのクエリ デザイナーのストアド プロシージャ")  
+ ![ストアド プロシージャのテキスト ベースのクエリ デザイナーで](../../reporting-services/report-data/media/rs-relational-text-sp.gif "テキスト ベースのクエリ デザイナーでのストアド プロシージャ")  
   
  次の表に各ペインの機能を示します。  
   
 |ペイン|機能|  
 |----------|--------------|  
 |[クエリ]|ストアド プロシージャの名前と入力パラメーターを表示します。|  
-|結果|クエリの結果を表示します。 クエリを実行するには、任意のペインで右クリックして、**[実行]** をクリックするか、ツール バーの **[実行]** ボタンをクリックします。|  
+|[結果]|クエリの結果を表示します。 クエリを実行するには、任意のペインで右クリックして、 **[実行]**をクリックするか、ツール バーの **[実行]** ボタンをクリックします。|  
   
-#### 例  
+#### <a name="example"></a>例  
  次のクエリでは、 **uspGetWhereUsedProductID**という AdventureWorks2014 のストアド プロシージャを呼び出します。 クエリを実行する場合は、製品 ID 番号パラメーターの値を入力する必要があります。  
   
 ```  
@@ -94,18 +99,18 @@ uspGetWhereUsedProductID
   
  指定した日付について、結果セットには、指定したコンポーネント番号を使用している 13 の製品 ID の一覧が表示されます。  
   
-### コマンドの種類 (TableDirect)  
- **[コマンドの種類] で [TableDirect]** を選択した場合、テキスト ベースのクエリ デザイナーには、クエリ ペインと結果ペインの 2 つのペインが表示されます。 テーブルを入力し、 **[実行]** ボタンをクリックすると、そのテーブルのすべての列が返されます。  
+### <a name="command-type-tabledirect"></a>コマンドの種類 (TableDirect)  
+ **[コマンドの種類] で [TableDirect]**を選択した場合、テキスト ベースのクエリ デザイナーには、クエリ ペインと結果ペインの 2 つのペインが表示されます。 テーブルを入力し、 **[実行]** ボタンをクリックすると、そのテーブルのすべての列が返されます。  
   
-#### 例  
+#### <a name="example"></a>例  
  データ ソースの種類が OLE DB の場合、次のデータセット クエリでは、AdventureWorks2014 データベースのすべての種類の連絡先を結果セットとして取得します。  
   
  `Person.ContactType`  
   
  テーブル名 Person.ContactType を入力した場合、これは [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの `SELECT * FROM Person.ContactType`を作成することに相当します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [リレーショナル クエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)   
- [クエリ デザイナー &#40;レポート ビルダー&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+ [クエリ デザイナー &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

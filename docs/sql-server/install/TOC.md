@@ -15,3 +15,4 @@
 # [SQL Server 2016 の BI 機能のインストール](install-sql-server-business-intelligence-features.md)
 # [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](configure-the-windows-firewall-to-allow-sql-server-access.md)  
 ## [SQL Server アクセス用のマルチホーム コンピューターの構成](configure-a-multi-homed-computer-for-sql-server-access.md)  
+# [インストール ウィザードのヘルプ](instance-configuration.md)

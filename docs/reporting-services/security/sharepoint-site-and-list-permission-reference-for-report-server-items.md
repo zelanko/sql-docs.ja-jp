@@ -1,28 +1,33 @@
 ---
-title: "レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "権限 [Reporting Services]、SharePoint 統合モード"
-  - "SharePoint 統合 [Reporting Services]、権限"
-  - "セキュリティ [Reporting Services]、SharePoint 統合モード"
-  - "権限セット [Reporting Services]"
+title: "レポート サーバー アイテムの SharePoint サイトと List Permission Reference for |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- SharePoint integration [Reporting Services], permissions
+- security [Reporting Services], SharePoint integrated mode
+- permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 14
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ca45a9fc4c37798983c4cc8956fbb27828a5ff01
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス
+# <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス
   ここでは、SharePoint 統合モードで動作するレポート サーバーに関して、レポート サーバー処理に対するアクセスの許可に使用できる、SharePoint の権限のリファレンス情報を提供します。 このトピックは、カスタム権限レベルを作成する場合に使用する権限を選択するのに役立ちます。  
   
  SharePoint には、コンテンツおよび処理へのアクセスを制御するために使用できる 33 個の権限があります。 これらの権限のすべてではありませんが、その一部は、ドキュメントおよび [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーが関係する処理に適用されます。 この記事の権限リファレンス表を見れば、どの権限で特定のレポート タスクがサポートされているかがわかります。  
@@ -41,7 +46,7 @@ caps.handback.revision: 14
 |-|  
 |[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード &#124; SharePoint 2010 と SharePoint 2013|  
   
-## リスト権限  
+## <a name="list-permissions"></a>リスト権限  
  ユーザーがレポート サーバー アイテムにアクセスする方法は、それらのアイテムが格納されているライブラリに設定した権限によって決まります。  
   
 |権限|Description|F|C|V|レポート サーバーの処理|  
@@ -58,21 +63,21 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  上記以外のリスト権限には、"チェックアウトの上書き"、"アイテムの承認"、および "アプリケーション ページの表示" があります。 レポート サーバーでは、これらの権限が評価されません。 レポート サーバーでは、これらの操作が処理されません。  
   
-## サイト権限  
+## <a name="site-permissions"></a>サイト権限  
  サイト権限は、特定のライブラリに格納されているアイテムには直接関係しない、レポート サーバー処理へのアクセスを決定します。 たとえば、複数のライブラリのアイテムで使用できる共有スケジュールの作成と管理、サイト全体で使用できるレポート ビューアー Web パーツの構成などです。  
   
 |権限|Description|F|C|V|レポート サーバーの処理|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |権限の管理|Web サイトの権限レベルを作成および変更し、権限をユーザーおよびグループに割り当てます。|×|||すべてのレポート サーバー アイテムおよび処理について権限を変更できます。 モデル アイテム セキュリティを設定できます。|  
 |Web サイトの管理|コンテンツの管理に加え、Web サイトのあらゆる管理作業を行います。|×|||共有スケジュールを作成、変更、または削除します。|  
-|ページの追加とカスタマイズ|HTML ページまたは Web パーツ ページを追加、変更、または削除します。また、[!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 互換のエディターを使用して Web サイトを編集します。|×|||レポート ビューアー Web パーツを追加または削除します。|  
+|ページの追加とカスタマイズ|HTML ページまたは Web パーツ ページを追加、変更、または削除します。また、 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]互換のエディターを使用して Web サイトを編集します。|×|||レポート ビューアー Web パーツを追加または削除します。|  
 |ユーザー情報の参照|Web サイトのユーザーに関する情報を表示します。|×|×|×|さまざまなサイト、ライブラリ、およびフォルダーに含まれているレポートなどのアイテムを参照します。 ライブラリにレポートなどのアイテムをパブリッシュします。|  
 |権限の一覧|Web サイト、リスト、フォルダー、ドキュメント、またはリスト アイテムに対する権限を一覧表示します。|×|||すべてのレポート サーバー アイテムに対する権限を読み取ります。 モデル アイテム セキュリティ設定を含むレポート モデルが使用されているクリックスルー レポートを表示します。|  
 |警告の管理|Web サイトのすべてのユーザーに対して通知を管理します。|×|||サイトのサブスクリプションの作成、変更、および削除を行います。|  
 |リモート インターフェイスの使用|SOAP、Web DAV、または SharePoint デザイナー インターフェイスを使用して Web サイトにアクセスします。|×|×|×|レポート サーバーに対する URL プロキシ エンドポイントを呼び出すために使用します。|  
 |開く|Web サイト、リスト、またはフォルダーを開き、これらのコンテナー内のアイテムにアクセスします。|×|×|×|スケジュールおよびアイテム プロパティを読み取ります。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

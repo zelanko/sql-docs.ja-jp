@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 2016 技術ドキュメント | Microsoft Docs"
+title: "SQL Server 技術ドキュメント |Microsoft ドキュメント"
 ms.date: 03/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -20,43 +20,38 @@ helpviewer_keywords:
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 caps.latest.revision: 106
-author: BYHAM
-ms.author: rickbyh
+author: craigg-msft
+ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 034e10f491c3c327d6a7b2a044f57121636c3c06
+ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
+ms.openlocfilehash: 6ba40fbd036ee6476d7eb3439a5d9e816e79651d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/25/2017
 
 ---
 # <a name="sql-server-technical-documentation"></a>SQL Server 技術ドキュメント
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+ > SQL Server の以前のバージョンに関連するコンテンツでは、次を参照してください。 [for SQL Server 2014 インストール](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx)です。
 
  SQL Server のインストール、構成、および使用の際に役立つドキュメントです。 コンテンツには、エンド ツー エンドの例、コード サンプル、およびビデオが含まれています。 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 言語のトピックについては、「 [言語リファレンス](../t-sql/language-reference.md)」を参照してください。
 
-**SQL Server vNext**
+**SQL Server 2017**
 
-最新のリリース ノートについては、「 [SQL Server vNext リリース ノート](../sql-server/sql-server-vnext-release-notes.md)」を参照してください。
-
-新機能に関する最新情報については、「 [SQL Server vNext の新機能](../sql-server/what-s-new-in-sql-server-vnext.md)」を参照してください。
+- [SQL Server 2017 年 1 リリース ノートします。](../sql-server/sql-server-2017-release-notes.md)
+- [SQL Server 2017 年 1 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)
  
 **SQL Server 2016:**
  
- [SQL Server 2016 リリース ノート](../sql-server/sql-server-2016-release-notes.md)
-
-[SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)
+- [SQL Server 2016 リリース ノート](../sql-server/sql-server-2016-release-notes.md)
+- [SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)
     
  **SQL Server をお試しください。**    
-    
- - [**Evaluation Center から SQL Server 2016 をダウンロードする**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)    
-    
-- **[SQL Server 2016 がインストール済みの Virtual Machine をすぐにご利用いただけます](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
-    
--  **[最新バージョンの SQL Server Management Studio をダウンロードする](https://msdn.microsoft.com/library/mt238290.aspx)**   
-    
-  
-    
+ - [**Evaluation Center から SQL Server 2016 をダウンロードする**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
+ - **[SQL Server 2016 がインストール済みの Virtual Machine をすぐにご利用いただけます](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+ - **[最新バージョンの SQL Server Management Studio をダウンロードする](https://msdn.microsoft.com/library/mt238290.aspx)**   
+      
 ## <a name="sql-server-technologies"></a>SQL Server のテクノロジ    
     
 |||    
@@ -69,7 +64,20 @@ ms.lasthandoff: 04/11/2017
 |![Analysis Services](../sql-server/media/analysis-services.png "Analysis Services")|**[Analysis Services](../analysis-services/analysis-services.md)**<br /><br /> [!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] は、個人、チーム、および企業のビジネス インテリジェンスのための分析データ プラットフォームおよびツールセットです。 サーバーとクライアント デザイナーは、従来の OLAP ソリューションや新しいテーブル モデリング ソリューションに加えて、 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]、Excel、および SharePoint Server 環境を使用するセルフサービス型の分析とコラボレーションをサポートしています。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には、大量のデータ内部に隠されたパターンとリレーションシップを発見するためのデータ マイニング機能も含まれています。|    
 |![レプリケーション サービス](../sql-server/media/replication-services.png "レプリケーション サービス")|**[レプリケーション](../relational-databases/replication/sql-server-replication.md)**<br /><br /> レプリケーションは、あるデータベースから別のデータベースへデータ オブジェクトやデータベース オブジェクトのコピーと配布を行い、一貫性を維持するためにデータベース間の同期を行うテクノロジ セットです。 レプリケーションでは、LAN や WAN、ダイヤル アップ接続、ワイヤレス接続、およびインターネットを使用して、異なる場所およびリモート ユーザーやモバイル ユーザーにデータを配布することができます。|    
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Reporting Services は Web 対応のレポート機能を提供します。これによって組織では、さまざまなデータ ソースのコンテンツを表示するレポートの作成、さまざまな形式でのレポートのパブリッシュ、およびセキュリティやサブスクリプションの集中管理を行うことができます。|    
-     
+
+    
+## <a name="earlier-sql-server-versions"></a>以前の SQL Server のバージョン
+- [SQL Server 2014 オンライン ブックのオンライン ブック](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
+- [SQL Server 2014 Express とその他の古いバージョンの SQL Server をインストールします](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)。 (**インストーラー パッケージ リンクをすべて 1 か所に集めてくれた [Scott Hanselman](http://www.hanselman.com/) に感謝します**)  
+- [SQL Server 2012 技術ドキュメント](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
+- [SQL Server 2008 R2 製品ドキュメント](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
+- [SQL Server 2008 技術ドキュメント](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
+- [SQL Server 2005 アーカイブ ドキュメント](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)    
+
+**サンプル データベース**  
+- [Wide World Importers のサンプル データベース](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)  
+- [SQL Server 2016 の AdventureWorks サンプル データベースとスクリプト](https://www.microsoft.com/en-us/download/details.aspx?id=49502) 
+- [GitHub の SQL Server サンプル](https://github.com/Microsoft/sql-server-samples) 
    
  ## <a name="more-information"></a>詳細情報   
 + [SQL Server 構成マネージャー](../relational-databases/sql-server-configuration-manager.md)
@@ -78,8 +86,6 @@ ms.lasthandoff: 04/11/2017
 + [SSMS を使用した SQL Server 管理ツールのインストール](https://msdn.microsoft.com/library/bb500441.aspx) 
 + [Visual Studio 2015 の SQL Server Data Tools](https://msdn.microsoft.com/mt186501.aspx)
 + [ビデオ、サンプル、およびコミュニティ リソース](https://msdn.microsoft.com/library/dn237258.aspx)
-+ [SQL Server 2016 の概要](https://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx?WT.srch=1&WT.mc_id=SEM_%5B_uniqid%5D&utm_source=Bing&utm_medium=CPC&utm_term=SQL%20Server%202016&utm_campaign=Data_Management)  
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 

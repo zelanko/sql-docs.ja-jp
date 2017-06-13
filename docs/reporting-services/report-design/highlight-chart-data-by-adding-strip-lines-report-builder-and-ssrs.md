@@ -1,23 +1,28 @@
 ---
-title: "ストリップ ラインの追加によるグラフのデータの強調表示 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ストリップ ライン (レポート ビルダーおよび SSRS) の追加によるグラフのデータを強調表示 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04bc46bc61a1091d715e348e44ac7ee22e4a891d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# ストリップ ラインの追加によるグラフのデータの強調表示 (レポート ビルダーおよび SSRS)
+# <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>ストリップ ラインの追加によるグラフのデータの強調表示 (レポート ビルダーおよび SSRS)
   ストリップ ライン (ストリップ) は、一定の間隔またはカスタムの間隔でグラフの背景を網掛け表示にする、横方向または縦方向の帯です。 ストリップ ラインを使用すると、次のことが可能になります。  
   
 -   グラフ上の個々の値を調べるために見やすくする。 一定の間隔でストリップ ラインを指定すると、グラフを読む際にデータ ポイントを区別しやすくなります。  
@@ -31,25 +36,25 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### インターレース ストリップ ラインを一定間隔でグラフに表示するには  
+### <a name="to-display-interlaced-strip-lines-at-regular-intervals-on-a-chart"></a>インターレース ストリップ ラインを一定間隔でグラフに表示するには  
   
-1.  横方向のストリップ ラインを表示するには、グラフの縦軸を右クリックし、**[縦軸のプロパティ]** をクリックします。  
+1.  横方向のストリップ ラインを表示するには、グラフの縦軸を右クリックし、 **[縦軸のプロパティ]**をクリックします。  
   
-     縦方向のストリップ ラインを表示するには、グラフの横軸を右クリックし、**[横軸のプロパティ]** をクリックします。  
+     縦方向のストリップ ラインを表示するには、グラフの横軸を右クリックし、 **[横軸のプロパティ]**をクリックします。  
   
 2.  **[インターレースを使用する]** チェック ボックスをオンにします。 グラフにグレーのストリップ ラインが表示されます。  
   
 3.  (省略可) 隣接する **[色]** ボックスの一覧を使用して、ストリップ ラインの色を指定します。  
   
-### インターレース ストリップ ラインをカスタムの間隔でグラフに表示するには  
+### <a name="to-display-interlaced-strip-lines-at-custom-intervals-on-a-chart"></a>インターレース ストリップ ラインをカスタムの間隔でグラフに表示するには  
   
-1.  横方向のストリップ ラインを表示するには、グラフの縦軸を右クリックし、**[縦軸のプロパティ]** をクリックします。  
+1.  横方向のストリップ ラインを表示するには、グラフの縦軸を右クリックし、 **[縦軸のプロパティ]**をクリックします。  
   
-     縦方向のストリップ ラインを表示するには、グラフの横軸を右クリックし、**[横軸のプロパティ]** をクリックします。  
+     縦方向のストリップ ラインを表示するには、グラフの横軸を右クリックし、 **[横軸のプロパティ]**をクリックします。  
   
      軸のプロパティが [プロパティ] ウィンドウに表示されます。  
   
-2.  [プロパティ] ウィンドウの **[外観]** セクションで、StripLines プロパティのコレクションの編集ボタン ([...]) をクリックし、**ChartStripLine コレクション エディター**を開きます。  
+2.  [プロパティ] ウィンドウの **[外観]** セクションで、StripLines プロパティのコレクションの編集ボタン ([...]) をクリックし、 **ChartStripLine コレクション エディター**を開きます。  
   
 3.  **[追加]** をクリックし、新しいストリップ ラインをコレクションに追加します。  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  既定では、Interval は Auto に設定されます。つまり、グラフでは、カスタム ストリップ ラインの間隔が計算されません。 グラフでは、間隔値が設定されている場合のみ、ストリップ ラインの間隔が計算されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [グラフの軸ラベルの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [グラフの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [グラフへの移動平均の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  

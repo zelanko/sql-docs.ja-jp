@@ -15,19 +15,57 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0773be32343e4707503b4acb616e5a1c807fe32f
+ms.sourcegitcommit: 0927784589c1f7227b432ff49f81f29de20083ec
+ms.openlocfilehash: 200753bf64d92043171788852227c6199b64711d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/27/2017
 
 ---
 # <a name="previous-sql-server-management-studio-releases"></a>SQL Server Management Studio の以前のリリース
   
 次に示す SQL Server Management Studio の以前のリリースが使用できます。
-
-
    
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-165-releasehttpgomicrosoftcomfwlinklinkid832812"></a>[SQL Server Management Studio 16.5 リリース](http://go.microsoft.com/fwlink/?LinkID=832812)の![ダウンロード](../ssdt/media/download.png)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1653-releasehttpgomicrosoftcomfwlinklinkid840946"></a>![ダウンロード](../ssdt/media/download.png) [SQL Server Management Studio 16.5.3 リリース](http://go.microsoft.com/fwlink/?LinkID=840946)
+
+**バージョン情報**  
+  
+*SSMS の今回のリリースでは、Visual Studio 2015 の分離シェルを使用します。*  
+リリース番号: 16.5.3  
+このリリースのビルド番号: 13.0.16106.4
+
+## <a name="changelog"></a>変更ログ  
+
+16.5.3
+
+このリリースでは次の問題が修正されました。
+
+* SSMS 16.5.2 で、テーブルに複数のスパース列がある場合に 'Table' ノードが拡張される原因となっていた問題が修正されました。
+
+* ユーザーは、SSIS カタログに、Microsoft Dynamics AX/CRM Online のリソースに接続される OData 接続マネージャーを含む SSIS パッケージを展開できます。 詳細については、「[OData 接続マネージャー](https://msdn.microsoft.com/library/dn584133.aspx)」を参照してください。
+
+* 関連付けられていないオブジェクトで既存のテーブルに対して Always Encrypted を構成すると、エラーが発生して実行できない ( [Connect ID 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects) を参照)。
+
+* 複数のスキーマを持つ既存のデータベースに対して Always Encrypted を構成できない ( [Connect ID 3109591](https://connect.microsoft.com/SQLServer/feedback/details/3109591/sql-server-2016-always-encrypted-against-existing-database-with-multiple-schemas-doesnt-work) を参照)。
+
+* データベースにシステム ビューを参照するビューが含まれているため、Always Encrypted の暗号化された列ウィザードでエラーが発生する ( [Connect ID 3111925](https://connect.microsoft.com/SQLServer/feedback/details/3111925/sql-server-2016-always-encrypted-encrypted-column-wizard-failed-task-failed-due-to-following-error-cannot-save-package-to-file-the-model-has-build-blocking-errors) を参照)。
+
+* Always Encrypted を使用して暗号化する場合、暗号化が正しく処理されていない状態でモジュールを更新するとエラーが発生する。
+
+* *[最近使用した項目を開く]* メニューに、最近保存したファイルが表示されない ( [Connect ID 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files) を参照)。
+
+* テーブルのインデックスを右クリックすると SSMS の動作が遅くなる (リモート (インターネット) 接続経由の場合)。 [Connect ID 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection) を参照)。
+ 
+* SQL デザイナーのスクロール バーの問題が修正されました ( [Connect ID 3114856](http://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016) を参照)。
+
+* テーブルのコンテキスト メニューがすぐにハングする。 
+ 
+* SSMS で利用状況モニターの例外がスローされ、クラッシュする場合がある ( [Connect ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/) を参照)。
+
+* ".NET ランタイムの内部エラーにより、処理が中止されました。IP 71AF8579 (71AE0000)、終了コード 80131506" という内容のエラーで SSMS 2016 がクラッシュする。
+
+
+
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-165-releasehttpgomicrosoftcomfwlinklinkid832812"></a>[SQL Server Management Studio 16.5 リリース](http://go.microsoft.com/fwlink/?LinkID=832812)の![ダウンロード](../ssdt/media/download.png)
 
 **バージョン情報**  
   
@@ -67,7 +105,7 @@ ms.lasthandoff: 04/11/2017
 
 
    
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1641-september-2016-releasehttpgomicrosoftcomfwlinklinkid828615"></a>[SQL Server Management Studio 16.4.1 (2016 年 9 月) リリース](http://go.microsoft.com/fwlink/?LinkID=828615)の![ダウンロード](../ssdt/media/download.png)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1641-september-2016-releasehttpgomicrosoftcomfwlinklinkid828615"></a>[SQL Server Management Studio 16.4.1 (2016 年 9 月) リリース](http://go.microsoft.com/fwlink/?LinkID=828615)の![ダウンロード](../ssdt/media/download.png)
 
 **バージョン情報**  
   
@@ -179,7 +217,7 @@ SSMS の英語以外のローカライズされたリリースでは、Windows 8
 
 
 
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-163-august-2016-releasehttpgomicrosoftcomfwlinklinkid824938"></a>![ダウンロード](../ssdt/media/download.png) [SQL Server Management Studio 16.3 (2016 年 8 月) リリース](http://go.microsoft.com/fwlink/?LinkID=824938)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-163-august-2016-releasehttpgomicrosoftcomfwlinklinkid824938"></a>![ダウンロード](../ssdt/media/download.png) [SQL Server Management Studio 16.3 (2016 年 8 月) リリース](http://go.microsoft.com/fwlink/?LinkID=824938)
  2016 年 8 月 15 日 | バージョン番号: 13.0.15700.28
 
 **機能**  
@@ -245,7 +283,7 @@ SSMS の英語以外のローカライズされたリリースでは、Windows 8
 [修正の詳細については、SSMS の変更ログをご覧ください。](../ssms/sql-server-management-studio-changelog-ssms.md)
  
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-july-2016-hotfix-update-releasehttpgomicrosoftcomfwlinklinkid822301"></a>![ダウンロード](../ssdt/media/download.png) [SQL Server Management Studio 2016 年 7 月修正プログラム リリース](http://go.microsoft.com/fwlink/?LinkID=822301)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-july-2016-hotfix-update-releasehttpgomicrosoftcomfwlinklinkid822301"></a>![ダウンロード](../ssdt/media/download.png) [SQL Server Management Studio 2016 年 7 月修正プログラム リリース](http://go.microsoft.com/fwlink/?LinkID=822301)
 
 2016 年 7 月 13 日 | バージョン番号: 13.0.15600.2
 
@@ -299,7 +337,7 @@ SSMS の英語以外のローカライズされたリリースでは、Windows 8
 [詳細な情報および利用可能なバグの修正については、SSMS 変更ログをご覧ください。](../ssms/sql-server-management-studio-changelog-ssms.md)
 
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-june-2016-releasehttpgomicrosoftcomfwlinklinkid799832"></a>![ダウンロード](../ssdt/media/download.png) [SQL Server Management Studio 2016 年 6 月リリース](http://go.microsoft.com/fwlink/?LinkID=799832)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-june-2016-releasehttpgomicrosoftcomfwlinklinkid799832"></a>![ダウンロード](../ssdt/media/download.png) [SQL Server Management Studio 2016 年 6 月リリース](http://go.microsoft.com/fwlink/?LinkID=799832)
 
 2016 年 6 月 1 日 | バージョン番号: 13.0.15000.23
 
@@ -331,7 +369,7 @@ SSMS の英語以外のローカライズされたリリースでは、Windows 8
 6. Always Encrypted エクスペリエンスのバグを修正。 Always Encrypted メニュー オプションが Stretch Database に対して正しく有効にならないバグを修正しました。 また、SafeNet (Luna SA) HSM プロバイダーを正しく使用しない Always Encrypted ウィザードのバグも修正しました。
 
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2014-sp1httpdownloadmicrosoftcomdownload156156992e6-f7c7-4e55-833d-249bd2348138enux86sqlmanagementstudiox86enuexe"></a>![ダウンロード](../ssdt/media/download.png) [SQL Server Management Studio 2014 SP1](http://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x86/SQLManagementStudio_x86_ENU.exe)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2014-sp1httpdownloadmicrosoftcomdownload156156992e6-f7c7-4e55-833d-249bd2348138enux86sqlmanagementstudiox86enuexe"></a>![ダウンロード](../ssdt/media/download.png) [SQL Server Management Studio 2014 SP1](http://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x86/SQLManagementStudio_x86_ENU.exe)
 
 2015 年 5 月 14 日 | バージョン番号: 12.0.4100.1
 
@@ -352,7 +390,7 @@ SSMS の英語以外のローカライズされたリリースでは、Windows 8
 7. タスク バーで SSMS のウィンドウ アイコンを更新しようとすると、SSMS がクラッシュする場合があります ([Microsoft Connect アイテム #799430](https://connect.microsoft.com/SQLServer/feedback/details/799430/ssms-2012-sp-1-cu-5-installed-crash-when-enforce-refresh-on-connect))。
 
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2012-sp3httpdownloadmicrosoftcomdownloadf67f673709c-d371-4a64-8bf9-c1dd73f60990enux86sqlmanagementstudiox86enuexe"></a>![ダウンロード](../ssdt/media/download.png) [SQL Server Management Studio 2012 SP3](http://download.microsoft.com/download/F/6/7/F673709C-D371-4A64-8BF9-C1DD73F60990/ENU/x86/SQLManagementStudio_x86_ENU.exe)  
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2012-sp3httpdownloadmicrosoftcomdownloadf67f673709c-d371-4a64-8bf9-c1dd73f60990enux86sqlmanagementstudiox86enuexe"></a>![ダウンロード](../ssdt/media/download.png) [SQL Server Management Studio 2012 SP3](http://download.microsoft.com/download/F/6/7/F673709C-D371-4A64-8BF9-C1DD73F60990/ENU/x86/SQLManagementStudio_x86_ENU.exe)  
   
 2015 年 11 月 21 日 | バージョン番号: 11.0.6020.0
 
@@ -368,7 +406,7 @@ SSMS の英語以外のローカライズされたリリースでは、Windows 8
 2. SSMS での差分バックアップを復元すると、「復元プランを作成できません。LSN チェーンが破損しています」というエラーが表示されます。
 
 ---
-### <a name="additional-downloads"></a>追加のダウンロード  
+## <a name="additional-downloads"></a>追加のダウンロード  
 すべての SQL Server Management Studio ダウンロードの一覧については、「[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending)」を検索してください。  
   
 SQL Server Management Studio の最新リリースについては、「[SQL Server Management Studio &#40;SSMS&#41; のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)」をご覧ください。  

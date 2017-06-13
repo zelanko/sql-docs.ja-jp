@@ -1,24 +1,29 @@
 ---
-title: "チュートリアル: 自由形式のレポートの作成 (レポート ビルダー) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "チュートリアル: 自由形式レポート (レポート ビルダー) の作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 09/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 356d795aec5249ecf4f990d549c8eacb70e25f03
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# チュートリアル: 自由形式のレポートの作成 (レポート ビルダー)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>チュートリアル: 自由形式のレポートの作成 (レポート ビルダー)
 このチュートリアルでは、ニュースレターとして機能する、ページ分割されたレポートを作成します。 各ページには、固定テキスト、概要ビジュアル、詳細サンプル セールス データが表示されます。
 
 ![report-builder-free-form-report-complete](../reporting-services/media/report-builder-free-form-report-complete.png)
@@ -27,7 +32,7 @@ caps.handback.revision: 16
   
 このチュートリアルの推定所要時間 : 20 分  
   
-## 必要条件  
+## <a name="requirements"></a>必要条件  
 要件に関する詳細については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/prerequisites-for-tutorials-report-builder.md)」を参照してください。  
   
 ## <a name="BlankReport"></a>1.空のレポート、データ ソース、およびデータセットを作成する  
@@ -35,9 +40,9 @@ caps.handback.revision: 16
 > [!NOTE]  
 > このチュートリアルでは、外部のデータ ソースが必要ないようにクエリにデータ値が含まれています。 このため、クエリが非常に長くなっています。 ビジネス環境でクエリにデータを含めることはありません。 これは、学習に使用することのみを目的としています。  
   
-### 空のレポートを作成するには  
+### <a name="to-create-a-blank-report"></a>空のレポートを作成するには  
   
-1.  コンピューター、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web ポータル、SharePoint 統合モードのいずれかから[レポート ビルダーを起動します](../reporting-services/report-builder/start-report-builder.md)。  
+1.  コンピューター、[Web ポータル、SharePoint 統合モードのいずれかから](../reporting-services/report-builder/start-report-builder.md) レポート ビルダーを起動します [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 。  
   
     **[新しいレポートまたはデータセット]** ダイアログ ボックスが開きます。  
   
@@ -47,11 +52,11 @@ caps.handback.revision: 16
  
 3.  右ペインで、 **[空のレポート]**をクリックします。  
   
-### 新しいデータ ソースを作成するには  
+### <a name="to-create-a-new-data-source"></a>新しいデータ ソースを作成するには  
   
-1.  レポート データ ペインで、**[新規作成]** > **[データ ソース]** をクリックします。  
+1.  レポート データ ペインで、 **[新規作成]** > **[データ ソース]**をクリックします。  
   
-2.   **[名前]** ボックスに「 **ListDataSource**」と入力します。  
+2.  **[名前]** ボックスに「 **ListDataSource**」と入力します。  
   
 3.  **[レポートに埋め込まれた接続を使用する]**をクリックします。  
   
@@ -63,11 +68,11 @@ caps.handback.revision: 16
   
 6.  **[OK]**をクリックします。  
   
-### 新しいデータセットを作成するには  
+### <a name="to-create-a-new-dataset"></a>新しいデータセットを作成するには  
   
-1.  レポート データ ペインで、**[新規作成]** > **[データセット]** をクリックします。  
+1.  レポート データ ペインで、 **[新規作成]** > **[データセット]**をクリックします。  
   
-2.  **[名前]** ボックスに「**ListDataset**」と入力します。  
+2.  **[名前]** ボックスに「 **ListDataset**」と入力します。  
   
 3.  **[レポートに埋め込まれたデータセットを使用します]**をクリックし、データ ソースが **ListDataSource**であることを確認します。  
   
@@ -119,36 +124,36 @@ caps.handback.revision: 16
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="List"></a>2.一覧を追加および構成する  
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、一覧データ領域は自由形式レポートを作成するのに最適です。 表やマトリックスと同様に、これは *tablix* データ領域に基づきます。 詳細については、「[一覧がある請求書とフォームを作成する](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)」を参照してください。  
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、一覧データ領域は自由形式レポートを作成するのに最適です。 表やマトリックスと同様に、これは *tablix* データ領域に基づきます。 詳細については、「 [一覧がある請求書とフォームを作成する](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)」を参照してください。  
   
 ニュースレターのように書式設定されたレポートで販売区域ごとの売上情報を表示するには、一覧を使用します。 情報は、区域ごとにグループ化されます。 区域ごとのデータをグループ化する新しい行グループを追加し、組み込みの詳細行グループを削除します。  
   
-### 一覧を追加するには  
+### <a name="to-add-a-list"></a>一覧を追加するには  
   
 1.  **[挿入]** タブで、**[データ領域]** > **[一覧]** の順に選択します。 
 
-2. レポート本文 (タイトル領域とフッター領域の間) をクリックし、ドラッグしてリスト ボックスを作成します。 リスト ボックスの高さを 7 インチ、幅を 6.25 インチにします。 正確なサイズを得るには、**[プロパティ]** ペインの **[位置]** で、**[幅]** プロパティと **[高さ]** プロパティに値を入力します。
+2. レポート本文 (タイトル領域とフッター領域の間) をクリックし、ドラッグしてリスト ボックスを作成します。 リスト ボックスの高さを 7 インチ、幅を 6.25 インチにします。 正確なサイズを得るには、 **[プロパティ]** ペインの **[位置]**で、 **[幅]** プロパティと **[高さ]** プロパティに値を入力します。
   
     > [!NOTE]  
     > このレポートでは、用紙サイズを Letter (8.5 X11) にし、余白を 1 インチとします。 縦が 9 インチより大きいか、横が 6.5 インチよりも大きいリスト ボックスでは、空のページが生成される可能性があります。  
   
-2.  リスト ボックス内をクリックし、一覧の一番上にあるバーを右クリックし、**[Tablix のプロパティ]** をクリックします。  
+2.  リスト ボックス内をクリックし、一覧の一番上にあるバーを右クリックし、 **[Tablix のプロパティ]**をクリックします。  
   
     ![report-builder-free-form-tablix-properties](../reporting-services/media/report-builder-free-form-tablix-properties.png) 
   
-3.  **[データセット名]** ドロップダウン リストの **[ListDataset]** を選択します。  
+3.  **[データセット名]** ドロップダウン リストの **[ListDataset]**を選択します。  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  一覧内を右クリックし、**[四角形のプロパティ]** をクリックします。  
+5.  一覧内を右クリックし、 **[四角形のプロパティ]**をクリックします。  
   
 6.  **[全般]** タブで **[後に改ページを追加する]** チェック ボックスをオンにします。  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### 新しい行グループを追加し、詳細グループを削除するには  
+### <a name="to-add-a-new-row-group-and-to-delete-the-details-group"></a>新しい行グループを追加し、詳細グループを削除するには  
   
-1.  行グループ ペインで、詳細グループを右クリックし、**[グループの追加]** をポイントして **[親グループ]** をクリックします。  
+1.  行グループ ペインで、詳細グループを右クリックし、 **[グループの追加]**をポイントして **[親グループ]**をクリックします。  
   
     ![report-builder-free-form-add-parent-group](../reporting-services/media/report-builder-free-form-add-parent-group.png)  
   
@@ -158,7 +163,7 @@ caps.handback.revision: 16
   
     セル `[Territory]` を含む列が一覧に追加されます。
   
-4.  一覧の Territory 列を右クリックし、**[列の削除]** をクリックします。  
+4.  一覧の Territory 列を右クリックし、 **[列の削除]**をクリックします。  
   
     ![report-builder-free-form-delete-columns](../reporting-services/media/report-builder-free-form-delete-columns.png)
   
@@ -166,16 +171,16 @@ caps.handback.revision: 16
   
 6.  行グループ ペインで、**[詳細]** グループを右クリックし、**[グループの削除]** をクリックします。  
    
-7.  **[グループのみを削除]** を選択します。  
+7.  **[グループのみを削除]**を選択します。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Graphics"></a>3.グラフィック要素を追加する  
 一覧データ領域の利点の 1 つは、表形式のレイアウトに制限されずに、四角形やテキスト ボックスなどのレポート アイテムをどこにでも追加できることです。 ここでは、グラフィック (任意の色で塗りつぶされた四角形) を追加して、レポートの体裁を整えます。  
   
-### レポートにグラフィック要素を追加するには  
+### <a name="to-add-graphic-elements-to-the-report"></a>レポートにグラフィック要素を追加するには  
   
-1.  **[挿入]** タブで **[四角形]** を選択します。 
+1.  **[挿入]** タブで **[四角形]**を選択します。 
 
 2. 一覧の左上隅をクリックし、ドラッグして高さ 7 インチ、幅 3.5 インチの四角形を作成します。 ここでも、正確なサイズを得るには、**[プロパティ]** ペインの **[位置]** で、**[幅]** と **[高さ]** に値を入力します。
   
@@ -183,7 +188,7 @@ caps.handback.revision: 16
   
 3.  **[塗りつぶし]** タブをクリックします。  
   
-4.  **[塗りつぶしの色]** で **[淡い灰色]** を選択します。  
+4.  **[塗りつぶしの色]**で **[淡い灰色]**を選択します。  
    
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -196,15 +201,15 @@ caps.handback.revision: 16
 ## <a name="Text"></a>4.自由形式テキストを追加する  
 テキスト ボックスを追加し、各レポート ページに繰り返し表示される固定テキストとデータ フィールドを表示できます。  
   
-### テキストをレポートに追加するには  
+### <a name="to-add-text-to-the-report"></a>テキストをレポートに追加するには  
   
 1.  **[デザイン]** をクリックしてデザイン ビューに戻ります。  
   
 2.  **[挿入]** タブの **[テキスト ボックス]** をクリックします。 先に追加した四角形の内側で、一覧の左上隅をクリックし、ドラッグして幅が約 3.45 インチ、高さが約 5 インチのテキスト ボックスを作成します。  
   
-3.  テキスト ボックスにカーソルを合わせ、「**Newsletter for**」と入力します。 "for" という単語の後にスペースを入れ、次の手順で追加するフィールドとテキストを分離します。   
+3.  テキスト ボックスにカーソルを合わせ、「 **Newsletter for** 」と入力します。 "for" という単語の後にスペースを入れ、次の手順で追加するフィールドとテキストを分離します。   
   
-    ![ニュースレターの見出しテキストの追加](../reporting-services/media/tutorial-newsletterfor.png "ニュースレターの見出しテキストの追加")  
+    ![ニュースレターの見出しのテキストの追加](../reporting-services/media/tutorial-newsletterfor.png "ニュースレターの見出しのテキストの追加")  
   
 4.  [レポート データ] ペインの ListDataSet からテキスト ボックスに `[Territory]` フィールドをドラッグし、"Newsletter for " の後に置きます。  
   
@@ -218,7 +223,7 @@ caps.handback.revision: 16
     *  **20 pt**
     *  **トマト**  
   
-9. 手順 3 で入力したテキストの下にカーソルを置き、「**Hello**」と入力します。「Hello」の後にスペースを入力し、次の手順で追加するフィールドとテキストを分離します。  
+9. 手順 3 で入力したテキストの下にカーソルを置き、「 **Hello** 」と入力します。「Hello」の後にスペースを入力し、次の手順で追加するフィールドとテキストを分離します。  
  
 10. [レポート データ] ペインの ListDataSet からテキスト ボックスに `[FullName]` フィールドをドラッグし、"Hello " の後に置きます。それからコンマ (,) を入力します。  
    
@@ -247,7 +252,7 @@ caps.handback.revision: 16
       *  **10 pt**
       *  **黒**  
  
-20. テキスト ボックスの中にカーソルを置き、意味のないテキストの下に「**Congratulations on your total sales of**」と入力します。この文章の後にスペースを入力し、次の手順で追加するフィールドとテキストを分離します。 
+20. テキスト ボックスの中にカーソルを置き、意味のないテキストの下に「 **Congratulations on your total sales of**」と入力します。この文章の後にスペースを入力し、次の手順で追加するフィールドとテキストを分離します。 
   
 21. Sales フィールドをテキスト ボックスにドラッグし、前の手順で入力したテキストの後に配置し、感嘆符 (!) を入力します。  
 
@@ -288,13 +293,13 @@ caps.handback.revision: 16
 ## <a name="Table"></a>5.売上の詳細情報を表示するテーブルを追加する  
 テーブルまたはマトリックスの新規作成ウィザードを使用して、自由形式レポートにテーブルを追加します。 ウィザードの完了後、合計を表示する行を手動で追加します。  
   
-### テーブルを追加するには  
+### <a name="to-add-a-table"></a>テーブルを追加するには  
   
 1.  **[挿入]** タブで、**[データ領域]** 領域を選択し、**[テーブル]** > **[テーブル ウィザード]** を選択します。  
   
-2.  **[データセットの選択]** ページで、**[ListDataset]** > **[次へ]** をクリックします。  
+2.  **[データセットの選択]** ページで、 **[ListDataset]** > **[次へ]**をクリックします。  
   
-4.  **[フィールドの配置]** ページで、**[使用できるフィールド]** から Product フィールドを **[値]** にドラッグします。  
+4.  **[フィールドの配置]** ページで、 **[使用できるフィールド]** から Product フィールドを **[値]**にドラッグします。  
   
 5.  SalesDate、Quantity、Sales にも手順 3 を実行します。 Product の下に SalesDate を、SalesDate の下に Quantity を、SalesDate の下に Sales を配置します。  
   
@@ -313,11 +318,11 @@ caps.handback.revision: 16
     > [!NOTE]  
     > テーブルがリスト ボックスの内側、かつ、灰色の四角形の内側に入っているようにします。  
   
-12. テーブルが選択されている状態で、**[行グループ]** ペインで **[詳細]** > **[合計の追加]** > **[後]** をクリックします。  
+12. テーブルが選択されている状態で、 **[行グループ]** ペインで **[詳細]** > **[合計の追加]** > **[後]**をクリックします。  
   
     ![report-builder-free-form-table-totals](../reporting-services/media/report-builder-free-form-table-totals.png)
   
-13. Product 列のセルを選択し、「**Total**」と入力します。
+13. Product 列のセルを選択し、「 **Total**」と入力します。
 
     ![report-builder-free-form-type-total](../reporting-services/media/report-builder-free-form-type-total.png)
 
@@ -336,7 +341,7 @@ caps.handback.revision: 16
   
 このチュートリアルでは、レポートをレポート サーバーに保存します。 レポート サーバーにアクセスできない場合は、レポートをコンピューターに保存してください。  
   
-### レポート サーバーにレポートを保存するには  
+### <a name="to-save-the-report-on-a-report-server"></a>レポート サーバーにレポートを保存するには  
   
 1.  **レポート ビルダー** のボタンの **[名前を付けて保存]**をクリックします。  
   
@@ -352,7 +357,7 @@ caps.handback.revision: 16
   
 レポートがレポート サーバーに保存されます。 接続しているレポート サーバーの名前がウィンドウ下部のステータス バーに表示されます。  
   
-### コンピューターにレポートを保存するには  
+### <a name="to-save-the-report-on-your-computer"></a>コンピューターにレポートを保存するには  
   
 1.  **レポート ビルダー** のボタンの **[名前を付けて保存]**をクリックします。  
   
@@ -365,42 +370,42 @@ caps.handback.revision: 16
 ## <a name="Line"></a>7.(省略可) レポートの領域を区切る線を追加する  
 レポートの編集領域と詳細領域を区切る線を追加します。  
   
-### 罫線を追加するには  
+### <a name="to-add-a-line"></a>罫線を追加するには  
   
 1.  **[デザイン]** をクリックしてデザイン ビューに戻ります。  
   
-2.  **[挿入]** タブで **[レポート アイテム]** > **[線]** を選択します。  
+2.  **挿入**タブ >**レポート アイテム** > **行です。**  
   
 3.  レッスン 4 で追加したテキスト ボックスの下に線を引きます。  
   
 4.  線をクリックし、**[ホーム]** タブの **[罫線]** で次のように選択します。
      * **[幅]** に **[3]** pt を選択します。
-     * **[色]** に **[トマト]** を選択します。  
+     * **[色]** に **[トマト]**を選択します。  
   
 ## <a name="Visualization"></a>8.(省略可) 概要データのビジュアル表現を追加する  
 四角形を利用して、レポートの表示方法を制御できます。 四角形の内側に円グラフや縦棒グラフを配置することで、レポートを思いどおりに表示できます。  
   
-### 四角形を追加するには  
+### <a name="to-add-a-rectangle"></a>四角形を追加するには  
   
 1.  **[デザイン]** をクリックしてデザイン ビューに戻ります。  
   
-2.  **[挿入]** タブで **[レポート アイテム]** >  **[四角形]** を選択します。 リスト ボックスの内側にある四角形をテーブルの右にドラッグし、幅が約 2.25 インチ、高さが約 7.9 インチの四角形を作成します。  
+2.  **挿入**タブ >**レポート アイテム** >  **四角形**です。 リスト ボックスの内側にある四角形をテーブルの右にドラッグし、幅が約 2.25 インチ、高さが約 7.9 インチの四角形を作成します。  
   
-3.  しい四角形が選択されている状態で、[プロパティ] ペインで、**BorderColor LightGrey**、**BorderStyle Solid**、**BorderWidth 2 pt** に設定します。 
+3.  しい四角形が選択されている状態で、[プロパティ] ペインで、 **BorderColor LightGrey**、 **BorderStyle Solid**、 **BorderWidth 2 pt**に設定します。 
 
 4. 四角形とテーブルの上部を揃えます。  
   
-## 円グラフを追加するには  
+## <a name="to-add-a-pie-chart"></a>円グラフを追加するには  
   
 1.  **[挿入]** タブで、**[データ ビジュアライゼーション]** > **[グラフ]** > **[グラフ ウィザード]** を選択します。  
   
-2.  **[データセットの選択]** ページで、**[ListDataset]** > **[次へ]** をクリックします。  
+2.  **[データセットの選択]** ページで、 **[ListDataset]** > **[次へ]**をクリックします。  
   
-3.  **[円]** > **[次へ]** をクリックします。  
+3.  **[円]** > **[次へ]**をクリックします。  
   
-4.  [グラフのフィールドの配置] ページで、Product を **[カテゴリ]** にドラッグします。  
+4.  [グラフのフィールドの配置] ページで、Product を **[カテゴリ]**にドラッグします。  
   
-5.  Quantity を **[値]** にドラッグし、**[次へ]** をクリックします。  
+5.  Quantity を **[値]**にドラッグし、 **[次へ]**をクリックします。  
   
 6.  **[完了]**をクリックします。  
   
@@ -412,7 +417,7 @@ caps.handback.revision: 16
   
 12. **[ホーム]** タブで **[フォント]** を選択し、タイトルを次のように設定します。
     * **フォント** **Segoe UI Semibold**.
-    * **サイズ** **12 pt**.
+    * **Size** **12 pt**.
     * **色** **黒**  
 
 13. 凡例を右クリックし、**[凡例のプロパティ]** をクリックします。
@@ -425,17 +430,17 @@ caps.handback.revision: 16
 
      ![report-builder-free-form-pie](../reporting-services/media/report-builder-free-form-pie.png)
   
-## 縦棒グラフを追加するには  
+## <a name="to-add-a-column-chart"></a>縦棒グラフを追加するには  
   
 1.  **[挿入]** タブで、**[データ ビジュアライゼーション]** > **[グラフ]** > **[グラフ ウィザード]** を選択します。  
   
 2.  **[データセットの選択]** ページで、**[ListDataset]** をクリックし、**[次へ]** をクリックします。  
   
-3.  **[列]** をクリックし、**[次へ]** をクリックします。  
+3.  **[列]**をクリックし、 **[次へ]**をクリックします。  
   
-4.  **[グラフのフィールドの配置]** ページで、Product フィールドを **[カテゴリ]** にドラッグします。  
+4.  **[グラフのフィールドの配置]** ページで、Product フィールドを **[カテゴリ]**にドラッグします。  
   
-5.  Sales を **[値]** にドラッグして、**[次へ]** をクリックします。  
+5.  Sales を **[値]** にドラッグして、 **[次へ]**をクリックします。  
   
     値は縦軸に表示されます。  
   
@@ -451,8 +456,8 @@ caps.handback.revision: 16
   
 12. **[ホーム]** タブで **[フォント]** を選択し、タイトルを次のように設定します。
     * **フォント** **Segoe UI Semibold**.
-    * **サイズ** **12 pt**.
-    * **色** **黒**  
+    * **Size** **12 pt**.
+    * **Color** **Black**.  
   
 15. 凡例を右クリックして **[凡例の削除]**をクリックします。  
   
@@ -461,12 +466,12 @@ caps.handback.revision: 16
   
     ![report-builder-free-form-column](../reporting-services/media/report-builder-free-form-column.png)
 
-12. グラフ軸を選択し、*[ホーム]* * タブで **[数値]** > **[通貨]* を選択します*。
+12. グラフの軸を選択し、*ホーム** タブ >**数** > **通貨**です。
 
 13. **[小数点表示桁下げ]** を 2 回選択します。数値にドルだけ表示され、セントは表示されません。      
-### 四角形の内側にグラフが配置されていることを確認するには  
+### <a name="to-verify-the-charts-are-inside-the-rectangle"></a>四角形の内側にグラフが配置されていることを確認するには  
 
-レポート ページの他のアイテムのコンテナーとして四角形を利用できます。 コンテナーとして四角形を利用する方法の詳細は[ここ](../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)で確認できます。
+レポート ページの他のアイテムのコンテナーとして四角形を利用できます。 コンテナーとして四角形を利用する方法の詳細は [ここ](../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)で確認できます。
   
 1.  このレッスンで作成し、グラフを追加した四角形を選択します。  
   
@@ -485,7 +490,7 @@ caps.handback.revision: 16
     > [!NOTE]  
     > グラフが四角形の内側にない場合、表示レポートでグラフはいっしょに表示されません。  
   
-### グラフのサイズを揃えるには  
+### <a name="to-make-the-charts-the-same-size"></a>グラフのサイズを揃えるには  
   
 1.  円グラフを選択し、Ctrl キーを押しながら縦棒グラフを選択します。  
   
@@ -500,7 +505,7 @@ caps.handback.revision: 16
   
 
   
-## 次の手順  
+## <a name="next-steps"></a>次の手順  
 これで、自由形式のレポートを作成する方法のチュートリアルは終了です。  
   
 一覧の詳細については、次を参照してください。 
@@ -508,8 +513,10 @@ caps.handback.revision: 16
 * [一覧がある請求書とフォームを作成する](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Tablix データ領域のセル、行、および列 (レポート ビルダーおよび SSRS)](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
-クエリ デザイナーの詳細については、「[クエリ デザイナー (レポート ビルダー)](../Topic/Query%20Designers%20(Report%20Builder).md)」と「[テキストベースのクエリ デザイナーのユーザー インターフェイス (レポート ビルダー)](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)」を参照してください。  
+クエリ デザイナーの詳細については、「[クエリ デザイナー (レポート ビルダー)](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)」と「[テキストベースのクエリ デザイナーのユーザー インターフェイス (レポート ビルダー)](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
 [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md) 
   
+
+

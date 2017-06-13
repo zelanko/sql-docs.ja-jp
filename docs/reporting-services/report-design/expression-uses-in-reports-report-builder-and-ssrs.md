@@ -1,28 +1,33 @@
 ---
-title: "レポートでの式の使用 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "式 [Reporting Services]、式について"
+title: "式はレポート (レポート ビルダーおよび SSRS) の使用 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 caps.latest.revision: 59
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 59
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 546817a006d06b1acbea5962cc1a3230867e111e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# レポートでの式の使用 (レポート ビルダーおよび SSRS)
-[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、パラメーター、クエリ、フィルター、レポート アイテムのプロパティ、グループ化と並べ替え定義、テキスト ボックスのプロパティ、ブックマーク、ドキュメント マップ、ページ ヘッダーとページ フッターの動的なコンテンツ、画像、および動的データ ソース定義の値を指定または計算するために、レポート定義を通して式が使用されています。 このトピックでは、レポートの内容と外観を変更するために式を使用できるさまざまな場所の例を示します。 この一覧がすべてではありません。 式 (**[fx]**) ボタンが表示されるダイアログ ボックスや、**[\<式...>]** が表示されるドロップダウン リストで、あらゆるプロパティに式を設定できます。  
+# <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>レポートでの式の使用 (レポート ビルダーおよび SSRS)
+[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、パラメーター、クエリ、フィルター、レポート アイテムのプロパティ、グループ化と並べ替え定義、テキスト ボックスのプロパティ、ブックマーク、ドキュメント マップ、ページ ヘッダーとページ フッターの動的なコンテンツ、画像、および動的データ ソース定義の値を指定または計算するために、レポート定義を通して式が使用されています。 このトピックでは、レポートの内容と外観を変更するために式を使用できるさまざまな場所の例を示します。 この一覧がすべてではありません。 式を表示する ダイアログ ボックスで、プロパティの式を設定することができます (**fx**) をクリックするかを表示するドロップダウン リストで**\<式… >**です。  
   
- 式には単純式と複合式があります。 *単純式*には、1 つのデータセット フィールド、パラメーター、または組み込みフィールドへの参照が含まれます。 複合式には、複数の組み込み参照、演算子、および関数呼び出しを含めることができます。 たとえば、複合式には売上フィールドに適用される Sum 関数が含まれる場合があります。  
+ 式には単純式と複合式があります。 *単純式* には、1 つのデータセット フィールド、パラメーター、または組み込みフィールドへの参照が含まれます。 複合式には、複数の組み込み参照、演算子、および関数呼び出しを含めることができます。 たとえば、複合式には売上フィールドに適用される Sum 関数が含まれる場合があります。  
   
  式は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]に書き込まれます。 式は等号 (=) で始まり、データセット フィールドとパラメーター、定数、関数、および演算子などの組み込みコレクションへの参照が後に続きます。  
   
@@ -30,7 +35,7 @@ caps.handback.revision: 59
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="Simple"></a> 単純式の使用  
- 単純式は、角かっこで囲まれたデザイン画面やダイアログ ボックスに表示されます。たとえば、データセット フィールドは `[ProductID]`と表示されます。 単純式は、データセットからフィールドをテキスト ボックスにドラッグすると自動的に作成されます。 プレースホルダーが作成され、式により基になる値が定義されます。 デザイン画面とダイアログ ボックスでは、データ領域のセルかテキスト ボックスに式を直接入力することもできます (たとえば、`[ProductID]`)。  
+ 単純式は、角かっこで囲まれたデザイン画面やダイアログ ボックスに表示されます。たとえば、データセット フィールドは `[ProductID]`と表示されます。 単純式は、データセットからフィールドをテキスト ボックスにドラッグすると自動的に作成されます。 プレースホルダーが作成され、式により基になる値が定義されます。 デザイン画面とダイアログ ボックスでは、データ領域のセルかテキスト ボックスに式を直接入力することもできます (たとえば、 `[ProductID]`)。  
   
  次の表は、単純式の使用例を示します。 機能、設定プロパティ、プロパティの設定に通常使用するダイアログ ボックス、およびプロパティの値を示しています。 あらゆる式と同様に、デザイン画面、ダイアログ ボックス、プロパティ ペインに直接単純式を入力したり、[式] ダイアログ ボックスで単純式を編集できます。  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 59
 |パラメーターをメイン レポートからサブレポートに渡します。|サブレポートのパラメーター コレクション。 [サブレポートのプロパティ] ダイアログ ボックスの **[パラメーター]**を使用します。|`[@Category]`<br /><br /> `[@Category]`|  
   
 ##  <a name="Complex"></a> 複合式の使用  
- 複合式には、複数の組み込み参照、演算子、関数呼び出しを含めることができ、デザイン画面には `<<Expr>>` として表示されます。 式のテキストを表示、または変更するには、 **[式]** ダイアログ ボックスを開くか、プロパティ ペインに直接入力する必要があります。 次の表には、設定プロパティ、プロパティの設定に通常使用するダイアログ ボックス、およびプロパティの値など、複合式を使用してデータを表示または編成したり、レポートの外観を変更したりする方法を示します。 ダイアログ ボックス、デザイン画面、またはプロパティ ペインに直接式を入力できます。  
+ 複合式には、複数の組み込み参照、演算子、関数呼び出しを含めることができ、デザイン画面には `<<Expr>>`として表示されます。 式のテキストを表示、または変更するには、 **[式]** ダイアログ ボックスを開くか、プロパティ ペインに直接入力する必要があります。 次の表には、設定プロパティ、プロパティの設定に通常使用するダイアログ ボックス、およびプロパティの値など、複合式を使用してデータを表示または編成したり、レポートの外観を変更したりする方法を示します。 ダイアログ ボックス、デザイン画面、またはプロパティ ペインに直接式を入力できます。  
   
 |機能|プロパティ、コンテキスト、およびダイアログ ボックス|プロパティ値|  
 |-------------------|---------------------------------------|--------------------|  
@@ -59,7 +64,7 @@ caps.handback.revision: 59
 |値に応じてテキスト ボックス内のデータを書式設定します。|Tablix の詳細行のテキスト ボックス内のプレースホルダーの色。 [テキスト ボックスのプロパティ] ダイアログ ボックスの **[フォント]**を使用します。|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |レポート全体で参照される値を 1 回計算します。|レポート変数の値。 [レポートのプロパティ] ダイアログ ボックスの **[変数]**を使用します。|`=Variables!MyCalculation.Value`|  
 |データセットからの複数のフィールドの特定の値が含まれます。|Tablix のグループの式にフィルターを適用します。 [Tablix のプロパティ] ダイアログ ボックスの **[フィルター]**を使用します。|データ型には、 **[ブール]**を選択します。<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|デザイン画面のテキスト ボックスを非表示にします。これは *Show*というブール型パラメーターを使用して切り替えることができます。|テキスト ボックスの Hidden プロパティ。 [テキスト ボックスのプロパティ] ダイアログ ボックスの **[表示]**を使用します。|`=Not Parameters!` *Show\<boolean parameter>* `.Value`|  
+|デザイン画面のテキスト ボックスを非表示にします。これは *Show*というブール型パラメーターを使用して切り替えることができます。|テキスト ボックスの Hidden プロパティ。 [テキスト ボックスのプロパティ] ダイアログ ボックスの **[表示]**を使用します。|`=Not Parameters!`*表示\<ブール値パラメーター >*`.Value`|  
 |ページ ヘッダーまたはページ フッターの動的なコンテンツを指定します。|ページ ヘッダーまたはページ フッターに配置されるテキスト ボックス内のプレースホルダーの値。|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |パラメーターを使用してデータ ソースを動的に指定します。|データ ソースの接続文字列。 [データ ソースのプロパティ] ダイアログ ボックスの **[全般]**を使用します。|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |ユーザーが選択した複数値パラメーターのすべての値を識別します。|テキスト ボックス内のプレースホルダーの値。 [Tablix のプロパティ] ダイアログ ボックスの **[フィルター]**を使用します。|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  
@@ -68,7 +73,7 @@ caps.handback.revision: 59
 |特定のカルチャの書式に設定された日付を指定します。|データ領域のテキスト ボックス内のプレースホルダーの値。 [テキスト ボックスのプロパティ] ダイアログ ボックスの **[全般]**を使用します。|`=Fields!OrderDate.Value.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("de-DE"))`|  
 |文字列と小数点 2 桁のパーセンテージとして書式設定された数を連結します。|データ領域のテキスト ボックス内のプレースホルダーの値。 [テキスト ボックスのプロパティ] ダイアログ ボックスの **[全般]**を使用します。|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

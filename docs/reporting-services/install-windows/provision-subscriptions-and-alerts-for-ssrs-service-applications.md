@@ -1,37 +1,42 @@
 ---
-title: "SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Reporting Services 共有サービス"
-  - "SharePoint モード [Reporting Services]"
-  - "SharePoint モード"
-  - "Reporting Services サービス アプリケーション"
-  - "SSRS サービス アプリケーション"
+title: "SSRS サービス アプリケーションのサブスクリプションと警告の準備 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 06/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services Shared Service
+- SharePoint Mode [Reporting Services]
+- SharePoint Mode
+- Reporting Services Service Application
+- SSRS service application
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 caps.latest.revision: 20
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 20
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 43a5b233f39e52555696d2b6f3e08ce9077581b6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサブスクリプションとデータ警告を利用するには、SQL Server エージェントが必要です。また、SQL Server エージェントに対する権限を構成する必要もあります。 SQL Server エージェントが実行中であるにもかかわらず、SQL Server エージェントが必要であることを示すエラー メッセージが表示された場合は、権限を更新または確認してください。 このトピックでは、SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を対象とし、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを使用して SQL Server エージェントの権限を更新する 3 つの方法について説明します。 このトピックの手順で使用する資格情報には、サービス アプリケーション データベース、msdb データベース、および master データベースのオブジェクトに対する実行権限を RSExecRole に許可するための十分な権限が必要です。  
+# <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサブスクリプションとデータ警告を利用するには、SQL Server エージェントが必要です。また、SQL Server エージェントに対する権限を構成する必要もあります。 SQL Server エージェントが実行中であるにもかかわらず、SQL Server エージェントが必要であることを示すエラー メッセージが表示された場合は、権限を更新または確認してください。 このトピックでは、SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を対象とし、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを使用して SQL Server エージェントの権限を更新する 3 つの方法について説明します。 このトピックの手順で使用する資格情報には、サービス アプリケーション データベース、msdb データベース、および master データベースのオブジェクトに対する実行権限を RSExecRole に許可するための十分な権限が必要です。  
   
 ||  
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
   
- ![SQL Agent permissions to Service Application DBs](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "SQL Agent permissions to Service Application DBs")  
+ ![サービス アプリケーション データベースへの SQL エージェント権限](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "サービス アプリケーション データベースへの SQL エージェント権限")  
   
-||説明|  
+||Description|  
 |------|-----------------|  
 |**1**|Reporting Services サービス アプリケーション データベースをホストしている SQL Server データベース エンジンのインスタンス。|  
 |**2**|SQL データベース エンジンのインスタンスに対応する SQL Server エージェントのインスタンス。|  
@@ -40,19 +45,19 @@ caps.handback.revision: 20
   
  権限を更新するには、次の 3 つの方法のいずれかを使用してください。  
   
-1.  **[サブスクリプションと警告の準備]** ページで資格情報を入力し、**[OK]** をクリックします。  
+1.  **[サブスクリプションと警告の準備]** ページで資格情報を入力し、 **[OK]**をクリックします。  
   
 2.  [サブスクリプションと警告の準備] ページの **[スクリプトのダウンロード]** をクリックして、権限の構成に使用できる Transact-SQL スクリプトをダウンロードします。  
   
 3.  PowerShell コマンドレットを実行して、権限の構成に使用できる Transact-SQL スクリプトを作成します。  
   
-### 準備ページを使用して権限を更新するには  
+### <a name="to-update-permissions-using-the-provision-page"></a>準備ページを使用して権限を更新するには  
   
-1.  SharePoint サーバーの全体管理で、**[アプリケーション構成の管理]** の **[サービス アプリケーションの管理]** をクリックします。  
+1.  SharePoint サーバーの全体管理で、 **[アプリケーション構成の管理]** の **[サービス アプリケーションの管理]**をクリックします。  
   
 2.  リストからサービス アプリケーションを探し、アプリケーションの名前をクリックするか、または **[種類]** 列をクリックしてサービス アプリケーションを選択し、SharePoint リボンで **[管理]** ボタンをクリックします。  
   
-3.  **[Reporting Services アプリケーションの管理]** ページで、**[サブスクリプションと警告の準備]** をクリックします。  
+3.  **[Reporting Services アプリケーションの管理]** ページで、 **[サブスクリプションと警告の準備]**をクリックします。  
   
 4.  SharePoint 管理者がマスター データベースとサービス アプリケーション データベースに対する十分な権限を持っている場合は、それらの資格情報を入力します。  
   
@@ -60,42 +65,42 @@ caps.handback.revision: 20
   
 ##  <a name="bkmk_download"></a> Transact-SQL スクリプトをダウンロードするには  
   
-1.  SharePoint サーバーの全体管理で、**[アプリケーション構成の管理]** の **[サービス アプリケーションの管理]** をクリックします。  
+1.  SharePoint サーバーの全体管理で、 **[アプリケーション構成の管理]** の **[サービス アプリケーションの管理]**をクリックします。  
   
 2.  リストからサービス アプリケーションを探し、アプリケーションの名前をクリックするか、または **[種類]** 列をクリックしてサービス アプリケーションを選択し、SharePoint リボンで **[管理]** ボタンをクリックします。  
   
-3.  **[Reporting Services アプリケーションの管理]** ページで、**[サブスクリプションと警告の準備]** をクリックします。  
+3.  **[Reporting Services アプリケーションの管理]** ページで、 **[サブスクリプションと警告の準備]**をクリックします。  
   
 4.  **[状態の表示]** 領域で、SQL Server エージェントが実行中であることを確認します。  
   
 5.  **[スクリプトのダウンロード]** をクリックして、SQL Server Management Studio 内で実行することにより権限を構成できる Transact-SQL スクリプトをダウンロードします。 作成されるスクリプト ファイル名には、Reporting Services サービス アプリケーションの名前が使用されます (例: **[サービス アプリケーションの名前]**-GrantRights.sql)。  
   
-### PowerShell を使用して Transact-SQL ステートメントを生成するには  
+### <a name="to-generate-the-transact-sql-statement-with-powershell"></a>PowerShell を使用して Transact-SQL ステートメントを生成するには  
   
 1.  SharePoint 2016 または SharePoint 2013 の管理シェルで Windows PowerShell コマンドレットを使用して、Transact-SQL スクリプトを作成することもできます。  
   
-2.  **[スタート]** ボタンをクリックし、**[すべてのプログラム]** をクリックします。  
+2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**をクリックします。  
   
-3.  **[Microsoft SharePoint 2016 製品]** を展開し、**[SharePoint 2016 管理シェル]** をクリックします。
+3.  **[Microsoft SharePoint 2016 製品]** を展開し、 **[SharePoint 2016 管理シェル]**をクリックします。
   
 4.  次の PowerShell コマンドレットの、レポート サーバー データベース名、アプリケーション プール アカウント、およびステートメント パスを置き換えます。  
   
-     **コマンドレットの構文: ** `Get-SPRSDatabaseRightsScript –DatabaseName <ReportingServices database name> -UserName <app pool account> -IsWindowsUser | Out-File <path of statement>`  
+     **コマンドレットの構文:** `Get-SPRSDatabaseRightsScript –DatabaseName <ReportingServices database name> -UserName <app pool account> -IsWindowsUser | Out-File <path of statement>`  
   
      **サンプル コマンドレット:** `Get-SPRSDatabaseRightsScript –DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c –UserName “NT AUTHORITY\NETWORK SERVICE” –IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
   
-## Transact-SQL スクリプトの使用  
+## <a name="using-the-transact-sql-script"></a>Transact-SQL スクリプトの使用  
  次の手順は、準備ページからダウンロードしたスクリプトか、または PowerShell を使用して作成したスクリプトに対して使用できます。  
   
-#### SQL Server Management Studio に Transact-SQL スクリプトを読み込むには  
+#### <a name="to-load-the-transact-sql-script-in-sql-server-management-studio"></a>SQL Server Management Studio に Transact-SQL スクリプトを読み込むには  
   
-1.  SQL Server Management Studio を開くには、**[スタート]** メニューで、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] をクリックし、**[SQL Server Management Studio]** をクリックします。  
+1.  SQL Server Management Studio を開くには、 **[スタート]** メニューで、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] ] をクリックし、 **[SQL Server Management Studio]**をクリックします。  
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、次のオプションを設定します。  
   
-    -   **[サーバーの種類]** ボックスの一覧で、**[データベース エンジン]** をクリックします。  
+    -   **[サーバーの種類]** ボックスの一覧で、 **[データベース エンジン]**をクリックします。  
   
-    -   **[サーバー名]** で、SQL Server エージェントの構成対象となる SQL Server インスタンスの名前を入力します。  
+    -   **[サーバー名]**で、SQL Server エージェントの構成対象となる SQL Server インスタンスの名前を入力します。  
   
     -   認証モードを選択します。  
   
@@ -103,18 +108,19 @@ caps.handback.revision: 20
   
 3.  **[接続]**をクリックします。  
   
-#### Transact-SQL ステートメントを実行するには  
+#### <a name="to-run-the-transact-sql-statement"></a>Transact-SQL ステートメントを実行するには  
   
-1.  SQL Server Management Studio のツール バーで、**[新しいクエリ]** をクリックします。  
+1.  SQL Server Management Studio のツール バーで、 **[新しいクエリ]**をクリックします。  
   
-2.  **[ファイル]** メニューの **[開く]** をポイントし、**[ファイル]** をクリックします。  
+2.  **[ファイル]** メニューの **[開く]**をポイントし、 **[ファイル]**をクリックします。  
   
 3.  SharePoint 2016 または SharePoint 2013 の管理シェルで生成した Transact-SQL ステートメントの保存先フォルダーに移動します。  
   
-4.  ファイルをクリックし、**[開く]** をクリックします。  
+4.  ファイルをクリックし、 **[開く]**をクリックします。  
   
      ステートメントがクエリ ウィンドウに追加されます。  
   
 5.  **[実行]**をクリックします。  
   
   
+

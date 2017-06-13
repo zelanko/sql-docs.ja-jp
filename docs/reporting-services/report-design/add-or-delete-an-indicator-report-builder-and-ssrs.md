@@ -1,24 +1,29 @@
 ---
-title: "インジケーターの追加または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "追加または削除 (レポート ビルダーおよび SSRS) を示すインジケーター |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1356d575f58eb36d00f52bcbac1483ce902b1954
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# インジケーターの追加または削除 (レポート ビルダーおよび SSRS)
-  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 改ページ調整されたレポートのインジケーターは、1 つのデータ値の状態をひとめでわかるようにするための小さなゲージです。 詳細については、「[インジケーター (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)」を参照してください。  
+# <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>インジケーターの追加または削除 (レポート ビルダーおよび SSRS)
+  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 改ページ調整されたレポートのインジケーターは、1 つのデータ値の状態をひとめでわかるようにするための小さなゲージです。 詳細については、「 [インジケーター (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)」を参照してください。  
   
  通常、インジケーターはテーブルまたはマトリックス内のセルに置かれますが、単独で使用したり、ゲージと並べて使用したり、ゲージに埋め込むこともできます。  
   
@@ -32,14 +37,14 @@ caps.handback.revision: 8
   
 -   [同期スコープの設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
   
- インジケーターは、ゲージ パネル内に配置されるため、**[インジケーターのプロパティ]** ダイアログ ボックスまたは**プロパティ** ペインを使用してインジケーターを構成するには、パネルの代わりにインジケーターを選択する必要があります。 次の図は、ゲージ パネルで選択されたインジケーターを示します。  
+ インジケーターは、ゲージ パネル内に配置されるため、 **[インジケーターのプロパティ]** ダイアログ ボックスまたは **プロパティ** ペインを使用してインジケーターを構成するには、パネルの代わりにインジケーターを選択する必要があります。 次の図は、ゲージ パネルで選択されたインジケーターを示します。  
   
  ![rs_GaugePanelWithIndicator](../../reporting-services/report-design/media/rs-gaugepanelwithindicator.gif "rs_GaugePanelWithIndicator")  
   
 > [!NOTE]  
 >  列の幅とデータ値の長さにより、テーブル内またはマトリックス セル内のテキストは、折り返されて複数行に表示されることがあります。 そのような場合、インジケーター アイコンが引き伸ばされて形が変わる場合があります。 これにより、インジケーター アイコンが読みにくくなることがあります。 インジケーターは、四角形の中に配置し、アイコンが引き伸ばされないようにしてください。  
   
-## テーブルまたはマトリックスにインジケーターを追加するには  
+## <a name="to-add-an-indicator-to-a-table-or-matrix"></a>テーブルまたはマトリックスにインジケーターを追加するには  
   
 1.  表示するデータのテーブルおよびマトリックスが含まれる既存のレポートを開くか、新しいレポートを作成します。 詳細については、「[テーブル (レポート ビルダーおよび SSRS&)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)」または「[マトリックス (レポート ビルダーおよび SSRS&)](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 8
   
 3.  必要に応じて、**[挿入]** タブで **[四角形]** をクリックし、新しい列のセルをクリックします。  
   
-4.  **[挿入]** タブで、**[インジケーター]** をクリックし、新しい列のセルをクリックします。  
+4.  **[挿入]** タブで、 **[インジケーター]**をクリックし、新しい列のセルをクリックします。  
   
      セルに四角形を追加した場合は、そのセルをクリックします。  
   
@@ -61,16 +66,16 @@ caps.handback.revision: 8
   
      インジケーターは既定値を使用するように構成されています。 既定では、インジケーターは測定単位としてパーセンテージを使用するように構成されており、パーセンテージの範囲は、インジケーターのメンバー間に均等に配分されます。インジケーターが示す値には、最も近いグループのスコープが使用されます。  
   
-## テーブルまたはマトリックスからインジケーターを削除するには  
+## <a name="to-delete-an-indicator-to-a-table-or-matrix"></a>テーブルまたはマトリックスからインジケーターを削除するには  
   
-1.  削除するインジケーターを右クリックし、**[削除]** をクリックします。  
+1.  削除するインジケーターを右クリックし、 **[削除]**をクリックします。  
   
     > [!NOTE]  
     >  インジケーターは、他のインジケーターまたはゲージを含むゲージ パネル内に配置されている場合があります。 ゲージ パネルに複数の項目が含まれている場合は、ゲージ パネルではなく、削除するインジケーターをクリックするよう注意してください。 ゲージ パネルをクリックして削除すると、ゲージ パネルだけでなく、その中の項目がすべて削除されます。  
   
 2.  **[削除]**をクリックします。  
   
-## 参照  
- [インジケーター (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>参照  
+ [インジケーター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

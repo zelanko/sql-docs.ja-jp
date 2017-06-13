@@ -1,3 +1,4 @@
+# [Visual Database Tools](visual-database-tools.md)
 # [[テーブルの追加] ダイアログ ボックス (クエリ デザイナーおよびビュー デザイナー) (Visual Database Tools)](add-table-dialog-box-query-and-view-designers-visual-database-tools.md)
 # [[変更スクリプトの保存] ダイアログ ボックス (Visual Database Tools)](save-change-script-dialog-box-visual-database-tools.md)
 # [複数のユーザーによる変更の調整 (Visual Database Tools)](reconcile-changes-made-by-multiple-users-visual-database-tools.md)
@@ -155,7 +156,6 @@
 # [同一クエリ内で HAVING 句および WHERE 句を使用する (Visual Database Tools)](use-having-and-where-clauses-in-the-same-query-visual-database-tools.md)
 # [クエリおよびビュー デザイナーでの移動 (Visual Database Tools)](navigate-in-the-query-and-view-designer-visual-database-tools.md)
 # [集計クエリにおける列の使用 (Visual Database Tools)](work-with-columns-in-aggregate-queries-visual-database-tools.md)
-# [Visual Database Tools](visual-database-tools.md)
 # [値の一致しない行を選択する方法 (Visual Database Tools)](select-rows-that-do-not-match-a-value-visual-database-tools.md)
 # [[保存前の通知] ダイアログ ボックス (Visual Database Tools)](post-save-notifications-dialog-box-visual-database-tools.md)
 # [クエリの保存 (Visual Database Tools)](save-queries-visual-database-tools.md)

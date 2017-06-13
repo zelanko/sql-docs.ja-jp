@@ -1,7 +1,7 @@
 ---
 title: "sqlcmd ユーティリティの使用 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/05/2016
+ms.date: 06/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -22,18 +22,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0da3877ee499ec318f386b875f6e3caa7ff3d4ea
+ms.sourcegitcommit: 0c1e5939ddf08692998f26ccbb2c2fa699342c55
+ms.openlocfilehash: 4ff24dabc28ae25ec38a546ed8f119979eef4e60
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/07/2017
 
 ---
-# <a name="sqlcmd---use-the-utility"></a>sqlcmd - ユーティリティの使用
+# <a name="sqlcmd---use-the-utility"></a>sqlcmd のユーティリティを使用して
   **sqlcmd** ユーティリティは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントおよびスクリプトを対話形式でアドホック実行したり、 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト タスクを自動化したりするためのコマンドライン ユーティリティです。 **sqlcmd** を対話形式で使用したり、 **sqlcmd**を使用して実行できるスクリプト ファイルを作成したりするには、ユーザーが [!INCLUDE[tsql](../../includes/tsql-md.md)]を理解している必要があります。 **sqlcmd** ユーティリティは一般的に次のように使用されます。  
   
--   コマンド プロンプトでの操作と同様、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを対話形式で入力します。 結果はコマンド プロンプトに表示されます。 コマンド プロンプト ウィンドウを開くには、 **[スタート]**ボタンをクリックし、 **[すべてのプログラム]**をポイントします。次に **[アクセサリ]**をポイントし、 **[コマンド プロンプト]**をクリックします。 コマンド プロンプトで「 **sqlcmd** 」と入力し、その後に必要なオプションのリストを入力します。 **sqlcmd**でサポートされるオプションの一覧については、「 [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)」を参照してください。  
+-   ユーザーが入力[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント、コマンド プロンプトでの操作と同様にします。 結果はコマンド プロンプトに表示されます。 コマンド プロンプト ウィンドウを開くには、Windows の検索ボックスに「cmd」を入力してください。**コマンド プロンプト**を開きます。 コマンド プロンプトで「 **sqlcmd** 」と入力し、その後に必要なオプションのリストを入力します。 **sqlcmd**でサポートされるオプションの一覧については、「 [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)」を参照してください。  
   
--   実行する **ステートメントを 1 つ指定するか、実行する** ステートメントの入ったテキスト ファイルをユーティリティに指定して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブを実行します。 出力先はコマンド プロンプトにすることもできますが、通常はテキスト ファイルに出力されます。  
+-   実行する **ステートメントを 1 つ指定するか、実行する** ステートメントの入ったテキスト ファイルをユーティリティに指定して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブを実行します。 出力は、通常、テキスト ファイルに送られますが、コマンド プロンプトも表示されます。  
   
 -   [クエリ エディターの](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md) SQLCMD モード [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
@@ -41,21 +41,17 @@ ms.lasthandoff: 04/11/2017
   
 -   SQL Server エージェントの CmdExec ジョブ  
   
-## <a name="typically-used-sqlcmd-options"></a>一般的な sqlcmd オプション  
- 最もよく使用されるオプションを次に示します。  
+## <a name="typically-used-sqlcmd-options"></a>通常使用される sqlcmd オプション  
   
--   サーバー オプション (**-S**)。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which **sqlcmd** connects.  
+-   サーバー オプション (**-s**) のインスタンスを識別[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する**sqlcmd**接続します。  
   
--   認証オプション (**-E**、 **-U**、 **-P**)。 **sqlcmd** から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続するために使用する資格情報を指定します。  
+-   認証オプション (**-e**、 **-u**、および**-p**) 資格情報を指定する**sqlcmd**はのインスタンスに接続を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 **注:**オプション**-e**は、既定値を指定する必要はありません。  
   
-    > **注:** **-E** オプションは既定値なので、指定する必要はありません。  
+-   入力オプション (**-q**、 **-q**、および**-i**) への入力場所を特定**sqlcmd**です。  
   
--   入力オプション (**-Q**、 **-q**、 **-i**)。 **sqlcmd**への入力場所を指定します。  
+-   出力オプション (**-o**) ファイルを指定**sqlcmd**にその出力を切り替えることです。  
   
--   出力オプション (**-o**)。 **sqlcmd** の結果を出力するファイルを指定します。  
-  
-## <a name="connecting-to-the-sqlcmd-utility"></a>sqlcmd ユーティリティへの接続  
- 次に、 **sqlcmd** ユーティリティの一般的な使用法を示します。  
+## <a name="connect-to-the-sqlcmd-utility"></a>Sqlcmd ユーティリティへの接続します。  
   
 -   Windows 認証を使用して既定のインスタンスに接続し、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを対話的に実行します。  
   
@@ -103,7 +99,7 @@ ms.lasthandoff: 04/11/2017
   
     > **ヒント** **sqlcmd** ユーティリティでサポートされているオプションの一覧を表示するには、 `sqlcmd -?`を実行してください。  
   
-## <a name="running-transact-sql-statements-interactively-by-using-sqlcmd"></a>sqlcmd を使用した Transact-SQL ステートメントの対話的な実行  
+## <a name="run-transact-sql-statements-interactively-by-using-sqlcmd"></a>Sqlcmd を使用した TRANSACT-SQL ステートメントを対話的に実行します。  
  コマンド プロンプト ウィンドウでは、 **sqlcmd** ユーティリティを対話的に使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **を使用して対話的に**ステートメントを実行するには、入力ファイルまたはクエリを指定するための **-Q**、 **-q**、 **-Z**、または **-i** オプションを使用せずにこのユーティリティを実行します。 例:  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
@@ -207,7 +203,7 @@ ms.lasthandoff: 04/11/2017
   
  行 `3> GO` の後の行は、 `SELECT` ステートメントの出力です。 出力の生成後、 `sqlcmd` により `sqlcmd` プロンプトがリセットされ、 `1>`が表示されます。 行 `EXIT` で「 `1>`」と入力すると、最初にコマンド プロンプト ウィンドウを開いたときと同じ行が表示されます。 これは、 `sqlcmd` のセッションを終了したことを示します。 その状態で再度 `EXIT` コマンドを入力すると、コマンド プロンプト ウィンドウを閉じることができます。  
   
-## <a name="running-transact-sql-script-files-by-using-sqlcmd"></a>sqlcmd を使用した Transact-SQL スクリプト ファイルの実行  
+## <a name="running-transact-sql-script-files-using-sqlcmd"></a>Sqlcmd を使用して TRANSACT-SQL スクリプト ファイルを実行します。  
  **sqlcmd** を使用してデータベース スクリプト ファイルを実行できます。 スクリプト ファイルは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、 **sqlcmd** コマンド、およびスクリプト変数が混在したテキスト ファイルです。 変数をスクリプト化する方法の詳細については、「 [sqlcmd でのスクリプト変数の使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)」をご覧ください。 スクリプト ファイル内のステートメント、コマンド、およびスクリプト変数に対して**sqlcmd** で行われる処理は、対話的に入力したステートメントやコマンドの処理と似ています。 **sqlcmd** が対話入力の場合と大きく異なる点は、ユーザーがステートメント、コマンド、およびスクリプト変数を入力するまで待機するのではなく、入力ファイルを最後まで中断することなく読み取るという点です。  
   
  データベース スクリプト ファイルの作成方法はいくつかあります。  
@@ -561,7 +557,7 @@ SQLCMD –E –N –C
   
  プロバイダーで `ForceProtocolEncryption = True` が指定されている場合、接続文字列で `Encrypt=No` が設定されていても暗号化が有効になります。  
   
-## <a name="see-also"></a>参照  
+## <a name="more-about-sqlcmd"></a>Sqlcmd に関する詳細情報  
  [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)   
  [sqlcmd でのスクリプト変数の使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
  [クエリ エディターによる SQLCMD スクリプトの編集](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   

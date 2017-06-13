@@ -1,23 +1,28 @@
 ---
-title: "データセットへのフィルターの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "フィルターをデータセットに追加 (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
 caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68838748a77567747cd7f44f7924738d87b68450
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# データセットへのフィルターの追加 (レポート ビルダーおよび SSRS)
+# <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>データセットへのフィルターの追加 (レポート ビルダーおよび SSRS)
   データが外部データ ソースから取得された後に、データセットにフィルターを追加してレポート内のデータを制限できます。 データセットにフィルターを追加すると、すべてのレポート パーツまたはデータ領域では、フィルター条件に一致するデータのみが使用されます。  
   
  共有データセットの場合、すべての依存アイテムに適用されるフィルターは、レポート サーバー上の共有データセット定義の一部である必要があります。 共有データセットのインスタンスを含むレポートまたはレポート パーツは、インスタンスにのみ適用される追加のフィルターを作成できます。  
@@ -27,7 +32,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 共有データセットにフィルターを追加するには  
+### <a name="to-add-a-filter-to-a-shared-dataset"></a>共有データセットにフィルターを追加するには  
   
 1.  共有データセット モードで共有データセットを開きます。  
   
@@ -49,11 +54,11 @@ caps.handback.revision: 8
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 埋め込みデータセットまたは共有データセットのインスタンスにフィルターを追加するには  
+### <a name="to-add-a-filter-to-an-embedded-dataset-or-a-shared-dataset-instance"></a>埋め込みデータセットまたは共有データセットのインスタンスにフィルターを追加するには  
   
 1.  レポート デザイン モードでレポートを開きます。  
   
-2.  **レポート データ** ペインでデータセットを右クリックし、**[データセットのプロパティ]** をクリックします。 **[データセットのプロパティ]** ダイアログ ボックスが表示されます。  
+2.  **レポート データ** ペインでデータセットを右クリックし、 **[データセットのプロパティ]**をクリックします。 **[データセットのプロパティ]** ダイアログ ボックスが表示されます。  
   
 3.  **[フィルター]**をクリックします。 現在のフィルター式の一覧が表示されます。 既定では、何も表示されません。  
   
@@ -71,8 +76,8 @@ caps.handback.revision: 8
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 参照  
- [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+## <a name="see-also"></a>参照  
+ [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [フィルターの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md)  
   

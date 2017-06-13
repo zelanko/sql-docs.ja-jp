@@ -1,25 +1,30 @@
 ---
-title: "URL アクセスを使用してレポートをエクスポートする | Microsoft Docs"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "形式 [Reporting Services], URL レンダリング"
-  - "URL アクセス [Reporting Services], レンダリング形式"
+title: "URL アクセスを使用してレポートをエクスポート |Microsoft ドキュメント"
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- formats [Reporting Services], URL rendering
+- URL access [Reporting Services], rendering formats
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
 caps.latest.revision: 42
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 42
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d9ee4dd3c00d9e250fd3c773a917ad3cf90f84c4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# URL アクセスを使用してレポートをエクスポートする
+# <a name="export-a-report-using-url-access"></a>URL アクセスを使用してレポートをエクスポートする
   *rs:Format* URL パラメーターを使用すると、レポートを表示する形式を必要に応じて指定できます。  HTML4.0 および HTM5 (表示拡張機能) の場合は、ブラウザーにレンダリングされます。他の形式の場合は、レポート出力をローカル ファイルに保存するよう促すメッセージが表示されます。  
   
  たとえば、ネイティブ モードのレポート サーバーから直接レポートの PDF コピーを取得するには、次の URL を使用します。  
@@ -44,8 +49,8 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
   
  *Format* パラメーターを URL の一部として含めない場合は、レポート サーバーがブラウザーを検出し、適切な HTML 形式でレポートを表示します。  
   
-## 参照  
- [URL アクセス (SSRS)](../reporting-services/url-access-ssrs.md)   
+## <a name="see-also"></a>参照  
+ [URL アクセス &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [URL アクセス パラメーター リファレンス](../reporting-services/url-access-parameter-reference.md)  
   
   

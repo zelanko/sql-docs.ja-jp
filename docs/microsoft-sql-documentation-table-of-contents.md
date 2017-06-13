@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7fbfb58c3cadb58914371a4947426dad5756be9c
+ms.sourcegitcommit: 4b11270e4535868da764601fcce1a2d3c12e077d
+ms.openlocfilehash: 36e98253c0445c07280734c18262cf4a0908736e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="microsoft-sql-documentation"></a>Microsoft SQL ドキュメント
@@ -25,5 +25,6 @@ ms.lasthandoff: 04/11/2017
 
 - SQL Server とそれに関連するいくつかのテクノロジの目次を左側に示します。
 - Azure SQL を含む SQL テクノロジのより大規模なセットの目次については、[SQL ハブ ページ](sql-hub-menu.md)をご覧ください。
+-  SQL Server の以前のバージョンに関連するコンテンツでは、次を参照してください。 [SQL Server 2014 の製品ドキュメント](http://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)です。 
 
 **参照**: その他の Azure データベース テクノロジ ([DocumentDB と Data Factory](/azure/#pivot=services&panel=databases) など)。  

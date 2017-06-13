@@ -1,23 +1,28 @@
 ---
-title: "範囲グラフ (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "範囲グラフ (レポート ビルダーおよび SSRS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 48e351d3-ac5b-4eda-a4bd-32a0de206a30
 caps.latest.revision: 5
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 5
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1cdcf1877134ea93ec52b3c7fb70dbfeda536a93
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# 範囲グラフ (レポート ビルダーおよび SSRS)
+# <a name="range-charts-report-builder-and-ssrs"></a>範囲グラフ (レポート ビルダーおよび SSRS)
   範囲グラフでは、同じカテゴリの複数の値によってそれぞれ定義された、一連のデータ ポイントが表示されます。 値は、マーカーの高さ (値軸) で表されます。 カテゴリのラベルは、カテゴリ軸に表示されます。 一般的な範囲グラフでは、各データ ポイントの最高値と最低値の間の領域が設定されます。  
   
  次の図は、3 つの系列の一般的な範囲グラフを示しています。  
@@ -27,7 +32,7 @@ caps.handback.revision: 5
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## バリエーション  
+## <a name="variations"></a>バリエーション  
   
 -   **平滑範囲**: 平滑範囲グラフでは、直線ではなく曲線が表示されます。  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 5
   
 -   **範囲横棒**: 範囲横棒グラフでは、領域ではなく横棒を使用して範囲を表示します。  
   
-## 範囲グラフのデータに関する注意点  
+## <a name="data-considerations-for-range-charts"></a>範囲グラフのデータに関する注意点  
   
 -   範囲グラフでは、データ ポイントごとに 2 つの値が必要です。 これらの値は、各データ ポイントの範囲を定義する高値および低値に対応しています。  
   
@@ -51,8 +56,8 @@ caps.handback.revision: 5
   
 -   ガント チャートは、範囲横棒グラフを使用して作成できます。  
   
-## 参照  
- [グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>参照  
+ [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [グラフの種類 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   

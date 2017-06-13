@@ -1,37 +1,42 @@
 ---
-title: "カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "カスケード型パラメーターを追加 (レポート ビルダーおよび SSRS) レポートに |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8efc7a0b7120faa53a63bd07c51029a1b379f9e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)
+# <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)
   カスケード型パラメーターを使用すると、大量のレポート データの管理が可能になります。 パラメーターの値の一覧が、別のパラメーターで選択された値によって決まるように、関連するパラメーターのセットを定義できます。 たとえば、最初のパラメーターが独立しており、製品カテゴリの一覧を表すとします。 ユーザーが任意のカテゴリを選択すると、2 番目のパラメーターは最初のパラメーターの値によって決まります。 その値は、選択したカテゴリ内のサブカテゴリの一覧で更新されます。 ユーザーがレポートを表示するとき、カテゴリ パラメーターとサブカテゴリ パラメーターの両方の値を使用して、レポート データにフィルターが適用されます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- カスケード型パラメーターを作成するには、まずデータセット クエリを定義し、必要な各カスケード型パラメーターにクエリ パラメーターを指定します。 各カスケード型パラメーターについて、使用可能な値を提供する独立したデータセットを作成する必要もあります。 詳細については、「[レポート パラメーターの値の追加、変更、または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add, change, or delete available values for a report parameter.md)」を参照してください。  
+ カスケード型パラメーターを作成するには、まずデータセット クエリを定義し、必要な各カスケード型パラメーターにクエリ パラメーターを指定します。 各カスケード型パラメーターについて、使用可能な値を提供する独立したデータセットを作成する必要もあります。 詳細については、「[レポート パラメーターの値の追加、変更、または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)」を参照してください。  
   
  一覧の後半にあるパラメーターのデータセット クエリには一覧の前半にある各パラメーターへの参照が含まれているため、カスケード型パラメーターでは順序が重要な意味を持ちます。 実行時には、レポート データ ペインのパラメーターの順序によって、パラメーター クエリがレポート内で作成される順序が決まります。したがって、ユーザーが後続の各パラメーター値を選択する順序が決まります。  
   
  複数の値を使用したカスケード型パラメーターを作成する方法、および [すべて選択] 機能を含める方法の詳細については、「 [How to have a Select All Multivalue Cascading Parameter](http://go.microsoft.com/fwlink/?LinkId=184757)」を参照してください。  
   
-## 関連する複数のパラメーターを含むクエリを使用してメイン データセットを作成するには  
+## <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>関連する複数のパラメーターを含むクエリを使用してメイン データセットを作成するには  
   
-1.  レポート データ ペインでデータ ソースを右クリックし、**[データセットの追加]** をクリックします。  
+1.  レポート データ ペインでデータ ソースを右クリックし、 **[データセットの追加]**をクリックします。  
   
 2.  **[名前]**ボックスに、データセットの名前を入力します。  
   
@@ -54,9 +59,9 @@ caps.handback.revision: 11
   
  次に、独立したパラメーターの値を提供するデータセットを作成します。  
   
-## 独立したパラメーターの値を提供するデータセットを作成するには  
+## <a name="to-create-a-dataset-to-provide-values-for-an-independent-parameter"></a>独立したパラメーターの値を提供するデータセットを作成するには  
   
-1.  レポート データ ペインでデータ ソースを右クリックし、**[データセットの追加]** をクリックします。  
+1.  レポート データ ペインでデータ ソースを右クリックし、 **[データセットの追加]**をクリックします。  
   
 2.  **[名前]**ボックスに、データセットの名前を入力します。  
   
@@ -78,9 +83,9 @@ caps.handback.revision: 11
   
  次に、このデータセットを使用する最初のパラメーターのプロパティを設定して、実行時に使用可能な値を入力します。  
   
-## レポート パラメーターに使用可能な値を設定するには  
+## <a name="to-set-available-values-for-a-report-parameter"></a>レポート パラメーターに使用可能な値を設定するには  
   
-1.  レポート データ ペインでパラメーター フォルダーの最初のパラメーターを右クリックし、**[パラメーターのプロパティ]** をクリックします。  
+1.  レポート データ ペインでパラメーター フォルダーの最初のパラメーターを右クリックし、 **[パラメーターのプロパティ]**をクリックします。  
   
 2.  **[名前]**ボックスのパラメーターの名前が正しいことを確認します。  
   
@@ -88,7 +93,7 @@ caps.handback.revision: 11
   
 4.  **[クエリから値を取得]**をクリックします。 3 つのフィールドが表示されます。  
   
-5.  **[データセット]** ボックスのドロップダウン リストから、前の手順で作成したデータセットの名前をクリックします。  
+5.  **[データセット]**ボックスのドロップダウン リストから、前の手順で作成したデータセットの名前をクリックします。  
   
 6.  **[値]** フィールドで、パラメーター値を指定するフィールドの名前をクリックします。  
   
@@ -98,9 +103,9 @@ caps.handback.revision: 11
   
  次に、従属パラメーターの値を提供するデータセットを作成します。  
   
-## 従属パラメーターの値を提供するデータセットを作成するには  
+## <a name="to-create-a-dataset-to-provide-values-for-a-dependent-parameter"></a>従属パラメーターの値を提供するデータセットを作成するには  
   
-1.  レポート データ ペインでデータ ソースを右クリックし、**[データセットの追加]** をクリックします。  
+1.  レポート データ ペインでデータ ソースを右クリックし、 **[データセットの追加]**をクリックします。  
   
 2.  **[名前]**ボックスに、データセットの名前を入力します。  
   
@@ -115,15 +120,15 @@ caps.handback.revision: 11
     WHERE (Category = @Category)  
     ```  
   
-     WHERE 句の Category は \<table> のフィールドの名前であり、@Category はクエリ パラメーターです。 このステートメントを使用すると、@Category に指定したカテゴリのサブカテゴリの一覧が生成されます。 この値は実行時に、ユーザーが同名のレポート パラメーターに選択した値を使用して入力されます。  
+     カテゴリは、フィールドの名前を WHERE 句で\<テーブル > と@Categoryクエリ パラメーターです。 このステートメントで指定したカテゴリのサブカテゴリの一覧を生成する@Categoryです。 この値は実行時に、ユーザーが同名のレポート パラメーターに選択した値を使用して入力されます。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
  次に、このデータセットを使用する 2 番目のパラメーターのプロパティを設定して、実行時に使用可能な値を入力します。  
   
-## レポート パラメーターに使用可能な値を設定するには  
+## <a name="to-set-available-values-for-a-report-parameter"></a>レポート パラメーターに使用可能な値を設定するには  
   
-1.  レポート データ ペインでパラメーター フォルダーの最初のパラメーターを右クリックし、**[パラメーターのプロパティ]** をクリックします。  
+1.  レポート データ ペインでパラメーター フォルダーの最初のパラメーターを右クリックし、 **[パラメーターのプロパティ]**をクリックします。  
   
 2.  **[名前]**ボックスのパラメーターの名前が正しいことを確認します。  
   
@@ -131,7 +136,7 @@ caps.handback.revision: 11
   
 4.  **[クエリから値を取得]**をクリックします。  
   
-5.  **[データセット]** ボックスのドロップダウン リストから、前の手順で作成したデータセットの名前をクリックします。  
+5.  **[データセット]**ボックスのドロップダウン リストから、前の手順で作成したデータセットの名前をクリックします。  
   
 6.  **[値]** フィールドで、パラメーター値を指定するフィールドの名前をクリックします。  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 11
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## カスケード型パラメーターをテストするには  
+## <a name="to-test-the-cascading-parameters"></a>カスケード型パラメーターをテストするには  
   
 1.  **[実行]**をクリックします。  
   
@@ -153,12 +158,12 @@ caps.handback.revision: 11
   
 4.  **[レポートの表示]**をクリックします。 選択したパラメーターに基づいて、レポートの表示が更新されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レポート パラメーターの追加、変更、または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)   
- [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+ [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

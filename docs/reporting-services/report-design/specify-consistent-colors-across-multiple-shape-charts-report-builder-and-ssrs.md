@@ -1,24 +1,29 @@
 ---
-title: "複数の図形グラフでの色の統一 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "複数の図形グラフ レポート ビルダー SSRS に一貫した色を指定 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 1f8ad4185acdcc86bd93367b23fab8be8ed95d9a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# 複数の図形グラフでの色の統一 (レポート ビルダーおよび SSRS)
-  改ページ調整されたレポートの図形以外のグラフの場合、[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] によって、グラフの系列のインデックスに基づいてパレットから新しい色が選択されます。 たとえば、グラフの最初の系列は、パレット内の最初の色にマップされます。 しかし、この動作は図形グラフでは異なります。 図形グラフの場合、パレットの各色は、データセット内のデータ ポイントにマップされます。 たとえば、データ ポイント 1 はパレットの最初の色にマップされ、データ ポイント 2 は 2 番目の色にマップされます。  
+# <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>複数の図形グラフでの色の統一 (レポート ビルダーおよび SSRS)
+  改ページ調整されたレポートの図形以外のグラフの場合、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] によって、グラフの系列のインデックスに基づいてパレットから新しい色が選択されます。 たとえば、グラフの最初の系列は、パレット内の最初の色にマップされます。 しかし、この動作は図形グラフでは異なります。 図形グラフの場合、パレットの各色は、データセット内のデータ ポイントにマップされます。 たとえば、データ ポイント 1 はパレットの最初の色にマップされ、データ ポイント 2 は 2 番目の色にマップされます。  
   
  値がないデータ ポイントは、図形グラフに表示されません。 したがって、そのデータ ポイントへの色のマッピングはスキップされます。 たとえば、ポイント 2 の値が 0 の場合、ポイント 1 にパレットの最初の色がマップされ、ポイント 3 にパレットの 2 番目の色がマップされます。 空のポイントを描画する必要がない場合、円グラフのデータセットの空のポイントにパレット色を使用する必要はないので、この方法は便利です。  
   
@@ -29,17 +34,17 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## テーブルまたはマトリックス内の複数のスパークライン図形グラフで色を統一するには  
+## <a name="to-specify-consistent-colors-across-multiple-sparkline-shape-charts-in-a-table-or-matrix"></a>テーブルまたはマトリックス内の複数のスパークライン図形グラフで色を統一するには  
   
 1.  グラフをクリックして、グラフ データ ペインを表示します。  
   
-2.  **[カテゴリ グループ]** 領域内のカテゴリを右クリックし、**[カテゴリ グループのプロパティ]** をクリックします。  
+2.  **[カテゴリ グループ]** 領域内のカテゴリを右クリックし、 **[カテゴリ グループのプロパティ]**をクリックします。  
   
 3.  [全般] タブの **[グループの同期]** ボックスで、色を同期させるカテゴリの名前をクリックし、 **[OK]**をクリックします。  
   
-## 複数の図形グラフで色を統一するには  
+## <a name="to-specify-consistent-colors-across-multiple-shape-charts"></a>複数の図形グラフで色を統一するには  
   
-1.  レポート本文の外側を右クリックし、**[レポートのプロパティ]** を選択します。  
+1.  レポート本文の外側を右クリックし、 **[レポートのプロパティ]**を選択します。  
   
 2.  **[コード]**のテキスト ボックスに次のコードを入力します。  
   
@@ -63,9 +68,9 @@ caps.handback.revision: 8
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  図形グラフ上を右クリックし、**[系列のプロパティ]** を選択します。  
+4.  図形グラフ上を右クリックし、 **[系列のプロパティ]**を選択します。  
   
-5.  **[塗りつぶし]** の**式** (*[fx]*) ボタンをクリックして、**Color** プロパティの式を編集します。  
+5.  **[塗りつぶし]**の **式** (*[fx]*) ボタンをクリックして、 **Color** プロパティの式を編集します。  
   
 6.  次の式を入力します。ここで、"MyCategoryField" は、 **[カテゴリ グループ]** 領域に表示されるフィールドです。  
   
@@ -73,9 +78,9 @@ caps.handback.revision: 8
     =Code.GetColor(Fields!MyCategoryField)  
     ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [グラフへの傾斜、エンボス、およびテクスチャのスタイルの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs.md)   
+ [グラフへの傾斜、エンボス、およびテクスチャのスタイルの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [パレットを使用したグラフの色の定義 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [空のポイントのグラフへの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)   
  [図形グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)   

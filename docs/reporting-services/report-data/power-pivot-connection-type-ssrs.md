@@ -1,54 +1,59 @@
 ---
-title: "Power Pivot の接続の種類 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot の接続の種類 (SSRS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 11e5762b794060577704a31cf59836839b464d76
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# Power Pivot の接続の種類 (SSRS)
+# <a name="power-pivot-connection-type-ssrs"></a>Power Pivot の接続の種類 (SSRS)
   SQL Server Analysis Services データ処理拡張機能を使用すると、SharePoint の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーにパブリッシュされた [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックからデータを取得することができます。  
   
  このトピックの情報を使用して、データ ソースを構築してください。 手順については、「[データ接続を追加および確認する &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)」を参照してください。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ソースは、SharePoint サイトの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーにパブリッシュされている必要があります。  
   
  レポート ビルダーから [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックへの接続をサポートするには、ワークステーション コンピューターに SQL Server 2008 R2 ADOMD.NET が必要です。 このクライアント ライブラリは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel と共にインストールされますが、このアプリケーションがインストールされていないコンピューターを使用する場合は、 [SQL Server 2008 R2 用 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=192565)に関するページから ADOMD.NET をダウンロードしてインストールする必要があります。  
   
-## データ ソースの種類  
+## <a name="data-source-type"></a>データ ソースの種類  
  使用するレポート データ ソースの種類は **Microsoft SQL Server Analysis Services**です。  
   
-## 接続文字列  
- 接続文字列は、SharePoint の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーまたはその他のライブラリにパブリッシュされた [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックの URL です (例: http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx)。  
+## <a name="connection-string"></a>接続文字列  
+ 接続文字列は、URL[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]での SharePoint にパブリッシュされたブック、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]ギャラリーまたはその他のライブラリ`http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`です。  
   
-## [資格情報]  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックおよび SharePoint サイトへのアクセスに必要な資格情報を指定します (Windows 認証 (統合セキュリティ) など)。 詳細については、「[データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」または「[レポート ビルダーでの資格情報の指定](../Topic/Specify%20Credentials%20in%20Report%20Builder.md)」を参照してください。  
+## <a name="credentials"></a>[資格情報]  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックおよび SharePoint サイトへのアクセスに必要な資格情報を指定します (Windows 認証 (統合セキュリティ) など)。 詳細については、「[データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」または「[レポート ビルダーでの資格情報の指定](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)」を参照してください。  
   
-## クエリ  
+## <a name="queries"></a>クエリ  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ソースに接続した後、MDX グラフィカル クエリを使用して、基となるデータ構造を参照および選択してクエリを作成します。 クエリを作成したら、それを実行して結果ペインにサンプル データを表示します。  
   
  クエリ デザイナーにより、クエリを分析してデータセット フィールドが決定されます。 また、 **レポート データ** ペインでデータセット フィールド コレクションを手動で編集することもできます。 詳細については、「[レポート データ ペインでのフィールドの追加、編集、更新 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)」を参照してください。  
   
-## フィルター  
+## <a name="filters"></a>フィルター  
  フィルター ペインで、クエリ結果から除外するか、クエリ結果に追加するディメンションおよびメンバーを指定します。  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  フィルター ペインで、フィルターの **[パラメーター]** オプションを選択して、フィルターの選択に対応する使用可能な値を持つレポート パラメーターが自動的に作成されるようにします。  
   
-## 解説  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックからレポート ビルダーを開いた場合、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックのピボットテーブル、ピボットグラフ、スライサー、およびその他のレイアウト機能や分析機能は、レポートで再作成されません。 代わりに、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブック内のデータを参照する、あらかじめ構成されたデータ ソースが空のレポートに含まれます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックに基づくレポートをデザインする場合、レポートで再作成するスライサー、フィルター、およびテーブルやグラフの数によっては、手間と時間がかかることがあります。 そのため、レポートでのデータの表示方法については、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のデザインとは切り離して考えることをお勧めします。  
+## <a name="remarks"></a>解説  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックからレポート ビルダーを開いた場合、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックのピボットテーブル、ピボットグラフ、スライサー、およびその他のレイアウト機能や分析機能は、レポートで再作成されません。 代わりに、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブック内のデータを参照する、あらかじめ構成されたデータ ソースが空のレポートに含まれます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックに基づくレポートをデザインする場合、レポートで再作成するスライサー、フィルター、およびテーブルやグラフの数によっては、手間と時間がかかることがあります。 そのため、レポートでのデータの表示方法については、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のデザインとは切り離して考えることをお勧めします。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブック内のデータは大幅に圧縮されていますが、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックから取得されたレポートのデータは圧縮されません。 クエリ デザイナーを使用してフィルターとパラメーターを指定し、レポートに必要なデータだけに制限します。  
   
@@ -62,8 +67,8 @@ caps.handback.revision: 9
   
 -   レポートには、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ソースからの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データのみが格納されます。  
   
-## 参照  
- [Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](../Topic/Analysis%20Services%20MDX%20Query%20Designer%20User%20Interface%20\(Report%20Builder\).md)   
+## <a name="see-also"></a>参照  
+ [Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

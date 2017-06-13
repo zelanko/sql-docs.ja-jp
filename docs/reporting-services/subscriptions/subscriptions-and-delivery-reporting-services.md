@@ -1,41 +1,46 @@
 ---
-title: "サブスクリプションと配信 (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "サブスクリプション [Reporting Services]、レポートの配信"
-  - "レポート [Reporting Services]、配信"
-  - "レポートの配信 [Reporting Services]"
-  - "パブリッシュされたレポート [Reporting Services]、配信"
-  - "レポートの送信"
-  - "レポートの共有"
-  - "レポートの送信 [Reporting Services]"
-  - "レポートの配信 [Reporting Services]、サブスクリプション"
-  - "サブスクリプション [Reporting Services]、サブスクリプションについて"
-  - "サブスクリプション [Reporting Services]"
+title: "サブスクリプションと配信 (Reporting Services) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscriptions [Reporting Services], report distribution
+- reports [Reporting Services], distributing
+- distributing reports [Reporting Services]
+- published reports [Reporting Services], distributing
+- sending reports
+- sharing reports
+- delivering reports [Reporting Services]
+- distributing reports [Reporting Services], subscriptions
+- subscriptions [Reporting Services], about subscriptions
+- subscriptions [Reporting Services]
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 caps.latest.revision: 56
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 56
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 5ecd364a199f122c98471f112e153d98d2778852
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/13/2017
+
 ---
-# サブスクリプションと配信 (Reporting Services)
+# <a name="subscriptions-and-delivery-reporting-services"></a>サブスクリプションと配信 (Reporting Services)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションは、特定の時刻で、またはイベントへの応答として、指定されたファイル形式でレポートを配信する構成です。 たとえば、毎週水曜日に、MonthlySales.rdl レポートを Microsoft Word 文書としてファイル共有に保存します。 サブスクリプションを使用して、レポート配信のスケジュールや自動化を設定したり、レポート パラメーターの特定の値セットを指定したりすることができます。  
   
  1 つのレポートに複数のサブスクリプションを作成して、サブスクリプションのオプションを変更することができます。たとえば、異なるパラメーター値を指定して、西部地域の売上レポート、東部地域の売上レポート、全地域の売上レポートのように、3 つのバージョンのレポートを作成できます。  
   
- ![SSRS サブスクリプション フローの例](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "SSRS サブスクリプション フローの例")  
+ ![ssrs サブスクリプション フローの例](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "ssrs サブスクリプション フローの例")  
   
- サブスクリプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2016 の各エディションがサポートする機能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)」を参照してください。  
+ サブスクリプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
  **このトピックの内容:**  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 56
   
  **このセクションのトピック:**  
   
--   [Reporting Services の電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)。レポート サーバーのファイル共有の配信操作および構成について説明します。  
+-   [Reporting Services の電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md) 。レポート サーバーのファイル共有の配信操作および構成について説明します。  
   
 -   [Create and Manage Subscriptions for Native Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) ネイティブ モードのレポート サーバーでサブスクリプションを作成するための詳細な手順です。  
   
@@ -67,11 +72,11 @@ caps.handback.revision: 56
   
 -   [SharePoint Library Delivery in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md) SharePoint ライブラリへのサブスクリプションの配信について説明します。  
   
--   [データ ドリブン サブスクリプション](../../reporting-services/subscriptions/data-driven-subscriptions.md)実行時にレポート出力をカスタマイズする際のデータ ドリブン サブスクリプションの使用に関する情報を記載しています。  
+-   [データ ドリブン サブスクリプション](../../reporting-services/subscriptions/data-driven-subscriptions.md) 実行時にレポート出力をカスタマイズする際のデータ ドリブン サブスクリプションの使用に関する情報を記載しています。  
   
 -   [Reporting Services のサブスクリプションを監視する](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
   
--   [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md)  
+-   [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
 ##  <a name="bkmk_subscription_scenarios"></a> サブスクリプションおよび配信のシナリオ  
  サブスクリプションごとに配信オプションを構成し、使用可能なオプションは選択する配信拡張機能によって決まります。 配信拡張機能は、いくつかの配信方法をサポートするモジュールです。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には複数の配信拡張機能が含まれており、配信拡張機能はサード パーティ ベンダーから利用できる可能性があります。  
@@ -88,7 +93,7 @@ caps.handback.revision: 56
 |レポートをデータ ドリブンにする|データ ドリブン サブスクリプションを使用して、実行時にレポート出力、配信オプション、およびレポート パラメーター設定をカスタマイズします。 サブスクリプションでは、クエリを使用して、実行時にデータ ソースから入力値を取得します。 データ ドリブン サブスクリプションを使用すると、サブスクリプションの処理時に決定されるサブスクライバーの一覧にレポートを送信する、文書の差し込み操作を実行できます。|  
   
 ##  <a name="bkmk_standard_and_datadriven"></a> 標準のサブスクリプションとデータ ドリブン サブスクリプション  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、**標準**および**データ ドリブン**の 2 種類のサブスクリプションをサポートします。 標準のサブスクリプションは、各ユーザーが作成して管理します。 標準のサブスクリプションは、サブスクリプションの処理中には変化しない静的な値で構成されます。 標準のサブスクリプションごとに、レポート表示オプション、配信オプション、およびレポート パラメーターのセットが 1 つ用意されます。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、 **標準** および **データ ドリブン**の 2 種類のサブスクリプションをサポートします。 標準のサブスクリプションは、各ユーザーが作成して管理します。 標準のサブスクリプションは、サブスクリプションの処理中には変化しない静的な値で構成されます。 標準のサブスクリプションごとに、レポート表示オプション、配信オプション、およびレポート パラメーターのセットが 1 つ用意されます。  
   
  データ ドリブン サブスクリプションでは、外部のデータ ソースをクエリすることによって、サブスクリプション情報が実行時に取得されます。受信者、レポート パラメーター、またはアプリケーション形式を指定する値は、この外部のデータ ソースが提供します。 データ ドリブン サブスクリプションは、受信者の一覧が非常に大きい場合、または受信者ごとにレポートの出力を変更する場合に使用できます。 データ ドリブン サブスクリプションを使用するには、クエリの作成に関する専門知識を持っていて、パラメーターの使用方法を理解していることが必要です。 通常、レポート サーバー管理者が、これらのサブスクリプションを作成して管理します。 詳細については、以下を参照してください。  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 56
 |要件|Description|  
 |-----------------|-----------------|  
 |Permissions|レポートへのアクセス権は必須です。 レポートをサブスクライブするには、レポートを表示する権限が必要です。<br /><br /> ネイティブ モードのレポート サーバーでは、次のロールの割り当てがサブスクリプションに影響します。<br /><br /> -   "個別のサブスクリプションを管理" タスクでは、ユーザーが特定のレポートのサブスクリプションを作成、変更、および削除できます。 定義済みのロールである閲覧者ロールとレポート ビルダー ロールには、このタスクが含まれています。 このタスクを含むロールの割り当てを使用すると、ユーザーは自分が作成するサブスクリプションのみを管理できます。<br />-   "すべてのサブスクリプションを管理" タスクでは、ユーザーがすべてのサブスクリプションにアクセスしてそれらを変更できます。 このタスクは、データ ドリブン サブスクリプションを作成する場合に必要です。 定義済みのロールでは、コンテンツ マネージャー ロールにのみ、このタスクが含まれます。|  
-|格納された資格情報|サブスクリプションを作成するには、レポートが保存された資格情報を使用するか、または実行時にデータを取得するために資格情報を使用しないことが必要です。 現在のユーザーの資格情報の権限借用や委任を使用して外部データ ソースに接続するように構成されているレポートは、サブスクライブすることはできません。 保存された資格情報は、Windows アカウントまたはデータベース ユーザー アカウントのいずれかです。 詳細については、「[レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。<br /><br /> レポートを閲覧するための権限のほか、各サブスクリプションを作成するための権限を所有していることが必要です。 レポート サーバーでは、**[定期的なイベントおよびレポート配信]** が有効になっている必要があります。 詳細については、「[ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](http://msdn.microsoft.com/ja-jp/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)」を参照してください。|  
+|格納された資格情報|サブスクリプションを作成するには、レポートが保存された資格情報を使用するか、または実行時にデータを取得するために資格情報を使用しないことが必要です。 現在のユーザーの資格情報の権限借用や委任を使用して外部データ ソースに接続するように構成されているレポートは、サブスクライブすることはできません。 保存された資格情報は、Windows アカウントまたはデータベース ユーザー アカウントのいずれかです。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。<br /><br /> レポートを閲覧するための権限のほか、各サブスクリプションを作成するための権限を所有していることが必要です。 レポート サーバーでは、**[定期的なイベントおよびレポート配信]** が有効になっている必要があります。 詳細については、「 [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)」を参照してください。|  
 |レポート内のユーザー依存の値|標準的なサブスクリプションに限り、ユーザー アカウント情報をフィルターに組み込んだレポートや、レポートに表示されるテキストとしてのレポートのサブスクリプションを作成できます。 レポートでは、現在のユーザーとして解釈される **User!UserID** 式を使用して、ユーザー アカウント名を指定します。 サブスクリプションを作成する時点では、サブスクリプションを作成するユーザーが現在のユーザーとして想定されます。|  
 |モデル アイテム セキュリティは無効|モデルにモデル アイテム セキュリティの設定が含まれている場合、データ ソースとしてモデルを使用するレポート ビルダー レポートをサブスクライブすることはできません。 この制限は、モデル アイテム セキュリティを使用するレポートのみが対象となります。|  
 |パラメーターの値|レポートでパラメーターを使用する場合、レポート自体または定義するサブスクリプションでパラメーター値を指定する必要があります。 レポートで既定値が定義されている場合は、パラメーター値でその既定値を使用するように設定できます。|  
@@ -112,7 +117,7 @@ caps.handback.revision: 56
   
  ユーザーがサブスクリプションを作成するとき、レポートの配信方法を決定するために、利用可能な配信拡張機能の 1 つを選択できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、次の配信拡張機能があります。  
   
-|配信拡張機能|説明|  
+|配信拡張機能|Description|  
 |------------------------|-----------------|  
 |Windows ファイル共有|レポートを静的なアプリケーション ファイルとして、ネットワーク上の共有フォルダーに配信します。|  
 |電子メール|通知またはレポートを、電子メールの添付ファイルまたは URL リンクとして配信します。|  
@@ -146,15 +151,15 @@ caps.handback.revision: 56
   
  サブスクリプションに定義されている形式に従ってレポートが生成され、指定した送信先にレポートまたは通知が配信されます。 レポートを配信できない場合、レポート サーバーのログ ファイルにエントリが記録されます。 再試行の操作を実行できるようにする場合、最初の配信が失敗したときにもう一度配信を試みるようにレポート サーバーを構成できます。  
   
-### 標準のサブスクリプション処理  
+### <a name="processing-a-standard-subscription"></a>標準のサブスクリプション処理  
  標準のサブスクリプションからは、レポートのインスタンスが 1 つ生成されます。 レポートの配信先は、単一の共有フォルダーか、サブスクリプションに指定されている複数の電子メール アドレスになります。 レポートのレイアウトおよびデータは変わりません。 パラメーターを使用する場合、標準のサブスクリプション処理ではレポートのパラメーターごとに 1 つの値が使用されます。  
   
-### データ ドリブン サブスクリプションの処理  
+### <a name="processing-a-data-driven-subscription"></a>データ ドリブン サブスクリプションの処理  
  データ ドリブン サブスクリプションからは、レポートのインスタンスが複数生成され、インスタンスを複数の送信先に配信できます。 サブスクライバーの結果セットからパラメーター値が渡された場合、レポートのレイアウトは変わりませんが、レポートのデータが変わる場合があります。 行セットから値が渡された場合にも、レポートをどう表示するか、およびレポートを電子メールにアタッチするのか、リンクするのかを決定する配信オプションがサブスクライバーごとに異なることがあります。  
   
  データ ドリブン サブスクリプションからは、多数の配信が生成されることがあります。 サブスクリプション クエリから返された行セットの 1 行ごとに 1 件の配信が生成されます。  
   
-### レポート配信の特性  
+### <a name="report-delivery-characteristics"></a>レポート配信の特性  
  標準のサブスクリプションにより配信されるレポートは、通常は静的なレポートとして表示されます。 それらのレポートは、直前のレポート実行スナップショットを基にするか、配信を完了するための静的なレポートとして生成されます。 要求時に実行されるレポートに対してサブスクリプションの **[リンクを含める]** オプションが選択されている場合、ハイパーリンクをクリックするとレポート サーバー側でレポートが実行されます。  
   
 > [!NOTE]  
@@ -162,7 +167,7 @@ caps.handback.revision: 56
   
  データ ドリブン サブスクリプションによって配信されるレポートは、サブスクリプションが処理されている間に再生成される場合があります。 レポート サーバーは、データ ドリブン サブスクリプションを完了するために、レポートまたはレポートのデータセットの特定のインスタンスをロックしません。 サブスクリプションでサブスクライバーごとに異なるパラメーターの値を使用した場合、それぞれに合わせた出力を生成するためにレポートが再生成されます。 最初のレポートのコピーが作成および配信された後で基になるデータが更新された場合、それ以後にそのレポートを受け取ったユーザーには、異なる結果セットを基にしたデータが表示されることがあります。 スナップショットとして実行されるレポートを使用すると、すべてのサブスクライバーに同じレポートのインスタンスが確実に配信されます。 ただし、スケジュールに設定されているスナップショットの更新がサブスクリプションの処理中に行われた場合、受け取るレポートのデータがユーザー間で異なることがあります。  
   
-### サブスクリプション処理の開始  
+### <a name="triggering-subscription-processing"></a>サブスクリプション処理の開始  
  レポート サーバーでは、スケジュールで指定されたタイム ドリブン イベントまたはスナップショット更新イベントの 2 種類のイベントを使用して、サブスクリプション処理を開始します。  
   
  タイム ドリブン トリガーは、レポート固有のスケジュールまたは共有スケジュールを使用し、サブスクリプションが実行される日時を指定します。 要求時レポートおよびキャッシュされたレポートでは、スケジュールはトリガー オプションのみです。  
@@ -172,7 +177,7 @@ caps.handback.revision: 56
 ##  <a name="bkmk_code"></a> サブスクリプションのプログラムによる制御  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オブジェクト モデルでは、プログラムを使用してサブスクリプションとサブスクリプションの処理を監査および制御できます。  次の例と開始方法をご覧ください。  
   
--   [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md)  
+-   [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
 -   PowerShell を使用してサブスクリプションを有効および無効にする方法の例については、「 [Disable or Pause Report and Subscription Processing](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)」を参照してください。  
   
@@ -180,10 +185,11 @@ caps.handback.revision: 56
   
 -   **ファイル共有アカウント**を使用するよう構成されている [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサブスクリプションをすべて列挙する PowerShell スクリプトの例については、「[サブスクリプション設定とファイル共有アカウント &#40;構成マネージャー&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データ ドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [スケジュール](../../reporting-services/subscriptions/schedules.md)   
  [Reporting Services レポート サーバー &#40;ネイティブ モード&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Reporting Services のサブスクリプションを監視する](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
   
   
+
