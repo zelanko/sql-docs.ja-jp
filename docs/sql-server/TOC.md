@@ -21,6 +21,7 @@
 ## [SQL Server 2012 リリース ノートします。](../release-notes/sql-server-2012-release-notes.md)
 ## [SQL Server 2012 SP1 リリース ノート](../release-notes/sql-server-2012-sp1-release-notes.md)
 ## [SQL Server 2012 SP2 のリリース ノートします。](../release-notes/sql-server-2012-sp2-release-notes.md)
+## [SQL Server 2012 SP3 リリース ノートします。](../release-notes/sql-server-2012-sp3-release-notes.md)
 ## [SQL Server 2008 R2 SP2 リリース ノート](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
@@ -37,5 +38,4 @@
 
 # ドキュメントについて
 ## [SQL Server リソース](sql-server-resources.md)
-## [SQL Server ドキュメントのオフライン アクセス](sql-server-documentation-offline-access.md)
 ## [ヘルプ ビューアー](../release-notes/sql-server-help-installation.md)
