@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bca71096e7e34aa6a72c84f065fd7df76eb6462f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>例: XMLDATA オプションと XMLSCHEMA オプションを使用した結果としてのスキーマの要求

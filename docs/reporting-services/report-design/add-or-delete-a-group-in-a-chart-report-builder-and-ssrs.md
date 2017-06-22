@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5360240569fcffe5f9708f68d7f95403e45c0909
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>グラフでのグループの追加または削除 (レポート ビルダーおよび SSRS)

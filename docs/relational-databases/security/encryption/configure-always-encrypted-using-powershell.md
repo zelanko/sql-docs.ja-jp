@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
 ms.openlocfilehash: dcd6c2dc9c489a888c647a77c27ce9694d154699
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>PowerShell を使用した Always Encrypted の構成
@@ -41,8 +41,8 @@ SQL Server インスタンスをホストしているコンピューターでは
 
 SqlServer モジュールを読み込むには:
 
-1.    適切なスクリプト実行ポリシーを設定するには、 **Set-ExecutionPolicy** コマンドレットを使用します。
-2.    SqlServer モジュールをインポートするには、 **Import-Module** コマンドレットを使用します。
+1.  適切なスクリプト実行ポリシーを設定するには、 **Set-ExecutionPolicy** コマンドレットを使用します。
+2.  SqlServer モジュールをインポートするには、 **Import-Module** コマンドレットを使用します。
 
 次に示すのは SqlServer モジュールを読み込む例です。
 
@@ -126,26 +126,26 @@ $database | Get-SqlColumnMasterKey
 
 Always Encrypted では次の PowerShell コマンドレットを使用できます。
 
-|コマンドレット    |説明
+|コマンドレット |説明
 |:---|:---
-|**[Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)**    |Azure への認証を実行し、認証トークンを取得します。
-|**[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)**    |データベースの既存の列暗号化キー オブジェクトに新しく暗号化された値を追加します。
-|**[Complete-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/complete-sqlcolumnmasterkeyrotation)**    |列マスター キーのローテーションを完了します。
-|**[Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey)**    |データベースで定義されているすべての列暗号化キー オブジェクトを返すか、指定された名前の特定の列暗号化キー オブジェクトを返します。
-|**[Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey)**    |データベースで定義されている列マスター キー オブジェクトを返すか、指定された名前の特定の列マスター キー オブジェクトを返します。
-|**[Invoke-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/invoke-sqlcolumnmasterkeyrotation)**    |列マスター キーのローテーションを開始します。
-|**[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)**    |Azure Key Vault に格納されている非対称キーを記述する SqlColumnMasterKeySettings オブジェクトを作成します。
-|**[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)**    |Cryptography Next Generation (CNG) API をサポートするキー ストアに格納されている非対称キーを記述する SqlColumnMasterKeySettings オブジェクトを作成します。
-|**[New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)**    |データベース内の列の暗号化キー オブジェクトを作成します。
-|**[New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)**    |列暗号化キーの暗号化された値を生成します。
-|**[New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings)**    |CEK と暗号化の種類を含め、1 つの列の暗号化に関する情報をカプセル化する SqlColumnEncryptionSettings オブジェクトを作成します。
-|**[New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)**    |データベース内の列マスター キー オブジェクトを作成します。
+|**[Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)**   |Azure への認証を実行し、認証トークンを取得します。
+|**[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)**   |データベースの既存の列暗号化キー オブジェクトに新しく暗号化された値を追加します。
+|**[Complete-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/complete-sqlcolumnmasterkeyrotation)**   |列マスター キーのローテーションを完了します。
+|**[Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey)** |データベースで定義されているすべての列暗号化キー オブジェクトを返すか、指定された名前の特定の列暗号化キー オブジェクトを返します。
+|**[Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey)** |データベースで定義されている列マスター キー オブジェクトを返すか、指定された名前の特定の列マスター キー オブジェクトを返します。
+|**[Invoke-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/invoke-sqlcolumnmasterkeyrotation)**   |列マスター キーのローテーションを開始します。
+|**[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)**   |Azure Key Vault に格納されている非対称キーを記述する SqlColumnMasterKeySettings オブジェクトを作成します。
+|**[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)**   |Cryptography Next Generation (CNG) API をサポートするキー ストアに格納されている非対称キーを記述する SqlColumnMasterKeySettings オブジェクトを作成します。
+|**[New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)** |データベース内の列の暗号化キー オブジェクトを作成します。
+|**[New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)** |列暗号化キーの暗号化された値を生成します。
+|**[New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings)**   |CEK と暗号化の種類を含め、1 つの列の暗号化に関する情報をカプセル化する SqlColumnEncryptionSettings オブジェクトを作成します。
+|**[New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)** |データベース内の列マスター キー オブジェクトを作成します。
 |**[新しい SqlColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkeysettings)**|指定されたプロバイダーとキーのパスを使用して、列マスター キーの SqlColumnMasterKeySettings オブジェクトを作成します。
-|**[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)**    |Cryptography API (CAPI) をサポートする暗号化サービス プロバイダー (CSP) によってキー ストアに格納されている非対称キーを記述する SqlColumnMasterKeySettings オブジェクトを作成します。
-|**[Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey)**    |データベースから列暗号化キー オブジェクトを削除します。
-|**[Remove-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkeyvalue)**    |データベースの既存の列暗号化キー オブジェクトから暗号化された値を削除します。
-|**[Remove-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnmasterkey)**    |データベースから列マスター キー オブジェクトを削除します。
-|**[Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)**    |データベースの指定された列を暗号化、復号化、または再暗号化します。
+|**[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)**   |Cryptography API (CAPI) をサポートする暗号化サービス プロバイダー (CSP) によってキー ストアに格納されている非対称キーを記述する SqlColumnMasterKeySettings オブジェクトを作成します。
+|**[Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey)**   |データベースから列暗号化キー オブジェクトを削除します。
+|**[Remove-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkeyvalue)** |データベースの既存の列暗号化キー オブジェクトから暗号化された値を削除します。
+|**[Remove-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnmasterkey)**   |データベースから列マスター キー オブジェクトを削除します。
+|**[Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)**   |データベースの指定された列を暗号化、復号化、または再暗号化します。
 
 
 

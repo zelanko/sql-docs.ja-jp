@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 49a53643e94d64fc47932bc2ee8dc3200967ae23
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>SSMS Usage Feedback Collection の Local Audit
@@ -28,9 +28,9 @@ SQL Server Management Studio (SSMS) には、匿名の機能使用状況デー�
 ## <a name="audit-feature-usage-data"></a>Audit 機能の使用状況データ
 
 SSMS で収集される機能の使用状況データを表示するには、次の操作を行います。
-1.    SSMS を起動します。
-2.    メインメニューで **[ビュー]**、**[出力]** の順にクリックし、**[出力]** ウィンドウを表示します。 
-3.    **[出力]** ウィンドウが表示されたら、**[出力元の表示:]** メニューで **[テレメトリ]** を選択します。
+1.  SSMS を起動します。
+2.  メインメニューで **[ビュー]**、**[出力]** の順にクリックし、**[出力]** ウィンドウを表示します。 
+3.  **[出力]** ウィンドウが表示されたら、**[出力元の表示:]** メニューで **[テレメトリ]** を選択します。
 
 SSMS を使用してデータベースと対話している間に、収集されたデータが **[出力]** ウィンドウに表示されます。
 

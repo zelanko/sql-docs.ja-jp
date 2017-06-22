@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 17c975de731604cb3bec9586735b344f532a50ab
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [全般] ページ

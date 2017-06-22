@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 88c9d4b8fc33bcbd7666c09505be752f4c762718
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>ダイアグラムで選択したテーブルの保存 (Visual Database Tools)

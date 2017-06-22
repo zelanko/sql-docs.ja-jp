@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 09253894ace06e9bd0b6a515e133eb8e2f5860a1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Always Encrypted と .NET Framework Data Provider を使用して開発する
@@ -262,7 +262,7 @@ cmd.ExecuteNonQuery();
 
 列暗号化キーを取得するプロセスは次のとおりです。
 
-1.    クエリで Always Encrypted が有効になっている場合、.NET Framework Data Provider for SQL Server は透過的に **sys.sp_describe_parameter_encryption** を呼び出し、暗号化された列をターゲットとするパラメーターの暗号化メタデータを取得します (クエリにパラメーターがある場合)。 クエリ結果に含まれる暗号化されたデータの場合、SQL Server は自動的に暗号化メタデータをアタッチします。 列マスター キーに関する情報には、以下のものが含まれます。
+1.  クエリで Always Encrypted が有効になっている場合、.NET Framework Data Provider for SQL Server は透過的に **sys.sp_describe_parameter_encryption** を呼び出し、暗号化された列をターゲットとするパラメーターの暗号化メタデータを取得します (クエリにパラメーターがある場合)。 クエリ結果に含まれる暗号化されたデータの場合、SQL Server は自動的に暗号化メタデータをアタッチします。 列マスター キーに関する情報には、以下のものが含まれます。
     - 列マスター キーを含むキー ストアをカプセル化する、キー ストア プロバイダーの名前。 
     - キー ストア内の列マスター キーの場所を指定するキー パス。
     
@@ -270,8 +270,8 @@ cmd.ExecuteNonQuery();
 
     - 列暗号化キーの暗号化された値。
     - 列暗号化キーの暗号化に使用されたアルゴリズムの名前。
-2.    .NET Framework Data Provider for SQL Server は、列マスター キー ストア プロバイダーの名前を使用して、内部データ構造でプロバイダー オブジェクト (SqlColumnEncryptionKeyStoreProvider クラスから派生したクラスのインスタンス) を検索します。
-3.    列暗号化キーを復号化するために、.NET Framework Data Provider for SQL Server は SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryptionKey メソッドを呼び出します。その場合、暗号化された列暗号化キーの生成に使用される、列マスター キー パス、列暗号化キーの暗号化された値と暗号化アルゴリズムの名前を渡します。
+2.  .NET Framework Data Provider for SQL Server は、列マスター キー ストア プロバイダーの名前を使用して、内部データ構造でプロバイダー オブジェクト (SqlColumnEncryptionKeyStoreProvider クラスから派生したクラスのインスタンス) を検索します。
+3.  列暗号化キーを復号化するために、.NET Framework Data Provider for SQL Server は SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryptionKey メソッドを呼び出します。その場合、暗号化された列暗号化キーの生成に使用される、列マスター キー パス、列暗号化キーの暗号化された値と暗号化アルゴリズムの名前を渡します。
 
 
 

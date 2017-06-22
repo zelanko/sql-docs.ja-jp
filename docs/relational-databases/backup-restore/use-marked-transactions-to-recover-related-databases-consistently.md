@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 937eb729c5252b09a82576805102d3cdcbceeb21
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>マークされたトランザクションを使用して関連するデータベースを一貫した状態に復元する

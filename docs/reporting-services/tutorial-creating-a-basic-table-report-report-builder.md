@@ -20,7 +20,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 021a980dee9f6cd72f663475ba084962fa543cd4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)

@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c9c042b372ac98efb372ff2198893c2dab5402e5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="distributor-info-subscription-watch-list-snapshot-pub-sql-2005"></a>ディストリビューター情報、サブスクリプション ウォッチ リスト (スナップショット パブリケーション、SQL 2005 以降)
