@@ -39,10 +39,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 0927784589c1f7227b432ff49f81f29de20083ec
-ms.openlocfilehash: 24e3ba52aed5d78f0ea5a1a50ab8bab21675f007
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: 68e743e2c94aab725d6d6a79737cac3c2ec1bc06
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server"></a>エディションと SQL Server のサポートされる機能
@@ -116,7 +116,7 @@ ms.lasthandoff: 05/27/2017
 |-------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブック|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の主要マニュアル。| 
 
-**Developer Edition と Evaluation Edition **  
+**Developer Edition と Evaluation Edition**   
 Developer Edition と Evaluation Edition でサポートされている機能については、下の表に記載されている SQL Server Enterprise Edition の機能をご覧ください。
 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 の Developer Edition に追加された機能の一覧については、[SQL Server 2016 SP1 の各エディション](https://aka.ms/uw6cw4)に関するページをご覧ください。  
 

@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 03f81b7010fdba70cccc916406b70131dd24cb8d
+ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
+ms.openlocfilehash: 40b7bd5f5f8bf6682a7c85d332cce420baf06105
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>メモリ最適化テーブルでのトランザクション
@@ -35,24 +35,6 @@ SQL Server のトランザクション分離レベルは、ディスク ベー�
 メモリ最適化テーブルでのトランザクションに固有のエラー条件については、「 [競合の検出と再試行ロジック](#confdetretry34ni)」のセクションに移動してください。
   
 詳細については、「 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。  
-  
-  
-  
-#### <a name="sections-in-this-article"></a>この記事のセクション:  
-  
-- [ペシミスティックとオプティミスティック](#pessvoptim22ni)  
-- [トランザクション開始モード](#txninitmodes24ni)  
-  - [Explicit モードのコード例](#codeexamexpmode25ni)  
-- [行のバージョン管理](#rowver28ni)  
-- [トランザクション分離レベル](#confdegreeiso30ni)  
-- [トランザクション フェーズと有効期間](#txnphaslife32ni)  
-- [競合の検出と再試行ロジック](#confdetretry34ni)  
-  - [再試行 T-SQL コードの例](#retrytsqlcodeexam35ni)  
-- [複数コンテナーにまたがるトランザクション](#crossconttxn38ni)  
-- [制限事項](#limitations40ni)  
-- [ネイティブ コンパイル ストアド プロシージャ](#natcompstorprocs42ni)  
-- [その他のトランザクション リンク](#othertxnlinks44ni)  
-  
   
   
 <a name="pessvoptim22ni"/>  

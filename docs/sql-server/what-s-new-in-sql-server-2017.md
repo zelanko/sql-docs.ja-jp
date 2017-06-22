@@ -1,7 +1,7 @@
 ---
 title: "どのような &#39; の SQL Server 2017 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 05/23/2017
+ms.date: 06/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 1d363db8e8bd0e1460cdea3c3a7add68e48714c9
-ms.openlocfilehash: 25d81efe1b915f0e4ddc5eab2feb4142ad2ceb8f
+ms.sourcegitcommit: aa08b5e7de9bb317fd781a98ee5d829431b92df6
+ms.openlocfilehash: 66c9bc4f2cba20076c357d27fdfacbc767a94c5c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="what39s-new-in-sql-server-2017"></a>どのような &#39; の SQL Server 2017
@@ -67,8 +67,8 @@ SQL Server 2017 では、SQL Server、Linux、Linux ベースの Docker コン�
 - CLR は、セキュリティ境界としてはサポートされなくなる .NET framework コード アクセス セキュリティ (CAS) を使用します。 作成された CLR アセンブリ`PERMISSION_SET = SAFE`外部システム リソースにアクセスし、アンマネージ コードを呼び出し、sysadmin 特権を取得できる場合があります。 以降で[!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]、`sp_configure`と呼ばれるオプション`clr strict security`は CLR アセンブリのセキュリティを強化するために導入されました。 `clr strict security`既定では、有効になり、処理`SAFE`と`EXTERNAL_ACCESS`アセンブリ マークされている場合と`UNSAFE`です。 `clr strict security`オプションは、旧バージョンと互換性のため、無効にすることができますが推奨されていません。 Microsoft では、すべてのアセンブリは、証明書または非対称キーに対応するログインが与えられているによって署名することをお勧め`UNSAFE ASSEMBLY`master データベースにアクセスを許可します。 詳細については、次を参照してください。 [CLR 厳格なセキュリティ](../database-engine/configure-windows/clr-strict-security.md)です。  
 - 多対多リレーションシップをモデル化するグラフのデータベース機能です。 これが新規に含まれます[CREATE TABLE](../t-sql/statements/create-table-sql-graph.md)ノードとエッジ テーブルとキーワードを作成するための構文[一致](../t-sql/queries/match-sql-graph.md)クエリ。 詳細については、次を参照してください。[グラフは、SQL Server 2017 を使用した処理](../relational-databases/graphs/sql-graph-overview.md)です。   
 - パフォーマンスの問題の潜在的なクエリに関する洞察を提供するデータベース機能は、自動チューニング、ソリューションを推奨して、修正プログラムが自動的に問題を識別します。 自動チューニング[!INCLUDE[ssnoversion](../includes/ssnoversion.md)]潜在的なパフォーマンスの問題が検出され、修正措置を適用することができます常に通知する、またはにより、[!INCLUDE[ssde](../includes/ssde-md.md)]パフォーマンスの問題を自動的に修復します。 詳細については、次を参照してください。[自動チューニング](../relational-databases/automatic-tuning/automatic-tuning.md)です。  
--    バッチ モード アダプティブへの参加 (データベースの互換性 140) プランの品質向上します。
--    (データベースの互換性 140) プランの品質を向上させるために複数ステートメントの T-SQL Tvf の逐次的実行します。
+-   バッチ モード アダプティブへの参加 (データベースの互換性 140) プランの品質向上します。
+-   (データベースの互換性 140) プランの品質を向上させるために複数ステートメントの T-SQL Tvf の逐次的実行します。
 - クエリのストア今すぐも追跡待機の統計情報の概要情報。 1 つのクエリのストア内のクエリの待機統計情報のカテゴリを追跡するには、エクスペリエンスのトラブルシューティング、さらに強化、ワークロードのパフォーマンスおよびクエリのストアのキーの利点を維持しながら、ボトルネックを把握を提供するパフォーマンスの次のレベルが有効にします。
 - Always On 可用性グループの同じインスタンスの一部であるデータベースを含む、可用性グループの一部であるデータベース間のすべての複数のデータベースにトランザクションのサポートを DTC。 詳細については、次を参照してください[トランザクション - Always On 可用性グループとデータベース ミラーリング。](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 - 新しい列**modified_extent_page_count**で導入された[sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)データベースの各データベース ファイル差分変更を追跡します。
@@ -76,7 +76,6 @@ SQL Server 2017 では、SQL Server、Linux、Linux ベースの Docker コン�
 - SQL Server セットアップは、初期の tempdb ファイル サイズの最大指定をサポート**(262,144 MB) は 256 GB**ファイルのサイズがより大きい値に設定されている場合、警告とファイルあたり**1 GB** IFI が有効になっていない場合。
 - 新しい動的管理ビュー (DMV) [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md)データベースごとのバージョン ストアの使用状況を追跡するために導入されました。
 - 新しい DMV [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) DBCC LOGINFO のような VLF 情報を公開するが導入されました。
-- DBCC CLONEDATABASE は、データベースの複製でクエリ ストアのランタイム統計情報の欠落を回避する複製中のランタイム統計情報が消去されます。 さらに、サポート、フルテキスト インデックスのクローンを作成し、DBCC CLONEDATABASE をさらに向上します。
 - システム バージョン管理されたテンポラル テーブルは、連鎖削除と連鎖更新をサポートします。
 - この CTP にはデータベース エンジンのバグ修正が含まれています。
 - 2017 年の詳細な一覧については、以前の CTP リリースで CTP の機能強化を参照してください[SQL Server 2017 (データベース エンジン) の新](../database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md)です。   

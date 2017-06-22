@@ -1,7 +1,7 @@
 ---
 title: "SQL Server チュートリアル |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 05/24/2017
+ms.date: 06/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: erikre
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: f1220e70a98fd38ac2f38f892a42ff88c3f64555
+ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
+ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/25/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server チュートリアル
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/25/2017
 |[Integration Services のチュートリアル](../integration-services/integration-services-tutorials.md)|[!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージの作成と配置の方法を学習します。|  
 |[レプリケーションのチュートリアル](../relational-databases/replication/replication-tutorials.md)|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用してレプリケーション トポロジをセットアップして実行する方法について説明します。|  
 |[Reporting Services チュートリアル &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|基本的なレポートとサブスクリプションを作成する方法について説明します。|  
-|[SQL Server R Services のチュートリアル](../advanced-analytics/r-services/sql-server-r-services-tutorials.md)|R 言語を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データを操作する方法、 [!INCLUDE[tsql](../includes/tsql-md.md)]から R スクリプトを実行する方法について説明します。|  
+|[SQL Server R Services のチュートリアル](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|R 言語を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データを操作する方法、 [!INCLUDE[tsql](../includes/tsql-md.md)]から R スクリプトを実行する方法について説明します。|  
   
  ## <a name="previously-published-tutorials"></a>以前に発行されたチュートリアル:  
   

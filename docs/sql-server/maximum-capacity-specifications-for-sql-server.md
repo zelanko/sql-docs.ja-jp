@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: b03d9514e39fad101a305784b6852e012e3e4aad
+ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
+ms.openlocfilehash: b93591eb1d0f34b792adc6f2c998dbfdd9fca4b5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server の最大容量仕様
@@ -140,14 +140,14 @@ ms.lasthandoff: 05/12/2017
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] レプリケーション オブジェクト||最大サイズ/最大数 (SQL Server 64 ビットの場合)|  
 |--------------------------------------------------|-|---------------------------------------------------|  
-|アーティクル数 (マージ パブリケーション)||256|  
+|アーティクル数 (マージ パブリケーション)||2048|  
 |アーティクル数 (スナップショットまたはトランザクション パブリケーション)||32,767|  
 |テーブル内の列数* (マージ パブリケーション)||246|  
 |テーブル内の列数** ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のスナップショットまたはトランザクション パブリケーション)||1,000|  
 |テーブル内の列数** (Oracle のスナップショットまたはトランザクション パブリケーション)||995|  
 |行フィルターで使用される列のバイト数 (マージ パブリケーション)||1,024|  
 |行フィルターで使用される列のバイト数 (スナップショットまたはトランザクション パブリケーション)||8,000|  
-  
+
  *行レベルの追跡を使用して競合を検出する場合 (既定値)、ベース テーブルには最大 1,024 列含めることができますが、最大 246 列がパブリッシュされるようにアーティクルから列をフィルター選択する必要があります。 列の追跡を使用する場合、ベース テーブルには最大 246 列を含めることができます。  
   
  **ベース テーブルには、パブリケーション データベースで許容される最大数 ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の場合は 1,024) の列を含めることができますが、列数がパブリケーション タイプに対して指定された最大数を超える場合は、アーティクルから列をフィルター選択する必要があります。  
