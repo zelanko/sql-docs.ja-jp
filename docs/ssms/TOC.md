@@ -7,6 +7,8 @@
 # [ソリューション エクスプ ローラー +](../ssms/solution/solution-explorer.md)
 # [テンプレート +](../ssms/template/template-explorer.md)
 # [Visual Database Tools +](../ssms/visual-db-tools/visual-database-tools.md)
+# [サーバーの登録 +](../ssms/register-servers/register-servers.md)
+# [チュートリアル +](../ssms/tutorials/tutorial-sql-server-management-studio.md)
 
 # [SSMS とは](sql-server-management-studio-ssms.md)
 # [SSMS の変更ログ](sql-server-management-studio-changelog-ssms.md)
@@ -42,3 +44,7 @@
 # [[ツール] メニューへの外部ツールの追加 (SSMS)](add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md)
 # [ログインの監査の構成 (SSMS)](configure-login-auditing-sql-server-management-studio.md)
 # [ツールボックスの使用](use-the-toolbox.md)
+
+# [Ssms ユーティリティ](ssms-utility.md)  
+# [SQL Server Management Studio のキーボード ショートカット](sql-server-management-studio-keyboard-shortcuts.md)  
+

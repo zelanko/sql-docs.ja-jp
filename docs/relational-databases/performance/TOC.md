@@ -1,3 +1,4 @@
+# [アダプティブ クエリ処理](adaptive-query-processing.md)
 # [自動調整](../automatic-tuning/automatic-tuning.md)
 # [基数推定](cardinality-estimation-sql-server.md)  
 
