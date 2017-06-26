@@ -22,13 +22,19 @@ SQL Server 2017 CTP 1.4 追加`sequence_number`に`sys.availability_groups`こ�
 設定する`REQUIRED_COPIES_TO_COMMIT`0 の場合に実行します。
 
 ```bash
-sudo pcs resource update <**ag1**> required_copies_to_commit=0
+sudo pcs resource update <**ag_cluster**> required_copies_to_commit=0
+```
+
+(SLES での) crm の使用と同等のコマンドを、次に示します。
+
+```bash
+sudo crm resource param <**ag_cluster**> set required_synchronized_secondaries_to_commit 0
 ```
 
 既定値に戻すには計算値、実行されます。
 
 ```bash
-sudo pcs resource update <**ag1**> required_copies_to_commit=
+sudo pcs resource update <**ag_cluster**> required_copies_to_commit=
 ```
 
 >[!NOTE]

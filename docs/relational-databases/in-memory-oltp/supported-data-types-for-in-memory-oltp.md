@@ -1,7 +1,7 @@
 ---
 title: "インメモリ OLTP に対してサポートされるデータ型 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/05/2017
+ms.date: 06/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 1d363db8e8bd0e1460cdea3c3a7add68e48714c9
-ms.openlocfilehash: 0095d4e8ab9f3dc48e9414dc888213b79b3c34c6
+ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
+ms.openlocfilehash: ee8d16f8999f2e3e39d90086993c9a46a30ac21a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>インメモリ OLTP に対してサポートされるデータ型
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
 
 ### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>行外の LOB 列およびその他の列の特定
 
-SQL Server 2016 以降では、メモリ最適化テーブルは行外列は、1 つのテーブルの行を 8,060 バイトより大きくすることを許可するをサポートします。 次の Transact-SQL SELECT ステートメントにより、メモリ最適化テーブルの行外のすべての列のレポートが生成されます。 次の点に注意してください。
+SQL Server 2016 以降では、メモリ最適化テーブルが[行外の列をサポートする](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)ため、1 つのテーブルの行を 8060 バイトよりも大きくすることができます。 次の Transact-SQL SELECT ステートメントにより、メモリ最適化テーブルの行外のすべての列のレポートが生成されます。 次の点に注意してください。
 
 - インデックス キー列はすべて行内に格納されます。
   - メモリ最適化テーブルでは、一意ではないインデックス キーが、NULL 値を許容する列を含むことができるようになりました。
@@ -91,6 +91,7 @@ SELECT
 ## <a name="see-also"></a>参照  
  [Transact-SQL によるインメモリ OLTP のサポート](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
  [メモリ最適化テーブルへの SQL_VARIANT の実装](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
+ [メモリ最適化テーブルのテーブルと行のサイズ](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
 

@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - リリース ノート | Microsoft Docs"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 06/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: b68d454230d414ff52d90b4f3f71dd68ee65c6bc
-ms.openlocfilehash: 1733a789fb2dc17eea82ab22d4a50614d1fffc3b
+ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
+ms.openlocfilehash: f593303a681e2f52161777fc48f0fb1b479d20d9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="sql-server-management-studio----release-notes"></a>SQL Server Management Studio - リリース ノート
@@ -57,6 +57,9 @@ SQL Server Management Studio の一般公開版リリースにようこそ!  こ
     
 5. **英語以外の SSMS のインストールには、追加のセキュリティ パッケージのインストールが必要になる場合があります。**  
 SSMS の英語以外のローカライズされたリリースでは、Windows 8、Windows 7、Windows Server 2012、Windows Server 2008 R2 にインストールする場合、 [KB 2862966 セキュリティ更新プログラム パッケージ](https://support.microsoft.com/en-us/kb/2862966) が必要です。
+
+5. **ヘルプをクリック、または F1 キーを押してもヘルプが開きません**  
+一部の環境では、ヘルプをクリック、または F1 キーを押すと、**[You'll need a new app to open ms-xhelp]\(ms-xhelp を開くには新しいアプリが必要です\)** と表示されます。 このエラーは既知の問題であり、今後のリリースで修正されます。
   
 ## <a name="feedback"></a>フィードバック  
   

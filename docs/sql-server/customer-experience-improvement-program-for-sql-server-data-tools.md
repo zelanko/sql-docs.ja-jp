@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7abf9d52d0e8fa4a4c6b16e479891db5f7e95529
+ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
+ms.openlocfilehash: 399dd15292b67f89829576234e0b2c600e5b4e44
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>SQL Server Data Tools のカスタマー エクスペリエンス向上プログラム
@@ -28,8 +28,50 @@ ms.lasthandoff: 04/11/2017
 >  Microsoft SQL Server 2016 リリースと、その他の製品およびサービスのユーザー データの収集および使用方法については、この [Microsoft のプライバシーに関する声明](https://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx)を参照してください。  
   
 ## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>SQL Server Data Tools の CEIP を有効または無効にする  
- カスタマー エクスペリエンス向上プログラムは、Microsoft が時間の経過と共に製品を向上させるために記述されたプログラムです。 このプログラムは、コンピューターで実行しているユーザーのタスクを中断することなく、コンピューターのハードウェアおよびユーザーによる製品の利用状況を収集します。 収集される情報は、Microsoft がどの機能を改善するかを特定するために役立ちます。 このドキュメントでは、Visual Studio 2015 と Visual Studio 2013 の両方で SQL Server Data Tools (SSDT) の CEIP を有効または無効にする方法について説明します。  
+ カスタマー エクスペリエンス向上プログラムは、Microsoft が時間の経過と共に製品を向上させるために記述されたプログラムです。 このプログラムは、コンピューターで実行しているユーザーのタスクを中断することなく、コンピューターのハードウェアおよびユーザーによる製品の利用状況を収集します。 収集される情報は、Microsoft がどの機能を改善するかを特定するために役立ちます。 このドキュメントでは、Visual Studio 2017、Visual Studio 2015 および Visual Studio 2013 で SQL Server Data Tools (SSDT) の CEIP を有効または無効にする方法について説明します。  
+
+### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2017"></a>Visual Studio 2017 の CEIP と SQL Server Data Tools の選択および制御  
+ Visual Studio 2017 の SSDT は、SQL Server 2017 に付属するデータ モデリング ツールです。 Visual Studio 2017 に組み込まれている CEIP オプションが使用されます。 Visual Studio 2017 の CEIP を通じてフィードバックを送信する方法の詳細は、[Visual Studio のヘルプ ドキュメント](https://www.visualstudio.com/en-us/docs/work/connect/give-feedback)で確認できます。  
   
+ プレビュー版の SQL Server 2017 では、CEIP が既定で有効になっています。 次の手順で、無効にし、再度有効に戻すことができます。  
+  
+ **Visual Studio の場合 (全言語がインストールされた Visual Studio 2017 に適用されます)**  
+  
+ 既に Visual Studio が含まれているコンピューターに SSDT セットアップを実行する場合は、SQL Server および Business Intelligence プロジェクト テンプレートのみが追加されます。 このシナリオでは、Visual Studio で提供されるカスタマー フィードバックのオプションを使用して CEIP を有効または無効にできます。  
+  
+1.  Visual Studio を起動します。  
+  
+2.  [ヘルプ] メニューから、 **[フィードバックの送信]** > **[設定]**を選択します。  
+  
+3.  CEIP をオフにするには、 **[いいえ、協力しません]**をクリックし、 **[OK]**をクリックします。  
+  
+     CEIP をオンにするには、 **[はい、協力します]**をクリックし、 **[OK]**をクリックします。  
+  
+
+  
+ **レジストリ ベースのポリシーまたはグループ ポリシーを使用する**  
+  
+ Visual Studio 2017 がないコンピューターに SSDT セットアップを実行すると、Visual Studio Shell のみがインストールされます。 このシェルは、カスタマー フィードバックのオプションを提供していません。 この場合、CEIP を構成するための唯一のオプションがレジストリの更新です。  
+  
+ 企業のお客様の場合、SQL Server 2017 のレジストリ ベースのポリシーを設定することにより、有効または無効にするグループ ポリシーが構成されている場合があります。  
+  
+ これに関連するレジストリ キーと設定は以下のとおりです。  
+  
+ キー = HKEY_CURRENT_USER\Software\Microsoft\VSCommon\15.0\SQM  
+  
+ レジストリ エントリ名 = OptIn  
+  
+ エントリのデータ型 DWORD :  
+  
+-   0 は無効  
+  
+-   1 は有効  
+  
+> [!CAUTION]  
+>  レジストリの編集を誤ると、システムに深刻な悪影響を及ぼす可能性があります。 レジストリを変更する前に、コンピューター上のすべての重要なデータをバックアップしておくことをお勧めします。 手動での変更の適用後に問題が発生した場合は、[前回正常起動時の構成] スタートアップ オプションを使うこともできます。  
+  
+ CEIP によって収集、処理、および転送される情報の詳細については、「 [Microsoft カスタマー エクスペリエンス向上プログラムのプライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkId=52143)」を参照してください。  
+ 
 ### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Visual Studio 2015 の CEIP と SQL Server Data Tools の選択および制御  
  Visual Studio 2015 の SSDT は、SQL Server 2016 に付属するデータ モデリング ツールです。 Visual Studio 2015 に組み込まれている CEIP オプションが使用されます。 Visual Studio 2015 の CEIP を通じてフィードバックを送信する方法の詳細は、 [Visual Studio のヘルプ ドキュメント](http://go.microsoft.com/fwlink/?LinkId=517102)で確認できます。  
   

@@ -1,7 +1,7 @@
 ---
 title: "データベースの完全バックアップの作成 (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 07/25/2016
+ms.date: 06/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,19 +20,19 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: fb2aa3981cd5107cf3ea6f6dc0408acfe3292701
+ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
+ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>データベースの完全バックアップの作成 (SQL Server)
 
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[データベースの完全バックアップの作成 (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx)」を参照してください。
+ > SQL Server 2014 の場合は、「[データベースの完全バックアップの作成 (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx)」を参照してください。
 
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、または PowerShell を使用して、データベースの完全バックアップを作成する方法について説明します。  
   
->  Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップについては、「 [Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 」および「 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。  
+>  Azure BLOB ストレージ サービスへの SQL Server のバックアップについては、「[Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」および「[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。  
   
 ##  <a name="BeforeYouBegin"></a> 作業を開始する準備 
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/05/2017
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
--   データベース サイズが大きくなると、データベースの完全バックアップにかかる時間は長くなり、必要な記憶領域も増加します。 大きなデータベースの場合は、データベースの完全バックアップを一連の *差分データベース バックアップ*で補完することができます。 詳細については、「 [差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md) 」および「 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。  
+-   データベース サイズが大きくなると、データベースの完全バックアップにかかる時間は長くなり、必要な記憶領域も増加します。 大規模なデータベースでは、[データベースの差分バックアップ](../../relational-databases/backup-restore/differential-backups-sql-server.md) を使用してデータベースの完全バックアップを補完することを検討してください。 詳細については、「 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。  
   
 -   データベースの完全バックアップのサイズは、 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) システム ストアド プロシージャを使用して推計します。  
   
@@ -198,7 +198,7 @@ ms.lasthandoff: 06/05/2017
 
 7.  **[OK]**をクリックします。
 
-#### <a name="d--backing-up-to-the-microsoft-azure-blob-storage-service"></a>**D.Microsoft Azure BLOB ストレージ サービスへのバックアップ**
+#### <a name="d--back-up-to-the-azure-blob-storage-service"></a>**D.Azure BLOB ストレージ サービスへのバックアップ**
 #### <a name="common-steps"></a>**一般的な手順**  
 次の 3 つの例では、Microsoft Azure BLOB ストレージ サービスへの `Sales` のデータベースの完全バックアップを実行します。  ストレージ アカウント名は `mystorageaccount`です。  コンテナーは `myfirstcontainer`と呼ばれます。  簡潔にするため、最初の 4 つの手順をここに一度だけリストし、例はすべて **手順 5.**から始めます。
 1.  **オブジェクト エクスプローラー**で、SQL Server データベース エンジンのインスタンスに接続し、そのインスタンスを展開します。
@@ -212,7 +212,7 @@ ms.lasthandoff: 06/05/2017
     **D1.URL へのストライプ バックアップで SQL Server 資格情報が既に存在する場合**  
 保存されたアクセス ポリシーは読み取り、書き込み、および一覧表示権で作成されています。  SQL Server 資格情報 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`は、保存されたアクセス ポリシーに関連付けられている Shared Access Signature を使用して作成されています。  
 *
-    5.    `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` [Azure ストレージ コンテナー:] **テキスト ボックスから** を選択します。
+    5.  `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` [Azure ストレージ コンテナー:] **テキスト ボックスから** を選択します。
 
     6.  **[バックアップ ファイル:]** テキスト ボックスに、「 `Sales_stripe1of2_20160601.bak`」と入力します。
 
@@ -247,7 +247,7 @@ ms.lasthandoff: 06/05/2017
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-### <a name="to-create-a-full-database-backup"></a>データベースの完全バックアップを作成するには  
+### <a name="create-a-full-database-backup"></a>データベースの完全バックアップの作成  
   
 1.  次の項目を指定した BACKUP DATABASE ステートメントを実行し、データベースの完全バックアップを作成します。  
   
@@ -299,7 +299,7 @@ ms.lasthandoff: 06/05/2017
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
   
-#### <a name="a-backing-up-to-a-disk-device"></a>**A.ディスク デバイスへのバックアップ**  
+#### <a name="a-back-up-to-a-disk-device"></a>**A.ディスク デバイスへのバックアップ**  
  次の例では、新しいメディア セットを作成する [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] を使用して、 `FORMAT` データベース全体をディスクにバックアップします。  
   
 ```tsql  
@@ -313,7 +313,7 @@ TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.Bak'
 GO  
 ```  
   
-#### <a name="b-backing-up-to-a-tape-device"></a>**B.テープ デバイスへのバックアップ**  
+#### <a name="b-back-up-to-a-tape-device"></a>**B.テープ デバイスへのバックアップ**  
  次の例では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース全体をテープにバックアップし、以前のバックアップに追加します。  
   
 ```tsql  
@@ -326,7 +326,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### <a name="c-backing-up-to-a-logical-tape-device"></a>**C.論理テープ デバイスへのバックアップ**  
+#### <a name="c-back-up-to-a-logical-tape-device"></a>**C.論理テープ デバイスへのバックアップ**  
  次の例では、テープ ドライブ用の論理バックアップ デバイスを作成した後、 作成したデバイスに [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース全体をバックアップします。  
   
 ```tsql  
