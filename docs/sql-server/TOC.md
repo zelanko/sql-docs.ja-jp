@@ -2,7 +2,7 @@
 
 # 概要
 ## [SQL Server 2016 の新機能](what-s-new-in-sql-server-2016.md)
-## [SQL Server 2017 年 1 の新機能](what-s-new-in-sql-server-2017.md)
+## [SQL Server 2017 の新機能](what-s-new-in-sql-server-2017.md)
 ## [エディションと SQL Server のサポートされる機能](editions-and-components-of-sql-server-2016.md)
 ## [SQL Server の最大容量仕様](maximum-capacity-specifications-for-sql-server.md)
 ## [SQL Server のエディション別の計算容量制限](compute-capacity-limits-by-edition-of-sql-server.md)
