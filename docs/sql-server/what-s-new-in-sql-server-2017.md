@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 2017 年 1 の新機能 |Microsoft ドキュメント"
+title: "SQL Server 2017 の新機能 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 06/19/2017
 ms.prod: sql-server-2017
@@ -21,7 +21,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 06/23/2017
 
 ---
-# <a name="what39s-new-in-sql-server-2017"></a>SQL Server 2017 年 1 の新機能
+# <a name="what39s-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
 SQL Server 2017 では、SQL Server、Linux、Linux ベースの Docker コンテナー、および Windows を SQL Server の電源を戻すことによって、開発言語のデータ型、内部設置型のクラウドとオペレーティング システム間での選択肢を提供するプラットフォームを行う方向に主要なステップを表します。
 
 このトピックでは、最新の Community Technical Preview (CTP) リリースと特定の機能領域の新しい情報より詳細なへのリンクの新機能の概要を示します。
