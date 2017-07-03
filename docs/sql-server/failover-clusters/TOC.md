@@ -1,4 +1,6 @@
 # [SQL Server フェールオーバー クラスターのインストール](install/sql-server-failover-cluster-installation.md)  
+
+# デザイン
 ## [フェールオーバー クラスタリングをインストールする前に](install/before-installing-failover-clustering.md)  
 ## [新しい SQL Server フェールオーバー クラスターの作成 (セットアップ)](install/create-a-new-sql-server-failover-cluster-setup.md)  
 ## [SQL Server フェールオーバー クラスターでのノードの追加または削除 (セットアップ)](install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  

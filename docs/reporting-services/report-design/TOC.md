@@ -1,5 +1,5 @@
 # [レポートの計画](planning-a-report-report-builder.md)  
-## [レポート デザインに関するヒント](report-design-tips-report-builder-and-ssrs.md)  
+# [レポート デザインに関するヒント](report-design-tips-report-builder-and-ssrs.md)  
 # [レポート作成の概念](report-authoring-concepts-report-builder-and-ssrs.md)  
 ## [レポート、レポート パーツ、およびレポート定義](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
 ## [データ領域とマップ](data-regions-and-maps-report-builder-and-ssrs.md)  

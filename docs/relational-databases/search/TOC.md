@@ -1,4 +1,6 @@
-# [フルテキスト検索](full-text-search.md)  
+# [概要](full-text-search.md)
+
+# フルテキスト検索 
 ## [フルテキスト検索の概要](get-started-with-full-text-search.md)  
 ## [フルテキスト検索でのクエリ](query-with-full-text-search.md)  
 ## [NEAR による他の単語の近くにある単語の検索](search-for-words-close-to-another-word-with-near.md)  
@@ -27,6 +29,7 @@
 ## [フルテキスト検索の DDL、関数、ストアド プロシージャ、およびビュー](full-text-search-ddl-functions-stored-procedures-and-views.md)  
 ## [フルテキスト インデックス作成ウィザードの使用](use-the-full-text-indexing-wizard.md)  
 ## [SQL Server 2016 の非推奨フルテキスト検索機能](deprecated-full-text-search-features-in-sql-server-2016.md)  
+
 # [セマンティック検索](semantic-search-sql-server.md)  
 ## [セマンティック検索のインストールと構成](install-and-configure-semantic-search.md)  
 ## [テーブルおよび列に対するセマンティック検索の有効化](enable-semantic-search-on-tables-and-columns.md)  

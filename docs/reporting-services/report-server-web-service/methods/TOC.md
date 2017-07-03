@@ -1,3 +1,5 @@
+# [レポート サーバー Web サービス メソッド](report-server-web-service-methods.md)
+
 # [Authorization メソッド](authorization-methods.md)
 # [データ ソースとの接続方法](data-sources-and-connection-methods.md)
 # [リンク レポートのメソッド](linked-reports-methods.md)
@@ -7,6 +9,5 @@
 # [レポート パラメーターのメソッド](report-parameters-methods.md)
 # [レポート サーバーの Namespace 管理メソッド](report-server-namespace-management-methods.md)
 # [レポート サーバー Web サービス エンドポイント](report-server-web-service-endpoints.md)
-# [レポート サーバー Web サービス メソッド](report-server-web-service-methods.md)
 # [メソッドのスケジュール設定](scheduling-methods.md)
 # [サブスクリプションおよび配信メソッド](subscription-and-delivery-methods.md)

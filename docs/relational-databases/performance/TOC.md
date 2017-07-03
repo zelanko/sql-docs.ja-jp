@@ -1,3 +1,7 @@
+
+# [SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+# [NVDIMM-N ライトバック キャッシュを使った記憶域スペースの構成](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
+
 # [アダプティブ クエリ処理](adaptive-query-processing.md)
 # [自動調整](../automatic-tuning/automatic-tuning.md)
 # [基数推定](cardinality-estimation-sql-server.md)  
@@ -50,8 +54,5 @@
 ## [アップグレード後のプラン ガイドの検証](validate-plan-guides-after-upgrade.md)  
 ## [プラン ガイドの削除](delete-a-plan-guide.md)  
 ## [プラン ガイドの有効化または無効化](enable-or-disable-a-plan-guide.md)  
-
-# [SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-## [NVDIMM-N ライトバック キャッシュを使った記憶域スペースの構成](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
 #[リソースの利用状況の監視 (システム モニター)](../performance-monitor/monitor-resource-usage-system-monitor.md) 

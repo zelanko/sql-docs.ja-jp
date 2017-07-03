@@ -27,7 +27,7 @@
 # [Analysis Services](../analysis-services/analysis-services.md)
 # [データベース エンジン](../database-engine/configure-windows/sql-server-database-engine.md)
 # [Data Quality Services](../data-quality-services/data-quality-services.md)
-# [ フェールオーバー クラスター](../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)
+# [ フェールオーバー クラスター](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
 # [インストール](../sql-server/install/planning-a-sql-server-installation.md)
 # [Integration Services](../integration-services/sql-server-integration-services.md)
 # [マスター データ サービス](../master-data-services/master-data-services-installation-and-configuration.md)
