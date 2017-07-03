@@ -3,9 +3,22 @@
 # [レプリケーションの旧バージョンとの互換性](replication-backward-compatibility.md)  
 ## [SQL Server レプリケーションの非推奨機能](deprecated-features-in-sql-server-replication.md)  
 ## [SQL Server レプリケーションにおける重大な変更](breaking-changes-in-sql-server-replication.md)  
+
+# レプリケーション領域
+## [レプリケーションの管理](./administration/administration-replication.md)
+## [Replication Agents](./agents/replication-agents.md)
+## [開発者の概念](../../relational-databases/replication/concepts/replication-developer-documentation.md)
+## [レプリケーションの監視](./monitor/monitoring-replication.md)
+## [SQL 以外の異種データベース レプリケーション](./non-sql/heterogeneous-database-replication.md)
+## [データとデータベース オブジェクトのパブリッシュ](./publish/publish-data-and-database-objects.md)
+## [レプリケーションのセキュリティ](./security/security-overview-replication.md)
+
 # [レプリケーション機能とタスク](replication-features-and-tasks.md)  
 ## [レプリケーションの種類](types-of-replication.md)  
 ### [スナップショット レプリケーション](snapshot-replication.md)  
+### [マージ レプリケーション](./merge/merge-replication.md)
+### [トランザクション レプリケーション](./transactional/transactional-replication.md) 
+
 ## [メモリ最適化テーブル サブスクライバーへのレプリケーション](replication-to-memory-optimized-table-subscribers.md)  
 ## [SQL Database へのレプリケーション](replication-to-sql-database.md)  
 ## [データの再パブリッシュ](republish-data.md)  
@@ -72,8 +85,6 @@
 ### [マージ サブスクライバーのパーティション情報の検証](validate-partition-information-for-a-merge-subscriber.md)  
 ### [サブスクライバーでのデータの検証](validate-data-at-the-subscriber.md)  
 ## [レプリケーションのスクリプト作成](scripting-replication.md)  
-
-# [開発者の概念](../../relational-databases/replication/concepts/developer-s-guide-how-to-topics-replication.md)
 
 # [テクニカル リファレンス](technical-reference-replication.md)  
 ## [プロパティ リファレンス](properties-reference-replication.md)  

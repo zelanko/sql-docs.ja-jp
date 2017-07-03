@@ -1,4 +1,6 @@
-# [概要](create-deploy-and-manage-mobile-and-paginated-reports.md)
+# [SQL Server Reporting Services (SSRS) とは](create-deploy-and-manage-mobile-and-paginated-reports.md)
+
+# 概要
 ## [Reporting Services の新機能](what-s-new-in-sql-server-reporting-services-ssrs.md) 
 ## [Reporting Services の概念 (SSRS)](reporting-services-concepts-ssrs.md)
 ## [Reporting Services の機能とタスク](reporting-services-features-and-tasks-ssrs.md)   
@@ -69,7 +71,7 @@
 
 # 開発者
 ## [アプリケーションの統合](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
-## [レポート サーバー web サービス](../reporting-services/report-server-web-service/accessing-the-soap-api.md)
+## [レポート サーバー web サービス](../reporting-services/report-server-web-service/report-server-web-service.md)
 ## [拡張機能](../reporting-services/extensions/reporting-services-extension-library.md)
 ## [カスタム レポート アイテム](../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)
 ## [カスタム アセンブリ](../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md)
@@ -83,7 +85,7 @@
 ### [Excel デバイス情報設定](excel-device-information-settings.md)  
 ### [HTML デバイス情報設定](html-device-information-settings.md)  
 ### [デバイス情報設定をイメージ](image-device-information-settings.md)  ### [MHTML デバイス情報設定](mhtml-device-information-settings.md)  
-### [PDF デバイス情報設定](pdf-device-information-settings.md)  
+### [PDF デバイス情報の設定](pdf-device-information-settings.md)  
 ### [PPTX デバイス情報設定](pptx-device-information-settings.md)  
 ### [XML デバイス情報設定](xml-device-information-settings.md)  
 ### [Word デバイス情報設定](word-device-information-settings.md)  
@@ -107,13 +109,13 @@
 
 ## [ReportViewer (SSRS チュートリアル) を使用してパラメーターでドリルスルー (RDLC) レポートを作成します。](create-drillthrough-rdlc-report-with-parameters-reportviewer.md)  
 ### [レッスン 1: 新しい Web サイトを作成します。](lesson-1-create-a-new-web-site.md)  
-### [レッスン 2: 親レポートのデータ接続とデータ テーブルを定義します。](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
-### [レッスン 3: レポート ウィザードを使用して、親レポートのデザインします。](lesson-3-design-the-parent-report-using-the-report-wizard.md)  
-### [レッスン 4: 子レポート用のデータ接続とデータ テーブルを定義します。](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
-### [レッスン 5: レポート ウィザードを使用して、子レポートのデザインします。](lesson-5-design-the-child-report-using-the-report-wizard.md)  
-### [レッスン 6: アプリケーションに ReportViewer コントロールの追加します。](lesson-6-add-a-reportviewer-control-to-the-application.md)  
-### [レッスン 7: 親レポートにドリルスルー アクションを追加します。](lesson-7-add-drillthrough-action-on-parent-report.md)  
-### [レッスン 8: データ フィルターを作成します。](lesson-8-create-a-data-filter.md)  
+### [レッスン 2: 親レポートのデータ接続とデータ テーブルを定義する](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
+### [レッスン 3: レポート ウィザードを使用して親レポートを設計する](lesson-3-design-the-parent-report-using-the-report-wizard.md)  
+### [レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
+### [レッスン 5: レポート ウィザードを使用して子レポートを設計する](lesson-5-design-the-child-report-using-the-report-wizard.md)  
+### [レッスン 6: アプリケーションに ReportViewer コントロールを追加する](lesson-6-add-a-reportviewer-control-to-the-application.md)  
+### [レッスン 7: 親レポートにドリルスルー アクションを追加する](lesson-7-add-drillthrough-action-on-parent-report.md)  
+### [レッスン 8: データ フィルターを作成する](lesson-8-create-a-data-filter.md)  
 ### [レッスン 9: ビルドおよびアプリケーションを実行します](lesson-9-build-and-run-the-application.md)  
 
 ## [レポート ビルダー チュートリアル](report-builder-tutorials.md)  

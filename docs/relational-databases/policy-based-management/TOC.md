@@ -1,4 +1,6 @@
-# [ポリシーベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)  
+# [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)  
+
+# ポリシー ベースの管理
 ## [ポリシーベースの管理のストレージ](policy-based-management-storage.md)  
 ## [ポリシーベースの管理の全般プロパティの構成](configure-the-general-properties-of-policy-based-management.md)  
 ## [ポリシー管理者にポリシー エラーを通知する警告の構成](configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
@@ -71,6 +73,8 @@
 ### [[ソースの選択] ダイアログ ボックス](select-source-dialog-box.md)  
 ### [[ポリシーとしてエクスポート] ダイアログ ボックス](export-as-policy-dialog-box.md)  
 ### [[ポリシーのインポート] ダイアログ ボックス](import-policies-dialog-box.md)  
+
+
 # [チュートリアル: ポリシーベースの管理を使用したサーバーの管理](tutorial-administering-servers-by-using-policy-based-management.md)  
 ## [レッスン 1: "既定でオフ" ポリシーの作成と適用](lesson-1-create-and-apply-an-off-by-default-policy.md)  
 ### [レッスン 1-1 - "既定でオフ" ポリシーの作成](lesson-1-1-create-the-off-by-default-policy.md)  
