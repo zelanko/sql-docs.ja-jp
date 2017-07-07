@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0d09693778fa9382d40dfb02f0c3fb4b212f86ed
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>SSMS を使用したデータベース バックアップの復元
@@ -218,61 +218,61 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
 ### <a name="e--restore-a-backup-from-the-microsoft-azure-storage-service"></a>**E.Microsoft Azure Storage サービスからバックアップを復元する**
 #### <a name="common-steps"></a>**一般的な手順**
 次の 2 つの例では、Microsoft Azure Storage サービスに置かれているバックアップから `Sales` の復元を実行します。  ストレージ アカウント名は `mystorageaccount`です。  コンテナーは `myfirstcontainer`と呼ばれます。  簡潔にするため、最初の 6 つの手順をここに一度だけリストし、例はすべて **手順 7**から始めます。
-1.    **オブジェクト エクスプローラー**で、SQL Server データベース エンジンのインスタンスに接続し、そのインスタンスを展開します。
+1.  **オブジェクト エクスプローラー**で、SQL Server データベース エンジンのインスタンスに接続し、そのインスタンスを展開します。
 
-2.    **[データベース]** を右クリックして、 **[データベースの復元...]**を選択します。
+2.  **[データベース]** を右クリックして、 **[データベースの復元...]**を選択します。
 
-3.    **[全般]** ページで、 **[ソース]** セクションの **[デバイス]** を選択します。
+3.  **[全般]** ページで、 **[ソース]** セクションの **[デバイス]** を選択します。
 
-4.    参照ボタン ([...]) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。  
-5.    **[バックアップ メディアの種類:]** ドロップダウン リストから **[URL]** を選択します。
+4.  参照ボタン ([...]) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。  
+5.  **[バックアップ メディアの種類:]** ドロップダウン リストから **[URL]** を選択します。
 
-6.    **[追加]** をクリックすると、 **[バックアップ ファイルの場所を選択]** ダイアログ ボックスが開きます。
+6.  **[追加]** をクリックすると、 **[バックアップ ファイルの場所を選択]** ダイアログ ボックスが開きます。
 
     #### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>**E1. 既存のデータベース上にストライプ バックアップを復元し、共有アクセス署名が存在する場合**
     保存されたアクセス ポリシーは読み取り、書き込み、削除および一覧表示権で作成されています。  保存されたアクセス ポリシーに関連付けられている Shared Access Signature は、コンテナー `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`用に作成されています。  SQL Server 資格情報が既に存在する場合、手順はほとんど同じです。  現在、 `Sales` データベースはサーバーに存在しています。  バックアップ ファイルは、 `Sales_stripe1of2_20160601.bak` と `Sales_stripe2of2_20160601.bak`です。  
 *  
-    7.    SQL Server 資格情報が既に存在する場合、 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` [Azure ストレージ コンテナー:] **ドロップダウン リストから [** ] を選択します。それ以外の場合は、手動でコンテナーの名前 ( `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`) を入力します。
+    7.  SQL Server 資格情報が既に存在する場合、 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` [Azure ストレージ コンテナー:] **ドロップダウン リストから [** ] を選択します。それ以外の場合は、手動でコンテナーの名前 ( `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`) を入力します。
     
-    8.    **[Shared Access Signature:]** リッチ テキスト ボックス に Shared Access Signature を入力します。
-       9.    **[OK]** をクリックすると、 **[Microsoft Azure でのバックアップ ファイルの位置指定]** ダイアログ ボックスが開きます。
-    10.    **[コンテナー]** を展開して、 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`に移動します。
+    8.  **[Shared Access Signature:]** リッチ テキスト ボックス に Shared Access Signature を入力します。
+       9.   **[OK]** をクリックすると、 **[Microsoft Azure でのバックアップ ファイルの位置指定]** ダイアログ ボックスが開きます。
+    10. **[コンテナー]** を展開して、 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`に移動します。
     
-    11.    Ctrl キーを押しながらファイル `Sales_stripe1of2_20160601.bak` と `Sales_stripe2of2_20160601.bak`を選択します。
-    12.    クリックして **OK**です。
-    13.    **[OK]** をクリックして、 **[全般]** ページに戻ります。
-    14.    **[ページの選択]** ペインの **[オプション]** をクリックします。
-    15.    **[復元オプション]** パネルで、 **[既存のデータベースを上書きする (WITH REPLACE)]**チェック ボックスをオンにします。
-    16.    **[ログ末尾のバックアップ]** セクションで、 **[復元の前にログ末尾のバックアップを実行する]**チェック ボックスをオフにします。
-    17.    **[サーバー接続]** セクションで、 **[接続先データベースへの既存の接続を閉じる]**チェック ボックスをオンにします。
-    18.    **[OK]**をクリックします。
+    11. Ctrl キーを押しながらファイル `Sales_stripe1of2_20160601.bak` と `Sales_stripe2of2_20160601.bak`を選択します。
+    12. クリックして **OK**です。
+    13. **[OK]** をクリックして、 **[全般]** ページに戻ります。
+    14. **[ページの選択]** ペインの **[オプション]** をクリックします。
+    15. **[復元オプション]** パネルで、 **[既存のデータベースを上書きする (WITH REPLACE)]**チェック ボックスをオンにします。
+    16. **[ログ末尾のバックアップ]** セクションで、 **[復元の前にログ末尾のバックアップを実行する]**チェック ボックスをオフにします。
+    17. **[サーバー接続]** セクションで、 **[接続先データベースへの既存の接続を閉じる]**チェック ボックスをオンにします。
+    18. **[OK]**をクリックします。
 
     #### <a name="e2---a-shared-access-signature-does-not-exist"></a>**E2. Shared Access Signature が存在しない場合**
     この例では、現在、 `Sales` データベースはサーバーに存在しません。
-    7.    **[追加]** をクリックすると、 **[Microsoft サブスクリプションへの接続]** ダイアログ ボックスが開きます。  
+    7.  **[追加]** をクリックすると、 **[Microsoft サブスクリプションへの接続]** ダイアログ ボックスが開きます。  
     
-    8.    **[Microsoft サブスクリプションへの接続]** ダイアログ ボックスに入力し、 **[OK]** をクリックして **[バックアップ ファイルの場所を選択]** ダイアログ ボックスに戻ります。  詳細については、「 [Microsoft Azure サブスクリプションへの接続](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) 」をご覧ください。
-    9.    **[バックアップ ファイルの場所を選択]** ダイアログ ボックスで **[OK]** をクリックして、 **[Microsoft Azure でのバックアップ ファイルの位置指定]** ダイアログ ボックスを開きます。
-    10.    **[コンテナー]** を展開して、 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`に移動します。
-    11.    バックアップ ファイルを選択して、 **[OK]**をクリックします。
-    12.    **[OK]** をクリックして、 **[全般]** ページに戻ります。
-    13.    **[OK]**をクリックします。
+    8.  **[Microsoft サブスクリプションへの接続]** ダイアログ ボックスに入力し、 **[OK]** をクリックして **[バックアップ ファイルの場所を選択]** ダイアログ ボックスに戻ります。  詳細については、「 [Microsoft Azure サブスクリプションへの接続](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) 」をご覧ください。
+    9.  **[バックアップ ファイルの場所を選択]** ダイアログ ボックスで **[OK]** をクリックして、 **[Microsoft Azure でのバックアップ ファイルの位置指定]** ダイアログ ボックスを開きます。
+    10. **[コンテナー]** を展開して、 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`に移動します。
+    11. バックアップ ファイルを選択して、 **[OK]**をクリックします。
+    12. **[OK]** をクリックして、 **[全般]** ページに戻ります。
+    13. **[OK]**をクリックします。
 
-#### <a name="f----restore-local-backup-to-microsoft-azure-storage-url"></a>**F.  Microsoft Azure Storage (URL) のローカルのバックアップを復元する**
+#### <a name="f---restore-local-backup-to-microsoft-azure-storage-url"></a>**F. Microsoft Azure Storage (URL) のローカルのバックアップを復元する**
 `Sales` データベースは、 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` に置かれたバックアップから Microsoft Azure ストレージ コンテナー `E:\MSSQL\BAK`に復元されます。  Azure コンテナーの SQL Server 資格情報は、既に作成されています。  復元先コンテナーの SQL Server 資格情報は、 **[復元]** タスク中に作成できないので、既に存在している必要があります。  現在、 `Sales` データベースはサーバーに存在しません。
-1.    **オブジェクト エクスプローラー**で、SQL Server データベース エンジンのインスタンスに接続し、そのインスタンスを展開します。
+1.  **オブジェクト エクスプローラー**で、SQL Server データベース エンジンのインスタンスに接続し、そのインスタンスを展開します。
 
-2.    **[データベース]** を右クリックして、 **[データベースの復元...]**を選択します。
-3.    **[全般]** ページで、 **[ソース]** セクションの **[デバイス]** を選択します。
-4.    参照ボタン ([...]) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。  
-5.    **[バックアップ メディアの種類:]** ドロップダウン リストから **[ファイル]** を選択します。
-6.    **[追加]** をクリックすると、 **[バックアップ ファイルの検索]** ダイアログ ボックスが開きます。
-7.    `E:\MSSQL\BAK`を移動し、バックアップ ファイルを選択して **[OK]**をクリックします。
-8.    **[OK]** をクリックして、 **[全般]** ページに戻ります。
-9.    **[ページの選択]** ペインの **[ファイル]** をクリックします。
-10.    **[すべてのファイルをフォルダーに移動]**チェック ボックスをオンにします。
-11.    `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`[データ ファイル フォルダー:] **と** [ログ ファイルのフォルダ:] **のテキスト ボックスで、コンテナー (**) を入力します。
-12.    クリックして **OK**です。
+2.  **[データベース]** を右クリックして、 **[データベースの復元...]**を選択します。
+3.  **[全般]** ページで、 **[ソース]** セクションの **[デバイス]** を選択します。
+4.  参照ボタン ([...]) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。  
+5.  **[バックアップ メディアの種類:]** ドロップダウン リストから **[ファイル]** を選択します。
+6.  **[追加]** をクリックすると、 **[バックアップ ファイルの検索]** ダイアログ ボックスが開きます。
+7.  `E:\MSSQL\BAK`を移動し、バックアップ ファイルを選択して **[OK]**をクリックします。
+8.  **[OK]** をクリックして、 **[全般]** ページに戻ります。
+9.  **[ページの選択]** ペインの **[ファイル]** をクリックします。
+10. **[すべてのファイルをフォルダーに移動]**チェック ボックスをオンにします。
+11. `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`[データ ファイル フォルダー:] **と** [ログ ファイルのフォルダ:] **のテキスト ボックスで、コンテナー (**) を入力します。
+12. クリックして **OK**です。
 
 
 ## <a name="see-also"></a>参照    

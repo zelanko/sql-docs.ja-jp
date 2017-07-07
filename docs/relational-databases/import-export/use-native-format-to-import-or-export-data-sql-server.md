@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4cb08ec44780935a8340d267fd3790af5150659b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server)
@@ -172,7 +172,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **XML 形式以外のフォーマット ファイルで bcp とネイティブ形式を使用してデータをインポートする方法**<a name="bcp_native_import_fmt"></a>
-**-n** および **-f** スイッチと **IN** コマンドです。  コマンド プロンプトで、次のコマンドを入力します。
+**-n** 列間で転送される **-f** スイッチと **IN** コマンドです。  コマンド プロンプトで、次のコマンドを入力します。
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"

@@ -17,10 +17,10 @@ caps.latest.revision: 33
 author: stevestein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 091625c7e502ac131bd045546ca4c587b754e366
+ms.sourcegitcommit: 8cb39d4ae3ff02fffe83e7f0e4646ade1545ce72
+ms.openlocfilehash: f1ad5de594493c65688d5c1ca2d69ac421661770
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="always-encrypted-client-development"></a>Always Encrypted (クライアント開発)
@@ -31,8 +31,8 @@ ms.lasthandoff: 06/22/2017
 Always Encrypted の保護するデータベースを使用したアプリケーションの開発、および Always Encrypted をサポートするクライアント ドライバーとそのバージョンの詳細については、次を参照してください。
 
 - [Always Encrypted と .NET Framework Data Provider for SQL Server を使用する](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [JDBC ドライバーで Always Encrypted を使用する](https://msdn.microsoft.com/library/mt591987.aspx)
-- [ODBC ドライバーで Always Encrypted を使用する](https://msdn.microsoft.com/library/mt637351.aspx)
+- [JDBC ドライバーで Always Encrypted を使用する](../../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)
+- [ODBC ドライバーで Always Encrypted を使用する](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 
 
 
