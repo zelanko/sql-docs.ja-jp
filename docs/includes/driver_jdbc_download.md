@@ -1,1 +1,1 @@
-![ダウンロード](../ssdt/media/download.png)[JDBC Driver のダウンロード](http://go.microsoft.com/fwlink/?LinkId=245496)
+![ダウンロード](../ssdt/media/download.png)[JDBC Driver のダウンロード](https://go.microsoft.com/fwlink/?linkid=852460)
