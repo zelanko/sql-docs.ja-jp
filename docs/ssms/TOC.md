@@ -1,8 +1,12 @@
 # [SSMS のダウンロード](download-sql-server-management-studio-ssms.md)
 # [SSMS とは](sql-server-management-studio-ssms.md)
-# [SSMS の変更ログ](sql-server-management-studio-changelog-ssms.md)
-# [リリース ノート](sql-server-management-studio-release-notes.md)
-# [以前のリリースの SSMS](previous-sql-server-management-studio-releases.md)
+
+# 新機能
+## [SSMS の変更ログ](sql-server-management-studio-changelog-ssms.md)
+## [リリース ノート](sql-server-management-studio-release-notes.md)
+## [新規および最近の更新記事](new-updated-ssms.md)
+## [以前のリリースの SSMS](previous-sql-server-management-studio-releases.md)
+
 # [SSMS の使用](use-sql-server-management-studio.md)
 # [SSMS の機能](features-in-sql-server-management-studio.md)
 # [使用状況のフィードバックの収集](sql-server-management-studio-telemetry-ssms.md)
