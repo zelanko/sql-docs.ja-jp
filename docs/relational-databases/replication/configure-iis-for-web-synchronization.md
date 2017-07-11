@@ -25,7 +25,8 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="configure-iis-for-web-synchronization"></a>Web 同期用の IIS の構成
+<a id="configure-iis-for-web-synchronization" class="xliff"></a>
+# Web 同期用の IIS の構成
   ここでは、マージ レプリケーション用に Web 同期を構成する 2 番目の手順を説明します。 この手順は、Web 同期用にパブリケーションを有効にした後に実行します。 構成プロセスの概要については、「 [[Web 同期の構成]](../../relational-databases/replication/configure-web-synchronization.md)」を参照してください。 ここでの手順を完了したら、続いて、Web 同期が使用されるようにサブスクリプションを構成する 3 番目の手順を実行してください。 3 番目の手順については、次のトピックで説明します。  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Web 同期が使用されるようにサブスクリプションを構成する方法 \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
@@ -61,10 +62,12 @@ ms.lasthandoff: 06/22/2017
   
 5.  診断モードで Web 同期を実行し、IIS を実行しているコンピューターへの接続をテストして、SSL 証明書が正しくインストールされることを確認します。  
   
-## <a name="configuring-secure-sockets-layer"></a>Secure Sockets Layer の構成  
+<a id="configuring-secure-sockets-layer" class="xliff"></a>
+## Secure Sockets Layer の構成  
  SSL を構成するには、IIS を実行しているコンピューターが使用する証明書を指定する必要があります。 マージ レプリケーション用の Web 同期では、サーバー証明書のみがサポートされており、クライアント証明書はサポートされていません。 配置用に IIS を構成するには、最初に証明機関 (CA) から証明書を取得する必要があります。 証明機関とは、ユーザー、コンピューター、およびその他の証明機関に属する公開暗号化キーの正当性の証明および保証を行う機関のことです。 証明書の詳細については、IIS のマニュアルを参照してください。 証明書をインストールしたら、その証明書を Web 同期で使用する Web サイトと関連付ける必要があります。  
   
-#### <a name="to-specify-a-certificate-for-deployment"></a>配置用に証明書を指定するには  
+<a id="to-specify-a-certificate-for-deployment" class="xliff"></a>
+#### 配置用に証明書を指定するには  
   
 1.  IIS を実行しているコンピューターに管理者としてログオンします。  
   
@@ -91,7 +94,8 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  Web サイトで SSL を使用できるようにするには、事前に証明書を Web サイトに関連付ける必要があります。 SelfSSL を使用すると、証明書が既定の Web サイトに自動的に関連付けられます。 既に証明書を保有しているか、または後で CA から証明書をインストールする場合は、証明書を Web 同期で使用する Web サイトと明示的に関連付ける必要があります。 サブスクリプションの同期に使用する Web サイトに関連付けられた証明書が 1 つしか存在しないことを確認します。 複数の証明書が存在する場合、サブスクライバーは使用可能な最初の Web サイトを使用します。  
   
-#### <a name="to-specify-a-certificate-for-testing-in-iis-60"></a>IIS 6.0 でテスト用に証明書を指定するには  
+<a id="to-specify-a-certificate-for-testing-in-iis-60" class="xliff"></a>
+#### IIS 6.0 でテスト用に証明書を指定するには  
   
 1.  IIS を実行しているコンピューターに管理者としてログオンします。  
   
@@ -106,9 +110,11 @@ ms.lasthandoff: 06/22/2017
   
     -   1 つ以上のパラメーターの値を指定するには、 **[スタート]**ボタンをクリックし、 **[ファイル名を指定して実行]**をクリックします。 **[名前]** ボックスに「 **cmd**」と入力し、 **[OK]**をクリックします。 SelfSSL のインストール ディレクトリに移動して「 `SelfSSL`」と入力し、1 つ以上のパラメーターの値を指定します。 パラメーターの一覧を確認する場合は、「 `SelfSSL -?`」と入力します。  
   
-## <a name="installing-connectivity-components-and-sql-server-management-studio"></a>接続コンポーネントと SQL Server Management Studio のインストール  
+<a id="installing-connectivity-components-and-sql-server-management-studio" class="xliff"></a>
+## 接続コンポーネントと SQL Server Management Studio のインストール  
   
-#### <a name="to-install-sql-server-connectivity-components-and-sql-server-management-studio"></a>SQL Server 接続コンポーネントと SQL Server Management Studio をインストールするには  
+<a id="to-install-sql-server-connectivity-components-and-sql-server-management-studio" class="xliff"></a>
+#### SQL Server 接続コンポーネントと SQL Server Management Studio をインストールするには  
   
 1.  IIS を実行しているコンピューターに管理者としてログオンします。  
   
@@ -123,7 +129,8 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  他のコンポーネントをインストールすることもできますが、Web 同期で必要なのは接続コンポーネントだけです。  
   
-## <a name="configuring-the-computer-that-is-running-iis-by-using-the-configure-web-synchronization-wizard"></a>Web 同期の構成ウィザードを使用した、IIS を実行しているコンピューターの構成  
+<a id="configuring-the-computer-that-is-running-iis-by-using-the-configure-web-synchronization-wizard" class="xliff"></a>
+## Web 同期の構成ウィザードを使用した、IIS を実行しているコンピューターの構成  
  Web 同期の構成ウィザードを使用して、IIS サーバーを構成します。 このウィザードを使用することをお勧めしますが、次のセクションで手動での構成の手順も説明します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] に付属する Web 同期ウィザードは、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を実行中のパブリッシャーまたは [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]にアップグレードされたパブリッシャーで作成されたパブリケーションのみに使用できます。 このウィザードは、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のパブリケーションには使用できません。 このウィザードは、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンおよび [!INCLUDE[ssEWnoversion](../../includes/ssewnoversion-md.md)] 3.0 以降のバージョンのサブスクリプションで使用できます。  
   
  この構成の特徴は次のとおりです。  
@@ -137,7 +144,8 @@ ms.lasthandoff: 06/22/2017
   
 -   基本認証を使用します。 基本認証の使用をお勧めする理由は、基本認証では、Kerberos 委任を必要とすることなく、IIS と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリッシャーまたはディストリビューターを別々のコンピューターで実行すること (推奨の構成) が可能になるからです。 基本認証を使用した SSL では、ログインやパスワードなどすべてのデータが暗号化されて送信されます  (使用する認証の種類にかかわらず、SSL は必須です)。Web 同期の推奨事項の詳細については、「[Configure Web Synchronization (Web 同期の構成)](../../relational-databases/replication/configure-web-synchronization.md)」の「Security Best Practices for Web Synchronization (Web 同期のセキュリティの推奨事項)」を参照してください。  
   
-#### <a name="to-configure-the-computer-that-is-running-iis-by-using-the-configure-web-synchronization-wizard"></a>Web 同期の構成ウィザードを使用して IIS を実行しているコンピューターを構成するには  
+<a id="to-configure-the-computer-that-is-running-iis-by-using-the-configure-web-synchronization-wizard" class="xliff"></a>
+#### Web 同期の構成ウィザードを使用して IIS を実行しているコンピューターを構成するには  
   
 1.  IIS を実行しているコンピューターで、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を起動します。  
   
@@ -193,10 +201,12 @@ ms.lasthandoff: 06/22/2017
   
          **regsvr32 replisapi.dll**  
   
-## <a name="manually-configuring-the-computer-that-is-running-iis"></a>IIS を実行しているコンピューターの手動の構成  
+<a id="manually-configuring-the-computer-that-is-running-iis" class="xliff"></a>
+## IIS を実行しているコンピューターの手動の構成  
  IIS を実行しているコンピューターを手動で構成するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナーをインストールおよび構成し、IIS に接続するサブスクライバーの認証を構成する必要があります。  
   
-#### <a name="to-install-and-configure-the-sql-server-replication-listener"></a>SQL Server レプリケーション リスナーのインストールと構成を行うには  
+<a id="to-install-and-configure-the-sql-server-replication-listener" class="xliff"></a>
+#### SQL Server レプリケーション リスナーのインストールと構成を行うには  
   
 1.  IIS を実行しているコンピューターに、replisapi.dll を格納するファイル ディレクトリを作成します。 ディレクトリはどこに作成してもかまいませんが、\<*drive*>:\Inetpub ディレクトリの下に作成することをお勧めします。 たとえば、ディレクトリ \<*drive*>:\Inetpub\SQLReplication\\ を作成します。  
   
@@ -219,20 +229,23 @@ ms.lasthandoff: 06/22/2017
   
 6.  replisapi.dll を実行できるように IIS を構成します。 手順 4. で割り当てた権限は、以前のバージョンの IIS では十分ですが、IIS バージョン 6.0 では ISAPI (インターネット サーバー API) 拡張を有効にする必要があります。 詳細については、IIS 6.0 のマニュアルの「ISAPI 拡張を構成する」および「動的コンテンツを有効および無効にする」を参照してください。  
   
-#### <a name="to-configure-iis-authentication"></a>IIS 認証を構成するには  
+<a id="to-configure-iis-authentication" class="xliff"></a>
+#### IIS 認証を構成するには  
   
 -   サブスクライバーが IIS に接続するには、サブスクライバーがリソースやプロセスにアクセスする前に、IIS がサブスクライバーを認証する必要があります。 IIS では、匿名認証、基本認証、統合認証の 3 種類の認証方式が用意されています。 認証は、Web サイト全体または作成した特定の仮想ディレクトリに適用することができます。  
   
      基本認証と SSL を組み合わせて使用することをお勧めします。 使用する認証の種類にかかわらず、SSL は必須です。 認証を構成する方法の詳細については、IIS のマニュアルを参照してください。  
   
-## <a name="setting-permissions-for-the-sql-server-replication-listener"></a>SQL Server レプリケーション リスナーの権限の設定  
+<a id="setting-permissions-for-the-sql-server-replication-listener" class="xliff"></a>
+## SQL Server レプリケーション リスナーの権限の設定  
  サブスクライバーが IIS を実行しているコンピューターに接続するときは、IIS の構成時に指定した認証の種類を使用して、サブスクライバーが認証されます。 IIS はサブスクライバーを認証した後、サブスクライバーに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションを実行する権限があるかどうかを確認します。 replisapi.dll の権限を設定して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションを実行できるユーザーを制御します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションに許可なくアクセスされることがないように権限を正しく構成する必要があります。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナーの実行に使用するアカウントを最小の権限で構成するには、次の手順を完了する必要があります。 この手順は、IIS 6.0 を実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] に適用されます。  
   
  次の手順の他に、PAL (パブリケーション アクセス リスト) に必要なログインが登録されていることを確認してください。 PAL の詳細については、「[Secure the Publisher (パブリッシャーのセキュリティ保護)](../../relational-databases/replication/security/secure-the-publisher.md)」を参照してください。  
   
-#### <a name="to-configure-the-account-and-permissions"></a>アカウントと権限を構成するには  
+<a id="to-configure-the-account-and-permissions" class="xliff"></a>
+#### アカウントと権限を構成するには  
   
 1.  IIS を実行しているコンピューターでローカル アカウントを作成します。  
   
@@ -310,10 +323,12 @@ ms.lasthandoff: 06/22/2017
   
     4.  クリックして **OK**です。  
   
-## <a name="testing-the-connection-to-replisapidll"></a>replisapi.dll への接続のテスト  
+<a id="testing-the-connection-to-replisapidll" class="xliff"></a>
+## replisapi.dll への接続のテスト  
  診断モードで Web 同期を実行すると、IIS を実行しているコンピューターへの接続をテストして、SSL (Secure Sockets Layer) 証明書が正しくインストールされているかどうかを確認できます。 診断モードで Web 同期を実行するには、IIS を実行しているコンピューターの管理者である必要があります。  
   
-#### <a name="to-test-the-connection-to-replisapidll"></a>replisapi.dll への接続をテストするには  
+<a id="to-test-the-connection-to-replisapidll" class="xliff"></a>
+#### replisapi.dll への接続をテストするには  
   
 1.  サブスクライバーの LAN (ローカル エリア ネットワーク) が正しく設定されていることを確認します。  
   
@@ -361,7 +376,8 @@ ms.lasthandoff: 06/22/2017
   
     2.  サーバーに診断モードで接続します。 証明書が正しくインストールされている場合は、 **[セキュリティの警告]** ダイアログ ボックスが表示されません。 ダイアログ ボックスが表示される場合は、マージ エージェントから IIS を実行しているコンピューターへの接続に失敗します。 アクセスしているサーバーの証明書が、信頼された証明書としてサブスクライバーの証明書ストアに追加されていることを確認する必要があります。 証明書のエクスポートの詳細については、IIS のマニュアルを参照してください。  
   
-## <a name="see-also"></a>参照  
+<a id="see-also" class="xliff"></a>
+## 参照  
  [[Web 同期の構成]](../../relational-databases/replication/configure-web-synchronization.md)  
   
   
