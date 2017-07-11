@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Data Tools (SSDT) のダウンロード | Microsoft Docs"
 ms.custom: 
-ms.date: 03/10/2017
+ms.date: 05/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,7 +23,9 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="download-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) のダウンロード
+<a id="download-sql-server-data-tools-ssdt" class="xliff"></a>
+
+# SQL Server Data Tools (SSDT) のダウンロード
 
 無料でダウンロードできる最新の開発ツールである **[SQL Server Data Tools](https://msdn.microsoft.com/mt186501)** を使用すると、SQL Server リレーショナル データベース、Azure SQL Database、Integration Services パッケージ、Analysis Services データ モデル、および Reporting Services レポートを作成できます。 SSDT では、Visual Studio でアプリケーションを開発する場合と同じくらい簡単に、SQL Server のコンテンツの種類を設計および展開できます。 このリリースでは、SQL Server 2005 から SQL Server 2017 までをサポートし、SQL Server 2016 の新機能を追加するためのデザイン環境を提供します。  
     
@@ -32,7 +34,9 @@ ms.lasthandoff: 06/22/2017
 
 ![ダウンロード](../ssdt/media/download.png) [データ層アプリケーション フレームワーク (DacFx) 17.1 のダウンロード](https://www.microsoft.com/download/details.aspx?id=55255)
 
-## <a name="sql-server-data-tools"></a>SQL Server Data Tools   
+<a id="sql-server-data-tools" class="xliff"></a>
+
+## SQL Server Data Tools   
 **バージョン情報**  
   
 リリース番号: 17.1  
@@ -84,17 +88,23 @@ SSDT のインストールまたは管理者用インストール ポイント�
 [ロシア語]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x419) |
 [スペイン語]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x40a)
 
-## <a name="download-visual-studio"></a>Visual Studio のダウンロード
+<a id="download-visual-studio" class="xliff"></a>
+
+## Visual Studio のダウンロード
 
 * [**Visual Studio Community 2015 のダウンロード**](https://www.visualstudio.com/products/visual-studio-community-vs.aspx)
 
-## <a name="installing-ssdt-without-visual-studio-pre-installed"></a>Visual Studio の事前インストールがない状態での SSDT のインストール
+<a id="installing-ssdt-without-visual-studio-pre-installed" class="xliff"></a>
+
+## Visual Studio の事前インストールがない状態での SSDT のインストール
 
 コンピューターに Visual Studio 2015 がインストールされていない場合、SSDT for Visual Studio 2015 をインストールすると、最小バージョン ("統合シェル") の Visual Studio 2015 もインストールされます。 このバージョンの Visual Studio は無料でインストールでき、必要な数のコンピューターで使用できます。 すべての種類の SQL Server プロジェクトに加え、SQL Server オブジェクト エクスプローラーおよび他の SQL ツールを使用できます。
 
 コンピューターに [Visual Studio 2015 Community Edition (以降)](https://www.visualstudio.com/products/visual-studio-community-vs.aspx) がインストールされていない場合、SSDT をインストールすると、既存の Visual Studio に完全な SQL Server ツール セットが追加されます。 Visual Studio には、ソース コード管理の統合および非 SQL 言語のサポートなど、使用可能な多くの機能が含まれています。 T-SQL の開発時に快適に操作できるように、Visual Studio 2015 Community 以降を使用することをお勧めす。
 
-## <a name="supported-sql-versions"></a>サポートされる SQL のバージョン
+<a id="supported-sql-versions" class="xliff"></a>
+
+## サポートされる SQL のバージョン
   
 |プロジェクト テンプレート|サポートされている SQL プラットフォーム|  
 |-------------------|--------------------|  
@@ -102,7 +112,9 @@ SSDT のインストールまたは管理者用インストール ポイント�
   |Analysis Services モデル<br /><br />Reporting Services レポート | SQL Server 2008 – SQL Server 2017|
   |Integration Services パッケージ| SQL Server 2012 – SQL Server 2017    |
   
-## <a name="next-steps"></a>次の手順  
+<a id="next-steps" class="xliff"></a>
+
+## 次の手順  
 SSDT をインストールした後、次のチュートリアルを使用して、SSDT を使ったデータベース、パッケージ、データ モデル、およびレポートの作成方法を学ぶことができます。  
   
 -   [プロジェクト指向のオフライン データベース開発](https://msdn.microsoft.com/library/hh272702(v=vs.103).aspx)  
@@ -113,7 +125,9 @@ SSDT をインストールした後、次のチュートリアルを使用して
   
 -   [基本的なテーブル レポートの作成 (SSRS チュートリアル)](https://msdn.microsoft.com/library/ms167305.aspx)  
   
-## <a name="use-ssdt-in-visual-studio-2017"></a>Visual Studio 2017 で SSDT を使用する 
+<a id="use-ssdt-in-visual-studio-2017" class="xliff"></a>
+
+## Visual Studio 2017 で SSDT を使用する 
 
 * [**Visual Studio 2017 のダウンロード**](https://www.visualstudio.com/) ([Visual Studio 2017 のエディション別の機能の比較](https://www.visualstudio.com/vs/compare/))
 
@@ -127,7 +141,9 @@ Visual Studio 2017 で SSDT を使用する場合は、AS コンポーネント�
 * [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
 
-## <a name="see-also"></a>参照  
+<a id="see-also" class="xliff"></a>
+
+## 参照  
 [Visual Studio の SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [SSDT MSDN フォーラム](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [SSDT チーム ブログ](http://blogs.msdn.com/b/ssdt/)  
