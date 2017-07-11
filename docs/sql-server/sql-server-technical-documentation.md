@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 技術ドキュメント |Microsoft ドキュメント"
-ms.date: 03/24/2017
+ms.date: 06/27/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,18 +23,22 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 79e06fb9a4eab8cd067aaa59a448593ca25e314c
+ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
+ms.openlocfilehash: 334c3d130a1d0c8371c1a7810d82d443e1fbecc8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/28/2017
 
 ---
-# <a name="sql-server-technical-documentation"></a>SQL Server 技術ドキュメント
+<a id="sql-server-technical-documentation" class="xliff"></a>
+
+# SQL Server 技術ドキュメント
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
  > SQL Server の以前のバージョンに関連するコンテンツでは、次を参照してください。 [for SQL Server 2014 インストール](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx)です。
 
  SQL Server のインストール、構成、および使用の際に役立つドキュメントです。 コンテンツには、エンド ツー エンドの例、コード サンプル、およびビデオが含まれています。 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 言語のトピックについては、「 [言語リファレンス](../t-sql/language-reference.md)」を参照してください。
+
+ヘルプ ビューアーを使って、SQL Server ドキュメントをオフラインで見ることもできます。 詳しくは、「[SQL Server のヘルプ ビューアーとオフライン コンテンツ](../release-notes/sql-server-help-installation.md)」をご覧ください。
 
 **SQL Server 2017**
 
@@ -51,7 +55,9 @@ ms.lasthandoff: 06/22/2017
  - **[SQL Server 2016 がインストール済みの Virtual Machine をすぐにご利用いただけます](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
  - **[最新バージョンの SQL Server Management Studio をダウンロードする](https://msdn.microsoft.com/library/mt238290.aspx)**   
       
-## <a name="sql-server-technologies"></a>SQL Server のテクノロジ    
+<a id="sql-server-technologies" class="xliff"></a>
+
+## SQL Server のテクノロジ    
     
 |||    
 |-|-|    
@@ -65,7 +71,9 @@ ms.lasthandoff: 06/22/2017
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Reporting Services は Web 対応のレポート機能を提供します。これによって組織では、さまざまなデータ ソースのコンテンツを表示するレポートの作成、さまざまな形式でのレポートのパブリッシュ、およびセキュリティやサブスクリプションの集中管理を行うことができます。|    
 
     
-## <a name="earlier-sql-server-versions"></a>以前の SQL Server のバージョン
+<a id="earlier-sql-server-versions" class="xliff"></a>
+
+## 以前の SQL Server のバージョン
 - [SQL Server 2014 オンライン ブックのオンライン ブック](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 - [SQL Server 2014 Express とその他の古いバージョンの SQL Server をインストールします](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)。 (**インストーラー パッケージ リンクをすべて 1 か所に集めてくれた [Scott Hanselman](http://www.hanselman.com/) に感謝します**)  
 - [SQL Server 2012 技術ドキュメント](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
@@ -78,7 +86,9 @@ ms.lasthandoff: 06/22/2017
 - [SQL Server 2016 の AdventureWorks サンプル データベースとスクリプト](https://www.microsoft.com/en-us/download/details.aspx?id=49502) 
 - [GitHub の SQL Server サンプル](https://github.com/Microsoft/sql-server-samples) 
    
- ## <a name="more-information"></a>詳細情報   
+<a id="more-information" class="xliff"></a>
+
+ ## 詳細情報   
 + [SQL Server 構成マネージャー](../relational-databases/sql-server-configuration-manager.md)
 + サポート対象のすべてのバージョンのリンクと情報については、[SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx) を参照してください 
 + [SQL Server データベース エンジンのインストール](../database-engine/install-windows/install-sql-server-database-engine.md) 

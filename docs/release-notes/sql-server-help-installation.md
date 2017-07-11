@@ -1,7 +1,7 @@
 ---
-title: "SQL Server のヘルプ ビューアー | Microsoft Docs"
+title: "SQL Server のヘルプ ビューアーとオフライン コンテンツ | Microsoft Docs"
 ms.custom: 
-ms.date: 02/15/2017
+ms.date: 06/27/2017
 ms.prod: sql-non-specified
 ms.technology: server-general
 ms.reviewer: 
@@ -11,36 +11,57 @@ ms.topic: article
 applies_to:
 - SQL Server 2014
 - SQL Server 2016
+- SQL Server 2017
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 caps.latest.revision: 8
 author: sabotta
 ms.author: carlasab
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fc2435ccea3b01328c3c4623e62fbf12ee53e400
+ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
+ms.openlocfilehash: ca52d53cf25fa0ead6abd9b870f4d8dab424d11a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/28/2017
 
 ---
-# <a name="help-viewer-for-sql-server"></a>SQL Server のヘルプ ビューアー
+<a id="help-viewer-and-offline-content-for-sql-server" class="xliff"></a>
+
+# SQL Server のヘルプ ビューアーとオフライン コンテンツ
   
   
   
-この記事では、ローカル ヘルプのインストール方法と、オンラインおよびローカル ヘルプの表示方法について説明します。 この記事では、Microsoft ヘルプ ビューアー 1.1 および 2.2 と、[!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] および [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] のドキュメントをカバーしています。 
+この記事では、ヘルプ ビューアーをインストールして SQL Server のドキュメントをオフラインで表示する方法を説明します。 この記事の対象は、[!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]、SQL Server 2016、SQL Server 2017 のドキュメントです。 
 
->[!IMPORTANT]
->ヘルプ ビューアーでは、プロキシ設定はサポートされておらず、ISO 形式もサポートされていません。  
+<a id="install-help-viewer" class="xliff"></a>
 
->**F1 とヘルプ**
->>F1 キーを押すと、対応するトピックがオンラインで表示されます。 このトピックはローカル ヘルプでは表示できません。
+## ヘルプ ビューアーをインストールする
+次の表では、SQL Server のバージョンごとにヘルプ ビューアーをインストールするツールを示します。 ヘルプ ビューアーをインストールするには、いずれかのツールをインストールします。
 
-## <a name="includesscurrentmdincludessscurrent-mdmd-and-help-viewer-22"></a>[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] とヘルプ ビューアー 2.2  
-ヘルプ ビューアー 2.2 は、2016 年 4 月プレビュー (13.0.12500.29) 以降の [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] Management Studio と、Visual Studio 2015 で提供されています。  
 
-> [![SSMS をダウンロードする](../release-notes/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **[最新バージョンの SQL Server Management Studio をダウンロードする](https://msdn.microsoft.com/library/mt238290.aspx)**  
+|**SQL Server のバージョン**|**ヘルプ ビューアーをインストールするツール**|**インストールされるヘルプ ビューアーのバージョン**|
+|---------|---------|---------|
+|SQL Server 2017<br>SQL Server 2016     |   [SQL Server Management Studio の最新バージョン](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)<br><br>[Visual Studio 2015 の SQL Server Data Tools の最新バージョン](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)<br><br>Visual Studio 2017 (*SQL Server 2016* のみをサポート)  |  v2.x       |
+|SQL Server 2014    | SQL Server 2014 Management Studio<br><br>Visual Studio 2012 より前のバージョンの Visual Studio        |  v1.x       |
 
-**ヘルプ ビューアー 2.2 で使用するローカル ヘルプをインストールするには**  
-1. SQL Server Management Studio または Visual Studio を起動し、**[ヘルプ]** メニューの **[ヘルプ コンテンツの追加と削除]** をクリックして、ヘルプ ビューアー 2.2 を開きます。  
+
+> [!IMPORTANT]
+> SQL Server 2016 でインストールされるヘルプ ビューアー 1.1 は、SQL Server 2016 および 2017 のドキュメントを表示できません。
+> <br>
+> <br>
+> SQL Server 2017 では、ヘルプ ビューアーはインストールされません。
+> <br>
+> <br>
+> Visual Studio 2017 でヘルプ ビューアーをインストールするには、**Visual Studio インストーラー** プログラムで **[個別のコンポーネント]** タブをクリックし、**[コード ツール]** カテゴリで **[ヘルプ ビューアー]** をクリックして、**[インストール]** をクリックします。 
+> <br>
+> <br>
+> [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 用のローカル ヘルプは、**ディスクからコンテンツをインストール**した場合に限り、ヘルプ ビューアー 2.x で表示できます。 
+
+
+<a id="sql-server-2016-sql-server-2017-offline-content" class="xliff"></a>
+
+## SQL Server 2016、SQL Server 2017 のオフライン コンテンツ  
+ 
+**オフライン コンテンツをインストールするには**  
+1. SQL Server Management Studio または Visual Studio を起動し、**[ヘルプ]** メニューの **[ヘルプ コンテンツの追加と削除]** をクリックして、ヘルプ ビューアーを開きます。  
 2. **[コンテンツの管理]** タブをクリックします。  
 3. オンライン ソースからヘルプをインストールするには、**[インストール元]** 領域で **[オンライン]** をクリックします。  
 ![HelpViewer2_ManageContent_OnlineSource](../release-notes/media/helpviewer2-managecontent-onlinesource.png)  
@@ -63,67 +84,73 @@ ms.lasthandoff: 04/11/2017
       
    >[!IMPORTANT]
    > 移動操作が失敗したことを示すメッセージが表示された場合は、メッセージ ボックスを閉じ、ヘルプ ビューアーを閉じた後、ヘルプ ビューアーを再度開きます。 **[ローカル ストア パス]** に、コンテンツの新しい場所が表示されます。   
-  
-**SQL Server Management Studio でローカル ヘルプまたはオンライン ヘルプを表示するには**  
-* ローカル ヘルプを表示するには、**[ヘルプ]** メニューの **[ヘルプ コンテンツの追加と削除]** をクリックし、**[ヘルプ ビューアー ホーム]** タブをクリックしてドキュメントを表示します。  
-    >[!NOTE]
-    >**[ヘルプ ビューアー ホーム]** というテキストは、目次でクリックしたトピックに応じて変わります。   
-* オンライン ヘルプを表示するには、**[ヘルプ]** メニューの **[ヘルプの表示]** をクリックします。 ブラウザーにドキュメントが表示されます。  
-![HelpViewer2_SSMS_ChooseOnlineORLocalHelp](../release-notes/media/helpviewer2-ssms-chooseonlineorlocalhelp.png)  
-  
-  
-**Visual Studio でローカル ヘルプまたはオンライン ヘルプを表示するには**  
-* **[ヘルプ]** メニューの **[ヘルプ設定の設定]** をクリックし、次のいずれかの操作を行います。  
-   * オンライン ヘルプを表示するには、**[ブラウザーで起動]** をクリックします。 **[ヘルプ]** メニューの **[ヘルプの表示]** をクリックすると、ブラウザーにドキュメントが表示されます。  
-   * ローカル ヘルプを表示するには、**[ヘルプ ビューアーで起動]** をクリックします。 **[ヘルプ]** メニューの **[ヘルプの表示]** をクリックすると、ヘルプ ビューアーにドキュメントが表示されます。  
-     
-     ![HelpViewer2_VisualStudio_ChooseOnlineORLocalHelp](../release-notes/media/helpviewer2-visualstudio-chooseonlineorlocalhelp.png)  
-  
-  
-## <a name="includesssql14mdincludessssql14-mdmd-and-help-viewer-11"></a>[!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] とヘルプ ビューアー 1.1  
- ヘルプ ビューアー 1.1 は、[!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] Management Studio と、Visual Studio 2012 より前のバージョンの Visual Studio で利用できます。   
  
->[!NOTE]
-> [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 用のローカル ヘルプは、**ディスクからコンテンツをインストール**した場合に限り、ヘルプ ビューアー 2.2 でも表示できます。 ヘルプ ビューアー 2.2 は、2016 年 4 月プレビュー (13.0.12500.29) 以降の [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] Management Studio と、Visual Studio 2015 で提供されています。 
-   
-**ヘルプ ビューアー 1.1 で使用するローカル ヘルプをインストールするには**  
+<a id="includesssql14mdincludessssql14-mdmd-offline-content" class="xliff"></a>
+
+## [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] のオフライン コンテンツ 
+ 
+  
+**オフライン コンテンツをインストールするには**  
 1. ヘルプ コンテンツの[ダウンロード サイト](https://www.microsoft.com/en-us/download/details.aspx?id=42557)に移動し、**[ダウンロード]** をクリックします。  
 2. メッセージ ボックスの **[保存]** をクリックして、 SQLServer2014Documentation_*.exe ファイルをコンピューターに保存します。  
-   >[!NOTE]
-   >ファイアウォールとプロキシによる制限がある環境では、環境内に持ち込むことができる USB ドライブか、その他のポータブル メディアにダウンロードを保存します。   
+
+ ファイアウォールとプロキシによる制限がある環境では、環境内に持ち込むことができる USB ドライブか、その他のポータブル メディアにダウンロードを保存します。   
+
 3. .exe をダブルクリックしてヘルプ コンテンツ ファイルをアンパックし、ローカルまたは共有のフォルダーにファイルを保存します。  
 4. SQL Server Management Studio または Visual Studio を起動し、**[ヘルプ]** メニューの **[ヘルプの設定の管理]** をクリックして、**[ヘルプ ライブラリ マネージャー]** を開きます。  
-7. **[ディスクからコンテンツをインストール]** をクリックし、ヘルプ コンテンツ ファイルをアンパックしたフォルダーを参照します。  
+5. **[ディスクからコンテンツをインストール]** をクリックし、ヘルプ コンテンツ ファイルをアンパックしたフォルダーを参照します。  
   
-[ディスクからコンテンツをインストール] を選択する  |ヘルプ コンテンツ ファイルを参照する   
----------|---------  
-![HelpLibraryManager_MainPage_InstallFromDisk](../release-notes/media/helplibrarymanager-mainpage-installfromdisk.png)    | ![HelpLibraryManager_InstallContentFromDisk_dialog1](../release-notes/media/helplibrarymanager-installcontentfromdisk-dialog1.png)          
+     [ディスクからコンテンツをインストール] を選択する  |ヘルプ コンテンツ ファイルを参照する   
+     ---------|---------  
+     ![HelpLibraryManager_MainPage_InstallFromDisk](../release-notes/media/helplibrarymanager-mainpage-installfromdisk.png)    | ![HelpLibraryManager_InstallContentFromDisk_dialog1](../release-notes/media/helplibrarymanager-installcontentfromdisk-dialog1.png)          
   
->[!IMPORTANT]
-> 目次の一部しかないローカル ヘルプ コンテンツがインストールされるのを防ぐには、**[ヘルプ ライブラリ マネージャー]** の **[ディスクからコンテンツをインストール]** オプションを使用します。  
->>**[オンラインからコンテンツをインストール]** オプションを使用した場合は、ヘルプ ビューアーに部分的な目次が表示されます。トラブルシューティング手順については、こちらの[ブログ投稿](https://blogs.msdn.microsoft.com/womeninanalytics/2016/06/21/troubleshoot-local-help-for-sql-server-2014/)をご覧ください。 
+     >[!IMPORTANT]
+     > 目次の一部しかないローカル ヘルプ コンテンツがインストールされるのを防ぐには、**[ヘルプ ライブラリ マネージャー]** の **[ディスクからコンテンツをインストール]** オプションを使用します。  
+     >>**[オンラインからコンテンツをインストール]** オプションを使用した場合は、ヘルプ ビューアーに部分的な目次が表示されます。トラブルシューティング手順については、こちらの[ブログ投稿](https://blogs.msdn.microsoft.com/womeninanalytics/2016/06/21/troubleshoot-local-help-for-sql-server-2014/)をご覧ください。 
 
 8. HelpContentSetup.msha ファイルをクリックし、**[開く]** をクリックして、**[次へ]** をクリックします。  
 9. インストールするドキュメントの横の **[追加]** をクリックし、**[更新]** をクリックします。  
   
    ![HelpLibraryManager_InstallContentFromDisk_dialog2](../release-notes/media/helplibrarymanager-installcontentfromdisk-dialog2.png)  
-10. **[完了]** をクリックし、**[終了]** をクリックした後、**[ヘルプ]** メニューの **[ヘルプの表示]** をクリックしてヘルプ ビューアーを開き、コンテンツを表示します。 左ペインの目次に、インストールしたコンテンツが表示されます。  
+10. **[完了]** をクリックし、**[終了]** をクリックします。
+11. **[ヘルプ ライブラリ マネージャー]** を再び開き、**[オンラインまたはローカル ヘルプの選択]** をクリックして、**[ローカル ヘルプを使用する]** をクリックします。
+12. **[ヘルプ]** メニューの **[ヘルプの表示]** をクリックしてヘルプ ビューアーを開き、コンテンツを表示します。 左ペインの目次に、インストールしたコンテンツが表示されます。  
   
     ![HelpViewer1_withContentInstalled_ZoomedIn](../release-notes/media/helpviewer1-withcontentinstalled-zoomedin.png)  
   
-**ローカル ヘルプまたはオンライン ヘルプを表示するには**  
+<a id="view-online-content-in-help-viewer" class="xliff"></a>
+
+## ヘルプ ビューアーでオンライン コンテンツを表示する
+
+ヘルプ ビューアー v2.x では、次のいずれかの方法でオンライン コンテンツを表示できます。
+
+- SQL Server Management Studio で、**[ヘルプ]** メニューの **[ヘルプの表示]** をクリックします。 ブラウザーにドキュメントが表示されます。
+![HelpViewer2_SSMS_ChooseOnlineORLocalHelp](../release-notes/media/helpviewer2-ssms-chooseonlineorlocalhelp.png)
+
+- Visual Studio で、**[ヘルプ]** メニューの **[ヘルプ設定の設定]** をクリックし、**[ブラウザーで起動]** をクリックします。 **[ヘルプ]** メニューの **[ヘルプの表示]** をクリックすると、ブラウザーにドキュメントが表示されます。
+
+![HelpViewer2_VisualStudio_ChooseOnlineORLocalHelp](../release-notes/media/helpviewer2-visualstudio-chooseonlineorlocalhelp.png)   
+
+ヘルプ ビューアー v1.x では、次の方法でオンライン コンテンツを表示できます。
 1. **[ヘルプ]** メニューの **[ヘルプの設定の管理]** をクリックして、**ヘルプ ライブラリ マネージャー**を開きます。  
 2. **[ヘルプ ライブラリ マネージャー]** ダイアログ ボックスで、**[オンラインまたはローカル ヘルプの選択]** をクリックします。  
   
    ![HelpLibraryManager_MainPage_ChooseOnlineORLocal.png](../release-notes/media/helplibrarymanager-mainpage-chooseonlineorlocal.png.png)  
-3. 次のいずれかの操作を行い、**[OK]** をクリックして、**[終了]** をクリックします。  
-   * **[I want to use online help (オンライン ヘルプを使用します)]** をクリックする  
-   * **[I want to use local help (ローカル ヘルプを使用します)]** をクリックする。  
-  
-   ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../release-notes/media/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)  
-  
-オンライン ヘルプを使用するよう選択した場合は、**[ヘルプ]** メニューの **[ヘルプの表示]** をクリックすると、ブラウザーが起動し、MSDN の「[Books Online for SQL Server 2014](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)」記事が表示されます。 ローカル ヘルプを使用するように選択した場合は、**[ヘルプの表示]** をクリックするとヘルプ ビューアーが起動します。  
+3. **[オンライン ヘルプを使用する]**、**[OK]**、**[終了]** の順にクリックします。  
 
-## <a name="additional-information"></a>関連情報
+   ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../release-notes/media/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
+
+<a id="f1-help-and-other-tips" class="xliff"></a>
+
+## F1 ヘルプおよびその他のヒント
+
+F1 キーを押すと、対応するトピックがオンラインで表示されます。 このトピックはローカル ヘルプでは表示できません。
+
+また、ヘルプ ビューアーは、プロキシ設定および ISO 形式をサポートしていません。 
+
+
+<a id="additional-information" class="xliff"></a>
+
+## 関連情報
 [Microsoft ヘルプ ビューアー - Visual Studio 2015](https://msdn.microsoft.com/library/hh580782.aspx)
 
