@@ -25,7 +25,9 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="alternate-snapshot-folder-locations"></a>スナップショット フォルダーの代替位置
+<a id="alternate-snapshot-folder-locations" class="xliff"></a>
+
+# スナップショット フォルダーの代替位置
   スナップショットの代替位置を使用すると、既定の場所 (通常はディストリビューター上) 以外の場所、または既定の場所に加えて別の場所にスナップショット ファイルを格納できます。 代替位置には、別のサーバー、ネットワーク ドライブ、またはリムーバブル メディア (CD-ROM またはリムーバブル ディスクなど) を指定できます。  
   
  スナップショットの代替位置は、パブリケーションのプロパティとして格納されます。 スナップショットの代替位置はパブリケーション プロパティであるため、ディストリビューション エージェントおよびマージ エージェントは同期処理の過程で適切なスナップショットを見つけることができます。  
@@ -44,7 +46,9 @@ ms.lasthandoff: 06/22/2017
   
 -   レプリケーション [!INCLUDE[tsql](../../includes/tsql-md.md)] プログラミング: [スナップショットのプロパティの構成 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   
-## <a name="see-also"></a>参照  
+<a id="see-also" class="xliff"></a>
+
+## 参照  
  [Initialize a Subscription with a Snapshot (スナップショットを使用したサブスクリプションの初期化)](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Snapshot Options](../../relational-databases/replication/snapshot-options.md)  
   
