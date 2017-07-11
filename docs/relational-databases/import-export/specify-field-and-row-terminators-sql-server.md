@@ -24,16 +24,20 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 42c2ee3fe98d6c6fc35d2417469bc3eec9fddd8c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="specify-field-and-row-terminators-sql-server"></a>フィールド ターミネータと行ターミネータの指定 (SQL Server)
+<a id="specify-field-and-row-terminators-sql-server" class="xliff"></a>
+
+# フィールド ターミネータと行ターミネータの指定 (SQL Server)
   文字列データ フィールドでは、省略可能なターミネータ文字を使用して、データ ファイルの各フィールドの末尾 ( *フィールド ターミネータ* を使用) と各行の末尾 ( *行ターミネータ*を使用) を示すことができます。 ターミネータ文字は、フィールドや行の終了位置と次のフィールドや行の開始位置を、データ ファイルを読み取るプログラムに示す方法の 1 つです。  
   
 > [!IMPORTANT]  
 >  ネイティブ形式または Unicode ネイティブ形式を使用するときは、フィールド ターミネータではなくプレフィックス長を使用します。 ネイティブ形式のデータ ファイルは [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内部バイナリ データ形式で格納されるので、ネイティブ形式のデータがターミネータと競合することがあります。  
   
-## <a name="characters-supported-as-terminators"></a>ターミネータとしてサポートされる文字  
+<a id="characters-supported-as-terminators" class="xliff"></a>
+
+## ターミネータとしてサポートされる文字  
  **bcp** コマンド、BULK INSERT ステートメント、および OPENROWSET 一括行セット プロバイダーでは、フィールド ターミネータまたは行ターミネータとしてさまざまな文字がサポートされます。また、常に、各ターミネータの最初のインスタンスが検索されます。 ターミネータ用にサポートされる文字を次の表に示します。  
   
 |ターミネータ文字|指定方法|  
@@ -53,13 +57,17 @@ ms.lasthandoff: 04/11/2017
 > [!IMPORTANT]  
 >  データ内にターミネータ文字が出現すると、データではなく、ターミネータとして解釈されます。その文字に続くデータは、次のフィールドまたは次のレコードに属すると解釈されます。 したがって、ターミネータがデータに出現することがないように、注意深くターミネータを選択してください。 たとえば、データに下位サロゲートが含まれている場合、フィールド ターミネータには下位サロゲート フィールド ターミネータは適していません。  
   
-## <a name="using-row-terminators"></a>行ターミネータの使用  
+<a id="using-row-terminators" class="xliff"></a>
+
+## 行ターミネータの使用  
  行ターミネータと最後のフィールドのターミネータを兼用できます。 ただし、通常は、行ターミネータを別に指定する方が便利です。 たとえば、表形式の出力を生成するには、各行の最後のフィールドを改行文字 (\n) で終了し、他のすべてのフィールドをタブ文字 (\t) で終了します。 各データ レコードをデータ ファイル内の独自の行に配置するには、行ターミネータに \r\n の組み合わせを指定します。  
   
 > [!NOTE]  
 >  **bcp** を対話的に使用し、\n (改行) を行ターミネータとして指定すると、 **bcp** によって自動的に \r (キャリッジ リターン) 文字が前に付加され、結果的には行ターミネータが \r\n になります。  
   
-## <a name="specifying-terminators-for-bulk-export"></a>一括エクスポートのターミネータの指定  
+<a id="specifying-terminators-for-bulk-export" class="xliff"></a>
+
+## 一括エクスポートのターミネータの指定  
  **char** データまたは **nchar** データを一括エクスポートするときに、既定のターミネータ以外を使用する場合、 **bcp** コマンドに対してターミネータを指定する必要があります。 次のいずれかの方法で、ターミネータを指定できます。  
   
 -   フォーマット ファイルで、フィールドごとにターミネータを指定します。  
@@ -76,7 +84,7 @@ ms.lasthandoff: 04/11/2017
         > [!NOTE]  
         >  **-n** (ネイティブ データ) スイッチまたは **-N** (Unicode ネイティブ) スイッチを指定すると、ターミネータは挿入されません。  
   
-    -   対話的な **bcp** コマンドに、 **in** オプションまたは **out** オプションが含まれていて、フォーマット ファイル スイッチ (**-f**) またはデータ形式スイッチ (**-n**、 **-c**、 **-w**、または **-N**) のいずれも含まれていない場合に、プレフィックス長とフィールド長の指定をしないと、各フィールドのフィールド ターミネータが要求されます。既定ではターミネータは "なし" になっています。  
+    -   対話的な **bcp** コマンドに、 **in** データまたは **out** オプションが含まれていて、フォーマット ファイル スイッチ (**-f**) またはデータ形式スイッチ (**-n**、 **-t**、 **-c**、または **-N**) のいずれも含まれていない場合に、プレフィックス長とフィールド長の指定をしないと、各フィールドのフィールド ターミネータが要求されます。既定ではターミネータは "なし" になっています。  
   
          `Enter field terminator [none]:`  
   
@@ -85,7 +93,9 @@ ms.lasthandoff: 04/11/2017
         > [!NOTE]  
         >  **bcp** コマンドですべてのフィールドを対話形式で指定すると、各フィールドへの応答を XML 形式以外のファイルに保存するように要求するプロンプトが表示されます。 XML 以外のフォーマット ファイルの詳細については、「[XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)」を参照してください。  
   
-### <a name="guidelines-for-using-terminators"></a>ターミネータ使用のガイドライン  
+<a id="guidelines-for-using-terminators" class="xliff"></a>
+
+### ターミネータ使用のガイドライン  
  状況によっては、 **char** データ フィールドまたは **nchar** データ フィールドには、ターミネータが役に立つ場合があります。 例:  
   
 -   プレフィックス長がわからないプログラムにインポートされるデータ ファイル内で NULL 値が含まれるデータ列。  
@@ -96,7 +106,9 @@ ms.lasthandoff: 04/11/2017
   
      この状況では、ターミネータを指定することで記憶領域が最小限になり、フィールドが可変長として処理されます。  
   
-### <a name="examples"></a>使用例  
+<a id="examples" class="xliff"></a>
+
+### 使用例  
  この例では、フィールド ターミネータにコンマ、行ターミネータに改行文字 (\n) を使用して、文字形式で `AdventureWorks.HumanResources.Department` テーブルから `Department-c-t.txt` データ ファイルにデータが一括エクスポートされます。  
   
  **bcp** コマンドには、次のスイッチがあります。  
@@ -118,7 +130,9 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
  このコマンドにより、それぞれ 4 つのフィールドを持つ 16 個のレコードが含まれる `Department-c-t.txt`が作成されます。 各フィールドはコンマで区切られています。  
   
-## <a name="specifying-terminators-for-bulk-import"></a>一括インポートのターミネータの指定  
+<a id="specifying-terminators-for-bulk-import" class="xliff"></a>
+
+## 一括インポートのターミネータの指定  
  **char** データまたは **nchar** データを一括インポートするときに、一括インポート コマンドではデータ ファイルで使用されているターミネータが認識される必要があります。 次のように、ターミネータの指定方法は一括インポート コマンドによって異なります。  
   
 -   **bcp**  
@@ -142,7 +156,9 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      OPENROWSET BULK 句の詳細については、「[OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)」を参照してください。  
   
-### <a name="examples"></a>使用例  
+<a id="examples" class="xliff"></a>
+
+### 使用例  
  この例では、前述の例で作成された `Department-c-t.txt` データ ファイルから、 `myDepartment` サンプル データベースの [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] テーブルに、文字データを一括インポートします。 このテーブルを作成しないと、例を実行できません。 **dbo** スキーマでこのテーブルを作成するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターで次のコードを実行します。  
   
 ```tsql  
@@ -158,7 +174,9 @@ ModifiedDate datetime not NULL CONSTRAINT DF_AddressType_ModifiedDate DEFAULT (G
 GO 
 ```  
   
-#### <a name="a-using-bcp-to-interactively-specify-terminators"></a>A. bcp を使用した対話的なターミネータの指定  
+<a id="a-using-bcp-to-interactively-specify-terminators" class="xliff"></a>
+
+#### A. bcp を使用した対話的なターミネータの指定  
  次の例では、 `Department-c-t.txt` コマンドを使用して、 `bcp` データ ファイルを一括インポートします。 このコマンドでは、一括エクスポート コマンドと同じコマンド スイッチを使用します。 詳細については、このトピックの「一括エクスポートのターミネータの指定」を参照してください。  
   
  Windows コマンド プロンプトで、次のように入力します。  
@@ -167,7 +185,9 @@ GO
 bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T  
 ```  
   
-#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. BULK INSERT を使用した対話的なターミネータの指定  
+<a id="b-using-bulk-insert-to-interactively-specify-terminators" class="xliff"></a>
+
+#### B. BULK INSERT を使用した対話的なターミネータの指定  
  次の例では、次の表に示す修飾子を指定した `Department-c-t.txt` ステートメントを使用して、 `BULK INSERT` データ ファイルを一括インポートします。  
   
 |オプション|属性|  
@@ -190,7 +210,9 @@ BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+<a id="see-also" class="xliff"></a>
+
+## 参照  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

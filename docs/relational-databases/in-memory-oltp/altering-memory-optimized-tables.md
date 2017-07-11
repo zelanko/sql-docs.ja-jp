@@ -2,7 +2,7 @@
 title: "メモリ最適化テーブルの変更 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 10/04/2016
+ms.date: 06/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,18 +16,22 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e4a8b3f4dabec4d46813c570e1a04fd469075a66
+ms.sourcegitcommit: 7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7
+ms.openlocfilehash: bd27f9755945abf7c09118a5997bb3745e66ab57
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
-# <a name="altering-memory-optimized-tables"></a>メモリ最適化テーブルの変更
+<a id="altering-memory-optimized-tables" class="xliff"></a>
+
+# メモリ最適化テーブルの変更
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  メモリ最適化テーブルのスキーマとインデックスの変更は、ALTER TABLE ステートメントを使用して実行できます。 データベース アプリケーションは実行を継続できます。また、テーブルにアクセスする操作は、変更プロセスが完了するまでブロックされます。  
+  メモリ最適化テーブルのスキーマとインデックスの変更は、ALTER TABLE ステートメントを使用して実行できます。 SQL Server 2016 と Azure SQL Database では、メモリ最適化テーブルに対する ALTER TABLE 操作は OFFLINE です。つまり、操作が行われている間、テーブルのクエリを行うことはできません。 データベース アプリケーションは実行を継続できます。また、テーブルにアクセスする操作は、変更プロセスが完了するまでブロックされます。 1 つの ALTER TABLE ステートメントに、複数の ADD、DROP、または ALTER 操作を組み合わせることができます。
   
-## <a name="alter-table"></a>ALTER TABLE  
+<a id="alter-table" class="xliff"></a>
+
+## ALTER TABLE  
  
 ALTER TABLE 構文は、テーブル スキーマを変更する場合だけでなく、インデックスの追加、削除、および再構築の場合にも使用します。 インデックスは、テーブル定義の一部と見なされます。  
   
@@ -80,12 +84,37 @@ ALTER TABLE 構文は、テーブル スキーマを変更する場合だけで�
   
  ALTER TABLE の機能と詳細な構文については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
   
-## <a name="schema-bound-dependency"></a>スキーマ バインド依存関係  
+<a id="schema-bound-dependency" class="xliff"></a>
+
+## スキーマ バインド依存関係  
  スキーマ バインドであるためには、アクセスするメモリ最適化テーブルおよび参照する列に対するスキーマ バインド依存関係を持つネイティブ コンパイル ストアド プロシージャが必要です。 スキーマ バインド依存関係とは、参照元エンティティが存在する限り、参照先エンティティを削除したり、互換性のない方法で変更したりすることができない 2 つのエンティティ間のリレーションシップです。  
   
  たとえば、スキーマ バインドのネイティブ コンパイル ストアド プロシージャがテーブル *mytable* の列 *c1*を参照している場合、列 *c1* は削除できません。 同様に、このようなプロシージャで列リストのない INSERT ステートメント (たとえば `INSERT INTO dbo.mytable VALUES (...)`) を使用している場合、テーブルの列はどれも削除できません。  
+ 
+<a id="logging-of-alter-table-on-memory-optimized-tables" class="xliff"></a>
+
+## メモリ最適化テーブルの ALTER TABLE のログ記録
+メモリ最適化テーブルでは、ほとんどの ALTER TABLE シナリオが並列に実行され、トランザクション ログへの書き込みが最適化されるようになりました。 最適化は、メタデータの変更のみをトランザクション ログに記録することによって実現されます。 ただし、次の ALTER TABLE 操作ではシングル スレッドが実行され、ログ最適化は行われません。
+
+この場合のシングル スレッド操作は、変更されたテーブルの内容全体をトランザクション ログに記録します。 シングル スレッド操作の一覧を以下に示します。
+
+- nvarchar(max)、varchar(max)、varbinary(max) などのラージ オブジェクト (LOB) 型を使用するために列を変更または追加します。
+
+- COLUMNSTORE インデックスを追加または削除します。
+
+- [行外列](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)に影響するほぼあらゆる操作。
+
+    - 行内の列を行外に移動します。
+
+    - 行外の列を行内に移動します。
+
+    - 新しい行外の列を作成します。
+
+    - *例外:* 既存の行外列が長くなった場合は、最適化された方法でログに記録されます。 
   
-## <a name="examples"></a>使用例  
+<a id="examples" class="xliff"></a>
+
+## 使用例  
  次の例では、既存のハッシュ インデックスのバケット数を変更します。 その結果、新しいバケット数でハッシュ インデックスが再構築されますが、ハッシュ インデックスの他のプロパティは変わりません。  
   
 ```tsql
@@ -150,29 +179,10 @@ GO
 
 <a name="logging-of-alter-table-on-memory-optimized-tables-124"></a>
 
-## <a name="logging-of-alter-table-on-memory-optimized-tables"></a>メモリ最適化テーブルの ALTER TABLE のログ記録
 
+<a id="see-also" class="xliff"></a>
 
-メモリ最適化テーブルでは、ほとんどの ALTER TABLE シナリオが並列に実行され、トランザクション ログへの書き込みが最適化されるようになりました。 最適化とは、メタデータの変更のみがトランザクション ログに書き込まれることです。 ただし、次の ALTER TABLE 操作ではシングル スレッドが実行され、ログ最適化は行われません。
-
-シングル スレッド操作では、変更されたテーブルの内容全体をログに書き込む必要があります。 シングル スレッド操作の一覧を以下に示します。
-
-- nvarchar(max)、varchar(max)、varbinary(max) などのラージ オブジェクト (LOB) 型を使用するために列を変更または追加します。
-
-- COLUMNSTORE インデックスを追加または削除します。
-
-- [行外列](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)に影響するほぼあらゆる操作。
-
-    - 行内の列を行外に移動します。
-
-    - 行外の列を行内に移動します。
-
-    - 新しい行外の列を作成します。
-
-    - *例外:* 既存の行外列が長くなった場合は、最適化された方法でログに記録されます。
-
-
-## <a name="see-also"></a>参照  
+## 参照  
 
 [メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   

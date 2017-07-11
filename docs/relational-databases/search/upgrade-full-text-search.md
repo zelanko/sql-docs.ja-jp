@@ -24,10 +24,12 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 33b11df8c6894b8acd24da6afd4e2f825fc93445
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="upgrade-full-text-search"></a>フルテキスト検索のアップグレード
+<a id="upgrade-full-text-search" class="xliff"></a>
+
+# フルテキスト検索のアップグレード
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのフルテキスト検索のアップグレードは、セットアップ時のほか、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース ファイルとフルテキスト カタログのアタッチ時、復元時、またはデータベース コピー ウィザードによるコピー時に行われます。  
   
   
@@ -83,7 +85,9 @@ ms.lasthandoff: 04/11/2017
   
      アップグレード時のインポートまたは再構築では CPU リソースを大量に消費するので、その他のサーバー インスタンスがアップグレードされてオンラインになるのが遅れます。 できるだけ早くサーバー インスタンスをオンラインにすることが重要であり、アップグレード後に手動作成を実行してもよい場合は、 **[リセット]** が最適です。  
   
-## <a name="ensure-consistent-query-results-after-importing-a-full-text-index"></a>フルテキスト インデックスをインポートした後にクエリ結果に不一致が生じないようにする  
+<a id="ensure-consistent-query-results-after-importing-a-full-text-index" class="xliff"></a>
+
+## フルテキスト インデックスをインポートした後にクエリ結果に不一致が生じないようにする  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースから [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]へのアップグレード時にフルテキスト カタログをインポートした場合、新旧のワード ブレーカーにおける動作の違いから、クエリとフルテキスト インデックスの内容との間に不一致が生じる可能性があります。 この場合、クエリとフルテキスト インデックスの内容を確実に完全一致させるためには、次のいずれかのオプションを選択します。  
   
 -   フルテキスト インデックスを含むフルテキスト カタログを再構築します ([ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*catalog_name* REBUILD)。  
@@ -92,7 +96,9 @@ ms.lasthandoff: 04/11/2017
   
  ワード ブレーカーの詳細については、「 [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)」を参照してください。  
   
-## <a name="upgrade-noise-word-files-to-stoplists"></a>ノイズワード ファイルからストップリストへのアップグレード  
+<a id="upgrade-noise-word-files-to-stoplists" class="xliff"></a>
+
+## ノイズワード ファイルからストップリストへのアップグレード  
 データベースが [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] から [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]にアップグレードされると、ノイズ ワード ファイルは使用されなくなります。 ただし、古いノイズ ワード ファイルは FTDATA\ FTNoiseThesaurusBak フォルダーに保存され、後で更新する際、または対応する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ストップリストを作成する際に使用できます。  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]からのアップグレード後  
@@ -112,7 +118,9 @@ ms.lasthandoff: 04/11/2017
   
      STOPLIST OFF 句は、ストップワードのフィルター処理を削除し、テーブル作成のトリガーとなります。このとき、ノイズと見なされたワードはフィルター処理されません。  
   
-## <a name="backup-and-imported-full-text-catalogs"></a>バックアップとインポートされたフルテキスト カタログ  
+<a id="backup-and-imported-full-text-catalogs" class="xliff"></a>
+
+## バックアップとインポートされたフルテキスト カタログ  
  アップグレード時に再構築またはリセットされたフルテキスト カタログ (および新しいフルテキスト カタログ) は論理的概念であり、ファイル グループ内には存在しません。 そのため、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でフルテキスト カタログをバックアップするには、カタログのフルテキスト インデックスが含まれるファイル グループをすべて特定し、1 つずつバックアップする必要があります。 詳細については、「 [フルテキスト カタログとフルテキスト インデックスのバックアップおよび復元](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)」を参照してください。  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]からインポートされたフルテキスト カタログは、元のファイル グループ内のデータベース ファイルのままです。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] におけるフルテキスト カタログのバックアップ プロセスが引き続き適用されます。ただし、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]には MSFTESQL サービスが存在しません。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] におけるプロセスの詳細については、SQL Server 2005 オンライン ブックの「 [フルテキスト カタログのバックアップと復元](http://go.microsoft.com/fwlink/?LinkId=209154) 」を参照してください。  
@@ -124,7 +132,7 @@ ms.lasthandoff: 04/11/2017
   
  **サーバー インスタンスでフルテキスト アップグレード動作を変更するには**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Use the **upgrade\_option** action of [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]: [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md) の **upgrade\_option** アクションを使用します。  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** **[サーバーのプロパティ]** ダイアログ ボックスの **[フルテキスト アップグレード オプション]** を使用します。 詳細については、「 [サーバー インスタンスでのフルテキスト検索の管理と監視](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)」を参照してください。  
   
@@ -155,7 +163,9 @@ ms.lasthandoff: 04/11/2017
   
 -   [データベースの全体復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)  
   
-### <a name="example"></a>例  
+<a id="example" class="xliff"></a>
+
+### 例  
  次の例では、 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントの MOVE 句を使用して、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] という `ftdb1`データベースを復元する方法を示しています。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のデータベース ファイル、ログ ファイル、およびカタログ ファイルは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー インスタンス上の新しい場所に、次のように移動されます。  
   
 -   データベース ファイル `ftdb1.mdf`は `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL13.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`に移動されます。  
@@ -180,7 +190,9 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  データベースのデタッチとアタッチの詳細については、「[データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)」、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」、「[sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md)」、「[sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+<a id="see-also" class="xliff"></a>
+
+## 参照  
  [フルテキスト検索の概要](../../relational-databases/search/get-started-with-full-text-search.md)   
  [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [検索用フィルターの構成と管理](../../relational-databases/search/configure-and-manage-filters-for-search.md)  

@@ -40,10 +40,12 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bc4b16adf509a811980323e2bc41e3f44c9906d9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="configure-web-synchronization"></a>Web 同期の構成
+<a id="configure-web-synchronization" class="xliff"></a>
+
+# Web 同期の構成
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マージ レプリケーションの Web 同期オプションを使用すると、インターネット経由で HTTPS プロトコルを使用してデータをレプリケートできます。 Web 同期を使用するには、最初に次の構成操作を実行する必要があります。  
@@ -63,7 +65,9 @@ ms.lasthandoff: 04/11/2017
   
  以降の手順では、説明を簡単にするために、ローカル アカウントを使用した場合の簡素化されたセキュリティ構成について説明します。 この簡素化された構成は、IIS と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパブリッシャーおよびディストリビューターの両方を同一のコンピューターで実行する環境に適しています。ただし、運用環境ではマルチサーバー トポロジを使用する可能性が高く、その方が推奨されます。 この手順のローカル アカウントは、ドメイン アカウントに置き換えることもできます。  
   
-## <a name="creating-new-accounts-and-mapping-sql-server-logins"></a>新しいアカウントの作成と SQL Server ログインのマッピング  
+<a id="creating-new-accounts-and-mapping-sql-server-logins" class="xliff"></a>
+
+## 新しいアカウントの作成と SQL Server ログインのマッピング  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナー (replisapi.dll) は、レプリケーション Web サイトに関連付けられたアプリケーション プールに指定されているアカウントを借用することでパブリッシャーに接続します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナーに使用するアカウントには、「[Merge Agent Security](../../relational-databases/replication/merge-agent-security.md)」(マージ エージェント セキュリティ) の「Connect to the Publisher or Distributor」(パブリッシャーまたはディストリビューターへの接続) で説明されている権限が必要です。 このアカウントに必要な権限の概要を以下に示します。  
@@ -80,7 +84,9 @@ ms.lasthandoff: 04/11/2017
   
  Web 同期を構成する前に、このトピックの「Web 同期のセキュリティの推奨事項」を一読することをお勧めします。 Web 同期のセキュリティの詳細については、「 [Security Architecture for Web Synchronization](../../relational-databases/replication/security/security-architecture-for-web-synchronization.md)」を参照してください。  
   
-## <a name="configuring-the-computer-that-is-running-iis"></a>IIS を実行しているコンピューターの構成  
+<a id="configuring-the-computer-that-is-running-iis" class="xliff"></a>
+
+## IIS を実行しているコンピューターの構成  
  Web 同期を使用するには、IIS をインストールして構成する必要があります。 レプリケーション Web サイトの URL がないと、Web 同期を使用するようにパブリケーションを構成できません。  
   
  Web 同期は、バージョン 5.0 以降の IIS でサポートされます。 IIS 7.0 では、Web 同期の構成ウィザードはサポートされていません。 SQL Server 2012 以降では、IIS サーバーで Web 同期コンポーネントを使用する場合は、レプリケーションとともに SQL Server をインストールすることをお勧めします。 これは無料の SQL Server Express edition で構いません。  
@@ -90,18 +96,22 @@ ms.lasthandoff: 04/11/2017
   
  **Web 同期用に IIS を構成するには**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configure IIS for Web Synchronization](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Web 同期用の IIS の構成](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configure IIS 7 for Web Synchronization](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Web 同期用の IIS 7 の構成](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
-## <a name="creating-a-web-garden"></a>Web ガーデンの作成  
+<a id="creating-a-web-garden" class="xliff"></a>
+
+## Web ガーデンの作成  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナーでは、スレッドごとに同時に 2 つの同期処理がサポートされます。 この制限を超えると、レプリケーション リスナーが応答しなくなる可能性があります。 replisapi.dll に割り当てられるスレッドの数は、アプリケーション プールの "ワーカー プロセスの最大数" プロパティで決まります。 既定では、このプロパティは 1 に設定されます。  
   
  1 つの CPU で同時にサポートできる同期処理の数を増やすには、"ワーカー プロセスの最大数" プロパティの値を大きくします。 CPU ごとのワーカー プロセスの数を増やしてスケールアウトすることを、"Web ガーデン" を作成するといいます。  
   
  Web ガーデンを作成すると、同時に 3 つ以上のサブスクライバーを同期できるようになります。 このとき、replisapi.dll による CPU 使用率も増加するため、サーバーの全体的なパフォーマンスは低下することがあります。 "ワーカー プロセスの最大数" の値を選択するときは、それらのバランスを考慮することが重要です。  
   
-#### <a name="to-increase-maximum-worker-processes-in-iis-7"></a>IIS 7 のワーカー プロセスの最大数を増やすには  
+<a id="to-increase-maximum-worker-processes-in-iis-7" class="xliff"></a>
+
+#### IIS 7 のワーカー プロセスの最大数を増やすには  
   
 1.  **インターネット インフォメーション サービス (IIS) マネージャー**で、ローカル サーバーのノードを展開し、 **[アプリケーション プール]** ノードをクリックします。  
   
@@ -109,7 +119,9 @@ ms.lasthandoff: 04/11/2017
   
 3.  [詳細設定] ダイアログで、 **[モデルの処理]** という見出しの下にある **[ワーカー プロセスの最大数]**というラベルの行をクリックします。 プロパティの値を変更し、 **[OK]**をクリックします。  
   
-## <a name="configuring-the-publication"></a>パブリケーションの構成  
+<a id="configuring-the-publication" class="xliff"></a>
+
+## パブリケーションの構成  
  Web 同期を使用するには、標準のマージ トポロジと同じ方法でパブリケーションを作成します。 詳細については、「[Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)」(データとデータベース オブジェクトのパブリッシュ) をご覧ください。  
   
  パブリケーションを作成した後、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、レプリケーション管理オブジェクト (RMO) のいずれかを使用して、Web 同期を許可するオプションを有効にします。 Web 同期を有効にするには、サブスクライバー接続の Web サーバー アドレスを指定する必要があります。  
@@ -118,13 +130,19 @@ ms.lasthandoff: 04/11/2017
   
  **gen** は、websync xml ファイルの予約語です。 **gen**という名前の列を含むテーブルをパブリッシュしようとしないでください。  
   
-## <a name="configuring-the-subscription"></a>サブスクリプションの構成  
+<a id="configuring-the-subscription" class="xliff"></a>
+
+## サブスクリプションの構成  
  パブリケーションを有効にし、IIS を構成した後、プル サブスクリプションを作成し、そのプル サブスクリプションが IIS を使用して同期するように指定します。 (Web 同期はプル サブスクリプションでのみサポートされます)。  
   
-## <a name="upgrading-from-an-earlier-version-of-sql-server"></a>以前のバージョンの SQL Server からのアップグレード  
+<a id="upgrading-from-an-earlier-version-of-sql-server" class="xliff"></a>
+
+## 以前のバージョンの SQL Server からのアップグレード  
  既存の構成済み Web 同期トポロジがあるときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアップグレードする場合は、Replisapi.dll の最新バージョンが、Web 同期で使用される仮想ディレクトリにコピーされていることを確認する必要があります。 既定では、Replisapi.dll の最新バージョンは C:\Program Files\Microsoft SQL Server\\<nnn\>\COM にあります。  
   
-## <a name="replicating-large-volumes-of-data"></a>大量のデータのレプリケート  
+<a id="replicating-large-volumes-of-data" class="xliff"></a>
+
+## 大量のデータのレプリケート  
  サブスクライバー コンピューター上で発生する可能性があるメモリの問題を回避できるように、Web 同期では、変更の転送に使用する XML ファイルに既定の最大サイズの 100 MB を使用します。 この制限は、次のレジストリ キーを設定して引き上げることができます。  
   
  **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\Replication**  
@@ -143,7 +161,9 @@ ms.lasthandoff: 04/11/2017
   
  大量のデータを扱う場合は、バッチ処理の各パラメーターに小さい数を指定します。 最初は値を 10 にして、アプリケーションのニーズとパフォーマンスに応じて調整することをお勧めします。 通常、これらのパラメーターは、エージェント プロファイルで指定します。 プロファイルの詳細については、「 [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)」を参照してください。  
   
-## <a name="security-best-practices-for-web-synchronization"></a>Web 同期のセキュリティの推奨事項  
+<a id="security-best-practices-for-web-synchronization" class="xliff"></a>
+
+## Web 同期のセキュリティの推奨事項  
  Web 同期にはセキュリティ関連の選択項目が多数あります。 次の方法が推奨されます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディストリビューターおよびパブリッシャーは、同じコンピューター上に存在できます (マージ レプリケーションの一般的なセットアップ)。 ただし、IIS は別のコンピューターにインストールする必要があります。  
@@ -178,7 +198,9 @@ ms.lasthandoff: 04/11/2017
 > [!IMPORTANT]  
 >  ファイアウォールのポートを開くと、サーバーが攻撃を受けやすくなります。 ポートを開く前に、ファイアウォール システムについて理解しておいてください。 詳細については、「 [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+<a id="see-also" class="xliff"></a>
+
+## 参照  
  [マージ レプリケーションの Web 同期](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

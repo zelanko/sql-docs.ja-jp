@@ -20,13 +20,15 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: be34605990368fbbccdb8b81c119318c01431ced
+ms.sourcegitcommit: 722e026f8b8e8f1e04a93ba58f78aa7135b528de
+ms.openlocfilehash: b8b90960e312ed5e26d5379dac1312849818022d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/30/2017
 
 ---
-# <a name="polybase-t-sql-objects"></a>PolyBase T-SQL オブジェクト
+<a id="polybase-t-sql-objects" class="xliff"></a>
+
+# PolyBase T-SQL オブジェクト
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   PolyBase を使用するには、外部テーブルを作成して、外部データを参照する必要があります。  
@@ -40,11 +42,18 @@ ms.lasthandoff: 06/22/2017
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
-  
-## <a name="prerequisites"></a>前提条件  
+ 
+> [!NOTE]
+>  SQL Server 2016 の PolyBase は、Windows ユーザーのみをサポートします。 SQL ユーザーを使って PolyBase の外部テーブルをクエリしようとすると、クエリは失敗します。
+
+<a id="prerequisites" class="xliff"></a>
+
+## 前提条件  
  PolyBase を構成します。 「 [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md)」を参照してください。  
   
-## <a name="create-external-tables-for-hadoop"></a>Hadoop の外部テーブルの作成  
+<a id="create-external-tables-for-hadoop" class="xliff"></a>
+
+## Hadoop の外部テーブルの作成  
  **1.データベース スコープ ベースの資格情報を作成する**  
   
  この手順が必要なのは、Kerberos でセキュリティ保護された Hadoop クラスターのみです。  
@@ -122,7 +131,9 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 ```  
   
-## <a name="create-external-tables-for-azure-blob-storage"></a>Azure BLOB ストレージ用の外部テーブルを作成します。  
+<a id="create-external-tables-for-azure-blob-storage" class="xliff"></a>
+
+## Azure BLOB ストレージ用の外部テーブルを作成します。  
  **1.データベース スコープ ベースの資格情報を作成する**  
   
 ```sql  
@@ -197,7 +208,9 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 ```  
  
-## <a name="create-external-tables-for-azure-data-lake-store"></a>Azure Data Lake Store 用の外部テーブルを作成する
+<a id="create-external-tables-for-azure-data-lake-store" class="xliff"></a>
+
+## Azure Data Lake Store 用の外部テーブルを作成する
 Azure Data Lake Store は SQL データ ウェアハウスの PolyBase でのみサポートされます。
 Azure SQL データ ウェアハウスと ADLS の詳細については、「[Load with Azure Data Lake Store](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)」 (Azure Data Lake Store による読み込み) を参照してください。
  
@@ -289,10 +302,14 @@ WITH
 CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)  
 ```  
 
-## <a name="next-steps"></a>次の手順  
+<a id="next-steps" class="xliff"></a>
+
+## 次の手順  
  クエリの例については、「 [PolyBase Queries (PolyBase のクエリ)](../../relational-databases/polybase/polybase-queries.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+<a id="see-also" class="xliff"></a>
+
+## 参照  
  [PolyBase の概要](../../relational-databases/polybase/get-started-with-polybase.md)   
  [PolyBase ガイド](../../relational-databases/polybase/polybase-guide.md)  
   

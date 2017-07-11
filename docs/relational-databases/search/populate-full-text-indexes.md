@@ -32,10 +32,12 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d68baa882e382b2b68e5eded3ea7807e4b13aa6d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="populate-full-text-indexes"></a>フルテキスト インデックスの作成
+<a id="populate-full-text-indexes" class="xliff"></a>
+
+# フルテキスト インデックスの作成
   フルテキスト インデックスの作成と保持では、 *作成* (または *クロール*) と呼ばれるプロセスを使用してインデックスが作成されます。  
   
 ##  <a name="types"></a> Types of population  
@@ -44,7 +46,9 @@ ms.lasthandoff: 04/11/2017
 -   **変更の追跡**に基づく自動または手動作成
 -   **タイムスタンプ**に基づく増分作成
   
-## <a name="full-population"></a>すべてのカタログの作成  
+<a id="full-population" class="xliff"></a>
+
+## すべてのカタログの作成  
  すべてのカタログの作成では、テーブルまたはインデックス付きビューのすべての行に対してインデックス エントリが作成されます。 フルテキスト インデックスのすべてのカタログの作成では、ベース テーブルまたはインデックス付きビューのすべての行に対してインデックス エントリが作成されます。  
   
 既定では、新しいフルテキスト インデックスが作成されると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってすぐにそのカタログが作成されます。
@@ -53,7 +57,9 @@ ms.lasthandoff: 04/11/2017
 
 すぐに値を入力せずにフルテキスト インデックスを作成するには、`CREATE FULLTEXT INDEX` ステートメントに `CHANGE_TRACKING OFF, NO POPULATION` 句を指定します。 `CHANGE_TRACKING MANUAL` を指定する場合、Full-Text Engine は、`START FULL POPULATION` または `START INCREMENTAL POPULATION` により `ALTER FULLTEXT INDEX` ステートメントが実行されるまで、新しいフルテキスト インデックスに値を入力しません。 
 
-### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>例 - 完全作成を実行せずにフルテキスト インデックスを作成する  
+<a id="example---create-a-full-text-index-without-running-a-full-population" class="xliff"></a>
+
+### 例 - 完全作成を実行せずにフルテキスト インデックスを作成する  
  次の例では、 `Production.Document` サンプル データベースの `AdventureWorks` テーブルにフルテキスト インデックスを作成します。 この例では `WITH CHANGE_TRACKING OFF, NO POPULATION` を利用し、最初の完全作成を遅らせます。  
   
 ```tsql
@@ -72,7 +78,9 @@ GO
   
 ```  
   
-### <a name="example---run-a-full-population-on-a-table"></a>例 - テーブルで完全作成を実行する  
+<a id="example---run-a-full-population-on-a-table" class="xliff"></a>
+
+### 例 - テーブルで完全作成を実行する  
  次の例では、 `Production.Document` サンプル データベースの `AdventureWorks` テーブルで完全作成を実行します。  
   
 ```tsql
@@ -80,7 +88,9 @@ ALTER FULLTEXT INDEX ON Production.Document
    START FULL POPULATION;  
 ```  
    
-## <a name="population-based-on-change-tracking"></a>変更の追跡に基づく作成
+<a id="population-based-on-change-tracking" class="xliff"></a>
+
+## 変更の追跡に基づく作成
  必要に応じて、変更の追跡を使用して、完全作成が最初に実行された後のフルテキスト インデックスを保持することができます。 変更の追跡には若干のオーバーヘッドが伴います。これは、前回のカタログ作成以降にベース テーブルに対して行われた変更を追跡するテーブルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で保持されるためです。 変更の追跡を使用すると、ベース テーブルまたはインデックス付きビューで更新、削除、または挿入によって変更された行の記録が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で保持されます。 WRITETEXT や UPDATETEXT によるデータの変更は、フルテキスト インデックスには反映されず、変更の監視でも取得されません。  
   
 > [!NOTE]  
@@ -88,7 +98,9 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  インデックス作成時に変更の追跡を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で新しいフルテキスト インデックスが作成された直後にそのインデックスですべてのカタログの作成が実行されます。 それ以降は、変更が追跡されてフルテキスト インデックスに反映されます。
 
-### <a name="enable-change-tracking"></a>変更の追跡を有効化
+<a id="enable-change-tracking" class="xliff"></a>
+
+### 変更の追跡を有効化
 変更の追跡には、次の 2 種類があります。
 -   自動 (`CHANGE_TRACKING AUTO` オプション)。 既定では自動で変更が追跡されます。
 -   手動 (`CHANGE_TRACKING MANUAL` オプション)。   
@@ -149,14 +161,18 @@ ALTER FULLTEXT INDEX ON Production.Document
     GO  
     ```
    
-### <a name="disable-change-tracking"></a>変更の追跡を無効化 
+<a id="disable-change-tracking" class="xliff"></a>
+
+### 変更の追跡を無効化 
   
 -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING OFF  
   
 -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING OFF  
    
   
-## <a name="incremental-population-based-on-a-timestamp"></a>タイムスタンプに基づく増分作成  
+<a id="incremental-population-based-on-a-timestamp" class="xliff"></a>
+
+## タイムスタンプに基づく増分作成  
  増分作成は、フルテキスト インデックスに手動でカタログを作成するためのもう 1 つのメカニズムです。 テーブルで大量の挿入が行われた場合は、手動でのカタログ作成よりも増分作成を使用した方が効率的です。
  
  増分作成は、CHANGE_TRACKING が MANUAL または OFF に設定されているフルテキスト インデックスに対して実行できます。 
@@ -170,7 +186,9 @@ ALTER FULLTEXT INDEX ON Production.Document
 -   フルテキスト インデックスの最初のカタログ作成が増分作成の場合、すべての行にインデックスが付けられるため、完全作成と同じになります。 
 -   前回のカタログ作成後にテーブルのフルテキスト インデックスに影響するようなメタデータの変更があった場合、増分作成の要求はすべてのカタログの作成として実行されます。 これには、列、インデックス、またはフルテキスト インデックスの定義を変更したことによるメタデータの変更が含まれます。 
 
-### <a name="run-an-incremental-population"></a>増分作成を実行する
+<a id="run-an-incremental-population" class="xliff"></a>
+
+### 増分作成を実行する
   
  増分作成を実行するには、`START INCREMENTAL POPULATION` 句を利用して `ALTER FULLTEXT INDEX` ステートメントを実行します。  
   
@@ -221,11 +239,13 @@ ALTER FULLTEXT INDEX ON Production.Document
 クロール ログ ファイルの可変部分は次のようになります。
 -   <**DatabaseID**> - データベースの ID。 <**dbid**> は、ゼロで始まる 5 桁の数字です。  
 -   <**FullTextCatalogID**> - フルテキスト カタログ ID。 <**catid**> は、ゼロで始まる 5 桁の数字です。  
--   <**n**> - 同じフルテキスト カタログに 1 つ以上のクロール ログが存在することを示す整数です。  
+-   <**n**> は、同じフルテキスト カタログに 1 つ以上のクロール ログが存在することを示す整数です。  
   
  たとえば、`SQLFT0000500008.2` はデータベース ID が 5 で、フルテキスト カタログ ID が 8 のクロール ログ ファイルです。 ファイル名の最後の 2 は、このデータベースとカタログのペアに 2 つのクロール ログ ファイルが存在することを示しています。  
 
-## <a name="see-also"></a>参照  
+<a id="see-also" class="xliff"></a>
+
+## 参照  
  [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)   
  [フルテキスト検索の概要](../../relational-databases/search/get-started-with-full-text-search.md)   
  [フルテキスト インデックスの作成と管理](../../relational-databases/search/create-and-manage-full-text-indexes.md)   

@@ -29,19 +29,25 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 441ae5e2f835146f3d25bda645c44b33fa0146d2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="enhance-transactional-replication-performance"></a>トランザクション レプリケーションのパフォーマンスの向上
+<a id="enhance-transactional-replication-performance" class="xliff"></a>
+
+# トランザクション レプリケーションのパフォーマンスの向上
   「 [レプリケーションの全般的パフォーマンスの向上](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)」で説明した全般的なパフォーマンス向上のヒントを検討した後、トランザクション レプリケーションに固有なこれらの項目を併せて検討してください。  
   
-## <a name="database-design"></a>データベースの設計  
+<a id="database-design" class="xliff"></a>
+
+## データベースの設計  
   
 -   アプリケーションの設計で、トランザクションのサイズを最小化する。  
   
      既定では、トランザクション レプリケーションはトランザクションの境界に従って変更を反映させます。 トランザクションが小さくなると、ネットワークの問題によりディストリビューション エージェントがトランザクションを再送信しなければならなくなる可能性は低くなります。 エージェントがトランザクションを再送信する必要があっても、送信されるデータは少なくなります。  
   
-## <a name="distributor-configuration"></a>ディストリビューターの構成  
+<a id="distributor-configuration" class="xliff"></a>
+
+## ディストリビューターの構成  
   
 -   ディストリビューション専用サーバーを構成する。  
   
@@ -51,7 +57,9 @@ ms.lasthandoff: 04/11/2017
   
      システムの典型的な負荷でレプリケーションをテストし、コマンドを格納するために必要な領域を決定します。 データベースが頻繁に自動拡張しなくてもコマンドを格納できるだけの大きさを備えていることを確認します。 データベースのサイズの変更に関する詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
-## <a name="publication-design"></a>パブリケーションの設計  
+<a id="publication-design" class="xliff"></a>
+
+## パブリケーションの設計  
   
 -   パブリッシュされたテーブルに対してバッチ更新を行う場合は、ストアド プロシージャの実行をレプリケートする。  
   
@@ -61,7 +69,9 @@ ms.lasthandoff: 04/11/2017
   
      **-SubscriptionStreams** パラメーター (このトピックで後ほど説明します) を使用できない場合は、複数のパブリケーションを作成することを検討してください。 これらのパブリケーションにアーティクルを分散させると、サブスクライバーに対する変更をレプリケーションで並列的に適用できます。  
   
-## <a name="subscription-considerations"></a>サブスクリプションに関する注意点  
+<a id="subscription-considerations" class="xliff"></a>
+
+## サブスクリプションに関する注意点  
   
 -   同一のパブリッシャーに複数のパブリケーションがある場合は、共有エージェントの代わりに独立エージェントを使用する (これはパブリケーションの新規作成ウィザードの既定の設定です)。  
   
@@ -69,9 +79,11 @@ ms.lasthandoff: 04/11/2017
   
      エージェントを連続的に実行するようにし、高い頻度のスケジュール、たとえば毎分などのスケジュールの作成を避けることで、レプリケーションのパフォーマンスが向上します。これは、エージェントが開始および停止する必要がなくなるからです。 ディストリビューション エージェントを連続的に実行するように設定すると、トポロジ内で接続しているその他のサーバーに、短い待機時間で変更が反映されます。 詳細については、以下をご覧ください。  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [同期スケジュールの指定](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
-## <a name="distribution-agent-and-log-reader-agent-parameters"></a>ディストリビューション エージェントおよびログ リーダー エージェントのパラメーター  
+<a id="distribution-agent-and-log-reader-agent-parameters" class="xliff"></a>
+
+## ディストリビューション エージェントおよびログ リーダー エージェントのパラメーター  
   
 -   予期せずに 1 回だけ発生するボトルネックを解決するには、ログ リーダー エージェントに対して **–MaxCmdsInTran** パラメーターを使用します。  
   

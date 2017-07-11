@@ -1,7 +1,7 @@
 ---
 title: "データベース スキーマの作成 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 07/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -22,13 +22,15 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fe54e464e4aabc53eb8645c1fbf20f509f427978
+ms.sourcegitcommit: 3a224f5be40f6f7a68a28cb4c8f741c24527e8bd
+ms.openlocfilehash: b164e70bf4b1e7586d8e70ab8edb7baa1dfcaade
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/05/2017
 
 ---
-# <a name="create-a-database-schema"></a>データベース スキーマの作成
+<a id="create-a-database-schema" class="xliff"></a>
+
+# データベース スキーマの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、スキーマを作成する方法について説明します。  
   
  **このトピックの内容**  
@@ -59,11 +61,13 @@ ms.lasthandoff: 06/22/2017
   
 -   データベースに対する CREATE SCHEMA 権限が必要です。  
   
--   別のユーザーを、作成されるスキーマの所有者として指定する場合、呼び出し元は、そのユーザーに対する IMPERSONATE 権限を持っている必要があります。 データベース ロールを所有者として指定する場合、呼び出し元は、データベース ロールのメンバーシップまたはデータベース ロールに対する ALTER 権限のいずれかを持っている必要があります。  
+-   別のユーザーを、作成されるスキーマの所有者として指定する場合、呼び出し元は、そのユーザーに対する IMPERSONATE 権限を持っている必要があります。 データベース ロールを所有者として指定する場合、呼び出し元は、データベース ロールのメンバーシップまたはデータベース ロールに対する ALTER アクセス許可のいずれかを持っている必要があります。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-##### <a name="to-create-a-schema"></a>スキーマを作成するには  
+<a id="to-create-a-schema" class="xliff"></a>
+
+##### スキーマを作成するには  
   
 1.  オブジェクト エクスプローラーで、 **[データベース]** フォルダーを展開します。  
   
@@ -77,7 +81,9 @@ ms.lasthandoff: 06/22/2017
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### <a name="additional-options"></a>追加オプション  
+<a id="additional-options" class="xliff"></a>
+
+### 追加オプション  
  **[スキーマ – 新規作成]** ダイアログ ボックスには、 **[権限]** と **[拡張プロパティ]**という 2 つのページもあり、それぞれにオプションが用意されています。  
   
 -   **[権限]** ページには、すべてのセキュリティ保護可能なリソースと、ログインに付与できる、セキュリティ保護可能なリソースに対する権限が一覧表示されます。  
@@ -86,27 +92,37 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### <a name="to-create-a-schema"></a>スキーマを作成するには  
+<a id="to-create-a-schema" class="xliff"></a>
+
+#### スキーマを作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
-  
-    ```  
-    USE AdventureWorks2012;  
-    GO  
-    -- Creates the schema Sprockets owned by Annik that contains table NineProngs.   
-    -- The statement grants SELECT to Mandar and denies SELECT to Prasanna.  
-  
+3.  次の例では、`Chains` という名前のスキーマを作成した後、`Sizes` という名前のテーブルを作成します。  
+    ```sql  
+    CREATE SCHEMA Chains;
+    GO
+    CREATE TABLE Chains.Sizes (ChainID int, width dec(10,2));
+    ```
+
+4.  追加オプションは、単一のステートメントで実行できます。 次の例では、Annik が所有するスキーマ `Sprockets` を作成します。このスキーマにはテーブル `NineProngs` が含まれます。 このステートメントは、Mandar に対して `SELECT` を許可し、Prasanna に対して `SELECT` を拒否します。  
+
+    ```sql  
     CREATE SCHEMA Sprockets AUTHORIZATION Annik  
         CREATE TABLE NineProngs (source int, cost int, partnumber int)  
         GRANT SELECT ON SCHEMA::Sprockets TO Mandar  
         DENY SELECT ON SCHEMA::Sprockets TO Prasanna;  
     GO  
     ```  
-  
+5. このデータベースのスキーマを見るには、次のステートメントを実行します。
+
+   ```sql
+   SELECT * FROM sys.schemas;
+   ```
+
  詳細については、「[CREATE SCHEMA &#40;Transact-SQL&#41;](../../../t-sql/statements/create-schema-transact-sql.md)」を参照してください。  
   
   
+

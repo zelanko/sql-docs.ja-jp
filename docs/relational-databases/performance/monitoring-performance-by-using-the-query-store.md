@@ -19,23 +19,27 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
-ms.openlocfilehash: 4650cfdda4eef32d1d09f4d4407b61f964832b8d
+ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
+ms.openlocfilehash: 53e0f5d479d7fc3cdeae2c6ce121734b6fc16f21
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 06/28/2017
 
 ---
-# <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
+<a id="monitoring-performance-by-using-the-query-store" class="xliff"></a>
+
+# クエリのストアを使用した、パフォーマンスの監視
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のクエリのストア機能により、クエリ プランの選択やパフォーマンスを把握できます。 これにより、クエリ プランの変更によって生じるパフォーマンスの違いがすばやくわかるようになり、パフォーマンス上のトラブルシューティングを簡略化できます。 クエリのストアは、自動的にクエリ、プラン、および実行時統計の履歴をキャプチャし、確認用に保持します。 データは時間枠で区分されるため、データベースの使用パターンを表示して、サーバー上でクエリ プランが変わった時点を確認することができます。 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) オプションを使用してクエリ ストアを構成できます。 
   
  Azure SQL Database におけるクエリ ストアの運用の詳細については、「 [Azure SQL Database でクエリ ストアを運用する](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/)」を参照してください。  
   
-##  <a name="Enabling"></a> Enabling the Query Store  
+##  <a name="Enabling"></a> クエリのストアを有効にする  
  既定では、クエリのストアは新しいデータベースに対してアクティブではありません。  
   
-#### <a name="use-the-query-store-page-in-management-studio"></a>Management Studio でクエリのストアのページを使用する  
+<a id="use-the-query-store-page-in-management-studio" class="xliff"></a>
+
+#### Management Studio でクエリのストアのページを使用する  
   
 1.  オブジェクト エクスプローラーで、データベースを右クリックし、 **[プロパティ]**をクリックします。  
   
@@ -46,7 +50,9 @@ ms.lasthandoff: 06/23/2017
   
 3.  **[操作モード (要求)]** ボックスで、 **[オン]**を選択します。  
   
-#### <a name="use-transact-sql-statements"></a>Transact-SQL ステートメントを使用する  
+<a id="use-transact-sql-statements" class="xliff"></a>
+
+#### Transact-SQL ステートメントを使用する  
   
 1.  **ALTER DATABASE** ステートメントを使用してクエリのストアを有効にします。 例:  
   
@@ -63,7 +69,9 @@ ms.lasthandoff: 06/23/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のどの特定のクエリの実行プランも、通常、統計情報やスキーマの変更、インデックスの作成または削除などのさまざまな理由により、時間の経過とともに進化します。プロシージャ キャッシュ (ここにキャッシュされたクエリ プランが格納される) には、最新の実行プランのみ格納されます。 メモリ負荷が原因で、プランがプラン キャッシュから削除されることもあります。 その結果、実行プランの変更によるクエリ パフォーマンスの低下が深刻なレベルになり、解決に時間を要する場合があります。  
   
  クエリのストアには、1 つのクエリにつき複数の実行プランが保持されるため、クエリの特定の実行プランを使用するようクエリ プロセッサに指示するポリシーを強制できます。 これをプラン強制と呼びます。 クエリのストアのプラン強制は、 [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md) クエリ ヒントに似たメカニズムを使用して提供されますが、ユーザー アプリケーションを変更する必要はありません。 プラン強制を使用することで、プラン変更によるクエリ パフォーマンスの低下をきわめて短時間に解決できます。  
-  
+
+ **待機統計**は、SQL Server のパフォーマンスのトラブルシューティングに役立つもう 1 つの情報源です。 長い間、待機統計はインスタンス レベルでしか使うことができず、実際のクエリにバックトラックするのは困難でした。 SQL Server 2017 と Azure SQL Database では、待機統計を追跡する別のディメンションがクエリ ストアに追加されました。 
+
  このクエリのストアの機能を使用する一般的なシナリオは次のとおりです。  
   
 -   前のクエリ プランを強制的に適用することにより、プラン パフォーマンスの低下をすばやく発見し修正します。 実行プランの変更によって最近パフォーマンスが低下したクエリを修正します。  
@@ -75,8 +83,15 @@ ms.lasthandoff: 06/23/2017
 -   指定したクエリのクエリ プランの履歴を監査します。  
   
 -   特定のデータベースのリソース (CPU、I/O、メモリ) の使用パターンを分析します。  
+-   リソースで待機している上位 n クエリを識別します。 
+-   特定のクエリまたはプランの待機の性質を理解します。
   
- クエリのストアには、次の 2 つのストアが含まれています。 **プラン ストア** は実行プラン情報を保持し、 **ランタイム統計情報ストア** は実行統計情報を保持するためのものです。 クエリのためにプラン ストア内に格納できる一意のプラン数は、 **max_plans_per_query** 構成オプションによって制限されています。 パフォーマンスを向上させるために、この情報は 2 つのストアに非同期的に書き込まれます。 領域使用量を最小にするため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 これらのストア内の情報は、クエリのストアのカタログ ビューに対してクエリを実行することによって表示できます。  
+クエリ ストアには 3 つのストアが含まれます。
+- **プラン ストア**は、実行プラン情報の保存用です
+- **ランタイム統計ストア**は、実行統計情報の保存用です 
+- **待機統計ストア**は、待機統計情報の保存用です
+ 
+ クエリのためにプラン ストア内に格納できる一意のプラン数は、 **max_plans_per_query** 構成オプションによって制限されています。 パフォーマンスを向上させるために、この情報は&2; つのストアに非同期的に書き込まれます。 領域使用量を最小にするため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 これらのストア内の情報は、クエリのストアのカタログ ビューに対してクエリを実行することによって表示できます。  
   
  次のクエリは、クエリのストア内のクエリとプランに関する情報を返します。  
   
@@ -89,7 +104,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
  
-##  <a name="Regressed"></a> Use the Regressed Queries Feature  
+##  <a name="Regressed"></a> 機能低下したクエリ機能を使用する  
  クエリのストアを有効にしてから、[オブジェクト エクスプローラー] ペインのデータベースの部分を更新して、 **[クエリ ストア]** セクションを追加します。  
   
  ![オブジェクト エクスプローラーのクエリ ストア ツリー](../../relational-databases/performance/media/objectexplorerquerystore.PNG "オブジェクト エクスプローラーのクエリ ストア ツリー")  
@@ -99,8 +114,22 @@ JOIN sys.query_store_query_text AS Txt
  ![オブジェクト エクスプローラーの機能低下したクエリ](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "オブジェクト エクスプローラーの機能低下したクエリ")  
   
  プランを強制的に適用するには、クエリとプランを選択してから、 **[プランの強制]**をクリックします。 強制できるプランは、クエリ プランの機能によって保存され、クエリ プランのキャッシュに保持されているプランのみです。  
- 
-##  <a name="Options"></a> Configuration Options 
+##  <a name="Waiting"></a>待機クエリの検索
+
+SQL Server 2017 CTP 2.0 以降および Azure SQL Database では、クエリ ストアのユーザーは一定期間のクエリごとの待機統計を見ることができます。 クエリ ストアでは、待機の種類が**待機カテゴリ**に組み合わされます。 完全なマッピングについては、「[sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)」をご覧ください。
+
+**待機カテゴリ**では、異なる待機種類が性質の類似性によってバケットに組み合わされます。 問題の解決に必要なフォローアップ分析は待機カテゴリによって異なりますが、同じカテゴリの待機種類からは非常によく似たトラブルシューティング エクスペリエンスが得られ、待機の先頭に影響受けたクエリを提供することは、このような調査の大部分を正常に完了するために不足している部分です。
+
+クエリ ストアに待機カテゴリが導入される前後でのワークロードの詳細情報の取得方法の例を次に示します。
+
+|||| 
+|-|-|-|  
+|以前のエクスペリエンス|新しいエクスペリエンス|操作|
+|データベースごとの高い RESOURCE_SEMAPHORE 待機|特定のクエリに対するクエリ ストアでの高いメモリ待機|クエリ ストアでメモリ消費量の多いクエリを探します。 これらのクエリは、影響を受けるクエリの進行をさらに遅らせる可能性があります。 これらのクエリまたは影響を受けるクエリに、MAX_GRANT_PERCENT クエリ ヒントを使うことを検討します。|
+|データベースごとの高い LCK_M_X 待機|特定のクエリに対するクエリ ストアでの高いロック待機|影響を受けるクエリのクエリ テキストを確認し、ターゲット エンティティを明らかにします。 クエリ ストアで同じエンティティを変更している他のクエリを探します。これらは、頻繁に実行されていたり、実行時間が長くなったりします。 これらのクエリを特定した後、同時実行が向上するようにアプリケーション ロジックを変更するか、制限の低い分離レベルを使うことを検討します。|
+|データベースごとの高い PAGEIOLATCH_SH 待機|特定のクエリに対するクエリ ストアでの高いバッファー IO 待機|クエリ ストアで、物理読み取り数が多いクエリを検索します。 それらが IO 待機の長いクエリと一致する場合は、スキャンではなくシークを行うように基になるエンティティにインデックスを導入して、クエリの IO オーバーヘッドを最小限に抑えることを検討します。|
+|データベースごとの高い SOS_SCHEDULER_YIELD 待機|特定のクエリに対するクエリ ストアでの高い CPU 待機|クエリ ストアで CPU 消費量の多いクエリを探します。 それらの中で、高い CPU 傾向が影響を受けるクエリの高い CPU 待機と関連性のあるクエリを特定します。 それらのクエリの最適化に注目します。プラン回帰または欠落インデックスが存在する可能性があります。| 
+##  <a name="Options"></a> 構成オプション 
 
 次のオプションは、クエリ ストア パラメーターの構成に使用できます。
 
@@ -135,14 +164,16 @@ JOIN sys.query_store_query_text AS Txt
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用してオプションを設定する方法の詳細については、「 [オプション管理](#OptionMgmt)」をご覧ください。  
   
-##  <a name="Related"></a> Related Views, Functions, and Procedures  
+##  <a name="Related"></a> 関連するビュー、関数、プロシージャ  
  クエリのストアは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] か、次のビューとプロシージャを使用して表示および管理します。  
 
 ||| 
 |-|-|  
 |[sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)|| 
   
-### <a name="query-store-catalog-views"></a>クエリのストアのカタログ ビュー  
+<a id="query-store-catalog-views" class="xliff"></a>
+
+### クエリのストアのカタログ ビュー  
  カタログ ビューはクエリのストアの情報を提供します。  
 
 ||| 
@@ -152,7 +183,9 @@ JOIN sys.query_store_query_text AS Txt
 |[sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|[sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)|  
 |[sys.query_store_wait_stats & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
   
-### <a name="query-store-stored-procedures"></a>クエリのストアのストアド プロシージャ  
+<a id="query-store-stored-procedures" class="xliff"></a>
+
+### クエリのストアのストアド プロシージャ  
  ストアド プロシージャはクエリのストアを構成します。  
 
 ||| 
@@ -163,7 +196,7 @@ JOIN sys.query_store_query_text AS Txt
  
 ##  <a name="Scenarios"></a> 基本的な使用シナリオ  
   
-###  <a name="OptionMgmt"></a> Option Management  
+###  <a name="OptionMgmt"></a> オプション管理  
  このセクションでは、クエリのストアの機能自体を管理する方法に関するガイドラインを示します。  
   
  **クエリのストアが現在アクティブか**  
@@ -233,7 +266,8 @@ SET QUERY_STORE (
     INTERVAL_LENGTH_MINUTES = 15,  
     SIZE_BASED_CLEANUP_MODE = AUTO,  
     QUERY_CAPTURE_MODE = AUTO,  
-    MAX_PLANS_PER_QUERY = 1000  
+    MAX_PLANS_PER_QUERY = 1000,
+    WAIT_STATS_CAPTURE_MODE = ON 
 );  
 ```  
   
@@ -284,10 +318,10 @@ DEALLOCATE adhoc_queries_cursor;
   
 -   **sp_query_store_reset_exec_stats** – 指定されたプランの実行時統計をクリアします。  
   
--   **sp_query_store_remove_plan** – つのプランを削除します。  
+-   **sp_query_store_remove_plan** –&amp;1; つのプランを削除します。  
  
   
-###  <a name="Peformance"></a> Performance Auditing and Troubleshooting  
+###  <a name="Peformance"></a> パフォーマンスの監査とトラブルシューティング  
  クエリのストアには、コンパイルの履歴とクエリの実行全体に関するランタイム メトリックスが保持されており、ワークロードに関連した質問の答えを見つけることができます。  
   
  **データベースで最近実行された *n* 個のクエリ。**  
@@ -321,7 +355,7 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;  
 ```  
   
- **過去 1 時間で平均実行時間が長かったクエリの上位。**  
+ **去&amp;1; 時間で平均実行時間が長かったクエリの上位。**  
   
 ```tsql  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
@@ -424,8 +458,25 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
 ```  
   
  プラン選択の変更に関連するものだけでなく、パフォーマンス低下に関するすべての情報を表示する場合、前のクエリから条件 `AND p1.plan_id <> p2.plan_id` を削除します。  
-  
- **最近パフォーマンスが低下したクエリ (最近の実行と履歴の実行を比較)。** 次のクエリは、実行期間に基づいてクエリの実行を比較します。 この例では、クエリは、最近の期間 (1 時間) と履歴の期間 (過去 1 日間) とで実行を比較し、 `additional_duration_workload`の原因となったものを識別します。 このメトリックは、最近の平均実行と履歴の平均実行に最近実行の数を掛けた値の間の差として計算されます。 これは、履歴と比較して、最近の実行でどれほどの期間が追加されたかを表します。  
+
+ **最も待機時間の長いクエリ。**
+ このクエリは、待機が最も多い上位 10 個のクエリを返します。 
+ 
+ ```tsql 
+  SELECT TOP 10
+    qt.query_text_id,
+    q.query_id,
+    p.plan_id,
+    sum(total_query_wait_time_ms) AS sum_total_wait_ms
+FROM sys.query_store_wait_stats ws
+JOIN sys.query_store_plan p ON ws.plan_id = p.plan_id
+JOIN sys.query_store_query q ON p.query_id = q.query_id
+JOIN sys.query_store_query_text qt ON q.query_text_id = qt.query_text_id
+GROUP BY qt.query_text_id, q.query_id, p.plan_id
+ORDER BY sum_total_wait_ms DESC
+ ```
+ 
+ **最近パフォーマンスが低下したクエリ (最近の実行と履歴の実行を比較)。** 次のクエリは、実行期間に基づいてクエリの実行を比較します。 この例では、クエリは、最近の期間 (1 時間) と履歴の期間 (過去&amp;1; 日間) とで実行を比較し、 `additional_duration_workload`の原因となったものを識別します。 このメトリックは、最近の平均実行と履歴の平均実行に最近実行の数を掛けた値の間の差として計算されます。 これは、履歴と比較して、最近の実行でどれほどの期間が追加されたかを表します。  
   
 ```tsql  
 --- "Recent" workload - last 1 hour  
@@ -509,12 +560,12 @@ OPTION (MERGE JOIN);
 ```  
  
   
-###  <a name="Stability"></a> Maintaining Query Performance Stability  
+###  <a name="Stability"></a> クエリ パフォーマンスの安定性を維持する  
  複数回実行されるクエリでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が異なるプランを使用した結果、リソースの使用の仕方や期間が異なっていることに気付く場合があります。 クエリのストアを使用すると、クエリ パフォーマンスが低下している時点を検出し、対象期間の最適なプランを特定できます。 こうすることで、将来のクエリの実行で最適なプランを強制的に適用できます。  
   
  パラメーターを持つクエリ (自動的にパラメーター化されたもの、または手動でパラメーター化されたもののいずれか) に関して、クエリ パフォーマンスが一定ではないものを特定することもできます。 さまざまなプランの中で、ほとんどすべてのパラメーター値に対して高速で最適なプランを特定し、そのプランを強制的に適用できます。これにより、より一層多様なユーザー シナリオに対して、予測可能なパフォーマンスを維持できます。  
   
- **クエリに対してプランを強制する (強制ポリシーの適用)。** 特定のクエリに対して 1 つのプランを強制すると、クエリが実行されるたびに、強制されているプランが使われて実行されます。  
+ **クエリに対してプランを強制する (強制ポリシーの適用)。** 特定のクエリに対して&1; つのプランを強制すると、クエリが実行されるたびに、強制されているプランが使われて実行されます。  
   
 ```tsql  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
@@ -528,7 +579,9 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   
-## <a name="see-also"></a>参照  
+<a id="see-also" class="xliff"></a>
+
+## 参照  
  [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [インメモリ OLTP でのクエリ ストアの使用](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [クエリ ストアの使用シナリオ](../../relational-databases/performance/query-store-usage-scenarios.md)   
