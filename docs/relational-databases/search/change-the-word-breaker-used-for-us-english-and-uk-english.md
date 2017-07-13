@@ -14,14 +14,16 @@ caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be3d7e956f6ed89f14fc63c36d97974cc9218933
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/10/2017
 
 ---
-# <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>米国英語と英国英語に使用されるワード ブレーカーの変更
+<a id="change-the-word-breaker-used-for-us-english-and-uk-english" class="xliff"></a>
+
+# 米国英語と英国英語に使用されるワード ブレーカーの変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、英語用のワード ブレーカーおよびステマーの新しいバージョン (バージョン 14.0.4999.1038) がインストールされて、前のバージョン (バージョン 12.0.6828.0) が置き換えられます。 新しいコンポーネントで変更された動作の詳細については、「 [フルテキスト検索の動作の変更](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)」を参照してください。 このトピックでは、これらのコンポーネントの新しいバージョンを前のバージョンに切り替えたり、前のバージョンから新しいバージョンに切り替えたりする方法について説明します。 クラスターのインストールでは、これらの変更を、すべてのプライマリ ノードとパッシブ ノードで行う必要があります。  
   
  前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、米国英語 (LCID 1033) と英国英語 (LCID 2057) に対し、異なる CLSID で表される異なるワード ブレーカーが使用されていました。 このリリースでは、次の表に示すように、両方の LCID で同じ CLSID を持つ同じコンポーネントが使用されます。  
@@ -35,9 +37,13 @@ ms.lasthandoff: 06/22/2017
   
  ワード ブレーカーとステマーの詳細については、「 [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)」を参照してください。  
   
-## <a name="switching-from-the-current-english-word-breaker-to-the-previous-english-word-breakers"></a>現在の英語用ワード ブレーカーから前の英語用ワード ブレーカーへの切り替え  
+<a id="switching-from-the-current-english-word-breaker-to-the-previous-english-word-breakers" class="xliff"></a>
+
+## 現在の英語用ワード ブレーカーから前の英語用ワード ブレーカーへの切り替え  
   
-#### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>米国英語用のワード ブレーカーを現在のバージョンから前のバージョンに切り替えるには  
+<a id="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version" class="xliff"></a>
+
+#### 米国英語用のワード ブレーカーを現在のバージョンから前のバージョンに切り替えるには  
   
 1.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
   
@@ -59,7 +65,9 @@ ms.lasthandoff: 06/22/2017
   
 6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
   
-#### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>英国英語用のワード ブレーカーを現在のバージョンから前のバージョンに切り替えるには  
+<a id="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version" class="xliff"></a>
+
+#### 英国英語用のワード ブレーカーを現在のバージョンから前のバージョンに切り替えるには  
   
 1.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
   
@@ -81,9 +89,13 @@ ms.lasthandoff: 06/22/2017
   
 6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
   
-## <a name="switching-back-from-the-previous-english-word-breakers-to-the-current-english-word-breaker"></a>前の英語用ワード ブレーカーから現在の英語用ワード ブレーカーへの切り替え  
+<a id="switching-back-from-the-previous-english-word-breakers-to-the-current-english-word-breaker" class="xliff"></a>
+
+## 前の英語用ワード ブレーカーから現在の英語用ワード ブレーカーへの切り替え  
   
-#### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>米国英語用のワード ブレーカーを前のバージョンから現在のバージョンに切り替えるには  
+<a id="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version" class="xliff"></a>
+
+#### 米国英語用のワード ブレーカーを前のバージョンから現在のバージョンに切り替えるには  
   
 1.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
   
@@ -105,7 +117,9 @@ ms.lasthandoff: 06/22/2017
   
 6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
   
-#### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>英国英語用のワード ブレーカーを前のバージョンから現在のバージョンに切り替えるには  
+<a id="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version" class="xliff"></a>
+
+#### 英国英語用のワード ブレーカーを前のバージョンから現在のバージョンに切り替えるには  
   
 1.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
   
@@ -127,7 +141,9 @@ ms.lasthandoff: 06/22/2017
   
 6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
   
-## <a name="see-also"></a>参照  
+<a id="see-also" class="xliff"></a>
+
+## 参照  
  [検索で使用するワード ブレーカーを以前のバージョンに戻す](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
  [フルテキスト検索の動作の変更](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
