@@ -1,7 +1,7 @@
 ---
 title: "警告管理者用のデータ警告マネージャー |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,17 +19,20 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c9d88d14b1f67a6d8da584349062de51e75ebf02
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 4690c2cc9c6f9cbf9d9591993e1c2483489e6114
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="data-alert-manager-for-alerting-administrators"></a>警告管理者用のデータ警告マネージャー
+# 警告管理者用のデータ警告マネージャー
+<a id="data-alert-manager-for-alerting-administrators" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のデータ警告マネージャーを使用し、SharePoint 警告管理者はデータ警告を管理することができます。 警告管理者は、サイトに保存されたすべての警告についての情報を表示することができ、警告を削除することもできます。 次の図に、SharePoint 警告管理者がデータ警告マネージャー内で使用できる機能を示します。
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+SQL Server Reporting Services では、データ警告を管理する SharePoint 警告管理者用のデータ警告マネージャーを使用します。 警告管理者は、サイトに保存されたすべての警告についての情報を表示することができ、警告を削除することもできます。 次の図に、SharePoint 警告管理者がデータ警告マネージャー内で使用できる機能を示します。
 
 ![Sharepoint サイト管理者用の警告マネージャー](../reporting-services/media/rs-alertmanagersite.gif "SharePoint サイト管理者用の警告マネージャー")
 
@@ -79,7 +82,8 @@ ms.lasthandoff: 06/22/2017
   
 -   [データ警告マネージャーで SharePoint サイトのすべてのデータ警告を管理する](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
 
-## <a name="see-also"></a>参照
+## 参照
+<a id="see-also" class="xliff"></a>
 
 [Reporting Services のデータ警告](../reporting-services/reporting-services-data-alerts.md)  
 

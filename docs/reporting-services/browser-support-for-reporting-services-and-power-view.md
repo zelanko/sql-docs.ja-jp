@@ -2,7 +2,7 @@
 title: "Reporting Services と Power View のブラウザー サポート |Microsoft ドキュメント"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/30/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -26,22 +26,24 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6a1f9f1dd348561e46c4e01dc4f635ef83f28193
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: fb5790cb0eaf8b160de98b2fa7ff3c327f654336
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services と Power View のブラウザー サポート
+# Reporting Services と Power View のブラウザー サポート
+<a id="browser-support-for-reporting-services-and-power-view" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 管理および SQL Server Reporting Services では、ReportViewer コントロールと Power View の表示についてどのようなブラウザー バージョンがサポートされているについて説明します。
 
 > [!NOTE]
 > SQL Server 2016 より後に、SharePoint と reporting Services の統合を使用できなくします。
 
-## <a name="browser-requirements-for-the-web-portal"></a>Web ポータルのブラウザー要件
+## Web ポータルのブラウザー要件
+<a id="browser-requirements-for-the-web-portal" class="xliff"></a>
 
 現在の web ポータルのサポートされているブラウザーの一覧を次に示します。
 
@@ -71,7 +73,8 @@ ms.lasthandoff: 06/22/2017
 
  **(+)** 最新公開リリース バージョン
 
-## <a name="browser-requirements-for-the-reportviewer-web-control-2015"></a>ブラウザー要件: ReportViewer Web コントロール (2015)
+## ブラウザー要件: ReportViewer Web コントロール (2015)
+<a id="browser-requirements-for-the-reportviewer-web-control-2015" class="xliff"></a>
 
  次は、ReportViewer Web コントロール (2015) でサポートされているブラウザーの現行リストです。 レポート ビューアーでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web ポータルや SharePoint ライブラリのレポートを表示できます。  
 
@@ -92,7 +95,8 @@ ms.lasthandoff: 06/22/2017
 
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]に統合されている SharePoint 製品を使用している場合は、「  [SharePoint 2016 でブラウザー サポートを計画する](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)」を参照してください。
 
-### <a name="authentication-requirements"></a>認証の要件
+### 認証の要件
+<a id="authentication-requirements" class="xliff"></a>
 
  クライアント要求が正常に終了するように、ブラウザーでは、レポート サーバーで処理する必要がある特定の認証方法をサポートしています。 次の表は、Windows オペレーティング システムで実行中の各ブラウザーでサポートされる既定の認証の種類を示しています。
 
@@ -106,7 +110,8 @@ ms.lasthandoff: 06/22/2017
 
  **(+)** 最新公開リリース バージョン
 
-### <a name="script-requirements-for-viewing-reports"></a>レポートを表示するためのスクリプトの要件
+### レポートを表示するためのスクリプトの要件
+<a id="script-requirements-for-viewing-reports" class="xliff"></a>
 
  レポート ビューアーを使用するには、スクリプトを実行するようにブラウザーを構成する必要があります。
 
@@ -119,7 +124,8 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]
 > レポート ツール バーは HTML ビューアー コンポーネントの一部です。 既定では、ツール バーはブラウザー ウィンドウに表示されるすべてのレポートの上部に表示されます。 レポート ビューアーには、レポート内の情報検索、特定のページへのスクロール、および表示目的でのページ サイズの調整機能があります。 レポート ツール バーまたは HTML ビューアーの詳細については、「 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)」を参照してください。
 
-## <a name="browser-support-for-reportviewer-web-server-controls-in-visual-studio"></a>Visual Studio での ReportViewer Web サーバー コントロールのブラウザー サポート
+## Visual Studio での ReportViewer Web サーバー コントロールのブラウザー サポート
+<a id="browser-support-for-reportviewer-web-server-controls-in-visual-studio" class="xliff"></a>
 
  ReportViewer Web サーバー コントロールは、ASP.NET Web アプリケーションにレポート機能を埋め込むために使用されます。 このコントロールは Visual Studio に含まれており、このトピックで説明している他のコンポーネントとはサポートしているブラウザーおよびブラウザー バージョンが異なります。 アプリケーションの表示に使用するブラウザーの種類によって、アプリケーションに埋め込むことができる ReportViewer の機能が決まります。 レポート機能が制限されるサポート対象のブラウザーとサポートされているプラットフォームについては、このトピックの表を参照してください。  
 
@@ -135,7 +141,8 @@ ms.lasthandoff: 06/22/2017
 
  **(+)** 最新公開リリース バージョン
 
-## <a name="power-view-browser-support"></a>Power View のブラウザー サポート
+## Power View のブラウザー サポート
+<a id="power-view-browser-support" class="xliff"></a>
 
 **Microsoft Windows**  
 *Windows 7、8.1、10、Windows Server 2008 R2、2012、2012 R2*
@@ -152,7 +159,8 @@ ms.lasthandoff: 06/22/2017
 
  SharePoint 2016 のブラウザー サポートの詳細については、「 [SharePoint 2013 でブラウザー サポートを計画する](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)」を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## 次の手順
+<a id="next-steps" class="xliff"></a>
 
 [検索して、web ポータルでレポートを表示します。](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services ツール](../reporting-services/tools/reporting-services-tools.md)  

@@ -1,7 +1,7 @@
 ---
 title: "データ警告の SharePoint ユーザーのマネージャー |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,17 +19,21 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f8d31181dd32ab6d48bdc3452986c6ed1c51f9f8
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: e9644b5bfcc57b24793684095aba912c688346b8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint ユーザー用のデータ警告マネージャー
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+# SharePoint ユーザー用のデータ警告マネージャー
+<a id="data-alert-manager-for-sharepoint-users" class="xliff"></a>
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のデータ警告マネージャーを使用して、SharePoint インフォメーション ワーカーはデータ警告を管理することができます。 具体的には、自分が作成した警告に関する情報を表示したり、警告を削除することができるほか、警告の定義を開いて編集したり、警告をオンデマンドで実行することができます。 1 つのレポートに対する警告のみを表示するか、すべてのレポートに対する警告を表示するかを選択することもできます。 次の図に、SharePoint インフォメーション ワーカーがデータ警告マネージャー内で使用できる機能を示します。
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]データ警告を管理する SharePoint インフォメーション ワーカー用のデータ警告マネージャーを使用します。 具体的には、自分が作成した警告に関する情報を表示したり、警告を削除することができるほか、警告の定義を開いて編集したり、警告をオンデマンドで実行することができます。 1 つのレポートに対する警告のみを表示するか、すべてのレポートに対する警告を表示するかを選択することもできます。 次の図に、SharePoint インフォメーション ワーカーがデータ警告マネージャー内で使用できる機能を示します。
 
 ![SharePoint ユーザーのマネージャーの機能のアラートを生成](../reporting-services/media/rs-alertmanageriw.gif "SharePoint ユーザー用の警告マネージャー機能")  
 
@@ -81,12 +85,13 @@ SharePoint サイトのデータ警告機能を有効にすると、MyDataAlerts
 ##  <a name="HowTo"></a> 関連タスク  
  警告を管理し、警告の定義を編集する際の手順を紹介しているトピックの一覧を次に示します。  
   
--   [データ警告マネージャーでのデータ警告の管理](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
+-   [データ警告マネージャーでデータ警告を管理します。](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
   
--   [警告デザイナーでのデータ警告の編集](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [警告デザイナーでデータ警告を編集します。](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
 
-## <a name="see-also"></a>参照
+## 参照
+<a id="see-also" class="xliff"></a>
 
 [データ警告デザイナー](../reporting-services/data-alert-designer.md)   
 [データ警告デザイナーでデータ警告を作成します。](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   

@@ -1,7 +1,7 @@
 ---
 title: "共有データセット (web ポータル) の操作 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 05/15/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,21 +15,23 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6dfbc134c0f0e351648d19cf8c485fe25a58eb99
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="work-with-shared-datasets---web-portal"></a>共有データセットの web ポータルを作業します。
+# 共有データセットの web ポータルを作業します。
+<a id="work-with-shared-datasets---web-portal" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 共有データセットを使用すると、データセットを使用するレポートおよび他のカタログ アイテムとは別にデータセットの設定を管理できます。 共有データセットは、ページ割り当てされたレポートおよびモバイル レポートで KPI と共に使用できます。
 
 Web ポータル内の共有データセットのプロパティを表示および管理できます。 Web ポータルからレポート ビルダーを起動して共有データセットを作成または編集できます。
 
-## <a name="create-a-shared-dataset"></a>共有データセットを作成する
+## 共有データセットを作成する
+<a id="create-a-shared-dataset" class="xliff"></a>
   
 新しい共有データセットを作成するには、次のようにします。  
   
@@ -47,7 +49,8 @@ Web ポータル内の共有データセットのプロパティを表示およ�
   
 6.  データセットを作成し、画面左上の **[保存]** アイコンを選択してデータセットをレポート サーバーに保存します。  
   
-## <a name="manage-an-existing-shared-dataset"></a>既存の共有データセットを管理する
+## 既存の共有データセットを管理する
+<a id="manage-an-existing-shared-dataset" class="xliff"></a>
   
 既存の共有データセットを管理するには、次のようにします。  
   
@@ -62,13 +65,15 @@ Web ポータル内の共有データセットのプロパティを表示およ�
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
-## <a name="properties"></a>プロパティ
+## プロパティ
+<a id="properties" class="xliff"></a>
   
 プロパティ画面では、データセットの **[名前]** と **[説明]** を変更できます。 また、 **[削除]**、 **[移動]**、 **[レポート ビルダーでの編集]**、 **[ダウンロード]** 、 **[置換]**を選択することもできます。  
   
 ![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
   
-## <a name="caching"></a>キャッシュ
+## キャッシュ
+<a id="caching" class="xliff"></a>
   
 データセットのデータのキャッシュに関するオプションがあります。 簡単な選択で始めことができます。  
   
@@ -82,7 +87,8 @@ Web ポータル内の共有データセットのプロパティを表示およ�
   
 ![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
   
-### <a name="cache-expiration"></a>キャッシュの有効期限  
+### キャッシュの有効期限
+<a id="cache-expiration" class="xliff"></a>  
   
 一定の時間が経過したら共有データセットのキャッシュを期限切れにするか、またはスケジュールに従って行うかを制御できます。 共有スケジュールを使用できます。  
   
@@ -91,7 +97,8 @@ Web ポータル内の共有データセットのプロパティを表示およ�
 > [!NOTE]
 > 有効期限を設定しても、キャッシュは更新されません。 キャッシュ更新計画がない場合、データはデータセットの次の実行時に更新されます。  
   
-### <a name="cache-refresh-plans"></a>キャッシュ更新計画  
+### キャッシュ更新計画
+<a id="cache-refresh-plans" class="xliff"></a>  
   
 [キャッシュ更新計画] を使用すると、共有データセットのデータの一時コピーを事前にキャッシュに読み込むスケジュールを作成できます。 更新計画には、スケジュールと、パラメーターの値を指定または上書きするためのオプションが含まれます。 読み取り専用にマークされているパラメーターの値を上書きすることはできません。 複数の更新計画を作成して使用できます。   
   

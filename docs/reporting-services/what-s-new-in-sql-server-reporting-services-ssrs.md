@@ -1,6 +1,6 @@
 ---
-title: "どのような &#39; s の新しい Reporting Services (SSRS) |Microsoft ドキュメント"
-ms.date: 05/30/2017
+title: "新機能 Reporting Services (SSRS) |Microsoft ドキュメント"
+ms.date: 07/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,13 +20,18 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7428fd46c73c7e32814928ae95085a704167544d
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 3a8ed8433d06f9f0250c42f6e5a190bc64e30235
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="what39s-new-in-sql-server-reporting-services-ssrs"></a>どのような &#39; s の新しい SQL Server Reporting Services (SSRS) で
+
+# SQL Server Reporting Services (SSRS) の新機能
+<a id="whats-new-in-sql-server-reporting-services-ssrs" class="xliff"></a>
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
+
 SQL Server の新機能について学習[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]です。 ここでは、主な機能領域を扱います。新しいアイテムがリリースされた場合は更新します。
   
   新機能 SQL Server の他の領域については、次を参照してください。[の SQL Server 2017 新](../sql-server/what-s-new-in-sql-server-2017.md)または[SQL Server 2016 の新](../sql-server/what-s-new-in-sql-server-2016.md)です。
@@ -43,7 +48,8 @@ SQL Server の新機能について学習[!INCLUDE[ssRSnoversion](../includes/ss
 
 Power BI のレポート サーバーについては、次を参照してください。 [Power BI のレポート サーバーの概要](https://powerbi.microsoft.com/documentation/reportserver-get-started/)です。
 
-## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>DAX では、今すぐレポート ビルダーおよび SQL Server Data Tools のデザイナー サポートをクエリします。
+## DAX では、今すぐレポート ビルダーおよび SQL Server Data Tools のデザイナー サポートをクエリします。
+<a id="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools" class="xliff"></a>
 
 レポート ビルダーと SQL Server Data Tools – リリース候補、最新のリリースでは、サポートされている SQL Server Analysis Services 表形式のデータ モデルに対するネイティブの DAX クエリを作成できます。 両方のツールで、クエリ デザイナーを使用するにはドラッグ アンド ドロップして、DAX クエリを自分で記述する代わりに生成されるフィールドです。  
  
@@ -54,9 +60,11 @@ Power BI のレポート サーバーについては、次を参照してくだ�
 
 > **注**: ビルドされた SQL Server 2016 + で SSAS 表形式のデータ ソースで DAX のクエリ デザイナーを使用することができますのみです。
  
-## <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 の新機能
+## SQL Server 2016 の新機能
+<a id="whats-new-in-sql-server-2016" class="xliff"></a>
   
-### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
+### Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]
+<a id="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd" class="xliff"></a>  
  新しい [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] を利用できます。 これは、KPI、モバイル レポート、ページ分割されたレポート、Excel および Power BI Desktop ファイルが組み込まれた最新のポータルです。 以前のリリースの Report Manager がこの [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] に置き換えられています。 Mobile Report Publisher と Report Builder を [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] からダウンロードすることもできます。ClickOnce テクノロジは必要ありません。
  
  モバイル レポートを作成するには、 [!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short-md.md)]が必要です。  
@@ -65,12 +73,14 @@ Power BI のレポート サーバーについては、次を参照してくだ�
   
  ![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
  
- #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] のカスタム ブランド化 
-  ブランド化パックを使用して、組織のロゴや色で [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]をカスタマイズできます。  
+ #### [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] のカスタム ブランド化
+<a id="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd" class="xliff"></a> 
+  ブランド化パックを使用して、組織のロゴや色で [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] をカスタマイズできます。  
   
-  カスタムブランド化の詳細については、「[Web ポータルのブランド化](http://msdn.microsoft.com/en-us/6dac97f7-02a6-4711-81a3-e850a6b40bf1)」を参照してください。
+  カスタムブランド化の詳細については、「 [Web ポータルのブランド化](http://msdn.microsoft.com/en-us/6dac97f7-02a6-4711-81a3-e850a6b40bf1)」を参照してください。
  
- #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] での主要業績評価指標 (KPI) 
+ #### [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]
+<a id="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd" class="xliff"></a> 
 
 使用しているフォルダーのコンテキストに適合する KPI を [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] で直接作成できます。 KPI を作成するときは、データセットを選択し、それらの値を集約できます。 詳細をドリル スルーするための関連コンテンツを選択することもできます。
   
@@ -79,26 +89,30 @@ Power BI のレポート サーバーについては、次を参照してくだ�
  詳細については、「 [Reporting Services で KPI を使用する](http://msdn.microsoft.com/en-us/a28cf500-6d47-4268-a248-04837e7a09eb)」を参照してください。
   
  
- ### <a name="mobile-reports"></a>モバイル レポート
+ ### モバイル レポート
+<a id="mobile-reports" class="xliff"></a>
  
 Reporting Services モバイル レポートは、多様なフォーム ファクター用に最適化された専用レポートであり、モバイル デバイスでレポートにアクセスするユーザーに最適なエクスペリエンスを提供します。 モバイル レポートでは、時間グラフ、カテゴリ グラフ、比較グラフ、ツリーマップ、カスタム マップなどの多種多様な視覚エフェクトを使用できます。 モバイル レポートは、オンプレミスの SQL Server Analysis Services 多次元およびテーブル データを含むさまざまなデータ ソースに接続できます。 調整可能なグリッド行とグリッド列と柔軟なモバイル レポート要素を備えたデザイン画面で、任意の画面サイズに対応するモバイル レポートをレイアウトできます。 その後、これらのモバイル レポートを Reporting Service サーバーに保存しておき、iPad、iPhone、Android フォン、および Windows 10 デバイスのブラウザーまたはPower BI モバイル アプリで表示と操作を実行できます。
   
-#### <a name="mobile-report-publisher"></a>Mobile Report Publisher  
+#### Mobile Report Publisher
+<a id="mobile-report-publisher" class="xliff"></a>  
  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)]では、SQL Server モバイル レポートを作成して [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]に公開できます。  
   
  ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
   
  詳細については、「 [SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)」をご覧ください。  
   
-#### <a name="sql-server-mobile-reports-hosted-in-reporting-services-available-in-power-bi-mobile-app"></a>Reporting Services でホストされている SQL Server モバイル レポートを Power BI モバイル アプリで使用可能  
+#### Reporting Services でホストされている SQL Server モバイル レポートを Power BI モバイル アプリで使用可能
+<a id="sql-server-mobile-reports-hosted-in-reporting-services-available-in-power-bi-mobile-app" class="xliff"></a>  
  iPad および iPhone の iOS 用 Power BI モバイル アプリでは、ローカル レポート サーバーでホストされている SQL Server モバイル レポートを表示できるようになりました。  
   
  ![SS_MRP_iPad_HomeSm](../reporting-services/media/ss-mrp-ipad-homesm.png "SS_MRP_iPad_HomeSm")  
   
  一部の構成を変更しないと、既定では接続できません。 Power BI モバイル アプリがレポート サーバーに接続できるようにする方法の詳細については、「 [Power BI モバイル アクセス用のレポート サーバーを有効にする](../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md)」をご覧ください。
   
-### <a name="support-of-sharepoint-mode-and-sharepoint-2016"></a>SharePoint モードと SharePoint 2016 のサポート  
- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supports integration with SharePoint 2013 and SharePoint 2016.
+### SharePoint モードと SharePoint 2016 のサポート
+<a id="support-of-sharepoint-mode-and-sharepoint-2016" class="xliff"></a>  
+ [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、SharePoint 2013 および SharePoint 2016 との統合をサポートしています。
  
 詳細については、以下をご覧ください。  
   
@@ -108,10 +122,12 @@ Reporting Services モバイル レポートは、多様なフォーム ファ�
   
 -   [Reporting Services SharePoint モードのインストール](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)  
 
-### <a name="microsoft-net-framework-4-support"></a>Microsoft .NET Framework 4 のサポート  
+### Microsoft .NET Framework 4 のサポート
+<a id="microsoft-net-framework-4-support" class="xliff"></a>  
  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] では、Microsoft .NET Framework 4 の現在のバージョンをサポートしています。 これには、バージョン 4.0 と 4.5.1 が含まれます。 .Net Framework バージョン 4.x がインストールされていない場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップの機能のインストール手順で .NET 4.0 がインストールされます。  
 
-### <a name="report-improvements"></a>レポートの強化機能
+### レポートの強化機能
+<a id="report-improvements" class="xliff"></a>
 
 **HTML5 レンダリング エンジン:** 新しい HTML5 レンダリング エンジンは、最新の Web の "完全" 標準モードと最新ブラウザーを対象としています。  新しいレンダリング エンジンは、一部の古いブラウザーで使用される互換モードに依存しなくなりました。
   
@@ -145,19 +161,22 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 ![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
 
-### <a name="subscription-improvements"></a>サブスクリプションの機能強化  
+### サブスクリプションの機能強化
+<a id="subscription-improvements" class="xliff"></a>  
  
 |機能|サポートされるサーバー モード|  
 |-------------|---------------------------|  
 |**サブスクリプションを有効または無効にする**: サブスクリプションを簡単に無効または有効にできる新しいユーザー インターフェイス オプション。 サブスクリプションを無効にしても、スケジュールなどの他の構成プロパティは維持され、簡単に有効にすることができます。<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> 詳細については、「 [レポートとサブスクリプションの処理を無効化または一時停止する](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)」を参照してください。|ネイティブ モード|  
 |**サブスクリプションの説明**: 新しいサブスクリプションを作成するときに、サブスクリプションのプロパティの一部として、レポートの説明を含めることができるようになりました。 説明はサブスクリプションの概要ページに表示されます。|SharePoint モードとネイティブ モード|  
 |**サブスクリプションの所有者の変更**: サブスクリプションの所有者をすばやく変更できる拡張ユーザー インターフェイス。 以前のバージョンの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、管理者はスクリプトを使用してサブスクリプションの所有者を変更できます。 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] リリース以降では、ユーザー インターフェイスまたはスクリプトを使用してサブスクリプションの所有者を変更できます。 サブスクリプションの所有者の変更は、ユーザーが組織を離れたり、組織での役割が変更されたりしたときに行う一般的な管理タスクです。|SharePoint モードとネイティブ モード|  
-|**ファイル共有サブスクリプションの共有資格情報**: [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のファイル共有サブスクリプションには、現在 2 つのワークフローがあります。<br /><br /> このリリースでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 管理者が 1 つのファイル共有アカウントを構成し、そのアカウントを 1 つ以上のサブスクリプションで使用できるようになりました。 ファイル共有アカウントは、ネイティブ モードの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーで **[ファイル共有アカウントの指定]**を使用して構成します。その後、サブスクリプション構成ページで、ユーザーが **[ファイル共有アカウントの使用]**を選択します。<br /><br /> 個々のサブスクリプションに、宛先のファイル共有の資格情報を具体的に構成します。<br /><br /> この 2 つの方法を組み合わせて、一部のファイル共有サブスクリプションでは管理者が構成したファイル共有アカウントを使用し、他のサブスクリプションでは特定の資格情報を使用することもできます。|ネイティブ モード|  
+|**ファイル共有サブスクリプションの共有資格情報**: [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のファイル共有サブスクリプションには、現在&amp;2; つのワークフローがあります。<br /><br /> このリリースでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 管理者が&amp;1; つのファイル共有アカウントを構成し、そのアカウントを&amp;1; つ以上のサブスクリプションで使用できるようになりました。 ファイル共有アカウントは、ネイティブ モードの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーで **[ファイル共有アカウントの指定]**を使用して構成します。その後、サブスクリプション構成ページで、ユーザーが **[ファイル共有アカウントの使用]**を選択します。<br /><br /> 個々のサブスクリプションに、宛先のファイル共有の資格情報を具体的に構成します。<br /><br /> この&2; つの方法を組み合わせて、一部のファイル共有サブスクリプションでは管理者が構成したファイル共有アカウントを使用し、他のサブスクリプションでは特定の資格情報を使用することもできます。|ネイティブ モード|  
 
-### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
+### SQL Server Data Tools (SSDT)
+<a id="sql-server-data-tools-ssdt" class="xliff"></a>  
  新しいリリースの SSDT には、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]用のプロジェクト テンプレート (レポート サーバー プロジェクト ウィザードとレポート サーバー プロジェクト) が含まれています。 SSDT のダウンロードについては、 [SQL Server Data Tools for Visual Studio 2015](http://go.microsoft.com/fwlink/?LinkId=827542)に関するページをご覧ください。  
 
-### <a name="report-builder-improvements"></a>レポート ビルダーの機能強化
+### レポート ビルダーの機能強化
+<a id="report-builder-improvements" class="xliff"></a>
 
 **新しいレポート ビルダーのユーザー インターフェイス:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] コア ユーザー インターフェイスの UI 要素が簡素化され、最新の外観になりました。  
   
@@ -177,7 +196,8 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
   
 -   [高 DPI と Windows 8.1](http://technet.microsoft.com/library/dn528848.aspx)  
 
-## <a name="next-steps"></a>次の手順
+## 次の手順
+<a id="next-steps" class="xliff"></a>
 
 [Analysis Services の新機能](http://msdn.microsoft.com/en-us/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [SSRS での Power BI レポートの技術プレビュー - リリース ノート](../reporting-services/reporting-services-release-notes.md)  

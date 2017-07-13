@@ -1,6 +1,6 @@
 ---
 title: "Reporting Services で Kpi を操作する |Microsoft ドキュメント"
-ms.date: 05/15/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,15 +14,17 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b451b1773d97d490c0021cdf8cfcfb14c07117b4
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="working-with-kpis-in-reporting-services"></a>Reporting Services で KPI を使用する
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+# Reporting Services で KPI を使用する
+<a id="working-with-kpis-in-reporting-services" class="xliff"></a>
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 主要業績評価指標 (KPI) は、目標に対する達成度の伝達を視覚化したものです。  主要業績評価指標は、チーム、マネージャー、およびビジネスにとって、測定可能な目標に対する進捗度をすばやく評価するうえで重要です。   
   
@@ -34,16 +36,19 @@ SQL Server 2016 Reporting Services で KPI を使用することで、以下の�
   
 -   最低限完了したことは何か。  
   
-## <a name="creating-a-dataset"></a>データセットの作成  
+## データセットの作成
+<a id="creating-a-dataset" class="xliff"></a>  
 KPI は、共有データセットの最初の行のデータのみを使用します。 使用したいデータがその最初の行にあることを確認します。 共有データセットを作成するには、レポート ビルダーまたは SQL Server Data Tools のいずれかを使用することができます。  
   
 > **注**: Dataset は、KPI と同じフォルダーに配置する必要はありません。  
   
-## <a name="placement-of-kpis"></a>KPI の配置  
+## KPI の配置
+<a id="placement-of-kpis" class="xliff"></a>  
   
 KPI は、レポート サーバーの任意のフォルダーに作成できます。  KPI を作成する前に、それを配置する適切な場所について検討する必要があります。 他のレポートおよびそれに関する KPI に関係があり、ユーザーが参照できるフォルダーに配置する必要があります。  
   
-## <a name="adding-a-kpi"></a>KPI を追加する  
+## KPI を追加する
+<a id="adding-a-kpi" class="xliff"></a>  
   
 KPI の場所を決定したら、そのフォルダーに移動して、トップ メニューから [ **新規** > **KPI** ] を選択します。  
   
@@ -91,7 +96,8 @@ KPI の場所を決定したら、そのフォルダーに移動して、トッ�
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)  
   
-## <a name="removing-a-kpi"></a>KPI を削除する  
+## KPI を削除する
+<a id="removing-a-kpi" class="xliff"></a>  
   
 KPI を削除するには、次の操作を実行します。  
   
@@ -103,11 +109,13 @@ KPI を削除するには、次の操作を実行します。
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   
-## <a name="refreshing-a-kpi"></a>KPI を更新する  
+## KPI を更新する
+<a id="refreshing-a-kpi" class="xliff"></a>  
   
 KPI を更新するには、共有データセットのキャッシュを構成する必要があります。 更新計画のキャッシュに関する詳細についてを参照してください[共有データセットを操作](../reporting-services/work-with-shared-datasets-web-portal.md)です。  
   
-## <a name="next-steps"></a>次の手順
+## 次の手順
+<a id="next-steps" class="xliff"></a>
   
 [Web ポータル](../reporting-services/web-portal-ssrs-native-mode.md)  
 [共有データセットを操作します。](../reporting-services/work-with-shared-datasets-web-portal.md)

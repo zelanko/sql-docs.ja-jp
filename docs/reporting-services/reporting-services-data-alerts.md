@@ -1,7 +1,7 @@
 ---
 title: "Reporting Services のデータ警告 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,26 +16,30 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 86cf02b246cc8ca11e7ed490cfb6082c2c6c7760
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 27956feca3ad15233943a447422e2260bd61c913
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="reporting-services-data-alerts"></a>Reporting Services Data Alerts
+# Reporting Services Data Alerts
+<a id="reporting-services-data-alerts" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の "データ警告" は、関心のある、または重要なレポート データを適切なタイミングで把握できるよう補助する、データ駆動型の警告ソリューションです。 データ警告を使用することで、情報を探し出す必要がなくなり、情報が自動的に通知されるようになります。  
-  
- データ警告メッセージは電子メールで送信されます。 情報の重要性に応じて、メッセージの送信頻度を選択したり、結果が変更された場合にのみメッセージが送信されるようにすることができます。 複数の電子メール受信者を指定して、この方法で他のユーザーに通知し、効率性とコラボレーションを強化することができます。  
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+SQL Server Reporting Services のデータ警告は、データ ドリブンの警告ソリューションですが興味深いか、使用して、適切なタイミングで重要なレポート データに通知することができます。 データ警告を使用することで、情報を探し出す必要がなくなり、情報が自動的に通知されるようになります。
+
+データ警告メッセージは電子メールで送信されます。 情報の重要性に応じて、メッセージの送信頻度を選択したり、結果が変更された場合にのみメッセージが送信されるようにすることができます。 複数の電子メール受信者を指定して、この方法で他のユーザーに通知し、効率性とコラボレーションを強化することができます。
 
 > [!NOTE]
 > SQL Server 2016 より後に、SharePoint と reporting Services の統合を使用できなくします。
-  
-##  <a name="AlertingWF"></a> データ警告のアーキテクチャとワークフロー  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] データ警告は、大きく次の機能に分けることができます。  
-  
+
+##  <a name="AlertingWF"></a> データ警告のアーキテクチャとワークフロー
+
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] データ警告は、大きく次の機能に分けることができます。
+
 -   **データ警告定義の作成と保存**: レポートの実行、注意すべきデータ値を識別するルールの作成、データ警告メッセージを送信する定期的なパターンの定義、警告メッセージの受信者の指定などを行います。  
   
 -   **データ警告定義の実行**: 警告サービスは、予定された時刻に警告の定義を処理してレポート データを取得し、警告の定義にあるルールに基づいてデータ警告インスタンスを作成します。  
@@ -54,7 +58,8 @@ ms.lasthandoff: 06/22/2017
   
  ![Reporting Services 警告内のワークフロー](../reporting-services/media/rs-alertingworkflow.gif "Reporting Services 警告内のワークフロー")  
   
-### <a name="reports-supported-by-data-alerts"></a>データ警告によってサポートされるレポート  
+### データ警告によってサポートされるレポート
+<a id="reports-supported-by-data-alerts" class="xliff"></a>  
  データ警告は、レポート定義言語 (RDL) で記述され、レポート デザイナーまたはレポート ビルダーで作成された、あらゆる種類の業務用レポートに対して作成できます。 データ領域 (テーブルやグラフなど) を含んだレポート、サブレポートを含んだレポート、さらには、複数のパラレルな列グループと入れ子になったデータ領域を含んだ複雑なレポートがサポートされます。 要件は、レポートに任意の種類のデータ領域が少なくとも 1 つ含まれていることと、レポート データ ソースが保存済みの資格情報を使用するか、または資格情報を使用しないように構成されていることだけです。 データ領域がないレポートに対しては警告を作成できません。  
   
  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]で作成されたレポートに対してデータ警告を作成することはできません。  
@@ -69,29 +74,34 @@ ms.lasthandoff: 06/22/2017
   
 -   [レポート サーバーでの認証](../reporting-services/security/authentication-with-the-report-server.md)  
   
-### <a name="run-reports"></a>レポートの実行  
+### レポートの実行
+<a id="run-reports" class="xliff"></a>  
  データ警告定義を作成する最初の手順は、SharePoint ライブラリ内にある目的のレポートの場所を特定し、レポートを実行することです。 レポートを実行するとき、そこにデータがないと、その時点でそのレポートについての警告を作成することはできません。  
   
  レポートがパラメーター化されている場合は、レポートの実行時に使用するパラメーター値を指定します。 パラメーター値は、レポートに対して作成するデータ警告定義内に保存されます。 これらの値は、レポートがデータ警告定義の処理の 1 つの手順として再実行される際に使用されます。 パラメーター値を変更する場合は、それらのパラメーター値を使用してレポートを再実行し、そのバージョンのレポートに対する警告定義を作成する必要があります。  
   
-### <a name="create-data-alert-definitions"></a>データ警告定義の作成  
+### データ警告定義の作成
+<a id="create-data-alert-definitions" class="xliff"></a>  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のデータ警告機能には、データ警告定義を作成するためのデータ警告デザイナーが用意されています。  
   
  データ警告定義を作成するには、レポートを実行し、SharePoint レポート ビューアーの **[アクション]** メニューからデータ警告デザイナーを開きます。 レポートのデータ フィードが生成され、データ警告デザイナーのデータ プレビュー テーブルにデータ フィードの先頭 100 行が表示されます。 レポートから取得されたすべてのデータ フィードは、データ警告デザイナーで警告の定義を行っている間キャッシュされます。 このキャッシュによって、複数のデータ フィードをすばやく切り替えることができます。 データ警告デザイナーで警告の定義を再度開くと、データ フィードが最新の情報に更新されます。  
   
  データ警告定義は、データ警告メッセージをトリガーするためにレポート データが満たす必要のあるルールと句、警告メッセージの送信頻度を定義するスケジュール、警告メッセージの送信開始/終了日 (オプション)、警告メッセージに含める情報 (件名行や説明など)、およびメッセージの受信者で構成されます。 作成した警告の定義は、SQL Server 警告データベースに保存します。  
   
-### <a name="save-data-alert-definitions-and-alerting-metadata"></a>データ警告定義と警告メタデータの保存  
+### データ警告定義と警告メタデータの保存
+<a id="save-data-alert-definitions-and-alerting-metadata" class="xliff"></a>  
  SharePoint モードで [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] をインストールすると、SQL Server 警告データベースが自動的に作成されます。  
   
  データ警告定義と警告メタデータは、警告データベースに保存されます。 既定では、この名前は ReportingServices\<GUID > _Alerting です。  
   
  データ警告定義を保存すると、警告定義のための SQL Server エージェント ジョブが自動的に作成されます。 このジョブには、ジョブ スケジュールが含まれます。 このスケジュールは、警告定義で定義した定期的なパターンに基づくものです。 ジョブを実行すると、データ警告定義の処理が開始されます。  
   
-### <a name="process-data-alert-definitions"></a>データ警告定義の処理  
+### データ警告定義の処理
+<a id="process-data-alert-definitions" class="xliff"></a>  
  SQL Server エージェント ジョブのスケジュールが警告定義の処理を開始すると、レポートが実行されてレポート データ フィードが更新されます。 警告サービスは、データ フィードを読み取り、そのデータ値に対し、データ警告定義によって指定されたルールを適用します。 ルールに合致するデータ値が 1 つでもあった場合は、データ警告インスタンスが作成され、警告結果を含むデータ警告メッセージがすべての受信者に電子メールで送信されます。 結果には、警告インスタンスの作成時点ですべてのルールを満たしていたレポート データの行が含まれます。 同じ結果を含む警告メッセージが複数生成されるのを防ぎたい場合は、結果が変更された場合にのみメッセージが送信されるように指定することもできます。 この場合、警告インスタンスは作成されて警告データベースに保存されますが、警告メッセージは生成されません。 エラーが発生した場合は、やはり警告インスタンスが警告データベースに保存され、エラーの詳細情報を含んだ警告メッセージが受信者に送信されます。 後の「診断とログ」のセクションでは、ログ記録とトラブルシューティングについてより詳しく説明しています。  
   
-### <a name="send-data-alert-messages"></a>データ警告メッセージの送信  
+### データ警告メッセージの送信
+<a id="send-data-alert-messages" class="xliff"></a>  
  データ警告メッセージは電子メールで送信されます。  
   
  **"差出人"** 行には、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の電子メール配信構成によって指定された値が表示されます。 **"宛先"** 行には、データ警告デザイナーで警告を作成するときに指定した一連の受信者が表示されます。  
@@ -145,7 +155,8 @@ ms.lasthandoff: 06/22/2017
   
  既定では、MaxRetries と SecondsBeforeRetry の設定は、データ警告をトリガーするすべてのイベントに適用されます。 再試行の実行と遅延をより細かく制御したい場合は、異なる MaxRetries 値と SecondsBeforeRetry 値を指定するすべてのイベント ハンドラーに対して要素を追加できます。  
   
-### <a name="event-handlers-and-retry"></a>イベント ハンドラーと再試行  
+### イベント ハンドラーと再試行
+<a id="event-handlers-and-retry" class="xliff"></a>  
  イベント ハンドラーには次のものがあります。  
   
 |イベント ハンドラー|Description|  
@@ -216,7 +227,8 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="DiagnosticsLogging"></a> 診断とログ  
  データ警告では、インフォメーション ワーカーおよび管理者が、さまざまな方法で警告を追跡し、警告に失敗した理由を特定することができます。また、管理者は、警告メッセージがだれに送信され、警告インスタンスがいくつ送信されたかなどを、ログを使用して把握できます。  
   
-### <a name="data-alert-manager"></a>データ警告マネージャー  
+### データ警告マネージャー
+<a id="data-alert-manager" class="xliff"></a>  
  失敗した理由をインフォメーション ワーカーと警告管理者が把握しやすいように、データ警告マネージャーには、警告の定義とエラー情報が一覧表示されます。 エラーの一般的な理由は、次のとおりです。  
   
 -   レポート データ フィードが変更され、データ警告定義のルールに使用されていた列が、現在はデータ フィードに存在しない。  
@@ -225,12 +237,14 @@ ms.lasthandoff: 06/22/2017
   
 -   基になるデータ ソースのデータ型が変更され、警告の定義が無効になった。  
   
-### <a name="logs"></a>ログ  
+### ログ
+<a id="logs" class="xliff"></a>  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、データ警告定義の処理時に実行されるレポートや、作成されるデータ警告インスタンスの詳細を把握するのに役立つ、多数のログが提供されます。 特によく使用されるログは、警告実行ログ、レポート サーバー実行ログ、およびレポート サーバー トレース ログの 3 つです。  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の他のログについては、「 [Reporting Services のログ ファイルとソース](../reporting-services/report-server/reporting-services-log-files-and-sources.md)」を参照してください。  
   
-#### <a name="alerting-execution-log"></a>警告実行ログ  
+#### 警告実行ログ
+<a id="alerting-execution-log" class="xliff"></a>  
  警告機能のランタイム サービスは、警告データベースの ExecutionLogView テーブルにエントリを書き込みます。 このテーブルに対してクエリを実行するか、次のストアド プロシージャを実行すると、警告データベースに保存されたデータ警告に関して、より詳細な診断情報を取得できます。  
   
 -   ReadAlertData  
@@ -251,10 +265,12 @@ ms.lasthandoff: 06/22/2017
   
  SQL エージェントを使用すると、ストアド プロシージャをスケジュールに従って実行することができます。 詳しくは、「 [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)」をご覧ください。  
   
-#### <a name="report-server-execution-log"></a>レポート サーバー実行ログ  
+#### レポート サーバー実行ログ
+<a id="report-server-execution-log" class="xliff"></a>  
  レポートは、データ警告定義の作成対象であるデータ フィードを生成するために実行されます。 レポート サーバー データベース内のレポート サーバー実行ログは、レポートが実行されるたびに情報を取得します。 データベース内の ExecutionLog2 ビューに対してクエリを実行し、詳細な情報を取得することもできます。 詳細については、「 [レポート サーバー実行ログと ExecutionLog3 ビュー](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)」を参照してください。  
   
-#### <a name="report-server-trace-log"></a>レポート サーバー トレース ログ  
+#### レポート サーバー トレース ログ
+<a id="report-server-trace-log" class="xliff"></a>  
  レポート サーバーのトレース ログには、レポート サーバー Web サービスおよびバックグラウンド処理によって実行された操作を含め、レポート サーバー サービスの操作に関するきわめて詳細な情報が記録されます。 トレース ログ情報は、レポート サーバーを含むアプリケーションをデバッグしている場合、またはイベント ログや実行ログに書き込まれた特定の問題を調査している場合に役立ちます。 詳細については、「 [Report Server Service Trace Log](../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。  
   
 ##  <a name="PerformanceCounters"></a> パフォーマンス カウンター  
@@ -318,7 +334,8 @@ ms.lasthandoff: 06/22/2017
   
 -   [ユーザーおよび警告管理者に権限を付与する](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
-## <a name="see-also"></a>参照
+## 参照
+<a id="see-also" class="xliff"></a>
 
 [データ警告デザイナー](../reporting-services/data-alert-designer.md)   
 [警告管理者用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-alerting-administrators.md)   

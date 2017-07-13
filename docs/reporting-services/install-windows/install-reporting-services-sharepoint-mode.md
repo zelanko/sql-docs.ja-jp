@@ -20,23 +20,33 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b2c77f21304b04b5349691b6c464026fe944a4eb
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 17effa28932798a3cd35427a0a7104d4aa355b56
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="install-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint モードのインストール
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポートの作成とドキュメント ライブラリでの表示、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションの電子メールを使用したレポートの配信、  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]、データ アラート、レポート管理機能をすべて、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint ベースの配置で使用できます。 SharePoint モードの機能の詳細については、「 [Reporting Services レポート サーバー](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)」の「サーバー モードごとの機能サポートと動作の違い」を参照してください。  
-  
- SharePoint モードでの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、インストールする2 つの主な [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のコンポーネントがあります。  
-  
+# Reporting Services SharePoint モードのインストール
+<a id="install-reporting-services-sharepoint-mode" class="xliff"></a>
+
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+SQL Server Reporting Services SharePoint で、有効にレポートの作成とドキュメント ライブラリでの表示[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]電子メールを使用したレポートのサブスクリプションの配信[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]のデータ アラート、およびすべての展開でのレポート管理機能に基づいて[!INCLUDE[msCoName](../../includes/msconame-md.md)]SharePoint。 SharePoint モードの機能に関する詳細についてを参照してください「機能サポートと動作の違いによってサーバー モード」で[Reporting Services レポート サーバー](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)です。
+
+> [!NOTE]
+> SQL Server 2016 より後に、SharePoint と reporting Services の統合を使用できなくします。
+
+SharePoint モードでの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、インストールする2 つの主な [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のコンポーネントがあります。  
+
 |インストール|説明|  
 |------------------|-----------------|  
 |**レポート サーバー:** SharePoint モードでインストールされる [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー|レポート サーバーは、データとレポートの処理と表示に加え、サブスクリプションとデータ警告処理も処理します。 SharePoint モードのレポート サーバーは、SharePoint 共有サービスとして設計およびインストールされています。<br /><br /> **方法:** レポート サーバーをインストールするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアを使用します。|  
-|**Add-in:** The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint products, **rssharepoint.msi**.|アドインでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ユーザー インターフェイス (UI) ページと機能を SharePoint Web フロントエンド サーバーにインストールします。 UI 機能には、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]、SharePoint サーバーの全体管理の管理ページ、SharePoint ドキュメント ライブラリ内で使用される機能ページ、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ警告ページが含まれます。<br /><br /> **方法:**  アドインは、Web ダウンロードまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアからインストールできます。 詳細については、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。|  
+|**アドイン:** SharePoint モードでインストールされる [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドイン ( **rssharepoint.msi**)。|アドインでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ユーザー インターフェイス (UI) ページと機能を SharePoint Web フロントエンド サーバーにインストールします。 UI 機能には、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]、SharePoint サーバーの全体管理の管理ページ、SharePoint ドキュメント ライブラリ内で使用される機能ページ、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ警告ページが含まれます。<br /><br /> **方法:**  アドインは、Web ダウンロードまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアからインストールできます。 詳細については、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。|  
   
-## <a name="in-this-section"></a>このセクションの内容  
+## このセクションの内容
+<a id="in-this-section" class="xliff"></a>  
  [SharePoint、Reporting Services サーバー、Reporting Services アドインのサポートされる組み合わせ &#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
  [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
@@ -54,10 +64,11 @@ ms.lasthandoff: 06/22/2017
  [SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
  [Claims to Windows Token Service &#40;c2WTS&#41; と Reporting Services](../../reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md)  
-  
-## <a name="see-also"></a>参照  
+
+## 次の手順
+<a id="next-steps" class="xliff"></a>
+
  [データ警告のアーキテクチャとワークフロー](../../reporting-services/reporting-services-data-alerts.md#AlertingWF)   
  [警告管理者用のデータ警告マネージャー](../../reporting-services/data-alert-manager-for-alerting-administrators.md)  
-  
-  
 
+他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

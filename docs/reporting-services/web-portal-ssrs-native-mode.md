@@ -15,16 +15,15 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: e3dff8b613f933caa84522b31bdc862aa9c799f7
 ms.contentlocale: ja-jp
 ms.lasthandoff: 07/10/2017
 
 ---
-<a id="web-portal-ssrs-native-mode" class="xliff"></a>
-
 # Web ポータル (SSRS ネイティブ モード)
+<a id="web-portal-ssrs-native-mode" class="xliff"></a>
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -32,9 +31,8 @@ Reporting Services web ポータルは、モバイル レポート、Kpi、レ�
 
 ![ssRSPortal](../reporting-services/media/ssrsportal.png)
 
-<a id="what-is-the-web-portal" class="xliff"></a>
-
 ## Web ポータルとは
+<a id="what-is-the-web-portal" class="xliff"></a>
 
 Web ポータルを使用するには、次のタスクを実行します。
 
@@ -72,17 +70,15 @@ Web ポータルは、ネイティブ モードで実行されているレポー
 > [!NOTE]
 > サーバーが実行されているローカル コンピューターで Web ポータルを閲覧している場合、このフォルダーの表示が禁止されている旨のメッセージが表示されることがあります。 これは Universal Access Control (UAC) による規制であり、また、ユーザーが管理者としてブラウザーを実行していないことに起因します。 管理者として Edge を実行することはできません。 Internet Explorer を使用する必要があります。 リモートでサーバーを閲覧するか、管理者として Internet Explorer を起動し、Web ポータルを閲覧できます。 Web ポータルをリモートで利用する場合、自分のアカウントにフォルダーのコンテンツ管理権限を与える必要があります。  
 
-<a id="start-and-use-the-web-portal" class="xliff"></a>
-
 ## Web ポータルの開始と使用
+<a id="start-and-use-the-web-portal" class="xliff"></a>
 
 Web ポータルを入力して起動する web アプリケーションとは、[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]ブラウザー ウィンドウのアドレス バーの URL。 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]の起動時に表示されるページ、リンク、オプションは、レポート サーバーに対してユーザーが持っている権限によって異なります。 タスクを実行するには、そのタスクを含むロールに割り当てられている必要があります。  すべての権限を持つロールに割り当てられたユーザーは、レポート サーバーの管理に利用できるすべてのアプリケーション メニューとページにアクセスできます。 一方、レポートの表示と実行の権限を持つロールに割り当てられたユーザーは、それらの操作をサポートするメニューとページのみを表示できます。 各ユーザーに対して、レポート サーバーごとに異なるロールを割り当てることも、単一のレポート サーバーに保存されている多様なレポートまたはフォルダーごとに異なるロールを割り当てることもできます。
 
 ロールの詳細については、「 [ネイティブ モードのレポート サーバーに対する権限の許可](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)」を参照してください。
 
-<a id="start-the-web-portal" class="xliff"></a>
-
 ### Web ポータルを開始します。
+<a id="start-the-web-portal" class="xliff"></a>
 
 ブラウザーから web ポータルを起動するには、次の操作を行います。
 
@@ -94,9 +90,8 @@ Web ポータルを入力して起動する web アプリケーションとは�
 
     レポート サーバーは、特定のポートを使用するように構成できます。 たとえば、 *http://[ComputerName]:80/repまたはts* または *http://[ComputerName]:8080/repまたはts*。
 
-<a id="grouping-by-categories" class="xliff"></a>
-
 ## カテゴリ別のグループ化
+<a id="grouping-by-categories" class="xliff"></a>
 
 Web ポータルでは、さまざまなカテゴリに項目をグループ化されます。 次のようなカテゴリがあります。
 
@@ -115,9 +110,8 @@ Web ポータルでは、さまざまなカテゴリに項目をグループ化�
 
 ![ssRSWebPortal-hidden](../reporting-services/media/ssrswebportal-hidden.png)
 
-<a id="power-bi-desktop-reports-and-excel-workbooks" class="xliff"></a>
-
 ### Power BI Desktop レポートと Excel ブック
+<a id="power-bi-desktop-reports-and-excel-workbooks" class="xliff"></a>
 
 Power BI Desktop レポートと Excel ブックのアクセス許可をアップロード、整理、管理できます。 Web ポータル内でグループ化されます。
 
@@ -125,17 +119,15 @@ Power BI Desktop レポートと Excel ブックのアクセス許可をアッ�
 
 ファイルは他のリソース ファイルと同様に Reporting Services 内に保管されます。 いずれかのアイテムを選択すると、デスクトップにローカル ダウンロードされます。 レポート サーバーに再アップロードすることで、変更を保存できます。
 
-<a id="search-for-items" class="xliff"></a>
-
 ## アイテムの検索
+<a id="search-for-items" class="xliff"></a>
 
 検索語句を入力できます。ユーザーがアクセスできるアイテムが表示されます。 結果は KPI、レポート、データセット、その他のアイテムに分類されます。 その後、結果を使用したり、お気に入りに追加したりできます。
 
 ![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
 
-<a id="web-portal-tasks" class="xliff"></a>
-
 ## Web ポータル タスク
+<a id="web-portal-tasks" class="xliff"></a>
 
 [Web ポータルのブランド化](../reporting-services/branding-the-web-portal.md)
 
@@ -143,9 +135,8 @@ Power BI Desktop レポートと Excel ブックのアクセス許可をアッ�
 
 [共有データセットの操作](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-<a id="see-also" class="xliff"></a>
-
 ## 参照
+<a id="see-also" class="xliff"></a>
 
 [SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 [URL の構成 (SSRS 構成マネージャー)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
