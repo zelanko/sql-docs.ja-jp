@@ -2,7 +2,7 @@
 title: "PolyBase T-SQL オブジェクト | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 03/08/2016
+ms.date: 07/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -26,10 +26,9 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 06/30/2017
 
 ---
-<a id="polybase-t-sql-objects" class="xliff"></a>
-
 # PolyBase T-SQL オブジェクト
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+<a id="polybase-t-sql-objects" class="xliff"></a>
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   PolyBase を使用するには、外部テーブルを作成して、外部データを参照する必要があります。  
   
@@ -46,14 +45,12 @@ ms.lasthandoff: 06/30/2017
 > [!NOTE]
 >  SQL Server 2016 の PolyBase は、Windows ユーザーのみをサポートします。 SQL ユーザーを使って PolyBase の外部テーブルをクエリしようとすると、クエリは失敗します。
 
-<a id="prerequisites" class="xliff"></a>
-
-## 前提条件  
+## 前提条件
+<a id="prerequisites" class="xliff"></a>  
  PolyBase を構成します。 「 [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md)」を参照してください。  
   
-<a id="create-external-tables-for-hadoop" class="xliff"></a>
-
-## Hadoop の外部テーブルの作成  
+## Hadoop の外部テーブルの作成
+<a id="create-external-tables-for-hadoop" class="xliff"></a>  
  **1.データベース スコープ ベースの資格情報を作成する**  
   
  この手順が必要なのは、Kerberos でセキュリティ保護された Hadoop クラスターのみです。  
@@ -131,9 +128,8 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 ```  
   
-<a id="create-external-tables-for-azure-blob-storage" class="xliff"></a>
-
-## Azure BLOB ストレージ用の外部テーブルを作成します。  
+## Azure BLOB ストレージ用の外部テーブルを作成します。
+<a id="create-external-tables-for-azure-blob-storage" class="xliff"></a>  
  **1.データベース スコープ ベースの資格情報を作成する**  
   
 ```sql  
@@ -208,9 +204,8 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 ```  
  
-<a id="create-external-tables-for-azure-data-lake-store" class="xliff"></a>
-
 ## Azure Data Lake Store 用の外部テーブルを作成する
+<a id="create-external-tables-for-azure-data-lake-store" class="xliff"></a>
 Azure Data Lake Store は SQL データ ウェアハウスの PolyBase でのみサポートされます。
 Azure SQL データ ウェアハウスと ADLS の詳細については、「[Load with Azure Data Lake Store](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)」 (Azure Data Lake Store による読み込み) を参照してください。
  
@@ -302,14 +297,12 @@ WITH
 CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)  
 ```  
 
-<a id="next-steps" class="xliff"></a>
-
-## 次の手順  
+## 次の手順
+<a id="next-steps" class="xliff"></a>  
  クエリの例については、「 [PolyBase Queries (PolyBase のクエリ)](../../relational-databases/polybase/polybase-queries.md)」を参照してください。  
   
-<a id="see-also" class="xliff"></a>
-
-## 参照  
+## 参照
+<a id="see-also" class="xliff"></a>  
  [PolyBase の概要](../../relational-databases/polybase/get-started-with-polybase.md)   
  [PolyBase ガイド](../../relational-databases/polybase/polybase-guide.md)  
   
