@@ -25,9 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 06/28/2017
 
 ---
-<a id="monitoring-performance-by-using-the-query-store" class="xliff"></a>
-
-# クエリのストアを使用した、パフォーマンスの監視
+# <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のクエリのストア機能により、クエリ プランの選択やパフォーマンスを把握できます。 これにより、クエリ プランの変更によって生じるパフォーマンスの違いがすばやくわかるようになり、パフォーマンス上のトラブルシューティングを簡略化できます。 クエリのストアは、自動的にクエリ、プラン、および実行時統計の履歴をキャプチャし、確認用に保持します。 データは時間枠で区分されるため、データベースの使用パターンを表示して、サーバー上でクエリ プランが変わった時点を確認することができます。 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) オプションを使用してクエリ ストアを構成できます。 
@@ -37,9 +35,7 @@ ms.lasthandoff: 06/28/2017
 ##  <a name="Enabling"></a> クエリのストアを有効にする  
  既定では、クエリのストアは新しいデータベースに対してアクティブではありません。  
   
-<a id="use-the-query-store-page-in-management-studio" class="xliff"></a>
-
-#### Management Studio でクエリのストアのページを使用する  
+#### <a name="use-the-query-store-page-in-management-studio"></a>Management Studio でクエリのストアのページを使用する  
   
 1.  オブジェクト エクスプローラーで、データベースを右クリックし、 **[プロパティ]**をクリックします。  
   
@@ -50,9 +46,7 @@ ms.lasthandoff: 06/28/2017
   
 3.  **[操作モード (要求)]** ボックスで、 **[オン]**を選択します。  
   
-<a id="use-transact-sql-statements" class="xliff"></a>
-
-#### Transact-SQL ステートメントを使用する  
+#### <a name="use-transact-sql-statements"></a>Transact-SQL ステートメントを使用する  
   
 1.  **ALTER DATABASE** ステートメントを使用してクエリのストアを有効にします。 例:  
   
@@ -171,9 +165,7 @@ SQL Server 2017 CTP 2.0 以降および Azure SQL Database では、クエリ �
 |-|-|  
 |[sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)|| 
   
-<a id="query-store-catalog-views" class="xliff"></a>
-
-### クエリのストアのカタログ ビュー  
+### <a name="query-store-catalog-views"></a>クエリのストアのカタログ ビュー  
  カタログ ビューはクエリのストアの情報を提供します。  
 
 ||| 
@@ -183,9 +175,7 @@ SQL Server 2017 CTP 2.0 以降および Azure SQL Database では、クエリ �
 |[sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|[sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)|  
 |[sys.query_store_wait_stats & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
   
-<a id="query-store-stored-procedures" class="xliff"></a>
-
-### クエリのストアのストアド プロシージャ  
+### <a name="query-store-stored-procedures"></a>クエリのストアのストアド プロシージャ  
  ストアド プロシージャはクエリのストアを構成します。  
 
 ||| 
@@ -579,9 +569,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 参照  
+## <a name="see-also"></a>参照  
  [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [インメモリ OLTP でのクエリ ストアの使用](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [クエリ ストアの使用シナリオ](../../relational-databases/performance/query-store-usage-scenarios.md)   
