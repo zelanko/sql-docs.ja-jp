@@ -33,7 +33,7 @@ ms.lasthandoff: 06/23/2017
 
  クリックすると、[登録済みサーバー] の設定を保存します。 
  
- ## <a name="reporting-services-new-or-edit-server-registration-general-tab"></a>Reporting Services の [新規サーバーの登録] または [サーバー登録プロパティの編集] ([全般] タブ) 
+ ## <a name="reporting-services-new-or-edit-server-registration-general-tab"></a>Reporting Services の [新規サーバーの登録] または [サーバー登録プロパティの編集]\([全般] タブ) 
   このタブを使用すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のインスタンスを登録するときのオプションを指定できます。  
   
  このページにアクセスするには、[登録済みサーバー] で、 **[登録済みサーバー]** ツール バーの **[Reporting Services]** をクリックし、登録済みサーバー グループ ( **[Reporting Services]**など) を右クリックして、 **[新規作成]**をポイントし、 **[サーバーの登録]**をクリックします。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/23/2017
  クリックすると、 **[サーバー名]**で選択されたサーバーへの接続をテストします。  
   
  
- ## <a name="analysis-services---multidimensional-data-new-or-edit-server-registration-general-tab"></a>Analysis Services - 多次元データの [新規サーバーの登録] または [サーバー登録プロパティの編集] ([全般] タブ)
+ ## <a name="analysis-services---multidimensional-data-new-or-edit-server-registration-general-tab"></a>Analysis Services - 多次元データの [新規サーバーの登録] または [サーバー登録プロパティの編集]\([全般] タブ)
  
   このタブを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスを登録するときのオプションを指定できます。  
   
@@ -112,7 +112,7 @@ ms.lasthandoff: 06/23/2017
  **テスト**  
  クリックすると、 **[サーバー名]**で選択されたサーバーへの接続をテストします。 
  
- ## <a name="ssis-new-or-edit-server-registration-general-tab"></a>SSIS の [新規サーバーの登録] または [サーバー登録プロパティの編集] ([全般] タブ) 
+ ## <a name="ssis-new-or-edit-server-registration-general-tab"></a>SSIS の [新規サーバーの登録] または [サーバー登録プロパティの編集]\([全般] タブ) 
  
  このタブを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を登録するときのオプションを指定できます。  
   
