@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58db786512aa1ed167df55831c6a7cc3c53224bd
+ms.translationtype: HT
+ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
+ms.openlocfilehash: f13f4f60d8df7d2a2fb668cc6d5a93f092973116
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="how-query-store-collects-data"></a>クエリ ストアがデータを収集するしくみ
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="views"></a>ビュー  
  次の図は、クエリ ストアのビューとその論理関係を示しています。コンパイル時間の情報は青のエンティティで表しています。  
   
- ![query-store-process-1views](../../relational-databases/performance/media/query-store-process-1views.png "query-store-process-1views")  
+ ![query-store-process-2views](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
   
  **ビューの説明**  
   
@@ -68,7 +68,8 @@ ms.lasthandoff: 04/11/2017
   
  システムのクラッシュが発生した場合、クエリ ストアでは `DATA_FLUSH_INTERVAL_SECONDS`で定義した時間までのランタイム データが失われる場合があります。 クエリのキャプチャ パフォーマンスとデータの可用性のバランスのためには、既定の 900 秒 (15 分) が最も適しています。  
 メモリ不足が発生した場合、 `DATA_FLUSH_INTERVAL_SECONDS`で定義した時間より前に、ランタイム統計をディスクにフラッシュすることができます。  
-クエリ ストアのデータ読み取り中は、メモリ内のデータとディスク上のデータが透過的に統合されます。  
+クエリ ストアのデータ読み取り中は、メモリ内のデータとディスク上のデータが透過的に統合されます。
+セッションの終了時またはクライアント アプリケーションの再起動/クラッシュ時、クエリ統計は記録されません。  
   
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 

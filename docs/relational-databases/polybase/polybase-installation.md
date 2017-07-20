@@ -17,11 +17,11 @@ caps.latest.revision: 25
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f5b029907f25811131e08d2f7ade1f050e3a18d5
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: 0c39bbf997fb5041a1fc4ea55699fbb3a40e3d75
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="polybase-installation"></a>PolyBase のインストール
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
 -   最小ハード ディスク容量: 2 GB。  
   
--   TCP/IP 接続を有効にする必要があります。 (「 [サーバー ネットワーク プロトコルを有効または無効にする](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)」を参照してください。)  
+-   TCP/IP 接続を有効にする必要があります。 (「 [サーバー ネットワーク プロトコルを有効または無効にする](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)」を参照してください。)SQL Server Developer エディションおよび Express エディションでは、TCP/IP 接続は既定では無効です。 PolyBase を機能させるには、これを手動で有効にする必要があります。
   
  **注**  
   
@@ -65,7 +65,7 @@ PolyBase をスタンドアロンとスケールアウト グループのいず�
   
 4.  [Server の構成] ページで、 **SQL Server PolyBase エンジン サービス** と SQL Server PolyBase データ移動サービスを同じアカウントで実行するように構成します。  
   
-    > **重要!!** PolyBase スケールアウト グループで、すべてのノード上の PolyBase エンジンおよび PolyBase データ移動サービスを、同じドメイン アカウントで実行する必要があります。  
+    > **重要:** PolyBase スケールアウト グループで、すべてのノード上の PolyBase エンジンおよび PolyBase データ移動サービスを、同じドメイン アカウントで実行する必要があります。  
     > PolyBase のスケール アウトを参照してください。  
   
 5.  **[PolyBase の構成]**ページで、次の 2 つのオプションのいずれかを選択します。 詳細については、「 [PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md) 」を参照してください。  

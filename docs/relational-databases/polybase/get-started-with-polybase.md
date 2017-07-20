@@ -2,7 +2,7 @@
 title: "PolyBase の概要 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 5/30/2017
+ms.date: 7/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -24,11 +24,11 @@ caps.latest.revision: 78
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
-ms.openlocfilehash: 59bf4021617603f0720c23ca192f4ddb65aa6834
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: baf9d02b824a8aae2a282d0f6203791c4b72f1f8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="get-started-with-polybase"></a>PolyBase の概要
@@ -53,10 +53,11 @@ ms.lasthandoff: 06/23/2017
   
 -   Oracle Java SE RunTime Environment (JRE) バージョン 7.51 以上 (64 ビット)。 ( [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) または [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) を使用できます)。 [Java SE ダウンロード](http://www.oracle.com/technetwork/java/javase/downloads/index.html)に移動します。 JRE が存在しない場合、インストーラーは失敗します。   
   
--   最小メモリ: 4 GB。  
+-   最小メモリ: 4 GB  
   
--   最小ハード ディスク容量: 2 GB。    
--   TCP/IP 接続を有効にする必要があります。 (「 [サーバー ネットワーク プロトコルを有効または無効にする](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)」を参照してください。)  
+-   最小ハード ディスク容量: 2 GB    
+
+-   TCP/IP 接続を有効にする必要があります。 (「 [サーバー ネットワーク プロトコルを有効または無効にする](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)」を参照してください。)SQL Server Developer エディションおよび Express エディションでは、TCP/IP が既定で無効になっています。 PolyBase はインストールできますが、TCP/IP が有効になるまで完全には開始できません。 PolyBase の機能を使用するには、TCP/IP を手動で有効にする必要があります。 
   
  
  次のいずれかの外部データ ソース:  
@@ -156,7 +157,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
  詳細については、「 [PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md)」を参照してください。  
   
 ## <a name="create-t-sql-objects"></a>T-SQL オブジェクトの作成  
- 外部データ ソース、Hadoop または Azure ストレージのいずれかによってオブジェクトを作成します。  
+ Hadoop または Azure Storage のいずれかの外部データ ソースに依存するオブジェクトを作成します。  
   
 ### <a name="hadoop"></a>Hadoop  
   
@@ -354,7 +355,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
  SQL Server 2016 RC1 から RC2 または RC3 にアップグレードすると、クエリは失敗する場合があります。 詳細と救済方法については、「 [SQL Server 2016 リリース ノート](../../sql-server/sql-server-2016-release-notes.md) 」を参照し、"PolyBase" を検索してください。  
   
 ## <a name="next-steps"></a>次の手順  
- スケールアウト機能の詳細については、「 [PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md)」を参照してください。  PolyBase を監視するには、「 [PolyBase のトラブルシューティング](../../relational-databases/polybase/polybase-troubleshooting.md)」を参照してください。 PolyBase パフォーマンスのトラブルシューティングについては、「 [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)」を参照してください。  
+ スケールアウト機能の詳細については、「 [PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md)」を参照してください。  PolyBase を監視するには、「 [PolyBase のトラブルシューティング](../../relational-databases/polybase/polybase-troubleshooting.md)」を参照してください。 PolyBase パフォーマンスのトラブルシューティングについては、「[PolyBase troubleshooting with dynamic management views (動的管理ビューを使用した PolyBase のトラブルシューティング)](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [PolyBase ガイド](../../relational-databases/polybase/polybase-guide.md)   

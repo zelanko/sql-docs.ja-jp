@@ -1,7 +1,7 @@
 ---
 title: "オンライン インデックス操作のガイドライン | Microsoft Docs"
 ms.custom: 
-ms.date: 04/14/2017
+ms.date: 07/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +21,11 @@ caps.latest.revision: 64
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
-ms.openlocfilehash: 508440b3e6cd15d4fb70f933c380e958dad74d56
+ms.translationtype: HT
+ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
+ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>オンライン インデックス操作のガイドライン
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/23/2017
 -   テーブルに LOB データ型が含まれていても、そのデータ型の列がキー列または非キー (付加) 列としてインデックス定義で使用されていない場合は、一意ではない非クラスター化インデックスをオンラインで作成できます。  
   
 -   ローカル一時テーブルのインデックスの作成、再構築、または削除は、オンラインでは実行できません。 この制限は、グローバル一時テーブルのインデックスには当てはまりません。
-- インデックスは、予期しないエラーが発生、データベースのフェールオーバー後に停止したところから再開できますまたは**PAUSE**コマンド。 参照してください[Alter Index](../../t-sql/statements/alter-index-transact-sql.md)です。 この機能は、SQL Server 2017 のパブリック プレビューでです。
+- インデックスは、予期しないエラーが発生、データベースのフェールオーバー後に停止したところから再開できますまたは**PAUSE**コマンド。 参照してください[Alter Index](../../t-sql/statements/alter-index-transact-sql.md)です。 この機能は、SQL Server 2017 および Azure SQL Database でパブリック プレビュー段階にあります。
 
 > [!NOTE]  
 >  オンラインでのインデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、[各エディションがサポートする機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)に関するページを参照してください。  
@@ -93,7 +93,7 @@ ms.lasthandoff: 06/23/2017
 ## <a name="resumable-index-rebuild-considerations"></a>再開可能なインデックス再構築に関する考慮事項
 
 > [!NOTE]
-> 参照してください[Alter Index](../../t-sql/statements/alter-index-transact-sql.md)です。 この機能は、SQL Server 2017 のパブリック プレビューでです。
+> 参照してください[Alter Index](../../t-sql/statements/alter-index-transact-sql.md)です。 この機能は、SQL Server 2017 および Azure SQL Database でパブリック プレビュー段階にあります。
 >
 
 再開可能なオンライン インデックス再構築を実行すると、次のガイドラインが適用されます。

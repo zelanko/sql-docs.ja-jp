@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_2814 | Microsoft Docs
 ms.custom: 
-ms.date: 04/04/2017
+ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f2408e7a6e34e903ecd9c24d93db222de69f6398
+ms.translationtype: HT
+ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
+ms.openlocfilehash: 3bca883d9f5b13b81e021014193df43fc3f5f6e3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 # <a name="mssqlserver2814"></a>MSSQLSERVER_2814
@@ -57,29 +57,24 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="user-action"></a>ユーザーの操作  
   
-1.  次のクエリを実行して、再コンパイルの原因になっているステートメントを確認します。 *sql_handle*、*starting_offset*、*ending_offset*、*plan_handle* の各プレースホルダーを、エラー メッセージで指定された値に置き換えます。 **database_name** 列と **object_name** 列は、アドホックおよび準備された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは NULL になることに注意してください。  
+1.  次のクエリを実行して、再コンパイルの原因になっているステートメントを確認します。 *sql_handle*、*starting_offset*、*ending_offset*、*plan_handle* の各プレースホルダーを、エラー メッセージで指定された値に置き換えます。 **database_name** 列と **object_name** 列は、アドホックおよび準備された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは NULL です。  
   
-    SELECT DB_NAME(st.dbid) AS database_name  
-  
-    , OBJECT_NAME(st.objectid) AS object_name  
-  
-    , st.text  
-  
+    ```sql   
+    SELECT DB_NAME(st.dbid) AS database_name,  
+        OBJECT_NAME(st.objectid) AS object_name,  
+        st.text  
     FROM sys.dm_exec_query_stats AS qs  
-  
     CROSS APPLY sys.dm_exec_sql_text (*sql_handle*) AS st  
-  
     WHERE qs.statement_start_offset = *starting_offset*  
-  
     AND qs.statement_end_offset = *ending_offset*  
-  
-    AND qs.plan_handle = *plan_handle*;  
+    AND qs.plan_handle = *plan_handle*;
+    ```
   
 2.  理由コードの説明に基づいて、再コンパイルを回避するようにステートメント、バッチ、またはプロシージャを修正します。 たとえば、ストアド プロシージャに 1 つ以上の SET ステートメントが含まれていることがあります。 これらのステートメントはプロシージャから削除する必要があります。 再コンパイルの理由と解決策のその他の例については、「[SQL Server 2005 のバッチのコンパイル、再コンパイル、およびプランのキャッシュに関する問題](http://go.microsoft.com/fwlink/?LinkId=69175)」を参照してください。  
   
 3.  問題が継続して発生する場合は、マイクロソフト カスタマー サポート サービスに問い合わせてください。  
   
 ## <a name="see-also"></a>参照  
-[SQL:StmtRecompile イベント クラス](../Topic/SQL:StmtRecompile%20Event%20Class.md)  
+[SQL:StmtRecompile イベント クラス](../event-classes/sql-stmtrecompile-event-class.md)  
   
 
