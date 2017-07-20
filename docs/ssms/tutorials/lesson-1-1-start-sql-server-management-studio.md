@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio の起動 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: c472ec73a5b0b24f47b5bc59121eda206e285ac9
+ms.translationtype: HT
+ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
+ms.openlocfilehash: 2d5147747a0b9bac8e90c77cca24fd3632d42240
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 # <a name="lesson-1-1---start-sql-server-management-studio"></a>レッスン 1-1 - SQL Server Management Studio の起動
@@ -31,8 +31,8 @@ ms.lasthandoff: 06/23/2017
 #### <a name="to-open-sql-server-management-studio"></a>SQL Server Management Studio を開くには  
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] (SSMS) の起動方法は、使用するオペレーティング システムによって異なります。  
-* **スタート ページ**Windows の新しいバージョンの場合、 **スタート ページ**で、「 **[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]** 」と入力すると、プログラムが表示されます。 プログラムをクリックして、SSMS を開きます。 プログラムを右クリックして、 **スタート ページ**へのピン留めを行うことができます。   
-* 以前のバージョンの Windows では、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] の順にポイントして、 **[SQL Server Management Studio]**をクリックします。 あるいは、 **[実行]** ダイアログ ボックスで、「 **SSMS.exe** 」と入力し、 **[OK]**をクリックします。  
+  * **スタート ページ**のある新しいバージョンの Windows の場合、**スタート ページ**で「**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**」と入力すると、プログラムが表示されます。 プログラムをクリックして、SSMS を開きます。 プログラムを右クリックして、 **スタート ページ**へのピン留めを行うことができます。   
+  * 以前のバージョンの Windows では、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] の順にポイントして、 **[SQL Server Management Studio]**をクリックします。 あるいは、 **[実行]** ダイアログ ボックスで、「 **SSMS.exe** 」と入力し、 **[OK]**をクリックします。  
   
     > [!NOTE]  
     >  SSMS が表示されない場合は、SSMS が正常にインストールされていない可能性があります。 [ダウンロード センター](https://msdn.microsoft.com/library/mt238290.aspx)から SSMS をインストールしてください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 の場合、SSMS は自動的にインストールされません。 すべての機能にアクセスするには、最新バージョンを使用します。  
@@ -40,11 +40,14 @@ ms.lasthandoff: 06/23/2017
 2.  次の手順では、SSMS の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オブジェクト エクスプローラー] **コンポーネントを使用して、** に接続します。 オブジェクト エクスプローラー ペインが表示されない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]**をクリックします。 オブジェクト エクスプローラー メニューで **[接続]** ボタンをクリックし、 **[データベース エンジン]**をクリックします。 **[サーバーへの接続]** ダイアログ ボックスが表示されます (SSMS が事前にインストールされている場合、ユーザー設定によっては **[サーバーへの接続]** ダイアログ ボックスが自動的に表示されることがあります)。  
   
 3.  **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバー名]** ボックスに名前を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の 3 つの種類のいずれかに接続できます。 種類ごとに、 **[サーバー名]** ボックスの形式が少し異なります。 次のいずれかの形式を使用します。  
---   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンス:** コンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールするときは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが既定のインスタンス (名前のないインスタンス) または名前付きインスタンスになるように指定することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスに接続する場合は、コンピューターの名前を挿入します。 たとえば、Accounting という名前のコンピューターで SSMS を実行している場合に、そのコンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  の既定のインスタンスに接続するには、 **[サーバー名]** ボックスに「 **Accounting** 」と入力します。  
---   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンス:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時に、インスタンスの名前を指定できます。たとえば、Accounting という名前のコンピューター上で、**Receivables** という名前の名前付きインスタンスを指定することが可能です。 名前付きインスタンスに接続するには、 **[サーバー名]** ボックスに、コンピューター名、円記号 (\)、インスタンス名の順に入力します。たとえば「 **Accounting\Receivables**」と入力します。  
---  **Azure SQL Database:** SQL Database のサーバー名の形式は SQL_Server_name.database.windows.net となります。たとえば、 **mydb2.database.windows.net**とすることができます。 サーバー名を決定する際に問題が発生した場合は、Azure ポータルにアクセスして、接続文字列の作成方法を確認してください。  
+  -  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンス:** コンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールするときは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが既定のインスタンス (名前のないインスタンス) または名前付きインスタンスになるように指定することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスに接続する場合は、コンピューターの名前を挿入します。 たとえば、Accounting という名前のコンピューターで SSMS を実行している場合に、そのコンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  の既定のインスタンスに接続するには、 **[サーバー名]** ボックスに「 **Accounting** 」と入力します。  
+  -  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンス:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時に、インスタンスの名前を指定できます。たとえば、Accounting という名前のコンピューター上で、**Receivables** という名前の名前付きインスタンスを指定することが可能です。 名前付きインスタンスに接続するには、 **[サーバー名]** ボックスに、コンピューター名、円記号 (\)、インスタンス名の順に入力します。たとえば「 **Accounting\Receivables**」と入力します。  
+  -  **Azure SQL Database:** SQL Database のサーバー名の形式は SQL_Server_name.database.windows.net となります。たとえば、 **mydb2.database.windows.net**とすることができます。 サーバー名を決定する際に問題が発生した場合は、Azure ポータルにアクセスして、接続文字列の作成方法を確認してください。  
   
-4. **[認証]** 領域  
+4. **[認証]** 領域で、認証方法を選択します。  
+  - コンピューターの管理者であり、SQL Server をインストールしたばかりの場合は、**Windows 認証** を試してください。  SQL Server へのアクセス権を持つドメイン ユーザーとして構成した場合は、この方法も有効です。 このログインの試行では Windows のログインに使用した資格情報を使用するため、**ユーザー名**と**パスワード**の両方のボックスが灰色表示されています。 
+  -  ユーザー アカウントの名前とパスワードがわかっている場合は、**SQL Server 認証**を選択し、**ユーザー名**と**パスワード**を指定します。
+  - SSMS の最新バージョンをお持ちの場合はさらに、**Active Directory 認証**を始めとする 3 つのオプションがあります。 これらの高度なオプションについては、「[SQL Database と SQL Data Warehouse でのユニバーサル認証 (MFA 対応の SSMS サポート)](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-ssms-mfa-authentication)」をご覧ください。  
   
 ## <a name="management-studio-components"></a>Management Studio のコンポーネント  
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、情報は種類ごとに専用のウィンドウに表示されます。 データベース情報はオブジェクト エクスプローラーとドキュメント ウィンドウに表示されます。  
@@ -59,11 +62,12 @@ ms.lasthandoff: 06/23/2017
   
 1.  **[表示]** メニューの **[登録済みサーバー]**をクリックします。  
   
-    [登録済みサーバー] ウィンドウがオブジェクト エクスプローラーの上または隣に表示されます。 これをドラッグし、さまざまな場所にドッキングすることができます。 [登録済みサーバー] には、管理頻度の高いサーバーの一覧が表示されます。 この一覧にサーバーを追加したり、一覧からサーバーを削除することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューター上の [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]インスタンスのみが一覧に表示されます。  
+    [登録済みサーバー] ウィンドウがオブジェクト エクスプローラーの上または隣に表示されます。 これをドラッグし、さまざまな場所にドッキングすることができます。 登録済みサーバーには、管理頻度の高いサーバーの一覧が表示されます。 この一覧にサーバーを追加したり、一覧からサーバーを削除することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューター上の [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]インスタンスのみが一覧に表示されます。  
   
 2.  [登録済みサーバー] にサーバーが表示されない場合は、 **[データベース エンジン]**を右クリックし、 **[タスク]**をクリックし、 **[ローカル サーバーの登録情報を更新]**をクリックします。 その他の SQL Server または SQL Database を追加するには、登録済みサーバーの場所を右クリックし、 **[新規サーバーの登録]**をクリックします。 **[サーバーへの接続]** ダイアログ ボックスの場合と同様に、 **[ログイン]** 領域に必要な情報を入力します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
 [登録済みサーバーおよびオブジェクト エクスプローラーを使用した接続](../../tools/sql-server-management-studio/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
+
   
 

@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio の以前のリリース | Microsoft Docs"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 07/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,29 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0927784589c1f7227b432ff49f81f29de20083ec
-ms.openlocfilehash: 200753bf64d92043171788852227c6199b64711d
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: f55f56b31aec2e094a35200e6fe08b28c93affb0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="previous-sql-server-management-studio-releases"></a>SQL Server Management Studio の以前のリリース
   
 次に示す SQL Server Management Studio の以前のリリースが使用できます。
+
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-170-releasehttpgomicrosoftcomfwlinklinkid847722"></a>![ダウンロード](../ssdt/media/download.png) [SQL Server Management Studio 17.0 リリース](http://go.microsoft.com/fwlink/?LinkID=847722)
+
+**バージョン情報**  
+  
+*SSMS の今回のリリースでは、Visual Studio 2015 の分離シェルを使用します。*  
+リリース番号: 17.0  
+このリリースのビルド番号: 14.0.17099.0
+
+## <a name="changelog"></a>変更ログ  
+
+[17.0](sql-server-management-studio-changelog-ssms.md#ssms-170-release) をご覧ください。
+
    
 ## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1653-releasehttpgomicrosoftcomfwlinklinkid840946"></a>![ダウンロード](../ssdt/media/download.png) [SQL Server Management Studio 16.5.3 リリース](http://go.microsoft.com/fwlink/?LinkID=840946)
 
@@ -413,7 +426,7 @@ SQL Server Management Studio の最新リリースについては、「[SQL Serv
 
 ---  
 ## <a name="related-resources"></a>関連リソース
-[Update center for Microsoft SQL Server (Microsoft SQL Server の更新センター) (Microsoft SQL Server の更新センター)](https://technet.microsoft.com/sqlserver/ff803383.aspx)   
+[Update center for Microsoft SQL Server (Microsoft SQL Server の更新センター)](https://technet.microsoft.com/sqlserver/ff803383.aspx)   
 [SQL Server Management Studio クイック スタートに関するページ](http://msdn.microsoft.com/en-us/d2bade70-07cf-4d94-b5d2-88aecb538ed1)  
 [SQL Server Management Studio フォーラムに関するページ](https://social.msdn.microsoft.com/forums/en-us/home?forum=sqltools)  
 
