@@ -12,18 +12,17 @@ ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 06/30/2017
+ms.date: 07/17/2017
 ms.author: genemi
 ms.workload: reporting-services
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 60041ec9af4e44fe5d078ecb65053dc16f6e809a
+ms.translationtype: MT
+ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
+ms.openlocfilehash: 15609f8770c3bc2741fe389faed794fc14082cae
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/19/2017
 
 ---
-# 新規または最近更新された: 用 SQL Server Reporting Services
-<a id="new-and-recently-updated-reporting-services-for-sql-server" class="xliff"></a>
+# <a name="new-and-recently-updated-reporting-services-for-sql-server"></a>新規または最近更新された: 用 SQL Server Reporting Services
 
 
 
@@ -35,7 +34,7 @@ ms.lasthandoff: 07/03/2017
 
 
 
-- *更新プログラムの日付範囲:* &nbsp; **2017 年-05-17** &nbsp;対&nbsp; **2017-06-30**
+- *更新プログラムの日付範囲:* &nbsp; **2017 年-05-23** &nbsp;対&nbsp; **2017-07-17**
 - *サブジェクト領域:* &nbsp; **for SQL Server Reporting Services**です。
 
 
@@ -43,21 +42,29 @@ ms.lasthandoff: 07/03/2017
 
 &nbsp;
 
-## 最近作成された新しい情報の記事
-<a id="new-articles-created-recently" class="xliff"></a>
+## <a name="new-articles-created-recently"></a>最近作成された新しい情報の記事
 
-次のリンクは、そこに最近追加された新しいアーティクルにジャンプします。
+以下のリンクは、最近追加された新しい記事に移動します。
 
 
-1. [Web ポータルを構成します。](report-server/configure-web-portal.md)
-2. [レポート サーバーにユーザー アクセスの許可](security/grant-user-access-to-a-report-server.md)
+***今回は新しい記事はありません。***
+
 
 
 
 &nbsp;
 
-## 更新されたアーティクルの抜粋が
-<a id="updated-articles-with-excerpts" class="xliff"></a>
+<a name="compactupdatedlist"/>
+
+## <a name="compact-list-of-articles-updated-recently"></a>最近更新されたアーティクルの圧縮のリスト
+
+この圧縮リストは、抜粋セクションに記載されているすべての更新されたアーティクルへのリンクを提供します。
+
+
+
+&nbsp;
+
+## <a name="updated-articles-with-excerpts"></a>更新されたアーティクルの抜粋が
 
 このセクションでは、大幅な更新が最近発生したアーティクルから収集された更新プログラムの抜粋を表示します。
 
@@ -69,64 +76,48 @@ ms.lasthandoff: 07/03/2017
 
 &nbsp;
 
-*この領域内のアーティクルは更新されませんでした最近では、この時間。*
+***この領域内のアーティクルは更新されませんでした最近では、この時間。***
 
 
 
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-## 最近更新されたアーティクルの圧縮のリスト
-<a id="compact-list-of-articles-updated-recently" class="xliff"></a>
-
-この圧縮リストは、前のセクションに記載されているすべての更新されたアーティクルへのリンクを提供します。
-
-
-
-
-
-<a name="sisters2"/>
+<a name="similars2"/>
 
 &nbsp;
 
-## 関連記事
-<a id="sister-articles" class="xliff"></a>
+## <a name="similar-articles"></a>類似した記事
 
 このセクションには、同じ GitHub.com リポジトリ内の他のサブジェクト領域で、最近更新されたアーティクルのアーティクルを非常に似ていますが一覧表示されます: [MicrosoftDocs/**sql docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/)です。
 
-<!--  20170630-1150  -->
+<!--  20170717-1101  -->
 
-#### 新規または最近更新されたアーティクルを持つサブジェクト領域
-<a id="subject-areas-which-do-have-new-or-recently-updated-articles" class="xliff"></a>
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>新規または最近更新されたアーティクルを持つサブジェクト領域
 
-- [新しい + 更新 (12 + 2): **SQL の高度な Analystics** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新しい + 更新 (1 + 0): **SQL 用に Analysis Services** docs](../analysis-services/new-updated-analysis-services.md)
-- [新しい + 更新 (0 + 2): **SQL への接続**docs](../connect/new-updated-connect.md)
-- [新しい + 更新 (3 + 0): **SQL のデータベース エンジン**docs](../database-engine/new-updated-database-engine.md)
-- [新しい + 更新 (1 + 2): **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
-- [新しい + 更新 (2 + 8): **SQL の Linux** docs](../linux/new-updated-linux.md)
+- [新しい + 更新 (4 + 4): **SQL の Advanced Analytics** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新しい + 更新 (2 + 0): **SQL 用に Analysis Services** docs](../analysis-services/new-updated-analysis-services.md)
+- [新しい + 更新 (1 + 2): **SQL への接続**docs](../connect/new-updated-connect.md)
+- [新しい + 更新 (6 + 0): **SQL のデータベース エンジン**docs](../database-engine/new-updated-database-engine.md)
+- [新しい + 更新 (13 + 2): **SQL の Linux** docs](../linux/new-updated-linux.md)
 - [新しい + 更新 (1 + 0): **SQL のように、マスター データ サービス (MDS)** docs](../master-data-services/new-updated-master-data-services.md)
-- [新しい + 更新 (5 + 5):**リレーショナル データベースを SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [新しい + 更新 (2 + 0): **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
-- [新しい + 更新 (0 + 4): **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [新しい + 更新 (0 + 1): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [新しい + 更新 (1 + 0): **SQL に対する ODBC (Open Database Connectivity)** docs](../odbc/new-updated-odbc.md)
+- [新しい + 更新 (8 + 4):**リレーショナル データベースを SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [新しい + 更新 (2 + 2): **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
 - [新しい + 更新 (0 + 1): **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [新しい + 更新 (1 + 0): **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
 - [新しい + 更新 (1 + 0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 
 
-#### サブジェクト領域に新規または最近更新されたアーティクルを持たない
-<a id="subject-areas-which-have-no-new-or-recently-updated-articles" class="xliff"></a>
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>サブジェクト領域に新規または最近更新されたアーティクルを持たない
 
 - [新しい + 更新 (0 0 以降): **SQL のように、ActiveX データ オブジェクト (ADO)** docs](../ado/new-updated-ado.md)
 - [新しい + 更新 (0 0 以降): **SQL の Data Quality Services** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [新しい + 更新 (0 0 以降):**データ マイニング拡張機能 (DMX) の SQL** docs](../dmx/new-updated-dmx.md)
+- [新しい + 更新 (0 0 以降): **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
 - [新しい + 更新 (0 0 以降): **SQL の多次元式 (MDX)** docs](../mdx/new-updated-mdx.md)
-- [新しい + 更新 (0 0 以降): **SQL に対する ODBC (Open Database Connectivity)** docs](../odbc/new-updated-odbc.md)
 - [新しい + 更新 (0 0 以降): **SQL 用の PowerShell** docs](../powershell/new-updated-powershell.md)
+- [新しい + 更新 (0 0 以降): **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
 - [新しい + 更新 (0 0 以降): **SQL 用のサンプル**docs](../sample/new-updated-sample.md)
+- [新しい + 更新 (0 0 以降): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
 - [新しい + 更新 (0 0 以降): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [新しい + 更新 (0 0 以降): **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
 - [新しい + 更新 (0 0 以降): **SQL 用の XQuery** docs](../xquery/new-updated-xquery.md)
 
 
