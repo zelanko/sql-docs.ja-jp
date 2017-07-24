@@ -6,4 +6,5 @@
 # [構成](polybase-configuration.md)  
 # [T-SQL オブジェクト](polybase-t-sql-objects.md)  
 # [クエリ](polybase-queries.md)  
-# [トラブルシューティング](polybase-troubleshooting.md)  
+# [トラブルシューティング](polybase-troubleshooting.md) 
+## [PolyBase Kerberos の接続性のトラブルシューティング](polybase-troubleshoot-connectivity.md)   
