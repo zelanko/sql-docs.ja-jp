@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="sequence-properties-general-page"></a>[順序のプロパティ] ([全般] ページ)
+# <a name="sequence-properties-general-page"></a>[順序のプロパティ]\([全般] ページ)
   シーケンス オブジェクトを作成し、そのプロパティを指定します。 シーケンスは、シーケンスが作成された仕様に従って数値のシーケンスを生成するユーザー定義のスキーマ バインド オブジェクトです。 数値のシーケンスは、定義された間隔で昇順または降順に生成され、要求に応じて再起動 (繰り返し) するように構成できます。 ID 列とは異なり、シーケンスは、特定のテーブルに関連付けられていません。 アプリケーションは、シーケンス オブジェクトを参照して、次の値を受け取ります。 シーケンスとテーブルの関係は、アプリケーションによって制御されます。 ユーザー アプリケーションは、シーケンス オブジェクトを参照し、複数の行とテーブル間で値を調整できます。  
   
  挿入時に生成される ID 列値とは異なり、アプリケーションで [NEXT VALUE の関数](../../t-sql/functions/next-value-for-transact-sql.md)を呼び出すことで、行を挿入せずに次のシーケンス番号を取得できます。 一度に複数のシーケンス番号を取得するには、 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) を使用します。  
