@@ -28,15 +28,11 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 06/22/2017
 
 ---
-<a id="improve-the-performance-of-full-text-indexes" class="xliff"></a>
-
-# フルテキスト インデックスのパフォーマンスの向上
+# <a name="improve-the-performance-of-full-text-indexes"></a>フルテキスト インデックスのパフォーマンスの向上
 このトピックでは、フルテキスト インデントとクエリのパフォーマンス低下の一般的な原因をいくつか説明します。 また、このような問題を軽減し、パフォーマンスを改善する提案もいくつか紹介します。
   
 ##  <a name="causes"></a> Common causes of performance issues
-<a id="hardware-resource-issues" class="xliff"></a>
-
-### ハードウェア リソースの問題
+### <a name="hardware-resource-issues"></a>ハードウェア リソースの問題
 フルテキスト インデックス作成とフルテキスト クエリのパフォーマンスは、メモリ、ディスク速度、CPU 速度、コンピューターのアーキテクチャなどのハードウェア リソースの影響を受けます。  
 
 フルテキスト インデックス作成のパフォーマンス低下の主な原因となるのは、ハードウェア リソースの制限です。  
@@ -50,18 +46,14 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、Full-Text Engine は sqlservr.exe プロセスの一部となったため、AWE メモリを使用できます。  
 
-<a id="full-text-batching-issues" class="xliff"></a>
-
-### フルテキスト バッチ処理の問題
+### <a name="full-text-batching-issues"></a>フルテキスト バッチ処理の問題
  システムにハードウェアのボトルネックがない場合、フルテキスト検索のインデックス作成パフォーマンスは、主に以下の条件に左右されます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によるフルテキスト バッチの作成にかかる時間  
   
 -   フィルター デーモンがバッチを処理する速度  
 
-<a id="full-text-index-population-issues" class="xliff"></a>
-
-### フルテキスト インデックスの作成の問題
+### <a name="full-text-index-population-issues"></a>フルテキスト インデックスの作成の問題
 -   **作成の種類**。 増分、手動、および自動の変更追跡による作成は、完全作成とは違って、ハードウェア リソースを最大限に活用して処理を高速化するようには作られていません。 そのため、このトピックで提案する調整を実行しても、増分、手動、または自動の変更追跡を使用したときのフルテキスト インデックスのパフォーマンスが改善しない場合があります。  
   
 -   **マスター マージ**。 作成が完了すると、最終的なマージ プロセスが起動され、インデックス フラグメントが 1 つのマスター フルテキスト インデックスにマージされます。 これにより、多数のインデックス フラグメントではなく、1 つのマスター インデックスのみをクエリすれば済むため、クエリのパフォーマンスが向上し、関連順位付けにもより的確なスコア (評価) 統計を適用できます。 ただし、マスターのマージ処理では、インデックス フラグメントをマージする際に大量のデータを読み書きする必要があるため、大量の I/O が発生しますが、クエリの着信がブロックされることはありません。  
@@ -82,9 +74,7 @@ ms.lasthandoff: 06/22/2017
 -   timestamp 列に基づいて増分作成を使用する場合は、**timestamp** 列にセカンダリ インデックスを構築し、増分作成のパフォーマンスを向上します。  
   
 ##  <a name="full"></a> 完全作成のパフォーマンスに関するトラブルシューティング  
-<a id="review-the-full-text-crawl-logs" class="xliff"></a>
-
-### フルテキスト クロール ログを確認する
+### <a name="review-the-full-text-crawl-logs"></a>フルテキスト クロール ログを確認する
  パフォーマンスの問題を診断するには、フルテキスト クロール ログを調べます。
  
 クロール時にエラーが発生すると、フルテキスト検索クロール ログ記録機能によってクロール ログが作成および保持されます。このログはプレーンテキスト ファイルです。 各クロール ログは特定のフルテキスト カタログに対応します。 既定では、所与のインスタンス (この例では、既定のインスタンス) のクロール ログは `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG` フォルダーにあります。
@@ -100,9 +90,7 @@ ms.lasthandoff: 06/22/2017
   
  たとえば、`SQLFT0000500008.2` はデータベース ID が 5 で、フルテキスト カタログ ID が 8 のクロール ログ ファイルです。 ファイル名の最後の 2 は、このデータベースとカタログのペアに 2 つのクロール ログ ファイルが存在することを示しています。  
 
-<a id="check-physical-memory-usage" class="xliff"></a>
-
-### 物理メモリの使用量を確認する  
+### <a name="check-physical-memory-usage"></a>物理メモリの使用量を確認する  
  フルテキスト作成時は、fdhost.exe または sqlservr.exe がメモリ不足またはメモリ枯渇の状態で実行される可能性があります。
 -   フルテキスト クロールのログを確認した結果、fdhost.exe が頻繁に再起動されているか、エラー コード 8007008 が返されていることが判明した場合は、これらのプロセスのいずれかでメモリ不足が生じています。
 -   特に大型のマルチ CPU コンピューター上で fdhost.exe がダンプを生成している場合、メモリが不足してきている可能性があります。  
@@ -120,9 +108,7 @@ ms.lasthandoff: 06/22/2017
 
 -   **ページングの問題**。 拡張が制限された小さなページ ファイルが使用されているシステムにおいてページ ファイルのサイズが不足した場合、fdhost.exe または sqlservr.exe でメモリ不足が発生します。 クロール ログにメモリ関連の障害が見当たらない場合、過剰なページングが原因でパフォーマンスが低下していることが考えられます。  
   
-<a id="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe" class="xliff"></a>
-
-### フィルター デーモン ホスト プロセス (fdhost.exe) のメモリ要件を推定する  
+### <a name="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe"></a>フィルター デーモン ホスト プロセス (fdhost.exe) のメモリ要件を推定する  
  fdhost.exe プロセスが作成のために必要とするメモリ量は、主に、プロセスが使用するフルテキスト クロール範囲の数、受信共有メモリ (ISM) のサイズ、および ISM インスタンスの最大数に依存します。  
   
  フィルター デーモン ホストによって使用されるメモリ量 (バイト単位) は、次の式を使用して概算できます。  
@@ -157,9 +143,7 @@ ms.lasthandoff: 06/22/2017
 2.  500 MB は、システムの他のプロセスに必要なメモリの推定値です。 システムで追加の作業を実行している場合、適宜この値を大きくします。  
 3.  」を参照してください。*ism_size* は 8 MB と見なされます (x64 プラットフォームの場合)。  
   
-<a id="example-estimate-the-memory-requirements-of-fdhostexe" class="xliff"></a>
-
- #### 例: fdhost.exe のメモリ要件を推定する  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>例: fdhost.exe のメモリ要件を推定する  
   
  この例は、8 GM の RAM と 4 つのデュアル コア プロセッサを搭載した 64 ビット コンピューターを対象としています。 最初の計算では、fdhost.exe に必要なメモリ (*F*) を推定します。 クロール範囲の数は `8`です。  
   
@@ -169,9 +153,7 @@ ms.lasthandoff: 06/22/2017
   
  `M = 8192-640-500=7052`  
   
-<a id="example-setting-max-server-memory" class="xliff"></a>
-
- #### 例 : max server memory の設定  
+ #### <a name="example-setting-max-server-memory"></a>例 : max server memory の設定  
   
  この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ステートメントおよび [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、前の例で計算した **M** の値 *を* max server memory `7052`として設定します:  
   
@@ -186,9 +168,7 @@ GO
   
 サーバー メモリ オプションの詳細については、「[Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)」(サーバー メモリに関するサーバー構成オプション) を参照してください。
   
-<a id="check-cpu-usage" class="xliff"></a>
-
-### CPU 使用量を確認する  
+### <a name="check-cpu-usage"></a>CPU 使用量を確認する  
 平均 CPU 消費率が約 30% 未満になると、完全作成のパフォーマンスは低下します。 CPU 消費率に影響するいくつかの要因を次に示します。  
   
 -   ページの待機時間が長い  
@@ -231,9 +211,7 @@ Full-Text Engine では、フルテキスト インデックスを作成する�
   
 この問題を回避するには、コンテナー ドキュメント (この例では Word 文書) に対するフィルターとして、シングル スレッド フィルターを設定します。 シングル スレッド フィルターとして設定するには、フィルターの **ThreadingModel** レジストリ値を **Apartment Threaded** に設定します。 シングル スレッド アパートメントの詳細については、ホワイト ペーパー「 [COM スレッド モデルの概要と使用方法](http://go.microsoft.com/fwlink/?LinkId=209159)」を参照してください。  
   
-<a id="see-also" class="xliff"></a>
-
-## 参照  
+## <a name="see-also"></a>参照  
  [サーバー メモリに関するサーバー構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [max full-text crawl range サーバー構成オプション](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [フルテキスト インデックスの作成](../../relational-databases/search/populate-full-text-indexes.md)   
