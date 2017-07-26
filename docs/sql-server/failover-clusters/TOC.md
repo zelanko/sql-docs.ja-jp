@@ -3,7 +3,7 @@
 # [役割の交代後のログインとジョブの管理](management-of-logins-and-jobs-after-role-switching-sql-server.md)  
 # [孤立ユーザーのトラブルシューティング](troubleshoot-orphaned-users-sql-server.md)  
 
-# [ フェールオーバー クラスター インストール (アーティクル)](install/TOC.md)  
+# [ フェールオーバー クラスター インストール](install/sql-server-failover-cluster-installation.md)  
 
 # [Windows Server フェールオーバー クラスタリング (WSFC), SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
 ## [WSFC クォーラム モードと投票の構成](windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
