@@ -32,9 +32,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 06/23/2017
 
 ---
-<a id="select-an-account-for-the-sql-server-agent-service" class="xliff"></a>
-
-# SQL Server エージェント サービスのアカウントの選択
+# <a name="select-an-account-for-the-sql-server-agent-service"></a>SQL Server エージェント サービスのアカウントの選択
 サービス開始アカウントにより、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] エージェントを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Windows アカウントとそのネットワーク権限が定義されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントは、指定されたユーザー アカウントで実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 構成マネージャーを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスのアカウントを選択します。構成マネージャーでは、次のオプションから選択できます。  
   
 -   **[ビルトイン アカウント]**。 次のビルトイン Windows サービス アカウントの一覧から選択できます。  
@@ -46,9 +44,7 @@ ms.lasthandoff: 06/23/2017
   
 -   **[このアカウント]**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスを実行する Windows ドメイン アカウントを指定します。 Windows **Administrators** グループのメンバーではない Windows ユーザー アカウントを選択することをお勧めします。 ただし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービス アカウントがローカル **Administrators** グループのメンバーではない場合、マルチサーバー管理の使用には制限があります。 詳細については、後の「サポートされるサービス アカウントの種類」を参照してください。  
   
-<a id="windows-domain-account-permissions" class="xliff"></a>
-
-## Windows ドメイン アカウントの権限  
+## <a name="windows-domain-account-permissions"></a>Windows ドメイン アカウントの権限  
 セキュリティを強化するには、 **[このアカウント]**を選択して、Windows ドメイン アカウントを指定します。 指定する Windows ドメイン アカウントは、次の権限を所持している必要があります。  
   
 -   すべてのバージョンの Windows で、サービスとしてログオンする権限 (SeServiceLogonRight)。  
@@ -72,18 +68,14 @@ ms.lasthandoff: 06/23/2017
 > [!NOTE]  
 > WMI 警告の通知を受信するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントのサービス アカウントに、WMI イベントを含む名前空間、および ALTER ANY EVENT NOTIFICATION に対する権限が許可されている必要があります。  
   
-<a id="sql-server-role-membership" class="xliff"></a>
-
-## SQL Server ロールのメンバーシップ  
+## <a name="sql-server-role-membership"></a>SQL Server ロールのメンバーシップ  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスを実行するアカウントは、次の [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ロールのメンバーである必要があります。  
   
 -   アカウントは、 **sysadmin** 固定サーバー ロールのメンバーでなければなりません。  
   
 -   マルチサーバー ジョブの処理を使用するには、アカウントはマスター サーバーの **msdb** データベースの **TargetServersRole** ロールのメンバーでなければなりません。  
   
-<a id="supported-service-account-types" class="xliff"></a>
-
-## サポートされるサービス アカウントの種類  
+## <a name="supported-service-account-types"></a>サポートされるサービス アカウントの種類  
 以下の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスで使用できる Windows アカウントの種類を示します。  
   
 |サービス アカウントの種類|非クラスター化サーバー|クラスター化サーバー|ドメイン コントローラー (非クラスター化)|  
@@ -95,39 +87,29 @@ ms.lasthandoff: 06/23/2017
 |ローカル システム アカウント (NT AUTHORITY\System)|Supported<br /><br />以下に示す制限事項 2 を参照してください。|サポートされていません|Supported<br /><br />以下に示す制限事項 2 を参照してください。|  
 |ローカル サービス アカウント (NT AUTHORITY\LocalService)|サポートされていません|サポートされていません|サポートされていません|  
   
-<a id="limitation-1-using-non-administrative-accounts-for-multiserver-administration" class="xliff"></a>
-
-### 制限事項 1 : マルチサーバー管理での非管理者アカウントの使用  
+### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>制限事項 1 : マルチサーバー管理での非管理者アカウントの使用  
 対象サーバーをマスター サーバーに参加させると、"参加操作に失敗しました" というエラー メッセージが表示されることがあります。  
   
 このエラーを解決するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスの両方を再起動します。 詳細については、「 [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](http://msdn.microsoft.com/en-us/32660a02-e5a1-411a-9e57-7066ca459df6)」を参照してください。  
   
-<a id="limitation-2-using-the-local-system-account-for-multiserver-administration" class="xliff"></a>
-
-### 制限事項 2 : マルチサーバー管理でのローカル システム アカウントの使用  
+### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>制限事項 2 : マルチサーバー管理でのローカル システム アカウントの使用  
 マルチサーバー管理は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスがローカル システム アカウントで実行されるとき、同じコンピューターにマスター サーバーと対象サーバーの両方が存在する場合にのみサポートされます。 この構成を使用している場合に、対象サーバーをマスター サーバーに参加させると、次のメッセージが返されます。  
   
 "*<target_server_computer_name>* のエージェント開始アカウントに対象サーバーとしてのログオン権限があることを確認します"  
   
 情報提供を目的としたこのメッセージは無視できます。 参加操作は、正常に完了します。 詳細については、「 [マルチサーバー環境の作成](../../ssms/agent/create-a-multiserver-environment.md)」を参照してください。  
   
-<a id="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user" class="xliff"></a>
-
-### 制限事項 3 : SQL Server ユーザーであるネットワーク サービス アカウントの使用  
+### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>制限事項 3 : SQL Server ユーザーであるネットワーク サービス アカウントの使用  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスをネットワーク サービス アカウントで実行する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] インスタンスに [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ユーザーとしてログインするアクセス権がそのネットワーク サービス アカウントに明示的に与えられていると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントが起動しないことがあります。  
   
 これを解決するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] が実行されているコンピューターを再起動します。 これは一度実行するだけで済みます。  
   
-<a id="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer" class="xliff"></a>
-
-### 制限事項 4 : SQL Server Reporting Services が同じコンピューターで実行されている場合のネットワーク サービス アカウントの使用  
+### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>制限事項 4 : SQL Server Reporting Services が同じコンピューターで実行されている場合のネットワーク サービス アカウントの使用  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスをネットワーク サービス アカウントで実行する場合、同じコンピューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] も動作していると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] エージェントが起動しないことがあります。  
   
 これを解決するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] が実行されているコンピューターを再起動し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスの両方を再起動します。 これは一度実行するだけで済みます。  
   
-<a id="common-tasks" class="xliff"></a>
-
-## 一般的なタスク  
+## <a name="common-tasks"></a>一般的なタスク  
 **SQL Server エージェント サービスの開始アカウントを指定するには**  
   
 -   [Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
@@ -139,9 +121,7 @@ ms.lasthandoff: 06/23/2017
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 構成マネージャーを使用して、オペレーティング システムを起動するときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを開始する必要があることを指定します。  
   
-<a id="see-also" class="xliff"></a>
-
-## 参照  
+## <a name="see-also"></a>参照  
 [Windows サービス アカウントの設定](http://msdn.microsoft.com/en-us/309b9dac-0b3a-4617-85ef-c4519ce9d014)  
 [サービスの管理方法に関するトピック (SQL Server 構成マネージャー)](http://msdn.microsoft.com/en-us/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)  
