@@ -21,9 +21,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 06/23/2017
 
 ---
-<a id="sql-server-management-studio----release-notes" class="xliff"></a>
-
-# SQL Server Management Studio - リリース ノート
+# <a name="sql-server-management-studio----release-notes"></a>SQL Server Management Studio - リリース ノート
 SQL Server Management Studio の一般公開版リリースにようこそ!  このリリースの SQL Server Management Studio (SSMS) は SQL Server リリースとは別の、スタンドアロン インストールです。 目的は、新しい機能、修正プログラム、SQL Server と Azure SQL Database の最新機能に対するサポートで頻繁に更新することです。  
   
 最新の SQL Server Management Studio をインストールするには、「[SQL Server Management Studio &#40;SSMS&#41; のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)」をご覧ください。  
@@ -63,15 +61,11 @@ SSMS の英語以外のローカライズされたリリースでは、Windows 8
 5. **ヘルプをクリック、または F1 キーを押してもヘルプが開きません**  
 一部の環境では、ヘルプをクリック、または F1 キーを押すと、**[You'll need a new app to open ms-xhelp]\(ms-xhelp を開くには新しいアプリが必要です\)** と表示されます。 このエラーは既知の問題であり、今後のリリースで修正されます。
   
-<a id="feedback" class="xliff"></a>
-
-## フィードバック  
+## <a name="feedback"></a>フィードバック  
   
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Microsoft Connect で問題や提案を記録](https://connect.microsoft.com/SQLServer/Feedback)。  
   
-<a id="see-also" class="xliff"></a>
-
-## 参照  
+## <a name="see-also"></a>参照  
 [SQL Server Management Studio のチュートリアル](../ssms/use-sql-server-management-studio.md)  
 [SQL Server Management Studio &amp;#40;SSMS&amp;#41; のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)  
 [SQL Server Management Studio の以前のリリース](../ssms/previous-sql-server-management-studio-releases.md)  
