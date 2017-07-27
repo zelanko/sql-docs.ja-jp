@@ -20,11 +20,11 @@ caps.latest.revision: 22
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bef55c15906ea76d2993d41e3eb7cbfd4bac9a4f
+ms.translationtype: HT
+ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
+ms.openlocfilehash: e65ea926f3a2d2fb3c30c511a1fbba6150de7b42
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase のトラブルシューティング
@@ -143,7 +143,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="to-view-the--polybase-query-plan"></a>PolyBase クエリ プランを参照するには  
   
-1.  SSMS で、[ **実際の実行プランを含める** ]\(Ctrl + M) を有効にし、クエリを実行します。  
+1.  SSMS で、[ **実際の実行プランを含める** ] (Ctrl + M) を有効にし、クエリを実行します。  
   
 2.  [ **実行プラン** ] タブをクリックします。  
   
@@ -232,4 +232,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="error-messages-and-possible-solutions"></a>エラー メッセージと考えられる解決策
 
 外部テーブルのエラーのトラブルシューティングについては、Murshed Zaman のブログ [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions")を参照してください。
+
+## <a name="see-also"></a>参照
+[PolyBase Kerberos の接続性のトラブルシューティング](polybase-troubleshoot-connectivity.md)
 

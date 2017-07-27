@@ -2,7 +2,7 @@
 title: "OPENJSON を使用して JSON データを行と列に変換する (SQL Server) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/31/2017
+ms.date: 07/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,33 +19,33 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: c153135f84f7cb9671840a55f29927fb06ea819e
+ms.translationtype: HT
+ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
+ms.openlocfilehash: a7229bfe9c6924d2d7a79c861fe10c48db4b0c15
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/19/2017
 
 ---
 # <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>OPENJSON を使用して JSON データを行と列に変換する (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-**OPENJSON** 行セット関数は、JSON テキストを行と列のセットに変換します。 **OPENJSON** を利用し、JSON コレクションに SQL クエリを実行したり、JSON テキストを SQL Server テーブルにインポートしたりします。  
+**OPENJSON** 行セット関数は、JSON テキストを行と列のセットに変換します。 **OPENJSON** を使用して JSON コレクションを行セットに変換したら、返されたデータで SQL クエリを実行したり、行セットをテーブルに挿入したりできます。 
   
- **OPENJSON** 関数は、1 つまたは集合の JSON オブジェクトを受け取り、1 つまたは複数の行に変換します。 既定では、**OPENJSON** 関数からは、次の情報が返されます。
+**OPENJSON** 関数は、1 つまたは集合の JSON オブジェクトを受け取り、1 つまたは複数の行に変換します。 既定では、**OPENJSON** 関数からは、次のデータが返されます。
 -   JSON オブジェクトからは、最初のレベルで検出されたすべてのキーと値のペアを返します。
 -   JSON 配列からは、配列のすべての要素とそれらのインデックスを返します。  
-  
-必要に応じて、**WITH** 句使用して、**OPENJSON** 関数から返される行のスキーマを指定します。 この明示的スキーマにより出力の構造が定義されます。  
-  
-## <a name="use-openjson-without-an-explicit-schema-for-the-output"></a>出力の明示的なスキーマを指定せずに OPENJSON を使用する
-結果の明示的なスキーマ (つまり OPENJSON の後の **WITH** 句) を指定せずに **OPENJSON**関数を使用すると、関数は、次の 3 つの列を含むテーブルを返します。
-1.  入力オブジェクトのプロパティの名前 (または入力配列の要素のインデックス)。
-2.  プロパティまたは配列要素の値。
-3.  型 (たとえば、文字列、数値、ブール値、配列、またはオブジェクト)。
 
-JSON オブジェクトの各プロパティ、または配列の各要素は、個別の行として返されます。  
+オプションの **WITH** 句を追加して、出力の構造を明示的に定義するスキーマを指定できます。  
+  
+## <a name="option-1---openjson-with-the-default-output"></a>オプション 1 - 既定の出力を使用する OPENJSON
+結果の明示的なスキーマ (つまり **OPENJSON** の後の **WITH** 句) を指定せずに **OPENJSON** 関数を使用すると、関数は、次の 3 つの列を含むテーブルを返します。
+1.  入力オブジェクトのプロパティの**名前** (または入力配列の要素のインデックス)。
+2.  プロパティまたは配列要素の**値**。
+3.  **型** (たとえば、文字列、数値、ブール値、配列、オブジェクト)。
 
-これは、既定のスキーマを使って **OPENJSON** を使用した簡単な例です。この例では JSON オブジェクトのプロパティごとに 1 つの行が返されています。  
+**OPENJSON** は、JSON オブジェクトの各プロパティ、または配列の各要素を、個別の行として返します。  
+
+これは、既定のスキーマ (つまり、オプションの **WITH** 句を指定しない) で **OPENJSON** を使用した簡単な例です。この例では JSON オブジェクトのプロパティごとに 1 つの行が返されています。  
  
 **例**
 ```sql  
@@ -66,17 +66,17 @@ FROM OPENJSON(@json);
 |有効期間|45|2|  
 |スキル|["SQL","C#","MVC"]|4|
 
-### <a name="more-info"></a>詳細
+### <a name="more-info-about-openjson-with-the-default-schema"></a>既定のスキーマを使用する OPENJSON に関する詳細情報
 
 詳細と例については、「[既定のスキーマを使用する OPENJSON の使用 &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-the-default-schema-sql-server.md)」を参照してください。
 
 構文と使用法については、「 [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)でのみ使用できます。 
 
     
-## <a name="use-openjson-with-an-explicit-schema-for-the-output"></a>出力の明示的なスキーマを指定して OPENJSON を使用する
-**OPENJSON** 関数の **WITH** 句を使用して結果のスキーマを指定すると、**WITH** 句に定義した列のみを持つテーブルが返されます。 **WITH** 句では、設定された出力列、それぞれの型、各出力値の JSON ソース プロパティのパスを定義します。 **OPENJSON** は JSON オブジェクトの配列を繰り返し処理し、列ごとに指定されたパスで値を読み取り、値を指定の型に変換します。  
+## <a name="option-2---openjson-output-with-an-explicit-structure"></a>オプション 2 - 明示的な構造を指定した OPENJSON 出力
+**OPENJSON** 関数の **WITH** 句を使用して結果のスキーマを指定すると、**WITH** 句に定義した列のみを持つテーブルが返されます。 オプションの **WITH** 句では、いくつかの出力列、各列の型、各出力値の JSON ソース プロパティのパスを指定します。 **OPENJSON** は JSON オブジェクトの配列を繰り返し処理し、列ごとに指定されたパスで値を読み取り、値を指定の型に変換します。  
 
-結果のスキーマを明示的に指定して **OPENJSON** を使用する簡単な例は次のようになります。  
+**WITH** 句で出力のスキーマを明示的に指定して **OPENJSON** を使用する簡単な例は次のようになります。  
   
 **例**
   
@@ -125,21 +125,21 @@ WITH (
 |SO43659|2011-05-により、|AW29825|1|  
 |として SO43661|2011-06-01T00:00:00|AW73565|3|  
   
- この関数は JSON 配列の要素を返し、書式設定します。  
+この関数は JSON 配列の要素を返し、書式設定します。  
   
 -   JSON 配列の要素ごとに、 **OPENJSON** によって出力テーブルに新しい行が生成されます。 JSON 配列の 2 つの要素が、返されるテーブルで、2 つの行に変換されます。  
   
--   `colName type json_path` 構文の使用で指定された列ごとに、**OPENJSON** 関数は、指定したパスの配列要素で検出された値を指定の型に変換し、出力テーブルのセルに入力します。 この例では、`Date` 列の値がパス `$.Order.Date` の各オブジェクトから取得され、datetime 値に変換されます。  
+-   `colName type json_path` 構文を使用して指定された列ごとに、**OPENJSON** 関数は、指定したパスの配列要素で検出された値を指定の型に変換します。 この例では、`Date` 列の値がパス `$.Order.Date` の各要素から取得され、datetime 値に変換されます。  
   
-**OPENJSON** を使用して行セットに JSON コレクションを変換したら、返されたデータで SQL クエリを実行したり、行セットをテーブルに挿入したりできます。  
-
-### <a name="more-info"></a>詳細
+### <a name="more-info-about-openjson-with-an-explicit-schema"></a>明示的なスキーマを指定した OPENJSON に関する詳細情報
 詳細と例については、「[明示的なスキーマで OPENJSON を使用する &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)」を参照してください。
 
 構文と使用法については、「 [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)でのみ使用できます。
 
 ## <a name="openjson-requires-compatibility-level-130"></a>OPENJSON には、互換性レベル 130 が必要
-**OPENJSON** 関数は、 **互換性レベル 130**でのみ使用できます。 データベースの互換性レベルが 130 よりも低い場合、SQL Server は **OPENJSON** 関数を見つけて実行することができません。 他の組込み JSON 関数は、すべての互換性レベルで使用できます。 sys.databases ビューまたはデータベース プロパティで互換性レベルを確認できます。
+**OPENJSON** 関数は、 **互換性レベル 130**でのみ使用できます。 データベースの互換性レベルが 130 よりも低い場合、SQL Server は **OPENJSON** 関数を見つけて実行することができません。 他の組込み JSON 関数は、すべての互換性レベルで使用できます。
+
+`sys.databases` ビューまたはデータベース プロパティで互換性レベルを確認できます。
 
 次のコマンドを利用し、データベースの互換性レベルを変更できます。   
 `ALTER DATABASE <DatabaseName> SET COMPATIBILITY_LEVEL = 130`  

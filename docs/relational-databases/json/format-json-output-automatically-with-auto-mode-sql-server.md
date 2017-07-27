@@ -2,7 +2,7 @@
 title: "AUTO モードで自動的に JSON 出力を書式設定する (SQL Server) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/02/2016
+ms.date: 07/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: cba250a399bb3de87c9713ac600c9807527a1cd9
+ms.translationtype: HT
+ms.sourcegitcommit: 1aa87e3d821e6d111948baa0843edf31d087d739
+ms.openlocfilehash: 09e81a8bbc77e9bbf9f76bb669ab53bd549bef85
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>AUTO モードで自動的に JSON 出力を書式設定する (SQL Server)
@@ -31,18 +31,20 @@ ms.lasthandoff: 06/23/2017
   
 **AUTO** オプションを指定すると、SELECT リストとソース テーブル内の列の順序に基づいて、JSON 出力の形式が自動的に決定されます。 この形式を変更することはできません。
  
- または、**PATH** オプションを使用して出力の制御を維持します。
- -   **PATH** オプションの詳細については、「[Format Nested JSON Output with PATH Mode](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md)」 (PATH モードで入れ子になった JSON 出力を書式設定する) を参照してください。
- -   両方のオプションの概要については、「[Format Query Results as JSON with FOR JSON](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)」(FOR JSON を使用してクエリ結果を JSON として書式設定する) を参照してください。
+または、**PATH** オプションを使用して出力の制御を維持します。
+-   **PATH** オプションの詳細については、「[Format Nested JSON Output with PATH Mode](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md)」 (PATH モードで入れ子になった JSON 出力を書式設定する) を参照してください。
+-   両方のオプションの概要については、「[Format Query Results as JSON with FOR JSON](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)」(FOR JSON を使用してクエリ結果を JSON として書式設定する) を参照してください。
+
+**FOR JSON AUTO** オプションを使用するクエリには、 **FROM** 句を含める必要があります。  
   
- **FOR JSON AUTO** オプションを使用するクエリには、 **FROM** 句を含める必要があります。  
+以下に、 **FOR JSON** 句で **AUTO** オプションを使用した例を示します。  
   
- 以下に、 **FOR JSON** 句で **AUTO** オプションを使用した例を示します。  
+## <a name="examples"></a>使用例
+
+### <a name="example-1"></a>例 1
+ **[データセットのプロパティ]**  
   
-## <a name="examples"></a>使用例  
- **クエリ 1**  
-  
-クエリで 1 つのテーブルだけが使用される場合は、FOR JSON AUTO 句の結果は、FOR JSON PATH の結果と同様になります。 この場合、FOR JSON AUTO では、入れ子になったオブジェクトは作成されません。 唯一の違いは、FOR JSON AUTO が、入れ子になったオブジェクトではなく、ドット付きのキーとしてドット区切りの別名 (次の例では `Info.MiddleName`) を出力する点です。  
+クエリで 1 つのテーブルだけが参照されている場合、FOR JSON AUTO 句の結果は、FOR JSON PATH の結果と同様になります。 この場合、FOR JSON AUTO では、入れ子になったオブジェクトは作成されません。 唯一の違いは、FOR JSON AUTO が、入れ子になったオブジェクトではなく、ドット付きのキーとしてドット区切りの別名 (次の例では `Info.MiddleName`) を出力する点です。  
   
 ```sql  
 SELECT TOP 5   
@@ -54,7 +56,7 @@ SELECT TOP 5
    FOR JSON AUTO  
 ```  
   
- **結果 1**  
+ **結果**  
   
 ```json  
 [{
@@ -83,10 +85,12 @@ SELECT TOP 5
     "Info.MiddleName": "A"
 }]
 ```  
+
+### <a name="example-2"></a>例 2
+
+**[データセットのプロパティ]**  
   
- **クエリ 2**  
-  
- テーブルを結合すると、最初のテーブル内の列はルート オブジェクトのプロパティとして生成されます。 2 番目のテーブル内の列は、入れ子になったオブジェクトのプロパティとして生成されます。 2 番目のテーブルのテーブル名または別名 (次の例では `D`) は、入れ子になった配列の名前として使用されます。  
+テーブルを結合すると、最初のテーブル内の列はルート オブジェクトのプロパティとして生成されます。 2 番目のテーブル内の列は、入れ子になったオブジェクトのプロパティとして生成されます。 2 番目のテーブルのテーブル名または別名 (次の例では `D`) は、入れ子になった配列の名前として使用されます。  
   
 ```sql  
 SELECT TOP 2 SalesOrderNumber,  
@@ -99,7 +103,7 @@ FROM Sales.SalesOrderHeader H
 FOR JSON AUTO   
 ```  
   
- **結果 2**  
+**結果**  
   
 ```json  
 [{
@@ -119,9 +123,11 @@ FOR JSON AUTO
     }]
 }]
 ```  
+
+### <a name="example-3"></a>例 3
  
- **クエリ 3**  
- FOR JSON AUTO を使用せずに、次の例のように SELECT ステートメントに FOR JSON PATH サブキーを入れ子にすることができます。 この例では、前の例と同じ結果が出力されます。  
+**[データセットのプロパティ]**  
+FOR JSON AUTO を使用せずに、次の例のように SELECT ステートメントに FOR JSON PATH サブキーを入れ子にすることができます。 この例では、前の例と同じ結果が出力されます。  
   
 ```sql  
 SELECT TOP 2  
@@ -135,7 +141,7 @@ FROM Sales.SalesOrderHeader AS H
 FOR JSON PATH  
 ```  
   
- **結果 3**  
+**結果**  
   
 ```json  
 [{

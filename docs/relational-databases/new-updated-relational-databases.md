@@ -13,18 +13,16 @@ ms.custom: UpdArt.exe
 ms.workload: relational-databases
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 06/30/2017
+ms.date: 07/17/2017
 ms.author: genemi
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 19b664245f45ad45a4c7d1eba249858030fad718
+ms.translationtype: HT
+ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
+ms.openlocfilehash: 519fbd2bc596112dbb1c662d76e4aeeb230ffc36
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/19/2017
 
 ---
-<a id="new-and-recently-updated-relational-databases-docs" class="xliff"></a>
-
-# 新規または最近の更新: リレーショナル データベース ドキュメント
+# <a name="new-and-recently-updated-relational-databases-docs"></a>新規または最近の更新: リレーショナル データベース ドキュメント
 
 
 
@@ -36,7 +34,7 @@ ms.lasthandoff: 07/03/2017
 
 
 
-- *更新日の範囲:* &nbsp; **2017 年 5 月 17 日**&nbsp; から &nbsp;**2017 年 6 月 30 日**
+- *更新日の範囲:* &nbsp; **2017 年 5 月 23 日**&nbsp;から &nbsp; **2017 年 7 月 17 日**
 - *サブジェクト領域:* &nbsp; **リレーショナル データベース**です。
 
 
@@ -44,9 +42,7 @@ ms.lasthandoff: 07/03/2017
 
 &nbsp;
 
-<a id="new-articles-created-recently" class="xliff"></a>
-
-## 最近新しく作成された記事
+## <a name="new-articles-created-recently"></a>最近新しく作成された記事
 
 以下のリンクは、最近追加された新しい記事に移動します。
 
@@ -54,16 +50,28 @@ ms.lasthandoff: 07/03/2017
 1. [SQL Server 2016 の SQL Server インメモリ OLTP 内部](in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md)
 2. [Microsoft SQL データベースでのアダプティブ クエリの処理](performance/adaptive-query-processing.md)
 3. [Microsoft SQL プラットフォームでのプライバシーの強化と GDPR 要件への対応に関するガイド](security/microsoft-sql-and-the-gdpr-requirements.md)
-4. [sys.dm_db_log_stats (Transact-SQL)](system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
-5. [sys.dm_exec_query_parallel_workers (Transact-SQL)](system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md)
+4. [sys.pdw_replicated_table_cache_state (Transact-SQL)](system-catalog-views/sys-pdw-replicated-table-cache-state-transact-sql.md)
+5. [sys.trusted_assemblies (Transact-SQL)](system-catalog-views/sys-trusted-assemblies-transact-sql.md)
+6. [sys.dm_exec_query_parallel_workers (Transact-SQL)](system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md)
+7. [sys.sp_add_trusted_assembly (Transact-SQL)](system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)
+8. [sys.sp_drop_trusted_assembly (Transact-SQL)](system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)
+
 
 
 
 &nbsp;
 
-<a id="updated-articles-with-excerpts" class="xliff"></a>
+<a name="compactupdatedlist"/>
 
-## 更新されたアーティクルの抜粋が
+## <a name="compact-list-of-articles-updated-recently"></a>最近更新されたアーティクルの圧縮のリスト
+
+この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
+
+
+
+&nbsp;
+
+## <a name="updated-articles-with-excerpts"></a>更新されたアーティクルの抜粋が
 
 このセクションでは、大幅な更新が最近発生したアーティクルから収集された更新プログラムの抜粋を表示します。
 
@@ -79,9 +87,7 @@ ms.lasthandoff: 07/03/2017
 
 <a name="TitleNum_1"/>
 
-<a id="1-nbsp-altering-memory-optimized-tablesin-memory-oltpaltering-memory-optimized-tablesmd" class="xliff"></a>
-
-### 1.&nbsp; [メモリ最適化テーブルの変更](in-memory-oltp/altering-memory-optimized-tables.md)
+### <a name="1-nbsp-altering-memory-optimized-tablesin-memory-oltpaltering-memory-optimized-tablesmd"></a>1.&nbsp; [メモリ最適化テーブルの変更](in-memory-oltp/altering-memory-optimized-tables.md)
 
 *更新日: 2017 年 6 月 23 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([次へ](#TitleNum_2))
 
@@ -126,9 +132,7 @@ ms.lasthandoff: 07/03/2017
 
 <a name="TitleNum_2"/>
 
-<a id="2-nbsp-table-and-row-size-in-memory-optimized-tablesin-memory-oltptable-and-row-size-in-memory-optimized-tablesmd" class="xliff"></a>
-
-### 2.&nbsp; [メモリ最適化テーブルのテーブルと行のサイズ](in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)
+### <a name="2-nbsp-table-and-row-size-in-memory-optimized-tablesin-memory-oltptable-and-row-size-in-memory-optimized-tablesmd"></a>2.&nbsp; [メモリ最適化テーブルのテーブルと行のサイズ](in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)
 
 *更新日: 2017 年 6 月 22 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([前へ](#TitleNum_1) | [次へ](#TitleNum_3))
 
@@ -171,9 +175,7 @@ ms.lasthandoff: 07/03/2017
 
 <a name="TitleNum_3"/>
 
-<a id="3-nbsp-post-migration-validation-and-optimization-guidepost-migration-validation-and-optimization-guidemd" class="xliff"></a>
-
-### 3.&nbsp; [移行後の検証および最適化ガイド](post-migration-validation-and-optimization-guide.md)
+### <a name="3-nbsp-post-migration-validation-and-optimization-guidepost-migration-validation-and-optimization-guidemd"></a>3.&nbsp; [移行後の検証および最適化ガイド](post-migration-validation-and-optimization-guide.md)
 
 *更新日: 2017 年 6 月 21 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([前へ](#TitleNum_2) | [次へ](#TitleNum_4))
 
@@ -210,11 +212,9 @@ ms.lasthandoff: 07/03/2017
 
 <a name="TitleNum_4"/>
 
-<a id="4-nbsp-sysquerystoreplan-transact-sqlsystem-catalog-viewssys-query-store-plan-transact-sqlmd" class="xliff"></a>
+### <a name="4-nbsp-sysquerystoreplan-transact-sqlsystem-catalog-viewssys-query-store-plan-transact-sqlmd"></a>4. &nbsp; [sys.query_store_plan (Transact-SQL)](system-catalog-views/sys-query-store-plan-transact-sql.md)
 
-### 4. &nbsp; [sys.query_store_plan (Transact-SQL)](system-catalog-views/sys-query-store-plan-transact-sql.md)
-
-*更新日: 2017 年 6 月 5 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([前へ](#TitleNum_3) | [次へ](#TitleNum_5))
+*更新日: 2017 年 6 月 5 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([前へ](#TitleNum_3))
 
 <!-- Source markdown line 58.  ms.author= "rickbyh".  -->
 
@@ -250,116 +250,45 @@ ms.lasthandoff: 07/03/2017
 
 
 
-&nbsp;
+
+<a name="similars2"/>
 
 &nbsp;
 
----
-
-<a name="TitleNum_5"/>
-
-<a id="5-nbsp-manage-retention-of-historical-data-in-system-versioned-temporal-tablestablesmanage-retention-of-historical-data-in-system-versioned-temporal-tablesmd" class="xliff"></a>
-
-### 5.&nbsp;[システム バージョン管理されたテンポラル テーブルの履歴データの保有期間管理](tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)
-
-*Updated: 2017-05-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_4))
-
-<!-- Source markdown line 425.  ms.author= "carlrab".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 ee69beb6a46913934d4a322f5d95343cc86f2ec4 94da98fec4ab16636a4581c16eb4456e2d1ff66b  (PR=1777  ,  Filename=manage-retention-of-historical-data-in-system-versioned-temporal-tables.md  ,  Dirpath=docs\relational-databases\tables\  ,  MergeCommitSha40=5bd0e1d3955d898824d285d28979089e2de6f322) -->
-
-
-
-**テンポラル履歴保有期間ポリシーのアプローチを使用します。**
-
-> **注:**テンポラル履歴保有期間ポリシーを使用する方法は [!INCLUDE [sqldbesa--../../includes/sqldbesa-md.md)]、SQL Server 2017 年 1 CTP 1.3 から開始します。  
-
-テンポラル履歴の保有期間を指定できます、個々 のテーブル レベルで構成されている、ポリシーを柔軟なエージングを作成できます。 テンポラルの保有期間を適用することは簡単: 1 つだけのパラメーター テーブルの作成時またはスキーマの変更時に設定する必要があります。
-
-保有ポリシーを定義した後、Azure SQL データベースは対象データの自動クリーンアップの履歴行があるかどうかを定期的に確認を開始します。 一致する行の id および履歴テーブルからそれらの削除のスケジュール設定し、システムによって実行されるバック グラウンド タスクの透過的に行われます。 Age 状態、履歴テーブルの行は、SYSTEM_TIME 期間の終了を表す列に基づいてがチェックされます。 たとえば、保有期間は 6 か月間に設定は、クリーンアップの対象となるテーブルの行は、次の条件を満たしています。
-```
-ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())
-```
-前の例では、ValidTo 列は、SYSTEM_TIME 期間の終了に対応していることと見なされます。
-**保有ポリシーを構成する方法は?**
-
-テンポラル テーブルの保有ポリシーを構成する前にまず、データベース レベルでテンポラル履歴保有期間が有効になっているかどうか。
-```
-SELECT is_temporal_history_retention_enabled, name
-FROM sys.databases
-```
-データベースのフラグ**is_temporal_history_retention_enabled**既定では、ON に設定されているが、ユーザーが ALTER DATABASE ステートメントを使用して変更できます。 ポイントイン タイム復元操作後に OFF に自動的に設定されます。 データベースの一時的な履歴保有期間のクリーンアップを有効にするには、次のステートメントを実行します。
-
-
-
-
-
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-<a id="compact-list-of-articles-updated-recently" class="xliff"></a>
-
-## 最近更新されたアーティクルの圧縮のリスト
-
-この圧縮リストは、前のセクションに記載されているすべての更新されたアーティクルへのリンクを提供します。
-
-1. [メモリ最適化テーブルの変更](#TitleNum_1)
-2. [メモリ最適化テーブルのテーブルと行のサイズ](#TitleNum_2)
-3. [移行後の検証および最適化ガイド](#TitleNum_3)
-4. [sys.query_store_plan (Transact-SQL)](#TitleNum_4)
-5. [システム バージョン管理されたテンポラル テーブルの履歴データの保有期間管理](#TitleNum_5)
-
-
-
-
-<a name="sisters2"/>
-
-&nbsp;
-
-<a id="sister-articles" class="xliff"></a>
-
-## 関連記事
+## <a name="similar-articles"></a>類似した記事
 
 このセクションでは、同じ GitHub.com リポジトリ [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/) 内の他の対象領域の記事で、この対象領域において最近更新された記事とよく似たものの一覧を示します。
 
-<!--  20170630-1150  -->
+<!--  20170717-1101  -->
 
-<a id="subject-areas-which-do-have-new-or-recently-updated-articles" class="xliff"></a>
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のある対象領域
 
-#### 新しい記事または最近更新された記事のある対象領域
-
-- [新規 + 更新 (12 + 2): **SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新規 + 更新 (1 + 0): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
-- [新規 + 更新 (0 + 2): **SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
-- [新規 + 更新 (3 + 0): **SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
-- [新規 + 更新 (1 + 2): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
-- [新規 + 更新 (2 + 8): **SQL 用の Linux** に関するドキュメント](../linux/new-updated-linux.md)
+- [新規 + 更新 (4 + 4): **SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新規 + 更新 (2 + 0): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
+- [新規 + 更新 (1 + 2): **SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
+- [新規 + 更新 (6 + 0): **SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
+- [新規 + 更新 (13 + 2): **SQL 用の Linux** に関するドキュメント](../linux/new-updated-linux.md)
 - [新規 + 更新 (1 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
-- [新規 + 更新 (5 + 5): **SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
-- [新規 + 更新 (2 + 0): **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
-- [新規 + 更新 (0 + 4): **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
-- [新規 + 更新 (0 + 1): **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
+- [新規 + 更新 (1 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
+- [新規 + 更新 (8 + 4): **SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
+- [新規 + 更新 (2 + 2): **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
 - [新規 + 更新 (0 + 1): **SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
+- [新規 + 更新 (1 + 0): **Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
 - [新規 + 更新 (1 + 0): **SQL 用のツール**に関するドキュメント](../tools/new-updated-tools.md)
 
 
-<a id="subject-areas-which-have-no-new-or-recently-updated-articles" class="xliff"></a>
-
-#### 新しい記事または最近更新された記事のない対象領域
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のない対象領域
 
 - [新規 + 更新 (0 + 0): **SQL の ActiveX データ オブジェクト (ADO)** に関するドキュメント](../ado/new-updated-ado.md)
 - [新規 + 更新 (0 + 0): **SQL の Data Quality Services** に関するドキュメント](../data-quality-services/new-updated-data-quality-services.md)
 - [新規 + 更新 (0 + 0): **SQL のデータ マイニング拡張機能 (DMX)** に関するドキュメント](../dmx/new-updated-dmx.md)
+- [新規 + 更新 (0 + 0): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
 - [新規 + 更新 (0 + 0): **SQL の多次元式 (MDX)** に関するドキュメント](../mdx/new-updated-mdx.md)
-- [新規 + 更新 (0 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
 - [新規 + 更新 (0 + 0): **SQL の PowerShell** に関するドキュメント](../powershell/new-updated-powershell.md)
+- [新規 + 更新 (0 + 0): **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
 - [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../sample/new-updated-sample.md)
+- [新規 + 更新 (0 + 0): **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
 - [新規 + 更新 (0 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
-- [新規 + 更新 (0 + 0): **Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
 - [新規 + 更新 (0 + 0): **SQL の XQuery** に関するドキュメント](../xquery/new-updated-xquery.md)
 
 

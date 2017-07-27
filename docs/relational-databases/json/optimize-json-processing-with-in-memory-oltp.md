@@ -1,7 +1,7 @@
 ---
 title: "インメモリ OLTP を使用した JSON の処理の最適化 | Microsoft Docs"
 ms.custom: 
-ms.date: 02/03/2017
+ms.date: 07/18/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -14,17 +14,17 @@ caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 12ef08a1f90e0346828a9dafb4052864254954d7
+ms.translationtype: HT
+ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
+ms.openlocfilehash: a0118939a71b06d7c3258efdfbe291a910358c37
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/19/2017
 
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>インメモリ OLTP を使用した JSON の処理の最適化
 [!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
 
-SQL Server と Azure SQL Database では、JSON 形式のテキストを使用できます。 JSON データを処理する OLTP クエリのパフォーマンスを上げるには、標準の文字列型の列 (NVARCHAR 型) を使用してメモリ最適化テーブルに JSON ドキュメントを格納します。
+SQL Server と Azure SQL Database では、JSON 形式のテキストを使用できます。 JSON データを処理するクエリのパフォーマンスを上げるには、標準の文字列型の列 (NVARCHAR 型) を使用してメモリ最適化テーブルに JSON ドキュメントを格納します。 JSON データをメモリ最適化テーブルに格納すると、ロックはされることがなく、データはインメモリでアクセスされるので、クエリのパフォーマンスが向上します。
 
 ## <a name="store-json-in-memory-optimized-tables"></a>メモリ最適化テーブルへの JSON の格納
 次に、`Tags` と `Data` という 2 つの JSON 列があるメモリ最適化 `Product` テーブルの例を示します。
@@ -42,17 +42,18 @@ CREATE TABLE xtp.Product(
 
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```
-JSON データをメモリ最適化テーブルに格納すると、ロックはされることがなく、データはインメモリでアクセスされるので、クエリのパフォーマンスが向上します。
 
-## <a name="optimize-json-with-additional-in-memory-features"></a>その他のインメモリ機能での JSON の最適化
-SQL Server と Azure SQL Database の新機能を使用すると、既存のインメモリ OLTP のテクノロジに JSON の機能を完全に統合できます。 たとえば、次を実行できます。
- - ネイティブ コンパイルの CHECK 制約を使用して、メモリ最適化テーブルに格納された JSON ドキュメントの構造を検証できます。
- - 計算列を使用して JSON ドキュメントに格納された値を公開し、型を厳密に指定できます。
- - メモリ最適化インデックスを使用して JSON ドキュメントの値にインデックスを作成できます。
- - JSON ドキュメントの値を使用する SQL クエリをネイティブでコンパイルしたり、結果を JSON テキストとして書式設定できます。
+## <a name="optimize-json-processing-with-additional-in-memory-features"></a>その他のインメモリ機能での JSON 処理の最適化
+SQL Server と Azure SQL Database の機能を使用すると、既存のインメモリ OLTP のテクノロジに JSON の機能を完全に統合できます。 たとえば、次を実行できます。
+ - ネイティブ コンパイルの CHECK 制約を使用して、メモリ最適化テーブルに格納された [JSON ドキュメントの構造を検証](#validate)できます。
+ - 計算列を使用して JSON ドキュメントに格納された[値を公開し、型を厳密に指定](#computedcol)できます。
+ - メモリ最適化インデックスを使用して JSON ドキュメントの[値にインデックスを作成](#index)できます。
+ - JSON ドキュメントの値を使用する [SQL クエリをネイティブでコンパイル](#compile)したり、結果を JSON テキストとして書式設定したりできます。
 
-## <a name="validate-json-columns"></a>JSON の列の検証
-SQL Server と Azure SQL Database では、次の例のように、文字列の列に格納された JSON ドキュメントの内容を検証するネイティブ コンパイルの CHECK 制約を追加できます。
+## <a name="validate"></a> JSON の列の検証
+SQL Server と Azure SQL Database では、文字列の列に格納された JSON ドキュメントの内容を検証するネイティブ コンパイルの CHECK 制約を追加できます。 ネイティブ コンパイルされた JSON の CHECK 制約では、メモリ最適化テーブルに格納されている JSON テキストの書式が正しいことを保証します。
+
+次の例では、JSON 列 `Tags` を含む `Product` テーブルを作成します。 `Tags` 列には、`ISJSON` 関数を使用して列の JSON テキストを検証する、CHECK 制約が設定されています。
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;
@@ -70,7 +71,7 @@ CREATE TABLE xtp.Product(
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```
 
-ネイティブ コンパイルの CHECK 制約は、JSON の列がある作成済みのテーブルに追加できます。
+ネイティブ コンパイルの CHECK 制約は、JSON の列がある既存のテーブルに追加することもできます。
 
 ```sql
 ALTER TABLE xtp.Product
@@ -78,14 +79,14 @@ ALTER TABLE xtp.Product
         CHECK (ISJSON(Data)=1)
 ```
 
-ネイティブ コンパイルされた JSON の CHECK 制約では、メモリ最適化テーブルに格納されている JSON テキストの書式が正しいことを保証します。
-
-## <a name="expose-json-values-using-computed-columns"></a>計算列を使用した JSON 値の公開
-計算列では、JSON テキストの値が公開されます。それらの値へは、JSON テキストから値を取得する式を再評価したり、JSON の構造を再解析することがなくアクセスできます。 計算列で公開される値の型は厳密に指定され、物理的に保存されます。 保存される計算列を使用した JSON 値へのアクセスは、JSON ドキュメント内の値へのアクセスよりも高速です。
+## <a name="computedcol"></a> 計算列を使用した JSON 値の公開
+計算列では、JSON テキストの値が公開されます。JSON テキストから値を再度取得したり、JSON の構造を再度解析したりすることなくそれらの値にアクセスできます。 このようにして公開される値の型は厳密に指定され、計算列に物理的に保存されます。 保存される計算列を使用した JSON 値へのアクセスは、JSON ドキュメント内の値に直接アクセスするよりも高速です。
 
 次の例では、JSON の `Data` 列から次の 2 つの値を公開する方法を示します。
 -   製品の製造国。
 -   製品の製造コスト。
+
+この例では、計算列の `MadeIn` と `Cost` は、`Data` 列に格納された JSON ドキュメントが変更されるたびに更新されます。
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;
@@ -103,10 +104,14 @@ CREATE TABLE xtp.Product(
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```
 
-計算列の `MadeIn` と `Cost` は、`Data` 列に格納された JSON ドキュメントが変更されるたびに更新されます。
-
-## <a name="index-values-in-json-columns"></a>JSON の列のインデックス値
+## <a name="index"></a> JSON の列のインデックス値
 SQL Server と Azure SQL Database では、メモリ最適化インデックスを使用して JSON の列の値にインデックスを作成できます。 インデックスが作成されている JSON 値は、次の例のように、計算列を使用して公開され、型が厳密に指定されている必要があります。
+
+JSON の列の値には、標準の非クラスター化インデックスとハッシュ インデックスの両方を使用してインデックスを作成できます。
+-   非クラスター化インデックスは、いくつかの JSON 値による行範囲の選択または JSON 値による結果の並べ替えを行うクエリを最適化します。
+-   ハッシュ インデックスは、検索対象の正確な値を指定することによって、1 行または少数の行を選択するクエリを最適化します。
+
+次の例では、2 つの計算列を使用して JSON 値を公開するテーブルを構築します。 例では、1 つの JSON 値に非クラスター化インデックスを作成し、もう 1 つの値にハッシュ インデックスを作成します。
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;
@@ -129,12 +134,11 @@ ALTER TABLE Product
     ADD INDEX [idx_Product_Cost] NONCLUSTERED HASH(Cost)
         WITH (BUCKET_COUNT=20000)
 ```
-JSON の列の値には、標準の非クラスター化インデックスとハッシュ インデックスの両方を使用してインデックスを作成できます。
--   非クラスター化インデックスは、いくつかの JSON 値による行範囲の選択または JSON 値による結果の並べ替えを行うクエリを最適化します。
--   ハッシュ インデックスは、検索する値を正確に指定し、1 行または少数の行がフェッチされるときにパフォーマンスが最適化されます。
 
-## <a name="native-compilation-of-json-queries"></a>JSON クエリのネイティブ コンパイル
-最後に、JSON 関数が使用されたクエリを含む TRANSACT-SQL プロシージャ、関数、およびトリガーのネイティブ コンパイルは、クエリのパフォーマンスを向上し、プロシージャの実行に必要な CPU サイクルを短縮します。 次に、JSON_VALUE、OPENJSON、JSON_MODIFY の JSON 関数をいくつか使用するネイティブ コンパイル プロシージャの例を示します。
+## <a name="compile"></a> JSON クエリのネイティブ コンパイル
+プロシージャ、関数、およびトリガーに組み込み JSON 関数を使用するクエリが含まれている場合は、ネイティブ コンパイルによって、それらのクエリのパフォーマンスが向上し、クエリの実行に必要な CPU サイクルが減少します。
+
+次に、いくつかの JSON 関数 (**JSON_VALUE**、**OPENJSON**、**JSON_MODIFY**) を使用するネイティブ コンパイル プロシージャの例を示します。
 
 ```sql
 CREATE PROCEDURE xtp.ProductList(@ProductIds nvarchar(100))

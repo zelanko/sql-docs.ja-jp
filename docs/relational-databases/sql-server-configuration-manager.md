@@ -2,7 +2,7 @@
 title: "SQL Server 構成マネージャー | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 02/25/2016
+ms.date: 07/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -26,11 +26,11 @@ caps.latest.revision: 58
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 54e170a54d3b4008a46b722734919769e2244ef1
+ms.translationtype: HT
+ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
+ms.openlocfilehash: 8c9ab15a35c892a31b882797271629a5ec9ef1a0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 構成マネージャー
@@ -40,11 +40,11 @@ ms.lasthandoff: 06/23/2017
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に関連付けられているサービスの管理、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]が使用するネットワーク プロトコルの設定、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クライアント コンピューターからのネットワーク接続の設定を行うためのツールです。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは、[スタート] メニューから利用できる [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール スナップインであり、他の [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール画面に追加することも可能です。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール (**mmc.exe**) は、**SQLServerManager\<バージョン>.msc** ファイル ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)] の **SQLServerManager13.msc** など) を使用して構成マネージャーを開きます。 最新の 4 つのバージョンへのパスを次に示します (Windows が C ドライブにインストールされている場合)。  
   
 |||  
-|-|-|  
+|-|-|
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
 |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
-|[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
-|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
+|[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール プログラムのスナップインであり、スタンドアロン プログラムではないため、新しいバージョンの Windows では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーはアプリケーションとして表示されません。  
@@ -69,7 +69,7 @@ ms.lasthandoff: 06/23/2017
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のサービスまたは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントのサービスが使用するアカウントやパスワードを変更する場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のツール ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーなど) を必ず使用してください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーでは、アカウント名の変更だけでなく、その新しいアカウントが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の設定を読み取れるように Windows レジストリ内の権限を設定するなど、付加的な構成も行えます。 Windows サービス コントロール マネージャーなどの他のツールでもアカウント名を変更できますが、関連する設定の変更はできません。 サービスがレジストリ内の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の部分にアクセスできなければ、そのサービスを正しく開始できません。  
   
- もう 1 つのメリットとして、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャー、SMO、WMI のいずれかによって変更したパスワードは、サービスを再起動しなくてもすぐに有効になります。  
+ もう 1 つのメリットとして、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャー、SMO、WMI のいずれかによって変更したパスワードは、サービスを再起動しなくてもすぐに有効になります。  
   
 ## <a name="manage-server--client-network-protocols"></a>サーバーとクライアントのネットワーク プロトコルの管理  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーでは、サーバーとクライアントのネットワーク プロトコルや接続オプションを設定できます。 通常は、正しいプロトコルを有効にした後にサーバー ネットワーク接続を変更する必要が生じることはありません。 ただし、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が特定のネットワーク プロトコル、ポート、パイプのいずれかで受信を待機するようにサーバー接続の設定を変更しなければならない場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーを使用してその変更を行えます。 プロトコルを有効にする方法の詳細については、「 [サーバー ネットワーク プロトコルの有効化または無効化](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)」を参照してください。 ファイアウォール経由でプロトコルへのアクセスを有効にする方法については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」を参照してください。  

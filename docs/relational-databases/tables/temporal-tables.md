@@ -15,17 +15,17 @@ caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a4cdbe630a64ce01c6319dcc5791c0f3f9b3176b
+ms.translationtype: HT
+ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
+ms.openlocfilehash: 5f9f128cab773951438aa89998ad76e7ba29bb4d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="temporal-tables"></a>テンポラル テーブル
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 現時点の正しいデータのみではなく、テーブルに保存されていた任意の時点のデータ情報を提供することを組み込みでサポートするデータベース機能として、システム バージョン管理されたテンポラル テーブルが導入されました。 テンポラルは、ANSI SQL 2011 で導入され、現在は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でサポートされているデータベース機能です。  
+  SQL Server 2016 では、現時点の正しいデータのみではなく、テーブルに保存されていた任意の時点のデータ情報を提供することを組み込みでサポートするデータベース機能として、システム バージョン管理されたテンポラル テーブルが導入されました。 テンポラルは、ANSI SQL 2011 で導入され、現在は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でサポートされているデータベース機能です。  
   
  **クイック スタート**  
   

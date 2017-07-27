@@ -2,7 +2,7 @@
 title: "Microsoft SQL データベースでのアダプティブ クエリの処理 | Microsoft Docs | Microsoft Docs"
 description: "SQL Server (2017 以降) および Azure SQL Database のクエリ パフォーマンスを向上させるためのアダプティブ クエリ処理の機能です。"
 ms.custom: 
-ms.date: 06/22/2017
+ms.date: 07/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -14,17 +14,15 @@ ms.assetid:
 author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
-ms.openlocfilehash: fdade5bce38348e80085643c5f6f5a2b4e9663c1
+ms.translationtype: HT
+ms.sourcegitcommit: cf8509cab2424529ca0ed16c936fa63a139dfca4
+ms.openlocfilehash: eff546e84d3f872406136f68a7fdbbd8147175ca
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 
-<a id="adaptive-query-processing-in-sql-databases" class="xliff"></a>
-
-# Microsoft SQL データベースでのアダプティブ クエリの処理
+# <a name="adaptive-query-processing-in-sql-databases"></a>Microsoft SQL データベースでのアダプティブ クエリの処理
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
@@ -41,16 +39,12 @@ ms.lasthandoff: 06/22/2017
 
 ![アダプティブ クエリ処理の機能](./media/1_AQPFeatures.png)
 
-<a id="how-to-enable-adaptive-query-processing" class="xliff"></a>
-
-### アダプティブ クエリ処理を有効にする方法
+### <a name="how-to-enable-adaptive-query-processing"></a>アダプティブ クエリ処理を有効にする方法
 データベースに対して互換性レベル 140 を有効にすることにより、自動的にワークロードをアダプティブ クエリ処理の対象にすることができます。  これは Transact-SQL を使って設定できます。 例:
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 140;
 ```
-<a id="batch-mode-memory-grant-feedback" class="xliff"></a>
-
-## バッチ モード メモリ許可フィードバック
+## <a name="batch-mode-memory-grant-feedback"></a>バッチ モード メモリ許可フィードバック
 SQL Server でのクエリの実行後プランには、実行に最低限必要なメモリと、すべての行をメモリに収めるのに最適なメモリ許可サイズが含まれます。 メモリ許可サイズが正しくない場合、パフォーマンスが低下します。 メモリ許可が多すぎると、メモリが無駄になり、同時実行が制限されます。 メモリ許可が少なすぎると、負荷の高いディスクへの書き込みが発生する原因になります。 繰り返されるワークロードを処理することにより、バッチ モード メモリ許可フィードバックはクエリに実際に必要なメモリ量を再計算し、キャッシュされたプランの許可値を更新します。  同じクエリ ステートメントを実行するとき、クエリは、修正されたメモリ許可サイズを使うことで、同時実行性に影響を与える過剰なメモリ許可を減らし、負荷の高いディスクへの書き込みが発生する過少なメモリ許可を修正します。
 次のグラフでは、バッチ モード アダプティブ メモリ許可フィードバックを使用する 1 つの例を示します。 最初のクエリ実行の場合、ディスクへの書き込みが多いため所要時間は "*88 秒*" でした。
 ```sql
@@ -68,36 +62,24 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 
 ![ディスクへの書き込みがない](./media/3_AQPGraphNoSpills.png)
 
-<a id="memory-grant-feedback-sizing" class="xliff"></a>
-
-### メモリ許可フィードバックのサイズ決定
+### <a name="memory-grant-feedback-sizing"></a>メモリ許可フィードバックのサイズ決定
 *メモリ許可が過剰な場合*、許可されるメモリが実際に使われるメモリ サイズの 2 倍より多いと、メモリ許可フィードバックはメモリ許可を再計算して、キャッシュされるプランを更新します。  メモリ許可が 1 MB 未満のプランについては、超過分の再計算は行われません。
 *メモリ許可が過少な場合*、バッチ モード演算子でディスクへの書き込みが発生すると、メモリ許可フィードバックはメモリ許可の再計算をトリガーします。 ディスク書き込みイベントがメモリ許可フィードバックに報告され、*spilling_report_to_memory_grant_feedback* XEvent イベントで表示できます。 このイベントは、プランのノード ID と、そのノードでディスクに書き込まれたデータのサイズを返します。
 
-<a id="memory-grant-feedback-and-parameter-sensitive-scenarios" class="xliff"></a>
-
-### メモリ許可フィードバックとパラメーター依存シナリオ
+### <a name="memory-grant-feedback-and-parameter-sensitive-scenarios"></a>メモリ許可フィードバックとパラメーター依存シナリオ
 最適化のためには、クエリ プランによってパラメーター値を変えることが必要な場合もあります。 この種のクエリは "パラメーター依存" と定義されます。 パラメーター依存プランでは、メモリ要件が不安定な場合、メモリ許可フィードバック自体がクエリで無効になります。  クエリが数回繰り返し実行された後でプランは無効になり、このことは *memory_grant_feedback_loop_disabled* XEvent で監視できます。
 
-<a id="memory-grant-feedback-caching" class="xliff"></a>
-
-### メモリ許可フィードバックのキャッシュ
+### <a name="memory-grant-feedback-caching"></a>メモリ許可フィードバックのキャッシュ
 フィードバックは、1 回の実行に対してキャッシュされるプランに格納できます。 ただし、メモリ許可フィードバックの調整によってメリットがあるのは、そのステートメントを連続して実行する場合です。 この機能は、ステートメントの反復実行に適用されます。 メモリ許可フィードバックが変更するのはキャッシュされたプランのみです。 現在、変更はクエリ Ssore ではキャプチャされません。
 プランがキャッシュから削除された場合、フィードバックは保持されません。 フェールオーバーが発生した場合もフィードバックは失われます。 OPTION(RECOMPILE) を使うステートメントでは、新しいプランが作成されますが、プランはキャッシュされません。 キャッシュされないため、メモリ許可フィードバックは生成されず、そのコンパイルおよび実行に対して格納されません。  ただし、OPTION(RECOMPILE) を "*使わない*" 同等のステートメント (つまり、クエリ ハッシュが同じ) がキャッシュされて再実行された場合、連続するステートメントでメモリ許可フィードバックのメリットがある場合があります。
 
-<a id="tracking-memory-grant-feedback-activity" class="xliff"></a>
-
-### メモリ許可フィードバック アクティビティの追跡
+### <a name="tracking-memory-grant-feedback-activity"></a>メモリ許可フィードバック アクティビティの追跡
 *memory_grant_updated_by_feedback* XEvent イベントを使って、メモリ許可フィードバック イベントを追跡することができます。  このイベントは、現在の実行カウント履歴、メモリ許可フィードバックによってプランが更新された回数、変更前の最適な追加メモリ許可、およびメモリ許可フィードバックによってキャッシュされたプランが変更された後の最適な追加メモリ許可を追跡します。
 
-<a id="memory-grant-feedback-resource-governor-and-query-hints" class="xliff"></a>
-
-### メモリ許可フィードバック、リソース ガバナー、クエリ ヒント
+### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>メモリ許可フィードバック、リソース ガバナー、クエリ ヒント
 実際に許可されるメモリは、リソース ガバナーまたはクエリ ヒントによって決定されるクエリ メモリ制限に従います。
 
-<a id="batch-mode-adaptive-joins" class="xliff"></a>
-
-## バッチ モード アダプティブ結合
+## <a name="batch-mode-adaptive-joins"></a>バッチ モード アダプティブ結合
 バッチ モード アダプティブ結合機能を使うと、最初の入力のスキャンが "*終わる*" まで、ハッシュ結合方法または入れ子になったループ結合方法のどちらを選ぶかを、遅延することができます。  アダプティブ結合演算子は、入れ子になったループ プランに切り替えるタイミングを決定するために使われるしきい値を定義します。 したがって、実行中により適切な結合方法に動的に切り替えることができます。
 しくみは次のとおりです。
 - ビルド結合入力の行数が十分に小さくて、入れ子になったループ結合の方がハッシュ結合より適している場合、プランは入れ子になったループ アルゴリズムに切り替わります。
@@ -141,24 +123,16 @@ WHERE   [fo].[Quantity] = 361;
 - 返されるのが 1 行なので、クラスター化インデックス シークを行が通過します。
 - また、ハッシュ結合ビルド フェーズを続行しなかったので、2 番目の分岐を通るのは 0 行です。
 
-<a id="adaptive-join-benefits" class="xliff"></a>
-
-### アダプティブ結合の利点
+### <a name="adaptive-join-benefits"></a>アダプティブ結合の利点
 大小の結合入力スキャンが頻繁に切り替わるワークロードの場合、この機能から最もメリットがあります。
 
-<a id="adaptive-join-overhead" class="xliff"></a>
-
-### アダプティブ結合のオーバーヘッド
+### <a name="adaptive-join-overhead"></a>アダプティブ結合のオーバーヘッド
 アダプティブ結合では、同等のインデックスが入れ子になったループ結合プランより多くのメモリが必要です。 追加のメモリは、入れ子になったループがハッシュ結合であるかのように要求されます。 ストップ アンド ゴー操作と、同等の入れ子になったループ ストリーミング結合の違いのため、ビルド フェーズにもオーバーヘッドがあります。 その追加コストにより、ビルド入力で行数が変動するシナリオに対して柔軟性があります。
 
-<a id="adaptive-join-caching-and-re-use" class="xliff"></a>
-
-### アダプティブ結合のキャッシュと再利用
+### <a name="adaptive-join-caching-and-re-use"></a>アダプティブ結合のキャッシュと再利用
 バッチ モード アダプティブ結合は、ステートメントの最初の実行に対して作用し、コンパイル後は、コンパイルされたアダプティブ結合しきい値と、外部入力のビルド フェーズを通過するランタイム行に基づいて、連続する実行がアダプティブのままになります。
 
-<a id="tracking-adaptive-join-activity" class="xliff"></a>
-
-### アダプティブ結合アクティビティの追跡
+### <a name="tracking-adaptive-join-activity"></a>アダプティブ結合アクティビティの追跡
 アダプティブ結合演算子には次のプラン演算子属性があります。
 
 | プラン属性 | Description |
@@ -169,14 +143,10 @@ WHERE   [fo].[Quantity] = 361;
 
 予想されるプランは、アダプティブ結合プランの概要と、定義されているアダプティブ結合しきい値および予想される結合の種類を示します。
 
-<a id="adaptive-join-and-query-store-interoperability" class="xliff"></a>
-
-### アダプティブ結合とクエリ ストアの相互運用性
+### <a name="adaptive-join-and-query-store-interoperability"></a>アダプティブ結合とクエリ ストアの相互運用性
 クエリ ストアは、バッチ モード アダプティブ結合プランをキャプチャし、強制できます。
 
-<a id="adaptive-join-eligible-statements" class="xliff"></a>
-
-### アダプティブ結合を使えるステートメント
+### <a name="adaptive-join-eligible-statements"></a>アダプティブ結合を使えるステートメント
 論理結合をバッチ モード アダプティブ結合で使うにはいくつかの条件があります。
 - データベースの互換性レベルが 140 である
 - クエリが SELECT ステートメントである (現在、データ変更ステートメントは使えません)
@@ -184,21 +154,15 @@ WHERE   [fo].[Quantity] = 361;
 - クエリ全体に列ストア インデックスが存在することにより、または列ストア インデックス テーブルを結合で直接参照することにより、ハッシュ結合がバッチ モードを使っている
 - 入れ子になったループ結合とハッシュ結合の生成された代替ソリューションが、同じ最初の子 (外部参照) を持っている
 
-<a id="adaptive-joins-and-nested-loop-efficiency" class="xliff"></a>
-
-### アダプティブ結合と入れ子になったループの効率
+### <a name="adaptive-joins-and-nested-loop-efficiency"></a>アダプティブ結合と入れ子になったループの効率
 アダプティブ結合は、入れ子になったループ操作に切り替えた場合、ハッシュ結合ビルドによって既に読み取られた行を使います。 演算子が外部参照行をもう一度読み込むことは "*ありません*"。
 
-<a id="adaptive-threshold-rows" class="xliff"></a>
-
-### アダプティブしきい値行
+### <a name="adaptive-threshold-rows"></a>アダプティブしきい値行
 次のグラフは、ハッシュ結合のコストと入れ子になったループ結合のコストの交点の例を示します。  この交点で、しきい値が決定され、それによって結合操作に実際に使われるアルゴリズムが決まります。
 
 ![結合しきい値](./media/6_AQPJoinThreshold.png)
 
-<a id="interleaved-execution-for-multi-statement-table-valued-functions" class="xliff"></a>
-
-## 複数ステートメントのテーブル値関数のインターリーブ実行
+## <a name="interleaved-execution-for-multi-statement-table-valued-functions"></a>複数ステートメントのテーブル値関数のインターリーブ実行
 インターリーブ実行は、単一クエリ実行の最適化フェーズと実行フェーズの間の一方向境界を変更し、修正された基数推定に基づいてプランが適応できるようにします。 最適化中に、インターリーブ実行の候補を検出した場合 (現在は**複数ステートメント テーブル値関数 (MSTVF)**)、最適化を一時停止し、該当するサブツリーを実行し、正確な基数の推定をキャプチャし、ダウンストリームの演算に対する最適化を再開します。
 MSTVF の固定の基数の推定は、SQL Server 2014 および SQL Server 2016 では "100"、それより前のバージョンでは "1" です。 インターリーブ実行は、複数ステートメント テーブル値関数に関するこれらの固定基数推定によるワークロードのパフォーマンスの問題に役立ちます。
 
@@ -217,34 +181,24 @@ MSTVF の固定の基数の推定は、SQL Server 2014 および SQL Server 2016
 1. 結合アルゴリズムに関しては、Nested Loop 操作から Hash Match 操作に切り替えました。これは、多くの行が関係する場合に、より適しています。
 1. また、MSTVF テーブル スキャンからフローする実際の行数に基づいて多くのメモリを許可しているので、ディスク書き込み警告は表示されなくなっています。
 
-<a id="interleaved-execution-eligible-statements" class="xliff"></a>
-
-### インターリーブ実行に適したステートメント
+### <a name="interleaved-execution-eligible-statements"></a>インターリーブ実行に適したステートメント
 インターリーブ実行内のステートメントを参照する MSTVF は、現在は読み取り専用でなければならず、データ変更操作の一部であってはなりません。 また、MSTVF は、CROSS APPLY の内部で使われている場合は、インターリーブ実行できません。
 
-<a id="interleaved-execution-benefits" class="xliff"></a>
-
-### インターリーブ実行の利点
+### <a name="interleaved-execution-benefits"></a>インターリーブ実行の利点
 一般に、推定行数と実際の行数の非対称が大きいほど、ダウンストリーム プラン操作の数との組み合わせで、パフォーマンスへの影響が大きくなります。
 一般に、インターリーブ実行は次の場合にクエリに対して利点があります。
 1. 中間結果セット (この例では MSTVF) で推定行数と実際の行数の非対称が大きい
 1. かつ、全体的なクエリが中間結果のサイズの変化による影響を受けやすい これは通常、クエリ プランのそのサブツリーの上に複雑なツリーが存在する場合に発生します。
 MSTVF の単純な "SELECT *" では、インターリーブ実行によるメリットはありません。
 
-<a id="interleaved-execution-overhead" class="xliff"></a>
-
-### インターリーブ実行のオーバーヘッド
+### <a name="interleaved-execution-overhead"></a>インターリーブ実行のオーバーヘッド
 オーバーヘッドは最小限か、ありません。 MSTVF はインターリーブ実行導入前に既に具体化されていましたが、違いは、今では最適化を延期でき、具体化された行セットの基数の推定を利用できることです。
 変更に影響を与える他のプランと同様に、一部のプランでは、サブツリーの基数がよくなることで、クエリ全体が悪いプランになることがあります。 軽減策は、互換性レベルを元に戻すか、またはクエリ ストアを使ってプランの非機能低下バージョンを強制します。
 
-<a id="interleaved-execution-and-consecutive-executions" class="xliff"></a>
-
-### インターリーブ実行と連続実行
+### <a name="interleaved-execution-and-consecutive-executions"></a>インターリーブ実行と連続実行
 インターリーブ実行プランがキャッシュされると、最初の実行の推定を修正されたプランが、インターリーブ実行を再インスタンス化することなく連続する実行に使われます。
 
-<a id="tracking-interleaved-execution-activity" class="xliff"></a>
-
-### インターリーブ実行アクティビティの追跡
+### <a name="tracking-interleaved-execution-activity"></a>インターリーブ実行アクティビティの追跡
 実際のクエリ実行プランで使用法属性を確認できます。
 
 | プラン属性 | Description |
@@ -262,18 +216,18 @@ MSTVF の単純な "SELECT *" では、インターリーブ実行によるメ�
 
 インターリーブ実行が MSTVF 基数推定を修正できるようにするには、クエリを実行する必要があります。 ただし、ContainsInterleavedExecutionCandidates 属性によるインターリーブ実行候補がある場合は、推定実行プランがまだ表示されます。
 
-<a id="interleaved-execution-caching" class="xliff"></a>
-
-### インターリーブ実行のキャッシュ
+### <a name="interleaved-execution-caching"></a>インターリーブ実行のキャッシュ
 プランがキャッシュからクリアまたは消去された場合、クエリ実行時に、インターリーブ実行を使う新しいコンパイルが行われます。
 OPTION(RECOMPILE) を使うステートメントは、インターリーブ実行を使う新しいプランを作成し、それをキャッシュしません。
 
-<a id="interleaved-execution-and-query-store-interoperability" class="xliff"></a>
-
-### インターリーブ実行とクエリ ストアの相互運用性
+### <a name="interleaved-execution-and-query-store-interoperability"></a>インターリーブ実行とクエリ ストアの相互運用性
 インターリーブ実行を使うプランは強制的に実行できます。 プランは、最初の実行に基づいて基数の推定を修正されたバージョンです。
 
-「[SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター](https://docs.microsoft.com/en-us/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)」もご覧ください。
+## <a name="see-also"></a>参照
+
+[SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター](https://docs.microsoft.com/en-us/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)   
+
+[アダプティブ クエリ処理のデモンストレーション](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)      
 
 
 

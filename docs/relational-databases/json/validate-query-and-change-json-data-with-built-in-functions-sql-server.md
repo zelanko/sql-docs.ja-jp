@@ -2,7 +2,7 @@
 title: "組み込み関数を使用した JSON データの検証、クエリ、変更 (SQL Server) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/02/2016
+ms.date: 07/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,17 +18,17 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: e2b7d75694080b52e9c31e58ffd1e1f738b1035c
+ms.translationtype: HT
+ms.sourcegitcommit: 1aa87e3d821e6d111948baa0843edf31d087d739
+ms.openlocfilehash: 017f0c1a33ea00e675115d91e6654ec7730b4bd3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>組み込み関数を使用した JSON データの検証、クエリ、変更 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  JSON の組み込みのサポートには、次の組み込み関数が含まれています。このトピックでは、これらの関数について説明します。  
+JSON の組み込みのサポートには、次の組み込み関数が含まれています。このトピックでは、これらの関数について簡単に説明します。  
   
 -   [ISJSON](#ISJSON) 。文字列に有効な JSON が含まれているかどうかをテストします。  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/23/2017
 ## <a name="json-text-for-the-examples-on-this-page"></a>このページの例の JSON テキスト
 このページの例では、複合要素が含まれる次の JSON テキストを使用しています。
 
-```json  
+```sql 
 DECLARE @jsonInfo NVARCHAR(MAX)
 
 SET @jsonInfo=N'{  
@@ -61,44 +61,44 @@ SET @jsonInfo=N'{
 ##  <a name="ISJSON"></a> ISJSON 関数を使用して JSON テキストを検証する  
  **ISJSON** 関数は、文字列に有効な JSON が含まれているかどうかをテストします。  
   
- 次の例は、列には、有効な JSON が含まれている場合に、JSON テキストを返します。  
+次の例は、列 `json_col` に有効な JSON が含まれている行を返します。  
   
 ```sql  
-SELECT id,json_col
+SELECT id, json_col
 FROM tab1
-WHERE ISJSON(json_col)>0 
+WHERE ISJSON(json_col) > 0 
 ```  
-  
- 詳細については、「 [ISJSON &#40;Transact-SQL&#41;](../../t-sql/functions/isjson-transact-sql.md)」を参照してください。  
+
+詳細については、「 [ISJSON &#40;Transact-SQL&#41;](../../t-sql/functions/isjson-transact-sql.md)」を参照してください。  
   
 ##  <a name="VALUE"></a> JSON_VALUE 関数を使用して、JSON テキストから値を抽出する  
- **JSON_VALUE** 関数は、JSON 文字列からスカラー値を抽出します。  
+**JSON_VALUE** 関数は、JSON 文字列からスカラー値を抽出します。  
   
- 次の例では、ローカル変数に JSON のプロパティの値を抽出します。  
+次の例では、入れ子になった JSON のプロパティ `town` の値をローカル変数に抽出します。  
   
 ```sql  
-SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')  
+SET @town = JSON_VALUE(@jsonInfo, '$.info.address.town')  
 ```  
   
- 詳細については、「 [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md)」を参照してください。  
+詳細については、「 [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md)」をご覧ください。  
   
 ##  <a name="QUERY"></a> JSON_QUERY 関数を使用して JSON テキストからオブジェクトまたは配列を抽出する  
- **JSON_QUERY** 関数は、JSON 文字列からオブジェクトまたは配列を抽出します。  
+**JSON_QUERY** 関数は、JSON 文字列からオブジェクトまたは配列を抽出します。  
  
- 次の例では、クエリの結果には JSON フラグメントを返す方法を示します。  
+次の例では、クエリの結果には JSON フラグメントを返す方法を示します。  
   
 ```sql  
-SELECT FirstName,LastName,JSON_QUERY(jsonInfo,'$.info.address') AS Address
+SELECT FirstName, LastName, JSON_QUERY(jsonInfo,'$.info.address') AS Address
 FROM Person.Person
 ORDER BY LastName
 ```  
   
- 詳細については、「 [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md)」を参照してください。  
+詳細については、「 [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md)」を参照してください。  
   
 ##  <a name="JSONCompare"></a> JSON_VALUE と JSON_QUERY を比較する  
- **JSON_VALUE** と **JSON_QUERY** の主な違いは、 **JSON_VALUE** はスカラー値を返しますが、 **JSON_QUERY** はオブジェクトまたは配列を返す点です。  
+**JSON_VALUE** と **JSON_QUERY** の主な違いは、 **JSON_VALUE** はスカラー値を返しますが、 **JSON_QUERY** はオブジェクトまたは配列を返す点です。  
   
- 次のようなサンプル JSON テキストがあるとします。  
+次のようなサンプル JSON テキストがあるとします。  
   
 ```json  
 {
@@ -108,9 +108,9 @@ ORDER BY LastName
 }  
 ```  
   
- このサンプル JSON テキストでは、データ メンバー "a" と "c" は文字列値ですが、データ メンバー "b" は配列です。 **JSON_VALUE** と **JSON_QUERY** は、次の結果を返します。  
+このサンプル JSON テキストでは、データ メンバー "a" と "c" は文字列値ですが、データ メンバー "b" は配列です。 **JSON_VALUE** と **JSON_QUERY** は、次の結果を返します。  
   
-|Query|**JSON_VALUE** が返す結果|**JSON_QUERY** が返す結果|  
+|[パス]|**JSON_VALUE** が返す結果|**JSON_QUERY** が返す結果|  
 |-----------|-----------------------------|-----------------------------|  
 |**$**|NULL またはエラー|`{ "a": "[1,2]", "b": [1,2], "c":"hi"}`|  
 |**$.a**|[1,2]|NULL またはエラー|  
@@ -119,15 +119,15 @@ ORDER BY LastName
 |**$.c**|hi|NULL またはエラー|  
   
 ## <a name="test-jsonvalue-and-jsonquery-with-the-adventureworks-sample-database"></a>AdventureWorks サンプル データベースを使用して JSON_VALUE と JSON_QUERY をテストする  
- このトピックで説明した組み込み関数をテストするには、JSON データが含まれている AdventureWorks サンプル データベースを使用して次の例を実行します。 AdventureWorks サンプル データベースを入手するには、 [こちらをクリック](http://www.microsoft.com/en-us/download/details.aspx?id=49502)してください。  
+このトピックで説明した組み込み関数をテストするには、JSON データが含まれている AdventureWorks サンプル データベースを使用して次の例を実行します。 AdventureWorks サンプル データベースを入手するには、 [こちらをクリック](http://www.microsoft.com/en-us/download/details.aspx?id=49502)してください。  
   
- 次の例では、SalesOrder_json テーブルの Info 列に JSON テキストが含まれています。  
+次の例では、`SalesOrder_json` テーブルの `Info` 列に JSON テキストが含まれています。  
   
 ### <a name="example-1---return-both-standard-columns-and-json-data"></a>例 1: 標準の列と JSON データの両方を返す  
- 次のクエリは、標準のリレーショナル列と JSON 列の値の両方を返します。  
+次のクエリは、標準のリレーショナル列と JSON 列の両方から値を返します。  
   
 ```sql  
-SELECT SalesOrderNumber,OrderDate,Status,ShipDate,Status,AccountNumber,TotalDue,
+SELECT SalesOrderNumber, OrderDate, Status, ShipDate, Status, AccountNumber, TotalDue,
  JSON_QUERY(Info,'$.ShippingInfo') ShippingInfo,
  JSON_QUERY(Info,'$.BillingInfo') BillingInfo,
  JSON_VALUE(Info,'$.SalesPerson.Name') SalesPerson,
@@ -135,11 +135,11 @@ SELECT SalesOrderNumber,OrderDate,Status,ShipDate,Status,AccountNumber,TotalDue,
  JSON_VALUE(Info,'$.Customer.Name') Customer,
  JSON_QUERY(OrderItems,'$') OrderItems
 FROM Sales.SalesOrder_json
-WHERE ISJSON(Info)>0
+WHERE ISJSON(Info) > 0
 ```  
   
 ### <a name="example-2--aggregate-and-filter-json-values"></a>例 2: JSON 値の集計とフィルター  
- 次のクエリは、(JSON に格納されている) 顧客名と (通常の列に格納されている) 状態別に小計を集計します。 次に、(JSON に格納されている) 市区町村と (通常の列に格納されている) OrderDate で結果をフィルターします。  
+次のクエリは、(JSON に格納されている) 顧客名と (通常の列に格納されている) 状態別に小計を集計します。 次に、(JSON に格納されている) 市区町村と (通常の列に格納されている) OrderDate で結果をフィルターします。  
   
 ```sql  
 DECLARE @territoryid INT;
@@ -149,22 +149,22 @@ SET @territoryid=3;
 
 SET @city=N'Seattle';
 
-SELECT JSON_VALUE(Info,'$.Customer.Name') AS Customer,Status,SUM(SubTotal) AS Total
+SELECT JSON_VALUE(Info, '$.Customer.Name') AS Customer, Status, SUM(SubTotal) AS Total
 FROM Sales.SalesOrder_json
 WHERE TerritoryID=@territoryid
- AND JSON_VALUE(Info,'$.ShippingInfo.City')=@city
- AND OrderDate>'1/1/2015'
-GROUP BY JSON_VALUE(Info,'$.Customer.Name'),Status
+ AND JSON_VALUE(Info, '$.ShippingInfo.City') = @city
+ AND OrderDate > '1/1/2015'
+GROUP BY JSON_VALUE(Info, '$.Customer.Name'), Status
 HAVING SUM(SubTotal)>1000
 ```  
   
 ##  <a name="MODIFY"></a> JSON_MODIFY 関数を使用して JSON テキストのプロパティ値を更新する  
- **JSON_MODIFY**  関数は、JSON 文字列内のプロパティの値を更新し、更新された JSON 文字列を返します。  
+**JSON_MODIFY** 関数は、JSON 文字列内のプロパティの値を更新し、更新された JSON 文字列を返します。  
   
- 次の例では、JSON を格納する変数のプロパティの値を更新します。  
+次の例では、JSON を格納する変数の JSON プロパティの値を更新します。  
   
 ```sql  
-SET @info=JSON_MODIFY(@jsonInfo,"$.info.address[0].town",'London')    
+SET @info = JSON_MODIFY(@jsonInfo, "$.info.address[0].town", 'London')    
 ```  
   
  詳細については、「 [JSON_MODIFY &#40;Transact-SQL&#41;](../../t-sql/functions/json-modify-transact-sql.md)」を参照してください。  

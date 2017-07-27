@@ -18,10 +18,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
-ms.openlocfilehash: 0c39bbf997fb5041a1fc4ea55699fbb3a40e3d75
+ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
+ms.openlocfilehash: 9a4f230e8c25a24f85f36f3a1aaf82fbf247cd9a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/17/2017
 
 ---
 # <a name="polybase-installation"></a>PolyBase のインストール
@@ -41,7 +41,7 @@ ms.lasthandoff: 07/14/2017
   
 -   最小ハード ディスク容量: 2 GB。  
   
--   TCP/IP 接続を有効にする必要があります。 (「 [サーバー ネットワーク プロトコルを有効または無効にする](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)」を参照してください。)SQL Server Developer エディションおよび Express エディションでは、TCP/IP 接続は既定では無効です。 PolyBase を機能させるには、これを手動で有効にする必要があります。
+-   Polybase が正常に機能するは、TCP/IP を有効にする必要があります。 TCP/IP は、Developer Edition と Express Edition を除く SQL Server のすべてのエディションで、既定で有効です。 Developer Edition および Express Edition で Polybase が正常に機能するためには、TCP/IP 接続を有効にする必要があります (「[Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)」 (サーバー ネットワーク プロトコルを有効または無効にする) を参照してください)。
   
  **注**  
   
