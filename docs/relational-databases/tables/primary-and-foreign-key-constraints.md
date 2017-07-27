@@ -2,7 +2,7 @@
 title: "主キー制約と外部キー制約 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/02/2016
+ms.date: 07/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主キー制約と外部キー制約
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   主キーと外部キーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内のデータに整合性を適用するために使用できる 2 種類の制約です。 これらは重要なデータベース オブジェクトです。  
   

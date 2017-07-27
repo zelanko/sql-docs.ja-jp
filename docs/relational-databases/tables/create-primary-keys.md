@@ -24,7 +24,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-primary-keys"></a>主キーの作成
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
  > 以前のバージョンの SQL Server に関連するコンテンツについては、「[主キーの作成](https://msdn.microsoft.com/en-US/library/ms189039(SQL.120).aspx)」を参照してください。
 

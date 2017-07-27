@@ -1,7 +1,7 @@
 ---
 title: "外部キー リレーションシップの変更 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 07/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="modify-foreign-key-relationships"></a>外部キー リレーションシップの変更
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、リレーションシップの外部キー側を変更できます。 テーブルの外部キーを変更すると、主キー テーブルの列に関連付けられる列が変更されます。  
   
