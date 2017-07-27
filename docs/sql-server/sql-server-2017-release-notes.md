@@ -14,15 +14,15 @@ caps.latest.revision: 41
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 67c1c0f3a9da6cc5d050da5db8a493f5da934c2a
-ms.openlocfilehash: fa45fea4ebb378f035b4b4af2b1fa8a20bc152a5
+ms.translationtype: HT
+ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
+ms.openlocfilehash: a2950b6aef0e12653efbb9eb26fd3f1ae6cb951e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/17/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 年 1 リリース ノートします。
-このトピックでは、[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] での制限事項と問題について説明します。 関連の情報は、次を参照してください。
+このトピックでは、[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] での制限事項と問題について説明します。 関連情報については、次のトピックを参照してください。
 
 - [SQL Server 2017 年 1 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)します。
 - [Linux のリリース ノート SQL Server](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)です。
@@ -31,6 +31,16 @@ ms.lasthandoff: 06/23/2017
  **お試しください:**    
    -   [![Evaluation Center からダウンロードする](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **[Evaluation Center から [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] をダウンロードする](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
+## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>SQL Server 2017 リリース候補 (RC1 - 2017 年 7 月)
+
+### <a name="sql-server-integration-services-ssis-rc1---july-2017"></a>SQL Server Integration Services (SSIS) (RC1 - 2017 年 7 月)
+- **問題とユーザーへの影響:** ストアド プロシージャ **[catalog].[create_execution]** の *runincluster* パラメーターは、一貫性とわかりやすさを理由に、名前が *runinscaleout* に変更されました。
+- **回避策:** Scale Out でパッケージを実行する既存のスクリプトがある場合は、スクリプトが RC1 で動作するように、パラメーター名を *runincluster* から *runinscaleout* に変更します。
+
+- **問題とユーザーへの影響:** SQL Server Management Studio (SSMS) 17.1 とそれより前のバージョンでは、RC1 の Scale Out でパッケージの実行を開始できません。 エラー メッセージ: "*@runincluster* is not a parameter for procedure **create_execution**" (@runincluster はプロシージャ create_execution のパラメーターではありません)。 この問題は、SSMS の次のリリースであるバージョン 17.2 で解決されています。 SSMS のバージョン 17.2 以降では、新しいパラメーター名と Scale Out でのパッケージ実行がサポートされています。 
+- **回避策:** SSMS バージョン 17.2 が利用可能になるまでは、既存バージョンの SSMS を使用してパッケージ実行スクリプトを生成し、そのスクリプトで *runincluster* パラメーターの名前を *runinscaleout* に変更したうえで、スクリプトを実行します。
+
+![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-ctp-21-may--2017"></a>SQL Server 2017 CTP 2.1 (2017 年 5 月)
 ### <a name="documentation-ctp-21"></a>ドキュメント (CTP 2.1)
 - **問題およびユーザーへの影響:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] のドキュメントは制限されており、コンテンツは [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] ドキュメント セットに付属しています。  記事の中で [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] に固有のコンテンツは、 **適用対象**で言及されます。 
@@ -96,78 +106,10 @@ ms.lasthandoff: 06/23/2017
 
    セカンダリ レプリカをホストしている SQL Server のインスタンスを回復します。
 
-
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-
-## <a name="sql-server-2017-ctp-14-march--2017"></a>SQL Server 2017 CTP 1.4 (2017 年 3 月)
-
-### <a name="documentation-ctp-14"></a>ドキュメント (CTP 1.4)
-- **問題およびユーザーへの影響:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] のドキュメントは制限されており、コンテンツは [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] ドキュメント セットに付属しています。  記事の中で [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] に固有のコンテンツは、 **適用対象**で言及されます。 
-- **問題およびユーザーへの影響:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]の場合、オフライン コンテンツを利用できません。
-
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-
-## <a name="sql-server-2017-ctp-13-february--2017"></a>SQL Server 2017 CTP 1.3 (2017 年 2 月)
-### <a name="supported-installation-scenarios-ctp-13"></a>サポートされているインストール シナリオ (CTP 1.3)
-[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] はテスト バージョンとしてのみ使用できます。  運用環境での展開はサポートされません。 仮想マシンに [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] をインストールし、テストすることが推奨されます。
-
-### <a name="documentation-ctp-13"></a>ドキュメント (CTP 1.3)
-- **問題およびユーザーへの影響:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] のドキュメントは制限されており、コンテンツは [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] ドキュメント セットに付属しています。  記事の中で [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] に固有のコンテンツは、 **適用対象**で言及されます。 
-- **問題およびユーザーへの影響:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]の場合、オフライン コンテンツを利用できません。
-
-### <a name="sql-server-integration-services-ssis-ctp-13"></a>SQL Server Integration Services (SSIS) (CTP 1.3)
-#### <a name="cdc-components-not-supported-in-this-ctp-release"></a>この CTP リリースでは、CDC コンポーネントはサポートされていません
--   **問題とユーザーへの影響**: この CTP リリースでは、CDC 制御タスク、CDC ソース、および CDC スプリッターはサポートされていません。
--   **回避策:**回避策はありません。
-
-
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-
-## <a name="sql-server-2017-ctp-12-january--2017"></a>SQL Server 2017 CTP 1.2 (2017 年 1 月)
-### <a name="supported-installation-scenarios-ctp-12"></a>サポートされているインストール シナリオ (CTP 1.2)
-[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] はテスト バージョンとしてのみ使用できます。  運用環境での展開はサポートされません。 仮想マシンに [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] をインストールし、テストすることが推奨されます。
-
-### <a name="sql-server-database-engine-ctp-12"></a>SQL Server データベース エンジン (CTP 1.2)
-- **問題およびユーザーへの影響:** MSSQLSERVER サービスが "開始" 状態で停止する場合があります。
-- **回避策:** この問題は次の方法で回避できます。
-  -  `mssqlserver` サービスおよび `keyiso` サービスの間で依存関係を作成する。 これを行う方法の&1; つは、管理者特権のコマンド プロンプトから `sc config mssqlserver depend= keyiso`のコマンドを実行することです。
-  - コンピューターを再起動します。
-
-### <a name="documentation-ctp-12"></a>ドキュメント (CTP 1.2)
-- **問題およびユーザーへの影響:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] のドキュメントは制限されており、コンテンツは [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] ドキュメント セットに付属しています。  記事の中で [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] に固有のコンテンツは、 **適用対象:**で言及されます。 
-- **問題およびユーザーへの影響:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]の場合、オフライン コンテンツを利用できません。
- 
-### <a name="sql-server-integration-services-ssis-ctp-12"></a>SQL Server Integration Services (SSIS) (CTP 1.2)
-#### <a name="deleting-the-ssis-catalog-may-fail-when-ssis-scale-out-is-installed"></a>SSIS Scale Out がインストールされているとき、SSIS カタログを削除できないことがある
-**問題とユーザーへの影響**: SSIS Scale Out 機能をコンピューターにインストールするときに、“Could not drop login *'login'* as the user is currently logged in” (ユーザーがログイン中のため、ログイン 'login' を切断できません) というエラーが表示され、SSISDB カタログ データベースを削除できないことがあります。
-   
-**回避策**:
--   Scale Out Master コンピューターで、"services.msc" コマンドを実行して [サービス] ウィンドウを開きます。 SQL Server Integration Services Cluster Master サービスを停止します。
--   マスターに接続する Scale Out Worker コンピューターで、コマンド "services.msc" を実行し、[サービス] ウィンドウを開きます。 SQL Server Integration Services Cluster Worker サービスを停止します。
-
-SSISDB カタログ データベースを削除できるようになりました。
-
-### <a name="sql-server-master-data-services-ctp-12"></a>SQL Server マスター データ サービス (CTP 1.2)
-#### <a name="transaction-may-not-work-when-the-entity-transaction-log-type-is-set-to-attribute"></a>エンティティ トランザクション ログ タイプが属性に設定されているとき、トランザクションが機能しないことがある
-**問題およびユーザーへの影響:** エンティティ トランザクション ログ タイプが **で** [属性] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] に設定されているとき (既定値は **[メンバー]**)、次のシナリオが失敗します。
-
-* エンティティ変更のトランザクションは Web サイトに表示されません。
-* Web サイトの **[トランザクション]** ページを開いたり、トランザクションを破棄したりできません。
-* Web サイトで、エンティティをトランザクションの注釈で更新できません。
-
-**回避策:**回避策はありません。
-
-#### <a name="copy-version-may-not-work-when-copy-only-committed-version-is-set-to-false"></a>**[コミットされたバージョンのみをコピーする]** が偽に設定されているとき、バージョンをコピーできないことがある
--  **問題およびユーザーへの影響:** **[コミットされたバージョンのみをコピーする]** 設定が **[いいえ]** に設定されていると (既定値は **[はい]**)、バージョン コピー操作が失敗することがあります。 エラー メッセージがありません。
--  **回避策:**回避策はありません。
-
 ##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) SQL Server エンジニアリング チームと連携する 
 - [スタック オーバーフロー (tag sql-server) - 技術的な質問](http://stackoverflow.com/questions/tagged/sql-server)
 - [MSDN フォーラム - 技術的な質問](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect - バグ報告と機能依頼](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit - R に関する一般的なディスカッション](https://www.reddit.com/r/SQLServer/)
 
-
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
-
-

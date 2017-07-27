@@ -41,29 +41,30 @@
    sudo vi /etc/hosts
    ```
 
-   次の例は`/etc/hosts`で**node1**の項目を追加**node1**と**node2**です。 このドキュメントで**node1** SQL Server のプライマリ レプリカを指します。 **node2**セカンダリ SQL サーバーを指します。 です。
+   次の例は、**node1** の `/etc/hosts` を示しています。**node1**、**node2**、**node3** に対して追加があります。 このドキュメントでは、**node1** はプライマリ レプリカをホストするサーバーを指します。 **node2** と **node3** は、セカンダリ レプリカをホストするサーバーを指します。
 
 
    ```
    127.0.0.1   localhost localhost4 localhost4.localdomain4
    ::1       localhost localhost6 localhost6.localdomain6
-   10.128.18.128 node1
+   10.128.18.12 node1
    10.128.16.77 node2
+   10.128.15.33 node3
    ```
 
 ### <a name="install-sql-server"></a>SQL Server をインストールする
 
 SQL Server をインストールします。 次のリンクは、さまざまな配布用の SQL Server インストールの手順をポイントします。 
 
-- [Red Hat Enterprise Linux](..\linux\sql-server-linux-setup-red-hat.md)
+- [Red Hat Enterprise Linux](../linux/quickstart-install-connect-red-hat.md)
 
-- [SUSE Linux Enterprise Server](..\linux\sql-server-linux-setup-suse-linux-enterprise-server.md)
+- [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md)
 
-- [Ubuntu](..\linux\sql-server-linux-setup-ubuntu.md)
+- [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)
 
 ## <a name="enable-always-on-availability-groups-and-restart-sqlserver"></a>Always On 可用性グループを有効にして、sql server の再起動
 
-SQL Server サービスをホストする各ノードで Always On 可用性グループを有効にしてから再起動`mssql-server`です。  次のスクリプトを実行します。
+SQL Server インスタンスをホストする各ノードで Always On 可用性グループを有効にしてから、`mssql-server` を再起動します。  次のスクリプトを実行します。
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
@@ -72,7 +73,7 @@ sudo systemctl restart mssql-server
 
 ##  <a name="enable-alwaysonhealth-event-session"></a>AlwaysOn_health イベント セッションを有効にします。 
 
-Optionaly 有効にする Always On 可用性グループ固有のイベントを拡張可用性グループをトラブルシューティングする際に、根本原因の診断に役立てるために実行できます。
+オプションで、Always On 可用性グループの拡張イベントを有効にすると、可用性グループのトラブルシューティング時に根本原因を診断するために役立ちます。 SQL Server の各インスタンスで次のコマンドを実行します。 
 
 ```Transact-SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
@@ -83,7 +84,7 @@ GO
 
 ## <a name="create-db-mirroring-endpoint-user"></a>データベース ミラーリング エンドポイントのユーザーを作成します。
 
-次の TRANSACT-SQL スクリプトは、という名前のログインを作成`dbm_login`、という名前のユーザーと`dbm_user`です。 強力なパスワードでスクリプトを更新します。 すべての SQL Server データベース ミラーリングのエンドポイントのユーザーを作成するには、次のコマンドを実行します。
+次の TRANSACT-SQL スクリプトは、という名前のログインを作成`dbm_login`、という名前のユーザーと`dbm_user`です。 強力なパスワードでスクリプトを更新します。 データベース ミラーリング エンドポイントのユーザーを作成するために、すべての SQL Server インスタンスで次のコマンドを実行します。
 
 ```Transact-SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
@@ -94,7 +95,7 @@ CREATE USER dbm_user FOR LOGIN dbm_login;
 
 Linux 上の SQL Server サービスは、ミラーリングのエンドポイント間の通信を認証するのに証明書を使用します。 
 
-次の TRANSACT-SQL スクリプトは、マスター_キーと証明書を作成します。 証明書をバックアップし、秘密キーを持つファイルをセキュリティで保護します。 強力なパスワードでスクリプトを更新します。 プライマリ SQL Server に接続し、証明書を作成する次の TRANSACT-SQL を実行します。
+次の TRANSACT-SQL スクリプトは、マスター_キーと証明書を作成します。 証明書をバックアップし、秘密キーを持つファイルをセキュリティで保護します。 強力なパスワードでスクリプトを更新します。 プライマリ SQL Server インスタンスに接続し、証明書を作成する次の TRANSACT-SQL を実行します。
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -116,7 +117,7 @@ cd /var/opt/mssql/data
 scp dbm_certificate.* root@**<node2>**:/var/opt/mssql/data/
 ```
 
-対象サーバー上で mssql ユーザー証明書にアクセスする権限を付与します。
+各対象サーバー上で mssql ユーザー証明書にアクセスするアクセス許可を付与します。
 
 ```bash
 cd /var/opt/mssql/data
@@ -144,7 +145,6 @@ CREATE CERTIFICATE dbm_certificate
 
 次の TRANSACT-SQL という名前の待機エンドポイントを作成する`Hadr_endpoint`可用性グループにします。 エンドポイントを開始し、作成したユーザーへの接続権限を提供します。 スクリプトを実行する前に、までの値を置き換える`**< ... >**`です。
 
-
 >[!NOTE]
 >このリリースでは、リスナーの IP 用に別の IP アドレスは使わないでください。 この問題の修正に取り組んでいますが、ここでのみ使用できる値は「0.0.0.0」。
 
@@ -164,5 +164,8 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 
 >[!IMPORTANT]
 >ファイアウォールで TCP ポートは、リスナー ポート用に開かれる必要があります。
+
+>[!IMPORTANT]
+>SQL Server 2017 リリースでは、データベース ミラーリング エンドポイントでサポートされる唯一の認証方法は `CERTIFICATE` です。 `WINDOWS` が将来のリリースで有効になる予定です。
 
 詳細については、次を参照してください。[データベース ミラーリング エンドポイント (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx)です。

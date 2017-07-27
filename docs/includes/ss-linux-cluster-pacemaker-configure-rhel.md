@@ -1,33 +1,28 @@
-
-3. 両方のクラスター ノードで、Pacemaker ファイアウォールのポートを開きます。 `firewalld` を使用してこれらのポートを開くには、次のコマンドを実行します。
+3. すべてのクラスター ノードでは、ペースのファイアウォール ポートを開きます。 `firewalld` を使用してこれらのポートを開くには、次のコマンドを実行します。
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
    sudo firewall-cmd --reload
    ```
 
-   > 組み込みの高可用性構成が備わっていない別のファイアウォールを使用する場合は、Pacemaker 用に次のポートを開き、クラスター内の他のノードと通信できるようにする必要があります
+   > ファイアウォールに組み込みの高可用性構成がない場合は、Pacemaker 用に次のポートを開きます。
    >
    > * TCP: ポート 2224、3121、21064
    > * UDP: ポート 5405
 
-1. 各ノードに Pacemaker パッケージをインストールします。
+1. すべてのノードに Pacemaker パッケージをインストールします。
 
    ```bash
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
 
-   
-
-2. Pacemaker と Corosync のパッケージをインストールしたときに作成された既定のユーザー用のパスワードを設定します。 両方のノードで同じパスワードを使用します。 
+2. Pacemaker と Corosync のパッケージをインストールしたときに作成された既定のユーザー用のパスワードを設定します。 すべてのノードで同じパスワードを使用します。 
 
    ```bash
    sudo passwd hacluster
    ```
 
-   
-
-3. `pcsd` サービスと Pacemaker を有効にし、起動します。 これにより、再起動後にノードはクラスターに再度参加できます。 両方のノードで、次のコマンドを実行します。
+3. 再起動後にノードがクラスターに再度参加できるように、`pcsd` サービスと Pacemaker を有効にして開始します。 すべてのノードで次のコマンドを実行します。
 
    ```bash
    sudo systemctl enable pcsd
@@ -44,9 +39,9 @@
    ```
    
    >[!NOTE]
-   >前に同じノードでクラスターを構成した場合は、"pcs cluster setup" を実行するときに "--force" オプションを使用する必要があります。 これは、"pcs cluster destroy" を実行するのと同じあり、"sudo systemctl enable pacemaker" を使用して、Pacemaker のサービスを再度有効にする必要がある点に注意してください。
+   >前に同じノードでクラスターを構成した場合は、`pcs cluster setup` を実行するときに `--force` オプションを使用する必要があります。 このオプションは、`pcs cluster destroy` を実行するのと同等です。 Pacemaker を再度有効にするために、`sudo systemctl enable pacemaker` を実行します。
 
-5. SQL Server の SQL Server リソース エージェントをインストールします。 両方のノードで、次のコマンドを実行します。 
+5. SQL Server の SQL Server リソース エージェントをインストールします。 すべてのノードで次のコマンドを実行します。 
 
    ```bash
    sudo yum install mssql-server-ha
