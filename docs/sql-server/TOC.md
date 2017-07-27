@@ -27,7 +27,7 @@
 ## [SQL Server 2008 R2 SP2 リリース ノート](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
-# [データベース エンジン](../database-engine/configure-windows/sql-server-database-engine.md)
+# [データベース エンジン](../database-engine/sql-server-database-engine-backward-compatibility.md)
 # [Data Quality Services](../data-quality-services/data-quality-services.md)
 # [ フェールオーバー クラスター](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
 # [インストール](../sql-server/install/planning-a-sql-server-installation.md)

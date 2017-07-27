@@ -1,10 +1,5 @@
-# [データベース機能](database-features.md)
+# [概要](database-features.md)
 # [新規および最近の更新記事](new-updated-relational-databases.md)
-
-# 概要
-## [データベース エンジンのインスタンス間機能](database-engine-cross-instance-features.md)
-## [テクニカル リファレンス](technical-reference-database-engine.md)  
-## [機能リファレンス](feature-reference-database-engine.md)   
 
 # [SQL Server ガイド](sql-server-guides.md)
 ## Always On 可用性グループのトラブルシューティングおよび監視ガイド
