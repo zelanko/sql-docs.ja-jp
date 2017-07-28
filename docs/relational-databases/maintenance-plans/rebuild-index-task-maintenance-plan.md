@@ -1,7 +1,7 @@
 ---
 title: "[インデックスの再構築タスク](メンテナンス プラン) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 07/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3d8dd428e1aded14e6e75c338b12c8b04cf722a8
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 223d43974e6b63f7375a3d3e000492612fb6856e
+ms.openlocfilehash: bb666c02a3e0d165a3c32515503be265287e1cac
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/25/2017
 
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>[インデックスの再構築タスク]\(メンテナンス プラン)
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
  **インデックスを埋め込む (Pad index)**  
  インデックスの埋め込みを指定します。  
   
- **[Keep index online]\(オンラインのインデックスを保持する)**  
+ **[Keep index online] (オンラインのインデックスを保持する)**  
  `ONLINE` オプションを使用すると、インデックス操作の実行中に、ユーザーは基になるテーブルまたはクラスター化インデックス データ、および任意の関連付けられた非クラスター化インデックスにアクセスできます。  
   
 > [!NOTE]  
@@ -90,10 +90,10 @@ ms.lasthandoff: 06/22/2017
  **MAXDOP**  
  並列プランの実行で使用されるプロセッサ数を制限する値を指定します。  
   
- **[Low Priority Used]\(低優先度の使用)**  
+ **[Low Priority Used] (低優先度の使用)**  
  優先度の低いロックを待機するには、このオプションを選択します。  
   
- **[Abort after Wait]\(待機後に中止)**  
+ **[Abort after Wait] (待機後に中止)**  
  **[最長期間]** で指定した時間が経過した後に行う処理を指定します。  
   
  **[最長期間]**  
@@ -104,6 +104,10 @@ ms.lasthandoff: 06/22/2017
   
 > [!NOTE]  
 >  影響を受けるオブジェクトが大量にある場合は、表示にかなりの時間を要する場合があります。  
+
+
+[!INCLUDE[index-stats-options-reorg-5589131-2999104](../../includes/paragraph-content/index-stats-options-reorganize-maintenance-plan-include.md)]
+
   
 ## <a name="new-connection-dialog-box"></a>[新しい接続] ダイアログ ボックス  
  **[接続名]**  
