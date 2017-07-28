@@ -1,6 +1,6 @@
 ---
 title: "メンテナンス プラン ウィザードの使用 | Microsoft Docs"
-ms.date: 08/19/2016
+ms.date: 06/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -37,11 +37,11 @@ caps.latest.revision: 43
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f4fa73a78b9f6e32edcf8395b344f1bcb7e8f5cc
+ms.translationtype: HT
+ms.sourcegitcommit: c51503eae95459aa4530032ef551d0eedf60caa4
+ms.openlocfilehash: 29245ecd82ef8f4401869008bcdb883880eec0bd
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>メンテナンス プラン ウィザードの使用
@@ -159,13 +159,13 @@ ms.lasthandoff: 04/11/2017
   
  -  **[すべてのデータベース]**  
   
-**tempdb** を除くすべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを対象として、このタスクを実行するメンテナンス プランを生成します。  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を除くすべての **[!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]**でメンテナンス プラン ウィザードを使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。  
   
 **システム データベース**  
   
   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tempdb **およびユーザーが作成したデータベースを除く** システム データベースを対象として、このタスクを実行するメンテナンス プランを生成します。  
   
- **[すべてのユーザー データベース] \(master、model、msdb、tempdb は対象外)**  
+ **[すべてのユーザー データベース] (master、model、msdb、tempdb は対象外)**  
   
  - ユーザーが作成したすべてのデータベースを対象として、このタスクを実行するメンテナンス プランを生成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム データベースではメンテナンス タスクは実行されません。  
   
@@ -176,10 +176,10 @@ ms.lasthandoff: 04/11/2017
 **[インデックスを含める]** チェック ボックス  
  - すべてのインデックス ページおよびテーブル データ ページの整合性を確認します。  
   
-**[Physical only] \(物理のみ)**  
+**[Physical only] (物理のみ)**  
  - ページの物理構造の整合性、レコード ヘッダー、およびデータベースの割り当ての一貫性にチェックを限定します。 このオプションは、大規模なデータベースの DBCC CHECKDB の実行時間を大幅に短縮することがあるため、実稼働システムで頻繁に使用する場合にお勧めします。  
   
-**[Tablock] \(Tablock)**  
+**[Tablock] (Tablock)**  
  - DBCC CHECKDB が、内部データベースのスナップショットを使用せずに、ロックを取得します。 これにはデータベースの短期の排他 (X) ロックも含まれます。 このオプションを使用すると、負荷の高いデータベースでの DBCC CHECKDB の実行速度が速くなることがありますが、DBCC CHECKDB の実行中はデータベースでの同時実行性が低下します。  
   
 ## <a name="define-database-shrink-tasks"></a>データベースの圧縮タスクを定義する  
@@ -203,7 +203,7 @@ ms.lasthandoff: 04/11/2017
      データベースは連続するページに圧縮されますが、ページの割り当ては解除されず、データベース ファイルは圧縮されません。 データベースを再度展開することが予想され、領域を再割り当てしない場合に、このオプションを使用します。 このオプションを指定した場合、データベース ファイルを可能な限り圧縮する動作は行われません。 NOTRUNCATE オプションが使用されます。  
   
      **[解放された領域をオペレーティング システムに返す]**  
-     データベースは連続するページに圧縮され、そのページが他のプログラムで使用できるようにオペレーティング システムに返されます。 データベース ファイルは可能な限り圧縮されます。 TRUNCATEONLY オプションが使用されます。 既定のオプションです。  
+     データベースは連続するページに圧縮され、そのページが他のプログラムで使用できるようにオペレーティング システムに返されます。 TRUNCATEONLY オプションが使用されます。 既定のオプションです。  
   
 ## <a name="define-the-index-tasks"></a>インデックスのタスクを定義する  
   
@@ -262,7 +262,7 @@ ms.lasthandoff: 04/11/2017
     > **注:** オンラインでのインデックス操作は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のすべてのエディションで使用できるわけではありません。 詳細については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
      **[MAXDOP]** チェック ボックス  
-     DBCC CHECKDB の sp_configure の max degree of parallelism 構成オプションを無効にします。 詳細については、「[DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)」を参照してください。  
+     DBCC CHECKDB の sp_configure の max degree of parallelism 構成オプションを無効にします。 詳細については、「[DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)」を参照してください  
   
 #### <a name="define-the-update-statistics-task"></a>統計の更新タスクを定義する  
   
@@ -362,7 +362,7 @@ ms.lasthandoff: 04/11/2017
      **[データベースごとにサブディレクトリを作成する]** チェック ボックス  
      メンテナンス プランの一部としてバックアップされるデータベースごとに、データベース バックアップを格納するサブディレクトリを、指定されたディスク ディレクトリの下に作成します。  
   
-    > **重要!!** サブディレクトリには、親ディレクトリから権限が継承されます。 不正アクセスを防ぐには、権限を制限してください。  
+    > **重要:** サブディレクトリには、親ディレクトリから権限が継承されます。 不正アクセスを防ぐには、権限を制限してください。  
   
      **[フォルダー]** ボックス  
      自動的に作成されたデータベース ファイルを格納するフォルダーを指定します。 バックアップ先として [URL] を選択した場合、このオプションは無効になります。  
@@ -370,7 +370,7 @@ ms.lasthandoff: 04/11/2017
      **[SQL 資格情報]**  
      Windows Azure ストレージへの認証に使用する SQL 資格情報を選択します。 使用できる既存の SQL 資格情報がない場合は、 **[作成]** ボタンをクリックして新しい SQL 資格情報を作成します。  
   
-    > **重要!!** **[作成]** をクリックすると開くダイアログでは、サブスクリプションの管理証明書または公開プロファイルが求められます。 管理証明書または公開プロファイルにアクセスできない場合は、Transact-SQL または SQL Server Management Studio を使用してストレージ アカウント名とアクセス キーの情報を指定し、SQL 資格情報を作成することができます。 Transact-SQL を使用して資格情報を作成するには、「 [資格情報の作成](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) 」のサンプル コードを参照してください。 または SQL Server Management Studio を使用して、データベース エンジン インスタンスから、 **[セキュリティ]**を右クリックし、 **[新規作成]**、 **[資格情報]**の順にクリックします。 **[ID]** にストレージ アカウント名、 **[パスワード]** にアクセス キーを指定します。  
+    > **重要:** **[作成]** をクリックすると開くダイアログでは、サブスクリプションの管理証明書または公開プロファイルが求められます。 管理証明書または公開プロファイルにアクセスできない場合は、Transact-SQL または SQL Server Management Studio を使用してストレージ アカウント名とアクセス キーの情報を指定し、SQL 資格情報を作成することができます。 Transact-SQL を使用して資格情報を作成するには、「 [資格情報の作成](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) 」のサンプル コードを参照してください。 または SQL Server Management Studio を使用して、データベース エンジン インスタンスから、 **[セキュリティ]**を右クリックし、 **[新規作成]**、 **[資格情報]**の順にクリックします。 **[ID]** にストレージ アカウント名、 **[パスワード]** にアクセス キーを指定します。  
   
      **[Azure ストレージ コンテナー]**  
      Windows Azure ストレージ コンテナーの名前を指定します。  
