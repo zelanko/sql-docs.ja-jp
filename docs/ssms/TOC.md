@@ -7,16 +7,13 @@
 ## [新規および最近の更新記事](new-updated-ssms.md)
 ## [以前のリリースの SSMS](previous-sql-server-management-studio-releases.md)
 
-# [SSMS の使用](use-sql-server-management-studio.md)
-# [SSMS の機能](features-in-sql-server-management-studio.md)
-# [使用状況のフィードバックの収集](sql-server-management-studio-telemetry-ssms.md)
-# [SQL Server PowerShell モジュールをダウンロードします。](download-sql-server-ps-module.md)
+# [SQL Server PowerShell モジュールのダウンロード](download-sql-server-ps-module.md)
 
 # [SQL Server エージェント +](../ssms/agent/sql-server-agent.md)
 # [F1 ヘルプ +](../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md)
 # [メニュー ヘルプ +](../ssms/menu-help/sql-server-management-studio-menu-help.md)
-# [オブジェクト エクスプ ローラー +](../ssms/object/object-explorer.md)
-# [ソリューション エクスプ ローラー +](../ssms/solution/solution-explorer.md)
+# [オブジェクト エクスプローラー +](../ssms/object/object-explorer.md)
+# [ソリューション エクスプローラー +](../ssms/solution/solution-explorer.md)
 # [テンプレート +](../ssms/template/template-explorer.md)
 # [Visual Database Tools +](../ssms/visual-db-tools/visual-database-tools.md)
 # [サーバーの登録 +](../ssms/register-servers/register-servers.md)
@@ -49,4 +46,4 @@
 
 # [Ssms ユーティリティ](ssms-utility.md)  
 # [SSMS のキーボード ショートカット](sql-server-management-studio-keyboard-shortcuts.md)  
-
+# [匿名の利用状況データ](sql-server-management-studio-telemetry-ssms.md)

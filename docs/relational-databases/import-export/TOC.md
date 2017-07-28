@@ -26,6 +26,7 @@
 ## [データの一括インポートでのフォーマット ファイルの使用](use-a-format-file-to-bulk-import-data-sql-server.md)  
 ## [フォーマット ファイルを使用したテーブル列のスキップ](use-a-format-file-to-skip-a-table-column-sql-server.md)  
 ## [フォーマット ファイルを使用したデータ フィールドのスキップ](use-a-format-file-to-skip-a-data-field-sql-server.md)  
-## [フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+## [フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
+# [Excel から SQL へのデータのインポート](import-data-from-excel-to-sql.md)  
 # [XML ドキュメントの一括インポートと一括エクスポートの例](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
 # [Azure BLOB ストレージのデータに一括アクセスする例](examples-of-bulk-access-to-data-in-azure-blob-storage.md)  
