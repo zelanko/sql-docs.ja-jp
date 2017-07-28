@@ -22,9 +22,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 06/29/2017
 
 ---
-<a id="columnstore-indexes---what39s-new" class="xliff"></a>
-
-# 列ストア インデックス - 新機能
+# <a name="columnstore-indexes---what39s-new"></a>列ストア インデックス - 新機能
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各バージョンと、Azure SQL Database Premium Edition、Azure SQL Data Warehouse、および Parallel Data Warehouse の最新リリースで使用できる列ストア機能の概要。  
@@ -32,9 +30,7 @@ ms.lasthandoff: 06/29/2017
  >[!NOTE]
  > Azure SQL Database の場合、列ストア インデックスは Premium Edition でのみ使用できます。
  
-<a id="feature-summary-for-product-releases" class="xliff"></a>
-
-## 製品リリースの機能の概要  
+## <a name="feature-summary-for-product-releases"></a>製品リリースの機能の概要  
  列ストア インデックスの主な機能と、これらの機能を利用できる製品をまとめた表を次に示します。  
 
   
@@ -63,17 +59,13 @@ ms.lasthandoff: 06/29/2017
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] での新機能は次のとおりです。
 
-<a id="functional" class="xliff"></a>
-
-### 機能
+### <a name="functional"></a>機能
 - [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] は、クラスター化列ストア インデックス内の保存されない計算列をサポートします。 保存される計算列は、クラスター化列ストア インデックスではサポートされません。計算列を含む列ストア インデックスに非クラスター化インデックスを作成することはできません。 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] には、パフォーマンスと列ストア インデックスの柔軟性を向上させるために重要な機能強化が追加されます。 これらの機能強化により、データ ウェアハウスのシナリオが強化され、リアルタイムの運用分析が可能になります。  
   
-<a id="functional" class="xliff"></a>
-
-### 機能  
+### <a name="functional"></a>機能  
   
 -   行ストア テーブルで、更新可能な非クラスター化列ストア インデックスを 1 つ使用できます。 以前、非クラスター化列ストア インデックスは、読み取り専用でした。  
   
@@ -87,9 +79,7 @@ ms.lasthandoff: 06/29/2017
   
 -   列ストア インデックスには、リアルタイム運用分析へのトランザクション ワークロードの影響を最小限に抑える圧縮遅延オプションが用意されています。  このオプションでは、頻繁に変更される行が安定するように配慮してから、それらの行を列ストアに圧縮します。 詳しくは、「[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)」および「[列ストアを使用したリアルタイム運用分析の概要](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)」をご覧ください。  
   
-<a id="performance-for-database-compatibility-level-120-or-130" class="xliff"></a>
-
-### データベースの互換性レベルが 120 または 130 の場合のパフォーマンス  
+### <a name="performance-for-database-compatibility-level-120-or-130"></a>データベースの互換性レベルが 120 または 130 の場合のパフォーマンス  
   
 -   列ストア インデックスでは、Read Committed スナップショット分離レベル (RCSI) とスナップショット分離 (SI) をサポートします。 これにより、ロックなしのトランザクション一貫性分析クエリが有効になります。  
   
@@ -101,9 +91,7 @@ ms.lasthandoff: 06/29/2017
   
 -   述語のプッシュ ダウンは、[v] char 型または n [v] char 型の文字列を比較するクエリを高速化します。 これは、一般的な比較演算子に適用され、ビットマップ フィルターを使用する演算子 (LIKE など) が含まれます。 SQL Server がサポートするすべての照合順序で動作します。  
   
-<a id="performance-for-database-compatibility-level-130" class="xliff"></a>
-
-### データベースの互換性レベルが 130 の場合のパフォーマンス  
+### <a name="performance-for-database-compatibility-level-130"></a>データベースの互換性レベルが 130 の場合のパフォーマンス  
   
 -   次のいずれかの操作を使用して、クエリの新しいバッチ モード実行をサポートします。  
   
@@ -121,9 +109,7 @@ ms.lasthandoff: 06/29/2017
   
 -   メモリ最適化テーブル クエリでは、行ストア インデックスまたは列ストア インデックス内のデータにアクセスする際に、並列プランを SQL 相互運用モードで使用できます。  
   
-<a id="supportability" class="xliff"></a>
-
-### サポート性  
+### <a name="supportability"></a>サポート性  
  次に、列ストア用の新しいシステム ビューを示します。  
   
 -   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
@@ -154,9 +140,7 @@ ms.lasthandoff: 06/29/2017
   
 -   [sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)  
   
-<a id="limitations" class="xliff"></a>
-
-### 制限事項  
+### <a name="limitations"></a>制限事項  
   
 -   クラスター化列ストア インデックスに対して B ツリー インデックスが定義されている場合、MERGE は無効になります。  
   
@@ -164,9 +148,7 @@ ms.lasthandoff: 06/29/2017
   
 -   インメモリ テーブルの場合、列ストア インデックスに対するクエリは相互運用モードでのみ実行され、インメモリ ネイティブ モードでは実行されません。 並列実行がサポートされています。  
   
-<a id="sql-server-2014" class="xliff"></a>
-
-## SQL Server 2014  
+## <a name="sql-server-2014"></a>SQL Server 2014  
  SQL Server 2014 では、プライマリ ストレージ形式として、クラスター化列ストア インデックスが導入されました。 これにより、通常の読み込みに加えて、更新、削除、および挿入の操作が可能になりました。  
   
 -   テーブルでは、プライマリ テーブル ストレージとしてクラスター化列ストア インデックスを使用できます。 テーブルで他のインデックスは使用できません。ただし、クラスター化列ストア インデックスは更新できるため、通常の読み込みを実行し、個々の行に変更を加えることができます。  
@@ -179,9 +161,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Scan、Filter、Project、Join、Group By、Union All の各演算子は、マルチ スレッド クエリではバッチ モードで実行されます。  
   
-<a id="sql-server-2012" class="xliff"></a>
-
-## SQL Server 2012  
+## <a name="sql-server-2012"></a>SQL Server 2012  
  SQL Server 2012 では、行ストア テーブルに対するもう 1 つのインデックス型としての非クラスター化列ストア インデックスと、列ストア データに対するクエリのバッチ処理が導入されました。  
   
 -   行ストア テーブルでは、非クラスター化列ストア インデックスを 1 つ使用することができます。  
@@ -192,9 +172,7 @@ ms.lasthandoff: 06/29/2017
   
 -   バッチ処理は、クエリのパフォーマンスを 2 倍以上向上させますが、並列クエリの実行でしか利用できません。  
   
-<a id="see-also" class="xliff"></a>
-
-## 参照  
+## <a name="see-also"></a>参照  
  列ストア インデックス ガイド   
  列ストア インデックス データの読み込み   
  [列ストア インデックスのクエリ パフォーマンス](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
