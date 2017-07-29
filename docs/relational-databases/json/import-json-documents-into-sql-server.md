@@ -13,7 +13,7 @@ ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
 ms.openlocfilehash: 1c842fde925e89901971a525c3e171ffce050269
@@ -79,13 +79,13 @@ END
 
     コマンドの構文を次に示します。
 
-    ```
+    ```dos
     net use [drive letter] \\[storage name].file.core.windows.net\[share name] /u:[storage account name] [storage account access key]
     ```
 
     ローカル ドライブ文字を割り当てる例を次に示します`T:`Azure File Storage 共有。
 
-    ```
+    ```dos
     net use t: \\mystorage.file.core.windows.net\sharejson /u:myaccount hb5qy6eXLqIdBj0LvGMHdrTiygkjhHDvWjUZg3Gu7bubKLg==
     ```
 
@@ -141,7 +141,7 @@ SELECT value
 ### <a name="example-2"></a>例 2
 OPENROWSET は 1 つのテキスト値をファイルから読み取り、BulkColumn として返し、OPENJSON 関数に渡します。 OPENJSON は BulkColumn 配列内の JSON オブジェクトの配列を反復処理し、JSON として書式設定、各行に 1 つの書籍を返します。
 
-```
+```json
 {"id":"978-0641723445″, "cat":["book","hardcover"], "name":"The Lightning Thief", … 
 {"id":"978-1423103349″, "cat":["book","paperback"], "name":"The Sea of Monsters", … 
 {"id":"978-1857995879″, "cat":["book","paperback"], "name":"Sophie’s World : The Greek … 
@@ -166,7 +166,8 @@ SELECT book.*
 978-0641723445|The Lightning Thief|12.5|384|Rick Riordan| 
 978-1423103349|The Sea of Monsters|6.49|304|Rick Riordan| 
 978-1857995879|Sophie’s World : The Greek Philosophers|3.07|64|Jostein Gaarder| 
-978-1933988177|Lucene in Action, Second Edition|30.5|475|Michael McCandless| 
+978-1933988177|Lucene in Action, Second Edition|30.5|475|Michael McCandless|
+||||||
 
 このテーブルをユーザーに返したり、データを別のテーブルに読み込んだりすることができます。
 
