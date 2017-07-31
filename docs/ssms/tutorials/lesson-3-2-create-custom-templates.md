@@ -20,11 +20,11 @@ caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: 7472e4f1f5284dcae032b057fc6d9d0caf3660b8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="lesson-3-2---create-custom-templates"></a>レッスン 3-2 - カスタム テンプレートの作成
@@ -111,7 +111,7 @@ ms.lasthandoff: 06/23/2017
   
 4.  **[テンプレート パラメーターの値の指定]** ダイアログ ボックスで、 **product_name** の値として「 **FreeWheel** 」と入力します (既定の内容を上書きします)。次に、 **[OK]** をクリックして **[テンプレート パラメーターの値の指定]** ダイアログ ボックスを閉じ、クエリ エディターのスクリプトを更新します。  
   
-5.  F5 キーを押してクエリを実行し、プロシージャを作成します。  
+5.  F5&lt;/localizedText&gt; キーを押してクエリを実行し、プロシージャを作成します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
 [プロジェクトまたはソリューションとしてスクリプトを保存する](../../tools/sql-server-management-studio/lesson-3-3-save-scripts-as-projects-or-solutions.md)  

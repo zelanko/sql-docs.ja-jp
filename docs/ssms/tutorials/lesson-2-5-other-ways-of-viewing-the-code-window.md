@@ -16,11 +16,11 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: 5977d22f769e8edc3244cdd64ed7a4cd75684a62
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="lesson-2-5---other-ways-of-viewing-the-code-window"></a>レッスン 2-5 - コード ウィンドウを表示するその他の方法
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/23/2017
 5.  2 番目および 3 番目のクエリ ウィンドウを閉じます。  
   
 > [!NOTE]  
-> クエリ エディターを全画面モードで表示するには、クエリ エディター ウィンドウ内をクリックし、Shift + Alt + Enter キーを押します。  
+> クエリ エディターを全画面モードで表示するには、クエリ エディター ウィンドウ内をクリックし、&lt;localizedText&gt;Shift&lt;/localizedText&gt; + &lt;localizedText&gt;Alt&lt;/localizedText&gt; + &lt;localizedText&gt;Enter&lt;/localizedText&gt; キーを押します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
 [テーブルのスクリプト作成](../../tools/sql-server-management-studio/lesson-2-6-script-a-table.md)  
