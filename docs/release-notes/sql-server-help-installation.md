@@ -16,24 +16,20 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 caps.latest.revision: 8
 author: sabotta
 ms.author: carlasab
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
 ms.openlocfilehash: ca52d53cf25fa0ead6abd9b870f4d8dab424d11a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="help-viewer-and-offline-content-for-sql-server" class="xliff"></a>
-
-# SQL Server のヘルプ ビューアーとオフライン コンテンツ
+# <a name="help-viewer-and-offline-content-for-sql-server"></a>SQL Server のヘルプ ビューアーとオフライン コンテンツ
   
   
   
 この記事では、ヘルプ ビューアーをインストールして SQL Server のドキュメントをオフラインで表示する方法を説明します。 この記事の対象は、[!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]、SQL Server 2016、SQL Server 2017 のドキュメントです。 
 
-<a id="install-help-viewer" class="xliff"></a>
-
-## ヘルプ ビューアーをインストールする
+## <a name="install-help-viewer"></a>ヘルプ ビューアーをインストールする
 次の表では、SQL Server のバージョンごとにヘルプ ビューアーをインストールするツールを示します。 ヘルプ ビューアーをインストールするには、いずれかのツールをインストールします。
 
 
@@ -56,9 +52,7 @@ ms.lasthandoff: 06/28/2017
 > [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 用のローカル ヘルプは、**ディスクからコンテンツをインストール**した場合に限り、ヘルプ ビューアー 2.x で表示できます。 
 
 
-<a id="sql-server-2016-sql-server-2017-offline-content" class="xliff"></a>
-
-## SQL Server 2016、SQL Server 2017 のオフライン コンテンツ  
+## <a name="sql-server-2016-sql-server-2017-offline-content"></a>SQL Server 2016、SQL Server 2017 のオフライン コンテンツ  
  
 **オフライン コンテンツをインストールするには**  
 1. SQL Server Management Studio または Visual Studio を起動し、**[ヘルプ]** メニューの **[ヘルプ コンテンツの追加と削除]** をクリックして、ヘルプ ビューアーを開きます。  
@@ -85,9 +79,7 @@ ms.lasthandoff: 06/28/2017
    >[!IMPORTANT]
    > 移動操作が失敗したことを示すメッセージが表示された場合は、メッセージ ボックスを閉じ、ヘルプ ビューアーを閉じた後、ヘルプ ビューアーを再度開きます。 **[ローカル ストア パス]** に、コンテンツの新しい場所が表示されます。   
  
-<a id="includesssql14mdincludessssql14-mdmd-offline-content" class="xliff"></a>
-
-## [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] のオフライン コンテンツ 
+## <a name="includesssql14mdincludessssql14-mdmd-offline-content"></a>[!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] のオフライン コンテンツ 
  
   
 **オフライン コンテンツをインストールするには**  
@@ -118,9 +110,7 @@ ms.lasthandoff: 06/28/2017
   
     ![HelpViewer1_withContentInstalled_ZoomedIn](../release-notes/media/helpviewer1-withcontentinstalled-zoomedin.png)  
   
-<a id="view-online-content-in-help-viewer" class="xliff"></a>
-
-## ヘルプ ビューアーでオンライン コンテンツを表示する
+## <a name="view-online-content-in-help-viewer"></a>ヘルプ ビューアーでオンライン コンテンツを表示する
 
 ヘルプ ビューアー v2.x では、次のいずれかの方法でオンライン コンテンツを表示できます。
 
@@ -140,17 +130,13 @@ ms.lasthandoff: 06/28/2017
 
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../release-notes/media/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
 
-<a id="f1-help-and-other-tips" class="xliff"></a>
-
-## F1 ヘルプおよびその他のヒント
+## <a name="f1-help-and-other-tips"></a>F1 ヘルプおよびその他のヒント
 
 F1 キーを押すと、対応するトピックがオンラインで表示されます。 このトピックはローカル ヘルプでは表示できません。
 
 また、ヘルプ ビューアーは、プロキシ設定および ISO 形式をサポートしていません。 
 
 
-<a id="additional-information" class="xliff"></a>
-
-## 関連情報
+## <a name="additional-information"></a>関連情報
 [Microsoft ヘルプ ビューアー - Visual Studio 2015](https://msdn.microsoft.com/library/hh580782.aspx)
 
