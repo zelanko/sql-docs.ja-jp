@@ -17,11 +17,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b468f44444a9c6cc031ea892f44849db401e0ab7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="indexes-for-memory-optimized-tables"></a>メモリ最適化テーブルのインデックス
@@ -223,7 +223,7 @@ SQL UPDATE ステートメントでメモリ最適化テーブルのデータが
   
 | 操作 | メモリ最適化、 <br/> ハッシュ | メモリ最適化、 <br/> 非クラスター化 | ディスク ベース、 <br/> (非) クラスター化 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
-| インデックス スキャン、すべてのテーブルの行を取得する。 | はい | はい | はい |  
+| インデックス スキャン、すべてのテーブルの行を取得する。 | はい | 可 | はい |  
 | 等値述語 (=) でのインデックス シーク。 | はい <br/> (フル キーが必要です。) | はい  | はい |  
 | 非等値述語と範囲述語でのインデックス シーク  <br/> (>, <, <=, >=, BETWEEN)。 | いいえ <br/> (インデックス スキャンが実行される) | はい | はい |  
 | インデックス定義と一致する行を並べ替え順序で取得する。 | いいえ | はい | はい |  

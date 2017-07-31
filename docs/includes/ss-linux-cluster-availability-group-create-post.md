@@ -7,7 +7,7 @@
 CREATE DATABASE [db1];
 ALTER DATABASE [db1] SET RECOVERY FULL;
 BACKUP DATABASE [db1] 
-   TO DISK = N'var/opt/mssql/data/db1.bak';
+   TO DISK = N'/var/opt/mssql/data/db1.bak';
 ```
 
 SQL Server のプライマリ レプリカで実行をという名前のデータベースを追加する次の TRANSACT-SQL`db1`を可用性グループと呼ばれる`ag1`です。

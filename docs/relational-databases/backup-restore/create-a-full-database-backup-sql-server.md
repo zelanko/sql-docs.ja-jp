@@ -19,18 +19,18 @@ caps.latest.revision: 63
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
 ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>データベースの完全バックアップの作成 (SQL Server)
 
  > SQL Server 2014 の場合は、「[データベースの完全バックアップの作成 (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx)」を参照してください。
 
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、または PowerShell を使用して、データベースの完全バックアップを作成する方法について説明します。  
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、または PowerShell を使用して、データベースの完全バックアップを作成する方法について説明します。  
   
 >  Azure BLOB ストレージ サービスへの SQL Server のバックアップについては、「[Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」および「[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。  
   
@@ -68,9 +68,9 @@ ms.lasthandoff: 06/23/2017
   
 ### <a name="back-up-a-database"></a>データベースをバックアップする  
   
-1.  **オブジェクト エクスプローラー**で適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]で適切な **[!INCLUDE[ssDEnoversion](../Token/ssDEnoversion_md.md)]**のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
   
-2.  **[データベース]** を展開し、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。  
+2.  **[データベース]**を展開し、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。  
   
 3.  データベースを右クリックして **[タスク]**をポイントし、 **[バックアップ]**をクリックします。 **[データベースのバックアップ]** ダイアログ ボックスが表示されます。  
 
@@ -259,14 +259,14 @@ ms.lasthandoff: 06/23/2017
   
      BACKUP DATABASE *database*  
   
-     TO *backup_device* [ **,**...*n* ]  
+     TO *backup_device* [ **、**...*n* ]  
   
      [ WITH *with_options* [ **,**...*o* ] ] ;  
   
     |オプション|[説明]|  
     |------------|-----------------|  
     |*database*|バックアップするデータベースです。|  
-    |*backup_device* [ **,**...*n* ]|バックアップ操作に使用する 1 ～ 64 個のバックアップ デバイスの一覧を指定します。 物理バックアップ デバイスを指定したり、対応する論理バックアップ デバイス (既に定義されている場合) を指定したりできます。 物理バックアップ デバイスを指定するには、DISK オプションまたは TAPE オプションを使用します。<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 詳細については、「[バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。|  
+    |*backup_device* [ **、**...*n* ]|バックアップ操作に使用する 1 ～ 64 個のバックアップ デバイスの一覧を指定します。 物理バックアップ デバイスを指定したり、対応する論理バックアップ デバイス (既に定義されている場合) を指定したりできます。 物理バックアップ デバイスを指定するには、DISK オプションまたは TAPE オプションを使用します。<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 詳細については、「[バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。|  
     |WITH *with_options* [ **,**...*o* ]|必要に応じて、1 つ以上の追加オプション ( *o*) を指定します。 基本的な with オプションについては、手順 2. を参照してください。|  
   
 2.  必要に応じて、1 つ以上の WITH オプションを指定します。 ここでは、一部の基本的な WITH オプションについて説明します。 すべての WITH オプションについては、「 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)」を参照してください。  

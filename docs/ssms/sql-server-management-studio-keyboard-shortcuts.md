@@ -24,11 +24,11 @@ caps.latest.revision: 82
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: 599b4967bce7c87eda5be0509ed1f9145d39ac92
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio のキーボード ショートカット
@@ -106,8 +106,8 @@ ms.lasthandoff: 06/23/2017
 |カーソルを下に移動する|下方向キー|下方向キー|  
 |カーソルを行の先頭に移動する|Home|Home|  
 |カーソルを行の末尾に移動する|END|END|  
-|カーソルをドキュメントの先頭に移動する|Ctrl + Home|Ctrl + Home|  
-|カーソルをドキュメントの末尾に移動する|Ctrl + End|Ctrl + End|  
+|カーソルをドキュメントの先頭に移動する|Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;Home|Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;Home|  
+|カーソルをドキュメントの末尾に移動する|Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;End|Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;End|  
 |カーソルを 1 画面上に移動する|PageUp|PageUp|  
 |カーソルを 1 画面下に移動する|PageDown|PageDown|  
 |カーソルを 1 ワード右に移動する|Ctrl + →|Ctrl + →|  
@@ -123,10 +123,10 @@ ms.lasthandoff: 06/23/2017
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |カーソルからドキュメントの先頭までのテキストを選択する|Ctrl + Shift + Home|Ctrl + Shift + Home|  
-|カーソルからドキュメントの末尾までのテキストを選択する|Ctrl + Shift + End|Ctrl + Shift + End|  
-|カーソルから現在の行の先頭までのテキストを選択する|Shift + Home|Shift + Home|  
+|カーソルからドキュメントの末尾までのテキストを選択する|Ctrl</localizedText> + <localizedText>Shift</localizedText> + <localizedText>End|Ctrl</localizedText> + <localizedText>Shift</localizedText> + <localizedText>End|  
+|カーソルから現在の行の先頭までのテキストを選択する|Shift</localizedText> + <localizedText>Home|Shift</localizedText> + <localizedText>Home|  
 |カーソルを現在の行の先頭に移動し、列選択範囲を拡大する|Shift + Alt + Home|該当するショートカットはありません|  
-|カーソルから現在の行の末尾までのテキストを選択する|Shift + End|Shift + End|  
+|カーソルから現在の行の末尾までのテキストを選択する|Shift</localizedText> + <localizedText>End|Shift</localizedText> + <localizedText>End|  
 |カーソルを行の末尾に移動し、列選択範囲を拡大する|Shift + Alt + End|該当するショートカットはありません|  
 |カーソル位置から下へテキストを 1 行ずつ選択する|Shift + ↓|Shift + ↓|  
 |カーソルを 1 行下に移動し、列選択範囲を拡大する|Shift + Ctrl + Shift + Del||  
@@ -292,8 +292,8 @@ ms.lasthandoff: 06/23/2017
 |すべて中断する|Ctrl + Alt + Break|Ctrl + Alt + Break|  
 |関数でブレークする|Ctrl + B|該当するショートカットはありません|  
 |**[ウォッチ 1]** ウィンドウを表示する|Ctrl + Alt + W、1|該当するショートカットはありません|  
-|**[ウォッチ 2]** ウィンドウを表示する|Ctrl + Alt + W、2|Ctrl + Alt + W、1|  
-|**[ウォッチ 3]** ウィンドウを表示する|Ctrl + Alt + W、3|Ctrl + Alt + W、3|  
+|**[ウォッチ 2]** ウィンドウを表示する|Ctrl</localizedText> + <localizedText>Alt</localizedText> + <localizedText>W</localizedText>、<localizedText>2|Ctrl + Alt + W、1|  
+|**[ウォッチ 3]** ウィンドウを表示する|Ctrl</localizedText> + <localizedText>Alt</localizedText> + <localizedText>W</localizedText>、<localizedText>3|Ctrl</localizedText> + <localizedText>Alt</localizedText> + <localizedText>W</localizedText>、<localizedText>3|  
 |**[ウォッチ 4]** ウィンドウを表示する|Ctrl + Alt + W、4|Ctrl + Alt + W、4|  
 |**[自動変数]** ウィンドウを表示する|Ctrl + Alt + V、A|Ctrl + Alt + V、A|  
 |**[ローカル]** ウィンドウを表示する|Ctrl + Alt + V、L|Ctrl + Alt + V、L|  
