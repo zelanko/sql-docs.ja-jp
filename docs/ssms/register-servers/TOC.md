@@ -3,7 +3,7 @@
 # アクション
 ## [接続済みのサーバーの登録 (SQL Server Management Studio)](register-a-connected-server-sql-server-management-studio.md)  
 ## [新しい登録済みサーバーの作成 (SQL Server Management Studio)](create-a-new-registered-server-sql-server-management-studio.md)  
-## [SQL Server Management Studio で登録済みサーバーを表示する](view-registered-servers-in-sql-server-management-studio.md)  
+## [SQL Server Management Studio で登録済みサーバーを表示する方法](view-registered-servers-in-sql-server-management-studio.md)  
 ## [登録済みサーバーの削除 (SQL Server Management Studio)](remove-a-registered-server-sql-server-management-studio.md)  
 ## [サーバーの登録の変更 (SQL Server Management Studio)](change-a-server-s-registration-sql-server-management-studio.md)  
 ## [登録済みサーバーへの接続 (SQL Server Management Studio)](connect-to-a-registered-server-sql-server-management-studio.md)  

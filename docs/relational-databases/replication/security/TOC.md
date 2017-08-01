@@ -5,7 +5,7 @@
 ## [レプリケーションのログインとパスワードの管理](manage-logins-and-passwords-in-replication.md)  
 ## [セキュリティで保護された開発](secure-development-replication.md)  
 ## [レプリケーション エージェントのセキュリティ モデル](replication-agent-security-model.md)  
-## [レプリケーションのセキュリティ ロール要件](security-role-requirements-for-replication.md)  
+## [Security Role Requirements for Replication](security-role-requirements-for-replication.md)  
 ## [レプリケーション セキュリティの推奨事項](replication-security-best-practices.md)  
 # [セキュリティで保護された配置](secure-deployment-replication.md)  
 ## [ディストリビューターのセキュリティ保護](secure-the-distributor.md)  

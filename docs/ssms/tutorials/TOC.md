@@ -1,7 +1,7 @@
 # [チュートリアル: SQL Server Management Studio](tutorial-sql-server-management-studio.md)  
 
 # レッスン
-## [レッスン 1: SQL Server Management Studio での基本操作](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
+## [レッスン 1 : SQL Server Management Studio での基本操作](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
 ### [レッスン 1-1 - SQL Server Management Studio の起動](lesson-1-1-start-sql-server-management-studio.md)  
 ### [レッスン 1-2 - 登録済みサーバーおよびオブジェクト エクスプローラーを使用した接続](lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
 ### [レッスン 1-3 - 環境レイアウトの変更](lesson-1-3-change-the-environment-layout.md)  
