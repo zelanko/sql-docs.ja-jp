@@ -7,7 +7,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 733d1495b9dbe1ad5c7028df3b8d28884d6cebf3
 ms.openlocfilehash: 160ac8567e3a74738da5083d67f8c8015cf19c16
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 
@@ -282,7 +282,7 @@ ms.lasthandoff: 07/20/2017
                                                     <li><a href="/azure/storage/storage-use-azcopy">AZCopy</a></li>
                                                     <li><a href="/azure/storage/storage-import-export-service">インポート/エクスポート サービス</a></li>
                                                     <li>
-                                                        <a href="/sql/integration-services/sql-server-integration-services"> SQL Server Integration Services (SSIS)</a>
+                                                        <a href="/sql/integration-services/sql-server-integration-services"> SQL Server Integration Services (SSIS) </a>
                                                     </li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Azure Data Lake Store に移動する</h4>
@@ -412,7 +412,7 @@ ms.lasthandoff: 07/20/2017
                                                     <li><a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-desktop-get-the-desktop/">Power BI Desktop</a></li>
                                                     <li><a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/">Power BI モバイル アプリ</a></li>
                                                     <li><a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-developer-overview-of-power-bi-rest-api/">Power BI デベロッパー</a></li>
-                                                    <li><a href="https://powerbi.microsoft.com/en-us/documentation/reportserver-get-started/">Power BI のレポート サーバー</a></li>
+                                                    <li><a href="https://powerbi.microsoft.com/en-us/documentation/reportserver-get-started/">Power BI レポート サーバー</a></li>
                                                 </ul>
                                             </div>
                                         </div>
