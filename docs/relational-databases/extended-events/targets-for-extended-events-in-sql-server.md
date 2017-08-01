@@ -15,11 +15,11 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f61a7661093216f4aae6ebf71b9d7159200e5dbd
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントのターゲット
@@ -744,7 +744,7 @@ SELECT
 
 
 (E)
-- この CROSS APPLY  句は、name= 属性が "lock_acquired" であるすべての &#x3c;event&#x3e; 要素を個別に反復処理します。
+- この CROSS APPLY 句は、name= 属性が "lock_acquired" であるすべての &#x3c;event&#x3e; 要素を個別に反復処理します。
 - これは、上の FROM 句から返された XML に対して行われます。
 
 

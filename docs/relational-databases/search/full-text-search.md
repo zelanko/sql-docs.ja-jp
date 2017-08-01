@@ -20,17 +20,13 @@ ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8df15a6d8f9875fbecf9e14fcdae51d37c7154fe
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="full-text-search" class="xliff"></a>
-
-# フルテキスト検索
+# <a name="full-text-search"></a>フルテキスト検索
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] のフルテキスト検索は、ユーザーおよびアプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルの文字ベースのデータに対してフルテキスト クエリを実行できるようにします。
   
-<a id="basic-tasks" class="xliff"></a>
-
-## 基本的なタスク
+## <a name="basic-tasks"></a>基本的なタスク
 このトピックでは、フルテキスト検索の概要とそのコンポーネントおよびアーキテクチャについて説明します。 すぐに使い始めたい場合は、この基本的なタスクを参照してください。
 -   [フルテキスト検索の概要](../../relational-databases/search/get-started-with-full-text-search.md)
 -   [フルテキスト カタログの作成と管理](../../relational-databases/search/create-and-manage-full-text-catalogs.md)
@@ -41,9 +37,7 @@ ms.lasthandoff: 07/10/2017
 > [!NOTE]
 > Full-Text Search is an optional component of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンのオプションのコンポーネントです。 SQL Server をインストールしたときにフルテキスト検索を選択しなかった場合は、SQL Server セットアップを再実行して追加します。
 
-<a id="overview" class="xliff"></a>
-
-## 概要
+## <a name="overview"></a>概要
 フルテキスト インデックスには、テーブルの 1 つ以上の文字ベースの列が含まれます。 これらの列のデータ型は、**char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml**、または **varbinary (max)** のいずれかおよび **FILESTREAM** です。 各フルテキスト インデックスによってテーブルの 1 つ以上の列にインデックスが設定され、列ごとに特定の言語を使用できます。  
   
  フルテキスト クエリでは、英語や日本語などの特定の言語の規則に基づいて語や句を操作することにより、フルテキスト インデックス内のテキスト データに対して言語検索を実行できます。 フルテキスト クエリには、単純な語や句、または複数の形式の語や句を含めることができます。 フルテキスト クエリでは、1 つ以上の一致 ( *ヒット*とも呼ばれます) が含まれているすべてのドキュメントが返されます。 一致は、フルテキスト クエリに指定されたすべての語句が対象のドキュメントに含まれていて、その他の検索条件 (一致する語句間の距離など) を満たしているときに、発生します。    
@@ -152,9 +146,7 @@ ms.lasthandoff: 07/10/2017
 ###  <a name="querying"></a> フルテキスト クエリのプロセス  
  クエリ プロセッサは、処理を行うためにクエリのフルテキストの一部を Full-Text Engine に送ります。 Full-Text Engine は、単語区切りと、必要に応じて、類義語の拡張、語幹への分割、ストップワード (ノイズ ワード) の処理を実行します。 次に、クエリのフルテキストの一部を SQL 演算子の形式で、主にストリーミング テーブル値関数 (STVF) として表現します。 クエリの実行中、STVF は正しい結果を取り出すために逆インデックスにアクセスします。 結果は、この時点でクライアントに戻されるか、さらに処理を加えてからクライアントに戻されます。  
 
-<a id="full-text-index-architecture" class="xliff"></a>
-
-## フルテキスト インデックスのアーキテクチャ
+## <a name="full-text-index-architecture"></a>フルテキスト インデックスのアーキテクチャ
   フルテキスト インデックスの情報は、特定の単語や単語の組み合わせをすばやく検索できるフルテキスト クエリをコンパイルするために Full-Text Engine で使用されます。 フルテキスト インデックスには、データベース テーブルの 1 つ以上の列の重要な語およびその場所に関する情報が保存されます。 フルテキスト インデックスは、Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]により構築および管理されるトークンベースの特殊な機能インデックスです。 フルテキスト インデックスの作成手順は、他のタイプのインデックスの作成手順とは異なります。 特定の行に格納された値に基づいて B ツリー構造を作成するのではなく、Full-Text Engine は、インデックスを作成するテキストの個々のトークンに基づいて、反転、スタック、および圧縮されたインデックス構造を作成します。  フルテキスト インデックスのサイズを制限する要因となるのは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターで使用できるメモリ リソースのみです。  
   
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降では、フルテキスト インデックスはデータベース エンジンと統合されており、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のようにファイル システムには格納されません。 新しいデータベースでは、フルテキスト カタログは、ファイル グループに属さない仮想オブジェクトです。これは、フルテキスト インデックスのグループを指す論理的概念に過ぎません。 ただし、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースをアップグレードする場合は、データ ファイルを含むフルテキスト カタログの新しいファイル グループが作成されます。詳細については、「 [フルテキスト検索のアップグレード](../../relational-databases/search/upgrade-full-text-search.md)」を参照してください。  
@@ -240,9 +232,7 @@ ms.lasthandoff: 07/10/2017
 |アセンブリ|1|2|6|  
 |3|1|2|7|  
 
-<a id="differences-between-full-text-indexes-and-regular-sql-server-indexes" class="xliff"></a>
-
-### フルテキスト インデックスと標準の SQL Server インデックスの違い:  
+### <a name="differences-between-full-text-indexes-and-regular-sql-server-indexes"></a>フルテキスト インデックスと標準の SQL Server インデックスの違い:  
   
 |フルテキスト インデックス|標準の SQL Server インデックス|  
 |------------------------|--------------------------------|  

@@ -14,11 +14,11 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
 ms.openlocfilehash: 0d112912b35e05e5e96ec43cf6bc5f7caee21bf4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>PowerShell を使用して Always Encrypted キーの構成
@@ -38,7 +38,7 @@ Always Encrypted に SqlServer PowerShell を使用する方法については�
 プレーンテキストまたはキー ストアへのアクセス (下の表の **[プレーンテキストのキー/キー ストアへのアクセス]** 列で確認) を含む手順を実行する前に、データベースをホストしているコンピューターとは別の安全なコンピューターで PowerShell 環境が実行されていることを確認してください。 詳細については、「 ***キー管理でのセキュリティに関する考慮事項***」を参照してください。
 
 
-タスク  |[アーティクル]  |[プレーンテキストのキー/キー ストアへのアクセス]  |データベースへのアクセス   
+タスク  |[アーティクル]  |プレーンテキストのキー/キー ストアへのアクセス  |データベースへのアクセス   
 ---------|---------|---------|---------
 手順 1. キー ストアで列マスター キーを作成します。<br><br>**注:** SqlServer PowerShell モジュールでは、この手順はサポートされていません。 コマンドラインからこのタスクを実行するには、選択したキー ストアに固有のツールを使用します。 |[列マスター キーを作成して保存する (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | はい | いいえ     
 手順 2.  PowerShell 環境を起動し、SqlServer の PowerShell モジュールをインポートします。  |   [PowerShell を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   |    いいえ    | いいえ         
@@ -192,7 +192,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 詳細については、「 [キー管理でのセキュリティに関する考慮事項](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)」を参照してください。
 
 
-タスク  |[アーティクル]  |[プレーンテキストのキー/キー ストアへのアクセス]  |データベースへのアクセス  
+タスク  |[アーティクル]  |プレーンテキストのキー/キー ストアへのアクセス  |データベースへのアクセス  
 ---------|---------|---------|---------
 手順 1. キー ストアで列マスター キーを作成します。<br><br>**注:** SqlServer モジュールでは、この手順はサポートされていません。 コマンドラインからこのタスクを実行するには、キー ストアの種類に固有のツールを使用する必要があります。     | [列マスター キーを作成して保存する (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    はい    | いいえ 
 手順 2.  PowerShell セッションを起動し、SqlServer のモジュールをインポートします。      |     [SqlServer モジュールのインポート](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule)     | いいえ | いいえ         

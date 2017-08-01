@@ -17,16 +17,14 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
 ms.openlocfilehash: 171f33aa7ff745b8a66efe2cd5f3879d78b1c9f4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="query-store-usage-scenarios" class="xliff"></a>
-
-# クエリ ストアの使用シナリオ
+# <a name="query-store-usage-scenarios"></a>クエリ ストアの使用シナリオ
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   クエリ ストアは、予測可能なワークロードのパフォーマンスの追跡と確保が重要である幅広いシナリオで使用できます。 考慮できるいくつかの例を次に示します。  
@@ -41,9 +39,7 @@ ms.lasthandoff: 06/22/2017
   
 -   アドホック ワークロードを識別して改善する  
   
-<a id="pinpoint-and-fix-queries-with-plan-choice-regressions" class="xliff"></a>
-
-## プランの選択による後退が発生しているクエリを特定して修正する  
+## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>プランの選択による後退が発生しているクエリを特定して修正する  
  通常のクエリの実行中に、重要な入力が変わったためにクエリ オプティマイザーが別のプランを採用することを決定する場合があります (データ量の変化やインデックスの作成、変更、破棄、統計の更新など)。選択される新しいプランの大部分は、前に使用されていたプランよりも優れているか、同程度のパフォーマンスを提供します。 ただし、新しいプランでパフォーマンスが大幅に低下することがあります。この状況をプランの選択変更による後退と呼びます。 クエリ ストアが導入される前は、これは、識別して修正することが非常に難しい問題でした。その理由は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、使用されていた実行プランをユーザーが調べるための組み込みのデータ ストアが提供されていなかったためです。  
   
  クエリ ストアを使って、次に示す操作を短時間で実行できます。  
@@ -58,9 +54,7 @@ ms.lasthandoff: 06/22/2017
   
  このシナリオの詳細な説明については、「 [Query Store: A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) 」(クエリ ストア: データベースのためのフライト データ レコーダー) ブログを参照してください。  
   
-<a id="identify-and-tune-top-resource-consuming-queries" class="xliff"></a>
-
-## リソースを大量に消費しているクエリを識別して調整する  
+## <a name="identify-and-tune-top-resource-consuming-queries"></a>リソースを大量に消費しているクエリを識別して調整する  
  ワークロードで数千のクエリが生成される可能性がありますが、通常は少数のクエリのみがシステム リソースの大半を実際に使用しています。このため、そのような少数のクエリに注目する必要があります。 ほとんどの場合、リソースを大量に消費しているクエリの中から、後退しているクエリか、調整を行うことで改善できるクエリを見つけることができます。  
   
  調査を開始する最も簡単な方法は、 **で** [Top Resource Consuming Queries] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)](上位リソース消費クエリ) を開くことです。 ユーザー インターフェイスは、次の 3 つのウィンドウに分かれています。上位リソース消費クエリを表すヒストグラム (左側)、選択したクエリで使用されたプランの概要 (右側)、および選択したプランの視覚化されたクエリ プラン (下部)。 分析するクエリの数と関心のある期間を制御するには、 **[構成]** ボタンをクリックします。 異なるリソース消費ディメンション (期間、CPU、メモリ、IO、実行回数) とベースライン (平均、最小、最大、合計、標準偏差) も選択できます。  
@@ -81,9 +75,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  高コストのクエリの書き直しを検討します。 たとえば、クエリのパラメーター化を利用して、動的 SQL の使用率を下げます。 データを読み取るときに最適なロジックを実装します (アプリケーション側ではなく、データベース側でデータのフィルター処理を適用します)。  
   
-<a id="ab-testing" class="xliff"></a>
-
-## A/B テストを実行する  
+## <a name="ab-testing"></a>A/B テストを実行する  
  クエリ ストアを使用して、予定しているアプリケーションの変更の導入前と導入後のワークロードのパフォーマンスを比較します。 次の一覧は、クエリ ストアを使用して、環境またはアプリケーションの変更がワークロードのパフォーマンスに与える影響を評価できるさまざまな例を示しています。  
   
 -   新しいアプリケーションのバージョンのロールアウト。  
@@ -143,9 +135,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  クエリ ストアを使って、分析と後退の修正を行います。大部分の新しいクエリ オプティマイザーの変更はより適切なプランを生成します。 ただし、クエリ ストアでは、簡単な方法でプランの選択による後退を特定し、プラン強制実行メカニズムを使用してそれらを修正できます。  
   
-<a id="identify-and-improve-ad-hoc-workloads" class="xliff"></a>
-
-## アドホック ワークロードを識別して改善する  
+## <a name="identify-and-improve-ad-hoc-workloads"></a>アドホック ワークロードを識別して改善する  
  一部のワークロードには、アプリケーション全体のパフォーマンスを向上させるために調整できる支配的なクエリはありません。 通常、これらのワークロードは、それぞれがシステムリソースの一部を消費する、比較的多数の異なるクエリに分類されます。 これらのクエリは非常にまれに実行される一意のクエリである (通常は 1 回のみ実行されます。このためアドホックという名前がついています) ため、それらのランタイム消費は重要ではありません。 一方で、アプリケーションが常に新しいクエリを生成する場合、システム リソースのかなりの部分がクエリのコンパイルで消費され、これは最適な状況ではありません。 このような状況はクエリ ストアにとって理想的ではなく、大量のクエリとプランが予約済みの領域に殺到した場合、クエリ ストアが非常に短時間で読み取り専用モードに至る可能性があることを意味します。 **サイズ ベース クリーンアップ ポリシー** がアクティブな場合 (クエリ ストアを常に稼働させるために[強くお勧めします](https://msdn.microsoft.com/library/mt604821.aspx) )、バックグラウンド プロセスによってほぼ常にクエリ ストア構造がクリーンアップされますが、この動作もシステム リソースを大幅に消費します。  
   
  **[リソースを消費するクエリの上位]** ビューに、ワークロードのアドホックな性質の最初の兆候が表示されます。  
@@ -231,9 +221,7 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
     (OPERATION_MODE = READ_WRITE, QUERY_CAPTURE_MODE = AUTO);  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 参照  
+## <a name="see-also"></a>参照  
  [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   

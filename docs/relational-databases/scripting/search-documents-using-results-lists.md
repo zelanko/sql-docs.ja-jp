@@ -19,21 +19,17 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a63ced363f4aee6ece4481f7b89b0ab195b82019
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="search-documents-using-results-lists" class="xliff"></a>
-
-# 結果一覧を使用してドキュメントを検索する方法
+# <a name="search-documents-using-results-lists"></a>結果一覧を使用してドキュメントを検索する方法
   **[検索と置換]** ダイアログ ボックスでは、プロジェクト内、ソリューション内、ファイル システム フォルダー内のすべてのファイルを対象にしてテキストの検索と置換を実行できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で開いていないファイルも対象になります。 **[検索と置換]** ダイアログ ボックスで実行した検索の一致項目は、[検索結果 1] ウィンドウと [検索結果 2] ウィンドウに表示されるので、一致項目を含んだ行のテキストを実際に確認できます。  
   
-<a id="to-search-in-multiple-files" class="xliff"></a>
-
-### 複数のファイルで検索を実行するには  
+### <a name="to-search-in-multiple-files"></a>複数のファイルで検索を実行するには  
   
 1.  **[編集]** メニューの **[検索と置換]** をポイントし、 **[フォルダーを指定して検索]**をクリックします。  
   
@@ -49,9 +45,7 @@ ms.lasthandoff: 06/22/2017
   
  既定では、[検索結果 1] ウィンドウに検索の一致項目が表示されます。 検索の一致項目を確認するには、[検索結果 1] ウィンドウ内の各項目をダブルクリックします。 検索結果を新しいウィンドウに表示するには、 **[検索結果 2 ウィンドウ]**を選択します。  
   
-<a id="to-replace-across-multiple-files-or-folders" class="xliff"></a>
-
-#### 複数のファイルまたはフォルダーで置換を実行するには  
+#### <a name="to-replace-across-multiple-files-or-folders"></a>複数のファイルまたはフォルダーで置換を実行するには  
   
 1.  **[編集]** メニューの **[検索と置換]** をポイントし、 **[フォルダーを指定して置換]**をクリックします。  
   
@@ -72,9 +66,7 @@ ms.lasthandoff: 06/22/2017
   
  既定では、[検索結果 1] ウィンドウに置換情報が表示されます。 置換項目を確認するには、[検索結果 1] ウィンドウ内の各項目をダブルクリックします。  
   
-<a id="see-also" class="xliff"></a>
-
-## 参照  
+## <a name="see-also"></a>参照  
  [検索と置換](../../relational-databases/scripting/search-and-replace.md)   
  [ドキュメントの対話形式の検索](../../relational-databases/scripting/search-documents-interactively.md)   
  [ワイルドカードを使用したテキスト検索](../../relational-databases/scripting/search-text-with-wildcards.md)   
