@@ -31,11 +31,11 @@ caps.latest.revision: 46
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 782e5a9458daf8c820b71d39e27b424c6995dba9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="collation-and-unicode-support"></a>照合順序と Unicode のサポート
@@ -45,7 +45,7 @@ ms.lasthandoff: 06/22/2017
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の照合順序サポートを最大限に活用するには、このトピックで定義されている用語と、それらがデータの特性にどのように関連しているかを理解する必要があります。    
     
-##  <a name="Terms"></a> Collation Terms    
+##  <a name="Terms"></a> 照合順序の用語    
     
 -   [照合順序](#Collation_Defn)    
     
@@ -121,7 +121,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ###  <a name="Sort_Order_Defn"></a> Sort Order    
  並べ替え順序は、データ値の並べ替え方法を指定します。 これは、データ比較の結果に影響を及ぼします。 データは、照合順序を使用して並べ替えられ、インデックスを使用して最適化することができます。    
     
-##  <a name="Unicode_Defn"></a> Unicode Support    
+##  <a name="Unicode_Defn"></a> Unicode のサポート    
  Unicode は、コード ポイントを文字にマップするための標準です。 Unicode は世界中のすべての言語のすべての文字を処理できるようにデザインされているので、異なる文字のセットを扱うために他のコード ページを必要とすることがありません。 複数の言語を反映する文字データを格納する場合は、非 Unicode データ型 (**char**、 **varchar**、および **text**) ではなく、Unicode データ型 (**nchar**、 **nvarchar**、および **ntext**) を常に使用してください。    
     
  非 Unicode データ型には、多くの制限が関連付けられています。 これは、Unicode に対応していないコンピューターではコード ページの使用が 1 つに制限されているためです。 Unicode コードを使用すると、必要なコード ページ変換が少なくなるので、パフォーマンスの向上が期待できます。 Unicode 照合順序は、サーバー レベルではサポートされないため、データベース、列、式の各レベルで個別に選択する必要があります。    
@@ -151,7 +151,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |非 Unicode|Unicode|これは、多言語データの使用に理想的な構成とはいえません。 Unicode データを非 Unicode サーバーに書き込むことはできません。 サーバーのコード ページ内に存在しないサーバーにデータを送信すると、問題が発生する可能性があります。|    
 |非 Unicode|非 Unicode|これは、多言語データに関して非常に制限的なシナリオです。 使用できるコード ページは 1 つだけです。|    
     
-##  <a name="Supplementary_Characters"></a> Supplementary Characters    
+##  <a name="Supplementary_Characters"></a> 補助文字    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Unicode データの格納用に、 **nchar** 、 **nvarchar** などのデータ型が用意されています。 これらのデータ型は、 *UTF-16*と呼ばれる形式でテキストをエンコードします。 Unicode コンソーシアムは、各文字に一意のコード ポイント (0x0000 から 0x10FFFF の範囲の値) を割り当てています。 最もよく使用される一連の文字にはメモリとディスク上で 16 ビット ワードに収まるコード ポイント値がありますが、コード ポイント値が 0xFFFF を超える文字は、連続した 2 つの 16 ビット ワードを必要とします。 これらの文字は *補助文字*と呼ばれ、2 つの連続する 16 ビット ワードは *サロゲート ペア*と呼ばれます。    
     
  補助文字を使用する場合は、以下の点に注意してください。    
@@ -188,10 +188,10 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |[UNICODE](../../t-sql/functions/unicode-transact-sql.md)|0 から 0x10FFFF の範囲の UTF-16 コード ポイントが返されます。|0 から 0xFFFF の範囲の UCS-2 コード ポイントが返されます。|    
 |[1 文字に一致するワイルドカード](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [ワイルドカード - 一致しない文字列](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|補助文字は、すべてのワイルドカード操作でサポートされています。|補助文字は、これらのワイルドカード操作でサポートされていません。 その他のワイルドカード演算子がサポートされます。|    
     
-##  <a name="GB18030"></a> GB18030 Support    
+##  <a name="GB18030"></a> GB18030 のサポート    
  GB18030 は中華人民共和国が単独で中国語の文字のエンコードに使用している標準規格です。 GB18030 文字の長さは 1 バイト、2 バイト、4 バイトのいずれかです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、クライアント側アプリケーションからサーバーに GB18030 でエンコードした文字が入力されたときに文字を認識し、内部的には Unicode 文字に変換して格納することで GB18030 文字をサポートしています。 サーバーに格納された GB18030 文字は、それ以降の操作では Unicode 文字として処理されます。 任意の中国語の照合順序を使用できますが、最新の 100 バージョンの使用をお勧めします。 すべての _100 レベルの照合順序は、GB18030 文字の言語的な並べ替えをサポートしています。 データに補助文字 (サロゲート ペア) が含まれている場合は、検索や並べ替えの機能を向上させるために、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で利用可能な SC 照合順序を使用できます。    
     
-##  <a name="Complex_script"></a> Complex Script Support    
+##  <a name="Complex_script"></a> 複雑な文字表記のサポート    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、複雑な文字表記の入力、格納、変更、および表示をサポートできます。 複雑な文字表記には、次の種類があります。    
     
 -   アラビア語テキストと英語テキストの組み合わせなど、右から左に記述されるテキストと左から右に記述されるテキストの両方の組み合わせを含む文字表記。    
@@ -214,7 +214,7 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 
 これらの照合順序はデータベース エンジン インデックス、メモリ最適化テーブル、列ストア インデックス、ネイティブ コンパイル モジュールでサポートされています。
     
-##  <a name="Related_Tasks"></a> Related Tasks    
+##  <a name="Related_Tasks"></a> 関連タスク    
     
 |タスク|トピック|    
 |----------|-----------|    
@@ -225,7 +225,7 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 |Transact-SQL ステートメントを、ある言語から別の言語に容易に移行したり、複数の言語を簡単にサポートしたりできるように記述する方法について説明します。|[国際化に対応した Transact-SQL ステートメントの記述](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
 |エラー メッセージの言語と、日付、時刻、通貨データを使用および表示する際の設定を変更する方法について説明します。|[セッション言語の設定](../../relational-databases/collations/set-a-session-language.md)|    
     
-##  <a name="Related_Content"></a> Related Content    
+##  <a name="Related_Content"></a> 関連コンテンツ    
  [SQL Server ベスト プラクティス照合順序の変更](http://go.microsoft.com/fwlink/?LinkId=113891)    
     
  [SQL Server ベスト プラクティス Unicode への移行](http://go.microsoft.com/fwlink/?LinkId=113890)    

@@ -19,11 +19,11 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d47140507a42084ddf60fa9c54ef6abe43c6f8b6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="work-with-replication-agent-profiles"></a>レプリケーション エージェント プロファイルを操作する
@@ -234,7 +234,7 @@ ms.lasthandoff: 06/22/2017
   
 ###  <a name="Create_RMO"></a> 新しいエージェント プロファイルを作成するには  
   
-1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、ディストリビューターへの接続を作成します。  
+1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスのインスタンスを使用して、ディストリビューターへの接続を作成します。  
   
 2.  <xref:Microsoft.SqlServer.Replication.AgentProfile> クラスのインスタンスを作成します。  
   
@@ -242,51 +242,51 @@ ms.lasthandoff: 06/22/2017
   
     -   <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> - プロファイルの名前。  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AgentType%2A> - プロファイルが作成されるレプリケーション エージェントの種類を指定する <xref:Microsoft.SqlServer.Replication.AgentType> 値。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AgentType%2A> - プロファイルを作成するレプリケーション エージェントの種類を指定する <xref:Microsoft.SqlServer.Replication.AgentType> 値。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 手順 1 で作成した <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 手順 1. で作成した <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
-    -   (省略可能) <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> - プロファイルの説明。  
+    -   (省略可) <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> - プロファイルの説明。  
   
-    -   (省略可能) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - 指定した <xref:Microsoft.SqlServer.Replication.AgentType> のすべての新しいエージェント ジョブが既定でこのプロファイルを使用する場合は、このプロパティを **true** に設定します。  
+    -   (省略可) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - この **T:Microsoft.SqlServer.Replication.AgentType** の新しいエージェント ジョブすべてが、既定でこのプロファイルを使用する場合、このプロパティを <xref:Microsoft.SqlServer.Replication.AgentType> に設定します。  
   
-4.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> メソッドを呼び出して、サーバーにプロファイルを作成します。  
+4.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> メソッドを呼び出し、サーバーにプロファイルを作成します。  
   
 5.  サーバーにプロファイルが作成されたら、レプリケーション エージェントのパラメーター値を追加、削除、変更することで、プロファイルをカスタマイズできます。  
   
-6.  プロファイルを既存のレプリケーション エージェント ジョブに割り当てるには、<xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> メソッドを呼び出します。 ディストリビューション データベースの名前を *distributionDBName* に渡し、ジョブの ID を *agentID*に渡します。  
+6.  既存のレプリケーション エージェント ジョブにプロファイルを割り当てるには、 <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> メソッドを呼び出します。 ディストリビューション データベースの名前を *distributionDBName* に渡し、ジョブの ID を *agentID*に渡します。  
   
 ###  <a name="Modify_RMO"></a> 既存のエージェント プロファイルを変更するには  
   
-1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、ディストリビューターへの接続を作成します。  
+1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスのインスタンスを使用して、ディストリビューターへの接続を作成します。  
   
-2.  <xref:Microsoft.SqlServer.Replication.ReplicationServer> クラスのインスタンスを作成します。 手順 1 で作成した <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトを渡します。  
+2.  <xref:Microsoft.SqlServer.Replication.ReplicationServer> クラスのインスタンスを作成します。 手順 1. で作成した <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトを渡します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>  メソッドを呼び出します。 このメソッドが **false**を返す場合、ディストリビューターが存在するかどうかを確認してください。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが **false**を返す場合、ディストリビューターが存在するかどうかを確認してください。  
   
-4.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A> メソッドを呼び出します。 特定の種類のレプリケーション エージェントのプロファイルのみが返るようにするには、<xref:Microsoft.SqlServer.Replication.AgentType> 値を渡します。  
+4.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A> メソッドを呼び出します。 特定の種類のレプリケーション エージェントのプロファイルが返されるように、 <xref:Microsoft.SqlServer.Replication.AgentType> 値を渡します。  
   
-5.  オブジェクトの <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> プロパティがプロファイル名と一致している、返された <xref:System.Collections.ArrayList> から目的の <xref:Microsoft.SqlServer.Replication.AgentProfile> オブジェクトを取得します。  
+5.  返された <xref:Microsoft.SqlServer.Replication.AgentProfile> から目的の <xref:System.Collections.ArrayList>オブジェクトを取得します。オブジェクトの <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> プロパティはプロファイル名と同じです。  
   
-6.  <xref:Microsoft.SqlServer.Replication.AgentProfile> の次のいずれかのメソッドを呼び出して、プロファイルを変更します。  
+6.  <xref:Microsoft.SqlServer.Replication.AgentProfile> の次のメソッドの 1 つを呼び出して、プロファイルを変更します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AddParameter%2A> - サポートされているパラメーターをプロファイルに追加します。*name* はレプリケーション エージェント パラメーターの名前であり、*value* は指定する値です。 特定の種類のエージェントでサポートされているエージェント パラメーターをすべて列挙するには、<xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> メソッドを呼び出します。 このメソッドは、サポートされているすべてのパラメーターを表す <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> オブジェクトの <xref:System.Collections.ArrayList> を返します。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AddParameter%2A> - サポートされるパラメーターをプロファイルに追加します。ここで、 *name* はレプリケーション エージェント パラメーターの名前、 *value* は指定する値です。 指定されたエージェントの種類でサポートされるエージェント パラメーターをすべて列挙するには、 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> メソッドを呼び出します。 このメソッドは、サポートされるすべてのパラメーターを表す <xref:System.Collections.ArrayList> オブジェクトの <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> を返します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.RemoveParameter%2A> - 既存のパラメーターをプロファイルから削除します。*name* はレプリケーション エージェント パラメーターの名前です。 プロファイルに定義されている現在のエージェント パラメーターをすべて列挙するには、<xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> メソッドを呼び出します。 このメソッドは、プロファイルの既存のパラメーターを表す <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> オブジェクトの <xref:System.Collections.ArrayList> を返します。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.RemoveParameter%2A> - プロファイルから既存のパラメーターを削除します。ここで、 *name* はレプリケーション エージェント パラメーターの名前です。 プロファイルに定義されている現在のエージェント パラメーターをすべて列挙するには、 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> メソッドを呼び出します。 このメソッドは、このプロファイルの既存のパラメーターを表す <xref:System.Collections.ArrayList> オブジェクトの <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> を返します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A> - プロファイルの既存のパラメーターの設定を変更します。*name* はエージェント パラメーターの名前であり、*newValue* はパラメーターの変更後の値です。 プロファイルに定義されている現在のエージェント パラメーターをすべて列挙するには、<xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> メソッドを呼び出します。 このメソッドは、プロファイルの既存のパラメーターを表す <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> オブジェクトの <xref:System.Collections.ArrayList> を返します。 サポートされるエージェント パラメーターの設定をすべて列挙するには、<xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> メソッドを呼び出します。 このメソッドは、すべてのパラメーターのサポートされている値を表す <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> オブジェクトの <xref:System.Collections.ArrayList> を返します。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A> - プロファイルの既存のパラメーターの設定を変更します。ここで、 *name* はエージェント パラメーターの名前、 *newValue* はパラメーターの変更後の値です。 プロファイルに定義されている現在のエージェント パラメーターをすべて列挙するには、 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> メソッドを呼び出します。 このメソッドは、このプロファイルの既存のパラメーターを表す <xref:System.Collections.ArrayList> オブジェクトの <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> を返します。 サポートされるエージェント パラメーターの設定をすべて列挙するには、 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> メソッドを呼び出します。 このメソッドは、すべてのパラメーターでサポートされる値を表す <xref:System.Collections.ArrayList> オブジェクトの <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> を返します。  
   
 ###  <a name="Delete_RMO"></a> エージェント プロファイルを削除するには  
   
-1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、ディストリビューターへの接続を作成します。  
+1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスのインスタンスを使用して、ディストリビューターへの接続を作成します。  
   
-2.  <xref:Microsoft.SqlServer.Replication.AgentProfile> クラスのインスタンスを作成します。 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> にプロファイルの名前を、<xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> に手順 1 の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> を設定します。  
+2.  <xref:Microsoft.SqlServer.Replication.AgentProfile> クラスのインスタンスを作成します。 プロファイルの名前を <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> に設定し、手順 1. の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>に設定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>  メソッドを呼び出します。 このメソッドが **false**を返す場合、指定された名前が誤っているか、プロファイルがサーバーに存在していません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが **false**を返す場合、指定された名前が誤っているか、プロファイルがサーバーに存在していません。  
   
-4.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> プロパティが <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User> に設定されていることを確認します。これは顧客のプロファイルを表します。 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> の値が <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> であるプロファイルは削除しないでください。  
+4.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> プロパティが <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>に設定されていることを確認します。これは、顧客のプロファイルを表します。 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> の値が <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>であるプロファイルは削除しないでください。  
   
-5.  このオブジェクトによって表されているユーザー定義プロファイルをサーバーから削除するには、<xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> メソッドを呼び出します。  
+5.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> メソッドを呼び出して、このオブジェクトで表されるユーザー定義プロファイルをサーバーから削除します。  
   
 ##  <a name="FollowUp"></a> フォロー アップ: エージェント パラメーターを変更した後  
  エージェント パラメーターの変更は、エージェントの次回起動時に反映されます。 エージェントを継続して実行している場合は、そのエージェントを停止して再起動する必要があります。  

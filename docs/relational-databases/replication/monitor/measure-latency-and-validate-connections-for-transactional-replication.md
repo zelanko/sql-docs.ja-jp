@@ -20,11 +20,11 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b2ef601ab4c3dca3b524805e9cce7798213deab9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>トランザクション レプリケーションの待機時間の計測および接続の検証
@@ -144,7 +144,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  <xref:Microsoft.SqlServer.Replication.TransPublication> クラスのインスタンスを作成します。  
   
-3.  パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティと <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定し、<xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1 で作成した接続を設定します。  
+3.  パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティおよび <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. で作成した接続を設定します。  
   
 4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが **false**を返す場合、手順 3. でパブリケーション プロパティを不適切に設定したか、パブリケーションが存在していません。  
   
@@ -156,13 +156,13 @@ ms.lasthandoff: 06/22/2017
   
 2.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor> クラスのインスタンスを作成します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、および <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> の各プロパティを設定し、<xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1 で作成した接続を設定します。  
+3.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、および <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> の各プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. で作成した接続を設定します。  
   
 4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが **false**を返す場合は、手順 3. のパブリケーション モニター プロパティが正しく定義されていないか、またはパブリケーションが存在していません。  
   
 5.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> メソッドを呼び出します。 返された <xref:System.Collections.ArrayList> オブジェクトを <xref:Microsoft.SqlServer.Replication.TracerToken> オブジェクトの配列にキャストします。  
   
-6.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A> メソッドを呼び出します。 手順 5 のトレーサー トークンに <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> の値を渡します。 これにより、<xref:System.Data.DataSet> オブジェクトとして選択したトレーサー トークンの待機時間情報が返されます。 すべてのトレーサー トークン情報が返された場合、パブリッシャーとディストリビューターとの接続、およびディストリビューターとサブスクライバーの接続が両方とも存在し、レプリケーション トポロジは機能しています。  
+6.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A> メソッドを呼び出します。 手順 5. のトレーサー トークンに <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> の値を渡します。 これにより、 <xref:System.Data.DataSet> オブジェクトとして選択したトレーサー トークンの待機時間情報が返されます。 すべてのトレーサー トークン情報が返された場合、パブリッシャーとディストリビューターとの接続、およびディストリビューターとサブスクライバーの接続が両方とも存在し、レプリケーション トポロジは機能しています。  
   
 #### <a name="to-remove-tracer-tokens"></a>トレーサー トークンを削除するには  
   
@@ -170,7 +170,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor> クラスのインスタンスを作成します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、および <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> の各プロパティを設定し、<xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1 で作成した接続を設定します。  
+3.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、および <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> の各プロパティを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. で作成した接続を設定します。  
   
 4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが **false**を返す場合は、手順 3. のパブリケーション モニター プロパティが正しく定義されていないか、またはパブリケーションが存在していません。  
   
@@ -178,7 +178,7 @@ ms.lasthandoff: 06/22/2017
   
 6.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A> メソッドを呼び出します。 次の値のいずれかを渡します。  
   
-    -   手順 5. のトレーサー トークンの <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A>。 これにより、選択したトークンの情報が削除されます。  
+    -   手順 5. のトレーサー トークンの <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> 。 これにより、選択したトークンの情報が削除されます。  
   
     -   <xref:System.DateTime> オブジェクト。 これにより、指定した日時より古いすべてのトークンの情報が削除されます。  
   

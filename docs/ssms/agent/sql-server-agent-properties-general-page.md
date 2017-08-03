@@ -16,15 +16,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 4da1f93dcc4c6e75b554a1a6dab8cbeb86096009
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="sql-server-agent-properties-general-page"></a>[SQL Server エージェントのプロパティ] ([全般] ページ)
-このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスの全般プロパティを表示したり、変更したりできます。  
+# <a name="sql-server-agent-properties-general-page"></a>[SQL Server エージェントのプロパティ]\([全般] ページ)
+このページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスの全般プロパティを表示したり、変更したりできます。  
   
 ## <a name="options"></a>オプション  
 **[サービスの状態]**  
@@ -39,7 +39,7 @@ ms.lasthandoff: 06/22/2017
 **Filename**  
 エラー ログのファイル名を指定します。  
   
-**[[...]]**  
+**[...]**  
 エラー ログ ファイルを参照します。  
   
 **[実行トレース メッセージを含める]**  

@@ -19,11 +19,11 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b0c9adb0d7fa110c08f280706d17706f4af07b07
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>ディストリビューターとパブリッシャーのプロパティの表示および変更
@@ -132,15 +132,15 @@ ms.lasthandoff: 06/22/2017
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、ディストリビューターへの接続を作成します。  
   
-2.  <xref:Microsoft.SqlServer.Replication.ReplicationServer> クラスのインスタンスを作成します。 手順 1. の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトを渡します。  
+2.  <xref:Microsoft.SqlServer.Replication.ReplicationServer> クラスのインスタンスを作成します。 手順 1 の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトを渡します。  
   
 3.  (省略可) <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A> プロパティをチェックして、現在接続されているサーバーがディストリビューターであることを確認します。  
   
 4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> メソッドを呼び出して、サーバーからプロパティを取得します。  
   
-5.  (省略可) プロパティを変更するには、<xref:Microsoft.SqlServer.Replication.ReplicationServer> オブジェクトの設定可能なディストリビューター プロパティに新しい値を設定します。  
+5.  (省略可) プロパティを変更するには、 <xref:Microsoft.SqlServer.Replication.ReplicationServer> オブジェクトの設定可能なディストリビューター プロパティに新しい値を設定します。  
   
-6.  (省略可) <xref:Microsoft.SqlServer.Replication.ReplicationServer> オブジェクトの <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> プロパティが **true** に設定されている場合は、<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出して変更内容をサーバーにコミットします。  
+6.  (省略可) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> オブジェクトの <xref:Microsoft.SqlServer.Replication.ReplicationServer> プロパティが **true**に設定されている場合は、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出して変更内容をサーバーにコミットします。  
   
 #### <a name="to-view-and-modify-distribution-database-properties"></a>ディストリビューション データベースのプロパティを表示および変更するには  
   
@@ -150,9 +150,9 @@ ms.lasthandoff: 06/22/2017
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、サーバーからプロパティを取得します。 このメソッドから **false**が返された場合、指定した名前のデータベースはサーバー上に存在しません。  
   
-4.  (省略可) プロパティを変更するには、<xref:Microsoft.SqlServer.Replication.DistributionDatabase> の設定可能なプロパティに新しい値を設定します。  
+4.  (省略可) プロパティを変更するには、 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> の設定可能なプロパティに新しい値を設定します。  
   
-5.  (省略可) <xref:Microsoft.SqlServer.Replication.DistributionDatabase> オブジェクトの <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> プロパティが **true** に設定されている場合は、<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出して変更内容をサーバーにコミットします。  
+5.  (省略可) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> オブジェクトの <xref:Microsoft.SqlServer.Replication.DistributionDatabase> プロパティが **true**に設定されている場合は、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出して変更内容をサーバーにコミットします。  
   
 #### <a name="to-view-and-modify-publisher-properties"></a>パブリッシャーのプロパティを表示および変更するには  
   
@@ -160,9 +160,9 @@ ms.lasthandoff: 06/22/2017
   
 2.  <xref:Microsoft.SqlServer.Replication.DistributionPublisher> クラスのインスタンスを作成します。 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> プロパティを指定し、手順 1. の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトを渡します。  
   
-3.  (省略可) プロパティを変更するには、<xref:Microsoft.SqlServer.Replication.DistributionPublisher> の設定可能なプロパティに新しい値を設定します。  
+3.  (省略可) プロパティを変更するには、 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> の設定可能なプロパティに新しい値を設定します。  
   
-4.  (省略可) <xref:Microsoft.SqlServer.Replication.DistributionPublisher> オブジェクトの <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> プロパティが **true** に設定されている場合は、<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出して変更内容をサーバーにコミットします。  
+4.  (省略可) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> オブジェクトの <xref:Microsoft.SqlServer.Replication.DistributionPublisher> プロパティが **true**に設定されている場合は、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出して変更内容をサーバーにコミットします。  
   
 #### <a name="to-change-the-password-for-the-administrative-connection-from-the-publisher-to-the-distributor"></a>パブリッシャーからディストリビューターへの管理接続に使用されているパスワードを変更するには  
   
@@ -170,14 +170,14 @@ ms.lasthandoff: 06/22/2017
   
 2.  <xref:Microsoft.SqlServer.Replication.ReplicationServer> クラスのインスタンスを作成します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに、手順 1 で作成した接続を設定します。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに、手順 1. の接続を設定します。  
   
 4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。  
   
 5.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> メソッドを呼び出します。 新しいパスワード値を *password* パラメーターに渡します。  
   
     > [!IMPORTANT]  
-    >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET Framework に用意されている](http://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  
+    >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&amp;amp;#xA0;Framework に用意されている](http://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  
   
 6.  (省略可) このディストリビューターを使用している各リモート パブリッシャーでパスワードを変更するには、次の手順に従います。  
   

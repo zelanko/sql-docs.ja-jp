@@ -17,14 +17,14 @@ caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 840b9d449ad320dc104960c322590e96082f0cdb
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="restore-database-files-page"></a>[データベースの復元] ([ファイル] ページ)
+# <a name="restore-database-files-page"></a>[データベースの復元]\([ファイル] ページ)
   **[データベースの復元]** ダイアログ ボックスの **[ファイル]** ページを使用して、データベース内で復元するように選択した特定のファイルを管理します。  
   
 ## <a name="options"></a>オプション  

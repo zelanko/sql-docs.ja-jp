@@ -16,11 +16,11 @@ caps.latest.revision: 44
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 553e8aece3969407a818d98cf69c20bf922d3601
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>[高度な編集] \(条件) ダイアログ ボックス
@@ -75,7 +75,7 @@ ms.lasthandoff: 06/22/2017
 |**Concatenate()**|String Concatenate (String *string1*, String *string2*)|2 つの文字列を連結します。|*string1* および *string2* - 連結する 2 つの文字列です。 NULL 以外の任意の有効な文字列を指定できます。|
                  *string1* の後に *string2*を連結した文字列。|`Concatenate("Hello", " World` `")` は、"`Hello World`" を返します。|  
 |**Count()**|Numeric Count (*VarArgs*)|引数リスト内の項目数を返します。|*VarArgs* - **text**、 **image**、 **ntext**を除く、任意の型の式です。|整数のデータ型カテゴリの値を返します。|`Count(1.0, 2.0, 3.0, 4.0, 5.0)` は `5` を返します。|  
-|**DateAdd()**|DateTime DateAdd (String *datepart*, Numeric *number*, DateTime *date*)|指定された日付に期間を加えた新しい **datetime** の値を返します。|*datepart* - 新しい値を返す日付の要素を指定するパラメーターです。 year(yy, yyyy)、month(mm, m)、dayofyear(dy, y) などの型がサポートされています。 詳細については、「[DATEADD &#40;Transact-SQL&#41;](../../t-sql/functions/dateadd-transact-sql.md)」を参照してください。<br /><br /> *number* - *datepart* に加算される値です。<br /><br /> *date* - **datetime** 型の値を返す式、または日付形式の文字列です。|指定された日付に期間を加えた新しい **datetime** の値です。|**Example:** `DateAdd('day', 21, DateTime('2007-08-06 14:21:50'))` returns `'2007-08-27 14:21:50'` in this example.<br /><br /> この関数でサポートされている *dateparts* とその省略形は、次のとおりです。<br /><br /> **year**: yy, yyyy<br /><br /> **month**: mm, m<br /><br /> **dayofyear**: dy, y<br /><br /> **day**: dd, d<br /><br /> **week**: wk, ww<br /><br /> **weekday**: dw, w<br /><br /> **hour**: hh<br /><br /> **minute**: mi, n<br /><br /> **second**: ss, s<br /><br /> **millisecond**: ms|  
+|**DateAdd()**|DateTime DateAdd (String *datepart*, Numeric *number*, DateTime *date*)|指定された日付に期間を加えた新しい **datetime** の値を返します。|*datepart* - 新しい値を返す日付の要素を指定するパラメーターです。 year(yy, yyyy)、month(mm, m)、dayofyear(dy, y) などの型がサポートされています。 詳細については、「[DATEADD &#40;Transact-SQL&#41;](../../t-sql/functions/dateadd-transact-sql.md)」を参照してください。<br /><br /> *number* - *datepart* に加算される値です。<br /><br /> *date* - **datetime** 型の値を返す式、または日付形式の文字列です。|指定された日付に期間を加えた新しい **datetime** の値です。|**例:** `DateAdd('day', 21, DateTime('2007-08-06 14:21:50'))` は `'2007-08-27 14:21:50'` を返します。<br /><br /> この関数でサポートされている *dateparts* とその省略形は、次のとおりです。<br /><br /> **year**: yy, yyyy<br /><br /> **month**: mm, m<br /><br /> **dayofyear**: dy, y<br /><br /> **day**: dd, d<br /><br /> **week**: wk, ww<br /><br /> **weekday**: dw, w<br /><br /> **hour**: hh<br /><br /> **minute**: mi, n<br /><br /> **second**: ss, s<br /><br /> **millisecond**: ms|  
 |**DatePart()**|Numeric DatePart (String *datepart*, DateTime *date*)|指定された日付の特定の *datepart* を表す整数を返します。|*datepart* - 返す対象となる日付要素を指定するパラメーターです。 year(yy, yyyy)、month(mm, m)、dayofyear(dy, y) などの型がサポートされています。 詳細については、「[DATEPART &#40;Transact-SQL&#41;](../../t-sql/functions/datepart-transact-sql.md)」を参照してください。<br /><br /> *date* - **datetime** 型の値を返す式、または日付形式の文字列です。|指定された日付の特定の *datepart* を表す、整数のデータ型カテゴリの値を返します。|`DatePart('month', DateTime('2007-08-06 14:21:50.620'))` は `8` を返します。|  
 |**DateTime()**|DateTime DateTime (String *dateString*)|文字列から datetime 値を作成します。|*dateString* - 文字列としての datetime 値です。|入力文字列から作成された datetime 値を返します。|`DateTime('3/12/2006')`|  
 |**Divide()**|Numeric Divide (Numeric *expression_dividend*, Numeric *expression_divisor*)|ある数値を別の数値で除算します。|*expression_dividend* - 除算される数値式です。 被除数には、数値型に分類されるデータ型を持つ有効な式を指定できます。ただし、 **datetime** データ型は除きます。<br /><br /> *expression_divisor* - 被除数を除算する数値式です。 除数には、数値型に分類されるデータ型を持つ有効な式を指定できます。ただし、 **datetime** データ型は除きます。|最も優先順位の高い引数のデータ型を返します。|**例:** `Divide(Property1, 2)`<br /><br /> 注: これは double 型の演算になります。 整数との比較を行う場合は、 `Round()`で結果を結合する必要があります。 たとえば、 `Round(Divide(10, 3), 0) = 3`のようにします。|  

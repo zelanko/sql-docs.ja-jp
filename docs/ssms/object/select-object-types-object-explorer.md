@@ -16,15 +16,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bd28c550c21656390a186fffeb225c1438ec62b3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="select-object-types-object-explorer"></a>[オブジェクトの種類を選択] (オブジェクト エクスプローラー)
-このダイアログ ボックスを使用すると、**[オブジェクトの選択]** ダイアログ ボックスに表示するオブジェクトの種類を指定できます。  
+このダイアログ ボックスを使用すると、 **[オブジェクトの選択]** ダイアログ ボックスに表示するオブジェクトの種類を指定できます。  
   
 ## <a name="select-the-types-of-objects-to-find"></a>[検索するオブジェクトの種類を選択]  
 **[オブジェクトの種類]** 一覧にある項目を選択します。 この一覧には、操作の種類に応じた項目のみが表示されます。たとえば新しいオブジェクトの所有者を選択する際には、 **[ログイン]** のみが表示されます。  
