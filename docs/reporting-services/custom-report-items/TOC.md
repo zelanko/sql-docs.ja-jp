@@ -4,4 +4,4 @@
 # [カスタム レポート アイテムのクラス ライブラリ](custom-report-item-class-libraries.md)
 # [カスタム レポート アイテムの実装要件](custom-report-item-implementation-requirements.md)
 # [カスタム レポート アイテム](custom-report-items.md)
-# [方法: カスタム レポート アイテムを配置](how-to-deploy-a-custom-report-item.md)
+# [カスタム レポート アイテムを配置する方法](how-to-deploy-a-custom-report-item.md)

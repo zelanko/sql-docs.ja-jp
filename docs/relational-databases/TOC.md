@@ -2,7 +2,7 @@
 # [新規および最近の更新記事](new-updated-relational-databases.md)
 
 # [SQL Server ガイド](sql-server-guides.md)
-## Always On 可用性グループのトラブルシューティングおよび監視ガイド
+## Always On 可用性グループのトラブルシューティングと監視のガイド
 ## [インデックス デザイン](sql-server-index-design-guide.md)
 ## [メモリ管理アーキテクチャ](memory-management-architecture-guide.md)
 ### [ページの読み取り](reading-pages.md)  
@@ -10,7 +10,7 @@
 ## [ページとエクステントのアーキテクチャ](pages-and-extents-architecture-guide.md)
 ## [移行後の検証および最適化](post-migration-validation-and-optimization-guide.md)
 ## [クエリ処理のアーキテクチャ](query-processing-architecture-guide.md)
-## [スレッドとタスクのアーキテクチャ](thread-and-task-architecture-guide.md)
+## [スレッドおよびタスクのアーキテクチャ](thread-and-task-architecture-guide.md)
 ## [トランザクション ログのアーキテクチャと管理](sql-server-transaction-log-architecture-and-management-guide.md)
 ## トランザクションのロックおよび行のバージョン管理ガイド
 

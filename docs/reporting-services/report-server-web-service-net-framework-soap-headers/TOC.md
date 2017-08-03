@@ -1,5 +1,5 @@
-# [SOAP ヘッダーをサービス レポートを使用します。](using-reporting-services-soap-headers.md)
+# [Reporting Services SOAP ヘッダーの使用](using-reporting-services-soap-headers.md)
 
-# [バッチ処理方式](batching-methods.md)
+# [メソッドのバッチ処理](batching-methods.md)
 # [実行状態の識別](identifying-execution-state.md)
-# [GetProperties メソッドの項目の Namespace を設定します。](setting-the-item-namespace-for-the-getproperties-method.md)
+# [GetProperties メソッドのアイテム名前空間の設定](setting-the-item-namespace-for-the-getproperties-method.md)
