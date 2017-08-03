@@ -1,0 +1,1 @@
+# [AlwaysOn 環境でのマスター データ サービスのインストール](installing-mds-in-an-alwayson-group-environment.md)
