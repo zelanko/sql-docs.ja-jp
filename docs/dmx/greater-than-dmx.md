@@ -1,0 +1,55 @@
+---
+title: "&gt;(より大きい)(DMX) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- DMX
+helpviewer_keywords:
+- greater than operator (>)
+- '> (greater than operator)'
+ms.assetid: a1485c02-8d10-4722-b8cd-b747c472741b
+caps.latest.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 515b8b3dfe8f08b57adaadb6e945baa0a685e38a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
+---
+# <a name="gt-greater-than-dmx"></a>&gt;(より大きい)(DMX)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  あるデータ マイニング拡張機能 (DMX) 式の値が他の DMX 式の値より大きいかどうかを判断する比較演算子を実行します。  
+  
+## <a name="syntax"></a>構文  
+  
+```  
+  
+DMX_Expression > DMX_Expression  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ *DMX_Expression*  
+ 有効な DMX 式です。  
+  
+## <a name="return-value"></a>戻り値  
+ 両方のパラメーターが NULL 以外であり、1 番目のパラメーターの値が 2 番目のパラメーターの値よりも大きい場合、TRUE を含むブール値です。 両方のパラメーターが NULL 以外であり、1 番目のパラメーターの値が 2 番目のパラメーターの値以下の場合、FALSE を含むブール値です。 どちらかまたは両方のパラメーターの結果が NULL 値の場合、NULL 値を含むブール値です。  
+  
+## <a name="see-also"></a>参照  
+ [比較演算子 (&) #40";"DMX"&"#41;](../dmx/operators-comparison.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [演算子 (&) #40";"DMX"&"#41;](../dmx/operators-dmx.md)  
+  
+  
+

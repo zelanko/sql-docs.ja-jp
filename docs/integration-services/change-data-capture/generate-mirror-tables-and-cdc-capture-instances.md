@@ -1,24 +1,29 @@
 ---
-title: "ミラー テーブルおよび CDC キャプチャ インスタンスの生成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "mirTab"
+title: "Generate Mirror Tables and CDC Capture Instances |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- mirTab
 ms.assetid: 260c1617-eecc-4007-a84d-3c5778ce46b6
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9c6a29a7c5ec5b42dfa8d0e923563c3b21fa0c51
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# ミラー テーブルおよび CDC キャプチャ インスタンスの生成
+# <a name="generate-mirror-tables-and-cdc-capture-instances"></a>ミラー テーブルおよび CDC キャプチャ インスタンスの生成
   [ミラー テーブルの生成] ページを使用すると、CDC インスタンスに含めたテーブルのミラー テーブルを生成できます。  
   
  **[実行]** をクリックするとミラー テーブルが作成されます。 テーブルごとに作成の進行状況が表示され、各ミラー テーブルの作成が正常に終了したか、エラーが発生したかを通知するメッセージが表示されます。 エラーが発生した場合は、 **[詳細]** をクリックしてエラーについて説明するダイアログ ボックスを表示します。  
@@ -27,7 +32,7 @@ caps.handback.revision: 5
   
  **[次へ]** をクリックして [Finish](../../integration-services/change-data-capture/finish.md) ページを開きます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server 変更データベース インスタンスを作成する方法](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)  
   
   

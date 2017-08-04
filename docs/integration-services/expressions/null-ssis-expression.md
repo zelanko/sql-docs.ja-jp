@@ -1,42 +1,47 @@
 ---
-title: "NULL (SSIS 式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "NULL 関数"
-  - "NULL 値 [Integration Services]"
+title: "NULL (SSIS 式) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- NULL function
+- null values [Integration Services]
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c3be5273bd31a2a812c96fac458b8b173e14b3b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# NULL (SSIS 式)
+# <a name="null-ssis-expression"></a>NULL (SSIS 式)
   要求されたデータ型の NULL 値を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 NULL(typespec)  
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  *typespec*  
  有効なデータ型です。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
-## 戻り値の型  
+## <a name="result-types"></a>戻り値の型  
  NULL 値である任意の有効なデータ型です。  
   
-## 解説  
+## <a name="remarks"></a>解説  
  引数が NULL の場合、NULL 関数は NULL を返します。  
   
  一部のデータ型の NULL 値を要求する場合は、パラメーターが必要となります。 次の表に、パラメーターが必要なデータ型とそのパラメーターの一覧を示します。  
@@ -50,7 +55,7 @@ NULL(typespec)
 |DT_NUMERIC|*有効桁数 (precision)*<br /><br /> *scale*|(DT_NUMERIC,10,3) は、数値を有効桁数 10 桁で小数点以下 3 桁の DT_NUMERIC データ型にキャストします。|  
 |DT_TEXT|*codepage*|(DT_TEXT,1252) は、1252 コード ページを使用して、値を DT_TEXT データ型にキャストします。|  
   
-## 式の例  
+## <a name="expression-examples"></a>式の例  
  これらの例は、DT_STR、DT_DATE、および DT_BOOL データ型の NULL 値を返します。  
   
 ```  
@@ -59,8 +64,8 @@ NULL(DT_DATE)
 NULL(DT_BOOL)  
 ```  
   
-## 参照  
- [ISNULL &#40;SSIS 式&#41;](../../integration-services/expressions/isnull-ssis-expression.md)   
- [関数 &#40;SSIS 式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>参照  
+ [ISNULL & #40 です。SSIS 式 &#41;](../../integration-services/expressions/isnull-ssis-expression.md)   
+ [関数と #40 です。SSIS 式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

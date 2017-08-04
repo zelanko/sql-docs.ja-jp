@@ -1,25 +1,30 @@
 ---
-title: "補足ログ スクリプトの確認および生成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "scripts"
+title: "確認および補足ログ スクリプトの生成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- scripts
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b3213f6e757e9fc3bcff63d0833d7f0c7fdee201
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# 補足ログ スクリプトの確認および生成
-  補足ログを設定する Oracle ソース データベースでスクリプトを実行または再実行するには、**[スクリプト]** タブを使用します。  
+# <a name="review-and-generate-supplemental-logging-scripts"></a>補足ログ スクリプトの確認および生成
+  補足ログを設定する Oracle ソース データベースでスクリプトを実行または再実行するには、 **[スクリプト]** タブを使用します。  
   
  スクリプトを実行する前に、次のいずれかを選択します。  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 6
   
  これらのオプションのいずれかを選択したら、補足ログ スクリプトを実行します。  
   
-### 補足ログ スクリプトを実行するには  
+### <a name="to-run-the-supplemental-logging-scripts"></a>補足ログ スクリプトを実行するには  
   
 1.  **[スクリプトの実行]** をクリックして、CDC インスタンスに定義されているテーブルで補足ログ スクリプトを実行します。 このスクリプトは、キャプチャされるテーブルに UPDATE 操作のログを記録するときに、必要なすべての列をトランザクション ログに書き込むように Oracle データベースに対して指示します。 通常、このスクリプトは Oracle システム管理者によって検査されて実行されます。  
   
@@ -42,18 +47,18 @@ caps.handback.revision: 6
   
  必要に応じて、SQL*Plus を使用してスクリプトを手動で実行することもできます。  
   
-### スクリプトを手動で実行するには  
+### <a name="to-run-the-scripts-manually"></a>スクリプトを手動で実行するには  
   
 1.  **[コピー]** をクリックしてスクリプトをクリップボードに貼り付けます。 SQL*Plus を開き、Oracle ソース データベースのディレクトリに移動します。 SQL\*Plus にスクリプトを貼り付けて実行します。  
   
-### 補足ログ スクリプトをテキスト ファイルに保存するには  
+### <a name="to-save-the-supplemental-logging-script-in-a-text-file"></a>補足ログ スクリプトをテキスト ファイルに保存するには  
   
 1.  **[名前を付けて保存]** をクリックし、ファイルを保存する場所を参照します。  
   
 2.  ファイルに名前を付け、 **[保存]** をクリックしてファイルを保存します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [CDC インスタンスのプロパティを編集する方法](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [スクリプトを実行するための Oracle 資格情報](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+ [スクリプトを実行するための oracle 資格情報](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
   

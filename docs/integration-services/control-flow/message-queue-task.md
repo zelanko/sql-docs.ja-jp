@@ -1,30 +1,35 @@
 ---
-title: "メッセージ キュー タスク | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.messagequeuetask.f1"
-helpviewer_keywords: 
-  - "メッセージ キュー タスク [Integration Services]"
-  - "受信、メッセージ"
-  - "メッセージ [Integration Services]"
-  - "sending messages"
+title: "メッセージ キュー タスク |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.messagequeuetask.f1
+helpviewer_keywords:
+- Message Queue task [Integration Services]
+- receiving messages
+- messages [Integration Services]
+- sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 caps.latest.revision: 68
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 68
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: bd765f2943b5bb1eb07a10664b1e9ce56bf01e29
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# メッセージ キュー タスク
-  メッセージ キュー タスクでは、Message Queuing (MSMQ) を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ間でメッセージを送受信したり、カスタム アプリケーションによって処理されるアプリケーションのキューにメッセージを送信したりすることができます。 これらのメッセージは、簡単なテキスト形式、ファイル、変数、またはそれらの値です。  
+# <a name="message-queue-task"></a>メッセージ キュー タスク
+  メッセージ キュー タスクでは、Message Queuing (MSMQ) を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ間でメッセージを送受信したり、カスタム アプリケーションによって処理されるアプリケーションのキューにメッセージを送信したりすることができます。 これらのメッセージは、簡単なテキスト形式、ファイル、変数、またはそれらの値です。  
   
  メッセージ キュー タスクを使用することにより、企業の組織全体の操作を調整できます。 送信先が使用できない場合やビジーの場合、メッセージをキューに入れ、後で配信できます。たとえば、送信先が販売担当者のオフラインのラップトップ コンピューターの場合、キューにメッセージが入れられ、販売担当者はネットワークに接続したときに受信できます。 メッセージ キュー タスクは、次の目的で使用できます。  
   
@@ -36,14 +41,14 @@ caps.handback.revision: 68
   
  メッセージ キュー タスクは、メッセージの送受信時に、"データ ファイル"、"文字列"、"文字列メッセージを変数に指定"、"変数" の 4 つのうちのいずれかのメッセージ型を使用します。 "文字列メッセージを変数に指定" メッセージ型は、メッセージの受信時にのみ使用できます。  
   
- タスクは MSMQ 接続マネージャーを使用して、メッセージ キューに接続します。 詳細については、「[MSMQ 接続マネージャー](../../integration-services/connection-manager/msmq-connection-manager.md)」を参照してください。 メッセージ キューの詳細については、[MSDN ライブラリ](http://go.microsoft.com/fwlink/?LinkId=7022)を参照してください。  
+ タスクは MSMQ 接続マネージャーを使用して、メッセージ キューに接続します。 詳細については、「 [MSMQ 接続マネージャー](../../integration-services/connection-manager/msmq-connection-manager.md)」を参照してください。 メッセージ キューの詳細については、 [MSDN ライブラリ](http://go.microsoft.com/fwlink/?LinkId=7022)を参照してください。  
   
- メッセージ キュー タスクには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスのインストールが必要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの **[インストールするコンポーネント]** ページまたは **[機能の選択]** ページでインストールの選択をした [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントによっては、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントのサブセットの一部がインストールされます。 これらのコンポーネントを使用して一部のタスクを実行することは可能ですが、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のすべての機能は使用できません。 たとえば、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のオプションでは、パッケージをデザインするために必要な [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントがインストールされますが、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスはインストールされません。したがって、メッセージ キュー タスクは機能しません。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を完全にインストールするには、**[インストールするコンポーネント]** ページで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を選択する必要があります。 メッセージ キュー タスクのインストールと実行の詳細については、「[Integration Services のインストール](../../integration-services/install-windows/install-integration-services.md)」を参照してください。  
+ メッセージ キュー タスクには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスのインストールが必要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの **[インストールするコンポーネント]** ページまたは **[機能の選択]** ページでインストールの選択をした [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントによっては、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントのサブセットの一部がインストールされます。 これらのコンポーネントを使用して一部のタスクを実行することは可能ですが、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のすべての機能は使用できません。 たとえば、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のオプションでは、パッケージをデザインするために必要な [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントがインストールされますが、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスはインストールされません。したがって、メッセージ キュー タスクは機能しません。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を完全にインストールするには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [インストールするコンポーネント] **ページで** を選択する必要があります。 メッセージ キュー タスクのインストールと実行の詳細については、「 [Integration Services のインストール](../../integration-services/install-windows/install-integration-services.md)」を参照してください。  
   
 > [!NOTE]  
 >  コンピューターのオペレーティング システムが FIPS モードで構成され、タスクで暗号化が使用されている場合は、メッセージ キュー タスクは Federal Information Processing Standard (FIPS) 140-2 に準拠することができません。 メッセージ キュー タスクで暗号化が使用されていない場合は、タスクを正常に実行することができます。  
   
-## メッセージ型  
+## <a name="message-types"></a>メッセージ型  
  メッセージ キュー タスクで用意されているメッセージ型は、次の方法で構成できます。  
   
 -   **[データ ファイル]** メッセージは、ファイルにメッセージが含まれることを指定します。 メッセージを受信するときに、タスクによってファイルを保存したり既存のファイルを上書きできるように、また、タスクによってメッセージを受信できるパッケージを指定するように、タスクを構成できます。  
@@ -52,12 +57,12 @@ caps.handback.revision: 68
   
 -   **[文字列メッセージを変数に指定]** では、基になるメッセージを、送信先の変数に送信される文字列として指定できます。 完全な比較、大文字と小文字を区別しない比較、またはサブストリングの比較を使用して、受信した文字列とユーザー定義の文字列とを比較するようにタスクを構成できます。 このメッセージ型は、タスクがメッセージを受信するときにのみ使用できます。  
   
--   **[変数]**は、メッセージが 1 つ以上の変数を含むことを指定します。 タスクは、メッセージに含まれる変数の名前を指定するように構成できます。 メッセージを受信するときに、メッセージを受信するパッケージおよびメッセージの送信先となる変数の両方を指定するようにタスクを構成できます。  
+-   **[変数]** は、メッセージが 1 つ以上の変数を含むことを指定します。 タスクは、メッセージに含まれる変数の名前を指定するように構成できます。 メッセージを受信するときに、メッセージを受信するパッケージおよびメッセージの送信先となる変数の両方を指定するようにタスクを構成できます。  
   
-## メッセージの送信  
+## <a name="sending-messages"></a>sending messages  
  メッセージ キュー タスクを構成してメッセージを送信する場合、メッセージ キュー テクノロジで現在サポートされている暗号化アルゴリズム (RC2 および RC4) のいずれかを使用してメッセージを暗号化できます。 現在、いずれの暗号化アルゴリズムも、メッセージ キュー テクノロジでまだサポートされていない最新のアルゴリズムと比較して、暗号強度の弱さが指摘されています。 そのため、メッセージ キュー タスクを使ってメッセージを送信する場合は、必要な暗号強度を満たすことができるかどうかを十分に検討する必要があります。  
   
-## メッセージの受信  
+## <a name="receiving-messages"></a>受信、メッセージ  
  メッセージ キュー タスクは、メッセージを受信する場合に次の方法で構成できます。  
   
 -   メッセージをバイパスするか、またはメッセージをキューから削除します。  
@@ -66,12 +71,12 @@ caps.handback.revision: 68
   
 -   タイムアウトが発生した場合には失敗します。  
   
--   メッセージが **[データ ファイル]** に格納されている場合、既存のファイルを上書きします。  
+-   メッセージが **[データ ファイル]**に格納されている場合、既存のファイルを上書きします。  
   
 -   メッセージが **[データ ファイル メッセージ]** 型を使用している場合、メッセージ ファイルを別のファイル名で保存します。  
   
-## メッセージ キュー タスクで使用できるカスタム ログ メッセージ  
- 次の表は、メッセージ キュー タスクのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../../integration-services/performance/custom-messages-for-logging.md)」を参照してください。  
+## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>メッセージ キュー タスクで使用できるカスタム ログ メッセージ  
+ 次の表は、メッセージ キュー タスクのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。  
   
 |ログ エントリ|Description|  
 |---------------|-----------------|  
@@ -84,23 +89,23 @@ caps.handback.revision: 68
 |**MSMQTaskInfo**|タスクに関する説明情報を提供します。|  
 |**MSMQTaskTimeOut**|タスクがタイムアウトしたことを示します。|  
   
-## メッセージ キュー タスクの構成  
+## <a name="configuration-of-the-message-queue-task"></a>メッセージ キュー タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[メッセージ キュー タスク エディター] &#40;[全般] ページ&#41;](../Topic/Message%20Queue%20Task%20Editor%20\(General%20Page\).md)  
+-   [[メッセージ キュー タスク エディター] &#40;[全般] ページ&#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)  
   
--   [[メッセージ キュー タスク エディター] &#40;[受信] ページ&#41;](../Topic/Message%20Queue%20Task%20Editor%20\(Receive%20Page\).md)  
+-   [[メッセージ キュー タスク エディター] &#40;[受信] ページ&#41;](../../integration-services/control-flow/message-queue-task-editor-receive-page.md)  
   
--   [[メッセージ キュー タスク エディター] &#40;[送信] ページ&#41;](../Topic/Message%20Queue%20Task%20Editor%20\(Send%20Page\).md)  
+-   [[メッセージ キュー タスク エディター] &#40;[送信] ページ&#41;](../../integration-services/control-flow/message-queue-task-editor-send-page.md)  
   
--   [[式] ページ](../Topic/Expressions%20Page.md)  
+-   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
  プログラムによってこれらのプロパティを設定する方法の詳細については、開発者ガイドの **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** クラスのドキュメントを参照してください。  
   
-## 関連タスク  
- これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「[タスクまたはコンテナーのプロパティを設定する](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)」を参照してください。  
+## <a name="related-tasks"></a>関連タスク  
+ これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「 [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
   

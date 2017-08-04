@@ -1,22 +1,27 @@
 ---
-title: "フラット ファイルのカスタム プロパティ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "フラット ファイルのカスタム プロパティ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 097c9a07d738bb1b192095ac91448487fdfa0eb1
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# フラット ファイルのカスタム プロパティ
+# <a name="flat-file-custom-properties"></a>フラット ファイルのカスタム プロパティ
   **変換元のカスタム プロパティ**  
   
  フラット ファイル ソースには、カスタム プロパティと、すべてのデータ フロー コンポーネントとの共通プロパティの両方があります。  
@@ -25,7 +30,7 @@ caps.handback.revision: 7
   
 |プロパティ名|データ型|Description|  
 |-------------------|---------------|-----------------|  
-|FileNameColumnName|文字列|ファイル名を格納する出力列の名前。 名前が指定されていない場合、ファイル名を格納する出力列は生成されません。<br /><br /> 注: このプロパティは、**フラット ファイル ソース エディター**では使用できませんが、**詳細エディター**を使用して設定できます。|  
+|FileNameColumnName|文字列|ファイル名を格納する出力列の名前。 名前が指定されていない場合、ファイル名を格納する出力列は生成されません。<br /><br /> 注: このプロパティは、 **フラット ファイル ソース エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
 |RetainNulls|ブール値|データ変換のパイプライン エンジンによってデータが処理される際に、ソース ファイルの NULL 値を NULL 値として保持するかどうかを示す値。 このプロパティの既定値は **False**です。|  
   
  フラット ファイル ソースの出力には、カスタム プロパティがありません。  
@@ -34,9 +39,9 @@ caps.handback.revision: 7
   
 |プロパティ名|データ型|Description|  
 |-------------------|---------------|-----------------|  
-|FastParse|ブール値|列の解析に、DTS が提供するロケール非依存型の高速な解析ルーチンを使用するか、またはロケール依存型の標準的な解析ルーチンを使用するかを示す値。 詳細については、「 [Fast Parse](../Topic/Fast%20Parse.md) 」および「 [Standard Parse](../Topic/Standard%20Parse.md)」を参照してください。 このプロパティの既定値は **False**です。<br /><br /> 注: このプロパティは、**フラット ファイル ソース エディター**では使用できませんが、**詳細エディター**を使用して設定できます。|  
+|FastParse|ブール値|列の解析に、DTS が提供するロケール非依存型の高速な解析ルーチンを使用するか、またはロケール依存型の標準的な解析ルーチンを使用するかを示す値。 詳細については、「 [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 」および「 [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)」を参照してください。 このプロパティの既定値は **False**です。<br /><br /> 注: このプロパティは、 **フラット ファイル ソース エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
   
- 詳細については、「[フラット ファイル ソース](../../integration-services/data-flow/flat-file-source.md)」を参照してください。  
+ 詳細については、「 [フラット ファイル ソース](../../integration-services/data-flow/flat-file-source.md)」を参照してください。  
   
  **変換先のカスタム プロパティ**  
   
@@ -51,9 +56,9 @@ caps.handback.revision: 7
   
  フラット ファイル変換先の入力および入力列には、カスタム プロパティはありません。  
   
- 詳細については、「[フラット ファイル変換先](../../integration-services/data-flow/flat-file-destination.md)」を参照してください。  
+ 詳細については、「 [フラット ファイル変換先](../../integration-services/data-flow/flat-file-destination.md)」を参照してください。  
   
-## 参照  
- [共通プロパティ](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>参照  
+ [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

@@ -1,31 +1,36 @@
 ---
-title: "[メッセージ キュー タスク エディター] ([送信] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.msgqueuetask.send.f1"
-helpviewer_keywords: 
-  - "メッセージ キュー タスク エディター"
+title: "メッセージ キュー タスク エディター (送信 ページ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.msgqueuetask.send.f1
+helpviewer_keywords:
+- Message Queue Task Editor
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d0914b6ab2222fa91d7db229970b081d4a43314d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# [メッセージ キュー タスク エディター] ([送信] ページ)
-   **[メッセージ キュー タスク エディター]** ダイアログ ボックスの **[送信]** ページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージからメッセージを送信するメッセージ キュー タスクを構成できます。  
+# <a name="message-queue-task-editor-send-page"></a>[メッセージ キュー タスク エディター] ([送信] ページ)
+  **[メッセージ キュー タスク エディター]** ダイアログ ボックスの **[送信]** ページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージからメッセージを送信するメッセージ キュー タスクを構成できます。  
   
  このタスクの詳細については、「 [Message Queue Task](../../integration-services/control-flow/message-queue-task.md)」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[UseEncryption]**  
  メッセージを暗号化するかどうかを示します。 既定値は **False**です。  
   
@@ -47,26 +52,26 @@ caps.handback.revision: 37
 |**[変数メッセージ]**|メッセージは変数に格納されます。 この値を選択すると、動的オプションの **[VariableMessage]**が表示されます。|  
 |**[文字列メッセージ]**|メッセージはメッセージ キュー タスクに格納されます。 この値を選択すると、動的オプションの **[StringMessage]**が表示されます。|  
   
-## [MessageType] の動的オプション  
+## <a name="messagetype-dynamic-options"></a>[MessageType] の動的オプション  
   
-### [MessageType] = [データ ファイル メッセージ]  
+### <a name="messagetype--data-file-message"></a>[MessageType] = [データ ファイル メッセージ]  
  **[DataFileMessage]**  
- データ ファイルのパスを入力します。または、参照ボタン (**[...]**) をクリックし、データ ファイルを指定します。  
+ データ ファイルのパスを入力します。または、参照ボタン ( **[...]** ) をクリックし、データ ファイルを指定します。  
   
-### [MessageType] = [変数メッセージ]  
+### <a name="messagetype--variable-message"></a>[MessageType] = [変数メッセージ]  
  **[VariableMessage]**  
- 変数名を入力します。または、参照ボタン (**[...]**) をクリックし、変数を指定します。 変数はコンマで区切って指定します。  
+ 変数名を入力します。または、参照ボタン ( **[...]** ) をクリックし、変数を指定します。 変数はコンマで区切って指定します。  
   
  **関連項目 :** 「変数の選択」  
   
-### [MessageType] = [文字列メッセージ]  
+### <a name="messagetype--string-message"></a>[MessageType] = [文字列メッセージ]  
  **[StringMessage]**  
- 文字列メッセージを入力します。または、参照ボタン (**[...]**) をクリックし、メッセージを **[メッセージの入力]** ダイアログ ボックスに入力します。  
+ 文字列メッセージを入力します。または、参照ボタン ( **[...]** ) をクリックし、メッセージを **[メッセージの入力]** ダイアログ ボックスに入力します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)   
- [[メッセージ キュー タスク エディター] ([全般] ページ)](../Topic/Message%20Queue%20Task%20Editor%20\(General%20Page\).md)   
- [メッセージ キュー タスク エディター ([受信] ページ)](../Topic/Message%20Queue%20Task%20Editor%20\(Receive%20Page\).md)   
- [[式] ページ](../Topic/Expressions%20Page.md)  
+ [メッセージ キュー タスク エディター & #40 です。[全般] ページ &#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)   
+ [メッセージ キュー タスク エディター & #40 です。受信ページ"&"#41;](../../integration-services/control-flow/message-queue-task-editor-receive-page.md)   
+ [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
   

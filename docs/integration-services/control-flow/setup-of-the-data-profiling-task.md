@@ -1,32 +1,37 @@
 ---
-title: "データ プロファイル タスクのセットアップ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データ プロファイル タスク [Integration Services], 構成"
+title: "データ プロファイル タスクのセットアップ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: 757bee96609bf389100076434cc733ff7ad46d25
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# データ プロファイル タスクのセットアップ
+# <a name="setup-of-the-data-profiling-task"></a>データ プロファイル タスクのセットアップ
   ソース データのプロファイルを確認する前に、まずデータ プロファイル タスクを設定して実行します。 このタスクは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内に作成します。 データ プロファイル タスクを構成するには、[データ プロファイル タスク エディター] を使用します。 このエディターを使用すると、プロファイルの出力先と計算するプロファイルを選択できます。 タスクを設定したら、パッケージを実行してデータ プロファイルを計算します。  
   
-## 要件と制限  
+## <a name="requirements-and-limitations"></a>要件と制限  
  データ プロファイル タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納されているデータでのみ機能します。 サードパーティまたはファイル ベースのデータ ソースでは機能しません。  
   
  さらに、データ プロファイル タスクが含まれているパッケージを実行するには、tempdb データベースに対する Read/Write 権限 (CREATE TABLE 権限を含む) があるアカウントを使用する必要があります。  
   
-## パッケージのデータ プロファイル タスク  
+## <a name="data-profiling-task-in-a-package"></a>パッケージのデータ プロファイル タスク  
  データ プロファイル タスクでは、プロファイルの構成と計算済みのプロファイルを含む出力ファイルの作成のみが実行されます。 この出力ファイルを確認するには、スタンドアロンのビューアー プログラムである Data Profile Viewer を使用する必要があります。 出力を個別に表示する必要があるために、他のタスクが含まれていないパッケージでデータ プロファイル タスクを使用する場合があります。  
   
  ただし、パッケージ内の唯一のタスクとしてデータ プロファイル タスクを使用する必要はありません。 より複雑なパッケージのワークフローやデータ フローでデータ プロファイルを実行する必要がある場合は、次のオプションを使用します。  
@@ -35,17 +40,17 @@ caps.handback.revision: 34
   
 -   データが読み込まれて変換された後にデータ フローでデータをプロファイルするには、変更されたデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに一時的に保存する必要があります。 これで、保存したデータをプロファイルすることができます。  
   
- 詳細については、「[パッケージ ワークフローでデータ プロファイル タスクを使用する](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md)」をご覧ください。  
+ 詳細については、「 [パッケージ ワークフローでデータ プロファイル タスクを使用する](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md)」をご覧ください。  
   
-## タスク出力の設定  
+## <a name="setup-of-the-task-output"></a>タスク出力の設定  
  データ プロファイル タスクがパッケージに追加されたら、タスクで計算するプロファイルの出力を設定します。 プロファイルの出力を設定するには、[データ プロファイル タスク エディター] の **[全般]** ページを使用します。 **[全般]** ページでは、出力先の指定以外に、データのクイック プロファイルも実行できます。 **[クイック プロファイル]**を選択すると、データ プロファイル タスクにより、一部またはすべての既定のプロファイルを既定の設定のまま使用してテーブルまたはビューがプロファイルされます。  
   
- 詳細については、「[データ プロファイル タスク エディター &#40;[全般] ページ&#41;](../Topic/Data%20Profiling%20Task%20Editor%20\(General%20Page\).md)」および「[単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)」をご覧ください。  
+ 詳細については、「[データ プロファイル タスク エディター &#40;[全般] ページ&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)」および「[単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)」をご覧ください。  
   
 > [!IMPORTANT]  
->  出力ファイルには、データベースに関する機密データやデータベースに格納されているデータが含まれる場合があります。 このファイルの安全性を高める方法の推奨事項については、「[パッケージで使用されるファイルへのアクセス](../../integration-services/security/access-to-files-used-by-packages.md)」をご覧ください。  
+>  出力ファイルには、データベースに関する機密データやデータベースに格納されているデータが含まれる場合があります。 このファイルの安全性を高める方法の推奨事項については、「 [パッケージで使用されるファイルへのアクセス](../../integration-services/security/security-overview-integration-services.md#files)」をご覧ください。  
   
-## 計算するプロファイルの選択と構成  
+## <a name="selection-and-configuration-of-the-profiles-to-be-computed"></a>計算するプロファイルの選択と構成  
  出力ファイルを設定したら、計算するデータ プロファイルを選択する必要があります。 データ プロファイル タスクでは、8 つの異なるデータ プロファイルを計算できます。 これらのプロファイルのうち 5 つは個々の列を分析し、残りの 3 つは複数の列または列とテーブル間のリレーションシップを分析します。 単一のデータ プロファイル タスクで、複数のテーブルまたはビューの複数の列または列の組み合わせに対して複数のプロファイルを計算することができます。  
   
  次の表では、各プロファイルで計算されるレポートとプロファイルで有効なデータ型について説明します。  
@@ -53,15 +58,15 @@ caps.handback.revision: 34
 |計算内容|特定できる問題|使用するプロファイル|  
 |----------------|-------------------------|----------------------|  
 |選択された列に含まれる文字列値の長さごとの、その長さと、テーブル内におけるその長さの行の比率。|**無効な文字列値**- たとえば、米国州コードとして 2 文字を使用する列をプロファイルし、3 文字以上の値を検出できます。|**列長分布プロファイル -**次のいずれかの文字データ型の列に対して有効です。<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
-|文字列型の列に含まれる指定された比率の値に対応する一連の正規表現。<br /><br /> また、新しい値を検証するために将来使用できる正規表現も見つけます。|**無効な文字列値または形式が正しくない文字列値** - たとえば、米国郵便番号列のパターン プロファイルでは、\d{5}-\d{4}、\d{5}、および \d{9} という正規表現が生成されます。 出力にその他の正規表現が示された場合、データに無効な値または形式が正しくない値が含まれています。|**列パターン プロファイル -**次のいずれかの文字データ型の列に対して有効です。<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
+|文字列型の列に含まれる指定された比率の値に対応する一連の正規表現。<br /><br /> また、新しい値を検証するために将来使用できる正規表現も見つけます。|**無効な文字列値または形式が正しくない文字列値**- たとえば、米国郵便番号列のパターン プロファイルでは、\d{5}-\d{4}、\d{5}、および \d{9} という正規表現が生成されます。 出力にその他の正規表現が示された場合、データに無効な値または形式が正しくない値が含まれています。|**列パターン プロファイル -**次のいずれかの文字データ型の列に対して有効です。<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
 |選択した列の NULL 値の比率。|**予想外に高い、列の NULL 値の比率 -**たとえば、米国郵便番号を想定している列をプロファイルし、許容範囲を超える欠落した郵便番号の比率を検出できます。|**列の NULL 比プロファイル -**次のいずれかのデータ型の列に対して有効です。<br /><br /> **image**<br /><br /> **text**<br /><br /> **xml**<br /><br /> ユーザー定義型<br /><br /> variant 型|  
-|数値型列の最小値、最大値、平均値、標準偏差や、 **datetime** 列の最小値、最大値などの統計。|**無効な数値および日付**- たとえば、履歴の日付の列をプロファイルし、将来の日付の最大値を検出できます。|**列統計プロファイル -**次のいずれかのデータ型の列に対して有効です。<br /><br /> 数値データ型:<br /><br /> 整数型 (**bit** 以外<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> 日付および時刻データ型:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> 注: 日付および時刻データ型を使用する列の場合、プロファイルでは最小値と最大値だけが計算されます。|  
-|選択された列に含まれる値ごとの、その値と、テーブル内におけるその値の行の比率。 または、テーブル内の指定された比率を超えている値。|**列に含まれる個別の値の数が正しくない**- たとえば、米国の州を含む列をプロファイルし、50 個を超える個別の値を検出できます。|**列の値分布プロファイル -**次のいずれかのデータ型の列に対して有効です。<br /><br /> 数値データ型:<br /><br /> 整数型 (**bit** 以外<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> 文字データ型:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 日付および時刻データ型:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
+|数値型列の最小値、最大値、平均値、標準偏差や、 **datetime** 列の最小値、最大値などの統計。|**無効な数値および日付**- たとえば、履歴の日付の列をプロファイルし、将来の日付の最大値を検出できます。|**列統計プロファイル -**次のいずれかのデータ型の列に対して有効です。<br /><br /> 数値データ型:<br /><br /> 整数型 ( **bit**以外<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> 日付および時刻データ型:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> 注: 日付および時刻データ型を使用する列の場合、プロファイルでは最小値と最大値だけが計算されます。|  
+|選択された列に含まれる値ごとの、その値と、テーブル内におけるその値の行の比率。 または、テーブル内の指定された比率を超えている値。|**列に含まれる個別の値の数が正しくない**- たとえば、米国の州を含む列をプロファイルし、50 個を超える個別の値を検出できます。|**列の値分布プロファイル -**次のいずれかのデータ型の列に対して有効です。<br /><br /> 数値データ型:<br /><br /> 整数型 ( **bit**以外<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> 文字データ型:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 日付および時刻データ型:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
 |列または列のセットが、選択したテーブルのキーまたは近似キーであるかどうか。|**キーとなる可能性がある列の重複値 -**たとえば、Customers テーブルの名前列と住所列をプロファイルし、名前と住所の組み合わせは一意である必要があるにもかかわらず重複している値を検出できます。|**候補キー プロファイル -**列または列のセットが、選択したテーブルのキーとして適しているかどうかを報告する複数列のプロファイルです。 次のいずれかのデータ型の列に対して有効です。<br /><br /> 整数データ型:<br /><br /> **bit**<br /><br /> **tinyint**<br /><br /> **smallint**<br /><br /> **int**<br /><br /> **bigint**<br /><br /> 文字データ型:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 日付および時刻データ型:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
 |ある列 (依存列) の値が別の列または列のセット (決定列) の値にどの程度依存しているか。|**依存列に含まれる無効な値 -**たとえば、米国郵便番号を含む列と米国の州を含む列の間の依存関係をプロファイルできます。 郵便番号によって州が一意に決定されますが、 このプロファイルでは、この依存関係の違反を検出できます。|**機能依存プロファイル -**次のいずれかのデータ型の列に対して有効です。<br /><br /> 整数データ型:<br /><br /> **bit**<br /><br /> **tinyint**<br /><br /> **smallint**<br /><br /> **int**<br /><br /> **bigint**<br /><br /> 文字データ型:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 日付および時刻データ型:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
 |列または列のセットが、選択したテーブル間の外部キーとして適しているかどうか。<br /><br /> つまり、このプロファイルは、2 つの列間または列のセット間の値の重複を報告します。|**無効な値 -**たとえば、Sales テーブルの ProductID 列をプロファイルするとします。 プロファイルでは、この列に Products テーブルの ProductID 列には存在しない値が含まれていることを検出できます。|**値包含プロファイル -**次のいずれかのデータ型の列に対して有効です。<br /><br /> 整数データ型:<br /><br /> **bit**<br /><br /> **tinyint**<br /><br /> **smallint**<br /><br /> **int**<br /><br /> **bigint**<br /><br /> 文字データ型:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 日付および時刻データ型:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
   
- 計算するプロファイルを選択するには、[データ プロファイル タスク エディター] の **[プロファイル要求]** ページを使用します。 詳細については、「[[データ プロファイル タスク エディター] &#40;[プロファイル要求] ページ&#41;](../Topic/Data%20Profiling%20Task%20Editor%20\(Profile%20Requests%20Page\).md)」をご覧ください。  
+ 計算するプロファイルを選択するには、[データ プロファイル タスク エディター] の **[プロファイル要求]** ページを使用します。 詳細については、「[[データ プロファイル タスク エディター] &#40;[プロファイル要求] ページ&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)」をご覧ください。  
   
  **[プロファイル要求]** ページでは、データ ソースの指定とデータ プロファイルの構成も行います。 タスクを構成する際は、次の点を考慮してください。  
   
@@ -73,32 +78,32 @@ caps.handback.revision: 34
   
  利用可能な各データ プロファイルには、独自の構成オプションがあります。 オプションの詳細については、次のトピックを参照してください。  
   
--   [[候補キー プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../Topic/Candidate%20Key%20Profile%20Request%20Options%20\(Data%20Profiling%20Task\).md)  
+-   [[候補キー プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [[列長分布プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../Topic/Column%20Length%20Distribution%20Profile%20Request%20Options%20\(Data%20Profiling%20Task\).md)  
+-   [[列長分布プロファイル要求] のオプション (データ プロファイル タスク)](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [[列の NULL 比プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../Topic/Column%20Null%20Ratio%20Profile%20Request%20Options%20\(Data%20Profiling%20Task\).md)  
+-   [[列の NULL 比プロファイル要求] のオプション (データ プロファイル タスク)](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [[列パターン プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../Topic/Column%20Pattern%20Profile%20Request%20Options%20\(Data%20Profiling%20Task\).md)  
+-   [[列パターン プロファイル要求] のオプション (データ プロファイル タスク)](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [[候補キー プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../Topic/Column%20Statistics%20Profile%20Request%20Options%20\(Data%20Profiling%20Task\).md)  
+-   [[候補キー プロファイル要求] のオプション (データ プロファイル タスク)](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [[列の値分布プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../Topic/Column%20Value%20Distribution%20Profile%20Request%20Options%20\(Data%20Profiling%20Task\).md)  
+-   [[列の値分布プロファイル要求] のオプション (データ プロファイル タスク)](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [[機能依存プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../Topic/Functional%20Dependency%20Profile%20Request%20Options%20\(Data%20Profiling%20Task\).md)  
+-   [[機能依存プロファイル要求] のオプション (データ プロファイル タスク)](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [[値包含プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../Topic/Value%20Inclusion%20Profile%20Request%20Options%20\(Data%20Profiling%20Task\).md)  
+-   [[値包含プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## データ プロファイル タスクを含むパッケージの実行  
+## <a name="execution-of-the-package-that-contains-the-data-profiling-task"></a>データ プロファイル タスクを含むパッケージの実行  
  データ プロファイル タスクを設定したら、このタスクを実行できるようになります。 実行すると、データ プロファイルが計算され、XML 形式のこの情報がファイルまたはパッケージ変数に出力されます。 この XML の構造は、DataProfile.xsd スキーマに基づきます。 このスキーマは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] やその他のスキーマ エディター、XML エディター、またはメモ帳などのテキスト エディターで開くことができます。 データ品質情報に関するこのスキーマは、次の目的に役立ちます。  
   
 -   組織内および組織間でデータ品質情報を交換する。  
   
 -   データ品質情報を処理するカスタム ツールを作成する。  
   
- 対象名前空間は、[http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/) のスキーマで識別されます。  
+ 対象名前空間は、 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)のスキーマで識別されます。  
   
-## 次の手順  
+## <a name="next-step"></a>次の手順  
  [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md).  
   
   

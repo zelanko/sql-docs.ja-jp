@@ -1,40 +1,45 @@
 ---
-title: "再生オプション (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "トレース [SQL Server], 再生"
-  - "トレースの再生"
-  - "ヘルス モニター [SQL Server]"
-  - "[構成の再生] ダイアログ ボックス"
+title: "再生オプション (SQL Server Profiler) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], replaying
+- replaying traces
+- health monitor [SQL Server]
+- Replay Configuration dialog box
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e334fe938bd9cc93854fc25e0074292a653bc3d7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# 再生オプション (SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、キャプチャされたトレースを再生するには、**[構成の再生]** ダイアログ ボックスで、以下の再生オプションを指定します。 このダイアログ ボックスを表示するには、再生するトレース ファイルまたはトレース テーブルを [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] で開き、**[再生]** メニューの **[開始]** をクリックします。 トレースの再生に必要な権限の詳細については、「[SQL Server Profiler の実行に必要な権限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)」を参照してください。  
+# <a name="replay-options-sql-server-profiler"></a>再生オプション (SQL Server Profiler)
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、キャプチャされたトレースを再生するには、**[構成の再生]** ダイアログ ボックスで、以下の再生オプションを指定します。 このダイアログ ボックスを表示するには、再生するトレース ファイルまたはトレース テーブルを [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]で開き、 **[再生]** メニューの **[開始]**をクリックします。 トレースの再生に必要な権限の詳細については、「 [SQL Server Profiler の実行に必要な権限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)」を参照してください。  
   
- このトピックでは、**[構成の再生]** ダイアログ ボックスで指定できるオプションについて説明します。  
+ このトピックでは、 **[構成の再生]** ダイアログ ボックスで指定できるオプションについて説明します。  
   
 > [!NOTE]  
 >  (アクティブな同時接続が多数ある、またはスループットが高い) 集中型の OLTP アプリケーションを再生する場合は、Distributed Replay Utility を使用することをお勧めします。 Distributed Replay Utility では、複数のコンピューターからのトレース データを再生し、ミッションクリティカルなワークロードをより正確にシミュレートできます。 詳細については、「 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)」を参照してください。  
   
-## 基本再生オプション  
+## <a name="basic-replay-options"></a>基本再生オプション  
  **[再生サーバー]**  
- このサーバーは、トレースを再生する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前になります。 このサーバーは、「[再生を実行するための必要条件](../../tools/sql-server-profiler/replay-requirements.md)」に記載されている再生の要件を満たしている必要があります。  
+ このサーバーは、トレースを再生する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前になります。 このサーバーは、「 [再生を実行するための必要条件](../../tools/sql-server-profiler/replay-requirements.md)」に記載されている再生の要件を満たしている必要があります。  
   
  **[ファイルに保存]**  
- トレースの再生結果を後で閲覧できるように書き込む出力ファイルを指定します。 既定では、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] によってトレースの再生結果が画面だけに表示されます。  
+ トレースの再生結果を後で閲覧できるように書き込む出力ファイルを指定します。 既定では、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] によってトレースの再生結果が画面だけに表示されます。  
   
  **[テーブルに保存]**  
  トレースの再生結果を後で閲覧できるように書き込むデータベース テーブルを指定します。  
@@ -54,7 +59,7 @@ caps.handback.revision: 17
 > [!NOTE]  
 >  最高のパフォーマンスを得るためには、[複数のスレッドを使用してイベントを再生します。このオプションはパフォーマンスを最適にし、デバッグを無効にします。] を選択し、[再生結果を表示する] を選択しないことをお勧めします。  
   
-## 再生オプションの詳細設定  
+## <a name="advanced-replay-options"></a>再生オプションの詳細設定  
  **[システム SPID を再生する]**  
  すべての SPID を再生します。 既定のオプションです。  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 17
  一覧から選択した SPID 番号のみを再生します。  
   
  **[日時により再生を制限する]**  
- **[開始時刻]** および **[終了時刻]** で指定された期間のトレースを再生します。  
+ **[開始時刻]** および **[終了時刻]**で指定された期間のトレースを再生します。  
   
  **[ヘルス モニターの待機間隔]**  
  ヘルス モニターにより終了されるまでの、プロセスに実行を許可する時間を設定します。  
@@ -73,12 +78,12 @@ caps.handback.revision: 17
  **[SQL Server のブロックされるプロセスの監視を有効にする]**  
  ブロックされるプロセス モニターが、ブロックされているプロセスまたはブロックしているプロセスを検索する頻度を設定します。  
   
-## ヘルス モニターについて  
+## <a name="about-the-health-monitor"></a>ヘルス モニターについて  
  ヘルス モニターは、トレースの再生に伴うシミュレートされたプロセスを監視するアプリケーション スレッドです。これらのプロセスのうち、再生内でブロックされているプロセスを終了します。 **[再生の構成]** ダイアログ ボックスの **[再生オプションの詳細設定]** タブで、ブロックされているプロセスを終了するまでにヘルス モニターが待機する時間を秒単位で指定できます (**[ヘルス モニターの待機間隔]**)。 この間隔が 0 に設定されていると、ヘルス モニターは、再生されているトレース中のブロックしているシミュレートされたプロセスを終了しません。  
   
-## 参照  
- [トレースの再生](../../tools/sql-server-profiler/replay-traces.md)   
- [再生を実行するための必要条件](../../tools/sql-server-profiler/replay-requirements.md)   
- [トレースの再生に関する注意点 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
+## <a name="see-also"></a>参照  
+ [トレースを再生します。](../../tools/sql-server-profiler/replay-traces.md)   
+ [再生の要件](../../tools/sql-server-profiler/replay-requirements.md)   
+ [トレース &#40; の再生に関する注意点SQL Server Profiler &#41;](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

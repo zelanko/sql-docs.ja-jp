@@ -1,25 +1,30 @@
 ---
-title: "パッケージ ワークフローでデータ プロファイル タスクを使用する | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データ プロファイル タスク [Integration Services], ワークフローでの出力の使用"
+title: "パッケージ ワークフローでは、タスクのプロファイリング データを組み込む |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ea3c68e0320216c81ce2a47f426112dd4a25f22f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# パッケージ ワークフローでデータ プロファイル タスクを使用する
-  データ プロファイルとクリーンアップは、初期段階で自動化されるプロセスの対象にはなりません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、データ プロファイル タスクを出力する場合、通常、視覚的な分析とユーザーの判断によって、報告された違反が意味のあるものか過剰であるかを判断する必要があります。 データ品質の問題を認識した後でも、クリーンアップに最適な方法に取り組む綿密な計画が必要です。  
+# <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>パッケージ ワークフローでデータ プロファイル タスクを使用する
+  データ プロファイルとクリーンアップは、初期段階で自動化されるプロセスの対象にはなりません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、データ プロファイル タスクを出力する場合、通常、視覚的な分析とユーザーの判断によって、報告された違反が意味のあるものか過剰であるかを判断する必要があります。 データ品質の問題を認識した後でも、クリーンアップに最適な方法に取り組む綿密な計画が必要です。  
   
  ただし、データ品質の基準が確立された後に、データ ソースの定期的な分析とクリーンアップを自動化することが必要になる場合があります。 次のシナリオを考えてみます。  
   
@@ -29,10 +34,10 @@ caps.handback.revision: 24
   
  データ フロー タスクを組み込むことのできるワークフローを用意したら、このタスクを追加するために必要な手順を理解する必要があります。 次のセクションでは、データ フロー タスクを組み込む一般的な手順について説明します。 最後の 2 つのセクションでは、データ フロー タスクを直接データ ソースに接続する方法、またはデータ フローから変換されたデータに接続する方法について説明します。  
   
-## データ フロー タスクの一般的なワークフローの定義  
+## <a name="defining-a-general-workflow-for-the-data-flow-task"></a>データ フロー タスクの一般的なワークフローの定義  
  パッケージのワークフローでデータ プロファイル タスクの出力を使用するための一般的な方法の概要を次に示します。  
   
-#### データ プロファイル タスクの出力をパッケージ内でプログラムによって使用するには  
+#### <a name="to-use-the-output-of-the-data-profiling-task-programmatically-in-a-package"></a>データ プロファイル タスクの出力をパッケージ内でプログラムによって使用するには  
   
 1.  パッケージにデータ プロファイル タスクを追加して構成します。  
   
@@ -44,17 +49,17 @@ caps.handback.revision: 24
   
  データ プロファイル タスクをパッケージのワークフローに組み込む場合は、このタスクの次の 2 つの機能に注意してください。  
   
--   **タスクの出力**。 データ プロファイル タスクは、DataProfile.xsd スキーマに従って、その出力をファイルまたはパッケージ変数に XML 形式で書き込みます。 そのため、パッケージの条件ワークフローでプロファイルの結果を使用する場合は、XML 出力に対してクエリを実行する必要があります。 Xpath クエリ言語を使用すると、この XML 出力に対して簡単にクエリを実行できます。 この XML 出力の構造を調べるために、サンプルの出力ファイル、またはスキーマ自体を開くことができます。 出力ファイルまたはスキーマを開くには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] やその他の XML エディター、またはメモ帳などのテキスト エディターを使用できます。  
+-   **タスクの出力**。 データ プロファイル タスクは、DataProfile.xsd スキーマに従って、その出力をファイルまたはパッケージ変数に XML 形式で書き込みます。 そのため、パッケージの条件ワークフローでプロファイルの結果を使用する場合は、XML 出力に対してクエリを実行する必要があります。 Xpath クエリ言語を使用すると、この XML 出力に対して簡単にクエリを実行できます。 この XML 出力の構造を調べるために、サンプルの出力ファイル、またはスキーマ自体を開くことができます。 出力ファイルまたはスキーマを開くには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]やその他の XML エディター、またはメモ帳などのテキスト エディターを使用できます。  
   
     > [!NOTE]  
     >  Data Profile Viewer に表示されるプロファイルの結果には、出力で直接見つからない、計算された値もあります。 たとえば、列の NULL 比プロファイルの出力には、行の総数と、NULL 値を含む行の総数が含まれます。 列の NULL 比を取得するには、この 2 つの値に対してクエリを実行してから、NULL 値を含む行の比率を計算します。  
   
--   **タスクの入力**。 データ プロファイル タスクは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルからその入力を読み取ります。 そのため、既にデータ フローに読み込まれて変換されたデータをプロファイルする場合は、メモリ内のデータをステージング テーブルに保存する必要があります。  
+-   **タスクの入力**。 データ プロファイル タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルからその入力を読み取ります。 そのため、既にデータ フローに読み込まれて変換されたデータをプロファイルする場合は、メモリ内のデータをステージング テーブルに保存する必要があります。  
   
  ここでは、外部データ ソースから直接送信されるデータ、またはデータ フロー タスクから変換されるデータのプロファイルを実行する、この一般的なワークフローを適用します。 また、データ フロー タスクの入出力の要件を扱う方法についても説明します。  
   
-## 外部データ ソースへの直接的なデータ プロファイル タスクの接続  
- データ プロファイル タスクでは、データ ソースから直接送信されるデータをプロファイルできます。  この機能を説明するために、次の例では、データ プロファイル タスクを使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの Person.Address テーブルの列で列の NULL 比プロファイルを計算します。 その後、この例では、スクリプト タスクを使用して出力ファイルから結果を取得し、ワークフローを分けるために使用できるパッケージ変数を設定します。  
+## <a name="connecting-the-data-profiling-task-directly-to-an-external-data-source"></a>外部データ ソースへの直接的なデータ プロファイル タスクの接続  
+ データ プロファイル タスクでは、データ ソースから直接送信されるデータをプロファイルできます。  この機能を説明するために、次の例では、データ プロファイル タスクを使用して、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの Person.Address テーブルの列で列の NULL 比プロファイルを計算します。 その後、この例では、スクリプト タスクを使用して出力ファイルから結果を取得し、ワークフローを分けるために使用できるパッケージ変数を設定します。  
   
 > [!NOTE]  
 >  この簡単な例では、AddressLine2 列を選択しました。この列では NULL 値の比率が高くなっています。  
@@ -71,41 +76,41 @@ caps.handback.revision: 24
   
 -   データ プロファイル タスクの結果に基づいて実行する、ワークフロー内の下流の分岐を制御する優先順位制約を構成します。  
   
-### 接続マネージャーの構成  
+### <a name="configure-the-connection-managers"></a>接続マネージャーの構成  
  この例では、次の 2 つの接続マネージャーがあります。  
   
 -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] データベースに接続する [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 接続マネージャー。  
   
 -   データ プロファイル タスクの結果を格納する出力ファイルを作成するファイル接続マネージャー。  
   
-##### 接続マネージャーを構成するには  
+##### <a name="to-configure-the-connection-managers"></a>接続マネージャーを構成するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で、新しい [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを作成します。  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、新しい [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを作成します。  
   
-2.  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーをパッケージに追加します。 この接続マネージャーを、.NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) を使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの使用可能なインスタンスに接続するように構成します。  
+2.  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーをパッケージに追加します。 この接続マネージャーを、.NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) を使用して、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの使用可能なインスタンスに接続するように構成します。  
   
-     既定では、接続マネージャーの名前は \<server name>.AdventureWorks1 となります。  
+     既定では、接続マネージャーは次の名前:\<サーバー名 >。AdventureWorks1 です。  
   
 3.  ファイル接続マネージャーをパッケージに追加します。 この接続マネージャーを、データ プロファイル タスクの出力ファイルを作成するように構成します。  
   
      この例では、ファイル名 DataProfile1.xml を使用します。 既定では、接続マネージャーの名前はファイルと同じになります。  
   
-### パッケージ変数の構成  
+### <a name="configure-the-package-variables"></a>パッケージ変数の構成  
  この例では、2 つのパッケージ変数を使用します。  
   
 -   ProfileConnectionName 変数は、ファイル接続マネージャーの名前をスクリプト タスクに渡します。  
   
 -   AddressLine2NullRatio 変数は、この列の計算された NULL 比をスクリプト タスクからパッケージに渡します。  
   
-##### プロファイルの結果を保持するパッケージ変数を構成するには  
+##### <a name="to-configure-the-package-variables-that-will-hold-profile-results"></a>プロファイルの結果を保持するパッケージ変数を構成するには  
   
 -   **[変数]** ウィンドウで、次の 2 つのパッケージ変数を追加して構成します。  
   
-    -   一方の変数では、名前を「**ProfileConnectionName**」と入力し、データ型を **String** に設定します。  
+    -   一方の変数では、名前を「 **ProfileConnectionName**」と入力し、データ型を **String**に設定します。  
   
-    -   もう一方の変数では、名前を「**AddressLine2NullRatio**」と入力し、データ型を **Double** に設定します。  
+    -   もう一方の変数では、名前を「 **AddressLine2NullRatio**」と入力し、データ型を **Double**に設定します。  
   
-### データ プロファイル タスクの構成  
+### <a name="configure-the-data-profiling-task"></a>データ プロファイル タスクの構成  
  データ プロファイル タスクは、次のように構成する必要があります。  
   
 -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーが提供するデータを入力として使用します。  
@@ -114,36 +119,36 @@ caps.handback.revision: 24
   
 -   ファイル接続マネージャーに関連付けられているファイルにプロファイルの結果を保存します。  
   
-##### データ プロファイル タスクを構成するには  
+##### <a name="to-configure-the-data-profiling-task"></a>データ プロファイル タスクを構成するには  
   
 1.  制御フローにデータ プロファイル タスクを追加します。  
   
 2.  **[データ プロファイル タスク エディター]** を開き、タスクを構成します。  
   
-3.  エディターの **[全般]** ページの **[変換先]** で、既に構成済みのファイル接続マネージャーの名前を選択します。  
+3.  エディターの **[全般]** ページの **[変換先]**で、既に構成済みのファイル接続マネージャーの名前を選択します。  
   
 4.  エディターの **[プロファイル要求]** ページで、列の NULL 比プロファイルを新しく作成します。  
   
-5.  **[要求プロパティ]** ペインの **[接続マネージャー]** で、既に構成済みの [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを選択します。 次に、**[TableOrView]** で Person.Address を選択します。  
+5.  **[要求プロパティ]** ペインの **[接続マネージャー]**で、既に構成済みの [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを選択します。 次に、 **[TableOrView]**で Person.Address を選択します。  
   
 6.  データ プロファイル タスク エディターを閉じます。  
   
-### スクリプト タスクの構成  
+### <a name="configure-the-script-task"></a>スクリプト タスクの構成  
  スクリプト タスクは、出力ファイルから結果を取得し、既に構成済みのパッケージ変数を設定するように構成する必要があります。  
   
-##### スクリプト タスクを構成するには  
+##### <a name="to-configure-the-script-task"></a>スクリプト タスクを構成するには  
   
 1.  制御フローにスクリプト タスクを追加します。  
   
 2.  スクリプト タスクをデータ プロファイル タスクに接続します。  
   
-3.  **スクリプト タスク エディター**を開いて、タスクを構成します。  
+3.  **スクリプト タスク エディター** を開いて、タスクを構成します。  
   
 4.  **[スクリプト]** ページで、使用するプログラミング言語を選択します。 次に、2 つのパッケージ変数をスクリプトで使用できるようにします。  
   
-    1.  **[ReadOnlyVariables]** で **ProfileConnectionName** を選択します。  
+    1.  **[ReadOnlyVariables]**で **ProfileConnectionName**を選択します。  
   
-    2.  **[ReadWriteVariables]** で **AddressLine2NullRatio** を選択します。  
+    2.  **[ReadWriteVariables]**で **AddressLine2NullRatio**を選択します。  
   
 5.  **[スクリプトの編集]** を選択して、スクリプト開発環境を開きます。  
   
@@ -262,14 +267,14 @@ caps.handback.revision: 24
   
 8.  スクリプト開発環境を閉じてから、スクリプト タスク エディターを閉じます。  
   
-#### 変数からプロファイル出力を読み込むコード  
+#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>変数からプロファイル出力を読み込むコード  
  上記の手順は、データ プロファイル タスクの出力をファイルから読み込む方法を示していますが、 この出力をパッケージ変数から読み込む方法もあります。 出力を変数から読み込むには、サンプル コードを次のように変更する必要があります。  
   
--   **LoadXml** メソッドではなく、**XmlDocument** クラスの **Load** メソッドを呼び出します。  
+-   **LoadXml** メソッドではなく、 **XmlDocument** クラスの **Load** メソッドを呼び出します。  
   
 -   スクリプト タスク エディターで、プロファイル出力を格納するパッケージ変数の名前を、タスクの **ReadOnlyVariables** リストに追加します。  
   
--   次のコード例で示すように、変数の文字列値を **LoadXML** メソッドに渡します  (この例では、プロファイル出力を格納するパッケージ変数の名前として "ProfileOutput" を使用しています)。  
+-   次のコード例で示すように、変数の文字列値を **LoadXML** メソッドに渡します (この例では、プロファイル出力を格納するパッケージ変数の名前として "ProfileOutput" を使用しています)。  
   
     ```vb  
     Dim outputString As String  
@@ -285,16 +290,16 @@ caps.handback.revision: 24
     profileOutput.LoadXml(outputString);  
     ```  
   
-### 優先順位制約の構成  
+### <a name="configure-the-precedence-constraints"></a>優先順位制約の構成  
  優先順位制約は、データ プロファイル タスクの結果に基づいて実行する、ワークフロー内の下流の分岐を制御するように構成する必要があります。  
   
-##### 優先順位制約を構成するには  
+##### <a name="to-configure-the-precedence-constraints"></a>優先順位制約を構成するには  
   
 -   スクリプト タスクをワークフロー内の下流の分岐に接続する優先順位制約では、変数の値を使用してワークフローを分ける式を作成します。  
   
-     たとえば、**[式と制約]** で、優先順位制約の **[評価操作]** を設定するとします。 次に、式の値として `@AddressLine2NullRatio < .90` を使用します。 これにより、ワークフローは、直前のタスクが成功した場合、および選択した列の NULL 値の比率が 90% 未満の場合に、選択したパスに沿って進みます。  
+     たとえば、 **[式と制約]** で、優先順位制約の **[評価操作]**を設定するとします。 次に、式の値として `@AddressLine2NullRatio < .90` を使用します。 これにより、ワークフローは、直前のタスクが成功した場合、および選択した列の NULL 値の比率が 90% 未満の場合に、選択したパスに沿って進みます。  
   
-## データ フローから変換されたデータへのデータ プロファイル タスクの接続  
+## <a name="connecting-the-data-profiling-task-to-transformed-data-from-the-data-flow"></a>データ フローから変換されたデータへのデータ プロファイル タスクの接続  
  データ ソースから直接データをプロファイルするのではなく、既にデータ フローに読み込まれて変換されたデータをプロファイルできます。 ただし、データ プロファイル タスクは、メモリ内のデータではなく、持続データに対してしか動作しません。 したがって、変換されたデータをステージング テーブルに保存するには、最初に、変換先コンポーネントを使用する必要があります。  
   
 > [!NOTE]  
@@ -310,9 +315,9 @@ caps.handback.revision: 24
   
  次の手順では、データ プロファイル タスクの出力を使用して、データ フローによって変換されたデータをプロファイルするための一般的な方法を示します。 この手順の多くは、外部データ ソースから直接送信されるデータをプロファイルするための既に説明した手順と似ています。 さまざまなコンポーネントを構成する方法の詳細については、上記の手順を確認してください。  
   
-#### データ フローでデータ プロファイル タスクを使用するには  
+#### <a name="to-use-the-data-profiling-task-in-the-data-flow"></a>データ フローでデータ プロファイル タスクを使用するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で、パッケージを作成します。  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、パッケージを作成します。  
   
 2.  データ フローで、適切な変換元と変換を追加、構成、および接続します。  
   
@@ -326,8 +331,8 @@ caps.handback.revision: 24
   
 7.  スクリプト タスクをワークフロー内の下流の分岐に接続する優先順位制約では、変数の値を使用してワークフローを分ける式を作成します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)   
- [Data Profile Viewer (Data Profile Viewer)](../../integration-services/control-flow/data-profile-viewer.md)  
+ [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)  
   
   

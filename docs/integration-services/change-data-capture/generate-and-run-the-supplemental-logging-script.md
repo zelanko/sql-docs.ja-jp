@@ -1,24 +1,29 @@
 ---
-title: "補足ログ スクリプトの生成および実行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "supLog"
+title: "生成して、補足ログ スクリプトを実行 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- supLog
 ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 736b11e79235b38659e9fa4c13f06369bd8b335d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# 補足ログ スクリプトの生成および実行
+# <a name="generate-and-run-the-supplemental-logging-script"></a>補足ログ スクリプトの生成および実行
   補足ログを設定する Oracle ソース データベースでスクリプトを実行するには、[変更をキャプチャするためのテーブルの設定] ページを使用します。  
   
  **補足ログ スクリプトを実行するには**  
@@ -35,8 +40,8 @@ caps.handback.revision: 6
   
  **[次へ]** をクリックして「 [Generate Mirror Tables and CDC Capture Instances](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md)」に進みます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server 変更データベース インスタンスを作成する方法](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [補足ログ スクリプトの確認および生成](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
+ [確認および補足ログ スクリプトを生成](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   
   

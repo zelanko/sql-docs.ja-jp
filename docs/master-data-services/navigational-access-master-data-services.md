@@ -1,26 +1,31 @@
 ---
-title: "ナビゲーション アクセス (マスター データ サービス) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ナビゲーション アクセス [マスター データ サービス]"
-  - "セキュリティ [マスター データ サービス], ナビゲーション アクセス"
+title: "ナビゲーション アクセス (Master Data Services) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- navigational access [Master Data Services]
+- security [Master Data Services], navigational access
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e3979b0f5749182f3188ee3baafd43cd3e0cbb8b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# ナビゲーション アクセス (マスター データ サービス)
-  ナビゲーション アクセスは、**[モデル]** タブで割り当てられるモデル オブジェクト セキュリティに適用されます。  
+# <a name="navigational-access-master-data-services"></a>ナビゲーション アクセス (マスター データ サービス)
+  ナビゲーション アクセスは、 **[モデル]** タブで割り当てられるモデル オブジェクト セキュリティに適用されます。  
   
  ナビゲーション アクセスは、セキュリティを割り当てたレベルよりも高いレベルへのアクセスです。  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 5
   
  コレクションに権限を割り当てた場合、名前、コード、説明、および所有者 ID の読み取りまたは更新を実行できます。 また、モデル名を読み取ることもできます。  
   
-## 参照  
- [権限の決定方法 (マスター データ サービス)](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+## <a name="see-also"></a>参照  
+ [アクセス許可を決定する方法 (&) #40 です。マスター データ サービス &#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

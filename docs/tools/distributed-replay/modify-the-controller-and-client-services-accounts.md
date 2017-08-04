@@ -1,37 +1,42 @@
 ---
-title: "Controller および Client のサービス アカウントの変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "コント ローラーを変更し、クライアントのサービス アカウント |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 caps.latest.revision: 29
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 94a6df60ae3e1acebb9ff7d75cf65c7efb21d6db
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# Controller および Client のサービス アカウントの変更
+# <a name="modify-the-controller-and-client-services-accounts"></a>Controller および Client のサービス アカウントの変更
   このトピックでは、分散再生コントローラーと分散再生クライアントのサービス アカウントを変更し、アクセス制御リスト (ACL) を再度適用する方法について説明します。  
   
-### [コンピューターの管理] を使用して 分散再生サービスを開始または停止するには  
+### <a name="to-start-or-stop-the-distributed-replay-services-using-computer-management"></a>[コンピューターの管理] を使用して 分散再生サービスを開始または停止するには  
   
-1.  分散再生サービスがインストールされているコンピューターで、コマンド プロンプトから、「**dcomcnfg**」と入力します。  
+1.  分散再生サービスがインストールされているコンピューターで、コマンド プロンプトから、「 **dcomcnfg**」と入力します。  
   
-2.  **[サービス]** をダブルクリックし、下へスクロールして、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<service name>]** を右クリックし、**[開始]** または **[停止]** をクリックします。  
+2.  ダブルクリック**Services**下にスクロールし、右クリックし、  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay\<サービス名 >**、順にクリック**開始**または**停止**です。  
   
-### 分散再生コントローラー サービスを変更するには  
+### <a name="to-modify-the-distributed-replay-controller-service"></a>分散再生コントローラー サービスを変更するには  
   
-1.  コントローラー コンピューターで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー サービスを停止します。  
+1.  コントローラー コンピューターで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー サービスを停止します。  
   
-2.  **[サービス]** で、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー]** を右クリックし、**[プロパティ]** をクリックします。  
+2.  **[サービス]**で、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー**を右クリックし、 **[プロパティ]**をクリックします。  
   
-3.  **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラーのプロパティ]** ウィンドウの **[ログオン]** タブで、**[このアカウント]** を選択して、新しいログオン アカウントを入力するか、**[参照]** をクリックして新しいログオン アカウントを指定し、**[OK]** をクリックします。  
+3.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラーのプロパティ** ウィンドウの **[ログオン]** タブで、 **[このアカウント]**を選択して、新しいログオン アカウントを入力するか、 **[参照]** をクリックして新しいログオン アカウントを指定し、 **[OK]**をクリックします。  
   
      **重要**: 分散再生コントローラーを構成するとき、分散再生クライアント サービスの実行に使用する 1 つ以上のユーザー アカウントを指定できます。 サポートされているアカウントの一覧を次に示します。  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 29
   
 4.  分散再生コントローラー サービスを開始します。  
   
-### 分散再生クライアント サービスを変更するには  
+### <a name="to-modify-the-distributed-replay-client-service"></a>分散再生クライアント サービスを変更するには  
   
 1.  分散再生クライアント サービスを変更する前に、変更する分散再生クライアントのサービス アカウントが、セットアップ時にコントローラー コンピューターの CTLRUSERS パラメーターに指定されていることを確認してください。 変更する分散再生クライアントのサービス アカウントがセットアップ時に指定されていない場合は、先に次の手順を実行する必要があります。  
   
@@ -61,13 +66,13 @@ caps.handback.revision: 29
   
     4.  **[DReplayController]** を右クリックし、**[プロパティ]** をクリックします。  
   
-    5.  **[DReplayController のプロパティ]** ウィンドウの **[セキュリティ]** タブで、**[起動とアクティブ化のアクセス許可]** セクションの **[編集]** をクリックします。  
+    5.  **[DReplayController のプロパティ]** ウィンドウの **[セキュリティ]** タブで、 **[起動とアクティブ化のアクセス許可]** セクションの **[編集]** をクリックします。  
   
-    6.  新しいクライアント サービス ログオン アカウントに**ローカルとリモートからのアクティブ化**権限を与え、**[OK]** をクリックします。  
+    6.  新しいクライアント サービス ログオン アカウントに **ローカルとリモートからのアクティブ化** 権限を与え、 **[OK]**をクリックします。  
   
-    7.  **[アクセス許可]** セクションの **[編集]** をクリックし、新しいクライアント サービス ログオン アカウントに**ローカルとリモートのアクセス権限**を与え、**[OK]** をクリックします。  
+    7.  **[アクセス許可]** セクションの **[編集]** をクリックし、新しいクライアント サービス ログオン アカウントに **ローカルとリモートのアクセス権限** を与え、 **[OK]**をクリックします。  
   
-    8.  **[OK]** をクリックして、**[DReplayController のプロパティ]** ウィンドウを閉じます。  
+    8.  **[OK]** をクリックして、 **[DReplayController のプロパティ]** ウィンドウを閉じます。  
   
     9. コントローラー コンピューターで、変更したクライアント サービス ログオン アカウントを **Distributed COM Users** グループに追加します。  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 29
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生クライアント サービスを停止します。  
   
-3.  **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生クライアントのプロパティ]** ウィンドウの **[ログオン]** タブで、**[このアカウント]** を選択して、新しいログオン アカウントを入力するか、**[参照]** をクリックして新しいログオン アカウントを指定し、**[OK]** をクリックします。  
+3.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生クライアントのプロパティ** ウィンドウの **[ログオン]** タブで、 **[このアカウント]**を選択して、新しいログオン アカウントを入力するか、 **[参照]** をクリックして新しいログオン アカウントを指定し、 **[OK]**をクリックします。  
   
 4.  分散再生クライアント サービスを開始します。  
   

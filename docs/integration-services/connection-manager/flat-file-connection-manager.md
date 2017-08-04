@@ -1,29 +1,34 @@
 ---
-title: "フラット ファイル接続マネージャー | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "接続マネージャー [Integration Services], フラット ファイル"
-  - "接続 [Integration Services], フラット ファイル"
-  - "ファイル [Integration Services], 接続"
-  - "フラット ファイル接続マネージャー"
-  - "フラット ファイル"
-  - "フラット ファイル接続 [Integration Services]"
+title: "フラット ファイル接続マネージャー |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connection managers [Integration Services], Flat File
+- connections [Integration Services], flat files
+- files [Integration Services], connections
+- Flat File connection manager
+- flat files
+- flat file connections [Integration Services]
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f3e174427f1aa92c14952571b0e81070ffe69d2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# フラット ファイル接続マネージャー
+# <a name="flat-file-connection-manager"></a>フラット ファイル接続マネージャー
   フラット ファイル接続マネージャーを使用すると、パッケージはフラット ファイルのデータにアクセスできます。 たとえば、フラット ファイルの変換元と変換先は、フラット ファイル接続マネージャーを使用して、データの抽出および読み込みを行うことができます。  
   
  フラット ファイル接続マネージャーがアクセスできるファイルは、1 つだけです。 複数のファイルを参照するには、フラット ファイル接続マネージャーではなく、複数フラット ファイル接続マネージャーを使用します。 詳細については、「 [複数フラット ファイル接続マネージャー](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)」を参照してください。  
@@ -70,14 +75,14 @@ caps.handback.revision: 49
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[フラット ファイル接続マネージャー エディター] &#40;[全般] ページ&#41;](../Topic/Flat%20File%20Connection%20Manager%20Editor%20\(General%20Page\).md)  
+-   [[フラット ファイル接続マネージャー エディター] &#40;[全般] ページ&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)  
   
--   [[フラット ファイル接続マネージャー エディター] &#40;[列] ページ&#41;](../Topic/Flat%20File%20Connection%20Manager%20Editor%20\(Columns%20Page\).md)  
+-   [ラット ファイル接続マネージャー エディター &#40;「列」 ページ&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)  
   
--   [[フラット ファイル接続マネージャー エディター] &#40;[詳細設定] ページ&#41;](../Topic/Flat%20File%20Connection%20Manager%20Editor%20\(Advanced%20Page\).md)  
+-   [フラット ファイル接続マネージャー エディター &#40;「詳細設定」 ページ&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)  
   
--   [[フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../Topic/Flat%20File%20Connection%20Manager%20Editor%20\(Preview%20Page\).md)  
+-   [フラット ファイル接続マネージャー エディター&#40;「プレビュー」 ページ&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)  
   
- プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」および「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)」を参照してください。  
+ プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
   
   

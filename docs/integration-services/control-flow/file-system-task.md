@@ -1,33 +1,38 @@
 ---
-title: "ファイル システム タスク | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.filesystemtask.f1"
-helpviewer_keywords: 
-  - "ファイル システム タスク [Integration Services]"
+title: "ファイル システム タスク |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.filesystemtask.f1
+helpviewer_keywords:
+- File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 caps.latest.revision: 58
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 0c10a9020fe4fd03e9d71df19a9b16223e3031ea
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# ファイル システム タスク
+# <a name="file-system-task"></a>ファイル システム タスク
   ファイル システム タスクは、ファイル システム内のファイルとディレクトリの操作を実行します。 たとえば、ファイル システム タスクを使用すると、パッケージはディレクトリやファイルの作成、移動、または削除を実行できます。 また、ファイル システム タスクを使用して、ファイルやディレクトリの属性を設定することもできます。 たとえば、ファイル システム タスクを使用すると、ファイルを非表示にしたり読み取り専用にできます。  
   
  ファイル システム タスクのすべての操作では、ファイルまたはディレクトリをソースとして使用します。 たとえば、タスクによりコピーされるファイルや、タスクにより削除されるディレクトリは、ソースと呼ばれます。 ソースを指定するには、ファイル接続マネージャーを使用してディレクトリまたはファイルをポイントするか、ソースへのパスが含まれる変数の名前を指定します。 詳細については、「[ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)」および「[Integration Services (SSIS) の変数](../../integration-services/integration-services-ssis-variables.md)」を参照してください。  
   
  ファイルやディレクトリをコピーまたは移動する操作、およびファイルの名前を変更する操作では、その操作の出力先となるファイルまたはディレクトリと、基になるファイルまたはディレクトリを使用します。 操作の出力先となるファイルまたはディレクトリは、ファイル接続マネージャーまたは変数を使用して指定します。 ファイル システム タスクの操作は、出力先のファイルやディレクトリの上書きを許可するように構成できます。 新しいディレクトリを作成する操作は、そのディレクトリが既に存在していても失敗するのではなく、指定した名前の既存のディレクトリが使用されるように構成できます。  
   
-## 定義済みのファイル システム操作  
+## <a name="predefined-file-system-operations"></a>定義済みのファイル システム操作  
  ファイル システム タスクには、定義済みの操作のセットが含まれています。 次の表では、これらの操作について説明します。  
   
 |操作|Description|  
@@ -45,38 +50,38 @@ caps.handback.revision: 58
   
  ファイル システム タスクは、1 つのファイルまたはディレクトリのみを処理できます。 したがって、このタスクでは、ワイルドカード文字を使用して複数のファイルに同じ処理を行うことはできません。 ファイル システム タスクが複数のファイルやディレクトリに対して同じ処理を繰り返し行うようにするには、次の手順に示すように、ファイル システム タスクを Foreach ループ コンテナー内に配置します。  
   
--   **Foreach ループ コンテナーの構成**[Foreach ループ エディター] の **[コレクション]** ページで **[Foreach File 列挙子]** に列挙子を設定して、**[ファイル]** の列挙子の構成としてワイルドカード式を入力します。 [Foreach ループ エディター] の **[変数のマッピング]** ページで、ファイル名を一度に 1 つずつファイル システム タスクに渡すために使用する変数をマップします。  
+-   **Foreach ループ コンテナーの構成** [Foreach ループ エディター] の **[コレクション]** ページで **[Foreach File 列挙子]** に列挙子を設定して、 **[ファイル]**の列挙子の構成としてワイルドカード式を入力します。 [Foreach ループ エディター] の **[変数のマッピング]** ページで、ファイル名を一度に 1 つずつファイル システム タスクに渡すために使用する変数をマップします。  
   
--   **ファイル システム タスクの追加と構成**ファイル システム タスクを Foreach ループ コンテナーに追加します。 [ファイル システム タスク エディター] の **[全般]** ページで、**SourceVariable** プロパティまたは **DestinationVariable** プロパティに、Foreach ループ コンテナーで定義した変数を設定します。  
+-   **ファイル システム タスクの追加と構成** ファイル システム タスクを Foreach ループ コンテナーに追加します。 [ファイル システム タスク エディター] の **[全般]** ページで、 **SourceVariable** プロパティまたは **DestinationVariable** プロパティに、Foreach ループ コンテナーで定義した変数を設定します。  
   
-## ファイル システム タスクで使用できるカスタム ログ エントリ  
- 次の表では、ファイル システム タスクのカスタム ログ エントリを説明します。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../../integration-services/performance/custom-messages-for-logging.md)」を参照してください。  
+## <a name="custom-log-entries-available-on-the-file-system-task"></a>ファイル システム タスクで使用できるカスタム ログ エントリ  
+ 次の表では、ファイル システム タスクのカスタム ログ エントリを説明します。 詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。  
   
 |ログ エントリ|Description|  
 |---------------|-----------------|  
 |**FileSystemOperation**|タスクで実行される操作を報告します。 ログ エントリは、ファイル システム操作の開始時に書き込まれます。これには、操作の基になるファイルと操作対象のファイルに関する情報が含まれます。|  
   
-## ファイル システム タスクの構成  
+## <a name="configuring-the-file-system-task"></a>ファイル システム タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
--   [[ファイル システム タスク エディター] ([全般] ページ)](../Topic/File%20System%20Task%20Editor%20\(General%20Page\).md)  
+-   [[ファイル システム タスク エディター] ([全般] ページ)](../../integration-services/control-flow/file-system-task-editor-general-page.md)  
   
--   [[式] ページ](../Topic/Expressions%20Page.md)  
+-   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
  プログラムでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
-## 関連タスク  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、データ ファイルをダウンロードまたはアップロードし、サーバー上のディレクトリを管理するタスクが含まれます。 詳細については、「[FTP タスク](../../integration-services/control-flow/ftp-task.md)」を参照してください。  
+## <a name="related-tasks"></a>関連タスク  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、データ ファイルをダウンロードまたはアップロードし、サーバー上のディレクトリを管理するタスクが含まれます。 詳細については、「 [FTP タスク](../../integration-services/control-flow/ftp-task.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
   

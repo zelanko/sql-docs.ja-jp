@@ -1,25 +1,30 @@
 ---
-title: "ODBC 入力元を使用したデータ抽出 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Odbc 入力元を使用して、データを抽出 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 236c2b7caf1ec3ade0a140bfabfc32f3a21a9ea1
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# ODBC 入力元を使用したデータ抽出
+# <a name="extract-data-by-using-the-odbc-source"></a>ODBC 入力元を使用したデータ抽出
   この手順では、ODBC 入力元を使用してデータを抽出する方法について説明します。 ODBC 入力元を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクがあらかじめ含まれている必要があります。  
   
-### ODBC 入力元を使用してデータを抽出するには  
+### <a name="to-extract-data-using-an-odbc-source"></a>ODBC 入力元を使用してデータを抽出するには  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、使用する [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] パッケージを開きます。  
   
@@ -49,9 +54,9 @@ caps.handback.revision: 8
   
 11. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## 参照  
- [ODBC ソース エディター ([接続マネージャー] ページ)](../Topic/ODBC%20Source%20Editor%20\(Connection%20Manager%20Page\).md)   
- [ODBC ソース エディター ([列] ページ)](../Topic/ODBC%20Source%20Editor%20\(Columns%20Page\).md)   
- [ODBC ソース エディター ([エラー出力] ページ)](../Topic/ODBC%20Source%20Editor%20\(Error%20Output%20Page\).md)  
+## <a name="see-also"></a>参照  
+ [Odbc 入力元エディター & #40 です。接続マネージャー ページ &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)   
+ [Odbc 入力元エディター & #40 です。[列] ページ &#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
+ [[ODBC ソース エディター] &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   

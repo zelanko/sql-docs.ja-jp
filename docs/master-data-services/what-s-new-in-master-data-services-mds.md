@@ -1,26 +1,31 @@
 ---
-title: "マスター データ サービス (MDS) の新機能 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "どのような &#39; マスター データ サービス (MDS) の |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 caps.latest.revision: 85
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 85
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e341e5b15e33af6338447f5422138aea1b94240a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# マスター データ サービス (MDS) の新機能
+# <a name="what39s-new-in-master-data-services-mds"></a>どのような &#39; のマスター データ サービス (MDS)
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]このトピックでは、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] リリースのマスター データ サービスの変更と更新の概要を説明します。 
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] このトピックでは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]リリースのマスター データ サービスの変更と更新の概要を説明します。 
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] のデータを整理する方法の概要については、[マスター データ サービスの概要](../master-data-services/master-data-services-overview-mds.md)を参照してください。 
   
@@ -50,9 +55,9 @@ caps.handback.revision: 85
   
     ```  
     <configuration>  
-       <system.webServer>  
+       \<system.webServer>  
           <urlCompression doStaticCompression="true" doDynamicCompression="false " />  
-       </system.webServer>  
+       \</system.webServer>  
     </configuration>  
   
     ```  
@@ -77,9 +82,9 @@ caps.handback.revision: 85
   
  このリリースでは、ユーザーに対して管理権限をモデル レベルで明示的に割り当てることができます。 つまり、エンティティ レベルなどのモデル サブツリーで後からユーザーに権限が割り当てられた場合、ユーザーはこの管理権限を保持し続けます。  
   
- この [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] リリースでは、読み取り、作成、更新、削除の各権限が新しく導入され、権限レベルがさらに多く提供されています。 たとえば、ユーザーに更新権限しかない場合、そのユーザーはマスター データを更新できますが、作成や削除はできません。 作成、更新、または削除権限をユーザーに付与すると、そのユーザーには読み取り権限が自動的に割り当てられます。 読み取り、作成、更新、削除の各権限を組み合わせることもできます。  
+ この [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]リリースでは、読み取り、作成、更新、削除の各権限が新しく導入され、権限レベルがさらに多く提供されています。 たとえば、ユーザーに更新権限しかない場合、そのユーザーはマスター データを更新できますが、作成や削除はできません。 作成、更新、または削除権限をユーザーに付与すると、そのユーザーには読み取り権限が自動的に割り当てられます。 読み取り、作成、更新、削除の各権限を組み合わせることもできます。  
   
- 次の表に示すように、[!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] にアップグレードすると、以前の権限が新しい権限に変換されます。  
+ 次の表に示すように、 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]にアップグレードすると、以前の権限が新しい権限に変換されます。  
   
 |以前のリリースの権限|新しい権限|  
 |------------------------------------|--------------------|  
@@ -150,7 +155,7 @@ caps.handback.revision: 85
 
  **新しいビジネス ルール条件**  
   
- 完全な条件セットを提供する&7; つのビジネス ルール条件が新しく追加されました。 詳細については、「[ビジネス ルール条件 (マスター データ サービス)](../master-data-services/business-rule-conditions-master-data-services.md)」を参照してください。  
+ 完全な条件セットを提供する 7 つのビジネス ルール条件が新しく追加されました。 詳細については、「[ビジネス ルール条件 (マスター データ サービス)](../master-data-services/business-rule-conditions-master-data-services.md)」を参照してください。  
 
 ## <a name="derived-hierarchy-improvements"></a>派生階層の強化
 
@@ -176,7 +181,7 @@ caps.handback.revision: 85
     
  **カスタム インデックス**  
   
- 1 つの属性 (シングル インデックス) または属性の一覧 (複合インデックス) に&1; つのエンティティとして非クラスター化インデックスを作成して、クエリ パフォーマンスを高めることができます。 詳細については、「[カスタム インデックス (マスター データ サービス)](../master-data-services/custom-index-master-data-services.md)」を参照してください。  
+ 1 つの属性 (シングル インデックス) または属性の一覧 (複合インデックス) に 1 つのエンティティとして非クラスター化インデックスを作成して、クエリ パフォーマンスを高めることができます。 詳細については、「[カスタム インデックス (マスター データ サービス)](../master-data-services/custom-index-master-data-services.md)」を参照してください。  
  
   **属性フィルター**  
   
@@ -200,7 +205,7 @@ caps.handback.revision: 85
   
  **競合のマージ**  
   
- 他のユーザーによって変更されているデータをパブリッシュしようとしている場合、パブリッシュ操作は競合エラーで失敗します。 このエラーを解決するには、競合のマージを実行した後で変更を再パブリッシュします。 詳細については、「[Merge Conflicts (Master Data Service) (競合のマージ (マスター データ サービス)](../master-data-services/merge-conflicts-master-data-services.md)」および「[競合のマージ (MDS Add-in for Excel)](../master-data-services/microsoft-excel-add-in/merge-conflicts-mds-add-in-for-excel.md)」を参照してください。  
+ 他のユーザーによって変更されているデータをパブリッシュしようとしている場合、パブリッシュ操作は競合エラーで失敗します。 このエラーを解決するには、競合のマージを実行した後で変更を再パブリッシュします。 詳細については、「 [Merge Conflicts (Master Data Service) (競合のマージ (マスター データ サービス)](../master-data-services/merge-conflicts-master-data-services.md) 」および「 [競合のマージ (MDS Add-in for Excel)](../master-data-services/microsoft-excel-add-in/merge-conflicts-mds-add-in-for-excel.md)」を参照してください。  
   
  **変更セット**  
   
@@ -224,12 +229,14 @@ caps.handback.revision: 85
    
  **モデル配置パッケージ サンプルの更新**  
   
- 新しいシナリオをサポートするためにサンプル パッケージが更新されました。 詳細については、「[SQL Server サンプル: モデルの配置パッケージ (マスター データ サービス)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)」を参照してください。  
+ 新しいシナリオをサポートするためにサンプル パッケージが更新されました。 詳細については、「 [SQL Server サンプル: モデルの配置パッケージ (マスター データ サービス)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [マスター データ サービスと SQL Server 2016 のエディションでサポートされるデータ品質サービス機能](../master-data-services/master data services and data quality services features support.md)  
+ [マスター データ サービスと SQL Server 2016 のエディションでサポートされるデータ品質サービス機能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [非推奨のマスター データ サービス機能](../master-data-services/deprecated-master-data-services-features.md)   
  [提供が中止されたマスター データ サービス機能](../master-data-services/discontinued-master-data-services-features.md)  
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+

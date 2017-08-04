@@ -1,24 +1,29 @@
 ---
-title: "変更をキャプチャするために選択したテーブルに対する変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "makChanToTab"
+title: "変更をキャプチャするために選択したテーブルに変更を加える |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- makChanToTab
 ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 962b3a3690bd8a0bf62de762509c4398773578ca
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# 変更をキャプチャするために選択したテーブルに対する変更
+# <a name="make-changes-to-the-tables-selected-for-capturing-changes"></a>変更をキャプチャするために選択したテーブルに対する変更
   このダイアログ ボックスでは、選択したテーブルから変更をキャプチャする特定の列を選択できます。 **[セキュリティ ロール]** と **[キャプチャ インスタンス]** の情報を編集することもできます。  
   
  このダイアログ ボックスでは、変更をキャプチャするために選択したテーブルに次の変更を加えることができます。  
@@ -48,8 +53,8 @@ caps.handback.revision: 6
   
  **"キャプチャ インスタンス"** フィールドに、キャプチャ インスタンスの名前を入力します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server 変更データベース インスタンスを作成する方法](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [Oracle のテーブルおよび列の選択](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
+ [Oracle のテーブルおよび列を選択します。](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   
   

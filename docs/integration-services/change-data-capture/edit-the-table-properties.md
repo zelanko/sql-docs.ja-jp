@@ -1,27 +1,32 @@
 ---
-title: "テーブルのプロパティの編集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "editTabProps"
+title: "テーブルのプロパティを編集 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- editTabProps
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5213e0c5757afd3a74c8b76f43bf1a2c88ced7e4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# テーブルのプロパティの編集
+# <a name="edit-the-table-properties"></a>テーブルのプロパティの編集
   変更がキャプチャされている選択したテーブルの特定の列を編集するには、このダイアログ ボックスを使用します。 **[セキュリティ ロール]** と **[キャプチャ インスタンス]** の情報を編集することもできます。  
   
-### CDC インスタンスに含める列を編集するには  
+### <a name="to-edit-the-columns-to-include-in-the-cdc-instance"></a>CDC インスタンスに含める列を編集するには  
   
 1.  次のいずれかまたは両方の操作を行います。  
   
@@ -29,11 +34,11 @@ caps.handback.revision: 8
   
     -   CDC インスタンスに含めない列の横のチェック ボックスをオフにします。  
   
-### セキュリティ ロールを編集するには  
+### <a name="to-edit-the-security-role"></a>セキュリティ ロールを編集するには  
   
 1.  **"セキュリティ ロール"** フィールドで、新しい名前を入力するか、セキュリティ ロールの名前を編集します。  
   
-### 新しいキャプチャ インスタンスを作成するには  
+### <a name="to-create-a-new-capture-instance"></a>新しいキャプチャ インスタンスを作成するには  
   
 1.  **[セキュリティ ロール]** セクションの **"名前"** フィールドに、キャプチャ インスタンスの名前を入力します。 既定では、このフィールドに入力される名前は、現在のキャプチャ インスタンスの名前の末尾に **_NEW** を追加したものです (例: **old_instance_NEW**)。  
   
@@ -49,8 +54,8 @@ caps.handback.revision: 8
   
  このダイアログ ボックスで情報の入力を終了したら、 **[OK]** をクリックして変更を受け入れます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [CDC インスタンスのプロパティを編集する方法](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [変更をキャプチャするために選択したテーブルに対する変更](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
+ [変更をキャプチャするために選択したテーブルを変更をします。](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
   

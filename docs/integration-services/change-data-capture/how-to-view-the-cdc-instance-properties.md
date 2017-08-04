@@ -1,25 +1,30 @@
 ---
-title: "CDC インスタンスのプロパティを表示する方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "CDC インスタンスのプロパティを表示する方法 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c23f7aa902cedb22cc5df69c8169fea336513e5
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC インスタンスのプロパティを表示する方法
+# <a name="how-to-view-the-cdc-instance-properties"></a>CDC インスタンスのプロパティを表示する方法
   この手順では、インスタンスの操作を管理するために作成するインスタンスの情報を、CDC デザイナー コンソールを使用して表示する方法について説明します。  
   
-### 特定のインスタンスに関する情報を表示するには  
+### <a name="to-view-information-about-a-specific-instance"></a>特定のインスタンスに関する情報を表示するには  
   
 1.  **[スタート]** メニューの **[CDC デザイナー コンソール]**をクリックします。  
   

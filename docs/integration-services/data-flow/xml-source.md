@@ -1,28 +1,33 @@
 ---
-title: "XML ソース | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.xmlsource.f1"
-helpviewer_keywords: 
-  - "ソース [Integration Services], XML"
-  - "XML ソース [Integration Services]"
-  - "XML ソース エディター"
+title: "XML ソース |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.xmlsource.f1
+helpviewer_keywords:
+- sources [Integration Services], XML
+- XML source [Integration Services]
+- XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 caps.latest.revision: 47
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e3af9fa8b743b01b222d1596197aa83bbb39854
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# XML ソース
+# <a name="xml-source"></a>XML ソース
   XML ソースは XML データ ファイルを読み取り、ソース出力の列にデータを設定します。  
   
  XML ファイルのデータには、多くの場合、階層リレーションシップが含まれます。 たとえば、XML データ ファイルはカタログおよびカタログ内のアイテムを表す場合があります。 データ フローにデータを入力できるようにするためには、XML データ ファイルの要素のリレーションシップを特定し、ファイル内部の各要素に対して出力を生成する必要があります。  
@@ -68,21 +73,21 @@ caps.handback.revision: 47
   
  XML ソースでは、複数の標準出力と複数のエラー出力がサポートされています。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、XML ソースを構成するための **[XML ソース エディター]** ダイアログ ボックスがあります。 このダイアログ ボックスは、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから利用できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、XML ソースを構成するための **[XML ソース エディター]**ダイアログ ボックスがあります。 このダイアログ ボックスは、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから利用できます。  
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
  **[XML ソース エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[XML ソース エディター] &#40;[接続マネージャー] ページ&#41;](../Topic/XML%20Source%20Editor%20\(Connection%20Manager%20Page\).md)  
+-   [[XML ソース エディター] &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/xml-source-editor-connection-manager-page.md)  
   
--   [[XML ソース エディター] &#40;[列] ページ&#41;](../Topic/XML%20Source%20Editor%20\(Columns%20Page\).md)  
+-   [[XML ソース エディター] &#40;[列] ページ&#41;](../../integration-services/data-flow/xml-source-editor-columns-page.md)  
   
--   [XML ソース エディター &#40;[エラー出力] ページ&#41;](../Topic/XML%20Source%20Editor%20\(Error%20Output%20Page\).md)  
+-   [XML ソース エディター &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/xml-source-editor-error-output-page.md)  
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](../Topic/Common%20Properties.md)  
+-   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [XML 入力元のカスタム プロパティ](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -92,3 +97,4 @@ caps.handback.revision: 47
   
 ## <a name="related-tasks"></a>関連タスク  
  [XML ソースを使用してデータを抽出する](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
+

@@ -1,24 +1,29 @@
 ---
-title: "Oracle CDC Service の管理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "createSrv"
+title: "Oracle CDC Service の管理 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- createSrv
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ece331cf561da80bf56df914fec6f42159ade23e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# Oracle CDC Service の管理
+# <a name="manage-an-oracle-cdc-service"></a>Oracle CDC Service の管理
   CDC Service 構成コンソールを使用すると、特定の CDC Service を管理できます。  
   
  **操作する CDC サービスを選択するには**  
@@ -37,13 +42,13 @@ caps.handback.revision: 8
   
      操作する CDC サービスを右クリックして、目的のアクションをクリックすることもできます。 「 [What can you do with a CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)」を参照してください。  
   
-##  <a name="BKMK_WhatcandowithCDCService"></a> CDC Service で可能な操作  
+##  <a name="BKMK_WhatcandowithCDCService"></a> What can you do with a CDC Service  
  CDC サービスの操作時には、以下のアクションを実行できます。  
   
-### サービスの削除  
+### <a name="delete-the-service"></a>サービスの削除  
  サービスを削除するには、CDC Service 構成コンソールの右側にある **[アクション]** ペインで **[削除]** をクリックします。  
   
- 削除する CDC サービスを右クリックして **[削除]** を選択することもできます。  
+ または、削除する CDC サービスを右クリックして **[削除]**を選択します。  
   
  **注**: 実行中のサービスを削除した場合、サービスは停止されてから削除されます。  
   
@@ -51,12 +56,12 @@ caps.handback.revision: 8
   
  [SQL Server への接続] ダイアログ ボックスに入力するデータについては、「 [Connection to SQL Server for Delete](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)」を参照してください。  
   
-### CDC Service のプロパティの編集  
+### <a name="edit-the-cdc-service-properties"></a>CDC Service のプロパティの編集  
  CDC Service 構成コンソールの右側にある **[アクション]** ペインで **[プロパティ]**をクリックします。  
   
- プロパティを編集する CDC サービスを右クリックして **[プロパティ]** を選択することもできます。  
+ または、プロパティを編集する CDC サービスを右クリックして **[プロパティ]**を選択します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ローカルの CDC Service を管理する方法](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
   
   

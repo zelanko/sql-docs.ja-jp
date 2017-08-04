@@ -1,35 +1,40 @@
 ---
-title: "エラーとイベントのリファレンス (Integration Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Integration Services パッケージ, イベント"
-  - "イベント [Integration Services]"
-  - "エラー [Integration Services]"
-  - "Integration Services, エラー"
+title: "エラーおよびイベント リファレンス (Integration Services) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Integration Services packages, events
+- events [Integration Services]
+- errors [Integration Services]
+- Integration Services, errors
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c98113795981fb4c080fac83f3f69a6242c1e86b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# エラーとイベントのリファレンス (Integration Services)
+# <a name="errors-and-events-reference-integration-services"></a>エラーとイベントのリファレンス (Integration Services)
   ここでは、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に関連するいくつかのエラーとイベントについて説明します。 エラー メッセージについては、原因と解決方法も示します。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] エラーとその説明の一覧など、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージの詳細については、「[Integration Services のエラーおよびメッセージのリファレンス](../integration-services/integration-services-error-and-message-reference.md)」を参照してください。 ただし、現在一覧にはトラブルシューティング情報は含まれていません。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] エラーとその説明の一覧など、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージの詳細については、「 [Integration Services のエラーおよびメッセージのリファレンス](../integration-services/integration-services-error-and-message-reference.md)」を参照してください。 ただし、現在一覧にはトラブルシューティング情報は含まれていません。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で作業しているときに発生する可能性のあるエラー メッセージの多くは、他のコンポーネントが原因になっています。 これには、OLE DB プロバイダー、[!INCLUDE[ssDE](../includes/ssde-md.md)] や [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] などの他のデータベース コンポーネント、またはファイル システム、SMTP サーバー、Microsoft Message Queueing などの他のサービスやコンポーネントが含まれます。 このような外部エラー メッセージの情報については、コンポーネント固有のドキュメントを参照してください。  
+>  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で作業しているときに発生する可能性のあるエラー メッセージの多くは、他のコンポーネントが原因になっています。 これには、OLE DB プロバイダー、 [!INCLUDE[ssDE](../includes/ssde-md.md)] や [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] などの他のデータベース コンポーネント、またはファイル システム、SMTP サーバー、Microsoft Message Queueing などの他のサービスやコンポーネントが含まれます。 このような外部エラー メッセージの情報については、コンポーネント固有のドキュメントを参照してください。  
   
-## エラー メッセージ  
+## <a name="error-messages"></a>エラー メッセージ  
   
 |エラーのシンボル名|Description|  
 |----------------------------|-----------------|  
@@ -47,8 +52,8 @@ caps.handback.revision: 20
 |DTS_E_WRITEWHILECACHEINUSE|参照変換によるインメモリ キャッシュからのデータの読み取りと同時に、キャッシュ変換によるインメモリ キャッシュへのデータの書き込みが試行されていることを示しています。|  
 |DTS_W_EXTERNALMETADATACOLUMNSOUTOFSYNC|データ ソース内の列のメタデータが、そのデータ ソースに接続されている変換元コンポーネントまたは変換先コンポーネントの列のメタデータと一致しないことを示しています。|  
   
-## イベント (SQLISPackage)  
- 詳細については、「[Integration Services パッケージによってログに記録されるイベント](../integration-services/performance/events-logged-by-an-integration-services-package.md)」を参照してください。  
+## <a name="events-sqlispackage"></a>イベント (SQLISPackage)  
+ 詳細については、「 [Integration Services パッケージによってログに記録されるイベント](../integration-services/performance/events-logged-by-an-integration-services-package.md)」を参照してください。  
   
 |イベント|Description|  
 |-----------|-----------------|  
@@ -61,8 +66,8 @@ caps.handback.revision: 20
 |SQLISPackage_12551|パッケージが作業を完了せずに停止したことを示しています。|  
 |SQLISPackage_12557|パッケージの実行が完了したことを示しています。|  
   
-## イベント (SQLISService)  
- 詳細については、「[Integration Services サービスによってログに記録されるイベント](../integration-services/service/events-logged-by-the-integration-services-service.md)」を参照してください。  
+## <a name="events-sqlisservice"></a>イベント (SQLISService)  
+ 詳細については、「 [Integration Services サービスによってログに記録されるイベント](../integration-services/service/events-logged-by-the-integration-services-service.md)」を参照してください。  
   
 |イベント|Description|  
 |-----------|-----------------|  
@@ -75,7 +80,7 @@ caps.handback.revision: 20
 |SQLISService_273|構成ファイルを読み取ることができなかったか、無効であることを示しています。|  
 |SQLISService_274|構成ファイルの場所を含むレジストリ エントリが存在しないか、空であることを示しています。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../integration-services/integration-services-error-and-message-reference.md)  
   
   

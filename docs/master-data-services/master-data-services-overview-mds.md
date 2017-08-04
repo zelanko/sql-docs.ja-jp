@@ -1,48 +1,55 @@
 ---
-title: "マスター データ サービスの概要 (MDS) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "マスター データとは"
-helpviewer_keywords: 
-  - "マスター データ サービス、概要"
-  - "マスター データ サービス"
+title: "マスター データ サービスの概要 (MDS) |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- "マスター データとは"
+helpviewer_keywords:
+- Master Data Services, overview
+- Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 caps.latest.revision: 28
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 4b1f65db7d29cfd0e081694b208f1add5cae21eb
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# マスター データ サービスの概要 (MDS)
-  このトピックでは、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] のデータ編成と管理機能について説明します。 
+# <a name="master-data-services-overview-mds"></a>マスター データ サービスの概要 (MDS)
+  このトピックでは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のデータ編成と管理機能について説明します。 
   
- >  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] アーキテクチャの説明については、simple-talk.com の記事「[Master Data Services -- The Basics](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics)」 (マスター データ サービス -- 基本) を参照してください。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の新機能については、「[マスター データ サービス (MDS) の新機能](../master-data-services/what-s-new-in-master-data-services-mds.md)」を参照してください。  
+ [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]使用すると、組織のデータのセットを master に管理できます。 できます、データ モデルを整理して、ルールを作成して、データの更新のデータを更新する制御します。 Excel では、組織内の他のユーザーとマスター データ セットを共有できます。 
+  
+ >  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] アーキテクチャの説明については、simple-talk.com の記事「 [Master Data Services -- The Basics](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) 」 (マスター データ サービス -- 基本) を参照してください。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の新機能については、「[マスター データ サービス (MDS) の新機能](../master-data-services/what-s-new-in-master-data-services-mds.md)」を参照してください。  
    **[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] のインストール、データベースと Web サイトのセットアップ、サンプル モデルの展開の手順については、**「[マスター データ サービスのイントールと構成](../master-data-services/master-data-services-installation-and-configuration.md)」を参照してください。  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、モデルはマスター データ構造の最上位のコンテナーです。 モデルを作成すると、類似したデータのグループを管理できます。たとえば、オンラインの製品データを管理するなどです。 モデルには 1 つ以上のエンティティが含まれています。エンティティにはメンバーが含まれており、これはデータ レコードです。 エンティティはテーブルに似ています。  
   
  たとえば、オンラインの製品モデルには、Product、Color、Style などのエンティティが含まれていることがあります。 Color エンティティには、赤、シルバー、黒の色のメンバーを含めることができます。  
   
- ![Color entity](../master-data-services/media/mds-productmodel-colorentity-composite.png "Color entity")  
+ ![エンティティのカラー](../master-data-services/media/mds-productmodel-colorentity-composite.png "エンティティの色")  
   
  またモデルには、エンティティ内で定義されている属性も含まれます。 属性には、エンティティ メンバーを記述するのに役立つ値が含まれています。 自由形式属性とドメインベースの属性があります。  ドメインベースの属性には、あるエンティティのメンバーによって設定され、その他のエンティティの属性値として使用できる値が含まれます。  
   
- たとえば、Product エンティティには、Cost と Weight の自由形式属性を含めることができます。 また、Color エンティティ メンバーによって設定された値を含む、色 ![Number 1](../master-data-services/media/mds-number1.png "Number 1") を表すドメインベースの属性もあります。 この色のマスター リストは、Product エンティティ ![Number 2](../master-data-services/media/mds-number2.png "Number 2") の属性値として使用できます。  
+ たとえば、Product エンティティには、Cost と Weight の自由形式属性を含めることができます。 色のドメイン ベースの属性があると、![番号 1](../master-data-services/media/mds-number1.png "番号 1") color エンティティ メンバーによって設定される値を含むです。 この色のマスター リストは、Product エンティティの属性値として使用![番号 2](../master-data-services/media/mds-number2.png "番号 2")です。  
   
- ![Domain-based attribute for color](../master-data-services/media/mds-productentity-color-domainattribute.png "Domain-based attribute for color")  
+ ![色のドメイン ベース属性](../master-data-services/media/mds-productentity-color-domainattribute.png "色のドメイン ベースの属性")  
   
- 派生階層は、モデル内のエンティティ間のリレーションシップから取得されます。 これらは、ドメインベースの属性リレーションシップです。 たとえば、Product モデルは、Color ![Number 2](../master-data-services/media/mds-number2.png "Number 2") エンティティと Product ![Number 3](../master-data-services/media/mds-number3.png "Number 3") エンティティ間のリレーションシップから取得される色の派生階層 ![Number 1](../master-data-services/media/mds-number1.png "Number 1") を持つ場合があります。  
+ 派生階層は、モデル内のエンティティ間のリレーションシップから取得されます。 これらは、ドメインベースの属性リレーションシップです。 製品モデルなどを持つ場合、色の派生階層![番号 1](../master-data-services/media/mds-number1.png "番号 1")色の間のリレーションシップから取得される![番号 2](../master-data-services/media/mds-number2.png "番号 2")および製品![番号 3](../master-data-services/media/mds-number3.png "番号 3")エンティティです。  
   
- ![Color derived hierarchy](../master-data-services/media/mds-derivedhierarchy.png "Color derived hierarchy")  
+ ![色の派生階層](../master-data-services/media/mds-derivedhierarchy.png "色の派生階層")  
   
  データの基本的な構造を定義したら、インポート機能を使用してデータ レコード (メンバー) の追加を開始できます。 ステージング テーブルにデータを読み込み、ビジネス ルールを使用してデータを検証して、MDS テーブルにデータを読み込みます。  また、属性の値を設定するのにビジネス ルールを使用することもできます。  
   
@@ -64,7 +71,7 @@ caps.handback.revision: 27
 |派生階層を作成する|派生階層は、ビジネス ニーズの変化に応じて更新でき、すべてのメンバーを適切なレベルで記述するようにします。|[派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-master-data-services.md)<br /><br /> [派生階層を作成する (マスター データ サービス)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
 |必要に応じて、明示的階層を作成する|レベル ベースではなく、単一のエンティティのメンバーを含む階層を作成する場合に、明示的階層を作成できます。|[明示的階層 (マスター データ サービス)](../master-data-services/explicit-hierarchies-master-data-services.md)<br /><br /> [明示的階層を作成する (マスター データ サービス)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
 |必要に応じて、コレクションを作成します。|レポートまたは分析のためにメンバーのさまざまなグループを表示する場合で、完全な階層を必要としないときは、コレクションを作成します。<br /><br /> <br /><br /> 注: ユーザーに最低でもコレクション モデル オブジェクトに対する [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 更新 **権限があり、** [エクスプローラー] **機能領域にアクセスできる場合は、** でコレクションを作成できます。|[コレクション (マスター データ サービス)](../master-data-services/collections-master-data-services.md)<br /><br /> [コレクションを作成する (マスター データ サービス)](../master-data-services/create-a-collection-master-data-services.md)|  
-|ユーザー定義メタデータを作成する|モデル オブジェクトを記述するには、モデルにユーザー定義メタデータを追加します。 メタデータには、オブジェクトの所有者やデータ ソースを含めることができます。|[メタデータ (マスター データ サービス)](../Topic/Metadata%20\(Master%20Data%20Services\).md)|  
+|ユーザー定義メタデータを作成する|モデル オブジェクトを記述するには、モデルにユーザー定義メタデータを追加します。 メタデータには、オブジェクトの所有者やデータ ソースを含めることができます。||  
 |モデルのバージョンをロックし、バージョン フラグを割り当てる|モデルのバージョンをロックして、管理者以外のユーザーがメンバーに対する変更を実行できないようにします。 ビジネス ルールに対するバージョンのデータ検証が正常に完了したら、バージョンをコミットできます。これにより、すべてのユーザーがメンバーに対する変更を実行できなくなります。<br /><br /> バージョン フラグを作成してモデルに割り当てます。 フラグによって、ユーザーおよびサブスクライブ システムは使用するモデルのバージョンを識別できます。|[バージョン (マスター データ サービス)](../master-data-services/versions-master-data-services.md)<br /><br /> [バージョンをロックする (マスター データ サービス)](../master-data-services/lock-a-version-master-data-services.md)<br /><br /> [バージョン フラグを作成する (マスター データ サービス)](../master-data-services/create-a-version-flag-master-data-services.md)|  
 |サブスクリプション ビューを作成する|サブスクライブ システムでマスター データを使用するために、サブスクリプション ビューを作成します。これにより、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに標準ビューが作成されます。|[概要: データのエクスポート (マスター データ サービス)](../master-data-services/overview-exporting-data-master-data-services.md)<br /><br /> [サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)|  
 |ユーザー権限とグループ権限を構成する|ユーザー権限とグループ権限は、テスト環境から運用環境にコピーできません。 ただし、運用環境で最終的に使用するセキュリティを決定するために、テスト環境を使用できます。|[セキュリティ (マスター データ サービス)](../master-data-services/security-master-data-services.md)<br /><br /> [グループを追加する (マスター データ サービス)](../master-data-services/add-a-group-master-data-services.md)<br /><br /> [ユーザーを追加する (マスター データ サービス)](../master-data-services/add-a-user-master-data-services.md)|  
@@ -72,3 +79,5 @@ caps.handback.revision: 27
  準備ができたら、データの有無に関係なく、運用環境にモデルを配置できます。 詳細については、「[モデルの配置 (マスター データ サービス)](../master-data-services/deploying-models-master-data-services.md)」を参照してください。  
   
   
+
+

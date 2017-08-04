@@ -1,27 +1,32 @@
 ---
-title: "XML タスク | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.xmltask.f1"
-helpviewer_keywords: 
-  - "XML [Integration Services]"
-  - "XML タスク [Integration Services]"
+title: "XML タスク |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.xmltask.f1
+helpviewer_keywords:
+- XML [Integration Services]
+- XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 87e8a8a282e0d6973f1fd47157c9ea33b71a8c7f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# XML タスク
+# <a name="xml-task"></a>XML Task
   XML タスクは、XML データの処理に使用します。 このタスクを使用すると、パッケージは、XML ドキュメントの取得、Extensible Stylesheet Language Transformations (XSLT) スタイル シートや XPath 式の使用によるドキュメントへの操作の適用、複数ドキュメントのマージ、または更新したドキュメントの検証、比較、およびファイルや変数への保存を行うことができます。  
   
  このタスクを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、XML ドキュメントを実行時に動的に変更できます。 XML タスクは、次の目的で使用できます。  
@@ -34,9 +39,9 @@ caps.handback.revision: 59
   
 -   XML ドキュメントを検証し、必要に応じて詳細なエラー出力を取得します。 詳細については、「 [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)」を参照してください。  
   
- XML ソースを使用して XML ドキュメントの値を抽出し、データ フロー内に XML データを含めることができます。 詳細については、「[XML ソース](../../integration-services/data-flow/xml-source.md)」を参照してください。  
+ XML ソースを使用して XML ドキュメントの値を抽出し、データ フロー内に XML データを含めることができます。 詳細については、「 [XML ソース](../../integration-services/data-flow/xml-source.md)」を参照してください。  
   
-## XML 操作  
+## <a name="xml-operations"></a>XML 操作  
  XML タスクが実行する最初のアクションは、特定の XML ドキュメントの取得です。 このアクションは XML タスクに組み込まれており、自動的に発生します。 取得した XML ドキュメントは、XML タスクが実行する操作においてデータの変換元として使用されます。  
   
  XML 操作である Diff、Merge、および Patch には、2 つのオペランドが必要です。 最初のオペランドは、XML ソース ドキュメントを指定します。 2 番目のオペランドも XML ドキュメントを指定しますが、その内容は操作の必要条件に応じて変化します。 たとえば、Diff 操作では 2 つのドキュメントを比較します。したがって、2 番目のオペランドは、XML ソース ドキュメントの比較対象となる、類似した別の XML ドキュメントを指定します。  
@@ -49,7 +54,7 @@ caps.handback.revision: 59
   
  XML タスクは、操作の結果を変数またはファイルに保存するように構成できます。 ファイルに保存する場合、XML タスクはファイル接続マネージャーを使用して、そのファイルにアクセスします。 また、Diff 操作によって生成された DiffGram の結果を、ファイルや変数に保存することもできます。  
   
-## 定義済み XML 操作  
+## <a name="predefined-xml-operations"></a>定義済み XML 操作  
  XML タスクには、XML ドキュメントを処理するための定義済み操作のセットが含まれています。 次の表では、これらの操作について説明します。  
   
 |操作|Description|  
@@ -61,7 +66,7 @@ caps.handback.revision: 59
 |XPath|XPath クエリと評価を実行します。|  
 |XSLT (XSLT)|XML ドキュメントに対して XSL 変換を実行します。|  
   
-### Diff 操作  
+### <a name="diff-operation"></a>Diff 操作  
  Diff 操作は、比較を高速で行うか詳細に行うかに応じて、異なる比較アルゴリズムを使用するように構成できます。 また、比較するドキュメントのサイズに基づいて、高速比較を行うか詳細比較を行うかを自動的に選択するように、構成することもできます。  
   
  Diff 操作には、XML 比較をカスタマイズするオプションのセットが含まれています。 次の表では、このオプションについて説明します。  
@@ -77,10 +82,10 @@ caps.handback.revision: 59
 |**[IgnoreProcessingInstructions]**|この値で、処理命令を比較するかどうかを指定します。|  
 |**[IgnoreDTD]**|この値で、DTD を無視するかどうかを指定します。|  
   
-### マージ操作  
+### <a name="merge-operation"></a>マージ操作  
  XPath ステートメントを使用してソース ドキュメント内でのマージ場所を特定すると、このステートメントによって 1 つのノードが返されます。 ステートメントによって複数のノードが返された場合は、最初のノードだけが使用されます。 2 番目のドキュメントの内容は、XPath クエリによって返される最初のノードでマージされます。  
   
-### XPath 操作  
+### <a name="xpath-operation"></a>XPath 操作  
  XPath 操作は、XPath のさまざまな種類の機能を使用するように構成できます。  
   
 -   **[評価]** オプションを選択すると、sum() などの XPath 関数を実装できます。  
@@ -89,12 +94,12 @@ caps.handback.revision: 59
   
 -   **[値]** オプションを選択すると、文字列に連結されたノードのうち、選択したすべてのノードの内部のテキスト値を返すことができます。  
   
-### 検証操作  
+### <a name="validation-operation"></a>検証操作  
  検証操作は、文書型定義 (DTD) または XML スキーマ定義 (XSD) スキーマのどちらかを使用するように構成できます。  
   
  **ValidationDetails** を有効にして、詳細なエラー出力を取得します。 詳細については、「 [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)」を参照してください。  
   
-## XML ドキュメントのエンコード  
+## <a name="xml-document-encoding"></a>XML ドキュメントのエンコード  
  XML タスクでは、Unicode ドキュメントのマージのみがサポートされています。 つまり、このタスクによりマージ操作を適用できるのは、エンコードが Unicode のドキュメントのみです。 他のエンコードを使用すると、XML タスクが失敗する原因になります。  
   
 > [!NOTE]  
@@ -106,37 +111,37 @@ caps.handback.revision: 59
   
  `<?xml version="1.0" encoding="UTF-8"?>`  
   
-## XML タスクで使用できるカスタム ログ メッセージ  
- 次の表では、XML タスクのカスタム ログ エントリを説明します。 詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../../integration-services/performance/custom-messages-for-logging.md)」を参照してください。  
+## <a name="custom-logging-messages-available-on-the-xml-task"></a>XML タスクで使用できるカスタム ログ メッセージ  
+ 次の表では、XML タスクのカスタム ログ エントリを説明します。 詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。  
   
 |ログ エントリ|Description|  
 |---------------|-----------------|  
 |**XMLOperation**|タスクで実行される操作に関する情報を提供します。|  
   
-## XML タスクの構成  
+## <a name="configuration-of-the-xml-task"></a>XML タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[XML タスク エディター] &#40;[全般] ページ&#41;](../Topic/XML%20Task%20Editor%20\(General%20Page\).md)  
+-   [XML タスク エディター & #40 です。[全般] ページ &#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
   
--   [XML タスクを使った XML の検証](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
+-   [XML タスクによる XML を検証します。](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
   
--   [[式] ページ](../Topic/Expressions%20Page.md)  
+-   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## プログラムによる XML タスクの構成  
+## <a name="programmatic-configuration-of-the-xml-task"></a>プログラムによる XML タスクの構成  
  プログラムによってこれらのプロパティを設定する方法の詳細については、次のトピックを参照してください。  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
-## 関連タスク  
- [タスクまたはコンテナーのプロパティを設定する](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+## <a name="related-tasks"></a>関連タスク  
+ [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
   
 -   agilebi.com のブログ「 [XML 変換先スクリプト コンポーネント](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)」  
   

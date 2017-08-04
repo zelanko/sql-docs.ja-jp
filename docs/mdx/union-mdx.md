@@ -1,0 +1,112 @@
+---
+title: "共用体 (MDX) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- functions [MDX], Union
+ms.assetid: cc083455-8b3b-46af-bb55-1e238376f162
+caps.latest.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d68afa2f9c424a0bb745ad2feaf781923eac624a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
+---
+# <a name="union--mdx"></a>共用体 (MDX)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  2 つのセットの和集合として生成されるセットを返します。重複するメンバーを保持することも可能です。  
+  
+## <a name="syntax"></a>構文  
+  
+```  
+  
+Standard syntax  
+Union(Set_Expression1, Set_Expression2 [,...n][, ALL])  
+  
+Alternate syntax 1  
+Set_Expression1 + Set_Expression2 [+...n]  
+  
+Alternate syntax 2  
+{Set_Expression1 , Set_Expression2 [,...n]}  
+```  
+  
+## <a name="arguments"></a>引数  
+ *セット式 1*  
+ セットを返す有効な多次元式 (MDX) です。  
+  
+ *セット式 2*  
+ セットを返す有効な多次元式 (MDX) です。  
+  
+## <a name="remarks"></a>解説  
+ この関数は、2 つの和集合を返しますまたは、複数の指定されたセット*です。* 標準構文を使用して、代替構文 1、重複は既定では除外されます。 標準の構文を使用して、**すべて**フラグ、結合されたセット内の重複部分を保持します。 重複部分はセットの末尾から削除されます。 代替構文 2 では、重複部分が常に保持されます。  
+  
+## <a name="examples"></a>使用例  
+ 次の例では、動作、**共用体**関数の各構文を使用します。  
+  
+### <a name="standard-syntax-duplicates-eliminated"></a>標準構文、重複部分の除去  
+  
+```  
+SELECT Union   
+   ([Date].[Calendar Year].children  
+   , {[Date].[Calendar Year].[CY 2002]}  
+   , {[Date].[Calendar Year].[CY 2003]}  
+   ) ON 0  
+FROM [Adventure Works]  
+  
+```  
+  
+### <a name="standard-syntax-duplicates-retained"></a>標準構文、重複部分の保持  
+  
+```  
+SELECT Union   
+   ([Date].[Calendar Year].children  
+   , {[Date].[Calendar Year].[CY 2002]}  
+   , {[Date].[Calendar Year].[CY 2003]}  
+   , ALL  
+   ) ON 0  
+FROM [Adventure Works]  
+  
+```  
+  
+### <a name="alternate-syntax-1-duplicates-eliminated"></a>代替構文 1、重複部分の除去  
+  
+```  
+SELECT   
+   [Date].[Calendar Year].children   
+   + {[Date].[Calendar Year].[CY 2002]}   
+   + {[Date].[Calendar Year].[CY 2003]} ON 0  
+FROM [Adventure Works]  
+  
+```  
+  
+### <a name="alternate-syntax-2-duplicates-retained"></a>代替構文 2、重複部分の保持  
+  
+```  
+SELECT   
+   {[Date].[Calendar Year].children  
+   , [Date].[Calendar Year].[CY 2002]  
+   , [Date].[Calendar Year].[CY 2003]} ON 0  
+FROM [Adventure Works]  
+  
+```  
+  
+## <a name="see-also"></a>参照  
+ [+ (& a) #40 です。共用体"&"#41;& #40 です。MDX と #41 です。](../mdx/union-mdx-operator-reference.md)   
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+  
+  
+

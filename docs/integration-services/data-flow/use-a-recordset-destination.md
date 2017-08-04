@@ -1,25 +1,30 @@
 ---
-title: "レコードセット変換先を使用する | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "レコードセット変換先"
+title: "レコード セット変換先を使用して |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e2423a1d19122a3eb13bd69c4bce495c96d81ff
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# レコードセット変換先を使用する
-  レコードセット変換先では、データは外部データ ソースに保存されません。 代わりに、レコードセット変換先では、**Object** データ型の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ変数に格納されるレコードセットのメモリにデータが保存されます。 レコードセット変換先でデータが保存されたら、通常、Foreach ループ コンテナーと Foreach ADO 列挙子を使用して、一度に 1 つのレコードセット行を処理します。 Foreach ADO 列挙子によって、現在の行の各列の値が個別のパッケージ変数に保存されます。 その後、Foreach ループ コンテナー内で構成したタスクによって変数から値が読み取られ、その値を使用してアクションが実行されます。  
+# <a name="use-a-recordset-destination"></a>レコードセット変換先を使用する
+  レコードセット変換先では、データは外部データ ソースに保存されません。 代わりに、レコードセット変換先では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Object **データ型の** パッケージ変数に格納されるレコードセットのメモリにデータが保存されます。 レコードセット変換先でデータが保存されたら、通常、Foreach ループ コンテナーと Foreach ADO 列挙子を使用して、一度に 1 つのレコードセット行を処理します。 Foreach ADO 列挙子によって、現在の行の各列の値が個別のパッケージ変数に保存されます。 その後、Foreach ループ コンテナー内で構成したタスクによって変数から値が読み取られ、その値を使用してアクションが実行されます。  
   
  レコードセット変換先は、さまざまなシナリオで使用できます。 次にいくつかの例を示します。  
   
@@ -29,10 +34,10 @@ caps.handback.revision: 11
   
  ここでは、まずレコードセット変換先を使用する一般的な手順について説明し、次に変換先の使用方法の具体的な例を示します。  
   
-## レコードセット変換先を使用する一般的な手順  
+## <a name="general-steps-to-using-a-recordset-destination"></a>レコードセット変換先を使用する一般的な手順  
  次の手順は、レコードセット変換先にデータを保存し、Foreach ループ コンテナーを使用して各行を処理するために必要な手順をまとめたものです。  
   
-#### レコードセット変換先にデータを保存し、Foreach ループ コンテナーを使用して各行を処理するには  
+#### <a name="to-save-data-to-a-recordset-destination-and-process-each-row-by-using-the-foreach-loop-container"></a>レコードセット変換先にデータを保存し、Foreach ループ コンテナーを使用して各行を処理するには  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを作成または開きます。  
   
@@ -56,10 +61,10 @@ caps.handback.revision: 11
   
 8.  Foreach ループ コンテナー内にタスクを追加し、変数から値を読み取って一度に 1 つのレコードセット行を処理するように構成します。  
   
-## レコードセット変換先の使用例  
+## <a name="example-of-using-the-recordset-destination"></a>レコードセット変換先の使用例  
  次の例では、データ フロー タスクが [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] の従業員に関する情報を Sales.SalesPerson テーブルからレコードセット変換先に読み込みます。 次に、Foreach ループ コンテナーが一度に 1 つのデータ行を読み取って、メール送信タスクを呼び出します。 メール送信タスクは、式を使用して、ボーナス額に関するカスタマイズされた電子メール メッセージを各販売員に送信します。  
   
-#### プロジェクトを作成して変数を構成するには  
+#### <a name="to-create-the-project-and-configure-the-variables"></a>プロジェクトを作成して変数を構成するには  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、新しい [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを作成します。  
   
@@ -83,7 +88,7 @@ caps.handback.revision: 11
   
          **Bonus** 変数には販売員のボーナス額が格納されます。  
   
-#### 接続マネージャーを構成するには  
+#### <a name="to-configure-the-connection-managers"></a>接続マネージャーを構成するには  
   
 1.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの [接続マネージャー] 領域で、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースに接続する新しい OLE DB 接続マネージャーを追加して構成します。  
   
@@ -93,11 +98,11 @@ caps.handback.revision: 11
   
      この接続マネージャーは、Foreach ループ コンテナー内のメール送信タスクが電子メールを送信するために使用されます。  
   
-#### データ フローとレコードセット変換先を構成するには  
+#### <a name="to-configure-the-data-flow-and-the-recordset-destination"></a>データ フローとレコードセット変換先を構成するには  
   
 1.  **デザイナーの** [制御フロー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] タブで、データ フロー タスクをデザイン画面に追加します。  
   
-2.   **[データ フロー]** tab, add an OLE DB source to the [データ フロー] task, and then open the **[OLE DB ソース エディター]**を開きます。  
+2.  **[データ フロー]** tab, add an OLE DB source to the [データ フロー] task, and then open the **[OLE DB ソース エディター]**を開きます。  
   
 3.  エディターの **[接続マネージャー]** ページで、次の設定を使用してソースを構成します。  
   
@@ -114,7 +119,7 @@ caps.handback.revision: 11
         ```  
   
         > [!NOTE]  
-        >  Bonus 列の **currency** 値を **Double** 型のパッケージ変数に読み込む前に、その値を **float** に変換する必要があります。  
+        >  Bonus 列の **currency** 値を **Double** 型のパッケージ変数に読み込む前に、その値を **float**に変換する必要があります。  
   
 4.  **[データ フロー]** タブで、レコードセット変換先を追加し、この変換先を OLE DB ソースの後に連結します。  
   
@@ -124,7 +129,7 @@ caps.handback.revision: 11
   
     2.  **[入力列]** タブで、使用可能な 3 つすべての列を選択します。  
   
-#### Foreach ループ コンテナーを構成してパッケージを実行するには  
+#### <a name="to-configure-the-foreach-loop-container-and-run-the-package"></a>Foreach ループ コンテナーを構成してパッケージを実行するには  
   
 1.  **デザイナーの** [制御フロー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] タブで、Foreach ループ コンテナーを追加し、このコンテナーをデータ フロー タスクの後に連結します。  
   
@@ -140,11 +145,11 @@ caps.handback.revision: 11
   
     1.  **[SmtpConnection]**で、前もって構成した SMTP 接続マネージャーを選択します。  
   
-    2.  **[差出人]** に、適切な電子メール アドレスを入力します。  
+    2.  **[差出人]**に、適切な電子メール アドレスを入力します。  
   
          自分の電子メール アドレスを使用すると、パッケージが正常に実行されているかどうかを確認できます。 メール送信タスクによって [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]に存在しない販売員にメッセージが送信されると、配信できなかったことが通知されます。  
   
-    3.  **[宛先]** に、既定の電子メール アドレスを入力します。  
+    3.  **[宛先]**に、既定の電子メール アドレスを入力します。  
   
          この値は使用されませんが、実行時に各販売員の電子メール アドレスに置き換えられます。  
   
@@ -152,7 +157,7 @@ caps.handback.revision: 11
   
     5.  **[MessageSourceType]**に対して **[直接入力]**を選択します。  
   
-5.  **[メール送信タスク エディター]** の **[式]** ページで、参照ボタン (**[...]**) をクリックして **[プロパティ式エディター]** を開きます。  
+5.  **[メール送信タスク エディター]** の **[式]**ページで、参照ボタン (**[...]**) をクリックして **[プロパティ式エディター]**を開きます。  
   
 6.  **[プロパティ式エディター]**で、次の情報を入力します。  
   
@@ -170,6 +175,6 @@ caps.handback.revision: 11
   
 7.  パッケージを実行します。  
   
-     有効な SMTP サーバーと自分の電子メール アドレスを指定すると、メール送信タスクによって [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] に存在しない販売員にメッセージが送信され、配信できなかったことが通知されます。  
+     有効な SMTP サーバーと自分の電子メール アドレスを指定すると、メール送信タスクによって [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]に存在しない販売員にメッセージが送信され、配信できなかったことが通知されます。  
   
   

@@ -1,25 +1,30 @@
 ---
-title: "CDC デザイナー コンソールから CDC サービスを管理する方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "CDC デザイナー コンソールから CDC サービスを管理する方法 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80fc7320cb47a9fc46b331b119ff91ec0a1cdc19
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC デザイナー コンソールから CDC サービスを管理する方法
+# <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>CDC デザイナー コンソールから CDC サービスを管理する方法
   この手順では、CDC デザイナー コンソールを使用して CDC サービスを管理する方法について説明します。  
   
-### CDC デザイナー コンソールから CDC サービスを管理するには  
+### <a name="to-manage-a-cdc-service-from-the-cdc-designer-console"></a>CDC デザイナー コンソールから CDC サービスを管理するには  
   
 1.  **[スタート]** メニューの **[CDC デザイナー コンソール]**をクリックします。  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 6
   
 4.  CDC サービスでは、以下のタスクを実行できます。  
   
-    -    **新しい CDC インスタンス**の作成  
+    -   **新しい CDC インスタンス**の作成  
   
     -   **すべてのインスタンスの開始** (選択した CDC サービスに含まれるすべてのインスタンス)  
   

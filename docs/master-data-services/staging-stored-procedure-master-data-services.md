@@ -1,33 +1,38 @@
 ---
-title: "ステージング ストアド プロシージャ (マスター データ サービス) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ステージング ストアド プロシージャ (マスター データ サービス) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 04/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 caps.latest.revision: 15
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c2c12151d25b7d563a8a37a7ccfd617bca5cb479
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# ステージング ストアド プロシージャ (マスター データ サービス)
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] からステージング処理を開始する場合、次の 3 つのストアド プロシージャのいずれかを使用します。  
+# <a name="staging-stored-procedure-master-data-services"></a>ステージング ストアド プロシージャ (マスター データ サービス)
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]からステージング処理を開始する場合、次の 3 つのストアド プロシージャのいずれかを使用します。  
   
--   stg.udp_\<名前>_Leaf  
+-   stg.udp_\<名前 > _Leaf  
   
--   stg.udp_\<名前>_Consolidated  
+-   stg.udp_\<名前 > _Consolidated  
   
--   stg.udp_\<名前>_Relationship  
+-   stg.udp_\<名前 > _relationship になります  
   
  name は、エンティティの作成時に指定されたステージング テーブルの名前です。  
   
-## ステージング処理ストアド プロシージャのパラメーター  
+## <a name="staging-process-stored-procedure-parameters"></a>ステージング処理ストアド プロシージャのパラメーター  
  次の表では、これらのストアド プロシージャのパラメーターの一覧を示します。  
   
 |パラメーター|Description|  
@@ -39,7 +44,7 @@ caps.handback.revision: 15
 |**[ユーザー名]**|省略可能なパラメーター|  
 |**[ユーザー ID]**|省略可能なパラメーター|  
   
-### ステージング処理ストアド プロシージャの例  
+### <a name="staging-process-stored-procedure-example"></a>ステージング処理ストアド プロシージャの例  
  次の例は、ステージング ストアド プロシージャを使用してステージング処理を開始する方法を示します。  
   
 ```  
@@ -56,8 +61,9 @@ GO
   
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [検証ストアド プロシージャ (マスター データ サービス)](../master-data-services/validation-stored-procedure-master-data-services.md)   
  [ステージング中に発生したエラーの表示 (マスター データ サービス)](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)  
   
   
+

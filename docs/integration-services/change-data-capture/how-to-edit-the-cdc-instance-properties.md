@@ -1,25 +1,30 @@
 ---
-title: "CDC インスタンスのプロパティを編集する方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "CDC インスタンスのプロパティを編集する方法 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 09474650ff16a5b6a11ad9d02154d9f2a4261ea7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC インスタンスのプロパティを編集する方法
+# <a name="how-to-edit-the-cdc-instance-properties"></a>CDC インスタンスのプロパティを編集する方法
   この手順では、CDC デザイナー コンソールを使用して CDC インスタンスの構成プロパティを編集する方法について説明します。  
   
-### CDC インスタンスの構成プロパティを編集するには  
+### <a name="to-edit-the-cdc-instance-configuration-properties"></a>CDC インスタンスの構成プロパティを編集するには  
   
 1.  **[スタート]** メニューの **[CDC デザイナー コンソール]**をクリックします。  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 6
   
 4.  CDC デザイナー コンソールの右側にある [アクション] ペインで **[プロパティ]**をクリックします。  
   
-     プロパティを編集するインスタンスを右クリックして **[プロパティ]** をクリックすることもできます。  
+     プロパティを編集するインスタンスを右クリックして **[プロパティ]**をクリックすることもできます。  
   
 5.  プロパティ エディターで、次のタブのプロパティを編集します。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 6
   
          このタブで編集できる内容の詳細については、「 [Edit Tables](../../integration-services/change-data-capture/edit-tables.md)」を参照してください。  
   
-    -   **[スクリプト]**: 補足ログを設定する Oracle ソース データベースでスクリプトを実行または再実行するには、**[スクリプト]** タブを使用します。  
+    -   **[スクリプト]**: 補足ログを設定する Oracle ソース データベースでスクリプトを実行または再実行するには、 **[スクリプト]** タブを使用します。  
   
          このタブで実行できる内容の詳細については、「 [Review and Generate Supplemental Logging Scripts](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)」を参照してください。  
   

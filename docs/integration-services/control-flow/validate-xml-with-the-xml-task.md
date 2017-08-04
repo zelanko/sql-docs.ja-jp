@@ -1,39 +1,44 @@
 ---
-title: "XML タスクを使った XML の検証 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XML 検証"
-  - "XML, 検証"
+title: "XML タスクによる XML の検証 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XML validation
+- XML, validating
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 15e3873505601704c4a14d4e5701875b7dc104f5
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# XML タスクを使った XML の検証
+# <a name="validate-xml-with-the-xml-task"></a>XML タスクを使った XML の検証
   XML タスクの **ValidationDetails** プロパティを有効にして、XML ドキュメントを検証し、詳細なエラー出力を取得します。  
   
  次のスクリーン ショットは、 **XML タスク エディター** と、XML 検証で詳細なエラー出力を取得するのに必要な設定を示しています。  
   
- ![XML task properties in the XML Task Editor](../../integration-services/control-flow/media/xmltaskproperties.jpg "XML task properties in the XML Task Editor")  
+ ![XML タスクのプロパティ、XML タスク エディター](../../integration-services/control-flow/media/xmltaskproperties.jpg "XML タスクのプロパティ、XML タスク エディター")  
   
  **ValidationDetails** プロパティが利用できるようになる前は、XML タスクによる XML 検証では、true や false のみの結果が返され、エラーやその場所に関する情報は返されませんでした。 現在は、 **ValidationDetails** を true に設定すると、出力ファイルに各エラーの行番号と位置を含む詳しい情報が出力されます。 この情報を使って、XML ドキュメントのエラーを把握、特定、修正できます。  
   
  この XML 検証機能は、大きなサイズの XML ドキュメントや大量のエラーにも、簡単に規模を変更して対応できます。 出力ファイル自体が XML 形式なので、出力に対するクエリの実行と分析が可能です。 たとえば、出力に大量のエラーが含まれている場合、このトピックで説明する方法で [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用して、エラーをグループ化することができます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) では、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2 で **ValidationDetails** プロパティが導入されました。 このプロパティは、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] と [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]でも利用できます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 導入された、 **ValidationDetails**プロパティ[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Service Pack 2 です。 このプロパティは、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] と [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]でも利用できます。  
   
-## 有効な XML のサンプル出力  
+## <a name="sample-output-for-xml-thats-valid"></a>有効な XML のサンプル出力  
  有効な XML ファイルの検証結果が記載されたサンプル出力ファイルを次に示します。  
   
 ```xml  
@@ -52,8 +57,8 @@ caps.handback.revision: 9
 </root>  
 ```  
   
-## 無効な XML のサンプル出力  
- 少数のエラーのある XML ファイルの検証結果が記載されたサンプル出力ファイルを次に示します。 \<error> 要素のテキストは、読みやすくするために折り返されています。  
+## <a name="sample-output-for-xml-thats-not-valid"></a>無効な XML のサンプル出力  
+ 少数のエラーのある XML ファイルの検証結果が記載されたサンプル出力ファイルを次に示します。 テキスト、\<エラー > 要素は、読みやすくするため改行しています。  
   
 ```xml  
   
@@ -76,7 +81,7 @@ caps.handback.revision: 9
 </root>  
 ```  
   
-## XML 検証の出力を Transact-SQL クエリで分析する  
+## <a name="analyze-xml-validation-output-with-a-transact-sql-query"></a>XML 検証の出力を Transact-SQL クエリで分析する  
  XML 検証の出力に大量のエラーが含まれている場合、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に出力を読み込むことができます。 そのうえで、WHERE、GROUP BY、ORDER BY、JOINなどの T-SQL 言語の機能をフル活用して、エラー一覧を分析できます。  
   
 ```tsql  
@@ -115,10 +120,10 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  次に示すのは、前に示したテキストの 2 つ目のサンプル クエリの結果を [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で表示した画面です。  
   
- ![Query to group XML errors in Management Studio](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Query to group XML errors in Management Studio")  
+ ![Management Studio での XML エラーのグループ化するクエリを](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Management Studio での XML エラーのグループ化するクエリ")  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [XML タスク](../../integration-services/control-flow/xml-task.md)   
- [XML タスク エディター ([全般] ページ)](../Topic/XML%20Task%20Editor%20\(General%20Page\).md)  
+ [XML タスク エディター & #40 です。[全般] ページ &#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
   
   

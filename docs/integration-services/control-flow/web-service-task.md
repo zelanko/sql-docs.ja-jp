@@ -1,26 +1,31 @@
 ---
-title: "Web サービス タスク | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.webservicetask.f1"
-helpviewer_keywords: 
-  - "Web サービス タスク [Integration Services]"
+title: "Web サービス タスク |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.webservicetask.f1
+helpviewer_keywords:
+- Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 caps.latest.revision: 57
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: f91aa6e47ee1255c97e8ffd2f91a5fb559a942ca
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# Web サービス タスク
+# <a name="web-service-task"></a>Web サービス タスク
   Web サービス タスクは、Web サービス メソッドを実行します。 Web サービス タスクは、次の目的で使用できます。  
   
 -   Web サービス メソッドが返す値を変数に書き込みます。 たとえば、Web サービス メソッドから 1 日の最高気温を取得し、その値を使用して、列の値を設定する式で使用する変数を更新できます。  
@@ -50,7 +55,7 @@ caps.handback.revision: 57
  Web サービス メソッドの結果は、変数またはファイルに書き込むことができます。 結果を書き込むファイルを指定するか、変数の名前を指定するには、ファイル接続マネージャーを使用します。 詳細については、「[ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)」および「[Integration Services (SSIS) の変数](../../integration-services/integration-services-ssis-variables.md)」を参照してください。  
   
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Web サービス タスクで使用できるカスタム ログ メッセージ  
- 次の表は、Web サービス タスクに対して有効にできるカスタム ログ エントリの一覧です。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../../integration-services/performance/custom-messages-for-logging.md)」を参照してください。  
+ 次の表は、Web サービス タスクに対して有効にできるカスタム ログ エントリの一覧です。 詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。  
   
 |ログ エントリ|Description|  
 |---------------|-----------------|  
@@ -63,17 +68,17 @@ caps.handback.revision: 57
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Web サービス タスク エディター &#40;[全般] ページ&#41;](../Topic/Web%20Service%20Task%20Editor%20\(General%20Page\).md)  
+-   [Web サービス タスク エディター &#40;[全般] ページ&#41;](../../integration-services/control-flow/web-service-task-editor-general-page.md)  
   
--   [Web サービス タスク エディター &#40;[入力] ページ&#41;](../Topic/Web%20Service%20Task%20Editor%20\(Input%20Page\).md)  
+-   [Web サービス タスク エディター &#40;[入力] ページ&#41;](../../integration-services/control-flow/web-service-task-editor-input-page.md)  
   
--   [Web サービス タスク エディター &#40;[出力] ページ&#41;](../Topic/Web%20Service%20Task%20Editor%20\(Output%20Page\).md)  
+-   [Web サービス タスク エディター &#40;[出力] ページ&#41;](../../integration-services/control-flow/web-service-task-editor-output-page.md)  
   
--   [[式] ページ](../Topic/Expressions%20Page.md)  
+-   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>プログラムによる Web サービス タスクの構成  
  プログラムによってこれらのプロパティを設定する方法の詳細については、次のトピックのいずれかを参照してください。  
@@ -82,3 +87,4 @@ caps.handback.revision: 57
   
 ## <a name="related-content"></a>関連コンテンツ  
  technet.microsoft.com のビデオ「 [Web サービス タスクを使用して Web サービスを呼び出す方法 (SQL Server ビデオ)](http://go.microsoft.com/fwlink/?LinkId=259642)」  
+

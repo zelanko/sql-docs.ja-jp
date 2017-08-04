@@ -1,68 +1,73 @@
 ---
-title: "マージ結合変換を使用してデータセットを拡張する | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "マージ結合変換"
-  - "データセット [Integration Services], 結合"
-  - "データセット [Integration Services], 拡張"
-  - "データセットの結合 [Integration Services]"
+title: "マージ結合変換を使用して、データセットを拡張 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Merge Join transformation
+- datasets [Integration Services], joining
+- datasets [Integration Services], extending
+- joining datasets [Integration Services]
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a7d7b4a2af89c855a6269d90d94f79465bfad8a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# マージ結合変換を使用してデータセットを拡張する
+# <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>マージ結合変換を使用してデータセットを拡張する
   マージ結合変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと、マージ結合変換への入力を提供する 2 つのデータ フロー コンポーネントがあらかじめ含まれている必要があります。  
   
- マージ結合変換には、2 つの並べ替え済み入力が必要です。 詳細については、「[マージ変換およびマージ結合変換用にデータを並べ替える](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。  
+ マージ結合変換には、2 つの並べ替え済み入力が必要です。 詳細については、「 [マージ変換およびマージ結合変換用にデータを並べ替える](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。  
   
-### データセットを拡張するには  
+### <a name="to-extend-a-dataset"></a>データセットを拡張するには  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  **[データ フロー]** タブをクリックし、次に **[ツールボックス]** で、マージ結合変換をデザイン画面にドラッグします。  
+3.  **[データ フロー]** タブをクリックし、次に **[ツールボックス]**で、マージ結合変換をデザイン画面にドラッグします。  
   
 4.  マージ結合変換をデータ フローに連結します。連結するには、データ ソースまたは直前の変換からマージ結合変換にコネクタをドラッグします。  
   
 5.  マージ結合変換をダブルクリックします。  
   
-6.  **[マージ結合変換エディター]** ダイアログ ボックスで、**[結合の種類]** ボックスの一覧から使用する結合の種類を選択します。  
+6.  **[マージ結合変換エディター]** ダイアログ ボックスで、 **[結合の種類]** ボックスの一覧から使用する結合の種類を選択します。  
   
     > [!NOTE]  
-    >  **[左外部結合]** を選択した場合、**[入力の入れ替え]** をクリックして入力を切り替え、左外部結合を右外部結合に変換できます。  
+    >  **[左外部結合]** を選択した場合、 **[入力の入れ替え]** をクリックして入力を切り替え、左外部結合を右外部結合に変換できます。  
   
-7.  左辺の入力内の列を、右辺の入力内の列にドラッグし、結合列を指定します。 列の名前が同じ場合、**[結合キー]** チェック ボックスをオンにすると、マージ結合変換は自動的に結合を作成できます。  
+7.  左辺の入力内の列を、右辺の入力内の列にドラッグし、結合列を指定します。 列の名前が同じ場合、 **[結合キー]** チェック ボックスをオンにすると、マージ結合変換は自動的に結合を作成できます。  
   
     > [!NOTE]  
-    >  並べ替えの位置が同じ列のみの結合を作成できます。この場合、並べ替えの位置によって指定された順序で結合を作成する必要があります。 順序が正しくない結合を作成しようとすると、**[マージ結合変換エディター]** で、スキップした並べ替えの位置に対して、追加の結合を作成するように要求されます。  
+    >  並べ替えの位置が同じ列のみの結合を作成できます。この場合、並べ替えの位置によって指定された順序で結合を作成する必要があります。 順序が正しくない結合を作成しようとすると、 **[マージ結合変換エディター]** で、スキップした並べ替えの位置に対して、追加の結合を作成するように要求されます。  
   
     > [!NOTE]  
     >  既定では、出力は結合列に基づいて並べ替えられます。  
   
 8.  左辺の入力および右辺の入力で、出力に追加して含める列のチェック ボックスをオンにします。 結合列は、既定で含まれています。  
   
-9. 必要に応じて、**[出力の別名]** 列で出力列の名前を更新します。  
+9. 必要に応じて、 **[出力の別名]** 列で出力列の名前を更新します。  
   
 10. **[OK]**をクリックします。  
   
 11. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [マージ結合変換](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../../integration-services/data-flow/integration-services-paths.md)   
- [[データ フロー タスク]](../../../integration-services/control-flow/data-flow-task.md)  
+ [データ フロー タスク](../../../integration-services/control-flow/data-flow-task.md)  
   
   

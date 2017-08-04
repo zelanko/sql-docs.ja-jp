@@ -1,62 +1,67 @@
 ---
-title: "SQL Server Profiler | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プロファイラー [SQL Server Profiler], SQL Server Profiler について"
-  - "トレース [SQL Server], SQL Server Profiler"
-  - "データベース監視 [SQL Server], SQL Server Profiler"
-  - "データベースのチューニング [SQL Server], SQL Server Profiler"
-  - "SQL Server Profiler"
-  - "サーバーのパフォーマンス [SQL Server], SQL Server Profiler"
-  - "プロファイラー [SQL Server Profiler]"
-  - "トレース [SQL Server]"
-  - "パフォーマンスの監視 [SQL Server], SQL Server Profiler"
-  - "イベント [SQL Server], SQL Server Profiler"
-  - "SQL Server Profiler, SQL Server Profiler について"
-  - "ツール [SQL Server], SQL Server Profiler"
-  - "データベース パフォーマンス [SQL Server], SQL Server Profiler"
-  - "trace [SQL Server]"
+title: "SQL Server Profiler |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Profiler [SQL Server Profiler], about SQL Server Profiler
+- traces [SQL Server], SQL Server Profiler
+- database monitoring [SQL Server], SQL Server Profiler
+- tuning databases [SQL Server], SQL Server Profiler
+- SQL Server Profiler
+- server performance [SQL Server], SQL Server Profiler
+- Profiler [SQL Server Profiler]
+- tracing [SQL Server]
+- monitoring performance [SQL Server], SQL Server Profiler
+- events [SQL Server], SQL Server Profiler
+- SQL Server Profiler, about SQL Server Profiler
+- tools [SQL Server], SQL Server Profiler
+- database performance [SQL Server], SQL Server Profiler
+- trace [SQL Server]
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55fa14d4d8e28f602c49613cf81e981c12856177
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server Profiler
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、トレースを作成および管理し、トレースの結果を分析および再生するために使用するインターフェイスです。 イベントはトレース ファイルに保存され、後で分析したり、問題の発生したステップを厳密に再現して診断する際に利用できます。  
+# <a name="sql-server-profiler"></a>SQL Server Profiler
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]インターフェイスの作成し、管理をトレースし、分析トレース結果を再生できます。 イベントはトレース ファイルに保存され、後で分析したり、問題の発生したステップを厳密に再現して診断する際に利用できます。  
   
 >**重要!!**  
-> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のトレース キャプチャおよびトレース再生用の [!INCLUDE[ssDE](../../includes/ssde-md.md)] は廃止されます。 これらの機能は SQL Server 2016 で使用 **できます** が、以降のバージョンでは削除される予定です。
+> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]のトレース キャプチャおよびトレース再生用の [!INCLUDE[ssDE](../../includes/ssde-md.md)] は廃止されます。 これらの機能は SQL Server 2016 で使用 **できます** が、以降のバージョンでは削除される予定です。
 >   
 >  Microsoft SQL Server の Trace オブジェクトや Replay オブジェクトを含む *Microsoft.SqlServer.Management.Trace* 名前空間も廃止される予定です。                     
 Analysis Services のワークロード用の**は廃止されず、引き続きサポートされることに** 注意 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] してください。
 >
 > ご意見やご質問がございましたら、 **[[接続]](https://connect.microsoft.com/SQLServer/Feedback)**
 
- ## プロファイラーはどこにありますか?
+ ## <a name="where-is-the-profiler"></a>プロファイラーはどこにありますか?
  
- SSMS 内から、多数の方法でプロファイラーを起動できます。 [プロファイラーを起動する方法のリストについては、こちらのトピックをご覧ください。](https://msdn.microsoft.com/library/ms173799.aspx)
+ SSMS 内から、多数の方法でプロファイラーを起動できます。 [次にプロファイラーを起動する方法を示すトピックを示します。](https://msdn.microsoft.com/library/ms173799.aspx)
   
-## トレース データをキャプチャし再生する 
+## <a name="capture-and-replay-trace-data"></a>トレース データをキャプチャし再生する 
 以下の表に、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でトレース データのキャプチャおよび再生を行うために使用が推奨される機能を示します。
   
 ||||  
 |-|-|-|  
-|**機能\対象のワークロード**|**リレーショナル エンジン**|**Analysis Services**|  
+|**機能 \ 対象のワークロード**|**リレーショナル エンジン**|**Analysis Services**|  
 |**トレースのキャプチャ**|SQL Server Management Studio の[拡張イベント](https://msdn.microsoft.com/library/bb630282.aspx) のグラフィカル ユーザー インターフェイス|SQL Server Profiler|  
-|**トレースの再生**|[Distributed Replay](https://msdn.microsoft.com/library/ff878183.aspx)|SQL Server Profiler|  
+|**トレースの再生**|[分散再生](https://msdn.microsoft.com/library/ff878183.aspx)|SQL Server Profiler|  
   
-## SQL Server Profiler  
- Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] または Analysis Services のインスタンスを監視するための SQL トレースのグラフィカル ユーザー インターフェイスです。 各イベントに関するデータをキャプチャし、ファイルやテーブルに保存して、後で分析できます。 たとえば、稼動環境を監視して、どのストアド プロシージャの実行が遅く、パフォーマンスに影響を与えているかを確認できます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、次のようなアクティビティに使用します。  
+## <a name="sql-server-profiler"></a>SQL Server Profiler  
+ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] または Analysis Services のインスタンスを監視するための SQL トレースのグラフィカル ユーザー インターフェイスです。 各イベントに関するデータをキャプチャし、ファイルやテーブルに保存して、後で分析できます。 たとえば、稼動環境を監視して、どのストアド プロシージャの実行が遅く、パフォーマンスに影響を与えているかを確認できます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]アクティビティで使用など。  
   
 -   問題の原因を特定するため、問題の発生したクエリを順次実行する。  
   
@@ -68,9 +73,9 @@ Analysis Services のワークロード用の**は廃止されず、引き続き
   
 -   問題を診断するために、さまざまなパフォーマンス カウンターの関連を調べる。  
   
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスで実行された操作の監査もサポートしています。 監査では、後でセキュリティ管理者が調査できるように、セキュリティ関連の操作を記録します。  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで実行された操作の監査もサポートしています。 監査では、後でセキュリティ管理者が調査できるように、セキュリティ関連の操作を記録します。  
   
-## SQL Server Profiler の概念  
+## <a name="sql-server-profiler-concepts"></a>SQL Server Profiler の概念  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用するには、ツールがどのように機能するのかを説明する用語を理解しておく必要があります。  
   
 >**注:** SQL Server Profiler を使用するとき、SQL Trace の知識が実際に役立ちます。 詳細については、「 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)」を参照してください。  
@@ -109,9 +114,9 @@ Analysis Services のワークロード用の**は廃止されず、引き続き
   
 -   **Audit Logout**  
   
--   **Lock:Acquired**  
+-   **ロック: 取得**  
   
--   **Lock:Released**  
+-   **ロック: リリース**  
   
  **EventCategory**  
  イベント カテゴリは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]内でイベントを分類する方法を定義します。 たとえば、ロック イベント クラスはすべて、 **ロック** イベント カテゴリに分類されます。 ただし、イベント カテゴリは [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]でしか存在しません。 この用語に、エンジン イベントを分類する方法は反映されていません。  
@@ -127,12 +132,12 @@ Analysis Services のワークロード用の**は廃止されず、引き続き
   
  SQL Server では、SQL Server のインスタンスをトレースするために 2 とおりの方法が用意されています。つまり、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してトレースする方法と、システム ストアド プロシージャを使用してトレースする方法です。  
   
- **[フィルター]**  
+ **フィルター**  
  トレースまたはテンプレートを作成する際には、指定したイベントで収集されたデータをフィルターで選択する基準を定義できます。 トレースが大きくなりすぎないようにするためには、イベント データのサブセットだけが収集されるようにフィルターを適用します。 たとえば、トレースでキャプチャする Microsoft Windows のユーザー名を特定のユーザーに限定して出力データを絞り込むことができます。  
   
  フィルターが設定されていない場合は、選択したイベント クラスのすべてのイベントがトレースに出力されます。  
   
-## SQL Server Profiler のタスク  
+## <a name="sql-server-profiler-tasks"></a>SQL Server Profiler のタスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
@@ -147,7 +152,7 @@ Analysis Services のワークロード用の**は廃止されず、引き続き
 |フィルターを変更する方法について説明します。|[フィルターの変更 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)|  
 |トレース ファイルの最大ファイル サイズを設定する方法について説明します (SQL Server Profiler)。|[トレース ファイルの最大ファイル サイズの設定 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-a-maximum-file-size-for-a-trace-file-sql-server-profiler.md)|  
 |トレース テーブルの最大テーブル サイズを設定する方法について説明します。|[トレース テーブルの最大テーブル サイズの設定 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md)|  
-|トレースの開始方法について説明します。|[トレースの開始](../../tools/sql-server-profiler/start-a-trace.md)|  
+|トレースの開始方法について説明します。|[トレースを開始します。](../../tools/sql-server-profiler/start-a-trace.md)|  
 |サーバーへの接続後、トレースを自動的に開始する方法について説明します。|[サーバーへの接続後の自動的なトレースの開始 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)|  
 |イベントの開始時刻に基づいてイベントをフィルター選択する方法について説明します。|[イベントの開始時刻に基づいたイベントのフィルター選択 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)|  
 |イベントの終了時刻に基づいてイベントをフィルター選択する方法について説明します。|[イベントの終了時刻に基づいたフィルターでのイベントの選択 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)|  
@@ -179,19 +184,19 @@ Analysis Services のワークロード用の**は廃止されず、引き続き
 |スクリプトをトレースから抽出する方法について説明します。|[トレースからのスクリプトの抽出 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/extract-a-script-from-a-trace-sql-server-profiler.md)|  
 |トレースと Windows パフォーマンス ログ データを相互に関連付ける方法について説明します。|[トレースと Windows パフォーマンス ログ データの関連付け &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
 |トレースに表示される列を構成する方法について説明します。|[トレースに表示される列の構成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
-|SQL Server Profiler を起動する方法について説明します。|[SQL Server Profiler の起動](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
+|SQL Server Profiler を起動する方法について説明します。|[SQL Server Profiler を起動します。](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
 |トレースとトレース テンプレートを保存する方法について説明します。|[トレースとトレース テンプレートの保存](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)|  
-|トレース テンプレートの変更方法について説明します。|[トレース テンプレートの変更](../../tools/sql-server-profiler/modify-trace-templates.md)|  
+|トレース テンプレートの変更方法について説明します。|[トレース テンプレートを変更します。](../../tools/sql-server-profiler/modify-trace-templates.md)|  
 |トレースと Windows パフォーマンス ログ データを相互に関連付ける方法について説明します。|[トレースと Windows パフォーマンス ログ データの関連付け](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)|  
 |SQL Server Profiler を使用したトレースの表示と分析の方法について説明します。|[SQL Server Profiler を使用したトレースの表示と分析](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)|  
 |SQL Server Profiler を使用してデッドロックを分析する方法について説明します。|[SQL Server Profiler を使用したデッドロックの分析](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)|  
 |SQL Server Profiler での SHOWPLAN 結果を使用してクエリを分析する方法について説明します。|[SQL Server Profiler での Showplan 結果を使用したクエリの分析](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)|  
-|SQL Server Profiler でトレースにフィルターを適用する方法について説明します。|[SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)|  
-|SQL Server Profiler の再生機能の使用方法について説明します。|[トレースの再生](../../tools/sql-server-profiler/replay-traces.md)|  
-|SQL Server Profiler の状況依存ヘルプ トピックについて紹介します。|[SQL Server Profiler の F1 ヘルプ](../../tools/sql-server-profiler/sql-server-profiler-の-f1-ヘルプ.md)|  
+|SQL Server Profiler でトレースにフィルターを適用する方法について説明します。|[SQL Server Profiler でトレースをフィルター処理します。](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)|  
+|SQL Server Profiler の再生機能の使用方法について説明します。|[トレースを再生します。](../../tools/sql-server-profiler/replay-traces.md)|  
+|SQL Server Profiler の状況依存ヘルプ トピックについて紹介します。|[SQL Server Profiler の F1 ヘルプ](../../tools/sql-server-profiler/sql-server-profiler-f1-help.md)|  
 |[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] でパフォーマンスと利用状況を監視する際に使用される一連のシステム ストアド プロシージャを紹介します。|[SQL Server Profiler のストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Locks イベント カテゴリ](../../relational-databases/event-classes/locks-event-category.md)   
  [Sessions イベント カテゴリ](../../relational-databases/event-classes/sessions-event-category.md)   
  [Stored Procedures イベント カテゴリ](../../relational-databases/event-classes/stored-procedures-event-category.md)   
@@ -199,3 +204,4 @@ Analysis Services のワークロード用の**は廃止されず、引き続き
  [サーバーのパフォーマンスと利用状況の監視](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   
+

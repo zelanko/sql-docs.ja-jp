@@ -1,25 +1,30 @@
 ---
-title: "リレーションシップ ステージング テーブル (マスター データ サービス) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "リレーションシップ ステージング テーブル [Master Data Services]"
-  - "データベース[マスター データ サービス]、リレーションシップ テーブル"
+title: "リレーションシップ ステージング テーブル (Master Data Services) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 04/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- relationships staging table [Master Data Services]
+- database [Master Data Services], relationships table
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9b2a6a4d1bd4e62c5c8edb3a5149dab402e0b897
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# リレーションシップ ステージング テーブル (マスター データ サービス)
+# <a name="relationship-staging-table-master-data-services"></a>リレーションシップ ステージング テーブル (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースのリレーションシップ ステージング テーブル (stg.name_Relationship) を使用して、メンバーが相互に保持するリレーションシップに基づいて、明示的階層におけるメンバーの位置を変更します。  
   
 ##  <a name="TableColumns"></a> テーブルの列  
@@ -38,9 +43,10 @@ caps.handback.revision: 8
 |**並べ替え順序**|省略可<br /><br /> 親の下にある他のメンバーに対するメンバーの順序を示す整数。 各子メンバーは一意識別子を保持します。||  
 |**ErrorCode**|エラー コードを表示します。 **ImportStatus_ID** が **2** のすべてのレコードについては、「[ステージング処理のエラー (マスター データ サービス)](../master-data-services/staging-process-errors-master-data-services.md)」を参照してください。||  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [概要: テーブルからデータをインポートする (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [ステージング中に発生したエラーの表示 (マスター データ サービス)](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
- [ステージング処理のエラー (マスター データ サービス)](../master-data-services/staging-process-errors-master-data-services.md)  
+ [ステージング処理のエラー & #40 です。マスター データ サービス &#41;](../master-data-services/staging-process-errors-master-data-services.md)  
   
   
+

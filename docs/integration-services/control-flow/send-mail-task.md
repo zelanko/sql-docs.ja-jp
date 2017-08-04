@@ -1,30 +1,35 @@
 ---
-title: "メール送信タスク | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sendmailtask.f1"
-helpviewer_keywords: 
-  - "メール [Integration Services]"
-  - "メール送信タスク"
-  - "電子メール [Integration Services]"
-  - "メッセージ [Integration Services]"
-  - "sending messages"
+title: "メール送信タスク |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sendmailtask.f1
+helpviewer_keywords:
+- mail [Integration Services]
+- Send Mail task
+- e-mail [Integration Services]
+- messages [Integration Services]
+- sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 caps.latest.revision: 51
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: fd6f7a19c1b553ee06013a4a24fbbf26a759a6cd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# メール送信タスク
+# <a name="send-mail-task"></a>メール送信タスク
   メール送信タスクは、電子メール メッセージを送信します。 メール送信タスクを使用すると、パッケージ ワークフロー内のタスクが成功または失敗した場合にパッケージからメッセージを送信したり、実行時にパッケージで発生するイベントに応答してメッセージを送信したりできます。 たとえば、データベースのバックアップ タスクが成功または失敗したことを、メール送信タスクからデータベース管理者に通知できます。  
   
  メール送信タスクは、次の方法で構成できます。  
@@ -50,12 +55,12 @@ caps.handback.revision: 51
     > [!IMPORTANT]  
     >  SMTP 接続マネージャーでは、匿名認証と Windows 認証のみがサポートされています。 基本認証はサポートされていません。  
   
- メッセージ テキストには、指定する文字列、テキストを含むファイルへの接続、またはテキストを含む変数名を使用できます。 タスクは、ファイル接続マネージャーを使用してファイルに接続します。 詳しくは、「[フラット ファイル接続マネージャー](../../integration-services/connection-manager/flat-file-connection-manager.md)」をご覧ください。  
+ メッセージ テキストには、指定する文字列、テキストを含むファイルへの接続、またはテキストを含む変数名を使用できます。 タスクは、ファイル接続マネージャーを使用してファイルに接続します。 詳しくは、「 [フラット ファイル接続マネージャー](../../integration-services/connection-manager/flat-file-connection-manager.md)」をご覧ください。  
   
- タスクは、SMTP 接続マネージャーを使用してメール サーバーに接続します。 詳しくは、「[SMTP 接続マネージャー](../../integration-services/connection-manager/smtp-connection-manager.md)」をご覧ください。  
+ タスクは、SMTP 接続マネージャーを使用してメール サーバーに接続します。 詳しくは、「 [SMTP 接続マネージャー](../../integration-services/connection-manager/smtp-connection-manager.md)」をご覧ください。  
   
-## メール送信タスクで使用できるカスタム ログ メッセージ  
- 次の表は、メール送信タスクのカスタム ログ エントリの一覧です。 詳しくは、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../../integration-services/performance/custom-messages-for-logging.md)」をご覧ください。  
+## <a name="custom-logging-messages-available-on-the-send-mail-task"></a>メール送信タスクで使用できるカスタム ログ メッセージ  
+ 次の表は、メール送信タスクのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。  
   
 |ログ エントリ|Description|  
 |---------------|-----------------|  
@@ -63,29 +68,29 @@ caps.handback.revision: 51
 |**SendMailTaskEnd**|タスクが電子メール メッセージの送信を終了したことを示します。|  
 |**SendMailTaskInfo**|タスクに関する説明情報を提供します。|  
   
-## メール送信タスクの構成  
+## <a name="configuring-the-send-mail-task"></a>メール送信タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[メール送信タスク エディター] &#40;[全般] ページ&#41;](../Topic/Send%20Mail%20Task%20Editor%20\(General%20Page\).md)  
+-   [[メール送信タスク エディター] &#40;[全般] ページ&#41;](../../integration-services/control-flow/send-mail-task-editor-general-page.md)  
   
--   [[メール送信タスク エディター] &#40;[メール] ページ&#41;](../Topic/Send%20Mail%20Task%20Editor%20\(Mail%20Page\).md)  
+-   [[メール送信タスク エディター] &#40;[メール] ページ&#41;](../../integration-services/control-flow/send-mail-task-editor-mail-page.md)  
   
--   [[式] ページ](../Topic/Expressions%20Page.md)  
+-   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
  プログラムによってこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask>  
   
-## 関連タスク  
- これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「[タスクまたはコンテナーのプロパティを設定する](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)」をご覧ください。  
+## <a name="related-tasks"></a>関連タスク  
+ これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「 [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」をご覧ください。  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
   
--   shareourideas.com の技術記事「[配信通知付きで電子メールを送信する方法 (C#)](http://go.microsoft.com/fwlink/?LinkId=237625)」  
+-   shareourideas.com の技術記事「 [配信通知付きで電子メールを送信する方法 (C#)](http://go.microsoft.com/fwlink/?LinkId=237625)」  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
   

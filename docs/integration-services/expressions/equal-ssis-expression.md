@@ -1,30 +1,35 @@
 ---
-title: "== (等しい) (SSIS 式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "等号演算子 (==)"
-  - "== (等号演算子)"
+title: "= = (等しい) (SSIS 式) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- equal operator (==)
+- == (equal operator)
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 caps.latest.revision: 53
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 53
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2944b2ac0c650f3a7a3d447d20b34bee5fa27e20
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# == (等しい) (SSIS 式)
-  2 つの式が等しいかどうかを判別するための比較を実行します。 式エバリュエーターは、比較の実行前にさまざまなデータ型を自動的に変換します。 詳細については、「[式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」を参照してください。  
+# <a name="-equal-ssis-expression"></a>== (等しい) (SSIS 式)
+  2 つの式が等しいかどうかを判別するための比較を実行します。 式エバリュエーターは、比較の実行前にさまざまなデータ型を自動的に変換します。 詳細については、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」を参照してください。  
   
- ただし、一部のデータ型では、式を正常に評価する前に明示的なキャストを含む必要がある場合があります。 データ型間の有効なキャストの詳細については、「[Cast (SSIS 式)](../../integration-services/expressions/cast-ssis-expression.md)」を参照してください。  
+ ただし、一部のデータ型では、式を正常に評価する前に明示的なキャストを含む必要がある場合があります。 データ型間の有効なキャストについて詳しくは、「[Cast &#40;SSIS 式&#41;](../../integration-services/expressions/cast-ssis-expression.md)」をご覧ください。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -32,19 +37,19 @@ expression1 == expression2
   
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  *expression1、expression2*  
  有効な式を指定します。  
   
-## 戻り値の型  
+## <a name="result-types"></a>戻り値の型  
  DT_BOOL  
   
-## 解説  
+## <a name="remarks"></a>解説  
  比較する式のいずれかが NULL の場合、比較結果は NULL になります。 両方の式が NULL の場合も、結果は NULL になります。  
   
- 設定する式の *expression1* と *expression2* は、次のいずれかのルールに従う必要があります。  
+ 設定する式の *expression1* と *expression2*は、次のいずれかのルールに従う必要があります。  
   
--   **数値** *expression1* と *expression2* の両方が数値データ型である必要があります。 データ型の積集合は、式エバリュエーターが実行する暗黙的な数値変換に関する規則で指定されているように、数値データ型である必要があります。 2 つの数値データ型の積集合を NULL にすることはできません。 詳細については、「[式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」を参照してください。  
+-   **数値** *expression1* と *expression2* の両方が数値データ型である必要があります。 データ型の積集合は、式エバリュエーターが実行する暗黙的な数値変換に関する規則で指定されているように、数値データ型である必要があります。 2 つの数値データ型の積集合を NULL にすることはできません。 詳しくは、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」をご覧ください。  
   
 -   **文字** *expression1* と *expression2* は、どちらも DT_STR または DT_WSTR データ型に評価される必要があります。 2 つの式が評価される文字列データ型は、異なっていてもかまいません。  
   
@@ -60,7 +65,7 @@ expression1 == expression2
   
     -   2 つの式が同じデータ型に評価される場合、そのデータ型の比較が実行されます。  
   
-    -   一方の式が DT_DBTIMESTAMPOFFSET データ型の場合、もう一方の式が暗黙的に DT_DBTIMESTAMPOFFSET に変換され、DT_DBTIMESTAMPOFFSET の比較が実行されます。 詳細については、「[式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」を参照してください。  
+    -   一方の式が DT_DBTIMESTAMPOFFSET データ型の場合、もう一方の式が暗黙的に DT_DBTIMESTAMPOFFSET に変換され、DT_DBTIMESTAMPOFFSET の比較が実行されます。 詳しくは、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」をご覧ください。  
   
     -   一方の式が DT_DBTIMESTAMP2 データ型の場合、もう一方の式が暗黙的に DT_DBTIMESTAMP2 に変換され、DT_DBTIMESTAMP2 の比較が実行されます。  
   
@@ -82,9 +87,9 @@ expression1 == expression2
   
 -   **BLOB** *expression1* と *expression2* は、どちらも同じバイナリ ラージ オブジェクト ブロック (BLOB) データ型 (DT_TEXT、DT_NTEXT、または DT_IMAGE) に評価される必要があります。  
   
- データ型の詳細については、「[Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
+ データ型について詳しくは、「 [Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」をご覧ください。  
   
-## 式の例  
+## <a name="expression-examples"></a>式の例  
  現在の日付が 2003 年 7 月 4 日の場合、この例の結果は TRUE に評価されます。 詳細については、「[GETDATE (SSIS 式)](../../integration-services/expressions/getdate-ssis-expression.md)」を参照してください。  
   
  "7/4/2003" == GETDATE()  
@@ -95,15 +100,15 @@ expression1 == expression2
 ListPrice == 500  
 ```  
   
- この例では、変数 **LPrice** を使用しています。 **LPrice** の値が 500 の場合、この例の結果は TRUE に評価されます。 式を正しく解析するには、この変数のデータ型が数値型である必要があります。  
+ この例では、変数 **LPrice**を使用しています。 **LPrice** の値が 500 の場合、この例の結果は TRUE に評価されます。 式を正しく解析するには、この変数のデータ型が数値型である必要があります。  
   
 ```  
 @LPrice == 500  
 ```  
   
-## 参照  
- [!= (等しくない) (SSIS 式)](../../integration-services/expressions/unequal-ssis-expression.md)   
+## <a name="see-also"></a>参照  
+ [! = &#40; です。等しくないものと &#41; です。&#40; です。SSIS 式と &#41; です。](../../integration-services/expressions/unequal-ssis-expression.md)   
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [演算子 (SSIS 式)](../../integration-services/expressions/operators-ssis-expression.md)  
+ [演算子 &#40; です。SSIS 式と &#41; です。](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

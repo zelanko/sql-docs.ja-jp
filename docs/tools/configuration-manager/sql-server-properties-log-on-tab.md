@@ -1,22 +1,27 @@
 ---
-title: "[SQL Server のプロパティ] ダイアログ ボックス ([ログオン] タブ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server のプロパティ ([ログオン] タブ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4dde3f4735a42553155d7f58a310963ad599c374
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# [SQL Server のプロパティ] ダイアログ ボックス ([ログオン] タブ)
+# <a name="sql-server-properties-log-on-tab"></a>[SQL Server のプロパティ] ダイアログ ボックス ([ログオン] タブ)
   **[SQL Server のプロパティ]** ダイアログ ボックスの **[ログオン]** タブでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが使用するアカウントの指定、アカウントのパスワードの変更、およびそのサービスの開始、停止を行います。 アカウントのパスワードを変更すると、その変更はすぐに有効になります。  
   
 > [!NOTE]  
@@ -24,7 +29,7 @@ caps.handback.revision: 25
 >   
 >  サービスを実行するアカウントの選択の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「Windows サービス アカウントの設定」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[ビルトイン アカウント]**  
  **Local System**  
  -   ローカル システム アカウントを指定します。 このアカウントはパスワードを必要としません。 ただし、ローカル システム アカウントに与えられている特権によっては、そのサービスが他のサーバーと対話できないこともあります。  
@@ -47,7 +52,7 @@ caps.handback.revision: 25
  **[パスワードの確認入力]**  
  アカウントのパスワードを再度入力します。  
   
- **コントロール パネルの [ ◆セグ : 文が分断されているため、訳の位置が入れ替わっています◇**  
+ **コントロール パネルの  ◆セグ : 文が分断されているため、訳の位置が入れ替わっています◇**  
  サービスを開始します。  
   
  **[停止]**  
@@ -60,9 +65,9 @@ caps.handback.revision: 25
  一時停止したサービスを再開します。  
   
 > [!IMPORTANT]  
->  サービスを開始、停止、一時停止、再開、または再起動できるのは、既定ではローカル管理者グループのメンバーだけです。 管理者以外のユーザーがサービスを管理できるようにする方法については、「[[HOWTO] Windows Server 2003 でサービスを管理する権利をユーザーに付与する](http://support.microsoft.com/kb/325349)」をご覧ください  (Windows の他のバージョンでも処理は同じです)。  
+>  サービスを開始、停止、一時停止、再開、または再起動できるのは、既定ではローカル管理者グループのメンバーだけです。 管理者以外のユーザーがサービスを管理できるようにする方法については、「 [[HOWTO] Windows Server 2003 でサービスを管理する権利をユーザーに付与する](http://support.microsoft.com/kb/325349)」をご覧ください (Windows の他のバージョンでも処理は同じです)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に、"実装されていません (not implemented) [0x80004001]" という語句を含む WMI エラーが発生する場合は、対象のコンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされていない可能性があります。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の起動時に、"実装されていません (not implemented) [0x80004001]" という語句を含む WMI エラーが発生する場合は、対象のコンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされていない可能性があります。  
   
   

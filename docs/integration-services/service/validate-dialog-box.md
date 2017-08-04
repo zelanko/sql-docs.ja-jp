@@ -1,25 +1,30 @@
 ---
-title: "[検証] ダイアログ ボックス | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.ssms.isprojectvalidate.f1"
-  - "sql13.ssis.ssms.ispackagevalidate.f1"
+title: "[検証] ダイアログ ボックス |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.ssms.isprojectvalidate.f1
+- sql13.ssis.ssms.ispackagevalidate.f1
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d7ff51208136b767dfb6260e6cfc07e67615531e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# [検証] ダイアログ ボックス
+# <a name="validate-dialog-box"></a>[検証] ダイアログ ボックス
   **のプロジェクトまたはパッケージの一般的な問題を確認するには、** [検証] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。  
   
  問題がある場合は、ダイアログ ボックスの上部にメッセージが表示されます。 それ以外の場合は、上部に "準備完了" と表示されます。  
@@ -42,7 +47,7 @@ caps.handback.revision: 7
   
 4.  検証するプロジェクトまたはパッケージが格納されているフォルダーを展開します。  
   
-5.  プロジェクトまたはパッケージを右クリックし、**[検証]** をクリックします。  
+5.  プロジェクトまたはパッケージを右クリックし、 **[検証]**をクリックします。  
   
 ##  <a name="general"></a> [全般] ページのオプションの設定  
  **環境**  

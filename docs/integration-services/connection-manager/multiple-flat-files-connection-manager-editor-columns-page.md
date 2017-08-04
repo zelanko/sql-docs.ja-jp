@@ -1,40 +1,45 @@
 ---
-title: "[複数フラット ファイル接続マネージャー エディター] ([列] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.multifile.columns.f1"
-helpviewer_keywords: 
-  - "複数フラット ファイル接続マネージャー エディター"
+title: "[複数フラット ファイル接続マネージャー エディター] ([列] ページ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.multifile.columns.f1
+helpviewer_keywords:
+- Multiple Flat Files Connection Manager Editor
 ms.assetid: ad0cb668-0df2-4d4e-9a20-d20692a0b67a
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2f1f2dee040a886d66ffcd5bd3fa3a710a8552b7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# [複数フラット ファイル接続マネージャー エディター] ([列] ページ)
+# <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>[複数フラット ファイル接続マネージャー エディター] ([列] ページ)
   **[複数フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[列]** ノードを使用すると、行と列の情報を指定し、最初に選択したファイルをプレビューできます。  
   
  複数フラット ファイル接続マネージャーの詳細については、「 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)」を参照してください。  
   
-## 静的オプション  
+## <a name="static-options"></a>静的オプション  
  **[接続マネージャー名]**  
  ワークフローにおける複数フラット ファイル接続の一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
  **Description**  
  接続の説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続の目的について記述することをお勧めします。  
   
-## フラット ファイル形式の動的オプション  
+## <a name="flat-file-format-dynamic-options"></a>フラット ファイル形式の動的オプション  
   
-### [形式] = [区切り記号]  
+### <a name="format--delimited"></a>[形式] = [区切り記号]  
  **[行区切り記号]**  
  使用できる行区切り記号の一覧から選択するか、区切り記号テキストを入力します。  
   
@@ -64,9 +69,9 @@ caps.handback.revision: 30
 |**[縦棒 {&#124;}]**|列は、縦棒で区切られます。|  
   
  **[列のリセット]**  
- 元の列以外のすべての列を削除するには、**[列のリセット]** をクリックします。  
+ 元の列以外のすべての列を削除するには、 **[列のリセット]**をクリックします。  
   
-### [形式] = [固定幅]  
+### <a name="format--fixed-width"></a>[形式] = [固定幅]  
  **フォント**  
  プレビュー データの表示に使用するフォントを選択します。  
   
@@ -77,9 +82,9 @@ caps.handback.revision: 30
  個々の列に対して区切り記号を追加する前に、行の長さを指定します。 または、プレビュー ウィンドウの垂直線をドラッグして行の終わりをマークします。 行幅値は自動的に更新されます。  
   
  **[列のリセット]**  
- 元の列以外のすべての列を削除するには、**[列のリセット]** をクリックします。  
+ 元の列以外のすべての列を削除するには、 **[列のリセット]**をクリックします。  
   
-### [形式] = [幅合わせしない]  
+### <a name="format--ragged-right"></a>[形式] = [幅合わせしない]  
   
 > [!NOTE]  
 >  幅合わせしない形式のファイルとは、最後の列を除くすべての列が固定幅のファイルです。 最後の列は、行区切り記号で区切られます。  
@@ -105,12 +110,12 @@ caps.handback.revision: 30
 |**[縦棒 {&#124;}]**|行は、縦棒で区切られます。|  
   
  **[列のリセット]**  
- 元の列以外のすべての列を削除するには、**[列のリセット]** をクリックします。  
+ 元の列以外のすべての列を削除するには、 **[列のリセット]**をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)   
- [[複数フラット ファイル接続マネージャー エディター] &#40;[全般] ページ&#41;](../Topic/Multiple%20Flat%20Files%20Connection%20Manager%20Editor%20\(General%20Page\).md)   
- [[複数フラット ファイル接続マネージャー エディター] &#40;[詳細設定] ページ&#41;](../Topic/Multiple%20Flat%20Files%20Connection%20Manager%20Editor%20\(Advanced%20Page\).md)   
- [[複数フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../Topic/Multiple%20Flat%20Files%20Connection%20Manager%20Editor%20\(Preview%20Page\).md)  
+ [複数のフラット ファイル接続マネージャー エディター & #40 です。[全般] ページ &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)   
+ [複数のフラット ファイル接続マネージャー エディター & #40 です。[詳細] ページ &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)   
+ [複数のフラット ファイル接続マネージャー エディター & #40 です。[プレビュー] ページ &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

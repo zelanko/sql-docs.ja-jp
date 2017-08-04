@@ -1,24 +1,29 @@
 ---
-title: "エンティティの依存関係エクスプローラー | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/06/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "マスター データ サービス"
+title: "エンティティの依存関係エクスプ ローラー |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 04/06/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- "マスター データ サービス"
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccac7deb9d40896082cddda7c438ebe5f6e53a83
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# エンティティの依存関係エクスプローラー
+# <a name="entity-dependencies-explorer"></a>エンティティの依存関係エクスプローラー
   
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 では、[エンティティの依存性] という新しいエクスプローラー ページが追加されました。ここでは、最初に派生階層を定義することなく、ドメイン ベースの属性 (DBA) 値で指定したとおりに、モデル内のエンティティ メンバー間のリレーションシップを視覚化する別の方法を提供します。   
   
@@ -43,3 +48,5 @@ caps.handback.revision: 5
   
   
   
+
+

@@ -1,29 +1,34 @@
 ---
-title: "[履歴属性オプション] (緩やかに変化するディメンション ウィザード) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.loaddimwizard.histattriboption.f1"
+title: "履歴属性オプション (緩やかに変化するディメンション ウィザード) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.loaddimwizard.histattriboption.f1
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
 caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2867e5173235520c521ca70952f50d1fa7bc8487
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# [履歴属性オプション] (緩やかに変化するディメンション ウィザード)
+# <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>[履歴属性オプション] (緩やかに変化するディメンション ウィザード)
   **[履歴属性オプション]** ダイアログ ボックスを使用すると、開始日や終了日によって履歴属性を表示したり、専用に作成された列に履歴属性を記録したりできます。  
   
  このウィザードの詳細については、「 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[現在のレコードと有効期限が切れたレコードを 1 列で表示する]**  
  1 列を使用して履歴属性のステータスを記録する場合は、次のオプションを使用できます。  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 22
 |**[終了日の列]**|ディメンション テーブルで終了日を含む列を選択します。|  
 |**[日付の値を設定する変数]**|日付の変数を一覧から選択します。|  
   
-## 参照  
- [緩やかに変化するディメンション ウィザードを使用して出力を構成する](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+## <a name="see-also"></a>参照  
+ [出力を緩やかに変化するディメンション ウィザードを使用して構成します。](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "[RAW ファイル変換先エディター] ([接続マネージャー] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rawfiledestinationconnectionmanager.f1"
+title: "Raw ファイル変換先エディター (接続マネージャー ページ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rawfiledestinationconnectionmanager.f1
 ms.assetid: a0ec9643-3b44-4467-b855-f45ae4794f7f
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9f27180b2dca144905af1a5346d3d8747aa8248a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# [RAW ファイル変換先エディター] ([接続マネージャー] ページ)
+# <a name="raw-file-destination-editor-connection-manager-page"></a>[RAW ファイル変換先エディター] ([接続マネージャー] ページ)
   ファイルに RAW データを書き込むための RAW ファイル変換先を構成するには、RAW ファイル変換先エディターを使用します。  
   
  **目的に合ったトピックをクリックしてください**  
@@ -33,7 +38,7 @@ caps.handback.revision: 8
   
 1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]パッケージに RAW ファイル変換先を追加します。  
   
-2.  コンポーネントを右クリックし、**[編集]** をクリックします。  
+2.  コンポーネントを右クリックし、 **[編集]**をクリックします。  
   
 ##  <a name="connection"></a> [接続マネージャー] タブのオプションの設定  
  **[アクセス モード]**  
@@ -55,12 +60,12 @@ caps.handback.revision: 8
  RAW ファイルに書き込む 1 つ以上の入力列を選択します。  
   
  **入力列**  
- **[使用できる入力列]** から選択した場合、このテーブルに入力列が自動的に追加されます。入力列をこのテーブルで直接選択することもできます。  
+ **[使用できる入力列]**から選択した場合、このテーブルに入力列が自動的に追加されます。入力列をこのテーブルで直接選択することもできます。  
   
  **[出力の別名]**  
  出力列に使用する代替名を指定します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [RAW ファイル変換先](../../integration-services/data-flow/raw-file-destination.md)  
   
   

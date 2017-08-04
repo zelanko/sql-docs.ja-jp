@@ -1,23 +1,28 @@
 ---
-title: "Microsoft Excel 用マスター データ サービス アドイン | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "マスター データ サービス アドインを Excel の |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 caps.latest.revision: 30
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 4d7a1a96cde8a7423aaa8d202ac7def518152279
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# Microsoft Excel 用マスター データ サービス アドイン
+# <a name="master-data-services-add-in-for-microsoft-excel"></a>Microsoft Excel 用マスター データ サービス アドイン
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、フィルター処理したデータ リストを MDS から Excel に読み込んで、そのデータを他のデータと同様に Excel で操作することができます。 完了したら、データをパブリッシュして一元的な格納場所の MDS に戻すことができます。 セキュリティによって、表示および更新できるデータを決定します。  
   
  管理者の場合は、 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] を使用してエンティティおよび属性を作成し、それらにデータを読み込みます。 これにより、他のツールを使用してデータをモデルに読み込む必要がなくなります。  
@@ -25,8 +30,8 @@ caps.handback.revision: 30
  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、Data Quality Services (DQS) を使用して、MDS に読み込む前にデータを照合できます。 これにより、MDS 内のデータの重複を防ぐことができます。  
 
 ## <a name="downloads"></a>ダウンロード 
->*  [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] SP1 用の [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] を[この Microsoft ダウンロード センター ページ](https://go.microsoft.com/fwlink/?linkid=836866)からダウンロードします。
->* SQL Server vNext CTP1 用の [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] を[この Microsoft ダウンロード センター ページ](https://go.microsoft.com/fwlink/?linkid=836867)からダウンロードします。
+>*  SQL Server 2016 SP1 からの Excel 用マスター データ サービス アドインをダウンロード[この Microsoft ダウンロード センター ページ](https://go.microsoft.com/fwlink/?linkid=836866)です。 
+>* ダウンロード、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]から SQL Server 2017 ctp1[この Microsoft ダウンロード センター ページ](https://go.microsoft.com/fwlink/?linkid=836867)です。 このアドインでは、SQL Server 2017 RC1 のでも動作します。
 
  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 30
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [接続 &#40;Excel 用 MDS アドイン&#41;](../../master-data-services/microsoft-excel-add-in/connections-mds-add-in-for-excel.md)  
+-   [接続 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/connections-mds-add-in-for-excel.md)  
   
 -   [概要: Excel へのデータのエクスポート &#40;Excel 用 MDS アドイン&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
@@ -83,3 +88,4 @@ caps.handback.revision: 30
 -   [セキュリティ &#40;マスター データ サービス&#41;](../../master-data-services/security-master-data-services.md)  
   
   
+

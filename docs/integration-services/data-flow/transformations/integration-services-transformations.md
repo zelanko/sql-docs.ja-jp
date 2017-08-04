@@ -1,36 +1,41 @@
 ---
-title: "Integration Services の変換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "変換 [Integration Services]、一覧"
-  - "変換 [Integration Services]、種類"
-  - "変換 [Integration Services]"
-  - "データ フロー [Integration Services]、変換"
-  - "ビジネス インテリジェンス変換 [Integration Services]"
-  - "結合変換"
-  - "分割変換 [Integration Services]"
-  - "カスタム変換 [Integration Services]"
-  - "行の変換 [Integration Services]"
-  - "行セットの変換 [Integration Services]"
+title: "Integration Services の変換 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transformations [Integration Services], listed
+- transformations [Integration Services], types
+- transformations [Integration Services]
+- data flow [Integration Services], transformations
+- business intelligence transformations [Integration Services]
+- join transformations
+- split transformations [Integration Services]
+- custom transformations [Integration Services]
+- row transformations [Integration Services]
+- rowset transformations [Integration Services]
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 85673091c2531821e62bf7cbeab2bbda6139b384
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# Integration Services の変換
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]  の変換とは、パッケージのデータ フロー内にある、データを集計、マージ、配信、および変更するコンポーネントのことです。 変換では、参照操作を実行してサンプル データセットを生成することもできます。 このセクションでは、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] に含まれる変換と、その機能について説明します。  
+# <a name="integration-services-transformations"></a>Integration Services の変換
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の変換とは、パッケージのデータ フロー内にある、データを集計、マージ、配信、および変更するコンポーネントのことです。 変換では、参照操作を実行してサンプル データセットを生成することもできます。 このセクションでは、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] に含まれる変換と、その機能について説明します。  
   
-## ビジネス インテリジェンス変換  
+## <a name="business-intelligence-transformations"></a>ビジネス インテリジェンス変換  
  次の変換は、データのクリーンアップ、テキストのマイニング、データ マイニング予測クエリの実行などのビジネス インテリジェンス操作を実行します。  
   
 |変換|Description|  
@@ -43,7 +48,7 @@ caps.handback.revision: 56
 |[データ マイニング クエリ変換](../../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|データ マイニング予測クエリを実行する変換です。|  
 |[DQS クレンジング変換](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)|作成されたルールを接続されたデータ ソースに適用することにより、そのデータ ソースのデータを修正する変換です。|  
   
-## 行の変換  
+## <a name="row-transformations"></a>行の変換  
  次の変換は、列の値を更新して新しい列を作成します。 この変換は、変換入力の各行に適用されます。  
   
 |変換|Description|  
@@ -57,7 +62,7 @@ caps.handback.revision: 56
 |[スクリプト コンポーネント](../../../integration-services/data-flow/transformations/script-component.md)|スクリプトを使用して、データの抽出、変換、または読み込みを行う変換です。|  
 |[OLE DB コマンド変換](../../../integration-services/data-flow/transformations/ole-db-command-transformation.md)|データ フローの各行で、SQL コマンドを実行する変換です。|  
   
-## 行セットの変換  
+## <a name="rowset-transformations"></a>行セットの変換  
  次の変換は、新しい行セットを作成します。 行セットには、集計された値や並べ替えた値、サンプル行セット、またはピボットされた行セットとピボットされていない行セットを含めることができます。  
   
 |変換|Description|  
@@ -69,7 +74,7 @@ caps.handback.revision: 56
 |[ピボット変換](../../../integration-services/data-flow/transformations/pivot-transformation.md)|正規化されたテーブルの、正規化されていないバージョンを作成する変換です。|  
 |[ピボット解除変換](../../../integration-services/data-flow/transformations/unpivot-transformation.md)|正規化されていないテーブルの、正規化されたバージョンを作成する変換です。|  
   
-## 分割および結合変換  
+## <a name="split-and-join-transformations"></a>分割および結合変換  
  次の変換は、別の出力への行の配信、変換入力のコピーの作成、1 つの出力への複数入力の結合、および参照操作の実行を行います。  
   
 |変換|Description|  
@@ -83,15 +88,15 @@ caps.handback.revision: 56
 |[キャッシュ変換](../../../integration-services/data-flow/transformations/cache-transform.md)|データ フロー内で接続中のデータ ソースからキャッシュ接続マネージャーにデータを書き込み、データをキャッシュ ファイルに保存する変換です。 参照変換は、キャッシュ ファイル内のデータに対する参照を実行します。|  
 |[Balanced Data Distributor (BDD) 変換](../../../integration-services/data-flow/transformations/balanced-data-distributor-transformation.md)|この変換は、複数の着信バッファーを、個別のスレッド上に存在する出力に対して一様に分配することにより、マルチコアおよびマルチプロセッサのサーバーで実行されている SSIS パッケージのパフォーマンスを向上させます。|  
   
-## 監査変換  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]  には、監査情報の追加や行のカウントを行う、次のような変換が含まれています。  
+## <a name="auditing-transformations"></a>監査変換  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、監査情報の追加や行のカウントを行う、次のような変換が含まれています。  
   
 |変換|Description|  
 |--------------------|-----------------|  
 |[監査変換](../../../integration-services/data-flow/transformations/audit-transformation.md)|環境に関する情報を、パッケージ内のデータ フローで利用可能にする変換です。|  
 |[行数変換](../../../integration-services/data-flow/transformations/row-count-transformation.md)|変換の処理を行うときに行をカウントし、最終的なカウントを変数に格納する変換です。|  
   
-## カスタム変換  
- カスタムの変換を記述することもできます。 詳細については、「[同期出力型のカスタム変換コンポーネントの開発](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)」と「[非同期出力型のカスタム変換コンポーネントの開発](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)」を参照してください。  
+## <a name="custom-transformations"></a>カスタム変換  
+ カスタムの変換を記述することもできます。 詳細については、「 [同期出力型のカスタム変換コンポーネントの開発](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md) 」と「 [非同期出力型のカスタム変換コンポーネントの開発](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)」を参照してください。  
   
   

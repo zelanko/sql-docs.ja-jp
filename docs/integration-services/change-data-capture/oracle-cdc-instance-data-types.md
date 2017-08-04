@@ -1,25 +1,30 @@
 ---
-title: "Oracle CDC インスタンスのデータ型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Oracle CDC インスタンスのデータ型 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ce8e5f7622c520f819b65000729b7d3c750764fc
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# Oracle CDC インスタンスのデータ型
+# <a name="oracle-cdc-instance-data-types"></a>Oracle CDC インスタンスのデータ型
   Oracle CDC インスタンスでは、ほとんどの Oracle データ型がサポートされます。 次のセクションでは、サポートされるデータ型とサポートされないデータ型について説明します。  
   
-## サポートされるデータ型  
+## <a name="supported-data-types"></a>サポートされるデータ型  
  次の表では、キャプチャできる Oracle データ型と、変更テーブルの SQL Server データ型に対する既定のマッピングについて説明します。 ソース Oracle テーブルにキャプチャ インスタンスを追加するときは、これらのマッピングよりも優先させることができます。  
   
 |Oracle データベース データ型|SQL Server データ型|  
@@ -42,7 +47,7 @@ caps.handback.revision: 9
 |VARCHAR2|VARCHAR|  
 |XMLTYPE|NVARCHAR (MAX)|  
   
-## サポートされないデータ型  
+## <a name="non-supported-data-types"></a>サポートされないデータ型  
  次の Oracle データ型の列を含むソース Oracle テーブルはキャプチャできません。 これらのデータ型を含むキャプチャ対象列は NULL として表示されます。ただし、これらの値の変更は、キャプチャ対象テーブルの変更マスクに示されます。  
   
 -   LONG  
@@ -71,8 +76,8 @@ caps.handback.revision: 9
   
 -   VARRAY  
   
-## 参照  
- [Attunity の Change Data Capture Designer for Oracle](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
+## <a name="see-also"></a>参照  
+ [Change Data Capture Designer for Oracle by Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
  [Oracle CDC インスタンス](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   
   

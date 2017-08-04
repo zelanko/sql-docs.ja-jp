@@ -1,26 +1,31 @@
 ---
-title: "派生階層 (Master Data Services) の多対多リレーションシップを表示する | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "派生階層 (Master Data Services) の多対多リレーションシップを表示する |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5653a69d945fda68c197107461f6af0861135505
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# 派生階層 (Master Data Services) の多対多リレーションシップを表示する
+# <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>派生階層 (Master Data Services) の多対多リレーションシップを表示する
   派生階層 (DH) には 1 対多のリレーションシップが表示されますが、多対多のリレーションシップも表示できるようになります。  
   
-## 多対多 (M2M) リレーションシップ  
+## <a name="many-to-many-m2m-relationships"></a>多対多 (M2M) リレーションシップ  
  2 つのエンティティ間の多対多 (M2M) リレーションシップは、両者間のマッピングを提供する第 3 のエンティティを使用してモデリングできます。  
   
  ![mds_hierarchies_manytomany](../master-data-services/media/mds-hierarchies-manytomany.png "mds_hierarchies_manytomany")  
@@ -37,13 +42,13 @@ caps.handback.revision: 13
   
  ![mds_hierarchies_edit_derived_hierarchy_one](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-one.PNG "mds_hierarchies_edit_derived_hierarchy_one")  
   
- 上のスクリーンショットで、 **Employee** エンティティが唯一のレベルとして **[現在のレベル]** の中間に表示される点に注目してください。 右側の派生階層の **[プレビュー]** には、 **Employee** エンティティのすべてのメンバー一覧が表示されます。 左側の **[使用できるレベル]** セクションには、現在の上位レベル (**Employee**) に追加できるレベルが表示されます。 そのほとんどは、**Department** DBA を含む、**Employee** エンティティのドメインベースの属性 (DBA) です。  
+ 上のスクリーンショットで、 **Employee** エンティティが唯一のレベルとして **[現在のレベル]** の中間に表示される点に注目してください。 右側の派生階層の **[プレビュー]** には、 **Employee** エンティティのすべてのメンバー一覧が表示されます。 左側の **[使用できるレベル]** セクションには、現在の上位レベル (**Employee**) に追加できるレベルが表示されます。 そのほとんどは、 **Department** DBA を含む、 **Employee** エンティティのドメインベースの属性 (DBA) です。  
   
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 以降は、M2M リレーションシップをモデリングする新しい種類のレベルがあります。例: **Class (ClassRegistration.Student でマッピング)**。 レベル名は他の情報よりも詳細で、マッピング リレーションシップをあいまいに説明するために必要な追加情報を反映しています。 このレベルを **[現在のレベル]** セクションの **[Employee]** レベルにドロップ ダウンします。  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]以降は、M2M リレーションシップをモデリングする新しい種類のレベルがあります。例: **Class (ClassRegistration.Student でマッピング)**。 レベル名は他の情報よりも詳細で、マッピング リレーションシップをあいまいに説明するために必要な追加情報を反映しています。 このレベルを **[現在のレベル]** セクションの **[Employee]** レベルにドロップ ダウンします。  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
- これで、プレビューには、登録したトレーニング クラスごとにグループ化された従業員が表示されるようになります。 これは M2M リレーションシップなので、各子メンバーは複数の親を持つ可能性があります。 上の例では、従業員 **6 {Hillman, Reinout N}** は 2 つのクラス **1 {Master Data Services 101}** と 4 **{Career-Limiting Moves}** で受講者として登録されています。  
+ これで、プレビューには、登録したトレーニング クラスごとにグループ化された従業員が表示されるようになります。 これは M2M リレーションシップなので、各子メンバーは複数の親を持つ可能性があります。 上の例では、従業員 **6 {Hillman, Reinout N}** は 2 つのクラス **1 {Master Data Services 101}** と 4 **{Career-Limiting Moves}**で受講者として登録されています。  
   
  このマッピングのリレーションシップは、反転させて、受講者別にクラスをグループ化して表示することもできます。  
   
@@ -53,9 +58,9 @@ caps.handback.revision: 13
   
  マッピング エンティティのメンバー **ClassRegistration** は、派生階層内のどこにも表示されません。 階層内の親と子メンバー間のリレーションシップを定義するためだけに使用されることはありません。  
   
- マッピング エンティティ メンバーを変更し、次のいずれかを実行して M2M リレーションシップを編集できます。 M2M リレーションシップは、**[派生階層エクスプローラー]** ページで読み取り専用です。  
+ マッピング エンティティ メンバーを変更し、次のいずれかを実行して M2M リレーションシップを編集できます。 M2M リレーションシップは、 **[派生階層エクスプローラー]** ページで読み取り専用です。  
   
--   Excel 用のマスター データ サービス アドイン、またはデータ ステージングを使用して、**[エンティティ エクスプローラー]** ページでマッピング エンティティ メンバーを変更します。  
+-   Excel 用のマスター データ サービス アドイン、またはデータ ステージングを使用して、 **[エンティティ エクスプローラー]** ページでマッピング エンティティ メンバーを変更します。  
   
 -   **[派生階層エクスプローラー]**ページで、親間で子ノードをドロップ ダウンします。  
   
@@ -70,16 +75,16 @@ caps.handback.revision: 13
  M2M レベルは、他の派生階層レベルと同様に非表示にすることができます。  
    
 ### <a name="M2MSample"></a> サンプル モデル内の M2M リレーションシップ  
-M2M リレーションシップのデモを見るには、[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]に含まれている Customer サンプル モデル内の Region Climate 派生階層を表示します。   
+M2M リレーションシップのデモを見るには、 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]に含まれている Customer サンプル モデル内の Region Climate 派生階層を表示します。   
   
-次の画像に示すように、このリレーションシップをモデル化したレベル名は ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate です(RegionClimate.Region でマッピング)**。 ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** には、地域が、関連付けられている気候の種類によってグループ化されて表示されます。 複数の気候 (親) に関連付けられた地域 (子メンバー) が存在するため、これは M2M リレーションシップです。 たとえば、![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** は ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** と ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** に関連付けられています。  
+次の画像に示すように、このリレーションシップをモデル化したレベル名は ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate です(RegionClimate.Region でマッピング)**。 ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** には、地域が、関連付けられている気候の種類によってグループ化されて表示されます。 複数の気候 (親) に関連付けられた地域 (子メンバー) が存在するため、これは M2M リレーションシップです。 たとえば、 ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** は ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** と ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**に関連付けられています。  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
-Customer サンプル モデルや、[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]に含まれている他のサンプル モデルを配置する手順については、「[サンプル モデルとデータを配置する](../sql-server/media/master-data-services.png#deploySample)」を参照してください。   
+Customer サンプル モデルや、 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]に含まれている他のサンプル モデルを配置する手順については、「 [サンプル モデルとデータを配置する](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md)」を参照してください。   
   
-## 1 対多のリレーションシップ  
- DH のメンバーは、多くの子メンバーの親になることができますが、一般的に、複数の親を持つことはできません (例外については、「[メンバーのセキュリティ](#bkmk_member_security)」を参照してください)。 たとえば、Employee と Department という 2 つのエンティティがあるとします。各従業員 (employee) は 1 つの部門 (department) に属します。 このリレーションシップは、Employee エンティティに、Department エンティティを参照するドメインベースの属性 (DBA) を追加してモデリングします。  
+## <a name="one-many-relationship"></a>1 対多のリレーションシップ  
+ DH のメンバーは、多くの子メンバーの親になることができますが、一般的に、複数の親を持つことはできません (例外については、「 [メンバーのセキュリティ](#bkmk_member_security)」を参照してください)。 たとえば、Employee と Department という 2 つのエンティティがあるとします。各従業員 (employee) は 1 つの部門 (department) に属します。 このリレーションシップは、Employee エンティティに、Department エンティティを参照するドメインベースの属性 (DBA) を追加してモデリングします。  
   
  ![mds_hierarchies_onetomany](../master-data-services/media/mds-hierarchies-onetomany.png "mds_hierarchies_onetomany")  
   
@@ -96,10 +101,11 @@ Customer サンプル モデルや、[!INCLUDE[ssMDSshort_md](../includes/ssmdss
   
 -   M2M レベルがある派生階層 (1 人の子を多数の管理者の役割にマッピングできます)。  
   
-## コレクション  
+## <a name="collections"></a>コレクション  
  コレクションと明示的階層は推奨されていません。 変換ストアド プロシージャ (udpConvertCollectionAndConsolidatedMembersToLeaf) は、コレクション メンバーをリーフ メンバーに変換し、多対多の派生階層を作成し、コレクション メンバー情報をキャプチャします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   
+

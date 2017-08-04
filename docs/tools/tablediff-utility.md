@@ -1,30 +1,35 @@
 ---
-title: "tablediff ユーティリティ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データの比較"
-  - "tablediff ユーティリティ"
-  - "テーブル [SQL Server レプリケーション]"
-  - "テーブルの比較 [SQL Server]"
-  - "コマンド プロンプト ユーティリティ [SQL Server], tablediff"
-  - "トラブルシューティング [SQL Server レプリケーション], 非収束"
-  - "非収束 [SQL Server]"
+title: "tablediff ユーティリティ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- comparing data
+- tablediff utility
+- tables [SQL Server replication]
+- table comparisons [SQL Server]
+- command prompt utilities [SQL Server], tablediff
+- troubleshooting [SQL Server replication], non-convergence
+- non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5ecdf895353c1ec75004b2268bbd055b255b53ab
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# tablediff ユーティリティ
+# <a name="tablediff-utility"></a>tablediff ユーティリティ
   **tablediff** ユーティリティは、2 つのテーブル内のデータを比較して非収束の発生を調べる場合に使用されます。これは、レプリケーション トポロジ内の非収束に対するトラブルシューティングを行うときに特に便利です。 このユーティリティは、コマンド プロンプトから、またはバッチ ファイル内で使用して、次のタスクを実行することができます。  
   
 -   レプリケーション パブリッシャーとして動作する [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス内のソース テーブルと、レプリケーション サブスクライバーとして動作する 1 つ以上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスにある対象テーブルの間で、1 行単位の比較を行う。  
@@ -37,7 +42,7 @@ caps.handback.revision: 30
   
 -   出力ファイルへの結果の記録、または対象データベース内にあるテーブルへの結果の記録。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -73,12 +78,12 @@ tablediff
 }  
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  [ **-?** ]  
  サポートされているパラメーターのリストを返します。  
   
  **-sourceserver** *source_server_name*[**\\***instance_name*]  
- ソース サーバー名を指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、*source_server_name* を指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスの *source_server_name***\\***instance_name* を指定します。  
+ ソース サーバー名を指定します。 *の既定のインスタンスの場合は、* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 *の名前付きインスタンスの***\\***source_server_name* instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。  
   
  **-sourcedatabase** *source_database*  
  ソース データベース名を指定します。  
@@ -102,7 +107,7 @@ tablediff
  比較中は、TABLOCK および HOLDLOCK テーブル ヒントを使用して、ソース テーブルがロックされます。  
   
  **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- 対象サーバー名を指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、*destination_server_name* を指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスの *destination_server_name***\\***instance_name* を指定します。  
+ 対象サーバー名を指定します。 *の既定のインスタンスの場合は、* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 *の名前付きインスタンスの***\\***destination_server_name* instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。  
   
  **-destinationdatabase** *subscription_database*  
  対象データベース名を指定します。  
@@ -126,19 +131,19 @@ tablediff
  比較中は、TABLOCK および HOLDLOCK テーブル ヒントを使用して、対象テーブルがロックされます。  
   
  **-b** *large_object_bytes*  
- ラージ オブジェクト データ型の列に対して比較するバイト数を指定します。列の型は、**text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** です。 *large_object_bytes* の既定値は、列のサイズです。 *large_object_bytes* を超えるデータは比較されません。  
+ ラージ オブジェクト データ型の列に対して比較するバイト数を指定します。列の型は、 **text**、 **ntext**、 **image**、 **varchar(max)**、 **nvarchar(max)** 、 **varbinary(max)**です。 *large_object_bytes* の既定値は、列のサイズです。 *large_object_bytes* を超えるデータは比較されません。  
   
  **-bf**  *number_of_statements*  
- **-f** オプションを使用する場合に、現在の [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト ファイルに書き込む [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの数を指定します。 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの数が *number_of_statements* で指定した値を超えると、新しい [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト ファイルが作成されます。  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] オプションを使用する場合に、現在の **スクリプト ファイルに書き込む** ステートメントの数を指定します。 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの数が *number_of_statements*で指定した値を超えると、新しい [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト ファイルが作成されます。  
   
  **-c**  
  列レベルでの違いを比較します。  
   
  **-dt**  
- テーブルが既に存在している場合は、*table_name* で指定された結果テーブルを削除します。  
+ テーブルが既に存在している場合は、 *table_name*で指定された結果テーブルを削除します。  
   
  **-et** *table_name*  
- 作成する結果テーブルの名前を指定します。 このテーブルが既に存在する場合は、**-DT** を使用する必要があります。使用しない場合、この処理は失敗します。  
+ 作成する結果テーブルの名前を指定します。 このテーブルが既に存在する場合は、 **-DT** を使用する必要があります。使用しない場合、この処理は失敗します。  
   
  **-f** [ *file_name* ]  
  対象サーバーにあるテーブルを、ソース サーバーにあるテーブルと収束させる [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプトを生成します。 作成される [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト ファイルの名前とパスを指定できます (省略可能)。 *file_name* を指定しない場合は、ユーティリティが実行されているディレクトリに [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト ファイルが作成されます。  
@@ -161,7 +166,7 @@ tablediff
  **-t** *connection_timeouts*  
  ソース サーバーと対象サーバーへの接続に関する接続タイムアウト時間を設定します (秒単位)。  
   
-## 戻り値  
+## <a name="return-value"></a>戻り値  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -169,7 +174,7 @@ tablediff
 |**1**|重大なエラー|  
 |**2**|テーブルの差分|  
   
-## 解説  
+## <a name="remarks"></a>解説  
  **tablediff** ユーティリティは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 以外のサーバーでは使用できません。  
   
  **sql_variant** データ型列を含むテーブルはサポートされていません。  
@@ -189,7 +194,7 @@ tablediff
 |**ntext**|**nvarchar(max)**|  
 |**image**|**varbinary(max)**|  
   
- これらのマッピングを行わず、厳密な検証を行う場合は、**-strict** オプションを使用します。  
+ これらのマッピングを行わず、厳密な検証を行う場合は、 **-strict** オプションを使用します。  
   
  比較のソース テーブルには、主キー列、ID 列、または ROWGUID 列が少なくとも 1 つ必要です。 **-strict** オプションを使用する場合は、対象テーブルにも主キー列、ID 列、または ROWGUID 列が必要です。  
   
@@ -211,7 +216,7 @@ tablediff
   
 -   **image**  
   
-## 権限  
+## <a name="permissions"></a>権限  
  テーブルを比較するには、比較するテーブル オブジェクトに対する SELECT ALL 権限が必要です。  
   
  **-et** オプションを使用するには、db_owner 固定データベース ロールのメンバーであることが必要です。または、少なくともサブスクリプション データベースでの CREATE TABLE 権限、および対象サーバーにある対象所有者スキーマに対する ALTER 権限を持っている必要があります。  
@@ -220,7 +225,7 @@ tablediff
   
  **-o** または **-f** オプションを使用するには、指定されたファイル ディレクトリの場所に対する書き込み権限を持っている必要があります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [レプリケートされたテーブルを比較して相違があるかどうかを確認する &#40;レプリケーション プログラミング&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

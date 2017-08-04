@@ -1,41 +1,46 @@
 ---
-title: "TOKENCOUNT (SSIS 式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "TOKENCOUNT (SSIS 式) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77faf8083207373dee5dba3721fb38f91eefc3f2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# TOKENCOUNT (SSIS 式)
+# <a name="tokencount-ssis-expression"></a>TOKENCOUNT (SSIS 式)
   指定された区切り記号で区切られたトークンを含んでいる文字列内のトークン数を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 TOKENCOUNT(character_expression, delimiter_string)  
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  *character_expression*  
  区切り記号で区切られたトークンを含む文字列です。  
   
  *delimiter_string*  
  区切り記号を含む文字列です。 たとえば、「; ,」には 3 つの区切り記号 (セミコロン、空白、コンマ) が含まれています。  
   
-## 戻り値の型  
+## <a name="result-types"></a>戻り値の型  
  DT_I4  
   
-## 解説  
+## <a name="remarks"></a>解説  
  TOKEN 関数には次の解説が適用されます。  
   
 -   区切り記号には 1 つ以上の区切り文字を含めることができます。  
@@ -48,7 +53,7 @@ TOKENCOUNT(character_expression, delimiter_string)
   
 -   この式の引数として、変数と列を使用できます。  
   
-## 式の例  
+## <a name="expression-examples"></a>式の例  
  次の例では、TOKENCOUNT 関数は 3 を返します。これは、文字列に 3 つのトークン ("01"、"12"、および "2011") が含まれているためです。  
   
 ```  
@@ -79,7 +84,7 @@ TOKENCOUNT("a:little|white dog","| ,.:")
 TOKENCOUNT("        a little white dog", " ")  
 ```  
   
-## 参照  
- [関数 (SSIS 式)](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>参照  
+ [関数と #40 です。SSIS 式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

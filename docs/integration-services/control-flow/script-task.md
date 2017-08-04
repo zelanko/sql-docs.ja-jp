@@ -1,28 +1,33 @@
 ---
-title: "スクリプト タスク | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.scripttask.f1"
-helpviewer_keywords: 
-  - "スクリプト [Integration Services]、タスク"
-  - "スクリプト タスク [Integration Services]、スクリプト タスクについて"
-  - "スクリプト タスク [Integration Services]"
+title: "スクリプト タスク |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.scripttask.f1
+helpviewer_keywords:
+- scripts [Integration Services], tasks
+- Script task [Integration Services], about Script task
+- Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 caps.latest.revision: 67
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 0ab143db0dfc6cda94bd0ba5e51fec66da7b46be
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# スクリプト タスク
+# <a name="script-task"></a>スクリプト タスク
   スクリプト タスクでは、組み込みのタスクで利用できない関数を実行するコード、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で用意されている変換を実行するコードが用意されています。 また、スクリプト タスクを使用すると、複数のタスクおよび変換を使用しなくても、関数を 1 つのスクリプトに結合できます。 スクリプト タスクは、データ行ごとに 1 回ではなく、1 つのパッケージ内で 1 回 (または列挙されたオブジェクトごとに 1 回) 行う作業に使用します。  
   
  スクリプト タスクは、次の目的で使用できます。  
@@ -35,21 +40,21 @@ caps.handback.revision: 67
   
  スクリプトを使用してセット内のデータ行ごとに同じ作業を行う必要がある場合は、スクリプト タスクではなく、スクリプト コンポーネントを使用します。 たとえば、郵送料が妥当かどうかを評価し、極端に高いデータ行や極端に安いデータ行をスキップする場合は、スクリプト コンポーネントを使用します。 詳細については、「 [Script Component](../../integration-services/data-flow/transformations/script-component.md)」を参照してください。  
   
- 複数のパッケージで 1 つのスクリプトを使用する場合は、スクリプト タスクを使用せず、カスタム タスクを記述することをお勧めします。 詳細については、「[カスタム タスクの開発](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)」を参照してください。  
+ 複数のパッケージで 1 つのスクリプトを使用する場合は、スクリプト タスクを使用せず、カスタム タスクを記述することをお勧めします。 詳細については、「 [カスタム タスクの開発](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)」を参照してください。  
   
  スクリプト タスクがパッケージにとって適切な選択である場合、タスクが使用するスクリプトを開発して、タスク自体を構成する必要があります。  
   
-## タスクが使用するスクリプトの記述と実行  
+## <a name="writing-and-running-the-script-that-the-task-uses"></a>タスクが使用するスクリプトの記述と実行  
  スクリプト タスクでは、スクリプトを記述する環境、およびそのスクリプトを実行するエンジンとして [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) を使用します。  
   
- VSTA には、色分け表示が可能な [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] エディター、IntelliSense、**オブジェクト エクスプローラー**など、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境での標準機能がすべて含まれています。 VSTA には、他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] の開発ツールに付属しているのと同じデバッガーも含まれています。 スクリプト内のブレークポイントは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のタスクやコンテナーのブレークポイントとシームレスに動作します。 VSTA では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic と [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# の両方のプログラミング言語がサポートされます。  
+ VSTA には、色分け表示が可能な [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] エディター、IntelliSense、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] オブジェクト エクスプローラー **など、**環境での標準機能がすべて含まれています。 VSTA には、他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] の開発ツールに付属しているのと同じデバッガーも含まれています。 スクリプト内のブレークポイントは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のタスクやコンテナーのブレークポイントとシームレスに動作します。 VSTA では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic と [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# の両方のプログラミング言語がサポートされます。  
   
  スクリプトを実行するには、パッケージを実行するコンピューターに VSTA がインストールされている必要があります。 パッケージを実行すると、タスクはスクリプト エンジンを読み込み、スクリプトを実行します。 プロジェクト内のアセンブリへの参照を追加すると、スクリプトから外部の .NET アセンブリにアクセスできます。  
   
 > [!NOTE]  
->  スクリプトをプリコンパイルするかどうかを指定できた以前のバージョンとは異なり、[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 以降のバージョンではすべてのスクリプトがプリコンパイルされます。 スクリプトがプリコンパイルされると、実行時に言語エンジンを読み込まないため、パッケージの実行速度が向上します。 ただし、コンパイル済みのバイナリ ファイルは多量のディスク領域を使用します。  
+>  スクリプトをプリコンパイルするかどうかを指定できた以前のバージョンとは異なり、 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 以降のバージョンではすべてのスクリプトがプリコンパイルされます。 スクリプトがプリコンパイルされると、実行時に言語エンジンを読み込まないため、パッケージの実行速度が向上します。 ただし、コンパイル済みのバイナリ ファイルは多量のディスク領域を使用します。  
   
-## スクリプト タスクの構成  
+## <a name="configuring-the-script-task"></a>スクリプト タスクの構成  
  スクリプト タスクは、次の方法で構成できます。  
   
 -   タスクを実行するカスタム スクリプトを指定します。  
@@ -62,32 +67,32 @@ caps.handback.revision: 67
   
  これらのプロパティは [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから設定するか、またはプログラムによって設定します。  
   
-### デザイナーでのスクリプト タスクの構成  
- 次の表では、スクリプト タスクでログに記録できる **ScriptTaskLogEntry** イベントについて説明します。 **ScriptTaskLogEntry** イベントは、**[SSIS ログの構成]** ダイアログ ボックスの **[詳細]** タブでログ記録の対象として選択できます。 詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../../integration-services/performance/custom-messages-for-logging.md)」を参照してください。  
+### <a name="configuring-the-script-task-in-the-designer"></a>デザイナーでのスクリプト タスクの構成  
+ 次の表では、スクリプト タスクでログに記録できる **ScriptTaskLogEntry** イベントについて説明します。 **ScriptTaskLogEntry** イベントは、 **[SSIS ログの構成]** ダイアログ ボックスの **[詳細]** タブでログ記録の対象として選択できます。 詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。  
   
 |ログ エントリ|Description|  
 |---------------|-----------------|  
-|**ScriptTaskLogEntry**|スクリプト内でのログ記録の実装結果を報告します。 タスクは、**Dts** オブジェクトの **Log** メソッドを呼び出すたびにログ エントリを書き込みます。 タスクは、これらのエントリをコードの実行時に書き込みます。 詳細については、「[スクリプト タスクでのログ記録](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)」を参照してください。|  
+|**ScriptTaskLogEntry**|スクリプト内でのログ記録の実装結果を報告します。 タスクは、 **Dts** オブジェクトの **Log** メソッドを呼び出すたびにログ エントリを書き込みます。 タスクは、これらのエントリをコードの実行時に書き込みます。 詳細については、「 [スクリプト タスクでのログ記録](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)」を参照してください。|  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
--   [[スクリプト タスク エディター] &#40;[全般] ページ&#41;](../Topic/Script%20Task%20Editor%20\(General%20Page\).md)  
+-   [[スクリプト タスク エディター] &#40;[全般] ページ&#41;](../../integration-services/control-flow/script-task-editor-general-page.md)  
   
--   [[スクリプト タスク エディター] &#40;[スクリプト] ページ&#41;](../Topic/Script%20Task%20Editor%20\(Script%20Page\).md)  
+-   [[スクリプト タスク エディター] &#40;[スクリプト] ページ&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
   
--   [[式] ページ](../Topic/Expressions%20Page.md)  
+-   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-### プログラムによるスクリプト タスクの構成  
+### <a name="configuring-the-script-task-programmatically"></a>プログラムによるスクリプト タスクの構成  
  プログラムによってこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask>  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
   
--   shareourideas.com の技術記事「[配信通知付きで電子メールを送信する方法 (C#)](http://go.microsoft.com/fwlink/?LinkId=237625)」  
+-   shareourideas.com の技術記事「 [配信通知付きで電子メールを送信する方法 (C#)](http://go.microsoft.com/fwlink/?LinkId=237625)」  
   
   

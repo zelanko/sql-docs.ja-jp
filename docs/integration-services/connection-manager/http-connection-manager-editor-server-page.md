@@ -1,26 +1,31 @@
 ---
-title: "[HTTP 接続マネージャー エディター] ([サーバー] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.httpconnection.server.f1"
-helpviewer_keywords: 
-  - "HTTP 接続マネージャー エディター"
+title: "HTTP 接続マネージャー エディター (サーバー ページ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.httpconnection.server.f1
+helpviewer_keywords:
+- HTTP Connection Manager Editor
 ms.assetid: 774778a0-ece6-4971-b93f-b121d8fc1fc1
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b11802c5d90948df8ce7e6ef41f3a3ef3ea2fed6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# [HTTP 接続マネージャー エディター] ([サーバー] ページ)
+# <a name="http-connection-manager-editor-server-page"></a>[HTTP 接続マネージャー エディター] ([サーバー] ページ)
   **[HTTP 接続マネージャー エディター]** ダイアログ ボックスの **[サーバー]** タブを使用すると、URL やセキュリティ資格情報などのプロパティを指定して、HTTP 接続マネージャーを構成できます。 HTTP 接続により、パッケージが HTTP を使用してファイルを送受信することで、Web サーバーにアクセスできるようになります。 HTTP 接続マネージャーを構成した後に接続をテストすることもできます。  
   
 > [!IMPORTANT]  
@@ -28,7 +33,7 @@ caps.handback.revision: 32
   
  HTTP 接続マネージャーの詳細については、「 [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md)」を参照してください。 HTTP 接続マネージャーの一般的な使用シナリオの詳細については、「 [Web Service Task](../../integration-services/control-flow/web-service-task.md)」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[サーバー URL]**  
  サーバーの URL を入力します。  
   
@@ -59,10 +64,10 @@ caps.handback.revision: 32
  データを書き込むためのチャンクのサイズを指定します。  
   
  **[接続テスト]**  
- HTTP 接続マネージャーを構成した後に、**[接続テスト]** をクリックして、接続が利用可能であることを確認します。  
+ HTTP 接続マネージャーを構成した後に、 **[接続テスト]**をクリックして、接続が利用可能であることを確認します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)   
- [[HTTP 接続マネージャー エディター] ([プロキシ] ページ)](../Topic/HTTP%20Connection%20Manager%20Editor%20\(Proxy%20Page\).md)  
+ [HTTP 接続マネージャー エディター & #40 です。[プロキシ] ページ &#41;](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)  
   
   

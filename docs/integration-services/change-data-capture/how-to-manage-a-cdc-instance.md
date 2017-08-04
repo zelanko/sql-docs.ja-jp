@@ -1,25 +1,30 @@
 ---
-title: "CDC インスタンスを管理する方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "CDC インスタンスを管理する方法 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d368fcacfb8e548647785c8b5f6ef5b73b4ef10b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC インスタンスを管理する方法
+# <a name="how-to-manage-a-cdc-instance"></a>CDC インスタンスを管理する方法
   この手順では、CDC デザイナー コンソールを使用して CDC インスタンスの操作を実行時に管理する方法について説明します。  
   
-### CDC インスタンスの操作を管理するには  
+### <a name="to-manage-cdc-instance-operations"></a>CDC インスタンスの操作を管理するには  
   
 1.  **[スタート]** メニューの **[CDC デザイナー コンソール]**をクリックします。  
   
@@ -37,11 +42,11 @@ caps.handback.revision: 6
   
     -   **[停止]**: 変更のキャプチャを停止します。  
   
-    -   **[リセット]**: CDC インスタンスを初期 (空) の状態にリセットするには、**[リセット]** をクリックします。 このオプションは、CDC インスタンスが停止しているときに使用できます。 変更テーブル内のすべての変更および CDC インスタンスの内部状態が削除されます。 CDC インスタンスが後から開始されると、変更キャプチャはその時点から開始され、CDC インスタンスの開始後に開始されたトランザクションのみがキャプチャの対象となります。  
+    -   **[リセット]**: CDC インスタンスを初期 (空) の状態にリセットするには、 **[リセット]** をクリックします。 このオプションは、CDC インスタンスが停止しているときに使用できます。 変更テーブル内のすべての変更および CDC インスタンスの内部状態が削除されます。 CDC インスタンスが後から開始されると、変更キャプチャはその時点から開始され、CDC インスタンスの開始後に開始されたトランザクションのみがキャプチャの対象となります。  
   
     -   **[削除]**: CDC インスタンスを削除します。  
   
-    -   **[Oracle ログ スクリプト]**: [Oracle ログ スクリプト] ダイアログ ボックスに Oracle 補足ログ スクリプトを表示するには、**[Oracle ログ スクリプト]** をクリックします。 このダイアログ ボックスで実行できる操作の詳細については、「 [Oracle Supplemental Logging Script](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)」を参照してください。  
+    -   **[Oracle ログ スクリプト]**: [Oracle ログ スクリプト] ダイアログ ボックスに Oracle 補足ログ スクリプトを表示するには、 **[Oracle ログ スクリプト]** をクリックします。 このダイアログ ボックスで実行できる操作の詳細については、「 [Oracle Supplemental Logging Script](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)」を参照してください。  
   
          **注**: 補足ログ スクリプトを実行すると、[スクリプトを実行するための Oracle 資格情報] ダイアログ ボックスが表示されます。このダイアログ ボックスで、有効な Oracle ユーザー名とパスワードを指定します。 適切な Oracle 資格情報を指定する方法については、「 [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)」を参照してください。  
   

@@ -1,25 +1,30 @@
 ---
-title: "CDC Service のコマンド ライン インターフェイスを使用する方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "CDC Service のコマンド ライン インターフェイスを使用する方法 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ab87b7da-c3b9-4bc8-a853-798716cbf74b
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9b1f69b32824d88f2e5be131dde2043414c2f9e8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC Service のコマンド ライン インターフェイスを使用する方法
+# <a name="how-to-use-the-cdc-service-command-line-interface"></a>CDC Service のコマンド ライン インターフェイスを使用する方法
   Oracle CDC サービス プログラム xdbcdcsvc.exe は、通常、Oracle CDC Windows サービスを実行します。ただし、コマンド ラインから直接呼び出して、Oracle CDC Windows サービスを作成または削除することもできます。  
   
-### コマンド ラインを使用するには  
+### <a name="to-use-the-command-line"></a>コマンド ラインを使用するには  
   
 1.  **[スタート]** メニューからコマンド ライン コンソールを開きます。 実行または検索ボックスに「 **cmd** 」と入力してコンソールを開きます。  
   

@@ -1,28 +1,33 @@
 ---
-title: "リーフ権限 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "属性グループ [マスター データ サービス], 権限"
-  - "メンバー [マスター データ サービス], リーフ メンバーの権限"
-  - "権限 [マスター データ サービス], リーフ メンバー"
-  - "リーフ メンバー [マスター データ サービス], 属性の権限"
-  - "属性 [マスター データ サービス], リーフ メンバーの属性の権限"
+title: "リーフ権限 (Master Data Services) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attribute groups [Master Data Services], permissions
+- members [Master Data Services], leaf member permissions
+- permissions [Master Data Services], leaf members
+- leaf members [Master Data Services], attribute permissions
+- attributes [Master Data Services], leaf member attribute permissions
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: caaea89264b37bd2c92f9c72a1cb7644b67b1fd4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# リーフ権限 (Master Data Services)
+# <a name="leaf-permissions-master-data-services"></a>リーフ権限 (Master Data Services)
   リーフ権限は、エンティティのすべてのリーフ メンバーの属性値に適用されます。  
   
  明示的階層が有効になっていないエンティティの場合、 **リーフ** への権限の割り当ては、エンティティへの権限の割り当てと同じです。  
@@ -43,21 +48,21 @@ caps.handback.revision: 9
   
  読み取り、作成、更新、削除の各権限は組み合わせることができます。 作成、更新、削除が割り当てられると、読み取り権限が自動的に割り当てられます。  
   
-## 属性の権限  
+## <a name="attribute-permissions"></a>属性の権限  
  属性の権限は、特定のエンティティの属性の値に適用されます。 属性の権限のみを持つユーザーは、メンバーを追加または削除できません。  
   
 |権限|Description|  
 |----------------|-----------------|  
 |**読み取り**|ユーザーは属性の読み取ることができます。|  
 |**作成**|ユーザーはメンバーを作成するときに値を割り当てることができます。|  
-|**Update**|ユーザーは属性を更新できます。|  
-|**削除**|影響しません。|  
-|**Deny**|属性が表示されません。<br /><br /> 注: Name 属性と Code 属性へのアクセスを明示的に拒否することはできません。|  
+|**更新**|ユーザーは属性を更新できます。|  
+|**Del**|影響しません。|  
+|**拒否**|属性が表示されません。<br /><br /> 注: Name 属性と Code 属性へのアクセスを明示的に拒否することはできません。|  
   
-### 例  
+### <a name="example"></a>例  
  Product エンティティの場合、Subcategory 属性に **更新** 権限を割り当てます。 他のすべての属性に対しては権限を拒否します。  
   
-|Name|コード|Subcategory (更新)|  
+|Name|Code|Subcategory (更新)|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|\{5\} Mountain Bikes|  
 |Mountain-100|BK-M201|\{5\} Mountain Bikes|  
@@ -67,11 +72,12 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  この例では、Subcategory は、SubcategoryList エンティティに基づくドメイン ベースの属性です。 Mountain-100 に対して別のサブカテゴリを選択することはできますが、SubcategoryList エンティティへのメンバーの追加または SubcategoryList エンティティからのメンバーの削除を行うことはできません。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [統合権限 (マスター データ サービス)](../Topic/Consolidated%20Permissions%20\(Master%20Data%20Services\).md)   
+    
  [モデル オブジェクト権限 (マスター データ サービス)](../master-data-services/model-object-permissions-master-data-services.md)   
- [メンバー (マスター データ サービス)](../master-data-services/members-master-data-services.md)   
- [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)  
+ [メンバーと #40 です。マスター データ サービス &#41;](../master-data-services/members-master-data-services.md)   
+ [属性と #40 です。マスター データ サービス &#41;](../master-data-services/attributes-master-data-services.md)  
   
   
+

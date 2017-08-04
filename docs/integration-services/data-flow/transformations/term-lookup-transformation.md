@@ -1,32 +1,37 @@
 ---
-title: "用語参照変換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.termlookuptrans.f1"
-helpviewer_keywords: 
-  - "データの抽出 [Integration Services]"
-  - "抽出用語の照合 [Integration Services]"
-  - "テキストの抽出 [Integration Services]"
-  - "用語の抽出 [Integration Services]"
-  - "参照 [Integration Services]"
-  - "抽出項目のカウント"
-  - "用語参照変換"
+title: "用語参照変換 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.termlookuptrans.f1
+helpviewer_keywords:
+- extracting data [Integration Services]
+- match extracted terms [Integration Services]
+- text extraction [Integration Services]
+- term extractions [Integration Services]
+- lookups [Integration Services]
+- counting extracted items
+- Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3eefbab1c6f9b3cd5e51faa9e875a44218c33b3f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# 用語参照変換
+# <a name="term-lookup-transformation"></a>用語参照変換
   用語参照変換は、変換入力列内のテキストから抽出された用語を、参照テーブルの用語と照合します。 次に、入力データセットで参照テーブル内の用語が検出された回数をカウントし、その数を参照テーブルの用語と共に変換出力の列に書き込みます。 この変換は、単語の使用頻度を示す統計付きのユーザー定義の単語一覧を、入力テキストから作成する場合に便利です。  
   
  用語参照変換は、用語抽出変換と同じ次の方法を使用して、参照を実行する前に入力列のテキストから単語を抽出します。  
@@ -39,21 +44,21 @@ caps.handback.revision: 56
   
  用語の照合方法を詳細にカスタマイズするには、大文字と小文字を区別して照合するように用語参照変換を構成できます。  
   
-## 次と一致する  
+## <a name="matches"></a>次と一致する  
  用語参照変換は参照を実行し、次の規則を使用して値を返します。  
   
--   大文字と小文字を区別して照合するように変換が構成されている場合、大文字と小文字を比較して一致しない場合は破棄されます。 たとえば、*student* と *STUDENT* は別の単語として扱われます。  
+-   大文字と小文字を区別して照合するように変換が構成されている場合、大文字と小文字を比較して一致しない場合は破棄されます。 たとえば、 *student* と *STUDENT* は別の単語として扱われます。  
   
     > [!NOTE]  
-    >  文の先頭で 1 文字目が大文字になっている単語は小文字の単語と見なされます。 たとえば、*Student* が文の最初の単語である場合、*student* と *Student* の照合は成功します。  
+    >  文の先頭で 1 文字目が大文字になっている単語は小文字の単語と見なされます。 たとえば、 *Student* が文の最初の単語である場合、 *student* と *Student* の照合は成功します。  
   
--   名詞または名詞句の複数形が参照テーブルに存在する場合、参照により一致するのは、名詞または名詞句の複数形のみです。 たとえば、*students* のすべてのインスタンスは、*student* のインスタンスとは別にカウントされます。  
+-   名詞または名詞句の複数形が参照テーブルに存在する場合、参照により一致するのは、名詞または名詞句の複数形のみです。 たとえば、 *students* のすべてのインスタンスは、 *student*のインスタンスとは別にカウントされます。  
   
--   単語の単数形のみが参照テーブルにある場合、単語または語句の単数形および複数形の両方が単数形と一致します。 たとえば、参照テーブルに *student* が含まれ、変換が *student* と *students* を検出した場合、両方の単語が、参照用語の *student* に一致するものとしてカウントされます。  
+-   単語の単数形のみが参照テーブルにある場合、単語または語句の単数形および複数形の両方が単数形と一致します。 たとえば、参照テーブルに *student*が含まれ、変換が *student* と *students*を検出した場合、両方の単語が、参照用語の *student*に一致するものとしてカウントされます。  
   
--   入力列のテキストが、見出し語付きの名詞句の場合、名詞句の最後の単語のみが正規化されます。 たとえば、*doctors appointments* の見出し語付き名詞句は、*doctors appointment* になります。  
+-   入力列のテキストが、見出し語付きの名詞句の場合、名詞句の最後の単語のみが正規化されます。 たとえば、 *doctors appointments* の見出し語付き名詞句は、 *doctors appointment*になります。  
   
- 参照セット内で重複している用語が参照項目に含まれる場合、つまりサブ用語が複数の参照レコード内に存在する場合、用語参照変換は参照結果を 1 つだけ返します。 次の例は、重複するサブ用語が参照項目に含まれる場合の結果を示しています。 この場合、重複するサブ用語は *Windows* で、2 つの参照用語内に存在します。 ただし、変換は結果を 2 つ返さず、参照用語の 1 つ *Windows* のみを返します。 2 番目の参照用語である *Windows 7 Professional* は返されません。  
+ 参照セット内で重複している用語が参照項目に含まれる場合、つまりサブ用語が複数の参照レコード内に存在する場合、用語参照変換は参照結果を 1 つだけ返します。 次の例は、重複するサブ用語が参照項目に含まれる場合の結果を示しています。 この場合、重複するサブ用語は *Windows*で、2 つの参照用語内に存在します。 ただし、変換は結果を 2 つ返さず、参照用語の 1 つ *Windows*のみを返します。 2 番目の参照用語である *Windows 7 Professional*は返されません。  
   
 |アイテム|値|  
 |----------|-----------|  
@@ -61,12 +66,12 @@ caps.handback.revision: 56
 |参照用語|Windows, Windows 7 Professional|  
 |出力|Windows|  
   
- 用語参照変換は、特殊文字が含まれる名詞および名詞句を照合でき、参照テーブルのデータにもこれらの文字を含めることができます。 特殊文字とは、%、@、&、$、#、\*、:、;、.、**,**、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、“、および ‘ です。  
+ 用語参照変換は、特殊文字が含まれる名詞および名詞句を照合でき、参照テーブルのデータにもこれらの文字を含めることができます。 特殊文字は次のとおり: %、@、&、$、#、 \*、: 以外の場合は、します。、 **、** 、!、?、 \<、>、+、=、^、~、|、 \\、/、(、)、[、]、{、}、"、および '。  
   
-## データ型  
+## <a name="data-types"></a>データ型  
  用語参照変換で使用できる列は、DT_WSTR または DT_NTEXT データ型のどちらかの列のみです。 列にテキストが含まれていても、これらのデータ型ではない場合、データ変換の変換では、DT_WSTR または DT_NTEXT データ型の列をデータ フローに追加し、列の値を新しい列にコピーできます。 その後、データ変換の変換からの出力を、用語参照変換への入力として使用できます。 詳細については、「 [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)」を参照してください。  
   
-## 用語参照変換の構成  
+## <a name="configuration-the-term-lookup-transformation"></a>用語参照変換の構成  
  用語参照変換の入力列には、InputColumnType プロパティが含まれ、このプロパティにより、列の使用方法を指定します。 InputColumnType は次の値を含むことができます。  
   
 -   値 0 は、列が出力のみに渡され、参照で使用されないことを示します。  
@@ -77,11 +82,11 @@ caps.handback.revision: 56
   
  変換出力列の InputColumnType プロパティが 0 または 2 に設定されている場合、1 つの列に CustomLineageID プロパティが含まれます。このプロパティには、上流のデータ フロー コンポーネントによって列に割り当てられた、系列 ID が含まれます。  
   
- 用語参照変換は、**用語**と**頻度**という既定の名前の付いた 2 つの列を変換出力に追加します。 **用語**列には参照テーブルからの用語が含まれ、**頻度**列には、入力データセットで参照テーブル内の用語が検出された回数が含まれます。 これらの列には、CustomLineageID プロパティは含まれません。  
+ 用語参照変換は、 **用語** と **頻度**という既定の名前の付いた 2 つの列を変換出力に追加します。 **用語** 列には参照テーブルからの用語が含まれ、 **頻度** 列には、入力データセットで参照テーブル内の用語が検出された回数が含まれます。 これらの列には、CustomLineageID プロパティは含まれません。  
   
- 参照テーブルは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または Access データベースのテーブルである必要があります。 用語抽出変換の出力がテーブルに保存されている場合、このテーブルを参照テーブルとして使用できます。ただし、他のテーブルを使用することもできます。 フラット ファイルのテキスト、Excel ブック、または他の変換元を用語参照変換で使用するには、これらを、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースまたは Access データベースにインポートする必要があります。  
+ 参照テーブルは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または Access データベースのテーブルである必要があります。 用語抽出変換の出力がテーブルに保存されている場合、このテーブルを参照テーブルとして使用できます。ただし、他のテーブルを使用することもできます。 フラット ファイルのテキスト、Excel ブック、または他の変換元を用語参照変換で使用するには、これらを、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースまたは Access データベースにインポートする必要があります。  
   
- 用語参照変換は、個別の OLE DB 接続を使用して、参照テーブルに接続します。 詳細については、「[OLE DB 接続マネージャー](../../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
+ 用語参照変換は、個別の OLE DB 接続を使用して、参照テーブルに接続します。 詳細については、「 [OLE DB 接続マネージャー](../../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
  用語参照変換は、完全な事前キャッシュ モードで動作します。 用語参照変換は、実行時に参照テーブルの用語を読み取って独自のメモリに格納してから、変換入力行を処理します。  
   
@@ -93,18 +98,18 @@ caps.handback.revision: 56
   
  **[用語参照変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [用語参照変換エディター ([参照テーブル] タブ)](../Topic/Term%20Lookup%20Transformation%20Editor%20\(Reference%20Table%20Tab\).md)  
+-   [用語参照変換エディター ([参照テーブル] タブ)](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-reference-table-tab.md)  
   
--   [用語参照変換エディター ([用語参照] タブ)](../Topic/Term%20Lookup%20Transformation%20Editor%20\(Term%20Lookup%20Tab\).md)  
+-   [用語参照変換エディター ([用語参照] タブ)](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
   
--   [用語参照変換エディター ([詳細設定] タブ)](../Topic/Term%20Lookup%20Transformation%20Editor%20\(Advanced%20Tab\).md)  
+-   [用語参照変換エディター ([詳細設定] タブ)](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-advanced-tab.md)  
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](../Topic/Common%20Properties.md)  
+-   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- プロパティの設定方法の詳細については、「[データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+ データ フロー コンポーネントのプロパティの設定方法については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
   

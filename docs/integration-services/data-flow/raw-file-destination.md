@@ -1,35 +1,40 @@
 ---
-title: "RAW ファイル変換先 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rawfiledest.f1"
-helpviewer_keywords: 
-  - "追加オプション [Integration Services]"
-  - "変換先 [Integration Services]、RAW ファイル"
-  - "生データ [Integration Services]"
-  - "生データの書き込み"
-  - "RAW ファイル変換先 (Raw File destination)"
+title: "Raw ファイル変換先 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rawfiledest.f1
+helpviewer_keywords:
+- append options [Integration Services]
+- destinations [Integration Services], Raw File
+- raw data [Integration Services]
+- writing raw data
+- Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a890502e4db72f00d21ed9656441cc27fa5e532d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# RAW ファイル変換先
+# <a name="raw-file-destination"></a>RAW ファイル変換先 (Raw File destination)
   RAW ファイル変換先は、生データをファイルに書き込みます。 データは変換先に固有の形式であるため、データは変換の必要がなく、解析もほとんど必要ありません。 したがって、RAW ファイル変換先は、フラット ファイルや OLE DB 変換先などの他の変換先よりも、高速にデータを書き込むことができます。  
   
  RAW ファイル変換先を使用すると、RAW データをファイルに書き込むことに加え、パッケージを実行せずに、列のみを含む空の RAW ファイル (メタデータのみのファイル) を生成することができます。 以前に変換先によって書き込まれた RAW データを取得するには、RAW ファイル ソースを使用します。 RAW ファイル ソースの参照先を、メタデータのみのファイルにすることもできます。  
   
- RAW ファイルの形式には、並べ替えの情報が含まれています。 RAW ファイル変換先には、文字列の列の比較フラグを含む並べ替えの情報がすべて保存されます。 RAW ファイル ソースは、並べ替えの情報を読み取って受け入れます。 詳細エディターを使用して、ファイル内の並べ替えのフラグを無視するように RAW ファイル ソースを構成するためのオプションが用意されています。 比較フラグの詳細については、「[文字列データの比較](../../integration-services/data-flow/comparing-string-data.md)」を参照してください。  
+ RAW ファイルの形式には、並べ替えの情報が含まれています。 RAW ファイル変換先には、文字列の列の比較フラグを含む並べ替えの情報がすべて保存されます。 RAW ファイル ソースは、並べ替えの情報を読み取って受け入れます。 詳細エディターを使用して、ファイル内の並べ替えのフラグを無視するように RAW ファイル ソースを構成するためのオプションが用意されています。 比較フラグの詳細については、「 [文字列データの比較](../../integration-services/data-flow/comparing-string-data.md)」を参照してください。  
   
  RAW ファイル変換先は、次の方法で構成できます。  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 59
   
 -   RAW ファイル変換先によって、同じ名前の既存のファイルにデータを追加するか、新しいファイルを作成するかを指定します。  
   
- RAW ファイル変換先は、パッケージの実行間で、部分的に処理されたデータの中間結果を書き込むために使用される場合がよくあります。 生データを格納すると、RAW ファイル ソースによって迅速に読み取られたデータを、最終的な変換先に読み込む前に、さらに変換できます。 たとえば、パッケージを複数回実行し、そのたびに生データをファイルに書き込むことができます。 後で、別のパッケージが RAW ファイル ソースを使用して各ファイルからデータを読み取り、全体結合変換を使用してデータを 1 つのデータセットにマージし、次に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルなどの最後の変換先に読み込まれる前に、追加の変換を適用してデータを集約することができます。  
+ RAW ファイル変換先は、パッケージの実行間で、部分的に処理されたデータの中間結果を書き込むために使用される場合がよくあります。 生データを格納すると、RAW ファイル ソースによって迅速に読み取られたデータを、最終的な変換先に読み込む前に、さらに変換できます。 たとえば、パッケージを複数回実行し、そのたびに生データをファイルに書き込むことができます。 後で、別のパッケージが RAW ファイル ソースを使用して各ファイルからデータを読み取り、全体結合変換を使用してデータを 1 つのデータセットにマージし、次に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルなどの最後の変換先に読み込まれる前に、追加の変換を適用してデータを集約することができます。  
   
 > [!NOTE]  
 >  RAW ファイル変換先では、NULL データはサポートされていますが、バイナリ ラージ オブジェクト (BLOB) データはサポートされていません。  
@@ -47,7 +52,7 @@ caps.handback.revision: 59
   
  この変換先は 1 つの標準入力をとります。 エラー出力はサポートされていません。  
   
-## データの追加および新しいファイルの作成オプション  
+## <a name="append-and-new-file-options"></a>データの追加および新しいファイルの作成オプション  
  WriteOption プロパティには、データを既存のファイルに追加する、または新しいファイルを作成するオプションが含まれています。  
   
  次の表では、WriteOption プロパティで使用できるオプションについて説明します。  
@@ -105,33 +110,33 @@ caps.handback.revision: 59
   
 6.  RawFile1 を RawFile2 に置き換えます。  
   
-### ループでの RAW ファイル変換先の使用  
+### <a name="using-the-raw-file-destination-in-a-loop"></a>ループでの RAW ファイル変換先の使用  
  RAW ファイル変換先を使用するデータ フローがループ内にある場合、ファイルを 1 回だけ作成し、ループが繰り返されるたびにデータをそのファイルに追加することができます。 ファイルにデータを追加するには、追加するデータが既存のファイルの形式に一致している必要があります。  
   
  ループの最初の繰り返しでファイルを作成し、ループの以降の繰り返しで行を追加するには、デザイン時に次のことを行う必要があります。  
   
-1.  WriteOption プロパティを **CreateOnce** または **CreateAlways** に設定し、ループの繰り返しを 1 回実行します。 ファイルが作成されます。 これにより、追加するデータのメタデータとファイルが必ず一致するようになります。  
+1.  WriteOption プロパティを **CreateOnce** または **CreateAlways**に設定し、ループの繰り返しを 1 回実行します。 ファイルが作成されます。 これにより、追加するデータのメタデータとファイルが必ず一致するようになります。  
   
-2.  WriteOption プロパティを **Append** にリセットし、ValidateExternalMetadata プロパティを **False** に設定します。  
+2.  WriteOption プロパティを **Append** にリセットし、ValidateExternalMetadata プロパティを **False**に設定します。  
   
  **Append** オプションの代わりに **TruncateAppend** オプションを使用すると、以前の実行で追加された行が切り捨てられ、新しい行が追加されます。 また **TruncateAppend** オプションを使用するには、データがファイル形式に一致している必要があります。  
   
-## RAW ファイル変換先の構成  
+## <a name="configuration-of-the-raw-file-destination"></a>RAW ファイル変換先の構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](../Topic/Common%20Properties.md)  
+-   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [RAW ファイルのカスタム プロパティ](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
-## 関連タスク  
- コンポーネントのプロパティの設定方法の詳細については、「[データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+## <a name="related-tasks"></a>関連タスク  
+ コンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
-## 関連コンテンツ  
- sqlservercentral.com のブログ「[RAW ファイルは最高](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)」  
+## <a name="related-content"></a>関連コンテンツ  
+ sqlservercentral.com のブログ「 [RAW ファイルは最高](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)」  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [RAW ファイル ソース](../../integration-services/data-flow/raw-file-source.md)   
  [データ フロー](../../integration-services/data-flow/data-flow.md)  
   

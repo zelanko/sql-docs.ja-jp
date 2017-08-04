@@ -1,31 +1,36 @@
 ---
-title: "[あいまいグループ化変換エディター] ([列] タブ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fuzzygroupingtransformation.columns.f1"
-helpviewer_keywords: 
-  - "あいまいグループ化変換エディター"
+title: "あいまいグループ化変換エディター (列 タブ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fuzzygroupingtransformation.columns.f1
+helpviewer_keywords:
+- Fuzzy Grouping Transformation Editor
 ms.assetid: 24f4539f-2a9f-4acd-acc7-06228a07f7df
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6040dde176f4f92674fd267388ff28a08499137b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# [あいまいグループ化変換エディター] ([列] タブ)
+# <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>[あいまいグループ化変換エディター] ([列] タブ)
   **[あいまいグループ化変換エディター]** ダイアログ ボックスの **[列]** タブを使用すると、重複する値を持つ行をグループ化するための列を指定できます。  
   
  あいまいグループ化変換の詳細については、「 [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **使用できる入力列**  
  重複する値を持つ行をグループ化するために使用する入力列を、この一覧から選択します。  
   
@@ -64,10 +69,10 @@ caps.handback.revision: 30
 |**[Leading and Trailing]**|先頭および末尾の両方の数字が考慮されます。|  
   
  **[比較フラグ]**  
- 文字列比較オプションについては、「[文字列データの比較](../../../integration-services/data-flow/comparing-string-data.md)」を参照してください。  
+ 文字列比較オプションについては、「 [文字列データの比較](../../../integration-services/data-flow/comparing-string-data.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../../integration-services/integration-services-error-and-message-reference.md)   
- [あいまいグループ化変換を使用して類似のデータ行を識別する](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
+ [あいまいグループ化変換を使用して、類似のデータ行を識別します。](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
   

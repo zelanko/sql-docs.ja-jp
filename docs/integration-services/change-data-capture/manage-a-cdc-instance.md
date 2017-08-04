@@ -1,24 +1,29 @@
 ---
-title: "CDC インスタンスの管理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "manIns"
+title: "Manage a CDC Instance |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 308d7528e516baa755a893bb42c9864c7ef7e3b7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC インスタンスの管理
+# <a name="manage-a-cdc-instance"></a>CDC インスタンスの管理
   CDC デザイナー コンソールを使用して、作成したインスタンスに関する情報を表示し、インスタンスの操作を管理することができます。  
   
  インスタンスに関する情報を表示するには、左ペインでインスタンスの名前をクリックします。  
@@ -26,22 +31,22 @@ caps.handback.revision: 11
 > [!NOTE]  
 >  左ペインでサービスを選択すると、CDC デザイナー コンソールの中央に、使用可能なインスタンスの一覧も表示されます。 このセクションでいずれかのインスタンスを選択すると、右側のペインでタスクを実行できます。ただし、プロパティ タブの情報を表示することはできません。  
   
-## CDC インスタンスの情報を表示しているときに実行できるタスク  
+## <a name="what-you-can-do-when-you-display-the-cdc-instance-information"></a>CDC インスタンスの情報を表示しているときに実行できるタスク  
  次の操作を右側のペインから実行します。  
   
  **[開始]**  
- 選択した CDC インスタンスについて変更のキャプチャを開始するには、**[開始]** をクリックします。  
+ 選択した CDC インスタンスについて変更のキャプチャを開始するには、 **[開始]** をクリックします。  
   
  **[停止]**  
- 選択した CDC インスタンスについて変更のキャプチャを停止するには、**[停止]** をクリックします。 CDC インスタンスを停止すると、その時点までにキャプチャされた変更は失われず、CDC インスタンスが再開されたときに伝達されます。  
+ 選択した CDC インスタンスについて変更のキャプチャを停止するには、 **[停止]** をクリックします。 CDC インスタンスを停止すると、その時点までにキャプチャされた変更は失われず、CDC インスタンスが再開されたときに伝達されます。  
   
  **リセット**  
- CDC インスタンスを初期 (空) の状態にリセットするには、**[リセット]** をクリックします。 このオプションは、CDC インスタンスが停止しているときに使用できます。 変更テーブル内のすべての変更および CDC インスタンスの内部状態が削除されます。 CDC インスタンスが後から開始されると、変更キャプチャはその時点から開始され、CDC インスタンスの開始後に開始されたトランザクションのみがキャプチャの対象となります。  
+ CDC インスタンスを初期 (空) の状態にリセットするには、 **[リセット]** をクリックします。 このオプションは、CDC インスタンスが停止しているときに使用できます。 変更テーブル内のすべての変更および CDC インスタンスの内部状態が削除されます。 CDC インスタンスが後から開始されると、変更キャプチャはその時点から開始され、CDC インスタンスの開始後に開始されたトランザクションのみがキャプチャの対象となります。  
   
  CDC インスタンスをリセットし、変更テーブルに書き込まれた変更を削除することを確認するには、確認のダイアログ ボックスで **[OK]** をクリックします。  
   
  **Del**  
- CDC インスタンスを完全に削除するには、**[削除]** をクリックします。 このオプションは、CDC インスタンスが停止しているときにのみ使用できます。  
+ CDC インスタンスを完全に削除するには、 **[削除]** をクリックします。 このオプションは、CDC インスタンスが停止しているときにのみ使用できます。  
   
  CDC インスタンスを削除することを確認するには、確認のダイアログ ボックスで **[OK]** をクリックします。  
   
@@ -68,10 +73,10 @@ caps.handback.revision: 11
   
     |||  
     |-|-|  
-    |![Error](../../integration-services/change-data-capture/media/error.gif "Error")|**エラー**: 再試行できないエラーが発生したため、Oracle CDC インスタンスは実行されていません。 次の副状態が利用できます。<br /><br /> **間違った構成**: 手動の介入を必要とする構成エラーが発生しました。<br /><br /> **パスワードが必要**: Oracle CDC インスタンスのパスワードが設定されていないか、パスワードが無効です。<br /><br /> **予期しないエラー**: その他すべての回復できないエラーです。|  
-    |![Okay](../../integration-services/change-data-capture/media/okay.gif "Okay")|**実行中**: CDC インスタンスが実行されていて、変更レコードが処理されています。 次の副状態が利用できます。<br /><br /> **アイドル状態**: すべての変更レコードが処理され、ターゲット変更テーブルに格納されました。 アクティブなトランザクションはこれ以上ありません。<br /><br /> **処理**: 変更テーブルにまだ書き込まれていない、処理中の変更レコードがあります。|  
-    |![Stop](../../integration-services/change-data-capture/media/stop.gif "Stop")|**停止**: CDC インスタンスが実行されていません。 停止状態は、CDC インスタンスが正常に停止したことを示します。|  
-    |![Paused](../../integration-services/change-data-capture/media/paused.gif "Paused")|**一時停止**: CDC インスタンスが実行されていますが、再試行できないエラーにより処理が中断されています。 次の副状態が利用できます。<br /><br /> **接続解除**: ソース Oracle データベースへの接続を確立できません。 接続が回復すると処理が再開されます。<br /><br /> **ストレージ**: 記憶領域がいっぱいです。 追加の記憶領域に空きができると処理が再開されます。<br /><br /> **ロガー**: ロガーは Oracle に接続されていますが、必要なトランザクション ログが利用できないなどの一時的な問題が発生しており、Oracle トランザクション ログを読み取ることができません。|  
+    |![エラー](../../integration-services/change-data-capture/media/error.gif "エラー")|**エラー**: 再試行できないエラーが発生したため、Oracle CDC インスタンスは実行されていません。 次の副状態が利用できます。<br /><br /> **間違った構成**: 手動の介入を必要とする構成エラーが発生しました。<br /><br /> **パスワードが必要**: Oracle CDC インスタンスのパスワードが設定されていないか、パスワードが無効です。<br /><br /> **予期しないエラー**: その他すべての回復できないエラーです。|  
+    |![わかりました](../../integration-services/change-data-capture/media/okay.gif "わかりました")|**実行中**: CDC インスタンスが実行されていて、変更レコードが処理されています。 次の副状態が利用できます。<br /><br /> **アイドル状態**: すべての変更レコードが処理され、ターゲット変更テーブルに格納されました。 アクティブなトランザクションはこれ以上ありません。<br /><br /> **処理**: 変更テーブルにまだ書き込まれていない、処理中の変更レコードがあります。|  
+    |![[停止]](../../integration-services/change-data-capture/media/stop.gif "[停止]")|**停止**: CDC インスタンスが実行されていません。 停止状態は、CDC インスタンスが正常に停止したことを示します。|  
+    |![一時停止](../../integration-services/change-data-capture/media/paused.gif "一時停止")|**一時停止**: CDC インスタンスが実行されていますが、再試行できないエラーにより処理が中断されています。 次の副状態が利用できます。<br /><br /> **接続解除**: ソース Oracle データベースへの接続を確立できません。 接続が回復すると処理が再開されます。<br /><br /> **ストレージ**: 記憶領域がいっぱいです。 追加の記憶領域に空きができると処理が再開されます。<br /><br /> **ロガー**: ロガーは Oracle に接続されていますが、必要なトランザクション ログが利用できないなどの一時的な問題が発生しており、Oracle トランザクション ログを読み取ることができません。|  
   
 -   **[詳細な状態]**: 現在の副状態です。  
   
@@ -102,24 +107,24 @@ caps.handback.revision: 11
     -   **[書き込まれた変更]**: SQL Server 変更テーブルに書き込まれた変更の数です。  
   
  **Oracle**  
- CDC インスタンスと、Oracle データベースに対する CDC インスタンスの接続に関する情報が表示されます。 このタブは読み取り専用です。 これらのプロパティを編集するには、左側のペインでインスタンスを右クリックし、**[プロパティ]** をクリックするか、右側のペインで **[プロパティ]** をクリックして [\<instance> のプロパティ] ダイアログ ボックスを表示します。  
+ CDC インスタンスと、Oracle データベースに対する CDC インスタンスの接続に関する情報が表示されます。 このタブは読み取り専用です。 これらのプロパティを編集するには、左ペインでインスタンスを右クリックして**プロパティ** をクリックしてまたは**プロパティ**を開くには右側のウィンドウで、\<インスタンス > プロパティ ダイアログ ボックス。  
   
  これらのプロパティとその編集方法については、「 [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)」を参照してください。  
   
  **テーブル**  
- CDC インスタンスに含まれるテーブルについての情報を表示します。 列情報も表示されます。 このタブは読み取り専用です。 これらのプロパティを編集するには、左側のペインでインスタンスを右クリックし、**[プロパティ]** をクリックするか、右側のペインで **[プロパティ]** をクリックして [\<instance> のプロパティ] ダイアログ ボックスを表示します。  
+ CDC インスタンスに含まれるテーブルについての情報を表示します。 列情報も表示されます。 このタブは読み取り専用です。 これらのプロパティを編集するには、左ペインでインスタンスを右クリックして**プロパティ** をクリックしてまたは**プロパティ**を開くには右側のウィンドウで、\<インスタンス > プロパティ ダイアログ ボックス。  
   
  これらのプロパティとその編集方法については、「 [Edit Tables](../../integration-services/change-data-capture/edit-tables.md)」を参照してください。  
   
  **[詳細設定]**  
- CDC インスタンスの詳細プロパティとプロパティ値を表示します。 このタブは読み取り専用です。 これらのプロパティを編集するには、左側のペインでインスタンスを右クリックし、**[プロパティ]** をクリックするか、右側のペインで **[プロパティ]** をクリックして [\<instance> のプロパティ] ダイアログ ボックスを表示します。  
+ CDC インスタンスの詳細プロパティとプロパティ値を表示します。 このタブは読み取り専用です。 これらのプロパティを編集するには、左ペインでインスタンスを右クリックして**プロパティ** をクリックしてまたは**プロパティ**を開くには右側のウィンドウで、\<インスタンス > プロパティ ダイアログ ボックス。  
   
  これらのプロパティとその編集方法については、「 [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server 変更データベース インスタンスを作成する方法](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [CDC インスタンスのプロパティを表示する方法](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
  [CDC インスタンスのプロパティを編集する方法](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [新しいインスタンス ウィザードの使用](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
+ [新しいインスタンス ウィザードを使用します。](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   

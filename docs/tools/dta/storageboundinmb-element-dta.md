@@ -1,29 +1,34 @@
 ---
-title: "StorageBoundInMB 要素 (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "StorageBoundInMB 要素"
+title: "StorageBoundInMB 要素 (DTA) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- XML
+helpviewer_keywords:
+- StorageBoundInMB element
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9be01bd27f8a3ad4a878e8b5340f2a4e0aead79e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# StorageBoundInMB 要素 (DTA)
+# <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 要素 (DTA)
   データベース エンジン チューニング アドバイザーのチューニング推奨設定 (インデックスとパーティション分割のセット) で使用できる最大容量を MB 単位で指定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 12
       <StorageBoundInMB>...</ StorageBoundInMB >  
 ```  
   
-## 要素の特性  
+## <a name="element-characteristics"></a>要素の特性  
   
 |特性|説明|  
 |--------------------|-----------------|  
@@ -41,14 +46,14 @@ caps.handback.revision: 12
 |**既定値**|[なし] :|  
 |**個数**|省略可。 **TuningOptions** 要素に 1 回だけ使用できます。|  
   
-## 要素の関係  
+## <a name="element-relationships"></a>要素の関係  
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[TuningOptions 要素 &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**親要素**|[TuningOptions 要素 & #40";"DTA"&"#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**子要素**|なし|  
   
-## 解説  
+## <a name="remarks"></a>解説  
  複数のデータベースをチューニングする場合は、すべてのデータベースの推奨設定が容量計算の対象になります。 データベース エンジン チューニング アドバイザーは、既定で以下の記憶領域サイズのうちの小さい方を使用します。  
   
 -   現在の生データのサイズの 3 倍 (テーブルのヒープとクラスター化インデックスの合計サイズも含まれる)  
@@ -59,12 +64,12 @@ caps.handback.revision: 12
   
  **StorageBoundInMB** 要素に指定した値が実際のディスク容量のサイズを超えている場合は、データベース エンジン チューニング アドバイザーからエラーが返されますが、チューニング自体は続行されます。 チューニングの完了後に、推奨設定を実装することにした場合はディスク容量を追加できます。  
   
-## 例  
+## <a name="example"></a>例  
   
-## 説明  
+## <a name="description"></a>説明  
  次のコード例では、チューニングの推奨設定で使用できる最大ディスク領域として 1500 MB の制限を設定する方法を示します。  
   
-## コード  
+## <a name="code"></a>コード  
   
 ```  
 <DTAInput>  
@@ -76,7 +81,7 @@ caps.handback.revision: 12
 </DTAInput>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

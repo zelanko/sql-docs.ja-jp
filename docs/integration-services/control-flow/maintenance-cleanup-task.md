@@ -1,29 +1,34 @@
 ---
-title: "メンテナンス クリーンアップ タスク | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.maintenancecleanuptask.f1"
-helpviewer_keywords: 
-  - "ファイルの削除"
-  - "ファイルの消去"
-  - "メンテナンス クリーンアップ タスク"
+title: "メンテナンス クリーンアップ タスク |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.maintenancecleanuptask.f1
+helpviewer_keywords:
+- deleting files
+- removing files
+- Maintenance Cleanup task
 ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 19ea8533605a0507db4ba6ac566c585d3746cc37
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# メンテナンス クリーンアップ タスク
-  メンテナンス クリーンアップ タスクでは、データベース バックアップ ファイルや、メンテナンス プランによって作成されたレポートなど、メンテナンス プランに関連するファイルを削除します。 詳細については、「[メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)」および「[SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)」を参照してください。  
+# <a name="maintenance-cleanup-task"></a>メンテナンス クリーンアップ タスク
+  メンテナンス クリーンアップ タスクでは、データベース バックアップ ファイルや、メンテナンス プランによって作成されたレポートなど、メンテナンス プランに関連するファイルを削除します。 詳細については、「 [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md) 」および「 [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)」を参照してください。  
   
  パッケージは、メンテナンス クリーンアップ タスクを使用して、指定したサーバー上のバックアップ ファイルやメンテナンス プランのレポートを削除することができます。 メンテナンス クリーンアップ タスクには、特定のファイルを削除したり、1 つのフォルダー内のファイルのグループを削除するオプションがあります。 必要に応じて、削除するファイルの拡張子を指定することもできます。  
   
@@ -31,19 +36,19 @@ caps.handback.revision: 25
   
  不要になった古いファイルは削除するのが普通です。メンテナンス クリーンアップ タスクは、指定した期限に達したファイルを削除するように構成できます。 たとえば、4 週間を経過したファイルを削除するようにタスクを構成できます。 削除するファイルの期限は、日、週、月、または年を使用して指定できます。 削除するファイルの最小経過期間を指定しないと、指定した種類のファイルがすべて削除されます。  
   
- 以前のバージョンのメンテナンス クリーンアップ タスクとは対照的に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンのタスクでは、指定したディレクトリのサブディレクトリにあるファイルは自動的には削除されません。 この制約により、メンテナンス クリーンアップ タスクの機能を悪用して故意にファイルを削除するような外部からの攻撃を防ぐことができます。 直下のサブフォルダーを削除するには、**[メンテナンス クリーンアップ タスク]** ダイアログ ボックスの **[直下のサブフォルダーを含める]** オプションをオンにして、明示的に指定する必要があります。  
+ 以前のバージョンのメンテナンス クリーンアップ タスクとは対照的に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンのタスクでは、指定したディレクトリのサブディレクトリにあるファイルは自動的には削除されません。 この制約により、メンテナンス クリーンアップ タスクの機能を悪用して故意にファイルを削除するような外部からの攻撃を防ぐことができます。 直下のサブフォルダーを削除するには、 **[メンテナンス クリーンアップ タスク]** ダイアログ ボックスの **[直下のサブフォルダーを含める]** オプションをオンにして、明示的に指定する必要があります。  
   
-## メンテナンス クリーンアップ タスクの構成  
+## <a name="configuration-of-the-maintenance-cleanup-task"></a>メンテナンス クリーンアップ タスクの構成  
  プロパティは、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから設定できます。 このタスクは、 **デザイナーの** [ツールボックス] **の** [メンテナンス プランのタスク] [!INCLUDE[ssIS](../../includes/ssis-md.md)] に表示されます。  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
--   [[メンテナンス クリーンアップ タスク] (メンテナンス プラン)](../Topic/Maintenance%20Cleanup%20Task%20\(Maintenance%20Plan\).md)  
+-   [[メンテナンス クリーンアップ タスク] (メンテナンス プラン)](../../relational-databases/maintenance-plans/maintenance-cleanup-task-maintenance-plan.md)  
   
-## 関連タスク  
- これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「[タスクまたはコンテナーのプロパティを設定する](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)」を参照してください。  
+## <a name="related-tasks"></a>関連タスク  
+ これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「 [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
   

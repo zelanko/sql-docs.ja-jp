@@ -1,26 +1,31 @@
 ---
-title: "チェックポイントを使用してパッケージを再開する | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "チェックポイント [Integration Services]"
-  - "パッケージの再開"
-  - "パッケージの開始"
+title: "チェックポイントを使用してパッケージを再開 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- checkpoints [Integration Services]
+- restarting packages
+- starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 caps.latest.revision: 54
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: 5207ffe29852aa5ed10144a3184917704682c49e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# チェックポイントを使用してパッケージを再開する
+# <a name="restart-packages-by-using-checkpoints"></a>チェックポイントを使用してパッケージを再開する
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、失敗したパッケージ全体を再実行する代わりに、失敗した時点から再開することができます。 パッケージがチェックポイントを使用するように設定されている場合、パッケージの実行に関する情報がチェックポイント ファイルに書き込まれます。 失敗したパッケージを再実行する場合、チェックポイント ファイルを使用して、失敗した時点からパッケージを再開します。 パッケージの実行が成功するとチェックポイント ファイルは削除され、次にパッケージが実行されるときに再度作成されます。  
   
  パッケージでチェックポイントを使用すると、次の利点があります。  
@@ -31,9 +36,9 @@ caps.handback.revision: 54
   
 -   値の集計の繰り返しを防止します。 たとえば、平均や合計など多くの集計値の計算を集計ごとに別々のデータ フロー タスクを使用して実行するパッケージで 1 つの集計値の計算が失敗した場合、パッケージを再開して、その集計のみを再実行することができます。  
   
- パッケージがチェックポイントを使用するように設定されている場合、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] はチェックポイント ファイルから再開ポイントを取得します。 失敗したコンテナーの種類や、トランザクションなどの実装機能によって、チェックポイント ファイルに記録される再開ポイントは影響を受けます。 変数の現在の値も、チェックポイント ファイルにキャプチャされます。 ただし、**Object** データ型を持つ変数の値は、チェックポイント ファイルに保存されません。  
+ パッケージがチェックポイントを使用するように設定されている場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] はチェックポイント ファイルから再開ポイントを取得します。 失敗したコンテナーの種類や、トランザクションなどの実装機能によって、チェックポイント ファイルに記録される再開ポイントは影響を受けます。 変数の現在の値も、チェックポイント ファイルにキャプチャされます。 ただし、 **Object** データ型を持つ変数の値は、チェックポイント ファイルに保存されません。  
   
-## 再開ポイントの定義  
+## <a name="defining-restart-points"></a>再開ポイントの定義  
  単一のタスクがカプセル化されているタスク ホスト コンテナーが、再開可能な最小のアトミック作業単位です。 Foreach ループ コンテナーおよびトランザクション化されたコンテナーも、アトミックな作業単位です。  
   
  トランザクション化されたコンテナーの実行中にパッケージが停止した場合、トランザクションが終了し、コンテナーによって実行された作業がすべてロールバックされます。 パッケージが再開されると、失敗したコンテナーが再実行されます。 トランザクション化されたコンテナーのいずれかの子コンテナーが完了しても、チェックポイント ファイルには記録されません。 このため、パッケージが再開されると、トランザクション化されたコンテナーと子コンテナーが再実行されます。  
@@ -41,13 +46,13 @@ caps.handback.revision: 54
 > [!NOTE]  
 >  同じパッケージでチェックポイントとトランザクションを使用すると、予期しない結果が生じる可能性があります。 たとえば、パッケージが失敗してチェックポイントから再開した場合、既に正常にコミットされているトランザクションがパッケージで繰り返し実行される可能性があります。  
   
- チェックポイント データは、For ループ コンテナーおよび Foreach ループ コンテナーには保存されません。 パッケージが再開されると、For ループ コンテナーおよび Foreach ループ コンテナーと、子コンテナーが再実行されます。 ループ内の子コンテナーの実行が成功してもチェックポイント ファイルには記録されないため、子コンテナーは再実行されます。 詳細情報および回避策については、「[SSIS チェックポイントが For ループ コンテナーまたは Foreach ループ コンテナーの項目に格納されない](http://go.microsoft.com/fwlink/?LinkId=241633)」を参照してください。  
+ チェックポイント データは、For ループ コンテナーおよび Foreach ループ コンテナーには保存されません。 パッケージが再開されると、For ループ コンテナーおよび Foreach ループ コンテナーと、子コンテナーが再実行されます。 ループ内の子コンテナーの実行が成功してもチェックポイント ファイルには記録されないため、子コンテナーは再実行されます。 詳細情報および回避策については、「 [SSIS チェックポイントが For ループ コンテナーまたは Foreach ループ コンテナーの項目に格納されない](http://go.microsoft.com/fwlink/?LinkId=241633)」を参照してください。  
   
  パッケージの再開時にはパッケージの構成が再読み込みされず、チェックポイント ファイルに書き込まれた構成情報が代わりに使用されます。 これによって、確実に、パッケージが失敗した時点と同じ構成を使用してパッケージが再実行されます。  
   
  パッケージは、制御フロー レベルでのみ再開できます。 データ フローの途中からパッケージを再開することはできません。 データ フロー全体の再実行を防止するには、パッケージを複数のデータ フローで設計して、各データ フローで別々のデータ フロー タスクを使用するようにします。 これによりパッケージを再開すると、1 つのデータ フロー タスクだけを再実行できます。  
   
-## パッケージを再開する設定  
+## <a name="configuring-a-package-to-restart"></a>パッケージを再開する設定  
  チェックポイント ファイルには、完了したすべてのコンテナーの実行結果、システム変数およびユーザー定義変数の現在の値、およびパッケージの構成情報が記録されています。 また、パッケージ固有の識別子も記録されています。 パッケージを正常に再開するには、チェックポイント ファイルに記録されたパッケージの識別子とパッケージが一致しなければなりません。一致しない場合、再開は失敗します。 これにより、パッケージの別のバージョンで作成されたチェックポイント ファイルの使用を防止します。 パッケージの再開後に実行が成功すると、チェックポイント ファイルは削除されます。  
   
  次の表に、チェックポイントの実装時に設定するパッケージのプロパティの一覧を示します。  
@@ -62,7 +67,7 @@ caps.handback.revision: 54
   
  ForceExecutionResult プロパティを使用して、パッケージのチェックポイントの使用をテストできます。 タスクまたはコンテナーの ForceExecutionResult を Failure に設定すると、実行時の障害を擬似的に実現できます。 パッケージを再実行すると、失敗したタスクとコンテナーが再実行されます。  
   
-### チェックポイントの使用法  
+### <a name="checkpoint-usage"></a>チェックポイントの使用法  
  CheckpointUsage プロパティは次の値に設定できます。  
   
 |値|Description|  
@@ -72,22 +77,46 @@ caps.handback.revision: 54
 |**IfExists**|チェックポイント ファイルが存在する場合、チェックポイント ファイルを使用することを指定します。 チェックポイント ファイルが存在する場合、パッケージは前の実行で失敗した時点から再開されます。存在しない場合、パッケージのワークフローの最初から実行されます。|  
   
 > [!NOTE]  
->  dtexec の **/CheckPointing on** オプションを使用すると、パッケージの **SaveCheckpoints** プロパティを **True** に設定した場合、および **CheckpointUsage** プロパティを Always に設定した場合と同等の効果が得られます。 詳細については、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」を参照してください。  
+>  dtexec の **/CheckPointing on** オプションを使用すると、パッケージの **SaveCheckpoints** プロパティを **True**に設定した場合、および **CheckpointUsage** プロパティを Always に設定した場合と同等の効果が得られます。 詳細については、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」を参照してください。  
   
-## チェックポイント ファイルのセキュリティ保護  
- パッケージ レベルの保護にはチェックポイント ファイルの保護が含まれないため、チェックポイント ファイルは個別にセキュリティ保護する必要があります。 チェックポイントのデータはファイル システムにしか格納できないので、オペレーティング システムのアクセス制御リスト (ACL) を使用して、ファイルの格納先またはフォルダーのセキュリティを保護する必要があります。 チェックポイント ファイルには、現在の変数値などパッケージの状態に関する情報が含まれているため、セキュリティで保護することが重要です。 たとえば変数には、電話番号などの個人データを含む多数の行で構成されるレコードセットが格納されている場合があります。 詳細については、「[パッケージで使用されるファイルへのアクセス](../../integration-services/security/access-to-files-used-by-packages.md)」を参照してください。  
+## <a name="securing-checkpoint-files"></a>チェックポイント ファイルのセキュリティ保護  
+ パッケージ レベルの保護にはチェックポイント ファイルの保護が含まれないため、チェックポイント ファイルは個別にセキュリティ保護する必要があります。 チェックポイントのデータはファイル システムにしか格納できないので、オペレーティング システムのアクセス制御リスト (ACL) を使用して、ファイルの格納先またはフォルダーのセキュリティを保護する必要があります。 チェックポイント ファイルには、現在の変数値などパッケージの状態に関する情報が含まれているため、セキュリティで保護することが重要です。 たとえば変数には、電話番号などの個人データを含む多数の行で構成されるレコードセットが格納されている場合があります。 詳細については、「 [パッケージで使用されるファイルへのアクセス](../../integration-services/security/security-overview-integration-services.md#files)」を参照してください。  
+
+## <a name="configure-checkpoints-for-restarting-a-failed-package"></a>失敗したパッケージを再開するためのチェックポイントを構成する
+  パッケージ全体を再実行するのではなく、障害が発生した時点からパッケージを再開するように [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを構成するには、チェックポイントに適用するプロパティを設定します。  
   
-### チェックポイント プロパティを設定するには  
+### <a name="to-configure-a-package-to-restart"></a>パッケージを再開するように構成するには  
   
--   [失敗したパッケージを再開するためのチェックポイントを構成する](../../integration-services/packages/configure-checkpoints-for-restarting-a-failed-package.md)  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、構成するパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
-## 外部リソース  
+2.  **ソリューション エクスプローラー**で、パッケージをダブルクリックして開きます。  
   
--   social.technet.microsoft.com の技術資料「[フェールオーバーまたはエラー後の SSIS パッケージの自動再起動](http://go.microsoft.com/fwlink/?LinkId=200407)」  
+3.  **[制御フロー]** タブをクリックします。  
   
--   support.microsoft.com のサポート技術情報の記事「[SSIS チェックポイントが For ループ コンテナーまたは Foreach ループ コンテナーの項目に格納されない](http://go.microsoft.com/fwlink/?LinkId=241633)」  
+4.  制御フローのデザイン画面の背景で任意の場所を右クリックし、 **[プロパティ]**をクリックします。  
   
-## 参照  
- [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
+5.  SaveCheckpoints プロパティを **True**に設定します。  
   
+6.  CheckpointFileName プロパティにチェックポイント ファイルの名前を入力します。  
   
+7.  CheckpointUsage プロパティを、次の 2 つの値のどちらかに設定します。  
+  
+    -   チェックポイントから常にパッケージを再開するには、 **Always** を選択します。  
+  
+        > [!IMPORTANT]  
+        >  チェックポイント ファイルが使用できない場合はエラーが発生します。  
+  
+    -   チェックポイント ファイルが使用できる場合のみパッケージを再開するには、 **IfExists** を選択します。  
+  
+8.  パッケージが再開できる地点のタスクおよびコンテナーを構成します。  
+  
+    -   タスクまたはコンテナーを右クリックし、 **[プロパティ]**をクリックします。  
+  
+    -   選択した各タスクとコンテナーで、FailPackageOnFailure プロパティを **True** に設定します。  
+    
+## <a name="external-resources"></a>外部リソース  
+  
+-   social.technet.microsoft.com の技術資料「 [フェールオーバーまたはエラー後の SSIS パッケージの自動再起動](http://go.microsoft.com/fwlink/?LinkId=200407)」  
+  
+-   support.microsoft.com のサポート技術情報の記事「 [SSIS チェックポイントが For ループ コンテナーまたは Foreach ループ コンテナーの項目に格納されない](http://go.microsoft.com/fwlink/?LinkId=241633)」  
+

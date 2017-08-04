@@ -1,40 +1,45 @@
 ---
-title: "[SQL Server オブジェクトの転送タスク エディター] ([オブジェクト] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.transfersqlserverobjects.objects.f1"
-helpviewer_keywords: 
-  - "SQL Server オブジェクトの転送タスク エディター"
+title: "転送 SQL Server オブジェクト タスク エディター (オブジェクト ページ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.transfersqlserverobjects.objects.f1
+helpviewer_keywords:
+- Transfer SQL Server Objects Task Editor
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 67557562dd3f2efbe3c40673a835dd557f617604
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# [SQL Server オブジェクトの転送タスク エディター] ([オブジェクト] ページ)
+# <a name="transfer-sql-server-objects-task-editor-objects-page"></a>[SQL Server オブジェクトの転送タスク エディター] ([オブジェクト] ページ)
   **[SQL Server オブジェクトの転送タスク エディター]** ダイアログ ボックスの **[オブジェクト]** ページを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス間で 1 つまたは複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトをコピーするためのプロパティを指定できます。 コピーできる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトには、テーブル、ビュー、ストアド プロシージャ、およびユーザー定義関数などがあります。 このタスクの詳細については、「 [Transfer SQL Server Objects Task](../../integration-services/control-flow/transfer-sql-server-objects-task.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトの転送タスクを作成するユーザーは、転送元サーバー オブジェクトをコピー用に選択するために必要な権限と、オブジェクトの転送先の転送先サーバー データベースにアクセスするために必要な権限を持っている必要があります。  
   
-## 静的オプション  
+## <a name="static-options"></a>静的オプション  
  **SourceConnection**  
- SMO 接続マネージャーを一覧から選択するか、**[\<新しい接続>]** をクリックしてコピー元のサーバーへの新しい接続を作成します。  
+ 一覧で、SMO 接続マネージャーを選択するかクリックして**\<新しい接続 >**移行元サーバーに新しい接続を作成します。  
   
  **[SourceDatabase]**  
  オブジェクトのコピー元の転送元サーバー上のデータベースを選択します。  
   
  **DestinationConnection**  
- SMO 接続マネージャーを一覧から選択するか、**[\<新しい接続>]** をクリックしてコピー先のサーバーへの新しい接続を作成します。  
+ 一覧で、SMO 接続マネージャーを選択するかクリックして**\<新しい接続 >**移行先サーバーに新しい接続を作成します。  
   
  **[DestinationDatabase]**  
  オブジェクトのコピー先の転送先サーバー上のデータベースを選択します。  
@@ -57,13 +62,13 @@ caps.handback.revision: 30
 |**追加**|転送元サーバーからコピーされたデータは、転送先サーバー上の既存のデータに追加されます。|  
   
 > [!NOTE]  
->  **[ExistingData]** オプションは、 **[CopyData]** が **[True]** に設定されている場合にのみ使用できます。  
+>  **[ExistingData]** オプションは、 **[CopyData]** が **[True]**に設定されている場合にのみ使用できます。  
   
  **[CopySchema]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトの転送タスクによる処理中にスキーマをコピーするかどうかを選択します。  
   
 > [!NOTE]  
->  **[CopySchema]** は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でのみ使用できます。  
+>  **[CopySchema]** は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でのみ使用できます。  
   
  **[UseCollation]**  
  転送元サーバー上で指定されている照合順序をオブジェクトの転送に含めるかどうかを選択します。  
@@ -78,7 +83,7 @@ caps.handback.revision: 30
  **[ObjectsToCopy]** を展開して、転送元データベースから転送先データベースにコピーするオブジェクトを指定します。  
   
 > [!NOTE]  
->  **[ObjectsToCopy]** は、**[CopyAllObjects]** が **[False]** に設定されている場合にのみ使用できます。  
+>  **[ObjectsToCopy]** は、 **[CopyAllObjects]** が **[False]**に設定されている場合にのみ使用できます。  
   
  次の種類のオブジェクトをコピーするオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でのみサポートされます。  
   
@@ -126,9 +131,9 @@ caps.handback.revision: 30
  **[GenerateScriptsInUnicode]**  
  転送スクリプトを Unicode 形式で生成するかどうかを指定します。  
   
-## 動的オプション  
+## <a name="dynamic-options"></a>動的オプション  
   
-### [CopyAllObjects] = [False]  
+### <a name="copyallobjects--false"></a>[CopyAllObjects] = [False]  
  **[CopyAllTables]**  
  指定した転送元データベース内のすべてのテーブルをコピーするか、選択したテーブルだけをコピーするかを選択します。  
   
@@ -207,11 +212,11 @@ caps.handback.revision: 30
  **[XmlSchemaCollectionsList]**  
  **[XML スキーマ コレクションの選択]** ダイアログ ボックスが開きます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
- [[SQL Server オブジェクトの転送タスク エディター] &#40;[全般] ページ&#41;](../Topic/Transfer%20SQL%20Server%20Objects%20Task%20Editor%20\(General%20Page\).md)   
- [[式] ページ](../Topic/Expressions%20Page.md)   
+ [SQL Server オブジェクトのタスク エディター &#40; を転送します。[全般] ページ &#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
+ [「 式」 ページ](../../integration-services/expressions/expressions-page.md)   
  [一括インポートまたは一括エクスポートのデータ形式 &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [SQL Server インストールにおけるセキュリティの考慮事項](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   

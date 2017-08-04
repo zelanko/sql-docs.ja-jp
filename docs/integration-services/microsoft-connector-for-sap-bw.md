@@ -1,22 +1,27 @@
 ---
-title: "Microsoft Connector for SAP BW | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Microsoft Connector for SAP BW |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d9edd63d224f5d4053133cba28ad31a8fba93522
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# Microsoft Connector for SAP BW
+# <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW は、SAP NetWeaver BW Version 7 システムからデータを抽出し、このシステムにデータを読み込むための 3 つのコンポーネントのセットで構成されます。  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW for SQL Server 2016 は、SQL Server 2016 の Feature Pack のコンポーネントです。 Connector for SAP BW およびそのドキュメントをインストールするには、 [SQL Server 2016 Feature Pack Web ページ](http://go.microsoft.com/fwlink/?LinkId=746297)からインストーラーをダウンロードして実行します。  
@@ -27,7 +32,7 @@ caps.handback.revision: 12
 > [!IMPORTANT]  
 >  SAP Netweaver BW からデータを抽出するには、追加の SAP のライセンスが必要です。 これらの要件を確認するには、SAP にお問い合わせください。  
   
-## コンポーネント  
+## <a name="components"></a>コンポーネント  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW には次のコンポーネントがあります。  
   
 -   **SAP BW 変換元**- SAP BW 変換元は、SAP Netweaver BW Version 7 システムからデータを抽出するためのデータ フローの変換元コンポーネントです。  
@@ -38,16 +43,16 @@ caps.handback.revision: 12
   
  SAP BW 接続マネージャー、変換元、変換先の構成および使用方法の詳細については、ホワイト ペーパー「 [SAP BI 7.0 を使用した SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=301897)」を参照してください。 このホワイト ペーパーには、SAP BW で必要なオブジェクトの構成方法についても説明されています。  
   
-## ドキュメント  
+## <a name="documentation"></a>ドキュメント  
  この [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW のヘルプ ファイルには、次のトピックとセクションが含まれています。  
   
  [Microsoft Connector for SAP BW のインストール](../integration-services/installing-the-microsoft-connector-for-sap-bw.md)  
- [!INCLUDE[msCoName](../includes/msconame-md.md)]Connector for SAP BW のインストール要件について説明します。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW のインストール要件について説明します。  
   
  [Microsoft Connector for SAP BW のコンポーネント](../integration-services/microsoft-connector-for-sap-bw-components.md)  
- [!INCLUDE[msCoName](../includes/msconame-md.md)]Connector for SAP BW の各コンポーネントについて説明します。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW の各コンポーネントについて説明します。  
   
  [Microsoft Connector for SAP BW の F1 ヘルプ](../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
- [!INCLUDE[msCoName](../includes/msconame-md.md)]Connector for SAP BW の各コンポーネントのユーザー インターフェイスについて説明します。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW の各コンポーネントのユーザー インターフェイスについて説明します。  
   
   

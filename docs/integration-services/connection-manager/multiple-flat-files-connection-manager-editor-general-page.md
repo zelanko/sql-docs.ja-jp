@@ -1,31 +1,36 @@
 ---
-title: "[複数フラット ファイル接続マネージャー エディター] ([全般] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.multifile.general.f1"
-helpviewer_keywords: 
-  - "複数フラット ファイル接続マネージャー エディター"
+title: "[複数フラット ファイル接続マネージャー エディター] ([全般] ページ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.multifile.general.f1
+helpviewer_keywords:
+- Multiple Flat Files Connection Manager Editor
 ms.assetid: 00129d43-2772-413b-bdf8-ac5de81cf4a5
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 84e8e23d349266c6c1195a10410085654548c64f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# [複数フラット ファイル接続マネージャー エディター] ([全般] ページ)
+# <a name="multiple-flat-files-connection-manager-editor-general-page"></a>[複数フラット ファイル接続マネージャー エディター] ([全般] ページ)
   **[複数フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、同じデータ形式を持つファイルのグループを選択したり、そのデータ形式を指定したりできます。 複数フラット ファイル接続は、パッケージが同じ形式のテキスト ファイルのグループに接続できるようにします。  
   
  複数フラット ファイル接続マネージャーの詳細については、「 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[接続マネージャー名]**  
  ワークフローにおける複数フラット ファイル接続の一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
@@ -79,10 +84,10 @@ caps.handback.revision: 31
  **[先頭データ行を列名として使用する]**  
  先頭データ行を列名として使用するか、ここに列名を指定するかを示します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)   
- [[複数フラット ファイル接続マネージャー エディター] ([列] ページ)](../Topic/Multiple%20Flat%20Files%20Connection%20Manager%20Editor%20\(Columns%20Page\).md)   
- [[複数フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)](../Topic/Multiple%20Flat%20Files%20Connection%20Manager%20Editor%20\(Advanced%20Page\).md)   
- [[複数フラット ファイル接続マネージャー エディター] ([プレビュー] ページ)](../Topic/Multiple%20Flat%20Files%20Connection%20Manager%20Editor%20\(Preview%20Page\).md)  
+ [複数のフラット ファイル接続マネージャー エディター & #40 です。[列] ページ &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)   
+ [複数のフラット ファイル接続マネージャー エディター & #40 です。[詳細] ページ &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)   
+ [複数のフラット ファイル接続マネージャー エディター & #40 です。[プレビュー] ページ &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

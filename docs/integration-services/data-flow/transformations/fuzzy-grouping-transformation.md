@@ -1,43 +1,48 @@
 ---
-title: "あいまいグループ化変換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fuzzygroupingtrans.f1"
-helpviewer_keywords: 
-  - "データのクリーニング"
-  - "データの比較"
-  - "トークン区切り記号 [Integration Services]"
-  - "一時インデックス [Integration Services]"
-  - "あいまいグループ化変換"
-  - "一時テーブル [Integration Services]"
-  - "データのグループ化"
-  - "データの標準化 [Integration Services]"
-  - "列 [Integration Services], 標準化"
-  - "類似性しきい値 [Integration Services]"
-  - "データのクリーニング [Integration Services]"
-  - "重複データ [Integration Services]"
+title: "あいまいグループ化変換 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fuzzygroupingtrans.f1
+helpviewer_keywords:
+- cleaning data
+- comparing data
+- token delimiters [Integration Services]
+- temporary indexes [Integration Services]
+- Fuzzy Grouping transformation
+- temporary tables [Integration Services]
+- grouping data
+- standardizing data [Integration Services]
+- columns [Integration Services], standardizing
+- similarity thresholds [Integration Services]
+- data cleaning [Integration Services]
+- duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 caps.latest.revision: 58
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 009cdda72a100f887adb81e6f526b9a3ebe7651f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# あいまいグループ化変換
+# <a name="fuzzy-grouping-transformation"></a>あいまいグループ化変換
   あいまいグループ化変換は、重複部分と考えられるデータの行を識別し、データを標準化するときに使用するデータの正規行を選択することで、データ クリーニング タスクを実行します。  
   
 > [!NOTE]  
->  パフォーマンスやメモリの制限など、あいまいグループ化変換に関する詳細については、ホワイト ペーパー「[Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)」(SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化) をご覧ください。  
+>  パフォーマンスやメモリの制限など、あいまいグループ化変換に関する詳細については、ホワイト ペーパー「 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)」(SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化) をご覧ください。  
   
- あいまいグループ化変換では、変換アルゴリズムの処理に必要な一時 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルを作成するために、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続が必要になります。 接続時には、データベース内にテーブルを作成する権限を持つユーザーの解決が必要です。  
+ あいまいグループ化変換では、変換アルゴリズムの処理に必要な一時 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルを作成するために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続が必要になります。 接続時には、データベース内にテーブルを作成する権限を持つユーザーの解決が必要です。  
   
  変換を構成する場合は、重複部分を識別するときに使用する入力列を選択し、一致の種類としてあいまい一致か完全一致かを列ごとに選択する必要があります。 完全一致の場合は、その列に同じ値を持つ行のみがグループ化されます。 完全一致は、DT_TEXT、DT_NTEXT、および DT_IMAGE を除く任意の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型の列に適用できます。 あいまい一致の場合は、ほぼ同じ値を持つ行がグループ化されます。 データのあいまい一致は、ユーザーが指定する類似性スコアに基づいて判定されます。 あいまい一致に使用できるのは、DT_WSTR データ型および DT_STR データ型の列のみです。 詳細については、「 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 58
   
 -   **_key_in**。各行を一意に識別する列です。  
   
--   **_key_out**。重複行のグループを識別する列です。 **_key_out** 列は、正規データ行の **_key_in** 列の値を含みます。 **_key_out** の値が同じ行は、同じグループに属します。 グループの **_key_out** 値は、正規データ行の **_key_in** の値に対応します。  
+-   **_key_out**。重複行のグループを識別する列です。 **_key_out** 列は、正規データ行の **_key_in** 列の値を含みます。 **_key_out** の値が同じ行は、同じグループに属します。 グループの **_key_out**値は、正規データ行の **_key_in** の値に対応します。  
   
 -   **_score**。入力行と正規行との類似性を示す、0 ～ 1 の値です。  
   
@@ -67,41 +72,41 @@ caps.handback.revision: 58
   
  この変換は 1 つの入力と 1 つの出力をとります。 エラー出力はサポートされていません。  
   
-## 行の比較  
- あいまいグループ化変換を構成するときに、変換入力内の行の比較に使用する比較アルゴリズムを指定できます。 Exhaustive プロパティを **true** に設定した場合は、入力内のすべての行が入力内の他のすべての行と比較されます。 この比較アルゴリズムを使用すると、より正確な結果が生成されますが、入力の行の数が少ない場合を除けば、処理により多くの時間がかかるようになります。 パフォーマンス上の問題を回避するため、パッケージの開発中は、Exhaustive プロパティを **True** のみに設定することをお勧めします。  
+## <a name="row-comparison"></a>行の比較  
+ あいまいグループ化変換を構成するときに、変換入力内の行の比較に使用する比較アルゴリズムを指定できます。 Exhaustive プロパティを **true**に設定した場合は、入力内のすべての行が入力内の他のすべての行と比較されます。 この比較アルゴリズムを使用すると、より正確な結果が生成されますが、入力の行の数が少ない場合を除けば、処理により多くの時間がかかるようになります。 パフォーマンス上の問題を回避するため、パッケージの開発中は、Exhaustive プロパティを **True** のみに設定することをお勧めします。  
   
-## 一時テーブルおよびインデックス  
+## <a name="temporary-tables-and-indexes"></a>一時テーブルおよびインデックス  
  実行時、あいまいグループ化変換は、テーブルやインデックスなどの一時オブジェクトを接続先の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに作成します。この一時オブジェクトのサイズは、かなり大きくなる可能性があります。 テーブルおよびインデックスのサイズは、変換入力内の行の数およびあいまいグループ化変換によって作成されたトークンの数に比例します。  
   
- また、変換は一時テーブルに対してクエリを実行します。 このため、特に稼働サーバーのディスク容量が少ない場合は、あいまいグループ化変換を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の非稼働インスタンスに接続することを検討してください。  
+ また、変換は一時テーブルに対してクエリを実行します。 このため、特に稼働サーバーのディスク容量が少ない場合は、あいまいグループ化変換を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の非稼働インスタンスに接続することを検討してください。  
   
  この変換で使用するテーブルおよびインデックスがローカル コンピューター上にあると、変換のパフォーマンスが向上する可能性があります。  
   
-## あいまいグループ化変換の構成  
+## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>あいまいグループ化変換の構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
  **[あいまいグループ化変換エディター]** ダイアログ ボックスを使用して設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[あいまいグループ化変換エディター] &#40;[接続マネージャー] タブ&#41;](../Topic/Fuzzy%20Grouping%20Transformation%20Editor%20\(Connection%20Manager%20Tab\).md)  
+-   [[あいまいグループ化変換エディター] &#40;[接続マネージャー] タブ&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [[あいまいグループ化変換エディター] &#40;[列] タブ&#41;](../Topic/Fuzzy%20Grouping%20Transformation%20Editor%20\(Columns%20Tab\).md)  
+-   [[あいまいグループ化変換エディター] &#40;[列] タブ&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [[あいまいグループ化変換エディター] &#40;[詳細設定] タブ&#41;](../Topic/Fuzzy%20Grouping%20Transformation%20Editor%20\(Advanced%20Tab\).md)  
+-   [[あいまいグループ化変換エディター] &#40;[詳細設定] タブ&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](../Topic/Common%20Properties.md)  
+-   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## 関連タスク  
+## <a name="related-tasks"></a>関連タスク  
  このタスクのプロパティの設定方法の詳細については、次のトピックのいずれかを参照してください。  
   
 -   [あいまいグループ化変換を使用して類似のデータ行を識別する](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
 -   [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [あいまい参照変換](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

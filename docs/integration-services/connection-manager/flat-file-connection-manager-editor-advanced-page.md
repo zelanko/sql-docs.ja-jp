@@ -1,33 +1,38 @@
 ---
-title: "[フラット ファイル接続マネージャー エディター] ([詳細設定] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.ffileconnection.columnproperties.f1"
-helpviewer_keywords: 
-  - "フラット ファイル接続マネージャー エディター"
+title: "[フラット ファイル接続マネージャー エディター] ([詳細] ページ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ffileconnection.columnproperties.f1
+helpviewer_keywords:
+- Flat File Connection Manager Editor
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
 caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6a7fee65a2bf7c387ec207f6f516c55b12b635b0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# [フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)
+# <a name="flat-file-connection-manager-editor-advanced-page"></a>[フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)
   **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[詳細設定]** ページでは、Integration Services で、フラット ファイルからデータをどのように読み取るか、フラット ファイルにデータをどのように書き込むかを指定するプロパティを設定できます。 フラット ファイル内の列名を変更し、ファイル内の各列にデータ型および区切り記号を指定するプロパティを設定できます。  
   
- 既定では、文字列の列の長さは 50 文字です。 これらの列の長さを変更して、データが切り捨てられたり、列の幅が広くなりすぎないようにできます。 また、変換先列と互換性を持つように他のメタデータも更新できます。 たとえば、整数データのみを含む列のデータ型を、DT_I2 などの数値データ型に変更するなどの操作を行えます。 このような変更は手動で行えます。また、**[型の選択]** ボタンをクリックし、**[列の型の推測]** ダイアログ ボックスを使用して、サンプル データを評価し、自動的に変更することもできます。  
+ 既定では、文字列の列の長さは 50 文字です。 これらの列の長さを変更して、データが切り捨てられたり、列の幅が広くなりすぎないようにできます。 また、変換先列と互換性を持つように他のメタデータも更新できます。 たとえば、整数データのみを含む列のデータ型を、DT_I2 などの数値データ型に変更するなどの操作を行えます。 このような変更は手動で行えます。また、 **[型の選択]** ボタンをクリックし、 **[列の型の推測]** ダイアログ ボックスを使用して、サンプル データを評価し、自動的に変更することもできます。  
   
  フラット ファイル接続マネージャーの詳細については、「 [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[接続マネージャー名]**  
  ワークフローにおけるフラット ファイル接続マネージャーの一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
@@ -43,14 +48,14 @@ caps.handback.revision: 36
 |**[出力列の幅]**|格納する値をバイト数で指定します。Unicode ファイルの場合、この値は文字数に対応します。 データ フロー タスクでは、この値を使用してフラット ファイル ソースの出力列の幅を設定します。 オブジェクト モデルでは、このプロパティの名前は MaximumWidth です。|  
 |**DataType**|使用できるデータ型を一覧から選択します。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。|  
 |**[テキスト修飾子]**|テキスト データが引用符などのテキスト修飾子文字で囲まれているかどうかを示します。<br /><br /> True: フラット ファイルのテキスト データは修飾されます。 False: フラット ファイルのテキスト データは修飾されません。|  
-|**名前**|わかりやすい列名を指定します。 名前を入力しないと、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって、列 1、列 2 などの形式で自動的に名前が作成されます。|  
+|**名前**|わかりやすい列名を指定します。 名前を入力しないと、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって、列 1、列 2 などの形式で自動的に名前が作成されます。|  
 |**[データ スケール]**|数値データの小数点以下の精度を指定します。 これは小数点以下の桁数を表します。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。|  
 |**[列区切り記号]**|使用できる列区切り記号の一覧から、列区切り記号を選択します。 テキストに出現しないと思われる区切り記号を選択してください。 固定幅列の場合、この値は無視されます。<br /><br /> **{CR}{LF}**。 列は、復帰と改行の組み合わせで区切られます。<br /><br /> **{CR}**。 列は、復帰で区切られます。<br /><br /> **{LF}**。 列は、改行で区切られます。<br /><br /> **セミコロン {;}**。 列は、セミコロンで区切られます。<br /><br /> **コロン {:}**。 列は、コロンで区切られます。<br /><br /> **コンマ {,}**。 列は、コンマで区切られます。<br /><br /> **タブ {t}**。 列は、タブで区切られます。<br /><br /> **縦棒 {&#124;}**。 列は、縦棒で区切られます。|  
 |**[データ精度]**|数値データの精度を指定します。 精度とは、桁数です。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。|  
 |**[入力列の幅]**|格納する値をバイト数で指定します。Unicode ファイルの場合、これは文字数として表示されます。 区切られた列の場合、この値は無視されます。<br /><br /> **注** オブジェクト モデルでは、このプロパティの名前は ColumnWidth です。|  
   
  **新規**  
- **[新規作成]** をクリックして新しい列を追加します。 既定では、 **[新規作成]** ボタンをクリックすると、新しい列がリストの末尾に追加されます。 さらにこのボタンのドロップダウン リストには、次のオプションがあります。  
+ **[新規作成]**をクリックして新しい列を追加します。 既定では、 **[新規作成]** ボタンをクリックすると、新しい列がリストの末尾に追加されます。 さらにこのボタンのドロップダウン リストには、次のオプションがあります。  
   
 |値|Description|  
 |-----------|-----------------|  
@@ -59,15 +64,15 @@ caps.handback.revision: 36
 |**[後に挿入]**|選択した列の後に新しい列を追加します。|  
   
  **Del**  
- 列を選択して **[削除]** をクリックすると、列が削除されます。  
+ 列を選択して **[削除]**をクリックすると、列が削除されます。  
   
  **[型の推測]**  
- **[列の型の推測]** ダイアログ ボックスを使用して、ファイルのサンプル データを評価し、各列のデータ型と長さの推測を取得します。 詳細については、「[[列の型の推測] ダイアログ ボックスの UI リファレンス](../Topic/Suggest%20Column%20Types%20Dialog%20Box%20UI%20Reference.md)」を参照してください。  
+ **[列の型の推測]** ダイアログ ボックスを使用して、ファイルのサンプル データを評価し、各列のデータ型と長さの推測を取得します。 詳細については、「 [[列の型の推測] ダイアログ ボックスの UI リファレンス](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)   
- [[フラット ファイル接続マネージャー エディター] ([全般] ページ)](../Topic/Flat%20File%20Connection%20Manager%20Editor%20\(General%20Page\).md)   
- [[フラット ファイル接続マネージャー エディター] ([列] ページ)](../Topic/Flat%20File%20Connection%20Manager%20Editor%20\(Columns%20Page\).md)   
- [[フラット ファイル接続マネージャー エディター] ([プレビュー] ページ)](../Topic/Flat%20File%20Connection%20Manager%20Editor%20\(Preview%20Page\).md)  
+ [フラット ファイル接続マネージャー エディター & #40 です。[全般] ページ &#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)   
+ [フラット ファイル接続マネージャー エディター & #40 です。[列] ページ &#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)   
+ [[フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)  
   
   

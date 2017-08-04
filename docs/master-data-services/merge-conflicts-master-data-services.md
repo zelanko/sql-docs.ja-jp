@@ -1,33 +1,38 @@
 ---
-title: "競合のマージ (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "競合のマージ (マスター データ サービス) |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cd232ee139207f8ee78b0a5c549c81a26ee1e5e1
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# 競合のマージ (マスター データ サービス)
+# <a name="merge-conflicts-master-data-services"></a>競合のマージ (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でパブリッシュしようとしているデータが他のユーザーによって変更されている場合、パブリッシュ操作は競合エラーで失敗します。 このエラーを解決するには、競合のマージを実行した後で変更を再パブリッシュします。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
   
 -   更新するエンティティのリーフ モデル オブジェクトに対する更新権限が最低限必要です。  
   
-### 競合をマージするには  
+### <a name="to-merge-conflicts"></a>競合をマージするには  
   
 1.  **[エクスプローラー]** ページで、メンバー属性を更新します。  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 5
   
 4.  **[適用]**をクリックした後、さらに変更を加えて、再びパブリッシュすることができます。 または、 **[キャンセル]** をクリックして更新を取り消し、サーバーから最新のバージョンを再び読み込むことができます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [メンバー (マスター データ サービス)](../master-data-services/members-master-data-services.md)  
   
   

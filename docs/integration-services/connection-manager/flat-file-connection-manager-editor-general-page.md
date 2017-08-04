@@ -1,31 +1,36 @@
 ---
-title: "[フラット ファイル接続マネージャー エディター] ([全般] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.ffileconnection.general.f1"
-helpviewer_keywords: 
-  - "フラット ファイル接続マネージャー エディター"
+title: "[フラット ファイル接続マネージャー エディター] ([全般] ページ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ffileconnection.general.f1
+helpviewer_keywords:
+- Flat File Connection Manager Editor
 ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6e94228deef3c278239cc9f24026677a175d3a65
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# [フラット ファイル接続マネージャー エディター] ([全般] ページ)
+# <a name="flat-file-connection-manager-editor-general-page"></a>[フラット ファイル接続マネージャー エディター] ([全般] ページ)
   **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、ファイルおよびデータ形式を選択できます。 フラット ファイル接続により、パッケージをテキスト ファイルに接続できるようになります。  
   
  フラット ファイル接続マネージャーの詳細については、「 [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[接続マネージャー名]**  
  ワークフローにおけるフラット ファイル接続の一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 24
  使用するテキスト修飾子を指定します。 たとえば、テキスト フィールドを引用符で囲むことを指定できます。  
   
 > [!NOTE]  
->  テキスト修飾子を選択した後で、**[なし]** オプションを再度選択することはできません。 テキスト修飾子の選択を解除するには、「**なし**」と入力します。  
+>  テキスト修飾子を選択した後で、 **[なし]** オプションを再度選択することはできません。 テキスト修飾子の選択を解除するには、「 **なし** 」と入力します。  
   
  **[ヘッダー行区切り記号]**  
  ヘッダー行の区切り記号の一覧から選択するか、区切り記号テキストを入力します。  
@@ -82,10 +87,10 @@ caps.handback.revision: 24
  **[先頭データ行を列名として使用する]**  
  先頭データ行を列名として使用するか、ここに列名を指定するかを示します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)   
- [[フラット ファイル接続マネージャー エディター] ([列] ページ)](../Topic/Flat%20File%20Connection%20Manager%20Editor%20\(Columns%20Page\).md)   
- [[フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)](../Topic/Flat%20File%20Connection%20Manager%20Editor%20\(Advanced%20Page\).md)   
- [[フラット ファイル接続マネージャー エディター] ([プレビュー] ページ)](../Topic/Flat%20File%20Connection%20Manager%20Editor%20\(Preview%20Page\).md)  
+ [フラット ファイル接続マネージャー エディター & #40 です。[列] ページ &#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)   
+ [フラット ファイル接続マネージャー エディター & #40 です。[詳細] ページ &#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)   
+ [[フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)  
   
   

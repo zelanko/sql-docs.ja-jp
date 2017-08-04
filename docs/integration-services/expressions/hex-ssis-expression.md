@@ -1,42 +1,47 @@
 ---
-title: "HEX (SSIS 式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "16 進数データ"
-  - "HEX 関数"
+title: "HEX (SSIS 式) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- hexadecimal data
+- HEX function
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f44919fb8992a26ce5adddfabba9f3b1164ee7be
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# HEX (SSIS 式)
+# <a name="hex-ssis-expression"></a>HEX (SSIS 式)
   整数の 16 進値を表す文字列を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 HEX(integer_expression)  
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  *integer_expression*  
  符号付き整数または符号なし整数です。  
   
-## 戻り値の型  
+## <a name="result-types"></a>戻り値の型  
  DT_WSTR  
   
-## 解説  
+## <a name="remarks"></a>解説  
  *integer_expression* が null の場合、HEX は null を返します。  
   
  *integer_expression* 引数は整数に評価される必要があります。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
@@ -55,26 +60,26 @@ HEX(integer_expression)
   
 -   DT_I8 および DT_UI8 データ型は、最大長 16 の文字列を返します。  
   
-## 式の例  
+## <a name="expression-examples"></a>式の例  
  この例では、数値リテラルを使用しています。 この関数は、値 190 を返します。  
   
 ```  
 HEX(400)   
 ```  
   
- この例では、**ReorderPoint** 列を使用します。 列のデータ型は **smallint** です。 **ReorderPoint** が 750 の場合、関数は 2EE を返します。  
+ この例では、 **ReorderPoint** 列を使用します。 列のデータ型は **smallint**です。 **ReorderPoint** が 750 の場合、関数は 2EE を返します。  
   
 ```  
 HEX(ReorderPoint)   
 ```  
   
- この例では、システム変数 **LocaleID** を使用しています。 **LocaleID** が 1033 の場合、関数は 409 を返します。  
+ この例では、システム変数 **LocaleID**を使用しています。 **LocaleID** が 1033 の場合、関数は 409 を返します。  
   
 ```  
 HEX(@LocaleID)  
 ```  
   
-## 参照  
- [関数 &#40;SSIS 式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>参照  
+ [関数と #40 です。SSIS 式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

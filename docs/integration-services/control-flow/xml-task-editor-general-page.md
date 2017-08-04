@@ -1,31 +1,36 @@
 ---
-title: "XML Task Editor (General Page) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.xmltask.general.f1"
-helpviewer_keywords: 
-  - "XML Task Editor"
+title: "XML タスク エディター (全般 ページ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.xmltask.general.f1
+helpviewer_keywords:
+- XML Task Editor
 ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9dc1f49a7e2fcee8b87546585075d016f1f6ace
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# XML Task Editor (General Page)
+# <a name="xml-task-editor-general-page"></a>XML Task Editor (General Page)
   **[XML タスク エディター]** ダイアログ ボックスの **[全般]** ノードを使用すると、操作の種類を指定したり構成したりできます。  
   
- このタスクの詳細については、「[XML タスク](../../integration-services/control-flow/xml-task.md)」および「[XML タスクを使った XML の検証](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)」をご覧ください。 XML ドキュメントとデータの操作の詳細については、MSDN ライブラリの「[.NET Framework における XML の使用](http://go.microsoft.com/fwlink/?LinkId=56214)」を参照してください。  
+ このタスクの詳細については、「 [XML タスク](../../integration-services/control-flow/xml-task.md) 」および「 [XML タスクを使った XML の検証](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)」をご覧ください。 XML ドキュメントとデータの操作の詳細については、MSDN ライブラリの「[.NET Framework における XML の使用](http://go.microsoft.com/fwlink/?LinkId=56214)」を参照してください。  
   
-## 静的オプション  
+## <a name="static-options"></a>静的オプション  
  **[OperationType]**  
  一覧から操作の種類を選択します。 このプロパティのオプションを次の表に示します。  
   
@@ -48,19 +53,19 @@ caps.handback.revision: 43
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
   
  **ソース**  
- **[ソース]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
+ **[ソース]** が **[直接入力]**に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
- **[ソース]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ 場合**ソース**に設定されている**ファイルの接続**をファイル接続マネージャーを選択するかをクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- **[ソース]** が **[変数]** に設定されている場合は、既存の変数を選択するか、**[\<新しい変数...>]** をクリックして新しい変数を作成します。  
+ 場合**ソース**に設定されている**変数**を既存の変数を選択するかをクリックして**\<新しい変数… >**新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../Topic/Add%20Variable.md)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-## [OperationType] の動的オプション  
+## <a name="operationtype-dynamic-options"></a>[OperationType] の動的オプション  
   
-### [OperationType] = [Validate]  
+### <a name="operationtype--validate"></a>[OperationType] = [Validate]  
  Validate 操作用のオプションを指定します。  
   
  **[SaveOperationResult]**  
@@ -69,8 +74,8 @@ caps.handback.revision: 43
  **[OverwriteDestination]**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **転送先**  
- 既存のファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ **変換先**  
+ 既存のファイル接続マネージャーを選択するかクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
@@ -96,9 +101,9 @@ caps.handback.revision: 43
  **[ValidationDetails]**  
  このプロパティの値が true の場合は、詳細なエラー出力を表示します。 詳細については、「 [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)」を参照してください。  
   
-### [ValidationType] の動的オプション  
+### <a name="validationtype-dynamic-options"></a>[ValidationType] の動的オプション  
   
-#### [ValidationType] = [XSD]  
+#### <a name="validationtype--xsd"></a>[ValidationType] = [XSD]  
  **[SecondOperandType]**  
  2 番目の XML ドキュメントのソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
   
@@ -109,17 +114,17 @@ caps.handback.revision: 43
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
   
  **[SecondOperand]**  
- **[SecondOperandType]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
+ **[SecondOperandType]** が **[直接入力]**に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
- **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ 場合**SecondOperandType**に設定されている**ファイルの接続**をファイル接続マネージャーを選択するかをクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- **[XPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ 場合**XPathStringSourceType**に設定されている**変数**を既存の変数を選択するかをクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../Topic/Add%20Variable.md)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-### [OperationType] = [XSLT]  
+### <a name="operationtype--xslt"></a>[OperationType] = [XSLT]  
  XSLT 操作用のオプションを指定します。  
   
  **[SaveOperationResult]**  
@@ -128,14 +133,14 @@ caps.handback.revision: 43
  **[OverwriteDestination]**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **転送先**  
- **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ **変換先**  
+ 場合**DestinationType**に設定されている**ファイルの接続**をファイル接続マネージャーを選択するかをクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- **[DestinationType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ 場合**DestinationType**に設定されている**変数**を既存の変数を選択するかをクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../Topic/Add%20Variable.md)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **[DestinationType]**  
  XML ドキュメントの対象となる種類を選択します。 このプロパティのオプションを次の表に示します。  
@@ -155,17 +160,17 @@ caps.handback.revision: 43
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
   
  **[SecondOperand]**  
- **[SecondOperandType]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
+ **[SecondOperandType]** が **[直接入力]**に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
- **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ 場合**SecondOperandType**に設定されている**ファイルの接続**をファイル接続マネージャーを選択するかをクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- **[XPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ 場合**XPathStringSourceType**に設定されている**変数**を既存の変数を選択するかをクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../Topic/Add%20Variable.md)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-### [OperationType] = [XPath]  
+### <a name="operationtype--xpath"></a>[OperationType] = [XPath]  
  XPath 操作用のオプションを指定します。  
   
  **[SaveOperationResult]**  
@@ -174,14 +179,14 @@ caps.handback.revision: 43
  **[OverwriteDestination]**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **転送先**  
- **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ **変換先**  
+ 場合**DestinationType**に設定されている**ファイルの接続**をファイル接続マネージャーを選択するかをクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- **[DestinationType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ 場合**DestinationType**に設定されている**変数**を既存の変数を選択するかをクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../Topic/Add%20Variable.md)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **[DestinationType]**  
  XML ドキュメントの対象となる種類を選択します。 このプロパティのオプションを次の表に示します。  
@@ -201,15 +206,15 @@ caps.handback.revision: 43
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
   
  **[SecondOperand]**  
- **[SecondOperandType]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
+ **[SecondOperandType]** が **[直接入力]**に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
- **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ 場合**SecondOperandType**に設定されている**ファイルの接続**をファイル接続マネージャーを選択するかをクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- **[XPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ 場合**XPathStringSourceType**に設定されている**変数**を既存の変数を選択するかをクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../Topic/Add%20Variable.md)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **[PutResultInOneNode]**  
  結果を 1 つのノードに記述するかどうかを指定します。  
@@ -223,7 +228,7 @@ caps.handback.revision: 43
 |**[ノード リスト]**|選択されたノードを XML フラグメントとして返します。|  
 |**値**|文字列に連結された、選択されたすべてのノードの内部テキスト値を返します。|  
   
-### [OperationType] = [Merge]  
+### <a name="operationtype--merge"></a>[OperationType] = [Merge]  
  Merge 操作用のオプションを指定します。  
   
  **[XPathStringSourceType]**  
@@ -236,15 +241,15 @@ caps.handback.revision: 43
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
   
  **[XPathStringSource]**  
- **[XPathStringSourceType]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
+ **[XPathStringSourceType]** が **[直接入力]**に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
- **[XPathStringSourceType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ 場合**XPathStringSourceType**に設定されている**ファイルの接続**をファイル接続マネージャーを選択するかをクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- **[XPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ 場合**XPathStringSourceType**に設定されている**変数**を既存の変数を選択するかをクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../Topic/Add%20Variable.md)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  XPath ステートメントを使用してソース ドキュメント内でのマージ場所を特定すると、このステートメントによって 1 つのノードが返されます。 ステートメントによって複数のノードが返された場合は、最初のノードだけが使用されます。 2 番目のドキュメントの内容は、XPath クエリによって返される最初のノードでマージされます。  
   
@@ -254,14 +259,14 @@ caps.handback.revision: 43
  **[OverwriteDestination]**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **転送先**  
- **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ **変換先**  
+ 場合**DestinationType**に設定されている**ファイルの接続**をファイル接続マネージャーを選択するかをクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- **[DestinationType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ 場合**DestinationType**に設定されている**変数**を既存の変数を選択するかをクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../Topic/Add%20Variable.md)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **[DestinationType]**  
  XML ドキュメントの対象となる種類を選択します。 このプロパティのオプションを次の表に示します。  
@@ -281,17 +286,17 @@ caps.handback.revision: 43
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
   
  **[SecondOperand]**  
- **[SecondOperandType]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
+ **[SecondOperandType]** が **[直接入力]**に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
- **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ 場合**SecondOperandType**に設定されている**ファイルの接続**をファイル接続マネージャーを選択するかをクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- **[SecondOperandType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ 場合**SecondOperandType**に設定されている**変数**を既存の変数を選択するかをクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../Topic/Add%20Variable.md)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-### [OperationType] = [Diff]  
+### <a name="operationtype--diff"></a>[OperationType] = [Diff]  
  Diff 操作用のオプションを指定します。  
   
  **[DiffAlgorithm]**  
@@ -329,14 +334,14 @@ caps.handback.revision: 43
  **[OverwriteDestination]**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **転送先**  
- **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ **変換先**  
+ 場合**DestinationType**に設定されている**ファイルの接続**をファイル接続マネージャーを選択するかをクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- **[DestinationType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ 場合**DestinationType**に設定されている**変数**を既存の変数を選択するかをクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../Topic/Add%20Variable.md)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **[DestinationType]**  
  XML ドキュメントの対象となる種類を選択します。 このプロパティのオプションを次の表に示します。  
@@ -356,17 +361,17 @@ caps.handback.revision: 43
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
   
  **[SecondOperand]**  
- **[SecondOperandType]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
+ **[SecondOperandType]** が **[直接入力]**に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
- **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ 場合**SecondOperandType**に設定されている**ファイルの接続**をファイル接続マネージャーを選択するかをクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- **[SecondOperandType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ 場合**SecondOperandType**に設定されている**変数**を既存の変数を選択するかをクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../Topic/Add%20Variable.md)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-### [OperationType] = [Patch]  
+### <a name="operationtype--patch"></a>[OperationType] = [Patch]  
  Patch 操作用のオプションを指定します。  
   
  **[SaveOperationResult]**  
@@ -375,14 +380,14 @@ caps.handback.revision: 43
  **[OverwriteDestination]**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **転送先**  
- **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ **変換先**  
+ 場合**DestinationType**に設定されている**ファイルの接続**をファイル接続マネージャーを選択するかをクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- **[DestinationType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ 場合**DestinationType**に設定されている**変数**を既存の変数を選択するかをクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../Topic/Add%20Variable.md)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **[DestinationType]**  
  XML ドキュメントの対象となる種類を選択します。 このプロパティのオプションを次の表に示します。  
@@ -402,18 +407,18 @@ caps.handback.revision: 43
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
   
  **[SecondOperand]**  
- **[SecondOperandType]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
+ **[SecondOperandType]** が **[直接入力]**に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
- **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ 場合**SecondOperandType**に設定されている**ファイルの接続**をファイル接続マネージャーを選択するかをクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- **[SecondOperandType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ 場合**SecondOperandType**に設定されている**変数**を既存の変数を選択するかをクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../Topic/Add%20Variable.md)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)   
- [[式] ページ](../Topic/Expressions%20Page.md)  
+ [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
   

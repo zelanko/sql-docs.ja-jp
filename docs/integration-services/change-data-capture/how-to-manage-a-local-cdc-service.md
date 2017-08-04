@@ -1,25 +1,30 @@
 ---
-title: "ローカルの CDC Service を管理する方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ローカルの CDC Service を管理する方法 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 40678ff92e4513354db09cca42d48ed0302369ac
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# ローカルの CDC Service を管理する方法
+# <a name="how-to-manage-a-local-cdc-service"></a>ローカルの CDC Service を管理する方法
   この手順では、CDC Service 構成コンソールを使用して特定の CDC サービスを管理する方法について説明します。  
   
-### 特定の CDC Service を管理するには  
+### <a name="to-manage-a-specific-cdc-service"></a>特定の CDC Service を管理するには  
   
 1.  **[スタート]** メニューの **[CDC Service Configuration for Oracle]**をクリックします。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 6
   
          サービスを削除するには、CDC Service 構成コンソールの右側にある **[アクション]** ペインで **[削除]** をクリックします。  
   
-         または、削除する CDC サービスを右クリックして **[削除]** を選択します。  
+         または、削除する CDC サービスを右クリックして **[削除]**を選択します。  
   
          **注**: 実行中のサービスを削除した場合、サービスは停止されてから削除されます。  
   
@@ -53,9 +58,9 @@ caps.handback.revision: 6
   
          CDC Service 構成コンソールの右側にある **[アクション]** ペインで **[プロパティ]**をクリックします。  
   
-         または、プロパティを編集する CDC サービスを右クリックして **[プロパティ]** を選択します。  
+         または、プロパティを編集する CDC サービスを右クリックして **[プロパティ]**を選択します。  
   
-## 参照  
- [Oracle CDC Service の管理](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
+## <a name="see-also"></a>参照  
+ [Oracle CDC Service を管理します。](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

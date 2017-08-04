@@ -1,25 +1,30 @@
 ---
-title: "[SQL Server のプロパティ] ダイアログ ボックス ([詳細設定] タブ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server のプロパティ ([詳細] タブ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4023e504dfee0b0655a78e773771d3ae16b4a2fb
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# [SQL Server のプロパティ] ダイアログ ボックス ([詳細設定] タブ)
+# <a name="sql-server-properties-advanced-tab"></a>[SQL Server のプロパティ] ダイアログ ボックス ([詳細設定] タブ)
   **[詳細設定]** タブには、以下のプロパティが既定で表示されます。 カスタム プロパティが定義されていれば、そのプロパティと値もこのタブに表示されます。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **クラスター化インデックス**  
  このサービスがクラスター サーバーのリソースとしてインストールされているかどうかが表示されます。  
   
@@ -27,19 +32,19 @@ caps.handback.revision: 19
  サービス品質の監視がこのサービスで有効になっているかどうかを示します。 カスタマー フィードバック報告の詳細については、オンライン ブックの「エラー レポートと使用状況レポートの設定」を検索してください。  
   
  **[データ パス]**  
- このインストールの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バイナリへのパスが表示されます。  
+ このインストールの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バイナリへのパスが表示されます。  
   
  **[ダンプ ディレクトリ]**  
  エラー発生時にメモリ ダンプが配置される場所が表示されます。  
   
- **[エラー報告]**  
+ **エラー報告**  
  **[はい]** に設定した場合、重大な障害が発生したときに、ワトソン博士プログラムによって [!INCLUDE[msCoName](../../includes/msconame-md.md)] またはエラー サーバーに情報が転送されます。 エラー報告の詳細については、オンライン ブックの「エラー レポートと使用状況レポートの設定」を検索してください。 この値を変更するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーでサーバーを右クリックし、**[プロパティ]** をクリックし、**[その他のサーバーの設定]** ページをクリックします。 **[エラー報告]** 領域にオプションが表示されます。  
   
  **ファイル バージョン**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行可能ファイルのバージョンが表示されます。  
   
  **インストール パス**  
- このインストールの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バイナリへのパスが表示されます。  
+ このインストールの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バイナリへのパスが表示されます。  
   
  **インスタンス ID**  
  このサービスを使用した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが表示されます。  
@@ -51,21 +56,21 @@ caps.handback.revision: 19
  このアプリケーションが使用するレジストリ キーの場所が表示されます。  
   
  **[Service Pack のレベル]**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のこのインスタンスのサービス パック レベルが表示されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこのインスタンスのサービス パック レベルが表示されます。  
   
  **[SKU 名]**  
  製品の SKU (Stock Keeping Unit、製品のエディションとも呼ばれます) が表示されます。  
   
  **起動時のパラメーター**  
- この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが使用する起動時のパラメーターが一覧表示されます。 各パラメーターはセミコロンで区切られます。 既定のパラメーターには、master データベースのデータ ファイル (`master.mdf`) のパス、master データベースのログ ファイル (`mastlog.ldf`) のパス、エラー ログ ファイルのパスが含まれます。 起動時のパラメーターの構文については、オンライン ブックの **「SQL Server サービスのスタートアップ オプションの使用」**を検索してください。  
+ この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが使用する起動時のパラメーターが一覧表示されます。 各パラメーターはセミコロンで区切られます。 既定のパラメーターには、master データベースのデータ ファイル (`master.mdf`) のパス、master データベースのログ ファイル (`mastlog.ldf`) のパス、エラー ログ ファイルのパスが含まれます。 起動時のパラメーターの構文については、オンライン ブックの **「SQL Server サービスのスタートアップ オプションの使用」**を検索してください。  
   
  **[SKU (Stock Keeping Unit)]**  
  製品の SKU (Stock Keeping Unit) 番号が表示されます。  
   
  **バージョン**  
- この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのバージョン番号が表示されます。  
+ この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのバージョン番号が表示されます。  
   
  **[仮想サーバー名]**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がクラスター サーバーにインストールされている場合の **仮想サーバー名**です。  
+ **がクラスター サーバーにインストールされている場合の** 仮想サーバー名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。  
   
   

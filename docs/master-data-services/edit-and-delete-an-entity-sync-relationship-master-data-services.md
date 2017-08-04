@@ -1,26 +1,31 @@
 ---
-title: "エンティティの同期関係の編集と削除 (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "編集および削除のエンティティの同期関係 (Master Data Services) |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 25454041bec8581e814cc733ecbcfdb3a2ddaa0b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# エンティティの同期関係の編集と削除 (マスター データ サービス)
+# <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>エンティティの同期関係の編集と削除 (マスター データ サービス)
   エンティティ同期は、エンティティのバージョン間での反復可能な一方向の同期です。 異なるモデルの間でエンティティ データを共有する方法を提供します。 自分で作成した同期関係は編集および削除できます。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  エンティティの同期関係を編集するための前提条件を次に示します。  
   
 -   [システム管理] 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
@@ -81,8 +86,8 @@ caps.handback.revision: 6
   
 5.  確認ダイアログで **[OK]**をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [エンティティの同期関係の作成と実行 (マスター データ サービス)](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
- [エンティティの同期関係 (マスター データ サービス)](../master-data-services/entity-sync-relationship-master-data-services.md)  
+ [エンティティの同期関係 & #40 です。マスター データ サービス &#41;](../master-data-services/entity-sync-relationship-master-data-services.md)  
   
   

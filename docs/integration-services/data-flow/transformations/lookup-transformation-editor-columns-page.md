@@ -1,31 +1,36 @@
 ---
-title: "[参照変換エディター] ([列] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.lookuptransformation.columns.f1"
-helpviewer_keywords: 
-  - "参照変換エディター"
+title: "参照変換エディター (列 ページ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.lookuptransformation.columns.f1
+helpviewer_keywords:
+- Lookup Transformation Editor
 ms.assetid: 690ffef5-fd59-4e95-a27d-4fcf0d6b1c0b
 caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1903f316c601a1685d8644d24a2a6eb12116293d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# [参照変換エディター] ([列] ページ)
+# <a name="lookup-transformation-editor-columns-page"></a>[参照変換エディター] ([列] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[列]** ページを使用すると、元のテーブルと参照テーブルの間に結合を指定したり、参照テーブルから参照列を選択したりできます。  
   
  参照変換の詳細については、「 [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **使用できる入力列**  
  使用できる入力列の一覧を表示します。 入力列とは、データ フロー内の接続されているソースからの列です。 入力列と参照列のデータ型は一致している必要があります。  
   
@@ -45,17 +50,17 @@ caps.handback.revision: 39
  **参照列**  
  選択した参照列を表示します。 選択内容は、 **[使用できる参照列]** テーブルのチェック ボックスの状態に反映されます。  
   
- **[参照操作]**  
+ **参照操作**  
  一覧から、参照列で実行する参照操作を選択します。  
   
- **[出力の別名]**  
+ **出力の別名**  
  各参照列の出力の別名を入力します。 既定では参照列の名前が使用されますが、一意なわかりやすい名前を自由に付けることができます。  
   
-## 参照  
- [参照変換エディター ([全般] ページ)](../Topic/Lookup%20Transformation%20Editor%20\(General%20Page\).md)   
- [参照変換エディター ([接続] ページ)](../Topic/Lookup%20Transformation%20Editor%20\(Connection%20Page\).md)   
- [参照変換エディター ([詳細設定] ページ)](../Topic/Lookup%20Transformation%20Editor%20\(Advanced%20Page\).md)   
- [参照変換エディター ([エラー出力] ページ)](../Topic/Lookup%20Transformation%20Editor%20\(Error%20Output%20Page\).md)   
+## <a name="see-also"></a>参照  
+ [[参照変換エディター] &#40;[全般] ページ&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-general-page.md)   
+ [[参照変換エディター] &#40;[接続] ページ&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)   
+ [[参照変換エディター] &#40;[詳細設定] ページ&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)   
+ [[参照変換エディター] &#40;[エラー出力] ページ&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)   
  [あいまい参照変換](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

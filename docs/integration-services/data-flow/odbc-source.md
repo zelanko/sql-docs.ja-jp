@@ -1,24 +1,29 @@
 ---
-title: "ODBC 入力元 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.odbcsource.f1"
+title: "Odbc 入力元 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.odbcsource.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fa8fcf2545618602bcf9f574a52ba51d0074a850
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# ODBC 入力元
+# <a name="odbc-source"></a>ODBC 入力元
   ODBC 入力元は、データベース テーブル、ビュー、または SQL ステートメントを使用して、ODBC でサポートされているデータベースからデータを抽出します。  
   
  ODBC 入力元には、データを抽出するために、次のデータ アクセス モードがあります。  
@@ -33,7 +38,7 @@ caps.handback.revision: 9
   
  ODBC 入力元には、1 つの標準出力と 1 つのエラー出力があります。  
   
-## エラー処理  
+## <a name="error-handling"></a>エラー処理  
  ODBC 入力元にはエラー出力があります。 コンポーネントのエラー出力には、次の出力列があります。  
   
 -   **エラー コード**: 現在のエラーに対応する数字です。 エラーの一覧については、使用している ODBC でサポートされているデータベースのドキュメントを参照してください。 SSIS エラー コードの一覧については、「SSIS のエラー コードおよびメッセージ リファレンス」を参照してください。  
@@ -42,57 +47,57 @@ caps.handback.revision: 9
   
 -   標準出力データ列。  
   
- ODBC 入力元は、エラー動作の設定に応じて、抽出処理中に発生したエラー (データ変換、切り捨て) をエラー出力に返します。 詳細については、「[ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;](../Topic/ODBC%20Destination%20Editor%20\(Connection%20Manager%20Page\).md)」を参照してください。  
+ ODBC 入力元は、エラー動作の設定に応じて、抽出処理中に発生したエラー (データ変換、切り捨て) をエラー出力に返します。 詳細については、「[ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)」を参照してください。  
   
-## データ型のサポート  
+## <a name="data-type-support"></a>データ型のサポート  
  ODBC 入力元でサポートされるデータ型については、「Connector for Open Database Connectivity (ODBC) by Attunity」を参照してください。  
   
-## 抽出オプション  
- ODBC 入力元は、**バッチ**または**行ごと**のどちらかのモードで動作します。 使用するモードは、**FetchMethod** プロパティによって決まります。 以下に、モードの説明を示します。  
+## <a name="extract-options"></a>抽出オプション  
+ ODBC 入力元は、 **バッチ** または **行ごと** のどちらかのモードで動作します。 使用するモードは、 **FetchMethod** プロパティによって決まります。 以下に、モードの説明を示します。  
   
--   **バッチ**: コンポーネントは、把握した ODBC プロバイダーの機能に基づいて、最も効率的なフェッチ方法を使用します。 最新の ODBC プロバイダーの場合、これは配列バインドを使用する SQLFetchScroll です (このとき、配列のサイズは **BatchSize** プロパティによって決定します)。 ユーザーが**バッチ**を選択し、この方法がプロバイダーでサポートされていない場合、ODBC 入力先は自動的に**行ごと**のモードに切り替わります。  
+-   **バッチ**: コンポーネントは、把握した ODBC プロバイダーの機能に基づいて、最も効率的なフェッチ方法を使用します。 最新の ODBC プロバイダーの場合、これは配列バインドを使用する SQLFetchScroll です (このとき、配列のサイズは **BatchSize** プロパティによって決定します)。 ユーザーが **バッチ** を選択し、この方法がプロバイダーでサポートされていない場合、ODBC 入力先は自動的に **行ごと** のモードに切り替わります。  
   
 -   **行ごと**: コンポーネントは SQLFetch を使用して、一度に 1 行ずつ取得します。  
   
- **FetchMethod** プロパティの詳細については、「[ODBC 入力元のカスタム プロパティ](../../integration-services/data-flow/odbc-source-custom-properties.md)」を参照してください。  
+ **FetchMethod** プロパティの詳細については、「 [ODBC 入力元のカスタム プロパティ](../../integration-services/data-flow/odbc-source-custom-properties.md)」を参照してください。  
   
-## 並列処理  
+## <a name="parallelism"></a>並列処理  
  並列実行できる ODBC 入力元コンポーネントの数に制限はありません。これは、同一テーブル上にある場合または異なるテーブル上にある場合、同一コンピューター上で実行する場合または異なるコンピューター上で実行する場合のいずれにも該当します (ただし、通常のグローバルなセッション制限を除きます)。  
   
  ただし、使用する ODBC プロバイダーの制限によって、プロバイダーを介する同時接続数が制限される場合があります。 これらの制限によって、ODBC 入力元で使用できる並列インスタンス数のサポートが制限されます。 SSIS プロバイダーは、使用される ODBC プロバイダーの制限を把握し、SSIS パッケージを作成する際に考慮する必要があります。  
   
-## ODBC 入力元のトラブルシューティング  
- ODBC 入力元による外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、ODBC 入力元による外部データ ソースからのデータ読み込みに関するトラブルシューティングを行うことができます。 ODBC 入力元による外部データ プロバイダーの呼び出しをログに記録するには、ODBC ドライバー マネージャーによるトレースを有効にします。 詳細については、「*ODBC で ODBC トレースを生成する方法 (データ ソース管理者向け)*」の Microsoft のドキュメントを参照してください。  
+## <a name="troubleshooting-the-odbc-source"></a>ODBC 入力元のトラブルシューティング  
+ ODBC 入力元による外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、ODBC 入力元による外部データ ソースからのデータ読み込みに関するトラブルシューティングを行うことができます。 ODBC 入力元による外部データ プロバイダーの呼び出しをログに記録するには、ODBC ドライバー マネージャーによるトレースを有効にします。 詳細については、「 *ODBC で ODBC トレースを生成する方法 (データ ソース管理者向け)*」の Microsoft のドキュメントを参照してください。  
   
-## ODBC 入力元の構成  
+## <a name="configuring-the-odbc-source"></a>ODBC 入力元の構成  
  ODBC 入力元は、プログラムによって、または SSIS デザイナーを使用して構成できます。  
   
  詳細については、次のいずれかのトピックを参照してください。  
   
--   [[ODBC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../Topic/ODBC%20Source%20Editor%20\(Connection%20Manager%20Page\).md)  
+-   [ODBC ソース エディターと &#40; です。接続マネージャーページと &#41; です。](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   
--   [[ODBC ソース エディター] &#40;[列] ページ&#41;](../Topic/ODBC%20Source%20Editor%20\(Columns%20Page\).md)  
+-   [ODBC ソース エディターと &#40; です。列ページと &#41; です。](../../integration-services/data-flow/odbc-source-editor-columns-page.md)  
   
--   [[ODBC ソース エディター] &#40;[エラー出力] ページ&#41;](../Topic/ODBC%20Source%20Editor%20\(Error%20Output%20Page\).md)  
+-   [ODBC ソース エディターと &#40; です。エラー出力ページと &#41; です。](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが表示されます。  
   
  **[詳細エディター]** ダイアログ ボックスを開くには、次の操作を実行します。  
   
--   [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] プロジェクトの **[データ フロー]** 画面で、ODBC 入力元を右クリックし、**[詳細エディターの表示]** をクリックします。  
+-   **プロジェクトの** [データ フロー] [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 画面で、ODBC 入力元を右クリックし、 **[詳細エディターの表示]**をクリックします。  
   
- [詳細エディター] ダイアログ ボックスで設定できるプロパティの詳細については、「[ODBC 入力元のカスタム プロパティ](../../integration-services/data-flow/odbc-source-custom-properties.md)」を参照してください。  
+ [詳細エディター] ダイアログ ボックスで設定できるプロパティの詳細については、「 [ODBC 入力元のカスタム プロパティ](../../integration-services/data-flow/odbc-source-custom-properties.md)」を参照してください。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
   
--   [[ODBC ソース エディター] &#40;[エラー出力] ページ&#41;](../Topic/ODBC%20Source%20Editor%20\(Error%20Output%20Page\).md)  
+-   [ODBC ソース エディターと &#40; です。エラー出力ページと &#41; です。](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
--   [[ODBC ソース エディター] &#40;[列] ページ&#41;](../Topic/ODBC%20Source%20Editor%20\(Columns%20Page\).md)  
+-   [ODBC ソース エディターと &#40; です。列ページと &#41; です。](../../integration-services/data-flow/odbc-source-editor-columns-page.md)  
   
--   [[ODBC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../Topic/ODBC%20Source%20Editor%20\(Connection%20Manager%20Page\).md)  
+-   [ODBC ソース エディターと &#40; です。接続マネージャーページと &#41; です。](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   
--   [ODBC 入力元を使用したデータ抽出](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
+-   [Odbc 入力元を使用して、データを抽出します。](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
   
--   [ODBC 入力元のカスタム プロパティ](../../integration-services/data-flow/odbc-source-custom-properties.md)  
+-   [Odbc 入力元のカスタム プロパティ](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   
   

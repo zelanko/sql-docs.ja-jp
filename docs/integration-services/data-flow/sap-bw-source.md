@@ -1,22 +1,27 @@
 ---
-title: "SAP BW 転送元 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SAP bw 変換元 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fe41cbbd7a58fe50e6dbfaa2c85b9f5f22cea0b5
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# SAP BW 転送元
+# <a name="sap-bw-source"></a>SAP BW 転送元
   SAP BW 変換元は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の変換元コンポーネントです。 SAP BW 変換元は、SAP Netweaver BW Version 7 システムからデータを抽出し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローにこのデータを使用可能にします。  
   
  この変換は、1 つの出力と 1 つのエラー出力をとります。  
@@ -43,19 +48,19 @@ caps.handback.revision: 10
   
 1.  SAP の GUI から SAP Netweaver BW にログインしてトランザクション コード SM59 を入力し、RFC 変換先を作成します。  
   
-    1.  **[接続の種類]** の **[TCP/IP]** を選択します。  
+    1.  **[接続の種類]**の **[TCP/IP]**を選択します。  
   
     2.  **[アクティブ化の種類]**の **[登録済みサーバーのプログラム]**を選択します。  
   
-    3.  **[対象のシステムを使用している通信の種類]** の **[非 Unicode (非アクティブな MDMP の設定)]** を選択します。  
+    3.  **[対象のシステムを使用している通信の種類]**の **[非 Unicode (非アクティブな MDMP の設定)]**を選択します。  
   
     4.  適切なプログラム ID を割り当てます。  
   
 2.  オープン ハブ転送先を作成します。  
   
-    1.  Administrator Workbench (トランザクション コード RSA1) に移動し、左ペインで **[オープン ハブ転送先]** を選択します。  
+    1.  Administrator Workbench (トランザクション コード RSA1) に移動し、左ペインで **[オープン ハブ転送先]**を選択します。  
   
-    2.  中央のペインで、InfoArea を右クリックし、**["オープン ハブ転送先の作成"]** を選択します。  
+    2.  中央のペインで、InfoArea を右クリックし、 **["オープン ハブ転送先の作成"]**を選択します。  
   
     3.  **[変換先の種類]**で、 **["サード パーティ ツール"]**を選択し、作成済みの RFC 変換先を入力します。  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 10
   
 3.  データ転送プロセス (DTP) を作成します。  
   
-    1.  InfoArea の中央のペインで、作成済みの変換先を右クリックし、**[データ転送プロセスの作成]** を選択します。  
+    1.  InfoArea の中央のペインで、作成済みの変換先を右クリックし、 **[データ転送プロセスの作成]**を選択します。  
   
     2.  DTP を構成、保存、およびアクティブ化します。  
   
@@ -105,7 +110,7 @@ caps.handback.revision: 10
   
     -   **[E - 抽出のみ]** オプションでは、要求 ID を指定します。  
   
--   文字列変換のルールを指定します (たとえば、すべての文字列を SAP Netweaver BW システムが Unicode であるかどうかに応じて変換するか、**varchar** または **nvarchar** に変換するかどうか)。  
+-   文字列変換のルールを指定します (たとえば、すべての文字列を SAP Netweaver BW システムが Unicode であるかどうかに応じて変換するか、 **varchar** または **nvarchar**に変換するかどうか)。  
   
 -   選択したオプションを使用して、抽出するデータをプレビューします。  
   
@@ -115,28 +120,28 @@ caps.handback.revision: 10
   
  SAP BW 接続マネージャー、変換元、変換先の構成および使用方法の詳細については、ホワイト ペーパー「 [SAP BI 7.0 を使用した SQL Server 2008 Integration Services](http://go.microsoft.com/fwlink/?LinkID=137090)」を参照してください。 このホワイト ペーパーには、SAP BW で必要なオブジェクトの構成方法についても説明されています。  
   
-### SSIS デザイナーを使用してソースを構成する  
+### <a name="using-the-ssis-designer-to-configure-the-source"></a>SSIS デザイナーを使用してソースを構成する  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できる SAP BW 変換元のプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [SAP BW ソース エディター ([接続マネージャー] ページ)](../Topic/SAP%20BW%20Source%20Editor%20\(Connection%20Manager%20Page\).md)  
+-   [SAP bw 変換元エディターと &#40; です。接続マネージャー」 ページと &#41; です。](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
--   [SAP BW ソース エディター ([列] ページ)](../Topic/SAP%20BW%20Source%20Editor%20\(Columns%20Page\).md)  
+-   [SAP bw 変換元エディターと &#40; です。「列」 ページと &#41; です。](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
   
--   [SAP BW ソース エディター ([エラー出力] ページ)](../Topic/SAP%20BW%20Source%20Editor%20\(Error%20Output%20Page\).md)  
+-   [SAP bw 変換元エディターと &#40; です。エラー出力 ページと &#41; です。](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [SAP BW ソース エディター ([詳細設定] ページ)](../Topic/SAP%20BW%20Source%20Editor%20\(Advanced%20Page\).md)  
+-   [SAP bw 変換元エディターと &#40; です。「詳細」 ページと &#41; です。](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
   
  SAP BW 変換元を構成するときに、SAP Netweaver BW オブジェクトを参照したり、ソース データをプレビューしたりするためにさまざまなダイアログ ボックスを使用できます。 これらのダイアログ ボックスの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[RFC 転送先の参照]](../../integration-services/data-flow/look-up-rfc-destination.md)  
+-   [RFC 転送先を検索します。](../../integration-services/data-flow/look-up-rfc-destination.md)  
   
--   [[プロセス チェーンの参照]](../../integration-services/data-flow/look-up-process-chain.md)  
+-   [プロセス チェーンの参照します。](../../integration-services/data-flow/look-up-process-chain.md)  
   
--   [[要求のログ]](../../integration-services/data-flow/request-log.md)  
+-   [要求のログ](../../integration-services/data-flow/request-log.md)  
   
 -   [プレビュー](../../integration-services/data-flow/preview.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Microsoft Connector for SAP BW のコンポーネント](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

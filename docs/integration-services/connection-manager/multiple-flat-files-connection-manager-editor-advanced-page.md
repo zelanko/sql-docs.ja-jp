@@ -1,33 +1,38 @@
 ---
-title: "[複数フラット ファイル接続マネージャー エディター] ([詳細設定] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.multifile.advanced.f1"
-helpviewer_keywords: 
-  - "複数フラット ファイル接続マネージャー エディター"
+title: "[複数フラット ファイル接続マネージャー エディター] ([詳細] ページ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.multifile.advanced.f1
+helpviewer_keywords:
+- Multiple Flat Files Connection Manager Editor
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
 caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ca2a47b75c7209fce3d1966ff749396047e550e3
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# [複数フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)
+# <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>[複数フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)
   **[複数フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、フラット ファイル接続マネージャーが接続するテキスト ファイルの各列のデータ型や区切り記号などのプロパティを設定できます。  
   
  既定では、文字列の列の長さは 50 文字です。 サンプル データを評価し、これらの列の長さを自動的に変更して、データが切り捨てられたり、列の幅が広くなりすぎないようにできます。 また、変換先列と互換性を持つように他のメタデータも更新できます。 たとえば、整数データのみを含む列のデータ型を、DT_I2 などの数値データ型に変更するなどの操作を行えます。  
   
  複数フラット ファイル接続マネージャーの詳細については、「 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[接続マネージャー名]**  
  ワークフロー内の複数フラット ファイル接続マネージャーの一意な名前を指定します。 指定された名前は、 **デザイナーの** [接続マネージャー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 領域内に表示されます。  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 36
 |**[入力列の幅]**|格納する値をバイト数で指定します。Unicode ファイルの場合、これは文字数として表示されます。 区切られた列の場合、この値は無視されます。<br /><br /> **注** オブジェクト モデルでは、このプロパティの名前は ColumnWidth です。|  
   
  **新規**  
- **[新規作成]** をクリックして新しい列を追加します。 既定では、 **[新規作成]** ボタンをクリックすると、新しい列がリストの末尾に追加されます。 さらにこのボタンのドロップダウン リストには、次のオプションがあります。  
+ **[新規作成]**をクリックして新しい列を追加します。 既定では、 **[新規作成]** ボタンをクリックすると、新しい列がリストの末尾に追加されます。 さらにこのボタンのドロップダウン リストには、次のオプションがあります。  
   
 |値|Description|  
 |-----------|-----------------|  
@@ -59,15 +64,15 @@ caps.handback.revision: 36
 |**[後に挿入]**|選択した列の後に新しい列を追加します。|  
   
  **Del**  
- 列を選択して **[削除]** をクリックすると、列が削除されます。  
+ 列を選択して **[削除]**をクリックすると、列が削除されます。  
   
  **[型の推測]**  
- **[列の型の推測]** ダイアログ ボックスを使用して、最初に選択されたファイルのサンプル データを評価し、各列のデータ型と長さの推測を取得します。 詳細については、「[[列の型の推測] ダイアログ ボックスの UI リファレンス](../Topic/Suggest%20Column%20Types%20Dialog%20Box%20UI%20Reference.md)」を参照してください。  
+ **[列の型の推測]** ダイアログ ボックスを使用して、最初に選択されたファイルのサンプル データを評価し、各列のデータ型と長さの推測を取得します。 詳細については、「 [[列の型の推測] ダイアログ ボックスの UI リファレンス](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)   
- [[複数フラット ファイル接続マネージャー エディター] &#40;[全般] ページ&#41;](../Topic/Multiple%20Flat%20Files%20Connection%20Manager%20Editor%20\(General%20Page\).md)   
- [[複数フラット ファイル接続マネージャー エディター] &#40;[列] ページ&#41;](../Topic/Multiple%20Flat%20Files%20Connection%20Manager%20Editor%20\(Columns%20Page\).md)   
- [[複数フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../Topic/Multiple%20Flat%20Files%20Connection%20Manager%20Editor%20\(Preview%20Page\).md)  
+ [複数のフラット ファイル接続マネージャー エディター & #40 です。[全般] ページ &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)   
+ [複数のフラット ファイル接続マネージャー エディター & #40 です。[列] ページ &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)   
+ [複数のフラット ファイル接続マネージャー エディター & #40 です。[プレビュー] ページ &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

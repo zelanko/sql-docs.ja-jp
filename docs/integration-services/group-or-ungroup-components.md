@@ -1,27 +1,32 @@
 ---
-title: "コンポーネントのグループ化とグループの解除 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "コンテナーのグループ化"
-  - "タスク [Integration Services], グループ化"
-  - "コンテナー [Integration Services], グループ化"
-  - "タスクのグループ化"
+title: "グループ化またはコンポーネントをグループ解除 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- grouping containers
+- tasks [Integration Services], grouping
+- containers [Integration Services], grouping
+- grouping tasks
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 caps.latest.revision: 46
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1162e9b3617c16dc057e899515b9125da35e070b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# コンポーネントのグループ化とグループの解除
+# <a name="group-or-ungroup-components"></a>コンポーネントのグループ化とグループの解除
   [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーの **[制御フロー]**、**[データ フロー]**、および **[イベント ハンドラー]** タブでは、折りたたみ可能なグループ化がサポートされています。 パッケージに多数のコンポーネントがある場合、タブは過密状態になることがあります。このような状態になると、すべてのコンポーネントを一度に表示するのが難しくなり、操作する項目を探すのも困難になります。 折りたたみ可能なグループ化機能を使用すると、作業画面上の領域を節約でき、大きなパッケージの処理が容易になります。  
   
  グループ化機能では、グループ化するコンポーネントを選択し、それらをグループ化します。次に、作業に合わせてグループを展開するか、折りたたみます。 グループを展開すると、グループ内のコンポーネントのプロパティにアクセスできます。 タスクとコンテナーを連結する優先順位制約は、自動的にグループ内に含まれます。  
@@ -34,32 +39,32 @@ caps.handback.revision: 46
   
 -   [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーは、パッケージの保存時にグループ化を保存します。ただし、グループ化はパッケージの実行には影響しません。 コンポーネントのグループ化機能は、デザイン時の機能であり、パッケージの実行時の動作には影響しません。  
   
-### コンポーネントをグループ化するには  
+### <a name="to-group-components"></a>コンポーネントをグループ化するには  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  **[制御フロー]**、**[データ フロー]**、または **[イベント ハンドラー]** タブをクリックします。  
+3.  **[制御フロー]**、 **[データ フロー]**、または **[イベント ハンドラー]** タブをクリックします。  
   
-4.  タブのデザイン画面で、グループ化するコンポーネントを選択します。選択したコンポーネントを右クリックし、**[グループ]** をクリックします。  
+4.  タブのデザイン画面で、グループ化するコンポーネントを選択します。選択したコンポーネントを右クリックし、 **[グループ]**をクリックします。  
   
 5.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-### コンポーネントのグループを解除するには  
+### <a name="to-ungroup-components"></a>コンポーネントのグループを解除するには  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  **[制御フロー]**、**[データ フロー]**、または **[イベント ハンドラー]** タブをクリックします。  
+3.  **[制御フロー]**、 **[データ フロー]**、または **[イベント ハンドラー]** タブをクリックします。  
   
-4.  タブのデザイン画面で、グループを解除するコンポーネントが含まれているグループを選択します。そのグループを右クリックし、**[グループ解除]** をクリックします。  
+4.  タブのデザイン画面で、グループを解除するコンポーネントが含まれているグループを選択します。そのグループを右クリックし、 **[グループ解除]**をクリックします。  
   
 5.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## 参照  
- [制御フローのタスクまたはコンテナーを追加または削除する](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [既定の優先順位制約を使用してタスクとコンテナーを連結する](../Topic/Connect%20Tasks%20and%20Containers%20by%20Using%20a%20Default%20Precedence%20Constraint.md)  
+## <a name="see-also"></a>参照  
+ [タスクまたはコンテナーを制御フローに追加または削除](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [既定の優先順位制約を使用してタスクとコンテナーを接続します。](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
   
   
