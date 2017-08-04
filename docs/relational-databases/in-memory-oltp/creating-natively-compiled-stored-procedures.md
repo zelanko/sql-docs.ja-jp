@@ -14,11 +14,11 @@ caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 002507c03a66bd262e7d5dfa44283d2e3e0a901a
+ms.translationtype: HT
+ms.sourcegitcommit: f0ebadeaa959c6eb148cdd9a9d6e0a1019d858ab
+ms.openlocfilehash: 413be658a429308744b303d2d3ef82892c964c5a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/27/2017
 
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャの作成
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/22/2017
   
 -   ATOMIC ブロック。 詳細については、「 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)」を参照してください。  
   
--   ネイティブ コンパイル ストアド プロシージャのパラメーターおよび変数の**NOT NULL** 制約。 **NULL** として宣言されているパラメーターまたは変数に **NOT NULL**値を割り当てることはできません。 詳細については、「[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)」を参照してください。  
+-   パラメーターおよび変数に対する **NOT NULL** 制約。 **NULL** として宣言されているパラメーターまたは変数に **NOT NULL**値を割り当てることはできません。 詳細については、「[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)」を参照してください。  
   
     -   CREATE PROCEDURE dbo.myproc (@myVarchar  varchar(32)  **not null**) ...  
   
@@ -74,3 +74,4 @@ go
  [ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   
+
