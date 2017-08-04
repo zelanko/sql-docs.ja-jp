@@ -1,27 +1,32 @@
 ---
-title: "データの切り捨て (SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データの切り捨て"
-  - "データの切り捨て [Integration Services]"
-  - "式 [Integration Services], データの切り詰め"
-  - "切り捨てオプション [Integration Services]"
+title: "データの切り捨て (SSIS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- truncating data
+- data truncation [Integration Services]
+- expressions [Integration Services], data truncation
+- truncate options [Integration Services]
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5bed8ab4de8d1fe868cf12ca9e90e1040857d858
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# データの切り捨て (SSIS)
+# <a name="data-truncation-ssis"></a>データの切り捨て (SSIS)
   あるデータ型から別のデータ型に値を変換すると、値が切り詰められる場合があります。  
   
  切り詰めは、次の場合に発生します。  
@@ -40,6 +45,6 @@ caps.handback.revision: 37
   
  ただし、切り詰めは実行時にチェックされません。 実行時、データは警告なしに切り詰められます。 ただし、ほとんどのデータ アダプターおよび変換では、エラー行を処理できるエラー出力がサポートされています。  
   
- データの切り詰め処理の詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。  
+ データの切り詰め処理の詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。  
   
   

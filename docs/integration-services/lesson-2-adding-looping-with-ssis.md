@@ -1,25 +1,30 @@
 ---
-title: "レッスン 2: SSIS でのループの追加 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "レッスン 2: SSIS によるループの追加 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8559dc3afb5f347555b9b21b61abc50765fd92c4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# レッスン 2: SSIS でのループの追加
-「[レッスン 1: SSIS によるプロジェクトと基本パッケージの作成](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)」では、単一のフラット ファイル ソースからデータを抽出するパッケージを作成し、参照変換を使用してデータを変換しました。さらに、変換したデータを、**AdventureWorksDW2012** サンプル データベースの **FactCurrency** ファクト テーブルに読み込みました。  
+# <a name="lesson-2-adding-looping-with-ssis"></a>レッスン 2: SSIS でのループの追加
+「 [レッスン 1: SSIS によるプロジェクトと基本パッケージの作成](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)」では、単一のフラット ファイル ソースからデータを抽出するパッケージを作成し、参照変換を使用してデータを変換しました。さらに、変換したデータを、 **AdventureWorksDW2012** サンプル データベースの **FactCurrency** ファクト テーブルに読み込みました。  
   
 しかし、抽出、変換、読み込み (ETL) プロセスでフラット ファイルを 1 つだけ使用することはほとんどありません。 通常の ETL プロセスでは、複数のフラット ファイル ソースからデータを抽出します。 複数のソースからデータを抽出するには、反復型の制御フローが必要となります。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、反復やループをパッケージへ簡単に追加できるようになりました。  
   
@@ -48,24 +53,25 @@ caps.handback.revision: 32
 このレッスンでは、データ フローは変更せずに、制御フローのみを変更します。  
   
 > [!IMPORTANT]  
-> このチュートリアルには、 **AdventureWorksDW2012** サンプル データベースが必要です。 **AdventureWorksDW2012** をインストールして配置する方法の詳細については、[CodePlex での Reporting Services 製品サンプル](http://go.microsoft.com/fwlink/p/?LinkID=526910)を参照してください。  
+> このチュートリアルには、 **AdventureWorksDW2012** サンプル データベースが必要です。 **AdventureWorksDW2012**をインストールしてデプロイする方法の詳細については、「 [Reporting Services Product Samples Project on CodePlex (CodePlex でのサービス製品サンプルのレポート)](http://go.microsoft.com/fwlink/p/?LinkID=526910)」をご覧ください。  
   
-## このレッスンの作業  
+## <a name="lesson-tasks"></a>このレッスンの作業  
 このレッスンの内容は次のとおりです。  
   
--   [手順 1: レッスン 1 のパッケージのコピー](../integration-services/step-1-copying-the-lesson-1-package.md)  
+-   [手順 1: レッスン 1 のパッケージのコピー](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
--   [手順 2: Foreach ループ コンテナーの追加と構成](../integration-services/step-2-adding-and-configuring-the-foreach-loop-container.md)  
+-   [手順 2: Foreach ループ コンテナーの追加と構成](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [手順 3: フラット ファイル接続マネージャーの変更](../integration-services/step-3-modifying-the-flat-file-connection-manager.md)  
+-   [手順 3: フラット ファイル接続マネージャーの変更](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
--   [手順 4: レッスン 2 のチュートリアル パッケージのテスト](../integration-services/step-4-testing-the-lesson-2-tutorial-package.md)  
+-   [手順 4: レッスン 2 のチュートリアル パッケージのテスト](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
-## レッスンの開始  
-[手順 1: レッスン 1 のパッケージのコピー](../integration-services/step-1-copying-the-lesson-1-package.md)  
+## <a name="start-the-lesson"></a>レッスンの開始  
+[手順 1: レッスン 1 のパッケージのコピー](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
 [For ループ コンテナー](../integration-services/control-flow/for-loop-container.md)  
   
   
   
+

@@ -1,24 +1,29 @@
 ---
-title: "CDC 制御タスク エディター | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.cdccontroltask.config.f1"
+title: "CDC 制御タスク エディター |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9bcf6e5d0186e4b74c4ea8c3719193d1610c9bba
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC 制御タスク エディター
+# <a name="cdc-control-task-editor"></a>CDC 制御タスク エディター
   **[CDC 制御タスク エディター]** ダイアログ ボックスを使用すると、CDC 制御タスクを構成できます。 CDC 制御タスクの構成では、CDC データベースへの接続、CDC タスクの操作、状態管理情報の定義などを行います。  
   
  CDC 制御タスクの詳細については、「 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)」を参照してください。  
@@ -29,30 +34,30 @@ caps.handback.revision: 10
   
 2.  **[制御フロー]** タブで、CDC 制御タスクをダブルクリックします。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[SQL Server CDC データベースの ADO.NET 接続マネージャー]**  
- 既存の接続マネージャーを一覧から選択するか、**[新規作成]** をクリックして新しい接続を作成します。 選択した変更テーブルが存在する、CDC に対応した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの接続である必要があります。  
+ 既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。 選択した変更テーブルが存在する、CDC に対応した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの接続である必要があります。  
   
  **[CDC 制御操作]**  
  このタスクに対して実行する操作を選択します。 どの操作でも、状態変数を使用します。この変数は、状態を格納してパッケージ内のコンポーネント間で受け渡しする SSIS パッケージ変数に格納されます。  
   
 -   **[初期読み込みの開始をマーク]**: この操作は、スナップショットのないアクティブ データベースから初期読み込みを実行するときに使用されます。 初期読み込みパッケージの開始時に呼び出され、ソース データベースで現在の LSN を記録します。その後、初期読み込みパッケージがソース テーブルの読み取りを開始します。 この操作には、ソース データベースへの接続が必要です。  
   
-     (Oracle ではなく) [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC での作業時に **[初期読み込みの開始をマーク]** を選択した場合、接続マネージャーで指定されたユーザーは、**db_owner** か **sysadmin** である必要があります。  
+     (Oracle ではなく) **CDC での作業時に** [初期読み込みの開始をマーク] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を選択した場合、接続マネージャーで指定されたユーザーは、  **db_owner** か **sysadmin**である必要があります。  
   
 -   **[初期読み込みの終了をマーク]**: この操作は、スナップショットのないアクティブ データベースから初期読み込みを実行するときに使用されます。 初期読み込みパッケージの終了時に呼び出され、初期読み込みパッケージがソース テーブルの読み取りを終了した後で、ソース データベースで現在の LSN を記録します。 この LSN を特定するために、この操作が発生したときの時刻が記録され、CDC データベース内の `cdc.lsn_time_`マッピング テーブルに対するクエリにより、その時刻より後に行われた変更が検索されます。  
   
-     (Oracle ではなく) [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC での作業時に **[初期読み込みの終了をマーク]** を選択した場合、接続マネージャーで指定されたユーザーは、**db_owner** か **sysadmin** である必要があります。  
+     (Oracle ではなく) **CDC での作業時に** [初期読み込みの終了をマーク] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を選択した場合、接続マネージャーで指定されたユーザーは、  **db_owner** か **sysadmin**である必要があります。  
   
 -   **[CDC の開始をマーク]**: この操作は、初期読み込みがスナップショット データベースまたは休止データベースから行われるときに使用されます。 初期読み込みパッケージ内の任意のポイントで呼び出されます。 この操作は、スナップショット LSN またはスナップショット データベースの名前 (これからスナップショット LSN が動的に派生) が設定されるパラメーターを受け取ります。ただし、このパラメーターは空のままにすることもでき、その場合は、現在のデータベース LSN が変更処理パッケージの開始 LSN として使用されます。  
   
      この操作は、[初期読み込みの開始をマーク] または [初期読み込みの終了をマーク] 操作の代わりに使用されます。  
   
-     (Oracle ではなく) [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC での作業時に **[CDC の開始をマーク]** を選択した場合、接続マネージャーで指定されたユーザーは、**db_owner** か **sysadmin** である必要があります。  
+     (Oracle ではなく) **CDC での作業時に** [CDC の開始をマーク] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を選択した場合、接続マネージャーで指定されたユーザーは、  **db_owner** か **sysadmin**である必要があります。  
   
 -   **[処理範囲の取得]**: この操作は、CDC ソース データ フローを使用するデータ フローを呼び出す前に、変更処理パッケージで使用されます。 この操作は、呼び出し時に CDC ソース データ フローが読み取る LSN の範囲を設定します。 範囲は、データ フローの処理中に CDC ソースによって使用される SSIS パッケージ変数に格納されます。  
   
-     格納されるすべての種類の CDC 状態の詳細については、「[状態変数の定義](../../integration-services/data-flow/define-a-state-variable.md)」を参照してください。  
+     格納されるすべての種類の CDC 状態の詳細については、「 [状態変数の定義](../../integration-services/data-flow/define-a-state-variable.md)」を参照してください。  
   
 -   **[処理済みの範囲をマーク]**: この操作は、(CDC データ フローが正常に完了した後) CDC 実行の終了時に変更処理パッケージで使用され、CDC 実行で完全に処理された最後の LSN を記録します。 `GetProcessingRange` を次に実行する際、この位置によって次の処理範囲の開始位置が決まります。  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 10
  **[CDC 状態を含む変数]**  
  タスク操作の状態情報を格納する SSIS パッケージ変数を選択します。 始める前に、変数を定義する必要があります。 **[状態の自動保持]**を選択した場合、状態変数は自動的に読み込まれ、保存されます。  
   
- 状態変数の定義の詳細については、「[状態変数の定義](../../integration-services/data-flow/define-a-state-variable.md)」を参照してください。  
+ 状態変数の定義の詳細については、「 [状態変数の定義](../../integration-services/data-flow/define-a-state-variable.md)」を参照してください。  
   
  **[CDC/スナップショット名を開始する SQL Server LSN]:**  
  初期読み込みの実行開始位置となる、現在のソース データベース LSN またはスナップショット データベースの名前を入力し、CDC の開始位置を決定します。 **[CDC 制御操作]** が **[CDC の開始をマーク]**に設定されている場合にのみ、使用できます。  
@@ -79,7 +84,7 @@ caps.handback.revision: 10
  **[状態の自動保持]** が選択されている場合にのみ使用できます。これは必須パラメーターです。  
   
  **[状態の格納に使用するテーブル]**  
- CDC 状態の格納に使用する状態テーブルの名前を入力します。 指定するテーブルには、**name** と **state** の 2 列が必要で、両方ともデータ型が **varchar (256)** である必要があります。  
+ CDC 状態の格納に使用する状態テーブルの名前を入力します。 指定するテーブルには、 **name** と **state** の 2 列が必要で、両方ともデータ型が **varchar (256)**である必要があります。  
   
  **[新規作成]** を選択して、必要な列を備えた新しい状態テーブルを構築する SQL スクリプトを入手することもできます。 **[状態の自動保持]** が選択されている場合、開発者は前の要件に従って状態テーブルを作成する必要があります。  
   
@@ -88,7 +93,7 @@ caps.handback.revision: 10
  **[状態名]**  
  永続的な CDC 状態に関連付ける名前を入力します。 同じ CDC コンテキストを使用する完全読み込みパッケージと CDC パッケージでは、共通の状態名を指定する必要があります。 この名前は、状態テーブルで状態行を検索するために使用されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [CDC 制御タスクのカスタム プロパティ](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
   
   

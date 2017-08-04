@@ -1,32 +1,37 @@
 ---
-title: "Cast (SSIS 式) | Microsoft Docs"
-ms.custom: 
-  - "ssisdev020617"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CAST 関数"
-  - "キャスト演算子"
-  - "データ型の変換 [Integration Services]"
-  - "データ型 [Integration Services], 式"
-  - "データ型 [Integration Services]、変換"
+title: "キャスト (SSIS 式) |Microsoft ドキュメント"
+ms.custom:
+- ssisdev020617
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CAST function
+- cast operator
+- converting data types [Integration Services]
+- data types [Integration Services], expressions
+- data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 caps.latest.revision: 61
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 199dca85523f6ba2f4d53ef89e1b9a73667a6472
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# Cast (SSIS 式)
+# <a name="cast-ssis-expression"></a>Cast (SSIS 式)
   式のあるデータ型を別のデータ型に明示的に変換します。 キャスト演算子は、切り捨て演算子としても機能できます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -34,20 +39,20 @@ caps.handback.revision: 61
   
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  *type_spec*  
  有効な [!INCLUDE[ssIS](../../includes/ssis-md.md)] データ型です。  
   
  *式 (expression)*  
  有効な式です。  
   
-## 戻り値の型  
- *type_spec* のデータ型です。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
+## <a name="result-types"></a>戻り値の型  
+ *type_spec*のデータ型です。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
-## 解説  
+## <a name="remarks"></a>解説  
  次の図は、有効なキャスト演算を示しています。  
   
- ![データ型間の有効および無効なキャスト](../../integration-services/expressions/media/data-conversion.gif "データ型間の有効および無効なキャスト")  
+ ![データ型の間でキャストを有効および無効](../../integration-services/expressions/media/data-conversion.gif "データ型間の有効および無効のキャスト")  
   
  一部のデータ型にキャストする場合、パラメーターが必要となります。 次の表に、パラメーターが必要なデータ型とそのパラメーターの一覧を示します。  
   
@@ -63,13 +68,13 @@ caps.handback.revision: 61
  文字列を DT_DATE にキャストする場合、またはその逆のキャストを行う場合、変換のロケールが使用されます。 ただし、ロケール設定で ISO 形式を使用するかどうかにかかわらず、日付は YYYY-MM-DD の ISO 形式となります。  
   
 > [!NOTE]  
->  文字列を DT_DATE 以外の日付データ型に変換するには、「[Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
+>  文字列を DT_DATE 以外の日付データ型に変換するには、「 [Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
- コード ページがマルチバイト文字の場合、バイト数と文字数は異なる場合があります。 DT_WSTR データ型から同じ *charcount* 値の DT_STR データ型にキャストすると、変換された文字列で最後の文字が切り捨てられる場合があります。 変換先のテーブルの列で十分なストレージが使用できる場合、*charcount* パラメーターの値は、マルチバイト コード ページで必要となるバイト数を反映するように設定します。 たとえば、936 コード ページを使用して、文字データを DT_STR データ型にキャストする場合、データに含まれると考えられる文字数の 2 倍の値を *charcount* に設定する必要があります。また、UTF-8 コード ページを使用して文字データをキャストする場合、*charcount* は、予想される文字数の 4 倍の値に設定する必要があります。  
+ コード ページがマルチバイト文字の場合、バイト数と文字数は異なる場合があります。 DT_WSTR データ型から同じ *charcount* 値の DT_STR データ型にキャストすると、変換された文字列で最後の文字が切り捨てられる場合があります。 変換先のテーブルの列で十分なストレージが使用できる場合、 *charcount* パラメーターの値は、マルチバイト コード ページで必要となるバイト数を反映するように設定します。 たとえば、936 コード ページを使用して、文字データを DT_STR データ型にキャストする場合、データに含まれると考えられる文字数の 2 倍の値を *charcount* に設定する必要があります。また、UTF-8 コード ページを使用して文字データをキャストする場合、 *charcount* は、予想される文字数の 4 倍の値に設定する必要があります。  
   
- 日付データ型の構造の詳細については、「[Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
+ 日付データ型の構造の詳細については、「 [Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
-## SSIS 式の例  
+## <a name="ssis-expression-examples"></a>SSIS 式の例  
  この例では、数値を整数にキャストします。  
   
 ```  
@@ -100,7 +105,7 @@ caps.handback.revision: 61
 (DT_NUMERIC,7,3)4000  
 ```  
   
- この例では、**nvarchar** データ型で定義され、長さが 50 の **FirstName** 列の値を、1252 コード ページを使用して文字列にキャストします。  
+ この例では、 **nvarchar** データ型で定義され、長さが 50 の **FirstName** 列の値を、1252 コード ページを使用して文字列にキャストします。  
   
 ```  
 (DT_STR,50,1252)FirstName  
@@ -124,28 +129,28 @@ caps.handback.revision: 61
 (DT_DBDATE) "1999-10-11"  
 ```  
   
- この例では、秒の小数部に 5 桁を使用する DT_DBTIME2 データ型に文字列リテラルをキャストします  (DT_DBTIME2 データ型では、秒の小数部に 0 ～ 7 桁まで指定できます)。  
+ この例では、秒の小数部に 5 桁を使用する DT_DBTIME2 データ型に文字列リテラルをキャストします (DT_DBTIME2 データ型では、秒の小数部に 0 ～ 7 桁まで指定できます)。  
   
 ```  
 (DT_DBTIME2, 5) "16:34:52.12345"  
 ```  
   
- この例では、秒の小数部に 4 桁を使用する DT_DBTIMESTAMP2 データ型に文字列リテラルをキャストします  (DT_DBTIMESTAMP2 データ型では、秒の小数部に 0 ～ 7 桁まで指定できます)。  
+ この例では、秒の小数部に 4 桁を使用する DT_DBTIMESTAMP2 データ型に文字列リテラルをキャストします (DT_DBTIMESTAMP2 データ型では、秒の小数部に 0 ～ 7 桁まで指定できます)。  
   
 ```  
 (DT_DBTIMESTAMP2, 4) "1999-10-11 16:34:52.1234"  
 ```  
   
- この例では、秒の小数部に 7 桁を使用する DT_DBTIMESTAMPOFFSET データ型に文字列リテラルをキャストします  (DT_DBTIMESTAMPOFFSET データ型では、秒の小数部に 0 ～ 7 桁まで指定できます)。  
+ この例では、秒の小数部に 7 桁を使用する DT_DBTIMESTAMPOFFSET データ型に文字列リテラルをキャストします (DT_DBTIMESTAMPOFFSET データ型では、秒の小数部に 0 ～ 7 桁まで指定できます)。  
   
 ```  
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)   
- [Integration Services &#40;SSIS&#41; 式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
+ [演算子 & #40 です。SSIS 式 &#41;](../../integration-services/expressions/operators-ssis-expression.md)   
+ [Integration Services & #40 です。SSIS &#41;式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Integration Services 式のデータ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
   
   

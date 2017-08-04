@@ -1,36 +1,41 @@
 ---
-title: "パッケージ実行ユーティリティ (DtExecUI) の UI リファレンス | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.dtexecui.setvalues.f1"
-  - "sql13.dts.dtexecui.reporting.f1"
-  - "sql13.dts.dtexecui.datasources.f1"
-  - "sql13.dts.dtexecui.commandfiles.f1"
-  - "sql13.dts.dtexecui.logging.f1"
-  - "sql13.dts.dtexecui.general.f1"
-  - "sql13.dts.dtexecui.verification.f1"
-  - "sql13.dts.dtexecui.executionoptions.f1"
-  - "sql13.dts.dtexecui.commandline.f1"
-  - "sql13.dts.dtexecui.configuration.f1"
-helpviewer_keywords: 
-  - "DTExecUI ユーティリティ"
+title: "実行パッケージ ユーティリティ (dtexecui) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.dtexecui.setvalues.f1
+- sql13.dts.dtexecui.reporting.f1
+- sql13.dts.dtexecui.datasources.f1
+- sql13.dts.dtexecui.commandfiles.f1
+- sql13.dts.dtexecui.logging.f1
+- sql13.dts.dtexecui.general.f1
+- sql13.dts.dtexecui.verification.f1
+- sql13.dts.dtexecui.executionoptions.f1
+- sql13.dts.dtexecui.commandline.f1
+- sql13.dts.dtexecui.configuration.f1
+helpviewer_keywords:
+- DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 2be36b0dcc8c6c87b1765607ecdb337c24ba83cd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# パッケージ実行ユーティリティ (DtExecUI) の UI リファレンス
-  **[パッケージ実行ユーティリティ]** を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行できます。 このユーティリティは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のうちのいずれかに格納されているパッケージを実行できます。 このユーザー インターフェイスは、**DTExec** コマンド プロンプト ツールを使用してパッケージを実行する代わりに使用できます。これは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] から開くか、またはコマンド プロンプトで「**dtexecui**」と入力して表示します。  
+# <a name="execute-package-utility-dtexecui"></a>実行パッケージ ユーティリティ (dtexecui)
+  **[パッケージ実行ユーティリティ]** を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行できます。 このユーティリティは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のうちのいずれかに格納されているパッケージを実行できます。 このユーザー インターフェイスは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] DTExec **コマンド プロンプト ツールを使用してパッケージを実行する代わりに使用できます。これは、** から開くか、またはコマンド プロンプトで「 **dtexecui** 」と入力して表示します。  
   
  **dtexecui.exe** ユーティリティと同じ手順でパッケージを実行します。 このユーティリティは 32 ビット ツールであるため、64 ビット環境では Windows on Win32 (WOW) で実行される 64 ビット環境の **dtexecui.exe** を使用して、パッケージを実行します。 64 ビット コンピューターで dtexecui.exe ユーティリティを使用してコマンドを開発およびテストする場合、実稼働サーバー上でコマンドの配置またはスケジュール設定を行う前に、64 ビット バージョンの **dtexec.exe** を使用してコマンドのテストを 64 ビット モードで行う必要があります。  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 39
   
  **パッケージ実行ユーティリティ** は、 **DTExec** を直接実行するときに使用するコマンド ラインの作成にも使用できます。  
   
-### SQL Server Management Studio でパッケージ実行ユーティリティを開くには  
+### <a name="to-open-execute-package-utility-in-sql-server-management-studio"></a>SQL Server Management Studio でパッケージ実行ユーティリティを開くには  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[オブジェクト エクスプローラー]**をクリックします。  
   
@@ -46,27 +51,27 @@ caps.handback.revision: 39
   
 3.  **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバー名]** ボックスにサーバー名を入力し、 **[接続]**をクリックします。  
   
-4.  **[格納されたパッケージ]** フォルダーとサブフォルダーを展開し、実行するパッケージを右クリックして **[パッケージの実行]** をクリックします。  
+4.  **[格納されたパッケージ]**フォルダーとサブフォルダーを展開し、実行するパッケージを右クリックして **[パッケージの実行]**をクリックします。  
   
-### コマンド プロンプトでパッケージ実行ユーティリティを開くには  
+### <a name="to-open-the-execute-package-utility-at-the-command-prompt"></a>コマンド プロンプトでパッケージ実行ユーティリティを開くには  
   
 -   コマンド プロンプト ウィンドウで、 **dtexecui**を実行します。  
   
  ここでは、 **[パッケージ実行ユーティリティ]** ダイアログ ボックスのページについて説明します。  
   
-## [全般] ページ  
+## <a name="general-page"></a>[全般] ページ  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[全般]** ページを使用すると、パッケージの名前と場所を指定できます。  
   
- パッケージがリモート サーバーに保存されている場合でも、パッケージ実行ユーティリティ (dtexecui.exe) は常にローカル コンピューターでパッケージを実行します。 リモート パッケージがリモート サーバーに保存されている構成ファイルを使用する場合は、パッケージ実行ユーティリティが構成を見つけられない可能性があり、この場合はパッケージは失敗します。 この問題を回避するには、\\\myserver\myfile のような汎用名前付け規則 (UNC) 共有名を使用して、構成を参照するようにする必要があります。  
+ パッケージがリモート サーバーに保存されている場合でも、パッケージ実行ユーティリティ (dtexecui.exe) は常にローカル コンピューターでパッケージを実行します。 リモート パッケージがリモート サーバーに保存されている構成ファイルを使用する場合は、パッケージ実行ユーティリティが構成を見つけられない可能性があり、この場合はパッケージは失敗します。 この問題を回避するには、 \\\myserver\myfile のような汎用名前付け規則 (UNC) 共有名を使用して、構成を参照するようにする必要があります。  
   
-### 静的オプション  
+### <a name="static-options"></a>静的オプション  
  **[パッケージ ソース]**  
  以下のオプションを使用して、パッケージを実行する場所を指定します。  
   
 |||  
 |-|-|  
 |値|Description|  
-|**SQL Server**|パッケージが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に存在する場合は、このオプションを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証に使用するユーザー名とパスワードを指定します。 各ユーザー名とパスワードは、**/USER** *username* および **/PASSWORD** *password* オプションをコマンド プロンプトに追加します。|  
+|**SQL Server**|パッケージが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に存在する場合は、このオプションを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証に使用するユーザー名とパスワードを指定します。 各ユーザー名とパスワードは、 **/USER** *username* および **/PASSWORD** *password* options to the commおよび prompt.|  
 |**ファイル システム**|パッケージがファイル システムに存在する場合は、このオプションを選択します。|  
 |**[SSIS パッケージ ストア]**|パッケージが [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに存在する場合は、このオプションを選択します。|  
   
@@ -78,32 +83,32 @@ caps.handback.revision: 39
  **[閉じる]**  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスを閉じます。  
   
-### 動的オプション  
+### <a name="dynamic-options"></a>動的オプション  
   
-#### [パッケージ ソース] = [SQL Server]  
+#### <a name="package-source--sql-server"></a>[パッケージ ソース] = [SQL Server]  
  **[サーバー]**  
  パッケージが存在する場所のサーバーの名前を入力するか、一覧からサーバーを選択します。  
   
  **[サーバー ログオン]**  
- パッケージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するために、Windows 認証と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のどちらを使用するかを指定します。 より高いセキュリティのためには Windows 認証をお勧めします。 Windows 認証ではユーザー名とパスワードを指定する必要はありません。  
+ パッケージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するために、Windows 認証と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証のどちらを使用するかを指定します。 より高いセキュリティのためには Windows 認証をお勧めします。 Windows 認証ではユーザー名とパスワードを指定する必要はありません。  
   
  **[Windows 認証を使用する]**  
  Windows 認証と [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザー アカウントを使用してログオンします。  
   
  **[SQL Server 認証を使用する]**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用します。 指定されたログイン名とパスワードを使用して、信頼関係の低い接続から接続した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン アカウントが設定されているかどうか、指定されたパスワードが以前に記録されたパスワードと一致しているかどうかを確認することで認証を行います。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログイン アカウントが見つからない場合、認証は失敗し、エラー メッセージが返されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用します。 指定されたログイン名とパスワードを使用して、信頼関係の低い接続から接続した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン アカウントが設定されているかどうか、指定されたパスワードが以前に記録されたパスワードと一致しているかどうかを確認することで認証を行います。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログイン アカウントが見つからない場合、認証は失敗し、エラー メッセージが返されます。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。  
   
  **[パッケージ]**  
- パッケージ名を入力するか、参照ボタン (**[...]**) をクリックし **[SSIS パッケージの選択]** ダイアログ ボックスを使用してパッケージを検索します。  
+ パッケージ名を入力するか、参照ボタン ( **[...]** ) をクリックし **[SSIS パッケージの選択]** ダイアログ ボックスを使用してパッケージを検索します。  
   
-#### [パッケージ ソース] = [ファイル システム]  
+#### <a name="package-source--file-system"></a>[パッケージ ソース] = [ファイル システム]  
  **[パッケージ]**  
- パッケージ名を入力するか、参照ボタン (**[...]**) をクリックし [開く] ダイアログ ボックスを使用してパッケージを検索します。 既定では、.dtsx 拡張子を持つファイルのみがダイアログ ボックスに一覧表示されます。  
+ パッケージ名を入力するか、参照ボタン ( **[...]** ) をクリックし [開く] ダイアログ ボックスを使用してパッケージを検索します。 既定では、.dtsx 拡張子を持つファイルのみがダイアログ ボックスに一覧表示されます。  
   
-#### [パッケージ ソース] = [SSIS パッケージ ストア]  
+#### <a name="package-source--ssis-package-store"></a>[パッケージ ソース] = [SSIS パッケージ ストア]  
  **[サーバー]**  
  パッケージが存在する場所のコンピューターの名前を入力するか、一覧からコンピューターを選択します。  
   
@@ -114,17 +119,17 @@ caps.handback.revision: 39
  Windows 認証と Microsoft Windows ユーザー アカウントを使用してログオンします。  
   
  **[SQL Server 認証を使用する]**  
- **[SSIS パッケージ ストア]** に格納されているパッケージを実行する場合は、このオプションは使用できません。  
+ **[SSIS パッケージ ストア]**に格納されているパッケージを実行する場合は、このオプションは使用できません。  
   
  **[パッケージ]**  
- パッケージ名を入力するか、参照ボタン (**[...]**) をクリックし **[SSIS パッケージの選択]** ダイアログ ボックスを使用してパッケージを検索します。  
+ パッケージ名を入力するか、参照ボタン ( **[...]** ) をクリックし **[SSIS パッケージの選択]** ダイアログ ボックスを使用してパッケージを検索します。  
   
-## [構成] ページ  
+## <a name="configurations-page"></a>[構成] ページ  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[構成]** ページを使用すると、実行時に読み込む構成ファイルの選択と、読み込む順序の指定ができます。  
   
-### オプション  
+### <a name="options"></a>オプション  
  **[構成ファイル]**  
- パッケージが使用する構成を一覧表示します。 構成ファイルごとに、**/CONFIGFILE filename** オプションがコマンド プロンプトに追加されます。  
+ パッケージが使用する構成を一覧表示します。 構成ファイルごとに、 **/CONFIGFILE filename** オプションがコマンド プロンプトに追加されます。  
   
  **方向キー**  
  一覧で構成ファイルを選択し、右側にある方向キーを使用して読み込み順序を変更します。 構成は、一覧の一番上から順に読み込まれます。  
@@ -136,7 +141,7 @@ caps.handback.revision: 39
  **[開く]** ダイアログ ボックスを使用して、構成を追加します。 既定では、.dtsconfig 拡張子を持つファイルのみがダイアログ ボックスに一覧表示されます。  
   
  **[削除]**  
- 一覧で構成を選択し、次に **[削除]** をクリックします。  
+ 一覧で構成を選択し、次に **[削除]**をクリックします。  
   
  **Execute**  
  パッケージを実行します。  
@@ -144,11 +149,11 @@ caps.handback.revision: 39
  **[閉じる]**  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスを閉じます。  
   
-## [コマンド ファイル] ページ  
+## <a name="command-files-page"></a>[コマンド ファイル] ページ  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[コマンド ファイル]** ページを使用すると、実行時に読み込むコマンド ファイルを選択できます。  
   
-### オプション  
- **[コマンド ファイル]**  
+### <a name="options"></a>オプション  
+ **Command files**  
  パッケージが使用するコマンド ファイルを一覧表示します。 パッケージは、複数のファイルを使用してコマンド ライン オプションを設定できます。  
   
  **方向キー**  
@@ -158,7 +163,7 @@ caps.handback.revision: 39
  **[開く]** ダイアログ ボックスを使用して、コマンド ファイルを追加します。  
   
  **[削除]**  
- テキスト ボックスでコマンド ファイルを選択し、**[削除]** ボタンを使用して削除します。  
+ テキスト ボックスでコマンド ファイルを選択し、 **[削除]** ボタンを使用して削除します。  
   
  **Execute**  
  パッケージを実行します。  
@@ -166,17 +171,17 @@ caps.handback.revision: 39
  **[閉じる]**  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスを閉じます。  
   
-## [接続マネージャー] ページ  
+## <a name="connection-managers-page"></a>[接続マネージャー] ページ  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、パッケージで使用する接続マネージャーの接続文字列を編集できます。  
   
-### オプション  
+### <a name="options"></a>オプション  
  **接続マネージャー**  
- チェック ボックスをオンにすると、**[接続文字列]** 列が編集可能になります。  
+ チェック ボックスをオンにすると、 **[接続文字列]** 列が編集可能になります。  
   
  **Description**  
  それぞれの接続マネージャーの説明を表示します。 説明は編集できません。  
   
- **接続文字列**  
+ **[接続文字列]**  
  接続マネージャーの接続文字列を編集します。 このフィールドは、 **[接続マネージャー]** チェック ボックスがオンの場合にのみ編集できます。  
   
  **Execute**  
@@ -185,10 +190,10 @@ caps.handback.revision: 39
  **[閉じる]**  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスを閉じます。  
   
-## [実行オプション] ページ  
+## <a name="execution-options-page"></a>[実行オプション] ページ  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[実行オプション]** ページを使用すると、パッケージの実行時オプションを指定できます。  
   
-### オプション  
+### <a name="options"></a>オプション  
  **[検証時に警告が発生したらパッケージを失敗とする]**  
  検証時に警告が発生した場合に、パッケージを失敗させるかどうかを示します。  
   
@@ -205,7 +210,7 @@ caps.handback.revision: 39
  パッケージのチェックポイントが有効な場合、使用されるパッケージのチェックポイント ファイルを一覧表示します。  
   
  **参照**  
- パッケージのチェックポイントが有効な場合、参照ボタン (**[...]**) をクリックし、**[開く]** ダイアログ ボックスを使用してチェックポイント ファイルを探します。 チェックポイント ファイルが既に指定されている場合、選択したファイルで置き換えられます。  
+ パッケージのチェックポイントが有効な場合、参照ボタン ( **[...]** ) をクリックし、 **[開く]** ダイアログ ボックスを使用してチェックポイント ファイルを探します。 チェックポイント ファイルが既に指定されている場合、選択したファイルで置き換えられます。  
   
  **[再開オプションを上書きする]**  
  パッケージのチェックポイントが有効な場合、再開オプションを上書きするかどうかを示します。  
@@ -219,10 +224,10 @@ caps.handback.revision: 39
  **[閉じる]**  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスを閉じます。  
   
-## [レポート] ページ  
+## <a name="reporting-page"></a>[レポート] ページ  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[レポート]** ページを使用すると、パッケージを実行したときにコンソールのログに記録する、イベントとパッケージに関する情報を指定できます。  
   
-### オプション  
+### <a name="options"></a>オプション  
  **[コンソールのイベント]**  
  レポートに記録するイベントとメッセージの種類を指定します。  
   
@@ -280,10 +285,10 @@ caps.handback.revision: 39
  **[閉じる]**  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスを閉じます。  
   
-## [ログ記録] ページ  
- **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[ログ記録]** ページを使用すると、ログ プロバイダーの実行時にパッケージを利用できます。 パッケージのログ プロバイダーの種類とログに接続するための接続文字列を指定します。 ログ プロバイダーのエントリごとに、**/LOGGER***classid* オプションがコマンド プロンプトに追加されます。  
+## <a name="logging-page"></a>[ログ記録] ページ  
+ **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[ログ記録]** ページを使用すると、ログ プロバイダーの実行時にパッケージを利用できます。 パッケージのログ プロバイダーの種類とログに接続するための接続文字列を指定します。 ログ プロバイダーのエントリごとに、 **/LOGGER***classid* オプションがコマンド プロンプトに追加されます。  
   
-### オプション  
+### <a name="options"></a>オプション  
  **[ログ プロバイダー]**  
  一覧からログ プロバイダーを選択します。  
   
@@ -299,10 +304,10 @@ caps.handback.revision: 39
  **[閉じる]**  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスを閉じます。  
   
-## [値の設定] ページ  
+## <a name="set-values-page"></a>[値の設定] ページ  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[値の設定]** ページを使用すると、プロパティのパスと値を入力することにより、パッケージ、実行可能ファイル、接続、変数、およびログ プロバイダーのプロパティ値を設定できます。 パスのエントリごとに、コマンド プロンプトに **/SET***propertypath;value* オプションが追加されます。  
   
-### オプション  
+### <a name="options"></a>オプション  
  **[プロパティのパス]**  
  プロパティのパスを入力します。 パスの構文では、円記号 (\\) を使用して続くアイテムがコンテナーであることを示し、ピリオド (.) を使用して続くアイテムがプロパティであることを示します。また、角かっこはコレクションのメンバーを示します。 メンバーは、インデックスまたは名前で識別できます。 たとえば、パッケージ変数のプロパティのパスは、「\Package.Variables[MyVariable].Value」です。  
   
@@ -318,10 +323,10 @@ caps.handback.revision: 39
  **[閉じる]**  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスを閉じます。  
   
-## [検証] ページ  
+## <a name="verification-page"></a>[検証] ページ  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[検証]** ページを使用すると、パッケージを検証するための条件を設定できます。  
   
-### オプション  
+### <a name="options"></a>オプション  
  **[署名付きパッケージのみ実行する]**  
  署名されたパッケージのみ実行します。  
   
@@ -349,17 +354,17 @@ caps.handback.revision: 39
  **[閉じる]**  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスを閉じます。  
   
-## [コマンド ライン] ページ  
+## <a name="command-line-page"></a>[コマンド ライン] ページ  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[コマンド ライン]** ノードを使用すると、さまざまなダイアログ ボックスで作成されたオプションを使用して生成されたコマンド ラインを編集できます。  
   
-### オプション  
+### <a name="options"></a>オプション  
  **[元のオプションを復元する]**  
  コマンド ラインを元の状態に復元します。 **[コマンド ラインを手動で編集する]** オプションを使用して変更してから、元のコマンド ライン オプションを復元する場合は、このオプションを使用します。  
   
  **[コマンド ラインを手動で編集する]**  
  **[コマンド ライン]** テキスト ボックスのコマンド ラインを編集します。  
   
- **コマンド ライン**  
+ **Command line**  
  現在のコマンド ラインを表示します。 コマンド ラインを手動で編集するためにこのオプションを選択した場合に編集可能です。  
   
  **Execute**  
@@ -368,7 +373,7 @@ caps.handback.revision: 39
  **[閉じる]**  
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスを閉じます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md)  
   
   

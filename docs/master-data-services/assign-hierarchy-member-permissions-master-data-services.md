@@ -1,43 +1,48 @@
 ---
-title: "階層メンバーの権限を割り当てる (マスター データ サービス) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "権限 [マスター データ サービス]、メンバー権限の割り当て"
-  - "メンバー [マスター データ サービス]、権限の割り当て"
+title: "階層メンバー権限 (Master Data Services) を割り当てる |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Master Data Services], assigning member permissions
+- members [Master Data Services], assigning permissions
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7a7e6cafe48506446396b83200d4d2343aa7949
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# 階層メンバーの権限を割り当てる (マスター データ サービス)
-  階層メンバーに権限を割り当てて、[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]の **[エクスプローラー]** 機能領域にあるデータを表示するためのアクセス権をユーザーまたはグループに付与します。  
+# <a name="assign-hierarchy-member-permissions-master-data-services"></a>階層メンバーの権限を割り当てる (マスター データ サービス)
+  階層メンバーに権限を割り当てて、 **の** [エクスプローラー] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]機能領域にあるデータを表示するためのアクセス権をユーザーまたはグループに付与します。  
   
  階層メンバーの権限はオプションです。 階層メンバーの権限は、必須であるモデル オブジェクトの権限に粒度を追加します。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
   
 -   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
-### 階層メンバーの権限を割り当てるには  
+### <a name="to-assign-hierarchy-member-permissions"></a>階層メンバーの権限を割り当てるには  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]**をクリックします。  
   
 2.  **[ユーザー]** または **[グループ]** ページで、編集するユーザーまたはグループの行を選択します。  
   
-3.  **[選択したユーザーの編集]** をクリックします。  
+3.  **[選択したユーザーの編集]**をクリックします。  
   
 4.  **[階層メンバー]** タブをクリックします。  
   
@@ -51,16 +56,16 @@ caps.handback.revision: 7
   
 9. ツリーを展開して、権限を割り当てる階層ノードをクリックします。  
   
-10. メニューから、**作成**、**読み取り、更新**、および**削除**権限の組み合わせ、または**拒否**権限を選択します。  
+10. メニューから、 **作成**、 **読み取り、更新** 、および **削除** 権限の組み合わせ、または **拒否** 権限を選択します。  
   
 11. **[保存]**をクリックします。  
   
     > [!NOTE]  
     >  階層メンバーの権限は、すぐには有効になりません。 詳細については、「[メンバー権限を直ちに適用する (マスター データ サービス)](../master-data-services/immediately-apply-member-permissions-master-data-services.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [階層メンバーの権限を削除する (マスター データ サービス)](../master-data-services/delete-hierarchy-member-permissions-master-data-services.md)   
- [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [階層メンバーの権限 (マスター データ サービス)](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
+ [モデル オブジェクト権限を割り当てる & #40 です。マスター データ サービス &#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [階層メンバーの権限 & #40 です。マスター データ サービス &#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

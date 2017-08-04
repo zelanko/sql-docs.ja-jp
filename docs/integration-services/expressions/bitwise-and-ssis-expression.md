@@ -1,31 +1,36 @@
 ---
-title: "&amp; (ビット演算 AND) (SSIS 式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ビットごとの AND"
-  - "& (ビット演算 AND)"
-  - "ビット演算 AND (&)"
+title: "&amp;(ビット演算 AND)(SSIS 式) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- AND, bitwise AND
+- '& (bitwise AND)'
+- bitwise AND (&)
 ms.assetid: 06d2958e-66a5-44d8-8bc4-56209ebe1ff2
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d5dad9457bbafe0218c1e71358d2c9c445f79a8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# &amp; (ビット演算 AND) (SSIS 式)
+# <a name="amp-bitwise-and-ssis-expression"></a>&amp;(ビット演算 AND)(SSIS 式)
   2 つの整数値の AND 演算をビット単位で実行します。 最初のオペランドの各ビットを 2 番目のオペランドの対応するビットと比較します。 両方のビットが 1 の場合、対応する結果ビットは 1 に設定されます。 それ以外の場合、対応する結果ビットは 0 に設定されます。  
   
  条件はいずれも符号付き整数型であるか、いずれも符号なし整数型である必要があります。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -33,18 +38,18 @@ integer_expression1 & integer_expression2
   
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  *integer_expression1、integer_ expression2*  
  符号付きまたは符号なし整数データ型の任意の有効な式です。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
-## 戻り値の型  
- 2 つの引数のデータ型によって決まります。 詳細については、「[式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」を参照してください。  
+## <a name="result-types"></a>戻り値の型  
+ 2 つの引数のデータ型によって決まります。 詳しくは、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」をご覧ください。  
   
-## 解説  
+## <a name="remarks"></a>解説  
  条件のいずれかが NULL の場合、式の結果は NULL になります。  
   
-## 式の例  
- この例では、列 **NumberA** と **NumberB** の間でビット演算子 AND を実行します。 列 **NumberA** には 3 (0000011) が含まれ、列 **NumberB** には 7 (00000111) が含まれています。  
+## <a name="expression-examples"></a>式の例  
+ この例では、列 **NumberA** と **NumberB**の間でビット演算子 AND を実行します。 列**NumberA** には 3 (0000011) が含まれ、列 **NumberB** には 7 (00000111) が含まれています。  
   
 ```  
 NumberA & NumberB  
@@ -92,9 +97,9 @@ ReorderPoint & SafetyStockLevel
   
  00000001  
   
-## 参照  
- [&& (論理 AND) (SSIS 式)](../../integration-services/expressions/logical-and-ssis-expression.md)   
+## <a name="see-also"></a>参照  
+ [& & & #40 です。論理 AND &#41;& #40 です。SSIS 式 &#41;](../../integration-services/expressions/logical-and-ssis-expression.md)   
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [演算子 (SSIS 式)](../../integration-services/expressions/operators-ssis-expression.md)  
+ [演算子 &#40; です。SSIS 式と &#41; です。](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

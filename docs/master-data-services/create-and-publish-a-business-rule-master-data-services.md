@@ -1,36 +1,41 @@
 ---
-title: "ビジネス ルールを作成しパブリッシュする (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ビジネス ルール [マスター データ サービス]、作成"
-  - "ビジネス ルールの作成 [マスター データ サービス]"
+title: "作成およびパブリッシュするビジネス ルール (マスター データ サービス) |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business rules [Master Data Services], creating
+- creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 caps.latest.revision: 14
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b8ea50a2feb5c35e431422c1786d7731bf97d8fb
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# ビジネス ルールを作成しパブリッシュする (マスター データ サービス)
+# <a name="create-and-publish-a-business-rule-master-data-services"></a>ビジネス ルールを作成しパブリッシュする (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、マスター データの精度を保証するためにビジネス ルールを作成します。 ルールを作成した後、データに適用する前に、そのルールをパブリッシュする必要があります。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
 -   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
-### ビジネス ルールを作成してパブリッシュするには  
+### <a name="to-create-and-publish-a-business-rule"></a>ビジネス ルールを作成してパブリッシュするには  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 14
   
 4.  **[エンティティ]** ドロップダウン リストから、エンティティを選択します。  
   
-5.  **[メンバーの種類]** ドロップダウン リストから、適用するビジネス ルールのメンバーの種類を選択します。  
+5.  **[メンバーの種類]** ボックスの一覧から、適用するビジネス ルールのメンバーの種類を選択します。  
   
 6.  **[追加]**をクリックします。  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 14
   
 8.  必要に応じて、 **[説明]** フィールドに、ビジネス ルールの説明を入力します。  
   
-9. 必要に応じて、**[通知を送信する]** オプションをオンにして、ドロップダウン リストから、電子メール通知を送信するユーザーまたはグループを選択します。  
+9. 必要に応じて、 **[通知を送信する]** オプションをオンにして、ドロップダウン リストから、電子メール通知を送信するユーザーまたはグループを選択します。  
   
     > [!NOTE]  
     >  通知は、検証アクションを含むルールに対してのみ送信されます。  
@@ -64,9 +69,9 @@ caps.handback.revision: 14
 14. **[保存]** ボタンをクリックします。 新しい行が **If** グリッドに追加されます。  
   
     > [!TIP]  
-    >  ビジネス ルールからアイテムを削除するには、各項目を右クリックして **[削除]** をクリックします。  
+    >  ビジネス ルールからアイテムを削除するには、各項目を右クリックして **[削除]**をクリックします。  
   
-15. オプションで、ビジネス ルールに複数の条件を追加します。 詳細については、「[ビジネス ルールに複数の条件を追加する (マスター データ サービス)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)」を参照してください。  
+15. オプションで、ビジネス ルールに複数の条件を追加します。 詳細については、「 [ビジネス ルールに複数の条件を追加する (マスター データ サービス)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)」を参照してください。  
   
 16. **Then** ブロックの下で **[追加]** をクリックします。 パネルが表示されます。  
   
@@ -96,29 +101,29 @@ caps.handback.revision: 14
   
 24. 確認のダイアログ ボックスで **[OK]**をクリックします。 **[ビジネス ルールの状態]** 列の値は **[アクティブ]**です。  
   
-## グリッド列  
+## <a name="grid-columns"></a>グリッド列  
  作成されたビジネス ルールごとに、6 列の行がグリッドに追加されます。 次の列が追加されます。  
   
-|名前|Description|  
+|[名前]|[説明]|  
 |----------|-----------------|  
 |[状態]|**[保存]** をクリックすると、ビジネス ルールが更新中であることを示す次のイメージが表示されます。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> ビジネス ルールの作成または編集中にエラーが発生すると、次のイメージが表示されます。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 適切な状態の場合は、次のイメージが表示されます。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
-|[名前]|ビジネス ルール名。|  
-|Description|ビジネス ルールの説明。|  
+|名前|ビジネス ルール名。|  
+|[説明]|ビジネス ルールの説明。|  
 |[ビジネス ルールの状態]|次のビジネス ルールの状態のいずれか: ルール未定義、アクティブ、除外、保留中の変更、保留中の実行、保留中の削除。|  
 |除外|ビジネス ルールを除外するかどうかを指定します。|  
 |Notification|電子メール通知を送信するユーザーまたはグループを指定します。|  
   
-## 次の手順  
+## <a name="next-steps"></a>次の手順  
   
 -   以下のいずれかの手順でビジネス ルールをデータに適用します。  
   
     -   [ビジネス ルールに対して特定のメンバーを検証する (マスター データ サービス)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [ビジネス ルール &#40; に対してバージョンを検証します。マスター データ サービス &#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [通知を送信するようにビジネス ルールを構成する (マスター データ サービス)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
- [ビジネス ルールの名前を変更する (マスター データ サービス)](../master-data-services/change-a-business-rule-name-master-data-services.md)   
- [ビジネス ルールに複数の条件を追加する (マスター データ サービス)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
+ [ビジネス ルールの名前 &#40; を変更します。マスター データ サービス &#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
+ [ビジネス ルール &#40; に複数の条件を追加します。マスター データ サービス &#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
   
   

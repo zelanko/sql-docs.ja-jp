@@ -1,29 +1,34 @@
 ---
-title: "ファイル属性を作成する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ファイル属性の作成 [マスター データ サービス]"
-  - "属性 [マスター データ サービス], ファイル属性の作成"
+title: "ファイル属性 (マスター データ サービス) を作成 |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating file attributes [Master Data Services]
+- attributes [Master Data Services], creating file attributes
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: edacb4f71f1cb154ebdf2c01fb614e69f0a64713
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# ファイル属性を作成する (マスター データ サービス)
+# <a name="create-a-file-attribute-master-data-services"></a>ファイル属性を作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でファイル属性を作成して、ファイルで属性値を設定します。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -32,12 +37,12 @@ caps.handback.revision: 8
   
 -   属性を作成するエンティティが存在する必要があります。 詳細については、「[エンティティを作成する (マスター データ サービス)](../master-data-services/create-an-entity-master-data-services.md)」を参照してください。  
   
-## 属性情報  
+## <a name="attribute-information"></a>属性情報  
  作成された属性ごとに、7 列の行がグリッドに追加されます。 次の表で各列について説明します。  
   
 |列|Description|  
 |------------|-----------------|  
-|状態|属性の状態。<br /><br /> [保存] をクリックしたときに表示される ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") 画像は、属性が更新中であることを示します。<br /><br /> 属性を作成または編集中にエラーが発生すると、![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status") 画像が表示されます。<br /><br /> それ以外の場合は正常な状態であり、![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") 画像が表示されます。|  
+|状態|属性の状態。<br /><br /> 保存をクリックすると、![ステータスの更新のアイコン](../master-data-services/media/mds-statusicon-updating.png "ステータスの更新のアイコン")イメージ属性を更新していることを示すが表示されます。<br /><br /> 作成または属性を編集するときにエラーがある場合、![のエラー状態をアイコン](../master-data-services/media/mds-statusicon-error.png "のエラー状態をアイコン")イメージが表示されます。<br /><br /> 状態が [ok] をそれ以外の場合、および![OK ステータス アイコン](../master-data-services/media/mds-statusicon-ok.png "OK ステータス アイコン")イメージが表示されます。|  
 |名前|属性名です。|  
 |表示名|属性の表示名。|  
 |Description|属性の説明。|  
@@ -55,7 +60,7 @@ caps.handback.revision: 8
   
 -   **更新日時**: 属性が最後に更新された日時。  
   
-### ファイル属性を作成するには  
+### <a name="to-create-a-file-attribute"></a>ファイル属性を作成するには  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
   
@@ -87,10 +92,10 @@ caps.handback.revision: 8
   
 12. **[保存]**をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)   
- [属性名とデータ型を変更する (マスター データ サービス)](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [ドメイン ベースの属性を作成する (マスター データ サービス)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [テキスト属性を作成する (マスター データ サービス)](../master-data-services/create-a-text-attribute-master-data-services.md)  
+ [属性名とデータ型 &#40; を変更します。マスター データ サービス &#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [ドメイン ベースの属性 &#40; を作成します。マスター データ サービス &#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [テキスト属性 &#40; を作成します。マスター データ サービス &#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
   

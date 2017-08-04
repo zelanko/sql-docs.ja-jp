@@ -1,36 +1,41 @@
 ---
-title: "[集計変換エディター] ([集計] タブ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.aggregationtransformation.aggregations.f1"
-helpviewer_keywords: 
-  - "集計変換エディター"
+title: "集計変換エディター (集計 タブ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.aggregationtransformation.aggregations.f1
+helpviewer_keywords:
+- Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6e7bf78662f021ae3c6ff776635035feea985b12
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# [集計変換エディター] ([集計] タブ)
+# <a name="aggregate-transformation-editor-aggregations-tab"></a>[集計変換エディター] ([集計] タブ)
   **[集計変換エディター]** ダイアログ ボックスの **[集計]** タブを使用すると、集計列および集計プロパティを指定できます。 複数の集計を適用することができます。 この変換ではエラー出力を生成しません。  
   
 > [!NOTE]  
->  キーの数、キー スケール、個別のキーの数、個別のキー スケールのオプションは、**[詳細設定]** タブで指定した場合はコンポーネント レベル、**[集計]** タブの [詳細設定] 画面で指定した場合は出力レベル、**[集計]** タブの下部にある列の一覧で指定した場合は列レベルで適用されます。  
+>  キーの数、キー スケール、個別のキーの数、個別のキー スケールのオプションは、 **[詳細設定]** タブで指定した場合はコンポーネント レベル、 **[集計]** タブの [詳細設定] 画面で指定した場合は出力レベル、 **[集計]** タブの下部にある列の一覧で指定した場合は列レベルで適用されます。  
 >   
->  集計変換では、**[キー]** および **[キー スケール]** は、**グループ化**操作の結果として予想されるグループの数を示します。 **[個別カウント キー数]** および **[個別カウント スケール]** は、**個別のカウント**操作の結果として予想される個別の値の数を示します。  
+>  集計変換では、 **[キー]** および **[キー スケール]** は、 **グループ化** 操作の結果として予想されるグループの数を示します。 **[個別カウント キー数]** および **[個別カウント スケール]** は、 **個別のカウント** 操作の結果として予想される個別の値の数を示します。  
   
- 集計変換の詳細については、「[集計変換](../../../integration-services/data-flow/transformations/aggregate-transformation.md)」を参照してください。  
+ 集計変換の詳細については、「 [集計変換](../../../integration-services/data-flow/transformations/aggregate-transformation.md)」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[詳細設定]/[基本]**  
  複数の出力用に複数の集計を構成するオプションを表示したり非表示にしたりします。 既定では、[詳細設定] オプションは非表示です。  
   
@@ -38,22 +43,22 @@ caps.handback.revision: 30
  [詳細設定] 画面で、集計の表示名を入力します。  
   
  **[グループ化列]**  
- [詳細設定] 画面で、後で説明するように、**[使用できる入力列]** リストを使用してグループ化する列を選択します。  
+ [詳細設定] 画面で、後で説明するように、 **[使用できる入力列]** リストを使用してグループ化する列を選択します。  
   
  **[キー スケール]**  
- [詳細設定] 画面で、集計によって書き込むことのできるキーの概数をオプションで指定します。 既定では、このオプションの値は **[未指定]** です。 **[キー スケール]** プロパティと **[キー]** プロパティの両方が設定されている場合、**[キー]** の値が優先されます。  
+ [詳細設定] 画面で、集計によって書き込むことのできるキーの概数をオプションで指定します。 既定では、このオプションの値は **[未指定]**です。 **[キー スケール]** プロパティと **[キー]** プロパティの両方が設定されている場合、 **[キー]** の値が優先されます。  
   
 |値|Description|  
 |-----------|-----------------|  
-|指定なし|[キー スケール] プロパティは使用されません。|  
+|[未指定]|[キー スケール] プロパティは使用されません。|  
 |Low|集計では約 500,000 キーを書き込むことができます。|  
 |Medium|集計では約 5,000,000 キーを書き込むことができます。|  
 |High|集計では 25,000,000 を超えるキーを書き込むことができます。|  
   
  **[キー]**  
- [詳細設定] 画面で、集計によって書き込むことのできる正確なキーの数をオプションで指定します。 **[キー スケール]** と **[キー]** の両方が指定されている場合、**[キー]** が優先されます。  
+ [詳細設定] 画面で、集計によって書き込むことのできる正確なキーの数をオプションで指定します。 **[キー スケール]** と **[キー]** の両方が指定されている場合、 **[キー]** が優先されます。  
   
- **使用できる入力列**  
+ **[使用できる入力列]**  
  このテーブルのチェック ボックスを使用して、使用できる入力列の一覧から選択します。  
   
  **入力列**  
@@ -76,24 +81,24 @@ caps.handback.revision: 30
 |**[最大]**|グループ内の最大値を返します。 numeric データ型に制限されます。|  
   
  **[比較フラグ]**  
- **[グループ化]** を選択する場合、チェック ボックスを使用して、変換により比較がどのように実行されるかを制御します。 文字列比較オプションについては、「[文字列データの比較](../../../integration-services/data-flow/comparing-string-data.md)」を参照してください。  
+ **[グループ化]**を選択する場合、チェック ボックスを使用して、変換により比較がどのように実行されるかを制御します。 文字列比較オプションについては、「 [文字列データの比較](../../../integration-services/data-flow/comparing-string-data.md)」を参照してください。  
   
- **[個別カウント スケール]**  
- 集計で書き込むことのできる個別の値の概数をオプションで指定します。 既定では、このオプションの値は **[未指定]** です。 **[CountDistinctScale]** および **[CountDistinctKeys]** の両方が指定されている場合、**[CountDistinctKeys]** が優先されます。  
+ **Count Distinct Scale**  
+ 集計で書き込むことのできる個別の値の概数をオプションで指定します。 既定では、このオプションの値は **[未指定]**です。 **[CountDistinctScale]** および **[CountDistinctKeys]** の両方が指定されている場合、 **[CountDistinctKeys]** が優先されます。  
   
 |値|Description|  
 |-----------|-----------------|  
-|指定なし|**CountDistinctScale** プロパティは使用されません。|  
+|[未指定]|**CountDistinctScale** プロパティは使用されません。|  
 |Low|集計では約 500,000 の個別の値を書き込むことができます。|  
 |Medium|集計では約 5,000,000 の個別の値を書き込むことができます。|  
 |High|集計では 25,000,000 を超える個別の値を書き込むことができます。|  
   
- **[個別カウント キー数]**  
- 集計によって書き込むことのできる個別の値の正確な数をオプションで指定します。 **[CountDistinctScale]** および **[CountDistinctKeys]** の両方が指定されている場合、**[CountDistinctKeys]** が優先されます。  
+ **Count Distinct Keys**  
+ 集計によって書き込むことのできる個別の値の正確な数をオプションで指定します。 **[CountDistinctScale]** および **[CountDistinctKeys]** の両方が指定されている場合、 **[CountDistinctKeys]** が優先されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../../integration-services/integration-services-error-and-message-reference.md)   
- [[集計変換エディター] &#40;[詳細設定] タブ&#41;](../Topic/Aggregate%20Transformation%20Editor%20\(Advanced%20Tab\).md)   
- [集計変換を使用してデータセットの値を集計する](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+ [集計変換エディターと &#40; です。詳細設定 タブと &#41; です。](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-advanced-tab.md)   
+ [集計変換を使用して、データセットの集計値](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

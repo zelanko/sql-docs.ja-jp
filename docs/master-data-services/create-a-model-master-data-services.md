@@ -1,36 +1,41 @@
 ---
-title: "モデルを作成する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "モデル [マスター データ サービス], モデルの作成"
-  - "モデルの作成 [マスター データ サービス]"
+title: "モデル (Master Data Services) を作成 |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- models [Master Data Services], creating models
+- creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1791558cec3999d3a038bc3b651cd3c8edbd307d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# モデルを作成する (マスター データ サービス)
+# <a name="create-a-model-master-data-services"></a>モデルを作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデルを作成してモデル オブジェクトを含めます。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
 -   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
-### モデルを作成するには  
+### <a name="to-create-a-model"></a>モデルを作成するには  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 13
   
  作成されたモデルごとに、8 列の行がグリッドに追加されます。 8 つの列は次のとおりです。  
   
--   **[状態]**: モデルの状態。 **[モデルの保存]** ボタンをクリックすると、モデルが更新されていることを示す ![Updating](../master-data-services/media/mds-model-status-updating.png "Updating") 画像が表示されます。 モデルを作成または編集中にエラーが発生すると、![Error](../master-data-services/media/mds-model-status-error.png "Error") 画像が表示されます。 それ以外の場合は正常な状態であり、![OK](../master-data-services/media/mds-model-status-ok.png "OK") 画像が表示されます。  
+-   **[状態]**: モデルの状態。 クリックすると、**保存モデル** ボタン、![更新](../master-data-services/media/mds-model-status-updating.png "更新")イメージを表示すると、モデルが更新中であることを示します。 作成または、モデルを編集するときにエラーがある場合、![エラー](../master-data-services/media/mds-model-status-error.png "エラー")イメージが表示されます。 それ以外の場合は正常な状態であり、 ![[OK]](../master-data-services/media/mds-model-status-ok.png "[OK]") 画像が表示されます。  
   
 -   **[名前]**: モデル名。  
   
@@ -68,15 +73,15 @@ caps.handback.revision: 13
   
 -   **[Updated Date and Time]**(更新日時): モデルが最後に更新された日時。  
   
-## 次の手順  
+## <a name="next-steps"></a>次の手順  
   
 -   [エンティティを作成する (マスター データ サービス)](../master-data-services/create-an-entity-master-data-services.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [モデル (マスター データ サービス)](../master-data-services/models-master-data-services.md)   
- [エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)   
- [モデルを削除する (マスター データ サービス)](../master-data-services/delete-a-model-master-data-services.md)   
- [モデルを編集する (マスター データ サービス)](../master-data-services/edit-model-master-data-services.md)   
+ [エンティティと #40 です。マスター データ サービス &#41;](../master-data-services/entities-master-data-services.md)   
+ [モデルと #40; を削除します。マスター データ サービスと #41 です。](../master-data-services/delete-a-model-master-data-services.md)   
+ [編集モデル & #40 です。マスター データ サービス &#41;](../master-data-services/edit-model-master-data-services.md)   
  [トランザクション (マスター データ サービス)](../master-data-services/transactions-master-data-services.md)  
   
   

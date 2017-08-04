@@ -1,24 +1,29 @@
 ---
-title: "[キャッシュ変換エディター] ([マッピング] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.cachetransmap.f1"
+title: "キャッシュ変換エディター (マッピング ページ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.cachetransmap.f1
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 778b7cbcc861b9bdee2c027e5d7d85220b913072
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# [キャッシュ変換エディター] ([マッピング] ページ)
+# <a name="cache-transformation-editor-mappings-page"></a>[キャッシュ変換エディター] ([マッピング] ページ)
   **[キャッシュ変換エディター]** の **[マッピング]** ページを使用して、キャッシュ変換の入力列をキャッシュ変換マネージャーの変換先列にマップします。  
   
 > [!NOTE]  
@@ -28,7 +33,7 @@ caps.handback.revision: 16
   
  キャッシュ接続マネージャーの詳細については、「 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **使用できる入力列**  
  使用できる入力列の一覧を表示します。 ドラッグ アンド ドロップ操作により、使用できる入力列を変換先列にマップします。  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 16
  **変換先列**  
  利用可能な各変換先列を表示します。  
   
-## 参照  
- [[キャッシュ変換エディター] &#40;[接続マネージャー] ページ&#41;](../Topic/Cache%20Transformation%20Editor%20\(Connection%20Manager%20Page\).md)  
+## <a name="see-also"></a>参照  
+ [[キャッシュ変換エディター] &#40;[接続マネージャー] ページ&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md)  
   
   

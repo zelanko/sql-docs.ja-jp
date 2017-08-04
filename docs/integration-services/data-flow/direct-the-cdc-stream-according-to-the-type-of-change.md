@@ -1,27 +1,32 @@
 ---
-title: "変更の種類に応じた CDC ストリームのダイレクト | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "変更の種類に応じて CDC ストリームのダイレクト |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c520920a94c6c53a577953b313837aee0f7d584
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# 変更の種類に応じた CDC ストリームのダイレクト
+# <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>変更の種類に応じた CDC ストリームのダイレクト
   CDC スプリッター変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの CDC ソースが含まれている必要があります。  
   
- パッケージに追加する CDC ソースでは、NetCDC 処理モードが選択されている必要があります。 処理モードの選択の詳細については、[「CDC ソース エディター ([接続マネージャー] ページ)」](../Topic/CDC%20Source%20Editor%20\(Connection%20Manager%20Page\).md) を参照してください。  
+ パッケージに追加する CDC ソースでは、NetCDC 処理モードが選択されている必要があります。 処理モードの選択の詳細については、[「CDC ソース エディター ([接続マネージャー] ページ)」](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md) を参照してください。  
   
-### 変更の種類に応じて CDC ストリームをダイレクトするには  
+### <a name="to-direct-the-cdc-stream-according-to-the-type-of-change"></a>変更の種類に応じて CDC ストリームをダイレクトするには  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] プロジェクトを開きます。  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 8
   
      CDC スプリッターの使用方法の詳細については、「Microsoft SQL Server Integration Services の CDC コンポーネント」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [CDC スプリッター](../../integration-services/data-flow/cdc-splitter.md)  
   
   

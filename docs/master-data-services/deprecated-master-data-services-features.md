@@ -1,25 +1,30 @@
 ---
-title: "非推奨のマスター データ サービス機能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "マスター データ サービス機能を非推奨 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 caps.latest.revision: 18
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
-caps.handback.revision: 18
+author: sabotta
+ms.author: carlasab
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e4d9b433e72c916ae6611520498b0eb8fa85c8f6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# 非推奨のマスター データ サービス機能
+# <a name="deprecated-master-data-services-features"></a>非推奨のマスター データ サービス機能
   このトピックでは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] でまだ使用できるものの、非推奨となった [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の機能について説明します。 これらの機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の今後のリリースで削除される予定です。 非推奨機能を新しいアプリケーションで使用しないでください。  
   
-## 明示的階層、コレクション、および関連コンポーネント  
+## <a name="explicit-hierarchies-collections-and-related-components"></a>明示的階層、コレクション、および関連コンポーネント  
  明示的階層、コレクション、および関連コンポーネントは非推奨です。 以前統合メンバーの種類 (明示的階層の親) およびコレクション メンバーの種類としてモデル化されていたメンバーは、派生階層のリーフ メンバーとしてモデル化されます。 次の新機能により、派生階層を、明示的階層の代わりに使用できます。  
   
 -   再帰型派生階層を使用して、メンバーのセキュリティ アクセス許可を割り当てることができます。  
@@ -42,15 +47,15 @@ caps.handback.revision: 18
   
 -   [メンバー (マスター データ サービス)](../master-data-services/members-master-data-services.md)  
   
-## 属性のエンティティのトランザクション ログの種類  
+## <a name="attribute-entity-transaction-log-type"></a>属性のエンティティのトランザクション ログの種類  
 エンティティのトランザクション ログの種類 "属性" を使用しないでください。"メンバー" というエンティティのトランザクション ログの種類に移行してください。 エンティティのトランザクション ログの種類については、次のトピックを参照してください。
 * [エンティティのトランザクション ログの種類の変更 (マスター データ サービス)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)
 * [メンバー リビジョン履歴](../master-data-services/member-revision-history-master-data-services.md)
   
-## 外部リソース  
+## <a name="external-resources"></a>外部リソース  
  msdn.com のブログ投稿「 [Deprecated: Explicit Hierarchies and Collections (非推奨: 明示的階層とコレクション)](http://go.microsoft.com/fwlink/p/?LinkId=615373)」  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [提供が中止されたマスター データ サービス機能](../master-data-services/discontinued-master-data-services-features.md)  
   
   

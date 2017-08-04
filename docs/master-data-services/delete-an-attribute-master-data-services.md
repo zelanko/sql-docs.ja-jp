@@ -1,36 +1,41 @@
 ---
-title: "属性を削除する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "属性 [マスター データ サービス], 削除"
-  - "属性の削除 [マスター データ サービス]"
+title: "属性を削除する (マスター データ サービス) |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attributes [Master Data Services], deleting
+- deleting attributes [Master Data Services]
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1d36564680430b7d35c415e23586c7fd0c47e084
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# 属性を削除する (マスター データ サービス)
+# <a name="delete-an-attribute-master-data-services"></a>属性を削除する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で、属性とそれに関連付けられたすべての属性値を完全に削除するには、属性を削除します。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
 -   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
-### 属性を削除するには  
+### <a name="to-delete-an-attribute"></a>属性を削除するには  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
   
@@ -57,10 +62,10 @@ caps.handback.revision: 6
   
 8.  確認のダイアログ ボックスで **[OK]**をクリックします。  
   
-## 参照  
- [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)   
- [ドメインベースの属性 (マスター データ サービス)](../master-data-services/domain-based-attributes-master-data-services.md)   
- [テキスト属性を作成する (マスター データ サービス)](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [ドメイン ベースの属性を作成する (マスター データ サービス)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+## <a name="see-also"></a>参照  
+ [属性と #40 です。マスター データ サービスと #41 です。](../master-data-services/attributes-master-data-services.md)   
+ [ドメイン ベースの属性と #40 です。マスター データ サービスと #41 です。](../master-data-services/domain-based-attributes-master-data-services.md)   
+ [テキスト属性 (& r) #40 です。マスター データ サービスと #41 です。](../master-data-services/create-a-text-attribute-master-data-services.md)   
+ [ドメイン ベースの属性 (& r) #40 です。マスター データ サービスと #41 です。](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   

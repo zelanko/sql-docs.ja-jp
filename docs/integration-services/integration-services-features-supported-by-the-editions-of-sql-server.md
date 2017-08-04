@@ -1,30 +1,35 @@
 ---
-title: "SQL Server の各エディションがサポートする Integration Services の機能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Integration Services の SQL Server のエディションでサポートされる機能 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 07/26/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 caps.latest.revision: 15
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 14
----
-# SQL Server の各エディションがサポートする Integration Services の機能
- このトピックでは、[!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] のさまざまなエディションでサポートされる SQL Server Integration Services (SSIS) の機能の詳細について説明します。  
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 365fb52c9808e0402323d52c85371c35555d833e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
 
-Evaluation Edition および Developer Edition でサポートされている機能については、SQL Server Enterprise Edition をご覧ください。 
+---
+# <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server のエディションでサポートされている integration Services 機能
+ このトピックでは、 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]のさまざまなエディションでサポートされる SQL Server Integration Services (SSIS) の機能の詳細について説明します。  
+
+Evaluation および Developer エディションでサポートされる機能、Enterprise Edition の次の表に示された機能を参照してください。
   
-最新のリリース ノートと新機能については、以下の情報を参照してください。
+最新のリリース ノートと新しい情報は、次の記事を参照してください。
 -   [SQL Server 2016 リリース ノート](../sql-server/sql-server-2016-release-notes.md)
 -   [SQL Server 2016 の Integration Services の新機能](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)
--   [SQL Server vNext の Integration Services の新機能](../integration-services/what-s-new-in-integration-services-in-sql-server-vnext.md)
+-   [SQL Server 2017 における Integration Services の新機能](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
     
 **SQL Server 2016 をお試しください。**    
 
@@ -32,50 +37,54 @@ Evaluation Edition および Developer Edition でサポートされている機
     
 > [![Evaluation Center からダウンロードする](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Evaluation Center から SQL Server 2016 をダウンロードする](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-> ![Azure Virtual Machine のアイコン](../analysis-services/media/azure-virtual-machine-small.png) **[SQL Server 2016 がインストール済みの Virtual Machine をすぐにご利用いただけます](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
+## <a name="ISNew"></a>SQL Server 2017 で新しい Integration Services の機能
+  
+|機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|スケール アウト マスター|はい|||||
+|スケール アウト ワーカー|はい|可 <sup>1</sup>|TBD|TBD|TBD|
+|Microsoft Dynamics AX および Microsoft Dynamics CRM OData コンポーネントでサポート<sup>2</sup>|はい|はい||||
 
-##  <a name="a-nameisanew-integration-services-features-in-sql-server-vnext"></a><a name="IS"></a>SQL Server vNext の新しい Integration Services 機能
-  
-|機能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|開発者|  
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Scale Out|可||||||可|
-|OData コンポーネントで Microsoft Dynamics AX および Microsoft Dynamics CRM をサポート <sup>1</sup>|可|可|||||可|
+<sup>1</sup>スケール アウト ワーカーが、SQL Server Enterprise のインスタンスで実行する必要がありますもスケール アウトの企業専用の機能を必要とするパッケージを実行する場合。
 
-<sup>1</sup> この機能は、SQL Server 2016 Service Pack 1 でもサポートされています。
+<sup>2</sup> Service Pack 1 の SQL Server 2016 では、この機能はサポートされてもします。
 
-##  <a name="a-nameisa-integration-services"></a><a name="IS"></a> Integration Services  
-  
-|機能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|開発者|  
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|組み込みのデータ ソース コネクタ|可|可|可|可|可|可|可|  
-|Azure データ ソース コネクタおよびタスク|可|可|可|可|可|可|可|  
-|SQL Server インポートおよびエクスポート ウィザード|可|可|可|可|可|可|可|  
-|Hadoop/HDFS コネクタおよびタスク|可|可|可||||可|  
-|SSIS デザイナーおよびランタイム|可|可|||||可|  
-|組み込みのタスクと変換|可|可|||||可|  
-|基本的なデータ プロファイリング ツール|可|可|||||可|  
-|Attunity の Change Data Capture Service for Oracle|可||||||可|  
-|Attunity の Change Data Capture Designer for Oracle|可||||||はい| 
+## <a name="IEWiz"></a>SQL Server インポートおよびエクスポート ウィザード
 
-##  <a name="a-nameisaaa-integration-services---advanced-adapters"></a><a name="ISAA"></a> Integration Services – 拡張アダプター  
+|機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|SQL Server インポートおよびエクスポート ウィザード|可|[ユーザー アカウント制御]|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい|  
+
+## <a name="IS"></a> Integration Services  
   
-|機能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|開発者|  
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|高パフォーマンスの Oracle 変換先|可||||||可|  
-|高パフォーマンスの Teradata 変換先|可||||||可|  
-|SAP BW 変換元と変換先|可||||||可|  
-|データ マイニング モデル トレーニング変換先アダプター|可||||||可|  
-|ディメンション処理の変換先アダプター|可||||||可|  
-|パーティション処理の変換先アダプター|可||||||可|  
-|Attunity 変更データ キャプチャ コンポーネント|可||||||可|  
-|Attunity ODBC (Open Database Connectivity) 接続|可||||||はい|  
+|機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|組み込みのデータ ソース コネクタ|可|可|||| 
+|組み込みのタスクと変換|可|はい||||  
+|Odbc 入力元および by Attunity の変換先|はい|可|||| 
+|Azure データ ソース コネクタおよびタスク|可|はい||||  
+|Hadoop と HDFS コネクタおよびタスク|はい|可||||  
+|基本的なデータ プロファイリング ツール|可|はい|||| 
+
+## <a name="ISAA"></a>Integration Services – 拡張元および変換先  
   
-##  <a name="a-nameisata-integration-services---advanced-transforms"></a><a name="ISAT"></a>Integration Services – 詳細な変換  
+|機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|By Attunity 高パフォーマンスの Oracle 変換先|はい|||||  
+|By Attunity の高パフォーマンスの Teradata 変換先|はい|||||  
+|SAP BW 変換元と変換先|はい|||||  
+|データ マイニング モデル トレーニング変換先|はい|||||  
+|ディメンション処理変換先|はい|||||  
+|パーティション処理変換先|はい|||||  
   
-|機能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|開発者|  
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|永続性 (高パフォーマンス) 参照|可||||||可|  
-|データ マイニング クエリ変換|可||||||可|  
-|あいまいグループ化変換とあいまい参照変換|可||||||可|  
-|用語抽出と用語参照変換|可||||||可|  
+## <a name="ISAT"></a>Integration Services – 詳細なタスクおよび変換  
   
+|機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|永続的な (高パフォーマンス) 参照|はい|||||  
+|変更データ キャプチャ コンポーネント by Attunity <sup>1</sup>|はい|||||  
+|データ マイニング クエリ変換|はい|||||  
+|あいまいグループ化とあいまい参照変換|はい|||||  
+|用語抽出と用語参照変換|はい|||||  
+
+<sup>1</sup> by Attunity の Change Data Capture コンポーネントには Enterprise edition が必要とします。 Change Data Capture Service と Change Data Capture Designer、ただし、不要 Enterprise edition です。 使用できます、Designer および Service コンピューターに SSIS がインストールされていません。

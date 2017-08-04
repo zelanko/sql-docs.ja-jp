@@ -1,26 +1,31 @@
 ---
-title: "変更セットの承認または拒否 (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "承認または拒否する変更セット (Master Data Services) |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8fd4aff2b131cb0eb8170b90219431e180943a2a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# 変更セットの承認または拒否 (マスター データ サービス)
+# <a name="approve-or-reject-a-changeset-master-data-services"></a>変更セットの承認または拒否 (マスター データ サービス)
   変更セットは、マスター データに対する保留中の変更のコレクションです。 エンティティを変更する場合に管理者による承認を必要とする場合、変更セットが承認のために送信されます。管理者は、変更セットを確認したうえで、承認または拒否します。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 8
   
 -   ユーザーは、自分自身が加えた変更を承認することはできません。 エンティティ管理者は、自分自身が加えた変更セットを承認するために 2 人目の管理者を割り当てる必要があります。  
   
-## 変更セットを承認または拒否するには  
+## <a name="to-approve-or-reject-a-changeset"></a>変更セットを承認または拒否するには  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] のホーム ページで、モデルとバージョンを選択し、 **[エクスプローラー]**をクリックします。  
   
@@ -46,9 +51,9 @@ caps.handback.revision: 8
   
 6.  変更セットを承認するには、 **[承認]** をクリックします。 変更セットが自動的にコミットされます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [変更セットを作成する (マスター データ サービス)](../master-data-services/create-a-changeset-master-data-services.md)   
- [変更セットの適用および更新 (マスター データ サービス)](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
+ [適用し、変更セット &#40; を更新マスター データ サービス &#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
  [変更セットのコミットまたは送信 (マスター データ サービス)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
   

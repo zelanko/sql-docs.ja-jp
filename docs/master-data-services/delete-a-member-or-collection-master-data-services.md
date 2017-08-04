@@ -1,44 +1,49 @@
 ---
-title: "メンバーまたはコレクションを削除する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "コレクション [マスター データ サービス], 削除"
-  - "リーフ メンバー [マスター データ サービス], 削除"
-  - "メンバーの削除 [マスター データ サービス]"
-  - "メンバー [マスター データ サービス], 削除"
-  - "統合メンバー [マスター データ サービス], 削除"
+title: "メンバーまたはコレクション (Master Data Services) の削除 |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collections [Master Data Services], deleting
+- leaf members [Master Data Services], deleting
+- deleting members [Master Data Services]
+- members [Master Data Services], deleting
+- consolidated members [Master Data Services], deleting
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 89e49964ef41c7d093a2bdba1673ae8ea44a4a70
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# メンバーまたはコレクションを削除する (マスター データ サービス)
+# <a name="delete-a-member-or-collection-master-data-services"></a>メンバーまたはコレクションを削除する (マスター データ サービス)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、不要になったメンバーまたはコレクションを削除します。 複数のメンバーを一括で削除する場合は、代わりにステージング テーブルを使用します。 詳細については、「[テーブルからのデータのインポート (マスター データ サービス)](../master-data-services/import-data-from-tables-master-data-services.md)」を参照してください。  
   
 > [!NOTE]  
 >  別のメンバーのドメイン ベースの属性値として使用されているメンバーは削除できません。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
   
--   メンバーの場合は、メンバーを削除するリーフ モデル オブジェクトに対する**削除**権限が最低限必要です。  
+-   メンバーの場合は、メンバーを削除するリーフ モデル オブジェクトに対する **削除** 権限が最低限必要です。  
   
--   コレクションの場合は、削除するリーフ コレクション オブジェクトに対する**更新**権限が最低限必要です。  
+-   コレクションの場合は、削除するリーフ コレクション オブジェクトに対する **更新** 権限が最低限必要です。  
   
-### メンバーまたはコレクションを削除するには  
+### <a name="to-delete-a-member-or-collection"></a>メンバーまたはコレクションを削除するには  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] のホーム ページで、 **[モデル]** ボックスの一覧からモデルを選択します。  
   
@@ -56,15 +61,15 @@ caps.handback.revision: 10
   
 5.  グリッドで、削除するメンバーまたはコレクションの行をクリックします。  
   
-6.  **[メンバーの削除]**、**[削除]**、または **[コレクションの削除]** をクリックします。  
+6.  **[メンバーの削除]**、 **[削除]**、または **[コレクションの削除]**をクリックします。  
   
 7.  エンティティ管理者には、エンティティ バージョンで論理削除されたすべてのメンバーを消去 (物理削除) するメニュー オプションも表示されます。  
   
 8.  確認のダイアログ ボックスで **[OK]**をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [メンバーまたはコレクションを再アクティブ化する (マスター データ サービス)](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
- [メンバー (マスター データ サービス)](../master-data-services/members-master-data-services.md)   
- [コレクション (マスター データ サービス)](../master-data-services/collections-master-data-services.md)  
+ [メンバーと #40 です。マスター データ サービス &#41;](../master-data-services/members-master-data-services.md)   
+ [コレクション & #40 です。マスター データ サービス &#41;](../master-data-services/collections-master-data-services.md)  
   
   

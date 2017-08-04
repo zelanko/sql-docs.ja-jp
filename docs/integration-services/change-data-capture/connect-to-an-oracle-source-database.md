@@ -1,24 +1,29 @@
 ---
-title: "Oracle ソース データベースへの接続 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "oraDb"
+title: "Oracle ソース データベースへの接続 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- oraDb
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a5c5a28264e255b50ee3d33986ba2b84c646c0f8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# Oracle ソース データベースへの接続
+# <a name="connect-to-an-oracle-source-database"></a>Oracle ソース データベースへの接続
   [Oracle ソース] ページを使用すると、Oracle ソース データベースへの接続に必要な情報を提供できます。 CDC インスタンスによって、接続している Oracle データベースの再実行ログが読み取られます。  
   
  **[Oracle 接続文字列]**  
@@ -40,7 +45,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  ユーザーがログ マイニング ユーザーになるには、Oracle データベースで次の特権を付与される必要があります。  
 >   
->  -   \<any-captured-table> に対する SELECT  
+>  -   SELECT \<any キャプチャ テーブル >  
 > -   SELECT ANY TRANSACTION  
 > -   DBMS LOGMNR に対する EXECUTE  
 > -   V$LOGMNR CONTENTS に対する SELECT  
@@ -57,15 +62,15 @@ caps.handback.revision: 8
 >  これらの特権を V$xxx に付与できないときは、V_S$xxx に付与してください。  
   
  **[接続テスト]**  
- Oracle データベースがあるリモート コンピューターとの接続が確立されているかどうかを確認するには、**[テスト接続]** をクリックします。 接続が正常に確立されたかどうかを通知するダイアログ ボックスが開きます。  
+ Oracle データベースがあるリモート コンピューターとの接続が確立されているかどうかを確認するには、 **[テスト接続]** をクリックします。 接続が正常に確立されたかどうかを通知するダイアログ ボックスが開きます。  
   
 > [!IMPORTANT]  
 >  CDC デザイナーが管理者として実行されていない場合は、既知の問題のために Oracle ソース データベースとの接続が失敗する場合があります。 接続が失敗した場合は、 **[管理者として実行]** オプションを使用して CDC デザイナーを終了して再起動します。  
   
  このページでの情報入力が終了したら、 **[次へ]** をクリックして「 [Select Oracle Tables and Columns](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)」に進みます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server 変更データベース インスタンスを作成する方法](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [インスタンスのプロパティの編集](../../integration-services/change-data-capture/edit-instance-properties.md)  
+ [インスタンス プロパティを編集します。](../../integration-services/change-data-capture/edit-instance-properties.md)  
   
   

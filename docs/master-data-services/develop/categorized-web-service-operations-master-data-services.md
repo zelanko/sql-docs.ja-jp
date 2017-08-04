@@ -1,0 +1,186 @@
+---
+title: "Web サービス操作 (Master Data Services) の分類 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- docset-sql-devref
+ms.tgt_pltfrm: 
+ms.topic: reference
+applies_to:
+- SQL Server 2016 Preview
+ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
+caps.latest.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5363c242248d57e23da9aae986f39825896d5162
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
+---
+# <a name="categorized-web-service-operations-master-data-services"></a>Web サービス操作の分類 (Master Data Services)
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web サービスには、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] がユーザー インターフェイスを通じて行うすべての機能をコード記述で制御できるようにするための操作が、完全なセットとして含まれています。 Web サービス操作は、<xref:Microsoft.MasterDataServices.IService> インターフェイスによって定義され、<xref:Microsoft.MasterDataServices.ServiceClient> クラスのメソッドとして実装されます。 このトピックでは、Web サービス API の使用方法を理解しやすくするために、Web サービス操作を概念ごとのカテゴリに分類します。  
+  
+## <a name="model-operations"></a>モデルの処理  
+ これらの操作は、モデルの作成、更新、削除のほか、モデルの全コンテンツ (エンティティ、階層、バージョンなど) に対する操作に使用されます。 詳細については、「[モデル (マスター データ サービス)](../../master-data-services/models-master-data-services.md)」を参照してください。  
+  
+||  
+|-|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.MetadataClone%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.MetadataCreate%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.MetadataDelete%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.MetadataGet%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A>|  
+  
+## <a name="entity-operations"></a>エンティティの操作  
+ これらの操作は、単一のエンティティのメンバーを作成、更新、削除するために使用されます。 詳細については、次を参照してください。[エンティティ & #40 です。マスター データ サービス &#41;](../../master-data-services/entities-master-data-services.md)と[メンバー & #40 です。マスター データ サービス &#41;](../../master-data-services/members-master-data-services.md).  
+  
+||  
+|-|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.EntityMemberKeyLookup%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.EntityMembersCopy%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.EntityMembersCreate%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.EntityMembersDelete%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.EntityMembersGet%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.EntityMembersMerge%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.EntityMembersUpdate%2A>|  
+  
+## <a name="member-operations"></a>メンバーの操作  
+ これらの操作は、メンバーを取得、更新、削除するために使用されます。 操作されるメンバーのセットには、複数のエンティティからのメンバーを含めることができます。 詳細については、「[バージョン (マスター データ サービス)](../../master-data-services/members-master-data-services.md)」を参照してください。  
+  
+||  
+|-|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.ModelMembersBulkDelete%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.ModelMembersBulkMerge%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.ModelMembersBulkUpdate%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.ModelMembersGet%2A>|  
+  
+## <a name="attribute-and-hierarchy-operations"></a>属性と階層の操作  
+ これらの操作は、属性や階層の情報を取得するために使用されます。 属性と階層は、モデル操作 (<xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A> など) を使用して変更することもできます。 詳細については、次を参照してください。[属性 & #40 です。マスター データ サービス &#41;](../../master-data-services/attributes-master-data-services.md)と[階層 & #40 です。マスター データ サービス &#41;](../../master-data-services/hierarchies-master-data-services.md).  
+  
+||  
+|-|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.EntityMemberAttributesGet%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.HierarchyMembersGet%2A>|  
+  
+## <a name="business-rule-operations"></a>ビジネス ルールの操作  
+ これらの操作は、ビジネス ルールを作成、更新、削除、パブリッシュするために使用されます。 詳細については、「[ビジネス ルール (マスター データ サービス)](../../master-data-services/business-rules-master-data-services.md)」を参照してください。  
+  
+||  
+|-|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.BusinessRulesClone%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.BusinessRulesCreate%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.BusinessRulesDelete%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.BusinessRulesGet%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.BusinessRulesPaletteGet%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.BusinessRulesPublish%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.BusinessRulesUpdate%2A>|  
+  
+## <a name="annotation-operations"></a>注釈の操作  
+ これらの操作は、注釈を作成、更新、削除するために使用されます。 詳細については、次を参照してください。[注釈 & #40 です。マスター データ サービス &#41;](../../master-data-services/annotations-master-data-services.md).  
+  
+||  
+|-|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.AnnotationsDelete%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.AnnotationsUpdate%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.EntityMemberAnnotationsCreate%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.EntityMemberAnnotationsGet%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.TransactionAnnotationsCreate%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.TransactionAnnotationsGet%2A>|  
+  
+## <a name="transaction-operations"></a>トランザクションの操作  
+ これらの操作は、トランザクションを取得および破棄するために使用されます。 詳細については、「[トランザクション (マスター データ サービス)](../../master-data-services/transactions-master-data-services.md)」を参照してください。  
+  
+||  
+|-|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.TransactionsGet%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.TransactionsReverse%2A>|  
+  
+## <a name="version-and-validation-operations"></a>バージョンと検証の操作  
+ これらの操作は、バージョンをコピーおよび検証するために使用されます。 詳細については、次を参照してください。[バージョン & #40 です。マスター データ サービス &#41;](../../master-data-services/versions-master-data-services.md)と[検証 & #40 です。マスター データ サービス &#41;](../../master-data-services/validation-master-data-services.md).  
+  
+||  
+|-|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.VersionCopy%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.ValidationGet%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.ValidationProcess%2A>|  
+  
+## <a name="data-quality-operations"></a>データ品質の操作  
+ これらの操作は、データ品質タスクの実行と、それらの結果の確認に使用されます。  
+  
+||  
+|-|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityCleansingOperationCreate%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityMatchingOperationCreate%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityInstalledState%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityKnowledgeBasesGet%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityOperationStart%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityOperationResultsGet%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityOperationStatus%2A>|  
+  
+## <a name="data-import-operations"></a>データ インポートの操作  
+ これらの操作は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースにデータをインポートするために使用されます。 詳細については、「[概要: テーブルからのデータのインポート (マスター データ サービス)](../../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
+  
+||  
+|-|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.EntityStagingClear%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.EntityStagingGet%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.EntityStagingLoad%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.EntityStagingProcess%2A>|  
+  
+ 次の操作は、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] に含まれるステージング処理を使用してデータをインポートするために使用されます。 これらの操作は、既存のデータベースをサポートする目的にのみ使用してください。 新規の開発には、先に示した操作を使用してください。  
+  
+||  
+|-|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.StagingClear%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.StagingGet%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.StagingNameCheck%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.StagingProcess%2A>|  
+  
+## <a name="data-export-operations"></a>データ エクスポートの操作  
+ これらの操作は、サブスクリプション ビューを使用してデータをエクスポートするために使用されます。 詳細については、「[概要: データのエクスポート (マスター データ サービス)](../../master-data-services/overview-exporting-data-master-data-services.md)」を参照してください。  
+  
+||  
+|-|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewCreate%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewDelete%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewListGet%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewUpdate%2A>|  
+  
+## <a name="security-operations"></a>セキュリティの操作  
+ これらの操作は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースへのアクセスを制御するセキュリティ設定を変更するために使用されます。 詳細については、「[セキュリティ (マスター データ サービス)](../../master-data-services/security-master-data-services.md)」を参照してください。  
+  
+||  
+|-|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.SecurityPrincipalsClone%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.SecurityPrincipalsCreate%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.SecurityPrincipalsDelete%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.SecurityPrincipalsGet%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.SecurityPrincipalsUpdate%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.SecurityPrivilegesClone%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.SecurityPrivilegesCreate%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.SecurityPrivilegesDelete%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.SecurityPrivilegesGet%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.SecurityPrivilegesUpdate%2A>|  
+  
+## <a name="system-operations"></a>システムの操作  
+ これらの操作は、システム設定やユーザー設定を取得および更新するために使用されます。  
+  
+||  
+|-|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.ServiceCheck%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.ServiceVersionGet%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.SystemDomainListGet%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.SystemPropertiesGet%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.SystemSettingsGet%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.SystemSettingsUpdate%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.UserPreferencesDelete%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.UserPreferencesGet%2A>|  
+|<xref:Microsoft.MasterDataServices.ServiceClient.UserPreferencesUpdate%2A>|  
+  
+  

@@ -1,29 +1,34 @@
 ---
-title: "属性グループを作成する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "属性グループ [マスター データ サービス], 作成"
-  - "属性グループの作成 [マスター データ サービス]"
+title: "属性グループ (Master Data Services) を作成 |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attribute groups [Master Data Services], creating
+- creating attribute groups [Master Data Services]
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: cd89cee45f9f0973764a2b4f4dc32f32abc6d1c9
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# 属性グループを作成する (マスター データ サービス)
+# <a name="create-an-attribute-group-master-data-services"></a>属性グループを作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、 **[エクスプローラー]** グリッドの個々のタブに属性を表示する場合、属性グループを作成します。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -32,7 +37,7 @@ caps.handback.revision: 7
   
 -   少なくとも 1 つの属性が必要です。 詳細については、「[テキスト属性を作成する (マスター データ サービス)](../master-data-services/create-a-text-attribute-master-data-services.md)」を参照してください。  
   
-### 属性グループを作成するには  
+### <a name="to-create-an-attribute-group"></a>属性グループを作成するには  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
   
@@ -46,9 +51,9 @@ caps.handback.revision: 7
   
      対象の属性グループがリーフ メンバーの属性グループの場合は、ページの上部にある **[メンバーの種類]** ドロップダウン リストの **[リーフ]** を選択します。  
   
-     対象の属性グループが統合メンバーの属性グループの場合は、**[メンバーの種類]** ドロップダウン リストの **[統合]** を選択します。  
+     対象の属性グループが統合メンバーの属性グループの場合は、 **[メンバーの種類]** ドロップダウン リストの **[統合]** を選択します。  
   
-     対象の属性グループがコレクションの属性グループの場合は、**[メンバーの種類]** ドロップダウン リストの **[コレクション]** を選択します。  
+     対象の属性グループがコレクションの属性グループの場合は、 **[メンバーの種類]** ドロップダウン リストの **[コレクション]** を選択します。  
   
 6.  **[リーフ グループ]**、 **[統合グループ]**、または **[コレクション グループ]** をクリックして、リーフ メンバー、統合メンバー、またはコレクションの属性グループを作成します。  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 7
   
 8.  属性を追加するには、 **[使用できる属性]** ボックスの属性をクリックし、 **[追加]** 矢印をクリックします。 すべての属性を追加するには、 **[すべて追加]** 矢印をクリックします。  
   
-9. **上**および**下**向きの矢印をクリックして、属性の順序 (左から右) を変更します。  
+9. **上** および **下** 向きの矢印をクリックして、属性の順序 (左から右) を変更します。  
   
 10. **[使用できるユーザー]** ボックスのユーザーをクリックし、 **[追加]** 矢印をクリックします。 すべてのユーザーを追加するには、 **[すべて追加]** 矢印をクリックします。  
   
@@ -64,16 +69,17 @@ caps.handback.revision: 7
   
 12. **[保存]**をクリックします。  
   
-## 次の手順  
+## <a name="next-steps"></a>次の手順  
   
 -   [属性グループのユーザーへの表示 (マスター データ サービス)](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [属性グループ (マスター データ サービス)](../master-data-services/attribute-groups-master-data-services.md)   
- [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)   
- [属性グループ名を変更する (マスター データ サービス)](../master-data-services/change-an-attribute-group-name-master-data-services.md)   
- [属性グループを削除する (マスター データ サービス)](../master-data-services/delete-an-attribute-group-master-data-services.md)   
+ [属性と #40 です。マスター データ サービスと #41 です。](../master-data-services/attributes-master-data-services.md)   
+ [属性グループ名 &#40; を変更します。マスター データ サービス &#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)   
+ [属性グループ &#40; を削除します。マスター データ サービス &#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)   
  [リーフ権限 (マスター データ サービス)](../master-data-services/leaf-permissions-master-data-services.md)   
- [統合権限 (マスター データ サービス)](../Topic/Consolidated%20Permissions%20\(Master%20Data%20Services\).md)  
+   
   
   
+

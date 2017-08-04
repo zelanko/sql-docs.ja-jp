@@ -1,25 +1,30 @@
 ---
-title: "カスタム インデックス (マスター データ サービス) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "カスタム インデックス (マスター データ サービス) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccb20ed7018a941ccc5e928d7fc9488377e3a125
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# カスタム インデックス (マスター データ サービス)
-  カスタム インデックスは、1 つの属性 (シングル インデックス) または属性の一覧 (複合インデックス) の非クラスター化インデックスを 1 つのエンティティとして作成します。 通常、インデックスによりクエリ処理のパフォーマンスが向上します。 SQL Server インデックスの詳細については、「[インデックス](../relational-databases/indexes/indexes.md)」を参照してください。  
+# <a name="custom-index-master-data-services"></a>カスタム インデックス (マスター データ サービス)
+  カスタム インデックスは、1 つの属性 (シングル インデックス) または属性の一覧 (複合インデックス) の非クラスター化インデックスを 1 つのエンティティとして作成します。 通常、インデックスによりクエリ処理のパフォーマンスが向上します。 SQL Server インデックスの詳細については、「 [インデックス](../relational-databases/indexes/indexes.md)」を参照してください。  
   
-## インデックスの種類  
+## <a name="type-of-indexes"></a>インデックスの種類  
  各エンティティには次のタイプのカスタム インデックスを複数作成することができます。  
   
 -   [一意インデックス]  
@@ -28,7 +33,7 @@ caps.handback.revision: 9
   
  一意インデックスにより、インデックス付き列に重複する値が含まれていないことが保証されます。 複合の一意インデックスの場合、このインデックスにより、選択した属性の一覧にある値のそれぞれの組み合わせが一意であることが保証されます。 選択した属性に対して重複する値が存在する場合、一意インデックスを作成できません。  
   
-## ルール  
+## <a name="rules"></a>ルール  
  次の規則は、一意と非一意の両方のカスタム インデックスに適用されます。  
   
 -   カスタム インデックスを作成するには、少なくとも 1 つの属性を選択してください。  
@@ -52,7 +57,7 @@ caps.handback.revision: 9
   
 -   カスタム インデックスに含まれている属性の種類は変更できません。  
   
-## 関連タスク  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

@@ -1,50 +1,55 @@
 ---
-title: "一括挿入タスク | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.bulkinserttask.f1"
-helpviewer_keywords: 
-  - "一括挿入タスク"
-  - "データのコピー [Integration Services]"
+title: "一括挿入タスク |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.bulkinserttask.f1
+helpviewer_keywords:
+- Bulk Insert task
+- copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 caps.latest.revision: 61
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 81b72c67ee8d968a2452e7ede94fe8c390c53a9b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# 一括挿入タスク
+# <a name="bulk-insert-task"></a>一括挿入タスク
   一括挿入タスクは、大量のデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルまたはビューにコピーするための効率的な方法です。 たとえば、会社で 100 万行の製品リストをメインフレーム システムに格納し、電子商取引システムで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して Web ページを構成しているとします。 また、メインフレームにあるマスター製品リストを使用して、夜間に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の製品テーブルを更新する必要があるものとします。 このテーブルを更新するには、製品リストをタブ区切り形式で保存し、一括挿入タスクを使用してデータを直接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルにコピーします。  
   
  高速なデータ コピーを確実に行うため、コピー元ファイルからテーブルまたはビューへのデータ移動時に、データ変換を行うことはできません。  
   
-## 使用に関する注意点  
+## <a name="usage-considerations"></a>使用に関する注意点  
  一括挿入タスクを使用する前に、次の点を考慮してください。  
   
 -   一括挿入タスクで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルまたはビューに転送できるのは、テキスト ファイルのデータのみです。 一括挿入タスクを使用して他のデータベース管理システム (DBMS) からデータを転送するには、データをコピー元からテキスト ファイルにエクスポートし、そのテキスト ファイルから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルまたはビューにインポートする必要があります。  
   
--   コピー先は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのテーブルまたはビューである必要があります。 コピー先のテーブルまたはビューに既にデータがある場合、一括挿入タスクが実行されると新しいデータが既存のデータに追加されます。 データを置換する場合は、一括挿入タスクを実行する前に、DELETE または TRUNCATE ステートメントを実行する SQL 実行タスクを実行します。 詳細については、「[SQL 実行タスク](../../integration-services/control-flow/execute-sql-task.md)」を参照してください。  
+-   コピー先は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのテーブルまたはビューである必要があります。 コピー先のテーブルまたはビューに既にデータがある場合、一括挿入タスクが実行されると新しいデータが既存のデータに追加されます。 データを置換する場合は、一括挿入タスクを実行する前に、DELETE または TRUNCATE ステートメントを実行する SQL 実行タスクを実行します。 詳細については、「 [SQL 実行タスク](../../integration-services/control-flow/execute-sql-task.md)」を参照してください。  
   
 -   一括挿入タスク オブジェクトではフォーマット ファイルを使用できます。 **bcp** ユーティリティを使用して作成したフォーマット ファイルを使用する場合、一括挿入タスクでフォーマット ファイルのパスを指定できます。 一括挿入タスクでは、XML および XML 以外のフォーマット ファイルの両方がサポートされます。 フォーマット ファイルの使用方法の詳細は、「[データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。  
   
 -   一括挿入タスクが含まれるパッケージを実行できるのは、固定サーバー ロール sysadmin のメンバーのみです。  
   
-## トランザクションでの一括挿入タスク  
+## <a name="bulk-insert-task-with-transactions"></a>トランザクションでの一括挿入タスク  
  バッチ サイズが設定されていないときは、一括コピー操作全体が 1 つのトランザクションとして処理されます。 バッチ サイズが **0** の場合は、データが 1 つのバッチに挿入されます。 バッチ サイズが設定されているときは、各バッチはバッチの実行終了時にコミットされるトランザクションを示します。  
   
  一括挿入タスクがトランザクションに関連付けられている場合、その動作は、パッケージ トランザクションに結合されているかどうかによって異なります。 一括挿入タスクがパッケージ トランザクションに結合する場合、エラーのない各バッチは次のバッチが実行されるまで 1 つの単位としてコミットされます。 一括挿入タスクがパッケージ トランザクションに結合する場合、タスクの実行終了時にエラーのないバッチはそのままトランザクション内に残ります。 これらのバッチは、パッケージのコミットまたはロールバック操作の対象となります。  
   
  一括挿入タスクに失敗した場合、正しく読み込まれたバッチは自動的にロールバックされません。同様に、一括挿入タスクが成功した場合でも、これらのバッチは自動的にコミットされません。 コミットとロールバックの各操作は、パッケージおよびワークフローのプロパティ設定で指定されている場合に限り発生します。  
   
-## コピー元とコピー先  
+## <a name="source-and-destination"></a>コピー元とコピー先  
  コピー元のテキスト ファイルの場所を指定するときは、次の点を考慮してください。  
   
 -   サーバーには、コピー元ファイルおよびコピー先データベースの両方にアクセスする権限が必要です。  
@@ -53,15 +58,15 @@ caps.handback.revision: 61
   
 -   一括挿入タスクが読み込むコピー元ファイルの場所は、データ挿入先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースと同じサーバー上でも、リモート サーバー上でもかまいません。 コピー元ファイルがリモート サーバー上にある場合、汎用名前付け規則 (UNC) を使用して、ファイル名をパスで指定する必要があります。  
   
-## パフォーマンスの最適化  
+## <a name="performance-optimization"></a>パフォーマンスの最適化  
  パフォーマンスを最適化するには、次のことを考慮してください。  
   
 -   テキスト ファイルがデータの挿入先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースと同じコンピューター上にある場合、データがネットワーク経由で転送されないため、コピー操作の実行速度がいっそう速くなります。  
   
 -   一括挿入タスクでは、エラーが発生した行はログに記録されません。 この情報を取得する必要がある場合は、データ フロー コンポーネントのエラー出力を使用すれば、エラーが発生した行を例外ファイルにキャプチャできます。  
   
-## 一括挿入タスクで使用できるカスタム ログ エントリ  
- 次の表は、一括挿入タスクのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../../integration-services/performance/custom-messages-for-logging.md)」を参照してください。  
+## <a name="custom-log-entries-available-on-the-bulk-insert-task"></a>一括挿入タスクで使用できるカスタム ログ エントリ  
+ 次の表は、一括挿入タスクのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。  
   
 |ログ エントリ|Description|  
 |---------------|-----------------|  
@@ -69,7 +74,7 @@ caps.handback.revision: 61
 |**BulkInsertTaskEnd**|一括挿入が終了したことを示します。|  
 |**BulkInsertTaskInfos**|タスクに関する説明情報を提供します。|  
   
-## 一括挿入タスクの構成  
+## <a name="bulk-insert-task-configuration"></a>一括挿入タスクの構成  
  一括挿入タスクは、次の方法で構成できます。  
   
 -   コピー先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、およびデータを挿入するテーブルまたはビューに接続する OLE DB 接続マネージャーを指定します。 一括挿入タスクでは、コピー先データベースに対して OLE DB 接続のみをサポートします。  
@@ -88,27 +93,27 @@ caps.handback.revision: 61
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [一括挿入タスク エディター &#40;[全般] ページ&#41;](../Topic/Bulk%20Insert%20Task%20Editor%20\(General%20Page\).md)  
+-   [一括挿入タスク エディター &#40;[全般] ページ&#41;](../../integration-services/control-flow/bulk-insert-task-editor-general-page.md)  
   
--   [一括挿入タスク エディター &#40;[接続] ページ&#41;](../Topic/Bulk%20Insert%20Task%20Editor%20\(Connection%20Page\).md)  
+-   [一括挿入タスク エディター &#40;[接続] ページ&#41;](../../integration-services/control-flow/bulk-insert-task-editor-connection-page.md)  
   
--   [一括挿入タスク エディター &#40;[オプション] ページ&#41;](../Topic/Bulk%20Insert%20Task%20Editor%20\(Options%20Page\).md)  
+-   [一括挿入タスク エディター &#40;[オプション] ページ&#41;](../../integration-services/control-flow/bulk-insert-task-editor-options-page.md)  
   
--   [[式] ページ](../Topic/Expressions%20Page.md)  
+-   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-### プログラムによる一括挿入タスクの構成  
+### <a name="programmatic-configuration-of-the-bulk-insert-task"></a>プログラムによる一括挿入タスクの構成  
  プログラムによってこれらのプロパティを設定する方法の詳細については、次のトピックを参照してください。  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask>  
   
-## 関連タスク  
- [タスクまたはコンテナーのプロパティを設定する](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+## <a name="related-tasks"></a>関連タスク  
+ [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
   
 -   support.microsoft.com の技術記事: [UAC 対応システムで "データを挿入するための SSIS 一括挿入を準備できません" というエラーが発生することがある](http://go.microsoft.com/fwlink/?LinkId=233693)  
   

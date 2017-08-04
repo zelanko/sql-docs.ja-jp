@@ -1,39 +1,44 @@
 ---
-title: "[データ フロー タスク] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataflowtask.f1"
-helpviewer_keywords: 
-  - "データ フロー タスク [Integration Services]"
-  - "パフォーマンス [Integration Services]"
-  - "データ フロー [Integration Services], パフォーマンス"
-  - "データ フロー [Integration Services], データ フロー タスク"
-  - "Integration Services, パフォーマンス"
+title: "データ フロー タスク |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataflowtask.f1
+helpviewer_keywords:
+- data flow task [Integration Services]
+- performance [Integration Services]
+- data flow [Integration Services], performance
+- data flow [Integration Services], Data Flow task
+- Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 caps.latest.revision: 75
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 75
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 8823647eeb74020da575143375d416a03e62d424
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# [データ フロー タスク]
+# <a name="data-flow-task"></a>[データ フロー タスク]
   データ フロー タスクは、変換元と変換先との間でデータを移動するデータ フロー エンジンをカプセル化して、データの移動時にユーザーがデータを変換、クリーンアップ、および変更できるようにします。 データ フロー タスクをパッケージの制御フローに追加すると、パッケージでデータの抽出、変換、および読み込みを行うことができます。  
   
  データ フローは 1 つ以上のデータ フロー コンポーネントで構成されますが、通常は、データを抽出する変換元、データを変更、ルーティング、または集約する変換、およびデータを読み込む変換先のデータ フロー コンポーネントが連結されてセットになっています。  
   
  実行時に、データ フロー タスクはデータ フローから実行プランを作成し、データ フロー エンジンはそのプランを実行します。 データ フローを含まないデータ フロー タスクも作成できますが、データ フロー タスクは少なくとも 1 つのデータ フローを含む場合にのみ実行されます。  
   
- テキスト ファイルのデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに一括挿入するには、データ フロー タスクとデータ フローの代わりに、一括挿入タスクを使用できます。 ただし、一括挿入タスクではデータの変換はできません。 詳細については、「[一括挿入タスク](../../integration-services/control-flow/bulk-insert-task.md)」を参照してください。  
+ テキスト ファイルのデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに一括挿入するには、データ フロー タスクとデータ フローの代わりに、一括挿入タスクを使用できます。 ただし、一括挿入タスクではデータの変換はできません。 詳細については、「 [一括挿入タスク](../../integration-services/control-flow/bulk-insert-task.md)」を参照してください。  
   
-## 複数のフロー  
+## <a name="multiple-flows"></a>複数のフロー  
  データ フロー タスクには、複数のデータ フローを含めることができます。 タスクが複数のデータのセットをコピーする場合で、データのコピー順序が重要でない場合は、データ フロー タスクにデータ フローを複数含める方が便利です。 たとえば、5 つのデータ フローを作成し、各データ フローで、フラット ファイルからデータ ウェアハウスのスター スキーマ内のそれぞれ別のディメンション テーブルにデータをコピーできます。  
   
  ただし、1 つのデータ フロー タスク内に複数のデータ フローが含まれる場合、実行順序はデータ フロー エンジンによって決定されます。 したがって、順序が重要である場合、パッケージは複数のデータ フロー タスクを使用して、各タスクにつきデータ フローを 1 つずつ含める必要があります。 次に、優先順位制約を適用して、タスクの実行順序を制御できます。  
@@ -42,8 +47,8 @@ caps.handback.revision: 75
   
  ![データ フロー](../../integration-services/control-flow/media/mw-dts-09.gif "データ フロー")  
   
-## ログ エントリ  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  では、すべてのタスクで利用可能な一連のログ イベントを提供しています。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  では、多くのタスクにカスタム ログ エントリも提供しています。 詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../../integration-services/performance/custom-messages-for-logging.md)」を参照してください。 データ フロー タスクには、次のカスタム ログ エントリが含まれています。  
+## <a name="log-entries"></a>ログ エントリ  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、すべてのタスクで利用可能な一連のログ イベントを提供しています。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、多くのタスクにカスタム ログ エントリも提供しています。 詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。 データ フロー タスクには、次のカスタム ログ エントリが含まれています。  
   
 |ログ エントリ|Description|  
 |---------------|-----------------|  
@@ -51,7 +56,7 @@ caps.handback.revision: 75
 |**OnPipelinePostEndOfRowset**|**ProcessInput** メソッドの最終呼び出しで設定される、行セットの終了シグナルがコンポーネントに通知されたことを示します。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
 |**OnPipelinePostPrimeOutput**|コンポーネントが **PrimeOutput** メソッドの最終呼び出しを完了したことを示します。 データ フローによっては、複数のログ エントリが書き込まれる場合があります。 コンポーネントがソースの場合、このログ エントリは、コンポーネントが行の処理を完了したことを意味します。|  
 |**OnPipelinePreEndOfRowset**|**ProcessInput** メソッドの最終呼び出しで設定される、行セットの終了シグナルをコンポーネントがまもなく受信することを示します。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
-|**OnPipelinePrePrimeOutput**|コンポーネントが、**PrimeOutput** メソッドからの呼び出し行セットの終了シグナルをまもなく受信することを示します。 データ フローによっては、複数のログ エントリが書き込まれる場合があります。|  
+|**OnPipelinePrePrimeOutput**|コンポーネントが、 **PrimeOutput** メソッドからの呼び出し行セットの終了シグナルをまもなく受信することを示します。 データ フローによっては、複数のログ エントリが書き込まれる場合があります。|  
 |**OnPipelineRowsSent**|**ProcessInput** メソッドの呼び出しによってコンポーネント入力に指定された行数を報告します。 ログ エントリにはコンポーネント名が含まれます。|  
 |**PipelineBufferLeak**|バッファー マネージャーの終了後もバッファーを保持しているコンポーネントに関する情報を提供します。 バッファーが保持されたままの場合、バッファー リソースは解放されていないので、メモリ リークが発生する可能性があります。 このログ エントリは、コンポーネントの名前とバッファーの ID を含みます。|  
 |**PipelineComponentTime**|主要な 5 つの処理手順 (Validate、PreExecute、PostExecute、ProcessInput、および ProcessOutput) それぞれにおいてコンポーネントが費やした時間 (ミリ秒) を報告します。|  
@@ -67,7 +72,7 @@ caps.handback.revision: 75
   
 -   [データ フロー パフォーマンス機能](../../integration-services/data-flow/data-flow-performance-features.md)  
   
-### データ フロー タスクからのサンプル メッセージ  
+### <a name="sample-messages-from-a-data-flow-task"></a>データ フロー タスクからのサンプル メッセージ  
  次の表は、ごく単純なパッケージでのログ エントリのサンプル メッセージの一覧です。 このパッケージは、OLE DB ソースを使用してテーブルからデータを抽出し、並べ替え変換を使用してデータを並べ替え、さらに OLE DB 変換先を使用してデータを別のテーブルに書き込みます。  
   
 |ログ エントリ|メッセージ|  
@@ -97,22 +102,22 @@ caps.handback.revision: 75
 |**InputName**|並べ替え変換に対する入力の **Name** プロパティの値です。|並べ替えの入力|  
 |**RowsSent**|並べ替え変換の入力に送信された行数です。|76|  
   
-## データ フロー タスクの構成  
- プロパティを設定するには、**[プロパティ]** ウィンドウで行うか、またはプログラムによって設定します。  
+## <a name="configuration-of-the-data-flow-task"></a>データ フロー タスクの構成  
+ プロパティを設定するには、 **[プロパティ]** ウィンドウで行うか、またはプログラムによって設定します。  
   
  プロパティを **[プロパティ]** ウィンドウで設定する方法の詳細については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## プログラムによるデータ フロー タスクの構成  
+## <a name="programmatic-configuration-of-the-data-flow-task"></a>プログラムによるデータ フロー タスクの構成  
  プログラムによってデータ フロー タスクをパッケージに追加して、データ フローのプロパティを設定する方法の詳細については、次のトピックを参照してください。  
   
 -   [プログラムによるデータ フロー タスクの追加](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
-## 関連タスク  
- [タスクまたはコンテナーのプロパティを設定する](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+## <a name="related-tasks"></a>関連タスク  
+ [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 関連コンテンツ  
- technet.microsoft.com のビデオ「[Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)」  
+## <a name="related-content"></a>関連コンテンツ  
+ technet.microsoft.com のビデオ「 [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)」  
   
   

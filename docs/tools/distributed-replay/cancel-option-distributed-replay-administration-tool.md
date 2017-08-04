@@ -1,36 +1,41 @@
 ---
-title: "cancel オプション (Distributed Replay 管理ツール) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cancel オプション (Distributed Replay 管理ツール) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fea376de-307a-4b45-b7e2-37df88f3681a
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2eda4d5628a755f6312bb13f573d306e4650294d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# cancel オプション (Distributed Replay 管理ツール)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理ツールである **DReplay.exe** は、Distributed Replay Controller と通信するために使用できるコマンド ライン ツールです。 このトピックでは、**cancel** コマンド ライン オプションとそれに対応する構文について説明します。  
+# <a name="cancel-option-distributed-replay-administration-tool"></a>cancel オプション (Distributed Replay 管理ツール)
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理ツールである **DReplay.exe**は、Distributed Replay Controller と通信するために使用できるコマンド ライン ツールです。 このトピックでは、 **cancel** コマンド ライン オプションとそれに対応する構文について説明します。  
   
  **cancel** オプションは、コントローラーで実行されている現在の操作をキャンセルします。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.png "トピック リンク アイコン") 管理ツールの構文で使用される構文表記規則の詳細については、「[Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")管理ツールの構文で使用される構文表記規則の詳細については、次を参照してください。 [TRANSACT-SQL 構文表記規則 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 dreplay cancel [-m controller] [-q]   
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  **-m** *controller*  
  コントローラーのコンピューター名です。 "`localhost`" または "`.`" を使用してローカル コンピューターを参照できます。  
   
@@ -41,19 +46,19 @@ dreplay cancel [-m controller] [-q]
   
  **-q** パラメーターは省略可能です。  
   
-## 使用例  
+## <a name="examples"></a>使用例  
  次の例では、非表示モードでキャンセル要求が送信されます。 値 `localhost` は、コントローラー サービスが管理ツールと同じコンピューターで実行されていることを示します。  
   
 ```  
 dreplay cancel –m localhost -q  
 ```  
   
-## アクセス許可  
+## <a name="permissions"></a>アクセス許可  
  対話ユーザー (ローカル ユーザーまたはドメイン ユーザー アカウント) として、管理ツールを実行する必要があります。 ローカル ユーザー アカウントを使用するには、管理ツールとコントローラーが同じコンピューター上で実行されている必要があります。  
   
  詳細については、「 [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)  
   
   

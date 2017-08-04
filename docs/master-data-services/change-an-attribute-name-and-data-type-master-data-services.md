@@ -1,35 +1,40 @@
 ---
-title: "属性名とデータ型を変更する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "属性 [マスター データ サービス]、名前の変更"
+title: "属性名と変更するデータ型 (Master Data Services) |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attributes [Master Data Services], changing name
 ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a1c9e79f7485db3577a17147e2d187d2acc6c521
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# 属性名とデータ型を変更する (マスター データ サービス)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、属性の名前を変更できます。  
+# <a name="change-an-attribute-name-and-data-type-master-data-services"></a>属性名とデータ型を変更する (マスター データ サービス)
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性の名前を変更できます。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
 -   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
-### 属性名と種類を変更するには  
+### <a name="to-change-an-attribute-name-and-type"></a>属性名と種類を変更するには  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 9
   
     -   属性の対象がコレクションの場合、 **[メンバーの種類]** ボックスの一覧から **[コレクション]** を選択します。  
   
-6.  編集する属性の行を選択し、**[編集]** をクリックします。  
+6.  編集する属性の行を選択し、 **[編集]**をクリックします。  
   
 7.  **[名前]** ボックスに、属性の新しい名前を入力します。 属性名として使用できない単語の一覧については、「[予約語 (マスター データ サービス)](../master-data-services/reserved-words-master-data-services.md)」を参照してください。  
   
@@ -55,9 +60,9 @@ caps.handback.revision: 9
   
 9. **[保存]**をクリックします。  
   
-## 参照  
- [テキスト属性を作成する (マスター データ サービス)](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [属性を削除する (マスター データ サービス)](../master-data-services/delete-an-attribute-master-data-services.md)   
- [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)  
+## <a name="see-also"></a>参照  
+ [テキスト属性 &#40; を作成します。マスター データ サービス &#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
+ [属性 &#40; を削除します。マスター データ サービス &#41;](../master-data-services/delete-an-attribute-master-data-services.md)   
+ [属性と #40 です。マスター データ サービス &#41;](../master-data-services/attributes-master-data-services.md)  
   
   

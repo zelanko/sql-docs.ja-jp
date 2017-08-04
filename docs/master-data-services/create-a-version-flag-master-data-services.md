@@ -1,29 +1,34 @@
 ---
-title: "バージョン フラグを作成する (マスター データ サービス) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "バージョン フラグの作成 [マスター データ サービス]"
-  - "バージョン フラグ [マスター データ サービス], 作成"
-  - "バージョン [マスター データ サービス], フラグの作成"
+title: "バージョン フラグ (Master Data Services) を作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating version flags [Master Data Services]
+- version flags [Master Data Services], creating
+- versions [Master Data Services], creating flags
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be3585a40a7ce8312e4e31b13118f6b128e2be13
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# バージョン フラグを作成する (マスター データ サービス)
+# <a name="create-a-version-flag-master-data-services"></a>バージョン フラグを作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で、バージョンに割り当てるバージョン フラグを作成します。 フラグによって、ユーザーまたはサブスクライブ システムが使用する必要があるバージョンを示すことができます。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
@@ -32,11 +37,11 @@ caps.handback.revision: 7
   
 -   [バージョン管理] 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
-### バージョン フラグを作成するには  
+### <a name="to-create-a-version-flag"></a>バージョン フラグを作成するには  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[バージョン管理]**をクリックします。  
   
-2.  **[バージョンの管理]** ページのメニュー バーから **[管理]** をポイントして **[フラグ]** をクリックします。  
+2.  **[バージョンの管理]** ページのメニュー バーから **[管理]** をポイントして **[フラグ]**をクリックします。  
   
 3.  **[バージョン フラグの管理]** ページの **[モデル]** フィールドから、フラグを作成するモデルを選択します。  
   
@@ -50,12 +55,12 @@ caps.handback.revision: 7
   
 8.  **[保存]**をクリックします。  
   
-## 次の手順  
+## <a name="next-steps"></a>次の手順  
   
--   [バージョンにフラグを割り当てる (マスター データ サービス)](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
+-   [バージョン &#40; にフラグを割り当てるマスター データ サービス &#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
-## 参照  
- [バージョン (マスター データ サービス)](../master-data-services/versions-master-data-services.md)   
- [バージョン フラグ名を変更する (マスター データ サービス)](../master-data-services/change-a-version-flag-name-master-data-services.md)  
+## <a name="see-also"></a>参照  
+ [バージョンと #40 です。マスター データ サービス &#41;](../master-data-services/versions-master-data-services.md)   
+ [バージョン フラグ名 &#40; を変更します。マスター データ サービス &#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)  
   
   

@@ -1,30 +1,35 @@
 ---
-title: "Excel 変換先 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.exceldest.f1"
-helpviewer_keywords: 
-  - "変換先 [Integration Services]、Excel"
-  - "Excel [Integration Services]"
+title: "移行先の excel |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.exceldest.f1
+helpviewer_keywords:
+- destinations [Integration Services], Excel
+- Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 62feb48c0b05d6f7c8d6b3342b49d9b050113ac3
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# Excel 変換先
+# <a name="excel-destination"></a>Excel 変換先
   Excel 変換先は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ブックのワークシートまたは範囲にデータを読み込みます。  
   
-## アクセス モード  
+## <a name="access-modes"></a>アクセス モード  
  Excel 変換先には、データを読み込むために、次の 3 つの異なるデータ アクセス モードが用意されています。  
   
 -   テーブルまたはビュー。  
@@ -36,8 +41,8 @@ caps.handback.revision: 49
 > [!IMPORTANT]  
 >  Excel でのワークシートまたは範囲は、テーブルまたはビューに相当します。 Excel ソース エディターと Excel 変換先エディターで使用できるテーブルの一覧では、既存のワークシート (Sheet1$ など、ワークシート名に $ 記号を付加して識別) と名前付き範囲 (MyRange など、$ 記号が付かないことで識別) のみが表示されます。  
   
-## 使用に関する注意点  
- Excel 接続マネージャーは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet 4.0 と、それによってサポートされる Excel ISAM (Indexed Sequential Access Method) ドライバーを使用して Excel データ ソースに接続し、データの読み取りおよび書き込みを行います。  
+## <a name="usage-considerations"></a>使用に関する注意点  
+ Excel 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet 4.0 と、それによってサポートされる Excel ISAM (Indexed Sequential Access Method) ドライバーを使用して Excel データ ソースに接続し、データの読み取りおよび書き込みを行います。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポート技術情報に含まれる資料の多くは、このプロバイダーおよびドライバーの処理に関するドキュメントです。これらの資料は [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] または従来のデータ変換サービスに固有のものではありませんが、予期しない結果が発生する可能性のある特定の動作について知っておくことをお勧めします。 Excel ドライバーの使用方法や動作に関する一般的な情報については、「 [[HOWTO] Visual Basic または VBA から ADO を Excel データで使用する](http://support.microsoft.com/kb/257819)」を参照してください。  
   
@@ -57,7 +62,7 @@ caps.handback.revision: 49
   
     -   Boolean – ブール (DT_BOOL)  
   
-    -   Date/time – **日付** (DT_DATE)  
+    -   Date/time –     **日付** (DT_DATE)  
   
     -   String – Unicode 文字列、長さ 255 (DT_WSTR)  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 49
   
     -   倍精度の Excel 数値列と他の型の数値列の列間の変換  
   
-## Excel 変換先の構成  
+## <a name="configuration-of-the-excel-destination"></a>Excel 変換先の構成  
  Excel 変換先は、Excel 接続マネージャーを使用してデータ ソースに接続します。Excel 接続マネージャーでは、使用する Excel ブック ファイルを指定します。 詳しくは、「 [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md)」をご覧ください。  
   
  Excel 変換先は、1 つの標準入力と 1 つのエラー出力をとります。  
@@ -80,21 +85,21 @@ caps.handback.revision: 49
   
  **[Excel 変換先エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[Excel 変換先エディター] ([接続マネージャー] ページ)](../Topic/Excel%20Destination%20Editor%20\(Connection%20Manager%20Page\).md)  
+-   [[Excel 変換先エディター] ([接続マネージャー] ページ)](../../integration-services/data-flow/excel-destination-editor-connection-manager-page.md)  
   
--   [[Excel 変換先エディター] ([マッピング] ページ)](../Topic/Excel%20Destination%20Editor%20\(Mappings%20Page\).md)  
+-   [[Excel 変換先エディター] ([マッピング] ページ)](../../integration-services/data-flow/excel-destination-editor-mappings-page.md)  
   
--   [[Excel 変換先エディター] ([エラー出力] ページ)](../Topic/Excel%20Destination%20Editor%20\(Error%20Output%20Page\).md)  
+-   [[Excel 変換先エディター] ([エラー出力] ページ)](../../integration-services/data-flow/excel-destination-editor-error-output-page.md)  
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるすべてのプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](../Topic/Common%20Properties.md)  
+-   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Excel のカスタム プロパティ](../../integration-services/data-flow/excel-custom-properties.md)  
   
- プロパティの設定方法の詳細については、「[データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+ プロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
-## 関連タスク  
+## <a name="related-tasks"></a>関連タスク  
   
 -   [Excel ブックに接続する](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 49
   
 -   [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
   
 -   dougbert.com のブログ「 [Integration Services における Excel (パート 1/3): 接続とコンポーネント](http://go.microsoft.com/fwlink/?LinkId=217674)」  
   
@@ -110,10 +115,10 @@ caps.handback.revision: 49
   
 -   dougbert.com のブログ「 [Integration Services における Excel (パート 3/3): 問題点と対処法](http://go.microsoft.com/fwlink/?LinkId=217676)」  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Excel ソース](../../integration-services/data-flow/excel-source.md)   
- [Integration Services (SSIS) の変数](../../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services & #40 です。SSIS &#41;変数](../../integration-services/integration-services-ssis-variables.md)   
  [データ フロー](../../integration-services/data-flow/data-flow.md)   
- [スクリプト タスクを使用した Excel ファイルの操作](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
+ [スクリプト タスクを持つ Excel ファイルの操作](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   

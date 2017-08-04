@@ -1,36 +1,41 @@
 ---
-title: "サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "サブスクリプション ビュー [マスター データ サービス], 作成"
-  - "サブスクリプション ビューの作成 [マスター データ サービス]"
+title: "データ (Master Data Services) をエクスポートするサブスクリプション ビューを作成 |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscription views [Master Data Services], creating
+- creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4934e49ef7b8e4f6b56439dd3b414fc93d5af832
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス)
+# <a name="create-a-subscription-view-to-export-data-master-data-services"></a>サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス)
   サブスクリプション ビューを作成して、マスター データ サービスのデータをサブスクライブ システムにエクスポートします。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース内のデータのビューを作成します。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   **[統合管理]** 機能領域にアクセスする権限が必要です。 詳細については、次を参照してください。 [機能領域権限と #40 です。マスター データ サービスと #41;](../master-data-services/functional-area-permissions-master-data-services.md)します。  
+-   **[統合管理]** 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
--   モデル管理者である必要があります。 詳細については、次を参照してください。 [管理者と #40 です。マスター データ サービスと #41;](../master-data-services/administrators-master-data-services.md)します。  
+-   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
-### サブスクリプション ビューを作成および編集するには  
+### <a name="to-create-and-edit-a-subscription-view"></a>サブスクリプション ビューを作成および編集するには  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[統合管理]**をクリックします。  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 10
   
 5.  **[モデル]** ボックスの一覧からモデルを選択します。  
   
-6.  選択 **いったん削除されたメンバーを含める**, 、ビューでいったん削除されたメンバーを含めるようにします。  
+6.  **[Include soft-deleted members]**(論理削除済みメンバーを含める) を選択して、論理削除済みメンバーをビューに含めます。  
   
 7.  **[バージョンのオプション]** で **[バージョン]** または **[バージョン フラグ]**のいずれかを選択し、対応する一覧から選択します。  
   
@@ -59,12 +64,12 @@ caps.handback.revision: 10
   
 11. **[保存]**をクリックします。  
   
-## ビュー情報  
+## <a name="view-information"></a>ビュー情報  
  作成されたビューごとに、10 列の行がグリッドに追加されます。 次の表で各列について説明します。  
   
-|列|説明|  
+|列|Description|  
 |------------|-----------------|  
-|[状態]|ビューの状態。<br /><br /> クリックすると、 **保存**, 、 ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") イメージが表示され、ビューが更新していることを示します。<br /><br /> 作成または編集、表示するときにエラーがある場合、 ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status") イメージが表示されます。<br /><br /> それ以外の場合、状態は OK、 ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") イメージが表示されます。|  
+|[状態]|ビューの状態。<br /><br /> クリックすると**保存**、![ステータスの更新のアイコン](../master-data-services/media/mds-statusicon-updating.png "ステータスの更新のアイコン")イメージ ビューが更新中であることを示すが表示されます。<br /><br /> 作成またはビューを編集するときにエラーがある場合、![のエラー状態をアイコン](../master-data-services/media/mds-statusicon-error.png "のエラー状態をアイコン")イメージが表示されます。<br /><br /> 状態が [ok] をそれ以外の場合、および![OK ステータス アイコン](../master-data-services/media/mds-statusicon-ok.png "OK ステータス アイコン")イメージが表示されます。|  
 |名前|サブスクリプション ビュー名。|  
 |[モデル]|モデル名。|  
 |[バージョンのオプション]|バージョン名。|  
@@ -85,9 +90,9 @@ caps.handback.revision: 10
   
 -   **更新日時**: ビューが最後に更新された日時。  
   
-## 参照  
- [概要: #40; (&)、データをエクスポートします。マスター データ サービスと #41 です。](../master-data-services/overview-exporting-data-master-data-services.md)   
- [サブスクリプション ビューと #40; を削除します。マスター データ サービスと #41 です。](../master-data-services/delete-a-subscription-view-master-data-services.md)   
- [バージョン フラグ (& r) #40 です。マスター データ サービスと #41 です。](../master-data-services/create-a-version-flag-master-data-services.md)  
+## <a name="see-also"></a>参照  
+ [概要: データのエクスポート (マスター データ サービス)](../master-data-services/overview-exporting-data-master-data-services.md)   
+ [サブスクリプション ビュー &#40; を削除します。マスター データ サービス &#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
+ [バージョン フラグ &#40; を作成します。マスター データ サービス &#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
   

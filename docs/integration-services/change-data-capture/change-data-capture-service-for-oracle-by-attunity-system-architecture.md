@@ -1,22 +1,27 @@
 ---
-title: "Change Data Capture Service for Oracle by Attunity のシステム アーキテクチャ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Change Data Capture Service for Oracle by Attunity のシステム アーキテクチャ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 69f36b9b3e01be90cc1f5a4cd19fb80543186620
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# Change Data Capture Service for Oracle by Attunity のシステム アーキテクチャ
+# <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Change Data Capture Service for Oracle by Attunity のシステム アーキテクチャ
   CDC Service for Oracle は、1 つ以上のソース Oracle データベースの選択したテーブルに加えられた変更を、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC データベースにキャプチャします。 次の図に、CDC Service for Oracle を構成するコンポーネントを示します。  
   
  ![サービスのアーキテクチャ](../../integration-services/change-data-capture/media/service-architecture.gif "サービスのアーキテクチャ")  
@@ -27,7 +32,7 @@ caps.handback.revision: 9
   
 -   Oracle データベース: Oracle データベースのサポート対象バージョンが実行される任意のコンピューターです。 これには、Windows、Linux、またはインストールされた Oracle データベースのバージョンがサポートする他の任意のオペレーティング システムを実行するコンピューターが含まれます。 このプラットフォームは図で複数示されています。これは、単一の Oracle CDC Service で複数のソース Oracle データベースの変更をキャプチャできるためです。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: 対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のサポート対象の SKU) が実行される任意のコンピューターです。 Oracle CDC Service は、変更テーブルおよびサービス構成を格納する 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ターゲットをサポートします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プラットフォームは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のクラスター化されたインスタンスまたは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の **Always On** 機能を使用してミラー化されたインスタンスを表す場合もあります。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: 対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ( [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のサポート対象の SKU) が実行される任意のコンピューターです。 Oracle CDC Service は、変更テーブルおよびサービス構成を格納する 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ターゲットをサポートします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プラットフォームは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のクラスター化されたインスタンスまたは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の **Always On** 機能を使用してミラー化されたインスタンスを表す場合もあります。  
   
 -   Oracle CDC デザイナー: ソースの Oracle データベースと対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにアクセスできる任意のサポート対象 Windows コンピューターです。  
   

@@ -1,26 +1,31 @@
 ---
-title: "緩やかに変化するディメンション ウィザードを使用して出力を構成する | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "緩やかに変化するディメンション変換"
-  - "緩やかに変化するディメンション"
-  - "緩やかに変化するディメンション ウィザード"
+title: "出力を緩やかに変化するディメンション ウィザードを使用して構成する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Slowly Changing Dimension transformation
+- slowly changing dimensions
+- Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cc89e598abbf0b224325d74501b47e3999bf472b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# 緩やかに変化するディメンション ウィザードを使用して出力を構成する
+# <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>緩やかに変化するディメンション ウィザードを使用して出力を構成する
   緩やかに変化するディメンション ウィザードは、緩やかに変化するディメンションの変換用のエディターとして機能します。 緩やかに変化するディメンションのデータのデータ フローを構築および構成する作業は、複雑なタスクになる場合があります。 緩やかに変化するディメンション ウィザードを使用すると、列のマッピング、ビジネス キーの列の選択、列の変化する属性の設定、および推定ディメンション メンバー サポートの構成などの手順の指針が示され、これにより、最も簡単な方法で、緩やかに変化するディメンションの変換出力のデータ フローを構築できます。  
   
  ディメンション テーブルで、ビジネス キーの列を少なくとも 1 つ選択し、入力列にマップする必要があります。 ビジネス キーの値は、変換元のレコードをディメンション テーブルのレコードにリンクします。 変換はこのマッピングを使用してディメンション テーブルのレコードを検索し、レコードが新しいものか変更されたものかを判断します。 通常、変換元の主キーがビジネス キーとなりますが、レコードを一意で識別し、値が変更されない限り、代替キーを使用することもできます。 複数の列から成る複合キーをビジネス キーとすることもできます。 ディメンション テーブルの主キーは、通常、代理キーです。つまり、ID 列、またはスクリプトなどのカスタム ソリューションによって自動的に生成された数値です。  
@@ -29,9 +34,9 @@ caps.handback.revision: 43
   
  緩やかに変化するディメンション ウィザードを [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーで開くには、緩やかに変化するディメンションの変換をダブルクリックします。  
   
-## 緩やかに変化するディメンションの出力の作成  
+## <a name="creating-slowly-changing-dimension-outputs"></a>緩やかに変化するディメンションの出力の作成  
   
-#### 緩やかに変化するディメンションの変換出力を作成するには  
+#### <a name="to-create-slowly-changing-dimension-transformation-outputs"></a>緩やかに変化するディメンションの変換出力を作成するには  
   
 1.  更新するディメンション テーブルが含まれているデータ ソースにアクセスするための、接続マネージャーを選択します。  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 43
   
 6.  履歴属性のオプションを設定します。  
   
-     列の変化の種類に **[履歴属性]** を使用するように構成した場合、現在のレコードと有効期限が切れたレコードとを区別する方法を選択する必要があります。 現在の行と有効期限が切れた行を判別するには、現在の行のインジケーター列または 2 つの日付列が使用できます。 現在の行のインジケーター列を使用する場合は、現在の行には **[現在]** または **[True]** を設定し、有効期限が切れた行には **[有効期限切れ]** または **[False]** を設定できます。 また、カスタム値を入力することもできます。 開始日と終了日の 2 つの日付列を使用する場合、日付を入力するかまたはシステム変数を選択してその値を使用することにより、日付列の値を設定するときに使用する日付を指定できます。  
+     列の変化の種類に **[履歴属性]** を使用するように構成した場合、現在のレコードと有効期限が切れたレコードとを区別する方法を選択する必要があります。 現在の行と有効期限が切れた行を判別するには、現在の行のインジケーター列または 2 つの日付列が使用できます。 現在の行のインジケーター列を使用する場合は、現在の行には **[現在]**または **[True]** を設定し、有効期限が切れた行には **[有効期限切れ]** または **[False]** を設定できます。 また、カスタム値を入力することもできます。 開始日と終了日の 2 つの日付列を使用する場合、日付を入力するかまたはシステム変数を選択してその値を使用することにより、日付列の値を設定するときに使用する日付を指定できます。  
   
 7.  推定メンバーをサポートするかどうかを指定し、推定メンバー レコードが含む列を選択します。  
   
@@ -73,12 +78,12 @@ caps.handback.revision: 43
   
      次の図は、固定属性、変化する属性、および履歴属性の変化、推定メンバー、および一致するレコードへの変更をサポートする、データ フローの例を示しています。  
   
-     ![緩やかに変化するディメンション ウィザードからのデータ フロー](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "緩やかに変化するディメンション ウィザードからのデータ フロー")  
+     ![緩やかに変化するディメンション ウィザードではからのデータ フロー](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "緩やかに変化するディメンション ウィザードではからのデータ フロー")  
   
-## 緩やかに変化するディメンションの出力の更新  
- 緩やかに変化するディメンションの変換出力の構成を最も簡単に更新するには、緩やかに変化するディメンション ウィザードを再実行し、ウィザード ページからプロパティを変更します。 また、**[詳細エディター]** ダイアログ ボックスまたはプログラムによっても、緩やかに変化するディメンションの変換を更新できます。  
+## <a name="updating-slowly-changing-dimension-outputs"></a>緩やかに変化するディメンションの出力の更新  
+ 緩やかに変化するディメンションの変換出力の構成を最も簡単に更新するには、緩やかに変化するディメンション ウィザードを再実行し、ウィザード ページからプロパティを変更します。 また、 **[詳細エディター]** ダイアログ ボックスまたはプログラムによっても、緩やかに変化するディメンションの変換を更新できます。  
   
-## 参照  
- [緩やかに変化するディメンション変換](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+## <a name="see-also"></a>参照  
+ [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   

@@ -1,31 +1,36 @@
 ---
-title: "文字マップ変換エディター | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.charactermaptransformation.f1"
-helpviewer_keywords: 
-  - "文字マップ変換エディター"
+title: "文字マップ変換エディター |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.charactermaptransformation.f1
+helpviewer_keywords:
+- Character Map Transformation Editor
 ms.assetid: 3f1dbcf9-9cca-4606-bdcc-7ea6ad48cdf3
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1ddabff7405401657b44a4cbc9205cf6092949d7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# 文字マップ変換エディター
+# <a name="character-map-transformation-editor"></a>文字マップ変換エディター
   **[文字マップ変換エディター]** ダイアログ ボックスを使用すると、列のデータに適用する文字列関数を選択し、マッピングが埋め込み先の変更か新しい列として追加されるかを指定できます。  
   
  文字マップ変換の詳細については、「 [Character Map Transformation](../../../integration-services/data-flow/transformations/character-map-transformation.md)」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **使用できる入力列**  
  チェック ボックスを使用し、文字列関数を使用して変換する列を選択します。 選択は下の表に表示されます。  
   
@@ -60,9 +65,9 @@ caps.handback.revision: 26
  各出力列の別名を入力します。 既定では、入力列の名前の後に " **のコピー** " が追加された別名になりますが、固有のわかりやすい名前を選択することもできます。  
   
  **エラー出力の構成**  
- [[エラー出力の構成]](../Topic/Configure%20Error%20Output.md) ダイアログ ボックスを使用して、この変換のエラー処理オプションを指定します。  
+ [[エラー出力の構成]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスを使用して、この変換のエラー処理オプションを指定します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../../integration-services/integration-services-error-and-message-reference.md)  
   
   

@@ -1,33 +1,38 @@
 ---
-title: "変更の追跡グループに属性を追加する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "変更の追跡グループ [マスター データ サービス]"
-  - "属性 [マスター データ サービス]、変更の追跡グループ"
-  - "変更の追跡グループ [マスター データ サービス]、属性の追加"
+title: "変更の追跡グループ (Master Data Services) に属性を追加 |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- change tracking groups [Master Data Services]
+- attributes [Master Data Services], change tracking groups
+- change tracking groups [Master Data Services], adding attributes
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f0d90b83014cab277a0289a972b18e7d0ac9253
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# 変更の追跡グループに属性を追加する (マスター データ サービス)
+# <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>変更の追跡グループに属性を追加する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で属性の値に対する変更を追跡する場合、変更の追跡グループに属性を追加します。  
   
 > [!NOTE]  
 >  変更の追跡グループに属性を追加した後に属性の値が変更されると、属性は [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースで変更済みとしてフラグが付けられます。 変更に基づいてアクションを実行するビジネス ルールを作成します。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -36,7 +41,7 @@ caps.handback.revision: 7
   
 -   変更の追跡グループに追加する属性が存在する必要があります。 詳細については、「[テキスト属性を作成する (マスター データ サービス)](../master-data-services/create-a-text-attribute-master-data-services.md)」を参照してください。  
   
-### 属性を変更の追跡グループに追加するには  
+### <a name="to-add-attributes-to-a-change-tracking-group"></a>属性を変更の追跡グループに追加するには  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 7
   
     -   属性の対象がコレクションの場合、 **[メンバーの種類]** ボックスの一覧から **[コレクション]** を選択します。  
   
-6.  編集する属性の行を選択し、**[編集]** をクリックします。  
+6.  編集する属性の行を選択し、 **[編集]**をクリックします。  
   
 7.  **[変更の追跡の有効化]** チェック ボックスをオンにします。  
   
@@ -62,16 +67,16 @@ caps.handback.revision: 7
   
 9. **[属性の保存]**をクリックします。  
   
-     編集済みの属性では、グリッドの **[Enable Change Tracking Group (変更の追跡グループを有効にする)]** 列が **[はい] (グループ: 入力したグループ番号)** に変更されます。  
+     編集済みの属性では、グリッドの **[Enable Change Tracking Group (変更の追跡グループを有効にする)]** 列が **[はい] (グループ: 入力したグループ番号)**に変更されます。  
   
 10. グループに含めるすべての属性に対して、この手順を繰り返します。 グループ内の各属性に対して同じ変更の追跡グループの番号を使用します。  
   
-## 次の手順  
+## <a name="next-steps"></a>次の手順  
   
--   [属性値の変更に基づいてアクションを開始する (マスター データ サービス)](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
+-   [属性値の変更 &#40; に基づいてアクションを開始します。マスター データ サービス &#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
   
-## 参照  
- [テキスト属性を作成する (マスター データ サービス)](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [ドメイン ベースの属性を作成する (マスター データ サービス)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+## <a name="see-also"></a>参照  
+ [テキスト属性 &#40; を作成します。マスター データ サービス &#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
+ [ドメイン ベースの属性 (& r) #40 です。マスター データ サービスと #41 です。](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   

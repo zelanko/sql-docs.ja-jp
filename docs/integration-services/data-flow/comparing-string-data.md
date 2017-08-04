@@ -1,31 +1,36 @@
 ---
-title: "文字列データの比較 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "比較、文字列データ"
-  - "比較オプション [Integration Services]"
-  - "ロケール [Integration Services]"
-  - "文字列データの変換"
-  - "文字列の比較"
+title: "文字列データの比較 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- comparing string data
+- comparison options [Integration Services]
+- locales [Integration Services]
+- converting string data
+- string comparisons
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee8d749695838be53ebbb0b9de11baf722ace7e2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# 文字列データの比較
-  文字列比較は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって実行される多くの変換において重要な部分です。また、文字列比較は、変数内の式やプロパティ式の評価でも使用されます。 たとえば、並べ替え変換はデータセット内の値を比較し、昇順または降順にデータを並べ替えます。  
+# <a name="comparing-string-data"></a>比較、文字列データ
+  文字列比較は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]によって実行される多くの変換において重要な部分です。また、文字列比較は、変数内の式やプロパティ式の評価でも使用されます。 たとえば、並べ替え変換はデータセット内の値を比較し、昇順または降順にデータを並べ替えます。  
   
-## 文字列の比較時の変換の構成  
+## <a name="configuring-transformations-for-string-comparisons"></a>文字列の比較時の変換の構成  
  並べ替え変換、集計変換、あいまいグループ化変換、およびあいまい参照変換をカスタマイズして、文字列の比較方法を列レベルで変更できます。 たとえば、比較で大文字と小文字を区別しないように指定できます。この場合は、大文字と小文字が同じ文字として扱われます。  
   
  次の変換は、文字列比較を含むことができる式を使用します。  
@@ -36,7 +41,7 @@ caps.handback.revision: 39
   
  変数、変数マッピング、および優先順位制約でも、文字列比較を含めた式を使用できます。 式の詳細については、「[Integration Services &#40;SSIS&#41; の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」を参照してください。  
   
-## 文字列の比較時の処理  
+## <a name="processing-during-string-comparison"></a>文字列の比較時の処理  
  データおよび変換の構成によっては、文字列データの比較中に次の処理が発生する場合があります。  
   
 -   データの Unicode への変換。 変換元のデータが Unicode でない場合、比較が行われる前に自動的に Unicode に変換されます。  
@@ -45,24 +50,24 @@ caps.handback.revision: 39
   
 -   比較の区別を変更するための、列レベルでの比較オプションの適用。  
   
-## 文字列データの Unicode への変換  
+## <a name="converting-string-data-to-unicode"></a>文字列データの Unicode への変換  
  変換が実行する操作や変換の構成によっては、文字列データは、文字列の Unicode 表現である DT_WSTR データ型に変換される場合があります。  
   
  DT_STR データ型の文字列データは、列のコード ページを使用して Unicode に変換されます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、列レベルでのコード ページがサポートされており、各列はそれぞれ異なるコード ページを使用して変換できます。  
   
- 多くの場合、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] はデータ ソースから正しいコード ページを識別できます。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースおよび列レベルで照合順序を設定できます。 コード ページは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序から取得します。この照合順序には、Windows または SQL の照合順序のどちらかを設定できます。  
+ 多くの場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] はデータ ソースから正しいコード ページを識別できます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースおよび列レベルで照合順序を設定できます。 コード ページは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序から取得します。この照合順序には、Windows または SQL の照合順序のどちらかを設定できます。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が予期しないコード ページを提供する場合、またはパッケージが正しいコード ページを決定するための十分な情報を提供しないプロバイダーを使用してデータ ソースにアクセスする場合は、OLE DB ソースおよび OLE DB 変換先で既定のコード ページを指定できます。 既定のコード ページは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で提供されるコード ページの代わりに使用されます。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が予期しないコード ページを提供する場合、またはパッケージが正しいコード ページを決定するための十分な情報を提供しないプロバイダーを使用してデータ ソースにアクセスする場合は、OLE DB ソースおよび OLE DB 変換先で既定のコード ページを指定できます。 既定のコード ページは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で提供されるコード ページの代わりに使用されます。  
   
  ファイルにはコード ページはありません。 代わりに、パッケージがファイル データへの接続に使用するフラット ファイル接続マネージャーおよび複数フラット ファイル接続マネージャーに、ファイルのコード ページを指定するプロパティが含まれます。 コード ページはファイル レベルでのみ設定できます。列レベルでは設定できません。  
   
-## ロケールの設定  
+## <a name="setting-locale"></a>ロケールの設定  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、データを並べ替えたり、日付、時間、および 10 進数データを解釈するためのロケール固有のルールを推定する場合、コード ページを使用しません。 その代わり、変換はデータ フロー コンポーネント、データ フロー タスク、コンテナー、またはパッケージ上の LocaleId プロパティによって設定されるロケールを読み取ります。 既定では、変換のロケールはデータ フロー タスクから継承され、データ フロー タスクはパッケージからロケールを継承します。 データ フロー タスクが For ループ コンテナーなどのコンテナー内にある場合は、コンテナーからロケールを継承します。  
   
  また、フラット ファイル接続マネージャーや、複数のフラット ファイル接続マネージャー用のロケールも指定できます。  
   
-## 比較オプションの設定  
- ロケールは、文字列データの比較に関する基本ルールを提供します。 たとえば、ロケールは、アルファベット内の各文字の並べ替えの位置を指定します。 ただし、こうしたルールは一部の変換が実行する比較に対しては十分でない場合があり、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ではロケールの比較ルールよりも詳細な比較オプションのセットがサポートされています。 これらの比較オプションは、列レベルで設定されます。 たとえば、詳細比較オプションの 1 つを使用すると、分音文字を無視できます。 このオプションをオンにした場合、文字列データの比較時にアクセントなどの分音文字が無視され、"a" と "&amp;#xE1;" が同一の文字と見なされます。  
+## <a name="setting-comparison-options"></a>比較オプションの設定  
+ ロケールは、文字列データの比較に関する基本ルールを提供します。 たとえば、ロケールは、アルファベット内の各文字の並べ替えの位置を指定します。 ただし、こうしたルールは一部の変換が実行する比較に対しては十分でない場合があり、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ではロケールの比較ルールよりも詳細な比較オプションのセットがサポートされています。 これらの比較オプションは、列レベルで設定されます。 たとえば、詳細比較オプションの 1 つを使用すると、分音文字を無視できます。 このオプションをオンにした場合、文字列データの比較時にアクセントなどの分音文字が無視され、"a" と "&amp;#xE1;" が同一の文字と見なされます。  
   
  次の表では、比較オプションと並べ替えスタイルについて説明します。  
   
@@ -77,11 +82,11 @@ caps.handback.revision: 39
   
  並べ替え変換、集計変換、あいまいグループ化変換、およびあいまい参照変換には、データを比較するためのこれらのオプションが含まれています。  
   
- あいまいグループ化変換およびあいまい参照変換の **[詳細エディター]** ダイアログ ボックスには、**[FullySensitive]** 比較フラグが表示されます。 **[FullySensitive]** 比較フラグを選択すると、すべての比較オプションが適用されます。  
+ あいまいグループ化変換およびあいまい参照変換の **[詳細エディター]** ダイアログ ボックスには、 **[FullySensitive]** 比較フラグが表示されます。 **[FullySensitive]** 比較フラグを選択すると、すべての比較オプションが適用されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)   
- [高速解析](../Topic/Fast%20Parse.md)   
- [標準解析](../Topic/Standard%20Parse.md)  
+ [高速解析](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
+ [標準解析](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
   
   

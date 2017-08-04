@@ -1,45 +1,50 @@
 ---
-title: "DQS 操作のためのデータへのアクセス | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "DQS 操作のためデータにアクセス |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a03861b1706667657461ecf95196fc6cb3501d2f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# DQS 操作のためのデータへのアクセス
+# <a name="access-data-for-the-dqs-operations"></a>DQS 操作のためのデータへのアクセス
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 操作にソース データを使用し、処理後のデータをエクスポートするには、次のいずれかの方法を使用できます。  
   
 -   ソース データを DQS_STAGING_DATA データベース内のテーブル/ビューにコピーし、その後、それを DQS 操作に使用する。 処理後のデータを、DQS_STAGING_DATA データベース内の新しいテーブルにエクスポートすることもできます。 これを行うには、Windows ユーザー アカウントに DQS_STAGING_DATA データベースへの読み取り/書き込みアクセス権を与える必要があります。  
   
 -   DQS 操作のソース データと、処理後のデータのエクスポート先に、自分専用のデータベースを使用する。 これを行うには、自分のデータベースが、Data Quality Server データベースと同じ SQL Server インスタンス内に存在する必要があります。 それ以外の場合、DQS 操作を行うために Data Quality Client でデータベースを利用することはできません。 また、Windows ユーザー アカウントには、照合結果をエクスポートする DQS_STAGING_DATA データベースへのアクセス権も付与する必要があります。これは、照合結果のエクスポートが、最初に照合結果が DQS_STAGING_DATA データベース内の一時テーブルにエクスポートされてから、エクスポート先データベース内のテーブルに移動されるという 2 段階で構成されるためです。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
   
--   DQSInstaller.exe ファイルを実行して [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを完了しておく必要があります。 詳細については、「[Data Quality Server のインストールを完了するための DQSInstaller.exe の実行](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)」をご覧ください。  
+-   DQSInstaller.exe ファイルを実行して [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを完了しておく必要があります。 詳細については、「 [Data Quality Server のインストールを完了するための DQSInstaller.exe の実行](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)」をご覧ください。  
   
 -   データベースの SQL ログインへのアクセスを付与または変更するには、Windows ユーザー アカウントがデータベース エンジン インスタンスの適切な固定サーバー ロール (securityadmin、serveradmin、sysadmin など) のメンバーであることが必要です。  
   
-### DQS_STAGING_DATA データベースへの読み取り/書き込みアクセス権をユーザーに付与するには  
+### <a name="to-grant-readwrite-access-to-a-user-on-the-dqsstagingdata-database"></a>DQS_STAGING_DATA データベースへの読み取り/書き込みアクセス権をユーザーに付与するには  
   
 1.  Microsoft SQL Server Management Studio を起動します。  
   
 2.  Microsoft SQL Server Management Studio で、SQL Server インスタンスを展開し、 **[セキュリティ]**を展開し、 **[ログイン]**を展開します。  
   
-3.  SQL ログインを右クリックし、**[プロパティ]** をクリックします。  
+3.  SQL ログインを右クリックし、 **[プロパティ]**をクリックします。  
   
 4.  **[ログインのプロパティ]** ダイアログ ボックスの左ペインで **[ユーザー マッピング]** をクリックします。  
   
-5.  右ペインで、**[DQS_STAGING_DATA]** データベースの **[マップ]** 列のチェック ボックスをオンにし、**[DQS_STAGING_DATA のデータベース ロール メンバーシップ]** ペインで次のロールを選択します。  
+5.  右ペインで、 **[DQS_STAGING_DATA]** データベースの **[マップ]** 列のチェック ボックスをオンにし、 **[DQS_STAGING_DATA のデータベース ロール メンバーシップ]** ペインで次のロールを選択します。  
   
     -   **db_datareader**: テーブル/ビューからのデータの読み取り。  
   
@@ -49,10 +54,10 @@ caps.handback.revision: 15
   
 6.  **[ログインのプロパティ]** ダイアログ ボックスで、 **[OK]** をクリックして変更を適用します。  
   
-## 次の手順  
+## <a name="next-steps"></a>次の手順  
  DQS 操作のデータ ソースとしてデータベースにアクセスする DQS 操作を実行してから、処理後のデータをデータベースにエクスポートしてください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Data Quality Services のインストール](../../data-quality-services/install-windows/install-data-quality-services.md)  
   
   

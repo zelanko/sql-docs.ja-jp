@@ -1,31 +1,36 @@
 ---
-title: "Data Profiling Task Editor (Profile Requests Page) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataprofilingtask.profilerequests.f1"
-helpviewer_keywords: 
-  - "データ プロファイル タスク エディター"
+title: "データ プロファイル タスク エディター (プロファイル要求 ページ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.profilerequests.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ac9d7e62bfad28176582537c59e733f51223a4f0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# Data Profiling Task Editor (Profile Requests Page)
+# <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
   **[データ プロファイル タスク エディター]** の **[プロファイル要求]** ページを使用すると、計算するプロファイルを選択および構成することができます。 単一のデータ プロファイル タスクで、複数のテーブルまたはビューの複数の列または列の組み合わせに対して複数のプロファイルを計算することができます。  
   
- データ プロファイル タスクの使用方法の詳細については、「[データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「[Data Profile Viewer (Data Profile Viewer)](../../integration-services/control-flow/data-profile-viewer.md)」を参照してください。  
+ データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer (Data Profile Viewer)](../../integration-services/control-flow/data-profile-viewer.md)」を参照してください。  
   
- **[データ プロファイル タスク エディター] の [プロファイル要求] ページを開くには**  
+ **プロファイル要求 ページの データ プロファイル タスク エディターを開きます**  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、データ プロファイル タスクを含む [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを開きます。  
   
@@ -33,10 +38,10 @@ caps.handback.revision: 26
   
 3.  **[データ プロファイル タスク エディター]**で、 **[プロファイル要求]**をクリックします。  
   
-## 要求ペインの使用  
+## <a name="using-the-requests-pane"></a>要求ペインの使用  
  要求ペインは、ページの最上部に表示されるペインです。 このペインには、現在のデータ プロファイル タスク用に構成されているすべてのプロファイルが表示されます。 構成済みのプロファイルが存在しない場合、要求ペインには何も表示されません。 新しいプロファイルを追加するには、 **[プロファイルの種類]** 列の下の空白領域をクリックし、一覧からプロファイルの種類を選択します。 プロファイルを構成するには、要求ペインでプロファイルを選択し、 **[要求プロパティ]** ペインでプロファイルのプロパティを設定します。  
   
-### 要求ペインのオプション  
+### <a name="requests-pane-options"></a>要求ペインのオプション  
  要求ペインには次のオプションがあります。  
   
  **表示**  
@@ -44,14 +49,14 @@ caps.handback.revision: 26
   
  要求ペインに表示される列は、選択した **[表示]** に応じて異なります。 各列の詳細については、次のセクション「要求ペインの列」を参照してください。  
   
-### 要求ペインの列  
+### <a name="requests-pane-columns"></a>要求ペインの列  
  要求ペインに表示される列は、選択した **[表示]** に応じて異なります。  
   
 -   **[すべての要求]**を表示するように選択した場合は、 **[プロファイルの種類]** および **[要求 ID]**の 2 つの列が要求ペインに表示されます。  
   
 -   5 つの列プロファイルのうちの 1 つを表示するように選択した場合は、 **[プロファイルの種類]**、 **[テーブルまたはビュー]**、 **[列]**、および **[要求 ID]**の 4 つの列が要求ペインに表示されます。  
   
--   候補キー プロファイルを表示するように選択した場合は、**[プロファイルの種類]**、**[テーブルまたはビュー]**、**[キー列]**、および **[要求 ID]** の 4 つの列が要求ペインに表示されます。  
+-   候補キー プロファイルを表示するように選択した場合は、 **[プロファイルの種類]**、 **[テーブルまたはビュー]**、 **[キー列]**、および **[要求 ID]**の 4 つの列が要求ペインに表示されます。  
   
 -   機能依存プロファイルを表示するように選択した場合は、 **[プロファイルの種類]**、 **[テーブルまたはビュー]**、 **[決定列]**、 **[依存列]**、および **[要求 ID]**の 5 つの列が要求ペインに表示されます。  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 26
   
  次のセクションで、これらの各列について説明します。  
   
-#### すべてのビューに共通の列  
+#### <a name="columns-common-to-all-views"></a>すべてのビューに共通の列  
  **[プロファイルの種類]**  
  次のオプションからデータ プロファイルを選択します。  
   
@@ -77,42 +82,42 @@ caps.handback.revision: 26
  **RequestID**  
  要求の識別子が表示されます。 通常、自動生成された値を変更する必要はありません。  
   
-#### 個々のプロファイルすべてに共通の列  
+#### <a name="columns-common-to-all-individual-profiles"></a>個々のプロファイルすべてに共通の列  
  **接続マネージャー**  
  ソース データベースに接続する [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーが表示されます。  
   
- **要求 ID**  
+ **[要求 ID]**  
  要求の識別子が表示されます。 通常、自動生成された値を変更する必要はありません。  
   
-#### 5 つの個々の列プロファイルに共通の列  
+#### <a name="columns-common-to-the-five-individual-column-profiles"></a>5 つの個々の列プロファイルに共通の列  
  **[テーブルまたはビュー]**  
  選択した列を含むテーブルまたはビューが表示されます。  
   
- **列**  
+ **[列]**  
  選択したプロファイル対象の列が表示されます。  
   
-#### 候補キー プロファイルに固有の列  
+#### <a name="columns-specific-to-the-candidate-key-profile"></a>候補キー プロファイルに固有の列  
  **[テーブルまたはビュー]**  
  選択した列を含むテーブルまたはビューが表示されます。  
   
  **[キー列]**  
  選択したプロファイル対象の列が表示されます。  
   
-#### 機能依存プロファイルに固有の列  
+#### <a name="columns-specific-to-the-functional-dependency-profile"></a>機能依存プロファイルに固有の列  
  **[テーブルまたはビュー]**  
  選択した列を含むテーブルまたはビューが表示されます。  
   
  **[決定列]**  
  プロファイル対象の決定列として選択した列が表示されます。 米国郵便番号によって米国の州が決定される例の場合、決定列は郵便番号列です。  
   
- **[依存列]**  
+ **Dependent column**  
  プロファイル対象の依存列として選択した列が表示されます。 米国郵便番号によって米国の州が決定される例の場合、依存列は州列です。  
   
-#### 値包含プロファイルに固有の列  
+#### <a name="columns-specific-to-the-value-inclusion-profile"></a>値包含プロファイルに固有の列  
  **[サブセット側のテーブルかビュー]**  
  サブセット側の列として選択した列を含むテーブルまたはビューが表示されます。  
   
- **[スーパーセット側のテーブルまたはビュー]**  
+ **スーパー セット側のテーブルまたはビュー**  
  スーパーセット側の列として選択した列を含むテーブルまたはビューが表示されます。  
   
  **[サブセット側の列]**  
@@ -121,32 +126,32 @@ caps.handback.revision: 26
  **[スーパーセット側の列]**  
  プロファイル対象のスーパーセット側の列として選択した列が表示されます。 米国の州の列の値が 2 文字の米国州コードの参照テーブルに存在することを確認する例では、参照テーブルの州コードの列がスーパーセット列になります。  
   
-## [要求プロパティ] ペインの使用  
+## <a name="using-the-request-properties-pane"></a>[要求プロパティ] ペインの使用  
  **[要求プロパティ]** ペインは要求ペインの下に表示されます。 このペインには、要求ペインで選択したプロファイルのオプションが表示されます。  
   
 > [!NOTE]  
->  プロファイル要求のプロパティを **[要求プロパティ]** に表示するには、**[プロファイルの種類]** を選択した後で **[要求 ID]** フィールドを選択する必要があります。  
+>  プロファイル要求のプロパティを **[要求プロパティ]**に表示するには、 **[プロファイルの種類]** を選択した後で **[要求 ID]** フィールドを選択する必要があります。  
   
  これらのオプションは、選択したプロファイルによって異なります。 個々のプロファイルの種類にあるオプションの詳細については、次のトピックを参照してください。  
   
--   [[候補キー プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../Topic/Candidate%20Key%20Profile%20Request%20Options%20\(Data%20Profiling%20Task\).md)  
+-   [候補キー プロファイル要求のオプションと &#40; データ プロファイル タスクと &#41; です。](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [[列の NULL 比プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../Topic/Column%20Null%20Ratio%20Profile%20Request%20Options%20\(Data%20Profiling%20Task\).md)  
+-   [列の Null 比プロファイル要求オプションと &#40; データ プロファイル タスクと &#41; です。](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [[列統計プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../Topic/Column%20Statistics%20Profile%20Request%20Options%20\(Data%20Profiling%20Task\).md)  
+-   [列統計プロファイル要求オプションと &#40; データ プロファイル タスクと &#41; です。](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [[列の値分布プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../Topic/Column%20Value%20Distribution%20Profile%20Request%20Options%20\(Data%20Profiling%20Task\).md)  
+-   [列の値分布プロファイル要求オプションと &#40; データ プロファイル タスクと &#41; です。](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [[列長分布プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../Topic/Column%20Length%20Distribution%20Profile%20Request%20Options%20\(Data%20Profiling%20Task\).md)  
+-   [列長分布プロファイル要求オプションと &#40; データ プロファイル タスクと &#41; です。](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [[列パターン プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../Topic/Column%20Pattern%20Profile%20Request%20Options%20\(Data%20Profiling%20Task\).md)  
+-   [列パターン プロファイル要求のオプションと &#40; データ プロファイル タスクと &#41; です。](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [[機能依存プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../Topic/Functional%20Dependency%20Profile%20Request%20Options%20\(Data%20Profiling%20Task\).md)  
+-   [機能依存プロファイル要求オプション &#40; データ プロファイル タスクと &#41; です。](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [[値包含プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../Topic/Value%20Inclusion%20Profile%20Request%20Options%20\(Data%20Profiling%20Task\).md)  
+-   [値包含プロファイル要求オプションと &#40; データ プロファイル タスクと &#41; です。](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## 参照  
- [データ プロファイル タスク エディター &#40;[全般] ページ&#41;](../Topic/Data%20Profiling%20Task%20Editor%20\(General%20Page\).md)   
- [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>参照  
+ [データ プロファイル タスク エディターと &#40; です。「全般」 ページと &#41; です。](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [単一テーブル クイック プロファイル フォーム &#40; のデータ プロファイル タスクと &#41; です。](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

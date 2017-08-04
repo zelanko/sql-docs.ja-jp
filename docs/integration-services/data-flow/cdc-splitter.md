@@ -1,40 +1,45 @@
 ---
-title: "CDC スプリッター | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.cdcsplitter.f1"
+title: "CDC スプリッター |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.cdcsplitter.f1
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e2bee6609acacd6c9d441eae62d178818aea27a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC スプリッター
+# <a name="cdc-splitter"></a>CDC スプリッター
   CDC スプリッターは、CDC ソース データの変更行の単一フローを、挿入、更新、削除の各操作のための個別のデータ フローに分割します。 データベースは、必須の列 `__$operation` と、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 変更テーブル内のその標準の値に基づいて分割されます。  
   
 |操作の値|出力|Description|  
 |------------------------|------------|-----------------|  
 |1|Del|削除された行|  
-|2|Insert|挿入された行 (**"結合を含む差分"** CDC モードを使用する場合は使用不可)|  
-|3|Update|更新前の行 (**"古い値を含むすべて"** CDC モードの場合のみ使用可)|  
+|2|Insert|挿入された行 ( **"結合を含む差分"** CDC モードを使用する場合は使用不可)|  
+|3|Update|更新前の行 ( **"古い値を含むすべて"** CDC モードの場合のみ使用可)|  
 |4|Update|更新後の行 (更新前と同じ)|  
-|5|Update|マージ行 (**"結合を含む差分"** CDC モードを使用する場合のみ使用可)|  
+|5|Update|マージ行 ( **"結合を含む差分"** CDC モードを使用する場合のみ使用可)|  
 |その他|[エラー]||  
   
  スプリッターを使用して、定義済みの挿入、削除、更新の各出力に接続し、さらに処理を実行することができます。  
   
  CDC スプリッター変換には、1 つの標準入力と 1 つのエラー出力があります。  
   
-## エラー処理  
+## <a name="error-handling"></a>エラー処理  
  CDC スプリッター変換にはエラー出力があります。 $operation 列の値が無効な入力行はエラーと見なされ、入力の **ErrorRowDisposition** プロパティに従って処理されます。  
   
  コンポーネントのエラー出力には、次の出力列があります。  
@@ -45,7 +50,7 @@ caps.handback.revision: 8
   
 -   **エラー行の列**: エラーの原因となった行の入力列。  
   
-## CDC スプリッターの構成  
+## <a name="configuring-the-cdc-splitter"></a>CDC スプリッターの構成  
  CDC スプリッターに構成可能なプロパティはありません。  
   
  CDC スプリッターの使用方法の詳細については、「Microsoft SQL Server Integration Services の CDC コンポーネント」を参照してください。  
@@ -56,7 +61,7 @@ caps.handback.revision: 8
   
 -   **プロジェクトの** [データ フロー] [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 画面で、CDC スプリッターを右クリックし、 **[詳細エディターの表示]**をクリックします。  
   
-## 参照  
- [変更の種類に応じた CDC ストリームのダイレクト](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
+## <a name="see-also"></a>参照  
+ [変更の種類に応じた CDC ストリームを直接します。](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
   

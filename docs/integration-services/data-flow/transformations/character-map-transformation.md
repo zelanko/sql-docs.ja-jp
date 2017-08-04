@@ -1,38 +1,43 @@
 ---
-title: "文字マップ変換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.charactertrans.f1"
-helpviewer_keywords: 
-  - "相互排他的マッピング [Integration Services]"
-  - "データのマッピング [Integration Services]"
-  - "文字列関数 (string functions)"
-  - "文字マップ変換 [Integration Services]"
+title: "文字マップ変換 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.charactertrans.f1
+helpviewer_keywords:
+- mutually exclusive mapping [Integration Services]
+- mapping data [Integration Services]
+- string functions
+- Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80818df1eb99cfe68012a119d4482698b17d0044
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# 文字マップ変換
+# <a name="character-map-transformation"></a>文字マップ変換
   文字マップ変換は、小文字から大文字への変換関数などの文字列関数を、文字データに適用します。 この変換は、文字列データ型の列データにのみ実行されます。  
   
  文字マップ変換では、列データを適切に変換したり、変換出力に列を追加して、変換後のデータを新しい列に挿入したりできます。 また、さまざまなマップ操作のセットを同じ入力列に適用し、その結果を別の列に格納できます。 たとえば、同じ列を大文字と小文字に変換し、その結果を 2 つの異なる列に格納できます。  
   
- 状況によっては、マップによってデータが切り捨てられる場合があります。 たとえば、1 バイト文字をマルチバイトで表記される文字にマップした場合、切り捨てが発生することがあります。 文字マップ変換には 1 つのエラー出力が含まれます。このエラー出力を使用すると、切り捨てられたデータを別の出力に送ることができます。 詳しくは、「[データのエラー処理](../../../integration-services/data-flow/error-handling-in-data.md)」をご覧ください。  
+ 状況によっては、マップによってデータが切り捨てられる場合があります。 たとえば、1 バイト文字をマルチバイトで表記される文字にマップした場合、切り捨てが発生することがあります。 文字マップ変換には 1 つのエラー出力が含まれます。このエラー出力を使用すると、切り捨てられたデータを別の出力に送ることができます。 詳しくは、「 [データのエラー処理](../../../integration-services/data-flow/error-handling-in-data.md)」をご覧ください。  
   
  この変換は、1 つの入力、1 つの出力、および 1 つのエラー出力をとります。  
   
-## マップ操作  
+## <a name="mapping-operations"></a>マップ操作  
  次の表では、文字マップ変換がサポートするマップ操作について説明します。  
   
 |操作|Description|  
@@ -48,7 +53,7 @@ caps.handback.revision: 42
 |繁体字中国語|簡体字中国語文字を繁体字中国語文字にマップします。|  
 |大文字|文字を大文字に変換します。|  
   
-## 相互に排他的なマップ操作  
+## <a name="mutually-exclusive-mapping-operations"></a>相互に排他的なマップ操作  
  変換では、複数の操作を実行できます。 ただし、一部のマップ操作は相互に排他的です。 次の表に、同じ行に対して複数の操作を行う場合に適用される制限の一覧を示します。 操作 A 列と操作 B 列の操作は、相互に排他的です。  
   
 |操作 A|操作 B|  
@@ -60,7 +65,7 @@ caps.handback.revision: 42
 |小文字|ひらがな、カタカナ、半角、全角|  
 |大文字|ひらがな、カタカナ、半角、全角|  
   
-## 文字マップ変換の構成  
+## <a name="configuration-of-the-character-map-transformation"></a>文字マップ変換の構成  
  文字マップ変換は、次の方法で構成できます。  
   
 -   変換する列を指定します。  
@@ -69,11 +74,11 @@ caps.handback.revision: 42
   
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[文字マップ変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「[文字マップ変換エディター](../../../integration-services/data-flow/transformations/character-map-transformation-editor.md)」をご覧ください。  
+ **[文字マップ変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [文字マップ変換エディター](../../../integration-services/data-flow/transformations/character-map-transformation-editor.md)」をご覧ください。  
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](../Topic/Common%20Properties.md)  
+-   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

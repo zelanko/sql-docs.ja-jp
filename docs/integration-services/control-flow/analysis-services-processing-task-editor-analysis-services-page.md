@@ -1,26 +1,31 @@
 ---
-title: "[Analysis Services 処理タスク エディター] ([Analysis Services] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.asprocessingtask.as.f1"
-helpviewer_keywords: 
-  - "Analysis Services 処理タスク エディター"
+title: "Analysis Services 処理タスク エディター (Analysis Services ページ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.asprocessingtask.as.f1
+helpviewer_keywords:
+- Analysis Services Processing Task Editor
 ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e5b90a26fb4477243c5a48b87d134ff8129430ab
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# [Analysis Services 処理タスク エディター] ([Analysis Services] ページ)
+# <a name="analysis-services-processing-task-editor-analysis-services-page"></a>[Analysis Services 処理タスク エディター] ([Analysis Services] ページ)
   **[Analysis Services 処理タスク エディター]** ダイアログ ボックスの **[Analysis Services]** ページを使用すると、Analysis Services 接続マネージャーの指定、処理する分析オブジェクトの選択、処理およびエラー処理オプションの設定を行うことができます。  
   
  テーブル モデルを処理する場合は、次の点に注意してください。  
@@ -33,16 +38,16 @@ caps.handback.revision: 29
   
 4.  テーブル モデルでは、バッチ設定が無視されます。  
   
- このタスクの詳細については、「[Analysis Services 処理タスク](../../integration-services/control-flow/analysis-services-processing-task.md)」をご覧ください。  
+ このタスクの詳細については、「 [Analysis Services 処理タスク](../../integration-services/control-flow/analysis-services-processing-task.md)」をご覧ください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **Analysis Services 接続マネージャー**  
- 既存の Analysis Services 接続マネージャーを一覧から選択するか、**[新規作成]** をクリックして新しい接続マネージャーを作成します。  
+ 既存の Analysis Services 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。  
   
- **新規**  
+ **[新規作成]**  
  新しい Analysis Services 接続マネージャーを作成します。  
   
- **関連トピック:** [Analysis Services 接続マネージャー](../../integration-services/connection-manager/analysis-services-connection-manager.md)、[[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](../Topic/Add%20Analysis%20Services%20Connection%20Manager%20Dialog%20Box%20UI%20Reference.md)  
+ **関連トピック:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)、 [[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **[オブジェクト一覧]**  
  |プロパティ|Description|  
@@ -56,12 +61,12 @@ caps.handback.revision: 29
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトを一覧に追加します。  
   
  **[削除]**  
- オブジェクトを選択し、**[削除]** をクリックします。  
+ オブジェクトを選択し、 **[削除]**をクリックします。  
   
  **[影響分析]**  
  選択したオブジェクトに対して影響分析を実行します。  
   
- **関連トピック:** [[影響分析] ダイアログ ボックス (Analysis Services - 多次元データ)](../Topic/Impact%20Analysis%20Dialog%20Box%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)  
+ **関連トピック:** [[影響分析] ダイアログ ボックス (Analysis Services - 多次元データ)](http://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **[バッチ設定の概要]**  
  |プロパティ|Description|  
@@ -75,11 +80,11 @@ caps.handback.revision: 29
  **[設定の変更]**  
  処理オプションおよびディメンション キー内のエラー処理を変更します。  
   
- **関連トピック:** [[設定の変更] ダイアログ ボックス (Analysis Services - 多次元データ)](../Topic/Change%20Settings%20Dialog%20Box%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)  
+ **関連トピック:** [[設定の変更] ダイアログ ボックス (Analysis Services - 多次元データ)](http://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)   
- [[Analysis Services 処理タスク エディター] ([全般] ページ)](../Topic/Analysis%20Services%20Processing%20Task%20Editor%20\(General%20Page\).md)   
+ [Analysis Services 処理タスク エディター & #40 です。[全般] ページ &#41;](../../integration-services/control-flow/analysis-services-processing-task-editor-general-page.md)   
  [Analysis Services DDL 実行タスク](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
   

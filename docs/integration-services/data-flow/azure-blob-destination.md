@@ -1,33 +1,36 @@
 ---
-title: "Azure Blob Destination | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.afpblobdest.f1"
-  - "sql14.dts.designer.afpblobdest.f1"
+title: "Azure Blob Destination |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.afpblobdest.f1
+- sql14.dts.designer.afpblobdest.f1
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
 caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 152d92859c2f4ce96d0cc1ba9b02ffb412d18fde
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# Azure Blob Destination
-  **Azure Blob Destination** コンポーネントは、SSIS パッケージが Azure Blob にデータを書き込めるようにします。 サポートされるファイル形式は、CSV および AVRO です。 
-  
->   [!NOTE] Azure Storage 接続マネージャーとこれを使用するコンポーネント (つまり、Blob Source、Blob Destination、BLOB のアップロード タスク、および BLOB のダウンロード タスク) が汎用ストレージ アカウントと BLOB ストレージ アカウントの両方に接続できるようにするために、必ず最新バージョンの Azure Feature Pack を[こちら](https://www.microsoft.com/download/details.aspx?id=49492)からダウンロードしてください。 これら 2 種類のストレージ アカウントの詳細については、「[Microsoft Azure Storage の概要](https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/#general-purpose-storage-accounts)」を参照してください。
-  
+# <a name="azure-blob-destination"></a>Azure Blob Destination
+ **Azure Blob Destination** コンポーネントは、SSIS パッケージが Azure Blob にデータを書き込めるようにします。 サポートされるファイル形式は、CSV および AVRO です。 
+   
  **Azure Blob Destination** をデータ フロー デザイナーにドラッグ アンド ドロップし、ダブルクリックしてエディターを表示します。  
   
- **Azure Blob Destination** は、SQL Server 2016 用の SQL Server Integration Services (SSIS) Feature Pack for Azure のコンポーネントです。 Feature Pack は [こちら](http://go.microsoft.com/fwlink/?LinkID=626967)からダウンロードしてください。  
+ **Azure Blob Destination**のコンポーネントである、 [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)です。  
   
 1.  	**[Azure storage connection manager]** (Azure Storage 接続マネージャー) フィールドに、既存の Azure Storage 接続マネージャーを指定するか、または Azure Storage アカウントを参照する新しい Azure Storage 接続マネージャーを作成します。  
   
@@ -42,3 +45,4 @@ caps.handback.revision: 10
 6.  接続情報を指定した後、 **[列]** ページで、SSIS データ フローのマップ元の列をマップ先の列にマップします。  
   
   
+

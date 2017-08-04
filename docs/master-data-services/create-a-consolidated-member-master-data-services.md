@@ -1,37 +1,42 @@
 ---
-title: "統合メンバーを作成する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "04/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "統合メンバーを作成する [マスター データ サービス]"
-  - "メンバー [マスター データ サービス], 統合メンバーを作成する"
-  - "統合メンバー [マスター データ サービス], 作成"
+title: "統合メンバー (マスター データ サービス) を作成 |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 04/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating consolidated members [Master Data Services]
+- members [Master Data Services], creating consolidated members
+- consolidated members [Master Data Services], creating
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 caps.latest.revision: 12
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: a50e1b7136542b4a230a461a81813e10730fba09
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# 統合メンバーを作成する (マスター データ サービス)
+# <a name="create-a-consolidated-member-master-data-services"></a>統合メンバーを作成する (マスター データ サービス)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で明示的階層の親ノードが必要な場合、統合メンバーを作成します。 データを一括で追加する場合は、ステージング テーブルを使用します。 詳細については、「[テーブルからのデータのインポート (マスター データ サービス)](../master-data-services/import-data-from-tables-master-data-services.md)」を参照してください。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
   
--   メンバーを追加するエンティティの統合モデル オブジェクトに対する **更新**権限が最低限必要です。さらに、エンティティ下の統合型に対する **作成権限**も必要です。  
+-   メンバーを追加するエンティティの統合モデル オブジェクトに対する **更新** 権限が最低限必要です。さらに、エンティティ下の統合型に対する **作成権限** も必要です。  
   
-### 統合メンバーを作成するには  
+### <a name="to-create-a-consolidated-member"></a>統合メンバーを作成するには  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] のホーム ページで、 **[モデル]** ボックスの一覧からモデルを選択します。  
   
@@ -53,14 +58,11 @@ caps.handback.revision: 11
   
 10. **[OK]**をクリックします。  
   
-## 次の手順  
-  
--   [階層内のメンバーを移動する (マスター データ サービス)](../Topic/Move%20Members%20within%20a%20Hierarchy%20\(Master%20Data%20Services\).md)  
-  
-## 参照  
- [明示的階層を作成する (マスター データ サービス)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [リーフ メンバーを作成する (マスター データ サービス)](../master-data-services/create-a-leaf-member-master-data-services.md)   
- [メンバー (マスター データ サービス)](../master-data-services/members-master-data-services.md)   
- [明示的階層 (マスター データ サービス)](../master-data-services/explicit-hierarchies-master-data-services.md)  
+## <a name="see-also"></a>参照  
+ [明示的階層 &#40; を作成します。マスター データ サービス &#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
+ [リーフ メンバー &#40; を作成します。マスター データ サービス &#41;](../master-data-services/create-a-leaf-member-master-data-services.md)   
+ [メンバーと #40 です。マスター データ サービス &#41;](../master-data-services/members-master-data-services.md)   
+ [明示的階層と #40 です。マスター データ サービス &#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
   
+

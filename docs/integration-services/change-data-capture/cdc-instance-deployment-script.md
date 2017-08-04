@@ -1,22 +1,27 @@
 ---
-title: "[CDC インスタンス配置スクリプト] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "CDC インスタンス配置スクリプト |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff22a521f6bebcb60bfc120cc79102a5b9172aef
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# [CDC インスタンス配置スクリプト]
+# <a name="cdc-instance-deployment-script"></a>[CDC インスタンス配置スクリプト]
   CCD インスタンス配置スクリプトを表示する [CDC インスタンス配置スクリプト] ダイアログ ボックスです。 このスクリプトは、すべてのアーティファクトが異なる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにある CDC データベースを再作成するために使用できます。  
   
  配置スクリプトの終了時に、次のことを確認する必要があります。  
@@ -35,7 +40,7 @@ caps.handback.revision: 7
  **[コピー]**  
  スクリプトをクリップボードにコピーします。 その後、スクリプトを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または任意のテキスト エディターに貼り付けて、後でスクリプトを実行できます。  
   
-## 参照  
- [CDC 用の SQL Server の準備](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
+## <a name="see-also"></a>参照  
+ [CDC 用 SQL Server を準備します。](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
   
   

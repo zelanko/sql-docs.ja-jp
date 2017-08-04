@@ -1,32 +1,37 @@
 ---
-title: "日付属性を作成する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "日付属性を作成する [マスター データ サービス]"
-  - "属性 [マスター データ サービス]、日付属性を作成する"
+title: "日付属性 (マスター データ サービス) を作成 |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating date attributes [Master Data Services]
+- attributes [Master Data Services], creating date attributes
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f44b3b8c577dcb684a386e74df07095c17bc204a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# 日付属性を作成する (マスター データ サービス)
+# <a name="create-a-date-attribute-master-data-services"></a>日付属性を作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、ユーザーに属性値として日付を入力させる場合、日付属性を作成します。  
   
 > [!NOTE]  
 >  属性は DateTime という名前ですが、時間の値はサポートされていません。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -35,7 +40,7 @@ caps.handback.revision: 13
   
 -   属性を作成するエンティティが存在する必要があります。 詳細については、「[エンティティを作成する (マスター データ サービス)](../master-data-services/create-an-entity-master-data-services.md)」を参照してください。  
   
-### 日付属性を作成するには  
+### <a name="to-create-a-date-attribute"></a>日付属性を作成するには  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 13
   
 8.  **[ピクセル幅の表示]** ボックスに、 **[エクスプローラー]** グリッドに表示する属性列の幅を入力します。  
   
-9. **[属性の種類]** リストから、**[自由形式]** を選択します。  
+9. **[属性の種類]** リストから、 **[自由形式]**を選択します。  
   
 10. **[データ型]** ボックスの一覧の **[DateTime]**をクリックします。  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 13
   
 13. **[保存]**をクリックします。  
   
-## datetime 値の時刻部分を表示するには  
+## <a name="to-display-the-time-portion-of-a-datetime-value"></a>datetime 値の時刻部分を表示するには  
  ユーザー インターフェイスに datetime 値の時刻部分を表示するには、属性に対する適切な入力マスクを選択する必要があります。 Datetime 属性にそのための組み込みのマスクは存在しませんが、時刻を表示するための新しいマスクを独自に追加することはできます。 そのためには、組み込みのマスクが格納されている MDS データベースの mdm.tblList テーブルに行を追加します。 この行には、次の値が存在する必要があります。  
   
 |||  
@@ -86,10 +91,10 @@ caps.handback.revision: 13
   
  [定型入力] は、カスタムの .NET DateTime 書式設定文字列です。 詳しくは、「 [カスタム日時書式指定文字列](https://msdn.microsoft.com/en-us/library/8kb3ddd4\(v=vs.110\).aspx)」をご覧ください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)   
- [属性名とデータ型を変更する (マスター データ サービス)](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [ドメイン ベースの属性を作成する (マスター データ サービス)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [属性名とデータ型 &#40; を変更します。マスター データ サービス &#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [ドメイン ベースの属性 &#40; を作成します。マスター データ サービス &#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [ファイル属性を作成する (マスター データ サービス)](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

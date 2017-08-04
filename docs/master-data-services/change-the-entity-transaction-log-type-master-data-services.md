@@ -1,31 +1,36 @@
 ---
-title: "エンティティのトランザクション ログの種類の変更 (マスター データ サービス) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "変更するエンティティのトランザクション ログの種類 (Master Data Services) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 75250b32-3384-43c2-9b5c-1607cc3aa7b3
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3f5998073b5a4ddf596e241a52db6bbd49f3a2d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# エンティティのトランザクション ログの種類の変更 (マスター データ サービス)
+# <a name="change-the-entity-transaction-log-type-master-data-services"></a>エンティティのトランザクション ログの種類の変更 (マスター データ サービス)
   エンティティのトランザクション ログの種類を、"属性"、"メンバー"、または "なし" に変更できます。  
   
 |トランザクション ログの種類|Description|  
 |--------------------------|-----------------|  
-|属性|エンティティの変更ログは、属性レベルで保存されます。<br /><br /> トランザクション ログは、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] の場合と同様に保存されます。|  
+|属性|エンティティの変更ログは、属性レベルで保存されます。<br /><br /> トランザクション ログは、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の場合と同様に保存されます。|  
 |メンバー|エンティティの変更ログは、行レベルで保存されます。<br /><br /> すべての属性の変更に対し、新しい行の更新がトリガーされます。<br /><br /> トランザクション ログの種類として "行" を使用している場合、エンティティは、緩やかに変化するディメンション タイプ 4 として保存されます。 タイプ 2 のサブスクリプション ビューとタイプ 4 の (履歴) サブスクリプション ビューがサポートされます。 詳細については、「[サブスクリプション ビュー形式 (マスター データ サービス)](../master-data-services/subscription-view-formats-master-data-services.md)」を参照してください。<br /><br /> より優れたパフォーマンスが得られます。|  
 |なし|変更ログは保存されません。<br /><br /> 最適なパフォーマンスが得られます。|  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   [システム管理] 機能領域にアクセスする権限が必要です。詳細については、「[機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  

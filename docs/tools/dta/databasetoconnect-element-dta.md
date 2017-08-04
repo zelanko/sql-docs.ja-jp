@@ -1,24 +1,29 @@
 ---
-title: "DatabaseToConnect 要素 (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "DatabaseToConnect 要素"
+title: "DatabaseToConnect 要素 (DTA) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- XML
+helpviewer_keywords:
+- DatabaseToConnect element
 ms.assetid: 65153a66-3aee-4429-99b7-0816ac23c285
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 94746d3007587223ba1b2ae6a3868ce3a013bafd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
 # DatabaseToConnect 要素 (DTA)
   データベース エンジン チューニング アドバイザーがワークロードのチューニング時に最初に接続するデータベースを指定します。  
@@ -44,7 +49,7 @@ caps.handback.revision: 12
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[TuningOptions 要素 &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**親要素**|[TuningOptions 要素 & #40";"DTA"&"#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**子要素**|なし|  
   
 ## 解説  
@@ -54,6 +59,6 @@ caps.handback.revision: 12
  使用例については、「[インライン ワークロードを指定した XML 入力ファイルのサンプル &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md)」を参照してください。  
   
 ## 参照  
- [XML 入力ファイル リファレンス &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

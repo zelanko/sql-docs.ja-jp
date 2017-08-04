@@ -1,25 +1,30 @@
 ---
-title: "ODBC 入力先を使用したデータ読み込み | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Odbc 入力先を使用してデータを読み込む |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 668cf193758a8dfaba90e598ccbdb7d0d84351fc
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# ODBC 入力先を使用したデータ読み込み
+# <a name="load-data-by-using-the-odbc-destination"></a>ODBC 入力先を使用したデータ読み込み
   次の手順では、ODBC 入力先を使用してデータを読み込む方法を示します。 ODBC 入力先を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの入力元があらかじめ含まれている必要があります。  
   
-### ODBC 入力先を使用してデータを読み込むには  
+### <a name="to-load-data-using-an-odbc-destination"></a>ODBC 入力先を使用してデータを読み込むには  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、使用する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを開きます。  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 9
   
 6.  データのアクセス方法を選択します。  
   
-    -   **[テーブル名 - バッチ]** バッチモードで動作する ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択すると、 **[バッチ サイズ]**を設定できます。  
+    -   **[テーブル名 - バッチ]**バッチモードで動作する ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択すると、 **[バッチ サイズ]**を設定できます。  
   
     -   **[テーブル名 - 行ごと]**: 一度に 1 行ずつ、入力先に各行を挿入する ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択すると、データは一度に 1 行ずつ、テーブルに読み込まれます。  
   
@@ -49,9 +54,9 @@ caps.handback.revision: 9
   
 12. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## 参照  
- [ODBC 変換先エディター ([接続マネージャー] ページ)](../Topic/ODBC%20Destination%20Editor%20\(Connection%20Manager%20Page\).md)   
- [ODBC 変換先エディター ([マッピング] ページ)](../Topic/ODBC%20Destination%20Editor%20\(Mappings%20Page\).md)   
- [ODBC ソース エディター ([エラー出力] ページ)](../Topic/ODBC%20Source%20Editor%20\(Error%20Output%20Page\).md)  
+## <a name="see-also"></a>参照  
+ [ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
+ [[ODBC 変換先エディター] &#40;[マッピング] ページ&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
+ [[ODBC ソース エディター] &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   

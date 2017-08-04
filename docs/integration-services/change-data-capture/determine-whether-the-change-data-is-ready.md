@@ -1,30 +1,35 @@
 ---
-title: "データの変更の準備ができているかどうかを判断する | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "増分読み込み [Integration Services], 準備の判断"
+title: "変更データが準備ができているかどうかを確認する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 91c0f342c63df8d3a1376850615c5b68745ab4c9
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# データの変更の準備ができているかどうかを判断する
+# <a name="determine-whether-the-change-data-is-ready"></a>データの変更の準備ができているかどうかを判断する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、2 番目のタスクは、選択した間隔の変更データが準備できていることを確認することです。 選択したエンドポイントまでの変更が非同期キャプチャ プロセスでまだ一部処理されていない可能性があるため、この手順が必要となります。  
   
 > [!NOTE]  
 >  制御フローの最初のタスクは、変更間隔のエンドポイントを計算することです。 このタスクに関する詳細については、「[変更データの間隔を指定する](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)」を参照してください。 制御フローをデザインするプロセス全体の説明については、「[変更データ キャプチャ (SSIS)](../../integration-services/change-data-capture/change-data-capture-ssis.md)」を参照してください。  
   
-## ソリューションのコンポーネントについて  
+## <a name="understanding-the-components-of-the-solution"></a>ソリューションのコンポーネントについて  
  このトピックで説明するソリューションでは、次の 4 つの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントを使用します。  
   
 -   SQL 実行タスクの出力を繰り返し評価する For ループ コンテナー。  
@@ -37,9 +42,9 @@ caps.handback.revision: 26
   
  これらのコンポーネントによって、いくつかのパッケージ変数の値が設定されるか読み取られ、ループ内およびパッケージの後続の実行フローが制御されます。  
   
-#### パッケージ変数を設定するには  
+#### <a name="to-set-up-package-variables"></a>パッケージ変数を設定するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の **[変数]** ウィンドウで、次の変数を作成します。  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の **[変数]** ウィンドウで、次の変数を作成します。  
   
     1.  SQL 実行タスクによって返される状態値を格納する整数データ型の変数を作成します。  
   
@@ -61,26 +66,26 @@ caps.handback.revision: 26
   
          この例では、IntervalID という名前の変数を使用し、値が最初の読み込みを示す 0 であることだけをチェックします。  
   
-## For ループ コンテナーの構成  
+## <a name="configuring-a-for-loop-container"></a>For ループ コンテナーの構成  
  変数を設定したら、まず For ループ コンテナーを追加します。  
   
-#### 変更データが準備できるまで待機するように For ループ コンテナーを構成するには  
+#### <a name="to-configure-a-for-loop-container-to-wait-until-change-data-is-ready"></a>変更データが準備できるまで待機するように For ループ コンテナーを構成するには  
   
-1.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[制御フロー]** タブで、For ループ コンテナーを制御フローに追加します。  
+1.  **デザイナーの** [制御フロー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] タブで、For ループ コンテナーを制御フローに追加します。  
   
 2.  間隔のエンドポイントを計算する SQL 実行タスクを For ループ コンテナーに連結します。  
   
-3.  **[For ループ エディター]** で、次のオプションを選択します。  
+3.  **[For ループ エディター]**で、次のオプションを選択します。  
   
-    1.  **[InitExpression]** に「`@DataReady = 0`」と入力します。  
+    1.  **[InitExpression]**に「 `@DataReady = 0`」と入力します。  
   
          この式によって、ループ変数の初期値が設定されます。  
   
-    2.  **[EvalExpression]** に「`@DataReady == 0`」と入力します。  
+    2.  **[EvalExpression]**に「 `@DataReady == 0`」と入力します。  
   
-         この式が **False** と評価されると、実行がループの外に移り、増分読み込みが開始されます。  
+         この式が **False**と評価されると、実行がループの外に移り、増分読み込みが開始されます。  
   
-## 変更データのクエリを実行する SQL 実行タスクの構成  
+## <a name="configuring-the-execute-sql-task-that-queries-for-change-data"></a>変更データのクエリを実行する SQL 実行タスクの構成  
  For ループ コンテナー内に SQL 実行タスクを追加します。 このタスクでは、変更データ キャプチャ プロセスがデータベースに保持しているテーブルに対してクエリを実行します。 このクエリの結果は、変更データが準備できているかどうかを示す状態値です。  
   
  次の表の 1 列目は、サンプルの Transact-SQL クエリによって SQL 実行タスクから返される値を示しています。 2 列目は、その他のコンポーネントがこれらの値に応答する方法を示しています。  
@@ -93,19 +98,19 @@ caps.handback.revision: 26
 |3|使用可能なすべての変更データの最初の読み込みを示します。<br /><br /> この値は、このためだけに使用される特殊なパッケージ変数から条件ロジックによって取得されます。|実行が For ループ コンテナーの外に移り、増分読み込みが開始されます。|  
 |5|TimeoutCeiling に達したことを示します。<br /><br /> 指定された回数だけループでデータがテストされましたが、データはまだ使用できません。 このテストまたは同様のテストを実行しないと、パッケージが無期限に実行される可能性があります。|タイムアウトをログに記録するオプションのコンポーネントから実行が継続されます。|  
   
-#### 変更データが準備できているかどうかをクエリするように SQL 実行タスクを構成するには  
+#### <a name="to-configure-an-execute-sql-task-to-query-whether-change-data-is-ready"></a>変更データが準備できているかどうかをクエリするように SQL 実行タスクを構成するには  
   
 1.  For ループ コンテナー内に SQL 実行タスクを追加します。  
   
-2.  **[SQL 実行タスク エディター]** の **[全般]** ページで、次のオプションを選択します。  
+2.  **[SQL 実行タスク エディター]**の **[全般]** ページで、次のオプションを選択します。  
   
-    1.  **[ResultSet]** で **[単一行]** を選択します。  
+    1.  **[ResultSet]**で **[単一行]**を選択します。  
   
     2.  ソース データベースへの有効な接続を構成します。  
   
-    3.  **[SQLSourceType]** で **[直接入力]** を選択します。  
+    3.  **[SQLSourceType]**で **[直接入力]**を選択します。  
   
-    4.  **[SQLStatement]** に、次の SQL ステートメントを入力します。  
+    4.  **[SQLStatement]**に、次の SQL ステートメントを入力します。  
   
         ```  
         declare @DataReady int, @TimeoutCount int  
@@ -136,7 +141,7 @@ caps.handback.revision: 26
   
         ```  
   
-3.  **[SQL 実行タスク エディター]** の **[パラメーター マッピング]** ページで、次のマッピングを行います。  
+3.  **[SQL 実行タスク エディター]** の **[パラメーター マッピング]**ページで、次のマッピングを行います。  
   
     1.  ExtractEndTime 変数をパラメーター 0 にマップします。  
   
@@ -148,25 +153,25 @@ caps.handback.revision: 26
   
     5.  TimeoutCeiling 変数をパラメーター 4 にマップします。  
   
-4.  **[SQL 実行タスク エディター]** の **[結果セット]** ページで、DataReady の結果を DataReady 変数に、TimeoutCount の結果を TimeoutCount 変数にマップします。  
+4.  **[SQL 実行タスク エディター]** の **[結果セット]**ページで、DataReady の結果を DataReady 変数に、TimeoutCount の結果を TimeoutCount 変数にマップします。  
   
-## 変更データが準備できるまでの待機  
+## <a name="waiting-until-the-change-data-is-ready"></a>変更データが準備できるまでの待機  
  いくつかある方法のうちいずれかを使用して、変更データが準備できていない場合に遅延を実装することができます。 次の 2 つの手順は、スクリプト タスクまたは SQL 実行タスクを使用して遅延を実装する方法を示しています。  
   
 > [!NOTE]  
 >  発生するオーバーヘッドは、SQL 実行タスクよりも事前コンパイルしたスクリプトの方が少なくなります。  
   
-#### スクリプト タスクを使用して遅延を実装するには  
+#### <a name="to-implement-a-delay-by-using-a-script-task"></a>スクリプト タスクを使用して遅延を実装するには  
   
 1.  For ループ コンテナー内にスクリプト タスクを追加します。  
   
 2.  変更データが準備できているかどうかを判断するためにクエリを実行する SQL 実行タスクを新しいスクリプト タスクに連結します。  
   
-3.  SQL 実行タスクをスクリプト タスクに連結する優先順位制約のために、**[優先順位制約エディター]** を開いて次のオプションを選択します。  
+3.  SQL 実行タスクをスクリプト タスクに連結する優先順位制約のために、 **[優先順位制約エディター]** を開いて次のオプションを選択します。  
   
-    1.  **[評価操作]** で **[式と制約]** を選択します。  
+    1.  **[評価操作]**で **[式と制約]**を選択します。  
   
-    2.  **[値]** で **[成功]** を選択します。  
+    2.  **[値]**で **[成功]**を選択します。  
   
          制約値 **[成功]** は、前のタスクの成功を表します。 この場合は、SQL 実行タスクの成功を表します。  
   
@@ -176,7 +181,7 @@ caps.handback.revision: 26
   
 4.  **[スクリプト タスク エディター]** の **[スクリプト]** ページの **[ReadOnlyVariables]** で、**[User::DelaySeconds]** 整数変数を一覧から選択します。  
   
-5.  **[スクリプト タスク エディター]** の **[スクリプト]** ページで、**[スクリプトの編集]** をクリックしてスクリプト開発環境を開きます。  
+5.  **[スクリプト タスク エディター]**の **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックしてスクリプト開発環境を開きます。  
   
 6.  Main プロシージャに、次のいずれかのコード行を入力します。  
   
@@ -188,7 +193,7 @@ caps.handback.revision: 26
   
          \- - または -  
   
-    -   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] でプログラミングしている場合は、次のコード行を入力します。  
+    -   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]でプログラミングしている場合は、次のコード行を入力します。  
   
         ```  
         System.Threading.Thread.Sleep(Ctype(Dts.Variables("DelaySeconds").Value, Integer) * 1000)  
@@ -200,19 +205,19 @@ caps.handback.revision: 26
   
 7.  スクリプトの実行から **DtsExecResult.Success** を返す既定のコード行はそのまま使用します。  
   
-8.  スクリプト開発環境と **[スクリプト タスク エディター]** を閉じます。  
+8.  スクリプト開発環境と **[スクリプト タスク エディター]**を閉じます。  
   
-#### SQL 実行タスクを使用して遅延を実装するには  
+#### <a name="to-implement-a-delay-by-using-an-execute-sql-task"></a>SQL 実行タスクを使用して遅延を実装するには  
   
 1.  For ループ コンテナー内に SQL 実行タスクを追加します。  
   
 2.  変更データが準備できているかどうかを判断するためにクエリを実行する SQL 実行タスクを新しい SQL 実行タスクに連結します。  
   
-3.  2 つの SQL 実行タスクを連結する優先順位制約のために、**[優先順位制約エディター]** を開いて次のオプションを選択します。  
+3.  2 つの SQL 実行タスクを連結する優先順位制約のために、 **[優先順位制約エディター]** を開いて次のオプションを選択します。  
   
-    1.  **[評価操作]** で **[式と制約]** を選択します。  
+    1.  **[評価操作]**で **[式と制約]**を選択します。  
   
-    2.  **[値]** で **[成功]** を選択します。  
+    2.  **[値]**で **[成功]**を選択します。  
   
          制約値 **[成功]** は、前の SQL 実行タスクの成功を表します。  
   
@@ -222,15 +227,15 @@ caps.handback.revision: 26
   
          この選択により、制約と式の両方の条件が True であることが必要になります。  
   
-4.  **[SQL 実行タスク エディター]** の **[全般]** ページで、次のオプションを選択します。  
+4.  **[SQL 実行タスク エディター]**の **[全般]** ページで、次のオプションを選択します。  
   
-    1.  **[ResultSet]** で **[単一行]** を選択します。  
+    1.  **[ResultSet]**で **[単一行]**を選択します。  
   
     2.  ソース データベースへの有効な接続を構成します。  
   
-    3.  **[SQLSourceType]** で **[直接入力]** を選択します。  
+    3.  **[SQLSourceType]**で **[直接入力]**を選択します。  
   
-    4.  **[SQLStatement]** に、次の SQL ステートメントを入力します。  
+    4.  **[SQLStatement]**に、次の SQL ステートメントを入力します。  
   
         ```  
         WAITFOR DELAY ?  
@@ -239,26 +244,26 @@ caps.handback.revision: 26
   
 5.  エディターの **[パラメーター マッピング]** ページで、DelaySeconds 文字列変数をパラメーター 0 にマップします。  
   
-## エラー状態の処理  
+## <a name="handling-an-error-condition"></a>エラー状態の処理  
  必要に応じて、エラーまたはタイムアウト状態をログに記録するようにループ内に追加のコンポーネントを構成することができます。  
   
 -   このコンポーネントでは、DataReady 変数の値が 1 の場合にエラー状態をログに記録できます。 この値は、選択した間隔の開始前に使用可能な変更データがないことを示します。  
   
 -   このコンポーネントでは、TimeoutCeiling 変数の値に達した場合にタイムアウト状態をログに記録することもできます。 この値は、指定された回数だけループでデータがテストされたが、データがまだ使用できないことを示します。 このテストまたは同様のテストを実行しないと、パッケージが無期限に実行される可能性があります。  
   
-#### エラー状態をログに記録するようにオプションのスクリプト タスクを構成するには  
+#### <a name="to-configure-an-optional-script-task-to-log-an-error-condition"></a>エラー状態をログに記録するようにオプションのスクリプト タスクを構成するには  
   
-1.  メッセージをログに書き込んでエラーまたはタイムアウトを報告する場合は、パッケージのログ記録を構成します。 詳細については、「[SQL Server Data Tools でパッケージのログ記録を有効にする](../../integration-services/performance/enable-package-logging-in-sql-server-data-tools.md)」を参照してください。  
+1.  メッセージをログに書き込んでエラーまたはタイムアウトを報告する場合は、パッケージのログ記録を構成します。 詳細については、「 [SQL Server Data Tools でパッケージのログ記録を有効にする](../../integration-services/performance/integration-services-ssis-logging.md#ssdt)」を参照してください。  
   
 2.  For ループ コンテナー内にスクリプト タスクを追加します。  
   
 3.  変更データが準備できているかどうかを判断するためにクエリを実行する SQL 実行タスクを新しいスクリプト タスクに連結します。  
   
-4.  SQL 実行タスクをスクリプト タスクに連結する優先順位制約のために、**[優先順位制約エディター]** を開いて次のオプションを選択します。  
+4.  SQL 実行タスクをスクリプト タスクに連結する優先順位制約のために、 **[優先順位制約エディター]** を開いて次のオプションを選択します。  
   
-    1.  **[評価操作]** で **[式と制約]** を選択します。  
+    1.  **[評価操作]**で **[式と制約]**を選択します。  
   
-    2.  **[値]** で **[成功]** を選択します。  
+    2.  **[値]**で **[成功]**を選択します。  
   
          制約値 **[成功]** は、前のタスクの成功を表します。 この場合は、SQL 実行タスクの成功を表します。  
   
@@ -268,15 +273,15 @@ caps.handback.revision: 26
   
          この選択により、制約と式の両方の条件が True であることが必要になります。  
   
-5.  **[スクリプト タスク エディター]** の **[スクリプト]** ページの **[ReadOnlyVariables]** で、**[User::DataReady]** および **[User::ExtractStartTime]** を一覧から選択し、それらの値をスクリプトに使用できるようにします。  
+5.  **[スクリプト タスク エディター]**の **[スクリプト]** ページの **[ReadOnlyVariables]**で、 **[User::DataReady]** および **[User::ExtractStartTime]** を一覧から選択し、それらの値をスクリプトに使用できるようにします。  
   
      特定のシステム変数 (System::PackageName など) の情報をログに書き込む情報に含める場合は、それらの変数も選択します。  
   
-6.  **[スクリプト タスク エディター]** の **[スクリプト]** ページで、**[スクリプトの編集]** をクリックしてスクリプト開発環境を開きます。  
+6.  **[スクリプト タスク エディター]**の **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックしてスクリプト開発環境を開きます。  
   
-7.  Main プロシージャに、**Dts.Log** メソッドを呼び出してエラーをログに記録するコードか、**Dts.Events** インターフェイスのいずれかのメソッドを呼び出してイベントを発生させるコードを入力します。 `Dts.TaskResult = Dts.Results.Failure` を返すことによってエラーをパッケージに通知します。  
+7.  Main プロシージャに、 **Dts.Log** メソッドを呼び出してエラーをログに記録するコードか、 **Dts.Events** インターフェイスのいずれかのメソッドを呼び出してイベントを発生させるコードを入力します。 `Dts.TaskResult = Dts.Results.Failure`を返すことによってエラーをパッケージに通知します。  
   
-     次の例は、メッセージをログに書き込む方法を示しています。 詳細については、「[スクリプト タスクでのログ記録](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)」、「[スクリプト タスクでのイベントの発生](../../integration-services/extending-packages-scripting/task/raising-events-in-the-script-task.md)」、「[スクリプト タスクから結果を返す](../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md)」を参照してください。  
+     次の例は、メッセージをログに書き込む方法を示しています。 詳細については、「 [スクリプト タスクでのログ記録](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)」、「 [スクリプト タスクでのイベントの発生](../../integration-services/extending-packages-scripting/task/raising-events-in-the-script-task.md)」、「 [スクリプト タスクから結果を返す](../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md)」を参照してください。  
   
     ```  
     ' User variables.  
@@ -328,9 +333,9 @@ caps.handback.revision: 26
   
     ```  
   
-8.  スクリプト開発環境と **[スクリプト タスク エディター]** を閉じます。  
+8.  スクリプト開発環境と **[スクリプト タスク エディター]**を閉じます。  
   
-## 次の手順  
+## <a name="next-step"></a>次の手順  
  変更データが準備できていると判断したら、次に変更データのクエリを準備します。  
   
  **次のトピック:** [変更データのクエリを準備する](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  

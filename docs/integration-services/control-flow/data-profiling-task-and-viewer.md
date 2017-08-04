@@ -1,26 +1,31 @@
 ---
-title: "データ プロファイル タスクとビューアー | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データ プロファイル タスク [Integration Services], データ プロファイルについて"
-  - "データ プロファイル"
-  - "プロファイル、データ"
+title: "データ プロファイル タスクおよびビューアー |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling task [Integration Services], about data profiling
+- data profiling
+- profiling data
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7738775f08124a54765b3597af992a74d63aaf33
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# データ プロファイル タスクとビューアー
+# <a name="data-profiling-task-and-viewer"></a>データ プロファイル タスクとビューアー
   データ プロファイル タスクを使用すると、データの抽出、変換、および読み込みを行うプロセス内でデータのプロファイルを実行できます。 データ プロファイル タスクを使用することによって、次のような利点があります。  
   
 -   ソース データをより効果的に分析できます。  
@@ -32,7 +37,7 @@ caps.handback.revision: 33
 > [!IMPORTANT]  
 >  データ プロファイル タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納されているデータでのみ機能します。 サードパーティまたはファイル ベースのデータ ソースでは機能しません。  
   
-## データ プロファイルの概要  
+## <a name="data-profiling-overview"></a>データ プロファイルの概要  
  データ品質は、すべてのビジネスにとって重要です。 企業はトランザクション システム上に分析システムおよびビジネス インテリジェンス システムを構築するので、主要業績評価指標とデータ マイニング予測の信頼性は、基になるデータの有効性に完全に依存します。 ただし、ビジネス上の意思決定における有効なデータの重要性は高まっていますが、このデータの有効性を確保することも難しくなっています。 データはさまざまなシステムやソースおよび多くのユーザーから企業に絶えず流れ込んできています。  
   
  データ品質の基準はドメインまたはアプリケーションに固有であるため、定義が困難な場合があります。 データ品質を定義する一般的な方法の 1 つとして、データのプロファイルが挙げられます。  
@@ -51,8 +56,8 @@ caps.handback.revision: 33
   
  データ プロファイルに示される統計によって、ソース データを使用することで生じる可能性がある品質の問題を効果的に最小限に抑えるために必要な情報を得ることができます。  
   
-## Integration Services とデータ プロファイル  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] におけるデータのプロファイル処理は、次の手順で構成されています。  
+## <a name="integration-services-and-data-profiling"></a>Integration Services とデータ プロファイル  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]におけるデータのプロファイル処理は、次の手順で構成されています。  
   
  **手順 1 : データ プロファイル タスクの設定**  
  データ プロファイル タスクは、計算するプロファイルを構成するために使用するタスクです。 データ プロファイル タスクが含まれているパッケージを実行して、プロファイルを計算します。 このタスクによって、XML 形式のプロファイル出力がファイルまたはパッケージ変数に保存されます。  
@@ -64,10 +69,10 @@ caps.handback.revision: 33
   
  **詳細情報:** [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)  
   
-### データ プロファイル ワークフローへの条件ロジックの追加  
- データ プロファイル タスクには、プロファイルの出力に基づいてこのタスクを下流のタスクに接続するための条件ロジックを使用できるようにする機能が組み込まれていません。 ただし、スクリプト タスクで少量のプログラミングを行って、このロジックを簡単に追加することができます。 たとえば、スクリプト タスクでは、データ プロファイル タスクの出力ファイルに対して XPath クエリを実行できます。 このクエリによって、特定の列の NULL 値の比率が特定のしきい値を超えていないかどうかを判断できます。 比率がしきい値を超えている場合は、パッケージを中断し、ソース データの問題を解決してから続行することができます。 詳細については、「[パッケージ ワークフローでデータ プロファイル タスクを使用する](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md)」を参照してください。  
+### <a name="addition-of-conditional-logic-to-the-data-profiling-workflow"></a>データ プロファイル ワークフローへの条件ロジックの追加  
+ データ プロファイル タスクには、プロファイルの出力に基づいてこのタスクを下流のタスクに接続するための条件ロジックを使用できるようにする機能が組み込まれていません。 ただし、スクリプト タスクで少量のプログラミングを行って、このロジックを簡単に追加することができます。 たとえば、スクリプト タスクでは、データ プロファイル タスクの出力ファイルに対して XPath クエリを実行できます。 このクエリによって、特定の列の NULL 値の比率が特定のしきい値を超えていないかどうかを判断できます。 比率がしきい値を超えている場合は、パッケージを中断し、ソース データの問題を解決してから続行することができます。 詳細については、「 [パッケージ ワークフローでデータ プロファイル タスクを使用する](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md)」を参照してください。  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
  [Data Profiler スキーマ](http://go.microsoft.com/fwlink/?LinkId=251524)  
   
   

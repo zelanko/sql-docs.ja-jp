@@ -1,25 +1,30 @@
 ---
-title: "コレクション権限 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "コレクション [マスター データ サービス], 権限"
-  - "権限 [マスター データ サービス], コレクション"
+title: "コレクション権限 (Master Data Services) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collections [Master Data Services], permissions
+- permissions [Master Data Services], collections
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6361881ec6af124d7bbfd6cb4b4b225259823a06
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# コレクション権限 (Master Data Services)
+# <a name="collection-permissions-master-data-services"></a>コレクション権限 (Master Data Services)
   コレクション権限は、エンティティのすべてのコレクションに適用されます。 特定のコレクションに権限を与えることはできません。つまり、権限はすべてのコレクションに適用されます。  
   
 > [!NOTE]  
@@ -35,9 +40,9 @@ caps.handback.revision: 6
   
  読み取り、作成、更新、削除の各権限は組み合わせることができます。 作成、更新、削除が割り当てられると、読み取り権限が自動的に割り当てられます。  
   
-## 参照  
- [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [コレクション (マスター データ サービス)](../master-data-services/collections-master-data-services.md)   
- [モデル オブジェクト権限 (マスター データ サービス)](../master-data-services/model-object-permissions-master-data-services.md)  
+## <a name="see-also"></a>参照  
+ [モデル オブジェクト権限を割り当てる & #40 です。マスター データ サービス &#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [コレクション & #40 です。マスター データ サービス &#41;](../master-data-services/collections-master-data-services.md)   
+ [モデル オブジェクト権限 & #40 です。マスター データ サービス &#41;](../master-data-services/model-object-permissions-master-data-services.md)  
   
   

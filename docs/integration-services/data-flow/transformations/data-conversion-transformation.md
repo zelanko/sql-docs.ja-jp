@@ -1,28 +1,33 @@
 ---
-title: "データ変換の変換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataconversiontrans.f1"
-helpviewer_keywords: 
-  - "データ型の変換 [Integration Services]"
-  - "データ変換の変換"
-  - "データ型 [Integration Services]、変換"
+title: "データ変換の変換 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataconversiontrans.f1
+helpviewer_keywords:
+- converting data types [Integration Services]
+- Data Conversion transformation
+- data types [Integration Services], converting
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 caps.latest.revision: 53
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 53
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 897651a9257aadeac68a392eeae8b51d0c87de8d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# データ変換の変換
+# <a name="data-conversion-transformation"></a>データ変換の変換
   データ変換の変換は、入力列のデータを別のデータ型に変換し、新しい出力列にコピーします。 たとえば、パッケージで複数の変換元のデータを抽出し、この変換を使用して、列を変換先のデータ ストアで要求されるデータ型に変換できます。 1 つの入力列に複数の変換を適用できます。  
   
  この変換を使用すると、パッケージで次の種類のデータ変換を実行できます。  
@@ -39,18 +44,18 @@ caps.handback.revision: 53
     > [!NOTE]  
     >  文字列データ型の 2 つの列間でコピーを行う場合、それらの列のコード ページは同じである必要があります。  
   
- 文字列データの出力列の長さが、対応する入力列の長さよりも短い場合、出力データは切り捨てられます。 詳しくは、「[データのエラー処理](../../../integration-services/data-flow/error-handling-in-data.md)」をご覧ください。  
+ 文字列データの出力列の長さが、対応する入力列の長さよりも短い場合、出力データは切り捨てられます。 詳しくは、「 [データのエラー処理](../../../integration-services/data-flow/error-handling-in-data.md)」をご覧ください。  
   
  この変換は、1 つの入力、1 つの出力、および 1 つのエラー出力をとります。  
   
-## 関連タスク  
- プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。 SSIS デザイナーでデータ変換の変換を使用する方法については、「[データ変換の変換を使用してデータを別のデータ型に変換する](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)」および「[[データ変換変換エディター]](../../../integration-services/data-flow/transformations/data-conversion-transformation-editor.md)」をご覧ください。 プログラムによるこの変換のプロパティの設定については、「[共通プロパティ](../Topic/Common%20Properties.md)」および「[変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」をご覧ください。  
+## <a name="related-tasks"></a>関連タスク  
+ プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。 SSIS デザイナーでデータ変換の変換を使用する方法については、「 [データ変換の変換を使用してデータを別のデータ型に変換する](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md) 」および「 [[データ変換変換エディター]](../../../integration-services/data-flow/transformations/data-conversion-transformation-editor.md)」をご覧ください。 プログラムによるこの変換のプロパティの設定については、「 [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) 」および「 [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」をご覧ください。  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
  blogs.msdn.com のブログ「 [SSIS 2008 のデータ型の変換手法間のパフォーマンス比較](http://go.microsoft.com/fwlink/?LinkId=220823)」  
   
-## 参照  
- [高速解析](../Topic/Fast%20Parse.md)   
+## <a name="see-also"></a>参照  
+ [高速解析](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
  [データ フロー](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

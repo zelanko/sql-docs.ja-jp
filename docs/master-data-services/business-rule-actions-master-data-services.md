@@ -1,28 +1,33 @@
 ---
-title: "ビジネス ルール アクション (マスター データ サービス) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ビジネス ルール アクション (マスター データ サービス) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8a4d478795952951063dab5ef6979f517997ff3f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# ビジネス ルール アクション (マスター データ サービス)
+# <a name="business-rule-actions-master-data-services"></a>ビジネス ルール アクション (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、ビジネス ルールのアクションはビジネス ルールの条件評価の結果です。 条件が true の場合は、アクションが開始されます。  
   
 > [!NOTE]  
 >  既定値アクションと値の変更アクションの場合は、生成された値が属性の最大長さを超えていた場合、生成された値が切り詰められます。  
   
-## 既定値のアクション  
+## <a name="default-value-actions"></a>既定値のアクション  
  "**既定値** " アクションは、指定した属性の既定値を設定します。 権限を持つユーザーは、これらの既定値を変更できます。  
   
 |値の名前|Description|  
@@ -31,7 +36,7 @@ caps.handback.revision: 10
 |**の既定値が生成値である**|選択した属性の既定値は、開始値および増分値の入力によって決まる、生成された値に設定されます **** 。<br /><br /> このアクションは、文字列値および数値に有効です。|  
 |**の既定値が連結値である**|選択した属性の既定値は、複数の属性の指定によって決まる、連結値に設定されます **** 。<br /><br /> このアクションは、文字列値およびリンク値に有効です。|  
   
-## 値の変更のアクション  
+## <a name="change-value-actions"></a>値の変更のアクション  
  "**値の変更** " アクションは、指定した属性または属性値の値を更新します。 ユーザーがこの値を変更できるのは、新しい値によってアクションが true となる場合のみです。  
   
 |値の名前|Description|  
@@ -39,7 +44,7 @@ caps.handback.revision: 10
 |**[等しい]**|選択した属性は、定義済みの属性値、その他の属性、または空白に変更されます。<br /><br /> このアクションは、文字列値、数値、データ値、およびリンク値に有効です。|  
 |**が連結値に等しい**|選択した属性は連結値に変更されます。連結値は、複数の属性を指定することで決まります。<br /><br /> このアクションは、文字列値およびリンク値に有効です。|  
   
-## 検証のアクション  
+## <a name="validation-actions"></a>検証のアクション  
  "**検証** " アクションは、true と評価されない場合、指定したユーザーまたはグループに電子メールを送信します。 バージョンをコミットするには、すべての検証アクションが true として評価される必要があります。  
   
  ただし、" **が必須である** " アクションおよび " **が無効である** " アクションは例外です。 これらのアクションを値の変更アクションと組み合わせると、データを正常に検証することができ、バージョンがコミットされます。  
@@ -60,16 +65,16 @@ caps.handback.revision: 10
 |**の最小の長さが次の値でなければならない**|選択した属性の最小長は指定した値である必要があります **** 。<br /><br /> このアクションは、文字列値およびリンク値に有効です。|  
 |**の最大の長さが次の値でなければならない**|選択した属性の最大長は指定した値である必要があります **** 。<br /><br /> このアクションは、文字列値およびリンク値に有効です。|  
   
-## 外部アクション  
+## <a name="external-action"></a>外部アクション  
  "**外部** " アクションは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]以外のアプリケーションを操作します。  
   
 |アクション名|Description|  
 |-----------------|-----------------|  
 |**がワークフローで始まる**|外部ワークフローを開始します。 このアクションが実行される原因となったデータはワークフローに渡されます。 詳細については、「 [SharePoint ワークフローとマスター データ サービスとの統合](http://msdn.microsoft.com/library/gg690195.aspx)」を参照してください。<br /><br /> このアクションは、文字列値、数値、データ値、およびリンク値に有効です。|  
   
-## 参照  
- [ビジネス ルール条件 (マスター データ サービス)](../master-data-services/business-rule-conditions-master-data-services.md)   
- [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)   
- [ビジネス ルールを作成しパブリッシュする (マスター データ サービス)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+## <a name="see-also"></a>参照  
+ [ビジネス ルール条件 & #40 です。マスター データ サービス &#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
+ [ビジネス ルール & #40 です。マスター データ サービス &#41;](../master-data-services/business-rules-master-data-services.md)   
+ [作成して発行するビジネス ルール & #40 です。マスター データ サービス &#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   

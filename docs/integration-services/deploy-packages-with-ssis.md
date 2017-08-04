@@ -1,32 +1,37 @@
 ---
-title: "SSIS によるパッケージの配置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "配置のチュートリアル [Integration Services]"
-  - "パッケージの配置 [Integration Services]"
-  - "SSIS, チュートリアル"
-  - "Integration Services, チュートリアル"
-  - "パッケージの配置 [Integration Services], インストール"
-  - "SQL Server Integration Services, チュートリアル"
-  - "学習 [Integration Services]"
-  - "配置ユーティリティ [Integration Services]"
-  - "パッケージの配置 [Integration Services], 構成"
+title: "SSIS パッケージを配置 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- deployment tutorial [Integration Services]
+- deploying packages [Integration Services]
+- SSIS, tutorials
+- Integration Services, tutorials
+- deploying packages [Integration Services], installing
+- SQL Server Integration Services, tutorials
+- walkthroughs [Integration Services]
+- deployment utility [Integration Services]
+- deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 939f988b8d91e93aa8f1cc4ef4b555af7b26cf67
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# SSIS によるパッケージの配置
+# <a name="deploy-packages-with-ssis"></a>SSIS によるパッケージの配置
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージを別のコンピューターへ簡単に配置できるツールが用意されています。 この配置ツールでは、パッケージに必要な構成やファイルなどの依存関係を管理することもできます。 このチュートリアルでは、これらのツールを使用して、対象のコンピューターにパッケージとその依存関係をインストールする方法を学習します。    
     
 まず、配置の準備を行います。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で新しい [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] プロジェクトを作成し、既存のパッケージとデータ ファイルをプロジェクトに追加します。 新しいパッケージを最初から作成するのではなく、このチュートリアル用に作成された既存のパッケージで作業を行います。 このチュートリアルでパッケージの機能は変更しませんが、パッケージをプロジェクトに追加した後、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでパッケージを開いて内容を確認しておくことをお勧めします。 パッケージの内容を確認すると、ログ ファイルなどのパッケージの依存関係やその他の便利な機能について理解できます。    
@@ -42,28 +47,28 @@ caps.handback.revision: 27
 このチュートリアルの目的は、実際の配置で発生する可能性のある複雑な問題をシミュレーションすることです。 ただし、パッケージを別のコンピューターに配置できない場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のローカル インスタンスの msdb データベースにパッケージをインストールし、パッケージを同じインスタンスの [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] から実行して、このチュートリアルを行うこともできます。    
     
 ## <a name="what-you-will-learn"></a>学習する内容    
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の新しいツール、コントロール、機能などに慣れる最良の方法は、実際に使ってみることです。 このチュートリアルでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、パッケージとその他の必要なファイルをプロジェクトに追加する手順を紹介します。 プロジェクトが完成したら、配置バンドルを作成し、バンドルを目的のコンピューターにコピーして、そのコンピューターにパッケージをインストールします。    
+[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の新しいツール、コントロール、機能などに慣れる最良の方法は、実際に使ってみることです。 このチュートリアルでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、パッケージとその他の必要なファイルをプロジェクトに追加する手順を紹介します。 プロジェクトが完成したら、配置バンドルを作成し、バンドルを目的のコンピューターにコピーして、そのコンピューターにパッケージをインストールします。    
     
 ## <a name="requirements"></a>必要条件    
 このチュートリアルは、ファイル システムの基本的な操作は理解していても、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]の新機能はほとんど使用したことがないユーザーを対象にしています。 このチュートリアルで使用する基本的な [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の概念をよく理解するためには、最初に [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のチュートリアルの「 [SSIS ETL パッケージを作成する方法](../integration-services/ssis-how-to-create-an-etl-package.md)」を終えることをお勧めします。    
     
-**ソース コンピューター**。 配置バンドルを作成するコンピューターには、**次のコンポーネントがインストールされている必要があります。**
+**ソース コンピューター** 配置バンドルを作成するコンピューターには、 **次のコンポーネントがインストールされている必要があります。**
 - SQL Server  
-- サンプル データ、完成したパッケージ、構成、Readme。 これらのファイルは、[Adventure Works 2014 サンプル データベース](https://msftdbprodsamples.codeplex.com/releases/view/125550)をダウンロードしている場合、共にインストールされています。     
+- サンプル データ、完成したパッケージ、構成、Readme。 これらのファイルは、 [Adventure Works 2014 サンプル データベース](https://msftdbprodsamples.codeplex.com/releases/view/125550)をダウンロードしている場合、共にインストールされています。     
 > **注:** AdventureWorks または使用する他のデータでテーブルを作成および削除する権限があることを確認します。         
     
 -   [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。    
     
-**配置先コンピューター**。 パッケージを配置するコンピューターには、**次のコンポーネントがインストールされている必要があります。**    
+**配置先コンピューター** パッケージを配置するコンピューターには、 **次のコンポーネントがインストールされている必要があります。**    
     
 - SQL Server
-- サンプル データ、完成したパッケージ、構成、Readme。 これらのファイルは、[Adventure Works 2014 サンプル データベース](https://msftdbprodsamples.codeplex.com/releases/view/125550)をダウンロードしている場合、共にインストールされています。 
+- サンプル データ、完成したパッケージ、構成、Readme。 これらのファイルは、 [Adventure Works 2014 サンプル データベース](https://msftdbprodsamples.codeplex.com/releases/view/125550)をダウンロードしている場合、共にインストールされています。 
     
 - [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)。    
     
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].    
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]」を参照してください。    
     
--   AdventureWorks でテーブルを作成および削除する権限と、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] でパッケージを実行する権限が必要です。    
+-   AdventureWorks でテーブルを作成および削除する権限と、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]でパッケージを実行する権限が必要です。    
     
 -   msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] システム データベースの sysssispackages テーブルの読み取り権限と書き込み権限が必要です。    
     
@@ -81,3 +86,5 @@ caps.handback.revision: 27
 [レッスン 3: SSIS パッケージのインストール](../integration-services/lesson-3-install-ssis-packages.md)    
 このレッスンでは、配置バンドルを対象のコンピューターにコピーし、パッケージをインストールして、パッケージを実行します。    
     
+
+

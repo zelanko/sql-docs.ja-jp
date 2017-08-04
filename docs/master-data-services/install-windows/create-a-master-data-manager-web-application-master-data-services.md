@@ -1,22 +1,27 @@
 ---
-title: "マスター データ マネージャー Web アプリケーションの作成 (マスター データ サービス) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "マスター データ マネージャー Web アプリケーション (Master Data Services) を作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9f2371c46e3eb0140c26357070e39a2f16d2d8f7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# マスター データ マネージャー Web アプリケーションの作成 (マスター データ サービス)
+# <a name="create-a-master-data-manager-web-application-master-data-services"></a>マスター データ マネージャー Web アプリケーションの作成 (マスター データ サービス)
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションは、マスター データを操作するためのユーザー用インターフェイスと、MDS を構成および管理するための管理者用インターフェイスを提供します。  
   
  Web アプリケーションは、必ず Web サイトに含める必要があります。 Web アプリケーションを作成するには、次のいずれかを実行する必要があります。  
@@ -29,54 +34,54 @@ caps.handback.revision: 8
   
  Web アプリケーションを作成したら、それを [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースに関連付けます。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
   
 -   データベースをホストするコンピューターの要件の詳細については、「[Web アプリケーションの要件 &#40;マスター データ サービス&#41;](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)」を参照してください。  
   
-## 新しい Web サイトにマスター データ マネージャー Web アプリケーションを作成するには  
+## <a name="to-create-a-master-data-manager-web-application-in-a-new-website"></a>新しい Web サイトにマスター データ マネージャー Web アプリケーションを作成するには  
  新しい Web サイトを作成した場合、ルート Web アプリケーションは [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションです。 また、作成された Web アプリケーションは新しいアプリケーション プールに追加されます。  
   
 > [!NOTE]  
->  この手順を使用した場合、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションの仮想パスと別名を指定することはできません。 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] の仮想パスと別名を指定する場合は、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションとして構成されていない既存の Web サイトに Web アプリケーションを作成する必要があります。  
+>  この手順を使用した場合、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションの仮想パスと別名を指定することはできません。 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]の仮想パスと別名を指定する場合は、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションとして構成されていない既存の Web サイトに Web アプリケーションを作成する必要があります。  
   
- また [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]では、HTTP バインドのみを含むサイトの作成もサポートされます。 HTTPS バインドを追加するには、[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]で新しいサイトとアプリケーションを作成します。詳細については、「[マスター データ マネージャー Web アプリケーションのセキュリティ保護](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)」を参照してください。  
+ また [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] では、HTTP バインドのみを含むサイトの作成もサポートされます。 HTTPS バインドを追加するには、 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] で新しいサイトとアプリケーションを作成します。詳細については、「 [マスター データ マネージャー Web アプリケーションのセキュリティ保護](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md) 」を参照してください。  
   
-#### 新しい Web サイトにマスター データ マネージャー Web アプリケーションを作成するには  
+#### <a name="to-create-a-master-data-manager-web-application-in-a-new-website"></a>新しい Web サイトにマスター データ マネージャー Web アプリケーションを作成するには  
   
-1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] を開きます。  
+1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
   
 2.  左ペインで **[Web の構成]**をクリックします。  
   
-3.  **[Web の構成]** ページにある Web サイトの一覧で、**[新規 Web サイトの作成]** を選択します。  
+3.  **[Web の構成]** ページにある Web サイトの一覧で、 **[新規 Web サイトの作成]**を選択します。  
   
-4.  **[Web サイトの作成]** ダイアログ ボックスで、新しい Web サイトの情報を指定します。 ダイアログ ボックスのユーザー インターフェイス (UI) オプションの詳細については、「[[Web サイトの作成] ダイアログ ボックス &#40;マスター データ サービス構成マネージャー&#41;](../Topic/Create%20Website%20Dialog%20Box%20\(Master%20Data%20Services%20Configuration%20Manager\).md)」を参照してください。  
+4.  **[Web サイトの作成]** ダイアログ ボックスで、新しい Web サイトの情報を指定します。 ダイアログ ボックスのユーザー インターフェイス (UI) オプションの詳細については、「[[Web サイトの作成] ダイアログ ボックス &#40;マスター データ サービス構成マネージャー&#41;](../../master-data-services/create-website-dialog-box-master-data-services-configuration-manager.md)」を参照してください。  
   
 5.  クリックして **OK**です。  
   
-## 既存の Web サイトにマスター データ マネージャー Web アプリケーションを作成するには  
+## <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>既存の Web サイトにマスター データ マネージャー Web アプリケーションを作成するには  
  既存の Web サイトに Web アプリケーションを作成する場合は、Web アプリケーションの仮想パスと別名を選択できます。 作成された Web アプリケーションは新しいアプリケーション プールに追加されます。  
   
-#### 既存の Web サイトにマスター データ マネージャー Web アプリケーションを作成するには  
+#### <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>既存の Web サイトにマスター データ マネージャー Web アプリケーションを作成するには  
   
-1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] を開きます。  
+1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
   
 2.  左ペインで **[Web の構成]**をクリックします。  
   
-3.  **[Web の構成]** ページで、**[Web サイト]** ボックスの一覧から、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションを作成する Web サイトを選択します。  
+3.  **[Web の構成]** ページで、 **[Web サイト]** ボックスの一覧から、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションを作成する Web サイトを選択します。  
   
-4.  **[アプリケーションの作成]** をクリックします。  
+4.  **[アプリケーションの作成]**をクリックします。  
   
-5.  **[Web アプリケーションの作成]** ダイアログ ボックスで、新しい Web アプリケーションの情報を指定します。 ウィザードのユーザー インターフェイス (UI) オプションの詳細については、「[[Web アプリケーションの作成] ダイアログ ボックス &#40;マスター データ サービス構成マネージャー&#41;](../Topic/Create%20Web%20Application%20Dialog%20Box%20\(Master%20Data%20Services%20Configuration%20Manager\).md)」を参照してください。  
+5.  **[Web アプリケーションの作成]** ダイアログ ボックスで、新しい Web アプリケーションの情報を指定します。 ウィザードのユーザー インターフェイス (UI) オプションの詳細については、「[[Web アプリケーションの作成] ダイアログ ボックス &#40;マスター データ サービス構成マネージャー&#41;](../../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)」を参照してください。  
   
 6.  クリックして **OK**です。  
   
-## 次の手順  
+## <a name="next-steps"></a>次の手順  
   
--   Web アプリケーションを [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースに関連付けます。 詳細については、「[Master Data Services データベースと Web アプリケーションの関連付け](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)」を参照してください。  
+-   Web アプリケーションを [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースに関連付けます。 詳細については、「 [Master Data Services データベースと Web アプリケーションの関連付け](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)」を参照してください。  
   
--   SSL (Secure Sockets Layer) を使用してコンテンツを暗号化する必要がある場合は、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションをホストする Web サイトで HTTPS バインドを使用するように構成します。 Web サーバー用にサーバー証明書を構成し、サイト用に HTTP バインドと SSL 設定を構成するには、IIS マネージャーなどのインターネット インフォメーション サービス (IIS) ツールを使用する必要があります。 詳細については、「[マスター データ マネージャー Web アプリケーションのセキュリティ保護](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)」を参照してください。  
+-   SSL (Secure Sockets Layer) を使用してコンテンツを暗号化する必要がある場合は、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションをホストする Web サイトで HTTPS バインドを使用するように構成します。 Web サーバー用にサーバー証明書を構成し、サイト用に HTTP バインドと SSL 設定を構成するには、IIS マネージャーなどのインターネット インフォメーション サービス (IIS) ツールを使用する必要があります。 詳細については、「 [マスター データ マネージャー Web アプリケーションのセキュリティ保護](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [マスター データ サービスのインストール](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

@@ -1,50 +1,55 @@
 ---
-title: "OLE DB ソースを使用してデータを抽出する | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データの抽出 [Integration Services]"
-  - "ソース [Integration Services], OLE DB"
-  - "OLE DB ソース [Integration Services]"
+title: "OLE DB ソースを使用してデータを抽出 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extracting data [Integration Services]
+- sources [Integration Services], OLE DB
+- OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: c80e5fef4855cf5066dfa00bf527e452aa616d33
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# OLE DB ソースを使用してデータを抽出する
+# <a name="extract-data-by-using-the-ole-db-source"></a>OLE DB ソースを使用してデータを抽出する
   OLE DB ソースを追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクがあらかじめ含まれている必要があります。  
   
-### OLE DB ソースを使用してデータを抽出するには  
+### <a name="to-extract-data-using-an-ole-db-source"></a>OLE DB ソースを使用してデータを抽出するには  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  **[データ フロー]** タブをクリックし、次に **[ツールボックス]** で、OLE DB ソースをデザイン画面にドラッグします。  
+3.  **[データ フロー]** タブをクリックし、次に **[ツールボックス]**で、OLE DB ソースをデザイン画面にドラッグします。  
   
 4.  OLE DB ソースをダブルクリックします。  
   
-5.  **[OLE DB ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページで、既存の OLE DB 接続マネージャーを選択するか、**[新規作成]** をクリックして新しい接続マネージャーを作成します。 詳細については、「[OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
+5.  **[OLE DB ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページで、既存の OLE DB 接続マネージャーを選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。 詳細については、「 [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
 6.  データのアクセス方法を、次の中から選択します。  
   
     -   **[テーブルまたはビュー]** OLE DB 接続マネージャーの接続先となる、データベースのテーブルまたはビューを選択します。  
   
-    -   **[テーブル名またはビュー名の変数]**OLE DB 接続マネージャーの接続先となるデータベースのテーブルまたはビューの名前が含まれる、ユーザー定義変数を選択します。  
+    -   **[テーブル名またはビュー名の変数]** OLE DB 接続マネージャーの接続先となるデータベースのテーブルまたはビューの名前が含まれる、ユーザー定義変数を選択します。  
   
-    -   **[SQL コマンド]**SQL コマンドを入力するか、**[クエリ ビルダー]** で **[クエリの作成]** をクリックして、SQL コマンドを記述します。  
+    -   **[SQL コマンド]** SQL コマンドを入力するか、 **[クエリ ビルダー]** で **[クエリの作成]**をクリックして、SQL コマンドを記述します。  
   
         > [!NOTE]  
-        >  コマンドにはパラメーターを含めることができます。 詳細については、「[クエリ パラメーターをデータ フロー コンポーネントの変数にマップする](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)」を参照してください。  
+        >  コマンドにはパラメーターを含めることができます。 詳細については、「 [クエリ パラメーターをデータ フロー コンポーネントの変数にマップする](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)」を参照してください。  
   
     -   **[変数からの SQL コマンド]** SQL コマンドが含まれるユーザー定義変数を選択します。  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 23
   
 8.  必要に応じて、 **[出力列]** 一覧の値を編集し、出力列の名前を更新します。  
   
-9. エラー出力を構成するには、 **[エラー出力]**をクリックします。 詳細については、「[データ フロー コンポーネントでエラー出力を構成する](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)」を参照してください。  
+9. エラー出力を構成するには、 **[エラー出力]**をクリックします。 詳細については、「 [データ フローのデバッグ](../../integration-services/troubleshooting/debugging-data-flow.md)」を参照してください。  
   
 10. **[プレビュー]** をクリックすると、OLE DB ソースによって抽出されたデータを最大 200 行表示できます。  
   
@@ -63,10 +68,10 @@ caps.handback.revision: 23
   
 12. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [OLE DB ソース](../../integration-services/data-flow/ole-db-source.md)   
  [Integration Services の変換](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../integration-services/data-flow/integration-services-paths.md)   
- [[データ フロー タスク]](../../integration-services/control-flow/data-flow-task.md)  
+ [データ フロー タスク](../../integration-services/control-flow/data-flow-task.md)  
   
   

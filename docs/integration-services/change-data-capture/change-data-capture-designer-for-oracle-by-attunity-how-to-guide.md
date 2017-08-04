@@ -1,25 +1,30 @@
 ---
-title: "Change Data Capture Designer for Oracle by Attunity 操作ガイド | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Data Capture Designer for Oracle by Attunity 操作ガイド 』 に変更する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 84ed22e8-2a0c-41c2-a8f0-eea3f4047656
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dee01cafcad2515e5fa80462dff67c14ff66f3ea
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# Change Data Capture Designer for Oracle by Attunity 操作ガイド
+# <a name="change-data-capture-designer-for-oracle-by-attunity-how-to-guide"></a>Change Data Capture Designer for Oracle by Attunity 操作ガイド
   ここでは、Change Data Capture Designer for Oracle by Attunity のタスクを実行する方法について説明します。  
   
-## Oracle CDC デザイナー コンソールを使用する方法を学ぶ  
+## <a name="learn-how-to-use-the-oracle-cdc-designer-console"></a>Oracle CDC デザイナー コンソールを使用する方法を学ぶ  
   
 -   [CDC デザイナー コンソールから CDC サービスを管理する方法](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)  
   

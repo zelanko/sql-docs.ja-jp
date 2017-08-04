@@ -1,30 +1,35 @@
 ---
-title: "派生列変換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.derivedcolumntrans.f1"
-helpviewer_keywords: 
-  - "複数の派生列"
-  - "式 [Integration Services], 派生列"
-  - "派生列"
-  - "列 [Integration Services], 派生"
-  - "派生列変換"
+title: "派生列変換 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.derivedcolumntrans.f1
+helpviewer_keywords:
+- multiple derived columns
+- expressions [Integration Services], derived columns
+- derived columns
+- columns [Integration Services], derivations
+- Derived Column transformation
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 caps.latest.revision: 60
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 51522b2df0c47048cbc62a6fb6997e40a484d7d6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# 派生列変換
+# <a name="derived-column-transformation"></a>派生列変換
   派生列変換では、式を変換入力列に適用することにより新しい列の値を作成します。 式には、変換入力からの列、変数、関数、および演算子の任意の組み合わせを含めることができます。 結果は、新しい列として追加するか、または既存の列の値を置き換える値として挿入できます。 派生列変換では複数の派生列を定義でき、任意の変数または入力列を複数の式に含めることができます。  
   
  この変換を使用すると、次のタスクを実行できます。  
@@ -61,7 +66,7 @@ caps.handback.revision: 60
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](../Topic/Common%20Properties.md)  
+-   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -75,3 +80,4 @@ caps.handback.revision: 60
   
 ## <a name="related-content"></a>関連コンテンツ  
  social.technet.microsoft.com の技術記事「 [SSIS 式の例](http://go.microsoft.com/fwlink/?LinkId=220761)」  
+

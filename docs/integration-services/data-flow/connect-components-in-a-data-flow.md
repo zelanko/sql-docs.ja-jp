@@ -1,28 +1,42 @@
 ---
-title: "データ フロー内でコンポーネントを連結する | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "コンポーネント [Integration Services], 接続"
-  - "接続 [Integration Services], データ フロー コンポーネント"
+title: "データ フロー内のコンポーネントを接続 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- components [Integration Services], connections
+- connections [Integration Services], data flow components
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 73a379b190f05f4eedc361b4557afefd700a9664
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# データ フロー内でコンポーネントを連結する
+# <a name="connect-components-in-a-data-flow"></a>データ フロー内でコンポーネントを連結する
   この手順は、データ フロー内のコンポーネントの出力を、同じデータ フロー内にある別のコンポーネントに連結する方法について説明します。  
+パッケージ内にデータ フローを構築するには、 **デザイナーにある** [データ フロー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] タブのデザイン画面を使用します。 データ フローにデータ フロー コンポーネントが 2 つ含まれる場合、変換元または変換からの出力を変換または変換先への入力に連結することで、これらのコンポーネントを連結できます。 2 つのデータ フロー コンポーネント間のコネクタは、パスと呼ばれます。  
   
-### データ フロー内でコンポーネントを連結するには  
+ 次の図は、1 つの変換元コンポーネント、2 つの変換、1 つの変換先コンポーネント、およびこれらを連結するパスを持つ、簡単なデータ フローを示しています。  
+  
+ ![Data flow](../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
+  
+ 2 つのコンポーネントを連結したら、パスを移動するデータのメタデータおよびパスのプロパティを、 **[データ フロー パス エディター]**で表示できます。 詳細については、「 [Integration Services のパス](../../integration-services/data-flow/integration-services-paths.md)」を参照してください。  
+  
+ また、データ ビューアーをパスに追加することもできます。 データ ビューアーを使用すると、パッケージの実行時にデータ フロー コンポーネント間を移動するデータを表示できます。  
+  
+### <a name="connect-components-in-a-data-flow"></a>データ フロー内でコンポーネントを連結する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -39,9 +53,8 @@ caps.handback.revision: 40
   
 6.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## 参照  
- [データ フローでコンポーネントを追加または削除する](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)   
- [データ フロー コンポーネントでエラー出力を構成する](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)   
- [データ フロー](../../integration-services/data-flow/data-flow.md)  
+## <a name="see-also"></a>参照  
+ [追加またはデータ フローでコンポーネントを削除します。](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)   
+ [データ フローのデバッグ](../../integration-services/troubleshooting/debugging-data-flow.md)[データ フロー](../../integration-services/data-flow/data-flow.md)  
   
   

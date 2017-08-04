@@ -1,28 +1,33 @@
 ---
-title: "バージョンをコピーする (マスター データ サービス) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "バージョン [マスター データ サービス]、コピー"
-  - "バージョンのコピー [マスター データ サービス]"
+title: "バージョンをコピーする (マスター データ サービス) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- versions [Master Data Services], copying
+- copying versions [Master Data Services]
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4ca0935b28c2dd7e863a6d75eaeff4b148cfc742
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# バージョンをコピーする (マスター データ サービス)
+# <a name="copy-a-version-master-data-services"></a>バージョンをコピーする (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] でモデルのバージョンをコピーして、新しいバージョンを作成します。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
@@ -31,7 +36,7 @@ caps.handback.revision: 6
   
 -   [バージョン管理] 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
-### バージョンをコピーするには  
+### <a name="to-copy-a-version"></a>バージョンをコピーするには  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[バージョン管理]**をクリックします。  
   
@@ -44,11 +49,11 @@ caps.handback.revision: 6
   
 4.  確認のダイアログ ボックスで **[OK]**をクリックします。  
   
-## 次の手順  
+## <a name="next-steps"></a>次の手順  
   
--   [バージョン名を変更する (マスター データ サービス)](../master-data-services/change-a-version-name-master-data-services.md)  
+-   [バージョン名 &#40; を変更します。マスター データ サービス &#41;](../master-data-services/change-a-version-name-master-data-services.md)  
   
-## 参照  
- [バージョン (マスター データ サービス)](../master-data-services/versions-master-data-services.md)  
+## <a name="see-also"></a>参照  
+ [バージョンと #40 です。マスター データ サービス &#41;](../master-data-services/versions-master-data-services.md)  
   
   

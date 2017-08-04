@@ -1,30 +1,35 @@
 ---
-title: "通知を送信するようにビジネス ルールを構成する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ビジネス ルール [マスター データ サービス], 通知の構成"
-  - "電子メール [マスター データ サービス], ビジネス ルールの構成"
-  - "通知 [マスター データ サービス], ビジネス ルールの構成"
+title: "通知 (Master Data Services) を送信するビジネス ルールの構成 |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business rules [Master Data Services], configuring notifications
+- e-mail [Master Data Services], configuring business rules
+- notifications [Master Data Services], configuring business rules
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29ff569439e245100befb8e0a515a128aac91f79
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# 通知を送信するようにビジネス ルールを構成する (マスター データ サービス)
+# <a name="configure-business-rules-to-send-notifications-master-data-services"></a>通知を送信するようにビジネス ルールを構成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、属性値の変更をユーザーに通知する場合は、通知を送信するようにビジネス ルールを構成します。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** および **[ユーザー/グループの権限]** 機能領域にアクセスする権限が必要です。 **[ユーザー/グループの権限]** 機能領域に対する権限がないと、通知を送信するユーザーおよびグループの一覧を表示できません。  
@@ -37,7 +42,7 @@ caps.handback.revision: 10
   
 -   メールがグループに送信された場合は、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] にアクセスしたグループ メンバーのみが電子メールを受信します。  
   
-### 通知を送信するようにビジネス ルールを構成するには  
+### <a name="to-configure-business-rules-to-send-notifications"></a>通知を送信するようにビジネス ルールを構成するには  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 10
   
 10. 確認のダイアログ ボックスで **[OK]**をクリックします。 **[ビジネス ルールの状態]** 列の値が **[アクティブ]** に変わり、 **[通知]** 列に通知の送信先ユーザーまたはグループが表示されます。  
   
-## 次の手順  
+## <a name="next-steps"></a>次の手順  
   
 -   以下のいずれかの手順でビジネス ルールをデータに適用します。  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 10
   
     -   [電子メール通知を構成する (マスター データ サービス)](../master-data-services/configure-email-notifications-master-data-services.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [通知 (マスター データ サービス)](../master-data-services/notifications-master-data-services.md)   
  [電子メール通知を構成する (マスター データ サービス)](../master-data-services/configure-email-notifications-master-data-services.md)  
   

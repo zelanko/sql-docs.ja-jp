@@ -1,26 +1,31 @@
 ---
-title: "[ファイル接続マネージャーの追加] ダイアログ ボックスの UI リファレンス | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fileconnection.f1"
-helpviewer_keywords: 
-  - "ファイル接続マネージャーの追加"
+title: "ファイル接続マネージャー ダイアログ ボックスの UI リファレンスの追加 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fileconnection.f1
+helpviewer_keywords:
+- Add File Connection Manager
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c189e040ea0fa8981f9f176cd1e89d80a2f7c445
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# [ファイル接続マネージャーの追加] ダイアログ ボックスの UI リファレンス
+# <a name="add-file-connection-manager-dialog-box-ui-reference"></a>[ファイル接続マネージャーの追加] ダイアログ ボックスの UI リファレンス
   **[ファイル接続マネージャーの追加]** ダイアログ ボックスを使用すると、ファイルまたはフォルダーのグループへの接続を定義できます。  
   
  複数のファイルの接続マネージャーの詳細については、「 [Multiple Files Connection Manager](../../integration-services/connection-manager/multiple-files-connection-manager.md)」を参照してください。  
@@ -28,7 +33,7 @@ caps.handback.revision: 33
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の組み込みタスクとデータ フロー コンポーネントは、複数ファイル接続マネージャーを使用しません。 ただし、スクリプト タスクまたはスクリプト コンポーネントでは、この接続マネージャーを使用できます。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[使用法の種類]**  
  複数のファイルの接続マネージャーに使用するファイルの種類を指定します。  
   
@@ -43,18 +48,18 @@ caps.handback.revision: 33
  次のボタンを使用して追加したファイルまたはフォルダーを表示します。  
   
  **[追加]**  
- **[ファイルの選択]** ダイアログ ボックスを使用してファイルを追加するか、**[フォルダーの参照]** ダイアログ ボックスを使用してフォルダーを追加します。  
+ **[ファイルの選択]** ダイアログ ボックスを使用してファイルを追加するか、 **[フォルダーの参照]** ダイアログ ボックスを使用してフォルダーを追加します。  
   
  **[編集]**  
- ファイルまたはフォルダーを選択し、**[ファイルの選択]** または **[フォルダーの参照]** ダイアログ ボックスを使用して別のファイルまたはフォルダーで置き換えます。  
+ ファイルまたはフォルダーを選択し、 **[ファイルの選択]** または **[フォルダーの参照]** ダイアログ ボックスを使用して別のファイルまたはフォルダーで置き換えます。  
   
  **[削除]**  
- ファイルまたはフォルダーを選択し、**[削除]** ボタンを使用して一覧から削除します。  
+ ファイルまたはフォルダーを選択し、 **[削除]** ボタンを使用して一覧から削除します。  
   
  **矢印ボタン**  
  ファイルまたはフォルダーを選択し、矢印ボタンを使用して上または下に移動して、アクセスのシーケンスを指定します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)  
   
   

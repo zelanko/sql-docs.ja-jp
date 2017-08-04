@@ -1,35 +1,40 @@
 ---
-title: "DATEDIFF (SSIS 式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DATEDIFF ステートメント"
-  - "日付 [Integration Services], DATEDIFF"
+title: "DATEDIFF (SSIS 式) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DATEDIFF statement
+- dates [Integration Services], DATEDIFF
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c771f4788199c26fae2cfe46dfd66a18d67fcb6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# DATEDIFF (SSIS 式)
+# <a name="datediff-ssis-expression"></a>DATEDIFF (SSIS 式)
   指定された 2 つの日付間の差を、日付および時刻の単位で返します。 *datepart* パラメーターにより、差分を計算する基となる日付と時刻を指定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 DATEDIFF(datepart, startdate, endate)  
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  *datepart*  
  比較して値を返す日付の要素を指定するパラメーターです。  
   
@@ -39,21 +44,21 @@ DATEDIFF(datepart, startdate, endate)
  *endate*  
  間隔の終了日です。  
   
-## 戻り値の型  
+## <a name="result-types"></a>戻り値の型  
  DT_I4  
   
-## 解説  
+## <a name="remarks"></a>解説  
  次の表に、式エバリュエーターで認識される日付要素 (datepart) と省略形を示します。  
   
-|日付要素 (datepart)|省略形|  
+|datepart|省略形|  
 |--------------|-------------------|  
 |年|yy、yyyy|  
 |Quarter|qq、q|  
-|月|mm、m|  
+|Month|mm、m|  
 |Dayofyear|dy、y|  
 |日|dd、d|  
 |Week|wk、ww|  
-|曜日|dw、w|  
+|Weekday|dw、w|  
 |Hour|Hh|  
 |Minute|mi、n|  
 |第 2 週|ss、s|  
@@ -67,7 +72,7 @@ DATEDIFF(datepart, startdate, endate)
   
  終了日が開始日よりも前の日付の場合、この関数は負の値を返します。 開始日と終了日の日付が同一、または同じ間隔の範囲内である場合、この関数は 0 を返します。  
   
-## SSIS 式の例  
+## <a name="ssis-expression-examples"></a>SSIS 式の例  
  この例では、2 つの日付リテラル間の日数が計算されます。 日付が "mm/dd/yyyy" 形式の場合、7 が返されます。  
   
 ```  
@@ -80,18 +85,18 @@ DATEDIFF("dd", (DT_DBTIMESTAMP)"8/1/2003", (DT_DBTIMESTAMP)"8/8/2003")
 DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())  
 ```  
   
- この例では、**ModifiedDate** 列の日付と、**YearEndDate** 変数の日付の間の週数が返されます。 **YearEndDate** が **date** データ型の場合、明示的なキャストは必要ありません。  
+ この例では、 **ModifiedDate** 列の日付と、 **YearEndDate** 変数の日付の間の週数が返されます。 **YearEndDate** が **date** データ型の場合、明示的なキャストは必要ありません。  
   
 ```  
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  
 ```  
   
-## 参照  
- [DATEADD (SSIS 式)](../../integration-services/expressions/dateadd-ssis-expression.md)   
- [DATEPART (SSIS 式)](../../integration-services/expressions/datepart-ssis-expression.md)   
- [DAY (SSIS 式)](../../integration-services/expressions/day-ssis-expression.md)   
- [MONTH (SSIS 式)](../../integration-services/expressions/month-ssis-expression.md)   
- [YEAR (SSIS 式)](../../integration-services/expressions/year-ssis-expression.md)   
- [関数 (SSIS 式)](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>参照  
+ [DATEADD & #40 です。SSIS 式 &#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
+ [DATEPART & #40 です。SSIS 式 &#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
+ [日付と #40 です。SSIS 式 &#41;](../../integration-services/expressions/day-ssis-expression.md)   
+ [月と #40 です。SSIS 式 &#41;](../../integration-services/expressions/month-ssis-expression.md)   
+ [年と #40 です。SSIS 式 &#41;](../../integration-services/expressions/year-ssis-expression.md)   
+ [関数と #40 です。SSIS 式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

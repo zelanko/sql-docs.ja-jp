@@ -1,41 +1,46 @@
 ---
-title: "リーフ メンバーを作成する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "リーフ メンバー [マスター データ サービス], 作成"
-  - "リーフ メンバー作成 [マスター データ サービス]"
-  - "メンバー [マスター データ サービス], リーフ メンバー作成"
+title: "リーフ メンバー (マスター データ サービス) を作成 |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- leaf members [Master Data Services], creating
+- creating leaf members [Master Data Services]
+- members [Master Data Services], creating leaf members
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 caps.latest.revision: 14
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3745604313dde3eda55c3d0f5d8f634bf7187440
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# リーフ メンバーを作成する (マスター データ サービス)
+# <a name="create-a-leaf-member-master-data-services"></a>リーフ メンバーを作成する (マスター データ サービス)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、マスター データをシステムに追加する場合は、リーフ メンバーを作成します。 データを一括で追加する場合は、ステージング テーブルを使用します。 詳細については、「[テーブルからのデータのインポート (マスター データ サービス)](../master-data-services/import-data-from-tables-master-data-services.md)」を参照してください。  
   
  データをインポートするには、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] も使用します。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
   
--   メンバーを追加するエンティティのリーフ モデル オブジェクトに対する **作成** または **更新**権限が最低限必要です。 作成権限では、メンバーを作成し、コードの属性のみを編集できます。 更新権限では、その他の属性を更新できます。  
+-   メンバーを追加するエンティティのリーフ モデル オブジェクトに対する **作成** または **更新** 権限が最低限必要です。 作成権限では、メンバーを作成し、コードの属性のみを編集できます。 更新権限では、その他の属性を更新できます。  
   
      詳細については、「[セキュリティ (マスター データ サービス)](../master-data-services/security-master-data-services.md)」を参照してください。  
   
-### リーフ メンバーを作成するには  
+### <a name="to-create-a-leaf-member"></a>リーフ メンバーを作成するには  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] のホーム ページで、 **[モデル]** ボックスの一覧からモデルを選択します。  
   
@@ -57,8 +62,8 @@ caps.handback.revision: 14
   
 8.  **[OK]**をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [統合メンバーを作成する (マスター データ サービス)](../master-data-services/create-a-consolidated-member-master-data-services.md)   
- [メンバー (マスター データ サービス)](../master-data-services/members-master-data-services.md)  
+ [メンバーと #40 です。マスター データ サービス &#41;](../master-data-services/members-master-data-services.md)  
   
   

@@ -1,23 +1,28 @@
 ---
-title: "変更セット (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "変更セット (Master Data Services) |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc6c8911695be4768990f83db618ce72a220b1a7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# 変更セット (Master Data Services)
+# <a name="changesets-master-data-services"></a>変更セット (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、エンティティに対する保留中の変更を変更セットに保存する機能をサポートします。 この機能には、2 つの使用シナリオがあります。  
   
 -   **“承認が必要” がエンティティ管理者によって有効にされる場合の変更**  
@@ -26,13 +31,13 @@ caps.handback.revision: 13
   
      このワークフローを実行します。  
   
-    1.  変更セットを作成します。 変更セットは、[開く] の状態です。 「[変更セットを作成する (マスター データ サービス)](../master-data-services/create-a-changeset-master-data-services.md)」を参照してください。  
+    1.  変更セットを作成します。 変更セットは、[開く] の状態です。 「 [変更セットを作成する (マスター データ サービス)](../master-data-services/create-a-changeset-master-data-services.md)  
   
-    2.  変更セットを適用し、いくつかの変更を変更セットに加えます。 「[変更セットの適用および更新 (マスター データ サービス)](../master-data-services/apply-and-update-a-changeset-master-data-services.md)」を参照してください。  
+    2.  変更セットを適用し、いくつかの変更を変更セットに加えます。 「 [変更セットの適用および更新 (マスター データ サービス)](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   
-    3.  承認のために、変更セットをエンティティ管理者に送信します。 変更セットは、[保留] の状態です。 「[変更セットのコミットまたは送信 (マスター データ サービス)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)」を参照してください。  
+    3.  承認のために、変更セットをエンティティ管理者に送信します。 変更セットは、[保留] の状態です。 「 [変更セットのコミットまたは送信 (マスター データ サービス)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
-    4.  エンティティ管理者は、変更セットが承認待ちをしている電子メール通知を受け取ります。 エンティティ管理者が変更セットを承認した場合、変更セットは [承認済み] の状態になります。 「[変更セットの承認または拒否 (マスター データ サービス)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)」を参照してください。  
+    4.  エンティティ管理者は、変更セットが承認待ちをしている電子メール通知を受け取ります。 エンティティ管理者が変更セットを承認した場合、変更セットは [承認済み] の状態になります。 「 [変更セットの承認または拒否 (マスター データ サービス)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
     5.  承認された変更セットは、自動的にコミットされます。 変更が正常にコミットされると、変更セットはコミット (committed) 状態になります。  
   
@@ -42,17 +47,17 @@ caps.handback.revision: 13
   
      このワークフローを実行します。  
   
-    1.  変更セットを作成します。 変更セットは、[開く] の状態です。 「[変更セットを作成する (マスター データ サービス)](../master-data-services/create-a-changeset-master-data-services.md)」を参照してください。  
+    1.  変更セットを作成します。 変更セットは、[開く] の状態です。 「 [変更セットを作成する (マスター データ サービス)](../master-data-services/create-a-changeset-master-data-services.md)  
   
-    2.  変更セットを適用し、いくつかの変更を変更セットに加えます。 「[変更セットの適用および更新 (マスター データ サービス)](../master-data-services/apply-and-update-a-changeset-master-data-services.md)」を参照してください。  
+    2.  変更セットを適用し、いくつかの変更を変更セットに加えます。 「 [変更セットの適用および更新 (マスター データ サービス)](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   
-    3.  準備ができたら、変更セットをコミットします。 「[変更セットのコミットまたは送信 (マスター データ サービス)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)」を参照してください。  
+    3.  準備ができたら、変更セットをコミットします。 「 [変更セットのコミットまたは送信 (マスター データ サービス)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [変更セットを作成する (マスター データ サービス)](../master-data-services/create-a-changeset-master-data-services.md)   
- [変更セットの適用および更新 (マスター データ サービス)](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
+ [適用し、変更セット &#40; を更新マスター データ サービス &#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
  [変更セットのコミットまたは送信 (マスター データ サービス)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)   
- [変更セットの承認または拒否 (マスター データ サービス)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)   
- [変更セットの管理 (マスター データ サービス)](../master-data-services/manage-changesets-master-data-services.md)  
+ [承認または却下、変更セット & #40 です。マスター データ サービス &#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)   
+ [変更セット &#40; を管理します。マスター データ サービス &#41;](../master-data-services/manage-changesets-master-data-services.md)  
   
   

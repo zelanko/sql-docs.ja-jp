@@ -1,33 +1,38 @@
 ---
-title: "CDC ソース | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.cdcsource.f1"
+title: "CDC ソース |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.cdcsource.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 031c5321bc17307a12403d974380eb710c841653
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC ソース
+# <a name="cdc-source"></a>CDC ソース
   CDC ソースは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 変更テーブルから変更データの範囲を読み取り、変更内容を下流の他の SSIS コンポーネントに伝えます。  
   
  CDC ソースによって読み取られた変更データの範囲は "CDC 処理範囲" と呼ばれ、現在のデータ フローの開始前に実行される CDC 制御タスクによって決定されます。 CDC 処理範囲は、テーブル グループの CDC 処理の状態を保持するパッケージ変数の値から導き出されます。  
   
- CDC ソースは、データベース テーブル、ビュー、または SQL ステートメントを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースからデータを抽出します。  
+ CDC ソースは、データベース テーブル、ビュー、または SQL ステートメントを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースからデータを抽出します。  
   
  CDC ソースは、次の構成を使用します。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC データベースにアクセスするための、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 接続マネージャー。 CDC ソース接続を構成する方法の詳細については、「[[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../Topic/CDC%20Source%20Editor%20\(Connection%20Manager%20Page\).md)」を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC データベースにアクセスするための、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 接続マネージャー。 CDC ソース接続を構成する方法の詳細については、「 [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)」を参照してください。  
   
 -   CDC のために有効にされたテーブル。  
   
@@ -37,11 +42,11 @@ caps.handback.revision: 11
   
 -   CDC 処理範囲が決定される基になる、CDC 状態パッケージ変数の名前。 CDC ソースによって、その変数が変更されることはありません。  
   
- CDC ソースによって返されるデータは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 関数の **cdc.fn_cdc_get_all_changes_\<capture-instance-name>** または **cdc.fn_cdc_get_net_changes_\<capture-instance-name>** (使用できる場合) によって返されるデータと同じです。 唯一、必要に応じて追加できる列として **__$initial_processing** があります。この列は、現在の処理範囲がテーブルの初期読み込みの範囲と重複できるかどうかを示します。 初期処理の詳細については、「[CDC 制御タスク](../../integration-services/control-flow/cdc-control-task.md)」を参照してください。  
+ CDC ソースによって返されるデータは、同じによって返された、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 関数**cdc.fn_cdc_get_all_changes_\<キャプチャ インスタンス名 >**または**cdc.fn_cdc_get_net_changes_\<キャプチャ インスタンス名 >** (使用可能な場合)。 唯一、必要に応じて追加できる列として **__$initial_processing** があります。この列は、現在の処理範囲がテーブルの初期読み込みの範囲と重複できるかどうかを示します。 初期処理の詳細については、「 [CDC 制御タスク](../../integration-services/control-flow/cdc-control-task.md)」を参照してください。  
   
  CDC ソースには、1 つの標準出力と 1 つのエラー出力があります。  
   
-## エラー処理  
+## <a name="error-handling"></a>エラー処理  
  CDC ソースにはエラー出力があります。 コンポーネントのエラー出力には、次の出力列があります。  
   
 -   **エラー コード**: 値は常に -1 です。  
@@ -50,15 +55,15 @@ caps.handback.revision: 11
   
 -   **エラー行の列**: エラーの原因となったレコード データ。  
   
- CDC ソースは、エラー動作の設定に応じて、抽出処理中に発生したエラー (データ変換、切り捨て) をエラー出力に返します。 詳細については、「[[CDC ソース エディター] &#40;[エラー出力] ページ&#41;](../Topic/CDC%20Source%20Editor%20\(Error%20Output%20Page\).md)」を参照してください。  
+ CDC ソースは、エラー動作の設定に応じて、抽出処理中に発生したエラー (データ変換、切り捨て) をエラー出力に返します。 詳細については、「 [[CDC ソース エディター] &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)」を参照してください。  
   
-## データ型のサポート  
+## <a name="data-type-support"></a>データ型のサポート  
  Microsoft の CDC ソース コンポーネントはすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型をサポートし、SSIS データ型に正確にマッピングします。  
   
-## CDC ソースのトラブルシューティング  
+## <a name="troubleshooting-the-cdc-source"></a>CDC ソースのトラブルシューティング  
  以下に、CDC ソースのトラブルシューティング情報を示します。  
   
-### このスクリプトを使用して問題を特定し、SQL Server Management Studio で再現する  
+### <a name="use-this-script-to-isolate-problems-and-reproduce-them-in-sql-server-management-studio"></a>このスクリプトを使用して問題を特定し、SQL Server Management Studio で再現する  
  CDC ソース操作は、CDC ソースを呼び出す前に実行される CDC 制御タスク操作によって管理されます。 CDC 制御タスクは、開始 LSN と終了 LSN が保存されている CDC 状態パッケージ変数の値を比較します。 CDC 制御タスクは、次のスクリプトに相当する関数を実行します。  
   
 ```  
@@ -74,56 +79,56 @@ use <cdc-enabled-database-name>
   
  それぞれの文字の説明は次のとおりです。  
   
--   \<cdc-enabled-database-name> は、変更テーブルが含まれている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの名前です。  
+-   \<cdc-有効になっている、データベース名 > の名前を指定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変更テーブルを含むデータベース。  
   
--   \<value-from-state-cs> は、CDC 状態変数に、CS/\<value-from-state-cs>/ として示される値です (CS は Current-processing-range-Start (現在の処理範囲の開始) の略語です)。  
+-   \<値から状態 cs > CS として CDC 状態変数に表示される値は、/\<値から状態 cs >/(CS は、現在の処理の範囲の開始を表します)。  
   
--   \<value-from-state-ce> は、CDC 状態変数に、CE/\<value-from-state-ce>/ として示される値です (CE は Current-processing-range-End (現在の処理範囲の終了) の略語です)。  
+-   \<値から状態 ce > CE として CDC 状態変数に表示される値は、/\<値から状態 cs >/(CE は、現在の処理の範囲の終了を表します)。  
   
--   \<mode> は、CDC の処理モードです。 この処理モードは、**[すべて]**、**[古い値を含むすべて]**、**[差分]**、**[更新マスクを含む差分]**、**[結合を含む差分]** のいずれかの値です。  
+-   \<モード > は、CDC 処理モードです。 この処理モードは、 **[すべて]**、 **[古い値を含むすべて]**、 **[差分]**、 **[更新マスクを含む差分]**、 **[結合を含む差分]**のいずれかの値です。  
   
- このスクリプトを実行すると、エラーの再現と特定を簡単に行うことができる [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で問題を再現することによって、問題を特定できます。  
+ このスクリプトを実行すると、エラーの再現と特定を簡単に行うことができる [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で問題を再現することによって、問題を特定できます。  
   
-#### SQL Server エラー メッセージ  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、次のメッセージが返されることがあります。  
+#### <a name="sql-server-error-message"></a>SQL Server エラー メッセージ  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によって、次のメッセージが返されることがあります。  
   
- **プロシージャまたは関数 cdc.fn_cdc_get_net_changes_\<..> に指定された引数が不足しています。**  
+ **プロシージャまたは関数 cdc.fn_cdc_get_net_changes_ に指定された引数の数が少ない\<.>。**  
   
  このエラーは、引数が不足していることを示すものではありません。 CDC 状態変数の開始または終了 LSN 値が無効であることを示します。  
   
-## CDC ソースの構成  
+## <a name="configuring-the-cdc-source"></a>CDC ソースの構成  
  CDC ソースは、プログラムによって、または SSIS デザイナーを使用して構成できます。  
   
  詳細については、次のいずれかのトピックを参照してください。  
   
--   [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../Topic/CDC%20Source%20Editor%20\(Connection%20Manager%20Page\).md)  
+-   [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
--   [[CDC ソース エディター] &#40;[列] ページ&#41;](../Topic/CDC%20Source%20Editor%20\(Columns%20Page\).md)  
+-   [CDC ソース エディターと &#40; です。「 列」 ページと &#41; です。](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
--   [[CDC ソース エディター] &#40;[エラー出力] ページ&#41;](../Topic/CDC%20Source%20Editor%20\(Error%20Output%20Page\).md)  
+-   [[CDC ソース エディター] &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが表示されます。  
   
  **[詳細エディター]** ダイアログ ボックスを開くには、次の操作を実行します。  
   
--   [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] プロジェクトの **[データ フロー]** 画面で、CDC ソースを右クリックし、**[詳細エディターの表示]** をクリックします。  
+-   **プロジェクトの** [データ フロー] [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 画面で、CDC ソースを右クリックし、 **[詳細エディターの表示]**をクリックします。  
   
- **[詳細エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「[CDC ソースのカスタム プロパティ](../../integration-services/data-flow/cdc-source-custom-properties.md)」を参照してください。  
+ **[詳細エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [CDC ソースのカスタム プロパティ](../../integration-services/data-flow/cdc-source-custom-properties.md)」を参照してください。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
   
--   [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../Topic/CDC%20Source%20Editor%20\(Connection%20Manager%20Page\).md)  
+-   [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
--   [[CDC ソース エディター] &#40;[列] ページ&#41;](../Topic/CDC%20Source%20Editor%20\(Columns%20Page\).md)  
+-   [CDC ソース エディターと &#40; です。「 列」 ページと &#41; です。](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
--   [[CDC ソース エディター] &#40;[エラー出力] ページ&#41;](../Topic/CDC%20Source%20Editor%20\(Error%20Output%20Page\).md)  
+-   [[CDC ソース エディター] &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
 -   [CDC ソースのカスタム プロパティ](../../integration-services/data-flow/cdc-source-custom-properties.md)  
   
 -   [CDC ソースを使用した変更データ抽出](../../integration-services/data-flow/extract-change-data-using-the-cdc-source.md)  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
   
--   mattmasson.com のブログ「[CDC ソースの処理モード](http://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)」  
+-   mattmasson.com のブログ「 [CDC ソースの処理モード](http://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)」  
   
   

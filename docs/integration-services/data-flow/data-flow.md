@@ -1,29 +1,34 @@
 ---
-title: "データ フロー | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "出力データ [Integration Services]"
-  - "データ フロー [Integration Services], 要素"
-  - "入力データ [Integration Services]"
-  - "外部メタデータ [Integration Services]"
-  - "データ フロー [Integration Services]"
-  - "エラー [Integration Services], データ フロー出力"
+title: "データ フロー |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- output data [Integration Services]
+- data flow [Integration Services], elements
+- input data [Integration Services]
+- external metadata [Integration Services]
+- data flow [Integration Services]
+- errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 70
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a72cbbc25ba137e96ad792441ea7f30d1d0af14
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# データ フロー
+# <a name="data-flow"></a>データ フロー
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、変換元、変換、および変換先という 3 種類のデータ フロー コンポーネントが用意されています。 変換元は、リレーショナル データベース、ファイル、および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのテーブルやビューなどのデータ ストアからデータを抽出します。 変換は、データを変更、集約、およびクリーンアップします。 変換先は、データをデータ ストアに読み込んだり、メモリ内のデータセットを作成します。  
   
 > [!NOTE]  
@@ -31,11 +36,11 @@ caps.handback.revision: 70
   
  また、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、コンポーネントの出力を別のコンポーネントの入力に連結するパスが用意されています。 パスは、コンポーネントの順序を定義します。また、パスを使用して注釈をデータ フローに追加したり、列の変換元を表示したりすることもできます。  
   
- データ フロー コンポーネントを連結するには、変換元と変換の出力を、変換と変換先の入力に連結します。 データ フローを構築する場合、通常は 2 番目以降のコンポーネントを追加するときに、データ フローに連結します。 コンポーネントを連結すると、コンポーネントを構成するための入力列が使用できるようになります。 使用できる入力列がない場合、コンポーネントをデータ フローに連結した後に、そのコンポーネントの構成を完了する必要があります。 詳細については、「 [Integration Services のパス](../../integration-services/data-flow/integration-services-paths.md) 」と「 [パスを使用してコンポーネントを連結する](../Topic/Connect%20Components%20with%20Paths.md)」を参照してください。  
+ データ フロー コンポーネントを連結するには、変換元と変換の出力を、変換と変換先の入力に連結します。 データ フローを構築する場合、通常は 2 番目以降のコンポーネントを追加するときに、データ フローに連結します。 コンポーネントを連結すると、コンポーネントを構成するための入力列が使用できるようになります。 使用できる入力列がない場合、コンポーネントをデータ フローに連結した後に、そのコンポーネントの構成を完了する必要があります。 詳細については、「 [Integration Services のパス](../../integration-services/data-flow/integration-services-paths.md) 」と「 [パスを使用してコンポーネントを連結する](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)」を参照してください。  
   
  次の図は、1 つの変換元、入力と出力を 1 つずつとる 1 つの変換、および 1 つの変換先を持つデータ フローを示しています。 この図には、入力列、出力列、および外部列に加え、入力、出力、およびエラー出力が含まれています。  
   
- ![データ フロー コンポーネントとそれらの入力および出力](../../integration-services/data-flow/media/mw-dts-dataflow.gif "データ フロー コンポーネントとそれらの入力および出力")  
+ ![データ フロー コンポーネントとその入力と出力](../../integration-services/data-flow/media/mw-dts-dataflow.gif "データ フロー コンポーネントとその入力と出力")  
   
 ## <a name="data-flow-implementation"></a>データ フローの実装  
  パッケージにデータ フローを実装するには、最初にデータ フロー タスクをパッケージの制御フローに追加します。 パッケージには、それぞれ独自のデータ フローを持つ複数のデータ フロー タスクを含めることができます。 たとえば、パッケージで、特定の順序でデータ フローを実行する必要がある場合、またはデータ フロー間で別のタスクを実行する必要がある場合は、データ フローごとに異なるデータ フロー タスクを使用する必要があります。  
@@ -66,7 +71,7 @@ caps.handback.revision: 70
  **[データ フロー]** タブがアクティブになっている場合、ツールボックスには、データ フローに追加できる変換元、変換、および変換先が表示されます。  
   
 ## <a name="expressions"></a>式  
- 多くのデータ フロー コンポーネント (変換元、変換、および変換先) では、一部のプロパティでプロパティ式を使用できます。 プロパティ式は、パッケージの読み込み時にプロパティの値を置き換える式です。 実行時に、パッケージは更新されたプロパティ値を使用します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式の構文を使用して式を作成し、その式に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の関数、演算子、識別子、および変数を含めることができます。 詳細については、「[Integration Services (SSIS) の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」、[](../../integration-services/expressions/integration-services-ssis-expressions.md "Integration Services (SSIS) Expressions")および「[パッケージでプロパティ式を使用する](../../integration-services/expressions/use-property-expressions-in-packages.md)」を参照してください。  
+ 多くのデータ フロー コンポーネント (変換元、変換、および変換先) では、一部のプロパティでプロパティ式を使用できます。 プロパティ式は、パッケージの読み込み時にプロパティの値を置き換える式です。 実行時に、パッケージは更新されたプロパティ値を使用します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式の構文を使用して式を作成し、その式に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の関数、演算子、識別子、および変数を含めることができます。 詳細については、「[Integration Services (SSIS) の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」、[](../../integration-services/expressions/integration-services-ssis-expressions.md)および「[パッケージでプロパティ式を使用する](../../integration-services/expressions/use-property-expressions-in-packages.md)」を参照してください。  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でパッケージを構築すると、プロパティ式をサポートするすべてのデータ フロー コンポーネントのプロパティが、そのデータ フロー コンポーネントが属するデータ フロー タスクに表示されます。 データ フロー コンポーネントのプロパティ式を追加、変更、および削除するには、データ フロー タスクをクリックし、[プロパティ] ウィンドウまたはタスク用のエディターを使用してプロパティ式を追加、変更、または削除します。 データ フロー タスク自体のプロパティ式は、[プロパティ] ウィンドウで管理します。  
   
@@ -166,7 +171,7 @@ caps.handback.revision: 70
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity のパフォーマンス強化を活用する方法の例については、「 [Microsoft Connector for Oracle by Attunity のパフォーマンス (SQL Server ビデオ)](http://go.microsoft.com/fwlink/?LinkID=210369)」を参照してください。  
   
 ## <a name="connection-managers"></a>接続マネージャー  
- 多くのデータ フロー コンポーネントはデータ ソースに接続します。そのため、コンポーネントを正しく構成するには、コンポーネントに必要な接続マネージャーをパッケージに追加する必要があります。 接続マネージャーは、データ フローを構築するときと、データ フローの構築を開始する前に追加できます。 詳細については、「[Integration Services (SSIS) の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)」および「[接続マネージャーを作成する](../Topic/Create%20Connection%20Managers.md)」を参照してください。  
+ 多くのデータ フロー コンポーネントはデータ ソースに接続します。そのため、コンポーネントを正しく構成するには、コンポーネントに必要な接続マネージャーをパッケージに追加する必要があります。 接続マネージャーは、データ フローを構築するときと、データ フローの構築を開始する前に追加できます。 詳細については、「[Integration Services (SSIS) の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)」および「[接続マネージャーを作成する](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)」を参照してください。  
   
 ## <a name="external-metadata"></a>外部メタデータ  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーを使用してパッケージ内にデータ フローを作成する場合、変換元と変換先のメタデータは、変換元と変換先の外部列にコピーされ、スキーマのスナップショットとして機能します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] がパッケージを検証する際に、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーはこのスナップショットを変換元または変換先のスキーマと比較し、変更内容に応じてエラーと警告を通知します。  
@@ -215,3 +220,4 @@ caps.handback.revision: 70
   
 ## <a name="related-content"></a>関連コンテンツ  
  technet.microsoft.com のビデオ「 [Microsoft Connector for Oracle by Attunity のパフォーマンス (SQL Server ビデオ)](http://go.microsoft.com/fwlink/?LinkID=210369)」  
+

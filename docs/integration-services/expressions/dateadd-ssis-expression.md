@@ -1,52 +1,57 @@
 ---
-title: "DATEADD (SSIS 式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "日付 [Integration Services], DATEADD"
-  - "日付 [Integration Services]"
-  - "DATEADD 関数"
+title: "DATEADD (SSIS 式) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dates [Integration Services], DATEADD
+- dates [Integration Services]
+- DATEADD function
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77230956969fb2fd2d27a1dec42140dd91a5cbd5
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# DATEADD (SSIS 式)
+# <a name="dateadd-ssis-expression"></a>DATEADD (SSIS 式)
   指定された日付要素に、日付または期間を示す数値を加算して、新しい DT_DBTIMESTAMP の値を返します。 数値のパラメーターは整数に、日付のパラメーターは有効な日付に評価される必要があります。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 DATEADD(datepart, number, date)  
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  *datepart*  
  日付の要素のうち、数値を追加する部分を指定するパラメーターです。  
   
  *number*  
- *datepart* に加算される値です。 式が解析される際、値は既知の整数である必要があります。  
+ *datepart*に加算される値です。 式が解析される際、値は既知の整数である必要があります。  
   
  *date*  
  有効な日付または日付形式の文字列を返す式です。  
   
-## 戻り値の型  
+## <a name="result-types"></a>戻り値の型  
  DT_DBTIMESTAMP  
   
-## 解説  
+## <a name="remarks"></a>解説  
  次の表に、式エバリュエーターで認識される日付要素 (datepart) と省略形を示します。 日付要素の名前では大文字と小文字が区別されません。  
   
-|日付要素 (datepart)|省略形|  
+|datepart|省略形|  
 |--------------|-------------------|  
 |年|yy、yyyy|  
 |Quarter|qq、q|  
@@ -60,7 +65,7 @@ DATEADD(datepart, number, date)
 |第 2 週|ss、s|  
 |Millisecond|Ms|  
   
- 式が解析される際、*number* 引数が使用できる必要があります。 引数には定数または変数を指定できます。 式が解析される際に既知の値が提供されないため、列の値を使用することはできません。  
+ 式が解析される際、 *number* 引数が使用できる必要があります。 引数には定数または変数を指定できます。 式が解析される際に既知の値が提供されないため、列の値を使用することはできません。  
   
  *datepart* 引数は引用符で囲む必要があります。  
   
@@ -70,14 +75,14 @@ DATEADD(datepart, number, date)
   
  日付が無効の場合、日付または時間の単位が文字列でない場合、または増分が静的な整数でない場合は、エラーが発生します。  
   
-## SSIS 式の例  
+## <a name="ssis-expression-examples"></a>SSIS 式の例  
  この例では、現在の日付に 1 か月追加した値を返します。  
   
 ```  
 DATEADD("Month", 1,GETDATE())  
 ```  
   
- この例では、**ModifiedDate** 列の日付に 21 日を追加します。  
+ この例では、 **ModifiedDate** 列の日付に 21 日を追加します。  
   
 ```  
 DATEADD("day", 21, ModifiedDate)  
@@ -89,12 +94,12 @@ DATEADD("day", 21, ModifiedDate)
 DATEADD("yyyy", 2, (DT_DBTIMESTAMP)"8/6/2003")  
 ```  
   
-## 参照  
- [DATEDIFF &#40;SSIS 式&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
- [DATEPART &#40;SSIS 式&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
- [DAY &#40;SSIS 式&#41;](../../integration-services/expressions/day-ssis-expression.md)   
- [MONTH &#40;SSIS 式&#41;](../../integration-services/expressions/month-ssis-expression.md)   
- [YEAR &#40;SSIS 式&#41;](../../integration-services/expressions/year-ssis-expression.md)   
- [関数 &#40;SSIS 式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>参照  
+ [Datediff 関数 & #40 です。SSIS 式 &#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
+ [DATEPART & #40 です。SSIS 式 &#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
+ [日付と #40 です。SSIS 式 &#41;](../../integration-services/expressions/day-ssis-expression.md)   
+ [月と #40 です。SSIS 式 &#41;](../../integration-services/expressions/month-ssis-expression.md)   
+ [年と #40 です。SSIS 式 &#41;](../../integration-services/expressions/year-ssis-expression.md)   
+ [関数と #40 です。SSIS 式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

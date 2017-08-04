@@ -1,24 +1,29 @@
 ---
-title: "[ADO NET 変換先エディター] ([接続マネージャー] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.adonetdest.connection.f1"
+title: "ADO NET 変換先エディター (接続マネージャー ページ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.adonetdest.connection.f1
 ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 16ed4103735f389959531b92fad81884fc583a5b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# [ADO NET 変換先エディター] ([接続マネージャー] ページ)
+# <a name="ado-net-destination-editor-connection-manager-page"></a>[ADO NET 変換先エディター] ([接続マネージャー] ページ)
   **[ADO NET 変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、変換先の [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続を選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
   
  ADO NET 変換先の詳細については、「 [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md)」を参照してください。  
@@ -29,23 +34,23 @@ caps.handback.revision: 31
   
 2.  **[データ フロー]** タブで、ADO NET 変換先をダブルクリックします。  
   
-3.  **[ADO NET 変換先エディター]** で、**[接続マネージャー]** をクリックします。  
+3.  **[ADO NET 変換先エディター]**で、 **[接続マネージャー]**をクリックします。  
   
-## 静的オプション  
- **[ODBC 入力先エディター]**  
- 既存の接続マネージャーを一覧から選択するか、**[新規作成]** をクリックして新しい接続を作成します。  
+## <a name="static-options"></a>静的オプション  
+ **Connection manager**  
+ 既存の接続マネージャーを一覧から選択するか、 **[新規作成]**をクリックして新しい接続を作成します。  
   
- **新規**  
+ **新機能**  
  **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスを使用して、新しい接続マネージャーを作成します。  
   
  **[テーブルまたはビューを使用する]**  
- 既存のテーブルまたはビューを一覧から選択するか、**[新規作成]** をクリックして新しいテーブルを作成します。  
+ 既存のテーブルまたはビューを一覧から選択するか、 **[新規作成]**をクリックして新しいテーブルを作成します。  
   
- **新規**  
+ **[新規作成]**  
  **[テーブルの作成]** ダイアログ ボックスを使用して、新しいテーブルまたはビューを作成します。  
   
 > [!NOTE]  
->  **[新規作成]** をクリックすると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により、接続されているデータ ソースに基づいて既定の CREATE TABLE ステートメントが生成されます。 基になるテーブルの列に FILESTREAM 属性が宣言されていても、この既定の CREATE TABLE ステートメントには FILESTREAM 属性が含まれません。 FILESTREAM 属性を使用して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントを実行するには、まず対象データベースに FILESTREAM ストレージを実装します。 次に、**[テーブルの作成]** ダイアログ ボックスで CREATE TABLE ステートメントに FILESTREAM 属性を追加します。 詳細については、「[バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」を参照してください。  
+>  **[新規作成]**をクリックすると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により、接続されているデータ ソースに基づいて既定の CREATE TABLE ステートメントが生成されます。 基になるテーブルの列に FILESTREAM 属性が宣言されていても、この既定の CREATE TABLE ステートメントには FILESTREAM 属性が含まれません。 FILESTREAM 属性を使用して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントを実行するには、まず対象データベースに FILESTREAM ストレージを実装します。 次に、**[テーブルの作成]** ダイアログ ボックスで CREATE TABLE ステートメントに FILESTREAM 属性を追加します。 詳細については、「[バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」を参照してください。  
   
  **プレビュー**  
  **[クエリ結果のプレビュー]** ダイアログ ボックスを使用して、結果をプレビューします。 プレビューでは、最大で 200 行を表示できます。  
@@ -53,23 +58,28 @@ caps.handback.revision: 31
  **[使用可能な場合は一括挿入を使用する]**  
  一括挿入操作のパフォーマンスを向上させるために <xref:System.Data.SqlClient.SqlBulkCopy> インターフェイスを使用するかどうかを指定します。  
   
- <xref:System.Data.SqlClient.SqlConnection> オブジェクトを返す ADO.NET プロバイダーのみが <xref:System.Data.SqlClient.SqlBulkCopy> インターフェイスの使用をサポートしています。 .NET Data Provider for SQL Server (SqlClient) は <xref:System.Data.SqlClient.SqlConnection> オブジェクトを返し、カスタム プロバイダーは <xref:System.Data.SqlClient.SqlConnection> オブジェクトを返す可能性があります。  
+ 返す ADO.NET プロバイダーのみ、<xref:System.Data.SqlClient.SqlConnection>オブジェクトの使用をサポートする、<xref:System.Data.SqlClient.SqlBulkCopy>インターフェイスです。 .NET Data Provider for SQL Server (SqlClient) は <xref:System.Data.SqlClient.SqlConnection> オブジェクトを返し、カスタム プロバイダーは <xref:System.Data.SqlClient.SqlConnection> オブジェクトを返す可能性があります。  
   
- .NET Data Provider for SQL Server (SqlClient) を使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] に接続できます。  
+ .NET Data Provider for SQL Server (SqlClient) を使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]に接続できます。  
   
- **[使用可能な場合は一括挿入を使用する]** を選択し、**[エラー]** オプションを **[行をリダイレクトする]** に設定した場合、変換先によってエラー出力にリダイレクトされるデータのバッチに問題のない行が含まれる可能性があります。一括操作でのエラー処理の詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。 **[エラー]** オプションの詳細については、「[[ADO NET 変換先エディター] &#40;[エラー出力] ページ&#41;](../Topic/ADO%20NET%20Destination%20Editor%20\(Error%20Output%20Page\).md)」を参照してください。  
+ **[使用可能な場合は一括挿入を使用する]**を選択し、 **[エラー]** オプションを **[行をリダイレクトする]**に設定した場合、変換先によってエラー出力にリダイレクトされるデータのバッチに問題のない行が含まれる可能性があります。一括操作でのエラー処理の詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。 詳細については、**エラー**オプションを参照してください[ADO NET 変換先エディター & #40 です。エラー出力 ページ &#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または Sybase のソース テーブルに ID 列が含まれている場合は、ADO NET 変換先の前と後に SQL 実行タスクを使用して SET IDENTITY_INSERT ステートメントを実行する必要があります。 ID 列プロパティは、列の増分値を指定します。 SET IDENTITY_INSERT ステートメントを使用することで、ID 列に明示的な値を挿入できます。 同じデータベース接続で CREATE TABLE ステートメントと SET IDENTITY ステートメントを実行するには、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーの **RetainSameConnection** プロパティを **True** に設定します。 また、SQL 実行タスクと ADO NET 変換先に同じ [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを使用します。  
+>  SQL Server または Sybase のソース テーブルには、id 列が含まれている場合、ADO NET 変換先の前に IDENTITY_INSERT を有効にして、後でもう一度無効にする SQL 実行タスクを使用する必要があります。 (Id 列のプロパティは、列の増分値を指定します。 SET IDENTITY_INSERT ステートメントにより、コピー先のテーブル内の id 列に挿入されるソース テーブルからの明示的な値です。)  
 >   
->  詳細については、「[SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md)」および「[IDENTITY &#40;プロパティ&#41; &#40;Transact-SQL&#41;](../Topic/IDENTITY%20\(Property\)%20\(Transact-SQL\).md)」を参照してください。  
+>   SET IDENTITY_INSERT ステートメントおよびデータの読み込みを正常を実行するには、次の作業を行うができます。
+>       1. SQL 実行タスクや ADO.NET 変換先は、同じの ADO.NET 接続マネージャーを使用します。
+>       2. 接続マネージャーの設定、 **RetainSameConnection**プロパティおよび**MultipleActiveResultSets**プロパティを True にします。
+>       3. ADO.NET 変換先の設定、 **UseBulkInsertWhenPossible**プロパティを False にします。
+>
+>  詳細については、「[SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md)」および「[IDENTITY &#40;プロパティ&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)」を参照してください。  
   
-## 外部リソース  
- sqlcat.com の技術記事「[Windows Azure SQL データベースへのデータの高速な読み込み](http://go.microsoft.com/fwlink/?LinkId=244333)」  
+## <a name="external-resources"></a>外部リソース  
+ sqlcat.com の技術記事「 [Windows Azure SQL データベースへのデータの高速な読み込み](http://go.microsoft.com/fwlink/?LinkId=244333)」  
   
-## 参照  
- [[ADO NET 変換先エディター] &#40;[マッピング] ページ&#41;](../Topic/ADO%20NET%20Destination%20Editor%20\(Mappings%20Page\).md)   
- [[ADO NET 変換先エディター] &#40;[エラー出力] ページ&#41;](../Topic/ADO%20NET%20Destination%20Editor%20\(Error%20Output%20Page\).md)   
+## <a name="see-also"></a>参照  
+ [[ADO NET 変換先エディター] &#40;[マッピング] ページ&#41;](../../integration-services/data-flow/ado-net-destination-editor-mappings-page.md)   
+ [ADO NET 変換先エディター & #40 です。エラー出力 ページ &#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)   
  [ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)   
  [SQL 実行タスク](../../integration-services/control-flow/execute-sql-task.md)  
   

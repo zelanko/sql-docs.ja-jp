@@ -1,27 +1,32 @@
 ---
-title: "管理ツール コマンド ライン オプション (Distributed Replay Utility) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "管理ツール コマンド ライン オプション (Distributed Replay Utility) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 08/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c01b0ed3-67e4-4561-92d2-a8fbb086aca8
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 652600de9d777f13332509fcaae3985daf9c26fc
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# 管理ツール コマンド ライン オプション (Distributed Replay Utility)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理ツールである **DReplay.exe** は、Distributed Replay Controller と通信するためのコマンド ライン ツールです。 管理ツールを使用して、コントローラー上の操作を開始、監視、取り消しできます。  
+# <a name="administration-tool-command-line-options-distributed-replay-utility"></a>管理ツール コマンド ライン オプション (Distributed Replay Utility)
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理ツールである **DReplay.exe**は、Distributed Replay Controller と通信するためのコマンド ライン ツールです。 管理ツールを使用して、コントローラー上の操作を開始、監視、取り消しできます。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.png "トピック リンク アイコン") 管理ツールの構文で使用される構文表記規則の詳細については、「[Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")管理ツールの構文で使用される構文表記規則の詳細については、次を参照してください。 [TRANSACT-SQL 構文表記規則 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -41,8 +46,8 @@ Usage:
   dreplay cancel [-m controller] [-q]   
 ```  
   
-## 解説  
- **DReplay.exe** では、次のコマンド ライン オプションを発行することができます。  
+## <a name="remarks"></a>解説  
+ **DReplay.exe**では、次のコマンド ライン オプションを発行することができます。  
   
  **preprocess**  
  前処理段階を開始します。 コントローラーは、対象サーバーに対する再生のために、運用環境からキャプチャした入力トレース データの準備を行います。  
@@ -58,22 +63,23 @@ Usage:
   
  コマンドの引数や例などの構文情報の詳細については、次のトピックを参照してください。  
   
--   [前処理オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)  
+-   [前処理オプション (&) #40";"Distributed Replay 管理ツール"&"#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)  
   
--   [replay オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)  
+-   [Replay オプション & #40";"Distributed Replay 管理ツール"&"#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)  
   
--   [status オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/status-option-distributed-replay-administration-tool.md)  
+-   [Status オプション (&) #40";"Distributed Replay 管理ツール"&"#41;](../../tools/distributed-replay/status-option-distributed-replay-administration-tool.md)  
   
--   [cancel オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md)  
+-   [Cancel オプション (&) #40";"Distributed Replay 管理ツール"&"#41;](../../tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md)  
   
  RPC は、言語イベントとしてではなく RPC として再生されます。  
   
-## アクセス許可  
+## <a name="permissions"></a>アクセス許可  
  対話ユーザー (ローカル ユーザーまたはドメイン ユーザー アカウント) として、管理ツールを実行する必要があります。 ローカル ユーザー アカウントを使用するには、管理ツールとコントローラーが同じコンピューター上で実行されている必要があります。  
   
  詳細については、「 [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)  
   
   
+

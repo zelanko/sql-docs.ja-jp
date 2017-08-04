@@ -1,30 +1,37 @@
 ---
-title: "制御フローのデバッグ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "進行状況レポート [Integration Services]"
-  - "ブレークポイント [Integration Services]"
-  - "デバッグ [Integration Services], 制御フロー"
-  - "制御フロー [Integration Services], デバッグ"
-  - "色分け表示の進行状況レポート [Integration Services]"
-  - "[ブレークポイントの設定] ダイアログ ボックス"
+title: "制御フローのデバッグ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.setbreakpoints.f1
+helpviewer_keywords:
+- progress reporting [Integration Services]
+- breakpoints [Integration Services]
+- debugging [Integration Services], control flow
+- control flow [Integration Services], debugging
+- color-coded progress reporting [Integration Services]
+- Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 caps.latest.revision: 54
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: dbf3a57ca87678aed1eac296b24e230d68db93b7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# 制御フローのデバッグ
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローのトラブルシューティングに使用できる、機能とツールが含まれています。  
+# <a name="debugging-control-flow"></a>制御フローのデバッグ
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローのトラブルシューティングに使用できる、機能とツールが含まれています。  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、コンテナーおよびタスク上のブレークポイントがサポートされています。  
   
@@ -32,8 +39,8 @@ caps.handback.revision: 54
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] では、デバッグ ウィンドウが用意されています。  
   
-## ブレークポイント  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーには、**[ブレークポイントの設定]** ダイアログ ボックスが用意されています。このダイアログ ボックスから、ブレークの条件を有効にし、パッケージの実行が中断するまでのブレークポイントの到達回数を指定することにより、ブレークポイントを設定できます。 ブレークポイントは、パッケージ レベル、または個別のコンポーネントのレベルで有効にできます。 タスクまたはコンテナー レベルでブレークの条件を有効にすると、**[制御フロー]** タブのデザイン画面上にあるタスクまたはコンテナーの隣に、ブレークポイントのアイコンが表示されます。 パッケージ レベルでブレークの条件を有効にすると、**[制御フロー]** タブのラベル上にブレークポイントのアイコンが表示されます。  
+## <a name="breakpoints"></a>ブレークポイント  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーには、 **[ブレークポイントの設定]** ダイアログ ボックスが用意されています。このダイアログ ボックスから、ブレークの条件を有効にし、パッケージの実行が中断するまでのブレークポイントの到達回数を指定することにより、ブレークポイントを設定できます。 ブレークポイントは、パッケージ レベル、または個別のコンポーネントのレベルで有効にできます。 タスクまたはコンテナー レベルでブレークの条件を有効にすると、 **[制御フロー]** タブのデザイン画面上にあるタスクまたはコンテナーの隣に、ブレークポイントのアイコンが表示されます。 パッケージ レベルでブレークの条件を有効にすると、 **[制御フロー]** タブのラベル上にブレークポイントのアイコンが表示されます。  
   
  ブレークポイントにヒットすると、ブレークポイントのアイコンが変化し、ブレークポイントの発生元を識別できます。 ブレークポイントは、パッケージの実行時に追加、削除、および変更できます。  
   
@@ -49,7 +56,7 @@ caps.handback.revision: 54
 |タスクまたはコンテナーが **OnTaskFailed** イベントを受け取ったとき。|タスク ホストが失敗したとき、タスク ホストによって呼び出されます。|  
 |タスクまたはコンテナーが **OnProgress** イベントを受け取ったとき。|タスクの実行の進行状況を更新するために呼び出されます。|  
 |タスクまたはコンテナーが **OnQueryCancel** イベントを受け取ったとき。|タスク処理の実行をキャンセルできる場合、任意のタイミングで呼び出されます。|  
-|タスクまたはコンテナーが **OnVariableValueChanged** イベントを受け取ったとき。|変数の値が変更されたとき、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ランタイムによって呼び出されます。 このイベントを起動するには、変数の RaiseChangeEvent を **true** に設定する必要があります。<br /><br /> **\*\* 警告 \*\*** このブレークポイントに関連付けられている変数は、**コンテナー** スコープで定義する必要があります。 この変数がパッケージ スコープで定義されると、ブレークポイントにヒットしません。|  
+|タスクまたはコンテナーが **OnVariableValueChanged** イベントを受け取ったとき。|変数の値が変更されたとき、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ランタイムによって呼び出されます。 このイベントを起動するには、変数の RaiseChangeEvent を **true** に設定する必要があります。<br /><br /> **\*\* 警告 \*\*** このブレークポイントに関連付けられている変数は、 **コンテナー** スコープで定義する必要があります。 この変数がパッケージ スコープで定義されると、ブレークポイントにヒットしません。|  
 |タスクまたはコンテナーが **OnCustomEvent** イベントを受け取ったとき。|タスクによって定義されたカスタム イベントを起動するため、タスクによって呼び出されます。|  
   
  一部のタスクとコンテナーには、すべてのタスクとコンテナーで使用できるブレークの条件以外に、ブレークポイントを設定するための特殊なブレーク条件が含まれています。 たとえば、For ループ コンテナーでは、ループの各反復処理の開始点で実行を中断するブレークポイントを設定するための、ブレークの条件を有効にできます。  
@@ -71,14 +78,14 @@ caps.handback.revision: 54
 |ヒット カウント (より大きいまたは等しい)|ブレークポイントの発生回数がヒット カウント以上になると実行が中断されます。|  
 |ヒット カウント (倍数)|ヒット カウントの倍数だけブレークポイントが発生すると実行が中断されます。 たとえば、このオプションを 5 に設定すると、実行は 5 回ごとに中断されます。|  
   
-#### ブレークポイントを設定するには  
+#### <a name="to-set-breakpoints"></a>ブレークポイントを設定するには  
   
--   [タスクまたはコンテナーにブレークポイントを設定してパッケージをデバッグする](../../integration-services/troubleshooting/debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)  
+-   [タスクまたはコンテナーにブレークポイントを設定してパッケージをデバッグする](#debug)  
   
-## 進行状況レポート  
+## <a name="progress-reporting"></a>進行状況レポート  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーには、2 種類の進行状況レポート機能が含まれています。1 つは **[制御フロー]** タブのデザイン画面上の色分けで、もう 1 つは **[進行状況]** タブ上の進行状況メッセージです。  
   
- パッケージを実行すると、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、各タスクまたはコンテナーが実行状態を示す色で表示され、進行状況を確認できます。 この色により、要素が実行の待機中か、現在実行中か、正常に完了したか、または正しく終了しなかったか、などがわかります。 パッケージの実行を停止すると、表示は色分けされなくなります。  
+ パッケージを実行すると、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、各タスクまたはコンテナーが実行状態を示す色で表示され、進行状況を確認できます。 この色により、要素が実行の待機中か、現在実行中か、正常に完了したか、または正しく終了しなかったか、などがわかります。 パッケージの実行を停止すると、表示は色分けされなくなります。  
   
  次の表では、実行状態を示す色について説明します。  
   
@@ -89,29 +96,75 @@ caps.handback.revision: 54
 |[緑]|正常に実行されました。|  
 |強調表示|実行されましたがエラーが発生しました。|  
   
- **[進行状況]** タブには、タスクとコンテナーが実行順に一覧表示され、それらの開始時刻と終了時刻、警告、およびエラー メッセージが表示されます。 パッケージの実行を停止すると、**[その実行結果]** タブに進行に関する情報が表示され、そのまま使用できます。  
+ **[進行状況]** タブには、タスクとコンテナーが実行順に一覧表示され、それらの開始時刻と終了時刻、警告、およびエラー メッセージが表示されます。 パッケージの実行を停止すると、 **[その実行結果]** タブに進行に関する情報が表示され、そのまま使用できます。  
   
 > [!NOTE]  
 >  **[進行状況]** タブでのメッセージの表示を有効または無効にするには、 **[SSIS]** メニューの **[進行状況レポートのデバッグ]** オプションを切り替えます。  
   
- 次の図は、**[進行状況]** タブを示しています。  
+ 次の図は、 **[進行状況]** タブを示しています。  
   
- ![SSIS デザイナーの [進捗状況] タブ](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "SSIS デザイナーの [進捗状況] タブ")  
+ ![SSIS デザイナーの進行状況 タブ](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "SSIS デザイナーの進行状況 タブ")  
   
-## デバッグ ウィンドウ  
+## <a name="debug-windows"></a>デバッグ ウィンドウ  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] には、ブレークポイントの処理、およびブレークポイントが含まれるパッケージのデバッグに使用できる多数のウィンドウがあります。 各ウィンドウの詳細については、ウィンドウを開いて F1 キーを押し、目的のウィンドウのヘルプを参照してください。  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でこれらのウィンドウを開くには、**[デバッグ]** メニューをクリックし、**[ウィンドウ]** をポイントします。次に、**[ブレークポイント]**、**[出力]**、または **[イミディエイト]** をクリックします。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でこれらのウィンドウを開くには、 **[デバッグ]** メニューをクリックし、 **[ウィンドウ]**をポイントします。次に、 **[ブレークポイント]**、 **[出力]**、または **[イミディエイト]**をクリックします。  
   
  次の表は、各ウィンドウについて説明しています。  
   
 |ウィンドウ|Description|  
 |------------|-----------------|  
 |ブレークポイント|パッケージ内のブレークポイントを一覧表示し、ブレークポイントの有効化および削除のオプションを提供します。|  
-|出力|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の機能に関する状態メッセージを表示します。|  
-|イミディエイト|式をデバッグして評価し、変数の値を出力するのに使用されます。|  
+|[出力]|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の機能に関する状態メッセージを表示します。|  
+|[イミディエイト]|式をデバッグして評価し、変数の値を出力するのに使用されます。|  
+
+## <a name="debug"></a> タスクまたはコンテナーにブレークポイントを設定してパッケージをデバッグする
+  この手順では、パッケージ、タスク、For ループ コンテナー、Foreach ループ コンテナー、またはシーケンス コンテナーにブレークポイントを設定する方法について説明します。  
   
-## 参照  
+### <a name="to-set-breakpoints-in-a-package-a-task-or-a-container"></a>パッケージ、タスク、またはコンテナーにブレークポイントを設定するには  
+  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+  
+2.  ブレークポイントを設定するパッケージをダブルクリックします。  
+  
+3.  SSIS デザイナーで、次の操作を行います。  
+  
+    -   パッケージ オブジェクトにブレークポイントを設定するには、 **[制御フロー]** タブをクリックし、デザイン画面の背景の任意の場所にカーソルを置いて右クリックし、 **[ブレークポイントの編集]**をクリックします。  
+  
+    -   パッケージ制御フローにブレークポイントを設定するには、 **[制御フロー]** タブをクリックし、タスク、For ループ コンテナー、Foreach ループ コンテナー、またはシーケンス コンテナーを右クリックし、 **[ブレークポイントの編集]**をクリックします。  
+  
+    -   イベント ハンドラーにブレークポイントを設定するには、**[イベント ハンドラー]** タブをクリックし、タスク、For ループ コンテナー、Foreach ループ コンテナー、またはシーケンス コンテナーを右クリックし、**[ブレークポイントの編集]** をクリックします。  
+  
+4.  **ブレークポイントの設定\<コンテナー名 >**  ダイアログ ボックスで、有効にするブレークポイントを選択します。  
+  
+5.  必要に応じて、各ブレークポイントのヒット カウントの種類とヒット カウント数を変更します。  
+  
+6.  パッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
+
+## <a name="set-breakpoints"></a>[ブレークポイントの設定]
+  **[ブレークポイントの設定]** ダイアログ ボックスを使用すると、ブレークポイントを有効にしてブレークポイントの動作を制御するためのイベントを指定できます。  
+  
+### <a name="options"></a>オプション  
+ **有効**  
+ 選択すると、イベントのブレークポイントが有効になります。  
+  
+ **[ブレークの条件]**  
+ ブレークポイントの設定に使用できるイベントの一覧を表示します。  
+  
+ **[ヒット カウントの種類]**  
+ ブレークポイントがいつ有効になるかを指定します。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|**毎回**|ブレークポイントにヒットすると、常に実行が中断されます。|  
+|**ヒット カウント (等しい)**|ブレークポイントの発生回数がヒット カウントと等しくなると実行が中断されます。|  
+|**[ヒット カウント (より大きいまたは等しい)]**|ブレークポイントの発生回数がヒット カウント以上になると実行が中断されます。|  
+|**ヒット カウント (倍数)**|ヒット カウントの倍数だけブレークポイントが発生すると実行が中断されます。 たとえば、このオプションを 5 に設定すると、実行は 5 回ごとに中断されます。|  
+  
+ **[ヒット カウント]**  
+ ブレークをトリガーするヒットの回数を指定します。 ブレークポイントが常に有効になっている場合、このオプションは使用できません。  
+  
+## <a name="see-also"></a>参照  
  [パッケージ開発のトラブルシューティング ツール](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
-  
-  
+ [スクリプト タスクとスクリプト コンポーネントにブレークポイントを設定してスクリプトをデバッグする](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)   
+

@@ -1,42 +1,47 @@
 ---
-title: "実行中のトレースからのテンプレートの作成 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "テンプレート [SQL Server], トレース"
-  - "トレース テンプレート [SQL Server]"
+title: "実行中のトレース (SQL Server Profiler) からのテンプレートの作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- templates [SQL Server], traces
+- trace templates [SQL Server]
 ms.assetid: 25a3b845-affb-4b2a-a382-198a4bdd9ad1
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0b2c1d0d7c0b0f8b88aa2bed0f2004dbf0c30448
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# 実行中のトレースからのテンプレートの作成 (SQL Server Profiler)
+# <a name="derive-a-template-from-a-running-trace-sql-server-profiler"></a>実行中のトレースからのテンプレートの作成 (SQL Server Profiler)
   このトピックでは、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、実行中の既存のトーレスからトレース テンプレートを作成する方法を説明します。  
   
-### 実行中のトレースからテンプレートを作成するには  
+### <a name="to-derive-a-template-from-a-running-trace"></a>実行中のトレースからテンプレートを作成するには  
   
 1.  目的のトレースが表示されているウィンドウに切り替えます。  
   
-2.  **[ファイル]** メニューの **[名前を付けて保存]** をポイントし、**[トレース テンプレート]** をクリックします。  
+2.  **[ファイル]** メニューの **[名前を付けて保存]**をポイントし、 **[トレース テンプレート]**をクリックします。  
   
 3.  名前を入力するか、または一覧から選択します。 クリックして **OK**です。  
   
 > [!NOTE]  
 >  既存のテンプレート ファイルを選択した場合は、ファイルを上書きするかどうかを確認するメッセージが表示されます。 選択できるのは、ユーザー定義のテンプレートだけです。 定義済みのシステム トレース テンプレートは上書きできません。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server プロファイラーのテンプレートと権限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [トレース テンプレートの作成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [トレース テンプレートの変更 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
+ [トレース テンプレート &#40; を作成します。SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [トレース テンプレート &#40; を変更します。SQL Server Profiler &#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
