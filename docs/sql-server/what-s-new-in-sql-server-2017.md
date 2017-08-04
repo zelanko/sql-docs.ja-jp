@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 の新機能 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/12/2017
+ms.date: 07/25/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
-ms.openlocfilehash: 731d53110d9dc47de5a44dd7f65190e029e120dc
+ms.sourcegitcommit: 70a1fd4dbec68d22187585de69a1d603c39e259e
+ms.openlocfilehash: 31572214a8276182ce1358fc05979a72b57a2ad6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
@@ -41,10 +41,17 @@ SQL Server 2017 は、SQL Server をプラットフォームとする方向に�
     -   ストアド プロシージャ **[catalog].[create_execution]** の *runincluster* パラメーターは、一貫性とわかりやすさを理由に、名前が *runinscaleout* に変更されました。
     -   SSIS カタログに、SSIS パッケージを実行する既定のモードを指定するための新しいグローバル プロパティが追加されました。
 
+### <a name="master-data-services-mds"></a>マスター データ サービス (MDS)
+- 次のSQL Server の以前のリリースから SQL Server 2017 マスター データ サービスにアップグレードするときの、アップグレード エクスペリエンスとパフォーマンスが改善されました。
+    - SQL Server 2012
+    - SQL Server 2014
+    - SQL Server 2016
+
+
 ## <a name="sql-server-database-engine"></a>SQL Server データベース エンジン  
 SQL Server 2017 には多くの新しいデータベース エンジン機能、機能強化、パフォーマンス向上が含まれています。 
-- **再開可能なオンライン インデックス リビルド**は、障害 (レプリカへのフェールオーバーや、ディスク領域不足など) 発生後、一時停止した場所からオンライン インデックス リビルド操作を再開します。または、一時停止し、オンライン インデックス リビルド操作を後から再開します。 参照してください[ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)と[オンライン インデックス操作のガイドライン](../relational-databases/indexes/guidelines-for-online-index-operations.md)です。 (CTP 2.0)
-- ALTER DATABASE SCOPED CONFIGURATION の **IDENTITY_CACHE** オプションを使用すると、サーバーが予期せず再起動したときやセカンダリ サーバーにフェールオーバーしたときに、ID 列の値のギャップを回避できます。 参照してください[ALTER データベース スコープ ベースの構成](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)です。 (CTP 2.0)
+- **再開可能なオンライン インデックス リビルド**は、障害 (レプリカへのフェールオーバーや、ディスク領域不足など) 発生後、一時停止した場所からオンライン インデックス リビルド操作を再開します。または、一時停止し、オンライン インデックス リビルド操作を後から再開します。 「[ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)」と「[オンライン インデックス操作のガイドライン](../relational-databases/indexes/guidelines-for-online-index-operations.md)」を参照してください。 (CTP 2.0)
+- ALTER DATABASE SCOPED CONFIGURATION の **IDENTITY_CACHE** オプションを使用すると、サーバーが予期せず再起動したときやセカンダリ サーバーにフェールオーバーしたときに、ID 列の値のギャップを回避できます。 「[ALTER DATABASE SCOPED CONFIGURATION (ALTER データベース スコープ ベースの構成)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。 (CTP 2.0)
 - **自動データベース チューニング**は、潜在的なクエリ パフォーマンスの問題に関する洞察を提供し、解決策を推奨して、特定された問題を自動的に解決できます。 「[自動調整](../relational-databases/automatic-tuning/automatic-tuning.md)」を参照してください。 (CTP 2.0)
 - 多対多のリレーションシップをモデル化する新しい**グラフ データベース機能**には、ノードとエッジ テーブルを作成するための新しい [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 構文と、クエリ用の [MATCH](../t-sql/queries/match-sql-graph.md) キーワードが含まれています。 「[Graph Processing with SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md)」 (SQL Server 2017 でのグラフ処理) を参照してください。 (CTP 2.0)
 - CLR アセンブリのセキュリティを強化する `clr strict security` という sp_configure オプションが既定で有効になります。 「[CLR strict security](../database-engine/configure-windows/clr-strict-security.md)」 (CLR の厳格なセキュリティ) を参照してください。 (CTP 2.0)
@@ -77,10 +84,16 @@ SQL Server 2017 には多くの新しいデータベース エンジン機能、
     -   SSIS カタログに、SSIS パッケージを実行する既定のモードを指定するための新しいグローバル プロパティが追加されました。
 - 新しい **SSIS の Scale Out** 機能で、実行をトリガーするときに **Use32BitRuntime** パラメーターを使用できるようになりました。 (CTP 2.1)
 - SQL Server 2017 Integration Services (SSIS) で **Linux 上の SQL Server** がサポートされ、新しいパッケージでは、コマンド ラインから Linux で SSIS パッケージを実行できます。 詳細については、[SSIS の Linux サポートをお知らせするブログの投稿](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)を参照してください。 (CTP 2.1)
-- 新しい **SSIS の Scale Out**  機能を使用すると、複数のコンピューターでの SSIS の実行が大幅に簡単になります。 「[Integration Services Scale Out](~/integration-services/integration-services-ssis-scale-out.md)」を参照してください。 (CTP 1.0)
+- 新しい **SSIS の Scale Out**  機能を使用すると、複数のコンピューターでの SSIS の実行が大幅に簡単になります。 「[Integration Services Scale Out](~/integration-services/scale-out/integration-services-ssis-scale-out.md)」を参照してください。 (CTP 1.0)
 - OData ソースと OData 接続マネージャーで、Microsoft Dynamics AX Online と Microsoft Dynamics CRM Online の OData フィードに接続できるようになりました。 (CTP 1.0)
 
 詳細については、「[SQL Server 2017 の Integration Services の新機能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)」を参照してください。
+
+## <a name="master-data-services-mds"></a>マスター データ サービス (MDS)
+SQL Server 2017 MDS へのアップグレード時のアップグレードのパフォーマンスとエクスペリエンスが向上したほか、次の機能強化がマスター データ サービスに加えられました。
+- Web アプリケーションの**エクスプローラー** ページに、エンティティ、コレクション、階層の並べ替えられたリストを表示できるようになりました。
+- ステージング ストアド プロシージャを使用した、数百万ものレコードのステージングのパフォーマンスが向上しました。
+- モデル権限を割り当てる**グループの管理**ページの、**エンティティ**フォルダーを展開するときのパフォーマンスが改善されました。 **グループの管理**ページは、Web アプリケーションの**セキュリティ**セクション内にあります。 パフォーマンスの向上の詳細については、[https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview) を参照してください。 権限の割り当ての詳細については、「[Assign Model Object Permissions (Master Data Services) (モデル オブジェクト権限を割り当てる (マスター データ サービス))](../master-data-services/assign-model-object-permissions-master-data-services.md)」を参照してください。
 
 ## <a name="sql-server-analysis-services-ssas"></a>SQL Server Analysis Services (SSAS) 
 SQL Server Analysis Services 2017 には、表形式モデルの多くの機能強化が導入されています。 たとえば、次のオブジェクトにアクセスできます。
@@ -99,14 +112,14 @@ SQL Server Analysis Services 2017 には、表形式モデルの多くの機能�
 詳細については、「[What's new in SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)」 (SQL Server Analysis Services 2017 の新機能) を参照してください。
 
 ## <a name="sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS)
-CTP 2.1 の時点で、SSRS は SQL Server セットアップを通じてインストールできなくなりました。 Microsoft ダウンロード センターに移動し、[Power BI Report Server の 2017 年 7 月のプレビュー版と、Power BI レポート サーバー用に最適化された Power BI Desktop をダウンロード](https://www.microsoft.com/download/details.aspx?id=55253)してください。 Power BI のレポート サーバーについては、次を参照してください。 [Power BI のレポート サーバーの概要](https://powerbi.microsoft.com/documentation/reportserver-get-started/)です。
+CTP 2.1 の時点で、SSRS は SQL Server セットアップを通じてインストールできなくなりました。 [Microsoft SQL Server 2017 Reporting Services リリース候補をダウンロード](https://www.microsoft.com/download/details.aspx?id=55252)するには、Microsoft ダウンロード センターに移動します。 
 - レポートでコメントが使用できるようになり、分析観点の追加や、他のユーザーとの共同作業ができるようになりました。 コメントに添付ファイルを含めることもできます。 (CTP 2.1)
 - レポート ビルダーと SQL Server Data Tools の最新リリースでは、クエリ デザイナーで必要なフィールドをドラッグ アンド ドロップすることで、サポートされている SQL Server Analysis Services 表形式データ モデルに対するネイティブの DAX クエリを作成できます。 [Reporting Services のブログ](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)を参照してください。
 
 詳細については、「[What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)」 (SQL Server Reporting Services (SSRS) の新機能) を参照してください。
 
-## <a name="sql-server-machine-learning-services"></a>SQL Server コンピューターのサービスの学習
-R 言語に加えて Python が新しくサポートされたことに合わせて、SQL Server R Services の名前が **SQL Server Machine Learning Services** に変更されました。 Machine Learning Services (データベース内) を使用して、SQL Server で R または Python スクリプトを実行したり、Microsoft Machine Learning Server (スタンドアロン) をインストールして、SQL Server を必要としない R および Python のモデルを配置し、使用したりすることができます。 両方のプラットフォームには、分散の機械学習、および Microsoft R (バージョン 9.1.0) の最新バージョンの新しい MicrosoftML アルゴリズムが含まれます。 (CTP 2.0)
+## <a name="sql-server-machine-learning-services"></a>SQL Server Machine Learning サービス
+R 言語に加えて Python が新しくサポートされたことに合わせて、SQL Server R Services の名前が **SQL Server Machine Learning Services** に変更されました。 Machine Learning Services (データベース内) を使用して、SQL Server で R または Python スクリプトを実行したり、Microsoft Machine Learning Server (スタンドアロン) をインストールして、SQL Server を必要としない R および Python のモデルを配置し、使用したりすることができます。 両方のプラットフォームには、新しい分散型機械学習の MicrosoftML アルゴリズム、および Microsoft R (バージョン 9.1.0) の最新バージョンが含まれます。 (CTP 2.0)
 - Python を使用した機械学習には **revoscalepy** モジュールが含まれています。これは、RevoScaleR で提供される分散アルゴリズムと計算コンテキストのサブセットをサポートするモジュールです。 
 - 新しい **rxExecBy** 関数を使用して、R から簡単に複数のモデルを同時に作成できます。 サポートされている計算コンテキストとして、RxSpark と RxInSQLServer があります。 (CTP 2.0)
 

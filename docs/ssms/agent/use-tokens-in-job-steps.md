@@ -20,11 +20,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bc46faf06a34a41f94ee9eb4fa05c2a9ce3a5cec
+ms.translationtype: HT
+ms.sourcegitcommit: 8ec830912e034436d2de0613c793c08ce961c031
+ms.openlocfilehash: bc10ed9c7b6ea1a240b9274c9880c44fa3e8f3ab
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/25/2017
 
 ---
 # <a name="use-tokens-in-job-steps"></a>ジョブ ステップでのトークンの使用
@@ -70,8 +70,8 @@ ms.lasthandoff: 06/22/2017
 |**(A-ERR)**|エラー番号。 ジョブが警告によって実行される場合、ジョブ ステップのこのトークンは自動的にエラー番号の値に置き換えられます。|  
 |**(A-SEV)**|エラーの重大度。 ジョブが警告によって実行される場合、ジョブ ステップのこのトークンは自動的にエラー重大度の値に置き換えられます。|  
 |**(A-MSG)**|メッセージ テキスト。 ジョブが警告によって実行される場合、ジョブ ステップのこのトークンは自動的にメッセージ テキストの値に置き換えられます。|  
-|**(AGENT_JOB_NAME)**|ジョブの名前を指定します。|  
-|**(AGENT_STEP_NAME)**|ステップの名前。|  
+|**(JOBNAME)**|ジョブの名前を指定します。|  
+|**(STEPNAME)**|ステップの名前。|  
 |**(DATE)**|YYYYMMDD 形式で表す現在の日付。|  
 |**(INST)**|インスタンス名。 既定のインスタンスの場合、このトークンは既定のインスタンス名、MSSQLSERVER になります。|  
 |**(JOBID)**|ジョブ ID。|  
