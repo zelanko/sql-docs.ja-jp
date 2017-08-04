@@ -14,26 +14,25 @@ caps.latest.revision: 51
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
-ms.openlocfilehash: f593303a681e2f52161777fc48f0fb1b479d20d9
+ms.translationtype: HT
+ms.sourcegitcommit: 223d43974e6b63f7375a3d3e000492612fb6856e
+ms.openlocfilehash: 7fb0aa5f5d8b78a4783efdbb4e1f064eb025538a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-management-studio----release-notes"></a>SQL Server Management Studio - リリース ノート
 SQL Server Management Studio の一般公開版リリースにようこそ!  このリリースの SQL Server Management Studio (SSMS) は SQL Server リリースとは別の、スタンドアロン インストールです。 目的は、新しい機能、修正プログラム、SQL Server と Azure SQL Database の最新機能に対するサポートで頻繁に更新することです。  
   
-最新の SQL Server Management Studio をインストールするには、「[SQL Server Management Studio &#40;SSMS&#41; のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)」をご覧ください。  
+最新の SQL Server Management Studio をインストールするには、「 [SQL Server Management Studio &#40;SSMS&#41; のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)」をご覧ください。  
   
 このリリースの SQL Server Management Studio に関連する問題と制約を次に示します。  
 
-1. **データベースの復元ウィザードで移行先データベース ファイルの場所を間違ったパス パターンが生成されます**
-   これは、SSMS が Linux サーバーに接続されている場合の既知の問題です。 パスが正しくない/奇数を探す場合でも、サーバー側で適切に処理される、つまり機能の問題はありません。
+1. **データベースの復元ウィザードで移行先データベース ファイルの場所が間違ったパス パターンが生成されます** これは、SSMS が Linux サーバーに接続されている場合の既知の問題です。 パスが正しくない/奇数を探す場合でも、サーバー側で適切に処理されます、つまり機能の問題はありません。
 
 2. **ファイル ブラウザーの問題**
-    - SQL Server の 2017 CTP 2.0 を Windows ベースのインスタンスを使用するときにファイル ブラウザー SSMS では、UI を開くには、サーバーに空のフロッピー ドライブまたは固定のディスクがインストールされている Bitlocker で保護されている場合があります。 
-    - ファイル ブラウザー UI には、SQL Server 2017 年 1 CTP 2.0 より前のバージョンがサポートされていません。
+    - Windows ベースの SQL Server 2017 CTP 2.0 インスタンスを使用するときに、サーバーに空のフロッピー ドライブまたは Bitlocker によって保護されている固定のディスクが取り付けられている場合、SSMS のファイル ブラウザー UI を開くことができないことがあります。 
+    - ファイル ブラウザー UI では、SQL Server 2017 CTP 2.0 より前のバージョンがサポートされなくなりました。
     
 
 
@@ -47,7 +46,7 @@ SQL Server Management Studio の一般公開版リリースにようこそ!  こ
     
     回避策としては、Active Directory パスワード認証、Active Directory 統合認証または SQL Server 認証など、SSMS で提供される認証の他の形式を使用してください。
 
-5. **SSMS は SQL Server 2016 Integrated Services (SSIS 2016) インスタンスしか接続できません。**  
+5. **SSMS 17.x は SQL Server 2017 Integrated Services (SSIS 2017) インスタンスにのみ接続できます。**  
     以前のバージョンに接続できない SQL Server Integration Services との互換性に関する既知の制限があります。
     
     この問題の回避策としては、 [SSIS インスタンスと連携された SSMS リリース](../ssms/previous-sql-server-management-studio-releases.md)を使用して、SQL Server Integration Service インスタンスに接続してください。 
@@ -63,11 +62,11 @@ SSMS の英語以外のローカライズされたリリースでは、Windows 8
   
 ## <a name="feedback"></a>フィードバック  
   
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Microsoft Connect で問題や提案を記録](https://connect.microsoft.com/SQLServer/Feedback)。  
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Microsoft Connect で問題や提案を記録](https://connect.microsoft.com/SQLServer/Feedback)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server Management Studio のチュートリアル](../ssms/use-sql-server-management-studio.md)  
-[SQL Server Management Studio &amp;#40;SSMS&amp;#41; のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)  
+[SQL Server Management Studio &#40;SSMS&#41; のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)  
 [SQL Server Management Studio の以前のリリース](../ssms/previous-sql-server-management-studio-releases.md)  
 
   

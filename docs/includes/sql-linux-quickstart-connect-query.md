@@ -19,7 +19,7 @@
 1. 接続エラーが発生した場合は、まずエラー メッセージから問題を診断します。 次に、[接続のトラブルシューティングに関する推奨事項](../linux/sql-server-linux-troubleshooting-guide.md#connection)を確認します。
 
 ## <a name="create-and-query-data"></a>データの作成とクエリ
-以下のセクションでは、**sqlcmd** と Transact-SQL を使用して新しいデータベースを作成し、データを追加して簡単なクエリを実行します。
+以下のセクションでは、**sqlcmd** を使用して新しいデータベースを作成し、データを追加して簡単なクエリを実行します。
 
 ### <a name="create-a-new-database"></a>新しいデータベースの作成
 
@@ -75,7 +75,7 @@
 
 ここで、`Inventory` テーブルからデータを返すクエリを実行します。
 
-1. **sqlcmd** のコマンド プロンプトで、`Inventory` テーブルから数量が 152 より大きい行を返すクエリを入力します。
+1. **sqlcmd** のコマンド プロンプトで、数量が 152 より大きい`Inventory` テーブルから行を返すクエリを入力します。
 
    ```sql
    SELECT * FROM Inventory WHERE quantity > 152;
@@ -97,7 +97,7 @@ QUIT
 
 ## <a name="connect-from-windows"></a>Windows からの接続
 
-Windows 上の SQL Server ツールは、あらゆるリモート SQL Server インスタンスへの接続と同じ方法で Linux 上の SQL Server インスタンスに接続するということが重要です。
+Windows 上の SQL Server ツールは、あらゆるリモート SQL Server インスタンスへの接続と同じ方法で Linux 上の SQL Server インスタンスに接続します。
 
 Linux コンピューターに接続できる Windows コンピューターがある場合は、**sqlcmd** を実行する Windows コマンド プロンプトから、このトピックと同じ手順を試してみてください。 localhost ではなくターゲットの Linux コンピューター名または IP アドレスを使用していることを確認し、TCP ポート 1433 が開いていることを確かめます。 Windows からの接続に問題がある場合は、[接続のトラブルシューティングに関する推奨事項](../linux/sql-server-linux-troubleshooting-guide.md#connection)を参照してください。
 
@@ -109,6 +109,15 @@ Windows で実行し、Linux 上の SQL Server に接続するその他のツー
 
 ## <a name="next-steps"></a>次の手順
 
-T-SQL を初めて使う場合は、「[Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md)」 (チュートリアル: Transact-SQL ステートメントの記述) と「[Transact-SQL Reference (Database Engine)](../t-sql/language-reference.md)」 (Transact-SQL リファレンス (データベース エンジン)) を参照してください。
+他のインストール シナリオについては、次のリソースを参照してください。
 
-SQL Server に接続して管理するその他の方法を調べるには、[Visual Studio のコード](../linux/sql-server-linux-develop-use-vscode.md)と [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md) に関するトピックを参照してください。
+|||
+|---|---|
+| [アップグレード](../linux/sql-server-linux-setup.md#upgrade) | Linux 上の SQL Server のアップグレード方法および既存のインストールについて説明する |
+| [アンインストール](../linux/sql-server-linux-setup.md#uninstall) | Linux 上の SQL Server をアンインストールする |
+| [無人インストール](../linux/sql-server-linux-setup.md#unattended) | プロンプトを表示せずにインストールするスクリプトを作成する方法を説明する |
+| [オフライン インストール](../linux/sql-server-linux-setup.md#offline) | オフライン インストール パッケージを手動でダウンロードする方法を説明する |
+
+SQL Server に接続して管理するその他の方法を調べるには、[Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) と [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md) に関するトピックを参照してください。
+
+Transact-SQL ステートメントおよびクエリの作成の詳細については、「[Tutorial: Writing Transact-SQL Statements (チュートリアル: TRANSACT-SQL ステートメントの作成)](../t-sql/tutorial-writing-transact-sql-statements.md)」を参照してください。
