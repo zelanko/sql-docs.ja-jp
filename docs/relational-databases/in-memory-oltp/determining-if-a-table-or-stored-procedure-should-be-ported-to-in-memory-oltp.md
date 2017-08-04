@@ -2,7 +2,7 @@
 title: "テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 03/01/2017
+ms.date: 08/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,11 +18,11 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a6f70a5be224219a572df858e37ecbfe5f9fde07
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: b18d5078244bf83d8820bf3f03039ac120287f8a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認
@@ -48,6 +48,8 @@ ms.lasthandoff: 06/22/2017
 ## <a name="transaction-performance-analysis-reports"></a>トランザクション パフォーマンス分析レポート  
  **オブジェクト エクスプローラー** でトランザクション パフォーマンス分析レポートを生成するには、データベースを右クリックし、 **[レポート]**、 **[標準レポート]**、 **[トランザクション パフォーマンス分析の概要]**の順にクリックします。 有意義な分析レポートを生成するには、データベースにアクティブなワークロード、または最近実行されたワークロードがある必要があります。  
   
+### <a name="tables"></a>テーブル
+  
  テーブルの詳細なレポートは、3 つのセクションで構成されています。  
   
 -   スキャン統計セクション  
@@ -57,9 +59,7 @@ ms.lasthandoff: 06/22/2017
     -   総アクセスに対する比率。 データベース全体のアクティビティに対する、このテーブルでのスキャンとシークの割合です。 この割合が高くなるほど、データベース内の他のテーブルと比較して、テーブルが使用される頻度が高くなります。  
   
     -   参照統計/範囲スキャン統計。 この列には、プロファイル中にテーブルで行われたポイント参照と範囲スキャン (インデックス スキャンとテーブル スキャン) の回数が記録されます。 トランザクションごとの平均は推定値です。  
-  
-    -   相互運用による到達率と本来の到達率。 これらの列では、テーブルがメモリ最適化テーブルに変換された場合にポイント参照または範囲スキャンによってパフォーマンスがどの程度向上するかを予測します。  
-  
+    
 -   競合統計セクション  
   
      このセクションには、データベース テーブルの競合を示すテーブルが含まれます。 データベースのラッチおよびロックの詳細については、「ロック アーキテクチャ」を参照してください。 次の列で構成されます。  
@@ -74,8 +74,10 @@ ms.lasthandoff: 06/22/2017
   
      このセクションには、このデータベース テーブルをメモリ最適化テーブルに変換する際の難易度を示すテーブルが含まれます。 難易度が高いほど、テーブルの変換が難しくなることを示します。 このデータベース テーブルの変換の詳細を確認するには、メモリ最適化アドバイザーを使用してください。  
   
- テーブル詳細レポートのスキャンと競合の統計は、sys.dm_db_index_operational_stats (Transact-SQL) から収集されて集計されます。  
-  
+テーブル詳細レポートのスキャンと競合の統計は、sys.dm_db_index_operational_stats (Transact-SQL) から収集されて集計されます。  
+
+### <a name="stored-procedures"></a>ストアド プロシージャ
+
  経過時間のうち CPU 時間の割合が高いストアド プロシージャは、移行の対象となります。 ネイティブ コンパイル ストアド プロシージャはメモリ最適化テーブルのみを参照できるため、レポートはすべてのテーブル参照を示します。これは移行コストに追加できます。  
   
  ストアド プロシージャの詳細レポートは、次の 2 つのセクションで構成されています。  
@@ -107,7 +109,7 @@ ms.lasthandoff: 06/22/2017
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [インメモリ OLTP 移行チェックリストの生成] **コマンドまたは PowerShell を使用して、** で移行チェックリストを生成できます。  
   
- **UI コマンドを使用して移行チェックリストを生成するには**  
+**UI コマンドを使用して移行チェックリストを生成するには**  
   
 1.  **オブジェクト エクスプ ローラー**で、システム データベース以外のデータベースを右クリックし、 **[タスク]**をクリックしてから、 **[インメモリ OLTP 移行チェックリストの生成]**をクリックします。  
   
@@ -127,7 +129,7 @@ ms.lasthandoff: 06/22/2017
   
  このレポートを、メモリ最適化アドバイザー ツールおよびネイティブ コンパイル アドバイザー ツールによって生成されたレポートと比較して、レポートの精度を確認できます。 詳細については、「 [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 」および「 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md)」を参照してください。  
   
- **SQL Server PowerShell を使用して移行チェックリストを生成するには**  
+**SQL Server PowerShell を使用して移行チェックリストを生成するには**  
   
 1.  **オブジェクト エクスプ ローラー**で、データベースをクリックし、 **[PowerShell の起動]**をクリックします。 次のようなプロンプトが表示されることを確認します。  
   
@@ -147,7 +149,7 @@ ms.lasthandoff: 06/22/2017
   
     -   データベース内のすべてのテーブルおよびストアド プロシージャに対して移行チェックリスト レポートが生成され、このレポートが folder_path で指定された場所に存在する。  
   
- **Windows PowerShell を使用して移行チェックリストを生成するには**  
+**Windows PowerShell を使用して移行チェックリストを生成するには**  
   
 1.  管理者特権の Windows PowerShell セッションを開始します。  
   
@@ -178,3 +180,4 @@ ms.lasthandoff: 06/22/2017
  [インメモリ OLTP への移行](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+
