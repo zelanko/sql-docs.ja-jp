@@ -1,31 +1,36 @@
 ---
-title: "[一括挿入タスク エディター] ([オプション] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.bulkinserttask.options.f1"
-helpviewer_keywords: 
-  - "一括挿入タスク エディター"
+title: "一括挿入タスク エディター (オプション ページ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.bulkinserttask.options.f1
+helpviewer_keywords:
+- Bulk Insert Task Editor
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1a714027caa6581a56d9f22da84c48d469e80cb1
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# [一括挿入タスク エディター] ([オプション] ページ)
+# <a name="bulk-insert-task-editor-options-page"></a>[一括挿入タスク エディター] ([オプション] ページ)
   **[一括挿入タスク エディター]** ダイアログ ボックスの **[オプション]** ページを使用すると、一括挿入操作のプロパティを設定できます。 一括挿入タスクにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルまたはビューに大量のデータがコピーされます。  
   
  一括挿入タスクについては、「[一括挿入タスク](../../integration-services/control-flow/bulk-insert-task.md)」および「[「BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **CodePage**  
  データ ファイル内のデータのコード ページを指定します。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 31
  **[FirstRow]**  
  コピーを開始する最初の行を指定します。  
   
- **オプション**  
+ **[一括挿入タスク エディター]**  
  |項目|定義|  
 |----------|----------------|  
 |**CHECK 制約**|テーブルおよび列に対する制約をチェックします。|  
@@ -59,11 +64,11 @@ caps.handback.revision: 31
 > [!NOTE]  
 >  一括読み込み操作でインポートできない行は、1 つのエラーとしてカウントされます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)   
- [一括挿入タスク エディター &#40;[全般] ページ&#41;](../Topic/Bulk%20Insert%20Task%20Editor%20\(General%20Page\).md)   
- [一括挿入タスク エディター &#40;[接続] ページ&#41;](../Topic/Bulk%20Insert%20Task%20Editor%20\(Connection%20Page\).md)   
- [[式] ページ](../Topic/Expressions%20Page.md)   
+ [一括挿入タスク エディターと &#40; です。「 全般」 ページと &#41; です。](../../integration-services/control-flow/bulk-insert-task-editor-general-page.md)   
+ [一括挿入タスク エディター & #40 です。[接続] ページ &#41;](../../integration-services/control-flow/bulk-insert-task-editor-connection-page.md)   
+ [「式」 ページ](../../integration-services/expressions/expressions-page.md)   
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
   
   

@@ -1,28 +1,33 @@
 ---
-title: "ビジネス ルール条件 (マスター データ サービス) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ビジネス ルール条件 (マスター データ サービス) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b47b8ae7924ae590156479209b2ae0ba639d07ec
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# ビジネス ルール条件 (マスター データ サービス)
+# <a name="business-rule-conditions-master-data-services"></a>ビジネス ルール条件 (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、1 つまたは複数のアクションの実行にあたって true になることが必須の条件が、ビジネス ルールの条件によって判定されます。  
   
 > [!NOTE]  
 >  条件は省略可能です。 条件を指定しなければ、ビジネス ルールに対してデータが検証されると必ずアクションが実行されます。  
   
-## ビジネス ルール条件  
+## <a name="business-rule-conditions"></a>ビジネス ルール条件  
   
 |条件名|Description|  
 |--------------------|-----------------|  
@@ -50,9 +55,9 @@ caps.handback.revision: 10
 > [!NOTE]  
 >  ビジネス ルールに 2 つの値を比較する条件が含まれていて、そのルールが両方の値とも NULL であるメンバーに適用されている場合、そのメンバーは検証に失敗します。  
   
-## 参照  
- [ビジネス ルール アクション (マスター データ サービス)](../master-data-services/business-rule-actions-master-data-services.md)   
- [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)   
- [ビジネス ルールを作成しパブリッシュする (マスター データ サービス)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+## <a name="see-also"></a>参照  
+ [ビジネス ルール アクション & #40 です。マスター データ サービス &#41;](../master-data-services/business-rule-actions-master-data-services.md)   
+ [ビジネス ルール & #40 です。マスター データ サービス &#41;](../master-data-services/business-rules-master-data-services.md)   
+ [作成して発行するビジネス ルール & #40 です。マスター データ サービス &#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   

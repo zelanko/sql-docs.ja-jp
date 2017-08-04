@@ -1,33 +1,38 @@
 ---
-title: "モデル権限とメンバー権限の重複 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "モデル [マスター データ サービス], 有効な権限"
-  - "権限 [マスター データ サービス], モデルとメンバーの重複"
-  - "メンバー [マスター データ サービス], 有効な権限"
+title: "モデルとメンバー権限 (Master Data Services) の重複 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- models [Master Data Services], effective permissions
+- permissions [Master Data Services], model and member overlaps
+- members [Master Data Services], effective permissions
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ffb74e06b9b6bfed579959db993d418599086fef
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# モデル権限とメンバー権限の重複 (Master Data Services)
+# <a name="overlapping-model-and-member-permissions-master-data-services"></a>モデル権限とメンバー権限の重複 (Master Data Services)
   メンバーに割り当てられている権限は、モデル オブジェクトに割り当てられている権限と重複している可能性があります。 重複が発生すると、より制限の厳しい権限が有効になります。  
   
  メンバーに割り当てられている権限が、対応するモデル オブジェクトの権限とは異なる場合、次のルールが適用されます。  
   
 -   **拒否** が他のどの権限よりも優先されます。  
   
--   **Admin** モデル レベルのアクセス許可は、他のすべてのアクセス許可を上書きし、下位レベルのアクセス許可をすべて (CRUD) に変更されます。  
+-   モデル レベルの**管理者** 権限がすべての権限に優先され、サブ レベルで ALL (CRUD) アクセス権限に変更されます。  
   
 -   有効なアクセス権限は、メンバーと属性のアクセス権限と交差します。  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 7
   
  ![mds_conc_security_member_overlap_table](../master-data-services/media/mds-conc-security-member-overlap-table.gif "mds_conc_security_member_overlap_table")  
   
-## 例 1  
+## <a name="example-1"></a>例 1  
  ![mds_conc_overlap_model_1](../master-data-services/media/mds-conc-overlap-model-1.gif "mds_conc_overlap_model_1")  
   
  **[モデル]** タブで、Product エンティティに **更新** 権限が割り当てられています。 エンティティのすべての属性がこの権限を継承しています。  
@@ -48,7 +53,7 @@ caps.handback.revision: 7
   
  ![mds_conc_overlap_model_example_1](../master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
-## 例 2  
+## <a name="example-2"></a>例 2  
  ![mds_conc_overlap_model_2](../master-data-services/media/mds-conc-overlap-model-2.gif "mds_conc_overlap_model_2")  
   
  **[モデル]** タブで、Subcategory 属性に **更新** 権限が割り当てられています。  
@@ -59,7 +64,7 @@ caps.handback.revision: 7
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## 例 3  
+## <a name="example-3"></a>例 3  
  ![mds_conc_overlap_model_3](../master-data-services/media/mds-conc-overlap-model-3.gif "mds_conc_overlap_model_3")  
   
  **[モデル]** タブで、Subcategory 属性に **読み取り** 権限が割り当てられています。  
@@ -70,8 +75,8 @@ caps.handback.revision: 7
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## 参照  
- [アクセス許可を決定する方法と #40 です。マスター データ サービスと #41 です。](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [重複するユーザーとグループのアクセス許可と #40 です。マスター データ サービスと #41 です。](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
+## <a name="see-also"></a>参照  
+ [権限の決定方法 (マスター データ サービス)](../master-data-services/how-permissions-are-determined-master-data-services.md)   
+ [重複するユーザーとグループのアクセス許可 (&) #40 です。マスター データ サービス &#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   
