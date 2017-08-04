@@ -17,12 +17,12 @@ ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 15d9caa3c474d5cbe2e16e158e6f2fcfe7959ed6
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 189aef1d316d4e8569a48a413ec72cfbc6a6673c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="enable-stretch-database-for-a-database"></a>データベースに対して Stretch Database を有効にする
@@ -30,7 +30,7 @@ ms.lasthandoff: 04/11/2017
 
   Stretch Database 用にデータベースを構成するには、SQL Server Management Studio でデータベースに対して **[タスク]、[ストレッチ]、[有効にする]** の順に選択し、**[データベースのストレッチの有効化]** ウィザードを開きます。 Transact-SQL を使用してデータベースの Stretch Database を有効にすることもできます。  
   
- 個別のテーブルに対して **[タスク]、[ストレッチ]、[有効にする]** の順に選択した場合、データベースの Stretch Database がまだ有効になっていないと、ウィザードはデータベースの Stretch Database を構成し、ユーザーはプロセスの一部としてテーブルを選択できます。 「 [テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)」の手順ではなく、このトピックの手順に従ってください。  
+ 個別のテーブルに対して **[タスク]、[ストレッチ]、[有効にする]** の順に選択した場合、データベースの Stretch Database がまだ有効になっていないと、ウィザードはデータベースの Stretch Database を構成し、ユーザーはプロセスの一部としてテーブルを選択できます。 「 [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)」の手順ではなく、このトピックの手順に従ってください。  
   
  データベースまたはテーブルで Stretch Database を有効にするには、db_owner アクセス許可が必要です。 データベースで Stretch Database を有効にするには、管理データベースのアクセス許可も必要です。  
 
@@ -67,7 +67,7 @@ GO
  詳細については、「[remote data archive サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-remote-data-archive-server-configuration-option.md)」と「[sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)」をご覧ください。  
   
 ##  <a name="Wizard"></a> ウィザードを使用してデータベースで Stretch Database を有効にする  
- 入力する必要がある情報や選択など、データベースのストレッチの有効化ウィザードの詳細については、「 [まずはデータベースのストレッチの有効化ウィザードを実行する](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)」 (データベースのストレッチの有効化ウィザードの実行から開始する) をご覧ください。  
+ 入力する必要がある情報や選択など、データベースのストレッチの有効化ウィザードの詳細については、「 [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)」 (データベースのストレッチの有効化ウィザードの実行から開始する) をご覧ください。  
   
 ##  <a name="EnableTSQLDatabase"></a> Transact-SQL を使用してデータベースで Stretch Database を有効にする  
  個別のテーブルで Stretch Database を有効にする前に、データベースで有効にする必要があります。  
