@@ -1,0 +1,5 @@
+# [特定の種類のスクリプト コンポーネントの開発](developing-specific-types-of-script-components.md)
+# [スクリプト コンポーネントによる変換元の作成](creating-a-source-with-the-script-component.md)
+# [スクリプト コンポーネントによる同期変換の作成](creating-a-synchronous-transformation-with-the-script-component.md)
+# [スクリプト コンポーネントによる非同期変換の作成](creating-an-asynchronous-transformation-with-the-script-component.md)
+# [スクリプト コンポーネントによる変換先の作成](creating-a-destination-with-the-script-component.md)
