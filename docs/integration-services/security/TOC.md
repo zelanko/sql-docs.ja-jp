@@ -1,4 +1,4 @@
-# [脅威と脆弱性の対策](threat-and-vulnerability-mitigation-integration-services.md)
-# [パッケージで使用されるファイルへのアクセス](access-to-files-used-by-packages.md)
-# [Integration Services サービスへのアクセス](access-to-the-integration-services-service.md)
-# [Security](security-overview-integration-services.md)
+# [概要](security-overview-integration-services.md)  
+# [パッケージ内の機微なデータへのアクセス制御](access-control-for-sensitive-data-in-packages.md)  
+# [デジタル署名を使用してパッケージのソースを特定する](identify-the-source-of-packages-with-digital-signatures.md)  
+# [Integration Services のロール (SSIS サービス)](integration-services-roles-ssis-service.md)

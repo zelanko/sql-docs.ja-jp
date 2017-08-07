@@ -1,0 +1,10 @@
+# [スクリプト タスクによるパッケージの拡張](extending-the-package-with-the-script-task.md)
+# [スクリプト タスク エディターでのスクリプト タスクの構成](configuring-the-script-task-in-the-script-task-editor.md)
+# [スクリプト タスクのコーディングおよびデバッグ](coding-and-debugging-the-script-task.md)
+# [スクリプト タスクでの変数の使用](using-variables-in-the-script-task.md)
+# [スクリプト タスクでのデータ ソースへの接続](connecting-to-data-sources-in-the-script-task.md)
+# [スクリプト タスクでのイベントの発生](raising-events-in-the-script-task.md)
+# [スクリプト タスクでのログ記録](logging-in-the-script-task.md)
+# [スクリプト タスクから結果を返す](returning-results-from-the-script-task.md)
+
+# [スクリプト タスクの例](../../extending-packages-scripting-task-examples/script-task-examples.md)
