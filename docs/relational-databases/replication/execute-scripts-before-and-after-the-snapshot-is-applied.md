@@ -43,6 +43,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>参照  
  [Initialize a Subscription with a Snapshot (スナップショットを使用したサブスクリプションの初期化)](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [Snapshot Options](../../relational-databases/replication/snapshot-options.md)  
+ [スナップショット オプション](../../relational-databases/replication/snapshot-options.md)  
   
   

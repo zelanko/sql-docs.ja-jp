@@ -1,5 +1,5 @@
 ---
-title: "テキスト ベースのクエリ デザイナーのユーザー インターフェイス (レポート ビルダー) |Microsoft ドキュメント"
+title: "テキストベースのクエリ デザイナーのユーザー インターフェイス (レポート ビルダー) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -19,11 +19,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1640b0536b6e206afbd2aff5ea8dd11349277f12
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>テキストベースのクエリ デザイナーのユーザー インターフェイス (レポート ビルダー)
@@ -45,13 +45,13 @@ ms.lasthandoff: 06/22/2017
 |------------|-----------------|  
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。 すべての種類のデータ ソースでグラフィカル クエリ デザイナーがサポートされているとは限りません。|  
 |**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は sql と rdl だけです。|  
-|![クエリを実行](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリを実行")|クエリを実行し、その結果セットを結果ペインに表示します。|  
+|![クエリを実行する](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリを実行する")|クエリを実行し、その結果セットを結果ペインに表示します。|  
 |**[コマンドの種類]**|**[Text]**、 **[StoredProcedure]**、または **[TableDirect]**を選択します。 パラメーターを受け取るストアド プロシージャの場合、ツール バーの **[実行]** をクリックすると、 **[クエリ パラメーターの定義]** ダイアログ ボックスが表示され、必要な値を入力できます。 サポートされるコマンドの種類は、データ ソースの種類によって異なります。 たとえば、 **[TableDirect]**がサポートされるのは、OLE DB と ODBC だけです。<br /><br /> 注: ストアド プロシージャから複数の結果セットが返された場合、最初の結果セットのみを使ってデータセットが設定されます。|  
   
 ### <a name="command-type-text"></a>コマンドの種類 (Text)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データセットを作成するとき、既定ではリレーショナル クエリ デザイナーが表示されます。 テキスト ベースのクエリ デザイナーに切り替えるには、ツール バーの **[テキストとして編集]** 切り替えボタンをクリックします。 テキスト ベースのクエリ デザイナーは、クエリ ペインと結果ペインの 2 つのペインで構成されています。 次の図に各ペインの名称を示します。  
   
- ![リレーショナル データのクエリの汎用クエリ デザイナー](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "リレーショナル データのクエリの汎用クエリ デザイナー")  
+ ![リレーショナル データのクエリに使用する汎用クエリ デザイナー](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "リレーショナル データのクエリに使用する汎用クエリ デザイナー")  
   
  次の表に各ペインの機能を示します。  
   
@@ -74,7 +74,7 @@ SELECT Name FROM Person.ContactType
   
  次の図に、ストアド プロシージャを実行したときのクエリ ペインと結果ペインを示します。 この場合、入力パラメーターは定数です。  
   
- ![ストアド プロシージャのテキスト ベースのクエリ デザイナーで](../../reporting-services/report-data/media/rs-relational-text-sp.gif "テキスト ベースのクエリ デザイナーでのストアド プロシージャ")  
+ ![テキスト ベースのクエリ デザイナーのストアド プロシージャ](../../reporting-services/report-data/media/rs-relational-text-sp.gif "テキスト ベースのクエリ デザイナーのストアド プロシージャ")  
   
  次の表に各ペインの機能を示します。  
   

@@ -1,5 +1,5 @@
 ---
-title: "レポート サーバー コンテンツの管理 (SSRS ネイティブ モード) |Microsoft ドキュメント"
+title: "レポート サーバー コンテンツの管理 (SSRS ネイティブ モード) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -21,18 +21,18 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2289f62499f876cc296d6c939c4d9e70ccfe4c3f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、コンテンツ管理とはレポート サーバー アイテムの管理を指します。 すべてのアイテムは、プロパティおよびセキュリティの設定を通して、個別に管理できます。 アイテムは、レポート サーバー フォルダー名前空間内のさまざまな場所に移動できます。 アイテムを効率的に管理するには、コンテンツ マネージャーで実行されるタスクを理解しておく必要があります。 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2 以降では、  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルを使用できます。 この記事では、レポート マネージャーと新しい Web ポータルのエクスペリエンスを取り上げます。  
   
 > [!NOTE]  
->  コンテンツ管理はレポート サーバー管理とは異なります。 レポート サーバーが実行されている環境の管理方法に関する詳細については、「[Reporting Services のレポート サーバー (ネイティブ モード)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)」を参照してください。  
+>  コンテンツ管理はレポート サーバー管理とは異なります。 レポート サーバーが実行されている環境の管理方法に関する詳細については、「[Reporting Services のレポート サーバー &#40;ネイティブ モード&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)」を参照してください。  
   
  コンテンツ管理には、次のタスクが含まれます。  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/22/2017
 |![リンク レポート アイコン](../../reporting-services/report-server/media/hlp-16linked.gif "リンク レポート アイコン")|リンク レポート|  
 |![フォルダー アイコン](../../reporting-services/report-server/media/hlp-16folder.gif "フォルダー アイコン")|フォルダー|  
 |![汎用リソース アイコン](../../reporting-services/report-server/media/hlp-16file.gif "汎用リソース アイコン")|汎用リソース|  
-|![共有データ ソース アイコン](../../reporting-services/report-data/media/hlp-16datasource.png "共有データ ソースのアイコン")|[共有データ ソース]|  
+|![共有データ ソースのアイコン](../../reporting-services/report-data/media/hlp-16datasource.png "共有データ ソースのアイコン")|[共有データ ソース]|  
 ||共有データセット|  
   
  作業に使用するすべてのアイテムを移動できるわけではありません。 サブスクリプションまたはレポート履歴など、レポートに関連付けられたアイテムを移動することはできません。 これらのアイテムは、関連するレポートと共に移動します。 同様に、フォルダー階層の外部にある、共有スケジュールなどのアイテムは移動できません。 操作を行うための権限がない場合は、アイテムを移動できません。 アイテムを移動するための権限は、当該アイテムのロールの割り当てで "レポートの管理"、"モデルの管理"、"フォルダーの管理、および "データ ソースの管理" のタスクを選択した場合に許可されます。  
@@ -124,21 +124,21 @@ ms.lasthandoff: 06/22/2017
 ### <a name="deleting-folders-and-folder-contents"></a>フォルダーおよびフォルダー コンテンツの削除  
  フォルダーを削除すると、フォルダーに含まれるすべてのアイテムが削除されます。 フォルダーを削除する前に、コンテンツを調べて、フォルダー階層の他の場所にあるアイテムによって参照または使用されている可能性のあるアイテムがないかどうかを判断してください。 参照されるアイテムには、リンク レポート、共有データ ソース、およびリソースをサポートするレポート定義があります。  
   
- レポートを参照するリンク レポートを持つレポートを削除した場合、レポートの削除後に、リンク レポートは無効になります。 レポートは、そのレポートを基としているリンク レポートに関する情報を保持しないので、どのリンク レポートに影響するかを事前に判断することはできません。 ただし、リンク レポートのプロパティを参照して、リンク レポートの基になっているレポートを確認できます。 一方、共有データ ソース アイテムでは、接続情報が使用中であるかどうかを簡単に判断できるように、そのアイテムを現在使用しているすべてのレポートが一覧表示されます。 詳細については、「[共有データ ソースを作成、変更、および削除する (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)」を参照してください。 最後に、レポートによって使用されているリソースは、これらのレポートを識別できません。  
+ レポートを参照するリンク レポートを持つレポートを削除した場合、レポートの削除後に、リンク レポートは無効になります。 レポートは、そのレポートを基としているリンク レポートに関する情報を保持しないので、どのリンク レポートに影響するかを事前に判断することはできません。 ただし、リンク レポートのプロパティを参照して、リンク レポートの基になっているレポートを確認できます。 一方、共有データ ソース アイテムでは、接続情報が使用中であるかどうかを簡単に判断できるように、そのアイテムを現在使用しているすべてのレポートが一覧表示されます。 詳細については、「[共有データ ソースを作成、変更、および削除する &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)」を参照してください。 最後に、レポートによって使用されているリソースは、これらのレポートを識別できません。  
   
  フォルダーを削除する前に、削除しようとしているレポートのレポート履歴、またはレポートの一部であるレポート固有の構造 (たとえば、データ ドリブン サブスクリプション) を保持する必要があるかどうかを検討します。 この情報に必要なものがある場合、フォルダーを削除する前に、フォルダー外にアイテムを移動します。  
   
  フォルダー内でアイテムを表示できるかどうかは、ロールの割り当て (つまり、アイテムを表示する権限) と、フォルダーに対して有効な表示オプションの両方によって異なります。 レポート マネージャーで、[コンテンツ] ページをリスト ビューまたは詳細ビューに設定することができます。 リスト ビューでは、レポートまたはアイテムが非表示になる場合があります。 コンテンツを削除する前に、詳細ビューでフォルダーを表示してください。  
   
 ##  <a name="bkmk_Resources"></a> リソース  
- リソースはレポート サーバーに格納される管理対象アイテムですが、レポート サーバーで処理されるものではありません。 通常、リソースにレポート ユーザー向けの外部コンテンツが用意されています。 例としては、.jpg ファイルや、空間データを含んだ ESRI シェープファイル、レポートで使用されるビジネス ルールを示す HTML ファイルなどがあります。 JPG、SHP、または HTML ファイルはレポート サーバーに格納されますが、ファイルはレポート サーバーで処理されずに、ブラウザーに直接渡されます。 詳細については、「[画像 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/images-report-builder-and-ssrs.md)」、および「[マップ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)」の「マップへのデータの追加」を参照してください。  
+ リソースはレポート サーバーに格納される管理対象アイテムですが、レポート サーバーで処理されるものではありません。 通常、リソースにレポート ユーザー向けの外部コンテンツが用意されています。 例としては、.jpg ファイルや、空間データを含んだ ESRI シェープファイル、レポートで使用されるビジネス ルールを示す HTML ファイルなどがあります。 JPG、SHP、または HTML ファイルはレポート サーバーに格納されますが、ファイルはレポート サーバーで処理されずに、ブラウザーに直接渡されます。 詳細については、「[画像 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)」、および「[マップ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)」の「マップへのデータの追加」を参照してください。  
   
 ### <a name="adding-and-viewing-a-resource"></a>リソース ファイルの追加と表示  
  レポート サーバーにリソースを追加するには、ファイルをアップロードまたはパブリッシュします。  
   
 |操作|ファイルの種類|  
 |---------------|---------------|  
-|アップロード|リソースをアップロードするには、レポート サーバーがネイティブ モードで動作している場合はレポート マネージャーを使用し、レポート サーバーが SharePoint 統合モードで動作している場合は SharePoint サイト上のアプリケーション ページを使用する必要があります。 詳しくは、「[ファイルまたはレポートをアップロードする &#40;レポート マネージャー&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)」または「[SharePoint ライブラリへのドキュメントのアップロード &#40;Reporting Services の SharePoint モード&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)」をご覧ください。|  
+|アップロード|リソースをアップロードするには、レポート サーバーがネイティブ モードで動作している場合はレポート マネージャーを使用し、レポート サーバーが SharePoint 統合モードで動作している場合は SharePoint サイト上のアプリケーション ページを使用する必要があります。 詳細については、「[ファイルまたはレポートをアップロードする &#40;レポート マネージャー&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)」または「[SharePoint ライブラリへのドキュメントのアップロード &#40;Reporting Services の SharePoint モード&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)」を参照してください。|  
 |パブリッシュ|プロジェクト内にある、レポート、レポート パーツ、データ ソース、またはデータセット以外のすべてのファイルは、リソースとしてアップロードされます。 リソースをパブリッシュするには、既存のアイテムをレポート デザイナーのプロジェクトに追加した後で、そのプロジェクトをレポート サーバーにパブリッシュします。|  
   
  リソースはすべて、もともとはファイル システム上のファイルです。そのファイルがレポート サーバーにアップロードされることで、リソースになります。 ASP.NET の制限により、ファイル サイズが既定で 4 MB 以下に限定されている以外は、アップロードできるファイルの種類に制限はありません。 ただし、リソースとしてレポート サーバーにパブリッシュする場合には、適合する MIME の種類があるファイルの方が適しています。 たとえば、HTML および JPG ファイルを基にしたリソースは、ユーザーがリソースをクリックすると、HTML は Web ページとして、JPG は画像として、ユーザーが見ることができる形でブラウザー ウィンドウで開かれます。 これに対し、たとえばデスクトップ アプリケーション ファイルなど、適合する MIME の種類がないリソースは、ブラウザー ウィンドウに表示されない場合があります。  
@@ -174,11 +174,11 @@ ms.lasthandoff: 06/22/2017
   
 |文字|エスケープ値|例|  
 |---------------|------------------|-------------|  
-|(スペース)|[ ]|*Firstname Lastname* becomes *Firstname[ ]Lastname*|  
-|\ (円記号)|1 つのスペース文字に置換されます。|*DomainName\Username* becomes *DomainName Username*|  
+|(スペース)|[ ]|*Firstname Lastname* は、 *Firstname[ ]Lastname*|  
+|\ (円記号)|1 つのスペース文字に置換されます。|*DomainName\Username* は、 *DomainName Username*|  
 |@ (アット マーク)|[at]|*username*@hotmail.com は、 *username*[at]hotmail.com になります。|  
-|& (アンパサンド)|[amp]|*username*@*company*&*company.com* becomes *username*[at]*company*[amp]*company.com*|  
-|$ (ドル記号)|[dollar]|*User* $*Name* becomes *User*[ ][dollar]*Name*|  
+|& (アンパサンド)|[amp]|*username*@*company*&*company.com* は、 *username*[at]*company*[amp]*company.com*|  
+|$ (ドル記号)|[dollar]|*User* $*Name* は、 *User*[ ][dollar]*Name*|  
   
  個人用レポートの機能は任意で使用できます。 既定では、レポート サーバーのインストール時には、個人用レポートは無効になっています。 この機能を有効にする方法の詳細については、「 [個人用レポートの有効化と無効化](../../reporting-services/report-server/enable-and-disable-my-reports.md)」を参照してください。 詳細については、「 [個人用レポートをセキュリティで保護する](../../reporting-services/security/secure-my-reports.md)」を参照してください。  
   
@@ -193,7 +193,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)   
- [ロールと権限 (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md)   
- [Reporting Services レポート (SSRS)](../../reporting-services/reports/reporting-services-reports-ssrs.md)  
+ [ロールと権限 &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)   
+ [Reporting Services レポート &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)  
   
   

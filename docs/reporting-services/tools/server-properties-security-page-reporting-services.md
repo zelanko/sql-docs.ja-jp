@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services サーバーのプロパティ ([セキュリティ] ページ) - |Microsoft ドキュメント"
+title: "[サーバーのプロパティ] ([セキュリティ] ページ) - Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8da36c90d2eb22600ad6560a37367e68de933971
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="server-properties-security-page---reporting-services"></a>[サーバーのプロパティ] ([セキュリティ] ページ) - Reporting Services
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
  この機能を無効にすることで、悪意のあるユーザーが **LoadReportDefinition** 要求でレポート サーバーを過負荷にするサービス拒否攻撃の脅威を緩和することができます。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバーのプロパティを設定する &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+ [レポート サーバーのプロパティを設定する (Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Management Studio でレポート サーバーに接続する](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Management Studio のレポート サーバーの F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  

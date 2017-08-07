@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 の新機能 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/25/2017
+ms.date: 07/31/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 70a1fd4dbec68d22187585de69a1d603c39e259e
-ms.openlocfilehash: 31572214a8276182ce1358fc05979a72b57a2ad6
+ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
+ms.openlocfilehash: db9f087684ae73a0a26cbb8ddedbc00a2651339c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
@@ -26,20 +26,10 @@ SQL Server 2017 は、SQL Server をプラットフォームとする方向に�
 
 **試す:** [SQL Server 2017 リリース候補 (RC) をダウンロードする](http://go.microsoft.com/fwlink/?LinkID=829477)
 
->[!TIP]
->**Linux での SQL Server の実行** 詳細については、[Linux 上の SQL Server についてのドキュメント](https://docs.microsoft.com/sql/linux/)と、[Linux 上の SQL Server 2017 の新機能](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)のトピックを参照してください。
+>**Linux での SQL Server の実行** 詳細については、「[SQL Server ドキュメントの再編成](https://docs.microsoft.com/sql/linux/)」を参照してください。
 
-## <a name="latest-release-sql-server-2017-release-candidate-rc1-july-2017"></a>最新リリース: SQL Server 2017 リリース候補 (RC1、2017 年 7 月)
-
-### <a name="sql-server-database-engine"></a>SQL Server データベース エンジン    
-- CTP 2.0 で説明されている `clr strict security` 機能の回避策として、CLR アセンブリをホワイトリストに追加できるようになりました。 信頼できるアセンブリのホワイトリストをサポートするために、[sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)、および [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) が追加されました。  
-
-### <a name="sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS)
-- SSIS の新しい **Scale Out** 機能には、RC1 での機能に次の追加または変更が行われています。 詳細については、「[SQL Server 2017 の Integration Services の新機能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)」を参照してください。
-    -   スケール アウト マスターで高可用性を実現できるようになりました。
-    -   スケール アウト ワーカーの実行ログのフェールオーバー処理が改善されました。
-    -   ストアド プロシージャ **[catalog].[create_execution]** の *runincluster* パラメーターは、一貫性とわかりやすさを理由に、名前が *runinscaleout* に変更されました。
-    -   SSIS カタログに、SSIS パッケージを実行する既定のモードを指定するための新しいグローバル プロパティが追加されました。
+## <a name="latest-release-sql-server-2017-release-candidate-rc2-august-2017"></a>最新リリース: SQL Server 2017 リリース候補 (RC2、2017 年 8 月)
+このリリースには、バグの修正とパフォーマンスの改善が含まれています。
 
 ### <a name="master-data-services-mds"></a>マスター データ サービス (MDS)
 - 次のSQL Server の以前のリリースから SQL Server 2017 マスター データ サービスにアップグレードするときの、アップグレード エクスペリエンスとパフォーマンスが改善されました。
@@ -47,9 +37,9 @@ SQL Server 2017 は、SQL Server をプラットフォームとする方向に�
     - SQL Server 2014
     - SQL Server 2016
 
-
 ## <a name="sql-server-database-engine"></a>SQL Server データベース エンジン  
 SQL Server 2017 には多くの新しいデータベース エンジン機能、機能強化、パフォーマンス向上が含まれています。 
+- CTP 2.0 で説明されている `clr strict security` 機能の回避策として、**CLR アセンブリ**をホワイトリストに追加できるようになりました。 信頼できるアセンブリ (RC1) のホワイトリストをサポートするために、[sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)、および [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) が追加されました。  
 - **再開可能なオンライン インデックス リビルド**は、障害 (レプリカへのフェールオーバーや、ディスク領域不足など) 発生後、一時停止した場所からオンライン インデックス リビルド操作を再開します。または、一時停止し、オンライン インデックス リビルド操作を後から再開します。 「[ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)」と「[オンライン インデックス操作のガイドライン](../relational-databases/indexes/guidelines-for-online-index-operations.md)」を参照してください。 (CTP 2.0)
 - ALTER DATABASE SCOPED CONFIGURATION の **IDENTITY_CACHE** オプションを使用すると、サーバーが予期せず再起動したときやセカンダリ サーバーにフェールオーバーしたときに、ID 列の値のギャップを回避できます。 「[ALTER DATABASE SCOPED CONFIGURATION (ALTER データベース スコープ ベースの構成)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。 (CTP 2.0)
 - **自動データベース チューニング**は、潜在的なクエリ パフォーマンスの問題に関する洞察を提供し、解決策を推奨して、特定された問題を自動的に解決できます。 「[自動調整](../relational-databases/automatic-tuning/automatic-tuning.md)」を参照してください。 (CTP 2.0)
@@ -119,13 +109,22 @@ CTP 2.1 の時点で、SSRS は SQL Server セットアップを通じてイン�
 詳細については、「[What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)」 (SQL Server Reporting Services (SSRS) の新機能) を参照してください。
 
 ## <a name="sql-server-machine-learning-services"></a>SQL Server Machine Learning サービス
-R 言語に加えて Python が新しくサポートされたことに合わせて、SQL Server R Services の名前が **SQL Server Machine Learning Services** に変更されました。 Machine Learning Services (データベース内) を使用して、SQL Server で R または Python スクリプトを実行したり、Microsoft Machine Learning Server (スタンドアロン) をインストールして、SQL Server を必要としない R および Python のモデルを配置し、使用したりすることができます。 両方のプラットフォームには、新しい分散型機械学習の MicrosoftML アルゴリズム、および Microsoft R (バージョン 9.1.0) の最新バージョンが含まれます。 (CTP 2.0)
-- Python を使用した機械学習には **revoscalepy** モジュールが含まれています。これは、RevoScaleR で提供される分散アルゴリズムと計算コンテキストのサブセットをサポートするモジュールです。 
-- 新しい **rxExecBy** 関数を使用して、R から簡単に複数のモデルを同時に作成できます。 サポートされている計算コンテキストとして、RxSpark と RxInSQLServer があります。 (CTP 2.0)
+R 言語に加えて Python がサポートされたことに合わせて、SQL Server R Services の名前が **SQL Server Machine Learning Services** に変更されました。 SQL Server で 	Machine Learning サービス (データベース内) を使用して、R または Python スクリプトを実行できます。 また、SQL Server が必要ない R および Python モデルを展開し、使用する場合は、**Microsoft Machine Learning Server (Standalone)** をインストールします。 
+
+SQL Server での開発者は、オープン ソース エコシステムで入手できるさまざまな Python ML および AI ライブラリと、Microsoft の最新技術を利用できるようになりました。 
+
++ **revoscalepy** - この Python 向けバージョンの RevoScaleR には、線形およびロジスティック回帰用並列アルゴリズム、デシジョン ツリー、ブースト ツリー、ランダム フォレストだけでなく、データ変換とデータ移動、リモート計算コンテキスト、およびデータ ソース用の豊富な API が含まれています。
+
++ **microsoftml** - Python バインディングを使用したこの最新パッケージの機械学習アルゴリズムと変換には、深層ニューラル ネットワーク、高速なデシジョン ツリーとデシジョン フォレスト、線形およびロジスティック回帰用に高度に最適化されたアルゴリズムが含まれています。 また、イメージの抽出や感情分析に使用できる ResNet モデルに基づくトレーニング済みモデルも用意されています。
+
++ **T-SQL を使用した Python 運用可能化** - ストアド プロシージャを使用して、Python コードを簡単に展開できます`sp_execute_external_script`。 SQL から Python プロセスへデータをストリーミングし、MPI リングの並列化を使用して、パフォーマンスを向上することができます。
+
++ **SQL Server 計算コンテキストでの Python** - データ サイエンティストと開発者は、データを移動することなく、開発環境からリモートで Python コードを実行し、データを探索してモデルを開発することができます。
 
 詳細については、「[What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)」 (SQL Server Machine Learning Services の新機能) を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 - [SQL Server 2017 リリース ノート](sql-server-2017-release-notes.md)を参照してください。
+- 「[Linux 上の SQL Server 2017 の新機能](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)」を参照してください。
 - [SQL Server 2016 の新機能](what-s-new-in-sql-server-2016.md)を確認してください。
 

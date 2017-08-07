@@ -20,11 +20,11 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e8fbc50a3d0e2c8e9df837f40bdfa5b787225fb3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="create-a-push-subscription"></a>プッシュ サブスクリプションの作成
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
   
 -   パブリッシャーとパブリケーションを指定します。  
   
--   レプリケーション エージェントが実行される場所を選択します。 プッシュ サブスクリプションでは、パブリケーションの種類に応じて、 **[ディストリビューション エージェントの場所]** ページまたは **[マージ エージェントの場所]** ページで **[ディストリビューター <Distributor> ですべてのエージェントを実行する (プッシュ サブスクリプション)]** を選択します。  
+-   レプリケーション エージェントが実行される場所を選択します。 プッシュ サブスクリプションでは、パブリケーションの種類に応じて、 **[ディストリビューション エージェントの場所]** ページまたは **[マージ エージェントの場所]** ページで **[ディストリビューター &lt;Distributor&gt; ですべてのエージェントを実行する (プッシュ サブスクリプション)]** を選択します。  
   
 -   サブスクライバーとサブスクリプション データベースを指定します。  
   
@@ -157,85 +157,85 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
  レプリケーション管理オブジェクト (RMO) を使用することで、プログラムによってプッシュ サブスクリプションを作成できます。 プッシュ サブスクリプションを作成する際に使用する RMO クラスは、作成するサブスクリプションの対象となるパブリケーションの種類によって異なります。  
   
-> **重要:** 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET Framework に用意されている](http://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  
+> **重要:** 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&amp;amp;#xA0;Framework に用意されている](http://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  
   
 #### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションに対するプッシュ サブスクリプションを作成するには  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、パブリッシャーへの接続を作成します。  
   
-2.  手順 1. のパブリッシャー接続を使用して、<xref:Microsoft.SqlServer.Replication.TransPublication> クラスのインスタンスを作成します。 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>、<xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>、および <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> を指定します。  
+2.  手順 1. のパブリッシャー接続を使用して、 <xref:Microsoft.SqlServer.Replication.TransPublication> クラスのインスタンスを作成します。 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>、 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>、および <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>を指定します。  
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが **false**を返す場合、手順 2. で指定したプロパティが誤っているか、サーバーにパブリケーションが存在していません。  
   
-4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティと <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> の間でビットごとの論理 AND (Visual C# では **&**、Visual Basic では **And**) を実行します。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None> である場合、<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> を <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> の間のビットごとの論理OR (Visual C# では **|**、Visual Basic では **Or**) の結果に設定します。 続けて、<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出して、プッシュ サブスクリプションを有効にします。  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティと <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> のビットごとの論理 AND 演算 (Visual C# では **&**、Visual Basic では **And**) を実行します。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>の場合、 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と**|** プロパティと **Or** 、Visual Basic では <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> に <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>」を参照してください。 次に、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出してプッシュ サブスクリプションを有効にします。  
   
-5.  サブスクリプション データベースが存在しない場合は、<xref:Microsoft.SqlServer.Management.Smo.Database> クラスを使用して作成します。 詳細については、「[データベースの作成、変更、および削除](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)」を参照してください。  
+5.  サブスクリプション データベースが存在しない場合は、 <xref:Microsoft.SqlServer.Management.Smo.Database> クラスを使用して作成します。 詳細については、「[データベースの作成、変更、および削除](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)」を参照してください。  
   
 6.  <xref:Microsoft.SqlServer.Replication.TransSubscription> クラスのインスタンスを作成します。  
   
 7.  次のサブスクリプション プロパティを設定します。  
   
-    -   <xref:Microsoft.SqlServer.Management.Common.ServerConnection> を手順 1 で作成した <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> のパブリッシャーに設定します。  
+    -   手順 1. で作成した、パブリッシャーに対する <xref:Microsoft.SqlServer.Management.Common.ServerConnection> を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>に指定します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> に、サブスクリプション データベースの名前。  
+    -   サブスクリプション データベース名を <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>に指定します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A> に、サブスクライバーの名前。  
+    -   サブスクライバー名を <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>に指定します。  
   
-    -   パブリケーション データベース名を <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> に指定します。  
+    -   パブリケーション データベース名を <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>に指定します。  
   
-    -   パブリケーション名を <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A> に指定します。  
+    -   パブリケーション名を <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>に指定します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> の <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> フィールドに、ディストリビューターでディストリビューション エージェントの実行に使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントの資格情報を指定します。 このアカウントは、ディストリビューターとのローカル接続を確立したり、Windows 認証を使用したリモート接続を確立するときに使用されます。  
+    -   ディストリビューターで実行されるディストリビューション エージェントが使用する <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> に <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> (または <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> ) フィールド。これにより、ディストリビューターでディストリビューション エージェントを実行するときに使用される [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントの資格情報が得られます。 このアカウントは、ディストリビューターとのローカル接続を確立したり、Windows 認証を使用したリモート接続を確立するときに使用されます。  
   
         > **注:** サブスクリプションが **sysadmin** 固定サーバー ロールのメンバーにより作成される場合、<xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> の設定は必須ではありませんが、推奨されます。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
-    -   (省略可) サブスクリプションを同期するためのエージェント ジョブを作成する場合は、 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> の値に **true** (既定値) を指定します。 **false**を指定した場合、サブスクリプションはプログラムでのみ同期が可能になります。  
+    -   (省略可) **true** に <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> (既定値) を指定します。 **false**を指定した場合、サブスクリプションはプログラムでのみ同期が可能になります。  
   
-    -   (省略可) SQL Server 認証を使用してサブスクライバ―に接続する場合、<xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> の <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> (または <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A>) フィールドを設定します。  
+    -   (省略可) SQL Server 認証を使用してサブスクライバーに接続する場合、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> の <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (または <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> ) フィールドを設定します。  
   
 8.  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> メソッドを呼び出します。  
   
-    > **重要:** リモート ディストリビューターを使用するパブリッシャー側でプッシュ サブスクリプションを作成する場合は、<xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> を含むすべてのプロパティに指定された値がディストリビューターにプレーン テキストとして送信されます。 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> メソッドを呼び出す前に、パブリッシャーとリモート ディストリビューター間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+    > **重要!!**リモート ディストリビューターを使用するパブリッシャー側でプッシュ サブスクリプションを作成する場合は、<xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> を含むすべてのプロパティに指定された値がディストリビューターにプレーン テキストとして送信されます。 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> メソッドを呼び出す前に、パブリッシャーとリモート ディストリビューター間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
 #### <a name="to-create-a-push-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプッシュ サブスクリプションを作成するには  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスを使用して、パブリッシャーへの接続を作成します。  
   
-2.  手順 1 のパブリッシャー接続を使用して、<xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成します。 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>、<xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>、および <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> を指定します。  
+2.  手順 1. のパブリッシャー接続を使用して、 <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成します。 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>、 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>、および <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>を指定します。  
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが **false**を返す場合、手順 2. で指定したプロパティが誤っているか、サーバーにパブリケーションが存在していません。  
   
-4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティと <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> の間でビットごとの論理 AND (Visual C# では **&**、Visual Basic では **And**) を実行します。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None> である場合、<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> を <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> の間のビットごとの論理OR (Visual C# では **|**、Visual Basic では **Or**) の結果に設定します。 続けて、<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出して、プッシュ サブスクリプションを有効にします。  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティと <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> のビットごとの論理 AND 演算 (Visual C# では **&**、Visual Basic では **And**) を実行します。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>の場合、 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と**|** プロパティと **Or** 、Visual Basic では <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> に <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>」を参照してください。 次に、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出してプッシュ サブスクリプションを有効にします。  
   
-5.  サブスクリプション データベースが存在しない場合は、<xref:Microsoft.SqlServer.Management.Smo.Database> クラスを使用して作成します。 詳細については、「[データベースの作成、変更、および削除](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)」を参照してください。  
+5.  サブスクリプション データベースが存在しない場合は、 <xref:Microsoft.SqlServer.Management.Smo.Database> クラスを使用して作成します。 詳細については、「[データベースの作成、変更、および削除](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)」を参照してください。  
   
 6.  <xref:Microsoft.SqlServer.Replication.MergeSubscription> クラスのインスタンスを作成します。  
   
 7.  次のサブスクリプション プロパティを設定します。  
   
-    -   <xref:Microsoft.SqlServer.Management.Common.ServerConnection> を手順 1 で作成した <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> のパブリッシャーに設定します。  
+    -   手順 1. で作成した、パブリッシャーに対する <xref:Microsoft.SqlServer.Management.Common.ServerConnection> を <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>に指定します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> に、サブスクリプション データベースの名前。  
+    -   サブスクリプション データベース名を <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>に指定します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A> に、サブスクライバーの名前。  
+    -   サブスクライバー名を <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>に指定します。  
   
-    -   パブリケーション データベース名を <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> に指定します。  
+    -   パブリケーション データベース名を <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>に指定します。  
   
-    -   パブリケーション名を <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A> に指定します。  
+    -   パブリケーション名を <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>に指定します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> の <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> フィールドに、ディストリビューターでマージ エージェントの実行に使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントの資格情報を指定します。 このアカウントは、ディストリビューターとのローカル接続を確立したり、Windows 認証を使用したリモート接続を確立するときに使用されます。  
+    -   ディストリビューターで実行されるディストリビューション エージェントが使用する <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> に <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> (または <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> ) フィールド。これにより、ディストリビューターでディストリビューション エージェントを実行するときに使用される [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントの資格情報が得られます。 このアカウントは、ディストリビューターとのローカル接続を確立したり、Windows 認証を使用したリモート接続を確立するときに使用されます。  
   
         > **注:** サブスクリプションが **sysadmin** 固定サーバー ロールのメンバーにより作成される場合、<xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> の設定は必須ではありませんが、推奨されます。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
-    -   (省略可) サブスクリプションを同期するためのエージェント ジョブを作成する場合は、 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> の値に **true** (既定値) を指定します。 **false**を指定した場合、サブスクリプションはプログラムでのみ同期が可能になります。  
+    -   (省略可) **true** に <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> (既定値) を指定します。 **false**を指定した場合、サブスクリプションはプログラムでのみ同期が可能になります。  
   
-    -   (省略可) SQL Server 認証を使用してサブスクライバ―に接続する場合、<xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> の <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> (または <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A>) フィールドを設定します。  
+    -   (省略可) SQL Server 認証を使用してサブスクライバーに接続する場合、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> の <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (または <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> ) フィールドを設定します。  
   
-    -   (省略可) SQL Server 認証を使用してパブリッシャーに接続する場合、<xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> の <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> (または <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A>) フィールドを設定します。  
+    -   (省略可) SQL Server 認証を使用してパブリッシャーに接続する場合、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> の <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (または <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> ) フィールドを設定します。  
   
 8.  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> メソッドを呼び出します。  
   
-    > **重要:**  リモート ディストリビューターを使用するパブリッシャー側でプッシュ サブスクリプションを作成する場合は、<xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> を含むすべてのプロパティに指定された値がディストリビューターにプレーン テキストとして送信されます。 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> メソッドを呼び出す前に、パブリッシャーとリモート ディストリビューター間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+    > **重要:**  リモート ディストリビューターを使用するパブリッシャー側でプッシュ サブスクリプションを作成する場合は、 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>を含むすべてのプロパティに指定された値がディストリビューターにプレーン テキストとして送信されます。 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> メソッドを呼び出す前に、パブリッシャーとリモート ディストリビューター間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
 ###  <a name="PShellExample"></a> 例 (RMO)  
  次の例では、トランザクション パブリケーションに対する新しいプッシュ サブスクリプションを作成します。 ディストリビューション エージェント ジョブを実行するために使用される Windows アカウントの資格情報は、実行時に渡されます。  

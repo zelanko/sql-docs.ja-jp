@@ -1,5 +1,5 @@
 ---
-title: "グラフィカル クエリ デザイナーのユーザー インターフェイス |Microsoft ドキュメント"
+title: "グラフィカル クエリ デザイナーのユーザー インターフェイス | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -24,11 +24,11 @@ caps.latest.revision: 54
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3c3bc432fc4dd02527f617b920cdf045103247a9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="graphical-query-designer-user-interface"></a>グラフィカル クエリ デザイナーのユーザー インターフェイス
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
  クエリの種類には、次のオプションがあります。  
   
--   **Text** リレーショナル データベースのデータ ソース ( [!INCLUDE[tsql](../../includes/tsql-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ テキストをサポートします。  
+-   **Text** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および Oracle のデータ処理拡張機能を含め、リレーショナル データベース データ ソースの標準の [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ テキストをサポートします。  
   
 -   **[TableDirect]** 指定したテーブルのすべての列を選択します。 たとえば、Customers という名前のテーブルの場合、これは [!INCLUDE[tsql](../../includes/tsql-md.md)] という `SELECT * FROM Customers`ステートメントと同じです。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="command-type-text"></a>コマンドの種類 (Text)  
  コマンドの種類が **[Text]** の場合、グラフィカル クエリ デザイナーに 4 つの領域 (ペイン) が表示されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリに対して、列、別名、並べ替えの値、およびフィルター値を指定できます。 選択に基づいて生成されたクエリ テキストを確認し、クエリを実行して、結果セットを表示できます。 次の図に 4 つのペインを示します。  
   
- ![Sql クエリのグラフィカル クエリ デザイナー](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "sql クエリのグラフィカル クエリ デザイナー")  
+ ![SQL クエリのグラフィカル クエリ デザイナー](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "SQL クエリのグラフィカル クエリ デザイナー")  
   
  次の表に各ペインの機能を示します。  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 06/22/2017
   
  最初の 3 つのペインのいずれかで情報を変更すると、変更内容が他のペインに反映されます。 たとえば、ダイアグラム ペインでテーブルを追加すると、そのテーブルは SQL ペインの [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリに自動的に追加されます。 また、SQL ペインでクエリにフィールドを追加すると、そのフィールドはグリッド ペインの一覧に自動的に追加され、ダイアグラム ペインのテーブルも更新されます。  
   
- 詳細については、「[クエリおよびビュー デザイナー ツール (Visual Database Tools)](http://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f)」を参照してください。  
+ 詳細については、「[クエリおよびビュー デザイナー ツール &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f)」を参照してください。  
   
 #### <a name="toolbar-for-the-graphical-query-designer"></a>グラフィカル クエリ デザイナーのツール バー  
  グラフィカル クエリ デザイナーのツール バーにあるボタンを使用すると、グラフィカル インターフェイスを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリをデザインできます。  
@@ -76,18 +76,18 @@ ms.lasthandoff: 06/22/2017
 |ボタン|Description|  
 |------------|-----------------|  
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。|  
-|**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は sql と rdl だけです。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。|  
-|![表示/非表示のダイアグラム ペインのトグル ボタン](../../reporting-services/report-data/media/rsqdicon-showhidediagram.gif "表示/非表示のダイアグラム ペインのトグル ボタン")|ダイアグラム ペインの表示と非表示を切り替えます。|  
-|![ペインの表示または非表示のグリッドの切り替え](../../reporting-services/report-data/media/rsqdicon-showhidegrid.gif "ペインの表示または非表示のグリッドの切り替え")|グリッド ペインの表示と非表示を切り替えます。|  
-|![Sql ペインの表示切り替えを非表示を切り替える](../../reporting-services/report-data/media/rsqdicon-showhidesql.gif "を表示するか、sql ペインの表示切り替えを非表示にします。")|SQL ペインの表示と非表示を切り替えます。|  
-|![表示または非表示の結果ペインの表示切り替え](../../reporting-services/report-data/media/rsqdicon-showhideresult.gif "ペインの表示または非表示の結果の切り替え")|結果ペインの表示と非表示を切り替えます。|  
-|![クエリを実行](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリを実行")|クエリを実行します。|  
-|![SQL ペイン] で [SQL の確認](../../reporting-services/report-data/media/rsqdicon-verifysql.gif "SQL ペインのボタンで SQL の確認")|クエリ テキストの構文が正しいかどうかを確認します。|  
-|![選択したフィールドで昇順で並べ替えを設定](../../reporting-services/report-data/media/rsqdicon-sortascending.gif "設定選択したフィールドで昇順で並べ替え")|ダイアグラム ペインで選択した列の並べ替え順序を **[昇順で並べ替え]** に設定します。|  
-|![選択したフィールドで降順で並べ替えを設定](../../reporting-services/report-data/media/rsqdicon-sortdescending.gif "設定選択したフィールドで降順で並べ替え")|ダイアグラム ペインで選択した列の並べ替え順序を **[降順で並べ替え]** に設定します。|  
-|![選択したフィールドでフィルターの削除](../../reporting-services/report-data/media/rsqdicon-removefilter.gif "選択したフィールドでフィルターの削除")|フィルターを持つものとしてマークされているダイアグラム ペインで選択した列のフィルターの削除 (![選択したフィルター列の横にあるフィルター グラフィック](../../reporting-services/report-data/media/rsqdicon-filter.gif "選択したフィルター列の横にある画像のフィルター処理"))。|  
-|![選択したフィールドの Group By を使用して](../../reporting-services/report-data/media/rsqdicon-usegroupby.gif "を使用してグループを選択したフィールドの")|グリッド ペインの **[グループ化]** 列の表示と非表示を切り替えます。 **[グループ化]** が有効になっている場合、グリッド ペインに **[グループ化]** という列が追加で表示されます。このとき、クエリで選択されている各列の既定値は **[グループ化]**になります。つまり、選択列が SQL テキストの Group By 句に追加されます。 [グループ化] ボタンは、GROUP BY 句を自動的に追加し、そこに、SELECT 句のすべての列を含める場合に使用します。 SELECT 句に集計関数の呼び出し (SUM(ColumnName) など) が含まれるとき、それを結果セットに表示する場合は、それぞれの非集計列を GROUP BY 句に追加します。<br /><br /> 結果ペインに表示するには、その値の計算に使用する集計関数をクエリの各列に対して定義するか、SQL クエリの GROUP BY 句でクエリの列を指定する必要があります。|  
-|![ダイアグラム ペインに新しいテーブルを追加](../../reporting-services/report-data/media/rsqdicon-addtable.gif "ダイアグラム ペインに新しいテーブルの追加")|データ ソースからダイアグラム ペインに新しいテーブルを追加します。<br /><br /> **注** 新しいテーブルを追加する場合、クエリ デザイナーは、データ ソースに対する外部キー リレーションシップの検出を試みます。 テーブルを追加した後、テーブル間のリンクによって表される外部キー リレーションシップが正しいことを確認してください。|  
+|**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は sql と rdl だけです。 詳細については、「 [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。|  
+|![[ダイアグラム ペインの表示/非表示] 切り替えボタン](../../reporting-services/report-data/media/rsqdicon-showhidediagram.gif "[ダイアグラム ペインの表示/非表示] 切り替えボタン")|ダイアグラム ペインの表示と非表示を切り替えます。|  
+|![グリッド ペインの表示/非表示の切り替え](../../reporting-services/report-data/media/rsqdicon-showhidegrid.gif "グリッド ペインの表示/非表示の切り替え")|グリッド ペインの表示と非表示を切り替えます。|  
+|![SQL ペインの表示/非表示の切り替え](../../reporting-services/report-data/media/rsqdicon-showhidesql.gif "SQL ペインの表示/非表示の切り替え")|SQL ペインの表示と非表示を切り替えます。|  
+|![結果ペインの表示/非表示の切り替え](../../reporting-services/report-data/media/rsqdicon-showhideresult.gif "結果ペインの表示/非表示の切り替え")|結果ペインの表示と非表示を切り替えます。|  
+|![クエリを実行する](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリを実行する")|クエリを実行します。|  
+|![SQL ウィンドウで SQL の確認](../../reporting-services/report-data/media/rsqdicon-verifysql.gif "SQL ウィンドウのボタンで SQL の確認")|クエリ テキストの構文が正しいかどうかを確認します。|  
+|![選択したフィールドでの昇順による並べ替え](../../reporting-services/report-data/media/rsqdicon-sortascending.gif "選択したフィールドでの昇順による並べ替え")|ダイアグラム ペインで選択した列の並べ替え順序を **[昇順で並べ替え]** に設定します。|  
+|![選択したフィールドでの降順による並べ替え](../../reporting-services/report-data/media/rsqdicon-sortdescending.gif "選択したフィールドでの降順による並べ替え")|ダイアグラム ペインで選択した列の並べ替え順序を **[降順で並べ替え]** に設定します。|  
+|![選択したフィールドのフィルターの削除](../../reporting-services/report-data/media/rsqdicon-removefilter.gif "選択したフィールドのフィルターの削除")|ダイアグラム ペインで選択された列のフィルター (![選択したフィルター列の隣にある画像のフィルター処理](../../reporting-services/report-data/media/rsqdicon-filter.gif "選択したフィルター列の隣にある画像のフィルター処理")) を解除します|  
+|![選択したフィールドでの Group By の使用](../../reporting-services/report-data/media/rsqdicon-usegroupby.gif "選択したフィールドでの Group By の使用")|グリッド ペインの **[グループ化]** 列の表示と非表示を切り替えます。 **[グループ化]** が有効になっている場合、グリッド ペインに **[グループ化]** という列が追加で表示されます。このとき、クエリで選択されている各列の既定値は **[グループ化]**になります。つまり、選択列が SQL テキストの Group By 句に追加されます。 [グループ化] ボタンは、GROUP BY 句を自動的に追加し、そこに、SELECT 句のすべての列を含める場合に使用します。 SELECT 句に集計関数の呼び出し (SUM(ColumnName) など) が含まれるとき、それを結果セットに表示する場合は、それぞれの非集計列を GROUP BY 句に追加します。<br /><br /> 結果ペインに表示するには、その値の計算に使用する集計関数をクエリの各列に対して定義するか、SQL クエリの GROUP BY 句でクエリの列を指定する必要があります。|  
+|![ダイアグラム ペインへの新しいテーブルの追加](../../reporting-services/report-data/media/rsqdicon-addtable.gif "ダイアグラム ペインへの新しいテーブルの追加")|データ ソースからダイアグラム ペインに新しいテーブルを追加します。<br /><br /> **注** 新しいテーブルを追加する場合、クエリ デザイナーは、データ ソースに対する外部キー リレーションシップの検出を試みます。 テーブルを追加した後、テーブル間のリンクによって表される外部キー リレーションシップが正しいことを確認してください。|  
   
 #### <a name="example"></a>例  
  次のクエリは、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの **Person** テーブルから姓の一覧を取得します。  
@@ -121,9 +121,9 @@ EXEC uspGetEmployeeManagers '1';
 |ボタン|Description|  
 |------------|-----------------|  
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。|  
-|**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は sql と rdl だけです。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。|  
+|**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は sql と rdl だけです。 詳細については、「 [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。|  
 |![汎用クエリ デザイナー ボタンのアイコン](../../reporting-services/report-data/media/icongenericquerydesigner.gif "汎用クエリ デザイナー ボタンのアイコン")|クエリ テキスト ビューまたはストアド プロシージャ ビューを維持したまま、汎用クエリ デザイナーとグラフィカル クエリ デザイナーを切り替えます。|  
-|![クエリを実行](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリを実行")|選択したテーブルのすべての列が選択されます。|  
+|![クエリを実行する](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリを実行する")|選択したテーブルのすべての列が選択されます。|  
   
 ### <a name="command-type-storedprocedure"></a>コマンドの種類 (StoredProcedure)  
  コマンドの種類が **[StoredProcedure]** の場合、グラフィカル クエリ デザイナーには、データ ソースで利用可能なストアド プロシージャを一覧にしたドロップダウン リストと結果ペインが表示されます。 次の表に各ペインの機能を示します。  
@@ -139,8 +139,8 @@ EXEC uspGetEmployeeManagers '1';
 |ボタン|Description|  
 |------------|-----------------|  
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。|  
-|**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は sql と rdl だけです。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。|  
-|![クエリを実行](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリを実行")|選択されたストアド プロシージャを実行します。|  
+|**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は sql と rdl だけです。 詳細については、「 [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。|  
+|![クエリを実行する](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリを実行する")|選択されたストアド プロシージャを実行します。|  
 |[ストアド プロシージャ] ドロップダウン リスト|下矢印をクリックすると、データ ソースで利用可能なストアド プロシージャが一覧表示されます。 この一覧から目的のストアド プロシージャをクリックして選択します。|  
   
 #### <a name="example"></a>例  
@@ -151,10 +151,10 @@ EXEC uspGetEmployeeManagers '1';
 ## <a name="see-also"></a>参照  
  [クエリ デザイン ツール (SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [SQL Server の接続の種類 (SSRS)](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)   
- [OLE DB の接続の種類 (SSRS)](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)   
+ [SQL Server の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)   
+ [OLE DB の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)   
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Oracle の接続の種類 (SSRS)](../../reporting-services/report-data/oracle-connection-type-ssrs.md)   
+ [Oracle の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md)   
  [RSReportDesigner 構成ファイル](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](http://msdn.microsoft.com/library/200903f4-1208-4563-9dca-26aabaacfa20)  
   

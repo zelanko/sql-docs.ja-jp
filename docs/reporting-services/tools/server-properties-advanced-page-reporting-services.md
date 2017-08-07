@@ -1,5 +1,5 @@
 ---
-title: "サーバーのプロパティ ([詳細] ページ) - Reporting Services |Microsoft ドキュメント"
+title: "[サーバーのプロパティ] ([詳細設定] ページ) - Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b5cd82621ecd65bb56b8a5a2eb0314935fd3a37a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>[サーバーのプロパティ] ([詳細設定] ページ) - Reporting Services
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
  レポート実行情報を実行ログに保持する日数。 このプロパティの有効値は、 **-1** - **2**、**147**、**483**、**647**です。 値が **-1** の場合、エントリは実行ログ テーブルから削除されません。 既定値は **60**です。  
  
 > [!NOTE] 
-> 値を設定**0**は*削除*実行ログからすべてのエントリ。 値**-1**実行ログのエントリを保持し、削除されません。
+> **0** の値を設定すると、実行ログからすべてのエントリが*削除*されます。 **-1** の値を設定すると、実行ログのエントリは保持され、削除されません。
   
  **SessionTimeout**  
  セッションがアクティブな状態になっている期間 (秒単位)。 既定値は **600**です。  
@@ -114,7 +114,7 @@ ms.lasthandoff: 06/22/2017
  ユーザーがレポート サーバーを使用してデータ ソース接続をテストする際に、クライアント コンピューターに詳細なエラー メッセージが送信されるようにするかどうかを指定します。 既定値は **true**です。 このオプションを **false**に設定した場合は、一般的なエラー メッセージだけが送信されます。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバーのプロパティを設定する &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+ [レポート サーバーのプロパティを設定する (Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Management Studio でレポート サーバーに接続する](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Reporting Services のプロパティ](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties.md)   
  [Management Studio のレポート サーバーの F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   

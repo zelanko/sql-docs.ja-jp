@@ -26,17 +26,17 @@ caps.latest.revision: 61
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e940ba8880aa2d1c4e4677c779b6984b2e6d4dde
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  レプリケーション管理オブジェクト (RMO) は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーション機能をカプセル化するマネージ コード アセンブリです。 RMO は、<xref:Microsoft.SqlServer.Replication> 名前空間によって実装されます。  
+  レプリケーション管理オブジェクト (RMO) は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーション機能をカプセル化するマネージ コード アセンブリです。 RMO は <xref:Microsoft.SqlServer.Replication> 名前空間により実装されます。  
   
  以下のセクションのトピックでは、レプリケーション タスクをプログラムから制御する場合の RMO の使用方法について説明します。  
   
@@ -150,9 +150,9 @@ ms.lasthandoff: 06/22/2017
 ## <a name="connecting-to-a-replication-server"></a>レプリケーション サーバーへの接続  
  RMO プログラミング オブジェクトでは、<xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスのインスタンスを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を作成する必要があります。 サーバーへの接続は、RMO プログラミング オブジェクトとは別に作成されます。 接続はインスタンスの作成中に RMO オブジェクトに渡されるか、オブジェクトの `P:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContex`t プロパティに割り当てることで渡されます。 この方法では、RMO プログラミング オブジェクトおよび接続オブジェクト インスタンスを別々に作成および管理することが可能となり、単一の接続オブジェクトを複数の RMO プログラミング オブジェクトと共に再利用することができます。 レプリケーション サーバーへの接続には、次の規則が適用されます。  
   
--   接続で使用するすべてのプロパティは、特定の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクト用に定義されています。  
+-   指定された <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトに、すべての接続プロパティを定義します。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンスへの接続には、独自の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトが必要です。  
+-   各 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに対する接続に、それぞれ独自の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトが含まれている必要があります。  
   
 -   <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトが、サーバー上で作成またはアクセスされる RMO プログラミング オブジェクトの `P:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext` プロパティに割り当てられます。  
   
@@ -162,11 +162,11 @@ ms.lasthandoff: 06/22/2017
   
 -   接続を作成し、サーバーに正常にログオンするための認証情報はすべて <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトで指定されます。  
   
--   既定は Windows 認証です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用する場合、<xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure%2A> は **false** に設定し、<xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login%2A> と <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password%2A> には有効な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログオンおよびパスワードが設定されている必要があります。 セキュリティ資格情報は常にセキュリティ保護された状態で保存し、処理する必要があります。可能な限り、実行時に入力するようにします。  
+-   既定は Windows 認証です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用するには、<xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure%2A> を **false** に設定し、<xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login%2A> および <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password%2A> に、有効な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログオンおよびパスワードを設定しておく必要があります。 セキュリティ資格情報は常にセキュリティ保護された状態で保存し、処理する必要があります。可能な限り、実行時に入力するようにします。  
   
--   マルチ スレッド アプリケーションの場合は、各スレッドで別の<xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトを使用する必要があります。  
+-   マルチスレッド化されたアプリケーションの場合、各スレッドで別々の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトを使用します。  
   
- RMO オブジェクトで使用されたアクティブなサーバー接続を閉じるには、<xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトに対して <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> メソッドを呼び出します。  
+ RMO オブジェクトで使用された、アクティブなサーバー接続を閉じるには、<xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> オブジェクトに対して <xref:Microsoft.SqlServer.Management.Common.ServerConnection> メソッドを呼び出します。  
   
 ## <a name="setting-rmo-properties"></a>RMO プロパティの設定  
  RMO プログラミング オブジェクトのプロパティは、サーバー上のこれらのレプリケーション オブジェクトのプロパティを表します。 サーバー上に新しいレプリケーション オブジェクトを作成するとき、RMO プロパティを使用してこれらのオブジェクトを定義します。 既存のオブジェクトの場合、RMO プロパティは既存のオブジェクトのプロパティを表しますが、変更できるのは書き込み可能または設定可能なプロパティのみです。 プロパティは、新しいオブジェクトまたは既存のオブジェクトに設定できます。  
@@ -183,7 +183,7 @@ ms.lasthandoff: 06/22/2017
 >  複数の RMO クライアントまたは複数の RMO プログラミング オブジェクト インスタンスが、サーバー上の同じレプリケーション オブジェクトにアクセスする場合、RMO オブジェクトの **Refresh** メソッドを呼び出して、サーバー上のオブジェクトの現在の状態に基づいてプロパティを更新できます。  
   
 ### <a name="caching-property-changes"></a>プロパティの変更のキャッシュ  
- <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> プロパティが <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes.CaptureSql> に設定されている場合、いずれかの実行方法を使用して 1 つのバッチで手動で実行できるよう RMO によって生成されるすべての [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントが取得されます。 RMO を使用するとプロパティの変更をキャッシュでき、オブジェクトの `M:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges` メソッドを使用して 1 つのバッチでまとめてコミットできます。 プロパティの変更をキャッシュするには、オブジェクトの `P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges` プロパティを **true** に設定する必要があります。 RMO でプロパティの変更をキャッシュする場合、変更がサーバーに送信されるタイミングはまだ <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトによって制御されています。 レプリケーション オブジェクトのプロパティのキャッシュの詳細については、「[ディストリビューターとパブリッシャーのプロパティの表示および変更](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)」を参照してください。  
+ <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> プロパティが <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes.CaptureSql> に設定されている場合、RMO により生成されるすべての [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントがキャプチャされ、いずれかの実行メソッドを使用して 1 つのバッチで手動で実行できます。 RMO を使用するとプロパティの変更をキャッシュでき、オブジェクトの `M:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges` メソッドを使用して 1 つのバッチでまとめてコミットできます。 プロパティの変更をキャッシュするには、オブジェクトの `P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges` プロパティを **true** に設定する必要があります。 RMO におけるプロパティの変更がキャッシュされる場合でも、変更がいつサーバーに送られるのかは <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトによって制御されます。 レプリケーション オブジェクトのプロパティのキャッシュの詳細については、「[ディストリビューターとパブリッシャーのプロパティの表示および変更](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> クラスでは、プロパティを設定するときに明示的なトランザクションの宣言がサポートされますが、そのようなトランザクションでは内部的なレプリケーション トランザクションに干渉する場合があるため、予期しない結果が生じる可能性があります。RMO では使用しないでください。  

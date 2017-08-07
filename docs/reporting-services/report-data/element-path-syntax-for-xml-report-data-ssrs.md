@@ -1,5 +1,5 @@
 ---
-title: "XML レポート データ (SSRS) の要素パス構文 |Microsoft ドキュメント"
+title: "XML レポート データの要素パス構文 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -18,18 +18,18 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7c25d6665198e0392aa70d649ca658adec84d2de
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML レポート データの要素パス構文 (SSRS)
   レポート デザイナーでは、大文字と小文字が区別される要素パスを定義して、レポートに使用するデータを XML データ ソースから指定します。 要素パスとは、XML データ ソースにおける XML 階層のノードとその属性の走査方法を指定するものです。 データセット クエリを空にするか、XML **Query** の XML **ElementPath** を空にした場合、既定の要素パスが使用されます。 XML データ ソースからデータが取得されると、テキスト値を持つ要素ノードおよび要素ノードの属性が、結果セットにおける列になります。 クエリを実行すると、これらのノードと属性の値が、行データになります。 [レポート データ] ペインでは、列がデータセット フィールド コレクションとして表示されます。 このトピックでは、要素パス構文について説明します。  
   
 > [!NOTE]  
->  要素パス構文は、名前空間に依存しません。 要素パスで名前空間を使用するには、XML **ElementPath** 要素 (「[XML レポート データの XML クエリ構文 (SSRS)](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)」を参照) を含む XML クエリ構文を使用します。  
+>  要素パス構文は、名前空間に依存しません。 要素パスで名前空間を使用するには、XML **ElementPath** 要素 (「[XML レポート データの XML クエリ構文 &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)」を参照) を含む XML クエリ構文を使用します。  
   
  次の表に、要素パスを定義する際の表記規則を示します。  
   
@@ -37,9 +37,9 @@ ms.lasthandoff: 06/22/2017
 |----------------|--------------|  
 |**太字**|記載されているとおりに入力する必要があるテキストを示します。|  
 |(& a) #124 です。(縦棒)|構文項目に複数の選択肢があることを示します。 選択できる項目は 1 つだけです。|  
-|`[ ]`(かっこ)|省略可能な構文項目。 角かっこは入力しません。|  
+|`[ ]` (角かっこ)|省略可能な構文項目。 角かっこは入力しません。|  
 |**{ }** (中かっこ)|構文項目のパラメーターを区切ります。|  
-|[**,**...*n*]|先行する項目が繰り返せることを示します *n* 回数。 項目はコンマで区切ります。|  
+|[**,**...*n*]|先行する項目を *n* 回繰り返せることを示します。 項目はコンマで区切ります。|  
   
 ## <a name="syntax"></a>構文  
   
@@ -80,16 +80,16 @@ XMLLocalName :: =
 |項目|定義|  
 |----------|----------------|  
 |Element path|XML ドキュメント内のノードのシーケンス、つまり、どのようにノードをたどっていけば、XML データ ソースからデータセットのフィールド データを取得できるかを定義します。|  
-|**ElementNode**|XML ドキュメント内の XML ノードです。 各ノードは他のノードと階層的な関係にあり、タグによって指定されます。 たとえば、\<顧客 > ルート要素ノードです。 \<顧客 > のサブ要素は、\<顧客 >。|  
+|**ElementNode**|XML ドキュメント内の XML ノードです。 各ノードは他のノードと階層的な関係にあり、タグによって指定されます。 たとえば、\<Customers> は、ルート要素ノードです。 \<Customer> は、\<Customers> のサブ要素です。|  
 |**XMLName**|ノードの名前。 たとえば、Customers ノードの名前は Customers です。 すべてのノード名を一意に識別できるように、 **XMLName** の先頭には名前空間識別子を付けることができます。|  
 |**[エンコード]**|この要素の **Value** はエンコードされた XML であり、この要素のサブ要素としてデコードおよび追加する必要があることを示します。|  
 |**FieldList**|データの取得に使用する一連の要素と属性を定義します。<br /><br /> 指定しなかった場合は、すべての属性およびサブ要素がフィールドとして使用されます。 空のフィールド リストが指定されている場合 (**{}**)、このノードのフィールドは使用されません。<br /><br /> **FieldList** には、 **Value** と **Element** または **ElementNode**の両方が含まれない場合があります。|  
 |**フィールド**|データセットのフィールドとして取得するデータを指定します。|  
-|**属性**|**ElementNode**内に指定される名前と値のペアです。 など、要素ノードで\<Customer ID =「1」>、 **ID**属性と **@ID(整数)**対応するデータ フィールドに「1」は整数型として返します**ID**です。|  
-|**Value**|要素の値です。 **Value** は、要素パス内で最後の **ElementNode** でのみ使用できます。 たとえば、ため\<を返す > の値を要素パスの末尾に追加した場合、リーフ ノードは、**返す {@}**は**椅子に座ったまま**です。|  
+|**属性**|**ElementNode**内に指定される名前と値のペアです。 たとえば、要素ノード \<Customer ID="1"> において、**ID** は属性です。**@ID(Integer)** は、対応するデータ フィールド (**ID**) に整数型の "1" を返します。|  
+|**値**|要素の値です。 **Value** は、要素パス内で最後の **ElementNode** でのみ使用できます。 たとえば、\<Return> はリーフ ノードであるため、これを要素パスの最後に追加した場合、**Return {@}** は **Chair** になります。|  
 |**Element**|指定されたサブ要素の値です。 たとえば、Customers {}/Customer {}/LastName とすると、LastName 要素についてのみ値が取得されます。|  
 |**型**|この要素から作成されたフィールドに使用するデータ型 (省略可) です。|  
-|**NamespacePrefix**|**NamespacePrefix** は XML Query 要素で定義されます。 XML Query 要素が存在しない場合、XML **ElementPath** の名前空間は無視されます。 XML Query 要素が存在する場合は、XML **ElementPath** に属性 **IgnoreNamespaces**を使用できます (省略可)。 IgnoreNamespaces が **true** の場合、XML **ElementPath** と XML ドキュメントの名前空間は無視されます。 詳細については、「[XML レポート データの XML クエリ構文 (SSRS)](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)」を参照してください。|  
+|**NamespacePrefix**|**NamespacePrefix** は XML Query 要素で定義されます。 XML Query 要素が存在しない場合、XML **ElementPath** の名前空間は無視されます。 XML Query 要素が存在する場合は、XML **ElementPath** に属性 **IgnoreNamespaces**を使用できます (省略可)。 IgnoreNamespaces が **true**の場合、XML **ElementPath** と XML ドキュメントの名前空間は無視されます。 詳細については、「[XML レポート データの XML クエリ構文 &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)」を参照してください。|  
   
 ## <a name="example---no-namespaces"></a>例 - 名前空間なし  
  データ ソースとして、XML ドキュメント (Customers.xml) を使用した例を次に示します。 要素パスの構文を示しながら、データセットを定義するクエリでその要素パスを使用した場合にどのような結果が得られるかを説明しています。  
@@ -210,8 +210,8 @@ XMLLocalName :: =
   
 ## <a name="see-also"></a>参照  
  [XML の接続の種類 (SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
- [Reporting Services チュートリアル (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [レポート データ ペインでのフィールドの追加、編集、更新 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
+ [Reporting Services チュートリアル &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [レポート データ ペインでのフィールドの追加、編集、更新 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
   
 

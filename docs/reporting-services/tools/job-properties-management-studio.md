@@ -1,5 +1,5 @@
 ---
-title: "ジョブのプロパティ (Management Studio) |Microsoft ドキュメント"
+title: "[ジョブのプロパティ] (Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="job-properties-management-studio"></a>[ジョブのプロパティ] (Management Studio)
@@ -75,6 +75,6 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>参照  
  [Management Studio のレポート サーバーの F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Management Studio でレポート サーバーに接続する](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Manage a Running Process](../../reporting-services/subscriptions/manage-a-running-process.md)  
+ [実行中の処理を管理する](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   

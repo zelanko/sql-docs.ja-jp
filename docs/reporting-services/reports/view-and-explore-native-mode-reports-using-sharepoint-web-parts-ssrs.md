@@ -1,5 +1,5 @@
 ---
-title: "表示し、SharePoint Web パーツ (SSRS) を使用してネイティブ モードのレポートを探索 |Microsoft ドキュメント"
+title: "SharePoint Web パーツを使用したネイティブ モードのレポートの表示と探索 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -15,18 +15,18 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 507cac75588632cfd89f5275ee7038a49b8cdfc5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
 
 > [!IMPORTANT]  
->  SQL Server Reporting Services では、ネイティブ モード レポート サーバーから SharePoint サイトでレポート サーバー コンテンツにアクセスする web パーツをネイティブ モード (RSWebParts.cab) を使用してをサポートしていません。 代わりに、 [SharePoint サイトのレポート ビューアー Web パーツ](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) を使用してください。  
+>  SQL Server Reporting Services では、ネイティブ モードの (RSWebParts.cab) Web パーツを使用した、ネイティブ モードのレポート サーバーから SharePoint サイト上のレポート サーバー コンテンツへのアクセスがサポートされなくなりました。 代わりに、 [SharePoint サイトのレポート ビューアー Web パーツ](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) を使用してください。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、特定のバージョンのレポート サーバーにおいて、特定の配置モードで動作する Web パーツがいくつかあります。  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 06/22/2017
   
 -   次のバージョンの SharePoint 製品およびテクノロジがサポートされています。  
   
-    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
+    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 および [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007。  
   
     -   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] と [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]の両方で使用できます。  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="install-web-parts-using-powershell"></a>PowerShell を使用した Web パーツのインストール  
   
-1.  SharePoint サーバー上のフォルダーに **RSWebParts.cab** をコピーします。 これを SharePoint サーバー上の任意のフォルダーにコピーしておき、Web パーツのインストールが終わった後で削除できます。 既定では、SQL Server 2014 Reporting Services と、以前は RSWebParts.cab ファイルを次のフォルダーにインストールします。  
+1.  SharePoint サーバー上のフォルダーに **RSWebParts.cab** をコピーします。 これを SharePoint サーバー上の任意のフォルダーにコピーしておき、Web パーツのインストールが終わった後で削除できます。 SQL Server 2014 Reporting Services 以前のバージョンでは、RSWebParts.cab ファイルが既定で次のフォルダーにインストールされます。  
   
     ```  
     C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint  
@@ -148,7 +148,7 @@ ms.lasthandoff: 06/22/2017
   
 6.  ページが編集モードのときに、レポート ビューアー Web パーツで **[Web パーツの編集]** をクリックします。  
   
-7.  **[レポート マネージャー URL]**に、アクセス対象のネイティブ モードのレポート サーバーに関連付けられているレポート マネージャー インスタンスの URL を入力します。 既定では、レポート マネージャーの URL は、次の構文: **http://\<servername >/reports**です。  
+7.  **[レポート マネージャー URL]**に、アクセス対象のネイティブ モードのレポート サーバーに関連付けられているレポート マネージャー インスタンスの URL を入力します。 レポート マネージャー URL の既定の構文は、**http://\<servername>/reports** です。  
   
 8.  **[レポート パス]**で、スラッシュ、フォルダーのパス、レポート名の順に指定します。 サーバー名やレポート マネージャーの仮想ディレクトリは **含めないでください** 。 たとえば、Adventure Works フォルダーにある Company Sales レポートを開くには、「 **/Adventure Works/Company Sales**」と指定します。 Products レポートがレポート サーバーのルート フォルダーの **/Products**にある別の例を次に示します。  
   
@@ -174,4 +174,4 @@ ms.lasthandoff: 06/22/2017
   
     3.  **[レポート ビューアー]**をクリックします。  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他のご不明な点は、 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

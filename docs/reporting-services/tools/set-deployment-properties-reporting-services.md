@@ -1,5 +1,5 @@
 ---
-title: "配置プロパティ (Reporting Services) を設定 |Microsoft ドキュメント"
+title: "配置プロパティを設定する (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -20,11 +20,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 30d542287f81032aa1bc2540d461a8f8c163b2f9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="set-deployment-properties-reporting-services"></a>配置プロパティを設定する (Reporting Services)
@@ -33,10 +33,10 @@ ms.lasthandoff: 06/22/2017
  プロジェクト構成でプロジェクトのプロパティのセットを作成および管理するには、構成マネージャーを使用します。 構成マネージャーは、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]の基となる [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] によってサポートされる機能です。  
   
 > [!NOTE]  
->  この機能は、インストール後に Reporting Services を構成するために使用する Reporting Services 構成マネージャーと混同しないようにしてください。 詳細については、「[レポート サーバーを構成および管理する (SSRSネイティブ モード)](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)」を参照してください。  
+>  この機能は、インストール後に Reporting Services を構成するために使用する Reporting Services 構成マネージャーと混同しないようにしてください。 詳細については、「[レポート サーバーを構成および管理する](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) &#40;SSRS ネイティブ モード&#41;」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] では、Report Server プロジェクトまたはソリューションからレポートをパブリッシュするアクションは、*レポートの配置*として知られています。  
+>  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]では、Report Server プロジェクトまたはソリューションからレポートをパブリッシュするアクションは、 *レポートの配置*として知られています。  
   
 ### <a name="to-set-deployment-properties"></a>配置プロパティを設定するには  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスで、 **[構成マネージャー]**をクリックします。  
   
-3.  **[構成マネージャー]** ダイアログ ボックスで、編集する構成を選択します。 現在アクティブな構成として表示される**Active (***\<構成 >***)**です。  
+3.  **[構成マネージャー]** ダイアログ ボックスで、編集する構成を選択します。 現在アクティブな構成は **[アクティブ] (***\<configuration>***)** と表示されます。  
   
 4.  ソリューションのプロジェクトごとに、 **[プロジェクトのコンテキスト]**で、 **[ビルド]** または **[配置]**をオンまたはオフにします。  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 06/22/2017
  [データ ソースとレポートのパブリッシュ](../../reporting-services/reports/publishing-data-sources-and-reports.md)   
  [レポートのプレビュー](../../reporting-services/reports/previewing-reports.md)   
  [レポート デザイナーの F1 ヘルプ](../../reporting-services/tools/report-designer-f1-help.md)   
- [SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 (SSRS)](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [[プロパティ ページ] ダイアログ ボックス](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [レポート サーバーへのレポートのパブリッシュ](../../reporting-services/reports/publishing-reports-to-a-report-server.md)  
   

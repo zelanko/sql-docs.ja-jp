@@ -1,5 +1,5 @@
 ---
-title: "URL (レポート ビルダーおよび SSRS) へのハイパーリンクの追加 |Microsoft ドキュメント"
+title: "URL へのハイパーリンクの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/07/2016
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c4d66e7d74d06cbad20351f80a312be95cc253c0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>URL へのハイパーリンクの追加 (レポート ビルダーおよび SSRS)
@@ -29,11 +29,11 @@ ms.lasthandoff: 06/22/2017
   
 *   指定した **URL でブラウザーを開くハイパーリンクを追加** できます。 ハイパーリンクには、静的な URL または URL を評価する式を使用できます。 URL を保持しているデータベースのフィールドがある場合は、式にそのフィールドを指定し、レポートにハイパーリンクの動的な一覧を渡すことができます。 URL を指定する場合、レポートを読む人がその URL にアクセスできることを確認します。  
    
-*  自分やユーザーに URL 要求を利用して表示する許可が与えられているレポート サーバー上であれば、そこにあるレポートへの **ドリルスルーを URL を指定して作成** できます。 たとえば、レポートを指定して、レポートがユーザーに最初に表示されたときにドキュメント マップを非表示にすることができます。 詳細については、「[URL アクセス (SSRS)](../../reporting-services/url-access-ssrs.md)」と「[外部アイテムへのパスの指定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)」を参照してください。
+*  自分やユーザーに URL 要求を利用して表示する許可が与えられているレポート サーバー上であれば、そこにあるレポートへの **ドリルスルーを URL を指定して作成** できます。 たとえば、レポートを指定して、レポートがユーザーに最初に表示されたときにドキュメント マップを非表示にすることができます。 詳細については、「[URL アクセス &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)」と「[外部アイテムへのパスの指定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)」を参照してください。
  
- *  また、同じレポートの**特定の場所にブックマークを追加**できます。 
+ *  また、同じレポートの **特定の場所にブックマークを追加** できます。 
   
-「[チュートリアル: テキストの書式設定 (レポート ビルダー)](../../reporting-services/tutorial-format-text-report-builder.md)」で、サンプル データを利用し、ハイパーリンクの追加をお試しください。  
+「[チュートリアル: テキストの書式設定 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-format-text-report-builder.md)」で、サンプル データを利用し、ハイパーリンクの追加をお試しください。  
   
 > [!NOTE]  
 >  データセット フィールドにバインドされているリンクは、悪意的な改ざんに対して脆弱である可能性があります。 詳細については、「 [レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)」を参照してください。  
