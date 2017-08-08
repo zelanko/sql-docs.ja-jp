@@ -24,7 +24,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="job-properties-management-studio"></a>[ジョブのプロパティ] (Management Studio)
+# <a name="job-properties-management-studio"></a>[ジョブのプロパティ]\(Management Studio)
   **[ジョブのプロパティ]** ページを使用して、進行中のレポートまたはサブスクリプションを取り消す前にそれらの情報を表示できます。  
   
  このページを開くには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を起動して、レポート サーバーに接続し、 **[ジョブ]** フォルダーを開きます。 実行中のジョブを右クリックし、 **[プロパティ]**をクリックします。  
