@@ -16,11 +16,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
 ms.openlocfilehash: 2853583d3902f9b0da32e2b0e1c5a55b696d34e0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>SQL Server エージェント プロキシの作成
@@ -48,7 +48,7 @@ ms.lasthandoff: 06/23/2017
   
 -   資格情報を用意していない場合は、プロキシを作成する前に、まず資格情報を作成する必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント プロキシは、資格情報を使用して Windows ユーザー アカウントに関する情報を格納します。 資格情報で指定されたユーザーに対する権限が必要「ネットワーク経由でコンピューターへアクセス」(SeNetworkLogonRight) コンピューターを[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]が実行されています。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント プロキシは、資格情報を使用して Windows ユーザー アカウントに関する情報を格納します。 資格情報で指定されたユーザーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] が実行されているコンピューターでの "ネットワーク経由でコンピューターへアクセス" アクセス許可 (SeNetworkLogonRight) を持っている必要があります。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントは、ジョブ ステップを実行するごとに、プロキシからサブシステムへのアクセス許可を確認し、アクセスを確立します。 プロキシにサブシステムへのアクセス許可がない場合、ジョブ ステップは失敗します。 プロキシにアクセス許可がある場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントはプロキシで指定されているユーザーの権限を借用してジョブ ステップを実行します。  
   

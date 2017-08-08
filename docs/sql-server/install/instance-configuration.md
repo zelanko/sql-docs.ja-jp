@@ -1,5 +1,5 @@
 ---
-title: "インストール ウィザードのヘルプ |Microsoft ドキュメント"
+title: "インストール ウィザードのヘルプ | Microsoft Docs"
 ms.custom: 
 ms.date: 2017-04-21
 ms.prod: sql-server-2016
@@ -19,16 +19,16 @@ caps.latest.revision: 62
 ms.author: mikeray
 manager: jhubbard
 robots: noindex,nofollow
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 4b16feb70ed6de54240e3335a42ce6df8fa57b81
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="installation-wizard-help"></a>インストール ウィザードのヘルプ
 
-このトピックで構成ページの説明、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストール ウィザード。 
+このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの構成ページの一部について説明します。 
 
 ## <a name="instance-configuration"></a>インスタンスの構成
 **インストール ウィザードの** [インスタンスの構成] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスまたは名前付きインスタンスのどちらを作成するのかを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがまだインストールされていない場合は、名前付きインスタンスを指定しない限り、既定のインスタンスが作成されます。  
@@ -56,10 +56,10 @@ ms.lasthandoff: 06/23/2017
   
 -   [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] をインストールするアプリケーションでは、名前付きインスタンスとしてインストールする必要があります。 これにより、複数のアプリケーションが同じコンピューターにインストールされた場合に競合が発生する可能性が軽減されます。  
   
- **既定のインスタンス**  
+ **[既定のインスタンス]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスをインストールするには、このオプションを選択します。 1 台のコンピューターでホストできる既定のインスタンスは 1 つだけです。その他すべては名前付きインスタンスにする必要があります。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスをインストールしている場合は、その同じコンピューターに [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既定のインスタンスを追加できます。  
   
- **名前付きインスタンス**  
+ **[名前付きインスタンス]**  
  新しい名前付きインスタンスを作成するには、このオプションを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに名前を付ける際は、次の点に注意してください。  
   
 -   インスタンス名では大文字と小文字が区別されません。  
@@ -126,11 +126,10 @@ ms.lasthandoff: 06/23/2017
 >  ユーザー アカウント制御 (UAC) は Windows セキュリティ機能であり、管理操作または管理アプリケーションの承認を管理者が実行前に明示的に行う必要があります。 UAC は既定でオンになっているため、高度な特権を必要とする特定の操作について許可するよう求めるメッセージが表示されます。 UAC を構成して既定の動作を変更することも、特定のプログラム用に UAC をカスタマイズすることもできます。 UAC および UAC 構成の詳細については、「[User Account Control Step by Step Guide](http://go.microsoft.com/fwlink/?linkid=196350)」(Windows ユーザー アカウント制御手順ガイド) と「[User Account Control (Wikipedia)](http://go.microsoft.com/fwlink/?linkid=196351)」(ユーザー アクセス制御) を参照してください。  
   
 ### <a name="see-also"></a>参照  
- [サービス アカウントの構成 &#40;Analysis Services#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)
- [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
+ [サービス アカウントの構成 &#40;Analysis Services#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md) [Windows サービス アカウントと権限の構成 ](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
  ## <a name="analysis-services-configuration---data-directories"></a>Analysis Services の構成 - データ ディレクトリ
-  次の表にある既定のディレクトリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ中にユーザーが構成できます。 ローカル管理者および SQLServerMSASUser$ のメンバーにこれらのファイルにアクセスする権限が与えられた\<インスタンス > が作成され、セットアップ中にプロビジョニングされているセキュリティ グループです。  
+  次の表にある既定のディレクトリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ中にユーザーが構成できます。 これらのファイルにアクセスする権限は、ローカル管理者と、セットアップ中に作成されて準備される SQLServerMSASUser$\<インスタンス> セキュリティ グループのメンバーに付与されます。  
   
 ### <a name="uielement-list"></a>UI 要素の一覧  
   
@@ -163,18 +162,18 @@ ms.lasthandoff: 06/23/2017
  ディレクトリ、ファイルの場所、およびインスタンス ID の名前付けの詳細については、「[SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所](file-locations-for-default-and-named-instances-of-sql-server.md)」を参照してください。  
   
 ## <a name="database-engine-configuration---data-directories"></a>データベース エンジンの構成 - データ ディレクトリ
-  このページを使用して、インストール場所を指定する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]プログラムおよびデータ ファイル。 インストールの種類により、サポートされるストレージにはローカル ディスク、共有ストレージ、または SMB ファイル サーバーが含まれる場合があります。  
+  このページを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] のプログラムおよびデータ ファイルのインストール場所を指定します。 インストールの種類により、サポートされるストレージにはローカル ディスク、共有ストレージ、または SMB ファイル サーバーが含まれる場合があります。  
   
  SMB ファイル共有をディレクトリとして指定するには、サポートされている UNC パスを手動で入力する必要があります。 SMB ファイル共有を参照して指定することはできません。 SMB ファイル共有のサポートされる UNC パス形式は、" \\\Servername\ShareName\\..." です。  
   
-### <a name="stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>スタンドアロン インスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンス  
  次の表は、サポートされているストレージの種類と、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスで使用される既定のディレクトリの一覧です。これらのディレクトリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ中にユーザーが構成できます。  
   
 ### <a name="uielement-list"></a>UI 要素の一覧  
   
 |説明|サポートされているストレージの種類|既定のディレクトリ|推奨事項|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|データ ルート ディレクトリ|ローカル ディスク、SMB ファイル サーバー、共有ストレージ* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップでの Acl が構成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ディレクトリと構成の一部として継承が無効です。|  
+|データ ルート ディレクトリ|ローカル ディスク、SMB ファイル サーバー、共有ストレージ* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディレクトリの ACL が構成され、構成の一部として継承が無効になります。|  
 |ユーザー データベース ディレクトリ|ローカル ディスク、SMB ファイル サーバー、共有ストレージ*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data |ユーザー データ ディレクトリのベスト プラクティスは、ワークロードとパフォーマンスの要件によって異なります。|  
 |ユーザー データベース ログ ディレクトリ|ローカル ディスク、SMB ファイル サーバー、共有ストレージ*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|ログ ディレクトリに十分な領域があることを確認してください。|  
 |バックアップ ディレクトリ|ローカル ディスク、SMB ファイル サーバー、共有ストレージ*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup|データの損失を防ぐために適切な権限を設定して、バックアップ ディレクトリに書き込むための適切な権限が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのユーザー アカウントにあることを確認してください。 マップされたドライブをバックアップ ディレクトリに使用することはサポートされていません。|  
@@ -186,7 +185,7 @@ ms.lasthandoff: 06/23/2017
   
 |説明|サポートされているストレージの種類|既定のディレクトリ|推奨事項|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|データ ルート ディレクトリ|共有ストレージ、SMB ファイル サーバー|\<ドライブ: > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> ヒント: **[クラスター ディスクの選択]** ページで共有ディスクを選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しなかった場合、このフィールドの既定値は空白になります。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップでの Acl が構成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ディレクトリと構成の一部として継承が無効です。|  
+|データ ルート ディレクトリ|共有ストレージ、SMB ファイル サーバー|\<ドライブ>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> ヒント: **[クラスター ディスクの選択]** ページで共有ディスクを選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しなかった場合、このフィールドの既定値は空白になります。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディレクトリの ACL が構成され、構成の一部として継承が無効になります。|  
 |ユーザー データベース ディレクトリ|共有ストレージ、SMB ファイル サーバー|\<ドライブ:>Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> ヒント: **[クラスター ディスクの選択]** ページで共有ディスクを選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しなかった場合、このフィールドの既定値は空白になります。|ユーザー データ ディレクトリのベスト プラクティスは、ワークロードとパフォーマンスの要件によって異なります。|  
 |ユーザー データベース ログ ディレクトリ|共有ストレージ、SMB ファイル サーバー|\<ドライブ:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> ヒント: **[クラスター ディスクの選択]** ページで共有ディスクを選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しなかった場合、このフィールドの既定値は空白になります。|ログ ディレクトリに十分な領域があることを確認してください。|  
 |バックアップ ディレクトリ|ローカル ディスク、共有ストレージ、SMB ファイル サーバー|\<ドライブ:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup<br /><br /> ヒント: **[クラスター ディスクの選択]** ページで共有ディスクを選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しなかった場合、このフィールドの既定値は空白になります。|データの損失を防ぐために適切な権限を設定して、バックアップ ディレクトリに書き込むための適切な権限が SQL Server サービスのユーザー アカウントにあることを確認してください。 マップされたドライブをバックアップ ディレクトリに使用することはサポートされていません。|  
@@ -220,7 +219,7 @@ ms.lasthandoff: 06/23/2017
   
 ### <a name="see-also"></a>参照  
 ### <a name="analysis-services-configuration---data-directories"></a>Analysis Services の構成 - データ ディレクトリ
-  次の表にある既定のディレクトリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ中にユーザーが構成できます。 ローカル管理者および SQLServerMSASUser$ のメンバーにこれらのファイルにアクセスする権限が与えられた\<インスタンス > が作成され、セットアップ中にプロビジョニングされているセキュリティ グループです。  
+  次の表にある既定のディレクトリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ中にユーザーが構成できます。 これらのファイルにアクセスする権限は、ローカル管理者と、セットアップ中に作成されて準備される SQLServerMSASUser$\<インスタンス> セキュリティ グループのメンバーに付与されます。  
   
 #### <a name="uielement-list"></a>UI 要素の一覧  
   
@@ -253,7 +252,7 @@ ms.lasthandoff: 06/23/2017
  ディレクトリ、ファイルの場所、およびインスタンス ID の名前付けの詳細については、「[SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所](file-locations-for-default-and-named-instances-of-sql-server.md)」を参照してください。  
   
     
- [共有とファイル サーバー上の NTFS アクセス許可](http://go.microsoft.com/fwlink/?LinkID=206571) 
+ [ファイル サーバーの共有アクセス許可と NTFS アクセス許可](http://go.microsoft.com/fwlink/?LinkID=206571) 
 
 ## <a name="database-engine-configuration---filestream"></a>データベース エンジンの構成 - Filestream
   このページを使用すると、このインストールの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に対して FILESTREAM を有効にすることができます。 FILESTREAM は、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] varbinary(max) **BLOB (バイナリ ラージ オブジェクト) データをファイル システム上のファイルとして格納することにより、** と NTFS ファイル システムを統合します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、FILESTREAM データの挿入、更新、クエリ、検索、およびバックアップを行うことができます。 Win32 ファイル システム インターフェイスによるデータへのストリーミング アクセスが可能になります。  
@@ -308,7 +307,7 @@ ms.lasthandoff: 06/23/2017
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]sa パスワードを空白のままにしないでください。また、推測しやすいパスワードを設定しないでください。  
   
- **混合モード (Windows 認証または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証)**  
+ **混合モード (Windows 認証または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証)**  
  Windows 認証または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用してユーザー接続を許可します。 Windows ユーザー アカウントで接続するユーザーは、Windows によって検証される信頼関係接続を使用することができます。  
   
  混合モード認証を選択する必要があり、レガシ アプリケーションに対応するために SQL ログインを使用する必要もある場合は、必ずすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントに強力なパスワードを設定してください。  
@@ -316,11 +315,11 @@ ms.lasthandoff: 06/23/2017
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証は旧バージョンとの互換性を維持するためだけに提供されます。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- **パスワードを入力します。**  
+ **パスワードの入力**  
  システム管理者 (sa) ログインを入力および確認します。 パスワードは侵入者に対する防御の最前線であるため、システムのセキュリティにとって強力なパスワードを設定することは不可欠です。 sa パスワードを空白のままにしないでください。また、推測しやすいパスワードを設定しないでください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パスワードには、1 ~ 128 文字で、英字、記号、および数字の任意の組み合わせを含めることができます。 混合モード認証を選択する場合、インストール ウィザードの次のページに進む前に、強力な sa パスワードを入力する必要があります。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パスワードは、文字、記号、数字の組み合わせを含む 1 ～ 128 文字で指定できます。 混合モード認証を選択する場合、インストール ウィザードの次のページに進む前に、強力な sa パスワードを入力する必要があります。  
   
  **強力なパスワードのガイドライン**  
  強力なパスワードとは、他人によってたやすく推測されず、コンピューター プログラムを使用して簡単にはハッキングされないパスワードです。 強力なパスワードでは、次のような禁止された条件または用語を使用することはできません。  
@@ -356,31 +355,31 @@ ms.lasthandoff: 06/23/2017
  このページで入力するパスワードは、強力なパスワード ポリシーの要件を満たす必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用したオートメーションを使用している場合、必ず強力なパスワード ポリシーの要件を満たすパスワードを指定してください。  
   
 ### <a name="related-content"></a>関連コンテンツ  
- Windows 認証と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を参照してください[Choose an Authentication Mode](../../relational-databases/security/choose-an-authentication-mode.md)です。  
+ Windows 認証と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]詳細については、「[認証モードの選択](../../relational-databases/security/choose-an-authentication-mode.md)」をご覧ください。  
   
- 実行するアカウントの選択の詳細については、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]を参照してください[Windows サービス アカウントの構成とアクセス許可](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)です。
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を実行するアカウントの選択の詳細については、「[Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」をご覧ください。
   
 ## <a name="database-engine-configuration---tempdb"></a>データベース エンジンの構成 - TempDB
-  このページを使用して、 **tempdb**データとログ ファイルの場所、サイズ、拡張設定、およびファイルの数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]です。 インストールの種類により、サポートされるストレージにはローカル ディスク、共有ストレージ、または SMB ファイル サーバーが含まれる場合があります。  
+  このページを利用し、**tempdb** のデータとログ ファイルの場所、サイズ、拡張設定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] のファイル数を指定します。 インストールの種類により、サポートされるストレージにはローカル ディスク、共有ストレージ、または SMB ファイル サーバーが含まれる場合があります。  
   
  SMB ファイル共有をディレクトリとして指定するには、サポートされている UNC パスを手動で入力する必要があります。 SMB ファイル共有を参照して指定することはできません。 SMB ファイル共有のサポートされる UNC パス形式は、" \\\Servername\ShareName\\..." です。  
   
-### <a name="data-and-log-directories-for--a-stand-alone-instance-of--includessnoversionincludesssnoversion-mdmd"></a>スタンドアロン インスタンスのデータとログ ディレクトリ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="data-and-log-directories-for--a-stand-alone-instance-of--includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスのデータとログのディレクトリ  
  次の表は、サポートされているストレージの種類と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスの既定のディレクトリの一覧です。ディレクトリは、セットアップ中に構成できます。  
   
 |説明|サポートされているストレージの種類|既定のディレクトリ|推奨事項|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|**データ ディレクトリ**|ローカル ディスク、SMB ファイル サーバー、共有ストレージ* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップでの Acl が構成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ディレクトリと構成の一部として継承が無効です。<br /><br /> **temdb** ディレクトリのベスト プラクティスは、ワークロードとパフォーマンスの要件によって異なります。 複数のフォルダー/ドライブを指定し、データ ファイルを複数のボリュームに分散します。|  
+|**データ ディレクトリ**|ローカル ディスク、SMB ファイル サーバー、共有ストレージ* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディレクトリの ACL が構成され、構成の一部として継承が無効になります。<br /><br /> **temdb** ディレクトリのベスト プラクティスは、ワークロードとパフォーマンスの要件によって異なります。 複数のフォルダー/ドライブを指定し、データ ファイルを複数のボリュームに分散します。|  
 |**ログ ディレクトリ**|ローカル ディスク、SMB ファイル サーバー、共有ストレージ*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|ログ ディレクトリに十分な領域があることを確認してください。|  
   
  *共有ディスクがサポートされていますが、これは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスで推奨される方法ではありません。  
   
-### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>フェールオーバー クラスター インスタンスのデータとログ ディレクトリ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフェールオーバー クラスター インスタンスのデータとログのディレクトリ  
  次の表は、サポートされているストレージの種類と、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフェールオーバー クラスター インスタンスで使用される既定のディレクトリの一覧です。これらのディレクトリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ中にユーザーが構成できます。  
   
 |説明|サポートされているストレージの種類|既定のディレクトリ|推奨事項|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|**tempdb** データ ディレクトリ|ローカル ディスク、共有ストレージ、SMB ファイル サーバー|\<ドライブ:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> ヒント: **[クラスター ディスクの選択]** ページで共有ディスクを選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しなかった場合、このフィールドの既定値は空白になります。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップでの Acl が構成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ディレクトリと構成の一部として継承が無効です。<br /><br /> 指定のディレクトリ (複数のファイルが指定される場合、ディレクトリも複数になります) はすべてのクラスター ノードで有効にします。 フェールオーバー中に、 **tempdb** のディレクトリがフェールオーバーのターゲット ノード上で利用できない場合、SQL Server リソースはオンラインへの移行に失敗します。|  
+|**tempdb** データ ディレクトリ|ローカル ディスク、共有ストレージ、SMB ファイル サーバー|\<ドライブ:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> ヒント: **[クラスター ディスクの選択]** ページで共有ディスクを選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しなかった場合、このフィールドの既定値は空白になります。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディレクトリの ACL が構成され、構成の一部として継承が無効になります。<br /><br /> 指定のディレクトリ (複数のファイルが指定される場合、ディレクトリも複数になります) はすべてのクラスター ノードで有効にします。 フェールオーバー中に、 **tempdb** のディレクトリがフェールオーバーのターゲット ノード上で利用できない場合、SQL Server リソースはオンラインへの移行に失敗します。|  
 |**tempdb** ログ ディレクトリ|ローカル ディスク、共有ストレージ、SMB ファイル サーバー|\<ドライブ:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> ヒント: **[クラスター ディスクの選択]** ページで共有ディスクを選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しなかった場合、このフィールドの既定値は空白になります。|ユーザー データ ディレクトリのベスト プラクティスは、ワークロードとパフォーマンスの要件によって異なります。<br /><br /> 指定したディレクトリがすべてのクラスター ノードで有効であることを確認してください。 フェールオーバー中に、 **tempdb** のディレクトリがフェールオーバーのターゲット ノード上で利用できない場合、SQL Server リソースはオンラインへの移行に失敗します。<br /><br /> ログ ディレクトリに十分な領域があることを確認してください。|  
   
 ### <a name="uielement-list"></a>UI 要素の一覧  
@@ -388,11 +387,11 @@ ms.lasthandoff: 06/23/2017
   
 -   **ファイル数** は **tempdb**のデータ ファイルの合計数です。 既定値は 8 とセットアップ時に検出された論理コア数の小さいほうになります。 一般的なルールとして、論理プロセッサの数が 8 以下の場合、論理プロセッサと同じ数のデータ ファイルを使用します。 論理プロセッサの数が 8 より大きい場合、8 つのデータ ファイルを使用し、競合が続く場合、競合が許容できるレベルに減少するまでデータ ファイルの数を 4 の倍数 (最大で論理プロセッサの数) 分増やすか、ワークロード/コードを変更します。 
   
--   **初回サイズ (MB)** は各 **tempdb** データ ファイルの初回サイズです (MB 単位)。 既定値は 8 MB (または 4 MB を[!INCLUDE[ssexpress](../../includes/ssexpress_md.md)])。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]262,144 MB (256 GB) の初期ファイルの最大サイズを紹介します。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)]1024 MB の初期ファイルの最大サイズがありました。 すべての **tempdb** データ ファイルの初回サイズは同じです。 **tempdb** は SQL Server が起動するか、フェーズするたびに再作成されるため、通常の作業のワークロードに必要なサイズに近いサイズを指定する必要があります。 起動時にさらに効率的に **tempdb** を作成するには、[[データベースのファイルの瞬時初期化]](../../relational-databases/databases/database-instant-file-initialization.md) を有効にします。  
+-   **初回サイズ (MB)** は各 **tempdb** データ ファイルの初回サイズです (MB 単位)。 既定値は 8 MB です (または、[!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] の場合は 4 MB)。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] では、最大初期ファイル サイズ 262,144 MB (256 GB) が導入されます。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] の最大初期ファイル サイズは 1024 MB でした。 すべての **tempdb** データ ファイルの初回サイズは同じです。 **tempdb** は SQL Server が起動するか、フェーズするたびに再作成されるため、通常の作業のワークロードに必要なサイズに近いサイズを指定する必要があります。 起動時にさらに効率的に **tempdb** を作成するには、[[データベースのファイルの瞬時初期化]](../../relational-databases/databases/database-instant-file-initialization.md) を有効にします。  
   
 -   **合計初回サイズ (MB)** はすべての **tempdb** データ ファイルを合計したものです。  
   
--   **自動拡張 (MB)** はメガバイト単位で表した領域です。各 **tempdb** データ ファイルの領域が枯渇すると、このサイズ分だけ自動的に拡張します。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)]以降ではすべてのデータ ファイルがこの設定で指定した量だけ同時に拡張します。  
+-   **自動拡張 (MB)** はメガバイト単位で表した領域です。各 **tempdb** データ ファイルの領域が枯渇すると、このサイズ分だけ自動的に拡張します。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 以降では、すべてのデータ ファイルがこの設定で指定された量だけ同時に拡張します。  
   
 -   **自動拡張の合計 (MB)** は各自動拡張イベントを合計したものです。  
   
@@ -404,7 +403,7 @@ ms.lasthandoff: 06/23/2017
   
  **TempDB ログ ファイル** はログ ファイルの名前です。 自動的に作成されます。 次の設定は、 **tempdb** ログ ファイルにのみ適用されます。  
   
--   **初回サイズ (MB)** は **tempdb** ログ ファイルの初回サイズです。 既定値は 8 MB (または 4 MB を[!INCLUDE[ssexpress](../../includes/ssexpress_md.md)])。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]262,144 MB (256 GB) の初期ファイルの最大サイズを紹介します。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)]1024 MB の初期ファイルの最大サイズがありました。 **tempdb** は SQL Server が起動するか、フェーズするたびに再作成されるため、通常の作業のワークロードに必要なサイズに近いサイズを指定する必要があります。 起動時にさらに効率的に **tempdb** を作成するには、[[データベースのファイルの瞬時初期化]](../../relational-databases/databases/database-instant-file-initialization.md) を有効にします。  
+-   **初回サイズ (MB)** は **tempdb** ログ ファイルの初回サイズです。 既定値は 8 MB です (または、[!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] の場合は 4 MB)。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] では、最大初期ファイル サイズ 262,144 MB (256 GB) が導入されます。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] の最大初期ファイル サイズは 1024 MB でした。 **tempdb** は SQL Server が起動するか、フェーズするたびに再作成されるため、通常の作業のワークロードに必要なサイズに近いサイズを指定する必要があります。 起動時にさらに効率的に **tempdb** を作成するには、[[データベースのファイルの瞬時初期化]](../../relational-databases/databases/database-instant-file-initialization.md) を有効にします。  
   
 -   **注記: Tempdb** では、最小ログ記録が利用されます。 **tempdb** ログはバックアップできません。 SQL Server が起動するたびに、あるいはクラスター インスタンスのフェールオーバー時に再作成されます。  
   
@@ -431,7 +430,7 @@ ms.lasthandoff: 06/23/2017
   
 ### <a name="see-also"></a>参照  
  [を含めて、すべての](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [共有とファイル サーバー上の NTFS アクセス許可](http://go.microsoft.com/fwlink/?LinkID=206571)  
+ [ファイル サーバーの共有アクセス許可と NTFS アクセス許可](http://go.microsoft.com/fwlink/?LinkID=206571)  
 
 ## <a name="database-engine-configuration---user-instance"></a>データベース エンジンの構成 - ユーザー インスタンス
 **[ユーザー インスタンス]** ページを使用して、管理者権限のないユーザー用に、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の個別インスタンスを作成し、それらのユーザーを管理者ロールに追加します。  
@@ -448,7 +447,7 @@ ms.lasthandoff: 06/23/2017
  [ユーザーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者ロールに追加する]  
  既定値はオフです。 現在のセットアップ ユーザーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者ロールに追加するには、このチェック ボックスをオンにします。  
   
- [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]builtin \administrators のメンバーであるユーザーは自動的に追加されません、sysadmin 固定サーバー ロールに接続するときに[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]です。 サーバーレベルの管理者ロールに明示的に追加されている [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] ユーザーのみが、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]を管理できます。 Built-In\Users グループのすべてのメンバーが [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] インスタンスに接続できますが、データベース タスクの実行権限は制限されます。 このため、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 特権を以前のリリースの Windows の BUILTIN\Administrators および Built-In\Users から継承しているユーザーには、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] で実行している [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]のインスタンスにおいて、管理特権を明示的に付与する必要があります。  
+ [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] ユーザーのうち、BUILTIN\Administrators のメンバーは、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] への接続時に sysadmin 固定サーバー ロールに自動的に追加されません。 サーバーレベルの管理者ロールに明示的に追加されている [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] ユーザーのみが、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]を管理できます。 Built-In\Users グループのすべてのメンバーが [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] インスタンスに接続できますが、データベース タスクの実行権限は制限されます。 このため、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 特権を以前のリリースの Windows の BUILTIN\Administrators および Built-In\Users から継承しているユーザーには、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] で実行している [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]のインスタンスにおいて、管理特権を明示的に付与する必要があります。  
   
  このインストール プログラムの完了後にユーザー ロールに変更を加えるには、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] セキュリティ構成ツール (SQLSAC.exe) を使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者ロールのユーザー一覧を更新するには、 **[新しい管理者の追加]** リンクをクリックします。  
   

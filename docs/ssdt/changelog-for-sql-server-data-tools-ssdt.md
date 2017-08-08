@@ -14,74 +14,74 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
 ms.openlocfilehash: 243d2e6187a58554cee80066912de7dfcc0c52fc
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の変更ログ
-この変更ログは[Visual Studio 2015 用 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)です。  
+この変更ログは、[Visual Studio 2015 用 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx) のものです。  
   
-新機能と変更に関する詳細な記事の投稿を参照してください[SSDT チームのブログ](https://blogs.msdn.microsoft.com/ssdt/)
+新機能および変更点の詳細については、[SSDT チーム ブログ](https://blogs.msdn.microsoft.com/ssdt/)をご覧ください。
 
 ## <a name="ssdt-171"></a>SSDT 17.1
 ビルド番号: 14.0.61705.170
 
 ### <a name="whats-new"></a>新機能
 **AS プロジェクト:**
-- ユーザーが 1400 モデルの UI 内の列でのヒントのエンコーディングを設定することができます。
-- IntelliSense の関連モデル以外はオフライン モードで使用できるようになりました
-- 表形式モデル エクスプ ローラーにモデル (1400 compat レベル テーブル モデル) 全体にわたって利用可能な名前付きの M 式を表すノードが含まれています
-- Azure Active Directory ユーザー選択ウィンドウ テーブル モデルでロールのメンバーを設定するときに今すぐ使用できる Microsoft Azure ポータルの IAM に似ています
+- ユーザーは、1400 モデルの UI の列にエンコーディング ヒントを設定できます。
+- モデルに関係がない IntelliSense をオフライン モードで使えるようになりました
+- 表形式モデル エクスプローラーにモデル (1400 互換性レベル表形式モデル) 全体で利用可能な名前付き M 式を表すノードが含まれるようになりました
+- Microsoft Azure Portal の IAM に似た Azure Active Directory ユーザー選択ウィンドウを、表形式モデルでロール メンバーを設定するときに使えるようになりました
 
 **データベース プロジェクト:**
-- DacFx 17.1 に更新
+- DacFx 17.1 に更新されました
 
 ### <a name="bug-fixes"></a>バグの修正
-- ここで、ビジネス インテリジェンス デザイナー グループ名が正しく表示されない VS2017 Visual Studio オプションで問題を修正しました
-- ここでレポート プロジェクトとソリューションのコード マップを生成する、クラッシュが発生する可能性がありますまたはプロジェクトとして問題を修正しました
-- Analysis Services 1400 compat レベル テーブル モデルの統合を PowerQuery をいくつかの問題を修正しました。
-- ツール ウィンドウで、代入演算子できませんでした行ごとにメジャーを定義するときに、新しい DAX エディターで問題を修正しました
-- パースペクティブ内のメジャーの名前を変更する場合、更新から表形式のメジャーの表示を妨げる問題を修正しました
-- 更新された Analysis Services の統合ワークスペース エンジンと表形式のオブジェクト モデル 1200 の表形式プロジェクトに失敗する翻訳が含まれる原因となったバグ再発を修正する SQL Server 2016 Analysis Services サーバーに配置します。
-- 新しい 1400 表形式のデータ ソースを非常に低速の creation\deletion したパフォーマンス問題を修正しました
-- 別の Dsv の間ですばやくビューを変更する場合に、多次元モデルでの DSV ダイアグラムでレンダリングに停止でした問題を修正しました
+- VS2017 の Visual Studio オプションでビジネス インテリジェンス デザイナー グループ名が正しく表示されない問題を修正しました
+- レポート プロジェクトまたは AS プロジェクトでソリューションのコード マップを生成するときにクラッシュが発生する可能性がある問題を修正しました
+- Analysis Services 1400 互換性レベル表形式モデルの PowerQuery 統合でのいくつかの問題を修正しました
+- メジャーを定義するときに代入演算子が新しい行にならない新しい DAX エディター ツール ウィンドウでの問題を修正しました
+- パースペクティブ内のメジャーの名前を変更するときに、テーブル メジャーの表示が更新されない問題を修正しました
+- Analysis Services 統合ワークスペース エンジンとテーブル オブジェクト モデルを更新し、翻訳を含む 1200 テープル プロジェクトが SQL Server 2016 Analysis Services サーバーへの配置で失敗する原因となったバグ再発を修正しました
+- 新しい 1400 テーブル データ ソースの作成/削除が非常に遅くなるパフォーマンスの問題を修正しました
+- 異なる DSV 間ですばやくビューを変更すると多次元モデルの DSV ダイアグラムがレンダリングを停止する問題を修正しました
 
 ## <a name="dacfx-171"></a>DacFx 17.1
-- その他の id 列を持つメモリ最適化テーブルで列を暗号化するときに、問題を修正しました
-- データベースの作成に CATALOG_COLLATION オプションを指定 SQLDOM のサポート
+- 他の ID 列でメモリ最適化テーブルの列を暗号化するときの問題を修正しました
+- CREATE DATABASE の CATALOG_COLLATION オプションの SQLDOM のサポート
 
 ## <a name="dacfx-1701"></a>DacFx 17.0.1 
-- EKM プロバイダーでの HSM で非対称キーでのデータベースと問題の解決[Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)
+- EKM プロバイダー [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)での HSM による非対称キーでのデータベースの問題を解決しました
 
-## <a name="ssdt-170-supports-up-to-sql-server-2017"></a>SSDT 17.0 インチ (SQL Server 2017 までサポートしています)
+## <a name="ssdt-170-supports-up-to-sql-server-2017"></a>SSDT 17.0 (SQL Server 2017 までのサポート)
 ビルド番号: 14.0.61704.140
 
 ### <a name="whats-new"></a>新機能
 **データベース プロジェクト:**
-- 配置を不要になったブロックは、ビューのクラスター化インデックスの修正
+- ビューのクラスター化インデックスが修正され、展開がブロックされることはなくなりました
 - 列の暗号化に関連するスキーマ比較文字列で、インスタンス名ではなく適切な名前が使用されます。   
-- SqlPackage に新しいコマンド ライン オプション (ModelFilePath) を追加しました。  これにより、高度なユーザーに外部 model.xml ファイルのインポート、公開およびスクリプト作成操作を指定するためのオプション   
-- Azure AD ユニバーサル認証と multi-factor authentication (MFA) をサポートするために、DacFx API が拡張されました
+- SqlPackage に新しいコマンド ライン オプション (ModelFilePath) を追加しました。  これにより、上級ユーザーは、インポート、発行およびスクリプト作成操作で、外部 model.xml を指定することができます   
+- Azure AD ユニバーサル認証と多要素認証 (MFA) をサポートするように DacFx API が拡張されました
 
 **IS プロジェクト:**
 - SSIS OData ソースと OData 接続マネージャーで、Microsoft Dynamics AX Online と Microsoft Dynamics CRM Online の OData フィードに接続できるようになりました。
-- SSIS プロジェクトがここで"SQL Server 2017"の対象サーバーのバージョンをサポートしています 
-- CDC 制御タスク、CDC スプリッターと SQL Server 2017 を対象とする場合、CDC ソースをサポートします。 
+- SSIS プロジェクトが "SQL Server 2017" の対象サーバー バージョンをサポートするようになりました 
+- SQL Server 2017 をターゲットにした場合、CDC 制御タスク、CDC スプリッター、および CDC ソースをサポートします。 
 
 **AS プロジェクト:**
-- Analysis Services 統合の PowerQuery (1400 compat レベル テーブル モデル)。
-    - DirectQuery は、SQL Oracle および Teradata のユーザーには、サード パーティ製のドライバーがインストールされている場合に使用できます。
-    - PowerQuery の例で列を追加します。
-    - データ アクセス 1400 モデル (モデル レベルのプロパティが M エンジンによって使用される) のオプション
-        - 高速結合を有効にする (既定値は false です-マッシュ アップを true に設定するとエンジンが無視データ ソースのプライバシー レベルのデータを結合するときに)
-        - (既定値は false – 可能性のあるセキュリティで保護されていない HTTP リダイレクトを実行する mashup エンジンは、true に設定すると従来のリダイレクトを有効にすます。  たとえば、HTTPS から HTTP URI へのリダイレクト)  
-        - エラー値として Null を返す (既定値は false – とき、true の場合、セル レベルのエラーをセットが null として返されます。 False の場合、例外が発生、セルにエラーが含まれている)  
-    - PowerQuery を使用して追加のデータ ソース (ファイル データ ソース)
+- Analysis Services PowerQuery 統合 (1400 互換性レベル表形式モデル):
+    - DirectQuery は、SQL Oracle で使用でき、サード パーティ製のドライバーがインストールされている場合は Teradata で使用できます
+    - PowerQuery での例示による列の追加
+    - 1400 モデルでのデータ アクセス オプション (M エンジンによって使われるモデル レベルのプロパティ)
+        - 高速結合の有効化 (既定値は false です。true に設定すると、マッシュアップ エンジンはデータを結合するときにデータ ソースのプライバシー レベルを無視します)
+        - 従来のリダイレクトの有効化 (既定値は false です。true に設定すると、マッシュアップ エンジンは安全ではない可能性のある HTTP リダイレクトに従います。  たとえば、HTTPS から HTTP URI へのリダイレクト)  
+        - エラー値を null として返します (既定値は false です。true にすると、セル レベルのエラーが null として返されます。 false の場合、セルにエラーが含まれると例外が発生します)  
+    - PowerQuery を使う追加データ ソース (ファイル データ ソース)
         - Excel 
-        - TEXT/CSV 
+        - テキスト/CSV 
         - Xml 
         - Json 
         - フォルダー 
@@ -89,8 +89,8 @@ ms.lasthandoff: 06/23/2017
         - Azure BLOB ストレージ 
     - ローカライズされた PowerQuery ユーザー インターフェイス
 - DAX エディター ツール ウィンドウ
-    - 改良された DAX のメジャー、計算列、およびビュー、SSDT での他のウィンドウ メニューで利用可能な詳細行の式を使用したエディター
-    - DAX parser\Intellisense の機能強化
+    - SSDT の [表示] > [その他のウィンドウ] メニューで利用可能な DAX 編集エクスペリエンスがメジャー、計算列、詳細行の式に関して改良されました
+    - DAX パーサー\Intellisense の機能強化
 
 
 **RS プロジェクト:**
@@ -121,17 +121,17 @@ ms.lasthandoff: 06/23/2017
 - 特定の状況で (初期カタログではサポートされていない) 一部のデータ ソースの正常な動作を妨げていた問題を修正しました。 
 - デプロイ ウィザードは、パーティションを保持するオプションが有効な場合でも、計算テーブルのパーティションに変更を適用する必要があります。
 - 既存の AS Connection に対する [詳細プロパティ] ダイアログで、選択し直すまでリスト全体が表示されない問題を修正しました。
-- 一部のローカライズされたビルドで登場したクリップの UI 文字列をいくつかの問題を修正しました。
-- 表形式モデルとして 1400 compat レベルで PowerQuery 統合をいくつかの問題を修正しました。
-- レポート ウィザード スタイル テンプレートが表示されない正しくの問題を修正しました。
-- SQL から AS に変更するときに正しくないデータ ソース設定につながる可能性のあるレポート ウィザードを使用して問題を修正しました。
-- コマンドライン (devenv.com\exe) から Analysis Services (表形式) プロジェクトのビルドの失敗の原因と問題を修正しました
-- 前にある文字で始まる場合は、修正して強調表示されたテキストの色を表示するために DAX メジャー パーサーで問題が修正されました: =
-- パスが長すぎる統合ワークスペース モードで表形式プロジェクトの すべてのファイルを表示しようとして取得した場合、ObjectRefException をトリガーする問題を修正しました
-- Compact 4.0 クライアント データ プロバイダーが使用できなくなった表示のデータ ソース デザイナーを問題を修正しました。
-- VS2017 でマイニング モデルとして参照しようとしました。 エラーの原因となった問題を修正しました
-- DSV ダイアグラムがビューの変更後のレンダリングを停止して、例外をヒット VS2017 で多次元モデルとしての問題を修正しました。
-- レポートのプレビューに VS2017 で失敗しました。 AS 接続している問題を修正しました
+- 一部のローカライズされたビルドで表示されたクリッピングされた UI 文字列の問題を修正しました
+- 1400 互換性レベル AS 表形式モデルの PowerQuery 統合でのいくつかの問題を修正しました
+- レポート ウィザード スタイル テンプレートが正しく表示されない問題を修正しました
+- SQL から AS に変更するとデータ ソース設定が正しくなくなるレポート ウィザードの問題を修正しました
+- コマンド ライン (devenv.com\exe) からの Analysis Services (表形式) プロジェクトのビルドが失敗する問題を修正しました
+- := の前にある文字で始まる場合に強調表示された正しいテキストの色で表示されるように DAX メジャー パーサーの問題を修正しました
+- 統合ワークスペース モードで表形式プロジェクトのすべてのファイルを表示しようとしてパスが長すぎる場合に ObjectRefException をトリガーする問題を修正しました
+- Compact 4.0 Client Data Provider のデータ ソース デザイナーが使用できない問題を修正しました
+- VS2017 で AS マイニング モデルを参照しようとしてエラーが発生した問題を修正しました
+- VS2017 の AS 多次元モデルで、ビューの変更後に DSV ダイアグラムがレンダリングを停止して例外が検出される問題を修正しました
+- VS2017 で AS 接続時のレポートのプレビューが失敗した問題を修正しました
  
 
 **RS プロジェクト:**
@@ -147,7 +147,7 @@ ms.lasthandoff: 06/23/2017
 - パッケージ パーツで注釈が非表示になるという問題が修正されました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3106624/package-parts-hide-annotations)を参照)。
 - パッケージ パーツでデータ フローのレイアウトと注釈が破棄されるという問題が修正されました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3109241/package-parts-discard-data-flow-layouts-and-annotations)を参照)。
 - SQL Server からのプロジェクトのインポート時に SSDT がクラッシュするという問題が修正されました。
-- 開く, SSIS パッケージを保存された後、実行時に、Hadoop ファイル システム タスク TimeoutInMinutes の既定値は 10 で問題を修正しました。
+- 保存されていた SSIS パッケージを開いた後の実行時に Hadoop ファイル システム タスクの TimeoutInMinutes が既定で 10 になる問題を修正しました。
 
 **データベース プロジェクト:**
 - SSDT DACPAC のデプロイで、IgnoreColumnOrder の追加設定が復活しました ([Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)を参照)。
@@ -158,7 +158,7 @@ ms.lasthandoff: 06/23/2017
 - Always Encrypted: オンライン暗号化は、キャンセル時に変更追跡を無効にできず、暗号化を開始する前に変更追跡がクリーニングされていない場合は適切に機能しません。
 
 
-## <a name="ssdt-165-supports-up-to-sql-server-2016"></a>SSDT 16.5 (SQL Server 2016 までサポートしています)
+## <a name="ssdt-165-supports-up-to-sql-server-2016"></a>SSDT 16.5 (SQL Server 2016 までのサポート)
 リリース日: 2016 年 10 月 20 日
 
 ビルド番号: 14.0.61021.0
@@ -360,7 +360,7 @@ SSDT テーブルに内部 SSAS インスタンスが含まれるようになり
     * MSOLAP OLEDB プロバイダーに関する SxS の問題を修正しました。この場合、32 ビット プロバイダーだけがインストールされて、SQL Server 2014 に接続する 64 ビットの Excel 2016 に影響を及ぼします (Office365 からの ClickOnce のインストールでは再現せず、MSI Excel のインストールでのみ発生します)。
     * 貼り付けられたテーブルを含む AS モデルを 1103 から 1200 互換性レベルにアップグレードすると、"リレーションシップで無効な列 ID が使用されています" というエラーが発生し、コーナー ケースがより強固になる問題を修正しました。
     * SSDT-BI 2013 が同じコンピューター上にある場合の SxS の問題を修正しました。この場合、SSDT 2015 のアンインストール後に AS モデル内のデータをインポートできません (カートリッジ共有のレジストリ設定)。
-    * AS エンジンへの接続が失われた場合 (SSDT を一晩中開いたままにしておく、AS サーバーをリサイクルする、、または接続が一時的に失われるその他のケース) の問題/クラッシュに対処するための堅牢性が強化されました。 
+    * AS エンジンへの接続が失われた場合 (SSDT を一晩中開いたままにしておく、AS サーバーをリサイクルする、または接続が一時的に失われるその他のケース) の問題/クラッシュに対処するための堅牢性が強化されました。 
     * マルチモニターを使用する場合に、VS ではなく別の画面でダイアログが開く問題を修正しました。 
     * AS モデルの貼り付けられたテーブルでの HTML テーブル (グリッド データ) からの貼り付けのサポートを修正/有効にしました。 
     * 空の貼り付けられたテーブルの 1200 へのアップグレードが失敗する (メジャー用のコンテナー テーブルとしてのみ使用されます) 問題を修正しました。 
@@ -437,7 +437,7 @@ SSDT の一般提供 (GA) がリリースされました。 2016 年 6 月の SS
   
 -   **SSIS パッケージ プロジェクト テンプレート**  
   
-    SSIS デザイナーは、SQL Server 2016、2014、または 2012 用のパッケージを作成および管理します。 新しいテンプレートは、パーツとして名前が変更されました。 SSIS の Hadoop コネクタは ORC 形式をサポートします。 詳しくは、「[Integration Services の新機能](https://msdn.microsoft.com/library/bb522534.aspx)」を覧ください。  
+    SSIS デザイナーは、SQL Server 2016、2014、または 2012 用のパッケージを作成および管理します。 新しいテンプレートは、パーツとして名前が変更されました。 SSIS の Hadoop コネクタは ORC 形式をサポートします。 詳しくは、「[Integration Services の新機能](https://msdn.microsoft.com/library/bb522534.aspx)」をご覧ください。  
   
 -   **SSAS プロジェクト テンプレート (表形式モデル プロジェクト)**  
   
@@ -459,7 +459,7 @@ SSDT の一般提供 (GA) がリリースされました。 2016 年 6 月の SS
 -   **SSIS パッケージ プロジェクト テンプレート**  
   
     ODBC 入力元と変換先コンポーネント、CDC 制御タスク、  
-      CDC ソースと分割コンポーネント、Microsoft Connector for SAP BW、Integration Services Feature Pack for Azure のサポートが追加されています。 詳しくは、「[Integration Services の新機能](https://msdn.microsoft.com/library/bb522534.aspx)」を覧ください。  
+      CDC ソースと分割コンポーネント、Microsoft Connector for SAP BW、Integration Services Feature Pack for Azure のサポートが追加されています。 詳しくは、「[Integration Services の新機能](https://msdn.microsoft.com/library/bb522534.aspx)」をご覧ください。  
   
 -   **SSAS プロジェクト テンプレート**  
   
