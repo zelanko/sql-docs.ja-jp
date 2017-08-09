@@ -15,11 +15,11 @@ caps.latest.revision: 18
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
 ms.openlocfilehash: 5ee3aa9223ae8ab832eff23a1da1755278e86d0b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>テンポラル テーブルの考慮事項と制約
@@ -53,13 +53,13 @@ ms.lasthandoff: 06/23/2017
   
 -   **INSERT** および **UPDATE** ステートメントは、SYSTEM_TIME 期間列を参照できません。 これらの列に値を直接挿入しようとすると、ブロックされます。  
   
--   **TRUNCATE TABLE** is not supported while **SYSTEM_VERSIONING** is **ON**  
+-   **SYSTEM_VERSIONING** が **オン** になっている時は、 **TRUNCATE TABLE**  
   
 -   履歴テーブルのデータを直接変更することはできません。  
   
 -   現在のテーブルでは、**ON DELETE CASCADE** と **ON UPDATE CASCADE** は許可されません。 つまり、テンポラル テーブルが外部キー リレーションシップの参照元テーブル (sys.foreign_keys の *parent_object_id* に対応) である場合、CASCADE オプションは使用できません。 この制約を回避するには、アプリケーション ロジックまたは AFTER トリガーを使用して、主キー テーブル (sys.foreign_keys の  *referenced_object_id* に対応) での削除の一貫性を維持します。 主キー テーブルがテンポラルで、参照元テーブルが非テンポラルである場合、このような制約はありません。 
 
-    **注:**この制限は SQL Server 2016 にのみ適用されます。 CASCADE オプションはサポート[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]と SQL Server 2017 年 1 CTP 2.0 から開始します。  
+    **注:** この制限は SQL Server 2016 にのみ適用されます。 CASCADE オプションは、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] および SQL Server 2017 CTP 2.0 以降でサポートされます。  
   
 -   DML ロジックが無効になるのを防ぐために、**INSTEAD OF** トリガーは現在のテーブルでも履歴テーブルでも許可されません。 **AFTER** トリガーは、現在のテーブルでのみ許可されます。 DML ロジックが無効になるのを防ぐために、このトリガーは履歴テーブルではブロックされます。  
   

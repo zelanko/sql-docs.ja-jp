@@ -14,11 +14,11 @@ caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
 ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>ネイティブ コンパイル T-SQL モジュールでサポートされる機能
@@ -51,29 +51,29 @@ ms.lasthandoff: 06/23/2017
 
 次のクエリ構造がサポートされます。  
 
-CASE 式: 任意のステートメントや、有効な式の句で CASE を使用できます。
-   - **適用されます:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]です。  
-    以降で[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]、CASE ステートメントはネイティブ コンパイル T-SQL モジュールに対してはサポートされています。
+CASE 式: CASE は、有効な式を使用できる任意のステートメントや句で使用できます。
+   - **適用対象:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]」をご覧ください。  
+    [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降、CASE ステートメントはネイティブ コンパイル T-SQL モジュールに対してサポートされています。
 
 SELECT 句:  
 
 -   列と名前のエイリアス (AS または = 構文を使用)。  
 
 -   スカラー サブクエリ
-    - **適用されます:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]です。
-      以降で[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]、スカラー サブクエリがネイティブ コンパイル モジュールでサポートされるようになりました。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」をご覧ください。
+      [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、スカラー サブクエリはネイティブ コンパイル モジュールでサポートされています。
 
 -   TOP*  
 
 -   SELECT DISTINCT  
-    - **適用されます:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]です。
-      以降で[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]、DISTINCT 演算子は、ネイティブ コンパイル モジュールでサポートされています。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」をご覧ください。
+      [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、DISTINCT 演算子はネイティブ コンパイル モジュールでサポートされています。
 
               DISTINCT aggregates are not supported.  
 
 -   UNION および UNION ALL
-    - **適用されます:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]です。
-      以降で[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]、UNION および UNION ALL 演算子がネイティブ コンパイル モジュールでサポートされています。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」をご覧ください。
+      [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、UNION および UNION ALL 演算子はネイティブ コンパイル モジュールでサポートされています。
 
 -   変数割り当て  
 
@@ -84,21 +84,21 @@ FROM 句:
 -   FROM \<ネイティブ コンパイル インライン TVF>  
 
 -   LEFT OUTER JOIN、RIGHT OUTER JOIN、CROSS JOIN、INNER JOIN。
-    - **適用されます:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]です。
-      以降で[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]結合がネイティブ コンパイル モジュールでサポートされています。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」をご覧ください。
+      [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、JOINS はネイティブ コンパイル モジュールでサポートされています。
 
 -   サブクエリ `[AS] table_alias`。 詳細については、「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。 
-    - **適用されます:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]です。
-      以降で[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]サブクエリがネイティブ コンパイル モジュールでサポートされるようになりました。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」をご覧ください。
+      [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、サブクエリはネイティブ コンパイル モジュールでサポートされています。
 
 WHERE 句:  
 
 -   フィルター述語 IS [NOT] NULL  
 
--   および、  
--   OR、NOT、では、次のように存在します。
-    - **適用されます:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]です。
-      以降で[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]OR、NOT、IN/EXISTS 演算子がネイティブ コンパイル モジュールでサポートされています。
+-   AND、BETWEEN  
+-   OR、NOT、IN、EXISTS
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」をご覧ください。
+      [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、OR/NOT/IN/EXISTS 演算子はネイティブ コンパイル モジュールでサポートされています。
 
 
 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 句:
@@ -194,7 +194,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   ビット演算子 ~、&、|、および ^  
 
 -   APPLY 演算子
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 より、ネイティブ コンパイル モジュールで APPLY 演算子がサポートされます。
 
 ##  <a name="bfncsp"></a> ネイティブ コンパイル モジュールの組み込み関数  
@@ -205,7 +205,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   日付関数: CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME、および YEAR  
 
 -   文字列関数: LEN、LTRIM、RTRIM、および SUBSTRING。  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 より、組み込み関数の TRIM、TRANSLATE、CONCAT_WS もサポートされます。  
 
 -   ID 関数: SCOPE_IDENTITY  
@@ -215,7 +215,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Uniqueidentifier 関数: NEWID および NEWSEQUENTIALID  
 
 -   JSON 関数  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 より、ネイティブ コンパイル モジュールで JSON 関数がサポートされます。
 
 -   エラー関数: ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY、および ERROR_STATE  
@@ -279,7 +279,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- 8192 行の制限は、`TOP N` が定数の場合に、前の例のように、`N` にのみ適用されます。  8192 より大きな `N` が必要である場合は、値を変数に割り当て、 `TOP`と共にその変数を使用することができます。  
+ 8192 行の制限は、 `TOP N` が定数の場合に、前の例のように、 `N` にのみ適用されます。  8192 より大きな `N` が必要である場合は、値を変数に割り当て、 `TOP`と共にその変数を使用することができます。  
 
  変数を使用した例: コンパイル  
 

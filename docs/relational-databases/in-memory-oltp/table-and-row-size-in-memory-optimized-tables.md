@@ -18,12 +18,10 @@ ms.translationtype: HT
 ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
 ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="table-and-row-size-in-memory-optimized-tables" class="xliff"></a>
-
-# メモリ最適化テーブルのテーブルと行のサイズ
+# <a name="table-and-row-size-in-memory-optimized-tables"></a>メモリ最適化テーブルのテーブルと行のサイズ
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] より前のバージョンでは、メモリ最適化テーブルの行内データのサイズは、[8,060 バイト](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx)より長くすることができませんでした。 しかし、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降および Azure SQL Database では、複数の大きな列 (複数の varbinary(8000) 列など) および LOB 列 (varbinary(max)、varchar(max)、nvarchar(max)) を含むメモリ最適化テーブルを作成し、ネイティブにコンパイルされた T-SQL モジュールとテーブル型を使ってこれらの列に対する操作を実行できるようになっています。 
@@ -44,7 +42,7 @@ ms.lasthandoff: 07/10/2017
 
   メモリ最適化テーブルは、行のコレクションと、行へのポインターを格納するインデックスで構成されています。 次の図は、インデックスと行を含むテーブルを示しています。行には行ヘッダーと行本文が含まれています。  
   
- ![メモリ最適化テーブル。](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
+ ![メモリ最適化テーブル。](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "メモリ最適化テーブル。")  
 インデックスと行で構成されたメモリ最適化テーブル。  
 
 ##  <a name="bkmk_TableSize"></a> テーブル サイズの計算
@@ -248,9 +246,7 @@ where object_id = object_id('dbo.Orders')
 
 詳しくは、「[What's new for In-Memory OLTP in SQL Server 2016 since CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3)」(CTP3 以降の SQL Server 2016 でのメモリ内 OLTP に関する新機能) ブログ投稿をご覧ください。   
  
-<a id="see-also" class="xliff"></a>
-
-## 参照  
+## <a name="see-also"></a>参照  
  [メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

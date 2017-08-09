@@ -17,16 +17,16 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
 ms.openlocfilehash: 7eb8ea4b29caaf7f1600bbd31db4f669b86476c1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="return-data-from-a-stored-procedure"></a>ストアド プロシージャからデータを返す
 
- > SQL Server の以前のバージョンに関連するコンテンツでは、次を参照してください。[ストアド プロシージャから返されるデータ](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx)です。
+ > 以前のバージョンの SQL Server に関連するコンテンツについては、「[ストアド プロシージャからデータを返す](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx)」を参照してください。
 
   結果セットやプロシージャからのデータを呼び出し元のプログラムに返す手段には、出力パラメーターとリターン コードの 2 つがあります。 このトピックでは、両方のアプローチについて説明します。  
   

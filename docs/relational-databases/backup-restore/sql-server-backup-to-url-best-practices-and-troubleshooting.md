@@ -14,11 +14,11 @@ caps.latest.revision: 26
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: b76a0f262fd12e53797c0ad86c991a6e4423927a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング
@@ -100,7 +100,7 @@ ms.lasthandoff: 06/23/2017
 -   圧縮されたバックアップから復元するときに、次のエラーが表示される場合があります。  
   
     -   `SqlException 3284 occurred. Severity: 16 State: 5`  
-        **デバイス`'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'`が無効です。バックアップセットの作成に使用したのと同じブロック サイズを指定して RESTORE ステートメントを再実行してください。使用した可能性のある値は '65536' です。**  
+        **デバイス `'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'` のファイルマークが揃っていません。バックアップセットの作成に使用したのと同じブロック サイズを指定して RESTORE ステートメントを再実行してください。使用した可能性のある値は '65536' です。**  
   
          このエラーを解決するには、 **BLOCKSIZE = 65536** を指定した **BACKUP** ステートメントを再実行してください。  
   
@@ -125,7 +125,7 @@ ms.lasthandoff: 06/23/2017
   
 -   "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" での書き込みに失敗しました: Backup to URL がリモート エンドポイントから例外を受け取りました。 例外メッセージ: 転送接続からデータを読み取ることができません: 接続は閉じられました。  
   
--   ファイルで回復不可能な I/O エラーが発生しました"`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`"リモート エンドポイントからエラーを収集できませんでした。  
+-   ファイル "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`" で回復できない I/O エラーが発生しました。リモート エンドポイントからエラーを収集できませんでした。  
   
      メッセージ 3013、レベル 16、状態 1、行 2  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 06/23/2017
   
  **選択されていない既定のプロキシ設定:**  
   
- 場合によって、既定の設定が選択されていない原因プロキシ認証エラーなど、次のように:*ファイルで回復不可能な I/O エラーが発生しました"`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`"Backup to URL がリモート エンドポイントから例外を受け取りました。例外メッセージ: リモート サーバーからエラーが返されました: (407)* **プロキシ認証が必要です**。  
+ 既定の設定が選択されていないことが原因で、次のようなプロキシ認証エラーが発生する場合があります。*"`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`" ファイルで回復不可能な I/O エラーが発生しました: Backup to URL がリモート エンドポイントから例外を受け取りました。例外メッセージ: リモート サーバーからエラーが返されました: (407)* **プロキシ認証が必要です**。  
   
  この問題を解決するには、次の手順に従って、Backup to URL プロセスで既定のプロキシ設定を使用できるようにするための構成ファイルを作成します。  
   

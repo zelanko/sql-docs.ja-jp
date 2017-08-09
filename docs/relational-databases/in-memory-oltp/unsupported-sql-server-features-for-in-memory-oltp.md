@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: cf8509cab2424529ca0ed16c936fa63a139dfca4
 ms.openlocfilehash: 85a720edefe425146e5c54613b0a0f88007765a9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>インメモリ OLTP に対してサポートされていない SQL Server の機能
@@ -38,7 +38,7 @@ ms.lasthandoff: 07/20/2017
 | レプリケーション | サブスクライバー上でのメモリ最適化されたテーブルに対するトランザクション レプリケーションを除き、他のレプリケーション構成は、メモリ最適化されたテーブルを参照するテーブルまたはビューと互換性がありません。<br /><br />メモリ最適化ファイル グループがある場合、sync_mode='database snapshot' を使用したレプリケーションはサポートされません。<br /><br />詳細については、「 [メモリ最適化テーブル サブスクライバーへのレプリケーション](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)」を参照してください。|
 |ミラーリング|データベース ミラーリングは、MEMORY_OPTIMIZED_DATA ファイル グループのデータベースではサポートされていません。 ミラーリングの詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。|  
 |ログの再構築|ログの再構築は、MEMORY_OPTIMIZED_DATA ファイル グループのデータベースでは、アタッチと ALTER DATABASE のいずれによるものでもサポートされていません。|  
-|Linked Server|メモリ最適化テーブルと同じクエリまたはトランザクションで、リンク サーバーにアクセスすることはできません。 詳しくは、「[リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)」を参照してください。|  
+|Linked Server|メモリ最適化テーブルと同じクエリまたはトランザクションで、リンク サーバーにアクセスすることはできません。 詳しくは、「 [リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)」を参照してください。|  
 |一括ログ記録|データベースの復旧モデルにかかわらず、持続性のあるメモリ最適化テーブル上のすべての操作は、常に完全にログに記録されます。|  
 |最小ログ記録|最小ログ記録は、メモリ最適化テーブルではサポートされていません。 最小ログ記録の詳細については、「[トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」および「[一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」を参照してください。|  
 |変更の追跡|変更の追跡は、インメモリ OLTP オブジェクトを含むデータベースで有効にすることができます。 ただし、メモリ最適化テーブルの変更は追跡されません。|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 07/20/2017
 
 |データベース|Allowed|Description|  
 |---------------|-------------|-----------------|  
-| ユーザー データベース、**model**、および **msdb** | 不可 | ほとんどの場合、複数のデータベースにまたがるクエリおよびトランザクションは*サポートされません*。<br /><br />クエリがメモリ最適化テーブルまたはネイティブにコンパイルされたストアド プロシージャを使用している場合、そのクエリは他のデータベースにアクセスできません。 この制限は、クエリだけでなくトランザクションにも適用されます。<br /><br />例外は、システム データベースである **tempdb** と **master** です。 ここで、**master** データベースは読み取り専用アクセスで利用できます。 |
+| ユーザー データベース、**model**、および **msdb**。 | 不可 | ほとんどの場合、複数のデータベースにまたがるクエリおよびトランザクションは*サポートされません*。<br /><br />クエリがメモリ最適化テーブルまたはネイティブにコンパイルされたストアド プロシージャを使用している場合、そのクエリは他のデータベースにアクセスできません。 この制限は、クエリだけでなくトランザクションにも適用されます。<br /><br />例外は、システム データベースである **tempdb** と **master** です。 ここで、**master** データベースは読み取り専用アクセスで利用できます。 |
 | **Resource** データベース、**tempdb** | はい | インメモリ OLTP オブジェクトを扱うトランザクションでは、**Resource** および **tempdb** システム データベースを追加の制限なく使用できます。
 
 

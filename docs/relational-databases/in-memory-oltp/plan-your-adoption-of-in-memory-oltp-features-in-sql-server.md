@@ -14,11 +14,11 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
 ms.openlocfilehash: bf29cd596c9b52ecf88fc715a580253de5477271
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>SQL Server でのインメモリ OLTP 機能の採用計画
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/23/2017
 
 Azure SQL データベースのクラウド サービスでホストされているデータベースの場合、選択したサービス層が、データベースで消費可能なアクティブ メモリの量に影響します。 アラートを使用してデータベースのメモリ使用量を監視する計画を立てる必要があります。 詳細については、次の情報を参照してください。
 
-- インメモリ OLTP のストレージ制限を確認する、[価格レベル](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)
+- [価格レベル](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)に対するインメモリ OLTP ストレージの制限を確認する
 - [インメモリ OLTP ストレージの監視](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>メモリ最適化テーブル変数
@@ -114,7 +114,7 @@ SSDT で管理される、.dacpac ファイルを使用してデータベース�
 
 ### <a name="a4-guidance-for-whether-in-memory-oltp-features-are-right-for-your-application"></a>A.4 インメモリ OLTP 機能がアプリケーションに適しているかどうかに関するガイダンス
 
-インメモリ OLTP 機能が、特定のアプリケーションのパフォーマンスを向上するかどうかについてを参照してください。
+インメモリ OLTP 機能で特定のアプリケーションのパフォーマンスを改善できるかに関するガイダンスについては、次の情報を参照してください。
 
 - [インメモリ OLTP (インメモリ最適化)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
@@ -122,7 +122,7 @@ SSDT で管理される、.dacpac ファイルを使用してデータベース�
 
 ## <a name="b-unsupported-features"></a>B. サポートされていない機能
 
-インメモリ OLTP での特定のシナリオではサポートされていない機能がについて説明します。
+特定のインメモリ OLTP シナリオでサポートされていない機能については、以下の情報を参照してください。
 
 - [インメモリ OLTP に対してサポートされていない SQL Server の機能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)
 
@@ -159,7 +159,7 @@ READPAST ヒントは、複数のセッションでそれぞれ、キューの�
 - メモリ最適化テーブルでは、 [RowVersion](../../t-sql/data-types/rowversion-transact-sql.md) の列にタグを付けることはできません。
 
 
-- A[シーケンス](../../t-sql/statements/create-sequence-transact-sql.md)メモリ最適化テーブルの制約では使用できません。 たとえば、NEXT VALUE FOR 句を使用して、既定の制約を作成できません。 シーケンスは、INSERT および UPDATE ステートメントで使用できます。
+- [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) はメモリ最適化テーブルの制約では使用できません。 たとえば、NEXT VALUE FOR 句では DEFAULT 制約を作成できません。 SEQUENCE は、INSERT および UPDATE ステートメントで使用できます。
 
 
 ## <a name="c-administrative-maintenance"></a>C. 管理メンテナンス
@@ -170,7 +170,7 @@ READPAST ヒントは、複数のセッションでそれぞれ、キューの�
 
 ### <a name="c1-identity-seed-reset-increment--1"></a>C.1 Identity シードのリセット、増分値が 1 より大きい
 
-IDENTITY 列を再シードするために [DBCC CHECKIDENT](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md) をメモリ最適化テーブルで使用することはできません。
+IDENTITY 列を再シードするために[DBCC CHECKIDENT](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)をメモリ最適化テーブルで使用することはできません。
 
 メモリ最適化テーブルでは、IDENTITY 列に対する増分値はちょうど 1 に限定されます。
 

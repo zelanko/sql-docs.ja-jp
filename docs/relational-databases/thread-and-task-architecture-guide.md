@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
 ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="thread-and-task-architecture-guide"></a>スレッドおよびタスクのアーキテクチャ ガイド
@@ -93,14 +93,14 @@ CPU を追加しても、SQL Server で自動的にその CPU の使用が開始
 
 多数の CPU を搭載するコンピューター上では、一時的にデータベースの復旧モデルを一括ログ復旧モデルまたは単純復旧モデルに設定することで、インデックスの作成や再構築などのインデックス操作のパフォーマンスを向上させることができます。 これらのインデックス操作では、大量のログ アクティビティが生成されることがあるため、ログの競合によって、SQL Server が選択した最適な並列処理の程度 (DOP) に影響が及ぶおそれがあります。
 
-さらに、調整を検討して、 **(MAXDOP) を並列処理の次数の最大**これらの操作に関するサーバー構成オプション。 次のガイドラインは、内部テストに基づき、一般的に推奨されます。 環境に最適な設定を決定するには、さまざまな MAXDOP 設定を試す必要があります。
+また、これらの操作を行う場合は、**並列処理の最大限度 (MAXDOP: Max Degree Of Parallelism)** サーバー構成オプションの調整を検討してください。 次のガイドラインは、内部テストに基づき、一般的に推奨されます。 環境に最適な設定を決定するには、さまざまな MAXDOP 設定を試す必要があります。
 
 * 完全復旧モデルでは、max degree of parallelism オプションの値を 8 以下に制限してください。   
 * 一括ログ復旧モデルまたは単純復旧モデルでは、max degree of parallelism オプションを 8 より大きい値に設定することを検討してください。   
 * NUMA が構成されているサーバーの場合、並列処理の最大限度は、それぞれの NUMA ノードに割り当てられている CPU 数を超える値に設定しないでください。 これは、クエリで 1 つの NUMA ノードのローカル メモリを使用する可能性が高く、それによりメモリのアクセス時間が改善される可能性があるためです。  
-* MAXDOP 値が論理プロセッサではなく、物理プロセッサの数を超えない、ハイパー スレッディングをあるサーバーが有効になっており、2009 年に製造された (ハイパー スレッディングの機能が強化されました) する前に以前されました。
+* 2009 年以前 (ハイパー スレッディング機能が改善される前) に製造されたサーバーでハイパー スレッディングが有効である場合、論理プロセッサではなく物理プロセッサ数を超える値を MAXDOP に設定しないでください。
 
-Max degree of parallelism オプションの詳細については、次を参照してください。 [max degree of parallelism サーバー構成オプションを構成する](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)です。
+並列処理の最大限度オプション詳細については、「[max degree of parallelism サーバー構成オプションの構成](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」をご覧ください。
 
 ### <a name="setting-the-maximum-number-of-worker-threads"></a>ワーカー スレッドの最大数の設定
 

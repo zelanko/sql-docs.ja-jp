@@ -16,11 +16,11 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: 3458af05f6289366c7a9391016327ff9d11c1434
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="publication-properties-ftp-snapshot-and-internet"></a>[パブリケーションのプロパティ]、[FTP スナップショットとインターネット]
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/23/2017
  このオプションを選択すると、サブスクライバーは FTP を使用してスナップショット ファイルを取得できますが、この設定は必須ではありません。 このオプションを選択した場合、サブスクリプションの新規作成ウィザードでは、サブスクライバーがスナップショット ファイルを FTP 経由で取得する設定が既定で有効になります。 設定を変更するには、 **[サブスクリプションのプロパティ]** ダイアログ ボックスを使用します。 サブスクライバーが FTP 経由でスナップショットにアクセスするように設定する場合は、 **[パブリケーションのプロパティ]** ダイアログ ボックスの **[スナップショット]** ページで、スナップショット ファイルの場所として FTP フォルダーを指定します。 これにより、スナップショット エージェントは、新しいスナップショットが生成されたときに FTP フォルダー内のファイルを自動的に更新します。 場所を FTP フォルダーに設定していない場合は、新しいスナップショットが生成されたときにファイルを手動で更新する必要があります。 詳細については、「[FTP でのスナップショットの配信](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)」を参照してください。  
   
  **[Web 同期]**  
- マージ レプリケーションのみです。 **[Web サーバーへの接続による同期をサブスクライバーに許可する]**を選択し、マージ サブスクライバーが Web 同期を使用できるように Web サーバー アドレスを指定します。 Web サーバーが Secure Sockets Layer (SSL) を使用する必要があり、Web アドレスのように、完全修飾する必要があります`https://server.domain.com/synchronize`です。 詳しくは、「 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)」をご覧ください。  
+ マージ レプリケーションのみです。 **[Web サーバーへの接続による同期をサブスクライバーに許可する]**を選択し、マージ サブスクライバーが Web 同期を使用できるように Web サーバー アドレスを指定します。 Web サーバーは、SSL (Secure Sockets Layer) を使用する必要があります。また、Web アドレスは `https://server.domain.com/synchronize` のように完全修飾である必要があります。 詳しくは、「 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   

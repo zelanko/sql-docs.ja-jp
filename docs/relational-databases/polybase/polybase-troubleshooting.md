@@ -24,7 +24,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
 ms.openlocfilehash: e65ea926f3a2d2fb3c30c511a1fbba6150de7b42
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase のトラブルシューティング
@@ -52,9 +52,9 @@ ms.lasthandoff: 07/20/2017
 |[sys.dm_exec_dms_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-services-transact-sql.md)|[sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |[sys.dm_exec_external_operations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-operations-transact-sql.md)|[sys.dm_exec_external_work &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)|  
   
-  PolyBase クエリは、sys.dm_exec_distributed_request_steps 内で一連のステップに分割されます。 次の表は、ステップ名と関連 DMV のマッピングになっています。
+  PolyBase のクエリは、sys.dm_exec_distributed_request_steps 内で一連のステップに分割されます。 次の表は、ステップ名と関連 DMV のマッピングになっています。
   
- |PolyBase ステップ|関連 DMV|  
+ |PolyBase のステップ|関連する DMV|  
  |-|-| 
  |HadoopJobOperation | sys.dm_exec_external_operations|
  |RandomIdOperation | sys.dm_exec_distributed_request_steps|
@@ -227,7 +227,7 @@ ms.lasthandoff: 07/20/2017
  - 可変長列の全長を含め、最大行サイズは 1 MB 以下にする必要があります。 
  - PolyBase では、Hive 0.12 以降のデータ型 (つまり、Char(), VarChar()) はサポートされません。   
  - SQL Server または Azure SQL データ ウェアハウスから ORC ファイル形式にデータをエクスポートするとき、java のメモリ不足エラーに起因し、テキストでいっぱいの列はわずか 50 列に制限されることがあります。 この問題を回避するには、列の一部だけをエクスポートします。
-- [SQL Server 2016 の フェールオーバー クラスターにノードを追加すると、PolyBase の機能をインストールできません](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
+- [SQL Server 2016 のフェールオーバー クラスターにノードを追加すると、PolyBase の機能をインストールできません](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
   
 ## <a name="error-messages-and-possible-solutions"></a>エラー メッセージと考えられる解決策
 

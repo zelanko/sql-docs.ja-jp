@@ -17,11 +17,11 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
 ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>クエリ ストアを使用するときの推奨事項
@@ -143,27 +143,27 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |機能低下したクエリ|実行メトリックが最近低下した (悪化した) クエリを特定します。 <br />このビューを使用して、アプリケーションで確認されたパフォーマンスの問題と、実際に修正や改善の必要があるクエリを関連付けます。|  
 |全体的なリソース消費量|実行メトリックのいずれかについて、データベースの全体的なリソース消費量を分析します。<br />このビューを使用して、リソースのパターン (日中または夜間のワークロード) を特定し、データベースの全体的な消費量を最適化します。|  
 |最もリソースを消費するクエリ|対象となる実行メトリックを選択し、対象期間内で最も極端な値を持つクエリを特定します。 <br />このビューを使用して、データベースのリソース消費量に最も大きな影響を与えているクエリに焦点を絞ります。|  
-|強制プランを持つクエリ|以前のクエリ ストアを使用してプランを強制的に一覧が表示されます。 <br />現在強制適用されたすべてのプランを簡単にアクセスするのにには、このビューを使用します。|  
-|高バリエーションを持つクエリ|希望する時間間隔の期間、CPU 時間、IO、およびメモリの使用率など、使用可能なディメンションのいずれかに関連する、高の実行のバリエーションを持つクエリを分析します。<br />このビューを使用して、アプリケーション全体のユーザー エクスペリエンスに影響を及ぼす可能性のある、パフォーマンスの差異が大きいクエリを特定します。|  
+|強制適用されたプランのあるクエリ|クエリ ストアを使って以前に強制適用されたプランを一覧表示します。 <br />このビューを使って、現在強制適用されているすべてのプランに簡単にアクセスします。|  
+|高バリエーションのクエリ|目的の期間内の継続時間、CPU 時間、IO、メモリ使用率など、使用可能なディメンションのいずれかに関連して実行バリエーションが高いクエリを分析します。<br />このビューを使用して、アプリケーション全体のユーザー エクスペリエンスに影響を及ぼす可能性のある、パフォーマンスの差異が大きいクエリを特定します。|  
 |追跡対象のクエリ|最も重要なクエリの実行をリアルタイムで追跡します。 このビューは通常、強制適用されたプランを持つクエリがあり、クエリのパフォーマンスを安定させる必要がある場合に使用します。|
   
 > [!TIP]  
 >  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して最もリソースを消費するクエリを特定し、プラン変更により機能低下したクエリを修正する方法の詳細については、[クエリ ストアに関する @Azure ブログの記事](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)を参照してください。  
   
- 準最適なパフォーマンスでクエリを特定するときに、アクションは、問題の性質によって異なります。  
+ パフォーマンスが低下したクエリを特定する際に必要なアクションは、問題の性質によって異なります。  
   
 -   クエリの実行プランが複数あり、最後のプランのパフォーマンスが前のプランよりも大幅に悪いような場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が今後は常に最適なプランを使用するよう、プランの強制適用メカニズムを使用することができます。  
   
      ![クエリ ストアのプランの強制](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
 > [!NOTE]  
-> 上記の図は、考えられる各状態の意味は次の特定のクエリ プランのさまざまな図形を機能可能性があります。<br />  
+> 上の図では特定のクエリ プランに異なる図形が使われている場合があり、考えられる各状態の意味を次に示します。<br />  
 > |図形|意味|  
 > |-------------------|-------------|
 > |Circle|クエリ完了 (通常の実行が正常に終了しました)|
-> |Square|キャンセル (が開始したクライアントは、実行を中止)|
-> |Triangle|失敗した (中止例外の実行)|
-> また、図形のサイズは、実行の大きい番号のサイズを大きく、指定した時間間隔内でクエリ実行の数を反映します。  
+> |Square|キャンセル (クライアントが開始した実行中止)|
+> |Triangle|失敗 (例外による実行中止)|
+> また、図形のサイズは指定期間内でのクエリ実行回数を反映し、実行回数が多いほどサイズが大きくなります。  
 
 -   クエリが最適に実行するために必要なインデックスが欠落している場合があります。 この情報は、クエリの実行プラン内で確認できます。 クエリ ストアを使用して欠落しているインデックスを作成し、クエリのパフォーマンスを確認します。  
   
@@ -175,7 +175,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
 -   問題のあるクエリを書き直します。 たとえば、クエリのパラメーター化を利用したり、より最適なロジックを実装したりする場合などです。  
   
-##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
+##  <a name="Verify"></a> クエリ ストアがクエリ データを収集していることを定期的に確認する  
  クエリ ストアの操作モードは、通知なしに変更されることがあります。 クエリ ストアの状態を定期的に監視して、クエリ ストアが問題なく動作していることを確認し、回避できたはずのエラーが発生しないようにしてください。 操作モードを確認して最も重要なパラメーターを表示するには、次のクエリを実行します。  
   
 ```tsql
@@ -233,11 +233,11 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
- 問題が解決しない場合は、データがディスクに永続化されるクエリのストアの破損を示します。
+ それでも問題が解決しない場合、ディスクに破損したクエリ ストア データが存在しています。
  
- クエリ ストアが実行することによって回復可能**sp_query_store_consistency_check**影響を受けたデータベース内のプロシージャを格納します。
+ 影響を受けたデータベース内で **sp_query_store_consistency_check** ストアド プロシージャを実行することで、クエリ ストアを復旧できる場合があります。
  
- 役立たなかった場合読み取り/書き込みモードを要求する前にクエリ ストアをクリアしようとすることができます。  
+ 復旧できない場合は、読み取り/書き込みモードを要求する前にクエリ ストアのクリアを試すことができます。  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
@@ -325,7 +325,7 @@ WHERE is_forced_plan = 1;
  [クエリ ストアのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [クエリ ストアのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [インメモリ OLTP でのクエリ ストアの使用](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
- [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [関連するビュー、関数、プロシージャ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)  
   
 

@@ -21,11 +21,11 @@ caps.latest.revision: 58
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))
@@ -85,8 +85,8 @@ Always Encrypted による暗号化アルゴリズムの詳細については、
 |タスク|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
 |対応する列マスター キーを使用した列マスター キー、列暗号化キー、暗号化された列の暗号化キーをプロビジョニングする。|はい|可|いいえ|
-|データベース内にキー メタデータを作成する。|はい|はい|はい|
-|暗号化された列がある新しいテーブルを作成する|はい|はい|はい|
+|データベース内にキー メタデータを作成する。|はい|可|はい|
+|暗号化された列がある新しいテーブルを作成する|はい|可|はい|
 |選択されたデータベース列内にあるデータを暗号化する|はい|可|いいえ|
 
 > [!NOTE]

@@ -18,20 +18,20 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 9383b62ac3413b0e4dc8780413bdde09bfc04af3
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 1fa05e61c8c057141eceee65c5c1da39c5d4200e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="use-for-json-output-in-sql-server-and-in-client-apps-sql-server"></a>SQL Server およびクライアント アプリでの FOR JSON 出力の使用 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-次の例では、使用する方法の点を示しています、 **FOR JSON**句およびその JSON の出力[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]またはクライアント アプリでします。  
+ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはクライアント アプリで **FOR JSON** 句およびその JSON 出力を使用する方法を例として示します。  
   
 ## <a name="use-for-json-output-in-sql-server-variables"></a>FOR JSON 出力を SQL Server の変数で使用する  
-句は FOR JSON の出力は、次の例で示すように、任意の変数に割り当てることができますので、nvarchar (max) を入力します。  
+FOR JSON 句の出力は NVARCHAR(MAX) 型のため、次の例に示すように、任意の変数に割り当てることができます。  
   
 ```sql  
 DECLARE @x NVARCHAR(MAX) = (SELECT TOP 10 * FROM Sales.SalesOrderHeader FOR JSON AUTO)  
@@ -65,7 +65,7 @@ FROM Sales.SalesOrderHeader H
 ```  
   
 ## <a name="merge-parent-and-child-data-into-a-single-table"></a>親と子のデータを 1 つのテーブルにマージする  
-次の例では、子の行の各セットは JSON 配列として書式設定します。 JSON 配列では、親テーブルの Details 列の値になります。  
+次の例では、子の行の各セットは JSON 配列として書式設定されます。 JSON 配列は、親テーブルの Details 列の値になります。  
   
 ```sql  
 SELECT TOP 10 SalesOrderId, OrderDate,  
@@ -78,7 +78,7 @@ FROM Sales.SalesOrderHeader H
 ```  
   
 ## <a name="update-the-data-in-json-columns"></a>JSON の列のデータを更新する  
- 次の例では、JSON テキストを含む列の値を更新することを示します。  
+ 次の例に、JSON テキストを含む列の値を更新する方法を示します。  
   
 ```sql  
 UPDATE SalesOrder  
@@ -90,7 +90,7 @@ SET Details =
 ```  
   
 ## <a name="use-for-json-output-in-a-c-client-app"></a>C# クライアント アプリで FOR JSON 出力を使用する  
- 次の例に、クエリの JSON の出力を C# クライアント アプリの StringBuilder オブジェクトに取得する方法を示します。 あると想定変数`queryWithForJson`FOR JSON 句を伴う SELECT ステートメントのテキストが含まれています。  
+ 次の例に、クエリの JSON の出力を C# クライアント アプリの StringBuilder オブジェクトに取得する方法を示します。 変数 `queryWithForJson` には FOR JSON 句を含む SELECT ステートメントのテキストが含まれているものと仮定します。  
   
 ```csharp  
 var queryWithForJson = "SELECT ... FOR JSON";
@@ -112,8 +112,8 @@ else
 }
 ```  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>詳細については、組み込みの JSON が SQL Server のサポート  
-特定のソリューションの多くは、ケース、および推奨事項を使用して、参照してください、[組み込みの JSON サポートに関するブログの投稿](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)SQL Server および Microsoft のプログラム マネージャー Jovan Popovic による Azure SQL データベースでします。
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>SQL Server に組み込まれている JSON サポートの詳細情報  
+多くの具体的なソリューション、ユース ケース、推奨事項については、Microsoft のプログラム マネージャー Jovan Popovic による SQL Server および Azure SQL Database に[組み込まれている JSON のサポートに関するブログ投稿](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)をご覧ください。
  
 ## <a name="see-also"></a>参照  
  [FOR JSON を使用してクエリ結果を JSON として書式設定する &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  

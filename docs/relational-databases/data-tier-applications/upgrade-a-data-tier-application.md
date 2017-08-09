@@ -28,19 +28,19 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: 2a55f2852f3146cd20ace9448040c1f96d328f07
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="upgrade-a-data-tier-application"></a>データ層アプリケーションのアップグレード
   データ層アプリケーションのアップグレード ウィザードまたは Windows PowerShell スクリプトを使用すると、現在配置されているデータ層アプリケーション (DAC) のスキーマとプロパティを、新しいバージョンの DAC で定義されているスキーマとプロパティに一致するように変更できます。  
   
--   **Before you begin:**  [Choosing DAC Upgrade Options](#ChoseDACUpgOptions), [Limitations and Restrictions](#LimitationsRestrictions), [Prerequisites](#Prerequisites), [Security](#Security), [Permissions](#Permissions)  
+-   **作業を開始する準備:**  [DAC アップグレード オプションの選択](#ChoseDACUpgOptions)、 [制限事項と制約事項](#LimitationsRestrictions)、 [前提条件](#Prerequisites)、 [セキュリティ](#Security)、 [権限](#Permissions)  
   
--   **To upgrade a DAC, using:**  [The Upgrade Data-tier Application Wizard](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **DAC のアップグレード:**  [データ層アプリケーションのアップグレード ウィザードの使用](#UsingDACUpgradeWizard)、 [PowerShell の使用](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
  DAC アップグレードは、既存のデータベースのスキーマを新しい DAC バージョンで定義されているスキーマに一致するように変更するインプレース アップグレードです。 新しい DAC バージョンは、DAC パッケージ ファイルで提供されます。 DAC パッケージの作成の詳細については、「 [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)」を参照してください。  
@@ -251,7 +251,7 @@ ms.lasthandoff: 06/23/2017
 7.  DAC パッケージ ファイルの読み取りに使用するファイル ストリームを閉じます。  
   
 ### <a name="example-powershell"></a>例 (PowerShell)  
- 次の例の既定のインスタンスの MyApplication という名前の DAC をアップグレードする、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、MyApplication2017.dacpac パッケージで新しい DAC バージョンを使用します。  
+ 次の例では、MyApplication2017.dacpac パッケージで新しい DAC バージョンを使用して、[!INCLUDE[ssDE](../../includes/ssde-md.md)] の既定のインスタンスの MyApplication という名前の DAC をアップグレードします。  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  

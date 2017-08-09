@@ -17,21 +17,21 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 36e612b6c3759d968687d8ba35286c399de02a74
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: bf0d7645df22c9a7540650e3c7f2ca2d0db8e1cc
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="remove-square-brackets-from-json---withoutarraywrapper-option"></a>WITHOUT_ARRAY_WRAPPER オプションを使用して JSON から角かっこを削除する
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-既定で **FOR JSON** 句の JSON 出力を囲んでいる角かっこを削除するには、 **WITHOUT_ARRAY_WRAPPER** オプションを指定します。 1 行の結果でこのオプションを使用して、単一要素を持つ配列の代わりに出力として単一の JSON オブジェクトを生成します。
+既定で **FOR JSON** 句の JSON 出力を囲んでいる角かっこを削除するには、 **WITHOUT_ARRAY_WRAPPER** オプションを指定します。 単一要素の配列の代わりに、単一の JSON オブジェクトを出力として生成するには、このオプションと単一行の結果を使います。
 
-複数行の結果では、このオプションを使用する場合、結果の出力はない有効な JSON 複数の要素と角かっこ、不足しているためです。  
+このオプションと複数行の結果を使うと、複数の要素が生成されて角かっこがないため、結果の出力は有効な JSON ではなくなります。  
   
-## <a name="example-single-row-result"></a>例 (1 行の結果)  
+## <a name="example-single-row-result"></a>例 (単一行の結果)  
 **WITHOUT_ARRAY_WRAPPER** オプションを指定した場合と指定しなかった場合の **FOR JSON** 句の出力例を以下に示します。  
   
  **Query**  
@@ -51,7 +51,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 } 
 ```  
   
- **結果**なし (既定)、 **WITHOUT_ARRAY_WRAPPER**オプション  
+ **WITHOUT_ARRAY_WRAPPER** オプションを使わない**結果** (既定)  
   
 ```json  
 [{
@@ -62,7 +62,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 ```  
 
 ## <a name="example-multiple-row-result"></a>例 (複数行の結果)
-次に、 **FOR JSON** オプションを指定した場合と指定しなかった場合の **WITHOUT_ARRAY_WRAPPER** オプションを指定します。 この例では、複数行の結果を生成します。 出力は、複数の要素と不足している角かっこによる有効な JSON ではありません。
+次に、 **FOR JSON** オプションを指定した場合と指定しなかった場合の **WITHOUT_ARRAY_WRAPPER** オプションを指定します。 この例では、複数行の結果が生成されます。 複数の要素があり、角かっこがないため、出力は有効な JSON ではありません。
   
  **Query**  
   
@@ -91,7 +91,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 } 
 ```  
   
- **結果**なし (既定)、 **WITHOUT_ARRAY_WRAPPER**オプション  
+ **WITHOUT_ARRAY_WRAPPER** オプションを使わない**結果** (既定)  
   
 ```json  
 [{
@@ -109,8 +109,8 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 }]
 ```  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>詳細については、組み込みの JSON が SQL Server のサポート  
-特定のソリューションの多くは、ケース、および推奨事項を使用して、参照してください、[組み込みの JSON サポートに関するブログの投稿](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)SQL Server および Microsoft のプログラム マネージャー Jovan Popovic による Azure SQL データベースでします。
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>SQL Server に組み込まれている JSON サポートの詳細情報  
+多くの具体的なソリューション、ユース ケース、推奨事項については、Microsoft のプログラム マネージャー Jovan Popovic による SQL Server および Azure SQL Database に[組み込まれている JSON のサポートに関するブログ投稿](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)をご覧ください。
   
 ## <a name="see-also"></a>参照  
  [FOR 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  

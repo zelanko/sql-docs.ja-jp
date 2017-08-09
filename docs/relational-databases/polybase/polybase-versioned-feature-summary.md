@@ -14,17 +14,17 @@ caps.latest.revision: 10
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: cf69aa2c57e86aab11974b5874039ae7f72b9917
 ms.openlocfilehash: 3384d962c3765bf4feb00f957ad56a668f8d92e4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>PolyBase のバージョン管理機能の概要
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-SQL Server の製品やサービスの使用可能な PolyBase 機能の概要です。  
+SQL Server の製品やサービスで利用可能な PolyBase 機能の概要です。  
   
 ## <a name="feature-summary-for-product-releases"></a>製品リリースの機能の概要  
  PolyBase の主な機能と、これらの機能を利用できる製品をまとめた表を次に示します。  
@@ -32,15 +32,15 @@ SQL Server の製品やサービスの使用可能な PolyBase 機能の概要�
 ||||||
 |-|-|-|-|-|   
 |**機能**|**SQL Server 2016**|**Azure SQL データベース**|**Azure SQL データ ウェアハウス**|**Parallel Data Warehouse**| 
-|で Hadoop データのクエリを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)]|可|いいえ|いいえ|可|
-|Hadoop からデータをインポートする|可|いいえ|いいえ|可|
-|データを Hadoop にエクスポートする  |可|いいえ|いいえ| 可|
-|クエリの計算を Hadoop にプッシュダウンする|可|いいえ|いいえ|可|  
-|Azure blob ストレージからデータをインポートする|はい|いいえ|はい|可| 
-|Azure blob ストレージにデータをエクスポートする|はい|いいえ|はい|可|  
+|で Hadoop データのクエリを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)]|はい|いいえ|いいえ|はい|
+|Hadoop からデータをインポートする|はい|いいえ|いいえ|はい|
+|データを Hadoop にエクスポートする  |はい|いいえ|いいえ| はい|
+|クエリの計算を Hadoop にプッシュダウンする|はい|いいえ|いいえ|はい|  
+|Azure blob ストレージからデータをインポートする|はい|いいえ|はい|はい| 
+|Azure blob ストレージにデータをエクスポートする|はい|いいえ|はい|はい|  
 |Azure Data Lake Store からデータをインポートする|いいえ|いいえ|はい|いいえ|    
 |Azure Data Lake Store からデータをエクスポートする|いいえ|いいえ|はい|いいえ|
-|Microsoft BI ツールから PolyBase クエリを実行する|可|いいえ|はい|可|   
+|Microsoft BI ツールから PolyBase クエリを実行する|はい|いいえ|はい|はい|   
 
 
 

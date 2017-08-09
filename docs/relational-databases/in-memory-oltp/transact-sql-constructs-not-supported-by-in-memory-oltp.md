@@ -14,11 +14,11 @@ caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 66f9964d94ebcbab021c9dcf69ae50663196a597
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>インメモリ OLTP でサポートされていない Transact-SQL の構造
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/23/2017
 |----------|----------|----------------|  
 |機能|ON|メモリ最適化テーブルをファイル グループまたはパーティション構成に配置できません。 **CREATE TABLE** ステートメントから ON 句を削除します。<br /><br /> すべてのメモリ最適化テーブルは、メモリ最適化ファイル グループにマップされます。|  
 |データ型|*データ型名*|指示されたデータ型はサポートされていません。 サポートされているデータ型に置き換えます。 詳細については、「 [サポートされるデータ型](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)」を参照してください。|  
-|機能|計算列|計算列は、メモリ最適化テーブルではサポートされていません。 **CREATE TABLE** ステートメントから計算列を削除します。<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降、メモリ最適化テーブルとインデックスで計算列がサポートされています。|  
+|機能|計算列|計算列は、メモリ最適化テーブルではサポートされていません。 **CREATE TABLE** ステートメントから計算列を削除します。<br/><br/>**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降、メモリ最適化テーブルとインデックスで計算列がサポートされています。|  
 |機能|レプリケーション|レプリケーションはメモリ最適化テーブルではサポートされていません。|  
 |機能|FILESTREAM|FILESTREAM ストレージは、メモリ最適化テーブルのサポートされた列ではありません。 列定義から **FILESTREAM** キーワードを削除します。|  
 |機能|SPARSE|メモリ最適化テーブルの列を SPARSE として定義することはできません。 列定義から **SPARSE** キーワードを削除します。|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/23/2017
 |操作|主キー列の更新|メモリ最適化テーブルおよびテーブル型の主キー列を更新できません。 主キーを更新する必要がある場合は、古い行を削除し、更新された主キーで新しい行を挿入します。|  
 |操作|CREATE INDEX|メモリ最適化テーブルのインデックスは、 **CREATE TABLE** ステートメントまたは **ALTER TABLE** ステートメントを使用してインラインで指定する必要があります。|  
 |操作|CREATE FULLTEXT INDEX|フルテキスト インデックスは、メモリ最適化テーブルでサポートされていません。|  
-|操作|スキーマの変更|メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャでは、 **sp_rename**などのスキーマの変更はサポートされません。<br /><br /> 特定のスキーマを変更しようとすると、エラー 12320 が生成されます。 スキーマ バージョンへの変更を必要とする操作 (名前変更など) は、メモリ最適化テーブルではサポートされません。<br /><br /> ALTER TABLE および ALTER PROCEDURE を使用して特定のスキーマを変更することは可能です。<br/><br/>**適用されます:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]です。<br/>以降で[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]sp_rename をサポートします。| 
+|操作|スキーマの変更|メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャでは、 **sp_rename**などのスキーマの変更はサポートされません。<br /><br /> 特定のスキーマを変更しようとすると、エラー 12320 が生成されます。 スキーマ バージョンへの変更を必要とする操作 (名前変更など) は、メモリ最適化テーブルではサポートされません。<br /><br /> ALTER TABLE および ALTER PROCEDURE を使用して特定のスキーマを変更することは可能です。<br/><br/>**適用対象:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]」を参照してください。<br/>[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 以降では、sp_rename がサポートされます。| 
 |操作|TRUNCATE TABLE|メモリ最適化テーブルでは TRUNCATE 操作はサポートされません。 テーブルからすべての行を削除するには、 **DELETE FROM***table* を使用してすべての行を削除するか、テーブルを削除してから再作成します。|  
 |操作|ALTER AUTHORIZATION|既存のメモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャでの所有者の変更はサポートされていません。 所有者を変更するには、テーブルまたはプロシージャを削除した後、再作成します。|  
 |操作|ALTER SCHEMA|スキーマ間でセキュリティ保護可能なリソースを移動します。|  
@@ -141,7 +141,7 @@ ms.lasthandoff: 06/23/2017
 |演算子|OFFSET|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **OFFSET** を削除します。|  
 |演算子|INTERSECT|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **INTERSECT** を削除します。 場合によっては INNER JOIN を使用して同じ結果を得ることができます。|  
 |演算子|EXCEPT|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **EXCEPT** を削除します。|  
-|演算子|APPLY|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **APPLY** を削除します。<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 より、ネイティブ コンパイル モジュールで APPLY 演算子がサポートされます。|  
+|演算子|APPLY|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **APPLY** を削除します。<br/><br/>**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 より、ネイティブ コンパイル モジュールで APPLY 演算子がサポートされます。|  
 |演算子|PIVOT|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **PIVOT** を削除します。|  
 |演算子|UNPIVOT|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **UNPIVOT** を削除します。|  
 |演算子|CONTAINS|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **CONTAINS** を削除します。|  

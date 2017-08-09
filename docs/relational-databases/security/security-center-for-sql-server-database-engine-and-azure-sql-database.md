@@ -24,11 +24,11 @@ caps.latest.revision: 55
 author: BYHAM
 ms.author: rickbyh
 manager: craigg
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 959bb6b98264296d13967725f29f763e0943a843
 ms.openlocfilehash: 970ea936f444a1c96d2c05e376905af7e03aef58
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター
@@ -75,9 +75,9 @@ ms.lasthandoff: 06/30/2017
   
 |||  
 |-|-|  
-|**自動監査**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit (Server と DB レベル)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Audit (データベース レベル)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") 脅威検出|[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL データベースの監査](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [SQL データベース脅威検出を開始](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/)|  
+|**自動監査**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査 (サーバーと DB レベル)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 監査 (データベース レベル)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") 脅威検出|[SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL データベースの監査](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [SQL データベース脅威検出を開始](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/)|  
 |**カスタム監査**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") トリガー|カスタム監査の実装: [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md) と [DML Triggers](../../relational-databases/triggers/dml-triggers.md)の作成|  
-|**準拠**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 準拠|SQL Server:<br />                        [情報セキュリティ国際評価基準](http://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> SQL データベース:<br />                        [Microsoft Azure セキュリティ センター: 機能による準拠](http://azure.microsoft.com/support/trust-center/services/)|  
+|**準拠**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") コンプライアンス|SQL Server:<br />                        [情報セキュリティ国際評価基準](http://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> SQL データベース:<br />                        [Microsoft Azure セキュリティ センター: 機能による準拠](http://azure.microsoft.com/support/trust-center/services/)|  
   
 ##  <a name="SQLInjection"></a> SQL インジェクション  
  SQL インジェクションとは、後で [!INCLUDE[ssDE](../../includes/ssde-md.md)] に渡され解析および実行が行われる文字列に、有害なコードを挿入するという攻撃です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、構文的に有効であれば受信したクエリがすべて実行されるため、SQL ステートメントを構成するすべてのプロシージャにおいて、インジェクションに対する脆弱性を検証する必要があります。 すべてのデータベース システムに SQL インジェクションのリスクがあり、脆弱性の多くが、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]にクエリを実行するアプリケーションで確認されています。 SQL インジェクション攻撃を阻止するには、ストアド プロシージャとパラメーター化コマンドを使用し、動的 SQL を回避して、すべてのユーザーのアクセス許可を制限します。  詳細については、「 [SQL Injection](../../relational-databases/security/sql-injection.md)」を参照してください。  

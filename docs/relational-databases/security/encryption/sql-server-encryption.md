@@ -19,11 +19,11 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
 ms.openlocfilehash: c7aee6098b6cf8eca74dd3f34b9ed9a836bb9d20
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-encryption"></a>SQL Server の暗号化
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/23/2017
 > [!NOTE]  
 >  トランスポート層セキュリティ (TLS1.2) に関する最新情報は、「 [Microsoft SQL Server 用の TLS 1.2 サポート](https://support.microsoft.com/kb/3135244)」から入手できます。  
 
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、接続、データ、およびストアド プロシージャに対して暗号化を使用できます。 次のトピックには、暗号化の詳細についてにが含まれて[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、接続、データ、およびストアド プロシージャに対して暗号化を使用できます。 次のトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] での暗号化の詳細が説明されています。  
 
  [暗号化階層](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の暗号化階層について説明します。  
@@ -79,7 +79,7 @@ ms.lasthandoff: 06/23/2017
  証明書を使用してデータを暗号化する方法について説明します。  
   
 ## <a name="external-resources"></a>外部リソース  
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2012 のセキュリティと保護](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
+ [Microsoft TechNet: SQL Server TechCenter: SQL Server 2012 - セキュリティと保護](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のセキュリティに関する最新情報が掲載されています。  
   
 ## <a name="see-also"></a>参照  

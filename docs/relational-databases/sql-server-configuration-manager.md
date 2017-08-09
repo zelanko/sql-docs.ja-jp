@@ -30,12 +30,12 @@ ms.translationtype: HT
 ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
 ms.openlocfilehash: 8c9ab15a35c892a31b882797271629a5ec9ef1a0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 構成マネージャー
 
- > SQL Server の以前のバージョンに関連するコンテンツでは、次を参照してください。 [SQL Server 構成マネージャー](https://msdn.microsoft.com/en-US/library/ms174212(SQL.120).aspx)です。
+ > 以前のバージョンの SQL Server に関連するコンテンツについては、「[SQL Server 構成マネージャー](https://msdn.microsoft.com/en-US/library/ms174212(SQL.120).aspx)」をご覧ください。
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に関連付けられているサービスの管理、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]が使用するネットワーク プロトコルの設定、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クライアント コンピューターからのネットワーク接続の設定を行うためのツールです。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは、[スタート] メニューから利用できる [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール スナップインであり、他の [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール画面に追加することも可能です。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール (**mmc.exe**) は、**SQLServerManager\<バージョン>.msc** ファイル ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)] の **SQLServerManager13.msc** など) を使用して構成マネージャーを開きます。 最新の 4 つのバージョンへのパスを次に示します (Windows が C ドライブにインストールされている場合)。  
   

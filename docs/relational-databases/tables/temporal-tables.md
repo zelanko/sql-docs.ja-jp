@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
 ms.openlocfilehash: 5f9f128cab773951438aa89998ad76e7ba29bb4d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="temporal-tables"></a>テンポラル テーブル
@@ -143,7 +143,7 @@ SELECT * FROM Employee
   
  次の表の該当行列の SysStartTime は、クエリ対象のテーブルの **SysStartTime** 列の値で、 **SysEndTime** はクエリ対象のテーブルの **SysEndTime** 列の値です。 完全な構文と例については、「 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) 」、および「 [システム バージョン管理されたテンポラル テーブルのデータのクエリ](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)でサポートされているデータベース機能です。  
   
-|式|該当行|説明|  
+|式|該当行|Description|  
 |----------------|---------------------|-----------------|  
 |**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|過去の指定時点の実際 (現行) の値を含む行のあるテーブルを返します。 内部的には、テンポラル テーブルとその履歴テーブルの結合が行われ、結果がフィルター処理されて、*<date_time>* パラメーターで指定された特定の時点で有効だった行の値が返されます。 *system_start_time_column_name* 値が *<date_time>* パラメーター値と等しいかそれよりも小さく、*system_end_time_column_name* 値が *<date_time>* パラメーター値より大きい場合に、行の値は有効と見なされます。|  
 |**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|指定した時間範囲内でアクティブだったすべての行バージョンの値を含むテーブルを返します。FROM 引数の *<start_date_time>* パラメーター値の前にアクティブになったか、TO 引数の *<end_date_time>* パラメーター値の後にアクティブでなくなったかに無関係です。 内部的には、共用体が一時的なテーブルとその履歴テーブルの間実行され、結果をフィルター処理すると、指定した時間範囲の中にいつでもにアクティブだったすべての行のバージョンの値を返します。 FROM エンドポイントによって定義されている下限の境界で正確にアクティブが中断された行は含まれず、TO エンドポイントによって定義された境界の上限で正確にアクティブになったレコードも含まれません。|  
@@ -152,7 +152,7 @@ SELECT * FROM Employee
 |**ALL**|すべての行|現行および履歴テーブルに属する行の和を返します。|  
   
 > [!NOTE]  
->  必要に応じて、これらの期間列を明示的に参照しないクエリがこれらの列を返さないよう、期間列を隠すこともできます (**SELECT \* FROM***\<table>* シナリオ)。 非表示の列を返すには、クエリで非表示の列を単純に明示的に参照してください。 同様に、 **INSERT** および **BULK INSERT** ステートメントでも、これらの新しい期間列が存在しないかのように続行されます (そして列値は自動入力されます)。 **HIDDEN** 句の使用方法の詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」と「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
+>  必要に応じて、これらの期間列を明示的に参照しないクエリがこれらの列を返さないよう、これらの期間列を隠すこともできます (**SELECT \* FROM***\<table>* シナリオ)。 非表示の列を返すには、クエリで非表示の列を単純に明示的に参照してください。 同様に、 **INSERT** および **BULK INSERT** ステートメントでも、これらの新しい期間列が存在しないかのように続行されます (そして列値は自動入力されます)。 **HIDDEN** 句の使用方法の詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」と「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
   
 ## <a name="did-this-article-help-you-were-listening"></a>この記事は役に立ちましたか? フィードバックをお待ちしております。  
  どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツ改善のため、フィードバックをお待ちしています。 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page) にコメントをお送りください  

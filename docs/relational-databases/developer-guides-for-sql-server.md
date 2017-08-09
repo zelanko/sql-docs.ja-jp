@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
 ms.openlocfilehash: bc86472cabd742e83980126dce2cf22d42dfdde2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="developer-guides-for-sql-server"></a>SQL Server の開発者ガイド
@@ -39,7 +39,7 @@ ms.lasthandoff: 07/20/2017
   
  - [Analysis Services の開発者向けドキュメント](../analysis-services/analysis-services-developer-documentation.md)  
   
- - [Reporting Services の開発者向けのドキュメント](../reporting-services/reporting-services-developer-documentation.md)  
+ - [Reporting Services Developer Documentation (Reporting Services の開発者向けのドキュメント)](../reporting-services/reporting-services-developer-documentation.md)  
   
  - [Integration Services の開発者向けのドキュメント](../integration-services/integration-services-developer-documentation.md)  
   

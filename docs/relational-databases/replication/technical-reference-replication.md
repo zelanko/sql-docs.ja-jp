@@ -16,20 +16,20 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 29ac4abdca7f7b8b3f77091bf91862471bb1066c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="technical-reference-replication"></a>テクニカル リファレンス (レプリケーション)
   ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションのテクニカル リファレンス ドキュメントへのリンクを示します。  
   
- ![小ファイル フォルダー アイコン](../../analysis-services/media/filefolder-small.png "Small File Folder Icon")**エラーとイベント**  
+ ![小さいファイル フォルダー アイコン](../../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") **エラーとイベント**  
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
- ![小ファイル フォルダー アイコン](../../analysis-services/media/filefolder-small.png "Small File Folder Icon")**機能リファレンス**  
+ ![小さいファイル フォルダー アイコン](../../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") **機能リファレンス**  
  [Configure Distribution Wizard](../../relational-databases/replication/configure-distribution-wizard.md)  
   
  [サブスクリプションの新規作成ウィザード &#40;UI リファレンス&#41;](../../relational-databases/replication/new-subscription-wizard-ui-reference.md)  
@@ -38,14 +38,14 @@ ms.lasthandoff: 06/22/2017
   
  [詳細情報](../../relational-databases/replication/properties-reference-replication.md)  
   
- ![小ファイル フォルダー アイコン](../../analysis-services/media/filefolder-small.png "Small File Folder Icon")**レプリケーション エージェント**  
+ ![小さいファイル フォルダー アイコン](../../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") **レプリケーション エージェント**  
  [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
  [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
  [詳細情報](../../relational-databases/replication/agents/replication-agents.md)  
   
- ![小ファイル フォルダー アイコン](../../analysis-services/media/filefolder-small.png "Small File Folder Icon")**レプリケーション ストアド プロシージャ**  
+ ![小さいファイル フォルダー アイコン](../../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") **レプリケーション ストアド プロシージャ**  
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)  
   
  [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)  
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
  [詳細情報](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
- ![小ファイル フォルダー アイコン](../../analysis-services/media/filefolder-small.png "Small File Folder Icon")**レプリケーション テーブル**  
+ ![小さいファイル フォルダー アイコン](../../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") **レプリケーション テーブル**  
  [MSmerge_conflicts_info &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)  
   
  [MSpeer_response &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mspeer-response-transact-sql.md)  
@@ -67,14 +67,14 @@ ms.lasthandoff: 06/22/2017
   
  [詳細情報](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
- ![小ファイル フォルダー アイコン](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **レプリケーション ビュー**  
+ ![小さいファイル フォルダー アイコン](../../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") **レプリケーション ビュー**  
  [syspublications &#40;システム ビュー&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)  
   
  [syssubscriptions &#40;システム ビュー&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md)  
   
  [詳細情報](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
- ![小ファイル フォルダー アイコン](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **レプリケーション クラス ライブラリ**  
+ ![小さいファイル フォルダー アイコン](../../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") **レプリケーション クラス ライブラリ**  
  <xref:Microsoft.SqlServer.Replication>  
   
  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  

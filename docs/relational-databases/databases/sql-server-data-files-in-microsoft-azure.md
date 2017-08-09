@@ -14,11 +14,11 @@ caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: c105f4fae3b3fffb61ef892cecbbe75754ccfd28
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 内の SQL Server データ ファイル
@@ -126,7 +126,7 @@ ON
  ここでは、Azure 機能で SQL Server データ ファイルを使用する場合に使用可能なツールとプログラミング リファレンス ライブラリについて説明します。  
   
 ### <a name="powershell-support"></a>PowerShell のサポート  
- ファイル パスの代わりに BLOB ストレージの URL パスを参照することにより、SQL Server データ ファイルを Azure BLOB ストレージ サービスに格納するには、PowerShell コマンドレットを使用します。 次の URL 形式を使用して Blob にアクセスします。`http://storageaccount.blob.core.windows.net/<container>/<blob>`です。  
+ ファイル パスの代わりに BLOB ストレージの URL パスを参照することにより、SQL Server データ ファイルを Azure BLOB ストレージ サービスに格納するには、PowerShell コマンドレットを使用します。 BLOB には、`http://storageaccount.blob.core.windows.net/<container>/<blob>` という URL 形式を使用してアクセスします。  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>SQL Server オブジェクトとパフォーマンス カウンターのサポート  
  SQL Server 2014 以降では、Azure Storage 機能内の SQL Server データ ファイルと組み合わせて使用する目的で、1 つの新しい SQL Server オブジェクトが追加されました。 新しい SQL Server オブジェクトは [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) と呼ばれます。これをシステム モニターで使用すると、SQL Server を Microsoft Azure Storage と共に使用する場合のアクティビティを監視できます。  
@@ -134,7 +134,7 @@ ON
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio のサポート  
  SQL Server Management Studio では、複数のダイアログ ウィンドウでこの機能を使用することができます。 たとえば、ストレージ コンテナーの URL パス (https://teststorageaccnt.blob.core.windows.net/testcontainer/ など) を、
  
- **[新しいデータベース]**、**[データベースのアタッチ]**、**[データベースの復元]** などの複数のダイアログ ウィンドウの **[パス]** として入力できます。 詳細については、「 [チュートリアル: Windows Azure ストレージ サービス内の SQL Server データ ファイル](https://msdn.microsoft.com/library/dn466438.aspx)」をご覧ください。  
+ **[新しいデータベース]** 、 **[データベースのアタッチ]**、 **[データベースの復元]**などの複数のダイアログ ウィンドウの **[パス]**として入力できます。 詳細については、「 [チュートリアル: Windows Azure ストレージ サービス内の SQL Server データ ファイル](https://msdn.microsoft.com/library/dn466438.aspx)」をご覧ください。  
   
 ### <a name="sql-server-management-objects-support"></a>SQL Server 管理オブジェクトのサポート  
  Azure 機能で SQL Server データ ファイルを使用する場合は、すべての SQL Server 管理オブジェクト (SMO) がサポートされます。 SMO オブジェクトにファイル パスが必要であれば、ローカル ファイル パスの代わりに BLOB の URL 形式 (`https://teststorageaccnt.blob.core.windows.net/testcontainer/` など) を使用します。 SQL Server 管理オブジェクト (SMO) の詳細については、SQL Server オンライン ブックの「[SQL Server 管理オブジェクト &#40;SMO&#41; プログラミング ガイド](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) 」をご覧ください。  
