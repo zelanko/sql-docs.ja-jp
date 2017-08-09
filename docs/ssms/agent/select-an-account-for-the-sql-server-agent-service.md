@@ -25,11 +25,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
 ms.openlocfilehash: 3050dc3fc207f2154a70c68770ca266d2d47ce92
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>SQL Server エージェント サービスのアカウントの選択
@@ -60,7 +60,7 @@ ms.lasthandoff: 06/23/2017
   
     -   プロセスに対してメモリ クォータを調整する権限 (SeIncreaseQuotaPrivilege)  
   
-    -   ネットワーク (SeNetworkLogonRight) からこのコンピューターにアクセスする権限  
+    -   ネットワークからこのコンピューターにアクセスする権限 (SeNetworkLogonRight)  
   
 > [!NOTE]  
 > アカウントにプロキシのサポートに必要な権限がない場合は、 **sysadmin** 固定サーバー ロールのメンバーのみがジョブを作成できます。  
@@ -112,7 +112,7 @@ ms.lasthandoff: 06/23/2017
 ## <a name="common-tasks"></a>一般的なタスク  
 **SQL Server エージェント サービスの開始アカウントを指定するには**  
   
--   [Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
+-   [Set the Service Startup Account for SQL Server Agent &#40;SQL Server Configuration Manager&#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
   
 **SQL Server エージェントのメール プロファイルを指定するには**  
   
