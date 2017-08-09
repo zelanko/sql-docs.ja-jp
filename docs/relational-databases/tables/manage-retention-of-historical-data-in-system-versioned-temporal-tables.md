@@ -15,11 +15,11 @@ caps.latest.revision: 23
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
 ms.openlocfilehash: 1fdb84c01f9e25c6ad818a6350a08df9ceaeae93
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>システム バージョン管理されたテンポラル テーブルの履歴データの保有期間管理
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/23/2017
 ## <a name="data-retention-management-for-history-table"></a>履歴テーブルのデータ保有期間管理  
  テンポラル テーブルのデータ保有期間の管理は、テンポラル テーブルごとに必要な保有期間を決定することから始まります。 ほとんどの場合、保有期間ポリシーは、テンポラル テーブルを利用する用途のビジネス ロジックの不可欠要素であると見なすべきです。 たとえば、データ監査やタイム トラベルのシナリオでは、オンライン クエリ実行のために履歴データを利用できる期間について、要件が確定されます。  
   
- データの保有期間を決定したら、次に、履歴データの保存方法、保存場所、保有期間を超えた履歴データの削除方法など、履歴データを管理するための計画を立てます。 テンポラル履歴テーブルの履歴データを管理するため、次の 4 つの方法を使用できます。  
+ データの保有期間を決定したら、次に、履歴データの保存方法、保存場所、保有期間を超えた履歴データの削除方法など、履歴データを管理するための計画を立てます。 次の 4 つの手法で、一時的な履歴テーブルの履歴データを管理できます。  
   
 -   [Stretch Database](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 06/23/2017
   
 -   [カスタム クリーンアップ スクリプト](https://msdn.microsoft.com/library/mt637341.aspx#using-custom-cleanup-script-approach)  
 
--   [保有期間ポリシー](https://msdn.microsoft.com/library/mt637341.aspx#using-temporal-history-retention-policy-approach)  
+-   [保持ポリシー](https://msdn.microsoft.com/library/mt637341.aspx#using-temporal-history-retention-policy-approach)  
 
  いずれの手法でも、履歴データを移行またはクリーンアップするためのロジックは、現在のテーブルの期間終了に相当する列に基づきます。 各行の期間終了値により、そのバージョンの行が “閉じられる”、つまり、履歴テーブルに入るタイミングが決定されます。 たとえば、条件 `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` では、1 か月以上経過した履歴データは履歴テーブルから削除されます。  
   
@@ -428,28 +428,28 @@ BEGIN TRAN
 COMMIT;  
 ```  
 
-## <a name="using-temporal-history-retention-policy-approach"></a>テンポラル履歴保有期間ポリシーのアプローチを使用します。
-> **注:**テンポラル履歴保有期間ポリシーを使用する方法は[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]と SQL Server 2017 年 1 CTP 1.3 から開始します。  
+## <a name="using-temporal-history-retention-policy-approach"></a>テンポラル履歴保有期間ポリシー アプローチの使用
+> **注:** テンポラル履歴保有期間ポリシーを使う方法は、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] および SQL Server 2017 の CTP 1.3 以降に適用されます。  
 
-テンポラル履歴の保有期間を指定できます、個々 のテーブル レベルで構成されている、ポリシーを柔軟なエージングを作成できます。 テンポラルの保有期間を適用することは簡単: 1 つだけのパラメーター テーブルの作成時またはスキーマの変更時に設定する必要があります。
+テンポラル履歴保有期間は個々のテーブル レベルで構成でき、ユーザーは柔軟なエージング ポリシーを作成できます。 テンポラル保有期間は簡単に適用できます。必要なのは、テーブル作成時またはスキーマ変更時にパラメーターを 1 つ設定することだけです。
 
-保有ポリシーを定義した後、Azure SQL データベースは対象データの自動クリーンアップの履歴行があるかどうかを定期的に確認を開始します。 一致する行の id および履歴テーブルからそれらの削除のスケジュール設定し、システムによって実行されるバック グラウンド タスクの透過的に行われます。 Age 状態、履歴テーブルの行は、SYSTEM_TIME 期間の終了を表す列に基づいてがチェックされます。 たとえば、保有期間は 6 か月間に設定は、クリーンアップの対象となるテーブルの行は、次の条件を満たしています。
+保有期間ポリシーを定義した後、Azure SQL Database は自動データ クリーンアップの対象になる履歴行があるかどうかの定期的な確認を開始します。 一致する行の識別と履歴テーブルからの削除は、システムによってスケジュール設定されて実行されるバックグラウンド タスクにおいて透過的に行われます。 履歴テーブルの行の経過時間状態は、SYSTEM_TIME 期間の終了を表す列に基づいてチェックされます。 たとえば、保有期間が 6 か月に設定されている場合、クリーンアップの対象となるテーブルの行は次の条件を満たします。
 ```
 ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())
 ```
-前の例では、ValidTo 列は、SYSTEM_TIME 期間の終了に対応していることと見なされます。
-### <a name="how-to-configure-retention-policy"></a>保有ポリシーを構成する方法は?
-テンポラル テーブルの保有ポリシーを構成する前にまず、データベース レベルでテンポラル履歴保有期間が有効になっているかどうか。
+前の例では、ValidTo 列が SYSTEM_TIME 期間の終了に対応しているものと想定されています。
+### <a name="how-to-configure-retention-policy"></a>保有期間ポリシーを構成する方法
+テンポラル テーブルの保有期間ポリシーを構成する前にまず、データベース レベルでテンポラル履歴保有期間が有効になっているかどうかを確認します。
 ```
 SELECT is_temporal_history_retention_enabled, name
 FROM sys.databases
 ```
-データベースのフラグ**is_temporal_history_retention_enabled**既定では、ON に設定されているが、ユーザーが ALTER DATABASE ステートメントを使用して変更できます。 ポイントイン タイム復元操作後に OFF に自動的に設定されます。 データベースの一時的な履歴保有期間のクリーンアップを有効にするには、次のステートメントを実行します。
+データベースのフラグ **is_temporal_history_retention_enabled** は既定で ON に設定されていますが、ユーザーは ALTER DATABASE ステートメントでそれを変更できます。 ポイントインタイム リストア操作の後では、OFF に自動的に設定されます。 データベースのテンポラル履歴保有期間のクリーンアップを有効にするには、次のステートメントを実行します。
 ```
 ALTER DATABASE <myDB>
 SET TEMPORAL_HISTORY_RETENTION  ON
 ```
-保持ポリシーは、ヒストリは削除パラメーターの値を指定することによってテーブルの作成中に構成されます。
+保有期間ポリシーは、テーブル作成時に HISTORY_RETENTION_PERIOD パラメーターの値を指定することによって構成します。
 ```
 CREATE TABLE dbo.WebsiteUserInfo
 (  
@@ -469,13 +469,13 @@ CREATE TABLE dbo.WebsiteUserInfo
      )
  );
 ```
-別の時間単位を使用して、保有期間を指定することができます: 日、週、月、および年です。 ヒストリは削除を省略すると、無期限の保有が使用されます。 無限のキーワードを明示的にも使用できます。
-一部のシナリオでテーブルの作成後に保有期間を構成する場合も、以前に変更するには、値を構成します。 その場合は、ALTER TABLE ステートメントを使用します。
+保有期間は、異なる時間単位 (DAYS、WEEKS、MONTHS、YEARS) を使って指定できます。 HISTORY_RETENTION_PERIOD を省略すると、INFINITE 保有期間と見なされます。 INFINITE キーワードを明示的に使うこともできます。
+シナリオによっては、テーブル作成後に保有期間を構成すること、または以前に構成した値を変更することが必要になる場合があります。 その場合は、ALTER TABLE ステートメントを使います。
 ```
 ALTER TABLE dbo.WebsiteUserInfo
 SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 9 MONTHS));
 ```
-保有ポリシーの現在の状態を確認するには、個々 のテーブルの保有期間で、データベース レベルでテンポラルの保有期間の有効化フラグを結合する次のクエリを使用します。
+保有期間ポリシーの現在の状態を確認するには、データベース レベルのテンポラル保有期間有効化フラグと個々のテーブルの保有期間を結合する次のクエリを使います。
 ```
 SELECT DB.is_temporal_history_retention_enabled,
 SCHEMA_NAME(T1.schema_id) AS TemporalTableSchema,
@@ -488,16 +488,16 @@ where name = DB_NAME()) AS DB
 LEFT JOIN sys.tables T2   
 ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 ```
-### <a name="how-sql-database-deletes-aged-rows"></a>SQL データベースの削除には、行が期限切れですか。
-クリーンアップ プロセスは、履歴テーブルのインデックスのレイアウトに依存します。 確認することが重要*有限の保持ポリシーが構成されていることがあるできる、クラスター化インデックス (B ツリーまたは列ストア) の履歴テーブルだけ*です。 有限の保有期間のすべてのテンポラル テーブルの期限切れデータをクリーンアップするバック グラウンド タスクが作成されます。 行ストア (B ツリー) のクラスター化インデックスのクリーンアップ ロジック (最大 10 K) の小さなチャンクで期限切れの行を削除するデータベースのログ、I/O サブシステムの負荷を最小限に抑えられます。 クリーンアップ ロジックを利用 B ツリー インデックス、保有期間は保証できませんしっかりとできてよりも古い行の削除の順序が必要です。 そのため、 *、アプリケーション内でクリーンアップの順序ですべての依存関係を受け取らない*です。
+### <a name="how-sql-database-deletes-aged-rows"></a>SQL Database が期限切れの行を削除する方法
+クリーンアップ プロセスは、履歴テーブルのインデックスのレイアウトに依存します。 *有限の保持期間ポリシーを構成できるのはクラスター化インデックス (B ツリーまたは列ストア) を使っている履歴テーブルだけである*ことに注意する必要があります。 有限の保有期間を持つすべてのテンポラル テーブルの期限切れデータをクリーンアップするために、バックグラウンド タスクが作成されます。 行ストア (B ツリー) クラスター化インデックスのクリーンアップ ロジックは、データベース ログと I/O サブシステムへの負荷を最小限に抑えるため、小さいチャンク (最大 10 K) で期限切れの行を削除します。 クリーンアップ ロジックは必要な B ツリー インデックスを利用しますが、保有期間より古い行の削除の順序は確実には保証できません。 そのため、"*アプリケーションではクリーンアップ順序に依存しないでください*"。
 
-クラスター化列ストアのクリーンアップ タスクは、全体の行グループを一度に削除 (通常です含まれている 100万行ごとの)、非常に効率的な履歴データが高のペースで生成されたときに特にです。
+クラスター化列ストアのクリーンアップ タスクは、行グループ全体を一度に削除します (通常、各グループには 100 万行が含まれます)。これは非常に効率的であり、履歴データが速いペースで生成されているときは特にそうです。
 
-![クラスター化列ストアの保有期間](../../relational-databases/tables/media/cciretention.png "クラスター化列ストアの保存")
+![クラスター化列ストアの保有期間](../../relational-databases/tables/media/cciretention.png "クラスター化列ストアの保有期間")
 
-優れたデータ圧縮と効率的な保有期間のクリーンアップはクラスター化列ストア インデックスのシナリオで最適、ワークロードが急速に大量の履歴データを生成するときにします。 そのパターンは、変更の追跡および監査、傾向分析や IoT やデータ取り込みのテンポラル テーブルを使用して処理を要するトランザクション処理ワークロードで一般的です。
+優れたデータ圧縮と効率的な保有期間のクリーンアップにより、クラスター化列ストア インデックスはワークロードが急速に大量の履歴データを生成するシナリオに最適な選択肢になります。 このようなパターンは、変更の追跡と監査、傾向分析、または IoT のデータ取り込みにテンポラル テーブルを使うトランザクション処理の多いワークロードで一般的なものです。
 
-確認してください[の保持ポリシーにテンポラル テーブルの履歴データを管理](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy)詳細についてはします。
+詳しくは、「[リテンション ポリシーを使用したテンポラル テーブルでの履歴データの管理](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy)」をご覧ください。
 
 ## <a name="see-also"></a>参照  
  [テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)   
