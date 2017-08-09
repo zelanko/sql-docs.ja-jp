@@ -24,7 +24,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="server-properties-logging-page"></a>[サーバーのプロパティ] ([ログ記録] ページ)
+# <a name="server-properties-logging-page"></a>[サーバーのプロパティ]\([ログ記録] ページ)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] で、この [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] ページを使用すると、レポート サーバーで収集されるレポート実行データに制限を設定できます。 実行データはレポート サーバー データベースに内部的に格納されます。 ネイティブ モードまたは SharePoint 統合モードで実行されているレポート サーバーのレポート処理を追跡できます。 レポート サーバーがスケールアウト配置の一部である場合、レポート実行ログでは、配置全体に対するすべてのレポート処理のレコードが 1 つのログ ファイルで保持されます。  
   
  このページを開くには:

@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="select-object-types-object-explorer"></a>[オブジェクトの種類を選択] (オブジェクト エクスプローラー)
+# <a name="select-object-types-object-explorer"></a>[オブジェクトの種類を選択]\(オブジェクト エクスプローラー)
 このダイアログ ボックスを使用すると、 **[オブジェクトの選択]** ダイアログ ボックスに表示するオブジェクトの種類を指定できます。  
   
 ## <a name="select-the-types-of-objects-to-find"></a>[検索するオブジェクトの種類を選択]  
