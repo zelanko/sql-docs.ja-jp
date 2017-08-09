@@ -1,5 +1,5 @@
 ---
-title: "移行後の検証および最適化ガイド |Microsoft ドキュメント"
+title: "移行後の検証および最適化ガイド | Microsoft Docs"
 ms.custom: 
 ms.date: 5/03/2017
 ms.prod: sql-server-2016
@@ -17,20 +17,20 @@ caps.latest.revision: 3
 author: pelopes
 ms.author: harinid
 manager: 
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
 ms.openlocfilehash: 30a271511fff2d9c3c9eab73a0d118bfb3f8130d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移行後の検証および最適化ガイド
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]post 移行手順がすべてのデータの精度と完全性を調整する際に非常に重要です。 だけでなく、ワークロードのパフォーマンスの問題を発見します。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の移行後手順は、データの精度と完全性の調整、およびワークロードのパフォーマンスの問題の発見に、非常に重要です。
 
 # <a name="common-performance-scenarios"></a>パフォーマンスの一般的なシナリオ 
-移行後に発生した、一般的なパフォーマンス シナリオの一部を次に示します[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]プラットフォームとの競合を解決する方法です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行 (古いバージョンから新しいバージョン) に固有のシナリオや、外部のプラットフォーム (Oracle、DB2、MySQL、Sybase など) から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行に固有のシナリオが含まれています。
+次に示すのは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プラットフォームへの移行後に発生する一般的なパフォーマンスのシナリオと、その解決方法です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行 (古いバージョンから新しいバージョン) に固有のシナリオや、外部のプラットフォーム (Oracle、DB2、MySQL、Sybase など) から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行に固有のシナリオが含まれています。
 
 ## <a name="CEUpgrade"></a> CE バージョンでの変更によるクエリ パフォーマンス低下
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/23/2017
 
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] で導入されたクエリ オプティマイザーの変更の詳細については、「[Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](http://msdn.microsoft.com/library/dn673537.aspx)」(SQL Server 2014 の基数推定を使用したクエリ プランの最適化) を参照してください。
 
-### <a name="steps-to-resolve"></a>解決する手順
+### <a name="steps-to-resolve"></a>解決手順
 
 [データベース互換性レベル](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)をソース バージョンに変更して、次の図に示すように推奨されるアップグレードのワークフローに従います。
 
@@ -50,87 +50,87 @@ ms.lasthandoff: 06/23/2017
 
 このトピックの詳細については、「[SQL Server 2016 へのアップグレード中にパフォーマンスの安定性を維持する](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)」を参照してください。
 
-## <a name="ParameterSniffing"></a>パラメーター スニッフィングに対する感度
+## <a name="ParameterSniffing"></a> パラメーター スニッフィングに対する感度
 
-**適用されます:** (Oracle、DB2、MySQL、Sybase) などの外部のプラットフォームを[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]移行します。
-
-> [!NOTE]
-> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]移行には、この問題は、ソースに存在していた場合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の新しいバージョンに移行する、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]として-はいないこのシナリオに対応します。 
-
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データの分布を入力用に最適化された、パラメーター化と再利用可能なプランを生成する最初のコンパイル時の入力パラメーターを見つけ出す機能を使用してストアド プロシージャでクエリ プランをコンパイルします。 ストアド プロシージャがない場合でも、単純なプランを生成するほとんどのステートメントがパラメーター化です。 プランがキャッシュされると、後に、以前にキャッシュされたプランを将来実行する任意に割り当てます。
-潜在的な問題は、その最初のコンパイル使用いない場合、最も一般的なパラメーターのセットは通常のワークロードの場合に発生します。 さまざまなパラメーターは、同じ実行プランは非効率的になります。 このトピックの詳細については、「[パラメーター スニッフィング](../relational-databases/query-processing-architecture-guide.md#ParamSniffing)」を参照してください。
-
-### <a name="steps-to-resolve"></a>解決する手順
-
-1.  使用して、`RECOMPILE`ヒント。 プランは、各パラメーターの値に適応するたびに計算されます。
-2.  オプションを使用するストアド プロシージャの書き直し`(OPTIMIZE FOR(<input parameter> = <value>))`です。 使用する値に適したの作成および保守をパラメーター化された値を効率的に 1 つのプランは、関連するワークロードの大半を決定します。
-3.  プロシージャ内のローカル変数を使用して、ストアド プロシージャを書き直してください。 これで、オプティマイザーは、結果のパラメーター値に関係なく同じプランの見積もり、密度ベクトルを使用します。
-4.  オプションを使用するストアド プロシージャの書き直し`(OPTIMIZE FOR UNKNOWN)`です。 ローカル変数の手法を使用する場合と同様です。
-5.  ヒントを使用するクエリを書き直す`DISABLE_PARAMETER_SNIFFING`です。 同じ影響を与えるとしてパラメーターを見つけ出す完全に無効にすると、によってローカル変数の手法を使用する場合を除き、 `OPTION(RECOMPILE)`、`WITH RECOMPILE`または`OPTIMIZE FOR <value>`を使用します。
-
-> [!TIP] 
-> 活用、[!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)]場合、これは、問題をすばやく識別する計画の分析機能します。 詳細については、使用可能な[ここ](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/)です。
-
-## <a name="MissingIndexes"></a>欠落したインデックス
-
-**適用されます:** (Oracle、DB2、MySQL、Sybase) などの外部のプラットフォームと[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]移行します。
-
-正しくないか、不足しているインデックスは、余分なメモリにつながる追加の I/O と CPU の浪費されているとします。 これによりを使用するなどの作業負荷プロファイルが変更されたためさまざまな述語の場合、既存の無効化インデックスの設計。 不適切なインデックス作成方法またはワークロードのプロファイルの変更の証拠は、次のとおりです。
--   複製で、ほとんど使用されないを重複していると完全に使用されていないインデックスを探します。
--   更新プログラムに使用されていないインデックスを持つ特別な注意します。
-
-### <a name="steps-to-resolve"></a>解決する手順
-
-1.  インデックスが存在しない参照をすべてのグラフィカル実行プランを利用します。
-2.  によって生成された提案をインデックス[データベース エンジン チューニング アドバイザー](../tools/dta/tutorial-database-engine-tuning-advisor.md)です。
-3.  活用、[欠落インデックス DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)により、または、 [SQL Server パフォーマンス ダッシュ ボード](https://www.microsoft.com/en-us/download/details.aspx?id=29063)です。
-4.  インデックスのすべての参照がヒント/にハードコーディング、データベースの既存のプロシージャおよび関数の場合も、不足している、重複する、冗長、めったに使用される、完全に使用されていないインデックスに関する洞察を提供する既存の Dmv を使用できる既存のスクリプトを活用します。 
-
-> [!TIP] 
-> このような既存のスクリプトの例として、[インデックスの作成](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Creation)と[インデックス情報](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Information)です。 
-
-## <a name="InabilityPredicates"></a>データのフィルター述語の機能を利用できません。
-
-**適用されます:** (Oracle、DB2、MySQL、Sybase) などの外部のプラットフォームと[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]移行します。
+**適用対象:** 外部プラットフォーム (Oracle、DB2、MySQL、Sybase など) から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行。
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]移行には、この問題は、ソースに存在していた場合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の新しいバージョンに移行する、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]として-はいないこのシナリオに対応します。
+> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行で、移行元の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にこの問題が存在していた場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の新しいバージョンにそのまま移行したのでは、このシナリオには対処できません。 
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]クエリ オプティマイザーはコンパイル時に認識されている情報のみを考慮することができます。 ワークロードは、実行時にのみが知っていることができますを述語に依存する場合は、不適切なプランの選択の可能性が向上します。 高品質のプランでは、述語がある必要があります**検索**、または**S**検索**Arg**ドキュメント**できません**です。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、最初のコンパイルで入力パラメーターのスニッフィングを使って、その入力データの分布に最適化された、パラメーター化された再利用可能なプランを生成することで、ストアド プロシージャのクエリ プランをコンパイルします。 ストアド プロシージャではない場合でも、単純なプランを生成するほとんどのステートメントがパラメーター化されます。 プランが最初にキャッシュされた後、それ以降の実行は前にキャッシュされたプランにマップします。
+その最初のコンパイルで通常のワークロードに対する最も一般的なパラメーターのセットが使われないことがある場合、問題が発生する可能性があります。 異なるパラメーターに対して実行プランが同じでは非効率的になります。 このトピックの詳細については、「[パラメーター スニッフィング](../relational-databases/query-processing-architecture-guide.md#ParamSniffing)」を参照してください。
 
-非検索述語の例をいくつか:
--   暗黙的なデータ変換、VARCHAR、NVARCHAR を VARCHAR に INT のいずれかのようにします。 実際の実行プランでランタイム CONVERT_IMPLICIT 警告を検索します。 1 つの型を変換すると、精度が失われるをこともあります。
--   などの複雑な不定式`WHERE UnitPrice + 1 < 3.975`、ではなく`WHERE UnitPrice < 320 * 200 * 32`です。
--   などの関数を使用して式`WHERE ABS(ProductID) = 771`または`WHERE UPPER(LastName) = 'Smith'`
--   ように、先頭のワイルドカード文字を使用した文字列`WHERE LastName LIKE '%Smith'`、ではなく`WHERE LastName LIKE 'Smith%'`です。
+### <a name="steps-to-resolve"></a>解決手順
 
-### <a name="steps-to-resolve"></a>解決する手順
+1.  `RECOMPILE` ヒントを使います。 プランは、各パラメーター値に適応されるたびに計算されます。
+2.  `(OPTIMIZE FOR(<input parameter> = <value>))` オプションを使うように、ストアド プロシージャを書き直します。 関連するワークロードのほとんどに適した値を決定し、パラメーター化された値に対して効率的になる 1 つのプランを作成して保守します。
+3.  プロシージャ内でローカル変数を使うように、ストアド プロシージャを書き直します。 これで、オプティマイザーは予測に密度ベクトルを使うようになり、パラメーター値に関係なく同じプランになります。
+4.  `(OPTIMIZE FOR UNKNOWN)` オプションを使うように、ストアド プロシージャを書き直します。 ローカル変数の手法を使う場合と同じ効果があります。
+5.  `DISABLE_PARAMETER_SNIFFING` ヒントを使うようにクエリを書き直します。 `OPTION(RECOMPILE)`、`WITH RECOMPILE`、または `OPTIMIZE FOR <value>` が使われていない場合はパラメーター スニッフィングを完全に無効にすることで、ローカル変数の手法を使う場合と同じ効果があります。
 
-1. 常に目的のターゲットとして変数およびパラメーターを宣言[データ型](../t-sql/data-types/data-types-transact-sql.md)です。 
-  -   基になるテーブルで使用されるデータ型の情報を保持するシステム テーブル (ストアド プロシージャ、ユーザー定義関数またはビュー) など、データベースに格納されている任意のユーザー定義コード構造体を比較する可能性があります (など[sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md))。
-2. 過去の時点にすべてのコードをスキャンできない場合はし、同じ用途の任意の変数/パラメーターの宣言を一致するように、テーブルでのデータ型を変更します。
-3. 次の構造の有用性を理由とします。
-  -   の述語として使用されている関数
-  -   ワイルドカードを検索します。
-  -   – 単票形式のデータに基づく複雑な式を計算列が永続化されたインデックスを作成できます。 これを代わりに作成する必要性を評価します。
+> [!TIP] 
+> これが問題かどうかをすばやく識別するには、[!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] のプラン分析機能を利用します。 詳細については、[こちら](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/)をご覧ください。
+
+## <a name="MissingIndexes"></a> 欠落したインデックス
+
+**適用対象:** 外部プラットフォーム (Oracle、DB2、MySQL、Sybase など) および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行。
+
+正しくないインデックスまたは不足しているインデックスにより、余分な I/O が発生し、結果としてメモリや CPU が浪費されます。 原因は、ワークロード プロファイルが変更されて、異なる述語が使われるようになり、既存のインデックス設計が無効になったためである可能性があります。 不適切なインデックス戦略またはワークロード プロファイルの変更の証拠としては、次のようなものがあります。
+-   重複したインデックス、冗長なインデックス、ほとんど使われていないインデックス、およびまったく使われていないインデックスを探します。
+-   更新では使われていないインデックスに特に注意します。
+
+### <a name="steps-to-resolve"></a>解決手順
+
+1.  存在しないインデックス参照にはグラフィカル実行プランを利用します。
+2.  [データベース エンジン チューニング アドバイザー](../tools/dta/tutorial-database-engine-tuning-advisor.md)によって生成されたインデックスの提案。
+3.  [不足インデックス DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) または [SQL Server パフォーマンス ダッシュ ボード](https://www.microsoft.com/en-us/download/details.aspx?id=29063)を利用します。
+4.  欠落、重複、冗長、低使用頻度、完全不使用のインデックスに関するインサイト、およびインデックス参照がデータベースの既存のプロシージャにヒント/ハードコーディングされているかどうかに関するインサイトを提供する既存の DMV を使用できる既存のスクリプトを活用します。 
+
+> [!TIP] 
+> 既存のスクリプトの例としては、[Index Creation](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Creation) や [Index Information](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Information) などがあります。 
+
+## <a name="InabilityPredicates"></a> 述語を使ってデータをフィルターできない
+
+**適用対象:** 外部プラットフォーム (Oracle、DB2、MySQL、Sybase など) および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行。
+
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行で、移行元の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にこの問題が存在していた場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の新しいバージョンにそのまま移行したのでは、このシナリオには対処できません。
+
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーは、コンパイル時に認識されている情報のみを考慮することができます。 ワークロードが実行時にのみ認識できる述語に依存する場合は、不適切なプランの選択が増える可能性があります。 高品質のプランでは、述語は **SARGable** (**S**earch **Arg**ument**able**: 検索引数化可能 ) である必要があります。
+
+SARGable ではない述語の例を次に示します。
+-   VARCHAR から NVARCHAR、INT から VARCHAR のような暗黙的なデータ変換。 実際の実行プランで実行時の CONVERT_IMPLICIT 警告を探します。 型を変換すると、精度が失われるをこともあります。
+-   `WHERE UnitPrice + 1 < 3.975` などの複雑な不定式。`WHERE UnitPrice < 320 * 200 * 32` は違います。
+-   `WHERE ABS(ProductID) = 771` や `WHERE UPPER(LastName) = 'Smith'` などの関数を使う式
+-   `WHERE LastName LIKE '%Smith'` のような先頭にワイルドカード文字がある文字列。`WHERE LastName LIKE 'Smith%'` は違います。
+
+### <a name="steps-to-resolve"></a>解決手順
+
+1. 常に目的のターゲット[データ型](../t-sql/data-types/data-types-transact-sql.md)として変数/パラメーターを宣言します。 
+  -   これには、データベースに格納されるユーザー定義のコード構造 (ストアド プロシージャ、ユーザー定義関数、ビューなど) と、基になるテーブルで使われるデータ型についての情報を保持するシステム テーブル ([sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md) など) の比較が含まれる場合があります。
+2. 前のポイントまですべてのコードをスキャンできない場合は、同じ目的で、変数/パラメーターの宣言と一致するように、テーブルのデータ型を変更します。
+3. 次の構造の有用性を熟考します。
+  -   述語として使われている関数
+  -   ワイルドカード検索
+  -   列データに基づく複雑な式 – インデックスを作成できる永続計算列を代わりに作成する必要性を評価します。
 
 > [!NOTE] 
 > 上記のすべてをプログラムで実行することができます。
 
-## <a name="TableValuedFunctions"></a>テーブル値関数 (複数のステートメントとインライン) の使用
+## <a name="TableValuedFunctions"></a> テーブル値関数の使用 (複数ステートメントとインライン)
 
-**適用されます:** (Oracle、DB2、MySQL、Sybase) などの外部のプラットフォームと[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]移行します。
+**適用対象:** 外部プラットフォーム (Oracle、DB2、MySQL、Sybase など) および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行。
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]移行には、この問題は、ソースに存在していた場合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の新しいバージョンに移行する、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]として-はいないこのシナリオに対応します。
+> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行で、移行元の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にこの問題が存在していた場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の新しいバージョンにそのまま移行したのでは、このシナリオには対処できません。
 
-テーブル値関数は、代わりにビューを使用可能なテーブル データ型を返します。 ビューは、1 つに限定`SELECT`ステートメントでは、ユーザー定義関数がビューで使用可能なより多くのロジックを許可する追加のステートメントを含めることができます。
+テーブル値関数は、ビューの代わりになるテーブル データ型を返します。 ビューは 1 つの `SELECT` ステートメントに制限されますが、ユーザー定義関数はビューより多くのロジックを許される追加ステートメントを含むことができます。
 
 > [!IMPORTANT] 
-> コンパイル時に、MSTVF (複数ステートメント テーブル値関数) の出力テーブルは作成されませんので、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ヒューリスティック、および行の推定を判断する実際の統計でクエリ オプティマイザーに依存しています。 基底のテーブルにインデックスを追加する場合でも、役立つこの予定はありません。 MSTVFs の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、MSTVF によって返される行の数が予期されたは、1 の固定の推定を使用して (以降で[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]推定を固定である 100 行)。
+> MSTVF (複数ステートメントのテーブル値関数) の出力テーブルはコンパイル時に作成されないので、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーは実際の統計ではなくヒューリスティックに依存して、行の推定を決定します。 基底テーブルにインデックスを追加しても、役には立ちません。 MSTVF の場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、MSTVF によって返されるものと予想される行数に固定値 1 を使います ([!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 以降、固定の推定値は 100 行です)。
 
-### <a name="steps-to-resolve"></a>解決する手順
-1.  複数ステートメントの TVF が 1 つのステートメントのみである場合は、インライン TVF に変換します。
+### <a name="steps-to-resolve"></a>解決手順
+1.  複数ステートメントの TVF が 1 ステートメントのみである場合は、インライン TVF に変換します。
 
     ```tsql
     CREATE FUNCTION dbo.tfnGetRecentAddress(@ID int)
@@ -160,13 +160,13 @@ ms.lasthandoff: 06/23/2017
     )
     ```
 
-2.  複雑な場合は、メモリ最適化テーブルまたは一時テーブルに格納されている中間結果を使用することを検討します。
+2.  さらに複雑な場合は、メモリ最適化テーブルまたは一時テーブルに格納される中間結果を使うことを検討します。
 
 ##  <a name="Additional_Reading"></a> その他の情報  
  [クエリ ストアを使用する際の推奨事項](../relational-databases/performance/best-practice-with-the-query-store.md)  
 [メモリ最適化テーブル](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
 [ユーザー定義関数](../relational-databases/user-defined-functions/user-defined-functions.md)  
-[変数をテーブルし、行の推定 - パート 1](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)  
-[変数をテーブルし、行の推定 - パート 2](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)  
+[テーブル変数と行の推定 - パート 1](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)  
+[テーブル変数と行の推定 - パート 2](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)  
 [実行プランのキャッシュと再利用](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)
 

@@ -18,11 +18,11 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
 ms.openlocfilehash: 53e0f5d479d7fc3cdeae2c6ce121734b6fc16f21
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
@@ -152,7 +152,7 @@ SQL Server 2017 CTP 2.0 以降および Azure SQL Database では、クエリ �
  各クエリに対して保持の計画の最大数を表す整数。 既定値は 200 です。  
  
  `WAIT_STATS_CAPTURE_MODE`  
- コントロールがクエリのストアのキャプチャした場合は、統計情報を待機します。 OFF = 0 または = 1 (既定)  
+ クエリ ストアが待機統計情報をキャプチャするかどうかを制御します。 OFF = 0 または ON = 1 (既定値) を指定できます  
  
  **sys.database_query_store_options** ビューにクエリを実行し、クエリ ストアの現在のオプションを確認します。 値に関する詳細については、「[sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)」を参照してください。  
   
@@ -173,7 +173,7 @@ SQL Server 2017 CTP 2.0 以降および Azure SQL Database では、クエリ �
 |[sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)|[sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)|  
 |[sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)|[sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)|  
 |[sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|[sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)|  
-|[sys.query_store_wait_stats & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
+|[sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
   
 ### <a name="query-store-stored-procedures"></a>クエリのストアのストアド プロシージャ  
  ストアド プロシージャはクエリのストアを構成します。  
@@ -450,7 +450,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
  プラン選択の変更に関連するものだけでなく、パフォーマンス低下に関するすべての情報を表示する場合、前のクエリから条件 `AND p1.plan_id <> p2.plan_id` を削除します。  
 
  **最も待機時間の長いクエリ。**
- このクエリは、待機が最も多い上位 10 個のクエリを返します。 
+このクエリは、待機が最も多い上位 10 個のクエリを返します。 
  
  ```tsql 
   SELECT TOP 10

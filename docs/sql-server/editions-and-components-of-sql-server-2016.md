@@ -42,14 +42,14 @@ ms.translationtype: HT
 ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
 ms.openlocfilehash: 97080f5d124b25b12b1f9f019e42753c143174e7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 の各エディションとサポートされている機能
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-このトピックでは、SQL Server のエディションでサポートされる機能の詳細を説明します。  この時点では、SQL Server 2017 のエディションでサポートされる機能の変更はありません。  
+このトピックでは、SQL Server のエディションでサポートされる機能の詳細を説明します。  現時点で、SQL Server 2017 のエディションでサポートされる機能の変更はありません。  
   
 インストールの前提条件は、アプリケーションのニーズによって異なります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にはさまざまなエディションがあり、組織や個人の独自のパフォーマンス、ランタイム、および価格に関する要件に対応できます。 インストールする [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンポーネントは、ユーザーの特定の要件によっても異なります。 この後のセクションでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の最適なエディションおよびコンポーネントを選択する方法について説明します。  
 
@@ -58,10 +58,10 @@ ms.lasthandoff: 07/17/2017
 最新のリリース ノートと新機能については、以下の情報を参照してください。
 - [SQL Server 2017 リリース ノート](../sql-server/sql-server-2017-release-notes.md)
 - [SQL Server 2016 リリース ノート](../sql-server/sql-server-2016-release-notes.md)
-- [SQL Server 2017 年 1 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)
+- [SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)
 - [SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)
 
-### <a name="try-sql-server"></a>SQL Server を実行してください。    
+### <a name="try-sql-server"></a>SQL Server を試してください    
     
 > [![Evaluation Center からダウンロードする](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Evaluation Center から SQL Server 2016 をダウンロードする](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
     
@@ -86,7 +86,7 @@ ms.lasthandoff: 07/17/2017
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] とクライアント/サーバー アプリケーションの使用  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクライアント コンポーネントだけを、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスに直接接続するクライアント/サーバー アプリケーションを実行するコンピューターにインストールできます。 クライアント コンポーネントをインストールすることは、データベース サーバー上にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを管理する場合、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] アプリケーションを開発しようとしている場合にも適切なオプションです。  
   
- クライアント ツールをインストールするオプションを選択すると、下位互換コンポーネント、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、接続コンポーネント、管理ツール、ソフトウェア開発キット、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]オンライン ブック コンポーネントなどの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 機能がインストールされます。 詳細については、次を参照してください。 [SQL Server インストール](../database-engine/install-windows/install-sql-server.md)です。  
+ クライアント ツールをインストールするオプションを選択すると、下位互換コンポーネント、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、接続コンポーネント、管理ツール、ソフトウェア開発キット、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]オンライン ブック コンポーネントなどの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 機能がインストールされます。 詳細については、「[SQL Server のインストール](../database-engine/install-windows/install-sql-server.md)」を参照してください。  
   
 ## <a name="deciding-among-includessnoversionincludesssnoversion-mdmd-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンポーネントの決定  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストールに含めるコンポーネントを選択するには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インストール ウィザードの [機能の選択] ページを使用します。 既定では、ツリーの中に、選択されている機能はありません。  
@@ -120,7 +120,7 @@ ms.lasthandoff: 07/17/2017
 Developer Edition と Evaluation Edition でサポートされている機能については、下の表に記載されている SQL Server Enterprise Edition の機能をご覧ください。
 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 の Developer Edition に追加された機能の一覧については、[SQL Server 2016 SP1 の各エディション](https://aka.ms/uw6cw4)に関するページをご覧ください。  
 
-Developer edition はの 1 つのみのクライアントをサポートするために引き続き[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)です。 
+Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md) のクライアントを 1 つだけサポートします。 
   
 ##  <a name="Cross-BoxScaleLimits"></a> Scale Limits  
   
@@ -143,25 +143,25 @@ Developer edition はの 1 つのみのクライアントをサポートする�
   
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Server Core サポート <sup>1</sup>|可|可|可|可|可|  
-|ログ配布|可|可|可|いいえ|不可|  
-|データベース ミラーリング|可|可<br /><br /> FULL SAFETY のみ|ミラーリング監視のみ|ミラーリング監視のみ|ミラーリング監視のみ| 
-|バックアップ圧縮|可|可|いいえ|いいえ|不可| 
-|データベース スナップショット|可|可 <sup>3</sup>|可 <sup>3</sup>|可 <sup>3</sup>|可 <sup>3</sup>|
+|Server Core サポート <sup>1</sup>|はい|可|可|可|はい|  
+|ログ配布|はい|可|可|いいえ|不可|  
+|データベース ミラーリング|はい|はい<br /><br /> FULL SAFETY のみ|ミラーリング監視のみ|ミラーリング監視のみ|ミラーリング監視のみ| 
+|バックアップ圧縮|はい|可|いいえ|いいえ|不可| 
+|データベース スナップショット|はい|可 <sup>3</sup>|可 <sup>3</sup>|可 <sup>3</sup>|可 <sup>3</sup>|
 |Always On フェールオーバー クラスター インスタンス|はい<br /><br /> ノードの数はオペレーティング システムの最大容量|はい<br /><br /> 2 つのノードのサポート|不可|いいえ|不可|  
-|Always On 可用性グループ|可<br /><br /> 2 個の同期セカンダリ レプリカを含む最大 8 個のセカンダリ レプリカ|不可|いいえ|いいえ|不可|
-|基本的な可用性グループ <sup>2</sup>|不可|可<br /><br /> 2 つのノードのサポート|不可|いいえ|不可|
-|オンライン ページおよびファイルの復元|可|いいえ|いいえ|いいえ|不可|
-|オンラインのインデックス構築|可|いいえ|いいえ|いいえ|不可|
-|オンラインのスキーマ変更|可|いいえ|いいえ|いいえ|不可|
-|高速復旧|可|いいえ|いいえ|いいえ|不可|
-|ミラー化バックアップ|可|いいえ|いいえ|いいえ|不可|
-|ホット アド メモリと CPU|可|いいえ|いいえ|いいえ|不可|
-|データベース復旧アドバイザー|可|可|可|可|可|
-|暗号化されたバックアップ|可|可|いいえ|いいえ|不可|
-|Windows Azure へのハイブリッド バックアップ (URL へのバックアップ)|可|可|いいえ|いいえ|不可|  
+|Always On 可用性グループ|はい<br /><br /> 2 個の同期セカンダリ レプリカを含む最大 8 個のセカンダリ レプリカ|不可|いいえ|いいえ|不可|
+|基本的な可用性グループ <sup>2</sup>|不可|はい<br /><br /> 2 つのノードのサポート|不可|いいえ|不可|
+|オンライン ページおよびファイルの復元|はい|いいえ|いいえ|いいえ|不可|
+|オンラインのインデックス構築|はい|いいえ|いいえ|いいえ|不可|
+|オンラインのスキーマ変更|はい|いいえ|いいえ|いいえ|不可|
+|高速復旧|はい|いいえ|いいえ|いいえ|不可|
+|ミラー化バックアップ|はい|いいえ|いいえ|いいえ|不可|
+|ホット アド メモリと CPU|はい|いいえ|いいえ|いいえ|不可|
+|データベース復旧アドバイザー|はい|可|可|可|はい|
+|暗号化されたバックアップ|はい|可|いいえ|いいえ|不可|
+|Windows Azure へのハイブリッド バックアップ (URL へのバックアップ)|はい|可|いいえ|いいえ|不可|  
   
- <sup>1</sup> Server Core での SQL Server のインストールの詳細については、次を参照してください。 [Server Core 上の SQL Server のインストール](../database-engine/install-windows/install-sql-server-on-server-core.md)です。 
+ <sup>1</sup> Server Core への SQL Server のインストールの詳細については、「[Server Core への SQL Server のインストール](../database-engine/install-windows/install-sql-server-on-server-core.md)」を参照してください。 
 
 <sup>2</sup> 基本的な可用性グループの詳細については、「 [基本的な可用性グループ](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)」を参照してください。  
 
@@ -171,20 +171,20 @@ Developer edition はの 1 つのみのクライアントをサポートする�
   
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|列ストア <sup>1</sup>|可|可 <sup>2</sup>|可 <sup>2</sup>|可<sup>2</sup>|可<sup>2</sup>|  
-|インメモリ OLTP <sup>1</sup>|可|可 <sup>2</sup>|可 <sup>2</sup>|可 <sup>2</sup>、 <sup>3</sup>|可 <sup>2</sup>|
-|Stretch Database|可|可|可|可|可|
-|恒久的なメイン メモリ|可|可|可|可|可|
+|列ストア <sup>1</sup>|はい|可 <sup>2</sup>|可 <sup>2</sup>|可<sup>2</sup>|可<sup>2</sup>|  
+|インメモリ OLTP <sup>1</sup>|はい|可 <sup>2</sup>|可 <sup>2</sup>|可 <sup>2</sup>、 <sup>3</sup>|可 <sup>2</sup>|
+|Stretch Database|はい|可|可|可|はい|
+|恒久的なメイン メモリ|はい|可|可|可|はい|
 |複数インスタンスのサポート|50|50|50|50|50|
-|テーブルとインデックスのパーティション分割|可|可 <sup>2</sup>|可 <sup>2</sup>|可 <sup>2</sup>|可 <sup>2</sup>|  
-|データ圧縮|可|可 <sup>2</sup>|可 <sup>2</sup>|可 <sup>2</sup>|可 <sup>2</sup>|
-|[リソース ガバナー]|可|いいえ|いいえ|いいえ|不可|  
-|パーティション テーブルの並列処理|可|いいえ|いいえ|いいえ|不可|
-|複数の Filestream コンテナー|可|可 <sup>2</sup>|可 <sup>2</sup>|可 <sup>2</sup>|可 <sup>2</sup>|
-|NUMA 対応のラージ ページ メモリとバッファー配列の割り当て|可|いいえ|いいえ|いいえ|不可|
-|バッファー プール拡張|可|可|いいえ|いいえ|不可|
-|IO リソース管理|可|いいえ|いいえ|いいえ|不可|  
-|遅延持続性|可|可|可|可|可|
+|テーブルとインデックスのパーティション分割|はい|可 <sup>2</sup>|可 <sup>2</sup>|可 <sup>2</sup>|可 <sup>2</sup>|  
+|データ圧縮|はい|可 <sup>2</sup>|可 <sup>2</sup>|可 <sup>2</sup>|可 <sup>2</sup>|
+|[リソース ガバナー]|はい|いいえ|いいえ|いいえ|不可|  
+|パーティション テーブルの並列処理|はい|いいえ|いいえ|いいえ|不可|
+|複数の Filestream コンテナー|はい|可 <sup>2</sup>|可 <sup>2</sup>|可 <sup>2</sup>|可 <sup>2</sup>|
+|NUMA 対応のラージ ページ メモリとバッファー配列の割り当て|はい|いいえ|いいえ|いいえ|不可|
+|バッファー プール拡張|はい|可|いいえ|いいえ|不可|
+|IO リソース管理|はい|いいえ|いいえ|いいえ|不可|  
+|遅延持続性|はい|可|可|可|はい|
 
 <sup>1</sup> インメモリ OLTP データ サイズおよび列ストア セグメント キャッシュは、「スケールの制限」セクションでエディションごとに指定されているメモリ量に制限されます。 並列処理には最大限度があります。 インデックス構築のための並列処理の度合い (DOP) は、Standard Edition では 2 DOP に、Web および Express Edition では 1 DOP に制限されます。 これは、ディスク ベース テーブルとメモリ最適化テーブルで作成された列ストア インデックスに当てはまります。
 
@@ -195,46 +195,46 @@ Developer edition はの 1 つのみのクライアントをサポートする�
   
 |機能|Enterprise|Standard|Web|Express|Express with Advanced Services|  
 |-------------|----------------|--------------|---------|-------------|------------------------------------| 
-|行レベルのセキュリティ|はい|可|可 <sup>1</sup>|可 <sup>1</sup>|可 <sup>1</sup>|  
-|Always Encrypted|可|可 <sup>1</sup>|可 <sup>1</sup>|可 <sup>1</sup>|可 <sup>1</sup>| 
-|動的なデータ マスキング|可|可|可 <sup>1</sup>|可 <sup>1</sup>|可 <sup>1</sup>|   
-|基本的な監査|可|可|可|可|可| 
-|詳細な監査|可|可 <sup>1</sup>|可 <sup>1</sup>|可 <sup>1</sup>|可 <sup>1</sup>| 
-|透過的なデータベースの暗号化|可|いいえ|いいえ|いいえ|不可|   
-|拡張キー管理|可|いいえ|いいえ|いいえ|不可| 
-|ユーザー定義ロール|可|可|可|可|可| 
-|包含データベース|可|可|可|可|可| 
-|バックアップの暗号化|可|可|いいえ|いいえ|不可|  
+|行レベルのセキュリティ|はい|はい|可 <sup>1</sup>|可 <sup>1</sup>|可 <sup>1</sup>|  
+|Always Encrypted|はい|可 <sup>1</sup>|可 <sup>1</sup>|可 <sup>1</sup>|可 <sup>1</sup>| 
+|動的なデータ マスキング|はい|はい|可 <sup>1</sup>|可 <sup>1</sup>|可 <sup>1</sup>|   
+|基本的な監査|はい|可|可|可|はい| 
+|詳細な監査|はい|可 <sup>1</sup>|可 <sup>1</sup>|可 <sup>1</sup>|可 <sup>1</sup>| 
+|透過的なデータベースの暗号化|はい|いいえ|いいえ|いいえ|不可|   
+|拡張キー管理|はい|いいえ|いいえ|いいえ|不可| 
+|ユーザー定義ロール|はい|可|可|可|はい| 
+|包含データベース|はい|可|可|可|はい| 
+|バックアップの暗号化|はい|可|いいえ|いいえ|不可|  
 
 <sup>1</sup> [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1 に適用されます。  
 ##  <a name="Replication"></a> Replication  
   
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|異種サブスクライバー|可|可|いいえ|いいえ|不可|  
-|マージ レプリケーション|可|可|可 (サブスクライバーのみ)|可 (サブスクライバーのみ)|可 (サブスクライバーのみ)|   
-|Oracle パブリッシュ|可|いいえ|いいえ|いいえ|不可| 
-|ピア ツー ピア トランザクション レプリケーション|可|いいえ|いいえ|いいえ|不可|   
-|スナップショット レプリケーション|可|可|可 (サブスクライバーのみ)|可 (サブスクライバーのみ)|可 (サブスクライバーのみ)|   
-|SQL Server の変更の追跡|可|可|可|可|可| 
-|トランザクション レプリケーション|可|可|可 (サブスクライバーのみ)|可 (サブスクライバーのみ)|可 (サブスクライバーのみ)|   
-|Azure へのトランザクション レプリケーション|可|可|いいえ|いいえ|不可|   
-|トランザクション レプリケーションの更新可能サブスクリプション|可|いいえ|いいえ|いいえ|不可|  
+|異種サブスクライバー|はい|可|いいえ|いいえ|不可|  
+|マージ レプリケーション|はい|はい|可 (サブスクライバーのみ)|可 (サブスクライバーのみ)|可 (サブスクライバーのみ)|   
+|Oracle パブリッシュ|はい|いいえ|いいえ|いいえ|不可| 
+|ピア ツー ピア トランザクション レプリケーション|はい|いいえ|いいえ|いいえ|不可|   
+|スナップショット レプリケーション|はい|はい|可 (サブスクライバーのみ)|可 (サブスクライバーのみ)|可 (サブスクライバーのみ)|   
+|SQL Server の変更の追跡|はい|可|可|可|はい| 
+|トランザクション レプリケーション|はい|はい|可 (サブスクライバーのみ)|可 (サブスクライバーのみ)|可 (サブスクライバーのみ)|   
+|Azure へのトランザクション レプリケーション|はい|可|いいえ|いいえ|不可|   
+|トランザクション レプリケーションの更新可能サブスクリプション|はい|いいえ|いいえ|いいえ|不可|  
   
 ##  <a name="SSMS"></a> Management Tools  
   
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express| 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|SQL 管理オブジェクト (SMO)|可|可|可|可|可|  
-|SQL 構成マネージャー|可|可|可|可|可|   
-|SQL CMD (コマンド プロンプト ツール)|可|可|可|可|可|      
-|分散再生 - 管理ツール|可|可|可|可|不可|  
-|分散再生 - クライアント|可|可|可|いいえ|不可|  
+|SQL 管理オブジェクト (SMO)|はい|可|可|可|はい|  
+|SQL 構成マネージャー|はい|可|可|可|はい|   
+|SQL CMD (コマンド プロンプト ツール)|はい|可|可|可|はい|      
+|分散再生 - 管理ツール|はい|可|可|可|不可|  
+|分散再生 - クライアント|はい|可|可|いいえ|不可|  
 |分散再生 - コントローラー|可 (最大 16 クライアント)|可 (1 クライアント)|可 (1 クライアント)|不可|不可|   
-|SQL Profiler|可|可|不可 <sup>1</sup>|不可 <sup>1</sup>|不可 <sup>1</sup>|  
-|SQL Server エージェント|可|可|可|いいえ|不可| 
-|Microsoft System Center Operations Manager 管理パック|可|可|可|いいえ|不可|  
-|データベース チューニング アドバイザー (DTA)|可|可 <sup>2</sup>|可 <sup>2</sup>|不可|不可|      
+|SQL Profiler|はい|はい|不可 <sup>1</sup>|不可 <sup>1</sup>|不可 <sup>1</sup>|  
+|SQL Server エージェント|はい|可|可|いいえ|不可| 
+|Microsoft System Center Operations Manager 管理パック|はい|可|可|いいえ|不可|  
+|データベース チューニング アドバイザー (DTA)|はい|可 <sup>2</sup>|可 <sup>2</sup>|不可|不可|      
   
  <sup>1</sup> SQL Server Web、SQL Server Express、SQL Server Express with Tools、および SQL Server Express with Advanced Services は、SQL Server Standard および SQL Server Enterprise の各エディションを使用してプロファイルできます。  
   
@@ -244,25 +244,25 @@ Developer edition はの 1 つのみのクライアントをサポートする�
   
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|ユーザー インスタンス|不可|いいえ|いいえ|はい|可| 
+|ユーザー インスタンス|不可|いいえ|いいえ|はい|はい| 
 |LocalDB|不可|いいえ|いいえ|可|不可| 
-|専用管理者接続|可|可|可|可 (トレース フラグを使用)|可 (トレース フラグを使用)|   
-|PowerShell スクリプティングのサポート|可|可|可|可|可| 
-|SysPrep のサポート <sup>1</sup>|可|可|可|可|可| 
-|データ層アプリケーション コンポーネントの操作のサポート - 抽出、配置、アップグレード、削除|可|可|可|可|可| 
-|ポリシー オートメーション (変更時とスケジュールに基づいて確認)|可|可|可|いいえ|不可|   
-|パフォーマンス データ コレクター|可|可|可|いいえ|不可| 
-|複数インスタンス管理でマネージ インスタンスとして登録できる|可|可|可|いいえ|不可|   
-|標準的なパフォーマンス レポート|可|可|可|いいえ|不可| 
-|プラン ガイドおよびプラン ガイドの固定計画|可|可|可|いいえ|不可|   
-|NOEXPAND ヒントを使用したインデックス付きビューの直接クエリ|可|可|可|可|可| 
-|インデックス付きビューの自動メンテナンス|可|可|可|いいえ|不可| 
-|分散パーティション ビュー|可|いいえ|いいえ|いいえ|不可| 
-|並列インデックス操作|可|いいえ|いいえ|いいえ|不可|  
-|クエリ オプティマイザーによる自動的なインデックス付きのビュー使用|可|いいえ|いいえ|いいえ|不可| 
-|並列整合性チェック|可|いいえ|いいえ|いいえ|不可| 
-|SQL Server ユーティリティ コントロール ポイント|可|いいえ|いいえ|いいえ|不可|    
-|バッファー プール拡張|可|可|いいえ|いいえ|不可| 
+|専用管理者接続|はい|可|はい|可 (トレース フラグを使用)|可 (トレース フラグを使用)|   
+|PowerShell スクリプティングのサポート|はい|可|可|可|はい| 
+|SysPrep のサポート <sup>1</sup>|はい|可|可|可|はい| 
+|データ層アプリケーション コンポーネントの操作のサポート - 抽出、配置、アップグレード、削除|はい|可|可|可|はい| 
+|ポリシー オートメーション (変更時とスケジュールに基づいて確認)|はい|可|可|いいえ|不可|   
+|パフォーマンス データ コレクター|はい|可|可|いいえ|不可| 
+|複数インスタンス管理でマネージ インスタンスとして登録できる|はい|可|可|いいえ|不可|   
+|標準的なパフォーマンス レポート|はい|可|可|いいえ|不可| 
+|プラン ガイドおよびプラン ガイドの固定計画|はい|可|可|いいえ|不可|   
+|NOEXPAND ヒントを使用したインデックス付きビューの直接クエリ|はい|可|可|可|はい| 
+|インデックス付きビューの自動メンテナンス|はい|可|可|いいえ|不可| 
+|分散パーティション ビュー|はい|いいえ|いいえ|いいえ|不可| 
+|並列インデックス操作|はい|いいえ|いいえ|いいえ|不可|  
+|クエリ オプティマイザーによる自動的なインデックス付きのビュー使用|はい|いいえ|いいえ|いいえ|不可| 
+|並列整合性チェック|はい|いいえ|いいえ|いいえ|不可| 
+|SQL Server ユーティリティ コントロール ポイント|はい|いいえ|いいえ|いいえ|不可|    
+|バッファー プール拡張|はい|可|いいえ|いいえ|不可| 
   
  <sup>1</sup> 詳細については、「 [SysPrep を使用した SQL Server のインストールに関する注意点](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)」を参照してください。  
  
@@ -272,35 +272,35 @@ Developer edition はの 1 つのみのクライアントをサポートする�
   
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express| 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|Microsoft Visual Studio の統合|可|可|可|可|可| 
-|Intellisense (Transact-SQL および MDX)|可|可|可|可|可| 
-|SQL Server Data Tools (SSDT)|可|可|可|可|不可|    
-|MDX 編集、デバッグ、およびデザイン ツール|可|可|いいえ|いいえ|不可|   
+|Microsoft Visual Studio の統合|はい|可|可|可|はい| 
+|Intellisense (Transact-SQL および MDX)|はい|可|可|可|はい| 
+|SQL Server Data Tools (SSDT)|はい|可|可|可|不可|    
+|MDX 編集、デバッグ、およびデザイン ツール|はい|可|いいえ|いいえ|不可|   
   
 ##  <a name="Programmability"></a> Programmability  
   
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|基本的な R 統合|可|可|可|可|不可|   
-|高度な R 統合|可|いいえ|いいえ|いいえ|不可| 
-|R Server (Standalone)|可|いいえ|いいえ|いいえ|不可|   
-|Polybase コンピューティング ノード|可|可 <sup>1</sup>|可 <sup>1</sup>、 <sup>2</sup>|可 <sup>1</sup>、 <sup>2</sup>|可 <sup>1</sup>、 <sup>2</sup>| 
-|Polybase ヘッド ノード|可|いいえ|いいえ|いいえ|不可| 
-|JSON|可|可|可|可|可|   
-|クエリ ストア|可|可|可|可|可|   
-|テンポラル|可|可|可|可|可|   
-|共通言語ランタイム (CLR) 統合|可|可|可|可|可|   
-|ネイティブ XML サポート|可|可|可|可|可| 
-|XML インデックスの作成|可|可|可|可|可| 
-|MERGE と UPSERT の機能|可|可|可|可|可|   
-|FILESTREAM のサポート|可|可|可|可|可| 
-|FileTable|可|可|可|可|可| 
-|日付および時刻データ型|可|可|可|可|可|  
-|国際化サポート|可|可|可|可|可| 
-|フルテキストおよびセマンティック検索|可|可|可|可|不可| 
-|クエリ内の言語指定|可|可|可|可|不可|   
-|Service Broker (メッセージング)|可|可|不可 (クライアントのみ)|不可 (クライアントのみ)|不可 (クライアントのみ)|   
-|Transact-SQL エンドポイント|可|可|可|いいえ|不可| 
+|基本的な R 統合|はい|可|可|可|不可|   
+|高度な R 統合|はい|いいえ|いいえ|いいえ|不可| 
+|R Server (スタンドアロン)|はい|いいえ|いいえ|いいえ|不可|   
+|Polybase コンピューティング ノード|はい|可 <sup>1</sup>|可 <sup>1</sup>、 <sup>2</sup>|可 <sup>1</sup>、 <sup>2</sup>|可 <sup>1</sup>、 <sup>2</sup>| 
+|Polybase ヘッド ノード|はい|いいえ|いいえ|いいえ|不可| 
+|JSON|はい|可|可|可|はい|   
+|クエリ ストア|はい|可|可|可|はい|   
+|テンポラル|はい|可|可|可|はい|   
+|共通言語ランタイム (CLR) 統合|はい|可|可|可|はい|   
+|ネイティブ XML サポート|はい|可|可|可|はい| 
+|XML インデックスの作成|はい|可|可|可|はい| 
+|MERGE と UPSERT の機能|はい|可|可|可|はい|   
+|FILESTREAM のサポート|はい|可|可|可|はい| 
+|FileTable|はい|可|可|可|はい| 
+|日付および時刻データ型|はい|可|可|可|はい|  
+|国際化サポート|はい|可|可|可|はい| 
+|フルテキストおよびセマンティック検索|はい|可|可|可|不可| 
+|クエリ内の言語指定|はい|可|可|可|不可|   
+|Service Broker (メッセージング)|はい|はい|不可 (クライアントのみ)|不可 (クライアントのみ)|不可 (クライアントのみ)|   
+|Transact-SQL エンドポイント|はい|可|可|いいえ|不可| 
 
 <sup>1</sup> 複数のコンピューティング ノードでのスケール アウトにはヘッド ノードが必要です。
 
@@ -308,68 +308,68 @@ Developer edition はの 1 つのみのクライアントをサポートする�
   
 ## <a name="IS"></a> Integration Services
 
-[!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] の各エディションがサポートする Integration Services (SSIS) の機能については、「[Integration Services Features Supported by the Editions of SQL Server (SQL Server の各エディションがサポートする Integration Services の機能)](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md)」をご覧ください。
+[!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] の各エディションがサポートする Integration Services (SSIS) の機能については、「[SQL Server の各エディションがサポートする Integration Services の機能](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md)」をご覧ください。
 
 ##  <a name="MDS"></a> Master Data Services  
- については、[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]と Data Quality Services 機能のエディションでサポートされる[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]を参照してください[マスター データ サービスとデータ品質サービスでサポートされる機能のエディションの SQL Server](../master-data-services/master-data-services-and-data-quality-services-features-support.md)です。 
+ [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] の各エディションがサポートする [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] と Data Quality Services の機能については、「[マスター データ サービスと SQL Server のエディションでサポートされるデータ品質サービス機能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)」をご覧ください。 
 
   
 ##  <a name="DW"></a> Data Warehouse  
   
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|データベースを使用しないキューブ作成|可|可|いいえ|いいえ|不可 |   
-|自動生成ステージングとデータ ウェアハウス スキーマ|可|可|いいえ|いいえ|不可| 
-|変更データ キャプチャ|可|可 <sup>1</sup>|不可|いいえ|不可| 
-|スター結合クエリ最適化|可|いいえ|いいえ|いいえ|不可| 
-|スケーラブルな読み取り専用の Analysis Services 構成|可|いいえ|いいえ|いいえ|不可| 
-|パーティション テーブルとパーティション インデックスに対する並列クエリ処理|可|いいえ|いいえ|いいえ|不可|   
-|グローバル バッチ集計|可|いいえ|いいえ|いいえ|不可| 
+|データベースを使用しないキューブ作成|はい|可|いいえ|いいえ|不可 |   
+|自動生成ステージングとデータ ウェアハウス スキーマ|はい|可|いいえ|いいえ|不可| 
+|変更データ キャプチャ|はい|可 <sup>1</sup>|不可|いいえ|不可| 
+|スター結合クエリ最適化|はい|いいえ|いいえ|いいえ|不可| 
+|スケーラブルな読み取り専用の Analysis Services 構成|はい|いいえ|いいえ|いいえ|不可| 
+|パーティション テーブルとパーティション インデックスに対する並列クエリ処理|はい|いいえ|いいえ|いいえ|不可|   
+|グローバル バッチ集計|はい|いいえ|いいえ|いいえ|不可| 
 
 <sup>1</sup> [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] SP1 に適用されます。  
 ##  <a name="SSAS"></a> Analysis Services  
   
-各エディションでサポートされている Analysis Services の機能について[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]を参照してください[SQL Server のエディションでサポートされる Analysis Services 機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)します。 
+[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] の各エディションによってサポートされる Analysis Services の機能については、「[SQL Server の各エディションがサポートする Analysis Services の機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。 
   
 ##  <a name="BIMD"></a> BI Semantic Model (Multi Dimensional)  
   
-各エディションでサポートされている Analysis Services の機能について[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]を参照してください[SQL Server のエディションでサポートされる Analysis Services 機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)します。
+[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] の各エディションによってサポートされる Analysis Services の機能については、「[SQL Server の各エディションがサポートする Analysis Services の機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
    
 ##  <a name="BIT"></a> BI Semantic Model (Tabular)  
   
-各エディションでサポートされている Analysis Services の機能について[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]を参照してください[SQL Server のエディションでサポートされる Analysis Services 機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)します。
+[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] の各エディションによってサポートされる Analysis Services の機能については、「[SQL Server の各エディションがサポートする Analysis Services の機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
   
 ##  <a name="PPSP"></a> Power Pivot for SharePoint  
   
-Power Pivot for SharePoint の機能のエディションでサポートされるについて[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]を参照してください[SQL Server のエディションでサポートされる Analysis Services 機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)します。
+[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] の各エディションによってサポートされる Power Pivot for SharePoint の機能については、「[SQL Server の各エディションがサポートする Analysis Services の機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
   
 ##  <a name="DM"></a> Data Mining  
   
-各エディションでサポートされているデータ マイニング機能については[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]を参照してください[SQL Server のエディションでサポートされる Analysis Services 機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)します。
+[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] の各エディションによってサポートされるデータ マイニングの機能については、「[SQL Server の各エディションがサポートする Analysis Services の機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
   
 ##  <a name="SSRS"></a> Reporting Services  
   
-各エディションでサポートされている Reporting Services の機能について[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]を参照してください[Reporting Services でサポートされる機能のエディションの SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)です。
+[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] の各エディションによってサポートされる Reporting Services の機能については、「[SQL Server の各エディションがサポートする Reporting Services の機能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
 
-##  <a name="BIC"></a> Business Intelligence Clients  
+##  <a name="BIC"></a> Business Intelligence クライアント  
 
-各エディションでサポートされているビジネス インテリジェンス クライアント機能については[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]を参照してください[SQL Server のエディションでサポートされる Analysis Services 機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)または[Reporting Services でサポートされる機能のエディションの SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)です。
+[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] の各エディションによってサポートされる Business Intelligence クライアントの機能については、「[SQL Server の各エディションがサポートする Analysis Services の機能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)」または「[SQL Server の各エディションがサポートする Reporting Services の機能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。
   
 ##  <a name="SLS"></a> Spatial and Location Services  
   
 |機能名|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
-|空間インデックス|可|可|可|可|可|   
-|平面データ型と測地データ型|可|可|可|可|可| 
-|高度な空間的なライブラリ|可|可|可|可|可|   
-|業界標準の空間データ形式のインポート/エクスポート|可|可|可|可|可|   
+|空間インデックス|はい|可|可|可|はい|   
+|平面データ型と測地データ型|はい|可|可|可|はい| 
+|高度な空間的なライブラリ|はい|可|可|可|はい|   
+|業界標準の空間データ形式のインポート/エクスポート|はい|可|可|可|はい|   
   
 ##  <a name="ADS"></a> Additional Database Services  
   
 |機能名|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|可|可|可|可|可|   
-|データベース メール|可|可|可|いいえ|不可| 
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|はい|可|可|可|はい|   
+|データベース メール|はい|可|可|いいえ|不可| 
   
 ##  <a name="Other"></a> Other Components  
   

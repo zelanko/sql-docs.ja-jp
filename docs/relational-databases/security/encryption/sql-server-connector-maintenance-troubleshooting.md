@@ -16,11 +16,11 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: 0218298a95d1e7df242b3ca7cbae657effead719
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server コネクタのメンテナンスとトラブルシューティング
@@ -166,12 +166,11 @@ Key Vault は定期的にバックアップする必要があります。 資格
  Key Vault 内の非対称キーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化キーを保護するために使用されます。 資格情報コンテナーから出て行くのは非対称キーの公開部分だけで、秘密の部分がコンテナーからエクスポートされることはありません。 非対称キーを使用するすべての暗号化操作は、Azure Key Vault サービス内で実行され、このサービスのセキュリティによって保護されます。  
   
  **キーの URI とは何ですか。**  
- Azure Key Vault 内のすべてのキーに、Uniform Resource Identifier (URI) が割り当てられます。アプリケーションからこの URI を使用してキーを参照できます。 形式を使用して`https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey`を現在のバージョンを取得し、形式を使用して`https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87`を特定のバージョンを取得します。  
+ Azure Key Vault 内のすべてのキーに、Uniform Resource Identifier (URI) が割り当てられます。アプリケーションからこの URI を使用してキーを参照できます。 常に最新のバージョンを取得するには `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` の形式、特定のバージョンを取得するには `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` の形式を使用します。  
   
 ### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>構成について [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-**SQL Server コネクタがアクセスする必要のあるエンドポイントは何ですか。** 
- コネクタは 2 つのエンドポイントと通信し、これらをホワイトリストに登録する必要があります。 これらの他のサービスへの送信通信に必要な唯一のポートは、Https 用の 443 です。
+**SQL Server コネクタがアクセスする必要のあるエンドポイントは何ですか。** コネクタは 2 つのエンドポイントと通信し、これらをホワイトリストに登録する必要があります。 これらの他のサービスへの送信通信に必要な唯一のポートは、Https 用の 443 です。
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/*:443
   
@@ -299,7 +298,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
 -   PowerShell の [Azure Key Vault コマンドレット](https://msdn.microsoft.com/library/dn868052.aspx) のリファレンス  
   
 ## <a name="see-also"></a>参照  
- [Extensible Key Management Using Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+ [Azure Key Vault を使用する拡張キー管理](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [SQL 暗号化機能への SQL Server コネクタの使用](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [EKM provider enabled サーバー構成オプション](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Azure Key Vault を使用した拡張キー管理のセットアップ手順](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
   
