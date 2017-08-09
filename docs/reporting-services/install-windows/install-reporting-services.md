@@ -20,11 +20,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 9d336624d3a9468757363bc468e5cd85d607cbfd
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Reporting Services のインストール
-<a id="install-reporting-services" class="xliff"></a>
+# <a name="install-reporting-services"></a>Reporting Services のインストール
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -50,8 +49,7 @@ SQL Server Reporting Services のインストールには、レポート アイ�
 > [!NOTE]
 > SQL Server Data Tools (SSDT) は、SQL Server 2016 に含まれていません。 [SQL Server Data Tools のダウンロード](http://go.microsoft.com/fwlink/?LinkID=616714)。
 
-## 次の手順
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>次の手順
 
 [SharePoint と Reporting Services サーバー、アドインのサポートされる組み合わせ](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
 [Reporting Services のアップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  

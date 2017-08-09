@@ -29,11 +29,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: fb5790cb0eaf8b160de98b2fa7ff3c327f654336
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Reporting Services と Power View のブラウザー サポート
-<a id="browser-support-for-reporting-services-and-power-view" class="xliff"></a>
+# <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services と Power View のブラウザー サポート
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -42,8 +41,7 @@ ms.lasthandoff: 07/03/2017
 > [!NOTE]
 > SQL Server 2016 より後に、SharePoint と reporting Services の統合を使用できなくします。
 
-## Web ポータルのブラウザー要件
-<a id="browser-requirements-for-the-web-portal" class="xliff"></a>
+## <a name="browser-requirements-for-the-web-portal"></a>Web ポータルのブラウザー要件
 
 現在の web ポータルのサポートされているブラウザーの一覧を次に示します。
 
@@ -73,8 +71,7 @@ ms.lasthandoff: 07/03/2017
 
  **(+)** 最新公開リリース バージョン
 
-## ブラウザー要件: ReportViewer Web コントロール (2015)
-<a id="browser-requirements-for-the-reportviewer-web-control-2015" class="xliff"></a>
+## <a name="browser-requirements-for-the-reportviewer-web-control-2015"></a>ブラウザー要件: ReportViewer Web コントロール (2015)
 
  次は、ReportViewer Web コントロール (2015) でサポートされているブラウザーの現行リストです。 レポート ビューアーでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web ポータルや SharePoint ライブラリのレポートを表示できます。  
 
@@ -95,8 +92,7 @@ ms.lasthandoff: 07/03/2017
 
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]に統合されている SharePoint 製品を使用している場合は、「  [SharePoint 2016 でブラウザー サポートを計画する](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)」を参照してください。
 
-### 認証の要件
-<a id="authentication-requirements" class="xliff"></a>
+### <a name="authentication-requirements"></a>認証の要件
 
  クライアント要求が正常に終了するように、ブラウザーでは、レポート サーバーで処理する必要がある特定の認証方法をサポートしています。 次の表は、Windows オペレーティング システムで実行中の各ブラウザーでサポートされる既定の認証の種類を示しています。
 
@@ -110,8 +106,7 @@ ms.lasthandoff: 07/03/2017
 
  **(+)** 最新公開リリース バージョン
 
-### レポートを表示するためのスクリプトの要件
-<a id="script-requirements-for-viewing-reports" class="xliff"></a>
+### <a name="script-requirements-for-viewing-reports"></a>レポートを表示するためのスクリプトの要件
 
  レポート ビューアーを使用するには、スクリプトを実行するようにブラウザーを構成する必要があります。
 
@@ -124,8 +119,7 @@ ms.lasthandoff: 07/03/2017
 > [!NOTE]
 > レポート ツール バーは HTML ビューアー コンポーネントの一部です。 既定では、ツール バーはブラウザー ウィンドウに表示されるすべてのレポートの上部に表示されます。 レポート ビューアーには、レポート内の情報検索、特定のページへのスクロール、および表示目的でのページ サイズの調整機能があります。 レポート ツール バーまたは HTML ビューアーの詳細については、「 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)」を参照してください。
 
-## Visual Studio での ReportViewer Web サーバー コントロールのブラウザー サポート
-<a id="browser-support-for-reportviewer-web-server-controls-in-visual-studio" class="xliff"></a>
+## <a name="browser-support-for-reportviewer-web-server-controls-in-visual-studio"></a>Visual Studio での ReportViewer Web サーバー コントロールのブラウザー サポート
 
  ReportViewer Web サーバー コントロールは、ASP.NET Web アプリケーションにレポート機能を埋め込むために使用されます。 このコントロールは Visual Studio に含まれており、このトピックで説明している他のコンポーネントとはサポートしているブラウザーおよびブラウザー バージョンが異なります。 アプリケーションの表示に使用するブラウザーの種類によって、アプリケーションに埋め込むことができる ReportViewer の機能が決まります。 レポート機能が制限されるサポート対象のブラウザーとサポートされているプラットフォームについては、このトピックの表を参照してください。  
 
@@ -141,8 +135,7 @@ ms.lasthandoff: 07/03/2017
 
  **(+)** 最新公開リリース バージョン
 
-## Power View のブラウザー サポート
-<a id="power-view-browser-support" class="xliff"></a>
+## <a name="power-view-browser-support"></a>Power View のブラウザー サポート
 
 **Microsoft Windows**  
 *Windows 7、8.1、10、Windows Server 2008 R2、2012、2012 R2*
@@ -159,8 +152,7 @@ ms.lasthandoff: 07/03/2017
 
  SharePoint 2016 のブラウザー サポートの詳細については、「 [SharePoint 2013 でブラウザー サポートを計画する](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)」を参照してください。
 
-## 次の手順
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>次の手順
 
 [検索して、web ポータルでレポートを表示します。](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services ツール](../reporting-services/tools/reporting-services-tools.md)  

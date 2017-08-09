@@ -22,12 +22,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: e9644b5bfcc57b24793684095aba912c688346b8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# SharePoint ユーザー用のデータ警告マネージャー
-<a id="data-alert-manager-for-sharepoint-users" class="xliff"></a>
+# <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint ユーザー用のデータ警告マネージャー
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -90,8 +89,7 @@ SharePoint サイトのデータ警告機能を有効にすると、MyDataAlerts
 -   [警告デザイナーでデータ警告を編集します。](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
 
-## 参照
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>参照
 
 [データ警告デザイナー](../reporting-services/data-alert-designer.md)   
 [データ警告デザイナーでデータ警告を作成します。](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   

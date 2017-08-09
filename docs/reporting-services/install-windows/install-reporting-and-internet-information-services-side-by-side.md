@@ -20,12 +20,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: f7e12ebcec8e06828430e10c377205e2421f50f4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# レポートをインストールし、インターネット インフォメーション サービスのサイド バイ サイド
-<a id="install-reporting-and-internet-information-services-side-by-side" class="xliff"></a>
+# <a name="install-reporting-and-internet-information-services-side-by-side"></a>レポートをインストールし、インターネット インフォメーション サービスのサイド バイ サイド
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -37,8 +36,7 @@ ms.lasthandoff: 07/03/2017
 |-----------------|------------|-----------------|  
 |8.0, 8.5|あるアプリケーションに対して送信された要求が、別のアプリケーションによって受け付けられます。<br /><br /> URL 予約には、HTTP.SYS による優先順位規則が適用されます。 同じ仮想ディレクトリ名を持ち、共にポート 80 を監視するアプリケーションが複数存在するとき、これらのアプリケーションに宛てて送信された要求は、目的のアプリケーションの URL 予約が、もう一方のアプリケーションの URL 予約よりもあいまいに指定されていた場合、意図したターゲットに到達しない可能性があります。|特定の条件下では、URL 予約体系において他の URL エンドポイントに優先する登録済みのエンドポイントが、他のアプリケーション宛ての HTTP 要求を受信する場合があります。<br /><br /> この競合は、レポート サーバー Web サービスおよび [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] に対し、一意の仮想ディレクトリ名を使用することによって回避できます。<br /><br /> このシナリオについては、このトピックで詳しく説明します。|  
   
-## URL 予約の優先順位規則
-<a id="precedence-rules-for-url-reservations" class="xliff"></a>  
+## <a name="precedence-rules-for-url-reservations"></a>URL 予約の優先順位規則  
  IIS と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]間の相互運用性の問題を解決するには、まず URL 予約の優先順位規則を理解しておく必要があります。 優先順位規則とは、簡単に言えば、"より明示的に定義された値を持つ URL 予約が、その URL に合致した要求を先に受け取ることができる" ということです。  
   
 -   仮想ディレクトリを指定する URL 予約は、仮想ディレクトリが省略された URL 予約よりも明示的である。  
@@ -59,8 +57,7 @@ ms.lasthandoff: 07/03/2017
   
  ポートが競合している場合は、「System.IO.FileLoadException: ファイルが別のプロセスで使用されているため、プロセスはファイルにアクセスできません (HRESULT からの例外: 0x80070020)」というエラー メッセージが表示されます。  
   
-## IIS 8.0、8.5 と SQL Server Reporting Services の URL 予約
-<a id="url-reservations-for-iis-80-85-with-sql-server-reporting-services" class="xliff"></a>  
+## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>IIS 8.0、8.5 と SQL Server Reporting Services の URL 予約  
  前のセクションで取り上げた優先順位規則を踏まえて考えると、Reporting Services と IIS に対して定義された URL 予約が、両者の相互運用性にどのように貢献しているかがわかります。 Reporting Services は、そのアプリケーションの仮想ディレクトリ名を明示的に指定する要求を受信します。一方、IIS は、それ以外のすべての要求を受信し、それらを IIS のプロセス モデル内で実行されるアプリケーションに送ることになります。  
   
 |アプリケーション|URL 予約|説明|受信する要求|  
@@ -69,8 +66,7 @@ ms.lasthandoff: 07/03/2017
 |Web ポータル|`http://+:80/Reports`|厳密なワイルドカード、ポート 80、Reports という仮想ディレクトリ|reports という仮想ディレクトリを指定するすべての要求をポート 80 で受信します。 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] Http:// に対するすべての要求を受け取る\<コンピューター名 >/reports です。|  
 |IIS|`http://*:80/`|弱いワイルドカード、ポート 80|まだ他のアプリケーションによって受信されていない残りの要求をすべてポート 80 で受信します。|  
 
-## IIS 8.0 および 8.5 で SQL Server Reporting Services のサイド バイ サイド展開
-<a id="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85" class="xliff"></a>
+## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>IIS 8.0 および 8.5 で SQL Server Reporting Services のサイド バイ サイド展開
 
  IIS と Reporting Services 間の相互運用性の問題は、IIS Web サイトに、Reporting Services で使用されているものと同じ仮想ディレクトリ名が存在する場合に発生します。 たとえば、次のような構成を考えてみます。  
   
@@ -88,8 +84,7 @@ ms.lasthandoff: 07/03/2017
   
 -   手動構成のインストールでは、構成する URL に既定の名前付け規則を採用します。 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] を名前付きインスタンスとしてインストールする場合は、仮想ディレクトリの作成時にインスタンス名を含めるようにします。  
 
-## 次の手順
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>次の手順
 
 [レポート サーバー Url を構成します。](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [URL を構成します。](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   

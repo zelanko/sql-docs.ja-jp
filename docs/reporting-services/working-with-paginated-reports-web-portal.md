@@ -18,19 +18,17 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: c6dcc44b05633004bd525d337c8303c1a8180121
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# ページ分割されたレポートの使用 (Web ポータル)
-<a id="working-with-paginated-reports-web-portal" class="xliff"></a>
+# <a name="working-with-paginated-reports-web-portal"></a>ページ分割されたレポートの使用 (Web ポータル)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Web ポータル内のページ分割されたレポートのプロパティを表示したり管理したりできます。 Web ポータルからレポート ビルダーを起動してページ分割されたレポートレポートを作成または編集できます。  
    
-## ページ分割されたレポートの作成
-<a id="create-a-paginated-report" class="xliff"></a>  
+## <a name="create-a-paginated-report"></a>ページ分割されたレポートの作成  
   
 新しい共有データセットを作成するには、次のようにします。  
   
@@ -44,8 +42,7 @@ Web ポータル内のページ分割されたレポートのプロパティを�
   
 4.  レポートを作成し、画面左上の **[保存]** アイコンを選択してページ分割されたレポートをレポート サーバーに保存します。  
   
-## 既存のページ分割されたレポートの管理
-<a id="manage-an-existing-paginated-report" class="xliff"></a>  
+## <a name="manage-an-existing-paginated-report"></a>既存のページ分割されたレポートの管理  
   
 既存のページ分割されたレポートを管理するには、次のようにします。  
   
@@ -60,22 +57,19 @@ Web ポータル内のページ分割されたレポートのプロパティを�
     
     ![ssRSWebPortal-manage-report2](../reporting-services/media/ssrswebportal-manage-report2.png)  
   
-## プロパティ
-<a id="properties" class="xliff"></a>  
+## <a name="properties"></a>プロパティ  
   
 プロパティ画面では、ページ分割されたレポートの **[名前]** と **[説明]** を変更できます。 また、 **[削除]**、 **[移動]**、 **[リンク レポートの作成]**、 **[レポート ビルダーでの編集]**、 **[ダウンロード]** 、または **[置換]**を選択することもできます。  
     
 ![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
    
-## パラメーター
-<a id="parameters" class="xliff"></a>  
+## <a name="parameters"></a>パラメーター  
   
 ページ分割されたレポートの既存のパラメーターを変更することができます。 新しいパラメーターを追加するには、レポート ビルダーまたは SQL Server Data Tools でレポートを編集する必要があります。  
   
 ![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
-## [データ ソース]
-<a id="data-source" class="xliff"></a>  
+## <a name="data-source"></a>[データ ソース]  
 共有データ ソースをポイントしたり、カスタム データ ソースの接続情報を入力したりできます。  
   
 ![ssRSWebPortal-report-datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  
@@ -131,18 +125,15 @@ Web ポータル内のページ分割されたレポートのプロパティを�
   
 このオプションを使用するには、レポート サーバー用の自動実行アカウントをあらかじめ構成しておく必要があります。 自動実行アカウントは、他に使用できる資格情報の手段がない場合に、外部データ ソースに接続するために使用します。 このオプションを指定していてアカウントが構成されていない場合、レポート データ ソースへの接続は失敗し、レポート処理は実行されません。 このアカウントの詳細については、「 [自動実行アカウントの構成 (SSRS 構成マネージャー)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」をご覧ください。  
   
-## サブスクリプション
-<a id="subscriptions" class="xliff"></a>  
+## <a name="subscriptions"></a>サブスクリプション  
 Reporting Services サブスクリプションは、特定の時刻に、またはイベントへの応答として、指定されたファイル形式でレポートを配信する構成です。 たとえば、毎週水曜日に、MonthlySales.rdl レポートを Microsoft Word 文書としてファイル共有に保存します。 サブスクリプションを使用して、レポート配信のスケジュールや自動化を設定したり、レポート パラメーターの特定の値セットを指定したりすることができます。 詳細については、次を参照してください。[サブスクリプション操作](working-with-subscriptions-web-portal.md)です。
   
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
-## 依存アイテム
-<a id="dependent-items" class="xliff"></a>  
+## <a name="dependent-items"></a>依存アイテム  
 [依存アイテム] ページを使用すると、このレポートを参照しているアイテムの一覧を表示できます。 各アイテムの種類のアイコンは、その内容を表しています。 選択することができますし、**省略記号 (...)**さらにそれらのアイテムを管理するには、各項目にします。  
   
-## キャッシュ
-<a id="caching" class="xliff"></a>  
+## <a name="caching"></a>キャッシュ  
 ページ分割されたレポートのデータをキャッシュするにはいくつかのオプションがあります。 簡単な選択で始めことができます。  
   
 1.  **[常に最新データを使用して、このレポートを実行する]** は、レポートを実行するたびにデータ ソースにクエリを発行します。 これにより、最新のデータを含むオンデマンド レポートが作成されます。 新しいクエリの結果を含むレポートを開くたびに、新しいレポートのインスタンスが作成されます。 この方法を使用すると、10 人のユーザーが同時にレポートを開いた場合、10 のクエリがデータ ソースに送信され、処理されます。  
@@ -159,16 +150,14 @@ Reporting Services サブスクリプションは、特定の時刻に、また�
 
 詳細については、次を参照してください。[スナップショット操作](working-with-snapshots-web-portal.md)です。
   
-### キャッシュの有効期限
-<a id="cache-expiration" class="xliff"></a>  
+### <a name="cache-expiration"></a>キャッシュの有効期限  
   
 一定の時間が経過したらページ分割されたレポートのキャッシュを期限切れにするか、またはスケジュールに従って行うかを制御できます。 共有スケジュールを使用できます。  
   
 > [!NOTE]
 > これによってキャッシュは更新されません。  
   
-### キャッシュ更新計画
-<a id="cache-refresh-plans" class="xliff"></a>  
+### <a name="cache-refresh-plans"></a>キャッシュ更新計画  
   
 [キャッシュ更新計画] を使用すると、ページ分割されたレポートのデータの一時コピーを事前にキャッシュに読み込むスケジュールを作成できます。 更新計画には、スケジュールと、パラメーターの値を指定または上書きするためのオプションが含まれます。 読み取り専用にマークされているパラメーターの値を上書きすることはできません。 複数の更新計画を作成して使用できます。  
    
@@ -187,8 +176,7 @@ Reporting Services サブスクリプションは、特定の時刻に、また�
   
 一覧に表示されている計画は、 **[編集]** または **[削除]** できます。 **[既存のものから新規作成]** オプションは、キャッシュ更新計画が 1 つだけ選択されている場合に有効になります。 このオプションでは、新しい更新計画が元の計画からコピーされて作成されます。 キャッシュ更新計画ページは、選択された計画の詳細があらかじめ設定された状態で開きます。 その後、更新計画オプションを変更して、新しい説明で計画を保存できます。  
   
-## 履歴スナップショット
-<a id="history-snapshots" class="xliff"></a>  
+## <a name="history-snapshots"></a>履歴スナップショット  
   
 [履歴スナップショット] ページには、一定期間に生成および保存したレポート スナップショットが表示されます。 設定されているオプションによっては、新しいスナップショットのみがレポート履歴に保存されます。  
   
@@ -198,8 +186,7 @@ Reporting Services サブスクリプションは、特定の時刻に、また�
   
 レポート ヒストリ スナップショットをクリックすると、そのスナップショットが表示されます。 レポート ヒストリに表示されるスナップショットは、作成日時だけで識別されます。 スナップショットがスケジュールの設定を受けて生成されたのか、手動で生成されたのかを識別する表示はありません。  
   
-## セキュリティ
-<a id="security" class="xliff"></a>  
+## <a name="security"></a>セキュリティ  
 [セキュリティのプロパティ] ページを使用すると、レポートへのアクセスを決定するセキュリティ設定の表示や変更を行えます。 このページは、セキュリティ保護の権限の対象となるアイテムに対して利用できます。  
   
 アイテムへのアクセスは、グループまたはユーザーが実行できるタスクを指定するロールの割り当てによって定義されます。 ロールの割り当ては、1 つのユーザー名またはグループ名、および一連のタスクを指定する 1 つ以上のロールの定義で構成されています。  
@@ -208,8 +195,7 @@ Reporting Services サブスクリプションは、特定の時刻に、また�
   
 現在のアイテムに定義されているセキュリティを変更する場合に選択します。
 
-## 次の手順
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>次の手順
 
 [Web ポータル](../reporting-services/web-portal-ssrs-native-mode.md)  
 [共有データセットを操作します。](../reporting-services/work-with-shared-datasets-web-portal.md)

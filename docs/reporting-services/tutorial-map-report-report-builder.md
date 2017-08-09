@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: マップ レポート (レポート ビルダー) | Microsoft Docs"
+title: "チュートリアル: マップ レポート (レポート ビルダー) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: efe91a2e1e8ca7b0744639ed718d63b70e3adc5c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tutorial-map-report-report-builder"></a>チュートリアル: マップ レポート (レポート ビルダー)
@@ -35,12 +35,12 @@ ms.lasthandoff: 08/03/2017
 このチュートリアルでは、New York 州の郡にある店舗の場所を表示するマップ レポートを作成します。  
    
 > [!NOTE]  
-> このチュートリアルでは、ウィザードに関する複数の手順を、データセットの作成とテーブルの作成の 2 つの手順にまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成、およびウィザードの実行に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
+> このチュートリアルでは、ウィザードに関する複数の手順を、データセットの作成とテーブルの作成の 2 つの手順にまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成、およびウィザードの実行に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
   
 このチュートリアルの推定所要時間: 30 分。  
   
 ## <a name="requirements"></a>必要条件  
-このチュートリアルでは、Bing マップの背景をサポートするようにレポート サーバーが構成されている必要があります。 詳細については、「 [マップ レポートのサポートを計画する](http://msdn.microsoft.com/en-us/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)」を参照してください。 
+このチュートリアルでは、Bing マップの背景をサポートするようにレポート サーバーが構成されている必要があります。 詳細については、「[マップ レポートのサポートを計画する](http://msdn.microsoft.com/en-us/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)」を参照してください。 
 
 その他の要件については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/prerequisites-for-tutorials-report-builder.md)」を参照してください。  
   
@@ -97,16 +97,16 @@ ms.lasthandoff: 08/03/2017
   
     デザイン画面にマップが追加されます。  
   
-13. "マップのタイトル" テキストを選択して、「**Sales by Store**」と入力し、Enter キーを押します。  
+13. "マップのタイトル" テキストを選択して、「**Sales by Store**」と入力し、ENTER キーを押します。  
 
-15. マップをダブルクリックして **[マップ レイヤー]**ペインを表示します。 **[マップ レイヤー]** ペインには、レイヤーの種類が **[埋め込み]**である 1 つの多角形レイヤー PolygonLayer1 が表示されます。 各郡は、このレイヤー上の埋め込みマップ要素となります。  
+15. マップをダブルクリックして **[マップ レイヤー]** ペインを表示します。 **[マップ レイヤー]** ペインには、レイヤーの種類が **[埋め込み]**である 1 つの多角形レイヤー PolygonLayer1 が表示されます。 各郡は、このレイヤー上の埋め込みマップ要素となります。  
   
     > [!NOTE]  
     > **[マップ レイヤー]** ペインが表示されない場合は、現在のビューの外に表示されている可能性があります。 デザイン ビュー ウィンドウの下部にあるスクロール バーを使用して、ビューを変更してください。 **[表示]** タブで **[レポート データ]** オプションをオフにして、デザイン画面の領域を広げることもできます。   
 
 15. PolygonLayer1 の横の矢印を選択し、**[多角形のプロパティ]** をクリックします。
 
-16. **[フォント]** タブで、色を **[ディム グレー]**に変更します。
+16. **[フォント]** タブで、色を **[ディム グレー]** に変更します。
 
 17. **[ホーム]** タブで **[実行]** をクリックして、レポートをプレビューします。  
   
@@ -126,7 +126,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  **[実行]** タブで **[デザイン]** をクリックして、デザイン ビューに戻ります。  
   
-2.  マップをダブルクリックして **[マップ レイヤー]** ペインを表示します。 ツールバーの **[レイヤーの新規作成]** ボタン ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard") をクリックします。 
+2.  マップをダブルクリックして **[マップ レイヤー]** ペインを表示します。 ツールバーで、をクリックして、**レイヤーの新規作成ウィザード**ボタン![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")です。 
 
     ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 08/03/2017
 5.  **[SQL Server 空間データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択します。  
 
     > [!NOTE]  
-    > 適切な権限を持っている限り、選択するデータ ソースは重要ではありません。 データ ソースからはデータを取得しません。 詳細については、[「別の方法でデータ接続を取得する &#40;レポート ビルダー&#41;」](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)を参照してください。  
+    > 適切な権限を持っている限り、選択するデータ ソースは重要ではありません。 データ ソースからはデータを取得しません。 詳細については、[「別の方法でデータ接続を取得する (レポート ビルダー)」](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)を参照してください。  
   
 6.  **[次へ]**をクリックします。  
   
@@ -242,7 +242,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  デザイン ビューに切り替えます。  
   
-2.  マップをダブルクリックして **[マップ レイヤー]** ペインを表示します。 ツールバーの **[レイヤーの新規作成]** ボタン ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard") をクリックします。  
+2.  マップをダブルクリックして **[マップ レイヤー]** ペインを表示します。 ツールバーで、をクリックして、**レイヤーの新規作成ウィザード**ボタン![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")です。  
   
 3.  **[空間データのソースを選択]** ページで、 **[SQL Server 空間クエリ]** を選択し、 **[次へ]**をクリックします。  
   
@@ -297,7 +297,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  デザイン ビューに切り替えます。  
   
-2.  マップをダブルクリックして **[マップ レイヤー]** ペインを表示します。 ツールバーの **[レイヤーの追加]** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer") をクリックします。  
+2.  マップをダブルクリックして **[マップ レイヤー]** ペインを表示します。 ツールバーで、をクリックして**レイヤーの追加** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")です。  
   
 3.  ドロップダウン リストで、 **[タイル レイヤー]**をクリックします。  
   
@@ -308,7 +308,7 @@ ms.lasthandoff: 08/03/2017
   
 4.  TileLayer1 の横の矢印をクリックし、**[タイトルのプロパティ]** をクリックします。  
   
-5.  **[全般]** タブの **[種類]**で、 **[航空写真]**を選択します。 航空写真ビューには、テキストは含まれません。  
+5.  **[全般]** タブの **[種類]** で、**[航空写真]** を選択します。 航空写真ビューには、テキストは含まれません。  
 
     ![report-builder-map-bing-aerial](../reporting-services/media/report-builder-map-bing-aerial.png)
   
@@ -413,7 +413,7 @@ ms.lasthandoff: 08/03/2017
 
 2. カラー スケールを選択します。 **[ホーム]** タブの **[数値]** セクションで、**[通貨]** をクリックします。  
   
-4.  **[数値]** セクションで、 **[小数点表示桁下げ]** ボタンを 2 回クリックします。  
+4.  **[数値]** セクションで、**[小数点表示桁下げ]** ボタンを 2 回クリックします。  
   
     カラー スケールで、各範囲の年間売上高が通貨形式で表示されます。  
   
@@ -461,9 +461,9 @@ ms.lasthandoff: 08/03/2017
   
 1.  デザイン ビューに切り替えます。  
   
-2.  マップをダブルクリックして **[マップ レイヤー]** ペインを表示します。 ツールバーの **[レイヤーの追加]** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer") をクリックし、**[ポイント レイヤー]** をクリックします。  
+2.  マップをダブルクリックして **[マップ レイヤー]** ペインを表示します。 ツールバーで、をクリックして**レイヤーの追加**![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")をクリックし、**ポイント レイヤー**です。    
   
-    新しいポイント レイヤーがマップに追加されます。 既定では、ポイント レイヤーの空間データの種類は **[埋め込み]**になります。  
+    新しいポイント レイヤーがマップに追加されます。 既定では、ポイント レイヤーの空間データの種類は **[埋め込み]** になります。  
   
 3.  PointLayer2 の矢印をクリックし、**[ポイントの追加]** をクリックします。  
   
@@ -534,7 +534,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  デザイン ビューまたはプレビューで、**[ファイル]** メニューの **[名前を付けて保存]** をクリックします。
  
-3.  **[名前]**に、「 **Store Sales in New York**」と入力します。  
+3.  **[名前]** に、「**Store Sales in New York**」と入力します。  
 
 3. ローカル コンピューターまたは [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] サーバーに保存します。
   

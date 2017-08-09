@@ -1,5 +1,5 @@
 ---
-title: "式で使用されるデータ型 (レポート ビルダーおよび SSRS) | Microsoft Docs"
+title: "式 (レポート ビルダーおよび SSRS) のデータ型 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ae8de6c7f599e9e6e3414a5f0296213e0dbc89e7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>式で使用されるデータ型 (レポート ビルダーおよび SSRS)
@@ -68,9 +68,9 @@ ms.lasthandoff: 08/03/2017
   
 -   データセット クエリを修正して、変換済みのデータを使った新しいクエリ フィールドを追加する。 リレーショナル データ ソースや多次元データ ソースの場合は、データ ソース リソースを使用して変換を行います。  
   
--   既存のレポート データセット フィールドに基づく計算フィールドを作成する。それには、結果セット列のすべてのデータを異なるデータ型の新しい列に変換する式を作成します。 たとえば、Year フィールドを整数値から文字列値に変換するには、 `=CStr(Fields!Year.Value)`という式を作成します。 詳細については、「[レポート データ ペインでのフィールドの追加、編集、更新 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)」を参照してください。  
+-   既存のレポート データセット フィールドに基づく計算フィールドを作成する。それには、結果セット列のすべてのデータを異なるデータ型の新しい列に変換する式を作成します。 たとえば、Year フィールドを整数値から文字列値に変換するには、`=CStr(Fields!Year.Value)` という式を作成します。 詳細については、「[レポート データ ペインでのフィールドの追加、編集、更新 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)」を参照してください。  
   
--   使用しているデータ処理拡張機能に、書式設定済みのデータを取得するためのメタデータが含まれているかどうかを確認する。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX クエリには、キューブの処理時に書式設定されたキューブ値を保持する FORMATTED_VALUE という拡張プロパティがあります。 詳細については、「[Analysis Services データベースに対する拡張フィールド プロパティ &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)」を参照してください。  
+-   使用しているデータ処理拡張機能に、書式設定済みのデータを取得するためのメタデータが含まれているかどうかを確認する。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX クエリには、キューブの処理時に書式設定されたキューブ値を保持する FORMATTED_VALUE という拡張プロパティがあります。 詳細については、「[Analysis Services データベースに対する拡張フィールド プロパティ &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)」を参照してください。  
   
 ## <a name="understanding-parameter-data-types"></a>パラメーターのデータ型について  
  レポート パラメーターに使用できるデータ型は、Boolean、DateTime、Integer、Float、Text (String) の 5 つだけです。 データセット クエリにクエリ パラメーターが含まれている場合は、レポート パラメーターが自動的に作成されて、対応するクエリ パラメーターに関連付けられます。 レポート パラメーターの既定のデータ型は String です。 レポート パラメーターの既定のデータ型を変更するには、 **[レポート パラメーターのプロパティ]** ダイアログ ボックスの **[全般]** ページで、 **[データ型]** ボックスの一覧から該当する値を選択します。  
@@ -100,9 +100,9 @@ ms.lasthandoff: 08/03/2017
  データ ソースへの接続に使用するデータ プロバイダーが、すべてのデータ型の変換をサポートしているとは限りません。このような場合、サポートされていないデータ ソースの種類に対する既定のデータ型は String になります。 次の例では、データ型が文字列として返される場合の対処方法について説明します。  
   
 ### <a name="concatenating-a-string-and-a-clr-datetimeoffset-data-type"></a>String 型と CLR DateTimeOffset 型の連結  
- CLR には、ほとんどのデータ型について既定の変換方法が用意されているため、& 演算子を使用することで、データ型が異なる値を 1 つの文字列に連結できます。 たとえば、"The date and time are: " というテキストと、StartDate という <xref:System.DateTime> 型のデータセット フィールドを連結するには、 `="The date and time are: " & Fields!StartDate.Value`」を参照してください。  
+ CLR には、ほとんどのデータ型について既定の変換方法が用意されているため、& 演算子を使用することで、データ型が異なる値を 1 つの文字列に連結できます。 たとえば、"The date and time are: " というテキストと、StartDate という <xref:System.DateTime> 型のデータセット フィールドを連結するには、`="The date and time are: " & Fields!StartDate.Value` という式を使用します。  
   
- データ型によっては、ToString 関数が必要になる場合があります。 たとえば、先ほどと同じ例を、CLR データ型の <xref:System.DateTimeOffset>(日付、時刻、および、UTC タイム ゾーンを基準とするタイム ゾーン オフセットで構成される) を使って記述する場合は、 `="The time is: " & Fields!StartDate.Value.ToString()`」を参照してください。  
+ データ型によっては、ToString 関数が必要になる場合があります。 たとえば、次の式は、CLR データ型を使用して同じ例を示しています。 <xref:System.DateTimeOffset>、日付、時刻、およびタイム ゾーンに対して UTC タイム ゾーン オフセットが組み込まれている:`="The time is: " & Fields!StartDate.Value.ToString()`です。  
   
 ### <a name="converting-a-string-data-type-to-a-clr-datetime-data-type"></a>String 型から CLR の DateTime 型への変換  
  データ ソースで定義されているすべてのデータ型をデータ処理拡張機能がサポートしていない場合、サポート対象外のデータはテキストとして処理される可能性があります。 たとえば、 **datetimeoffset(7)** データ型の値は String データ型として処理されます。 "July 1, 2008, at 6:05:07.9999999 A.M." に対応する文字列値は、オーストラリアのパースでは 次のようになります。  
@@ -145,7 +145,7 @@ ms.lasthandoff: 08/03/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの型の詳細については、[SQL Server オンライン ブック](http://go.microsoft.com/fwlink/?linkid=120955) の「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」および「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ型の詳細については、 [SQL Server オンライン ブック](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) の「 [SQL Server Books Onlの「e](http://go.microsoft.com/fwlink/?linkid=120955)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ型の詳細については、[SQL Server オンライン ブック](http://go.microsoft.com/fwlink/?linkid=120955)の「[Analysis Services で使用するデータ型](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レポート アイテムの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

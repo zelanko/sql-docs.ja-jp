@@ -18,12 +18,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 2bca4e3089bde763669c4fe518f509fbe94cb6eb
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# スナップショットの操作 (Web ポータル)
-<a id="working-with-snapshots-web-portal" class="xliff"></a>
+# <a name="working-with-snapshots-web-portal"></a>スナップショットの操作 (Web ポータル)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -34,8 +33,7 @@ ms.lasthandoff: 07/03/2017
    
 キャッシュ スナップショットを作成して、特定の実行プロパティの読み込み速度を高めることができます。 また、履歴スナップショットで特定の時点をキャプチャすることもできます。  
   
-## キャッシュ スナップショットを作成する
-<a id="creating-a-cache-snapshot" class="xliff"></a>  
+## <a name="creating-a-cache-snapshot"></a>キャッシュ スナップショットを作成する  
   
 スナップショットを作成するには、次のようにします。  
   
@@ -47,8 +45,7 @@ ms.lasthandoff: 07/03/2017
   
 3.  今すぐキャッシュ スナップショットを作成するには、 **[このページの [適用] をクリックした時点でキャッシュ スナップショットを作成する]** を選択します。 このオプションのみを選択すると、スナップショットは更新されません。  
   
-## 履歴スナップショットの作成、変更および削除
-<a id="create-modify-and-delete-history-snapshots" class="xliff"></a>  
+## <a name="create-modify-and-delete-history-snapshots"></a>履歴スナップショットの作成、変更および削除  
   
 履歴スナップショットを使用するには、レポートの管理で **[履歴スナップショット]**を選択します。  
   
@@ -66,8 +63,7 @@ ms.lasthandoff: 07/03/2017
   
 3.  履歴スナップショットをクリックすると、そのスナップショットが表示されます。 レポート ヒストリに表示されるスナップショットは、作成日時だけで識別されます。 スナップショットがスケジュールの設定を受けて生成されたのか、手動で生成されたのかを識別する表示はありません。  
   
-### スケジュールと設定
-<a id="schedule-and-settings" class="xliff"></a>  
+### <a name="schedule-and-settings"></a>スケジュールと設定  
   
 **[スケジュールと設定]** には、スケジュールを設定し作成したスナップショットの保有期間を制御するオプションが用意されています。  
   
@@ -81,8 +77,7 @@ ms.lasthandoff: 07/03/2017
   
 これをオンにすると、レポート実行プロパティを基に生成したレポート スナップショットがレポート履歴にコピーされます。 生成したスナップショットからレポートを実行するようにレポート実行プロパティを設定できます。 このレポート ヒストリのプロパティを設定すると、一定期間に生成されたすべてのレポート スナップショットのコピーをレポート ヒストリに配置することで、その記録を保存できます。
 
-## 次の手順
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>次の手順
 
 [Web ポータル](../reporting-services/web-portal-ssrs-native-mode.md)  
 [改ページ調整されたレポートの使用](working-with-paginated-reports-web-portal.md)  

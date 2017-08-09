@@ -18,12 +18,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 4f49f5376344d6c52159c3a4dcff553255c79320
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# サブスクリプションの操作 (Web ポータル)
-<a id="working-with-subscriptions-web-portal" class="xliff"></a>
+# <a name="working-with-subscriptions-web-portal"></a>サブスクリプションの操作 (Web ポータル)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -42,14 +41,12 @@ ms.lasthandoff: 07/03/2017
   
 また、このページでは、実行したサブスクリプションの結果の状態も **[結果]** 列に示されます。 サブスクリプションのエラーが発生した場合、メッセージの内容を表示するには、最初に [結果] 列を確認する必要があります。  
   
-## サブスクリプションの作成と編集
-<a id="creating-or-editing-a-subscription" class="xliff"></a>  
+## <a name="creating-or-editing-a-subscription"></a>サブスクリプションの作成と編集  
 [新しいサブスクリプション] ページまたは [サブスクリプションの編集] ページでは、レポートに新しいサブスクリプションを作成したり、既存のサブスクリプションを変更したりできます。 このページに表示されるオプションは、ロールの割り当てによって異なります。 高度な権限を持つユーザーは、追加のオプションを使用して作業できます。  
   
 サブスクリプションは、自動的に実行できるレポートでサポートされています。 少なくとも、レポートでは、格納された資格情報を使用するか、資格情報を使用しないようにする必要があります。 レポートでパラメーターを使用する場合、既定値を指定する必要があります。 レポート実行の設定を変更したり、パラメーター プロパティで使用される既定値を削除したりすると、サブスクリプションが非アクティブになることがあります。 詳細については、「ネイティブ モード レポート サーバーのサブスクリプションの作成と管理」を参照してください。  
   
-### サブスクリプションの種類
-<a id="type-of-subscription" class="xliff"></a>  
+### <a name="type-of-subscription"></a>サブスクリプションの種類  
 **[標準サブスクリプション]** と **[データ ドリブン サブスクリプション]**から選択できます。  
   
 ![ssRSWebPortal-subscriptions3](../reporting-services/media/ssrswebportal-subscriptions3.png)  
@@ -60,8 +57,7 @@ ms.lasthandoff: 07/03/2017
   
 このオプションを使用できるのは、高度な権限を持つユーザーのみです。 既定のセキュリティを設定している場合、[個人用レポート] フォルダーにあるレポートに対してデータ ドリブン サブスクリプションを使用することはできません。  
   
-### 転送先
-<a id="destination" class="xliff"></a>  
+### <a name="destination"></a>転送先  
 レポートの配信に使用する配信拡張機能を選択します。   
   
 配信拡張機能を使用できるかどうかは、配信拡張機能がレポート サーバーにインストールおよび構成されているかどうかによって決まります。 レポート サーバーの電子メールは、既定の配信拡張機能ですが、使用する前に構成する必要があります。 ファイル共有配信は構成の必要はありませんが、共有フォルダーは使用前に定義が必要です。  
@@ -74,8 +70,7 @@ ms.lasthandoff: 07/03/2017
   
 -   ファイル共有サブスクリプションには、配信先の場所を指定できるフィールドがあります。 ファイル共有には任意のレポートを配信できます。 ただし、対話機能をサポートするレポート (たとえば、対応する行と列へのドリル ダウンをサポートするマトリックス形式のレポート) は、静的ファイルとして表示されます。 静的ファイルに行と列のドリル ダウンを表示することはできません。 ファイル共有名は、汎用名前付け規則 (UNC) 形式 (たとえば、\mycomputer\public\myreportfiles) で指定する必要があります。 パス名の末尾に円記号を含めないでください。 レポート ファイルは、表示形式に基づくファイル形式で配信されます (たとえば、[Excel] を選択した場合、レポートは .xlsx ファイルとして配信されます)。  
   
-### データ ドリブン サブスクリプション データセット
-<a id="data-driven-subscription-dataset" class="xliff"></a>  
+### <a name="data-driven-subscription-dataset"></a>データ ドリブン サブスクリプション データセット  
 データ ドリブン サブスクリプションの場合は、サブスクリプションで使用されるデータセットを定義する必要があります。 **[データセットの編集]** を選択して情報を指定します。  
   
 ![ssRSWebPortal-subscriptions4](../reporting-services/media/ssrswebportal-subscriptions4.png)  

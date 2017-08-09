@@ -1,5 +1,5 @@
 ---
-title: "レポート デザイナーを使用してレポートをデザインする (SSRS) | Microsoft Docs"
+title: "(SSRS) のレポート デザイナーでレポートをデザイン |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -17,19 +17,19 @@ caps.latest.revision: 77
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 02e1eb6504ae66ba6e48cedc0c511c4cd9505fb2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>レポート デザイナーを使用して Reporting Services の改ページ調整されたレポートをデザインする (SSRS)
+# <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Reporting Services の改ページ調整されたレポート (SSRS) のレポート デザイナーでデザイン
 
 レポート デザイナーを使用すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のフル機能付きのページ分割レポートおよびレポート ソリューションを作成できます。 レポート デザイナーには、データ ソース、データセット、およびクエリ、データ領域とフィールドのレポート レイアウトの配置、連携するパラメーターとレポートのセットなどの対話機能を定義できるグラフィカル インターフェイスが用意されています。  
 
-レポート デザイナーは、Microsoft Visual Studio のビジネス インテリジェンス ソリューション作成環境である  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の機能です。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、SQL Server には含まれていません。 [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)をダウンロードします。 
+レポート デザイナーは、Microsoft Visual Studio のビジネス インテリジェンス ソリューション作成環境である  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の機能です。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]SQL Server に含まれていません。 [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714) をダウンロードします。 
   
 ## <a name="benefits-of-report-projects"></a>レポート プロジェクトの利点  
 レポート プロジェクトは、レポート定義およびリソース用のコンテナーの役割を果たします。 プロジェクトを使用する目的  
@@ -45,14 +45,14 @@ ms.lasthandoff: 08/03/2017
  このトピックの情報は、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ソリューションで単一レポート プロジェクトのページ分割レポートおよび関連アイテムを設計する場合に参考にしてください。 SQL Server Data Tools のソリューションおよび複数のプロジェクトの詳細については、「 [SQL Server Data Tools の Reporting Services](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)」を参照してください。  
 
   
-##  <a name="bkmk_SharedDataSources"></a> 共有データ ソース  
+##  <a name="bkmk_SharedDataSources"></a> Shared Data Sources  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使用して、レポート ソリューションの共有データ ソースを定義および配置します。 共有データ ソースは、 **OverwriteDataSources** プロパティおよび **TargetDataSourceFolder** プロパティを使用して、プロジェクト内の他のアイテムとは別に配置できます。 詳細については、「[配置プロパティを設定する (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)」を参照してください。  
   
  レポート デザイナーでは、レポート データ ペインとソリューション エクスプローラーの両方で作業して、レポートで使用されるデータ ソースを定義します。 詳しくは、「 [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)」をご覧ください。 レポート サーバーまたは SharePoint サイトにパブリッシュされ、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ソリューションに含まれていないデータ ソースを開く際に、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使用することはできません。 その機能については、「[レポート ビルダーの作成環境 (SSRS)](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md)」を参照してください。  
   
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] はクライアント ツールです。 レポート ソリューションをローカル コンピューターでテストし、サーバー ソリューションをテストするためにテスト環境に配置した後、運用環境に配置できます。 配置後、データ ソース処理拡張機能とデータ ソース資格情報がレポート サーバー環境用に構成されていることを確認します。 構成マネージャーを使用すると、さまざまな配置のプロパティを管理できます。 詳細については、「[SQL Server データ ツールの Reporting Services (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)」を参照してください。  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] はクライアント ツールです。 レポート ソリューションをローカル コンピューターでテストし、サーバー ソリューションをテストするためにテスト環境に配置した後、運用環境に配置できます。 配置後、データ ソース処理拡張機能とデータ ソース資格情報がレポート サーバー環境用に構成されていることを確認します。 構成マネージャーを使用すると、さまざまな配置のプロパティを管理できます。 詳細については、「[SQL Server Data Tools の Reporting Services (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)」を参照してください。  
   
- 詳細については、「 [データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。  
    
 ##  <a name="bkmk_SharedDatasets"></a> 共有データセット  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使用して、レポート ソリューションの共有データセットを定義および配置します。 共有データセットは、 **OverwriteDatasets** プロパティおよび **TargetDatasetFolder** プロパティを使用して、プロジェクト内の他のアイテムとは別に配置できます。 詳細については、「[配置プロパティを設定する (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)」を参照してください。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/03/2017
 ページネーションのあるレポートは、レポート プロジェクト内に保存されるファイルです。 レポートは、スタンドアロン レポート、サブレポート、またはメイン レポートからのドリルスルー アクションの対象として使用できます。 **TargetReportFolder** プロパティおよびその他のプロパティを使用して、プロジェクト内の他のアイテムとは別にレポートを配置できます。 詳細については、「[配置プロパティを設定する (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)」を参照してください。  
   
 > [!NOTE]  
->  SharePoint モードでレポート サーバーにパブリッシュする場合、レポート デザイナー プロジェクトでは一部のレポート ソリューション機能をテストできません。 レポート、サブレポート、および詳細レポートへの参照では、レポート プロジェクトの配置後にのみテストできる完全修飾 URL を使用する必要があります。 詳細については、「 [SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)」を参照してください。  
+>  SharePoint モードでレポート サーバーにパブリッシュする場合、レポート デザイナー プロジェクトでは一部のレポート ソリューション機能をテストできません。 レポート、サブレポート、および詳細レポートへの参照では、レポート プロジェクトの配置後にのみテストできる完全修飾 URL を使用する必要があります。 詳細については、「[SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 (SSRS)](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)」を参照してください。  
   
  レポートは、次の方法でプロジェクトに追加できます。  
   
@@ -77,37 +77,37 @@ ms.lasthandoff: 08/03/2017
   
 -   **既存のアイテムを追加します。** 既存のレポート定義 (.rdl) がレポート デザイナーに表示されます。 以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] からレポートまたはプロジェクトを開くと、プロジェクトが現在のバージョンに、レポートが現在のスキーマに自動的にアップグレードされます。 詳細については、「 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)」を参照してください。  
   
--   **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Access レポートをインポートします。** Access データベース (.mdb、.accdb) またはプロジェクト (.adp) ファイルからすべてのレポートをインポートします。 レポート デザイナーによって、データベースまたはプロジェクト ファイル内の各レポートが RDL に変換され、レポート プロジェクト内に保存されます。 Access レポートのすべての機能がレポート定義 (.rdl) ファイルに転送されるわけではありません。 詳細については、「[Microsoft Access からレポートをインポートする &#40;Reporting Services&#41;](http://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646)」および「[サポートされる Access レポート機能 &#40;SSRS&#41;](http://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44)」を参照してください。  
+-   **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Access レポートをインポートします。** Access データベース (.mdb、.accdb) またはプロジェクト (.adp) ファイルからすべてのレポートをインポートします。 レポート デザイナーによって、データベースまたはプロジェクト ファイル内の各レポートが RDL に変換され、レポート プロジェクト内に保存されます。 Access レポートのすべての機能がレポート定義 (.rdl) ファイルに転送されるわけではありません。 詳細については、「[Microsoft Access からレポートをインポートする (Reporting Services)](http://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646)」および「[サポートされる Access レポート機能 (SSRS)](http://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44)」を参照してください。  
   
     > [!NOTE]  
     >  インポート機能を使用するには、レポート デザイナーがインストールされているコンピューターに Access 2002 以降のバージョンがインストールされている必要があります。 レポートのインポート時に、Access レポートのデータ ソースが使用可能な状態である必要があります。  
   
 -   **RDL で直接操作します。** レポート デザイナーで作成したレポートは、XML 形式のレポート定義言語 (RDL) ファイルとして保存されます。 このファイルは、レポート デザイナー、テキスト エディターをはじめ、XML の編集が可能な任意のツールで編集できます。  
   
-     レポート デザイナーでレポート定義ソースを編集する際は、開発ツールのインストール元である [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンの現在の RDL スキーマで作業していることになります。 プロジェクトを構築する際に、配置プロパティに応じてスキーマ バージョンが変更されることがあります。 詳細については、「 [SQL Server データ ツールの配置およびバージョン サポート (SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)には含まれていません。  
+     レポート デザイナーでレポート定義ソースを編集する際は、開発ツールのインストール元である [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンの現在の RDL スキーマで作業していることになります。 プロジェクトを構築する際に、配置プロパティに応じてスキーマ バージョンが変更されることがあります。 詳細については、「 [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)」を参照してください。  
   
      RDL を直接編集すると、生成されるレポートがレポート サーバーにパブリッシュできなかったり、実行できない場合があります。 XML ファイルと同様に、要素内で使用されている XML 固有の文字が正しくエンコードされていることを確認してください。 レポートをパブリッシュすると、レポート サーバー側でそのスキーマを基にして RDL ファイルに含まれる XML の検証が行われます。  
   
      RDL スキーマの一部ではない要素を含めるには、その要素を Custom 要素に配置します。 Custom 要素はカスタム表示拡張機能で読み取ることができますが、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で提供されている表示拡張機能では無視されます。 たとえば、Custom 要素を使用するとレポートにコメントを保存できます。  
   
-     詳細については、「[レポート定義言語 (SSRS)](../../reporting-services/reports/report-definition-language-ssrs.md)」を参照してください。  
+     詳細については、「[レポート定義言語 &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)」を参照してください。  
   
 ##  <a name="bkmk_ReportParts"></a> レポート パーツ  
- レポート デザイナーで、プロジェクトのテーブル、グラフ、および他のページ分割されたレポート アイテムを作成した後、それらを " *レポート パーツ* " として、レポート サーバーまたはレポート サーバーと統合されている SharePoint サイトにパブリッシュできます。これにより、自分や他のユーザーが、それらのレポート パーツを別のレポートで再利用できるようになります。 詳細については、「[レポート デザイナーでのレポート パーツ &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)」を参照してください。  
+ レポート デザイナーで、プロジェクトのテーブル、グラフ、および他のページ分割されたレポート アイテムを作成した後、それらを " *レポート パーツ* " として、レポート サーバーまたはレポート サーバーと統合されている SharePoint サイトにパブリッシュできます。これにより、自分や他のユーザーが、それらのレポート パーツを別のレポートで再利用できるようになります。 詳細については、「[レポート デザイナーでのレポート パーツ (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)」を参照してください。  
   
  **TargetReportPartFolder** プロパティおよびその他のプロパティを使用して、プロジェクト内の他のアイテムとは別にレポート パーツを配置できます。 詳細については、「[配置プロパティを設定する (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)」を参照してください。  
   
 ##  <a name="bkmk_Resources"></a> リソース  
  レポートに関連していて、レポート サーバーによって処理されないファイルを、プロジェクトに追加できます。 たとえば、写真の画像や空間データの ESRI シェープファイルを追加できます。 詳しくは、「 [Resources](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources)」をご覧ください。  
  
-##  <a name="bkmk_ReportLayout"></a> ページ分割されたレポートのレイアウト  
+##  <a name="bkmk_ReportLayout"></a> Paginated Report Layout  
  レポート レイアウトを作成するには、レポート アイテムとデータ領域をツールボックスからデザイン画面にドラッグして位置を調整します。 レポートにデータを追加するには、データセット フィールドをデザイン画面のアイテムにドラッグします。 Tablix データ領域でデータをグループにまとめるには、データセット フィールドをグループ化ペインにドラッグします。 レポート作成ツールは基本的にレポート定義を作成する方法であるため、レポート ビルダーとレポート デザイナーのレポート デザイン方法は非常に似ています。  
    
-##  <a name="bkmk_Preview"></a> ページ分割されたレポートのプレビュー  
+##  <a name="bkmk_Preview"></a> Preview a Paginated Report  
  **[プレビュー]** は、レポート データとレイアウト デザインを確認する際に使用します。 レポートをプレビューすると、レポート プロセッサはレポート定義スキーマと式の構文を検証し、 [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) ウィンドウに問題を一覧表示します。  
   
 > [!NOTE]  
->  レポートをプレビューすると、レポートのデータがローカル コンピューターのファイルにキャッシュされます。 同じレポートを、同じクエリ、パラメーター、および資格情報を使用して再びプレビューすると、レポート デザイナーはクエリを再実行する代わりにキャッシュされたコピーを表示します。 データ ファイルは *\<reportname>*.rdl.data として、レポート定義ファイルと同じディレクトリに保存されます。 レポート デザイナーを終了してもファイルは削除されません。  
+>  レポートをプレビューすると、レポートのデータがローカル コンピューターのファイルにキャッシュされます。 同じレポートを、同じクエリ、パラメーター、および資格情報を使用して再びプレビューすると、レポート デザイナーはクエリを再実行する代わりにキャッシュされたコピーを表示します。 データ ファイルが保存 *\<reportname >*。 rdl.data レポート定義ファイルと同じディレクトリにします。 レポート デザイナーを終了してもファイルは削除されません。  
   
  レポートは、次の方法でプレビューできます。  
   
@@ -146,7 +146,7 @@ ms.lasthandoff: 08/03/2017
   
     -   印刷形式で読みやすいようにレポート レイアウトを変更する必要がある。  
    
-##  <a name="bkmk_SaveandDeploy"></a> ページ分割レポートの保存および配置  
+##  <a name="bkmk_SaveandDeploy"></a> Save and Deploy Paginated Reports  
  レポート デザイナーでは、レポートおよび他のプロジェクト ファイルをローカルに保存することも、レポート サーバーまたは SharePoint サイトに配置することもできます。 共有データ ソース、共有データセット、レポート、レポート リソース、およびレポート パーツは、ユーザーが構成するプロジェクト配置プロパティに応じて、別々に配置することも、まとめて配置することもできます。 詳しくは、「 [Configuration and Deployment Properties](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties)」をご覧ください。  
   
  レポート デザイナーでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の現在のバージョンの [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でサポートされているレポート定義スキーマを使用してレポートをデザインする点を理解しておくことが重要です。 特定のレポート サーバーまたは SharePoint サイトのプロジェクト配置プロパティを設定してから、レポートを保存すると、レポート デザイナーによって、対象レポート サーバーのバージョンと一致するスキーマ内のビルド ディレクトリにレポート定義が保存されます。 下位のレポート サーバー上でパブリッシュできるレポートを作成するために、レポート デザイナーは対象スキーマに存在しないレポート アイテムを削除します。 この処理は、メッセージが表示されずに自動的に行われます。 この場合、元のレポート定義はプロジェクト フォルダーに保持されます。 配置される変更済みのレポート定義は、ビルド フォルダーにあります。  
@@ -154,7 +154,7 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  式および配置エラーをデバッグする場合、ビルド フォルダー内のレポート定義を表示する必要があります。 **[ソースの表示]**は使用しないでください。 **[ソースの表示]** を使用すると、プロジェクト フォルダーのレポート定義ソースが表示されます。  
   
- 詳細については、「 [SQL Server データ ツールの配置およびバージョン サポート (SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)には含まれていません。  
+ 詳細については、「 [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)」を参照してください。  
   
 ### <a name="save-a-report-locally"></a>ローカルでのレポートの保存  
  レポート デザイナーでレポートまたは他のプロジェクト アイテムを操作する場合、ファイルはローカル コンピューターまたはアクセス権限のある別のコンピューター上の共有に保存されます。  
@@ -170,7 +170,7 @@ ms.lasthandoff: 08/03/2017
 ##  <a name="bkmk_ReportValidationandErrorLevels"></a> レポートの検証とエラー レベル  
  レポートは、プレビューの前および配置時に検証されます。 レポートをビルドする際にビルドに関する複数の問題が発生する可能性があります。 レポートには、プロジェクトによって指定された [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のバージョンと互換性のない、式やクエリなどの文字列が含まれる場合があります。  
   
- ビルドに関する警告やエラーを管理するには、ErrorLevel プロパティを使用します。 ErrorLevel プロパティには 0 ～ 4 の範囲の値が含まれます。 値によって、エラーとしてレポートされるビルドの問題や、警告としてレポートされるビルドの問題が決まります。 既定値は 2 です。 警告とエラーは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)][Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) ウィンドウに問題を一覧表示します。  
+ ビルドに関する警告やエラーを管理するには、ErrorLevel プロパティを使用します。 ErrorLevel プロパティには 0 ～ 4 の範囲の値が含まれます。 値によって、エラーとしてレポートされるビルドの問題や、警告としてレポートされるビルドの問題が決まります。 既定値は 2 です。 警告とエラーは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の[出力](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output)ウィンドウに書き込まれます。  
   
  ErrorLevel の値以下の重大度レベルを持つ問題は、エラーとしてレポートされます。それ以外の問題は、警告としてレポートされます。  
   
@@ -189,8 +189,8 @@ ms.lasthandoff: 08/03/2017
 ## <a name="next-steps"></a>次の手順
 
 [SQL Server Data Tools のダウンロード](http://go.microsoft.com/fwlink/?LinkID=616714)  
-[SQL Server Data Tools の Reporting Services](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   
+[Reporting Services の SQL Server Data Tools](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   
 [クエリ デザイン ツール](../../reporting-services/report-data/query-design-tools-ssrs.md)   
-[SQL Server Data Tools の配置およびバージョン サポート](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+[Deployment and Version Support in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-その他のご不明な点は、 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

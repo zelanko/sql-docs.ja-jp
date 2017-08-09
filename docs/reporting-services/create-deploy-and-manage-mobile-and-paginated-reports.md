@@ -26,12 +26,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 49f990d30564a2c4fc38a527e7da1e97f9a21ca1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# SQL Server Reporting Services (SSRS) とは
-<a id="what-is-sql-server-reporting-services-ssrs" class="xliff"></a>
+# <a name="what-is-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) とは
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -41,8 +40,7 @@ ms.lasthandoff: 07/03/2017
 
 ![SQL Server Reporting Services まとめて](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services 統合")
 
-## 作成、展開、およびモバイル レポートや改ページ調整されたレポートの管理
-<a id="create-deploy-and-manage-mobile-and-paginated-reports" class="xliff"></a>
+## <a name="create-deploy-and-manage-mobile-and-paginated-reports"></a>作成、展開、およびモバイル レポートや改ページ調整されたレポートの管理
 
 SQL Server Reporting Services は、レポートを作成、パブリッシュ、管理し、Web ブラウザー、モバイル デバイス、受信トレイ内のメールなどで表示できるようにさまざまな方法で適切なユーザーに提供するための、ユーザーのオンプレミスに配置されるソリューションです。
 
@@ -57,8 +55,7 @@ SQL Server 2016 の Reporting Services では、更新された製品スイー�
 > [!NOTE]
 > Power BI のレポート サーバーを検索してください。 参照してください[Power BI のレポート サーバーの概要](https://powerbi.microsoft.com/documentation/reportserver-get-started/)です。
 
-### Reporting Services の新機能
-<a id="whats-new-in-reporting-services" class="xliff"></a>
+### <a name="whats-new-in-reporting-services"></a>Reporting Services の新機能
 
 これらのリソースで SQL Server 2016 Reporting Services の新機能に関する最新情報をご確認いただけます。
 
@@ -66,8 +63,7 @@ SQL Server 2016 の Reporting Services では、更新された製品スイー�
 * [SQL Server Reporting Services チームのブログ](https://blogs.msdn.microsoft.com/sqlrsteamblog/)
 * [Guy in a Cube YouTube チャンネル](https://www.youtube.com/channel/UCFp1vaKzpfvoGai0vE5VJ0w)
 
-## ページ分割されたレポート
-<a id="paginated-reports" class="xliff"></a>
+## <a name="paginated-reports"></a>ページ分割されたレポート
 
 ![ssrs-paginated-reports](../reporting-services/media/ssrs-paginated-reports.png)
 
@@ -80,8 +76,7 @@ Reporting Services は "従来の" ページ分割されたドキュメント �
 * PowerPoint などの新しい形式にエクスポートできます。 PowerPoint での Reporting Services の視覚化は、単なるスクリーンショットではなく、ライブ表示であり編集可能です。
 * Power BI と Reporting Services のハイブリッド エクスペリエンスを作成できます。オンプレミスの Reporting Services を Power BI で作成し直すのではなく、レポートのビジュアルを Power BI ダッシュボードにピン留めすることができます。 その後は、Power BI ダッシュボードだけですべての情報を監視できます。
 
-## モバイル レポート
-<a id="mobile-reports" class="xliff"></a>
+## <a name="mobile-reports"></a>モバイル レポート
 
 ![ssrs-mobile-reports](../reporting-services/media/ssrs-mobile-reports.png)
 
@@ -91,8 +86,7 @@ Reporting Services は "従来の" ページ分割されたドキュメント �
 
 モバイル レポートは新しい [Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) アプリで作成します。 その後、Windows 10、iOS、Android、HTML5 用のネイティブな [モバイル デバイス用 Power BI アプリ](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) で、クラウドの Power BI データやオンプレミスの SQL Server 2016 Reporting Services データにアクセスできます。 視覚エフェクトを作成すると、Mobile Report Publisher によりサンプル データが自動的に生成されるので、実際のデータでの視覚エフェクトの見え方や、各視覚エフェクトに適したデータの種類を確認できます。
 
-## Web ポータル
-<a id="web-portal" class="xliff"></a>
+## <a name="web-portal"></a>Web ポータル
 
 ![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
 
@@ -108,22 +102,19 @@ Web ポータル上のコンテンツは型で構成されています: Reportin
 
 詳細について、 [Web ポータル (SSRS ネイティブ モード)](../reporting-services/web-portal-ssrs-native-mode.md)です。
 
-## Reporting Services の SharePoint 統合モード
-<a id="reporting-services-in-sharepoint-integrated-mode" class="xliff"></a>
+## <a name="reporting-services-in-sharepoint-integrated-mode"></a>Reporting Services の SharePoint 統合モード
 
 SharePoint 統合モードで Reporting Services にレポートをパブリッシュします。 レポート処理のスケジュール設定、レポートへのオンデマンド アクセス、パブリッシュされたレポートのサブスクライブ、他のアプリケーション (Microsoft Excel など) へのレポートのエクスポートを実行できます。 SharePoint サイトにパブリッシュされたレポートに対してデータ警告を作成したり、レポートのデータが変化したときに電子メール メッセージを受信できます。  
 
 詳しくは、「 [Reporting Services Report Server (SharePoint Mode)](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)」をご覧ください。
 
-## [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のプログラミング機能
-<a id="includessrsnoversionincludesssrsnoversion-mdmd-programming-features" class="xliff"></a>
+## <a name="includessrsnoversionincludesssrsnoversion-mdmd-programming-features"></a>[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のプログラミング機能
 
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のプログラミング機能を活用し、API を使用してカスタム アプリケーションのデータ処理とレポート処理を統合または拡張して、レポート作成機能を拡張およびカスタマイズできます。
 
 詳しくは、「 [開発者ガイド (Reporting Services)](../reporting-services/reporting-services-developer-documentation.md)」をご覧ください。 
 
-## 次の手順
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>次の手順
 
 * [Reporting Services のインストール](../reporting-services/install-windows/install-reporting-services.md)  
 * [レポート ビルダーをインストールする](../reporting-services/install-windows/install-report-builder.md)   

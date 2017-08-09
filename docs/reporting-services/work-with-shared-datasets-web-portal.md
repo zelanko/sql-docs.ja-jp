@@ -18,11 +18,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# 共有データセットの web ポータルを作業します。
-<a id="work-with-shared-datasets---web-portal" class="xliff"></a>
+# <a name="work-with-shared-datasets---web-portal"></a>共有データセットの web ポータルを作業します。
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -30,8 +29,7 @@ ms.lasthandoff: 07/03/2017
 
 Web ポータル内の共有データセットのプロパティを表示および管理できます。 Web ポータルからレポート ビルダーを起動して共有データセットを作成または編集できます。
 
-## 共有データセットを作成する
-<a id="create-a-shared-dataset" class="xliff"></a>
+## <a name="create-a-shared-dataset"></a>共有データセットを作成する
   
 新しい共有データセットを作成するには、次のようにします。  
   
@@ -49,8 +47,7 @@ Web ポータル内の共有データセットのプロパティを表示およ�
   
 6.  データセットを作成し、画面左上の **[保存]** アイコンを選択してデータセットをレポート サーバーに保存します。  
   
-## 既存の共有データセットを管理する
-<a id="manage-an-existing-shared-dataset" class="xliff"></a>
+## <a name="manage-an-existing-shared-dataset"></a>既存の共有データセットを管理する
   
 既存の共有データセットを管理するには、次のようにします。  
   
@@ -65,15 +62,13 @@ Web ポータル内の共有データセットのプロパティを表示およ�
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
-## プロパティ
-<a id="properties" class="xliff"></a>
+## <a name="properties"></a>プロパティ
   
 プロパティ画面では、データセットの **[名前]** と **[説明]** を変更できます。 また、 **[削除]**、 **[移動]**、 **[レポート ビルダーでの編集]**、 **[ダウンロード]** 、 **[置換]**を選択することもできます。  
   
 ![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
   
-## キャッシュ
-<a id="caching" class="xliff"></a>
+## <a name="caching"></a>キャッシュ
   
 データセットのデータのキャッシュに関するオプションがあります。 簡単な選択で始めことができます。  
   
@@ -87,8 +82,7 @@ Web ポータル内の共有データセットのプロパティを表示およ�
   
 ![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
   
-### キャッシュの有効期限
-<a id="cache-expiration" class="xliff"></a>  
+### <a name="cache-expiration"></a>キャッシュの有効期限  
   
 一定の時間が経過したら共有データセットのキャッシュを期限切れにするか、またはスケジュールに従って行うかを制御できます。 共有スケジュールを使用できます。  
   
@@ -97,8 +91,7 @@ Web ポータル内の共有データセットのプロパティを表示およ�
 > [!NOTE]
 > 有効期限を設定しても、キャッシュは更新されません。 キャッシュ更新計画がない場合、データはデータセットの次の実行時に更新されます。  
   
-### キャッシュ更新計画
-<a id="cache-refresh-plans" class="xliff"></a>  
+### <a name="cache-refresh-plans"></a>キャッシュ更新計画  
   
 [キャッシュ更新計画] を使用すると、共有データセットのデータの一時コピーを事前にキャッシュに読み込むスケジュールを作成できます。 更新計画には、スケジュールと、パラメーターの値を指定または上書きするためのオプションが含まれます。 読み取り専用にマークされているパラメーターの値を上書きすることはできません。 複数の更新計画を作成して使用できます。   
   

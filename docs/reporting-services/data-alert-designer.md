@@ -26,11 +26,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 10ec05b662839e5cf2aac0d756d7ae581bdf8de9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# データ警告デザイナー
-<a id="data-alert-designer" class="xliff"></a>
+# <a name="data-alert-designer"></a>データ警告デザイナー
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -68,8 +67,7 @@ ms.lasthandoff: 07/03/2017
  ![警告デザイナー ユーザー インターフェイス内の領域](../reporting-services/media/rs-alertdesigner.gif "警告デザイナー ユーザー インターフェイス内の領域")  
   
   
-### 警告データ
-<a id="alert-data" class="xliff"></a>  
+### <a name="alert-data"></a>警告データ  
  データ警告デザイナーを開くと、レポートからすべてのデータ フィードが生成されて使用できるようになり、 **[レポート データ名]** ボックスの一覧にフィードの名前が表示されます。 警告の定義を作成している間、データ フィードはメモリにキャッシュされ、複数のデータ フィードを切り替えてレポート データを調査するときに、データ フィード データを表示するテーブルがすばやく設定されます。  
   
  データ警告の定義を作成する最初の手順は、警告の監視対象データが含まれたレポート データ フィードを選択することです。 レポートには 0 個から複数個のデータ フィードを含めることができます。 レポートにデータ フィードがない場合、そのレポートには警告を作成できません。 データ フィードは、あらゆるタイプのグラフ、ゲージ、インジケーターや、テーブル、マトリックス、リストなど、任意のデータ領域により生成できます。  
@@ -82,14 +80,12 @@ ms.lasthandoff: 07/03/2017
   
  レポートの中には数百万行のデータがあるものもあります。 テーブルに表示されるのは、フィード内の最初の 100 行のデータのみです。  
   
-### 警告名
-<a id="alert-name" class="xliff"></a>  
+### <a name="alert-name"></a>警告名  
  既定では、警告の定義の名前はレポートと同じです。 この警告名は、わかりやすい名前に変更できます。 これにより、どの警告に更新や削除を行うかを決定するなど、警告の管理が容易になります。  
   
  レポートには、複数の警告を作成できます。 同じ名前で複数の警告を定義できますが、警告名は一意にすることをお勧めします。 そうすることで、警告の定義を区別および管理することがより簡単になります。 データ警告マネージャーでは、作成したすべての警告の一覧を表示できます。 詳細については、「 [警告管理者用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-alerting-administrators.md) 」および「 [データ警告マネージャーでのデータ警告の管理](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)」を参照してください。  
   
-### ルールと句
-<a id="rules-and-clauses" class="xliff"></a>  
+### <a name="rules-and-clauses"></a>ルールと句  
  警告をトリガーするデータ変更は、警告ルール内のデータ変更のスコープによって定義されます。 データ変更のスコープは、次のとおりです。  
   
 -   **[いずれかのデータに適合]**: データ内の少なくとも 1 つの値が、条件で指定されたルールを満たしている。  
@@ -160,8 +156,7 @@ ms.lasthandoff: 07/03/2017
   
  ルールと句はデータ警告メッセージに含まれます。  
   
-### スケジュール設定
-<a id="schedule-settings" class="xliff"></a>  
+### <a name="schedule-settings"></a>スケジュール設定  
  データ警告のために定義するスケジュールでは、データ警告メッセージの送信の定期的なパターンや、警告メッセージの送信の開始および停止のタイミングが定義されます。 パターンは、1 回のみ、分単位、日単位、または週単位です。 警告ごとにスケジュールは 1 つだけですが、これらの間隔を使用することにより、ほとんどのビジネス ニーズを満たす複雑な定期的なパターンを作成できます。 スケジュールで使用する定期的なパターンの一般的な例を次に示します。  
   
 -   **日単位で 10 日ごと** : 10 日ごとに 1 日 1 回、警告を送信します。  
@@ -179,8 +174,7 @@ ms.lasthandoff: 07/03/2017
 > [!IMPORTANT]  
 >  重要な業務上の理由がない限り、1 日 1 回よりも短い間隔の定期的パターンは使用しないことをお勧めします。 データ警告定義をリアルタイムに処理することは、サポートされているシナリオではありません。 データ警告定義を処理する頻度が多すぎると、レポート サーバーと全体的な [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置のパフォーマンスに影響を与えます。  
   
-### 電子メールの設定
-<a id="email-settings" class="xliff"></a>  
+### <a name="email-settings"></a>電子メールの設定  
  電子メールでデータ警告メッセージを受信する受信者の電子メール アドレスは、 **[受信者]** オプションで指定します。 Microsoft Office Outlook の電子メール メッセージと同じように、複数の電子メール アドレスはセミコロンで区切ります。 配布グループを受信者として指定することもできます。これにより、受信者の一覧をより簡単かつ効率的に管理できます。 警告定義の作成時に、作成者の電子メール アドレスを SharePoint が取得できた場合は、そのアドレスが受信者リストに自動的に追加されますが、それ以外の場合は自分自身を受信者として明示的に追加する必要があります。  
   
  既定の電子メールの件名は**データ アラート\<警告名 >**です。 件名は必要に応じて変更できます。  
@@ -223,8 +217,7 @@ ms.lasthandoff: 07/03/2017
   
 -   [警告デザイナーでのデータ警告の作成](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
 
-## 参照
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>参照
 
 [Reporting Services のデータ警告](../reporting-services/reporting-services-data-alerts.md)   
 [警告管理者用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-alerting-administrators.md)  

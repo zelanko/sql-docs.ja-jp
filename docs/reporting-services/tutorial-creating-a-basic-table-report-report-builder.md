@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: 基本的な表レポートの作成 (レポート ビルダー) | Microsoft Docs"
+title: "チュートリアル: 基本的なテーブル レポート (レポート ビルダー) の作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 06/23/2016
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 021a980dee9f6cd72f663475ba084962fa543cd4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)
@@ -52,7 +52,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="DataConnection"></a>1a. テーブル ウィザードでデータ接続を指定する  
 データ接続には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースなどの外部データ ソースに接続するときに必要な情報が含まれます。 通常、使用する接続情報と資格情報の種類はデータ ソースの所有者から提供されます。 データ接続を指定するには、レポート サーバーの共有データ ソースを使用するか、このレポートでのみ使用する埋め込みデータ ソースを作成します。  
   
-このチュートリアルでは、埋め込みデータ ソースを使用します。 共有データ ソースの使用方法の詳細については、「[別の方法でデータ接続を取得する &#40;レポート ビルダー&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)」を参照してください。  
+このチュートリアルでは、埋め込みデータ ソースを使用します。 共有データ ソースの使用方法の詳細については、「[別の方法でデータ接続を取得する (レポート ビルダー)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)」を参照してください。  
   
 ### <a name="to-create-an-embedded-data-source"></a>埋め込みデータ ソースを作成するには  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/03/2017
   
 3.  **[名前]**に、データ ソースの名前として「 **Product_Sales** 」と入力します。  
   
-4.  **[接続の種類の選択]**で、 **[Microsoft SQL Server]** が選択されていることを確認します。  
+4.  **[接続の種類の選択]** で、**[Microsoft SQL Server]** が選択されていることを確認します。  
   
 5.  **[接続文字列]** に次のテキストを入力します。\<servername> には、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスの名前を入力します。  
   
@@ -201,7 +201,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  [デザイン] ビューで、書式設定されたテキスト ボックスとプレース ホルダー テキストのサンプル値を表示するには、**[ホーム]** タブの **[数値]** グループで、**[プレース ホルダーのスタイル]** アイコンの横の矢印をクリックし **[サンプル値]** をクリックします。  
   
-2.   [Sales] 列の 2 行目 (列見出しの次の行) のセルをクリックして下にドラッグし、 `[Sum(Sales)]`が格納されたすべてのセルを選択します。  
+2.   [Sales] 列の 2 行目 (列見出しの次の行) のセルをクリックして下にドラッグし、`[Sum(Sales)]` が格納されたすべてのセルを選択します。  
   
 3.  **[ホーム]** タブの **[数値]** グループで、 **[通貨]** ボタンをクリックします。 書式設定された通貨を表示するようにセルが変化します。  
   
@@ -222,7 +222,7 @@ Sales の集計値が通貨として表示されます。
   
 3.  リボンの **[ホーム]** タブの **[数値]** グループで、 **[日付]**を選択します。  
   
-    セルに、日付の例として **[2000/1/31]**と表示されます。 日付の例が表示されない場合は、**[ホーム]** タブの **[数値]** グループで、**[プレース ホルダーのスタイル]** アイコンの横の矢印をクリックし、**[サンプル値]** をクリックします。  
+    セルに、日付の例として **[2000/1/31]** と表示されます。 日付の例が表示されない場合は、**[ホーム]** タブの **[数値]** グループで、**[プレース ホルダーのスタイル]** アイコンの横の矢印をクリックし、**[サンプル値]** をクリックします。  
   
 4.  **[実行]** をクリックして、レポートをプレビューします。  
   
@@ -270,7 +270,7 @@ SalesDate の値が、月の数字ではなく月の名前で表示されます�
 ## <a name="Title"></a>5.レポート タイトルを追加する  
 レポート タイトルは、レポートの最上部に表示されます。 レポート ヘッダーがあれば、そこにレポート タイトルを配置します。レポート ヘッダーを使用しない場合は、レポート本文の一番上のテキスト ボックスに配置します。 このチュートリアルでは、自動的にレポート本文の一番上に配置されるテキスト ボックスを使用します。  
   
-テキストの語句や文字のフォントのスタイル、サイズ、および色を変更して、テキストをさらに強調することもできます。 詳細については、「[テキスト ボックス内のテキストの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)」を参照してください。  
+テキストの語句や文字のフォントのスタイル、サイズ、および色を変更して、テキストをさらに強調することもできます。 詳細については、「[テキスト ボックス内のテキストの書式設定 (レポート ビルダーおよび SSRS)](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)」を参照してください。  
   
 ### <a name="to-add-a-report-title"></a>レポート タイトルを追加するには  
   
@@ -346,7 +346,7 @@ SalesDate の値が、月の数字ではなく月の名前で表示されます�
   
 3.  **[名前を付けて保存]** ダイアログ ボックスで、ファイルの保存先に進みます。  
   
-4.  **[ファイル名]** ボックスに「 **Product_Sales_Excel**」と入力します。  
+4.  **[ファイル名]** ボックスに「**Product_Sales_Excel**」と入力します。  
   
 5.  ファイルの種類が **Excel (\*.xlsx)** であることを確認します。  
   
@@ -359,7 +359,7 @@ SalesDate の値が、月の数字ではなく月の名前で表示されます�
 2.  ブック見出しの名前が「 **Product Sales Excel**」であることを確認します。  
   
 ## <a name="next-steps"></a>次の手順  
-これで、基本的なテーブル レポートを作成する方法のチュートリアルは終了です。 テーブルの詳細については、「[テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)」を参照してください。  
+これで、基本的なテーブル レポートを作成する方法のチュートリアルは終了です。 テーブルの詳細については、「[テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md)  
