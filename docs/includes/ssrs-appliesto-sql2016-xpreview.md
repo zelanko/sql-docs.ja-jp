@@ -1,1 +1,1 @@
-**このトピックに適用されます**![はい](media/yes.png)SQL Server 2016![ありません](media/no.png)Power BI のレポート サーバー。
+**適用対象:**![○](media/yes.png)SQL Server 2016![×](media/no.png)Power BI レポート サーバー
