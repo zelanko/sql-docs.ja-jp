@@ -38,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 テスト_ケースの目的を識別する追加情報を入力します。  
   
 ## <a name="next-step"></a>次の手順  
-[選択と構成オブジェクトをテスト (&) #40 です。 OracleToSQL & #41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+[選択と構成オブジェクトをテスト (&) #40 です。 OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
 ## <a name="see-also"></a>参照  
 [データベース オブジェクト (&) #40";"OracleToSQL"&"#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
