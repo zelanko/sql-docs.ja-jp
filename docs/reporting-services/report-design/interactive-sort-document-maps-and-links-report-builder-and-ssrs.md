@@ -15,7 +15,7 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f60696e601bc48d20384d9037f4e5f7a1b35d749
 ms.contentlocale: ja-jp
@@ -42,19 +42,19 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [対話的な並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
+ [対話的な並べ替え & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
  対話型の並べ替えボタンを列ヘッダーに追加する方法について説明します。  
   
- [ドキュメント マップの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
+ [ドキュメント マップ &#40; を作成します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
  サイズの大きなレポートでの移動をサポートする目次を追加する方法について説明します。  
   
- [レポートへのブックマークの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
+ [レポート &#40; にブックマークを追加します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
  ブックマークを追加して、レポート内にリンクを作成する方法について説明します。  
   
- [URL へのハイパーリンクの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
+ [ハイパーリンクの URL &#40; を追加します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  レポートから URL へのリンクを追加する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (&) #40;レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

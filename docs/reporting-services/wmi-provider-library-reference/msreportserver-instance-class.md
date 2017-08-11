@@ -23,7 +23,7 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 75976823433b59a52f3fe1fe17ebd86f48d33917
 ms.contentlocale: ja-jp
@@ -49,9 +49,9 @@ public class MSReportServer_Instance
  この型の public static (**では** Shared [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) のすべてのメンバーは、マルチスレッド操作で安全に使用できます。 インスタンスのメンバーは、スレッドセーフであるとは限りません。  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
- **プラットフォーム:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
+ **Platform:**[!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [MSReportServer_Instance メンバー](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  

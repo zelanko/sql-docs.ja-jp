@@ -18,7 +18,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6a90a566e3e100fff3bb17e838a368a82ac3f4f5
 ms.contentlocale: ja-jp
@@ -32,7 +32,7 @@ ms.lasthandoff: 08/09/2017
   
  SharePoint モードのレポート サーバーは、SharePoint 製品のインフラストラクチャを利用してスケールアウトを行います。 SharePoint モードのスケールアウトは、SharePoint モードのレポート サーバーを SharePoint ファームに追加することによって実行されます。 SharePoint モードでのスケールアウトについては、 「[ファームへのレポート サーバーの追加 &#40;SSRS スケールアウト&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)」を参照してください。  
  
-  *スケールアウト配置*は次のシナリオで使用します。  
+  *スケールアウト配置* は次のシナリオで使用します。  
   
 -   サーバー クラスターで複数のレポート サーバーの負荷分散を行うための前提条件として使用されます。 複数のレポート サーバーの負荷分散を行う前に、まず同じレポート サーバー データベースを共有するようにレポート サーバーを構成する必要があります。  
   
@@ -153,6 +153,6 @@ An error occurred within the report server database.  This may be due to a conne
 [レポート サーバー Url を構成します。](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [レポート サーバー データベース接続を構成します。](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [追加およびスケール アウト配置に対する暗号化キーを削除します。](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
-[Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+[Reporting Services ネイティブ モード レポート サーバーを管理します。](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

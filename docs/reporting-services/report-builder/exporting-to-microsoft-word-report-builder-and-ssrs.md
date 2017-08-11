@@ -15,7 +15,7 @@ caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7c537a08d262bfadf686e1c6555d1ce221f5aef7
 ms.contentlocale: ja-jp
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  このレンダラーによって生成されるファイルのコンテンツ タイプは **application/vnd.openxmlformats-officedocument.wordprocessingml.document** で、ファイル拡張子は .docx です。  
   
- Word へのエクスポート方法の詳細については、「[レポートのエクスポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」を参照してください。  
+ 参照してください[レポート &#40; をエクスポートレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)を Word にエクスポートする方法の詳細。  
   
  レポートを Word 文書にエクスポートした後は、レポートの内容を変更したり、宛名ラベル、発注書、手紙など、文書形式のレポートをデザインしたりできます。  
   
@@ -167,7 +167,7 @@ ms.lasthandoff: 08/09/2017
   
 -   レポート ビルダーが切断モードのときにレポート ビルダーでレポートをプレビューした場合。  
   
--   レポート ビューアー Web パーツがローカル モードで、SharePoint ファームが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーと統合されていない場合。 詳細については、「[レポート ビューアーでのローカル モードと接続モードのレポート (Reporting Services の SharePoint モード)](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)」を参照してください。  
+-   レポート ビューアー Web パーツがローカル モードで、SharePoint ファームが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーと統合されていない場合。 詳細については、次を参照してください。[ローカル モードとします。接続モードのレポート &#40;Reporting Services の SharePoint モード&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  **[Word 2003]** レンダラーが表示されるように構成されている場合は、 **Word** と **Word 2003** の両方のメニュー オプションが次の状況で使用可能になります。  
   

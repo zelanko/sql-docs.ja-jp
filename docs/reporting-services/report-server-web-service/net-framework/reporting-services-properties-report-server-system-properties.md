@@ -17,14 +17,14 @@ helpviewer_keywords:
 - system-specific properties [Reporting Services]
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 caps.latest.revision: 55
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: fd0b6d58eb740f9398bd358429f91071b38eefaf
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: d91c1bb43978ab08857c09ffc235da78f5f0ffea
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Reporting Services のプロパティ - レポート サーバーのシステム プロパティ
@@ -42,9 +42,9 @@ ms.lasthandoff: 06/13/2017
 |EnableMyReports|個人用レポート機能が有効になっているかどうかを指定します。 値 **true** は、機能が有効になっていることを示します。|  
 |MyReportsRole|ユーザーの個人用レポート フォルダーに、セキュリティ ポリシーを作成する際に使用するロールの名前。 既定値は **My Reports Role**です。|  
 |EnableExecutionLogging|レポート実行のログ記録が有効になっているかどうかを示します。 既定値は **true**です。|  
-|ExecutionLogDaysKept|レポート実行情報を実行ログに保持する日数。 このプロパティの有効値は **0** ～ **2**、**147**、**483**、**647** です。 値が **0** の場合、エントリは実行ログ テーブルから削除されません。 既定値は **60**です。|  
+|ExecutionLogDaysKept|レポート実行情報を実行ログに保持する日数。 このプロパティの有効値は **0** ～ **2**、**147**、**483**、**647** です。 値が場合**0**エントリは、実行ログ テーブルから削除されません。 既定値は **60**です。|  
 |SnapshotCompression|スナップショットの圧縮方法を定義します。 既定値は **SQL**です。 有効な値は次のとおりです。<br /><br /> **SQL** =、レポート サーバー データベースに格納されているときにスナップショットが圧縮されます。 これは現在の動作です。<br /><br /> **なし** = スナップショットは圧縮されません。<br /><br /> **すべて**=、レポート サーバー データベースまたはファイル システムを含む、すべての記憶域オプションのスナップショットが圧縮されます。|  
-|EnableClientPrinting|レポート サーバーからのダウンロードに RSClientPrint ActiveX コントロールが使用可能かどうかを示します。 有効値は **true** および **false**です。 既定値は **true**です。 このコントロールに必要な追加設定に関する詳細については、「[Reporting Services のクライアント側印刷機能の有効化と無効化](../../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)」を参照してください。|  
+|EnableClientPrinting|レポート サーバーからのダウンロードに RSClientPrint ActiveX コントロールが使用可能かどうかを示します。 有効値は **true** および **false**です。 既定値は **true**です。 このコントロールに必要な追加設定に関する詳細については、「 [Reporting Services のクライアント側印刷機能の有効化と無効化](../../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)」を参照してください。|  
 |EnableIntegratedSecurity|統合セキュリティをレポート データ ソース接続でサポートするかどうかを決定します。 既定値は **True**です。 有効な値は次のとおりです。<br /><br /> **True** = 統合セキュリティを有効にします。<br /><br /> **False** = 統合セキュリティが有効でないです。 統合セキュリティを使用するように構成されているレポート データ ソースは実行されません。|  
 |EnableRemoteErrors|リモート コンピューターからレポートを要求したユーザーに返されるエラー メッセージに、外部エラー情報 (レポート データ ソースに関するエラー情報など) を含めます。 有効値は **true** および **false**です。 既定値は **false**です。 詳細については、「[リモート エラーの有効化 (Reporting Services)](../../../reporting-services/report-server/enable-remote-errors-reporting-services.md)」を参照してください。|  
   

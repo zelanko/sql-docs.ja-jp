@@ -21,14 +21,14 @@ helpviewer_keywords:
 - hyperlinks [Reporting Services]
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 caps.latest.revision: 33
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f931c5bd79835f8cf2ce9ceb88078e9408ace71a
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: b8d7aff6c9afdfa6e6fb322d028b9bccf5cbaaf5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>使用する URL アクセスの Web アプリケーションをサービス レポートの統合
@@ -87,7 +87,7 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main&rs:Format=HTML4.0
   
 ## <a name="see-also"></a>参照  
  [アプリケーションへの Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [URL アクセスを使用した Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
+ [URL アクセスを使用して Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
  [Windows アプリケーションで URL アクセスの使用](../../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md)   
  [URL アクセスと #40 です。SSRS &#41;](../../reporting-services/url-access-ssrs.md)  
   

@@ -19,7 +19,7 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2ab5f4b5d2774d9dc944ad17bb55063388b70a6d
 ms.contentlocale: ja-jp
@@ -116,6 +116,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>次の手順
 
 [Windows トークン サービスに対するクレーム (c2WTS) の概要](http://msdn.microsoft.com/library/ee517278.aspx)   
-[SharePoint 2013 で Kerberos 認証を計画します。](http://technet.microsoft.com/library/ee806870.aspx)  
+[SharePoint 2013 で Kerberos 認証を計画する](http://technet.microsoft.com/library/ee806870.aspx)  
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

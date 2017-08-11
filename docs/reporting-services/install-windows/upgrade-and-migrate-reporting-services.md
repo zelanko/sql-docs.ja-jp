@@ -20,7 +20,7 @@ caps.latest.revision: 92
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e7144b243b14ea3f65d912552ce8e6cdd736ab59
 ms.contentlocale: ja-jp
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **アップグレード:** サーバーと現在インストールされているインスタンスで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントをアップグレードします。 これは一般に "インプレース" アップグレードと呼ばれます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバーのモード間でのインプレース アップグレードはサポートされていません。 たとえば、ネイティブ モードのレポート サーバーを SharePoint モードのレポート サーバーにアップグレードすることはできません。 レポート アイテムはモード間で移行できます。 詳細については、このドキュメントの「ネイティブ モードから SharePoint モードへの移行のシナリオ」を参照してください。  
   
--   **移行**:新しい SharePoint 環境をインストールして構成し、レポート アイテムとリソースを新しい環境にコピーして、既存のコンテンツを使用するよう新しい環境を構成します。 下位レベルの移行形式では、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データベース、構成ファイル、および SharePoint コンテンツ データベース (SharePoint モードを使用している場合) をコピーします。  
+-   **移行**:新しい SharePoint 環境をインストールして構成し、レポート アイテムとリソースを新しい環境にコピーして、既存のコンテンツを使用するよう新しい環境を構成します。 下位レベルの移行形式では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データベース、構成ファイル、および SharePoint コンテンツ データベース (SharePoint モードを使用している場合) をコピーします。  
     
 > **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 08/09/2017
   
  ただし、次の状況が生じた場合は、レポート サーバー インストールを手動で **移行** する必要があります。  
   
--   配置で使用されるレポート サーバーの種類を変更します。 たとえば、ネイティブ モードのレポート サーバーを SharePoint モードにアップグレードまたは変換することはできません。 詳細については、「[ネイティブ モードから SharePoint モードへの移行 &#40;SSRS&#41;](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md)」を参照してください。  
+-   配置で使用されるレポート サーバーの種類を変更します。 たとえば、ネイティブ モードのレポート サーバーを SharePoint モードにアップグレードまたは変換することはできません。 詳細については、次を参照してください[に SharePoint の移行 &#40; ネイティブ。SSRS &#41;](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md).  
   
 -   アップグレード プロセス中にレポート サーバーがオフラインになる時間を最小限に抑えることが求められている。 既存のレポート サーバーのインストールの状態を変更せずに、新しいレポート サーバー インスタンスにコンテンツ データをコピーし、インストールをテストする間、現在のインストールはオンライン状態で維持されます。  
   
@@ -142,7 +142,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_native_scaleout"></a> Reporting Services ネイティブ モードのスケールアウト配置のアップグレード  
  複数のレポート サーバーにスケールアウトされる [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードの配置をアップグレードする方法の概要を次に示します。 このプロセスでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置のダウンタイムが発生します。  
   
-1.  レポート サーバー データベースと暗号化キーをバックアップします。 詳細については、「[Reporting Services のバックアップおよび復元操作](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)」および「[スケールアウト配置に関する暗号化キーの追加と削除 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)」を参照してください。  
+1.  レポート サーバー データベースと暗号化キーをバックアップします。 詳細については、次を参照してください[Backup および Restore Operations for Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)と[追加し、スケール アウト配置 &#40; の暗号化キーの削除。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
   
 2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して、スケールアウトした配置からすべてのレポート サーバーを削除します。 詳細については、「[ネイティブ モード レポート サーバーのスケールアウト配置の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)」を参照してください。  
   
@@ -164,7 +164,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 製品用アドイン。 詳細については、「 [SharePoint 用 Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)」を参照してください。  
   
- SharePoint モードのインストールを移行する方法の詳細については、「[Reporting Services のインストールの移行 &#40;SharePoint Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)」を参照してください。  
+ SharePoint モードのインストールを移行する方法の詳細な手順は、次を参照してください[Reporting Services のインストール &#40; を移行します。。SharePoint モード &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
   
 > [!IMPORTANT]  
 >  次のシナリオでは、異なるテクノロジをアップグレードする必要があるため、SharePoint 環境のダウンタイムが発生する場合があります。 ダウンタイムの発生を許容できない場合は、インプレース アップグレードではなく、移行操作を実行する必要があります。  
@@ -188,7 +188,7 @@ ms.lasthandoff: 08/09/2017
      SharePoint 2010 と統合された [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインストールを使用している場合は、SharePoint サーバーのインプレース アップグレードを行うことはできません。 ただし、SharePoint 2010 ファームから SharePoint 2013/2016 ファームにコンテンツ データベースとサービス アプリケーション データベースを移行することは可能です。  
   
 ### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]SQL Server Reporting Services を  
- **Starting environment:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SharePoint 2010.  
+ **開始環境:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、SharePoint 2010。  
   
  **終了環境:** SQL Server Reporting Services、SharePoint 2013 または SharePoint 2016。  
  

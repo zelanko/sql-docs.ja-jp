@@ -24,7 +24,7 @@ caps.latest.revision: 70
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5c6265fd62ae10a8037b0fbd1f7d26edb5de8bc9
 ms.contentlocale: ja-jp
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/09/2017
   
  以前の名前空間に対応するレポートが作成済みの場合、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーで .rdl ファイルを開くと、レポート デザイナーによって自動的にバックアップ ファイルが作成され、レポートが現在の名前空間にアップグレードされます。 これは、レポート定義ファイルをアップグレードする唯一の方法です。  
   
- 設定する配置プロパティは、レポート定義ファイルを保存するスキーマに影響する場合があります。 詳細については、「 [SQL Server データ ツールの配置およびバージョン サポート (SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)には含まれていません。  
+ 設定する配置プロパティは、レポート定義ファイルを保存するスキーマに影響する場合があります。 詳細については、「[SQL Server データ ツールの配置およびバージョン サポート &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)」を参照してください。  
   
  以前のバージョンで作成された .rdl ファイルをアップロードする[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]して、新しいバージョンに自動的にアップグレード初回使用時にします。 レポート サーバーには、元の形式のレポート定義ファイルが格納されます。 レポートは初めて表示されたときに自動的にアップグレードされますが、格納されたレポート定義ファイルは変更されません。  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 08/09/2017
   
      詳細については、このトピックの「 [レポート デザイナーで CRI を含むレポートを開く](#OpeningaReport) 」を参照してください。  
   
- レポート サーバー、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]、またはレポートの現在の RDL 名前空間を確認する方法については、「[レポート定義スキーマのバージョンを確認する &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)」を参照してください。  
+ レポート サーバーは、現在の RDL 名前空間を識別する方法について[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]、または、レポートを参照してください[レポート定義スキーマのバージョン &#40; を見つけるSSRS &#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>レポート サーバー上のレポートのアップグレード  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーにアップグレードしたレポート サーバーで初めて [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポートを実行すると、そのレポートは、レポート サーバーでサポートされている現在のレポート定義の名前空間に自動的にアップグレードされます。 アップグレード前にレポート サーバーに存在していたレポートと、レポート マネージャーを使用してアップロードされたか、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]のレポート デザイナーからレポート サーバーにパブリッシュされたレポートが含まれます。  
@@ -147,10 +147,10 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>次の手順
 
 [Reporting Services のアップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[SQL Server 2016 における SQL Server Reporting Services における重大な変更](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
-[SQL Server 2016 における SQL Server Reporting Services の動作変更します。](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
-[SQL Server Reporting Services SQL Server 2016 で廃止された機能](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
+[SQL Server 2016 における SQL Server Reporting Services の重大な変更](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[SQL Server 2016 における SQL Server Reporting Services の動作変更](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[SQL Server 2016 で廃止された SQL Server Reporting Services の機能](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [カスタム レポート アイテム](../../reporting-services/custom-report-items/custom-report-items.md)   
-[レポート サーバー データベースをアップグレードします。](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
+[レポート サーバー データベースのアップグレード](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

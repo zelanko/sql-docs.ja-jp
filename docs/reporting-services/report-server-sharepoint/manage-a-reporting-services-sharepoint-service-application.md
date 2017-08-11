@@ -15,7 +15,7 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f0930c8f5d3b0af4460c3deac2b8aa780e1f2568
 ms.contentlocale: ja-jp
@@ -98,7 +98,7 @@ ms.lasthandoff: 08/09/2017
 |実行のログ記録を有効にする|既定値は TRUE です。<br /><br /> レポート サーバーでトレース ログを生成するかどうかと、ログの保持日数を指定します。 をクリックします。 ログは、レポート サーバー コンピューターの \Microsoft SQL Server\MSSQL.n\ReportServer\Log フォルダーに格納されます。 サービスを再起動するたび、新しいログ ファイルが生成されます。 ログ ファイルの詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。|  
 |実行ログの保持日数|既定の日数は 60 日です。|  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はすべて、SharePoint ULS ログをサポートしています。  詳細については、「 [SharePoint トレース ログの Reporting Services イベントをオンにする (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はすべて、SharePoint ULS ログをサポートしています。  詳細については、「[SharePoint トレース ログの Reporting Services イベントをオンにする &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)」を参照してください。  
   
 ###  <a name="bkmk_security_settings_section"></a> セキュリティ設定  
   

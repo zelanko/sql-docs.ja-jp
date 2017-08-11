@@ -23,7 +23,7 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 70f9afea9e9fe495c66ac98ea8ec4f3e9b1e3a6d
 ms.contentlocale: ja-jp
@@ -127,9 +127,9 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 >  詳細な例については、「 [レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
-- [Reporting Services スクリプト ファイルを実行します。](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
-- [スクリプトを展開および管理タスク](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
-- [Rs.exe ユーティリティと Web サービスのスクリプト](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
-- [レポート サーバーのコマンド プロンプト ユーティリティ & #40 です。SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
+- [Reporting Services スクリプト ファイルを実行する](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
+- [配置タスクおよび管理タスクのスクリプト作成](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
+- [rs.exe ユーティリティと Web サービスを使用したスクリプト](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
+- [レポート サーバーのコマンド プロンプト ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
   
   

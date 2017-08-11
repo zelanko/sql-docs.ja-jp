@@ -21,14 +21,14 @@ ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d860d17f29ca39fc5df422e616805c8bc040185d
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 0d6c14934417d4ece40596c17a7335e09ec1ad78
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
+# <a name="the-role-of-soap-in-reporting-services"></a>Reporting Services における SOAP の役割
   レポート サーバー Web サービスでは、Simple Object Access Protocol (SOAP) メッセージングを使用し、ネットワーク経由でテキストベースのコマンドを送信します。 これらのコマンドは XML テキスト形式であり、HTTP を使用して World Wide Web 経由で送信されます。 レポート サーバー Web サービスでは、通信プロトコルとして SOAP を使用することで、アプリケーションとコンポーネントが開放型で広く普及しているインフラストラクチャを使用してレポート サーバーとデータを交換できるようにしています。 SOAP 標準は www.w3.org/TR/SOAP で定義されています。  
   
  クライアント アプリケーションは、SOAP に対応しており、SOAP 要求を送信できる限り、SOAP クライアントして動作できます。 レポート マネージャーはそのような SOAP クライアントの 1 つです。 レポート マネージャーは、すべてのレポートとレポート関連コンテンツが格納されているレポート サーバー データベースへのインターフェイスを提供します。 エンド ユーザーはアプリケーションを使用して、レポート サーバー名前空間のレポートとフォルダーを参照し、管理できます。 レポート マネージャーはレポート サーバー Web サービス インフラストラクチャ上に構築されています。  
@@ -67,8 +67,8 @@ public void DeleteItem(string item);
   
 ## <a name="see-also"></a>参照  
  [SOAP API にアクセスします。](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
- [レポート マネージャー (SSRS ネイティブ モード)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
+ [レポート マネージャーと &#40; です。SSRS ネイティブ モードと &#41; です。](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Reporting Services レポート サーバー](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [レポート サーバー Web サービス](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   

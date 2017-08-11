@@ -14,7 +14,7 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cc931cf057da3d63bd23e7c6ca68ed6d6ec31de9
 ms.contentlocale: ja-jp
@@ -110,7 +110,7 @@ Rssharepoint.msi /?
   
          **CD %temp%**。  
   
-         ファイルを **\Users\\<your name\>\AppData\Local\Temp** に配置する必要があります。  
+         ファイルの場所にあります: **\Users\\< 氏名\>\AppData\Local\Temp**  
   
     2.  次のコマンドを入力します。 この構成手順は、完了まで数分かかります。 この処理中に W3SVC サービスが再起動されます。 プログラムでファイルがコピーされ、コンポーネントが登録され、SharePoint 製品構成ウィザードが実行されると共に、状態メッセージが表示されます。  
   
@@ -277,6 +277,6 @@ Rssharepoint.msi /?
 ## <a name="see-also"></a>参照
 
 [SharePoint モードでの最初のレポート サーバーのインストール](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)   
-[Reporting Services レポート サーバー & #40 です。SharePoint モード &#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
+[Reporting Services Report Server &#40;SharePoint Mode&#41; (Reporting Services レポート サーバー &#40;SharePoint モード&#41;)](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

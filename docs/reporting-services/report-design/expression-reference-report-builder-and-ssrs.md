@@ -15,7 +15,7 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c398f3e0b6e3d6eae50fbd9f2bad35c47524c808
 ms.contentlocale: ja-jp
@@ -33,27 +33,27 @@ ms.lasthandoff: 08/09/2017
  レポートで簡単な式を作成する方法については、このセクションで紹介している各トピックを参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)  
+ [式 &#40; 内のデータ型レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)  
   
- [式で使用される定数 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)  
+ [式 &#40; で使用される定数レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)  
   
- [式で使用される演算子 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)  
+ [式 &#40; 内の演算子レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)  
   
- [式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)  
+ [式 &#40; 内で組み込みコレクションレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)  
   
- [組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+ [組み込み Globals および Users 参照 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
- [Parameters コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Parameters コレクションの参照と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
- [データセット フィールド コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)  
+ [データセット フィールド コレクションの参照と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)  
   
- [DataSources コレクションと DataSets コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)  
+ [データ ソースと DataSets コレクションの参照と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)  
   
- [レポート変数コレクションとグループ変数コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
+ [レポートとグループ変数コレクションの参照と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- [ReportItems コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md)  
+ [ReportItems コレクション参照 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md)  
   
 ## <a name="see-also"></a>参照  
- [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [式と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

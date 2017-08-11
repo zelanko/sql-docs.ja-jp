@@ -21,14 +21,14 @@ caps.latest.revision: 54
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a92c37165b8142b7e96a8bb99dee43ea5f12e247
 ms.contentlocale: ja-jp
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="grant-user-access-to-a-report-server"></a>レポート サーバーにユーザー アクセスの許可
+# <a name="grant-user-access-to-a-report-server"></a>レポート サーバーへのユーザー アクセスを許可する
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -42,13 +42,13 @@ ms.lasthandoff: 08/09/2017
 
 - システムレベルのロール : 特定のアイテムではなく、サイト全体にわたる操作へのアクセスを許可します。 たとえば、レポート ビルダーや共有スケジュールを使用することが含まれます。
 
-    この 2 種類のロールは相互補完的な関係にあり、組み合わせて使用する必要があります。 そのため、レポート サーバーにユーザーを追加するには、2 段階の処理が必要となります。 ユーザーをアイテムレベルのロールに割り当てる場合は、同時にシステムレベルのロールにも割り当てる必要があります。 ユーザーをロールに割り当てる際は、既に定義されているロールを選択する必要があります。 ロールを作成、変更、または削除するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用します。 詳細については、「[ロールを作成、削除、または変更する (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)」を参照してください。
+    この 2 種類のロールは相互補完的な関係にあり、組み合わせて使用する必要があります。 そのため、レポート サーバーにユーザーを追加するには、2 段階の処理が必要となります。 ユーザーをアイテムレベルのロールに割り当てる場合は、同時にシステムレベルのロールにも割り当てる必要があります。 ユーザーをロールに割り当てる際は、既に定義されているロールを選択する必要があります。 ロールを作成、変更、または削除するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用します。 詳細については、「[ロールを作成、削除、または変更する &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)」を参照してください。
 
 ## <a name="before-you-start"></a>開始前の準備
 
 ネイティブ モードのレポート サーバーにユーザーを追加する場合は、あらかじめ次の点を確認してください。
 
-- レポート サーバー コンピューターのローカル Administrators グループのメンバーとしてログインする必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] または Windows Server 2008 に配置する場合、レポート サーバーをローカルで管理するには追加の構成が必要となります。 詳細については、次を参照してください。[をローカル管理用のネイティブ モード レポート サーバーを構成する](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)です。
+- レポート サーバー コンピューターのローカル Administrators グループのメンバーとしてログインする必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] または Windows Server 2008 に配置する場合、レポート サーバーをローカルで管理するには追加の構成が必要となります。 詳細については、「[ローカル管理用のネイティブ モードのレポート サーバーの構成](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)」を参照してください。
 
 - このタスクを他のユーザーに委任する場合は、ユーザー アカウントをコンテンツ マネージャー ロールとシステム管理者ロールにマップするためのロール割り当てを作成します。 コンテンツ マネージャーとシステム管理者の権限を与えられたユーザーは、レポート サーバーにユーザーを追加できます。
 
@@ -102,9 +102,9 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>次の手順
 
-[ロールの割り当てを作成および管理する](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[ロールの割り当て ページ &#40; 新しいロールの割り当てを編集します。レポート マネージャー &#41;](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[セキュリティのプロパティ ページ、項目 & #40 です。レポート マネージャー &#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
+[作成および管理ロールの割り当て](../../reporting-services/security/create-and-manage-role-assignments.md)   
+[[新しいロールの割り当て]: [ロールの割り当てを編集] ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
+[[セキュリティのプロパティ] ページ、アイテム &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
 [ロールの割り当て](../../reporting-services/security/role-assignments.md)   
 [ロールの定義](../../reporting-services/security/role-definitions.md)  
 

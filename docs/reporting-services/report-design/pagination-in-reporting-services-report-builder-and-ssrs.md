@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b9e295143b577d99732186b0cefda5be908c1c34
 ms.contentlocale: ja-jp
@@ -88,6 +88,6 @@ ms.lasthandoff: 08/09/2017
  レポートが Excel にエクスポートされるときのこれらのプロパティのしくみの詳細については、「[Microsoft Excel へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [ページ レイアウトとレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [ページ レイアウトとレンダリングと &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

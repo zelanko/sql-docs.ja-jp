@@ -21,14 +21,14 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 caps.latest.revision: 49
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ec79e5169ff32294cc68f5bee24c3df677d8b38b
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: f99a0c09bfbe96062b078c07f86295b34069d9cf
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="report-server-web-service-methods"></a>レポート サーバー Web サービスのメソッド
@@ -39,16 +39,16 @@ ms.lasthandoff: 06/13/2017
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[レポート サーバー Web サービス エンドポイント](../../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)|レポート サーバー Web サービスの管理用エンドポイントと実行用エンドポイントについて説明します。|  
-|[レポート サーバーの Namespace 管理メソッド](../../../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md)|レポート サーバー データベースの管理に使用できるメソッドについて説明します。 フォルダーとリソースの管理、アイテム プロパティの設定を行えます。|  
+|[レポート サーバー Web サービス, エンドポイント](../../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)|レポート サーバー Web サービスの管理用エンドポイントと実行用エンドポイントについて説明します。|  
+|[レポート サーバー名前空間管理メソッド](../../../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md)|レポート サーバー データベースの管理に使用できるメソッドについて説明します。 フォルダーとリソースの管理、アイテム プロパティの設定を行えます。|  
 |[Authorization メソッド](../../../reporting-services/report-server-web-service/methods/authorization-methods.md)|タスク、ロール、およびポリシーの管理に使用できるメソッドについて説明します。|  
-|[データ ソースとの接続方法](../../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md)|レポートのデータ ソース接続や資格情報の設定および管理に使用できるメソッドについて説明します。|  
+|[データ ソースと接続のメソッド](../../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md)|レポートのデータ ソース接続や資格情報の設定および管理に使用できるメソッドについて説明します。|  
 |[レポート パラメーターのメソッド](../../../reporting-services/report-server-web-service/methods/report-parameters-methods.md)|レポートのパラメーターを設定および取得するためのメソッドについて説明します。|  
-|[モデルのメソッドのレポート サーバー Web サービス](../../../reporting-services/report-server-web-service/methods/model-methods-report-server-web-service.md)|モデルの管理に使用できるメソッドについて説明します。|  
-|[レンダリング メソッドと Execution メソッド](../../../reporting-services/report-server-web-service/methods/rendering-and-execution-methods.md)|レポートの実行、表示、およびキャッシュを管理するためのメソッドについて説明します。|  
+|[モデル メソッド - レポート サーバー Web サービス メソッド](../../../reporting-services/report-server-web-service/methods/model-methods-report-server-web-service.md)|モデルの管理に使用できるメソッドについて説明します。|  
+|[Rendering メソッドと Execution メソッド](../../../reporting-services/report-server-web-service/methods/rendering-and-execution-methods.md)|レポートの実行、表示、およびキャッシュを管理するためのメソッドについて説明します。|  
 |[レポート履歴メソッド](../../../reporting-services/report-server-web-service/methods/report-history-methods.md)|レポート履歴スナップショットを作成および管理するためのメソッドについて説明します。|  
 |[メソッドのスケジュール設定](../../../reporting-services/report-server-web-service/methods/scheduling-methods.md)|レポート サーバーが使用する共有スケジュールとキャッシュ更新計画を作成および管理するためのメソッドについて説明します。|  
-|[サブスクリプションおよび配信メソッド](../../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|サブスクリプションとレポート配信を作成および管理するためのメソッドについて説明します。|  
+|[サブスクリプション メソッドおよび配信メソッド](../../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|サブスクリプションとレポート配信を作成および管理するためのメソッドについて説明します。|  
 |[リンク レポートのメソッド](../../../reporting-services/report-server-web-service/methods/linked-reports-methods.md)|リンク レポートを作成および管理するためのメソッドについて説明します。|  
   
 ## <a name="see-also"></a>参照  

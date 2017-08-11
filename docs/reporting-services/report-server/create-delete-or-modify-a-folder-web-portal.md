@@ -14,7 +14,7 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6a9eef590a80442110d49359c789ff5317246791
 ms.contentlocale: ja-jp
@@ -26,7 +26,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-create-a-folder"></a>フォルダーを作成するには  
   
-1.  [レポート マネージャー (SSRS ネイティブ モード)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
+1.  開始、[レポート マネージャー & #40 です。SSRS ネイティブ モード &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Web ポータルの **[新規]** メニュー ドロップダウンで **[フォルダー]** を選択します。 既存のフォルダーの下にフォルダーを作成する場合には、そのフォルダーに移動し、 **[新規]** メニュー ドロップダウンで **[フォルダー]** を選択します。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/09/2017
 6.  **[適用]** をクリックして変更を保存します。  
   
 ## <a name="see-also"></a>参照  
- [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [検索、表示、およびレポート &#40; を管理します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
 

@@ -24,7 +24,7 @@ caps.latest.revision: 118
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 51be2879461864ce67992e12d7cfd95014e03e40
 ms.contentlocale: ja-jp
@@ -119,22 +119,22 @@ ms.lasthandoff: 08/09/2017
   
 |**Data source**|**例**|**Description**|  
 |---------------------|-----------------|---------------------|  
-|ローカル サーバーの SQL Server データベース|`data source="(local)";initial catalog=AdventureWorks`|データ ソースの種類を **Microsoft SQL Server**に設定します。 詳細については、「[SQL Server の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)」を参照してください。|  
+|ローカル サーバーの SQL Server データベース|`data source="(local)";initial catalog=AdventureWorks`|データ ソースの種類を **Microsoft SQL Server**に設定します。 詳細については、「[SQL Server の接続の種類 (SSRS)](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)」を参照してください。|  
 |SQL Server インスタンス<br /><br /> データベース (database)|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|データ ソースの種類を **Microsoft SQL Server**に設定します。|  
 |SQL Server Express データベース|`Data Source=localhost\MSSQL13.SQLEXPRESS; Initial Catalog=AdventureWorks`|データ ソースの種類を **Microsoft SQL Server**に設定します。|  
-|Azure SQL データベース|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|データ ソースの種類 'éý' **Microsoft Azure SQL Database**です。 詳細については、「[SQL Azure の接続の種類 (SSRS)](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)」を参照してください。|  
-|SQL Server 並列データ ウェアハウス|`HOST=<IP address>;database= AdventureWorks; port=<port>`|データ ソースの種類を **Microsoft SQL Server Parallel Data Warehouse**に設定します。 詳細については、「[SQL Server 並列データ ウェアハウスの接続の種類 (SSRS)](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)」を参照してください。|  
-|ローカル サーバーの Analysis Services データベース|`data source=localhost;initial catalog=Adventure Works DW`|データ ソースの種類を **Microsoft SQL Server Analysis Services**に設定します。 詳細については、「[MDX のための Analysis Services の接続の種類 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)」または「[DMX のための Analysis Services の接続の種類 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)」を参照してください。|  
-|Sales パースペクティブを持つ Analysis Services テーブル モデル データベース|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|データ ソースの種類を **Microsoft SQL Server Analysis Services**に設定します。 cube= 設定にパースペクティブの名前を指定します。 詳細については、「[パースペクティブ (SSAS テーブル)](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)」を参照してください。|  
-|ネイティブ モードで構成されているレポート サーバーのレポート モデル データ ソース|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|レポート サーバーまたはドキュメント ライブラリの URL と、レポート サーバー フォルダーまたはドキュメント ライブラリ フォルダーの名前空間内のパブリッシュされたモデルへのパスを指定します。 詳細については、「[レポート モデルの接続 (SSRS)](../../reporting-services/report-data/report-model-connection-ssrs.md)」を参照してください。|  
+|Azure SQL Database|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|データ ソースの種類 'éý' **Microsoft Azure SQL Database**です。 詳細については、「[SQL Azure の接続の種類 (SSRS)](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)」を参照してください。|  
+|SQL Server 並列データ ウェアハウス|`HOST=<IP address>;database= AdventureWorks; port=<port>`|データ ソースの種類を **Microsoft SQL Server Parallel Data Warehouse**に設定します。 詳細については、「[SQL Server 並列データ ウェアハウスの接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)」を参照してください。|  
+|ローカル サーバーの Analysis Services データベース|`data source=localhost;initial catalog=Adventure Works DW`|データ ソースの種類を **Microsoft SQL Server Analysis Services**に設定します。 詳細については、次を参照してください[の MDX &#40; Analysis Services 接続の種類。SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)または[の DMX &#40; Analysis Services の接続の種類SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
+|Sales パースペクティブを持つ Analysis Services テーブル モデル データベース|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|データ ソースの種類を **Microsoft SQL Server Analysis Services**に設定します。 cube= 設定にパースペクティブの名前を指定します。 詳しくは、「 [パースペクティブ &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)」をご覧ください。|  
+|ネイティブ モードで構成されているレポート サーバーのレポート モデル データ ソース|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|レポート サーバーまたはドキュメント ライブラリの URL と、レポート サーバー フォルダーまたはドキュメント ライブラリ フォルダーの名前空間内のパブリッシュされたモデルへのパスを指定します。 詳細については、次を参照してください。[レポート モデルの接続 & #40 です。SSRS &#41;](../../reporting-services/report-data/report-model-connection-ssrs.md).|  
 |SharePoint 統合モードで構成されているレポート サーバーのレポート モデル データ ソース|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|レポート サーバーまたはドキュメント ライブラリの URL と、レポート サーバー フォルダーまたはドキュメント ライブラリ フォルダーの名前空間内のパブリッシュされたモデルへのパスを指定します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|データ ソースの種類を **[OLE DB Provider for OLAP Services 8.0]**に設定します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ConnectTo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロパティを **8.0** に設定すると、 **2000**データ ソースにより高速に接続できるようになります。 このプロパティを設定するには、 **[接続プロパティ]** ダイアログ ボックスの **[詳細プロパティ]** タブを使用します。|  
-|Oracle サーバー|`data source=myserver`|データ ソースの種類を **Oracle**に設定します。 レポート デザイナーがインストールされているコンピューターとレポート サーバーに、Oracle クライアント ツールがインストールされている必要があります。 詳細については、「[Oracle の接続の種類 (SSRS)](../../reporting-services/report-data/oracle-connection-type-ssrs.md)」を参照してください。|  
-|SAP NetWeaver BI データ ソース|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|データ ソースの種類を **SAP NetWeaver BI**に設定します。 詳細については、「[SAP NetWeaver BI の接続の種類 (SSRS)](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md)」を参照してください。|  
-|Hyperion Essbase データ ソース|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|データ ソースの種類を **Hyperion Essbase**に設定します。 詳細については、「[Hyperion Essbase の接続の種類 (SSRS)](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md)」を参照してください。|  
-|Teradata データ ソース|`data source=`\<NNN >。\<NNN >。\<NNN >。\<NNN >`;`|データ ソースの種類を **Teradata**に設定します。 接続文字列は、各フィールドが 1 ～ 3 桁の 4 つのフィールドで構成されるインターネット プロトコル (IP) アドレスです。 詳細については、「[Teradata の接続の種類 (SSRS)](../../reporting-services/report-data/teradata-connection-type-ssrs.md)」を参照してください。|  
+|Oracle サーバー|`data source=myserver`|データ ソースの種類を **Oracle**に設定します。 レポート デザイナーがインストールされているコンピューターとレポート サーバーに、Oracle クライアント ツールがインストールされている必要があります。 詳細については、「[Oracle の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md)」を参照してください。|  
+|SAP NetWeaver BI データ ソース|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|データ ソースの種類を **SAP NetWeaver BI**に設定します。 詳細については、「[SAP NetWeaver BI の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md)」を参照してください。|  
+|Hyperion Essbase データ ソース|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|データ ソースの種類を **Hyperion Essbase**に設定します。 詳細については、「[Hyperion Essbase の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md)」を参照してください。|  
+|Teradata データ ソース|`data source=`\<NNN >。\<NNN >。\<NNN >。\<NNN >`;`|データ ソースの種類を **Teradata**に設定します。 接続文字列は、各フィールドが 1 ～ 3 桁の 4 つのフィールドで構成されるインターネット プロトコル (IP) アドレスです。 詳細については、次を参照してください。 [Teradata の接続の種類 & #40 です。SSRS &#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).|  
 |Teradata データ ソース|`Database=`*\<database name>* `; data source=` *\<NN*N*>.\<NNN >。\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|前の例と同様に、データ ソースの種類を **Teradata**に設定します。 Database タグで指定した既定のデータベースのみを使用して、データ間の関係を自動的に検出しないようにしてください。|  
-|XML データ ソース、Web サービス|`data source=http://adventure-works.com/results.aspx`|データ ソースの種類を **XML**に設定します。 接続文字列は、Web サービス記述言語 (WSDL) をサポートする Web サービスの URL です。 詳細については、「[ の接続の種類 (SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md)」を参照してください。|  
+|XML データ ソース、Web サービス|`data source=http://adventure-works.com/results.aspx`|データ ソースの種類を **XML**に設定します。 接続文字列は、Web サービス記述言語 (WSDL) をサポートする Web サービスの URL です。 詳細については、次を参照してください。 [XML 接続の種類 & #40 です。SSRS &#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md).|  
 |XML データ ソース、XML ドキュメント|`http://localhost/XML/Customers.xml`|データ ソースの種類を **XML**に設定します。 接続文字列は XML ドキュメントへの URL です。|  
 |XML データ ソース、埋め込み XML ドキュメント|*空*|データ ソースの種類を **XML**に設定します。 XML データはレポート定義に埋め込まれています。|  
 |SharePoint リスト|`data source=http://MySharePointWeb/MySharePointSite/`|データ ソースの種類を **SharePoint List**に設定します。|  
@@ -172,7 +172,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>次の手順
 
 [作成、変更、および共有データ ソースを削除します。](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
-[作成し、埋め込みデータ ソースの変更](../../reporting-services/report-data/create-and-modify-embedded-data-sources.md)   
+[埋め込みデータ ソースを作成および変更する](../../reporting-services/report-data/create-and-modify-embedded-data-sources.md)   
 [配置プロパティを設定します。](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 

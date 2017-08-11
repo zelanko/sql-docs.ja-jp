@@ -20,7 +20,7 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 37ba742708ded98cd5728a3051a2e7a76b9fa99f
 ms.contentlocale: ja-jp
@@ -48,6 +48,6 @@ ms.lasthandoff: 08/09/2017
  レポート、レポート サーバー、またはレポート作成環境の現在のレポート定義形式を特定するには、「[Find the Report Definition Schema Version (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)」(レポート定義スキーマのバージョンを確認する (SSRS)) を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
+ [レポート ビルダー ダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
   
   

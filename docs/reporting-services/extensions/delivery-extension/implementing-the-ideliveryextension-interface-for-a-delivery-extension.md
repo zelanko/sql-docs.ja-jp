@@ -18,20 +18,20 @@ helpviewer_keywords:
 - IDeliveryExtension interface
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
 caps.latest.revision: 37
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 82bf0172d2ad744d5a34945596814cd584888d95
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: ac54345b14ba3ff84a755e0ce4e8b1c4e9acab13
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>配信拡張機能に対する IDeliveryExtension インターフェイスの実装
   配信拡張機能のクラスは、通知のコンテンツに基づいてレポート通知をユーザーに配信する場合に使用します。 配信拡張機能のクラスは、配信拡張機能に渡すユーザー設定を検証するためのインフラストラクチャも提供します。 また、配信拡張機能のクラスには、クライアントが拡張機能の名前に関する情報を取得する場合に使用できる特定のプロパティ、拡張機能がサポートする設定、および配信拡張機能で使用できる表示形式が含まれている必要があります。  
   
- ![IDeliveryExtension インターフェイスの処理](../../../reporting-services/extensions/delivery-extension/media/bk-ext-02.gif "IDeliveryExtension interface process")  
+ ![IDeliveryExtension インターフェイス プロセス](../../../reporting-services/extensions/delivery-extension/media/bk-ext-02.gif "IDeliveryExtension インターフェイスの処理")  
 IDeliveryExtension インターフェイスを使用すると、ユーザー データを検証できることに加えて、クライアントが必要な配信設定を学習することもできます。  
   
  配信拡張機能のクラスを作成するには、<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> および <xref:Microsoft.ReportingServices.Interfaces.IExtension> を実装します。 **IDeliveryExtension**インターフェイスを使用してレポート通知を配信する配信拡張機能は有効、<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A>メソッドを使用して入力方向の拡張機能の設定を検証して、<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ValidateUserData%2A>メソッドです。 **IExtension**インターフェイスにより、ローカライズされた拡張機能名を実装し、格納されている拡張機能に固有の構成情報を処理するための配信拡張機能、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]構成ファイル。 実装することによって**IExtension**、配信拡張機能が含まれています、<xref:Microsoft.ReportingServices.Interfaces.Extension.LocalizedName%2A>プロパティです。 強くお勧めする[!INCLUDE[ssRS](../../../includes/ssrs-md.md)]配信拡張機能のサポート、 **LocalizedName**プロパティがユーザーに、レポート マネージャーなどのユーザー インターフェイスで拡張機能の既知の名前が表示されます。  

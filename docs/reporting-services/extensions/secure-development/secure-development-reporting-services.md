@@ -18,14 +18,14 @@ helpviewer_keywords:
 - security [Reporting Services], strategies
 ms.assetid: 12161a6c-b93b-4312-9d27-0c922561eb9b
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cb8a4502531dbe3ee23434ea126457196b56c701
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 335ffb51ba87298181e2907be36694c53c6eb701
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="secure-development-reporting-services"></a>セキュリティで保護された開発 (Reporting Services)
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
  [セキュリティ ポリシーの概要](../../../reporting-services/extensions/secure-development/understanding-security-policies.md)  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の各種アセンブリとコード アクセス セキュリティがコード権限に及ぼす影響について説明します。  
   
- [Reporting Services セキュリティ ポリシー ファイルを使用します。](../../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)  
+ [Reporting Services セキュリティ ポリシー ファイルの使用](../../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)  
  各種 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] コンポーネントおよび対応するポリシー構成ファイルについて説明します。  
   
   

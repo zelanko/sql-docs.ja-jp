@@ -21,7 +21,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6d7a1e1b9b0c8fb3fe60022f79ebfd21d6c44a09
 ms.contentlocale: ja-jp
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
 -   別のレポート サーバー データベースを使用するようにレポート サーバーを構成する。  
   
--   データベース接続に使用するユーザー アカウントまたはパスワードを変更する。 データベース接続を更新する必要があるのは、アカウント情報が RSReportServer.config ファイルに保存されている場合だけです。 接続にサービス アカウントを使用している (資格情報の種類として Windows 統合セキュリティを使用する) 場合は、パスワードが保存されないので、接続情報を更新する必要はありません。 アカウント変更の詳細については、「 [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)」を参照してください。  
+-   データベース接続に使用するユーザー アカウントまたはパスワードを変更する。 データベース接続を更新する必要があるのは、アカウント情報が RSReportServer.config ファイルに保存されている場合だけです。 接続にサービス アカウントを使用している (資格情報の種類として Windows 統合セキュリティを使用する) 場合は、パスワードが保存されないので、接続情報を更新する必要はありません。 アカウント変更の詳細については、「[レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)」を参照してください。  
   
 -   レポート サーバー スケールアウト配置を構成する。 スケールアウト配置を構成するには、レポート サーバー データベースへの複数の接続を作成する必要があります。 この複数段階に分かれた操作の実行方法の詳細については、「[ネイティブ モード レポート サーバーのスケールアウト配置の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)」を参照してください。  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
 -   レポート サーバー データベースをホストする [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの名前。  
   
--   レポート サーバー データベースの名前。 接続を初めて作成する場合、新しいレポート サーバー データベースを作成することも、既存のデータベースを選択することもできます。 詳細については、 [レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)」を参照してください。  
+-   レポート サーバー データベースの名前。 接続を初めて作成する場合、新しいレポート サーバー データベースを作成することも、既存のデータベースを選択することもできます。 詳細については、「[レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)」を参照してください。  
   
 -   資格情報の種類。 サービス アカウント、Windows ドメイン アカウント、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ログインを使用できます。  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 08/09/2017
  使用する資格情報は、レポート サーバー データベースへのアクセス権が許可されている必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用する場合、この手順は自動的に実行されます。 データベースのアクセスに必要な権限の詳細については、このトピックの「データベース権限」のセクションを参照してください。  
   
 ### <a name="storing-database-connection-information"></a>データベース接続情報の保存  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 次の RSreportserver.config 設定に接続情報が格納され暗号化されています。 これらの設定の暗号化された値を作成するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールまたは rsconfig ユーティリティを使用する必要があります。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、次の RSreportserver.config 設定に接続情報が格納され暗号化されています。 これらの設定の暗号化された値を作成するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールまたは rsconfig ユーティリティを使用する必要があります。  
   
  すべての値がどの種類の接続に対しても設定されるとは限りません。 既定の値 (つまり、アカウントを使用して、サービス接続を確立する) を使用して接続を構成する場合\< **LogonUser**>、 \< **LogonDomain**>、および\< **LogonCred**> は次のように空になります。  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 08/09/2017
 ##### <a name="using-service-accounts-and-integrated-security"></a>サービス アカウントと統合セキュリティの使用  
  Windows 統合セキュリティを使用すると、レポート サーバー サービス アカウント経由で接続できます。 レポート サーバー サービス アカウントには、レポート サーバー データベースへのログイン権限が与えられます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を既定の構成でインストールした場合、セットアップは、Windows 統合セキュリティを既定の資格情報の種類として選択します。  
   
- サービス アカウントは信頼されたアカウントであり、レポート サーバー データベース接続の管理に対するメンテナンスが軽減されます。 サービス アカウントでは Windows 統合セキュリティを使用して接続を行うため、資格情報の格納は不要です。 ただし、後でサービス アカウントのパスワードまたは ID を変更する場合 (たとえば、ビルトイン アカウントからドメイン アカウントに切り替える場合など) は、必ず [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用して変更を行ってください。 このツールを使用すると、データベース権限が自動的に更新され、変更したアカウント情報が使用されるようになります。 詳細については、 [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)」を参照してください。  
+ サービス アカウントは信頼されたアカウントであり、レポート サーバー データベース接続の管理に対するメンテナンスが軽減されます。 サービス アカウントでは Windows 統合セキュリティを使用して接続を行うため、資格情報の格納は不要です。 ただし、後でサービス アカウントのパスワードまたは ID を変更する場合 (たとえば、ビルトイン アカウントからドメイン アカウントに切り替える場合など) は、必ず [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用して変更を行ってください。 このツールを使用すると、データベース権限が自動的に更新され、変更したアカウント情報が使用されるようになります。 詳細については、「[レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)」を参照してください。  
   
  サービス アカウントを使用するようにデータベース接続を構成するとき、レポート サーバー データベースがリモート コンピューター上にある場合には、アカウントにネットワーク アクセス許可が必要になります。 レポート サーバー データベースが別のドメインつまりファイアウォールの背後にある場合や、ドメイン セキュリティではなくワークグループ セキュリティを使用している場合は、サービス アカウントを使用しないでください。 代わりに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ユーザー アカウントを使用してください。  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>次の手順
 
 [レポート サーバー データベースを作成します。](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
-[Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
+[Reporting Services ネイティブ モード レポート サーバーを管理します。](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [レポート サーバー サービス アカウントを構成します。](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

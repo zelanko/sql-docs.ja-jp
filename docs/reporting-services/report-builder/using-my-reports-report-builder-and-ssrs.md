@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f394a1ad055276cc7f0a6d28f923215dde8e437a
 ms.contentlocale: ja-jp
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  個人用レポート機能は、必須機能ではなく、レポート サーバー管理者が無効にすることができます。 有効になっている場合、[ホーム] フォルダー内に [個人用レポート] フォルダーが表示されます。[個人用レポート] フォルダーには、レポート マネージャーまたは Web ブラウザーを使用してアクセスすることができます。 詳細については、「[レポート マネージャーを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/library/dd255286.aspx)」を参照してください。  
   
- SharePoint 統合モードで構成されたレポート サーバーには、個人用レポート フォルダーに相当するフォルダーは存在しません。 詳細については、「 [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)」を参照してください。  
+ SharePoint 統合モードで構成されたレポート サーバーには、個人用レポート フォルダーに相当するフォルダーは存在しません。 詳細については、「[レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="ways-to-use-my-reports"></a>個人用レポートの使用方法  
  [個人用レポート] フォルダーは、ユーザーがレポートやフォルダー、その他のアイテムを追加するまでは空になっています。 [個人用レポート] フォルダーにコンテンツを追加する方法は次のとおりです。  
   
--   個人のリンク レポートを作成し、これを [個人用レポート] に保存します。 すべてのレポートから、リンク レポートを作成できるわけではありません。 詳細については、「 [リンク レポートを作成する](../../reporting-services/reports/create-a-linked-report.md)」を参照してください。  
+-   個人のリンク レポートを作成し、これを [個人用レポート] に保存します。 すべてのレポートから、リンク レポートを作成できるわけではありません。 詳細については、「[リンク レポートを作成する](../../reporting-services/reports/create-a-linked-report.md)」を参照してください。  
   
 -   レポート定義 (.rdl) ファイル、レポート モデル (.smdl) ファイルなどのファイルをファイル システムからアップロードします。 どんなファイルでもアップロードできますが、レポート サーバーで処理できるのは、ファイル拡張子が .rdl または .smdl のレポート ファイルのみです。 詳細については、SQL Server オンライン ブックの [Reporting Services ドキュメント](http://go.microsoft.com/fwlink/?linkid=121312)の「レポート定義」と「[ファイルまたはレポートをアップロード (レポート マネージャー)](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)」を参照してください。  
   
@@ -49,6 +49,6 @@ ms.lasthandoff: 08/09/2017
  レポート サーバー データベースを検索する場合、検索を行うユーザーの [個人用レポート] フォルダーのコンテンツは検索対象になりますが、他のユーザーの [個人用レポート] フォルダーのコンテンツは検索対象から除外されます。 検索結果には、アクセス権が与えられているレポートのみが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [検索、表示、およびレポート &#40; を管理します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

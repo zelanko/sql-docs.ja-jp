@@ -22,7 +22,7 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8964b2b0886ffd0483e48c8e9baf91ab9b2dae3d
 ms.contentlocale: ja-jp
@@ -56,7 +56,7 @@ public void SetServiceState(Boolean EnableWindowsService,
  レポート マネージャーの目的の状態を示す **Boolean** 値。
  
  > [!NOTE] 
- > この設定は、SQL Server 2016 Reporting Services Cumulative Update 2 の時点で廃止されました。 Web ポータルは、常に有効にします。 値は無視されます。
+ > この設定は、SQL Server 2016 Reporting Services 累積更新プログラム 2 の時点で廃止されました。 Web ポータルは常に有効になります。 値は無視されます。
   
  *HRESULT*  
  [out] 呼び出しの成功または失敗を示す値。  
@@ -67,7 +67,7 @@ public void SetServiceState(Boolean EnableWindowsService,
 ## <a name="remarks"></a>解説  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

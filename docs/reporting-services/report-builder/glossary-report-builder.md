@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 69a348a8f2f2d44dbe17f5500557db03b95e5b04
 ms.contentlocale: ja-jp
@@ -375,6 +375,6 @@ ms.lasthandoff: 08/09/2017
 |y 軸 (y-axis)|「値 (y) 軸 (value (y) axis)」を参照。|  
   
 ## <a name="see-also"></a>参照  
- [レポート作成の概念 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [レポート作成の概念と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

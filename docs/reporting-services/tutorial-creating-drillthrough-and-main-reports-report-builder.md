@@ -16,7 +16,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 0c67ffbd38887cd9428551a369a4d864d8b972d8
 ms.contentlocale: ja-jp
@@ -44,7 +44,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
 全般的な要件については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/prerequisites-for-tutorials-report-builder.md)」を参照してください。  
   
 ## <a name="DMatrixAndDataset"></a>1.テーブルまたはマトリックス ウィザードを使用して詳細レポートを作成する  
-[作業の開始] ダイアログ ボックスから、**テーブルまたはマトリックス ウィザード**を使用してマトリックス レポートを作成します。 このウィザードには、レポート デザイン モードと共有データセット デザイン モードの 2 つのモードがあります。 このチュートリアルでは、レポート デザイン モードを使用します。  
+[作業の開始] ダイアログ ボックスから、 **テーブルまたはマトリックス ウィザード**を使用してマトリックス レポートを作成します。 このウィザードには、レポート デザイン モードと共有データセット デザイン モードの 2 つのモードがあります。 このチュートリアルでは、レポート デザイン モードを使用します。  
   
 #### <a name="to-create-a-new-report"></a>新しいレポートを作成するには  
   
@@ -59,7 +59,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
 3.  右ペインで、 **[テーブルまたはマトリックス ウィザード]** が選択されていることを確認します。  
   
 ## <a name="DConnection"></a>1a. データ接続を指定する  
-データ接続には、Analysis Services キューブや [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースなどの外部データ ソースに接続するときに必要な情報が含まれます。 データ接続を指定するには、レポート サーバーの共有データ ソースを使用するか、このレポートでのみ使用する埋め込みデータ ソースを作成します。 このチュートリアルでは、埋め込みデータ ソースを使用します。 共有データ ソースの使用方法の詳細については、「[別の方法でデータ接続を取得する (レポート ビルダー)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)」を参照してください。  
+データ接続には、Analysis Services キューブや [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースなどの外部データ ソースに接続するときに必要な情報が含まれます。 データ接続を指定するには、レポート サーバーの共有データ ソースを使用するか、このレポートでのみ使用する埋め込みデータ ソースを作成します。 このチュートリアルでは、埋め込みデータ ソースを使用します。 共有データ ソースの使用に関する詳細については、次を参照してください[データの接続 &#40; を取得する代替方法。レポート ビルダー"&"#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>埋め込みデータ ソースを作成するには  
   
@@ -114,7 +114,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
 2.  **[キューブの選択]** ダイアログ ボックスで、Sales をクリックし、 **[OK]**をクリックします。  
   
     > [!TIP]  
-    > MDX クエリを手動で作成しないようにする場合にクリックして、![デザイン モードに切り替える](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode")アイコン、クエリ デザイナーをクエリ モードに切り替えて、完成した MDX クエリ デザイナーを貼り付けて手順 6. に進みます[、データセットを作成する](#DSkip)です。  
+    > MDX クエリを手動で作成しないようにする場合にクリックして、![デザイン モードに切り替える](../reporting-services/media/rsqdicon-designmode.gif "デザイン モードに切り替える")アイコン、クエリ デザイナーをクエリ モードに切り替えて、完成した MDX クエリ デザイナーを貼り付けて手順 6. に進みます[、データセットを作成する](#DSkip)です。  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -344,7 +344,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
 7.  **[保存]**をクリックします。  
   
 ## <a name="MMatrixAndDataset"></a>1.テーブルまたはマトリックス ウィザードを使用してメイン レポートを作成する  
-**[作業の開始]** ダイアログ ボックスから、**テーブルまたはマトリックス ウィザード**を使用してマトリックス レポートを作成します。  
+**[作業の開始]** ダイアログ ボックスから、 **テーブルまたはマトリックス ウィザード**を使用してマトリックス レポートを作成します。  
   
 #### <a name="to-create-the-main-report"></a>メイン レポートを作成するには  
   
@@ -405,7 +405,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
 2.  **[キューブの選択]** ダイアログ ボックスで、Sales をクリックし、 **[OK]**をクリックします。  
   
     > [!TIP]  
-    > MDX クエリを手動で作成しないようにする場合にクリックして、![デザイン モードに切り替える](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode")アイコン、クエリ デザイナーをクエリ モードに切り替えて、完成した MDX クエリ デザイナーに貼り付けますおよび手順 5. に進みます[、データセットを作成する](#MSkip)です。  
+    > MDX クエリを手動で作成しないようにする場合にクリックして、![デザイン モードに切り替える](../reporting-services/media/rsqdicon-designmode.gif "デザイン モードに切り替える")アイコン、クエリ デザイナーをクエリ モードに切り替えて、完成した MDX クエリ デザイナーに貼り付けますおよび手順 5. に進みます[、データセットを作成する](#MSkip)です。  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  

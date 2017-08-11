@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5360240569fcffe5f9708f68d7f95403e45c0909
 ms.contentlocale: ja-jp
@@ -61,6 +61,6 @@ ms.lasthandoff: 08/09/2017
 2.  **[カテゴリ グループ]** 領域または **[系列グループ]** 領域内のグループを右クリックし、 **[削除]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

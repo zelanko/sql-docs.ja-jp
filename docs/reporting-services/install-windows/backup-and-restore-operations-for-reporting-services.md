@@ -24,7 +24,7 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e3247864547983779f4037eb963ba6721a2b7654
 ms.contentlocale: ja-jp
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/09/2017
 
   このトピックでは、インストールした [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で使用するデータ ファイルの概要と、これらのファイルをバックアップするタイミングおよび方法について説明します。 レポート サーバー データベース ファイルのバックアップ/復元プランの作成は、復旧計画の最も重要な部分です。 ただし、さらに包括的な復旧計画には、暗号化キー、カスタム アセンブリや拡張機能、構成ファイル、レポートおよびモデルのソース ファイルのバックアップなども必要になります。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Mode  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード  
   
  バックアップ操作および復元操作は、インストールした [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の全体または一部を移動する際によく使用します。  
   
@@ -46,9 +46,9 @@ ms.lasthandoff: 08/09/2017
   
     -   [Reporting Services のアップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
-    -   [Reporting Services の移行 &#40;SharePoint モード&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
+    -   [Reporting Services のインストール &#40; を移行します。SharePoint モード &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
   
-    -   [Reporting Services のインストールの移行 &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+    -   [Reporting Services のインストール &#40; を移行します。ネイティブ モード &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
   
 ## <a name="backing-up-the-report-server-databases"></a>レポート サーバー データベースのバックアップ  
  レポート サーバーはステートレス サーバーであるため、アプリケーション データはすべて、 **インスタンスで稼働している** reportserver **および** reportservertempdb [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] データベースに格納されます。 **reportserver** データベースと **reportservertempdb** データベースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースでサポートされているバックアップ方式のいずれかを使用してバックアップできます。 レポート サーバー データベースについては、次のような推奨事項があります。  
@@ -80,7 +80,7 @@ ms.lasthandoff: 08/09/2017
   
 -   レポート サーバーおよびレポート マネージャーの [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーション用の Web.config  
   
--   用の Machine.config [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]  
+-   用の Machine.config[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]  
   
 ## <a name="backing-up-data-files"></a>データ ファイルのバックアップ  
  レポート デザイナーおよびモデル デザイナーで作成およびメンテナンスしているファイルをバックアップします。 これらのファイルには、レポート定義 (.rdl) ファイル、レポート モデル (.smdl) ファイル、共有データ ソース (.rds) ファイル、データ ビュー (.dv) ファイル、データ ソース (.ds) ファイル、レポート サーバー プロジェクト (.rptproj) ファイル、およびレポート ソリューション (.sln) ファイルが含まれます。  

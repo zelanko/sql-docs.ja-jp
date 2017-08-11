@@ -15,7 +15,7 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d68de45f8514de03e9804996da00d5f63d211311
 ms.contentlocale: ja-jp
@@ -33,7 +33,7 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能 (拡張機能や暗号化キーなど) の管理。  
 
 ##  <a name="bkmk_cmdlet_sum"></a> コマンドレットの概要  
- コマンドレットを実行するには、SharePoint 管理シェルを開く必要があります。 Microsoft Windows に付属しているグラフィカル ユーザー インターフェイス エディター ( **Windows PowerShell Integrated Scripting Environment (ISE)**) を使用することもできます。 詳細については、次を参照してください。 [Windows サーバー上の Windows PowerShell の開始](http://technet.microsoft.com/library/hh847814.aspx)です。 次のコマンドレット概要では、サービス アプリケーション "データベース" への参照は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションによって作成および使用されたすべてのデータベースを参照します。 これには、構成、警告、および一時データベースが含まれます。  
+ コマンドレットを実行するには、SharePoint 管理シェルを開く必要があります。 Microsoft Windows に付属しているグラフィカル ユーザー インターフェイス エディター ( **Windows PowerShell Integrated Scripting Environment (ISE)**) を使用することもできます。 詳細については、「 [Windows Server での Windows PowerShell の開始](http://technet.microsoft.com/library/hh847814.aspx)) を使用することもできます。 次のコマンドレット概要では、サービス アプリケーション "データベース" への参照は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションによって作成および使用されたすべてのデータベースを参照します。 これには、構成、警告、および一時データベースが含まれます。  
   
  PowerShell の例を入力すると、次のようなエラー メッセージが表示されます。  
   
@@ -50,7 +50,7 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- 詳細については、次を参照してください。 [SharePoint 2013 を管理する Windows PowerShell を使用して](http://technet.microsoft.com/library/ee806878.aspx)です。  
+ 詳細については、「 [Windows PowerShell を使用して SharePoint 2013 を管理する](http://technet.microsoft.com/library/ee806878.aspx)) を使用することもできます。  
   
 #### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>SharePoint 管理シェルを開いてコマンドレットを実行するには  
   
@@ -280,8 +280,8 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
 ## <a name="next-steps"></a>次の手順
 
 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[チェックリスト: PowerShell を使用して、SharePoint の Power Pivot を確認するには](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
-[SQL Server powershell のヘルプ](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
+[チェック リスト: PowerShell を使用して PowerPivot for SharePoint を確認する](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+[SQL Server PowerShell のヘルプの参照](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 [CodePlex SharePoint 管理 PowerShell スクリプト](http://sharepointpsscripts.codeplex.com/)   
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

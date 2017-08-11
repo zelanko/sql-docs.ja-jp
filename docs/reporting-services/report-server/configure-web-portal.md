@@ -16,7 +16,7 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c0c6cc27711140e96bbf4420e8de596af53ddfcd
 ms.contentlocale: ja-jp
@@ -100,7 +100,7 @@ Web ポータルを使用する色を変更するカスタム ブランド パ�
 [Reporting Services のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
 [URL の構成](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Reporting Services のインストール状態の検証](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
-[Reporting Services の機能をオンまたはオフにします。](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)   
+[Reporting Services 機能の有効化と無効化](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)   
 [Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [ローカル管理用のネイティブ モード レポート サーバーを構成します。](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)

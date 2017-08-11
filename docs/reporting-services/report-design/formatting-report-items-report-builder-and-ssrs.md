@@ -17,7 +17,7 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 993571d2e5d70ba0553a0ed747caccfcadb3a0da
 ms.contentlocale: ja-jp
@@ -43,22 +43,22 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [書式設定テキストとプレース ホルダー (&) #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  テキストの書式設定方法と、テキスト ボックス内の異なるテキスト ブロックの書式設定オプションのカスタマイズ方法について説明します。  
   
- [レポートへの HTML のインポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [HTML レポート &#40; をインポートレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
  レポートに HTML を挿入して使用する方法について説明します。  
   
- [数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]によりサポートされる標準書式指定文字列とカスタム書式指定文字列の使用方法について説明します。  
+ [書式設定の数値と日付 (&) #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によりサポートされる標準書式指定文字列とカスタム書式指定文字列の使用方法について説明します。  
   
- [線、色、および画像の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)  
+ [線、色、およびイメージ &#40; を書式設定レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)  
  レポート アイテムとデータ領域内の線、グリッド線、色、および画像の書式設定方法について説明します。  
   
- [レポートまたはテキスト ボックスのロケールの設定 &#40;Reporting Services&#41;](../../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)  
+ [レポートまたはテキスト ボックス &#40; 用のロケールを設定します。Reporting Services &#41;](../../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  日付、通貨、数値など、言語や地域ごとに異なるデータの表示形式の設定を変更する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [グラフの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
+ [グラフ &#40; を書式設定レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   

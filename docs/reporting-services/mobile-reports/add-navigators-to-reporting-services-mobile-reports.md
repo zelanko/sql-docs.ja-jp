@@ -14,14 +14,14 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 753cb1a6bc95c854d8a9457f6dc8a70867f2a6bd
 ms.contentlocale: ja-jp
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="add-navigators-to-reporting-services-mobile-reports"></a>Reporting Services モバイル レポートにナビゲーターを追加します。
+# <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]では、時間または選択したものによって視覚エフェクトのデータをフィルター処理するには、 *ナビゲーター* を追加します。 
 
 ナビゲーターは、Power BI や Excel のピボットテーブルのスライサーに似ていますが、ナビゲーター固有の特徴もいくつかあります。

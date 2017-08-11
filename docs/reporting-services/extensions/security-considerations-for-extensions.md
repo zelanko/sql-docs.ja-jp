@@ -18,14 +18,14 @@ helpviewer_keywords:
 - permissions [Reporting Services], extensions
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
 caps.latest.revision: 30
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c7e953f9beea75f08e6c87a210975172e5768d68
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 1d7c7d5f46e1340de1fca0422ff91f64c910a32d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="security-considerations-for-extensions"></a>拡張機能のセキュリティに関する考慮事項
@@ -54,7 +54,7 @@ ms.lasthandoff: 06/22/2017
  レポート サーバーで拡張機能を最初にメモリに読み込むときに、サービス アカウントの資格情報が使用されます。一部の拡張機能アセンブリでは、システム リソースへのアクセス、構成ファイルの読み込み、およびその他の依存するアセンブリの読み込みに特定の権限が必要であるためです。 ただし、アセンブリが読み込まれ、初期化された後は、拡張機能アセンブリのすべての呼び出しに、現在ログオンしているユーザー アカウントの資格情報が使用されます。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services の拡張機能](../../reporting-services/extensions/reporting-services-extensions.md)   
+ [Reporting Services 拡張機能](../../reporting-services/extensions/reporting-services-extensions.md)   
  [Reporting Services 拡張機能ライブラリ](../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

@@ -17,7 +17,7 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 91be669329ea6d822dcc489584d649e5a01ce018
 ms.contentlocale: ja-jp
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>次の手順
 
 [Power BI のレポート サーバーの統合](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
-[Power BI のダッシュ ボードへの Reporting Services アイテムのピン留め](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
+[Power BI ダッシュボードへの Reporting Services のアイテムのピン留め](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
 [Power BI のダッシュボード](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 [Web ポータル](../reporting-services/web-portal-ssrs-native-mode.md)  
 

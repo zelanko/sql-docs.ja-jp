@@ -15,7 +15,7 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d8ec3b39a36a6020a6655e7c7e7c2a589266f3fc
 ms.contentlocale: ja-jp
@@ -60,19 +60,19 @@ ms.lasthandoff: 08/09/2017
 ## <a name="rendering-extensions"></a>表示拡張機能  
  表示拡張機能は、レポート プロセッサのデータとレイアウト情報をデバイス固有の形式に変換します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTML、Excel、CSV、XML、Image、PDF、および [!INCLUDE[msCoName](../includes/msconame-md.md)] Word の 7 つの表示拡張機能が含まれています。  
   
--   **HTML 表示拡張機能** Web ブラウザーを使用してレポート サーバーのレポートを要求すると、レポート サーバーは HTML 表示拡張機能を使用してレポートを表示します。 HTML 表示拡張機能では、すべての HTML が UTF-8 エンコードを使用して生成されます。 詳細については、「[HTML での表示 (レポート ビルダーおよび SSRS)](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)」および「[Reporting Services と Power View のブラウザー サポート](../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。  
+-   **HTML 表示拡張機能** Web ブラウザーを使用してレポート サーバーのレポートを要求すると、レポート サーバーは HTML 表示拡張機能を使用してレポートを表示します。 HTML 表示拡張機能では、すべての HTML が UTF-8 エンコードを使用して生成されます。 詳細については、次を参照してください[HTML &#40; での表示。レポート ビルダーおよび SSRS &#41;](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)と[Reporting Services と Power View のブラウザー サポート](../reporting-services/browser-support-for-reporting-services-and-power-view.md)です。  
   
--   **Excel 表示拡張機能** Excel 表示拡張機能は、[!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 以降のバージョンで表示および変更可能なレポートを表示します。 この表示拡張機能は、バイナリ交換ファイル形式 (BIFF) でファイルを作成します。 BIFF は、Excel データのネイティブなファイル形式です。 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] で表示されたレポートは、スプレッドシートで利用できる機能をすべてサポートします。 詳細については、「[Microsoft Excel へのエクスポート (レポート ビルダーおよび SSRS)](../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)」を参照してください。  
+-   **Excel 表示拡張機能** Excel 表示拡張機能は、 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 以降のバージョンで表示および変更可能なレポートを表示します。 この表示拡張機能は、バイナリ交換ファイル形式 (BIFF) でファイルを作成します。 BIFF は、Excel データのネイティブなファイル形式です。 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] で表示されたレポートは、スプレッドシートで利用できる機能をすべてサポートします。 詳細については、「[Microsoft Excel へのエクスポート (レポート ビルダーおよび SSRS)](../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)」を参照してください。  
   
--   **CSV 表示拡張機能** コンマ区切り (CSV) 表示拡張機能は、書式を持たないコンマ区切りのプレーン テキスト形式のファイルでレポートを表示します。 ユーザーは、[!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] などのスプレッドシート アプリケーション、またはテキスト ファイルを読み取る他のプログラムで、これらのファイルを開くことができます。 詳細については、「[CSV ファイルへのエクスポート (レポート ビルダーおよび SSRS)](../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)」を参照してください。  
+-   **CSV 表示拡張機能** コンマ区切り (CSV) 表示拡張機能は、書式を持たないコンマ区切りのプレーン テキスト形式のファイルでレポートを表示します。 ユーザーは、 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]などのスプレッドシート アプリケーション、またはテキスト ファイルを読み取る他のプログラムで、これらのファイルを開くことができます。 詳細については、「[CSV ファイルへのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)」を参照してください。  
   
--   **XML 表示拡張機能** XML 表示拡張機能は、XML ファイル形式でレポートを表示します。 これらの XML ファイルは、他のプログラムで保存したり読み込んだりすることができます。 XSLT 変換を使用してレポートを別の XML スキーマに変換し、別のアプリケーションで使用できるようにすることも可能です。 XML 表示拡張機能によって生成された XML は、UTF-8 でエンコードされます。 詳細については、「[XML へのエクスポート (レポート ビルダーおよび SSRS)](../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)」を参照してください。  
+-   **XML 表示拡張機能** XML 表示拡張機能は、XML ファイル形式でレポートを表示します。 これらの XML ファイルは、他のプログラムで保存したり読み込んだりすることができます。 XSLT 変換を使用してレポートを別の XML スキーマに変換し、別のアプリケーションで使用できるようにすることも可能です。 XML 表示拡張機能によって生成された XML は、UTF-8 でエンコードされます。 詳細については、「[XML へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)」を参照してください。  
   
--   **画像表示拡張機能** 画像表示拡張機能は、レポートをビットマップまたはメタファイルとして表示します。 この拡張機能は、BMP、EMF、GIF、JPEG、PNG、TIFF、および WMF の各形式でレポートを表示できます。 既定では、画像は TIFF 形式で表示されます。TIFF 形式は、使用するオペレーティング システムの既定のイメージ ビューアー (たとえば、Windows 画像と FAX ビューアー) で表示できます。 ビューアーからプリンターに画像を送ることができます。 画像表示拡張機能を使用してレポートを表示することにより、すべてのクライアントで同じレポートが表示されます (ユーザーが HTML 形式でレポートを表示する場合、ユーザーが使用するブラウザー、ブラウザーの設定、および使用できるフォントによって、レポートの外観が異なります)。画像表示拡張機能はレポートをサーバー上で表示します。そのため、すべてのユーザーが同じ画像を見ることができます。 レポートはサーバー上で表示されるため、レポートで使用されるすべてのフォントがサーバーにインストールされている必要があります。 詳細については、「[画像ファイルへのエクスポート (レポート ビルダーおよび SSRS)](../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)」を参照してください。  
+-   **画像表示拡張機能** 画像表示拡張機能は、レポートをビットマップまたはメタファイルとして表示します。 この拡張機能は、BMP、EMF、GIF、JPEG、PNG、TIFF、および WMF の各形式でレポートを表示できます。 既定では、画像は TIFF 形式で表示されます。TIFF 形式は、使用するオペレーティング システムの既定のイメージ ビューアー (たとえば、Windows 画像と FAX ビューアー) で表示できます。 ビューアーからプリンターに画像を送ることができます。 画像表示拡張機能を使用してレポートを表示することにより、すべてのクライアントで同じレポートが表示されます (ユーザーが HTML 形式でレポートを表示する場合、ユーザーが使用するブラウザー、ブラウザーの設定、および使用できるフォントによって、レポートの外観が異なります)。画像表示拡張機能はレポートをサーバー上で表示します。そのため、すべてのユーザーが同じ画像を見ることができます。 レポートはサーバー上で表示されるため、レポートで使用されるすべてのフォントがサーバーにインストールされている必要があります。 詳細については、「[画像ファイルへのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)」を参照してください。  
   
--   **PDF 表示拡張機能** PDF 表示拡張機能は、Adobe Acrobat 6.0 以降のバージョンで開いたり表示したりすることができる PDF ファイル形式でレポートを表示します。 詳細については、「[PDF ファイルへのエクスポート (レポート ビルダーおよび SSRS)](../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)」を参照してください。  
+-   **PDF 表示拡張機能** PDF 表示拡張機能は、Adobe Acrobat 6.0 以降のバージョンで開いたり表示したりすることができる PDF ファイル形式でレポートを表示します。 詳細については、「[PDF ファイルへのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)」を参照してください。  
   
--   **Word 表示拡張機能** [!INCLUDE[msCoName](../includes/msconame-md.md)] Word 表示拡張機能は、[!INCLUDE[msCoName](../includes/msconame-md.md)] Office Word 2000 以降と互換性のある Word 文書としてレポートを表示します。 詳細については、「[Microsoft Word へのエクスポート (レポート ビルダーおよび SSRS)](../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)」を参照してください。  
+-   **Word 表示拡張機能** [!INCLUDE[msCoName](../includes/msconame-md.md)] Word 表示拡張機能は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Word 2000 以降と互換性のある Word 文書としてレポートを表示します。 詳細については、「[Microsoft Word へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="report-processing-extensions"></a>レポート処理拡張機能  
  レポート処理拡張機能を追加すると、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]に含まれていないレポート アイテム用のカスタム レポート処理を提供できます。 既定では、レポート サーバーはテーブル、グラフ、マトリックス、一覧、テキスト ボックス、画像、およびその他すべてのレポート アイテムを処理できます。 レポートの実行中にカスタム処理を必要とする特別な機能をレポートに追加する場合 (たとえば、 [!INCLUDE[msCoName](../includes/msconame-md.md)] MapPoint の地図を埋め込む場合)、その処理を実行するレポート処理拡張機能を作成できます。  

@@ -15,7 +15,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5203aab062888ca40ee83ee3f00521d6661defba
 ms.contentlocale: ja-jp
@@ -118,11 +118,11 @@ ms.lasthandoff: 08/09/2017
   
      警告定義の作成者の電子メール アドレスが利用できる場合は、 **[受信者]** ボックスに追加されます。  
   
-20. 必要に応じて、 **[件名]** ボックスで、警告メッセージの件名行を更新します。  
+20. 必要に応じて、**[件名]** ボックスで、警告メッセージの件名行を更新します。  
   
      既定の件名は**データ アラート\<データ警告名 >**です。  
   
-21. 必要に応じて、 **[説明]** ボックスに警告メッセージの説明を入力します。  
+21. 必要に応じて、**[説明]** ボックスに警告メッセージの説明を入力します。  
   
 22. **[保存]**をクリックします。  
 

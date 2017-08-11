@@ -15,7 +15,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 91700c92ed7f96e00ba05d7ee9ca96590d0a4837
 ms.contentlocale: ja-jp
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/09/2017
 
 SharePoint 権限の詳細については、「 [ユーザー権限とアクセス許可レベル (SharePoint Server 2010)](http://technet.microsoft.com/library/cc721640.aspx)」を参照してください。
 
-## <a name="grant-permissions"></a>アクセス許可の付与
+## <a name="grant-permissions"></a>[アクセス許可の付与]
   
 1.  権限を付与する SharePoint サイトに移動します。  
   
@@ -59,7 +59,7 @@ SharePoint 権限の詳細については、「 [ユーザー権限とアクセ�
 
 ## <a name="see-also"></a>参照
 
-[SharePoint サイト上のレポート サーバー アイテムに対する権限の設定 (Reporting Services の SharePoint 統合モード)](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+[SharePoint サイト &#40; レポート サーバー アイテムに対する権限を設定します。Reporting Services の SharePoint モード &#41; と統合](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
 [Reporting Services のデータ警告](../reporting-services/reporting-services-data-alerts.md)  
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

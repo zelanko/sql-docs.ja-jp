@@ -17,14 +17,14 @@ helpviewer_keywords:
 - delivery extensions [Reporting Services], about extensions
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 caps.latest.revision: 37
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3b201ef2225d7794b399c79a318627fc978b8b72
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 79894381bf493132c1f73d711ecd6d1ba282401e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="delivery-extensions-overview"></a>配信拡張機能の概要
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
 |レポート サーバーの電子メール|SMTP サーバーを使用して個々のユーザーまたはグループに電子メールでレポートを送信します。|  
 |レポート サーバーのファイル共有|組織内のレポートをネットワーク ファイル共有に配布するときに使用します。 指定したスケジュールでファイル共有にレポートを自動的にコピーできます。|  
   
- ![Reporting Services 配信拡張機能のアーキテクチャ](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Reporting Services delivery extension architecture")  
+ ![Reporting Services 配信拡張機能のアーキテクチャ](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Reporting Services 配信拡張機能のアーキテクチャ")  
 Reporting Services の配信拡張機能アーキテクチャ  
   
  配信拡張機能はサブスクリプションと対になっています。 ユーザーはサブスクリプションを作成するとき、レポートの配信方法を決定するために、利用可能な配信拡張機能の 1 つを選択できます。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、サブスクリプションはレポート サーバー データベースに置かれます。 イベントが発生すると、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] はレポート サーバー データベースにあるサブスクリプションとイベントを照合します。 イベントに関連付けられたサブスクリプションごとに、レポート サーバーは通知を作成します。 データ ドリブン サブスクリプションの場合、受信者ごとに通知が作成されます。 通知が作成されると、レポート サーバーでは特定の配信拡張機能を呼び出し、通知に指定された拡張機能設定の値を渡します。 配信拡張機能は、選択された配信拡張機能により指定されたユーザーに通知を送信します。  
@@ -60,7 +60,7 @@ Reporting Services の配信拡張機能アーキテクチャ
   
 -   レポート マネージャーに独自のサブスクリプション ユーザー インターフェイスを実装する場合は、[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] および Web コントロールについてよく理解していること  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# や [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET など、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 言語による開発経験があること  
+-   開発エクスペリエンス、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]などの言語[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Visual c# または[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET です。  
   
 ## <a name="see-also"></a>参照  
  [Implementing a Delivery Extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   

@@ -17,7 +17,7 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7265597c2376d62b6d3e42c55c8d87e45f6d869e
 ms.contentlocale: ja-jp
@@ -42,7 +42,7 @@ ms.lasthandoff: 08/09/2017
  内部エラーが発生するのはまれです。 このエラーが発生した場合は、レポート サーバーのトレース ログで詳細情報を確認できます。 さらに、このエラーが発生したコンピューターで、ローカル管理者として処理を実行している場合は、呼び出し履歴で詳細情報を確認できます。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- このメッセージの具体的な原因を特定するのには \Microsoft SQL Server\MSRS12 にあるレポート サーバー ログ ファイルを確認します。\<instancename > \reporting です。 詳細については、「 [Reporting Services のログ ファイルとソース](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)」を参照してください。  
+ このメッセージの具体的な原因を特定するのには \Microsoft SQL Server\MSRS12 にあるレポート サーバー ログ ファイルを確認します。\<instancename > \reporting です。 詳細については、「[Reporting Services のログ ファイルとソース](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)」を参照してください。  
   
  呼び出し履歴を表示するには、エラーが発生したページを右クリックし、 **[ソースの表示]**をクリックします。 呼び出し履歴を表示するには、エラーが発生したコンピューターの管理者権限が必要です。  
   
@@ -51,6 +51,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="internal-only"></a>内部使用のみ  
   
 ## <a name="see-also"></a>参照  
- [Start and Stop the Report Server Service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
+ [起動し、レポート サーバー サービスを停止します](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
   
   

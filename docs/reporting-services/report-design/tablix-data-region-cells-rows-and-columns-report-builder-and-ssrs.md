@@ -20,7 +20,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 79c838b6bc98b64ac57b83e193b25d861e905e38
 ms.contentlocale: ja-jp
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix データ領域のセル、行、および列 (レポート ビルダーおよび SSRS)
-  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートの Tablix データ領域の行および列にデータを表示する方法を制御するには、詳細データ、グループ データ、ラベル、および合計に対して行と列を指定する方法を理解する必要があります。 多くの場合、テーブル、マトリックス、または一覧の既定の構造を使用してデータを表示できます。 詳細については、「[テーブル (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)」、「[マトリックスの作成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)」、または「[一覧がある請求書とフォームを作成する (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)」を参照してください。  
+  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートの Tablix データ領域の行および列にデータを表示する方法を制御するには、詳細データ、グループ データ、ラベル、および合計に対して行と列を指定する方法を理解する必要があります。 多くの場合、テーブル、マトリックス、または一覧の既定の構造を使用してデータを表示できます。 詳細については、次を参照してください。[テーブル & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)、[マトリックス](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)、または[一覧](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)です。  
   
  Tablix データ領域では、詳細行および詳細列に詳細データが表示され、グループ行およびグループ列にグループ化されたデータが表示されます。 Tablix データ領域に行グループおよび列グループを追加すると、データを表示するための行および列が自動的に追加されます。 行および列を手動で追加および削除して、Tablix データ領域をカスタマイズし、レポートでデータを表示する方法を制御することができます。  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 08/09/2017
   
  詳細グループの場合、各詳細行は詳細グループの内側にあります。 行は、データセット クエリの結果セット内の値ごとに繰り返されます。  
   
- グループ階層の詳細については、「[グループについて (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
+ グループ階層の詳細については、次を参照してください。[グループについて & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
  次の図に、入れ子になった行グループと詳細グループのある Tablix データ領域を示します。  
   
@@ -99,10 +99,10 @@ ms.lasthandoff: 08/09/2017
   
  グループに関連付けられている行および列を削除するため、そのグループを削除できます。 グループを削除する場合、グループ定義のみを削除する方法と、グループおよび関連付けられているすべての行および列を削除する方法があります。 グループのみを削除すると、データ領域で行および列レイアウトが維持されます。 グループとその関連行および列を削除すると、そのグループに関連付けられているすべての静的な行および列 (グループ ヘッダーおよびフッターを含む) と、動的な行および列 (グループ インスタンスを含む) が削除されます。  
   
- 行および列の追加または削除の詳細な手順については、「[列の挿入または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md)」および「[列の挿入または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)」を参照してください。  
+ 追加または削除する行と列に関する詳細な手順については、次を参照してください[挿入または行 &#40; を削除します。。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md)と[挿入または列 &#40; を削除します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
 ## <a name="understanding-tablix-cells"></a>Tablix セルについて  
- Tablix セルは 4 つの Tablix 領域 (Tablix 本体、Tablix 行グループ領域、Tablix 列グループ領域、または Tablix コーナー) のいずれかに属します。 各セルにはデータセット内の任意の値を表示できますが、セルごとの既定の機能はその場所によって異なります。 Tablix 領域の詳細については、「[Tablix データ領域部分 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)」を参照してください。  
+ Tablix セルは 4 つの Tablix 領域 (Tablix 本体、Tablix 行グループ領域、Tablix 列グループ領域、または Tablix コーナー) のいずれかに属します。 各セルにはデータセット内の任意の値を表示できますが、セルごとの既定の機能はその場所によって異なります。 Tablix 領域の詳細については、次を参照してください。 [Tablix データ領域部分 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  既定では、Tablix 行および列グループ領域内のセルはグループ メンバーを表します。 グループのメンバーは、レポート定義で複数のツリー構造に分類されます。 行グループ階層は水平方向に展開します。 列グループ階層は垂直方向に展開します。 グループを作成すると、これらのセルが自動的に追加され、実行時にグループの一意の値が表示されます。  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 08/09/2017
  Tablix 本体領域のセルには、セルが詳細行または詳細列内にある場合は詳細データを、セルがグループ行またはグループ列内にある場合は集計グループ データを表示できます。 セルのデータのスコープは、そのセルが属する最も内側の行グループと最も内側の列グループの交点です。  
   
 > [!NOTE]  
->  各セルについて表示される実際のデータは、セルに含まれているレポート アイテムの評価済みの式 (通常、テキスト ボックス) です。 詳細行または詳細列に属するセルの場合、式は既定で詳細データ (例: **[LineTotal]**) になります。 詳細行または詳細列に属さないセルの場合、式は既定で集計関数 (例: **Sum[LineTotal]**) になります。 セルがグループ行またはグループ列に属していても、式で集計関数が指定されていない場合、グループ内の最初の値が表示されます。 集計の詳細については、「[合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)」を参照してください。  
+>  各セルについて表示される実際のデータは、セルに含まれているレポート アイテムの評価済みの式 (通常、テキスト ボックス) です。 詳細行または詳細列に属するセルの場合、式は既定で詳細データ (例: **[LineTotal]**) になります。 詳細行または詳細列に属さないセルの場合、式は既定で集計関数 (例: **Sum[LineTotal]**) になります。 セルがグループ行またはグループ列に属していても、式で集計関数が指定されていない場合、グループ内の最初の値が表示されます。 集計の詳細については、次を参照してください。[式のスコープの合計、集計、および組み込みコレクション & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="merging-and-splitting-cells"></a>セルの結合と分割  
  Tablix 領域内では、隣接する複数のセルを結合できます。 たとえば、複数の列または行にまたがるラベルのセルを作成できます。  
@@ -120,7 +120,7 @@ ms.lasthandoff: 08/09/2017
   
  Tablix 本体領域では、セルは水平方向にのみ結合できます。 垂直方向のセルの結合はサポートされていません。  
   
- 詳細については、「[データ領域内のセルの結合 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「[データ領域内のセルの結合 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
  以前に結合したセルを分割できます。 セルを水平方向に列に分割するか、垂直方向に行に分割できます。 セルを、セルのブロックに分割するには、最初にセルを水平方向に分割し、次に、垂直方向に必要な数だけ分割します。  
   

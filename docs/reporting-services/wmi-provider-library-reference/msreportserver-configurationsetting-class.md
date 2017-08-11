@@ -23,7 +23,7 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0c9a364ca856fef827afee604f64893ce20d21a1
 ms.contentlocale: ja-jp
@@ -49,7 +49,7 @@ public class MSReportServer_ConfigurationSetting
  この型の public static (**では** Shared [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) のすべてのメンバーは、マルチスレッド操作で安全に使用できます。 インスタンスのメンバーは、スレッドセーフであるとは限りません。  
   
 ## <a name="example"></a>例  
- 次のコードを実行するには、それぞれの代わりに、サーバー名を追加\< *servername*>。 インストールの場所が既定でない場合は、その場所を指すようにパスを更新します。 次のコード例は、 *MSReportServer_ConfigurationSetting* クラスの各プロパティを反復処理し、各プロパティの名前とその値をコンソールに出力します。  
+ 次のコードを実行するには、それぞれの代わりに、サーバー名を追加\< *servername*>。 インストールの場所が既定でない場合は、その場所を指すようにパスを更新します。 次のコード例は、*MSReportServer_ConfigurationSetting* クラスの各プロパティを反復処理し、各プロパティの名前とその値をコンソールに出力します。  
   
 ```vb  
 Imports System  
@@ -174,9 +174,9 @@ class Class1
 ```  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
- **プラットフォーム:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
+ **Platform:**[!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

@@ -19,20 +19,20 @@ helpviewer_keywords:
 - Nofication class
 ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
 caps.latest.revision: 33
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 708144d726d97380f32d39ac88901e0f6d57ba0b
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 064d5556dca130324f69dd49d14f3caa76c8eec8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>配信拡張機能での Notification クラスの使用
   <xref:Microsoft.ReportingServices.Interfaces.Notification> クラスは <xref:Microsoft.ReportingServices.Interfaces> 名前空間にあり、配信拡張機能がレポートの配信に使用するサブスクリプション情報を表します。 <xref:Microsoft.ReportingServices.Interfaces.Notification> クラスには、配信するレポートの表示、通知の状態の決定、およびユーザー データの設定に使用できる多数のプロパティが用意されています。  
   
- ![レポート通知の処理](../../../reporting-services/extensions/delivery-extension/media/bk-ext-03.gif "Report notification process")  
+ ![レポートの通知プロセス](../../../reporting-services/extensions/delivery-extension/media/bk-ext-03.gif "通知プロセスのレポート")  
 notification は、配信の中心的なオブジェクトです。  
   
  カスタム配信拡張機能を使用するサブスクリプションに関連付けられたイベントが起動すると、<xref:Microsoft.ReportingServices.Interfaces.Report> オブジェクトを含む通知が作成されます。 <xref:Microsoft.ReportingServices.Interfaces.Report> オブジェクトは、特定のレポートをサポートされている表示形式で表示するための機能をカプセル化します。また、このオブジェクトには、サーバー上のレポートの URL やレポート名など、レポート関連のプロパティが含まれます。 詳細については、<xref:Microsoft.ReportingServices.Interfaces.Report>クラスを参照してください[配信拡張機能のレポート クラスを使用して](../../../reporting-services/extensions/delivery-extension/using-the-report-class-for-a-delivery-extension.md)です。  

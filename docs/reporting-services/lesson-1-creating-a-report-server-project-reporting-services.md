@@ -14,7 +14,7 @@ caps.latest.revision: 57
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: bead48dd2f32047b2782a54204bf06a145a7d71d
 ms.contentlocale: ja-jp
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)]を開きます。  
   
-2.  **[ファイル]** メニューの **[新規]**  > **[プロジェクト]** をクリックします。  
+2.  **ファイル**メニュー >**新規** > **プロジェクト**です。  
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
@@ -80,10 +80,10 @@ ms.lasthandoff: 08/09/2017
     **[レポート データ]** ペインでデータを定義します。 **[デザイン]** ビューではレポートのレイアウトを定義します。 **[プレビュー]** ビューではレポートを実行して結果を確認できます。  
   
 ## <a name="next-lesson"></a>次のレッスン  
-ここでは、"Tutorial" というレポート プロジェクトを作成し、このレポート プロジェクトにレポート定義ファイル (.rdl) を追加しました。 次に、レポートで使用するデータ ソースを指定します。 「[レッスン 2: 接続情報の指定 (Reporting Services)](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)」を参照してください。  
+ここでは、"Tutorial" というレポート プロジェクトを作成し、このレポート プロジェクトにレポート定義ファイル (.rdl) を追加しました。 次に、レポートで使用するデータ ソースを指定します。 参照してください[レッスン 2: 接続情報 &#40; を指定します。Reporting Services &#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
   
 ## <a name="see-also"></a>参照  
-[基本的なテーブル レポートの作成 &#40;SSRS チュートリアル&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
+[基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
 
 

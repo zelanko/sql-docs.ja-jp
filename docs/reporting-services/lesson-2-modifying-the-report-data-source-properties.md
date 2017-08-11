@@ -16,7 +16,7 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be153d2ba1469034cad5e31e5e823d6ac5be4b4e
 ms.contentlocale: ja-jp
@@ -113,7 +113,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="bkmk_redeploy"></a>レポートを再配置する  
   
-1.  レポートを再配置して、このレッスンで適用した変更を、次のレッスンのサブスクリプション構成で利用できるようにします。 テーブルのチュートリアルで使用されるプロジェクト プロパティの詳細については、「[レッスン 6: グループと合計の追加 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)」の「レポートをレポート サーバーにパブリッシュするには (オプション)」セクションを参照してください。  
+1.  レポートを再配置して、このレッスンで適用した変更を、次のレッスンのサブスクリプション構成で利用できるようにします。 テーブルのチュートリアルで使用するプロジェクト プロパティの詳細についてを参照してください (省略可能) レポート サーバーにレポートをパブリッシュ' するには ' の[レッスン 6: 追加のグループ化と集計 & #40 です。Reporting Services &#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 2.  ツール バーの **[ビルド]** をクリックし、 **[チュートリアルの配置]**をクリックします。  
   

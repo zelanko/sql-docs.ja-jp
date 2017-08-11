@@ -18,14 +18,14 @@ helpviewer_keywords:
 - custom report items
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
 caps.latest.revision: 22
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2396af94f8c28c41d41c52cd505d12aa8dceee17
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 260b1fbbcac13246da70790ab53cfcbbb07623c2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="custom-report-items"></a>カスタム レポート アイテム
@@ -51,13 +51,13 @@ ms.lasthandoff: 06/22/2017
  [カスタム レポート アイテムのデザイン時コンポーネントの作成](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  
  カスタム レポート アイテムのデザイン時コンポーネントの作成方法について説明します。  
   
- [カスタム レポート アイテムを配置する方法](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [方法: カスタム レポート アイテムを配置](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
  カスタム レポート アイテムの配置方法について説明します。  
   
  [カスタム レポート アイテムのクラス ライブラリ](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
  カスタム レポート アイテム インフラストラクチャのクラスとマネージ ラッパー クラスについて説明します、 **Microsoft.ReportDesigner**名前空間。  
   
 ## <a name="see-also"></a>参照  
- [テクニカル リファレンス (SSRS)](../../reporting-services/technical-reference-ssrs.md)  
+ [テクニカル リファレンス & #40 です。SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)  
   
   

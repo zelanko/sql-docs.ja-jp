@@ -18,7 +18,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 45aad2cc5dbdbc23fa28f1f70b138da4ec05f281
 ms.contentlocale: ja-jp
@@ -134,9 +134,9 @@ Reporting Services にはメール配信拡張機能があり、メールを使�
 ## <a name="configuration-options-for-remote-smtp-service"></a>リモート SMTP サービスの構成オプション
 レポート サーバーと SMTP サーバーまたはフォワーダーの間の接続は、次の構成設定によって決まります。
 
-- `<SendUsing>` メッセージを送信する方法を指定します。 ネットワーク SMTP サービスまたはローカル SMTP サービスのピックアップ ディレクトリを選択できます。 リモート SMTP サービスを使用するには、RSReportServer.config ファイルでこの値を **2** に設定する必要があります。
-- `<SMTPServer>` リモート SMTP サーバーまたはフォワーダーを指定します。 リモート SMTP サーバーまたはフォワーダーを使用している場合には、この値は必須です。
-- `<From>` メール メッセージの **[送信者]** 行に使用する値を設定します。 リモート SMTP サーバーまたはフォワーダーを使用している場合には、この値は必須です。
+- `<SendUsing>`メッセージを送信する方法を指定します。 ネットワーク SMTP サービスまたはローカル SMTP サービスのピックアップ ディレクトリを選択できます。 リモート SMTP サービスを使用するには、RSReportServer.config ファイルでこの値を **2** に設定する必要があります。
+- `<SMTPServer>`リモート SMTP サーバーまたはフォワーダーを指定します。 リモート SMTP サーバーまたはフォワーダーを使用している場合には、この値は必須です。
+- `<From>`表示される値の設定、**から:**電子メール メッセージの行にします。 リモート SMTP サーバーまたはフォワーダーを使用している場合には、この値は必須です。
 
 リモート SMTP サービスで使用する他の値としては、次のものがあります (既定値を変更するのでない限り、これらの値を指定する必要はありません)。
 
@@ -228,7 +228,7 @@ Reporting Services にはメール配信拡張機能があり、メールを使�
   
 ## <a name="see-also"></a>参照  
 [Reporting Services 構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
-[Reporting Services の構成ファイル (rsreportserver.config) の変更します。](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
+[Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [Rsreportserver.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   
   

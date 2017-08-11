@@ -22,7 +22,7 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c18054b5c11569239af51e7c3808bdb9ce05109
 ms.contentlocale: ja-jp
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/09/2017
   
  アカウントを指定するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールまたは **rsconfig** ユーティリティを使用できます。 自動実行アカウントを構成する最も簡単な方法は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを実行して、[実行アカウント] ページで資格情報を指定することです。  
   
-1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動し、構成するレポート サーバー インスタンスに接続します。 手順については、「[Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
+1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動し、構成するレポート サーバー インスタンスに接続します。 手順については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
 2.  [実行アカウント] ページで、 **[実行アカウントの指定]**を選択します。  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 08/09/2017
   
      **rsconfig-e-u\<ドメイン/ユーザー名 >-p\<パスワード >**  
   
- **rsconfig -e** では、他にも引数がサポートされています。 構文の詳細およびコマンド例については、SQL Server オンライン ブックの「[rsconfig ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)」を参照してください。  
+ **rsconfig -e** では、他にも引数がサポートされています。 コマンドの例を表示して構文に関する詳細については、次を参照してください。 [rsconfig ユーティリティ & #40 です。SSRS &#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) SQL Server オンライン ブック。  
   
 ### <a name="how-account-information-is-stored"></a>アカウント情報の保存方法  
  アカウントを設定すると、ローカルまたはリモートのレポート サーバー インスタンス上の RSreportserver.config ファイル内で、暗号化された値として次の設定が指定されます。  

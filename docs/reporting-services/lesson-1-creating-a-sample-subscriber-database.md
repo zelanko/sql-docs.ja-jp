@@ -16,7 +16,7 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4d862dc34dcbb81ce8d50cfac53d81a80f47d29c
 ms.contentlocale: ja-jp
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/09/2017
     GO  
     ```  
   
-7.  ツールバーの **[実行]** をクリックします。  
+7.  をクリックして**!実行**ツールバー。  
   
 8.  SELECT ステートメントを使用して、3 行のデータがあることを確認します。 例: `select * from OrderInfo`  
   

@@ -15,7 +15,7 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ca6519365ae81c5a7875825fb976c163dbb588f3
 ms.contentlocale: ja-jp
@@ -23,13 +23,13 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>レポート ビューアーでのローカル モードと接続モードのレポート
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートは、 *レポート サーバーを使用する、* ローカル モード *または*接続モード [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のいずれかで実行するように構成できます。 代わりに、データ拡張機能でローカル モード レポートがサポートされている場合は、レポート ビューアーを使用して SharePoint から直接レポートを表示できます。 この方法は、 *ローカル モード*と呼ばれます。 以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、レポート ビューアー コントロールでレポートを表示できるように、SharePoint モードで構成されている [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーに SharePoint ファームが接続されている必要がありました。 この方法は、 *リモート モード* または *接続モード*と呼ばれます。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポートは、いずれかで実行するように構成できます*ローカル モード*または*接続モード*、どの活用して、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポート サーバー。 代わりに、データ拡張機能でローカル モード レポートがサポートされている場合は、レポート ビューアーを使用して SharePoint から直接レポートを表示できます。 この方法は、 *ローカル モード*と呼ばれます。 以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、レポート ビューアー コントロールでレポートを表示できるように、SharePoint モードで構成されている [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーに SharePoint ファームが接続されている必要がありました。 この方法は、 *リモート モード* または *接続モード*と呼ばれます。  
   
  *ローカル モード* では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーはありません。 SharePoint 製品用に [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインをインストールする必要がありますが、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーは必須ではありません。 ローカル モードでは、ユーザーはレポートを表示できますが、サブスクリプションやデータ警告などのサーバー側機能にはアクセスできません。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード:|  
   
  **このトピックの内容:**  
   
@@ -46,9 +46,9 @@ ms.lasthandoff: 08/09/2017
   
  ローカル モード レポートをサポートしているデータ処理拡張機能の一覧を次に示します。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 2010 レポート拡張機能。 Access Services の詳細については、「 [Access Services と SQL Reporting Services の併用: SQL Server 2008 R2 Reporting Services アドインのインストール (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686)」を参照してください。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]Access 2010 レポート拡張機能。 Access Services の詳細については、「 [Access Services と SQL Reporting Services の併用: SQL Server 2008 R2 Reporting Services アドインのインストール (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686)」を参照してください。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint リスト データ拡張機能。 SharePoint リスト データ拡張機能の詳細については、「 [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint リスト データ拡張機能。 SharePoint リスト データ拡張機能の詳細については、「 [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   
  カスタム データ処理拡張機能を開発して、ローカル モードをサポートすることもできます。 詳細については、「 [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)」を参照してください。  
   
@@ -89,6 +89,6 @@ ms.lasthandoff: 08/09/2017
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 接続モードでの ADS 拡張機能の使用に関する最新情報については、「 [SharePoint サイトの Access Services レポートで示されるデータ拡張機能「ADS」のエラー](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
+ [Reporting Services &#40; でサポートされるデータ ソースSSRS &#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   
   

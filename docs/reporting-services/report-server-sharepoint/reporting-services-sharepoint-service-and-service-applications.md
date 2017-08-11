@@ -15,7 +15,7 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d34dfcd5c6c4ecb6ef91dc57cb7e98ee71512393
 ms.contentlocale: ja-jp
@@ -23,7 +23,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services の SharePoint サービスとサービス アプリケーション
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードは、SharePoint サービス アーキテクチャ上に構築されており、SharePoint サービスと一対多のサービス アプリケーションを利用します。 サービス アプリケーションを作成すると、サービスが使用可能になり、サービス アプリケーション データベースが生成されます。 複数の Reporting Services サービス アプリケーションを作成することができますが、ほとんどの配置シナリオではサービス アプリケーションは 1 つで十分です。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint モードでは、SharePoint サービス アーキテクチャ上に構築されており、SharePoint サービスと一対多のサービス アプリケーションを利用します。 サービス アプリケーションを作成すると、サービスが使用可能になり、サービス アプリケーション データベースが生成されます。 複数の Reporting Services サービス アプリケーションを作成することができますが、ほとんどの配置シナリオではサービス アプリケーションは 1 つで十分です。  
   
  このトピックの内容は次のとおりです。  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
 -   [関連タスク](#bkmk_related)  
   
 ##  <a name="bkmk_createapp"></a> Reporting Services サービス アプリケーションの作成  
- SharePoint サーバーの全体管理または PowerShell スクリプトを使用して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを作成できます。 SharePoint サーバーの全体管理を使用する方法の詳細については、「 [SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c)」の「Reporting Services サービス アプリケーションの作成」セクションを参照してください。 サービス アプリケーションを作成するための PowerShell スクリプトの例は、このトピックの後半の PowerShell のセクションを参照してください。  
+ SharePoint サーバーの全体管理または PowerShell スクリプトを使用して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを作成できます。 SharePoint サーバーの全体管理を使用する方法の詳細については、「[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c)」の「Reporting Services サービス アプリケーションの作成」セクションを参照してください。 サービス アプリケーションを作成するための PowerShell スクリプトの例は、このトピックの後半の PowerShell のセクションを参照してください。  
   
 ##  <a name="bkmk_associations"></a> プロキシ グループを使用したサービス アプリケーションの関連付けの変更  
  サービス アプリケーションを作成するための [新規作成] ページには、 **[Web アプリケーションの関連付け]**セクションがあります。 このセクションでは、サービス アプリケーションの作成時に関連付けを行うことができます。 関連付けを変更してカスタム構成をサービス アプリケーションに割り当てるには、次の手順を使用します。 同じ一般的なプロセスは、サービス アプリケーションとカスタム グループとの関連付けを変更せずに、プロキシを既定のグループに追加する場合にも使用できます。  
@@ -87,7 +87,7 @@ ms.lasthandoff: 08/09/2017
   
 |タスク|リンク|  
 |----------|----------|  
-|サービス アプリケーションの設定を管理する|[Manage a Reporting Services SharePoint Service Application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)|  
-|サービス アプリケーションと関連コンポーネント (暗号化キーやプロキシなど) をバックアップおよび復元する|[Backup and Restore Reporting Services SharePoint Service Applications](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
+|サービス アプリケーションの設定を管理する|[Reporting Services SharePoint サービス アプリケーションを管理します。](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)|  
+|サービス アプリケーションと関連コンポーネント (暗号化キーやプロキシなど) をバックアップおよび復元する|[バックアップと復元の Reporting Services SharePoint サービス アプリケーション](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
   
   

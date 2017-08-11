@@ -20,14 +20,14 @@ helpviewer_keywords:
 - report definition files [Reporting Services]
 ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
 caps.latest.revision: 36
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 87609ab5b118eaa696f7152b25cf7e984e7f6e7f
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 9fd80c818f13972434b72a72ce306e2f494cf56f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>RDL ファイルのアセンブリの参照
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
 </CodeModules>  
 ```  
   
- 呼び出す代わりに<xref:System.Reflection.Assembly.Load%2A>、カスタム コードから手動で追加するかによって、カスタム アセンブリを登録**CodeModule**要素を RDL ファイルにまたはを使用して、**参照**のタブ、**レポート プロパティ**ダイアログ。 詳細については、「 [レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)を表しています。  
+ 呼び出す代わりに<xref:System.Reflection.Assembly.Load%2A>、カスタム コードから手動で追加するかによって、カスタム アセンブリを登録**CodeModule**要素を RDL ファイルにまたはを使用して、**参照**のタブ、**レポート プロパティ**ダイアログ。 詳細については、「[レポート デザイナーでカスタム コードやアセンブリを式から参照する &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)」を参照してください。  
   
  **クラス**要素が、レポート定義のインスタンス メンバーの使用をサポートします。 **クラス**クラス名とインスタンス名への参照を含む最上位の要素。 インスタンス メンバーの使用をサポートするレポート定義のエントリは次のようになります。  
   
@@ -57,6 +57,6 @@ ms.lasthandoff: 06/22/2017
  詳細については、次を参照してください。 [Custom Assemblies Through Expressions にアクセスする](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md)です。  
   
 ## <a name="see-also"></a>参照  
- [レポートでカスタム アセンブリの使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
+ [レポートでのカスタム アセンブリの使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

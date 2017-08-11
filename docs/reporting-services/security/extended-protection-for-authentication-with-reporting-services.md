@@ -15,7 +15,7 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3d0ba0f40d1d93f03a08b762d379cbe1242f0cd1
 ms.contentlocale: ja-jp
@@ -172,11 +172,11 @@ SSRS は、サポートおよびオペレーティング システムで有効�
 ## <a name="next-steps"></a>次の手順
 
 [拡張保護を使用したデータベース エンジンへの接続](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
-[認証の概要の拡張保護](http://go.microsoft.com/fwlink/?LinkID=177943)   
+[認証の拡張保護の概要](http://go.microsoft.com/fwlink/?LinkID=177943)   
 [拡張保護付き統合 Windows 認証](http://go.microsoft.com/fwlink/?LinkId=179922)   
-[マイクロソフト セキュリティ アドバイザリ: 認証に対する保護の強化](http://go.microsoft.com/fwlink/?LinkId=179923)   
+[マイクロソフト セキュリティ アドバイザリ: 認証の拡張保護](http://go.microsoft.com/fwlink/?LinkId=179923)   
 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)   
 [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
-[SetExtendedProtectionSettings メソッド & #40 です。WMI MSReportServer_ConfigurationSetting &#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
+[SetExtendedProtectionSettings Method &#40;WMI MSReportServer_ConfigurationSetting&#41; (SetExtendedProtectionSettings メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

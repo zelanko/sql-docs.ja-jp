@@ -15,7 +15,7 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a401c2af14ba5e530d9efe3ff62eeae3ad9f8e7e
 ms.contentlocale: ja-jp
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE[ssrs-appliesto-sql2016-xpreview](../../includes/ssrs-appliesto-sql2016-xpreview.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  このトピックでは、SharePoint モードで配置した [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を SharePoint 環境間で移行するために必要な手順の概要について説明します。 具体的な手順は、以降元の SharePoint のバージョンによって異なる場合があります。 SharePoint モードのアップグレードと移行のシナリオの詳細については、「 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)」を参照してください。 1 つのサーバーから別のサーバーにのみレポート アイテムをコピーする場合は、「[レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
+  このトピックでは、SharePoint モードで配置した [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を SharePoint 環境間で移行するために必要な手順の概要について説明します。 具体的な手順は、以降元の SharePoint のバージョンによって異なる場合があります。 SharePoint モードのアップグレードと移行のシナリオの詳細については、「 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)」を参照してください。 1 つのサーバーから別のサーバーにのみレポート アイテムをコピーする場合は、「 [レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードの配置の移行の詳細については、「[Reporting Services のインストールの移行 &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)」を参照してください。  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/09/2017
 -   [コンテンツ データベースを移動する (SharePoint 2013)](http://technet.microsoft.com/library/cc262792.aspx)
   
 ##  <a name="bkmk_prior_versions"></a> SQL Server 2012 よりも前のバージョンの Reporting Services SharePoint モードからの移行  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード アーキテクチャは、サービス アプリケーション データベース スキーマを含め、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]で変更されました。 移行する場合は、[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]より前のバージョンからの SharePoint モード[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、最初に SharePoint と SQL Server 2016 Reporting Services SharePoint モードをインストールして、新しい SharePoint 環境を作成します。 詳細については、「 [Reporting Services SharePoint モードのインストール](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)」を参照してください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード アーキテクチャは、サービス アプリケーション データベース スキーマを含め、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]で変更されました。 移行する場合は、[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]より前のバージョンからの SharePoint モード[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、最初に SharePoint と SQL Server 2016 Reporting Services SharePoint モードをインストールして、新しい SharePoint 環境を作成します。 詳細については、「 [Reporting Services の SharePoint モードのインストール](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)」を参照してください。  
   
  新しい SharePoint 環境が実行されていると、コンテンツ データベースを含むデータベース レベルで、コンテンツのみの移行またはすべてのコンテンツの移行を選択できます。  
   
@@ -69,11 +69,11 @@ ms.lasthandoff: 08/09/2017
   
 |データベース|名前の例||  
 |--------------|------------------|-|  
-|カタログ データベース|ReportingService_[service application GUID] **(\*)**|ユーザーが移行。|  
-|一時データベース|ReportingService_[service application GUID]TempDB **(\*)**|ユーザーが移行。|  
+|カタログ データベース|[サービス アプリケーションの GUID] ReportingService_ **(\*)**|ユーザーが移行。|  
+|一時データベース|[サービス アプリケーションの GUID] ReportingService_ TempDB **(\*)**|ユーザーが移行。|  
 |警告データベース|ReportingService_[service application GUID]_Alerting|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの作成時に作成。|  
   
- **(\*)** 表に示した名前の例は、新しい SSRS サービス アプリケーションを作成する際に SSRS によって使用される名前付け規則に従っています。 別のサーバーから移行する場合、カタログ データベースと一時データベースの名前は元のインストールと同じになります。  
+ **(\*)**の表に示す例の名前が SSRS によって使用される、新しい SSRS サービス アプリケーションを作成するときに、名前付け規則に従います。 別のサーバーから移行する場合、カタログ データベースと一時データベースの名前は元のインストールと同じになります。  
   
 ####  <a name="bkmk_backup_operations"></a> バックアップ操作  
  ここでは、移行に必要な情報の種類と、バックアップの実行に使用するツールやプロセスについて説明します。  

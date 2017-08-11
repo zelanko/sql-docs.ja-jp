@@ -16,7 +16,7 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b491008866649087e050b04261bfde7a3ad82e92
 ms.contentlocale: ja-jp
@@ -24,7 +24,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>レッスン 3: レポート ウィザードを使用して親レポートを設計する
-親レポートのデータ接続とデータ テーブルを作成した後は、レポート デザイナーのレポート ウィザードを使用して親レポートを設計します。 レポート デザイナーの詳細については、[「レポート デザイナーを使用してレポートをデザインする (SSRS)」](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) を参照してください。  
+親レポートのデータ接続とデータ テーブルを作成した後は、レポート デザイナーのレポート ウィザードを使用して親レポートを設計します。 レポート デザイナーの詳細については、次を参照してください。[レポートをデザインすると、レポート デザイナーと #40 です。SSRS &#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 ### <a name="to-design-the-parent-report-using-the-report-wizard"></a>レポート ウィザードを使用して親レポートを設計するには  
   

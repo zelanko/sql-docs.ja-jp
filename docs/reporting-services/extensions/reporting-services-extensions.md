@@ -20,14 +20,14 @@ helpviewer_keywords:
 - extensions [Reporting Services]
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
 caps.latest.revision: 45
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cd4cd15bf03648329dab8bc7ef55314ece7cf9a2
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 37adf4c09f7f23294572a17631240ad88f51fc9e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-extensions"></a>Reporting Services の拡張機能
@@ -40,16 +40,16 @@ ms.lasthandoff: 06/22/2017
  別のレポート サーバー拡張機能であるレポート定義カスタマイズ拡張機能 (RDCE) では、レポート定義を処理エンジンに渡す前に動的にカスタマイズできます。 レポートは、ユーザーや言語などの要因に基づいてカスタマイズできます。 たとえば、部署のマネージャーやメンバーなどのユーザーごとに異なるビューを実装したり、フランス語やアラビア語では異なるレイアウトで表示されるようにレポートをカスタマイズしたりできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [セキュリティ拡張機能に関する考慮事項](../../reporting-services/extensions/security-considerations-for-extensions.md)  
+ [拡張機能のセキュリティに関する考慮事項](../../reporting-services/extensions/security-considerations-for-extensions.md)  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 拡張機能の開発と配置に関連するセキュリティ上の問題について説明します。  
   
  [データ処理拡張機能の実装](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のデータ処理拡張機能を実装するための要件と手順について説明します。  
   
- [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)  
+ [配信拡張機能の実装](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の配信拡張機能を実装するための要件と手順について説明します。  
   
- [表示拡張機能を実装します。](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)  
+ [表示拡張機能の実装](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)  
  表示拡張機能の開発の概要が記載されています。  
   
  [セキュリティ拡張機能の実装](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  

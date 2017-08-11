@@ -16,7 +16,7 @@ caps.latest.revision: 64
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 76224139b629d797735b88bfcc692a1e8abce336
 ms.contentlocale: ja-jp
@@ -72,7 +72,7 @@ ms.lasthandoff: 08/09/2017
 > **[ファイル]** メニューの **[すべてを保存]** をクリックして、レポートを保存します。  
   
 ## <a name="next-steps"></a>次の手順  
-[テーブル] データ領域がレポートに、フィールドがデータ領域にそれぞれ正しく追加され、レポートが正しくプレビューされました。 次は、列ヘッダー、日付、および通貨の値の書式を設定します。 「[レッスン 5: レポートの書式設定 (Reporting Services)](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)」を参照してください。  
+[テーブル] データ領域がレポートに、フィールドがデータ領域にそれぞれ正しく追加され、レポートが正しくプレビューされました。 次は、列ヘッダー、日付、および通貨の値の書式を設定します。 参照してください[レッスン 5: レポート &#40; を書式設定Reporting Services &#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
   
 ## <a name="see-also"></a>参照  
 [テーブル &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  

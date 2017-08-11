@@ -17,7 +17,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: db3f35e539a034d2016de9cd89fb0fe8b7c1d0a7
 ms.contentlocale: ja-jp
@@ -41,7 +41,7 @@ public string MachineAccountIdentity;
  レポート サーバーがインストールされているコンピューターのコンピューター アカウント ID を含む **String** 値。  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting プロパティ](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-properties.md)  

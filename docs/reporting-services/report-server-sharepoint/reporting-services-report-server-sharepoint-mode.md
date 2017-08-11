@@ -15,7 +15,7 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a633c14ae598d3535acc4f721ae5ae392f91a6a2
 ms.contentlocale: ja-jp
@@ -31,9 +31,9 @@ ms.lasthandoff: 08/09/2017
   
 -   [SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c)。  
   
--   [ファームへのレポート サーバーの追加 (SSRS スケールアウト)](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
+-   [追加のレポート サーバーを追加するファーム & #40 です。SSRS スケール アウト &#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
   
- このリリースの新機能については、「[Reporting Services (SSRS) の新機能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)」の SharePoint に関するセクションを参照してください。  
+ このリリースの新機能についてを参照してください」の SharePoint[新 Reporting Services & #40 です。SSRS &#41;](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).  
   
  このトピックの内容:  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_connectedandlocal"></a> 接続モードとローカル モード  
  SQL Server 2008 R2 リリースでは、SharePoint 2010 用 Microsoft SQL Server 2008 R2 以降の Reporting Services アドインがインストールされている SharePoint 2010 サーバーからレポートを表示するための新しい *ローカル モード* が導入されました。  
   
--   *ローカル モード*: ローカル モードでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーと統合することなく、SharePoint ドキュメント ライブラリからレポートをローカルに表示できます。 SharePoint 製品では [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインは必須ですが、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーは必須ではありません。 アドインは、いくつかの異なる方法でインストールできます (SharePoint 2010 製品準備ツールなど)。 ローカル モードの詳細については、「[レポート ビューアーでのローカル モードと接続モードのレポート (Reporting Services の SharePoint モード)](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)」および「[SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
+-   *ローカル モード*: ローカル モードでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーと統合することなく、SharePoint ドキュメント ライブラリからレポートをローカルに表示できます。 SharePoint 製品では [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインは必須ですが、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーは必須ではありません。 アドインは、いくつかの異なる方法でインストールできます (SharePoint 2010 製品準備ツールなど)。 ローカル モードの詳細については、「[レポート ビューアーでのローカル モードと接続モードのレポート ビューアー &#40; レポートReporting Services の SharePoint モード &#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)と[SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)です。  
   
 -   *接続モード*: 接続モードは、SharePoint サーバーの全体管理を使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーを SharePoint ファームに統合することによってサポートされます。 レポート サーバーとの統合により、完全なエンド ツー エンドのレポート処理が実現され、SharePoint 2010 のコラボレーション機能やレポート サーバーのサーバー ベースの機能 (サブスクリプション、スナップショット、サーバー ベースの処理など) が提供されます。  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 08/09/2017
      ドキュメント ライブラリのバージョン履歴は、"ライブラリ設定" の "バージョン設定" ページで構成されます。  
   
 ##  <a name="bkmk_supportedcombinations"></a> SharePoint アドインとレポート サーバーのサポートされる組み合わせ  
- レポート サーバー、SharePoint 用 Reporting Services アドイン、および SharePoint 製品のすべての組み合わせで、すべての機能がサポートされているわけではありません。 詳細については、「[SharePoint、Reporting Services サーバー、Reporting Services アドインのサポートされる組み合わせ (SQL Server 2016)](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)」を参照してください。  
+ レポート サーバー、SharePoint 用 Reporting Services アドイン、および SharePoint 製品のすべての組み合わせで、すべての機能がサポートされているわけではありません。 詳細については、次を参照してください。 [SharePoint の組み合わせをサポートと Reporting Services サーバーとアドイン (&) #40 です。SQL Server 2016 &#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 > [!NOTE]  
 >  Reporting Services アドインの正しいバージョンを SharePoint 製品の対応するバージョンと共に使用する必要があります。  
@@ -114,9 +114,9 @@ ms.lasthandoff: 08/09/2017
  統合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と、SharePoint 用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインによって実現します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインは自由に配布できるコンポーネントです。ダウンロードして、適切なバージョンの SharePoint が動作しているサーバーにインストールできます。  
   
 > [!TIP]  
->  レポート サーバー、SharePoint 用 Reporting Services アドイン、および SharePoint 製品のすべての組み合わせで、すべての機能がサポートされているわけではありません。 詳細については、「[SharePoint、Reporting Services サーバー、Reporting Services アドインのサポートされる組み合わせ (SQL Server 2016)](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)」を参照してください。  
+>  レポート サーバー、SharePoint 用 Reporting Services アドイン、および SharePoint 製品のすべての組み合わせで、すべての機能がサポートされているわけではありません。 詳細については、「 [SharePoint 組み合わせサポートと Reporting Services サーバーとアドイン (&) #40 です。SQL Server 2016 &#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
--   SharePoint 上では、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインによって ReportServer プロキシ エンドポイント、レポート ビューアー Web パーツ、およびアプリケーション ページが提供されます。これにより、SharePoint のサイトまたはファームでレポート サーバー コンテンツを表示、保存、および管理することができます。  
+-   SharePoint 上では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインによって ReportServer プロキシ エンドポイント、レポート ビューアー Web パーツ、およびアプリケーション ページが提供されます。これにより、SharePoint のサイトまたはファームでレポート サーバー コンテンツを表示、保存、および管理することができます。  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、更新済みプログラム ファイル、SOAP エンドポイント、カスタムのセキュリティおよび配信の拡張機能が提供されます。 レポート サーバーは、SharePoint 統合モードで実行し、レポートのアクセスと配信を SharePoint サイトのみで専用に行うように構成する必要があります。  
   
@@ -140,8 +140,8 @@ ms.lasthandoff: 08/09/2017
   
 |**タスク**|**リンク**|  
 |--------------|--------------|  
-|SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインストールおよび構成するための詳細な手順。|「[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c)」および「[ファームへのレポート サーバーの追加 (SSRS スケールアウト)](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)」。|  
-|レポート サーバーの追加による [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 配置のスケールアウト。|「[ファームへのレポート サーバーの追加 (SSRS スケールアウト)](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)」および「[SharePoint の SQL Server BI 機能の配置トポロジ](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)」。|  
+|SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインストールおよび構成するための詳細な手順。|[Install Reporting Services SharePoint Mode for SharePoint 2010](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c)と[ファーム &#40; に追加のレポート サーバーを追加SSRS スケール アウト &#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
+|レポート サーバーの追加による [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 配置のスケールアウト。|[追加のレポート サーバーを追加するファーム & #40 です。SSRS スケール アウト &#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)と[SQL Server BI Features in SharePoint の配置トポロジ](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)です。|  
 |表示およびレポート アイテム用の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントがインストールされている SharePoint Web フロントエンドの追加。|[ファームへの Reporting Services Web フロントエンドの追加](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のデータ警告機能およびサブスクリプション機能の電子メールの構成。|[Reporting Services サービス アプリケーションの電子メールの構成 (SharePoint 2010 および SharePoint 2013)](https://msdn.microsoft.com/library/hh231673.aspx)|  
 |TechNet Wiki に掲載されている、今リリース向けの最新情報。|[SQL Server 2012 Reporting Services の役立つヒントおよびトラブルシューティング](http://go.microsoft.com/fwlink/?LinkId=221297)。|  
@@ -150,6 +150,6 @@ ms.lasthandoff: 08/09/2017
 
 [SharePoint 用 Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
 [SharePoint サイトのレポート ビューアー Web パーツ](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
-[SSRS 2012 の SharePoint 統合の構成に関するクイズ](http://go.microsoft.com/fwlink/?LinkId=306443)  
+[SharePoint 統合用の SSRS 2012 の構成に関するクイズ](http://go.microsoft.com/fwlink/?LinkId=306443)  
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

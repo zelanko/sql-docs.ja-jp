@@ -25,11 +25,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 5fd4d415e452549e80aa12b9eb1397bf83ce6557
+ms.translationtype: HT
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: 10769f49396bcf32d437e4bee9b04cbc2a3c8d9c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-web-service"></a>レポート サーバー Web サービス
@@ -44,7 +44,7 @@ ms.lasthandoff: 06/13/2017
 -   SOAP 対応の開発ツールを使用してアプリケーションを開発する。 詳細については、次を参照してください。 [The Role of SOAP in Reporting Services](../../reporting-services/report-server-web-service/the-role-of-soap-in-reporting-services.md)です。  
   
 ## <a name="programming-diagram"></a>プログラミング図  
- ![レポート サーバー Web サービス開発オプション](../../reporting-services/report-server-web-service/media/reportserviceswebserviceprog-01.gif "Report Server Web service development options")  
+ ![レポート サーバー Web サービス開発オプション](../../reporting-services/report-server-web-service/media/reportserviceswebserviceprog-01.gif "レポート サーバー Web サービス開発オプション")  
 Reporting Services で利用可能な Web サービス開発オプション  
   
 ## <a name="in-this-section"></a>このセクションの内容  
@@ -54,7 +54,7 @@ Reporting Services で利用可能な Web サービス開発オプション
  [Reporting Services における SOAP の役割](../../reporting-services/report-server-web-service/the-role-of-soap-in-reporting-services.md)  
  SOAP の概要およびレポート サーバー Web サービスでの使用方法について説明します。  
   
- [SOAP API にアクセスします。](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)  
+ [SOAP API へのアクセス](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)  
  Web サービス記述言語 (WSDL) について説明し、Reporting Services WSDL ファイルにアクセスするための URL を記載します。  
   
  [Web サービスと、.NET Framework を使用してアプリケーションの構築](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
@@ -63,7 +63,7 @@ Reporting Services で利用可能な Web サービス開発オプション
  [Rs.exe ユーティリティと Web サービスのスクリプト](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] スクリプト環境の概要を説明します。  
   
- [テクニカル リファレンス (SSRS)](../../reporting-services/technical-reference-ssrs.md)  
+ [テクニカル リファレンス & #40 です。SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)  
  レポート サーバー Web サービスのメソッドおよび対応する複合型のリファレンス情報です。  
   
 ## <a name="user-requirements-for-web-service-development"></a>Web サービスを開発するためのユーザーの必要条件  

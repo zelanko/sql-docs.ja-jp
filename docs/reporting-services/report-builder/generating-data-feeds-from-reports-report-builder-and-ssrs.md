@@ -15,7 +15,7 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 190c45d5ec0deeff6d71ce06e4c66872ca3253d2
 ms.contentlocale: ja-jp
@@ -149,7 +149,7 @@ ms.lasthandoff: 08/09/2017
   
 -   ピア データ領域は、一般的なデータ領域または動的な先祖を共有する、データ領域または動的グループです。 ピア データがフラットなツリーの分岐で識別されます。  
   
- 詳細については、「 [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)を返します。  
+ 詳細については、「 [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)」を参照してください。  
   
   
 ##  <a name="AtomRendering"></a> Atom 表示ルール  

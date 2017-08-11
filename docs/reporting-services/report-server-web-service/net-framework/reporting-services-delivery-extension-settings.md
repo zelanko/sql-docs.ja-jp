@@ -26,14 +26,14 @@ helpviewer_keywords:
 - Web service [Reporting Services], delivery extension settings
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 caps.latest.revision: 36
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 668c3d31af5f287d7d254c2dc666e20a5f6328fa
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: bc52f95cdc038c0074feb10b05fffe916b3d3da1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 配信拡張機能の設定
@@ -45,7 +45,7 @@ ms.lasthandoff: 06/13/2017
 ## <a name="e-mail-delivery-settings"></a>電子メール配信の設定  
  次の表は、レポート サーバー電子メールを使用するサブスクリプションの電子メール配信設定を示しています。  
   
-|設定|値|  
+|設定|[値]|  
 |-------------|-----------|  
 |**宛先**|表示される電子メール アドレス、**に**電子メール メッセージの行。 複数の電子メール アドレスを指定するときは、それぞれをセミコロンで区切ります。 必須。|  
 |**[CC]**|表示される電子メール アドレス、 **Cc**電子メール メッセージの行。 複数の電子メール アドレスを指定するときは、それぞれをセミコロンで区切ります。 省略可。|  
@@ -54,14 +54,14 @@ ms.lasthandoff: 06/13/2017
 |**IncludeReport**|電子メール配信にレポートを含めるかどうかを示す値。 値**true**電子メール メッセージの本文にレポートを配信することを示します。|  
 |**RenderFormat**|表示レポートの生成に使用する表示拡張機能の名前。 名前は、レポート サーバーにインストールされている表示可能な表示拡張機能のいずれかに対応している必要があります。 この値が必要な**IncludeReport**設定の値に設定されて**true**です。|  
 |**[Priority]**|電子メール メッセージを送信する優先順位。 有効な値は**低**、**標準**、および**高**です。 既定値は**標準**です。|  
-|**Subject**|電子メール メッセージの件名のテキスト。|  
+|**[Subject]**|電子メール メッセージの件名のテキスト。|  
 |**解説**|電子メール メッセージの本文のテキスト。|  
 |**IncludeLink**|電子メールの本文にレポートへのリンクを含めるかどうかを示す値。|  
   
 ## <a name="file-share-delivery-settings"></a>ファイル共有配信の設定  
  次の表は、サブスクリプションのファイル共有配信設定を示しています。  
   
-|設定|値|  
+|設定|[値]|  
 |-------------|-----------|  
 |**ファイル名**|ディスクに保存するファイルの名前。|  
 |**FILEEXTN**|表示レポートのファイル拡張機能を含めるかどうかを示します。 いずれかの値が**true**または**false**です。|  

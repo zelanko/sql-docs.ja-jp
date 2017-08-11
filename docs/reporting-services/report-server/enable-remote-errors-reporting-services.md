@@ -18,7 +18,7 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 20adc5eb8b830b960fe07d39f3717279abca3f23
 ms.contentlocale: ja-jp
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  レポート サーバー ノードを右クリックして、 **[プロパティ]**をクリックします。  
   
-3.  **[詳細設定]** をクリックすると、プロパティ ページが表示されます。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[サーバーのプロパティ ([詳細設定] ページ) - Reporting Services」](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)を参照してください。  
+3.  **[詳細設定]** をクリックすると、プロパティ ページが表示されます。 詳細については、次を参照してください。[サーバーのプロパティ & #40 です。[詳細] ページ &#41;-Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   
 4.  **EnableRemoteErrors**で **True**を選択します。  
   

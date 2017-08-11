@@ -15,7 +15,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: fc9ca2f7181dbda59726b9c38352c349bcf8a472
 ms.contentlocale: ja-jp
@@ -29,8 +29,8 @@ ms.lasthandoff: 08/09/2017
   
 この記事では、次について説明します。   
   
-- サンプル データ ソースとして AdventureWorks データベースを使用して、[!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータル上で共有データ ソースとデータセットを作成する。  
-- [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] で Reporting Services モバイル レポートを作成する  
+- サンプル データ ソースとして AdventureWorks データベースを使用して、 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータル上で共有データ ソースとデータセットを作成する。  
+- [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
 - モバイル レポートを [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータルにパブリッシュする。  
 - Power BI モバイル アプリでモバイル レポートを表示する。  
   
@@ -54,7 +54,7 @@ Reporting Services でサポートされるデータ ソースのいずれもか
 1. [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータルから、 **[新規作成]** > **[データソース]**をクリックします。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
-3. データ ソースの情報を入力し、**[OK]** をクリックします。  
+3. データ ソース情報を入力 > **OK**です。  
   
     既定では、データ ソースはポータルに表示されません。    
    
@@ -235,9 +235,9 @@ Reporting Services モバイル レポートを作成するには、 [SQL Server
   
 マスター レイアウトでビジュアルを作成したら、電話ユーザー用に最適化されたレイアウトを持つモバイル レポートを作成できます。    
   
-1. 右上隅で、キャンバス アイコン、**[電話]** の順にクリックします。  
+1. 右上隅のアイコンをクリックして、キャンバス > **Phone**です。  
   
-2. [レイアウト] タブの **[Control Instances (コントロール インスタンス)]** で、作成した 2 つのグラフを確認します。   
+2. [レイアウト] タブの **[Control Instances (コントロール インスタンス)]**で、作成した 2 つのグラフを確認します。   
   
 3. ツリー マップを電話キャンバスにドラッグし、4 つ分の列の幅、3 つ分の行の高さに調整します。  
   

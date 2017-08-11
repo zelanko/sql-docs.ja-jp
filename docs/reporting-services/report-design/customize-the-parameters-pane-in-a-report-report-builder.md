@@ -14,7 +14,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d9ca14104f9dd60fda20d723290789733f0a9f4a
 ms.contentlocale: ja-jp
@@ -24,7 +24,7 @@ ms.lasthandoff: 08/09/2017
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
   レポート ビルダーでパラメーターを使用して改ページ調整されたレポートを作成するときに、パラメーター ペインをカスタマイズできます。 レポート デザイン ビューで、パラメーター ペインの特定の列や行にパラメーターをドラッグできます。 列を追加または削除して、ペインのレイアウトを変更することもできます。  
   
- ペイン内で新しい列や行にパラメーターをドラッグすると、 **レポート データ** ペインのパラメーターの順序が変わります。 **レポート データ** ペインでパラメーターの順序を変更すると、ペインでのパラメーターの位置が変わります。 パラメーターの順序が重要である理由の詳細については、「[レポート パラメーターの順序の変更 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)」を参照してください。  
+ ペイン内で新しい列や行にパラメーターをドラッグすると、 **レポート データ** ペインのパラメーターの順序が変わります。 **レポート データ** ペインでパラメーターの順序を変更すると、ペインでのパラメーターの位置が変わります。 パラメーターの順序は、重要な理由の詳細についてを参照してください[レポート パラメーター &#40; の順序を変更レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
   
 ## <a name="to-customize-the-parameters-pane"></a>パラメーター ペインをカスタマイズするには  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  パラメーターをパラメーター ペインの新しい場所に移動するには、ペインの異なるセルにパラメーターをドラッグします。  
   
-     ペインでパラメーターの位置を変更すると、 **レポート データ** ペインの **[パラメーター]** ボックスの一覧でパラメーターの順序が自動的に変わります。 パラメーターの順序の影響の詳細については、「[レポート パラメーターの順序の変更 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)」を参照してください。  
+     ペインでパラメーターの位置を変更すると、 **レポート データ** ペインの **[パラメーター]** ボックスの一覧でパラメーターの順序が自動的に変わります。 パラメーターの順序の影響に関する詳細については、次を参照してください[レポート パラメーター &#40; の順序を変更。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
 4.  パラメーターのプロパティにアクセスするには、次のいずれかの操作を行います。  
   
@@ -70,6 +70,6 @@ ms.lasthandoff: 08/09/2017
     -   **レポート データ** ペインでパラメーターを右クリックし、 **[削除]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

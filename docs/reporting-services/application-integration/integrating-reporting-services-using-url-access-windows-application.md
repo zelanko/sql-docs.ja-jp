@@ -20,14 +20,14 @@ helpviewer_keywords:
 - URL access [Reporting Services], Windows applications
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 caps.latest.revision: 48
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6174bfd45317faf9b6c8c7131dd1c5026d3a4d51
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 782be214cb491e1fdddf6ff7d45ac377fcfbf8a4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>URL アクセスの Windows アプリケーションを使用して Reporting Services の統合
@@ -122,7 +122,7 @@ webBrowser1.Navigate(url);
   
 ## <a name="see-also"></a>参照  
  [アプリケーションへの Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [URL アクセスを使用した Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
+ [URL アクセスを使用して Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
  [SOAP を使用して Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)   
  [ReportViewer コントロールを使用して Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)   
  [URL アクセスと #40 です。SSRS &#41;](../../reporting-services/url-access-ssrs.md)  
