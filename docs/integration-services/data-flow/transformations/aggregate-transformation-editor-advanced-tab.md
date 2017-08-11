@@ -1,5 +1,5 @@
 ---
-title: "集計変換エディター (詳細 タブ) |Microsoft ドキュメント"
+title: "[集計変換エディター]\\ ([詳細] タブ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="aggregate-transformation-editor-advanced-tab"></a>[集計変換エディター] ([詳細設定] タブ)
+# <a name="aggregate-transformation-editor-advanced-tab"></a>[集計変換エディター]\ ([詳細設定] タブ)
   **[集計変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、コンポーネントのプロパティの設定、集計の指定、入力列と出力列のプロパティの設定を行うことができます。  
   
 > [!NOTE]  

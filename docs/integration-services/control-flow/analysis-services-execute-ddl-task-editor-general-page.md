@@ -1,5 +1,5 @@
 ---
-title: "Analysis Services DDL 実行タスク エディター (全般 ページ) |Microsoft ドキュメント"
+title: "Analysis Services DDL 実行タスク エディター\\ (全般 ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="analysis-services-execute-ddl-task-editor-general-page"></a>[Analysis Services DDL 実行タスク エディター] ([全般] ページ)
+# <a name="analysis-services-execute-ddl-task-editor-general-page"></a>[Analysis Services DDL 実行タスク エディター]\ ([全般] ページ)
   **[Analysis Services DDL 実行タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 実行タスクの名前と説明を入力できます。  
   
  このタスクの詳細については、「 [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)」(Analysis Services DDL 実行タスク) を参照してください。  

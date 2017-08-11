@@ -1,5 +1,5 @@
 ---
-title: "集計変換エディター (集計 タブ) |Microsoft ドキュメント"
+title: "[集計変換エディター]\\ ([集計] タブ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="aggregate-transformation-editor-aggregations-tab"></a>[集計変換エディター] ([集計] タブ)
+# <a name="aggregate-transformation-editor-aggregations-tab"></a>[集計変換エディター]\ ([集計] タブ)
   **[集計変換エディター]** ダイアログ ボックスの **[集計]** タブを使用すると、集計列および集計プロパティを指定できます。 複数の集計を適用することができます。 この変換ではエラー出力を生成しません。  
   
 > [!NOTE]  
