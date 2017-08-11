@@ -1,34 +1,39 @@
 ---
-title: "Windows アプリケーション ログの表示 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "アプリケーション ログ [SQL Server]"
-  - "Windows アプリケーション ログ [SQL Server]"
-  - "Windows アプリケーション ログの確認"
-  - "エラー [SQL Server], ログ"
-  - "システム ログ [SQL Server]"
-  - "セキュリティ ログ [SQL Server]"
-  - "Windows アプリケーション ログの表示"
-  - "ログ [SQL Server], Windows アプリケーション ログ"
+title: "Windows アプリケーション ログの表示 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application logs [SQL Server]
+- Windows application logs [SQL Server]
+- viewing Windows application logs
+- errors [SQL Server], logs
+- system logs [SQL Server]
+- security logs [SQL Server]
+- displaying Windows application logs
+- logs [SQL Server], Windows application logs
 ms.assetid: f9853b74-7db7-47cc-b957-e49ed5bc0a1a
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 833f71530a08ad5648b35719f9fd636213c61595
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# Windows アプリケーション ログの表示
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が Microsoft Windows アプリケーション ログを使用するように構成されている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各セッションでは新しいイベントが書き込まれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログとは異なり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを開始するたびに新しいアプリケーション ログが作成されることはありません。  
+# <a name="viewing-the-windows-application-log"></a>Windows アプリケーション ログの表示
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が Microsoft Windows アプリケーション ログを使用するように構成されている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各セッションでは新しいイベントが書き込まれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログとは異なり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを開始するたびに新しいアプリケーション ログが作成されることはありません。  
   
- Windows イベント ビューアーまたは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のログ ビューアーを使用して、Windows アプリケーション ログを表示および管理します。  
+ Windows イベント ビューアーまたは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のログ ビューアーを使用して、Windows アプリケーション ログを表示および管理します。  
   
  イベント ビューアーでは、次の 3 つのログを表示できます。  
   
@@ -42,6 +47,6 @@ caps.handback.revision: 20
   
  **Windows アプリケーション ログを表示するには**  
   
- [Windows アプリケーション ログの表示 &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows.md)  
+ [Windows アプリケーション ログの表示 &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows-10.md)  
   
   
