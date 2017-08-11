@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
-ms.openlocfilehash: b93591eb1d0f34b792adc6f2c998dbfdd9fca4b5
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 8558691157d6a4f2fe705df236c0701f8bc1bf6c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server の最大容量仕様
@@ -71,7 +71,7 @@ ms.lasthandoff: 07/31/2017
 |幅の狭いテーブルごとの列数||1,024||  
 |幅の広いテーブルごとの列数||30,000||  
 |SELECT ステートメントごとの列数||4,096||  
-|INSERT ステートメントごとの列数||4096||  
+|INSERT ステートメントごとの列数||4,096||  
 |クライアントごとの接続数||構成した接続の最大値||  
 |データベース サイズ||524,272 テラバイト||  
 |インスタンスごとのデータベース数 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
