@@ -33,11 +33,11 @@ caps.latest.revision: 61
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0c1c30915d5b9e78b9e8c33b33a2c66b91f47512
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>レポート データ ソースに関する資格情報と接続情報を指定する
@@ -51,21 +51,21 @@ ms.lasthandoff: 06/22/2017
 ## <a name="when-credentials-are-used-in-report-builder"></a>レポート ビルダーの資格情報を使用する場合  
  レポート ビルダーでは、資格情報はレポート サーバーに接続するときと、埋め込みデータ ソースの作成、データセット クエリの実行、レポートのプレビューなどのデータ関連タスクに使用されます。 資格情報はレポートに格納されません。 資格情報は、レポート サーバー上またはローカル クライアント上で個別に管理されます。 次の一覧に、指定する必要がある資格情報の種類、それらの資格情報の格納場所、およびそれらの資格情報の使用方法を示します。  
   
--   [[Reporting Services ログイン] ダイアログ ボックス &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md) で入力するレポート サーバーの資格情報。  
+-   入力するレポート サーバーの資格情報、 [Services ログイン ダイアログ ボックスのレポート作成 & #40 です。レポート ビルダー"&"#41;](../../reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md).  
   
      レポート サーバーまたは SharePoint サイトに対して最初に保存、パブリッシュ、または参照を実行するとき、資格情報を入力する必要がある場合があります。 入力した資格情報は、レポート ビルダー セッションが終了するまで使用されます。 資格情報の保存を選択した場合、資格情報はユーザー設定と共に、使用しているコンピューターに安全に格納されます。 以降のレポート ビルダー セッションでは、同じレポート サーバーまたは SharePoint サイトへの接続に、保存した資格情報が使用されます。 レポート サーバーの管理者または SharePoint 管理者は、使用する資格情報を指定します。  
   
--   埋め込みデータ ソースの [[資格情報] &#40;[データ ソースのプロパティ] ダイアログ ボックス&#41; &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) ページで入力するデータ ソースの資格情報。  
+-   データ ソースに入力した資格情報、[データ ソースのプロパティ ダイアログ ボックス、資格情報 & #40 です。レポート ビルダー"&"#41;](http://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99)埋め込みデータ ソースのページです。  
   
      これらの資格情報は、外部データ ソースへのデータ接続を行うために、レポート サーバーによって使用されます。 一部の種類のデータ ソース用に、資格情報をレポート サーバーに安全に格納できます。 これらの資格情報により、他のユーザーは基になるデータ接続の資格情報を指定することなく、レポートを実行できます。  
   
--   データセット クエリの実行時、データセット フィールドの更新時、またはレポートのプレビュー時に [[データ ソースの資格情報の入力] ダイアログ ボックス &#40;レポート ビルダー&#41;](../../reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) で入力するデータ ソースの資格情報。  
+-   データ ソースに入力した資格情報、[入力データ ソースの資格情報 ダイアログ ボックス & #40 です。レポート ビルダー"&"#41;](../../reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md)データセット クエリを実行、データセット フィールドの更新またはレポートをプレビューするとします。  
   
      これらの資格情報は、レポート ビルダーから外部データ ソースにデータ接続を行うために、または資格情報の入力を求めるように構成されたレポートをプレビューするために使用されます。 このダイアログ ボックスで入力した資格情報は、レポート サーバーに格納されず、他のユーザーが使用することはできません。 レポート ビルダーは、クエリの実行またはレポートのプレビューのたびに資格情報を入力しなくても済むように、レポート編集セッション中に資格情報をキャッシュします。  
   
      共有データ ソースの場合は、 **[パスワードを保存する]** オプションを使用して、資格情報をユーザー設定と共に、使用しているコンピューターにローカルに保存します。 レポート ビルダーは、対応する外部データ ソースに接続するたびに、保存されている資格情報を使用します。  
   
- 詳しくは、「[[全般] &#40;[データ ソースのプロパティ] ダイアログ ボックス&#41; &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b)」および「[レポート ビルダーでのレポートのプレビュー](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)」をご覧ください。  
+ 詳細については、次を参照してください。[データ ソースのプロパティダイアログ ボックスの [全般] の場合も (&) #40 です。レポート ビルダー"&"#41;](http://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b)と[レポート ビルダーでレポートをプレビュー](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)です。  
   
 ## <a name="using-remote-data-sources"></a>リモート データ ソースの使用  
  リモートのデータベース サーバーのデータをレポートに取得する場合、次の点を確認します。  
@@ -148,7 +148,7 @@ ms.lasthandoff: 06/22/2017
   
 -   レポートが、親レポートの資格情報を使用するサブレポートである。  
   
- このような条件下では、レポート サーバーは、事前に定義する必要がある自動実行アカウントを使用して、リモート データ ソースに接続します。 レポート サーバーはそのサービス資格情報を使用してリモート サーバーに接続しないため、レポート サーバーが接続のために使用できるアカウントを指定する必要があります。 このアカウントの作成の詳細については、「[自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」をご覧ください。  
+ このような条件下では、レポート サーバーは、事前に定義する必要がある自動実行アカウントを使用して、リモート データ ソースに接続します。 レポート サーバーはそのサービス資格情報を使用してリモート サーバーに接続しないため、レポート サーバーが接続のために使用できるアカウントを指定する必要があります。 このアカウントの作成の詳細については、次を参照してください[無人実行アカウント &#40; を構成する。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="user-name-and-password-login"></a>ユーザー名とパスワードによるログイン  
  **[次のユーザー名とパスワードを使用]**を選択した場合、データ ソースへのアクセスにはユーザー名およびパスワードの指定が必要になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの場合は、この資格情報がデータベース ログイン用となる可能性があります。 この資格情報は、認証用にデータ ソースに渡されます。  
@@ -169,9 +169,9 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>参照  
  [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
  [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [レポート データ ソースを管理する](../../reporting-services/report-data/manage-report-data-sources.md)   
- [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [共有データ ソースを作成、削除、または変更する &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [レポートのデータ ソースのプロパティを構成する &#40;レポート マネージャー&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [レポート データ ソースを管理します。](../../reporting-services/report-data/manage-report-data-sources.md)   
+ [レポート マネージャーと &#40; です。SSRS ネイティブ モードと &#41; です。](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [共有データ ソースの作成、削除、または変更 &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [レポート &#40; のデータ ソースのプロパティを構成します。レポート マネージャー &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   
