@@ -22,15 +22,15 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 74e70cd67affe64f31076f362f36e813f3357f82
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>データ処理拡張機能と .NET Framework データ プロバイダー (SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能は、特定の種類のデータ ソースからのデータ取得や、レポート デザインやレポート処理をサポートする追加機能を提供することを目的として、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]と共にインストールされるコンポーネントです。 A[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]データ プロバイダーは、コンポーネントから使用可能な[!INCLUDE[msCoName](../../includes/msconame-md.md)]またはサポートするサード パーティ製ソース<xref:System.Data>インターフェイスを取得して、特定の種類のデータ ソースからデータを変更できるようにします。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能は、特定の種類のデータ ソースからのデータ取得や、レポート デザインやレポート処理をサポートする追加機能を提供することを目的として、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と共にインストールされるコンポーネントです。 A[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]データ プロバイダーは、コンポーネントから使用可能な[!INCLUDE[msCoName](../../includes/msconame-md.md)]またはサポートするサード パーティ製ソース<xref:System.Data>インターフェイスを取得して、特定の種類のデータ ソースからデータを変更できるようにします。  
   
 ## <a name="understanding-a-data-processing-extension"></a>データ処理拡張機能について  
  A[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]データ処理拡張機能のサブセットをサポートする、<xref:System.Data>インターフェイスです。 データ処理拡張機能には、データ ソースへの読み取り専用アクセスのみが必要です。書き込みおよび更新用のインターフェイスは実装されていません。 それぞれのデータ処理拡張機能では、レポート処理をサポートするカスタム機能を設定できます。 たとえば、データ処理拡張機能がサポートしている機能の種類は次のとおりです。  
@@ -53,6 +53,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [データ処理拡張機能の概要](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)   
- [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [レポート埋め込みデータセットおよび共有データセット &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

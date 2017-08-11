@@ -19,11 +19,11 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e056f5577c2c569e333f2341060862c06d803f6b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="secure-shared-data-source-items"></a>共有データ ソース アイテムをセキュリティで保護する
@@ -45,10 +45,10 @@ ms.lasthandoff: 06/22/2017
 |アイテムへのセキュリティの設定|共有データ ソースへのアクセスを制御するロールの割り当てを作成および変更します。 このタスクは、"データ ソースの表示" タスク、または "データ ソースの管理" タスクのいずれかと併用する必要があります。 それ以外の場合、ユーザーはアイテムを選択できないので効果がありません。|  
   
 ## <a name="see-also"></a>参照  
- [レポート データ ソースを管理する](../../reporting-services/report-data/manage-report-data-sources.md)   
- [フォルダーをセキュリティで保護する](../../reporting-services/security/secure-folders.md)   
- [レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)   
- [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Store Credentials in a Reporting Services Data Source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [レポート データ ソースを管理します。](../../reporting-services/report-data/manage-report-data-sources.md)   
+ [セキュリティで保護されたフォルダー](../../reporting-services/security/secure-folders.md)   
+ [セキュリティで保護されたレポート、およびリソース](../../reporting-services/security/secure-reports-and-resources.md)   
+ [ネイティブ モード レポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Reporting Services データ ソースの資格情報を保存します。](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

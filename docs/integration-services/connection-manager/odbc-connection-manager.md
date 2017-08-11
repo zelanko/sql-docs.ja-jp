@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.odbcconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], ODBC
 - ODBC connection manager
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a136e71727d1a0b729f7014448dd97d81a7af89d
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: f3e331efe9c6a297ef8d9dc342fb07c83ddafc03
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="odbc-connection-manager"></a>ODBC 接続マネージャー
@@ -48,8 +50,25 @@ ms.lasthandoff: 08/03/2017
   
 -   [ODBC 接続マネージャーの UI リファレンス](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)  
   
- プログラムによる接続マネージャーの構成の詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」および「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
+ プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
   
+## <a name="odbc-connection-manager-ui-reference"></a>ODBC 接続マネージャーの UI リファレンス
+  **[ODBC の接続マネージャーの構成]** ダイアログ ボックスを使用すると、接続を ODBC データ ソースに追加できます。  
+  
+ ODBC 接続マネージャーの詳細については、「 [ODBC Connection Manager](../../integration-services/connection-manager/odbc-connection-manager.md)」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **[データ接続]**  
+ 既存の ODBC 接続マネージャーを一覧から選択します。  
+  
+ **[データ接続のプロパティ]**  
+ 選択されている ODBC 接続マネージャーのプロパティと値を表示します。  
+  
+ **新規**  
+ **[接続マネージャー]** ダイアログ ボックスを使用して ODBC 接続マネージャーを作成します。 このダイアログ ボックスでは、必要に応じて新しい ODBC データ ソースを作成することもできます。  
+  
+ **Del**  
+ 接続を選択し、 **[削除]** ボタンを使用して削除します。  
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

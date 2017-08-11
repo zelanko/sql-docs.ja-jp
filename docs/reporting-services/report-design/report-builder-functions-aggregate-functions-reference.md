@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f7f78e643a5ed5e8874cf2f8dda867c3edac70d0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>レポート ビルダーの関数の集計関数リファレンス
@@ -78,19 +78,19 @@ ms.lasthandoff: 06/22/2017
   
 |レポート内の場所|フィールド|パラメーター|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|変数|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
-|ページ ヘッダー<br /><br /> ページ フッター|可|可|最大 1<br /><br /> 注 1|可|はい|はい|可|  
-|本文|可<br /><br /> 注 2|可|現在のスコープまたはコンテナー スコープのアイテムのみ<br /><br /> 注 3|いいえ|はい|はい|可|  
+|ページ ヘッダー<br /><br /> ページ フッター|可|可|最大 1<br /><br /> 注 1|可|[ユーザー アカウント制御]|[ユーザー アカウント制御]|可|  
+|本文|可<br /><br /> 注 2|可|現在のスコープまたはコンテナー スコープのアイテムのみ<br /><br /> 注 3|いいえ|[ユーザー アカウント制御]|[ユーザー アカウント制御]|可|  
 |レポート パラメーター|いいえ|リスト内で先に出現するパラメーターのみ<br /><br /> 注 4|いいえ|いいえ|いいえ|いいえ|いいえ|  
-|フィールド|可|可|いいえ|いいえ|いいえ|いいえ|いいえ|  
+|フィールド|可|[ユーザー アカウント制御]|いいえ|いいえ|いいえ|いいえ|いいえ|  
 |クエリ パラメーター|いいえ|可|いいえ|いいえ|いいえ|いいえ|いいえ|  
-|グループ式|可|可|いいえ|いいえ|可|いいえ|いいえ|  
-|並べ替え式|可|可|いいえ|いいえ|はい|可<br /><br /> 注 5|いいえ|  
-|[フィルター式]|可|可|いいえ|いいえ|はい|可<br /><br /> 注 6|いいえ|  
+|グループ式|可|[ユーザー アカウント制御]|いいえ|いいえ|可|いいえ|いいえ|  
+|並べ替え式|可|[ユーザー アカウント制御]|いいえ|いいえ|[ユーザー アカウント制御]|可<br /><br /> 注 5|いいえ|  
+|[フィルター式]|可|[ユーザー アカウント制御]|いいえ|いいえ|[ユーザー アカウント制御]|可<br /><br /> 注 6|いいえ|  
 |コード|いいえ|可<br /><br /> 注 7|いいえ|いいえ|いいえ|いいえ|いいえ|  
 |レポートの言語|いいえ|可|いいえ|いいえ|いいえ|いいえ|いいえ|  
-|変数|可|可|いいえ|いいえ|可|現在のスコープかコンテナー スコープ|いいえ|  
+|変数|可|[ユーザー アカウント制御]|いいえ|いいえ|可|現在のスコープかコンテナー スコープ|いいえ|  
 |集計|可|可|ページ ヘッダー/ページ フッター内のみ|レポート アイテムの集計内のみ|可|いいえ|いいえ|  
-|参照関数|可|はい|可|いいえ|可|いいえ|いいえ|  
+|参照関数|可|[ユーザー アカウント制御]|[ユーザー アカウント制御]|いいえ|可|いいえ|いいえ|  
   
 -   **注 1:** ReportItems は、表示されるレポート ページに存在する必要があります。そうでない場合は値が Null になります。 レポート アイテムの表示が式に依存し、その式が False に評価される場合、ページにはレポート アイテムが存在しません。  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 06/22/2017
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
 |Running Value|いいえ|いいえ|いいえ|いいえ|可|いいえ|可|いいえ|  
 |First<br /><br /> Last|いいえ|いいえ|いいえ|いいえ|可|いいえ|いいえ|いいえ|  
-|Previous|可|はい|可|いいえ|可|いいえ|可|いいえ|  
+|Previous|可|[ユーザー アカウント制御]|[ユーザー アカウント制御]|いいえ|可|いいえ|可|いいえ|  
 |Sum およびその他の事前並べ替え関数|いいえ|いいえ|いいえ|いいえ|可|いいえ|可|いいえ|  
 |ReportItem の集計|いいえ|いいえ|いいえ|いいえ|いいえ|いいえ|いいえ|いいえ|  
 |参照関数|可|可<br /><br /> 注 1|可<br /><br /> 注 1|可<br /><br /> 注 1|可<br /><br /> 注 1|可<br /><br /> 注 1|いいえ|いいえ|  
@@ -187,7 +187,7 @@ ms.lasthandoff: 06/22/2017
  ![トップにリンク バックに使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン")ページのトップへ  
   
 ##  <a name="RetrievingRecursiveLevel"></a> 再帰レベルの取得  
- 次の組み込み関数は、再帰型階層が処理されたときの現在のレベルを取得します。 テキスト ボックスの **Padding** プロパティに対してこの関数の結果を使用して、再帰グループの階層構造のインデント レベルを制御できます。 詳細については、「[複数の再帰型階層グループの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)」をご覧ください。  
+ 次の組み込み関数は、再帰型階層が処理されたときの現在のレベルを取得します。 テキスト ボックスの **Padding** プロパティに対してこの関数の結果を使用して、再帰グループの階層構造のインデント レベルを制御できます。 詳細については、「[複数の再帰型階層グループの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)」を参照してください。  
   
 |関数|Description|  
 |--------------|-----------------|  
@@ -196,8 +196,8 @@ ms.lasthandoff: 06/22/2017
  ![トップにリンク バックに使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン")ページのトップへ  
   
 ## <a name="see-also"></a>参照  
- [レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [合計、集計、および組み込みコレクションの式のスコープ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [レポート &#40; 内の式の使用レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [式の例と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [式のスコープの合計、集計、および組み込みコレクション & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

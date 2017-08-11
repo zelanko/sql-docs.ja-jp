@@ -16,11 +16,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e046d1afc8cc2f774e56f70ac9448e9ba9660cbb
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>レポート サーバーの複数インスタンス配置における URL 予約
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
  重複する URL があれば、サービスの起動時に行われる URL の登録の際に検出されます。 一意でない URL 予約を作成した場合、サービスを起動するまで名前の競合が検出されない可能性があります。 このため、名前付け規則に従ってすべての値が一意になるようにしてください。  
   
 ## <a name="default-naming-conventions"></a>既定の名前付け規則  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンス内にインストールできます。 名前付きインスタンス内にレポート サーバーをインストールまたは構成すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に用意されている既定の URL 予約の仮想ディレクトリにインスタンス名が自動的に含められます。 次の表に、既定のインスタンスと名前付きインスタンスの URL 予約を示します。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンス内にインストールできます。 名前付きインスタンス内にレポート サーバーをインストールまたは構成すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に用意されている既定の URL 予約の仮想ディレクトリにインスタンス名が自動的に含められます。 次の表に、既定のインスタンスと名前付きインスタンスの URL 予約を示します。  
   
 |SQL Server インスタンス|既定の URL 予約|  
 |-------------------------|-----------------------------|  
@@ -52,8 +52,8 @@ ms.lasthandoff: 06/22/2017
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の基になるテクノロジには、一意の名前に関する要件があります。 HTTP.SYS のリポジトリ内の URL はすべて一意にする必要があります。 URL は、ポート、ホスト名、または仮想ディレクトリ名を変えることで一意にできます。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] では、同一プロセス内の各アプリケーション ID が一意である必要があります。 この要件は、仮想ディレクトリ名に影響します。 この要件では、同一レポート サーバー インスタンス内では重複する仮想ディレクトリ名を使用できないことが規定されています。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [レポート サーバーの Url &#40; を構成します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [URL &#40; を構成します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
   
   
 

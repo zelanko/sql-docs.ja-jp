@@ -17,11 +17,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="job-properties-management-studio"></a>[ジョブのプロパティ]\(Management Studio)
@@ -73,8 +73,8 @@ ms.lasthandoff: 08/03/2017
  ユーザーによって開始された処理の場合、この列には処理を開始したユーザーの名前が表示されます。 システム ジョブの場合は、レポート サーバーの名前になります。  
   
 ## <a name="see-also"></a>参照  
- [Management Studio のレポート サーバーの F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Management Studio でレポート サーバーに接続する](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [実行中の処理を管理する](../../reporting-services/subscriptions/manage-a-running-process.md)  
+ [レポート サーバーの Management Studio の F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Management Studio でのレポート サーバーに接続します。](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [実行中のプロセスを管理します。](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   

@@ -38,11 +38,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: aee605482e4de390b545f63ac96bfc123cee568a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>マップの凡例、カラー スケール、および関連付けられているルールの変更 (レポート ビルダーおよび SSRS)
@@ -212,7 +212,7 @@ ms.lasthandoff: 08/03/2017
   
      分布のオプションの詳細については、「[ルールおよび分析データを使用した多角形、線、およびポイントの表示の変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)」を参照してください。  
   
-6.  **[部分範囲の数]**に、使用する部分範囲の数を入力します。 分布タイプが **[最適]**の場合は、部分範囲の数が自動的に計算されます。  
+6.  **[部分範囲の数]** に、使用する部分範囲の数を入力します。 分布タイプが **[最適]**の場合は、部分範囲の数が自動的に計算されます。  
   
 7.  **[範囲の開始]**に範囲の最小値を入力します。 この値よりも小さい値はすべて、範囲の下限と同じと見なされます。  
   
@@ -285,15 +285,15 @@ ms.lasthandoff: 08/03/2017
   
 3.  **[凡例]**をクリックします。  
   
-4.  **[凡例のテキスト]** には、凡例に表示するデータを指定するキーワードが表示されます。 マップ キーワードとカスタム書式を使用すると、凡例のテキストの書式を制御できます。 たとえば、 #FROMVALUE {C2} は小数点以下 2 桁の通貨書式を示します。 詳細については、「 [ルールおよび分析データを使用した多角形、線、およびポイントの表示の変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)」を参照してください。  
+4.  **[凡例のテキスト]** には、凡例に表示するデータを指定するキーワードが表示されます。 マップ キーワードとカスタム書式を使用すると、凡例のテキストの書式を制御できます。 たとえば、 #FROMVALUE {C2} は小数点以下 2 桁の通貨書式を示します。 詳細については、「[ルールおよび分析データを使用した多角形、線、およびポイントの表示の変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)」を参照してください。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [マップ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [マップまたはマップ レイヤーの追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [マップまたはマップ レイヤーのデータと表示のカスタマイズ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
- [マップ ウィザードおよびマップ レイヤー ウィザードのページ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
+ [マップ & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [追加、変更、またはマップまたはマップ レイヤー &#40; を削除レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [データとマップまたはマップ レイヤー &#40; の表示をカスタマイズします。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [レポートと #40 です。 マップ レポートのトラブルシューティング。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [マップ ウィザードおよびマップ レイヤー ウィザード & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

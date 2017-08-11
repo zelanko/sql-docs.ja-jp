@@ -17,11 +17,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5348146e3cce3c1f3f6288797f8a4e2bbd520cab
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>[レポート サーバー ジョブのキャンセル] (Management Studio)
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/03/2017
   
  このページを開くには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を起動してレポート サーバーに接続し、 **[ジョブ]**を右クリックして **[すべてのジョブのキャンセル]**をクリックします。 または、 **[ジョブ]**を開き、レポート サーバーで実行中のジョブを右クリックして、 **[ジョブのキャンセル]**をクリックします。  
   
- ジョブを取り消す前に、そのプロパティを表示し、ジョブがいつ開始されたかを確認します。 詳細については、「[ジョブのプロパティ &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)」を参照してください。  
+ ジョブを取り消す前に、そのプロパティを表示し、ジョブがいつ開始されたかを確認します。 詳細については、「[ジョブのプロパティ (Management Studio)](../../reporting-services/tools/job-properties-management-studio.md)」を参照してください。  
   
 > [!NOTE]  
 >  この機能は、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services ではサポートされません。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]を実行している場合、このページは表示されません。  
@@ -60,8 +60,8 @@ ms.lasthandoff: 08/03/2017
  1 つのジョブまたは複数のジョブを取り消します。 ジョブはすぐに取り消され、再開することはできません。 誤ってジョブを取り消した場合は、レポートまたはサブスクリプションを再度要求して新しいジョブを開始する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [Management Studio のレポート サーバーの F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Management Studio でレポート サーバーに接続する](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [実行中の処理を管理する](../../reporting-services/subscriptions/manage-a-running-process.md)  
+ [レポート サーバーの Management Studio の F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Management Studio でのレポート サーバーに接続します。](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [実行中のプロセスを管理します。](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   

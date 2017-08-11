@@ -22,14 +22,14 @@ caps.latest.revision: 51
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a49274f347768a1a213c9a0010917e9e1d1376a5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="schedules"></a>スケジュール
+# <a name="schedules"></a>Schedules
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポートの処理および配信の制御を支援する **共有スケジュール** と **レポート固有スケジュール** が用意されています。 これら 2 種類のスケジュールでは、定義、格納、管理の方法が異なります。 2 種類のスケジュールの内部の構成は同じです。 すべてのスケジュールでは、毎月、毎週、または毎日という定期実行の種類を指定します。 定期実行の種類では、イベントが発生する頻度を表す間隔と範囲を設定します。 定期的な実行パターンの種類とパターンの指定方法は、共有スケジュールとレポート固有スケジュールのいずれを作成する場合でも同じです。
   
   -   共有スケジュールは、個別のアイテムとして作成されます。 共有スケジュールは、作成後、サブスクリプションまたは他のスケジュール操作を定義するときに参照します。  
@@ -129,20 +129,20 @@ ms.lasthandoff: 06/22/2017
 >  **[Reporting Services のセキュリティ構成]** ファセットを使用して、一時的または永続的に、スケジュールされた操作を停止させることができます。 カスタム配信拡張機能を作成して配置することはできますが、それだけではスケジュールおよび配信のプロセッサを拡張できません。 イベントおよび通知の管理方法を変更することはできません。 機能を無効にするには、「 **Turn Reporting Services Features On or Off** 」の「 [定期的なイベントおよび配信](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)」を参照してください。  
   
 ###  <a name="bkmk_stoppingagent"></a> SQL Server エージェントの停止の影響  
- スケジュールされたレポート処理では、既定で SQL Server エージェントを使用します。 サービスを停止すると、<xref:ReportService2010.ReportingService2010.FireEvent%2A> メソッドによりプログラムで追加しない限り、新しい処理要求はキューに追加されません。 サービスを再開すると、レポート処理要求を作成するジョブが再開されます。 SQL Server エージェントがオフラインの間、レポート サーバーは、過去に発生する可能性のあったレポート処理ジョブを再作成しません。 SQL Server エージェントを 1 週間停止する場合、その週のすべてのスケジュールされた操作は失われます。  
+ スケジュールされたレポート処理では、既定で SQL Server エージェントを使用します。 サービスを停止すると、 <xref:ReportService2010.ReportingService2010.FireEvent%2A> メソッドによりプログラムで追加しない限り、新しい処理要求はキューに追加されません。 サービスを再開すると、レポート処理要求を作成するジョブが再開されます。 SQL Server エージェントがオフラインの間、レポート サーバーは、過去に発生する可能性のあったレポート処理ジョブを再作成しません。 SQL Server エージェントを 1 週間停止する場合、その週のすべてのスケジュールされた操作は失われます。  
   
 > [!NOTE]  
->  SQL Server エージェントが Reporting Services に提供する機能を、<xref:ReportService2010.ReportingService2010.FireEvent%2A> メソッドを使用するカスタム コードに置き換え、キューにスケジュール イベントを追加することができます。  
+>  SQL Server エージェントが Reporting Services に提供する機能を、 <xref:ReportService2010.ReportingService2010.FireEvent%2A> メソッドを使用するカスタム コードに置き換え、キューにスケジュール イベントを追加することができます。  
   
 ###  <a name="bkmk_stoppingservice"></a> レポート サーバー サービスの停止の影響  
  レポート サーバー サービスを停止しても、SQL Server エージェントは引き続きレポート処理要求をキューに追加します。 SQL Server エージェントからの状態情報は、ジョブが成功したことを示します。 ただし、レポート サーバー サービスが停止しているため、実際にはレポート処理は実行されません。 レポート サーバー サービスを再起動するまで、要求はキューに蓄積され続けます。 レポート サーバー サービスを再起動すると、キューにあるすべてのレポート処理要求が順番に処理されます。  
   
 ## <a name="see-also"></a>参照  
  [レポート履歴のスナップショットの作成、変更および削除](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
- [サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [サブスクリプションと配信 & #40 です。Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [データ ドリブン サブスクリプション](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [レポートのキャッシュ &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [キャッシュのレポートと #40 です。SSRS &#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [レポート サーバー コンテンツの管理と &#40; です。SSRS ネイティブ モードと &#41; です。](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [共有データセットのキャッシュ &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   
   

@@ -18,11 +18,11 @@ caps.latest.revision: 19
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fa6837d82c145d2bb079013238dd67332e512cc6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="planning-a-report-report-builder"></a>レポートの計画 (レポート ビルダー)
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **どの形式でレポートを表示するか**  
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルなどのブラウザーでレポートをオンラインで表示したり、Excel、Word、PDF などの他の形式にレポートをエクスポートしたりすることができます。 エクスポート形式によっては一部の機能を使用できないので、レポートの最終的な形式を検討することは重要です。 詳しくは、「 [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)におけるページ割り付けの制御規則を理解しておく必要があります。  
+     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルなどのブラウザーでレポートをオンラインで表示したり、Excel、Word、PDF などの他の形式にレポートをエクスポートしたりすることができます。 エクスポート形式によっては一部の機能を使用できないので、レポートの最終的な形式を検討することは重要です。 詳しくは、「[レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」をご覧ください。  
   
 -   **どのような構造を使用してレポートのデータを表すか**  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **どのデータを表示するか、データまたは形式フィルターをかけるようにさまざまな対象ユーザーですか。**  
   
-     レポートの範囲を特定のユーザーまたは場所、あるいは特定の期間などに絞り込むことができます。 レポート データをフィルター処理するには、パラメーターを使用して、必要なデータのみを取得して表示します。 詳細については、「 [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+     レポートの範囲を特定のユーザーまたは場所、あるいは特定の期間などに絞り込むことができます。 レポート データをフィルター処理するには、パラメーターを使用して、必要なデータのみを取得して表示します。 詳細については、「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
   
 -   **独自の計算を作成する必要があるかどうか**  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2016 のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [レポート作成の概念 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [レポート作成の概念と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)  
   
   

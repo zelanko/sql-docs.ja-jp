@@ -15,15 +15,15 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dfa24b2135c34e95dae65e0a6fee4bf5da6b3d16
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>円グラフ (レポート ビルダーおよび SSRS)
-  円グラフおよびドーナツ グラフは、データを全体に対する比率として表示します。 円グラフは、主に、グループ間の比較を示すために使用されます。 円グラフとドーナツ グラフは、ピラミッド グラフやじょうごグラフと同様、図形グラフの一種です。 図形グラフには軸がありません。 図形グラフに数値フィールドをドロップすると、それぞれの値の全体に占める比率が計算されます。 図形グラフの詳細については、「[Shape Charts (Report Builder and SSRS)](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)」(グラフ (レポート ビルダーおよび SSRS)) を参照してください。  
+  円グラフおよびドーナツ グラフは、データを全体に対する比率として表示します。 円グラフは、主に、グループ間の比較を示すために使用されます。 円グラフとドーナツ グラフは、ピラミッド グラフやじょうごグラフと同様、図形グラフの一種です。 図形グラフには軸がありません。 図形グラフに数値フィールドをドロップすると、それぞれの値の全体に占める比率が計算されます。 図形グラフの詳細については、次を参照してください。[図形グラフと #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md).  
   
  次の図は、パーセンテージ形式のデータ ラベルを持つ 3-D 円グラフを示しています。  右側中央には凡例が配置されています。  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 06/22/2017
  詳細については、「[グラフへの傾斜、エンボス、およびテクスチャのスタイルの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)」を参照してください。  
   
 ## <a name="displaying-percentage-values-on-a-pie-chart"></a>円グラフへのパーセンテージの表示  
- 他の図形グラフと同様、円グラフは、全体に占める割合 (パーセント) を表します。 そのため、円グラフのラベルは、パーセンテージで表記するのが一般的です。 他の種類のグラフとの一貫性を保つ関係上、既定では、円グラフにパーセンテージ ラベルが表示されません。 グラフにパーセンテージ値を表示する方法については、「[円グラフへのパーセンテージの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)」を参照してください。 レポートで数値の書式をパーセンテージとして設定する方法については、「[Formatting Numbers and Dates (Report Builder and SSRS)](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)」(数値と日付の書式設定 (レポート ビルダーおよび SSRS)) を参照してください。  
+ 他の図形グラフと同様、円グラフは、全体に占める割合 (パーセント) を表します。 そのため、円グラフのラベルは、パーセンテージで表記するのが一般的です。 他の種類のグラフとの一貫性を保つ関係上、既定では、円グラフにパーセンテージ ラベルが表示されません。 グラフにパーセンテージ値を表示する方法については、「 [円グラフへのパーセンテージの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)」(グラフ (レポート ビルダーおよび SSRS)) を参照してください。 レポートで数値の書式をパーセンテージとして設定する方法については、「[Formatting Numbers and Dates (Report Builder and SSRS)](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)」(数値と日付の書式設定 (レポート ビルダーおよび SSRS)) を参照してください。  
   
  ![円グラフにデータ ポイント ラベルをパーセンテージとして](../../reporting-services/report-design/media/rs-piechartpercentages.gif "円グラフにデータ ポイントの割合としてのラベル")  
   
@@ -92,11 +92,11 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [円グラフの外側へのデータ ポイント ラベルの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
- [円グラフの小さいスライスをまとめる (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
- [円グラフへのパーセンテージの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
- [チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [グラフの凡例の書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
- [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [グラフの系列の色の書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  
+ [円グラフ &#40; 上の小さいスライスをまとめるレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [円グラフ &#40; 上の割合の値を表示します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [チュートリアル: レポートへの円グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [グラフの凡例の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [グラフ &#40; 内の空および Null データ ポイントレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  
   
   

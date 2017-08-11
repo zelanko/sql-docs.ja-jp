@@ -4,16 +4,16 @@ description: "このトピックでは、リリース ノートが含まれて�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
-ms.openlocfilehash: 1907ef1ae99146fe7cdf2ca124af22aabdc29b35
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: baa5826e9722bfb23afacf729d80bebf88985ed3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
@@ -152,6 +152,8 @@ ms.lasthandoff: 08/04/2017
       sudo systemctl restart mssql-server
       ```
 
+- インメモリ OLTP を使用して Windows 上の SQL Server 2014 データベースは、Linux 上の SQL Server 2017 に復元することはできません。 インメモリ OLTP を使用する SQL Server 2014 データベースを復元するに最初にデータベースをアップグレードを SQL Server 2016 または Windows 上の SQL Server 2017 移動の前に SQL server on Linux のバックアップ/復元またはデタッチとアタッチを使用して。
+
 #### <a name="remote-database-files"></a>リモートのデータベース ファイル
 
 - このリリースでは、NFS サーバー上のデータベース ファイルをホストすることはできません。 これは、NFS を使用して、共有ディスクに対してフェールオーバー クラスタ リングのデータベースと非クラスター化インスタンスに含まれています。 今後のリリースで NFS サーバーのサポートを有効にすると現在取り組んでいます。
@@ -267,6 +269,7 @@ Linux では、SSIS パッケージを実行できます。 詳細について�
 | &nbsp; | Stretch DB |
 | &nbsp; | Polybase |
 | &nbsp; | Distributed Query |
+| &nbsp; | Machine Learning サービス |
 | &nbsp; | システム拡張ストアド プロシージャ (XP_CMDSHELL など) |
 | &nbsp; | Filetable |
 | &nbsp; | CLR アセンブリと EXTERNAL_ACCESS または UNSAFE 権限の設定します。 |
@@ -856,7 +859,7 @@ Linux CTP 2.1 の更新で、SSIS で SSIS パッケージは、Linux の ODBC �
     - 変更データ キャプチャ
 
 #### <a name="in-memory-oltp"></a>インメモリ OLTP
-- インメモリ OLTP データベースは、/var/opt/mssql ディレクトリにのみ作成できます。 詳細については、次を参照してください。、 [、インメモリ OLTP トピック](sql-server-linux-performance-get-started.md#use-in-memory-oltp)です。  
+- インメモリ OLTP データベースは、/var/opt/mssql ディレクトリにのみ作成できます。 詳細については、次を参照してください。、 [、インメモリ OLTP トピック](sql-server-linux-performance-get-started.md#use-in-memory-oltp)です。
 
 #### <a name="sqlpackage"></a>SqlPackage
 - SqlPackage を使用するには、ファイルの絶対パスを指定する必要があります。 "/Tmp sqlpackage 下のファイルの相対パスを使用してマップされます。\<コード \> /システム/system32"フォルダーです。 

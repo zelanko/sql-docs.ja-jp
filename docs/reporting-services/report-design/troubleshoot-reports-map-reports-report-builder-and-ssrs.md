@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 488c17afabc7dc828ccf88ed1e058f1e13c7e0b2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS)
@@ -180,7 +180,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>レポートを実行してもカラー スケールが表示されない  
  カラー スケールは、マップ レイヤーのレイヤー全体または埋め込みマップ要素に対し、多角形、線、またはポイントに対する色ルールが指定されている場合に、ユーザーに情報を表示するものです。 マップ要素に色ルールが指定されていない場合や、色ルールの指定に (カラー マップではなく) 凡例が使用されている場合、レンダリングされたレポートにカラー マップは表示されません。  
   
- カラー スケールを表示するには、レイヤーまたは埋め込みマップ要素に色ルールを指定します。 詳細については、「 [マップの凡例、カラー スケール、および関連付けられているルールの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)」を参照してください。  
+ カラー スケールを表示するには、レイヤーまたは埋め込みマップ要素に色ルールを指定します。 詳細については、「[マップの凡例、カラー スケール、および関連付けられているルールの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)」を参照してください。  
   
 ##  <a name="Tile"></a> タイルの問題  
  タイルの背景のオプションに関連した問題の解決方法については、このセクションを参照してください。  
@@ -212,7 +212,7 @@ ms.lasthandoff: 06/22/2017
  レポート データセットのものではない空間データに関連したデータを指定するには、# 記号に続けて、データの名前を指定するラベルを指定する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [マップ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [レポート ビルダーのトラブルシューティング](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+ [マップ & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [レポート ビルダーをトラブルシューティングします。](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
   
   

@@ -17,17 +17,17 @@ caps.latest.revision: 30
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 68038228fd6fb7b2af8dd6f1bb5ae50b7f63daac
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="system-role-properties-management-studio"></a>システム ロールのプロパティ (Management Studio)
   [システム ロール] ページは、レポート サーバーで現在定義されているシステム ロールの定義を表示するために使用します。 システム ロールの定義には、個別のアイテムではなく、サイト全体に関連して実行される名前付きのタスクのコレクションが含まれています。 ロールの定義は、ロールの割り当てを作成するために、ユーザーまたはグループに割り当てられます。 ロールの定義のタスクには、ユーザーまたはグループが実行できる操作を指定します。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、 **システム管理者** と **システム ユーザー**という 2 つのシステム ロールがあらかじめ定義されています。 タスクの一覧を変更することにより、ロールの定義を変更できます。また、異なるタスクの組み合わせをサポートする新しいシステム ロールを作成できます。 ロールの定義を編集すると、そのロールの定義を含むすべてのロールの割り当てに反映されます。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]2 つの定義済みのシステム ロールの定義:**システム管理者**と**システム ユーザー**です。 タスクの一覧を変更することにより、ロールの定義を変更できます。また、異なるタスクの組み合わせをサポートする新しいシステム ロールを作成できます。 ロールの定義を編集すると、そのロールの定義を含むすべてのロールの割り当てに反映されます。  
   
 > [!NOTE]  
 >  システム ロールの割り当ては、ネイティブ モードで実行されているレポート サーバーでのみ使用されます。 レポート サーバーが SharePoint 統合モード用に構成されている場合、このページは使用できません。  
@@ -46,9 +46,9 @@ ms.lasthandoff: 06/22/2017
  各タスクに関する情報が表示されます。 タスクの説明を変更することはできません。  
   
 ## <a name="see-also"></a>参照  
- [Management Studio のレポート サーバーの F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [システムレベルのタスク](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)   
+ [レポート サーバーの Management Studio の F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [システム レベルのタスク](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)   
  [タスクと権限](../../reporting-services/security/tasks-and-permissions.md)   
- [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)  
+ [定義済みのロール](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   

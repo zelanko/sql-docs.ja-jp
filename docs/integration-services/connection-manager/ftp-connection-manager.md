@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ftpconnectionmanager.f1
 helpviewer_keywords:
 - FTP connection manager
 - connections [Integration Services], FTP
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 04cc47e64fbbaec3f1e1df9216ead850efa75b90
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 051dc7db2ef8aa475fa8739b097edd93d8286524
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ftp-connection-manager"></a>FTP 接続マネージャー
@@ -59,7 +61,43 @@ ms.lasthandoff: 08/03/2017
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティについては、「 [[FTP 接続マネージャー エディター]](../../integration-services/connection-manager/ftp-connection-manager-editor.md)」を参照してください。  
   
- プログラムによる接続マネージャーの構成の詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」および「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
+ プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
+  
+## <a name="ftp-connection-manager-editor"></a>FTP 接続マネージャー エディター
+  **[FTP 接続マネージャー エディター]** ダイアログ ボックスを使用すると、FTP サーバーに接続するためのプロパティを指定できます。  
+  
+> [!IMPORTANT]  
+>  FTP 接続マネージャーでは、匿名認証と基本認証のみがサポートされています。 Windows 認証はサポートされていません。  
+  
+ FTP 接続マネージャーの詳細については、「 [FTP 接続マネージャー](../../integration-services/connection-manager/ftp-connection-manager.md)」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **サーバー名**  
+ FTP サーバーの名前を指定します。  
+  
+ **[サーバー ポート]**  
+ 接続に使用する FTP サーバーのポート番号を指定します。 このプロパティの既定値は **21**です。  
+  
+ **ユーザー名**  
+ FTP サーバーにアクセスするために使用するユーザー名を指定します。 このプロパティの既定値は **anonymous**です。  
+  
+ **Password**  
+ FTP サーバーにアクセスするために使用するパスワードを指定します。  
+  
+ **[タイムアウト (秒)]**  
+ タスクがタイムアウトするまでの秒数を指定します。 この値に **0** を指定すると、時間は無制限になります。 このプロパティの既定値は **60**です。  
+  
+ **[パッシブ モードを使用する]**  
+ サーバーまたはクライアントのどちらが接続を開始するかを指定します。 アクティブ モードではサーバーが接続を開始し、パッシブ モードではクライアントが接続を開始します。 このプロパティの既定値は **アクティブ モード**です。  
+  
+ **[再試行の回数]**  
+ 接続を試行する回数を指定します。 値 **0** は、無制限に再試行を行うことを示します。  
+  
+ **[チャンク サイズ (KB)]**  
+ データを転送するためのチャンク サイズを KB 単位で指定します。  
+  
+ **[接続テスト]**  
+ FTP 接続マネージャーを構成した後に、 **[接続テスト]**をクリックして、接続が利用可能であることを確認します。  
   
 ## <a name="see-also"></a>参照  
  [FTP タスク](../../integration-services/control-flow/ftp-task.md)   

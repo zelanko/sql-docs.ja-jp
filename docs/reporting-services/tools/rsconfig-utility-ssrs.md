@@ -21,11 +21,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 68b5e38f2b4e71298fbf7b6ec6970fc7824c3cde
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig ユーティリティ (SSRS)
@@ -60,7 +60,7 @@ rsconfig {-?}
 |**-i**  *instancename*|名前付きインスタンスを使用する場合は必須。|名前付き [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを使用してレポート サーバー データベースをホストする場合、この値には名前付きインスタンスを指定します。|  
 |**-d**  *databasename*|必須。|レポート サーバー データベースの名前を指定します。|  
 |**-a**  *authmethod*|必須。|レポート サーバーがレポート サーバー データベースへの接続に使用する認証方法を指定します。 有効な値は、 **Windows** または **SQL** です (この引数は大文字と小文字を区別しません)。<br /><br /> **Windows** は、レポート サーバーが Windows 認証を使用することを指定します。<br /><br /> **SQL** は、レポート サーバーが SQL Server 認証を使用することを指定します。|  
-|**-u**  *[domain\\]username*|**-e** の場合は必須。**-c** の場合は省略可。|レポート サーバー データベース接続または自動アカウントのためのユーザー アカウントを指定します。<br /><br /> **rsconfig -e**では、この引数は必須です。 引数はドメイン ユーザー アカウントであることが必要です。<br /><br /> **rsconfig -c** および **-a SQL**では、この引数には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定する必要があります。<br /><br /> **rsconfig -c** および **-a Windows**では、この引数には、ドメイン ユーザー、組み込みアカウント、またはサービス アカウント資格情報を指定できます。 ドメイン アカウントを指定している場合は、 *domain* と *username* を *domain\username*の形式で指定します。 組み込みアカウントを使用する場合、この引数は省略可能です。 サービス アカウント資格情報を使用する場合、この引数は省略してください。|  
+|**-u***[ドメイン\\] ユーザー名* |**-e** の場合は必須。 **-c**の場合は省略可。|レポート サーバー データベース接続または自動アカウントのためのユーザー アカウントを指定します。<br /><br /> **rsconfig -e**では、この引数は必須です。 引数はドメイン ユーザー アカウントであることが必要です。<br /><br /> **rsconfig -c** および **-a SQL**では、この引数には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定する必要があります。<br /><br /> **rsconfig -c** および **-a Windows**では、この引数には、ドメイン ユーザー、組み込みアカウント、またはサービス アカウント資格情報を指定できます。 ドメイン アカウントを指定している場合は、 *domain* と *username* を *domain\username*の形式で指定します。 組み込みアカウントを使用する場合、この引数は省略可能です。 サービス アカウント資格情報を使用する場合、この引数は省略してください。|  
 |**-p**  *password*|**-u** を指定した場合は必須。|*username* 引数と共に使用するパスワードを指定します。 アカウントがパスワードを必要としない場合、この引数を空白に設定できます。 この値は、ドメイン アカウントの大文字と小文字を区別します。|  
 |**-t**|省略可。|エラー メッセージをトレース ログに出力します。 この引数は値を取りません。 詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。|  
   
@@ -127,12 +127,12 @@ rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <P
 ```  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Reporting Services レポート サーバー &#40;ネイティブ モード&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [レポート サーバー データベース接続 &#40; を構成します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [自動実行アカウント &#40; を構成します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Reporting Services レポート サーバー & #40 です。ネイティブ モード &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [暗号化されたレポート サーバー データ &#40; の格納SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services 構成ファイル](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [レポート サーバーのコマンド プロンプト ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [レポート サーバーのコマンド プロンプト ユーティリティ & #40 です。SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   

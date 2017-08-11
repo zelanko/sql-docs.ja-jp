@@ -19,11 +19,11 @@ caps.latest.revision: 48
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7e79341b1988e43d27ac35d46fcba482de0ab371
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-access-parameter-reference"></a>URL アクセス パラメーター リファレンス
@@ -125,7 +125,7 @@ ms.lasthandoff: 06/22/2017
   
 -   *Stylesheet*: HTML ビューアーに適用するスタイル シートを指定します。  
   
--   デバイス情報設定: `rc:tag=value`の形式でデバイス情報設定を指定します。 *tag* は、現在使用されている表示拡張機能に固有のデバイス情報設定の名前です ( *Format* パラメーターの説明を参照してください)。 たとえば、IMAGE 表示拡張機能の *OutputFormat* デバイス情報設定を使用すると、URL アクセス文字列に `…&rs:Format=IMAGE&rc:OutputFormat=JPEG` パラメーターを指定することで、レポートを JPEG 画像で表示できます。 拡張機能に固有のすべてのデバイス情報設定の詳細については、「[表示拡張機能のデバイス情報設定 (Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)」を参照してください。  
+-   デバイス情報設定: `rc:tag=value`の形式でデバイス情報設定を指定します。 *tag* は、現在使用されている表示拡張機能に固有のデバイス情報設定の名前です ( *Format* パラメーターの説明を参照してください)。 たとえば、IMAGE 表示拡張機能の *OutputFormat* デバイス情報設定を使用すると、URL アクセス文字列に `…&rs:Format=IMAGE&rc:OutputFormat=JPEG`パラメーターを指定することで、レポートを JPEG 画像で表示できます。 拡張機能に固有のすべてのデバイス情報設定の詳細については、「[表示拡張機能のデバイス情報設定 (Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)」を参照してください。  
   
 ##  <a name="bkmk_reportserver"></a> レポート サーバー コマンド (rs:)  
  レポート サーバー コマンドには接頭辞として *rs:* が付き、レポート サーバーを対象として使用されます。  

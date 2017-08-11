@@ -15,11 +15,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 271d1b4018890ab23db0254b24cbf7664491b848
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>データセット フィールド コレクション (レポート ビルダーおよび SSRS)
@@ -31,7 +31,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **データセット計算フィールド :** データセットに作成する追加フィールド。 各計算フィールドは、ユーザー定義の式を評価して作成されます。  
   
--   **組み込みフィールド :** レポート ビルダーによって提供されるフィールドのコレクションを表すメタデータで、レポートの処理時にレポート名や時間などのレポート情報を提供します。 詳細については、「[組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)」を参照してください。  
+-   **組み込みフィールド :** レポート ビルダーによって提供されるフィールドのコレクションを表すメタデータで、レポートの処理時にレポート名や時間などのレポート情報を提供します。 詳細については、「[組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)」をご覧ください。  
   
  データセットのフィールド名は、レポートのデータセット定義の一部として保存されます。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/22/2017
   
  Tablix データ領域では、既定のフィールド式は、フィールドを追加するテキスト ボックスの行およびグループ メンバーシップに依存します。 テーブルの詳細行のテキスト ボックスに追加した場合、フィールド Sales のフィールド式は、 `[Sales]`です。 同じフィールドをグループ ヘッダー内のテキスト ボックスに追加した場合、グループ ヘッダーには詳細値ではなくグループの集計値が表示されるので、既定の式は `(Sum[Sales])`です。 レポートの実行時に、レポート プロセッサによって各式が評価され、レポート内の結果が置き換えられます。  
   
- 式の詳細については、「[式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。  
+ 式の詳細については、「[式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。  
   
   
 ##  <a name="DataTypes"></a> フィールド データ型  
@@ -103,7 +103,7 @@ ms.lasthandoff: 06/22/2017
     |**DateTimeTZ**|**DateTimeOffset**|タイム ゾーン オフセットを含む日付と時刻|  
     |**DateTime2**|**DateTime**|小数ミリ秒を含む日付と時刻|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの型の詳細については、「[データ型 (データベース エンジン)](http://go.microsoft.com/fwlink/?linkid=98362)」および「[日付と時刻のデータ型および関数 (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの型の詳細については、「 [データ型 (データベース エンジン)](http://go.microsoft.com/fwlink/?linkid=98362) 」および「 [日付と時刻のデータ型および関数 (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360)」を参照してください。  
   
  式のデータセット フィールドへの参照を含める方法については、「[式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [[フィールド] ([データセットのプロパティ] ダイアログ ボックス) &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
- [レポート ビルダーのレポート パーツおよびデータセット](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [レポート パーツとレポート ビルダーでデータセット](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [レポート埋め込みデータセットおよび共有データセット &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

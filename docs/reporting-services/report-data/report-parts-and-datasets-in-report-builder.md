@@ -15,17 +15,17 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5bd079fcfdd867bbcfb251c7e58fa485c9c56d17
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>レポート ビルダーのレポート パーツおよびデータセット
   レポート ビルダーでレポートにデータを含める最も簡単な方法は、レポート パーツ ギャラリーからレポート パーツを追加することです。 レポート パーツには、そのレポート パーツが依存するデータセットが含まれており、 *依存データセット*と呼ばれます。 依存データセットは共有データ ソースに基づいており、埋め込みデータセットまたは共有データセットのどちらかにすることができます。 [レポート パーツ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)の詳細を参照してください。  
   
- レポートにデータを含めるもう 1 つの簡単な方法は、共有データセットを使用することです。 詳細については、「 [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。  
+ レポートにデータを含めるもう 1 つの簡単な方法は、共有データセットを使用することです。 詳しくは、「[レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」をご覧ください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -56,13 +56,13 @@ ms.lasthandoff: 06/22/2017
 2.  レポート ビルダーを終了したり、新規レポートを開始したりすると、レポートを保存するように求められます。 レポートを保存しない場合、次にこのレポートを開き、レポート アイテムをパブリッシュするときに、同じデータセットの新しいコピーをパブリッシュできます。 レポート サーバーに共有データセットの複数のコピーを保存したくない場合は、レポートを保存することをお勧めします。  
   
 > [!IMPORTANT]  
->  共有データセットから継続して正常にデータを使用するには、レポート アイテムのセキュリティ保護の背景にある原則を理解する必要があります。 詳細については、「 [共有データセット アイテムをセキュリティで保護する](../../reporting-services/security/secure-shared-dataset-items.md)」を参照してください。  
+>  共有データセットから継続して正常にデータを使用するには、レポート アイテムのセキュリティ保護の背景にある原則を理解する必要があります。 詳細については、「[共有データセット アイテムをセキュリティで保護する](../../reporting-services/security/secure-shared-dataset-items.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レポート デザイン ビュー (レポート ビルダー)](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [セキュリティ (レポート ビルダー)](../../reporting-services/report-builder/security-report-builder.md)   
- [レポート パーツ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
- [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [レポート デザイン ビュー &#40;です。レポート ビルダー&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
+ [セキュリティ &#40;です。レポート ビルダー&#41;](../../reporting-services/report-builder/security-report-builder.md)   
+ [レポート パーツと &#40;です。レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
+ [レポート埋め込みデータセットと共有データセットと &#40;です。レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
 

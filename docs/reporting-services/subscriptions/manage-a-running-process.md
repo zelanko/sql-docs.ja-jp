@@ -32,11 +32,11 @@ caps.latest.revision: 53
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 103472f5003235e0e08c65c40999545ff4d864ee
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 -   個々のユーザーが所有する標準サブスクリプション。  
   
- ジョブのキャンセルでは、レポート サーバーで実行中の処理だけが取り消されます。 レポート サーバーは、他のコンピューター上のデータ処理を管理しないため、他のシステム上で孤立したそれ以降のクエリ処理については、手動で取り消す必要があります。 実行に長時間かかるクエリが自動的にシャットダウンされるようなクエリのタイムアウト値を指定することを検討してください。 詳細については、「[レポートおよび共有データセット処理のタイムアウト値の設定 (SSRS)](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)」を参照してください。 レポートを一時的に停止する方法の詳細については、「[レポートとサブスクリプションの処理を無効化または一時停止する](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)」を参照してください。  
+ ジョブのキャンセルでは、レポート サーバーで実行中の処理だけが取り消されます。 レポート サーバーは、他のコンピューター上のデータ処理を管理しないため、他のシステム上で孤立したそれ以降のクエリ処理については、手動で取り消す必要があります。 実行に長時間かかるクエリが自動的にシャットダウンされるようなクエリのタイムアウト値を指定することを検討してください。 詳細については、次を参照してください。[タイムアウト値の設定値レポートおよび共有データセットの処理 (&) #40 です。SSRS &#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). レポートを一時的に停止する方法の詳細については、「 [レポートとサブスクリプションの処理を無効化または一時停止する](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)」を参照してください。  
   
 > [!NOTE]  
 >  まれに、サーバーを再起動して処理を取り消す必要が生じる場合があります。 SharePoint モードの場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションをホストしているアプリケーション プールの再起動が必要になる場合があります。 詳細については、「 [レポート サーバー サービスの開始と停止](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)」を参照してください。  
@@ -121,14 +121,14 @@ ms.lasthandoff: 06/22/2017
 5.  または、ジョブのボックスをクリックして **[削除]** をクリックし、ジョブをキャンセルします。 ジョブを削除しても、サブスクリプションは削除されません。  
   
 ##  <a name="bkmk_programmatically"></a> プログラムによるジョブの管理  
- ジョブは、プログラムまたはスクリプトを使用して管理できます。 詳細については、次を参照してください。 <xref:ReportService2010.ReportingService2010.ListJobs%2A>、<xref:ReportService2010.ReportingService2010.CancelJob%2A>です。  
+ ジョブは、プログラムまたはスクリプトを使用して管理できます。 詳細については、「 <xref:ReportService2010.ReportingService2010.ListJobs%2A>」と「 <xref:ReportService2010.ReportingService2010.CancelJob%2A>の両方を管理できます。  
   
 ## <a name="see-also"></a>参照  
  [[レポート サーバー ジョブのキャンセル] (Management Studio)](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
- [[ジョブのプロパティ] (Management Studio)](../../reporting-services/tools/job-properties-management-studio.md)   
- [Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [ジョブのプロパティ & #40 です。Management Studio &#41;](../../reporting-services/tools/job-properties-management-studio.md)   
+ [Reporting Services の構成ファイル &#40; を変更します。RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [レポート マネージャー (SSRS ネイティブ モード)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [レポート マネージャーと &#40; です。SSRS ネイティブ モードと &#41; です。](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [レポート サーバーのパフォーマンスの監視](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   

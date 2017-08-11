@@ -27,18 +27,18 @@ caps.latest.revision: 60
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e587f50e041d42bb09d99fa03d4146216883fce6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーに対する権限の許可
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、ロールベースの承認および認証サブシステムを使用して、操作の実行およびレポート サーバーのアイテムへのアクセスを行えるユーザーを決定します。 ロールベースの承認では、ユーザーまたはグループが実行できる一連のアクションがロールに分類されます。 認証は、組み込みの Windows 認証、または指定したカスタム認証モジュールに基づいて行われます。 どちらの種類の認証でも、定義済みロールまたはカスタム ロールを使用できます。  
   
 ## <a name="using-roles-to-grant-report-server-access"></a>ロールを使用したレポート サーバーへのアクセス許可  
- すべてのユーザーは、特定のレベルのアクセスを定義するロールのコンテキスト内でレポート サーバーと対話します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポート サーバーにすぐにアクセスできるように、ユーザーおよびグループに割り当てることのできる定義済みロールが含まれています。 **コンテンツ マネージャー**、 **パブリッシャー**、および **閲覧者** は、定義済みロールの例です。 各ロールでは、関連するタスクのコレクションを定義します。 たとえば、 **パブリッシャー** には、レポートを追加して、そのレポートを格納するフォルダーを作成する権限があります。  
+ すべてのユーザーは、特定のレベルのアクセスを定義するロールのコンテキスト内でレポート サーバーと対話します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポート サーバーにすぐにアクセスを提供するユーザーおよびグループに割り当てることのできる定義済みのロールが含まれます。 **コンテンツ マネージャー**、 **パブリッシャー**、および **閲覧者** は、定義済みロールの例です。 各ロールでは、関連するタスクのコレクションを定義します。 たとえば、 **パブリッシャー** には、レポートを追加して、そのレポートを格納するフォルダーを作成する権限があります。  
   
  通常、ロールの割り当ては親ノードから継承されますが、特定のアイテムに対する新しいロールの割り当てを作成することで権限の継承を無効にすることができます。 あるレポートの **コンテンツ マネージャー** ロールのメンバーは、別のレポートの **閲覧者** ロールのメンバーである可能性があります。  
   
@@ -72,15 +72,15 @@ ms.lasthandoff: 06/22/2017
   
 |ツール|処理手順|  
 |----------|-----------|  
-|Management Studio - ロールの定義を表示、変更、作成、および削除する場合に使用します。|[ロールを作成、削除、または変更する (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
-|レポート マネージャー - ユーザーおよびグループをロールに割り当てる場合に使用します。|[レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [ロールの割り当てを変更または削除する (レポート マネージャー)](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
+|Management Studio - ロールの定義を表示、変更、作成、および削除する場合に使用します。|[作成、削除、または、Role &#40; を変更Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
+|レポート マネージャー - ユーザーおよびグループをロールに割り当てる場合に使用します。|[レポート サーバー &#40; をユーザー アクセスを許可します。レポート マネージャー &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [変更または削除するロールの割り当てと #40 です。レポート マネージャー &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>参照  
- [定義済みロール](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [定義済みのロール](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [SharePoint サイト上のレポート サーバー アイテムに対する権限の許可](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [レポート サーバーでの認証](../../reporting-services/security/authentication-with-the-report-server.md)   
- [ロールの割り当てを作成および管理する](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [作成および管理ロールの割り当て](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Reporting Services のセキュリティと保護](../../reporting-services/security/reporting-services-security-and-protection.md)   
- [レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [レポート サーバー コンテンツの管理 & #40 です。SSRS ネイティブ モード &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

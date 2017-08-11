@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 03787380e498b82c160583cf1e8391bf643edf7c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tables-report-builder--and-ssrs"></a>テーブル (レポート ビルダーおよび SSRS)
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
  ![太字の列ヘッダーを含むテーブルのプレビュー](../../reporting-services/media/rs-basictabledetailsformattedpreview.png "太字の列ヘッダーを含むテーブルのプレビュー")  
   
- 作業を開始したテーブルは、Tablix データ領域に基づいたテンプレートです。 基になる Tablix データ領域でサポートされている機能を追加することで、テーブルのデザインを整えることができます。 詳細については、「[レポート ページでの Tablix データ領域の表示の制御 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)」を参照してください。 また、行グループや列グループの追加、詳細グループの追加や削除を行って、テーブルを改良することもできます。 詳細については、「[Tablix データ領域の柔軟性について (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。  
+ 作業を開始したテーブルは、Tablix データ領域に基づいたテンプレートです。 基になる Tablix データ領域でサポートされている機能を追加することで、テーブルのデザインを整えることができます。 詳細については、「[レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)」を参照してください。 また、行グループや列グループの追加、詳細グループの追加や削除を行って、テーブルを改良することもできます。 詳細については、「[Tablix データ領域の柔軟性について (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
 ### <a name="adding-totals-for-detail-data"></a>詳細データの合計の追加  
  合計を追加するには、数値データを含むセルを選択し、数値フィールドの詳細データのラベルと合計を自動的に追加するショートカット メニューを使用します。 他のラベルおよび合計を手動で指定することもできます。 次の図に、合計を自動と手動の両方で指定した一般的な合計行を示します。  
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/22/2017
  詳細については、「[グループまたは Tablix データ領域への合計の追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
 ##  <a name="AddingRowGroups"></a> テーブルへの行グループの追加  
- レポート データ ペインからセルにフィールドをドラッグして詳細データを表示できるのと同様に、フィールドをグループ化ペインにドラッグしてグループを追加できます。 テーブルの行グループ ペインにフィールドをドラッグします。 グループを追加すると、テーブルの行グループ領域の新しい列にセルが自動的に追加され、グループ値が表示されます。 領域の詳細については、「[Tablix データ領域部分 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)」を参照してください。  
+ レポート データ ペインからセルにフィールドをドラッグして詳細データを表示できるのと同様に、フィールドをグループ化ペインにドラッグしてグループを追加できます。 テーブルの行グループ ペインにフィールドをドラッグします。 グループを追加すると、テーブルの行グループ領域の新しい列にセルが自動的に追加され、グループ値が表示されます。 領域の詳細については、次を参照してください。 [Tablix データ領域部分 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  次の図に、入れ子になっている 2 つの行グループを含むテーブルの [デザイン] ビューを示します。 行グループは、Order フィールドと Date フィールドを順に行グループ ペインにドラッグし、各グループを既存のグループの親として挿入して作成されています。 この図は、日付に基づいた親グループ、注文番号に基づいた子グループ、および既定で定義されている詳細グループを示します。  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 06/22/2017
   
  ![テーブルが日付でグループ化され、注文して](../../reporting-services/media/rs-basictablegroupspreview.png "テーブルが日付でグループ化され、注文して")  
   
- グループ化されたデータの表示は、それぞれの値を個々の列に表示する代わりに、グループ階層をインデントして、入れ子になったグループのリレーションシップを表示することもできます。 このスタイルの書式設定は、階段状レポートと呼ばれます。 グループ情報を段階状レポートとして書式設定する方法の詳細については、「[階段状レポートの作成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md)」を参照してください。  
+ グループ化されたデータの表示は、それぞれの値を個々の列に表示する代わりに、グループ階層をインデントして、入れ子になったグループのリレーションシップを表示することもできます。 このスタイルの書式設定は、階段状レポートと呼ばれます。 階段状レポートとしてグループ情報を書式設定する方法の詳細については、次を参照してください[階段状レポート &#40; を作成します。。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md).  
   
 ### <a name="adding-totals-to-row-groups"></a>行グループへの合計の追加  
  グループの合計を表示するには、状況依存の **[合計の追加]** コマンドを使用できます。 行グループに対して [合計の追加] コマンドを使用すると、グループに対して 1 回だけ繰り返されるようにグループの外側に行が追加されます。 入れ子になっているグループの場合、子グループの合計行は子グループの外側で、親グループの内側に配置されます。 そのような場合は、子グループの合計行の背景色を設定して詳細行と区別すると便利です。 また、別の背景色を使用してテーブルのヘッダー行とフッター行を区別することもできます。 次の図に、注文番号に基づいたグループの合計行が追加されたテーブルを示します。  
@@ -120,8 +120,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [式と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [式の例と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、およびリスト & #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

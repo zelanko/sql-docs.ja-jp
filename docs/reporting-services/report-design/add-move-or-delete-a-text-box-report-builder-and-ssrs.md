@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 75444343968c9901a24c1a4d431d4d8cfacb1567
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>テキスト ボックスの追加、移動、または削除 (レポート ビルダーおよび SSRS)
@@ -66,7 +66,7 @@ ms.lasthandoff: 06/22/2017
     >  テキスト ボックスの中をクリックして編集モードになった場合は、Esc キーを押すとテキスト ボックスを選択できます。  
   
 2.  テキスト ボックスのハンドルをクリックし、テキスト ボックスを新しい場所にドラッグします。   
-    または、方向キーを使用して、選択したテキスト ボックスを横方向または縦方向に移動します。 デザイン画面でテキスト ボックスを細かく移動するには、Ctrl キーを押しながら方向キーを使用します。  
+    または、方向キーを使用して、選択したテキスト ボックスを横方向または縦方向に移動します。 デザイン画面でテキスト ボックスを細かく移動するには、&lt;localizedText&gt;Ctrl&lt;/localizedText&gt; キーを押しながら方向キーを使用します。  
   
 ## <a name="to-delete-a-text-box"></a>テキスト ボックスを削除するには  
   
@@ -76,8 +76,8 @@ ms.lasthandoff: 06/22/2017
     >  テキスト ボックスの中をクリックして編集モードになった場合は、Esc キーを押すとテキスト ボックスを選択できます。  
   
 ## <a name="see-also"></a>参照  
- [テキスト ボックス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [キーボード ショートカット (レポート ビルダー)](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
+ [テキスト ボックス & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
+ [式と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [キーボード ショートカットと #40 です。レポート ビルダー"&"#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
   

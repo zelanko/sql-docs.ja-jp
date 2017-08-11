@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8d2a1b09aefaf3baf454edd419e3d1edd8aa575f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>レポートのレポート サーバーへの保存 (レポート ビルダー)
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-save-a-report-to-a-report-server"></a>レポートをレポート サーバーに保存するには  
   
-1.  レポート ビルダーのボタンの **[保存]**をクリックします。 **名前を付けて保存***\<レポート アイテム >*  ダイアログ ボックスが表示されます。  
+1.  レポート ビルダーのボタンの **[保存]** をクリックします。 **名前を付けて保存***\<レポート アイテム >*  ダイアログ ボックスが表示されます。  
   
     > [!NOTE]  
     >  レポートを再保存すると、自動的に以前の場所に再保存されます。 場所を変更するには、[名前を付けて保存] を使用します。  
@@ -55,8 +55,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [レポートのエクスポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
+ [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [レポートの保存 (レポート ビルダー)](../../reporting-services/report-builder/saving-reports-report-builder.md)   
- [別の種類のファイルとしてレポートをエクスポートする (レポート ビルダーおよび SSRS)](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
+ [別のファイルの種類 &#40; としてレポートをエクスポートします。レポート ビルダーおよび SSRS &#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
   
   

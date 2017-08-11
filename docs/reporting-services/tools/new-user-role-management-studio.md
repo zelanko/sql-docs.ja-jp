@@ -17,11 +17,11 @@ caps.latest.revision: 26
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d4c239e87379ead3b826e4db3c85006b364392a6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="new-user-role-management-studio"></a>[新しいユーザー ロール]\(Management Studio)
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/03/2017
  タスクでサポートされる操作または権限を列挙する、タスクの説明を表示します。  
   
 ## <a name="see-also"></a>参照  
- [Management Studio のレポート サーバーの F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [レポート サーバーの Management Studio の F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [ロールの定義](../../reporting-services/security/role-definitions.md)  
   
   

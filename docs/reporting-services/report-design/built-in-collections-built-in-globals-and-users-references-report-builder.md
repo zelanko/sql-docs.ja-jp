@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 821c2e768a14af3004971ca8f7b8d8ab76e2c762
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>組み込みコレクションは、組み込み Globals および Users 参照 (レポート ビルダー)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>Globals コレクションの使用  
- **Globals** コレクションには、レポートのグローバル変数が保持されます。 デザイン画面では、これらの変数は、`[&ReportName]` など、先頭に & (アンパサンド) が付いた状態で表示されます。 次の表では、 **Globals** コレクションのメンバーについて説明します。  
+ **Globals** コレクションには、レポートのグローバル変数が保持されます。 デザイン サーフェイスでは、これらの変数が表示されますが付いた状態で、& (アンパサンド)、たとえば、`[&ReportName]`です。 次の表では、 **Globals** コレクションのメンバーについて説明します。  
   
 |**メンバー**|**型**|**Description**|  
 |----------------|--------------|---------------------|  
@@ -44,7 +44,7 @@ ms.lasthandoff: 06/22/2017
 |OverallTotalPages|**Integer**|レポート全体の合計ページ数です。 この値は ResetPageNumber の影響を受けません。<br /><br /> OverallTotalPages は、ページ ヘッダーまたはページ フッターの式でのみ使用できます。|  
 |RenderFormat|**RenderFormat**|現在の表示要求に関する情報です。<br /><br /> 詳細については、次のセクションの「RenderFormat」を参照してください。|  
   
- **Globals** コレクションのメンバーからは、Variant 値が返されます。 特定のデータ型を必要とする、このコレクションのメンバーを式で使用する場合は、先に変数をキャストする必要があります。 たとえば、バリアント型の実行時間を Date 形式に変換するには、 `=CDate(Globals!ExecutionTime)`を使用します。 詳細については、「 [式で使用されるデータ型 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)など、先頭に & (アンパサンド) が付いた状態で表示されます。  
+ **Globals** コレクションのメンバーからは、Variant 値が返されます。 特定のデータ型を必要とする、このコレクションのメンバーを式で使用する場合は、先に変数をキャストする必要があります。 たとえば、バリアント型の実行時間を Date 形式に変換するには、 `=CDate(Globals!ExecutionTime)`を使用します。 詳細については、「 [式で使用されるデータ型 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)など、先頭に &amp; (アンパサンド) が付いた状態で表示されます。  
   
 ### <a name="renderformat"></a>RenderFormat  
  次の表では、 **RenderFormat**のメンバーについて説明します。  
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>User コレクションの使用  
- **User** コレクションには、レポートを実行しているユーザーのデータが保持されます。 このコレクションを使用すると、現在のユーザーのデータのみを表示するなど、レポートに表示されるデータをフィルター選択することも、レポート タイトルなどに UserID を表示することもできます。 デザイン画面では、これらの変数は、`[&UserID]` など、先頭に & (アンパサンド) が付いた状態で表示されます。  
+ **User** コレクションには、レポートを実行しているユーザーのデータが保持されます。 このコレクションを使用すると、現在のユーザーのデータのみを表示するなど、レポートに表示されるデータをフィルター選択することも、レポート タイトルなどに UserID を表示することもできます。 デザイン サーフェイスでは、これらの変数が表示されますが付いた状態で、& (アンパサンド)、たとえば、`[&UserID]`です。  
   
  次の表では、 **User** コレクションのメンバーについて説明します。  
   
@@ -95,9 +95,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [[式] ダイアログ ボックス (レポート ビルダー)](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
- [式で使用されるデータ型 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [数値と日付の書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [式 ダイアログ ボックス & #40 です。レポート ビルダー"&"#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [式 &#40; 内のデータ型レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [書式の数値および日付 &#40; です。レポート ビルダーおよび SSRS & &#41; です。](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [式の例 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

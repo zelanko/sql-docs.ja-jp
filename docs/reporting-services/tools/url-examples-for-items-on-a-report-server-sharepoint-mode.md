@@ -15,11 +15,11 @@ caps.latest.revision: 5
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 53c07f85e9ec0bfca627b8ff941eddfde03336df
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>SharePoint モードのレポート サーバー上のアイテムの URL の例
@@ -140,9 +140,9 @@ ms.lasthandoff: 06/22/2017
  SharePoint 統合モードで実行しているレポート サーバーでは、リソースの概念は狭義になります。 この場合、レポート サーバーのリソースとは、外部画像を参照するレポートの保存場所を指します。 レポートが内部用のスナップショットまたはコピーとして保持されている場合がこれに該当します。  
   
 ## <a name="see-also"></a>参照  
- [SharePoint ライブラリへのレポートのパブリッシュ](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
- [SharePoint ライブラリへの共有データ ソースのパブリッシュ](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [[プロパティ ページ] ダイアログ ボックス](../../reporting-services/tools/project-property-pages-dialog-box.md)  
+ [SharePoint ライブラリにレポートをパブリッシュします。](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
+ [SharePoint ライブラリに共有データ ソースをパブリッシュします。](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [プロジェクト プロパティ ページ ダイアログ ボックス](../../reporting-services/tools/project-property-pages-dialog-box.md)  
   
   
 

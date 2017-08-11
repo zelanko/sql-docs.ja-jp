@@ -163,11 +163,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8e9aa0032e0610b73c28ff50c7c8f616cca6a2fd
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>ゲージ (レポート ビルダーおよび SSRS)
@@ -197,7 +197,7 @@ ms.lasthandoff: 06/22/2017
   
  線形ゲージは、横方向または縦方向の長方形で、ルーラーに似ています。 ゲージ ポインターには、温度計を使用する場合が多いですが、マーカーまたはバーも使用できます。 線形ゲージは、その形状から、テーブルまたはマトリックスのデータ領域と統合して進行状況データを表示する際に役立ちます。  
   
- この 2 種類のゲージは、上記の違いを除けば、交換して使用できます。 ただし、レポートで単純なゲージを使用する必要がある場合、ゲージの代わりにインジケーターを使用することも検討する必要があります。 詳細については、「[インジケータ― (レポート ビルダーおよび SSRS&)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)」を参照してください。  
+ この 2 種類のゲージは、上記の違いを除けば、交換して使用できます。 ただし、レポートで単純なゲージを使用する必要がある場合、ゲージの代わりにインジケーターを使用することも検討する必要があります。 詳細については、次を参照してください。[インジケーター & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
  次の図に放射状ゲージと線形ゲージを示します。 放射状ゲージは円形で、針ポインターを使用します。 線形ゲージは横方向で、温度計ポインターを使用します。  
   
@@ -248,12 +248,12 @@ ms.lasthandoff: 06/22/2017
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
- 集計式の詳細については、「[集計関数リファレンス (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)」を参照してください。  
+ 集計式の詳細については、「[集計関数リファレンス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)」を参照してください。  
   
 ### <a name="defining-a-group-on-a-gauge"></a>ゲージでのグループの定義  
- フィールドをゲージに追加すると、1 つのデータ グループを追加できます。 ゲージは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]にある他のすべてのデータ領域とは異なり、1 つのデータ領域に複数のグループを表示できます。 ゲージでグループ式を定義してグループを追加するときの操作は、Tablix データ領域で行グループを追加する場合と同じです。 ただし、グループを追加した場合、最後のグループの値のみがポインター値としてゲージに表示されます。 たとえば、年度に関するグループ化式を追加した場合、データセット内の昨年の売上集計値を表す値がポインターによって指し示されます。 グループの詳細については、「[グループについて (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
+ フィールドをゲージに追加すると、1 つのデータ グループを追加できます。 ゲージは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]にある他のすべてのデータ領域とは異なり、1 つのデータ領域に複数のグループを表示できます。 ゲージでグループ式を定義してグループを追加するときの操作は、Tablix データ領域で行グループを追加する場合と同じです。 ただし、グループを追加した場合、最後のグループの値のみがポインター値としてゲージに表示されます。 たとえば、年度に関するグループ化式を追加した場合、データセット内の昨年の売上集計値を表す値がポインターによって指し示されます。 グループの詳細については、「 [グループについて (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
   
- 表またはリスト内に複数のゲージを表示したり、グループ別に集計したデータを表示する場合に、グループをゲージに追加できます。 詳細については、「 [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
+ 表またはリスト内に複数のゲージを表示したり、グループ別に集計したデータを表示する場合に、グループをゲージに追加できます。 詳細については、「[データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
 ##  <a name="PositioningData"></a> ゲージでの要素の配置  
  ゲージ パネルは、1 つ以上のゲージを格納するトップレベルのコンテナーです。 このゲージのすぐ外側をクリックすると、 **[ゲージ パネルのプロパティ]** ダイアログ ボックスが表示されます。 各ゲージには、ゲージ スケール、ゲージ範囲、およびゲージ ポインターなどの複数のゲージ要素が含まれます。 ゲージを使用する際は、これらの要素のサイズと位置を変更するために、ゲージ パネルでの要素の測定方法を理解しておく必要があります。  
@@ -305,9 +305,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [グラフ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [フィルター、グループ、およびデータを並べ替える &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [レポート パラメーターと &#40; です。レポート ビルダーおよびレポート デザイナーと &#41; です。](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、およびリスト & #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

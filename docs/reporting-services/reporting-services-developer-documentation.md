@@ -21,11 +21,11 @@ caps.latest.revision: 21
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3704373a08b29a8f36ce843db5f67a860a04a47b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-developer-documentation"></a>Reporting Services 開発者向けドキュメント
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
  [レポート サーバー Web サービス](../reporting-services/report-server-web-service/report-server-web-service.md)  
  レポート サーバー Web サービスでは、レポート サーバーのすべての機能にアクセスできます。 Web サービスは、HTTP に対して SOAP を使用し、クライアント プログラムとレポート サーバー間の通信インターフェイスとして動作するように設計されています。 Web サービスとそのメソッドは、レポート サーバーの機能を提供するため、管理から実行までのレポートのライフ サイクルのあらゆる部分にカスタム ツールを作成できます。  
   
- [URL アクセス (SSRS)](../reporting-services/url-access-ssrs.md)  
+ [URL アクセスと #40 です。SSRS &#41;](../reporting-services/url-access-ssrs.md)  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、レポートのナビゲーションおよび表示を行うためにすばやくかつ簡単なアクセス ポイントとして使用できる URL ベースの完全な要求セットをサポートします。 このテクノロジをレポート サーバー Web サービスと組み合わせることにより、完全なレポート ソリューションをカスタム ビジネス アプリケーションに統合できます。 Web ポータルの一部としてレポートを統合するとき、または Web ブラウザーからレポートを表示するときに、URL アクセスが特に役立ちます。  
   
  [Reporting Services 拡張機能](../reporting-services/extensions/reporting-services-extensions.md)  
@@ -52,16 +52,16 @@ ms.lasthandoff: 06/22/2017
  [カスタム レポート アイテム](../reporting-services/custom-report-items/custom-report-items.md)  
  カスタム レポート アイテムを作成して RDL に機能を追加する方法、または既存のコントロールの機能を拡張する方法について説明します。  
   
- [レポートでカスタム アセンブリの使用](../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
+ [レポートでのカスタム アセンブリの使用](../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
  レポート定義内にコード参照を含めることによって、カスタム アセンブリとレポートを併用する方法について説明します。  
   
- [Reporting Services WMI プロバイダーへのアクセスします。](../reporting-services/tools/access-the-reporting-services-wmi-provider.md)  
+ [Reporting Services WMI プロバイダーへのアクセス](../reporting-services/tools/access-the-reporting-services-wmi-provider.md)  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] WMI プロバイダーを使用して、レポート サーバーの配置を管理する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Reporting Services & #40 です。SSRS &#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [レポート定義言語 & #40 です。SSRS &#41;](../reporting-services/reports/report-definition-language-ssrs.md)   
- [テクニカル リファレンス &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
+ [テクニカル リファレンス & #40 です。SSRS &#41;](../reporting-services/technical-reference-ssrs.md)   
  [開発 &#40; をセキュリティで保護します。Reporting Services &#41;](../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
   
   

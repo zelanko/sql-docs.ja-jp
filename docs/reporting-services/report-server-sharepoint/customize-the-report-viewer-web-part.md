@@ -19,11 +19,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e5941044afa950ba41e23ce1c3507a51e6121556
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="customize-the-report-viewer-web-part"></a>レポート ビューアー Web パーツのカスタマイズ
@@ -97,7 +97,7 @@ ms.lasthandoff: 06/22/2017
  パラメーター領域には、レポートの実行前に値を入力するためのフィールドが用意されています。 この領域は、レポート定義にパラメーターが含まれている場合にのみ使用されます。 パラメーター領域または資格情報領域が表示されるときには、Web パーツの残りの幅に収まるようにレポート表示が調整されます。 Web パーツのプロパティを設定して、パラメーターの幅をカスタマイズできます。 ページ上で個々のパラメーターの横に表示されるラベルも定義できます。 パラメーター ラベルの変更方法の詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SharePoint サイトのレポート ビューアー Web パーツ](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
- [レポート ビューアー Web パーツを Web ページに追加する (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
+ [SharePoint サイト上のレポート ビューアー Web パーツ](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Web ページ &#40; をレポート ビューアー Web パーツを追加します。Reporting Services の SharePoint モード &#41; と統合](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   

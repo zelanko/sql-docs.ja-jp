@@ -16,11 +16,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 99c21c41115748c82267ed72845607b044ee3a6a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL の構成 (SSRS 構成マネージャー)
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/22/2017
   
  URL を構成するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用します。 URL のすべての部分をこのツールで定義します。 以前のリリースとは異なり、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] アプリケーションへのアクセスにインターネット インフォメーション サービス (IIS) Web サイトは使用されません。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、他の Web サービスや Web アプリケーションとのサイド バイ サイドの配置を含むほとんどの配置シナリオに対応する既定値が用意されています。 同じコンピューターで複数のレポート サーバー インスタンスを実行する場合に URL が競合するリスクを最小限に抑えられるように、既定の URL にはインスタンス名が組み込まれます。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]既定値を他の Web サービスやアプリケーションとのサイド バイ サイドの配置を含むほとんどの展開シナリオでは、その作業を提供します。 同じコンピューターで複数のレポート サーバー インスタンスを実行する場合に URL が競合するリスクを最小限に抑えられるように、既定の URL にはインスタンス名が組み込まれます。  
   
  このトピックでは、次のタスクの手順について説明します。  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
 -   URL の詳細プロパティを設定して追加の URL を定義する。  
   
- URL の格納および管理のしくみや相互運用性の問題に関する詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[URL の予約と登録について &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)」および「[Reporting Services とインターネット インフォメーション サービスのサイド バイ サイド インストール &#40;SSRS ネイティブ モード&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)」を参照してください。 Reporting Services でよく使用される URL の例については、このトピックの「[URL の構成の例](#URLExamples)」を参照してください。  
+ Url の格納し、管理のしくみや相互運用性の問題に関する詳細については、次を参照してください。[についての URL 予約と登録 & #40 です。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)と[インストール Reporting Services とインターネット情報サービス サイド バイ サイド (&) #40 です。SSRS ネイティブ モード &#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。 Reporting Services でよく使用される URL の例については、このトピックの「 [URL の構成の例](#URLExamples) 」を参照してください。  
   
 ## <a name="prerequisites"></a>前提条件  
  URL の作成や変更を行う前に、次の点を確認してください。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 06/22/2017
   
     -   **[::1]** は、IPv6 形式のループバック アドレスです。  
   
-    -   特定の IP アドレスもこの一覧に表示されます。 IP アドレスは、IPv4 形式および IPv6 形式で指定できます。 "*nnn.nnn.nnn.nnn* " は、コンピューターのネットワーク アダプター カードの 32 ビット IPv4 アドレスです。 IPv6 アドレスが 128 ビット、コロンで区切られた 8 つの 4 バイト フィールド:\<プレフィックス >:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
+    -   特定の IP アドレスもこの一覧に表示されます。 IP アドレスは、IPv4 形式および IPv6 形式で指定できます。 "*nnn.nnn.nnn.nnn*" は、コンピューターのネットワーク アダプター カードの 32 ビット IPv4 アドレスです。 IPv6 アドレスが 128 ビット、コロンで区切られた 8 つの 4 バイト フィールド:\<プレフィックス >:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
   
          複数のカードがある場合や、ネットワークで IPv4 と IPv6 の両方のアドレスがサポートされている場合は、複数の IP アドレスが表示されます。 1 つの IP アドレスのみを選択すると、アプリケーション アクセスがその IP アドレス (およびドメイン ネーム サーバーによってそのアドレスにマップされるホスト名) に限定されます。 localhost を使用してレポート サーバーにアクセスすることはできません。また、レポート サーバー コンピューターにインストールされている他のネットワーク アダプター カードの IP アドレスは使用できません。 通常、この値を選択するのは、明確な IP アドレスやホスト名を指定する複数の URL 予約 (イントラネット接続に使用するネットワーク アダプター カード用と外部接続に使用するネットワーク アダプター カード用など) を構成する場合です。  
   
@@ -199,6 +199,6 @@ ms.lasthandoff: 06/22/2017
 -   `https://www.adventure-works.com:8080/reports`  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+ [Reporting Services 構成マネージャー & #40 です。ネイティブ モード &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [レポート サーバーの Url &#40; を構成します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 

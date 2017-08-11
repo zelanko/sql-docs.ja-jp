@@ -27,11 +27,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 799f6c8803852baf8b4c2262d85826167f55ed5c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="caching-reports-ssrs"></a>複数のレポートのキャッシュ (SSRS)
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
  キャッシュは、パフォーマンスを向上させる技法です。 キャッシュのコンテンツは変動するので、レポートを追加、置換、または削除すると変更できます。 より予測可能なキャッシュ方法が必要な場合、レポート スナップショットを作成する必要があります。 詳細については、「 [レポート処理プロパティの設定](../../reporting-services/report-server/set-report-processing-properties.md)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、データベースに一時ファイルが保持され、ユーザー セッションやレポート処理のサポートに使用されます。 これらのファイルは内部使用を目的にキャッシュされ、単一のブラウザー セッションの間、表示状態の整合性を保つために使用されます。 内部使用を目的とした一時ファイルのキャッシュ方法の詳細については、「[レポート サーバー データベース (SSRS ネイティブ モード)](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)」を参照してください。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ユーザー セッションやレポートの処理をサポートするためにデータベースに一時ファイルを格納します。 これらのファイルは内部使用を目的にキャッシュされ、単一のブラウザー セッションの間、表示状態の整合性を保つために使用されます。 内部使用を目的とした一時ファイルのキャッシュ方法の詳細については、「[レポート サーバー データベース (SSRS ネイティブ モード)](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)」を参照してください。  
   
 ## <a name="cached-instances"></a>キャッシュされたインスタンス  
  キャッシュされたレポートのインスタンスは、レポートの中間形式に基づいています。 通常、レポート サーバーでは、レポート名に基づいてレポートのインスタンスが 1 つキャッシュされます。 ただし、クエリ パラメーターに基づいてレポートに別のデータを含めることができる場合、任意の指定された時間に複数のバージョンのレポートがキャッシュされることがあります。 たとえば、パラメーター値として地域コードを取得するパラメーター化されたレポートがあるとします。 4 人の異なるユーザーが、4 つの一意の地域コードを指定した場合、キャッシュされたコピーが 4 つ作成されます。  
@@ -75,12 +75,12 @@ ms.lasthandoff: 06/22/2017
  何らかの理由で、キャッシュされたインスタンスでレポートを実行できない場合 (たとえば、ユーザーが指定したパラメーター値が、キャッシュされたレポートの生成に使用するパラメーター値と異なる場合)、レポート サーバーでレポートが再実行されます。  
   
 ## <a name="see-also"></a>参照  
- [処理オプションの設定 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [レポート処理プロパティの設定](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Reporting Services の概念 (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [キャッシュの事前読み込み (レポート マネージャー)](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
+ [処理オプション &#40; を設定します。Reporting Services の SharePoint モード &#41; と統合](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [レポート処理プロパティを設定します。](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [Reporting Services の概念 &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [事前に読み込むキャッシュ & #40 です。レポート マネージャー &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
  [スケジュール](../../reporting-services/subscriptions/schedules.md)   
- [共有データセットのキャッシュ (SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
- [キャッシュ更新オプション (レポート マネージャー)](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
+ [キャッシュ共有データセットと #40 です。SSRS &#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
+ [キャッシュ更新オプション & #40 です。レポート マネージャー &#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   

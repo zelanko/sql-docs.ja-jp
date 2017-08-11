@@ -21,25 +21,25 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6ca8d81025d48af07b5e2ce9336a8e031ea4fb1a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="store-credentials-in-a-reporting-services-data-source"></a>Store Credentials in a Reporting Services Data Source
+# <a name="store-credentials-in-a-reporting-services-data-source"></a>Reporting Services データ ソースに資格情報を保存する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーが、レポートに必要な外部データにアクセスするときに使用する、保存された資格情報を構成できます。 保存された資格情報は、レポートを自動実行する場合に使用されます。たとえば、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションがレポートを電子メールとしてパブリッシュする場合などです。 この資格情報は、レポート処理がスケジュールで設定されている場合、または、レポート処理がトリガーされた場合に、レポート サーバーによって取得されて使用されます。 このトピックでは、ネイティブ モードと SharePoint モードの両方のレポート サーバーに対して、保存された資格情報を構成する方法について説明します。  
   
 ||  
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード|  
   
--   [レポート固有のデータ ソース用の保存された資格情報を構成する (ネイティブ モード)](#bkmk_stored_credentials_data_source_native)  
+-   [レポートに固有のデータ ソース (ネイティブ モード) の保存された資格情報を構成します。](#bkmk_stored_credentials_data_source_native)  
   
--   [レポート固有のデータ ソース用の保存された資格情報を構成する (SharePoint モード)](#bkmk_stored_credentials_data_source_sharepoint)  
+-   [レポートに固有のデータ ソース (SharePoint モード) の保存された資格情報を構成します。](#bkmk_stored_credentials_data_source_sharepoint)  
   
--   [共有データ ソース用の保存された資格情報を構成する (ネイティブ モード)](#bkmk_stored_credentials_shared_data_source_native)  
+-   [共有データ ソース (ネイティブ モード) の保存された資格情報を構成します。](#bkmk_stored_credentials_shared_data_source_native)  
   
 -   [共有データ ソース用の保存された資格情報を構成する (SharePoint モード)](#bkmk_stored_credentials_shared_data_source_sharepoint)  
   
@@ -110,7 +110,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> 共有データ ソース用の保存された資格情報を構成する (ネイティブ モード)  
   
-1.  ネイティブ モードのレポート マネージャーで、共有データ ソース アイテムに移動します。 ![共有データ ソース アイコン](../../reporting-services/report-data/media/hlp-16datasource.png "共有データ ソースのアイコン")  
+1.  ネイティブ モードのレポート マネージャーで、共有データ ソース アイテムに移動します。 ![共有データ ソースのアイコン](../../reporting-services/report-data/media/hlp-16datasource.png "共有データ ソースのアイコン")  
   
 2.  コンテキスト メニューをクリックして![ssrs アイテム用のレポート マネージャーのコンテキスト メニュー](../../reporting-services/report-data/media/ssrs-report-manager-item-context-menu.png "ssrs アイテム用のレポート マネージャーのコンテキスト メニュー")  をクリックし、**管理**です。  
   
@@ -163,11 +163,11 @@ ms.lasthandoff: 06/22/2017
      ![トップにリンク バックに使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン")[保存された資格情報のセキュリティ ポリシーの要件](#bkmk_top)  
   
 ## <a name="see-also"></a>参照  
- [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [レポートのデータ ソースのプロパティを構成する &#40;レポート マネージャー&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [共有データ ソースを作成、削除、または変更する &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [[データ ソース] プロパティ ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [[新しいデータ ソース] ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)  
+ [資格情報とレポート データ ソースの接続情報を指定します。](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [レポート データ ソースのプロパティの構成 &#40;レポート マネージャー&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
+ [共有データ ソースの作成、削除、または変更 &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [データ ソース プロパティ ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [新しいデータ ソース ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)  
   
   
 

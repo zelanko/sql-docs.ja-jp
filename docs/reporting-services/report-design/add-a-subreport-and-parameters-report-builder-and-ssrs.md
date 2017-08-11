@@ -18,11 +18,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9e594025e0d4451d563f4d1b8b500d7f1ef1b576
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>サブレポートおよびパラメーターの追加 (レポート ビルダーおよび SSRS)
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  **[次のレポートをサブレポートとして使用]** ボックスで、 **[参照]**をクリックするか、レポートの名前を入力します。 **[参照]** をクリックする方法ではサブレポートへのパスが自動的に指定されるため、こちらの方法をお勧めします。 レポートは、複数の方法で指定できます。 詳細については、「[外部アイテムへのパスの指定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)」を参照してください。  
   
-6.  (省略可) サブレポートが複数ページにまたがる場合にサブレポートの途中で罫線が表示されないようにするには、**[改ページの罫線を省略する]** で **[はい]** をクリックします。  
+6.  (省略可) サブレポートが複数ページにまたがる場合にサブレポートの途中で罫線が表示されないようにするには、 **[改ページの罫線を省略する]** で **[はい]** をクリックします。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -78,6 +78,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [サブレポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   
- [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
+ [レンダリングの動作と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   

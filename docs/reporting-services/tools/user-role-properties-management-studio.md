@@ -17,11 +17,11 @@ caps.latest.revision: 27
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 76bd80e1fc470d9cdb998d23834d0a3473d411fe
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="user-role-properties-management-studio"></a>[ユーザー ロールのプロパティ]\(Management Studio)
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/03/2017
   
  アイテムレベルのロールの定義は、ユーザーが特定のアイテム (フォルダー、レポート、リソース、または共有データ ソース) に対して実行する名前付きの一連のタスクです。 ロールの定義は、レポート マネージャーでロールの割り当てを作成するためにユーザーまたはグループに割り当てられます。 ユーザーまたはグループが実行できる内容は、ロールの定義に含まれているタスクによって記述されます。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、作業に使用できる事前定義されたアイテムレベルのロールの定義が多く含まれています。 定義ごとのタスク一覧を変更することで、ロールの定義を変更できます。 ロールの定義を編集すると、そのロールの定義を含むすべてのロールの割り当てに反映されます。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]使用する定義済みのアイテム レベルのロール定義の数が含まれます。 定義ごとのタスク一覧を変更することで、ロールの定義を変更できます。 ロールの定義を編集すると、そのロールの定義を含むすべてのロールの割り当てに反映されます。  
   
 > [!NOTE]  
 >  ユーザー ロールの割り当ては、ネイティブ モードで実行されているレポート サーバーでのみ使用されます。 レポート サーバーが SharePoint 統合モード用に構成されている場合、このページには、SharePoint サイトで定義されているロールと権限レベルに関する読み取り専用の情報が表示されます。  
@@ -48,10 +48,10 @@ ms.lasthandoff: 08/03/2017
  各タスクに関する情報が表示されます。 タスクの説明を変更することはできません。  
   
 ## <a name="see-also"></a>参照  
- [アイテムレベルのタスク](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)   
+ [アイテム レベルのタスク](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)   
  [ロールの定義](../../reporting-services/security/role-definitions.md)   
- [Management Studio のレポート サーバーの F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [レポート サーバーの Management Studio の F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [タスクと権限](../../reporting-services/security/tasks-and-permissions.md)   
- [定義済みロール](../../reporting-services/security/role-definitions-predefined-roles.md)  
+ [定義済みのロール](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   

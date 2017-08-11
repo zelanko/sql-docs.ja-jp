@@ -27,11 +27,11 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 66a306d07b8556fe43659d4b078e2d31f3d51900
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
@@ -145,9 +145,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
- [Pause and Resume Shared Schedules](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
- [レポートのキャッシュ (レポート マネージャー)](../../reporting-services/report-server/cache-a-report-report-manager.md)   
- [レポート履歴へのスナップショットの追加 (レポート マネージャー)](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
+ [共有スケジュールを一時停止と再開](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
+ [キャッシュするレポートと #40 です。レポート マネージャー &#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
+ [レポート履歴 &#40; にスナップショットを追加します。レポート マネージャー &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
   
   
 

@@ -45,11 +45,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 10cbda042d03d5405c136894017418e341665c99
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>ドリルダウン アクション (レポート ビルダーおよび SSRS)
@@ -59,7 +59,7 @@ ms.lasthandoff: 06/22/2017
   
  この図では、レポートの正符号 (+) をクリックして詳細データを表示しています。  
   
- たとえば、行グループのあるテーブルの場合、外側のグループの概要行を除いて、最初にすべての行を非表示にすることができます。 それぞれの内部グループ (詳細グループを含む) に対して、グループ化セルの展開/折りたたみを切り替えるアイコンを対象グループに追加します。 レポートが表示されると、ユーザーはこのテキスト ボックスをクリックして、詳細データを展開したり折りたたんだりすることができます。 詳細については、「[テーブル (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)」を参照してください。  
+ たとえば、行グループのあるテーブルの場合、外側のグループの概要行を除いて、最初にすべての行を非表示にすることができます。 それぞれの内部グループ (詳細グループを含む) に対して、グループ化セルの展開/折りたたみを切り替えるアイコンを対象グループに追加します。 レポートが表示されると、ユーザーはこのテキスト ボックスをクリックして、詳細データを展開したり折りたたんだりすることができます。 詳細については、「[テーブル &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)」を参照してください。  
   
  アイテムの展開と折りたたみをユーザーが行うようにするには、アイテムの表示プロパティを設定します。  
   
@@ -68,9 +68,9 @@ ms.lasthandoff: 06/22/2017
 >   
 >  たとえば、入れ子構造のグループに関連付けられている行を非表示にするには、テキスト ボックスが、親グループに関連付けられている行にあるか、包含階層の上位にある必要があります。  
 >   
->  グループ、列、または行の可視化の設定については、「[アイテムへの展開または折りたたみアクションの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)」を参照してください。  
+>  詳細グループ、列または行の設定の可視性の情報については、次を参照してください[項目 &#40; を展開または折りたたみアクションを追加。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)  
   
- レポート アイテムを非表示にする方法の詳細については、「[アイテムを非表示にする (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)」を参照してください。  
+ レポート アイテムを非表示の詳細については、次を参照してください[項目 &#40; を非表示にする。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -91,7 +91,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)   
- [対話的な並べ替え、ドキュメント マップ、およびリンク (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [対話的な並べ替え、ドキュメント マップ、およびリンクと #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [式の例 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

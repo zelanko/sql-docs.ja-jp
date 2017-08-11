@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.oledbconnection.f1
 helpviewer_keywords:
 - OLE DB connection manager
 - data sources [Integration Services], connections
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 94287024cf1a79384f888406a0c111644d6696fc
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 6a81892e0206775357c7fdf74ef81a7b8c3ae3c7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 接続マネージャー
@@ -65,6 +67,29 @@ ms.lasthandoff: 08/03/2017
     
 -   carlprothman.net の [OLE DB プロバイダー用接続文字列](http://go.microsoft.com/fwlink/?LinkId=220744)に関する技術記事    
     
+## <a name="configure-ole-db-connection-manager"></a>[OLE DB 接続マネージャーの構成]
+  **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用すると、データ ソースへの接続を追加できます。新しい接続を設定するか、既存の接続のコピーを使用できます。  
+  
+> [!NOTE]  
+>  データ ソースが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 である場合、Excel の以前のバージョンとは異なる接続マネージャーが必要になります。 詳細については、「 [Excel ブックに接続する](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)」を参照してください。  
+>   
+>  データ ソースが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007 である場合、Access の以前のバージョンとは異なる OLE DB プロバイダーが必要になります。 詳細については、「 [Access データベースに接続する](../../integration-services/connection-manager/connect-to-an-access-database.md)」を参照してください。  
+  
+ OLE DB 接続マネージャーの詳細については、「 [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **[データ接続]**  
+ 一覧から既存の OLE DB データ接続を選択します。  
+  
+ **[データ接続のプロパティ]**  
+ 選択した OLE DB データ接続のプロパティとその値を表示します。  
+  
+ **新規**  
+ **[接続マネージャー]** ダイアログ ボックスを使用して、OLE DB データ接続を作成します。  
+  
+ **Del**  
+ データ接続を選択して **[削除]** ボタンをクリックすると、接続が削除されます。  
+  
 ## <a name="see-also"></a>参照    
  [OLE DB ソース](../../integration-services/data-flow/ole-db-source.md)     
  [OLE DB 変換先](../../integration-services/data-flow/ole-db-destination.md)     

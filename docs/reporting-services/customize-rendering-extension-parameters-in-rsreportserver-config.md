@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 009b40c83d662b40b3215f701a2eb490ebc4fed1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
  表示拡張機能パラメーターへの変更は、レポート サーバーの表示操作にのみ影響します。 レポート デザイナーのレポート プレビューで表示拡張機能の設定は上書きできません。  
   
- 構成ファイルでの表示拡張機能パラメーターの設定は、表示拡張機能全体に影響を与えます。 構成ファイルの設定は、特定の表示拡張機能が使用されるたびに既定値に代わって使用されます。 特定のレポートまたは表示操作の表示拡張機能パラメーターを設定する場合は、<xref:ReportExecution2005.ReportExecutionService.Render%2A> メソッドを使用するか、レポート URL にデバイス情報設定を指定することにより、デバイス情報をプログラムで指定する必要があります。 表示操作のデバイス情報設定の詳細について、およびデバイス情報設定の一覧表示については、 [「表示拡張機能にデバイス情報設定を渡す」](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)を参照してください。  
+ 構成ファイルでの表示拡張機能パラメーターの設定は、表示拡張機能全体に影響を与えます。 構成ファイルの設定は、特定の表示拡張機能が使用されるたびに既定値に代わって使用されます。 特定のレポートまたは表示操作の表示拡張機能パラメーターを設定する場合は、 <xref:ReportExecution2005.ReportExecutionService.Render%2A> メソッドを使用するか、レポート URL にデバイス情報設定を指定することにより、デバイス情報をプログラムで指定する必要があります。 表示操作のデバイス情報設定の詳細について、およびデバイス情報設定の一覧表示については、 [「表示拡張機能にデバイス情報設定を渡す」](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)を参照してください。  
   
 ## <a name="finding-and-modifying-rsreportserverconfig"></a>RSReportServer.config の検索および変更  
  レポート出力形式の構成設定は、RSReportServer.config ファイルで表示拡張機能パラメーターとして指定します。 構成ファイルの表示拡張機能パラメーターを指定するには、表示パラメーターを設定する XML 構造の定義方法を理解しておく必要があります。 変更できる XML 構造は次の 2 つです。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **DeviceInfo** XML 構造は、表示拡張機能で使用するデバイス情報設定を定義しています。 ほとんどの表示拡張機能パラメーターは、デバイス情報設定として指定されます。  
   
- テキスト エディターでファイルを変更できます。 RSReportServer.config ファイルは、\Reporting Services\Report Server\Bin フォルダーにあります。 構成ファイルの変更方法の詳細については、[「Reporting Services の構成ファイル (RSreportserver.config) の変更」](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) を参照してください。  
+ テキスト エディターでファイルを変更できます。 RSReportServer.config ファイルは、\Reporting Services\Report Server\Bin フォルダーにあります。 構成ファイルの変更の詳細については、次を参照してください[Reporting Services の構成ファイル &#40; を変更。RSreportserver.config &#41;](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="changing-the-display-name"></a>表示名の変更  
  表示拡張機能の表示名は、レポート ツール バーのエクスポート一覧に表示されます。 既定の表示名の例として、Web アーカイブ、TIFF ファイル、Acrobat (PDF) ファイルなどがあります。 構成ファイルで **OverrideNames** 要素を指定すると、既定の表示名をカスタム値に置き換えることができます。 また、単一の表示拡張機能の 2 つのインスタンスを定義する場合は、 **OverrideNames** 要素を使用して、エクスポート一覧の各インスタンスを区別できます。  
@@ -137,11 +137,11 @@ ms.lasthandoff: 06/22/2017
  [RsReportServer.config 構成ファイル](../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [RSReportDesigner 構成ファイル](../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [CSV デバイス情報設定](../reporting-services/csv-device-information-settings.md)   
- [Excel  デバイス情報設定](../reporting-services/excel-device-information-settings.md)   
+ [Excel デバイス情報設定](../reporting-services/excel-device-information-settings.md)   
  [HTML デバイス情報設定](../reporting-services/html-device-information-settings.md)   
  [画像デバイス情報設定](../reporting-services/image-device-information-settings.md)   
  [MHTML デバイス情報設定](../reporting-services/mhtml-device-information-settings.md)   
- [PDF デバイス情報の設定](../reporting-services/pdf-device-information-settings.md)   
+ [PDF デバイス情報設定](../reporting-services/pdf-device-information-settings.md)   
  [XML デバイス情報設定](../reporting-services/xml-device-information-settings.md)  
   
   

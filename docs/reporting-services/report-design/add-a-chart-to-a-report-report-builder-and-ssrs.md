@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a2d2ad7ae37e0f787709fb79afbf80ef3e584b5e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>レポートへのグラフの追加 (レポート ビルダーおよび SSRS)
@@ -47,9 +47,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="to-add-a-chart-to-a-report"></a>レポートにグラフを追加するには  
   
-1.  レポートを作成し、データセットを定義します。 詳細については、[レポート データセット &#40;SSRS&#41; ](../../reporting-services/report-data/report-datasets-ssrs.md) に関する記事を参照してください。  
+1.  レポートを作成し、データセットを定義します。 詳細については、次を参照してください。[レポート データセット & #40 です。SSRS &#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
-2.  **[挿入]** タブの **[グラフ]** をクリックし、次に **[グラフの挿入]** をクリックします。  
+2.  **[挿入]** タブの **[グラフ]**をクリックし、次に **[グラフの挿入]**をクリックします。  
   
 3.  デザイン画面上のグラフの左上隅となる場所をクリックし、グラフの右下隅となる位置までドラッグします。  
   
@@ -69,15 +69,15 @@ ms.lasthandoff: 06/22/2017
   
 10. レポートの作業を続行するには、 **[実行]** タブで **[デザイン]** をクリックします。  
   
- 横棒グラフや縦棒グラフなど、軸を使用するグラフでは、カテゴリ軸にすべてのカテゴリ ラベルが表示されるとは限りません。 軸ラベルの変更方法の詳細については、「[Specify an Axis Interval &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)」(軸間隔の指定 &#40;レポート ビルダーおよび SSRS&#41;) を参照してください。  
+ 横棒グラフや縦棒グラフなど、軸を使用するグラフでは、カテゴリ軸にすべてのカテゴリ ラベルが表示されるとは限りません。 軸ラベルを変更する方法の詳細については、次を参照してください。[軸の間隔 &#40; を指定します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>参照  
- [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [グラフ内の空のデータ ポイントおよび NULL データ ポイント &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [チュートリアル: レポートへの横棒グラフの追加 (レポート デザイナー)](http://go.microsoft.com/fwlink/?LinkId=198042)   
- [チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)](http://go.microsoft.com/fwlink/?LinkId=198051)   
- [チュートリアル: レポートへの円グラフの追加 (レポート デザイナー)](http://go.microsoft.com/fwlink/?LinkId=198041)  
+ [グラフと &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [グラフの種類 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [グラフ &#40; 内の空および Null データ ポイントレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [チュートリアル: レポート (レポート ビルダー) への横棒グラフの追加](http://go.microsoft.com/fwlink/?LinkId=198052)   
+ [チュートリアル: レポート (レポート デザイナー) への横棒グラフの追加](http://go.microsoft.com/fwlink/?LinkId=198042)   
+ [チュートリアル: レポート (レポート ビルダー) への円グラフの追加](http://go.microsoft.com/fwlink/?LinkId=198051)   
+ [チュートリアル: レポート (レポート デザイナー) への円グラフの追加](http://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

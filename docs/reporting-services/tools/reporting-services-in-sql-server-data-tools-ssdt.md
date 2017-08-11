@@ -17,17 +17,17 @@ caps.latest.revision: 76
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ee41ccb35aef5f0ab94c663a1556aad07bb85faa
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの Reporting Services (SSDT)
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT は、レポート デザイナー作成環境を標準装備しています。この環境では、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポート定義、共有データ ソース、共有データセット、およびレポート パーツを開けるほか、変更、プレビュー、保存、配置ができます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]SQL Server に含まれていません。 [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714) をダウンロードします。 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、ビジネス インテリジェンス ソリューションを作成するための [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境です。 SSDT は、レポート デザイナー作成環境を標準装備しています。この環境では、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポート定義、共有データ ソース、共有データセット、およびレポート パーツを開けるほか、変更、プレビュー、保存、配置ができます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、SQL Server には含まれていません。 [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)をダウンロードします。 
   
  このトピックでは、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] に使用される [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のソリューション、プロジェクト、プロジェクト テンプレート、および構成と、レポート デザイナーで使用できるビュー、メニュー、ツール バー、およびショートカットについて説明します。  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="bkmk_ReportServerProjects"></a> レポート サーバープロジェクト  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]をインストールすると、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で次のプロジェクト テンプレートを使用できるようになります。  
   
--   **レポート サーバー プロジェクト。** レポート サーバー プロジェクトを選択すると、レポート デザイナーが開きます。 レポート サーバー プロジェクトは、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] によってインストールされ、**[新しいプロジェクト]** ダイアログ ボックスで使用できる、ビジネス インテリジェンス プロジェクト用のテンプレートです。 詳細については、「[新規または既存のレポートをレポート プロジェクトに追加する (SSRS)](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md)」を参照してください。レポート サーバー プロジェクトのプロパティは、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] プロジェクト内のすべてのレポートとすべての共有データ ソースに適用されます。 これらのプロパティには、レポート サーバーの URL、およびレポートと共有データ ソースのフォルダー名が含まれます。 現在のプロパティ値を確認するには、 **[プロジェクト プロパティ ページ]** ダイアログ ボックスを使用します。 このダイアログ ボックスを開くには、 **[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
+-   **レポート サーバー プロジェクト。** レポート サーバー プロジェクトを選択すると、レポート デザイナーが開きます。 レポート サーバー プロジェクトは、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] によってインストールされ、 **[新しいプロジェクト]** ダイアログ ボックスで使用できる、ビジネス インテリジェンス プロジェクト用のテンプレートです。 詳細については、次を参照してください[新規または既存のレポートをレポート プロジェクト &#40; を追加。SSRS &#41;](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md).レポート サーバー プロジェクトのプロパティを適用するすべてのレポートとすべての共有データ ソース で、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]プロジェクト。 これらのプロパティには、レポート サーバーの URL、およびレポートと共有データ ソースのフォルダー名が含まれます。 現在のプロパティ値を確認するには、 **[プロジェクト プロパティ ページ]** ダイアログ ボックスを使用します。 このダイアログ ボックスを開くには、 **[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
   
 -   **レポート サーバー プロジェクト ウィザード。** レポート サーバー プロジェクト ウィザードを選択すると、レポート サーバー プロジェクトが自動的に作成され、レポート ウィザードが開きます。 このウィザードでは、各ページの手順に従ってレポートを作成し、データ ソースへの接続文字列の作成、データ ソースの資格情報の設定、クエリのデザイン、テーブルまたはマトリックス データ領域の追加、レポート データやグループの指定、フォントや色のスタイルの選択、レポート サーバーへのレポートのパブリッシュ、およびローカルでのレポートのプレビューを行うことができます。 ウィザードを使用してレポートを作成した後で、レポート サーバー プロジェクトでレポート デザイナーを使用して、レポート データおよびレポート デザイナーを変更できます。  
   
@@ -70,14 +70,14 @@ ms.lasthandoff: 06/22/2017
   
 -   **画像** レポートに画像レポート アイテムとして含めることができる画像の一覧です。  
   
- [レポート データ] ペインのデータ ソースおよびデータセットは、レポート定義内の要素を表します。 [レポート データ] ペインは、複数のレポート作成環境でサポートされている機能です。 レポート ビルダーでは、データ ソースとデータセットの管理に使用できる唯一のペインです。 レポート デザイナーでは、[レポート データ] ペインはソリューション エクスプローラーと連携して動作します。ソリューション エクスプローラーでは、共有データ ソースと共有データセットがファイルとして表示されます。 [レポート データ] ペインの共有データ ソースと共有データセットは、ソリューション エクスプローラーの対応する共有データ ソースと共有データセットを参照する必要があります。 そのため、[レポート データ] ペインの要素には、ソリューション エクスプローラーのデータ ファイルへの参照が含まれます。 プロジェクト プロパティによって、共有データ ソースと共有データセットがレポート サーバーに配置されるか、SharePoint サイトに配置されるかが決まります。 詳細については、「[データ ソースの変換 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md)」を参照してください。  
+ [レポート データ] ペインのデータ ソースおよびデータセットは、レポート定義内の要素を表します。 [レポート データ] ペインは、複数のレポート作成環境でサポートされている機能です。 レポート ビルダーでは、データ ソースとデータセットの管理に使用できる唯一のペインです。 レポート デザイナーでは、[レポート データ] ペインはソリューション エクスプローラーと連携して動作します。ソリューション エクスプローラーでは、共有データ ソースと共有データセットがファイルとして表示されます。 [レポート データ] ペインの共有データ ソースと共有データセットは、ソリューション エクスプローラーの対応する共有データ ソースと共有データセットを参照する必要があります。 そのため、[レポート データ] ペインの要素には、ソリューション エクスプローラーのデータ ファイルへの参照が含まれます。 プロジェクト プロパティによって、共有データ ソースと共有データセットがレポート サーバーに配置されるか、SharePoint サイトに配置されるかが決まります。 詳細については、次を参照してください。[データ ソースの変換 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  [レポート データ] ペインが表示されていない場合は、デザイン領域内をクリックし、**[表示]** メニューの **[レポート データ]** をクリックします。 [レポート データ] ペインが固定されていない場合は、固定することができます。 詳細については、「[レポート デザイナーのレポート データ ペインをドッキングする (SSRS)](../../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md)」を参照してください。  
+>  [レポート データ] ペインが表示されていない場合は、デザイン領域内をクリックし、 **[表示]** メニューの **[レポート データ]**をクリックします。 [レポート データ] ペインが固定されていない場合は、固定することができます。 詳細については、「[レポート デザイナーのレポート データ ペインをドッキングする (SSRS)](../../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md)」を参照してください。  
   
   
 ###  <a name="bkmk_GroupingPane"></a> グループ化ペイン  
- Tablix データ領域のグループを定義するには、[グループ化] ペインを使用します。 テーブルの行グループと詳細グループ、およびマトリックスの行グループと列グループを定義できます。 [グループ化] ペインを使用して、グラフまたは他のデータ領域のグループを定義することはできません。 詳細については、「[グループについて (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
+ Tablix データ領域のグループを定義するには、[グループ化] ペインを使用します。 テーブルの行グループと詳細グループ、およびマトリックスの行グループと列グループを定義できます。 [グループ化] ペインを使用して、グラフまたは他のデータ領域のグループを定義することはできません。 詳細については、「[グループについて &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
   
  グループ化ペインには、次の 2 つのモードがあります。  
   
@@ -105,9 +105,9 @@ ms.lasthandoff: 06/22/2017
   
 -   グリッドをカテゴリ別の表示からアルファベット順の表示に変更するには、[プロパティ] ペインのツール バー ボタンを使用します。 カテゴリ別の表示では、カテゴリのすべてのプロパティを表示するには、そのカテゴリを展開する必要があります。 アイテムの [プロパティ] ダイアログ ボックスを開くには、ツール バーの **[プロパティ ページ]** ボタンをクリックするか、アイテムを右クリックして **[プロパティ]**をクリックします。  
   
--   [グループ化] ペインで現在選択されているグループ メンバーのプロパティを設定します。 グループ メンバーのプロパティを使用すると、グループ インスタンスごとに静的なグループ ヘッダー行とフッター行を繰り返す方法を制御できます。 詳細については、「[グループ単位でのヘッダーとフッターの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)」を参照してください。  
+-   [グループ化] ペインで現在選択されているグループ メンバーのプロパティを設定します。 グループ メンバーのプロパティを使用すると、グループ インスタンスごとに静的なグループ ヘッダー行とフッター行を繰り返す方法を制御できます。 詳細については、次を参照してください[グループ &#40; でディスプレイのヘッダーとフッター。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).  
   
- [プロパティ] ペインを表示するには、**[表示]** メニューの **[プロパティ ウィンドウ]** をクリックします。 このペインのドッキングを解除して [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]ウィンドウの別の領域に移動したり、デザイン画面上にタブ付きビューとして表示したりできます。  
+ [プロパティ] ペインを表示するには、 **[表示]** メニューの **[プロパティ ウィンドウ]**をクリックします。 このペインのドッキングを解除して [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]ウィンドウの別の領域に移動したり、デザイン画面上にタブ付きビューとして表示したりできます。  
   
   
 ###  <a name="bkmk_SolutionExplorer"></a> ソリューション エクスプローラー  
@@ -248,13 +248,13 @@ ms.lasthandoff: 06/22/2017
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] はソース プラグインと統合できます。 **[オプション]** ダイアログ ボックスの [プロジェクトおよびソリューション] ページを使用して、プラグインを指定し、プロパティを構成します。  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> カスタム レポート テンプレート  
- 新しいレポートのテンプレートとしてカスタム レポートを使用するには、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] がインストールされているコンピューターの ReportProject フォルダーにそれらのレポートをコピーするだけです。 既定では、このフォルダーは次の場所にあります:  `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 レポート プロジェクトに新しいアイテムを追加すると、カスタム レポートが [テンプレート] ペインに表示されます。  
+ 新しいレポートのテンプレートとしてカスタム レポートを使用するには、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] がインストールされているコンピューターの ReportProject フォルダーにそれらのレポートをコピーするだけです。 既定では、このフォルダーは、次の場所:`<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`です。 レポート プロジェクトに新しいアイテムを追加すると、カスタム レポートが [テンプレート] ペインに表示されます。  
   
  また、カスタム スタイルをレポート ウィザードに追加することもできます。  
   
   
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> SQL Server データ ツールのコマンド ライン サポート  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]基づく[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]と基になる devenv.exe アプリケーションです。 これらのオプションを使用するには、次の 2 つの項目に対して有効な値を設定しておく必要があります。  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] および基になる devenv.exe アプリケーションに基づいています。 これらのオプションを使用するには、次の 2 つの項目に対して有効な値を設定しておく必要があります。  
   
 -   OverwriteDataSources、TargetDataSourceFolder、TargetReportFolder、および TargetServerURL のプロジェクト プロパティ。  
   
@@ -302,21 +302,21 @@ ms.lasthandoff: 06/22/2017
     |あるレポート アイテムから次のレポート アイテムにフォーカスを移動する|Tab|  
     |選択したレポート アイテムを移動する|方向キー|  
     |選択したレポート アイテムを微調整する|Ctrl + 方向キー|  
-    |選択したレポート アイテムのサイズを増減する|Ctrl + Shift + 方向キー|  
-    |テキスト ボックスで、表示されているテキストの先頭にカーソルを移動する|Ctrl + Home|  
-    |テキスト ボックスで、表示されているテキストの末尾にカーソルを移動する|Ctrl + End|  
-    |テキストボックスで、現在のカーソル位置から表示されているテキストの先頭までのテキストを選択する|Shift + Home|  
-    |テキストボックスで、現在のカーソル位置から表示されているテキストの末尾までのテキストを選択する|Shift + End|  
-    |テキスト ボックスで、現在のカーソル位置から表現の先頭までのテキストを選択する|Ctrl + Shift + Home|  
-    |テキスト ボックスで、現在のカーソル位置から表現の末尾までのテキストを選択する|Ctrl + Shift + End|  
+    |選択したレポート アイテムのサイズを増減する|Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;Shift&lt;/localizedText&gt; + 方向キー|  
+    |テキスト ボックスで、表示されているテキストの先頭にカーソルを移動する|Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;Home|  
+    |テキスト ボックスで、表示されているテキストの末尾にカーソルを移動する|Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;End|  
+    |テキストボックスで、現在のカーソル位置から表示されているテキストの先頭までのテキストを選択する|Shift</localizedText> + <localizedText>Home|  
+    |テキストボックスで、現在のカーソル位置から表示されているテキストの末尾までのテキストを選択する|Shift</localizedText> + <localizedText>End|  
+    |テキスト ボックスで、現在のカーソル位置から表現の先頭までのテキストを選択する|Ctrl</localizedText> + <localizedText>Shift</localizedText> + <localizedText>Home|  
+    |テキスト ボックスで、現在のカーソル位置から表現の末尾までのテキストを選択する|Ctrl</localizedText> + <localizedText>Shift</localizedText> + <localizedText>End|  
     |選択したレポート アイテムのコンテキスト メニューを開く|Shift + F10 + 新しいキーボードのプロパティ キー|
   
 ## <a name="next-steps"></a>次の手順
 
 [SQL Server Data Tools のダウンロード](http://go.microsoft.com/fwlink/?LinkID=616714)
-[ソリューション エクスプ ローラー](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
+[ソリューション エクスプローラー](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
 [Reporting Services レポート](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
 [レポート定義言語](../../reporting-services/reports/report-definition-language-ssrs.md)   
-[Deployment and Version Support in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+[SQL Server Data Tools の配置およびバージョン サポート](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他のご不明な点は、 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)

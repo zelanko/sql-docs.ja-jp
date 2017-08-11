@@ -15,11 +15,11 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a8f5d95f21c220a5039945a06204fd2a0e9a3c66
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="secure-shared-dataset-items"></a>共有データセット アイテムをセキュリティで保護する
@@ -54,10 +54,10 @@ ms.lasthandoff: 06/22/2017
  詳細については、「 [アイテムレベルのタスク](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md) 」と「 [定義済みロール](../../reporting-services/security/role-definitions-predefined-roles.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [共有データセットを管理する](../../reporting-services/report-data/manage-shared-datasets.md)   
- [フォルダーをセキュリティで保護する](../../reporting-services/security/secure-folders.md)   
- [レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)   
- [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [共有データセットを管理します。](../../reporting-services/report-data/manage-shared-datasets.md)   
+ [セキュリティで保護されたフォルダー](../../reporting-services/security/secure-folders.md)   
+ [セキュリティで保護されたレポート、およびリソース](../../reporting-services/security/secure-reports-and-resources.md)   
+ [ネイティブ モード レポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [ネイティブ モード レポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

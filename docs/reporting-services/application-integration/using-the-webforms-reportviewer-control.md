@@ -19,11 +19,11 @@ caps.latest.revision: 25
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 98afd0f9a34c1b15fce4905fcc1f16c3b9b024fb
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>WebForms ReportViewer コントロールの使用
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  新しい[!INCLUDE[msCoName](../../includes/msconame-md.md)]いずれかを使用して ASP.NET Web サイト[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[csprcs](../../includes/csprcs-md.md)]または[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]です。  
   
-     \-または、  
+     \- または、  
   
      既存の ASP.NET Web サイトを開いて新しい Web フォームを追加します。  
   

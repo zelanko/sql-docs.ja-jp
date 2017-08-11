@@ -16,11 +16,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c3add6da899bdf6d62134d3df15db35aa5b1b569
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>構成ファイル内の URL (SSRS 構成マネージャー)
@@ -32,11 +32,11 @@ ms.lasthandoff: 06/22/2017
 #### <a name="urls-for-application-access"></a>アプリケーションにアクセスするための URL  
  レポート サーバー Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]へのアクセスに URL が使用されます。 URL を構成するには、Reporting Services 構成ツールを使用する必要があります。 このツールでは、HTTP.SYS に各アプリケーションの URL 予約が作成され、RSReportServer.config の **URLReservations** セクションに URL のエントリが追加されます。  
   
--   **URLReservations** セクションの各要素の説明を表示するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)」を参照してください。  
+-   **URLReservations** セクションの各要素の説明を表示するには、 [オンライン ブックの「](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) RsReportServer.config 構成ファイル [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
   
--   **UrlString** 要素の構文の詳細については、「[URL 予約の構文 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)」を参照してください。  
+-   だけの詳細については、構文の**UrlString**要素を参照してください[URL 予約構文 & #40 です。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
   
--   アプリケーションにアクセスするための URL の構成方法については、「[URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)」を参照してください。  
+-   アプリケーションにアクセスするための URL の構成方法については、「 [URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)へのアクセスに URL が使用されます。  
   
 #### <a name="urls-for-report-access"></a>レポートにアクセスするための URL  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポート リンクまたは添付ファイルの送信に使用できるレポート サーバーの電子メール配信拡張機能が用意されています。 レポート リンクは、レポートが配信されるときに構築されます。 レポート サーバーの電子メール配信拡張機能では、構成ファイルの **UrlRoot** 設定を使用してリンクが作成されます。 **UrlRoot** は、自動レポート処理によって生成される表示レポートでリンクを解決する場合にも使用されます。  
@@ -63,6 +63,6 @@ ms.lasthandoff: 06/22/2017
 |**ReportServerExternalUrl**|省略可。 この要素は、手動で追加しない限り RSReportServer.config ファイルには含まれません。<br /><br /> SharePoint 2.0 Web パーツを使用しており、ユーザーがレポートを取得して新しいブラウザー ウィンドウで開くことができるようにする場合にのみ、この要素を設定します。<br /><br /> 追加\< **ReportServerExternalUrl**> の下に、 \< **ReportServerUrl**> 別のブラウザー ウィンドウにアクセスするときに、レポート サーバーのインスタンスに解決される要素、およびされる名、完全に修飾されたレポート サーバーに設定します。 削除しない\< **ReportServerUrl**>。<br /><br /> 構文例を次に示します。<br /><br /> `<ReportServerExternalUrl>http://myserver/reportserver</ReportServerExternalUrl>`|この値は SharePoint 2.0 Web パーツで使用されます。<br /><br /> 以前のリリースでは、この値を設定してインターネットに接続されたレポート サーバーにレポート ビルダーを配置することが推奨されていました。 この配置シナリオはテストされていません。 以前に、レポート ビルダーへのインターネット アクセスをサポートするためにこの設定を使用していた場合は、他の方法を検討してください。|  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
+ [レポート サーバーの Url &#40; を構成します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [URL &#40; を構成します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
 

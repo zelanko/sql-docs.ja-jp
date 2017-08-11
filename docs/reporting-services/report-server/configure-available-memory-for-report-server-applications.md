@@ -18,11 +18,11 @@ caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 21f15afcea2904a88e8e9bdb71b2cccc677ff43d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>レポート サーバー アプリケーションで利用可能なメモリの構成
@@ -79,7 +79,7 @@ ms.lasthandoff: 06/22/2017
 |**MemorySafetyMargin**|**WorkingSetMaximum** を上限として、メモリ圧迫の度合いを中レベルと低レベルに分けたとき、その境界を定義するパーセンテージを指定します。 メモリには、システム用に予約され、レポート サーバーの処理には使用できない領域も存在します。この値は、使用可能なメモリに対するパーセンテージを示します。 既定値は 80 です。|  
   
 > [!NOTE]  
->  **MemoryLimit** および **MaximumMemoryLimit** の設定は、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは廃止されています。 既存のインストールをアップグレードした場合、または、該当する設定を含んだ RSReportServer.config ファイルを使用している場合、これらの値は読み取られません。  
+>  **MemoryLimit**と**MaximumMemoryLimit**設定は廃止されています[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降のバージョン。 既存のインストールをアップグレードした場合、または、該当する設定を含んだ RSReportServer.config ファイルを使用している場合、これらの値は読み取られません。  
   
 #### <a name="example-of-memory-configuration-settings"></a>メモリの構成設定の例  
  次の例は、カスタム メモリ構成値を使用したレポート サーバー コンピューターの構成設定を示しています。 **WorkingSetMaximum** または **WorkingSetMinimum**を追加する場合は、その要素と値を RSReportServer.config ファイルに入力する必要があります。 どちらの値も、サーバー アプリケーションに割り当てる RAM のサイズ (キロバイト単位) を整数で指定します。 次の例では、レポート サーバー アプリケーションに対するメモリの合計割当量が 4 GB を超えないように指定しています。 **WorkingSetMinimum** の既定値 ( **WorkingSetMaximum**の 60%) を使用する場合は、そちらを省略し、RSReportServer.config ファイルには **WorkingSetMaximum** のみを指定することも可能です。 この例では、実際にどのように追加すればよいかを示すために、 **WorkingSetMinimum** を省略せずに記載しています。  
@@ -97,7 +97,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>参照  
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Reporting Services の構成ファイル &#40; を変更します。RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [レポート サーバー アプリケーションのアプリケーション ドメイン](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
   
   

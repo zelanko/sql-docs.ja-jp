@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0411de7999d497b3198e6864d185cb54a4a5e1f5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>複数の値を持つパラメーターのレポートへの追加
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  レポート データセットを右クリックし、 **[データセットのプロパティ]**をクリックします。  
   
-3.  **[クエリ]** ボックスでクエリ テキストを編集するか、クエリ デザイナーを使用してフィルターを追加することで、データセット クエリに変数を追加します。 詳細については、「[リレーショナル クエリ デザイナーでのクエリの作成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)」を参照してください。  
+3.  **[クエリ]** ボックスでクエリ テキストを編集するか、クエリ デザイナーを使用してフィルターを追加することで、データセット クエリに変数を追加します。 詳しくは、「[リレーショナル クエリ デザイナーでのクエリの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)」をご覧ください。  
   
     ```  
     WHERE  
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
      使用可能な値の一覧を使用すると、ユーザーがパラメーターに選択できる値が有効な値のみに制限されます。 値が複数ある場合は、一覧の先頭に **[すべて選択]** という項目が用意されるため、ユーザーは 1 回のクリックですべての値を選択またはクリアできます。 レポート パラメーターで使用できる値をデータセット クエリから取得する場合は、同じレポート パラメーターに関連付けられているクエリ変数を含まないデータセットを選択してください。  
   
-     詳細については、「[レポート パラメーターの値の追加、変更、または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)」を参照してください。  
+     詳細については、次を参照してください[追加、変更、またはレポート パラメーター &#40; の使用可能な値の削除。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
 ## <a name="to-add-a-multi-value-parameter"></a>複数の値を持つパラメーターを追加するには  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  レポート データセットを右クリックし、 **[データセットのプロパティ]**をクリックします。  
   
-3.  **[クエリ]** ボックスでクエリ テキストを編集するか、クエリ デザイナーを使用してフィルターを追加することで、データセット クエリに変数を追加します。 詳細については、「[リレーショナル クエリ デザイナーでのクエリの作成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)」を参照してください。  
+3.  **[クエリ]** ボックスでクエリ テキストを編集するか、クエリ デザイナーを使用してフィルターを追加することで、データセット クエリに変数を追加します。 詳しくは、「[リレーショナル クエリ デザイナーでのクエリの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)」をご覧ください。  
   
      ```  
     WHERE  
@@ -87,7 +87,7 @@ ms.lasthandoff: 06/22/2017
   
      使用可能な値の一覧を使用すると、ユーザーがパラメーターに選択できる値が有効な値のみに制限されます。 値が複数ある場合は、一覧の先頭に **[すべて選択]** という項目が用意されるため、ユーザーは 1 回のクリックですべての値を選択またはクリアできます。 レポート パラメーターで使用できる値をデータセット クエリから取得する場合は、同じレポート パラメーターに関連付けられているクエリ変数を含まないデータセットを選択してください。  
   
-     詳細については、「[レポート パラメーターの値の追加、変更、または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)」を参照してください。  
+     詳細については、次を参照してください[追加、変更、またはレポート パラメーター &#40; の使用可能な値の削除。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
 ## <a name="see-also"></a>参照  
  [カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   

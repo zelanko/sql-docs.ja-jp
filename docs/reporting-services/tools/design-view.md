@@ -19,11 +19,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7a3129645fd110b2bddedae0022592a74fb97a9e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="design-view"></a>[デザイン] ビュー
@@ -61,8 +61,8 @@ ms.lasthandoff: 06/22/2017
  [プロパティ] ペインを使用すると、デザイン画面で現在選択されているレポート アイテムのプロパティや、[グループ化] ペインで現在選択されているグループのプロパティを表示できます。 別の方法として、選択したレポート アイテムまたはグループを右クリックし、 **[プロパティ]** をクリックして、そのレポート アイテムまたはグループに対応する **[プロパティ]** ダイアログ ボックスを開くこともできます。  
   
 ## <a name="see-also"></a>参照  
- [ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [レポート デザインに関するヒント (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
+ [ページ ヘッダーおよびフッター & #40 です。レポート ビルダーおよび SSRS & #41 です。](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [レポート デザインに関するヒント & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   
 

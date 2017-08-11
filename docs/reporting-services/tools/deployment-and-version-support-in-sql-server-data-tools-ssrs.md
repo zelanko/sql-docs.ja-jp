@@ -15,11 +15,11 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 29df783121de48e39d824b9b9e9666d764717ebc
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>Deployment and Version Support in SQL Server Data Tools (SSRS)
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [OutputPath] は、ビルドの検証、配置、およびレポートのプレビューで使用されるレポート定義の保存先フォルダーのパスを識別するビルド プロパティです。  
   
--   [ErrorLevel] は、エラーとしてレポートされるビルドの問題の重大度を識別するビルド プロパティです。 [ErrorLevel] の値以下の重大度レベルを持つ問題は、エラーとしてレポートされます。それ以外の問題は、警告としてレポートされます。 詳細については、「[レポート デザイナーを使用してレポートをデザインする (SSRS)](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)」の「レポートの検証とエラー レベル」を参照してください。  
+-   [ErrorLevel] は、エラーとしてレポートされるビルドの問題の重大度を識別するビルド プロパティです。 [ErrorLevel] の値以下の重大度レベルを持つ問題は、エラーとしてレポートされます。それ以外の問題は、警告としてレポートされます。 詳細については、「レポートの検証とエラー レベル」セクションを参照してください。[レポートをデザインすると、レポート デザイナーと #40 です。SSRS &#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 -   [TargetServerVersion] は、TargetServerURL プロパティで指定された対象レポート サーバーにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の想定されるバージョンを識別する配置プロパティです。  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="bkmk_SupportedVersions"></a> Supported Versions  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]レポート サーバー プロジェクトの 32 ビット開発環境であり、 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]ベースのコンピューターで実行できるようにデザインされていないため、 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]ベースのサーバーにはインストールされません。 ただし、x64 ベースのコンピューターでは [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] がサポートされています。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、レポート サーバー プロジェクトの 32 ビット開発環境が上で実行するものでありません[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-ベースのコンピューターと、にインストールされていない[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-ベースのサーバー。 ただし、x64 ベースのコンピューターでは [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] がサポートされています。  
   
  次の表では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でのレポートの作成およびパブリッシュをサポートするバージョンについて説明します。  
   

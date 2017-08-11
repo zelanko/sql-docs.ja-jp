@@ -23,11 +23,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b4a7d4a5babf6789baa551f808b840c469dfa31a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="upload-files-to-a-folder"></a>フォルダーへのファイルのアップロード
@@ -44,13 +44,13 @@ ms.lasthandoff: 06/22/2017
   
  視覚的には、レポート サーバー データベースにアップロードしたファイルは、以下のアイコンでフォルダー階層に表示されます。  
   
- ![Report icon](../../reporting-services/report-server/media/hlp-16doc.gif "Report icon")  
+ ![レポート アイコン](../../reporting-services/report-server/media/hlp-16doc.gif "レポート アイコン")  
 レポート アイコン  
   
- ![モデル アイコン](../../reporting-services/report-server/media/model-icon.gif "Model icon")  
+ ![モデル アイコン](../../reporting-services/report-server/media/model-icon.gif "モデル アイコン")  
 レポート モデル アイコン  
   
- ![汎用リソース アイコン](../../reporting-services/report-server/media/hlp-16file.gif "generic resource icon")  
+ ![汎用リソース アイコン](../../reporting-services/report-server/media/hlp-16file.gif "汎用リソース アイコン")  
 汎用リソース アイコン  
   
  ファイルをアップロードすると、ファイルは常に、現在選択しているフォルダーに格納されます。 最初に、アイテムを含めるフォルダーに移動できます。また、ファイルをアップロードしてから最終的な場所にファイルを移動することもできます。  
@@ -64,9 +64,9 @@ ms.lasthandoff: 06/22/2017
 |フォルダーのコンテンツの表示|リソースの表示、レポートの表示|  
   
 ## <a name="see-also"></a>参照  
- [レポート マネージャー (SSRS ネイティブ モード)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [レポート マネージャーと &#40; です。SSRS ネイティブ モードと &#41; です。](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [ネイティブ モード レポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [タスクと権限](../../reporting-services/security/tasks-and-permissions.md)   
- [ファイルまたはレポートをアップロードする (レポート マネージャー)](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
+ [ファイルまたはレポート &#40; をアップロードします。レポート マネージャー &#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
   
   

@@ -21,18 +21,18 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 162f43fc4f81c228d90839c75d1959d71eff9322
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="secure-my-reports"></a>個人用レポートをセキュリティで保護する
   個人用レポート機能により、ユーザーが管理するレポート処理用のワークスペースが提供されます。 [個人用レポート] フォルダーは、その性質上、他の汎用的な用途のフォルダーよりも権限の制限を緩める必要があります。 他のフォルダーのレポートを表示および実行する権限しか持たないユーザーが、[個人用レポート] フォルダーおよび自らが所有するコンテンツを管理するためには、より強い権限が必要となります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、そのための特別なロールの割り当てとロールの定義が用意されています。  
   
 > [!NOTE]  
->  個人用レポートはレポート マネージャーでのみ使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]では使用できません。  
+>  個人用レポートはレポート マネージャーでのみ使用できます。 これでは使用できません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]です。  
   
 ## <a name="role-assignment-for-my-reports"></a>個人用レポートのロールの割り当て  
  個人用レポートのロールの割り当てには、あらかじめ要素が定義されています。[個人用レポート] フォルダーがアクティブになっている各ユーザーには、この割り当てが自動的に作成されます。 レポート サーバーから自動的にセキュリティを割り当てられるので、管理者が個人用レポートのユーザー 1 人ずつのアクセス権を有効にする必要がなくなります。したがって、個人用レポートを広く使用する組織にとっては、この手法が非常に有効です。  
@@ -60,8 +60,8 @@ ms.lasthandoff: 06/22/2017
  個人用レポートを無効にすると、[個人用レポート] フォルダーのリンクがレポート マネージャーから削除されます。 個人用レポートをサポートする基本のフォルダー構造 (つまり Users フォルダーとサブフォルダー) は有効なままなので、ユーザーはフォルダーのパスがわかればアクセスすることができます。 **個人用レポート** ロールからタスクを削除すると、アクセスが拒否されます。  
   
 ## <a name="see-also"></a>参照  
- [レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)   
- [フォルダーをセキュリティで保護する](../../reporting-services/security/secure-folders.md)   
- [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [セキュリティで保護されたレポート、およびリソース](../../reporting-services/security/secure-reports-and-resources.md)   
+ [セキュリティで保護されたフォルダー](../../reporting-services/security/secure-folders.md)   
+ [ネイティブ モード レポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

@@ -15,11 +15,11 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 64cab4cc760ee1af2c3777bca88be2663d8039a4
+ms.translationtype: MT
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 967dfebc4add43efb039a3b5eb54f8e5d20f1fab
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config 構成ファイル
@@ -77,6 +77,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**DisableSecureFormsAuthenticationCookie**|既定値は False です。<br /><br /> フォーム認証とカスタム認証をセキュリティで保護されているものとしてマークするために使用するクッキーの強制を無効にするかどうかを指定します。 SQL Server 2012 以降、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によって、カスタム認証拡張機能と共に使用されるフォーム認証クッキーが、クライアントへの送信時にセキュリティで保護されたクッキーとして自動的にマークされます。 このプロパティを変更することで、レポート サーバー管理者およびカスタム セキュリティ拡張機能の作成者は、カスタム セキュリティ拡張機能の作成者がクッキーをセキュリティで保護されたクッキーとしてマークするかどうかを指定できた以前の動作に戻すことができます。 ネットワーク スニッフィングや再生攻撃を防止するため、フォーム認証にはセキュリティで保護されたクッキーを使用することをお勧めします。|×|  
 |**CleanupCycleMinutes**|レポート サーバー データベースから古いセッションと期限切れのスナップショットを削除するまでの保持期間を分単位で指定します。 有効な値は、0 から整数型の最大値までです。 既定値は、10 です。 値を 0 に設定すると、データベースによる処理のクリーンアップが無効になります。|N、S|  
 |**MaxActiveReqForOneUser**|ユーザーが同時に処理できる最大レポート数を指定します。 最大数に達すると、それ以降のレポート処理要求は拒否されます。 有効値は、1 から整数型の最大値までです。 既定値は 20 です。<br /><br /> 要求の大半はきわめて迅速に処理されるため、1 人のユーザーが任意の時点で 20 より多くの接続を開くということはまずありません。 ユーザーが 15 より多い処理集中型のレポートを同時に開く場合は、この値を増やす必要があります。<br /><br /> この設定は、SharePoint 統合モードで動作するレポート サーバーでは無視されます。|N、S|  
+|**MaxActiveReqForAnonymous**|できるプロセスで、同時に匿名の要求の最大数を指定します。 制限に達すると、さらに処理要求は拒否されます。 有効値は、1 から整数型の最大値までです。 既定値は 200 です。
 |**DatabaseQueryTimeout**|レポート サーバー データベースへの接続がタイムアウトするまでの期間を秒単位で指定します。 この値は、System.Data.SQLClient.SQLCommand.CommandTimeout プロパティに渡されます。 有効な値の範囲は 0 ～ 2147483647 です。 既定値は 120 です。 値を 0 に設定することはお勧めできません。0 にすると待ち時間が無制限になります。|×|  
 |**AlertingCleanupCycleMinutes**|既定値は 20 です。<br /><br /> 警告データベースに格納されている一時データのクリーンアップが発生する頻度を指定します。|S|  
 |**AlertingDataCleanupMinutes**|既定値は 360 です。<br /><br /> 警告の定義を作成または編集するために使用するセッション データを警告データベース内で保持する期間を指定します。 既定値は 6 時間です。|S|  
@@ -846,7 +847,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [レポート サーバーの初期化 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- その他のご不明な点は、 [Reporting Services のフォーラムにアクセスします](http://go.microsoft.com/fwlink/?LinkId=620231)
+ その他のご不明な点は、 [Reporting Services のフォーラムを再試行してください。](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
 

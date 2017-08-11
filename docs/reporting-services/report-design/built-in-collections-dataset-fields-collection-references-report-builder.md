@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: df288358b8fd8b209adda5c52af5f23f878541e9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>組み込みコレクションのデータセット フィールド コレクションの参照 (レポート ビルダー)
@@ -93,7 +93,7 @@ End Function
 ### <a name="using-extended-field-properties"></a>拡張フィールド プロパティの使用  
  拡張フィールド プロパティは、データ処理拡張機能によってフィールドに定義された追加プロパティであり、データセットのデータ ソースの種類に基づいて決定されます。 拡張フィールド プロパティには、定義済みのものと、データ ソースの種類に固有のものがあります。 詳細については、「[Analysis Services データベースに対する拡張フィールド プロパティ (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)」を参照してください。  
   
- そのフィールドでサポートされていないプロパティを指定した場合、式は **null** ([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] では **Nothing**) に評価されます。 データ プロバイダーが拡張フィールド プロパティをサポートしていない場合や、クエリ実行時にフィールドが見つからなかった場合、 **文字列** 型と**オブジェクト** 型のプロパティの値は [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]null **(** では **Nothing**) に、 **整数**型のプロパティの値はゼロ (0) になります。 データ処理拡張機能は、この構文を含むクエリを最適化することにより、定義済みのプロパティを利用する場合があります。  
+ そのフィールドでサポートされていないプロパティを指定した場合、式は **null** (**では** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) に評価されます。 データ プロバイダーが拡張フィールド プロパティをサポートしていない場合や、クエリ実行時にフィールドが見つからなかった場合、 **文字列** 型と**オブジェクト** 型のプロパティの値は [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]null **(** では **Nothing**) に、 **整数**型のプロパティの値はゼロ (0) になります。 データ処理拡張機能は、この構文を含むクエリを最適化することにより、定義済みのプロパティを利用する場合があります。  
   
 ## <a name="see-also"></a>参照  
  [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   

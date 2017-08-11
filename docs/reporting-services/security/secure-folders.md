@@ -20,11 +20,11 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5aad5bbe0b53e2e6669df93496795f4c5b6a3bca
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="secure-folders"></a>フォルダーをセキュリティで保護する
@@ -48,8 +48,8 @@ ms.lasthandoff: 06/22/2017
 |アイテムへのセキュリティの設定|フォルダーへのアクセスを制御するロールの割り当てを作成および変更できます。 このタスクは、"フォルダーの表示" または "フォルダーの管理" のいずれかと併用する必要があります。 それ以外の場合、ユーザーがアイテムを選択できないので効果がありません。|  
   
 ## <a name="see-also"></a>「  
- [レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)   
- [共有データ ソース アイテムをセキュリティで保護する](../../reporting-services/security/secure-shared-data-source-items.md)   
- [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [セキュリティで保護されたレポート、およびリソース](../../reporting-services/security/secure-reports-and-resources.md)   
+ [セキュリティで保護された共有データ ソース アイテム](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [ネイティブ モード レポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

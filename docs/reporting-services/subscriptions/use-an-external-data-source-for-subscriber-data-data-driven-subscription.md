@@ -22,11 +22,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a337202cea263001fe810c91a607fa1746219bd6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>サブスクライバー データに対して外部データ ソースを使用する (データ ドリブン サブスクリプション)
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
 -   レポート モデル  
   
- データ ドリブン サブスクリプションで使用する、カスタム データ処理拡張機能があれば、する必要がありますを実装して、<xref:Microsoft.ReportingServices.DataProcessing.IDbCommand>と<xref:Microsoft.ReportingServices.DataProcessing.IDataReader>インターフェイスです。 データ処理拡張機能では、スキーマのみのクエリ実行をサポートする必要があります。 このクエリは、デザイン時に列のメタデータを取得するために使用します。これにより、サブスクリプション定義の配信オプションおよびレポート パラメーターにユーザーが列をマップできるようになります。 スキーマのみのクエリ実行は、ユーザーによるサブスクリプション定義の初期段階に使用されます。  
+ データ ドリブン サブスクリプションでカスタム データ処理拡張機能を使用する場合は、 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> および <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> インターフェイスを実装する必要があります。 データ処理拡張機能では、スキーマのみのクエリ実行をサポートする必要があります。 このクエリは、デザイン時に列のメタデータを取得するために使用します。これにより、サブスクリプション定義の配信オプションおよびレポート パラメーターにユーザーが列をマップできるようになります。 スキーマのみのクエリ実行は、ユーザーによるサブスクリプション定義の初期段階に使用されます。  
   
 ## <a name="query-requirements"></a>クエリの要件  
  サブスクリプション データを取得するクエリを作成する場合は、次の点に注意してください。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>サブスクライバー データベースからレポートへのパラメーター値の受け渡し  
  パラメーター化されたレポート用のデータ ドリブン サブスクリプションを作成する場合、変数パラメーター値を使用して、各レポートの出力をカスタマイズできます。 たとえば、サブスクライバー データベースには、レポート データのフィルター処理に使用できる従業員 ID 番号、雇用日、職種、および勤務地情報が含まれていることがあります。 これらの列データまたは他の使用可能な列データに基づいたパラメーターをレポートが受け取ると、そのパラメーターを適切な列にマップすることができます。  
   
- サブスクライバー フィールドをレポート パラメーターにマップするときは、データ型および列の長さに互換性があることを確認してください。 データ型に不一致がある場合、サブスクリプションの処理中にエラーが発生します。 パラメーター化したレポートでのサブスクライバー データの使用については、「[データドリブン サブスクリプションの作成 (SSRS チュートリアル)](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)」を参照してください。  
+ サブスクライバー フィールドをレポート パラメーターにマップするときは、データ型および列の長さに互換性があることを確認してください。 データ型に不一致がある場合、サブスクリプションの処理中にエラーが発生します。 パラメーター化されたレポートでサブスクライバーのデータの使用に関する詳細については、次を参照してください[データ ドリブン サブスクリプション &#40; を作成する。SSRS チュートリアル &#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
 ## <a name="modifying-the-subscriber-data-source"></a>サブスクライバー データ ソースの変更  
  サブスクライバー データ ソースに以下の変更を加えると、サブスクリプションの実行を防ぐことができます。  
@@ -85,7 +85,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [データ ドリブン サブスクリプションを作成、変更、および削除する](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [サブスクリプションと配信 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [データ ドリブン サブスクリプション](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [サブスクリプションと配信 & #40 です。Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

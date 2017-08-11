@@ -27,14 +27,14 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 58588838e0e74b545290df5ff0e77dc68ad5e918
+ms.translationtype: MT
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: e228d60a4ae01aa345f007be91109b7bccb76f5a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Building Applications Using the Web Service and the .NET Framework
+# <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Web サービスと .NET Framework を使用したアプリケーションの構築
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]メソッド、プリミティブ型などの使い慣れたプログラミング構造を使用することができます、およびユーザー定義の複合が Web サービスを使用する型します。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] により、W3C (World Wide Web Consortium) の標準に準拠した任意の Web サービスを呼び出すことができる、Web サービス クライアントを作成するためのインフラストラクチャとツールが提供されます。  
   
  レポート サーバー Web サービス クライアントとは、Simple Object Access Protocol (SOAP) メッセージを使用して、レポート サーバーと通信をする任意のコンポーネントまたはアプリケーションのことです。  
@@ -58,16 +58,16 @@ ms.lasthandoff: 06/13/2017
 |トピック|Description|  
 |-----------|-----------------|  
 |[Web サービス プロキシの作成](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)|プロキシ クラスを使用して、プロジェクトに追加する方法について説明[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]です。|  
-|[Web サービスの認証](../../../reporting-services/report-server-web-service/net-framework/web-service-authentication.md)|レポート サーバー Web サービスに対する呼び出しの認証方法について説明します。|  
+|[Web サービス認証](../../../reporting-services/report-server-web-service/net-framework/web-service-authentication.md)|レポート サーバー Web サービスに対する呼び出しの認証方法について説明します。|  
 |[Web サービス メソッドの呼び出し](../../../reporting-services/report-server-web-service/net-framework/calling-web-service-methods.md)|Web サービス メソッドを呼び出すには SOAP API を使用する方法について説明[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]です。|  
 |[Web サービスの Url プロパティを設定](../../../reporting-services/report-server-web-service/net-framework/setting-the-url-property-of-the-web-service.md)|Web 参照の作成後に新しいサーバーの URL を Web サービス プロキシに知らせるためのプログラミング方法について説明します。|  
-|[Web サービス メソッドの引数を指定します。](../../../reporting-services/report-server-web-service/net-framework/supplying-web-service-method-arguments.md)|Web サービス メソッドを呼び出す方法およびメソッドの引数の指定方法を説明します。|  
+|[Web サービス メソッドの引数の指定](../../../reporting-services/report-server-web-service/net-framework/supplying-web-service-method-arguments.md)|Web サービス メソッドを呼び出す方法およびメソッドの引数の指定方法を説明します。|  
 |[省略可能な Web サービス オブジェクトの値を省略](../../../reporting-services/report-server-web-service/net-framework/omitting-values-for-optional-web-service-objects.md)|省略可能な Web サービス オブジェクトの値の省略方法を説明します。|  
-|[セキュリティで保護された Web サービス メソッドを使用します。](../../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)|について説明します、 **SecureConnectionLevel**設定と Reporting Services SOAP API の使用に影響する方法です。|  
+|[セキュリティで保護された Web サービス メソッドの使用](../../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)|について説明します、 **SecureConnectionLevel**設定と Reporting Services SOAP API の使用に影響する方法です。|  
 |[表示拡張機能にデバイス情報設定を渡す](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)|異なる形式でレポートを表示するための、デバイス情報の設定について説明します。|  
 |[Reporting Services 配信拡張機能の設定](../../../reporting-services/report-server-web-service/net-framework/reporting-services-delivery-extension-settings.md)|レポート サーバーの電子メールを使用してレポートを配信するための設定について説明します。|  
 |[SOAP ヘッダーをサービス レポートを使用します。](../../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の SOAP ヘッダーの使用について説明します。|  
-|[Reporting Services での例外処理の概要](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のエラー処理方法に関する情報を提供します。|  
+|[Reporting Services における例外処理の概要](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のエラー処理方法に関する情報を提供します。|  
   
 ## <a name="see-also"></a>参照  
  [レポート サーバー Web サービス](../../../reporting-services/report-server-web-service/report-server-web-service.md)   

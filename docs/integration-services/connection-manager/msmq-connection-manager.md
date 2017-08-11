@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.msmqconnectionmanager.f1
 helpviewer_keywords:
 - connections [Integration Services], message queues
 - connection managers [Integration Services], MSMQ
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2a3eabde204f3629f903e66da5b4b0204a49ccd7
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 0e028f9f648acc18d56dc05262adccbbc52f8f7e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 接続マネージャー
@@ -51,7 +53,35 @@ ms.lasthandoff: 08/03/2017
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、「 [MSMQ 接続マネージャー エディター](../../integration-services/connection-manager/msmq-connection-manager-editor.md)」を参照してください。  
   
- プログラムによる接続マネージャーの構成の詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」および「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
+ プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
+  
+## <a name="msmq-connection-manager-editor"></a>MSMQ 接続マネージャー エディター
+  **[MSMQ 接続マネージャー]** ダイアログ ボックスでは、Message Queuing (MSMQ) メッセージ キューへのパスを指定できます。  
+  
+ MSMQ 接続マネージャーの詳細については、「 [MSMQ Connection Manager](../../integration-services/connection-manager/msmq-connection-manager.md)」を参照してください。  
+  
+> [!NOTE]  
+>  MSMQ 接続マネージャーでは、ローカルのパブリック キューと専用キュー、およびリモートのパブリック キューがサポートされています。 リモートの専用キューはサポートされていません。 スクリプト タスクを使用する回避策については、「 [Sending to a Remote Private Message Queue with the Script Task](../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md)」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **名前**  
+ ワークフローにおける MSMQ 接続マネージャーの一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
+  
+ **Description**  
+ 接続マネージャーの説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続マネージャーの目的について記述することをお勧めします。  
+  
+ **[パス]**  
+ メッセージ キューの完全なパスを入力します。 パスの形式はキューの種類によって異なります。  
+  
+|[キューの種類]|パスのサンプル|  
+|----------------|-----------------|  
+|パブリック|\<コンピューター名 >\\< キュー名\>|  
+|Private|\<コンピューター名 > \Private$\\< キュー名\>|  
+  
+ "." を使用してローカル コンピューターを表すことができます。  
+  
+ **テスト**  
+ MSMQ 接続マネージャーを構成した後に、 **[テスト]**をクリックして、接続が利用可能であることを確認します。  
   
 ## <a name="see-also"></a>参照  
  [メッセージ キュー タスク](../../integration-services/control-flow/message-queue-task.md)   

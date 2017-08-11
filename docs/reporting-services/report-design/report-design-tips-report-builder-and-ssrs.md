@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0d30cf6d4ad8e2a4903172230469f1ba41bab360
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>レポート デザインに関するヒント (レポート ビルダーおよび SSRS)
@@ -160,11 +160,11 @@ ms.lasthandoff: 06/22/2017
   
     4.  列ヘッダーで、テキスト ボックス プロパティの WritingMode を変更して縦書きテキストを使用します。  
   
- このような操作の組み合わせ、レポート アイテムの幅と高さのプロパティ、レポート本文のサイズ、ページの高さと幅の定義、親レポートの余白の設定、およびレンダラー固有の改ページ調整のすべてが総合されて、表示されるページでのレポート アイテムのレイアウトが決まります。 詳細については、「[Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)」を参照してください。  
+ このような操作の組み合わせ、レポート アイテムの幅と高さのプロパティ、レポート本文のサイズ、ページの高さと幅の定義、親レポートの余白の設定、およびレンダラー固有の改ページ調整のすべてが総合されて、表示されるページでのレポート アイテムのレイアウトが決まります。 詳細については、「 [Reporting Services の改ページ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2016 のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Reporting Services チュートリアル &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Reporting Services のチュートリアル & #40 です。SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)  
   
   

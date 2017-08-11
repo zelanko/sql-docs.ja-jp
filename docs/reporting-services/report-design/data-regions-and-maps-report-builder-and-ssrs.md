@@ -17,11 +17,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fe5be4e624ef5a5bc956731819f2b4636dc39799
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>データ領域とマップ (レポート ビルダーおよび SSRS)
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/22/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="table"></a>Table  
- テーブルは、データを行ごとに表示するデータ領域です。 テーブルの列は静的です。列数はレポートのデザイン時に指定します。 テーブルの行は動的であり、データに応じて下方向に拡張されます。 テーブルにグループを追加すると、選択したフィールドまたは式ごとにデータを整理できます。 レポートにテーブルを追加する方法の詳細については、[「テーブル (レポート ビルダーおよびSSRS)」](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) を参照してください。  
+ テーブルは、データを行ごとに表示するデータ領域です。 テーブルの列は静的です。列数はレポートのデザイン時に指定します。 テーブルの行は動的であり、データに応じて下方向に拡張されます。 テーブルにグループを追加すると、選択したフィールドまたは式ごとにデータを整理できます。 レポートにテーブルを追加する方法の詳細については、次を参照してください。[テーブル & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
 ## <a name="matrix"></a>マトリックス  
  マトリックスは、クロス集計ともいいます。 マトリックス データ領域では、動的な列と行の両方がデータに応じて拡張されます。 マトリックスには、動的な列と行、および静的な列と行を含めることができます。 列または行には、他の列または行を含めることができ、データのグループ化にも使用できます。 レポートにマトリックスを追加する方法の詳細については、 [「レポートへのマトリックスの追加」](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)を参照してください。  
@@ -48,16 +48,16 @@ ms.lasthandoff: 06/22/2017
  ゲージは、特定の値を指すインジケーターを内部に含む領域としてデータを表示します。 ゲージは、主要業績評価指標 (KPI) やその他の基準を表示するために使用されます。 ゲージの例として、線形ゲージや円形ゲージなどがあります。 詳細については、 [「レポートへのゲージの追加」](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)を参照してください。  
   
 ## <a name="map"></a>マップ  
- マップでは、地理的な背景にデータを表現することができます。 マップ データには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ、ESRI シェープファイル、または [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing マップのタイルの空間データを指定できます。 空間データは、形状または領域を表す多角形、ルートまたはパスを表す線、およびマーカーで表されるポイントを定義する座標のセットで構成されます。 集計データをマップ要素に関連付けて、マップ要素の色とサイズを自動的に変化させることができます。 たとえば、売上高に基づいて店舗のマーカーの種類を変えたり、制限速度に基づいて道路の色を変えたりできます。 詳細については、「[マップ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)」を参照してください。  
+ マップでは、地理的な背景にデータを表現することができます。 マップ データには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ、ESRI シェープファイル、または [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing マップのタイルの空間データを指定できます。 空間データは、形状または領域を表す多角形、ルートまたはパスを表す線、およびマーカーで表されるポイントを定義する座標のセットで構成されます。 集計データをマップ要素に関連付けて、マップ要素の色とサイズを自動的に変化させることができます。 たとえば、売上高に基づいて店舗のマーカーの種類を変えたり、制限速度に基づいて道路の色を変えたりできます。 詳細については、「[マップ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="data-regions-in-the-report-layout"></a>レポート レイアウトのデータ領域  
  レポートには複数のデータ領域を追加できます。 データ領域は、リンクされているデータセットのデータに合わせて拡大されます。 たとえば、年ごとに各製品の売上を表示するマトリックスには、製品名に基づく行グループと年に基づく列グループがあります。 レポートを実行すると、マトリックスのページは、各製品に合わせて下方向に拡張され、各年に合わせて横方向に拡張されます。 レポート デザイン画面でマトリックスの横に配置したグラフは、表示レポートでは、拡張されたマトリックスの横に表示されます。 ページ上のデータ領域の表示方法には、レポートの出力形式に基づく一連の規則が適用されます。 たとえば、ページ上のグラフとマトリックスの表示方法を制御するには、コンテナーとして四角形を使用するか、両方のデータ領域を一覧内に入れ子にします。 詳細については、「 [ページ レイアウトとレンダリング (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)として保存できます。  
   
 ## <a name="nested-data-regions"></a>入れ子になったデータ領域  
- データ領域を他のデータ領域内に入れ子にすることができます。 たとえば、データベース内の各販売員ごとの売上記録を作成する場合、テキスト ボックスおよび画像を使用して一覧を作成し、従業員に関する情報を表示します。次に、この一覧にテーブルおよびグラフ データ領域を追加して従業員の売上記録を表示します。 詳細については、[「入れ子になったデータ領域 (レポート ビルダーおよび SSRS)」](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md) を参照してください。  
+ データ領域を他のデータ領域内に入れ子にすることができます。 たとえば、データベース内の各販売員ごとの売上記録を作成する場合、テキスト ボックスおよび画像を使用して一覧を作成し、従業員に関する情報を表示します。次に、この一覧にテーブルおよびグラフ データ領域を追加して従業員の売上記録を表示します。 詳細については、「 [入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="multiple-data-regions-linked-to-the-same-dataset"></a>同じデータセットにリンクされた複数のデータ領域  
- 複数のデータ領域を同じデータセットにリンクすることで、同じデータをさまざまな形式で表示することができます。 たとえば、同じデータをテーブルやグラフで表示できます。 レポートのテーブルに対話的な並べ替えボタンを組み込むことで、テーブルを並べ替えたときにグラフも自動的に並べ替えられるようにすることができます。 詳細については、「[同じデータセットへの複数のデータ領域のリンク (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)」を参照してください。  
+ 複数のデータ領域を同じデータセットにリンクすることで、同じデータをさまざまな形式で表示することができます。 たとえば、同じデータをテーブルやグラフで表示できます。 レポートのテーブルに対話的な並べ替えボタンを組み込むことで、テーブルを並べ替えたときにグラフも自動的に並べ替えられるようにすることができます。 詳細については、「 [同じデータセットへの複数のデータ領域のリンク (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="data-for-a-data-region"></a>データ領域のデータ  
  Tablix、グラフ、およびゲージはそれぞれ、単一のデータセットのデータを表示するために設計されています。 マップには、同じデータセットまたは異なるデータセットの空間データと分析データが表示されます。 また、以下のように、データ領域にリンクされていないデータセットの値を含めることもできます。  
@@ -66,13 +66,13 @@ ms.lasthandoff: 06/22/2017
   
 -   別のデータセットの名前と値のペアの参照値。  
   
- 詳細については、「[式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「[式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レポート作成の概念 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [ページ レイアウトとレンダリング (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
+ [ページ レイアウトとレンダリング & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)   
- [Reporting Services チュートリアル (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)  
+ [Reporting Services のチュートリアルと &#40; です。SSRS と &#41; です。](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   
   

@@ -26,11 +26,11 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fc98f8394e637ea9a627cffd8e40887484462df5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>カスタム データ処理拡張機能の接続を指定する
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 >  カスタム データ処理拡張機能の実装方法はサード パーティ プロバイダーに問い合わせてください。  
   
 ## <a name="impersonation-and-custom-data-processing-extensions"></a>権限借用とカスタム データ処理拡張機能  
- カスタム データ処理拡張機能は、権限借用を使用してデータ ソースに接続する場合は、いずれかの Open メソッドを使用する必要があります、<xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>または<xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>の要求を行うインターフェイスです。 または、ユーザー ID オブジェクト (System.Security.Principal.WindowsIdentity) を格納後、他のデータ処理拡張機能 API でそのユーザー ID オブジェクトを再利用できます。  
+ 権限借用を使用してカスタム データ処理拡張機能がデータ ソースへ接続する場合は、 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> または <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> のインターフェイスで Open メソッドを使用して要求を行う必要があります。 または、ユーザー ID オブジェクト (System.Security.Principal.WindowsIdentity) を格納後、他のデータ処理拡張機能 API でそのユーザー ID オブジェクトを再利用できます。  
   
  以前のリリースの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、すべてのカスタム データ処理拡張機能はユーザーの権限借用により呼び出されました。 このリリースでは、ユーザーの権限を借用している間に Open メソッドのみ呼び出されます。 統合セキュリティを必要とする既存のデータ処理拡張機能の場合は、Open メソッドを使用するように、またはユーザー ID オブジェクトを格納するようにコードを変更する必要があります。  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/22/2017
  **IDbConnection**を使用する場合には、統合セキュリティ、Windows ユーザー アカウント、およびデータベース資格情報はサポートされません。 データ ソース接続にこれらのオプションを使用した場合、レポート サーバーは接続に失敗します。  
   
 ## <a name="connections-for-idbconnectionextension"></a>IDbConnectionExtension の接続  
- カスタム データ処理拡張機能をサポートしておりを使用している場合<xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>、次の方法で接続を指定することができます。  
+ カスタム データ処理拡張機能を使用し、 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>がサポートされる場合、次の方法で接続を指定できます。  
   
 |[資格情報]|接続|  
 |-----------------|-----------------|  
@@ -83,11 +83,11 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [自動実行アカウントの構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [資格情報とレポート データ ソースの接続情報を指定します。](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [データ処理拡張機能の実装](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [レポート マネージャー (SSRS ネイティブ モード)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [共有データ ソースを作成、削除、または変更する &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [レポートのデータ ソースのプロパティを構成する &#40;レポート マネージャー&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [レポート マネージャーと &#40; です。SSRS ネイティブ モードと &#41; です。](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [共有データ ソースの作成、削除、または変更 &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [レポート &#40; のデータ ソースのプロパティを構成します。レポート マネージャー &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

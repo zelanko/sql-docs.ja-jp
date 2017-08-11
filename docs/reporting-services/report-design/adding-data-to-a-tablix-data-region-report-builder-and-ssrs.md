@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b6f41b4d1b42db5ca020841f9363df3f4cf3eb99
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>Tablix データ領域へのデータの追加 (レポート ビルダーおよび SSRS)
@@ -40,11 +40,11 @@ ms.lasthandoff: 08/03/2017
  テーブル テンプレートと一覧のテンプレートには詳細行があります。 マトリックス テンプレートには詳細行がありません。 Tablix データ領域に詳細行がない場合は、詳細グループを定義すると追加できます。 詳細については、「[詳細グループの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-details-group-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="adding-grouped-data"></a>グループ化されたデータの追加  
- グループ化されたデータは、データセット、データ領域、およびグループにフィルターが適用された後の、グループ式によって指定されたすべての詳細データです。 グループ内の詳細データを整理するには、レポート データ ペインからグループ化ペインにフィールドをドラッグします。 グループを追加すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、グループ化されたデータが表示される Tablix データ領域に、関連する行や列が自動的に追加されます。 これらの行や列内のセルは、グループ化されたデータに関連付けられます。 詳細については、「 [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
+ グループ化されたデータは、データセット、データ領域、およびグループにフィルターが適用された後の、グループ式によって指定されたすべての詳細データです。 グループ内の詳細データを整理するには、レポート データ ペインからグループ化ペインにフィールドをドラッグします。 グループを追加すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、グループ化されたデータが表示される Tablix データ領域に、関連する行や列が自動的に追加されます。 これらの行や列内のセルは、グループ化されたデータに関連付けられます。 詳細については、「[データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
- 既定では、数値データを表すデータセット フィールドを、グループ行またはグループ列内のセルに追加すると、セルの値は、スコープがセルの最も内側の行グループおよび列グループのメンバーシップに設定された、グループ化されたデータの合計になります。 既定の集計関数 Sum を、Avg や Count などの他の集計関数に変更できます。 集計計算の既定のスコープを変更することもできます。たとえば、行グループに対して値が占める割合を計算するように変更できます。 詳細については、「 [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)を表しています。  
+ 既定では、数値データを表すデータセット フィールドを、グループ行またはグループ列内のセルに追加すると、セルの値は、スコープがセルの最も内側の行グループおよび列グループのメンバーシップに設定された、グループ化されたデータの合計になります。 既定の集計関数 Sum を、Avg や Count などの他の集計関数に変更できます。 集計計算の既定のスコープを変更することもできます。たとえば、行グループに対して値が占める割合を計算するように変更できます。 詳細については、「[合計、集計、および組み込みコレクションの式のスコープ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)」を参照してください。  
   
- 既定では、グループ化されたデータはすべて同じレポート データセットのデータです。 Tablix データ領域で、データセット名をスコープとして指定して、他のデータセットの集計値を含めることができます。 1 つの Tablix データ領域内で複数のデータセットの集計値を複数指定できます。 詳細については、「 [集計関数リファレンス (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)」を参照してください。  
+ 既定では、グループ化されたデータはすべて同じレポート データセットのデータです。 Tablix データ領域で、データセット名をスコープとして指定して、他のデータセットの集計値を含めることができます。 1 つの Tablix データ領域内で複数のデータセットの集計値を複数指定できます。 詳細については、「[集計関数リファレンス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)」を参照してください。  
   
 ## <a name="adding-subtotals-and-totals"></a>小計と合計の追加  
  グループの小計とデータ領域の総計を追加するには、セルまたはグループ化ペインのショートカット メニューの [合計の追加] 機能を使用します。 合計を表示するための行および列が自動的に追加されます。 小計および合計の式の既定では、 [Sum](../../reporting-services/report-design/report-builder-functions-sum-function.md) 集計関数を使用します。 式を追加した後、既定の関数を変更できます。 詳細については、「[グループまたは Tablix データ領域への合計の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)」と「[合計、集計、および組み込みコレクションの式のスコープ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)」を参照してください。  
@@ -53,14 +53,14 @@ ms.lasthandoff: 08/03/2017
  グループまたはデータ領域のラベルを追加するには、ラベルを作成するグループの外側に行または列を追加します。 ラベルの行および列は、合計を表示するために追加した行および列に似ています。 詳細については、「[行の挿入または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md)」または「[列の挿入または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="adding-an-existing-tablix-data-region-from-another-report"></a>別のレポートにある既存の Tablix データ領域の追加  
- 別のレポートからデータ領域をコピーし、新しいレポートまたは既存のレポートに貼り付けることができます。 データ領域を貼り付けた後で、データ領域が使用するデータセットが定義されており、データセット フィールドの名前およびデータ型が元のレポートと同じであることを確認する必要があります。 データセットは、異なるレポート間でコピーできません。ただし、レポートが共有データ ソースを使用している場合は、別のレポートにデータセットをすばやく複製できます。 また、データセット用にデータを取得するクエリのクエリ テキストもインポートできます。この操作によって、複数のレポート内でクエリを簡単に複製できます。 詳細については、「 [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。  
+ 別のレポートからデータ領域をコピーし、新しいレポートまたは既存のレポートに貼り付けることができます。 データ領域を貼り付けた後で、データ領域が使用するデータセットが定義されており、データセット フィールドの名前およびデータ型が元のレポートと同じであることを確認する必要があります。 データセットは、異なるレポート間でコピーできません。ただし、レポートが共有データ ソースを使用している場合は、別のレポートにデータセットをすばやく複製できます。 また、データセット用にデータを取得するクエリのクエリ テキストもインポートできます。この操作によって、複数のレポート内でクエリを簡単に複製できます。 詳細については、「[レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [対話的な並べ替え、ドキュメント マップ、およびリンク &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [レポート データ ペインでのフィールドの追加、編集、更新 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)   
- [式の追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)  
+ [式と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [レポート パラメーターと &#40; です。レポート ビルダーおよびレポート デザイナーと &#41; です。](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [対話的な並べ替え、ドキュメント マップ、およびリンクと #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [データセット フィルター、データ領域フィルター、およびグループ フィルターと &#40; を追加します。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [追加、編集、レポート データ ペイン &#40; 内のフィールドを更新レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)   
+ [式 &#40; を追加します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)  
   
   

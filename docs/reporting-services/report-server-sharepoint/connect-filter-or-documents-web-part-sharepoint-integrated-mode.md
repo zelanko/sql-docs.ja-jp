@@ -20,11 +20,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5745964338889cd378a109636b2f6ebbdc32db26
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="connect-filter-or-documents-web-part---sharepoint-integrated-mode"></a>フィルターまたはドキュメント Web パーツの SharePoint 統合モードを接続します。
@@ -81,8 +81,8 @@ ms.lasthandoff: 06/22/2017
 11. 変更をチェックインし、ページを保存します。  
   
 ## <a name="see-also"></a>参照  
- [レポート ビューアー Web パーツを Web ページに追加する (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)   
- [SharePoint サイトのレポート ビューアー Web パーツ](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
- [レポート ビューアー Web パーツのカスタマイズ](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)  
+ [Web ページ &#40; をレポート ビューアー Web パーツを追加します。Reporting Services の SharePoint モード &#41; と統合](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)   
+ [SharePoint サイト上のレポート ビューアー Web パーツ](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [レポート ビューアー Web パーツをカスタマイズします。](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)  
   
   

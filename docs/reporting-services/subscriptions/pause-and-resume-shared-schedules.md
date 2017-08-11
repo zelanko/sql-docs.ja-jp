@@ -23,11 +23,11 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0eceb425b1294026a1c82043800c6aaa2ec83972
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="pause-and-resume-shared-schedules"></a>共有スケジュールを一時停止および再開する
@@ -68,9 +68,9 @@ ms.lasthandoff: 06/22/2017
 4.  スケジュールを選択し、 **[選択したスケジュールの一時停止]** または **[選択したスケジュールの実行]**をクリックします。 スケジュールが現在一時停止している場合は、 **[状態]** 列に **[一時停止]**が表示されます。  
   
 ## <a name="see-also"></a>参照  
- [[スケジュール]](../../reporting-services/subscriptions/schedules.md)   
- [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
- [レポート サーバーでタイム ゾーンと時計の設定を変更する](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
- [実行中の処理を管理する](../../reporting-services/subscriptions/manage-a-running-process.md)  
+ [スケジュール](../../reporting-services/subscriptions/schedules.md)   
+ [作成、変更、およびスケジュールの削除](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
+ [タイム ゾーンと、レポート サーバーのクロック設定を変更します。](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
+ [実行中のプロセスを管理します。](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   

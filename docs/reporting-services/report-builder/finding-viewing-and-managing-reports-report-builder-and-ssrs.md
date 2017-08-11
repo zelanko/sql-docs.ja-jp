@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0185d35444cdac141cb5d9626d85618b7eaf3358
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)
@@ -72,21 +72,21 @@ ms.lasthandoff: 06/22/2017
   
 -   サーバーでレポートを整理するフォルダーの新規作成  
   
- これらの作業のいくつかはレポート サーバーの管理者が行う場合があります。 レポート サーバーで行う作業の詳細については、「[Reporting Services Report Server (Native Mode)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)」をご覧ください。  
+ これらの作業のいくつかはレポート サーバーの管理者が行う場合があります。 レポート サーバーで実行されるタスクの詳細については、次を参照してください。 [Reporting Services レポート サーバー & #40 です。ネイティブ モード &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
  レポート マネージャーには通常、フォルダー、レポート、データ ソース、およびレポート モデルと、[個人用レポート] フォルダーが含まれています。 [個人用レポート] は、所有しているレポートを保存したり操作したりできる作業領域です。 他のレポート サーバー フォルダーはパブリック フォルダーであり、通常、フォルダーのコンテンツの追加や変更を行うには高度な権限が必要になります。 [個人用レポート] 内にフォルダーを作成して、レポートをさらに細かく分類できます。 詳細については、「 [個人用レポートの使用 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)」を参照してください。  
   
  レポート マネージャーではレポートが Reporting Services HTML ビューアーに表示されます。 HTML ビューアーは、レポートを HTML で表示するためのフレームワークを提供し、レポートのツール バー、パラメーター セクション、資格情報セクション、ドキュメント マップなどが含まれています。 レポート ツール バーには、ページ ナビゲーション、拡大または縮小、更新、検索、エクスポート、印刷、データ フィードの機能があります。 URL を指定してレポートにアクセスした場合、[レポート] ツール バーはブラウザー ウィンドウのレポートの最上部に表示されます。 印刷機能はオプションで、管理者がオンにする必要があります。 この機能が使用可能なときは、プリンターのアイコンがレポート ツール バーに表示されます。 次の図は、[レポート マネージャー] ウィンドウのレポート ツール バーです。レポート ツール バーの機能が強調されています。  
   
- ![レポート マネージャーのレポート ツールバー](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "Report toolbar in Report Manager")  
+ ![レポート マネージャーのレポート ツールバー](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "レポート マネージャーのレポート ツールバー")  
 [レポート マネージャー] ウィンドウ  
   
- ![レポート ツール バー](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
+ ![レポート ツールバー](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "レポート ツールバー")  
 レポート ツール バー  
   
- レポートを実行した後は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel や PDF など、レポートを別の形式にエクスポートできます。 また、コンマ区切り値 (CSV) 表示拡張機能などのデータ表示拡張機能を使用してレポートをエクスポートしてから、別のアプリケーションの入力として CSV データ ファイルを使用することもできます。 レポートのエクスポートの詳細については、「[レポートのエクスポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」および「[別の種類のファイルとしてレポートをエクスポートする (レポート ビルダーおよび SSRS)](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)」をご覧ください。  
+ レポートを実行した後は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel や PDF など、レポートを別の形式にエクスポートできます。 また、コンマ区切り値 (CSV) 表示拡張機能などのデータ表示拡張機能を使用してレポートをエクスポートしてから、別のアプリケーションの入力として CSV データ ファイルを使用することもできます。 レポートのエクスポートの詳細については、次を参照してください。[レポートのエクスポート & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)と[別のファイルの種類 &#40; としてレポートをエクスポートレポート ビルダーおよび SSRS &#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
   
- レポートを選択して実行するには、レポート マネージャーを起動して、表示するレポートを検索または参照する方法が最も簡単です。 レポートを開く方法の手順を追った説明については、「[レポートを開閉する (レポート マネージャー)](../../reporting-services/reports/open-and-close-a-report-report-manager.md)」をご覧ください。  
+ レポートを選択して実行するには、レポート マネージャーを起動して、表示するレポートを検索または参照する方法が最も簡単です。 レポートを開く方法の詳細な手順については、次を参照してください。[を開いたり、閉じたり、レポートと #40 です。レポート マネージャー &#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
  レポートを実行した後、そのレポートを更新すると新しいデータを表示できます。  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 06/22/2017
 |------------|------------|  
 |ブラウザー ウィンドウの**[更新]** ボタン|セッションのキャッシュに保存されているレポートを表示します。 セッションのキャッシュは、ユーザーがレポートを開いた時点で作成されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、ブラウザー セッションを使用して、レポートが開いている間の表示状態の整合性を保ちます。|  
 |![[レポート] ツールバーのブラウザー更新ボタン](../../reporting-services/media/htmlviewer-refresh.GIF "[レポート] ツールバーのブラウザー更新ボタン")|[レポート] ツール バーで **[更新]** ボタンをクリックすると、レポート サーバーは、クエリを再実行し、レポートが要求時に実行される場合はレポート データを更新します。 レポートがキャッシュされる場合、またはスナップショットである場合は、 **[更新]** をクリックすると、レポート サーバー データベースに保存されているレポートが表示されます。|  
-|Ctrl + F5 キー|[レポート] ツール バーで **[更新]** ボタンをクリックした場合と同じ結果になります。|  
+|Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;F5&lt;/localizedText&gt; キー|[レポート] ツール バーで **[更新]** ボタンをクリックした場合と同じ結果になります。|  
   
   
 ##  <a name="ViewingAndManagingSharePointSite"></a> SharePoint サイトからのレポート サーバー アイテムの表示と管理  
@@ -107,7 +107,7 @@ ms.lasthandoff: 06/22/2017
   
  アプリケーション ページにアクセスするには、SharePoint ライブラリに既に追加したレポートまたは他のレポート サーバー アイテムのドロップダウン メニューから、アイテム固有のアクションを選択します。 アイテムと権限に応じて、レポート ビルダーでレポートを作成したり、モデルを生成したり、モデル アイテムのセキュリティを設定することもできます。  
   
- Reporting Services および SharePoint テクノロジの詳細については、msdn.microsoft.com で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?LinkId=154888)の「[レポート サーバーの構成と管理 (Reporting Services SharePoint モード)](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)」をご覧ください。  
+ Reporting Services と SharePoint テクノロジの詳細については、次を参照してください[レポート サーバー &#40; の構成と管理。Reporting Services SharePoint モード &#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][オンライン ブックの「](http://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com の「します。  
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>SharePoint サイトでのレポート サーバー アイテムの場所  
  プロパティを設定するには、まずアイテムを探し出せることが必要です。 レポート サーバー アイテムは、常にライブラリまたはライブラリ内のフォルダーに格納されています。  
@@ -161,6 +161,6 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>参照  
  [レポートの保存 (レポート ビルダー)](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [SQL Server 2016 のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [レポート ビルダーのインストールとアンインストール](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
+ [インストールおよびレポート ビルダーをアンインストールします。](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
   
   

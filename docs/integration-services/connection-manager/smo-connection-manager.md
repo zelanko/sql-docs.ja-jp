@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.smoconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], SMO
 - SMO connection manager
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 15ed4177b267642f5b6ef7186b5e03e74fa39767
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: d1f03b27dd5dca9e9a2940abf3731a2f5cefe0af
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="smo-connection-manager"></a>SMO 接続マネージャー
@@ -41,7 +43,34 @@ ms.lasthandoff: 08/03/2017
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、「 [SMO 接続マネージャー エディター](../../integration-services/connection-manager/smo-connection-manager-editor.md)」を参照してください。  
   
- プログラムによる接続マネージャーの構成の詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」および「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
+ プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
+  
+## <a name="smo-connection-manager-editor"></a>SMO 接続マネージャー エディター
+  **[SMO 接続マネージャー エディター]** を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを転送するさまざまなタスクで使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続を構成します。  
+  
+ SMO 接続マネージャーの詳細については、「 [SMO Connection Manager](../../integration-services/connection-manager/smo-connection-manager.md)」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **サーバー名**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前を入力するか、サーバーを一覧から選択します。  
+  
+ **[更新]**  
+ ネットワークで検出できる利用可能な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの一覧を更新します。  
+  
+ **[Windows 認証を使用する]**  
+ Windows 認証を使用して、選択されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。  
+  
+ **[SQL Server 認証を使用する]**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して、選択されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。  
+  
+ **ユーザー名**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択している場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー名を入力します。  
+  
+ **Password**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択している場合は、パスワードを入力します。  
+  
+ **[接続テスト]**  
+ 構成されたとおりに接続をテストします。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)  

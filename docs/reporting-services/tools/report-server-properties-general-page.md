@@ -17,11 +17,11 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: dbd2d63c8698cb9e33361c12980aa6abdeaaae7b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-properties-general-page"></a>レポート サーバーのプロパティ ([全般] ページ)
@@ -58,10 +58,10 @@ ms.lasthandoff: 06/22/2017
 
   
 ## <a name="see-also"></a>参照  
- [レポート サーバーのプロパティを設定する &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
- [Management Studio でレポート サーバーに接続する](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [個人用レポートの有効化と無効化](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
- [Management Studio のレポート サーバーの F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [レポート サーバーのプロパティの設定 & #40 です。Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+ [Management Studio でのレポート サーバーに接続します。](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [有効にして、個人用レポートを無効にします。](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
+ [レポート サーバーの Management Studio の F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [個人用レポートをセキュリティで保護する](../../reporting-services/security/secure-my-reports.md)  
   
   

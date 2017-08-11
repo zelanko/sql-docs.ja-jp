@@ -26,11 +26,11 @@ caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8302c8f1713adc224c76b3f6dca11d984ff69c32
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-design-view-report-builder"></a>レポート デザイン ビュー (レポート ビルダー)
@@ -71,9 +71,9 @@ ms.lasthandoff: 06/22/2017
   
 -   ページ設定などレポート自体のプロパティ。デザイン画面の周りの灰色の領域を右クリックし、 **[レポートのプロパティ]**をクリックします。  
   
--   レポート アイテムのプロパティ。該当するレポート アイテムを右クリックし、**[プロパティ]** をクリックします。  
+-   レポート アイテムのプロパティ。該当するレポート アイテムを右クリックし、 **[プロパティ]**をクリックします。  
   
- キーボードを使用してデザイン画面上のアイテムを操作する方法については、「[キーボード ショートカット (レポート ビルダー)](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)」を参照してください。  
+ キーボードを使用して、デザイン画面上の項目を操作する方法の詳細については、次を参照してください。[のキーボード ショートカットと #40 です。レポート ビルダー"&"#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
 ### <a name="design-surface-size-and-print-area"></a>デザイン画面のサイズと印刷領域  
  デザイン画面のサイズは、レポートを印刷する際に指定するページ サイズの印刷領域とは異なる場合があります。 デザイン画面のサイズを変更しても、レポートの印刷領域は変わりません。 レポートの印刷領域に設定したサイズに関係なく、デザイン領域全体のサイズは変わりません。 詳細については、「[レンダリングの動作 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)」を参照してください。  

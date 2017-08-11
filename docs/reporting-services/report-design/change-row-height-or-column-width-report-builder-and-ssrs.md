@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aef6ef0fe1f32f015abe3b48177f6e4d3e45648d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>行の高さまたは列の幅の変更 (レポート ビルダーおよび SSRS)
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [Tablix データ領域 (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/library/dd220587.aspx)   
- [Tablix データ領域のセル、行、および列 (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/library/dd220511.aspx)   
+ [Tablix データ領域のセル、行、および列 (レポート ビルダー) と SSRS](https://msdn.microsoft.com/library/dd220511.aspx)   
  [テーブル (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [マトリックス (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/library/dd207149.aspx)   
  [一覧 (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/library/dd239330.aspx)   

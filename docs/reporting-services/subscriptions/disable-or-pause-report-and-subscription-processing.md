@@ -26,11 +26,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9fa43a5766fc82bfb716f275600b50eaab6c1ed0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>レポートとサブスクリプションの処理を無効化または一時停止する
@@ -171,11 +171,11 @@ ForEach ($subscription in $subscriptions)
   
 ## <a name="see-also"></a>参照  
  [サブスクリプションと配信 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [「Reporting Services 構成ファイル」](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [レポート マネージャーの構成 &#40;ネイティブ モード&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
- [Reporting Services レポート サーバー (ネイティブ モード)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [レポート マネージャー (SSRS ネイティブ モード)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [[セキュリティのプロパティ] ページ、アイテム (レポート マネージャー)](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
+ [Reporting Services 構成ファイル](../../reporting-services/report-server/reporting-services-configuration-files.md)   
+ [レポート マネージャー &#40; を構成します。ネイティブ モード &#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
+ [Reporting Services レポート サーバー & #40 です。ネイティブ モード &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [レポート マネージャーと &#40; です。SSRS ネイティブ モードと &#41; です。](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [セキュリティのプロパティ ページ、項目 & #40 です。レポート マネージャー &#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
   
   
 

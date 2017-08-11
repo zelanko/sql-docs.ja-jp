@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c4b3521ce8485561df5fec6a9cd468732cfbc52b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>横棒グラフ (レポート ビルダーおよび SSRS)
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
   
 -   横棒グラフでは、値が左から右に表示されます。このため、期間に関連するデータを表示する際に直感的にわかりやすくなります。  
   
--   レポート内のテーブルやマトリックスに横棒を追加する場合、横棒グラフの代わりに線形ゲージの使用を検討してください。 線形ゲージは、複数のグループではなく 1 つの値を表示するようにデザインされています。そのため、一覧またはテーブルのデータ領域内でより柔軟に使用できます。 詳細については、「[ゲージ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)」をご覧ください。  
+-   レポート内のテーブルやマトリックスに横棒を追加する場合、横棒グラフの代わりに線形ゲージの使用を検討してください。 線形ゲージは、複数のグループではなく 1 つの値を表示するようにデザインされています。そのため、一覧またはテーブルのデータ領域内でより柔軟に使用できます。 詳しくは、「 [ゲージ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)」をご覧ください。  
   
 -   横棒グラフの各棒に特殊な描画スタイルを追加して、視覚的な効果を高めることができます。 描画スタイルには、くさび形、エンボス、円柱、およびグラデーションがあります。 これらの効果は、2D グラフを見やすくするためにデザインされています。 3D グラフを使用している場合でも描画スタイルを適用できますが、同じ効果を得られないことがあります。 横棒グラフに描画スタイルを追加する方法の詳細については、「 [グラフへの傾斜、エンボス、およびテクスチャのスタイルの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)」をご覧ください。  
   
@@ -63,16 +63,16 @@ ms.lasthandoff: 06/22/2017
 -   グラフのサイズに対してデータセット内のデータ ポイントの数が多い場合は、列または横棒のサイズおよびその間隔が小さくなります。 グラフ内の列の幅を手動で設定するには、 **PointWidth** プロパティを変更して列の幅をピクセル単位で変更します。 既定では、このプロパティの値は 0.8 です。 グラフの列または横棒の幅を大きくすると、各列または横棒の間隔は小さくなります。  
   
 ## <a name="see-also"></a>参照  
- [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [グラフ内の空のデータ ポイントおよび NULL データ ポイント &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [縦棒グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
- [範囲グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
+ [グラフと &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [グラフの種類 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [グラフ &#40; 内の空および Null データ ポイントレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [縦棒グラフと #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
+ [範囲グラフと &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
  [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [グラフの軸ラベルの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [グラフの凡例の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [グラフへの傾斜、エンボス、およびテクスチャのスタイルの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [チュートリアル : レポートへの横棒グラフの追加](http://go.microsoft.com/fwlink/?LinkId=198042)  
+ [チュートリアル: レポート (レポート ビルダー) への横棒グラフの追加](http://go.microsoft.com/fwlink/?LinkId=198052)   
+ [チュートリアル: レポートへの横棒グラフの追加](http://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

@@ -19,11 +19,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6388e815e67edcb764a02f9c15d7f7dfdc12a6c5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>[フィルター] ([データセットのプロパティ] ダイアログ ボックス)
@@ -46,9 +46,9 @@ ms.lasthandoff: 08/03/2017
  フィルターを適用する式を入力または選択します。 式を編集するには、式 (**[fx]**) ボタンをクリックします。  
   
  **データ型**  
- **[値]**のデータ型を選択します。 可能であれば、 **[式]**のデータ型と一致するデータ型を選択します。 詳細については、「[フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)」を参照してください。  
+ **[値]**のデータ型を選択します。 可能であれば、**[式]** のデータ型と一致するデータ型を選択します。 詳細については、「[フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)」を参照してください。  
   
- **[演算子]**  
+ **演算子**  
  式と値の比較に使用する演算子を選択します。  
   
  **[値]**  

@@ -23,11 +23,11 @@ caps.latest.revision: 53
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3d4025539369dcc955e8675a92def39e356cb86d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>共有データ ソースを作成、変更、および削除する (SSRS)
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
  次のアイコンは、レポート マネージャーのフォルダー階層内の共有データ ソースを示します。  
   
- ![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")  
+ ![共有データ ソースのアイコン](../../reporting-services/report-data/media/hlp-16datasource.png "共有データ ソースのアイコン")  
 共有データ ソースのアイコン  
   
  共有データ ソースは、レポートおよびデータ ドリブン サブスクリプションでは省略可能ですが、レポート モデルでは必須です。 カスタム レポート用のレポート モデルを使用する予定がある場合は、そのモデルへの接続情報を提供する共有データ ソース アイテムを作成および管理する必要があります。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 |----------|-----------------|  
 |名前|レポート サーバーのフォルダー階層内にあるアイテムを識別する名前。|  
 |Description|レポート マネージャーでフォルダーの内容を参照したときに、アイテムと共に表示される説明です。|  
-|接続の種類|データ ソースで使用するデータ処理拡張機能です。 レポート サーバーに配置されているデータ処理拡張機能のみ使用できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に含まれているデータ処理拡張機能の詳細については、「[Reporting Services でサポートされるデータ ソース (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」を参照してください。|  
+|接続の種類|データ ソースで使用するデータ処理拡張機能です。 レポート サーバーに配置されているデータ処理拡張機能のみ使用できます。 含まれているデータ処理拡張機能の詳細については[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を参照してください[Reporting Services &#40; でサポートされるデータ ソースSSRS &#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
 |[接続文字列]|データベースの接続文字列です。 よく使われるデータ ソースの接続文字列の詳細と例を確認するには、「 [データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。|  
 |資格情報の種類|接続に必要な資格情報をどのように取得するか、および、接続の確立後もそれらを使用するかどうかを指定します。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」をご覧ください。|  
   
@@ -185,7 +185,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  **[名前]**に、.rsds ファイルに付けるわかりやすい名前を入力します。  
   
-4.  **[データ ソースの種類]**で、一覧からデータ ソースの種類を選択します。 詳細については、「[Reporting Services でサポートされるデータ ソース (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」を参照してください。  
+4.  **[データ ソースの種類]**で、一覧からデータ ソースの種類を選択します。 詳しくは、「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」をご覧ください。  
   
 5.  **[接続文字列]**で、外部データ ソースへの接続を確立するために必要な設定として、データ ソースへのポインターなどを指定します。 使用するデータ ソースの種類によって、接続文字列の構文が異なります。 詳細と例については、「 [データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -195,9 +195,9 @@ ms.lasthandoff: 06/22/2017
   
     -   ユーザーがレポートを実行するたびに資格情報の入力を要求する場合は、 **[資格情報を要求する]** をクリックします。 このレポートのサブスクリプションまたはデータ処理をスケジュールする場合は、このオプションを選択しないでください。  
   
-    -   1 組の資格情報を使用してデータにアクセスする場合は、 **[保存された資格情報]** を選択します。 資格情報は暗号化されてから保存されます。 保存されている資格情報の認証方法を指定するオプションを選択できます。 保存された資格情報が Windows ユーザー アカウントに属する場合は、[データ ソースへの接続時に Windows 資格情報として使用する] をクリックします。 データベース サーバーの実行コンテキストを設定する場合は、 **[実行コンテキストをこのアカウントに設定する]** をクリックします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの場合、このオプションによって SETUSER 関数が設定されます。 詳細については、「[SETUSER (Transact-SQL)](../../t-sql/statements/setuser-transact-sql.md)」を参照してください。  
+    -   1 組の資格情報を使用してデータにアクセスする場合は、 **[保存された資格情報]** を選択します。 資格情報は暗号化されてから保存されます。 保存されている資格情報の認証方法を指定するオプションを選択できます。 保存された資格情報が Windows ユーザー アカウントに属する場合は、[データ ソースへの接続時に Windows 資格情報として使用する] をクリックします。 データベース サーバーの実行コンテキストを設定する場合は、 **[実行コンテキストをこのアカウントに設定する]** をクリックします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの場合、このオプションによって SETUSER 関数が設定されます。 詳細については、次を参照してください。 [SETUSER & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/setuser-transact-sql.md).  
   
-    -   接続文字列で資格情報を指定する場合や、レポート サーバーで構成されている最小特権アカウントを使用してレポートを実行する場合は、**[資格情報は必要ありません]** を選択します。 レポート サーバーでこのアカウントが構成されていない場合、ユーザーは資格情報の入力を要求され、そのレポート用に定義したスケジュール済みの操作は実行されません。  
+    -   接続文字列で資格情報を指定する場合や、レポート サーバーで構成されている最小特権アカウントを使用してレポートを実行する場合は、 **[資格情報は必要ありません]** を選択します。 レポート サーバーでこのアカウントが構成されていない場合、ユーザーは資格情報の入力を要求され、そのレポート用に定義したスケジュール済みの操作は実行されません。  
   
 7.  データ ソースをアクティブにする場合は、 **[このデータ ソースを有効にする]** を選択します。 データ ソースが構成されていてもアクティブでない場合は、ユーザーがそのデータ ソースに基づくレポートを使用しようとするとエラー メッセージが表示されます。  
   
@@ -235,13 +235,13 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
- [データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [レポート データ ソースを管理する](../../reporting-services/report-data/manage-report-data-sources.md)   
- [レポート マネージャー (SSRS ネイティブ モード)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [埋め込みおよび共有のデータ接続またはデータ ソース (レポート ビルダーおよび SSRS)](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [[データ ソース] プロパティ ページ (レポート マネージャー)](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [共有データ ソースを作成、削除、または変更する (レポート マネージャー)](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [レポートのデータ ソースのプロパティを構成する &#40;レポート マネージャー&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [レポート データ ソースを管理します。](../../reporting-services/report-data/manage-report-data-sources.md)   
+ [レポート マネージャーと &#40; です。SSRS ネイティブ モードと &#41; です。](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [埋め込みおよび共有のデータ接続またはデータ ソース &#40;レポート ビルダーおよび SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
+ [データ ソース プロパティ ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [共有データ ソースの作成、削除、または変更 &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [レポート &#40; のデータ ソースのプロパティを構成します。レポート マネージャー &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   
 

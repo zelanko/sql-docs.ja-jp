@@ -32,11 +32,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d3bb6bc91b9b96830074bac3de28fc6a5f6b0143
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
  データセットのフィールドをグラフ上にドラッグすると、グラフでは、そのフィールドがカテゴリ軸と値軸のどちらに属するかが決定されます。  
   
- 値軸は、通常、グラフの縦軸 (Y 軸) です。 これは、グラフ化される数値データの値を表示するために使用されます。 データ フィールドの領域にドラッグされたフィールドは、値軸にプロットされます。 カテゴリ軸は、通常、グラフの横軸 (X 軸) です。 横棒グラフの場合、これらの軸は逆になります。 横棒グラフでは、カテゴリ軸が縦軸、値軸が横軸になります。 詳細については、「[横棒グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)」をご覧ください。  
+ 値軸は、通常、グラフの縦軸 (Y 軸) です。 これは、グラフ化される数値データの値を表示するために使用されます。 データ フィールドの領域にドラッグされたフィールドは、値軸にプロットされます。 カテゴリ軸は、通常、グラフの横軸 (X 軸) です。 横棒グラフの場合、これらの軸は逆になります。 横棒グラフでは、カテゴリ軸が縦軸、値軸が横軸になります。 詳細については、「 [横棒グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="how-the-chart-calculates-axis-label-intervals"></a>グラフで軸ラベルの間隔を計算する方法  
  軸ラベルの書式を設定する前に、グラフで軸ラベルの間隔がどのように計算されるかを理解する必要があります。 これにより、目的とする軸のラベル付け動作を実現するのに必要なプロパティを設定できます。  
@@ -105,14 +105,14 @@ ms.lasthandoff: 06/22/2017
  グラフでは、グラフのサイズに関係なく、約 5 個の軸ラベルの間隔が計算されます。 幅の広いグラフや高さのあるグラフでは、軸上にラベルが 5 個しかない場合、各ラベル間の空白部分が大きくなる場合があります。 このような場合、軸に対して各データ ポイントの値を特定することが難しくなります。 幅の広いグラフや高さのあるグラフでこの状況を回避するには、軸の可変間隔を設定できます。 グラフでは、対応する軸に応じ、グラフの幅または高さに基づいて、軸に表示されるラベルの最適な数が計算されます。 詳細については、「 [軸の間隔の指定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)をクリックします。  
   
 ## <a name="sorting-axis-values"></a>軸の値の並べ替え  
- カテゴリは、結果セットに出現する順序で X 軸に表示されます。 グループの順序を変更するには、SORT コマンドをクエリに追加するか、式を使用してデータセットを並べ替えます。 グラフ データ領域は、その他のすべてのデータ領域と同じように並べ替えることができます。 データを並べ替える方法の詳細については、「[データ領域内のデータの並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)」をご覧ください。  
+ カテゴリは、結果セットに出現する順序で X 軸に表示されます。 グループの順序を変更するには、SORT コマンドをクエリに追加するか、式を使用してデータセットを並べ替えます。 グラフ データ領域は、その他のすべてのデータ領域と同じように並べ替えることができます。 データを並べ替える方法の詳細については、次を参照してください[データ領域 &#40; のデータを並べ替える。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
 ## <a name="specifying-scalar-values-on-the-category-axis"></a>カテゴリ軸でのスカラー値の指定  
  既定では、グラフに表示されるのは、有効な値が含まれているデータセット内のデータ ポイントに対する軸ラベルだけです。 たとえば、カテゴリ軸に 1、2、6 という値を設定した場合、グラフには 1、2、6 というカテゴリのみが表示されます。 カテゴリ値のスケールを保つために、グラフでスカラー軸が使用されるように指定できます。 この場合は、データセットに 3 ～ 5 の値が含まれていなくても、グラフの X 軸に 1 ～ 6 のラベルが表示されます。  
   
  スカラー軸を設定するには、次の 2 つの方法があります。  
   
--   **[軸のプロパティ]** ダイアログ ボックスの **[スカラー軸]** チェック ボックスをオンにします。 これにより軸上で、データをグループ化する値が存在しない箇所に、数値または日付/時刻値が追加されます。 詳細については、「[[軸のオプション] ([軸のプロパティ] ダイアログ ボックス) &#40;レポート ビルダーおよび SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)」をご覧ください。  
+-   **[軸のプロパティ]** ダイアログ ボックスの **[スカラー軸]** チェック ボックスをオンにします。 これにより軸上で、データをグループ化する値が存在しない箇所に、数値または日付/時刻値が追加されます。 詳細については、次を参照してください。[軸のプロパティ ダイアログ ボックス、軸のオプション & #40 です。レポート ビルダーおよび SSRS &#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
   
 -   **[系列のプロパティ]** ダイアログ ボックスの **[カテゴリ フィールド]** オプションで、フィールドを選択するか、式を入力します。 グラフでは、指定したカテゴリ フィールドのすべての値に対して軸の間隔が追加されます。  
   
@@ -133,6 +133,6 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>参照  
  [グラフの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [グラフでのデータ ポイントの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
+ [グラフ &#40; 上のデータ ポイントの書式設定レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
   
   

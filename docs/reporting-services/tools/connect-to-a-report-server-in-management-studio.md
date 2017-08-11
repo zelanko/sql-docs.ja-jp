@@ -25,11 +25,11 @@ caps.latest.revision: 53
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 53ebe2ae1938dc656af351cf922f5d5d85d664b8
+ms.translationtype: MT
+ms.sourcegitcommit: 0bc7925f72d59170a24f4a82d1c1a73e618a97a0
+ms.openlocfilehash: f59854e37e292d03cf7d57443e3aa4b899a21a11
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Management Studio でレポート サーバーに接続する
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/13/2017
   
 5.  **[接続]**をクリックします。 レポート サーバーがオブジェクト エクスプローラーに表示されます。  
   
-6.  サーバー ノードを右クリックし、システムのプロパティおよびサーバーの既定値を設定します。 詳細については、「[レポート サーバーのプロパティを設定する &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)」を参照してください。  
+6.  サーバー ノードを右クリックし、システムのプロパティおよびサーバーの既定値を設定します。 詳細については、次を参照してください。[レポート サーバーのプロパティの設定 & #40 です。Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
 ### <a name="to-connect-to-a-sharepoint-integrated-mode-report-server"></a>SharePoint 統合モードのレポート サーバーに接続するには  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 06/13/2017
   
 5.  **[接続]**をクリックします。 レポート サーバーがオブジェクト エクスプローラーに表示されます。  
   
-6.  サーバー ノードを右クリックし、システムのプロパティおよびサーバーの既定値を設定します。 詳細については、「[レポート サーバーのプロパティを設定する &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)」を参照してください。  
+6.  サーバー ノードを右クリックし、システムのプロパティおよびサーバーの既定値を設定します。 詳細については、次を参照してください。[レポート サーバーのプロパティの設定 & #40 です。Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
 ### <a name="to-register-a-report-server"></a>レポート サーバーを登録するには  
   
@@ -119,6 +119,6 @@ ms.lasthandoff: 06/13/2017
   
 ## <a name="see-also"></a>参照  
  [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [SQL Server Management Studio の Reporting Services &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [Reporting Services の SQL Server Management Studio & #40 です。SSRS &#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

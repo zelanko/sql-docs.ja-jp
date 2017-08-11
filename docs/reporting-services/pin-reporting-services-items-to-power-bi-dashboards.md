@@ -21,11 +21,11 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ce952f1d25529948bbcc3dbae5f1707af9683b11
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Power BI ダッシュボードへの Reporting Services のアイテムのピン留め
@@ -108,15 +108,15 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="bkmk-troubleshoot"></a> 問題のトラブルシューティング  
   
--   **レポート ビューアー ツール バーに [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ボタンがない:**  これは、レポート サーバーが [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] と統合されていないことを示しています。 詳細については、「[Power BI レポート サーバーの統合 (構成マネージャー)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)」を参照してください。  
+-   **レポート ビューアー ツール バーに [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ボタンがない:**  これは、レポート サーバーが [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] と統合されていないことを示しています。 詳細については、「 [Power BI レポート サーバーの統合 (構成マネージャー)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)と統合しておく必要があります。  
   
-- **ピン留めできない**: アイテムをピン留めしようとすると、次のエラー メッセージが表示されます。「[ピン留めできるアイテム](#bkmk_supported_items)」を参照してください。  
+- **ピン留めできない**: アイテムをピン留めしようとすると、次のエラー メッセージが表示されます。「 [ピン留めできるアイテム](#bkmk_supported_items)」を参照してください。  
   
       Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
--   **[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードでピン留めされたアイテムに古いデータが表示**され、一定期間更新されなかった:   ユーザーの資格情報トークンの有効期限が切れているので、もう一度サインインする必要があります。  Azure と [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] へのユーザーの資格情報登録の有効期間は 90 日間です。 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]で、 **[個人用設定]**をクリックします。 詳細については、「[Power BI 統合の個人用設定 &#40;Web ポータル&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)」を参照してください。  
+-   **ピン留めされたアイテムに古いデータが表示**で、[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]一定の時間のダッシュ ボードとそのを更新しました。  ユーザーの資格情報トークンの有効期限が切れているので、もう一度サインインする必要があります。  Azure と [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] へのユーザーの資格情報登録の有効期間は 90 日間です。 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]で、 **[個人用設定]**をクリックします。 詳細については、「 [Power BI 統合の個人用設定 &#40;Web ポータル&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)と統合しておく必要があります。  
   
--   **[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードでピン留めされたアイテムに古いデータが表示**され、一度も更新されていない:   問題は、保存された資格情報を使用するようにレポートが構成されていないことです。 レポート アイテムのピン留め操作により、タイルの更新スケジュールを管理する [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションが作成されるため、レポートでは保存された資格情報を使用する必要があります。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションでは、保存された資格情報が必要です。 **[個人用サブスクリプション]** ページを確認すると、次のようなエラー メッセージが表示されます。  
+-   **ピン留めされたアイテムに古いデータが表示**で、[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]ダッシュ ボードとそれが一度も更新されません。  問題は、保存された資格情報を使用するようにレポートが構成されていないことです。 レポート アイテムのピン留め操作により、タイルの更新スケジュールを管理する [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションが作成されるため、レポートでは保存された資格情報を使用する必要があります。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションでは、保存された資格情報が必要です。 **[個人用サブスクリプション]** ページを確認すると、次のようなエラー メッセージが表示されます。  
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   

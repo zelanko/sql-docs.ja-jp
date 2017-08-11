@@ -9,6 +9,9 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.httpconnection.server.f1
+- sql13.dts.designer.httpconnection.proxy.f1
 helpviewer_keywords:
 - HTTP connection manager
 - Web site connections [Integration Services]
@@ -21,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4cf63461848933530a215a75b19d40128327f356
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 7dbd165b8d94247365697fe3b9e0cbb372becd8c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="http-connection-manager"></a>HTTP 接続マネージャー
@@ -50,13 +53,84 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-http-connection-manager"></a>HTTP 接続マネージャーの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [[HTTP 接続マネージャー エディター] ([サーバー] ページ)](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
-  
--   [[HTTP 接続マネージャー エディター] ([プロキシ] ページ)](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)  
-  
  プログラムによる接続マネージャーの構成の詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>」を参照してください。  
+  
+## <a name="http-connection-manager-editor-server-page"></a>[HTTP 接続マネージャー エディター] ([サーバー] ページ)
+  **[HTTP 接続マネージャー エディター]** ダイアログ ボックスの **[サーバー]** タブを使用すると、URL やセキュリティ資格情報などのプロパティを指定して、HTTP 接続マネージャーを構成できます。 HTTP 接続により、パッケージが HTTP を使用してファイルを送受信することで、Web サーバーにアクセスできるようになります。 HTTP 接続マネージャーを構成した後に接続をテストすることもできます。  
+  
+> [!IMPORTANT]  
+>  HTTP 接続マネージャーでは、匿名認証と基本認証のみがサポートされています。 Windows 認証はサポートされていません。  
+  
+ HTTP 接続マネージャーの詳細については、「 [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md)」を参照してください。 HTTP 接続マネージャーの一般的な使用シナリオの詳細については、「 [Web Service Task](../../integration-services/control-flow/web-service-task.md)」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **[サーバー URL]**  
+ サーバーの URL を入力します。  
+  
+ **[Web サービス タスク エディター]** の **[全般]** ページにある **[WSDL のダウンロード]** ボタンを使用する場合は、WSDL ファイルの URL を入力します。 この URL は "?wsdl" で終わります。  
+  
+ **[資格情報を使用する]**  
+ HTTP 接続マネージャーで、認証のためにユーザーのセキュリティ資格情報を使用するかどうかを指定します。  
+  
+ **ユーザー名**  
+ HTTP 接続マネージャーで資格情報を使用する場合は、ユーザー名、パスワード、およびドメインを指定する必要があります。  
+  
+ **Password**  
+ HTTP 接続マネージャーで資格情報を使用する場合は、ユーザー名、パスワード、およびドメインを指定する必要があります。  
+  
+ **[ドメイン]**  
+ HTTP 接続マネージャーで資格情報を使用する場合は、ユーザー名、パスワード、およびドメインを指定する必要があります。  
+  
+ **[クライアント証明書を使用する]**  
+ HTTP 接続マネージャーで、認証のためにクライアント証明書を使用するかどうかを指定します。  
+  
+ **Certificate**  
+ **[証明書の選択]** ダイアログ ボックスを使用して、一覧から証明書を選択します。 テキスト ボックスに、この証明書に関連付けられている名前が表示されます。  
+  
+ **[タイムアウト (秒)]**  
+ Web サーバーへの接続のタイムアウトを指定します。 このプロパティの既定値は 30 秒です。  
+  
+ **[チャンク サイズ (KB)]**  
+ データを書き込むためのチャンクのサイズを指定します。  
+  
+ **[接続テスト]**  
+ HTTP 接続マネージャーを構成した後に、 **[接続テスト]**をクリックして、接続が利用可能であることを確認します。  
+  
+## <a name="http-connection-manager-editor-proxy-page"></a>[HTTP 接続マネージャー エディター] ([プロキシ] ページ)
+  **[HTTP 接続マネージャー エディター]** の **[プロキシ]** タブを使用すると、HTTP 接続マネージャーがプロキシ サーバーを使用するように設定できます。 HTTP 接続により、パッケージが HTTP を使用してファイルを送受信することで、Web サーバーにアクセスできるようになります。  
+  
+ HTTP 接続マネージャーの詳細については、「 [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md)」を参照してください。 HTTP 接続マネージャーの一般的な使用シナリオの詳細については、「 [Web Service Task](../../integration-services/control-flow/web-service-task.md)」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **[プロキシを使用する]**  
+ HTTP 接続マネージャーでプロキシ サーバーを使用して接続するかどうかを指定します。  
+  
+ **[プロキシ URL]**  
+ プロキシ サーバーの URL を入力します。  
+  
+ **[ローカルではプロキシを使用しない]**  
+ HTTP 接続マネージャーで、ローカル アドレスの場合はプロキシ サーバーを使用しないかどうかを指定します。  
+  
+ **[資格情報を使用する]**  
+ HTTP 接続マネージャーで、プロキシ サーバーに対してセキュリティ資格情報を使用するかどうかを指定します。  
+  
+ **ユーザー名**  
+ HTTP 接続マネージャーで資格情報を使用する場合は、ユーザー名、パスワード、およびドメインを指定する必要があります。  
+  
+ **Password**  
+ HTTP 接続マネージャーで資格情報を使用する場合は、ユーザー名、パスワード、およびドメインを指定する必要があります。  
+  
+ **[ドメイン]**  
+ HTTP 接続マネージャーで資格情報を使用する場合は、ユーザー名、パスワード、およびドメインを指定する必要があります。  
+  
+ **[プロキシ バイパス一覧]**  
+ プロキシ サーバーを使用しないアドレスの一覧です。  
+  
+ **[追加]**  
+ プロキシ サーバーを使用しないアドレスを入力します。  
+  
+ **[削除]**  
+ アドレスを選択した後、 **[削除]**をクリックするとアドレスが削除されます。  
   
 ## <a name="see-also"></a>参照  
  [Web サービス タスク](../../integration-services/control-flow/web-service-task.md)   

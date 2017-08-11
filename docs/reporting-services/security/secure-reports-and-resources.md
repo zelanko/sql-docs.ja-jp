@@ -21,11 +21,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 66e32b412558ec3c06fcbfcb3b4dbd1b7b2e06e0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="secure-reports-and-resources"></a>レポートとリソースの保護
@@ -79,10 +79,10 @@ ms.lasthandoff: 06/22/2017
  機密情報を含むレポートは、重要なデータにアクセスするための資格情報の入力をユーザーに要求することによって、データアクセス レベルのセキュリティで保護する必要があります。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」をご覧ください。 また、未承認のユーザーがアクセスできないように、フォルダーをセキュリティで保護することもできます。 詳細については、「 [フォルダーをセキュリティで保護する](../../reporting-services/security/secure-folders.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [ロールの割り当てを作成および管理する](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [レポート ビルダーへのアクセスの構成](../../reporting-services/report-server/configure-report-builder-access.md)   
- [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [共有データ ソース アイテムをセキュリティで保護する](../../reporting-services/security/secure-shared-data-source-items.md)   
- [Store Credentials in a Reporting Services Data Source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [作成および管理ロールの割り当て](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [レポート ビルダーへのアクセスを構成します。](../../reporting-services/report-server/configure-report-builder-access.md)   
+ [ネイティブ モード レポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [セキュリティで保護された共有データ ソース アイテム](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [Reporting Services データ ソースの資格情報を保存します。](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

@@ -22,11 +22,11 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 78bd4357f5e6de5706a536c44bddac7f3e33ade6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>パフォーマンス カウンターが MSRS 2011 SharePoint Mode パフォーマンス オブジェクト
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
  パフォーマンス オブジェクトは、Windows パフォーマンス モニター (**Perfmon.exe**) で利用できます。 詳細については、Windows のマニュアルを参照してください。 [ランタイム プロファイリング](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx)。  
   
- パフォーマンス カウンターとネイティブ モードのレポート サーバーについては、「[MSRS 2011 Web Service と MSRS 2011 Windows Service パフォーマンス オブジェクトのパフォーマンス カウンター (ネイティブ モード)](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)」および「[MSRS 2011 Web Service SharePoint Mode と MSRS 2011 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンター (SharePoint モード)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)」を参照してください。  
+ パフォーマンス カウンターとネイティブ モードのレポート サーバーに関する情報については、次を参照してください[MSRS 2011 Web Service と MSRS 2011 Windows Service パフォーマンス オブジェクト &#40; 用のパフォーマンス カウンター。ネイティブ モード &#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) [MSRS 2011 Web Service SharePoint Mode と MSRS 2011 Windows Service SharePoint モードのパフォーマンス オブジェクト (SharePoint モード) のパフォーマンス カウンター](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)です。  
   
  このトピックの内容:  
   
@@ -142,7 +142,7 @@ CounterSetName     : MSRS 2011 Web Service SharePoint Mode
   
 ## <a name="see-also"></a>参照  
  [レポート サーバーのパフォーマンスの監視](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [MSRS 2011 Web Service と MSRS 2011 Windows Service パフォーマンス オブジェクトのパフォーマンス カウンター (ネイティブ モード)](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [MSRS 2011 Web Service と MSRS 2011 Windows Service パフォーマンス オブジェクト &#40; 用のパフォーマンス カウンターネイティブ モード &#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [ReportServer:Service と ReportServerSharePoint:Service パフォーマンス オブジェクトのパフォーマンス カウンター](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
   
   

@@ -32,11 +32,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 37ae409b2c0d9d703c0bce162bc607c9f571cd29
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="chart-legend---formatting-report-builder"></a>グラフの凡例の書式設定 (レポート ビルダー)
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="changing-the-text-or-color-of-a-legend-item-in-the-legend"></a>凡例内の凡例アイテムのテキストまたは色の変更  
  グラフのデータ フィールドのドロップ ゾーンにフィールドを配置すると、このフィールドの名前を含む凡例アイテムが自動的に生成されます。 既定では、各凡例アイテムのテキストはデータ フィールドの名前から取得されます。 すべての凡例アイテムは、グラフ上の個々の系列に接続されています。ただし図形グラフの場合は例外で、凡例は個々の系列ではなく個々のデータ ポイントに接続されています。 図形グラフ上でカテゴリ グループを定義すると、各凡例アイテムのテキストは、カテゴリ グループの文字列表現から取得されます。 円グラフ、ドーナツ グラフ、およびじょうごグラフにカスタム ラベル テキストを指定して、凡例の個々のデータ ポイントに関連するカテゴリ グループ ラベル以外の情報を表示することができます。 そのためには、凡例を選択し、 **[系列のプロパティ]** ダイアログ ボックスまたは [プロパティ] ペインの **LegendText** プロパティに凡例テキストを指定します。 詳細については、「 [凡例アイテムのテキストの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)をクリックします。  
   
- **LegendText** プロパティまたは **[系列のプロパティ]** ダイアログ ボックスで頻繁に参照される属性に対して、大文字と小文字が区別される、グラフに固有のキーワードを指定できます。 これらのキーワードは、グラフ コントロールによって実行時にデータ表現に置き換えられます。 特定のデータ ポイントに関連する情報を表示することができるので、この方法は図形グラフで便利です。 詳細については、「[グラフでのデータ ポイントの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)」を参照してください。  
+ **LegendText** プロパティまたは **[系列のプロパティ]** ダイアログ ボックスで頻繁に参照される属性に対して、大文字と小文字が区別される、グラフに固有のキーワードを指定できます。 これらのキーワードは、グラフ コントロールによって実行時にデータ表現に置き換えられます。 特定のデータ ポイントに関連する情報を表示することができるので、この方法は図形グラフで便利です。 詳細については、「 [グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)をクリックします。  
   
  各凡例アイテムに表示される色付きボックスは、対応する系列の塗りつぶしの色を継承します。 凡例アイテムに表示される色を変更するには、対応する系列の色を変更する必要があります。 詳細については、「 [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)をクリックします。  
   
@@ -86,10 +86,10 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>参照  
  [[全般] ([凡例のプロパティ] ダイアログ ボックス) &#40;レポート ビルダーおよび SSRS&#41;](http://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
  [凡例アイテムのテキストの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
- [グラフの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [グラフと &#40; を書式設定レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [グラフの凡例項目を非表示にする &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
+ [グラフ &#40; の凡例項目を非表示にします。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
  [パレットを使用したグラフの色の定義 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
   

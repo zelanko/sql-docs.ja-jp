@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d8efc7a0b7120faa53a63bd07c51029a1b379f9e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- カスケード型パラメーターを作成するには、まずデータセット クエリを定義し、必要な各カスケード型パラメーターにクエリ パラメーターを指定します。 各カスケード型パラメーターについて、使用可能な値を提供する独立したデータセットを作成する必要もあります。 詳細については、「[レポート パラメーターの値の追加、変更、または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)」を参照してください。  
+ カスケード型パラメーターを作成するには、まずデータセット クエリを定義し、必要な各カスケード型パラメーターにクエリ パラメーターを指定します。 各カスケード型パラメーターについて、使用可能な値を提供する独立したデータセットを作成する必要もあります。 詳細については、次を参照してください[追加、変更、またはレポート パラメーター &#40; の使用可能な値の削除。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
  一覧の後半にあるパラメーターのデータセット クエリには一覧の前半にある各パラメーターへの参照が含まれているため、カスケード型パラメーターでは順序が重要な意味を持ちます。 実行時には、レポート データ ペインのパラメーターの順序によって、パラメーター クエリがレポート内で作成される順序が決まります。したがって、ユーザーが後続の各パラメーター値を選択する順序が決まります。  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
 6.  **[実行]** (**!**) をクリックします。 クエリ パラメーターを指定し、クエリを実行したら、クエリ パラメーターに対応するレポート パラメーターが自動的に作成されます。  
   
     > [!NOTE]  
-    >  最初にクエリを実行したときのクエリ パラメーターの順序によって、クエリ パラメーターがレポート内で作成される順序が決まります。 順序を変更するには、「[レポート パラメーターの順序の変更 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)」を参照してください。  
+    >  最初にクエリを実行したときのクエリ パラメーターの順序によって、クエリ パラメーターがレポート内で作成される順序が決まります。 順序を変更するを参照してください[レポート パラメーター &#40; の順序を変更。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -160,10 +160,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [レポート パラメーターの追加、変更、または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [レポート パラメーターと &#40; です。レポート ビルダーおよびレポート デザイナーと &#41; です。](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [チュートリアル: レポートと &#40; へのパラメーターを追加します。レポート ビルダーと &#41; です。](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)   
- [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [データセット フィルター、データ領域フィルター、およびグループ フィルターと &#40; を追加します。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [レポート埋め込みデータセットおよび共有データセット &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

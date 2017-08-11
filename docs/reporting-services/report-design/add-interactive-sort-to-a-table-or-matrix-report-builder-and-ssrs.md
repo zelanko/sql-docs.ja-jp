@@ -18,11 +18,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ab2138bdee0abc064ae1fabb06ef04ed3c490170
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>テーブルまたはマトリックスへの対話的な並べ替えの追加 (レポート ビルダーおよび SSRS)
@@ -117,9 +117,9 @@ ms.lasthandoff: 08/03/2017
  ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="SortingMultipleRowGroups"></a> 複雑なグループ式に基づく行の並べ替え  
- ユーザーが列見出しをクリックすることにより、親グループと子グループの組み合わせを並べ替えられるようにするには、対話的な並べ替えボタンを列見出しに追加します。 この機能を実現するには、両方のグループを複合したものにグループ式を変更する必要があります。 たとえば、ある店舗の在庫合計を表示するマトリックスがあり、色とサイズの両方でアイテムがグループ化されているとします。 この場合に、色とサイズの組み合わせに基づいて行を並べ替えるには、色とサイズのグループを別々に定義するのではなく、色とサイズの組み合わせに基づいたグループを 1 つ定義します。 グループ式の定義の詳細については、「[グループ式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)」を参照してください。  
+ ユーザーが列見出しをクリックすることにより、親グループと子グループの組み合わせを並べ替えられるようにするには、対話的な並べ替えボタンを列見出しに追加します。 この機能を実現するには、両方のグループを複合したものにグループ式を変更する必要があります。 たとえば、ある店舗の在庫合計を表示するマトリックスがあり、色とサイズの両方でアイテムがグループ化されているとします。 この場合に、色とサイズの組み合わせに基づいて行を並べ替えるには、色とサイズのグループを別々に定義するのではなく、色とサイズの組み合わせに基づいたグループを 1 つ定義します。 グループ式の定義の詳細については、「[グループ式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)」を参照してください。  
   
- 次の手順では、Tablix データ領域部分を指定する用語が使用されています。 詳細については、「[Tablix データ領域部分 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)」を参照してください。  
+ 次の手順では、Tablix データ領域部分を指定する用語が使用されています。 詳細については、「[Tablix データ領域部分 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)」を参照してください。  
   
  通常、複数のグループに基づいて行を並べ替える場合は、列グループにかかわらず、並べ替えられた行の合計を表示することが必要となります。 この手順では、列グループが使用されません。 まず、マトリックスを追加して、既定の列グループを削除します。 または、テーブルを追加して、詳細グループを削除することもできます。  
   
@@ -223,9 +223,9 @@ ms.lasthandoff: 08/03/2017
  ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ## <a name="see-also"></a>参照  
- [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [対話的な並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
- [データ領域内のデータの並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Tablix データ領域の柔軟性について &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
+ [フィルター、グループ、およびデータを並べ替える &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [対話的な並べ替え & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
+ [データ領域と &#40; のデータを並べ替えるレポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [Tablix データ領域 &#40; の柔軟性をについてください。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
   
   

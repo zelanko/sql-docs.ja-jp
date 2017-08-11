@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8f2a5c52f4fa9b04026490c1e66243bf0d660c13
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>処理オプションの設定 (Reporting Services の SharePoint 統合モード)
@@ -35,13 +35,13 @@ ms.lasthandoff: 06/22/2017
 -   レポート履歴は、以前実行したレポートの一連のコピーです。 レポート履歴を使用すると、長期にわたりレポートの記録を管理できます。 秘密情報または個人データを含むレポートは、レポート履歴の対象ではありません。 このため、レポート履歴に含めることができるのは、レポートを実行するすべてのユーザーが使用できる資格情報 (格納された資格情報、または自動的にレポートを実行するために使用する資格情報のいずれか) でデータ ソースへのクエリを行うレポートのみです。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の統合では、SharePoint のコンテンツのチェックアウトおよびチェックイン管理機能を使用して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のコンテンツの種類への更新を保存します。 これには、レポート スナップショットの作成が含まれます。 したがって、ドキュメント ライブラリでのバージョン管理を有効にしている場合は、新しいレポート履歴スナップショットが作成されたときに、レポート バージョンが更新されます。 この動作は、スナップショットの更新による副作用です。 スナップショットが更新されると、レポートの LastExecution プロパティが変更され、それによってレポートのバージョンが変更されます。  
+    >  SharePoint との [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の統合では、SharePoint のコンテンツのチェックアウトおよびチェックイン管理機能を使用して、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のコンテンツの種類への更新を保存します。 これには、レポート スナップショットの作成が含まれます。 したがって、ドキュメント ライブラリでのバージョン管理を有効にしている場合は、新しいレポート履歴スナップショットが作成されたときに、レポート バージョンが更新されます。 この動作は、スナップショットの更新による副作用です。 スナップショットが更新されると、レポートの LastExecution プロパティが変更され、それによってレポートのバージョンが変更されます。  
   
 -   タイムアウト値を指定して、システム リソースの使用に制限を設定できます。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード:|  
   
  **このトピックの内容:**  
   
@@ -110,8 +110,8 @@ ms.lasthandoff: 06/22/2017
 1.  Windows PowerShell を使用すると、SharePoint レポート サーバーのデータベースのタイムアウト値を設定できます。 詳細については、 [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)の「レポートするサービス アプリケーション データベースのプロパティの取得と設定」セクションを参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レポート処理プロパティの設定](../../reporting-services/report-server/set-report-processing-properties.md)   
- [レポートのキャッシュ (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [レポートおよび共有データセット処理のタイムアウト値の設定 (SSRS)](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [レポート処理プロパティを設定します。](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [キャッシュのレポートと #40 です。SSRS &#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [レポートおよび共有データセットの処理 &#40; のタイムアウト値の設定SSRS &#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
   
   

@@ -24,11 +24,11 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 186bb0bab4abac91ea95d397f379986cac9d2f0f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>数値と日付の書式設定 (レポート ビルダーおよび SSRS)
@@ -36,9 +36,9 @@ ms.lasthandoff: 06/22/2017
   
  テキスト ボックスのレポート アイテム内の書式文字列を指定するには、書式を設定するアイテムを選択して右クリックし、 **[テキスト ボックスのプロパティ]**を選択してから **[数値]**をクリックする必要があります。 テーブルまたはマトリックスのセルは個別のテキスト ボックスであるため、同じ方法でテーブル データ領域またはマトリックス データ領域の個別のセルを書式設定できます。  
   
- グラフ データ領域では、通常、カテゴリ軸 (x 軸) に日付が示され、値軸 (y 軸) に値が示されます。 グラフの書式を指定するには、軸を右クリックし、 **[軸のプロパティ]**を選択します。 値軸では、数値の書式しか指定できません。 詳細については、「[グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)」を参照してください。  
+ グラフ データ領域では、通常、カテゴリ軸 (x 軸) に日付が示され、値軸 (y 軸) に値が示されます。 グラフの書式を指定するには、軸を右クリックし、 **[軸のプロパティ]**を選択します。 値軸では、数値の書式しか指定できません。 詳細については、「[グラフの軸ラベルの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)」を参照してください。  
   
- ゲージのデータ領域で書式を指定するには、ゲージのスケールを右クリックし、**[放射状のスケールのプロパティ]** または **[線形スケールのプロパティ]** を選択します。  
+ ゲージのデータ領域で書式を指定するには、ゲージのスケールを右クリックし、 **[放射状のスケールのプロパティ]** または **[線形スケールのプロパティ]**を選択します。  
   
 > [!NOTE]  
 >  目的の書式設定オプションがグレー表示されている場合、その書式設定オプションと、データ ソースに設定されているフィールドのデータ型に互換性がないことを示します。 たとえば、フィールドに格納されているデータが数値であっても、フィールドのデータ型が文字列である場合、通貨型や 10 進数型などの数値データ書式設定オプションを適用できません。  
@@ -63,9 +63,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [線、色、および画像の書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
- [グラフの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [日付または通貨として軸ラベルを書式設定する (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [書式設定の線、色、およびイメージ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
+ [グラフと &#40; を書式設定レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [日付または通貨として軸ラベルを書式設定する &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [スケール、ゲージ &#40; の書式設定レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

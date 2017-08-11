@@ -17,11 +17,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 817f519ef87ae764f41634f467a554cbae04baed
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>レポート パーツ (レポート ビルダーおよび SSRS)
@@ -99,7 +99,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="what-comes-with-a-report-part"></a>レポート パーツの付属アイテム  
  レポートにレポート パーツを追加すると、動作に必要なアイテムもすべて追加されます。 たとえば、クエリやデータ ソースへの接続など、データを表示するオブジェクトはデータセットに依存しています。 また、1 つ以上のパラメーターが含まれている場合もあります。 依存するアイテムには *依存関係*があり、レポート パーツをレポートに追加する場合、依存するすべてのアイテムまたはアイテムへのポインターがレポート パーツに付属しています。 データセットとパラメーターは、レポートのレポート データ ペインに一覧表示されます。  
   
- レポート パーツのデータセットは、レポート パーツに埋め込むか、レポート パーツが参照する別の共有データセットとして指定できます。 レポート パーツに埋め込まれているデータセットは、変更できる場合があります。 共有データセットである場合は、別のオブジェクトであり、権限が必要になります。 共有データセットと埋め込みデータセットの詳細については、「[レポート データセット &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)」を参照してください。  
+ レポート パーツのデータセットは、レポート パーツに埋め込むか、レポート パーツが参照する別の共有データセットとして指定できます。 レポート パーツに埋め込まれているデータセットは、変更できる場合があります。 共有データセットである場合は、別のオブジェクトであり、権限が必要になります。 共有し、埋め込みデータセットについての詳細についてを参照してください[レポート データセット & #40 です。SSRS &#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
 ### <a name="resolving-naming-conflicts"></a>名前の競合の解決  
  レポート パーツを追加する場合、レポート ビルダーによって名前の競合が修正されます。 たとえば、レポートに Chart1 が既に存在する場合、Chart1 という名前のレポート パーツを追加すると、レポート ビルダーによって新しいレポート パーツは Chart2 という名前に自動的に変更されます。 レポートに Dataset1 が既に存在する場合、同じ Dataset1 という名前の別のデータセットを参照するレポート パーツを追加すると、レポート ビルダーによって新しいデータセットは Dataset2 という名前に変更され、参照が更新されます。  
@@ -136,7 +136,7 @@ ms.lasthandoff: 06/22/2017
   
   
 ##  <a name="RptPartsRptDesigner"></a> レポート デザイナーでのレポート パーツの操作  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーでは、レポート パーツの動作が少し異なります。 一方、レポート デザイナーでは、パブリッシュは一方向です。つまり、レポート デザイナーからレポート パーツをパブリッシュすることはできますが、レポート デザイナーで既存のレポート パーツを再利用することはできません。 詳細については、「[レポート デザイナーでのレポート パーツ &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーでは、レポート パーツの動作が少し異なります。 一方、レポート デザイナーでは、パブリッシュは一方向です。つまり、レポート デザイナーからレポート パーツをパブリッシュすることはできますが、レポート デザイナーで既存のレポート パーツを再利用することはできません。 詳細については、「[レポート デザイナーでのレポート パーツ (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)」を参照してください。  
   
 ##  <a name="HowTo"></a> 操作方法に関するトピック  
  [レポート パーツのパブリッシュおよび再パブリッシュ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  

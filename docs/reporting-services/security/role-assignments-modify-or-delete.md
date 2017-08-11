@@ -21,11 +21,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1a0db8452d082dddf6f5ffc39c1a9bd5802bf114
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-assignments---modify-or-delete"></a>ロールの割り当ての変更または削除
@@ -68,9 +68,9 @@ ms.lasthandoff: 06/22/2017
 6.  ロールの割り当てを削除するには、ユーザーまたはグループ名の隣にあるチェック ボックスをオンにして、 **[削除]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [ロールの割り当てを作成および管理する](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [作成および管理ロールの割り当て](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [ロールの割り当て](../../reporting-services/security/role-assignments.md)   
- [[サイトの設定] ページ (レポート マネージャー)](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
- [[新しいシステム ロールの割り当て]: [システム ロールの割り当てを編集] ページ (レポート マネージャー)](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
+ [サイト設定ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
+ [新しいシステム ロールの割り当て、システムの役割の割り当てページの編集 &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
   
   

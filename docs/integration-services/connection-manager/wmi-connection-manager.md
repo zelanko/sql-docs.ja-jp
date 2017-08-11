@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.wmiconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], WMI
 - connection managers [Integration Services], WMI
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8bd256a462a8a0a51441024619f2ed81f6db753
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 6e314655d6a230bde897ffceb54fadb8d180d1db
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="wmi-connection-manager"></a>WMI 接続マネージャー
@@ -43,10 +45,39 @@ ms.lasthandoff: 08/03/2017
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティについては、「 [[WMI 接続マネージャー エディター]](../../integration-services/connection-manager/wmi-connection-manager-editor.md)」を参照してください。  
   
- プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」および「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
+ プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
+  
+## <a name="wmi-connection-manager-editor"></a>WMI 接続マネージャー エディター
+  **[WMI 接続マネージャー]** ダイアログ ボックスを使用すると、サーバーに対する Microsoft Windows Management Instrumentation (WMI) 接続を指定できます。  
+  
+ WMI 接続マネージャーの詳細については、「 [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md)」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **名前**  
+ 接続マネージャーの一意な名前を指定します。  
+  
+ **Description**  
+ 接続マネージャーの説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続マネージャーの目的について記述することをお勧めします。  
+  
+ **サーバー名**  
+ WMI 接続の対象となるサーバーの名前を指定します。  
+  
+ **名前空間**  
+ WMI 名前空間を指定します。  
+  
+ **[Windows 認証を使用する]**  
+ Windows 認証を使用する場合に選択します。 Windows 認証を使用すると、接続の際にユーザー名とパスワードを入力する必要がなくなります。  
+  
+ **ユーザー名**  
+ Windows 認証を使用しない場合、接続に使用するユーザー名を入力する必要があります。  
+  
+ **Password**  
+ Windows 認証を使用しない場合、接続に使用するパスワードを入力する必要があります。  
+  
+ **テスト**  
+ 接続マネージャーの設定をテストします。  
   
 ## <a name="see-also"></a>参照  
  [Web サービス タスク](../../integration-services/control-flow/web-service-task.md)   
  [Integration Services & #40 です。SSIS &#41;接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
-  
+

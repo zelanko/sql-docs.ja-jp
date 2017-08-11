@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c8916eaf7a88d74e88c6364148259373a6d0d75d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-datasets-ssrs"></a>レポート データセット (SSRS)
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
  また、レポート パーツ (レポート パーツが依存するデータセットが含まれています) を追加することによって、データセットをレポートに追加することもできます。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータを表示するレポートの作成方法については、「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。 独自のデータが含まれたレポートの作成方法については、「[チュートリアル: オフラインでのクイック グラフ レポートの作成 &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)」を参照してください。  
+ データを表示するレポートを作成する方法については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを参照してください[チュートリアル: 基本的なテーブル レポート &#40; を作成します。レポート ビルダー"&"#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). 独自のデータが含まれたレポートの作成方法については、「[チュートリアル: オフラインでのクイック グラフ レポートの作成 &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -64,15 +64,15 @@ ms.lasthandoff: 06/22/2017
 -   埋め込みデータ ソースに基づいた埋め込みデータセットを追加する。  
   
 > [!NOTE]  
->  レポート サーバーでは、共有アイテムは、個別に、またはパブリッシュされるフォルダーから権限を継承することによって、セキュリティで保護されます。 保存した共有データセットに他のユーザーがアクセスできるようにするには、権限を付与する方法を理解する必要があります。 詳細については、「[セキュリティ (レポート ビルダー)](../../reporting-services/report-builder/security-report-builder.md)」または「[共有データセット アイテムをセキュリティで保護する](../../reporting-services/security/secure-shared-dataset-items.md)」を参照してください。  
+>  レポート サーバーでは、共有アイテムは、個別に、またはパブリッシュされるフォルダーから権限を継承することによって、セキュリティで保護されます。 保存した共有データセットに他のユーザーがアクセスできるようにするには、権限を付与する方法を理解する必要があります。 詳細については、次を参照してください。[セキュリティ & #40 です。レポート ビルダー"&"#41;](../../reporting-services/report-builder/security-report-builder.md)または[共有データセット アイテムのセキュリティで保護された](../../reporting-services/security/secure-shared-dataset-items.md)です。  
   
  レポートにデータを追加した後、データ領域に基づくレポート ページのデータの編成、レポート パーツの変更、および他のユーザーとの変更内容の共有を行うことができます。また、レポートに表示されるデータの制限または並べ替えをユーザーが行うことができるように設定できます。 詳細については、次の関連項目を参照してください。  
   
 -   [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
--   [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+-   [グラフと &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
--   [スパークラインとデータ バー (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
+-   [スパーク ラインとデータ バーと &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
 -   [インジケーター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 06/22/2017
   
  クエリ デザイナーで、サンプル データを表示し、クエリ コマンド構文を検証するクエリを実行できます。 結果セットの列名は、レポート データ ペインに表示されるフィールド名になります。 結果セットは、データの各行の値の数と同じ数の列と行を持つ、1 つの行セットです。 1 つのクエリからの複数の結果セットはサポートされていません。 一定の数の列を含まず、各行で異なる数のデータ値を生成する可能性がある不規則階層は、サポートされていません。  
   
- クエリを実行するには、デザイン時の資格情報が必要です。 詳細については、「[レポート ビルダーでの資格情報の指定](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)」または「[データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。  
+ クエリを実行するには、デザイン時の資格情報が必要です。 詳細については、次を参照してください。[レポート ビルダーでの資格情報を指定](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)と[データ接続、データ ソース、および接続文字列と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
  データ拡張機能と外部データ ソースの間の通信は、データ プロバイダーによって処理されます。 サポートされているクエリ コマンド構文、クエリ パラメーター、結果セット内の値のデータ型は、各データ プロバイダーによって決まります。 詳細については、データ拡張機能の特定の型についてのトピックおよび「[クエリ デザイナー &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)」を参照してください。  
   
@@ -138,6 +138,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [レポート デザイン ビュー (レポート ビルダー)](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [レポート作成の概念 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [レポート作成の概念と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

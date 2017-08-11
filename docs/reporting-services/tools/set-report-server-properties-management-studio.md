@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 729aad553e15f0169f8144f21809c828a8058d56
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-report-server-properties-management-studio"></a>レポート サーバーのプロパティを設定する (Management Studio)
@@ -34,7 +34,7 @@ ms.lasthandoff: 06/22/2017
 2.  レポート サーバー ノードを右クリックして、 **[プロパティ]**をクリックします。 **[詳細設定]** をクリックすると、プロパティ ページが表示されます。 各プロパティの詳細については、「[[サーバーのプロパティ] ([詳細設定] ページ) - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Management Studio でレポート サーバーに接続する](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Management Studio でのレポート サーバーに接続します。](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [レポート サーバーのシステム プロパティ](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   

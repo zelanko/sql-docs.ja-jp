@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d688ed124a419017e97d405d7f5bd80e6e3bf530
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>ページ レイアウトとレンダリング (レポート ビルダーおよび SSRS)
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
  レポート アイテムのプロパティを設定して、ページ上でのレポート アイテムの表示および非表示を初期設定できます。 データ領域の行、列、またはグループの表示プロパティを設定したり、ユーザーがレポート データの表示と非表示を対話形式で設定するための切り替えボタンを配置したりできます。 表示の設定や表示の初期設定は、レポート パラメーターに基づく式などを使用することで設定できます。  
   
- レポートの処理時、レポート データはレポート レイアウト要素と結合し、この結合したデータがレポート レンダラーに送信されます。 レポート レンダラーは、定義済みのレポート アイテム拡張規則に従い、各ページにどのくらいの量のデータを配置できるかを判断します。 使用するレンダラーに最適化された見やすいレポートをデザインするには、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] におけるページ割り付けの制御規則を理解しておく必要があります。 詳細については、「 [Reporting Services の改ページ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)」を参照してください。  
+ レポートの処理時、レポート データはレポート レイアウト要素と結合し、この結合したデータがレポート レンダラーに送信されます。 レポート レンダラーは、定義済みのレポート アイテム拡張規則に従い、各ページにどのくらいの量のデータを配置できるかを判断します。 使用するレンダラーに最適化された見やすいレポートをデザインするには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]におけるページ割り付けの制御規則を理解しておく必要があります。 詳細については、「 [Reporting Services の改ページ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)」を参照してください。  
   
 ##  <a name="RenderingExtensions"></a> レンダラー  
  Reporting Services には、表示拡張機能とも呼ばれる一連のレンダラーが付属しています。レンダラーを使用して、レポートをさまざまな形式にエクスポートできます。 レンダラーには、次の 3 種類があります。  
@@ -83,7 +83,7 @@ ms.lasthandoff: 06/22/2017
   
  たとえば、HTML 形式や MHTML 形式としてレンダリングされたレポートは、コンピューター画面での操作性を重視して最適化され、ページの長さは固定的ではありません。  
   
- 詳細については、「[レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「[レンダリングの動作 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)」を参照してください。  
    
 ##  <a name="Pagination"></a> ページ割り付け  
  ページ割り付けとは、レポートに含まれるページ数と、ページ上でのレポート アイテムの配置方法をいいます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でのページ割り付けは、レポートの閲覧と作成に使用する表示拡張機能のほか、レポートに使用する改ページのオプションと同一ページ表示のオプションによって異なります。  

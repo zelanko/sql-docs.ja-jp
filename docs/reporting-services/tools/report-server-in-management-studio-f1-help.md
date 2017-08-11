@@ -17,11 +17,11 @@ caps.latest.revision: 41
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 289bf07fd3d920d218cf79f2a725a4e33c9572a7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Management Studio のレポート サーバーの F1 ヘルプ
@@ -29,37 +29,37 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [[レポート サーバー ジョブのキャンセル]](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)  
+-   [レポート サーバー ジョブをキャンセルします。](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)  
   
--   [[カタログ アイテムの削除]](../../reporting-services/tools/delete-catalog-items-management-studio.md)  
+-   [カタログ アイテムを削除します。](../../reporting-services/tools/delete-catalog-items-management-studio.md)  
   
--   [[ジョブのプロパティ] ページ](../../reporting-services/tools/job-properties-management-studio.md)  
+-   [ジョブのプロパティ ページ](../../reporting-services/tools/job-properties-management-studio.md)  
   
--   [[新しい共有スケジュール]](../../reporting-services/tools/new-shared-schedule-management-studio.md)  
+-   [新しい共有スケジュール&#93;](../../reporting-services/tools/new-shared-schedule-management-studio.md)  
   
--   [[新しいシステム ロール]](../../reporting-services/tools/new-system-role-management-studio.md)  
+-   [新しいシステムの役割](../../reporting-services/tools/new-system-role-management-studio.md)  
   
--   [[新しいユーザー ロール]](../../reporting-services/tools/new-user-role-management-studio.md)  
+-   [新しいユーザー ロール](../../reporting-services/tools/new-user-role-management-studio.md)  
   
--   [[スケジュールのプロパティ] ([全般] ページ)](../../reporting-services/tools/schedule-properties-general-page.md)  
+-   [スケジュールのプロパティ ([全般] ページ)](../../reporting-services/tools/schedule-properties-general-page.md)  
   
--   [[スケジュールのプロパティ] ([レポート] ページ)](../../reporting-services/tools/schedule-properties-reports-page.md)  
+-   [スケジュールのプロパティ ([レポート] ページ)](../../reporting-services/tools/schedule-properties-reports-page.md)  
   
--   [[サーバーのプロパティ] ([全般] ページ)](../../reporting-services/tools/report-server-properties-general-page.md)  
+-   [サーバーのプロパティ ([全般] ページ)](../../reporting-services/tools/report-server-properties-general-page.md)  
   
--   [[サーバーのプロパティ] [実行] ページ)](../../reporting-services/tools/server-properties-execution-page.md)  
+-   [サーバーのプロパティ ([実行] ページ)](../../reporting-services/tools/server-properties-execution-page.md)  
   
--   [[サーバーのプロパティ] ([履歴] ページ)](../../reporting-services/tools/server-properties-history-page.md)  
+-   [サーバーのプロパティ ([履歴] ページ)](../../reporting-services/tools/server-properties-history-page.md)  
   
--   [[サーバーのプロパティ] ([ログ記録] ページ)](../../reporting-services/tools/server-properties-logging-page.md)  
+-   [サーバーのプロパティ (ログ記録 ページ)](../../reporting-services/tools/server-properties-logging-page.md)  
   
--   [[サーバーのプロパティ] ([セキュリティ] ページ)](../../reporting-services/tools/server-properties-security-page-reporting-services.md)  
+-   [サーバーのプロパティ ([セキュリティ] ページ)](../../reporting-services/tools/server-properties-security-page-reporting-services.md)  
   
--   [[サーバーのプロパティ] ([詳細設定] ページ)](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)  
+-   [サーバーのプロパティ ([詳細] ページ)](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)  
   
--   [[システム ロールのプロパティ]](../../reporting-services/tools/system-role-properties-management-studio.md)  
+-   [システム ロールのプロパティ](../../reporting-services/tools/system-role-properties-management-studio.md)  
   
--   [[ユーザー ロールのプロパティ]](../../reporting-services/tools/user-role-properties-management-studio.md)  
+-   [ユーザー ロールのプロパティ](../../reporting-services/tools/user-role-properties-management-studio.md)  
   
 ## <a name="see-also"></a>参照  
  [機能リファレンス (Reporting Services)](../../reporting-services/feature-reference-reporting-services.md)  

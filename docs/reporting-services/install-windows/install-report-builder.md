@@ -14,17 +14,17 @@ caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5d2d84a84ef5abf6f048fe5f0d73e5724ae32950
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="install-report-builder"></a>レポート ビルダーをインストールする
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] はスタンドアロン アプリケーションです。ユーザーまたは管理者によってコンピューターにインストールされます。 Microsoft ダウンロード センター、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート サーバー、または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]と統合された SharePoint サイトからインストールできます。  
   
- 管理者は、通常、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のインストールと構成、Web ポータルから [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] をダウンロードするための権限の許可、フォルダーの管理とレポート サーバーに保存されたレポート、レポート パーツ、および共有データセットに対する権限の管理を行います。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理の詳細については、「[Reporting Services レポート サーバー &#40;ネイティブ モード&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)」を参照してください。  
+ 管理者は、通常、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のインストールと構成、Web ポータルから [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] をダウンロードするための権限の許可、フォルダーの管理とレポート サーバーに保存されたレポート、レポート パーツ、および共有データセットに対する権限の管理を行います。 詳細については[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]管理を参照してください[Reporting Services レポート サーバー & #40 です。ネイティブ モード &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
 ## <a name="install-includessrbnoversionincludesssrbnoversion-mdmd-from--a--web-portal-or-sharepoint-library"></a>Web ポータルまたは SharePoint ライブラリから [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] をインストールする 
   

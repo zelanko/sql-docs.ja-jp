@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 78f69746e290ea004d28edf8a0a90aeabfb9151d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>マップ レポートの計画 (レポート ビルダーおよび SSRS)
@@ -156,9 +156,9 @@ ms.lasthandoff: 06/22/2017
  動的な空間データを使用するには、空間データ ソースをレポート サーバーに置く必要があります。 レポートのデザインに [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用する場合、空間データ ソースをプロジェクトに追加し、レポート定義と併せてレポート サーバーにパブリッシュすることができます。 レポート ビルダーを使用してレポートをデザインする場合は、まず空間データをレポート サーバーにアップロードし、その後、ウィザードまたはレイヤーのプロパティで、そのマップ レイヤーに使用する空間データのソースを指定する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [マップまたはマップ レイヤーのデータと表示のカスタマイズ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [チュートリアル: マップ レポート &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
- [マップ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [レポートのトラブルシューティング: マップ レポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [データとマップまたはマップ レイヤー &#40; の表示をカスタマイズします。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [チュートリアル: マップ レポート & #40 です。レポート ビルダー"&"#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
+ [マップ & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [レポートと #40 です。 マップ レポートのトラブルシューティング。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

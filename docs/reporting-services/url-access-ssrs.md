@@ -22,11 +22,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f91b97d1877e365813f3aa2445fabea1a263ab2b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-access-ssrs"></a>URL アクセス (SSRS)
@@ -115,18 +115,18 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
   
 |タスクの説明|リンク|  
 |-----------------------|-----------|  
-|レポート、共有データ ソース、リソースなどのレポート サーバー アイテムにアクセスする|[URL アクセスを使用したレポート サーバー アイテムへのアクセス](../reporting-services/access-report-server-items-using-url-access.md)|  
+|レポート、共有データ ソース、リソースなどのレポート サーバー アイテムにアクセスする|[URL アクセスを使用してレポート サーバー項目にアクセスします。](../reporting-services/access-report-server-items-using-url-access.md)|  
 |レポート パラメーターをレポートに受け渡す|[URL 内でレポート パラメーターを渡す](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
-|日付、通貨など、ロケール固有の解釈を定義する URL アクセス文字列にレポート パラメーターのロケールを設定する|[URL でレポート パラメーターの言語を設定する](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
-|レポートの表示形式をカスタマイズする表示拡張機能固有の設定を送信する|[URL でデバイス情報設定を指定する](../reporting-services/specify-device-information-settings-in-a-url.md)|  
-|ブラウザーに表示せずに、レポートを直接ファイル形式にエクスポートする|[URL アクセスを使用してレポートをエクスポートする](../reporting-services/export-a-report-using-url-access.md)|  
-|レポートを開き、文字列の場所に直接移動する|[URL アクセスを使用してレポートを検索する](../reporting-services/search-a-report-using-url-access.md)|  
-|特例のレポート履歴スナップショットを表示する|[URL アクセスを使用してレポート履歴スナップショットを表示する](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
+|日付、通貨など、ロケール固有の解釈を定義する URL アクセス文字列にレポート パラメーターのロケールを設定する|[URL でレポート パラメーターの言語を設定します。](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
+|レポートの表示形式をカスタマイズする表示拡張機能固有の設定を送信する|[URL でのデバイス情報設定を指定します。](../reporting-services/specify-device-information-settings-in-a-url.md)|  
+|ブラウザーに表示せずに、レポートを直接ファイル形式にエクスポートする|[URL アクセスを使用して、レポートをエクスポートします。](../reporting-services/export-a-report-using-url-access.md)|  
+|レポートを開き、文字列の場所に直接移動する|[URL アクセスを使用して、レポートを検索します。](../reporting-services/search-a-report-using-url-access.md)|  
+|特例のレポート履歴スナップショットを表示する|[URL アクセスを使用して、レポート履歴スナップショットを表示します。](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
   
 ## <a name="see-also"></a>参照  
  [URL 内でレポート パラメーターを渡す](../reporting-services/pass-a-report-parameter-within-a-url.md)   
- [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md)   
- [URL アクセスを使用した Reporting Services の統合](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
- [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [URL アクセス パラメーター リファレンス](../reporting-services/url-access-parameter-reference.md)   
+ [URL アクセスを使用して Reporting Services の統合](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
+ [検索、表示、およびレポート &#40; を管理します。レポート ビルダーおよび SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

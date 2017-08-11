@@ -15,11 +15,11 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3674bb697d86ac79906aa4ee5172ad24030a22fc
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>印刷コントロールを使用したブラウザーからのレポートの印刷 (レポート ビルダーおよび SSRS)
@@ -42,10 +42,10 @@ ms.lasthandoff: 06/22/2017
  レポートをプレビューするには、 **[印刷]** ダイアログ ボックスで **[プレビュー]** ボタンをクリックします。 これによりレポートの最初のページが別のプレビュー ウィンドウ内に表示されます。 残りのページは、レポート サーバーでレポートが表示されると利用可能になります。 レポートのプレビューは、EMF 形式で表示されます。 プレビューでは前後のページに移動することができ、最後のページに到達すると、 **[次へ]** ボタンが無効になります。  
   
 ### <a name="adjusting-print-margins"></a>余白の調整  
- レポートを印刷する前に、表示される EMF レポートの余白を変更できます。 余白を変更するには、 **[印刷]** ダイアログ ボックスで **[プレビュー]** ボタンをクリックします。 プレビュー ページの上部にある **[余白]** ボタンをクリックします。 [余白] ダイアログ ボックスが表示されます。 必要に応じて上下および左右の余白を設定します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)] ダイアログ ボックスが閉じ、プレビューの表示および印刷の設定が保存されます。  
+ レポートを印刷する前に、表示される EMF レポートの余白を変更できます。 余白を変更するには、 **[印刷]** ダイアログ ボックスで **[プレビュー]** ボタンをクリックします。 プレビュー ページの上部にある **[余白]** ボタンをクリックします。 [余白] ダイアログ ボックスが表示されます。 必要に応じて上下および左右の余白を設定します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]ダイアログ ボックスを閉じるし、プレビューの表示および印刷の設定が格納されます。  
   
 ## <a name="see-also"></a>「  
- [レポートの印刷 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
- [レポートの印刷 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
+ [レポートの印刷 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
+ [印刷するレポートと #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
   
   

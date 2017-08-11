@@ -24,11 +24,11 @@ caps.latest.revision: 77
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dc8491006425de79f8e96be1affb10687a1553f9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)
@@ -55,14 +55,14 @@ ms.lasthandoff: 06/22/2017
 2.  カスタム アセンブリへの参照を含んだレポートをローカル モードでプレビューする。  
   
 ##  <a name="Common"></a> 使用頻度の高い関数への参照の追加  
- **[式]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に組み込まれている共通の関数の一覧がカテゴリ別に表示されます。 **[共通の関数]** を展開してカテゴリをクリックすると、式に含める関数の一覧が **[アイテム]** ペインに表示されます。 共通の関数がからクラスを含める、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math>と<xref:System.Convert>名前空間と[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]ランタイム ライブラリ関数。 便宜上、最もよく使用される関数が **[式]** ダイアログ ボックスで表示されます。このダイアログ ボックスでは、これらの関数は、テキスト、日付と時刻、数学、検査、プログラム フロー、集計、財務、変換、その他というカテゴリごとに表示されます。 使用頻度の低い関数は、一覧に表示されませんが、式で使用することはできます。  
+ **[式]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に組み込まれている共通の関数の一覧がカテゴリ別に表示されます。 **[共通の関数]** を展開してカテゴリをクリックすると、式に含める関数の一覧が **[アイテム]** ペインに表示されます。 共通の関数には、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> 名前空間と <xref:System.Convert> 名前空間のクラス、および [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ランタイム ライブラリ関数が含まれています。 便宜上、最もよく使用される関数が **[式]** ダイアログ ボックスで表示されます。このダイアログ ボックスでは、これらの関数は、テキスト、日付と時刻、数学、検査、プログラム フロー、集計、財務、変換、その他というカテゴリごとに表示されます。 使用頻度の低い関数は、一覧に表示されませんが、式で使用することはできます。  
   
  組み込み関数を使用するには、[アイテム] ペインで関数名をダブルクリックします。 関数の説明が説明ペインに表示され、関数呼び出しの例がサンプル ペインに表示されます。 コード ペインで、関数名の後に左かっこ **(**を入力すると、IntelliSense により、関数呼び出しの有効な各構文が表示されます。 たとえば、テーブルの `Quantity` という名前のフィールドの最大値を計算するには、 `=Max(` という単純な式をコード ペインに追加した後、スマート タグを使用して、関数呼び出しに使用できる有効な構文をすべて表示します。 この例を完成させるには、「 `=Max(Fields!Quantity.Value)`」と入力します。  
   
- 各関数の詳細については、次を参照してください。 <xref:System.Math>、 <xref:System.Convert>、および[Visual Basic ランタイム ライブラリ メンバー](http://go.microsoft.com/fwlink/?LinkId=198941) msdn です。  
+ 各関数の詳細については、MSDN の「 <xref:System.Math>」、「 <xref:System.Convert>」、および「 [Visual Basic ランタイム ライブラリのメンバー](http://go.microsoft.com/fwlink/?LinkId=198941) 」を参照してください。  
   
 ##  <a name="NotCommon"></a> 使用頻度の低い関数への参照の追加  
- 一般的に使用される CLR 名前空間以下を他の参照を含めるにする必要があります参照を使用する完全修飾、たとえば、<xref:System.Text.StringBuilder>です。 このような使用頻度の低い関数については、 **[式]** ダイアログ ボックスのコード ペインで IntelliSense がサポートされていません。  
+ 使用頻度の低い、その他の CLR 名前空間への参照を含めるには、 <xref:System.Text.StringBuilder>」を参照してください。 このような使用頻度の低い関数については、 **[式]** ダイアログ ボックスのコード ペインで IntelliSense がサポートされていません。  
   
  各関数の詳細については、MSDN の「 [Visual Basic ランタイム ライブラリのメンバー](http://go.microsoft.com/fwlink/?LinkId=198941) 」を参照してください。  
   
@@ -196,11 +196,11 @@ End Function
  *Fields* コレクションおよび *ReportItems* コレクションの内容は実行時に動的に変更されるので、カスタム アセンブリ内への呼び出し間でそれらを保持することは避けてください (たとえば、メンバー変数内など)。 この推奨事項は、すべての組み込みコレクションについて共通に該当します。  
   
 ## <a name="see-also"></a>参照  
- [レポートにコードを追加する &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
- [レポートでのカスタム アセンブリの使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [レポートにアセンブリへの参照を追加する &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
- [Reporting Services チュートリアル &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [コードを追加、レポートと #40 です。SSRS &#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
+ [レポートでカスタム アセンブリの使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [レポート &#40; へのアセンブリ参照を追加します。SSRS &#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
+ [Reporting Services のチュートリアル & #40 です。SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [式の例と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [レポート サンプル (レポート ビルダーおよび SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
   

@@ -18,23 +18,23 @@ caps.latest.revision: 54
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5e33585c625c49967304ca36ad91ccc1ebac32f1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services でのファイル共有の配信
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、フォルダーへのレポートの配信を可能にするファイル共有配信拡張機能が用意されています。 ファイル共有配信拡張機能は既定で使用できるため、追加で構成する必要はありません。 ファイルの配信を正常に実行するためには、共有フォルダーに書き込みアクセス権を設定する必要があります。 ライター権限を必要とするアカウントには、サブスクリプションに構成された資格情報またはレポート サーバー用に構成された **ファイル共有アカウント** を使用できます。 ファイル共有アカウントの詳細については、「 [サブスクリプション設定とファイル共有アカウント &#40;構成マネージャー&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)」を参照してください。 また、レポートへのアクセスを要求するユーザーは、共有フォルダーの読み取り権限を持っている必要があります。  
   
- ファイル共有にレポートを配信するには、標準のサブスクリプションまたはデータ ドリブン サブスクリプションを定義します。 データ ドリブン サブスクリプションでファイル共有配信を使用する方法については、「[データ ドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)」を参照してください。 また、リモート ファイル共有サブスクリプションを実行するアカウントには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンピューターに対するローカル ログオン権限が必要です。  
+ ファイル共有にレポートを配信するには、標準のサブスクリプションまたはデータ ドリブン サブスクリプションを定義します。 データ ドリブン サブスクリプションでファイル共有の配信を使用する方法については、次を参照してください[データ ドリブン サブスクリプション &#40; を作成します。。SSRS チュートリアル &#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md). また、リモート ファイル共有サブスクリプションを実行するアカウントには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンピューターに対するローカル ログオン権限が必要です。  
   
 ||  
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード|  
   
- **このトピックの内容:**  
+ **このトピックの内容**  
   
 -   [共有フォルダーに配信されるレポートの特性](#bkmk_Characteristics)  
   
@@ -87,6 +87,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [サブスクリプション設定とファイル共有アカウント &#40;構成マネージャー&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
+ [サブスクリプションの設定とファイル共有アカウントと #40 です。構成マネージャー &#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
   
   

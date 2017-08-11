@@ -21,15 +21,15 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cca3d552a0e1ffb7fdfc09e98a334f8f4d196d84
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>SSRS の暗号化キー - レポート サーバーを初期化します。
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、初期化されたサーバーとは、レポート サーバー データベース内のデータの暗号化および暗号化解除を実行できるサーバーのことです。 レポート サーバーを操作するには、初期化が必要です。 初期化は、レポート サーバー サービスを最初に開始するときに行われます。 また、既存の配置にレポート サーバーを追加するときや、復旧処理の一環としてキーを手動で再作成するときにも、初期化が行われます。 暗号化キーを使用する方法と理由の詳細については、「[」暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)」および「[暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)」を参照してください。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、初期化されたサーバーとは、レポート サーバー データベース内のデータの暗号化および暗号化解除を実行できるサーバーのことです。 レポート サーバーを操作するには、初期化が必要です。 初期化は、レポート サーバー サービスを最初に開始するときに行われます。 また、既存の配置にレポート サーバーを追加するときや、復旧処理の一環としてキーを手動で再作成するときにも、初期化が行われます。 暗号化キーを使用する方法と理由の詳細については、「[」暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)」および「[暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)」を参照してください。  
   
  暗号化キーは、レポート サーバー サービスのプロファイル情報に一部基づいています。 レポート サーバー サービスの実行に使用されるユーザー ID を変更する場合は、それに応じてキーを更新する必要があります。 Reporting Services 構成ツールを使用して ID を変更すると、この手順が自動的に実行されます。  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 5.  レポート サーバー サービスがレポート サーバー データベースに再接続し、手順 3 で格納された公開キーとインストール識別子の値に対称キーを追加します。 対称キーを格納する前に、レポート サーバー サービスはその公開キーを使用して対称キーを暗号化します。 対称キーが格納されると、レポート サーバーは初期化されたと見なされて、使用可能になります。  
   
 ## <a name="initializing-a-report-server-for-scale-out-deployment"></a>スケールアウト配置用のレポート サーバーの初期化  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 1 つのレポート サーバー データベースを複数のレポート サーバー インスタンスで共有するスケールアウト配置モデルがサポートされています。 スケールアウト配置に参加するには、レポート サーバーは、対称キーのコピーを作成して共有データベースに格納する必要があります。 そのデータベースを使用する複数のサーバーで使用される対称キーは 1 つですが、各レポート サーバーはその対称キーのコピーを持っています。 各コピーは、それ自体の公開キーを使用して一意に暗号化されるため、それぞれに異なります。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]複数のレポート サーバー インスタンスで 1 つのレポート サーバー データベースを共有するスケール アウト配置モデルをサポートしています。 スケールアウト配置に参加するには、レポート サーバーは、対称キーのコピーを作成して共有データベースに格納する必要があります。 そのデータベースを使用する複数のサーバーで使用される対称キーは 1 つですが、各レポート サーバーはその対称キーのコピーを持っています。 各コピーは、それ自体の公開キーを使用して一意に暗号化されるため、それぞれに異なります。  
   
  スケールアウト配置のためにレポート サーバーを初期化する際の最初の数手順は、1 つのサーバーと 1 つのデータベースの初期化で行う最初の 3 つの手順と同じです。  
   

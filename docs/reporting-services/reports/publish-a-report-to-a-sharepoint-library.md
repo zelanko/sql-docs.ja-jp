@@ -19,11 +19,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 88caf60aea658972b79c49948d882ce5f96e1d07
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>SharePoint ライブラリへのレポートのパブリッシュ
@@ -41,13 +41,13 @@ ms.lasthandoff: 06/22/2017
   
 4.  プロジェクトの共有データ ソースをパブリッシュし、以前にパブリッシュされた共有データ ソースを上書きするには、 **[OverwriteDataSources]** を **[True]**に設定します。  
   
-5.  (省略可能)**TargetDataSourceFolder**、SharePoint ライブラリまたはライブラリ フォルダーの URL を入力 (たとえば、 `http://TestServer/TestSite/Documents/DataSources`)。  
+5.  (省略可) **[TargetDataSourceFolder]**には、SharePoint ライブラリまたはライブラリ フォルダーの URL ( `http://TestServer/TestSite/Documents/DataSources`) として表示されます。  
   
      値を指定しない場合は、 **[TargetReportFolder]** の値が使用されます。  
   
 6.  **TargetReportFolder**、ライブラリまたはライブラリ フォルダーへの URL を入力 (たとえば、 `http://TestServer/TestSite/Documents/Reports`)。  
   
-7.  **[TargetServerURL]**に、SharePoint トップレベル サイトまたはサブサイトの URL を入力します。 サイトを指定しない場合は、既定のトップレベル サイト (`http://servername`、`http://servername/site`、`http://servername/site/subsite` など) が使用されます。  
+7.  **[TargetServerURL]**に、SharePoint トップレベル サイトまたはサブサイトの URL を入力します。 サイトを指定しなかった場合は、既定のトップレベル サイトが使用されます (たとえば、 `http://servername`、 `http://servername/site`、 `http://servername/site/subsite`) として表示されます。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -55,9 +55,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [[プロパティ ページ] ダイアログ ボックス](../../reporting-services/tools/project-property-pages-dialog-box.md)   
- [配置プロパティを設定する &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
- [レポート サーバーへのレポートのパブリッシュ](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   
- [SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 (SSRS)](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
- [レポートで Office Data Connection (.odc) を使用する (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
+ [配置プロパティを設定する (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
+ [レポート サーバーにレポートのパブリッシュ](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   
+ [SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [Office データ接続 &#40; を使用します。odc &#41;でレポートと #40 です。Reporting Services の SharePoint モード &#41; と統合](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

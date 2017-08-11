@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6414ac861d66bdacde41575662c7c66fc5014839
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="manage-shared-datasets"></a>共有データセットを管理する
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  共有データセット定義には、クエリ、既定値を含むデータセット パラメーター、大文字と小文字の区別などのデータ オプション、およびデータセット フィルターが含まれています。 共有データセット定義に設定した値は、共有データセットがレポートに組み込まれるときに必ず使用されます。  
   
- レポート内で共有データセットを使用するには、レポート ビルダーなどのアプリケーションを開き、レポート サーバーまたは SharePoint サイトを参照して、共有データセットを選択します。 これにより、共有データセットのインスタンスがレポートに追加されます。 レポートでは、共有データセットのクエリや共有データ ソースを表示または変更することはできません。 レポート内のインスタンスに適用する、追加のデータセット プロパティ値のセットを指定できます。 たとえば、フィルターを追加したり、大文字と小文字の区別などのデータ オプションを変更したりできます。 詳細については、msdn.microsoft.com の[レポート ビルダーに関するドキュメント](http://go.microsoft.com/fwlink/?LinkId=154494)の「[レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。  
+ レポート内で共有データセットを使用するには、レポート ビルダーなどのアプリケーションを開き、レポート サーバーまたは SharePoint サイトを参照して、共有データセットを選択します。 これにより、共有データセットのインスタンスがレポートに追加されます。 レポートでは、共有データセットのクエリや共有データ ソースを表示または変更することはできません。 レポート内のインスタンスに適用する、追加のデータセット プロパティ値のセットを指定できます。 たとえば、フィルターを追加したり、大文字と小文字の区別などのデータ オプションを変更したりできます。 詳細については、次を参照してください。[レポート埋め込みデータセットと共有データセットと #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)で、[レポート ビルダーに関するドキュメント](http://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com の「します。  
   
 ## <a name="managing-shared-datasets"></a>共有データセットの管理  
  パブリッシュされた共有データセットのプロパティを管理するには、ネイティブ モードのレポート サーバーの場合はレポート マネージャーを使用し、レポート サーバーを SharePoint 統合モードで配置した場合は SharePoint サイト上のアプリケーション ページを使用します。 共有データセットに対して実行できるタスクは、ロールの割り当てや、サイト レベルおよびアイテム レベルの権限 (権限の継承が有効な場合はフォルダー レベルの権限も含む) に応じて異なります。 共有データセットのアイテム レベルのセキュリティは、レポートのアイテム レベルのセキュリティと同じモデルに準拠しています。 詳細については、「 [共有データセット アイテムをセキュリティで保護する](../../reporting-services/security/secure-shared-dataset-items.md)」を参照してください。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
 |-|-|  
 |名前の編集|共有データセットの名前を変更できます。 依存アイテムからのすべての参照は引き続き動作します。|  
 |説明の編集|共有データセットの説明を変更できます。|  
-|クエリ実行タイムアウト|クエリ実行タイムアウトを秒単位で設定できます。 ゼロ (0) 秒は、タイムアウトが設定されていないことを意味します。 設定した秒数が経過すると、データセット クエリがタイムアウトとなります。 タイムアウト値を指定しない場合は、0 を使用します。 詳細については、「[レポートおよび共有データセット処理のタイムアウト値の設定 (SSRS)](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)」を参照してください。|  
+|クエリ実行タイムアウト|クエリ実行タイムアウトを秒単位で設定できます。 ゼロ (0) 秒は、タイムアウトが設定されていないことを意味します。 設定した秒数が経過すると、データセット クエリがタイムアウトとなります。 タイムアウト値を指定しない場合は、0 を使用します。 詳細については、次を参照してください。[タイムアウト値の設定値レポートおよび共有データセットの処理 (&) #40 です。SSRS &#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  
 |依存アイテムの表示|この共有データセットを使用するアイテム (パブリッシュ済みレポート パーツ、共有データ ソース、およびレポート) を表示できます。|  
   
  次の追加の共有データセット プロパティは、自動的に構成されます。  
@@ -126,6 +126,6 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 ## <a name="see-also"></a>参照  
  [レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [ネイティブ モード レポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

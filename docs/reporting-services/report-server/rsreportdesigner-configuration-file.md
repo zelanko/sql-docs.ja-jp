@@ -18,11 +18,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 08eb8b5f2acf66f9c07c6cf6de647dbc02ce079b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 構成ファイル
@@ -36,9 +36,9 @@ ms.lasthandoff: 06/22/2017
 ## <a name="editing-guidelines"></a>編集のガイドライン  
  カスタム拡張機能を配置または削除する場合、プレビュー時のキャッシュを無効にする場合、およびサービス パック アップグレードの後に新しいデータ処理拡張機能を登録する場合を除いて、このファイルの設定を変更しないでください。  
   
- 表示拡張機能の設定をカスタマイズしている場合は、構成ファイルの編集方法を説明したトピックが用意されています。 詳細については、「[RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)」を参照してください。  
+ 表示拡張機能の設定をカスタマイズしている場合は、構成ファイルの編集方法を説明したトピックが用意されています。 詳細については、「 [RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)」を参照してください。  
   
- 一般的な構成ファイルを編集する方法については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。  
+ 構成ファイルを編集する方法の一般的な手順については、次を参照してください[Reporting Services の構成ファイル &#40; を変更。RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="example-configuration-file"></a>構成ファイルの例  
  以下の例は、RSReportDesigner.config ファイルの形式を示しています。  
@@ -74,6 +74,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [Reporting Services 構成ファイル](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [クエリ デザイン ツール &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)  
+ [SQL Server データ ツールのレポート デザイナーのクエリ デザイン ツール (SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md)  
   
   

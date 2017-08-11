@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 95e64239c30aab1a341c281230c887f9668b9277
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt ユーティリティ (SSRS)
@@ -100,7 +100,7 @@ rskeymgmt {-?}
  レポート サーバー インスタンスをレポート サーバーのスケール アウト配置に追加する場合、このレポート サーバー インスタンスをホストするリモート コンピューターの名前を指定します。 ネットワーク上で識別されるコンピューターの名前を使用します。  
   
  **-n**  
- リモート コンピューター上のレポート サーバー インスタンスの名前を指定します。 この引数は省略可能、既定のレポート サーバーをインストールする場合は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス (既定値を **-n** は MSSQLSERVER)。 名前付きインスタンスとして、レポート サーバーをインストールした場合 **-n** が必要です。  
+ リモート コンピューター上のレポート サーバー インスタンスの名前を指定します。 レポート サーバーを既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにインストールした場合、この引数は省略できます ( **-n** の既定値は MSSQLSERVER)。 レポート サーバーを名前付きインスタンスとしてインストールした場合は、 **-n** は必須です。  
   
  **-u**  *useraccount*  
  スケールアウト配置に追加するリモート コンピューター上の管理者アカウントを指定します。 アカウントが指定されない場合は、現在のユーザーの資格情報が使用されます。  
@@ -170,7 +170,7 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>ファイルの場所  
- Rskeymgmt.exe は ** \<*ドライブ*>: \Program Files\Microsoft SQL server \110\tools\binn * * または* * \<*ドライブ*>: \Program Files (x86) \Microsoft SQL Server\110\Tools\Binn** です。 このユーティリティは、ファイル システム上の任意のフォルダーから実行できます。  
+ Rskeymgmt.exe は  **\<*ドライブ*>: \Program Files\Microsoft SQL server \110\tools\binn * * または  **\<*ドライブ*>: \Program Files (x86) \Microsoft SQL Server\110\Tools\Binn** です。 このユーティリティは、ファイル システム上の任意のフォルダーから実行できます。  
   
 ## <a name="remarks"></a>解説  
  レポート サーバーは、格納された資格情報および接続情報を暗号化します。 データの暗号化には、公開キーおよび対称キーが使用されます。 レポート サーバーを実行するには、レポート サーバー データベースに有効なキーが含まれている必要があります。 キーのバックアップ、削除、復元を行うには **rskeymgmt** を使用します。 このツールには、キーを復元できない場合に、使用できなくなった暗号化されたコンテンツを削除する方法が用意されています。  
@@ -181,8 +181,8 @@ rskeymgmt -r <installationID>
   
 ## <a name="see-also"></a>参照  
  [スケールアウト配置 - Reporting Services のネイティブ モード (構成マネージャー)](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
- [Reporting Services レポート サーバー (ネイティブ モード)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [レポート サーバーのコマンド プロンプト ユーティリティ (SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Reporting Services レポート サーバー & #40 です。ネイティブ モード &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [レポート サーバーのコマンド プロンプト ユーティリティ & #40 です。SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [構成および暗号化キー &#40; を管理します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

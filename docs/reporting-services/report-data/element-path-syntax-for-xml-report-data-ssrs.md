@@ -18,11 +18,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7c25d6665198e0392aa70d649ca658adec84d2de
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML レポート データの要素パス構文 (SSRS)
@@ -39,7 +39,7 @@ ms.lasthandoff: 08/03/2017
 |(& a) #124 です。(縦棒)|構文項目に複数の選択肢があることを示します。 選択できる項目は 1 つだけです。|  
 |`[ ]` (角かっこ)|省略可能な構文項目。 角かっこは入力しません。|  
 |**{ }** (中かっこ)|構文項目のパラメーターを区切ります。|  
-|[**,**...*n*]|先行する項目を *n* 回繰り返せることを示します。 項目はコンマで区切ります。|  
+|[**,**...*n*]|先行する項目が繰り返せることを示します *n* 回数。 項目はコンマで区切ります。|  
   
 ## <a name="syntax"></a>構文  
   
@@ -209,9 +209,9 @@ XMLLocalName :: =
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [XML の接続の種類 (SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
- [Reporting Services チュートリアル &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [レポート データ ペインでのフィールドの追加、編集、更新 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
+ [XML 接続の種類と &#40; です。SSRS と &#41; です。](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
+ [Reporting Services のチュートリアル & #40 です。SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [追加、編集、レポート データ ペイン &#40; 内のフィールドを更新レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
   
 

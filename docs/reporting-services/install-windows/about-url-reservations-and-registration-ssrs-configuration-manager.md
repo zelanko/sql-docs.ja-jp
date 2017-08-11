@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: eb1f09f1a23a6e24077357c36a0dbc136a86473f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>URL の予約と登録について (SSRS 構成マネージャー)
@@ -97,7 +97,7 @@ ms.lasthandoff: 06/22/2017
 |SQL Server Express|Web ポータル|`http://<servername>/reports_SQLExpress`|`http://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Reporting Services の URL の認証とサービス ID  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL 予約では、レポート サーバー サービスのサービス アカウントが指定されます。 サービスが実行されているアカウントが、同じインスタンスで実行される [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションに対して作成されるすべての URL に対して使用されます。 レポート サーバー インスタンスのサービス ID は、RSReportServer.config ファイルに格納されます。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]URL 予約では、レポート サーバー サービスのサービス アカウントを指定します。 サービスが実行されているアカウントが、同じインスタンスで実行される [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションに対して作成されるすべての URL に対して使用されます。 レポート サーバー インスタンスのサービス ID は、RSReportServer.config ファイルに格納されます。  
   
  サービス アカウントには既定値はありません。 ただし、セットアップ時には (ファイルのみのモードでサーバーをインストールする場合でも) サービス アカウントを指定する必要があります。サービス アカウントは、RSReportServer.config の **URLReservation** に指定されます。 サービス アカウントの有効な値は、ドメイン ユーザー アカウント、 **LocalSystem**、および **NetworkService**です。  
   
@@ -111,8 +111,8 @@ ms.lasthandoff: 06/22/2017
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]と [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 以降には、誤ってプログラムが高度な特権で実行されるリスクを最小限に抑える新しいセキュリティ機能が含まれています。 これらのオペレーティング システムでローカル管理を有効にするには、追加の手順が必要です。 詳細については、「[ローカル管理用のネイティブ モードのレポート サーバー &#40;SSRS&#41; の構成](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [URL 予約の構文 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+ [URL &#40; を構成します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [URL 予約構文 & #40 です。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
   
   
 

@@ -30,15 +30,15 @@ caps.latest.revision: 101
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6cf3c3d62250f84184adc53d66d9ec274a2a1b3d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>式の例 (レポート ビルダーおよび SSRS)
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、内容と外観を制御するために式をよく使用します。 式は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で記述し、組み込み関数、カスタム コード、レポート変数とグループ変数、およびユーザー定義変数を使用することができます。 式は等号 (=) で始まります。 式エディターと使用できる参照の種類の詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)」および「[式の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)」を参照してください。  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、内容と外観を制御するために式をよく使用します。 式は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で記述し、組み込み関数、カスタム コード、レポート変数とグループ変数、およびユーザー定義変数を使用することができます。 式は等号 (=) で始まります。 式エディターと、含めることのできる参照の種類の詳細については、次を参照してください[レポート &#40; で式を使用して。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)、および[式 &#40; を追加レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
 >  RDL サンドボックスが有効になっている場合は、レポートのパブリッシュ時に式のテキストで使用できる型およびメンバーが特定の型およびメンバーに制限されます。 詳細については、「 [RDL サンドボックスの有効化と無効化](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md)」を参照してください。  
@@ -67,13 +67,13 @@ ms.lasthandoff: 06/22/2017
   
 -   [レポート変数コレクションとグループ変数コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
-単純型と複合型の式、式を使用できる場所、式に使用できる参照の種類など、レポート式の詳細については、「 [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。 式が集計の計算のために評価されるコンテキストの詳細については、「[合計、集計、および組み込みコレクションの式のスコープ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)」を参照してください。  
+単純型と複合型の式、式を使用できる場所、式に使用できる参照の種類など、レポート式の詳細については、「 [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。 集計を計算するための式が評価されるコンテキストに関する詳細については、次を参照してください。[式のスコープの合計、集計、および組み込みコレクション & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 多数の関数および演算子がこのトピックでも式の例に使用されていますが、これらを使用して式を作成する方法をレポート作成のコンテキストで学習するには、「 [チュートリアル: 式の概要](../../reporting-services/tutorial-introducing-expressions.md)」を参照してください。  
 
   
 ## <a name="functions"></a>関数  
- レポート内の多くの式には、関数が含まれています。 これらの関数を使用して、データの書式を設定し、ロジックを適用し、レポートのメタデータにアクセスできます。 関数を使用する式を作成することができます、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]ランタイム ライブラリとの間、<xref:System.Convert>と<xref:System.Math>名前空間。 また、他のアセンブリまたはカスタム コードの関数への参照も追加できます。 クラスを使用することも、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]など、<xref:System.Text.RegularExpressions>です。  
+ レポート内の多くの式には、関数が含まれています。 これらの関数を使用して、データの書式を設定し、ロジックを適用し、レポートのメタデータにアクセスできます。 関数を使用する式を作成することができます、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]ランタイム ライブラリとの間、<xref:System.Convert>と<xref:System.Math>名前空間。 また、他のアセンブリまたはカスタム コードの関数への参照も追加できます。 また、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]などの <xref:System.Text.RegularExpressions>」を参照してください。  
   
 ##  <a name="VisualBasicFunctions"></a> Visual Basic の関数  
  [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の関数を使用して、テキスト ボックスに表示されるデータや、レポートのパラメーター、プロパティ、または他の領域に使用されるデータを操作できます。 ここでは、このような関数のうち、いくつかの例を紹介します。 各関数の詳細については、MSDN の「 [Visual Basic ランタイム ライブラリのメンバー](http://go.microsoft.com/fwlink/?LinkId=198941) 」を参照してください。  
@@ -169,7 +169,7 @@ ms.lasthandoff: 06/22/2017
     =DateAdd(DateInterval.Month,DateDiff(DateInterval.Month,CDate("01/01/1900"),Now())-1,CDate("01/01/1900"))  
     ```  
   
--   次の式は、SellStartDate と LastReceiptDate の間にある年数を生成します。 これらのフィールドは、DataSet1 と DataSet2 の異なる 2 つのデータセットに含まれます。 集計関数である [First 関数 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md) は、DataSet1 にある SellStartDate の最初の値と、DataSet2 にある LastReceiptDate の最初の値を返します。  
+-   次の式は、SellStartDate と LastReceiptDate の間にある年数を生成します。 これらのフィールドは、DataSet1 と DataSet2 の異なる 2 つのデータセットに含まれます。 [最初の関数と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/report-builder-functions-first-function.md)DataSet1 と DataSet2 にある LastReceiptDate の最初の値で SellStartDate の最初の値は、集計関数を返します。  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -221,7 +221,7 @@ ms.lasthandoff: 06/22/2017
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
     ```  
   
-     次の式の結果のメンバーを使用して、前のものと同じ値に、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String>クラスの代わりに[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]関数。  
+     次の式では、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> System.String [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] クラスのメンバーを使用しています。返される値は、上記の式と同じです。  
   
     ```  
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
@@ -240,14 +240,14 @@ ms.lasthandoff: 06/22/2017
   
     ```  
   
--   **Regex**から機能、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions>既存の文字列の形式、たとえば、電話番号の書式設定を変更するのに便利です。 The following expression uses the **Replace** function to change the format of a ten-digit telephone number in a field from "*nnn*-*nnn*-*nnnn*" to "(*nnn*) *nnn*-*nnnn*":  
+-   また、 **の** System.Text.RegularExpressions [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 関数は、電話番号の書式を設定するなど、既存の文字列の書式を変更する場合に役立ちます。 次の式では、フィールドに含まれる、" **nnn** nnn*nnn*-*nnn*-*nnnn*関数を使用して "(*nnn*) *nnn*-*nnnn*" 形式に変更しています。  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
     ```  
   
     > [!NOTE]  
-    >  Fields!Phone.Value に余分なスペースがないことと、データ型が <xref:System.String> であることを確認してください。  
+    >  Fields!Phone.Value に余分なスペースがないことと、データ型が <xref:System.String>」を参照してください。  
   
 ### <a name="lookup"></a>Lookup  
   
@@ -414,7 +414,7 @@ ms.lasthandoff: 06/22/2017
     =Ceiling(RowNumber(Nothing)/25)  
     ```  
   
-     ユーザーが 1 ページあたりの行数の値を設定できるようにするには、`RowsPerPage` という名前のパラメーターを作成し、次の式で示すように、そのパラメーターに基づいてグループ式を作成します。  
+     ユーザーが 1 ページあたりの行数の値を設定できるようにするには、 `RowsPerPage` という名前のパラメーターを作成し、次の式で示すように、そのパラメーターに基づいてグループ式を作成します。  
   
     ```  
     =Ceiling(RowNumber(Nothing)/Parameters!RowsPerPage.Value)  
@@ -453,7 +453,7 @@ ms.lasthandoff: 06/22/2017
 >  使用できる色は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の KnownColor 列挙体の色です。  
   
 ### <a name="chart-colors"></a>グラフの色  
- 図形グラフの色を指定するには、色がデータ点にマップされる順序を制御するカスタム コードを使用できます。 これは複数のグラフで同じカテゴリ グループの色を統一するときに役立ちます。 詳細については、「[複数の図形グラフでの色の統一 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)」を参照してください。  
+ 図形グラフの色を指定するには、色がデータ点にマップされる順序を制御するカスタム コードを使用できます。 これは複数のグラフで同じカテゴリ グループの色を統一するときに役立ちます。 詳細については、「[複数の図形グラフでの色の統一 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)」を参照してください。  
   
 ###  <a name="Visibility"></a> 表示  
  レポート アイテムの表示プロパティを使用して、レポート内のアイテムの表示/非表示を切り替えることができます。 テーブルなどのデータ領域では、最初に、式の値に基づいて詳細行を非表示にできます。  
@@ -485,7 +485,7 @@ ms.lasthandoff: 06/22/2017
     ="http://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
     ```  
   
-     詳細については、「[URL へのハイパーリンクの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)」を参照してください。  
+     詳細については、次を参照してください[ハイパーリンクの URL &#40; を追加。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
   
 -   次の式では、テキスト ボックス内に URL を追加するかどうかを、条件付きで制御します。 この式では、アクティブ URL をレポートに含めるかどうかをユーザーが決定できるように、 `IncludeURLs` という名前のパラメーターを使用しています。 この式は、テキスト ボックスに対するアクションとして設定されます。 パラメーターを False に設定してからレポートを表示すると、ハイパーリンクなしでレポートを Microsoft Excel にエクスポートできます。  
   
@@ -518,7 +518,7 @@ ms.lasthandoff: 06/22/2017
     ```  
   
 ##  <a name="CustomCode"></a> カスタム コード  
- レポート内では、カスタム コードを使用できます。 カスタム コードは、レポート内に埋め込むか、レポートで使用されるカスタム アセンブリに格納します。 カスタム コードの詳細については、「[レポート デザイナーでカスタム コードやアセンブリを式から参照する &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)」を参照してください。  
+ レポート内では、カスタム コードを使用できます。 カスタム コードは、レポート内に埋め込むか、レポートで使用されるカスタム アセンブリに格納します。 カスタム コードの詳細については、次を参照してください[カスタム コードやレポート デザイナー &#40; 内の式でのアセンブリ参照。SSRS &#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>グループ変数を使用したカスタム集計  
  特定のグループ スコープ内のローカルなグループ変数の値を初期化し、その変数を式の中で参照することができます。 カスタム コードでグループ変数を使用するシナリオとしては、カスタム集計の実装が挙げられます。 詳細については、「 [グループ変数を使ったカスタム集計 (Reporting Services 2008)](http://go.microsoft.com/fwlink/?LinkId=128714)」を参照してください。  
@@ -560,9 +560,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [グループ式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [グループ式の例 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [レポート &#40; 内の式の使用レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [式と &#40; です。レポート ビルダーおよび SSRS &#41; です。](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [一般的に使用されるフィルター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
   
   

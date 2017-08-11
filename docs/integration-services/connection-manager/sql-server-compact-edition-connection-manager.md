@@ -9,6 +9,9 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sqlmobileconnection.connection.f1
+- sql13.dts.designer.sqlmobileconnection.all.f1
 helpviewer_keywords:
 - SQL Server Compact, connection manager
 - connections [Integration Services], SQL Server Compact
@@ -19,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dad3c3c379b62863de834386783b595c984c49ed
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 6b3f09dad60239f595aaae0cac0162283d84430d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 接続マネージャー
@@ -48,12 +51,72 @@ ms.lasthandoff: 08/03/2017
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
   
--   [[SQL Server Compact Edition 接続マネージャー エディター] &#40;[接続] ページ&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)  
+## <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>[SQL Server Compact Edition 接続マネージャー エディター] ([接続] ページ)
+  **[SQL Server Compact Edition 接続マネージャー エディター]** ダイアログ ボックスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースに接続するためのプロパティを指定できます。  
   
--   [[SQL Server Compact Edition 接続マネージャー エディター] &#40;[すべて] ページ&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition 接続マネージャーについて詳しくは、「 [SQL Server Compact Edition 接続マネージャー](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)」をご覧ください。  
   
- プログラムによる接続マネージャーの構成の詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」および「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
+### <a name="options"></a>オプション  
+ **[データベースのファイル名とパスを入力]**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースのパスとファイル名を入力します。  
   
+ **参照**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server Compact Edition データベースの選択] **ダイアログ ボックスを使用して、目的の** Compact データベース ファイルを探します。  
   
+ **[データベースのパスワードを入力]**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースのパスワードを入力します。  
+  
+## <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>[SQL Server Compact Edition 接続マネージャー エディター] ([すべて] ページ)
+  **[SQL Server Compact Edition 接続マネージャー エディター]** ダイアログ ボックスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースに接続するためのプロパティを指定できます。  
+  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition 接続マネージャーについて詳しくは、「 [SQL Server Compact Edition 接続マネージャー](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)」をご覧ください。  
+  
+### <a name="options"></a>オプション  
+ **[AutoShrink Threshold]**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベース ファイルの空き容量 (%) がどの程度になったら自動圧縮プロセスを実行するかを指定します。  
+  
+ **[Default Lock Escalation]**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースが、ロックのエスカレートを試行する前に取得するデータベース ロックの数を指定します。  
+  
+ **[Default Lock Timeout]**  
+ トランザクションがロックを待機する既定の間隔を、ミリ秒単位で指定します。  
+  
+ **[Flush Interval]**  
+ トランザクションがコミットされてから、ディスクにフラッシュされるまでの間隔を秒単位で指定します。  
+  
+ **[Locale Identifier]**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースのロケール ID (LCID) を指定します。  
+  
+ **[Max Buffer Size]**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact が、データをディスクにフラッシュするまでに使用する最大メモリ容量を KB 単位で指定します。  
+  
+ **[Max Database Size]**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースの最大サイズを MB 単位で指定します。  
+  
+ **モード**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースを開くファイル モードを指定します。 このプロパティの既定値は **[Read Write]**です。  
+  
+ [Mode] オプションには、次の表に示すように 4 つの値が用意されています。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|**[読み取り専用]**|データベースに対する読み取り専用アクセスを指定します。|  
+|**[Read Write]**|データベースに対する読み取り/書き込み権限を指定します。|  
+|**[Exclusive]**|データベースに対する排他アクセスを指定します。|  
+|**[Shared Read]**|他のユーザーがデータベースからの読み取りを同時に行うことができることを指定します。|  
+  
+ **Persist Security Info**  
+ セキュリティ情報を接続文字列の一部として返すかどうかを指定します。 このオプションの既定値は **[False]**です。  
+  
+ **[Temp File Directory]**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 一時データベース ファイルの場所を指定します。  
+  
+ **[データ ソース]**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースの名前を指定します。  
+  
+ **Password**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースのパスワードを入力します。  
+  
+

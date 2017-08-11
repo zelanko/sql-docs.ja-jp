@@ -14,11 +14,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e1fde5db0ebdf332d82cdb7269342aea036ec61
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー)
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
 -   レポート サーバー データベースをホストするために使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスのログイン権限を自動的に更新します。 新しいアカウントは **RSExecRole**に追加されます。  
   
-     古いアカウントのデータベース ログインは自動的に削除されません。 使用されなくなったするアカウントは削除するようにしてください。 詳細については、SQL Server オンラインブックの「[レポート サーバー データベースの管理 &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)」を参照してください。  
+     古いアカウントのデータベース ログインは自動的に削除されません。 使用されなくなったするアカウントは削除するようにしてください。 詳細については、次を参照してください。[管理、レポート サーバー データベース & #40 です。SSRS ネイティブ モード &#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md) SQL Server オンライン ブック。  
   
      新しいサービス アカウントにデータベース権限が与えられるのは、そのサービス アカウントを最初に使用するようにレポート サーバー データベース接続を構成した場合に限られます。 ドメイン ユーザー アカウントまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ログインを使用するようにレポート サーバー データベース接続を構成した場合は、サービス アカウントを更新しても接続情報には影響しません。  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  対称キーをバックアップするかどうかを確認するメッセージが表示されたら、対称キーのバックアップ用のファイル名と場所を入力し、ファイルをロックおよびロック解除するためのパスワードを入力して **[OK]**をクリックします。  
   
-6.  レポート サーバーがサービス アカウントを使用してレポート サーバー データベースに接続する場合は、新しいアカウントまたはパスワードを使用するように接続情報が更新されます。 接続情報を更新するには、データベースに接続する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **[データベース接続]** ダイアログ ボックスが表示されたら、データベースに接続する権限を持つ資格情報を入力し、**[OK]** をクリックします。  
+6.  レポート サーバーがサービス アカウントを使用してレポート サーバー データベースに接続する場合は、新しいアカウントまたはパスワードを使用するように接続情報が更新されます。 接続情報を更新するには、データベースに接続する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **[データベース接続]** ダイアログ ボックスが表示されたら、データベースに接続する権限を持つ資格情報を入力し、 **[OK]**などのビルトイン アカウントで実行できます。  
   
 7.  対称キーを復元するかどうかを確認するメッセージが表示されたら、手順 5. で指定したパスワードを入力し、 **[OK]**をクリックします。  
   
@@ -113,5 +113,5 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+ [Reporting Services 構成マネージャー & #40 です。ネイティブ モード &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
 

@@ -20,11 +20,11 @@ caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c2a8702fcee392936451e4a55a4b97327de2b97d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-builder-in-sql-server-2016"></a>SQL Server 2016 のレポート ビルダー
@@ -80,7 +80,7 @@ ms.lasthandoff: 06/22/2017
 
   [SQL Server 2016 の Reporting Services とレポート ビルダーの新機能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   このバージョンの [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] および [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]の新機能について説明します。   
-  [チュートリアル: オフラインでのクイック グラフ レポートを作成します。](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+  [チュートリアル: オフラインでのクイック グラフ レポートの作成](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] とレポートの作成に使用できるウィザードを紹介します。 このチュートリアルには、作業用の一連のデータが用意されているため、データ ソースに接続せずに実習を開始できます。  
   
  [レポートの計画 (レポート ビルダー)](../../reporting-services/report-design/planning-a-report-report-builder.md)  

@@ -23,11 +23,11 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ea2b4cba953b6622811b80c7f6c60838ce0a6f91
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="roles-and-permissions-reporting-services"></a>ロールと権限 (Reporting Services)
@@ -42,14 +42,14 @@ ms.lasthandoff: 06/22/2017
  SharePoint 統合モードでは、要求がレポート サーバーに到達する前に、認証と承認が SharePoint サイトで処理されます。 認証の構成方法に応じて、SharePoint サイトからの要求には、セキュリティ トークンまたは信頼されたユーザー名が含まれます。 SharePoint のユーザーおよびグループに設定した権限によって、SharePoint ライブラリに配置されているレポート サーバー アイテムへのアクセスが承認されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [ネイティブ モード レポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
  コンテンツおよび操作へのアクセスを提供するロールベースの承認モデルについて説明します。  
   
- [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
+ [SharePoint サイト上のレポート サーバー アイテムに対する権限の許可](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
  SharePoint グループ、権限レベル、および権限を使用してレポート サーバーへのアクセスを制御する方法を説明します。  
   
 ## <a name="see-also"></a>参照  
  [レポート サーバーでの認証](../../reporting-services/security/authentication-with-the-report-server.md)   
- [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [ネイティブ モード レポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 08ab050564e74a18d8231701f2355c042efc8685
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-model-query-designer-user-interface"></a>レポート モデル クエリ デザイナーのユーザー インターフェイス
@@ -63,7 +63,7 @@ ms.lasthandoff: 06/22/2017
 |**[インポート]**|ファイル システムのレポート定義 (.rdl) ファイルから既存のクエリをインポートします。 詳細については、「[レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。|  
 |![アクションを元に戻す](../../reporting-services/report-data/media/rsqdicon-undo.gif "アクションを元に戻す")|最後の操作を元に戻します。|  
 |![操作をやり直す](../../reporting-services/report-data/media/rsqdicon-redo.gif "操作をやり直す")|最後の操作を再実行します。|  
-|![クエリを実行](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリを実行")|クエリを実行し、その結果として得られた行を結果ペインに表示します。|  
+|![クエリを実行する](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリを実行する")|クエリを実行し、その結果として得られた行を結果ペインに表示します。|  
 |![選択したフィルター列の横にあるフィルター グラフィック](../../reporting-services/report-data/media/rsqdicon-filter.gif "選択したフィルター列の横にある画像のフィルター処理")|**[データのフィルター選択]** ダイアログ ボックスを開きます。このダイアログ ボックスでは、フィルターを適用するデータを選択できます。 フィルターは、デザイン領域に現在表示されているデータとは無関係に指定できます。|  
   
 ## <a name="text-based-query-designer"></a>テキストベースのクエリ デザイナー  
@@ -89,12 +89,12 @@ ms.lasthandoff: 06/22/2017
 |------------|-----------------|  
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。|  
 |**[インポート]**|既存のレポートからクエリをインポートします。|  
-|![クエリを実行](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリを実行")|クエリ テキストを実行し、その結果として得られた行セットを結果ペインに表示します。|  
+|![クエリを実行する](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリを実行する")|クエリ テキストを実行し、その結果として得られた行セットを結果ペインに表示します。|  
   
 ## <a name="see-also"></a>参照  
  [クエリ デザイン ツール &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [外部データ ソースのデータを追加する &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [レポート モデルの接続 &#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
+ [レポート モデルの接続 & #40 です。SSRS &#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
  [RSReportDesigner 構成ファイル](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   
   
