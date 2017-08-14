@@ -1,5 +1,5 @@
 ---
-title: "[フラット ファイル変換先エディター] ([接続マネージャー] ページ) |Microsoft ドキュメント"
+title: "[フラット ファイル変換先エディター]\\ ([接続マネージャー] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="flat-file-destination-editor-connection-manager-page"></a>[フラット ファイル変換先エディター] ([接続マネージャー] ページ)
+# <a name="flat-file-destination-editor-connection-manager-page"></a>[フラット ファイル変換先エディター]\ ([接続マネージャー] ページ)
   **[フラット ファイル変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、変換先のフラット ファイル接続を選択したり、既存の変換先ファイルに対して上書きまたは追加のどれを実行するかを指定したりできます。 フラット ファイル変換先は、データをテキスト ファイルに書き込みます。 テキスト ファイルには、区切り形式、固定幅形式、行区切り記号付き固定幅形式、または幅合わせしない形式を使用できます。  
   
  フラット ファイル変換先の詳細については、「 [Flat File Destination](../../integration-services/data-flow/flat-file-destination.md)」を参照してください。  

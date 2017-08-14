@@ -1,5 +1,5 @@
 ---
-title: "あいまいグループ化変換エディター (詳細 タブ) |Microsoft ドキュメント"
+title: "[あいまいグループ化変換エディター]\\ ([詳細] タブ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>[あいまいグループ化変換エディター] ([詳細設定] タブ)
+# <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>[あいまいグループ化変換エディター]\ ([詳細設定] タブ)
   **[あいまいグループ化変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、入力列と出力列の指定、類似性のしきい値の設定、区切り記号の定義ができます。  
   
 > [!NOTE]  

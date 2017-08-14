@@ -1,5 +1,5 @@
 ---
-title: "キャッシュ変換エディター (マッピング ページ) |Microsoft ドキュメント"
+title: "[キャッシュ変換エディター]\\ ([マッピング] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="cache-transformation-editor-mappings-page"></a>[キャッシュ変換エディター] ([マッピング] ページ)
+# <a name="cache-transformation-editor-mappings-page"></a>[キャッシュ変換エディター]\ ([マッピング] ページ)
   **[キャッシュ変換エディター]** の **[マッピング]** ページを使用して、キャッシュ変換の入力列をキャッシュ変換マネージャーの変換先列にマップします。  
   
 > [!NOTE]  

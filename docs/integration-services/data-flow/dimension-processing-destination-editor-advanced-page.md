@@ -1,5 +1,5 @@
 ---
-title: "ディメンション処理変換先エディター (詳細 ページ) |Microsoft ドキュメント"
+title: "[ディメンション処理変換先エディター]\\ ([詳細] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="dimension-processing-destination-editor-advanced-page"></a>[ディメンション処理変換先エディター] ([詳細設定] ページ)
+# <a name="dimension-processing-destination-editor-advanced-page"></a>[ディメンション処理変換先エディター]\ ([詳細設定] ページ)
   **[ディメンション処理変換先エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、エラー処理を構成できます。  
   
  ディメンション処理変換先の詳細については、「 [Dimension Processing Destination](../../integration-services/data-flow/dimension-processing-destination.md)」を参照してください。  

@@ -1,5 +1,5 @@
 ---
-title: "あいまい参照変換エディター (詳細 タブ) |Microsoft ドキュメント"
+title: "[あいまい参照変換エディター]\\ ([詳細] タブ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>[あいまい参照変換エディター] ([詳細設定] タブ)
+# <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>[あいまい参照変換エディター]\ ([詳細設定] タブ)
   **[あいまい参照変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、あいまい参照のパラメーターを設定できます。  
   
  あいまい参照変換の詳細については、「 [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)」を参照してください。  

@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="fixed-and-changing-attribute-options-slowly-changing-dimension-wizard"></a>[固定属性と変化する属性のオプション] (緩やかに変化するディメンション ウィザード)
+# <a name="fixed-and-changing-attribute-options-slowly-changing-dimension-wizard"></a>[固定属性と変化する属性のオプション]\ (緩やかに変化するディメンション ウィザード)
   **[固定属性と変化する属性のオプション]** ダイアログ ボックスを使用すると、固定属性と変化する属性において変更に応答する方法を指定します。  
   
  このウィザードの詳細については、「 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)」を参照してください。  

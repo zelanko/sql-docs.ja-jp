@@ -1,5 +1,5 @@
 ---
-title: "あいまいグループ化変換エディター (接続マネージャー タブ) |Microsoft ドキュメント"
+title: "[あいまいグループ化変換エディター]\\ ([接続マネージャー] タブ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>[あいまいグループ化変換エディター] ([接続マネージャー] タブ)
+# <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>[あいまいグループ化変換エディター]\ ([接続マネージャー] タブ)
   **[あいまいグループ化変換エディター]** ダイアログ ボックスの **[接続マネージャー]** タブを使用すると、既存の接続を選択したり新しい接続を作成したりできます。  
   
 > [!NOTE]  

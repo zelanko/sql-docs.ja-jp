@@ -1,5 +1,5 @@
 ---
-title: "CDC ソース エディター (接続マネージャー ページ) |Microsoft ドキュメント"
+title: "[CDC ソース エディター]\\ ([接続マネージャー] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="cdc-source-editor-connection-manager-page"></a>[CDC ソース エディター] ([接続マネージャー] ページ)
+# <a name="cdc-source-editor-connection-manager-page"></a>[CDC ソース エディター]\ ([接続マネージャー] ページ)
   **[CDC ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、CDC ソースが変更行を読み取る [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース (CDC データベース) の ADO.NET 接続マネージャーを選択できます。 CDC データベースを選択した後で、キャプチャされたテーブルをデータベースで選択する必要があります。  
   
  CDC ソースの詳細については、「 [CDC ソース](../../integration-services/data-flow/cdc-source.md)」を参照してください。  

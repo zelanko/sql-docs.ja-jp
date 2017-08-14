@@ -1,5 +1,5 @@
 ---
-title: "用語抽出変換エディター (除外 タブ) |Microsoft ドキュメント"
+title: "[用語抽出変換エディター]\\ ([除外] タブ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="term-extraction-transformation-editor-exclusion-tab"></a>[用語抽出変換エディター] ([除外] タブ)
+# <a name="term-extraction-transformation-editor-exclusion-tab"></a>[用語抽出変換エディター]\ ([除外] タブ)
   **[用語抽出変換エディター]** ダイアログ ボックスの **[除外]** タブを使用すると、除外テーブルへの接続を設定し、除外用語が含まれている列を指定できます。  
   
  用語抽出変換の詳細については、「 [Term Extraction Transformation](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)」を参照してください。  

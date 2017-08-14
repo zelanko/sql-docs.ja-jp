@@ -1,5 +1,5 @@
 ---
-title: "参照変換エディター (全般 ページ) |Microsoft ドキュメント"
+title: "[参照変換エディター]\\ ([全般] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="lookup-transformation-editor-general-page"></a>[参照変換エディター] ([全般] ページ)
+# <a name="lookup-transformation-editor-general-page"></a>[参照変換エディター]\ ([全般] ページ)
   [参照変換エディター] ダイアログ ボックスの **[全般]** ページを使用して、キャッシュ モードや接続の種類を選択し、一致するエントリがない行の処理方法を指定します。  
   
  参照変換の詳細については、「 [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)」を参照してください。  

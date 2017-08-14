@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>[あいまい参照変換エディター] ([列] タブ)
+# <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>[あいまい参照変換エディター]\ ([列] タブ)
   **[あいまい参照変換エディター]** ダイアログ ボックスの **[列]** タブを使用すると、入力列および出力列のプロパティを設定できます。  
   
  あいまい参照変換の詳細については、「 [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)」を参照してください。  

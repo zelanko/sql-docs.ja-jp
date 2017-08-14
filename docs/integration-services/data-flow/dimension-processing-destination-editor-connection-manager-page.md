@@ -1,5 +1,5 @@
 ---
-title: "ディメンション処理変換先エディター (接続マネージャー ページ) |Microsoft ドキュメント"
+title: "[ディメンション処理変換先エディター]\\ ([接続マネージャー] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="dimension-processing-destination-editor-connection-manager-page"></a>[ディメンション処理変換先エディター] ([接続マネージャー] ページ)
+# <a name="dimension-processing-destination-editor-connection-manager-page"></a>[ディメンション処理変換先エディター]\ ([接続マネージャー] ページ)
   **[ディメンション処理変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスへの接続を指定できます。  
   
  ディメンション処理変換先の詳細については、「 [Dimension Processing Destination](../../integration-services/data-flow/dimension-processing-destination.md)」を参照してください。  

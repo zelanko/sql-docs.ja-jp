@@ -1,5 +1,5 @@
 ---
-title: "列エクスポート変換エディター (列 ページ) |Microsoft ドキュメント"
+title: "[列エクスポート変換エディター]\\ ([列] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="export-column-transformation-editor-columns-page"></a>[列エクスポート変換エディター] ([列] ページ)
+# <a name="export-column-transformation-editor-columns-page"></a>[列エクスポート変換エディター]\ ([列] ページ)
   **[列エクスポート変換エディター]** ダイアログ ボックスの **[列]** ページを使用すると、ファイルに抽出するデータ フロー内の列を指定できます。 列エクスポート変換でファイルにデータを追加するか、既存のファイルを上書きするかどうかを指定できます。  
   
  列エクスポート変換の詳細については、「 [Export Column Transformation](../../../integration-services/data-flow/transformations/export-column-transformation.md)」を参照してください。  

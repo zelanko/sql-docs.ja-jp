@@ -1,5 +1,5 @@
 ---
-title: "CDC ソース エディター (列 ページ) |Microsoft ドキュメント"
+title: "[CDC ソース エディター]\\ ([列] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="cdc-source-editor-columns-page"></a>[CDC ソース エディター] ([列] ページ)
+# <a name="cdc-source-editor-columns-page"></a>[CDC ソース エディター]\ ([列] ページ)
   **[CDC ソース エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (ソース) 列にマップできます。  
   
  CDC ソースの詳細については、「 [CDC Source](../../integration-services/data-flow/cdc-source.md)」を参照してください。  

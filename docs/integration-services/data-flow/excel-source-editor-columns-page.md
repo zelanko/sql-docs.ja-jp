@@ -1,5 +1,5 @@
 ---
-title: "Excel ソース エディター (列 ページ) |Microsoft ドキュメント"
+title: "[Excel ソース エディター]\\ ([列] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="excel-source-editor-columns-page"></a>[Excel ソース エディター] ([列] ページ)
+# <a name="excel-source-editor-columns-page"></a>[Excel ソース エディター]\ ([列] ページ)
   **[Excel ソース エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (変換元) 列にマップできます。  
   
  Excel ソースの詳細については、「 [Excel Source](../../integration-services/data-flow/excel-source.md)」を参照してください。  

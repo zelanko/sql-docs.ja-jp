@@ -1,5 +1,5 @@
 ---
-title: "データ マイニング モデル トレーニング エディター (列 タブ) |Microsoft ドキュメント"
+title: "[データ マイニング モデル トレーニング エディター]\\ ([列] タブ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="data-mining-model-training-editor-columns-tab"></a>[データ マイニング モデル トレーニング エディター] ([列] タブ)
+# <a name="data-mining-model-training-editor-columns-tab"></a>[データ マイニング モデル トレーニング エディター]\ ([列] タブ)
   **[データ マイニング モデル トレーニング エディター]** ダイアログ ボックスの **[列]** タブを使用すると、入力列をマイニング構造の列にマップできます。  
   
  データ マイニング モデル トレーニング変換先の詳細については、「 [Data Mining Model Training Destination](../../integration-services/data-flow/data-mining-model-training-destination.md)」を参照してください。  

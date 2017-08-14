@@ -1,5 +1,5 @@
 ---
-title: "XML ソース エディター (エラー出力 ページ) |Microsoft ドキュメント"
+title: "[XML ソース エディター]\\ ([エラー出力] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="xml-source-editor-error-output-page"></a>[XML ソース エディター] ([エラー出力] ページ)
+# <a name="xml-source-editor-error-output-page"></a>[XML ソース エディター]\ ([エラー出力] ページ)
   **[XML ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
   
  XML ソースの詳細については、「 [XML Source](../../integration-services/data-flow/xml-source.md)」を参照してください。  

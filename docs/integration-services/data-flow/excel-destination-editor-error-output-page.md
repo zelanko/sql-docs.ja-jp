@@ -1,5 +1,5 @@
 ---
-title: "Excel 変換先エディター (エラー出力 ページ) |Microsoft ドキュメント"
+title: "[Excel 変換先エディター]\\ ([エラー出力] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="excel-destination-editor-error-output-page"></a>[Excel 変換先エディター] ([エラー出力] ページ)
+# <a name="excel-destination-editor-error-output-page"></a>[Excel 変換先エディター]\ ([エラー出力] ページ)
   **[Excel 変換先エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、エラー処理オプションを指定できます。  
   
  Excel 変換先の詳細については、「 [Excel Destination](../../integration-services/data-flow/excel-destination.md)」を参照してください。  

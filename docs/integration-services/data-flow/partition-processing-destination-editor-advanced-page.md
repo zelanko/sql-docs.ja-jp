@@ -1,5 +1,5 @@
 ---
-title: "パーティション処理変換先エディター (詳細 ページ) |Microsoft ドキュメント"
+title: "[パーティション処理変換先エディター]\\ ([詳細] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="partition-processing-destination-editor-advanced-page"></a>[パーティション処理変換先エディター] ([詳細設定] ページ)
+# <a name="partition-processing-destination-editor-advanced-page"></a>[パーティション処理変換先エディター]\ ([詳細設定] ページ)
   **[パーティション処理変換先エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、エラー処理を設定できます。  
   
  パーティション処理変換先の詳細については、「 [Partition Processing Destination](../../integration-services/data-flow/partition-processing-destination.md)」を参照してください。  

@@ -1,5 +1,5 @@
 ---
-title: "[フラット ファイル ソース エディター] ([接続マネージャー] ページ) |Microsoft ドキュメント"
+title: "[フラット ファイル ソース エディター]\\ ([接続マネージャー] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016

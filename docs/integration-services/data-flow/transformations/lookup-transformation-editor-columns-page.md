@@ -1,5 +1,5 @@
 ---
-title: "参照変換エディター (列 ページ) |Microsoft ドキュメント"
+title: "[参照変換エディター]\\ ([列] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="lookup-transformation-editor-columns-page"></a>[参照変換エディター] ([列] ページ)
+# <a name="lookup-transformation-editor-columns-page"></a>[参照変換エディター]\ ([列] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[列]** ページを使用すると、元のテーブルと参照テーブルの間に結合を指定したり、参照テーブルから参照列を選択したりできます。  
   
  参照変換の詳細については、「 [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)」を参照してください。  

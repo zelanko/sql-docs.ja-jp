@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="data-mining-query-transformation-editor-mining-model-tab"></a>[データ マイニング クエリ変換エディター] ([マイニング モデル] タブ)
+# <a name="data-mining-query-transformation-editor-mining-model-tab"></a>[データ マイニング クエリ変換エディター]\ ([マイニング モデル] タブ)
   **[データ マイニング クエリ変換エディター]** ダイアログ ボックスの **[マイニング モデル]** タブを使用すると、データ マイニング構造とそのマイニング モデルを選択できます。  
   
  データ マイニング クエリ変換の詳細については、「 [Data Mining Query Transformation](../../../integration-services/data-flow/transformations/data-mining-query-transformation.md)」を参照してください。  

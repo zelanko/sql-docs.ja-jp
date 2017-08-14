@@ -1,5 +1,5 @@
 ---
-title: "XML ソース エディター (接続マネージャー ページ) |Microsoft ドキュメント"
+title: "[XML ソース エディター]\\ ([接続マネージャー] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="xml-source-editor-connection-manager-page"></a>[XML ソース エディター] ([接続マネージャー] ページ)
+# <a name="xml-source-editor-connection-manager-page"></a>[XML ソース エディター]\ ([接続マネージャー] ページ)
   **[XML ソース エディター]** の **[接続マネージャー]** ページを使用すると、XML ファイルと、XML データを変換する XSD を指定できます。  
   
  XML ソースの詳細については、「 [XML Source](../../integration-services/data-flow/xml-source.md)」を参照してください。  

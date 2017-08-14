@@ -1,5 +1,5 @@
 ---
-title: "用語抽出変換エディター (用語抽出 タブ) |Microsoft ドキュメント"
+title: "[用語抽出変換エディター]\\ ([用語抽出] タブ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="term-extraction-transformation-editor-term-extraction-tab"></a>[用語抽出変換エディター] ([用語抽出] タブ)
+# <a name="term-extraction-transformation-editor-term-extraction-tab"></a>[用語抽出変換エディター]\ ([用語抽出] タブ)
   **[用語抽出変換エディター]** ダイアログ ボックスの **[用語抽出]** タブを使用すると、抽出するテキストを含むテキスト列を指定できます。  
   
  用語抽出変換の詳細については、「 [Term Extraction Transformation](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)」を参照してください。  

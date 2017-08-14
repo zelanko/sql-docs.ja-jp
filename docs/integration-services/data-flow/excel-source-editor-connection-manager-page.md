@@ -1,5 +1,5 @@
 ---
-title: "Excel ソース エディター (接続マネージャー ページ) |Microsoft ドキュメント"
+title: "[Excel ソース エディター]\\ ([接続マネージャー] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="excel-source-editor-connection-manager-page"></a>[Excel ソース エディター] ([接続マネージャー] ページ)
+# <a name="excel-source-editor-connection-manager-page"></a>[Excel ソース エディター]\ ([接続マネージャー] ページ)
   **[Excel ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ノードを使用すると、変換元として [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ブックを選択して使用できます。 Excel ソースは、既存のブックのワークシートまたは名前付き範囲からデータを読み取ります。  
   
 > [!NOTE]  

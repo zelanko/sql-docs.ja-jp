@@ -1,5 +1,5 @@
 ---
-title: "[フラット ファイル ソース エディター] ([列] ページ) |Microsoft ドキュメント"
+title: "[フラット ファイル ソース エディター]\\ ([列] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="flat-file-source-editor-columns-page"></a>[フラット ファイル ソース エディター] ([列] ページ)
+# <a name="flat-file-source-editor-columns-page"></a>[フラット ファイル ソース エディター]\ ([列] ページ)
   **[フラット ファイル ソース エディター]** ダイアログ ボックスの **[列]** ノードを使用すると、出力列を各外部 (変換元) 列にマップできます。  
   
 > [!NOTE]  

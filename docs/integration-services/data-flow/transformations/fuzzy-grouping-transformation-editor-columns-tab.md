@@ -1,5 +1,5 @@
 ---
-title: "あいまいグループ化変換エディター (列 タブ) |Microsoft ドキュメント"
+title: "[あいまいグループ化変換エディター]\\ ([列] タブ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>[あいまいグループ化変換エディター] ([列] タブ)
+# <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>[あいまいグループ化変換エディター]\ ([列] タブ)
   **[あいまいグループ化変換エディター]** ダイアログ ボックスの **[列]** タブを使用すると、重複する値を持つ行をグループ化するための列を指定できます。  
   
  あいまいグループ化変換の詳細については、「 [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)」を参照してください。  

@@ -1,5 +1,5 @@
 ---
-title: "XML ソース エディター (列 ページ) |Microsoft ドキュメント"
+title: "[XML ソース エディター]\\ ([列] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="xml-source-editor-columns-page"></a>[XML ソース エディター] ([列] ページ)
+# <a name="xml-source-editor-columns-page"></a>[XML ソース エディター]\ ([列] ページ)
   **[XML ソース エディター]** ダイアログ ボックスの **[列]** ノードを使用して、出力列を外部 (変換元) 列にマップします。  
   
  XML ソースの詳細については、「 [XML Source](../../integration-services/data-flow/xml-source.md)」を参照してください。  

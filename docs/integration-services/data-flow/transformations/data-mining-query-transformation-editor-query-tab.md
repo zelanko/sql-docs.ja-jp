@@ -1,5 +1,5 @@
 ---
-title: "データ マイニング クエリ変換エディター (クエリ タブ) |Microsoft ドキュメント"
+title: "[データ マイニング クエリ変換エディター]\\ ([クエリ] タブ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="data-mining-query-transformation-editor-query-tab"></a>[データ マイニング クエリ変換エディター] ([クエリ] タブ)
+# <a name="data-mining-query-transformation-editor-query-tab"></a>[データ マイニング クエリ変換エディター]\ ([クエリ] タブ)
   **[データ マイニング クエリ変換エディター]** ダイアログ ボックスの **[クエリ]** タブを使用すると、予測クエリを作成できます。  
   
  データ マイニング クエリ変換の詳細については、「 [Data Mining Query Transformation](../../../integration-services/data-flow/transformations/data-mining-query-transformation.md)」を参照してください。  

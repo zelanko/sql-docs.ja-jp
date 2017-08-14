@@ -1,5 +1,5 @@
 ---
-title: "キャッシュ変換エディター (接続マネージャー ページ) |Microsoft ドキュメント"
+title: "[キャッシュ変換エディター]\\ ([接続マネージャー] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="cache-transformation-editor-connection-manager-page"></a>[キャッシュ変換エディター] ([接続マネージャー] ページ)
+# <a name="cache-transformation-editor-connection-manager-page"></a>[キャッシュ変換エディター]\ ([接続マネージャー] ページ)
   **[キャッシュ変換エディター]** ダイアログ ボックスの **[接続マネージャー]** タブを使用すると、既存のキャッシュ接続マネージャーを選択したり、新しいキャッシュ接続マネージャーを作成したりできます。  
   
  キャッシュ変換の詳細については、「 [Cache Transform](../../../integration-services/data-flow/transformations/cache-transform.md)」を参照してください。  

@@ -1,5 +1,5 @@
 ---
-title: "パーティション処理変換先エディター (マッピング ページ) |Microsoft ドキュメント"
+title: "[パーティション処理変換先エディター]\\ ([マッピング] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="partition-processing-destination-editor-mappings-page"></a>[パーティション処理変換先エディター] ([マッピング] ページ)
+# <a name="partition-processing-destination-editor-mappings-page"></a>[パーティション処理変換先エディター]\ ([マッピング] ページ)
   **[パーティション処理変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列をパーティション列にマップできます。  
   
  パーティション処理変換先の詳細については、「 [Partition Processing Destination](../../integration-services/data-flow/partition-processing-destination.md)」を参照してください。  

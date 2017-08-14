@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="excel-destination-editor-mappings-page"></a>[Excel 変換先エディター] ([マッピング] ページ)
+# <a name="excel-destination-editor-mappings-page"></a>Excel 変換先エディター (マッピング ページ)
   **[Excel 変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
  Excel 変換先の詳細については、「 [Excel Destination](../../integration-services/data-flow/excel-destination.md)」を参照してください。  

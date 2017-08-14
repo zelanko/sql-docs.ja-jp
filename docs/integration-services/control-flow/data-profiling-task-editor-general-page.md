@@ -1,5 +1,5 @@
 ---
-title: "データ プロファイル タスク エディター (全般 ページ) |Microsoft ドキュメント"
+title: "[データ プロファイル タスク エディター]\\ ([全般] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="data-profiling-task-editor-general-page"></a>[データ プロファイル タスク エディター] ([全般] ページ)
+# <a name="data-profiling-task-editor-general-page"></a>[データ プロファイル タスク エディター]\ ([全般] ページ)
   **[データ プロファイル タスク エディター]** の **[全般]** ページを使用すると、次のオプションを構成できます。  
   
 -   プロファイル出力の保存先を指定する。  

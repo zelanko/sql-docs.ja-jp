@@ -1,5 +1,5 @@
 ---
-title: "[フラット ファイル変換先エディター] ([マッピング] ページ) |Microsoft ドキュメント"
+title: "[フラット ファイル変換先エディター]\\ ([マッピング] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="flat-file-destination-editor-mappings-page"></a>[フラット ファイル変換先エディター] ([マッピング] ページ)
+# <a name="flat-file-destination-editor-mappings-page"></a>[フラット ファイル変換先エディター]\ ([マッピング] ページ)
   **[フラット ファイル変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
  フラット ファイル変換先の詳細については、「 [Flat File Destination](../../integration-services/data-flow/flat-file-destination.md)」を参照してください。  

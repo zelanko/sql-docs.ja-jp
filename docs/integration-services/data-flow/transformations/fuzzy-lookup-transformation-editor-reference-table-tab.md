@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>[あいまい参照変換エディター] ([参照テーブル] タブ)
+# <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>[あいまい参照変換エディター]\ ([参照テーブル] タブ)
   **[あいまい参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブを使用すると、参照に使用する変換元テーブルとインデックスを指定できます。 参照データ ソースは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースのテーブルである必要があります。  
   
 > [!NOTE]  

@@ -1,5 +1,5 @@
 ---
-title: "参照変換エディター (接続 ページ) |Microsoft ドキュメント"
+title: "[参照変換エディター]\\ ([接続] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="lookup-transformation-editor-connection-page"></a>[参照変換エディター] ([接続] ページ)
+# <a name="lookup-transformation-editor-connection-page"></a>[参照変換エディター]\ ([接続] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[接続]** ページを使用して、接続マネージャーを選択します。 OLE DB 接続マネージャーを選択する場合は、参照データセットを生成するためのクエリ、テーブル、またはビューも選択します。  
   
  参照変換の詳細については、「 [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)」を参照してください。  

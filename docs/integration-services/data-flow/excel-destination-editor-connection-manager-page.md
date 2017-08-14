@@ -1,5 +1,5 @@
 ---
-title: "Excel 変換先エディター (接続マネージャー ページ) |Microsoft ドキュメント"
+title: "[Excel 変換先エディター]\\ ([接続マネージャー] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="excel-destination-editor-connection-manager-page"></a>[Excel 変換先エディター] ([接続マネージャー] ページ)
+# <a name="excel-destination-editor-connection-manager-page"></a>[Excel 変換先エディター]\ ([接続マネージャー] ページ)
   **[Excel 変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、データ ソース情報を指定したり、結果をプレビューしたりできます。 Excel 変換先では、 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ブックのワークシートまたは名前付き範囲にデータが読み込まれます。  
   
 > [!NOTE]  

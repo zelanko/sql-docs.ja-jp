@@ -1,5 +1,5 @@
 ---
-title: "[フラット ファイル ソース エディター] ([エラー出力] ページ) |Microsoft ドキュメント"
+title: "[フラット ファイル ソース エディター]\\ ([エラー出力] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="flat-file-source-editor-error-output-page"></a>[フラット ファイル ソース エディター] ([エラー出力] ページ)
+# <a name="flat-file-source-editor-error-output-page"></a>[フラット ファイル ソース エディター]\ ([エラー出力] ページ)
   **[フラット ファイル ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページでは、エラー処理オプションの選択や、エラー出力列に対するプロパティの設定を行えます。  
   
  フラット ファイル ソースの詳細については、「 [Flat File Source](../../integration-services/data-flow/flat-file-source.md)」を参照してください。  

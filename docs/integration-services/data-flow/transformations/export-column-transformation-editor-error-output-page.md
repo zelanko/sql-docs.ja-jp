@@ -1,5 +1,5 @@
 ---
-title: "列エクスポート変換エディター (エラー出力 ページ) |Microsoft ドキュメント"
+title: "[列エクスポート変換エディター]\\ ([エラー出力] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="export-column-transformation-editor-error-output-page"></a>[列エクスポート変換エディター] ([エラー出力] ページ)
+# <a name="export-column-transformation-editor-error-output-page"></a>[列エクスポート変換エディター]\ ([エラー出力] ページ)
   **[列エクスポート変換エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラーをどのように処理するかを指定できます。  
   
  列エクスポート変換の詳細については、「 [Export Column Transformation](../../../integration-services/data-flow/transformations/export-column-transformation.md)」を参照してください。  
