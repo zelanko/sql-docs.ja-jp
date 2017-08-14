@@ -1,5 +1,5 @@
 ---
-title: "ADO NET 変換先エディター (エラー出力 ページ) |Microsoft ドキュメント"
+title: "[ADO NET 変換先エディター]\\ ([エラー出力] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="ado-net-destination-editor-error-output-page"></a>[ADO NET 変換先エディター] ([エラー出力] ページ)
+# <a name="ado-net-destination-editor-error-output-page"></a>[ADO NET 変換先エディター]\ ([エラー出力] ページ)
   **[ADO NET 変換先エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを指定できます。  
   
  ADO NET 変換先の詳細については、「 [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md)」を参照してください。  

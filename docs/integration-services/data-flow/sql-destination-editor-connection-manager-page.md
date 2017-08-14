@@ -1,5 +1,5 @@
 ---
-title: "SQL 変換先エディター (接続マネージャー ページ) |Microsoft ドキュメント"
+title: "[SQL 変換先エディター]\\ ([接続マネージャー] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="sql-destination-editor-connection-manager-page"></a>[SQL 変換先エディター] ([接続マネージャー] ページ)
+# <a name="sql-destination-editor-connection-manager-page"></a>[SQL 変換先エディター]\ ([接続マネージャー] ページ)
   **[SQL 変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、データ ソース情報を指定したり、結果をプレビューしたりできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先エディターは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのテーブルまたはビューにデータを読み込みます。  
   
  SQL Server 変換先の詳細については、「 [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)」を参照してください。  

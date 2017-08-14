@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="term-lookup-transformation-editor-reference-table-tab"></a>[用語参照変換エディター] ([参照テーブル] タブ)
+# <a name="term-lookup-transformation-editor-reference-table-tab"></a>[用語参照変換エディター]\ ([参照テーブル] タブ)
   **[用語参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブを使用すると、参照テーブルへの接続を指定できます。  
   
  用語参照変換の詳細については、「 [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)」を参照してください。  

@@ -1,5 +1,5 @@
 ---
-title: "用語参照変換エディター (詳細 タブ) |Microsoft ドキュメント"
+title: "[用語参照変換エディター]\\ ([詳細] タブ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="term-lookup-transformation-editor-advanced-tab"></a>[用語参照変換エディター] ([詳細設定] タブ)
+# <a name="term-lookup-transformation-editor-advanced-tab"></a>[用語参照変換エディター]\ ([詳細設定] タブ)
   **[用語参照変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、参照で大文字と小文字を区別するかどうかを指定できます。  
   
  用語参照変換の詳細については、「 [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)」を参照してください。  

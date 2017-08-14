@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="ado-net-destination-editor-mappings-page"></a>[ADO NET 変換先エディター] ([マッピング] ページ)
+# <a name="ado-net-destination-editor-mappings-page"></a>[ADO NET 変換先エディター]\ ([マッピング] ページ)
   **[ADO NET 変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
  ADO NET 変換先の詳細については、「 [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md)」を参照してください。  

@@ -1,5 +1,5 @@
 ---
-title: "SQL 変換先エディター (マッピング ページ) |Microsoft ドキュメント"
+title: "[SQL 変換先エディター]\\ ([マッピング] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="sql-destination-editor-mappings-page"></a>[SQL 変換先エディター] ([マッピング] ページ)
+# <a name="sql-destination-editor-mappings-page"></a>[SQL 変換先エディター]\ ([マッピング] ページ)
   **[SQL 変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
  SQL Server 変換先の詳細については、「 [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)」を参照してください。  

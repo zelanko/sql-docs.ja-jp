@@ -1,5 +1,5 @@
 ---
-title: "用語参照変換エディター (用語参照 タブ) |Microsoft ドキュメント"
+title: "[用語参照変換エディター]\\ ([用語参照] タブ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="term-lookup-transformation-editor-term-lookup-tab"></a>[用語参照変換エディター] ([用語参照] タブ)
+# <a name="term-lookup-transformation-editor-term-lookup-tab"></a>[用語参照変換エディター]\ ([用語参照] タブ)
   **[用語参照変換エディター]** ダイアログ ボックスの **[用語参照]** タブを使用すると、入力列を参照テーブルの参照列にマップし、各出力列の別名を提供できます。  
   
  用語参照変換の詳細については、「 [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)」を参照してください。  
