@@ -14,7 +14,7 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 79d064c7ddb43531fdff086eda71ba1e28d71fd6
 ms.contentlocale: ja-jp
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/09/2017
   
 -   System32 フォルダーに Authz.dll があることが必要です。  
   
- インターネット インフォメーション サービス (IIS) または [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]はセットアップでチェックされなくなりました。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]MDAC 2.0 が必要です、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]バージョン 2.0。既にインストールされていない場合は、セットアップでこれらがインストールされます。  
+ インターネット インフォメーション サービス (IIS) または [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]はセットアップでチェックされなくなりました。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には MDAC 2.0 および [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 が必要です。これらがインストールされていない場合は、セットアップで自動的にインストールされます。  
   
 ##  <a name="bkmk_tshoot_sharepoint"></a> SharePoint モードのインストールでのトラブルシューティング  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
  ![トップにリンク バックに使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン") [SharePoint モードのインストールに関する問題のトラブルシューティング](#bkmk_tshoot_sharepoint)  
   
-###  <a name="bkmk_no_ssrs_service"></a>SQL Server 2016 SSRS を SharePoint モードでインストールした後、SharePoint サーバーの全体管理で、SQL Server Reporting Services サービスが表示されません。  
+###  <a name="bkmk_no_ssrs_service"></a> SQL Server 2016 SSRS を SharePoint モードでインストールした後、SharePoint サーバーの全体管理に SQL Server Reporting Services サービスが表示されない  
  **説明:**が正常をインストールした後 SQL Server 2016 Reporting Services SharePoint モードと、SQL Server 2016 Reporting Services アドインで SharePoint 2013/2016 には表示されない場合"SQL Server Reporting Services"次の 2 つのメニューの[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]サービスが登録されていません。  
   
 -   [SharePoint 2013/2016 サーバーの全体管理] -> [アプリケーション構成の管理] -> [サーバーのサービスの管理] ページ  
@@ -114,7 +114,7 @@ ms.lasthandoff: 08/09/2017
 ###  <a name="bkmk_cmdlets_not_recognized"></a> Reporting Services の PowerShell コマンドレットが使用できず、コマンドが認識されない  
  **説明:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の PowerShell コマンドレットを実行しようとすると、次のようなエラー メッセージが表示されます。  
   
--   用語 'Install-SPRSServiceInstall-SPRSService' は、コマンドレット、関数、スクリプト ファイル、または操作可能なプログラムの名前として**認識されません**。 名前が正しく記述されていることを確認し、パスが含まれている場合はそのパスが正しいことを確認してから、再試行してください。At line:1 char:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          : ObjectNotFound: (Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
+-   用語 'Install-SPRSServiceInstall-SPRSService' は、コマンドレット、関数、スクリプト ファイル、または操作可能なプログラムの名前として **認識されません** 。 名前が正しく記述されていることを確認し、パスが含まれている場合はそのパスが正しいことを確認してから、再試行してください。At line:1 char:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          : ObjectNotFound: (Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
   
  **解決方法:** 次のいずれかの手順を実行します。  
   
@@ -212,7 +212,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  コマンド ウィンドウを開き、コマンド プロンプトで次のコマンドを入力します。  
   
-    -   **実行\<**  *.NET 4.0 Framework ディレクトリ* **> \InstallUtil.exe \< ** *レポート サーバーの Bin ディレクトリ* **> \ReportingServicesLibrary.dll**  
+    -   **実行\<**  *.NET 4.0 Framework ディレクトリ* **> \InstallUtil.exe \<**  *レポート サーバーの Bin ディレクトリ* **> \ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
         >  置き換える\< *.NET 4.0 Framework ディレクトリ*> ファイル、.NET Framework 4.0 の物理パスと置き換えます\<*レポート サーバーの Bin ディレクトリ*> レポート サーバーの bin ファイルの物理パス。  
