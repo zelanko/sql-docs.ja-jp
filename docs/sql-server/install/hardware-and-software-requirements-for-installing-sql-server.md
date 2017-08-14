@@ -67,7 +67,7 @@ ms.lasthandoff: 08/03/2017
   
 **お試しください:**  
   
--   [**Evaluation Center**から SQL Server をダウンロードします](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)。 
+-   [**Evaluation Center**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)から SQL Server をダウンロードします。 
   
 -    [**SQL Server 2016**](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) がインストール済みの Virtual Machine をすぐにご利用いただけます。  
   
