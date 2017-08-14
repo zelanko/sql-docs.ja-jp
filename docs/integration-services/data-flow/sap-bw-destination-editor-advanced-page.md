@@ -1,5 +1,5 @@
 ---
-title: "SAP BW 変換先エディター (詳細 ページ) |Microsoft ドキュメント"
+title: "[SAP BW 変換先エディター]\\ ([詳細] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="sap-bw-destination-editor-advanced-page"></a>[SAP BW 変換先エディター] ([詳細設定] ページ)
+# <a name="sap-bw-destination-editor-advanced-page"></a>[SAP BW 変換先エディター]\ ([詳細設定] ページ)
   パッケージのサイズやタイムアウトの情報などの詳細を設定するには、 **[SAP BW 変換先エディター]** の **[詳細設定]** ページを使用します。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の SAP BW 変換先の詳細については、「 [SAP BW 転送先](../../integration-services/data-flow/sap-bw-destination.md)」を参照してください。  

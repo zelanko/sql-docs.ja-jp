@@ -1,5 +1,5 @@
 ---
-title: "スクリプト変換エディター (スクリプト ページ) |Microsoft ドキュメント"
+title: "[スクリプト変換エディター]\\ ([スクリプト] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="script-transformation-editor-script-page"></a>[スクリプト変換エディター] ([スクリプト] ページ)
+# <a name="script-transformation-editor-script-page"></a>[スクリプト変換エディター]\ ([スクリプト] ページ)
   **[スクリプト変換エディター]** ダイアログ ボックスの **[スクリプト]** タブを使用すると、スクリプトおよび関連プロパティを指定できます。  
   
  スクリプト コンポーネントの詳細については、「 [Script Component](../../../integration-services/data-flow/transformations/script-component.md) 」および「 [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」を参照してください。 スクリプト コンポーネントのプログラミングの詳細については、「 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)」を参照してください。  

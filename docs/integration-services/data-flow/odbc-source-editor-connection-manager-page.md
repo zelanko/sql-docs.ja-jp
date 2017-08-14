@@ -1,5 +1,5 @@
 ---
-title: "[ODBC ソース エディター] ([接続マネージャー] ページ) |Microsoft ドキュメント"
+title: "[ODBC ソース エディター]\\ ([接続マネージャー] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="odbc-source-editor-connection-manager-page"></a>[ODBC ソース エディター] ([接続マネージャー] ページ)
+# <a name="odbc-source-editor-connection-manager-page"></a>[ODBC ソース エディター]\ ([接続マネージャー] ページ)
   **[ODBC 入力元エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、入力元の ODBC 接続マネージャーを選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
   
  ODBC 入力元の詳細については、「 [ODBC Source](../../integration-services/data-flow/odbc-source.md)」を参照してください。  

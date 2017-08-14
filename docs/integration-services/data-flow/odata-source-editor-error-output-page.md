@@ -1,5 +1,5 @@
 ---
-title: "OData ソース エディター (エラー出力 ページ) |Microsoft ドキュメント"
+title: "[OData ソース エディター]\\ ([エラー出力] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="odata-source-editor-error-output-page"></a>[OData ソース エディター] ([エラー出力] ページ)
+# <a name="odata-source-editor-error-output-page"></a>[OData ソース エディター]\ ([エラー出力] ページ)
   **[OData ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
   
 ## <a name="options"></a>オプション  

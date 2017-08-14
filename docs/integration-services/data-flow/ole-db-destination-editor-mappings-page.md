@@ -1,5 +1,5 @@
 ---
-title: "OLE DB 変換先エディター (マッピング ページ) |Microsoft ドキュメント"
+title: "[OLE DB 変換先エディター]\\ ([マッピング] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="ole-db-destination-editor-mappings-page"></a>[OLE DB 変換先エディター] ([マッピング] ページ)
+# <a name="ole-db-destination-editor-mappings-page"></a>[OLE DB 変換先エディター]\ ([マッピング] ページ)
   **[OLE DB 変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
  OLE DB 変換先の詳細については、「 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)」を参照してください。  

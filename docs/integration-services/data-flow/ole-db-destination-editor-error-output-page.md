@@ -1,5 +1,5 @@
 ---
-title: "OLE DB 変換先エディター (エラー出力 ページ) |Microsoft ドキュメント"
+title: "[OLE DB 変換先エディター]\\ ([エラー出力] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="ole-db-destination-editor-error-output-page"></a>[OLE DB 変換先エディター] ([エラー出力] ページ)
+# <a name="ole-db-destination-editor-error-output-page"></a>[OLE DB 変換先エディター]\ ([エラー出力] ページ)
   **[OLE DB 変換先エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを指定できます。  
   
  OLE DB 変換先の詳細については、「 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)」を参照してください。  

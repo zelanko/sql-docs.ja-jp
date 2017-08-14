@@ -1,5 +1,5 @@
 ---
-title: "生ファイル ソース エディター (接続マネージャー ページ) |Microsoft ドキュメント"
+title: "[生ファイル ソース エディター]\\ ([接続マネージャー] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="raw-file-source-editor-connection-manager-page"></a>[生ファイル ソース エディター] ([接続マネージャー] ページ)
+# <a name="raw-file-source-editor-connection-manager-page"></a>[生ファイル ソース エディター]\ ([接続マネージャー] ページ)
   RAW ファイル ソースは、ファイルから生データを読み取ります。 データはソース ファイル固有の方法で表示されるため、変換の必要がなく、ほとんどの場合は解析の必要もありません。 詳細については、「 [RAW ファイル ソース](../../integration-services/data-flow/raw-file-source.md)」を参照してください。  
   
   

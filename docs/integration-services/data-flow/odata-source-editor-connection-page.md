@@ -1,5 +1,5 @@
 ---
-title: "OData ソース エディター (接続 ページ) |Microsoft ドキュメント"
+title: "[OData ソース エディター]\\ ([接続] ページ) |Microsoft ドキュメント"
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -22,7 +22,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="odata-source-editor-connection-page"></a>[OData ソース エディター] ([接続] ページ)
+# <a name="odata-source-editor-connection-page"></a>[OData ソース エディター]\ ([接続] ページ)
   **[ODBC ソース エディター]** ダイアログ ボックスの **[接続]** ページを使用すると、OData ソースに対応する ODBC 接続マネージャーを選択できます。 また、このページで、コレクションまたはリソースのパスと、どのデータを OData ソースから取得する必要があるかを示すクエリ オプションを指定することができます。 OData ソースの詳細については、「 [OData ソース](../../integration-services/data-flow/odata-source.md)」を参照してください。  
   
 ## <a name="static-options"></a>静的オプション  

@@ -1,5 +1,5 @@
 ---
-title: "OData ソース エディター (列 ページ) |Microsoft ドキュメント"
+title: "[OData ソース エディター]\\ ([列] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="odata-source-editor-columns-page"></a>[OData ソース エディター] ([列] ページ)
+# <a name="odata-source-editor-columns-page"></a>[OData ソース エディター]\ ([列] ページ)
   出力に含める外部 (変換元) 列を選択し、それらを出力列にマップするには、 **[OData ソース エディター]** ダイアログ ボックスの **[列]** ページを使用します。  
   
 ## <a name="options"></a>オプション  

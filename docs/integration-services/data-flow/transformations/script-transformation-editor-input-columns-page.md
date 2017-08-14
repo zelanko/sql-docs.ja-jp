@@ -1,5 +1,5 @@
 ---
-title: "スクリプト変換エディター (入力列 ページ) |Microsoft ドキュメント"
+title: "[スクリプト変換エディター]\\ ([入力列] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="script-transformation-editor-input-columns-page"></a>[スクリプト変換エディター] ([入力列] ページ)
+# <a name="script-transformation-editor-input-columns-page"></a>[スクリプト変換エディター]\ ([入力列] ページ)
   **[スクリプト変換エディター]** ダイアログ ボックスの **[入力列]** ページを使用すると、入力列のプロパティを設定できます。  
   
 > [!NOTE]  

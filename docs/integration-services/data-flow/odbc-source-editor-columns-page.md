@@ -1,5 +1,5 @@
 ---
-title: "[ODBC ソース エディター] ([列] ページ) |Microsoft ドキュメント"
+title: "[ODBC ソース エディター]\\ ([列] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="odbc-source-editor-columns-page"></a>[ODBC ソース エディター] ([列] ページ)
+# <a name="odbc-source-editor-columns-page"></a>[ODBC ソース エディター]\ ([列] ページ)
   **[ODBC ソース エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (入力元) 列にマップできます。  
   
  ODBC 入力元の詳細については、「 [ODBC Source](../../integration-services/data-flow/odbc-source.md)」を参照してください。  

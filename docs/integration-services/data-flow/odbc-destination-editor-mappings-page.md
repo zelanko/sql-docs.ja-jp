@@ -1,5 +1,5 @@
 ---
-title: "ODBC 変換先エディター (マッピング ページ) |Microsoft ドキュメント"
+title: "ODBC 変換先エディター\\ (マッピング ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="odbc-destination-editor-mappings-page"></a>[ODBC 変換先エディター] ([マッピング] ページ)
+# <a name="odbc-destination-editor-mappings-page"></a>[ODBC 変換先エディター]\ ([マッピング] ページ)
   **[ODBC 入力先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
  ODBC 入力先の詳細については、「 [ODBC Destination](../../integration-services/data-flow/odbc-destination.md)」を参照してください。  

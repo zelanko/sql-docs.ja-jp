@@ -1,5 +1,5 @@
 ---
-title: "スクリプト変換エディター (入力呼び出し力 ページ) |Microsoft ドキュメント"
+title: "スクリプト変換エディター\\ (入力呼び出し力 ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="script-transformation-editor-inputs-and-outputs-page"></a>[スクリプト変換エディター] ([入力および出力] ページ)
+# <a name="script-transformation-editor-inputs-and-outputs-page"></a>[スクリプト変換エディター]\ ([入力および出力] ページ)
   **[スクリプト変換エディター]** ダイアログ ボックスの **[入力および出力]** ページを使用すると、スクリプト変換の入力および出力を追加、削除、構成できます。  
   
 > [!NOTE]  

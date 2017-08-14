@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>[SSIS パッケージの保存] (SQL Server インポートおよびエクスポート ウィザード)
+# <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>[SSIS パッケージの保存]\ (SQL Server インポートおよびエクスポート ウィザード)
   指定した場合、**パッケージの実行を保存して**を SQL Server Integration Services (SSIS) パッケージとして、その設定を保存するページを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インポートおよびエクスポート ウィザードの番組**SSIS パッケージの保存**です。 このページでは、ウィザードによって作成されたパッケージを保存するための追加のオプションを指定します。  
 
 **[SSIS パッケージの保存]** ページに表示されるオプションは、SQL Server またはファイル システムにパッケージを保存するために **[パッケージの保存および実行]** ページで以前に行った選択によって異なります。 **[パッケージの保存および実行]** ページについては、「 [Save and Run Package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)」 ([パッケージの保存および実行]) を参照してください。

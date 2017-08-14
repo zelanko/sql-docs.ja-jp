@@ -1,5 +1,5 @@
 ---
-title: "Raw ファイル変換先エディター (接続マネージャー ページ) |Microsoft ドキュメント"
+title: "[Raw ファイル変換先エディター]\\ ([接続マネージャー] ページ) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="raw-file-destination-editor-connection-manager-page"></a>[RAW ファイル変換先エディター] ([接続マネージャー] ページ)
+# <a name="raw-file-destination-editor-connection-manager-page"></a>[RAW ファイル変換先エディター]\ ([接続マネージャー] ページ)
   ファイルに RAW データを書き込むための RAW ファイル変換先を構成するには、RAW ファイル変換先エディターを使用します。  
   
  **目的に合ったトピックをクリックしてください**  
