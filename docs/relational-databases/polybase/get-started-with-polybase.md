@@ -2,7 +2,7 @@
 title: "PolyBase の概要 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 7/13/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,22 +19,21 @@ helpviewer_keywords:
 - Azure blob storage export
 - Hadoop import, PolyBase getting started
 - Hadoop export, Polybase getting started
-ms.assetid: c71ddc50-b4c7-416c-9789-264671bd9ecb
 caps.latest.revision: 78
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
-ms.openlocfilehash: baf9d02b824a8aae2a282d0f6203791c4b72f1f8
+ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
+ms.openlocfilehash: b107ea3ebabbf959ee12b900885612df364dfc12
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="get-started-with-polybase"></a>PolyBase の概要
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  このトピックには、SQL Server インスタンス上の PolyBase の実行に関する基本事項が含まれています。
+  このトピックでは、SQL Server インスタンスでの PolyBase の実行に関する基本事項について説明します。
   
  次の手順を実行すると、次の結果が得られます。  
   
@@ -47,7 +46,7 @@ ms.lasthandoff: 07/14/2017
 -   PolyBase オブジェクトを使用するクエリの例を確認できる  
   
 ## <a name="prerequisites"></a>前提条件  
- インスタンス[SQL Server (64 ビット)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)次。  
+ 次のような [SQL Server (64 ビット)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) のインスタンス:  
   
 -   Microsoft .NET Framework 4.5。  
   
@@ -64,13 +63,13 @@ ms.lasthandoff: 07/14/2017
   
 -   Hadoop クラスター。 サポートされているバージョンについては、「 [PolyBase を構成する](#supported)」を参照してください。  
 
--   Azure Blob ストレージ
+-   Azure BLOB ストレージ
 
 > [!NOTE]
->   Hadoop に対して計算プッシュダウン機能を使用する予定の場合、ターゲットの Hadoop クラスターに HDFS のコア コンポーネントの Yarn/MapReduce があり、Jobhistory サーバーが有効であることを確認する必要があります。 PolyBase から MapReduce 経由でプッシュダウン クエリを送信し、JobHistory Server からステータスをプルします。 コンポーネントのいずれかがない場合は、クエリは失敗します。 
+>   Hadoop に対して計算プッシュダウン機能を使用する予定の場合、ターゲットの Hadoop クラスターに HDFS のコア コンポーネントの Yarn/MapReduce があり、Jobhistory サーバーが有効であることを確認する必要があります。 PolyBase から MapReduce 経由でプッシュダウン クエリを送信し、JobHistory Server からステータスをプルします。 いずれかのコンポーネントがない場合、クエリは失敗します。 
 
 ## <a name="install-polybase"></a>PolyBase のインストール  
- PolyBase をインストールしていない場合は、次を参照してください。 [PolyBase インストール](../../relational-databases/polybase/polybase-installation.md)です。  
+ PolyBase をインストールしていない場合は、「[PolyBase のインストール](../../relational-databases/polybase/polybase-installation.md)」をご覧ください。  
   
 ### <a name="how-to-confirm-installation"></a>インストールの確認方法  
  インストールが完了したら、次のコマンドを実行して、PolyBase が正常にインストールされていることを確認します。 PolyBase がインストールされている場合は 1 を返し、それ以外の場合は 0 を返します。  
@@ -79,21 +78,24 @@ ms.lasthandoff: 07/14/2017
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
-##  <a name="supported"></a> Configure PolyBase  
- をインストールしたら、Hadoop バージョンのいずれかを使用する SQL Server または Azure Blob ストレージを構成する必要があります。 PolyBase には、Hortonworks Data Platform (HDP) と Cloudera Distributed Hadoop (CDH) の 2 つの Hadoop プロバイダーがサポートしています。  サポートされている外部データ ソースは次のとおりです。  
+##  <a name="supported"></a> PolyBase を構成する  
+ インストールの後、Hadoop バージョンまたは Azure Blob Storage のどちらかを使うように SQL Server を構成する必要があります。 PolyBase は、Hortonworks Data Platform (HDP) と Cloudera Distributed Hadoop (CDH) の 2 つの Hadoop プロバイダーをサポートしています。  サポートされている外部データ ソースは次のとおりです。  
   
 -   Linux/Windows Server 上の Hortonworks HDP 1.3  
   
--   Linux 上の Hortonworks HDP 2.1 – 2.6
+-   Linux 上の Hortonworks HDP 2.1 ～ 2.6
 
 -   Windows Server 上の Hortonworks HDP 2.1 - 2.3  
   
 -   Linux 上の Cloudera CDH 4.3  
   
--   Cloudera CDH 5.1-5.5、Linux 上の 5.9 5.11  
+-   Linux 上の Cloudera CDH 5.1 – 5.5、5.9 - 5.12  
   
 -   Azure BLOB ストレージ  
-  
+ 
+Hadoop は、その新しいリリースの "Major.Minor.Version" パターンに従います。 サポートされているメジャー リリースおよびマイナー リリース内のすべてのバージョンがサポートされています。
+ 
+
 >  [!NOTE]
 > Azure Data Lake Store 接続は、Azure SQL Data Warehouse でのみサポートされています。
   
@@ -241,10 +243,15 @@ CREATE EXTERNAL DATA SOURCE AzureStorage with (
 --3:  Create an external file format.  
 -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
   
-CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
-        FORMAT_TYPE = DELIMITEDTEXT,   
-        FORMAT_OPTIONS (FIELD_TERMINATOR ='|',   
-                USE_TYPE_DEFAULT = TRUE)  
+CREATE EXTERNAL FILE FORMAT TextFileFormat
+WITH (  
+       FORMAT_TYPE = DELIMITEDTEXT,   
+       FORMAT_OPTIONS (
+         FIELD_TERMINATOR ='|',   
+         USE_TYPE_DEFAULT = TRUE
+       )
+);
+         
   
 --4: Create an external table.  
 -- The external table points to data stored in Azure storage.  

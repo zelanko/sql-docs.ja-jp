@@ -15,11 +15,11 @@ caps.latest.revision: 23
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b16232d4a183a75dd9cf76e57ca0751df19e3a2f
+ms.translationtype: HT
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 16e5ac5c58c00568541aa10352b11017c1bd9d3e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="columnstore-indexes---query-performance"></a>列ストア インデックス - クエリ パフォーマンス
@@ -116,13 +116,17 @@ ms.lasthandoff: 06/22/2017
  ¹SQL Server 2016、SQL データベース V12 Premium Edition、および SQL Data Warehouse に適用    
     
 ### <a name="aggregate-pushdown"></a>集計プッシュ ダウン    
- SCAN ノードから条件を満たす行をフェッチしてバッチ モードで値を集計する、集計計算の通常の実行パスです。  パフォーマンスは良好ですが、SQL Server 2016 では、次の条件を満たしていれば、集計操作を SCAN ノードにプッシュして、集計計算のパフォーマンスを大幅に (バッチ モードでの実行に加えてさらに) 向上できます。    
-    
--   サポートされる集計演算子は MIN、MAX、SUM、COUNT、AVG です。    
-    
--   64 ビット以下のすべてのデータ型がサポートされます。  たとえば、bigint はサイズが 8 バイトなのでサポートされますが、decimal (38,6) はサイズが 17 バイトなのでサポートされません。 また、文字列型はサポートされません。    
-    
--   集計演算子は SCAN ノードまたは GROUP BY を含む SCAN ノード上にある必要があります。    
+ SCAN ノードから条件を満たす行をフェッチしてバッチ モードで値を集計する、集計計算の通常の実行パスです。  パフォーマンスは良好ですが、SQL Server 2016 では、次の条件を満たしていれば、集計操作を SCAN ノードにプッシュして、集計計算のパフォーマンスを大幅に (バッチ モードでの実行に加えてさらに) 向上できます。 
+ 
+-    集計は、MIN、MAX、SUM、COUNT、COUNT(*) です。 
+-  集計演算子は SCAN ノードまたは GROUP BY を含む SCAN ノード上にある必要があります。
+-  この集計は、個別の集計ではありません。
+-  集計列は、文字列型の列ではありません。
+-  集計列は、仮想列ではありません。 
+-  入力と出力のデータ型は、次のいずれかで、64 ビットに収まる必要があります。
+    -  Tiny int、int、big int、small int、bit
+    -  Small money、money、decimal および有効桁数 <= 18 の numeric
+    -  Small date、date、datetime、datetime2、time
     
  集計プッシュ ダウンは、キャッシュに対応した実行時に圧縮/エンコード データを効率的に集計し、SIMD を活用することでさらに高速になります。    
     

@@ -1,11 +1,10 @@
 ---
 title: "Excel から SQL にデータをインポートする | Microsoft Docs"
 ms.custom: 
-ms.date: 03/27/2017
+ms.date: 08/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.assetid: 
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,23 +13,29 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 70a1fd4dbec68d22187585de69a1d603c39e259e
-ms.openlocfilehash: 3a978076b9776b57ffc996404c5f7773d7cf9094
+ms.sourcegitcommit: ab792aed71ab2e7837da9cf0073d4ff191ce5184
+ms.openlocfilehash: ce462c238c81a4a9fc82869a856ac13e9f112aee
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Excel から SQL Server または Azure SQL Database にデータをインポートする
-Excel ファイルからSQL Server または Azure SQL Database に、データをインポートする方法はいくつかあります。
--   SQL Server インポートおよびエクスポート ウィザード、Integration Services (SSIS)、または OPENROWSET 関数を使用して、Excel SQL から直接データをインポートできます。 
--   テキストとして Excel データを保存して、BULK INSERT ステートメント、BCP、または Azure Data Factory を使用できます。 ここでは、詳細な手順へのリンクがを付いたオプションの概要をご覧いただけます。
+Excel ファイルからSQL Server または Azure SQL Database に、データをインポートする方法はいくつかあります。 この記事では、これらの各オプションの概要と、詳細な手順へのリンクを提供します。
+-   次のいずれかのツールを使用することで、1 つの手順で Excel から SQL にデータをインポートできます。
+    -   SQL Server インポートおよびエクスポート ウィザード
+    -   SQL Server Integration Services (SSIS)
+    -   OPENROWSET 関数
+-   データをテキストとして保存してから、次のいずれかのツールを使用することで、2 つの手順でデータをインポートできます。
+    -   BULK INSERT ステートメント
+    -   BCP
+    -   Azure Data Factory
 
-> [!NOTE]
-> SSIS や Azure Data Factory のような複雑なツールとサービスの詳細については、この概要の範囲外です。 興味のあるソリューションの詳細については、チュートリアルおよび詳細情報へのリンクを参照してください。
+> [!IMPORTANT]
+> SSIS や Azure Data Factory のような複雑なツールとサービスの詳細については、この概要の範囲外です。 興味のあるソリューションの詳細については、詳細情報へのリンクを参照してください。
 
 ## <a name="sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザード
 
-各ウィザードのページをステップ実行して、Excel ファイルから直接データをインポートします。 必要に応じて、カスタマイズして再利用できる SQL Server Integration Services (SSIS) パッケージとして、インポート/エクスポートの設定を保存します。
+SQL Server インポートおよびエクスポート ウィザードのページをステップ実行して、Excel ファイルから直接データをインポートします。 必要に応じて、カスタマイズして再利用できる SQL Server Integration Services (SSIS) パッケージとして、インポート/エクスポートの設定を保存します。
 
 ![Excel データ ソースに接続する](media/excel-connection.png)
 
@@ -50,9 +55,11 @@ SSIS パッケージをビルドする方法の学習を開始するには、チ
 
 ## <a name="openrowset-and-linked-servers"></a>OPENROWSET およびリンク サーバー
 > [!NOTE]
-> Excel ファイルに接続する ACE プロバイダー (旧称 Jet プロバイダー) は、対話型のクライアント側での使用を対象としています。 特に自動化されたプロセスまたは並列で実行中のプロセスで、サーバー上の ACE プロバイダーを使用すると、予期しない結果になることがあります。
+> Excel データ ソースに接続する ACE プロバイダー (旧称 Jet プロバイダー) は、対話型のクライアント側での使用を対象としています。 特に自動化されたプロセスまたは並列で実行中のプロセスで、サーバー上の ACE プロバイダーを使用すると、予期しない結果になることがあります。
 
-`OPENROWSET` または `OPENDATASOURCE` 関数を使用して、Excel ファイルから直接データをインポートします。 このような使用方法は、*"分散クエリ"* と呼ばれます。
+### <a name="distributed-queries"></a>分散クエリ
+
+Transact-SQL `OPENROWSET` または `OPENDATASOURCE` 関数を使用して、Excel ファイルから直接データをインポートします。 このような使用方法は、*"分散クエリ"* と呼ばれます。
 
 分散クエリを実行する前に、次の例で示すように、`ad hoc distributed queries` サーバー構成オプションを有効にする必要があります。 詳しくは、「[ad hoc distributed queries サーバー構成オプション](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md)」を参照してください。
 
@@ -65,7 +72,7 @@ RECONFIGURE;
 GO
 ```
 
-次のコード サンプルでは、Excel `Customers` ワークシートから `OPENROWSET` を持つ新しい SQL Server テーブルにデータをインポートしています。
+次のコード サンプルでは、`OPENROWSET` を使用して、Excel `Data` ワークシートから新しいデータベース テーブルにデータをインポートしています。
 
 ```sql
 USE ImportFromExcel;
@@ -89,14 +96,16 @@ GO
 
 新しいテーブルを作成する代わりに、インポートされたデータを、*"既存"* テーブルに *"追加"* するには、前の例で使用された `SELECT ... INTO ... FROM ...` 構文ではなく `INSERT INTO ... SELECT ... FROM ...` 構文を使用します。
 
-Excel のデータをインポートせずに Excel のデータにクエリを実行するには、`SELECT ... FROM ...` 構文を使用します。
+Excel のデータをインポートせずに Excel のデータにクエリを実行するには、標準の `SELECT ... FROM ...` 構文を使用します。
 
 分散クエリの詳細については、次のトピックを参照してください。
 -   [分散クエリ](https://msdn.microsoft.com/library/ms188721(v=sql.105).aspx)。 (分散クエリは SQL Server 2016 でもサポートされていますが、この機能のドキュメントは更新されていません。)
 -   [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)
 -   [OPENDATASOURCE](../../t-sql/functions/openquery-transact-sql.md)
 
-Excel ファイルへの永続的な接続を *"リンク サーバー"* として構成することもできます。 次の例は、既存の Excel のリンク サーバー `EXCELLINK` の `Data` ワークシートからデータを、`Data_ls` という名前の新しい SQL Server テーブルにインポートしています。
+### <a name="linked-servers"></a>リンク サーバー
+
+Excel ファイルへの永続的な接続を *"リンク サーバー"* として構成することもできます。 次の例は、既存の Excel のリンク サーバー `EXCELLINK` の `Data` ワークシートからデータを、`Data_ls` という名前の新しいデータベース テーブルにインポートしています。
 
 ```sql
 USE ImportFromExcel;
@@ -147,7 +156,7 @@ Excel で **[ファイル] メニューから [名前をつけて保存]** を�
 
 ## <a name="bulk-insert-command"></a>BULK INSERT コマンド
 
-`BULK INSERT` は、SQL Server Management Studio から実行できるコマンドです。 次の例では、`Data.csv` コンマ区切りファイルから既存のテーブルにデータを読み込みます。
+`BULK INSERT` は、SQL Server Management Studio から実行できる Transact-SQL コマンドです。 次の例では、`Data.csv` コンマ区切りファイルから既存のデータベース テーブルにデータを読み込みます。
 
 ```sql
 USE ImportFromExcel;
@@ -166,24 +175,26 @@ GO
 
 ## <a name="bcp-tool"></a>BCP ツール
 
-BCP は、コマンド プロンプトから実行する SQL Server です。 次の例では、`Data.csv` CSV ファイルから SQL Server の既存の `Data_bcp` テーブルにデータを読み込みます。
+BCP は、コマンド プロンプトから実行するプログラムです。 次の例では、`Data.csv` コンマ区切りファイルから既存の `Data_bcp` データベース テーブルにデータを読み込みます。
 
 ```sql
 bcp.exe ImportFromExcel..Data_bcp in "D:\Desktop\data.csv" -T -c -t ,
 ```
 
-詳細については、次のトピックを参照してください。
+BCP の詳細については、次のトピックを参照してください。
 -   [bcp ユーティリティを使用した一括データのインポートとエクスポート](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
 -   [bcp ユーティリティ](../../tools/bcp-utility.md)
 -   [一括エクスポートまたは一括インポートのデータの準備](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
 
 ## <a name="copy-wizard-azure-data-factory"></a>コピー ウィザード (Azure Data Factory)
-各ウィザードのページをステップ実行して、テキストファイルとして保存したデータをインポートします。 コピー ウィザードの詳細については、次のトピックを参照してください。
+コピー ウィザードのページをステップ実行して、テキストファイルとして保存したデータをインポートします。
+
+コピー ウィザードの詳細については、次のトピックを参照してください。
 -   [Data Factory コピー ウィザード](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
 -   [チュートリアル: コピー アクティビティがあるパイプラインを Data Factory コピー ウィザードで作成する](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)。
 
 ## <a name="azure-data-factory"></a>Azure Data Factory
-Azure Data Factory に精通していて、Azure Data Factory のコピー ウィザードを実行したくない場合は、ファイル保存場所にあるテキスト ファイルから SQL Server または Azure SQL Database にコピーするコピー アクティビティでパイプラインを作成します。
+Azure Data Factory に精通していて、コピー ウィザードを実行したくない場合は、テキスト ファイルから SQL Server または Azure SQL Database にコピーするコピー アクティビティでパイプラインを作成します。
 
 これらの Data Factory のソースおよびシンクの使用に関する詳細については、次のトピックを参照してください。
 -   [ファイル システム](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
@@ -193,4 +204,8 @@ Azure Data Factory に精通していて、Azure Data Factory のコピー ウ�
 Azure Data Factory でデータをコピーする方法の学習を開始するには、次のトピックを参照してください。
 -   [コピー アクティビティを使用したデータの移動](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
 -   [チュートリアル: コピー アクティビティがあるパイプラインを Azure Portal で作成する](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+
+## <a name="next-steps"></a>次の手順
+
+興味のあるソリューションの詳細については、詳細情報へのリンクを参照してください。
 

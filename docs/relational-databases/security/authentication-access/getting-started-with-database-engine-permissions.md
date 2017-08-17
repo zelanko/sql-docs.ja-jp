@@ -16,11 +16,11 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 16d16229a267564977addc768e04e804d0b163cf
+ms.translationtype: HT
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 376e591e28bbdddbd635392b24c3d6652f3bd94d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>データベース エンジンの権限の概要
@@ -168,7 +168,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] プリンシパルとサーバーおよびデータベース オブジェクト間の関係を示す図については、「[権限の階層 &#40;データベース エンジン&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)」をご覧ください。  
   
 ## <a name="permissions-vs-fixed-server-and-fixed-database-roles"></a>権限対固定サーバーと固定データベース ロール  
- 固定サーバー ロールおよび固定データベース ロールの権限は似ていますが、詳細な権限がまったく同じということではありません。 たとえば、 `sysadmin` 固定サーバー ロールのメンバーには [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスのすべての権限があり、 `CONTROL SERVER` 権限のログインも同様です。 ただし、 `CONTROL SERVER` 権限を付与してもログインは sysadmin 固定サーバー ロールのメンバーにはならず、  `sysadmin` 固定サーバー ロールにログインを追加しても、ログインに  `CONTROL SERVER` 権限は明示的には付与されません。 ストアド プロシージャは、詳細な権限は確認せずに固定ロールを確認することがあります。 たとえば、データベースをデタッチするには、 `db_owner` 固定データベース ロールのメンバーシップが必要です。 同じ `CONTROL DATABASE` 権限では不十分です。 これらの 2 つのシステムは並行して運用されますが、互いに干渉することはほとんどありません。 マイクロソフトでは、可能な限り固定ロールではなくより新しい詳細な権限システムを使用することをお勧めしています。  
+ 固定サーバー ロールおよび固定データベース ロールの権限は似ていますが、詳細な権限がまったく同じということではありません。 たとえば、 `sysadmin` 固定サーバー ロールのメンバーには [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスのすべての権限があり、 `CONTROL SERVER` 権限のログインも同様です。 ただし、`CONTROL SERVER` アクセス許可を付与してもログインは sysadmin 固定サーバー ロールのメンバーにはならず、`sysadmin` 固定サーバー ロールにログインを追加しても、ログインに `CONTROL SERVER` アクセス許可は明示的には付与されません。 ストアド プロシージャは、詳細な権限は確認せずに固定ロールを確認することがあります。 たとえば、データベースをデタッチするには、 `db_owner` 固定データベース ロールのメンバーシップが必要です。 同じ `CONTROL DATABASE` 権限では不十分です。 これらの 2 つのシステムは並行して運用されますが、互いに干渉することはほとんどありません。 マイクロソフトでは、可能な限り固定ロールではなくより新しい詳細な権限システムを使用することをお勧めしています。
   
 ## <a name="monitoring-permissions"></a>権限の監視  
  次のビューは、セキュリティ情報を返します。  

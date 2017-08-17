@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5486c08226959ecb96431659ce2b865160d20680
+ms.translationtype: HT
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: da7bf96dbacf57f7086c5cfda298b2e810c43a07
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server トランザクション ログのアーキテクチャと管理ガイド
@@ -217,7 +217,7 @@ LSN 148 はトランザクション ログの最後のレコードです。 LSN 
 ## <a name="additional-reading"></a>その他の情報  
  トランザクション ログに関するその他の情報については、次の記事および書籍を参照することをお勧めします。  
   
- [SQL Server のログ記録と復旧について (著者: Paul Randall)](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
+ [SQL Server のログ記録と復旧について (著者: Paul Randal)](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
   
  [SQL Server Transaction Log Management (SQL Server のトランザクション ログ管理) (著者: Tony Davis、Gail Shaw)](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
