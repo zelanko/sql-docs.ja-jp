@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Data Tools (SSDT) の変更ログ | Microsoft Docs"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 08/07/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -13,18 +13,68 @@ ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
-ms.openlocfilehash: 243d2e6187a58554cee80066912de7dfcc0c52fc
+ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
+ms.openlocfilehash: 51cfeaf15f9d7a01ce55968907e0074f7f2cb955
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の変更ログ
 この変更ログは、[Visual Studio 2015 用 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx) のものです。  
   
 新機能および変更点の詳細については、[SSDT チーム ブログ](https://blogs.msdn.microsoft.com/ssdt/)をご覧ください。
+
+
+
+## <a name="ssdt-172"></a>SSDT 17.2
+ビルド番号: 14.0.61707.300
+
+### <a name="whats-new"></a>新機能
+
+
+**AS プロジェクト:**
+- 1400 互換性レベル表形式モデルでの高度なセキュリティの [*ロール*] ダイアログでオブジェクト レベルのセキュリティを構成できるようになりました。
+- VS2017 の SSDT AS プロジェクトの AS Azure モデルにメール アドレスがないユーザーに対する新しい AAD ロール メンバー選択。
+- ADAL 資格情報のキャッシュ動作をカスタマイズするための SSDT AS テーブル プロジェクトでの新しい AS Azure の "Always Prompt" プロジェクト プロパティ。
+
+
+### <a name="bug-fixes"></a>バグの修正
+
+**全般**
+- SQL Server 2017 の参照のブランド化が更新されました。
+
+**AS プロジェクト**
+- DAX メジャーの変更とその他のモデルの編集をコミットするときのエクスペリエンスを向上させるため、大幅なパフォーマンスの修正が行われました。
+- 1400 互換性レベル表形式モデルを使用する Analysis Services プロジェクトでの Power Query 統合で複数の問題を修正しました。
+- VS2017 でデザイン集計デザイナーのみが読み込みに失敗する場合がある、多次元プロジェクトの問題を修正しました。
+- Analysis Services 多次元 DSV ダイアグラムで項目をドラッグしたときに VS 2017 がクラッシュする場合がある問題を修正しました。
+- [展開] ダイアログが Visual Studio の上のフォアグラウンドに常に表示されない AS プロジェクトの問題を修正しました。
+- Data Marketplace から Analysis Services をデータ ソースとしてインポートするのは、サービスが停止されたため、削除されました。
+- 表形式モデル エクスプローラーで既存のデータ ソースから新しいテーブルのインポート後に、テーブル デザイナーが無効になったままになる問題を修正しました。
+- [モデル] メニュー項目で [データ ソースからのインポート] または [データ ソースの追加] が間違ったコンテキストで非表示のままになる問題を修正しました。
+- フォーカスがメジャーを作成するために使用された列に戻るのを避けるため、表形式モデル エクスプローラーからメジャーを作成する際のエクスペリエンスが向上しました。
+- AS の表形式プロジェクトの統合ワークスペースから明示的ワークスペース サーバーに切り替えると、古いデータベース ファイルにクリーンアップされるようになりました。
+- [行レベルセキュリティ] チェックボックス UI の状態が、基になるオブジェクトの実際の状態に関係なく、最初はオフになっている、AS 表形式 1400 モデル プロジェクトの問題を修正しました。
+- Power Query を使用してテキスト ファイルまたは Excel ファイルを 1400 互換モード表形式モデルにインポートして、ハンドルされない例外が発生した場合に、クラッシュが発生することがある問題を修正しました。
+- AS 表形式モデル デザイナーの DAX 数式の編集コントロール内のスクロールバーのつまみで発生することがある問題を修正しました。
+- PowerQuery マッシュアップ データ ソースにユーザー名認証またはパスワード認証が含まれていると、変更できない問題を修正しました。
+- 接続文字列に追加のプロパティを設定するときに、データ ソースの接続を妨げる可能性のある問題を修正しました。
+- 複数の AS 表形式モデル プロジェクトが読み込まれるときに、最初にデザイナー内のいずれともやり取りをすることなく、2 番目のモデル デザイナーが閉じて VS がクラッシュする可能性がある問題を修正しました。
+- KPI の書式設定に対して行った編集が保持されない場合がある問題を修正しました。
+- 数式バーが表示されたかどうかについて、メニューのチェック状態が正しく表示されない PowerQuery UI の問題を修正しました。
+- 表形式モデル エクスプローラーから [データ ソースの変更] メニューを選択すると、VS がクラッシュすることがある PowerQuery データソースを使用した AS 表形式 1400 互換性レベル プロジェクトの問題を修正しました。
+- 1400 表形式モデルの読み込み時に、"*ファイルまたはアセンブリ 'Microsoft.ProBI.MashupLibrary' を読み込むことができませんでした*" というエラーが表示されることがある断続的な問題を修正しました。
+
+**RS プロジェクト**
+- RS ルーラーとパラメーター ボックスの設定に対するユーザーの選択は、セッション間で正しく記憶されます。
+
+**IS プロジェクト**
+- ADO/ADO.NET ForEachLoop コンテナーが正しく表示されない問題を修正しました
+- 一部のタスク/コンポーネント/ウィザードがローカライズされていない問題を修正しました
+- 最新の *TargetServerVersion* が "SQL Server vNext" から "SQL Server 2017" に変更されました
+
 
 ## <a name="ssdt-171"></a>SSDT 17.1
 ビルド番号: 14.0.61705.170
@@ -383,135 +433,10 @@ SSDT テーブルに内部 SSAS インスタンスが含まれるようになり
 
 SSDT の一般提供 (GA) がリリースされました。 2016 年 6 月の SSDT GA の更新では、SQL Server 2016 RTM の最新の更新プログラムのサポートとさまざまなバグ修正が追加されました。 詳しくは、「[SQL Server Data Tools GA update for June 2016](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/)」(2016 年 6 月の SQL Server Data Tools の GA 更新) をご覧ください。
 
-      
-
-## <a name="ssdt-april-for-sql-server-2016-rc3"></a>SSDT 4 月 (SQL Server 2016 RC3 用)  
-リリース日: 2016 年 4 月 15 日  
-  
-ビルド番号: 14.0.60413.0  
-  
-**SQL Server データベース**  
-* **Always Encrypted のサポート:** Always Encrypted の列を格納するデータベースについては、SSDT と DacFx を使用したデータベースの表示と編集、およびデータベース プロジェクトからデータベースへの発行が可能です。 列暗号化が存在する列の変更のサポートは、今後のリリースで導入される予定です。  
-* **接続ダイアログと SQL Server オブジェクト エクスプローラー:** 複数の修正と強化が行われました。  
-    * 接続の詳細プロパティを表示する [詳細] ページが見直され、複数行のボックスに接続文字列全体を表示し、高 DPI のコンピューターにおけるサポートを強化しました。  
-    * 詳細な接続エラーを含む従来のエラー ダイアログに戻しました。 これにより、わかりやすいエラー メッセージとスタック トレースを使用してログインの問題を診断できるため、問題の診断に必要な情報を DBA または CSS で取得できます。  
-    * 最小限のアクセス許可を持つユーザーについて、接続ダイアログと SQL Server オブジェクト エクスプローラーにおけるデータベースの表示やセキュリティ フォルダーの表示などに関するいくつかの問題を修正しました。  
-    * データベース ノードを展開してすべての DB を表示する際の Azure SQL DB のパフォーマンスを改善しました。  
-* **SSDT のインストーラー:**  
-    * アンインストール時に .NET がダウンロードされる問題を修正しました。  
-    * 現在は、高 DPI のコンピューターでインストーラーのサイズが正しく設定されています。  
-    * 新しいバージョンの SQL Server が存在する場合に SSDT のインストールをブロックするバージョン チェックを削除しました。  
-    * スキーマ比較: Visual Studio において複数の項目のチェック/チェック解除に時間がかかるパフォーマンスの問題を修正しました。  
-    * x86 バージョンの SQL Server 2016 が存在しないため、x86 コンピューターでは LocalDB 2014 の使用がサポートされます。  
-* **ビルドと配置:**  
-    * テンポラル テーブルで計算列がサポートされない問題を修正しました。  
-    * Azure V12 への配置の際には、[シングル ユーザー モードで配置スクリプトを実行する] オプションが無視されます (クラウド環境ではこのオプションがサポートされないため)。  
   
   
-## <a name="ssdt-hotfix-for-sql-server-2016-rc2"></a>SSDT 修正プログラム (SQL Server 2016 RC2 用)  
-リリース日: 2016 年 4 月 5 日  
+## <a name="additional-resources"></a>その他のリソース
   
-ビルド番号: 14.0.60329.0  
-  
-このビルドには、SQL Server Integration Services 用の機能を提供する SSDT のバージョンの修正プログラムが含まれています。 また、ビルド 14.0.60316.0 を SQL Server 2016 の Analysis Services および Reporting Services と共に使用することもできます。   
-  
-この修正プログラムを取得するには、[このブログ投稿のダウンロード リンク](https://blogs.msdn.microsoft.com/ssdt/2016/04/05/ssdt-preview-update-rc2/)を使用してください。  
-  
-レポート開発者がこのビルドの SSDT を使用して新しいレポートを作成する場合は、この修正プログラムにのみ見られる SSRS レポートにおける一時的な問題について、[既知の問題と回避策をご覧ください](https://blogs.msdn.microsoft.com/ssdt/2016/04/05/ssdt-preview-update-rc2/)。  
-  
-## <a name="ssdt-hotfix-for-sql-server-2016-rc0"></a>SSDT 修正プログラム (SQL Server 2016 RC0 用)  
-リリース日: 2016 年 3 月 18 日  
-  
-ビルド番号: 14.0.60316.0  
-  
-このビルドには、SQL Server 2016 RC0 用の機能を提供する SSDT のバージョンの修正プログラムが含まれています。 現時点では、SSDT の RC1 バージョンはありません。 ビルド 14.0.60316.0 は、RC0 または RC1 の SQL Server 2016 と共に使用することができます。  
-      
-## <a name="ssdt-february-2016-preview-for-sql-server-2016-rc0"></a>SSDT 2016 年 2 月プレビュー (SQL Server 2016 RC0 用)  
-リリース日: 2016 年 3 月 7 日  
-  
-ビルド番号: 14.0.60305.0  
-  
--   **SQL Server プロジェクト テンプレート**  
-  
-    この SSDT プレビュー リリースに関するお知らせはありません。 このリリースのその他の機能については、「[データベース エンジンの新機能](https://msdn.microsoft.com/library/bb510411.aspx)」をご覧ください。  
-  
--   **SSIS パッケージ プロジェクト テンプレート**  
-  
-    SSIS デザイナーは、SQL Server 2016、2014、または 2012 用のパッケージを作成および管理します。 新しいテンプレートは、パーツとして名前が変更されました。 SSIS の Hadoop コネクタは ORC 形式をサポートします。 詳しくは、「[Integration Services の新機能](https://msdn.microsoft.com/library/bb522534.aspx)」をご覧ください。  
-  
--   **SSAS プロジェクト テンプレート (表形式モデル プロジェクト)**  
-  
-    Analysis Services に対する今月の更新では、表形式モデル用の表示フォルダーのサポートを提供します。また、新しい SQL Server 2016 互換性レベルで作成されたモデルが SSIS パッケージでサポートされるようになりました。 詳しくは、 「[Analysis Services の新機能 (ブログ投稿)](http://blogs.msdn.com/b/analysisservices/archive/2016/01/28/what-s-new-for-sql-server-2016-analysis-services-in-ctp3-3.aspx)」をご覧ください。  
-  
--   **SSRS レポート プロジェクト テンプレート**  
-  
-    この SSDT プレビュー リリースに関するお知らせはありません。 このリリースのその他の機能については、「[Reporting Services の新機能](https://msdn.microsoft.com/library/ms170438.aspx)」をご覧ください。  
-  
-## <a name="ssdt-january-2016-preview"></a>SSDT 2016 年 1 月プレビュー  
-リリース日: 2016 年 2 月 4 日  
-  
-ビルド番号: 14.0.60203.0  
-  
--   **SQL Server プロジェクト テンプレート**  
-  
-    この SSDT プレビュー リリースに関するお知らせはありません。 この CTP のその他の機能については、「[データベース エンジンの新機能](https://msdn.microsoft.com/library/bb510411.aspx)」をご覧ください。  
-  
--   **SSIS パッケージ プロジェクト テンプレート**  
-  
-    ODBC 入力元と変換先コンポーネント、CDC 制御タスク、  
-      CDC ソースと分割コンポーネント、Microsoft Connector for SAP BW、Integration Services Feature Pack for Azure のサポートが追加されています。 詳しくは、「[Integration Services の新機能](https://msdn.microsoft.com/library/bb522534.aspx)」をご覧ください。  
-  
--   **SSAS プロジェクト テンプレート**  
-  
-    互換性レベル 1200 の表形式モデル、DirectQuery モードのモデルの計算列と行レベルのセキュリティ、モデル メタデータの翻訳、SSIS Analysis Services DDL 実行タスクでの TMSL スクリプトの実行の機能強化に加え多くのバグ修正が含まれています。  
-    詳しくは、「[Analysis Services の新機能 (msdn)](https://msdn.microsoft.com/library/bb522628.aspx)」または「[Analysis Services の新機能 (ブログ投稿)](http://blogs.msdn.com/b/analysisservices/archive/2016/01/28/what-s-new-for-sql-server-2016-analysis-services-in-ctp3-3.aspx)」をご覧ください。  
-  
--   **SSRS レポート プロジェクト テンプレート**  
-  
-    この SSDT プレビュー リリースに関するお知らせはありません。 この CTP のその他の機能については、「[Reporting Services の新機能](https://msdn.microsoft.com/library/ms170438.aspx)」をご覧ください。  
-  
-## <a name="ssdt-december-2015-preview"></a>SSDT 2015 年 12 月プレビュー  
-  
--   **SQL Server プロジェクト テンプレート**では以下のバグ修正が含まれています。[接続] ダイアログ ボックス。最近の履歴リスト。データベース一覧の読み込み時における接続プロパティに設定されている認証コンテキストの正しい使用。  
-  
-    -   テスト接続タイムアウト値を 15 秒に変更しました。  
-  
-    -   データベース一覧を読み込むときにクライアント IP が登録されていない場合は Azure SQL Database サーバーのファイアウォール ルールを作成します。  
-  
-    -   SQL Server 2016 CTP3.2 機能のプログラミング サポート。  
-  
--   **SSAS プロジェクト テンプレート**では、モデル内で定義済みの DAX 式やその他のオブジェクトに基づく計算テーブルの作成がサポートされるようになりました。  
-  
--   **SSIS パッケージ プロジェクト テンプレート**の追加機能には、Avro ファイル形式と Kerberos 認証用の SSIS Hadoop コネクタのサポートが含まれています。   
-    SSIS 2012 と 2014 に対する SSIS デザイナーのサポートは、この更新プログラムにはまだ含まれていません。  
-  
-## <a name="ssdt-november-2015-preview"></a>SSDT 2015 年 11 月プレビュー  
-  
--   **SQL Server プロジェクト テンプレート**:  SQL Server と Azure SQL Database の接続エクスペリエンス向上のプレビュー。  
-  
--   **SSIS パッケージ プロジェクト テンプレート**:  SSIS カタログのパフォーマンス向上: SSIS 管理者以外のユーザーのための SSIS カタログ ビューのほとんどで、パフォーマンスが向上しています。  
-  
--   **SSAS プロジェクト テンプレート**には、Analysis Services の表形式モデル プロジェクトの機能強化が含まれています。 **[コードの表示]** コマンドを使って JSON でのモデル定義を表示できます。 JSON エディターを使うには、フル機能エディションの Visual Studio 2015 を入手する必要があります。 [Visual Studio Community エディション](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)を無料でダウンロードできます。  
-  
-## <a name="ssdt-october-2015-preview"></a>SSDT 2015 年 10 月プレビュー  
-  
--   BI 用の新しいプロジェクト テンプレート (Analysis Services モデル、Reporting Services レポート、Integration Services パッケージ)。 すべての SQL Server プロジェクト テンプレートが 1 つの SSDT でそろうようになりました。  
-  
--   SSIS の新機能 (Hadoop コネクタ、制御フロー テンプレート、データ フロー タスクの最大バッファー サイズの緩和など)。  
-  
--   SQL Server 2016 CTP 3.0 機能をリレーショナル データベース プロジェクトに対してサポート。  
-  
--   SSIS でのさまざまなバグ修正と Windows 7 OS のサポート。  
-  
-## <a name="ssdt-september-2015-preview"></a>SSDT 2015 年 9 月プレビュー  
-  
--   複数言語サポートがこのプレビューで新たに追加されました。  
-  
-## <a name="ssdt-august-2015-preview"></a>SSDT 2015 年 8 月プレビュー  
-  
--   SSDT をインストールするための新しいスタンドアロンの Setup.exe。  変更済みバージョンの SQL Server セットアップを使う必要はなくなりました。 このバージョンの SSDT には、SQL Server または Azure SQL Database に配置されるリレーショナル データベースを構築するためのプロジェクト テンプレートが含まれています。  
-  
-## <a name="see-also"></a>参照  
 [SQL Server Data Tools &#40;SSDT&#41; のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [以前のリリースの SQL Server Data Tools (SSDT と SSDT-BI)](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
 [データベース エンジンの新機能](https://msdn.microsoft.com/library/bb510411.aspx)  
