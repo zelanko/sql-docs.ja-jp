@@ -64,7 +64,7 @@ ms.lasthandoff: 08/03/2017
   
  プロセス実行タスクの各種プロパティを設定する際にも、式を使用できます。  
   
- **StandardInputVariable** プロパティを使用して入力を提供するようにプロセス実行タスクを構成した場合は、アプリケーションから **Console.ReadLine** メソッドを呼び出して、入力を読み取ります。 詳細については、 [](http://go.microsoft.com/fwlink/?LinkId=129201)クラス ライブラリで、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Class Library.  
+ **StandardInputVariable** プロパティを使用して入力を提供するようにプロセス実行タスクを構成した場合は、アプリケーションから **Console.ReadLine** メソッドを呼び出して、入力を読み取ります。 詳細については、 [Console.ReadLine メソッド](http://go.microsoft.com/fwlink/?LinkId=129201)クラス ライブラリで、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Class Library.  
   
  **Arguments** プロパティを使用して入力を提供するようにプロセス実行タスクを構成した場合は、次のいずれかの手順を実行して、引数を取得します。  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 08/03/2017
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  
   
-     詳細については、 [のリファレンスで、](http://go.microsoft.com/fwlink/?LinkId=129200)My.Application.CommandLineArgs プロパティ [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] のトピックを参照してください。  
+     詳細については、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]のリファレンスで、[My.Application.CommandLineArgs プロパティ](http://go.microsoft.com/fwlink/?LinkId=129200) のトピックを参照してください。  
   
 -   Microsoft Visual C# を使用してアプリケーションを作成する場合は、 **Main** メソッドを使用します。  
   

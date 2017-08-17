@@ -28,7 +28,7 @@ ms.lasthandoff: 08/02/2017
 使用して変換されたオブジェクトが正常に同期後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、DB2 からからデータを移行することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
   
 > [!IMPORTANT]  
-> 使用されているエンジンがサーバー側のデータ移行のエンジンの場合は、次に、データを移行する前にインストールしてください、SSMA DB2 拡張機能パックおよび SSMA を実行しているコンピューター上の DB2 プロバイダー。 SQL Server エージェント サービスを実行する必要があります。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SSMA コンポーネントを SQL サーバーをインストールします。。](http://msdn.microsoft.com/en-us/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
+> 使用されているエンジンがサーバー側のデータ移行のエンジンの場合は、次に、データを移行する前にインストールしてください、SSMA DB2 拡張機能パックおよび SSMA を実行しているコンピューター上の DB2 プロバイダー。 SQL Server エージェント サービスを実行する必要があります。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SSMA コンポーネントを SQL サーバーをインストールします。](http://msdn.microsoft.com/en-us/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
   
 ## <a name="setting-migration-options"></a>移行オプションの設定  
 移行する前にデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、プロジェクトの移行オプションの確認、**プロジェクト設定** ダイアログ ボックス。  
