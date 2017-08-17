@@ -1,5 +1,5 @@
 ---
-title: "[レポート サーバー ジョブのキャンセル] (Management Studio) | Microsoft Docs"
+title: "[レポート サーバー ジョブのキャンセル]\\(Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -24,7 +24,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="cancel-report-server-jobs-management-studio"></a>[レポート サーバー ジョブのキャンセル] (Management Studio)
+# <a name="cancel-report-server-jobs-management-studio"></a>[レポート サーバー ジョブのキャンセル]\(Management Studio)
   実行中のレポートの表示や実行のキャンセルを行うには、 **[レポート サーバー ジョブのキャンセル]** ダイアログ ボックスを使用します。 このダイアログ ボックスには、レポート サーバーで現在実行中のすべてのジョブが表示されます。 現在処理中のジョブを一時停止または再開することはできませんが、すべてのジョブ、または時間がかかりすぎて完了できない場合は個々のジョブをキャンセルできます。  
   
  ユーザー ジョブとシステム ジョブをキャンセルできます。  

@@ -1,5 +1,5 @@
 ---
-title: "[フィルター] ([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー) | Microsoft Docs"
+title: "[フィルター]\\([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -26,7 +26,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="dataset-properties-dialog-box-filters"></a>[フィルター] ([データセットのプロパティ] ダイアログ ボックス)
+# <a name="dataset-properties-dialog-box-filters"></a>[フィルター]\([データセットのプロパティ] ダイアログ ボックス)
   **[データセットのプロパティ]** ダイアログ ボックスの **[フィルター]** を選択すると、データセットに対するフィルターを作成できます。  
   
 ## <a name="options"></a>オプション  
