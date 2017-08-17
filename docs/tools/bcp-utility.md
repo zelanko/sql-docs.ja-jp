@@ -149,7 +149,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |*code_page*|850 などの特定のコード ページ番号を指定します。<br /><br /> バージョン 13 ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) より前のバージョンでは、コード ページ 65001 (UTF-8 エンコード) はサポートされません。 バージョン 13 以降では、UTF-8 エンコードを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の前のバージョンにインポートできます。|  
   
  **-d** ***database_name***<a name="d"></a>   
- 接続先のデータベースを指定します。 既定では、bcp.exe はユーザーの既定のデータベースに接続します。 **-d** *database_name* と、3 つの部分で構成される名前 (*database_name.schema.table*, passed as the first parameter to bcp.exe) is specified, an error will occur because you cannot specify the database name twice. *database_name* がハイフン (-)、またはスラッシュ (/) から始まる場合は、 **-d** とデータベース名の間に空白を入れないでください。  
+ 接続先のデータベースを指定します。 既定では、bcp.exe はユーザーの既定のデータベースに接続します。 **-d** *database_name* と、3 つの部分で構成される名前 (*database_name.schema.table*、bcp.exe の最初のパラメーターとして渡される) を指定した場合、データベース名は 2 回指定できないため、エラーが発生します。*database_name* がハイフン (-)、またはスラッシュ (/) から始まる場合は、**-d** とデータベース名の間に空白を入れないでください。  
   
  **-e** ***err_file***<a name="e"></a>  
  **bcp** ユーティリティがファイルからデータベースに転送できなかったすべての行を格納するエラー ファイルの完全パスを指定します。 **bcp** コマンドからのエラー メッセージは、ユーザーのワークステーションに送られます。 このオプションを指定しないと、エラー ファイルは作成されません。  

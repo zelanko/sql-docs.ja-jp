@@ -190,14 +190,14 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、�
 |**[ヘルス モニターの既定のポーリング間隔 (秒)]**|再生中のヘルス モニターのポーリング間隔を秒単位で指定します。 既定値は 60 秒です。 ユーザーはこの値を指定することで、終了するプロセスを決定するためにヘルス モニターがポーリングする頻度を設定できます。
 ## <a name="source-table-database-engine-tuning-advisor-select-workload-table"></a>ソース テーブル (データベース エンジン チューニング アドバイザーの選択のワークロード テーブル)
 Microsoft SQL Server Profiler および チューニング アドバイザーでは、このダイアログ ボックスを使用してテーブルを選択します。  
-- Profiler では、 **[基になるテーブル]** ダイアログ ボックスを使用して、トレース テーブルの基になるテーブルを指定します。 This is a table from which a trace is loaded, and the contents of which are viewed or used for replaying the trace.  
+- Profiler では、 **[基になるテーブル]** ダイアログ ボックスを使用して、トレース テーブルの基になるテーブルを指定します。 これは、トレースの読み込み元のテーブルです。このテーブルの内容が、表示されたり、トレースを再生するために使用されたりします。  
 - チューニング アドバイザーでは、 **[ワークロード テーブルの選択]** ダイアログ ボックスを使用して、チューニング ワークロードとして使用する profiler トレース情報が格納されているデータベース テーブルを選択したり、チューニング分析を開始する前にテーブルの内容をプレビューしたりします。  
 
 |アイテム|Description
 |---|---
 |**SQL Server**|現在接続されている SQL Server のインスタンスを指定します。 このフィールドには自動的に値が入力され、更新することはできません。  
 |**データベース**|トレース テーブルがあるデータベースを指定します。  
-|**所有者**|Specifies the owner of the trace table. このフィールドは、 **dbo**として自動的に入力されます。  
+|**所有者**|トレース テーブルの名前を指定します。 このフィールドは、 **dbo**として自動的に入力されます。  
 |**Table**|トレースの読み込み元のトレース テーブルの名前を指定します。  
 ## <a name="destination-table"></a>[ターゲット テーブル]
 **[挿入先テーブル]** ダイアログ ボックスを使用すると、トレースを格納するテーブルを指定できます。  
@@ -205,7 +205,7 @@ Microsoft SQL Server Profiler および チューニング アドバイザーで
 |---|---
 |**SQL Server**|現在接続されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを指定します。 このフィールドには自動的に値が入力され、更新することはできません。 サーバーを変更するには、 **[キャンセル]** をクリックして、トレース テーブルを格納する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。  
 |**データベース**|トレース テーブルを格納するデータベースを指定します。  
-|**所有者**|Specifies the owner of the trace table. このフィールドは、 **dbo**として自動的に入力されます。  
+|**所有者**|トレース テーブルの名前を指定します。 このフィールドは、 **dbo**として自動的に入力されます。  
 |**Table**|トレースを格納するテーブルの名前を指定します。  
 ## <a name="replay-configuration"></a>構成の再生
 ### <a name="basic-replay-options"></a>基本再生オプション
