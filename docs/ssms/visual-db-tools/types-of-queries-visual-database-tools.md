@@ -20,11 +20,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 14a314fc77534de5378a38de50e1768d25dc5bda
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="types-of-queries-visual-database-tools"></a>クエリの種類 (Visual Database Tools)
@@ -34,7 +34,7 @@ ms.lasthandoff: 06/22/2017
 [サポートされるクエリの種類 (Visual Database Tools)](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
 クエリおよびビュー デザイナーで使用できるクエリの種類について説明します。  
   
-[フルテキスト検索クエリの作成 &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)  
+[フルテキスト検索クエリの作成 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)  
 フルテキスト インデックス列を検索するクエリの作成方法を説明します。  
   
 [結果の挿入クエリの作成 (Visual Database Tools)](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)  

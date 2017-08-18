@@ -19,15 +19,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7190609525c847d4a7ff62899e2e5879d41e04af
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>クエリへの列の追加 (Visual Database Tools)
-クエリで列を使用するには、クエリに列を追加する必要があります。 列の追加は、クエリ出力に列を追加する場合、列を並べ替える場合、列の内容を検索する場合、または列の内容を集計する場合に行います。 クエリで使用する列のうち、クエリを実行したときに結果ペインに含める列を指定できます。 詳細については、「 [Remove Columns from Query Results &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md)」を参照してください。  
+クエリで列を使用するには、クエリに列を追加する必要があります。 列の追加は、クエリ出力に列を追加する場合、列を並べ替える場合、列の内容を検索する場合、または列の内容を集計する場合に行います。 クエリで使用する列のうち、クエリを実行したときに結果ペインに含める列を指定できます。 詳細については、「 [クエリ結果からの列の削除 (Visual Database Tools)](../../ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md)」を参照してください。  
   
 > [!NOTE]  
 > 列のデータ型をクエリおよびビュー デザイナーに表示するには、 **ダイアグラム ペイン** でテーブルまたはテーブル値オブジェクトを選択して、プロパティ ウィンドウの [列一覧] をクリックします。 次に省略記号 ( **[...]** ) をクリックすると、 **[列一覧]** ダイアログ ボックスが開きます。  

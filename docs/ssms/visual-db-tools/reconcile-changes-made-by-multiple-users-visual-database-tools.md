@@ -18,18 +18,18 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 65aad0bfb2f6ce9e9ce5987ea47d4858d54c6e9e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>複数のユーザーによる変更の調整 (Visual Database Tools)
 マルチユーザー環境では、同一のオブジェクトに複数のユーザーが同時に変更を加える場合があります。 この現象は、テーブル デザイナーまたはデータベース ダイアグラム デザイナーでオブジェクトの構造を操作しているときに発生する可能性があります。また、クエリおよびビュー デザイナーの結果ペインに返された結果の値に、他のユーザーが変更を加えている場合もあります。 こうした現象により、解決を必要とする競合が発生する可能性があります。  
   
 ## <a name="conflicts-in-the-table-or-database-diagram-designers"></a>テーブル デザイナーまたはデータベース ダイアグラム デザイナーでの競合  
-たとえば、テーブル デザイナーでテーブルを操作しているときに、他のユーザーが同じテーブルまたは関連するテーブルを削除したり、名前を変更したりする可能性があります。 テーブルを保存しようとすると、 [Database Changes Detected Dialog Box &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md) によって、テーブルを前回開いた後でデータベースが更新されたことが通知されます。  
+たとえば、テーブル デザイナーでテーブルを操作しているときに、他のユーザーが同じテーブルまたは関連するテーブルを削除したり、名前を変更したりする可能性があります。 テーブルを保存しようとすると、 [[データベースの変更を確認] ダイアログ ボックス (Visual Database Tools)](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md) によって、テーブルを前回開いた後でデータベースが更新されたことが通知されます。  
   
 このダイアログ ボックスには、テーブルを保存する結果として影響を受けるデータベース オブジェクトの一覧も表示されます。 この時点で、次のいずれかの処理を実行できます。  
   

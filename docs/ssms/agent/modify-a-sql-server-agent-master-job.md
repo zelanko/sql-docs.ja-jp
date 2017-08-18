@@ -18,23 +18,23 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 78567637cde259cfe36cbcffd6cc9b0cc253b9f1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブの変更
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント マスター ジョブを変更する方法については、次のトピックを参照してください。  
   
-[SQL Server エージェントのマスター ジョブのスケジューリングの詳細の変更](../../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
+[Change the Scheduling Details for a SQL Server Agent Master Job](../../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
   
-[SQL Server エージェントのマスター ジョブへのステップの追加](../../ssms/object/add-steps-to-a-sql-server-agent-master-job.md)  
+[Add Steps to a SQL Server Agent Master Job](../../ssms/object/add-steps-to-a-sql-server-agent-master-job.md)  
   
-[SQL Server エージェントのマスター ジョブのステップの変更](../../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md)  
+[Change Steps of a SQL Server Agent Master Job](../../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md)  
   
-[SQL Server エージェントのマスター ジョブからのステップの削除](../../ssms/agent/remove-steps-from-a-sql-server-agent-master-job.md)  
+[Remove Steps from a SQL Server Agent Master Job](../../ssms/agent/remove-steps-from-a-sql-server-agent-master-job.md)  
   
 [SQL Server エージェントのマスター ジョブに関連付けられている対象サーバーの変更](../../ssms/agent/modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
   

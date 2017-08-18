@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8fbfa283615298113db6fd52de97c27f73291d8d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="query-properties-visual-database-tools"></a>クエリのプロパティ (Visual Database Tools)
@@ -72,7 +72,7 @@ SQL ステートメントの説明を表示します。 説明全体を表示し
 **[Top の指定] カテゴリ**  
 展開すると、 **[Top]**、 **[パーセント]**、 **[式]**、および **[With Ties]** の各プロパティが表示されます。  
   
-**[[(Top)]]**  
+**[(Top)]**  
 クエリに TOP 句が含まれるように指定します。この場合、最初の *n* 行または最初の *n* % の行だけが結果セットに返されます。 既定では、クエリは最初の 10 行を結果セットに返します。  
   
 このボックスは、返される行数を変更するか、異なるパーセントを指定する場合に使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 以降だけに適用されます。  
@@ -83,7 +83,7 @@ SQL ステートメントの説明を表示します。 説明全体を表示し
 **[パーセント]**  
 クエリが最初の *n* % の行だけを結果セットに返すように指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 以降だけに適用されます。  
   
-**[[With Ties]]**  
+**[With Ties]**  
 ビューに WITH TIES 句を含むことを指定します。 WITH TIES は、ビューに ORDER BY 句とパーセンテージに基づく TOP 句が含まれる場合に便利です。 このオプションを設定すると、ORDER BY 句の列で同一の値を持つ行がセットになり、セットの一部の行がパーセンテージによる制限で切り捨てられてしまう場合は、すべての行が含まれるように、クエリで指定されるパーセンテージが増やされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 以降だけに適用されます。  
   
 ## <a name="see-also"></a>参照  

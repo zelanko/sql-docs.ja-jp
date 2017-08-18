@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 81ad964781f4d467f27d0693522f601bb86119fc
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-server-management-studio-menu-help"></a>SQL Server Management Studio メニュー ヘルプ
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/22/2017
   
 [[検索フォルダーの選択] ダイアログ ボックス (Visual Studio)](../../ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md)  
   
-[[ツールボックス アイテムの選択] &amp;#40;[メンテナンス タスク] ページ&amp;#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  
+[[ツールボックス アイテムの選択] &#40;[メンテナンス タスク] ページ&#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  
   
 [[カスタマイズ] ([コマンド] ページ)](../../ssms/menu-help/customize-commands-page.md)  
   

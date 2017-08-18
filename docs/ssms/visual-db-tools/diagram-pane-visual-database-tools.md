@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d77c2ce648939486be70ca9ab961bb9697b4d8db
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="diagram-pane-visual-database-tools"></a>ダイアグラム ペイン (Visual Database Tools)
@@ -69,8 +69,8 @@ ms.lasthandoff: 06/22/2017
   
 |チェック ボックスまたは記号|Description|  
 |-----------------------|---------------|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbi7.gif "Visual Database Tools icon")<br /><br />![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbi8.gif "Visual Database Tools icon")<br /><br />![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbi9.gif "Visual Database Tools icon")<br /><br />![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbia.gif "Visual Database Tools icon")|データ列をクエリの結果セットに表示するかどうか (選択クエリ)、または更新クエリ、結果の挿入クエリ、テーブルの作成クエリ、値の挿入クエリで使用するかどうかを指定します。 結果に列を追加するには、その列のチェック ボックスをオンにします。 **[* (すべての列)]** を選択すると、すべてのデータ列が出力に表示されます。<br /><br />チェック ボックスに表示されるアイコンは、作成するクエリの種類によって変わります。 削除クエリを作成するときは、列を個別に選択することはできません。|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbib.gif "Visual Database Tools icon")<br /><br />![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbic.gif "Visual Database Tools icon")|クエリ結果の並べ替えに使用される (ORDER BY 句の一部である) データ列を示します。 並べ替え順序が昇順の場合はアイコンに A-Z と表示されます。降順の場合は Z-A と表示されます。|  
+|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbi7.gif "Visual Database Tools のアイコン")<br /><br />![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbi8.gif "Visual Database Tools のアイコン")<br /><br />![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbi9.gif "Visual Database Tools のアイコン")<br /><br />![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbia.gif "Visual Database Tools のアイコン")|データ列をクエリの結果セットに表示するかどうか (選択クエリ)、または更新クエリ、結果の挿入クエリ、テーブルの作成クエリ、値の挿入クエリで使用するかどうかを指定します。 結果に列を追加するには、その列のチェック ボックスをオンにします。 **[* (すべての列)]** を選択すると、すべてのデータ列が出力に表示されます。<br /><br />チェック ボックスに表示されるアイコンは、作成するクエリの種類によって変わります。 削除クエリを作成するときは、列を個別に選択することはできません。|  
+|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbib.gif "Visual Database Tools のアイコン")<br /><br />![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbic.gif "Visual Database Tools のアイコン")|クエリ結果の並べ替えに使用される (ORDER BY 句の一部である) データ列を示します。 並べ替え順序が昇順の場合はアイコンに A-Z と表示されます。降順の場合は Z-A と表示されます。|  
 |![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbid.gif "Visual Database Tools のアイコン")|集計クエリで結果セットをグループ化するために使用される (GROUP BY 句の一部である) データ列を示します。|  
 |![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbie.gif "Visual Database Tools のアイコン")|クエリの検索条件に含まれる (WHERE 句または HAVING 句の一部である) データ列を示します。|  
 |![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbif.gif "Visual Database Tools のアイコン")|データ列の内容が出力のときに集約される (SUM、AVG、または他の集計関数に含まれる) ことを示します。|  

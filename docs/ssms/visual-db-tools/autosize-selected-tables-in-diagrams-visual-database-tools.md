@@ -19,11 +19,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 85956b6ed09b3ba2e68880a8704dc3a545a3176e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>ダイアグラムで選択したテーブルのサイズの自動変更 (Visual Database Tools)

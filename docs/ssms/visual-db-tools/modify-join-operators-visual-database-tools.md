@@ -18,15 +18,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1fd890f8a6c63bd6da3d92896c6e7d481d0a110d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>結合演算子の変更 (Visual Database Tools)
-[クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)の既定では、等号を使用してテーブルが結合されます (等結合)。等結合では、2 つの結合列の値が一致します。 必要に応じて、結合列の値の比較に使用する演算子を変更できます。  
+[クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) の既定では、等号を使用してテーブルが結合されます (等結合)。等結合では、2 つの結合列の値が一致します。 必要に応じて、結合列の値の比較に使用する演算子を変更できます。  
   
 ### <a name="to-modify-join-operators"></a>結合演算子を変更するには  
   

@@ -19,15 +19,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 64aee66141249bc2a1848f6a65ec9683c73dc429
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>集計クエリにおける列の使用 (Visual Database Tools)
-集計クエリを作成する場合、[クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)は有効なクエリを構築できるように一定の仮説に基づいた処理を行います。 たとえば、集計クエリを作成するときに、あるデータ列を出力するように指定した場合、その列は自動的に GROUP BY 句に含められ、個別の行の内容が誤って要約に表示されるのを防ぎます。  
+集計クエリを作成する場合、 [クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) は有効なクエリを構築できるように一定の仮説に基づいた処理を行います。 たとえば、集計クエリを作成するときに、あるデータ列を出力するように指定した場合、その列は自動的に GROUP BY 句に含められ、個別の行の内容が誤って要約に表示されるのを防ぎます。  
   
 ## <a name="using-group-by"></a>GROUP BY の使用  
 クエリおよびビュー デザイナーは、次のガイドラインに従って列を処理します。  

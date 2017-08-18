@@ -19,15 +19,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e64df57000934aca3d532b34a46c799e4a74e542
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="print-query-results-visual-database-tools"></a>クエリ結果の印刷 (Visual Database Tools)
-クエリの結果を印刷するには、[結果ペイン](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)の内容をワード プロセッシング プログラムなど、他の Windows プログラムにコピーし、書式を設定してから印刷します。  
+クエリの結果を印刷するには、 [結果ペイン](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) の内容をワード プロセッシング プログラムなど、他の Windows プログラムにコピーし、書式を設定してから印刷します。  
   
 クエリおよびビュー デザイナーは、クエリの結果をクリップボードにコピーするときに、各列はタブで区切り、行間はキャリッジ リターンとライン フィード (CR-LF) 文字で区切ります。  
   

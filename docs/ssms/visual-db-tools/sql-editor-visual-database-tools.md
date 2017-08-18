@@ -25,11 +25,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dd01c244e33751b49c4bd811a879eedd500be957
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL エディター (Visual Database Tools)
@@ -50,7 +50,7 @@ SQL エディターには、次に示す便利な SQL テキスト編集機能�
 > [!NOTE]  
 > SQL エディターでは、IntelliSense のプロンプトは機能しません。  
   
-SQL ステートメントを編集するときは、細い線の枠で囲まれた Transact-SQL ステートメントがあります。 この枠によって、SQL コードを視覚的に複数のコマンド セクションに分類できます。また、クエリ デザイナーでグラフィカルにデザインできる SQL ステートメントのブロックを識別できます。 クエリ デザイナーの使用の詳細については、「[クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)」を参照してください。  
+SQL ステートメントを編集するときは、細い線の枠で囲まれた Transact-SQL ステートメントがあります。 この枠によって、SQL コードを視覚的に複数のコマンド セクションに分類できます。また、クエリ デザイナーでグラフィカルにデザインできる SQL ステートメントのブロックを識別できます。 クエリ デザイナーの使用の詳細については、「 [クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

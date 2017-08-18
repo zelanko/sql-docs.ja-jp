@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d1947c39760dc30d22c7b419412288da72fcc9e3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-server-agent-error-log"></a>SQL Server エージェント エラー ログ
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
 **SQL Server エージェントのエラー ログを表示するには**  
   
--   [SQL Server エージェントのエラー ログの表示 (SQL Server Management Studio)](../../ssms/agent/view-sql-server-agent-error-log-sql-server-management-studio.md)  
+-   [View SQL Server Agent Error Log (SQL Server Management Studio)](../../ssms/agent/view-sql-server-agent-error-log-sql-server-management-studio.md)  
   
 **SQL Server エージェント エラー ログの名前を変更するには**  
   

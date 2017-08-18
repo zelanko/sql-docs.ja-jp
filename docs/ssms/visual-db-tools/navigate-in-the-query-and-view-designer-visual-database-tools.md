@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7cc7f7c8972fae08c956db86f95250d830fba39b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>クエリおよびビュー デザイナーでの移動 (Visual Database Tools)
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/22/2017
   
 |**変換先**|**ショートカット キー**|**クリックする場所**|  
 |----------|-------------|-------------|  
-|クエリおよびビュー デザイナーのペイン間で移動する|F6、 Shift + F6|移動先のペイン内の任意の箇所|  
+|クエリおよびビュー デザイナーのペイン間で移動する|F6&lt;/localizedText&gt;、&lt;localizedText&gt;Shift&lt;/localizedText&gt; + &lt;localizedText&gt;F6|移動先のペイン内の任意の箇所|  
   
 > [!TIP]  
 > Ctrl キーを押しながら Tab キーを押すと、クエリおよびビュー デザイナーのペインだけでなく、その他のペインにフォーカスを移すことができます。  
@@ -60,8 +60,8 @@ ms.lasthandoff: 06/22/2017
 |セル間で移動する|方向キーまたは Tab または Shift + Tab|移動先のセル|  
 |選択した列の最後の行に移動する|Ctrl + ↓||  
 |選択した列の最初の行に移動する|Ctrl + ↑||  
-|グリッド内の見えている範囲の左上隅にあるセルに移動する|Ctrl + Home||  
-|右下隅にあるセルに移動する|Ctrl + End||  
+|グリッド内の見えている範囲の左上隅にあるセルに移動する|Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;Home||  
+|右下隅にあるセルに移動する|Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;End||  
 |ドロップダウン リスト内で移動する|↑または↓|セル内のボタン|  
 |グリッド内の 1 つの列全体を選択する|Ctrl + SPACE キー|列ヘッダー|  
 |編集モードとセル選択モードを切り替える|F2||  
@@ -95,10 +95,10 @@ SQL ペインでの作業時には、標準の Windows 編集キーを使用で�
 |セル間を移動する|方向キーまたは Tab または Shift + Tab|移動先のセル|  
 |現在の行の最初または最後のセルに移動する|ホームまたは End||  
 |現在の列の最初の行に移動する|Ctrl + ↑||  
-|左上隅のセルに移動する|Ctrl + Home||  
+|左上隅のセルに移動する|Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;Home||  
 |最初の列の一番下のセルに移動する|Ctrl + ↓||  
-|セル内の最初の文字を選択する|Shift + Home||  
-|セル内の最後の文字を選択する|Shift + End||  
+|セル内の最初の文字を選択する|Shift</localizedText> + <localizedText>Home||  
+|セル内の最後の文字を選択する|Shift</localizedText> + <localizedText>End||  
 |編集モードとセル選択モードを切り替える|F2||  
 |セルでの編集中に挿入モードと上書きモードを切り替える|Ins||  
 |テーブルから行を削除する|DELETE||  

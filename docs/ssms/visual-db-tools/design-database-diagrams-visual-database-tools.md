@@ -22,11 +22,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 39d9220dc13546a5a1e9c95d034b5a5cf0ac43b5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>データベース ダイアグラムのデザイン (Visual Database Tools)
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
 **タイトル バー** タイトル バーにはテーブルの名前が表示されます。  
   
-テーブルを変更し、まだ保存していない場合は、保存されていない変更があることを示すアスタリスク (*) がテーブル名の最後に表示されます。 変更したテーブルおよびダイアグラムの保存については、「 [Work with Database Diagrams &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+テーブルを変更し、まだ保存していない場合は、保存されていない変更があることを示すアスタリスク (*) がテーブル名の最後に表示されます。 変更したテーブルおよびダイアグラムの保存については、「 [データベース ダイアグラムの使用 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 **行セレクター** 行セレクターをクリックすると、テーブルの中のデータベース列を選択できます。 列がテーブルの主キーに含まれる場合は、行セレクターに鍵の記号が表示されます。 主キーの詳細については、「 [キーの使用 (Visual Database Tools)](http://msdn.microsoft.com/en-us/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)」を参照してください。  
   

@@ -18,15 +18,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1556e7c6469ff2ece09e3249c8396e6a0e96eb6c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>クエリおよびビュー デザイナーでの結合の表示方法 (Visual Database Tools)
-テーブルを結合すると、[クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)は、[ダイアグラム ペイン](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)にその結合をグラフィカル表示します。また、SQL 構文を使用して [SQL ペイン](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)にも表示します。  
+テーブルを結合すると、 [クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) は、 [ダイアグラム ペイン](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) にその結合をグラフィカル表示します。また、SQL 構文を使用して [SQL ペイン](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)にも表示します。  
   
 ## <a name="diagram-pane"></a>ダイアグラム ペイン  
 ダイアグラム ペインでは、結合に関係するデータ列の間に結合線が引かれます。 結合条件ごとに 1 本の結合線が表示されます。 たとえば、次の図には結合された 2 つのテーブル間の結合線が示されています。  

@@ -26,11 +26,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d1adeb21a6fca540cd4359c57ac6756bffa8cd16
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>クエリ結果の並べ替えおよびグループ化 (Visual Database Tools)

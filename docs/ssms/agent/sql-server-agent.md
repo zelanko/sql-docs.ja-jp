@@ -17,11 +17,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0c9be76ca64a4df24cca399308244c5bc4c28e0d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-server-agent"></a>SQL Server エージェント
@@ -176,7 +176,7 @@ ms.lasthandoff: 06/22/2017
 |SQL Server エージェントのエラー ログを使用する方法について説明します。|[SQL Server エージェント エラー ログ](../../ssms/agent/sql-server-agent-error-log.md)|  
 |パフォーマンス オブジェクトを使用する方法について説明します。|[パフォーマンス オブジェクトの使用](../../ssms/agent/use-performance-objects.md)|  
 |メンテナンス プラン ウィザードについて説明します。メンテナンス プラン ウィザードは、SQL Server のインスタンスを自動管理するために、ジョブ、警告、およびオペレーターを作成するのに役立つユーティリティです。|[メンテナンス プラン ウィザードの使用](http://msdn.microsoft.com/en-us/db65c726-9892-480c-873b-3af29afcee44)|  
-|SQL Server エージェントを使用して管理タスクを自動化する方法について説明します。|[管理タスクの自動化 &amp;#40;SQL Server エージェント&amp;#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
+|SQL Server エージェントを使用して管理タスクを自動化する方法について説明します。|[管理タスクの自動化 &#40;SQL Server エージェント&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
   
 ## <a name="see-also"></a>参照  
 [セキュリティ構成](http://msdn.microsoft.com/en-us/f741169c-1453-4ad2-830b-bf2be27d712f)  

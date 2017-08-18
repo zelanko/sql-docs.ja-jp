@@ -16,15 +16,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0671c3815de4c20aca3eab4d30e038a094409f07
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>クエリ内の複数の列の並べ替え (Visual Database Tools)
-データを並べ替える列の使用順序指定には、**[並べ替え順序]** 列を[抽出条件ペイン](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)上で使用します。  
+データを並べ替える列の使用順序指定には、 **[並べ替え順序]** 列を [抽出条件ペイン](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)上で使用します。  
   
 ### <a name="to-sort-query-results-by-more-than-one-column"></a>複数の列でクエリ結果を並べ替えるには  
   

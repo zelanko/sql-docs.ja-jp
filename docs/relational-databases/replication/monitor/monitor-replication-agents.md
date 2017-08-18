@@ -23,11 +23,11 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 90cb8e5af3fa8e3e86639e7cffa3f9fb97368c45
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="monitor-replication-agents"></a>レプリケーション エージェントの監視
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
      これらのエージェントに関連付けられている情報およびタスクにアクセスするには、 **[サブスクリプション ウォッチ リスト]** タブ (各パブリッシャーで利用可能) または **[すべてのサブスクリプション]** タブ (各パブリケーションで利用可能) を使用します。 詳細については、「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>SQL Server Management Studio を使用してレプリケーション エージェントを監視する  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] provides the following dialog boxes for monitoring replication agents:  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] には、レプリケーション エージェントの監視用に以下のダイアログ ボックスが用意されています。  
   
 -   **[スナップショット エージェントの状態の表示]** ダイアログ ボックス (すべてのパブリケーション用)  
   

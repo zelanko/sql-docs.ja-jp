@@ -19,15 +19,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f617973f041218de7b77b64350b8953dbaa0d149
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>結果更新の規則 (Visual Database Tools)
-多くの場合、[結果ペイン](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)に表示されている結果セットは更新できます。 ただし、更新できない場合もあります。  
+多くの場合、 [結果ペイン](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)に表示されている結果セットは更新できます。 ただし、更新できない場合もあります。  
   
 結果を更新するには、通常、 [クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) がテーブル内の行を一意に識別するのに十分な情報が必要です。 たとえば、クエリの出力リストに主キーが含まれている場合などが該当します。 さらに、データベースを更新するためのアクセス許可も必要です。  
   

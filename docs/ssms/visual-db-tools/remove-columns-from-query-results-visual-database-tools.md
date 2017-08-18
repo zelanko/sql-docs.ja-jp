@@ -21,18 +21,18 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ef92982f0b86b25fad049f444416ed5afb43fd85
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>クエリ結果からの列の削除 (Visual Database Tools)
 選択クエリで使用する列を結果セットには表示しない場合、つまりクエリの選択リストにはその列が必要ない場合、出力から列を削除できます。 クエリ出力から列を削除した後でも、検索条件や並べ替えフィールドとしてその列を使用できます。  
   
 > [!NOTE]  
-> クエリから完全に列を削除する場合は、「[クエリからの列の削除 (Visual Database Tools)](../../ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools.md)」を参照してください。  
+> クエリから完全に列を削除する場合は、「 [クエリからの列の削除 (Visual Database Tools)](../../ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools.md)」を参照してください。  
   
 ### <a name="to-remove-a-column-from-the-query-output"></a>クエリ出力から列を削除するには  
   
