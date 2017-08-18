@@ -1,27 +1,32 @@
 ---
-title: "Configure the cost threshold for parallelism Server Configuration Option | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cost threshold for parallelism option"
+title: "cost threshold for parallelism サーバー構成オプションの構成 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cost threshold for parallelism option
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b26280bb3b17cef25a8f578322889a08502a305
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configure the cost threshold for parallelism Server Configuration Option
+# <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>cost threshold for parallelism サーバー構成オプションの構成
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] cost threshold for parallelism [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **cost threshold for parallelism** オプションによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がクエリの並列プランを作成および実行するしきい値が指定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、クエリの並列プランが作成および実行されるのは、同じクエリの直列プランを実行するための推定コストが **cost threshold for parallelism**に設定されている値を超える場合のみです。 コストとは、時間の単位ではなく、特定のハードウェア構成で直列プランを実行するための予想コストを表します。 **cost threshold for parallelism** オプションには、0 ～ 32,767 の範囲の値を設定できます。 既定値は 5 です。  
+  このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] cost threshold for parallelism [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **cost threshold for parallelism** オプションによって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がクエリの並列プランを作成および実行するしきい値が指定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、クエリの並列プランが作成および実行されるのは、同じクエリの直列プランを実行するための推定コストが **cost threshold for parallelism**に設定されている値を超える場合のみです。 コストとは、時間の単位ではなく、特定のハードウェア構成で直列プランを実行するための予想コストを表します。 **cost threshold for parallelism** オプションには、0 ～ 32,767 の範囲の値を設定できます。 既定値は 5 です。  
   
  **このトピックの内容**  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 31
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:** [cost threshold for parallelism オプションを構成した後](#FollowUp)  
+-   **補足情報:**  [cost threshold for parallelism オプションを構成した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 31
   
     -   使用しているコンピューターに論理プロセッサが 1 つしか搭載されていない場合。  
   
-    -   **関係マスク**構成オプションの設定により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で 1 つの論理プロセッサしか使用できない場合。  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 関係マスク **構成オプションの設定により、** で 1 つの論理プロセッサしか使用できない場合。  
   
     -   **max degree of parallelism** オプションが 1 に設定されている場合。  
   
@@ -76,9 +81,9 @@ FROM sys.dm_os_sys_info
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### cost threshold for parallelism オプションを構成するには  
+#### <a name="to-configure-the-cost-threshold-for-parallelism-option"></a>cost threshold for parallelism オプションを構成するには  
   
-1.  オブジェクト エクスプローラーで、サーバーを右クリックし、**[プロパティ]** をクリックします。  
+1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]**をクリックします。  
   
 2.  **[詳細設定]** ノードをクリックします。  
   
@@ -86,13 +91,13 @@ FROM sys.dm_os_sys_info
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### cost threshold for parallelism オプションを構成するには  
+#### <a name="to-configure-the-cost-threshold-for-parallelism-option"></a>cost threshold for parallelism オプションを構成するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、`cost threshold for parallelism` オプションの値を `10` に設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `cost threshold for parallelism` オプションの値を `10`に設定する方法を示します。  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -107,14 +112,14 @@ RECONFIGURE
 GO  
 ```  
   
- 詳細については、「[サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。  
+ 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)サーバー構成オプションを構成する方法について説明します。  
   
 ##  <a name="FollowUp"></a> 補足情報: cost threshold for parallelism オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)   
- [クエリ ヒント &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md)   
+ [クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)   
  [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [affinity mask サーバー構成オプション](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
@@ -122,3 +127,4 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

@@ -1,49 +1,54 @@
 ---
 title: "データベース ミラーリング監視サーバーを追加または置き換える方法 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "確立することに監視サーバー [SQL Server]"
-  - "データベース ミラーリング [SQL Server], 監視"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- witness [SQL Server], establishing
+- database mirroring [SQL Server], witness
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 004b19ca2fe75f3a34f21eac1fa531e7f72d258b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# データベース ミラーリング監視サーバーを追加または置き換える方法 (SQL Server Management Studio)
-  データベース ミラーリング エンドポイントで Windows 認証を使用している場合、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してミラーリング監視サーバーを追加または置き換えることができます。 また、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でミラーリング監視サーバーを追加すると、動作モードが自動フェールオーバーを伴う高い安全性モードに変更されます。  
+# <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>データベース ミラーリング監視サーバーを追加または置き換える方法 (SQL Server Management Studio)
+  データベース ミラーリング エンドポイントで Windows 認証を使用している場合、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してミラーリング監視サーバーを追加または置き換えることができます。 また、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でミラーリング監視サーバーを追加すると、動作モードが自動フェールオーバーを伴う高い安全性モードに変更されます。  
   
 > [!NOTE]  
 >  ミラーリング監視サーバーは、どちらのパートナーにも属さない別のコンピューターに常駐させることを強くお勧めします。 ミラーリング監視サーバーで使用するサービス アカウントのドメインは、プリンシパル サーバー インスタンスおよびミラー サーバー インスタンスで使用するサービス アカウントのドメインと同じであるか、信頼関係のあるドメインのアカウントである必要があります。  
   
-### ミラーリング監視サーバーを追加または置き換えるには  
+### <a name="to-add-or-replace-a-witness"></a>ミラーリング監視サーバーを追加または置き換えるには  
   
 1.  プリンシパル サーバー インスタンスに接続した後、オブジェクト エクスプローラーでサーバー名をクリックして、サーバー ツリーを展開します。  
   
-2.  **[データベース]** を展開し、ミラーリング監視サーバーを追加または置き換えるセッションのプリンシパル データベースを選択します。  
+2.  **[データベース]**を展開し、ミラーリング監視サーバーを追加または置き換えるセッションのプリンシパル データベースを選択します。  
   
-3.  データベースを右クリックして **[タスク]** を選択し、**[ミラー]** をクリックします。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページが開きます。  
+3.  データベースを右クリックして **[タスク]**を選択し、 **[ミラー]**をクリックします。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページが開きます。  
   
-4.  **[セキュリティの構成]** をクリックします。  
+4.  **[セキュリティの構成]**をクリックします。  
   
-5.  **[データベース ミラーリング セキュリティ構成ウィザード]** 開始ページが表示されたら、**[次へ]** をクリックします。  
+5.  **[データベース ミラーリング セキュリティ構成ウィザード]** 開始ページが表示されたら、 **[次へ]**をクリックします。  
   
-6.  **[ミラーリング監視サーバーを含める]** ページで **[はい]** をクリックし、**[次へ]** をクリックします。  
+6.  **[ミラーリング監視サーバーを含める]** ページで **[はい]**をクリックし、 **[次へ]**をクリックします。  
   
-7.  **[構成するサーバーを選択する]** ページでは、**[ミラーリング監視サーバー インスタンス]** チェック ボックスが自動的にオンになっています。 **[次へ]**をクリックします。  
+7.  **[構成するサーバーを選択する]** ページでは、 **[ミラーリング監視サーバー インスタンス]** チェック ボックスが自動的にオンになっています。 **[次へ]**をクリックします。  
   
 8.  **[プリンシパル サーバー インスタンス]** ページで、既定で設定されているポートとエンドポイントをそのままにしておきます。 **[次へ]**をクリックします。  
   
-9. **[ミラーリング監視サーバー インスタンス]** ページで、**[接続]** をクリックします。  
+9. **[ミラーリング監視サーバー インスタンス]** ページで、 **[接続]**をクリックします。  
   
 10. **[サーバーへの接続]** ページの **[サーバー名]** フィールドでミラーリング監視サーバー インスタンスを指定し、既定の Windows 認証を使用します。 **[接続]**をクリックします。  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 16
   
     -   すべてのサーバー インスタンスで同じサービス アカウントを使用する場合は、これらのフィールドを空白のままにします。  
   
-    -   ミラーリング監視サーバー インスタンスで、どちらかのパートナーと異なるサービス アカウントを使用する場合は、**[プリンシパル]**、**[ミラー]**、および **[ミラーリング監視]** の各フィールドに、次のようにしてアカウント名を指定します。  
+    -   ミラーリング監視サーバー インスタンスで、どちらかのパートナーと異なるサービス アカウントを使用する場合は、 **[プリンシパル]**、 **[ミラー]**、および **[ミラーリング監視]** の各フィールドに、次のようにしてアカウント名を指定します。  
   
          *DOMAINNAME* **\\** *username*  
   
@@ -61,17 +66,17 @@ caps.handback.revision: 16
   
      **[次へ]**をクリックします。  
   
-13. **[ウィザードの完了]** 概要ページで必要に応じてミラーリング監視サーバーの構成を確認し、**[完了]** をクリックします。  
+13. **[ウィザードの完了]** 概要ページで必要に応じてミラーリング監視サーバーの構成を確認し、 **[完了]**をクリックします。  
   
-14. 完了時に、ウィザードによって **[データベースのプロパティ]** ダイアログ ボックスが表示されます。このダイアログ ボックスの **[ミラーリング監視]** フィールドには、ミラーリング監視サーバーのサーバー ネットワーク アドレスが表示されます。 また、ミラーリング監視サーバーに必要な **[自動フェールオーバーを伴う高い安全性 (同期)]** が自動的に選択されます。  
+14. 完了時に、ウィザードによって **[データベースのプロパティ]** ダイアログ ボックスが表示されます。このダイアログ ボックスの **[ミラーリング監視]** フィールドには、ミラーリング監視サーバーのサーバー ネットワーク アドレスが表示されます。 また、ミラーリング監視サーバーに必要な **[自動フェールオーバーを伴う高い安全性 (同期)]**が自動的に選択されます。  
   
-     ミラーリング監視サーバーを有効にし、自動フェールオーバーを伴う高い安全性モードにセッションを変更するには、**[OK]** をクリックします。  
+     ミラーリング監視サーバーを有効にし、自動フェールオーバーを伴う高い安全性モードにセッションを変更するには、 **[OK]**をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データベース ミラーリング監視サーバー](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [データベース プロパティ &#40;[ミラーリング] ページ&#41;](../Topic/Database%20Properties%20\(Mirroring%20Page\).md)   
- [Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)   
+ [データベース プロパティ &#40;[ミラーリング] ページ&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)   
  [データベース ミラーリング監視サーバー](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   

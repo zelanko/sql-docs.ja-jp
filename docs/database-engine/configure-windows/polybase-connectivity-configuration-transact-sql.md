@@ -1,29 +1,34 @@
 ---
-title: "PolyBase Connectivity Configuration (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PolyBase"
+title: "PolyBase 接続構成 (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 caps.latest.revision: 14
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b60b3ca22932fb4e48a4ae7d47240de073c5c930
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# PolyBase Connectivity Configuration (Transact-SQL)
+# <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 接続構成 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   PolyBase での Hadoop と Azure BLOB ストレージの接続に対するグローバル構成設定を表示または変更します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.png "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,7 +55,7 @@ RECONFIGURE
  新しい構成設定を指定します。 *value* のデータ型は **int**で、既定値は NULL です。 最大値はオプションごとに異なります。  
   
  **'hadoop connectivity'**  
- PolyBase から Hadoop クラスターまたは Azure BLOB ストレージ (WASB) へのすべての接続に Hadoop データ ソースの種類を指定します。 この設定は、外部テーブルに外部データ ソースを作成するために必要です。 詳細については、「[CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)」を参照してください。  
+ PolyBase から Hadoop クラスターまたは Azure BLOB ストレージ (WASB) へのすべての接続に Hadoop データ ソースの種類を指定します。 この設定は、外部テーブルに外部データ ソースを作成するために必要です。 詳細については、「 [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)」を参照してください。  
   
  Hadoop の接続設定とそれに対応してサポートされる Hadoop データ ソースがあります。 一度に 1 つの設定だけを有効にすることができます。 オプション 1、4、および 7 では、複数の種類の外部データ ソースを作成して、サーバー上のすべてのセッションで使用することができます。  
   
@@ -70,32 +75,32 @@ RECONFIGURE
   
 -   オプション 5: Linux 上の Hortonworks HDP 2.0  
   
--   オプション 6: Linux 上の Cloudera 5.1、5.2、5.3、5.4、5.5、および 5.9  
+-   オプション 6: Linux 上の Cloudera 5.1、5.2、5.3、5.4、5.5、5.9、5.10、5.11  
   
--   オプション 7: Linux 上の Hortonworks 2.1、2.2、2.3、2.4、2.5  
+-   オプション 7: Linux 上の Hortonworks 2.1、2.2、2.3、2.4、2.5、2.6  
   
 -   オプション 7: Windows Server 上の Hortonworks 2.1、2.2、および 2.3  
   
 -   オプション 7: Azure BLOB ストレージ (WASB[S])  
   
  **RECONFIGURE**  
- 構成値 (config_value) と一致するように、実行値 (run_value) を更新します。 run_value と config_value の定義については、「[結果セット](#ResultSets)」を参照してください。 sp_configure で設定されている新しい構成値は、実行値が RECONFIGURE ステートメントで設定されるまで有効になりません。  
+ 構成値 (config_value) と一致するように、実行値 (run_value) を更新します。 run_value と config_value の定義については、「 [結果セット](#ResultSets) 」を参照してください。 sp_configure で設定されている新しい構成値は、実行値が RECONFIGURE ステートメントで設定されるまで有効になりません。  
   
  RECONFIGURE を実行した後に、SQL Server サービスを停止して再起動する必要があります。 SQL Server サービスを停止すると、追加された PolyBase エンジンとデータ移動サービスの 2 つが自動的に停止されることにご注意ください。 SQL Server エンジン サービスを再起動した後に、これら 2 つのサービスをもう一度再起動します (自動的には起動されません)。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-##  <a name="a-nameresultsetsa-result-sets"></a><a name="ResultSets"></a>結果セット  
- パラメーターなしで実行されると、**sp_configure** は 5 つの列を含む結果セットを返します。  
+##  <a name="ResultSets"></a> 結果セット  
+ パラメーターなしで実行されると、 **sp_configure** は 5 つの列を含む結果セットを返します。  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|構成オプションの名前。|  
 |**minimum**|**int**|構成オプションの最小値。|  
 |**maximum**|**int**|構成オプションの最大値。|  
-|**config_value**|**int**|**sp_configure** を使用して設定された値。|  
-|**run_value**|**int**|PolyBase が使用する現在の値。 この値は、RECONFIGURE を実行すると設定されます。<br /><br /> 値が変更中のプロセスではない限り、**config_value** と **run_value** は、通常は同じ値です。<br /><br /> 再構成が進行中である場合、この実行値を正確にするために、再起動が必要になる可能性があります。|  
+|**config_value**|**int**|**sp_configure**を使用して設定された値。|  
+|**run_value**|**int**|PolyBase が使用する現在の値。 この値は、RECONFIGURE を実行すると設定されます。<br /><br /> 値が変更中のプロセスではない限り、 **config_value** と **run_value** は、通常は同じ値です。<br /><br /> 再構成が進行中である場合、この実行値を正確にするために、再起動が必要になる可能性があります。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、RECONFIGURE を実行した後に、'hadoop connectivity' の実行値を有効にするために、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動する必要があります。  
@@ -105,9 +110,9 @@ RECONFIGURE
  RECONFIGURE は、明示的または暗黙的なトランザクションでは使用できません。  
   
 ## <a name="permissions"></a>Permissions  
- すべてのユーザーは、パラメーターなし、または @configname パラメーターを使用して、**sp_configure** を実行することができます。  
+ すべてのユーザーは、パラメーターなし、または **パラメーターを使用して、** sp_configure @configname を実行することができます。  
   
- 構成値を変更する、または RECONFIGURE を実行するには、**sysadmin** 固定サーバー ロールに **ALTER SETTINGS** サーバー レベルの権限またはメンバーシップが必要です。  
+ 構成値を変更する、または RECONFIGURE を実行するには、 **sysadmin** 固定サーバー ロールに **ALTER SETTINGS** サーバー レベルの権限またはメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
   
@@ -118,7 +123,7 @@ RECONFIGURE
 EXEC sp_configure;  
 ```  
   
- 結果は、オプションの最小値と最大値が続くオプション名を返します。 **config_value** は、再構成が完了したときに、SQL (または PolyBase) が使用する値です。 **run_value** は、現在使用されている値です。 値が変更中のプロセスではない限り、**config_value** と **run_value** は、通常は同じ値です。  
+ 結果は、オプションの最小値と最大値が続くオプション名を返します。 **config_value** は、再構成が完了したときに、SQL (または PolyBase) が使用する値です。 **run_value** は、現在使用されている値です。 値が変更中のプロセスではない限り、 **config_value** と **run_value** は、通常は同じ値です。  
   
 ### <a name="b-list-the-configuration-settings-for-one-configuration-name"></a>B. 1 つの構成名の構成設定を一覧表示する  
   
@@ -146,3 +151,4 @@ GO
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   
   
+

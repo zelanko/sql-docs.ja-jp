@@ -1,26 +1,31 @@
 ---
 title: "データベース ミラーリング セッションからのミラーリング監視の削除 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ミラーリング監視 [SQL Server]、無効化"
-  - "ミラーリング監視 [SQL Server]、削除"
-  - "データベース ミラーリング [SQL Server]、監視"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- witness [SQL Server], turning off
+- witness [SQL Server], removing
+- database mirroring [SQL Server], witness
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 caps.latest.revision: 39
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: f46a7668500b1a17b531c241e1e023cfb91d7f3f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# データベース ミラーリング セッションからのミラーリング監視の削除 (SQL Server)
+# <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションからのミラーリング監視の削除 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でデータベース ミラーリング セッションからミラーリング監視サーバーを削除する方法について説明します。 データベース ミラーリング セッション中のどの時点でも、データベース所有者は、データベース ミラーリング セッションのミラーリング監視サーバーを無効にできます。  
   
  **このトピックの内容**  
@@ -46,22 +51,22 @@ caps.handback.revision: 39
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### ミラーリング監視サーバーを削除するには  
+#### <a name="to-remove-the-witness"></a>ミラーリング監視サーバーを削除するには  
   
 1.  プリンシパル サーバー インスタンスに接続し、 **[オブジェクト エクスプローラー]** ペインでサーバー名をクリックして、サーバー ツリーを展開します。  
   
 2.  **[データベース]**を展開し、削除するミラーリング監視が設定されているデータベースをクリックします。  
   
-3.  データベースを右クリックして **[タスク]** をポイントし、**[ミラー]** をクリックします。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページが開きます。  
+3.  データベースを右クリックして **[タスク]**をポイントし、 **[ミラー]**をクリックします。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページが開きます。  
   
 4.  ミラーリング監視サーバーを削除するには、 **[ミラーリング監視]** フィールドからそのサーバー ネットワーク アドレスを削除します。  
   
     > [!NOTE]  
-    >  自動フェールオーバーを伴う高い安全性モードから高パフォーマンス モードに切り替えると、**[ミラーリング監視]** フィールドの内容は自動的に消去されます。  
+    >  自動フェールオーバーを伴う高い安全性モードから高パフォーマンス モードに切り替えると、 **[ミラーリング監視]** フィールドの内容は自動的に消去されます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### ミラーリング監視サーバーを削除するには  
+#### <a name="to-remove-the-witness"></a>ミラーリング監視サーバーを削除するには  
   
 1.  パートナー サーバー インスタンスで [!INCLUDE[ssDE](../../includes/ssde-md.md)] に接続します。  
   
@@ -69,18 +74,18 @@ caps.handback.revision: 39
   
 3.  次のステートメントを実行します。  
   
-     [ALTER DATABASE](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md) *database_name* SET WITNESS OFF  
+     [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) *database_name* SET WITNESS OFF  
   
      *database_name* はミラー化されたデータベースの名前です。  
   
-     次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースからミラーリング監視サーバーを削除します。  
+     次の例では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースからミラーリング監視サーバーを削除します。  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
 ##  <a name="FollowUp"></a> 補足情報: ミラーリング監視サーバーを削除した後  
- ミラーリング監視を無効にすると、[動作モード](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)トランザクションの安全性の設定に応じて変更されます。  
+ ミラーリング監視を無効にすると、 [動作モード](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)トランザクションの安全性の設定に応じて変更されます。  
   
 -   トランザクションの安全性の設定が FULL (既定値) の場合、セッションは自動フェールオーバーを伴わない高い安全性の同期モードで動作します。  
   
@@ -95,8 +100,8 @@ caps.handback.revision: 39
   
 -   [データベース ミラーリング監視サーバーを追加または置き換える方法 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
-## 参照  
- [ALTER DATABASE データベース ミラーリング &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>参照  
+ [ALTER DATABASE データベース ミラーリング &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
  [データベース ミラーリング セッションでのトランザクションの安全性の変更 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)   
  [Windows 認証を使用してデータベースのミラーリング監視を追加する &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)   
  [データベース ミラーリング監視サーバー](../../database-engine/database-mirroring/database-mirroring-witness.md)  

@@ -1,28 +1,33 @@
 ---
 title: "可用性グループからのセカンダリ レプリカの削除 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.removesecondaryar.f1"
-helpviewer_keywords: 
-  - "可用性レプリカの可用性グループ [SQL Server]"
-  - "構成する可用性グループ [SQL Server]"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.removesecondaryar.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], configuring
 ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 caps.latest.revision: 38
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c0faf42e9f7ad186523fc6f0b704b9a2e3c15e10
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# 可用性グループからのセカンダリ レプリカの削除 (SQL Server)
-  このトピックでは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループからセカンダリ レプリカを削除する方法について説明します。  
+# <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>可用性グループからのセカンダリ レプリカの削除 (SQL Server)
+  このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループからセカンダリ レプリカを削除する方法について説明します。  
   
 -   **作業を開始する準備:**  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 38
   
      [PowerShell](#PowerShellProcedure)  
   
--   **補足情報:** [セカンダリ レプリカの削除後](#PostBestPractices)  
+-   **補足情報:**  [セカンダリ レプリカの削除後](#PostBestPractices)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -64,13 +69,13 @@ caps.handback.revision: 38
   
 1.  オブジェクト エクスプローラーで、プライマリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
   
-2.  [**AlwaysOn 高可用性**] ノードと [**可用性グループ**] ノードを展開します。  
+2.  [ **AlwaysOn 高可用性** ] ノードと [ **可用性グループ** ] ノードを展開します。  
   
 3.  可用性グループを選択し、 **[可用性レプリカ]** ノードを展開します。  
   
 4.  削除するレプリカが複数であるか単独であるかによって、次のように実行する手順が異なります。  
   
-    -   複数のレプリカを削除するには、 **[オブジェクト エクスプローラーの詳細]** ペインを使用して、削除するレプリカを表示してすべて選択します。 詳細については、「[[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視 &#40;SQL Server Management Studio&#41;](../Topic/Use%20the%20Object%20Explorer%20Details%20to%20Monitor%20Availability%20Groups%20\(SQL%20Server%20Management%20Studio\).md)」を参照してください。  
+    -   複数のレプリカを削除するには、 **[オブジェクト エクスプローラーの詳細]** ペインを使用して、削除するレプリカを表示してすべて選択します。 詳細については、「[[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)」を参照してください。  
   
     -   単独のレプリカを削除するには、 **[オブジェクト エクスプローラー]** ペインまたは **[オブジェクト エクスプローラーの詳細]** ペインで選択します。  
   
@@ -87,9 +92,9 @@ caps.handback.revision: 38
   
      ALTER AVAILABILITY GROUP *group_name* REMOVE REPLICA ON '*instance_name*' [,...*n*]  
   
-     *group_name* は可用性グループの名前、*instance_name* はセカンダリ レプリカがあるサーバー インスタンスです。  
+     *group_name* は可用性グループの名前、 *instance_name* はセカンダリ レプリカがあるサーバー インスタンスです。  
   
-     次の例では、セカンダリ レプリカを *MyAG* 可用性グループから削除しています。 対象のセカンダリ レプリカは、*COMPUTER02* という名前のコンピューターの *HADR_INSTANCE* という名前のサーバー インスタンスにあります。  
+     次の例では、セカンダリ レプリカを *MyAG* 可用性グループから削除しています。 対象のセカンダリ レプリカは、 *COMPUTER02* という名前のコンピューターの *HADR_INSTANCE*という名前のサーバー インスタンスにあります。  
   
     ```  
     ALTER AVAILABILITY GROUP MyAG REMOVE REPLICA ON 'COMPUTER02\HADR_INSTANCE';  
@@ -102,7 +107,7 @@ caps.handback.revision: 38
   
 2.  **Remove-SqlAvailabilityReplica** コマンドレットを使用します。  
   
-     たとえば、次のコマンドは、サーバー `MyReplica` 上の可用性レプリカを、`MyAg` という名前の可用性グループから削除します。  このコマンドは、可用性グループのプライマリ レプリカをホストするサーバー インスタンスで実行する必要があります。  
+     たとえば、次のコマンドは、サーバー `MyReplica` 上の可用性レプリカを、 `MyAg`という名前の可用性グループから削除します。  このコマンドは、可用性グループのプライマリ レプリカをホストするサーバー インスタンスで実行する必要があります。  
   
     ```  
     Remove-SqlAvailabilityReplica `   
@@ -110,7 +115,7 @@ caps.handback.revision: 38
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で **Get-Help** コマンドレットを使用します。 詳細については、「[Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)」をご覧ください。  
+    >  コマンドレットの構文を表示するには、 **PowerShell 環境で** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
@@ -121,9 +126,10 @@ caps.handback.revision: 38
   
  レプリカの削除により、データの受信が停止します。 セカンダリ レプリカがグローバル ストアから削除されたことが確認されると、RECOVERING 状態でローカル サーバー インスタンスに残っている可用性グループ設定がデータベースから削除されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループへのセカンダリ レプリカの追加 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)   
  [可用性グループの削除 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
   
   
+

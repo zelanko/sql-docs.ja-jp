@@ -1,31 +1,36 @@
 ---
 title: "複数の TCP ポートでリッスンするデータベース エンジンの構成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ポート [SQL Server], 複数"
-  - "TDS (TDS)"
-  - "複数のポートでリッスン"
-  - "エンドポイント [SQL Server], TDS"
-  - "ポートの追加"
-  - "表形式のデータ ストリーム (tabular data stream)"
-  - "複数のポート"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ports [SQL Server], multiple
+- TDS
+- listen on multiple ports
+- endpoints [SQL Server], TDS
+- adding ports
+- tabular data stream
+- multiple ports
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0ba9063f05af2d7e021244bca5e14b75a8a510b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# 複数の TCP ポートでリッスンするデータベース エンジンの構成
-  このトピックでは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] で SQL Server 構成マネージャーを使用して、複数の TCP ポートをリッスンするように[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を構成する方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で TCP/IP を有効にしている場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は、IP アドレスと TCP ポート番号で構成される接続ポイントで着信接続をリッスンします。次の手順では、表形式のデータ ストリーム (TDS) エンドポイントを作成し、追加の TCP ポートを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンするように設定します。  
+# <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>複数の TCP ポートでリッスンするデータベース エンジンの構成
+  このトピックでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で SQL Server 構成マネージャーを使用して、複数の TCP ポートをリッスンするように [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を構成する方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で TCP/IP を有効にしている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、IP アドレスと TCP ポート番号で構成される接続ポイントで着信接続をリッスンします。次の手順では、表形式のデータ ストリーム (TDS) エンドポイントを作成し、追加の TCP ポートを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンするように設定します。  
   
  2 つ目の TDS エンドポイントを作成する理由として考えられる点を次に示します。  
   
@@ -41,11 +46,11 @@ caps.handback.revision: 26
   
 -   選択された IP アドレス用の TCP ポート番号を指定します。  
   
- Windows ファイアウォールの既定の設定の詳細と、データベース エンジン、Analysis Services、Reporting Services、および Integration Services に影響する TCP ポートの説明については、「[SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」をご覧ください。  
+ Windows ファイアウォールの既定の設定の詳細と、データベース エンジン、Analysis Services、Reporting Services、および Integration Services に影響する TCP ポートの説明については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」をご覧ください。  
   
 ##  <a name="SSMSProcedure"></a>  
   
-#### TDS エンドポイントを作成するには  
+#### <a name="to-create-a-tds-endpoint"></a>TDS エンドポイントを作成するには  
   
 -   次のステートメントを実行し、サーバー上の利用できるすべての TCP アドレスのポート 1500 に対して **CustomConnection** という名前のエンドポイントを作成します。  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 26
   
  新しい [!INCLUDE[tsql](../../includes/tsql-md.md)] エンドポイントを作成すると、既定の TDS エンドポイントに対する **public** の接続権限は取り消されます。 既定のエンドポイントに対して **public** グループへのアクセスが必要な場合は、 `GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] to [public];` ステートメントを使用してこの権限を再適用します。  
   
-#### エンドポイントへのアクセスを許可するには  
+#### <a name="to-grant-access-to-the-endpoint"></a>エンドポイントへのアクセスを許可するには  
   
 -   次のステートメントを実行し、corp ドメイン内の SQLSupport グループに対して **CustomConnection** エンドポイントへのアクセスを許可します。  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 26
     GO  
     ```  
   
-#### 追加の TCP ポートでリッスンするように SQL Server データベース エンジンを構成するには  
+#### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>追加の TCP ポートでリッスンするように SQL Server データベース エンジンを構成するには  
   
 1.  SQL Server 構成マネージャーで **[SQL Server ネットワークの構成]** を展開し、***[<instance_name>* のプロトコル]** をクリックします。  
   
@@ -79,12 +84,12 @@ caps.handback.revision: 26
   
 3.  右ペインで、無効になっている IP アドレスのうち、有効にする IP アドレスをそれぞれ右クリックし、**[有効化]** をクリックします。  
   
-4.  **[IPAll]** を右クリックし、**[プロパティ]** をクリックします。  
+4.  **[IPAll]**を右クリックし、 **[プロパティ]**をクリックします。  
   
 5.  **[TCP ポート]** ボックスで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] がリッスンするポートを入力します。複数のポートを指定する場合はコンマで区切ります。 たとえば、既定のポート 1433 がボックスに含まれている場合、「 **,1500** 」と入力します。ボックスの内容は " **1433,1500**" になります。次に **[OK]**をクリックします。  
   
     > [!NOTE]  
-    >  一部の IP アドレスのポートだけを有効にする場合、[プロパティ] ダイアログ ボックスで、必要なアドレスに対してのみ追加のポートを構成します。 次に、コンソール ペインで、**[TCP/IP]** を右クリックし、**[プロパティ]** をクリックします。**[すべて受信待ち]** ボックスで、**[いいえ]** を選択します。  
+    >  一部の IP アドレスのポートだけを有効にする場合、[プロパティ] ダイアログ ボックスで、必要なアドレスに対してのみ追加のポートを構成します。 次に、コンソール ペインで、 **[TCP/IP]**を右クリックし、 **[プロパティ]**をクリックします。 **[すべて受信待ち]** ボックスで、 **[いいえ]**を選択します。  
   
 6.  左ペインで、 **[SQL Server のサービス]**をクリックします。  
   
@@ -92,7 +97,7 @@ caps.handback.revision: 26
   
      [!INCLUDE[ssDE](../../includes/ssde-md.md)]が再起動すると、エラー ログには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンしているポートが記録されています。  
   
-#### 新しいエンドポイントに接続するには  
+#### <a name="to-connect-to-the-new-endpoint"></a>新しいエンドポイントに接続するには  
   
 -   次のステートメントを実行し、ACCT という名前のサーバー上にある、既定の SQL Server インスタンスの **CustomConnection** エンドポイントに接続します。このとき、信頼関係接続を使用します。ユーザーは [corp\SQLSupport] グループのメンバーであると想定しています。  
   
@@ -100,7 +105,7 @@ caps.handback.revision: 26
     sqlcmd -SACCT,1500  
     ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   

@@ -1,38 +1,43 @@
 ---
 title: "データベース ミラーリング モニター ([警告] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.warningsandalerts.f1"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbmmonitor.warningsandalerts.f1
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c67c02e3e06ccf7617ebd33356290d2c2f632d36
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# データベース ミラーリング モニター ([警告] ページ)
+# <a name="database-mirroring-monitor-warnings-page"></a>データベース ミラーリング モニター ([警告] ページ)
   データベース ミラーリングのイベントでサポートされている警告の読み取り専用の一覧と指定された警告しきい値 (存在する場合) を表示します。  
   
  **SQL Server Management Studio を使用してデータベース ミラーリングを監視するには**  
   
 -   [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## 列  
+## <a name="columns"></a>列  
  **警告**  
  しきい値を定義可能な警告には、次のものがあります。  
   
 |警告|しきい値|  
 |-------------|---------------|  
 |**[未送信のログがしきい値を超えた場合に警告する]**|未送信のログが何キロバイトになると、プリンシパル サーバー インスタンスで警告を生成するかを指定します。 この警告は、キロバイト数でデータ損失の可能性を測定する場合に役立ちます。また、高パフォーマンス モードに特に関連します。 パートナーとの通信が切断されたためにミラーリングが一時停止または中断している場合は、高安全モードにも関係します。|  
-|**[復元されていないログがしきい値を超えた場合に警告する]**|復元されていないログが何キロバイトになると、ミラー サーバー インスタンスで警告を生成するかを指定します。 この警告は、キロバイト数でフェールオーバー時間を測定する場合に役立ちます。 *フェールオーバー時間* の大部分は、以前のミラー サーバーの再実行キューに残っているログをロールフォワードする場合に必要となる時間です。この時間にわずかな時間を加えます。<br /><br /> 注: 自動フェールオーバーの場合、システムがエラーを通知するまでの時間は、フェールオーバー時間に関係ありません。<br /><br /> 詳細については、「[役割の交代中に発生するサービスの中断時間の算出 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)」を参照してください。|  
+|**[復元されていないログがしきい値を超えた場合に警告する]**|復元されていないログが何キロバイトになると、ミラー サーバー インスタンスで警告を生成するかを指定します。 この警告は、キロバイト数でフェールオーバー時間を測定する場合に役立ちます。 *フェールオーバー時間* の大部分は、以前のミラー サーバーの再実行キューに残っているログをロールフォワードする場合に必要となる時間です。この時間にわずかな時間を加えます。<br /><br /> 注: 自動フェールオーバーの場合、システムがエラーを通知するまでの時間は、フェールオーバー時間に関係ありません。<br /><br /> 詳しくは、「 [役割の交代中に発生するサービスの中断時間の算出 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)という処理により、一般的にプリンシパルとミラーの役割を相互交換できます。|  
 |**[最も古い未送信のトランザクションの経過期間がしきい値を超えた場合に警告する]**|送信キュー内にトランザクションを累積できる時間 (分単位) を指定します。この時間を経過すると、プリンシパル サーバー インスタンスで警告が生成されます。 この警告は、時間でデータ損失の可能性を測定する場合に役立ちます。また、高パフォーマンス モードに特に関連します。 パートナーとの通信が切断されたためにミラーリングが一時停止または中断している場合は、高安全モードにも関係します。|  
 |**[ミラー コミットのオーバーヘッドがしきい値を超えた場合に警告する]**|プリンシパル サーバーで警告を生成する前に許容されるトランザクションごとの平均遅延時間をミリ秒単位で指定します。 この遅延時間は、ミラー サーバー インスタンスによってトランザクションのログ レコードが再実行キューに書き込まれるのをプリンシパル サーバー インスタンスが待機している間、発生したオーバーヘッドの量になります。 この値は高安全モードにのみ関係します。|  
   
@@ -46,10 +51,10 @@ caps.handback.revision: 31
   
  詳細については、後の「解説」を参照してください。  
   
-## 解説  
- サーバー インスタンスの情報が現在表示できない場合、対応している **['<server_instance>' でのしきい値]** 列のセルには、背景が灰色のウォーターマーク テキストが表示されます。 モニターがサーバー インスタンスに接続されていない場合、グリッドの各セルには、既定のインスタンスか名前付きインスタンスかに応じて、"***\<システム名>* に接続していません**" または "***\<システム名>***\\***\<インスタンス名>***" と表示されます。 モニターがクエリの応答を待機している場合、グリッドの各セルに "**データを待機しています...**" と 表示されます。  
+## <a name="remarks"></a>解説  
+ サーバー インスタンスの情報が現在表示できない場合、対応している **['<server_instance>' でのしきい値]** 列のセルには、背景が灰色のウォーターマーク テキストが表示されます。 モニターがサーバー インスタンスに接続されていない場合、グリッドの各セルには、既定のインスタンスか名前付きインスタンスかに応じて、"***<システム名>* に接続していません**" または "***<システム名>***\\***<インスタンス名>***" と表示されます。 モニターがクエリの応答を待機している場合、グリッドの各セルに "**データを待機しています...**" と 表示されます。  
   
- 情報を表示できる場合、各警告のセルには、指定されたしきい値が表示されるか、または "**有効になっていません**" と表示されます。  
+ 情報を表示できる場合、各警告のセルには、指定されたしきい値が表示されるか、または " **有効になっていません**" と表示されます。  
   
  状態テーブルが更新されたときにしきい値を超えた場合、状態の行が記録される際に Windows イベント ログにイベントがログ記録されます。 既定では、モニターが動作していない場合、状態の行は 1 分ごとに記録されます。 SQL Server エージェントまたは Microsoft Management Operations Manager (MOM) などの他のプログラムを使用して、ログに記録された各種イベントの警告を構成できます。  
   
@@ -67,14 +72,14 @@ caps.handback.revision: 31
 |**[最も古い未送信のトランザクションの経過期間がしきい値を超えた場合に警告する]**|最も古い未送信のトランザクション|32044|  
 |**[ミラー コミットのオーバーヘッドがしきい値を超えた場合に警告する]**|ミラー コミットのオーバーヘッド|32045|  
   
-## 権限  
- フル アクセスの場合、**sysadmin** 固定サーバー ロールのメンバーシップが必要です。 **sysadmin** のメンバーだけが主要なパフォーマンス基準の警告しきい値を構成および表示できます。  
+## <a name="permissions"></a>権限  
+ フル アクセスの場合、 **sysadmin** 固定サーバー ロールのメンバーシップが必要です。 **sysadmin** のメンバーだけが主要なパフォーマンス基準の警告しきい値を構成および表示できます。  
   
- **dbm_monitor** ロールのメンバーシップを使用して、**[警告]** ページに最新の状態行のみを表示できます。  
+ **dbm_monitor** ロールのメンバーシップを使用して、 **[警告]** ページに最新の状態行のみを表示できます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+ [データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

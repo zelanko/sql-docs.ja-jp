@@ -1,35 +1,40 @@
 ---
 title: "プライマリ ログ配布サーバーとセカンダリ ログ配布サーバー間でのロールの変更 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ログ配布 [SQL Server]、ロールの切り替え"
-  - "セカンダリ データ ファイル [SQL Server]、ロールの切り替え"
-  - "プライマリ データベース [SQL Server]"
-  - "初期ロールの切り替え [SQL Server]"
-  - "ログ配布 [SQL Server]、フェールオーバー"
-  - "フェールオーバー [SQL Server]、ログ配布"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], role changes
+- secondary data files [SQL Server], roles changed between
+- primary databases [SQL Server]
+- initial role changes [SQL Server]
+- log shipping [SQL Server], failover
+- failover [SQL Server], log shipping
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 47e98a220a3480a854be76dbae16e98c0c17d180
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# プライマリ ログ配布サーバーとセカンダリ ログ配布サーバー間でのロールの変更 (SQL Server)
+# <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>プライマリ ログ配布サーバーとセカンダリ ログ配布サーバー間でのロールの変更 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ配布構成をセカンダリ サーバーにフェールオーバーした後、プリイマリ データベースとして機能するようにセカンダリ データベースを構成できます。 その後、プライマリ データベースとセカンダリ データベースを必要に応じて切り替えることができます。  
   
-## 初期ロール切り替えの実行  
+## <a name="performing-the-initial-role-change"></a>初期ロール切り替えの実行  
  初めてセカンダリ データベースにフェールオーバーし、これを新しいプライマリ データベースとして使用する場合は、次の一連の手順を実行する必要があります。 この初期手順を実行した後、プライマリ データベースとセカンダリ データベース間でロールを簡単に切り替えることができるようになります。  
   
-1.  プライマリ データベースからセカンダリ データベースに手動でフェールオーバーします。 NORECOVERY 句を使用して、プライマリ サーバー上のアクティブなトランザクション ログを必ずバックアップしてください。 詳細については、「[ログ配布のセカンダリへのフェールオーバー &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)」を参照してください。  
+1.  プライマリ データベースからセカンダリ データベースに手動でフェールオーバーします。 NORECOVERY 句を使用して、プライマリ サーバー上のアクティブなトランザクション ログを必ずバックアップしてください。 詳細については、「 [ログ配布のセカンダリへのフェールオーバー &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)」を参照してください。  
   
 2.  元のプライマリ サーバー上のログ配布バックアップ ジョブと、元のセカンダリ サーバー上のコピーおよび復元ジョブを無効にします。  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 20
         GO  
         ```  
   
-## ロールの切り替え  
+## <a name="swapping-roles"></a>ロールの切り替え  
  上記の初期ロール切り替えの手順が完了したら、このセクションの手順に従って、プライマリ データベースとセカンダリ データベース間のロールを切り替えることができます。 ロールを切り替えるには、次の一般的な手順を実行します。  
   
 1.  セカンダリ データベースをオンラインにし、NORECOVERY 句を使用してプライマリ サーバー上のトランザクション ログをバックアップします。  
@@ -77,7 +82,7 @@ caps.handback.revision: 20
 3.  セカンダリ サーバー (新しいプライマリ サーバー) 上のログ配布バックアップ ジョブを有効にし、プライマリ サーバー (新しいセカンダリ サーバー) 上のコピーおよび復元ジョブを有効にします。  
   
 > [!IMPORTANT]  
->  セカンダリ データベースをプライマリ データベースに変更するときは、ユーザーおよびアプリケーションに一貫した使用環境を提供するために、新しいプライマリ サーバー インスタンスで、ログインやジョブなどのデータベースのメタデータの一部またはすべてを作成し直す必要がある場合があります。 詳細については、「[データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md)」を参照してください。  
+>  セカンダリ データベースをプライマリ データベースに変更するときは、ユーザーおよびアプリケーションに一貫した使用環境を提供するために、新しいプライマリ サーバー インスタンスで、ログインやジョブなどのデータベースのメタデータの一部またはすべてを作成し直す必要がある場合があります。 詳細については、「[データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」を参照してください。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
@@ -85,7 +90,7 @@ caps.handback.revision: 20
   
 -   [役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ログ配布テーブルとストアド プロシージャ](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   

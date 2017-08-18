@@ -1,31 +1,36 @@
 ---
-title: "[データベース ミラーリングの履歴] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.databasemirroringhistory.f1"
+title: "データベース ミラーリングの履歴 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbmmonitor.databasemirroringhistory.f1
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 caps.latest.revision: 25
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 24f7e8d76bc04e82c4403139c575c6c736648c48
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# [データベース ミラーリングの履歴]
+# <a name="database-mirroring-history"></a>[データベース ミラーリングの履歴]
   このダイアログ ボックスは、指定したサーバー インスタンスでミラー化されたデータベースについて、ミラーリング状態の履歴を表示するために使用します。  
   
  **SQL Server Management Studio を使用してデータベース ミラーリングを監視するには**  
   
 -   [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## オプション  
+## <a name="options"></a>オプション  
  **サーバー インスタンス**  
  履歴レポートの対象となるサーバー インスタンスの名前です。  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 25
  履歴一覧を更新する場合にクリックします。  
   
 > [!NOTE]  
->  このダイアログ ボックスに表示される履歴一覧は、自動的には更新されません。 一覧を更新するには、**[最新の情報に更新]** をクリックするか、別のフィルター オプションを選択します。 ミラーリング履歴を更新できるのは、**sysadmin** 固定サーバー ロールのメンバーだけです。  
+>  このダイアログ ボックスに表示される履歴一覧は、自動的には更新されません。 一覧を更新するには、 **[最新の情報に更新]** をクリックするか、別のフィルター オプションを選択します。 ミラーリング履歴を更新できるのは、 **sysadmin** 固定サーバー ロールのメンバーだけです。  
   
  **履歴**  
  履歴一覧を表示します。 列のヘッダーをクリックすると、その列のデータを使用してグリッドが並べ替えられます。 一覧には次の列があります。  
@@ -71,8 +76,8 @@ caps.handback.revision: 25
 |**[ミラー化の状態]**|データベースの状態。<br /><br /> 切断済み<br /><br /> [フェールオーバーを保留しています]<br /><br /> 中断<br /><br /> 同期済み<br /><br /> [同期中]<br /><br /> Unknown|  
 |**[ミラーリング監視接続]**|データベースのミラーリング セッションにおけるミラーリング監視接続の状態です。[接続済み] または [接続解除] のいずれかになります。 ミラーリング監視が存在しない場合、値は NULL になります。|  
 |**[未送信のログ]**|プリンシパル サーバー インスタンスの送信キューにある未送信ログのサイズをキロバイト (KB) 単位で表します。|  
-|**[送信する日時]**|プリンシパル サーバー インスタンスが、送信キューに現在存在するログをミラー サーバー インスタンスに送信するために必要な、おおよその時間です。その際の速度は、*送信比率*で表されます。 入力トランザクションの送信比率は著しく変化するため、ログの送信にかかる時間は、推定値になります。 ただし、送信比率は、手動フェールオーバーに必要な時間を推定する際の目安として使用できます。|  
-|**[送信比率]**|トランザクションがミラー サーバー インスタンスに送信される速度 (KB/秒) です。|  
+|**[送信する日時]**|プリンシパル サーバー インスタンスが、送信キューに現在存在するログをミラー サーバー インスタンスに送信するために必要な、おおよその時間です。その際の速度は、 *送信比率*で表されます。 入力トランザクションの送信比率は著しく変化するため、ログの送信にかかる時間は、推定値になります。 ただし、送信比率は、手動フェールオーバーに必要な時間を推定する際の目安として使用できます。|  
+|**Send Rate**|トランザクションがミラー サーバー インスタンスに送信される速度 (KB/秒) です。|  
 |**[新しいトランザクションの比率]**|入力トランザクションが、プリンシパルのログに記録される速度 (KB/秒) です。 この値と **[送信する日時]** の値を比較することによって、ミラーリングの状況 (遅延している、順調に進行している、遅延が解消されつつあるなど) を確認できます。|  
 |**[最も古い未送信のトランザクション]**|送信キュー内で最も古い未送信トランザクションの経過期間。 トランザクションの経過期間は、トランザクションがミラー サーバー インスタンスに送信されないまま経過した時間を分単位で示します。 この値は、データ損失の可能性を時間の観点から測定するのに役立ちます。|  
 |**[復元されていないログ]**|再実行キューで待機しているログのサイズ (KB) です。|  
@@ -80,9 +85,9 @@ caps.handback.revision: 25
 |**[復元比率]**|トランザクションがミラー データベースに復元される速度 (KB/秒) です。|  
 |**[ミラー コミットのオーバーヘッド]**|トランザクションあたりの平均遅延時間をミリ秒で表します (同期モードのみ)。 この遅延時間は、ミラー サーバー インスタンスによってトランザクションのログ レコードが再実行キューに書き込まれるのをプリンシパル サーバー インスタンスが待機している間、発生したオーバーヘッドの量になります。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+ [データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

@@ -1,33 +1,42 @@
 ---
 title: "データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "接続 [SQL Server]、ファイアウォール システム"
-  - "ファイアウォール システム、[データベース エンジン]"
-  - "セキュリティ [SQL Server]、ファイアウォール"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connections [SQL Server], firewall systems
+- firewall systems, [Database Engine]
+- security [SQL Server], firewalls
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 caps.latest.revision: 57
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 7d79f9d00344dceb2559d66f7f6f4450597c79f7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で SQL Server 構成マネージャーを使用して、データベース エンジン アクセスのための Windows ファイアウォールを構成する方法について説明します。 ファイアウォール システムは、コンピューター リソースへの不正アクセスを防ぐのに役立ちます。 ファイアウォールを経由して [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスにアクセスするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターで、アクセスを許可するようにファイアウォールを構成する必要があります。  
+# <a name="configure-a-windows-firewall-for-database-engine-access"></a>データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する
+
+ > 以前のバージョンの SQL Server に関連するコンテンツについては、「[データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](https://msdn.microsoft.com/en-US/library/ms175043(SQL.120).aspx)」をご覧ください。
+
+
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で SQL Server 構成マネージャーを使用して、データベース エンジン アクセスのための Windows ファイアウォールを構成する方法について説明します。 ファイアウォール システムは、コンピューター リソースへの不正アクセスを防ぐのに役立ちます。 ファイアウォールを経由して [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスにアクセスするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターで、アクセスを許可するようにファイアウォールを構成する必要があります。  
   
- Windows ファイアウォールの既定の設定の詳細と、[!INCLUDE[ssDE](../../includes/ssde-md.md)]、Analysis Services、Reporting Services、および Integration Services に影響する TCP ポートの説明については、「[SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」をご覧ください。 多くのファイアウォール システムが市販されています。 システム固有の情報については、ファイアウォールのマニュアルを参照してください。  
+ Windows ファイアウォールの既定の設定の詳細と、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、Analysis Services、Reporting Services、および Integration Services に影響する TCP ポートの説明については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」をご覧ください。 多くのファイアウォール システムが市販されています。 システム固有の情報については、ファイアウォールのマニュアルを参照してください。  
   
  アクセスを許可するための主な手順を次に示します。  
   
-1.  特定の TCP/IP ポートを使用するように[!INCLUDE[ssDE](../../includes/ssde-md.md)]を構成します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の既定のインスタンスはポート 1433 を使用しますが、使用するポートは変更できます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で使用されているポートは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに記録されます。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] と [!INCLUDE[ssEW](../../includes/ssew-md.md)] のインスタンス、および[!INCLUDE[ssDE](../../includes/ssde-md.md)]の名前付きインスタンスは動的ポートを使用します。 特定のポートを使うようにこれらのインスタンスを構成する方法については、「[特定の TCP ポートで受信待ちするようにサーバーを構成する方法 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/configure a server to listen on a specific tcp port.md)」をご覧ください。  
+1.  特定の TCP/IP ポートを使用するように [!INCLUDE[ssDE](../../includes/ssde-md.md)] を構成します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の既定のインスタンスはポート 1433 を使用しますが、使用するポートは変更できます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で使用されているポートは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに記録されます。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] と [!INCLUDE[ssEW](../../includes/ssew-md.md)] のインスタンス、および[!INCLUDE[ssDE](../../includes/ssde-md.md)]の名前付きインスタンスは動的ポートを使用します。 特定のポートを使うようにこれらのインスタンスを構成する方法については、「[特定の TCP ポートで受信待ちするようにサーバーを構成する方法 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)」をご覧ください。  
   
 2.  認証済みのユーザーまたはコンピューターが上記で構成したポートにアクセスできるように、ファイアウォールを構成します。  
   
@@ -49,7 +58,7 @@ caps.handback.revision: 57
   
      [SQL Server 構成マネージャー](#SSMSProcedure)  
   
-## はじめに  
+## <a name="before-you-begin"></a>はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
  ファイアウォールのポートを開くと、サーバーが攻撃を受けやすくなります。 ポートを開く前に、ファイアウォール システムについて理解しておいてください。 詳細については、「 [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)」をご覧ください。  
@@ -57,17 +66,17 @@ caps.handback.revision: 57
 ##  <a name="SSMSProcedure"></a> SQL Server 構成マネージャーの使用  
  Windows Vista、Windows 7、および Windows Server 2008 に適用されます。  
   
- 次の手順では、セキュリティが強化された Windows ファイアウォールの Microsoft 管理コンソール (MMC) スナップインを使用して Windows ファイアウォールを構成します。 セキュリティが強化された Windows ファイアウォールでは、現在のプロファイルのみを構成できます。 セキュリティが強化された Windows ファイアウォールの詳細については、「[SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」をご覧ください。  
+ 次の手順では、セキュリティが強化された Windows ファイアウォールの Microsoft 管理コンソール (MMC) スナップインを使用して Windows ファイアウォールを構成します。 セキュリティが強化された Windows ファイアウォールでは、現在のプロファイルのみを構成できます。 セキュリティが強化された Windows ファイアウォールの詳細については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」をご覧ください。  
   
-#### TCP アクセス用に Windows ファイアウォールのポートを開くには  
+#### <a name="to-open-a-port-in-the-windows-firewall-for-tcp-access"></a>TCP アクセス用に Windows ファイアウォールのポートを開くには  
   
 1.  [スタート] ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックして「 **WF.msc**」と入力し、 **[OK]**をクリックします。 ****  
   
-2.  **[セキュリティが強化された Windows ファイアウォール]** の左ペインの **[受信の規則]** をクリックし、[操作] ペインの **[新規の規則]** をクリックします。  
+2.  **[セキュリティが強化された Windows ファイアウォール]**の左ペインの **[受信の規則]**をクリックし、[操作] ペインの **[新規の規則]** をクリックします。  
   
 3.  **[規則の種類]** ダイアログ ボックスで、 **[ポート]**をクリックし、 **[次へ]**をクリックします。  
   
-4.  **[プロトコルおよびポート]** ダイアログ ボックスで、 **[TCP]**をクリックします。 **[特定のローカル ポート]** をクリックし、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスのポート番号を入力します。たとえば、既定のインスタンスの場合は「**1433**」と入力します。 **[次へ]**をクリックします。  
+4.  **[プロトコルおよびポート]** ダイアログ ボックスで、 **[TCP]**をクリックします。 **[特定のローカル ポート]**をクリックし、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスのポート番号を入力します。たとえば、既定のインスタンスの場合は「 **1433** 」と入力します。 **[次へ]**をクリックします。  
   
 5.  **[操作]** ダイアログ ボックスで、 **[接続を許可する]**をクリックし、 **[次へ]**をクリックします。  
   
@@ -75,15 +84,15 @@ caps.handback.revision: 57
   
 7.  **[名前]** ダイアログ ボックスで、この規則の名前と説明を入力し、 **[完了]**をクリックします。  
   
-#### 動的ポートの使用時に SQL Server にアクセスするには  
+#### <a name="to-open-access-to-sql-server-when-using-dynamic-ports"></a>動的ポートの使用時に SQL Server にアクセスするには  
   
 1.  [スタート] ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックして「 **WF.msc**」と入力し、 **[OK]**をクリックします。 ****  
   
-2.  **[セキュリティが強化された Windows ファイアウォール]** の左ペインの **[受信の規則]** をクリックし、[操作] ペインの **[新規の規則]** をクリックします。  
+2.  **[セキュリティが強化された Windows ファイアウォール]**の左ペインの **[受信の規則]**をクリックし、[操作] ペインの **[新規の規則]** をクリックします。  
   
 3.  **[規則の種類]** ダイアログ ボックスで、 **[プログラム]**をクリックし、 **[次へ]**をクリックします。  
   
-4.  **[プログラム]** ダイアログ ボックスで、 **[このプログラムのパス]**をクリックします。 **[参照]**をクリックし、ファイアウォール経由でアクセスする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに移動して、 **[開く]**をクリックします。 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe** にあります。 **[次へ]**をクリックします。  
+4.  **[プログラム]** ダイアログ ボックスで、 **[このプログラムのパス]**をクリックします。 **[参照]**をクリックし、ファイアウォール経由でアクセスする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに移動して、 **[開く]**をクリックします。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**にあります。 **[次へ]**をクリックします。  
   
 5.  **[操作]** ダイアログ ボックスで、 **[接続を許可する]**をクリックし、 **[次へ]**をクリックします。  
   
@@ -91,7 +100,7 @@ caps.handback.revision: 57
   
 7.  **[名前]** ダイアログ ボックスで、この規則の名前と説明を入力し、 **[完了]**をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [方法: ファイアウォールの設定 (Azure SQL データベース) を構成します。](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   

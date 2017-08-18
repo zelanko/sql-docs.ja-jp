@@ -1,28 +1,33 @@
 ---
 title: "可用性データベースが中断されている | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.agdashboard.drp1notsuspended.issues.f1"
-helpviewer_keywords: 
-  - "可用性グループ [SQL Server]、ポリシー"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.agdashboard.drp1notsuspended.issues.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
 ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 3f2040ca390a66809806e7e5123c24272c4470e2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# 可用性データベースが中断されている
+# <a name="availability-database-is-suspended"></a>可用性データベースが中断されている
     
-## 概要  
+## <a name="introduction"></a>概要  
   
 |||  
 |-|-|  
@@ -31,24 +36,25 @@ caps.handback.revision: 15
 |**カテゴリ**|**警告**|  
 |**ファセット**|可用性データベース|  
   
-## 説明  
+## <a name="description"></a>説明  
  このポリシーは、セカンダリ データベース ("セカンダリ データベース レプリカ" とも呼ばれます) のデータの移動状態をチェックします。 データの移動が中断された場合、ポリシーは通常とは異なる状態です。 それ以外の場合、ポリシーは正常な状態です。  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] のこのリリース向けに、TechNet Wiki の「[可用性データベースが中断されている](http://go.microsoft.com/fwlink/p/?LinkId=220860)」に、考えられるエラーの原因および解決方法に関する情報が紹介されています。  
+>  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のこのリリース向けに、TechNet Wiki の「 [可用性データベースが中断されている](http://go.microsoft.com/fwlink/p/?LinkId=220860) 」に、考えられるエラーの原因および解決方法に関する情報が紹介されています。  
   
-## 考えられる原因  
+## <a name="possible-causes"></a>考えられる原因  
  この可用性データベースでのデータ同期が中断された原因として、次の原因が考えられます。  
   
 -   エラーが原因でシステムによってデータの同期が中断された。  
   
 -   メンテナンスのためにデータベース管理者によってデータの同期が中断された。  
   
-## 考えられる解決方法  
+## <a name="possible-solution"></a>考えられる解決方法  
  データの同期を再開します。 問題が解決しない場合は、イベント ログで可用性グループを調べ、データの移動が中断された原因を分析します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   
+

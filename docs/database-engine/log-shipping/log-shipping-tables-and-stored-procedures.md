@@ -1,31 +1,36 @@
 ---
 title: "ログ配布テーブルとストアド プロシージャ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "セカンダリ サーバー [SQL Server]"
-  - "監視サーバー [SQL Server]"
-  - "システム テーブルのログ配布 [SQL Server]"
-  - "ログ配布 [SQL Server] のストアド プロシージャ"
-  - "プライマリ サーバー [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- secondary servers [SQL Server]
+- monitor servers [SQL Server]
+- log shipping [SQL Server], system tables
+- log shipping [SQL Server], stored procedures
+- primary servers [SQL Server]
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 25b36ec7a049001e54726e37024c392f71cd07ab
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# ログ配布テーブルとストアド プロシージャ
+# <a name="log-shipping-tables-and-stored-procedures"></a>ログ配布テーブルとストアド プロシージャ
   このトピックでは、ログ配布構成に関連付けられているすべてのテーブルおよびストアド プロシージャについて説明します。 すべてのログ配布テーブルは、各サーバーの **msdb** に保存されます。 次の表は、ログ配布構成にあるどのサーバーで、どのテーブルおよびストアド プロシージャが使用されるかを示しています。  
   
-## プライマリ サーバーのテーブル  
+## <a name="primary-server-tables"></a>プライマリ サーバーのテーブル  
   
 |テーブル|説明|  
 |-----------|-----------------|  
@@ -36,7 +41,7 @@ caps.handback.revision: 20
 |[log_shipping_primary_databases](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)|特定のサーバー上にあるプライマリ データベースの構成情報を格納します。 プライマリ データベースごとに 1 行ずつ格納します。|  
 |[log_shipping_primary_secondaries](../../relational-databases/system-tables/log-shipping-primary-secondaries-transact-sql.md)|プライマリ データベースをセカンダリ データベースにマッピングします。|  
   
-## プライマリ サーバーのストアド プロシージャ  
+## <a name="primary-server-stored-procedures"></a>プライマリ サーバーのストアド プロシージャ  
   
 |ストアド プロシージャ|説明|  
 |----------------------|-----------------|  
@@ -46,11 +51,11 @@ caps.handback.revision: 20
 |[sp_cleanup_log_shipping_history](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)|保持期間に基づいて、ローカルおよびモニター上の履歴をクリーンアップします。|  
 |[sp_delete_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)|バックアップ ジョブ、ローカル履歴、リモート履歴など、プライマリ データベースのログ配布を削除します。|  
 |[sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md)|プライマリ データベースからセカンダリ データベース名を削除します。|  
-|[sp_help_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)|プライマリ データベースの設定を取得し、**log_shipping_primary_databases** テーブルと **log_shipping_monitor_primary** テーブルの値を表示します。|  
+|[sp_help_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)|プライマリ データベースの設定を取得し、 **log_shipping_primary_databases** テーブルと **log_shipping_monitor_primary** テーブルの値を表示します。|  
 |[sp_help_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-secondary-transact-sql.md)|プライマリ データベースのセカンダリ データベース名を取得します。|  
 |[sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)|指定したログ配布エージェントの最新情報でモニターを更新します。|  
   
-## セカンダリ サーバーのテーブル  
+## <a name="secondary-server-tables"></a>セカンダリ サーバーのテーブル  
   
 |テーブル|説明|  
 |-----------|-----------------|  
@@ -62,9 +67,9 @@ caps.handback.revision: 20
 |[log_shipping_secondary_databases](../../relational-databases/system-tables/log-shipping-secondary-databases-transact-sql.md)|特定のセカンダリ データベースの構成情報を格納します。 セカンダリ データベースごとに 1 行ずつ格納します。|  
   
 > [!NOTE]  
->  特定のプライマリ データベースと同じセカンダリ サーバー上にあるセカンダリ データベースでは、**log_shipping_secondary** テーブルの設定が共有されます。 1 つのセカンダリ データベースで共有設定が変更されると、すべてのセカンダリ データベースで設定が変更されます。  
+>  特定のプライマリ データベースと同じセカンダリ サーバー上にあるセカンダリ データベースでは、 **log_shipping_secondary** テーブルの設定が共有されます。 1 つのセカンダリ データベースで共有設定が変更されると、すべてのセカンダリ データベースで設定が変更されます。  
   
-## セカンダリ サーバーのストアド プロシージャ  
+## <a name="secondary-server-stored-procedures"></a>セカンダリ サーバーのストアド プロシージャ  
   
 |ストアド プロシージャ|説明|  
 |----------------------|-----------------|  
@@ -75,11 +80,11 @@ caps.handback.revision: 20
 |[sp_cleanup_log_shipping_history](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)|保持期間に基づいて、ローカルおよびモニター上の履歴をクリーンアップします。|  
 |[sp_delete_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)|セカンダリ データベース、ローカル履歴、およびリモート履歴を削除します。|  
 |[sp_delete_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-primary-transact-sql.md)|指定したプライマリ サーバーについての情報をセカンダリ サーバーから削除します。|  
-|[sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|**log_shipping_secondary**、**log_shipping_secondary_databases**、および **log_shipping_monitor_secondary** の各テーブルからセカンダリ データベースの設定を取得します。|  
+|[sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|**log_shipping_secondary**、 **log_shipping_secondary_databases**、および **log_shipping_monitor_secondary** の各テーブルからセカンダリ データベースの設定を取得します。|  
 |[sp_help_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)|セカンダリ サーバーにある指定されたプライマリ データベースの設定を取得します。|  
 |[sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)|指定したログ配布エージェントの最新情報でモニターを更新します。|  
   
-## 監視サーバーのテーブル  
+## <a name="monitor-server-tables"></a>監視サーバーのテーブル  
   
 |テーブル|説明|  
 |-----------|-----------------|  
@@ -89,7 +94,7 @@ caps.handback.revision: 20
 |[log_shipping_monitor_primary](../../relational-databases/system-tables/log-shipping-monitor-primary-transact-sql.md)|この監視サーバーに関連付けられているプライマリ データベースごとに 1 つの監視レコードを格納します。|  
 |[log_shipping_monitor_secondary](../../relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql.md)|この監視サーバーに関連付けられているセカンダリ データベースごとに 1 つの監視レコードを格納します。|  
   
-## 監視サーバーのストアド プロシージャ  
+## <a name="monitor-server-stored-procedures"></a>監視サーバーのストアド プロシージャ  
   
 |ストアド プロシージャ|説明|  
 |----------------------|-----------------|  

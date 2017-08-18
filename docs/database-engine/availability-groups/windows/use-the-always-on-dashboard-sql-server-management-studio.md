@@ -1,30 +1,35 @@
 ---
-title: "Always On ダッシュボードの使用 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.agdashboard.f1"
-helpviewer_keywords: 
-  - "可用性グループ [SQL Server]、ポリシー"
-  - "可用性グループ [SQL Server]、ダッシュボード"
+title: "Always On 可用性グループ ダッシュボードの使用 (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.agdashboard.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
+- Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 caps.latest.revision: 30
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b17125da076312057366a5f2150d513072b074f2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# Always On ダッシュボードの使用 (SQL Server Management Studio)
+# <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Always On 可用性グループ ダッシュボードの使用 (SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  データベース管理者は Always On ダッシュボードを使用して、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の Always On 可用性グループ、可用性レプリカ、および可用性データベースの正常性をひとめで確認できるビューを取得します。 Always On ダッシュボードの一般的な用途を次に示します。  
+  データベース管理者は Always On 可用性グループ ダッシュボードを使用して、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の可用性グループ、可用性レプリカ、および可用性データベースの正常性をひとめで確認できるビューを取得します。 可用性グループ ダッシュボードの一般的な用途を次に示します。  
   
 -   手動フェールオーバー用のレプリカの選択。  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 30
   
 -   同期コミット セカンダリ レプリカのパフォーマンスへの影響の評価。  
   
- Always On ダッシュボードは、可用性グループの主要な状態およびパフォーマンス インジケーターを提供し、以下の種類の情報を使用して高可用性操作について容易に判断できるようにします。  
+ ダッシュボードは、可用性グループの主要な状態およびパフォーマンス インジケーターを提供し、以下の種類の情報を使用して高可用性操作について容易に判断できるようにします。  
   
 -   レプリカのロールアップの状態  
   
@@ -50,34 +55,6 @@ caps.handback.revision: 30
   
 -   ログの復元時間  
   
- **このトピックの内容**  
-  
--   **作業を開始する準備:**  
-  
-     [前提条件](#Prerequisites)  
-  
-     [セキュリティ](#Security)  
-  
-     [アクセス許可](#Permissions)  
-  
--   **概要:**  
-  
-     [Always On ダッシュボード](#SSMSProcedure)  
-  
-     [Always On ダッシュボードのオプションを変更するには](#DashboardOptions)  
-  
--   **ダッシュボード ウィンドウ:**  
-  
-     [可用性グループの概要](#AvGroupsView)  
-  
-     [可用性グループの詳細](#AvGroupDetails)  
-  
-     [可用性レプリカの詳細](#AvReplicaDetails)  
-  
-     [可用性グループの情報をグループ化するには](#AvDbDetails)  
-  
--   [関連タスク](#RelatedTasks)  
-  
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
@@ -92,7 +69,7 @@ caps.handback.revision: 30
   
 1.  オブジェクト エクスプローラーで、Always On ダッシュボードを実行する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続します。  
   
-2.  **[Always On 高可用性]** ノードを展開し、**[可用性グループ]** ノードを右クリックして、**[ダッシュボードの表示]** をクリックします。  
+2.  **[Always On 高可用性]** ノードを展開し、 **[可用性グループ]** ノードを右クリックして、 **[ダッシュボードの表示]**をクリックします。  
   
 ###  <a name="DashboardOptions"></a> Always On ダッシュボードのオプションを変更するには  
  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の **[オプション]** ダイアログ ボックスを使って、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On ダッシュボードの自動更新と自動定義 Always On ポリシーの有効化の動作を構成できます。  
@@ -101,7 +78,7 @@ caps.handback.revision: 30
   
 2.  ダッシュボードを自動的に更新するには、 **[オプション]** ダイアログ ボックスで **[自動更新を有効にする]**を選択し、更新間隔を秒単位で入力して、接続の再試行の回数を入力します。  
   
-3.  ユーザー定義ポリシーを有効にするには、**[ユーザー定義の Always On ポリシーを有効にする]** を選択します。  
+3.  ユーザー定義ポリシーを有効にするには、 **[ユーザー定義の Always On ポリシーを有効にする]**を選択します。  
   
 ##  <a name="AvGroupsView"></a> 可用性グループの概要  
  可用性グループの画面には、接続されているサーバー インスタンスがホストしているレプリカの可用性グループごとに概要を示す行が表示されます。 このペインには、次の列が表示されます。  
@@ -120,7 +97,7 @@ caps.handback.revision: 30
 -   **[手動]**。 自動フェールオーバー モードのレプリカがないことを示します。  
   
  **問題**  
- **[問題]** リンクをクリックすると、問題のトラブルシューティングのドキュメントが表示されます。 Always On ポリシーのすべての問題の一覧は、「[Always On 可用性グループでの運用上の問題のポリシー ベースの管理 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)」を参照してください。  
+ **[問題]** リンクをクリックすると、問題のトラブルシューティングのドキュメントが表示されます。 Always On ポリシーのすべての問題の一覧は、「[Always On 可用性グループでの運用上の問題のポリシー ベースの管理 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)」を参照してください。  
   
 > [!TIP]  
 >  列見出しをクリックすると、可用性グループの名前、プライマリ インスタンス、フェールオーバー モード、または問題で、可用性グループの情報を並べ替えることができます。  
@@ -131,10 +108,10 @@ caps.handback.revision: 30
  **[可用性グループの状態]**  
  可用性グループの正常性の状態を表示します。  
   
- **[プライマリ インスタンス]**  
+ **Primary instance**  
  可用性グループのプライマリ レプリカをホストしているサーバー インスタンスの名前。  
   
- **[フェールオーバー モード]**  
+ **Failover mode**  
  レプリカの構成で指定されているフェールオーバー モードを表示します。 フェールオーバー モードとして有効な値は、次のとおりです。  
   
 -   **[自動]**。 1 つまたは複数のレプリカが自動フェールオーバー モードであることを示します。  
@@ -151,7 +128,7 @@ caps.handback.revision: 30
  可用性レプリカをホストするサーバー インスタンスの名前。 この列は既定で表示されます。  
   
  **ロール**  
- 可用性レプリカの現在のロール (**[プライマリ]** または **[セカンダリ]**) を示します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のロールについては、「[Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。 この列は既定で表示されます。  
+ 可用性レプリカの現在のロール ( **[プライマリ]** または **[セカンダリ]**) を示します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のロールについては、「[Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。 この列は既定で表示されます。  
   
  **フェールオーバー モード**  
  レプリカの構成で指定されているフェールオーバー モードを表示します。 フェールオーバー モードとして有効な値は、次のとおりです。  
@@ -175,7 +152,7 @@ caps.handback.revision: 30
 -   **NULL**。 不明な状態です。 この値は、ローカル サーバー インスタンスが WSFC フェールオーバー クラスターと通信できない (ローカル ノードが WSFC クォーラムの一部ではない) 場合に生じます。  
   
  **問題**  
- 問題の名前が一覧表示されます。 この値は既定で表示されます。 Always On ポリシーのすべての問題の一覧は、「[Always On 可用性グループでの運用上の問題のポリシー ベースの管理 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)」を参照してください。  
+ 問題の名前が一覧表示されます。 この値は既定で表示されます。 Always On ポリシーのすべての問題の一覧は、「[Always On 可用性グループでの運用上の問題のポリシー ベースの管理 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)」を参照してください。  
   
  **可用性モード**  
  各可用性レプリカのために個別に設定したレプリカ プロパティを示します。 この値は既定で非表示になります。 可能な値は次のとおりです。  
@@ -228,7 +205,7 @@ caps.handback.revision: 30
  最後の接続エラーのタイムスタンプ。 この値は既定で非表示になります。  
   
 > [!NOTE]  
->  可用性レプリカのパフォーマンス カウンターの詳細については、「[SQL Server、Availability Replica](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)」を参照してください。  
+>  可用性レプリカのパフォーマンス カウンターの詳細については、「 [SQL Server、Availability Replica](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)」を参照してください。  
   
 ##  <a name="AvDbDetails"></a> 可用性グループの情報をグループ化するには  
  情報をグループ化するには、 **[グループ化]**をクリックし、次のいずれかを選択します。  
@@ -237,7 +214,7 @@ caps.handback.revision: 30
   
 -   **可用性データベース**  
   
--   **同期状態**  
+-   **Synchronization state**  
   
 -   **フェールオーバーの準備**  
   
@@ -290,7 +267,7 @@ caps.handback.revision: 30
     > [!CAUTION]  
     >  データベースが INITIALIZING 状態の場合、セカンダリ レプリカに強制的にフェールオーバーすると、常にそのデータベースは起動できない状態のままになります。  
   
- **フェールオーバーの準備**  
+ **Failover Readiness**  
  どの可用性レプリカがフェールオーバーできるかを、データ損失の可能性の有無と共に示します。 この列は既定で表示されます。 可能な値は次のとおりです。  
   
 -   **[データ損失]**  
@@ -304,10 +281,10 @@ caps.handback.revision: 30
   
 -   **[重大]**。 クリックすると、重大な問題が表示されます。  
   
- Always On ポリシーのすべての問題の一覧は、「[Always On 可用性グループでの運用上の問題のポリシー ベースの管理 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)」を参照してください。  
+ Always On ポリシーのすべての問題の一覧は、「[Always On 可用性グループでの運用上の問題のポリシー ベースの管理 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)」を参照してください。  
   
  **中断**  
- データベースが **[中断状態]** であるか **[再開]** されたかを示します。 この値は既定で非表示になります。  
+ データベースが **[中断状態]** であるか **[再開]**されたかを示します。 この値は既定で非表示になります。  
   
  **中断の理由**  
  中断状態の理由を示します。 この値は既定で非表示になります。  
@@ -316,7 +293,7 @@ caps.handback.revision: 30
  プライマリ レプリカおよびセカンダリ レプリカ内の最後のトランザクション ログ レポートの時間の差分を示します。 プライマリ レプリカが失敗すると、時間枠内のすべてのトランザクション ログ レコードが失われます。 この値は既定で非表示になります。  
   
  **[推定復旧時間] (秒)**  
- キャッチアップ時間の再実行にかかる時間を秒単位で示します。 *キャッチアップ時間*は、セカンダリ レプリカがプライマリ レプリカに追いつくためにかかる時間です。 この値は既定で非表示になります。  
+ キャッチアップ時間の再実行にかかる時間を秒単位で示します。 *キャッチアップ時間* は、セカンダリ レプリカがプライマリ レプリカに追いつくためにかかる時間です。 この値は既定で非表示になります。  
   
  **[同期のパフォーマンス] (秒)**  
  プライマリ レプリカとセカンダリ レプリカ間の同期にかかる時間を秒単位で示します。 この値は既定で非表示になります。  
@@ -379,8 +356,9 @@ caps.handback.revision: 30
   
 -   [Always On ポリシーを使用した可用性グループの正常性の確認 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [可用性グループの監視 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
+

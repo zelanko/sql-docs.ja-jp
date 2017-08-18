@@ -1,23 +1,28 @@
 ---
 title: "SysPrep を使用した SQL Server のインストールに関する注意点 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ebab112323b9c9ad8b5c8fdba8e3b7e10f69b808
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# SysPrep を使用した SQL Server のインストールに関する注意点
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sysprep を使用すると、コンピューター上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスを準備し、後で構成を完了できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sysprep では、2 段階のプロセスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスを構成します。 手順は次のとおりです。  
+# <a name="considerations-for-installing-sql-server-using-sysprep"></a>SysPrep を使用した SQL Server のインストールに関する注意点
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sysprep を使用すると、コンピューター上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスを準備し、後で構成を完了できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sysprep では、2 段階のプロセスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のスタンドアロン インスタンスを構成します。 手順は次のとおりです。  
   
 -   [イメージの準備](#BKMK_PrepareImage)  
   
@@ -25,11 +30,11 @@ caps.handback.revision: 22
   
 -   [イメージの完了](#BKMK_CompleteImage)  
   
-     この手順では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みインスタンスの構成を完了できます。 ここでは、コンピューター、ネットワーク、およびアカウントに固有の情報を入力できます。  
+     この手順では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の準備済みインスタンスの構成を完了できます。 ここでは、コンピューター、ネットワーク、およびアカウントに固有の情報を入力できます。  
   
- SysPrep を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールする方法の詳細については、「[SysPrep を使用した SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-2016-using-sysprep.md)」を参照してください。  
+ SysPrep を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールする方法の詳細については、「 [SysPrep を使用した SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-using-sysprep.md)」を参照してください。  
   
-## [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep の一般的な使用方法  
+## <a name="common-uses-for-includessnoversionincludesssnoversion-mdmd-sysprep"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep の一般的な使用方法  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 機能は、次のいずれかの方法で使用できます。  
   
 -   イメージの準備手順を使用して、同じコンピューター上に 1 つ以上の未構成の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを準備できます。 同じコンピューターでイメージの完了手順を使用することで、これらの準備済みインスタンスを構成できます。  
@@ -40,12 +45,12 @@ caps.handback.revision: 22
   
      Windows オペレーティング システムのイメージを準備するには、Windows SysPrep ツールを使用します。 このツールは、組織全体に配置するためにオペレーティング システムのカスタマイズされたイメージをキャプチャする場合に使用されます。 SysPrep とその使用方法の詳細については、「 [Sysprep とは](http://go.microsoft.com/fwlink/?LinkId=143546)」を参照してください。  
   
-## インストール メディアに関する注意点  
- 完全バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用している場合は、次のことを考慮してください。  
+## <a name="installation-media-considerations"></a>インストール メディアに関する注意点  
+ 完全バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用している場合は、次のことを考慮してください。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition 以外のエディション:  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Express Edition 以外のエディション:  
   
-    -   イメージの準備手順では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Evaluation Edition を使用して製品バイナリがインストールされます。 インスタンスが完了すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションはイメージの完了手順で入力した製品 ID に応じて決定されます。  
+    -   イメージの準備手順では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Evaluation Edition を使用して製品バイナリがインストールされます。 インスタンスが完了すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションはイメージの完了手順で入力した製品 ID に応じて決定されます。  
   
     -   Evaluation Edition の製品 ID を入力すると、準備済みインスタンスの完了から 180 日で期限が切れるように評価期間が設定されます。  
   
@@ -55,8 +60,8 @@ caps.handback.revision: 22
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition の準備済みインスタンスには、製品 ID を指定できません。  
   
-## サポートされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の SysPrep は、ツールを含む [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての機能をサポートします。  
+## <a name="supported-includessnoversionincludesssnoversion-mdmd-installations"></a>サポートされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の SysPrep は、ツールを含む [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべての機能をサポートします。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] またはそれ以前のバージョンをサイド バイ サイドでインストールするために、複数のインスタンスを準備できます。 これらのインスタンスの機能は、SysPrep をサポートしている必要があります。  
   
@@ -64,19 +69,19 @@ caps.handback.revision: 22
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを準備すると自動的に準備され、 イメージの完了手順で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを完了させると完了します。  
   
- サポートされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションについては、「[SQL Server 2016 の各エディションでサポートされる機能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)」を参照してください。  
+ サポートされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエディションについては、「 [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
- 準備済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの構成時に、エディションをアップグレードできます。 このオプションは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition ではサポートされていません。  
+ 準備済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの構成時に、エディションをアップグレードできます。 このオプションは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition ではサポートされていません。  
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]以降では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SysPrep はコマンド ラインからの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターのインストールをサポートしています。  
   
-## [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep の制限事項  
+## <a name="includessnoversionincludesssnoversion-mdmd-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep の制限事項  
  準備済みインスタンスの修復はサポートされていません。 イメージの準備手順またはイメージの完了手順でセットアップが失敗した場合は、アンインストールを実行する必要があります。  
   
 ##  <a name="BKMK_PrepareImage"></a> イメージの準備  
  イメージの準備手順では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 製品と機能がインストールされますが、インストールの構成は行われません。  
   
- インストールする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 製品のインストール ファイルのインストール場所は、この手順で指定できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを準備するには、**[インストール センター]** の **[詳細設定]** ページにある **[SysPrep 配置のスタンドアロン インスタンスのイメージの準備]** を使用するか、コマンド プロンプトを使用します。  
+ インストールする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 製品のインストール ファイルのインストール場所は、この手順で指定できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを準備するには、 **[インストール センター]** の **[詳細設定]** ページにある **[SysPrep 配置のスタンドアロン インスタンスのイメージの準備]** を使用するか、コマンド プロンプトを使用します。  
   
 -   同じコンピューター上で、後で完了できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスを準備できます。  
   
@@ -89,9 +94,10 @@ caps.handback.revision: 22
   
 -   [スタート] メニューのショートカットを使用します。  
   
--   **[インストール センター]** の **[詳細設定]** ページにある **[準備済みスタンドアロン インスタンスのイメージの完了]** をクリックします。  
+-   **[インストール センター]** の **[詳細設定]** ページにある **[準備済みスタンドアロン インスタンスのイメージの完了]**をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)  
   
   
+

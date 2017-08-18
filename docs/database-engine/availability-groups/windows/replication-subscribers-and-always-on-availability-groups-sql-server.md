@@ -1,31 +1,36 @@
 ---
 title: "レプリケーション サブスクライバーと AlwaysOn 可用性グループ (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "フェールオーバー サブスクライバーと AlwaysOn"
-  - "可用性グループ [SQL Server]、相互運用性"
-  - "レプリケーション [SQL Server]、AlwaysOn 可用性グループ"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- failover subscribers with AlwaysOn
+- Availability Groups [SQL Server], interoperability
+- replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 caps.latest.revision: 19
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 777e170ba0f7b64a1522c614c52661f1a70a7bab
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# レプリケーション サブスクライバーと AlwaysOn 可用性グループ (SQL Server)
+# <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>レプリケーション サブスクライバーと AlwaysOn 可用性グループ (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   レプリケーション サブスクライバーであるデータベースを含む AlwaysOn 可用性グループがフェールオーバーすると、レプリケーション サブスクリプションが失敗することがあります。 トランザクション サブスクライバーの場合、サブスクリプションがサブスクライバーの可用性グループ リスナーの名前を使用していると、ディストリビューション エージェントは自動的にレプリケーションを継続します。 マージ サブスクライバーの場合、レプリケーション管理者はサブスクリプションを再作成して、手動でサブスクライバーを再構成する必要があります。  
   
-## サポート対象  
+## <a name="what-is-supported"></a>サポート対象  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションは、パブリッシャーの自動フェールオーバー、トランザクション サブスクライバーの自動フェールオーバー、およびマージ サブスクライバーの手動フェールオーバーをサポートします。 可用性データベース上のディストリビューターのフェールオーバーはサポートされていません。 AlwaysOn は、Websync および ssNoVersion Compact のシナリオと組み合わせることはできません。  
   
  **マージ プル サブスクリプションのフェールオーバー**  
@@ -36,7 +41,7 @@ caps.handback.revision: 19
   
  可用性グループのフェールオーバー時のプッシュ サブスクリプションは失敗します。これは、プッシュ エージェントが元のサブスクライバーの元のサブスクリプション データベースに接続できなくなっているためです。  
   
-## AlwaysOn 環境でトランザクション サブスクリプションを作成する方法  
+## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>AlwaysOn 環境でトランザクション サブスクリプションを作成する方法  
  トランザクション レプリケーションの場合、サブスクライバーの可用性グループを構成およびフェールオーバーするために、次の手順を使用します。  
   
 1.  サブスクリプションを作成する前に、適切な AlwaysOn 可用性グループにサブスクライバー データベースを追加します。  
@@ -46,7 +51,7 @@ caps.handback.revision: 19
 3.  以下の「 **トランザクション レプリケーションのプッシュ サブスクリプションの作成** 」セクションのスクリプトを使用して、サブスクライバーの可用性グループ リスナーの名前を使用するサブスクリプションを作成します。 フェールオーバー後、リスナー名は常に有効になるのに対し、サブスクライバーの実際のサーバー名は、新しいプライマリになった実際のノードによって異なります。  
   
     > [!NOTE]  
-    >  サブスクリプションは [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを使用して作成する必要があります。[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] を使用して作成できません。  
+    >  サブスクリプションは [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを使用して作成する必要があります。 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]を使用して作成できません。  
   
 4.  プル サブスクリプションを作成する場合:  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 19
   
  この手順に従ってサブスクリプションを作成した場合、フェールオーバー後には何もする必要がありません。  
   
-## トランザクション レプリケーションのプッシュ サブスクリプションの作成  
+## <a name="creating-a-transactional-replication-push-subscription"></a>トランザクション レプリケーションのプッシュ サブスクリプションの作成  
   
 ```  
 -- commands to execute at the publisher, in the publisher database:  
@@ -79,7 +84,7 @@ EXEC sp_addpushsubscription_agent @publication = N'<publication name>',
 GO  
 ```  
   
-## サブスクライバーの可用性グループがフェールオーバーした後で、マージ エージェントを再開するには  
+## <a name="to-resume-the-merge-agents-after-the-availability-group-of-the-subscriber-fails-over"></a>サブスクライバーの可用性グループがフェールオーバーした後で、マージ エージェントを再開するには  
  マージ レプリケーションでは、レプリケーション管理者が次の手順に従い、手動でサブスクライバーを再構成する必要があります。  
   
 1.  **sp_subscription_cleanup** を実行して、サブスクライバー上の古いサブスクリプションを削除します。 この操作は、新しいプライマリ レプリカ (以前のセカンダリ レプリカ) で実行します。  
@@ -90,3 +95,4 @@ GO
 >  現在のプロセスはマージ レプリケーションのサブスクライバーには不便ですが、マージ レプリケーションの主なシナリオは、サブスクライバーで AlwaysOn 可用性グループを使用しない未接続のユーザー (デスクトップ、ラップトップ、携帯端末) です。  
   
   
+

@@ -1,37 +1,42 @@
 ---
 title: "ネットワークを使用する場合とネットワークを使用しない場合の SQL Server の実行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "サーバー サービスが開始されたことの確認"
-  - "net start [SQL Server]"
-  - "コマンド プロンプト [SQL Server], 接続"
-  - "SQL Server のサービス, ネットワーク"
-  - "状態情報 [SQL Server], Server のサービス"
-  - "SQL Server の実行"
-  - "ネットワーク [SQL Server], 使用する場合と使用しない場合の SQL Server"
-  - "サービス [SQL Server], ネットワーク"
-  - "サーバー サービスの開始"
-  - "SQL Server, 実行"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- verifying Server service has been started
+- net start [SQL Server]
+- command prompt [SQL Server], connections
+- SQL Server services, networks
+- status information [SQL Server], Server service
+- running SQL Server
+- networking [SQL Server], SQL Server with or without
+- services [SQL Server], networks
+- starting Server service
+- SQL Server, running
 ms.assetid: 54eac961-5c7a-4481-982d-f93a64b5c2f4
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 491a6a7e8c5e2e9cbfb26bf095d0c8057e5d1f63
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# ネットワークを使用する場合とネットワークを使用しない場合の SQL Server の実行
+# <a name="run-sql-server-with-or-without-a-network"></a>ネットワークを使用する場合とネットワークを使用しない場合の SQL Server の実行
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はネットワーク上で実行できます。また、ネットワークを使用せずに機能させることもできます。  
   
-## ネットワーク上での SQL Server の実行  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がネットワーク経由で通信するようにするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを実行する必要があります。 既定では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows により、組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが自動的に開始されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが開始されているかどうかを調べるには、コマンド プロンプトで次のように入力します。  
+## <a name="running-sql-server-on-a-network"></a>ネットワーク上での SQL Server の実行  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がネットワーク経由で通信するようにするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを実行する必要があります。 既定では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows により、組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが自動的に開始されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが開始されているかどうかを調べるには、コマンド プロンプトで次のように入力します。  
   
  **net start**  
   
@@ -43,12 +48,12 @@ caps.handback.revision: 26
   
 -   SQL Server Agent (MSSQLSERVER)  
   
-## ネットワークを使用しない SQL Server の実行  
- ネットワークを使用せずに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行する場合は、組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを開始する必要はありません。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、SQL Server 構成マネージャー、および **net start** コマンドと **net stop** コマンドは、ネットワークを使用していなくても機能するので、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを起動および停止する手順は、ネットワークを使用している場合もスタンドアロン運用の場合も同じです。  
+## <a name="running-sql-server-without-a-network"></a>ネットワークを使用しない SQL Server の実行  
+ ネットワークを使用せずに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行する場合は、組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを開始する必要はありません。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、SQL Server 構成マネージャー、および **net start** コマンドと **net stop** コマンドは、ネットワークを使用していなくても機能するので、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを起動および停止する手順は、ネットワークを使用している場合もスタンドアロン運用の場合も同じです。  
   
- **sqlcmd** などのローカル クライアントからスタンドアロンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続するときは、ネットワークを使用せずに、ローカル パイプを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに直接接続します。 ローカル パイプとネットワーク パイプの相違は、ネットワークを使用するかしないかです。 他に指定がない限り、ローカル パイプでもネットワーク パイプでも、標準パイプ (\\\\.\pipe\sql\query) を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスとの接続が確立されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlcmd **などのローカル クライアントからスタンドアロンの**インスタンスに接続するときは、ネットワークを使用せずに、ローカル パイプを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに直接接続します。 ローカル パイプとネットワーク パイプの相違は、ネットワークを使用するかしないかです。 他に指定がない限り、ローカル パイプでもネットワーク パイプでも、標準パイプ ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .\pipe\sql\query) を使用して\\\\のインスタンスとの接続が確立されます。  
   
- サーバー名を指定せずにローカル [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続しているときは、ローカル パイプを使用していることになります。 ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続し、明示的にサーバー名を指定しているときは、ネットワーク パイプまたは IPX/SPX (Internetwork Packet Exchange/Sequenced Packet Exchange) などの別のネットワーク プロセス間通信 (IPC) メカニズムを使用していることになります (複数のネットワークを使用するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成している場合)。 スタンドアロンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではネットワーク パイプがサポートされないので、クライアントから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するときに、不要な **/***<Server_name>* 引数を省略する必要があります。 たとえば、**osql** からスタンドアロンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続するには、次のように入力します。  
+ サーバー名を指定せずにローカル [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続しているときは、ローカル パイプを使用していることになります。 ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続し、明示的にサーバー名を指定しているときは、ネットワーク パイプまたは IPX/SPX (Internetwork Packet Exchange/Sequenced Packet Exchange) などの別のネットワーク プロセス間通信 (IPC) メカニズムを使用していることになります (複数のネットワークを使用するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成している場合)。 スタンドアロンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではネットワーク パイプがサポートされないので、クライアントから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するときに、不要な **/***<Server_name>* 引数を省略する必要があります。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] osql **からスタンドアロンの**インスタンスに接続するには、次のように入力します。  
   
  **osql /Usa /P** *\<saPassword>*  
   

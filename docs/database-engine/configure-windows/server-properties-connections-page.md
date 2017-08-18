@@ -1,35 +1,40 @@
 ---
-title: "[サーバーのプロパティ] ([接続] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.connections.f1"
+title: "サーバーのプロパティ ([接続] ページ) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73d0b32c2688c912c282c7c4acab0bd9ecb5633f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# [サーバーのプロパティ] ([接続] ページ)
+# <a name="server-properties---connections-page"></a>サーバーのプロパティ - [接続] ページ
   このページを使用すると、接続オプションを表示したり変更したりできます。  
   
-## 接続  
+## <a name="connections"></a>接続  
  **[同時接続の最大数 (0 = 無制限)]**  
- 0 以外の値に設定した場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で許可される接続の数を制限します。  
+ 0 以外の値に設定した場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で許可される接続の数を制限します。  
   
 > [!CAUTION]  
 >  この値を 1 や 2 などの小さい値に設定することにより、管理者が接続してサーバー管理できないように指定できます。ただし、専用管理者接続には常に接続できます。  
   
-## [既定の接続オプション]  
- **[既定の接続オプション]**  
+## <a name="default-connection-options"></a>[既定の接続オプション]  
+ **Default connection options**  
  次の表に示すような既定の接続オプションを指定します。  
   
 |構成オプション|説明|  
@@ -52,25 +57,25 @@ caps.handback.revision: 27
   
  接続オプションの詳細については、オンライン ブックで該当するオプションを参照してください。  
   
-## [リモート サーバー接続]  
+## <a name="remote-server-connections"></a>[リモート サーバー接続]  
  **[このサーバーへのリモート接続を許可する]**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するリモート サーバーからのストアド プロシージャの実行を制御します。 このチェック ボックスをオンにすることは、**sp_configureremote access** オプションを 1 に設定することと同じです。 このチェック ボックスをオフにすると、ストアド プロシージャはリモート サーバーから実行されません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを実行するリモート サーバーからのストアド プロシージャの実行を制御します。 このチェック ボックスをオンにすることは、 **sp_configureremote access** オプションを 1 に設定することと同じです。 このチェック ボックスをオフにすると、ストアド プロシージャはリモート サーバーから実行されません。  
   
  **[リモート クエリのタイムアウト (秒単位、0 = タイムアウトなし)]**  
  リモート操作の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] タイムアウトまでの時間 (秒) を指定します。 既定は 600 秒 (10 分) 間の待機です。  
   
  **[サーバー間通信で使用する分散トランザクションを要求する]**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) トランザクションにより、サーバー間のプロシージャのアクションを保護します。 詳細については、「[remote proc trans サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md)」を参照してください。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) トランザクションにより、サーバー間のプロシージャのアクションを保護します。 詳細については、「 [remote proc trans サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md)」を参照してください。  
   
-## [プロパティ] ページの [表示] オプション  
+## <a name="property-page-display-options"></a>[プロパティ] ページの [表示] オプション  
  **[構成した値]**  
- このペインの各オプションに構成されている値を表示します。 これらの値を変更した場合は、**[実行中の値]** をクリックして、変更後の値が反映されているかどうかを確認してください。 値が反映されていない場合は、最初に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを再起動する必要があります。  
+ このペインの各オプションに構成されている値を表示します。 これらの値を変更した場合は、 **[実行中の値]** をクリックして、変更後の値が反映されているかどうかを確認してください。 値が反映されていない場合は、最初に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを再起動する必要があります。  
   
  **[実行中の値]**  
  このペイン上のオプションの、現在実行中の値を表示します。 これらの値は読み取り専用です。  
   
-## 参照  
- [[オプション] &#40;[クエリ実行]:[SQL Server]:[詳細設定] ページ&#41;](../Topic/Options%20\(Query%20Execution:%20SQL%20Server:%20Advanced%20Page\).md)   
+## <a name="see-also"></a>参照  
+ [[オプション] &#40;[クエリ実行]:[SQL Server]:[詳細設定] ページ&#41;](http://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
  [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

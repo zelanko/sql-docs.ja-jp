@@ -1,224 +1,98 @@
 ---
-title: "Windows 認証を使用してデータベース ミラーリング セッションを確立する方法 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Windows 認証 [SQL Server]"
-  - "データベース ミラーリング [SQL Server], セキュリティ"
+title: "データベース ミラーリング セッションの確立 - Windows 認証 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], sessions
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 caps.latest.revision: 58
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 77
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 104c736aa623fa6aa3c55c204559759eb9885800
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# Windows 認証を使用してデータベース ミラーリング セッションを確立する方法 (Transact-SQL)
+# <a name="establish-database-mirroring-session---windows-authentication"></a>データベース ミラーリング セッションの確立 - Windows 認証
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用します。  
   
- ミラー データベースを準備した後 (「[ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)」を参照)、データベース ミラーリング セッションを確立できます。 プリンシパル サーバー、ミラー サーバー、およびミラーリング監視サーバーのインスタンスは、別々のホスト システムにある別々のサーバー インスタンスでなければなりません。  
+ データベース ミラーリング セッションを確立したり、特定のデータベースについてデータベース ミラーリングのプロパティを変更するには、 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページを使用します。 **[ミラーリング]** ページを使用してデータベース ミラーリングを構成する前に、次の要件を満たしていることをご確認ください。  
   
-> [!IMPORTANT]  
->  ミラーリングの構成はパフォーマンスに影響する場合があるので、データベース ミラーリングの構成はピーク タイム以外の時間に行うことをお勧めします。  
-  
-> [!NOTE]  
->  特定のサーバー インスタンスを、同じパートナーまたは別のパートナーを含む複数の同時実行データベース ミラーリング セッションに参加させることができます。 また、サーバー インスタンスを、あるセッションではパートナーとし、別のセッションではミラーリング監視にすることができます。 ミラー サーバー インスタンスでは、プリンシパル サーバー インスタンスと同じエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されている必要があります。 データベース ミラーリングは、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2016 の各エディションがサポートする機能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)」を参照してください。 また、ワークロードの処理能力が同程度のシステム上で運用することを強くお勧めします。  
-  
-### データベース ミラーリング セッションを確立するには  
-  
-1.  ミラー データベースを作成します。 詳細については、「[ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)」を参照してください。  
-  
-2.  各サーバー インスタンスにセキュリティを設定します。  
-  
-     データベース ミラーリング セッションの各サーバー インスタンスには、データベース ミラーリング エンドポイントが必要です。 エンドポイントが存在しない場合は、作成する必要があります。  
+-   プリンシパル サーバー インスタンスおよびミラー サーバー インスタンスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の同じエディション (Standard または Enterprise) を実行している必要があります。 また、ワークロードの処理能力が同程度のシステム上で運用することを強くお勧めします。  
   
     > [!NOTE]  
-    >  サーバー インスタンスによりデータベースのミラーリングに使用される認証の形式は、データベース ミラーリング エンドポイントのプロパティで指定します。 データベース ミラーリングのトランスポートには、Windows 認証と証明書ベースの認証の 2 種類のセキュリティを使用できます。 詳細については、「[データベース ミラーリングと AlwaysOn 可用性グループのトランスポート セキュリティ &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)」を参照してください。  
+    >  ミラーリング監視サーバー インスタンスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
-     各パートナー サーバーで、データベース ミラーリング用のエンドポイントが存在していることを確認します。 サポートするミラーリング セッションの数にかかわらず、サーバー インスタンスではデータベース ミラーリング エンドポイントを 1 つしか持つことができません。 このサーバー インスタンスをデータベース ミラーリング セッションでパートナー専用に使用する場合は、パートナーのロールをエンドポイントに割り当てることができます (ROLE**=**PARTNER)。 また、このサーバーを他のデータベース ミラーリング セッションのミラーリング監視サーバーとしても使用する場合は、エンドポイントのロールを ALL として割り当てます。  
+-   ミラー データベースが存在し、最新状態である必要があります。  
   
-     SET PARTNER ステートメントを実行するには、両方のパートナーのエンドポイントの STATE が、STARTED に設定されている必要があります。  
+     ミラー データベースを作成するには、ミラー サーバー インスタンス上でプリンシパル データベースの最新のバックアップを (WITH NORECOVERY を使用して) 復元する必要があります。 また、完全バックアップの後に 1 つ以上のログ バックアップを取得し、(WITH NORECOVERY を使用して) これらのバックアップを順にミラー データベースに復元する必要もあります。 詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)のすべてのエディションで使用できるわけではありません。  
   
-     サーバー インスタンスにデータベース ミラーリング エンドポイントがあるかどうかを調べて、そのロールと状態を確認するには、そのインスタンスで、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用します。  
+-   サーバー インスタンスが別のドメイン ユーザー アカウントで実行されている場合、それぞれに他方のインスタンスの **master** データベースのログインが必要になります。 ログインが存在しない場合は、作成してからミラーリングを構成する必要があります。 詳細については「[Windows 認証を使用してデータベース ミラーリング エンドポイントへのネットワーク アクセスを許可する &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)」を参照してください。  
   
-    ```  
-    SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints  
-    ```  
+### <a name="to-configure-database-mirroring"></a>データベース ミラーリングを構成するには  
   
-    > [!IMPORTANT]  
-    >  使用中のデータベース ミラーリング エンドポイントは再構成しないでください。 データベース ミラーリング エンドポイントが存在し、既に使用されている場合、サーバー インスタンスのすべてのセッションでそのエンドポイントを使用することをお勧めします。 使用中のエンドポイントを削除すると、そのエンドポイントが再起動され、既存のセッションの接続が切断される場合があります。この場合、他のサーバー インスタンスからはエラーが発生したように見える可能性があります。 これは、自動フェールオーバーを伴う高い安全性モードでは特に重要です。この場合、パートナーでエンドポイントを再構成すると、フェールオーバーの原因になることがあります。 また、セッションにミラーリング監視サーバーが設定されている場合、データベース ミラーリング エンドポイントを削除すると、そのセッションのプリンシパル サーバーがクォーラムを失う可能性があります。プリンシパル サーバーがクォーラムを失うと、データベースがオフラインになりユーザー接続が切断されます。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
+1.  プリンシパル サーバー インスタンスに接続した後、オブジェクト エクスプローラーでサーバー名をクリックして、サーバー ツリーを展開します。  
   
-     いずれかのパートナーにエンドポイントがない場合は、「[Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)」を参照してください。  
+2.  **[データベース]**を展開し、ミラー化するデータベースを選択します。  
   
-3.  サーバー インスタンスが別のドメイン ユーザー アカウントで実行されている場合、それぞれに他方のインスタンスの **master** データベースのログインが必要になります。 ログインが存在しない場合は、作成する必要があります。 詳細については「[Windows 認証を使用してデータベース ミラーリング エンドポイントへのネットワーク アクセスを許可する &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md)」を参照してください。  
+3.  データベースを右クリックして **[タスク]**を選択し、 **[ミラー]**をクリックします。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページが開きます。  
   
-4.  プリンシパル サーバーをミラー データベースのパートナーとして設定するには、ミラー サーバーに接続し、次のステートメントを実行します。  
-  
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
-  
-     *<database_name>* はミラー化するデータベースの名前 (両方のパートナーで同一の名前にします)、*<server_network_address>* はプリンシパル サーバーのサーバー ネットワーク アドレスです。  
-  
-     サーバー ネットワーク アドレスの構文は次のとおりです。  
-  
-     TCP**://**\<*system-address>***:**\<*port>*  
-  
-     *\<system-address>* は目的のコンピューター システムを明確に指定する文字列です。また、*<port>* はパートナー サーバー インスタンスのミラーリング エンドポイントが使用するポート番号です。 詳細については、「[サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)」を参照してください。  
-  
-     たとえば、ミラーリング サーバー インスタンスで、次の ALTER DATABASE ステートメントは元のプリンシパル サーバー インスタンスとしてパートナーを設定します。 データベース名は **AdventureWorks**、システムのアドレスは DBSERVER1 (パートナーのシステム名)、パートナーのデータベース ミラーリング エンドポイントが使用するポートは 7022 です。  
-  
-    ```  
-    ALTER DATABASE AdventureWorks   
-       SET PARTNER = 'TCP://DBSERVER1:7022'  
-    ```  
-  
-     このステートメントを実行すると、プリンシパル サーバーからの接続時にミラー サーバーにセッションを確立する準備が整います。  
-  
-5.  ミラー サーバーをプリンシパル データベースのパートナーとして設定するには、プリンシパル サーバーに接続し、次のステートメントを実行します。  
-  
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
-  
-     詳細については、手順 4. を参照してください。  
-  
-     たとえば、プリンシパル サーバー インスタンスで、次の ALTER DATABASE ステートメントは元のミラー サーバー インスタンスとしてパートナーを設定します。 データベース名は **AdventureWorks**、システムのアドレスは DBSERVER2 (パートナーのシステム名)、パートナーのデータベースのミラーリング エンドポイントが使用するポートは 7025 です。  
-  
-    ```  
-    ALTER DATABASE AdventureWorks SET PARTNER = 'TCP://DBSERVER2:7022'  
-    ```  
-  
-     プリンシパル サーバーでこのステートメントを入力すると、データベース ミラーリング セッションが開始されます。  
-  
-6.  既定ではセッションでのトランザクションの安全性が "完全" に設定され (SAFETY が FULL に設定された状態)、同期セッションが自動フェールオーバーを伴わない高い安全性モードで開始されます。 セッションは、次のように自動フェールオーバーを伴う高い安全性モードか、非同期の高パフォーマンス モードで実行するように再構成できます。  
-  
-    -   **自動フェールオーバーを伴う高い安全性モード**  
-  
-         自動フェールオーバーをサポートするために高い安全性モードでセッションを実行する場合は、ミラーリング監視サーバー インスタンスを追加します。 詳細については、「[Windows 認証の使用によるデータベースのミラーリング監視の追加 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)」を参照してください。  
-  
-    -   **高パフォーマンス モード**  
-  
-         自動フェールオーバーを行わず、高可用性よりパフォーマンスを重視する場合は、トランザクションの安全性を無効にします。 詳細については、｢[データベース ミラーリング セッションでのトランザクションの安全性の変更 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)」を参照してください。  
-  
-        > [!NOTE]  
-        >  高パフォーマンス モードでは、WITNESS を OFF に設定してください。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
-  
-## 例  
-  
-> [!NOTE]  
->  次の例では、既存のミラー データベースのためにパートナー間にデータベース ミラーリング セッションを確立します。 ミラー データベースを作成する方法の詳細については、「[ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)」を参照してください。  
-  
- ミラーリング監視サーバーを使用せずにデータベース ミラーリング セッションを作成するための基本的な手順を示します。 2 つのパートナーは、2 台のコンピューター システムにある既定のサーバー インスタンスです (PARTNERHOST1 および PARTNERHOST5)。 2 つのパートナー インスタンスは、同一の Windows ドメイン ユーザー アカウント (MYDOMAIN\dbousername) で実行されます。  
-  
-1.  プリンシパル サーバー インスタンス (PARTNERHOST1 の既定のインスタンス) で、ポート 7022 を使用するすべてのロールをサポートするエンドポイントを作成します。  
-  
-    ```  
-    --create an endpoint for this instance  
-    CREATE ENDPOINT Endpoint_Mirroring  
-        STATE=STARTED   
-        AS TCP (LISTENER_PORT=7022)   
-        FOR DATABASE_MIRRORING (ROLE=ALL)  
-    GO  
-    --Partners under same domain user; login already exists in master.  
-    ```  
+4.  ミラーリングの構成を開始するには、 **[セキュリティの構成]** をクリックして、データベース ミラーリング セキュリティ構成ウィザードを起動します。  
   
     > [!NOTE]  
-    >  ログインをセットアップする方法の例は、「[Windows 認証を使用してデータベース ミラーリング エンドポイントへのネットワーク アクセスを許可する &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md)」を参照してください。  
+    >  データベース ミラーリング セッションでは、このウィザードだけを使用して、ミラーリング監視サーバー インスタンスを追加または変更できます。  
   
-2.  ミラー サーバー インスタンス (PARTNERHOST5 の既定のインスタンス) で、ポート 7022 を使用するすべてのロールをサポートするエンドポイントを作成します。  
-  
-    ```  
-    --create an endpoint for this instance  
-    CREATE ENDPOINT Endpoint_Mirroring  
-        STATE=STARTED   
-        AS TCP (LISTENER_PORT=7022)   
-        FOR DATABASE_MIRRORING (ROLE=ALL)  
-    GO  
-    --Partners under same domain user; login already exists in master.  
-    ```  
-  
-3.  プリンシパル サーバー インスタンス (PARTNERHOST1) で、データベースをバックアップします。  
-  
-    ```  
-    BACKUP DATABASE AdventureWorks   
-        TO DISK = 'C:\AdvWorks_dbmirror.bak'   
-        WITH FORMAT  
-    GO  
-    ```  
-  
-4.  ミラー サーバー インスタンス (`PARTNERHOST5`) で、データベースを復元します。  
-  
-    ```  
-    RESTORE DATABASE AdventureWorks   
-        FROM DISK = 'Z:\AdvWorks_dbmirror.bak'   
-        WITH NORECOVERY  
-    GO  
-    ```  
-  
-5.  完全データベース バックアップを作成した後、プリンシパル データベースでログ バックアップを作成する必要があります。 たとえば、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、前回の完全データベース バックアップで使用したものと同じファイルにログをバックアップします。  
-  
-    ```  
-    BACKUP LOG AdventureWorks   
-        TO DISK = 'C:\AdventureWorks.bak'   
-    GO  
-    ```  
-  
-6.  ミラーリングを開始する前に、必要なログ バックアップ (および、それ以降のログ バックアップ) を適用する必要があります。  
-  
-     たとえば、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは C:\AdventureWorks.bak から最初のログを復元します。  
-  
-    ```  
-    RESTORE LOG AdventureWorks   
-        FROM DISK = 'C:\ AdventureWorks.bak'   
-        WITH FILE=1, NORECOVERY  
-    GO  
-    ```  
-  
-7.  ミラー サーバー インスタンスで、PARTNERHOST1 のサーバー インスタンスをパートナーとして設定します (初期プリンシパル サーバーにします)。  
-  
-    ```  
-    USE master;  
-    GO  
-    ALTER DATABASE AdventureWorks   
-        SET PARTNER =   
-        'TCP://PARTNERHOST1:7022'  
-    GO  
-    ```  
+5.  データベース ミラーリング セキュリティ構成ウィザードでは、各サーバー インスタンス上にデータベース ミラーリング エンドポイントが存在しない場合は自動的に作成され、サーバー インスタンスのロールに対応するフィールド ("**プリンシパル**"、" **ミラー**"、または " **ミラーリング監視**") にサーバー ネットワーク アドレスが入力されます。  
   
     > [!IMPORTANT]  
-    >  既定でデータベース ミラーリング セッションは、トランザクションの安全性が「完全」に設定された (SAFETY が FULL に設定された) 状態の同期モードで実行されます。 セッションを非同期の高パフォーマンス モードで実行するには、SAFETY を OFF にします。 詳しくは、「 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)」をご覧ください。  
+    >  エンドポイントを作成すると、データベース ミラーリング セキュリティ構成ウィザードでは、常に Windows 認証が使用されます。 証明書ベースの認証でウィザードを使用する前に、各サーバー インスタンスで証明書を使用するようにミラーリング エンドポイントを構成しておく必要があります。 また、ウィザードの **[サービス アカウント]** ダイアログ ボックスのフィールドはすべて空のままにしておく必要があります。 証明書を使用するデータベース ミラーリング エンドポイントの作成については、「[CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)」をご覧ください。  
   
-8.  プリンシパル サーバー インスタンスで、`PARTNERHOST5` のサーバー インスタンスをパートナーとして設定します (初期ミラー サーバーにします)。  
+6.  必要に応じて、動作モードを変更します。 特定の動作モードの可用性は、ミラーリング監視サーバーの TCP アドレスを指定したかどうかに依存します。 次のオプションがあります。  
   
-    ```  
-    USE master;  
-    GO  
-    ALTER DATABASE AdventureWorks   
-        SET PARTNER = 'TCP://PARTNERHOST5:7022'  
-    GO  
-    ```  
+    |オプション|ミラーリング監視サーバー|説明|  
+    |------------|--------------|-----------------|  
+    |**[高パフォーマンス (非同期)]**|Null (存在しても使用されませんが、セッションにクォーラムが必要になります)|最適なパフォーマンスを提供するために、ミラー データベースが常にプリンシパル データベースから多少遅延されます。完全に時間差がなくなることはありません。 ただし、データベース間の時間差は、通常はわずかです。 パートナーの損失による影響は次のとおりです。<br /><br /> ミラー サーバー インスタンスが使用できなくなった場合は、引き続きプリンシパル サーバー インスタンスが使用されます。<br /><br /> プリンシパル サーバー インスタンスが使用できなくなると、ミラー サーバー インスタンスは停止しますが、セッションにミラーリング監視サーバーがない場合 (推奨) やミラーリング監視サーバーがミラー サーバーに接続されている場合、ミラー サーバーはウォーム スタンバイとしてアクセスできます。つまり、データベース所有者は、ミラー サーバー インスタンスにサービスを強制できます (データ損失の可能性があります)。<br /><br /> <br /><br /> 詳細については、「 [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)のすべてのエディションで使用できるわけではありません。|  
+    |**[自動フェールオーバーを伴わない高い安全性 (同期)]**|いいえ|コミットされているすべてのトランザクションは、ミラー サーバー上のディスクに書き込まれることが保証されています。<br /><br /> パートナーが相互に接続され、データベースが同期されると、手動フェールオーバーを開始できます。<br /><br /> パートナーの損失による影響は次のとおりです。<br /><br /> ミラー サーバー インスタンスが使用できなくなった場合は、引き続きプリンシパル サーバー インスタンスが使用されます。<br /><br /> プリンシパル サーバー インスタンスが使用できなくなると、ミラー サーバー インスタンスは停止しますが、ウォーム スタンバイとしてアクセスできます。データベース所有者は、ミラー サーバー インスタンスにサービスを強制できます (データ損失の可能性があります)。<br /><br /> <br /><br /> 詳細については、「 [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)のすべてのエディションで使用できるわけではありません。|  
+    |**[自動フェールオーバーを伴う高い安全性 (同期)]**|指定あり (必須)|コミットされているすべてのトランザクションは、ミラー サーバー上のディスクに書き込まれることが保証されています。<br /><br /> 自動フェールオーバーをサポートするミラーリング監視サーバー インスタンスを含めることによって、可用性は最大限に高まります。 **[自動フェールオーバーを伴う高い安全性 (同期)]** オプションを選択できるのは、最初にミラーリング監視サーバーのアドレスを指定した場合のみです。<br /><br /> パートナーが相互に接続され、データベースが同期されると、手動フェールオーバーを開始できます。<br /><br /> ミラーリング監視サーバーが存在する場合、パートナーの損失による影響は次のとおりです。<br /><br /> プリンシパル サーバー インスタンスが使用できなくなった場合、自動フェールオーバーが発生します。 ミラー サーバー インスタンスはプリンシパル サーバー インスタンスの役割に切り替わり、ミラー データベースがプリンシパル データベースとして提供されます。<br /><br /> ミラー サーバー インスタンスが使用できなくなった場合は、引き続きプリンシパル サーバー インスタンスが使用されます。<br /><br /> <br /><br /> 詳細については、「 [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)のすべてのエディションで使用できるわけではありません。<br /><br /> **\*\* 重要 \*\*** ミラーリング監視サーバーが切断された場合、データベースを使用できるようにするには、パートナーが相互に接続されている必要があります。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。|  
   
-9. 自動フェールオーバーを伴う高い安全性モードを使用する場合、必要に応じてミラーリング監視サーバー インスタンスを設定します。 詳細については、「[Windows 認証の使用によるデータベースのミラーリング監視の追加 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)」を参照してください。  
+7.  次のすべての条件に当てはまる場合は、 **[ミラーリングの開始]** をクリックしてミラーリングを開始します。  
   
-> [!NOTE]  
->  セキュリティの設定、ミラー データベースの準備、パートナーの設定、およびミラーリング監視サーバーの追加をすべて含む例については、「[データベース ミラーリングの設定 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)」を参照してください。  
+    -   現在プリンシパル サーバー インスタンスに接続されています。  
   
-## 参照  
- [データベース ミラーリングの設定 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Windows 認証を使用してデータベース ミラーリング エンドポイントへのネットワーク アクセスを許可する &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md)   
+    -   セキュリティが正しく構成されています。  
+  
+    -   プリンシパル サーバー インスタンスとミラー サーバー インスタンスの完全修飾 TCP アドレスが、( **[サーバー ネットワーク アドレス]** セクションで) 指定されています。  
+  
+    -   動作モードが **[自動フェールオーバーを伴う高い安全性 (同期)]**に設定されている場合、ミラーリング監視サーバー インスタンスの完全修飾 TCP アドレスも指定されています。  
+  
+8.  ミラーリングが開始された後でも、動作モードを変更して **[OK]**をクリックすることで変更を保存できます。 自動フェールオーバーを伴う高い安全性モードに切り替えることができるのは、先にミラーリング監視サーバーのアドレスを指定した場合のみです。  
+  
+    > [!NOTE]  
+    >  ミラーリング監視サーバーを削除するには、 **[ミラーリング監視]** フィールドからそのサーバー ネットワーク アドレスを削除します。 自動フェールオーバーを伴う高い安全性モードから高パフォーマンス モードに切り替えると、 **[ミラーリング監視]** フィールドの内容は自動的に消去されます。  
+  
+## <a name="see-also"></a>参照  
+ [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [データベース ミラーリングとログ配布 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)   
- [データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [データベース ミラーリングとレプリケーション &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
+ [データベース プロパティ &#40;[ミラーリング] ページ&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [データベース ミラーリング セッションを一時停止または再開する &#40;SQL Server&#41;](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)   
+ [TRUSTWORTHY プロパティを使用するようにミラー データベースを設定する方法 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)   
+ [データベース ミラーリングを削除する &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)   
+ [役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
  [データベース ミラーリングの設定 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
- [データベース ミラーリングの動作モード](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [データベース ミラーリング監視サーバーを追加または置き換える方法 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
   
+

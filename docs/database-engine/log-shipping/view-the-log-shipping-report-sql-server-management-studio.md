@@ -1,28 +1,33 @@
 ---
 title: "ログ配布レポートの表示 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ログ配布レポートの表示"
-  - "ログ配布レポートの確認"
-  - "ログ配布 [SQL Server], 監視"
-  - "ログ配布 [SQL Server], レポートの表示"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing log shipping reports
+- displaying log shipping reports
+- log shipping [SQL Server], monitoring
+- log shipping [SQL Server], viewing reports
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 caps.latest.revision: 18
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: bae6798ce7212ece23767ab31884c1ccabb568fd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# ログ配布レポートの表示 (SQL Server Management Studio)
-  このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でトランザクション ログの配布の状態レポートを表示する方法について説明します。 状態レポートは、監視サーバー、プライマリ サーバー、またはセカンダリ サーバーで実行できます。 ログ配布構成に関する完全な情報を表示するには、監視サーバーのインスタンスでレポートを表示します。  
+# <a name="view-the-log-shipping-report-sql-server-management-studio"></a>ログ配布レポートの表示 (SQL Server Management Studio)
+  このトピックでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でトランザクション ログの配布の状態レポートを表示する方法について説明します。 状態レポートは、監視サーバー、プライマリ サーバー、またはセカンダリ サーバーで実行できます。 ログ配布構成に関する完全な情報を表示するには、監視サーバーのインスタンスでレポートを表示します。  
   
  このレポートには、接続先のサーバー インスタンスから使用できるログ配布の利用状況の状態が表示されます。 接続先のサーバー インスタンスが複数の構成に関与しており、それぞれ異なる役割が与えられている場合 (あるデータベースでは監視サーバーとして機能し、別のデータベースではセカンダリ サーバーとして機能する場合など) は、それぞれの役割から見た各構成の情報が表示されます。 ストアド プロシージャから特定のログ配布構成の監視サーバー インスタンスに接続できる場合、レポートにはその構成の状態がさらに多く表示されます。  
   
@@ -38,15 +43,15 @@ caps.handback.revision: 18
   
  レポートでは、**sp_help_log_shipping_monitor** を呼び出してデータを取得します。 必要なアクセス許可については、「[sp_help_log_shipping_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql.md)」を参照してください。  
   
-### サーバー インスタンスでのトランザクション ログの配布の状態レポートを表示するには  
+### <a name="to-display-the-transaction-log-shipping-status-report-on-a-server-instance"></a>サーバー インスタンスでのトランザクション ログの配布の状態レポートを表示するには  
   
 1.  監視サーバー、プライマリ サーバー、またはセカンダリ サーバーのいずれかに接続します。  
   
-2.  オブジェクト エクスプローラーで、サーバー インスタンスを右クリックして **[レポート]** をポイントし、**[標準レポート]** をクリックします。  
+2.  オブジェクト エクスプローラーで、サーバー インスタンスを右クリックして **[レポート]**をポイントし、 **[標準レポート]**をクリックします。  
   
-3.  **[トランザクション ログの配布の状態]** をクリックします。  
+3.  **[トランザクション ログの配布の状態]**をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ログ配布の監視 &#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)  
   
   

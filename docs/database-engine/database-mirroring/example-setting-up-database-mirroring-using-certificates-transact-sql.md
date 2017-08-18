@@ -1,28 +1,33 @@
 ---
 title: "証明書を使用したデータベース ミラーリングの設定の例 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データベース ミラーリング [SQL Server], 配置"
-  - "証明書 [SQL Server], データベース ミラーリング"
-  - "認証 [SQL Server], データベース ミラーリング"
-  - "データベース ミラーリング [SQL Server], セキュリティ"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- certificates [SQL Server], database mirroring
+- authentication [SQL Server], database mirroring
+- database mirroring [SQL Server], security
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 caps.latest.revision: 50
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d6e25ad5bb119adb048ee80f89b1ff76baefb7bf
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# 証明書を使用したデータベース ミラーリングの設定の例 (Transact-SQL)
-  この例では、証明書ベースの認証を使用してデータベース ミラーリング セッションを作成するために必要なすべての段階について説明します。 このトピックの例では、[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用します。 ネットワークがセキュリティで保護されていることを保証できる場合を除いて、データベース ミラーリング接続に対して暗号化を使用することをお勧めします。  
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>証明書を使用したデータベース ミラーリングの設定の例 (Transact-SQL)
+  この例では、証明書ベースの認証を使用してデータベース ミラーリング セッションを作成するために必要なすべての段階について説明します。 このトピックの例では、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。 ネットワークがセキュリティで保護されていることを保証できる場合を除いて、データベース ミラーリング接続に対して暗号化を使用することをお勧めします。  
   
  証明書を別のシステムにコピーする場合は、セキュリティで保護されたコピー方法を使用してください。 すべての証明書をセキュリティで保護された状態で保管するよう十分に注意してください。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 50
   
     2.  発信接続用の Host_B の構成。  
   
-     データベース ミラーリングの設定のこの段階の詳細については、「[データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md)」を参照してください。  
+     データベース ミラーリングの設定のこの段階の詳細については、「 [データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)を使用します。  
   
 2.  [着信接続の構成](#ConfigureInboundConnections)  
   
@@ -51,11 +56,11 @@ caps.handback.revision: 50
   
     2.  着信接続用の Host_B の構成。  
   
-     データベース ミラーリングの設定のこの段階の詳細については、「[データベース ミラーリング エンドポイントで着信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md)」を参照してください。  
+     データベース ミラーリングの設定のこの段階の詳細については、「 [データベース ミラーリング エンドポイントで着信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)を使用します。  
   
 3.  ミラー データベースの作成  
   
-     ミラー データベースを作成する方法の詳細については、「[ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)」を参照してください。  
+     ミラー データベースを作成する方法の詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)を使用します。  
   
 4.  [ミラーリング パートナーの構成](#ConfigureMirroringPartners)  
   
@@ -149,7 +154,7 @@ caps.handback.revision: 50
   
 5.  安全なコピー方法を使用して、C:\HOST_B_cert.cer を HOST_A にコピーします。  
   
- 詳細については、「[データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md)」を参照してください。  
+ 詳細については、「 [データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)を使用します。  
   
  [&#91;例の先頭に戻る&#93;](#ExampleH2)  
   
@@ -223,16 +228,16 @@ caps.handback.revision: 50
 > [!IMPORTANT]  
 >  自動フェールオーバーを伴う高い安全性モードで実行する場合、発信接続と着信接続の両方で、ミラーリング監視サーバーを構成する同じ手順を繰り返す必要があります。 ミラーリング監視サーバーを利用する着信接続を設定する場合は、両方のパートナーでミラーリング監視サーバー用にログインとユーザーを設定し、ミラーリング監視サーバーで両方のパートナー用にログインとユーザーを設定する必要があります。  
   
- 詳細については、「[データベース ミラーリング エンドポイントで着信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md)」を参照してください。  
+ 詳細については、「 [データベース ミラーリング エンドポイントで着信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)を使用します。  
   
  [&#91;例の先頭に戻る&#93;](#ExampleH2)  
   
-### ミラー データベースの作成  
- ミラー データベースを作成する方法の詳細については、「[ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)」を参照してください。  
+### <a name="creating-the-mirror-database"></a>ミラー データベースの作成  
+ ミラー データベースを作成する方法の詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)を使用します。  
   
 ###  <a name="ConfigureMirroringPartners"></a> ミラーリング パートナーの構成  
   
-1.  HOST_B のミラー サーバー インスタンスで、HOST_A のサーバー インスタンスをパートナー (最初のプリンシパル サーバー インスタンス) として設定します。 `TCP://HOST_A.Mydomain.Corp.Adventure-Works``.com:7024` の部分を有効なネットワーク アドレスに置き換えます。 詳細については、「[サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)」をご覧ください。  
+1.  HOST_B のミラー サーバー インスタンスで、HOST_A のサーバー インスタンスをパートナー (最初のプリンシパル サーバー インスタンス) として設定します。 `TCP://HOST_A.Mydomain.Corp.Adventure-Works``.com:7024`の部分を有効なネットワーク アドレスに置き換えます。 詳細については、「 [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)を使用します。  
   
     ```  
     --At HOST_B, set server instance on HOST_A as partner (principal server):  
@@ -241,7 +246,7 @@ caps.handback.revision: 50
     GO  
     ```  
   
-2.  HOST_A のプリンシパル サーバー インスタンスで、HOST_B のサーバー インスタンスをパートナー (最初のミラー サーバー インスタンス) として設定します。 `TCP://HOST_B.Mydomain.Corp.Adventure-Works.com:7024` の部分を有効なネットワーク アドレスに置き換えます。  
+2.  HOST_A のプリンシパル サーバー インスタンスで、HOST_B のサーバー インスタンスをパートナー (最初のミラー サーバー インスタンス) として設定します。 `TCP://HOST_B.Mydomain.Corp.Adventure-Works.com:7024`の部分を有効なネットワーク アドレスに置き換えます。  
   
     ```  
     --At HOST_A, set server instance on HOST_B as partner (mirror server).  
@@ -268,18 +273,18 @@ caps.handback.revision: 50
   
 -   [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
--   [データベース ミラーリング エンドポイントで着信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md)  
+-   [データベース ミラーリング エンドポイントで着信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md)  
+-   [データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
 -   [役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
--   [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md) (SQL Server)  
+-   [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md) (SQL Server)  
   
 -   [データベース ミラーリング構成のトラブルシューティング &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
-## 参照  
- [データベース ミラーリングと Always On 可用性グループのトランスポート セキュリティ &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+## <a name="see-also"></a>参照  
+ [データベース ミラーリングと Always On 可用性グループのトランスポート セキュリティ &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
  [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   
@@ -287,3 +292,4 @@ caps.handback.revision: 50
  [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
+

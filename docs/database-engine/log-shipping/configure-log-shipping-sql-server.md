@@ -1,25 +1,30 @@
 ---
 title: "ログ配布の構成 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ログ配布 [SQL Server], 有効化"
-  - "ログ配布 [SQL Server], 構成"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], enabling
+- log shipping [SQL Server], configuring
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: a1703b56628ba9c509f66cb3d722e6636bd29486
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# ログ配布の構成 (SQL Server)
+# <a name="configure-log-shipping-sql-server"></a>ログ配布の構成 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、ログ配布を構成する方法を説明します。  
   
 > [!NOTE]  
@@ -47,16 +52,16 @@ caps.handback.revision: 42
   
 -   プライマリ データベースでは、完全復旧モデルか一括ログ復旧モデルを使用する必要があります。単純復旧モデルにデータベースを切り替えると、ログ配布が機能しなくなります。  
   
--   ログ配布を構成する前に、セカンダリ サーバーからトランザクション ログ バックアップを使用できるようにするための共有を作成する必要があります。 この共有は、トランザクション ログ バックアップを生成するディレクトリにします。 たとえば、トランザクション ログをディレクトリ c:\data\tlogs\\ にバックアップする場合は、このディレクトリを基に \\\\*primaryserver*\tlogs という共有を作成します。  
+-   ログ配布を構成する前に、セカンダリ サーバーからトランザクション ログ バックアップを使用できるようにするための共有を作成する必要があります。 この共有は、トランザクション ログ バックアップを生成するディレクトリにします。 たとえば、トランザクション ログをディレクトリ c:\data\tlogs\\にバックアップする場合は、このディレクトリを基に \\\\*primaryserver*\tlogs という共有を作成します。  
   
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> 権限  
- ログ配布ストアド プロシージャには、**sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ ログ配布ストアド プロシージャには、 **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### ログ配布を構成するには  
+#### <a name="to-configure-log-shipping"></a>ログ配布を構成するには  
   
 1.  ログ配布構成のプライマリ データベースとして使用するデータベースを右クリックし、 **[プロパティ]**をクリックします。  
   
@@ -125,7 +130,7 @@ caps.handback.revision: 42
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### ログ配布を構成するには  
+#### <a name="to-configure-log-shipping"></a>ログ配布を構成するには  
   
 1.  プライマリ データベースの完全バックアップをセカンダリ サーバーに復元して、セカンダリ データベースを初期化します。  
   
@@ -145,7 +150,7 @@ caps.handback.revision: 42
   
 9. プライマリ サーバーで [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) を実行して、新しいセカンダリ データベースに関する必要な情報をプライマリ サーバーに追加します。  
   
-10. セカンダリ サーバーでコピー ジョブと復元ジョブを有効にします。 詳細については、「 [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)」をご覧ください。  
+10. セカンダリ サーバーでコピー ジョブと復元ジョブを有効にします。 詳細については、「 [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)」をご覧ください。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
@@ -163,7 +168,7 @@ caps.handback.revision: 42
   
 -   [ログ配布のセカンダリへのフェールオーバー &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [ログ配布テーブルとストアド プロシージャ](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

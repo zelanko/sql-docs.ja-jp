@@ -1,26 +1,31 @@
 ---
 title: "Windows 認証の使用によるデータベースのミラーリング監視の追加 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "確立することに監視サーバー [SQL Server]"
-  - "Windows 認証 [SQL Server]"
-  - "データベース ミラーリング [SQL Server]、監視"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- witness [SQL Server], establishing
+- Windows authentication [SQL Server]
+- database mirroring [SQL Server], witness
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 caps.latest.revision: 51
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0e37425e42bbe7c320894de9368c0113373d2e4d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# Windows 認証の使用によるデータベースのミラーリング監視の追加 (Transact-SQL)
+# <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Windows 認証の使用によるデータベースのミラーリング監視の追加 (Transact-SQL)
   データベースのミラーリング監視を設定するには、データベース所有者が、データベース エンジンのインスタンスをミラーリング監視サーバーの役割に割り当てます。 ミラーリング監視サーバーのインスタンスは、プリンシパル サーバーまたはミラー サーバーのインスタンスと同じコンピューターで実行できますが、このようにすると、自動フェールオーバーの堅牢性が大幅に低下します。  
   
  ミラーリング監視は独立したコンピューターに常駐させることを強くお勧めします。 特定のサーバーを、同じパートナーまたは別のパートナーを含む複数の同時実行データベース ミラーリング セッションに参加させることができます。 また、特定のサーバーを、あるセッションではパートナーとし、別のセッションではミラーリング監視にすることができます。  
@@ -30,7 +35,7 @@ caps.handback.revision: 51
 > [!IMPORTANT]  
 >  構成はパフォーマンスに影響する場合があるので、データベース ミラーリングの構成はピーク タイム以外の時間に行うことをお勧めします。  
   
-### ミラーリング監視を確立するには  
+### <a name="to-establish-a-witness"></a>ミラーリング監視を確立するには  
   
 1.  ミラーリング監視サーバーのインスタンスで、データベース ミラーリングのエンドポイントが存在することを確認します。 サポートされるミラーリング セッションの数に関係なく、サーバー インスタンスにはデータベース ミラーリング エンドポイントが 1 つだけ存在する必要があります。 このサーバー インスタンスをデータベース ミラーリング セッションのミラーリング監視専用に使用する場合、ミラーリング監視の役割をエンドポイントに割り当てます (ROLE**=**WITNESS)。 このサーバー インスタンスを 1 つ以上の他のデータベース ミラーリング セッションのパートナーとして使用する場合、エンドポイントの役割を ALL に割り当てます。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 51
   
      ミラーリング監視にエンドポイントが存在しない場合は、「[Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)」を参照してください。  
   
-2.  パートナー インスタンスが異なるドメイン ユーザー アカウントで実行されている場合、各インスタンスの master データベースに別のアカウントのログインを作成します。 詳細については「[Windows 認証を使用してデータベース ミラーリング エンドポイントへのネットワーク アクセスを許可する &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md)」を参照してください。  
+2.  パートナー インスタンスが異なるドメイン ユーザー アカウントで実行されている場合、各インスタンスの master データベースに別のアカウントのログインを作成します。 詳細については、「 [Windows 認証を使用してデータベース ミラーリング エンドポイントへのネットワーク アクセスを許可する &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)」を参照してください。  
   
 3.  プリンシパル サーバーに接続し、次のステートメントを実行します。  
   
@@ -59,19 +64,19 @@ caps.handback.revision: 51
   
      TCP**://**\<*system-address>***:**\<*port>*  
   
-     \<*system-address>* は目的のコンピューター システムを明確に指定する文字列です。また、\<*port>* はパートナー サーバー インスタンスのミラーリング エンドポイントが使用するポート番号です。 詳細については、「[サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)」をご覧ください。  
+     \<*system-address*> は目的のコンピューター システムを明確に指定する文字列です。また、\<*port>* はパートナー サーバー インスタンスのミラーリング エンドポイントが使用するポート番号です。 詳細については、「 [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)を使用します。  
   
-     たとえば、プリンシパル サーバー インスタンスでは、次の ALTER DATABASE ステートメントでミラーリング監視を設定します。 データベース名は **AdventureWorks**、システム アドレスは DBSERVER3 (ミラーリング監視システムの名前)、ミラーリング監視のデータベース ミラーリング エンドポイントが使用するポートは `7022` です。  
+     たとえば、プリンシパル サーバー インスタンスでは、次の ALTER DATABASE ステートメントでミラーリング監視を設定します。 データベース名は **AdventureWorks**、システム アドレスは DBSERVER3 (ミラーリング監視システムの名前)、ミラーリング監視のデータベース ミラーリング エンドポイントが使用するポートは `7022`です。  
   
     ```  
     ALTER DATABASE AdventureWorks   
       SET WITNESS = 'TCP://DBSERVER3:7022'  
     ```  
   
-## 例  
- 次の例では、データのミラーリング監視を確立します。 ミラーリング監視サーバー インスタンス (`WITNESSHOST4` の既定のインスタンス) で、次の手順を実行します。  
+## <a name="example"></a>例  
+ 次の例では、データのミラーリング監視を確立します。 ミラーリング監視サーバー インスタンス ( `WITNESSHOST4`の既定のインスタンス) で、次の手順を実行します。  
   
-1.  `7022` を使用する WITNESS の役割だけにこのサーバー インスタンスのエンドポイントを作成します。  
+1.  `7022`を使用する WITNESS の役割だけにこのサーバー インスタンスのエンドポイントを作成します。  
   
     ```  
     CREATE ENDPOINT Endpoint_Mirroring  
@@ -81,7 +86,7 @@ caps.handback.revision: 51
     GO  
     ```  
   
-2.  パートナー インスタンスのドメイン ユーザー アカウントが異なる場合は、そのログインを作成します。たとえば、ミラーリング監視サーバーが `SOMEDOMAIN\witnessuser` で実行されていて、パートナーが `MYDOMAIN\dbousername` で実行されている場合などです。 パートナーのログインを作成するには、以下のステートメントを実行します。  
+2.  パートナー インスタンスのドメイン ユーザー アカウントが異なる場合は、そのログインを作成します。たとえば、ミラーリング監視サーバーが `SOMEDOMAIN\witnessuser`で実行されていて、パートナーが `MYDOMAIN\dbousername`で実行されている場合などです。 パートナーのログインを作成するには、以下のステートメントを実行します。  
   
     ```  
     --Create a login for the partner server instances,  
@@ -111,7 +116,7 @@ caps.handback.revision: 51
     GO  
     ```  
   
-4.  プリンシパル サーバーで、ミラーリング監視サーバー (`WITNESSHOST4`) を設定します。  
+4.  プリンシパル サーバーで、ミラーリング監視サーバー ( `WITNESSHOST4`) を設定します。  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -125,11 +130,11 @@ caps.handback.revision: 51
   
  セキュリティの設定、ミラー データベースの準備、パートナーの設定、およびミラーリング監視サーバーの追加をすべて含む例については、「[データベース ミラーリングの設定 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Windows 認証を使用してデータベース ミラーリング エンドポイントへのネットワーク アクセスを許可する &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md)   
+ [Windows 認証を使用してデータベース ミラーリング エンドポイントへのネットワーク アクセスを許可する &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)   
  [Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [Windows 認証を使用してデータベース ミラーリング セッションを確立する方法 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)   
+ [Windows 認証を使用してデータベース ミラーリング セッションを確立する方法 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)   
  [データベース ミラーリング セッションからのミラーリング監視サーバーの削除 &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)   
  [データベース ミラーリング監視サーバー](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   

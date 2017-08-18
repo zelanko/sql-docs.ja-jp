@@ -1,27 +1,32 @@
 ---
 title: "データベース ミラーリング構成のトラブルシューティング (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データベース ミラーリング [SQL Server]、配置"
-  - "エンドポイント [SQL Server]、データベース ミラーリング"
-  - "データベース ミラーリング [SQL Server]、トラブルシューティング"
-  - "トラブルシューティング [SQL Server]、データベース ミラーリング"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- endpoints [SQL Server], database mirroring
+- database mirroring [SQL Server], troubleshooting
+- troubleshooting [SQL Server], database mirroring
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 caps.latest.revision: 69
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 69
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c06d67efd16f0ceb894516bcdd3c47e1ff520284
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# データベース ミラーリング構成のトラブルシューティング (SQL Server)
+# <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>データベース ミラーリング構成のトラブルシューティング (SQL Server)
   ここでは、データベース ミラーリング セッションの設定時に発生する問題のトラブルシューティングに役立つ情報を提供します。  
   
 > [!NOTE]  
@@ -29,7 +34,7 @@ caps.handback.revision: 69
   
 |問題点|概要|  
 |-----------|-------------|  
-|エラー メッセージ 1418|この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メッセージは、サーバー ネットワーク アドレスに到達できないか、そのアドレスが存在しないことを意味し、ネットワーク アドレス名を確認してコマンドを再実行するように示しています。 詳細については、「[MSSQLSERVER_1418](../Topic/MSSQLSERVER_1418.md)」を参照してください。|  
+|エラー メッセージ 1418|この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メッセージは、サーバー ネットワーク アドレスに到達できないか、そのアドレスが存在しないことを意味し、ネットワーク アドレス名を確認してコマンドを再実行するように示しています。 |  
 |[Accounts](#Accounts)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているアカウントを適切に構成するための要件について説明します。|  
 |[エンドポイント](#Endpoints)|各サーバー インスタンスのデータベース ミラーリング エンドポイントを適切に構成するための要件について説明します。|  
 |[システム アドレス](#SystemAddress)|データベース ミラーリング構成でサーバー インスタンスのシステム名を指定するためのその他の方法について概要を説明します。|  
@@ -46,9 +51,9 @@ caps.handback.revision: 69
   
     1.  アカウントが同じドメインで実行されている場合、アカウントの構成が不適切になる可能性は低くなります。  
   
-    2.  アカウントが別のドメインで実行されているか、またはドメイン アカウントではない場合、もう一方のコンピューターの **master** データベースにアカウントのログインを作成する必要があります。また、そのログインには、エンドポイントに対して CONNECT 権限を与える必要があります。 詳細については、「[データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md)」を参照してください。 これには、ネットワーク サービス アカウントも含まれます。  
+    2.  アカウントが別のドメインで実行されているか、またはドメイン アカウントではない場合、もう一方のコンピューターの **master** データベースにアカウントのログインを作成する必要があります。また、そのログインには、エンドポイントに対して CONNECT 権限を与える必要があります。 詳細については、「[データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」を参照してください。 これには、ネットワーク サービス アカウントも含まれます。  
   
-2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がローカル システム アカウントを使用しているサービスとして実行されている場合、認証には証明書を使用する必要があります。 詳細については、「[データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)」を参照してください。  
+2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がローカル システム アカウントを使用しているサービスとして実行されている場合、認証には証明書を使用する必要があります。 詳細については、この後の「 [データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)」を参照してください。  
   
 ##  <a name="Endpoints"></a> エンドポイント  
  エンドポイントが正しく構成されている必要があります。  
@@ -57,9 +62,9 @@ caps.handback.revision: 69
   
 2.  ポート番号が適切であることを確認します。  
   
-     サーバー インスタンスのデータベース ミラーリング エンドポイントに現在関連付けられているポートを識別するには、[sys.database_mirroring_endpoints](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) カタログ ビューおよび [sys.tcp_endpoints](../../relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md) カタログ ビューを使用します。  
+     サーバー インスタンスのデータベース ミラーリング エンドポイントに現在関連付けられているポートを識別するには、 [sys.database_mirroring_endpoints](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) カタログ ビューおよび [sys.tcp_endpoints](../../relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md) カタログ ビューを使用します。  
   
-3.  説明が困難なデータベース ミラーリングのセットアップに関する問題については、各サーバー インスタンスを調査して、それぞれが正しいポートでリッスンしているかどうかを確認することをお勧めします。 ポートの可用性の検証については、「[MSSQLSERVER_1418](../Topic/MSSQLSERVER_1418.md)」を参照してください。  
+3.  説明が困難なデータベース ミラーリングのセットアップに関する問題については、各サーバー インスタンスを調査して、それぞれが正しいポートでリッスンしているかどうかを確認することをお勧めします。   
   
 4.  エンドポイントが開始されていること (STATE = STARTED) を確認します。 各サーバー インスタンスで、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用します。  
   
@@ -108,12 +113,12 @@ caps.handback.revision: 69
     ```  
   
 ##  <a name="SystemAddress"></a> システム アドレス  
- データベース ミラーリング構成におけるサーバー インスタンスのシステム名には、システムを明確に識別できる任意の名前を使用できます。 サーバー アドレスには、システム名 (システムが同じドメインに存在する場合)、完全修飾ドメイン名、または IP アドレス (可能であれば静的 IP アドレス) を使用できます。 完全修飾ドメイン名を使用すると動作が保証されます。 詳細については、「[サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)」を参照してください。  
+ データベース ミラーリング構成におけるサーバー インスタンスのシステム名には、システムを明確に識別できる任意の名前を使用できます。 サーバー アドレスには、システム名 (システムが同じドメインに存在する場合)、完全修飾ドメイン名、または IP アドレス (可能であれば静的 IP アドレス) を使用できます。 完全修飾ドメイン名を使用すると動作が保証されます。 詳細については、「 [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)を使用します。  
   
-##  <a name="NetworkAccess"></a> ネットワーク アクセス  
+##  <a name="NetworkAccess"></a> Network Access  
  各サーバー インスタンスは、他のサーバー インスタンスのポートに TCP 経由でアクセスできる必要があります。 これは、サーバー インスタンスが相互に信頼関係を持たない別のドメイン (信頼されていないドメイン) に存在する場合に特に重要になります。 このような状況では、サーバー インスタンス間の通信の大半が制限されます。  
   
-##  <a name="MirrorDbPrep"></a> ミラー データベースの準備  
+##  <a name="MirrorDbPrep"></a> Mirror Database Preparation  
  ミラーリングを初めて開始する場合も、ミラーリングを削除した後に再度開始する場合も、ミラー データベースがミラーリング用に準備されていることを確認します。  
   
  ミラー サーバーにミラー データベースを作成する際には、同じデータベース名と WITH NORECOVERY オプションを指定して、プリンシパル データベースのバックアップを復元する必要があります。 また、このバックアップが実行された後で作成されたすべてのログ バックアップについても、WITH NORECOVERY を指定して適用する必要があります。  
@@ -125,9 +130,9 @@ caps.handback.revision: 69
   
  データベース ミラーリングが停止している場合にミラーリングを再開するには、停止後にプリンシパル データベースで作成されたすべてのログ バックアップをミラー データベースに適用する必要があります。  
   
- 詳細については、「[ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)」を参照してください。  
+ 詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)のすべてのエディションで使用できるわけではありません。  
   
-##  <a name="FailedCreateFileOp"></a> 失敗したファイル作成操作  
+##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
  ミラーリング セッションに影響を与えずにファイルを追加するには、追加するファイルのパスが両方のサーバーに存在する必要があります。 したがって、ミラー データベースの作成時にデータベース ファイルを移動し、その後でミラー データベースにファイルを追加しようとした場合、ファイルの追加操作が失敗し、ミラーリングが中断されることがあります。  
   
  この問題を解決するには、データベース所有者が次の操作を行う必要があります。  
@@ -138,7 +143,7 @@ caps.handback.revision: 69
   
 3.  新しいミラーリング セッションのためにデータベースを準備するには、WITH NORECOVERY オプションを使用して、プリンシパル サーバーでバックアップした他の未処理のログをすべて復元する必要もあります。  
   
- 詳細については、「[データベース ミラーリングの削除 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)」、「[ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)」、「[Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)」、「[データベース ミラーリング エンドポイントでの証明書の使用&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)」、「[Windows 認証を使用してデータベース ミラーリング セッションを確立する方法 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)」のいずれかを参照してください。  
+ 詳細については、「[データベース ミラーリングの削除 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)」、「[ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)」、「[Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)」、「[データベース ミラーリング エンドポイントでの証明書の使用&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)」、「[Windows 認証を使用してデータベース ミラーリング セッションを確立する方法 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)」のいずれかを参照してください。  
   
 ##  <a name="StartDbm"></a> Transact-SQL を使用したミラーリングの開始  
  ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** ステートメントを実行する際は、順序が非常に重要です。  
@@ -150,21 +155,24 @@ caps.handback.revision: 69
  詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してミラーリングを開始する方法の詳細については、「[Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)」を参照してください。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してミラーリングを開始する方法の詳細については、「[Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)」を参照してください。  
   
 ##  <a name="CrossDbTxns"></a> 複数データベースにまたがるトランザクション  
  データベースが自動フェールオーバーを伴う高い安全性モードでミラー化されている場合、自動フェールオーバーにより、状態が不明なトランザクションが自動的に解決されることがあります。ただし、この解決は不適切な場合があります。 複数データベースにまたがるトランザクションがコミットされているときに、いずれかのデータベースで自動フェールオーバーが発生すると、データベース間で論理的な不一致が発生することがあります。  
   
  自動フェールオーバーの影響を受ける可能性がある、複数データベースにまたがるトランザクションには、次の種類があります。  
   
--   同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで複数のデータベースを更新するトランザクション。  
+-   同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスで複数のデータベースを更新するトランザクション。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) を使用するトランザクション。  
   
- 詳細については、「[Always On 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions - always on availability and database mirroring.md)」を参照してください。  
+ 詳細については、「[Always On 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データベース ミラーリングの設定 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [データベース ミラーリングと Always On 可用性グループのトランスポート セキュリティ &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)  
+ [データベース ミラーリングと Always On 可用性グループのトランスポート セキュリティ &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)  
   
   
+
+
+

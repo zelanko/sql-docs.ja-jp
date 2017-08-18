@@ -1,30 +1,35 @@
 ---
-title: "ミラーリング パフォーマンス基準の警告しきい値および警告の使用 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データベース ミラーリングの監視 [SQL Server]"
-  - "しきい値 [SQL Server]"
-  - "データベース ミラーリング [SQL Server], SQL Server Management Studio での管理"
-  - "警告 [SQL Server]、データベース ミラーリング"
-  - "データベース ミラーリング [SQL Server] の監視"
-  - "警告 [データベース ミラーリング]"
+title: "ミラーリング パフォーマンス基準の警告しきい値および警告の使用 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring database mirroring [SQL Server]
+- thresholds [SQL Server]
+- database mirroring [SQL Server], managing in SQL Server Management Studio
+- alerts [SQL Server], database mirroring
+- database mirroring [SQL Server], monitoring
+- warnings [database mirroring]
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 caps.latest.revision: 40
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1d7f8c3105d562dd4203f5f9d2f47852068af819
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# ミラーリング パフォーマンス基準の警告しきい値および警告の使用 (SQL Server)
-  このトピックでは、データベース ミラーリング用に警告しきい値を構成および管理できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントについて説明します。 データベース ミラーリング モニター、または **sp_dbmmonitorchangealert**、**sp_dbmmonitorhelpalert**、および **sp_dbmmonitordropalert** の各ストアド プロシージャを使用できます。 また、データベース ミラーリング イベントの警告の構成についても説明します。  
+# <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>ミラーリング パフォーマンス基準の警告しきい値および警告の使用 (SQL Server)
+  このトピックでは、データベース ミラーリング用に警告しきい値を構成および管理できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントについて説明します。 データベース ミラーリング モニター、または **sp_dbmmonitorchangealert**、 **sp_dbmmonitorhelpalert**、および **sp_dbmmonitordropalert** の各ストアド プロシージャを使用できます。 また、データベース ミラーリング イベントの警告の構成についても説明します。  
   
  ミラー化されたデータベースに対する監視が確立された後、システム管理者は、複数の主要なパフォーマンス基準に警告しきい値を設定できます。 また、管理者は、これらの基準や他のデータベース ミラーリング イベントに基づいて警告を構成することもできます。  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 40
 |パフォーマンス基準|警告しきい値|データベース ミラーリング モデルのラベル|  
 |------------------------|-----------------------|--------------------------------------|  
 |未送信のログ|未送信のログのサイズ (KB) を指定します。このサイズを超えると、プリンシパル サーバー インスタンスで警告が生成されます。 この警告は、サイズの観点からデータ損失の可能性を測定するのに役立ち、特に、高パフォーマンス モードに関連しています。 パートナーとの通信が切断されたためにミラーリングが一時停止または中断している場合は、高安全モードにも関係します。|**[未送信のログがしきい値を超えた場合に警告する]**|  
-|未復元のログ|未復元のログのサイズ (KB) を指定します。このサイズを超えると、ミラー サーバー インスタンスで警告が生成されます。 この警告を使用すると、フェールオーバー時間を判断できます。 *フェールオーバー時間* の大部分は、以前のミラー サーバーの再実行キューに残っているログをロールフォワードする場合に必要となる時間です。この時間にわずかな時間を加えます。<br /><br /> 注: 自動フェールオーバーの場合、システムがエラーを通知するまでの時間は、フェールオーバー時間に関係ありません。<br /><br /> 詳細については、「[役割の交代中に発生するサービスの中断時間の算出 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)」を参照してください。|**[復元されていないログがしきい値を超えた場合に警告する]**|  
+|未復元のログ|未復元のログのサイズ (KB) を指定します。このサイズを超えると、ミラー サーバー インスタンスで警告が生成されます。 この警告を使用すると、フェールオーバー時間を判断できます。 *フェールオーバー時間* の大部分は、以前のミラー サーバーの再実行キューに残っているログをロールフォワードする場合に必要となる時間です。この時間にわずかな時間を加えます。<br /><br /> 注: 自動フェールオーバーの場合、システムがエラーを通知するまでの時間は、フェールオーバー時間に関係ありません。<br /><br /> 詳しくは、「 [役割の交代中に発生するサービスの中断時間の算出 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)という処理により、一般的にプリンシパルとミラーの役割を相互交換できます。|**[復元されていないログがしきい値を超えた場合に警告する]**|  
 |最も古い未送信のトランザクション|送信キュー内にトランザクションを累積できる時間 (分単位) を指定します。この時間を経過すると、プリンシパル サーバー インスタンスで警告が生成されます。 この警告は、時間の観点からデータ損失の可能性を測定するのに役立ち、特に、高パフォーマンス モードに関連しています。 パートナーとの通信が切断されたためにミラーリングが一時停止または中断している場合は、高安全モードにも関係します。|**[最も古い未送信のトランザクションの経過期間がしきい値を超えた場合に警告する]**|  
 |ミラー コミットのオーバーヘッド|許容可能な、トランザクションあたりの平均遅延時間 (ミリ秒単位) を指定します。この時間を経過すると、プリンシパル サーバーで警告が生成されます。 この遅延時間は、ミラー サーバー インスタンスによってトランザクションのログ レコードが再実行キューに書き込まれるのをプリンシパル サーバー インスタンスが待機している間、発生したオーバーヘッドの量になります。 この値は高安全モードにのみ関係します。|**[ミラー コミットのオーバーヘッドがしきい値を超えた場合に警告する]**|  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 40
   
      データベース ミラーリング モニターでは、管理者は、 **[警告]** タブ ページをクリックして、プリンシパル サーバー インスタンスとミラー サーバー インスタンスの両方で選択したデータベースの警告の現在の構成を同時に確認できます。 そのページから、 **[警告しきい値の設定]** ダイアログ ボックスを開き、1 つ以上の警告しきい値を有効にして設定できます。  
   
-     データベース ミラーリング モニターのインターフェイスの概要については、「 [Database Mirroring Monitor Overview](../../database-engine/database-mirroring/database-mirroring-monitor-overview.md)」を参照してください。 データベース ミラーリング モニターの起動方法については、「[データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)」を参照してください。  
+     データベース ミラーリング モニターのインターフェイスの概要については、「 [Database Mirroring Monitor Overview](../../database-engine/database-mirroring/database-mirroring-monitor-overview.md)」を参照してください。 データベース ミラーリング モニターの起動方法については、「 [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)」を参照してください。  
   
 -   システム ストアド プロシージャ  
   
@@ -71,8 +76,8 @@ caps.handback.revision: 40
     |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)|データベース ミラーリング監視の主要なパフォーマンス基準の 1 つまたはすべてについて、警告しきい値に関する情報を返します。|  
     |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)|指定したパフォーマンス基準に対する警告を削除します。|  
   
-## Windows イベント ログに送信されるパフォーマンスしきい値イベント  
- パフォーマンス基準に警告しきい値を定義する場合、状態テーブルを更新すると、最新の値がそのしきい値に対して評価されます。 しきい値に達している場合は、更新用のプロシージャ **sp_dbmmonitorupdate** によって、基準に対する情報イベント (*パフォーマンスしきい値イベント*) が生成され、そのイベントが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows イベント ログに書き込まれます。 次の表は、パフォーマンスしきい値イベントのイベント ID を示しています。  
+## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Windows イベント ログに送信されるパフォーマンスしきい値イベント  
+ パフォーマンス基準に警告しきい値を定義する場合、状態テーブルを更新すると、最新の値がそのしきい値に対して評価されます。 しきい値に達している場合は、更新用のプロシージャ **sp_dbmmonitorupdate**によって、基準に対する情報イベント ( *パフォーマンスしきい値イベント*) が生成され、そのイベントが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows イベント ログに書き込まれます。 次の表は、パフォーマンスしきい値イベントのイベント ID を示しています。  
   
 |パフォーマンス基準|イベント ID|  
 |------------------------|--------------|  
@@ -98,13 +103,13 @@ caps.handback.revision: 40
      データベース ミラーリング セッションの内部状態に変更が生じたときに生成される Windows Management Instrumentation (WMI) イベントです。  
   
     > [!NOTE]  
-    >  詳細については、「[WMI Provider for Server Events の概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)」を参照してください。  
+    >  詳細については、「 [WMI Provider for Server Events の概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)」を参照してください。  
   
- システム管理者は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントまたは他のアプリケーション ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Operations Manager など) を使用して、これらのイベントに対して警告を構成できます。  
+ システム管理者は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントまたは他のアプリケーション ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Operations Manager など) を使用して、これらのイベントに対して警告を構成できます。  
   
  データベース ミラーリング イベントで警告を定義する場合は、両方のパートナー サーバー インスタンスで警告しきい値と警告を定義することをお勧めします。 個々のイベントはプリンシパル サーバーまたはミラー サーバーのいずれかで生成されますが、各パートナーは常にどちらの役割も実行できます。 フェールオーバー後に警告が動作を続行するには、両方のパートナーで警告を定義する必要があります。  
   
- 詳細については、 [SQL Server Web サイト](http://go.microsoft.com/fwlink/?linkid=62373)にあるデータベース ミラーリング イベントの警告に関するホワイト ペーパーを参照してください。 このホワイト ペーパーには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用した警告の構成方法、データベース ミラーリングの WMI イベント、およびサンプル スクリプトに関する情報が記載されています。  
+ 詳細については、 [SQL Server Web サイト](http://go.microsoft.com/fwlink/?linkid=62373)にあるデータベース ミラーリング イベントの警告に関するホワイト ペーパーを参照してください。 このホワイト ペーパーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用した警告の構成方法、データベース ミラーリングの WMI イベント、およびサンプル スクリプトに関する情報が記載されています。  
   
 > [!IMPORTANT]  
 >  すべてのミラーリング セッションでは、状態変更イベントに対する警告を送信するようにデータベースを構成することを強くお勧めします。 状態変更は手動による構成の変更結果として予測される場合を除いて、データを損傷する可能性があります。 データを保護するには、予測されていない状態変更の原因を特定して解決します。  
@@ -112,9 +117,9 @@ caps.handback.revision: 40
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **SQL Server Management Studio を使用して警告を作成するには**  
   
--   [エラー番号を使用して警告を作成する](../../ssms/agent/create-an-alert-using-an-error-number.md)  
+-   [エラー番号を使用して警告を作成する](http://msdn.microsoft.com/library/03dd7fac-5073-4f86-babd-37e45a86023c)  
   
--   [WMI イベント警告の作成](../../ssms/agent/create-a-wmi-event-alert.md)  
+-   [WMI イベント警告の作成](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
   
  **データベース ミラーリングを監視するには**  
   
@@ -138,7 +143,7 @@ caps.handback.revision: 40
   
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   

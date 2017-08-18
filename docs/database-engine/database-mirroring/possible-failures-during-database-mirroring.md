@@ -1,38 +1,43 @@
 ---
 title: "データベース ミラーリング中に発生する可能性のあるエラー | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "タイムアウト時間 [SQL Server データベース ミラーリング]"
-  - "ソフト エラー [SQL Server]"
-  - "データベース ミラーリング [SQL Server]、トラブルシューティング"
-  - "タイムアウト エラー [SQL Server]"
-  - "トラブルシューティング [SQL Server]、データベース ミラーリング"
-  - "ハード エラー"
-  - "失敗したデータベース ミラーリング セッション [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time-out period [SQL Server database mirroring]
+- soft errors [SQL Server]
+- database mirroring [SQL Server], troubleshooting
+- timeout errors [SQL Server]
+- troubleshooting [SQL Server], database mirroring
+- hard errors
+- failed database mirroring sessions [SQL Server]
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 caps.latest.revision: 59
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 8c97371185c1fe7bdd38c7ed172d5a49ae27b58c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# データベース ミラーリング中に発生する可能性のあるエラー
-  物理的な問題、オペレーティング システムの問題、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の問題により、データベース ミラーリング セッションが失敗する場合があります。 データベース ミラーリングでは、Sqlservr.exe が依存しているコンポーネントを定期的にチェックして、それらのコンポーネントが正常に機能しているのか失敗したのかを確認する処理は行われません。 ただし、失敗の種類によっては、影響を受けたコンポーネントからエラーが Sqlservr.exe に報告されます。 他のコンポーネントから報告されるエラーを *ハード エラー*といいます。 データベース ミラーリングでは、通知されないその他の失敗を検出するために、独自のタイムアウト メカニズムを実装しています。 ミラーリングでタイムアウトが発生すると、データベース ミラーリングでは失敗が発生したと想定し、*ソフト エラー*を宣言します。 ただし、SQL Server のインスタンス レベルで発生する一部の失敗ではミラーリングがタイムアウトしないため、失敗が検出されない場合があります。  
+# <a name="possible-failures-during-database-mirroring"></a>データベース ミラーリング中に発生する可能性のあるエラー
+  物理的な問題、オペレーティング システムの問題、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の問題により、データベース ミラーリング セッションが失敗する場合があります。 データベース ミラーリングでは、Sqlservr.exe が依存しているコンポーネントを定期的にチェックして、それらのコンポーネントが正常に機能しているのか失敗したのかを確認する処理は行われません。 ただし、失敗の種類によっては、影響を受けたコンポーネントからエラーが Sqlservr.exe に報告されます。 他のコンポーネントから報告されるエラーを *ハード エラー*といいます。 データベース ミラーリングでは、通知されないその他の失敗を検出するために、独自のタイムアウト メカニズムを実装しています。 ミラーリングでタイムアウトが発生すると、データベース ミラーリングでは失敗が発生したと想定し、 *ソフト エラー*を宣言します。 ただし、SQL Server のインスタンス レベルで発生する一部の失敗ではミラーリングがタイムアウトしないため、失敗が検出されない場合があります。  
   
 > [!IMPORTANT]  
 >  ミラー化されたデータベース以外のデータベースで発生した障害は、データベース ミラーリング セッションでは検出されません。 さらに、データ ディスクの障害によりデータベースが再起動した場合を除き、データ ディスクの障害はほとんど検出されません。  
   
  したがって、エラー検出の速度と、ミラーリング セッションの失敗への反応時間は、ハード エラーかソフト エラーかによって異なります。 ハード エラーの中には、ネットワーク障害など、直ちに報告されるものもあります。 しかし、場合によっては、コンポーネント固有のタイムアウト時間のために報告が遅くなるハード エラーもあります。 ソフト エラーの場合は、ミラーリング タイムアウト時間の長さによってエラー検出の速度が決まります。 既定では、この時間は 10 秒間です。 これは推奨最小値です。  
   
-## ハード エラーによるエラー  
+## <a name="failures-due-to-hard-errors"></a>ハード エラーによるエラー  
  次のような状況が、ハード エラーの原因になる可能性があります (ただし、これだけではありません)。  
   
 -   接続またはケーブルの切断  
@@ -73,7 +78,7 @@ caps.handback.revision: 59
 > [!NOTE]  
 >  サーバーにアクセスするクライアント専用のパブリック NIC の障害はミラーリングによって保証されません。 たとえば、パブリック ネットワーク アダプターがプリンシパル サーバー インスタンスへのクライアント接続を処理していて、プライベート ネットワーク インターフェイス カードがサーバー インスタンス間のすべてのミラーリング トラフィックを処理している場合を考えます。 この場合、パブリック ネットワーク アダプターに障害が生じると、クライアントはデータベースにアクセスできなくなります。ただし、データベースのミラー化は引き続き行われます。  
   
-## ソフト エラーによるエラー  
+## <a name="failures-due-to-soft-errors"></a>ソフト エラーによるエラー  
  次のような状況が、ミラーリング タイムアウトの原因になる可能性があります (ただし、これだけではありません)。  
   
 -   TCP リンクのタイムアウト、パケットの紛失または破損、不正な順序のパケットなどのネットワーク エラー。  
@@ -84,7 +89,7 @@ caps.handback.revision: 59
   
 -   CPU やディスクの過負荷、いっぱいになったトランザクション ログ、メモリやスレッドが不足しているシステムなど、コンピューティング リソースの不足。 このような場合は、タイムアウト期間を長くするか、ワークロードを軽減するか、ハードウェアを交換してワークロードを処理できるようにする必要があります。  
   
-### ミラーリング タイムアウトのメカニズム  
+### <a name="the-mirroring-time-out-mechanism"></a>ミラーリング タイムアウトのメカニズム  
  サーバー インスタンスはソフト エラーを直接検出できないので、ソフト エラーのために、サーバー インスタンスが無限に待機する可能性があります。 このような状態を防ぐため、データベース ミラーリングではタイムアウト メカニズムが実装されており、ミラーリング セッション内の各サーバー インスタンスは、一定の間隔で、開いている各接続に対して ping を送信します。  
   
  接続が開いた状態を維持するためには、定義されたタイムアウト期間と、ping をもう 1 回送信するために必要な時間を足した時間内に、その接続でサーバー インスタンスが ping を受信する必要があります。 タイムアウト時間内に ping を受信した場合は、その接続がまだ開いており、サーバー インスタンスがその接続により通信していることを示します。 ping を受信すると、サーバー インスタンスはその接続に対するタイムアウト カウンターをリセットします。  
@@ -101,12 +106,12 @@ caps.handback.revision: 59
   
  **現在のタイムアウト値を表示するには**  
   
--   [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) の **mirroring_connection_timeout** にクエリを行います。  
+-   **sys.database_mirroring** の [mirroring_connection_timeout](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)にクエリを行います。  
   
-## エラーへの対応  
+## <a name="responding-to-an-error"></a>エラーへの対応  
  エラーを検出したサーバー インスタンスは、エラーの種類に関係なく、インスタンスのロール、セッションの動作モード、およびセッション内の他のすべての接続の状態に基づいて、適切な応答を行います。 パートナーと通信できなくなった場合の処置の詳細については、「 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [役割の交代中に発生するサービスの中断時間の算出 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
  [データベース ミラーリングの動作モード](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   

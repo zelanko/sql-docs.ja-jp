@@ -1,26 +1,31 @@
 ---
 title: "リモート サーバー接続オプションの表示または構成 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "リモート サーバー [SQL Server], 接続オプション"
-  - "サーバー [SQL Server], リモート"
-  - "接続 [SQL Server], リモート サーバー"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- remote servers [SQL Server], connection options
+- servers [SQL Server], remote
+- connections [SQL Server], remote servers
 ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 700524e1605ef7ff871d7308ea1b4caa359081c9
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# リモート サーバー接続オプションの表示または構成 (SQL Server)
+# <a name="view-or-configure-remote-server-connection-options-sql-server"></a>リモート サーバー接続オプションの表示または構成 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でサーバー レベルのリモート サーバー接続オプションを表示または構成する方法について説明します。  
   
  **このトピックの内容**  
@@ -35,7 +40,7 @@ caps.handback.revision: 25
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:** [リモート サーバー接続オプションを構成した後](#FollowUp)  
+-   **補足情報:**  [リモート サーバー接続オプションを構成した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -46,11 +51,11 @@ caps.handback.revision: 25
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### リモート サーバー接続オプションを表示または構成するには  
+#### <a name="to-view-or-configure-remote-server-connection-options"></a>リモート サーバー接続オプションを表示または構成するには  
   
-1.  オブジェクト エクスプローラーでサーバーを右クリックし、**[プロパティ]** をクリックします。  
+1.  オブジェクト エクスプローラーでサーバーを右クリックし、 **[プロパティ]**をクリックします。  
   
-2.  **[サーバーのプロパティ - \<***server_name***>**] ダイアログ ボックスで、**[接続]** をクリックします。  
+2.  **[サーバーのプロパティ - \<***server_name***>]** ダイアログ ボックスで、**[接続]** をクリックします。  
   
 3.  **[接続]** ページで、 **[リモート サーバー接続]** の設定を確認し、必要に応じて変更します。  
   
@@ -58,13 +63,13 @@ caps.handback.revision: 25
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### リモート サーバー接続オプションを表示するには  
+#### <a name="to-view-remote-server-connection-options"></a>リモート サーバー接続オプションを表示するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、[sp_helpserver](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md) を使用して、すべてのリモート サーバーに関する情報を返します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 [sp_helpserver](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md) を使用して、すべてのリモート サーバーに関する情報を返します。  
   
 ```tsql  
 USE master;  
@@ -72,13 +77,13 @@ GO
 EXEC sp_helpserver ;  
 ```  
   
-#### リモート サーバー接続オプションを構成するには  
+#### <a name="to-configure-remote-server-connection-options"></a>リモート サーバー接続オプションを構成するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、[sp_serveroption](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md) を使用して、リモート サーバーを構成する方法を示します。 この例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の別のインスタンスに対応するリモート サーバー `SEATTLE3` を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスと互換性のある照合順序になるように構成します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 [sp_serveroption](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md) を使用して、リモート サーバーを構成する方法を示します。 この例では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の別のインスタンスに対応するリモート サーバー `SEATTLE3`を、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のローカル インスタンスと互換性のある照合順序になるように構成します。  
   
 ```tsql  
 USE master;  
@@ -88,7 +93,7 @@ EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';
 ##  <a name="FollowUp"></a> 補足情報: リモート サーバー接続オプションを構成した後  
  設定を有効にするには、リモート サーバーを停止し、再起動する必要があります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [リモート サーバー](../../database-engine/configure-windows/remote-servers.md)   
  [リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   

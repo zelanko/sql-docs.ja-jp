@@ -1,28 +1,33 @@
 ---
 title: "データベース ミラーリング セッションの一時停止または再開 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データベース ミラーリングの再開"
-  - "データベース ミラーリング [SQL Server], セッション"
-  - "データベース ミラーリング [SQL Server], 一時停止"
-  - "データベース ミラーリング [SQL Server], 再開"
-  - "データベース ミラーリングの一時停止"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resuming database mirroring
+- database mirroring [SQL Server], sessions
+- database mirroring [SQL Server], pausing
+- database mirroring [SQL Server], resuming
+- pausing database mirroring
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c8cb7cac464772284682e74d2f8157df190adcef
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# データベース ミラーリング セッションの一時停止または再開 (SQL Server)
+# <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションの一時停止または再開 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でデータベース ミラーリングを一時停止または再開する方法について説明します。  
   
  **このトピックの内容**  
@@ -53,13 +58,13 @@ caps.handback.revision: 34
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  データベース ミラーリング セッションを一時停止または再開するには、 **[データベースのプロパティ]** の [ミラーリング] ページを使用します。  
   
-#### データベース ミラーリングを一時停止または再開するには  
+#### <a name="to-pause-or-resume-database-mirroring"></a>データベース ミラーリングを一時停止または再開するには  
   
 1.  データベース ミラーリング セッション中にプリンシパル サーバー インスタンスに接続します。次に、オブジェクト エクスプローラーで、サーバー名をクリックしてサーバー ツリーを展開します。  
   
 2.  **[データベース]**を展開し、データベースを選択します。  
   
-3.  データベースを右クリックして **[タスク]** を選択し、**[ミラー]** をクリックします。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページが開きます。  
+3.  データベースを右クリックして **[タスク]**をポイントし、 **[ミラー]**をクリックします。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページが開きます。  
   
 4.  セッションを一時停止するには、 **[一時停止]**をクリックします。  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 34
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### データベース ミラーリングを一時停止するには  
+#### <a name="to-pause-database-mirroring"></a>データベース ミラーリングを一時停止するには  
   
 1.  いずれかのパートナーの [!INCLUDE[ssDE](../../includes/ssde-md.md)] に接続します。  
   
@@ -83,13 +88,13 @@ caps.handback.revision: 34
   
      *database_name* は、セッションを中断しようとしているミラー化データベースです。  
   
-     次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースを一時停止します。  
+     次の例では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースを一時停止します。  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET PARTNER SUSPEND;  
     ```  
   
-##### データベース ミラーリングを再開するには  
+##### <a name="to-resume-database-mirroring"></a>データベース ミラーリングを再開するには  
   
 1.  いずれかのパートナーの [!INCLUDE[ssDE](../../includes/ssde-md.md)] に接続します。  
   
@@ -101,7 +106,7 @@ caps.handback.revision: 34
   
      *database_name* は、再開するセッションのミラー化されたデータベースです。  
   
-     次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースを一時停止します。  
+     次の例では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースを一時停止します。  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
@@ -111,7 +116,7 @@ caps.handback.revision: 34
   
 -   **データベース ミラーリングを一時停止した後**  
   
-     プライマリ データベースで、トランザクション ログが満杯にならないように予防策をとります。 詳細については、「[トランザクションログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください.  
+     プライマリ データベースで、トランザクション ログが満杯にならないように予防策をとります。 詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
   
 -   **データベース ミラーリングを再開した後**  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 34
   
 -   [データベース ミラーリングを削除する &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

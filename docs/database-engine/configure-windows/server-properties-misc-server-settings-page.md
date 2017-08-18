@@ -1,27 +1,32 @@
 ---
-title: "[サーバーのプロパティ] ([その他のサーバーの設定] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.miscserversettings.f1"
+title: "サーバーのプロパティ ([その他のサーバーの設定] ページ) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.miscserversettings.f1
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 53069a083eff6c49fa5198743eb626ca429b96d1
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# [サーバーのプロパティ] ([その他のサーバーの設定] ページ)
+# <a name="server-properties---misc-server-settings-page"></a>[サーバーのプロパティ] - [その他のサーバーの設定] ページ
   このページを使用すると、サーバーの設定を表示したり、変更したりできます。  
   
-## オプション  
+## <a name="options"></a>オプション  
  **[ユーザーの既定の言語]**  
  新しく作成するすべてのログインの既定の言語を指定します。  
   
@@ -34,15 +39,15 @@ caps.handback.revision: 22
  **[2 桁の年を以下の間にある年として解釈]**  
  2 桁の年の値を解釈するために 100 年の日付範囲を指定します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、2 桁の日付値を解釈するときに、その 2 桁が下 2 桁となる年を、指定された範囲の中から参照します。  
   
- 右のボックスで終了年を設定します。 終了年が保存されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の左のボックスに自動的に開始年が入力されます。  
+ 右のボックスで終了年を設定します。 終了年が保存されると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の左のボックスに自動的に開始年が入力されます。  
   
  **[構成した値]**  
- このペインの各オプションに構成されている値を表示します。 これらの値を変更した場合は、**[実行中の値]** をクリックして、変更後の値が反映されているかどうかを確認してください。 値が反映されていない場合は、先に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを再指定する必要があります。  
+ このペインの各オプションに構成されている値を表示します。 これらの値を変更した場合は、 **[実行中の値]** をクリックして、変更後の値が反映されているかどうかを確認してください。 値が反映されていない場合は、先に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを再指定する必要があります。  
   
  **[実行中の値]**  
  このペイン上のオプションの、現在実行中の値を表示します。 これらの値は読み取り専用です。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

@@ -1,33 +1,38 @@
 ---
 title: "オプション (SQL Server AlwaysOn、[ダッシュボード] ページ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Alwayson.Dashboard"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.ToolsOptionsPages.Alwayson.Dashboard
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 caps.latest.revision: 8
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 6edac25ccc503679e45bdc3477a819e0285e2909
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# オプション (SQL Server AlwaysOn、[ダッシュボード] ページ)
+# <a name="options-sql-server-always-on-dashboard-page"></a>オプション (SQL Server AlwaysOn、[ダッシュボード] ページ)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)][** のオプション]** ダイアログ ボックスの **[SQL Server AlwaysOn ダッシュボード]** ページを使用して、AlwaysOn ダッシュボードを構成します。  
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)][ **のオプション]** ダイアログ ボックスの **[SQL Server AlwaysOn ダッシュボード]** ページを使用して、AlwaysOn ダッシュボードを構成します。  
   
  **このページにアクセスするには:**  
   
- **[ツール]** メニューの **[オプション]** をクリックし、**[SQL Server AlwaysOn]** フォルダーを展開して、**[ダッシュボード]** をクリックします。  
+ **[ツール]** メニューの **[オプション]**をクリックし、 **[SQL Server AlwaysOn]** フォルダーを展開して、 **[ダッシュボード]**をクリックします。  
   
-## このページの内容  
+## <a name="on-this-page"></a>このページの内容  
  **[自動更新を有効にする]**  
  クリックすると、自動更新が有効になります。 使用可能なオプションは次のとおりです。  
   
@@ -38,7 +43,8 @@ caps.handback.revision: 8
  **[ユーザー定義の AlwaysOn ポリシーを有効にする]。**  
  AlwaysOn ポリシーを定義している場合は、このオプションをクリックしてポリシーを有効にします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   
+

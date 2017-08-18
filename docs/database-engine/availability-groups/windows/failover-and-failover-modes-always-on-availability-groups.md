@@ -1,44 +1,49 @@
 ---
 title: "フェールオーバーとフェールオーバー モード (AlwaysOn 可用性グループ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性レプリカの可用性グループ [SQL Server]"
-  - "可用性グループ [SQL Server], フェールオーバー"
-  - "可用性グループ [SQL Server], フェールオーバー モード"
-  - "フェールオーバー [SQL Server], AlwaysOn 可用性グループ"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], failover
+- Availability Groups [SQL Server], failover modes
+- failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: 75
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 74
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 54450a69119f344ba40787e7ce076ad84e0b211d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# フェールオーバーとフェールオーバー モード (AlwaysOn 可用性グループ)
+# <a name="failover-and-failover-modes-always-on-availability-groups"></a>フェールオーバーとフェールオーバー モード (AlwaysOn 可用性グループ)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  一般的に、可用性グループのコンテキスト内で、可用性レプリカのプライマリ ロールとセカンダリ ロールが *フェールオーバー*と呼ばれるプロセスで交換されることがあります。 フェールオーバーには、自動フェールオーバー (データ損失なし)、計画的な手動フェールオーバー (データ損失なし)、および "*強制フェールオーバー*" と通常呼ばれる強制手動フェールオーバー (データ損失の可能性あり) の 3 つの形式があります。 自動フェールオーバーと計画的な手動フェールオーバーでは、すべてのデータが保持されます。 可用性グループは、可用性レプリカのレベルでフェールオーバーします。 つまり、可用性グループはセカンダリ レプリカのいずれか (現在の "*フェールオーバー ターゲット*") にフェールオーバーされます。  
+  一般的に、可用性グループのコンテキスト内で、可用性レプリカのプライマリ ロールとセカンダリ ロールが *フェールオーバー*と呼ばれるプロセスで交換されることがあります。 フェールオーバーには、自動フェールオーバー (データ損失なし)、計画的な手動フェールオーバー (データ損失なし)、および " *強制フェールオーバー*" と通常呼ばれる強制手動フェールオーバー (データ損失の可能性あり) の 3 つの形式があります。 自動フェールオーバーと計画的な手動フェールオーバーでは、すべてのデータが保持されます。 可用性グループは、可用性レプリカのレベルでフェールオーバーします。 つまり、可用性グループはセカンダリ レプリカのいずれか (現在の " *フェールオーバー ターゲット*") にフェールオーバーされます。  
   
 > [!NOTE]  
 >  データベース レベルの問題 (データ ファイルの損失、データベースの削除、トランザクション ログの破損による障害が疑われる場合など) が発生しても、可用性グループのフェールオーバーは行われません。  
   
  フェールオーバーによってフェールオーバー ターゲットがプライマリ ロールを引き継ぎ、そのデータベースを復旧し、新しいプライマリ データベースとしてオンラインにします。 元のプライマリ レプリカは使用可能になるとセカンダリ ロールに切り替わり、そのデータベースがセカンダリ データベースになります。 場合によっては、複数のエラーに対する対応として、または管理目的のために、これらのロールを何度も交代できます (または、別のフェールオーバー ターゲットに切り替えることができます)。  
   
- 特定の可用性レプリカがサポートするフェールオーバーの形式は、"*フェールオーバー モード*" プロパティで指定されます。 可用性レプリカの有効なフェールオーバー モードは、次のようにそのレプリカの [可用性モード](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md) によって異なります。  
+ 特定の可用性レプリカがサポートするフェールオーバーの形式は、" *フェールオーバー モード* " プロパティで指定されます。 可用性レプリカの有効なフェールオーバー モードは、次のようにそのレプリカの [可用性モード](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md) によって異なります。  
   
 -   **同期コミット レプリカ:** 自動と手動の 2 つの設定をサポートします。 "自動" 設定では、自動フェールオーバーと手動フェールオーバーの両方をサポートしています。 データの損失を回避するために、自動フェールオーバーおよび計画的なフェールオーバーでは、フェールオーバー ターゲットが正常な同期状態を持つセカンダリ レプリカを同期コミットします (これは、フェールオーバー ターゲット上のすべてのセカンダリ データベースが対応するプライマリ データベースと同期されることを表します)。 セカンダリ レプリカがどちらの条件も満たさない場合は、強制フェールオーバーのみがサポートされます。 ロールが RESOLVING 状態であるレプリカでも強制フェールオーバーがサポートされていることに注意してください。  
   
 -   **非同期コミット レプリカ:** 手動フェールオーバー モードのみをサポートします。 また、同期されないため、強制フェールオーバーのみをサポートします。  
   
 > [!NOTE]  
->  フェールオーバー後、プライマリ データベースにアクセスする必要があるクライアント アプリケーションは、新しいプライマリ レプリカに接続する必要があります。 また、新しいセカンダリ レプリカが読み取り専用アクセスを許可するように構成されている場合は、読み取り専用クライアント アプリケーションから接続できます。 可用性グループ リスナーの詳細については、「[可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)」をご覧ください。  
+>  フェールオーバー後、プライマリ データベースにアクセスする必要があるクライアント アプリケーションは、新しいプライマリ レプリカに接続する必要があります。 また、新しいセカンダリ レプリカが読み取り専用アクセスを許可するように構成されている場合は、読み取り専用クライアント アプリケーションから接続できます。 可用性グループ リスナーの詳細については、「[可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)」をご覧ください。  
   
  **このトピックのセクション:**  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 74
  プライマリ レプリカの喪失によって自動的に発生するフェールオーバー。 自動フェールオーバーは、現在のプライマリ レプリカと 1 つのセカンダリ レプリカのフェールオーバー モードがどちらも AUTOMATIC に設定され、セカンダリ レプリカが現在同期されている場合のみサポートされます。  プライマリ レプリカまたはセカンダリ レプリカのフェールオーバー モードが MANUAL に設定されている場合、自動フェールオーバーは実行されません。  
   
  計画的な手動フェールオーバー (データ損失なし)  
- 計画的な手動フェールオーバーまたは "*手動フェールオーバー*" は、一般的に管理目的でデータベース管理者によって開始されるフェールオーバーです。 計画的な手動フェールオーバーは、プライマリ レプリカおよびセカンダリ レプリカに同期コミット モードが構成され、セカンダリ レプリカが現在プライマリ レプリカと同期されている (SYNCHRONIZED 状態になっている) 場合にのみサポートされます。 対象のセカンダリ レプリカが同期されているときは、セカンダリ データベースでフェールオーバーの準備が整っているため、プライマリ レプリカがクラッシュした場合でも手動フェールオーバー (データ損失なし) を実行できます。 データベース管理者は手動フェールオーバーを手動で開始します。  
+ 計画的な手動フェールオーバーまたは " *手動フェールオーバー*" は、一般的に管理目的でデータベース管理者によって開始されるフェールオーバーです。 計画的な手動フェールオーバーは、プライマリ レプリカおよびセカンダリ レプリカに同期コミット モードが構成され、セカンダリ レプリカが現在プライマリ レプリカと同期されている (SYNCHRONIZED 状態になっている) 場合にのみサポートされます。 対象のセカンダリ レプリカが同期されているときは、セカンダリ データベースでフェールオーバーの準備が整っているため、プライマリ レプリカがクラッシュした場合でも手動フェールオーバー (データ損失なし) を実行できます。 データベース管理者は手動フェールオーバーを手動で開始します。  
   
  強制フェールオーバー (データ損失の可能性あり)  
  プライマリ レプリカに同期されている (SYNCHRONIZED 状態の) セカンダリ レプリカがない場合、またはプライマリ レプリカが実行されていないためにセカンダリ レプリカでフェールオーバーの準備が整っていない場合に、データベース管理者が開始できるフェールオーバー。 強制フェールオーバーはデータを損失する可能性があるため、障害復旧にのみ使用することをお勧めします。 強制フェールオーバーは、手動のみで開始できるため、強制手動フェールオーバーとも呼ばれます。 これは、非同期コミット可用性モードでサポートされているフェールオーバーの唯一の形式です。  
@@ -80,25 +85,25 @@ caps.handback.revision: 74
   
 ||非同期コミット モード|手動フェールオーバー モードを指定した同期コミット モード|自動フェールオーバーを指定した同期コミット モード|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|自動フェールオーバー|いいえ|不可|はい|  
-|計画的な手動フェールオーバー|いいえ|可|はい|  
+|自動フェールオーバー|いいえ|いいえ|はい|  
+|計画的な手動フェールオーバー|いいえ|はい|はい|  
 |強制フェールオーバー|はい|はい|可**\***|  
   
- **\*** 同期されたセカンダリ レプリカ上で強制フェールオーバー コマンドを実行した場合、セカンダリ レプリカは手動フェールオーバーの場合と同様に動作します。  
+ **\***同期されたセカンダリ レプリカ上で強制フェールオーバー コマンドを実行した場合、セカンダリ レプリカは手動フェールオーバーの場合と同様に動作します。  
   
  フェールオーバー中にデータベースが使用できなくなる時間の長さは、フェールオーバーの種類および原因によって異なります。  
   
 > [!IMPORTANT]  
->  フェールオーバー後もクライアント接続をサポートするには、これまでのすべてのプライマリ データベースで定義されたログインおよびジョブを新しいプライマリ データベースに手動で再作成する必要があります (ただし、包含データベースは例外)。 詳細については、「[可用性グループのデータベースのためのログインとジョブの管理 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins and jobs for availability group databases.md)」を参照してください。  
+>  フェールオーバー後もクライアント接続をサポートするには、これまでのすべてのプライマリ データベースで定義されたログインおよびジョブを新しいプライマリ データベースに手動で再作成する必要があります (ただし、包含データベースは例外)。 詳細については、「 [可用性グループのデータベースのためのログインとジョブの管理 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md)と呼ばれるプロセスで交換されることがあります。  
   
-### フェールオーバー セット  
+### <a name="failover-sets"></a>フェールオーバー セット  
  特定の可用性グループで可能なフェールオーバーの形式は、フェールオーバー セットの観点から理解できます。 フェールオーバー セットは、次のようにフェールオーバーの特定の形式をサポートするプライマリ レプリカとセカンダリ レプリカで構成されています。  
   
--   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (省略可能):** 指定された可用性グループ内で、自動フェールオーバーが指定された同期コミット モード (存在する場合) が構成されている、(現在のプライマリ レプリカを含む) 可用性レプリカのペア。 自動フェールオーバー セットは、セカンダリ レプリカがプライマリ レプリカとの間で現在 SYNCHRONIZED 状態にある場合のみ有効です。  
+-   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (省略可能):**  指定された可用性グループ内で、自動フェールオーバーが指定された同期コミット モード (存在する場合) が構成されている、(現在のプライマリ レプリカを含む) 可用性レプリカのペア。 自動フェールオーバー セットは、セカンダリ レプリカがプライマリ レプリカとの間で現在 SYNCHRONIZED 状態にある場合のみ有効です。  
   
--   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (省略可能):** 指定された可用性グループ内で、同期コミット モード (存在する場合) が構成されている、(現在のプライマリ レプリカを含む) 2 つまたは 3 つの可用性レプリカのセット。 同期コミット フェールオーバー セットは、セカンダリ レプリカに手動フェールオーバー モードが構成され、1 つ以上のセカンダリ レプリカとプライマリ レプリカが現在 SYNCHRONIZED 状態にある場合のみ有効です。  
+-   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (省略可能):**  指定された可用性グループ内で、同期コミット モード (存在する場合) が構成されている、(現在のプライマリ レプリカを含む) 2 つまたは 3 つの可用性レプリカのセット。 同期コミット フェールオーバー セットは、セカンダリ レプリカに手動フェールオーバー モードが構成され、1 つ以上のセカンダリ レプリカとプライマリ レプリカが現在 SYNCHRONIZED 状態にある場合のみ有効です。  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)]:** 指定された可用性グループ内で、可用性モードおよびフェールオーバー モードに関係なく、現在の操作状態が ONLINE であるすべての可用性レプリカのセット。 全フェールオーバー セットは、現在プライマリ レプリカと SYNCHRONIZED 状態になっているセカンダリ レプリカがない場合に有効です。  
+-   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  指定された可用性グループ内で、可用性モードおよびフェールオーバー モードに関係なく、現在の操作状態が ONLINE であるすべての可用性レプリカのセット。 全フェールオーバー セットは、現在プライマリ レプリカと SYNCHRONIZED 状態になっているセカンダリ レプリカがない場合に有効です。  
   
  可用性レプリカに、自動フェールオーバーが指定された同期コミット モードを構成した場合、可用性レプリカは [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]の一部になります。 ただし、セットが有効になるかどうかは、現在のプライマリに依存します。 指定された時刻に実際に可能なフェールオーバーの形式は、現在有効なフェールオーバー セットによって決まります。  
   
@@ -115,7 +120,7 @@ caps.handback.revision: 74
   
  ![プライマリ レプリカ構成がフェールオーバーに与える影響](../../../database-engine/availability-groups/windows/media/aoag-failoversetexample.gif "プライマリ レプリカ構成がフェールオーバーに与える影響")  
   
-##  <a name="AutomaticFailover"></a> 自動フェールオーバー  
+##  <a name="AutomaticFailover"></a> Automatic Failover  
  自動フェールオーバーでは、プライマリ レプリカが使用できなくなった後で、対応するセカンダリ レプリカが自動的にプライマリ ロールに移行します。 セカンダリ レプリカをホストするノードに対して、プライマリ レプリカをホストする WSFC ノードがローカルである場合、自動フェールオーバーが最適です。 これには、データ同期はコンピューター間のメッセージ待機時間が短いときに最も効果的であること、およびクライアント接続をローカルに保持できるという理由があります。  
   
  **このセクションの内容**  
@@ -129,9 +134,9 @@ caps.handback.revision: 74
 ###  <a name="RequiredConditions"></a> 自動フェールオーバーに必要な条件  
  自動フェールオーバーは、以下の条件が満たされた場合のみ発生します。  
   
--   自動フェールオーバー セットが存在する。 このセットはプライマリ レプリカとセカンダリ レプリカ ("*自動フェールオーバー ターゲット*") で構成され、プライマリ レプリカとセカンダリ レプリカは両方とも同期コミット モードで構成され、どちらも AUTOMATIC フェールオーバーに設定されています。 プライマリ レプリカが MANUAL フェールオーバーに設定されている場合、セカンダリ レプリカが AUTOMATIC フェールオーバーに設定されていても、自動フェールオーバーは行われません。  
+-   自動フェールオーバー セットが存在する。 このセットはプライマリ レプリカとセカンダリ レプリカ (" *自動フェールオーバー ターゲット*") で構成され、プライマリ レプリカとセカンダリ レプリカは両方とも同期コミット モードで構成され、どちらも AUTOMATIC フェールオーバーに設定されています。 プライマリ レプリカが MANUAL フェールオーバーに設定されている場合、セカンダリ レプリカが AUTOMATIC フェールオーバーに設定されていても、自動フェールオーバーは行われません。  
   
-     詳細については、「[可用性モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)」を参照してください。  
+     詳細については、「 [可用性モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)と呼ばれるプロセスで交換されることがあります。  
   
 -   自動フェールオーバー ターゲットの同期状態が正常である (これは、フェールオーバー ターゲットのすべてのセカンダリ データベースが、対応するプライマリ データベースと同期されていることを意味します)。  
   
@@ -142,7 +147,7 @@ caps.handback.revision: 74
   
 -   Windows Server フェールオーバー クラスタリング (WSFC) クラスターにクォーラムがある。 詳細については、「[WSFC クォーラム モードと投票の構成 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)」を参照してください。  
   
--   プライマリ レプリカが使用できなくなり、柔軟なフェールオーバー ポリシーにより定義されたフェールオーバー条件レベルが満たされている。 フェールオーバー条件レベルの詳細については、「[可用性グループの自動フェールオーバーのための柔軟なフェールオーバー ポリシー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible automatic failover policy - availability group.md)」をご覧ください。  
+-   プライマリ レプリカが使用できなくなり、柔軟なフェールオーバー ポリシーにより定義されたフェールオーバー条件レベルが満たされている。 フェールオーバー条件レベルの詳細については、「 [可用性グループの自動フェールオーバーのための柔軟なフェールオーバー ポリシー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)と呼ばれるプロセスで交換されることがあります。  
   
 ###  <a name="HowAutoFoWorks"></a> 自動フェールオーバーの動作  
  自動フェールオーバーにより、次の一連の操作が開始されます。  
@@ -163,13 +168,13 @@ caps.handback.revision: 74
 ###  <a name="EnableAutoFo"></a> 自動フェールオーバーを設定するには  
  任意の時点で、可用性レプリカが自動フェールオーバーをサポートするように構成できます。  
   
- **自動フェールオーバーを設定するには**  
+ **To configure automatic failover**  
   
-1.  セカンダリ レプリカが、同期コミット可用性モードを使用するように構成されていることを確認します。 詳細については、「[可用性レプリカの可用性モードの変更 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)」を参照してください。  
+1.  セカンダリ レプリカが、同期コミット可用性モードを使用するように構成されていることを確認します。 詳細については、「 [可用性レプリカの可用性モードの変更 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)と呼ばれるプロセスで交換されることがあります。  
   
-2.  フェールオーバー モードを自動に設定します。 詳細については、「[可用性レプリカのフェールオーバー モードの変更 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md)」を参照してください。  
+2.  フェールオーバー モードを自動に設定します。 詳細については、「 [可用性レプリカのフェールオーバー モードの変更 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md)と呼ばれるプロセスで交換されることがあります。  
   
-3.  必要に応じて、可用性グループの柔軟なフェールオーバー ポリシーを変更して、自動フェールオーバーを発生させる障害の種類を指定します。 詳細については、「[自動フェールオーバーの条件を制御する柔軟なフェールオーバー ポリシーの構成 &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/configure flexible automatic failover policy.md)」と「[フェールオーバー クラスター インスタンスのフェールオーバー ポリシー](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)」を参照してください。  
+3.  必要に応じて、可用性グループの柔軟なフェールオーバー ポリシーを変更して、自動フェールオーバーを発生させる障害の種類を指定します。 詳細については、「 [自動フェールオーバーの条件を制御する柔軟なフェールオーバー ポリシーの構成 &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md) 」と「 [フェールオーバー クラスター インスタンスのフェールオーバー ポリシー](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)と呼ばれるプロセスで交換されることがあります。  
   
 ##  <a name="ManualFailover"></a> 計画的な手動フェールオーバー (データ損失なし)  
  対象のセカンダリ レプリカがホストされているサーバー インスタンスでデータベース管理者が手動フェールオーバー コマンドを発行すると、同期済みのセカンダリ レプリカがプライマリ ロールに移行します。 手動フェールオーバーをサポートするには、セカンダリ レプリカと現在のプライマリ レプリカの両方に同期コミット モード (存在する場合) が構成されている必要があります。 可用性レプリカのすべてのセカンダリ データベースが可用性グループに参加し、その対応するプライマリ データベースに同期されている必要があります (つまり、セカンダリ レプリカを同期する必要があります)。 これにより、元のプライマリ データベースでコミットされていたトランザクションもすべて新しいプライマリ データベースに確実にコミットされます。 したがって、新しいプライマリ データベースは、古いプライマリ データベースと同じです。  
@@ -178,9 +183,9 @@ caps.handback.revision: 74
   
 1.  フェールオーバーの前、プライマリ レプリカは `Node01`のサーバー インスタンスによってホストされています。  
   
-2.  データベース管理者によって計画的なフェールオーバーが開始されます。 フェールオーバー ターゲットは、`Node02` のサーバー インスタンスによってホストされている可用性レプリカです。  
+2.  データベース管理者によって計画的なフェールオーバーが開始されます。 フェールオーバー ターゲットは、 `Node02`のサーバー インスタンスによってホストされている可用性レプリカです。  
   
-3.  (`Node02` 上の) フェールオーバー ターゲットが新しいプライマリ レプリカになります。 これは計画的なフェールオーバーであるため、フェールオーバー中に元のプライマリ レプリカはセカンダリ ロールに切り替わり、そのデータベースをセカンダリ データベースとして即座にオンラインにします。  
+3.  ( `Node02`上の) フェールオーバー ターゲットが新しいプライマリ レプリカになります。 これは計画的なフェールオーバーであるため、フェールオーバー中に元のプライマリ レプリカはセカンダリ ロールに切り替わり、そのデータベースをセカンダリ データベースとして即座にオンラインにします。  
   
  ![計画的な手動フェールオーバーの図](../../../database-engine/availability-groups/windows/media/aoag-plannedmanualfailover.gif "計画的な手動フェールオーバーの図")  
   
@@ -206,7 +211,7 @@ caps.handback.revision: 74
   
 1.  新しいユーザー トランザクションが元のプライマリ データベースで発生しないようにするために、WSFC クラスターがプライマリ レプリカをオフラインにする要求をプライマリ レプリカに送信します。  
   
-2.  セカンダリ データベースの復旧キューで待機中のログがある場合は、セカンダリ レプリカで、そのセカンダリ データベースのロールフォワードが終了されます。 必要な時間は、システムの処理速度、最近の作業負荷、および復旧キューのログの量によって異なります。 復旧キューの現在のサイズを調べるには、 **Recovery Queue** パフォーマンス カウンターを使用します。 詳細については、「[SQL Server、Database Replica](../../../relational-databases/performance-monitor/sql-server-database-replica.md)」を参照してください。  
+2.  セカンダリ データベースの復旧キューで待機中のログがある場合は、セカンダリ レプリカで、そのセカンダリ データベースのロールフォワードが終了されます。 必要な時間は、システムの処理速度、最近の作業負荷、および復旧キューのログの量によって異なります。 復旧キューの現在のサイズを調べるには、 **Recovery Queue** パフォーマンス カウンターを使用します。 詳細については、「 [SQL Server、Database Replica](../../../relational-databases/performance-monitor/sql-server-database-replica.md)」を参照してください。  
   
     > [!NOTE]  
     >  復旧キューのサイズを制限することでフェールオーバーの時間を調節できます。 ただし、セカンダリ レプリカの遅れを取り戻すためにプライマリ レプリカの処理速度が低下する場合があります。  
@@ -220,16 +225,16 @@ caps.handback.revision: 74
     > [!NOTE]  
     >  新しいセカンダリ レプリカのデータベースの再同期が完了すると、その時点から、反対方向のフェールオーバーを実行できるようになります。  
   
- フェールオーバー後は、クライアントから現在のプライマリ データベースに再接続する必要があります。 詳細については、「[可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)」を参照してください。  
+ フェールオーバー後は、クライアントから現在のプライマリ データベースに再接続する必要があります。 詳細については、「 [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)での 1 つ以上の可用性グループの構成と管理において重要です。  
   
 ###  <a name="ManualFailoverDuringUpgrades"></a> アップグレード中の可用性の維持  
- 可用性グループのデータベース管理者は、手動フェールオーバーを使用することにより、ハードウェアまたはソフトウェアのアップグレード時にデータベースの可用性を維持できます。 ソフトウェア アップグレードのために可用性グループを使用するには、対象のセカンダリ レプリカがホストされているサーバー インスタンスまたはコンピューター ノードでアップグレードが受信済みである必要があります。 詳細については、「[AlwaysOn 可用性グループのレプリカ インスタンスのアップグレード](../../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)」を参照してください。  
+ 可用性グループのデータベース管理者は、手動フェールオーバーを使用することにより、ハードウェアまたはソフトウェアのアップグレード時にデータベースの可用性を維持できます。 ソフトウェア アップグレードのために可用性グループを使用するには、対象のセカンダリ レプリカがホストされているサーバー インスタンスまたはコンピューター ノードでアップグレードが受信済みである必要があります。 詳細については、「 [AlwaysOn 可用性グループのレプリカ インスタンスのアップグレード](../../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)」を参照してください。  
   
 ##  <a name="ForcedFailover"></a> 強制フェールオーバー (データ損失の可能性あり)  
- 可用性グループの強制フェールオーバー (データ損失の可能性あり) は、セカンダリ レプリカをウォーム スタンバイ サーバーとして使用できる災害復旧方法です。フェールオーバーを強制するとデータを損失する可能性があるので、強制フェールオーバーは注意深く慎重に使用してください。 可用性データベースにサービスをすぐに復元する必要があり、データの損失を許容できる場合に限り、フェールオーバーを強制することをお勧めします。 強制フェールオーバーを実行するための前提条件と推奨事項の詳細、および強制フェールオーバーを使用して重大なエラーから復旧するサンプル シナリオについては、このトピックの「[可用性グループの強制手動フェールオーバーの実行 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)」をご覧ください。  
+ 可用性グループの強制フェールオーバー (データ損失の可能性あり) は、セカンダリ レプリカをウォーム スタンバイ サーバーとして使用できる災害復旧方法です。フェールオーバーを強制するとデータを損失する可能性があるので、強制フェールオーバーは注意深く慎重に使用してください。 可用性データベースにサービスをすぐに復元する必要があり、データの損失を許容できる場合に限り、フェールオーバーを強制することをお勧めします。 強制フェールオーバーを実行するための前提条件と推奨事項の詳細、および強制フェールオーバーを使用して重大なエラーから復旧するサンプル シナリオについては、このトピックの「 [可用性グループの強制手動フェールオーバーの実行 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)と呼ばれるプロセスで交換されることがあります。  
   
 > [!WARNING]  
->  強制フェールオーバーでは、WSFC クラスターにクォーラムが必要です。 クォーラム構成とクォーラムの強制の詳細については、「[Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)」をご覧ください。  
+>  強制フェールオーバーでは、WSFC クラスターにクォーラムが必要です。 クォーラム構成とクォーラムの強制の詳細については、「 [Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)と呼ばれるプロセスで交換されることがあります。  
   
  **このセクションの内容**  
   
@@ -275,21 +280,21 @@ caps.handback.revision: 74
   
 1.  プライマリ レプリカに接続します。  
   
-2.  [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) 動的管理ビューの **last_commit_lsn** (最後にコミットされたトランザクションの LSN) 列および **last_commit_time** (最終コミット時間) 列に対してクエリを実行します。  
+2.  **sys.dm_hadr_database_replica_states** 動的管理ビューの **last_commit_lsn** (最後にコミットされたトランザクションの LSN) 列および [last_commit_time](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (最終コミット時間) 列に対してクエリを実行します。  
   
 3.  各プライマリ データベースとその各セカンダリ データベースに返された値を比較します。 最後にコミットした LSN の差異は、遅延の程度を示します。  
   
 4.  1 つのデータベースまたは一連のデータベースでの遅延の程度が一定期間、指定した遅延の最大値を超えた場合に、警告を表示させることができます。 たとえば、クエリは、各プライマリ データベースで 1 分ごとに実行されるジョブによって実行できます。 プライマリ データベースとそのセカンダリ データベースの **last_commit_time** の差異が、最後にジョブが実行された後に目標復旧ポイント (RPO) (たとえば、5 分) を超えた場合、ジョブは警告を生成できます。  
   
 > [!IMPORTANT]  
->  WSFC クラスターにクォーラムが存在しない場合またはクォーラムが強制されている場合は、 **last_commit_lsn** と **last_commit_time** は NULL になります。 クォーラム強制後のデータ損失を回避する方法の詳細については、「[可用性グループの強制手動フェールオーバーの実行 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)」の "クォーラム強制後のデータ損失を回避できる方法" をご覧ください。  
+>  WSFC クラスターにクォーラムが存在しない場合またはクォーラムが強制されている場合は、 **last_commit_lsn** と **last_commit_time** は NULL になります。 クォーラム強制後のデータ損失を回避する方法の詳細については、「 [可用性グループの強制手動フェールオーバーの実行 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)と呼ばれるプロセスで交換されることがあります。  
   
 ###  <a name="ForcedFailoverManagingDataLoss"></a> データ損失の可能性への対処  
  フェールオーバーの強制後は、すべてのセカンダリ データベースが中断されます。 これには、元のプライマリ データベースも含まれます (元のプライマリ レプリカは、オンラインに戻った後でセカンダリ レプリカになります)。 各セカンダリ レプリカで、中断されたデータベースをそれぞれ手動で再開する必要があります。  
   
  前のプライマリ レプリカが使用可能になると、そのデータベースは破損していないと想定されるので、データ損失の可能性に対処できます。 データ損失の可能性に対処するために使用できる方法は、元のプライマリ レプリカが新しいプライマリ レプリカに接続されたかどうかによって異なります。 元のプライマリ レプリカが新しいプライマリ インスタンスにアクセスできる場合、自動的かつ透過的に再接続されます。  
   
-#### 元のプライマリ レプリカが再接続された場合  
+#### <a name="the-original-primary-replica-has-reconnected"></a>元のプライマリ レプリカが再接続された場合  
  通常、障害発生後は、元のプライマリ レプリカは再起動するとすぐに、パートナーに再接続します。 再接続時に、元のプライマリ レプリカがセカンダリ レプリカになります。 そのデータベースはセカンダリ データベースになり、SUSPENDED 状態になります。 新しいセカンダリ データベースは、データベースを再開しない限り、ロールバックされません。  
   
  ただし、中断されたデータベースにはアクセスできないため、データベースを調査しても、指定されたデータベースを再開したときに失われるデータを評価することはできません。 そのため、セカンダリ データベースを再開するか削除するかは、次に示すようにデータの損失を許容できるかどうかによって決まります。  
@@ -302,7 +307,7 @@ caps.handback.revision: 74
   
      新しいセカンダリ データベースを再開すると、データベース同期の最初のステップとしてこのデータベースがロールバックされます。 障害発生時にログ レコードが送信キューで待機していた場合、対応するトランザクションはコミットされていた場合でも失われます。  
   
-#### 元のプライマリ レプリカが再接続されなかった場合  
+#### <a name="the-original-primary-replica-has-not-reconnected"></a>元のプライマリ レプリカが再接続されなかった場合  
  元のプライマリ レプリカが新しいプライマリ レプリカにネットワーク経由で再接続するのを一時的に防ぐことができる場合、元のプライマリ データベースを調査して、データベースが再開されたらどのデータが失われるのかを評価できます。  
   
 -   データ損失が許容される場合  
@@ -325,7 +330,7 @@ caps.handback.revision: 74
   
 -   [可用性レプリカのフェールオーバー モードの変更 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
--   [自動フェールオーバーの条件を制御する柔軟なフェールオーバー ポリシーの構成 &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/configure flexible automatic failover policy.md)  
+-   [自動フェールオーバーの条件を制御する柔軟なフェールオーバー ポリシーの構成 &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)  
   
  **手動フェールオーバーを実行するには**  
   
@@ -335,7 +340,7 @@ caps.handback.revision: 74
   
 -   [可用性グループのフェールオーバー ウィザードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
--   [可用性グループのデータベースのためのログインとジョブの管理 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins and jobs for availability group databases.md)  
+-   [可用性グループのデータベースのためのログインとジョブの管理 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md)  
   
  **WSFC クォーラムの構成を設定するには**  
   
@@ -349,14 +354,15 @@ caps.handback.revision: 74
   
 -   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn チームのブログ: SQL Server AlwaysOn チームのオフィシャル ブログ](http://blogs.msdn.com/b/sqlAlways%20On/)  
+-   [SQL Server AlwaysOn チームのブログ: SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [AlwaysOn 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions - always on availability and database mirroring.md)   
+ [AlwaysOn 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)   
  [フェールオーバー クラスター インスタンスのフェールオーバー ポリシー](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
- [可用性グループの自動フェールオーバーのための柔軟なフェールオーバー ポリシー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible automatic failover policy - availability group.md)  
+ [可用性グループの自動フェールオーバーのための柔軟なフェールオーバー ポリシー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)  
   
   
+

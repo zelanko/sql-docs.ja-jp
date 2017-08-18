@@ -1,27 +1,32 @@
 ---
 title: "network packet size サーバー構成オプションの構成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "既定のパケット サイズ"
-  - "サイズ [SQL Server], パケット"
-  - "パケット [SQL Server], サイズ"
-  - "network packet size オプション"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- default packet size
+- size [SQL Server], packets
+- packets [SQL Server], size
+- network packet size option
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5dff5ae44e8b383d6cb3f10374da36d423c6b4e7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# network packet size サーバー構成オプションの構成
+# <a name="configure-the-network-packet-size-server-configuration-option"></a>network packet size サーバー構成オプションの構成
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] network packet size [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **network packet size** オプションは、ネットワーク全体で使用するパケット サイズ (バイト単位) を設定します。 パケットとは、固定サイズのデータのチャンクで、クライアントとサーバー間で要求および結果を転送します。 既定のパケット サイズは 4,096 バイトです。  
@@ -45,7 +50,7 @@ caps.handback.revision: 26
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:** [network packet size オプションを構成した後](#FollowUp)  
+-   **補足情報:**  [network packet size オプションを構成した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 26
   
 -   異なるネットワーク プロトコルを使用しているシステムでは、最も一般的に使用されるプロトコル向けのサイズに network packet size を設定します。 ネットワーク プロトコルで大きなパケットがサポートされるときは、network packet size オプションを設定することでネットワーク パフォーマンスを向上できます。 クライアント アプリケーションはこの値を上書きできます。  
   
--   OLE DB 関数、ODBC (Open Database Connectivity) 関数、および DB-Library 関数を呼び出して、パケット サイズの変更を要求することもできます。 要求されたパケット サイズにサーバーが対応できない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]からクライアントに警告メッセージが送信されます。 環境によっては、パケット サイズを変更すると、次のような通信リンク エラーが発生することがあります。  
+-   OLE DB 関数、ODBC (Open Database Connectivity) 関数、および DB-Library 関数を呼び出して、パケット サイズの変更を要求することもできます。 要求されたパケット サイズにサーバーが対応できない場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] からクライアントに警告メッセージが送信されます。 環境によっては、パケット サイズを変更すると、次のような通信リンク エラーが発生することがあります。  
   
      `Native Error: 233, no process is on the other end of the pipe.`  
   
@@ -72,9 +77,9 @@ caps.handback.revision: 26
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### network packet size オプションを構成するには  
+#### <a name="to-configure-the-network-packet-size-option"></a>network packet size オプションを構成するには  
   
-1.  オブジェクト エクスプローラーで、サーバーを右クリックし、**[プロパティ]** をクリックします。  
+1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]**をクリックします。  
   
 2.  **[詳細設定]** ノードをクリックします。  
   
@@ -82,13 +87,13 @@ caps.handback.revision: 26
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### network packet size オプションを構成するには  
+#### <a name="to-configure-the-network-packet-size-option"></a>network packet size オプションを構成するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、`network packet size` オプションの値を `6500` バイトに設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `network packet size` オプションの値を `6500` バイトに設定する方法を示します。  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -104,14 +109,15 @@ GO
   
 ```  
   
- 詳細については、「[サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。  
+ 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)サーバー構成オプションを構成する方法について説明します。  
   
 ##  <a name="FollowUp"></a> 補足情報: network packet size オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

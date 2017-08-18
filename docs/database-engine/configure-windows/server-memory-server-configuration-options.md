@@ -1,91 +1,96 @@
 ---
 title: "サーバー メモリに関するサーバー構成オプション | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "仮想メモリ マネージャー"
-  - "max server memory オプション"
-  - "仮想メモリ [SQL Server]"
-  - "VMM"
-  - "サーバー メモリ オプション [SQL Server]"
-  - "サーバー [SQL Server], メモリ"
-  - "バッファー プール [SQL Server]"
-  - "min server memory オプション"
-  - "手動メモリ オプション [SQL Server]"
-  - "メモリ [SQL Server], サーバー"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Virtual Memory Manager
+- max server memory option
+- virtual memory [SQL Server]
+- VMM
+- server memory options [SQL Server]
+- servers [SQL Server], memory
+- buffer pools [SQL Server]
+- min server memory option
+- manual memory options [SQL Server]
+- memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 caps.latest.revision: 78
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 78
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3e94744eab69b635feb00ed9f5f8eb01b196c3b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# サーバー メモリに関するサーバー構成オプション
+# <a name="server-memory-server-configuration-options"></a>サーバー メモリに関するサーバー構成オプション
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **min server memory** および **max server memory** の 2 つのサーバー メモリ オプションを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで使用される SQL Server プロセス用に SQL Server Memory Manager によって管理されるメモリ量を MB 単位で再構成します。  
+  **min server memory** および **max server memory**の 2 つのサーバー メモリ オプションを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用される SQL Server プロセス用に SQL Server Memory Manager によって管理されるメモリ量を MB 単位で再構成します。  
   
  **min server memory** の既定の設定は 0 MB で、 **max server memory** の既定の設定は 2,147,483,647 MB です。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は使用可能なシステム リソースに基づいて、必要なメモリを動的に変更できます。  
   
 > [!NOTE]  
->  **max server memory** を最小値に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンスが極端に悪化し、場合によっては起動できなくなります。 このオプションの変更後に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動できなくなった場合は、 **–f** 起動オプションを使用して起動し、 **max server memory** を元の値に戻します。 詳細については、「[データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。  
+>  **max server memory** を最小値に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンスが極端に悪化し、場合によっては起動できなくなります。 このオプションの変更後に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動できなくなった場合は、 **–f** 起動オプションを使用して起動し、 **max server memory** を元の値に戻します。 詳細については、「 [データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。  
   
- メモリを動的に使用する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はシステムに定期的にクエリして、メモリの空き容量を確認します。 このようにメモリの空き容量を維持することによって、オペレーティング システム (OS) のページングが防止されます。 空きメモリが少ない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は OS に対してメモリを解放します。 空きメモリが多い場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はより多くのメモリを割り当てることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってメモリが追加されるのは、ワークロードが高いためにメモリを増やす必要がある場合だけです。アクティブでないサーバーの仮想アドレス空間のサイズは増えません。  
+ メモリを動的に使用する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はシステムに定期的にクエリして、メモリの空き容量を確認します。 このようにメモリの空き容量を維持することによって、オペレーティング システム (OS) のページングが防止されます。 空きメモリが少ない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は OS に対してメモリを解放します。 空きメモリが多い場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はより多くのメモリを割り当てることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってメモリが追加されるのは、ワークロードが高いためにメモリを増やす必要がある場合だけです。アクティブでないサーバーの仮想アドレス空間のサイズは増えません。  
   
- 現在使用されているメモリを返すクエリについては、例 B を参照してください。 **max server memory** は、バッファー プール、コンパイル メモリ、すべてのキャッシュ、qe メモリ許可、ロック マネージャーのメモリ、および clr メモリ (基本的に **sys.dm_os_memory_clerks** でクラークが見つけたすべてのメモリ) を含む [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ割り当てを制御します。 スレッド スタックのメモリ、メモリ ヒープ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のリンクされているサーバーのプロバイダー、および非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL によって割り当てられたメモリは、最大サーバー メモリによって制御されません。  
+ 現在使用されているメモリを返すクエリについては、例 B を参照してください。 **max server memory** は、バッファー プール、コンパイル メモリ、すべてのキャッシュ、qe メモリ許可、ロック マネージャーのメモリ、および clr メモリ (基本的に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sys.dm_os_memory_clerks **でクラークが見つけたすべてのメモリ) を含む**メモリ割り当てを制御します。 スレッド スタックのメモリ、メモリ ヒープ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のリンクされているサーバーのプロバイダー、および非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL によって割り当てられたメモリは、最大サーバー メモリによって制御されません。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、メモリ通知 API **QueryMemoryResourceNotification** を使用して、いつ SQL Server Memory Manager がメモリの割り当てまたは解放を行うことができるかを判断します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がメモリを動的に使用できるようにする方法をお勧めしますが、手動でメモリ オプションを設定して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がアクセスできるメモリの量を制限することもできます。 この場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用のメモリ量を設定する前に、OS および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他のインスタンス (およびコンピューターが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 専用でない場合は他のシステム) が使用するメモリの量を物理メモリ全体から差し引いて適切なメモリ設定を決定します。 この差が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に割り当てることができる最大メモリ量です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がメモリを動的に使用できるようにする方法をお勧めしますが、手動でメモリ オプションを設定して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がアクセスできるメモリの量を制限することもできます。 この場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用のメモリ量を設定する前に、OS および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他のインスタンス (およびコンピューターが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]専用でない場合は他のシステム) が使用するメモリの量を物理メモリ全体から差し引いて適切なメモリ設定を決定します。 この差が、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に割り当てることができる最大メモリ量です。  
   
-## メモリ オプションの手動設定  
+## <a name="setting-the-memory-options-manually"></a>メモリ オプションの手動設定  
  **min server memory** と **max server memory** に異なる値を設定して、メモリ範囲を与えます。 この方法は、システム管理者またはデータベース管理者が同じコンピューター上で実行する他のアプリケーションに必要なメモリと合わせて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを構成する場合に便利です。  
   
  **min server memory** を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス用に SQL Server Memory Manager で使用できる最小メモリ量を確保できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 **min server memory** で指定されたメモリ量を起動時にすぐに割り当てるわけではありません。 ただし、クライアントの負荷によってメモリの使用量がこの値に達すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] min server memory **の値を小さくしない限り、** はメモリを解放できません。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 **min server memory**で指定されたメモリ量を必ず割り当てるわけではありません。 サーバーの負荷が **min server memory**で指定されたメモリ量の割り当てを必要としない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はより少ないメモリで実行します。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、**min server memory** で指定されたメモリ量を必ず割り当てるわけではありません。 サーバーの負荷が **min server memory**で指定されたメモリ量の割り当てを必要としない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はより少ないメモリで実行します。  
   
  **max server memory** に設定できる最小メモリは 128 MB です。  
   
-## SQL Server Management Studio を使用して、メモリ オプションを構成する方法  
- **min server memory** および **max server memory** の 2 つのサーバー メモリ オプションを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス用に SQL Server Memory Manager によって管理されるメモリ量を MB 単位で再構成します。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は使用可能なシステム リソースに基づいて、必要なメモリを動的に変更できます。  
+## <a name="how-to-configure-memory-options-using-sql-server-management-studio"></a>SQL Server Management Studio を使用して、メモリ オプションを構成する方法  
+ **min server memory** および **max server memory**の 2 つのサーバー メモリ オプションを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス用に SQL Server Memory Manager によって管理されるメモリ量を MB 単位で再構成します。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は使用可能なシステム リソースに基づいて、必要なメモリを動的に変更できます。  
   
-### 固定量のメモリを構成する手順  
+### <a name="procedure-for-configuring-a-fixed-amount-of-memory"></a>固定量のメモリを構成する手順  
  固定量のメモリを設定するには  
   
-1.  オブジェクト エクスプローラーで、サーバーを右クリックし、**[プロパティ]** をクリックします。  
+1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]**をクリックします。  
   
 2.  **[メモリ]** ノードをクリックします。  
   
 3.  **[サーバー メモリ オプション]**で、 **[最小サーバー メモリ]** と **[最大サーバー メモリ]**に必要な数値を入力します。  
   
-     既定の設定を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用できるシステム リソースに基づいて、そのメモリ要求を動的に変更できるようになります。 **min server memory** の既定の設定は 0 MB で、**max server memory** の既定の設定は 2,147,483,647 MB です。  
+     既定の設定を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用できるシステム リソースに基づいて、そのメモリ要求を動的に変更できるようになります。 **min server memory** の既定の設定は 0 MB で、 **max server memory** の既定の設定は 2,147,483,647 MB です。  
   
-## ネットワーク アプリケーションのデータ スループットの最大化  
+## <a name="maximize-data-throughput-for-network-applications"></a>ネットワーク アプリケーションのデータ スループットの最大化  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のシステム メモリ使用量を最適化するには、ファイルのキャッシュに使用されるメモリ量を制限する必要があります。 ファイル システム キャッシュを制限するには、 **[ファイル共有のデータ スループットを最大にする]** が選択されていないことを確認します。 最小のファイル システム キャッシュを指定するには、 **[メモリの使用を最小にする]** または **[バランスをとる]**を選択します。  
   
-#### オペレーティング システムの現在の設定を確認するには  
+#### <a name="to-check-the-current-setting-on-your-operating-system"></a>オペレーティング システムの現在の設定を確認するには  
   
-1.  **[スタート]** ボタンをクリックし、**[コントロール パネル]** をクリックします。次に **[ネットワーク接続]** をダブルクリックして、**[ローカル エリア接続]** をダブルクリックします。  
+1.  **[スタート]**ボタンをクリックし、 **[コントロール パネル]**をクリックします。次に **[ネットワーク接続]**をダブルクリックして、 **[ローカル エリア接続]**をダブルクリックします。  
   
 2.  **[全般]** タブで **[プロパティ]**をクリックし、 **[Microsoft ネットワーク用ファイルとプリンター共有]**を選択して、 **[プロパティ]**をクリックします。  
   
 3.  **[ネットワーク アプリケーションのデータ スループットを最大にする]** が選択されている場合は、他のオプションを選択して **[OK]**をクリックし、すべてのダイアログ ボックスを閉じます。  
   
-## lock pages in memory  
- この Windows ポリシーにより、プロセスを使用して物理メモリにデータを保持できるアカウントを指定し、ディスク上の仮想メモリへのデータのページングを防止します。 メモリ内のページをロックすると、ディスクへのメモリのページングが発生した際に、サーバーの応答性を維持できます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard エディション以上のインスタンスでは、sqlservr.exe の実行権限があるアカウントに Windows の "Locked Pages in Memory" (LPIM) ユーザー権利が付与されている場合、SQL Server の **Lock Pages in Memory** オプションはオンに設定されます。  
+## <a name="lock-pages-in-memory"></a>lock pages in memory  
+ この Windows ポリシーにより、プロセスを使用して物理メモリにデータを保持できるアカウントを指定し、ディスク上の仮想メモリへのデータのページングを防止します。 メモリ内のページをロックすると、ディスクへのメモリのページングが発生した際に、サーバーの応答性を維持できます。 **Standard エディション以上のインスタンスでは、sqlservr.exe の実行権限があるアカウントに Windows の "Locked Pages in Memory" (LPIM) ユーザー権利が付与されている場合、SQL Server の** Lock Pages in Memory [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] オプションはオンに設定されます。  
   
  **の** Lock Pages In Memory [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オプションを無効にするには、SQL Server 開始アカウントに対する "Locked Pages in Memory" ユーザー権利を削除します。  
   
-### Lock Pages in Memory を無効にするには  
+### <a name="to-disable-lock-pages-in-memory"></a>Lock Pages in Memory を無効にするには  
  lock pages in memory オプションを無効にするには  
   
 1.  **[スタート]** メニューの **[ファイル名を指定して実行]**をクリックします。 **[開く]** ボックスに「 **gpedit.msc**」と入力します。  
@@ -100,20 +105,20 @@ caps.handback.revision: 78
   
      ポリシーが詳細ペインに表示されます。  
   
-5.  詳細ペインで、**[メモリ内のページのロック] **をダブルクリックします。  
+5.  詳細ペインで、 **[メモリ内のページのロック]**をダブルクリックします。  
   
 6.  **[ローカル セキュリティ ポリシーの設定]** ダイアログ ボックスで、sqlservr.exe の実行権限のあるアカウントを選択し、 **[削除]**をクリックします。  
   
-## 仮想メモリ マネージャー  
+## <a name="virtual-memory-manager"></a>仮想メモリ マネージャー  
  Windows 仮想メモリ マネージャー (VMM) は、使用可能な物理メモリにコミット済みのアドレス空間をマップします。  
   
  さまざまなオペレーティング システムでサポートされている物理メモリ量の詳細については、Windows のマニュアルの「Windows のリリース別のメモリ制限」を参照してください。  
   
  仮想メモリ システムでは、仮想メモリと物理メモリの比率が 1:1 を超えるような物理メモリの設定を許可しています。 その結果、さまざまな物理メモリ構成のコンピューターで大規模なプログラムを実行できます。 しかし、すべてのプロセスの平均ワーキング セットを合わせた容量よりもはるかに大きな仮想メモリを使用すると、パフォーマンスが低下する可能性があります。  
   
- **min server memory** および **max server memory** は拡張オプションです。 **sp_configure** システム ストアド プロシージャを使用してこれらの設定を変更するには、**show advanced options** を 1 に設定する必要があります。 これらの設定は、サーバーを再起動しなくてもすぐに有効になります。  
+ **min server memory** および **max server memory** は拡張オプションです。 **sp_configure** システム ストアド プロシージャを使用してこれらの設定を変更するには、 **show advanced options** を 1 に設定する必要があります。 これらの設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
-## SQL Server の複数インスタンスの実行  
+## <a name="running-multiple-instances-of-sql-server"></a>SQL Server の複数インスタンスの実行  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]の複数のインスタンスを実行する場合は、3 つの方法でメモリを管理できます。  
   
 -   **max server memory** を使用して、メモリ使用量を制御します。 許可する値の合計がコンピューターの合計物理メモリを超えないように注意して、各インスタンスの最大値を設定します。 予測されるワークロードまたはデータベース サイズに比例して、各インスタンスにメモリを割り当てることができます。 この方法の利点は、新しいプロセスまたはインスタンスが起動したときに、直ちに空きメモリを使用できることです。 欠点は、実行していないインスタンスがある場合、残っている空きメモリを実行中のインスタンスが利用できないことです。  
@@ -124,14 +129,14 @@ caps.handback.revision: 78
   
  これらの設定はインスタンスを再起動しなくても変更できるので、簡単にいろいろな設定を試して、使用パターンに最適な設定を見つけることができます。  
   
-## SQL Server に対する最大メモリ容量の指定  
+## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>SQL Server に対する最大メモリ容量の指定  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで、プロセス仮想アドレス空間の制限までメモリを構成できます (8 TB)。  
   
  ***/3gb** は、オペレーティング システムのブート パラメーターです。 詳細については、 [MSDN ライブラリ](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)を参照してください。  
   
-## 使用例  
+## <a name="examples"></a>使用例  
   
-### 例 A  
+### <a name="example-a"></a>例 A  
  次の例では、 `max server memory` オプションを 4 GB に設定します。  
   
 ```  
@@ -145,7 +150,7 @@ RECONFIGURE;
 GO  
 ```  
   
-### 例 B: 現在のメモリ割り当てを確認する  
+### <a name="example-b-determining-current-memory-allocation"></a>例 B: 現在のメモリ割り当てを確認する  
  次のクエリでは、現在割り当てられているメモリに関する情報を返します。  
   
 ```  
@@ -158,10 +163,11 @@ process_virtual_memory_low
 FROM sys.dm_os_process_memory;  
 ```  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

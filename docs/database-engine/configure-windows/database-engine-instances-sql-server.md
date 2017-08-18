@@ -1,30 +1,35 @@
 ---
 title: "データベース エンジンのインスタンス (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 629b0c63a6dfe888b64c665fe02de93134acb320
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# データベース エンジンのインスタンス (SQL Server)
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスは、オペレーティング システム サービスとして実行される **sqlservr** 実行可能ファイルのコピーです。 各インスタンスは、いくつかのシステム データベースと、1 つまたは複数のユーザー データベースを管理します。 各コンピューターは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の複数のインスタンスを実行できます。 アプリケーションはインスタンスに接続して、インスタンスに管理されているデータベースでの作業を実行します。  
+# <a name="database-engine-instances-sql-server"></a>データベース エンジンのインスタンス (SQL Server)
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスは、オペレーティング システム サービスとして実行される **sqlservr** 実行可能ファイルのコピーです。 各インスタンスは、いくつかのシステム データベースと、1 つまたは複数のユーザー データベースを管理します。 各コンピューターは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の複数のインスタンスを実行できます。 アプリケーションはインスタンスに接続して、インスタンスに管理されているデータベースでの作業を実行します。  
   
-## インスタンス  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスは、そのインスタンスで管理されているいずれかのデータベースのデータを操作するすべてのアプリケーション要求を処理するサービスとして動作します。 アプリケーションからの接続要求 (ログイン) の送信先です。 アプリケーションとインスタンスが別のコンピューター上にある場合、接続はネットワーク接続を通じて確立されます。 アプリケーションとインスタンスが同じコンピューター上にある場合、SQL Server 接続はネットワーク接続としてもインメモリ接続としても確立できます。 接続が完了すると、アプリケーションは接続を通じてインスタンスに [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを送信します。 インスタンスは [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをデータベース内のデータおよびオブジェクトに対する操作に解決して、必要な権限がログイン資格情報に付与されていれば、操作を実行します。 取得されたデータは、エラーなどのメッセージと共にアプリケーションに返されます。  
+## <a name="instances"></a>インスタンス  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスは、そのインスタンスで管理されているいずれかのデータベースのデータを操作するすべてのアプリケーション要求を処理するサービスとして動作します。 アプリケーションからの接続要求 (ログイン) の送信先です。 アプリケーションとインスタンスが別のコンピューター上にある場合、接続はネットワーク接続を通じて確立されます。 アプリケーションとインスタンスが同じコンピューター上にある場合、SQL Server 接続はネットワーク接続としてもインメモリ接続としても確立できます。 接続が完了すると、アプリケーションは接続を通じてインスタンスに [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを送信します。 インスタンスは [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをデータベース内のデータおよびオブジェクトに対する操作に解決して、必要な権限がログイン資格情報に付与されていれば、操作を実行します。 取得されたデータは、エラーなどのメッセージと共にアプリケーションに返されます。  
   
  1 台のコンピューター上で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の複数のインスタンスを実行できます。 1 つのインスタンスを既定のインスタンスにすることができます。 既定のインスタンスには名前がありません。 接続要求にコンピューター名しか指定されていない場合、接続は既定のインスタンスに対して確立されます。 名前付きインスタンスは、インスタンスをインストールするときに名前を指定するインスタンスです。 このインスタンスに対する接続要求では、コンピューター名とインスタンス名の両方を指定する必要があります。 既定のインスタンスのインストールは必須ではありません。コンピューターで実行されているすべてのインスタンスが名前付きインスタンスであってもかまいません。  
   
-## 関連タスク  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
@@ -41,16 +46,16 @@ caps.handback.revision: 15
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]から電子メール メッセージを送信するために、データベース アプリケーションがどのようにデータベース メールを使用できるかについて説明します。|[データベース メール](../../relational-databases/database-mail/database-mail.md)|  
 |パフォーマンス基準の策定やパフォーマンスの問題の診断に使用できるパフォーマンス データをキャプチャするために拡張イベントを使用する方法について説明します。 拡張イベントは、パフォーマンス データを収集するための軽量で拡張性の高いシステムです。|[拡張イベント](../../relational-databases/extended-events/extended-events.md)|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]のイベントのキャプチャおよび記録用にカスタマイズされたシステムを構築するために SQL トレースを使用する方法について説明します。|[SQL トレース (SQL Trace)](../../relational-databases/sql-trace/sql-trace.md)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスが受け取ったアプリケーション要求のトレースをキャプチャするために [!INCLUDE[ssDE](../../includes/ssde-md.md)] Profiler を使用する方法について説明します。 これらのトレースは、後でパフォーマンスのテストや問題の診断などの活動のために再生できます。|[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが受け取ったアプリケーション要求のトレースをキャプチャするために [!INCLUDE[ssDE](../../includes/ssde-md.md)]Profiler を使用する方法について説明します。 これらのトレースは、後でパフォーマンスのテストや問題の診断などの活動のために再生できます。|[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)|  
 |変更データ キャプチャ (CDC) 機能および変更の追跡機能について説明し、これらの機能を使用してデータベースのデータに対する変更を追跡する方法について説明します。|[データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)|  
-|さまざまなログ ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ジョブ履歴、SQL Server ログ、Windows イベント ログなど) 内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラーやメッセージを検索および表示するために [ログ ファイルの表示] を使用する方法について説明します。|[ログ ファイルの表示](../../relational-databases/logs/log-file-viewer.md)|  
-|データベースを分析し、潜在的なパフォーマンスの問題に対処する提案を行うために[!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーを使用する方法について説明します。|[データベース エンジン チューニング アドバイザー](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
+|さまざまなログ ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ジョブ履歴、SQL Server ログ、Windows イベント ログなど) 内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラーやメッセージを検索および表示するために [ログ ファイルの表示] を使用する方法について説明します。|[ログ ファイルの表示](../../relational-databases/logs/log-file-viewer.md)|  
+|データベースを分析し、潜在的なパフォーマンスの問題に対処する提案を行うために [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーを使用する方法について説明します。|[データベース エンジン チューニング アドバイザー](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
 |標準接続が受け入れられないときに実稼働データベース管理者がインスタンスへの診断接続を確立する方法について説明します。|[データベース管理者用の診断接続](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)]の 1 つのインスタンスから別のインスタンスにアクセスできるようにする、非推奨のリモート サーバー機能を使用する方法について説明します。 この機能のための推奨メカニズムは、リンク サーバーです。|[リモート サーバー](../../database-engine/configure-windows/remote-servers.md)|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] の 1 つのインスタンスから別のインスタンスにアクセスできるようにする、非推奨のリモート サーバー機能を使用する方法について説明します。 この機能のための推奨メカニズムは、リンク サーバーです。|[リモート サーバー](../../database-engine/configure-windows/remote-servers.md)|  
 |メッセージング アプリケーションおよびキューイング アプリケーションのための Service Broker の機能について説明し、Service Broker のドキュメントを示します。|[Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)|  
 |バッファー プール拡張が、不揮発性ランダム アクセス ストレージ (ソリッドステート ドライブ) とデータベース エンジン バッファー プールとのシームレスな統合をどのように実現し、I/O スループットを大幅に向上させるかについて説明します。|[バッファー プール拡張ファイル](../../database-engine/configure-windows/buffer-pool-extension.md)|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [sqlservr アプリケーション](../../tools/sqlservr-application.md)   
  [データベース機能](../../relational-databases/database-features.md)   
  [データベース エンジンのインスタンス間機能](../../relational-databases/database-engine-cross-instance-features.md)  

@@ -1,39 +1,44 @@
 ---
 title: "affinity mask サーバー構成オプション | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "既定の affinity mask オプション"
-  - "プロセッサ キャッシュの再読み込み"
-  - "プロセッサ キャッシュ [SQL Server]"
-  - "CPU [SQL Server], ライセンス"
-  - "遅延プロセス コール"
-  - "affinity mask オプション"
-  - "プロセッサ関係 [SQL Server]"
-  - "SMP"
-  - "DPC"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- default affinity mask option
+- reloading processor cache
+- processor cache [SQL Server]
+- CPU [SQL Server], licensing
+- deferred process call
+- affinity mask option
+- processor affinity [SQL Server]
+- SMP
+- DPC
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0aa50b8c593ced9089a939eb5490380872d38472
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# affinity mask サーバー構成オプション
+# <a name="affinity-mask-server-configuration-option"></a>affinity mask サーバー構成オプション
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 代わりに [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) を使用します。  
   
- マルチタスクを実行するため、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows では、プロセス スレッドが別のプロセッサに移動される場合があります。 オペレーティング システムにとっては効率的であっても、この操作で各プロセッサのキャッシュに繰り返しデータが再読み込みされるため、システムの負荷が高くなり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンスが低下する場合があります。 このような状況では、特定のスレッドにプロセッサを割り当てることで、プロセッサの再読み込みを回避し、プロセッサ間でのスレッドの移行回数を少なくできるため、コンテキストの切り替えを減らしてパフォーマンスを改善できます。このようなスレッドとプロセッサ間の関連付けを "プロセッサ関係 (processor affinity)" と言います。  
+ マルチタスクを実行するため、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows では、プロセス スレッドが別のプロセッサに移動される場合があります。 オペレーティング システムにとっては効率的であっても、この操作で各プロセッサのキャッシュに繰り返しデータが再読み込みされるため、システムの負荷が高くなり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンスが低下する場合があります。 このような状況では、特定のスレッドにプロセッサを割り当てることで、プロセッサの再読み込みを回避し、プロセッサ間でのスレッドの移行回数を少なくできるため、コンテキストの切り替えを減らしてパフォーマンスを改善できます。このようなスレッドとプロセッサ間の関連付けを "プロセッサ関係 (processor affinity)" と言います。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、affinity mask (別名 **CPU affinity mask**) と affinity I/O mask の 2 つの affinity mask オプションにより、プロセッサ関係をサポートします。 affinity I/O mask オプションの詳細については、「 [affinity Input-Output mask サーバー構成オプション](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md)」を参照してください。 プロセッサが 33 から 64 個のサーバーに対して CPU および I/O affinity をサポートするには、 [affinity64 mask サーバー構成オプション](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md) および [affinity64 I/O mask サーバー構成オプション](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md)がそれぞれ必要になります。  
   
@@ -60,9 +65,9 @@ caps.handback.revision: 52
   
  存在しない CPU にマップしているような関係マスクを指定した場合、RECONFIGURE コマンドによりクライアント セッションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログの両方にエラー メッセージが報告されます。 この場合、RECONFIGURE WITH OVERRIDE オプションを使用しても影響がなく、同じ構成エラーが再度報告されます。  
   
- Windows&amp;amp;amp;#xA0;2000 または Windows&amp;amp;amp;#xA0;Server&amp;amp;amp;#xA0;2003 オペレーティング システムにより特定のワークロード割り当てが割り当てられているプロセッサから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の動作を除外することもできます。 プロセッサを表すビットを 1 に設定している場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンは、このプロセッサをスレッド割り当ての対象として選択します。 **affinity mask** を 0 (既定値) に設定すると、Microsoft Windows 2000 または Windows Server 2003 のスケジューリング アルゴリズムにより、スレッドの関係 (affinity) が設定されます。 **affinity mask** を 0 以外の値に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の関係 (affinity) により、選択可能なプロセッサを指定するビット マスクとしてその値が解釈されます。  
+ Windows&amp;amp;amp;amp;#xA0;2000 または Windows&amp;amp;amp;amp;#xA0;Server&amp;amp;amp;amp;#xA0;2003 オペレーティング システムにより特定のワークロード割り当てが割り当てられているプロセッサから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の動作を除外することもできます。 プロセッサを表すビットを 1 に設定している場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンは、このプロセッサをスレッド割り当ての対象として選択します。 **affinity mask** を 0 (既定値) に設定すると、Microsoft Windows 2000 または Windows Server 2003 のスケジューリング アルゴリズムにより、スレッドの関係 (affinity) が設定されます。 **affinity mask** を 0 以外の値に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の関係 (affinity) により、選択可能なプロセッサを指定するビット マスクとしてその値が解釈されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スレッドを特定のプロセッサ上の実行から隔離すると、Microsoft Windows&amp;amp;amp;#xA0;2000 または Windows&amp;amp;amp;#xA0;Server&amp;amp;amp;#xA0;2003 では、システムによる Windows 固有のプロセス処理を評価しやすくなります。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを 2 つ (インスタンス A および B) を実行する 8 CPU サーバーで、システム管理者は affinity mask オプションを使用して最初の 4 個の CPU をインスタンス A に割り当て、残りの 4 個をインスタンス B に割り当てることができます。33 プロセッサ以上を構成する場合は、affinity mask および affinity64 mask の両方を設定します。 **affinity mask** の値は、以下のとおりです。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スレッドを特定のプロセッサ上の実行から隔離すると、Microsoft Windows&amp;amp;amp;amp;#xA0;2000 または Windows&amp;amp;amp;amp;#xA0;Server&amp;amp;amp;amp;#xA0;2003 では、システムによる Windows 固有のプロセス処理を評価しやすくなります。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを 2 つ (インスタンス A および B) を実行する 8 CPU サーバーで、システム管理者は affinity mask オプションを使用して最初の 4 個の CPU をインスタンス A に割り当て、残りの 4 個をインスタンス B に割り当てることができます。33 プロセッサ以上を構成する場合は、affinity mask および affinity64 mask の両方を設定します。 **affinity mask** の値は、以下のとおりです。  
   
 -   1 バイトの **affinity mask** は、マルチプロセッサ コンピューターの最大 8 個の CPU に対応します。  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 52
 > [!CAUTION]  
 >  Windows オペレーティング システムでの CPU 関係の構成と、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]での関係マスクの構成は、同時に行わないようにしてください。 この 2 つの設定は、同じ効果をねらったものであり、これらの構成間に一貫性がない場合は、予期しない結果を招く可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 関係を構成する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の sp_configure オプションを使用する方法が最適です。  
   
-## 例  
+## <a name="example"></a>例  
  affinity mask オプションの設定例として、たとえば、ビット 1、2、および 5 を 1 に設定し、ビット 0、3、4、6、および 7 を 0 に設定して、プロセッサ 1、2、および 5 を使用可能として選択する場合は、16 進値 0x26 または 10 進値 `38` を指定します。 ビットの番号は右から左に数えます。 affinity mask オプションは、プロセッサを 0 から 31 までカウントします。したがって、次の例のカウンターの `1` は、サーバー上の 2 個目のプロセッサを表しています。  
   
 ```  
@@ -117,21 +122,21 @@ GO
   
  affinity mask オプションは拡張オプションです。 sp_configure システム ストアド プロシージャを使用して **affinity mask** の設定を変更するには、 **show advanced options** を 1 に設定する必要があります。 [!INCLUDE[tsql](../../includes/tsql-md.md)] の RECONFIGURE コマンドの実行が完了すると、新しい設定は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを再起動しなくてもすぐに有効になります。  
   
-## NUMA (Non-uniform Memory Access)  
+## <a name="non-uniform-memory-access-numa"></a>NUMA (Non-uniform Memory Access)  
  NUMA (non-uniform memory access) ベースのハードウェアを使用し、affinity mask を設定する場合、ノード内のすべてのスケジューラがそのノードの CPU に関連付けられます。 affinity mask を設定しない場合、各スケジューラは NUMA ノード内の CPU のグループに関連付けられ、NUMA ノード N1 にマップされたスケジューラはノード内の任意の CPU で作業をスケジュールできますが、他のノードに関連付けられた CPU ではスケジュールできません。  
   
  1 つの NUMA ノードで実行中のすべての操作は、そのノードのバッファー ページのみを使用できます。 操作を複数のノードの CPU で並行して実行する場合、メモリは関連する任意のノードから使用できます。  
   
-## ライセンスに関する問題点  
+## <a name="licensing-issues"></a>ライセンスに関する問題点  
  動的関係は、CPU ライセンスにより厳密に制限されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ライセンス ポリシーに違反する関係マスク オプションの構成が許可されていません。  
   
-### 起動時  
+### <a name="startup"></a>起動時  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時またはデータベースのアタッチ時に、指定された関係マスクがライセンス ポリシーに違反する場合、エンジン層により起動処理や、データベースのアタッチおよび復元操作は完了されますが、その後、関係マスクの sp_configure 実行値が 0 にリセットされ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログにエラー メッセージが記録されます。  
   
-### 再構成時  
+### <a name="reconfigure"></a>再構成時  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] の RECONFIGURE コマンドの実行時に、指定された関係マスクがライセンス ポリシーに違反する場合は、エラー メッセージがクライアント セッションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに報告されます。データベース管理者による関係マスクの再構成作業が必要になります。 この場合、RECONFIGURE WITH OVERRIDE コマンドの実行が許可されません。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [リソースの利用状況の監視 &#40;システム モニター&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
@@ -139,3 +144,4 @@ GO
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
+

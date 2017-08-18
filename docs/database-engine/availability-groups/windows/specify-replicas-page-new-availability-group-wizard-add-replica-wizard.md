@@ -1,43 +1,48 @@
 ---
 title: "[レプリカの指定] ページ (新しい可用性グループ ウィザード: レプリカの追加ウィザード) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.newagwizard.listeners.f1"
-  - "sql13.swb.addreplicawizard.specifyreplicas.f1"
-  - "sql13.swb.newagwizard.specifyreplicas.f1"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.newagwizard.listeners.f1
+- sql13.swb.addreplicawizard.specifyreplicas.f1
+- sql13.swb.newagwizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 18521a8d3f0deb2c7ada0a3633c3d9e606eff9b5
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# [レプリカの指定] ページ (新しい可用性グループ ウィザード: レプリカの追加ウィザード)
-  このトピックでは、 **[レプリカの指定]** ページのオプションについて説明します。 このページの対象は、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] の [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] および [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]です。 **[レプリカの指定]** ページを使用して、1 つまたは複数の可用性レプリカを指定および構成して可用性グループを追加します。 このページには、次の表に示す 4 つのタブが含まれます。 この表でタブの名前をクリックすると、このトピックの対応するセクションに移動します。  
+# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>[レプリカの指定] ページ (新しい可用性グループ ウィザード: レプリカの追加ウィザード)
+  このトピックでは、 **[レプリカの指定]** ページのオプションについて説明します。 このページの対象は、 **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** の **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**です。 **[レプリカの指定]** ページを使用して、1 つまたは複数の可用性レプリカを指定および構成して可用性グループを追加します。 このページには、次の表に示す 4 つのタブが含まれます。 この表でタブの名前をクリックすると、このトピックの対応するセクションに移動します。  
   
 |タブ|簡単な説明|  
 |---------|-----------------------|  
-|[レプリカ](#ReplicasTab)|このタブを使用して、セカンダリ レプリカを現在ホストしている、またはホストする予定である [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンスを指定します。 現在接続しているサーバー インスタンスでプライマリ レプリカをホストする必要があることに注意してください。<br /><br /> 他のタブに進む前に、**[レプリカ]** タブですべてのレプリカを指定してください。|  
+|[レプリカ](#ReplicasTab)|このタブを使用して、セカンダリ レプリカを現在ホストしている、またはホストする予定である [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンスを指定します。 現在接続しているサーバー インスタンスでプライマリ レプリカをホストする必要があることに注意してください。<br /><br /> 他のタブに進む前に、 **[レプリカ]** タブですべてのレプリカを指定してください。<br/><br/> クラスター タイプが **NONE** の場合、**自動フェールオーバー**は無効になります。 SQL Server は、可用性グループがクラスターに含まれないときに、手動フェールオーバーのみをサポートします。 <br/><br/> クラスター タイプが EXTERNAL の場合、フェールオーバー モードは **External** です。 <br/><br/> レプリカを追加するときは、新しいレプリカすべてが、既存のレプリカと同じオペレーティング システムの種類でホストされている必要があります。 <br/><br/>レプリカを追加するとき、プライマリ レプリカが WSFC にある場合、セカンダリ レプリカは同じクラスターに含まれていなければなりません。|
 |[エンドポイント](#EndpointsTab)|このタブを使用して、既存の任意のデータベース ミラーリング エンドポイントを検証します。また、サービス アカウントが Windows 認証を使用しているサーバー インスタンスでエンドポイントが不足している場合は、エンドポイントを自動的に作成します。|  
 |[バックアップの設定](#BackupPreferencesTab)|このタブを使用して、可用性グループ全体についてバックアップの設定を指定し、各可用性レプリカのバックアップ優先順位を指定します。|  
-|[リスナー](#Listener)|このタブ (使用可能な場合) を使用して、可用性グループ リスナーを作成します。 既定では、リスナーは作成されません。<br /><br /> このタブは、[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]を実行している場合のみ使用できます。|  
+|[リスナー](#Listener)|このタブ (使用可能な場合) を使用して、可用性グループ リスナーを作成します。 既定では、リスナーは作成されません。<br /><br /> このタブは、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]を実行している場合のみ使用できます。<br/><br/>クラスター タイプが EXTERNAL または NONE のいずれかの場合、DHCP は無効です。 |  
   
 ##  <a name="ReplicasTab"></a> [レプリカ] タブ  
  **サーバー インスタンス**  
  可用性レプリカをホストするサーバー インスタンスの名前を表示します。  
   
- セカンダリ レプリカをホストするために使用するサーバー インスタンスが **[可用性レプリカ]** グリッドに表示されていない場合は、 **[レプリカの追加]** をクリックします。 ハイブリッド IT 環境で可用性グループを構成する場合は (「[Windows Azure の仮想マシン内の SQL Server の高可用性と災害復旧](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx)」を参照)、**[Azure のレプリカ追加]** をクリックして、セカンダリ レプリカを備えた仮想マシンを Windows Azure に作成できます。  
+ セカンダリ レプリカをホストするために使用するサーバー インスタンスが **[可用性レプリカ]** グリッドに表示されていない場合は、**[レプリカの追加]** をクリックします。 ハイブリッド IT 環境で可用性グループを構成する場合は (「 [Windows Azure の仮想マシン内の SQL Server の高可用性と災害復旧](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx)」を参照)、 **[Azure のレプリカ追加]** をクリックして、セカンダリ レプリカを備えた仮想マシンを Windows Azure に作成できます。  
   
  **[初期ロール]**  
- 新しいレプリカが初期状態で実行するロール (**プライマリ**または**セカンダリ**) を示します。  
+ 新しいレプリカが初期状態で実行するロール ( **プライマリ** または **セカンダリ**) を示します。  
   
  **自動フェールオーバー (上限 3)**  
  この可用性レプリカを自動フェールオーバー パートナーにする場合のみ、このチェック ボックスをオンにします。 自動フェールオーバーを構成するには、最初のプライマリ レプリカと 1 つのセカンダリ レプリカに対してこのオプションを選択する必要があります。 どちらのレプリカでも同期コミット可用性モードが使用されます。 3 つのレプリカのみが自動フェールオーバーをサポートできます。  
@@ -45,7 +50,7 @@ caps.handback.revision: 35
  同期コミット可用性モードの詳細については、「[可用性モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)」を参照してください。 自動フェールオーバーの詳細については、「[フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)」を参照してください。  
   
  **[同期コミット (上限 3)]**  
- レプリカに **[自動フェールオーバー (最大 3)]** を選択した場合、**[同期コミット (最大 3)]** も選択されます。 このチェック ボックスがオフになっている場合は、このレプリカで同期コミット モードを計画的な手動フェールオーバーでのみ使用する場合に限り、オンにしてください。 3 つのレプリカのみが同期コミット モードを使用できます。  
+ レプリカに **[自動フェールオーバー (最大 3)]** を選択した場合、 **[同期コミット (最大 3)]** も選択されます。 このチェック ボックスがオフになっている場合は、このレプリカで同期コミット モードを計画的な手動フェールオーバーでのみ使用する場合に限り、オンにしてください。 3 つのレプリカのみが同期コミット モードを使用できます。  
   
  このレプリカで非同期コミット可用性モードを使用する場合、このチェック ボックスはオフのままにします。 レプリカは、強制手動フェールオーバー (データ損失の可能性あり) のみをサポートします。 非同期コミット可用性モードの詳細については、「[可用性モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)」を参照してください。 計画的な手動フェールオーバーと強制手動フェールオーバーの詳細については、「[フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)」を参照してください。  
   
@@ -77,7 +82,7 @@ caps.handback.revision: 35
  可用性レプリカをホストするサーバー インスタンスの名前が表示されます。  
   
  **エンドポイント URL**  
- データベース ミラーリング エンドポイントの実際の URL または提案された URL が表示されます。 提案された新しいエンドポイントに対して、この値を変更することができます。 詳細については、「[可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)」を参照してください。  
+ データベース ミラーリング エンドポイントの実際の URL または提案された URL が表示されます。 提案された新しいエンドポイントに対して、この値を変更することができます。 詳細については、「[可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)」を参照してください。  
   
  **[ポート番号]**  
  エンドポイントの実際のポート番号または提案されたポート番号が表示されます。 提案された新しいエンドポイントに対して、この値を変更することができます。  
@@ -101,7 +106,7 @@ caps.handback.revision: 35
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントをドメイン アカウントに変更する。 詳細については、「[SQL Server のサービス開始アカウントの変更 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)」を参照してください。  
   
-    -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] または PowerShell を使用して、証明書を使用するデータベース ミラーリング エンドポイントを手動で作成する。 詳細については、「[CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)」または「[AlwaysOn 可用性グループのデータベース ミラーリング エンドポイントの作成 &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database mirroring - always on availability groups- powershell.md)」を参照してください。  
+    -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] または PowerShell を使用して、証明書を使用するデータベース ミラーリング エンドポイントを手動で作成する。 詳細については、「 [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md) または [AlwaysOn 可用性グループのデータベース ミラーリング エンドポイントの作成 &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)です。  
   
      エンドポイントを構成するときに **[可用性レプリカの指定]** ページを開いたままにしていた場合は、 **[エンドポイント]** タブに戻り、 **[更新]** をクリックして、 **[エンドポイント値]** グリッドを最新の情報に更新します。  
   
@@ -123,7 +128,7 @@ caps.handback.revision: 35
 > [!IMPORTANT]  
 >  バックアップに関するユーザー設定は適用されません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ある場合)。 詳細については、「[アクティブなセカンダリ: セカンダリ レプリカでのバックアップ &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
-### [レプリカのバックアップの優先順位] グリッド  
+### <a name="replica-backup-priorities-grid"></a>[レプリカのバックアップの優先順位] グリッド  
  **[レプリカのバックアップの優先順位]** グリッドを使用して、可用性グループのレプリカごとに、バックアップの優先順位を指定します。 このグリッドに含まれる列は、次のとおりです。  
   
  **サーバー インスタンス**  
@@ -136,10 +141,10 @@ caps.handback.revision: 35
  バックアップの実行に対してこの可用性レプリカが選択されないようにするには これは、たとえば、バックアップをフェールオーバーすることがないリモート可用性レプリカのような場合に便利です。  
   
 ##  <a name="Listener"></a> [リスナー] タブ  
- クライアント接続ポイントを提供する[可用性グループ リスナー](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)の設定を指定します。次のいずれかです。  
+ クライアント接続ポイントを提供する[可用性グループ リスナー](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)の設定を指定します。次のいずれかです。  
   
  **[今は可用性グループ リスナーを作成しない]**  
- この手順をスキップします。 リスナーは、後で作成できます。 詳細については、「[可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)」を参照してください。  
+ この手順をスキップします。 リスナーは、後で作成できます。 詳細については、「 [可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)です。  
   
  **[可用性グループ リスナーの作成]**  
  次のように、この可用性グループに対するリスナー優先順位を指定します。  
@@ -148,13 +153,13 @@ caps.handback.revision: 35
  リスナーのネットワーク名を指定します。 この名前は、ドメインで一意である必要があり、英数字、ダッシュ (**-**)、およびハイフン (**_**) のみを任意の順序で含めることができます。 **[リスナー]** タブを使用して指定した場合は、DNS 名の長さは 15 文字までになります。  
   
 > [!IMPORTANT]  
->  **[リスナー]** タブで無効な DNS リスナー名 (またはポート番号) を入力した場合は、**[レプリカの指定]** ページの **[次へ]** ボタンが無効になります。  
+>  **[リスナー]** タブで無効な DNS リスナー名 (またはポート番号) を入力した場合は、 **[レプリカの指定]** ページの **[次へ]** ボタンが無効になります。  
   
  **ポート**  
  このリスナーで使用される TCP ポートを指定します。  
   
 > [!NOTE]  
->  **[リスナー]** タブで無効なポート番号 (または DNS リスナー名) を入力した場合は、**[レプリカの指定]** ページの **[次へ]** ボタンが無効になります。  
+>  **[リスナー]** タブで無効なポート番号 (または DNS リスナー名) を入力した場合は、 **[レプリカの指定]** ページの **[次へ]** ボタンが無効になります。  
   
  **[ネットワーク モード]**  
  ドロップダウン リストを使用して、このリスナーによって使用されるネットワーク モードを選択します。次のいずれかです。  
@@ -171,13 +176,13 @@ caps.handback.revision: 35
  特定のサブネットに指定した IPv4 または IPv6 のアドレスが表示されます。  
   
  **[追加]**  
- このリスナーにサブネットを追加する場合にクリックします。 クリックすると、 **[IP アドレスの追加]** ダイアログ ボックスが開きます。 詳細については、「[[IP アドレスの追加] ダイアログ ボックス &#40;SQL Server Management Studio&#41;](../Topic/Add%20IP%20Address%20Dialog%20Box%20\(SQL%20Server%20Management%20Studio\).md)」ヘルプ トピックを参照してください。  
+ このリスナーにサブネットを追加する場合にクリックします。 クリックすると、 **[IP アドレスの追加]** ダイアログ ボックスが開きます。 詳細については、「[[IP アドレスの追加] ダイアログ ボックス &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/add-ip-address-dialog-box-sql-server-management-studio.md)」ヘルプ トピックを参照してください。  
   
  **[削除]**  
  グリッド内で現在選択されているサブネットを削除する場合にクリックします。  
   
  **[DHCP]**  
- リスナーで単一のサブネットをリッスンし、動的ホスト構成プロトコル (DHCP) を実行しているサーバーによって割り当てられる動的 IPv4 アドレスを使用する場合に選択します。 DHCP は、可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスに共通の単一サブネットに限定されます。  
+ リスナーで単一のサブネットをリッスンし、動的ホスト構成プロトコル (DHCP) を実行しているサーバーによって割り当てられる動的 IPv4 アドレスを使用する場合に選択します。 DHCP は、可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスに共通の単一サブネットに限定されます。 DHCP は、クラスター タイプ external または none では使用できません。  
   
 > [!IMPORTANT]  
 >  運用環境での DHCP の使用はお勧めしません。 ダウンタイムが発生して DHCP IP のリース期限が切れると、リスナーの DNS 名に関連付けられている新しい DHCP のネットワーク IP アドレスの登録に余分な時間がかかり、クライアント接続に影響が及びます。 ただし、開発環境とテスト環境を設定して可用性グループの基本機能を確認する場合や、アプリケーションとの統合の場合には DHCP が適しています。  
@@ -185,7 +190,7 @@ caps.handback.revision: 35
  **[DHCP]** が選択されている場合は、 **[サブネット]** フィールドが表示されます。  
   
  **[サブネット]**  
- ネットワーク モードとして **[DHCP]** を選択している場合は、**[サブネット]** ボックスの一覧を使用して、可用性グループの可用性レプリカがホストされているサブネットのアドレスを選択します。  
+ ネットワーク モードとして **[DHCP]** を選択している場合は、 **[サブネット]** ボックスの一覧を使用して、可用性グループの可用性レプリカがホストされているサブネットのアドレスを選択します。  
   
 > [!IMPORTANT]  
 >  可用性グループ リスナーを定義した後は、次のことを行うことを強くお勧めします。  
@@ -205,11 +210,12 @@ caps.handback.revision: 35
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)  
   
--   [AlwaysOn 可用性グループのデータベース ミラーリング エンドポイントの作成 &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database mirroring - always on availability groups- powershell.md)  
+-   [AlwaysOn 可用性グループのデータベース ミラーリング エンドポイントの作成 &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)   
- [AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)  
+ [AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   
+

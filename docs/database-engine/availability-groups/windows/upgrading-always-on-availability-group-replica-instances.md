@@ -1,30 +1,35 @@
 ---
 title: "AlwaysOn 可用性グループのレプリカ インスタンスのアップグレード | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1783e700e516978e4eded68fa675addd8d31a234
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# AlwaysOn 可用性グループのレプリカ インスタンスのアップグレード
+# <a name="upgrading-always-on-availability-group-replica-instances"></a>AlwaysOn 可用性グループのレプリカ インスタンスのアップグレード
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On 可用性グループを新しい [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] バージョン、新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス パックまたは累積更新プログラムにアップグレードしている場合、または新しい Windows サービス パックまたは累積更新プログラムにインストールしている場合、ローリング アップグレードを実行して、単一の手動フェールオーバー (または、元のプライマリにフェールバックする場合は、2 回の手動フェールオーバー) におけるプライマリ レプリカのダウンタイムを減らすことができます。 アップグレード プロセス中に、セカンダリ レプリカはフェールオーバーや読み取り専用操作を行うことができなくなります。また、アップグレード後は、プライマリ レプリカ ノード上のアクティビティ量に応じて、プライマリ レプリカ ノードを検出するセカンダリ レプリカの時間がかかる場合があります (そのため、高いネットワーク トラフィック量が予想されます)。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On 可用性グループを新しい [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] バージョン、新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サービス パックまたは累積更新プログラムにアップグレードしている場合、または新しい Windows サービス パックまたは累積更新プログラムにインストールしている場合、ローリング アップグレードを実行して、単一の手動フェールオーバー (または、元のプライマリにフェールバックする場合は、2 回の手動フェールオーバー) におけるプライマリ レプリカのダウンタイムを減らすことができます。 アップグレード プロセス中に、セカンダリ レプリカはフェールオーバーや読み取り専用操作を行うことができなくなります。また、アップグレード後は、プライマリ レプリカ ノード上のアクティビティ量に応じて、プライマリ レプリカ ノードを検出するセカンダリ レプリカの時間がかかる場合があります (そのため、高いネットワーク トラフィック量が予想されます)。  
   
 > [!NOTE]  
->  ここでは、SQL Server 自体のアップグレードについてのみ説明します。 これには、Windows Server フェールオーバー クラスタリング (WSFC) のクラスターを含む、オペレーティング システムのアップグレードは含まれません。 フェールオーバー クラスターをホストしている Windows オペレーティング システムのアップグレードは、Windows Server 2012 R2 より前のオペレーティング システムではサポートされません。 Windows Server 2012 R2 で実行されているクラスター ノードのアップグレードについては、「[Cluster Operating System Rolling Upgrade (クラスター オペレーティング システムのローリング アップグレード)](https://technet.microsoft.com/library/dn850430.aspx)」を参照してください。  
+>  ここでは、SQL Server 自体のアップグレードについてのみ説明します。 これには、Windows Server フェールオーバー クラスタリング (WSFC) のクラスターを含む、オペレーティング システムのアップグレードは含まれません。 フェールオーバー クラスターをホストしている Windows オペレーティング システムのアップグレードは、Windows Server 2012 R2 より前のオペレーティング システムではサポートされません。 Windows Server 2012 R2 で実行されているクラスター ノードのアップグレードについては、「 [Cluster Operating System Rolling Upgrade (クラスター オペレーティング システムのローリング アップグレード)](https://technet.microsoft.com/library/dn850430.aspx)」を参照してください。  
   
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  作業を開始する前に、次の重要な情報を確認してください。  
   
 -   [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): 自分のバージョンの Windows オペレーティング システムと SQL Server から SQL Server 2016 にアップグレードできることを確認します。 たとえば、SQL Server 2005 インスタンスから [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]に直接アップグレードすることはできません。  
@@ -33,9 +38,9 @@ caps.handback.revision: 14
   
 -   [データベース エンジンのアップグレード計画の策定およびテスト](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): リリース ノート、アップグレードに関する既知の問題、アップグレード前のチェックリストを確認して、アップグレードの計画を作成およびテストします。  
   
--   [SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md): [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] をインストールするためのソフトウェア要件を確認します。 その他のソフトウェアが必要な場合は、ダウンタイムを最小限に抑えるために、アップグレード プロセスを開始する前に、各ノードにソフトウェアをインストールします。  
+-   [SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]をインストールするためのソフトウェア要件を確認します。 その他のソフトウェアが必要な場合は、ダウンタイムを最小限に抑えるために、アップグレード プロセスを開始する前に、各ノードにソフトウェアをインストールします。  
   
-## AlwaysOn 可用性グループのローリング アップグレードのベスト プラクティス  
+## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>AlwaysOn 可用性グループのローリング アップグレードのベスト プラクティス  
  サーバーのアップグレード時に可用性グループのダウンタイムとデータ損失を最小限に抑えるには、次のベスト プラクティスに従ってください。  
   
 -   ローリング アップグレードを開始する前に、次の操作を実行します。  
@@ -62,7 +67,7 @@ caps.handback.revision: 14
   
 -   可用性グループをフェールオーバーする前に、フェールオーバー ターゲットの同期状態が SYNCHRONIZED であることを確認してください。  
   
-## ローリング アップグレード プロセス  
+## <a name="rolling-upgrade-process"></a>ローリング アップグレード プロセス  
  実際のプロセスは、可用性グループの配置トポロジや各レプリカのコミット モードなどの要因によって変わります。 ただし、最も単純なシナリオにおけるローリング アップグレードは、次の手順で構成される単純な複数段階のプロセスになります。  
   
  ![HADR シナリオの可用性グループのアップグレード](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "HADR シナリオの可用性グループのアップグレード")  
@@ -81,7 +86,7 @@ caps.handback.revision: 14
   
  必要であれば、さらに手動でフェールオーバーを実行して、可用性グループを元の構成に戻すこともできます。  
   
-## 1 つのリモート セカンダリ レプリカを含む可用性グループ  
+## <a name="availability-group-with-one-remote-secondary-replica"></a>1 つのリモート セカンダリ レプリカを含む可用性グループ  
  災害復旧のみを目的として可用性グループを配置していた場合、可用性グループを非同期コミット セカンダリ レプリカにフェールオーバーする必要がある場合があります。 次の図に、そのような構成の例を示します。  
   
  ![DR シナリオの可用性グループのアップグレード](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "DR シナリオの可用性グループのアップグレード")  
@@ -108,10 +113,10 @@ caps.handback.revision: 14
   
 -   プライマリ サイトの [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] をアップグレードまたは更新するときに、可用性モードを非同期コミットに戻し、もう一度プライマリ サイトへのフェールオーバーの準備が完了したときに、同期コミットに戻す。  
   
-## フェールオーバー クラスター インスタンス ノードを含む可用性グループ  
+## <a name="availability-group-with-failover-cluster-instance-nodes"></a>フェールオーバー クラスター インスタンス ノードを含む可用性グループ  
  可用性グループにフェールオーバー クラスター インスタンス (FCI) ノードが含まれている場合、非アクティブなノードをアップグレードした後で、アクティブなノードをアップグレードする必要があります。 次の図では、ローカルでの可用性を高めるために FCI を使用し、リモートの災害復旧のために FCI 間の非同期コミットを使用する、一般的な可用性グループのシナリオを示します。さらに、アップグレード手順も示しています。  
   
- ![FCI による可用性グループのアップグレード:](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "FCI による可用性グループのアップグレード:")  
+ ![FCI による可用性グループのアップグレード](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "FCI による可用性グループのアップグレード")  
   
 1.  REMOTE2 をアップグレードまたは更新する。  
   
@@ -125,7 +130,7 @@ caps.handback.revision: 14
   
 6.  PRIMARY1 をアップグレードまたは更新する。  
   
-## 複数の可用性グループを含む SQL Server インスタンスのアップグレードまたは更新  
+## <a name="upgrade-update-sql-server-instances-with-multiple-availability-groups"></a>複数の可用性グループを含む SQL Server インスタンスのアップグレードまたは更新  
  プライマリ レプリカが別々のサーバー ノードに存在する (アクティブ/アクティブ構成) 可用性グループが複数実行されている場合、アップグレード時にはプロセスの高可用性を維持するためのフェールオーバー手順を追加で実行する必要があります。 次の表に示すように、3 つのサーバー ノードで 3 つの可用性グループが実行され、すべてのセカンダリ レプリカが同期コミット モードで実行されているとします。  
   
 |可用性グループ|Node1|Node2|Node3|  
@@ -163,8 +168,9 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  多くの場合は、ローリング アップグレードが完了すると、元のプライマリ レプリカにフェールバックします。  
   
-## 参照  
- [インストール ウィザードを使用した SQL Server 2016 へのアップグレード &#40;セットアップ&#41;](../../../database-engine/install-windows/upgrade-to-sql-server-2016-using-the-installation-wizard-setup.md)   
+## <a name="see-also"></a>参照  
+ [インストール ウィザードを使用した SQL Server 2016 へのアップグレード &#40;セットアップ&#41;](../../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [コマンド プロンプトからの SQL Server 2016 のインストール](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   
+

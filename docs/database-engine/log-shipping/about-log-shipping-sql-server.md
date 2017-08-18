@@ -1,37 +1,42 @@
 ---
 title: "ログ配布について (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "セカンダリ サーバー [SQL Server]"
-  - "ログ配布 [SQL Server], ジョブ"
-  - "コピー ジョブ [SQL Server]"
-  - "プライマリ データベース [SQL Server]"
-  - "ログ配布 [SQL Server], 監視"
-  - "ログ配布 [SQL Server], ログ配布について"
-  - "警告ジョブ [SQL Server]"
-  - "可用性 [SQL Server]"
-  - "ジョブ [SQL Server], ログ配布"
-  - "監視サーバー [SQL Server]"
-  - "復元ジョブ [SQL Server]"
-  - "ログ配布 [SQL Server]"
-  - "バックアップ ジョブ [SQL Server]"
-  - "プライマリ サーバー [SQL Server]"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- secondary servers [SQL Server]
+- log shipping [SQL Server], jobs
+- copy jobs [SQL Server]
+- primary databases [SQL Server]
+- log shipping [SQL Server], monitoring
+- log shipping [SQL Server], about log shipping
+- alert jobs [SQL Server]
+- availability [SQL Server]
+- jobs [SQL Server], log shipping
+- monitor servers [SQL Server]
+- restore jobs [SQL Server]
+- log shipping [SQL Server]
+- backup jobs [SQL Server]
+- primary servers [SQL Server]
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 caps.latest.revision: 65
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: dd5412ff60f00e648452796423fcf715d8e56168
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/02/2017
+
 ---
-# ログ配布について (SQL Server)
+# <a name="about-log-shipping-sql-server"></a>ログ配布について (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログ配布を使用すると、トランザクション ログ バックアップを、 *プライマリ サーバー* インスタンスの *プライマリ データベース* から、別の *セカンダリ サーバー* インスタンスの 1 つ以上の *セカンダリ データベース* に自動的に送信できます。 トランザクション ログ バックアップはセカンダリ データベースごとに個別に適用されます。 オプションで用意する 3 台目のサーバー インスタンス ( *監視サーバー*) では、バックアップ操作と復元操作の履歴と状態が記録されます。また、これらの操作がスケジュールどおりに実行されなかった場合に警告を通知することもできます。  
   
  **このトピックの内容**  
@@ -48,26 +53,26 @@ caps.handback.revision: 65
   
 ##  <a name="Benefits"></a> 利点  
   
--   1 つのプライマリ データベースと 1 つ以上のセカンダリ データベース (それぞれが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の個別のインスタンスに存在) で構成される災害復旧ソリューションを提供します。  
+-   1 つのプライマリ データベースと 1 つ以上のセカンダリ データベース (それぞれが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の個別のインスタンスに存在) で構成される災害復旧ソリューションを提供します。  
   
 -   復元ジョブの間のセカンダリ データベースへの制限付きの読み取り専用アクセスをサポートします。  
   
 -   プライマリ サーバーでプライマリ データベースのログをバックアップする時点と、セカンダリ サーバーがそのログ バックアップを復元 (適用) する時点との間に生じる遅延時間をユーザーが指定できます。 たとえば、プライマリ データベースでデータが誤って変更された場合などに、長い遅延が役立ちます。 誤った変更にすぐに気付いた場合、遅延があれば、変更が反映される前に、セカンダリ データベースにあるまだ変更されていないデータを取得できます。  
   
 ##  <a name="TermsAndDefinitions"></a> 用語と定義  
- プライマリ サーバー (primary server)  
+ プライマリ データベース  
  実稼働サーバーである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス。  
   
- プライマリ データベース (primary database)  
+ プライマリ サーバー  
  別のサーバーにバックアップするプライマリ サーバーのデータベース。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用したログ配布構成の管理は、すべてプライマリ データベースから実行されます。  
   
- セカンダリ サーバー (secondary server)  
+ セカンダリ データベース  
  プライマリ データベースのウォーム スタンバイ コピーを保持しておく [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス。  
   
  セカンダリ データベース (secondary database)  
  プライマリ データベースのウォーム スタンバイ コピー。 セカンダリ データベースは、RECOVERING と STANDBY のどちらかの状態にすることができます。この状態では、データベースを制限付きの読み取り専用アクセスで使用できます。  
   
- 監視サーバー (monitor server)  
+ 監視サーバー  
  ログ配布に関する次の詳細情報をすべて追跡する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のオプションのインスタンス。  
   
 -   プライマリ データベースのトランザクション ログが最後にバックアップされた日時  
@@ -111,7 +116,7 @@ caps.handback.revision: 65
   
  さらに、ログ配布構成の警告を構成できます。  
   
-### 通常のログ配布構成  
+### <a name="a-typical-log-shipping-configuration"></a>通常のログ配布構成  
  次の図に、プライマリ サーバー インスタンス、3 台のセカンダリ サーバー インスタンス、および監視サーバー インスタンスを使用するログ配布構成を示します。 この図に示されているバックアップ ジョブ、コピー ジョブ、および復元ジョブの実行手順は、次のようになります。  
   
 1.  プライマリ サーバー インスタンスがバックアップ ジョブを実行し、プライマリ データベースのトランザクション ログをバックアップします。 このサーバー インスタンスは、次にログ バックアップをプライマリ ログ バックアップ ファイルに配置し、バックアップ フォルダーに送信します。  この図では、バックアップ フォルダーは共有ディレクトリ ( *バックアップ共有*) にあります。  
@@ -122,12 +127,12 @@ caps.handback.revision: 65
   
  プライマリ サーバー インスタンスおよびセカンダリ サーバー インスタンスは、それぞれの履歴および状態を監視サーバー インスタンスに送信します。  
   
- ![ジョブのバックアップ、コピー、復元を示す構成](../../database-engine/log-shipping/media/ls-typical-configuration.gif "ジョブのバックアップ、コピー、復元を示す構成")  
+ ![バックアップ ジョブ、コピー ジョブ、復元ジョブを示す構成](../../database-engine/log-shipping/media/ls-typical-configuration.gif "バックアップ ジョブ、コピー ジョブ、復元ジョブを示す構成")  
   
 ##  <a name="Interoperability"></a> 相互運用性  
- ログ配布は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の次の機能またはコンポーネントと共に使用できます。  
+ ログ配布は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の次の機能またはコンポーネントと共に使用できます。  
   
--   [ログ配布から AlwaysOn 可用性グループへの移行の前提条件 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs migrating log shipping to always on availability groups.md)  
+-   [ログ配布から AlwaysOn 可用性グループへの移行の前提条件 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
 -   [データベース ミラーリングとログ配布 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
@@ -158,7 +163,8 @@ caps.handback.revision: 65
   
 -   [役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+
