@@ -4,6 +4,7 @@
 # [チュートリアル: Integration Services Scale Out をセットアップする](walkthrough-set-up-integration-services-scale-out.md)
 # [Scale Out Master](integration-services-ssis-scale-out-master.md)
 # [Scale Out Worker](integration-services-ssis-scale-out-worker.md)
+# [Scale Out Manager](integration-services-ssis-scale-out-manager.md)
 # [Scale Out でのパッケージの実行](run-packages-in-integration-services-ssis-scale-out.md)
 # [Scale Out ログのアカウントの変更](change-logdb-account.md)
 # [Scale Out における証明書の処理](deal-with-certificates-in-ssis-scale-out.md)
