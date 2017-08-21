@@ -21,7 +21,7 @@ ms.lasthandoff: 08/02/2017
 
 このトピックの内容を使用する方法を示しています、 **mssql** Visual Studio Code (VS Code) を SQL Server データベースを開発するための拡張機能です。
 
-Visual Studio のコードは、Linux、macOS、および拡張機能をサポートする Windows のグラフィカルなコード エディターです。 [**Mssql** VS Code 拡張機能]、SQL Server transact-sql (T-SQL)、クエリに接続し、結果を表示することができます。
+Visual Studio のコードは、Linux、macOS、および拡張機能をサポートする Windows のグラフィカルなコード エディターです。 [**Mssql** VS Code 拡張機能] 、SQL Server transact-sql (T-SQL)、クエリに接続し、結果を表示することができます。
 
 ## <a name="install-vs-code"></a>VS Code をインストールします。
 1. VS Code をまだインストールしていない場合[をダウンロードしてインストール VS Code]コンピューターにします。
