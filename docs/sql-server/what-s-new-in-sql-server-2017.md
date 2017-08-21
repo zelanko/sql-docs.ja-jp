@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 の新機能 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/31/2017
+ms.date: 08/07/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,29 +15,21 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: db9f087684ae73a0a26cbb8ddedbc00a2651339c
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 64fa56e239432ed01fb908ebcb9bda221a42cd5e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
-SQL Server 2017 は、SQL Server をプラットフォームとする方向に向けた大きな一歩を表します。そのプラットフォームは、SQL Server、Linux、Linux ベースの Docker コンテナー、および Windows の機能を利用することによって、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムの選択肢を提供します。 このトピックでは、最新の SQL Server 2017 リリース候補 (RC1、2017 年 7 月) およびコミュニティ テクニカル プレビュー (CTP) リリースでの特定の機能領域について、新機能をまとめて示します。
+SQL Server 2017 は、SQL Server をプラットフォームとする方向に向けた大きな一歩を表します。そのプラットフォームは、SQL Server、Linux、Linux ベースの Docker コンテナー、および Windows の機能を利用することによって、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムの選択肢を提供します。 このトピックでは、最新の SQL Server 2017 リリース候補 (RC2、2017 年 8 月) およびコミュニティ テクニカル プレビュー (CTP) リリースでの特定の機能領域について、新機能をまとめて示します。
 
-**試す:** [SQL Server 2017 リリース候補 (RC) をダウンロードする](http://go.microsoft.com/fwlink/?LinkID=829477)
+**お試しください:** [最新の SQL Server 2017 リリース (RC2、2017 年 8 月) をダウンロードする](http://go.microsoft.com/fwlink/?LinkID=829477)
+このリリースには、バグの修正とパフォーマンスの改善が含まれています。
 
 >**Linux での SQL Server の実行** 詳細については、「[SQL Server ドキュメントの再編成](https://docs.microsoft.com/sql/linux/)」を参照してください。
 
-## <a name="latest-release-sql-server-2017-release-candidate-rc2-august-2017"></a>最新リリース: SQL Server 2017 リリース候補 (RC2、2017 年 8 月)
-このリリースには、バグの修正とパフォーマンスの改善が含まれています。
-
-### <a name="master-data-services-mds"></a>マスター データ サービス (MDS)
-- 次のSQL Server の以前のリリースから SQL Server 2017 マスター データ サービスにアップグレードするときの、アップグレード エクスペリエンスとパフォーマンスが改善されました。
-    - SQL Server 2012
-    - SQL Server 2014
-    - SQL Server 2016
-
-## <a name="sql-server-database-engine"></a>SQL Server データベース エンジン  
+## <a name="sql-server-2017-database-engine"></a>SQL Server 2017 データベース エンジン  
 SQL Server 2017 には多くの新しいデータベース エンジン機能、機能強化、パフォーマンス向上が含まれています。 
 - CTP 2.0 で説明されている `clr strict security` 機能の回避策として、**CLR アセンブリ**をホワイトリストに追加できるようになりました。 信頼できるアセンブリ (RC1) のホワイトリストをサポートするために、[sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)、および [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) が追加されました。  
 - **再開可能なオンライン インデックス リビルド**は、障害 (レプリカへのフェールオーバーや、ディスク領域不足など) 発生後、一時停止した場所からオンライン インデックス リビルド操作を再開します。または、一時停止し、オンライン インデックス リビルド操作を後から再開します。 「[ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)」と「[オンライン インデックス操作のガイドライン](../relational-databases/indexes/guidelines-for-online-index-operations.md)」を参照してください。 (CTP 2.0)
@@ -66,7 +58,7 @@ SQL Server 2017 には多くの新しいデータベース エンジン機能、
 
 詳細については、「[What's new in SQL Server 2017 Database Engine](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md)」 (SQL Server 2017 データベース エンジンの新機能) を参照してください。
 
-## <a name="sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS)
+## <a name="sql-server-2017-integration-services-ssis"></a>SQL Server 2017 Integration Services (SSIS)
 - SSIS の新しい **Scale Out** 機能として、次のような新しい機能と変更された機能があります。 詳細については、「[SQL Server 2017 の Integration Services の新機能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)」を参照してください。 (RC1)
     -   スケール アウト マスターで高可用性を実現できるようになりました。
     -   スケール アウト ワーカーの実行ログのフェールオーバー処理が改善されました。
@@ -79,13 +71,13 @@ SQL Server 2017 には多くの新しいデータベース エンジン機能、
 
 詳細については、「[SQL Server 2017 の Integration Services の新機能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)」を参照してください。
 
-## <a name="master-data-services-mds"></a>マスター データ サービス (MDS)
-SQL Server 2017 MDS へのアップグレード時のアップグレードのパフォーマンスとエクスペリエンスが向上したほか、次の機能強化がマスター データ サービスに加えられました。
+## <a name="sql-server-2017-master-data-services-mds"></a>SQL Server 2017 マスター データ サービス (MDS)
+- SQL Server 2012、SQL Server 2014、および SQL Server 2016 から SQL Server 2017 マスター データ サービスにアップグレードすると、エクスペリエンスとパフォーマンスが向上します。 
 - Web アプリケーションの**エクスプローラー** ページに、エンティティ、コレクション、階層の並べ替えられたリストを表示できるようになりました。
 - ステージング ストアド プロシージャを使用した、数百万ものレコードのステージングのパフォーマンスが向上しました。
-- モデル権限を割り当てる**グループの管理**ページの、**エンティティ**フォルダーを展開するときのパフォーマンスが改善されました。 **グループの管理**ページは、Web アプリケーションの**セキュリティ**セクション内にあります。 パフォーマンスの向上の詳細については、[https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview) を参照してください。 権限の割り当ての詳細については、「[Assign Model Object Permissions (Master Data Services) (モデル オブジェクト権限を割り当てる (マスター データ サービス))](../master-data-services/assign-model-object-permissions-master-data-services.md)」を参照してください。
+- モデル アクセス許可を割り当てる**グループの管理**ページの、**エンティティ**フォルダーを展開するときのパフォーマンスが改善されました。 **グループの管理**ページは、Web アプリケーションの**セキュリティ**セクション内にあります。 パフォーマンスの向上の詳細については、[https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview) を参照してください。 権限の割り当ての詳細については、「[Assign Model Object Permissions (Master Data Services) (モデル オブジェクト権限を割り当てる (マスター データ サービス))](../master-data-services/assign-model-object-permissions-master-data-services.md)」を参照してください。
 
-## <a name="sql-server-analysis-services-ssas"></a>SQL Server Analysis Services (SSAS) 
+## <a name="sql-server-2017-analysis-services-ssas"></a>SQL Server 2017 Analysis Services (SSAS) 
 SQL Server Analysis Services 2017 には、表形式モデルの多くの機能強化が導入されています。 たとえば、次のオブジェクトにアクセスできます。
 - Analysis Services の既定のインストール オプションとしての表形式モード。 (CTP 2.0)
 - 表形式モデルのメタデータをセキュリティで保護する、オブジェクト レベルのセキュリティ。 (CTP 2.0)
@@ -101,30 +93,32 @@ SQL Server Analysis Services 2017 には、表形式モデルの多くの機能�
 
 詳細については、「[What's new in SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)」 (SQL Server Analysis Services 2017 の新機能) を参照してください。
 
-## <a name="sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS)
+## <a name="sql-server-2017-reporting-services-ssrs"></a>SQL Server 2017 Reporting Services (SSRS)
 CTP 2.1 の時点で、SSRS は SQL Server セットアップを通じてインストールできなくなりました。 [Microsoft SQL Server 2017 Reporting Services リリース候補をダウンロード](https://www.microsoft.com/download/details.aspx?id=55252)するには、Microsoft ダウンロード センターに移動します。 
 - レポートでコメントが使用できるようになり、分析観点の追加や、他のユーザーとの共同作業ができるようになりました。 コメントに添付ファイルを含めることもできます。 (CTP 2.1)
 - レポート ビルダーと SQL Server Data Tools の最新リリースでは、クエリ デザイナーで必要なフィールドをドラッグ アンド ドロップすることで、サポートされている SQL Server Analysis Services 表形式データ モデルに対するネイティブの DAX クエリを作成できます。 [Reporting Services のブログ](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)を参照してください。
 
 詳細については、「[What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)」 (SQL Server Reporting Services (SSRS) の新機能) を参照してください。
 
-## <a name="sql-server-machine-learning-services"></a>SQL Server Machine Learning サービス
-R 言語に加えて Python がサポートされたことに合わせて、SQL Server R Services の名前が **SQL Server Machine Learning Services** に変更されました。 SQL Server で 	Machine Learning サービス (データベース内) を使用して、R または Python スクリプトを実行できます。 また、SQL Server が必要ない R および Python モデルを展開し、使用する場合は、**Microsoft Machine Learning Server (Standalone)** をインストールします。 
+## <a name="sql-server-2017-machine-learning-services"></a>SQL Server 2017 Machine Learning サービス
+R 言語に加えて Python がサポートされたことに合わせて、SQL Server R Services の名前が **SQL Server Machine Learning Services** に変更されました。 Machine Learning サービス (データベース内) を使用して、SQL Server で R または Python スクリプトを実行したり、**Microsoft Machine Learning Server (スタンドアロン)** をインストールして、SQL Server を必要としない R および Python のモデルを配置し、使用したりすることができます。 
 
 SQL Server での開発者は、オープン ソース エコシステムで入手できるさまざまな Python ML および AI ライブラリと、Microsoft の最新技術を利用できるようになりました。 
 
-+ **revoscalepy** - この Python 向けバージョンの RevoScaleR には、線形およびロジスティック回帰用並列アルゴリズム、デシジョン ツリー、ブースト ツリー、ランダム フォレストだけでなく、データ変換とデータ移動、リモート計算コンテキスト、およびデータ ソース用の豊富な API が含まれています。
-
-+ **microsoftml** - Python バインディングを使用したこの最新パッケージの機械学習アルゴリズムと変換には、深層ニューラル ネットワーク、高速なデシジョン ツリーとデシジョン フォレスト、線形およびロジスティック回帰用に高度に最適化されたアルゴリズムが含まれています。 また、イメージの抽出や感情分析に使用できる ResNet モデルに基づくトレーニング済みモデルも用意されています。
-
-+ **T-SQL を使用した Python 運用可能化** - ストアド プロシージャを使用して、Python コードを簡単に展開できます`sp_execute_external_script`。 SQL から Python プロセスへデータをストリーミングし、MPI リングの並列化を使用して、パフォーマンスを向上することができます。
-
-+ **SQL Server 計算コンテキストでの Python** - データ サイエンティストと開発者は、データを移動することなく、開発環境からリモートで Python コードを実行し、データを探索してモデルを開発することができます。
+- **revoscalepy** - この Python 向けバージョンの RevoScaleR には、線形およびロジスティック回帰用並列アルゴリズム、デシジョン ツリー、ブースト ツリー、ランダム フォレストだけでなく、データ変換とデータ移動、リモート計算コンテキスト、およびデータ ソース用の豊富な API が含まれています。
+- **microsoftml** - Python バインディングを使用したこの最新パッケージの機械学習アルゴリズムと変換には、深層ニューラル ネットワーク、高速なデシジョン ツリーとデシジョン フォレスト、線形およびロジスティック回帰用に最適化されたアルゴリズムが含まれています。 また、イメージの抽出や感情分析に使用できる ResNet モデルに基づくトレーニング済みモデルも用意されています。
+- **T-SQL を使用した Python 運用可能化** - ストアド プロシージャを使用して、Python コードを簡単に展開できます`sp_execute_external_script`。 SQL から Python プロセスへデータをストリーミングし、MPI リングの並列化を使用して、パフォーマンスを向上することができます。
+- **SQL Server 計算コンテキストでの Python** - データ サイエンティストと開発者は、データを移動することなく、開発環境からリモートで Python コードを実行し、データを探索してモデルを開発することができます。
 
 詳細については、「[What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)」 (SQL Server Machine Learning Services の新機能) を参照してください。
+
+##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) SQL Server エンジニアリング チームと連携する 
+- [スタック オーバーフロー (tag sql-server) - 技術的な質問](http://stackoverflow.com/questions/tagged/sql-server)
+- [MSDN フォーラム - 技術的な質問](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
+- [Microsoft Connect - バグ報告と機能依頼](https://connect.microsoft.com/SQLServer/Feedback)
+- [Reddit - SQL Server に関する一般的なディスカッション](https://www.reddit.com/r/SQLServer/)
 
 ## <a name="next-steps"></a>次の手順
 - [SQL Server 2017 リリース ノート](sql-server-2017-release-notes.md)を参照してください。
 - 「[Linux 上の SQL Server 2017 の新機能](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)」を参照してください。
 - [SQL Server 2016 の新機能](what-s-new-in-sql-server-2016.md)を確認してください。
-
