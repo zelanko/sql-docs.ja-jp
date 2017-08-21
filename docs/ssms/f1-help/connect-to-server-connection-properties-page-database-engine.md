@@ -1,7 +1,7 @@
 ---
 title: "[サーバーへの接続] ([接続プロパティ] ページ) (データベース エンジン) | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -17,26 +17,25 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 22cef3465036947ad6389b41c4c80bfc5ef965cb
+ms.translationtype: HT
+ms.sourcegitcommit: 5316f9d560f7e15bb0699780f67aff641067b203
+ms.openlocfilehash: 67f517ace6307fc4ad5afaf068c04ba6039d1c98
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>[サーバーへの接続] \([接続プロパティ] ページ) (データベース エンジン)
-このタブを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]のインスタンスに接続するとき、または[!INCLUDE[ssDE](../../includes/ssde_md.md)]を**登録済みサーバー**に登録するときのオプションを表示または指定できます。 **のインスタンスに接続するときには、** [接続] **および** [オプション] [!INCLUDE[ssDE](../../includes/ssde_md.md)]のみがこのダイアログ ボックスに表示されます。 **を登録するときには、** [テスト] **および** [保存] [!INCLUDE[ssDE](../../includes/ssde_md.md)]のみがこのダイアログ ボックスに表示されます。  
+このタブを使用すると、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] のインスタンスに接続するとき、または [!INCLUDE[ssDE](../../includes/ssde_md.md)] を **登録済みサーバー**に登録するときのオプションを表示または指定できます。 **のインスタンスに接続するときには、** [接続] **および** [オプション] [!INCLUDE[ssDE](../../includes/ssde_md.md)]のみがこのダイアログ ボックスに表示されます。 **を登録するときには、** [テスト] **および** [保存] [!INCLUDE[ssDE](../../includes/ssde_md.md)]のみがこのダイアログ ボックスに表示されます。  
   
-## <a name="options"></a>および  
 **[データベースへの接続]**  
 接続するデータベースを一覧から選択します。 **[<default>]** を選択した場合、サーバーの既定のデータベースに接続されます。 **[<Browse server>]** を選択した場合は、サーバーを参照して接続先データベースを指定できます。  
   
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] を通じて [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベース エンジンのインスタンスに接続する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 認証を使用し、**[サーバーへの接続]** ダイアログ ボックスの **[接続プロパティ]** タブでデータベースを指定する必要があります。 **[暗号化接続]** チェック ボックスがオンになっていることを確認してください。  
   
-既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] は **master**に接続されます。 ユーザー データベースを指定すると、オブジェクト エクスプローラーにそのデータベースとそのオブジェクトのみが表示されます。 **master**に接続すると、すべてのデータベースを表示できるようになります。 詳しくは、「 [Windows Azure SQL Database Overview](http://go.microsoft.com/fwlink/?LinkId=163948)」(Microsoft Azure SQL Database の概要) をご覧ください。  
+既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] は **master**に接続されます。 [!INCLUDE[ssSDS](../../includes/sssds_md.md)] に接続する場合、ユーザー データベースを指定すると、オブジェクト エクスプローラーにそのデータベースとそのオブジェクトのみが表示されます。 **master** に接続すると、すべてのデータベースを表示できるようになります。 詳しくは、「 [Windows Azure SQL Database Overview](http://go.microsoft.com/fwlink/?LinkId=163948)」(Microsoft Azure SQL Database の概要) をご覧ください。  
   
 **[ネットワーク プロトコル]**  
-一覧からプロトコルを選択します。 使用できるクライアント プロトコルは、[コンピューターの管理] の [SQL Native Client の構成] を使用して設定されたプロトコルです。  
+一覧からプロトコルを選択します。 使用できるクライアント プロトコルは、[コンピューターの管理] の [クライアント ネットワーク構成] を使用して設定されます。  
   
 **[ネットワーク パケット サイズ]**  
 送信されるネットワーク パケットのサイズを入力します。 既定値は 4096 バイトです。  
@@ -59,6 +58,9 @@ ms.lasthandoff: 06/22/2017
   
 -   **[ファイル]** メニューで、 **[新規作成]** 、 **[データベース エンジン クエリ]**の順にクリックすると、 **[サーバーへの接続]** ダイアログ ボックスで指定した色がそのクエリ エディター ウィンドウに適用されます。  
   
+**AD ドメイン名またはテナント ID**  
+**[Active Directory - MFA で汎用]** 認証を使用して接続する場合は、認証ドメインを指定します。 このオプションは、SSMS バージョン 17.2 以降を使用する場合にのみ利用できます。 
+
 **[すべてリセット]**  
 手動で入力された接続プロパティ値をすべて既定値に置き換えます。  
   
