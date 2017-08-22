@@ -10,11 +10,10 @@
 ### [ダイアログ](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
 ### [Transact-SQL](create-an-availability-group-transact-sql.md)  
 ### [PowerShell](create-an-availability-group-sql-server-powershell.md)  
-### [Azure 仮想マシン>](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview)
+### [Azure の仮想マシン](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview)
 ## [リスナー](create-or-configure-an-availability-group-listener-sql-server.md)  
 
 # 概念
-## [自動シード処理](automatically-initialize-always-on-availability-group.md)  
 ## [セカンダリ レプリカの自動シード処理](automatic-seeding-secondary-replicas.md)
 ## [可用性グループ ポリシー](always-on-policies-for-operational-issues-always-on-availability.md)  
 ## [可用性モード](availability-modes-always-on-availability-groups.md)  
@@ -55,6 +54,7 @@
 ## 可用性グループを構成する 
 ### [レプリカの可用性を変更する](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
 ### [レプリカのフェールオーバー モードを変更する](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
+### [自動シード処理の構成](automatically-initialize-always-on-availability-group.md)  
 ### [レプリカでバックアップを構成する](configure-backup-on-availability-replicas-sql-server.md)  
 ### [柔軟なフェールオーバー ポリシーを構成する](configure-flexible-automatic-failover-policy.md)  
 ### [レプリカでバックアップを構成する](configure-backup-on-availability-replicas-sql-server.md)  
