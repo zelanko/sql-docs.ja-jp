@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 61366dbbcc5b4787783ea3e52112d827e2db026f
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: a768e5237b997e5f9b05e9476c907ea66f886c7b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server Usage Feedback Collection の Local Audit
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/02/2017
 
 Microsoft SQL Server は、お客様のコンピューターまたはデバイスに関する情報 (以下「標準的なコンピューター情報」といいます) を収集してマイクロソフトに送信するインターネット対応の機能を備えています。 [SQL Server Usage Feedback Collection](http://support.microsoft.com/kb/3153756) の Local Audit コンポーネントは、サービスで収集されたデータを保存先フォルダーに出力します。このデータは、Microsoft に送信されるデータ (ログ) です。 Local Audit の目的は、Microsoft がこの機能で収集するすべてのデータをユーザーがコンプライアンス、法規制、またはプライバシーの検証目的で確認できるようにすることです。  
 
-SQL Server 2016 CU2 以降、Local Audit は SQL Server Database Engine and Analysis Services (SSAS) のインスタンス レベルで構成できるようになりました。 SQL Server Integration Services (SSIS) のLocal Audit はデータベース エンジンで構成できます。 セットアップ中にインストールされる他の SQL Server コンポーネントと、セットアップ後にダウンロードまたはインストールされる SQL Server ツールには、使用状況フィードバック収集用の Local Audit 機能はありません。 
+SQL Server 2016 CU2 以降、Local Audit は SQL Server Database Engine and Analysis Services (SSAS) のインスタンス レベルで構成できるようになりました。 SQL Server 2016 CU4 および SQL Server 2016 SP1 では、Local Audit は SQL Server Integration Services (SSIS) に対しても有効になります。 セットアップ中にインストールされる他の SQL Server コンポーネントと、セットアップ後にダウンロードまたはインストールされる SQL Server ツールには、使用状況フィードバック収集用の Local Audit 機能はありません。 
 
 ## <a name="prerequisites"></a>前提条件 
 
@@ -61,7 +61,7 @@ Local Audit を有効にする前に、システム管理者には次の準備�
  
 1. **[サービス]** を起動します ( **[Windows]**  ボタンをクリックし、「 *services.msc*」と入力します) 
 
-2. 目的のサービスに移動します。 たとえば、データベース エンジンの場合、 **SQL Server CEIP service *インスタンス名***にキーを作成します。 Analysis Services の場合、**SQL Server Analysis Services CEIP *インスタンス名*** を探します。 
+2. 目的のサービスに移動します。 たとえば、データベース エンジンの場合、 **SQL Server CEIP service \<インスタンス名\>**にキーを作成します。 Analysis Services の場合、**SQL Server Analysis Services CEIP \<インスタンス名\>** を探します。 Integration Services の場合は、**SQL Server Integration Services CEIP サービス 13** を探します。
 
 3. サービスを右クリックし、 **[プロパティ]**を選択します。 
 
