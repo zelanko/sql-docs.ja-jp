@@ -1,7 +1,7 @@
 ---
 title: "cross db ownership chaining サーバー構成オプション | Microsoft Docs"
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,10 +19,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 457ca08fbfef2ab0fb96e4cd2ec4515e04b9dc6e
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: c42780edef8e57b9d8159d9dfe384554cade4fb2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="cross-db-ownership-chaining-server-configuration-option"></a>cross db ownership chaining サーバー構成オプション
@@ -39,7 +39,13 @@ ms.lasthandoff: 08/02/2017
 -   ALTER DATABASE ステートメントの SET 句を使用すると、個別のデータベースに複数データベースの組み合わせ所有権を設定できます。 新しいデータベースを作成する場合、CREATE DATABASE ステートメントを使用すると、新しいデータベースに複数データベースの組み合わせ所有権オプションを設定できます。  
   
      **cross db ownership chaining** を 1 に設定することはお勧めしません。この設定を行う場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスによってホストされているすべてのデータベースが複数データベースの組み合わせ所有権に参加する必要があります。また、この設定がセキュリティに与える影響も理解しておく必要があります。  
-  
+
+複数データベースの組み合わせ所有権の現在の状態を確認するには、次のクエリを実行します。  
+```sql
+SELECT is_db_chaining_on, name FROM sys.databases;
+```  
+結果が 1 の場合は、複数データベースの組み合わせ所有権が有効になっていることを示します。
+
 ## <a name="controlling-cross-database-ownership-chaining"></a>複数データベースの組み合わせ所有権の制御  
  複数データベースの組み合わせ所有権のオンとオフを切り替える前に、次の項目について検討する必要があります。  
   

@@ -1,7 +1,7 @@
 ---
 title: "アクティブなリースを保持しているバックアップ BLOB ファイルの削除 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,38 +14,38 @@ caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a8590c7e7adbf796d44347b66a790f98c13667bc
+ms.translationtype: HT
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: f2b63d34ff5c06d82b6514d7447762546fe2c9e1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/17/2017
 
 ---
-# <a name="deleting-backup-blob-files-with-active-leases"></a>アクティブなリースを保持しているバックアップ BLOB ファイルの削除
-  Windows Azure ストレージへのバックアップまたは Windows Azure ストレージからの復元を実行するときに、SQL Server は BLOB への排他アクセスをロックするために無限リースを取得します。 バックアップまたは復元プロセスが正常に完了すると、リースは解放されます。 バックアップまたは復元に失敗すると、バックアップ プロセスは無効な BLOB のクリーンアップを試みます。 ただし、バックアップの失敗の原因が長期的または持続的なネットワーク接続エラーの場合は、バックアップ プロセスは BLOB にアクセスできず、BLOB は孤立したままになる可能性があります。 つまり、リースが解放されるまで、BLOB を書き込むことも削除することもできません。 このトピックでは、リースを解放する方法と BLOB の削除について説明します。  
+# <a name="delete-backup-blob-files-with-active-leases"></a>アクティブなリースを保持しているバックアップ BLOB ファイルを削除する
+  Microsoft Azure Storage へのバックアップまたは Microsoft Azure Storage からの復元を実行するときに、SQL Server は BLOB への排他アクセスをロックするために無限リースを取得します。 バックアップまたは復元プロセスが正常に完了すると、リースは解放されます。 バックアップまたは復元に失敗すると、バックアップ プロセスは無効な BLOB のクリーンアップを試みます。 ただし、バックアップの失敗の原因が長期的または持続的なネットワーク接続エラーの場合は、バックアップ プロセスは BLOB にアクセスできず、BLOB は孤立したままになる可能性があります。 つまり、リースが解放されるまで、BLOB を書き込むことも削除することもできません。 このトピックでは、リースを解放 (終了) する方法と BLOB の削除について説明します。 
   
- リースの種類の詳細については、こちらの [記事](http://go.microsoft.com/fwlink/?LinkId=275664)をご覧ください。  
+ リースの種類について詳しくは、[こちらの記事](http://go.microsoft.com/fwlink/?LinkId=275664)をご覧ください。  
   
- バックアップ操作が失敗すると、無効なバックアップ ファイルが生成されます。  また、バックアップ BLOB ファイルでは、削除や上書きを防ぐためにアクティブなリースを保持する場合もあります。  BLOB を削除または上書きするには、最初にリースを終了する必要があります。バックアップ障害が発生した場合は、リースをクリーンアップして BLOB を削除することをお勧めします。 また、ストレージ管理タスクの一部としてクリーンアップを定期的に選択することもできます。  
+ バックアップ操作が失敗すると、無効なバックアップ ファイルが生成されます。 また、バックアップ BLOB ファイルでは、削除や上書きを防ぐためにアクティブなリースを保持する場合もあります。 そのような BLOB を削除または上書きするには、先にリースを解放 (終了) する必要があります。 バックアップに問題がある場合は、リースをクリーンアップして BLOB を削除することをお勧めします。 記憶域管理タスクの一環として、リースのクリーンアップと BLOB の削除を定期的に行うこともできます。  
   
  復元エラーが発生した場合、後続の復元はブロックされないため、アクティブなリースは問題にならないことがあります。 リースを終了する必要があるのは、BLOB を上書きまたは削除する場合だけです。  
   
-## <a name="managing-orphaned-blobs"></a>孤立した BLOB の管理  
- 次の手順では、バックアップ動作または復元動作の失敗後にクリーンアップする方法について説明します。 すべての手順は、PowerShell スクリプトを使用して実行することもできます。 コード例については、次のセクションに示します。  
+## <a name="manage-orphaned-blobs"></a>孤立した BLOB の管理  
+ 次の手順では、バックアップ動作または復元動作の失敗後にクリーンアップする方法について説明します。 すべての手順は、PowerShell スクリプトを使って実行できます。 次のセクションでは、PowerShell スクリプトの例が示されています。  
   
-1.  **リースを保持している BLOB の識別:** バックアップ プロセスを実行するスクリプトまたはプロセスがあると、スクリプトまたはプロセス内のエラーをキャプチャし、それを使用して BLOB をクリーンアップできる場合があります。   また、LeaseStats プロパティと LeastState プロパティを使用して、それらのプロパティに対してリースを保持している BLOB を識別することもできます。 BLOB を識別したら、一覧を確認し、BLOB を削除する前にバックアップ ファイルが有効かどうかを確認することをお勧めします。  
+1.  **リースを保持している BLOB を識別する:** バックアップ プロセスを実行するスクリプトまたはプロセスがあると、スクリプトまたはプロセス内のエラーをキャプチャし、それを使って BLOB をクリーンアップできる場合があります。  また、LeaseStats プロパティと LeastState プロパティを使って、それらのプロパティに対してリースを保持している BLOB を識別することもできます。 BLOB を識別したら、一覧を確認し、BLOB を削除する前にバックアップ ファイルが有効かどうかを確認します。  
   
-2.  **リースの終了:** 承認された要求では、リース ID を指定せずにリースを終了できます。 詳細については、 [こちら](http://go.microsoft.com/fwlink/?LinkID=275664) をご覧ください。  
+2.  **リースを終了する:** 承認された要求では、リース ID を指定せずにリースを終了できます。 詳細については、 [こちら](http://go.microsoft.com/fwlink/?LinkID=275664) をご覧ください。  
   
     > [!TIP]  
     >  SQL Server は、復元操作中にリース ID を発行して排他アクセスを確立します。 復元のリース ID は BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2 です。  
   
-3.  **BLOB の削除:** アクティブなリースを保持している BLOB を削除するには、最初にリースを終了する必要があります。  
+3.  **BLOB を削除する:** アクティブなリースを保持している BLOB を削除するには、最初にリースを終了する必要があります。  
   
 ###  <a name="Code_Example"></a> PowerShell スクリプトの例  
   
 > [!IMPORTANT]  
->  PowerShell 2.0 を実行している場合、Microsoft WindowsAzure.Storage.dll アセンブリの読み込み中に問題が発生することがあります。 この問題を解決するには、PowerShell をアップグレードすることをお勧めします。 また、PowerShell 2.0 では次の回避策を使用することもできます。  
+>  PowerShell 2.0 を実行している場合、Microsoft WindowsAzure.Storage.dll アセンブリの読み込み中に問題が発生することがあります。 この問題を解決するには、[PowerShell](https://docs.microsoft.com/powershell/) をアップグレードすることをお勧めします。 また、PowerShell 2.0 では次の回避策を使用することもできます。  
 >   
 >  -   次のスクリプトを使用して実行時に .NET 2.0 アセンブリと .NET 4.0 アセンブリを読み込むように powershell.exe.config ファイルを作成または変更する:  
 >   
@@ -60,14 +60,14 @@ ms.lasthandoff: 06/22/2017
 >   
 >     ```  
   
- 次の例は、アクティブなリースを保持している BLOB を識別してから、アクティブなリースを終了する方法を示しています。 この例は、リリースのリース ID をフィルター選択する方法も示します。  
+ 次に示すスクリプトの例では、アクティブなリースを保持している BLOB を識別し、それを終了しています。 この例は、リリースのリース ID をフィルター選択する方法も示します。  
   
- このスクリプトの実行に関するヒント  
+**このスクリプトの実行に関するヒント**  
   
 > [!WARNING]  
->  Windows Azure Blob ストレージ サービスへのバックアップをこのスクリプトと同時に実行すると、バックアップは失敗する場合があります。これは、このスクリプトで終了するリースを、同時にバックアップが取得しようとしているためです。 このスクリプトは、保守期間中またはバックアップの実行が予期されていないときに実行することをお勧めします。  
+>  Microsoft Azure BLOB ストレージ サービスへのバックアップをこのスクリプトと同時に実行すると、バックアップは失敗する場合があります。これは、このスクリプトで終了するリースを、同時にバックアップが取得しようとしているためです。 このスクリプトは、保守期間中、バックアップが実行されていないとき、またはバックアップの実行が予期されていないときに実行します。  
   
-1.  このスクリプトを実行すると、ストレージ アカウント、ストレージ キー、コンテナー、および Windows Azure ストレージ アセンブリのパスと名前のパラメーターの値を指定するように求められます。 ストレージ アセンブリのパスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのインストール ディレクトリです。 ストレージ アセンブリのファイル名は Microsoft.WindowsAzure.Storage.dll です。 次に、入力するプロンプトと値の例を示します。  
+1.  このスクリプトを実行すると、ストレージ アカウント、ストレージ キー、コンテナー、および Azure ストレージ アセンブリのパスと名前のパラメーターの値を指定するように求められます。 ストレージ アセンブリのパスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのインストール ディレクトリです。 ストレージ アセンブリのファイル名は Microsoft.WindowsAzure.Storage.dll です。 次に、入力するプロンプトと値の例を示します。  
   
     ```  
     cmdlet  at command pipeline position 1  
@@ -116,7 +116,7 @@ $client = New-Object 'Microsoft.WindowsAzure.Storage.Blob.CloudBlobClient' "http
 $container = $client.GetContainerReference($blobContainer)  
   
 #list all the blobs  
-$allBlobs = $container.ListBlobs()   
+$allBlobs = $container.ListBlobs($null,$true) 
   
 $lockedBlobs = @()  
 # filter blobs that are have Lease Status as "locked"  
@@ -163,3 +163,4 @@ if($lockedBlobs.Count -gt 0)
  [SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   
+

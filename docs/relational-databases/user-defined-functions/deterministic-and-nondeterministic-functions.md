@@ -1,7 +1,7 @@
 ---
 title: "決定的関数と非決定的関数 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/28/2016
+ms.date: 08/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,11 +20,11 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd6393571f06ba7b73f0b52bcfe8bc218279c1af
+ms.translationtype: HT
+ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
+ms.openlocfilehash: fe23cb7ab3fbc0461f0c0853aedaa4444e4bb543
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>決定的関数と非決定的関数
@@ -90,7 +90,7 @@ ms.lasthandoff: 06/22/2017
 |CURRENT_TIMESTAMP|RAND|  
 |DENSE_RANK|RANK|  
 |FIRST_VALUE|ROW_NUMBER|   
-||TEXTPTR|  
+|FORMAT|TEXTPTR|  
   
 ## <a name="calling-extended-stored-procedures-from-functions"></a>関数からの拡張ストアド プロシージャ呼び出し  
  拡張ストアド プロシージャはデータベースに副作用を及ぼす可能性があるため、拡張ストアド プロシージャを呼び出す関数は非決定的関数です。 副作用とはデータベースのグローバル状態の変更を指し、たとえば、テーブルの更新や、ファイルやネットワークなどの外部リソースの更新 (ファイルの変更、電子メール メッセージの送信) などが挙げられます。 ユーザー定義関数から拡張ストアド プロシージャを実行した場合は、一貫性のある結果セットが返される保証はありません。 データベースに副作用を与えるユーザー定義関数の使用はお勧めしません。  
@@ -99,7 +99,7 @@ ms.lasthandoff: 06/22/2017
   
  拡張ストアド プロシージャは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続し直すことができますが、 その拡張ストアド プロシージャを呼び出した元の関数と同じトランザクションに参加することはできません。  
   
- 拡張ストアド プロシージャは、バッチまたはストアド プロシージャから呼び出された場合と同様に、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] を実行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows セキュリティ アカウントのコンテキストで実行されます。 拡張ストアド プロシージャの所有者は、プロシージャを実行する権限を他のユーザーに許可するときに、このことを考慮する必要があります。  
+ 拡張ストアド プロシージャは、バッチまたはストアド プロシージャから呼び出された場合と同様に、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] を実行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows セキュリティ アカウントのコンテキストで実行されます。 拡張ストアド プロシージャの所有者は、プロシージャを実行する権限を他のユーザーに許可するときに、このセキュリティ コンテキストのアクセス許可を考慮する必要があります。  
   
   
 

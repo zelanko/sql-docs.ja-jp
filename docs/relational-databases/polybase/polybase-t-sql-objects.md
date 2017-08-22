@@ -2,7 +2,7 @@
 title: "PolyBase T-SQL オブジェクト | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/13/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,15 @@ helpviewer_keywords:
 - PolyBase, fundamentals
 - PolyBase, SQL statements
 - PolyBase, SQL objects
-ms.assetid: ef5d6c40-6ce6-4cf0-8ad3-38f98b32f98e
 caps.latest.revision: 20
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
-ms.openlocfilehash: c2ed145cb54f90bdbb368d120651a6875f9d5b5c
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: 8a6a21a3cc6317d1eee54cd83ced008e3358e139
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="polybase-t-sql-objects"></a>PolyBase T-SQL オブジェクト
@@ -47,7 +46,9 @@ ms.lasthandoff: 07/31/2017
 ## <a name="prerequisites"></a>前提条件  
  PolyBase を構成します。 「 [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md)」を参照してください。  
   
-## <a name="create-external-tables-for-hadoop"></a>Hadoop の外部テーブルの作成  
+## <a name="create-external-tables-for-hadoop"></a>Hadoop の外部テーブルの作成
+適用対象: SQL Server (2016 以降)、Parallel Data Warehouse
+  
  **1.データベース スコープ ベースの資格情報を作成する**  
   
  この手順が必要なのは、Kerberos でセキュリティ保護された Hadoop クラスターのみです。  
@@ -126,6 +127,8 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
   
 ## <a name="create-external-tables-for-azure-blob-storage"></a>Azure BLOB ストレージ用の外部テーブルを作成します。  
+適用対象: SQL Server (2016 以降)、Azure SQL Data Warehouse、Parallel Data Warehouse
+
  **1.データベース スコープ ベースの資格情報を作成する**  
   
 ```sql  
@@ -201,11 +204,11 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
  
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Azure Data Lake Store 用の外部テーブルを作成する
-Azure Data Lake Store は SQL データ ウェアハウスの PolyBase でのみサポートされます。
-Azure SQL データ ウェアハウスと ADLS の詳細については、「[Load with Azure Data Lake Store](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)」 (Azure Data Lake Store による読み込み) を参照してください。
+適用対象: Azure SQL Data Warehouse
+
+詳しくは、「[Azure Data Lake Store から Azure SQL Data Warehouse へのデータの読み込み](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)」をご覧ください
  
- **1.データベース スコープ ベースの資格情報を作成する**  
-  
+ **1.データベース スコープ ベースの資格情報を作成する**   
 
 ```sql
 -- Create a Database Master Key.
