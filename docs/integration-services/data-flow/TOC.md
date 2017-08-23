@@ -45,7 +45,7 @@
 # [フラット ファイルのカスタム プロパティ](flat-file-custom-properties.md)  
 # [OData ソース](odata-source.md)  
 ## [チュートリアル: OData ソースの使用](tutorial-using-the-odata-source.md)  
-## [実行時の OData ソース クエリの変更](modify-odata-source-query-at-runtime.md)  
+## [実行時の OData ソース クエリの提供](modify-odata-source-query-at-runtime.md)  
 ## [OData ソースのプロパティ](odata-source-properties.md)  
 # [ODBC フロー コンポーネント](odbc-flow-components.md)  
 ## [ODBC 変換先](odbc-destination.md)  
