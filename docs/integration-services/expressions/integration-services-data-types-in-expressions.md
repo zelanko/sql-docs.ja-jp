@@ -1,36 +1,41 @@
 ---
-title: "式における Integration Services データ型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "式 [Integration Services], データ型"
-  - "データ型 [Integration Services], 式"
+title: "Integration Services 式のデータ型 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- expressions [Integration Services], data types
+- data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 caps.latest.revision: 57
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cd0a604c665f7bd31a8ebd3e46b78afde802cc98
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# 式における Integration Services データ型
+# <a name="integration-services-data-types-in-expressions"></a>式における Integration Services データ型
   式エバリュエーターは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型を使用します。 データが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローに入力されると、データ フロー エンジンはすべての列データを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換します。このため、式が列データを使用するときには、既に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型になっています。 条件分割変換および派生列変換で使用される式は、列データが含まれるデータ フローの一部であるため、列を参照できます。  
   
-## 変数  
+## <a name="variables"></a>変数  
  また、式は変数を使用することもできます。 変数は variant データ型で、式エバリュエーターは、変数のデータ型を variant サブタイプから [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換してから式を評価します。 変数では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型のサブセットのみが使用できます。 たとえば、変数はバイナリ ラージ オブジェクト (BLOB) データ型を使用することはできません。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型と [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に対する ｖariant データ型のマッピングについては、「[Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型と [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に対する ｖariant データ型のマッピングについては、「 [Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
-## リテラル  
- 式には、文字列、ブール、および数値リテラルも含めることができます。 数値リテラルの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数値データ型への変換の詳細については、「[ &#40;SSIS&#41;](../../integration-services/expressions/literals-ssis.md)」を参照してください。  
+## <a name="literals"></a>リテラル  
+ 式には、文字列、ブール、および数値リテラルも含めることができます。 数値リテラルの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数値データ型への変換の詳細については、「[ &#40;SSIS&#41;](../../integration-services/expressions/numeric-string-and-boolean-literals.md)」を参照してください。  
   
-## 文字列  
+## <a name="strings"></a>文字列  
  DT_STR または DT_WSTR のいずれかを、式の戻り値の型として使用できます。 ただし、式の内部でサポートされるのは DT_WSTR のみです。DT_STR 値は DT_WSTR 値に変換されます。 式を作成するときは、これを考慮する必要があります。  
   
 -   式の内部では、NULL(DT_STR, ...) ではなく NULL(DT_WSTR, ...) を使用します。 この関数の詳細については、「[NULL &#40;SSIS 式&#41;](../../integration-services/expressions/null-ssis-expression.md)」を参照してください。  
@@ -39,7 +44,7 @@ caps.handback.revision: 57
   
  次のスクリーン ショットの式について考えてみましょう。  
   
- ![String data types in SSIS expressions](../../integration-services/expressions/media/stringsinssisexpressions.png "String data types in SSIS expressions")  
+ ![SSIS 式におけるデータ型を文字列](../../integration-services/expressions/media/stringsinssisexpressions.png "SSIS 式におけるデータ型の文字列")  
   
 1.  最初の式は、NULL(DT_STR, ...) 関数が式のルート レベルにあるため、エラーなしで実行されます。  
   
@@ -53,20 +58,20 @@ caps.handback.revision: 57
   
  以下の例は、キャストの影響を示しています。  
   
- ![Casting strings in SSIS expressions](../../integration-services/expressions/media/stringsinssisexpressions2.png "Casting strings in SSIS expressions")  
+ ![SSIS 式の文字列をキャスト](../../integration-services/expressions/media/stringsinssisexpressions2.png "SSIS 式の文字列のキャスト")  
   
 1.  最初の式は、キャストが式のルート レベルにありません。 式エバリュエーターは、このキャストをインテリジェントに処理し、DT_STR ではなく、DT_WSTR にキャストします。 式は DT_WSTR を返します。  
   
 2.  2 番目の式は、キャストが式のルート レベルにあります。 式は DT_STR を返します。  
   
-## 暗黙的なデータ変換  
+## <a name="implicit-data-conversion"></a>暗黙的なデータ変換  
  データ型の暗黙的な変換は、式エバリュエーターがあるデータ型を別のデータ型に自動的に変換するときに行われます。 たとえば、 **smallint** 型を **int**型と比較する場合、比較を実行する前に、 **smallint** 型から **int** 型に暗黙的に変換されます。  
   
  引数やオペランドに互換性のないデータ型がある場合は、式エバリュエーターは暗黙的なデータ変換を実行できません。 また、式エバリュエーターは、どのような値もブール値に暗黙的に変換することはできません。 代わりに、キャスト演算子を使用して引数とオペランドを明示的に変換する必要があります。 詳細については、「[Cast &#40;SSIS 式&#41;](../../integration-services/expressions/cast-ssis-expression.md)」を参照してください。  
   
  次の図は、BINARY 演算での暗黙的な変換の結果のデータ型を示しています。 この表の列と行の交差部分は、左 (変換元) と右 (変換先) の型のオペランドによるバイナリ演算の結果のデータ型です。  
   
- ![データ型間における暗黙的なデータ型の変換](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "データ型間における暗黙的なデータ型の変換")  
+ ![暗黙的なデータ型のデータ型の間で変換](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "暗黙的なデータ型のデータ型間の変換")  
   
  符号付き整数と符号なし整数の積集合は符号付き整数になり、この値はどちらかの引数よりも大きい場合があります。  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 57
 > [!NOTE]  
 >  ブール値は論理値であり、数値ではありません。 ブール値は一部の環境で数値として表示される場合がありますが、数値として格納されることはありません。また、.NET Framework のメソッドと同様に、さまざまなプログラミング言語でブール値が個別の数値として表されます。  
 >   
->  たとえば、Visual Basic で利用できる変換関数では **True** は -1 に変換されますが、.NET Framework の **System.Convert.ToInt32** メソッドでは **True** は +1 に変換されます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の式言語では、**True** は -1 に変換されます。  
+>  たとえば、Visual Basic で利用できる変換関数では **True** は -1 に変換されますが、.NET Framework の **System.Convert.ToInt32** メソッドでは **True** は +1 に変換されます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の式言語では、 **True** は -1 に変換されます。  
 >   
 >  エラーや予期しない結果が発生しないように、 **True** および **False**については、特定の数値を参照するようなコードは記述しないでください。 可能な限り、ブール型の変数には、仕様で定められている論理値以外の値を使用しないようにしてください。  
   
@@ -103,7 +108,7 @@ caps.handback.revision: 57
   
  複数の引数が同じデータ型の場合、結果も同じデータ型になります。 ただし、DT_DECIMAL データ型の 2 つの値におけるバイナリ演算の結果だけは例外で、DT_NUMERIC データ型の結果を返します。  
   
-## 式で使用されるデータの要件  
+## <a name="requirements-for-data-used-in-expressions"></a>式で使用されるデータの要件  
  式エバリュエーターは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のすべてのデータ型をサポートします。 ただし、演算または関数によっては、オペランドや引数で特定のデータ型が必要になります。 式エバリュエーターは、式で使用されるデータに対し、次のデータ型を要求します。  
   
 -   **論理** 演算で使用するオペランドは、ブール型に評価される必要があります。 たとえば、ColumnA > 1&&ColumnB < 2 などの場合です。  
@@ -116,7 +121,7 @@ caps.handback.revision: 57
   
      `(DT_DBTIMESTAMPOFFSET,3) "1999-10-11 20:34:52.123 -3:30" != (DT_DBDATE)"1999-10-12"`  
   
-     式 `(DT_DBDATE)"1999-10-12"` は DT_DBTIMESTAMPOFFSET に変換されます。 変換された式は "1999-10-12 00:00:00.000 +00:00" となり、他の式の値 `(DT_DBTIMESTAMPOFFSET,3) "1999-10-11 20:34:52.123 -3:30"` と一致しないため、TRUE に評価されます。  
+     式 `(DT_DBDATE)"1999-10-12"`は DT_DBTIMESTAMPOFFSET に変換されます。 変換された式は "1999-10-12 00:00:00.000 +00:00" となり、他の式の値 `(DT_DBTIMESTAMPOFFSET,3) "1999-10-11 20:34:52.123 -3:30"`と一致しないため、TRUE に評価されます。  
   
 -   数学関数に渡される引数は、数値データ型に評価される必要があります。 関数または演算によっては、特定の数値データ型が必要となる場合があります。 たとえば HEX 関数では、符号付き整数または符号なし整数が必要です。  
   
@@ -128,10 +133,10 @@ caps.handback.revision: 57
   
  演算や関数の結果のデータ型は、多くの場合、定義済みのものです。 つまり、引数のデータ型、または式エバリュエーターが結果をキャストするデータ型として定義されています。 たとえば、論理 OR 演算子 (||) の結果は常にブール型で、ABS 関数の結果は引数と同じ数値データ型になります。また、乗算の結果は、結果を失うことなく保持可能な最小の数値データ型になります。 結果のデータ型については、「[ &#40;SSIS Expression&#41;](../../integration-services/expressions/operators-ssis-expression.md)」と「[ &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)」を参照してください。  
   
-## 関連タスク  
- [データ フロー コンポーネントで式を使用する](../Topic/Use%20an%20Expression%20in%20a%20Data%20Flow%20Component.md)  
+## <a name="related-tasks"></a>関連タスク  
+ [データ フロー コンポーネントで式を使用する](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
   
 -   pragmaticworks.com の技術記事「 [SSIS 式チート シート](http://go.microsoft.com/fwlink/?LinkId=746575)」  
   

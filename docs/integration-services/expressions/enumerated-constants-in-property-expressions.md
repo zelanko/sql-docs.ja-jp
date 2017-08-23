@@ -1,34 +1,39 @@
 ---
-title: "プロパティ式における列挙定数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "列挙子 [Integration Services]"
-  - "パッケージ [Integration Services], 式"
-  - "動的プロパティ"
-  - "パッケージのプロパティの更新"
-  - "列挙定数 [Integration Services]"
-  - "プロパティ式 [Integration Services]"
+title: "列挙プロパティ式で定数 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- enumerators [Integration Services]
+- packages [Integration Services], expressions
+- dynamic properties
+- updating package properties
+- enumerated constants [Integration Services]
+- property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8483c36dca5a24485e865b1115e766aa579635b9
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/03/2017
+
 ---
-# プロパティ式における列挙定数
+# <a name="enumerated-constants-in-property-expressions"></a>プロパティ式における列挙定数
   プロパティ式に列挙子メンバー リストの値が含まれている場合、この式ではメンバーの表示名ではなく、列挙子メンバーの数値を使用する必要があります。 たとえば、式で **LoggingMode** プロパティを設定する場合、表示名 Disabled ではなく、数値 2 を使用する必要があります。  
   
  このトピックでは、プロパティ式でメンバーがよく使用される列挙子の表示名に対応した数値のみを示します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] オブジェクト モデルには、パッケージをプログラムで構築したり、タスクやデータ フロー コンポーネントなどのカスタム パッケージ要素をコード化する際に使用する列挙子が多数追加されています。  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のプロパティ ウィンドウには、パッケージとパッケージ オブジェクトのカスタム プロパティに加えて、パッケージ、タスク、Foreach ループ コンテナー、For ループ コンテナー、およびシーケンス コンテナーで使用できる一連のプロパティが含まれています。 列挙子の値によって設定される共通プロパティ (**ForceExecutionResult**、**LoggingMode**、**IsolationLevel**、および **Transaction Option**) の一覧が [共通プロパティ] セクションに表示されます。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のプロパティ ウィンドウには、パッケージとパッケージ オブジェクトのカスタム プロパティに加えて、パッケージ、タスク、Foreach ループ コンテナー、For ループ コンテナー、およびシーケンス コンテナーで使用できる一連のプロパティが含まれています。 列挙子の値によって設定される共通プロパティ (**ForceExecutionResult**、 **LoggingMode**、 **IsolationLevel**、および **Transaction Option**) の一覧が [共通プロパティ] セクションに表示されます。  
   
  次の各セクションでは、列挙定数について説明します。  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 34
 ##  <a name="Package"></a> [パッケージ]  
  次の表は、列挙子からの値を使用して設定する、パッケージのプロパティの表示名とそれに対応する数値を示します。  
   
- **PackageType** プロパティ—**DTSPackageType** 列挙子の値を使用して設定されます。  
+ **PackageType** プロパティ— **DTSPackageType** 列挙子の値を使用して設定されます。  
   
 |DTSPackageType の表示名|数値|  
 |-------------------------------------|-------------------|  
@@ -56,7 +61,7 @@ caps.handback.revision: 34
 |DTSDesigner100|5|  
 |SQLDBMaint|6|  
   
- **CheckpointUsage** プロパティ—**DTSCheckpointUsage** 列挙子の値を使用して設定されます。  
+ **CheckpointUsage** プロパティ— **DTSCheckpointUsage** 列挙子の値を使用して設定されます。  
   
 |DTSCheckpointUsage の表示名|数値|  
 |-----------------------------------------|-------------------|  
@@ -64,7 +69,7 @@ caps.handback.revision: 34
 |IfExists|1|  
 |毎回|2|  
   
- **PackagePriorityClass** プロパティ—**DTSPriorityClass** 列挙子の値を使用して設定されます。  
+ **PackagePriorityClass** プロパティ— **DTSPriorityClass** 列挙子の値を使用して設定されます。  
   
 |DTSPriorityClass の表示名|数値|  
 |---------------------------------------|-------------------|  
@@ -74,7 +79,7 @@ caps.handback.revision: 34
 |BelowNormal|3|  
 |Idle|4|  
   
- **ProtectionLevel** プロパティ—**DTSProtectionLevel** 列挙子の値を使用して設定されます。  
+ **ProtectionLevel** プロパティ— **DTSProtectionLevel** 列挙子の値を使用して設定されます。  
   
 |DTSProtectionLevel の表示名|数値|  
 |-----------------------------------------|-------------------|  
@@ -86,7 +91,7 @@ caps.handback.revision: 34
 |ServerStorage|5|  
   
 ##  <a name="PrecedenceConstraints"></a> 優先順位制約  
- **EvalOp** プロパティ—**DTSPrecedenceEvalOp** 列挙子の値を使用して設定されます。  
+ **EvalOp** プロパティ— **DTSPrecedenceEvalOp** 列挙子の値を使用して設定されます。  
   
 |DTSPrecedenceEvalOp の表示名|数値|  
 |------------------------------------------|-------------------|  
@@ -95,7 +100,7 @@ caps.handback.revision: 34
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
   
- **Value** プロパティ—**DTSExecResult** 列挙子の値を使用して設定されます。  
+ **Value** プロパティ— **DTSExecResult** 列挙子の値を使用して設定されます。  
   
 |表示名|数値|  
 |-------------------|-------------------|  
@@ -107,8 +112,8 @@ caps.handback.revision: 34
 ##  <a name="Foreach"></a> Foreach ループ列挙子  
  Foreach ループには、プロパティ式で設定できるプロパティを含む一連の列挙子があります。  
   
-### Foreach ADO 列挙子  
- **Type** プロパティ—**ADOEnumerationType** 列挙子の値を使用して設定されます。  
+### <a name="foreach-ado-enumerator"></a>Foreach ADO 列挙子  
+ **Type** プロパティ— **ADOEnumerationType** 列挙子の値を使用して設定されます。  
   
 |ADOEnumerationType の表示名|数値|  
 |-----------------------------------------|-------------------|  
@@ -116,8 +121,8 @@ caps.handback.revision: 34
 |EnumerateAllRows|1|  
 |EnumerateRowsInFirstTable|2|  
   
-### Foreach Nodelist 列挙子  
- **SourceDocumentType**、**InnerXPathStringSourceType**、および **OuterXPathStringSourceType** プロパティ—**SourceType** 列挙子の値を使用して設定されます。  
+### <a name="foreach-nodelist-enumerator"></a>Foreach Nodelist 列挙子  
+ **SourceDocumentType**、 **InnerXPathStringSourceType**、および **OuterXPathStringSourceType** プロパティ— **SourceType** 列挙子の値を使用して設定されます。  
   
 |SourceType の表示名|数値|  
 |---------------------------------|-------------------|  
@@ -125,7 +130,7 @@ caps.handback.revision: 34
 |変数|1|  
 |DirectInput|2|  
   
- **EnumerationType** プロパティ—**EnumerationType** 列挙子の値を使用して設定されます。  
+ **EnumerationType** プロパティ— **EnumerationType** 列挙子の値を使用して設定されます。  
   
 |EnumerationType の表示名|数値|  
 |--------------------------------------|-------------------|  
@@ -134,7 +139,7 @@ caps.handback.revision: 34
 |NodeText|2|  
 |ElementCollection|3|  
   
- **InnerElementType** プロパティ—**InnerElementType** 列挙子の値を使用して設定されます。  
+ **InnerElementType** プロパティ— **InnerElementType** 列挙子の値を使用して設定されます。  
   
 |InnerElementType の表示名|数値|  
 |---------------------------------------|-------------------|  
@@ -145,8 +150,8 @@ caps.handback.revision: 34
 ##  <a name="Tasks"></a> 処理手順  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、プロパティ式で設定できるプロパティを含む多くのタスクが含まれています。  
   
-### Analysis Services DDL 実行タスク  
- **SourceType** プロパティ—**DDLSourceType** 列挙子の値を使用して設定されます。  
+### <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 実行タスク  
+ **SourceType** プロパティ— **DDLSourceType** 列挙子の値を使用して設定されます。  
   
 |DDLSourceType の表示名|数値|  
 |------------------------------------|-------------------|  
@@ -154,8 +159,8 @@ caps.handback.revision: 34
 |[FileConnection]|1|  
 |変数|2|  
   
-### 一括挿入タスク  
- **DataFileType** プロパティ—**DTSBulkInsert_DataFileType** 列挙子の値を使用して設定されます。  
+### <a name="bulk-insert-task"></a>一括挿入タスク  
+ **DataFileType** プロパティ— **DTSBulkInsert_DataFileType** 列挙子の値を使用して設定されます。  
   
 |DTSBulkInsert_DataFileType の表示名|数値|  
 |--------------------------------------------------|-------------------|  
@@ -164,8 +169,8 @@ caps.handback.revision: 34
 |DTSBulkInsert_DataFileType_WideChar|2|  
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
-### SQL 実行タスク  
- **ResultSetType** プロパティ—**ResultSetType** 列挙子の値を使用して設定されます。  
+### <a name="execute-sql-task"></a>SQL 実行タスク  
+ **ResultSetType** プロパティ— **ResultSetType** 列挙子の値を使用して設定されます。  
   
 |ResultSetType の表示名|数値|  
 |------------------------------------|-------------------|  
@@ -174,7 +179,7 @@ caps.handback.revision: 34
 |ResultSetType_Rowset|3|  
 |ResultSetType_XML|4|  
   
- **SqlStatementSourceType** プロパティ—**SqlStatementSourceType** 列挙子の値を使用して設定されます。  
+ **SqlStatementSourceType** プロパティ— **SqlStatementSourceType** 列挙子の値を使用して設定されます。  
   
 |SqlStatementSourceType の表示名|数値|  
 |---------------------------------------------|-------------------|  
@@ -182,8 +187,8 @@ caps.handback.revision: 34
 |[FileConnection]|2|  
 |変数|3|  
   
-### ファイル システム タスク  
- **Operation** プロパティ—**DTSFileSystemOperation** 列挙子の値を使用して設定されます。  
+### <a name="file-system-task"></a>ファイル システム タスク  
+ **Operation** プロパティ— **DTSFileSystemOperation** 列挙子の値を使用して設定されます。  
   
 |DTSFileSystemOperation の表示名|数値|  
 |---------------------------------------------|-------------------|  
@@ -198,7 +203,7 @@ caps.handback.revision: 34
 |DeleteDirectory|8|  
 |DeleteDirectoryContent|9|  
   
- **Attributes** プロパティ—**DTSFileSystemAttributes** 列挙子の値を使用して設定されます。  
+ **Attributes** プロパティ— **DTSFileSystemAttributes** 列挙子の値を使用して設定されます。  
   
 |DTSFileSystemAttributes の表示名|数値|  
 |----------------------------------------------|-------------------|  
@@ -208,8 +213,8 @@ caps.handback.revision: 34
 |ReadOnly|4|  
 |システム|8|  
   
-### FTP タスク  
- **Operation** プロパティ—**DTSFTPOp** 列挙子の値を使用して設定されます。  
+### <a name="ftp-task"></a>FTP タスク  
+ **Operation** プロパティ— **DTSFTPOp** 列挙子の値を使用して設定されます。  
   
 |DTSFTPOp の表示名|数値|  
 |-------------------------------|-------------------|  
@@ -222,8 +227,8 @@ caps.handback.revision: 34
 |RemoveDirLocal|6|  
 |RemoveDirRemote|7|  
   
-### メッセージ キュー タスク  
- **MessageType** プロパティ—**MQMessageType** 列挙子の値を使用して設定されます。  
+### <a name="message-queue-task"></a>メッセージ キュー タスク  
+ **MessageType** プロパティ— **MQMessageType** 列挙子の値を使用して設定されます。  
   
 |MQMessageType の表示名|数値|  
 |------------------------------------|-------------------|  
@@ -232,7 +237,7 @@ caps.handback.revision: 34
 |DTSMQMessageType_Variables|2|  
 |DTSMQMessagType_StringMessageToVariable|3|  
   
- **StringCompareType** プロパティ—**MQStringMessageCompare** 列挙子の値を使用して設定されます。  
+ **StringCompareType** プロパティ— **MQStringMessageCompare** 列挙子の値を使用して設定されます。  
   
 |MQStringMessageCompare の表示名|数値|  
 |---------------------------------------------|-------------------|  
@@ -241,15 +246,15 @@ caps.handback.revision: 34
 |DTSMQStringMessageCompare_IgnoreCase|2|  
 |DTSMQStringMessageCompare_Contains|3|  
   
- **TaskType** プロパティ—**MQType** 列挙子の値を使用して設定されます。  
+ **TaskType** プロパティ— **MQType** 列挙子の値を使用して設定されます。  
   
 |MQType の表示名|数値|  
 |-----------------------------|-------------------|  
 |DTSMQType_Sender|0|  
 |DTSMQType_Receiver|1|  
   
-### メール送信タスク  
- **MessageSourceType** プロパティ—**SendMailMessageSourceType** 列挙子の値を使用して設定されます。  
+### <a name="send-mail-task"></a>メール送信タスク  
+ **MessageSourceType** プロパティ— **SendMailMessageSourceType** 列挙子の値を使用して設定されます。  
   
 |SendMailMessageSourceType の表示名|数値|  
 |------------------------------------------------|-------------------|  
@@ -257,7 +262,7 @@ caps.handback.revision: 34
 |[FileConnection]|1|  
 |変数|2|  
   
- **Priority** プロパティ—**MailPriority** 列挙子の値を使用して設定されます。  
+ **Priority** プロパティ— **MailPriority** 列挙子の値を使用して設定されます。  
   
 |MailPriority の表示名|数値|  
 |-----------------------------------|-------------------|  
@@ -265,23 +270,23 @@ caps.handback.revision: 34
 |標準|3|  
 |Low|5|  
   
-### データベース転送タスク  
- **Action** プロパティ—**TransferAction** 列挙子の値を使用して設定されます。  
+### <a name="transfer-database-task"></a>データベース転送タスク  
+ **Action** プロパティ— **TransferAction** 列挙子の値を使用して設定されます。  
   
 |TransferAction の表示名|数値|  
 |-------------------------------------|-------------------|  
 |[コピー]|0|  
 |[移動]|1|  
   
- **Method** プロパティ—**TransferMethod** 列挙子の値を使用して設定されます。  
+ **Method** プロパティ— **TransferMethod** 列挙子の値を使用して設定されます。  
   
 |TransferMethod の表示名|数値|  
 |-------------------------------------|-------------------|  
 |DatabaseOffline|0|  
 |DatabaseOnline|1|  
   
-### エラー メッセージ転送タスク  
- **IfObjectExists** プロパティ—**IfObjectExists** 列挙子の値を使用して設定されます。  
+### <a name="transfer-error-messages-task"></a>エラー メッセージ転送タスク  
+ **IfObjectExists** プロパティ— **IfObjectExists** 列挙子の値を使用して設定されます。  
   
 |IfObjectExists の表示名|数値|  
 |-------------------------------------|-------------------|  
@@ -289,8 +294,8 @@ caps.handback.revision: 34
 |Overwrite|1|  
 |Skip|2|  
   
-### ジョブ転送タスク  
- **IfObjectExists** プロパティ—**IfObjectExists** 列挙子の値を使用して設定されます。  
+### <a name="transfer-jobs-task"></a>ジョブ転送タスク  
+ **IfObjectExists** プロパティ— **IfObjectExists** 列挙子の値を使用して設定されます。  
   
 |IfObjectExists の表示名|数値|  
 |-------------------------------------|-------------------|  
@@ -298,8 +303,8 @@ caps.handback.revision: 34
 |Overwrite|1|  
 |Skip|2|  
   
-### ログイン転送タスク  
- **IfObjectExists** プロパティ—**IfObjectExists** 列挙子の値を使用して設定されます。  
+### <a name="transfer-logins-task"></a>ログイン転送タスク  
+ **IfObjectExists** プロパティ— **IfObjectExists** 列挙子の値を使用して設定されます。  
   
 |IfObjectExists の表示名|数値|  
 |-------------------------------------|-------------------|  
@@ -307,7 +312,7 @@ caps.handback.revision: 34
 |Overwrite|1|  
 |Skip|2|  
   
- **LoginsToTransfer** プロパティ—**LoginsToTransfer** 列挙子の値を使用して設定されます。  
+ **LoginsToTransfer** プロパティ— **LoginsToTransfer** 列挙子の値を使用して設定されます。  
   
 |LoginsToTransfer の表示名|数値|  
 |---------------------------------------|-------------------|  
@@ -315,8 +320,8 @@ caps.handback.revision: 34
 |[SelectedLogins]|1|  
 |[AllLoginsFromSelectedDatabases]|2|  
   
-### Master ストアド プロシージャ転送タスク  
- **IfObjectExists** プロパティ—**IfObjectExists** 列挙子の値を使用して設定されます。  
+### <a name="transfer-master-stored-procedures-task"></a>Master ストアド プロシージャ転送タスク  
+ **IfObjectExists** プロパティ— **IfObjectExists** 列挙子の値を使用して設定されます。  
   
 |IfObjectExists の表示名|数値|  
 |-------------------------------------|-------------------|  
@@ -324,32 +329,32 @@ caps.handback.revision: 34
 |Overwrite|1|  
 |Skip|2|  
   
-### SQL Server オブジェクトの転送タスク  
- **ExistingData** プロパティ—**ExistingData** 列挙子の値を使用して設定されます。  
+### <a name="transfer-sql-server-objects-task"></a>SQL Server オブジェクトの転送タスク  
+ **ExistingData** プロパティ— **ExistingData** 列挙子の値を使用して設定されます。  
   
 |ExistingData の表示名|数値|  
 |-----------------------------------|-------------------|  
 |[置換]|0|  
 |追加|1|  
   
-### Web サービス タスク  
- **OutputType** プロパティ—**DTSOutputType** 列挙子の値を使用して設定されます。  
+### <a name="web-service-task"></a>Web サービス タスク  
+ **OutputType** プロパティ— **DTSOutputType** 列挙子の値を使用して設定されます。  
   
 |DTSOutputType の表示名|数値|  
 |------------------------------------|-------------------|  
 |ファイル|0|  
 |変数|1|  
   
-### WMI データ リーダー タスク  
- **OverwriteDestination** プロパティ—**OverwriteDestination** 列挙子の値を使用して設定されます。  
+### <a name="wmi-data-reader-task"></a>WMI データ リーダー タスク  
+ **OverwriteDestination** プロパティ— **OverwriteDestination** 列挙子の値を使用して設定されます。  
   
 |OverwriteDestination の表示名|数値|  
 |-------------------------------------------|-------------------|  
-|[OverwriteDestination]|0|  
+|OverwriteDestination|0|  
 |AppendToDestination|1|  
 |KeepOriginal|2|  
   
- **OutputType** プロパティ—**OutputType** 列挙子の値を使用して設定されます。  
+ **OutputType** プロパティ— **OutputType** 列挙子の値を使用して設定されます。  
   
 |OutputType の表示名|数値|  
 |---------------------------------|-------------------|  
@@ -357,14 +362,14 @@ caps.handback.revision: 34
 |PropertyValue|1|  
 |PropertyNameAndValue|2|  
   
- **DestinationType** プロパティ—**DestinationType** 列挙子の値を使用して設定されます。  
+ **DestinationType** プロパティ— **DestinationType** 列挙子の値を使用して設定されます。  
   
 |DestinationType の表示名|数値|  
 |--------------------------------------|-------------------|  
 |[FileConnection]|0|  
 |変数|1|  
   
- **WqlQuerySourceType** プロパティ—**QuerySourceType** 列挙子の値を使用して設定されます。  
+ **WqlQuerySourceType** プロパティ— **QuerySourceType** 列挙子の値を使用して設定されます。  
   
 |QuerySourceType の表示名|数値|  
 |--------------------------------------|-------------------|  
@@ -372,21 +377,21 @@ caps.handback.revision: 34
 |DirectInput|1|  
 |変数|2|  
   
- WMI イベント監視の **ActionAtEvent** プロパティ—**ActionAtEvent** 列挙子の値を使用して設定されます。  
+ WMI イベント監視の **ActionAtEvent** プロパティ— **ActionAtEvent** 列挙子の値を使用して設定されます。  
   
 |ActionAtEvent の表示名|数値|  
 |------------------------------------|-------------------|  
 |LogTheEventAndFireDTSEvent|0|  
 |LogTheEvent|1|  
   
- **ActionAtTimeout** プロパティ—**ActionAtTimeout** 列挙子の値を使用して設定されます。  
+ **ActionAtTimeout** プロパティ— **ActionAtTimeout** 列挙子の値を使用して設定されます。  
   
 |ActionAtTimeout の表示名|数値|  
 |--------------------------------------|-------------------|  
 |LogTimeoutAndFireDTSEvent|0|  
 |LogTimeout|1|  
   
- **AfterEvent** プロパティ—**AfterEvent** 列挙子の値を使用して設定されます。  
+ **AfterEvent** プロパティ— **AfterEvent** 列挙子の値を使用して設定されます。  
   
 |AfterEvent の表示名|数値|  
 |---------------------------------|-------------------|  
@@ -394,7 +399,7 @@ caps.handback.revision: 34
 |ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
- **AfterTimeout** プロパティ—**AfterTimeout** 列挙子の値を使用して設定されます。  
+ **AfterTimeout** プロパティ— **AfterTimeout** 列挙子の値を使用して設定されます。  
   
 |AfterTimeout の表示名|数値|  
 |-----------------------------------|-------------------|  
@@ -402,7 +407,7 @@ caps.handback.revision: 34
 |ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
- **WqlQuerySourceType** プロパティ—**QuerySourceType** 列挙子の値を使用して設定されます。  
+ **WqlQuerySourceType** プロパティ— **QuerySourceType** 列挙子の値を使用して設定されます。  
   
 |QuerySourceType の表示名|数値|  
 |--------------------------------------|-------------------|  
@@ -410,8 +415,8 @@ caps.handback.revision: 34
 |DirectInput|1|  
 |変数|2|  
   
-### XML タスク  
- **OperationType** プロパティ—**DTSXMLOperation** 列挙子の値を使用して設定されます。  
+### <a name="xml-task"></a>XML タスク  
+ **OperationType** プロパティ— **DTSXMLOperation** 列挙子の値を使用して設定されます。  
   
 |DTSXMLOperation の表示名|数値|  
 |--------------------------------------|-------------------|  
@@ -422,7 +427,7 @@ caps.handback.revision: 34
 |[Diff]|4|  
 |[Patch]|5|  
   
- **SourceType**、**SecondOperandType**、および **XPathSourceType** プロパティ—**DTSXMLSourceType** 列挙子の値を使用して設定されます。  
+ **SourceType**、 **SecondOperandType**、および **XPathSourceType** プロパティ— **DTSXMLSourceType** 列挙子の値を使用して設定されます。  
   
 |DTSXMLSourceType の表示名|数値|  
 |---------------------------------------|-------------------|  
@@ -430,21 +435,21 @@ caps.handback.revision: 34
 |変数|1|  
 |DirectInput|2|  
   
- **DestinationType** および **DiffGramDestinationType** プロパティ—**DTSXMLSaveResultTo** 列挙子の値を使用して設定されます。  
+ **DestinationType** および **DiffGramDestinationType** プロパティ— **DTSXMLSaveResultTo** 列挙子の値を使用して設定されます。  
   
 |DTSXMLSaveResultTo の表示名|数値|  
 |-----------------------------------------|-------------------|  
 |[FileConnection]|0|  
 |変数|1|  
   
- **ValidationType** プロパティ—**DTSXMLValidationType** 列挙子の値を使用して設定されます。  
+ **ValidationType** プロパティ— **DTSXMLValidationType** 列挙子の値を使用して設定されます。  
   
 |DTSXMLValidationType の表示名|数値|  
 |-------------------------------------------|-------------------|  
 |[DTD]|0|  
 |[XSD]|1|  
   
- **XPathOperation** プロパティ—**DTSXMLXPathOperation** 列挙子の値を使用して設定されます。  
+ **XPathOperation** プロパティ— **DTSXMLXPathOperation** 列挙子の値を使用して設定されます。  
   
 |DTSXMLXPathOperation の表示名|数値|  
 |-------------------------------------------|-------------------|  
@@ -452,7 +457,7 @@ caps.handback.revision: 34
 |値|1|  
 |NodeList|2|  
   
- **DiffOptions** プロパティ—**DTSXMLDiffOptions** 列挙子の値を使用して設定されます。 この列挙子の各オプションは相互排他的ではなく、複数を同時に指定することができます。 複数のオプションを使用するには、適用するオプションをコンマ区切りのリストで指定します。  
+ **DiffOptions** プロパティ— **DTSXMLDiffOptions** 列挙子の値を使用して設定されます。 この列挙子の各オプションは相互排他的ではなく、複数を同時に指定することができます。 複数のオプションを使用するには、適用するオプションをコンマ区切りのリストで指定します。  
   
 |DTSXMLDiffOptions の表示名|数値|  
 |----------------------------------------|-------------------|  
@@ -466,7 +471,7 @@ caps.handback.revision: 34
 |IgnoreXmlDecl|64|  
 |IgnoreDtd|128|  
   
- **DiffAlgorithm** プロパティ—**DTSXMLDiffAlgorithm** 列挙子の値を使用して設定されます。  
+ **DiffAlgorithm** プロパティ— **DTSXMLDiffAlgorithm** 列挙子の値を使用して設定されます。  
   
 |DTSXMLDiffAlgorithm の表示名|数値|  
 |------------------------------------------|-------------------|  
@@ -479,10 +484,10 @@ caps.handback.revision: 34
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、プログラムによるこれらのタスクの操作がサポートされていません。また、プログラミング リファレンス ドキュメントには、これらのタスクとその列挙子に関する API ドキュメントが含まれていません。  
   
-### すべてのメンテナンス タスク  
+### <a name="all-maintenance-tasks"></a>すべてのメンテナンス タスク  
  すべてのメンテナンス タスクでは、次の列挙子を使用して、指定したプロパティを設定します。  
   
- **DatabaseSelectionType** プロパティ—**DatabaseSelection** 列挙子の値を使用して設定されます。  
+ **DatabaseSelectionType** プロパティ— **DatabaseSelection** 列挙子の値を使用して設定されます。  
   
 |DatabaseSelection の表示名|数値|  
 |----------------------------------------|-------------------|  
@@ -492,7 +497,7 @@ caps.handback.revision: 34
 |ユーザー|3|  
 |Specific|4|  
   
- **TableSelectionType** プロパティ—**TableSelection** 列挙子の値を使用して設定されます。  
+ **TableSelectionType** プロパティ— **TableSelection** 列挙子の値を使用して設定されます。  
   
 |TableSelection の表示名|数値|  
 |-------------------------------------|-------------------|  
@@ -500,7 +505,7 @@ caps.handback.revision: 34
 |すべて|1|  
 |Specific|2|  
   
- **ObjectTypeSelection** プロパティ—**ObjectType** 列挙子の値を使用して設定されます。  
+ **ObjectTypeSelection** プロパティ— **ObjectType** 列挙子の値を使用して設定されます。  
   
 |ObjectType の表示名|数値|  
 |---------------------------------|-------------------|  
@@ -508,22 +513,22 @@ caps.handback.revision: 34
 |表示|1|  
 |TableView|2|  
   
-### データベースのバックアップ タスク  
- **DestinationCreationType** プロパティ—**DestinationType** 列挙子の値を使用して設定されます。  
+### <a name="back-up-database-task"></a>データベースのバックアップ タスク  
+ **DestinationCreationType** プロパティ— **DestinationType** 列挙子の値を使用して設定されます。  
   
 |DestinationType の表示名|数値|  
 |--------------------------------------|-------------------|  
 |Auto|0|  
 |手動|1|  
   
- **ExistingBackupsAction** プロパティ—**ActionForExistingBackups** 列挙子の値を使用して設定されます。  
+ **ExistingBackupsAction** プロパティ— **ActionForExistingBackups** 列挙子の値を使用して設定されます。  
   
 |ActionForExistingBackups の表示名|数値|  
 |-----------------------------------------------|-------------------|  
 |追加|0|  
 |Overwrite|1|  
   
- **BackupAction** プロパティ—**BackupTaskType** 列挙子の値を使用して設定されます。 このプロパティは、タスクで実行されるバックアップの種類を定義する際に、**BackupIsIncremental** プロパティと合わせて使用します。  
+ **BackupAction** プロパティ— **BackupTaskType** 列挙子の値を使用して設定されます。 このプロパティは、タスクで実行されるバックアップの種類を定義する際に、 **BackupIsIncremental** プロパティと合わせて使用します。  
   
 |BackupTaskType の表示名|数値|  
 |-------------------------------------|-------------------|  
@@ -531,7 +536,7 @@ caps.handback.revision: 34
 |[ファイル]|1|  
 |Log|2|  
   
- **BackupDevice** プロパティ—[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) の **DeviceType** 列挙子の値を使用して設定されます。  
+ **BackupDevice** プロパティ— [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) の **DeviceType** 列挙子の値を使用して設定されます。  
   
 |DeviceType の表示名|数値|  
 |---------------------------------|-------------------|  
@@ -541,15 +546,15 @@ caps.handback.revision: 34
 |Pipe|3|  
 |VirtualDevice|4|  
   
-### メンテナンス クリーンアップ タスク  
- **FileTypeSelected** プロパティ—**FileType** 列挙子の値を使用して設定されます。  
+### <a name="maintenance-cleanup-task"></a>メンテナンス クリーンアップ タスク  
+ **FileTypeSelected** プロパティ— **FileType** 列挙子の値を使用して設定されます。  
   
 |FileType の表示名|数値|  
 |-------------------------------|-------------------|  
 |FileBackup|0|  
 |FileReport|1|  
   
- **OlderThanTimeUnitType** プロパティ—**TimeUnitType** 列挙子の値を使用して設定されます。  
+ **OlderThanTimeUnitType** プロパティ— **TimeUnitType** 列挙子の値を使用して設定されます。  
   
 |TimeUnitType の表示名|数値|  
 |-----------------------------------|-------------------|  
@@ -558,8 +563,8 @@ caps.handback.revision: 34
 |Month|2|  
 |年|3|  
   
-### 統計の更新タスク  
- **UpdateType** プロパティ—[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) の **StatisticsTarget** 列挙子の値を使用して設定されます。  
+### <a name="update-statistics-task"></a>統計の更新タスク  
+ **UpdateType** プロパティ— [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) の **StatisticsTarget** 列挙子の値を使用して設定されます。  
   
 |StatisticsTarget の表示名|数値|  
 |---------------------------------------|-------------------|  
@@ -570,7 +575,7 @@ caps.handback.revision: 34
 ##  <a name="CommonProperties"></a> 共通プロパティ  
  パッケージ、タスク、Foreach ループ コンテナー、For ループ コンテナー、およびシーケンス コンテナーでは、次の列挙子を使用して、指定されたプロパティを設定できます。  
   
- **ForceExecutionResult** プロパティ—**DTSForcedExecResult** 列挙子の値を使用して設定されます。  
+ **ForceExecutionResult** プロパティ— **DTSForcedExecResult** 列挙子の値を使用して設定されます。  
   
 |DTSForcedExecResult の表示名|数値|  
 |------------------------------------------|-------------------|  
@@ -579,9 +584,9 @@ caps.handback.revision: 34
 |失敗|1|  
 |Completion|2|  
   
- **IsolationLevel** プロパティ—.NET Framework **IsolationLevel** 列挙子の値を使用して設定されます。 詳細については、[MSDN ライブラリ](http://go.microsoft.com/fwlink?LinkId=17313)の .NET Framework クラス ライブラリを参照してください。  
+ **IsolationLevel** プロパティ—.NET Framework **IsolationLevel** 列挙子の値を使用して設定されます。 詳細については、 [MSDN ライブラリ](http://go.microsoft.com/fwlink?LinkId=17313)の .NET Framework クラス ライブラリを参照してください。  
   
- **LoggingMode** プロパティ—**DTSLoggingMode** 列挙子の値を使用して設定されます。  
+ **LoggingMode** プロパティ— **DTSLoggingMode** 列挙子の値を使用して設定されます。  
   
 |DTSLoggingMode の表示名|数値|  
 |-------------------------------------|-------------------|  
@@ -589,7 +594,7 @@ caps.handback.revision: 34
 |有効|1|  
 |Disabled|2|  
   
- **TransactionOption** プロパティ—**DTSTransactionOption** 列挙子の値を使用して設定されます。  
+ **TransactionOption** プロパティ— **DTSTransactionOption** 列挙子の値を使用して設定されます。  
   
 |DTSTransactionOption の表示名|数値|  
 |-------------------------------------------|-------------------|  
@@ -597,12 +602,12 @@ caps.handback.revision: 34
 |Supported|1|  
 |必須|2|  
   
-## 関連タスク  
+## <a name="related-tasks"></a>関連タスク  
  [プロパティ式を追加または変更する](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [パッケージでプロパティ式を使用する](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Integration Services &#40;SSIS&#41; パッケージ](../../integration-services/integration-services-ssis-packages.md)   
+ [Integration Services & #40 です。SSIS &#41;パッケージ](../../integration-services/integration-services-ssis-packages.md)   
  [Integration Services コンテナー](../../integration-services/control-flow/integration-services-containers.md)   
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [優先順位制約](../../integration-services/control-flow/precedence-constraints.md)  
