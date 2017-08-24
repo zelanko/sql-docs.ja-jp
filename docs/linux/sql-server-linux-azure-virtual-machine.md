@@ -17,6 +17,9 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="create-a-linux-sql-server-2017-virtual-machine-with-the-azure-portal"></a>Azure ポータルで SQL Server 2017 年 Linux 仮想マシンを作成します。
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 Azure では、インストールされている SQL Server 2017 RC2 のある Linux 仮想マシン イメージを提供します。 このトピックでは、Azure ポータルを使用して、SQL Server の Linux 仮想マシンを作成する方法の短いチュートリアルを提供します。 
 
 ## <a name="create-a-linux-vm-with-sql-server-installed"></a>インストールされている SQL Server と Linux VM を作成します。

@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>抽出、変換、および SSIS Linux でのデータを読み込む
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 このトピックでは、Linux 上の SQL Server Integration Services (SSIS) パッケージを実行する方法について説明します。 SSIS は、変換して、データのクレンジングと複数の送信先を更新から複数のソースと形式のデータの読み込みで複雑なデータ統合の問題を解決します。 
 
 Linux で実行されている SSIS パッケージは、Windows、オンプレミスまたはクラウドでは、Linux では、または Docker で実行されている Microsoft SQL Server に接続できます。 Azure SQL Database、Azure SQL Data Warehouse、および ODBC データ ソースに接続することもできます。

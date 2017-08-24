@@ -16,8 +16,9 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="configure-read-scale-out-availability-group-for-sql-server-on-linux"></a>SQL Server on Linux の読み取りのスケール アウト可用性グループを構成します。
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 Linux に SQL Server の読み取りのスケール アウト可用性グループを構成することができます。 可用性グループの 2 つのアーキテクチャがあります。 A*高可用性*アーキテクチャでは、クラスター マネージャーを使用して、ビジネス継続性を提供します。 このアーキテクチャでは、読み取りのスケール アウト レプリカを含めることもできます。 高可用性アーキテクチャを作成するを参照してください。[構成 Always On 可用性グループの SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)です。
 

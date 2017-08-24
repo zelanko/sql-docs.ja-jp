@@ -18,6 +18,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux 上の SQL Server のパフォーマンス機能のチュートリアル
+
 SQL Server に新しい Linux ユーザーの場合は、次のタスクはパフォーマンス機能の一部を説明します。 これらは一意または Linux に固有でないですがさらに詳しく調査するには、領域の概念を付けると便利です。 各例では、リンクは、その領域の深さのドキュメントが提供されます。
 
 > [!NOTE]

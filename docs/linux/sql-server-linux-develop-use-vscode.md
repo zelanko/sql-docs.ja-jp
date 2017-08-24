@@ -19,6 +19,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Visual Studio のコードを使用して作成し、SQL Server の TRANSACT-SQL スクリプトを実行
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 このトピックの内容を使用する方法を示しています、 **mssql** Visual Studio Code (VS Code) を SQL Server データベースを開発するための拡張機能です。
 
 Visual Studio のコードは、Linux、macOS、および拡張機能をサポートする Windows のグラフィカルなコード エディターです。 [**Mssql** VS Code 拡張機能] 、SQL Server transact-sql (T-SQL)、クエリに接続し、結果を表示することができます。

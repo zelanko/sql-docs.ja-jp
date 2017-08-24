@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>接続ライブラリと Microsoft SQL Server のフレームワーク
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 チェック アウト、[チュートリアル入門](http://aka.ms/sqldev)をすばやく c#、Java、Node.js、PHP、Python などのプログラミング言語で作業を開始し、macos Linux または Windows Docker で SQL Server を使用してアプリをビルドします。
 
 次の表に、接続ライブラリを表示または*ドライバー*またはクラウドでは、Linux、Windows または Docker ともに Azure SQL Database と Azure SQL Data Warehouse に接続し、オンプレミスで実行して Microsoft SQL Server を使用する言語のさまざまなクライアント アプリケーションを使用できることです。 

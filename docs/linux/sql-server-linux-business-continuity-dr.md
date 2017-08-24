@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="business-continuity-and-database-recovery-sql-server-on-linux"></a>ビジネス継続性とデータベース復旧 Linux に SQL Server
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 SQL Server on Linux さまざまなさまざまなビジネス要件に対応するサービス レベル契約の目標を実現するために実行できるようにします。
 
 最も簡単なソリューションでは、高度な障害に対する回復性ホスト レベル、ハードウェアの障害、および弾力性とリソース活用を最大化に対してフォールト トレランスを実現するために仮想化テクノロジを活用します。 これらのシステムでは、プライベートまたはパブリック クラウド、またはハイブリッド環境で、オンプレミスでを実行できます。 災害復旧と保護の最も単純な形式は、データベースのバックアップです。 SQL Server 2017 RC2 で使用できる単純なソリューションは次のとおりです。

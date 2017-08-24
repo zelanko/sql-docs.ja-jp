@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>SQL Server on Linux をトラブルシューティングします。
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 このドキュメントでは、Linux または、Docker コンテナーで実行されている Microsoft SQL Server のトラブルシューティングを行う方法について説明します。 SQL Server on Linux のトラブルシューティングを行うときは、このプライベート プレビュー リリースの制限事項に注意してくださいを確認してください。 これらの一覧を検索することができます、[リリース ノート](sql-server-linux-release-notes.md)です。
 
 ## <a id="connection"></a>接続エラーをトラブルシューティングします。

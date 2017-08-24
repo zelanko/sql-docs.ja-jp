@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Sqlcmd および bcp、SQL Server コマンド ライン ツールを Linux にインストールします。
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 次の手順では、コマンド ライン ツール、Microsoft ODBC ドライバー、およびその依存関係をインストールします。 **Mssql ツール**パッケージが含まれています。
 
 - **sqlcmd**: コマンド ライン クエリ ユーティリティです。

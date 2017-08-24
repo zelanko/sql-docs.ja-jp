@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Linux 上のバックアップと復元の SQL Server データベース
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 他のプラットフォームと同じツールを使用して、Linux 上の SQL Server 2017 RC2 からのデータベースのバックアップを実行できます。 使用することができます、Linux サーバー `sqlcmd` SQL Server に接続し、バックアップを実行します。 Windows は、Linux 上の SQL Server に接続し、ユーザー インターフェイスとバックアップを実行します。 バックアップ機能は、プラットフォーム間で同じです。 ローカルをリモート ドライブ、またはデータベースをバックアップするなど、 [Microsoft Azure Blob ストレージ サービス](http://msdn.microsoft.com/library/dn435916.aspx)です。 
 
 ## <a name="backup-with-sqlcmd"></a>Sqlcmd でのバックアップ

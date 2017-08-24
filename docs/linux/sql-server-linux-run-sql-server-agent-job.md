@@ -16,8 +16,10 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>作成し、Linux 上の SQL Server エージェント ジョブの実行
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 SQL Server ジョブを使用して、定期的に、SQL Server データベースで同じ一連のコマンドを実行できます。 このトピックでは、TRANSACT-SQL および SQL Server Management Studio (SSMS) の両方を使用して Linux に SQL Server エージェント ジョブを作成する方法の例を示します。
 
 このリリースの SQL Server エージェントで既知の問題を参照してください、 [Release Notes](sql-server-linux-release-notes.md)です。

@@ -16,9 +16,9 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/02/2017
 
 ---
-
-
 # <a name="get-started-with-log-shipping-on-linux"></a>Linux 上のログ配布の概要します。
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server ログ配布は、1 つ以上のセカンダリ サーバー上にプライマリ サーバーからデータベースがレプリケートされる HA 構成です。 簡単に言うと、ソース データベースのバックアップはセカンダリ サーバー上に復元されます。 トランザクション ログ バックアップの作成、プライマリ サーバー、定期的にし、セカンダリ サーバーに復元、データベースのセカンダリ コピーを更新します。 
 

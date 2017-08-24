@@ -17,6 +17,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Linux での SQL Server カスタマー フィードバック
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 Microsoft SQL Server は既定で、お客様のアプリケーションの使用状態に関する情報を収集します。 具体的には、SQL Server はインストール エクスペリエンス、利用状況、およびパフォーマンスに関する情報を収集します。 この情報は、Microsoft が製品の向上を図り、お客様のニーズをさらに満たすのに役立ちます。 たとえば Microsoft では、お客様が受け取るエラー コードの種類に関する情報を収集して、関連するバグの修正、SQL Server の使用方法に関するドキュメントの改善、より良いサービスのために製品に機能を追加すべきかどうかの判断を行います。
 
 このドキュメントではどのような種類の情報が収集および送信を収集する Linux の Microsoft SQL Server を構成する方法に関する詳細情報がマイクロソフトにします。 SQL Server 2017 には、お行い、ユーザーから収集することはありませんは、どのような情報を説明するプライバシーに関する声明が含まれています。 プライバシーに関する声明をお読みください。

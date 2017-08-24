@@ -17,6 +17,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Ubuntu 用のサンプル: SQL Server の無人インストール スクリプト
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 このサンプル バッシュ スクリプトは、対話型の入力なし、Ubuntu 16.04 を SQL Server 2017 RC2 をインストールします。 データベース エンジン、SQL Server エージェント、SQL Server コマンド ライン ツールのインストールの例を紹介し、インストール後の手順を実行します。 必要に応じて、フルテキスト検索をインストールし、管理ユーザーを作成できます。
 
 > [!TIP]

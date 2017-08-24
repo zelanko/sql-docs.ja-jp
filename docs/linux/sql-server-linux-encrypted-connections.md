@@ -20,7 +20,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Linux 上の SQL Server への接続を暗号化
 
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]Linux のトランスポート層セキュリティ (TLS) 暗号化に使用できます、クライアント アプリケーションとのインスタンス間のネットワーク経由で送信されるデータ[!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]です。 [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]Windows と Linux の両方で同じ TLS プロトコルをサポートします。 TLS 1.2、1.1 および 1.0 です。 ただし、TLS を構成する手順は、オペレーティング システムに固有[!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]が実行されています。  
  
