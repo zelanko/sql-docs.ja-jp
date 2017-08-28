@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQL Server Configuration Manager, help
 ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e7c3445dee2fe753506a02e9c828f1835664592a
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: d12d9e8aa7c2a11dfe340897c4b63681591784d5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="sql-server-configuration-manager-help"></a>SQL Server 構成マネージャーのヘルプ
@@ -71,6 +71,12 @@ ms.lasthandoff: 08/02/2017
   
 -   **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]** (バージョン)、 **[構成ツール]**の順にポイントして、 **[SQL Server 構成マネージャー]**をクリックします。  
   
+  
+ **アクセスする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager を使用します。[!INCLUDE[win8](../../includes/win8-md.md)]**  
+  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーは [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール プログラムのスナップインであり、スタンドアロン プログラムではありません。そのため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行している場合、[!INCLUDE[win8](../../includes/win8-md.md)] 構成マネージャーはアプリケーションとして表示されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを開くには、**検索**チャームで、**[アプリ]** の下に「**SQLServerManager12.msc**」([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] の場合) または「**SQLServerManager11.msc**」([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の場合) と入力し、**Enter** キーを押します。  
+  
+
 ## <a name="see-also"></a>参照  
  [SQL Server サービス](../../tools/configuration-manager/sql-server-services.md)   
  [SQL Server ネットワークの構成](../../tools/configuration-manager/sql-server-network-configuration.md)   

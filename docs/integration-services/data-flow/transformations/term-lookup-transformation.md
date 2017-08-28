@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.termlookuptrans.f1
+- sql13.dts.designer.termlookup.termlookup.f1
+- sql13.dts.designer.termlookup.referencetable.f1
+- sql13.dts.designer.termlookup.advanced.f1
 helpviewer_keywords:
 - extracting data [Integration Services]
 - match extracted terms [Integration Services]
@@ -25,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3eefbab1c6f9b3cd5e51faa9e875a44218c33b3f
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ee1fa267107940169c05942e8614a7bf7148566a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="term-lookup-transformation"></a>用語参照変換
@@ -96,20 +99,61 @@ ms.lasthandoff: 08/03/2017
   
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[用語参照変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [用語参照変換エディター ([参照テーブル] タブ)](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-reference-table-tab.md)  
-  
--   [用語参照変換エディター ([用語参照] タブ)](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
-  
--   [用語参照変換エディター ([詳細設定] タブ)](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-advanced-tab.md)  
-  
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- データ フロー コンポーネントのプロパティの設定方法については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+ プロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
+## <a name="term-lookup-transformation-editor-term-lookup-tab"></a>[用語参照変換エディター]\ ([用語参照] タブ)
+  **[用語参照変換エディター]** ダイアログ ボックスの **[用語参照]** タブを使用すると、入力列を参照テーブルの参照列にマップし、各出力列の別名を提供できます。  
   
+### <a name="options"></a>オプション  
+ **使用できる入力列**  
+ チェック ボックスを使用して、出力にそのまま渡す入力列を選択します。 **[使用できる参照列]** の一覧に入力列をドラッグして、入力列を参照テーブル内の参照列にマップします。 入力列と参照列は、DT_NTEXT または DT_WSTR のサポートされるデータ型が同じである必要があります。 マッピングする行を選択して右クリックし、 [[リレーションシップの作成]](../../../integration-services/data-flow/transformations/create-relationships.md) ダイアログ ボックスでマッピングを編集します。  
+  
+ **使用できる参照列**  
+ 参照テーブル内の使用できる列を表示します。 一致させる用語の一覧を含む列を選択します。  
+  
+ **パススルー列**  
+ 使用できる入力列の一覧から選択します。 選択内容が **[使用できる入力列]** テーブルのチェック ボックスに反映されます。  
+  
+ **出力列の別名**  
+ 各出力列の別名を入力します。 既定では列の名前が使用されますが、一意なわかりやすい名前を自由に付けることができます。  
+  
+ **エラー出力を構成します。**  
+ [[エラー出力の構成]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理オプションを指定するために使用します。  
+  
+## <a name="term-lookup-transformation-editor-reference-table-tab"></a>[用語参照変換エディター]\ ([参照テーブル] タブ)
+  **[用語参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブを使用すると、参照テーブルへの接続を指定できます。  
+  
+### <a name="options"></a>オプション  
+ **OLE DB 接続マネージャー**  
+ 既存の接続マネージャーを一覧から選択するか、 **[新規作成]**をクリックして新しい接続を作成します。  
+  
+ **新機能**  
+ **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用して、新しい接続を作成します。  
+  
+ **参照テーブル名**  
+ 一覧から項目を選択することにより、データベースからの参照テーブルまたはビューを選択します。 テーブルまたはビューは、変換元の列のテキストとの比較に使用できる、既存の一覧が含まれた列を含んでいる必要があります。  
+  
+ **エラー出力を構成します。**  
+ [[エラー出力の構成]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理オプションを指定するために使用します。  
+  
+## <a name="term-lookup-transformation-editor-advanced-tab"></a>[用語参照変換エディター]\ ([詳細設定] タブ)
+  **[用語参照変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、参照で大文字と小文字を区別するかどうかを指定できます。  
+  
+### <a name="options"></a>オプション  
+ **[用語参照で大文字と小文字を区別する]**  
+ 参照で大文字と小文字が区別されるかどうかを示します。 既定値は **False**です。  
+  
+ **[エラー出力の構成]**  
+ [[エラー出力の構成]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理オプションを指定するために使用します。  
+  
+## <a name="see-also"></a>参照  
+ [Integration Services のエラーおよびメッセージのリファレンス](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [用語抽出変換](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
+  
+

@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataconversiontrans.f1
+- sql13.dts.designer.dataconversiontransformation.f1
 helpviewer_keywords:
 - converting data types [Integration Services]
 - Data Conversion transformation
@@ -21,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 897651a9257aadeac68a392eeae8b51d0c87de8d
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ad8bb1bcb5ad02be3604ff0899074c4ced10cc96
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="data-conversion-transformation"></a>データ変換の変換
@@ -49,10 +50,44 @@ ms.lasthandoff: 08/03/2017
  この変換は、1 つの入力、1 つの出力、および 1 つのエラー出力をとります。  
   
 ## <a name="related-tasks"></a>関連タスク  
- プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。 SSIS デザイナーでデータ変換の変換を使用する方法については、「 [データ変換の変換を使用してデータを別のデータ型に変換する](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md) 」および「 [[データ変換変換エディター]](../../../integration-services/data-flow/transformations/data-conversion-transformation-editor.md)」をご覧ください。 プログラムによるこの変換のプロパティの設定については、「 [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) 」および「 [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」をご覧ください。  
+ プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。 SSIS デザイナーでデータ変換の変換の使用方法の詳細については、次を参照してください。[データを、データ変換の変換を使用して、異なるデータ型に変換](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)です。 プログラムによるこの変換のプロパティの設定については、「 [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) 」および「 [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」をご覧ください。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  blogs.msdn.com のブログ「 [SSIS 2008 のデータ型の変換手法間のパフォーマンス比較](http://go.microsoft.com/fwlink/?LinkId=220823)」  
+  
+## <a name="data-conversion-transformation-editor"></a>データ変換変換エディター
+  **[データ変換変換エディター]** ダイアログ ボックスを使用すると、変換対象の列や列の変換先のデータ型を選択したり、変換属性を設定したりできます。  
+  
+> [!NOTE]  
+>  データ変換の変換の出力列の **FastParse** プロパティは、 **[データ変換変換エディター]**ではアクセスできませんが、 **[詳細エディター]**を使用して設定できます。 このプロパティの詳細については、「 [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」の「データ変換の変換」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **使用できる入力列**  
+ 変換対象の列のチェック ボックスを使用して選択します。 選択した列が入力列として下のテーブルに追加されます。  
+  
+ **入力列**  
+ 使用できる入力列の一覧から変換対象の列を選択します。 上記のチェック ボックスに、選択内容が反映されます。  
+  
+ **[出力の別名]**  
+ それぞれの新しい列の別名を入力します。 既定では、入力列の名前の後に " **のコピー** " が追加された別名になりますが、固有のわかりやすい名前を選択することもできます。  
+  
+ **データ型**  
+ 一覧から利用可能なデータ型を選択します。 詳細については、「 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
+  
+ **長さ**  
+ 文字列データの列の長さを設定します。  
+  
+ **有効桁数**  
+ 数値データの有効桁数を設定します。  
+  
+ **Scale**  
+ 数値データの小数点以下桁数を設定します。  
+  
+ **コード ページ**  
+ DT_STR 型の列に適したコード ページを選択します。  
+  
+ **[エラー出力の構成]**  
+ [[エラー出力の構成]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスを使用して、エラーの処理方法を指定します。  
   
 ## <a name="see-also"></a>参照  
  [高速解析](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   

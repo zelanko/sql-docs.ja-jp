@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bdb767ed145a95868bb11e5a9fa4facc837d0c07
+ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
+ms.openlocfilehash: 5e1127580ff900077fa3d36abcb339cce57857d2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>どのような &#39; の SQL server 2016 Integration Services
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
- このトピックでは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]で追加または更新された機能について説明します。  
+ このトピックが追加または SQL Server 2016 で更新された機能について説明[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]です。  
   
 ## <a name="improvements-grouped-by-category"></a>カテゴリ別の機能強化  
   
@@ -156,7 +156,7 @@ ms.lasthandoff: 08/03/2017
 ####  <a name="AlwaysOn"></a> SSIS カタログでの Always On 機能のサポート  
  Always On 可用性グループ機能は、データベース ミラーリングに代わる、高可用性と災害復旧のためのエンタープライズ レベルのソリューションです。 可用性グループは、可用性データベースとして知られる、ひとまとまりでフェールオーバーされる別々のユーザー データベース セットのためのフェールオーバー環境をサポートします。 詳細については、「 [AlwaysOn 可用性グループ (SQL Server)](https://msdn.microsoft.com/library/hh510230.aspx)」を参照してください。  
   
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]では、一元化された SSIS カタログ (つまり SSISDB ユーザー データベース) を簡単に配置できる新しい機能が SSIS に導入されています。 SSISDB データベースとそのコンテンツ (プロジェクト、パッケージ、実行ログなど) の高可用性を提供するために、SSISDB データベースを (他のユーザー データベースと同じように) AlwaysOn 可用性グループに追加できます。 フェールオーバーが発生すると、セカンダリ ノードのいずれかが自動的に新しいプライマリ ノードになります。  
+ SQL Server 2016 では、SSIS には、一元化された SSIS カタログ (つまり SSISDB ユーザー データベース) を簡単に配置するのに便利な新しい機能が導入されています。 SSISDB データベースとそのコンテンツ (プロジェクト、パッケージ、実行ログなど) の高可用性を提供するために、SSISDB データベースを (他のユーザー データベースと同じように) AlwaysOn 可用性グループに追加できます。 フェールオーバーが発生すると、セカンダリ ノードのいずれかが自動的に新しいプライマリ ノードになります。  
   
  詳細な概要と SSISDB に対して常に有効にするための詳細な手順については、次を参照してください。 [SSIS カタログ](../integration-services/service/ssis-catalog.md)です。  
 
@@ -193,7 +193,7 @@ ms.lasthandoff: 08/03/2017
  SSIS カタログの新しい **RuntimeLineage** ログ記録レベルは、データ フローの系列情報を追跡するために必要な情報を収集します。 この系列情報を解析して、タスク間の系列の関係をマッピングできます。 ISV と開発者は、この情報を利用して、カスタム系列マッピング ツールを構築できます。 
 
 ####  <a name="CustomLogging"></a> SSIS カタログでの新しいカスタム ログ レベル  
- SSIS カタログの以前のバージョンでは、パッケージを実行するときに、4 つの組み込みログ記録レベル ( **なし、基本、パフォーマンス、または詳細**) から選択できました。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] では、 **RuntimeLineage** ログ記録レベルが追加されています。 さらに、複数のカスタム ログ記録レベルを作成して SSIS カタログに保存し、パッケージを実行するときに、毎回ログ記録レベルを選択できるようになりました。 カスタム ログ記録レベルでは、キャプチャする統計とイベントのみを選択します。 必要に応じて、変数の値、接続文字列、およびタスクのプロパティを確認するために、イベント コンテキストを含めます。 詳細については、「 [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。 
+ SSIS カタログの以前のバージョンでは、パッケージを実行するときに、4 つの組み込みログ記録レベル ( **なし、基本、パフォーマンス、または詳細**) から選択できました。 SQL Server 2016 の追加、 **RuntimeLineage**ログ記録レベル。 さらに、複数のカスタム ログ記録レベルを作成して SSIS カタログに保存し、パッケージを実行するときに、毎回ログ記録レベルを選択できるようになりました。 カスタム ログ記録レベルでは、キャプチャする統計とイベントのみを選択します。 必要に応じて、変数の値、接続文字列、およびタスクのプロパティを確認するために、イベント コンテキストを含めます。 詳細については、「 [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。 
 
 ####  <a name="ErrorColumn"></a> データ フロー内のエラー列の名前  
  エラー出力にエラーが含まれるデータ フロー内の行をリダイレクトすると、出力には、エラーが発生したが列の名前が表示されない列の数値識別子が含まれています。 エラーが発生した列の名前を、さまざまな方法で検索または表示できるようになりました。  
@@ -289,7 +289,7 @@ AU5 の PDW にデータを読み込むための変換先アダプターがリ�
 ### <a name="expanded-connectivity-to-the-cloud"></a>クラウドへの接続性の拡張
 
 ####  <a name="AFP2016"></a> SQL Server 2016 用の Azure Feature Pack for SSIS のリリース  
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]用の Azure Feature Pack for Integration Services がリリースされています。 この機能パックには、Azure データソースとタスクに接続して、Azure の一般的な操作を実行するための接続マネージャーが含まれています。 詳細については、「[Azure Feature Pack for Integration Services &#40;SSIS&#41; (Integration Services 用の Azure Feature Pack &#40;SSIS&#41;)](../integration-services/azure-feature-pack-for-integration-services-ssis.md)」を参照してください。  
+ Integration Services 用 Azure Feature Pack は SQL Server 2016 のリリースされています。 この機能パックには、Azure データソースとタスクに接続して、Azure の一般的な操作を実行するための接続マネージャーが含まれています。 詳細については、「[Azure Feature Pack for Integration Services &#40;SSIS&#41; (Integration Services 用の Azure Feature Pack &#40;SSIS&#41;)](../integration-services/azure-feature-pack-for-integration-services-ssis.md)」を参照してください。  
 
 #### <a name="dynamics"></a> Service Pack 1 でリリースされた Microsoft Dynamics オンライン リソースのサポート
 

@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.cachetrans.f1
+- sql13.dts.designer.cachetranscon.f1
+- sql13.dts.designer.cachetransmap.f1
 helpviewer_keywords:
 - Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c03d2c178b4632b334078c72ab87a11d645fe7da
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 4f1a65ed00262cfc0af0d4c4f117ef022846e26c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="cache-transform"></a>キャッシュ変換
@@ -39,7 +41,7 @@ ms.lasthandoff: 08/03/2017
   
  単一のパッケージ内で同じキャッシュ接続マネージャーにデータを書き込むことができるのは 1 つのキャッシュ変換だけです。 パッケージに複数のキャッシュ変換が含まれている場合、パッケージが実行されたときに最初に呼び出されたキャッシュ変換が接続マネージャーにデータを書き込みます。 それ以降のキャッシュ変換による書き込み操作は失敗します。  
   
- 詳細については、「 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md) 」および「 [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)」を参照してください。  
+ 詳細については、次を参照してください。[キャッシュ接続マネージャー](../../../integration-services/data-flow/transformations/cache-connection-manager.md)です。  
   
 ## <a name="configuration-of-the-cache-transform"></a>キャッシュ変換の構成  
  データをキャッシュ ファイル (.caw) に保存するようにキャッシュ接続マネージャーを構成できます。  
@@ -57,7 +59,22 @@ ms.lasthandoff: 08/03/2017
   
  プロパティは、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] デザイナーから設定できます。 **[詳細エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」を参照してください。  
   
- データ フロー コンポーネントのプロパティの設定方法については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」をご覧ください。  
+ プロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+  
+## <a name="cache-transformation-editor-connection-manager-page"></a>[キャッシュ変換エディター]\ ([接続マネージャー] ページ)
+  **[キャッシュ変換エディター]** ダイアログ ボックスの **[接続マネージャー]** タブを使用すると、既存のキャッシュ接続マネージャーを選択したり、新しいキャッシュ接続マネージャーを作成したりできます。  
+  
+ キャッシュ接続マネージャーの詳細については、「 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **Cache connection manager**  
+ 既存の OLE DB 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
+  
+ **[新規作成]**  
+ 新しい接続を作成するには、[キャッシュ接続マネージャー エディター] ダイアログ ボックスを使用します。  
+  
+ **[編集]**  
+ 既存の接続を編集します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   

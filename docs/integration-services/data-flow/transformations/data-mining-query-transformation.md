@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingquerytrans.f1
+- sql13.dts.designer.dmquerytransformation.miningmodel.f1
+- sql13.dts.designer.dmquerytransformation.query.f1
 helpviewer_keywords:
 - Data Mining Query transformation
 - prediction queries [Integration Services]
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 544f0aaf11e83b9ba2fc0ae5150b85e537998c25
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 7ec5d0d1168e49fb38ce8b58eaa75d6c0d6c51b5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="data-mining-query-transformation"></a>データ マイニング クエリ変換
@@ -38,18 +40,38 @@ ms.lasthandoff: 08/03/2017
   
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[データ マイニング クエリ変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [[データ マイニング クエリ変換エディター] ([マイニング モデル] タブ)](../../../integration-services/data-flow/transformations/data-mining-query-transformation-editor-mining-model-tab.md)  
-  
--   [[データ マイニング クエリ変換エディター] ([マイニング モデル] タブ)](../../../integration-services/data-flow/transformations/data-mining-query-transformation-editor-mining-model-tab.md)  
-  
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- データ フロー コンポーネントのプロパティの設定方法については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+ プロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
+## <a name="data-mining-query-transformation-editor-mining-model-tab"></a>[データ マイニング クエリ変換エディター]\ ([マイニング モデル] タブ)
+  **[データ マイニング クエリ変換エディター]** ダイアログ ボックスの **[マイニング モデル]** タブを使用すると、データ マイニング構造とそのマイニング モデルを選択できます。  
   
+### <a name="options"></a>オプション  
+ **接続**  
+ リスト ボックスを使用して既存の Analysis Services 接続を選択するか、以下に説明する **[新規作成]** ボタンを使用して新しい接続を作成します。  
+  
+ **[新規作成]**  
+ **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用して、新しい接続を作成します。  
+  
+ **マイニング構造**  
+ 使用できるマイニング モデル構造の一覧から選択します。  
+  
+ **[マイニング モデル]**  
+ 選択したデータ マイニング構造に関連付けられているマイニング モデルの一覧を表示します。  
+  
+## <a name="data-mining-query-transformation-editor-query-tab"></a>[データ マイニング クエリ変換エディター]\ ([クエリ] タブ)
+  **[データ マイニング クエリ変換エディター]** ダイアログ ボックスの **[クエリ]** タブを使用すると、予測クエリを作成できます。  
+  
+### <a name="options"></a>オプション  
+ **[データ マイニング クエリ]**  
+ データ マイニング拡張機能 (DMX) クエリを、テキスト ボックスに直接入力します。  
+  
+ **[新しいクエリの作成]**  
+ **[新しいクエリの作成]** をクリックし、グラフィカルなクエリ ビルダーを使用して、データ マイニング拡張機能 (DMX) クエリを作成します。  
+  
+

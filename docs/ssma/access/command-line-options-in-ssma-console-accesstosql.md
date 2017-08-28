@@ -2,7 +2,7 @@
 title: "SSMA コンソール (AccessToSQL) でのコマンド ライン オプション |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/19/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,25 +16,25 @@ ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
 caps.latest.revision: 11
 author: sabotta
 ms.author: carlasab
-manager: lonnyb
+manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9f50d2b9f83758a604aad2fe0f7aed81c0ecd33f
+ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
+ms.openlocfilehash: 827257d90042aa1655545edd9fc20d114952f426
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/21/2017
 
 ---
-# <a name="command-line-options-in-ssma-console-accesstosql"></a>SSMA コンソール (AccessToSQL) でのコマンド ライン オプション
-Microsoft を実行し、SSMA 動作を制御する堅牢な一連のコマンド ライン オプションを提供します。 次のセクションでは、同じを詳しく説明します。  
+# <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA コンソール (AccessToSQL) でのコマンド ライン オプション
+Microsoft は、堅牢な一連の実行および SSMA アクティビティを制御するコマンド ライン オプションを提供します。 次のセクションでは、追加の詳細情報を提供します。  
   
-## <a name="command-line-options-in-ssma-console"></a>SSMA コンソールでのコマンド ライン オプション  
+## <a name="command-line-options-in-the-ssma-console"></a>SSMA コンソールのコマンド ライン オプション  
 コンソールは、コマンドのオプションは、ドキュメントに記載します。  
   
 このセクションの目的で用語 'option' とも呼びます 'switch' です。  
   
-オプションは、小文字は区別されず、いずれかで始めることは '**-**'、'**/**' 文字です。  
+オプションは、小文字は区別されず、いずれかで始めることは、'**-**'または'**/**' 文字です。  
   
-オプションを指定する場合、対応するオプション パラメーターを指定する必須になります。  
+オプションを指定する場合は必須では、対応するオプション パラメーターを指定することです。  
   
 オプション パラメーターは、オプションの文字から空白の領域で区切る必要があります。  
   
@@ -46,21 +46,21 @@ Microsoft を実行し、SSMA 動作を制御する堅牢な一連のコマン�
   
 二重引用符で囲まれた空白を含むフォルダーまたはファイルの名前を指定する必要があります。  
   
-コマンドラインのエントリとエラー メッセージの出力は STDOUT にまたは指定されたファイル内に格納されます。  
+コマンドラインの入力とエラー メッセージの出力は STDOUT にまたは指定されたファイル内に格納されます。  
   
-### <a name="script-file-option-sscript"></a>スクリプト ファイルのオプション: – s/スクリプト  
+### <a name="script-file-option-sscript"></a>ファイルのオプションのスクリプト: – s/スクリプト  
 必須のスイッチでは、スクリプト ファイルのパスと名前は、SSMA によって実行されるコマンドのシーケンスのスクリプトを指定します。  
   
 **構文例:**  
   
 `C:\>SSMAforAccessConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”`  
   
-### <a name="variable-value-file-option-vvariable"></a>– V/変数の変数値のファイル オプション:  
-このファイルには、スクリプト ファイルで使用される変数が構成されています。 これは、省略可能なスイッチです。 変数がない変数ファイルで宣言されているし、スクリプト ファイルで使用される、アプリケーションが、エラーが発生し、コンソールの実行を終了します。  
+### <a name="variable-value-file-option-vvariable"></a>変数の値のファイル オプション: – v/変数  
+変数の値のファイルには、スクリプト ファイルで使用される変数が構成されています。 スイッチは省略できます。 変数がない変数ファイルで宣言されているし、スクリプト ファイルで使用される、アプリケーションが、エラーが発生し、コンソールの実行を終了します。  
   
 **構文例:**  
   
--   変数は、おそらく 1 つで、既定値と該当する場合に、インスタンス固有値を持つ別の複数の変数値ファイルで定義されています。 変数の重複がある場合に、コマンドライン引数で指定された最後の変数ファイルは、基本設定を受け取る。  
+-   変数は、おそらく 1 つで、既定値と別に該当する場合は、インスタンス固有の値の複数の変数値ファイルで定義されています。 変数の重複がある場合に、コマンドラインの引数で指定された最後の変数ファイルは、基本設定を受け取る。  
   
     `C:\>SSMAforAccessConsole.EXE -s`  
   
@@ -68,14 +68,14 @@ Microsoft を実行し、SSMA 動作を制御する堅牢な一連のコマン�
   
     `projects\global_variablevaluefile.xml –v “c:\migrationprojects\instance_variablevaluefile.xml”`  
   
-### <a name="server-connection-file-option-cserverconnection"></a>サーバー接続のファイル オプション: – c/serverconnection  
-このファイルには、各サーバーのサーバー接続情報が含まれています。 各サーバーの定義は、id。 一意なサーバーによって識別されます。 サーバーの Id が接続用のスクリプト ファイルで参照されている関連するコマンド。  
+### <a name="server-connection-file-option-cserverconnection"></a>サーバー接続のファイル オプション: serverconnection/– c  
+このファイルには、各サーバーのサーバー接続情報が含まれています。 各サーバーの定義は、id。 一意なサーバーによって識別されます。 サーバーの Id は、接続に関連するコマンドのスクリプト ファイルで参照されます。  
   
 サーバーの定義は、サーバー接続のファイルやスクリプト ファイルの一部にすることができます。 スクリプト ファイル内のサーバー id は、サーバー接続ファイルに優先されるサーバー id の重複がある場合にします。  
   
 **構文例:**  
   
--   サーバー Id は、スクリプト ファイルで使用して、別のサーバー接続ファイルで定義されている、サーバー接続ファイルは、変数値ファイルで定義されている変数を使用します。  
+-   サーバーの Id は、スクリプト ファイルで使用されます。 別のサーバー接続ファイルで定義されています。 このファイルには、変数値ファイルで定義されている変数が使用されます。  
   
     `C:\>SSMAforAccessConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –v`  
   
@@ -87,12 +87,12 @@ Microsoft を実行し、SSMA 動作を制御する堅牢な一連のコマン�
   
     `C:\>SSMAforAccessConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”`  
   
-### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 出力のオプション: x/xmloutput [xmloutputfile]  
+### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML の出力オプション:-x/xmloutput [xmloutputfile]  
 このコマンドはコンソールにするか、xml ファイルを xml 形式でコマンドの出力メッセージを出力するために使用されます。  
   
-2 つのオプション使用できるが、xmloutput viz。.。  
+2 つのオプションあります xmloutput、つまり。  
   
--   Xmloutput スイッチの後にファイル パスが指定した場合は、ファイルに出力がリダイレクトされます。  
+-   Xmloutput スイッチの後にファイル パスを指定する場合は、ファイルに出力がリダイレクトされます。  
   
     **構文例:**  
   
@@ -106,8 +106,8 @@ Microsoft を実行し、SSMA 動作を制御する堅牢な一連のコマン�
   
     `C:\>SSMAforAccessConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –xmloutput`  
   
-### <a name="log-file-option-llog"></a>– L/ログのログ ファイルのオプション:  
-コンソール アプリケーションでのすべての SSMA 操作は、ログ ファイルに記録を取得します。 これは、省略可能なスイッチです。 ログ ファイルとそのパスをコマンドラインで指定する場合、ログが指定された場所に生成を取得します。 それ以外の場合、これは既定の場所で生成されたを取得します。  
+### <a name="log-file-option-llog"></a>ログ ファイルのオプション: – l/ログ  
+コンソール アプリケーションでのすべての SSMA 操作は、ログ ファイルに記録され、スイッチは省略可能です。 ログ ファイルとそのパスをコマンドラインで指定する場合、ログが指定された場所に生成を取得します。 それ以外の場合、これは既定の場所で生成されたを取得します。  
   
 **構文例:**  
   
@@ -116,7 +116,7 @@ Microsoft を実行し、SSMA 動作を制御する堅牢な一連のコマン�
 `“C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –l c:\SsmaProjects\migration1.log`  
   
 ### <a name="project-environment-folder-option-eprojectenvironment"></a>プロジェクトの環境のフォルダー オプション: – e/projectenvironment  
-これは、環境設定のプロジェクト フォルダーに現在の SSMA プロジェクトを示します。 このスイッチは省略できます。  
+このオプションのスイッチは、環境設定のプロジェクト フォルダーに現在の SSMA プロジェクトを表します。  
   
 **構文例:**  
   
@@ -128,14 +128,14 @@ Microsoft を実行し、SSMA 動作を制御する堅牢な一連のコマン�
 |-|  
 ||  
   
-### <a name="secure-password-option-psecurepassword"></a>セキュリティで保護されたパスワードのオプション: – p/securepassword  
-このオプションでは、サーバー接続の暗号化されたパスワードを指定します。 その他のすべてのオプションとは異なる: オプションで、スクリプトの実行も移行関連のあらゆる作業に役立ちますが、移行プロジェクトで使用するサーバー接続のパスワードの暗号化の管理を支援します。  
+### <a name="secure-password-option-psecurepassword"></a>Password オプションをセキュリティで保護された: – p/securepassword  
+このオプションでは、サーバー接続の暗号化されたパスワードを指定します。 移行プロジェクトで使用するサーバー接続のパスワードの暗号化を管理できるため、任意のスクリプトを実行したり、任意の移行関連のアクティビティでは、ヘルプしないその他のすべてのオプションとは異なります。  
   
-コマンド ライン パラメーターとして、他のオプションやパスワードを入力することはできません。 それ以外の場合、エラーが発生します。 詳細についてを参照してください、[管理パスワード](http://msdn.microsoft.com/en-us/b099d0f9-dd37-4c87-8b6f-ed0177881ea4)セクションです。  
+コマンド ライン パラメーターとして、他のオプションやパスワードを入力することはできません。 それ以外の場合、エラーが発生します。 詳細については、次を参照してください。、[管理パスワード](http://msdn.microsoft.com/b099d0f9-dd37-4c87-8b6f-ed0177881ea4)セクションです。  
   
-次のサブ オプションはサポートされて`–p/securepassword`:  
+次のサブオプションがサポートされて`–p/securepassword`:  
   
--   パスワードを追加するには、指定したサーバー ID に対して、またはサーバー接続ファイルで定義されているすべてのサーバー Id の記憶域を保護します。 既に存在する場合、更新プログラムの下のオプションのパスワードを上書きします。  
+-   パスワードを追加または既存のパスワードを指定したサーバー ID に対して、またはサーバー接続ファイルで定義されているすべてのサーバー Id の保護された記憶域に更新します。  
   
     `-p|-securepassword -a|add    {"<server_id>[, .n]"|all}``-c|-serverconnection <server-connection-file> [-v|variable <variable-value-file>]``[-o|overwrite]`  
   
@@ -159,21 +159,21 @@ Microsoft を実行し、SSMA 動作を制御する堅牢な一連のコマン�
   
     コンマ区切り記号を使用して、複数のサーバー Id を指定できます。  
   
-### <a name="help-option-help"></a>ヘルプ オプション: –?/help  
+### <a name="help-option-help"></a>Help オプション: –?/help  
 SSMA コンソールのオプションの構文の概要が表示されます。  
   
 `C:\>SSMAforAccessConsole.EXE -?`  
   
-SSMA コンソール コマンド ライン オプションの表形式の表示を参照してください[付録 - 1 & #40 です。AccessToSQL &#41;](../../ssma/access/appendix-1-accesstosql.md).  
+SSMA コンソールのコマンド ライン オプションの表形式の表示を参照してください[付録 - 1 & #40 です。AccessToSQL &#41;](../../ssma/access/appendix-1-accesstosql.md).  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>SecurePassword ヘルプ オプション: – securepassword-?/help  
 SSMA コンソールのオプションの構文の概要が表示されます。  
   
 `C:\>SSMAforAccessConsole.EXE -securepassword -?`  
   
-SSMA コンソール コマンド ライン オプションの表形式の表示を参照してください[付録 - 1 & #40 です。AccessToSQL &#41;](../../ssma/access/appendix-1-accesstosql.md)  
+SSMA コンソールのコマンド ライン オプションの表形式の表示を参照してください[付録 - 1 & #40 です。AccessToSQL &#41;](../../ssma/access/appendix-1-accesstosql.md)  
   
-### <a name="next-step"></a>次の手順  
+### <a name="next-steps"></a>次の手順  
 次の手順は、プロジェクトの要件によって異なります。  
   
 1.  パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[パスワードの管理 & #40 です。AccessToSQL &#41;](../../ssma/access/managing-passwords-accesstosql.md).  

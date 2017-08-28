@@ -14,19 +14,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8e2d26fd9ce79fc8c47c7499313648d565ae1b97
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 353e7cf5cef8430303e3ee6fbefc92db08f5f733
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性グループの構成の高可用性とデータの保護
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 この記事では、Linux サーバー上の SQL Server Always On 可用性グループのサポートされる展開構成を表示します。 可用性グループには、高可用性とデータ保護がサポートしています。 障害の自動検出、自動フェールオーバー、およびフェールオーバー後に透過的な再接続は、高可用性を実現します。 同期されたレプリカは、データ保護を提供します。 
 
 >[!NOTE]
->高可用性とデータ保護、だけでなく、可用性グループことができますも災害復旧を実現、クロス プラットフォームの移行、およびスケール アウトを読み取る。 主に、高可用性とデータ保護の実装について説明します。 
+>高可用性とデータ保護、だけでなく、可用性グループことができますも災害復旧を実現、クロス プラットフォームの移行、およびスケール アウトを読み取る。主に、高可用性とデータ保護の実装について説明します。 
 
 Windows Server フェールオーバー クラスタ リングで、一般的な構成の高可用性を使用する 2 つのレプリカを同期し、[ファイル共有監視](http://technet.microsoft.com/library/cc731739.aspx)です。 ファイル共有監視は、たとえば、可用性グループの構成で、同期の状態と、レプリカのロールを検証します。 この構成により、セカンダリ レプリカのフェールオーバー ターゲットがある最新のデータと可用性グループ構成の変更として選択します。 
 
@@ -74,7 +75,7 @@ Linux 用の現在の高可用性ソリューションを Windows Server フェ�
 
 ## <a name="two-synchronous-replicas"></a>2 つの同期レプリカ
 
-この構成は、データの保護を実現します。 その他の可用性グループ構成のように読み取りのスケール アウトを有効にできます。 2 つの同期レプリカの構成は、自動の高可用性を提供しません。 
+この構成は、データの保護を実現します。 その他の可用性グループ構成のように読み取りのスケール アウトを有効にできます。2 つの同期レプリカの構成は、自動の高可用性を提供しません。 
 
 ![2 つの同期レプリカ][1]
 
@@ -114,7 +115,7 @@ SQL Server 2017 CTP 1.4 追加`sequence_number`に`sys.availability_groups`レ�
 このシナリオでは、2 つのレプリカは、フェールオーバーをトリガーする応答する必要です。 最新の状態にして、応答、プライマリ レプリカの停止後に自動フェールオーバーを正常に実行、両方のセカンダリ レプリカが必要な事前の通知を昇格します。 Online と同期する場合は、同じシーケンス番号があります。 可用性グループを使用して、それらの 1 つ昇格させます。 応答するセカンダリ レプリカの 1 つだけの場合、事前昇格アクション、リソース エージェントは、応答したセカンダリが最高の sequence_number され、フェールオーバーがトリガーされないことを保証ことはできません。
 
 >[!IMPORTANT]
->ときに`required_synchronized_secondaries_to_commit`0 はデータ損失のリスクがします。 プライマリ レプリカの停止中に、リソースのエージェントに自動的にフェールオーバーは発生しません、します。 プライマリへの回復を待つか、手動フェールオーバーを使用することができます`FORCE_FAILOVER_ALLOW_DATA_LOSS`です。
+>`required_synchronized_secondaries_to_commit` が 0 の場合、データ損失のリスクがあります。 プライマリ レプリカの停止中に、リソースのエージェントに自動的にフェールオーバーは発生しません、します。 プライマリへの回復を待つか、手動フェールオーバーを使用することができます`FORCE_FAILOVER_ALLOW_DATA_LOSS`です。
 
 既定の動作をオーバーライドして、可用性グループ リソースも設定することもできます`required_synchronized_secondaries_to_commit`自動的にします。
 

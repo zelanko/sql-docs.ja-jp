@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.audittrans.f1
+- sql13.dts.designer.audittransformation.f1
 helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
@@ -20,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c495bd9c116e10877f79f165f0f582938b0347ad
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 253c8abb921dbd60e571a892f108d283b111e70c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="audit-transformation"></a>監査変換
@@ -51,14 +52,34 @@ ms.lasthandoff: 08/03/2017
   
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[監査変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [Audit Transformation Editor](../../../integration-services/data-flow/transformations/audit-transformation-editor.md)」を参照してください。  
-  
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- データ フロー コンポーネントのプロパティの設定方法については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+ プロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+  
+## <a name="audit-transformation-editor"></a>監査変換エディター
+  監査変換により、パッケージが実行される環境に関するデータをパッケージ内のデータ フローに含めることができます。 たとえば、パッケージ、コンピューター、および演算子の名前をデータ フローに追加できます。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、この情報を提供するシステム変数が含まれています。  
+  
+### <a name="options"></a>オプション  
+ **[出力列の名前]**  
+ 監査情報を格納する、新しい出力列の名前を入力します。  
+  
+ **[監査の種類]**  
+ 監査情報を得るために使用できるシステム変数を選択します。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|**[実行インスタンスの GUID]**|パッケージの実行インスタンスを個別に識別する GUID を挿入します。|  
+|**[パッケージ ID]**|パッケージを個別に識別する GUID を挿入します。|  
+|**パッケージ名**|パッケージ名を挿入します。|  
+|**[バージョン ID]**|パッケージのバージョンを個別に識別する GUID を挿入します。|  
+|**[実行開始時刻]**|パッケージの実行が開始される時刻を挿入します。|  
+|**コンピューター名**|パッケージを起動したコンピューターの名前を挿入します。|  
+|**ユーザー名**|パッケージを起動したユーザーのログイン名を挿入します。|  
+|**[タスク名]**|監査変換が関連付けられているデータ フロー タスクの名前を挿入します。|  
+|**[タスク ID]**|監査変換が関連付けられているデータ フロー タスクを個別に識別する GUID を挿入します。|  
   
   

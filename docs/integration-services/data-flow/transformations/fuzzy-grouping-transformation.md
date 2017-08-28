@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.fuzzygroupingtrans.f1
+- sql13.dts.designer.fuzzygroupingtransformation.connection.f1
+- sql13.dts.designer.fuzzygroupingtransformation.columns.f1
+- sql13.dts.designer.fuzzygroupingtransformation.advanced.f1
 helpviewer_keywords:
 - cleaning data
 - comparing data
@@ -30,10 +33,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 009cdda72a100f887adb81e6f526b9a3ebe7651f
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 6fceec90818b05ae23c04f90cff8f68c8c7c3c42
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="fuzzy-grouping-transformation"></a>あいまいグループ化変換
@@ -85,14 +88,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>あいまいグループ化変換の構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[あいまいグループ化変換エディター]** ダイアログ ボックスを使用して設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [[あいまいグループ化変換エディター] &#40;[接続マネージャー] タブ&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
-  
--   [[あいまいグループ化変換エディター] &#40;[列] タブ&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-columns-tab.md)  
-  
--   [[あいまいグループ化変換エディター] &#40;[詳細設定] タブ&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-advanced-tab.md)  
-  
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -105,6 +100,85 @@ ms.lasthandoff: 08/03/2017
 -   [あいまいグループ化変換を使用して類似のデータ行を識別する](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
 -   [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>[あいまいグループ化変換エディター]\ ([接続マネージャー] タブ)
+  **[あいまいグループ化変換エディター]** ダイアログ ボックスの **[接続マネージャー]** タブを使用すると、既存の接続を選択したり新しい接続を作成したりできます。  
+  
+> [!NOTE]  
+>  接続によって指定されるサーバーでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]が実行されている必要があります。 あいまいグループ化変換では、変換に対する完全な入力と同じサイズの一時データ オブジェクトが tempdb に作成されます。 変換の実行中は、これらの一時オブジェクトに対してサーバー クエリが発行されます。 この操作は、サーバーの全体のパフォーマンスに影響を与える可能性があります。  
+  
+### <a name="options"></a>オプション  
+ **OLE DB 接続マネージャー**  
+ 既存の OLE DB 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
+  
+ **[新規作成]**  
+ **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用して、新しい接続を作成します。  
+  
+## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>[あいまいグループ化変換エディター]\ ([列] タブ)
+  **[あいまいグループ化変換エディター]** ダイアログ ボックスの **[列]** タブを使用すると、重複する値を持つ行をグループ化するための列を指定できます。  
+  
+### <a name="options"></a>オプション  
+ **使用できる入力列**  
+ 重複する値を持つ行をグループ化するために使用する入力列を、この一覧から選択します。  
+  
+ **名前**  
+ 使用できる入力列の名前を表示します。  
+  
+ **[パススルー]**  
+ 入力列を変換の出力に含めるかどうかを選択します。 グループ化に使用されるすべての列は、自動的に出力にコピーされます。 この列を選択することによって、追加の列を含めることができます。  
+  
+ **入力列**  
+ **[使用できる入力列]** の一覧で選択されている入力列の 1 つを選択します。  
+  
+ **[出力の別名]**  
+ 対応する出力列に付けるわかりやすい名前を入力します。 既定では、出力列名は入力列名と同じになります。  
+  
+ **[グループ出力の別名]**  
+ グループ化された重複の標準の値を含む列に付けるわかりやすい名前を入力します。 この出力列の既定の名前は、入力列名に _clean を付けた名前です。  
+  
+ **[一致の種類]**  
+ あいまい一致と完全一致のどちらかを指定します。 あいまい一致の場合、行は、すべての列にわたって行が十分に類似している場合に重複していると見なされます。 さらに、特定の列に対して完全一致を指定した場合、完全一致列内で同一の値を含む行だけが、重複の可能性があると見なされます。 したがって、特定の列にエラーや矛盾がないことがわかっている場合は、その列に対して完全一致を指定して、他の列でのあいまい一致の精度を高めることができます。  
+  
+ **[最小類似]**  
+ スライダーを使用して、類似のしきい値を結合レベルで設定します。 値を 1 に近づけるほど、参照元の値と参照先の値との類似性が高くなければ一致しないと見なされます。 しきい値を大きくすると、照合の対象となるレコードが少なくなるため、照合の速度が向上します。  
+  
+ **[類似出力の別名]**  
+ 選択された結合の類似スコアを格納する、新しい出力列に付ける名前を指定します。 この値を空にした場合、出力列は作成されません。  
+  
+ **[数字]**  
+ 列データを比較する際の先頭および末尾の数字の有意性を指定します。 たとえば、先頭の数字が有意である場合、"123 Main Street" は "456 Main Street" と同じグループとは見なされません。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|**[Neither]**|先頭および末尾の数字は考慮されません。|  
+|**[Leading]**|先頭の数字のみが考慮されます。|  
+|**[Trailing]**|末尾の数字のみが考慮されます。|  
+|**[Leading and Trailing]**|先頭および末尾の両方の数字が考慮されます。|  
+  
+ **[比較フラグ]**  
+ 文字列比較オプションについては、「 [文字列データの比較](../../../integration-services/data-flow/comparing-string-data.md)」を参照してください。  
+  
+## <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>[あいまいグループ化変換エディター]\ ([詳細設定] タブ)
+  **[あいまいグループ化変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、入力列と出力列の指定、類似性のしきい値の設定、区切り記号の定義ができます。  
+  
+> [!NOTE]  
+>  あいまいグループ化変換の **Exhaustive** プロパティおよび **MaxMemoryUsage** プロパティは、 **[あいまいグループ化変換エディター]**ではアクセスできませんが、 **[詳細エディター]**を使用して設定できます。 これらのプロパティの詳細については、「 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」の「あいまいグループ化変換」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **[入力キー列名]**  
+ 各入力行の一意の識別子を含む、出力列の名前を指定します。 **[_key_in]** 列は各行を一意に識別する値を持ちます。  
+  
+ **[出力キー列名]**  
+ 重複する行グループの正規行の一意識別子を含む、出力列の名前を指定します。 **[_key_out]** 列は、正規データ行の **[_key_in]** 値に対応します。  
+  
+ **[類似性スコアの列名]**  
+ 類似性スコアを含む列の名前を指定します。 類似性スコアは、正規行に対する入力行の類似性を示す、0 ～ 1 の間の値です。 スコアが 1 に近いほど、その行と正規行との類似性が高いことを示しています。  
+  
+ **[類似性のしきい値]**  
+ スライダーを使用して類似性のしきい値を設定します。 しきい値が 1 に近づくと、より類似性が高い行どうしのみが重複として扱われるようになります。 しきい値を増加させると候補レコードとして処理対象になる数が少なくなるため、一致処理の速度が向上します。  
+  
+ **[トークン区切り記号]**  
+ 変換により、トークンにするデータの区切り記号の既定のセットが提供されます。必要に応じて、一覧を編集して区切り記号の追加や削除を行うことができます。  
   
 ## <a name="see-also"></a>参照  
  [あいまい参照変換](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

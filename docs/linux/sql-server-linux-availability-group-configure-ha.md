@@ -10,18 +10,19 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3a94bf7646143d687a7300c8ab2a66c3caa2d8d9
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 6ceceaa00b2db22b5f1be9a6e8305da5b4cea49b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="configure-always-on-availability-group-for-sql-server-on-linux"></a>Linux 上の SQL Server の Always On 可用性グループを構成します。
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 この記事では、Linux 上の高可用性の可用性グループに SQL サーバーを常に作成する方法について説明します。 可用性グループの 2 つの構成の種類があります。 A*高可用性*構成では、クラスター マネージャーを使用して、ビジネス継続性を提供します。 この構成では、読み取りのスケール アウト レプリカを含めることもできます。 このドキュメントでは、可用性グループの高可用性構成を作成する方法について説明します。
 
-作成することも、*読み取りのスケール アウト*クラスター マネージャーがない可用性グループです。 のみ、この構成は、パフォーマンスのスケール アウトの読み取り専用レプリカを提供します。 高可用性は提供されません。 読み取りのスケール アウト可用性グループを作成するを参照してください。 [Linux に SQL Server のスケール アウトの可用性グループを読み取る構成](sql-server-linux-availability-group-configure-rs.md)です。
+作成することも、*読み取りのスケール アウト*クラスター マネージャーがない可用性グループです。 のみ、この構成は、パフォーマンスのスケール アウトの読み取り専用レプリカを提供します。高可用性は提供されません。 読み取りのスケール アウト可用性グループを作成するを参照してください。 [Linux に SQL Server のスケール アウトの可用性グループを読み取る構成](sql-server-linux-availability-group-configure-rs.md)です。
 
 高可用性とデータ保護を保証する構成では、2 または 3 つの同期コミット レプリカが必要です。 次の 3 つの同期レプリカ、可用性グループが自動的に回復場合でも、1 つのサーバーは使用できません。 詳細については、次を参照してください。[可用性グループの構成の高可用性とデータ保護](sql-server-linux-availability-group-ha.md)です。 
 

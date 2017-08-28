@@ -11,6 +11,11 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.scriptcomponentdetails.f1
+- sql13.dts.designer.scriptcomponent.f1
+- sql13.dts.designer.scriptcomponent.connections.f1
+- sql13.dts.designer.scriptcomponent.inputcolumn.f1
+- sql13.dts.designer.scriptcomponent.columnproperties.f1
+- sql13.dts.designer.scriptcomponent.script.f1
 helpviewer_keywords:
 - Script transformation
 - scripts [Integration Services], transformations
@@ -22,10 +27,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9411fdeb050a63c94c9904cd3f1b6e8aefd6b0a
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: e7b0923968137a76b68d0324223ffbb61e7443b9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="script-component"></a>スクリプト コンポーネント
@@ -92,16 +97,6 @@ ms.lasthandoff: 08/03/2017
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
 ### <a name="configuring-the-script-component-in-the-designer"></a>デザイナーでのスクリプト コンポーネントの構成  
- **[スクリプト変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [スクリプト変換エディター ([入力列] ページ)](../../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)  
-  
--   [スクリプト変換エディター ([入力および出力] ページ)](../../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)  
-  
--   [スクリプト変換エディター ([スクリプト] ページ)](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)  
-  
--   [スクリプト変換エディター ([接続マネージャー] ページ)](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)  
-  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
 -   [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
@@ -116,6 +111,113 @@ ms.lasthandoff: 08/03/2017
  プロパティの設定方法の詳細については、次のトピックのいずれかを参照してください。  
   
 -   [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="select-script-component-type"></a>[スクリプト コンポーネントの種類を選択]
+  **[スクリプト コンポーネントの種類を選択]** ダイアログ ボックスを使用すると、変換元、変換、または変換先として構成済みのスクリプト変換を作成するかどうかを指定できます。  
+  
+ スクリプト コンポーネントの詳細については、次を参照してください。[スクリプト コンポーネント エディターで、スクリプト コンポーネントを構成する](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)です。 スクリプト コンポーネントのプログラミングの詳細については、「 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **[変換元]**、 **[変換先]**、または **[変換]** のどれを選択するかに応じて、スクリプト変換の構成とスクリプト変換エディターのページが変わります。  
+  
+## <a name="script-transformation-editor-connection-managers-page"></a>[スクリプト変換エディター]\ ([接続マネージャー] ページ)
+  **[スクリプト変換エディター]** の **[接続マネージャー]** ページを使用すると、スクリプトで使用される接続を指定できます。  
+  
+ スクリプト コンポーネントの詳細については、次を参照してください。[スクリプト コンポーネント エディターで、スクリプト コンポーネントを構成する](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)です。 スクリプト コンポーネントのプログラミングの詳細については、「 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **接続マネージャー**  
+ スクリプトで使用できる接続の一覧を表示します。  
+  
+ **名**  
+ 接続を表す一意な名前を入力します。  
+  
+ **接続マネージャー**  
+ 使用できる接続マネージャーの一覧から選択するか選択**\<新しい接続 >**を開くには、 **SSIS 接続マネージャーの追加** ダイアログ ボックス。  
+  
+ **Description**  
+ 接続の説明を入力します。  
+  
+ **追加**  
+ **[接続マネージャー]** の一覧に、他の接続を追加します。  
+  
+ **削除します。**  
+ **[接続マネージャー]** の一覧から、選択した接続を削除します。  
+  
+## <a name="script-transformation-editor-input-columns-page"></a>[スクリプト変換エディター]\ ([入力列] ページ)
+  **[スクリプト変換エディター]** ダイアログ ボックスの **[入力列]** ページを使用すると、入力列のプロパティを設定できます。  
+  
+> [!NOTE]  
+>  ソース コンポーネントでは、出力はあっても入力はないため、 **[入力列]** ページはソース コンポーネントには表示されません。  
+  
+ スクリプト コンポーネントの詳細については、次を参照してください。[スクリプト コンポーネント エディターで、スクリプト コンポーネントを構成する](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)です。 スクリプト コンポーネントのプログラミングの詳細については、「 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **[入力名]**  
+ 使用できる入力の一覧から選択します。  
+  
+ **使用できる入力列**  
+ チェック ボックスを使用して、スクリプト変換に使用する列を指定します。  
+  
+ **入力列**  
+ 各行に対して使用できる入力列の一覧から選択します。 選択内容が **[使用できる入力列]**テーブルのチェック ボックスに反映されます。  
+  
+ **[出力の別名]**  
+ 各出力列の別名を入力します。 既定は入力列の名前です。一意のわかりやすい名前を付けることもできます。  
+  
+ **[使用法の種類]**  
+ スクリプト変換で各列を **ReadOnly** または **ReadWrite**として扱うかどうかを指定します。  
+  
+## <a name="script-transformation-editor-inputs-and-outputs-page"></a>[スクリプト変換エディター]\ ([入力および出力] ページ)
+  **[スクリプト変換エディター]** ダイアログ ボックスの **[入力および出力]** ページを使用すると、スクリプト変換の入力および出力を追加、削除、構成できます。  
+  
+> [!NOTE]  
+>  基になるコンポーネントには出力はありますが、入力はありません。変換先のコンポーネントには入力はありますが、出力はありません。 変換には入力と出力の両方があります。  
+  
+ スクリプト コンポーネントの詳細については、次を参照してください。[スクリプト コンポーネント エディターで、スクリプト コンポーネントを構成する](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)です。 スクリプト コンポーネントのプログラミングの詳細については、「 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **入力と出力**  
+ 左側で入力または出力を選択すると、右側の表にプロパティが表示されます。 編集に使用できるプロパティは、選択内容によって異なります。 表示されるプロパティの多くは読み取り専用です。 各プロパティの詳細については、次のトピックを参照してください。  
+  
+ [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+  
+ [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
+  
+ **出力を追加します。**  
+ 追加の出力を一覧に追加します。  
+  
+ **列を追加します。**  
+ 新しい出力列を格納するフォルダーを選択して **[列の追加]**をクリックすると、列が追加されます。  
+  
+ **出力を削除します。**  
+ 出力を選択した後、 **[出力の削除]**をクリックするとその出力が削除されます。  
+  
+ **列を削除します。**  
+ 列を選択した後、 **[列の削除]**をクリックするとその列が削除されます。  
+  
+## <a name="script-transformation-editor-script-page"></a>[スクリプト変換エディター]\ ([スクリプト] ページ)
+  **[スクリプト変換エディター]** ダイアログ ボックスの **[スクリプト]** タブを使用すると、スクリプトおよび関連プロパティを指定できます。  
+  
+ スクリプト コンポーネントの詳細については、次を参照してください。[スクリプト コンポーネント エディターで、スクリプト コンポーネントを構成する](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)です。 スクリプト コンポーネントのプログラミングの詳細については、「 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **プロパティ**  
+ スクリプト変換のプロパティを表示および変更します。 表示されるプロパティの多くは読み取り専用です。 以下のプロパティを変更できます。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|**Description**|スクリプト変換の目的を記述します。|  
+|**LocaleID**|ロケールを指定して、順序付けおよび日時の変換に関する地域固有の情報を提供します。|  
+|**名前**|わかりやすいコンポーネント名を入力します。|  
+|**[ValidateExternalMetadata]**|スクリプト変換において、デザイン時に外部データ ソースに対して列のメタデータを検証するかどうかを示します。 値 **false** を設定した場合、検証は実行時まで延期されます。|  
+|**[ReadOnlyVariables]**|スクリプト変換が読み取り専用でアクセスする変数の、コンマ区切りの一覧を入力します。<br /><br /> 注: 変数名では大文字と小文字が区別されます。|  
+|**[ReadWriteVariables]**|スクリプト変換が読み取り/書き込み用にアクセスする変数の、コンマ区切りの一覧を入力します。<br /><br /> 注: 変数名では大文字と小文字が区別されます。|  
+|**[ScriptLanguage]**|スクリプト コンポーネントが使用するスクリプト言語を選択します。<br /><br /> スクリプト コンポーネントとスクリプト タスクの既定のスクリプト言語を設定するには、 **[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。|  
+|**[UserComponentTypeName]**|指定します、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost>クラスおよび**Microsoft.SqlServer.TxScript**をサポートするアセンブリ、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インフラストラクチャです。|  
+  
+ **[スクリプトの編集]**  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) を使用して、スクリプトを作成または変更します。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

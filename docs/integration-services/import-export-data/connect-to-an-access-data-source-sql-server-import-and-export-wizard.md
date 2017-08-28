@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b2a5deb6e6ec95e6f6707abe9ad85374b2334e05
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 71bb3914e31259bc95a1116c2db03708c0442e8c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Access データ ソース (SQL Server インポートおよびエクスポート ウィザード) への接続します。
@@ -44,9 +44,7 @@ Microsoft Access データベースへの接続例を次のスクリーン シ�
 |Microsoft Access (Jet データベース エンジン)|Office 2007 より前の office バージョン|
 
 > [!IMPORTANT]
-> ダウンロードして、選択したアクセスのバージョンに接続する追加のファイルをインストールする必要があります。 参照してください[アクセスへの接続に必要なファイルを取得](#officeDownloads)の詳細については、このページにします。
-
-バージョンを指定するときに問題がある場合は、以前のバージョンでも、別のバージョンを指定してください。 たとえば、Microsoft Office 365 サブスクリプションがあるために、Office 2016 データ プロバイダーをインストールすることができません。 アクセス 2016年と Excel 2016 データ プロバイダーは、Microsoft Office のデスクトップ バージョンにのみインストールできます。 この場合、アクセス 2016年ではなく Access 2013 を指定できます。 2 つのバージョンのプロバイダーは、機能的に等価です。 Office 2016 ランタイムのこのような制限に記載されて[このブログの投稿](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/)です。
+> ダウンロードして Access データベースに接続する追加ファイルをインストールする必要があります。 参照してください[アクセスへの接続に必要なファイルを取得](#officeDownloads)の詳細については、このページにします。
 
  **[ファイル名]**  
 Access ファイルのパスとファイル名を指定します。 たとえば、 **c:\\MyData.mdb** 、ローカル コンピューター上のファイルのまたは **\\ \\Sales\\データベース\\Northwind.mdb**ネットワーク共有上のファイルにします。 または、**[参照]** をクリックします。 
@@ -70,20 +68,20 @@ Access ファイルのパスとファイル名を指定します。 たとえば
 
 ## <a name="i-dont-see-access-in-the-list-of-data-sources"></a>データ ソースの一覧で、アクセスが表示されません。
 アクセスは、データ ソースの一覧に表示されない場合、は、ウィザードを実行して、64 ビットか。 Excel および Access のプロバイダーは、通常、32 ビットし、64 ビットのウィザードでは表示されません。 代わりに 32 ビットのウィザードを実行します。
-  
+
+> [!NOTE]
+> 64 ビット バージョンの SQL Server インポートおよびエクスポート ウィザードを使用するのには、SQL Server をインストールする必要があります。 SQL Server Data Tools (SSDT) および SQL Server Management Studio (SSMS) は 32 ビット アプリケーションであり、32 ビット バージョンのウィザードを含む、32 ビット ファイルのインストールのみです。
+
 ## <a name="officeDownloads"></a>Access に接続する必要があるファイルを取得します。  
-Microsoft Office などデータ ソース、Excel、アクセスがまだインストールしていない場合の接続コンポーネントをダウンロードする必要があります。
+まだインストールしていない場合に、Access や Excel をなど、Microsoft Office のデータ ソースに接続コンポーネントをダウンロードする必要があります。 最新バージョンの Access や Excel の両方のファイルをここで、接続コンポーネントのダウンロード: [Microsoft Access データベース エンジン 2016 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=54920)です。
+  
+最新のバージョンのコンポーネントは、以前のバージョンの Access によって作成されたファイルを開くことができます。
 
-以前のバージョンのプログラムで作成したファイルは、新しいバージョンのコンポーネントで開くことができます。 多くの場合、以前のバージョンのコンポーネントは以降のバージョンのプログラムによって作成されるファイルのも開くことができます。 たとえば場合、Office 2016 コンポーネントをインストールすることはできません、Office 2013 コンポーネント代わりに使用します。 2 つのバージョンのプロバイダーは、機能的に等価です。 Office 2016 ランタイムのこのような制限に記載されて[このブログの投稿](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/)です。
+コンピューターには、Office の 32 ビット バージョンが存在する場合、コンポーネントの 32 ビット バージョンをインストールする必要があるし、およびも 32 ビット モードでパッケージを実行することを確認する必要があります。
 
-コンピューターが 32 ビット バージョンの Office - これは 64 ビット コンピューター上であっても、一般的な場合は、32 ビット バージョンのコンポーネントをインストールする必要があります。 また、32 ビットのウィザードを実行するか、または 32 ビット モードでウィザードが作成される SQL Server Integration Services パッケージを実行する必要があります。
+Office 365 サブスクリプションがある場合は、し、Microsoft Access 2016 ランタイムではなく、Access データベース エンジン 2016 再頒布可能パッケージをダウンロードすることを確認します。 インストーラーを実行するときに、Office 実行するための コンポーネントと、ダウンロード サイド バイ サイドをインストールすることはできません、エラー メッセージを参照してください可能性があります。 このエラー メッセージをバイパスするには、コマンド プロンプト ウィンドウを開きを実行している quiet モードでインストールを実行します。 します。EXE ファイルと共にダウンロードした、`/quiet`スイッチします。 例:
 
-|Microsoft Office のバージョン|ダウンロード|  
-|------------------------------|--------------|  
-|2016|[Microsoft Access 2016 Runtime](https://www.microsoft.com/download/details.aspx?id=50040)|
-|2013|[Microsoft Access 2013 Runtime](http://www.microsoft.com/download/details.aspx?id=39358)|
-|2010|[Microsoft Access 2010 Runtime](https://www.microsoft.com/download/details.aspx?id=10910)|  
-|2007|[2007 Office system ドライバー: データ接続コンポーネント](https://www.microsoft.com/download/details.aspx?id=23734)|    
+`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
 ## <a name="database_password"></a>パスワードで保護されたデータベース ファイルですか。
 場合によっては、Access データベースがパスワードで保護されたが、ワークグループ情報ファイルが使用されていません。 すべてのユーザーは、同じパスワードを指定する必要があるが、ユーザー名を入力する必要はありません。 データベース パスワードを指定するには、次のように操作します。

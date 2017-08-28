@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.unpivottrans.f1
+- sql13.dts.designer.unpivottransformation.f1
 helpviewer_keywords:
 - Unpivot transformation
 - more normalized data set [Integration Services]
@@ -22,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d491bb19b4eb86bd0fe75a7b8ca8e7b6e5d226b5
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 62a84ccfd5fdf3e6b439388e6175804b567f4be3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="unpivot-transformation"></a>ピボット解除変換
@@ -48,10 +49,6 @@ ms.lasthandoff: 08/03/2017
   
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[ピボット解除変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [[ピボット解除変換エディター]](../../../integration-services/data-flow/transformations/unpivot-transformation-editor.md)  
-  
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -59,5 +56,47 @@ ms.lasthandoff: 08/03/2017
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  データ フロー コンポーネントのプロパティの設定方法については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+  
+## <a name="unpivot-transformation-editor"></a>ピボット解除変換エディター
+  **[ピボット解除変換エディター]** ダイアログ ボックスを使用すると、行でピボットする列を選択したり、データ列および新しいピボット値出力列を指定したりできます。  
+  
+> [!NOTE]  
+>  このトピックでは、「 [ピボット解除変換](../../../integration-services/data-flow/transformations/unpivot-transformation.md) 」に示されているピボット解除の例に基づいて、オプションの使用方法を説明します。  
+  
+### <a name="options"></a>オプション  
+ **使用できる入力列**  
+ チェック ボックスを使用して、行でピボットする列を指定します。  
+  
+ **名前**  
+ 使用できる入力列の名前を表示します。  
+  
+ **[パススルー]**  
+ ピボット解除された出力に列を含めるかどうかを示します。  
+  
+ **入力列**  
+ 各行に対して使用できる入力列の一覧から選択します。 選択内容が **[使用できる入力列]** テーブルのチェック ボックスに反映されます。  
+  
+ 「 [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)」のピボット解除の例では、入力列として、 **Ham**, **Soda**, **Milk**, **Beer**、および **Chips** の各列があります。  
+  
+ **変換先列**  
+ データ列の名前を指定します。  
+  
+ 「 [ピボット解除変換](../../../integration-services/data-flow/transformations/unpivot-transformation.md)」のピボット解除の例では、変換先列は数量 (**Qty**) 列です。  
+  
+ **[ピボット キー値]**  
+ ピボット値の名前を指定します。 既定は入力列の名前です。一意のわかりやすい名前を付けることもできます。  
+  
+ このプロパティの値は、プロパティ式を使用して指定することができます。  
+  
+ 「 [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)」のピボット解除の例では、ピボット値は、 **[ピボット キー値の列名]** オプションで指定された新しい Product 列のテキスト値 **Ham**, **Soda**, **Milk**, **Beer**、および **Chips**として表示されます。  
+  
+ **[ピボット キー値の列名]**  
+ ピボット値列の名前を指定します。 既定では [ピボット キー値] になりますが、わかりやすい一意な名前を選択することもできます。  
+  
+ 「 [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)」のピボット解除の例では、ピボット キー値列の名前は **Product** です。これは、 **Product** 、 **Product**, **Product**, **Product**, **Product**の列のピボット解除が行われる新しい **Product** 列を示しています。  
+  
+## <a name="see-also"></a>参照  
+ [Integration Services のエラーおよびメッセージのリファレンス](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [ピボット変換](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
   
   

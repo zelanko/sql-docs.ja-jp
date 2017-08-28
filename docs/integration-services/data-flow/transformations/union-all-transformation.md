@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.unionalltrans.f1
+- sql13.dts.designer.unionalltransformation.f1
 helpviewer_keywords:
 - merging datasets [Integration Services]
 - combining datasets
@@ -22,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 049d9195499e7145f98258cb90f2fd7069569058
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: e947aa8b3d079830b9433ba1b01450fda699904a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="union-all-transformation"></a>全体結合変換
@@ -45,13 +46,24 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-union-all-transformation"></a>全体結合変換の構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[全体結合変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [全体結合変換エディター](../../../integration-services/data-flow/transformations/union-all-transformation-editor.md)」を参照してください。  
-  
  プログラムによって設定できるプロパティの詳細については、「 [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)」を参照してください。  
   
  プロパティの設定方法の詳細については、次のトピックのいずれかを参照してください。  
   
 -   [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="union-all-transformation-editor"></a>全体結合変換エディター
+  **[全体結合変換エディター]** ダイアログ ボックスを使用すると、複数の入力行セットを 1 つの出力行セットにマージできます。 データ フローに全体結合変換を含めることで、複数のデータ フローのデータをマージしたり、全体結合変換を入れ子にして複雑なデータセットを作成したり、データ内のエラーを修正した後で行を再マージしたりできます。  
+  
+### <a name="options"></a>オプション  
+ **[出力列の名前]**  
+ 各列に対して別名を入力します。 既定では最初の (参照) 入力の入力列の名前が使用されますが、一意なわかりやすい名前を任意に付けることもできます。  
+  
+ **[全体結合 入力 1]**  
+ 最初の (参照) 入力で使用可能な入力列を一覧から選択します。 マップされた列のメタデータが一致する必要があります。  
+  
+ **[全体結合 入力 n]**  
+ 2 番目およびその他の入力で使用可能な入力列を一覧から選択します。 マップされた列のメタデータが一致する必要があります。  
   
 ## <a name="related-tasks"></a>関連タスク  
  [全体結合変換を使用してデータをマージする](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  

@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.termextractiontrans.f1
+- sql13.dts.designer.termextraction.termextraction.f1
+- sql13.dts.designer.termextraction.inclusionexclusion.f1
+- sql13.dts.designer.termextraction.advanced.f1
 helpviewer_keywords:
 - word boundaries [Integration Services]
 - extracting data [Integration Services]
@@ -30,10 +33,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1aff30861feebd429bf4c061a3b8cff3031c7528
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: e664673c39b6f60ef9d3a523c46a2415a993d950
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="term-extraction-transformation"></a>用語抽出変換
@@ -175,20 +178,85 @@ ms.lasthandoff: 08/03/2017
   
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[用語抽出変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [[用語抽出変換エディター] &#40;[用語抽出] タブ&#41;](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-term-extraction-tab.md)  
-  
--   [[用語抽出変換エディター] &#40;[除外] タブ&#41;](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-exclusion-tab.md)  
-  
--   [[用語抽出変換エディター] &#40;[詳細設定] タブ&#41;](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-advanced-tab.md)  
-  
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- データ フロー コンポーネントのプロパティの設定方法については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+ プロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
+## <a name="term-extraction-transformation-editor-term-extraction-tab"></a>[用語抽出変換エディター]\ ([用語抽出] タブ)
+  **[用語抽出変換エディター]** ダイアログ ボックスの **[用語抽出]** タブを使用すると、抽出するテキストを含むテキスト列を指定できます。  
   
+### <a name="options"></a>オプション  
+ **使用できる入力列**  
+ チェック ボックスを使用して、用語の抽出に使用するテキスト列を 1 つ選択します。  
+  
+ **項目**  
+ 抽出された用語を格納する出力列の名前を指定します。  
+  
+ **[スコア]**  
+ 抽出されたそれぞれの用語のスコアを格納する出力列の名前を指定します。  
+  
+ **エラー出力の構成**  
+ [[エラー出力の構成]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理を指定するために使用します。  
+  
+## <a name="term-extraction-transformation-editor-exclusion-tab"></a>[用語抽出変換エディター]\ ([除外] タブ)
+  **[用語抽出変換エディター]** ダイアログ ボックスの **[除外]** タブを使用すると、除外テーブルへの接続を設定し、除外用語が含まれている列を指定できます。  
+  
+### <a name="options"></a>オプション  
+ **[除外用語を使用する]**  
+ 除外用語が含まれている列を指定することにより、用語抽出のときに特定の用語を除外するかどうかを示します。 用語を除外する場合は、次のソース プロパティを指定する必要があります。  
+  
+ **OLE DB 接続マネージャー**  
+ 既存の OLE DB 接続マネージャーを選択するか、 **[新規作成]**をクリックして新しい接続を作成します。  
+  
+ **[新規作成]**  
+ **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用して、データベースへの新しい接続を作成します。  
+  
+ **[テーブルまたはビュー]**  
+ 除外用語が含まれているテーブルまたはビューを選択します。  
+  
+ **列**  
+ 除外用語が含まれているテーブルまたはビューの列を選択します。  
+  
+ **[エラー出力の構成]**  
+ [[エラー出力の構成]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理を指定するために使用します。  
+  
+## <a name="term-extraction-transformation-editor-advanced-tab"></a>[用語抽出変換エディター]\ ([詳細設定] タブ)
+  **[用語抽出変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、頻度、長さ、語または句の抽出の有無など、抽出に関するプロパティを指定できます。  
+  
+### <a name="options"></a>オプション  
+ **[名詞]**  
+ 変換によって個別の名詞のみを抽出するように指定します。  
+  
+ **[名詞句]**  
+ 変換によって個別の名詞句のみを抽出するように指定します。  
+  
+ **[名詞と名詞句]**  
+ 変換によって名詞と名詞句を両方とも抽出するように指定します。  
+  
+ **頻度**  
+ スコアが用語の頻度であることを指定します。  
+  
+ **[TFIDF]**  
+ スコアが用語の TFIDF 値であることを指定します。 TFIDF スコアは、Term Frequency と Inverse Document Frequency の積です。"用語 T の TFIDF = (T の頻度) * log( (入力の行数) / (T を含む行数) )" として定義されます。  
+  
+ **[頻度のしきい値]**  
+ 語または句を抽出する前の語または句の出現回数を指定します。 既定値は 2 です。  
+  
+ **[用語の最大長]**  
+ 句の最大長を語数で指定します。 このオプションは、名詞句のみに影響を与えます。 既定値は 12 です。  
+  
+ **[用語抽出で大文字と小文字を区別する]**  
+ 抽出で大文字と小文字を区別するかどうかを指定します。 既定値は **False**です。  
+  
+ **[エラー出力の構成]**  
+ [[エラー出力の構成]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理を指定するために使用します。  
+  
+## <a name="see-also"></a>参照  
+ [Integration Services のエラーおよびメッセージのリファレンス](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [用語参照変換](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
+
+

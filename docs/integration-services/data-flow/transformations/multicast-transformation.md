@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.multicasttrans.f1
+- sql13.dts.designer.multicasttransformation.f1
 helpviewer_keywords:
 - multiple outputs
 - Multicast transformation
@@ -22,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8619a0ed02ffc73126eb151f4a83a0b6b24c4be8
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: bd3eee42fbb204a9ca1e806d273b7c09a86c87d2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="multicast-transformation"></a>マルチキャスト変換
@@ -40,12 +41,20 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-multicast-transformation"></a>マルチキャスト変換の構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[マルチキャスト変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [マルチキャスト変換エディター](../../../integration-services/data-flow/transformations/multicast-transformation-editor.md)」を参照してください。  
-  
  プログラムによって設定できるプロパティの詳細については、「 [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)」を参照してください。  
   
 ## <a name="related-tasks"></a>関連タスク  
  このコンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+  
+## <a name="multicast-transformation-editor"></a>マルチキャスト変換エディター
+  **[マルチキャスト変換エディター]** ダイアログ ボックスを使用すると、各変換出力のプロパティを表示したり設定したりできます。  
+  
+### <a name="options"></a>オプション  
+ **出力**  
+ 左側で出力を選択すると、右側の表にプロパティが表示されます。  
+  
+ **プロパティ**  
+ 表示されている出力プロパティの **[名前]** および **[説明]**以外はすべて読み取り専用です。  
   
 ## <a name="see-also"></a>参照  
  [データ フロー](../../../integration-services/data-flow/data-flow.md)   

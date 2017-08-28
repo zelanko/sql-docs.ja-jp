@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 88683c4fbf4426ffac83ef2091f81087101463e9
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 9eee58be471d8b39b051c1343f9eb26a2960b6d6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>インポートおよびエクスポート ウィザードのこの簡単な例の概要します。
@@ -44,6 +44,8 @@ Windows [スタート] メニュー上の Microsoft SQL Server 2016 グループ
 
 > [!NOTE]
 > この例では、インストールされている Microsoft Office の 32 ビット バージョンがあるため、32 ビットのウィザードを選択します。 その結果、Excel への接続に、32 ビット データ プロバイダーを使用する必要があります。 その他の多くのデータ ソースは、通常 64 ビットのウィザードを選択できます。
+>
+> 64 ビット バージョンの SQL Server インポートおよびエクスポート ウィザードを使用するのには、SQL Server をインストールする必要があります。 SQL Server Data Tools (SSDT) および SQL Server Management Studio (SSMS) は 32 ビット アプリケーションであり、32 ビット バージョンのウィザードを含む、32 ビット ファイルのインストールのみです。
 
 詳細については、「 [Start the SQL Server Import and Export Wizard](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)」(SQL Server インポートおよびエクスポート ウィザードを開始する) を参照してください。
 
@@ -58,9 +60,6 @@ Windows [スタート] メニュー上の Microsoft SQL Server 2016 グループ
 次のページで**データ ソースを選択**、データ ソースとして Microsoft Excel を選択します。 Excel ファイルを参照します。 最後に、ファイルの作成に使用した Excel のバージョンを指定します。
 
 ![Excel データ ソースを選択します。](../../integration-services/import-export-data/media/choose-the-excel-data-source.jpg)
-
-> [!NOTE]
-> 通常、バージョンとして Microsoft Excel 2016 を指定し、Excel 2016 とアクセス 2016年への接続のファイルをダウンロードします。 ただし、Microsoft Office 365 サブスクリプションがある場合は、Office 2016 ランタイムをインストールすることはできません。 Excel 2016 とアクセス 2016年用データ プロバイダーは、Microsoft Office のデスクトップ バージョンにのみインストールできます。 したがって、Excel 2013 の Excel の以前のバージョンだけで指定します。 必要に応じて、Excel 2013 および 2013 のアクセスに接続するためのファイルをダウンロードします。 Office 2016 ランタイムのこのような制限に記載されて[このブログの投稿](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/)です。
 
 Excel への接続に関する詳細については、次を参照してください。 [Excel データ ソースへの接続](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)です。 ウィザードのこのページの詳細については、次を参照してください。[データ ソースを選択](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)です。
 

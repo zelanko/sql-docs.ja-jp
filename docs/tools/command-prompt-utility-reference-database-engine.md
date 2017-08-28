@@ -1,5 +1,5 @@
 ---
-title: "コマンド プロンプト ユーティリティ リファレンス (データベース エンジン) |Microsoft ドキュメント"
+title: "SQL コマンド プロンプト ユーティリティ (データベース エンジン) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - command prompt [SQL Server], utilities
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
 caps.latest.revision: 90
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 12e1015034b5f933eff620c626ab363cdf5800e7
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 4ef7f8faaebd237d498744554b44283142e2b01e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="command-prompt-utility-reference-database-engine"></a>コマンド プロンプト ユーティリティ リファレンス (データベース エンジン)
+# <a name="sql-command-prompt-utilities-database-engine"></a>SQL コマンド プロンプト ユーティリティ (データベース エンジン)
   コマンド プロンプト ユーティリティを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の操作のスクリプトを作成できます。 次の表は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に付属するコマンド プロンプト ユーティリティの一覧です。  
   
 |**Utility**|**説明**|**インストール先**|  
@@ -53,11 +53,7 @@ ms.lasthandoff: 08/02/2017
 |[sqlservr アプリケーション](../tools/sqlservr-application.md)|トラブルシューティングを行うために、コマンド プロンプトから [!INCLUDE[ssDE](../includes/ssde-md.md)] インスタンスを開始および停止します。|\<ドライブ >: \Program Files\Microsoft SQL Server\MSSQL13 です。MSSQLSERVER\MSSQL\Binn|  
 |[Ssms ユーティリティ](../tools/sql-server-management-studio/ssms-utility.md)|コマンド プロンプトから [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を起動します。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VSShell\Common7\IDE|  
 |[tablediff ユーティリティ](../tools/tablediff-utility.md)|2 つのテーブルのデータを比較し、非収束について調査します。これは、レプリケーション トポロジのトラブルシューティングを行う場合に便利です。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]COM (COM)|  
-  
- **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーにアクセスするには - [!INCLUDE[win8](../includes/win8-md.md)]**  
-  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール プログラムのスナップインであり、スタンドアロン プログラムではありません。そのため、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を実行している場合、 [!INCLUDE[win8](../includes/win8-md.md)]構成マネージャーはアプリケーションとして表示されません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーを開くには、 **検索** チャームで、 **[アプリ]**の下に「 **SQLServerManager12.msc** 」( [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]の場合) または「 **SQLServerManager11.msc** 」([!INCLUDE[ssSQL11](../includes/sssql11-md.md)]の場合) と入力し、 **Enter**キーを押します。  
-  
+
 ## <a name="command-prompt-utilities-syntax-conventions"></a>コマンド プロンプト ユーティリティで使用する構文表記規則  
   
 |**表記**|**使用目的**|  

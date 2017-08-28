@@ -11,13 +11,15 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f87c28e4d2ba7689d422ccf2f1a903765a39f27a
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 66f625f1739f17f20a6b5e2a564f2d72f81d6b95
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Docker でコンテナー イメージの SQL Server 2017 を構成します。
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 構成および使用する方法を説明する、 [mssql サーバー linux コンテナー イメージ](https://hub.docker.com/r/microsoft/mssql-server-linux/)docker です。 このイメージは、Ubuntu 16.04 に基づいて Linux で実行されている SQL Server で構成されます。 Mac/Windows 用の Docker エンジン 1.8 + Linux または Docker を使用できます。
 
@@ -75,7 +77,7 @@ SQL Server 2017 CTP 2.0 以降で、 [SQL Server コマンド ライン ツー�
     ```
 
     > [!TIP]
-    > 常にコンテナー全体の id を指定する必要はありません。 だけ、一意に識別するための十分な文字を指定する必要があるとします。 この例で使用するのに十分なする可能性があります`e6`または`e69`完全 id ではなくです。
+    > 常にコンテナー全体の id を指定する必要はありません。だけ、一意に識別するための十分な文字を指定する必要があるとします。 この例で使用するのに十分なする可能性があります`e6`または`e69`完全 id ではなくです。
 
 2. 1 回、コンテナー内の接続ローカル sqlcmd でします。 その sqlcmd がパスにない、既定では、完全なパスを指定する必要があるので注意してください。
 

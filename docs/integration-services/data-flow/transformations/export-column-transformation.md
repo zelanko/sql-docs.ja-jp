@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.exportcolumntrans.f1
+- sql13.dts.designer.fileextractortransformation.columns.f1
+- sql13.dts.designer.fileextractortransformation.errorhandling.f1
 helpviewer_keywords:
 - exporting data
 - append options [Integration Services]
@@ -24,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e7e611452f931d049c63c822587dc7610bf1eb25
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 986a900c49a91578358b0ace380c1fb6e3f5cb9e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="export-column-transformation"></a>列エクスポート変換
@@ -65,14 +67,56 @@ ms.lasthandoff: 08/03/2017
   
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[列エクスポート変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「[[列エクスポート変換エディター] ([列] ページ)](../../../integration-services/data-flow/transformations/export-column-transformation-editor-columns-page.md)」を参照してください。  
-  
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- データ フロー コンポーネントのプロパティの設定方法については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+ プロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+  
+## <a name="export-column-transformation-editor-columns-page"></a>[列エクスポート変換エディター]\ ([列] ページ)
+  **[列エクスポート変換エディター]** ダイアログ ボックスの **[列]** ページを使用すると、ファイルに抽出するデータ フロー内の列を指定できます。 列エクスポート変換でファイルにデータを追加するか、既存のファイルを上書きするかどうかを指定できます。  
+  
+### <a name="options"></a>オプション  
+ **[列の抽出]**  
+ テキストまたは画像データを持つ入力列の一覧から選択します。 すべての行には、 **[列の抽出]** と **[ファイル パス列]**の定義が含まれます。  
+  
+ **[ファイル パス列]**  
+ ファイル パスとファイル名を持つ入力列の一覧から選択します。 すべての行には、 **[列の抽出]** と **[ファイル パス列]**の定義が含まれます。  
+  
+ **[追加の許可]**  
+ 変換により、既存のファイルにデータを追加するかどうかを指定します。 既定値は **false**です。  
+  
+ **[強制的に切り捨て]**  
+ 変換により、データを書き込む前に既存のファイルの内容を削除するかどうかを指定します。 既定値は **false**です。  
+  
+ **[バイト順マークの書き込み]**  
+ バイト順マーク (BOM) をファイルに書き込むかどうかを指定します。 BOM は、データが **DT_NTEXT** または DT_WSTR のデータ型を持つ場合にのみ書き込まれ、既存のデータ ファイルには追加されません。  
+  
+## <a name="export-column-transformation-editor-error-output-page"></a>[列エクスポート変換エディター]\ ([エラー出力] ページ)
+  **[列エクスポート変換エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラーをどのように処理するかを指定できます。  
+  
+### <a name="options"></a>オプション  
+ **入力/出力**  
+ 出力の名前を表示します。 名前をクリックすると、ビューを展開して列を含めることができます。  
+  
+ **列**  
+ **[列エクスポート変換エディター]** ダイアログ ボックスの **[列]** ページで選択された出力列を表示します。  
+  
+ **エラー**  
+ エラーが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  
+  
+ **切り捨て**  
+ 切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  
+  
+ **Description**  
+ 操作の説明を表示します。  
+  
+ **この値を選択したセルに設定します。**  
+ エラーまたは切り捨てが発生した場合に、選択したすべてのセルに対して障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
+  
+ **適用**  
+ 選択したセルにエラー処理オプションを適用します。  
   
   

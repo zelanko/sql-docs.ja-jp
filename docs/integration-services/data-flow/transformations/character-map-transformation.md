@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.charactertrans.f1
+- sql13.dts.designer.charactermaptransformation.f1
 helpviewer_keywords:
 - mutually exclusive mapping [Integration Services]
 - mapping data [Integration Services]
@@ -22,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80818df1eb99cfe68012a119d4482698b17d0044
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 3ea6f6f0526a0ad1a2f98c97aed2a7aebbffb65a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="character-map-transformation"></a>文字マップ変換
@@ -74,8 +75,6 @@ ms.lasthandoff: 08/03/2017
   
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[文字マップ変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [文字マップ変換エディター](../../../integration-services/data-flow/transformations/character-map-transformation-editor.md)」をご覧ください。  
-  
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -86,6 +85,46 @@ ms.lasthandoff: 08/03/2017
   
 -   [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [マージ変換およびマージ結合変換用にデータを並べ替える](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [マージ変換およびマージ結合変換用のデータの並べ替え](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+  
+## <a name="character-map-transformation-editor"></a>文字マップ変換エディター
+  **[文字マップ変換エディター]** ダイアログ ボックスを使用すると、列のデータに適用する文字列関数を選択し、マッピングが埋め込み先の変更か新しい列として追加されるかを指定できます。  
+  
+### <a name="options"></a>オプション  
+ **使用できる入力列**  
+ チェック ボックスを使用し、文字列関数を使用して変換する列を選択します。 選択は下の表に表示されます。  
+  
+ **入力列**  
+ 上の表で選択された入力列が表示されます。 使用できる入力列の一覧を使用して、選択した列を変更したり、削除したりできます。  
+  
+ **転送先**  
+ 文字列処理の結果を、既定の列を使用して所定の場所に保存するか、変更されたデータを新しい列として保存するかを指定します。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|[新しい列]|データを新しい列に保存します。 **[出力の別名]**で、列名を割り当てます。|  
+|[埋め込み先変更]|変更されたデータを既存の列に保存します。|  
+  
+ **操作**  
+ 列のデータに適用する文字列関数を一覧から選択します。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|小文字|小文字に変換します。|  
+|大文字|大文字に変換します。|  
+|バイトの反転|バイト順序を反転します。|  
+|ひらがな|カタカナをひらがなに変換します。|  
+|カタカナ|ひらがなをカタカナに変換します。|  
+|半角|全角文字を半角文字に変換します。|  
+|全角|半角文字を全角文字に変換します。|  
+|言語の文字種|システムのルールではなく、言語の文字種による規則 (チュルク語などのロケールにおける Unicode の文字種の単純な割り当て) を適用します。|  
+|簡体字中国語|繁体字中国語の文字を簡体字中国語に変換します。|  
+|繁体字中国語|簡体字中国語の文字を繁体字中国語に変換します。|  
+  
+ **[出力の別名]**  
+ 各出力列の別名を入力します。 既定では、入力列の名前の後に " **のコピー** " が追加された別名になりますが、固有のわかりやすい名前を選択することもできます。  
+  
+ **エラー出力の構成**  
+ [[エラー出力の構成]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスを使用して、この変換のエラー処理オプションを指定します。  
   
   

@@ -4,24 +4,27 @@ description:
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 1ee9ee5d5bd15104c9d38ee104b3894edbc0e98a
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 8772b1f3dd4562f778f9dc0ca6be53168925d6d9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>Linux に SQL Server Migration Assistant でのデータベースの移行を自動化します。
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+
 このトピックで紹介[SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) Microsoft Access、DB2、MySQL、Oracle、Sybase から Linux 上の SQL Server 2017 RC2 へのデータベースを容易に移行するのに役立ちます。 SSMA は、Windows アプリケーションので、使用 SSMA Linux 上のリモート SQL Server インスタンスに接続できる Windows マシンがあるとします。 
 
 SSMA は、さまざまなソース データベースが Oracle、MySQL、Sybase、DB2 および Linux に SQL Server 2017 RC2 への Microsoft Access などをサポートしており、移行タスクの自動化に役立ちます。
+
 - ソース データベースを評価します。
 - Microsoft SQL Server スキーマを送信元データベースのスキーマに変換します。
 - スキーマを移行します

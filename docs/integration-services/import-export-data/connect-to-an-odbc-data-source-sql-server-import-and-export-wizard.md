@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4d1a2374d480f2d6b886425a02cb590b00b3564a
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0e3ffe2ff1695de69be7149f4be7b42f57b0e991
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>ODBC データ ソース (SQL Server インポートおよびエクスポート ウィザード) への接続します。
@@ -39,6 +39,8 @@ Microsoft から必要があるか、サードパーティ製の ODBC ドライ�
 
 > [!TIP]
 > ドライバーのインストールされ、64 ビット アプレットに表示されないことがわかっている場合は、32 ビット アプレットで代わりに検索します。 これも示します、64 ビットまたは 32 ビット SQL Server インポートおよびエクスポート ウィザードを実行する必要があるかどうか。
+>
+> 64 ビット バージョンの SQL Server インポートおよびエクスポート ウィザードを使用するのには、SQL Server をインストールする必要があります。 SQL Server Data Tools (SSDT) および SQL Server Management Studio (SSMS) は 32 ビット アプリケーションであり、32 ビット バージョンのウィザードを含む、32 ビット ファイルのインストールのみです。
     
 ## <a name="step-1---select-the-data-source"></a>手順 1 - データ ソースの選択
 お使いのコンピューターにインストールされている ODBC ドライバーは、データ ソースのドロップダウン リストに記載されていません。 ODBC ドライバーで接続するを選択して開始、 **.NET Framework Data Provider for ODBC**上のデータ ソースとして、**データ ソースを選択**または**先選択**ウィザードのページです。 このプロバイダーは、ODBC ドライバーをラップするラッパーとして機能します。
@@ -70,7 +72,7 @@ DSN (データ ソース名) で接続情報を提供する場合は、使用、
 
     ![コントロール パネルの odbc データ ソース アドミニストレーター](../../integration-services/import-export-data/media/odbc-administrator-control-panel-applet.png)
     
-3.  する場合**既存の DSN を使用して**、データ ソースに表示される任意の DSN を使用することができます、**ユーザー DSN**、**システム DSN**、または**ファイル DSN**タブです。 名前を確認し、ウィザードに戻ってに入力、 **Dsn**フィールドに、**データ ソースを選択**または**変換先の選択**ページ。 このページの残りの部分をスキップし、ウィザードの次の手順を続行します。
+3.  する場合**既存の DSN を使用して**、データ ソースに表示される任意の DSN を使用することができます、**ユーザー DSN**、**システム DSN**、または**ファイル DSN**タブです。名前を確認し、ウィザードに戻ってに入力、 **Dsn**フィールドに、**データ ソースを選択**または**変換先の選択**ページ。 このページの残りの部分をスキップし、ウィザードの次の手順を続行します。
 4.  する場合**新しい DSN を作成する**表示されるようにするかどうかにのみ (ユーザー DSN)、コンピューターのすべてのユーザーに表示されるなどの Windows サービスの (システム DSN) を決定する、または (ファイル DSN) のファイルに保存します。 この例では、新しいシステム DSN を作成します。
 5. **システム DSN**  タブで、をクリックして**追加**です。
 

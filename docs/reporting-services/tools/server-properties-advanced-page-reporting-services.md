@@ -18,10 +18,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 5baf0e5c9dcc3b9c70fce06024e5bba957c48f65
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0626dc829e6ae2cd4212dc05deb406740592dc40
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 
@@ -72,7 +72,7 @@ Web ポータルのページ タイトルに表示されるレポート サー�
 レポート サーバーがクライアント ブラウザーとの通信時にセッションクッキーを使用する必要があるかどうかを指定します。 既定値は **true**です。  
 
 **ExternalImagesTimeout**  
-この時間以内に外部画像ファイルを取得しないと接続がタイムアウトになる時間の長さを指定します。 既定値は **600** 秒です。  
+この時間以内に外部画像ファイルを取得しないと接続がタイムアウトになる時間の長さを指定します。既定値は **600** 秒です。  
 
 **SnapshotCompression**  
 スナップショットの圧縮方法を定義します。 既定値は **SQL**です。 有効な値は次のとおりです。
@@ -114,7 +114,7 @@ Windows 統合セキュリティをレポート データ ソース接続でサ�
 レポート編集セッションでアクティブにできるデータ キャッシュ エントリの数を指定します。 既定の数は 5 です。  
 
 **EditSessionTimeout**  
-レポート編集セッションがタイムアウトするまでの秒数を指定します。 既定値は 7200 秒 (2 時間) です。  
+レポート編集セッションがタイムアウトするまでの秒数を指定します。既定値は 7200 秒 (2 時間) です。  
 
 **EnableCustomVisuals** ***(Power BI のレポート サーバーのみ)***  
 PowerBI カスタム ビジュアルの表示を有効に PowerBI ReportServer ください。 値は、True を false の場合です。  既定値は True です。  
@@ -124,6 +124,19 @@ Power Bi ビジュアルのデータのエクスポートを有効に PowerBI Re
 
 **EnableTestConnectionDetailedErrors**  
 ユーザーがレポート サーバーを使用してデータ ソース接続をテストする際に、クライアント コンピューターに詳細なエラー メッセージが送信されるようにするかどうかを指定します。 既定値は **true**です。 このオプションを **false**に設定した場合は、一般的なエラー メッセージだけが送信されます。
+
+**AccessControlAllowCredentials**  
+'資格情報' フラグが設定されている場合に、クライアント要求に応答を公開することができるかどうかを示す true に設定します。 既定値は **false**です。
+
+**AccessControlAllowHeaders**クライアント要求を行うときに、サーバーを許可するヘッダーのコンマ区切りリスト。 このプロパティは、空の文字列にすることができますを指定する * すべてのヘッダーを許可します。
+
+**AccessControlAllowMethods**クライアント要求を行うときに、サーバーを許可する HTTP メソッドのコンマ区切りリスト。 既定値は、(GET、PUT、POST、PATCH、DELETE) を指定する * すべてのメソッドを許可します。
+
+**AccessControlAllowOrigin**クライアント要求を行うときに、サーバーを許可するオリジンのコンマ区切りリスト。 既定値は空白を指定するすべての要求を防ぐことが * 資格情報が設定されていませんときに、すべてのオリジンを許可されます。オリジンの明示的なリストを指定する必要がありますの資格情報が指定した場合。
+
+**AccessControlExposeHeaders**サーバーがクライアントに公開されるヘッダーのコンマ区切りリスト。 既定値は空白です。
+
+**AccessControlMaxAge**プレフライト要求の結果をキャッシュする秒数を指定します。 既定値は 600 (10 分) です。
 
 ## <a name="see-also"></a>参照
 

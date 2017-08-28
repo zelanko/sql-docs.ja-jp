@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.fuzzylookuptrans.f1
+- sql13.dts.designer.fuzzylookuptransformation.referencetable.f1
+- sql13.dts.designer.fuzzylookuptransformation.columns.f1
+- sql13.dts.designer.fuzzylookuptransformation.advanced.f1
 helpviewer_keywords:
 - cleaning data
 - comparing data
@@ -35,10 +38,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c05d44e6a91c79e5a5ce71b1e26ac2f4a319a88
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ff5f003749572b16e750b5940cd0f05b0b879fda
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="fuzzy-lookup-transformation"></a>あいまい参照変換
@@ -128,14 +131,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>あいまい参照変換の設定  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[あいまい参照変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [あいまい参照変換エディター ([参照テーブル] タブ)](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-reference-table-tab.md)  
-  
--   [あいまい参照変換エディター ([列] タブ)](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)  
-  
--   [あいまい参照変換エディター ([詳細設定] タブ)](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-advanced-tab.md)  
-  
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -144,6 +139,83 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-tasks"></a>関連タスク  
  データ フロー コンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+  
+## <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>[あいまい参照変換エディター]\ ([参照テーブル] タブ)
+  **[あいまい参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブを使用すると、参照に使用する変換元テーブルとインデックスを指定できます。 参照データ ソースは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースのテーブルである必要があります。  
+  
+> [!NOTE]  
+>  あいまい参照変換では、参照テーブルの作業用コピーが作成されます。 以降に説明するインデックスは、通常の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インデックスではなく、特別なテーブルを使用してこの作業用テーブルに作成されるものです。 **[保存されたインデックスを維持する]**を選択しないと、既存の変換元テーブルは変更されません。 この場合、参照テーブルに加えられた変更に基づいて作業用テーブルと参照インデックス テーブルを更新するトリガーが、参照テーブルに作成されます。  
+  
+> [!NOTE]  
+>  あいまい参照変換の **Exhaustive** プロパティおよび **MaxMemoryUsage** プロパティは、 **[あいまい参照変換エディター]**ではアクセスできませんが、 **[詳細エディター]**を使用して設定できます。 さらに、 **MaxOutputMatchesPerInput** の 100 より大きい値は、 **[詳細エディター]**でのみ指定できます。 これらのプロパティの詳細については、「 [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」の「あいまい参照変換」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **OLE DB 接続マネージャー**  
+ 一覧から既存の OLE DB 接続マネージャーを選択するか、 **[新規作成]**をクリックして新しい接続を作成します。  
+  
+ **[新規作成]**  
+ **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用して、新しい接続を作成します。  
+  
+ **[新しいインデックスを生成する]**  
+ 参照に使用する新しいインデックスを作成するように指定します。  
+  
+ **[参照テーブル名]**  
+ 参照テーブルとして使用する既存のテーブルを選択します。  
+  
+ **[新しいインデックスを保存する]**  
+ 新しい参照インデックスを保存する場合に、このオプションを選択します。  
+  
+ **[新しいインデックス名]**  
+ 新しい参照インデックスを保存するように指定した場合、そのインデックスの名前を入力します。  
+  
+ **[保存されたインデックスを維持する]**  
+ 新しい参照インデックスを保存するように指定した場合、そのインデックスを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でも維持するかどうかを指定します。  
+  
+> [!NOTE]  
+>  **[あいまい参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブで **[保存されたインデックスを維持する]**を選択すると、変換ではマネージ ストアド プロシージャを使用してインデックスを維持します。 これらのマネージ ストアド プロシージャは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の共通言語ランタイム (CLR) 統合機能を使用します。 既定では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の CLR 統合は無効です。 **[保存されたインデックスを維持する]** 機能を使用するには、CLR 統合を有効にする必要があります。 詳細については、「 [CLR 統合の有効化](../../../relational-databases/clr-integration/clr-integration-enabling.md)」を参照してください。  
+>   
+>  **[保存されたインデックスを維持する]** オプションは CLR 統合を必要とするため、この機能を使用できるのは、CLR 統合が有効になっている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの参照テーブルを選択した場合だけです。  
+  
+ **[既存のインデックスを使用する]**  
+ 参照に既存のインデックスを使用するように指定します。  
+  
+ **[既存のインデックスの名前]**  
+ 以前に作成した参照インデックスを一覧から選択します。  
+  
+## <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>[あいまい参照変換エディター]\ ([列] タブ)
+  **[あいまい参照変換エディター]** ダイアログ ボックスの **[列]** タブを使用すると、入力列および出力列のプロパティを設定できます。  
+  
+### <a name="options"></a>オプション  
+ **使用できる入力列**  
+ 入力列をドラッグして、使用できる参照列に接続します。 これらの列は、サポートされているデータ型と一致する必要があります。 マッピングする行を選択して右クリックし、 [[リレーションシップの作成]](../../../integration-services/data-flow/transformations/create-relationships.md) ダイアログ ボックスでマッピングを編集します。  
+  
+ **名**  
+ 使用可能な入力列の名前が表示されます。  
+  
+ **パススルー**  
+ 変換先の出力に入力列を含めるかどうかを指定します。  
+  
+ **使用できる参照列**  
+ チェック ボックスを使用して、あいまい参照操作を実行する列を選択します。  
+  
+ **参照列**  
+ 使用できる参照テーブル列の一覧から参照列を選択します。 選択内容が **[使用できる参照列]** テーブルのチェック ボックスに反映されます。 **[使用できる参照列]** テーブルの列を選択すると、返される一致行ごとに参照テーブル列の値を含む出力列が作成されます。  
+  
+ **出力の別名**  
+ 各参照列の出力の別名を入力します。 既定では、参照列の名前に数値のインデックス値が追加されます。一意のわかりやすい名前を付けることもできます。  
+  
+## <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>[あいまい参照変換エディター]\ ([詳細設定] タブ)
+  **[あいまい参照変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、あいまい参照のパラメーターを設定できます。  
+  
+### <a name="options"></a>オプション  
+ **参照ごとの出力に一致する項目の最大数**  
+ 変換で返される、各入力行の一致の最大数を指定します。 既定値は **1**です。  
+  
+ **類似性のしきい値**  
+ スライダーを使用して、コンポーネント レベルの類似性のしきい値を設定します。 値を 1 に近づけるほど、参照元の値と参照先の値との類似性が高くなければ一致しないと見なされます。 しきい値を大きくすると、照合の対象となるレコードが少なくなるため、照合の速度が向上します。  
+  
+ **トークン区切り記号**  
+ 列の値をトークンにする際に使用される区切り記号を指定します。  
   
 ## <a name="see-also"></a>参照  
  [参照変換](../../../integration-services/data-flow/transformations/lookup-transformation.md)   

@@ -4,19 +4,21 @@ description: "このトピックでは、mssql conf ツールを使用して Lin
 author: luisbosquez
 ms.author: lbosq
 manager: jhubbard
-ms.date: 06/16/2017
+ms.date: 08/24/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: a79e5c43dd8921ba2f30ca022d071648b26cdfb0
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 894a3756d9bffcaaf3347e0bfae92abb0f846a97
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql conf ツールを使用して Linux 上の SQL Server を構成します。
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 **mssql conf** Red Hat Enterprise Linux、SUSE Linux Enterprise Server、および Ubuntu 用 SQL Server 2017 RC2 をインストールする構成スクリプトを示します。 このユーティリティを使用するには、次のパラメーターを設定します。
 
@@ -37,13 +39,16 @@ ms.lasthandoff: 08/02/2017
 | [TLS](#tls) | トランスポート レベルのセキュリティを構成します。 |
 | [トレース フラグ](#traceflags) | サービスを使用する予定のトレース フラグを設定します。 |
 
-次のセクションでは、これらの各シナリオの mssql conf を使用する方法の例を紹介します。
-
 > [!TIP]
-> Mssql-conf でを実行するこれらの例は、完全なパスを指定します。 **/opt/mssql/bin/mssql-conf**です。 代わりにそのパスに移動する場合は、現在のディレクトリのコンテキストで mssql conf を実行します。 **。/mssql conf**です。
-
-> [!NOTE]
 > これらの設定の一部は、環境変数で構成できます。 詳細については、次を参照してください。[環境変数と SQL Server の構成設定](sql-server-linux-configure-environment-variables.md)です。
+
+## <a name="usage-tips"></a>使用上のヒント
+
+* Always On 可用性グループと共有ディスク クラスターでは、常に各ノードで同じ構成の変更をください。
+
+* 共有ディスク クラスターのシナリオのしようとしないで再起動、 **mssql サーバー**変更を適用するサービスです。 SQL Server のアプリケーションとして実行します。 代わりに、オフラインおよびオンラインに戻る、リソースを取得します。
+
+* Mssql-conf でを実行するこれらの例は、完全なパスを指定します。 **/opt/mssql/bin/mssql-conf**です。 代わりにそのパスに移動する場合は、現在のディレクトリのコンテキストで mssql conf を実行します。 **。/mssql conf**です。
 
 ## <a id="collation"></a>SQL Server 照合順序を変更します。
 
@@ -190,7 +195,7 @@ SQL Server では収集するメモリの種類を制御するダンプの 2 つ
     sudo /opt/mssql/bin/mssql-conf set coredump.captureminiandfull <true or false>
     ```
 
-    既定値:**は true。**
+    既定値: **false**
 
 1. ダンプ ファイルの種類の指定、 **coredump.coredumptype**設定します。
 
@@ -314,11 +319,11 @@ sudo systemctl restart mssql-server
 
 |オプション |Description |
 |--- |--- |
-|**network.forceencryption** |1 の場合、し[!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]強制的にすべての接続を暗号化します。 既定では、このオプションは 0 です。 |
-|**network.tlscert** |証明書への絶対パスがファイルを[!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]は TLS を使用します。 例:`/etc/ssl/certs/mssql.pem`証明書ファイルは mssql アカウントでアクセスする必要があります。 使用してファイルのアクセスを制限することをお勧めします。`chown mssql:mssql <file>; chmod 400 <file>`です。 |
-|**network.tlskey** |秘密キーへの絶対パスがファイルを[!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]は TLS を使用します。 例:`/etc/ssl/private/mssql.key`証明書ファイルは mssql アカウントでアクセスする必要があります。 使用してファイルのアクセスを制限することをお勧めします。`chown mssql:mssql <file>; chmod 400 <file>`です。 |
-|**network.tlsprotocols** |SQL Server でどの TLS のプロトコルが許可されているコンマ区切り一覧。 [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]常にしようとすると、最も強力な許可されているプロトコルをネゴシエートします。 クライアントが、許可されているすべてのプロトコルをサポートしていない場合[!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]接続の試行を拒否します。  互換性のため、すべてのサポートされているプロトコルが既定 (1.2、1.1、1.0) で許可されます。  TLS 1.2 をサポートして、クライアント場合は、TLS 1.2 のみを許可することをお勧めします。 |
-|**network.tlsciphers** |指定する暗号がによって許可[!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]TLS 用です。 この文字列はに従って書式設定する必要があります[OpenSSL の暗号一覧形式](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html)です。 一般に、このオプションを変更する必要はありません。 <br /> 既定では、次の暗号は使用できます。 <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
+|**network.forceencryption** |1 の場合、し[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]強制的にすべての接続を暗号化します。 既定では、このオプションは 0 です。 |
+|**network.tlscert** |証明書への絶対パスがファイルを[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は TLS を使用します。 例:`/etc/ssl/certs/mssql.pem`証明書ファイルは mssql アカウントでアクセスする必要があります。 使用してファイルのアクセスを制限することをお勧めします。`chown mssql:mssql <file>; chmod 400 <file>`です。 |
+|**network.tlskey** |秘密キーへの絶対パスがファイルを[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は TLS を使用します。 例:`/etc/ssl/private/mssql.key`証明書ファイルは mssql アカウントでアクセスする必要があります。 使用してファイルのアクセスを制限することをお勧めします。`chown mssql:mssql <file>; chmod 400 <file>`です。 |
+|**network.tlsprotocols** |SQL Server でどの TLS のプロトコルが許可されているコンマ区切り一覧。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]常にしようとすると、最も強力な許可されているプロトコルをネゴシエートします。 クライアントが、許可されているすべてのプロトコルをサポートしていない場合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]接続の試行を拒否します。  互換性のため、すべてのサポートされているプロトコルが既定 (1.2、1.1、1.0) で許可されます。  TLS 1.2 をサポートして、クライアント場合は、TLS 1.2 のみを許可することをお勧めします。 |
+|**network.tlsciphers** |指定する暗号がによって許可[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]TLS 用です。 この文字列はに従って書式設定する必要があります[OpenSSL の暗号一覧形式](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html)です。 一般に、このオプションを変更する必要はありません。 <br /> 既定では、次の暗号は使用できます。 <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Kerberos keytab ファイルへのパス |
 
 TLS の設定を使用しての例は、次を参照してください。 [Linux に SQL Server への接続の暗号化](sql-server-linux-encrypted-connections.md)です。
@@ -351,15 +356,83 @@ TLS の設定を使用しての例は、次を参照してください。 [Linux
    sudo systemctl restart mssql-server
    ```
 
+## <a name="remove-a-setting"></a>設定を削除します。
+
+任意の設定がによる設定を解除する`mssql-conf set`、呼び出す**mssql conf**で、`unset`オプションと設定の名前。 これは、設定を消去します、実質的にその既定値に戻すこと。
+
+1. 次の例では、クリア、 **network.tcpport**オプション。
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf unset network.tcpport
+   ```
+
+1. SQL Server サービスを再起動します。
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
 ## <a name="view-current-settings"></a>現在の設定を表示
 
-明示的に構成されているすべての設定を表示する**mssql conf**、次のコマンドを実行します。
+いずれかを表示するように構成の内容を出力するには、次のコマンドを実行して、設定、 **mssql.conf**ファイル。
 
 ```bash
 sudo cat /var/opt/mssql/mssql.conf
 ```
 
-このファイルに表示されていないすべての設定が既定値を使用していることに注意してください。
+このファイルに表示されていないすべての設定が既定値を使用していることに注意してください。 次のセクションでは、サンプルを提供**mssql.conf**ファイル。
+
+## <a name="mssqlconf-format"></a>mssql.conf 形式
+
+次**/var/opt/mssql/mssql.conf**ファイルは、各設定の例を示します。 この形式を使用してへの変更を手動で行うことができます、 **mssql.conf**必要に応じてファイルします。 場合は、ファイルを手動で変更しないでください、変更が適用される前に SQL Server を再起動する必要があります。 使用する、 **mssql.conf**ファイル Docker を使用する必要があります Docker [、データを永続化](sql-server-linux-configure-docker.md)です。 最初に完全な追加**mssql.conf**ホスト ディレクトリにファイルし、コンテナーを実行します。 この例は[お客様からのフィードバック](sql-server-linux-customer-feedback.md)です。
+
+```ini
+[EULA]
+accepteula = Y
+
+[coredump]
+captureminiandfull = true
+coredumptype = full
+
+[filelocation]
+defaultbackupdir = /var/opt/mssql/data/
+defaultdatadir = /var/opt/mssql/data/
+defaultdumpdir = /var/opt/mssql/data/
+defaultlogdir = /var/opt/mssql/data/
+
+[hadr]
+hadrenabled = 0
+
+[language]
+lcid = 1033
+
+[memory]
+memorylimitmb = 4096
+
+[network]
+forceencryption = 0
+ipaddress = 10.192.0.0
+kerberoskeytabfile = /var/opt/mssql/secrets/mssql.keytab
+tcpport = 1401
+tlscert = /etc/ssl/certs/mssql.pem
+tlsciphers = ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA
+tlskey = /etc/ssl/private/mssql.key
+tlsprotocols = 1.2,1.1,1.0
+
+[sqlagent]
+databasemailprofile = default
+errorlogfile = /var/opt/mssql/log/sqlagentlog.log
+errorlogginglevel = 7
+
+[telemetry]
+customerfeedback = true
+userrequestedlocalauditdirectory = /tmp/audit
+
+[traceflag]
+traceflag0 = 1204
+traceflag1 = 2345
+traceflag = 3456
+```
 
 ## <a name="next-steps"></a>次の手順
 

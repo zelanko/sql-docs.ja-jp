@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.rowsamplingtrans.f1
+- sql13.DTS.DESIGNER.ROWSAMPLINGTRANSFORMATION.COLUMNS.F1
+- sql13.dts.designer.rowsamplingtransformation.f1
 helpviewer_keywords:
 - sampling seeds [Integration Services]
 - random seeds
@@ -25,10 +27,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7726faae94381cab80d6f1dc0a01a1cf56d34550
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 74bc28f5ce476bf86ad91258877fe3c45e44c8df
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="row-sampling-transformation"></a>行サンプリング変換
@@ -51,8 +53,6 @@ ms.lasthandoff: 08/03/2017
   
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[行サンプリング変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「[行サンプリング変換エディター &#40;[サンプリング] ページ&#41;](../../../integration-services/data-flow/transformations/row-sampling-transformation-editor-sampling-page.md)」をご覧ください。  
-  
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -60,6 +60,24 @@ ms.lasthandoff: 08/03/2017
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  プロパティの設定方法の詳細については、次のトピックを参照してください。  
+  
+## <a name="row-sampling-transformation-editor-sampling-page"></a>行サンプリング変換エディター ([サンプリング] ページ)
+  **[行サンプリング変換エディター]** ダイアログ ボックスを使用すると、指定された行数を使用して、入力の一部をサンプルに分割できます。 この変換は、入力を 2 つの別個の出力に分割します。  
+  
+### <a name="options"></a>オプション  
+ **[行数]**  
+ サンプルとして使用する入力における行数を指定します。  
+  
+ このプロパティの値は、プロパティ式を使用して指定することができます。  
+  
+ **[サンプル出力名]**  
+ サンプリングされた行を含める出力の一意な名前を指定します。 指定した名前は、SSIS デザイナー内に表示されます。  
+  
+ **[選択されていない出力名]**  
+ サンプリングから除外された行を含む出力の一意な名前を指定します。 指定した名前は、SSIS デザイナー内に表示されます。  
+  
+ **[次のランダム シードを使用する]**  
+ 変換でサンプルを作成するために使用する乱数ジェネレーターのサンプリング シードを指定します。 このオプションは、開発およびテスト用にのみ使用することをお勧めします。 ランダム シードを指定しなかった場合は、Microsoft Windows のティック数がシードとして使用されます。  
   
 ## <a name="related-tasks"></a>関連タスク  
  [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  

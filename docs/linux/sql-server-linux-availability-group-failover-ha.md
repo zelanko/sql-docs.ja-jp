@@ -10,14 +10,15 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 6f060f110121bc744687b09a15e142112f48c86c
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 07a50a59c320d7abb58c725c717393f8751b337d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="operate-ha-availability-group-for-sql-server-on-linux"></a>SQL Server on Linux の HA 可用性グループを操作します。
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 ## <a name="failover"></a>可用性グループをフェールオーバーする方法
 
@@ -175,9 +176,6 @@ ms.lasthandoff: 08/02/2017
 
 次のセクションでは、可用性グループを含む Linux 上の SQL Server インスタンスでローリング アップグレードを実行する方法を説明します。 
 
->[!WARNING]
->Linux では、SQL Server 2017 RC2 へのローリング アップグレードはサポートされません。 セカンダリ レプリカをアップグレードした後は、プライマリ レプリカがアップグレードされるまで、プライマリ レプリカから切断されます。 Microsoft が将来のリリースでこの問題を解決しようとしています。 
-
 ### <a name="upgrade-steps-on-linux"></a>Linux 上のアップグレード手順
 
 可用性グループのレプリカが Linux での SQL Server のインスタンス上にある場合は、可用性グループのクラスターの種類は`EXTERNAL`または`NONE`です。 さらには、Windows Server フェールオーバー クラスター (WSFC) クラスター マネージャーで管理されている可用性グループ`EXTERNAL`です。 Corosync とペースでは、外部のクラスター マネージャーの例を示します。 クラスター マネージャーがありませんがある可用性グループがクラスターの種類`NONE`アップグレード手順は、こちらは、クラスターの種類の可用性グループの特定`EXTERNAL`または`NONE`です。
@@ -191,6 +189,15 @@ ms.lasthandoff: 08/02/2017
 
    >[!NOTE]
    >のみの場合、可用性グループ非同期レプリカ - をデータの損失を回避するのには 1 つのレプリカを同期に変更しが同期されるまでを待ちます。 このレプリカをアップグレードします。
+   
+   b.1 です。 アップグレードの対象となるセカンダリ レプリカをホストしているノード上のリソースを停止します。
+   
+   アップグレード コマンドを実行する前に、クラスターを監視し、は、不必要に失敗するように、リソースを停止します。 次の例では、停止するためのリソースに原因となるノードの場所の制約を追加します。 更新`ag_cluster-master`リソース名を持つと`nodeName1`アップグレードの対象となるレプリカをホストしているノードにします。
+
+   ```bash
+   pcs constraint location ag_cluster-master avoids nodeName1
+   ```
+   b.2 です。 セカンダリ レプリカで SQL Server をアップグレードします。
 
    次の例のアップグレード`mssql-server`と`mssql-server-ha`パッケージです。
 
@@ -198,11 +205,18 @@ ms.lasthandoff: 08/02/2017
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
    ```
+   b.3 です。 場所の制約の削除
+
+   アップグレード コマンドを実行する前に、クラスターを監視し、は、不必要に失敗するように、リソースを停止します。 次の例では、停止するためのリソースに原因となるノードの場所の制約を追加します。 更新`ag_cluster-master`リソース名を持つと`nodeName1`アップグレードの対象となるレプリカをホストしているノードにします。
+
+   ```bash
+   pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
+   ```
+   ベスト プラクティスとして、リソースが開始されたことを確認します (を使用して`pcs status`コマンド)、セカンダリ レプリカが接続されているし、アップグレード後に状態が同期されているとします。
 
 1. すべてのセカンダリ レプリカをアップグレードした後に手動でフェールオーバー同期セカンダリ レプリカのいずれか。
 
    可用性グループを`EXTERNAL`タイプのクラスターをクラスター管理ツールを使用して、失敗を over; の可用性グループを`NONE`クラスターの種類は、TRANSACT-SQL を使用してフェールオーバーする必要があります。 
-
    次の例は、クラスター管理ツールを使用して可用性グループのフェールオーバーが失敗します。 置き換える`<targetReplicaName>`プライマリとなる同期セカンダリ レプリカの名前に置き換えます。
 
    ```bash
@@ -211,7 +225,6 @@ ms.lasthandoff: 08/02/2017
    
    >[!IMPORTANT]
    >次の手順は、クラスター マネージャーがない可用性グループにのみ適用されます。  
-
    可用性グループのクラスターの種類が場合`NONE`を手動でフェールオーバーします。 次の手順を実行します。
 
       a. 次のコマンドは、プライマリ レプリカをセカンダリに設定します。 置き換える`AG1`可用性グループの名前に置き換えます。 プライマリ レプリカをホストする SQL Server のインスタンスで TRANSACT-SQL コマンドを実行します。
@@ -226,13 +239,27 @@ ms.lasthandoff: 08/02/2017
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
       ```
 
-1. フェールオーバー後は、古いプライマリ レプリカで SQL Server をアップグレードします。 
+1. フェールオーバー後は、b.1 b.3 上記の手順で説明されている同じ手順を繰り返して、古いプライマリ レプリカで SQL Server をアップグレードします。
 
    次の例のアップグレード`mssql-server`と`mssql-server-ha`パッケージです。
 
    ```bash
+   # add constraint for the resource to stop on the upgraded node
+   # replace 'nodename2' with the name of the cluster node targeted for upgrade
+   pcs constraint location ag_cluster-master avoids nodeName2
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
+   ```
+   
+   ```bash
+   # upgrade mssql-server and mssql-server-ha packages
+   sudo yum update mssql-server
+   sudo yum update mssql-server-ha
+   ```
+
+   ```bash
+   # remove the constraint; make sure the resource is started and replica is connected and synchronized
+   pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
 
 1. 外部のクラスターで、可用性グループ マネージャー - クラスターの入力場所は外部、クリーンアップ、手動フェールオーバーが発生した場所の制約条件です。 
