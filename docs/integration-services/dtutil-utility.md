@@ -209,7 +209,7 @@ dtutil /SQL srcPackage /EXISTS
  **認証を使用する** のローカル インスタンス上に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースがあり、このデータベースにパッケージが存在するかどうかを判断するには、次の構文を使用します。  
   
 ```dos
-dtutil SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS  
+dtutil /SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS  
 ```  
   
 > [!NOTE]  
@@ -280,3 +280,4 @@ dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd
 [Integration Services (SSIS) パッケージの実行](../integration-services/packages/run-integration-services-ssis-packages.md)  
   
   
+

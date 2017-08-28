@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>SQL Server on Linux に bcp を使用したデータの一括コピー
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 このトピックの内容を使用する方法を示しています、 [bcp](https://msdn.microsoft.com/en-us/library/ms162802.aspx) Linux 上の SQL Server 2017 RC2 のインスタンスと、ユーザー指定の形式でデータ ファイル間でデータの一括コピーするコマンド ライン ユーティリティです。
 

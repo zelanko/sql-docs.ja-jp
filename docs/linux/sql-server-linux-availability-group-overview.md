@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="availability-groups-for-sql-server-on-linux"></a>Linux 上の SQL Server の可用性グループ
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server Always On 可用性グループは高可用性 (HA) の場合、災害復旧 (DR) およびスケール アウト ソリューションです。 直接接続されたストレージ上のデータベースのグループに対して HA を提供します。 統合の HA および災害復旧、障害の自動検出、高速透過フェールオーバー、および読み取りの負荷分散の複数のセカンダリをサポートしています。 この機能の広範なセットでは、ワークロードの最適な可用性の Sla を達成することができます。
 

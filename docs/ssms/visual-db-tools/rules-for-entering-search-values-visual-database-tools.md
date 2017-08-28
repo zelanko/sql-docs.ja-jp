@@ -120,8 +120,8 @@ ms.lasthandoff: 08/18/2017
   
 |**ペイン**|**日付形式**|  
 |------------|-------------------|  
-|条件|ロケール固有&amp;#x2028;データベース固有&amp;#x2028;ANSI 標準<br /><br />[抽出条件ペイン](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) で入力された日付は、SQL ペインではデータベース互換の形式に変換されます。|  
-|SQL|データベース固有&amp;#x2028;ANSI 標準|  
+|条件|ロケール固有&#x2028;データベース固有&#x2028;ANSI 標準<br /><br />[抽出条件ペイン](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) で入力された日付は、SQL ペインではデータベース互換の形式に変換されます。|  
+|SQL|データベース固有&#x2028;ANSI 標準|  
 |[結果]|ロケール固有|  
   
 ## <a name="searching-on-logical-values"></a>論理値の検索  

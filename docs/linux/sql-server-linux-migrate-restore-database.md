@@ -18,7 +18,7 @@ ms.lasthandoff: 08/16/2017
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Windows からのバックアップと復元を使用して Linux に SQL Server データベースを移行します。
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server のバックアップと復元機能は、Linux 上の SQL Server 2017 RC2 への Windows 上の SQL Server からデータベースを移行することをお勧めします。 このチュートリアルでは、linux のバックアップ データベースを移動して、復元の方法に必要な手順について説明します。
 
