@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a4b2f82ac904d58604b0c27d46624995878e8a35
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 2d8ba0dcd52de143cd935eab6e8bba95e924409d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Visual Studio のコードを使用して作成し、SQL Server の TRANSACT-SQL スクリプトを実行
@@ -23,7 +23,7 @@ ms.lasthandoff: 08/02/2017
 
 このトピックの内容を使用する方法を示しています、 **mssql** Visual Studio Code (VS Code) を SQL Server データベースを開発するための拡張機能です。
 
-Visual Studio のコードは、Linux、macOS、および拡張機能をサポートする Windows のグラフィカルなコード エディターです。 [**Mssql** VS Code 拡張機能] 、SQL Server transact-sql (T-SQL)、クエリに接続し、結果を表示することができます。
+Visual Studio のコードは、Linux、macOS、および拡張機能をサポートする Windows のグラフィカルなコード エディターです。 [ **Mssql** VS Code 拡張機能]、SQL Server transact-sql (T-SQL)、クエリに接続し、結果を表示することができます。
 
 ## <a name="install-vs-code"></a>VS Code をインストールします。
 1. VS Code をまだインストールしていない場合[をダウンロードしてインストール VS Code]コンピューターにします。

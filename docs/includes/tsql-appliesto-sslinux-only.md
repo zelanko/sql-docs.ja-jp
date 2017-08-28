@@ -1,0 +1,1 @@
+<Token>**このトピックに適用されます**![ありません](media/no.png)SQL Server on Windows![[はい]](media/yes.png)Linux に SQL Server![ありません](media/no.png)Azure SQL Database![ありません](media/no.png)Azure SQL Data Warehouse![ありません](media/no.png)Parallel Data Warehouse。</Token>
