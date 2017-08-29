@@ -31,7 +31,8 @@
 # [SQL Server ツールでサーバーの状態を表示できるようにする WMI の構成](configure-wmi-to-show-server-status-in-sql-server-tools.md)
 # [SSMS 環境](the-sql-server-management-studio-environment.md)
 # [SSMS のプロパティ ページ](property-pages-in-sql-server-management-studio.md)
-# [SSMS の [プロパティ] ウィンドウ](properties-window-management-studio.md)
+# [SSMS のプロパティ ウィンドウ](properties-window-management-studio.md)
+# [SSMS の出力ウィンドウ](output-window.md)
 
 # [[バージョン情報] ダイアログ ボックス](about-dialog-box.md)
 # [SSMS の Web ブラウザー](sql-server-management-studio-web-browser.md)
