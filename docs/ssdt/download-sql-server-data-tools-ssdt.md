@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Data Tools (SSDT) のダウンロード | Microsoft Docs"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 08/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -17,45 +17,57 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 4bcceaeca15c3fa20cd797bda0182cf48f73a730
+ms.sourcegitcommit: 71a2cbf181c94c4c1aff877614aadf890b2496e0
+ms.openlocfilehash: 0bdc983c4a80781eaba888c3e214fc23a4ddad22
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) のダウンロード
 
-無料でダウンロードできる最新の開発ツールである **[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** を使用すると、SQL Server リレーショナル データベース、Azure SQL Database、Integration Services パッケージ、Analysis Services データ モデル、および Reporting Services レポートを作成できます。 SSDT では、Visual Studio でアプリケーションを開発する場合と同じくらい簡単に、SQL Server のコンテンツの種類を設計および展開できます。 このリリースでは、SQL Server 2005 から SQL Server 2017 までをサポートし、SQL Server の新機能を追加するためのデザイン環境を提供します。  
-    
-    
-![ダウンロード](../ssdt/media/download.png) [Visual Studio 2015 用 SQL Server Data Tools 17.2 のダウンロード](https://go.microsoft.com/fwlink/?linkid=852922)
+無料でダウンロードできる最新の開発ツールである **[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** を使用すると、SQL Server リレーショナル データベース、Azure SQL Database、Integration Services パッケージ、Analysis Services データ モデル、および Reporting Services レポートを作成できます。 SSDT では、Visual Studio でアプリケーションを開発する場合と同じくらい簡単に、SQL Server のコンテンツの種類を設計および展開できます。 
 
-![ダウンロード](../ssdt/media/download.png) [データ層アプリケーション フレームワーク (DacFx) 17.2 のダウンロード](https://www.microsoft.com/download/details.aspx?id=55713)
+SSDT for Visual Studio 2017 のプレビュー バージョン (15.3.0 プレビュー) が使用できるようになりました。 このリリースでは、Visual Studio 2017 (15.3 以降) での SQL Server データベース、Analysis Services、Reporting Services、および Integration Services のプロジェクトに対してスタンドアロン Web インストール エクスペリエンスを導入します。
 
-## <a name="sql-server-data-tools"></a>SQL Server Data Tools   
+| SSDT for Visual Studio 2017 (プレビュー) | SSDT for Visual Studio 2015 | 
+|:--|:--|
+|[![ダウンロード](../ssdt/media/download.png)SSDT for Visual Studio 2017 (15.3.0 プレビュー) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=853836) | [![ダウンロード](../ssdt/media/download.png)SSDT for Visual Studio 2015 (17.2) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=852922)|
+|||
+
+> [!IMPORTANT]
+> SSDT for Visual Studio 2017 (プレビュー) をインストールする前に、すべての VS インスタンスを閉じます。VS 2017 に既に SSAS および SSRS がインストールされている場合はアンインストールします。
+> 
+
+
+SSDT for Visual Studio 2015 と SSDT for Visual Studio 2017 は両方とも DacFx 17.2 を使用: [Data-Tier Application Framework (DacFx) 17.2 をダウンロードする](https://www.microsoft.com/download/details.aspx?id=55713)
+
+
+
+## <a name="ssdt-for-visual-studio-2017"></a>SSDT for Visual Studio 2017
+**バージョン情報**  
+  
+リリース番号: 15.3.0 プレビュー  
+このリリースのビルド番号: 14.0.16121.0
+
+詳細な変更一覧については、[変更ログ](changelog-for-sql-server-data-tools-ssdt.md)を参照してください。
+
+SSDT for Visual Studio 2017 のシステム要件は VS のインストールの場合と同じです。サポートされるオペレーティング システムは Windows 7 SP1、Windows 8.1 または Windows Server 2012 R2、Windows 10 または Windows Server 2016 です。  
+
+### <a name="available-languages---ssdt-for-vs-2017"></a>使用できる言語 - SSDT for VS 2017
+  
+ この SSDT のプレビュー リリースは、現在、英語のみでご利用いただけます。
+
+
+
+## <a name="ssdt-for-visual-studio-2015"></a>SSDT for Visual Studio 2015
 **バージョン情報**  
   
 リリース番号: 17.2  
 このリリースのビルド番号: 14.0.61707.300
   
-**新機能**
+詳細な変更一覧については、[変更ログ](changelog-for-sql-server-data-tools-ssdt.md)を参照してください。
 
-**AS**
-
-- 1400 互換性レベル テーブル モデルでの高度なセキュリティの [ロール] ダイアログでオブジェクト レベルのセキュリティを構成できるようになりました。
-- VS2017 の SSDT AS プロジェクトの AS Azure モデルにメール アドレスがないユーザーに対する新しい AAD ロール メンバー選択。
-- ADAL 資格情報のキャッシュ動作をカスタマイズするための SSDT AS テーブル プロジェクトでの新しい AS Azure の "Always Prompt" プロジェクト プロパティ。
-
-
-**既知の問題**
-
-- 詳細な変更一覧については、[変更ログ](changelog-for-sql-server-data-tools-ssdt.md)を参照してください。
-- [SSDT Connect フィードバック](https://connect.microsoft.com/SQLServer/Feedback) サイトで問題を報告します。
-
-> [!NOTE]
-> Visual Studio 2017 で SQL Server Data Tools を使用するには、後述する[こちら](#use-ssdt-in-visual-studio-2017)のセクションを参照してください。
-
-  **使用できる言語**  
+### <a name="available-languages---ssdt-for-vs-2015"></a>使用できる言語 - SSDT for VS 2015
   
  SSDT の今回のリリースは、次の言語でインストールできます。  
 [中国語 (中華人民共和国)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x804) | 
@@ -70,7 +82,7 @@ ms.lasthandoff: 08/08/2017
 [ロシア語]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x419) | 
 [スペイン語]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x40a)  
 
-**ISO イメージ**
+### <a name="iso-images---ssdt-for-vs-2015"></a>ISO イメージ - SSDT for VS 2015
 
 SSDT のインストールまたは管理者用インストール ポイントのセットアップの代替方法として、SSDT の ISO イメージを使用できます。 この ISO イメージは、SSDT に必要なすべてのコンポーネントが含まれた自己完結型ファイルであり、ダウンロード マネージャーを使用してダウンロードできます。ダウンロード マネージャーは再開可能であるため、ネットワークの帯域幅が限られている場合や信頼性が低い場合に便利です。 ダウンロードが完了したら、ISO イメージはドライブとしてマウントすることも、DVD に書き込むこともできます。
 
@@ -86,15 +98,17 @@ SSDT のインストールまたは管理者用インストール ポイント�
 [ロシア語]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x419) |
 [スペイン語]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x40a)
 
+
 ## <a name="download-visual-studio"></a>Visual Studio のダウンロード
 
-* [**Visual Studio Community 2015 のダウンロード**](https://www.visualstudio.com/products/visual-studio-community-vs.aspx)
+* [**Visual Studio のダウンロード**](https://www.visualstudio.com/downloads)
 
 ## <a name="installing-ssdt-without-visual-studio-pre-installed"></a>Visual Studio の事前インストールがない状態での SSDT のインストール
 
-コンピューターに Visual Studio 2015 がインストールされていない場合、SSDT for Visual Studio 2015 をインストールすると、最小バージョン ("統合シェル") の Visual Studio 2015 もインストールされます。 このバージョンの Visual Studio は無料でインストールでき、必要な数のコンピューターで使用できます。 すべての種類の SQL Server プロジェクトに加え、SQL Server オブジェクト エクスプローラーおよび他の SQL ツールを使用できます。
+コンピューターに Visual Studio がインストールされていない場合、SSDT for Visual Studio をインストールすると、最小バージョンの Visual Studio がインストールされます。 このバージョンの Visual Studio は無料でインストールでき、必要な数のコンピューターで使用できます。 すべての種類の SQL Server プロジェクトに加え、*SQL Server オブジェクト エクスプローラー*および他の SQL ツールを使用できます。
 
-コンピューターに [Visual Studio 2015 Community Edition (以降)](https://www.visualstudio.com/products/visual-studio-community-vs.aspx) がインストールされていない場合、SSDT をインストールすると、既存の Visual Studio に完全な SQL Server ツール セットが追加されます。 Visual Studio には、ソース コード管理の統合および非 SQL 言語のサポートなど、使用可能な多くの機能が含まれています。 T-SQL の開発時に快適に操作できるように、Visual Studio 2015 Community 以降を使用することをお勧めす。
+Visual Studio 2015 (以降) が既にインストールされている場合、SSDT をインストールすると、既存の Visual Studio に完全な SQL Server ツール セットが追加されます。 Visual Studio には、ソース コード管理の統合および非 SQL 言語のサポートなど、使用可能な多くの機能が含まれています。 T-SQL の開発時に快適に操作できるように、Visual Studio 2015 以降を使用することをお勧めします。
+
 
 ## <a name="supported-sql-versions"></a>サポートされる SQL のバージョン
   
@@ -115,18 +129,7 @@ SSDT をインストールした後、次のチュートリアルを使用して
   
 -   [基本的なテーブル レポートの作成 (SSRS チュートリアル)](https://msdn.microsoft.com/library/ms167305.aspx)  
   
-## <a name="use-ssdt-in-visual-studio-2017"></a>Visual Studio 2017 で SSDT を使用する 
 
-* [**Visual Studio 2017 のダウンロード**](https://www.visualstudio.com/) ([Visual Studio 2017 のエディション別の機能の比較](https://www.visualstudio.com/vs/compare/))
-
-リレーショナル データベース プロジェクトを使用するには、インストール中に**データの格納および処理**ワークロードをオンにすることをお勧めします。 SSDT データベース プロジェクトのサポートは、数多くの他のワークロードなどにも含まれています (*Azure*、"*ASP.Net と Web 開発*"、"*.Net Core クロス プラットフォーム開発*" など)。
-
-> [!NOTE]
-> 現在、Visual Studio 2017 の SSDT データベース プロジェクトは SQL Server 2016 までをサポートしています。  SQL Server 2017 は、Visual Studio 2017 の更新プログラムでまもなくサポートされます。
-
-Visual Studio 2017 で SSDT を使用する場合は、AS コンポーネントと RS コンポーネントをインストールします。
-* [Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)
-* [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
 
 ## <a name="see-also"></a>参照  

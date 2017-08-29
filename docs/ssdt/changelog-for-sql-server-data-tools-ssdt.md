@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Data Tools (SSDT) の変更ログ | Microsoft Docs"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 08/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,20 +15,36 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 51cfeaf15f9d7a01ce55968907e0074f7f2cb955
+ms.sourcegitcommit: 71a2cbf181c94c4c1aff877614aadf890b2496e0
+ms.openlocfilehash: e4bc77e76190463864ecab75ae94e28b16624309
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の変更ログ
-この変更ログは、[Visual Studio 2015 用 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx) のものです。  
+この変更ログは、[SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx) のものです。  
   
 新機能および変更点の詳細については、[SSDT チーム ブログ](https://blogs.msdn.microsoft.com/ssdt/)をご覧ください。
 
+## <a name="ssdt-for-visual-studio-2017-1530-preview"></a>SSDT for Visual Studio 2017 (15.3.0 プレビュー)
+ビルド番号: 14.0.16121.0
+  
+### <a name="whats-new"></a>新機能
+
+このプレビューは、SSDT for Visual Studio 2017 の最初のバージョンです。 このリリースでは、Visual Studio 2017 (15.3 以降) での SQL Server データベース、Analysis Services、Reporting Services、および Integration Services のプロジェクトに対してスタンドアロン Web インストール エクスペリエンスを導入します。
 
 
-## <a name="ssdt-172"></a>SSDT 17.2
+**既知の問題**
+
+- インストーラーはローカライズされていません。
+- SSIS はローカライズされていません。
+- *ExecuteOutofProcess* が *True* に設定されると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
+- 詳細な変更一覧については、[変更ログ](changelog-for-sql-server-data-tools-ssdt.md)を参照してください。
+- [SSDT Connect フィードバック](https://connect.microsoft.com/SQLServer/Feedback) サイトで問題を報告します。
+- サード パーティの拡張機能を含む SSIS パッケージは、その他のサーバー バージョンを対象にするように切り替えることはできません。
+
+
+## <a name="ssdt-172-for-visual-studio-2015"></a>SSDT 17.2 for Visual Studio 2015
 ビルド番号: 14.0.61707.300
 
 ### <a name="whats-new"></a>新機能
@@ -76,7 +92,7 @@ ms.lasthandoff: 08/08/2017
 - 最新の *TargetServerVersion* が "SQL Server vNext" から "SQL Server 2017" に変更されました
 
 
-## <a name="ssdt-171"></a>SSDT 17.1
+## <a name="ssdt-171-for-visual-studio-2015"></a>SSDT 17.1 for Visual Studio 2015
 ビルド番号: 14.0.61705.170
 
 ### <a name="whats-new"></a>新機能
@@ -95,7 +111,7 @@ ms.lasthandoff: 08/08/2017
 - Analysis Services 1400 互換性レベル表形式モデルの PowerQuery 統合でのいくつかの問題を修正しました
 - メジャーを定義するときに代入演算子が新しい行にならない新しい DAX エディター ツール ウィンドウでの問題を修正しました
 - パースペクティブ内のメジャーの名前を変更するときに、テーブル メジャーの表示が更新されない問題を修正しました
-- Analysis Services 統合ワークスペース エンジンとテーブル オブジェクト モデルを更新し、翻訳を含む 1200 テープル プロジェクトが SQL Server 2016 Analysis Services サーバーへの配置で失敗する原因となったバグ再発を修正しました
+- Analysis Services 統合ワークスペース エンジンとテーブル オブジェクト モデルを更新し、翻訳を含む 1200 テーブル プロジェクトが SQL Server 2016 Analysis Services サーバーへの配置で失敗する原因となったバグ再発を修正しました
 - 新しい 1400 テーブル データ ソースの作成/削除が非常に遅くなるパフォーマンスの問題を修正しました
 - 異なる DSV 間ですばやくビューを変更すると多次元モデルの DSV ダイアグラムがレンダリングを停止する問題を修正しました
 
@@ -106,7 +122,7 @@ ms.lasthandoff: 08/08/2017
 ## <a name="dacfx-1701"></a>DacFx 17.0.1 
 - EKM プロバイダー [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)での HSM による非対称キーでのデータベースの問題を解決しました
 
-## <a name="ssdt-170-supports-up-to-sql-server-2017"></a>SSDT 17.0 (SQL Server 2017 までのサポート)
+## <a name="ssdt-170-for-visual-studio-2015-supports-up-to-sql-server-2017"></a>SSDT 17.0 for Visual Studio 2015 (SQL Server 2017 までサポート)
 ビルド番号: 14.0.61704.140
 
 ### <a name="whats-new"></a>新機能
@@ -167,7 +183,7 @@ ms.lasthandoff: 08/08/2017
 - DAX Related() 関数の Intellisense が正常に機能せず、他のテーブルの列が表示されない問題を修正しました。
 - データベースからの AS テーブル プロジェクトのインポートを、AS データベースの一覧を並べ替えることで改善しました。
 - AS 表形式モデルで計算テーブルを作成するときに、候補オブジェクトとしてテーブルが式に表示されない問題を修正しました。
-- コードの表示後に統合ワークスペースを使用して プレビュー 1400 AS モデルを開こうとしたときに発生する問題を修正しました。
+- コードの表示後に統合ワークスペースを使用してプレビュー 1400 AS モデルを開こうとしたときに発生する問題を修正しました。
 - 特定の状況で (初期カタログではサポートされていない) 一部のデータ ソースの正常な動作を妨げていた問題を修正しました。 
 - デプロイ ウィザードは、パーティションを保持するオプションが有効な場合でも、計算テーブルのパーティションに変更を適用する必要があります。
 - 既存の AS Connection に対する [詳細プロパティ] ダイアログで、選択し直すまでリスト全体が表示されない問題を修正しました。
@@ -208,7 +224,7 @@ ms.lasthandoff: 08/08/2017
 - Always Encrypted: オンライン暗号化は、キャンセル時に変更追跡を無効にできず、暗号化を開始する前に変更追跡がクリーニングされていない場合は適切に機能しません。
 
 
-## <a name="ssdt-165-supports-up-to-sql-server-2016"></a>SSDT 16.5 (SQL Server 2016 までのサポート)
+## <a name="ssdt-165-for-visual-studio-2015-supports-up-to-sql-server-2016"></a>SSDT 16.5 for Visual Studio 2015 (SQL Server 2016 までサポート)
 リリース日: 2016 年 10 月 20 日
 
 ビルド番号: 14.0.61021.0
@@ -303,7 +319,7 @@ SSAS 表形式デザイナーの DAX パーサーにおいて、大きな DAX �
 
 
 
-## <a name="ssdt-164-for-sql-server-2016"></a>SSDT 16.4 (SQL Server 2016 用)
+## <a name="ssdt-164-for-visual-studio-2015-for-sql-server-2016"></a>SSDT 16.4 for Visual Studio 2015 (SQL Server 2016 用)
 リリース日: 2016 年 9 月 20 日
 
 ビルド番号: 14.0.60918
@@ -337,13 +353,13 @@ SSDT テーブルに内部 SSAS インスタンスが含まれるようになり
 * 高 DPI スケールでサイズ変更する際に正しく固定される SSDT AS のプロジェクトのプロパティダイアログに関する問題を修正しました。
 * SSDT AS のプロジェクトにおいて、貼り付けられたテーブルを含む特定のモデルのアップグレード中にエラーが発生する問題を修正しました。
 * SSDT AS において、Excel からシート行全体を貼り付ける処理が非常に遅く、不要な多数の列が作成される問題を修正しました。
-* SSDT AS において、静的な大きい DataTable式の解析と強調表示が非常に遅い、またはハングする問題を修正しました。
+* SSDT AS において、静的な大きい DataTable 式の解析と強調表示が非常に遅い、またはハングする問題を修正しました。
 * SSDT AS において、エディターで選択した現在のパースペクティブにメジャーと KPI 値を追加する際の問題を修正しました。
 * SSDT において、SQL Azure から AS プロジェクトへのデータのインポートで "dbo" 以外のスキーマの種類がサポートされない問題を修正しました。
 
 
 
-## <a name="ssdt-163-for-sql-server-2016"></a>SSDT 16.3 (SQL Server 2016 用)
+## <a name="ssdt-163-for-visual-studio-2015-for-sql-server-2016"></a>SSDT 16.3 for Visual Studio 2015 (SQL Server 2016 用)
 リリース日: 2016 年 8 月 15 日
 
 ビルド番号: 14.0.60812.0  
@@ -351,7 +367,7 @@ SSDT テーブルに内部 SSAS インスタンスが含まれるようになり
 **新機能**
 
 - **リリース バージョン管理と番号付け:** 月別ではなく数値でリリースがタグ付けされるようになりました。 これは新しい SSMS ポリシーに準拠したもので、リリースや修正プログラムが 1 か月に複数ある場合の処理が簡略化されます。 このリリースは 16.3 であり、RTM リリース後の 3 回目の更新であることを意味します。 修正プログラムは 16.3.1 のように表記され、次回の更新 (来月を予定) は 16.4 になります。
-- **Analysis Services – 表形式モデル エクスプローラー:** 表形式モデル エクスプローラーを使用すると、モデル内のさまざまなメタデータ オブジェクト (データ ソース、テーブル、メジャー、リレーションシップなど) 間を移動できます。 このエクスプローラーは個別のツール ウィンドウとして実装されます。Visual Studio の [表示] メニューを開いて [その他のウィンドウ] をポイントし、[表形式モデル エクスプローラー] をクリックすると表示できます。 既定では、表形式モデル エクスプローラーは個別のタブのソリューション エクスプローラー領域に表示されます。 表形式モデル エクスプローラーでは、メタデータ オブジェクトが、表形式モデル 1200 のスキーマによく似たツリー構造で表示されます。また、多数の新機能も追加されています。
+- **Analysis Services – 表形式モデル エクスプローラー:** 表形式モデル エクスプローラーを使用すると、モデル内のさまざまなメタデータ オブジェクト (データ ソース、テーブル、メジャー、リレーションシップなど) 間を移動できます。 このエクスプローラーは個別のツール ウィンドウとして実装されます。Visual Studio の [表示] メニューを開いて [その他のウィンドウ] をポイントし、[表形式モデル エクスプローラー] をクリックすると表示できます。 既定では、表形式モデル エクスプローラーは個別のタブのソリューション エクスプローラー領域に表示されます。表形式モデル エクスプローラーでは、メタデータ オブジェクトが、表形式モデル 1200 のスキーマによく似たツリー構造で表示されます。また、多数の新機能も追加されています。
 - **データベース ツール – Always Encrypted**:  このリリースには、新しい [Always Encrypted キー管理](https://msdn.microsoft.com/library/mt708953.aspx)ダイアログが用意されています。これにより、データベース プロジェクトまたは SQL Server オブジェクト エクスプローラーのライブ データベースに列マスター キーまたは列暗号化キーを簡単に追加できます。 このリリースは、Windows 証明書ストアの証明書をサポートしています。 今後のリリースでは、Azure Key Vault および CNG プロバイダーがサポートされる予定です。
     - 列マスター キーまたは列暗号化キーを作成する際、[データベースの更新] のクリック直後に SQL Server オブジェクト エクスプローラーに変更が反映されない可能性があります。 この問題を回避するには、SQL Server オブジェクト エクスプローラーでデータベース ノードを更新します。
     - SQL Server オブジェクト エクスプローラーからデータを含むテーブル内の列を暗号化しようとすると、エラーが発生する可能性があります。 現在、この機能は SSDT データベース プロジェクトと SSMS でのみサポートされています。 SQL Server オブジェクト エクスプローラーのサポートは今後のリリースで有効になる予定です。
@@ -383,7 +399,7 @@ SSDT テーブルに内部 SSAS インスタンスが含まれるようになり
 
  
   
-## <a name="ssdt-july-for-sql-server-2016"></a>SSDT 7 月 (SQL Server 2016 用)  
+## <a name="ssdt-july-for-visual-studio-2015-for-sql-server-2016"></a>SSDT July for Visual Studio 2015 (SQL Server 2016 用)  
 リリース日: 2016 年 6 月 30 日  
   
 ビルド番号: 14.0.60629.0  
@@ -426,7 +442,7 @@ SSDT テーブルに内部 SSAS インスタンスが含まれるようになり
     * 1200 互換性レベル モデルの計算テーブルの UI において、列の種類の既定の書式設定を使用して UI から書式設定の種類の変更を許可する際の問題を修正しました。 
     
 
-## <a name="ssdt-june-for-sql-server-2016"></a>SSDT 6 月 (SQL Server 2016 用)  
+## <a name="ssdt-june-for-visual-studio-2015-for-sql-server-2016"></a>SSDT June for Visual Studio 2015 (SQL Server 2016 用)  
 リリース日: 2016 年 6 月 1 日  
   
 ビルド番号: 14.0.60525.0 

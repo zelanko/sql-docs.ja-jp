@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 の新機能 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 08/25/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,16 +15,16 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 64fa56e239432ed01fb908ebcb9bda221a42cd5e
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 8d10f9e80eb1cc0c2495042e03ff746a017f8e2a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
 SQL Server 2017 は、SQL Server をプラットフォームとする方向に向けた大きな一歩を表します。そのプラットフォームは、SQL Server、Linux、Linux ベースの Docker コンテナー、および Windows の機能を利用することによって、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムの選択肢を提供します。 このトピックでは、最新の SQL Server 2017 リリース候補 (RC2、2017 年 8 月) およびコミュニティ テクニカル プレビュー (CTP) リリースでの特定の機能領域について、新機能をまとめて示します。
 
-**お試しください:** [最新の SQL Server 2017 リリース (RC2、2017 年 8 月) をダウンロードする](http://go.microsoft.com/fwlink/?LinkID=829477)
+[![Evaluation Center からダウンロードする](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  **お試しください:** [最新の SQL Server 2017 リリース (RC2、2017 年 8 月) をダウンロードする](http://go.microsoft.com/fwlink/?LinkID=829477)。
 このリリースには、バグの修正とパフォーマンスの改善が含まれています。
 
 >**Linux での SQL Server の実行** 詳細については、「[SQL Server ドキュメントの再編成](https://docs.microsoft.com/sql/linux/)」を参照してください。
@@ -66,7 +66,7 @@ SQL Server 2017 には多くの新しいデータベース エンジン機能、
     -   SSIS カタログに、SSIS パッケージを実行する既定のモードを指定するための新しいグローバル プロパティが追加されました。
 - 新しい **SSIS の Scale Out** 機能で、実行をトリガーするときに **Use32BitRuntime** パラメーターを使用できるようになりました。 (CTP 2.1)
 - SQL Server 2017 Integration Services (SSIS) で **Linux 上の SQL Server** がサポートされ、新しいパッケージでは、コマンド ラインから Linux で SSIS パッケージを実行できます。 詳細については、[SSIS の Linux サポートをお知らせするブログの投稿](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)を参照してください。 (CTP 2.1)
-- 新しい **SSIS の Scale Out**  機能を使用すると、複数のコンピューターでの SSIS の実行が大幅に簡単になります。 「[Integration Services Scale Out](~/integration-services/scale-out/integration-services-ssis-scale-out.md)」を参照してください。 (CTP 1.0)
+- 新しい **SSIS の Scale Out**  機能を使用すると、複数のコンピューターでの SSIS の実行が大幅に簡単になります。 「[Integration Services Scale Out](~/integration-services/scale-out/integration-services-ssis-scale-out.md)」を参照してください。(CTP 1.0)
 - OData ソースと OData 接続マネージャーで、Microsoft Dynamics AX Online と Microsoft Dynamics CRM Online の OData フィードに接続できるようになりました。 (CTP 1.0)
 
 詳細については、「[SQL Server 2017 の Integration Services の新機能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)」を参照してください。
@@ -112,11 +112,12 @@ SQL Server での開発者は、オープン ソース エコシステムで入�
 
 詳細については、「[What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)」 (SQL Server Machine Learning Services の新機能) を参照してください。
 
-##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) SQL Server エンジニアリング チームと連携する 
-- [スタック オーバーフロー (tag sql-server) - 技術的な質問](http://stackoverflow.com/questions/tagged/sql-server)
+##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) ヘルプの参照 
+- [スタック オーバーフロー (tag sql-server) - SQL 開発に関する質問](http://stackoverflow.com/questions/tagged/sql-server)
 - [MSDN フォーラム - 技術的な質問](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect - バグ報告と機能依頼](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit - SQL Server に関する一般的なディスカッション](https://www.reddit.com/r/SQLServer/)
+- [Microsoft SQL Server ライセンス条項および情報](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
 
 ## <a name="next-steps"></a>次の手順
 - [SQL Server 2017 リリース ノート](sql-server-2017-release-notes.md)を参照してください。

@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 8b8796e2bda252800c836cf7f10cc20f8b7d593c
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: e0bdc95320ea2e696444048156dffefcd89e1910
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="sql-server-technical-documentation"></a>SQL Server 技術ドキュメント
@@ -47,14 +47,11 @@ SQL Server のインストール、構成、および使用の際に役立つド
 - [SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)
     
 **SQL Server をお試しください。**    
-- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [**SQL Server 2017 のダウンロード**](http://go.microsoft.com/fwlink/?LinkID=829477)
-- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [**SQL Server 2016 のダウンロード**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
-- **[SQL Server 2016 がインストール済みの Virtual Machine をすぐにご利用いただけます](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**   
-- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://msdn.microsoft.com/library/mt238290.aspx) [**最新バージョンの SQL Server Management Studio (SSMS) のダウンロード**](https://msdn.microsoft.com/library/mt238290.aspx)   
-- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [**SQL Server Data Tools (SSDT) のダウンロード**](../ssdt/download-sql-server-data-tools-ssdt.md)
- 
-**関連情報**
-- [Microsoft SQL Server ライセンス条項および情報](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
+- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 のダウンロード](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [SQL Server 2016 のダウンロード](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
+- [SQL Server 2016 がインストール済みの仮想マシン](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)をすぐにご利用いただけます。
+- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://msdn.microsoft.com/library/mt238290.aspx) [SQL Server Management Studio (SSMS) のダウンロード](https://msdn.microsoft.com/library/mt238290.aspx)   
+- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [SQL Server Data Tools (SSDT) のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)
     
 ## <a name="sql-server-technologies"></a>SQL Server のテクノロジ    
     
@@ -93,8 +90,8 @@ SQL Server のインストール、構成、および使用の際に役立つド
 + [SQL Server Update Center - サポート対象のすべてのバージョンのリンクと情報](https://msdn.microsoft.com/library/ff803383.aspx)
   
 ##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) ヘルプの参照 
-- [スタック オーバーフロー (tag sql-server) - 技術的な質問](http://stackoverflow.com/questions/tagged/sql-server)
+- [スタック オーバーフロー (tag sql-server) - SQL 開発に関する質問](http://stackoverflow.com/questions/tagged/sql-server)
 - [MSDN フォーラム - 技術的な質問](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect - バグ報告と機能依頼](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit - SQL Server に関する一般的なディスカッション](https://www.reddit.com/r/SQLServer/)
-
+- [Microsoft SQL Server ライセンス条項および情報](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 

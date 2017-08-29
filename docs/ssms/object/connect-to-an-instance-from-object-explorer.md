@@ -1,7 +1,7 @@
 ---
-title: "オブジェクト エクスプローラーからインスタンスへの接続 | Microsoft Docs"
+title: "SQL Server または Azure SQL Database への接続 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/25/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -13,45 +13,55 @@ ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 53043981ec7d3d66f3a16252a5dd90a9ad323aa6
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 2d5048825b3c71ecaec5da0f6ae75277994d1697
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="connect-to-an-instance-from-object-explorer"></a>オブジェクト エクスプローラーからインスタンスへの接続
-オブジェクト エクスプローラーを使用してオブジェクトを管理するには、まず、オブジェクトを含むインスタンスにオブジェクト エクスプローラーを接続する必要があります。 オブジェクト エクスプローラーは複数のインスタンスに同時に接続できます。  
+# <a name="connect-to-a-sql-server-or-azure-sql-database"></a>SQL Server または Azure SQL Database への接続
+
+サーバーとデータベースで作業するには、まず、サーバーに接続する必要があります。 同時に複数のサーバーに接続することができます。
+
+[SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) では、複数の種類の接続をサポートしています。 この記事では、SQL Server と Azure SQL Database への接続 (Azure SQL 論理サーバーへの接続) の詳細について説明します。 他の接続オプションについては、このページの下部に示す[リンク](#see-also)を参照してください。
   
-## <a name="connecting-object-explorer-to-a-server"></a>オブジェクト エクスプローラーからサーバーへの接続  
-オブジェクト エクスプローラーを使用するには、まずサーバーに接続する必要があります。 [オブジェクト エクスプローラー] ツール バーの **[接続]** をクリックし、ドロップダウン リストからサーバーの種類を選択してください。 **[サーバーへの接続]** ダイアログ ボックスが開きます。 接続するには、少なくともサーバーの名前と正しい認証情報を指定する必要があります。  
-  
-## <a name="optional-object-explorer-connection-settings"></a>オブジェクト エクスプローラーの省略可能な接続設定  
-サーバーに接続するときに、 **[サーバーへの接続]** ダイアログ ボックスで追加の接続情報を指定できます。 **[サーバーへの接続]** ダイアログ ボックスでは最後に使用した設定が保存され、新しい接続 (新しいコード エディターのウィンドウなど) ではその設定が使用されます。  
-  
-省略可能な接続設定を指定するには、次の手順を実行します。  
-  
-1.  [オブジェクト エクスプローラー] ツール バーの **[接続]** をクリックし、接続先のサーバーの種類をクリックします。 **[サーバーへの接続]** ダイアログ ボックスが表示されます。  
-  
-2.  **[サーバー名]** ボックスに [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] インスタンスの名前を入力します。  
-  
-3.  **[オプション]**をクリックします。 **[サーバーへの接続]** ダイアログ ボックスに追加のオプションが表示されます。  
-  
-4.  **[接続プロパティ]** タブをクリックし、追加の設定を構成します。 使用可能な設定は、サーバーの種類によって異なります。 [!INCLUDE[ssDE](../../includes/ssde_md.md)]で使用可能な設定は以下のとおりです。  
-  
-    |設定|Description|  
-    |-----------|---------------|  
-    |**[データベースへの接続]**|サーバー上の使用可能なデータベースのいずれかを選択します。 一覧には、表示権限のあるデータベースだけが表示されます。|  
-    |**[ネットワーク プロトコル]**|共有メモリ、TCP/IP、名前付きパイプのいずれかを選択します。|  
-    |**[ネットワーク パケット サイズ]**|バイト単位で設定します。 既定の設定は 4096 バイトです。|  
-    |**[接続タイムアウト]**|秒単位で設定します。 既定の設定は 15 秒です。|  
-    |**[実行タイムアウト]**|秒単位で設定します。 既定の設定 (0) の場合、実行はタイムアウトになりません。|  
-    |**[暗号化接続]**|暗号化を強制的に行います。|  
-  
-5.  指定したサーバーを登録済みサーバーの一覧に追加するには、 **[登録済みサーバー]** タブをクリックし、その新しいサーバーを表示する場所をクリックしてから、接続を完了します。  
-  
-> [!NOTE]  
-> **[追加の接続パラメーター]** ページを使用すると、接続文字列に接続パラメーターをさらに追加できます。 詳細については、「[[サーバーへの接続] ([追加の接続パラメーター] ページ)](../../ssms/f1-help/connect-to-server-additional-connection-parameters-page.md)」を参照してください。  
-  
+## <a name="connecting-to-a-server"></a>サーバーへの接続  
+
+1. **オブジェクト エクスプローラー**で、**[接続]、[データベース エンジン]** の順にクリックします。
+
+   ![connect](../media/connect-to-server/connect-db-engine.png)
+
+1. [**サーバーへの接続**] フォームに必要事項を入力し、[**接続**] をクリックします。
+
+   ![サーバーへの接続](../media/connect-to-server/connect.png)
+
+1. Azure SQL Server に接続する場合は、サインインしてファイアウォール規則を作成するように求めるメッセージが表示される場合があります。 [**サインイン**] をクリックします (メッセージが表示されない場合は、下記の手順 6 に進みます)。
+
+   ![ファイアウォール](../media/connect-to-server/firewall-rule-sign-in.png)
+
+1. サインインが正常に終了すると、フォームには特定の IP アドレスが既に設定された状態となります。 IP アドレスが頻繁に変更になる場合は、特定の範囲へのアクセス権を付与するのが簡単です。環境に応じて最適なオプションを選択してください。 
+
+   ![ファイアウォール](../media/connect-to-server/new-firewall-rule.png)
+
+1. ファイアウォール規則を作成して、サーバーに接続するには、[**OK**] をクリックします。
+
+1. 接続が正常に行われると、**オブジェクト エクスプローラー**にサーバー表示されます。
+
+   ![接続済み](../media/connect-to-server/connected.png)
+
+## <a name="next-steps"></a>次の手順
+
+[テーブルの設計、作成、更新](../visual-db-tools/design-tables-visual-database-tools.md)
+
+## <a name="see-also"></a>参照
+
+[SQL Server Management Studio (SSMS)](../sql-server-management-studio-ssms.md)  
+[SQL Server Management Studio (SSMS) のダウンロード](../download-sql-server-management-studio-ssms.md)
+
+[Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)  
+[Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
+[Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)  
+[Azure Storage](../f1-help/connect-to-microsoft-azure-storage.md)  
 

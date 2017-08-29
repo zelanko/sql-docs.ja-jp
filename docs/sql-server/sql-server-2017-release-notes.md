@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 リリース ノート | Microsoft Docs"
 ms.custom: 
-ms.date: 05/16/2017
+ms.date: 08/25/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,18 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 04245fd42b770129ce4074f8a4ae8377b10cf384
-ms.openlocfilehash: 6494051851601ead6fb3d51e1688b8f1320ed5d4
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0288cee4b9dee5fba6b67b21e81193bdbe374a94
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 リリース ノート
 このトピックでは、 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]での制限事項と問題について説明します。 関連情報については、次を参照してください。
 - [SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)。
 - [SQL Server on Linux リリース ノート](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)。
-  
-[![Evaluation Center からダウンロードしてください。](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  **[Evaluation Center](http://go.microsoft.com/fwlink/?LinkID=829477)** から [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] をダウンロードしてください
+
+[![Evaluation Center からダウンロードする](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  **お試しください:** [最新の SQL Server 2017 リリース (RC2、2017 年 8 月) をダウンロードする](http://go.microsoft.com/fwlink/?LinkID=829477)。
 
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 リリース候補 (RC2、2017 年 8 月)
 このリリースに対する、Windows 上の SQL Server のリリース ノートはありません。 [Linux 上の SQL Server のリリース ノート](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)に関する記事をご覧ください。
@@ -109,11 +109,12 @@ ms.lasthandoff: 08/15/2017
 
    セカンダリ レプリカをホストしていた SQL Server のインスタンスが回復します。
 
-##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) SQL Server エンジニアリング チームと連携する 
-- [スタック オーバーフロー (tag sql-server) - 技術的な質問](http://stackoverflow.com/questions/tagged/sql-server)
+##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) ヘルプの参照 
+- [スタック オーバーフロー (tag sql-server) - SQL 開発に関する質問](http://stackoverflow.com/questions/tagged/sql-server)
 - [MSDN フォーラム - 技術的な質問](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect - バグ報告と機能依頼](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit - SQL Server に関する一般的なディスカッション](https://www.reddit.com/r/SQLServer/)
+- [Microsoft SQL Server ライセンス条項および情報](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
 
 ## <a name="more-information"></a>詳細情報
 - [SQL Server Reporting Services リリース ノート](../reporting-services/reporting-services-release-notes.md)での制限事項と問題について説明します。

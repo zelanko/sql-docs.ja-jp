@@ -1,1 +1,1 @@
-<Token>**このトピックに適用されます**![ありません](media/no.png)SQL Server on Windows![[はい]](media/yes.png)Linux に SQL Server![ありません](media/no.png)Azure SQL Database![ありません](media/no.png)Azure SQL Data Warehouse![ありません](media/no.png)Parallel Data Warehouse。</Token>
+<Token>**適用対象:** ![X](media/no.png)SQL Server on Windows![○](media/yes.png)SQL Server on Linux![X](media/no.png)Azure SQL Database![X](media/no.png)Azure SQL Data Warehouse![X](media/no.png)Parallel Data Warehouse </Token>

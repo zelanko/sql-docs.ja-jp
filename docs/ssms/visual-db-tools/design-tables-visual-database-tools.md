@@ -1,7 +1,7 @@
 ---
-title: "テーブルのデザイン (Visual Database Tools) | Microsoft Docs"
+title: "テーブルの作成と更新 (SSMS) | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/25/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -12,26 +12,58 @@ ms.topic: article
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], Table Designer
 - Table Designer, designing tables
+- opening tables
+- opening Table Designer
+- tables [SQL Server], opening
+- Table Designer, opening
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
 caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f87cf8d01b8a7b00e91df6803936f37df4af4b46
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: ca37946fadb30837e21255ae67b862a61bd6f68e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="design-tables-visual-database-tools"></a>テーブルのデザイン (Visual Database Tools)
-テーブル デザイナーでは、ウィンドウ全体を使用して 1 つのテーブルをデザインします。 このセクションの各トピックでは、テーブル デザイナーを使用してデータベース テーブルを作成および変更する方法について説明します。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
-[テーブル デザイナーを開く &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-table-designer-visual-database-tools.md)  
-新規または既存のデータベース テーブルを開きます。  
-  
-[テーブル デザイナーでの作業を保存する (Visual Database Tools)](../../ssms/visual-db-tools/save-your-work-in-table-designer-visual-database-tools.md)  
-テーブル デザイナーで開いている特定のテーブル、またはすべてのテーブルの変更を保存します。  
-  
+# <a name="create-and-update-database-tables"></a>データベース テーブルの作成と更新
 
+テーブル デザイナーはビジュアル ツールであり、[データベース テーブル](../../relational-databases/tables/tables.md)の設計および視覚化を行うことができます。 SQL Server Management Studio (SSMS) テーブル デザイナーを使用して、テーブル、列、キー、インデックス、リレーションシップ、および制約を作成、編集、または削除します。  
+
+  
+## <a name="create-a-table"></a>テーブルの作成  
+  
+1. データベースで **[テーブル]** ノードを右クリックし、**[新規作成]** > **[テーブル]** を選択します。  
+  
+    ![新しいテーブル](../media/design-tables/new-table.png)
+  
+1. テーブルに[列](column-properties-visual-database-tools.md)を追加します。
+  
+    ![テーブルを設計する](../media/design-tables/new-table2.png)
+
+1. デザイナーを閉じて、変更を保存します。
+  
+## <a name="update-a-table"></a>テーブルを更新する  
+  
+1. データベースの **[テーブル]** ノードの下にあるテーブルを右クリックし、**[デザイン]** を選択します。  
+  
+   ![テーブルを更新する](../media/design-tables/update-table.png)
+
+1. 目的のテーブル設定を更新します。
+
+   ![](../media/design-tables/update-table2.png)
+
+1. デザイナーを閉じて、変更を保存します。
+
+## <a name="see-also"></a>参照
+
+[テーブル](http://msdn.microsoft.com/82d7819c-b801-4309-a849-baa63083e83f)  
+[テーブルのプロパティ (Visual Database Tools)](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
+[列のプロパティ](column-properties-visual-database-tools.md)  
+[テーブルへの列の追加](../../relational-databases/tables/add-columns-to-a-table-database-engine.md)  
+[主キーと外部キー](../../relational-databases/tables/primary-and-foreign-key-constraints.md)  
+[インデックス](../../relational-databases/indexes/indexes.md)  
+[データ型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
+[SQL Server Management Studio (SSMS) のダウンロード](../download-sql-server-management-studio-ssms.md)  
