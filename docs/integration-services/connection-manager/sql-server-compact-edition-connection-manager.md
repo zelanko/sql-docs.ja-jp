@@ -53,7 +53,7 @@ ms.lasthandoff: 08/09/2017
   
  プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
   
-## <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>[SQL Server Compact Edition 接続マネージャー エディター] ([接続] ページ)
+## <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>[SQL Server Compact Edition 接続マネージャー エディター] \([接続] ページ)
   **[SQL Server Compact Edition 接続マネージャー エディター]** ダイアログ ボックスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースに接続するためのプロパティを指定できます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition 接続マネージャーについて詳しくは、「 [SQL Server Compact Edition 接続マネージャー](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)」をご覧ください。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 08/09/2017
  **[データベースのパスワードを入力]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースのパスワードを入力します。  
   
-## <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>[SQL Server Compact Edition 接続マネージャー エディター] ([すべて] ページ)
+## <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>[SQL Server Compact Edition 接続マネージャー エディター]\ ([すべて] ページ)
   **[SQL Server Compact Edition 接続マネージャー エディター]** ダイアログ ボックスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースに接続するためのプロパティを指定できます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition 接続マネージャーについて詳しくは、「 [SQL Server Compact Edition 接続マネージャー](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)」をご覧ください。  

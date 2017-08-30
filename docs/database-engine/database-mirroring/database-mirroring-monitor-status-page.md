@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/02/2017
 
 ---
-# <a name="database-mirroring-monitor-status-page"></a>[データベース ミラーリング モニター] ([状態] ページ)
+# <a name="database-mirroring-monitor-status-page"></a>[データベース ミラーリング モニター] \([状態] ページ)
   読み取り専用ページです。現在ナビゲーション ツリーで選択されているデータベースのプリンシパルおよびミラー サーバー インスタンスについて、最新のミラーリング状態が表示されます。 インスタンスに関する情報が利用できない場合、そのインスタンスに対応する **[状態]** グリッドのセルは " **不明**" とグレーで表示されます。  
   
  **SQL Server Management Studio を使用してデータベース ミラーリングを監視するには**  

@@ -130,7 +130,7 @@ ms.lasthandoff: 06/22/2017
  **[ディストリビューターに登録されたカスタム競合回避モジュールを使用する]**  
  アーティクル競合回避モジュール ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] が提供しているモジュールまたは自作のモジュール) の使用を選択した場合、リスト ボックスから競合回避モジュールを選択する必要があります。 詳細については、「 [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
   
- 競合回避モジュールに入力が必要な場合、 **[競合回避モジュールが必要とする情報の入力]** テキスト ボックスで指定してください。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタム競合回避モジュールに必要な入力の詳細については、「[Microsoft COM ベースの競合回避モジュール](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)」を参照してください。  
+ 競合回避モジュールに入力が必要な場合、 **[競合回避モジュールが必要とする情報の入力]** テキスト ボックスで指定してください。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタム競合回避モジュールに必要な入力の詳細については、「 [Microsoft COM-Based Resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md) 」を参照してください。  
   
  **[要求時同期中にサブスクライバーが対話的に競合を解決することを許可する]**  
  サブスクライバーでオン デマンド同期が使用されるとき (マージ レプリケーションの既定の動作)、競合を対話的に解決する場合に、このオプションを選択します。 オン デマンド同期は、サブスクリプションの新規作成ウィザードの **[同期スケジュール]** ページで指定します。 競合を対話的に解決するには、インタラクティブ競合回避モジュールのユーザー インターフェイスを使用します。 詳細については、「 [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)」を参照してください。  

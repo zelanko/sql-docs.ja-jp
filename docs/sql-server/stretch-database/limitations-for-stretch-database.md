@@ -62,8 +62,8 @@ Stretch に対応するテーブルには次の制限事項があります。
   
 -   メモリ最適化テーブル  
   
- ### <a name="data-types"></a>データ型  
- -   text、ntext、image  
+### <a name="data-types"></a>データ型  
+-   text、ntext、image  
   
 -   timestamp  
   

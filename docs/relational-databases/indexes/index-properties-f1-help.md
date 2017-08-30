@@ -216,7 +216,7 @@ ms.lasthandoff: 06/22/2017
  **[地理自動グリッド]**  
  このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、データベース互換性レベルが 110 以上に設定されている場合に利用できます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がテセレーションを実装するしくみについては、「[空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がテセレーションを実装するしくみについては、「 [空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md) 」を参照してください。  
   
  **[オブジェクトごとのセル数]**  
  インデックスの単一の空間オブジェクトに使用できるオブジェクトごとのテセレーション セル数を示します。 1 ～ 8192 の整数を指定できます。 既定値は 16 ですが、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でデータベース互換性レベルが 110 以上に設定されている場合、既定値は 8 です。  

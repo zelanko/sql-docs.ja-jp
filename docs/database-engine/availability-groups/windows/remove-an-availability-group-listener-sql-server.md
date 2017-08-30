@@ -71,7 +71,7 @@ ms.lasthandoff: 08/02/2017
   
 5.  これにより、 **[可用性グループからのリスナーの削除]** ダイアログ ボックスが開きます。 詳細については、このトピックの「 [[可用性グループからのリスナーの削除]](#AgListenerPropertiesDialog)」を参照してください。  
   
-###  <a name="AgListenerPropertiesDialog"></a> [可用性グループからのリスナーの削除] (ダイアログ ボックス)  
+###  <a name="AgListenerPropertiesDialog"></a> [可用性グループからのリスナーの削除] \(ダイアログ ボックス)  
  **名前**  
  削除するリスナーの名前です。  
   
