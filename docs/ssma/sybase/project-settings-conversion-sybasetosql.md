@@ -383,7 +383,7 @@ ASE を省略可能なサポート*user_id* INDEX_COL 関数に渡す引数た�
 **NEXT_IDENTITY 関数**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure の NEXT_IDENTITY システム関数ではありません。  
   
--   ASE 動作を使用するには、次のように選択します。**変換関数**です。 NEXT_IDENTITY 関数へのすべての呼び出しは、式 (IDENT_CURRENT(parameter Value) + Sybase ASE 動作をエミュレートする IDENT_INCR(parameter Value) で置き換えられます。。  
+-   ASE 動作を使用するには、次のように選択します。**変換関数**です。 NEXT_IDENTITY 関数へのすべての呼び出しは、式 (IDENT_CURRENT(parameter Value) + Sybase ASE 動作をエミュレートする IDENT_INCR(parameter Value) で置き換えられます  
   
 -   エラー メッセージを印刷するは、その NEXT_IDENTITY が発生するたびに、**エラーでマーク**です。 SSMA は、関数への参照は変換されませんし、エラー コメントを指定してステートメントをマークします。  
   
