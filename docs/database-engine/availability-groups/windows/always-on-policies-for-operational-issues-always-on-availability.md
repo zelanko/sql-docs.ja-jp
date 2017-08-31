@@ -67,20 +67,20 @@ ms.lasthandoff: 08/02/2017
   
 |ポリシー名|問題点|カテゴリ**\***|ファセット|  
 |-----------------|-----------|--------------------|-----------|  
-|WSFC クラスターの状態|[WSFC cluster service is offline](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md)。|重大|SQL Server のインスタンス|  
-|可用性グループのオンライン状態|[Availability group is offline](../../../database-engine/availability-groups/windows/availability-group-is-offline.md)。|重大|可用性グループ|  
-|可用性グループの自動フェールオーバーの準備|[Availability group is not ready for automatic failover](../../../database-engine/availability-groups/windows/availability-group-is-not-ready-for-automatic-failover.md)。|重大|可用性グループ|  
-|可用性レプリカのデータ同期状態|[Some availability replicas are not synchronizing data](../../../database-engine/availability-groups/windows/some-availability-replicas-are-not-synchronizing-data.md)。|警告|可用性グループ|  
-|同期レプリカのデータの同期状態|[Some synchronous replicas are not synchronized](../../../database-engine/availability-groups/windows/some-synchronous-replicas-are-not-synchronized.md)。|警告|可用性グループ|  
-|可用性レプリカのロールの状態|[Some availability replicas do not have a healthy role](../../../database-engine/availability-groups/windows/some-availability-replicas-do-not-have-a-healthy-role.md)。|警告|可用性グループ|  
-|可用性レプリカの接続状態|[Some availability replicas are disconnected](../../../database-engine/availability-groups/windows/some-availability-replicas-are-disconnected.md)。|警告|可用性グループ|  
-|可用性レプリカのロールの状態|[Availability replica does not have a healthy role](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md)。|重大|可用性レプリカ|  
-|可用性レプリカの接続状態|[Availability replica is disconnected](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md)。|重大|可用性レプリカ|  
+|WSFC クラスターの状態|[WSFC クラスター サービスはオフラインです](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md)。|重大|SQL Server のインスタンス|  
+|可用性グループのオンライン状態|[可用性グループがオフラインです](../../../database-engine/availability-groups/windows/availability-group-is-offline.md)。|重大|可用性グループ|  
+|可用性グループの自動フェールオーバーの準備|[可用性グループで自動フェールオーバーの準備ができていません](../../../database-engine/availability-groups/windows/availability-group-is-not-ready-for-automatic-failover.md)。|重大|可用性グループ|  
+|可用性レプリカのデータ同期状態|[一部の可用性レプリカでデータが同期されません](../../../database-engine/availability-groups/windows/some-availability-replicas-are-not-synchronizing-data.md)。|警告|可用性グループ|  
+|同期レプリカのデータの同期状態|[一部の同期レプリカが同期されていません](../../../database-engine/availability-groups/windows/some-synchronous-replicas-are-not-synchronized.md)。|警告|可用性グループ|  
+|可用性レプリカのロールの状態|[一部の可用性レプリカに正常なロールがありません](../../../database-engine/availability-groups/windows/some-availability-replicas-do-not-have-a-healthy-role.md)。|警告|可用性グループ|  
+|可用性レプリカの接続状態|[一部の可用性レプリカの接続が解除されています](../../../database-engine/availability-groups/windows/some-availability-replicas-are-disconnected.md)。|警告|可用性グループ|  
+|可用性レプリカのロールの状態|[可用性レプリカに正常なロールがありません](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md)。|重大|可用性レプリカ|  
+|可用性レプリカの接続状態|[可用性レプリカの接続が解除されます](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md)。|重大|可用性レプリカ|  
 |可用性レプリカの参加状態|[可用性レプリカが参加していません](../../../database-engine/availability-groups/windows/availability-replica-is-not-joined.md)。|警告|可用性レプリカ|  
-|可用性レプリカのデータの同期状態|[Data synchronization state of some availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md)。|警告|可用性レプリカ|  
-|可用性データベースの中断状態|[Availability database is suspended](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md)。|警告|可用性データベース|  
-|可用性データベースの参加状態|[Secondary database is not joined](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md)。|警告|可用性データベース|  
-|可用性データベースのデータ同期状態|[Data synchronization state of availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md)。|警告|可用性データベース|  
+|可用性レプリカのデータの同期状態|[一部の可用性データベースのデータ同期状態が正常ではありません](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md)。|警告|可用性レプリカ|  
+|可用性データベースの中断状態|[可用性データベースが中断されています](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md)。|警告|可用性データベース|  
+|可用性データベースの参加状態|[セカンダリ データベースが参加していません](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md)。|警告|可用性データベース|  
+|可用性データベースのデータ同期状態|[可用性データベースのデータ同期状態が正常ではありません](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md)。|警告|可用性データベース|  
   
 > [!IMPORTANT]  
 >  **\*** AlwaysOn ポリシーでは、カテゴリの名前が ID として使用されます。 AlwaysOn カテゴリの名前を変更すると、正常性評価の機能を使用できなくなります。 このため、AlwaysOn カテゴリの名前は変更しないでください。  
