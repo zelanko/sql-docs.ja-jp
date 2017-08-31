@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
 -   イベントの起動: ManageWeb  
   
- 詳しくは、「 [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)」をご覧ください。  
+ 詳しくは、「 [Reporting Services のロールおよびタスクと SharePoint のグループおよび権限の比較](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)」をご覧ください。  
   
 ### <a name="script-usage"></a>スクリプトの使用法  
  **スクリプトファイル (.ps1) の作成**  
