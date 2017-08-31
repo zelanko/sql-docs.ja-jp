@@ -1,7 +1,7 @@
 ---
 title: "分散型可用性グループ (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 06/20/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: e390d6efa26dcb628da636bc9bcf7c8fac54af65
+ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
+ms.openlocfilehash: 534cc0e8f798c8d231936e1c89835257832c4b16
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 # <a name="distributed-availability-groups"></a>分散型可用性グループ
@@ -42,7 +42,8 @@ ms.lasthandoff: 08/11/2017
 
 次の図では、それぞれが専用の WSFC クラスターに構成されている 2 つの可用性グループ (AG 1 および AG 2) にまたがる分散型可用性グループの概略を示します。 分散型可用性グループには、可用性グループごとに 2 つずつ、合計で 4 つのレプリカがあります。 各可用性グループは最大数までのレプリカをサポートできるので、Standard Edition に基づく分散型可用性グループでは最大 4 個のレプリカ、Enterprise Edition に基づく分散型可用性グループでは最大 18 個のレプリカを、持つことができます。
 
-<a name="fig1"></a> ![分散型可用性グループの概要][1]
+<a name="fig1"></a>
+![分散型可用性グループの概要][1]
 
 分散型可用性グループでのデータ移動は、同期または非同期として構成できます。 ただし、分散型可用性グループでのデータの移動は、従来の可用性グループと若干異なります。 各可用性グループにはプライマリ レプリカがありますが、挿入、更新、削除を受け付けることができるのは、分散型可用性グループに参加しているデータベースの 1 つのコピーだけです。 次の図に示すように、AG 1 はプライマリ可用性グループです。 AG 1 のプライマリ レプリカは、AG 1 のセカンダリ レプリカと AG 2 のプライマリ レプリカの両方にトランザクションを送信します。 AG 2 のプライマリ レプリカは、AG 2 のセカンダリ レプリカを維持します。 
 
@@ -119,7 +120,7 @@ AG 2 のプライマリ レプリカが挿入、更新、削除を受け付け�
 
 移行の機能は、SQL Server を同じバージョンにしたまま基になる OS を変更またはアップグレードするシナリオで特に便利です。 Windows Server 2016 では、同じハードウェア上で Windows Server 2012 R2 からローリング アップグレードできますが、ほとんどのユーザーは新しいハードウェアまたは仮想マシンの配置を選びます。 
 
-新しい構成への移行を完了するには、プロセスの最後に、元の可用性グループへのすべてのデータ トラフィックを停止し、分散型可用性グループを同期データ移動に変更します。 これにより、第 2 の可用性グループのプライマリ レプリカが完全に同期され、データが失われないことが保証されます。 同期を確認した後、「[セカンダリ可用性グループにフェールオーバーする](https://msdn.microsoft.com/en-US/library/mt651673.aspx)」セクションで第 2 の可用性グループに分散型可用性グループをフェールオーバーします。
+新しい構成への移行を完了するには、プロセスの最後に、元の可用性グループへのすべてのデータ トラフィックを停止し、分散型可用性グループを同期データ移動に変更します。 これにより、第 2 の可用性グループのプライマリ レプリカが完全に同期され、データが失われないことが保証されます。 同期を確認した後、セカンダリ可用性グループに分散型可用性グループをフェールオーバーします。 詳細については、「[セカンダリ可用性グループにフェールオーバーする](configure-distributed-availability-groups.md#failover)」を参照してください。
 
 移行後には、第 2 の可用性グループが新しいプライマリ可用性グループになり、次のいずれかを行うことが必要な場合があります。
 
@@ -174,75 +175,101 @@ AG 2 のプライマリ レプリカが挿入、更新、削除を受け付け�
 
 <!-- ![Two WSFC clusters with multiple availability groups through PowerShell Get-ClusterGroup command][7]  -->
 <a name="fig7"></a>
+
 ```
 PS C:\> Get-ClusterGroup -Cluster CLUSTER_A
 
 Name                            OwnerNode             State
 ----                            ---------             -----
-AG1                             DENNIS                Online Available Storage               GLEN                  Offline Cluster Group                   JY                    Online New_RoR                         DENNIS                Online Old_RoR                         DENNIS                Online SeedingAG                       DENNIS                Online
+AG1                             DENNIS                Online
+Available Storage               GLEN                  Offline
+Cluster Group                   JY                    Online
+New_RoR                         DENNIS                Online
+Old_RoR                         DENNIS                Online
+SeedingAG                       DENNIS                Online
 
 
 PS C:\> Get-ClusterGroup -Cluster CLUSTER_B
 
 Name                            OwnerNode             State
 ----                            ---------             -----
-AG2                             TOMMY                 Online Available Storage               JC                    Offline Cluster Group                   JC                    Online
+AG2                             TOMMY                 Online
+Available Storage               JC                    Offline
+Cluster Group                   JC                    Online
 ```
 
-All detailed information about a distributed availability group is in SQL Server, specifically in the availability-group dynamic management views. Currently, the only information shown in SQL Server Management Studio for a distributed availability group is on the primary replica for the availability groups. As shown in the following figure, under the Availability Groups folder, SQL Server Management Studio shows that there is a distributed availability group. The figure shows AG1 as a primary replica for an individual availability group that's local to that instance, not for a distributed availability group.
+分散型可用性グループの詳細情報は、SQL Server の特に可用性グループの動的管理ビューに表示されます。 現在のところ、分散型可用性グループについて SQL Server Management Studio に表示される情報は、可用性グループのプライマリ レプリカについてのみです。 以下の図のように、SQL Server Management Studio の [可用性グループ] フォルダーに分散型可用性グループが表示されます。 この図では、分散型可用性グループではなく、そのインスタンスでローカルの各可用性グループのプライマリ レプリカとして AG1 が表示されます。
 
-![View in SQL Server Management Studio of the primary replica on the first WSFC cluster of a distributed availability group][8]
+![分散型可用性グループの最初の WSFC クラスター上のプライマリ レプリカが表示された SQL Server Management Studio のビュー][8]
 
 
-However, if you right-click the distributed availability group, no options are available (see the following figure), and the expanded Availability Databases, Availability Group Listeners, and Availability Replicas folders are all empty. SQL Server Management Studio 16 displays this result, but it might change in a future version of SQL Server Management Studio.
+ただし、分散型可用性グループを右クリックしても使用できるオプションが表示されません (次の図を参照)。また、[可用性データベース]、[可用性グループ リスナー]、[可用性レプリカ] の各フォルダーを展開してもすべて空です。 SQL Server Management Studio 16 ではこの結果が表示されますが、今後のバージョンの SQL Server Management Studio では変更される可能性があります。
 
-![No options available for action][9]
+![操作できるオプションがありません][9]
 
-As shown in the following figure, secondary replicas show nothing in SQL Server Management Studio related to the distributed availability group. These availability group names map to the roles shown in the previous [CLUSTER_A WSFC cluster](#fig7) image.
+次の図のように、セカンダリ レプリカの場合、分散型可用性グループに関連する情報が SQL Server Management Studio に表示されません。 これらの可用性グループ名は、前述の「[CLUSTER_A WSFC クラスター](#fig7)」図に表示されるロールにマップされます。
 
-![View in SQL Server Management Studio of a secondary replica][10]
+![SQL Server Management Studio のセカンダリ レプリカのビュー][10]
 
-The same concepts hold true when you use the dynamic management views. By using the following query, you can see all the availability groups (regular and distributed) and the nodes participating in them. This result is displayed only if you query the primary replica in one of the WSFC clusters that are participating in the distributed availability group. There is a new column in the dynamic management view `sys.availability_groups` named `is_distributed`, which is 1 when the availability group is a distributed availability group. To see this column:
+動的管理ビューを使用する場合にも同じ概念が適用されます。 次のクエリを使用すると、すべての可用性グループ (通常と分散型) とそれに参加しているノードが表示されます。 この結果は、分散型可用性グループに参加しているいずれかの WSFC クラスター内のプライマリ レプリカに対してクエリを実行した場合にのみ表示されます。 動的管理ビュー `sys.availability_groups` には、`is_distributed` という新しい列があります。可用性グループが分散型可用性グループの場合、これは 1 です。 この列を表示するには:
 
-```
-SELECT ag.[name] as 'AG Name', ag.Is_Distributed, ar.replica_server_name as 'Replica Name' FROM    sys.availability_groups ag, sys.availability_replicas ar       
+```sql
+SELECT ag.[name] as 'AG Name', 
+    ag.Is_Distributed, 
+    ar.replica_server_name as 'Replica Name'
+FROM    sys.availability_groups ag, 
+    sys.availability_replicas ar       
 WHERE   ag.group_id = ar.group_id
 ```
 
-An example of output from the second WSFC cluster that's participating in a distributed availability group is shown in the following figure. SPAG1 is composed of two replicas: DENNIS and JY. However, the distributed availability group named SPDistAG has the names of the two participating availability groups (SPAG1 and SPAG2) rather than the names of the instances, as with a traditional availability group. 
+次の図は、分散型可用性グループに参加している 2 つ目の WSFC クラスターの出力例です。 SPAG1 は、DENNIS と JY という 2 つのレプリカで構成されています。 一方、SPDistAG という分散型可用性グループには、従来の可用性グループのようにインスタンス名ではなく、2 つの参加している可用性グループ (SPAG1 と SPAG2) の名前が表示されます。 
 
-![Example output of the preceding query][11]
+![上記のクエリの出力例][11]
 
-In SQL Server Management Studio, any status shown on the Dashboard and other areas are for local synchronization only within that availability group. To display the health of a distributed availability group, query the dynamic management views. The following example query extends and refines the previous query:
+SQL Server Management Studio で、ダッシュボードや他の領域に表示される状態は、その可用性グループ内のローカル同期についてのみです。 分散型可用性グループの正常性を表示するには、動的管理ビューに対してクエリを実行します。 次のクエリ例では、前のクエリを拡張して改善しています。
 
-```
-SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status' FROM    sys.availability_groups ag, sys.availability_replicas ar,       
+```sql
+SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
+FROM    sys.availability_groups ag, 
+sys.availability_replicas ar,       
 sys.dm_hadr_availability_replica_states ars       
-WHERE   ar.replica_id = ars.replica_id and     ag.group_id = ar.group_id and ag.is_distributed = 1
+WHERE   ar.replica_id = ars.replica_id
+and     ag.group_id = ar.group_id 
+and ag.is_distributed = 1
 ```
        
        
-![Distributed availability group status][12]
+![分散型可用性グループの状態][12]
 
 
-To further extend the previous query, you can also see the underlying performance via the dynamic management views by adding in `sys.dm_hadr_database_replicas_states`. The dynamic management view currently stores information about the second availability group only. The following example query, run on the primary availability group, produces the sample output shown below:
+前のクエリをさらに拡張するために、`sys.dm_hadr_database_replicas_states` に追加して、動的管理ビューで基となるパフォーマンスを表示することもできます。 現在、動的管理ビューはセカンダリ可用性グループの情報のみを保存しています。 次のクエリ例は、プライマリ可用性グループ上で実行し、以下の出力例を生成します。
 
 ```
-SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate FROM    sys.databases dbs, sys.availability_groups ag, sys.availability_replicas ar, sys.dm_hadr_availability_replica_states ars, sys.dm_hadr_database_replica_states drs WHERE   drs.group_id = ag.group_id and ar.replica_id = ars.replica_id and ars.replica_id = drs.replica_id and dbs.database_id = drs.database_id and ag.is_distributed = 1
+SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
+FROM    sys.databases dbs,
+    sys.availability_groups ag,
+    sys.availability_replicas ar,
+    sys.dm_hadr_availability_replica_states ars,
+    sys.dm_hadr_database_replica_states drs
+WHERE   drs.group_id = ag.group_id
+and ar.replica_id = ars.replica_id
+and ars.replica_id = drs.replica_id
+and dbs.database_id = drs.database_id
+and ag.is_distributed = 1
 ```
 
-![Performance information for a distributed availability group][13]
+![分散型可用性グループのパフォーマンス情報][13]
 
 
-### Next steps 
+### <a name="next-steps"></a>次の手順 
 
-* [Use the availability group wizard (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
+* [可用性グループ ウィザードの使用 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
 
-* [Use the new availability group dialog box (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
+* [[新しい可用性グループ] ダイアログ ボックスの使用 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
-* [Create an availability group with Transact-SQL](create-an-availability-group-transact-sql.md)
+* [Transact-SQL での可用性グループの作成](create-an-availability-group-transact-sql.md)
 
-This content was written by [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), Microsoft Most Valued Professional.
+このコンテンツの執筆者は [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt) (マイクロソフト MVP) です。
 
 <!--Image references-->
 [1]: ./media/dag-01-high-level-view-distributed-ag.png

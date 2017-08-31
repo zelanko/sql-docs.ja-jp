@@ -1,7 +1,8 @@
 ---
 title: "インメモリ OLTP に対する SQL Server 管理オブジェクトのサポート | Microsoft Docs"
+description: "インメモリ OLTP をサポートする SQL Server 管理オブジェクト (SMO) の項目について説明します。"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 08/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,57 +16,35 @@ author: JennieHubbard
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: f97c2335abf293f70fad454ac9f181a3cb3e439c
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 249188036af10473b3a17eaeb2d0c47b80420f4a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>インメモリ OLTP に対する SQL Server 管理オブジェクトのサポート
 
-このトピックでは、インメモリ OLTP 向けの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) の変更について説明します。  
-  
-次の型およびメンバーは、インメモリ OLTP をサポートします。  
-  
-- Microsoft.SqlServer.Management.Smo.**<xref:Microsoft.SqlServer.Management.Smo.DurabilityType>** (列挙体)
+このトピックでは、インメモリ OLTP をサポートする SQL Server 管理オブジェクト (SMO) の項目について説明します。  
 
-- Microsoft.SqlServer.Management.Smo.FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>** (プロパティ)
+## <a name="smo-types-and-members"></a>SMO の型とメンバー
 
-- Microsoft.SqlServer.Management.Smo.FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>** (コンストラクター)
+次の型とメンバーは、名前空間 **Microsoft.SqlServer.Management.Smo** 内にあり、インメモリ OLTP をサポートしています。
 
-- Microsoft.SqlServer.Management.Smo.**<xref:Microsoft.SqlServer.Management.Smo.FileGroupType>** (列挙体)
+- **<xref:Microsoft.SqlServer.Management.Smo.DurabilityType>** (列挙体)
+- FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>** (プロパティ)
+- FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>** (コンストラクター)
+- **<xref:Microsoft.SqlServer.Management.Smo.FileGroupType>** (列挙体)
+- Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>** (プロパティ)
+- IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>** (列挙体メンバー)
+- Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>** (プロパティ)
+- Server.**<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>** (プロパティ)
+- StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>** (プロパティ)
+- StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>** (プロパティ)
+- Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>** (プロパティ)
+- Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>** (プロパティ)
+- UserDefinedTableType.**<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>** (プロパティ)
 
-- Microsoft.SqlServer.Management.Smo.Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>** (プロパティ)
-
-- Microsoft.SqlServer.Management.Smo.IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>** (列挙体メンバー)
-
-- Microsoft.SqlServer.Management.Smo.Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>** (プロパティ)
-
-- Microsoft.SqlServer.Management.Smo.Server.**<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>** (プロパティ)
-
-- Microsoft.SqlServer.Management.Smo.StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>** (プロパティ)
-
-- Microsoft.SqlServer.Management.Smo.StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>** (プロパティ)
-
-- Microsoft.SqlServer.Management.Smo.Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>** (プロパティ)
-
-- Microsoft.SqlServer.Management.Smo.Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>** (プロパティ)
-
-- Microsoft.SqlServer.Management.Smo.UserDefinedTableType.**<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>** (プロパティ)
-
-## <a name="code-sample"></a>コード サンプル
-
-#### <a name="actions-taken-in-the-code-example"></a>コード サンプルで実行されるアクション
-  
--   メモリ最適化ファイル グループとメモリ最適化ファイルが含まれるデータベースを作成します。  
-  
--   主キー、非クラスター化インデックス、および非クラスター化ハッシュ インデックスが設定された持続性のあるメモリ最適化テーブルを作成します。  
-  
--   列とインデックスを作成します。  
-  
--   ユーザー定義のメモリ最適化テーブル型を作成します。  
-  
--   ネイティブ コンパイル ストアド プロシージャを作成します。
+## <a name="c-code-example"></a>C# のコード例
 
 #### <a name="assemblies-referenced-by-the-compiled-code-example"></a>コンパイル済みのコード サンプルで参照されているアセンブリ
 
@@ -73,6 +52,14 @@ ms.lasthandoff: 08/17/2017
 - Microsoft.SqlServer.Management.Sdk.Sfc.dll
 - Microsoft.SqlServer.Smo.dll
 - Microsoft.SqlServer.SqlEnum.dll
+
+#### <a name="actions-taken-in-the-code-example"></a>コード サンプルで実行されるアクション
+
+1. メモリ最適化ファイル グループとメモリ最適化ファイルが含まれるデータベースを作成します。  
+2. 主キー、非クラスター化インデックス、および非クラスター化ハッシュ インデックスが設定された持続性のあるメモリ最適化テーブルを作成します。  
+3. 列とインデックスを作成します。  
+4. ユーザー定義のメモリ最適化テーブル型を作成します。  
+5. ネイティブ コンパイル ストアド プロシージャを作成します。
 
 #### <a name="source-code"></a>ソース コード
   
@@ -180,5 +167,6 @@ public class A {
   
 ## <a name="see-also"></a>参照  
 
-[SQL Server によるインメモリ OLTP のサポート](sql-server-support-for-in-memory-oltp.md)
+- [SQL Server によるインメモリ OLTP のサポート](sql-server-support-for-in-memory-oltp.md)
+- [SMO の概要](../server-management-objects-smo/overview-smo.md)
 

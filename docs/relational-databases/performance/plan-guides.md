@@ -24,11 +24,11 @@ caps.latest.revision: 52
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e3c1733219769d0a2d08996db9a25e3dd08a1e86
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 2e8ae8b72d588904cc7b3d4aaeaba1e783a21b48
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="plan-guides"></a>プラン ガイド
@@ -42,12 +42,12 @@ ms.lasthandoff: 06/22/2017
 ## <a name="types-of-plan-guides"></a>プラン ガイドの種類  
  次の種類のプラン ガイドを作成できます。  
   
- OBJECT プラン ガイド  
+ ### <a name="object-plan-guide"></a>OBJECT プラン ガイド  
  OBJECT プラン ガイドでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ、スカラー ユーザー定義関数、複数ステートメント テーブル値ユーザー定義関数、および DML トリガーのコンテキストで実行されるクエリが照合されます。  
   
- `@Country`_`region` パラメーターを受け取る次のストアド プロシージャが、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに対して配置されたデータベース アプリケーションに存在するとします。  
+ `@Country_region` パラメーターを受け取る次のストアド プロシージャが、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに対して配置されたデータベース アプリケーションに存在するとします。  
   
-```  
+```t-sql  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
 AS  
 BEGIN  
@@ -60,11 +60,11 @@ BEGIN
 END;  
 ```  
   
- このストアド プロシージャは `@Country`_`region = N'AU'` (オーストラリア) 用にコンパイルおよび最適化されているものとします。 ただし、オーストラリアでは比較的少数の販売注文しか発生していないため、多くの販売注文が発生している国のパラメーター値を使用してクエリを実行するとパフォーマンスが低下します。 販売注文数が最も多いのは米国なので、 `@Country`\_`region = N'US'` 用に生成されたクエリ プランのパフォーマンスは、 `@Country`\_`region` パラメーターにどの値を使用しても低下しません。  
+ このストアド プロシージャは `@Country_region = N'AU'` (オーストラリア) 用にコンパイルおよび最適化されているものとします。 ただし、オーストラリアでは比較的少数の販売注文しか発生していないため、多くの販売注文が発生している国のパラメーター値を使用してクエリを実行するとパフォーマンスが低下します。 販売注文数が最も多いのは米国なので、 `@Country_region = N'US'` 用に生成されたクエリ プランのパフォーマンスは、 `@Country_region` パラメーターにどの値を使用しても低下しません。  
   
  ストアド プロシージャを変更して `OPTIMIZE FOR` クエリ ヒントをクエリに追加することで、この問題に対処できます。 ただし、ストアド プロシージャは配置済みアプリケーション内にあるので、アプリケーション コードを直接変更することはできません。 代わりに、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに次のプラン ガイドを作成できます。  
   
-```  
+```t-sql  
 sp_create_plan_guide   
 @name = N'Guide1',  
 @stmt = N'SELECT *FROM Sales.SalesOrderHeader AS h,  
@@ -81,16 +81,16 @@ sp_create_plan_guide
   
  `sp_create_plan_guide` ステートメントの指定したクエリが実行されると、そのクエリは最適化される前に変更され、 `OPTIMIZE FOR (@Country = N''US'')` 句が含められます。  
   
- SQL プラン ガイド  
+ ### <a name="sql-plan-guide"></a>SQL プラン ガイド  
  SQL プラン ガイドでは、データベース オブジェクトの一部ではないスタンドアロン [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとスタンドアロン バッチのコンテキストで実行されるクエリが照合されます。 また、SQL ベースのプラン ガイドを使用して、指定した形式にパラメーター化されたクエリを照合することもできます。 SQL プラン ガイドは、スタンドアロン [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとスタンドアロン バッチに適用されます。 これらのステートメントは、よく [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) システム ストアド プロシージャを使用してアプリケーションから送信されます。 たとえば、次のスタンドアロン バッチについて考えてみましょう。  
   
-```  
+```t-sql  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
  このクエリに並列実行プランが生成されないようにするには、次のプラン ガイドを作成し、 `MAXDOP` パラメーターで `1` クエリ ヒントを `@hints` に設定します。  
   
-```  
+```t-sql  
 sp_create_plan_guide   
 @name = N'Guide2',   
 @stmt = N'SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC',  
@@ -105,31 +105,34 @@ sp_create_plan_guide
   
  PARAMETERIZATION データベース オプションを FORCED に設定するか、またはクエリのクラスをパラメーター化するように指定して TEMPLATE プラン ガイドを作成すると、同じ形式にパラメーター化されるクエリに SQL プラン ガイドを作成することもできます。  
   
- TEMPLATE プラン ガイド  
+ ### <a name="template-plan-guide"></a>TEMPLATE プラン ガイド  
  TEMPLATE プラン ガイドでは、指定した形式にパラメーター化されたスタンドアロン クエリが照合されます。 これらのプラン ガイドは、クエリのクラスのデータベースの現在の PARAMETERIZATION データベース SET オプションを上書きするために使用されます。  
   
  TEMPLATE プラン ガイドは、次のいずれかの状況で作成できます。  
   
--   PARAMETERIZATION データベース オプションを FORCED に設定したが、簡易パラメーター化のルールに従ってコンパイルするクエリがある場合。  
+-   PARAMETERIZATION データベース オプションを FORCED に設定したが、[簡易パラメーター化](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)のルールに従ってコンパイルするクエリがある場合。  
   
--   PARAMETERIZATION データベース オプションを SIMPLE (既定値) に設定したが、特定のクラスのクエリについて強制パラメーター化が必要である場合。  
+-   PARAMETERIZATION データベース オプションを SIMPLE (既定値) に設定したが、特定のクラスのクエリについて[強制パラメーター化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)が必要である場合。  
   
 ## <a name="plan-guide-matching-requirements"></a>プラン ガイドの照合要件  
  プラン ガイドの範囲は、そのガイドが作成されているデータベースです。 したがって、クエリの実行時に使用されているデータベース内に存在するプラン ガイドだけをクエリと照合できます。 たとえば、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] が現在のデータベースの場合に次のクエリを実行するとします。  
   
- `SELECT FirstName, LastName FROM Person.Person;`  
+ ```t-sql
+ SELECT FirstName, LastName FROM Person.Person;
+ ```  
   
  この場合、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内のプラン ガイドだけがこのクエリと照合されます。 ただし、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] が現在のデータベースの場合に、次のステートメントを実行すると結果が異なります。  
   
- `USE DB1;`  
-  
- `SELECT FirstName, LastName FROM Person.Person;`  
+ ```t-sql
+ USE DB1; 
+ SELECT FirstName, LastName FROM Person.Person;
+ ```  
   
  この場合、 `DB1` のコンテキストでこのクエリが実行されているので、 `DB1`内のプラン ガイドがこのクエリと照合されます。  
   
  SQL ベースのプラン ガイドまたは TEMPLATE ベースのプラン ガイドでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、引数 @module_or_batch と引数 @params の値が文字単位で比較されてクエリと照合されます。 つまり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で受け取られる実際のバッチ テキストと厳密に同じテキストを指定する必要があります。  
   
- @type = 'SQL' で、@module_or_batch が NULL に設定されている場合、@module_or_batch の値は @stmt の値に設定されます。 つまり、 *statement_text* の値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に送信するときと同一の形式で、同じ文字で指定する必要があります。 この適合を容易にするために内部変換は実行されません。  
+ @type = 'SQL' で、@module_or_batch が NULL に設定されている場合、@module_or_batch の値は @stmt の値に設定されます。つまり、 *statement_text* の値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に送信するときと同一の形式で、同じ文字で指定する必要があります。 この適合を容易にするために内部変換は実行されません。  
   
  通常の (SQL または OBJECT) プラン ガイドと TEMPLATE プラン ガイドの両方をステートメントに適用可能な場合、通常のプラン ガイドのみが使用されます。  
   

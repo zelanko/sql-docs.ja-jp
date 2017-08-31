@@ -13,12 +13,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 529ae718a28d99104d8835ecaf2cdc4eb5fcc63f
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 9061cf182fd1bc245de22ea2bade18b93e231042
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージ バックアップ
@@ -26,7 +26,7 @@ ms.lasthandoff: 06/22/2017
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] は Microsoft Azure BLOB ストレージへの SQL Server バックアップを管理および自動化します。 SQL Server でデータベースのトランザクション ワークロードに基づいて、バックアップ スケジュールを決定するように選択できます。 また、詳細オプションを使用して、スケジュールを定義することもできます。 保有期間の設定で、Azure BLOB ストレージでのバックアップの保存期間を決定します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] では、指定された保有期間の特定の時点への復元がサポートされています。  
   
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] のプロシージャと基になる動作が変更されています。 詳細については、「 [SQL Server 2014 マネージ バックアップの設定を SQL Server 2016 に移行する](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md)」を参照してください。  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] のプロシージャと基になる動作が変更されています。 詳細については、「 [Migrate SQL Server 2014 Managed Backup Settings to SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md)」を参照してください。  
   
 > [!TIP]  
 >  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] は、Microsoft Azure 仮想マシンで実行されている SQL Server インスタンスに推奨されます。  
@@ -111,6 +111,10 @@ ms.lasthandoff: 06/22/2017
  データベースでは、実行されている既存のデータベースの完全バックアップ ジョブがある場合、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] は現在のジョブが完了するのを待ってから、同じデータベースの完全バックアップをもう一度実行します。 同様に、一度に実行できるトランザクション ログ バックアップは 1 つだけです。 ただし、データベースの完全バックアップとトランザクション ログ バックアップは同時に実行できます。 エラーは、拡張イベントとしてログに記録されます。  
   
  同時に 10 個を超えるデータベースの完全バックアップがスケジュールされている場合、拡張イベントのデバッグ チャネルを通じて警告が発生します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] は、バックアップする必要がある残りのデータベースの優先キューを、すべてのバックアップがスケジュールされ完了するまで管理します。  
+
+> [!NOTE]
+> プロキシ サーバーでは SQL Server Managed Backup はサポートされていません。
+>
   
 ##  <a name="support_limits"></a> サポート性  
  次のサポートの制限事項と考慮事項は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に固有のものです。  
@@ -125,7 +129,8 @@ ms.lasthandoff: 06/22/2017
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ではブロック BLOB へのバックアップ機能を使用します。 ブロック BLOB の最大サイズは 200 GB です。 ストライピングを利用することにより、個々のバックアップの最大サイズを 12 TB まで指定できます。 バックアップ要件がこれを超える場合は、圧縮の使用を検討し、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]をセットアップする前にバックアップ ファイルのサイズをテストします。 テストは、ローカル ディスクにバックアップするか、Transact-SQL の **BACKUP TO URL** ステートメントを使用して手動で Microsoft Azure ストレージにバックアップして行うことができます。 詳細については、「 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。  
   
--   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] は、バックアップ、高可用性、または災害復旧をサポートする他のテクノロジで構成されている場合にいくつかの制限がある場合があります。  
+-   
+            [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は、バックアップ、高可用性、またはディザスター リカバリーをサポートする他のテクノロジで構成されている場合にいくつかの制限がある場合があります。  
   
 ## <a name="see-also"></a>参照  
 - [Microsoft Azure への SQL Server マネージ バックアップを有効にする](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   

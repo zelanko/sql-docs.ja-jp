@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cf69aa2c57e86aab11974b5874039ae7f72b9917
-ms.openlocfilehash: 3384d962c3765bf4feb00f957ad56a668f8d92e4
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: dcfa27ad11e3027519398b9424056b52afb1617b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>PolyBase のバージョン管理機能の概要
@@ -35,6 +35,7 @@ SQL Server の製品やサービスで利用可能な PolyBase 機能の概要�
 |で Hadoop データのクエリを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)]|はい|いいえ|いいえ|はい|
 |Hadoop からデータをインポートする|はい|いいえ|いいえ|はい|
 |データを Hadoop にエクスポートする  |はい|いいえ|いいえ| はい|
+|HDInsights のクエリ、インポート、エクスポート |いいえ|いいえ|いいえ|いいえ
 |クエリの計算を Hadoop にプッシュダウンする|はい|いいえ|いいえ|はい|  
 |Azure blob ストレージからデータをインポートする|はい|いいえ|はい|はい| 
 |Azure blob ストレージにデータをエクスポートする|はい|いいえ|はい|はい|  

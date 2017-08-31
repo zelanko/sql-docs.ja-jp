@@ -14,17 +14,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6c41a2a22b034f36ebe96508e978096b0ed29524
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: c247025da3c103105e41162cc614b1986796bb42
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージ バックアップの詳細設定オプションの構成
   次のチュートリアルでは、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の詳細設定オプションを設定する方法について説明します。 この手順は、その機能が必要な場合のみ必要です。 それ以外の場合、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にし、既定の動作に依存します。  
   
- 各シナリオで、バックアップは `database_name` パラメーターを使用して指定します。 `database_name` が NUL または * の場合、変更はインスタンス レベルで既定の設定に影響します。 インスタンス レベルの設定は、変更後に作成された新しいデータベースにも影響します。  
+ 各シナリオで、バックアップは `database_name` パラメーターを使用して指定します。 `database_name` が NULL または * の場合、変更はインスタンス レベルで既定の設定に影響します。 インスタンス レベルの設定は、変更後に作成された新しいデータベースにも影響します。  
   
  これらの設定を指定したら、データベースまたはインスタンスで、システム ストアド プロシージャ [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) を使用してマネージ バックアップを有効にできます。 詳細については、「 [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  **毎週バックアップをする曜日を決定する** : 毎週バックアップをする場合、完全バックアップを実行する曜日を選択します。  
   
-4.  **バックアップの開始時刻を決定する** : 24 時間表記を使用し、バックアップの開始時刻を選択します。  
+4.  **バックアップの開始時刻を決定する**: 24 時間表記を使用し、バックアップの開始時刻を選択します。  
   
 5.  **バックアップを許可する時間の長さを決定する** : バックアップが完了しなければならない時間を指定します。  
   
@@ -120,3 +120,4 @@ ms.lasthandoff: 06/22/2017
  [Microsoft Azure への SQL Server マネージ バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   
+

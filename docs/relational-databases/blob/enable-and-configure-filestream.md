@@ -1,7 +1,7 @@
 ---
 title: "FILESTREAM の有効化と構成 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/23/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7bee35abc8b2c450a9bd1badb89b18eb31128be8
+ms.translationtype: HT
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 19f5d560766c4bc70bd16fcff4f9f12f23b80146
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="enable-and-configure-filestream"></a>FILESTREAM の有効化と構成
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
   
 -   64 KB の NTFS クラスターを使用します。 圧縮されたボリュームは、4 KB の NTFS クラスターに設定する必要があります。  
   
--   FILESTREAM ボリューム上のインデックスの作成を無効にし、 **disablelastaccess** を設定します。 **disablelastaccess**を設定するには、Windows **fsutil** ユーティリティを使用します。  
+-   FILESTREAM ボリューム上のインデックスの作成を無効にし、**disablelastaccess** を設定します。 **disablelastaccess** を設定するには、Windows **fsutil** ユーティリティを使用します。  
   
 -   必要でない場合は、FILESTREAM ボリューム上でのウイルス スキャンを無効にします。 ウイルス スキャンが必要な場合は、問題のあるファイルを自動的に削除するポリシーを設定しないようにします。  
   
@@ -97,3 +97,4 @@ ms.lasthandoff: 06/22/2017
 -   領域管理とポリシーは、FILESTREAM では直接サポートされません。 ただし、それぞれの FILESTREAM ファイル グループを別個のボリュームに割り当て、ボリュームの管理機能を使用することで、領域の管理とポリシーの適用を行うことができます。  
   
   
+

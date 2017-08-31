@@ -3,8 +3,10 @@ title: "セカンダリ レプリカの自動シード処理 (SQL Server) | Micr
 description: "自動シード処理を使用して、セカンダリ レプリカを初期化します。"
 services: data-lake-analytics
 ms.custom: 
-ms.date: 06/22/2017
-ms.prod: sql-server-2016
+ms.date: 08/17/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -19,17 +21,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1b72f9f5bf58f72bb4284b1a6cc8d0af7a722aed
+ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
+ms.openlocfilehash: a472109765c0ac77e9064a385a7125877cee0423
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>セカンダリ レプリカの自動シード処理
 
 [!INCLUDE [tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-SQL Server 2012 および 2014 では、可用性グループでセカンダリ レプリカを初期化する唯一の方法はバックアップ、コピー、および復元を使用することです。 SQL Server 2016 では、セカンダリ レプリカを初期化するための*自動シード処理*という新機能が導入されています。 自動シード処理ではログ ストリーム トランスポートを使用して、VDI を使用するバックアップを、構成済みのエンドポイントを使用する可用性グループの各データベースのセカンダリ レプリカにストリーミングします。 この新機能は、可用性グループの最初の作成時やデータベースの追加時に使用できます。 自動シード処理は、Always On 可用性グループをサポートする SQL Server のすべてのエディションで、従来の可用性グループと[分散型可用性グループ](distributed-availability-groups.md)の両方で使用できます。
+SQL Server 2012 および 2014 では、SQL Server Always On 可用性グループでセカンダリ レプリカを初期化する唯一の方法はバックアップ、コピー、および復元を使用することです。 SQL Server 2016 では、セカンダリ レプリカを初期化するための*自動シード処理*という新機能が導入されています。 自動シード処理ではログ ストリーム トランスポートを使用して、VDI を使用するバックアップを、構成済みのエンドポイントを使用する可用性グループの各データベースのセカンダリ レプリカにストリーミングします。 この新機能は、可用性グループの最初の作成時やデータベースの追加時に使用できます。 自動シード処理は、Always On 可用性グループをサポートする SQL Server のすべてのエディションで、従来の可用性グループと[分散型可用性グループ](distributed-availability-groups.md)の両方で使用できます。
 
 ## <a name="considerations"></a>考慮事項
 
@@ -48,23 +50,51 @@ SQL Server 2012 および 2014 では、可用性グループでセカンダリ 
 * ネットワーク速度が 1Gb/秒である。
 * 2 つのサイト間の距離が 1000 マイルである。
 
-1 Gb/秒のネットワークでは、全帯域幅が使用可能な場合、125 MB/秒の持続スループットを提供できます。 この例では、自動シード処理時間が 11 時間をわずかに超えます。 実際に、距離が長いほどネットワーク信号が弱くなり、リンクは通常、ネットワーク上の他のリソースと共有されるため、自動シード処理プロセスの速度は若干低下します。 シード処理中に、プライマリ レプリカでのデータベースのトランザクション ログは増大し続け、データベースの自動シード処理が完了するまで切り捨てることはできません。  そのため、トランザクション ログを切り捨てる場合はトランザクション ログ バックアップを使用します。
+全帯域を使用可能な場合、1Gb/秒のネットワークは 125 MB/秒の持続スループットを提供できます。この例では、自動シード処理時間が 11 時間をわずかに超えます。 実際に、距離が長いほどネットワーク信号が弱くなり、リンクはネットワーク上の他のリソースと共有されるため、自動シード処理プロセスの速度は低下します。 シード処理中に、プライマリ レプリカでのデータベースのトランザクション ログは増大し続け、データベースの自動シード処理が完了するまで切り捨てることはできません。  そのため、トランザクション ログを切り捨てる場合はトランザクション ログ バックアップを使用します。
 
-自動シード処理は、最大 5 つのデータベースを処理できるシングル スレッド プロセスです。 これは、可用性グループに複数のデータベースがある場合は特に、パフォーマンスに影響する可能性があります。
+自動シード処理は、最大 5 つのデータベースを処理できるシングル スレッド プロセスです。 シングル スレッドは、可用性グループに複数のデータベースがある場合は特に、パフォーマンスに影響する可能性があります。
 
-自動シード処理では圧縮を使用できますが、既定では使用不可になっています。 圧縮を有効にすると、ネットワーク帯域幅が減り、プロセス速度が上がる可能性はありますが、その代りにプロセッサのオーバーヘッドが増えます。 自動シード処理中に圧縮を使用するには、トレース フラグ 9567 を有効にします (「[可用性グループの圧縮の調整](tune-compression-for-availability-group.md)」を参照)。
+自動シード処理では圧縮を使用できますが、既定では使用不可になっています。 圧縮を有効にすると、ネットワーク帯域幅が減り、プロセス速度が上がる可能性はありますが、その代わりにプロセッサのオーバーヘッドが増えます。 自動シード処理中に圧縮を使用するには、トレース フラグ 9567 を有効にします (「[可用性グループの圧縮の調整](tune-compression-for-availability-group.md)」を参照)。
 
-### <a name="disk-layout"></a>ディスク レイアウト
+### <a name = "disklayout"></a> ディスク レイアウト
 
-自動シード処理でデータベースが作成されるフォルダーが既に存在しており、プライマリ レプリカのパスと同じである必要があります。
+SQL Server 2016 以前では、自動シード処理でデータベースが作成されるフォルダーが既に存在しており、プライマリ レプリカのパスと同じである必要があります。 
+
+SQL Server 2017 では、可用性グループに参加するすべてのレプリカで同じデータとログ ファイルのパスを使用することをお勧めしますが、必要に応じて別のパスを使用することもできます。 たとえば、クロス プラットフォーム可用性グループの場合、SQL Server のあるインスタンスは Windows 上に、SQL Server の別インスタンスは Linux 上に展開することができます。 プラットフォームによって、既定のパスは異なります。 SQL Server 2017 は、既定のパスが異なる SQL Server のインスタンス上にある可用性グループ レプリカをサポートしています。
+
+次の表は、自動シード処理に対応できるサポート対象のデータ ディスク レイアウトの例をまとめたものです。
+
+|プライマリ インスタンス</br>既定のデータ パス|セカンダリ インスタンス</br>既定のデータ パス|プライマリ インスタンス</br>ソース ファイルの場所|セカンダリ インスタンス</br> ターゲット ファイルの場所
+|:------|:------|:------|:------
+|c:\\data\\ |/var/opt/mssql/data/ |c:\\data\\ |/var/opt/mssql/data/|
+|c:\\data\\ |/var/opt/mssql/data/ |c:\\data\\group1\\ |/var/opt/mssql/data/group1/|
+|c:\\data\\ |d:\\data\\ |c:\\data\\ |d:\\data\\
+|c:\\data\\ |d:\\data\\ |c:\\data\\group1\\ |d:\\data\\group1\
+
+プライマリおよびセカンダリのレプリカ データベースの場所がインスタンスの既定のパスではないシナリオは、この変更の影響を受けません。 セカンダリ レプリカ ファイルのパスをプライマリ レプリカ ファイルのパスと合わせるという要件は同じままです。
+
+|プライマリ インスタンス</br>既定のデータ パス|セカンダリ インスタンス</br>既定のデータ パス|プライマリ インスタンス</br>ファイルの場所|セカンダリ インスタンス</br> ファイルの場所
+|:------|:------|:------|:------
+|c:\\data\\ |c:\\data\\ |d:\\group1\\ |d:\\group1\\
+|c:\\data\\ |c:\\data\\ |d:\\data\\ |d:\\data\\
+|c:\\data\\ |c:\\data\\ |d:\\data\\group1\\ |d:\\data\\group1\\
+
+プライマリ レプリカとセカンダリ レプリカで既定のパスと既定以外のパスを混合していると、SQL Server 2017 は以前のリリースと異なる動作になります。 次の表は、SQL Server 2017 の動作の一覧です。
+
+|[プライマリ インスタンス]</br>既定のデータ パス |セカンダリ インスタンス</br>既定のデータ パス |プライマリ インスタンス</br>ファイルの場所 |SQL Server 2016 </br>セカンダリ インスタンス</br>ファイルの場所 |SQL Server 2017 </br>セカンダリ インスタンス</br>ファイルの場所
+|:------|:------|:------|:------|:------
+|c:\\data\\ |d:\\data\\ |c:\\data\\ |c:\\data\\ |d:\\data\\ 
+|c:\\data\\ |d:\\data\\ |c:\\data\\group1\\ |c:\\data\\group1\\ |d:\\data\\group1\\
+
+SQL Server 2016 以前の動作に戻すには、トレース フラグ 9571 を有効にします。 トレース フラグを有効にする方法については、「[DBCC TRACEON (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)」を参照してください。
 
 ### <a name="security"></a>セキュリティ
 
 セキュリティのアクセス許可は、初期化されるレプリカの種類によって異なります。
 
-* 従来の可用性グループの場合、セカンダリ レプリカは可用性グループに結合されているため、その可用性グループにアクセス許可を与える必要があります。 Transact-SQL で、コマンド ALTER AVAILABILITY GROUP [AGName] GRANT CREATE ANY DATABASE を使用してください。
+* 従来の可用性グループの場合、セカンダリ レプリカは可用性グループに結合されているため、その可用性グループにアクセス許可を与える必要があります。 Transact-SQL では、コマンド `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE` を使用します。
 * 作成されるレプリカのデータベースが 2 番目の可用性グループのプライマリ レプリカにある分散型可用性グループの場合、既にそれはプライマリであるため、余分なアクセス許可は必要ありません。
-* 分散型可用性グループの 2 番目の可用性グループのセカンダリ レプリカの場合は、コマンド ALTER AVAILABILITY GROUP [2ndAGName] GRANT CREATE ANY DATABASE を使用する必要があります。 このセカンダリ レプリカは 2 番目の可用性グループのプライマリからシード処理されます。
+* 分散型可用性グループの 2 番目の可用性グループのセカンダリ レプリカの場合は、コマンド `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE` を使用する必要があります。 このセカンダリ レプリカは 2 番目の可用性グループのプライマリからシード処理されます。
 
 ## <a name="create-an-availability-group-with-automatic-seeding"></a>自動シード処理で可用性グループを作成する
 
@@ -72,10 +102,10 @@ Transact-SQL または SQL Server Management Studio (SSMS、バージョン 17 �
 
 ![最初のデータ同期を選択][1]
 
-次の例では、Transact-SQL を使用して可用性グループを作成します。 「[可用性グループの作成 (Transact-SQL)](create-an-availability-group-transact-sql.md)」も参照してください。 シード処理は、SEEDING_MODE オプションを AUTOMATIC に設定することでセカンダリ レプリカで使用可能になります。 既定の動作は MANUAL です。これは、SQL Server 2016 より前の動作であり、プライマリ レプリカでのデータベースのバックアップ作成、セカンダリ レプリカへのバックアップ ファイルのコピー、および WITH NORECOVERY を指定したバックアップの復元が必要です。
+次の例では、Transact-SQL の自動シード処理を使用して可用性グループを作成します。 「[可用性グループの作成 (Transact-SQL)](create-an-availability-group-transact-sql.md)」も参照してください。 シード処理は、`SEEDING_MODE` オプションを `AUTOMATIC` に設定することでセカンダリ レプリカで使用可能になります。 既定の動作は `MANUAL` です。これは、SQL Server 2016 より前の動作であり、プライマリ レプリカでのデータベースのバックアップ作成、セカンダリ レプリカへのバックアップ ファイルのコピー、および `WITH NORECOVERY` を指定したバックアップの復元が必要です。
 
-```
-CREATE AVAILABILITY GROUP [AGName]
+```sql
+CREATE AVAILABILITY GROUP [<AGName>]
   FOR DATABASE db1
   REPLICA ON N'Primary_Replica'
 WITH (
@@ -84,42 +114,52 @@ WITH (
   AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
 ),
   N'Secondary_Replica' WITH (
-    ENDPOINT_URL = N'TCP://Secondary_Replica.Contoso.com :5022', 
+    ENDPOINT_URL = N'TCP://Secondary_Replica.Contoso.com:5022', 
     FAILOVER_MODE = AUTOMATIC, 
     SEEDING_MODE = AUTOMATIC);
  GO
 ```
 
-CREATE AVAILABILITY GROUP ステートメントの実行中にプライマリ レプリカで SEEDING_MODE を設定しても、プライマリ レプリカには既にデータベースの主要な読み取り/書き込みコピーが含まれているため、効果はありません。 SEEDING_MODE が適用されるのは、別のレプリカがプライマリになっており、データベースが追加されている場合のみです。 シード処理モードは後で変更できます (「[レプリカのシード処理モードを変更する](#change-the-seeding-mode-of-a-replica)」を参照)。
+`CREATE AVAILABILITY GROUP` ステートメントの実行中にプライマリ レプリカで `SEEDING_MODE` を設定しても、プライマリ レプリカには既にデータベースの主要な読み取り/書き込みコピーが含まれているため、効果はありません。 `SEEDING_MODE` が適用されるのは、別のレプリカがプライマリになっており、データベースが追加されている場合のみです。 シード処理モードは後で変更できます (「[レプリカのシード処理モードを変更する](#change-the-seeding-mode-of-a-replica)」を参照)。
 
 セカンダリ レプリカになるインスタンスの場合、インスタンスが結合されると、SQL Server ログに次のようなメッセージが追加されます。
 
-可用性グループ 'AGName' のローカル可用性レプリカには、データベースの作成アクセス許可は与えられていませんが、SEEDING_MODE が AUTOMATIC になっています。 ALTER AVAILABILITY GROUP ...  GRANT CREATE ANY DATABASE コマンドを使用して、プライマリ可用性レプリカによってシード処理されるデータベースを作成できるようにします。
+>可用性グループ 'AGName' のローカル可用性レプリカには、データベースの作成アクセス許可は与えられていませんが、`SEEDING_MODE` が `AUTOMATIC` になっています。 `ALTER AVAILABILITY GROUP … GRANT CREATE ANY DATABASE` コマンドを使用して、プライマリ可用性レプリカによってシード処理されるデータベースを作成できるようにします。
 
-結合後に次のステートメントを実行します。
+### <a name = "grantCreate"></a> セカンダリ レプリカの CREATE DATABASE アクセス許可を可用性グループに付与する
 
-```
-ALTER AVAILABILITY GROUP [AGName] GRANT CREATE ANY DATABASE
+参加後に、SQL Server のセカンダリ レプリカ インスタンスでデータベースを作成するアクセス許可を可用性グループに付与します。 自動シード処理が動作するには、データベースを作成するアクセス許可が可用性グループに必要です。 
+
+>[!TIP]
+>可用性グループがセカンダリ レプリカにデータベースを作成すると、`ALTER AVAILABILITY GROUP` ステートメントを実行したアカウントとしてデータベース所有者が設定され、任意のデータベースを作成するアクセス許可が付与されます。 ほとんどのアプリケーションでは、セカンダリ レプリカのデータベース所有者をプライマリ レプリカと同じにする必要があります。
+>
+>プライマリ レプリカと同じデータベース所有者がすべてのデータベースを作成するようにするには、プライマリ レプリカのデータベース所有者であるログインのセキュリティ コンテキストで、以下のコマンド例を実行します。 このログインには、`ALTER AVAILABILITY GROUP` アクセス許可が必要です。 
+>
+>セカンダリ レプリカにデータベースが自動的に作成された後にデータベース所有者を変更するには、`ALTER AUTHORIZATION` を使用します。 「[ALTER AUTHORIZATION (Transact-SQL)](../../../t-sql/statements/alter-authorization-transact-sql.md)」を参照してください。
+ 
+次の例では、このアクセス許可を AGName という可用性グループに付与します。
+
+```sql
+ALTER AVAILABILITY GROUP [<AGName>] 
+    GRANT CREATE ANY DATABASE
  GO
-````
-
-> [!NOTE] 
-> 現在 (SQL Server 2016 SP1 CU2 の時点)、既知の問題があります。セカンダリ レプリカは、ALTER AVAILABILITY GROUP... ステートメントを実行する前に AG がデータベースをシード処理できるようになるまで 3 分待つ必要があります。 この時間が経過するまで、ステートメントはエラーを返さず、成功を示します。 これも既知の問題です。 これらの問題は、SQL Server の今後の更新で修正されます。 この問題を回避するには、以下の WAITFOR ステートメントを挿入します。
-
 ```
-WAITFOR DELAY '00:03:15';
-ALTER AVAILABILITY GROUP [AGName] GRANT CREATE ANY DATABASE;
-GO
-```
+
+必要に応じて、セカンダリ レプリカのデータベース所有者を設定します。 
+
+### <a name="verify-automatic-seeding"></a>自動シード処理を確認する
 
 成功した場合、次のいずれかの状態のセカンダリ レプリカでデータベースが自動的に作成されます。
 
-* SYNCHRONIZED: セカンダリ レプリカが同期されるように構成されており、データが完全に同期されている場合。
+* SYNCHRONIZED: セカンダリ レプリカが同期されるように構成されており、データが同期されている場合。
 * SYNCHRONIZING: セカンダリ レプリカが非同期データ移動で構成されているか、同期で構成されているが、プライマリ レプリカとはまだ同期していない場合。
 
 <a name="sql-server-log"></a> 以下に示す[動的管理ビュー](#dynamic-management-views)に加え、自動シード処理の開始および完了を SQL Server ログで確認することができます。
 
 ![SQL Server ログ][2]
+
+
+
 
 ## <a name="combine-backup-and-restore-with-automatic-seeding"></a>バックアップおよび復元を自動シード処理と組み合わせる
 
@@ -128,13 +168,13 @@ GO
 ## <a name="add-a-database-to-an-availability-group-with-automatic-seeding"></a>自動シード処理で可用性グループにデータベースを追加する
 
 Transact-SQL または SQL Server Management Studio (SSMS、バージョン 17 以降) で自動シード処理を使用して、可用性グループにデータベースを追加することができます。
-セカンダリ レプリカで、可用性グループへの追加時に自動シード処理が使用された場合は、何もする必要はありません。 バックアップ、コピー、および復元が使用された場合は、まず、シード処理モードを変更し (次のセクションを参照)、データベースを追加する際に GRANT ステートメントを使用します (「[Availability Group - Add a Database](availability-group-add-a-database.md)」 (可用性グループ - データベースの追加) を参照)。
+セカンダリ レプリカで、可用性グループへの追加時に自動シード処理が使用された場合は、何もする必要はありません。 セカンダリ レプリカで、バックアップ、コピー、および復元が使用された場合は、まず、シード処理モードを変更し (次のセクションを参照)、データベースを追加する際に `GRANT` ステートメントを使用します (「[可用性グループ - データベースの追加](availability-group-add-a-database.md)」を参照)。
 
 ## <a name="change-the-seeding-mode-of-a-replica"></a>レプリカのシード処理モードを変更する
 
 可用性グループの作成後にレプリカのシード処理モードを変更できます。したがって、自動シード処理を有効または無効にすることができます。 作成後に自動シード処理を有効にすれば、バックアップ、コピー、および復元で作成する場合と同じように、自動シード処理を使用して可用性グループにデータベースを追加できます。 例:
 
-```
+```sql
 ALTER AVAILABILITY GROUP [AGName]
   MODIFY REPLICA ON 'Replica_Name'
   WITH (SEEDING_MODE = AUTOMATIC)
@@ -146,8 +186,9 @@ ALTER AVAILABILITY GROUP [AGName]
 
 セカンダリ レプリカで自動シード処理を完全に無効にはしないが、セカンダリ レプリカが一時的にデータベースを自動作成できないようにする場合は、可用性グループの CREATE アクセス許可を拒否します。 これは、新しいデータベースは可用性グループに追加されるが、可用性グループがセカンダリ レプリカでデータベースを作成するのを許可すべきではない場合です。
 
-```
-ALTER AVAILABILITY GROUP [AGName] DENY CREATE ANY DATABASE
+```sql
+ALTER AVAILABILITY GROUP [AGName] 
+    DENY CREATE ANY DATABASE
 GO
 ```
 
@@ -162,11 +203,11 @@ GO
 
 ### <a name="dynamic-management-views"></a>動的管理ビュー
 
-シード処理を監視するため動的管理ビュー (DMV) は sys.dm_hadr_automatic_seeding と sys.dm_hadr_physical_seeding_stats の 2 つがあります。
+シード処理の監視に使用できる動的管理ビュー (DMV) には、`sys.dm_hadr_automatic_seeding` と `sys.dm_hadr_physical_seeding_stats` の 2 つがあります。
 
-* sys.dm_hadr_automatic_seeding には自動シード処理の一般的な状態が含まれ、実行ごとに (成功したかどうかに関係なく) 履歴が保持されます。 current_state 列には COMPLETED または FAILED の値が含まれます。 値が FAILED の場合は、failure_state_desc の値を使用します。これは、問題の診断に役立ちます。 [SQL Server ログ](#sql-server-log)に示されているものと組み合わせて問題を確認する必要がある場合があります。 この DMV はプライマリ レプリカとすべてのセカンダリ レプリカで設定されます。
+* `sys.dm_hadr_automatic_seeding` には自動シード処理の一般的な状態が含まれ、実行ごとに (成功したかどうかに関係なく) 履歴が保持されます。 `current_state` 列には COMPLETED または FAILED の値が含まれます。 値が FAILED の場合は、`failure_state_desc` の値を使用します。これは、問題の診断に役立ちます。 [SQL Server ログ](#sql-server-log)に示されているものと組み合わせて問題を確認する必要がある場合があります。 この DMV はプライマリ レプリカとすべてのセカンダリ レプリカで設定されます。
 
-* sys.dm_hadr_physical_seeding_stats には、自動シード処理操作の実行時の状態が表示されます。 sys.dm_hadr_automatic_seeding と同様に、プライマリ レプリカとセカンダリ レプリカの両方の値が表示されますが、この履歴は格納されません。 値は現在の実行のみに関するものであり、保持されません。 該当する列には start_time_utc, end_time_utc、estimate_time_complete_utc、total_disk_io_wait_time_ms、total_network_wait_time_ms が含まれ、シード処理操作が失敗した場合は failure_message が含まれます。
+* `sys.dm_hadr_physical_seeding_stats` には、自動シード処理操作の実行時の状態が表示されます。 `sys.dm_hadr_automatic_seeding` と同様に、プライマリ レプリカとセカンダリ レプリカの両方について値を返しますが、その履歴は保存されません。 値は現在の実行のみに関するものであり、保持されません。 関係する列には `start_time_utc`、`end_time_utc`、`estimate_time_complete_utc`、`total_disk_io_wait_time_ms`、`total_network_wait_time_ms` などがあり、シード処理操作が失敗した場合は failure_message になります。
 
 ### <a name="backup-history-tables"></a>バックアップ履歴テーブル
 
@@ -177,7 +218,7 @@ GO
 自動シード処理には、初期化中の状態変更、エラー、およびパフォーマンス統計情報を追跡するための新しい拡張イベントが追加されています。
 たとえば、以下のスクリプトでは、自動シード処理に関連したイベントをキャプチャする拡張イベント セッションを作成します。
 
-```
+```sql
 CREATE EVENT SESSION [AG_autoseed] ON SERVER 
     ADD EVENT sqlserver.hadr_automatic_seeding_state_transition,
     ADD EVENT sqlserver.hadr_automatic_seeding_timeout,
@@ -189,8 +230,20 @@ CREATE EVENT SESSION [AG_autoseed] ON SERVER
     ADD EVENT sqlserver.hadr_physical_seeding_progress,
     ADD EVENT sqlserver.hadr_physical_seeding_restore_state_change,
     ADD EVENT sqlserver.hadr_physical_seeding_submit_callback
-    ADD TARGET package0.event_file(SET filename=N’autoseed.xel’,max_file_size=(5),max_rollover_files=(4))
-  WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=30 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=ON)
+    ADD TARGET package0.event_file(
+        SET filename=N’autoseed.xel’,
+        max_file_size=(5),
+        max_rollover_files=(4)
+        )
+    WITH (
+        MAX_MEMORY=4096 KB,
+        EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
+        MAX_DISPATCH_LATENCY=30 SECONDS,
+        MAX_EVENT_SIZE=0 KB,
+        MEMORY_PARTITION_MODE=NONE,
+        TRACK_CAUSALITY=OFF,
+        STARTUP_STATE=ON
+        )
 GO
 
 ALTER EVENT SESSION AlwaysOn_autoseed ON SERVER STATE=START
@@ -224,7 +277,7 @@ GO
 
 [Always On 可用性グループのトラブルシューティングと監視のガイド](http://technet.microsoft.com/library/dn135328.aspx)
 
-> このコンテンツは [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt) (マイクロソフト MVP) によって作成されたものです。
+> この記事の執筆者は [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt) (マイクロソフト MVP) です。
 
 <!--Image references-->
 [1]: ./media/auto-seed-new-availability-group.png

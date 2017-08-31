@@ -1,7 +1,7 @@
 ---
 title: "クラスター化インデックスと非クラスター化インデックスの概念 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/01/2016
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: 860844c00da732d2a40b4572aff98ec06f5d4ddf
+ms.translationtype: HT
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 3ddf0231bfbea2137834ffbf7113654af9d9af6a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>クラスター化インデックスと非クラスター化インデックスの概念
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
     -   非クラスター化インデックス内のインデックス行からデータ行を指すポインターを、行ロケーターと呼びます。 行ロケーターの構造は、データ ページがヒープまたはクラスター化テーブルのどちらに格納されているかによって異なります。 ヒープに格納されている場合、行ロケーターは行を指すポインターです。 クラスター化テーブルに格納されている場合、行ロケーターはクラスター化インデックス キーです。  
   
-    -   非キー列をリーフ レベルの非クラスター化インデックスに追加することで、サイズが 900 バイトまで、キー列が 16 個までという、既存のインデックス キーの制限を回避して、すべてを対象とするインデックスが設定されたクエリを実行できます。 詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。  
+    -   非キー列をリーフ レベルの非クラスター化インデックスに追加することで、既存のインデックス キーの制限を回避して、すべてを対象とするインデックスが設定されたクエリを実行できます。 詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。 インデックス キーの制限の詳細については、「[SQL Server の最大容量仕様](../../sql-server/maximum-capacity-specifications-for-sql-server.md)」を参照してください。 
   
  クラスター化インデックスと非クラスター化インデックスは共に一意インデックスにできます。 つまり、2 つの行がインデックス キーに同じ値を持つことができなくなります。 一意インデックスにしない場合、インデックスは一意でなくなり、複数の行が同じキー値を共有できます。 詳細については、「 [一意のインデックスの作成](../../relational-databases/indexes/create-unique-indexes.md)」を参照してください。  
   

@@ -1,7 +1,7 @@
 ---
 title: "XML 形式での実行プランの保存 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,11 +20,11 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e60ae53c74f8f6df450ac6abc5a421f773ce434
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 6fe7ad1d3aedc20aac792831c0d469816979ae7e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>XML 形式での実行プランの保存
@@ -36,25 +36,26 @@ ms.lasthandoff: 06/22/2017
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でクエリ エディターを開き、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  次のステートメントを使用して、SHOWPLAN_XML を有効にします。  
+2.  次のステートメントを使用して、[SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md) を有効にします。  
   
-    ```  
+    ```t-sql  
     SET SHOWPLAN_XML ON;  
     GO  
     ```  
   
-     次のステートメントを使用して、STATISTICS XML を有効にします。  
+     次のステートメントを使用して、[STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) を有効にします。  
   
-    ```  
+    ```t-sql  
     SET STATISTICS XML ON;  
     GO  
     ```  
   
-     SHOWPLAN_XML は、クエリのコンパイル時クエリ実行プラン情報を生成しますが、クエリの実行は行いません。 STATISTICS XML は、クエリの実行時クエリ実行プラン情報を生成し、クエリを実行します。  
+     > [!NOTE] 
+     > SHOWPLAN_XML は、クエリのコンパイル時クエリ実行プラン情報を生成しますが、クエリの実行は行いません。 これは**推定**実行プランとも呼ばれます。 STATISTICS XML は、クエリの実行時クエリ実行プラン情報を生成し、クエリを実行します。 これは**実際の**実行プランとも呼ばれます。  
   
 3.  クエリを実行します。 例:  
   
-    ```  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     SET SHOWPLAN_XML ON;  
@@ -75,7 +76,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>SQL Server Management Studio のオプションを使用して実行プランを保存するには  
   
-1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、推定実行プランまたは実際の実行プランを生成します。 詳細については、「 [推定実行プランの表示](../../relational-databases/performance/display-the-estimated-execution-plan.md) 」または「 [実際の実行プランの表示](../../relational-databases/performance/display-an-actual-execution-plan.md)」を参照してください。  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、推定実行プランまたは実際の実行プランを生成します。 詳細については、「[推定実行プランの表示](../../relational-databases/performance/display-the-estimated-execution-plan.md) 」と「[実際の実行プランの表示](../../relational-databases/performance/display-an-actual-execution-plan.md)」を参照してください。  
   
 2.  結果ペインの **[実行プラン]** タブで、グラフィカルな実行プランを右クリックし、 **[実行プランに名前を付けて保存]**をクリックします。  
   
@@ -100,3 +101,4 @@ ms.lasthandoff: 06/22/2017
  [SET STATISTICS XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-xml-transact-sql.md)  
   
   
+
