@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/02/2017
 
 ---
-# <a name="witness-server-instance-configure-database-mirroring-security-wizard"></a>[ミラーリング監視サーバー インスタンス] (データベース ミラーリング セキュリティ構成ウィザード)
+# <a name="witness-server-instance-configure-database-mirroring-security-wizard"></a>[ミラーリング監視サーバー インスタンス]\(データベース ミラーリング セキュリティ構成ウィザード)
   このページを使用すると、セッションのミラーリング監視サーバーとして機能するサーバー インスタンスの情報を指定できます。  
   
 > [!NOTE]  
