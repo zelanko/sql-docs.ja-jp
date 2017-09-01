@@ -99,7 +99,7 @@ ms.lasthandoff: 08/09/2017
   
  グループに関連付けられている行および列を削除するため、そのグループを削除できます。 グループを削除する場合、グループ定義のみを削除する方法と、グループおよび関連付けられているすべての行および列を削除する方法があります。 グループのみを削除すると、データ領域で行および列レイアウトが維持されます。 グループとその関連行および列を削除すると、そのグループに関連付けられているすべての静的な行および列 (グループ ヘッダーおよびフッターを含む) と、動的な行および列 (グループ インスタンスを含む) が削除されます。  
   
- 追加または削除する行と列に関する詳細な手順については、次を参照してください[挿入または行 &#40; を削除します。。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md)と[挿入または列 &#40; を削除しますレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
+ 追加または削除する行と列に関する詳細な手順については、次を参照してください[挿入または行 &#40; を削除します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md)と[挿入または列 &#40; を削除しますレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
 ## <a name="understanding-tablix-cells"></a>Tablix セルについて  
  Tablix セルは 4 つの Tablix 領域 (Tablix 本体、Tablix 行グループ領域、Tablix 列グループ領域、または Tablix コーナー) のいずれかに属します。 各セルにはデータセット内の任意の値を表示できますが、セルごとの既定の機能はその場所によって異なります。 Tablix 領域の詳細については、次を参照してください。 [Tablix データ領域部分 & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
