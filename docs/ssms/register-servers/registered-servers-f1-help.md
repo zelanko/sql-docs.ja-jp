@@ -22,7 +22,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: df1eb91bc84f39d0e2277731d5329d79b8c43e78
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="registered-servers-f1-help"></a>[登録済みサーバー] の F1 ヘルプ
@@ -33,7 +33,7 @@ ms.lasthandoff: 07/31/2017
 
  クリックすると、[登録済みサーバー] の設定を保存します。 
  
- ## <a name="reporting-services-new-or-edit-server-registration-general-tab"></a>Reporting Services の [新規サーバーの登録] または [サーバー登録プロパティの編集] ([全般] タブ) 
+ ## <a name="reporting-services-new-or-edit-server-registration-general-tab"></a>Reporting Services の [新規サーバーの登録] または [サーバー登録プロパティの編集]\([全般] タブ) 
   このタブを使用すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のインスタンスを登録するときのオプションを指定できます。  
   
  このページにアクセスするには、[登録済みサーバー] で、 **[登録済みサーバー]** ツール バーの **[Reporting Services]** をクリックし、登録済みサーバー グループ ( **[Reporting Services]**など) を右クリックして、 **[新規作成]**をポイントし、 **[サーバーの登録]**をクリックします。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 07/31/2017
  クリックすると、 **[サーバー名]**で選択されたサーバーへの接続をテストします。  
   
  
- ## <a name="analysis-services---multidimensional-data-new-or-edit-server-registration-general-tab"></a>Analysis Services - 多次元データの [新規サーバーの登録] または [サーバー登録プロパティの編集] ([全般] タブ)
+ ## <a name="analysis-services---multidimensional-data-new-or-edit-server-registration-general-tab"></a>Analysis Services - 多次元データの [新規サーバーの登録] または [サーバー登録プロパティの編集]\([全般] タブ)
  
   このタブを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスを登録するときのオプションを指定できます。  
   
@@ -112,7 +112,7 @@ ms.lasthandoff: 07/31/2017
  **テスト**  
  クリックすると、 **[サーバー名]**で選択されたサーバーへの接続をテストします。 
  
- ## <a name="ssis-new-or-edit-server-registration-general-tab"></a>SSIS の [新規サーバーの登録] または [サーバー登録プロパティの編集] ([全般] タブ) 
+ ## <a name="ssis-new-or-edit-server-registration-general-tab"></a>SSIS の [新規サーバーの登録] または [サーバー登録プロパティの編集]\([全般] タブ) 
  
  このタブを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を登録するときのオプションを指定できます。  
   
