@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/02/2017
 
 ---
-# <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>[可用性グループのプロパティ]: [新しい可用性グループ] ([バックアップの設定] ページ)
+# <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>[可用性グループのプロパティ]: [新しい可用性グループ]\([バックアップの設定] ページ)
   このダイアログ ボックスを使用して、選択した可用性グループのバックアップのユーザー設定を表示および変更します。  
   
  **可用性グループのプロパティを表示するには**  

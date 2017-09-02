@@ -25,7 +25,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="single-table-quick-profile-form-data-profiling-task"></a>[単一テーブル クイック プロファイル フォーム] (データ プロファイル タスク)
+# <a name="single-table-quick-profile-form-data-profiling-task"></a>[単一テーブル クイック プロファイル フォーム]\(データ プロファイル タスク)
   **[単一テーブル クイック プロファイル フォーム]** を使用すると、既定の設定を使用して単一のテーブルまたはビューをプロファイルするように、データ プロファイル タスクをすばやく構成できます。  
   
  データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)」を参照してください。  
