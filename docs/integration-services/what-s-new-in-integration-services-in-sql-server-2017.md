@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
-ms.openlocfilehash: 2d47d1bb82b586890e3bfc250cf09e929a64fb25
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 87b850c06bea8992ad6869c56acdecd45fa289f4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>どのような &#39; の SQL Server 2017 における Integration Services
@@ -39,7 +39,7 @@ SQL Server 2017 の Integration Services で最も重要な新機能を示しま
 
 ## <a name="new-in-the-azure-feature-pack"></a>Azure Feature Pack の新機能
 
-SQL Server の接続性の向上だけでなく、Integration Services Feature Pack for Azure に Azure Data Lake Store のサポートが追加されました。 詳細については、次を参照してください。 [Integration Services (SSIS) の Azure Feature Pack](azure-feature-pack-for-integration-services-ssis.md)です。
+SQL Server の接続性の向上だけでなく、Integration Services Feature Pack for Azure に Azure Data Lake Store のサポートが追加されました。 詳細については、ブログの投稿を参照してください。[新しい Azure 機能パック リリース強化 ADLS 接続](https://blogs.msdn.microsoft.com/ssis/2017/08/29/new-azure-feature-pack-release-strengthening-adls-connectivity/)です。 参照してください[Integration Services (SSIS) の Azure Feature Pack](azure-feature-pack-for-integration-services-ssis.md)です。
 
 ## <a name="new-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の新機能
 

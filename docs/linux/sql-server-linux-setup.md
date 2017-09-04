@@ -4,19 +4,21 @@ description: "インストール、更新、および Linux に SQL Server を�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: c5bd1be5cbe08e9454b1640d9dd58584aa54955f
+ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
+ms.openlocfilehash: f746037f695301881ce9a993f3d556db44f44292
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上の SQL Server のインストールのガイダンス
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 このトピックでは、インストール、更新、および Linux に SQL Server 2017 をアンインストールする方法について説明します。 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、および Ubuntu では、SQL Server 2017 RC2 をサポートします。 Linux または Docker を Windows/ファルダ上の Docker エンジンで実行できる、Docker のイメージとして使用
 
@@ -57,11 +59,11 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 - [Red Hat Enterprise Linux にインストールします。](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server をインストールします。](quickstart-install-connect-suse.md)
 - [Ubuntu をインストールします。](quickstart-install-connect-ubuntu.md)
-- [Docker で実行します。](quickstart-install-connect-ubuntu.md)
+- [Docker で実行します。](quickstart-install-connect-docker.md)
 
-## <a id="upgrade"></a>SQL Server をアップグレードします。
+## <a id="upgrade"></a>SQL Server を更新します。
 
-アップグレードする、 **mssql サーバー** Linux でパッケージ化、プラットフォームに基づく次のコマンドのいずれかを使用します。
+更新する、 **mssql サーバー**最新のリリースにパッケージ化、プラットフォームに基づく次のコマンドのいずれかを使用します。
 
 | プラットフォーム | パッケージの更新コマンド |
 |-----|-----|
@@ -70,6 +72,26 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server` |
 
 これらのコマンドは、最新のパッケージをダウンロードし、下にあるバイナリ ファイルを置き換える`/opt/mssql/`です。 ユーザーがデータベースを生成し、システム データベースは、この操作には影響しません。
+
+## <a id="rollback"></a>SQL Server をロールバック
+
+ロールバックまたは SQL Server の以前のリリースにダウン グレードは、次の手順に従います。
+
+1. ダウン グレードする SQL Server パッケージのバージョン番号を識別します。 パッケージの番号の一覧は、次を参照してください。、[リリース ノート](sql-server-linux-release-notes.md)です。
+
+1. SQL Server の以前のバージョンにダウン グレードします。 次のコマンドで置き換える`<version_number>`いずれかの手順で特定した SQL Server のバージョン番号を持つ。
+
+   | プラットフォーム | パッケージの更新コマンド |
+   |-----|-----|
+   | RHEL | `sudo yum downgrade mssql-server-<version_number>.x86_64` |
+   | SLES | `sudo zypper install --oldpackage mssql-server=<version_number>` |
+   | Ubuntu | `sudo apt-get install mssql-server=<version_number>`<br/>`sudo systemctl start mssql-server` |
+
+> [!NOTE]
+> SQL Server 2017 など、同じメジャー バージョンのリリースにダウン グレードすることのみサポートされます。
+
+> [!IMPORTANT]
+> ダウン グレードは、この時点で RC2 と RC1 の間でのみサポートされます。
 
 ## <a id="uninstall"></a>SQL Server をアンインストールします。
 
@@ -110,7 +132,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 
 ## <a id="offline"></a>オフライン インストール
 
-かどうか、Linux コンピューターがアクセスできないで使用されるオンライン リポジトリに、[クイック スタート](#platforms)、パッケージ ファイルを直接ダウンロードできます。 これらのパッケージが Microsoft リポジトリ内にある[https://packages.microsoft.com](https://packages.microsoft.com)です。
+かどうか、Linux コンピューターがアクセスできないで使用されるオンライン リポジトリに、[クイック スタート](#platforms)、パッケージ ファイルを直接ダウンロードできます。 これらのパッケージは、Microsoft リポジトリ [https://packages.microsoft.com](https://packages.microsoft.com) にあります。
 
 > [!TIP]
 > クイック スタートの手順に正常にインストールした場合は、ダウンロードしたり、次のパッケージを手動でインストールする必要はありません。 このセクションでは、オフラインのシナリオでのみです。

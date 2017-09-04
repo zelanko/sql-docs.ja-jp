@@ -4,16 +4,16 @@ description: "このクイック スタート チュートリアルでは、Dock
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 95c360dad72a9cd075f2a85d2581dc8021adf941
+ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
+ms.openlocfilehash: 10623562f57ae1b4b571dd2e5b7dad56b81b8f8b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Docker を使用した SQL Server 2017 コンテナー イメージを実行します。
@@ -66,6 +66,9 @@ ms.lasthandoff: 08/28/2017
 
     > [!TIP]
     > Linux、によっては、システムとユーザーの構成が必要になる各の先頭には`docker`コマンドと`sudo`です。
+
+    > [!NOTE]
+    > 上記のコマンドは、最新の SQL Server のコンテナー イメージを取得します。 コロンとタグ名を追加する場合は、特定のイメージを取得するには、(たとえば、 `microsoft/mssql-server-linux:rc1`)。 すべての利用可能なイメージを表示するには、次を参照してください。 [mssql サーバー linux Docker ハブ ページ](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)です。
 
 1. Docker によってコンテナー イメージを実行するには、bash シェル (Linux/macOS) から次のコマンドを使用できます。
 
@@ -259,7 +262,7 @@ SQL Server に接続するその他の一般的なツールは次のとおりで
 
 ## <a name="next-steps"></a>次の手順
 
-複数のコンテナー、データの永続性、および troublehshooting を実行するなどその他のシナリオを調査するを参照してください。 [Docker でコンテナーのイメージを構成する SQL Server 2017](sql-server-linux-configure-docker.md)です。
+複数のコンテナーを実行するなどその他のシナリオを探索するデータの永続性、およびトラブルシューティングを参照してください[Docker でコンテナーのイメージを構成する SQL Server 2017](sql-server-linux-configure-docker.md)です。
 
 また、チェック アウト、 [mssql docker GitHub リポジトリ](https://github.com/Microsoft/mssql-docker)リソース、フィードバック、および既知の問題です。
 

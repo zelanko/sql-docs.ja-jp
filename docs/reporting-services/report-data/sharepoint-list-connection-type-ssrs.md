@@ -1,5 +1,5 @@
 ---
-title: "SharePoint リストの接続の種類 (SSRS) |Microsoft ドキュメント"
+title: "SharePoint リストの接続の種類 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-server-2016
@@ -15,7 +15,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 23799f3c292e7a64ca859d06b570bd8f4657953a
 ms.contentlocale: ja-jp
@@ -26,9 +26,9 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)] [!INCLUDE [ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-Microsoft SharePoint リストのデータをレポートに含めるには、種類が Microsoft SharePoint リストのレポート データ ソースに基づいたデータセットを追加または作成する必要があります。 これは、Microsoft SQL Server Reporting Services SharePoint リストのデータ拡張機能に基づいたビルトイン データ ソースの種類です。 接続し、一覧データから SharePoint 2013 以降を取得するには、このデータ ソースの種類を使用します。
+Microsoft SharePoint リストのデータをレポートに含めるには、種類が Microsoft SharePoint リストのレポート データ ソースに基づいたデータセットを追加または作成する必要があります。 これは、Microsoft SQL Server Reporting Services SharePoint リストのデータ拡張機能に基づいたビルトイン データ ソースの種類です。 このデータ ソースの種類を使用して、SharePoint 2013 以降のリスト データに接続し、そのデータを取得します。
 
-このトピックの情報を使用して、データ ソースを構築してください。 手順については、「 [データ接続またはデータ ソースの追加および確認 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)のレポート データ ソースに基づいたデータセットが必要です。  
+このトピックの情報を使用して、データ ソースを構築してください。 手順については、「 [データ接続を追加および確認する (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)」を参照してください。  
 
 ##  <a name="Connection"></a> 接続文字列  
  SharePoint リストへの接続文字列は、SharePoint サイトまたはサブサイトの URL です ( `http://MySharePointWeb/MySharePointSite` や `http://MySharePointWeb/MySharePointSite/Subsite`など)。  
@@ -73,8 +73,8 @@ Microsoft SharePoint リストのデータをレポートに含めるには、�
  
  レポート サーバー (ローカル モード) なしで動作するように構成されている SharePoint テクノロジの場合、このオプションはサポートされません。 ローカル モードの詳細については、「[レポート ビューアーでのローカル モードと接続モードのレポート (Reporting Services の SharePoint モード)](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)」を参照してください。  
   
- **[資格情報は必要ありません] ([資格情報を使用しない])**  
- このオプションを使用するには、レポート サーバーで自動実行アカウントを構成する必要があります。 詳細については、「[自動実行アカウントを構成する (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
+ **[資格情報は必要ありません]\([資格情報を使用しない])**  
+ このオプションを使用するには、レポート サーバーで自動実行アカウントを構成する必要があります。 詳細については、「[自動実行アカウントを構成する &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
  Microsoft BI スタックにおける要求認証サポートの詳細については、「 [Microsoft BI スタックにおける要求認証の使用](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)」を参照してください。  
   
@@ -95,17 +95,9 @@ Microsoft SharePoint リストのデータをレポートに含めるには、�
   
 -   **非表示** SharePoint リスト ビューにフィールドを表示するかどうかを指定します。  
   
- 複数のリストからフィールドを選択することはできません。 各リストのデータセットを作成し、各データセットからフィールドを選択できます。 リストに共通のフィールドが含まれている場合、一方のデータセットにバインドされている Tablix データ領域で Lookup 関数を使用し、データ領域にバインドされていない他方のデータセットから値を抽出することができます。 詳細については、「[Lookup 関数 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-builder-functions-lookup-function.md)」を参照してください。  
+ 複数のリストからフィールドを選択することはできません。 各リストのデータセットを作成し、各データセットからフィールドを選択できます。 リストに共通のフィールドが含まれている場合、一方のデータセットにバインドされている Tablix データ領域で Lookup 関数を使用し、データ領域にバインドされていない他方のデータセットから値を抽出することができます。 詳細については、「[Lookup 関数 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md)」を参照してください。  
   
--   **選択されたフィールド**  選択したフィールドが表示されます。 このペインのフィールドの名前は、SharePoint ユーザーが指定した表示名になります。 クエリ デザイナーを閉じると、レポート データ ペインのデータセット フィールド コレクションにこれらの名前が表示されます。 一意の名前と表示名の関係については、「[[フィールド] ([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー)](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)」を参照してください。  
-  
--   **適用されたフィルター**  SharePoint リストから返されたデータがレポートに返される前に、このデータを制限します。 使用するフィールド名、演算子、および値を選択して、リストに取得されるデータを制限します。 演算子は、選択した値のデータ型によって異なります。  
-  
-     グラフィカル クエリ デザイナーでは、並べ替え順を変更したり、グループを指定したりすることはできません。 これらの手順を実行するには、レポート データセットの並べ替え式およびレポートのデータ領域のグループ式を設定します。 クエリ パラメーターはサポートされていません。 レポートでデータをフィルター処理するには、作成したレポート フィルターまたはレポート パラメーターを使用します。 詳細については、「 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) 」および「 [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
-  
--   **クエリ結果**  クエリの実行時に返される行のサンプルが表示されます。 SharePoint リストの値が SharePoint サイトで頻繁に変更されると、クエリ結果ペインに表示される値とレポートの値が異なる場合があります。  
-  
--   **選択されたフィールド**  選択したフィールドが表示されます。 このペインのフィールドの名前は、SharePoint ユーザーが指定した表示名になります。 クエリ デザイナーを閉じると、レポート データ ペインのデータセット フィールド コレクションにこれらの名前が表示されます。 一意の名前と表示名の関係については、「[[フィールド] ([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー)](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)」を参照してください。  
+-   **選択されたフィールド**  選択したフィールドが表示されます。 このペインのフィールドの名前は、SharePoint ユーザーが指定した表示名になります。 クエリ デザイナーを閉じると、レポート データ ペインのデータセット フィールド コレクションにこれらの名前が表示されます。 一意の名前と表示名の関係については、「[[フィールド] ([データセットのプロパティ] ダイアログ ボックス) &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)」を参照してください。  
   
 -   **適用されたフィルター**  SharePoint リストから返されたデータがレポートに返される前に、このデータを制限します。 使用するフィールド名、演算子、および値を選択して、リストに取得されるデータを制限します。 演算子は、選択した値のデータ型によって異なります。  
   
@@ -113,7 +105,15 @@ Microsoft SharePoint リストのデータをレポートに含めるには、�
   
 -   **クエリ結果**  クエリの実行時に返される行のサンプルが表示されます。 SharePoint リストの値が SharePoint サイトで頻繁に変更されると、クエリ結果ペインに表示される値とレポートの値が異なる場合があります。  
   
- 詳細については、「[SharePoint リストのクエリ デザイナー (レポート ビルダー)](../../reporting-services/report-data/sharepoint-list-query-designer-report-builder.md)」を参照してください。  
+-   **選択されたフィールド**  選択したフィールドが表示されます。 このペインのフィールドの名前は、SharePoint ユーザーが指定した表示名になります。 クエリ デザイナーを閉じると、レポート データ ペインのデータセット フィールド コレクションにこれらの名前が表示されます。 一意の名前と表示名の関係については、「[[フィールド] ([データセットのプロパティ] ダイアログ ボックス) &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)」を参照してください。  
+  
+-   **適用されたフィルター**  SharePoint リストから返されたデータがレポートに返される前に、このデータを制限します。 使用するフィールド名、演算子、および値を選択して、リストに取得されるデータを制限します。 演算子は、選択した値のデータ型によって異なります。  
+  
+     グラフィカル クエリ デザイナーでは、並べ替え順を変更したり、グループを指定したりすることはできません。 これらの手順を実行するには、レポート データセットの並べ替え式およびレポートのデータ領域のグループ式を設定します。 クエリ パラメーターはサポートされていません。 レポートでデータをフィルター処理するには、作成したレポート フィルターまたはレポート パラメーターを使用します。 詳細については、「 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) 」および「 [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+  
+-   **クエリ結果**  クエリの実行時に返される行のサンプルが表示されます。 SharePoint リストの値が SharePoint サイトで頻繁に変更されると、クエリ結果ペインに表示される値とレポートの値が異なる場合があります。  
+  
+ 詳細については、「[SharePoint リストのクエリ デザイナー &#40;レポート ビルダー&#41;](../../reporting-services/report-data/sharepoint-list-query-designer-report-builder.md)」を参照してください。  
   
 ### <a name="query-text"></a>クエリ テキスト  
  グラフィカル クエリ デザイナーで生成されたクエリを表示するには、テキスト ベースのクエリ デザイナーに切り替えます。 このビューには、グラフィカル クエリ デザイナーで作成された XML が表示されます。 XML には要素として、リスト名、フィールド コレクション、およびフィルターも含まれます。  
@@ -164,34 +164,34 @@ Microsoft SharePoint リストのデータをレポートに含めるには、�
 ##  <a name="HowTo"></a> 操作方法に関するトピック  
  データ接続、データ ソース、およびデータセットを操作する手順について説明します。  
   
- [データ接続またはデータ ソースの追加および確認 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [データ接続を追加および確認する (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
- [共有データセットまたは埋め込みデータセットの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+ [共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [データセットへのフィルターの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [データセットへのフィルターの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
 ##  <a name="Related"></a> 関連項目  
- 次に示すセクションでは、レポート データの概念が詳細に説明されているほか、データに関連するレポートのパーツを定義、カスタマイズ、および使用する手順が説明されています。  
+ 次に示すセクションでは、レポート データの概念が詳細に説明されているほか、データに関連するレポートのパーツを定義し、カスタマイズし、使用する方法が説明されています。  
   
- [レポート データセット &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
+ [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  レポートのデータへのアクセスの概要について説明します。  
   
  [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  データ接続とデータ ソースについて説明します。  
   
- [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  埋め込みデータセットと共有データセットについて説明します。  
   
- [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [データセット フィールド コレクション (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  クエリによって生成されるデータセット フィールド コレクションについて説明します。  
   
- [Reporting Services でサポートされるデータ ソース (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](http://go.microsoft.com/fwlink/?linkid=121312)の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメント)  
+ [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブックの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメント](http://go.microsoft.com/fwlink/?linkid=121312))。  
  各データ拡張機能のプラットフォームおよびバージョン サポートに関する詳細な情報です。  
 
 ## <a name="see-also"></a>参照
 
 [レポート パラメーター](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
-[フィルター、グループ、およびデータの並べ替え](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
-[式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+[データのフィルター、グループ化、および並べ替え](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+[式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他のご不明な点は、 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
