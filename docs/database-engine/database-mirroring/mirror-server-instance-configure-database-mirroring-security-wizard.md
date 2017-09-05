@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/02/2017
 
 ---
-# <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>[ミラー サーバー インスタンス] (データベース ミラーリング セキュリティ構成ウィザード)
+# <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>[ミラー サーバー インスタンス]\(データベース ミラーリング セキュリティ構成ウィザード)
   このページを使用すると、ミラー データベースを持つサーバー インスタンスに関する情報を指定できます。  
   
 > [!IMPORTANT]  
