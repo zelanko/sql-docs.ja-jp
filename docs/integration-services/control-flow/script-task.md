@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.scripttask.f1
+- sql13.dts.designer.scripttask.general.f1
+- sql13.dts.designer.scripttask.script.f1
 helpviewer_keywords:
 - scripts [Integration Services], tasks
 - Script task [Integration Services], about Script task
@@ -21,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 0ab143db0dfc6cda94bd0ba5e51fec66da7b46be
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: b1a74f830a25717aa3e0e36910842582be4be1c5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="script-task"></a>スクリプト タスク
@@ -90,6 +92,57 @@ ms.lasthandoff: 08/03/2017
  プログラムによってこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask>  
+  
+## <a name="script-task-editor-general-page"></a>[スクリプト タスク エディター]\ ([全般] ページ)
+  **[スクリプト タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、スクリプト タスクの名前と説明を入力できます。  
+  
+ スクリプト タスクの詳細については、「 [スクリプト タスク](../../integration-services/control-flow/script-task.md) 」および「 [スクリプト タスク エディターでスクリプト タスクの構成](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)」を参照してください。 スクリプト タスクのプログラミングの詳細については、「 [スクリプト タスクによるパッケージの拡張](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **名前**  
+ スクリプト タスクの固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
+  
+> [!NOTE]  
+>  タスク名はパッケージ内で一意である必要があります。  
+  
+ **Description**  
+ スクリプト タスクの説明を入力します。  
+  
+## <a name="script-task-editor-script-page"></a>[スクリプト タスク エディター] ([スクリプト] ページ)
+  **[スクリプト タスク エディター]** ダイアログ ボックスの **[スクリプト]** ページを使用すると、スクリプト プロパティを設定し、スクリプトによってアクセスできる変数を指定できます。  
+  
+> [!NOTE]  
+>  [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] およびそれ以降のバージョンでは、すべてのスクリプトがプリコンパイル済みです。 以前のバージョンでは、 **PrecompileScriptIntoBinaryCode** プロパティを設定して、スクリプトを事前コンパイルするかどうかを指定していました。  
+  
+ スクリプト タスクの詳細については、「 [Script Task](../../integration-services/control-flow/script-task.md) 」および「 [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)」を参照してください。 スクリプト タスクのプログラミングの詳細については、「 [スクリプト タスクによるパッケージの拡張](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **[ScriptLanguage]**  
+ タスクのスクリプト言語を選択します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# のいずれかです。  
+  
+ タスクのスクリプトを作成した後に、 **[ScriptLanguage]** プロパティの値を変更することはできません。  
+  
+ スクリプト タスクの既定のスクリプト言語を設定するには、 **[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。 詳細については、「 [General Page](../../integration-services/control-flow/script-task-editor-general-page.md)」を参照してください。  
+  
+ **[EntryPoint]**  
+ スクリプト タスクのコードのエントリ ポイントとして [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ランタイムが呼び出すメソッドを指定します。 指定するメソッドは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) プロジェクトの ScriptMain クラスに存在する必要があります。ScriptMain クラスは、スクリプト テンプレートによって生成される既定のクラスです。  
+  
+ VSTA プロジェクトでメソッドの名前を変更する場合は、 **EntryPoint** プロパティの値を変更する必要があります。  
+  
+ **[ReadOnlyVariables]**  
+ スクリプトに使用できる読み取り専用の変数の一覧をコンマ区切りで入力するか、省略記号ボタン (**[...]**) をクリックして **[変数の選択]** ダイアログ ボックスで変数を選択します。  
+  
+> [!NOTE]  
+>  変数名では大文字と小文字が区別されます。  
+  
+ **[ReadWriteVariables]**  
+ スクリプトに使用できる読み取り/書き込み用の変数の一覧をコンマ区切りで入力するか、省略記号ボタン (**[...]**) をクリックして **[変数の選択]** ダイアログ ボックスで変数を選択します。  
+  
+> [!NOTE]  
+>  変数名では大文字と小文字が区別されます。  
+  
+ **[スクリプトの編集]**  
+ スクリプトを作成または変更できる VSTA IDE が開きます。  
   
 ## <a name="related-content"></a>関連コンテンツ  
   

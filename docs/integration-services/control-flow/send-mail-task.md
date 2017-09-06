@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sendmailtask.f1
+- sql13.dts.designer.sendmailtask.general.f1
+- sql13.dts.designer.sendmailtask.mail.f1
 helpviewer_keywords:
 - mail [Integration Services]
 - Send Mail task
@@ -23,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: fd6f7a19c1b553ee06013a4a24fbbf26a759a6cd
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: cf06b8fdc020b9c2012d5d710427b64043898e84
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="send-mail-task"></a>メール送信タスク
@@ -71,11 +73,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuring-the-send-mail-task"></a>メール送信タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [[メール送信タスク エディター] &#40;[全般] ページ&#41;](../../integration-services/control-flow/send-mail-task-editor-general-page.md)  
-  
--   [[メール送信タスク エディター] &#40;[メール] ページ&#41;](../../integration-services/control-flow/send-mail-task-editor-mail-page.md)  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
 -   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
@@ -89,6 +87,81 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-content"></a>関連コンテンツ  
   
 -   shareourideas.com の技術記事「 [配信通知付きで電子メールを送信する方法 (C#)](http://go.microsoft.com/fwlink/?LinkId=237625)」  
+  
+## <a name="send-mail-task-editor-general-page"></a>[メール送信タスク エディター]\ ([全般] ページ)
+  **[メール送信タスク エディター]** の **[全般]** ページを使用すると、メール送信タスクに名前を付けて説明を記述できます。  
+  
+### <a name="options"></a>オプション  
+ **名前**  
+ メール送信タスクに一意の名前を提供します。 この名前は、タスク アイコンのラベルとして使用されます。  
+  
+ **注** タスク名はパッケージ内で一意である必要があります。  
+  
+ **Description**  
+ メール送信タスクの説明を入力します。  
+  
+## <a name="send-mail-task-editor-mail-page"></a>[メール送信タスク エディター]\ ([メール] ページ)
+  **[メール送信タスク エディター]** ダイアログ ボックスの **[メール]** ページを使用すると、受信者、メッセージの種類、メッセージの重要度を指定できます。 メッセージにファイルを添付することもできます。 メッセージ テキストは、入力した文字列、テキストが含まれるファイルへのファイル接続、またはテキストが含まれる変数の名前になります。  
+  
+### <a name="options"></a>オプション  
+ **[SMTPConnection]**  
+ 一覧で、SMTP 接続マネージャーを選択するかクリックして**\<新しい接続 >**新しい接続マネージャーを作成します。  
+  
+> [!IMPORTANT]  
+>  SMTP 接続マネージャーでは、匿名認証と Windows 認証のみがサポートされています。 基本認証はサポートされていません。  
+  
+ **関連項目:** [SMTP 接続マネージャー](../../integration-services/connection-manager/smtp-connection-manager.md)  
+  
+ **From**  
+ 送信者の電子メール アドレスを指定します。  
+  
+ **変換先**  
+ 受信者の電子メール アドレスを指定します。受信者はセミコロンで区切ります。  
+  
+ **[Cc]**  
+ メッセージのコピーを受け取る受信者の電子メール アドレスを指定します。受信者はセミコロンで区切ります。  
+  
+ **[Bcc]**  
+ メッセージのコピーを Bcc として受け取る受信者の電子メール アドレスを指定します。受信者はセミコロンで区切ります。  
+  
+ **[Subject]**  
+ 電子メール メッセージの件名を指定します。  
+  
+ **[MessageSourceType]**  
+ メッセージのソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|**[直接入力]**|メッセージ テキストをソースとして設定します。 この値を選択すると、動的オプション **[MessageSource]**が表示されます。|  
+|**[ファイル接続]**|メッセージ テキストが含まれるファイルをソースとして設定します。 この値を選択すると、動的オプション **[MessageSource]**が表示されます。|  
+|**変数**|メッセージ テキストが含まれる変数をソースとして設定します。 この値を選択すると、動的オプション **[MessageSource]**が表示されます。|  
+  
+ **[Priority]**  
+ メッセージの重要度を設定します。  
+  
+ **[Attachments]**  
+ 電子メール メッセージに添付するファイル名を指定します。ファイル名はパイプ文字 (|) で区切ります。  
+  
+> [!NOTE]  
+>  [宛先]、[CC]、[BCC] 行の文字数は、インターネット標準に従って 256 文字に制限されています。  
+  
+### <a name="messagesourcetype-dynamic-options"></a>MessageSourceType 動的オプション  
+  
+#### <a name="messagesourcetype--direct-input"></a>[MessageSourceType] = [直接入力]  
+ **[MessageSource]**  
+ メッセージ テキストを入力するか、参照ボタン ([...]) をクリックして **[メッセージの送信元]** ダイアログ ボックスにメッセージを入力します。  
+  
+#### <a name="messagesourcetype--file-connection"></a>[MessageSourceType] = [ファイル接続]  
+ **[MessageSource]**  
+ 一覧で、ファイル接続マネージャーを選択するかクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
+  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="messagesourcetype--variable"></a>[MessageSourceType] = [変数]  
+ **[MessageSource]**  
+ 一覧に変数を選択するか、をクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
+  
+ **関連トピック:** [Integration Services (SSIS) 変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   

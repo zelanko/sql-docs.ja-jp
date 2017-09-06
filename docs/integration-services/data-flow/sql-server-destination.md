@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sqlserverdest.f1
+- sql13.dts.designer.sqlserverdestadapter.connection.f1
+- sql13.dts.designer.sqlserverdestadapter.mappings.f1
+- sql13.dts.designer.sqlserverdestadapter.advanced.f1
 helpviewer_keywords:
 - SQL Server destination
 - loading data
@@ -23,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1224814d165d5763d832b18f6523c6c47f6f59c
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: e85093b58f8fcad60231c0f1a5c24387be686be3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="sql-server-destination"></a>SQL Server 変換先
@@ -93,14 +96,6 @@ ms.lasthandoff: 08/03/2017
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[SQL 変換先エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [[SQL 変換先エディター] &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/sql-destination-editor-connection-manager-page.md)  
-  
--   [[SQL 変換先エディター] &#40;[マッピング] ページ&#41;](../../integration-services/data-flow/sql-destination-editor-mappings-page.md)  
-  
--   [[SQL 変換先エディター] &#40;[詳細設定] ページ&#41;](../../integration-services/data-flow/sql-destination-editor-advanced-page.md)  
-  
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -125,7 +120,88 @@ ms.lasthandoff: 08/03/2017
   
 -   msdn.microsoft.com の技術記事: [Integration Services のパフォーマンス チューニング技法](http://go.microsoft.com/fwlink/?LinkId=233700)  
   
--   simple-talk.com の技術資料「 [SQL Server Integration Services を使用してデータの一括読み込みを行う](http://go.microsoft.com/fwlink/?LinkId=233701)」  
+-   simple-talk.com の技術記事: [SQL Server Integration Services を使用してデータの一括読み込みを行う](http://go.microsoft.com/fwlink/?LinkId=233701)  
+  
+## <a name="sql-destination-editor-connection-manager-page"></a>[SQL 変換先エディター]\ ([接続マネージャー] ページ)
+  **[SQL 変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、データ ソース情報を指定したり、結果をプレビューしたりできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先エディターは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのテーブルまたはビューにデータを読み込みます。  
+  
+### <a name="options"></a>オプション  
+ **OLE DB 接続マネージャー**  
+ 一覧から既存の接続を選択するか、 **[新規作成]**をクリックして新しい接続を作成します。  
+  
+ **[新規作成]**  
+ **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用して、新しい接続を作成します。  
+  
+ **[テーブルまたはビューを使用する]**  
+ 既存のテーブルまたはビューを一覧から選択するか、 **[新規作成]**をクリックして新しい接続を作成します。  
+  
+ **[新規作成]**  
+ **[テーブルの作成]** ダイアログ ボックスを使用して新しいテーブルを作成します。  
+  
+> [!NOTE]  
+>  **[新規作成]**をクリックすると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により、接続されているデータ ソースに基づいて既定の CREATE TABLE ステートメントが生成されます。 基になるテーブルの列に FILESTREAM 属性が宣言されていても、この既定の CREATE TABLE ステートメントには FILESTREAM 属性が含まれません。 FILESTREAM 属性を使用して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントを実行するには、まず対象データベースに FILESTREAM ストレージを実装します。 次に、**[テーブルの作成]** ダイアログ ボックスで CREATE TABLE ステートメントに FILESTREAM 属性を追加します。 詳細については、「[バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」を参照してください。  
+  
+ **プレビュー**  
+ **[クエリ結果のプレビュー]** ダイアログ ボックスを使用して、結果をプレビューします。 プレビューでは、最大で 200 行を表示できます。  
+  
+## <a name="sql-destination-editor-mappings-page"></a>[SQL 変換先エディター]\ ([マッピング] ページ)
+  **[SQL 変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
+  
+### <a name="options"></a>オプション  
+ **使用できる入力列**  
+ 使用できる入力列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる入力列を変換先列にマップします。  
+  
+ **使用できる変換先列**  
+ 使用できる変換先列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる変換先列を入力列にマップします。  
+  
+ **入力列**  
+ 上の表で選択された入力列が表示されます。 **[使用できる入力列]**ボックスの一覧を使用して、マッピングを変更できます。  
+  
+ **変換先列**  
+ マップされているかどうかに関係なく、使用できる変換先列を表示します。  
+  
+## <a name="sql-destination-editor-advanced-page"></a>[SQL 変換先エディター]\ ([詳細設定] ページ)
+  **[SQL 変換先エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、詳細な一括挿入オプションを指定できます。  
+  
+### <a name="options"></a>オプション  
+ **[ID を保持する]**  
+ タスクが値を ID 列に挿入するかどうかを指定します。 このプロパティの既定値は **False**です。  
+  
+ **[NULL を保持する]**  
+ タスクが NULL 値を保持するかどうかを指定します。 このプロパティの既定値は **False**です。  
+  
+ **[テーブル ロック]**  
+ データが読み込まれるときにテーブルをロックするかどうかを指定します。 このプロパティの既定値は **True**です。  
+  
+ **CHECK 制約**  
+ タスクが制約をチェックするかどうかを指定します。 このプロパティの既定値は **True**です。  
+  
+ **[トリガーを起動する]**  
+ テーブルにおける一括挿入でトリガーを起動するかどうかを指定します。 このプロパティの既定値は **False**です。  
+  
+ **[先頭行]**  
+ 先頭行が挿入されるように指定します。 このプロパティの既定値は、 **-1**です。これは、値が割り当てられていないことを示します。  
+  
+> [!NOTE]  
+>  このプロパティに値を割り当てない場合、 **[SQL 変換先エディター]** のテキスト ボックスをクリアします。 **[プロパティ]** ウィンドウ、 **[詳細エディター]**、およびオブジェクト モデルでは、-1 を使用します。  
+  
+ **[最終行]**  
+ 最終行が挿入されるように指定します。 このプロパティの既定値は、 **-1**です。これは、値が割り当てられていないことを示します。  
+  
+> [!NOTE]  
+>  このプロパティに値を割り当てない場合、 **[SQL 変換先エディター]** のテキスト ボックスをクリアします。 **[プロパティ]** ウィンドウ、 **[詳細エディター]**、およびオブジェクト モデルでは、-1 を使用します。  
+  
+ **[エラーの最大数]**  
+ 一括挿入を停止する前に許容するエラー数を指定します。 このプロパティの既定値は、 **-1**です。これは、値が割り当てられていないことを示します。  
+  
+> [!NOTE]  
+>  このプロパティに値を割り当てない場合、 **[SQL 変換先エディター]** のテキスト ボックスをクリアします。 **[プロパティ]** ウィンドウ、 **[詳細エディター]**、およびオブジェクト モデルでは、-1 を使用します。  
+  
+ **Timeout**  
+ タイムアウトで一括挿入が停止されるまでの待機時間を秒数で指定します。  
+  
+ **[列の順序]**  
+ キー列の名前を入力します。 各列は、昇順または降順で並べ替えることができます。 複数のキー列を使用する場合は、リストをコンマで区切ります。  
   
 ## <a name="see-also"></a>参照  
  [データ フロー](../../integration-services/data-flow/data-flow.md)  

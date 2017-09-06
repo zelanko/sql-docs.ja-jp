@@ -1,7 +1,7 @@
 ---
 title: "データ警告マネージャーでデータ警告の管理 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,16 +18,16 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: fdea7fc38d680e8bf7acb104254cb75b95297660
+ms.translationtype: MT
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 84bd8143bbc487ad38416f7b4c7fed48ab0f0369
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>データ警告マネージャーでのデータ警告の管理
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
 SharePoint ユーザーは、自分が作成したデータ警告と、それらの警告に関する情報を一覧表示できます。 また、警告を削除したり、データ警告デザイナーで警告定義を開いて編集したり、それらの警告を実行することもできます。 次の図に、データ警告マネージャーでユーザーが使用できる機能を示します。
 
