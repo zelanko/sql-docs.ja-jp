@@ -1,39 +1,44 @@
 ---
-title: "このブックには外部データを更新する 1 つ以上のクエリが含まれています。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "このブックに外部データを更新する 1 つまたは複数のクエリが含まれています |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: aa65c992-eb41-4032-9e11-a9ba871b6a3c
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 7
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: f400a5513fcd16ea5344157e451d06b8fe103796
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# このブックには外部データを更新する 1 つ以上のクエリが含まれています。
+# <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>このブックには、外部データを更新する 1 つまたは複数のクエリが含まれています。
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データが含まれる Excel ブックの場合、Excel Services は接続情報が検出されるとこの警告を表示し、このブックのクエリを有効にするか無効にするかを確認するプロンプトを表示します。  
   
-## 詳細  
+## <a name="details"></a>詳細  
   
 |||  
 |-|-|  
-|製品名|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint|  
-|製品バージョン|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|製品名|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint|  
+|製品バージョン|[!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11_md](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)]|  
 |原因|Excel Services がデータ更新時に警告を表示するように構成されています。|  
 |メッセージ テキスト|このブックには外部データを更新する 1 つ以上のクエリが含まれています。 悪意のあるユーザーは資格情報にアクセスし、他のユーザーに配布したり、他の有害なアクションを実行するようにクエリを書き換えることがあります。<br /><br /> このブックのソースを信頼できる場合は、[はい] をクリックしてこのブックの外部データに対するクエリを有効にします。 信頼できるかどうかが不明である場合は、[いいえ] をクリックして変更がブックに適用されないようにします。<br /><br /> このブックの外部データへのクエリを有効にしますか?|  
   
-## 説明  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックに、データの読み込みと計算を行う外部 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーと通信する Excel で使用される埋め込みデータ接続文字列が含まれています。 [データ更新に関する警告を表示する] が有効になっている場合、Excel Services はこの接続文字列を検出し、ユーザーにその旨を警告します。  
+## <a name="explanation"></a>説明  
+ [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ブックに、データの読み込みと計算を行う外部 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サーバーと通信する Excel で使用される埋め込みデータ接続文字列が含まれています。 [データ更新に関する警告を表示する] が有効になっている場合、Excel Services はこの接続文字列を検出し、ユーザーにその旨を警告します。  
   
- ブックの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データをフィルターおよびスライスする場合は、クエリを有効にする必要があります。 信頼できる [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックのクエリのみを有効にしてください。  
+ ブックの [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] データをフィルターおよびスライスする場合は、クエリを有効にする必要があります。 信頼できる [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ブックのクエリのみを有効にしてください。  
   
-## ユーザーの操作  
+## <a name="user-action"></a>ユーザーの操作  
  **[はい]** をクリックしてクエリを有効にします。  
   
  また、構成設定を変更して、更新時に警告が表示されないようにすることもできます。  
@@ -50,6 +55,6 @@ caps.handback.revision: 7
   
 6.  **[OK]**をクリックします。  
   
- または、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックが含まれるサイト用に新しく信頼できる場所を作成し、そのサイトの構成設定だけを変更することもできます。 詳細については、「 [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  
+ または、 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ブックが含まれるサイト用に新しく信頼できる場所を作成し、そのサイトの構成設定だけを変更することもできます。 詳細については、「 [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  
   
   

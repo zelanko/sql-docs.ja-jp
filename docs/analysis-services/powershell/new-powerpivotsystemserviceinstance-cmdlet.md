@@ -1,38 +1,49 @@
 ---
-title: "New-PowerPivotSystemServiceInstance コマンドレット | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "New-powerpivotsystemserviceinstance コマンドレット |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 7ea94113-c0f1-4cca-9228-f1a034fba5db
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 8cde819f27942e78bf67c85356602ad1954420c0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# New-PowerPivotSystemServiceInstance コマンドレット
+# <a name="new-powerpivotsystemserviceinstance-cmdlet"></a>New-PowerPivotSystemServiceInstance コマンドレット
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
+
   新しいインスタンスを追加 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] をアプリケーション サーバーのシステム サービスです。  
+
+>[!NOTE] 
+>この記事には、古くなった情報と例があります。 最新バージョンには、Get-help コマンドレットを使用します。
   
  **適用対象:** SharePoint 2010 および SharePoint 2013  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServicePipeBind>] [-SystemServiceInstanceName <string>] [-Provision] [<CommonParameters>]  
 ```  
   
-## Description  
+## <a name="description"></a>Description  
  New-PowerPivotSystemServiceInstance コマンドレットは、SQL Server セットアップを使用して [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をローカル アプリケーション サーバーにインストールした後に、ファーム レベルで新しい PowerPivotSystemService オブジェクトをプロビジョニングします。 各アプリケーション サーバーにサービス インスタンスを 1 つだけ作成できます。  サービスが既に準備されている場合は、このコマンドレットを実行することはできません。  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
   
-### -ParentService \<PowerPivotMidTierServicePipeBind>  
+### <a name="-parentservice-powerpivotmidtierservicepipebind"></a>-Parentservice \<PowerPivotMidTierServicePipeBind >  
  GUID を指定、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 、ファーム内のシステム サービスの親オブジェクトです。 このリリースでは、1 つの親オブジェクトのみが許可されます。 Get-PowerPivotSystemService を使用してサービス オブジェクトまたはその GUID を返すことができます。  
   
 |||  
@@ -43,7 +54,7 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
 |パイプライン入力の受け入れ|true|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### -SystemServiceInstanceName \<string>  
+### <a name="-systemserviceinstancename-string"></a>-Systemserviceinstancename &\<文字列 >  
  このオブジェクトを識別する名前を指定します。  
   
 |||  
@@ -54,7 +65,7 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### Provision [\<SwitchParameter>]  
+### <a name="provision-switchparameter"></a>プロビジョニング [\<SwitchParameter >]  
  SharePoint でサービスを利用できるようにします。 有効な値は $true または $false です。  
   
 |||  
@@ -65,10 +76,10 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### \<CommonParameters>  
- このコマンドレットは共通のパラメーターをサポートしています (Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer、および OutVariable)。 詳細については、「[About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)」を参照してください。  
+### <a name="commonparameters"></a>\<CommonParameters >  
+ このコマンドレットは共通のパラメーターをサポートしています (Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer、および OutVariable)。 詳細については、「 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)」を参照してください。  
   
-## 入力および出力  
+## <a name="inputs-and-outputs"></a>入力および出力  
  入力型は、コマンドレットにパイプできるオブジェクトの型です。 戻り値の型は、コマンドレットが返すオブジェクトの型です。  
   
 |||  
@@ -76,7 +87,7 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
 |入力|[なし] :|  
 |出力|[なし] :|  
   
-## 例 1  
+## <a name="example-1"></a>例 1  
   
 ```  
 C:\PS>New-PowerPivotSystemServiceInstance -Provision:$true  
@@ -84,7 +95,7 @@ C:\PS>New-PowerPivotSystemServiceInstance -Provision:$true
   
  この例は、コマンドレットの最も一般的な形式を示します。 登録、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] と、ファームのローカル アプリケーション サーバー上のシステム サービスです。  
   
-## 例 2  
+## <a name="example-2"></a>例 2  
   
 ```  
 C:\PS>New-PowerPivotSystemServiceInstance -SystemServiceInstanceName "MyPSSInstance" -provision:$false  

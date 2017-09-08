@@ -1,47 +1,52 @@
 ---
-title: "集計関数の使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "集計関数 [Analysis Services]"
+title: "集計関数を使用して |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- aggregate functions [Analysis Services]
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 62fb5170cb4d1ea3b33e5bb080f56860d610a531
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# 集計関数の使用
-  メジャーをスライスするためにディメンションを使用する場合、メジャーはそのディメンションに含まれる階層に沿って集約されます。 この集約動作は、メジャーに指定される集計関数に依存します。 数値データが含まれているほとんどのメジャーでは、集計関数は **Sum** になります。 メジャーの値は、どの階層のレベルがアクティブかに応じて異なる量の合計になります。  
+# <a name="use-aggregate-functions"></a>集計関数の使用
+  メジャーをスライスするためにディメンションを使用する場合、メジャーはそのディメンションに含まれる階層に沿って集約されます。 この集約動作は、メジャーに指定される集計関数に依存します。 数値データが含まれているほとんどのメジャーでは、集計関数は **Sum**になります。 メジャーの値は、どの階層のレベルがアクティブかに応じて異なる量の合計になります。  
   
- Analysis Services において作成するすべてのメジャーは、対応する集計関数によりその動作が決まります。 定義済みの集計の種類には、**Sum****Min****Max****Count****Distinct Count**、およびその他複数の特化した関数があります。 または、複雑な数式やカスタムの数式に基づいて集計を必要とする場合は、構築済みの集計関数を代わりに使用して、MDX の計算を作成できます。 たとえば、割合の値のためのメジャーを定義する場合、計算されるメジャーを使用して MDX でそれを実行します。 「[CREATE MEMBER ステートメント &#40;MDX&#41;](../Topic/CREATE%20MEMBER%20Statement%20\(MDX\).md)」を参照してください。  
+ Analysis Services において作成するすべてのメジャーは、対応する集計関数によりその動作が決まります。 定義済みの集計の種類には、**Sum****Min****Max****Count****Distinct Count**、およびその他複数の特化した関数があります。 または、複雑な数式やカスタムの数式に基づいて集計を必要とする場合は、構築済みの集計関数を代わりに使用して、MDX の計算を作成できます。 たとえば、割合の値のためのメジャーを定義する場合、計算されるメジャーを使用して MDX でそれを実行します。 「[CREATE MEMBER ステートメント &#40;MDX&#41;](../../mdx/mdx-data-definition-create-member.md)」を参照してください。  
   
- キューブ ウィザードを使用して作成されるメジャーは、メジャーの定義の一部として、集計の種類に割り当てられます。 ソース列に数値データが含まれることを前提として、集計の種類は常に **Sum** になります。 **Sum** は、ソース列のデータ型に関係なく割り当てられます。 たとえば、キューブ ウィザードを使用してメジャーを作成し、ファクト テーブルからすべての列を抜粋した場合、ソースが日付と時間の列であっても、結果として得られるメジャーのすべてに **Sum** の集計があることが分かります。 集計関数が適切であることを確認するウィザードを介して作成されたメジャーの場合は、事前に割り当てられている集計メソッドを常に確認します。  
+ キューブ ウィザードを使用して作成されるメジャーは、メジャーの定義の一部として、集計の種類に割り当てられます。 ソース列に数値データが含まれることを前提として、集計の種類は常に **Sum**になります。 **Sum** は、ソース列のデータ型に関係なく割り当てられます。 たとえば、キューブ ウィザードを使用してメジャーを作成し、ファクト テーブルからすべての列を抜粋した場合、ソースが日付と時間の列であっても、結果として得られるメジャーのすべてに **Sum**の集計があることが分かります。 集計関数が適切であることを確認するウィザードを介して作成されたメジャーの場合は、事前に割り当てられている集計メソッドを常に確認します。  
   
  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] または MDX のいずれかを介したキューブの定義で、集計方法を割り当てたり、変更したりすることができます。 詳細については、「[多次元モデル内のメジャーおよびメジャー グループの作成](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)」または「[Aggregate &#40;MDX&#41;](../../mdx/aggregate-mdx.md)」を参照してください。  
   
 ##  <a name="AggFunction"></a> 集計関数  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  には、メジャー グループに含まれるディメンションに従ってメジャーを集計するための関数があります。 集計関数の "*加法性*" によって、キューブのすべてのディメンションにわたってメジャーがどのように集計されるかが決まります。 集計関数の加法性は、3 つのレベルに分類されます。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、メジャー グループに含まれるディメンションに従ってメジャーを集計するための関数があります。 集計関数の " *加法性* " によって、キューブのすべてのディメンションにわたってメジャーがどのように集計されるかが決まります。 集計関数の加法性は、3 つのレベルに分類されます。  
   
  加法  
  加法メジャーは完全加法メジャーとも呼ばれ、メジャーが含まれているメジャー グループ内のすべてのディメンションに従って制限なく集計できます。  
   
  準加法  
- 準加法メジャーは、メジャーが含まれているメジャー グループ内のすべてではなく一部のディメンションに従って集計できます。 たとえば、在庫の数量を表すメジャーは、地理ディメンションに従って集計してすべての倉庫の合計在庫数量を生成できますが、このメジャーは在庫数量の定期的なスナップショットを表しているため、時間ディメンションに従って集計できません。 そのようなメジャーを時間ディメンションに従って集計すると、間違った結果が生成されます。 詳細については、「[準加法の動作の定義](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)」を参照してください。  
+ 準加法メジャーは、メジャーが含まれているメジャー グループ内のすべてではなく一部のディメンションに従って集計できます。 たとえば、在庫の数量を表すメジャーは、地理ディメンションに従って集計してすべての倉庫の合計在庫数量を生成できますが、このメジャーは在庫数量の定期的なスナップショットを表しているため、時間ディメンションに従って集計できません。 そのようなメジャーを時間ディメンションに従って集計すると、間違った結果が生成されます。 詳細については、「 [準加法の動作の定義](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md) 」を参照してください。  
   
  非加法  
  非加法メジャーは、メジャーが含まれているメジャー グループ内のどのディメンションに従っても集計できません。 代わりに、このメジャーは、メジャーを表すキューブのセルごとに計算する必要があります。 たとえば、利益率などの比率を返す計算されるメジャーは、どのディメンションの子メンバーのパーセンテージ値からも集計できません。  
   
- 次の表は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の集計関数を示しています。関数の加法性と予想される出力が記載されています。  
+ 次の表は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の集計関数を示しています。関数の加法性と予想される出力が記載されています。  
   
 |集計関数|加法性|戻り値|  
 |--------------------------|----------------|--------------------|  
@@ -49,9 +54,9 @@ caps.handback.revision: 28
 |**Count**|加法|すべての子メンバーの数を取得します。|  
 |**Min**|準加法|すべての子メンバーの最低値を取得します。|  
 |**Max**|準加法|すべての子メンバーの最高値を取得します。|  
-|**DistinctCount**|非加法|すべての一意の子メンバーの数を取得します。 詳細については、次のセクションの「[個別のカウント メジャーの概要](../../analysis-services/multidimensional-models/use-aggregate-functions.md#bkmk_distinct)」を参照してください。|  
+|**DistinctCount**|非加法|すべての一意の子メンバーの数を取得します。 詳細については、次のセクションの「 [個別のカウント メジャーの概要](../../analysis-services/multidimensional-models/use-aggregate-functions.md#bkmk_distinct) 」を参照してください。|  
 |**なし**|非加法|集計は行われず、ディメンションのリーフ メンバーおよび非リーフ メンバーのすべての値が、メジャーが含まれているメジャー グループのファクト テーブルから直接入力されます。 ファクト テーブルからメンバーの値を読み取ることができない場合は、そのメンバーの値は Null に設定されます。|  
-|**[ByAccount]**|準加法|勘定科目ディメンションのメンバーの勘定科目の種類に割り当てられている集計関数に従って集計します。 勘定科目ディメンションがメジャー グループに存在しない場合は、 **None** 集計関数として扱われます。<br /><br /> 勘定科目ディメンションの詳細については、「[親子型ディメンションの財務アカウントの作成](../../analysis-services/multidimensional-models/create-a-finance-account-of-parent-child-type-dimension.md)」を参照してください。|  
+|**[ByAccount]**|準加法|勘定科目ディメンションのメンバーの勘定科目の種類に割り当てられている集計関数に従って集計します。 勘定科目ディメンションがメジャー グループに存在しない場合は、 **None** 集計関数として扱われます。<br /><br /> 勘定科目ディメンションの詳細については、「 [親子型ディメンションの財務アカウントの作成](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)」を参照してください。|  
 |**AverageOfChildren**|準加法|空ではないすべての子メンバーの値の平均を計算します。|  
 |**FirstChild**|準加法|最初の子メンバーの値を取得します。|  
 |**LastChild**|準加法|最後の子メンバーの値を取得します。|  
@@ -67,9 +72,9 @@ caps.handback.revision: 28
   
  メンバーをカウントする個別のカウント メジャーは、ファクト テーブル内の外部キー列に基づきます  (つまり、メジャーの **Source Column** プロパティでこの列を識別します)。この列は、個別のカウント メジャーによってカウントされたメンバーを識別するディメンション テーブル列と結合します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [メジャーおよびメジャー グループ](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
- [MDX 関数リファレンス &#40;MDX&#41;](../../mdx/mdx-function-reference-mdx.md)   
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../../mdx/mdx-function-reference-mdx.md)   
  [準加法の動作の定義](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   

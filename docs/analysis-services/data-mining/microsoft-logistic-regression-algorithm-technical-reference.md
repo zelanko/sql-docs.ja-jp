@@ -1,52 +1,57 @@
 ---
-title: "Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "logistic regression [Analysis Services]"
-  - "MAXIMUM_INPUT_ATTRIBUTES parameter"
-  - "HOLDOUT_PERCENTAGE parameter"
-  - "MAXIMUM_OUTPUT_ATTRIBUTES parameter"
-  - "MAXIMUM_STATES parameter"
-  - "SAMPLE_SIZE parameter"
-  - "回帰アルゴリズム [Analysis Services]"
-  - "HOLDOUT_SEED parameter"
+title: "Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logistic regression [Analysis Services]
+- MAXIMUM_INPUT_ATTRIBUTES parameter
+- HOLDOUT_PERCENTAGE parameter
+- MAXIMUM_OUTPUT_ATTRIBUTES parameter
+- MAXIMUM_STATES parameter
+- SAMPLE_SIZE parameter
+- regression algorithms [Analysis Services]
+- HOLDOUT_SEED parameter
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1f258864aae1f2dfbc41ad822d2f7f0793378843
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ロジスティック回帰アルゴリズムは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムを変形したものです。このアルゴリズムでは、*HIDDEN_NODE_RATIO* パラメーターは 0 に設定されています。 この設定により、非表示の層を含んでいない、ロジスティック回帰に相当するニューラル ネットワーク モデルが作成されます。  
+# <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ロジスティック回帰アルゴリズムは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムを変形したものです。このアルゴリズムでは、 *HIDDEN_NODE_RATIO* パラメーターは 0 に設定されています。 この設定により、非表示の層を含んでいない、ロジスティック回帰に相当するニューラル ネットワーク モデルが作成されます。  
   
-## Microsoft ロジスティック回帰アルゴリズムの実装  
+## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Microsoft ロジスティック回帰アルゴリズムの実装  
  予測可能列に状態が 2 つしか含まれていない場合に、予測可能列に特定の状態が含められる確率と入力列を関連付けて、回帰分析を実行する必要があるとします。 次の図は、予測可能列の状態に 1 と 0 を割り当て、この列に特定の状態が含められる確率を計算し、入力変数に対する線形回帰を実行した場合に得られる結果を示しています。  
   
- ![線形回帰を使用して不十分にモデル化されたデータ](../../analysis-services/data-mining/media/logistic-linear-regression.gif "線形回帰を使用して不十分にモデル化されたデータ")  
+ ![不十分な線形回帰を使用してデータをモデル化](../../analysis-services/data-mining/media/logistic-linear-regression.gif "が不十分な線形回帰を使用してデータをモデル化")  
   
  x 軸には入力列の値が表示されます。 y 軸には、予測可能列が特定の状態またはもう一方の状態になる確率が表示されます。 この場合の問題は、列の最大値と最小値が 0 と 1 であっても、線形回帰によって列が 0 と 1 の間に制限されないことです。 この問題を解決するには、ロジスティック回帰を実行します。 ロジスティック回帰分析では、直線を作成するのではなく、制約の最大値と最小値を含んでいる "S" 字型曲線が作成されます。 たとえば、次の図は、前の例で使用したのと同じデータに対してロジスティック回帰を実行した場合に得られる結果を示しています。  
   
- ![ロジスティック回帰を使用してモデル化されたデータ](../../analysis-services/data-mining/media/logistic-regression.gif "ロジスティック回帰を使用してモデル化されたデータ")  
+ ![ロジスティック回帰を使用して、データがモデル化](../../analysis-services/data-mining/media/logistic-regression.gif "ロジスティック回帰を使用して、データがモデル化")  
   
  曲線が 0 ～ 1 の範囲を超えていないことに注目してください。 ロジスティック回帰を使用して、予測可能列の状態の決定に重要な役割を果たす入力列を特定できます。  
   
-### 機能の選択  
+### <a name="feature-selection"></a>機能の選択  
  機能の選択は、分析の向上と処理負荷の削減のためにすべての Analysis Services データ マイニング アルゴリズムで自動的に使用されます。 ロジスティック回帰モデルの機能の選択に使用される方法は、属性のデータ型によって異なります。 ロジスティック回帰は、Microsoft ニューラル ネットワーク アルゴリズムに基づいているため、ニューラル ネットワークに適用される機能の選択方法のサブセットを使用します。 詳細については、「[機能の選択 &#40;データ マイニング&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)」を参照してください。  
   
-### 入力のスコアリング  
- ニューラル ネットワーク モデルまたはロジスティック回帰モデルのコンテキストにおける "*スコアリング*" とは、データに存在する値を同じ尺度を使用する値のセットに変換して相互に比較できるようにするプロセスを意味します。 たとえば、Income に対する入力の範囲が 0 ～ 100,000 であるのに対し、[Number of Children] に対する入力の範囲は 0 ～ 5 であるとします。 この変換プロセスによって、値の違いに関係なく、各入力の重要性を比較できます。  
+### <a name="scoring-inputs"></a>入力のスコアリング  
+ ニューラル ネットワーク モデルまたはロジスティック回帰モデルのコンテキストにおける "*スコアリング* " とは、データに存在する値を同じ尺度を使用する値のセットに変換して相互に比較できるようにするプロセスを意味します。 たとえば、Income に対する入力の範囲が 0 ～ 100,000 であるのに対し、[Number of Children] に対する入力の範囲は 0 ～ 5 であるとします。 この変換プロセスによって、値の違いに関係なく、各入力の重要性を比較できます。  
   
- トレーニング セットに表示されている状態ごとに、モデルは 1 つの入力を生成します。 不連続な入力または分離された入力の場合、Missing 状態がトレーニング セットに 1 回以上表示されると、Missing 状態を表す追加の入力が作成されます。 連続する入力では、最大 2 つの入力ノードが作成されます。1 つはトレーニング データに存在する場合の Missing 値用の入力ノードで、もう 1 つはすべての既存の値 (Null 以外の値) 用の入力ノードです。 各入力は、z スコア正規化法 `(x – μ)\StdDev` を使用して数値書式にスケーリングされます。  
+ トレーニング セットに表示されている状態ごとに、モデルは 1 つの入力を生成します。 不連続な入力または分離された入力の場合、Missing 状態がトレーニング セットに 1 回以上表示されると、Missing 状態を表す追加の入力が作成されます。 連続する入力では、最大 2 つの入力ノードが作成されます。1 つはトレーニング データに存在する場合の Missing 値用の入力ノードで、もう 1 つはすべての既存の値 (Null 以外の値) 用の入力ノードです。 各入力は、z スコア正規化法 `(x – μ)\StdDev`を使用して数値書式にスケーリングされます。  
   
  z スコア正規化中に、トレーニング セット全体の平均 (μ) と標準偏差が取得されます。  
   
@@ -66,7 +71,7 @@ caps.handback.revision: 17
   
  値が存在しない:     `(– μ)/σ` (負のミューをシグマで除算)  
   
-### ロジスティック回帰係数について  
+### <a name="understanding-logistic-regression-coefficients"></a>ロジスティック回帰係数について  
  統計学の文献にはロジスティック回帰を実行するためのさまざまな方法が記されていますが、どの方法でも重要なのはモデルの適合性を評価する部分です。 適合度統計の中でも、オッズ比と共変量パターンを扱うものについて、さまざまな提案がなされています。 モデルの適合性を測定する方法についてはこのトピックでは扱いませんが、モデルの係数の値を取得し、それらの係数を使用して独自に適合性の測定方法を設計できます。  
   
 > [!NOTE]  
@@ -88,12 +93,12 @@ WHERE NODE_TYPE = 23
   
  アクティベーション: `exp(F(X)) / (1 + exp(F(X)) )`  
   
- 詳細については、「[ロジスティック回帰モデルのクエリ例](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)」を参照してください。  
+ 詳細については、「 [ロジスティック回帰モデルのクエリ例](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)」を参照してください。  
   
-## ロジスティック回帰アルゴリズムのカスタマイズ  
+## <a name="customizing-the-logistic-regression-algorithm"></a>ロジスティック回帰アルゴリズムのカスタマイズ  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ロジスティック回帰アルゴリズムでは、結果として得られるマイニング モデルの動作、パフォーマンス、および精度に影響を与えるいくつかのパラメーターがサポートされています。 また、入力として使用する列にモデリング フラグを設定して、モデルの動作を変更することもできます。  
   
-### アルゴリズム パラメーターの設定  
+### <a name="setting-algorithm-parameters"></a>アルゴリズム パラメーターの設定  
  次の表は、Microsoft ロジスティック回帰アルゴリズムで使用できるパラメーターを示しています。  
   
  HOLDOUT_PERCENTAGE  
@@ -128,7 +133,7 @@ WHERE NODE_TYPE = 23
   
  既定値は 10000 です。  
   
-### ModelingFlags  
+### <a name="modeling-flags"></a>ModelingFlags  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ロジスティック回帰アルゴリズムでは、次のモデリング フラグを使用できます。  
   
  NOT NULL  
@@ -137,14 +142,14 @@ WHERE NODE_TYPE = 23
  マイニング構造列に適用されます。  
   
  MODEL_EXISTENCE_ONLY  
- 列が、**Missing** および **Existing** の 2 つの可能な状態を持つ列として扱われることを示します。 NULL は Missing 値になります。  
+ 列が、 **Missing** および **Existing**の 2 つの可能な状態を持つ列として扱われることを示します。 NULL は Missing 値になります。  
   
  マイニング モデル列に適用されます。  
   
-## 必要条件  
+## <a name="requirements"></a>必要条件  
  ロジスティック回帰モデルには、キー列、入力列、および少なくとも 1 つの予測可能列が必要です。  
   
-### 入力列と予測可能列  
+### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  次の表のように、[!INCLUDE[msCoName](../../includes/msconame-md.md)] ロジスティック回帰アルゴリズムでは、特定の入力列のコンテンツの種類、予測可能列のコンテンツの種類、およびモデリング フラグがサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 &#40;データ マイニング&#41;](../../analysis-services/data-mining/content-types-data-mining.md)」を参照してください。  
   
 |列|コンテンツの種類|  
@@ -152,10 +157,10 @@ WHERE NODE_TYPE = 23
 |入力属性|Continuous、Discrete、Discretized、Key、Table|  
 |予測可能な属性|Continuous、Discrete、Discretized|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Microsoft ロジスティック回帰アルゴリズム](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [線形回帰モデルのクエリ例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [ロジスティック回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining model content for logistic regression models.md)   
+ [ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Microsoft ニューラル ネットワーク アルゴリズム](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)  
   
   

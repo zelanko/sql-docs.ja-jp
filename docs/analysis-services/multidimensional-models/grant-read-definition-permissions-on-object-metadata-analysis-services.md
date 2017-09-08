@@ -1,39 +1,44 @@
 ---
-title: "オブジェクト メタデータに対する定義の読み取り権限の付与 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "メタデータ [Analysis Services]"
-  - "権限 [Analysis Services]、メタデータ読み取り"
-  - "メタデータ読み取り権限"
+title: "Grant 定義の読み取りアクセス許可オブジェクトのメタデータ (Analysis Services) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metadata [Analysis Services]
+- permissions [Analysis Services], read metadata
+- read metadata permissions
 ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55c4e6d43ffedd933e968e8fc2355871c698d290
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# オブジェクト メタデータに対する定義の読み取り権限の付与 (Analysis Services)
+# <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>オブジェクト メタデータに対する定義の読み取り権限の付与 (Analysis Services)
   管理者は、選択したオブジェクトのオブジェクト定義またはメタデータを読み取る権限を使用して、オブジェクトの定義の変更、オブジェクトの構造の変更、またはオブジェクトの実際のデータの表示を行う権限を付与することなく、オブジェクト情報を表示する権限を付与できます。 **[定義の読み取り]** 権限は、データベース、データ ソース、ディメンション、マイニング構造、マイニング モデルの各レベルで付与できます。 キューブの **[定義の読み取り]** 権限が必要である場合は、データベースの **[定義の読み取り]** を有効にする必要があります。権限は加算的であることに注意してください。 たとえば、あるロールではキューブのメタデータを読み取るための権限を付与し、別のロールでは同じユーザーにディメンションのメタデータを読み取るための権限を付与します。 これら 2 つの異なるロールの権限は組み合わされ、キューブのメタデータを読み取る権限と、そのデータベース内のディメンションのメタデータを読み取る権限をユーザーに与えることになります。  
   
 > [!NOTE]  
->  データベースのメタデータを読み取る権限は、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] または [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] データベースに接続するために必要な最小限の権限です。 また、メタデータを読み取る権限を持つユーザーは、DISCOVER_XML_METADATA スキーマ行セットを使用して、オブジェクトのクエリを行い、そのメタデータを表示できます。 詳細については、「[DISCOVER_XML_METADATA 行セット](../../analysis-services/schema-rowsets/xml/discover-xml-metadata-rowset.md)」を参照してください。  
+>  データベースのメタデータを読み取る権限は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] または [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]データベースに接続するために必要な最小限の権限です。 また、メタデータを読み取る権限を持つユーザーは、DISCOVER_XML_METADATA スキーマ行セットを使用して、オブジェクトのクエリを行い、そのメタデータを表示できます。 詳細については、「 [DISCOVER_XML_METADATA 行セット](../../analysis-services/schema-rowsets/xml/discover-xml-metadata-rowset.md)」を参照してください。  
   
-## データベースに対する定義の読み取り権限の設定  
+## <a name="set-read-definition-permissions-on-a-database"></a>データベースに対する定義の読み取り権限の設定  
  データベース メタデータを読み取る権限を付与すると、データベース内のすべてのオブジェクトのメタデータを読み取るための権限も付与されます。  
   
  専用の処理のためのロールを設定する場合は、データベース レベルで **[定義の読み取り]** 権限を含めることをお勧めします。 **[定義の読み取り]** があると、管理者以外のユーザーでも [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でモデルのオブジェクト階層を表示し、個々のオブジェクトに移動して後続の処理を実行できるようになります。  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに接続し、オブジェクト エクスプローラーで適切なデータベースの **[ロール]** を展開し、データベース ロールをクリックするか、新しいデータベース ロールを作成します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、オブジェクト エクスプローラーで適切なデータベースの **[ロール]** を展開し、データベース ロールをクリックするか、新しいデータベース ロールを作成します。  
   
 2.  **[全般]** タブで **[定義の読み取り]** オプションを選択します。  
   
@@ -41,11 +46,11 @@ caps.handback.revision: 32
   
 4.  **[OK]** をクリックして、ロールの作成を終了します。  
   
-## 個々のオブジェクトに対する定義の読み取り権限の設定  
+## <a name="set-read-definition-permissions-on-individual-objects"></a>個々のオブジェクトに対する定義の読み取り権限の設定  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに接続し、**[データベース]** フォルダーを開き、データベースを選択します。オブジェクト エクスプローラーでそのデータベースの **[ロール]** を展開し、データベース ロールをクリックするか、または新しいデータベース ロールを作成します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、 **[データベース]** フォルダーを開き、データベースを選択します。オブジェクト エクスプローラーでそのデータベースの **[ロール]** を展開し、データベース ロールをクリックするか、または新しいデータベース ロールを作成します。  
   
-2.  **[全般]** ペインで、**[定義の読み取り]** のデータベース権限を消去します。 この手順によって、権限継承が削除され、個々のオブジェクトに対する権限を設定できるようになります。  
+2.  **[全般]** ペインで、 **[定義の読み取り]**のデータベース権限を消去します。 この手順によって、権限継承が削除され、個々のオブジェクトに対する権限を設定できるようになります。  
   
 3.  **[定義の読み取り]** プロパティを指定するオブジェクトを選択します。  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 32
   
 5.  **[OK]** をクリックして、ロールの作成を終了します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データベース権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
  [処理権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   

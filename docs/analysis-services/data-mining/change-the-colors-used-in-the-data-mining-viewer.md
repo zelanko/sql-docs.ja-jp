@@ -1,28 +1,33 @@
 ---
-title: "データ マイニング ビューアーで使用する色の変更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.DATA_MINING_VIEWERS"
+title: "データ マイニング ビューアーで使用する色を変更する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.DATA_MINING_VIEWERS
 ms.assetid: 9de2fc2a-fca5-456b-b2bd-13586e7951e6
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 325bc785030aa4606d91e40dfa30cb51ee4b03af
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# データ マイニング ビューアーで使用する色の変更
+# <a name="change-the-colors-used-in-the-data-mining-viewer"></a>データ マイニング ビューアーで使用する色の変更
   データ マイニング ビューアーでデータ系列、ノード、またはクラスターを表示する際に使用する色を変更できます。 これを行うには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のオプションを設定します。 設定を変更すると、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用して表示するすべてのモデルに色の選択が適用されます。ただし、新しい色を表示するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を閉じて、ビューアーでモデルを再度開く必要があります。  
   
-### データ マイニング ビューアーで使用する色を変更するには  
+### <a name="to-change-the-colors-used-in-the-data-mining-viewers"></a>データ マイニング ビューアーで使用する色を変更するには  
   
 1.  **または** の [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [ツール] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]メニューの **[オプション]**をクリックします。  
   

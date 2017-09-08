@@ -1,29 +1,34 @@
 ---
-title: "データ マイニング クエリ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "予測クエリ [Analysis Services]"
-  - "クエリ [DMX]、作成"
-  - "予測クエリ [DMX]"
-  - "予測クエリ ビルダー"
-  - "マイニング モデル [Analysis Services]、クエリ"
+title: "データ マイニング クエリ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- prediction queries [Analysis Services]
+- queries [DMX], creating
+- prediction queries [DMX]
+- Prediction Query Builder
+- mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1994ebc359ca23eee9ae76112d9ceebd1970debb
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# データ マイニング クエリ
+# <a name="data-mining-queries"></a>データ マイニング クエリ
   データ マイニング クエリは多くの目的で役立ちます。 可能な代替手段としては以下の方法があります。  
   
 -   モデルを新しいデータに適用し、1 つまたは複数の予測を作成する。 入力値をパラメーターとして、またはバッチで提供する。  
@@ -71,18 +76,18 @@ caps.handback.revision: 44
   
  クエリを作成する前に、SQL Server の各データ マイニング アルゴリズムを使用して作成されるモデルの違いを理解してください。  
   
--   各種のアルゴリズムに対して用意されているカスタム データ マイニング ビューアーを使用して、各種のモデルを参照して調査します。 詳細については、「[マイニング モデル ビューアーのタスクと操作方法](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)」を参照してください。  
+-   各種のアルゴリズムに対して用意されているカスタム データ マイニング ビューアーを使用して、各種のモデルを参照して調査します。 詳細については、「 [マイニング モデル ビューアーのタスクと操作方法](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)」を参照してください。  
   
--   **Microsoft 汎用コンテンツ ツリー ビューアー**を使用して、各種のモデルのモデル コンテンツを確認します。 この情報を解釈する方法については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+-   **Microsoft 汎用コンテンツ ツリー ビューアー**を使用して、各種のモデルのモデル コンテンツを確認します。 この情報を解釈する方法については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
 ##  <a name="bkmk_Interfaces"></a> クエリ ツールとインターフェイス  
- SQL Server で用意されているクエリ ツールを使用すると、データ マイニング クエリを対話形式で作成できます。 グラフィカルな予測クエリ ビルダーは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の両方で用意されています。 これまで予測クエリ ビルダーを使用したことがない場合は、インターフェイスに慣れるために「 [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md) 」の手順を実行することをお勧めします。 手順の概要を簡単に把握するには、「[予測クエリ ビルダーを使用した予測クエリの作成](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)」のクエリ作成の手順を参照してください。  
+ SQL Server で用意されているクエリ ツールを使用すると、データ マイニング クエリを対話形式で作成できます。 グラフィカルな予測クエリ ビルダーは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の両方で用意されています。 これまで予測クエリ ビルダーを使用したことがない場合は、インターフェイスに慣れるために「 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c) 」の手順を実行することをお勧めします。 手順の概要を簡単に把握するには、「 [予測クエリ ビルダーを使用した予測クエリの作成](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)」のクエリ作成の手順を参照してください。  
   
  予測クエリ ビルダーは、クエリを開始して後からカスタマイズする際に役立ちます。 簡単にデータ ソースを追加して列にマップすることができ、その後、DMX ビューに切り替えて、WHERE 句や他の関数を追加してクエリをカスタマイズできます。  
   
- データ マイニング モデル、およびクエリのビルド方法を理解したら、データ マイニング拡張機能 (DMX) を使用してクエリを直接作成することもできます。 DMX は Transact-SQL に似たクエリ言語であり、多数のクライアントから使用できます。 DMX は、カスタムの予測と複雑なクエリの両方を作成するために選ばれるツールです。 DMX の概要については、「[DMX を使用したデータ マイニング モデルの作成とクエリ : チュートリアル &#40;Analysis Services - データ マイニング&#41;](../Topic/Creating%20and%20Querying%20Data%20Mining%20Models%20with%20DMX:%20Tutorials%20\(Analysis%20Services%20-%20Data%20Mining\).md)」を参照してください。  
+ データ マイニング モデル、およびクエリのビルド方法を理解したら、データ マイニング拡張機能 (DMX) を使用してクエリを直接作成することもできます。 DMX は Transact-SQL に似たクエリ言語であり、多数のクライアントから使用できます。 DMX は、カスタムの予測と複雑なクエリの両方を作成するために選ばれるツールです。 DMX の概要については、「[DMX を使用したデータ マイニング モデルの作成とクエリ : チュートリアル &#40;Analysis Services - データ マイニング&#41;](http://msdn.microsoft.com/library/145b81a7-c0c3-4ca3-bb32-0b482423b9a0)」を参照してください。  
   
- DMX エディターは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の両方で提供されます。 また、予測クエリ ビルダーを使用してクエリを開始してから、ビューをテキスト エディターに変更し、DMX ステートメントを別のクライアントにコピーすることもできます。 詳細については、「[データ マイニング クエリ ツール](../../analysis-services/data-mining/data-mining-query-tools.md)」を参照してください。  
+ DMX エディターは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の両方で提供されます。 また、予測クエリ ビルダーを使用してクエリを開始してから、ビューをテキスト エディターに変更し、DMX ステートメントを別のクライアントにコピーすることもできます。 詳細については、「 [データ マイニング クエリ ツール](../../analysis-services/data-mining/data-mining-query-tools.md)」を参照してください。  
   
  DMX ステートメントをプログラムで作成し、AMO または XMLA を使用して、クライアントから [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーに送信できます。 ただし、DMX は、マイニング モデルに対するクエリを作成するために使用する必要がある言語です。  
   
@@ -128,7 +133,7 @@ caps.handback.revision: 44
   
 -   **モデル コンテンツ関数:** すべてのモデルの *コンテンツ* は標準化された形式で表され、単純なクエリを使用して取得できます。 DMX を使用して、モデル コンテンツに対するクエリを作成します。 一部のモデル コンテンツは、データ マイニング スキーマ行セットを使用して取得することもできます。  
   
-     モデル コンテンツでは、返されるテーブルの各行またはノードの意味は、モデルのビルドに使用されたアルゴリズムの種類と列のデータ型によって異なります。 詳細については、「[コンテンツ クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)」を参照してください。  
+     モデル コンテンツでは、返されるテーブルの各行またはノードの意味は、モデルのビルドに使用されたアルゴリズムの種類と列のデータ型によって異なります。 詳細については、「 [コンテンツ クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)」を参照してください。  
   
 ##  <a name="bkmk_Reqs"></a> 必要条件  
  モデルに対するクエリを作成する前に、データ マイニング モデルを処理する必要があります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの処理には特別な権限が必要です。 マイニング モデルの処理の詳細については、「[処理の要件および注意事項 &#40;データ マイニング&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)」を参照してください。  
@@ -139,7 +144,7 @@ caps.handback.revision: 44
   
  データ マイニング クエリを実行するために必要なセキュリティ コンテキストの詳細については、「[セキュリティの概要 &#40;データ マイニング&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)」を参照してください。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
  ここでは、各種のデータ マイニング クエリについて詳しく説明し、データ マイニング モデルに対してクエリを作成する詳しい例へのリンクを示します。  
   
  [予測クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
@@ -152,21 +157,21 @@ caps.handback.revision: 44
   
  [データ マイニング クエリ ツール](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
-## 関連タスク  
+## <a name="related-tasks"></a>関連タスク  
  データ マイニング クエリを作成および操作する方法の詳細については、次のリンクを使用してください。  
   
 |処理手順|リンク|  
 |-----------|-----------|  
-|データ マイニング クエリのチュートリアルの表示|[レッスン 6: 予測の作成と操作 &#40;基本的なデータ マイニング チュートリアル&#41;](../Topic/Lesson%206:%20Creating%20and%20Working%20with%20Predictions%20\(Basic%20Data%20Mining%20Tutorial\).md)<br /><br /> [時系列予測の DMX のチュートリアル](../Topic/Time%20Series%20Prediction%20DMX%20Tutorial.md)|  
+|データ マイニング クエリのチュートリアルの表示|[レッスン 6: 予測の作成と操作 &#40;基本的なデータ マイニング チュートリアル&#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)<br /><br /> [時系列予測の DMX のチュートリアル](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)|  
 |SQL Server Management studio と [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[SQL Server Management Studio で DMX クエリを作成する](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [予測クエリ ビルダーを使用した予測クエリの作成](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [モデルへの予測関数の適用](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [手動での予測クエリの編集](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
 |予測クエリで使用される外部データの操作|[予測クエリの入力データの選択およびマップ](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [予測クエリの入力データの選択およびマップ](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)|  
 |クエリ結果の操作|[予測クエリの結果の表示および保存](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)|  
 |Management Studio の DMX クエリ テンプレートと XMLA クエリ テンプレートの使用|[テンプレートからの単一予測クエリの作成](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [XMLA を使用したデータ マイニング クエリの作成](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [SQL Server Management Studio での Analysis Services テンプレートの使用](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |コンテンツ クエリの詳細の説明と例の参照|[マイニング モデルのコンテンツ クエリの作成](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)<br /><br /> [マイニング モデルの作成に使用されたパラメーターのクエリ](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [コンテンツ クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)|  
 |クエリ オプションの設定およびクエリの権限と問題のトラブルシューティング|[データ マイニング クエリのタイムアウト値の変更](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
-|Integration Services のデータ マイニング コンポーネントの使用|[データ マイニング クエリ タスク](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [データ マイニング クエリ変換](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
+|Integration Services のデータ マイニング コンポーネントの使用|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   

@@ -1,27 +1,32 @@
 ---
-title: "使用状況データ収集の構成 (対象は Power Pivot for SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用状況データ収集の構成 (Power Pivot for SharePoint |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 98ec79c14a0ac082c75967a9c81fa7b2027f5511
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用状況データ収集の構成 (対象は Power Pivot for SharePoint)
+# <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>使用状況データ収集の構成 (対象は Power Pivot for SharePoint)
   使用状況データ収集は、ファーム レベルの SharePoint 機能です。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint では、このシステムを使用および拡張して、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のデータやサービスがどのように使用されているかを示すレポートが [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボードに用意されています。 SharePoint のインストール方法によっては、使用状況データ収集がファームに対して無効になっていることがあります。 ファーム管理者は、使用状況のログ記録を有効にして、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボードに表示される使用状況データを作成する必要があります。  
   
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボードの使用状況データの詳細については、「[PowerPivot 管理ダッシュボードと使用状況データ](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)」を参照してください。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボードの使用状況データの詳細については、「 [PowerPivot 管理ダッシュボードと使用状況データ](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)」を参照してください。  
   
  **このトピックの内容:**  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 9
   
 1.  サーバーの全体管理で **[監視]**をクリックします。  
   
-2.   **[レポート]**セクションで、 **[使用状況と正常性のデータ収集の構成]**をクリックします。  
+2.  **[レポート]**セクションで、 **[使用状況と正常性のデータ収集の構成]**をクリックします。  
   
 3.  **[利用状況データの収集を有効にする]**をオンにします。  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 9
   
 6.  **[OK]** をクリックして変更を保存します。  
   
-7.  必要に応じて、すべてのメッセージをログに記録するか、エラーのみをログに記録するかを指定できます。 イベント メッセージのスロットル方法の詳細については、「[SharePoint ログ ファイルと診断ログの構成と表示 &#40;Power Pivot for SharePoint&#41;](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md)」を参照してください。  
+7.  必要に応じて、すべてのメッセージをログに記録するか、エラーのみをログに記録するかを指定できます。 イベント メッセージのスロットル方法の詳細については、「[SharePoint ログ ファイルと診断ログの構成と表示 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)」を参照してください。  
   
 ##  <a name="configdb"></a> ログ ファイルの場所の設定  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 使用状況データは、まずローカル サーバー上の使用状況ログ ファイルに格納され、その後 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション データベースに定期的に移動されます。 ログ ファイルの場所は、サーバーの全体管理で設定します。 既定の場所は次のとおりです。  
@@ -101,7 +106,7 @@ caps.handback.revision: 9
   
 4.  **[今すぐ実行]**をクリックします。 **[今すぐ実行]** ボタンが無効になっている場合は、 **[有効]** をクリックしてから **[今すぐ実行]**をクリックします。  
   
-5.  [ジョブの定義] リストで、 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボード処理タイマー ジョブ]**をクリックします。  
+5.  [ジョブの定義] リストで、 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボード処理タイマー ジョブ**をクリックします。  
   
 6.  **[今すぐ実行]**をクリックします。  
   
@@ -126,7 +131,7 @@ caps.handback.revision: 9
   
 3.  **[OK]**をクリックします。  
   
- 使用状況データが収集および格納されるしくみの詳細については、「[Power Pivot 使用状況データ収集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)」を参照してください。  
+ 使用状況データが収集および格納されるしくみの詳細については、「 [Power Pivot 使用状況データ収集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)」を参照してください。  
   
 ##  <a name="qrh"></a> レポート用の高速、中速、および低速のクエリ応答カテゴリの定義  
  クエリ応答のパフォーマンスは、定義済みのカテゴリに基づいて計測されます。このカテゴリでは、完了に要する時間に応じた要求と応答のサイクルが定義されています。 この定義済みのカテゴリの種類には、簡易応答、迅速な応答、想定される応答、長い応答、および超過応答があります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーへのすべての要求は、完了に要する時間に基づいて、いずれかのカテゴリに分類されます。  
@@ -141,9 +146,9 @@ caps.handback.revision: 9
   
 3.  [迅速な要求の上限] に、迅速な応答を完了するための上限を設定する値 (ミリ秒単位) を入力します。 このカテゴリに分類される要求には、きわめて小規模なデータセットに対するクエリや、大規模なデータセットのメタデータ サーバーに対するクエリがあります。 既定値は 1,000 ミリ秒 (1 秒) です。  
   
-4.  **[想定される応答の上限]** に、想定または平均のタイム フレーム内で応答を完了するための上限を設定する値 (ミリ秒単位) を入力します。 このカテゴリに分類される要求には、データのビューアーへの読み込みがあります。 既定値は 3,000 ミリ秒 (3 秒) です。  
+4.  **[想定される応答の上限]**に、想定または平均のタイム フレーム内で応答を完了するための上限を設定する値 (ミリ秒単位) を入力します。 このカテゴリに分類される要求には、データのビューアーへの読み込みがあります。 既定値は 3,000 ミリ秒 (3 秒) です。  
   
-5.  **[長い応答の上限]** に、実行時間が長い応答を完了するための上限を設定する値 (ミリ秒単位) を入力します。 このカテゴリに分類される要求は、想定よりも長い時間実行されますが、許容範囲には収まります。 既定値は 10,000 ミリ秒 (10 秒) です。  
+5.  **[長い応答の上限]**に、実行時間が長い応答を完了するための上限を設定する値 (ミリ秒単位) を入力します。 このカテゴリに分類される要求は、想定よりも長い時間実行されますが、許容範囲には収まります。 既定値は 10,000 ミリ秒 (10 秒) です。  
   
      この制限を超えるすべての要求は、 *超過*と分類されます。 *超過*についての構成可能なしきい値はありません。 [長い応答の上限] で指定した上限から推測されます。 超過カテゴリに分類される要求は、定義した SLA によって許容される時間よりも長く実行される要求です。  
   
@@ -154,7 +159,7 @@ caps.handback.revision: 9
   
 1.  [Power Pivot サービス アプリケーションのページを開きます](#openconfig)。  
   
-2.  **[使用状況データ コレクション]** セクションの **[クエリをレポートする間隔]** に、サーバーがすべてのカテゴリ (簡易応答、迅速な応答、想定される応答、長い応答、および超過応答) のクエリ統計を、単一のイベントとして使用状況データ収集システムに報告するまでの秒数を入力します。  
+2.  **[使用状況データ コレクション]** セクションの **[クエリをレポートする間隔]**に、サーバーがすべてのカテゴリ (簡易応答、迅速な応答、想定される応答、長い応答、および超過応答) のクエリ統計を、単一のイベントとして使用状況データ収集システムに報告するまでの秒数を入力します。  
   
     -   範囲は、1 から任意の正の整数までです。  
   
@@ -182,15 +187,15 @@ caps.handback.revision: 9
   
 |設定|既定値|型|有効な範囲|  
 |-------------|-------------------|----------|-----------------|  
-|**Analysis Services 使用状況イベント** (接続、読み込み、アンロード、要求)|\<enabled>|ブール値|これらの値は、有効または無効のいずれかです。|  
-|**クエリをレポートする間隔**|300 (秒)|Integer|1 から任意の正の整数まで。 既定値は 5 分です。|  
-|**[使用状況データの履歴]**|365 (日)|Integer|0 は無制限を示しますが、履歴データが期限切れとなる上限を設定し、履歴データを自動的に削除することもできます。 限られた保持期間の有効な値は 1 ～ 5,000 (日) です。|  
+|**Analysis Services 使用状況イベント** (接続、読み込み、アンロード、要求)|\<有効になっている >|ブール値|これらの値は、有効または無効のいずれかです。|  
+|**Query Reporting interval**|300 (秒)|Integer|1 から任意の正の整数まで。 既定値は 5 分です。|  
+|**Usage data history**|365 (日)|Integer|0 は無制限を示しますが、履歴データが期限切れとなる上限を設定し、履歴データを自動的に削除することもできます。 限られた保持期間の有効な値は 1 ～ 5,000 (日) です。|  
 |[簡易応答の上限]|500 (ミリ秒単位)|Integer|簡易要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。 0 ～ 500 ミリ秒で完了する要求は簡易要求であり、レポートでは無視されます。|  
 |迅速な応答の上限|1000 (ミリ秒単位)|Integer|迅速な要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。|  
-|想定される応答の上限|3000 (ミリ秒単位)|Integer|想定される要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。|  
+|[想定される応答の上限]|3000 (ミリ秒単位)|Integer|想定される要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。|  
 |長い応答の上限|10,000 (ミリ秒)|Integer|長い要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。 この上限を超えるすべての要求は、上限のしきい値がない超過カテゴリに分類されます。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [構成設定のリファレンス &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Power Pivot 使用状況データ収集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   

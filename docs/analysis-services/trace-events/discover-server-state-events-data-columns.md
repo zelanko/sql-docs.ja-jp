@@ -1,24 +1,29 @@
 ---
-title: "Discover Server State イベントのデータ列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "サーバー状態検出イベント カテゴリ"
+title: "Discover Server State イベントのデータ列 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Discover Server State event category
 ms.assetid: fbacb187-a4d1-4aa4-be3b-3ddd175f9e19
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c71c32614ee4be7fdbe198530d5ce228452d2276
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Discover Server State イベントのデータ列
+# <a name="discover-server-state-events-data-columns"></a>Discover Server State イベントのデータ列
   Discover Server State イベント カテゴリには、次のイベント クラスがあります。  
   
 |**イベント ID**|**イベント名**|**イベントの説明**|  
@@ -29,7 +34,7 @@ caps.handback.revision: 32
   
  次の表は、これらのイベント クラスのデータ列の一覧です。  
   
-## Server State Discover Begin クラスのデータ列  
+## <a name="server-state-discover-begin-classdata-columns"></a>Server State Discover Begin クラスのデータ列  
   
 |||||  
 |-|-|-|-|  
@@ -50,7 +55,7 @@ caps.handback.revision: 32
 |ServerName|43|8|Server State Discover イベントが発生した [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前を表します。|  
 |RequestProperties|45|9|現在の XMLA 要求のプロパティを表します。|  
   
-## Server State Discover Data クラスのデータ列  
+## <a name="server-state-discover-data-classdata-columns"></a>Server State Discover Data クラスのデータ列  
   
 |||||  
 |-|-|-|-|  
@@ -65,7 +70,7 @@ caps.handback.revision: 32
 |TextData|42|9|検出要求に対するサーバーの応答に関連付けられたテキスト データを表します。|  
 |ServerName|43|8|Server State Discover イベントが発生した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前を表します。|  
   
-## Server State Discover End クラスのデータ列  
+## <a name="server-state-discover-end-classdata-columns"></a>Server State Discover End クラスのデータ列  
   
 |||||  
 |-|-|-|-|  
@@ -88,7 +93,7 @@ caps.handback.revision: 32
 |TextData|42|9|検出要求に対するサーバーの応答に関連付けられたテキスト データを表します。|  
 |ServerName|43|8|Server State Discover イベントが発生した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前を表します。|  
   
-## 参照  
- [サーバー状態検出イベント カテゴリ](../../analysis-services/trace-events/discover-server-state-event-category.md)  
+## <a name="see-also"></a>参照  
+ [Discover Server State Event Category](../../analysis-services/trace-events/discover-server-state-event-category.md)  
   
   

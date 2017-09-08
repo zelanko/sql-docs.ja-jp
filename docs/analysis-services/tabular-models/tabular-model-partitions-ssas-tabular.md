@@ -1,26 +1,31 @@
 ---
-title: "テーブル モデル パーティション (SSAS テーブル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.ssms.partitions.partitionmgr.imbi.f1"
+title: "テーブル モデル パーティション (SSAS テーブル) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.ssms.partitions.partitionmgr.imbi.f1
 ms.assetid: 041c269f-a229-4a41-8794-6ba4b014ef83
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 03122814773bd2e11b0ea1dc24b91b4c21a8f1a8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# テーブル モデル パーティション (SSAS テーブル)
+# <a name="tabular-model-partitions-ssas-tabular"></a>テーブル モデル パーティション (SSAS テーブル)
   パーティションは、テーブルを論理的な部分に分割します。 各パーティションは、他のパーティションとは個別に処理 (更新) できます。 モデル作成時にあるモデルのために定義されたパーティションが、配置済みモデルで複製されます。 いったん配置されると、 **の** [パーティション] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ダイアログ ボックスまたはスクリプトを使用して、それらのパーティションを管理したり、新しいパーティションを作成したりできます。 このトピックでは、配置済みのテーブル モデル データベースにおけるパーティションについて説明します。 モデル作成時のパーティションの作成と管理の詳細については、「[パーティション (SSAS テーブル)](../../analysis-services/tabular-models/partitions-ssas-tabular.md)」を参照してください。  
   
  このトピックのセクション:  
@@ -66,16 +71,16 @@ caps.handback.revision: 11
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用してモデル作成時にロールを作成する方法の詳細については、「[ロール (SSAS テーブル)](../../analysis-services/tabular-models/roles-ssas-tabular.md)」を参照してください。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して配置済みテーブル モデル ロールのロール メンバーを管理する方法の詳細については、「[テーブル モデル ロール (SSAS テーブル)](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)」を参照してください。  
   
 ##  <a name="bkmk_parallelProc"></a> 並列処理  
- [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] には、処理パフォーマンスを強化する、2 つ以上のパーティションを持つテーブルへの並行処理が含まれます。 並行処理には構成設定はありません (メモを参照)。 テーブルを処理する場合、または同じテーブルに複数のパーティションを選択して処理する場合、既定で並列処理が行われます。 テーブルのパーティションを個別に処理することもできます。  
+Analysis Services には、処理パフォーマンスが向上する 2 つまたは複数のパーティションを持つテーブルへの並行処理が含まれています。 並行処理には構成設定はありません (メモを参照)。 テーブルを処理する場合、または同じテーブルに複数のパーティションを選択して処理する場合、既定で並列処理が行われます。 テーブルのパーティションを個別に処理することもできます。  
   
 > [!NOTE]  
->  更新操作を順次実行するか並列して実行するかを指定するには、**maxParallism** プロパティ オプションで [Sequence コマンド (TMSL)](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md) を指定します。 TMSL は 1200 テーブル モデルでのみサポートされます。
+>  更新操作を順次実行するか並列して実行するかを指定するには、 **maxParallism** プロパティ オプションで [Sequence コマンド (TMSL)](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md)を指定します。
 
 > [!NOTE]  
 >  再エンコードが検出されると、並列処理が原因で、システム リソースの使用量が増える場合があります。 これは、同時に行われる新しいエンコードにより、、複数のパーティションの操作を中断し、再開する必要があるためです。  
   
 ##  <a name="bkmk_process_partitions"></a> パーティションの処理  
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の **[パーティション]** ダイアログ ボックスを使用するか、スクリプトを使用すると、パーティションの処理 (更新) を他のパーティションに影響を与えずに行うことができます。 処理には次のオプションがあります。  
+ **の** [パーティション] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ダイアログ ボックスを使用するか、スクリプトを使用すると、パーティションの処理 (更新) を他のパーティションに影響を与えずに行うことができます。 処理には次のオプションがあります。  
   
 |モード|Description|  
 |----------|-----------------|  

@@ -1,0 +1,106 @@
+---
+title: "VERIFYSIGNEDBYASYMKEY (TRANSACT-SQL) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VERIFYSIGNEDBYASYMKEY_TSQL
+- VERIFYSIGNEDBYASYMKEY
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- verifying digitally signed data for changes
+- VERIFYSIGNEDBYASYMKEY
+- testing digitally signed data for changes
+- checking digitally signed data for changes
+- signatures [SQL Server]
+- digital signatures [SQL Server]
+ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
+caps.latest.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: da1bbf517ed81e1e39a7ba95db7af26eb2d18e77
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+  デジタル署名付きデータが、署名された後に変更されているかどうかをテストします。  
+  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>構文  
+  
+```  
+  
+VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )  
+```  
+  
+## <a name="arguments"></a>引数  
+ *Asym_Key_ID*  
+ データベース内の非対称キー証明書の ID を指定します。  
+  
+ *clear_text*  
+ 検証するクリア テキスト データを指定します。  
+  
+ *署名*  
+ 署名付きデータにアタッチされた署名を指定します。 *署名*は**varbinary**です。  
+  
+## <a name="return-types"></a>戻り値の型  
+ **int**  
+  
+ 署名が一致する場合は 1 が返されます。それ以外の場合は 0 が返されます。  
+  
+## <a name="remarks"></a>解説  
+ **VerifySignedByAsymKey**指定された非対称キーの公開キーを使用して、データの署名を復号化し、データの新しく計算された MD5 ハッシュを復号化された値を比較します。 値が一致すると、その署名が有効であることが確認されます。  
+  
+## <a name="permissions"></a>Permissions  
+ 非対称キーに対する VIEW DEFINITION 権限が必要です。  
+  
+## <a name="examples"></a>使用例  
+  
+### <a name="a-testing-for-data-with-a-valid-signature"></a>A. データの署名が有効かどうかをテストする  
+ 次の例では、選択したデータが非対称キー `WillisKey74` で署名された後に変更されていない場合は 1 が返されます。 データが変更されている場合は 0 が返されます。  
+  
+```  
+SELECT Data,  
+     VerifySignedByAsymKey( AsymKey_Id( 'WillisKey74' ), SignedData,  
+     DataSignature ) as IsSignatureValid  
+FROM [AdventureWorks2012].[SignedData04]   
+WHERE Description = N'data encrypted by asymmetric key ''WillisKey74''';  
+GO  
+RETURN;  
+```  
+  
+### <a name="b-returning-a-result-set-that-contains-data-with-a-valid-signature"></a>B. 有効な署名が添付されたデータを含む結果セットを返す  
+ 次の例は、内の行を返します`SignedData04`非対称キーで署名された後変更されていないデータが含まれている`WillisKey74`です。 この例では、関数`AsymKey_ID`をデータベースから非対称キーの ID を取得します。  
+  
+```  
+SELECT Data   
+FROM [AdventureWorks2012].[SignedData04]   
+WHERE VerifySignedByAsymKey( AsymKey_Id( 'WillisKey74' ), Data,  
+     DataSignature ) = 1  
+AND Description = N'data encrypted by asymmetric key ''WillisKey74''';  
+GO  
+```  
+  
+## <a name="see-also"></a>参照  
+ [ASYMKEY_ID & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/asymkey-id-transact-sql.md)   
+ [SIGNBYASYMKEY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/signbyasymkey-transact-sql.md)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
+ [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
+ [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   
+ [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
+  
+  

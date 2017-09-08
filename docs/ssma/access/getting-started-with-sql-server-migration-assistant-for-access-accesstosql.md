@@ -23,14 +23,14 @@ helpviewer_keywords:
 - user interface overview
 ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
 caps.latest.revision: 24
-author: sabotta
-ms.author: carlasab
+author: Shamikg
+ms.author: Shamikg
 manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: dfec6c6fdcf4640199c08190b558e68f63cfec1f
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 846d08c9226e6a34e0d0b3bbd5efab8c2548a469
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant for Access (AccessToSQL) の概要
@@ -101,7 +101,7 @@ SSMA を参照してアクセスに対する操作の実行に使用できる 2 
   
 -   アクセス メタデータ エクスプ ローラーで、型のマッピングを変更することができます。 必ずレポートを作成またはスキーマを変換する前に、これらの変更を作成してください。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]メタデータ エクスプ ローラーでテーブルとインデックスのプロパティを変更することができます、**テーブル**タブです。 スキーマを読み込む前に、これらの変更を行う[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 詳細については、次を参照してください。[データベース オブジェクトの変換へのアクセス](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)です。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]メタデータ エクスプ ローラーでテーブルとインデックスのプロパティを変更することができます、**テーブル**タブです。スキーマを読み込む前に、これらの変更を行う[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 詳細については、次を参照してください。[データベース オブジェクトの変換へのアクセス](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)です。  
   
 ### <a name="toolbars"></a>[ツール バー]  
 SSMA は 2 つのツールバー: プロジェクト ツールバー、および移行ツールバー。  

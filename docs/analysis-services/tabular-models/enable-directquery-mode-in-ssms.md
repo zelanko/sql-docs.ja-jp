@@ -1,33 +1,41 @@
 ---
-title: "SSMS での DirectQuery モードの有効化 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SSMS での DirectQuery モードを有効にする |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 86bae72aacde357b372e48f83a429e8102553325
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# SSMS での DirectQuery モードの有効化
+# <a name="enable-directquery-mode-in-ssms"></a>SSMS での DirectQuery モードの有効化
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   既にデプロイされている表形式モデルのデータ アクセス プロパティは、DirectQuery モードを有効にすることで変更できます。このときクエリは、メモリ内にあるキャッシュ データではく、バックエンドのリレーショナル データ ソースに対して実行されます。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、DirectQuery の構成はモデルの互換性レベルにより異なります。 すべての互換性レベルで動作する手順を下記で説明します。  
   
- このトピックでは、互換性レベル 1200 のインメモリ表形式モデルが既に作成および検証済みで、DirectQuery へのアクセスの有効化と接続文字列のアップデートのみが必要であることを前提としています。 これよりも低い互換性レベルから開始する場合は、最初に手動でアップグレードする必要があります。 手順については、「[Analysis Services のアップグレード](../../database-engine/install-windows/upgrade-analysis-services.md)」をご覧ください。  
+ このトピックでは、作成し、の互換性レベル 1200 以上おり DirectQuery アクセスを有効にして、接続文字列を更新する必要があるだけでのメモリ内の表形式モデルの検証が前提としています。 これよりも低い互換性レベルから開始する場合は、最初に手動でアップグレードする必要があります。 手順については、「 [Analysis Services のアップグレード](../../database-engine/install-windows/upgrade-analysis-services.md) 」をご覧ください。  
   
 > [!IMPORTANT]  
->  データ ストレージ モードを切り替えるには、Management Studio ではなく、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] の使用をお勧めします。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使用してモデルを変更すると、サーバーにデプロイされ、モデルとデータベースが同期します。 さらに、モデル内のストレージ モードを変更すると、発生した検証エラーを確認できます。 この記事で説明するように [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用すると、検証エラーは報告されません。  
+>  データ ストレージ モードを切り替えるには、Management Studio ではなく、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] の使用をお勧めします。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使用してモデルを変更すると、サーバーにデプロイされ、モデルとデータベースが同期します。さらに、モデル内のストレージ モードを変更すると、発生した検証エラーを確認できます。 この記事で説明するように [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用すると、検証エラーは報告されません。  
   
-## 必要条件  
+## <a name="requirements"></a>必要条件  
  表形式モデルで DirectQuery モードを使用できるようにするには、複数の手順を行います。  
   
 -   モデルに DirectQuery モードで検証エラーが発生する機能がないことを確認し、モデルのデータ ストレージ モードをメモリ内から DirectQuery に変更します。  
@@ -44,7 +52,7 @@ caps.handback.revision: 18
   
 -   最後の手順として、DirectQuery モードがクエリを実行して動作することを確認します。  
   
-## 手順 1: 互換性レベルを確認する  
+## <a name="step-1-check-the-compatibility-level"></a>手順 1: 互換性レベルを確認する  
  データ アクセスを定義するプロパティは、互換性レベルで異なります。 準備の段階として、データベースがどの互換性レベルなのか確認してください。  
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の場合、表形式モデルのあるインスタンスに接続します。  
@@ -55,7 +63,7 @@ caps.handback.revision: 18
   
  表形式モデルを DirectQuery モードに変更すると、すぐに新しいデータ ストレージ モードが有効になります。  
   
-## 手順 2 a: 表形式 1200 データベースを DirectQuery モードに切り替える  
+## <a name="step-2a-switch-a-tabular-1200-database-to-directquery-mode"></a>手順 2 a: 表形式 1200 データベースを DirectQuery モードに切り替える  
   
 1.  オブジェクト エクスプローラーで、データベースを右クリックし、**[プロパティ]**  >  **[モデル]**  >  **[既定のモード]** の順にクリックします。  
   
@@ -67,7 +75,7 @@ caps.handback.revision: 18
     |**DirectQuery**|クエリは、モデルに定義されているデータ ソース接続を使用して、バックエンド リレーショナル データベースに対して実行されます。<br /><br /> モデルへのクエリは、ネイティブ データベース クエリに変換され、データ ソースにリダイレクトします。<br /><br /> モデル セットを DirectQuery モードで処理すると、メタデータのみがコンパイルされ、デプロイされます。 データ自体はモデルの外部にあり、稼動しているデータ ソースのデータベース ファイルに存在します。|  
     |**[インポート]**|クエリは、MDX または DAX の表形式データベースに対して実行されます。<br /><br /> モデル セットをインポート モードで処理すると、データはバックエンド データ ソースから取得され、ディスクに格納されます。 データベースがロードされると、非常に高速のテーブル スキャンやクエリが実行され、データ全体がメモリにコピーされます。<br /><br /> これは表形式モデルの既定のモードで、特定の (非リレーショナル) データ ソースに適応する唯一のモードです。|  
   
-## 手順 2 a: 表形式 1100 から 1103 データベースを DirectQuery モードに切り替える  
+## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>手順 2 a: 表形式 1100 から 1103 データベースを DirectQuery モードに切り替える  
   
 1.  オブジェクト エクスプローラーで、データベースを右クリックし、**[プロパティ]**  >  **[データベース]**  >  **[DirectQueryMode]**の順にクリックします。  
   
@@ -91,16 +99,16 @@ caps.handback.revision: 18
   
 -   DirectQuery モードに使用されるプライマリ パーティションが処理されず、常にリレーショナル ソースを参照する方法で、キャッシュにパーティションを構成することができます。 モデル デザインとレポート環境を最適化するために、多くの方法でパーティションを使用できます。 詳しくは、「[Define partitions in DirectQuery models &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md)」(DirectQuery モデルでのパーティションの定義 &#40;SSAS テーブル&#41;) をご覧ください。  
   
--   モデルが配置された後、優先される接続方法を変更できます。 たとえば、テストにはハイブリッド モードを使用し、モデルを使用するレポートまたはクエリを完全にテストした後でのみ **DirectQuery のみ** のモードに切り替えることができます。 詳しくは、「[DirectQuery の優先接続方法の設定または変更](../Topic/Set%20or%20Change%20the%20Preferred%20Connection%20Method%20for%20DirectQuery.md)」をご覧ください。  
+-   モデルが配置された後、優先される接続方法を変更できます。 たとえば、テストにはハイブリッド モードを使用し、モデルを使用するレポートまたはクエリを完全にテストした後でのみ **DirectQuery のみ** のモードに切り替えることができます。 詳しくは、「 [DirectQuery の優先接続方法の設定または変更](http://msdn.microsoft.com/library/f10d5678-d678-4251-8cce-4e30cfe15751)」をご覧ください。  
   
-## 手順 3: データベースの接続プロパティを確認する  
+## <a name="step-3-check-the-connection-properties-on-the-database"></a>手順 3: データベースの接続プロパティを確認する  
  データ ソース接続のセットアップ方法に応じて、DirectQuery を切り替えると、接続のセキュリティ コンテキストを変更することができます。 データ アクセス モードを変更するときに、偽装や接続文字列プロパティをチェックして、バックエンド データベースに接続しているログインが有効であることを確認してください。  
   
  「 **Configure Analysis Services for Kerberos constrained delegation** 」の「 [信頼された委任用に Analysis Services を構成する](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md) 」セクションを確認します。こちらでは、DirectQuery シナリオのユーザー ID の委任について、その経緯を説明しています。  
   
-1.  オブジェクト エクスプローラーで、**[接続]** を展開し、[接続] をダブルクリックして、該当するプロパティを表示します。  
+1.  オブジェクト エクスプローラーで、 **[接続]** を展開し、[接続] をダブルクリックして、該当するプロパティを表示します。  
   
-     DirectQuery モデルの場合は、データベースに定義されている接続は 1つのみです、また、データ ソースはリレーショナルで、サポートされているデータベース型にする必要があります。 「[Data Sources Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)」(サポートされているデータ ソース &#40;SSAS テーブル&#41;) をご覧ください。  
+     DirectQuery モデルの場合は、データベースに定義されている接続は 1つのみです、また、データ ソースはリレーショナルで、サポートされているデータベース型にする必要があります。 手順については、「 [サポートされているデータ ソース &amp;#40;SSAS テーブル&amp;#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)」(DirectQuery モード &#40;SSAS テーブル&#41;) に記載されています。  
   
 2.  [**接続文字列** ] がサーバー、データベース名、および DirectQuery 操作で使用する認証方法を指定します。 SQL Server 認証を使用している場合は、こちらでデータベース ログインを指定できます。  
   
@@ -114,7 +122,7 @@ caps.handback.revision: 18
   
  モデルをメモリ内でのみ使用する場合は、権限借用を使用できません。 モデルで DirectQuery モードを使用していない限り、 **ImpersonateCurrentUser**設定は無効です。  
   
-## 手順 4: DirectQuery アクセスを検証する  
+## <a name="step-4-validate-directquery-access"></a>手順 4: DirectQuery アクセスを検証する  
   
 1.  Management Studio で、SQL Server のリレーショナル データベースに接続しながら、SQL Server Profiler または xEvents を使用して、トレースを開始します。  
   
@@ -124,7 +132,7 @@ caps.handback.revision: 18
   
 3.  トレースすると、リレーショナル データベースでクエリが実行された証拠が表示されるはずです。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Analysis Services での表形式モデルの互換性レベル](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [サポートされているデータ ソース &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)   

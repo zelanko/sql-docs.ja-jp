@@ -1,29 +1,34 @@
 ---
-title: "マイニング モデル タスクと操作方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データ マイニング [Analysis Services], モデル"
-  - "マイニング モデル [Analysis Services], 操作方法に関するトピック"
+title: "マイニング モデル タスクと操作方法 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], models
+- mining models [Analysis Services], how-to topics
 ms.assetid: 7c2073e5-b40f-4bf8-aa51-021adb08e072
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0ad2ff2582e2b781debd14372614bd0e8c6d2323
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# マイニング モデル タスクと操作方法
-  マイニング構造のマイニング モデルを管理および処理するには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のデータ マイニング デザイナーにある **[マイニング モデル]** タブを使用します。  
+# <a name="mining-model-tasks-and-how-tos"></a>マイニング モデル タスクと操作方法
+  マイニング構造のマイニング モデルを管理および処理するには、 **のデータ マイニング デザイナーにある** [マイニング モデル] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] タブを使用します。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
   
 -   [既存のマイニング構造へのマイニング モデルの追加](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)  
   
@@ -55,9 +60,9 @@ caps.handback.revision: 34
   
 -   [データ マイニング ディメンションの作成](../../analysis-services/data-mining/create-a-data-mining-dimension.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [マイニング構造のタスクと操作方法](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)   
- [マイニング モデル (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
+ [マイニング モデルと #40 です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
  [データ マイニングの概念](../../analysis-services/data-mining/data-mining-concepts.md)  
   
   

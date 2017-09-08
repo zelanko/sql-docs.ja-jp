@@ -1,22 +1,27 @@
 ---
-title: "Lock イベントのデータ列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "イベントのデータ列をロック |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: c223157f-41a0-405c-bc1a-41c999506936
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a211ed540b3bddb11c5d84cf0db65ef3dade1ad
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Lock イベントのデータ列
+# <a name="lock-events-data-columns"></a>Lock イベントのデータ列
   Lock イベント カテゴリには、次のイベント クラスがあります。  
   
 |**イベント ID**|**イベント名**|**イベントの説明**|  
@@ -29,7 +34,7 @@ caps.handback.revision: 5
   
  次の表は、このイベント クラスのデータ列の一覧です。  
   
-## Deadlock  
+## <a name="deadlock"></a>Deadlock  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -39,7 +44,7 @@ caps.handback.revision: 5
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Lock Timeout  
+## <a name="lock-timeout"></a>Lock Timeout  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -60,7 +65,7 @@ caps.handback.revision: 5
 |SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Lock Acquired  
+## <a name="lock-acquired"></a>Lock Acquired  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -78,7 +83,7 @@ caps.handback.revision: 5
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Lock Released  
+## <a name="lock-released"></a>Lock Released  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -96,7 +101,7 @@ caps.handback.revision: 5
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Lock Waiting  
+## <a name="lock-waiting"></a>Lock Waiting  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -114,7 +119,7 @@ caps.handback.revision: 5
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ロック イベント カテゴリ](../../analysis-services/trace-events/lock-events-category.md)  
   
   

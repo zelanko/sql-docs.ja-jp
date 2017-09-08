@@ -1,0 +1,117 @@
+---
+title: "CERTPROPERTY (TRANSACT-SQL) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 07/24/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- CERTPROPERTY
+- CERTPROPERTY_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- certificates [SQL Server], schema names
+- schemas [SQL Server], names
+- CERTPROPERTY function
+ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
+caps.latest.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 4b43b587688b574c6d6395b72c5b368b82e617fd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="certproperty-transact-sql"></a>CERTPROPERTY (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+指定した証明書のプロパティの値を返します。
+  
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+  
+## <a name="syntax"></a>構文  
+  
+```sql
+CertProperty ( Cert_ID , '<PropertyName>' )  
+  
+<PropertyName> ::=  
+   Expiry_Date | Start_Date | Issuer_Name   
+   | Cert_Serial_Number | Subject | SID | String_SID   
+```  
+  
+## <a name="arguments"></a>引数  
+*Cert_ID*  
+明書の ID を指定します。 *Cert_ID*は int です。
+  
+*Expiry_Date*  
+証明書の有効期限日を指定します。
+  
+*Start_Date*  
+証明書が有効になる日付です。
+  
+*Issuer_Name*  
+証明書の発行者の名前を指定します。
+  
+*Cert_Serial_Number*  
+証明書のシリアル番号を指定します。
+  
+*Subject*  
+証明書のサブジェクトを指定します。
+  
+ *SID*  
+証明書の SID を指定します。 これは、この証明書にマップされているログインまたはユーザーの SID でもあります。
+  
+*String_SID*  
+証明書の SID を文字列で指定します。 これは、任意のログインまたは証明書にマップされたユーザーの SID。
+  
+## <a name="return-types"></a>戻り値の型
+プロパティは単一引用符で囲んで指定する必要があります。
+  
+戻り値の型は、関数の呼び出しで指定されたプロパティによって異なります。 すべての戻り値は、戻り値の型にラップされます**sql_variant**です。
+-   *Expiry_Date*と*Start_Date*返す**datetime**です。  
+-   *Cert_Serial_Number*、 *Issuer_Name*、*サブジェクト*、および*String_SID*返す**nvarchar**です。  
+-   *SID*返します**varbinary**です。  
+  
+## <a name="remarks"></a>解説  
+証明書に関する情報は、 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)カタログ ビューです。
+  
+## <a name="permissions"></a>Permissions  
+証明書に対する権限が必要です。呼び出し元で、証明書に対する VIEW DEFINITION 権限が拒否されていないことも条件となります。
+  
+## <a name="examples"></a>使用例  
+次の例では、証明書のサブジェクトを返します。
+  
+```sql
+-- First create a certificate.  
+CREATE CERTIFICATE Marketing19 WITH   
+    START_DATE = '04/04/2004' ,  
+    EXPIRY_DATE = '07/07/2007' ,  
+    SUBJECT = 'Marketing Print Division';  
+GO  
+  
+-- Now use CertProperty to examine certificate  
+-- Marketing19's properties.  
+DECLARE @CertSubject sql_variant;  
+set @CertSubject = CertProperty( Cert_ID('Marketing19'), 'Subject');  
+PRINT CONVERT(nvarchar, @CertSubject);  
+GO  
+```  
+  
+## <a name="see-also"></a>参照
+[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
+[ALTER CERTIFICATE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-certificate-transact-sql.md)  
+[CERT_ID & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cert-id-transact-sql.md) 
+[暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)
+[sys.certificates & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 
+[セキュリティ カタログ ビュー & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
+  
+  
+

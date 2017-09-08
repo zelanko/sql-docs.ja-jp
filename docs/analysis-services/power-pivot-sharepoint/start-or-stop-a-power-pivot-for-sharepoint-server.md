@@ -1,24 +1,29 @@
 ---
-title: "PowerPivot for SharePoint サーバーの開始または停止 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "開始または SharePoint サーバーに対して Stop a Power Pivot |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f512a256765bbba4b1f641fb9752bd09fae4696
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# PowerPivot for SharePoint サーバーの開始または停止
+# <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>PowerPivot for SharePoint サーバーの開始または停止
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスと [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] インスタンスは、同じローカル アプリケーション サーバー上で同時に動作し、SharePoint ファーム内での連携要求とデータ処理をサポートします。  
   
  このトピックには、次のセクションが含まれます。  
@@ -41,7 +46,7 @@ caps.handback.revision: 8
   
  ファーム全体のすべての物理サービスを同時に開始または停止することはできません。 各サーバーを選択してから、特定のサービスを開始または停止する必要があります。  
   
- 特定の Web アプリケーションに対する [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスを開始、一時停止、または停止することはできませんが、サービスを既定の接続リストから削除して使用できない状態にすることができます。 詳しくは、「[サーバーの全体管理での SharePoint Web アプリケーションへの PowerPivot サービス アプリケーションの接続](../../analysis-services/power-pivot-sharepoint/connect power pivot service app to sharepoint web app in ca.md)」をご覧ください。  
+ 特定の Web アプリケーションに対する [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスを開始、一時停止、または停止することはできませんが、サービスを既定の接続リストから削除して使用できない状態にすることができます。 詳しくは、「 [サーバーの全体管理での SharePoint Web アプリケーションへの PowerPivot サービス アプリケーションの接続](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)」をご覧ください。  
   
 1.  サーバーの全体管理で、 **[システム設定]**の **[サーバーのサービスの管理]**をクリックします。  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 8
 |新しいクエリ要求またはデータ更新要求|ファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint サーバーのみを停止した場合、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データに対する新しい要求は処理されません。データを要求すると、データが見つからないことを示すエラーが発生します。<br /><br /> ファーム内に追加の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint サーバーがある場合、要求は使用可能なサーバーのうちの 1 つに送信されます。|  
 |使用状況データ|使用状況データは、サービスの停止中は収集されません。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Power Pivot サービス アカウントの構成](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)  
   
   

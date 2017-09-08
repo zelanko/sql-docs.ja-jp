@@ -1,35 +1,40 @@
 ---
-title: "メモリのプロパティ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "LowMemoryLimit プロパティ"
-  - "MinimumAllocatedMemory プロパティ"
-  - "MidMemoryPrice プロパティ"
-  - "MemoryHeapType プロパティ"
-  - "メモリ [Analysis Services]"
-  - "DefaultPagesCountToReuse プロパティ"
-  - "TotalMemoryLimit プロパティ"
-  - "SessionMemoryLimit プロパティ"
-  - "VirtualMemoryLimit プロパティ"
-  - "WaitCountIfHighMemory プロパティ"
-  - "HighMemoryPrice プロパティ"
-  - "HeapTypeForObjects プロパティ"
+title: "メモリのプロパティ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- LowMemoryLimit property
+- MinimumAllocatedMemory property
+- MidMemoryPrice property
+- MemoryHeapType property
+- memory [Analysis Services]
+- DefaultPagesCountToReuse property
+- TotalMemoryLimit property
+- SessionMemoryLimit property
+- VirtualMemoryLimit property
+- WaitCountIfHighMemory property
+- HighMemoryPrice property
+- HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a26f0b5272c12e45ed1bf99c0d297fa7f89773ae
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# メモリのプロパティ
+# <a name="memory-properties"></a>メモリのプロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、要求をすぐに処理できるように、開始時に少量のメモリを事前に割り当てます。 追加のメモリがクエリに割り当てられ、処理のワークロードが増大します。 
   
   構成設定を指定すると、メモリが解放されるしきい値を制御することができます。 たとえば、 **HardMemoryLimit** 設定では、メモリ不足の条件を自分で指定します (既定では、このしきい値は有効ではありません)。ここでは、新しい要求は追加のリソースが有効になるまで完全に拒否されます。
@@ -61,7 +66,7 @@ HardMemoryLimit | Analysis Services がメモリ不足のために、完全に�
  64 ビットの符号付き倍精度浮動小数点数のプロパティです。Analysis Services が優先度の低いオブジェクトのメモリ (使用頻度の低いキャッシュなど) を解放し始める最初のしきい値を定義します。 メモリを割り当てると、サーバーはこの制限より下のメモリを解放することはありません。 既定値は 65 です。これは、物理メモリまたは仮想アドレス空間の 65% (どちらか少ない方) を超えたらメモリ不足とすることを示します。  
   
  **TotalMemoryLimit**  
- 他の要求用にスペースを作るために、サーバーがメモリの割り当てを解除し始めるしきい値を定義します。 この制限に達すると、インスタンスは、期限切れのセッションを終了したり、使用されていない計算をアンロードしたりすることによって、徐々にキャッシュ内のメモリを解放し始めます。 既定値は、物理メモリまたは仮想アドレス空間の 80% です (どちらか少ない方)。  **TotalMemoryLimit** は常に、 **HardMemoryLimit**より小さくする必要があります。  
+ 他の要求用にスペースを作るために、サーバーがメモリの割り当てを解除し始めるしきい値を定義します。 この制限に達すると、インスタンスは、期限切れのセッションを終了したり、使用されていない計算をアンロードしたりすることによって、徐々にキャッシュ内のメモリを解放し始めます。 既定値は、物理メモリまたは仮想アドレス空間の 80% です (どちらか少ない方)。 **TotalMemoryLimit** は常に、 **HardMemoryLimit**より小さくする必要があります。  
   
  **HardMemoryLimit**  
  インスタンスが、メモリ使用量を減らすために、アクティブなユーザー セッションを積極的に終了し始めるメモリのしきい値を指定します。 終了されたすべてのセッションには、メモリ不足によって使用中止となった旨のエラーが送信されます。 既定値 (0) は、 **HardMemoryLimit** が **TotalMemoryLimit** とシステムの物理メモリ合計の間の値に設定されることを意味します。システムの物理メモリがプロセスの仮想アドレス領域を超える場合は、 **HardMemoryLimit**を計算せずに、仮想アドレス空間が使用されます。  
@@ -101,7 +106,7 @@ HardMemoryLimit | Analysis Services がメモリ不足のために、完全に�
 **-1** | (既定値) 自動。 エンジンがどれを使用するかを決定します。
 **1** | Analysis Services ヒープ。
 **2** | Windows LFH。
-**5** | ハイブリッド アロケーター。 このアロケーターでは、16 KB 以下の割り当ての場合は Windows LFH、16 KB を超える割り当ての場合は AS ヒープが使用されます。 
+**5** | ハイブリッド アロケーター。 このアロケーターを使用の Windows LFH \<= 16 KB の割り当てと AS のヒープ > 16 KB の割り当て。 
 **6** | Intel TBB アロケーター。 SQL Server 2016 SP1 (およびそれ以降) の Analysis Services で使用できます。
   
   
@@ -141,3 +146,4 @@ HardMemoryLimit | Analysis Services がメモリ不足のために、完全に�
  [Analysis Services インスタンスのサーバー モードの決定](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)
   
+

@@ -1,37 +1,42 @@
 ---
-title: "Autoexists | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Autoexists |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 934307b7230a950bc41b5de117cc6f2326b90561
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Autoexists
+# <a name="autoexists"></a>Autoexists
   *autoexists* の概念を導入すると、このキューブ空間を、同じ階層から属性階層メンバーの可能なすべての組み合わせを作成した結果として存在するセルでなく、実際に存在するセルのみに限定できます。 これは、1 つの属性階層のメンバーは、同じディメンション内の別の属性階層のメンバーと共存できないためです。 SELECT ステートメントに同じディメンションの属性階層を複数使用した場合、こうした属性のメンバーは、Analysis Services が属性の式を評価する際、それ以外のすべての属性の条件を満たすよう、適切に絞り込まれます。  
   
  たとえば、Geography ディメンションの属性を指定したとします。 一方の式で City 属性のすべてのメンバーを返し、もう一方の式で Country 属性のメンバーを欧州内の国のみに限定した場合、結果として得られる City メンバーは、欧州の国に属する市区町村に限定されます。 これは、Analysis Services が備えている Autoexists という特性のためです。 Autoexists が同じディメンションの属性にのみ適用されるのは、一方の属性式で排除されたディメンション レコードが、もう一方の属性式で含められるのを防ぐように機能するためです。 ディメンション行に複数の属性式を適用した結果の共通集合と考えることもできます。  
   
-## セルの存在  
+## <a name="cell-existence"></a>セルの存在  
  次のセルは常に存在します。  
   
 -   同じディメンション内の他の階層のメンバーの影響を受ける場合、各階層の (All) メンバー  
   
 -   計算されない兄弟または計算されない兄弟の親または子孫の影響を受ける場合、計算されるメンバー  
   
-## 存在しないセルの指定  
+## <a name="providing-non-existing-cells"></a>存在しないセルの指定  
  存在しないセルは、キューブ内に存在しないセルを要求するクエリまたは計算に対する応答としてシステムによって提供されるセルです。 たとえば、Geography ディメンションに属する City 属性階層と Country 属性階層、および Internet Sales Amount メジャーが含まれたキューブがあるとします。このキューブの空間には、共存できるメンバーのみが含まれます。 City 属性階層に都市 New York、London、Paris、Tokyo、Melbourne があり、Country 属性階層に国 United States、United Kingdom、France、Japan、Australia があるとすると、このキューブ空間に Paris と United States が交差する領域 (セル) は含まれません。  
   
  存在しないセルに対するクエリを実行すると、NULL が返されます。つまり、存在しないセルには計算を含めることができないので、この領域に書き込みを行う計算は定義できません。 たとえば、次のステートメントには、存在しないセルが含まれています。  
@@ -45,7 +50,7 @@ WHERE Measures.[Internet Sales Amount]
 ```  
   
 > [!NOTE]  
->  このクエリでは、[Members (セット) (MDX)](../../../mdx/members-set-mdx.md) 関数を使用して列軸の Gender 属性階層のメンバーのセットを取得し、それを行軸の Customer 属性階層のメンバーの限定的なセットと交差させています。  
+>  このクエリでは、 [Members (セット) (MDX)](../../../mdx/members-set-mdx.md) 関数を使用して列軸の Gender 属性階層のメンバーのセットを取得し、それを行軸の Customer 属性階層のメンバーの限定的なセットと交差させています。  
   
  上記のクエリを実行すると、Aaron A. Allen と Female が交差するセルに NULL が表示されます。 同様に、Abigail Clark と Male が交差するセルに NULL が表示されます。 これらのセルは存在しないため値を含めることができませんが、クエリから返される結果には、存在しないセルが表示される場合があります。  
   
@@ -64,7 +69,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  このクエリでは、列軸を表す axis(0) の略記である 0 を使用して、列軸を指定しています。  
   
- 上のクエリを実行すると、クエリ内の各属性階層から、共存できるメンバーのセルのみが返されます。 上のクエリは、[* (クロス積) (MDX)](../../../mdx/crossjoin-mdx.md) 関数の新しい * バリアントを使用して記述することもできます。  
+ 上のクエリを実行すると、クエリ内の各属性階層から、共存できるメンバーのセルのみが返されます。 上のクエリは、 [* (クロス積) (MDX)](../../../mdx/crossjoin-mdx-operator-reference.md) 関数の新しい * バリアントを使用して記述することもできます。  
   
 ```  
 SELECT   
@@ -87,9 +92,9 @@ WHERE (Measures.[Internet Sales Amount],
   
  結果セットのメタデータが異なりますが、返されるセルの値は同一です。 たとえば上のクエリで、Country 階層は (WHERE 句の) スライサー軸に移動されたので、結果セットに明示的には出現しません。  
   
- これら 3 つのクエリはいずれも、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の autoexist の効果を示しています。  
+ これら 3 つのクエリはいずれも、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の autoexist の効果を示しています。  
   
-## Deep および Shallow Autoexists  
+## <a name="deep-and-shallow-autoexists"></a>Deep および Shallow Autoexists  
  Autoexists は、式に対して深く (deep) または浅く (shallow) 適用できます。 **Deep Autoexists** では、スライサーの式、軸の下位選択式などを適用した後、可能な限り深い場所に到達するように、すべての式が評価されます。 **Shallow Autoexists** では、現在の式より前に外部の式が評価され、その結果が現在の式に渡されます。 既定の設定は deep autoexists です。  
   
  以下のシナリオとサンプルでは、さまざまな種類の Autoexists について説明します。 この例では 2 つのセットを 1 つは計算式として、もう 1 つは定数式として作成します。  
@@ -285,7 +290,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  この結果セットは、Shallow Autoexists と考えることもできます。 式がスライス句よりも前に評価されるためです。 前の例では、概念をわかりやすく説明するために、定数式を使用しました。  
   
- Autoexists の動作は、 **Autoexists** 接続文字列プロパティを使用することにより、セッション レベルで変更できます。 次の例は、まず、新しいセッションを開いてを追加する、*Autoexists=3* プロパティを接続文字列にします。 この例を実行するには、新しい接続を開く必要があります。 いったん Autoexist 設定で確立された接続は、その接続が解除されるまで有効です。  
+ Autoexists の動作は、 **Autoexists** 接続文字列プロパティを使用することにより、セッション レベルで変更できます。 次の例は、まず、新しいセッションを開いてを追加する、 *Autoexists=3* プロパティを接続文字列にします。 この例を実行するには、新しい接続を開く必要があります。 いったん Autoexist 設定で確立された接続は、その接続が解除されるまで有効です。  
   
  `with member [Measures].[PCT Discount] AS '[Measures].[Discount Amount]/[Measures].[Reseller Sales Amount]', FORMAT_STRING = 'Percent'`  
   
@@ -310,15 +315,15 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Autoexists の動作は、接続文字列の AUTOEXISTS=[1|2|3] パラメーターを使用して変更できます。パラメーターの使用法については、「[サポートされる XMLA プロパティ (XMLA)](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md)」および「<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>」をご覧ください。  
+ Autoexists の動作は、AUTOEXISTS を使用して変更できます = [1 | 2 | 3] パラメーター、接続文字列です。参照してください[サポートされる XMLA プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)と<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>パラメーターの使用法。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [MDX の主な概念 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [キューブ空間](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+ [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [組](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
- [メンバー、組、およびセットの操作 (MDX)](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [メンバー、組、およびセットの操作 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [表示部分の合計と非表示部分の合計](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
- [MDX 言語リファレンス (MDX)](../../../mdx/mdx-language-reference-mdx.md)   
- [多次元式 (MDX) リファレンス](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [MDX 言語リファレンス &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [多次元式 &#40;MDX&#41; リファレンス](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

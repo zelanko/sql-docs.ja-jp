@@ -1,31 +1,36 @@
 ---
-title: "SQL Server の以前のバージョンへのデータ マイニング ソリューションの配置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "旧バージョンとの互換性 [Analysis Services]"
-  - "提示 [データ マイニング]"
-  - "配置 [Analysis Services]"
-  - "タイム シリーズ [Analysis Services]"
-  - "配置 [Analysis Services - データ マイニング]"
-  - "同期 [Analysis Services]"
-  - "配置 [Analysis Services]"
+title: "SQL Server の以前のバージョンにデータ マイニング ソリューションの配置 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backward compatibility [Analysis Services]
+- holdout [data mining]
+- deploy [Analysis Services]
+- time series [Analysis Services]
+- deploying [Analysis Services - data mining]
+- synchronization [Analysis Services]
+- deployment [Analysis Services]
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d56f2cdd207e7d50584b08b5ebcae77bd9057b36
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# SQL Server の以前のバージョンへのデータ マイニング ソリューションの配置
+# <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>SQL Server の以前のバージョンへのデータ マイニング ソリューションの配置
   ここでは、 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] のインスタンスで作成されたデータ マイニング モデルまたはデータ マイニング構造を、SQL Server 2005 Analysis Services を使用するデータベースに配置しようとする際、または SQL Server 2005 で作成されたモデルを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のインスタンスに配置する際に発生する可能性のある、互換性に関する既知の問題について説明します。  
   
  SQL Server 2000 Analysis Services のインスタンスへの配置はサポートされていません。  
@@ -41,7 +46,7 @@ caps.handback.revision: 16
  [データベースの同期の使用](#bkmk_Synch)  
   
 ##  <a name="bkmk_TimeSeries"></a> タイム シリーズ モデルの配置  
- Microsoft タイム シリーズのアルゴリズムは、SQL Server 2008 で補完的なアルゴリズムの ARIMA が追加され、機能が拡張されています。 タイム シリーズ アルゴリズムの変更に関する詳細については、「[Microsoft タイム シリーズ アルゴリズム](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)」を参照してください。  
+ Microsoft タイム シリーズのアルゴリズムは、SQL Server 2008 で補完的なアルゴリズムの ARIMA が追加され、機能が拡張されています。 タイム シリーズ アルゴリズムの変更に関する詳細については、「 [Microsoft タイム シリーズ アルゴリズム](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)」を参照してください。  
   
  したがって、新しい ARIMA アルゴリズムを使用するタイム シリーズ マイニング モデルを SQL Server 2005 Analysis Services のインスタンスに配置すると、動作が異なる場合があります。  
   
@@ -51,19 +56,19 @@ caps.handback.revision: 16
   
  したがって、モデルが変更されないようにするには、モデルを参照するだけにして、決して処理を行わないようにします。 あるいは、FORECAST_METHOD パラメーターまたは PREDICTION_SMOOTHING パラメーターを明示的に設定することもできます。  
   
- 混合モデルを設定する方法については、「[Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
+ 混合モデルを設定する方法については、「 [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
   
  モデルのデータ ソースに使用されるプロバイダーが SQL Client Data Provider 10 の場合、データ ソース定義も変更して、SQL Server Native Client の前のバージョンを指定する必要があります。 そうしないと、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で、プロバイダーが登録されていないことを示すエラーが発生します。  
   
 ##  <a name="bkmk_Holdout"></a> 提示されたパーティションを使用するモデルの配置  
- [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] で、データ マイニング モデルのテストに使用する提示されたパーティションを含むマイニング構造を作成する場合、マイニング構造を SQL Server 2005 インスタンスに配置できますが、パーティションの情報は失われます。  
+ データ マイニング モデルをテストするために使用される、提示されたパーティションを含むマイニング構造を作成する場合は、マイニング構造を SQL Server 2005 のインスタンスに配置できますが、パーティション情報は失われます。  
   
  SQL Server 2005 Analysis Services でマイニング構造を開くと、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] でエラーが発生し、提示されたパーティションを削除するためにそのマイニング構造が再生成されます。  
   
- 構造が再構築された後、提示されたパーティションのサイズは [プロパティ] ウィンドウで使用できなくなります。ただし ASSL スクリプト ファイルには、値 (\<ddl100_100:HoldoutMaxPercent>30\</ddl100_100:HoldoutMaxPercent>) が残る可能性があります。  
+ プロパティ ウィンドウに、提示されたパーティションのサイズが使用可能なで不要になった構造が再構築された後にただし、値\</ddl100_100:holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >)、ASSL スクリプト ファイルである可能性があります。  
   
 ##  <a name="bkmk_Filter"></a> フィルターを使用するモデルの配置  
- [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] で、マイニング モデルにフィルターを適用する場合、モデルを SQL Server 2005 インスタンスに配置できますが、フィルターは適用されません。  
+ マイニング モデルにフィルターを適用する場合、モデルは、SQL Server 2005 のインスタンスに配置することができますが、フィルターは適用されません。  
   
  マイニング モデルを開くと、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でエラーが発生し、フィルターを削除するためにモデルが再生成されます。  
   
@@ -77,7 +82,7 @@ caps.handback.revision: 16
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースの同期を試みると、サーバーはエラーを返し、データベースの同期は失敗します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Analysis Services の旧バージョンとの互換性](../../analysis-services/analysis-services-backward-compatibility.md)  
   
   

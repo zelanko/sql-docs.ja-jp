@@ -1,32 +1,37 @@
 ---
-title: "結合モデルのクエリ例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "アイテムセット [Analysis Services]"
-  - "association algorithms [Analysis Services]"
-  - "ルール [データ マイニング]"
-  - "アソシエーション ルール"
-  - "コンテンツ クエリ [DMX]"
+title: "アソシエーション モデルのクエリ例 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- itemsets [Analysis Services]
+- association algorithms [Analysis Services]
+- rules [Data Mining]
+- association rules
+- content queries [DMX]
 ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7e1bd8f5d4b6b70c0d31f1fc4a9e1c06da088e3
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# 結合モデルのクエリ例
+# <a name="association-model-query-examples"></a>結合モデルのクエリ例
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析の間に検出されたルールやアイテムセットの詳細情報を取得できます。予測クエリでは、データ内で検出されたアソシエーションを使用して予測を行うことができます。 アソシエーション モデルの場合、予測はルールに基づいて行われるのが一般的で、提案を行うために使用できます。一方、コンテンツ クエリではアイテムセット間の関係を調べるのが一般的です。 モデルに関するメタデータを取得することもできます。  
   
- ここでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムに基づくモデルに対してこれらの種類のクエリを作成する方法について説明します。  
+ ここでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムに基づくモデルに対してこれらの種類のクエリを作成する方法について説明します。  
   
  **Content Queries**  
   
@@ -47,10 +52,10 @@ caps.handback.revision: 25
  [関連するアイテムセットの信頼度を特定する](#bkmk_Query7)  
   
 ##  <a name="bkmk_top2"></a> モデルに関する情報の入手  
- すべてのマイニング モデルでは、アルゴリズムによって学習されたコンテンツが、標準化されたスキーマに従って公開されます。このスキーマを、マイニング モデル スキーマ行セットと呼びます。 マイニング モデル スキーマ行セットに対するクエリは、データ マイニング拡張機能 (DMX) ステートメントか [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ストアド プロシージャを使用して作成できます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、SQL に似た構文を使用して、スキーマ行セットに対して直接、システム テーブルとしてクエリを実行することもできます。  
+ すべてのマイニング モデルでは、アルゴリズムによって学習されたコンテンツが、標準化されたスキーマに従って公開されます。このスキーマを、マイニング モデル スキーマ行セットと呼びます。 マイニング モデル スキーマ行セットに対するクエリは、データ マイニング拡張機能 (DMX) ステートメントか [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ストアド プロシージャを使用して作成できます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、SQL に似た構文を使用して、スキーマ行セットに対して直接、システム テーブルとしてクエリを実行することもできます。  
   
 ###  <a name="bkmk_Query1"></a> サンプル クエリ 1: DMX を使用してモデル メタデータを取得する  
- 次のクエリは、アソシエーション モデル `Association` に関する基本的なメタデータ (モデルの名前、モデルが格納されているデータベース、モデルの子ノードの数など) を返します。 このクエリでは、DMX コンテンツ クエリを使用してモデルの親ノードからメタデータを取得しています。  
+ 次のクエリは、アソシエーション モデル `Association`に関する基本的なメタデータ (モデルの名前、モデルが格納されているデータベース、モデルの子ノードの数など) を返します。 このクエリでは、DMX コンテンツ クエリを使用してモデルの親ノードからメタデータを取得しています。  
   
 ```  
 SELECT MODEL_CATALOG, MODEL_NAME, NODE_CAPTION,   
@@ -73,7 +78,7 @@ WHERE NODE_TYPE = 1
 |CHILDREN_CARDINALITY|942|  
 |NODE_DESCRIPTION|Association Rules Model; ITEMSET_COUNT=679; RULE_COUNT=263; MIN_SUPPORT=14; MAX_SUPPORT=4334; MIN_ITEMSET_SIZE=0; MAX_ITEMSET_SIZE=3; MIN_PROBABILITY=0.400390625; MAX_PROBABILITY=1; MIN_LIFT=0.14309369632511; MAX_LIFT=1.95758227647523|  
   
- アソシエーション モデル内でのこれらの列の意味については、「[アソシエーション モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)」を参照してください。  
+ アソシエーション モデル内でのこれらの列の意味については、「 [アソシエーション モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)」を参照してください。  
   
  [トップに戻る](#bkmk_top2)  
   
@@ -115,7 +120,7 @@ WHERE MODEL_NAME = 'Association'
   
  [トップに戻る](#bkmk_top2)  
   
-## ルールとアイテムセットに関する情報の入手  
+## <a name="finding-information-about-rules-and-itemsets"></a>ルールとアイテムセットに関する情報の入手  
  アソシエーション モデルの用途としては、頻度の高いアイテムセットに関する情報の検出と、特定のルールやアイテムセットに関する詳細の抽出の 2 つが一般的です。 たとえば、スコアによって特に興味深いとされたルールのリストを抽出したり、最も一般的なアイテムセットのリストを作成したりすることができます。 このような情報を取得するには、DMX コンテンツ クエリを使用します。 **Microsoft アソシエーション ビューアー**を使用してこの情報を参照することもできます。  
   
 ###  <a name="bkmk_Query4"></a> サンプル クエリ 4: アイテムセットと製品のリストを取得する  
@@ -160,13 +165,13 @@ WHERE NODE_TYPE = 7
   
  [トップに戻る](#bkmk_top2)  
   
-## モデルを使用して予測を行う  
+## <a name="making-predictions-using-the-model"></a>モデルを使用して予測を行う  
  アソシエーション ルール モデルは、アイテムセットで検出された相関関係に基づく提案を生成するためによく使用されます。 したがって、アソシエーション ルール モデルに基づく予測クエリを作成する際には、そのモデルのルールを使用して新しいデータに基づく推測を行うのが一般的です。  [PredictAssociation (DMX)](../../dmx/predictassociation-dmx.md) は提案を返す関数であり、クエリ結果をカスタマイズするために使用できるいくつかの引数が用意されています。  
   
  アソシエーション モデルに対するクエリは、そのほか、異なるクロスセル戦略の効果を比較できるようにさまざまなルールやアイテムセットの信頼度を取得するためにも使用できます。 以降の例は、このようなクエリの作成方法を示しています。  
   
 ###  <a name="bkmk_Query6"></a> サンプル クエリ 6: 関連のあるアイテムを予測する  
- この例では、「[中級者向けデータ マイニング チュートリアル (Analysis Services - データ マイニング)](../Topic/Intermediate%20Data%20Mining%20Tutorial%20\(Analysis%20Services%20-%20Data%20Mining\).md)」で作成したアソシエーション モデルを使用します。 この例は、特定の製品を購入した顧客に対してどの製品を提案すればよいかを示す予測クエリの作成方法を示しています。 このクエリのように、**SELECT…UNION** ステートメントでモデルに値を渡す種類のクエリを、単一クエリと呼びます。 新しい値に対応する予測可能なモデル列は入れ子になったテーブルであるため、1 つの **SELECT** 句を使用して新しい値を入れ子になったテーブル列 `[Model]` にマップし、もう 1 つの **SELECT** 句を使用して入れ子になったテーブルの列をケース レベルの列 `[v Assoc Seq Line Items]` にマップする必要があります。 キーワード INCLUDE-STATISTICS をクエリに追加すると、提案の確率とサポートも確認できます。  
+ この例では、「[中級者向けデータ マイニング チュートリアル (Analysis Services - データ マイニング)](http://msdn.microsoft.com/library/404b31d5-27f4-4875-bd60-7b2b8613eb1b)」で作成したアソシエーション モデルを使用します。 この例は、特定の製品を購入した顧客に対してどの製品を提案すればよいかを示す予測クエリの作成方法を示しています。 このクエリのように、 **SELECT…UNION** ステートメントでモデルに値を渡す種類のクエリを、単一クエリと呼びます。 新しい値に対応する予測可能なモデル列は入れ子になったテーブルであるため、1 つの **SELECT** 句を使用して新しい値を入れ子になったテーブル列 `[Model]`にマップし、もう 1 つの **SELECT** 句を使用して入れ子になったテーブルの列をケース レベルの列 `[v Assoc Seq Line Items]`にマップする必要があります。 キーワード INCLUDE-STATISTICS をクエリに追加すると、提案の確率とサポートも確認できます。  
   
 ```  
 SELECT PredictAssociation([Association].[vAssocSeqLineItems],INCLUDE_STATISTICS, 3)  
@@ -189,7 +194,7 @@ AS t
  [トップに戻る](#bkmk_top2)  
   
 ###  <a name="bkmk_Query7"></a> サンプル クエリ 7: 関連するアイテムセットの信頼度を特定する  
- 提案を生成するにはルールが便利ですが、データセット内のパターンをより深く分析するためにはアイテムセットの方が興味深い対象であると言えます。 たとえば、前のサンプル クエリで返された提案が満足できるものでなかった場合、Product A を含む他のアイテムセットを調べると、Product A があらゆる種類の製品と一緒に購入されるような付属品なのか、それとも特定の製品の購入との間に強い相関関係があるのかがわかります。 これらの関係は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ビューアーでアイテムセットにフィルターを適用することによって簡単に調べることができますが、同じ情報をクエリで取得することもできます。  
+ 提案を生成するにはルールが便利ですが、データセット内のパターンをより深く分析するためにはアイテムセットの方が興味深い対象であると言えます。 たとえば、前のサンプル クエリで返された提案が満足できるものでなかった場合、Product A を含む他のアイテムセットを調べると、Product A があらゆる種類の製品と一緒に購入されるような付属品なのか、それとも特定の製品の購入との間に強い相関関係があるのかがわかります。 これらの関係は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ビューアーでアイテムセットにフィルターを適用することによって簡単に調べることができますが、同じ情報をクエリで取得することもできます。  
   
  次のサンプル クエリは、Water Bottle というアイテムを含むすべてのアイテムセットを、単一のアイテムの Water Bottle も含めて返します。  
   
@@ -219,25 +224,25 @@ ORDER BY NODE_SUPPORT DESC
   
  [トップに戻る](#bkmk_top2)  
   
-## 関数一覧  
- すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムでは、共通の関数セットがサポートされています。 ただし、[!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムでは、次の表のような追加の関数がサポートされています。  
+## <a name="function-list"></a>関数一覧  
+ すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムでは、共通の関数セットがサポートされています。 ただし、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムでは、次の表のような追加の関数がサポートされています。  
   
 |||  
 |-|-|  
 |予測関数|使用方法|  
-|[IsDescendant (DMX)](../../dmx/isdescendant-dmx.md)|あるノードがニューラル ネットワーク グラフ内の別のノードの子であるかどうかを示します。|  
+|[IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|あるノードがニューラル ネットワーク グラフ内の別のノードの子であるかどうかを示します。|  
 |[IsInNode (DMX)](../../dmx/isinnode-dmx.md)|指定されたノードが現在のケースを含んでいるかどうかを示します。|  
-|[PredictAdjustedProbability (DMX)](../../dmx/predictadjustedprobability-dmx.md)|重み付け確率を返します。|  
-|[PredictAssociation (DMX)](../../dmx/predictassociation-dmx.md)|結合データセットのメンバーシップを予測します。|  
-|[PredictHistogram (DMX)](../../dmx/predicthistogram-dmx.md)|現在の予測値に関連する値のテーブルを返します。|  
-|[PredictNodeId (DMX)](../../dmx/predictnodeid-dmx.md)|各ケースの Node_ID を返します。|  
-|[PredictProbability (DMX)](../../dmx/predictprobability-dmx.md)|予測値の確率を返します。|  
-|[PredictSupport (DMX)](../../dmx/predictsupport-dmx.md)|指定された状態に対するサポート値を返します。|  
+|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|重み付け確率を返します。|  
+|[PredictAssociation &#40;DMX&#41;](../../dmx/predictassociation-dmx.md)|結合データセットのメンバーシップを予測します。|  
+|[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|現在の予測値に関連する値のテーブルを返します。|  
+|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|各ケースの Node_ID を返します。|  
+|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|予測値の確率を返します。|  
+|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|指定された状態に対するサポート値を返します。|  
 |[PredictVariance (DMX)](../../dmx/predictvariance-dmx.md)|予測値の分散を返します。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Microsoft アソシエーション アルゴリズム](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Microsoft アソシエーション アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
- [アソシエーション モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [アソシエーション モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

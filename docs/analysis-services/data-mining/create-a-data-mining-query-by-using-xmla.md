@@ -1,52 +1,57 @@
 ---
-title: "XMLA を使用したデータ マイニング クエリの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "コンテンツ クエリ [DMX]"
+title: "XMLA を使用して、データ マイニング クエリを作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- content queries [DMX]
 ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 750a40e26b044bbbd761cc19ebf9a30133eed7e0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# XMLA を使用したデータ マイニング クエリの作成
+# <a name="create-a-data-mining-query-by-using-xmla"></a>XMLA を使用したデータ マイニング クエリの作成
   AMO、DMX、または XML/A を使用すると、データ マイニング オブジェクトに対するさまざまなクエリを作成できます。  
   
- Analysis Services サーバーとすべてのクライアントの間の通信には、XML が使用されます。 したがって、一般には DMX を使用してコンテンツ クエリを作成する方がはるかに簡単ですが、SOAP プロトコルをサポートするクライアントを使用するか、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で XML/A クエリを作成することにより、XML/A で DISCOVER および COMMAND ステートメントを使用してクエリを作成できます。  
+ Analysis Services サーバーとすべてのクライアントの間の通信には、XML が使用されます。 したがって、一般には DMX を使用してコンテンツ クエリを作成する方がはるかに簡単ですが、SOAP プロトコルをサポートするクライアントを使用するか、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で XML/A クエリを作成することにより、XML/A で DISCOVER および COMMAND ステートメントを使用してクエリを作成できます。  
   
- このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で利用できる XML/A テンプレートを使用して、現在のサーバーに格納されているマイニング モデルに対するモデル コンテンツ クエリを作成する方法について説明します。  
+ このトピックでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で利用できる XML/A テンプレートを使用して、現在のサーバーに格納されているマイニング モデルに対するモデル コンテンツ クエリを作成する方法について説明します。  
   
-## XML/A を使用したデータ マイニング スキーマ行セットのクエリ  
+## <a name="querying-data-mining-schema-rowsets-by-using-xmla"></a>XML/A を使用したデータ マイニング スキーマ行セットのクエリ  
   
-#### XML/A テンプレートを開くには  
+#### <a name="to-open-an-xmla-template"></a>XML/A テンプレートを開くには  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[テンプレート エクスプローラー]**をクリックします。  
   
 2.  キューブ アイコンをクリックして、Analysis Services テンプレートの一覧を開きます。  
   
-3.  テンプレート カテゴリの一覧で **[XMLA]**、**[スキーマ行セット]** の順に展開し、**[スキーマ行セットの発見]** をダブルクリックします。コード エディターにこのテンプレートが表示されます。  
+3.  テンプレート カテゴリの一覧で **[XMLA]**、 **[スキーマ行セット]**の順に展開し、 **[スキーマ行セットの発見]** をダブルクリックします。コード エディターにこのテンプレートが表示されます。  
   
-4.  **[Analysis Services への接続]** ダイアログ ボックスで接続情報を指定し、**[接続]** をクリックします。 新しいクエリ エディター ウィンドウが開き、**[スキーマ行セットの発見]** テンプレートの内容が表示されます。  
+4.  **[Analysis Services への接続]** ダイアログ ボックスで接続情報を指定し、 **[接続]**をクリックします。 新しいクエリ エディター ウィンドウが開き、 **[スキーマ行セットの発見]** テンプレートの内容が表示されます。  
   
-#### MINING MODEL CONTENT スキーマ行セットから列名を検出するには  
+#### <a name="to-discover-column-names-from-the-mining-model-content-schema-rowset"></a>MINING MODEL CONTENT スキーマ行セットから列名を検出するには  
   
-1.  **[スキーマ行セットの発見]** テンプレートを開き、**[実行]** をクリックします。  
+1.  **[スキーマ行セットの発見]** テンプレートを開き、 **[実行]**をクリックします。  
   
      **[結果]** ペインに返されるスキーマ行セットの一覧には、現在のインスタンスで入手できるすべての行セットの行セット名と行セット列が含まれます。  
   
-2.  **[クエリ]** ペインで、**\<Restriction List>** の後ろにカーソルを置き、Enter キーを押して新しい行を追加します。  
+2.  **クエリ** ウィンドウで、後にカーソルを置き**\<制限一覧 >**し、enter キーを押して新しい行を追加します。  
   
-3.  空白行にカーソルを置き、「**\<SchemaName>DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName>**」と入力します。  
+3.  カーソルを置き、空白行と種類 **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
   
      制限のセクション全体は次のようになります。  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 11
   
      **[結果]** ペインに、指定したスキーマ行セットの列名の一覧が表示されます。  
   
-#### MINING MODEL CONTENT スキーマ行セットを使用してコンテンツ クエリを作成するには  
+#### <a name="to-create-a-content-query-using-the-mining-model-content-schema-rowset"></a>MINING MODEL CONTENT スキーマ行セットを使用してコンテンツ クエリを作成するには  
   
 1.  **[スキーマ行セットの発見]** テンプレートで、"要求の種類" タグの内側のテキストを置き換えて、要求の種類を変更します。  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 11
   
      置き換えると、次のようになります。  
   
-     **\<RequestType>DMSCHEMA_MINING_MODEL_CONTENT\</RequestType>**  
+     **\<RequestType > DMSCHEMA_MINING_MODEL_CONTENT\</RequestType >**  
   
 2.  制限リストに新しい条件を追加することで、名前でマイニング モデルを指定するように制限リストを変更します。  
   
@@ -98,7 +103,7 @@ caps.handback.revision: 11
   
      [結果] ペインに、スキーマ定義および指定したモデルの値が表示されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [データ マイニング スキーマ行セット](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   

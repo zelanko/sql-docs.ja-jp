@@ -1,38 +1,49 @@
 ---
-title: "Get-PowerPivotServiceApplication コマンドレット | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Get-powerpivotserviceapplication コマンドレット |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 99e4faa1-2f87-43c6-b7ec-a97d4112c5ac
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 2c96b18bb421d264c99a683af04a51d6e60597d3
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Get-PowerPivotServiceApplication コマンドレット
+# <a name="get-powerpivotserviceapplication-cmdlet"></a>Get-PowerPivotServiceApplication コマンドレット
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
+
   1 つまたは複数の返します [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション。  
+
+>[!NOTE] 
+>この記事には、古くなった情報と例があります。 最新バージョンには、Get-help コマンドレットを使用します。
   
  **適用対象:** SharePoint 2010 および SharePoint 2013  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 Get-PowerPivotServiceApplication [[-Identity] <SPGeminiServiceApplicationPipeBind>] [<CommonParameters>]  
 ```  
   
-## Description  
+## <a name="description"></a>Description  
  Get-PowerPivotServiceApplication コマンドレットは、Identity パラメーターで指定されたサービス アプリケーションを返します。 コマンドレットに、すべてを返しますパラメーターが指定されていない場合 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 、ファーム内のアプリケーションのサービスを提供します。 各アプリケーションは、その表示名、アプリケーションの種類、および GUID によって識別されます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションの追加のプロパティを表示するには、コマンドレットに format-list オプションを追加します。  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
   
-### -Identity \<SPGeminiServiceApplicationPipeBind>  
+### <a name="-identity-spgeminiserviceapplicationpipebind"></a>Id \<SPGeminiServiceApplicationPipeBind >  
  取得するサービス アプリケーションを指定します。 値は、ファーム内のオブジェクトを一意に識別する有効な GUID である必要があります。  
   
 |||  
@@ -43,10 +54,10 @@ Get-PowerPivotServiceApplication [[-Identity] <SPGeminiServiceApplicationPipeBin
 |パイプライン入力の受け入れ|true|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### \<CommonParameters>  
- このコマンドレットは共通のパラメーターをサポートしています (Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer、および OutVariable)。 詳細については、「[About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)」を参照してください。  
+### <a name="commonparameters"></a>\<CommonParameters >  
+ このコマンドレットは共通のパラメーターをサポートしています (Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer、および OutVariable)。 詳細については、「 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)」を参照してください。  
   
-## 入力および出力  
+## <a name="inputs-and-outputs"></a>入力および出力  
  入力型は、コマンドレットにパイプできるオブジェクトの型です。 戻り値の型は、コマンドレットが返すオブジェクトの型です。  
   
 |||  
@@ -54,7 +65,7 @@ Get-PowerPivotServiceApplication [[-Identity] <SPGeminiServiceApplicationPipeBin
 |入力|[なし] :|  
 |出力|[なし] :|  
   
-## 例 1  
+## <a name="example-1"></a>例 1  
   
 ```  
 C:\PS>Get-PowerPivotServiceApplication  
@@ -62,7 +73,7 @@ C:\PS>Get-PowerPivotServiceApplication
   
  この例では、ファーム内の 1 つ以上のサービス アプリケーションを返します。  
   
-## 例 2  
+## <a name="example-2"></a>例 2  
   
 ```  
 C:\PS>Get-PowerPivotServiceApplication | format-list  
@@ -70,7 +81,7 @@ C:\PS>Get-PowerPivotServiceApplication | format-list
   
  この例では、すべてのプロパティを返します、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション。  
   
-## 例 3  
+## <a name="example-3"></a>例 3  
   
 ```  
 C:\PS>get-PowerPivotServiceApplication -Identity 1234567-890a-bcde-fghijklm  

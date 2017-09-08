@@ -1,31 +1,36 @@
 ---
-title: "Analysis Services インポート ウィザードを使用したデータ マイニング プロジェクトのインポート | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Analysis Services インポート ウィザードを使用してデータ マイニング プロジェクトのインポート |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aaa433e5bd9b8730c38e4853eda591177e592a92
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services インポート ウィザードを使用したデータ マイニング プロジェクトのインポート
-  このトピックでは、別のサーバーにある既存のデータ マイニング プロジェクトからメタデータをインポートすることによって新しいデータ マイニング プロジェクトを作成する方法を説明します。インポートには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の "**サーバーからインポート (多次元およびデータ マイニング) プロジェクト**" というテンプレートを使用します。  
+# <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Analysis Services インポート ウィザードを使用したデータ マイニング プロジェクトのインポート
+  このトピックでは、別のサーバーにある既存のデータ マイニング プロジェクトからメタデータをインポートすることによって新しいデータ マイニング プロジェクトを作成する方法を説明します。インポートには、 **の "**サーバーからインポート (多次元およびデータ マイニング) プロジェクト [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]" というテンプレートを使用します。  
   
-## データ ソース、マイニング構造、およびマイニング モデルを既存のデータ マイニング プロジェクトからインポートする  
- "**サーバーからインポート (多次元およびデータ マイニング) プロジェクト**" テンプレートを使用すると、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] によって新しいデータ マイニング プロジェクトが作成されて、指定されたデータ マイニング プロジェクトからメタデータがコピーされます。 新しいプロジェクトには、インポート元の ssASnoversion データベースと同じデータ ソース、データ ソース ビュー、マイニング構造、およびマイニング モデルが含まれています。 したがって、インポート プロセスが完了し、オブジェクトが作成された後、マイニング構造と依存モデルのトレーニングによって、それらのオブジェクトに自分でデータを投入する必要があります。  
+## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>データ ソース、マイニング構造、およびマイニング モデルを既存のデータ マイニング プロジェクトからインポートする  
+ " **サーバーからインポート (多次元およびデータ マイニング) プロジェクト**" テンプレートを使用すると、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] によって新しいデータ マイニング プロジェクトが作成されて、指定されたデータ マイニング プロジェクトからメタデータがコピーされます。 新しいプロジェクトには、インポート元の ssASnoversion データベースと同じデータ ソース、データ ソース ビュー、マイニング構造、およびマイニング モデルが含まれています。 したがって、インポート プロセスが完了し、オブジェクトが作成された後、マイニング構造と依存モデルのトレーニングによって、それらのオブジェクトに自分でデータを投入する必要があります。  
   
 -   新しいデータ マイニング プロジェクトに、インポート元のサーバーのデータそのものはコピーされません。インポートされるのは、データ ソースとデータ ソース ビューの定義だけです。 したがって、インポート プロセスが完了し、オブジェクトが作成された後、マイニング構造と依存モデルをトレーニングすることによって、それらのオブジェクトに自分でデータを投入する必要があります。 モデルと構造のトレーニングは、データ マイニング デザイナーの **[すべて処理]** コマンドを使用して実行できます。  
   
--   インポートするプロジェクトが以前のバージョンの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で作成されたものである場合、データ ソースに使用されているプロバイダーが、プロジェクトのインポート先となるサーバーにはインストールされていない可能性があります。 インポートしたマイニング構造を処理しているときにエラーが発生した場合、各データ ソースを右クリックし、**[デザイナーを開く]** を選択して、接続文字列を編集し、プロバイダーのプロパティを確認します。  
+-   インポートするプロジェクトが以前のバージョンの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で作成されたものである場合、データ ソースに使用されているプロバイダーが、プロジェクトのインポート先となるサーバーにはインストールされていない可能性があります。 インポートしたマイニング構造を処理しているときにエラーが発生した場合、各データ ソースを右クリックし、 **[デザイナーを開く]** を選択して、接続文字列を編集し、プロバイダーのプロパティを確認します。  
   
      データ マイニング オブジェクトを処理したりデータ マイニング モデルを照会したりする際のアカウントに、データ ソースに対する必要な権限があるかどうかも、場合によってはこの時点で確認する必要があります。  
   
@@ -35,11 +40,11 @@ caps.handback.revision: 6
   
      多次元モードまたはデータ マイニング モードで動作している [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスを使用するように既定の配置データベースを変更できない場合でも、 **[プロジェクトのプロパティ]** ダイアログ ボックスを使用していつでも配置データベースを指定できます。  
   
-#### 既存のデータ マイニング プロジェクトをインポートして新しいデータ マイニング プロジェクトを作成するには  
+#### <a name="to-create-a-new-data-mining-project-by-importing-an-existing-data-mining-project"></a>既存のデータ マイニング プロジェクトをインポートして新しいデータ マイニング プロジェクトを作成するには  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の **[ファイル]** メニューの **[新規作成]**をクリックし、 **[プロジェクト]**をクリックします。  
   
-2.  **[新しいプロジェクト]** ダイアログ ボックスの **[インストールされているテンプレート]** で **[ビジネス インテリジェンス]** をクリックし、**[Analysis Services]** をクリックして、**[サーバーからインポート (多次元/データ マイニング)]** をクリックします。  
+2.  **[新しいプロジェクト]** ダイアログ ボックスの **[インストールされているテンプレート]**で **[ビジネス インテリジェンス]**をクリックし、 **[Analysis Services]**をクリックして、 **[サーバーからインポート (多次元/データ マイニング)]**をクリックします。  
   
 3.  **[名前]**でプロジェクトの名前を入力し、場所とソリューション名を指定してから **[OK]**をクリックします。  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 6
   
      [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用して、新しいプロジェクトが自動的に表示されます。  
   
-## 参照  
- [プロジェクトのプロパティ (SSAS テーブル)](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
+## <a name="see-also"></a>参照  
+ [プロジェクトのプロパティ &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   
   

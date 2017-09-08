@@ -1,24 +1,29 @@
 ---
-title: "Discover イベントのデータ列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Discover イベントのイベント カテゴリ"
+title: "Discover イベントのデータ列 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Discover Events event category
 ms.assetid: 10ec598e-5b51-4767-b4f7-42e261d96a40
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1d4275dc8ed85c907a458c5772a57153dc88fa0e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Discover イベントのデータ列
+# <a name="discover-events-data-columns"></a>Discover イベントのデータ列
   Discover イベント カテゴリには、次のイベント クラスがあります。  
   
 -   Discover Begin クラス  
@@ -27,7 +32,7 @@ caps.handback.revision: 29
   
  次の表は、これらのイベント クラスのデータ列の一覧です。  
   
-## Discover Begin クラスのデータ列  
+## <a name="discover-begin-classdata-columns"></a>Discover Begin クラスのデータ列  
   
 |||||  
 |-|-|-|-|  
@@ -46,10 +51,10 @@ caps.handback.revision: 29
 |NTCanonicalUserName|40|8|Discover イベントに関連付けられた Windows ユーザー名を表します。 ユーザー名は正規の形式です。 たとえば、engineering.microsoft.com/software/user などです。|  
 |SPID|41|1|Discover イベントに関連付けられたユーザー セッションを一意に識別するサーバー プロセス ID (SPID) を表します。 SPID は、XMLA で使用するセッション GUID に直接対応します。|  
 |TextData|42|9|イベントに関連付けられたテキスト データを表します。|  
-|ServerName|43|8|Discover イベントが発生した [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前を表します。|  
+|ServerName|43|8|Discover イベントが発生した [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前を表します。|  
 |RequestProperties|45|9|Discover イベントに関連付けられた XML for Analysis (XMLA) 要求プロパティを表します。|  
   
-## Discover End クラスのデータ列  
+## <a name="discover-end-classdata-columns"></a>Discover End クラスのデータ列  
   
 |||||  
 |-|-|-|-|  
@@ -77,7 +82,7 @@ caps.handback.revision: 29
 |ServerName|43|8|Discover イベントが発生した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前を表します。|  
 |RequestProperties|45|9|XMLA 要求のプロパティを表します。|  
   
-## 参照  
- [Discover イベントのイベント カテゴリ](../../analysis-services/trace-events/discover-events-event-category.md)  
+## <a name="see-also"></a>参照  
+ [Discover Events Event Category](../../analysis-services/trace-events/discover-events-event-category.md)  
   
   

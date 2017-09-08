@@ -1,24 +1,29 @@
 ---
-title: "テーブルと列 (SSAS テーブル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "テーブルと列 (SSAS テーブル) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e941e6c084842238d429c7a653efbad24fb56520
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# テーブルと列 (SSAS テーブル)
+# <a name="tables-and-columns-ssas-tabular"></a>テーブルと列 (SSAS テーブル)
   テーブルのインポート ウィザードを使用してモデルにテーブルとデータを追加したら、新しいデータ列の追加、テーブル間のリレーションシップの作成、データを拡張する計算の定義、テーブルを見やすくするためのデータのフィルター処理と並べ替えなどを行ってテーブルを操作できます。  
   
  このトピックのセクション:  
@@ -50,7 +55,7 @@ caps.handback.revision: 13
   
 -   テーブルにコピーまたは貼り付けられたリレーショナル データと表形式 (HTML) データの組み合わせ。  
   
- データをインポートすると、各テーブルやビュー、シート、データのファイルがテーブルとしてモデル デザイナーに追加されます。 通常はソースごとに別々のタブにデータを追加しますが、**[貼り付け]** および **[貼り付け追加]** を使用すると 1 つのテーブルにデータを結合することができます。 詳細については、「[ &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/copy-and-paste-data-ssas-tabular.md)」を参照してください。  
+ データをインポートすると、各テーブルやビュー、シート、データのファイルがテーブルとしてモデル デザイナーに追加されます。 通常はソースごとに別々のタブにデータを追加しますが、**[貼り付け]** および **[貼り付け追加]** を使用すると 1 つのテーブルにデータを結合することができます。 詳細については、「[ &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)」を参照してください。  
   
  必要なデータをすべて追加した後で、テーブル、参照、または参照関連値の間の追加のリレーションシップを他のテーブルで作成したり、新しい計算列を追加して派生値を作成したりできます。  
   
@@ -63,13 +68,13 @@ caps.handback.revision: 13
 |[列のテーブルへの追加 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)|テーブル定義にソース列を追加する方法について説明します。|  
 |[列の削除 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/delete-a-column-ssas-tabular.md)|モデル デザイナー、または [テーブルのプロパティ] ダイアログ ボックスを使用して、モデル テーブルの列を削除する方法について説明します。|  
 |[テーブル、列、または行のフィルターのマッピングの変更 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)|[テーブルのプロパティの編集] ダイアログ ボックスのテーブルのプレビューまたは SQL クエリ エディターを使用して、テーブル、列、または行のフィルターのマッピングを変更する方法について説明します。|  
-|[タイム インテリジェンスで使用する [日付テーブルとしてマーク] の指定 &#40;SSAS テーブル&#41;](../Topic/Specify%20Mark%20as%20Date%20Table%20for%20use%20with%20Time%20Intelligence%20\(SSAS%20Tabular\).md)|[日付テーブルとしてマーク] ダイアログ ボックスを使用して、日付テーブルと一意識別子列を指定する方法について説明します。 DAX 式でタイム インテリジェンス関数を使用する場合は、日付テーブルと一意識別子の指定が必要です。|  
+|[タイム インテリジェンスで使用する [日付テーブルとしてマーク] の指定 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|[日付テーブルとしてマーク] ダイアログ ボックスを使用して、日付テーブルと一意識別子列を指定する方法について説明します。 DAX 式でタイム インテリジェンス関数を使用する場合は、日付テーブルと一意識別子の指定が必要です。|  
 |[テーブルの追加 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/add-a-table-ssas-tabular.md)|既存のデータ ソース接続を使用して、データ ソースからテーブルを追加する方法について説明します。|  
 |[テーブルの削除 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)|モデル ワークスペース データベース内の不要なテーブルを削除する方法について説明します。|  
 |[テーブルまたは列名の変更 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|モデル内で識別できるようにテーブルまたは列の名前を変更する方法について説明します。|  
 |[列のデータ型の設定 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|列のデータ型を変更する方法について説明します。 データ型は、列のデータの格納および表示方法を定義します。|  
 |[列の非表示または固定 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|表示しない列を非表示にする方法、およびモデルのある領域内の特定の列を固定 (ロック) して、その領域を表示したまま別の領域にスクロールする方法について説明します。|  
-|[計算列 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)|このセクションのトピックでは、計算列を使用して集計データをモデルに追加する方法について説明します。|  
-|[データのフィルター処理と並べ替え &#40;SSAS テーブル&#41;](../Topic/Filter%20and%20Sort%20Data%20\(SSAS%20Tabular\).md)|このセクションのトピックでは、モデル デザイナーのコントロールを使用してデータのフィルター処理または並べ替えを実行する方法について説明します。|  
+|[計算列 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)|このセクションのトピックでは、計算列を使用して集計データをモデルに追加する方法について説明します。|  
+|[データのフィルター処理と並べ替え &#40;SSAS テーブル&#41;](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|このセクションのトピックでは、モデル デザイナーのコントロールを使用してデータのフィルター処理または並べ替えを実行する方法について説明します。|  
   
   

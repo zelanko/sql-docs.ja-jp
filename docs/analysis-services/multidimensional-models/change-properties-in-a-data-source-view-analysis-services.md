@@ -1,31 +1,36 @@
 ---
-title: "データ ソース ビューのプロパティの変更 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "わかりやすい名前 [Analysis Services]"
-  - "名前 [Analysis Services], データ ソース ビュー"
-  - "テーブルの参照"
-  - "テーブルの表示"
-  - "データ ソース ビュー [Analysis Services], テーブル"
-  - "テーブル [Analysis Services], データ ソース ビュー"
+title: "データ ソース ビュー (Analysis Services) でプロパティを変更 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- friendly names [Analysis Services]
+- names [Analysis Services], data source views
+- viewing tables
+- displaying tables
+- data source views [Analysis Services], tables
+- tables [Analysis Services], data source views
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d2d7af5e8fa2adb597380aded86778e57135ae0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# データ ソース ビューのプロパティの変更 (Analysis Services)
+# <a name="change-properties-in-a-data-source-view-analysis-services"></a>データ ソース ビューのプロパティの変更 (Analysis Services)
   データ ソース ビュー ウィザードを使用してデータ ソース ビューを定義し、テーブル、ビュー、名前付き計算、および名前付きクエリをデータ ソース ビューに追加した後、以下の項目に関するプロパティを変更できます。  
   
 -   データ ソース ビューの一致条件  
@@ -38,7 +43,7 @@ caps.handback.revision: 34
   
  変更できないデータ ソースから取得したオブジェクト メタデータを表示することもできます。  
   
-## データ ソース ビューのプロパティの表示または変更  
+## <a name="viewing-or-changing-data-source-view-properties"></a>データ ソース ビューのプロパティの表示または変更  
  データ ソース ビューの説明以外のデータ ソース ビューのプロパティは、データ ソース ビューを最初に定義したときにデータ ソース ビュー ウィザードで設定されます。 次の表は、データ ソース ビューのプロパティの一覧およびその説明を示します。  
   
 > [!NOTE]  
@@ -53,12 +58,12 @@ caps.handback.revision: 34
 |RetrieveRelationships|リレーションシップをデータベースから取得するかどうかを指定します。 既定値は True です。|  
 |SchemaRestriction|データ ソースから取得されるスキーマに制限がある場合は、その制限を指定します。 既定では、スキーマの制限は存在しません。|  
   
-## DataTable プロパティの表示または変更  
+## <a name="viewing-or-changing-datatable-properties"></a>DataTable プロパティの表示または変更  
  **DataTable** プロパティは、データ ソース ビュー内のテーブル、ビュー、および名前付きクエリのプロパティです。 これらのプロパティは、これらのオブジェクトのいずれかがデータ ソース ビューに追加されたときに設定されます。 次の表は、データ ソース ビューの **DataTable** オブジェクトのプロパティの一覧およびその説明を示します。  
   
 |プロパティ|Description|  
 |--------------|-----------------|  
-|AllowChangesDuringGeneration|スキーマ生成ウィザードに、再生成中のデータ ソース ビューの上書き権限があるかどうかを指定します。 このプロパティは、スキーマ生成ウィザードによって最初に生成されたテーブルのみに存在します。 詳細については、「[増分生成の理解](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)」を参照してください。|  
+|AllowChangesDuringGeneration|スキーマ生成ウィザードに、再生成中のデータ ソース ビューの上書き権限があるかどうかを指定します。 このプロパティは、スキーマ生成ウィザードによって最初に生成されたテーブルのみに存在します。 詳細については、「 [増分生成の理解](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)」を参照してください。|  
 |DataSource|オブジェクトのデータ ソースを指定します。 このプロパティを編集することはできません。|  
 |Description|テーブル、ビュー、または名前付きクエリの説明を指定します。 基になるデータベース テーブルまたはビューに、拡張プロパティとして格納されている説明がある場合に、この値が表示されます。 このプロパティは編集できます。|  
 |FriendlyName|ユーザーが理解しやすいか、サブジェクト領域との関連性が高いテーブル名またはビュー名を指定します。 既定では、テーブルまたはビューの **FriendlyName** プロパティは、テーブルまたはビューの **Name** プロパティと同じです。 **FriendlyName** プロパティは、テーブルまたはビューを基にしてオブジェクト名を定義するときに、OLAP およびデータ マイニング オブジェクトによって使用されます。 このプロパティは編集できます。|  
@@ -67,21 +72,21 @@ caps.handback.revision: 34
 |スキーマ|テーブル、ビュー、または名前付きクエリに適用されるデータベース スキーマを指定します。 このプロパティは編集できません。|  
 |TableType|テーブル、ビュー、または名前付きクエリのテーブルの種類を指定します。 このプロパティは編集できません。|  
   
-## DataColumn プロパティの表示または変更  
+## <a name="viewing-or-changing-datacolumn-properties"></a>DataColumn プロパティの表示または変更  
  **DataColumn** プロパティは、データ ソース ビュー内のテーブル、ビュー、および名前付きクエリ内の列のプロパティです。 これらのプロパティは、これらのオブジェクトのいずれかが、基になるテーブルかビューまたは名前付きクエリからデータ ソース ビューに追加されるか、名前付き計算で定義されてデータ ソース ビューに追加されるときに設定されます。 次の表は、データ ソース ビューの **DataColumn** オブジェクトのプロパティの一覧およびその説明を示します。  
   
 |プロパティ|Description|  
 |--------------|-----------------|  
 |AllowNull|基になるテーブル内の列、値、または名前付きクエリに基づいて、列の NULL 値許容プロパティを指定します。 このプロパティは編集できません。|  
 |DataType|基になるテーブル内の列、値、または名前付きクエリに基づいて列のデータ型を指定します。 このプロパティは直接編集できません。 ただし、テーブルまたはビューの列のデータ型を変更する必要がある場合は、列を目的のデータ型に変換する名前付きクエリにテーブルを置換します。|  
-|DateTimeMode|**DateTime** 列の日付シリアル化形式を指定します。 既定値は **UnspecifiedLocal** です。 このプロパティは編集できます。|  
+|DateTimeMode|**DateTime** 列の日付シリアル化形式を指定します。 既定値は **UnspecifiedLocal**です。 このプロパティは編集できます。|  
 |Description|列の説明を指定します。 基になるデータベース列に、拡張プロパティとして格納されている説明がある場合に、この値が表示されます。 このプロパティは編集できます。|  
 |FriendlyName|ユーザーが理解しやすいか、サブジェクト領域との関連性が高い、テーブルまたはビューの列の名前を指定します。 既定では、テーブルまたはビューの列の **FriendlyName** プロパティは、列の **Name** プロパティと同じです。 **FriendlyName** プロパティは、テーブルまたはビューの列を基にして属性を定義するときに、OLAP およびデータ マイニング オブジェクトによって使用されます。 このプロパティは編集できます。|  
 |長さ|基になるテーブルまたはビュー内の列のデータに基づいて、列の最大長を指定します。|  
 |名前|基になる列の名前、または名前付き計算の名前を指定します。 **Name** プロパティは、名前付き計算を基にして属性を定義するときに、OLAP およびデータ マイニング オブジェクトによって使用されます。 このプロパティは、名前付き計算に対してのみ編集できます。|  
   
-## 参照  
- [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
+## <a name="see-also"></a>参照  
+ [多次元モデル内のデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [データ ソース ビュー デザイナーでのダイアグラムの操作 (Analysis Services)](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

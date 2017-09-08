@@ -1,27 +1,32 @@
 ---
-title: "列のテーブルへの追加 (SSAS テーブル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "テーブル (SSAS テーブル) に列を追加 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 170b1c7aceb4a642343f00faa6dc6ffbb3f6cbbb
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# 列のテーブルへの追加 (SSAS テーブル)
+# <a name="add-columns-to-a-table-ssas-tabular"></a>列のテーブルへの追加 (SSAS テーブル)
   このトピックでは、既存のテーブルに列を追加する方法について説明します。  
   
-## データ ソースからの列の追加  
+## <a name="add-columns-from-the-data-source"></a>データ ソースからの列の追加  
  テーブルのインポート ウィザードを使用してデータ ソース テーブルからデータをインポートすると、ソース テーブル内のすべての列を含むテーブルがモデルに新しく作成されます。ただし、[プレビュー] 機能および [フィルター] 機能を使用して特定の列を除外した場合は、このテーブルには選択したフィルター処理済みのデータのみが含まれます。 また、インポートする特定の列のみを指定する SQL クエリを作成することもできます。 ただし、モデル テーブルに追加したいその他の列がソース テーブルにあることが後で判明する場合や DAX 式で算定された値を含む計算列を追加する必要がある場合があります。  
   
  たとえば、データ ソースから最初にインポートしたときに、テーブルのインポート ウィザードのプレビューおよびフィルター機能を使用して、ソース テーブルから限定された数の列を選択し、後でソース テーブルに存在するがモデル テーブルにはまだ存在しない別の列を追加する必要があると判断したとします。 または、データ ソースで FactSales テーブルに AdjustedProfit  列が追加され、モデル内の Sales テーブルにも同じ AdjustedProfit 列とデータを追加したいとします。  
@@ -34,36 +39,36 @@ caps.handback.revision: 11
 > [!NOTE]  
 >  テーブルのインポート ウィザードを最初に使用してデータをインポートしたときに、SQL クエリを使用してテーブルと列を選択した場合、モデル テーブルに列を追加するには、[テーブルのプロパティの編集] ダイアログ ボックスで再度 SQL クエリを使用する必要があります。  
   
-#### [テーブルのプロパティの編集] ダイアログ ボックスを使用してデータ ソースから列を追加するには  
+#### <a name="to-add-a-column-from-the-data-source-by-using-the-edit-table-properties-dialog-box"></a>[テーブルのプロパティの編集] ダイアログ ボックスを使用してデータ ソースから列を追加するには  
   
-1.  モデル デザイナーで列を追加するテーブルをクリックし、**[テーブル]** メニュー、**[テーブルのプロパティ]** の順にクリックします。  
+1.  モデル デザイナーで列を追加するテーブルをクリックし、 **[テーブル]** メニュー、  **[テーブルのプロパティ]**の順にクリックします。  
   
 2.  **[テーブルのプロパティの編集]** ダイアログ ボックスのテーブル プレビュー ウィンドウで、追加するソース列を選択してから、[OK] をクリックします。 既にテーブル定義に含まれている列はチェックされています。  
   
-## 計算列の追加  
- 計算列では、各行の値の定義に DAX 式を使用します。 たとえば、各行に 1 を加算する単純な数式 (=1) を使用した計算列を作成できます。 計算列には、モデル内のその他のデータに基づき値を計算する複雑な式が含まれることもあります。 計算列については、他のトピックで詳しく説明します。 詳細については、「[計算列 (SSAS テーブル)](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)」を参照してください。  
+## <a name="add-a-calculated-column"></a>計算列の追加  
+ 計算列では、各行の値の定義に DAX 式を使用します。 たとえば、各行に 1 を加算する単純な数式 (=1) を使用した計算列を作成できます。 計算列には、モデル内のその他のデータに基づき値を計算する複雑な式が含まれることもあります。 計算列については、他のトピックで詳しく説明します。 詳細については、「[計算列 (SSAS テーブル)](../../analysis-services/tabular-models/ssas-calculated-columns.md)」を参照してください。  
   
-#### 計算列を作成するには  
+#### <a name="to-create-a-calculated-column"></a>計算列を作成するには  
   
-1.  モデル デザイナーのデータ ビューで、新しい空白の計算列を追加するテーブルを選択し、右端の列にスクロールするか、**[列]** メニューをクリックしてから **[列の追加]** をクリックします。  
+1.  モデル デザイナーのデータ ビューで、新しい空白の計算列を追加するテーブルを選択し、右端の列にスクロールするか、 **[列]** メニューをクリックしてから **[列の追加]**をクリックします。  
   
-     2 つの既存の列の間に新しい列を作成するには、既存の列をクリックしてから **[列の挿入]** をクリックします。  
+     2 つの既存の列の間に新しい列を作成するには、既存の列をクリックしてから **[列の挿入]**をクリックします。  
   
 2.  各行の属性を追加するには、数式バーに DAX 式を入力します。  
   
-## 空白列の追加  
- モデル テーブルに名前付きの空白列を作成できます。 空白の列は、別のソースのデータを貼り付ける場合に便利です。 貼り付けたデータは、インポートされたデータとは異なる方法で保存されることに留意してください。 詳細については、「[データのコピーと貼り付け (SSAS テーブル)](../../analysis-services/tabular-models/copy-and-paste-data-ssas-tabular.md)」を参照してください。  
+## <a name="add-a-blank-column"></a>空白列の追加  
+ モデル テーブルに名前付きの空白列を作成できます。 空白の列は、別のソースのデータを貼り付ける場合に便利です。 貼り付けたデータは、インポートされたデータとは異なる方法で保存されることに留意してください。 詳細については、「[データのコピーと貼り付け (SSAS テーブル)](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)」を参照してください。  
   
-#### 名前付きの空白列を作成するには  
+#### <a name="to-create-a-named-blank-column"></a>名前付きの空白列を作成するには  
   
-1.  モデル デザイナーのデータ ビューで、空白列を追加するテーブルを選択し、右端の列にスクロールするか、**[列]** メニューをクリックしてから **[列の追加]** をクリックします。  
+1.  モデル デザイナーのデータ ビューで、空白列を追加するテーブルを選択し、右端の列にスクロールするか、 **[列]** メニューをクリックしてから **[列の追加]**をクリックします。  
   
-     2 つの既存の列の間に新しい列を作成するには、既存の列をクリックしてから **[列の挿入]** をクリックします。  
+     2 つの既存の列の間に新しい列を作成するには、既存の列をクリックしてから **[列の挿入]**をクリックします。  
   
 2.  一番上のセルをクリックし、名前を入力してから Enter キーを押します。  
   
-## 参照  
- [[テーブルのプロパティの編集] ダイアログ ボックス (SSAS)](../Topic/Edit%20Table%20Properties%20Dialog%20Box%20\(SSAS\).md)   
- [テーブル、列、または行のフィルターのマッピングの変更 (SSAS テーブル)](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+## <a name="see-also"></a>参照  
+ [[テーブルのプロパティの編集] ダイアログ ボックス (SSAS)](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
+ [テーブル、列、または行のフィルターのマッピングの変更 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

@@ -1,22 +1,27 @@
 ---
-title: "ファイルの読み込みと保存のイベント カテゴリ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "ファイルの読み込みと保存のイベント カテゴリ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 8051a7d8-d815-45e1-a764-a5992b07b4fd
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 850f34801904ebf17e82991facceb89a89c67f56
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# ファイルの読み込みと保存のイベント カテゴリ
+# <a name="file-load-and-save-event-category"></a>ファイルの読み込みと保存のイベント カテゴリ
   ファイルの読み込みと保存のイベント カテゴリには、次の表に示したイベント クラスがあります。  
   
 |Event Class|イベント ID|Description|  
@@ -32,7 +37,7 @@ caps.handback.revision: 6
   
  ファイルの読み込みと保存の各イベント クラスに関連する列については、「 [File Load and Save Data Columns](../../analysis-services/trace-events/file-load-and-save-data-columns.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Analysis Services トレース イベント](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

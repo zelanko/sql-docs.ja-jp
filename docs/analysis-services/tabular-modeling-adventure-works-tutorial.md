@@ -1,36 +1,44 @@
 ---
-title: "テーブル モデリング (Adventure Works チュートリアル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-keywords: 
-  - "Analysis Services"
-  - "テーブル モデル"
-  - "チュートリアル"
-  - "SSAS"
+title: "テーブル モデリング (Adventure Works チュートリアル) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 04/19/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+keywords:
+- Analysis Services
+- "テーブル モデル"
+- "チュートリアル"
+- SSAS
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 30028afc0a7d994441a0958b207b7ab70c40f133
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# テーブル モデリング (Adventure Works チュートリアル)
-このチュートリアルでは、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] を使用して、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Analysis Services テーブル モデルを作成する方法を学習します。  
+# <a name="tabular-modeling-adventure-works-tutorial"></a>テーブル モデリング (Adventure Works チュートリアル)
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+
+このチュートリアルでの Analysis Services 表形式モデルを作成する方法のレッスンでは、[互換性レベル 1200](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)を使用して[SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)、Analysis Services にモデルを配置およびサーバーをオンプレミスまたは Azure です。  
+ 
+SQL Server 2017 または Azure Analysis Services を使用して、1400 互換性のレベルでモデルを作成、使用する場合、 [Azure Analysis Services - Adventure Works チュートリアル](https://review.docs.microsoft.com/azure/analysis-services/tutorials/aas-adventure-works-tutorial?branch=master)です。 この更新されたバージョンは、新しい、最新のデータの取得機能を使用して接続し、ソース データをインポートし、パーティションを構成する、M 言語を使用します。
+ 
   
+## <a name="what-youll-learn"></a>学習する内容   
   
-## 学習する内容  
-このチュートリアルでは次のことを学習します。  
-  
--   [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で新しいテーブル モデル プロジェクトを作成する方法。  
+-   SSDT で新しいテーブル モデル プロジェクトを作成する方法。
   
 -   SQLServer リレーショナル データベースからテーブル モデル プロジェクトにデータをインポートする方法。  
   
@@ -44,60 +52,64 @@ caps.handback.revision: 35
   
 -   ユーザー メンバーのロールを作成して、モデル オブジェクトとデータを保護する方法。  
   
--   テーブル モデルを、サンドボックスや、テーブル モードで実行されている Analysis Services の実稼働インスタンスに配置する方法。  
+-   Analysis Services サーバーにオンプレミスまたは Azure では、表形式モデルを展開する方法です。  
   
-## Scenario  
-このチュートリアルには、[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] という架空の会社が登場します。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]  は、特殊合金自転車を北アメリカ、ヨーロッパ、およびアジアの市場に供給する大規模な多国籍製造会社です。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] はワシントン州のボセルに本社を置き、500 名の従業員を抱えています。 さらに、[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] の各市場には、その地域を担当する販売チームがいます。  
+## <a name="scenario"></a>Scenario  
+このチュートリアルは、Adventure Works Cycles、架空の会社に基づいています。 Adventure Works は、生成し、金属製自転車を北アメリカ、ヨーロッパ、およびアジアの市場を配布する、大規模な多国籍製造会社です。 ワシントン州ボセルに本社では、会社には、500 の作業者が採用しています。 さらに、Adventure Works では、市場には、全体で複数の地域販売チームが採用しています。  
   
 あなたは、販売チーム、マーケティング チーム、および上級管理職のデータ分析ニーズにより高度に対応するべく、AdventureWorksDW サンプル データベース内のインターネット販売データを分析するためのテーブル モデルを作成します。  
   
-このチュートリアル (および Adventure Works Internet Sales テーブル モデル) を完了するには、多数のレッスンを完了する必要があります。 各レッスンに多数の実習が含まれています。レッスンを完了するには、各実習を順序どおりに完了する必要があります。 特定のレッスン内には、同様の結果を達成する実習もいくつか存在しますが、どのように完了するかは実習ごとに少しずつ違います。 これは、同じ実習を完了するのにも複数の方法が存在する場合がよくあるためです。また、前の実習で学習したスキルが身についているかどうかを確認するためでもあります。  
+このチュートリアル (および Adventure Works Internet Sales テーブル モデル) を完了するには、多数のレッスンを完了する必要があります。 各レッスンに多数の実習が含まれています。レッスンを完了するには、各実習を順序どおりに完了する必要があります。 特定のレッスンである可能性があります、同様の結果を実現するいくつかのタスクが、各タスクを完了する方法は若干異なります。 これは、特定のタスクを完了して、前のタスクで学習したスキルが身に複数の 1 つの方法が多くの場合、ことを示します。  
   
-各レッスンの目的は、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] に含まれる多数の機能を使用して、インメモリ モードで実行される基本的なテーブル モデルを作成できるようになることです。 各レッスンは前のレッスンに基づいているので、順序どおりに完了する必要があります。 すべてのレッスンを完了すると、Analysis Services サーバー上に Adventure Works Internet Sales サンプル テーブル モデルが作成され、配置されます。  
+各レッスンの目的は、SSDT に含まれる機能の多くを使用して、インメモリ モードで実行されている基本的な表形式モデルの作成を指示します。 各レッスンは前のレッスンに基づいているので、順序どおりに完了する必要があります。 すべてのレッスンを完了したら、作成し、Adventure Works Internet Sales サンプル テーブル モデルの Analysis Services サーバーを展開したされます。  
   
 このチュートリアルでは、配置したテーブル モデル データベースを SQL Server Management Studio で管理する方法や、レポート クライアント アプリケーションを使用して配置済みのモデルに接続し、モデル データを参照する方法については説明しません。  
   
-## 前提条件  
-このチュートリアルを完了するには、以下が事前にインストールされている必要があります。  
+## <a name="prerequisites"></a>前提条件  
+このチュートリアルを完了するために次の前提条件が必要です。  
   
--   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Analysis Services (テーブル モードで実行)。  
+-   最新バージョン[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]します。 [最新バージョンを入手](https://msdn.microsoft.com/library/mt204009.aspx)です。
+
+-   SQL Server Management Studio の最新バージョン。 [最新バージョンを入手](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)です。 
   
--   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]」を参照してください。 [最新のバージョンを入手する。](https://msdn.microsoft.com/library/mt204009.aspx)  
+-   などのクライアント アプリケーション[Power BI Desktop](https://powerbi.microsoft.com/desktop/)または[!INCLUDE[msCoName](../includes/msconame-md.md)]Excel です。    
   
--   Adventure Works DW 2014 サンプル データベース。 このサンプル データベースには、このチュートリアルを完了するのに必要なデータが含まれています。 サンプル データベースをダウンロードにするには、[http://go.microsoft.com/fwlink/?LinkID=335807](http://go.microsoft.com/fwlink/?LinkID=335807) を参照してください。  
+-   Adventure Works DW 2014 サンプル データベースと SQL Server インスタンス。 このサンプル データベースには、このチュートリアルを完了するのに必要なデータが含まれています。 [最新バージョンを入手](http://go.microsoft.com/fwlink/?LinkID=335807)です。  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]  Excel 2003 以降 (レッスン 11 で "Excel で分析" 機能を使用するため)。  
+
+-   Azure Analysis Services または SQL Server 2016 またはそれ以降の Analysis Services インスタンスにモデルを配置します。 [Azure Analysis Services の無料試用版にサインアップする](https://azure.microsoft.com/services/analysis-services/)です。
   
-## レッスン  
+## <a name="lessons"></a>レッスン  
 このチュートリアルには次のレッスンが含まれています。  
   
 |レッスン|推定所要時間|  
 |----------|------------------------------|  
 |[レッスン 1: 新しいテーブル モデル プロジェクトの作成](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)|10 分|  
 |[レッスン 2: データの追加](../analysis-services/lesson-2-add-data.md)|20 分|  
-|[レッスン 3: 列名の変更](../analysis-services/lesson-3-rename-columns.md)|20 分|  
-|[レッスン 4 : 日付テーブルとしてマーク](../analysis-services/lesson-4-mark-as-date-table.md)|3 分|  
-|[レッスン 5: リレーションシップの作成](../analysis-services/lesson-5-create-relationships.md)|10 分|  
-|[レッスン 6: 計算列の作成](../analysis-services/lesson-6-create-calculated-columns.md)|15 分|  
-|[レッスン 7: メジャーの作成](../analysis-services/lesson-7-create-measures.md)|30 分|  
-|[レッスン 8: 主要業績評価指標の作成](../analysis-services/lesson-8-create-key-performance-indicators.md)|15 分|  
-|[レッスン 9: パースペクティブの作成](../Topic/Lesson%209:%20Create%20Perspectives.md)|5 分|  
-|[レッスン 10: 階層の作成](../analysis-services/lesson-10-create-hierarchies.md)|20 分|  
-|[レッスン 11: パーティションの作成](../analysis-services/lesson-11-create-partitions.md)|15 分|  
-|[レッスン 12: ロールの作成](../analysis-services/lesson-12-create-roles.md)|15 分|  
-|[レッスン 13: Excel での分析](../analysis-services/lesson-13-analyze-in-excel.md)|20 分|  
-|[レッスン 14: 配置](../analysis-services/lesson-14-deploy.md)|5 分|  
+|[レッスン 3: 日付テーブルとしてマーク](../analysis-services/lesson-3-mark-as-date-table.md)|3 分|  
+|[レッスン 4: リレーションシップを作成します。](../analysis-services/lesson-4-create-relationships.md)|10 分|  
+|[レッスン 5: 計算列を作成します。](../analysis-services/lesson-5-create-calculated-columns.md)|15 分|
+|[レッスン 6: メジャーを作成します。](../analysis-services/lesson-6-create-measures.md)|30 分|  
+|[レッスン 7: 主要業績評価指標の作成](../analysis-services/lesson-7-create-key-performance-indicators.md)|15 分|  
+|[レッスン 8: パースペクティブを作成します。](../analysis-services/lesson-8-create-perspectives.md)|5 分|  
+|[レッスン 9: 階層を作成します。](../analysis-services/lesson-9-create-hierarchies.md)|20 分|  
+|[レッスン 10: パーティションを作成します。](../analysis-services/lesson-10-create-partitions.md)|15 分|  
+|[レッスン 11: ロールを作成します。](../analysis-services/lesson-11-create-roles.md)|15 分|  
+|[レッスン 12: Excel での分析](../analysis-services/lesson-12-analyze-in-excel.md)|20 分| 
+|[レッスン 13: 配置](../analysis-services/lesson-13-deploy.md)|5 分|  
   
-## 補足のレッスン  
-このチュートリアルには、[補足レッスン](../Topic/Supplemental%20Lessons.md)も含まれています。 このセクションのトピックはチュートリアルを完了するのに必須ではありませんが、高度なテーブル モデル作成機能をより深く理解するために役立ちます。  
+## <a name="supplemental-lessons"></a>補足のレッスン  
+このチュートリアルには、 [補足レッスン](http://msdn.microsoft.com/library/2018456f-b4a6-496c-89fb-043c62d8b82e)も含まれています。 このセクションのトピックはチュートリアルを完了するのに必須ではありませんが、高度なテーブル モデル作成機能をより深く理解するために役立ちます。  
   
 |レッスン|推定所要時間|  
 |----------|------------------------------|  
-|[行フィルターを使用した動的なセキュリティの実装](../analysis-services/implement-dynamic-security-by-using-row-filters.md)|30 分|  
-|[Power View レポートのレポート プロパティの構成](../analysis-services/configure-reporting-properties-for-power-view-reports.md)|30 分|  
+|[行フィルターを使用した動的なセキュリティの実装](../analysis-services/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md)|30 分|  
+
   
-## 次の手順  
-チュートリアルを開始するには、[「レッスン 1: 新しいテーブル モデル プロジェクトの作成」](../analysis-services/lesson-1-create-a-new-tabular-model-project.md) に進みます。  
+## <a name="next-step"></a>次の手順  
+チュートリアルを開始するには、 [「レッスン 1: 新しいテーブル モデル プロジェクトの作成」](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)に進みます。  
   
   
   
+
+

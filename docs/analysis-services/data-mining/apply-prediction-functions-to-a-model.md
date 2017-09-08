@@ -1,28 +1,33 @@
 ---
-title: "モデルへの予測関数の適用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "マイニング モデル予測 [Analysis Services], マイニング モデルの選択"
+title: "予測関数をモデルに適用する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Mining Model Prediction [Analysis Services], selecting mining models
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0634ebe36d956f356d13384159eb1171d4fc2ea4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# モデルへの予測関数の適用
+# <a name="apply-prediction-functions-to-a-model"></a>モデルへの予測関数の適用
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ マイニングで予測クエリを作成するには、クエリの基になるマイニング モデルを選択する必要があります。 現在のプロジェクトに存在するマイニング モデルを選択できます。  
   
- モデルを選択した後は、クエリに "*予測関数*" を追加します。 予測関数を使用して予測を取得する以外に、予測値の確率や、予測の生成に使用された情報など、関連する統計情報を返す予測関数を追加することもできます。  
+ モデルを選択した後は、クエリに " *予測関数* " を追加します。 予測関数を使用して予測を取得する以外に、予測値の確率や、予測の生成に使用された情報など、関連する統計情報を返す予測関数を追加することもできます。  
   
  予測関数は、次の種類の値を返すことができます。  
   
@@ -42,23 +47,23 @@ caps.handback.revision: 17
   
  特定の種類のマイニング モデルに対するクエリの実行方法の例については、「[データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)」のアルゴリズム リファレンス トピックを参照してください。  
   
-### 予測に使用するマイニング モデルの選択  
+### <a name="choose-a-mining-model-to-use-for-prediction"></a>予測に使用するマイニング モデルの選択  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でモデルを右クリックし、**[予測クエリの作成]** を選択します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でモデルを右クリックし、 **[予測クエリの作成]**を選択します。  
   
      -- または --  
   
-     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で **[マイニング モデル予測]** タブをクリックし、**[マイニング モデル]** テーブルの **[モデルの選択]** をクリックします。  
+     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で **[マイニング モデル予測]**タブをクリックし、 **[マイニング モデル]** テーブルの  **[モデルの選択]** をクリックします。  
   
-2.  **[マイニング モデルの選択]** ダイアログ ボックスでマイニング モデルを選択し、**[OK]** をクリックします。  
+2.  **[マイニング モデルの選択]** ダイアログ ボックスでマイニング モデルを選択し、 **[OK]**をクリックします。  
   
      現在の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内の任意のモデルを選択できます。 別のデータベース内のモデルを使用してクエリを作成するには、そのデータベースのコンテキストで新しいクエリ ウィンドウを開くか、そのモデルを含んでいるソリューション ファイルを開く必要があります。  
   
-### クエリへの予測関数の追加  
+### <a name="add-prediction-functions-to-a-query"></a>クエリへの予測関数の追加  
   
-1.  **[予測クエリ ビルダー]** で、**[単一クエリ入力]** ダイアログ ボックスで値を指定するか、モデルを外部データ ソースにマップして、予測に使用する入力データを構成します。  
+1.  **[予測クエリ ビルダー]**で、 **[単一クエリ入力]** ダイアログ ボックスで値を指定するか、モデルを外部データ ソースにマップして、予測に使用する入力データを構成します。  
   
-     詳細については、「[予測クエリの入力データの選択およびマップ](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)」を参照してください。  
+     詳細については、「 [予測クエリの入力データの選択およびマップ](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)」を参照してください。  
   
     > [!WARNING]  
     >  予測を生成するための入力を用意する必要はありません。 入力がない場合は、通常、アルゴリズムがすべての可能な入力を通じて最も可能性の高い予測値を返します。  
@@ -67,22 +72,22 @@ caps.handback.revision: 17
   
     |||  
     |-|-|  
-    |**\<モデル名>**|このオプションを選択すると、マイニング モデルの値が結果に含められます。 予測可能な列のみを追加できます。<br /><br /> モデルから列を追加すると、返される結果はその列の値の個別でないリストになります。<br /><br /> このオプションで追加する列は、作成される DMX ステートメントの SELECT 部分に含まれます。|  
-    |**予測関数**|このオプションを選択すると、予測関数の一覧を参照できます。<br /><br /> 選択した値または関数は、作成される DMX ステートメントの SELECT 部分に追加されます。<br /><br /> 予測関数の一覧が、選択したモデルの種類によってフィルター処理や制限を受けることはありません。 そのため、現在のモデルの種類で関数がサポートされていることが確実でない場合は、関数を一覧に追加して、エラーが起きないかどうかを確認します。<br /><br /> $ で始まる一覧の項目 ($AdjustedProbability など) は、関数の **PredictHistogram** を使用した場合の結果である、入れ子になったテーブルの列を表しています。 これらは、入れ子になったテーブルの代わりに単一の列を返すために使用できるショートカットです。|  
-    |**カスタム式**|このオプションを選択すると、カスタム式を入力し、結果に別名を割り当てることができます。<br /><br /> カスタム式は、作成される DMX 予測クエリの SELECT 部分に追加されます。<br /><br /> このオプションは、各行で結果のためのテキストを追加して、VB 関数やカスタム ストアド プロシージャを呼び出す場合に便利です。<br /><br /> DMX から VBA および Excel 関数を使用する方法の詳細については、「[MDX および DAX での VBA 関数](../../mdx/vba-functions-in-mdx-and-dax.md)」を参照してください。|  
+    |**\<モデル名 >**|このオプションを選択すると、マイニング モデルの値が結果に含められます。 予測可能な列のみを追加できます。<br /><br /> モデルから列を追加すると、返される結果はその列の値の個別でないリストになります。<br /><br /> このオプションで追加する列は、作成される DMX ステートメントの SELECT 部分に含まれます。|  
+    |**Prediction Function**|このオプションを選択すると、予測関数の一覧を参照できます。<br /><br /> 選択した値または関数は、作成される DMX ステートメントの SELECT 部分に追加されます。<br /><br /> 予測関数の一覧が、選択したモデルの種類によってフィルター処理や制限を受けることはありません。 そのため、現在のモデルの種類で関数がサポートされていることが確実でない場合は、関数を一覧に追加して、エラーが起きないかどうかを確認します。<br /><br /> $ で始まる一覧の項目 ($AdjustedProbability など) は、関数の **PredictHistogram**を使用した場合の結果である、入れ子になったテーブルの列を表しています。 これらは、入れ子になったテーブルの代わりに単一の列を返すために使用できるショートカットです。|  
+    |**カスタム式**|このオプションを選択すると、カスタム式を入力し、結果に別名を割り当てることができます。<br /><br /> カスタム式は、作成される DMX 予測クエリの SELECT 部分に追加されます。<br /><br /> このオプションは、各行で結果のためのテキストを追加して、VB 関数やカスタム ストアド プロシージャを呼び出す場合に便利です。<br /><br /> DMX から VBA および Excel 関数を使用する方法の詳細については、「 [MDX および DAX での VBA 関数](../../mdx/vba-functions-in-mdx-and-dax.md)」を参照してください。|  
   
 3.  各関数または式の追加後は、DMX ビューに切り替えて、関数がどのように DMX ステートメント内に追加されたかを確認します。  
   
     > [!WARNING]  
-    >  予測クエリ ビルダーでは、**[結果]** をクリックするまで、DMX は検証されません。 クエリ ビルダーによって生成された式は、有効な DMX でないことがよくあります。 主な原因は、予測可能列に関連付けられていない列の参照や、入れ子になったテーブル内の列の予測 (サブ SELECT ステートメントが必要) です。 この時点で、DMX ビューに切り替えて、ステートメントの編集を続行できます。  
+    >  予測クエリ ビルダーでは、 **[結果]**をクリックするまで、DMX は検証されません。 クエリ ビルダーによって生成された式は、有効な DMX でないことがよくあります。 主な原因は、予測可能列に関連付けられていない列の参照や、入れ子になったテーブル内の列の予測 (サブ SELECT ステートメントが必要) です。 この時点で、DMX ビューに切り替えて、ステートメントの編集を続行できます。  
   
-### 例: クラスター モデルに対するクエリの作成  
+### <a name="example-create-a-query-on-a-clustering-model"></a>例: クラスター モデルに対するクエリの作成  
   
-1.  このサンプル クエリを作成するために使用できるクラスター モデルがない場合は、[基本的なデータ マイニング チュートリアル](../Topic/Basic%20Data%20Mining%20Tutorial.md)を使用して、モデルの [TM_Clustering] を作成してください。  
+1.  このサンプル クエリを作成するために使用できるクラスター モデルがない場合は、 [基本的なデータ マイニング チュートリアル](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)を使用して、モデルの [TM_Clustering] を作成してください。  
   
-2.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でモデルの [TM_Clustering] を右クリックし、**[予測クエリの作成]** を選択します。  
+2.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でモデルの [TM_Clustering] を右クリックし、 **[予測クエリの作成]**を選択します。  
   
-3.  **[マイニング モデル]** メニューの **[単一クエリ]** を選択します。  
+3.  **[マイニング モデル]** メニューの **[単一クエリ]**を選択します。  
   
 4.  **[単一クエリ入力]** ダイアログ ボックスで、入力として次の値を設定します。  
   
@@ -90,15 +95,15 @@ caps.handback.revision: 17
   
     -   Commute Distance = 5-10 miles  
   
-5.  クエリ グリッドの **[ソース]** で TM_Clustering マイニング モデルを選択し、列の [Bike Buyer] を追加します。  
+5.  クエリ グリッドの **[ソース]**で TM_Clustering マイニング モデルを選択し、列の [Bike Buyer] を追加します。  
   
-6.  **[ソース]** で **[予測関数]** を選択し、関数の **Cluster** を追加します。  
+6.  **[ソース]**で **[予測関数]**を選択し、関数の **Cluster**を追加します。  
   
-7.  **[ソース]** で **[予測関数]** を選択し、関数の **PredictSupport** を追加して、モデル列の [Bike Buyer] を **[条件と引数]** ボックスにドラッグします。 **[別名]** 列に「**Support**」と入力します。  
+7.  **[ソース]**で **[予測関数]**を選択し、関数の **PredictSupport**を追加して、モデル列の [Bike Buyer] を **[条件と引数]** ボックスにドラッグします。 **[別名]** 列に「 **Support** 」と入力します。  
   
      予測関数を表す式および列参照を **[条件と引数]** ボックスからコピーします。  
   
-8.  **[ソース]** で **[カスタム式]** を選択し、別名を入力してから、次の構文を使用して Excel の CEILING 関数を参照します。  
+8.  **[ソース]**で **[カスタム式]**を選択し、別名を入力してから、次の構文を使用して Excel の CEILING 関数を参照します。  
   
     ```  
     Excel![CEILING](<arguments) as <return type>  
@@ -114,17 +119,18 @@ caps.handback.revision: 17
   
      **[別名]** 列に「CEILING」と入力します。  
   
-9. **[クエリ テキスト ビューに切り替え]** をクリックして、生成された DMX ステートメントを確認してから、**[クエリ結果ビューに切り替え]** をクリックして、予測クエリによって出力された列を表示します。  
+9. **[クエリ テキスト ビューに切り替え]** をクリックして、生成された DMX ステートメントを確認してから、 **[クエリ結果ビューに切り替え]** をクリックして、予測クエリによって出力された列を表示します。  
   
      予想される結果を次の表に示します。  
   
-    |Bike Buyer|$Cluster|SUPPORT|CEILING|  
+    |Bike Buyer|$Cluster|[別名]|CEILING|  
     |----------------|--------------|-------------|-------------|  
     |0|Cluster 8|954|953.948638926372|  
   
  他の句 (たとえば WHERE 句) をステートメントのどこかに追加する場合、グリッドを使用して追加することはできません。まず、DMX ビューに切り替える必要があります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)  
   
   
+

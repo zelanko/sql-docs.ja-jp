@@ -1,27 +1,32 @@
 ---
-title: "参照リレーションシップと参照リレーションシップのプロパティの定義 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "参照ディメンションのリレーションシップ"
-  - "リレーションシップ [Analysis Services], 参照ディメンション"
+title: "参照リレーションシップを定義し、リレーションシップのプロパティを参照 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- referenced dimension relationship
+- relationships [Analysis Services], referenced dimensions
 ms.assetid: 5bb44b41-635b-4398-8fe9-0bfbb142553e
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3213d88fd8f1119ffbb4bb71ab8658e0750f98c6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# 参照リレーションシップと参照リレーションシップのプロパティの定義
+# <a name="define-a-referenced-relationship-and-referenced-relationship-properties"></a>参照リレーションシップと参照リレーションシップのプロパティの定義
   参照ディメンションのリレーションシップは、キューブ デザイナーの **[ディメンションの使用法]** タブで定義します。 参照ディメンションのリレーションシップを定義するには、以下を指定します。  
   
 -   結合先の中間ディメンション。 標準ディメンションまたは別の参照ディメンションを指定します。  

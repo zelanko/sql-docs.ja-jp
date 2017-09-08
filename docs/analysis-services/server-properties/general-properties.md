@@ -1,57 +1,62 @@
 ---
-title: "全般プロパティ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "IdleConnectionTimeout プロパティ"
-  - "InstanceVisible プロパティ"
-  - "TempDir プロパティ"
-  - "AdminTimeout プロパティ"
-  - "MinIdleSessionTimeout プロパティ"
-  - "MaxIdleSessionTimeout プロパティ"
-  - "IdleOrphanSessionTimeout プロパティ"
-  - "BackupDir プロパティ"
-  - "CommitTimeout プロパティ"
-  - "ExternalCommandTimeout プロパティ"
-  - "Enabled プロパティ"
-  - "ForceCommitTimeout プロパティ"
-  - "Port プロパティ"
-  - "CoordinatorShutdownMode プロパティ"
-  - "ServerTimeout プロパティ"
-  - "AllowedBrowsingFolders プロパティ"
-  - "CoordinatorCancelCount プロパティ"
-  - "DataDir プロパティ"
-  - "CoordinatorQueryMaxThreads プロパティ"
-  - "CoordinatorExecutionMode プロパティ"
-  - "ExternalConnectionTimeout プロパティ"
-  - "CollationName プロパティ"
-  - "EnableFast1033Locale プロパティ"
-  - "CoordinatorBuildMaxThreads プロパティ"
-  - "Language プロパティ"
-  - "StatisticsStoreSize プロパティ"
-  - "RepositoryConnectionString プロパティ"
+title: "全般プロパティ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- IdleConnectionTimeout property
+- InstanceVisible property
+- TempDir property
+- AdminTimeout property
+- MinIdleSessionTimeout property
+- MaxIdleSessionTimeout property
+- IdleOrphanSessionTimeout property
+- BackupDir property
+- CommitTimeout property
+- ExternalCommandTimeout property
+- Enabled property
+- ForceCommitTimeout property
+- Port property
+- CoordinatorShutdownMode property
+- ServerTimeout property
+- AllowedBrowsingFolders property
+- CoordinatorCancelCount property
+- DataDir property
+- CoordinatorQueryMaxThreads property
+- CoordinatorExecutionMode property
+- ExternalConnectionTimeout property
+- CollationName property
+- EnableFast1033Locale property
+- CoordinatorBuildMaxThreads property
+- Language property
+- StatisticsStoreSize property
+- RepositoryConnectionString property
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 007ace0dcec576b4a15909d470a701f442221788
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# 全般プロパティ
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー プロパティがサポートされています。 このトピックでは、Security、Network、ThreadPool など、個別のセクションで取り上げることのできなかった、msmdsrv.ini ファイル内のサーバー プロパティについて説明しています。 その他のサーバー プロパティとその設定方法の詳細については、「[Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)」を参照してください。  
+# <a name="general-properties"></a>全般プロパティ
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー プロパティがサポートされています。 このトピックでは、Security、Network、ThreadPool など、個別のセクションで取り上げることのできなかった、msmdsrv.ini ファイル内のサーバー プロパティについて説明しています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)」を参照してください。  
   
  **適用対象:** 特に記載のない限り、多次元サーバー モードおよびテーブル サーバー モードが対象となります。  
   
-## 不特定カテゴリ  
+## <a name="non-specific-category"></a>不特定カテゴリ  
  **AdminTimeout**  
- 管理者のタイムアウトを秒単位で定義する、符号付き 32 ビット整数のプロパティです。 これは詳細プロパティなので、[!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
+ 管理者のタイムアウトを秒単位で定義する、符号付き 32 ビット整数のプロパティです。 これは詳細プロパティなので、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
  このプロパティの既定値は 0 であり、タイムアウトがないことを示します。  
   
@@ -67,28 +72,24 @@ caps.handback.revision: 29
  **CommitTimeout**  
  サーバーがトランザクションをコミットする目的で書き込みロックの取得を待機する時間 (ミリ秒単位) を指定する整数のプロパティです。 サーバーはトランザクションをコミットする書き込みロックを取得する前に他のロックが解放されるのを待機する必要があるため、待機期間が必要になることがあります。  
   
- このプロパティの既定値は 0 であり、サーバーで無限に待機することを示します。 ロックに関連したプロパティの詳細については、「[SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
+ このプロパティの既定値は 0 であり、サーバーで無限に待機することを示します。 ロックに関連したプロパティの詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
  **CoordinatorBuildMaxThreads**  
- パーティション インデックスの作成に割り当てられるスレッドの最大数を定義する、符号付き 32 ビット整数のプロパティです。 パーティション インデックスの作成時間を短縮するには、この値を大きくしてください。ただし、メモリの使用量は増えます。 このプロパティの詳細については、「[SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
+ パーティション インデックスの作成に割り当てられるスレッドの最大数を定義する、符号付き 32 ビット整数のプロパティです。 パーティション インデックスの作成時間を短縮するには、この値を大きくしてください。ただし、メモリの使用量は増えます。 このプロパティの詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
  **CoordinatorCancelCount**  
- キャンセル イベントが発生したかどうかを内部反復カウントに基づいてサーバーがチェックする頻度を定義する、符号付き 32 ビット整数のプロパティです。 キャンセルのチェック頻度を多くするには、この値を小さくしてください。ただし、全体的なパフォーマンスは低下します。  
-  
- **CoordinatorCancelCount** はテーブル サーバー モードでは無視されます。  
+ キャンセル イベントが発生したかどうかを内部反復カウントに基づいてサーバーがチェックする頻度を定義する、符号付き 32 ビット整数のプロパティです。 キャンセルのチェック頻度を多くするには、この値を小さくしてください。ただし、全体的なパフォーマンスは低下します。 表形式サーバー モードでは、このプロパティが無視されます。  
   
  **CoordinatorExecutionMode**  
  処理操作やクエリ操作など、サーバーによって試行される並列操作の最大数を定義する、符号付き 32 ビット整数のプロパティです。 0 を指定すると、サーバーの内部アルゴリズムに基づいて決定されます。 正の数値は、操作の最大総数を示します。 負の数値 (反対の符号) は、プロセッサあたりの操作の最大数を示します。  
-  
- **CoordinatorExecutionMode** はテーブル サーバー モードでは無視されます。  
-  
- このプロパティの既定値は -4 であり、サーバーのプロセッサあたりの並列操作が 4 に制限されることを示します。 このプロパティの詳細については、「[SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
+
+ このプロパティの既定値は -4 であり、サーバーのプロセッサあたりの並列操作が 4 に制限されることを示します。 このプロパティの詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
  **CoordinatorQueryMaxThreads**  
  クエリ解決時のパーティション セグメントあたりの最大スレッド数を定義する、符号付き 32 ビット整数のプロパティです。 同時ユーザーの数が少なくなるほど大きい値を設定できますが、値を大きくするとメモリの使用量が増えます。 逆に、同時ユーザーが多い場合は、この値を小さくする必要があります。  
   
  **CoordinatorShutdownMode**  
- コーディネーターのシャットダウン モードを定義するブール型プロパティです。 これは詳細プロパティなので、[!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
+ コーディネーターのシャットダウン モードを定義するブール型プロパティです。 これは詳細プロパティなので、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
  **DataDir**  
  データを保存するディレクトリの名前を指定する文字列プロパティです。  
@@ -127,7 +128,7 @@ caps.handback.revision: 29
 > [!NOTE]  
 >  このイベントによってクエリやプロセスが取り消されると、"`Server: The operation has been cancelled`" というエラー メッセージが報告されます。  
   
- このプロパティの詳細については、「[SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
+ このプロパティの詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
 > [!IMPORTANT]  
 >  **ForceCommitTimeout** は、キューブ処理コマンドと書き戻し操作に適用されます。  
@@ -152,7 +153,7 @@ caps.handback.revision: 29
  サーバー ログを保存するディレクトリの名前を指定する文字列プロパティです。 このプロパティは、データベース テーブル (既定の動作) ではなく、ディスク ファイルがログ記録に使用される場合にのみ適用されます。  
   
  **MaxIdleSessionTimeout**  
- アイドル状態のセッションの最大タイムアウトを秒単位で定義する整数のプロパティです。 既定値は 0 (ゼロ) で、セッションがタイムアウトにならないことを示します。 ただし、サーバーにリソースの制約がある場合はアイドル状態のセッションが削除されます。  
+ アイドル状態のセッションの最大タイムアウトを秒単位で定義する整数のプロパティです。 既定値は 0 (ゼロ) で、セッションがタイムアウトにならないことを示します。ただし、サーバーにリソースの制約がある場合はアイドル状態のセッションが削除されます。  
   
  **MinIdleSessionTimeout**  
  アイドル状態のセッションがタイムアウトになるまでの最短時間を秒単位で定義する整数のプロパティです。 既定値は 2700 秒です。 この時間を経過すると、メモリが必要な場合に限り、アイドル状態のセッションがサーバーによって終了されます。  
@@ -168,14 +169,14 @@ caps.handback.revision: 29
  **TempDir**  
  処理、復元、その他の操作時に使用する一時ファイルの格納場所を指定する文字列プロパティです。 このプロパティの既定値は、セットアップによって指定されます。 このプロパティを指定しない場合、既定値は Data ディレクトリです。  
   
-## 要求の優先順位付けカテゴリ  
+## <a name="requestprioritization-category"></a>要求の優先順位付けカテゴリ  
  **有効**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
  **StatisticsStoreSize**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Analysis Services インスタンスのサーバー モードの決定](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

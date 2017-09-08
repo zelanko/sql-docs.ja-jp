@@ -1,23 +1,28 @@
 ---
-title: "Prediction Queries (Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "予測クエリ (データ マイニング) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55dd3cf7af1721a958ebebb70d864a1fd0b873c6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Prediction Queries (Data Mining)
+# <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
   一般的なデータ マイニング プロジェクトの目標は、マイニング モデルを使用して予測を行うことです。 たとえば、あるサーバーの集まりのダウンタイムを予測したり、顧客区分が広告キャンペーンに反応するかどうかを示すスコアを生成したりする場合があります。 これらすべてを行うには、予測クエリを作成します。  
   
  クエリに対する入力の種類に応じて、さまざまな機能の予測クエリが SQL Server でサポートされています。  
@@ -82,9 +87,9 @@ caps.handback.revision: 14
  関連するすべての列のマップが終了したらクエリを実行します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって、モデル内のパターンに基づいて新しいデータの各行の予測が行われます。 外部データを含むデータ ソース ビューの新しいテーブルに結果を保存することができます。あるいは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用している場合は、データをコピーして貼り付けることができます。  
   
 > [!WARNING]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のデザイナーを使用する場合は、先に外部データ ソースをデータ ソース ビューとして定義しておく必要があります。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデザイナーを使用する場合は、先に外部データ ソースをデータ ソース ビューとして定義しておく必要があります。  
   
- DMX を使用して予測結合を作成する場合は、OPENQUERY、OPENROWSET、または SHAPE の各コマンドを使用して外部データ ソースを指定できます。 DMX テンプレートの既定のデータ アクセス メソッドは OPENQUERY です。 これらのメソッドの詳細については、「[&#60;source data query&#62;](../Topic/%3Csource%20data%20query%3E.md)」をご覧ください。  
+ DMX を使用して予測結合を作成する場合は、OPENQUERY、OPENROWSET、または SHAPE の各コマンドを使用して外部データ ソースを指定できます。 DMX テンプレートの既定のデータ アクセス メソッドは OPENQUERY です。 これらのメソッドの詳細については、「[&#60;source data query&#62;](../../dmx/source-data-query.md)」をご覧ください。  
   
 ###  <a name="bkmk_TSQuery"></a> 時系列マイニング モデルの予測  
  時系列モデルは他の種類のモデルとは異なります。モデルをそのまま使用して予測を作成することも、モデルに新しいデータを渡し、モデルを更新して、最新の傾向に基づいて予測を作成することもできます。 新しいデータを追加する場合は、新しいデータの使用方法を指定できます。  
@@ -104,7 +109,7 @@ caps.handback.revision: 14
 ##  <a name="bkmk_WorkResults"></a> 予測クエリの結果の操作  
  データ マイニング予測クエリの結果を保存するオプションは、クエリの作成方法に応じて異なります。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で予測クエリ ビルダーを使用してクエリを作成する場合は、予測クエリの結果を既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに保存できます。 詳しくは、「[予測クエリの結果の表示および保存](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)」をご覧ください。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で予測クエリ ビルダーを使用してクエリを作成する場合は、予測クエリの結果を既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに保存できます。 詳しくは、「 [予測クエリの結果の表示および保存](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)」をご覧ください。  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [クエリ] ペインで DMX を使用して予測クエリを作成する場合は、クエリの出力オプションを使用して結果をファイルに保存するか、[クエリ結果] ペインにテキストとして、またはグリッドに保存できます。 詳細については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)」を参照してください。  
   
@@ -147,7 +152,7 @@ FROM
   
  階層的な行セットを処理できないプロバイダーを使用している場合は、予測クエリ内で FLATTEN キーワードを使用して結果をフラット化することができます。 フラットな行セットの例などの詳細については、「[SELECT &#40;DMX&#41;](../../dmx/select-dmx.md)」をご覧ください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [コンテンツ クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
  [データ定義クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   

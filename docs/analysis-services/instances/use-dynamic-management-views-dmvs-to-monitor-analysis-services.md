@@ -1,24 +1,29 @@
 ---
-title: "動的管理ビュー (DMV) を使用した Analysis Services の監視 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Analysis Services の監視を動的管理ビュー (Dmv) を使用して |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c9faafd33f7abaee582821336dcd471d637a1c1
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# 動的管理ビュー (DMV) を使用した Analysis Services の監視
+# <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>動的管理ビュー (DMV) を使用した Analysis Services の監視
   Analysis Services 動的管理ビュー (DMV) は、ローカル サーバーの操作やサーバーの正常性に関する情報を公開するクエリ構造です。 クエリ構造は、Analysis Services インスタンスのメタデータと監視情報を返すためのスキーマ行セットへのインターフェイスです。  
   
  ほとんどの DMV クエリでは、XML/A スキーマ行セットと合わせて **SELECT** ステートメントと **$System** スキーマを使用します。  
@@ -27,7 +32,7 @@ caps.handback.revision: 16
 SELECT * FROM $System.<schemaRowset>  
 ```  
   
- DMV クエリは、クエリが実行された時点でのサーバーの状態に関する情報を返します。 リアルタイムでの操作を監視するには、代わりにトレースを使用します。 詳細については、「[SQL Server Profiler を使用した Analysis Services の監視](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)」を参照してください。  
+ DMV クエリは、クエリが実行された時点でのサーバーの状態に関する情報を返します。 リアルタイムでの操作を監視するには、代わりにトレースを使用します。 詳細については、「 [SQL Server Profiler を使用した Analysis Services の監視](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)」を参照してください。  
   
  このトピックのセクションは次のとおりです。  
   
@@ -47,9 +52,9 @@ SELECT * FROM $System.<schemaRowset>
  DMV クエリは、XML/A Discover コマンドの実行の代わりとなる手段です。 クエリの構文は SQL に基づいているため、多くの管理者にとって DMV クエリを記述するのはより簡単です。 また、結果セットは、読み取りやコピーが容易な表形式で返されます。  
   
 ##  <a name="bkmk_ex"></a> 例とシナリオ  
- DMV クエリは、アクティブなセッションおよび接続に関する疑問に答えたり、特定の時刻に CPU またはメモリを最も消費しているオブジェクトを特定するために役立つ可能性があります。 このセクションでは、DMV クエリが最もよく使用されるシナリオの例を示します。 DMV クエリを使用してサーバー インスタンスを監視する方法の詳細については、「[SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)」を参照してください。  
+ DMV クエリは、アクティブなセッションおよび接続に関する疑問に答えたり、特定の時刻に CPU またはメモリを最も消費しているオブジェクトを特定するために役立つ可能性があります。 このセクションでは、DMV クエリが最もよく使用されるシナリオの例を示します。 DMV クエリを使用してサーバー インスタンスを監視する方法の詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) 」を参照してください。  
   
- `Select * from $System.discover_object_activity` /** このクエリは、サービスの前回の開始以降のオブジェクト アクティビティについてレポートします。 この DMV に基づくクエリの例については、「[New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)」を参照してください。  
+ `Select * from $System.discover_object_activity` /** このクエリは、サービスの前回の開始以降のオブジェクト アクティビティについてレポートします。 この DMV に基づくクエリの例については、「 [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)」を参照してください。  
   
  `Select * from $System.discover_object_memory_usage` /** このクエリは、オブジェクトによるメモリ消費についてレポートします。  
   
@@ -87,7 +92,7 @@ Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAM
   
  SQL Server Management Studio、Reporting Services レポート、または PerformancePoint ダッシュボードなど、MDX または DMX クエリをサポートするクライアント アプリケーションを使用できます。  
   
- Management Studio から DMV クエリを実行するには、クエリを行うインスタンスに接続し、**[新しいクエリ]** をクリックします。 MDX または DMX クエリ ウィンドウからクエリを実行することができます。  
+ Management Studio から DMV クエリを実行するには、クエリを行うインスタンスに接続し、 **[新しいクエリ]**をクリックします。 MDX または DMX クエリ ウィンドウからクエリを実行することができます。  
   
 ##  <a name="bkmk_ref"></a> DMV リファレンス  
  すべてのスキーマ行セットに DMV インターフェイスがあるわけではありません。 DMV を使用してクエリを行うことができる、すべてのスキーマ行セットの一覧を返すには、次のクエリを実行します。  
@@ -99,7 +104,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  指定された行セットで DMV を使用できない場合、サーバーは "\<schemarowset> という要求の種類がサーバーで識別されませんでした。" というエラーを返します。 他のすべてのエラーは、構文の問題を示します。  
+>  サーバーが、次のエラーを返す DMV が指定された行セットは利用できない場合は、:"、 \<schemarowset > 要求の種類は、サーバーで認識されませんでした"。 他のすべてのエラーは、構文の問題を示します。  
   
 |[行セット]|Description|  
 |------------|-----------------|  
@@ -138,7 +143,7 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_TRACE_EVENT_CATEGORIES 行セット](../../analysis-services/schema-rowsets/xml/discover-trace-event-categories-rowset.md)|使用できるカテゴリの一覧を返します。|  
 |[DISCOVER_TRACES 行セット](../../analysis-services/schema-rowsets/xml/discover-traces-rowset.md)|現在の接続でアクティブに実行しているトレースの一覧を返します。|  
 |[DISCOVER_TRANSACTIONS 行セット](../../analysis-services/schema-rowsets/xml/discover-transactions-rowset.md)|現在の接続でアクティブに実行しているトランザクションの一覧を返します。|  
-|[DISCOVER_XEVENT_TRACE_DEFINITION 行セット](../Topic/DISCOVER_XEVENT_TRACE_DEFINITION%20Rowset.md)|現在の接続でアクティブに実行している XEvent トレースの一覧を返します。|  
+|[DISCOVER_XEVENT_TRACE_DEFINITION 行セット](http://msdn.microsoft.com/library/e1ce2d2d-f994-4318-801a-ee0385aecd84)|現在の接続でアクティブに実行している XEvent トレースの一覧を返します。|  
 |[DMSCHEMA_MINING_COLUMNS 行セット](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|現在の接続で利用可能な、すべてのマイニング モデルの個々の列を一覧表示します。|  
 |[DMSCHEMA_MINING_FUNCTIONS 行セット](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-functions-rowset.md)|サーバー上のデータ マイニング アルゴリズムによってサポートされる関数の一覧を返します。|  
 |[DMSCHEMA_MINING_MODEL_CONTENT 行セット](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)|現在のモデルを説明する列で構成される行セットを返します。|  
@@ -163,9 +168,9 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_PROPERTIES 行セット](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|プロパティの型、データ型、その他のメタデータと共に、各プロパティの完全修飾名を返します。|  
 |[MDSCHEMA_SETS 行セット](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|現在の接続で定義されるセットの一覧を表示します。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
  [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
- [制限された行セットと DMV の新しい SYSTEMRESTRICTEDSCHEMA 関数](http://go.microsoft.com/fwlink/?LinkId=231885)  
+ [制限された行セットと Dmv の新しい SYSTEMRESTRICTEDSCHEMA 関数](http://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

@@ -1,26 +1,31 @@
 ---
-title: "データの手動処理 (SSAS テーブル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.datarefreshprogressdb.f1"
+title: "データ (SSAS テーブル) を手動で処理 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.datarefreshprogressdb.f1
 ms.assetid: 0918c04c-c1e6-45b4-acfa-96fa578e684b
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d421c1f625ee182497be3fbbff0c19f727f1a2b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# データの手動処理 (SSAS テーブル)
+# <a name="manually-process-data-ssas-tabular"></a>データの手動処理 (SSAS テーブル)
   このトピックでは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のワークスペースのデータを手動で処理する方法について説明します。  
   
  外部データを使用するテーブル モデルを作成すると、[処理] コマンドを使用してデータを手動で更新できます。 1 つのテーブル、モデル内のすべてのテーブル、または 1 つ以上のパーティションを処理できます。 データを処理するときには、データの再計算も必要になることがあります。  データの処理とは、外部ソースから最新のデータを取得することです。 再計算とは、データを使用する数式の結果を更新することです。  
@@ -33,19 +38,19 @@ caps.handback.revision: 18
   
 ##  <a name="bkmk_mahually_process"></a> データの手動処理  
   
-#### モデル内の 1 つまたはすべてのテーブルのデータを処理するには  
+#### <a name="to-process-data-for-a-single-table-or-all-tables-in-a-model"></a>モデル内の 1 つまたはすべてのテーブルのデータを処理するには  
   
 1.  モデル デザイナーで、処理するテーブルをクリックします。  
   
 2.  **[モデル]** メニュー、 **[処理]**の順にクリックし、 **[処理]** または **[すべて処理]**をクリックします。  
   
-#### 同じ接続を使用するすべてのテーブルのデータを処理するには  
+#### <a name="to-process-data-for-all-tables-using-the-same-connection"></a>同じ接続を使用するすべてのテーブルのデータを処理するには  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で **[モデル]** メニューをクリックし、 **[既存の接続]**をクリックします。  
   
 2.  **[既存の接続]** ダイアログ ボックスで接続を選択し、 **[処理]**をクリックします。  
   
-#### 1 つ以上のパーティションのデータを処理するには  
+#### <a name="to-process-data-for-one-or-more-partitions"></a>1 つ以上のパーティションのデータを処理するには  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の **[モデル]** メニューをクリックし、 **[処理]**をポイントして **[パーティションの処理]**をクリックします。  
   
@@ -73,8 +78,8 @@ caps.handback.revision: 18
  **[更新の停止]**  
  処理の操作を停止します。 このオプションは、操作に時間がかかりすぎる場合や、エラーが多すぎる場合に有効です。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データの処理 (SSAS テーブル)](../../analysis-services/tabular-models/process-data-ssas-tabular.md)   
- [データの処理のトラブルシューティング (SSAS テーブル)](../../analysis-services/troubleshoot-process-data-ssas-tabular.md)  
+ [データの処理のトラブルシューティング &#40;SSAS テーブル&#41;](../../analysis-services/troubleshoot-process-data-ssas-tabular.md)  
   
   

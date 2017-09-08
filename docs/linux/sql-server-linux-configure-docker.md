@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: 8a0c0a07c6874c6015ec3c4b1f561e0a1076482f
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 693b994cd7e00e9db439a445fe0b692bc2d379d5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Docker でコンテナー イメージの SQL Server 2017 を構成します。
@@ -139,7 +139,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap
 この手法では、共有し、Docker の外部でホスト上のファイルを表示することもできます。
 
 > [!IMPORTANT]
-> この時点では、Linux イメージ上の SQL Server で、Mac 上の Docker のホスト ボリュームのマッピングはサポートされていません。 代わりにデータ ボリューム コンテナーを使用します。 この制限に固有の`/var/opt/msql`ディレクトリ。 マウントされたディレクトリが正しく動作からの読み取り。 たとえば、– v を使用して、Mac のホストのディレクトリをマウントでき、ホスト上にある .bak ファイルからバックアップを復元できます。
+> この時点では、Linux イメージ上の SQL Server で、Mac 上の Docker のホスト ボリュームのマッピングはサポートされていません。 代わりにデータ ボリューム コンテナーを使用します。 この制限に固有の`/var/opt/mssql`ディレクトリ。 マウントされたディレクトリが正しく動作からの読み取り。 たとえば、– v を使用して、Mac のホストのディレクトリをマウントでき、ホスト上にある .bak ファイルからバックアップを復元できます。
 
 ### <a name="use-data-volume-containers"></a>データ ボリューム コンテナーを使用してください。
 

@@ -1,32 +1,37 @@
 ---
-title: "データ マイニング ソリューションの配置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "マイニング モデル [Analysis Services], 配置"
-  - "配置 [Analysis Services], 実稼働環境"
-  - "配置 [Analysis Services - データ マイニング]"
-  - "ソリューション [Analysis Services], 配置"
-  - "モデル [Analysis Services], データ マイニング"
+title: "データ マイニング ソリューションの配置 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining models [Analysis Services], deploying
+- deploying [Analysis Services], production environments
+- deploying [Analysis Services - data mining]
+- solutions [Analysis Services], deploying
+- models [Analysis Services], data mining
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aa037f7ff155df158ba2967c5e7c31989ace887d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# データ マイニング ソリューションの配置
+# <a name="deployment-of-data-mining-solutions"></a>データ マイニング ソリューションの配置
   データ マイニング プロセスの最後の手順は、実稼働環境へのモデルの配置です。 配置は、モデルをユーザーが使用できるようにし、次のようなタスクを実行できるようになるという点で重要です。  
   
--   モデルを使用して予測を作成し、業務上の意思決定を行います。 クエリの作成に使用できるツールの詳細については、「[データ マイニング クエリ ツール](../../analysis-services/data-mining/data-mining-query-tools.md)」をご覧ください。  
+-   モデルを使用して予測を作成し、業務上の意思決定を行います。 クエリの作成に使用できるツールの詳細については、「 [データ マイニング クエリ ツール](../../analysis-services/data-mining/data-mining-query-tools.md)」をご覧ください。  
   
 -   データ マイニング機能をアプリケーションに直接埋め込みます。 マイニング構造とマイニング モデルを作成、変更、処理、および削除するためにアプリケーションで使用できる一連のオブジェクトを含んでいる分析管理オブジェクト (AMO) またはアセンブリを含めることができます。  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 16
   
  [関連リソース](#bkmk_Resources)  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
  [SQL Server の以前のバージョンへのデータ マイニング ソリューションの配置](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
  [データ マイニング オブジェクトのエクスポートおよびインポート](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
@@ -50,14 +55,14 @@ caps.handback.revision: 16
 ##  <a name="bkmk_Reqs"></a> データ マイニング ソリューションの配置の要件  
  ソリューションの配置先となる [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスは、多次元オブジェクトとデータ マイニング オブジェクトをサポートするモードで実行されている必要があります。つまり、テーブル モデルや [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データをホストするインスタンスにデータ マイニング オブジェクトを配置することはできません。  
   
- したがって、Visual Studio でデータ マイニング ソリューションを作成するときは、**[Analysis Services 多次元およびデータ マイニング プロジェクト]** テンプレートを必ず使用してください。  
+ したがって、Visual Studio でデータ マイニング ソリューションを作成するときは、 **[Analysis Services 多次元およびデータ マイニング プロジェクト]**テンプレートを必ず使用してください。  
   
  ソリューションを配置すると、データ マイニングに使用されるオブジェクトが、指定された [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに作成されます。作成先は、ソリューション ファイルと同じ名前のデータベースになります。  
   
 ###  <a name="bkmk_RelationalSltn"></a> リレーショナル ソリューションの配置  
  リレーショナル データ マイニング ソリューションを配置すると、必要なデータ マイニング オブジェクトが新しい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内に作成され、それらのオブジェクトは既定の設定で処理されます。 処理オプションは、構成プロパティの **[処理オプション]** を使用して変更できます。 詳細については、「[Analysis Services プロジェクトのプロパティの構成 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)」をご覧ください。  
   
- 既定では、増分変更だけが毎回配置されます。 つまり、マイニング モデルを変更すると、プロジェクトを再配置するときに、そのマイニング モデルだけが更新されます。 ただし、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを複数のクライアントが編集する場合は、このためにエラーが発生することがあります。 既定の配置モードを変更して、ソリューションが配置されるときにデータベース全体が更新されるようにするには、**[配置モード]** プロパティを変更します。  
+ 既定では、増分変更だけが毎回配置されます。 つまり、マイニング モデルを変更すると、プロジェクトを再配置するときに、そのマイニング モデルだけが更新されます。 ただし、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを複数のクライアントが編集する場合は、このためにエラーが発生することがあります。 既定の配置モードを変更して、ソリューションが配置されるときにデータベース全体が更新されるようにするには、 **[配置モード]** プロパティを変更します。  
   
  リレーショナル データ マイニング ソリューションでは、配置しなければならないオブジェクトは、データ ソース定義、使用されたすべてのデータ ソース ビュー、マイニング構造、およびすべての依存マイニング モデルだけです。  
   
@@ -81,9 +86,9 @@ caps.handback.revision: 16
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの配置についての一般的な情報を提供し、プロジェクト構成の一部として設定できるプロパティについて説明しています。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [多次元モデルの処理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [データ マイニング クエリ ツール](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [処理の要件および注意事項 &#40;データ マイニング&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [処理の要件および注意事項 (データ マイニング)](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

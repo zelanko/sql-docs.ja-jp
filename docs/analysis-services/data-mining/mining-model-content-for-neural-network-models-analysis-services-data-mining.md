@@ -1,47 +1,52 @@
 ---
-title: "Mining Model Content for Neural Network Models (Analysis Services - Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "output neurons [Analysis Services]"
-  - "neural network algorithms [Analysis Services]"
-  - "output layer [Data Mining]"
-  - "hidden layer"
-  - "hidden neurons"
-  - "input layer [Data Mining]"
-  - "input neurons [Analysis Services]"
-  - "mining model content, neural network models"
-  - "neural network model [Analysis Services]"
+title: "ニューラル ネットワーク モデルのマイニング モデル コンテンツ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- output neurons [Analysis Services]
+- neural network algorithms [Analysis Services]
+- output layer [Data Mining]
+- hidden layer
+- hidden neurons
+- input layer [Data Mining]
+- input neurons [Analysis Services]
+- mining model content, neural network models
+- neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 4ba3de4a84dfd666e23d9877241f8c444891a0be
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
+# <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
   このトピックでは、Microsoft ニューラル ネットワーク アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
-## ニューラル ネットワーク モデルの構造について  
+## <a name="understanding-the-structure-of-a-neural-network-model"></a>ニューラル ネットワーク モデルの構造について  
  各ニューラル ネットワーク モデルには、モデルとそのメタデータを表す 1 つの親ノードと、入力属性に関する説明的な統計情報を提供するマージナル統計ノード (NODE_TYPE = 24) があります。 マージナル統計ノードの便利な点は、入力値に関する情報が要約されるため、個々のノードのデータにクエリを実行する必要がないことです。  
   
  これら 2 つのノードの下に、少なくとも 2 つのノードがあります。モデルの予測可能属性の数によっては、それ以上のノードが存在する場合もあります。  
   
 -   最初のノード (NODE_TYPE = 18) が常に、入力層の最上位ノードです。 この最上位ノードの下にある入力ノード (NODE_TYPE = 21) に、実際の入力属性とその値が含まれています。  
   
--   後続のノードには、それぞれ異なる*サブネットワーク* (NODE_TYPE = 17) が含まれています。 各サブネットワークには、そのサブネットワークの非表示層 (NODE_TYPE = 19) と出力層 (NODE_TYPE = 20) が常に含まれます。  
+-   後続のノードには、それぞれ異なる *サブネットワーク* (NODE_TYPE = 17) が含まれています。 各サブネットワークには、そのサブネットワークの非表示層 (NODE_TYPE = 19) と出力層 (NODE_TYPE = 20) が常に含まれます。  
   
- ![ニューラル ネットワークのモデル コンテンツの構造](../../analysis-services/data-mining/media/modelcontentstructure-nn.gif "ニューラル ネットワークのモデル コンテンツの構造")  
+ ![ニューラル ネットワークのモデル コンテンツの構造体](../../analysis-services/data-mining/media/modelcontentstructure-nn.gif "ニューラル ネットワークのモデル コンテンツの構造")  
   
- 入力層の情報は簡単です。各入力層の最初のノード (NODE_TYPE = 18) は、入力ノード (NODE_TYPE = 21) のコレクションのオーガナイザーの役割を果たします。  次の表では、入力ノードの内容について説明します。  
+ 入力層の情報は簡単です。各入力層の最初のノード (NODE_TYPE = 18) は、入力ノード (NODE_TYPE = 21) のコレクションのオーガナイザーの役割を果たします。 次の表では、入力ノードの内容について説明します。  
   
  各サブネットワーク (NODE_TYPE = 17) は、特定の予測可能属性に対する入力層の影響の分析を表します。 複数の予測可能な出力がある場合は、複数のサブネットワークがあります。 各サブネットワークの非表示層には、複数の隠しノード (NODE_TYPE = 22) が含まれます。これらの隠しノードには、その特定の隠しノードで終了する各遷移の、重みに関する詳細が含まれます。  
   
@@ -52,9 +57,9 @@ caps.handback.revision: 19
   
  入力とサブネットワークの構造を確認する場合は、 **Microsoft 汎用コンテンツ ツリー ビューアー**を使用するのが最も簡単な方法です。 任意のノードをクリックして展開すると、子ノードを表示できます。ノードに含まれている重みやその他の統計情報を表示することもできます。  
   
- データを処理したり、モデルと入力および出力との関係性を確認したりするには、 **Microsoft ニューラル ネットワーク ビューアー**を使用します。 このカスタム ビューアーを使用して、入力属性およびその値をフィルター処理したり、出力への影響をグラフィカルに表示したりできます。 このビューアーのツールヒントには、入力値と出力値の各ペアに関連付けられている確率とリフトが示されます。 詳細については、「[Microsoft ニューラル ネットワーク ビューアーを使用したモデルの参照](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)」を参照してください。  
+ データを処理したり、モデルと入力および出力との関係性を確認したりするには、 **Microsoft ニューラル ネットワーク ビューアー**を使用します。 このカスタム ビューアーを使用して、入力属性およびその値をフィルター処理したり、出力への影響をグラフィカルに表示したりできます。 このビューアーのツールヒントには、入力値と出力値の各ペアに関連付けられている確率とリフトが示されます。 詳細については、「 [Microsoft ニューラル ネットワーク ビューアーを使用したモデルの参照](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)」を参照してください。  
   
-## ニューラル ネットワーク モデルのモデル コンテンツ  
+## <a name="model-content-for-a-neural-network-model"></a>ニューラル ネットワーク モデルのモデル コンテンツ  
  ここでは、マイニング モデル コンテンツの列のうち、ニューラル ネットワーク モデルに関連する列についてのみ詳細と例を紹介します。 ここに記載されていないスキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細や、マイニング モデルの用語の説明については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
  MODEL_CATALOG  
@@ -72,7 +77,7 @@ caps.handback.revision: 19
 |マージナル統計|空白|  
 |入力層|空白|  
 |入力ノード|入力属性名|  
-|非表示層|空白|  
+|hidden layer|空白|  
 |隠しノード|空白|  
 |出力層|空白|  
 |出力ノード|出力属性名|  
@@ -112,7 +117,7 @@ caps.handback.revision: 19
 |マージナル統計|常に 0 です。|  
 |入力層|モデルで使用された入力属性と値のペアの数を示します。|  
 |入力ノード|常に 0 です。|  
-|非表示層|モデルによって作成された隠しノードの数を示します。|  
+|hidden layer|モデルによって作成された隠しノードの数を示します。|  
 |隠しノード|常に 0 です。|  
 |出力層|出力値の数を示します。|  
 |出力ノード|常に 0 です。|  
@@ -131,7 +136,7 @@ caps.handback.revision: 19
 |マージナル統計|空白|  
 |入力層|空白|  
 |入力ノード|入力属性名|  
-|非表示層|空白|  
+|hidden layer|空白|  
 |隠しノード|隠しノードの一覧における隠しノードのシーケンスを示す整数。|  
 |出力層|空白|  
 |出力ノード|出力属性が連続属性の場合は、出力属性名が含まれます。<br /><br /> 出力属性が不連続属性または分離された属性の場合は、出力属性名と値が含まれます。|  
@@ -145,7 +150,7 @@ caps.handback.revision: 19
 |マージナル統計|空白|  
 |入力層|空白|  
 |入力ノード|NODE_DESCRIPTION 列と同じ情報が含まれている XML フラグメント。|  
-|非表示層|空白|  
+|hidden layer|空白|  
 |隠しノード|隠しノードの一覧における隠しノードのシーケンスを示す整数。|  
 |出力層|空白|  
 |出力ノード|NODE_DESCRIPTION 列と同じ情報が含まれている XML フラグメント。|  
@@ -160,7 +165,7 @@ caps.handback.revision: 19
  親ノードからノードに到達する確率です。 ニューラル ネットワーク モデルでは常に 0 です。  
   
  NODE_DISTRIBUTION  
- ノードの統計情報を含む入れ子になったテーブル。 このテーブルのノードの種類ごとの内容の詳細については、「[NODE_DISTRIBUTION テーブル内の情報の解釈](#bkmk_NodeDistTable)」のセクションを参照してください。  
+ ノードの統計情報を含む入れ子になったテーブル。 このテーブルのノードの種類ごとの内容の詳細については、「 [NODE_DISTRIBUTION テーブル内の情報の解釈](#bkmk_NodeDistTable)」のセクションを参照してください。  
   
  NODE_SUPPORT  
  ニューラル ネットワーク モデルでは常に 0 です。  
@@ -177,7 +182,7 @@ caps.handback.revision: 19
 |マージナル統計|空白|  
 |入力層|空白|  
 |入力ノード|入力属性名。|  
-|非表示層|空白|  
+|hidden layer|空白|  
 |隠しノード|空白|  
 |出力層|空白|  
 |出力ノード|入力属性名。|  
@@ -188,7 +193,7 @@ caps.handback.revision: 19
  MSOLAP_NODE_SHORT_CAPTION  
  ニューラル ネットワーク モデルでは常に空白です。  
   
-## 解説  
+## <a name="remarks"></a>解説  
  ニューラル ネットワーク モデルをトレーニングする目的は、入力から中間点へ、および中間点からエンドポイントへの各遷移に関連付けられた重みを特定することです。 したがって、モデルの入力層は、主に、モデルの作成に使用された実際の値を格納するために存在します。 非表示層は、計算された重みを格納し、元の入力属性へのポインターを提供します。 出力層は、予測可能な値を格納し、非表示層内の中間点へのポインターも提供します。  
   
 ##  <a name="bkmk_NodeIDs"></a> ノードの名前と ID の使用  
@@ -213,7 +218,7 @@ caps.handback.revision: 19
 ##  <a name="bkmk_NodeDistTable"></a> NODE_DISTRIBUTION テーブル内の情報の解釈  
  ノードによっては、NODE_DISTRIBUTION テーブルが空の場合があります。 しかし、入力ノード、非表示層ノード、および出力ノードの NODE_DISTRIBUTION テーブルには、モデルに関する重要かつ興味深い情報が格納されます。 情報を解釈しやすいよう、NODE_DISTRIBUTION テーブルの各行の VALUETYPE 列には、ATTRIBUTE_VALUE 列の値が不連続値 (4)、分離された値 (5)、連続値 (3) のいずれであるかが表示されます。  
   
-### 入力ノード  
+### <a name="input-nodes"></a>入力ノード  
  入力層には、モデルで使用された属性の値ごとに 1 つのノードが含まれます。  
   
  **不連続属性:** 入力ノードには、属性名とその値だけが ATTRIBUTE_NAME 列と ATTRIBUTE_VALUE 列に格納されます。 たとえば、列が [勤務シフト] の場合、モデルで使用されたその列の値 (AM や PM など) ごとに個別のノードが作成されます。 各ノードの NODE_DISTRIBUTION テーブルには、属性の現在の値だけが表示されます。  
@@ -222,10 +227,10 @@ caps.handback.revision: 19
   
  **連続属性 :** 入力ノードには、属性の平均値が格納されます。 各ノードの NODE_DISTRIBUTION テーブルには、属性の現在の値だけが表示されます。  
   
-### 非表示層ノード  
+### <a name="hidden-layer-nodes"></a>非表示層ノード  
  非表示層には可変数のノードが含まれます。 各ノードの NODE_DISTRIBUTION テーブルには、非表示層から入力層のノードへのマッピングが含まれます。 ATTRIBUTE_NAME 列には、入力層のノードに対応するノード ID が含まれます。 ATTRIBUTE_VALUE 列には、入力ノードと非表示層ノードの組み合わせに関連付けられた重みが含まれます。 テーブルの最終行には、非表示層内のその隠しノードの重みを表す係数が含まれます。  
   
-### 出力ノード  
+### <a name="output-nodes"></a>出力ノード  
  出力層には、モデルで使用された出力値ごとに 1 つの出力ノードが含まれます。 各ノードの NODE_DISTRIBUTION テーブルには、出力層から非表示層のノードへのマッピングが含まれます。 ATTRIBUTE_NAME 列には、非表示層のノードに対応するノード ID が含まれます。 ATTRIBUTE_VALUE 列には、出力ノードと非表示層ノードの組み合わせに関連付けられた重みが含まれます。  
   
  属性の型に応じて、NODE_DISTRIBUTION テーブルには次の追加情報が含まれます。  
@@ -236,7 +241,7 @@ caps.handback.revision: 19
   
  **連続属性:** NODE_DISTRIBUTION テーブルの最後の 2 行には、属性の平均、ノード全体の係数、および係数の分散が含まれます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Microsoft ニューラル ネットワーク アルゴリズム](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [Neural Network Model Query Examples](../../analysis-services/data-mining/neural-network-model-query-examples.md)  

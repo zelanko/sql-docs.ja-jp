@@ -1,0 +1,123 @@
+---
+title: "ALTER APPLICATION ROLE (TRANSACT-SQL) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- ALTER_APPLICATION_ROLE_TSQL
+- ALTER APPLICATION ROLE
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- modifying application roles
+- passwords [SQL Server], application roles
+- ALTER APPLICATION ROLE statement
+- application roles [SQL Server], modifying
+ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
+caps.latest.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d5205897f64dfb05d8903ed2f4197f35bd722224
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+  アプリケーション ロールの名前、パスワード、または既定のスキーマを変更します。  
+  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>構文  
+  
+```  
+  
+ALTER APPLICATION ROLE application_role_name   
+    WITH <set_item> [ ,...n ]  
+  
+<set_item> ::=   
+    NAME = new_application_role_name   
+    | PASSWORD = 'password'  
+    | DEFAULT_SCHEMA = schema_name  
+```  
+  
+## <a name="arguments"></a>引数  
+ *application_role_name*  
+ 変更するアプリケーション ロールの名前です。  
+  
+ 名前 =*new_application_role_name*  
+ アプリケーション ロールの新しい名前を指定します。 この名前は、データベース内のどのプリンシパルへの参照にも使用されていない名前である必要があります。  
+  
+ パスワード ='*パスワード*'  
+ アプリケーション ロールのパスワードを指定します。 *パスワード*のインスタンスを実行しているコンピューターの Windows パスワード ポリシーの要件を満たす必要がある[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 複雑なパスワードの使用をお勧めします。  
+  
+ DEFAULT_SCHEMA =*schema_name*  
+ オブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマを指定します。 *schema_name*データベースに存在しないスキーマを指定できます。  
+  
+## <a name="remarks"></a>解説  
+ 新しいアプリケーション ロールの名前が既にデータベースに存在する場合、このステートメントは失敗します。 アプリケーション ロールの名前、パスワード、または既定のスキーマが変更されても、そのロールに関連付けられている ID は変更されません。  
+  
+> [!IMPORTANT]  
+>  パスワードの有効期限ポリシーは、アプリケーション ロールのパスワードには適用されません。 このため、複雑なパスワードを選択する際には十分注意してください。 アプリケーション ロールを呼び出すアプリケーションは、これらのパスワードを格納する必要があります。  
+  
+ アプリケーション ロールは、sys.database_principals カタログ ビューで参照できます。  
+  
+> [!CAUTION]  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]スキーマの動作が以前のバージョンの動作から変更[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 コードで、スキーマがデータベース ユーザーと同じであることが前提となっている場合、正しい結果が返されない場合があります。 CREATE SCHEMA、ALTER SCHEMA、DROP SCHEMA、CREATE USER、ALTER USER、DROP USER、CREATE ROLE、ALTER ROLE、DROP ROLE、CREATE APPROLE、ALTER APPROLE、DROP APPROLE、ALTER AUTHORIZATION のいずれかの DDL ステートメントが使用されたことのあるデータベースでは、sysobjects を含む以前のカタログ ビューを使用しないでください。 このようなデータベースでは、新しいカタログ ビューを使用する必要があります。 新しいカタログ ビューでは、プリンシパルとで導入されたスキーマの分離を考慮に入れて[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。 カタログ ビューの詳細については、「[カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)」を参照してください。  
+  
+## <a name="permissions"></a>Permissions  
+ データベースに対する ALTER ANY APPLICATION ROLE 権限が必要です。 既定のスキーマを変更するには、アプリケーション ロールに対する ALTER 権限も必要です。 アプリケーション ロールは、それ自体の既定のスキーマを変更できますが、名前とパスワードは変更できません。  
+  
+## <a name="examples"></a>使用例  
+  
+### <a name="a-changing-the-name-of-application-role"></a>A. アプリケーション ロールの名前を変更する  
+ 次の例は、アプリケーション ロールの名前を変更`weekly_receipts`に`receipts_ledger`です。  
+  
+```  
+USE AdventureWorks2012;  
+CREATE APPLICATION ROLE weekly_receipts   
+    WITH PASSWORD = '987Gbv8$76sPYY5m23' ,   
+    DEFAULT_SCHEMA = Sales;  
+GO  
+ALTER APPLICATION ROLE weekly_receipts   
+    WITH NAME = receipts_ledger;  
+GO  
+```  
+  
+### <a name="b-changing-the-password-of-application-role"></a>B. アプリケーション ロールのパスワードを変更する  
+ 次の例は、アプリケーション ロールのパスワードを変更`receipts_ledger`です。  
+  
+```  
+ALTER APPLICATION ROLE receipts_ledger   
+    WITH PASSWORD = '897yUUbv867y$200nk2i';  
+GO  
+```  
+  
+### <a name="c-changing-the-name-password-and-default-schema"></a>C. 名前、パスワード、および既定のスキーマを変更する  
+ 次の例は、名前、パスワード、およびアプリケーション ロールの既定のスキーマを変更`receipts_ledger`すべてを同じにします。  
+  
+```  
+ALTER APPLICATION ROLE receipts_ledger   
+    WITH NAME = weekly_ledger,   
+    PASSWORD = '897yUUbv77bsrEE00nk2i',   
+    DEFAULT_SCHEMA = Production;  
+GO  
+```  
+  
+## <a name="see-also"></a>参照  
+ [アプリケーション ロール](../../relational-databases/security/authentication-access/application-roles.md)   
+ [APPLICATION ROLE &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [DROP APPLICATION ROLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-application-role-transact-sql.md)   
+ [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
+  
+  

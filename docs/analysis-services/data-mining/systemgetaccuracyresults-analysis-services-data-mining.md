@@ -1,34 +1,39 @@
 ---
-title: "SystemGetAccuracyResults (Analysis Services - データ マイニング) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "データ マイニングであるストアド プロシージャ [Analysis Services]"
-  - "SystemGetAccuracyResults"
-  - "相互検証 [データ マイニング]"
+title: "SystemGetAccuracyResults (Analysis Services - データ マイニング) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- stored procedures [Analysis Services], data mining
+- SystemGetAccuracyResults
+- cross-validation [data mining]
 ms.assetid: 54ff584c-c6ce-4c31-9515-0a645719bd1a
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6b2eca528b40afd905661e2508e93529159b8627
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# SystemGetAccuracyResults (Analysis Services - データ マイニング)
+# <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - データ マイニング)
   マイニング構造と関連するすべてのモデル (クラスター モデルを除く) に対するクロス検証の精度基準を返します。  
   
- このストアド プロシージャは、データセット全体の基準を 1 つのパーティションとして返します。 データセットをクロスセクションにパーティション分割し、各パーティションのメトリックを取得するには、[SystemGetCrossValidationResults (Analysis Services - データ マイニング)](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md) を使用します。  
+ このストアド プロシージャは、データセット全体の基準を 1 つのパーティションとして返します。 データセットをクロスセクションにパーティション分割し、各パーティションのメトリックを取得するには、 [SystemGetCrossValidationResults (Analysis Services - データ マイニング)](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)を使用します。  
   
 > [!NOTE]  
->  このストアド プロシージャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムや [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムを使用して作成されたモデルではサポートされていません。 また、クラスター モデルの場合は、別のストアド プロシージャ [SystemGetClusterAccuracyResults (Analysis Services - データ マイニング)](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md) を使用します。  
+>  このストアド プロシージャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムや [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムを使用して作成されたモデルではサポートされていません。 また、クラスター モデルの場合は、別のストアド プロシージャ [SystemGetClusterAccuracyResults (Analysis Services - データ マイニング)](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)を使用します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -41,7 +46,7 @@ SystemGetAccuracyResults(<mining structure>,
 [,<test list>])  
 ```  
   
-## 引数  
+## <a name="arguments"></a>引数  
  *マイニング構造 (mining structure)*  
  現在のデータベースのマイニング構造の名前。  
   
@@ -81,21 +86,21 @@ SystemGetAccuracyResults(<mining structure>,
   
  既定値は **null**です。  
   
- (省略可能)  
+ (オプション)  
   
  *target threshold*  
  予測値が正確であると見なされる最小確率を示す 0.0 ～ 1 の範囲の数値。  
   
  既定値は **null**です。これは、すべての予測が正しいと見なされることを意味します。  
   
- (省略可能)  
+ (オプション)  
   
  *テスト リスト (test list)*  
  テスト オプションを指定する文字列。 このパラメーターは将来使用するために予約されています。  
   
- (省略可能)  
+ (オプション)  
   
-## 戻り値の型  
+## <a name="return-type"></a>戻り値の型  
  返される行セットには、各パーティションのスコアと、すべてのモデルの集計が含まれます。  
   
  次の表は、 **GetValidationResults**によって返される列の一覧です。  
@@ -106,13 +111,13 @@ SystemGetAccuracyResults(<mining structure>,
 |AttributeName|予測可能列の名前。|  
 |AttributeState|予測可能列の対象の値。<br /><br /> この列に値が含まれる場合、指定した状態の基準だけが収集されます。<br /><br /> この値が指定されていない場合や Null の場合は、予測ごとに最も可能性の高い状態の基準が計算されます。|  
 |PartitionIndex|結果が適用されるパーティションを表します。<br /><br /> このプロシージャでは、常に 0 になります。|  
-|PartitionCases|*\<data set>* パラメーターに基づいてケース セット内の行数を示す整数。|  
+|PartitionCases|基づいた、ケースのセット内の行の数を示す整数、 *\<データ セット >*パラメーター。|  
 |テスト|実行されたテストの種類。|  
-|[メジャー]|テストから返されたメジャーの名前。 各モデルのメジャーは、モデルの種類と、予測可能な値の型によって異なります。<br /><br /> 予測可能な型ごとに返されるメジャーの一覧については、「[相互検証レポートのメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)」をご覧ください。<br /><br /> 各メジャーの定義については、「[相互検証 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)」をご覧ください。|  
+|[メジャー]|テストから返されたメジャーの名前。 各モデルのメジャーは、モデルの種類と、予測可能な値の型によって異なります。<br /><br /> 予測可能な型ごとに返されるメジャーの一覧については、「[相互検証レポートのメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)」をご覧ください。<br /><br /> 各メジャーの定義については、「[相互検証 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)」をご覧ください。|  
 |値|指定したメジャーの値。|  
   
-## 解説  
- 次の表は、クロス検証に使用されるマイニング構造のデータを指定するために使用できる値の例を示しています。 クロス検証にテスト ケースを使用する場合、マイニング構造には、既にテスト データセットが含まれている必要があります。 マイニング構造の作成時にテスト データセットを定義する方法の詳細については、「[トレーニング データ セットとテスト データ セット](../../analysis-services/data-mining/training-and-testing-data-sets.md)」をご覧ください。  
+## <a name="remarks"></a>解説  
+ 次の表は、クロス検証に使用されるマイニング構造のデータを指定するために使用できる値の例を示しています。 クロス検証にテスト ケースを使用する場合、マイニング構造には、既にテスト データセットが含まれている必要があります。 マイニング構造の作成時にテスト データセットを定義する方法の詳細については、「 [トレーニング データ セットとテスト データ セット](../../analysis-services/data-mining/training-and-testing-data-sets.md)」をご覧ください。  
   
 |整数値|Description|  
 |-------------------|-----------------|  
@@ -124,9 +129,9 @@ SystemGetAccuracyResults(<mining structure>,
 |6|テスト ケースのみが使用され、モデル フィルターが適用されます。|  
 |7|トレーニング ケースとテスト ケースの両方が使用され、モデル フィルターが適用されます。|  
   
- クロス検証を使用するシナリオの詳細については、「[テストおよび検証 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)」をご覧ください。  
+ クロス検証を使用するシナリオの詳細については、「[テストおよび検証 &#40;データ マイニング&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)」をご覧ください。  
   
-## 使用例  
+## <a name="examples"></a>使用例  
  この例では、 `v Target Mail DT`マイニング構造に関連付けられている 1 つのデシジョン ツリー モデル `vTargetMail` の精度のメジャーを返します。 4 行目のコードは、結果が、テスト ケースに基づいていて、モデルごとにそのモデル固有のフィルターでフィルター処理されていることを示します。  `[Bike Buyer]` は、予測される列を指定し、その次の行の 1 は、モデルが特定の値 1 ("はい、購入します") に対してのみ評価されることを示します。  
   
  コードの最後の行では、状態のしきい値が 0.5 であることを指定します。 つまり、確率が 50% を超える予測は、精度を計算する際に "良い" 予測であると見なされます。  
@@ -154,13 +159,13 @@ CALL SystemGetAccuracyResults (
 |v Target Mail DT|Bike Buyer|1|0|1638|Likelihood|リフト|0.0936717116894395|  
 |v Target Mail DT|Bike Buyer|1|0|1638|Likelihood|2 乗平均平方根誤差|0.361630800104946|  
   
-## 必要条件  
- 相互検証は、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降の [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] でのみ使用できます。  
+## <a name="requirements"></a>必要条件  
+ 相互検証は、 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] 以降の [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]でのみ使用できます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SystemGetCrossValidationResults (Analysis Services - データ マイニング)](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults (Analysis Services - データ マイニング)](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults (Analysis Services - データ マイニング)](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterCrossValidationResults & #40 です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

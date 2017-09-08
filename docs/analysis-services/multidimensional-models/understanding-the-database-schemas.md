@@ -1,35 +1,40 @@
 ---
-title: "データベース スキーマの理解 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "スキーマ生成ウィザード, データベース スキーマ"
-  - "データベース スキーマ [Analysis Services]"
-  - "リレーショナル スキーマ [Analysis Services], データベース スキーマ"
-  - "サブジェクト領域スキーマ オプション [Analysis Services]"
-  - "ステージング領域スキーマ オプション [Analysis Services]"
-  - "非正規化スキーマ"
+title: "データベース スキーマの理解 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Schema Generation Wizard, database schema
+- database schema [Analysis Services]
+- relational schema [Analysis Services], database schema
+- subject area schema options [Analysis Services]
+- staging area schema options [Analysis Services]
+- denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 12d62289fe08395c91eff39202b60ee0f67ff82a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# データベース スキーマの理解
-  スキーマ生成ウィザードでは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンションおよびメジャー グループに基づいて、サブジェクト領域のデータベース用の非正規化されたリレーショナル スキーマを生成します。 このウィザードでは、ディメンション データを格納するための各ディメンション用のリレーショナル テーブル (ディメンション テーブル)、およびファクト データを格納するための各メジャー グループ用のリレーショナル テーブル (ファクト テーブル) が生成されます。 このウィザードを使用してこれらのリレーショナル テーブルを生成する場合、リンク ディメンション、リンク メジャー グループ、およびサーバー時間ディメンションは無視されます。  
+# <a name="understanding-the-database-schemas"></a>データベース スキーマの理解
+  スキーマ生成ウィザードでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のディメンションおよびメジャー グループに基づいて、サブジェクト領域のデータベース用の非正規化されたリレーショナル スキーマを生成します。 このウィザードでは、ディメンション データを格納するための各ディメンション用のリレーショナル テーブル (ディメンション テーブル)、およびファクト データを格納するための各メジャー グループ用のリレーショナル テーブル (ファクト テーブル) が生成されます。 このウィザードを使用してこれらのリレーショナル テーブルを生成する場合、リンク ディメンション、リンク メジャー グループ、およびサーバー時間ディメンションは無視されます。  
   
-## 検証  
- 基になるリレーショナル スキーマの生成を開始する前に、スキーマ生成ウィザードによって、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブおよびディメンションが検証されます。 ウィザードによってエラーが検出された場合には、ウィザードは停止し、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の [タスク一覧] ウィンドウにエラー レポートが表示されます。 スキーマの生成を妨げるエラーには次のようなものがあります。  
+## <a name="validation"></a>検証  
+ 基になるリレーショナル スキーマの生成を開始する前に、スキーマ生成ウィザードによって、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブおよびディメンションが検証されます。 ウィザードによってエラーが検出された場合には、ウィザードは停止し、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の [タスク一覧] ウィンドウにエラー レポートが表示されます。 スキーマの生成を妨げるエラーには次のようなものがあります。  
   
 -   ディメンションに複数のキー属性がある。  
   
@@ -39,13 +44,13 @@ caps.handback.revision: 28
   
 -   逆ディメンションまたはメジャーが不適切に構成されている。  
   
--   代理キーが不適切に構成されている (**ScdOriginalID** 属性型を使用した複数の属性や、整数データ型を使用した列にバインドされていない **ScdOriginalID** を使用した属性など)。  
+-   代理キーが不適切に構成されている ( **ScdOriginalID** 属性型を使用した複数の属性や、整数データ型を使用した列にバインドされていない **ScdOriginalID** を使用した属性など)。  
   
-## ディメンション テーブル  
+## <a name="dimension-tables"></a>ディメンション テーブル  
  各ディメンションに対して、スキーマ生成ウィザードによって、サブジェクト領域データベースに含まれるディメンション テーブルが生成されます。 ディメンション テーブルの構造は、基になるディメンションをデザイン中に行った選択によって異なります。  
   
  列  
- ウィザードを実行すると、ディメンション テーブルの基になるディメンションの各属性に関連付けられているバインディング (各属性の **KeyColumns**、**NameColumn**、**ValueColumn**、**CustomRollupColumn**、**CustomRollupPropertiesColumn**、**UnaryOperatorColumn** プロパティのバインディングなど) ごとに 1 列が生成されます。  
+ ウィザードを実行すると、ディメンション テーブルの基になるディメンションの各属性に関連付けられているバインディング (各属性の **KeyColumns**、 **NameColumn**、 **ValueColumn**、 **CustomRollupColumn**、 **CustomRollupPropertiesColumn**、 **UnaryOperatorColumn** プロパティのバインディングなど) ごとに 1 列が生成されます。  
   
  リレーションシップ  
  このウィザードでは、各親属性の列とディメンション テーブルの主キーの間のリレーションシップが生成されます。  
@@ -61,11 +66,11 @@ caps.handback.revision: 28
  翻訳  
  このウィザードでは、翻訳列が必要なすべての属性に対して、翻訳済みの値を格納する個別のテーブルが生成されます。 また、必要な言語ごとに個別の列が作成されます。  
   
-## ファクト テーブル  
+## <a name="fact-tables"></a>ファクト テーブル  
  キューブ内の各メジャー グループに対して、スキーマ生成ウィザードによって、サブジェクト領域データベースに含まれるファクト テーブルが生成されます。 ファクト テーブルの構造は、基になるメジャー グループのデザイン中に行われた選択と、メジャー グループと含まれるディメンションの間のリレーションシップによって異なります。  
   
  列  
- このウィザードでは、**Count** 集計関数を使用するメジャー以外の各メジャーに 1 つずつ列が生成されます。 これらのメジャーは、ファクト テーブルに対応する列を必要としません。  
+ このウィザードでは、 **Count** 集計関数を使用するメジャー以外の各メジャーに 1 つずつ列が生成されます。 これらのメジャーは、ファクト テーブルに対応する列を必要としません。  
   
  さらに、必要に応じて、メジャー グループ上の標準のディメンション リレーションシップごとの各粒度属性列に 1 つの列が生成され、このテーブルの基になるメジャー グループへのファクト ディメンション リレーションシップがあるディメンションの各属性に関連付けられたバインドに 1 つまたは複数の列が生成されます。  
   
@@ -82,8 +87,8 @@ caps.handback.revision: 28
  翻訳  
  このウィザードでは、翻訳列を必要とするメジャー グループのすべてのプロパティの翻訳済みの値を格納する個別のテーブルが生成されます。 また、必要な言語ごとに個別の列が作成されます。  
   
-## データ型変換と既定の長さ  
- スキーマ生成ウィザードでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **wchar** データ型を使用する列以外のすべての場合に、データ型が無視されます。 **wchar** データ サイズは、**nvarchar** データ型に直接変換されます。 ただし、**wchar** サイズを使用している列の指定された長さが 4,000 バイトより長い場合には、スキーマ生成ウィザードではエラーが発生します。  
+## <a name="data-type-conversion-and-default-lengths"></a>データ型変換と既定の長さ  
+ スキーマ生成ウィザードでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **wchar** データ型を使用する列以外のすべての場合に、データ型が無視されます。 **wchar** データ サイズは、 **nvarchar** データ型に直接変換されます。 ただし、 **wchar** サイズを使用している列の指定された長さが 4,000 バイトより長い場合には、スキーマ生成ウィザードではエラーが発生します。  
   
  属性のバインドなどのデータ アイテムに長さが指定されていない場合、次の表に示す既定の長さが列に使用されます。  
   
@@ -95,8 +100,8 @@ caps.handback.revision: 28
 |CustomRollupPropertiesColumn|500|  
 |UnaryOperatorColumn|1|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [増分生成の理解](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
- [データ ソース ビューおよびデータ ソースへの変更の管理](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
+ [データ ソース ビューとデータ ソースへの変更を管理します。](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
   
   

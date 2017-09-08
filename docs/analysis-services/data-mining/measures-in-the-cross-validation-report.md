@@ -1,39 +1,44 @@
 ---
-title: "相互検証レポートのメジャー | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "2 乗平均平方根誤差 [データ マイニング]"
-  - "相互検証 [データ マイニング]"
-  - "平均絶対誤差 [データ マイニング]"
-  - "ログ スコア [データ マイニング]"
-  - "可能性 [データ マイニング]"
+title: "クロス検証レポート内のメジャー |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- root mean square error [data mining]
+- cross-validation [data mining]
+- mean absolute error [data mining]
+- log score [data mining]
+- likelihood [data mining]
 ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f046ddaa3152318bfb3fe01d055bf213fdfdec41
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# 相互検証レポートのメジャー
-  相互検証では、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はマイニング構造のデータを複数のセクションにパーティション分割し、構造および関連マイニング モデルのテストを反復的に実行します。 この分析に基づき、構造および各モデルの標準の精度のメジャーを出力します。  
+# <a name="measures-in-the-cross-validation-report"></a>相互検証レポートのメジャー
+  相互検証では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はマイニング構造のデータを複数のセクションにパーティション分割し、構造および関連マイニング モデルのテストを反復的に実行します。 この分析に基づき、構造および各モデルの標準の精度のメジャーを出力します。  
   
  レポートでは、データ内のフォールドの数や各フォールド内のデータの量に関するいくつかの基本情報に加えて、データの分布を示す一連の一般的な基準が表示されます。 それぞれのセクションに対する一般的な基準を比較することで、構造またはモデルの信頼性を評価できます。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、マイニング モデルの一連の詳細メジャーも表示されます。 これらのメジャーは、分析するモデルの種類や、不連続であるか連続であるかなど属性の型によって異なります。  
   
- ここでは、**[相互検証]** レポートに含まれるメジャーおよびその意味の一覧を示します。 各メジャーの計算方法の詳細については、「[クロス検証の式](../../analysis-services/data-mining/cross-validation-formulas.md)」を参照してください。  
+ ここでは、 **[相互検証]** レポートに含まれるメジャーおよびその意味の一覧を示します。 各メジャーの計算方法の詳細については、「 [クロス検証の式](../../analysis-services/data-mining/cross-validation-formulas.md)」を参照してください。  
   
-## 相互検証レポートのメジャーの一覧  
- 次の表は、相互検証レポートに表示されるメジャーの一覧を示します。 メジャーは、表の左の列に表示されている*テストの種類*でグループ化されています。 右の列には、レポートに表示されるメジャーの名前、および意味に関する簡単な説明を示します。  
+## <a name="list-of-measures-in-the-cross-validation-report"></a>相互検証レポートのメジャーの一覧  
+ 次の表は、相互検証レポートに表示されるメジャーの一覧を示します。 メジャーは、表の左の列に表示されている *テストの種類*でグループ化されています。 右の列には、レポートに表示されるメジャーの名前、および意味に関する簡単な説明を示します。  
   
 |テストの種類|基準と説明|  
 |---------------|-------------------------------|  
@@ -54,7 +59,7 @@ caps.handback.revision: 28
 ||**Mean**:<br />                      特定のメジャーに関するパーティション値の平均です。|  
 ||**Standard Deviation**:<br />                      モデル内のすべてのパーティションを対象とした、特定メジャーの平均値に基づく偏差の平均。<br /><br /> 相互検証の場合、このスコアの値が高いことは、フォールドの間の変動が大きいことを意味します。|  
   
-## 参照  
- [テストおよび検証 &#40;データ マイニング&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>参照  
+ [テストおよび検証 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

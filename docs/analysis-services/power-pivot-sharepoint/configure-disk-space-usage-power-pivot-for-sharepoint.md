@@ -1,31 +1,36 @@
 ---
-title: "ディスクの使用領域の構成 (Power Pivot for SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ディスク領域使用率 (Power Pivot for SharePoint) の構成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fbd3fcbe7aa757ac95f225f7da01d7d54116e10b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# ディスクの使用領域の構成 (Power Pivot for SharePoint)
+# <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>ディスクの使用領域の構成 (Power Pivot for SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の配置では、再読み込みを高速化するために、ホスト コンピューターのディスク領域を使用して、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースをキャッシュします。 後で再読み込みをすばやく実行して新しい要求を処理できるように、メモリに読み込まれているすべての [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースが最初にディスクにキャッシュされます。 既定では、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint は、利用可能なすべてのディスク領域を使用してデータベースをキャッシュします。ただし、この動作は、使用するディスク領域を制限するプロパティを設定することにより変更できます。  
   
  このトピックでは、ディスク領域の使用量を制限する方法について説明します。  
   
  このトピックには、コンテンツ データベースに格納されている [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベース (Excel ブックに埋め込まれている) のディスク領域の管理に関するガイダンスは含まれていません。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースのサイズが大きいために、ファームのストレージ容量を増やすことが必要になる可能性があります。 また、バージョン管理が有効になっている場合は、同じコンテンツ データベース内のデータの複数のコピーを簡単に作成できるため、コンテンツの格納に必要なディスク領域の量がさらに増える可能性があります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースはディスクの管理における重要な考慮事項ですが、SharePoint ファームに保存されているその他のコンテンツと切り離して管理できるものではありません。 業務での [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックの使用率が増加するにつれて、ディスク領域をさらに詳しく監視する必要が生じます。 また、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボードでは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックの利用状況を追跡し、使用されなくなったブックを削除することもできます。  
   
-## キャッシュされているデータベースを Power Pivot for SharePoint で管理する方法  
+## <a name="how-power-pivot-for-sharepoint-manages-cached-databases"></a>キャッシュされているデータベースを Power Pivot for SharePoint で管理する方法  
  キャッシュを管理するために、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスでは、バックグラウンド ジョブを定期的に実行して、未使用のデータベースや、コンテンツ ライブラリ内に新しいバージョンがある古いデータベースをクリーンアップします。 クリーンアップ ジョブの目的は、非アクティブなデータベースをメモリからアンロードすること、および未使用のキャッシュされているデータベースをファイル システムから削除することにあります。 クリーンアップ ジョブは長期的なメンテナンスを目的としており、これによってシステム上にデータベースが無期限に残る状況を回避できます。 アクティブなサーバーの場合、サーバーのメモリ負荷、SharePoint でのデータベースの削除、またはコンテンツ ライブラリ内の新しいバージョンのデータベースが原因で、データベースが削除される頻度が高くなる場合があります。  
   
  クリーンアップ ジョブのスケジュールを設定することはできませんが、次のようにサーバー構成プロパティを設定して、キャッシュ ファイルの管理をカスタマイズできます。  
@@ -34,7 +39,7 @@ caps.handback.revision: 19
   
 -   最大ディスク容量に達したときに削除するデータの量を指定する。  
   
-## ディスク使用量を確認する方法  
+## <a name="how-to-check-disk-space-usage"></a>ディスク使用量を確認する方法  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint は、SharePoint ファーム内のアプリケーション サーバーにインストールされます。 各インストールには、Backup フォルダーを含むデータ ディレクトリがあります。 Backup フォルダーには、コンピューター上の Analysis Services インスタンスによってキャッシュされたすべてのデータ ファイルが含まれています。 既定では、Backup フォルダーは、次のパスにあります。  
   
  `%drive%:\Program Files\Microsoft SQL Server\MSAS10_50.PowerPivot\OLAP\Backup\Sandboxes\<serviceApplicationName>`  
@@ -43,7 +48,7 @@ caps.handback.revision: 19
   
  Backup フォルダーは、ローカル コンピューターのメモリに読み込まれる任意の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースに共通のキャッシュ ストレージです。 ファームで複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを定義した場合、各アプリケーションはローカル サーバーを使用して [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを読み込み、キャッシュすることができます。 データの読み込みとキャッシュは、どちらも Analysis Services サーバーの操作です。 したがって、ディスクの合計使用量は、Backup フォルダーにおいて Analysis Services インスタンス レベルで管理されます。 このため、ディスク使用量を制限する構成設定は、SharePoint アプリケーション サーバー上で実行される単一の SQL Server Analysis Services インスタンスで設定します。  
   
- キャッシュには、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースのみが格納されます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースは、1 つの親フォルダー (Backup フォルダー) の下に複数のファイルとして格納されます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースは Excel ブックの内部データとして使用することが意図されているため、データベース名はわかりやすい名前ではなく、GUID ベースになっています。 **\<serviceApplicationName>** の下にある GUID フォルダーは、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースの親フォルダーです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースがサーバーに読み込まれると、データベースごとに追加のフォルダーが作成されます。  
+ キャッシュには、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースのみが格納されます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースは、1 つの親フォルダー (Backup フォルダー) の下に複数のファイルとして格納されます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースは Excel ブックの内部データとして使用することが意図されているため、データベース名はわかりやすい名前ではなく、GUID ベースになっています。 下にある GUID フォルダー  **\<serviceApplicationName >**の親フォルダーには、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]データベース。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースがサーバーに読み込まれると、データベースごとに追加のフォルダーが作成されます。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データはファーム内の Analysis Services インスタンスに読み込まれることがあるため、同じデータがファーム内の複数のコンピューターにキャッシュされる可能性があります。 この処理ではディスク領域の使用率よりパフォーマンスを優先していますが、その代わりに、既にディスク上で使用可能になっているデータにユーザーが迅速にアクセスできます。  
   
@@ -57,7 +62,7 @@ caps.handback.revision: 19
   
 -   [Windows Server 2008 でのディスク領域不足に関する警告の設定](http://go.microsoft.com/fwlink/?LinkID=204870) (http://go.microsoft.com/fwlink/?LinkID=204870)。  
   
-## キャッシュされたファイルの格納に使用するディスク領域のサイズを制限する方法  
+## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>キャッシュされたファイルの格納に使用するディスク領域のサイズを制限する方法  
   
 1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サーバーのサービスの管理]**をクリックします。  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 19
   
      既定値は 4 時間です。この場合、4 時間以上非アクティブであったすべてのデータベースがファイル システムから削除されます。 非アクティブであってもまだメモリ内にあるデータベースは、アンロードされた後、ファイル システムから削除されます。  
   
-## データベースがキャッシュ内に保持される期間を制限する方法  
+## <a name="how-to-limit-how-long-a-database-is-kept-in-the-cache"></a>データベースがキャッシュ内に保持される期間を制限する方法  
   
 1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]**をクリックします。  
   
@@ -91,10 +96,10 @@ caps.handback.revision: 19
   
 5.  **[OK]** をクリックして変更を保存します。  
   
-## 次の手順  
- サーバーの状態、構成、または可用性の問題が検出された場合に修正措置を実行できるように、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint のインストールには正常性ルールが用意されています。 一部のルールでは、構成設定を使用して、正常性ルールがトリガーされる条件が決定されます。 サーバー パフォーマンスを積極的にチューニングしている場合は、これらの設定を確認して、既定値がシステムに最適であることを確認するようにします。 詳細については、「[Power Pivot の正常性ルールの構成](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md)」を参照してください。  
+## <a name="next-steps"></a>次の手順  
+ サーバーの状態、構成、または可用性の問題が検出された場合に修正措置を実行できるように、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint のインストールには正常性ルールが用意されています。 一部のルールでは、構成設定を使用して、正常性ルールがトリガーされる条件が決定されます。 サーバー パフォーマンスを積極的にチューニングしている場合は、これらの設定を確認して、既定値がシステムに最適であることを確認するようにします。 詳細については、「 [Power Pivot の正常性ルールの構成](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [サーバーの全体管理での Power Pivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

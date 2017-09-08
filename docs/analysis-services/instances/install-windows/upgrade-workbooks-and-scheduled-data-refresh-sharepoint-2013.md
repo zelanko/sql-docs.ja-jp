@@ -1,22 +1,27 @@
 ---
-title: "ブックのアップグレードと定期データ更新 (SharePoint 2013) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ブックと定期データ更新 (SharePoint 2013) のアップグレード |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 09907013b8a83b70fae3f0bf91f68f49a08290df
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# ブックのアップグレードと定期データ更新 (SharePoint 2013)
+# <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>ブックのアップグレードと定期データ更新 (SharePoint 2013)
   このトピックでは、以前の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 環境で作成されたブックのユーザー エクスペリエンスについて、およびこのリリースで導入された新機能を利用できるよう、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックをアップグレードする方法について説明します。 新機能の詳細については、「 [PowerPivot の新機能](http://go.microsoft.com/fwlink/?LinkID=203917)」を参照してください。  
   
 > [!WARNING]  
@@ -42,11 +47,11 @@ caps.handback.revision: 20
 -   SharePoint モードの [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] Analysis Services サーバーで実行されるブックの定期データ更新を有効にできます。  
   
 > [!IMPORTANT]  
->  アップグレードしたブックはロールバックできないため、以前のバージョンの [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] や [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] でそのブックを使用することがある場合は、必ずコピーを作成しておいてください。  
+>  アップグレードしたブックはロールバックできないため、以前のバージョンの [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)]や [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]でそのブックを使用することがある場合は、必ずコピーを作成しておいてください。  
   
  次の表に、ブックが作成された環境に基づく [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックのサポートおよび動作を示します。 この表では、一般的なユーザー エクスペリエンス、特定の環境にブックをアップグレードするときにサポートされるアップグレード オプション、およびアップグレードしていないブックの定期データ更新の動作について説明しています。  
   
-### ブックの動作とアップグレード オプション  
+### <a name="workbook-behavior-and-upgrade-options"></a>ブックの動作とアップグレード オプション  
   
 |作成|\<|サポートおよび動作|>|  
 |----------------|--------|--------------------------|--------|  
@@ -82,9 +87,9 @@ caps.handback.revision: 20
   
      ブックを保存して、SharePoint サーバーに再発行します。  
   
- Analysis Services の機能の変更点に関する詳細については、「[SQL Server 2016 における Analysis Services 機能の動作の変更](../../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)」を参照してください。  
+ Analysis Services の機能の変更点に関する詳細については、「 [SQL Server 2016 における Analysis Services 機能の動作の変更](../../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)」を参照してください。  
   
- 更新履歴の詳細については、「[データ更新履歴の表示 &#40;Power Pivot for SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)」を参照してください。  
+ 更新履歴の詳細については、「 [データ更新履歴の表示 &#40;Power Pivot for SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)」を参照してください。  
   
 ##  <a name="bkmk_to_2012sp1_from_2012"></a> SQL Server 2012 PowerPivot for Excel アドインで作成したブックから Office 2013 ブックへのアップグレード  
  ここでは、SQL Server 2012 **for Excel 2010 ブック** から [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SQL Server 2012 SP1 **for Excel 2013 ブック** へ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] アップグレードする方法について説明します。  
@@ -155,9 +160,9 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
 2.  **[定義]** タブの接続文字列の先頭にプロバイダーのバージョンが表示されます。  
   
-     **Provider=MSOLAP.5** は、ブックが [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] であることを示しています。  
+     **Provider=MSOLAP.5** は、ブックが [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]であることを示しています。  
   
-     **Provider=MSOLAP.4** は [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] を示しています。  
+     **Provider=MSOLAP.4** は [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]を示しています。  
   
      **Data Source=$Embedded$** は、ブックが埋め込みデータベースを使用する [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックであることを示しています。  
   
@@ -168,10 +173,10 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
 2.  MSOLAP まで下方向へスクロールします。 システムにインストールされている OLAP プロバイダーの中に MSOLAP.5 が含まれていることを確認します。 MSOLAP | CurVer が MSOLAP.5 に設定されていることを確認してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SharePoint 2013 への Power Pivot の移行](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [Power Pivot for SharePoint のアップグレード](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [Analysis Services の新機能](../../../analysis-services/what-s-new-in-analysis-services.md)   
- [データ更新履歴の表示 &#40;Power Pivot for SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
+ [ビューのデータ更新の履歴と #40 です。Power Pivot for SharePoint &#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
   

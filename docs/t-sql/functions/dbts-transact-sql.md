@@ -1,0 +1,69 @@
+---
+title: "@@DBTS (TRANSACT-SQL) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 07/30/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '@@DBTS_TSQL'
+- '@@DBTS'
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- '@@DBTS function'
+- timestamp data type
+ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
+caps.latest.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: f044c71018186baaf2bd5c27076b78aae139b34f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="dbts-transact-sql"></a>@@DBTS (TRANSACT-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+現在のデータベースの現在の **timestamp** 型の値を返します。 この timestamp はデータベース内で一意になることが保証されます。
+  
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+  
+## <a name="syntax"></a>構文  
+  
+```sql
+@@DBTS  
+```  
+  
+## <a name="return-types"></a>戻り値の型
+**varbinary**
+  
+## <a name="remarks"></a>解説  
+@@DBTS現在のデータベースの最後に使用されたタイムスタンプ値を返します。 **timestamp** 列を含む行を追加または更新するたびに、タイムスタンプの新しい値が生成されます。
+  
+@@DBTS関数は、トランザクション分離レベルの変更による影響ありません。
+  
+## <a name="examples"></a>使用例  
+次の例は、現在を返して**タイムスタンプ**から、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。
+  
+```sql
+USE AdventureWorks2012;  
+GO  
+SELECT @@DBTS;  
+```  
+  
+## <a name="see-also"></a>参照
+[構成関数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/configuration-functions-transact-sql.md)  
+[カーソルの同時実行 (&) #40";"ODBC"&"#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
+[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
+[MIN_ACTIVE_ROWVERSION & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/min-active-rowversion-transact-sql.md)
+  
+  
+

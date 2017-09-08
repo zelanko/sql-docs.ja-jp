@@ -1,38 +1,36 @@
 ---
-title: "サーバーの全体管理での Power Pivot サイト用の信頼できる場所の作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "サーバーの全体管理で Power Pivot サイト用の信頼できる場所を作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 7
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9f2913ee3aa26a01a704fbdd94a4d01b7044f73a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# サーバーの全体管理での Power Pivot サイト用の信頼できる場所の作成
+# <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>サーバーの全体管理での Power Pivot サイト用の信頼できる場所の作成
   Excel Services では、SharePoint サーバーで開いたブックの有効なリポジトリの場所を指定できます。 これは「信頼できる場所」と呼ばれ、作成したそれぞれの信頼できる場所について異なる構成設定を使用できます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の配置の場合、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックが含まれるサイト用に信頼できる場所を作成し、ファームのその他の部分に対する既定値を保持しながら [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスに対しては最適な設定を適用できるようにすることを検討してください。  
   
- このトピックには、次のセクションが含まれます。  
   
- [前提条件](#prereq)  
-  
- [概要](#overview)  
-  
- [Power Pivot データ アクセス用の信頼できる場所の作成](#create)  
-  
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
  URL を信頼できる場所として指定するには、ファームまたはサービスの管理者である必要があります。  
   
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーか、ブックが保存されているその他のライブラリが含まれる SharePoint サイトの URL アドレスがわかっていることが必要です。 アドレスを取得するには、ライブラリがあるサイトを開き、**[[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー]** を右クリックして、**[プロパティ]** をクリックします。次に、サーバー名とサイト パスを含む [アドレス (URL)] の最初の部分をコピーします。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーか、ブックが保存されているその他のライブラリが含まれる SharePoint サイトの URL アドレスがわかっていることが必要です。 アドレスを取得するには、ライブラリがあるサイトを開き、 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー**を右クリックして、 **[プロパティ]**をクリックします。次に、サーバー名とサイト パスを含む [アドレス (URL)] の最初の部分をコピーします。  
   
 ##  <a name="overview"></a> 概要  
  Excel Services の最初のインストールでは、'http://' が信頼できる場所として指定されます。このため、ファームのどのサイトからアクセスしたブックもサーバーで開くことができます。 信頼できると見なされる場所の制御を厳しくする必要がある場合は、ファームの特定のサイトにマップする信頼できる場所を新しく作成し、各場所の設定とアクセス許可を変更します。  
@@ -56,7 +54,7 @@ caps.handback.revision: 7
 6.  [場所の種類] で、 **[Microsoft SharePoint Foundation]**を選択します。  
   
     > [!IMPORTANT]  
-    >  UNC と HTTP の場所の種類は、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスではサポートされていません。  
+    >  UNC と HTTP の場所の種類は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスではサポートされていません。  
   
 7.  [セッションの管理]、[ブックのプロパティ]、および [計算動作] のプロパティの既定の設定をすべてそのまま使用します。  
   
@@ -68,9 +66,9 @@ caps.handback.revision: 7
   
 11. **[OK]**をクリックします。  
   
-## 参照  
- [Power Pivot ギャラリー](../Topic/Power%20Pivot%20Gallery.md)   
- [PowerPivot ギャラリーの作成およびカスタマイズ](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
- [Power Pivot ギャラリーを使用する](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  
+## <a name="see-also"></a>参照  
+ [Power Pivot ギャラリー](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)   
+ [作成し、Power Pivot ギャラリーのカスタマイズ](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
+ [Power Pivot ギャラリーを使用](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  
   
   

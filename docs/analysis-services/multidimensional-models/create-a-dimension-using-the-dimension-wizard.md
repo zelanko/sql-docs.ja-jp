@@ -1,36 +1,41 @@
 ---
-title: "ディメンション ウィザードを使用したディメンションの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ディメンション [Analysis Services], 作成"
+title: "ディメンション ウィザードを使用してディメンションを作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], creating
 ms.assetid: d84f66ae-7551-49bf-99d0-88368ca2dd0e
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff4a16fdc7f18eae35de5023116a11179fb11c5b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# ディメンション ウィザードを使用したディメンションの作成
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション ウィザードを使用して新しいディメンションを作成できます。  
+# <a name="create-a-dimension-using-the-dimension-wizard"></a>ディメンション ウィザードを使用したディメンションの作成
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のディメンション ウィザードを使用して新しいディメンションを作成できます。  
   
-### 新しいディメンションを作成するには  
+### <a name="to-create-a-new-dimension"></a>新しいディメンションを作成するには  
   
-1.  **ソリューション エクスプローラー**で **[ディメンション]** を右クリックし、**[新しいディメンション]** をクリックします。  
+1.  **ソリューション エクスプローラー**で **[ディメンション]**を右クリックし、 **[新しいディメンション]**をクリックします。  
   
-2.  ディメンション ウィザードの **[作成方法の選択]** ページで、**[既存のテーブルの使用]** をクリックして、**[次へ]** をクリックします。  
+2.  ディメンション ウィザードの **[作成方法の選択]** ページで、 **[既存のテーブルの使用]**をクリックして、 **[次へ]**をクリックします。  
   
     > [!NOTE]  
-    >  既存のテーブルを使用せずにディメンションを作成することが必要な場合もあります。 詳細については、「[データ ソースに時間テーブル以外のテーブルを生成することによるディメンションの作成](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)」および「[時間テーブルの生成による時間ディメンションの作成](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)」をご覧ください。  
+    >  既存のテーブルを使用せずにディメンションを作成することが必要な場合もあります。 詳細については、「 [データ ソースに時間テーブル以外のテーブルを生成することによるディメンションの作成](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md) 」および「 [時間テーブルの生成による時間ディメンションの作成](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)」をご覧ください。  
   
 3.  **[基になる情報の指定]** ページで、次の手順を実行します。  
   
@@ -48,31 +53,31 @@ caps.handback.revision: 17
   
     5.  **[次へ]**をクリックします。  
   
-4.  **[関連テーブルの選択]** ページで、ディメンションに含める関連テーブルを選択し、**[次へ]** をクリックします。  
+4.  **[関連テーブルの選択]** ページで、ディメンションに含める関連テーブルを選択し、 **[次へ]**をクリックします。  
   
     > [!NOTE]  
     >  **[関連テーブルの選択]** ページは、指定したメイン ディメンション テーブルに他のディメンション テーブルへのリレーションシップがある場合に表示されます。  
   
-5.  **[ディメンション属性の選択]** ページで、ディメンションに含める属性を選択し、**[次へ]** をクリックします。  
+5.  **[ディメンション属性の選択]** ページで、ディメンションに含める属性を選択し、 **[次へ]**をクリックします。  
   
      必要に応じて、属性名の変更、参照の有効化または無効化、および属性の型の指定を行うことができます。  
   
     > [!NOTE]  
     >  属性の **[参照を有効にする]** フィールドおよび **[属性の型]** フィールドをアクティブにするには、ディメンションに含めるように属性を選択する必要があります。  
   
-6.  **[勘定科目インテリジェンスの定義]** ページの **[ビルトイン勘定科目の種類]** 列で、勘定科目の種類を選択し、**[次へ]** をクリックします。  
+6.  **[勘定科目インテリジェンスの定義]** ページの **[ビルトイン勘定科目の種類]** 列で、勘定科目の種類を選択し、 **[次へ]**をクリックします。  
   
-     勘定科目の種類は、**[基になるテーブルの勘定科目の種類]** 列に表示されている、基になるテーブルの勘定科目の種類に対応している必要があります。  
+     勘定科目の種類は、 **[基になるテーブルの勘定科目の種類]** 列に表示されている、基になるテーブルの勘定科目の種類に対応している必要があります。  
   
     > [!NOTE]  
     >  **[勘定科目インテリジェンスの定義]** ページは、ウィザードの **[ディメンション属性の選択]** ページで、ディメンション属性 **[勘定科目の種類]** を定義した場合に表示されます。  
   
-7.  **[ウィザードの完了]** ページで、新しいディメンションの名前を入力し、ディメンション構造を確認します。 変更が必要な場合は **[戻る]** をクリックします。変更が必要ない場合は **[完了]** をクリックします。  
+7.  **[ウィザードの完了]** ページで、新しいディメンションの名前を入力し、ディメンション構造を確認します。 変更が必要な場合は **[戻る]**をクリックします。変更が必要ない場合は **[完了]**をクリックします。  
   
     > [!NOTE]  
     >  ディメンション ウィザードを完了した後、ディメンション デザイナーを使用して、ディメンションの属性と階層を追加、削除、および設定できます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [既存のテーブルを使用したディメンションの作成](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
   
   

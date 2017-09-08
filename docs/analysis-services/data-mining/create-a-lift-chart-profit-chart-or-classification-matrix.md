@@ -1,25 +1,30 @@
 ---
-title: "リフト チャート、利益チャート、または分類マトリックスの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "マイニング精度チャート [Analysis Services], マイニング構造"
+title: "リフト チャート、利益チャート、または分類マトリックスを作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Mining Accuracy Chart [Analysis Services], mining structures
 ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4a4ebb3633becee7df676650ce88d2e00ff96f8a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# リフト チャート、利益チャート、または分類マトリックスの作成
+# <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>リフト チャート、利益チャート、または分類マトリックスの作成
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニング モデルの精度チャートを作成するには、次の 5 つの基本手順に従います。  
   
 -   比較するマイニング モデルが含まれているマイニング構造を選択します。  
@@ -32,9 +37,9 @@ caps.handback.revision: 20
   
 -   グラフのオプションを構成します。  
   
- これらの基本手順は、リフト チャート、利益チャート、および分類マトリックスと同じです。 これらのグラフの種類の基本的なグラフ オプションを構成する手順を次に示します。 相互検証レポートの作成方法については、「[相互検証レポートのメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)」を参照してください。  
+ これらの基本手順は、リフト チャート、利益チャート、および分類マトリックスと同じです。 これらのグラフの種類の基本的なグラフ オプションを構成する手順を次に示します。 相互検証レポートの作成方法については、「 [相互検証レポートのメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)」を参照してください。  
   
-### マイニング構造を精度チャート デザイナーで開く  
+### <a name="open-the-mining-structure-in-the-accuracy-chart-designer"></a>マイニング構造を精度チャート デザイナーで開く  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でデータ マイニング デザイナーを開きます。  
   
@@ -42,9 +47,9 @@ caps.handback.revision: 20
   
 3.  **[マイニング精度チャート]** タブをクリックします。  
   
-### グラフに含めるマイニング モデルの選択  
+### <a name="select-mining-models-for-inclusion-in-the-chart"></a>グラフに含めるマイニング モデルの選択  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のデータ マイニング デザイナーの **[マイニング精度チャート]** タブで、**[入力の選択]** タブをクリックします。  
+1.  **のデータ マイニング デザイナーの** [マイニング精度チャート] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブで、 **[入力の選択]** タブをクリックします。  
   
      現在の構造内にある、予測可能な属性が同じであるモデルがすべて、一覧に表示されます。  
   
@@ -52,39 +57,39 @@ caps.handback.revision: 20
   
 3.  **[予測可能列名]** ボックスをクリックし、一覧から予測可能列の名前を選択します。 1 つのグラフに含めるすべてのモデルで、同一の予測可能列を使用する必要があります。  
   
-4.  2 つのモデルを比較する場合に、予測可能列の値またはデータ型が異なるときは、**[予測列と値の同期]** チェック ボックスをオフにすると、強制的に比較が行われます。  
+4.  2 つのモデルを比較する場合に、予測可能列の値またはデータ型が異なるときは、 **[予測列と値の同期]** チェック ボックスをオフにすると、強制的に比較が行われます。  
   
     > [!NOTE]  
     >  **[予測列と値の同期]** チェック ボックスをオンにした場合、モデルの予測可能列のデータとテスト データが Analysis Services によって分析され、最も合うものが検索されます。 したがって、強制的な列の比較がどうしても必要な場合にのみ、このチェック ボックスをオフにしてください。  
   
 5.  **[予測値]** ボックスをクリックし、一覧から値を選択します。 予測可能列のデータ型が連続値の場合は、このボックスに値を入力する必要があります。  
   
-     詳細については、「[マイニング モデルのテストに使用する列の選択](../../analysis-services/data-mining/choose-the-column-to-use-for-testing-a-mining-model.md)」を参照してください。  
+     詳細については、「 [マイニング モデルのテストに使用する列の選択](../../analysis-services/data-mining/choose-the-column-to-use-for-testing-a-mining-model.md)」を参照してください。  
   
-### テスト データの選択  
+### <a name="select-testing-data"></a>テスト データの選択  
   
-1.  **[マイニング精度チャート]** タブにある **[入力の選択]** タブで、**[精度チャートに使用するデータセットの選択]** のいずれかのオプションを選択することによって、グラフの生成に使用するデータのソースを指定します。  
+1.  **[マイニング精度チャート]** タブにある **[入力の選択]** タブで、 **[精度チャートに使用するデータセットの選択]**のいずれかのオプションを選択することによって、グラフの生成に使用するデータのソースを指定します。  
   
-    -   マイニング構造のテスト ケースとモデルの作成時に適用されたフィルターの積集合で定義されているケースのサブセットを使用する場合は、**[マイニング モデルのテスト ケースを使用する]** オプションを選択します。  
+    -   マイニング構造のテスト ケースとモデルの作成時に適用されたフィルターの積集合で定義されているケースのサブセットを使用する場合は、 **[マイニング モデルのテスト ケースを使用する]**オプションを選択します。  
   
-    -   マイニング構造の予約データ セットの一部として定義されたテスト ケースの完全なセットを使用するには、**[マイニング モデルのテスト ケースを使用する]** オプションを選択します。  
+    -   マイニング構造の予約データ セットの一部として定義されたテスト ケースの完全なセットを使用するには、 **[マイニング モデルのテスト ケースを使用する]**オプションを選択します。  
   
-    -   外部データを使用する場合は、**[別のデータセットを指定する]** オプションを選択します。  データ セットは、データ ソース ビューとして使用可能である必要があります。   参照 (**[…]**) ボタンをクリックして、精度チャートに使用するデータ テーブルを選択します。 詳細については、「[モデルのテスト データの選択およびマップ](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)」を参照してください。  
+    -   外部データを使用する場合は、 **[別のデータセットを指定する]**オプションを選択します。  データ セットは、データ ソース ビューとして使用可能である必要があります。   参照 (**[…]**) ボタンをクリックして、精度チャートに使用するデータ テーブルを選択します。 詳細については、「 [モデルのテスト データの選択およびマップ](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)」を参照してください。  
   
-         外部データセットを使用する場合、必要に応じて入力データセットをフィルター選択できます。 詳細については、「[モデルのテスト データへのフィルターの適用](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)」を参照してください。  
+         外部データセットを使用する場合、必要に応じて入力データセットをフィルター選択できます。 詳細については、「 [モデルのテスト データへのフィルターの適用](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)」を参照してください。  
   
 > [!NOTE]  
->  **[入力の選択]** タブでは、モデルのテスト ケースやマイニング構造のテスト ケースにフィルターを作成できません。 マイニング モデルにフィルターを作成するには、モデルの Filter プロパティを変更します。 詳細については、「[マイニング モデルへのフィルターの適用](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)」を参照してください。  
+>  **[入力の選択]** タブでは、モデルのテスト ケースやマイニング構造のテスト ケースにフィルターを作成できません。マイニング モデルにフィルターを作成するには、モデルの Filter プロパティを変更します。 詳細については、「 [マイニング モデルへのフィルターの適用](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)」を参照してください。  
   
-### グラフ設定の構成とグラフの生成  
+### <a name="configure-chart-settings-and-generate-the-chart"></a>グラフ設定の構成とグラフの生成  
   
 1.  **[マイニング精度チャート]** タブで、作成するグラフのタブをクリックします。  
   
-2.  **リフト チャート**の場合は **[リフト チャート]** タブをクリックします。 グラフは、選択したモデル、予測可能な属性、および入力データに基づいて自動的に生成されます。  
+2.  **リフト チャート**の場合は **[リフト チャート]** タブをクリックします。グラフは、選択したモデル、予測可能な属性、および入力データに基づいて自動的に生成されます。  
   
-3.  **分類マトリックス**の場合は、**[分類マトリックス]** タブをクリックします。 それ以上の設定は不要です。グラフは、選択した入力データおよびモデルに基づいて自動的に生成されます。  
+3.  **分類マトリックス**の場合は、 **[分類マトリックス]** タブをクリックします。それ以上の設定は不要です。グラフは、選択した入力データおよびモデルに基づいて自動的に生成されます。  
   
-4.  **利益チャート**の場合は、まず **[リフト チャート]** タブをクリックします。 **[グラフの種類]** ボックスの一覧から **[利益チャート]** を選択します。  
+4.  **利益チャート**の場合は、まず **[リフト チャート]** タブをクリックします。**[グラフの種類]** ボックスの一覧から **[利益チャート]**を選択します。  
   
      **[利益チャートの設定]** ダイアログ ボックスで次の設定を入力します。  
   
@@ -110,8 +115,8 @@ caps.handback.revision: 20
      **[個人ごとの収益]**  
      成功した各販売に関連する収益です。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [リフト チャート &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
- [分類マトリックス &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
+ [分類マトリックス (Analysis Services - データ マイニング)](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   

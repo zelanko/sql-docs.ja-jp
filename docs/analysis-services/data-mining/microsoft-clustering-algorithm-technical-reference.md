@@ -1,37 +1,42 @@
 ---
-title: "Microsoft クラスタリング アルゴリズム テクニカル リファレンス | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "クラスター [データ マイニング]"
-  - "MAXIMUM_INPUT_ATTRIBUTES parameter"
-  - "CLUSTER_SEED パラメーター"
-  - "MODELLING_CARDINALITY パラメーター"
-  - "MINIMUM_SUPPORT パラメーター"
-  - "STOPPING_TOLERANCE パラメーター"
-  - "MAXIMUM_STATES parameter"
-  - "SAMPLE_SIZE パラメーター"
-  - "CLUSTERING_METHOD パラメーター"
-  - "ソフト クラスタリング [データ マイニング]"
-  - "クラスタリング アルゴリズム [Analysis Services]"
-  - "CLUSTER_COUNT パラメーター"
+title: "Microsoft クラスタ リング アルゴリズム テクニカル リファレンス |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clustering [Data Mining]
+- MAXIMUM_INPUT_ATTRIBUTES parameter
+- CLUSTER_SEED parameter
+- MODELLING_CARDINALITY parameter
+- MINIMUM_SUPPORT parameter
+- STOPPING_TOLERANCE parameter
+- MAXIMUM_STATES parameter
+- SAMPLE_SIZE parameter
+- CLUSTERING_METHOD parameter
+- soft clustering [Data Mining]
+- clustering algorithms [Analysis Services]
+- CLUSTER_COUNT parameter
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c0c63e2966073fc045401febb16b1a350e94552c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Microsoft クラスタリング アルゴリズム テクニカル リファレンス
-  ここでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムの実装について、クラスター モデルの動作を制御するために使用できるパラメーターを含めて説明します。 クラスター モデルの作成時や処理時のパフォーマンスを向上させる方法に関するアドバイスも含まれています。  
+# <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft クラスタリング アルゴリズム テクニカル リファレンス
+  ここでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムの実装について、クラスター モデルの動作を制御するために使用できるパラメーターを含めて説明します。 クラスター モデルの作成時や処理時のパフォーマンスを向上させる方法に関するアドバイスも含まれています。  
   
  クラスター モデルの使用方法の詳細については、次のトピックを参照してください。  
   
@@ -39,12 +44,12 @@ caps.handback.revision: 21
   
 -   [クラスタリング モデルのクエリ例](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
-## Microsoft クラスタリング アルゴリズムの実装  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムには、クラスターを作成し、クラスターにデータ ポイントを割り当てるための 2 つの方法が用意されています。 1 つ目の *K-Means* アルゴリズムは、ハード クラスタリングの手法です。 この手法では、データ ポイントが所属できるクラスターは 1 つだけであるため、そのクラスターの各データ ポイントのメンバーシップについて 1 つの確率が計算されます。 2 つ目の *Expectation Maximization* (EM) 手法は、*ソフト クラスタリング*の手法です。 この手法では、データ ポイントが常に複数のクラスターに所属するため、データ ポイントとクラスターの組み合わせごとに確率が計算されます。  
+## <a name="implementation-of-the-microsoft-clustering-algorithm"></a>Microsoft クラスタリング アルゴリズムの実装  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムには、クラスターを作成し、クラスターにデータ ポイントを割り当てるための 2 つの方法が用意されています。 1 つ目の *K-Means* アルゴリズムは、ハード クラスタリングの手法です。 この手法では、データ ポイントが所属できるクラスターは 1 つだけであるため、そのクラスターの各データ ポイントのメンバーシップについて 1 つの確率が計算されます。 2 つ目の *Expectation Maximization* (EM) 手法は、 *ソフト クラスタリング* の手法です。 この手法では、データ ポイントが常に複数のクラスターに所属するため、データ ポイントとクラスターの組み合わせごとに確率が計算されます。  
   
- どちらのアルゴリズムを使用するかは、*CLUSTERING_METHOD* パラメーターを設定して選択できます。 既定のクラスタリング手法はスケーラブル EM です。  
+ どちらのアルゴリズムを使用するかは、 *CLUSTERING_METHOD* パラメーターを設定して選択できます。 既定のクラスタリング手法はスケーラブル EM です。  
   
-### EM クラスタリング  
+### <a name="em-clustering"></a>EM クラスタリング  
  EM クラスタリングでは、初期クラスター モデルがデータに合わせて反復的に調整され、データ ポイントがクラスター内に存在する確率が判定されます。 このプロセスは、その確率論的モデルがデータに適合すると終了します。 適合の判定に使用される関数は、与えられたモデルに対するデータの対数尤度です。  
   
  このプロセスで空のクラスターが生成された場合や、メンバーシップが指定のしきい値に達していないクラスターがあった場合は、母集団の小さいクラスターが新しいポイントで再シードされ、EM アルゴリズムが再実行されます。  
@@ -63,33 +68,33 @@ caps.handback.revision: 21
   
  Microsoft による実装には、スケーラブル EM と非スケーラブル EM という 2 つのオプションがあります。 既定のスケーラブル EM では、初期スキャンのシードに最初の 50,000 レコードが使用されます。 これが成功した場合は、モデルでそのデータのみが使用されます。 50,000 個のレコードを使用して適切なモデルを作成できなかった場合は、さらに 50,000 個のレコードが読み取られます。 非スケーラブル EM では、サイズにかかわらずデータセット全体が読み取られます。 これにより、より正確なクラスターが作成される場合もありますが、必要なメモリの量が大幅に増加する可能性があります。 スケーラブル EM では、ローカル バッファーが使用されるため、データの反復処理が大幅に高速化されます。また、非スケーラブル EM よりはるかに効率的に CPU メモリ キャッシュを活用できます。 さらに、すべてのデータがメイン メモリに収まる場合でも非スケーラブル EM に比べて 3 倍高速になります。 このパフォーマンスの改善によって最終的なモデルの質が低下することもほとんどありません。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムの EM の実装に関する技術的なレポートについては、「[EM (Expectation Maximization) クラスタリングの大規模データベースへのスケーリング](http://go.microsoft.com/fwlink/?LinkId=45964)」を参照してください。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムの EM の実装に関する技術的なレポートについては、「 [EM (Expectation Maximization) クラスタリングの大規模データベースへのスケーリング](http://go.microsoft.com/fwlink/?LinkId=45964)」を参照してください。  
   
-### K-Means クラスタリング  
- K-Means クラスタリングは、クラスター内のアイテム間の相違を最小化し、クラスター間の距離を最大化することによってクラスター メンバーシップを割り当てる、よく知られている手法です。 K-Means の "Means" は、クラスターの*重心*を表します。クラスターの重心とは、任意に選択され、クラスター内のすべてのデータ ポイントの真の平均を表すようになるまで反復的に調整されるデータ ポイントです。 "K" は、クラスタリング処理のシードに使用される任意の数のポイントを表します。 K-Means アルゴリズムでは、クラスター内のデータ レコードと、クラスターの平均を表すベクトルとの間のユークリッド距離の 2 乗を計算し、その総和が最小値に達したとき、最終的な k 個のクラスターのセットに収束します。  
+### <a name="k-means-clustering"></a>K-Means クラスタリング  
+ K-Means クラスタリングは、クラスター内のアイテム間の相違を最小化し、クラスター間の距離を最大化することによってクラスター メンバーシップを割り当てる、よく知られている手法です。 K-Means の "Means" は、クラスターの *重心* を表します。クラスターの重心とは、任意に選択され、クラスター内のすべてのデータ ポイントの真の平均を表すようになるまで反復的に調整されるデータ ポイントです。 "K" は、クラスタリング処理のシードに使用される任意の数のポイントを表します。 K-Means アルゴリズムでは、クラスター内のデータ レコードと、クラスターの平均を表すベクトルとの間のユークリッド距離の 2 乗を計算し、その総和が最小値に達したとき、最終的な k 個のクラスターのセットに収束します。  
   
  K-Means アルゴリズムでは、各データ ポイントが割り当てられるクラスターは 1 つだけであり、メンバーシップのあいまいさは許容されません。 クラスターのメンバーシップは重心からの距離として表されます。  
   
  K-Means アルゴリズムは、平均への距離を簡単に計算できる連続属性のクラスターの作成に使用されるのが一般的ですが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] の実装では、確率を使用することにより、不連続属性に対しても使用できるようになっています。  不連続属性の場合、特定のクラスターからデータ ポイントまでの距離は次のように計算されます。  
   
- 1 - P(data point, cluster)   
+ 1 - P(data point, cluster)  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムでは、K-Means の計算に使用される距離関数は公開されておらず、完成したモデルで距離の測定値を使用することはできません。 ただし、予測関数を使用して、距離に相当する値を取得することができます。この場合の距離は、データ ポイントがクラスターに属する確率として計算されます。 詳細については、「[ClusterProbability &#40;DMX&#41;](../../dmx/clusterprobability-dmx.md)」を参照してください。  
   
  K-Means アルゴリズムには、データセットのサンプリング方法が 2 つ用意されています。1 つ目の非スケーラブル K-Means では、データセット全体を読み込んで 1 つのクラスタリング パスを作成します。2 つ目のスケーラブル K-Means では、最初の 50,000 ケースを使用してデータに適合するモデルを作成できなかった場合にのみ追加のケースが読み取られます。  
   
-### SQL Server 2008 の Microsoft クラスタリング アルゴリズムへの更新  
- SQL Server 2008 では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムの既定の構成が、内部パラメーター NORMALIZATION = 1 を使用するように変更されました。 正規化は z スコア統計を使用して実行され、正規分布を想定しています。 既定の動作をこのように変更したのは、規模が大きくなり外れ値が増える可能性がある属性の影響を最小限に抑えるためです。 ただし、z スコア正規化により、正規ではない分布 (均一分布など) のクラスタリング結果が異なる可能性があります。 正規化を回避し、SQL Server 2005 の K-Means クラスタリング アルゴリズムと同じ動作を得るには、**[パラメーター設定]** ダイアログ ボックスを使用して、カスタム パラメーター NORMALIZATION を追加し、その値を 0 に設定します。  
+### <a name="updates-to-the-microsoft-clustering-algorithm-in-sql-server-2008"></a>SQL Server 2008 の Microsoft クラスタリング アルゴリズムへの更新  
+ SQL Server 2008 では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムの既定の構成が、内部パラメーター NORMALIZATION = 1 を使用するように変更されました。 正規化は z スコア統計を使用して実行され、正規分布を想定しています。 既定の動作をこのように変更したのは、規模が大きくなり外れ値が増える可能性がある属性の影響を最小限に抑えるためです。 ただし、z スコア正規化により、正規ではない分布 (均一分布など) のクラスタリング結果が異なる可能性があります。 正規化を回避し、SQL Server 2005 の K-Means クラスタリング アルゴリズムと同じ動作を得るには、 **[パラメーター設定]** ダイアログ ボックスを使用して、カスタム パラメーター NORMALIZATION を追加し、その値を 0 に設定します。  
   
 > [!NOTE]  
 >  NORMALIZATION パラメーターは [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムの内部プロパティであり、サポートされていません。 通常、モデルの結果を向上させるには、クラスタリング モデルで正規化を使用することをお勧めします。  
   
-## Microsoft クラスタリング アルゴリズムのカスタマイズ  
+## <a name="customizing-the-microsoft-clustering-algorithm"></a>Microsoft クラスタリング アルゴリズムのカスタマイズ  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムでは、結果として得られるマイニング モデルの動作、パフォーマンス、および精度に影響を与えるいくつかのパラメーターがサポートされています。  
   
-### アルゴリズム パラメーターの設定  
- 次の表は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムで使用できるパラメーターを示しています。 これらのパラメーターは、結果として得られるマイニング モデルのパフォーマンスと精度の両方に影響を与えます。  
+### <a name="setting-algorithm-parameters"></a>アルゴリズム パラメーターの設定  
+ 次の表は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムで使用できるパラメーターを示しています。 これらのパラメーターは、結果として得られるマイニング モデルのパフォーマンスと精度の両方に影響を与えます。  
   
  CLUSTERING_METHOD  
  アルゴリズムで使用するクラスタリング手法を指定します。 使用可能なクラスタリング手法は次のとおりです。  
@@ -156,7 +161,7 @@ caps.handback.revision: 21
   
  既定値は、100 です。  
   
-### ModelingFlags  
+### <a name="modeling-flags"></a>ModelingFlags  
  アルゴリズムでは、次のモデリング フラグがサポートされています。 モデリング フラグは、マイニング構造やマイニング モデルを作成するときに定義し、 分析時に各列の値をどのように処理するかを指定します。  
   
 |モデリング フラグ|Description|  
@@ -164,10 +169,10 @@ caps.handback.revision: 21
 |MODEL_EXISTENCE_ONLY|列が、Missing および Existing の 2 つの可能な状態を持つ列として扱われます。 NULL は Missing 値になります。<br /><br /> マイニング モデル列に適用されます。|  
 |NOT NULL|列に NULL を含めることはできません。 モデルのトレーニング中に NULL が検出された場合はエラーが発生します。<br /><br /> マイニング構造列に適用されます。|  
   
-## 必要条件  
+## <a name="requirements"></a>必要条件  
  クラスタリング モデルは、キー列と入力列を含んでいる必要があります。 入力列は、予測可能列として定義することもできます。 **[予測のみ]** に設定されている列は、クラスターの作成には使用されません。 クラスター内のそれらの値の分布は、クラスターの作成後に算出されます。  
   
-### 入力列と予測可能列  
+### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 &#40;データ マイニング&#41;](../../analysis-services/data-mining/content-types-data-mining.md)」を参照してください。  
   
 |列|コンテンツの種類|  
@@ -178,9 +183,9 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  コンテンツの種類 Cyclical および Ordered はサポートされますが、アルゴリズムはこれらを不連続の値として扱い、特別な処理は行いません。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Microsoft クラスタリング アルゴリズム](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
- [クラスタリング モデルのクエリ例](../../analysis-services/data-mining/clustering-model-query-examples.md)   
+ [クラスタ リング モデルのクエリ例](../../analysis-services/data-mining/clustering-model-query-examples.md)   
  [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

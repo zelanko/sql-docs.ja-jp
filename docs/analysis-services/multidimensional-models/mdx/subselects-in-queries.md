@@ -1,27 +1,32 @@
 ---
-title: "クエリのサブセレクト | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "クエリのサブセレクト |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 918c7727a7af1f85f93d110652da450f1ea770cb
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# クエリのサブセレクト
+# <a name="subselects-in-queries"></a>クエリのサブセレクト
   サブセレクト式とは、入れ子になった SELECT 式です。この式は、外側にある外部の SELECT が評価されているキューブ空間を制限するために使用されます。 サブセレクトにより、すべての計算が評価される新しい空間を定義できます。  
   
-## サブセレクトの例  
+## <a name="subselects-by-example"></a>サブセレクトの例  
  表示させたい結果を生成するために、サブセレクトがどのように機能するかを示す例を見てみましょう。 上位 10 製品の数年間の販売動向を示す表を生成するように要求されたとします。  
   
  結果は以下の表のようになります。  
@@ -158,7 +163,7 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   
  上記の結果は、インターネット チャネル経由でフランスで販売された上位 10 製品を示しています。  
   
-## サブセレクト ステートメント  
+## <a name="subselect-statement"></a>サブセレクト ステートメント  
  サブセレクトの BNF は次のとおりです。  
   
 ```  
@@ -339,7 +344,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  両方のセットの結果には、違いがあることがわかります。 最初のクエリは、上位 5 販売地域の最も販売された製品は何かという質問に対する結果を返し、2 番目のクエリは、上位 5 販売製品が最も販売された場所はどこかという質問に対する結果を返しています。  
   
-### 解説  
+### <a name="remarks"></a>解説  
  サブセレクトには、次の制限事項と制約事項があります。  
   
 -   WHERE 句はサブ空間に対してフィルターを適用しません。  
@@ -350,6 +355,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   HAVING 句は軸句では使用できません。代わりに [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md) 関数式を使用します。  
   
--   既定では、計算されるメンバーはサブセレクトでは許可されません。ただし、この制限は、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> の **SubQueries** 接続文字列プロパティ、または [Supported XMLA Properties &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md) の **DBPROP_MSMD_SUBQUERIES** プロパティに、値を割り当てると、セッション単位で変更できます。 **SubQueries** または **DBPROP_MSMD_SUBQUERIES** の値に基づく計算されたメンバーの動作の詳細については、「[サブセレクトとサブキューブで計算されるメンバー](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md)」を参照してください。  
+-   既定では計算されるメンバーでは許可されませんサブセレクトです。ただし、この制限は、セッション単位でに値を割り当てることによって、**サブクエリ**で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または**DBPROP_MSMD_SUBQUERIES** 内のプロパティ[サポートされる XMLA プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) または **DBPROP_MSMD_SUBQUERIES** の値に基づく計算されたメンバーの動作の詳細については、「 **サブセレクトとサブキューブで計算されるメンバー**」を参照してください。  
   
   

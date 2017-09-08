@@ -1,34 +1,39 @@
 ---
-title: "テーブル内のデータのフィルター処理 (SSAS テーブル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.notallitemsshowing.f1"
-  - "sql13.asvs.bidtoolset.autofiltermenu.f1"
-  - "sql13.asvs.bidtoolset.customfilterdb.f1"
+title: "テーブル (SSAS テーブル) 内のデータをフィルター処理 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.notallitemsshowing.f1
+- sql13.asvs.bidtoolset.autofiltermenu.f1
+- sql13.asvs.bidtoolset.customfilterdb.f1
 ms.assetid: 3223059d-f525-4835-bf88-ebc195d9dbdc
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 310909a6e5f607a9473fca8720d718351ef00476
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# テーブル内のデータのフィルター処理 (SSAS テーブル)
+# <a name="filter-data-in-a-table-ssas-tabular"></a>テーブル内のデータのフィルター処理 (SSAS テーブル)
   テーブルに読み込む行を制御するには、データをインポートする際にフィルターを適用します。 データをインポートした後、行を個別に削除することはできません。 ただし、カスタム フィルターを適用して行の表示方法を制御することは可能です。 フィルター条件を満たしていない行は非表示になります。 1 行以上の列を基準にしてフィルター処理を行うことができます。 フィルター処理は追加型です。つまり、新しいフィルターによる処理は、前のフィルター処理の結果に対して行われます。したがって、フィルターを適用するごとにデータのサブセットは減っていきます。  
   
 > [!NOTE]  
 >  フィルターのプレビュー ウィンドウでは、表示される異なる値の数が制限されます。 制限を超えた場合は、メッセージが表示されます。  
   
-### 列の値を基準にしてデータをフィルター処理するには  
+### <a name="to-filter-data-based-on-column-values"></a>列の値を基準にしてデータをフィルター処理するには  
   
 1.  モデル デザイナーでテーブルを選択し、フィルター処理の基準にする列の見出しの矢印をクリックします。  
   
@@ -38,22 +43,22 @@ caps.handback.revision: 13
   
          値の数が極端に多い場合、個々のアイテムが一覧に表示されないことがあります。 その場合は、"アイテムが多すぎるため、表示できません" というメッセージが表示されます。  
   
-    -   列の種類に応じて **[数値フィルター]** または **[テキスト フィルター]** をクリックし、比較演算子コマンド (**[等しい]** など) のいずれかをクリックするか、**[カスタム フィルター]** をクリックします。 **[カスタム フィルター]** ダイアログ ボックスで、フィルターを作成し、 **[OK]**をクリックします。  
+    -   列の種類に応じて **[数値フィルター]** または **[テキスト フィルター]** をクリックし、比較演算子コマンド ( **[等しい]**など) のいずれかをクリックするか、 **[カスタム フィルター]**をクリックします。 **[カスタム フィルター]** ダイアログ ボックスで、フィルターを作成し、 **[OK]**をクリックします。  
   
-### 列のフィルターをクリアするには  
+### <a name="to-clear-a-filter-for-a-column"></a>列のフィルターをクリアするには  
   
 1.  フィルターをクリアする列の見出しの矢印をクリックします。  
   
-2.  **[\<列名> のフィルターをクリア]** をクリックします。  
+2.  をクリックして**からフィルターをクリア\<列名 >**です。  
   
-### テーブルのすべてのフィルターをクリアするには  
+### <a name="to-clear-all-filters-for-a-table"></a>テーブルのすべてのフィルターをクリアするには  
   
 1.  モデル デザイナーで、フィルターをクリアするテーブルを選択します。  
   
 2.  **[列]** メニューをクリックし、 **[すべてのフィルターをクリア]**をクリックします。  
   
-## 参照  
- [データのフィルター処理と並べ替え (SSAS テーブル)](../Topic/Filter%20and%20Sort%20Data%20\(SSAS%20Tabular\).md)   
+## <a name="see-also"></a>参照  
+ [データのフィルター処理と並べ替え (SSAS テーブル)](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)   
  [パースペクティブ (SSAS テーブル)](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [ロール (SSAS テーブル)](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   

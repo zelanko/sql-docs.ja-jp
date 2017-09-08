@@ -1,27 +1,32 @@
 ---
-title: "Command イベントのデータ列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Command イベントのイベント カテゴリ"
+title: "コマンドの Events Data Columns |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Command Events event category
 ms.assetid: 7169f1e2-c6be-4d8c-b147-25719b84bc2c
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 39022629aeda9951a01e79ebf45ec099bd5d7205
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Command イベントのデータ列
-  次の表は、**Command イベント**のイベント カテゴリにある各イベント クラスのデータ列の一覧です。  
+# <a name="command-events-data-columns"></a>Command イベントのデータ列
+  次の表は、 **Command イベント** のイベント カテゴリにある各イベント クラスのデータ列の一覧です。  
   
- **Command イベント**のイベント カテゴリには、次のイベント クラスがあります。  
+ **Command イベント** のイベント カテゴリには、次のイベント クラスがあります。  
   
 -   [Command Begin クラス](#bkmk_1)  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 36
 |StartTime|有効な場合、Command イベントが開始された時刻を表します。|  
 |SessionType|操作の原因となったエンティティを表します。|  
 |NTDomainName|Object Permission イベントに関連付けられた Windows ドメイン アカウントを表します。|  
-|ClientProcessID|Command イベントに関連付けられた一意のクライアント プロセス ID を表します。 |  
+|ClientProcessID|Command イベントに関連付けられた一意のクライアント プロセス ID を表します。|  
   
 ##  <a name="bkmk_2"></a> Command End クラスのデータ列  
   
@@ -54,10 +59,10 @@ caps.handback.revision: 36
 |ConnectionID|Command イベントに関連付けられた一意の接続 ID を表します。|  
 |TextData|Command イベントに関連付けられたテキスト データを表します。|  
 |ServerName|Command イベントが発生した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前を表します。|  
-|CurrentTime|Command イベントの現在の時刻を表します。 フィルター選択では、*YYYY*-*MM*-*DD* および *YYYY*-*MM*-*DD HH*:*MM*:*SS* の形式が使用されます。|  
+|CurrentTime|Command イベントの現在の時刻を表します。 フィルター選択では、 *YYYY*-*MM*-*DD* および *YYYY*-*MM*-*DD HH*:*MM*:*SS*の形式が使用されます。|  
 |DatabaseName|コマンドが実行されているデータベースの名前を表します。|  
 |Duration|Command Begin イベントから Command End イベントまでのおおよその時間を表します。|  
-|EndTime|Command イベントが終了した時刻を表します。 フィルター選択では、*YYYY*-*MM*-*DD* および *YYYY*-*MM*-*DD HH*:*MM*:*SS* の形式が使用されます。|  
+|EndTime|Command イベントが終了した時刻を表します。 フィルター選択では、 *YYYY*-*MM*-*DD* および *YYYY*-*MM*-*DD HH*:*MM*:*SS*の形式が使用されます。|  
 |EventSubclass|Command イベント内のイベントのクラスを表します。 サポートされている値は次のとおりです。<br /><br /> 0: Create<br /><br /> 1: Alter<br /><br /> 2: Delete<br /><br /> 3: Process<br /><br /> 4: DesignAggregations<br /><br /> 5: WBInsert<br /><br /> 6: WBUpdate<br /><br /> 7: WBDelete<br /><br /> 8: Backup<br /><br /> 9: Restore<br /><br /> 10: MergePartitions<br /><br /> 11: Subscribe<br /><br /> 12: Batch<br /><br /> 13: BeginTransaction<br /><br /> 14: CommitTransaction<br /><br /> 15: RollbackTransaction<br /><br /> 16: GetTransactionState<br /><br /> 17: Cancel<br /><br /> 18: Synchronize<br /><br /> 19: Import80MiningModels<br /><br /> 20: Attach<br /><br /> 21: Detach<br /><br /> 22: SetAuthContext<br /><br /> 23: ImageLoad<br /><br /> 24: ImageSave<br /><br /> 10000: Other|  
 |NTCanonicalUserName|Command イベントに関連付けられた Windows ユーザー名を表します。 ユーザー名は正規の形式です。 たとえば、engineering.microsoft.com/software/user などです。|  
 |NTUserName|Command イベントに関連付けられた Windows ユーザー アカウントを表します。|  
@@ -69,9 +74,9 @@ caps.handback.revision: 36
 |成功|Command イベントの成功または失敗を表します。 値は次のとおりです。<br /><br /> 0 = 失敗<br /><br /> 1 = 成功|  
 |SessionType|Command End イベントに関連付けられた操作が発生する原因となったエンティティを表します。|  
 |NTDomainName|Command イベントに関連付けられた Windows ドメイン アカウントを表します。|  
-|ClientProcessID|Command イベントに関連付けられた一意のクライアント プロセス ID を表します。 |  
+|ClientProcessID|Command イベントに関連付けられた一意のクライアント プロセス ID を表します。|  
   
-## 参照  
- [Command イベントのイベント カテゴリ](../../analysis-services/trace-events/command-events-event-category.md)  
+## <a name="see-also"></a>参照  
+ [Command Events Event Category](../../analysis-services/trace-events/command-events-event-category.md)  
   
   

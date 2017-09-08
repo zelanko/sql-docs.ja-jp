@@ -1,46 +1,51 @@
 ---
-title: "Microsoft Neural Network Algorithm Technical Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "HIDDEN_NODE_RATIO parameter"
-  - "MAXIMUM_INPUT_ATTRIBUTES parameter"
-  - "HOLDOUT_PERCENTAGE parameter"
-  - "ニューラル ネットワーク アルゴリズム [Analysis Services]"
-  - "output layer [Data Mining]"
-  - "neural networks"
-  - "MAXIMUM_OUTPUT_ATTRIBUTES parameter"
-  - "MAXIMUM_STATES parameter"
-  - "SAMPLE_SIZE parameter"
-  - "hidden layer"
-  - "hidden neurons"
-  - "input layer [Data Mining]"
-  - "activation function [Data Mining]"
-  - "Back-Propagated Delta Rule network"
-  - "neural network model [Analysis Services]"
-  - "coding [Data Mining]"
-  - "HOLDOUT_SEED パラメーター"
+title: "Microsoft ニューラル ネットワーク アルゴリズム テクニカル リファレンス |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- HIDDEN_NODE_RATIO parameter
+- MAXIMUM_INPUT_ATTRIBUTES parameter
+- HOLDOUT_PERCENTAGE parameter
+- neural network algorithms [Analysis Services]
+- output layer [Data Mining]
+- neural networks
+- MAXIMUM_OUTPUT_ATTRIBUTES parameter
+- MAXIMUM_STATES parameter
+- SAMPLE_SIZE parameter
+- hidden layer
+- hidden neurons
+- input layer [Data Mining]
+- activation function [Data Mining]
+- Back-Propagated Delta Rule network
+- neural network model [Analysis Services]
+- coding [Data Mining]
+- HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d29618af2bb8ffe0a7e809388f32ed5987b67aea
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Microsoft Neural Network Algorithm Technical Reference
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワークでは、最大 3 層のニューロンまたは*パーセプトロン*で構成される*多層パーセプトロン* ネットワーク (*バックプロパゲーション デルタ ルール ネットワーク*とも呼ばれる) を使用します。 これらの層は、入力層、オプションの非表示層、および出力層です。  
+# <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワークでは、最大 3 層のニューロンまたは *パーセプトロン* で構成される *多層パーセプトロン*ネットワーク ( *バックプロパゲーション デルタ ルール ネットワーク*とも呼ばれる) を使用します。 これらの層は、入力層、オプションの非表示層、および出力層です。  
   
  多層パーセプトロン ニューラル ネットワークの詳細については、このマニュアルでは扱いません。 このトピックでは、入力値および出力値を正規化するために使用する方法や属性の基数を減らすために使用する機能選択方法など、アルゴリズムの基本的な実装について説明します。 このトピックでは、アルゴリズムの動作をカスタマイズするために使用できるパラメーターおよびその他の設定について説明します。モデルのクエリに関する追加情報へのリンクも示します。  
   
-## Microsoft ニューラル ネットワーク アルゴリズムの実装  
+## <a name="implementation-of-the-microsoft-neural-network-algorithm"></a>Microsoft ニューラル ネットワーク アルゴリズムの実装  
  多層パーセプトロン ニューラル ネットワークでは、各ニューロンは 1 つまたは複数の入力を受け取り、1 つまたは複数の同一の出力を生成します。 各出力は、ニューロンへの入力の合計の単純な非線形関数です。 入力は入力層のノードから非表示層のノードに送られ、次に非表示層から出力層に渡されます。層内のニューロン間は接続されていません。 ロジスティック回帰モデルのように、非表示層が含まれていない場合、入力は入力層のノードから出力層のノードに直接渡されます。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムで作成されるニューラル ネットワークには、次の 3 種類のニューロンがあります。  
@@ -49,7 +54,7 @@ caps.handback.revision: 26
   
  入力ニューロンは、データ マイニング モデルの入力属性値を指定します。 不連続の入力属性の場合、入力ニューロンは通常、入力属性からの 1 つの状態を表します。 この状態には不足値が含まれます。状態が不足値になるのは、属性のトレーニング データに NULL が含まれている場合です。 3 つ以上の状態を持つ不連続の入力属性では、各状態の入力ニューロンが 1 つずつ生成されます。また、トレーニング データに NULL が含まれている場合は、存在しない状態の入力ニューロンが 1 つ生成されます。 連続する入力属性では、存在しない状態のニューロンと、連続する属性自体の値のニューロンという 2 つの入力ニューロンが生成されます。 入力ニューロンは、1 つまたは複数の非表示ニューロンの入力になります。  
   
-**非表示ニューロン**  
+**Hidden neurons**  
   
  非表示ニューロンは入力ニューロンから入力を受け取り、出力ニューロンに出力を渡します。  
   
@@ -61,9 +66,9 @@ caps.handback.revision: 26
   
  各入力には、 *重み*と呼ばれる値が割り当てられています。この値は、非表示ニューロンまたは出力ニューロンに対する特定の入力の関連性または重要性を表します。 入力に割り当てられている重みが大きいほど、その入力の値の関連性または重要性が増加します。 重みには負の値も使用できます。これは、その入力によって特定のニューロンがアクティブになるのではなく、抑制されることを意味します。 特定のニューロンに対する入力の重要性を増加させるには、各入力の値と重みを乗算します。 負の重みの場合は、値と重みを乗算すると重要性が低下します。  
   
- 各ニューロンには*アクティブ化関数*と呼ばれる単純な非線形関数が割り当てられており、ニューラル ネットワークの層に対する特定のニューロンの関連性または重要性が表されます。 非表示ニューロンではアクティブ化関数として*ハイパーボリック タンジェント*関数 () を使用し、出力ニューロンではアクティブ化関数として*シグモイド*関数を使用します。 どちらの関数も、ニューラル ネットワークによる入力ニューロンと出力ニューロン間の非線形リレーションシップのモデル化を可能にする非線形の連続関数です。  
+ 各ニューロンには *アクティブ化関数*と呼ばれる単純な非線形関数が割り当てられており、ニューラル ネットワークの層に対する特定のニューロンの関連性または重要性が表されます。 非表示ニューロンではアクティブ化関数として *ハイパーボリック タンジェント* 関数 () を使用し、出力ニューロンではアクティブ化関数として *シグモイド* 関数を使用します。 どちらの関数も、ニューラル ネットワークによる入力ニューロンと出力ニューロン間の非線形リレーションシップのモデル化を可能にする非線形の連続関数です。  
   
-### ニューラル ネットワークのトレーニング  
+### <a name="training-neural-networks"></a>ニューラル ネットワークのトレーニング  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムを使用するデータ マイニング モデルのトレーニングには、複数の手順が必要です。 これらの手順は、アルゴリズム パラメーターに対して指定した値の影響を強く受けます。  
   
  まず、アルゴリズムによってデータ ソースのトレーニング データの評価および抽出が行われます。 *予約データ*と呼ばれるトレーニング データの割合は、ネットワークの精度の評価で使用するために予約されています。 トレーニング処理の間、トレーニング データを反復処理するたびに、ネットワークが即座に評価されます。 精度が向上しなくなると、トレーニング処理が停止します。  
@@ -75,13 +80,13 @@ caps.handback.revision: 26
   
  次に、マイニング モデルがサポートするネットワークの数と複雑さがアルゴリズムによって決定されます。 予測のみに使用される 1 つまたは複数の属性がマイニング モデルに含まれている場合は、そのようなすべての属性を表す単一のネットワークが作成されます。 入力と予測に使用される 1 つまたは複数の属性がマイニング モデルに含まれている場合は、アルゴリズム プロバイダーによって各属性のネットワークが作成されます。  
   
- 不連続の値を持つ入力属性および予測可能属性の場合、各入力ニューロンまたは出力ニューロンはそれぞれ 1 つの状態を表します。 連続する値を持つ入力属性および予測可能属性の場合、各入力ニューロンまたは出力ニューロンはそれぞれ属性の値の範囲および分布を表します。 両方のケースでサポートされる状態の最大数は、*MAXIMUM_STATES* アルゴリズム パラメーターの値によって異なります。 特定の属性の状態の数が *MAXIMUM_STATES* アルゴリズム パラメーターの値を超えている場合は、許可された状態の最大数に達するまで、その属性の最も一般的な状態または最も関連性の強い状態が選択され、残りの状態は分析の目的では不足値としてグループ化されます。  
+ 不連続の値を持つ入力属性および予測可能属性の場合、各入力ニューロンまたは出力ニューロンはそれぞれ 1 つの状態を表します。 連続する値を持つ入力属性および予測可能属性の場合、各入力ニューロンまたは出力ニューロンはそれぞれ属性の値の範囲および分布を表します。 両方のケースでサポートされる状態の最大数は、 *MAXIMUM_STATES* アルゴリズム パラメーターの値によって異なります。 特定の属性の状態の数が *MAXIMUM_STATES* アルゴリズム パラメーターの値を超えている場合は、許可された状態の最大数に達するまで、その属性の最も一般的な状態または最も関連性の強い状態が選択され、残りの状態は分析の目的では不足値としてグループ化されます。  
   
  アルゴリズムでは、非表示層に対して作成するニューロンの最初の数を決定するときに *HIDDEN_NODE_RATIO* パラメーターの値が使用されます。 *HIDDEN_NODE_RATIO* を 0 に設定すると、マイニング モデルに対して生成されるネットワーク内に非表示層が作成されず、ニューラル ネットワークがロジスティック回帰として扱われます。  
   
  アルゴリズム プロバイダーでは、 *一括学習*と呼ばれる処理で、以前に予約されたトレーニング データのセットを取得し、予約データ内の各ケースの実際の既知の値をネットワークの予測と比較することによって、ネットワーク内のすべての入力の重みを同時に反復的に評価します。 アルゴリズムによってトレーニング データのセット全体が評価された後、各ニューロンの予測値と実際値が確認されます。 アルゴリズムでは、エラーがあればエラーの程度を計算し、 *バックプロパゲーション*と呼ばれる処理で出力ニューロンから入力ニューロンに逆方向の処理を行い、そのニューロンの入力に関連付けられた重みを調整します。 次に、アルゴリズムではトレーニング データのセット全体で処理が繰り返されます。 アルゴリズムでは多数の重みと出力ニューロンをサポートできるので、入力の重みの割り当ておよび評価を行うトレーニング処理の実行には、共役勾配アルゴリズムが使用されます。 共役勾配アルゴリズムの詳細については、このマニュアルでは扱いません。  
   
-### 機能の選択  
+### <a name="feature-selection"></a>機能の選択  
  入力属性の数が *MAXIMUM_INPUT_ATTRIBUTES* パラメーターの値を上回っているか、予測可能属性の数が *MAXIMUM_OUTPUT_ATTRIBUTES* パラメーターの値を上回っている場合は、マイニング モデルに含まれているネットワークの複雑さを軽減するために、機能選択アルゴリズムが使用されます。 機能選択によって、入力属性または予測可能属性の数が、モデルとの関連性が統計的に最も高い属性の数まで減らされます。  
   
  すべての [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニング アルゴリズムでは、分析の向上と処理負荷の削減のため、機能の選択が自動的に使用されます。 ニューラル ネットワーク モデルの機能の選択に使用される方法は、属性のデータ型に応じて異なります。 参考に、ニューラル ネットワーク モデルで使用される機能の選択の方法と、ニューラル ネットワーク アルゴリズムに基づくロジスティック回帰アルゴリズムで使用される機能の選択の方法を次の表に示します。  
@@ -93,7 +98,7 @@ caps.handback.revision: 26
   
  ニューラル ネットワーク モデルに対する機能の選択を制御するアルゴリズム パラメーターは、MAXIMUM_INPUT_ATTRIBUTES、MAXIMUM_OUTPUT_ATTRIBUTES、および MAXIMUM_STATES です。 HIDDEN_NODE_RATIO パラメーターを設定して、非表示層の数を制御することもできます。  
   
-### スコアリング方法  
+### <a name="scoring-methods"></a>スコアリング方法  
  *スコアリング* は正規化の一種であり、ニュートラル ネットワーク モデルのトレーニングのコンテキストでは、不連続テキスト ラベルなどの値を、他の種類の入力との比較およびネットワーク内での重み付けを行うことができる値に変換するプロセスを意味します。 たとえば、Male および Female という値をとる Gender という入力属性と、可変値をとる Income という入力属性があるとします。この場合、各属性の値を直接比較することはできません。そのため、値を共通のスケールにエンコードして、重みを計算できるようにする必要があります。 スコアリングは、このような入力を数値 (特に確率範囲) に正規化するプロセスです。 正規化に使用する関数は、極端な値によって分析結果が歪められることがないように、入力値を単一のスケールでより均等に分布させる場合にも役立ちます。  
   
  ニューラル ネットワークの出力もエンコードされます。 出力 (予測) に使用するターゲットが 1 つだけ存在する場合、または入力用ではなく予測のみに使用するターゲットが複数存在する場合、モデルは単一のネットワークを作成するため、値を正規化する必要はないと思われるかもしれません。 しかし、複数の属性が入力および予測に使用される場合、モデルは複数のネットワークを作成する必要があります。したがって、すべての値を正規化し、出力についてもネットワークからの出力時にエンコードする必要があります。  
@@ -116,10 +121,10 @@ caps.handback.revision: 26
   
  出力のエンコードには、シグモイド関数が使用されます。シグモイド関数は、予測に非常に役立つ性質をいくつか備えています。 このような性質の 1 つとして、元の値のスケーリング方法や値が負であるか正であるかにかかわらず、常に 0 ～ 1 の値を出力するという点が挙げられます。この性質は確率の推定に適しています。 もう 1 つの有用な性質は、シグモイド関数にはスムージング効果があるため、値が変曲点から離れるにつれて、値の確率が 0 または 1 の方向へ緩やかに移動するという点です。  
   
-## ニューラル ネットワーク アルゴリズムのカスタマイズ  
+## <a name="customizing-the-neural-network-algorithm"></a>ニューラル ネットワーク アルゴリズムのカスタマイズ  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムでは、結果として得られるマイニング モデルの動作、パフォーマンス、および精度に影響を与えるいくつかのパラメーターがサポートされています。 列にモデリング フラグを設定するか、または列内の値の処理方法を指定するディストリビューション フラグを設定して、モデルによるデータの処理方法を変更することもできます。  
   
-### アルゴリズム パラメーターの設定  
+### <a name="setting-algorithm-parameters"></a>アルゴリズム パラメーターの設定  
  次の表は、Microsoft ニューラル ネットワーク アルゴリズムで使用できるパラメーターを示しています。  
   
  HIDDEN_NODE_RATIO  
@@ -161,7 +166,7 @@ caps.handback.revision: 26
   
  既定値は 10000 です。  
   
-### ModelingFlags  
+### <a name="modeling-flags"></a>ModelingFlags  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムでは、次のモデリング フラグを使用できます。  
   
  NOT NULL  
@@ -174,7 +179,7 @@ caps.handback.revision: 26
   
  マイニング モデル列に適用されます。  
   
-### ディストリビューション フラグ  
+### <a name="distribution-flags"></a>ディストリビューション フラグ  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムでは、次のディストリビューション フラグを使用できます。 ディストリビューション フラグは、モデルのみへのヒントとして使用されます。アルゴリズムでは、異なる分布が検出された場合、ヒントで指定された分布ではなく、検出された分布が使用されます。  
   
  標準  
@@ -184,12 +189,12 @@ caps.handback.revision: 26
  列内の値を、均等に分布している値として処理する必要があることを示します。つまり、値の確率はほぼ均等で、値の合計数の関数になります。  
   
  Log Normal  
- 列内の値を、*対数正規*曲線に従って分布している (値の対数が正規分布している) 値として処理する必要があることを示します。  
+ 列内の値を、 *対数正規* 曲線に従って分布している (値の対数が正規分布している) 値として処理する必要があることを示します。  
   
-## 必要条件  
+## <a name="requirements"></a>必要条件  
  線形回帰モデルには、1 つ以上の入力列と 1 つの出力列が必要です。  
   
-### 入力列と予測可能列  
+### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。  
   
 |列|コンテンツの種類|  
@@ -200,9 +205,9 @@ caps.handback.revision: 26
 > [!NOTE]  
 >  コンテンツの種類 Cyclical および Ordered はサポートされますが、アルゴリズムはこれらを不連続の値として扱い、特別な処理は行いません。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Microsoft ニューラル ネットワーク アルゴリズム](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [ニューラル ネットワーク モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [ニューラル ネットワーク モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Neural Network Model Query Examples](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

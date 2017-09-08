@@ -1,28 +1,33 @@
 ---
-title: "データ ソース ビューでの論理リレーションシップの定義 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "リレーションシップの追加"
-  - "リレーションシップ [Analysis Services], データ ソース ビュー"
-  - "データ ソース ビュー [Analysis Services], リレーションシップ"
+title: "データ ソース ビュー (Analysis Services) に論理リレーションシップの定義 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding relationships
+- relationships [Analysis Services], data source views
+- data source views [Analysis Services], relationships
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08ca218747186a14224809c574a6dc524296cb1a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# データ ソース ビューでの論理リレーションシップの定義 (Analysis Services)
+# <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>データ ソース ビューでの論理リレーションシップの定義 (Analysis Services)
   データ ソース ビュー ウィザードとデータ ソース ビュー デザイナーでは、データ ソース ビュー (DSV) に追加されたテーブル間のリレーションシップが、基になるデータベース リレーションシップまたは指定した名前一致条件に基づき、自動的に定義されます。  
   
  複数のデータ ソースのデータを使用する場合は、データ ソース ビューの論理リレーションシップを手動で定義して、自動的に定義されたリレーションシップを補完する必要があることもあります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、ファクト テーブルやディメンション テーブルの識別、基になるデータ ソースからデータやメタデータを取得するためのクエリの作成、および高度なビジネス インテリジェンス機能の利用において、リレーションシップが必要となります。  
@@ -50,14 +55,14 @@ caps.handback.revision: 37
   
 ##  <a name="bkmk_addRel"></a> テーブル、名前付きクエリ、またはビュー間のリレーションシップを追加するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でプロジェクトを開くか、論理リレーションシップを追加するデータ ソース ビューが含まれているデータベースに接続します。  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でプロジェクトを開くか、論理リレーションシップを追加するデータ ソース ビューが含まれているデータベースに接続します。  
   
-2.  ソリューション エクスプローラーで **[データ ソース ビュー]** フォルダーを展開し、データ ソース ビューをダブルクリックして**データ ソース ビュー デザイナー**を開きます。  
+2.  ソリューション エクスプローラーで **[データ ソース ビュー]** フォルダーを展開し、データ ソース ビューをダブルクリックして **データ ソース ビュー デザイナー**を開きます。  
   
-3.  **[テーブル]** ペインで、リレーションシップの追加先のテーブル、名前付きクエリ、またはビューを右クリックし、**[新しいリレーションシップ]** をクリックします。  
+3.  **[テーブル]** ペインで、リレーションシップの追加先のテーブル、名前付きクエリ、またはビューを右クリックし、 **[新しいリレーションシップ]**をクリックします。  
   
     > [!NOTE]  
-    >  テーブル、ビュー、または名前付きクエリを検索するには、**[データ ソース ビュー]** メニューをクリックするか、**テーブル** ペインまたは**ダイアグラム** ペインの空いている領域を右クリックして、**[テーブルの検索]** をクリックします。  
+    >  テーブル、ビュー、または名前付きクエリを検索するには、 **[データ ソース ビュー]** メニューをクリックするか、 **テーブル** ペインまたは **ダイアグラム** ペインの空いている領域を右クリックして、 **[テーブルの検索]** をクリックします。  
   
 4.  **[リレーションシップの指定]** ダイアログ ボックスで、次の操作を行います。  
   
@@ -67,25 +72,25 @@ caps.handback.revision: 37
   
     3.  **[基になる列]** および **[対象になる列]** 一覧から列を選択して、2 つのテーブル間のリレーションシップを作成します。  
   
-         基になるテーブル、ビュー、または名前付きクエリのデータをサンプリングすることで、誤った方向 (外部キーから主キーではなく、主キーから外部キー) にリレーションシップを定義したことが [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] によって検出された場合は、順序を逆にするように要求されます。 順序を逆にするには、**[反転]** をクリックします。  
+         基になるテーブル、ビュー、または名前付きクエリのデータをサンプリングすることで、誤った方向 (外部キーから主キーではなく、主キーから外部キー) にリレーションシップを定義したことが [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] によって検出された場合は、順序を逆にするように要求されます。 順序を逆にするには、 **[反転]**をクリックします。  
   
          選択した列にリレーションシップが既に存在することが [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] によって検出された場合は、メッセージが表示されます。 リレーションシップを重複して定義することはできません。  
   
-    4.  必要に応じて、**[説明]** ボックスにリレーションシップの説明を入力します。  
+    4.  必要に応じて、 **[説明]** ボックスにリレーションシップの説明を入力します。  
   
 ##  <a name="bkmk_diagrampane"></a> [ダイアグラム] ペインでリレーションシップを表示または変更するには  
   
--   **データ ソース ビュー デザイナー**の **[ダイアグラム]** ペインで、表示するリレーションシップを右クリックし、**[リレーションシップの編集]** をクリックするか、リレーションシップの矢印をダブルクリックします。  リレーションシップを変更するには、**[リレーションシップの編集]** ダイアログ ボックスを使用します。  
+-   **データ ソース ビュー デザイナー** の **[ダイアグラム]**ペインで、表示するリレーションシップを右クリックし、 **[リレーションシップの編集]** をクリックするか、リレーションシップの矢印をダブルクリックします。  リレーションシップを変更するには、 **[リレーションシップの編集]** ダイアログ ボックスを使用します。  
   
 ##  <a name="bkmk_tablespane"></a> [テーブル] ペインでリレーションシップを表示または変更するには  
   
-1.  **データ ソース ビュー デザイナー**の **[テーブル]** ペインで、表示または変更するリレーションシップを含むテーブル、ビュー、または名前付きクエリを検索し、展開します。  
+1.  **データ ソース ビュー デザイナー** の **[テーブル]**ペインで、表示または変更するリレーションシップを含むテーブル、ビュー、または名前付きクエリを検索し、展開します。  
   
 2.  **[リレーションシップ]** フォルダーを展開します。  選択したテーブル、ビュー、または名前付きクエリと他のテーブル、ビュー、および名前付きクエリ間のリレーションシップが、リレーションシップ列と共に表示されます。  
   
-3.  変更するリレーションシップを右クリックし、**[リレーションシップの編集]** をクリックします。  
+3.  変更するリレーションシップを右クリックし、 **[リレーションシップの編集]**をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

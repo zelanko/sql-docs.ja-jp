@@ -1,29 +1,34 @@
 ---
-title: "予測クエリ ビルダーを使用した予測クエリの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "予測クエリ [Analysis Services]"
-  - "マイニング モデル予測 [Analysis Services], 予測クエリ"
+title: "予測クエリ ビルダーを使用して予測クエリを作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- prediction queries [Analysis Services]
+- Mining Model Prediction [Analysis Services], prediction queries
 ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3a61c0e05e427ef4d4e693e1594598dafe85f3c2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# 予測クエリ ビルダーを使用した予測クエリの作成
-  予測クエリは、BI Development Studio でデータ マイニング ソリューションを構築しているときに作成できます。また、SQL Server Management Studio で既存のマイニング モデルを右クリックし、**[予測クエリの作成]** オプションを選択して、作成することもできます。  
+# <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>予測クエリ ビルダーを使用した予測クエリの作成
+  予測クエリは、BI Development Studio でデータ マイニング ソリューションを構築しているときに作成できます。また、SQL Server Management Studio で既存のマイニング モデルを右クリックし、 **[予測クエリの作成]**オプションを選択して、作成することもできます。  
   
- **予測クエリ ビルダー**には、次の 3 種類のデザイン モードがあります。これらのモードを切り替えるには、左上隅のアイコンをクリックします。  
+ **予測クエリ ビルダー** には、次の 3 種類のデザイン モードがあります。これらのモードを切り替えるには、左上隅のアイコンをクリックします。  
   
 -   **デザイン**  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 30
   
  ビジュアル ツールとテキスト エディターを組み合わせて使用して、データ マイニング クエリをデザインできます。 テキスト エディターでクエリへの変更を入力して **[デザイン]** ビューに戻ると、変更はすべて失われ、クエリは予測クエリ ビルダーで作成した元のクエリに戻ります。このトピックでは、グラフィカル クエリ ビルダーの使用手順を示します。  
   
-### 予測クエリを作成するには  
+### <a name="to-create-a-prediction-query"></a>予測クエリを作成するには  
   
 1.  データ マイニング デザイナーの **[マイニング モデル予測]** タブをクリックします。  
   
@@ -70,15 +75,15 @@ caps.handback.revision: 30
   
 3.  予測を作成するモデルを選択して、 **[OK]**をクリックします。  
   
-4.  **[入力テーブルの選択]** テーブルで、**[ケース テーブルの選択]** をクリックします。  
+4.  **[入力テーブルの選択]** テーブルで、 **[ケース テーブルの選択]**をクリックします。  
   
      **[テーブルの選択]** ダイアログ ボックスが開きます。  
   
 5.  **[データ ソース]** 一覧で、予測を作成するデータが含まれているデータ ソースを選択します。  
   
-6.  **[テーブル名またはビュー名]** ボックスで、予測を作成するデータが含まれているテーブルを選択し、**[OK]** をクリックします。  
+6.  **[テーブル名またはビュー名]** ボックスで、予測を作成するデータが含まれているテーブルを選択し、 **[OK]**をクリックします。  
   
-     入力テーブルを選択すると、列名に基づいてマイニング モデルと入力テーブルの間に既定のマッピングが作成されます。 マッピングを削除するには、**[マイニング モデル]** テーブル内の列が **[入力テーブルの選択]** テーブル内のマップ先の列にリンクしている線をクリックして選択し、Del キーを押します。 **[入力テーブルの選択]** テーブルの列をクリックし、**[マイニング モデル]** テーブルの対応する列にドラッグして、マッピングを手動で作成することもできます。  
+     入力テーブルを選択すると、列名に基づいてマイニング モデルと入力テーブルの間に既定のマッピングが作成されます。 マッピングを削除するには、 **[マイニング モデル]** テーブル内の列が **[入力テーブルの選択]** テーブル内のマップ先の列にリンクしている線をクリックして選択し、Del キーを押します。 **[入力テーブルの選択]** テーブルの列をクリックし、 **[マイニング モデル]** テーブルの対応する列にドラッグして、マッピングを手動で作成することもできます。  
   
 7.  次の 3 種類の情報を任意に組み合わせて、予測クエリ ビルダーのグリッドに追加します。  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 30
   
 8.  **[マイニング モデル予測]** タブのツール バーにある最初のボタンをクリックし、 **[結果]**を選択して、クエリを実行します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データ マイニング デザイナーでの単一クエリの作成](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)  
   

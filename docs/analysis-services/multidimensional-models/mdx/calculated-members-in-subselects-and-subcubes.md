@@ -1,29 +1,34 @@
 ---
-title: "サブセレクトとサブキューブで計算されるメンバー | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "計算されるメンバーはサブセレクトとサブキューブで |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a06ba2933b415a28d53266e4c02f3768e5044866
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# サブセレクトとサブキューブで計算されるメンバー
+# <a name="calculated-members-in-subselects-and-subcubes"></a>サブセレクトとサブキューブで計算されるメンバー
   計算メンバーは実行時に式から値が計算されるディメンション メンバーで、クエリのキューブ空間をより正確に定義するためにサブセレクトとサブキューブで使用されます。  
   
-## サブ空間で計算メンバーを有効にする  
- <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> の **SubQueries** 接続文字列プロパティまたは「[サポートされる XMLA プロパティ (XMLA)](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md)」の **DBPROPMSMDSUBQUERIES** プロパティは、サブセレクトまたはサブキューブにおける計算されるメンバーまたは計算されるセットの動作または許容量を定義します。 このドキュメントのコンテキストでは、特に明記しない限り、サブセレクトはサブセレクトとサブキューブを示します。  
+## <a name="enabling-calculated-members-in-the-subspace"></a>サブ空間で計算メンバーを有効にする  
+ **サブクエリ**で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または**DBPROPMSMDSUBQUERIES**プロパティ[サポートされる XMLA プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)サブセレクトの動作や計算されるメンバーまたは計算されるセットの許容期間を定義またはサブキューブです。 このドキュメントのコンテキストでは、特に明記しない限り、サブセレクトはサブセレクトとサブキューブを示します。  
   
  SubQueries プロパティでは次の値を指定できます。  
   
@@ -121,12 +126,12 @@ Where [Measures].[Reseller Sales Amount]
   
  上記の結果では、[All Geographies]、[United States]、[Oregon]、および [Washington] の集計値は、&[Portland]&[OR] および &[Spokane]&[WA] の子孫の集計から取得されます。 計算されるメンバーから取得されるものはありません。  
   
-### 解説  
+### <a name="remarks"></a>解説  
  サブセレクトまたはサブキューブ式で許可されるのは、グローバルまたはセッションで計算されるメンバーのみです。 MDX 式にクエリで計算されるメンバーが含まれている場合に、サブセレクトまたはサブキューブ式を評価すると、エラーが発生します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [クエリのサブセレクト](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
- [サポートされる XMLA プロパティ (XMLA)](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md)  
+ [サポートされる XMLA プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
   
   

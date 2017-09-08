@@ -1,0 +1,117 @@
+---
+title: "Log10 関数 (TRANSACT-SQL) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- LOG10
+- LOG10_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- float expressions
+- LOG10 function
+- base-10 logarithms
+- logarithm of expression
+ms.assetid: 1eb7fb34-1937-4a39-a936-f5c0c7c7e06f
+caps.latest.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d8cc5b0ef6af319e55744a3ca373f0e6b11e230b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="log10-transact-sql"></a>LOG10 (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  指定した底 10 の対数を返します**float**式。  
+  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>構文  
+  
+```  
+-- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+  
+LOG10 ( float_expression )  
+```  
+  
+## <a name="arguments"></a>引数  
+ *float_expression*  
+ [式](../../t-sql/language-elements/expressions-transact-sql.md)型の**float**または型に暗黙的に変換できる**float**です。  
+  
+## <a name="return-types"></a>戻り値の型  
+ **float**  
+  
+## <a name="remarks"></a>解説  
+ LOG10 関数と POWER 関数は逆の意味で相互に関連付けられています。 たとえば、10 ^ LOG10 (*n*) =  *n*です。  
+  
+## <a name="examples"></a>使用例  
+  
+### <a name="a-calculating-the-base-10-logarithm-for-a-variable"></a>A. 変数の 10 を底とする対数を計算する  
+ 次の例では、指定された変数の `LOG10` を計算します。  
+  
+```  
+DECLARE @var float;  
+SET @var = 145.175643;  
+SELECT 'The LOG10 of the variable is: ' + CONVERT(varchar,LOG10(@var));  
+GO  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+```  
+The LOG10 of the variable is: 2.16189      
+  
+(1 row(s) affected)  
+```  
+  
+### <a name="b-calculating-the-result-of-raising-a-base-10-logarithm-to-a-specified-power"></a>B. 10 を底とする対数を指定指数で累乗した結果を計算する  
+ 次の例では、10 を底とする対数を指定指数で累乗した結果を返します。  
+  
+```  
+SELECT POWER (10, LOG10(5));   
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+```  
+-----------  
+5  
+  
+(1 row(s) affected)  
+```  
+  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+  
+### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>C: は、値の底 10 の対数を計算します。  
+ 次の例では、計算、`LOG10`指定された値。  
+  
+```  
+SELECT LOG10(145.175642);  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+ `-------------------`  
+  
+ `2.16`  
+  
+## <a name="see-also"></a>参照  
+ [数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [電源 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/power-transact-sql.md)   
+ [ログ & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/log-transact-sql.md)  
+  
+  
+
+

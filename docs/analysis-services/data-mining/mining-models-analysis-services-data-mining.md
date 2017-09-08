@@ -1,31 +1,36 @@
 ---
-title: "マイニング モデル (Analysis Services - データ マイニング) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "アルゴリズム [データ マイニング]"
-  - "mining models [Analysis Services]"
-  - "論理アーキテクチャ [Analysis Services - 多次元データ]"
-  - "プロパティ [Analysis Services]"
-  - "マイニング モデル [Analysis Services]、データ マイニング モデルについて"
-  - "アーキテクチャ [Analysis Services]"
+title: "マイニング モデル (Analysis Services - データ マイニング) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- algorithms [data mining]
+- mining models [Analysis Services]
+- logical architecture [Analysis Services Multidimensional Data]
+- properties [Analysis Services]
+- mining models [Analysis Services], about data mining models
+- architecture [Analysis Services]
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3425210ee85136d7b85c48c16562d85534a115f8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# マイニング モデル (Analysis Services - データ マイニング)
-  *マイニング モデル*は、データにアルゴリズムを適用することによって作成されますが、単なるアルゴリズムまたはメタデータ コンテナーではなく、予測を生成し、リレーションシップを推定するために新しいデータに適用されるデータ、統計情報、およびパターンのセットです。  
+# <a name="mining-models-analysis-services---data-mining"></a>マイニング モデル (Analysis Services - データ マイニング)
+  *マイニング モデル* は、データにアルゴリズムを適用することによって作成されますが、単なるアルゴリズムまたはメタデータ コンテナーではなく、予測を生成し、リレーションシップを推定するために新しいデータに適用されるデータ、統計情報、およびパターンのセットです。  
   
  ここでは、データ マイニング モデルおよびその使用方法 (モデルおよび構造の基本的なアーキテクチャ、マイニング モデルのプロパティ、およびマイニング モデルの作成方法と操作方法) について説明します。  
   
@@ -46,11 +51,11 @@ caps.handback.revision: 37
   
  マイニング モデルは、マイニング構造から提供されたデータの処理と分析が完了するまでは空の状態です。 処理後のマイニング モデルには、メタデータ、結果、およびマイニング構造へのバインドが含まれています。  
   
- ![モデルにはメタデータ、パターン、およびバインドが含まれる](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "モデルにはメタデータ、パターン、およびバインドが含まれる")  
+ ![モデルには、メタデータ、パターン、およびバインドが含まれている](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "モデルには、メタデータ、パターン、およびバインドが含まれています。")  
   
  メタデータは、モデルの名前、モデルが格納されているサーバー、モデルの定義 (モデルの構築に使用されたマイニング構造の列、モデルの処理時に適用されたフィルターの定義、データの分析に使用されたアルゴリズムなど) を示します。 データ列およびそのデータ型、フィルター、およびアルゴリズムの選択は分析結果に多大な影響を及ぼします。  
   
- たとえば、同じデータを使用して複数のモデルを作成するために、クラスタリング アルゴリズム、デシジョン ツリー アルゴリズム、および Naïve Bayes アルゴリズムを使用できます。 予測の作成に使用できるパターン、アイテムセット、ルール、または式のセットは、モデルの種類ごとに異なります。 通常、各アルゴリズムではデータをさまざまな方法で分析するため、結果のモデルの*コンテンツ*もさまざまな構造で構成されます。 あるモデルの種類では、データとパターンが*クラスター*にグループ化され、別のモデルの種類のデータは、データを分割して定義するツリー、分岐、およびルールで構成されます。  
+ たとえば、同じデータを使用して複数のモデルを作成するために、クラスタリング アルゴリズム、デシジョン ツリー アルゴリズム、および Naïve Bayes アルゴリズムを使用できます。 予測の作成に使用できるパターン、アイテムセット、ルール、または式のセットは、モデルの種類ごとに異なります。 通常、各アルゴリズムではデータをさまざまな方法で分析するため、結果のモデルの *コンテンツ* もさまざまな構造で構成されます。 あるモデルの種類では、データとパターンが *クラスター*にグループ化され、別のモデルの種類のデータは、データを分割して定義するツリー、分岐、およびルールで構成されます。  
   
  また、モデルはトレーニングを行う際のデータの影響も受けます。同じマイニング構造でトレーニングを行ったモデルでも、データのフィルター処理の方法が異なったり、分析時に異なるシードを使用すると、異なる結果が生成される場合があります。 ただし、実際のデータはモデルには格納されません。概要の統計のみが格納され、実際のデータはマイニング構造に存在します。 モデルのトレーニングを行ったときのデータに基づいてフィルターを作成した場合、フィルターの定義もモデル オブジェクトと一緒に保存されます。  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 37
   
 -   必要に応じて、アルゴリズムによる処理を微調整するパラメーターを設定します。  
   
--   構造およびモデルを*処理*してモデルにデータを入力します。  
+-   構造およびモデルを *処理* してモデルにデータを入力します。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、マイニング モデルの管理に役立つ以下のツールが用意されています。  
   
@@ -88,11 +93,11 @@ caps.handback.revision: 37
   
  各マイニング モデルには、マイニング構造から派生するプロパティや、モデルに使用するデータ列を記述するプロパティもあります。 入れ子になったテーブルの列をモデルで使用する場合は、その列に適用される別個のフィルターが存在することもあります。  
   
- さらに、それぞれのマイニング モデルには、<xref:Microsoft.AnalysisServices.MiningModel.Algorithm%2A> と <xref:Microsoft.AnalysisServices.MiningModelColumn.Usage%2A> という 2 つの特殊なプロパティが含まれます。  
+ さらに、それぞれのマイニング モデルには、 <xref:Microsoft.AnalysisServices.MiningModel.Algorithm%2A> と <xref:Microsoft.AnalysisServices.MiningModelColumn.Usage%2A>という 2 つの特殊なプロパティが含まれます。  
   
--   **Algorithm プロパティ** モデルの作成に使用するアルゴリズムを指定します。 使用できるアルゴリズムは、使用しているプロバイダーによって異なります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に含まれているアルゴリズムの一覧については、「[データ マイニング アルゴリズム (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)」を参照してください。 **Algorithm** プロパティはマイニング モデルに適用し、各モデルに対して 1 回だけ設定できます。 後でアルゴリズムを変更できますが、選択したアルゴリズムによってサポートされていないために、マイニング モデルの列が無効になる場合があります。 このプロパティを変更した後は、モデルを再処理する必要があります。  
+-   **Algorithm プロパティ** モデルの作成に使用するアルゴリズムを指定します。 使用できるアルゴリズムは、使用しているプロバイダーによって異なります。 含まれているアルゴリズムの一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を参照してください[データ マイニング アルゴリズムと #40 です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). **Algorithm** プロパティはマイニング モデルに適用し、各モデルに対して 1 回だけ設定できます。 後でアルゴリズムを変更できますが、選択したアルゴリズムによってサポートされていないために、マイニング モデルの列が無効になる場合があります。 このプロパティを変更した後は、モデルを再処理する必要があります。  
   
--   **Usage プロパティ** モデルによる各列の使用方法を定義します。 列の使用法は、**[入力]**、**[予測]**、**[予測のみ]**、または **[キー]** のいずれかに定義できます。 **Usage** プロパティは、マイニング モデルの個別の列に適用し、モデルに含まれるすべての列に個別に設定する必要があります。 モデルで使用しない列が構造に含まれる場合は、使用法を **Ignore** に設定します。 顧客名や電子メール アドレスなどは、マイニング構造に含まれていても分析には使用されないデータの例です。 このように、後でクエリを実行する場合、分析フェーズで列を含める必要はありません。  
+-   **Usage プロパティ** モデルによる各列の使用方法を定義します。 列の使用法は、 **[入力]**、 **[予測]**、 **[予測のみ]**、または **[キー]**のいずれかに定義できます。 **Usage** プロパティは、マイニング モデルの個別の列に適用し、モデルに含まれるすべての列に個別に設定する必要があります。 モデルで使用しない列が構造に含まれる場合は、使用法を **Ignore**に設定します。 顧客名や電子メール アドレスなどは、マイニング構造に含まれていても分析には使用されないデータの例です。 このように、後でクエリを実行する場合、分析フェーズで列を含める必要はありません。  
   
  マイニング モデルのプロパティの値は、マイニング モデルの作成後に変更できます。 ただし、たとえマイニング モデルの名前の変更であっても、なんらかの変更を加えた場合はマイニング モデルの再処理が必要になります。 モデルを再処理すると、結果が変化する場合があります。  
   
@@ -117,11 +122,11 @@ caps.handback.revision: 37
  [マイニング モデルのアーキテクチャ](#bkmk_mdlArch)  
   
 ##  <a name="bkmk_mdlView"></a> マイニング モデルの表示とクエリ  
- モデルの処理が完了したら、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] および [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で提供されているカスタム ビューアーを使用してモデルを調べることができます。 For  
+ モデルの処理が完了したら、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] および [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で提供されているカスタム ビューアーを使用してモデルを調べることができます。 For  
   
  予測を行う場合や、モデル メタデータまたはモデルによって作成されるパターンを取得する場合に、マイニング モデルに対するクエリを作成することもできます。 クエリの作成には、データ マイニング拡張機能 (DMX) を使用します。  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
   
 |トピック|リンク|  
 |------------|-----------|  
@@ -129,10 +134,10 @@ caps.handback.revision: 37
 |さまざまなアルゴリズム、およびアルゴリズムの選択がモデル コンテンツに与える影響について説明します。|[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)<br /><br /> [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
 |モデルのコンポジションと動作に影響を与えるプロパティの設定方法について説明します。|[マイニング モデルのプロパティ](../../analysis-services/data-mining/mining-model-properties.md)<br /><br /> [モデリング フラグ &#40;データ マイニング&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
 |データ マイニングのプログラミング可能なインターフェイスについて説明します。|[分析管理オブジェクト &#40;AMO&#41; による開発](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)<br /><br /> [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でのカスタム データ マイニング ビューアーの使用方法について説明します。|[データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でのカスタム データ マイニング ビューアーの使用方法について説明します。|[データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |データ マイニング モデルに対して使用できるさまざまな種類のクエリの例について説明します。|[データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)|  
   
-## 関連タスク  
+## <a name="related-tasks"></a>関連タスク  
  データ マイニング モデルの操作方法の詳細については、次のリンクを参照してください。  
   
 |タスク|リンク|  
@@ -144,7 +149,7 @@ caps.handback.revision: 37
 |モデルにデータを入力する、またはモデルのデータを更新する|[マイニング モデルの処理](../../analysis-services/data-mining/process-a-mining-model.md)|  
 |OLAP モデルを操作する|[データ マイニング ディメンションの作成](../../analysis-services/data-mining/create-a-data-mining-dimension.md)|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データベース オブジェクト &#40;Analysis Services - 多次元データ&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
