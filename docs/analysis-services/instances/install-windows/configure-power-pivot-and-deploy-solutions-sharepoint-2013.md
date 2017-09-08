@@ -1,23 +1,28 @@
 ---
-title: "Power Pivot の構成とソリューションの配置 (SharePoint 2013) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "power-view"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot の構成し、ソリューションの配置 (SharePoint 2013) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- power-view
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 901098e2a656d178932b9b706b70d559bef4f215
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Power Pivot の構成とソリューションの配置 (SharePoint 2013)
-  このトピックでは、[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ギャラリー、定期データ更新、管理ダッシュボード、データ プロバイダーといった [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 機能に対する中間層機能強化の配置および構成について説明します。 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 構成** ツールを実行して、以下の操作を完了します。  
+# <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Power Pivot の構成とソリューションの配置 (SharePoint 2013)
+  このトピックでは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ギャラリー、定期データ更新、管理ダッシュボード、データ プロバイダーといった [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 機能に対する中間層機能強化の配置および構成について説明します。 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 構成** ツールを実行して、以下の操作を完了します。  
   
 -   SharePoint ソリューション ファイルを配置する。  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 14
   
  SharePoint のインストール時に使用したアカウントでログインするか、SharePoint サーバーの全体管理サイトのプライマリ管理者としてセットアップ アカウントを構成します。  
   
-1.  **[スタート]** メニューの **[すべてのプログラム]**をクリックし、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]] をクリックします。次に、 **[構成ツール]**をクリックし、 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] For SharePoint 2013 の構成]**をクリックします。 ツールは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint がローカル サーバーにインストールされている場合にのみ表示されます。  
+1.  **[スタート]** メニューの **[すべてのプログラム]**をクリックし、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]] をクリックします。次に、 **[構成ツール]**をクリックし、 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] For SharePoint 2013 の構成**をクリックします。 ツールは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint がローカル サーバーにインストールされている場合にのみ表示されます。  
   
 2.  **[[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint の構成または修復]** をクリックし、**[OK]** をクリックします。  
   
@@ -67,11 +72,11 @@ caps.handback.revision: 14
   
     3.  **[パスフレーズ]:**パスフレーズを入力します。 新しい SharePoint ファームを作成する場合、SharePoint ファームにサーバーまたはアプリケーションを追加するたびにこのパスフレーズが使用されます。 ファームが既に存在する場合、ファームにサーバー アプリケーションを追加するためのパスフレーズを入力してください。  
   
-    4.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバー]:**SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーの名前を入力します。 シングル サーバー配置では、データベース サーバーと同じサーバーです。 `[ServerName]\powerpivot`  
+    4.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバー:**SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーの名前を入力します。 シングル サーバー配置では、データベース サーバーと同じサーバーです。 `[ServerName]\powerpivot`  
   
     5.  左側のウィンドウで **[サイト コレクションの作成]** をクリックします。 **[サイトの URL]** をメモしておくと、この後の手順で参照できます。 SharePoint サーバーがまだ構成されていない場合、構成ウィザードでは Web アプリケーションとサイト コレクション URL のルートは既定で `http://[ServerName]`になります。 既定値を変更するには、左側のウィンドウの **[既定の Web アプリケーションの作成]** ページおよび **[Web アプリケーション ソリューションの配置]**ページを確認します。  
   
-5.  必要に応じて、各アクションを完了するために使用された残りの入力値を確認します。 左側のウィンドウで各アクションをクリックして、アクションの詳細を確認します。 各アクションの詳細については、このトピックの「[Power Pivot for SharePoint 2010 の構成または修復 (Power Pivot 構成ツール)](http://msdn.microsoft.com/ja-jp/d61f49c5-efaa-4455-98f2-8c293fa50046)」で「サーバーの構成に使用する入力値」セクションを参照してください。  
+5.  必要に応じて、各アクションを完了するために使用された残りの入力値を確認します。 左側のウィンドウで各アクションをクリックして、アクションの詳細を確認します。 各アクションの詳細については、このトピックの [「Power Pivot for SharePoint 2010 の構成または修復 (Power Pivot 構成ツール)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046) 」で「サーバーの構成に使用する入力値」セクションを参照してください。  
   
 6.  必要に応じて、今回は処理しないすべてのアクションを削除します。 たとえば、Secure Store Service を後で構成する場合は、 **[Secure Store Service の構成]**をクリックし、 **[この操作をタスク一覧に含めます]**チェック ボックスをオフにします。  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 14
   
 8.  **[実行]** をクリックして、タスクの一覧にあるすべてのアクションを処理します。 **[実行]** は、アクションの検証後に有効になります。 **[実行]** が有効になっていない場合は、まず **[検証]** をクリックしてください。  
   
- 詳細については、「[Power Pivot for SharePoint 2010 の構成または修復 (Power Pivot 構成ツール)](http://msdn.microsoft.com/ja-jp/d61f49c5-efaa-4455-98f2-8c293fa50046)」を参照してください。  
+ 詳細については、「 [Power Pivot for SharePoint 2010 の構成または修復 (Power Pivot 構成ツール)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)」を参照してください。  
   
 ##  <a name="bkmk_verify_powerpivot"></a> Power Pivot の構成の確認  
  **サービス**  
@@ -92,17 +97,17 @@ caps.handback.revision: 14
   
 1.  サーバーの全体管理で、[システム設定] の **[ファーム機能の管理]**をクリックします。  
   
-2.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 統合機能]** が **[アクティブ]**になっていることを確認します。  
+2.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 統合機能** が **[アクティブ]**になっていることを確認します。  
   
  **サイト コレクション機能**  
   
 1.  構成ツールによって作成されたサイトの URL を参照します。  
   
-     **[設定]**![SharePoint の設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.png "SharePoint の設定") をクリックし、**[サイトの設定]** をクリックします。  
+     をクリックして**設定**![SharePoint 設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")、順にクリック**サイト設定**です。  
   
      **[サイト コレクションの機能]**をクリックします。  
   
-2.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 機能の統合]** が **[アクティブ]**になっていることを確認します。  
+2.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 機能の統合** が **[アクティブ]**になっていることを確認します。  
   
  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーション**  
   
@@ -137,7 +142,7 @@ caps.handback.revision: 14
   
 5.  クリックして **OK**です。  
   
- データ更新のトラブルシューティングに関する詳細については、[Troubleshooting Power Pivot Data Refresh (Power Pivot データ更新のトラブルシューティング)](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) に関するページを参照してください。  
+ データ更新のトラブルシューティングに関する詳細については、 [Troubleshooting Power Pivot Data Refresh (Power Pivot データ更新のトラブルシューティング)](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) に関するページを参照してください。  
   
  構成ツールの詳細については、「 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)」を参照してください。  
   

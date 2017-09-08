@@ -1,24 +1,29 @@
 ---
-title: "Power Pivot サービス アカウントの構成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot サービス アカウントの構成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7bdd53a084d7438152d4ae83eeeb884984d48e51
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Power Pivot サービス アカウントの構成
+# <a name="configure-power-pivot-service-accounts"></a>Power Pivot サービス アカウントの構成
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]のインストールには、サーバー処理をサポートする 2 つのサービスが含まれます。 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** サービスは、アプリケーション サーバー上での [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データの処理およびクエリのサポートを提供する Windows サービスです。 このサービスのログイン アカウントは、SharePoint 統合モードで Analysis Services をインストールするときに、SQL Server セットアップで必ず指定します。  
   
  SharePoint ファームのアプリケーション プール ID で実行される共有 Web サービスである [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション用に、アカウントをもう 1 つ指定する必要があります。 このアカウントは、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]構成ツールまたは PowerShell を使用して [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] インストールを構成するときに指定します。  
@@ -98,16 +103,16 @@ caps.handback.revision: 15
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション プール [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスに関連付けられ、ファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クエリ処理に SharePoint 統合と SharePoint インフラストラクチャを提供します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションに対して指定するアプリケーション プールは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスのサービス ID です。 1 つのファームに複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを作成できますが、 それぞれのサービス アプリケーションを、固有のアプリケーション プールで実行する必要があります。  
   
-#### Analysis Services サービス アカウント  
+#### <a name="analysis-services-service-account"></a>Analysis Services サービス アカウント  
   
 |要件|Description|  
 |-----------------|-----------------|  
 |プロビジョニングの要件|このアカウントは、SQL Server セットアップ中にインストール ウィザードの **[Analysis Services - 構成]** ページ (またはコマンド ライン セットアップの **ASSVCACCOUNT** インストール パラメーター) を使用して指定する必要があります。<br /><br /> ユーザー名やパスワードは、サーバーの全体管理、PowerShell、または [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールを使用して変更できます。 その他のツールでのアカウントやパスワードの変更はサポートされていません。|  
 |ドメイン ユーザー アカウントの要件|このアカウントは Windows ドメイン ユーザー アカウントであることが必要です。 ビルトイン コンピューター アカウント (Network Service や Local Service など) は禁止されています。 SQL Server セットアップは、コンピューター アカウントが指定された場合にインストールをブロックすることで、ドメイン ユーザー アカウント要件を適用します。|  
-|権限の要件|このアカウントは、ローカル コンピューターの SQLServerMSASUser$\<server>$PowerPivot セキュリティ グループおよび WSS_WPG セキュリティ グループのメンバーである必要があります。 これらの権限は自動的に付与されます。 権限の確認や付与を行う方法の詳細については、このトピックの「[PowerPivot サービス アカウントの管理権限を手動で付与する](#updatemanually)」および「[初期構成 (Power Pivot for SharePoint)](http://msdn.microsoft.com/ja-jp/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)」を参照してください。|  
+|権限の要件|このアカウントは SQLServerMSASUser$ のメンバーである必要があります\<server > $PowerPivot セキュリティ グループとローカル コンピューターの WSS_WPG セキュリティ グループです。 これらの権限は自動的に付与されます。 権限の確認や付与を行う方法の詳細については、このトピックの「 [PowerPivot サービス アカウントの管理権限を手動で付与する](#updatemanually) 」および「 [初期構成 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)」を参照してください。|  
 |スケールアウトの要件|ファームに複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint サーバー インスタンスをインストールする場合は、すべての Analysis Services サーバー インスタンスが同じドメイン ユーザー アカウントで実行されている必要があります。 たとえば、最初の [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] インスタンスが Contoso\ssas-srv01 として実行されるように構成した場合は、それ以降に同じファームに配置したその他のすべての [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] インスタンスも Contoso\ssas-srv01 (または現在の任意のアカウント) として実行される必要があります。<br /><br /> すべてのサービス インスタンスが同じアカウントで実行されるように構成すると、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスで、クエリ処理やデータ更新のジョブをファーム内の任意の Analysis Services サービス インスタンスに割り当てられるようになります。 また、Analysis Services サーバー インスタンスに対してサーバーの全体管理のマネージ アカウント機能を使用できるようになります。 すべての [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] インスタンスに同じアカウントを使用すると、アカウントまたはパスワードを 1 回変更するだけで、これらの資格情報を使用するすべてのサービス インスタンスを自動的に更新できます。<br /><br /> SQL Server セットアップでは、同一アカウント要件が適用されます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint インスタンスが既に SharePoint ファームにインストールされているスケールアウト配置では、指定した [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] アカウントとファーム内で既に使用されているアカウントが異なる場合、セットアップによって新規インストールがブロックされます。|  
   
-#### Power Pivot サービス アプリケーション プール  
+#### <a name="power-pivot-service-application-pool"></a>Power Pivot サービス アプリケーション プール  
   
 |要件|Description|  
 |-----------------|-----------------|  
@@ -121,17 +126,17 @@ caps.handback.revision: 15
   
 1.  [監視] で、 **[ジョブ定義の確認]**をクリックします。  
   
-2.  **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の構成タイマー ジョブ]**をクリックします。  
+2.  **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の構成タイマー ジョブ**をクリックします。  
   
 3.  **[今すぐ実行]**をクリックします。  
   
- 最終的な手段として、Analysis Services システム管理権限を [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションに付与して適切な権限を確保し、サービス アプリケーション ID を SQLServerMSASUser$\<servername>$PowerPivot Windows セキュリティ グループに追加できます。 SharePoint ファームに統合された各 Analysis Services インスタンスに対してこれらの手順を繰り返す必要があります。  
+ 最後の手段としては、Analysis Services システム管理権限を付与することで適切なアクセス許可を確認できます、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]サービス アプリケーション、および、具体的には、サービス アプリケーション id を SQLServerMSASUser$を追加\<servername > $PowerPivot Windows セキュリティ グループです。 SharePoint ファームに統合された各 Analysis Services インスタンスに対してこれらの手順を繰り返す必要があります。  
   
  Windows セキュリティ グループを更新するには、ローカル管理者である必要があります。  
   
-1.  SQL Server Management Studio で、Analysis Services インスタンスに \<server name>\POWERPIVOT として接続します。  
+1.  SQL Server Management Studio でとして Analysis Services インスタンスに接続\<サーバー名 > \POWERPIVOT です。  
   
-2.  サーバー名を右クリックし、**[プロパティ]** をクリックします。  
+2.  サーバー名を右クリックし、 **[プロパティ]**をクリックします。  
   
 3.  **[セキュリティ]**をクリックします。  
   
@@ -145,7 +150,7 @@ caps.handback.revision: 15
   
 8.  **[グループ]**を開きます。  
   
-9. [SQLServerMSASUser$\<servername>$PowerPivot] をダブルクリックします。  
+9. SQLServerMSASUser$ をダブルクリック\<servername > $PowerPivot です。  
   
 10. **[追加]**をクリックします。  
   
@@ -158,7 +163,7 @@ caps.handback.revision: 15
   
 2.  サイトまたはサーバーの全体管理アプリケーション プールの ID が、期限切れのパスワードを持つドメイン ユーザー アカウントである場合は、次の手順を実行します。  
   
-    1.  アプリケーション プール名を右クリックし、**[詳細設定]** をクリックします。  
+    1.  アプリケーション プール名を右クリックし、 **[詳細設定]**をクリックします。  
   
     2.  **[ID]** を選択し、[…] (省略記号) ボタンをクリックして、[アプリケーション プール ID] ダイアログ ボックスを開きます。  
   
@@ -178,10 +183,10 @@ caps.handback.revision: 15
   
 8.  パスワードを入力し、 **[OK]**をクリックします。  
   
- Reporting Services がインストールされている場合は、Reporting Services 構成マネージャーを使用して、レポート サーバーのパスワードとレポート サーバー データベースへの接続に使用するパスワードを更新します。 詳細については、「[レポート サーバーの構成と管理 (Reporting Services SharePoint モード)](../../reporting-services/report-server-sharepoint/configuration and administration of a report server.md)」を参照してください。  
+ Reporting Services がインストールされている場合は、Reporting Services 構成マネージャーを使用して、レポート サーバーのパスワードとレポート サーバー データベースへの接続に使用するパスワードを更新します。 詳細については、「[レポート サーバーの構成と管理 (Reporting Services SharePoint モード)](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [PowerPivot for SharePoint サーバーの開始または停止](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)   
- [Power Pivot 自動データ更新アカウントの構成 (Power Pivot for SharePoint)](http://msdn.microsoft.com/ja-jp/81401eac-c619-4fad-ad3e-599e7a6f8493)  
+ [Power Pivot 自動データ更新アカウントの構成 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   
   

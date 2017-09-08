@@ -1,27 +1,32 @@
 ---
-title: "Power Pivot for SharePoint インストールの確認 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "For SharePoint のインストール verify a Power Pivot |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: abc618942a95b28fd2b93f72e4b511e519c58191
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Power Pivot for SharePoint インストールの確認
+# <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Power Pivot for SharePoint インストールの確認
   SharePoint ファームにインストールした [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint インスタンスは、SharePoint サーバーの全体管理から管理されます。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のサーバー コンポーネントと機能が使用可能になっているかどうかは、少なくとも、サーバーの全体管理および SharePoint サイトのページを調べれば確認できます。 インストールを完全に確認するには、SharePoint にパブリッシュでき、ライブラリからアクセスできる [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックが必要になります。 テスト時には、既に [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] データが含まれているサンプル ブックをパブリッシュし、それを使用して SharePoint 統合が正しく構成されているかどうかを確認できます。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016 &#124; SharePoint 2013|  
+|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
   
 ##  <a name="verifyinstall"></a> 全体管理統合の確認  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のサーバーの全体管理との統合を確認するには、次の操作を行います。  
@@ -47,7 +52,7 @@ caps.handback.revision: 15
   
 3.  サーバーの全体管理で、[システム設定] の **[ファーム機能の管理]**をクリックします。  
   
-4.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 統合機能]** が **[アクティブ]**になっていることを確認します。  
+4.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 統合機能** が **[アクティブ]**になっていることを確認します。  
   
 5.  サーバーの全体管理で、[システム設定] の **[サーバーのサービスの管理]**をクリックします。  
   
@@ -59,20 +64,20 @@ caps.handback.revision: 15
   
 8.  **[既定の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーション]** をクリックして、このアプリケーションの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理ダッシュボードを開きます。 最初に使用するときは、ダッシュボードの読み込みに数分かかります。  
   
-     または、**[既定の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーション]** の横の空白部分をクリックして行を選択し、**[プロパティ]** をクリックしてこのサービス アプリケーションの構成設定を表示します。 構成設定とアプリケーション プロパティの両方を修正して、サーバーの構成を変更できます。 これらの設定の詳細については、「[サーバーの全体管理での Power Pivot サービス アプリケーションの作成および構成](../../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)」を参照してください。  
+     または、**[既定の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーション]** の横の空白部分をクリックして行を選択し、**[プロパティ]** をクリックしてこのサービス アプリケーションの構成設定を表示します。 構成設定とアプリケーション プロパティの両方を修正して、サーバーの構成を変更できます。 これらの設定の詳細については、「 [サーバーの全体管理での Power Pivot サービス アプリケーションの作成および構成](../../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)」を参照してください。  
   
-## サイト レベルでの統合の確認  
+## <a name="verify-integration-at-the-site-level"></a>サイト レベルでの統合の確認  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] の SharePoint サイトとの統合を確認するには、次の操作を行います。  
   
-1.  ブラウザーで、作成した Web アプリケーションを開きます。 既定値を使用した場合は、URL アドレスに http://\<コンピューター名> と指定します。  
+1.  ブラウザーで、作成した Web アプリケーションを開きます。 既定値を使用した場合は、http:// を指定できます\<コンピューター名 >、URL アドレスにします。  
   
-2.  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のデータ アクセス機能とデータ処理機能がアプリケーションで使用可能になっていることを確認します。 そのためには、[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] から提供されるライブラリ テンプレートがあるかどうかを確認します。  
+2.  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のデータ アクセス機能とデータ処理機能がアプリケーションで使用可能になっていることを確認します。 そのためには、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]から提供されるライブラリ テンプレートがあるかどうかを確認します。  
   
     1.  **[サイト コンテンツ]**を選択します。  
   
-    2.  アプリの一覧には、 **[データ フィード ライブラリ]** と **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ギャラリー]**が表示されます。 これらのライブラリ テンプレートは [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 機能によって提供されるものであり、機能が正しく統合されている場合に [ライブラリ] に表示されます。  
+    2.  アプリの一覧には、 **[データ フィード ライブラリ]** と **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ギャラリー**が表示されます。 これらのライブラリ テンプレートは [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 機能によって提供されるものであり、機能が正しく統合されている場合に [ライブラリ] に表示されます。  
   
-## サーバーでのデータ アクセスの確認  
+## <a name="verify-data-access-on-the-server"></a>サーバーでのデータ アクセスの確認  
  サーバーで [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] データ アクセスを確認するには、次の操作を行います。  
   
 1.  Reporting Services のチュートリアルにある Picnic のデータ サンプルを[ダウンロード](http://go.microsoft.com/fwlink/?LinkID=219108) します。 このダウンロードに含まれるサンプル ブックを使用して、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] データのアクセスを確認します。 ファイルを抽出します。  
@@ -91,12 +96,12 @@ caps.handback.revision: 15
   
 7.  [サーバーの種類] で **[Analysis Services]**を選択します。  
   
-8.  [サーバー名] に **\<サーバー名>\powerpivot**と入力します。**\<サーバー名>** には、[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint をインストールしたコンピューターの名前を入力します。  
+8.  サーバー名を入力**\<サーバー名 > \powerpivot**ここで、 **\<サーバー名 >**があるコンピューターの名前を指定、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePointインストール。  
   
 9. **[接続]**をクリックします。 これにより、Analysis Services サーバーが使用可能であることを確認します。  
   
 10. オブジェクト エクスプローラーで、 **[データベース]** をクリックして、読み込まれた [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] データ ファイルの一覧を確認します。  
   
-11. コンピューターのファイル システムのフォルダーで、ファイルがディスクにキャッシュされているかどうかを確認します。 キャッシュされたファイルが存在していれば、配置が機能していることの確認になります。 ファイル キャッシュを表示するには、[!INCLUDE[ssInstallPathVar](../../../includes/ssinstallpathvar-md.md)]MSAS13.POWERPIVOT\OLAP\Backup\Sandboxes\Default [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーションのフォルダーに移動します。 キャッシュされた各データベースは、名前が一意になるように、GUID ベースの名前付け規則を使用してそれぞれのフォルダーに格納されます。  
+11. コンピューターのファイル システムのフォルダーで、ファイルがディスクにキャッシュされているかどうかを確認します。 キャッシュされたファイルが存在していれば、配置が機能していることの確認になります。 ファイル キャッシュを表示するには、 [!INCLUDE[ssInstallPathVar](../../../includes/ssinstallpathvar-md.md)]MSAS13.POWERPIVOT\OLAP\Backup\Sandboxes\Default [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーションのフォルダーに移動します。 キャッシュされた各データベースは、名前が一意になるように、GUID ベースの名前付け規則を使用してそれぞれのフォルダーに格納されます。  
   
   
