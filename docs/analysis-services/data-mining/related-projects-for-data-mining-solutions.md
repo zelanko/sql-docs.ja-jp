@@ -1,23 +1,28 @@
 ---
-title: "データ マイニング ソリューションの関連プロジェクト | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "データ マイニング ソリューションの関連プロジェクト |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 290142e362b4e41148ab2042c8c76738f3e7b54c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# データ マイニング ソリューションの関連プロジェクト
+# <a name="related-projects-for-data-mining-solutions"></a>データ マイニング ソリューションの関連プロジェクト
   データ マイニング ソリューションに最低限必要なのは、データ ソース、データ ソース ビュー、マイニング構造、およびマイニング モデルを定義した、データ マイニング プロジェクトです。 ただし、データ マイニング モデルを日々の意志決定に使用する場合は、データ マイニングを予測分析ソリューションの他の部分と統合し、次のプロセスやコンポーネントを含めることが重要です。  
   
 -   データと変数の準備および選択。 データ クレンジング、複数のデータ ソースのメタデータ管理と統合のほか、データの変換、マージ、およびデータ ウェアハウスへのアップロードが含まれます。  
@@ -113,7 +118,7 @@ caps.handback.revision: 12
  Reporting Services をデータ ソースのプレゼンテーション層として使用する方法の詳細については、「 [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)」を参照してください。  
   
 ##  <a name="bkmk_DQSetc"></a> Data Quality Services  
- Data Quality Services (DQS) は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の新機能です。 データに問題があるとデータ マイニングが不可能になる可能性があるため、繰り返し分析を行ったり、大規模な組織で複雑なデータ ソースを扱ったりするデータ マイニング担当者は、DQS を使用する計画的なデータ プロジェクトの方が、[!INCLUDE[tsql](../../includes/tsql-md.md)] やその他のスクリプトを使用した場当たり的なデータ クレンジングよりも、データ マイニングをサポートするうえで信頼性の高いソリューションであることを認識する必要があります。  
+ Data Quality Services (DQS) は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の新機能です。 データに問題があるとデータ マイニングが不可能になる可能性があるため、繰り返し分析を行ったり、大規模な組織で複雑なデータ ソースを扱ったりするデータ マイニング担当者は、DQS を使用する計画的なデータ プロジェクトの方が、 [!INCLUDE[tsql](../../includes/tsql-md.md)] やその他のスクリプトを使用した場当たり的なデータ クレンジングよりも、データ マイニングをサポートするうえで信頼性の高いソリューションであることを認識する必要があります。  
   
  データ マイニング ソリューションでのデータ準備とデータ整合性のために、DQS の次の機能を考慮する必要があります。  
   
@@ -153,17 +158,17 @@ caps.handback.revision: 12
   
  フルテキスト クエリは SQL Server エンジンによって提供される機能なので、パラメーター化クエリを作成したり、テキスト データ ソースでフルテキスト検索機能を使用してカスタム データ セットや用語のベクトルを生成したりできるほか、これらのソースをデータ マイニングで使用することもできます。  
   
- フルテキスト クエリでフルテキスト インデックスを扱う方法の詳細については、「[フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)」を参照してください。  
+ フルテキスト クエリでフルテキスト インデックスを扱う方法の詳細については、「 [フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)」を参照してください。  
   
  SQL Server のフルテキスト検索機能の利点は、すべての SQL Server 言語で提供されるワード ブレーカーとステマーに含まれる言語インテリジェンスを活用できるという点です。 提供されたワード ブレーカーとステマーを使用すると、各言語に適した文字で単語を区切ることができるうえ、分音記号または表記のバリエーション (日本語における数の複数の形式など) に基づくシノニムを見落とさずに済みます。  
   
  単語の境界を決める言語インテリジェンスに加え、各言語のステマーでも、その言語の活用形や表記のバリエーションに関するルールのナレッジに基づいて、単語の変化形を 1 つの用語に絞り込むことができます。 言語分析のルールは言語ごとに異なり、実際のコーパスに関する幅広い研究に基づいて作成されます。  
   
- 詳細については、「[検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)」を参照してください。  
+ 詳細については、「 [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)」を参照してください。  
   
  フルテキスト インデックスの作成後に保存される単語のバージョンは、圧縮形式のトークンです。 フルテキスト インデックスに対する後続のクエリにより、その言語のルールに基づいて特定の単語の変化形が複数生成されるため、あいまい一致も漏らさず照合されます。 たとえば、格納されているトークンが "run" であっても、クエリ エンジンは "running"、"ran"、および "runner" の各用語も検索します。これらは、原形の単語 "run" からルールどおりに派生した変化形であるためです。  
   
- ユーザー類義語辞典を作成および構築して、シノニムの格納、検索結果の精度の向上、用語の分類を行うこともできます。 フルテキスト データに合わせた類義語辞典を作成すると、そのデータのフルテキスト クエリのスコープを効果的に拡張できます。 詳細については、「[フルテキスト検索に使用する類義語辞典ファイルの構成と管理](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)」を参照してください。  
+ ユーザー類義語辞典を作成および構築して、シノニムの格納、検索結果の精度の向上、用語の分類を行うこともできます。 フルテキスト データに合わせた類義語辞典を作成すると、そのデータのフルテキスト クエリのスコープを効果的に拡張できます。 詳細については、「 [フルテキスト検索に使用する類義語辞典ファイルの構成と管理](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)」を参照してください。  
   
  フルテキスト検索を使用するうえでの要件は次のとおりです。  
   
@@ -186,9 +191,9 @@ caps.handback.revision: 12
   
 -   類似性スコアと、そのスコアに関係する用語を返す。  
   
- 詳細については、「[セマンティック検索を使用したドキュメント内のキー フレーズの検索](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)」および「[セマンティック検索による類似および関連したドキュメントの検索](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)」をご覧ください。  
+ 詳細については、「 [セマンティック検索を使用したドキュメント内のキー フレーズの検索](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) 」および「 [セマンティック検索による類似および関連したドキュメントの検索](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)」をご覧ください。  
   
- セマンティック インデックスの作成をサポートするデータベース オブジェクトの詳細については、「[テーブルおよび列に対するセマンティック検索の有効化](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)」をご覧ください。  
+ セマンティック インデックスの作成をサポートするデータベース オブジェクトの詳細については、「 [テーブルおよび列に対するセマンティック検索の有効化](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)」をご覧ください。  
   
  セマンティック検索を使用するための要件は次のとおりです。  
   
@@ -200,8 +205,8 @@ caps.handback.revision: 12
   
 -   すべてのフルテキスト言語でセマンティック インデックスの作成がサポートされているわけではありません。 サポートされている言語の一覧については、「[sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)」をご覧ください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [多次元モデル ソリューション &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [テーブル モデル ソリューション &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [テーブル モデル ソリューション (SSAS テーブル)](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
   

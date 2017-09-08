@@ -1,26 +1,31 @@
 ---
-title: "データ フィード ライブラリを使用したデータ フィードの共有 (PowerPivot for SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データ フィード [Analysis Services と SharePoint]"
+title: "データ フィード ライブラリ (Power Pivot for SharePoint) を使用してデータ フィードの共有 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data feeds [Analysis Services with SharePoint]
 ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31457f6abb88dff525bd19609b8dd552adadfeb8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# データ フィード ライブラリを使用したデータ フィードの共有 (PowerPivot for SharePoint)
+# <a name="share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint"></a>データ フィード ライブラリを使用したデータ フィードの共有 (PowerPivot for SharePoint)
   データ フィードとは、データを Atom ワイヤ形式で公開するサービスまたはアプリケーションから生成される XML データ ストリームです。 データをアプリケーション間で転送したり、クライアント側のビューアーに転送したりするために使用されることが増えています。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の配置では、データ フィードを使用して、Atom 対応のアプリケーションまたはサービスからのデータを [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ソースに読み込みます。  
   
  Atom 対応アプリケーションの組み合わせを既に使用している場合は、データがアプリケーション間でシームレスに転送されるので、フィードの生成方法と使用方法を理解する必要はありません。 ただし、カスタム ソリューションを使用して Atom フィードをパブリッシュする組織は、インフォメーション ワーカーがフィードを使用できるようにしなければならないことがよくあります。 これを実現する方法の 1 つに、フィードを生成するオンライン ソースへの接続が指定されるデータ サービス ドキュメント (.atomsvc) ファイルを作成して共有する方法があります。 データ フィード ライブラリと呼ばれる特別な用途のライブラリによって、SharePoint Web アプリケーションでのデータ サービス ドキュメントの作成と共有がサポートされます。  
@@ -38,10 +43,10 @@ caps.handback.revision: 26
  [次の手順: データ サービス ドキュメントの使用](#usedsdoc)  
   
 > [!NOTE]  
->  データ フィードは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] で作成した [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] データ ソースに Web データを追加するために使用されますが、データ サービス ドキュメントの処理は、Atom フィードを読み取ることができる任意のクライアント アプリケーションで実行できます。  
+>  データ フィードは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] で作成した [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]データ ソースに Web データを追加するために使用されますが、データ サービス ドキュメントの処理は、Atom フィードを読み取ることができる任意のクライアント アプリケーションで実行できます。  
   
 ##  <a name="prereq"></a> 前提条件  
- SharePoint ファームに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クエリ処理を追加する [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint が配置されている必要があります。 データ フィードは、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション パッケージによってサポートされます。  
+ SharePoint ファームに [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint が配置されている必要があります。 データ フィードは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション パッケージによってサポートされます。  
   
  データ サービス ドキュメントのコンテンツ タイプをサポートする SharePoint ライブラリが必要です。 この場合は既定のデータ フィード ライブラリをお勧めしますが、コンテンツ タイプを任意のライブラリに手動で追加することもできます。 詳細については、「[データ フィード ライブラリの作成またはカスタマイズ (Power Pivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)」を参照してください。  
   
@@ -56,9 +61,9 @@ caps.handback.revision: 26
   
 1.  SharePoint サイトで、データ フィード ライブラリ、またはデータ サービスのコンテンツ タイプを追加および構成した別のドキュメント ライブラリを開きます。 以前に作成したデータ フィード ライブラリを見つけるには、サイド リンク バーで **[すべて表示]** をクリックします。  
   
-2.  ページ上部のリボンの [ドキュメント ツール] で **[ドキュメント]** をクリックします。  
+2.  ページ上部のリボンの [ドキュメント ツール] で **[ドキュメント]**をクリックします。  
   
-3.  **[新しいドキュメント]** をクリックし、**[データ サービス ドキュメント]** をクリックします。  
+3.  **[新しいドキュメント]** をクリックし、 **[データ サービス ドキュメント]**をクリックします。  
   
 4.  [新しいデータ サービス ドキュメント] ページで、次の情報を入力します。  
   
@@ -72,7 +77,7 @@ caps.handback.revision: 26
   
          データ フィード URL にはパラメーターを含めることができます。 さまざまな種類のデータ サービス テクノロジで、使用するデータを正確に選択できる高度な URL アドレス指定スキームがサポートされています。 たとえば、ADO.NET データ サービスには、基になるデータのエンティティ、アソシエーション、およびナビゲーション パスを指定するための URL パラメーターが用意されています。 複雑な URL をデータ フィードのソースとして指定することで、使用するデータセットを正確に指定できます。  
   
-    3.  同じデータ フィードにおいて、クライアント アプリケーションでデータセットを識別することになるテーブル名を入力します。 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] では、インポートする各データ フィードは、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ソース内の固有のテーブル コントロールに配置されます。 データ フィードの設定時に、インポートされたデータを受け取るテーブルの名前を指定する必要があります。  
+    3.  同じデータ フィードにおいて、クライアント アプリケーションでデータセットを識別することになるテーブル名を入力します。 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]では、インポートする各データ フィードは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ソース内の固有のテーブル コントロールに配置されます。 データ フィードの設定時に、インポートされたデータを受け取るテーブルの名前を指定する必要があります。  
   
 5.  [別のデータ フィードの追加] をクリックし、前の手順を繰り返して同じサービスまたは異なるサービスからの追加のフィードを指定します。  
   
@@ -82,20 +87,20 @@ caps.handback.revision: 26
   
 6.  ドキュメントを保存します。 データ サービス ドキュメントは、このコンテンツ タイプ用に構成されたコンテンツ ライブラリに物理ファイル (.atomsvc) として格納されます。  
   
- データ サービス ドキュメントを使用するには、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] で [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] ブックを開いて、データのインポート ウィザードで **[データ フィードから]** オプションを選択します。 指定画面が表示されたら、ユーザーがデータ サービス ドキュメントの SharePoint URL を指定して、データのインポート操作を開始します。 詳細については、「[データ フィードの使用 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)」を参照してください。  
+ データ サービス ドキュメントを使用するには、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] で [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] ブックを開いて、データのインポート ウィザードで **[データ フィードから]** オプションを選択します。 指定画面が表示されたら、ユーザーがデータ サービス ドキュメントの SharePoint URL を指定して、データのインポート操作を開始します。 詳細については、「 [データ フィードの使用 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)」を参照してください。  
   
 ##  <a name="securedsdoc"></a> データ サービス ドキュメントのセキュリティ保護  
  データ サービス ドキュメントは、そのドキュメントを格納するライブラリの権限を継承します。 アイテムに対して設定した権限によって、ユーザーがデータ サービス ドキュメントを表示、変更、または削除できるかどうかが決まります。  
   
  データ サービス ドキュメントを [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クライアント アプリケーションでデータ フィードのインポートとして使用するために必要なのは、ドキュメントに対する表示権限のみです。 インポート ウィザードで URL を解決するには表示権限で十分です。  
   
- データ サービス ドキュメントに対する表示権限は、データ フィードのインポート操作が開始されるときにのみ確認されます。 インポート後は、ドキュメントに対する権限は確認されません。[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ソースに追加されたフィードは、元の接続情報を提供したデータ サービス ドキュメントから切断された静的データとして存在します。  
+ データ サービス ドキュメントに対する表示権限は、データ フィードのインポート操作が開始されるときにのみ確認されます。 インポート後は、ドキュメントに対する権限は確認されません。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ソースに追加されたフィードは、元の接続情報を提供したデータ サービス ドキュメントから切断された静的データとして存在します。  
   
  同様に、後でスケジュール設定するデータ更新操作でもデータ サービス ドキュメントは除外されます。 インポート時に、更新のために各フィードの接続情報が [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ソースにコピーされます。 したがって、ドキュメント自体は更新操作で参照されないので、データ サービス ドキュメントに対する権限はデータ更新では確認されません。  
   
 |タスク|SharePoint 権限の要件|  
 |----------|----------------------------------------|  
-|データ フィードを [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 対応のブックにインポートする。|ライブラリのデータ サービス ドキュメントに対する表示権限。|  
+|データ フィードを [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]対応のブックにインポートする。|ライブラリのデータ サービス ドキュメントに対する表示権限。|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クライアント アプリケーションで、以前にフィードを介して取得されたデータを更新する。|該当なし。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クライアント アプリケーションは、埋め込まれた HTTP 接続情報を使用して、フィードを提供するデータ サービスおよびアプリケーションに直接接続します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クライアント アプリケーションでは、データ サービス ドキュメントは使用されません。|  
 |SharePoint ファームで、ユーザー入力を要求せずにデータを定期タスクとして更新する。|該当なし。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービスは、埋め込まれた HTTP 接続情報を使用して、フィードを提供するデータ サービスおよびアプリケーションに直接接続します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービスでは、データ サービス ドキュメントは使用されません。|  
 |ライブラリのデータ サービス ドキュメントを削除する。|ライブラリに対する投稿権限。|  
@@ -108,12 +113,12 @@ caps.handback.revision: 26
  SharePoint サイトのデータ サービス ドキュメントとインポートされたフィードが含まれる [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックの間に永続的なリンクがないので、データ サービス ドキュメントの一部を変更しても既存の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックには影響しません。  
   
 > [!IMPORTANT]  
->  データ サービス ドキュメントは一度しか読み取られませんが、実際のデータを提供するデータ サービスには、新しいフィードを取得するために定期的にアクセスできます。 データを更新する方法の詳細については、「[Power Pivot データ更新](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)」を参照してください。  
+>  データ サービス ドキュメントは一度しか読み取られませんが、実際のデータを提供するデータ サービスには、新しいフィードを取得するために定期的にアクセスできます。 データを更新する方法の詳細については、「 [Power Pivot データ更新](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)」を参照してください。  
   
 ##  <a name="usedsdoc"></a> 次の手順: データ サービス ドキュメントの使用  
- SharePoint ライブラリで作成したデータ サービス ドキュメントを使用するには、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ソースで **[データ フィードから]** インポート オプションを使用します。 手順については、「[データ フィードの使用 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)」を参照してください。  
+ SharePoint ライブラリで作成したデータ サービス ドキュメントを使用するには、 **データ ソースで** [データ フィードから] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] インポート オプションを使用します。 手順については、「[データ フィードの使用 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Power Pivot データ フィード](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   
   

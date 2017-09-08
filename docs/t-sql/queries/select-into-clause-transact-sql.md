@@ -1,0 +1,256 @@
+---
+title: "INTO 句 (TRANSACT-SQL) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 05/23/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- INTO_TSQL
+- INSERT_INTO_TSQL
+- INSERT INTO
+- INTO
+- INTO clause
+- INTO_clause_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- copying data [SQL Server], into a new table
+- INTO clause
+- moving data, to a new table
+- table creation [SQL Server], INTO clause
+- SELECT INTO statement
+- inserting rows
+- clauses [SQL Server], INTO
+- row additions [SQL Server], INTO clause
+ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
+caps.latest.revision: 63
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d8aa3c2ff42396114287f58b7d9d431d13de8a2f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="select---into-clause-transact-sql"></a>SELECT の INTO 句 (TRANSACT-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+  SELECT...INTO は、既定のファイル グループに新しいテーブルを作成し、クエリの結果得られた行をそのテーブルに挿入します。 SELECT の完全な構文を表示するには、次を参照してください[SELECT &#40;。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-transact-sql.md).  
+  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>構文  
+  
+```  
+[ INTO new_table ]
+[ ON filegroup]
+```  
+  
+## <a name="arguments"></a>引数  
+ *new_table*  
+ 新しいテーブルの名前を指定します。このテーブルは選択リストで指定した列とデータ ソースから選択された行を基に作成されます。  
+ 
+  *ファイル グループ*
+ 
+ 新しいテーブルが作成されるファイル グループの名前を指定します。 指定されたファイル グループは存在他のデータベースで SQL Server エンジンがスローされますエラーです。 このオプションは、以降でのみサポートされます[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]です。
+ 
+ 形式*new_table*は選択リスト内の式を評価することによって決定されます。 内の列*new_table*選択リストで指定された順序で作成されます。 内の各列*new_table*選択リスト内の対応する式と同じ名前、データ型、null 値許容属性、および値を持ちます。 列の IDENTITY プロパティは、「解説」の「ID 列の使用」に示されている条件に当てはまる場合を除いて転送されます。  
+  
+ 別のデータベースの同じインスタンスにテーブルを作成する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、指定*new_table*形式で完全修飾名として*database.schema.table_name*です。  
+  
+ 作成することはできません*new_table*リモート サーバーです。 ただし、設定できる*new_table*リモート データ ソースからです。 作成する*new_table*リモート ソース テーブルから指定の形式で 4 部構成の名前を使用してソース テーブル*linked_server*.*カタログ*.*スキーマ*.*オブジェクト*SELECT ステートメントの FROM 句でします。 また、使用することができます、 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)関数または[OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md)リモート データ ソースを指定する FROM 句内の関数。  
+  
+## <a name="data-types"></a>データ型  
+ FILESTREAM 属性は新しいテーブルに転送されません。 FILESTREAM Blob がコピーされ、新しいテーブルに格納されている**varbinary (max)** Blob です。 FILESTREAM 属性がない、 **varbinary (max)**データ型に 2 GB の制限があります。 FILESTREAM BLOB がこの値を超えると、エラー 7119 が発生して、ステートメントが中止されます。  
+  
+ 既存の ID 列が新しいテーブルに選択された場合は、次の条件のいずれかが満たされている場合を除き、新しい列には IDENTITY プロパティが継承されます。  
+  
+-   SELECT ステートメントに結合が含まれています。  
+  
+-   複数の SELECT ステートメントが UNION を使用して結合されている。  
+  
+-   ID 列が選択リストに 2 回以上指定されている。  
+  
+-   ID 列が式の一部である。  
+  
+-   ID 列がリモート データ ソースから取得されている。  
+  
+これらの条件が 1 つでも満たされている場合は、列に IDENTITY プロパティは継承されず、代わりに NOT NULL として作成されます。 新しいテーブルに ID 列が必要であるものの使用できる列がない場合や、ソースの ID 列とは異なるシード値や増分値が必要な場合は、選択リストで IDENTITY 関数を使用してその列を定義します。 以下の「例」の「IDENTITY 関数を使用して ID 列を作成する」を参照してください。  
+  
+## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
+ テーブル変数やテーブル値パラメーターを新しいテーブルとして指定することはできません。  
+  
+ ソース テーブルがパーティション分割されている場合でも、SELECT...INTO を使用してパーティション テーブルを作成することはできません。 SELECT...INTO では、ソース テーブルのパーティション構成が使用されず、新しいテーブルが既定のファイル グループに作成されます。 パーティション テーブルに行を挿入するには、まずパーティション テーブルを作成してから INSERT INTO...SELECT FROM ステートメントを使用する必要があります。  
+  
+ ソース テーブルに定義されているインデックス、制約、およびトリガーは、新しいテーブルに転送されません。SELECT...INTO ステートメントで指定することもできません。 これらのオブジェクトが必要な場合は、SELECT...INTO ステートメントの実行後に作成できます。  
+  
+ ORDER BY 句を指定しても、行が指定した順序どおりに挿入されるかどうかは保証されません。  
+  
+ 選択リストにスパース列が含まれている場合、新しいテーブルの列にスパース列のプロパティは転送されません。 新しいテーブルでこのプロパティが必要な場合は、SELECT...INTO ステートメントの実行後に列の定義を変更してプロパティを追加してください。  
+  
+ リストに計算列が指定されている場合、新しいテーブル内の対応する列は計算列にはなりません。 新しい列の値は、SELECT...INTO が実行された時点の計算値になります。  
+  
+## <a name="logging-behavior"></a>ログ記録の動作  
+ SELECT...INTO のログ記録量は、データベースに対して有効な復旧モデルによって異なります。 単純復旧モデルまたは一括ログ復旧モデルでは、一括操作は最小限しかログに記録されません。 選択 を使用して、最小ログ記録しています. ステートメントに効率的であるテーブルを作成すると、INSERT ステートメントを含むテーブルを作成します。 詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
+  
+## <a name="permissions"></a>Permissions  
+ 対象となるデータベースの CREATE TABLE 権限が必要です。  
+  
+## <a name="examples"></a>使用例  
+  
+### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>A. 複数のソースの列を指定してテーブルを作成する  
+ 次の例では、各種の従業員関連テーブルと住所関連テーブルから 7 つの列を選択して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにテーブル `dbo.EmployeeAddresses` を作成します。  
+  
+```tsql  
+SELECT c.FirstName, c.LastName, e.JobTitle, a.AddressLine1, a.City,   
+    sp.Name AS [State/Province], a.PostalCode  
+INTO dbo.EmployeeAddresses  
+FROM Person.Person AS c  
+    JOIN HumanResources.Employee AS e   
+    ON e.BusinessEntityID = c.BusinessEntityID  
+    JOIN Person.BusinessEntityAddress AS bea  
+    ON e.BusinessEntityID = bea.BusinessEntityID  
+    JOIN Person.Address AS a  
+    ON bea.AddressID = a.AddressID  
+    JOIN Person.StateProvince as sp   
+    ON sp.StateProvinceID = a.StateProvinceID;  
+GO  
+```  
+  
+### <a name="b-inserting-rows-using-minimal-logging"></a>B. 最小ログ記録を使用して行を挿入する  
+ 次の例は、テーブルを作成`dbo.NewProducts`から行を挿入し、`Production.Product`テーブル。 例では、復旧モデル、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースが FULL に設定します。 したがって、最小ログ記録が使用されるようにするために、行を挿入する前に [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの復旧モデルを BULK_LOGGED に設定し、SELECT...INTO ステートメントの後に FULL に戻しています。 これにより、SELECT...INTO ステートメントが使用するトランザクション ログの領域が最小化され、ステートメントが効率的に実行されるようになります。  
+  
+```tsql  
+ALTER DATABASE AdventureWorks2012 SET RECOVERY BULK_LOGGED;  
+GO  
+  
+SELECT * INTO dbo.NewProducts  
+FROM Production.Product  
+WHERE ListPrice > $25   
+AND ListPrice < $100;  
+GO  
+ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
+GO  
+```  
+  
+### <a name="c-creating-an-identity-column-using-the-identity-function"></a>C. IDENTITY 関数を使用して ID 列を作成する  
+ 次の例では、IDENTITY 関数を使用して、新しいテーブルに id 列を作成する`Person.USAddress`で、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。 この操作が必要になるのは、テーブルを定義する SELECT ステートメントに結合が含まれているため、IDENTITY プロパティが新しいテーブルに転送されないからです。 IDENTITY 関数で、ソース テーブル `AddressID` の `Person.Address` 列とは異なるシード値と増分値が指定されていることに注意してください。  
+  
+```tsql  
+-- Determine the IDENTITY status of the source column AddressID.  
+SELECT OBJECT_NAME(object_id) AS TableName, name AS column_name, 
+  is_identity, seed_value, increment_value  
+FROM sys.identity_columns  
+WHERE name = 'AddressID';  
+  
+-- Create a new table with columns from the existing table Person.Address. 
+-- A new IDENTITY column is created by using the IDENTITY function.  
+SELECT IDENTITY (int, 100, 5) AS AddressID,   
+       a.AddressLine1, a.City, b.Name AS State, a.PostalCode  
+INTO Person.USAddress   
+FROM Person.Address AS a  
+INNER JOIN Person.StateProvince AS b 
+  ON a.StateProvinceID = b.StateProvinceID  
+WHERE b.CountryRegionCode = N'US';   
+  
+-- Verify the IDENTITY status of the AddressID columns in both tables.  
+SELECT OBJECT_NAME(object_id) AS TableName, name AS column_name, 
+  is_identity, seed_value, increment_value  
+FROM sys.identity_columns  
+WHERE name = 'AddressID';  
+```  
+  
+### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>D. リモート データ ソースの列を指定してテーブルを作成する  
+ 次の例は、ローカル サーバーで新しいテーブルをリモート データ ソースから作成するための 3 つの方法を示しています。 最初にリモート データ ソースへのリンクを作成した後、 リンク サーバー名、`MyLinkServer,`の最初の SELECT FROM 句で指定しています.2 番目の SELECT の OPENQUERY 関数とステートメントにしています.INTO ステートメントです。 3 つ目の SELECT...INTO ステートメントでは、OPENDATASOURCE 関数を使用して、リンク サーバー名を使用する代わりに直接リモート データ ソースを指定しています。  
+  
+ **適用されます:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。  
+  
+```tsql
+USE master;  
+GO  
+-- Create a link to the remote data source.   
+-- Specify a valid server name for @datasrc as 'server_name' 
+-- or 'server_name\instance_name'.  
+EXEC sp_addlinkedserver @server = N'MyLinkServer',  
+    @srvproduct = N' ',  
+    @provider = N'SQLNCLI',   
+    @datasrc = N'server_name',  
+    @catalog = N'AdventureWorks2012';  
+GO  
+
+USE AdventureWorks2012;  
+GO  
+-- Specify the remote data source in the FROM clause using a four-part name   
+-- in the form linked_server.catalog.schema.object.  
+SELECT DepartmentID, Name, GroupName, ModifiedDate  
+INTO dbo.Departments  
+FROM MyLinkServer.AdventureWorks2012.HumanResources.Department  
+GO  
+-- Use the OPENQUERY function to access the remote data source.  
+SELECT DepartmentID, Name, GroupName, ModifiedDate  
+INTO dbo.DepartmentsUsingOpenQuery  
+FROM OPENQUERY(MyLinkServer, 'SELECT *  
+               FROM AdventureWorks2012.HumanResources.Department');   
+GO  
+-- Use the OPENDATASOURCE function to specify the remote data source.  
+-- Specify a valid server name for Data Source using the format 
+-- server_name or server_name\instance_name.  
+SELECT DepartmentID, Name, GroupName, ModifiedDate  
+INTO dbo.DepartmentsUsingOpenDataSource  
+FROM OPENDATASOURCE('SQLNCLI',  
+    'Data Source=server_name;Integrated Security=SSPI')  
+    .AdventureWorks2012.HumanResources.Department;  
+GO  
+```  
+  
+### <a name="e-import-from-an-external-table-created-with--polybase"></a>E. PolyBase で作成された外部テーブルをインポートします。  
+ Hadoop または Azure ストレージからデータを永続的なストレージの SQL Server にインポートします。 使用して`SELECT INTO`を SQL Server で永続的なストレージの外部テーブルで参照されるデータをインポートします。 リレーショナル テーブルにその場を作成し、2 番目の手順で、テーブルの上に列ストア インデックスを作成します。  
+  
+ **適用対象:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]」を参照してください。  
+  
+```tsql
+-- Import data for car drivers into SQL Server to do more in-depth analysis.  
+SELECT DISTINCT   
+        Insured_Customers.FirstName, Insured_Customers.LastName,   
+        Insured_Customers.YearlyIncome, Insured_Customers.MaritalStatus  
+INTO Fast_Customers from Insured_Customers INNER JOIN   
+(  
+        SELECT * FROM CarSensor_Data where Speed > 35   
+) AS SensorD  
+ON Insured_Customers.CustomerKey = SensorD.CustomerKey  
+ORDER BY YearlyIncome  
+  
+```  
+### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 別のテーブルのコピーとして新しいテーブルを作成して、指定されたファイル グループを読み込む
+次の例を別のテーブルのコピーとして新しいテーブルを作成して、ユーザーの既定のファイル グループから別の指定されたファイル グループへの読み込みを demostrates です。
+
+ **適用されます:**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+
+```tsql
+ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
+ALTER DATABASE [AdventureWorksDW2016]
+ADD FILE
+(
+NAME='FG2_Data',
+FILENAME = '/var/opt/mssql/data/AdventureWorksDW2016_Data1.mdf'
+)
+TO FILEGROUP FG2;
+GO
+SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
+```
+  
+## <a name="see-also"></a>参照  
+ [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
+ [例 &#40; を選択します。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-examples-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [ID および #40 です。関数と #41 です。& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/identity-function-transact-sql.md)  
+  
+  
+

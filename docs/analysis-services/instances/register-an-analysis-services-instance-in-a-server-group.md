@@ -1,27 +1,32 @@
 ---
-title: "サーバー グループへの Analysis Services インスタンスの登録 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "サーバー グループ内の Analysis Services インスタンスの登録 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5fd3826b-8f75-48eb-910c-bf784163e53b
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7096b27b40d42ce11035feee9871a151c1460c76
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# サーバー グループへの Analysis Services インスタンスの登録
+# <a name="register-an-analysis-services-instance-in-a-server-group"></a>サーバー グループへの Analysis Services インスタンスの登録
   多数の Analysis Services サーバー インスタンスがある場合、サーバー管理をより容易にするために Management Studio 内にサーバー グループを作成できます。 サーバー グループの目的は、管理ワークスペース内の関連するサーバーのグループで近接性を提供することです。 たとえば、10 個の独立した Analysis Services インスタンスを管理する必要があるとします。 サーバー モード、連続稼動条件、または部門や地域によってそれらをグループ化することで、同じ特徴を持つインスタンスをより簡単に表示および接続することができます。 サーバーがどのように使用されるかを思い出すために役立つ情報を追加することもできます。  
   
- ![[登録済みサーバー] ペインとメンバー サーバー](../../analysis-services/instances/media/ssas-ssms-registerserver.gif "[登録済みサーバー] ペインとメンバー サーバー")  
+ ![登録済みサーバー ペインは、メンバー サーバーと](../../analysis-services/instances/media/ssas-ssms-registerserver.gif "とメンバー サーバーの登録済みサーバー ウィンドウ")  
   
  サーバー グループは、階層構造で作成することができます。 ローカル サーバー グループはルート ノードです。 これには、ローカル コンピューターで実行される Analysis Services のインスタンスが常に含まれます。 リモート サーバーは、ローカル グループを含む任意のグループに追加できます。  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 8
   
  サーバー名など、サーバーで定義されている接続情報は、サーバー登録によって保存されます。 接続情報を変更したり、他のツールを使用してサーバーに接続するときに登録名を使用したりはできません。  
   
-## サーバー グループの作成および登録サーバーの追加  
+## <a name="create-a-server-group-and-add-registered-servers"></a>サーバー グループの作成および登録サーバーの追加  
   
 1.  Management Studio で、[表示] メニューの [登録済みサーバー] をクリックし、ワークスペースで [登録済みサーバー] ペインを開きます。 既定では、ローカル サーバー グループが既に作成されています。 ローカル サーバーで実行されている Analysis Services のすべてのインスタンスが、メンバーです。  
   

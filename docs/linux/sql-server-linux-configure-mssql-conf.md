@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 894a3756d9bffcaaf3347e0bfae92abb0f846a97
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: 5147b648f2b34496bc46f756639ded028b01fe0e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql conf ツールを使用して Linux 上の SQL Server を構成します。
@@ -24,8 +24,9 @@ ms.lasthandoff: 08/28/2017
 
 |||
 |---|---|
-| [[照合順序]](#collation) | Linux 上の SQL Server の新しい照合順序を設定します。 |
+| [照合順序](#collation) | Linux 上の SQL Server の新しい照合順序を設定します。 |
 | [お客様のフィードバック](#customerfeedback) | SQL Server が Microsoft にフィードバックを送信するかどうかを選択します。 |
+| [[データベース メール プロファイル]](#dbmail) | Linux 上の SQL Server の既定のデータベース メール プロファイルを設定します。 |
 | [既定のデータ ディレクトリ](#datadir) | 新しい SQL Server データベース データ ファイル (.mdf) の既定のディレクトリを変更します。 |
 | [既定のログ ディレクトリ](#datadir) | 新しい SQL Server データベースのログ (.ldf) ファイルの既定のディレクトリを変更します。 |
 | [既定のダンプ ディレクトリ](#dumpdir) | 新しいメモリ ダンプおよびその他のトラブルシューティング ファイルの既定のディレクトリを変更します。 |
@@ -214,6 +215,13 @@ SQL Server では収集するメモリの種類を制御するダンプの 2 つ
     | **フィルター処理** | 減算に基づくフィルター処理された使用は、ここで、プロセス内のすべてのメモリが含まれる具体的には除外されていない限りをデザインします。 設計は、SQLPAL とダンプから特定の地域を除く、ホスト環境の内部構造を理解しています。
     | **完全** | 完全をすべての領域を含む完全なプロセス ダンプ内にある**/proc/$pid/マップ**です。 これによって制御されない**coredump.captureminiandfull**設定します。 |
 
+## <a id="dbmail"></a>Linux 上の SQL Server の既定のデータベース メール プロファイルを設定します。
+
+**Sqlpagent.databasemailprofile**電子メール アラートの既定のデータベース メール プロファイルを設定することができます。
+
+```bash
+sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+```
 ## <a id="hadr"></a>高可用性
 
 **Hadr.hadrenabled** SQL Server インスタンスで可用性グループを有効にします。 次のコマンドでは、可用性グループを有効に設定して**hadr.hadrenabled**を 1 にします。 有効にする設定の SQL Server を再起動する必要があります。

@@ -1,22 +1,27 @@
 ---
-title: "クエリ処理イベント カテゴリ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "クエリ処理イベントのカテゴリ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: a94b3198-be85-4935-845d-1cd4e121fc94
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3e583b0b0a6985ec4c91090b9009df6924c25c75
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# クエリ処理イベント カテゴリ
+# <a name="query-processing-events-category"></a>クエリ処理イベント カテゴリ
   クエリ処理イベント カテゴリには、次の表に示したイベント クラスがあります。  
   
 |**Event Class**|**イベント ID**|**Description**|  
@@ -42,7 +47,7 @@ caps.handback.revision: 6
   
  クエリ処理イベントの各イベント クラスに関連する列については、「 [Query Processing Events Data Columns](../../analysis-services/trace-events/query-processing-events-data-columns.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Analysis Services トレース イベント](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

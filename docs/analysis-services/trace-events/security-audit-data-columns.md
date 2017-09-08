@@ -1,24 +1,29 @@
 ---
-title: "Security Audit のデータ列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Security Audit イベント カテゴリ [SQL Server]"
+title: "セキュリティ監査のデータ列 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Security Audit event category [SQL Server]
 ms.assetid: fac1a7f9-5961-4f4b-bb04-847616b505d7
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77d887822dd132c6e4d3e356e49279fa92d32541
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Security Audit のデータ列
+# <a name="security-audit-data-columns"></a>Security Audit のデータ列
   セキュリティ監査イベント カテゴリには、次のイベント クラスがあります。  
   
 ||||  
@@ -32,7 +37,7 @@ caps.handback.revision: 36
   
  次の表は、これらのイベント クラスのデータ列の一覧です。  
   
-## Audit Login  
+## <a name="audit-login"></a>Audit Login  
   
 |||||  
 |-|-|-|-|  
@@ -52,7 +57,7 @@ caps.handback.revision: 36
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Audit Logout  
+## <a name="audit-logout"></a>Audit Logout  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -71,7 +76,7 @@ caps.handback.revision: 36
 |NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Audit Server Starts And Stops  
+## <a name="audit-server-starts-and-stops"></a>Audit Server Starts And Stops  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -84,7 +89,7 @@ caps.handback.revision: 36
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Audit Object Permission Event  
+## <a name="audit-object-permission-event"></a>Audit Object Permission Event  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -109,7 +114,7 @@ caps.handback.revision: 36
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Audit Admin Operations Even  
+## <a name="audit-admin-operations-event"></a>Audit Admin Operations Even  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -130,7 +135,7 @@ caps.handback.revision: 36
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [セキュリティ監査イベント カテゴリ](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

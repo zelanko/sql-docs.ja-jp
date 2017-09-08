@@ -1,19 +1,19 @@
 ---
 title: "Red Hat Enterprise Linux に SQL Server 2017 の概要 |Microsoft ドキュメント"
 description: "このクイック スタート チュートリアルでは、Red Hat Enterprise Linux に SQL Server 2017 をインストールし、作成し、sqlcmd によるデータベースのクエリを実行する方法を示します。"
-author: sabotta
-ms.author: carlasab
-manager: craigg
-ms.date: 07/24/2017
+author: rothja
+ms.author: jroth
+manager: jhubbard
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 53f3c2dbda293d6c3f9beb8bd16287b6aa0d9e26
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5309c2884fa4bf46a4c9c7224f4c1f21be23e7e6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>SQL Server をインストールし、Red hat でデータベースを作成
@@ -50,7 +50,7 @@ RHEL で SQL Server を構成するをインストールするターミナルで
    sudo yum install -y mssql-server
    ```
 
-1. パッケージのインストールが完了すると、実行後に**mssql conf セットアップ**および手順に従い、SA のパスワードを設定してのエディションを選択します。
+1. パッケージのインストールが完了すると、実行後に**mssql conf セットアップ**SA パスワードを設定しのエディションを選択する指示に従います。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -116,3 +116,4 @@ RHEL で SQL Server を構成するをインストールするターミナルで
 > **Sqlcmd**クエリの実行し、管理と開発タスクを実行する SQL Server に接続するためのツールの 1 つだけです。 その他のツールが含まれます[SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)と[Visual Studio Code](sql-server-linux-develop-use-vscode.md)です。
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]
+

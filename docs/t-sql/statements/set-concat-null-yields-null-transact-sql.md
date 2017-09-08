@@ -1,0 +1,106 @@
+---
+title: "セット CONCAT_NULL_YIELDS_NULL (TRANSACT-SQL) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- CONCAT_NULL_YIELDS_NULL_TSQL
+- SET CONCAT_NULL_YIELDS_NULL
+- CONCAT_NULL_YIELDS_NULL
+- SET_CONCAT_NULL_YIELDS_NULL_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CONCAT_NULL_YIELDS_NULL option
+- null values [SQL Server], concatenation results
+- concatenation [SQL Server]
+- SET CONCAT_NULL_YIELDS_NULL statement
+ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
+caps.latest.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 60281ff903bf7eb04165a65e8f2b75a80f589780
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="set-concatnullyieldsnull-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+
+  連結の結果が NULL として取り扱われるのか、空文字列として取り扱われるのかを制御します。  
+  
+> [!IMPORTANT]  
+>  将来のバージョンで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CONCAT_NULL_YIELDS_NULL は常に ON になり、オプションを OFF に明示的に設定するアプリケーションでエラーが発生します。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。  
+  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>構文  
+  
+```  
+-- Syntax for SQL Server  
+    
+SET CONCAT_NULL_YIELDS_NULL { ON | OFF }   
+```  
+  
+```  
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+  
+SET CONCAT_NULL_YIELDS_NULL ON    
+```  
+  
+## <a name="remarks"></a>解説  
+ SET CONCAT_NULL_YIELDS_NULL が ON の場合、NULL 値を文字列と連結すると、結果は NULL になります。 たとえば、`SELECT 'abc' + NULL`生成`NULL`です。 SET CONCAT_NULL_YIELDS_NULL が OFF の場合、NULL 値を文字列と連結すると、結果は元の文字列になり、NULL 値は空文字列として扱われます。 たとえば、`SELECT 'abc' + NULL`生成`abc`です。  
+  
+ CONCAT_NULL_YIELDS_NULL の設定が指定されていない場合の設定、 **CONCAT_NULL_YIELDS_NULL**データベース オプションが適用されます。  
+  
+> [!NOTE]  
+>  SET CONCAT_NULL_YIELDS_NULL は、ALTER DATABASE の CONCAT_NULL_YIELDS_NULL 設定と同じ設定です。  
+  
+ SET CONCAT_NULL_YIELDS_NULL は、解析時ではなく実行時に設定されます。  
+  
+ 計算列やインデックス付きビューのインデックスを作成または変更するときには、SET CONCAT_NULL_YIELDS_NULL を ON に設定する必要があります。 SET CONCAT_NULL_YIELDS_NULL が OFF の場合、計算列にインデックスが設定されているテーブルやインデックス付きビューにおける CREATE、UPDATE、INSERT、および DELETE のステートメントはいずれも失敗します。 計算列でインデックス付きビューとインデックスを持つ必要な SET オプション設定に関する詳細についてを参照してください「の考慮事項とする SET ステートメントの使用」 [SET ステートメント & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md).  
+  
+ CONCAT_NULL_YIELDS_NULL を OFF に設定した場合、複数のサーバーにまたがって文字列を連結することはできません。  
+  
+ この設定の現在の設定を表示するには、次のクエリを実行します。  
+  
+```  
+DECLARE @CONCAT_NULL_YIELDS_NULL VARCHAR(3) = 'OFF';  
+IF ( (4096 & @@OPTIONS) = 4096 ) SET @CONCAT_NULL_YIELDS_NULL = 'ON';  
+SELECT @CONCAT_NULL_YIELDS_NULL AS CONCAT_NULL_YIELDS_NULL;  
+  
+```  
+  
+## <a name="examples"></a>使用例  
+ 次の例では、両方の `SET CONCAT_NULL_YIELDS_NULL` 設定を示します。  
+  
+```  
+PRINT 'Setting CONCAT_NULL_YIELDS_NULL ON';  
+GO  
+-- SET CONCAT_NULL_YIELDS_NULL ON and testing.  
+SET CONCAT_NULL_YIELDS_NULL ON;  
+GO  
+SELECT 'abc' + NULL ;  
+GO  
+  
+-- SET CONCAT_NULL_YIELDS_NULL OFF and testing.  
+SET CONCAT_NULL_YIELDS_NULL OFF;  
+GO  
+SELECT 'abc' + NULL;   
+GO  
+```  
+  
+## <a name="see-also"></a>参照  
+ [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
+ [SESSIONPROPERTY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/sessionproperty-transact-sql.md)  
+  
+  

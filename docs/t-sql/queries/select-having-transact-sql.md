@@ -1,0 +1,86 @@
+---
+title: "(TRANSACT-SQL) を持つ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 08/09/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- HAVING
+- HAVING_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- restricting conditions for result set
+- search conditions [SQL Server], HAVING clause
+- HAVING clause
+- HAVING clause, about HAVING clause
+ms.assetid: 55650709-001e-42f4-902f-ead09a3c34af
+caps.latest.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9bff75a84689090f6e416db052a2561e57fa98a6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="select---having-transact-sql"></a>選択 - こと (TRANSACT-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  グループまたは集計の検索条件を指定します。 HAVING は、SELECT ステートメントと共にのみ使用できます。 通常、HAVING は GROUP BY 句で使用されます。 GROUP BY 句を使用しない場合、HAVING は WHERE 句と同様に動作します。  
+  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>構文  
+  
+```  
+-- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+  
+[ HAVING <search condition> ]  
+```  
+  
+## <a name="arguments"></a>引数  
+\<search_condition > を満たすために、グループまたは集計の検索条件を指定します。  
+  
+ **テキスト**、**イメージ**、および**ntext**データ型は HAVING 句では使用できません。  
+  
+## <a name="examples"></a>使用例  
+ 次の例では、`HAVING` テーブルから `SalesOrderID` を超える `SalesOrderDetail` ごとの合計を取得する単純な `$100000.00` 句を使用しています。  
+  
+```  
+USE AdventureWorks2012 ;  
+GO  
+SELECT SalesOrderID, SUM(LineTotal) AS SubTotal  
+FROM Sales.SalesOrderDetail  
+GROUP BY SalesOrderID  
+HAVING SUM(LineTotal) > 100000.00  
+ORDER BY SalesOrderID ;  
+```  
+  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 次の例で、`HAVING`句の合計を取得する`SalesAmount`から、`FactInternetSales`時にテーブル、`OrderDateKey`年 2004 以降に。  
+  
+```  
+-- Uses AdventureWorks  
+  
+SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales   
+FROM FactInternetSales  
+GROUP BY OrderDateKey   
+HAVING SUM(SalesAmount) > 80000  
+ORDER BY OrderDateKey;  
+```  
+  
+## <a name="see-also"></a>参照  
+ [GROUP BY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-group-by-transact-sql.md)   
+ [ここで & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)  
+  
+  
+
+

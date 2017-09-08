@@ -1,35 +1,46 @@
 ---
-title: "Remove-RoleMember コマンドレット | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Remove-rolemember コマンドレット |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: e38f56ab-facd-4bef-9502-f52f8486a6a6
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: c093787d86398acaaeaca8f282e1f588c3e726d7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Remove-RoleMember コマンドレット
+# <a name="remove-rolemember-cmdlet"></a>Remove-RoleMember コマンドレット
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Analysis Services データベースの指定したロールからメンバーを削除します。  
+
+>[!NOTE] 
+>この記事には、古くなった情報と例があります。 最新バージョンには、Get-help コマンドレットを使用します。
   
-## 構文  
+## <a name="syntax"></a>構文  
  `Remove-RoleMember [-MemberName] <System.String> [-Database] <System.String> [-RoleName] <System.String> [<CommonParameters>]`  
   
  `Remove-RoleMember [-DatabaseRole] <Microsoft.AnalysisServices.Role> [-MemberName] <System.String>  [<CommonParameters>]`  
   
-## Description  
+## <a name="description"></a>Description  
  Remove-RoleMember コマンドレットは、Analysis Services データベースのロールから既存のメンバーを削除します。  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
   
-### -MemberName \<string>  
+### <a name="-membername-string"></a>-Membername\<文字列 >  
  ロールから削除する Windows ユーザーまたはグループを指定します。  
   
 |||  
@@ -40,7 +51,7 @@ caps.handback.revision: 8
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### -Database \<string>  
+### <a name="-database-string"></a>-データベース\<文字列 >  
  ロールが属するデータベースを指定します。  
   
 |||  
@@ -51,7 +62,7 @@ caps.handback.revision: 8
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### -RoleName \<string>  
+### <a name="-rolename-string"></a>-RoleName\<文字列 >  
  メンバーが削除されるロールを指定します。  
   
 |||  
@@ -62,7 +73,7 @@ caps.handback.revision: 8
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### -DatabaseRole \<string>  
+### <a name="-databaserole-string"></a>-Databaserole &\<文字列 >  
  メンバーが削除される Microsoft.AnalysisServices.Role オブジェクトを指定します。 データベース ロールをパイプラインを介して指定する場合に、–Database および –RoleName パラメーターの代わりにこのパラメーターを使用します。  
   
 |||  
@@ -73,13 +84,13 @@ caps.handback.revision: 8
 |パイプライン入力の受け入れ|可 (ByPropertyName)|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### \<CommonParameters>  
- このコマンドレットは、-Verbose、-Debug、-ErrorAction、-ErrorVariable、-OutBuffer、および –OutVariable の共通パラメーターをサポートしています。 詳しくは、「[About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)」をご覧ください。  
+### <a name="commonparameters"></a>\<CommonParameters >  
+ このコマンドレットは、-Verbose、-Debug、-ErrorAction、-ErrorVariable、-OutBuffer、および –OutVariable の共通パラメーターをサポートしています。 詳細については、「 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)」を参照してください。  
   
-## 入力および出力  
+## <a name="inputs-and-outputs"></a>入力および出力  
  [なし] :  
   
-## 例 1  
+## <a name="example-1"></a>例 1  
   
 ```  
 PS SQLSERVER:\sqlas\localhost\default> remove-rolemember –membername “adventure-works\bobh” –database “AdventureWorks” –rolename “Reader”  
@@ -87,7 +98,7 @@ PS SQLSERVER:\sqlas\localhost\default> remove-rolemember –membername “advent
   
  このコマンドは、既定のローカル インスタンス上で動作する AdventureWorks データベースの Reader ロールから Windows ドメイン ユーザー アカウントを削除します。  
   
-## 例 2  
+## <a name="example-2"></a>例 2  
   
 ```  
 PS SQLSERVER:\sqlas\localhost\default> $roles= dir .\databases\AWTEST\Roles  
@@ -97,7 +108,7 @@ PS SQLSERVER:\sqlas\localhost\default> remove-rolemember –membername:“advent
   
  行 1 は、AWTEST データベースのすべてのデータベース ロールをパイプラインに追加します。 行 2 のプロンプトで入力した「$roles」は、ロールの配列を示しています。 行 3 は、配列内の最初のロールから、Windows ユーザー "adventure-works\bobh" を削除します。  
   
-## 例 3  
+## <a name="example-3"></a>例 3  
   
 ```  
 PS SQLSERVER:\sqlas\localhost\default\Databases\AWTEST\Roles> $roles=dir  
@@ -106,8 +117,6 @@ PS SQLSERVER:\sqlas\localhost\default\Databases\AWTEST\Roles> $roles[0] | Remove
   
  このコマンドは、Windows ドメイン ユーザー アカウントを配列内の最初のロールから削除します。この配列は、特定のデータベース (AWTEST) のコンテキストで Roles フォルダーの子の一覧を表示することによって作成されたものです。  
   
-## 参照  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [PowerShell を使用したテーブル モデルの管理](http://go.microsoft.com/fwlink/?linkID=227685)  
+
   
   

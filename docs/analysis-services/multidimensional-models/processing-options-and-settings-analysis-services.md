@@ -1,43 +1,48 @@
 ---
-title: "処理オプションと設定 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "[データの処理] オプション [Analysis Services]"
-  - "オブジェクトの処理 [Analysis Services]"
-  - "[未処理] オプション [Analysis Services]"
-  - "[完全処理] オプション [Analysis Services]"
-  - "[インデックスの処理] オプション [Analysis Services]"
-  - "[構造の処理] オプション [Analysis Services]"
-  - "[増分処理] オプション [Analysis Services]"
-  - "[更新の処理] オプション [Analysis Services]"
-  - "[構造消去の処理] オプション [Analysis Services]"
-  - "[既定の処理] オプション [Analysis Services]"
+title: "処理オプションと設定 (Analysis Services) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- process data option [Analysis Services]
+- processing objects [Analysis Services]
+- unprocess option [Analysis Services]
+- process full option [Analysis Services]
+- process index option [Analysis Services]
+- process structure option [Analysis Services]
+- process incremental option [Analysis Services]
+- process update option [Analysis Services]
+- process clear structure option [Analysis Services]
+- process default option [Analysis Services]
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
 caps.latest.revision: 48
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 48
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a4540adcf485554cff6c909dedf4d53585336ae6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# 処理オプションと設定 (Analysis Services)
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でオブジェクトを処理する場合、処理オプションを選択することにより、各オブジェクトに対して行われる処理の種類を制御できます。 処理の種類はオブジェクトごとに異なるほか、オブジェクトに対する変更内容 (オブジェクトが前回処理されたことによって発生した変更) によっても異なります。 処理方法を自動的に選択する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の機能を有効にすると、オブジェクトを完全処理状態に最短時間で戻す方法が使用されます。  
+# <a name="processing-options-and-settings-analysis-services"></a>処理オプションと設定 (Analysis Services)
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でオブジェクトを処理する場合、処理オプションを選択することにより、各オブジェクトに対して行われる処理の種類を制御できます。 処理の種類はオブジェクトごとに異なるほか、オブジェクトに対する変更内容 (オブジェクトが前回処理されたことによって発生した変更) によっても異なります。 処理方法を自動的に選択する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の機能を有効にすると、オブジェクトを完全処理状態に最短時間で戻す方法が使用されます。  
   
  処理オプションを設定することにより、処理されるオブジェクト、およびオブジェクトの処理方法を制御できます。 このような設定のいくつかは、主にバッチ処理ジョブで使用されます。 バッチ処理の詳細については、「[バッチ処理 (Analysis Services)](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)」を参照してください。  
   
 > [!NOTE]  
 >  このトピックは、多次元、およびデータ マイニングの各ソリューションに適用されます。 テーブル モデル ソリューションについては、「[データベース、テーブル、またはパーティションの処理 (Analysis Services)](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)」を参照してください。  
   
-## 処理オプション  
+## <a name="processing-options"></a>処理オプション  
  次の表に、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で使用できる処理方法と、それぞれの方法でサポートされているオブジェクトを示します。  
   
 |モード|適用対象|Description|  
@@ -52,7 +57,7 @@ caps.handback.revision: 48
 |**構造の処理**|キューブ、マイニング構造|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、キューブが処理されていない場合、必要に応じてキューブのすべてのディメンションが処理されます。 その後、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、キューブ定義だけを作成します。 このオプションをマイニング構造に適用すると、マイニング構造にソース データが設定されます。 このオプションと完全処理オプションの違いは、このオプションでは、マイニング モデル自体まで処理が繰り返されないという点です。|  
 |**構造消去の処理**|マイニング構造|マイニング構造からすべてのトレーニング データを削除します。|  
   
-## 処理の設定  
+## <a name="processing-settings"></a>処理の設定  
  次の表では、処理操作の作成時に使用できる処理オプションの設定について説明します。  
   
 |処理オプション|Description|オプション値|  
@@ -61,12 +66,12 @@ caps.handback.revision: 48
 |**シーケンシャル (トランザクション モード)**|処理ジョブの実行動作を制御します。 2 つのオプションを使用できます。<br /><br /> **[1 つのトランザクション]**を使用して処理する場合、処理ジョブが成功した後にすべての変更がコミットされます。 つまり、コミット処理までは、特定の処理ジョブの影響を受けるすべての [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトをそのままクエリ用に使用できます。 これにより、オブジェクトは一時的に使用できなくなります。 **[個別のトランザクション]** を使用した場合、処理ジョブ内の処理の影響を受けるすべてのオブジェクトは、その処理が成功するとすぐに、クエリ用に使用できなくなります。|**[1 つのトランザクション]**。 処理ジョブは 1 つのトランザクションとして実行されます。 処理ジョブ内のすべての処理が成功すると、処理ジョブによる変更がすべてコミットされます。 処理が 1 つ失敗すると、処理ジョブによる変更がすべてロールバックされます。 **[1 つのトランザクション]** が既定値です。<br /><br /> **[個別のトランザクション]**。 処理ジョブ内の各処理はスタンドアロンのジョブとして実行されます。 処理が 1 つ失敗すると、その処理だけがロールバックされ、処理ジョブは続行されます。 各ジョブでは、そのジョブの最後に処理の変更がすべてコミットされます。|  
 |**書き戻しテーブル オプション**|処理中に書き戻しテーブルをどのように処理するかを制御します。 このオプションは、キューブ内の書き戻しパーティションに適用されます。|**[既存のデータを使用する]**。 既存の書き戻しテーブルを使用します。 これは既定値です。<br /><br /> **[作成]**。 新しい書き戻しテーブルを作成します。書き戻しテーブルが既に存在する場合、その処理は失敗します。<br /><br /> **[常に作成する]**。 書き戻しテーブルが既に存在する場合でも新しい書き戻しテーブルを作成します。 既存のテーブルは削除されて置き換えられます。|  
 |**影響を受けたオブジェクトの処理**|処理ジョブのオブジェクトのスコープを制御します。 影響を受けるオブジェクトは、オブジェクトの依存関係によって定義されます。 たとえば、パーティションは、集計を決定するディメンションに依存しますが、ディメンションはパーティションに依存しません。 **[False]** が既定の設定です。|**[False]**。 ジョブは、そのジョブで明示的に指定されたオブジェクトとすべての依存オブジェクトを処理します。 たとえば、処理ジョブにディメンションしか含まれていない場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、そのジョブで明示的に特定されたオブジェクトだけを処理します。 処理ジョブにパーティションが含まれている場合は、パーティションを処理すると、影響を受けるディメンションに関する処理が自動的に呼び出されます。<br /><br /> **[True]**。 ジョブによって処理されるのは、そのジョブで明示的に指定されたオブジェクト、すべての依存オブジェクト、および処理されるオブジェクトの影響を受けるすべてのオブジェクトです。ただし、影響を受けるオブジェクトの状態は変更されません。 たとえば、処理ジョブにディメンションしか含まれていない場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、現在処理済みの状態にあるパーティションに対してディメンション処理を行ったときに影響を受けるすべてのパーティションも処理します。 影響を受けるパーティションのうち、現在未処理の状態にあるパーティションは処理されません。 ただし、パーティションはディメンションに依存するため、処理ジョブにパーティションしか含まれていない場合は、ディメンションが現在未処理の状態にあっても、パーティションを処理すると、影響を受けるディメンションの処理が自動的に呼び出されます。|  
-|**ディメンション キーのエラー**|処理中にエラーが発生した場合に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で実行されるアクションを決定します。 **[カスタム エラー構成を使用する]** を選択すると、次のアクションの値を選択して、エラー処理の動作を制御できます。<br /><br /> [既定のエラー構成を使用する] を選択すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、処理される各オブジェクトに設定されているエラー構成が使用されます。 既定の構成設定を使用するようにオブジェクトを設定すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、各オプションに指定されている既定の設定が使用されます。||  
+|**ディメンション キーのエラー**|処理中にエラーが発生した場合に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で実行されるアクションを決定します。 **[カスタム エラー構成を使用する]**を選択すると、次のアクションの値を選択して、エラー処理の動作を制御できます。<br /><br /> [既定のエラー構成を使用する] を選択すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、処理される各オブジェクトに設定されているエラー構成が使用されます。 既定の構成設定を使用するようにオブジェクトを設定すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、各オプションに指定されている既定の設定が使用されます。||  
 ||**[キー エラー アクション]**。 レコードにキー値がまだ存在していない場合、次のいずれかのアクションが行われるように選択します。|**[不明な種類に変換]**。 このキーは不明メンバーとして解釈されます。 これが既定の設定です。<br /><br /> **[レコードの破棄]**。 レコードが破棄されます。|  
 ||**[エラー処理の制限]**。 次のいずれかのオプションを選択して、処理されるエラー数を制御します。|**[エラー数を無視する]**。 これにより、エラー数に関係なく、処理を続行できます。<br /><br /> **[エラー時に停止する]**。 このオプションでは、さらに 2 つのオプションを設定します。 **[エラー数]** では、特定の数のエラーに処理を制限できます。 **[エラー時のアクション]** では、 **[エラー数]** に到達したときのアクションを決定できます。 **[処理の停止]**(処理ジョブが失敗した場合にすべての変更がロールバックされます) や **[ログ記録の停止]**(エラーをログに記録せずに処理を続行できます) を選択できます。 **[エラー時に停止する]** は既定の設定で、 **[エラー数]** が **0** に設定され、 **[エラー時のアクション]** が **[処理の停止]**に設定されています。|  
 ||次のエラー条件です。 オプションの値を設定して、特定のエラー処理の動作を制御できます。<br /><br /> **[既定のエラー構成を使用する]**を選択すると、Analysis Services では、処理される各オブジェクトに設定されているエラー構成が使用されます。 既定の構成設定を使用するようにオブジェクトを設定すると、Analysis Services では、各オプションに指定されている既定の設定が使用されます。|**[見つからないキー]**。 キー値がパーティションに存在しても対応するディメンションに存在しない場合に使用されます。 既定の設定は **[報告して続行する]**です。 他に、 **[エラーを無視する]** および **[報告して停止する]**という設定もあります。<br /><br /> **[重複キー]**。 ディメンションに複数のキー値が存在する場合に使用されます。 既定の設定は **[エラーを無視する]**です。 他に、 **[報告して続行する]** および **[報告して停止する]**という設定もあります。<br /><br /> **[不明な種類に変換された NULL キー]**。 キー値が NULL で、 **[キー エラー アクション]** が **[不明な種類に変換]**に設定されている場合に使用されます。 既定の設定は **[エラーを無視する]**です。 他に、 **[報告して続行する]** および **[報告して停止する]**という設定もあります。<br /><br /> **[許可されていない NULL キー]**。 **[キー エラー アクション]** が **[レコードの破棄]**に設定されている場合に使用されます。 既定の設定は **[報告して続行する]**です。 他に、 **[エラーを無視する]** および **[報告して停止する]**という設定もあります。|  
   
-## 参照  
- [多次元モデルの処理 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
+## <a name="see-also"></a>参照  
+ [多次元モデルの処理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

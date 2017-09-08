@@ -1,30 +1,35 @@
 ---
-title: "Power Pivot for SharePoint 2013 向けに最小限の特権を構成する例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot の最小限の特権の例 - SharePoint 2013 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9583847e375cf3deb030319dce8b77dab3e5e609
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Power Pivot for SharePoint 2013 向けに最小限の特権を構成する例
+# <a name="power-pivot-minimum-privilege-example---sharepoint-2013"></a>Power Pivot の最小限の特権の例 - SharePoint 2013
   このトピックでは、最小限の特権を使用する [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 構成の例について説明します。 この構成では、3 種類のコンポーネントごとに個別のアカウントを使用します。各アカウントには最小レベルの特権を指定します。  
   
 ||  
 |-|  
 |**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
   
-## アカウントの概要  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 では、Analysis Services サービス アカウントに Network Service アカウントを使用できます。 Network Service アカウントは、SharePoint 2010 のシナリオではサポートされません。 サービス アカウントの詳細については、「[Windows サービス アカウントと権限の構成](http://msdn.microsoft.com/library/ms143504.aspx)」(http://msdn.microsoft.com/library/ms143504.aspx) を参照してください。  
+## <a name="summary-of-accounts"></a>アカウントの概要  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 では、Analysis Services サービス アカウントに Network Service アカウントを使用できます。 Network Service アカウントは、SharePoint 2010 のシナリオではサポートされません。 サービス アカウントの詳細については、「 [Windows サービス アカウントと権限の構成](http://msdn.microsoft.com/library/ms143504.aspx) 」(http://msdn.microsoft.com/library/ms143504.aspx) を参照してください。  
   
  次の表は、最小限の特権の構成の例で使用する 3 種類のアカウントをまとめたものです。  
   
@@ -34,13 +39,13 @@ caps.handback.revision: 12
 |SharePoint ファーム アカウント|**SPFarm**|  
 |Analysis Services サービス アカウント|**SPsvc**|  
   
-### SharePoint 管理者アカウント (SpAdmin)  
- **SPAdmin** は、ファームのインストールと構成に使用するドメイン アカウントです。 このアカウントは、SharePoint 構成ウィザードと SharePoint 2013 用 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 構成ツールの実行に使用します。**SPAdmin** は、ローカル管理者権限が必要になる唯一のアカウントです。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 構成ツールを実行する前に、**SPAdmin** アカウントの特権を、SharePoint によってコンテンツ データベースと構成データベースが作成される SQL Server データベース インスタンスに与えます。 最小限の特権のシナリオで SPAdmin アカウントを構成する場合、SPAdmin アカウントは **securityadmin** ロールと **dbcreator**ロールのメンバーにします。  
+### <a name="the-sharepoint-administrator-account-spadmin"></a>SharePoint 管理者アカウント (SpAdmin)  
+ **SPAdmin** は、ファームのインストールと構成に使用するドメイン アカウントです。 このアカウントは、SharePoint 構成ウィザードと SharePoint 2013 用 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 構成ツールの実行に使用します。 **SPAdmin** は、ローカル管理者権限が必要になる唯一のアカウントです。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 構成ツールを実行する前に、 **SPAdmin** アカウントの特権を、SharePoint によってコンテンツ データベースと構成データベースが作成される SQL Server データベース インスタンスに与えます。 最小限の特権のシナリオで SPAdmin アカウントを構成する場合、SPAdmin アカウントは **securityadmin** ロールと **dbcreator**ロールのメンバーにします。  
   
-### ファーム アカウント (SPFarm)  
- **SPFarm** は、SharePoint Timer Service と全体管理用 Web アプリケーションが SharePoint コンテンツ データベースにアクセスするために使用するドメイン アカウントです。 このアカウントは、ローカル管理者である必要はありません。 SharePoint 構成ウィザードでは、バックエンドの SQL Server データベースで必要最小限の特権を付与します。SQL Server の特権の最小限の構成は **securityadmin** ロールと **dbcreator** ロールのメンバーシップです。  
+### <a name="the-farm-account-spfarm"></a>ファーム アカウント (SPFarm)  
+ **SPFarm** は、SharePoint Timer Service と全体管理用 Web アプリケーションが SharePoint コンテンツ データベースにアクセスするために使用するドメイン アカウントです。 このアカウントは、ローカル管理者である必要はありません。 SharePoint 構成ウィザードでは、バックエンドの SQL Server データベースで必要最小限の特権を付与します。SQL Server の特権の最小限の構成は **securityadmin** ロールと **dbcreator**ロールのメンバーシップです。  
   
-### PowerPivot サービスのサービス アカウント (SPsvc)  
+### <a name="the-service-account-for-power-pivot-service-spsvc"></a>PowerPivot サービスのサービス アカウント (SPsvc)  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 構成ツールを実行する前に新しい SharePoint ファームが構成されていない場合、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 構成ツールでは既定で以下のものを作成します。  
   
 -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Service アプリケーション。  
@@ -55,7 +60,7 @@ caps.handback.revision: 12
   
 1.  SharePoint のサーバーの全体管理で **[セキュリティ]**を選択します。  
   
-2.   **[サービス アカウントの構成]**を選択します。  
+2.  **[サービス アカウントの構成]**を選択します。  
   
 3.  **[新しい管理アカウントの登録]**を選択します。  
   

@@ -1,30 +1,35 @@
 ---
-title: "Power Pivot から復元 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql11.asvs.ssmsimbi.RestoreFromPP.f1"
+title: "Power Pivot から復元 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql11.asvs.ssmsimbi.RestoreFromPP.f1
 ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 27541f0f58b11367994d2131eb95b63cbf55a4af
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Power Pivot から復元
-  SQL Server Management Studio の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] から復元機能を使って、テーブル モードで実行されている Analysis Services インスタンス上に新しいテーブル モデル データベースを作成したり、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブック (.xlsx) から既存のデータベースに復元したりできます。  
+# <a name="restore-from-power-pivot"></a>Power Pivot から復元
+  SQL Server Management Studio の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] から復元機能を使って、テーブル モードで実行されている Analysis Services インスタンス上に新しいテーブル モデル データベースを作成したり、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブック (.xlsx) から既存のデータベースに復元したりできます。  
   
 > [!NOTE]  
->  SQL Server Data Tools の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] からのインポート プロジェクト テンプレートが同様の機能を提供します。 詳細については、「[Power Pivot からのインポート (SSAS テーブル)](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)」を参照してください。  
+>  SQL Server Data Tools の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] からのインポート プロジェクト テンプレートが同様の機能を提供します。 詳細については、「 [Power Pivot からのインポート (SSAS テーブル)](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)」を参照してください。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]から復元機能を使用する場合、次の点に注意してください。  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 8
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ モデルのデータは、Analysis Services インスタンス上の既存または新規のテーブル モデル データベースにコピーされます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックにリンク テーブルが含まれている場合は、新規テーブルを使用して作成されたテーブルのように、データ ソースを使用せずにテーブルとして再作成されます。  
   
-### Power Pivot から復元するには  
+### <a name="to-restore-from-power-pivot"></a>Power Pivot から復元するには  
   
 1.  SSMS で、復元先の Active Directory インスタンスで **[データベース]** を右クリックし、**[[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] から復元]** をクリックします。  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 8
   
 5.  **[オプション]**で、 **[セキュリティ情報を含める]** チェック ボックスをオンのままにします。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックから復元する場合は、この設定は適用されません。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [表形式モデルのデータベース (SSAS 表形式)](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   
  [Power Pivot からのインポート (SSAS テーブル)](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)  
   

@@ -1,24 +1,29 @@
 ---
-title: "進行状況レポートのデータ列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "進行状況レポート イベント カテゴリ"
+title: "進行状況レポートのデータ列 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Progress Reports event category
 ms.assetid: d34a6322-e26b-4454-b98f-32307d6956b5
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 18f95a363c72cde1e067bb930d44c65254631ce2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# 進行状況レポートのデータ列
+# <a name="progress-reports-data-columns"></a>進行状況レポートのデータ列
   進行状況レポート イベント カテゴリには、次のイベント クラスがあります。  
   
 |**イベント ID**|**イベント名**|**イベントの説明**|  
@@ -30,7 +35,7 @@ caps.handback.revision: 34
   
  次の表は、これらのイベント クラスのデータ列の一覧です。  
   
-## Progress Report Begin のデータ列  
+## <a name="progress-report-begindata-columns"></a>Progress Report Begin のデータ列  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -55,7 +60,7 @@ caps.handback.revision: 34
 |TextData|42|9|Reported イベントに関連付けられたテキスト データを表します。|  
 |ServerName|43|8|Reported イベントが発生した [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前を表します。|  
   
-## Progress Report End のデータ列  
+## <a name="progress-report-enddata-columns"></a>Progress Report End のデータ列  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -88,7 +93,7 @@ caps.handback.revision: 34
 |TextData|42|9|Reported イベントに関連付けられたテキスト データを表します。|  
 |ServerName|43|8|Reported イベントが発生した [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前を表します。|  
   
-## Progress Report Current のデータ列  
+## <a name="progress-report-currentdata-columns"></a>Progress Report Current のデータ列  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -112,7 +117,7 @@ caps.handback.revision: 34
 |TextData|42|9|Reported イベントに関連付けられたテキスト データを表します。|  
 |ServerName|43|8|Reported イベントが発生した [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前を表します。|  
   
-## Progress Report Error のデータ列  
+## <a name="progress-report-errordata-columns"></a>Progress Report Error のデータ列  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -132,7 +137,7 @@ caps.handback.revision: 34
 |ObjectPath|14|8|Reported イベントに関連付けられたオブジェクトのオブジェクト パスを表します。パスは、オブジェクトの親を先頭に、コンマで区切った親のリストとして表されます。|  
 |ObjectReference|15|8|Reported イベントのオブジェクトの参照を表します。すべての親を XML としてエンコードし、オブジェクトを記述するタグを使用して表します。|  
 |Severity|22|1|Reported イベントに関連付けられた例外の重大度レベルを表します。 値は次のとおりです。<br /><br /> 0 = 成功<br /><br /> 1 = 情報<br /><br /> 2 = 警告<br /><br /> 3 = エラー|  
-|Error|24|1|特定のイベントのエラー番号が含まれます。|  
+|[エラー]|24|1|特定のイベントのエラー番号が含まれます。|  
 |ConnectionID|25|1|Reported イベントに関連付けられた一意の接続 ID を表します。|  
 |DatabaseName|28|8|Reported イベントが発生したデータベースの名前を表します。|  
 |SessionID|39|8|Reported イベントに関連付けられたセッション ID を表します。|  
@@ -140,7 +145,7 @@ caps.handback.revision: 34
 |TextData|42|9|Reported イベントに関連付けられたテキスト データを表します。|  
 |ServerName|43|8|Reported イベントが発生した [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前を表します。|  
   
-## 参照  
- [進行状況レポート イベント カテゴリ](../../analysis-services/trace-events/progress-reports-event-category.md)  
+## <a name="see-also"></a>参照  
+ [Progress Reports Event Category](../../analysis-services/trace-events/progress-reports-event-category.md)  
   
   

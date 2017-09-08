@@ -1,24 +1,29 @@
 ---
-title: "Session イベントのデータ列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Session イベントのイベント カテゴリ"
+title: "セッション Events Data Columns |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Session Events event category
 ms.assetid: 35853451-6768-4a02-8b8f-81a8ae37a333
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb85851bd0c05de09120fa2403c1e47bf0da9a75
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Session イベントのデータ列
+# <a name="session-events-data-columns"></a>Session イベントのデータ列
   Session イベントのイベント カテゴリには、次のイベント クラスが含まれています。  
   
 |**イベント ID**|**イベント名**|**イベントの説明**|  
@@ -29,7 +34,7 @@ caps.handback.revision: 21
   
  次の表は、このイベント クラスのデータ列の一覧です。  
   
-## Existing Connection  
+## <a name="existing-connection"></a>Existing Connection  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -44,7 +49,7 @@ caps.handback.revision: 21
 |SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Existing Session  
+## <a name="existing-session"></a>Existing Session  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -65,7 +70,7 @@ caps.handback.revision: 21
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
 |RequestProperties|45|9|XMLA 要求のプロパティ。|  
   
-## Session Initialize  
+## <a name="session-initialize"></a>Session Initialize  
   
 |||||  
 |-|-|-|-|  
@@ -85,7 +90,7 @@ caps.handback.revision: 21
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
 |RequestProperties|45|9|XMLA 要求のプロパティ。|  
   
-## 「  
+## <a name="see-also"></a>「  
  [セキュリティ監査イベント カテゴリ](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "Queries イベントのデータ列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Queries イベントのイベント カテゴリ"
+title: "イベントのデータ列を照会 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Queries Events event category
 ms.assetid: 28aa7df5-3e1f-4f4f-8a1c-8bbd29d5da13
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 33
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 48f2e8dec1939bedda904845dd2e56a237ddc10c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Queries イベントのデータ列
+# <a name="queries-events-data-columns"></a>Queries イベントのデータ列
   Queries イベントのイベント カテゴリには、次のイベント クラスがあります。  
   
 |**イベント ID**|**イベント名**|**イベントの説明**|  
@@ -28,7 +33,7 @@ caps.handback.revision: 33
   
  次の表は、これらのイベント クラスのデータ列の一覧です。  
   
-## Query Begin クラスのデータ列  
+## <a name="query-begin-classdata-columns"></a>Query Begin クラスのデータ列  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -50,7 +55,7 @@ caps.handback.revision: 33
 |RequestParameters|44|9|Query イベントに関連付けられたパラメーター化クエリとコマンドのパラメーターを表します。|  
 |RequestProperties|45|9|XMLA 要求のプロパティを表します。|  
   
-## Query End クラスのデータ列  
+## <a name="query-end-classdata-columns"></a>Query End クラスのデータ列  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -76,7 +81,7 @@ caps.handback.revision: 33
 |TextData|42|9|Query イベントに関連付けられたテキスト データを表します。|  
 |ServerName|43|8|Query イベントが発生した [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前を表します。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Queries イベント カテゴリ](../../analysis-services/trace-events/queries-events-category.md)  
   
   

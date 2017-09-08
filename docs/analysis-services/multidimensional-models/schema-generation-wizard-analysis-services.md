@@ -1,26 +1,31 @@
 ---
-title: "スキーマ生成ウィザード (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "リレーショナル スキーマ [Analysis Services]"
+title: "スキーマ生成ウィザード (Analysis Services) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- relational schema [Analysis Services]
 ms.assetid: 68bf7ba3-d0cb-437f-9a3e-9edc0999af19
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 789106378805f50a4a27dbb02ace2e8e0943daed
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# スキーマ生成ウィザード (Analysis Services)
+# <a name="schema-generation-wizard-analysis-services"></a>スキーマ生成ウィザード (Analysis Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたはデータベース内で OLAP プロジェクトを定義する際の、2 種類のリレーショナル スキーマ操作方法をサポートしています。 一般的に、OLAP オブジェクトは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたはデータベース内のデータ ソース ビューで作成される論理データ モデルに基づいて定義します。 このデータ ソース ビューは、データ ソース ビューでカスタマイズされる、1 つ以上のリレーショナル データ ソースのスキーマ要素に基づいて定義されます。  
   
  または、OLAP オブジェクトを最初に定義してから、これらの OLAP オブジェクトをサポートするデータ ソース ビュー、データ ソース、および基になるリレーショナル データベース スキーマを生成することもできます。 このリレーショナル データベースは、サブジェクト領域データベースと呼ばれます。  
@@ -35,7 +40,7 @@ caps.handback.revision: 16
   
  一般的に、スキーマ生成ウィザードによって生成されたオブジェクトに対する変更は、スキーマ生成ウィザードが次にそのオブジェクトを再生成したときに上書きされます。 この主な例外は、スキーマ生成ウィザードで生成されたテーブルに列を追加する場合です。 この場合、スキーマ生成ウィザードによって、テーブルに追加した列だけでなく、その列のデータも保持されます。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
  次の表に、スキーマ生成ウィザードの操作方法を説明するその他のトピックを示します。  
   
 |トピック|Description|  
@@ -44,9 +49,9 @@ caps.handback.revision: 16
 |[データベース スキーマの理解](../../analysis-services/multidimensional-models/understanding-the-database-schemas.md)|サブジェクト領域データベースとステージング領域データベースに対して生成されるスキーマについて説明します。|  
 |[増分生成の理解](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)|スキーマ生成ウィザードの増分生成機能について説明します。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [多次元モデルのデータ ソース](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
- [サポートされるデータ ソース (SSAS - 多次元)](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [サポートされるデータ ソース &#40;SSASSSAS - 多次元&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

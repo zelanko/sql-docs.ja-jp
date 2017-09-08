@@ -1,31 +1,36 @@
 ---
-title: "Power Pivot データ アクセス | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot データ アクセス |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad15d17a17809c6190a45b9ead89bc66ed6962d6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Power Pivot データ アクセス
+# <a name="power-pivot-data-access"></a>Power Pivot データ アクセス
   このトピックでは、SharePoint ライブラリにパブリッシュされる [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックからデータを取得する方法について説明します。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データは Excel ブック内に格納されます。 接続文字列は、SharePoint サイト上のブックの URL です。  
   
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データは、そのデータが含まれるブックによってピボットテーブルとピボットグラフのデータとして頻繁に使用されます。 または、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを外部データ ソースとして使用することもできます。その場合は、ブック、ダッシュボード、またはレポートが SharePoint で別の Excel (.xlsx) ファイルに接続してデータを取得し、そのデータを後で使用します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データをよく使用するクライアント ツールは Excel、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]、他の Reporting Services レポート、および PerformancePoint です。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データは、そのデータが含まれるブックによってピボットテーブルとピボットグラフのデータとして頻繁に使用されます。 または、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを外部データ ソースとして使用することもできます。その場合は、ブック、ダッシュボード、またはレポートが SharePoint で別の Excel (.xlsx) ファイルに接続してデータを取得し、そのデータを後で使用します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データをよく使用するクライアント ツールは Excel、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]、他の Reporting Services レポート、および PerformancePoint です。  
   
- デスクトップでは、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] アドインは AMO と ADOMD.NET を使用して、クライアント ワークスペースで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データの作成、処理、およびクエリを実行します。  
+ デスクトップでは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] アドインは AMO と ADOMD.NET を使用して、クライアント ワークスペースで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データの作成、処理、およびクエリを実行します。  
   
  SharePoint ファームでは、Excel Services はローカル MSOLAP OLE DB プロバイダーを使用して [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データに接続します。 プロバイダーは、この接続要求をファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint サーバーに送信します。 このサーバーがデータをロードし、クエリを実行し、結果セットを返します。  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 8
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックのデータの一部は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint によって処理されません。 ワークシートのテーブルおよびセル データは Excel Services によって処理されます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint によって処理されるのは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データに合わないピボットテーブル、ピボットグラフ、およびスライサーだけです。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Analysis Services への接続](../../analysis-services/instances/connect-to-analysis-services.md)   
  [テーブル モデル データ アクセス](../../analysis-services/tabular-models/tabular-model-data-access.md)  
   

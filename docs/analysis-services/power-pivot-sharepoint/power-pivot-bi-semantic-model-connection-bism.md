@@ -1,29 +1,34 @@
 ---
-title: "Power Pivot BI セマンティック モデル接続 (.bism) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot BI セマンティック モデル接続 (.bism) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41cfa6b2ca110803ca4b63abf683edf7d508c027
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Power Pivot BI セマンティック モデル接続 (.bism)
+# <a name="power-pivot-bi-semantic-model-connection-bism"></a>Power Pivot BI セマンティック モデル接続 (.bism)
   BI セマンティック モデル接続 (.bism) は、Excel または Power View レポートを Analysis Services テーブル モデル データベースまたは多次元モードの Analysis Services インスタンスに接続する、移植可能な接続です。 Office データ接続 (.odc) ファイルに精通している場合は、.bism 接続ファイルの定義方法と使用方法が類似していることがわかります。  
   
  BI セマンティック モデル接続は、SharePoint 経由で作成およびアクセスされます。 BI セマンティック モデル接続を作成すると、ライブラリの BI セマンティック モデル接続でサイド リンク バー コマンドが有効になります。 サイド リンク バー コマンドは、新しい Excel ブックまたは接続ファイルを編集するためのオプションを開きます。 Reporting Services がインストールされている場合は、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] レポートを作成するためのコマンドも表示されます。  
   
- ![BISM サイド リンク バー コマンドのスクリーンショット](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "BISM サイド リンク バー コマンドのスクリーンショット")  
+ ![スクリーン ショットの BISM サイド リンク バー コマンド](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "スクリーン ショットの BISM サイド リンク バー コマンド")  
   
 ##  <a name="bkmk_prereq"></a> サポートされるデータベース  
  BI セマンティック モデル接続は、テーブル モデル データを参照します。 このデータには、次の 3 つのソースがあります。  
@@ -34,12 +39,12 @@ caps.handback.revision: 37
   
 -   Analysis Services インスタンス上の多次元データ モデル。  
   
- データ ソースの比較については、コミュニティ コンテンツ「[Understanding the SQL Server 2012 BI Semantic Model (BISM)](http://www.mssqltips.com/sqlservertip/2818/understanding-the-sql-server-2012-bi-semantic-model-bism/)」 (SQL Server 2012 BI セマンティック モデル (BISM) について) を参照してください。  
+ データ ソースの比較については、コミュニティ コンテンツ「 [Understanding the SQL Server 2012 BI Semantic Model (BISM)](http://www.mssqltips.com/sqlservertip/2818/understanding-the-sql-server-2012-bi-semantic-model-bism/)」 (SQL Server 2012 BI セマンティック モデル (BISM) について) を参照してください。  
   
-## BI セマンティック接続の接続シーケンスについて  
+## <a name="understanding-the-connection-sequence-for-bi-semantic-connections"></a>BI セマンティック接続の接続シーケンスについて  
  このセクションでは、さまざまなクライアント アプリケーション (Excel デスクトップ アプリケーション、SharePoint の Power View レポート クライアントなど) と SharePoint ファーム内または外のテーブル モデル データベースとの接続動作について説明します。  
   
- テーブル モデル データベースへのすべての接続は、データを要求しているユーザーの資格情報を使用して作成されます。 ただし、その接続のしくみは、接続がファーム内接続、シングルホップ接続、ダブルホップ接続のいずれであるかと、Kerberos が有効かどうかによって異なります。 SharePoint とバックエンド データ ソースとの認証接続の詳細については、「[ダブルホップ認証: NTLM では失敗し、Kerberos では成功する理由](http://go.microsoft.com/fwlink/?LinkId=237137)」を参照してください。  
+ テーブル モデル データベースへのすべての接続は、データを要求しているユーザーの資格情報を使用して作成されます。 ただし、その接続のしくみは、接続がファーム内接続、シングルホップ接続、ダブルホップ接続のいずれであるかと、Kerberos が有効かどうかによって異なります。 SharePoint とバックエンド データ ソースとの認証接続の詳細については、「 [ダブルホップ認証: NTLM では失敗し、Kerberos では成功する理由](http://go.microsoft.com/fwlink/?LinkId=237137)」を参照してください。  
   
  **Excel からネットワーク上の表形式データへの接続**  
   
@@ -57,11 +62,11 @@ caps.handback.revision: 37
   
  Kerberos が構成されておらず、要求が失敗した場合は、Reporting Services が 2 度目の試行を行います。 このシナリオでは、クライアント ライブラリが Reporting Services のサービス ID と NTLM 認証を使用して、Analysis Services に接続します。 Power View ユーザーの ID は、 **effectiveusername** パラメーターを使用して、接続文字列で渡されます。  
   
- Analysis Services インスタンス上のシステム管理者ロールのメンバーだけが、 **effectiveusername** パラメーターを使用して接続を作成し、サーバー インスタンスの他のユーザーの権限を借用する権限を持っています。 そのため、Reporting Services 共有サービスの実行アカウントは、Analysis Services インスタンスに対する管理権限を持っている必要があります。  サービス アカウントに管理権限を付与する手順は、このトピックの「[テーブル モデル データベースへの BI セマンティック モデル接続の作成](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)」に示されています。  
+ Analysis Services インスタンス上のシステム管理者ロールのメンバーだけが、 **effectiveusername** パラメーターを使用して接続を作成し、サーバー インスタンスの他のユーザーの権限を借用する権限を持っています。 そのため、Reporting Services 共有サービスの実行アカウントは、Analysis Services インスタンスに対する管理権限を持っている必要があります。  サービス アカウントに管理権限を付与する手順は、このトピックの「 [テーブル モデル データベースへの BI セマンティック モデル接続の作成](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)」に示されています。  
   
  次の図は、各接続に同じ Windows ユーザー ID を使用する接続シーケンスを示しています。 Analysis Services への最後の接続では、Reporting Services サービス アプリケーション ID で接続が作成され、 **effectiveusername**を使用して Windows ユーザー ID が渡されています。  
   
- ![テーブル データベースに対する借用の接続](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivotbismconnection-2.gif "テーブル データベースに対する借用の接続")  
+ ![表形式 db に対する借用の接続](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivotbismconnection-2.gif "表形式 db に対する借用の接続")  
   
  **Power View から SharePoint の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データへの接続**  
   
@@ -70,15 +75,15 @@ caps.handback.revision: 37
  このシナリオでは、すべての接続が同じファーム内で行われるため、Kerberos または制約付き委任は必要とされません。  
   
 ##  <a name="bkmk_rel"></a> 関連タスク  
- [BI セマンティック モデル接続のコンテンツ タイプのライブラリへの追加 (Power Pivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/add bi semantic model connection content type to library.md)  
+ [BI セマンティック モデル接続のコンテンツ タイプのライブラリへの追加 (Power Pivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)  
   
  [Power Pivot ブックへの BI セマンティック モデル接続の作成](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [テーブル モデル データベースへの BI セマンティック モデル接続の作成](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
  [Excel または Reporting Services での BI セマンティック モデル接続の使用](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Analysis Services インスタンスのサーバー モードの決定](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Analysis Services への接続](../../analysis-services/instances/connect-to-analysis-services.md)  
   

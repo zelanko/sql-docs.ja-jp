@@ -1,27 +1,32 @@
 ---
-title: "プロパティ (SSAS テーブル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "プロパティ (SSAS テーブル) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b51561b367c10248daca388c58646e68ecc1534e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# プロパティ (SSAS テーブル)
+# <a name="properties-ssas-tabular"></a>プロパティ (SSAS テーブル)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の表形式モデル プロジェクトには、プロジェクト、モデル、レポート、および配置の方法を定義するさまざまなプロパティがあります。 プロパティ設定は、Model.bim ファイルに XML 形式で保存されます。ただし、ここで説明するすべてのプロパティは、 **の** [プロパティ] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]ウィンドウで構成できます。  
   
-## 関連タスク  
+## <a name="related-tasks"></a>関連タスク  
   
 |トピック|Description|  
 |-----------|-----------------|  

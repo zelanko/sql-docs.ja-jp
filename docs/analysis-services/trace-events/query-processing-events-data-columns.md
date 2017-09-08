@@ -1,22 +1,27 @@
 ---
-title: "クエリ処理イベントのデータ列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "クエリ処理イベントのデータ列 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 81a522bd-440d-406c-a524-3af44a3af101
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fafade22e12b14c1e11aab4a44ce65433d2a158
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# クエリ処理イベントのデータ列
+# <a name="query-processing-events-data-columns"></a>クエリ処理イベントのデータ列
   クエリ処理イベントのイベント カテゴリには、次のイベント クラスがあります。  
   
 |**イベント ID**|**イベント名**|**イベントの説明**|  
@@ -46,7 +51,7 @@ caps.handback.revision: 6
   
  次の表は、これらのイベント クラスのデータ列の一覧です。  
   
-## Query Cube Begin  
+## <a name="query-cube-begin"></a>Query Cube Begin  
   
 |||||  
 |-|-|-|-|  
@@ -68,7 +73,7 @@ caps.handback.revision: 6
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Query Cube End  
+## <a name="query-cube-end"></a>Query Cube End  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -89,7 +94,7 @@ caps.handback.revision: 6
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Calculate Non Empty Begin  
+## <a name="calculate-non-empty-begin"></a>Calculate Non Empty Begin  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -110,7 +115,7 @@ caps.handback.revision: 6
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Calculate Non Empty Current  
+## <a name="calculate-non-empty-current"></a>Calculate Non Empty Current  
   
 |||||  
 |-|-|-|-|  
@@ -133,7 +138,7 @@ caps.handback.revision: 6
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Calculate Non Empty End  
+## <a name="calculate-non-empty-end"></a>Calculate Non Empty End  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -154,7 +159,7 @@ caps.handback.revision: 6
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Serialize Results Begin  
+## <a name="serialize-results-begin"></a>Serialize Results Begin  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -175,7 +180,7 @@ caps.handback.revision: 6
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Serialize Results Current  
+## <a name="serialize-results-current"></a>Serialize Results Current  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -197,7 +202,7 @@ caps.handback.revision: 6
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Serialize Results End  
+## <a name="serialize-results-end"></a>Serialize Results End  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -218,50 +223,7 @@ caps.handback.revision: 6
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Execute MDX Script Begin  
-  
-|**列名**|**列 ID**|**列の型**|**列の説明**|  
-|---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
-|EventSubclass|1|1|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 1: MDX Script<br /><br /> 2: MDX Script Command|  
-|CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
-|StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
-|EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
-|Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
-|CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
-|ProgressTotal|9|1|進行状況の合計。|  
-|IntegerData|10|1|整数データ。|  
-|ObjectType|12|1|オブジェクトの種類です。|  
-|ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|1|一意の接続 ID。|  
-|DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
-|NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
-|TextData|42|9|イベントに関連付けられているテキスト データ。|  
-|ServerName|43|8|イベントを生成したサーバーの名前。|  
-  
-## Execute MDX Script Current  
-  
-|**列名**|**列 ID**|**列の型**|**列の説明**|  
-|---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
-|CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
-|StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
-|EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
-|Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
-|CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
-|ProgressTotal|9|1|進行状況の合計。|  
-|IntegerData|10|1|整数データ。|  
-|ObjectType|12|1|オブジェクトの種類です。|  
-|ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
-|ConnectionID|25|1|一意の接続 ID。|  
-|DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
-|NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
-|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
-|TextData|42|9|イベントに関連付けられているテキスト データ。|  
-|ServerName|43|8|イベントを生成したサーバーの名前。|  
-  
-## Execute MDX Script End  
+## <a name="execute-mdx-script-begin"></a>Execute MDX Script Begin  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -283,7 +245,50 @@ caps.handback.revision: 6
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Query Dimension  
+## <a name="execute-mdx-script-current"></a>Execute MDX Script Current  
+  
+|**列名**|**列 ID**|**列の型**|**列の説明**|  
+|---------------------|-------------------|---------------------|----------------------------|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
+|CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
+|StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
+|EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
+|Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
+|CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
+|ProgressTotal|9|1|進行状況の合計。|  
+|IntegerData|10|1|整数データ。|  
+|ObjectType|12|1|オブジェクトの種類です。|  
+|ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
+|ConnectionID|25|1|一意の接続 ID。|  
+|DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
+|NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|TextData|42|9|イベントに関連付けられているテキスト データ。|  
+|ServerName|43|8|イベントを生成したサーバーの名前。|  
+  
+## <a name="execute-mdx-script-end"></a>Execute MDX Script End  
+  
+|**列名**|**列 ID**|**列の型**|**列の説明**|  
+|---------------------|-------------------|---------------------|----------------------------|  
+|EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
+|EventSubclass|1|1|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 1: MDX Script<br /><br /> 2: MDX Script Command|  
+|CurrentTime|2|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
+|StartTime|3|5|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
+|EndTime|4|5|イベントの終了時刻。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
+|Duration|5|2|イベントにかかった時間 (ミリ秒)。|  
+|CPUTime|6|2|イベントに使用された CPU 時間 (ミリ秒単位)。|  
+|ProgressTotal|9|1|進行状況の合計。|  
+|IntegerData|10|1|整数データ。|  
+|ObjectType|12|1|オブジェクトの種類です。|  
+|ObjectPath|14|8|オブジェクトのパス。 そのオブジェクトの親から始まり、各親がコンマで区切られた一覧です。|  
+|ConnectionID|25|1|一意の接続 ID。|  
+|DatabaseName|28|8|ユーザーのステートメントが実行されているデータベースの名前。|  
+|NTCanonicalUserName|40|8|正規の形式のユーザー名。 たとえば、engineering.microsoft.com/software/someone などです。|  
+|SPID|41|1|サーバー プロセス ID。 この ID によりユーザー セッションが一意に識別されます。 これは、XML/A で使用されるセッション GUID に直接対応します。|  
+|TextData|42|9|イベントに関連付けられているテキスト データ。|  
+|ServerName|43|8|イベントを生成したサーバーの名前。|  
+  
+## <a name="query-dimension"></a>Query Dimension  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -305,7 +310,7 @@ caps.handback.revision: 6
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Query Subcube  
+## <a name="query-subcube"></a>Query Subcube  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -325,7 +330,7 @@ caps.handback.revision: 6
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Query Subcube Verbose  
+## <a name="query-subcube-verbose"></a>Query Subcube Verbose  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -345,7 +350,7 @@ caps.handback.revision: 6
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Get Data From Aggregation  
+## <a name="get-data-from-aggregation"></a>Get Data From Aggregation  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -364,7 +369,7 @@ caps.handback.revision: 6
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Get Data From Cache  
+## <a name="get-data-from-cache"></a>Get Data From Cache  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -384,7 +389,7 @@ caps.handback.revision: 6
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## VertiPaq SE Query Begin  
+## <a name="vertipaq-se-query-begin"></a>VertiPaq SE Query Begin  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -409,7 +414,7 @@ caps.handback.revision: 6
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## VertiPaq SE Query End  
+## <a name="vertipaq-se-query-end"></a>VertiPaq SE Query End  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -442,7 +447,7 @@ caps.handback.revision: 6
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Resource Usage  
+## <a name="resource-usage"></a>Resource Usage  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -460,7 +465,7 @@ caps.handback.revision: 6
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## VertiPaq SE Query Cache Match  
+## <a name="vertipaq-se-query-cache-match"></a>VertiPaq SE Query Cache Match  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -484,7 +489,7 @@ caps.handback.revision: 6
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Direct Query Begin  
+## <a name="direct-query-begin"></a>Direct Query Begin  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -512,7 +517,7 @@ caps.handback.revision: 6
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## Direct Query End  
+## <a name="direct-query-end"></a>Direct Query End  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -540,7 +545,7 @@ caps.handback.revision: 6
 |TextData|42|9|イベントに関連付けられているテキスト データ。|  
 |ServerName|43|8|イベントを生成したサーバーの名前。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [クエリ処理イベント カテゴリ](../../analysis-services/trace-events/query-processing-events-category.md)  
   
   

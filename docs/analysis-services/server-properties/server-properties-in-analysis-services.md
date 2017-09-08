@@ -1,31 +1,36 @@
 ---
-title: "Analysis Services のサーバー プロパティ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SSAS, 構成プロパティ"
-  - "Analysis Services, 構成プロパティ"
-  - "SQL Server Analysis Services, 構成プロパティ"
-  - "構成オプション [Analysis Services]"
-  - "サーバーのプロパティ [Analysis Services]"
-  - "プロパティ [Analysis Services], 構成"
-  - "プロパティ [Analysis Services]"
+title: "Analysis Services のサーバー プロパティ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SSAS, configuration properties
+- Analysis Services, configuration properties
+- SQL Server Analysis Services, configuration properties
+- configuration options [Analysis Services]
+- server properties [Analysis Services]
+- properties [Analysis Services], configuration
+- properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4157f63f72acd5da6dd369034d1633e7461c9b87
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services のサーバー プロパティ
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理者は、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの既定のサーバー構成プロパティを変更できます。 各インスタンスには、同じサーバーの他のインスタンスとは別に設定される固有の構成プロパティがあります。  
+# <a name="server-properties-in-analysis-services"></a>Analysis Services のサーバー プロパティ
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理者は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの既定のサーバー構成プロパティを変更できます。 各インスタンスには、同じサーバーの他のインスタンスとは別に設定される固有の構成プロパティがあります。  
   
  サーバーを構成するには、SQL Server Management Studio を使用するか、特定のインスタンスの msmdsrv.ini ファイルを編集します。  
  
@@ -34,21 +39,21 @@ SQL Server Management Studio のプロパティ ページには、最も頻繁�
 > [!NOTE]  
 >  既定のインストールでは、msmdsrv.ini は \Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config フォルダーに格納されます。
 > 
-> サーバー構成に影響を与える他のプロパティには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の配置構成プロパティが含まれます。 これらのプロパティに関する詳細については、「[ソリューションの配置に関する構成設定の指定](../../analysis-services/multidimensional-models/specifying-configuration-settings-for-solution-deployment.md)」を参照してください。
+> サーバー構成に影響を与える他のプロパティには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の配置構成プロパティが含まれます。 これらのプロパティに関する詳細については、「 [ソリューションの配置に関する構成設定の指定](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)」を参照してください。
  
 ##  <a name="bkmk_config"></a> Management Studio のプロパティを構成する 
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに接続します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに接続します。  
   
-2. オブジェクト エクスプローラーで、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスを右クリックし、**[プロパティ]** をクリックします。 [全般] ページが表示され、より使用頻度の高いプロパティが表示されます。  
+2. オブジェクト エクスプローラーで、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスを右クリックし、 **[プロパティ]**をクリックします。 [全般] ページが表示され、より使用頻度の高いプロパティが表示されます。  
 
 3.  その他のプロパティを表示するには、ページ下部にある **[すべての詳細プロパティを表示する]** チェック ボックスをオンにします。  
   
-     サーバー プロパティの変更は、テーブル モードおよび多次元モードのサーバーについてのみサポートされます。 マイクロソフトのサポートから別途指示された場合を除き、[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をインストールした場合は、必ず既定値を使用してください。  
+     サーバー プロパティの変更は、テーブル モードおよび多次元モードのサーバーについてのみサポートされます。 マイクロソフトのサポートから別途指示された場合を除き、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]をインストールした場合は、必ず既定値を使用してください。  
   
-     運用上またはパフォーマンス上の問題をサーバーのプロパティを通じて解消する方法については、「[SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
+     運用上またはパフォーマンス上の問題をサーバーのプロパティを通じて解消する方法については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
-     サーバーのプロパティについては、Microsoft ホワイト ペーパー「[SQL Server 2005 Analysis Services (SSAS) サーバー プロパティ](http://go.microsoft.com/fwlink/?LinkID=199102)」も参照してください。サーバーのプロパティの多くは、過去数回のリリースにわたり変更されていません。    
+     サーバーのプロパティについては、Microsoft ホワイト ペーパー「 [SQL Server 2005 Analysis Services (SSAS) サーバー プロパティ](http://go.microsoft.com/fwlink/?LinkID=199102)」も参照してください。サーバーのプロパティの多くは、過去数回のリリースにわたり変更されていません。    
   
 ##  <a name="bkmk_msmdsrvini"></a> msmdsrv.ini のプロパティを構成する
   一部のプロパティの設定は、msmdrsrv.ini ファイルでのみ行うことができます。 詳細プロパティを表示しても設定する対象のプロパティが含まれていない場合は、msmdsrv.ini ファイルを直接編集する必要があります。
@@ -67,7 +72,7 @@ SQL Server Management Studio のプロパティ ページには、最も頻繁�
   
 ##  <a name="bkmk_ref"></a> サーバー プロパティ リファレンス  
   
- 次のトピックでは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のさまざまな構成プロパティについて説明します。  
+ 次のトピックでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のさまざまな構成プロパティについて説明します。  
   
 |トピック|Description|  
 |-----------|-----------------|  
@@ -85,8 +90,8 @@ SQL Server Management Studio のプロパティ ページには、最も頻繁�
 |[セキュリティのプロパティ](../../analysis-services/server-properties/security-properties.md)|セキュリティ セクションには、アクセス権を定義する基本プロパティと詳細プロパティの両方が含まれています。 管理者およびユーザーに関連する設定が含まれます。|  
 |[スレッド プール プロパティ](../../analysis-services/server-properties/thread-pool-properties.md)|スレッド プール プロパティでは、サーバーによって作成されるスレッドの数を制御します。 これらは主に詳細プロパティです。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Analysis Services インスタンス管理](../../analysis-services/instances/analysis-services-instance-management.md)   
- [ソリューションの配置に関する構成設定の指定](../../analysis-services/multidimensional-models/specifying-configuration-settings-for-solution-deployment.md)  
+ [ソリューションの配置に関する構成設定の指定](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

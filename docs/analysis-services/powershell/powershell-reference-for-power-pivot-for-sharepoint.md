@@ -1,26 +1,37 @@
 ---
-title: "Power Pivot for SharePoint 用 PowerShell リファレンス | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/16/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Power Pivot for SharePoint 用 PowerShell リファレンス |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/16/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: c01735a8-f919-48ad-8d74-35d75a18f821
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 39567e2b212761ac2dd726a1f8f33893a83f245c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Power Pivot for SharePoint 用 PowerShell リファレンス
-  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] インストールを構成または管理するための PowerShell コマンドレットの一覧を次に示します。 コマンドレットの有効化と組み込まれているヘルプの表示については、「[Windows PowerShell を使用した Power Pivot の構成](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)」を参照してください。  
+# <a name="powershell-reference-for-power-pivot-for-sharepoint"></a>Power Pivot for SharePoint 用 PowerShell リファレンス
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
+
+  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] インストールを構成または管理するための PowerShell コマンドレットの一覧を次に示します。 コマンドレットの有効化と組み込まれているヘルプの表示については、「 [Windows PowerShell を使用した Power Pivot の構成](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)」を参照してください。  
+
+>[!NOTE] 
+>この記事には、古くなった情報と例があります。 最新バージョンには、Get-help コマンドレットを使用します。
   
-## コマンドレットの一覧  
+## <a name="cmdlet-list"></a>コマンドレットの一覧  
  PowerShell プロンプトからコマンドレットの一覧を表示するには:  
   
 1.  **[管理者として実行]** オプションを使用して SharePoint 管理シェルを開きます。  
@@ -40,7 +51,7 @@ caps.handback.revision: 11
 |[Set-PowerPivotSystemService コマンドレット](../../analysis-services/powershell/set-powerpivotsystemservice-cmdlet.md)|SharePoint 2013 &#124; SharePoint 2016|  
 |[Update-PowerPivotSystemService コマンドレット](../../analysis-services/powershell/update-powerpivotsystemservice-cmdlet.md)|SharePoint 2013 &#124; SharePoint 2016|  
   
- 注: 次のコマンドレットは SharePoint 2010 でのみ機能し、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ではサポートされません。  
+ 注: 次のコマンドレットは SharePoint 2010 でのみ機能し、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ではサポートされません。  
   
 -   Get-PowerPivotEngineService  
   
@@ -57,3 +68,4 @@ caps.handback.revision: 11
 -   Update-PowerPivotEngineService  
   
   
+

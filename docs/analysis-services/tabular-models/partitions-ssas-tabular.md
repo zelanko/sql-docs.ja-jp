@@ -1,59 +1,58 @@
 ---
-title: "パーティション (SSAS テーブル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "パーティション (SSAS テーブル) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 729c24cf80e99f6f0e2596c51bfbc8bdf2490d0d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# パーティション (SSAS テーブル)
-  パーティションは、テーブルを論理的な部分に分割します。 各パーティションは、他のパーティションとは個別に処理 (更新) できます。 モデル作成時に [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の [パーティション] ダイアログ ボックスを使用して作成されたパーティションは、モデル ワークスペース データベースに適用されます。 モデルが配置されたときに、モデル ワークスペース データベースに定義されたパーティションが配置済み model データベースで複製されます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [パーティション] ダイアログ ボックスを使用して、配置済みモデル データベースのパーティションをさらに作成し管理できます。  このトピックでは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の [パーティション マネージャー] ダイアログ ボックスを使用してモデルを作成するときに作成されたパーティションについて説明します。 配置済みモデルのパーティションの作成と管理の詳細については、「[テーブル モデル パーティションの作成および管理 (SSAS テーブル)](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)」を参照してください。  
-  
- このトピックのセクション:  
-  
--   [利点](#bkmk_benefits)  
-  
--   [関連タスク](#bkmk_related_tasks)  
+# <a name="partitions"></a>パーティション
+  パーティションは、テーブルを論理的な部分に分割します。 各パーティションは、他のパーティションとは個別に処理 (更新) できます。 モデル作成時に SSDT の [パーティション] ダイアログ ボックスを使用して作成されたパーティションは、モデル ワークスペース データベースに適用されます。 モデルが配置されたときに、モデル ワークスペース データベースに定義されたパーティションが配置済み model データベースで複製されます。 さらに、作成し、SSMS の [パーティション] ダイアログ ボックスを使用して、配置済みモデル データベースのパーティションを管理することができます。  このトピックで提供される情報には、SSDT のパーティション マネージャー ダイアログ ボックスを使用してモデルを作成中に作成されたパーティションがについて説明します。 作成して、配置済みモデルのパーティションの管理については、次を参照してください。[作成および表形式モデル パーティションの管理](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)です。  
   
 ##  <a name="bkmk_benefits"></a> 利点  
  テーブル モデルでは、パーティションがテーブルを論理パーティション オブジェクトに分割します。 各パーティションは、他のパーティションとは個別に処理できます。 たとえば、あるテーブルにはめったに変更されないデータを含む所定の行セットが含まれている場合がありますが、他の行セットには頻繁に変更されるデータがあるとします。 このような場合は、データの一部を処理するときにデータ全体を処理する必要はありません。 パーティションを使用すると、めったに処理されないデータから頻繁に処理する必要のあるデータ部分を分割できます。  
   
  効率的なモデル設計によるパーティションの活用によって、不必要な処理とその後の Analysis Services サーバーでのプロセッサ負荷が排除されます。同時に、データ ソースの大部分の最新のデータを反映できる頻度でデータが処理され更新されるようになります。 モデル作成時にパーティションをどのように実装し利用するかは、配置済みモデルでパーティションがどのように実装され利用されているかによって大幅に異なる場合があります。 モデル作成段階では、最終的に配置済みモデルに入るデータのサブセットのみを操作している可能性があるということに注意してください。  
   
-### パーティションの処理  
- 配置済みモデルでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用するか、プロセス コマンドを含み処理のオプションと設定を指定するスクリプトを実行して、処理が行われます。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]を使用してモデルを作成するとき、[モデル] メニューまたはツール バーの [処理] を使用して、処理操作を実行できます。 処理操作は、パーティション、テーブル、またはすべてに対して指定できます。  
+### <a name="processing-partitions"></a>パーティションの処理  
+ 配置済みモデルは、処理には、SSMS を使用するか、process コマンドを含め、処理オプションと設定を指定するスクリプトを実行して行われます。 SSDT を使用してモデルを作成するときに、[モデル] メニューまたはツールバーからプロセス コマンドを使用して処理操作を実行できます。 処理操作は、パーティション、テーブル、またはすべてに対して指定できます。  
   
  処理操作を実行するときは、データ接続を使用してデータ ソースへの接続が行われます。 モデル テーブルに新しいデータがインポートされると、各テーブルに対してリレーションシップと階層が再構築され、計算済みの列およびメジャーでの計算が再計算されます。  
   
- テーブルを論理パーティションにさらに分割することで、各パーティション内のどのデータを、どのタイミングで、どのように処理するかを、選択的に決めることができます。 モデルを配置するとき、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [パーティション] ダイアログ ボックスを使用するか、プロセス コマンドを実行するスクリプトを使用して、パーティションの処理を手動で完了できます。  
+ テーブルを論理パーティションにさらに分割することで、各パーティション内のどのデータを、どのタイミングで、どのように処理するかを、選択的に決めることができます。 モデルを配置する場合は、パーティションの処理は、ssms で、[パーティション] ダイアログ ボックスを使用して手動で完了できるまたはプロセス コマンドを実行するスクリプトを使用しています。  
   
-### モデル ワークスペース データベースのパーティション  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]内の Partition Manager を使用して、新しいパーティションの作成、パーティションの編集、マージ、または削除が可能です。 Partition Manager には、パーティションのテーブル、行、および列を選択する、テーブルのプレビュー モードと SQL クエリ モードの 2 つのモードがあります。 すべてのパーティションは SQL クエリを使用して定義しますが、テーブル プレビュー モードを使用すると、パーティションに含めるデータをプレビューして選択できます。 SQL クエリが自動的に作成され、検証されます。 テーブル プレビュー モードは [テーブルのプロパティの編集] ダイアログ ボックスおよびテーブルのインポート ウィザードの [テーブルのプレビュー] ページと同じテーブル プレビューであるため、プレビューの最大行数は 50 です。  
+### <a name="partitions-in-the-model-workspace-database"></a>モデル ワークスペース データベースのパーティション  
+ 新しいパーティションを作成、編集、マージ、か SSDT で Partition Manager を使用してパーティションを削除します。 作成中のモデルの互換性レベルによってパーティション マネージャーでは、2 つのモード テーブル、行、およびパーティションの列を選択します M クエリを使用して表形式の 1400 モデルのパーティションが定義されているかを開くにはデザイン モードを使用することができます。クエリ エディターです。 表形式の 1100、1103、1200 モデルでは、使用テーブル プレビュー モードと SQL クエリ モードです。 
   
-### 配置済みモデル データベースのパーティション  
- モデルを配置するとき、配置済みモデル データベースのパーティションは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のデータベース オブジェクトとして表示されます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [パーティション] ダイアログ ボックスを使用して、配置済みモデルのパーティションを作成、編集、マージ、および削除できます。 このトピックでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] での配置済みモデルのパーティションの管理については説明しません。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でのパーティション管理については、「[テーブル モデル パーティションの作成および管理 (SSAS テーブル)](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)」を参照してください。  
+### <a name="partitions-in-a-deployed-model-database"></a>配置済みモデル データベースのパーティション  
+ モデルを配置するときに、配置済みモデル データベース用のパーティションは、SSMS でデータベース オブジェクトとして表示されます。 ことができますを作成、編集、マージ、および SSMS の [パーティション] ダイアログ ボックスを使用して配置済みモデル用のパーティションを削除します。 SSMS で、配置済みモデルのパーティションを管理するには、このトピックの範囲外です。 詳細については、SSMS でのパーティションを管理する、次を参照してください。[作成および表形式モデル パーティションの管理](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)です。  
   
-##  <a name="bkmk_related_tasks"></a> 関連タスク  
+##  <a name="bkmk_related_tasks"></a> Related tasks  
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[ワークスペース データベースのパーティションの作成と管理 (SSAS テーブル)](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で Partition Manager を使用して、モデル ワークスペース データベースでパーティションを作成し管理する方法について説明します。|  
-|[ワークスペース データベースのパーティションの処理 (SSAS テーブル)](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)|モデル ワークスペース データベースでのパーティションの処理 (更新) 方法について説明します。|  
+|[ワークスペース データベースでのパーティション作成し、管理](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)|作成し、SSDT で Partition Manager を使用して、モデル ワークスペース データベースでパーティションを管理する方法について説明します。|  
+|[ワークスペース データベースでパーティションの処理](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)|モデル ワークスペース データベースでのパーティションの処理 (更新) 方法について説明します。|  
   
-## 参照  
- [DirectQuery モード &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [データの処理 (SSAS テーブル)](../../analysis-services/tabular-models/process-data-ssas-tabular.md)  
+## <a name="see-also"></a>参照  
+ [DirectQuery モード](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
+ [データの処理](../../analysis-services/tabular-models/process-data-ssas-tabular.md)  
   
   
