@@ -26,7 +26,7 @@
 ## [システム構成チェッカーの検査パラメーター](check-parameters-for-the-system-configuration-checker.md)  
 ## [Server Core インストールでの SQL Server の構成](configure-sql-server-on-a-server-core-installation.md)  
 ## [Server Core への SQL Server のインストール](install-sql-server-on-server-core.md)  
-## [SQL Server をインストール ウィザードからインストールする (セットアップ)](install-sql-server-from-the-installation-wizard-setup.md)  
+## [SQL Server をインストール ウィザードからインストールする (セットアップ)](install-sql-server-from-the-installation-wizard-setup.md)
 ## [コマンド プロンプトからの SQL Server のインストール](install-sql-server-2016-from-the-command-prompt.md)  
 ## [構成ファイルを使用した SQL Server のインストール](install-sql-server-2016-using-a-configuration-file.md)  
 ## [SysPrep を使用して SQL Server をインストールする](install-sql-server-using-sysprep.md)  
