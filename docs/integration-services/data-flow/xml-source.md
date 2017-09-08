@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.xmlsource.f1
+- sql13.dts.designer.xmlsourceadapter.connectionmanager.f1
+- sql13.dts.designer.xmlsourceadapter.columns.f1
+- sql13.dts.designer.xmlsourceadapter.erroroutput.f1
 helpviewer_keywords:
 - sources [Integration Services], XML
 - XML source [Integration Services]
@@ -21,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0e3af9fa8b743b01b222d1596197aa83bbb39854
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 53aaa24f90570856354e1f7ebc46fea9eac0730f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="xml-source"></a>XML ソース
@@ -77,14 +80,6 @@ ms.lasthandoff: 08/03/2017
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[XML ソース エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [[XML ソース エディター] &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/xml-source-editor-connection-manager-page.md)  
-  
--   [[XML ソース エディター] &#40;[列] ページ&#41;](../../integration-services/data-flow/xml-source-editor-columns-page.md)  
-  
--   [XML ソース エディター &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/xml-source-editor-error-output-page.md)  
-  
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -94,6 +89,88 @@ ms.lasthandoff: 08/03/2017
  プロパティの設定方法の詳細については、次のトピックのいずれかを参照してください。  
   
 -   [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="xml-source-editor-connection-manager-page"></a>[XML ソース エディター]\ ([接続マネージャー] ページ)
+  **[XML ソース エディター]** の **[接続マネージャー]** ページを使用すると、XML ファイルと、XML データを変換する XSD を指定できます。  
+  
+### <a name="static-options"></a>静的オプション  
+ **データ アクセス モード**  
+ ソースからデータを選択する方法を指定します。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|[XML ファイルの場所]|XML ファイルからデータを取得します。|  
+|[変数からの XML ファイル]|XML ファイルの名前を変数で指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|[変数からの XML データ]|変数から XML データを取得します。|  
+  
+ **インライン スキーマを使用します。**  
+ XML ソース データ自体に、その構造とデータを定義して検証する XSD スキーマを含めるかどうかを指定します。  
+  
+ **XSD の場所**  
+ XSD スキーマ ファイルのパスと名前を入力するか、 **[参照]**をクリックしてファイルを指定します。  
+  
+ **[参照]**  
+ **[開く]** ダイアログ ボックスを使用して、XSD スキーマ ファイルを指定します。  
+  
+ **XSD を生成します。**  
+ **[名前を付けて保存]** ダイアログ ボックスを使用して、XSD スキーマ ファイルが自動生成される場所を選択します。 スキーマは XML データの構造から推測されます。  
+  
+### <a name="data-access-mode-dynamic-options"></a>データ アクセス モードの動的オプション  
+  
+#### <a name="data-access-mode--xml-file-location"></a>[データ アクセス モード] が [XML ファイルの場所] の場合  
+ **XML の場所**  
+ XML データ ファイルのパスと名前を入力するか、 **[参照]**をクリックしてファイルを指定します。  
+  
+ **[参照]**  
+ **[開く]** ダイアログ ボックスを使用して、XML データ ファイルを指定します。  
+  
+#### <a name="data-access-mode--xml-file-from-variable"></a>[データ アクセス モード] が [変数からの XML ファイル] の場合  
+ **変数名**  
+ XML ファイルのパスとファイル名を含む変数を選択します。  
+  
+#### <a name="data-access-mode--xml-data-from-variable"></a>[データ アクセス モード] が [変数からの XML データ] の場合  
+ **変数名**  
+ XML データを含む変数を選択します。  
+  
+## <a name="xml-source-editor-columns-page"></a>[XML ソース エディター]\ ([列] ページ)
+  **[XML ソース エディター]** ダイアログ ボックスの **[列]** ノードを使用して、出力列を外部 (変換元) 列にマップします。  
+  
+### <a name="options"></a>オプション  
+ **使用できる外部列**  
+ データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
+  
+ **外部列**  
+ タスクで外部 (変換元) 列を読み取る順序を表示します。 この順序を変更するには、最初にエディターに表示されているテーブル内で選択されている列を選択解除してから、一覧から外部列を別の順で選択します。  
+  
+ **出力列**  
+ 各出力列の一意な名前を表示します。 既定では選択された外部 (変換元) 列の名前になりますが、一意でわかりやすい名前を付けることもできます。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
+  
+## <a name="xml-source-editor-error-output-page"></a>[XML ソース エディター]\ ([エラー出力] ページ)
+  **[XML ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
+  
+### <a name="options"></a>オプション  
+ **入力/出力**  
+ データ ソースの名前を表示します。  
+  
+ **列**  
+ **[XML ソース エディター]** ダイアログ ボックスの **[接続マネージャー]**ページで選択した外部 (ソース) 列を表示します。  
+  
+ **エラー**  
+ エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
+  
+ **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **切り捨て**  
+ 切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  
+  
+ **Description**  
+ エラーの説明を表示します。  
+  
+ **この値を選択したセルに設定します。**  
+ エラーまたは切り捨てが発生した場合に、選択したすべてのセルに対して障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
+  
+ **適用**  
+ 選択したセルにエラー処理オプションを適用します。  
   
 ## <a name="related-tasks"></a>関連タスク  
  [XML ソースを使用してデータを抽出する](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  

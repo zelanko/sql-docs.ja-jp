@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.adonetdest.f1
+- sql13.dts.designer.adonetdest.connection.f1
+- sql13.dts.designer.adonetdest.mappings.f1
+- sql13.dts.designer.adonetdest.erroroutput.f1
 helpviewer_keywords:
 - destinations [Integration Services], ADO.NET
 - ADO.NET destination
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 19dc271dee6898d253f51be7c49efe7f0aaa5e7a
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 70508825dfb2bdf60bcd77bdaad9ba9dbb19e7eb
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="ado-net-destination"></a>ADO NET 変換先
@@ -49,14 +52,6 @@ ms.lasthandoff: 08/03/2017
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[ADO NET 変換先エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [[ADO NET 変換先エディター] ([接続マネージャー] ページ)](../../integration-services/data-flow/ado-net-destination-editor-connection-manager-page.md)  
-  
--   [[ADO NET 変換先エディター] &#40;[マッピング] ページ&#41;](../../integration-services/data-flow/ado-net-destination-editor-mappings-page.md)  
-  
--   [[ADO NET 変換先エディター] &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)  
-  
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -64,5 +59,116 @@ ms.lasthandoff: 08/03/2017
 -   [ADO NET カスタム プロパティ](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
  プロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+  
+## <a name="ado-net-destination-editor-connection-manager-page"></a>[ADO NET 変換先エディター]\ ([接続マネージャー] ページ)
+  **[ADO NET 変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、変換先の [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続を選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
+  
+ **接続マネージャー ページを開きます**  
+  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、ADO NET 変換先を含む [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを開きます。  
+  
+2.  **[データ フロー]** タブで、ADO NET 変換先をダブルクリックします。  
+  
+3.  **[ADO NET 変換先エディター]**で、 **[接続マネージャー]**をクリックします。  
+  
+### <a name="static-options"></a>静的オプション  
+ **Connection manager**  
+ 既存の接続マネージャーを一覧から選択するか、 **[新規作成]**をクリックして新しい接続を作成します。  
+  
+ **新機能**  
+ **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスを使用して、新しい接続マネージャーを作成します。  
+  
+ **[テーブルまたはビューを使用する]**  
+ 既存のテーブルまたはビューを一覧から選択するか、 **[新規作成]**をクリックして新しいテーブルを作成します。  
+  
+ **[新規作成]**  
+ **[テーブルの作成]** ダイアログ ボックスを使用して、新しいテーブルまたはビューを作成します。  
+  
+> [!NOTE]  
+>  **[新規作成]**をクリックすると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により、接続されているデータ ソースに基づいて既定の CREATE TABLE ステートメントが生成されます。 基になるテーブルの列に FILESTREAM 属性が宣言されていても、この既定の CREATE TABLE ステートメントには FILESTREAM 属性が含まれません。 FILESTREAM 属性を使用して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントを実行するには、まず対象データベースに FILESTREAM ストレージを実装します。 次に、**[テーブルの作成]** ダイアログ ボックスで CREATE TABLE ステートメントに FILESTREAM 属性を追加します。 詳細については、「[バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」を参照してください。  
+  
+ **プレビュー**  
+ **[クエリ結果のプレビュー]** ダイアログ ボックスを使用して、結果をプレビューします。 プレビューでは、最大で 200 行を表示できます。  
+  
+ **[使用可能な場合は一括挿入を使用する]**  
+ 一括挿入操作のパフォーマンスを向上させるために <xref:System.Data.SqlClient.SqlBulkCopy> インターフェイスを使用するかどうかを指定します。  
+  
+ 返す ADO.NET プロバイダーのみ、<xref:System.Data.SqlClient.SqlConnection>オブジェクトの使用をサポートする、<xref:System.Data.SqlClient.SqlBulkCopy>インターフェイスです。 .NET Data Provider for SQL Server (SqlClient) は <xref:System.Data.SqlClient.SqlConnection> オブジェクトを返し、カスタム プロバイダーは <xref:System.Data.SqlClient.SqlConnection> オブジェクトを返す可能性があります。  
+  
+ .NET Data Provider for SQL Server (SqlClient) を使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]に接続できます。  
+  
+ **[使用可能な場合は一括挿入を使用する]**を選択し、 **[エラー]** オプションを **[行をリダイレクトする]**に設定した場合、変換先によってエラー出力にリダイレクトされるデータのバッチに問題のない行が含まれる可能性があります。一括操作でのエラー処理の詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。 詳細については、**エラー**オプションを参照してください[ADO NET 変換先エディター & #40 です。エラー出力 ページ &#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
+  
+> [!NOTE]  
+>  SQL Server または Sybase のソース テーブルには、id 列が含まれている場合、ADO NET 変換先の前に IDENTITY_INSERT を有効にして、後でもう一度無効にする SQL 実行タスクを使用する必要があります。 (Id 列のプロパティは、列の増分値を指定します。 SET IDENTITY_INSERT ステートメントにより、コピー先のテーブル内の id 列に挿入されるソース テーブルからの明示的な値です。)  
+>   
+>   SET IDENTITY_INSERT ステートメントおよびデータの読み込みを正常を実行するには、次の作業を行うができます。
+>       1. SQL 実行タスクや ADO.NET 変換先は、同じの ADO.NET 接続マネージャーを使用します。
+>       2. 接続マネージャーの設定、 **RetainSameConnection**プロパティおよび**MultipleActiveResultSets**プロパティを True にします。
+>       3. ADO.NET 変換先の設定、 **UseBulkInsertWhenPossible**プロパティを False にします。
+>
+>  詳細については、「[SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md)」および「[IDENTITY &#40;プロパティ&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)」を参照してください。  
+  
+## <a name="external-resources"></a>外部リソース  
+ sqlcat.com の技術記事「 [Windows Azure SQL データベースへのデータの高速な読み込み](http://go.microsoft.com/fwlink/?LinkId=244333)」  
+  
+## <a name="ado-net-destination-editor-mappings-page"></a>[ADO NET 変換先エディター]\ ([マッピング] ページ)
+  **[ADO NET 変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
+  
+ **[マッピング] ページを開く**  
+  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、ADO NET 変換先を含む [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを開きます。  
+  
+2.  **[データ フロー]** タブで、ADO NET 変換先をダブルクリックします。  
+  
+3.  **[ADO NET 変換先エディター]**で、 **[マッピング]**をクリックします。  
+  
+### <a name="options"></a>オプション  
+ **使用できる入力列**  
+ 使用できる入力列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる入力列を変換先列にマップします。  
+  
+ **使用できる変換先列**  
+ 使用できる変換先列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる変換先列を入力列にマップします。  
+  
+ **入力列**  
+ 選択した入力列を表示します。 マッピングを削除するを選択すると**\<無視 >**出力から列を除外します。  
+  
+ **変換先列**  
+ マップするかどうかにかかわらず、使用できる変換先列を表示します。  
+  
+## <a name="ado-net-destination-editor-error-output-page"></a>[ADO NET 変換先エディター]\ ([エラー出力] ページ)
+  **[ADO NET 変換先エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを指定できます。  
+  
+ **エラー出力 ページを開きます**  
+  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、ADO NET 変換先を含む [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを開きます。  
+  
+2.  **[データ フロー]** タブで、ADO NET 変換先をダブルクリックします。  
+  
+3.  **[ADO NET 変換先エディター]**で、 **[エラー出力]**をクリックします。  
+  
+### <a name="options"></a>オプション  
+ **入力または出力**  
+ 入力の名前を表示します。  
+  
+ **列**  
+ 使用されていません。  
+  
+ **エラー**  
+ エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
+  
+ **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **切り捨て**  
+ 使用されていません。  
+  
+ **Description**  
+ 操作の説明を表示します。  
+  
+ **この値を選択したセルに設定します。**  
+ エラーまたは切り捨てが発生した場合に、選択したすべてのセルに対して障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
+  
+ **適用**  
+ 選択したセルにエラー処理オプションを適用します。  
   
   

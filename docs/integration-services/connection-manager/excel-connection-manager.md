@@ -21,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 15de3ffdf6b4580918edf3a29d40e856614367fb
+ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
+ms.openlocfilehash: a5ce75f3c1715870113626642150028e31a0d58b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="excel-connection-manager"></a>Excel 接続マネージャー
@@ -82,17 +82,17 @@ ms.lasthandoff: 08/09/2017
  **[先頭行に列名を含める]**  
  選択されているワークシートのデータの 1 行目に列名が含まれているかどうかを指定します。 このオプションの既定値は **[true]**です。  
   
-### <a name="providers-and-drivers-for-microsoft-excel-and-access-file"></a>Microsoft Excel および Access ファイルのプロバイダーとドライバー  
- まだインストールしていない場合は、Microsoft Office ファイル用の OLE DB プロバイダーとドライバーをダウンロードする必要があることがあります。 以降のバージョンのプロバイダーは、以前のバージョンの Excel で作成したファイルを開くことができます。  
+## <a name="connectivity-components-for-microsoft-excel-and-access-files"></a>Microsoft Excel および Access ファイルの接続コンポーネント
   
- コンピューターに 32 ビット バージョンの Office が存在する場合は、32 ビット バージョンのドライバーをインストールする必要があるほか、32 ビット モードで作成したウィザードまたは Integration Services パッケージが実行されるようにする必要があります。  
+まだインストールしていない場合は、Microsoft Office ファイル用の接続コンポーネントをダウンロードする必要があります。 両方の Excel および Access ファイルの接続コンポーネントの最新バージョンをダウンロード: [Microsoft Access データベース エンジン 2016 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=54920)です。
   
-|Microsoft Office のバージョン|ダウンロード|  
-|------------------------------|--------------|  
-|2007|[2007 Office system ドライバー: データ接続コンポーネント](https://www.microsoft.com/download/details.aspx?id=23734)|  
-|2010|[Microsoft Access 2010 Runtime](https://www.microsoft.com/download/details.aspx?id=10910)|  
-|2013|[Microsoft Access 2013 Runtime](http://www.microsoft.com/download/details.aspx?id=39358)|  
-|2016|[Microsoft Access 2016 Runtime](https://www.microsoft.com/download/details.aspx?id=50040)|
+最新のバージョンのコンポーネントは、以前のバージョンの Excel で作成されたファイルを開くことができます。
+
+コンピューターには、Office の 32 ビット バージョンが存在する場合、コンポーネントの 32 ビット バージョンをインストールする必要があるし、およびも 32 ビット モードでパッケージを実行することを確認する必要があります。
+
+Office 365 サブスクリプションがある場合は、し、Microsoft Access 2016 ランタイムではなく、Access データベース エンジン 2016 再頒布可能パッケージをダウンロードすることを確認します。 インストーラーを実行するときに、Office 実行するための コンポーネントと、ダウンロード サイド バイ サイドをインストールすることはできません、エラー メッセージを参照してください可能性があります。 このエラー メッセージをバイパスするには、コマンド プロンプト ウィンドウを開きを実行している quiet モードでインストールを実行します。 します。EXE ファイルと共にダウンロードした、`/quiet`スイッチします。 例:
+
+`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
   
 ## <a name="related-tasks"></a>関連タスク  
   

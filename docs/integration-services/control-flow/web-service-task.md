@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.webservicetask.f1
+- sql13.dts.designer.webservicestask.general.f1
+- sql13.dts.designer.webservicestask.input.f1
+- sql13.dts.designer.webservicestask.output.f1
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
@@ -19,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: f91aa6e47ee1255c97e8ffd2f91a5fb559a942ca
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: d8ebe6e3486cb13440a66383c518c9d306f2984f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="web-service-task"></a>Web サービス タスク
@@ -66,13 +69,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-web-service-task"></a>Web サービス タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [Web サービス タスク エディター &#40;[全般] ページ&#41;](../../integration-services/control-flow/web-service-task-editor-general-page.md)  
-  
--   [Web サービス タスク エディター &#40;[入力] ページ&#41;](../../integration-services/control-flow/web-service-task-editor-input-page.md)  
-  
--   [Web サービス タスク エディター &#40;[出力] ページ&#41;](../../integration-services/control-flow/web-service-task-editor-output-page.md)  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
 -   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
@@ -84,6 +81,107 @@ ms.lasthandoff: 08/03/2017
  プログラムによってこれらのプロパティを設定する方法の詳細については、次のトピックのいずれかを参照してください。  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
+  
+## <a name="web-service-task-editor-general-page"></a>[Web サービス タスク エディター]\ ([全般] ページ)
+  **[Web サービス タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、HTTP 接続マネージャーの指定、Web サービス タスクで使用する WSDL (Web サービス記述言語) ファイルの場所の指定、Web サービス タスクの記述、WSDL ファイルのダウンロードなどの操作を実行できます。  
+  
+### <a name="options"></a>オプション  
+ **[HTTPConnection]**  
+ 一覧で、接続マネージャーを選択するかクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
+  
+> [!IMPORTANT]  
+>  HTTP 接続マネージャーでは、匿名認証と基本認証のみがサポートされています。 Windows 認証はサポートされていません。  
+  
+ **関連項目:**  [HTTP 接続マネージャー](../../integration-services/connection-manager/http-connection-manager.md), 、[[HTTP 接続マネージャー エディター] ([サーバー] ページ)](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+  
+ **[WSDLFile]**  
+ コンピューターのローカルにある WSDL ファイルの完全修飾パスを入力するか、参照ボタン ( **[...]** ) をクリックしてファイルを指定します。  
+  
+ WSDL ファイルを既に手動でコンピューターにダウンロードしている場合は、そのファイルを選択します。 ただし、WSDL ファイルをまだダウンロードしていない場合は、次の手順に従います。  
+  
+-   ファイル名拡張子が ".wsdl" の空のファイルを作成します。  
+  
+-   **[WSDLFile]** オプションで、この空のファイルを選択します。  
+  
+-   **[OverwriteWSDLFile]** の値を **True** に設定して、空のファイルを実際の WSDL ファイルで上書きできるようにします。  
+  
+-   **[WSDL のダウンロード]** をクリックして実際の WSDL ファイルをダウンロードし、空のファイルを上書きします。  
+  
+    > [!NOTE]  
+    >  **[WSDL のダウンロード]** オプションは、 **[WSDLFile]** ボックスに既存のローカル ファイルの名前を指定するまで有効になりません。  
+  
+ **[OverwriteWSDLFile]**  
+ Web サービス タスクの WSDL ファイルを上書きできるかどうかを示します。  
+  
+ **[WSDL のダウンロード]** ボタンを使用して WSDL ファイルをダウンロードする場合は、この値を **True**に設定します。  
+  
+ **名前**  
+ Web サービス タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
+  
+> [!NOTE]  
+>  タスク名はパッケージ内で一意である必要があります。  
+  
+ **Description**  
+ Web サービス タスクの説明を入力します。  
+  
+ **[WSDL のダウンロード]**  
+ WSDL ファイルをダウンロードします。  
+  
+ このボタンは、 **[WSDLFile]** ボックスに既存のローカル ファイルの名前を指定するまで有効になりません。  
+  
+## <a name="web-service-task-editor-input-page"></a>[Web サービス タスク エディター]\ ([入力] ページ)
+  **[Web サービス タスク エディター]** ダイアログ ボックスの **[入力]** ページを使用すると、Web サービス、Web メソッド、および Web メソッドの入力値を指定できます。 値を指定するには、[値] 列に直接文字列を入力するか、[値] 列から変数を選択します。  
+  
+### <a name="options"></a>オプション  
+ **サービス**  
+ Web メソッドを実行するために使用する Web サービスを一覧から選択します。  
+  
+ **方法**  
+ タスクで実行する Web メソッドを一覧から選択します。  
+  
+ **[WebMethodDocumentation]**  
+ Web メソッドの説明を入力するか、参照ボタン ( **[...]** ) をクリックして **[Web メソッド ドキュメント]** ダイアログ ボックスに説明を入力します。  
+  
+ **名前**  
+ Web メソッドへの入力の名前を一覧表示します。  
+  
+ **型**  
+ 入力のデータ型を一覧表示します。  
+  
+> [!NOTE]  
+>  Web サービス タスクがサポートするパラメーターのデータ型は、整数や文字列などのプリミティブ型、プリミティブ型の配列とシーケンス、および列挙型のみです。  
+  
+ **変数**  
+ 変数を使って入力値を指定する場合は、チェック ボックスをオンにします。  
+  
+ **値**  
+ [Variable] のチェック ボックスをオンにした場合、一覧から変数を選択して入力値を指定します。それ以外の場合は、入力値として使用する値をキーボードから入力します。  
+  
+## <a name="web-service-task-editor-output-page"></a>[Web サービス タスク エディター]\ ([出力] ページ)
+  **[Web サービス タスク エディター]** ダイアログ ボックスの **[出力]** ページを使用すると、Web メソッドから返された結果を格納する場所を指定できます。  
+  
+### <a name="static-options"></a>静的オプション  
+ **[OutputType]**  
+ 結果を格納するときに使用するストレージ型を選択します。 このプロパティのオプションを次の表に示します。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|**[ファイル接続]**|結果をファイルに格納します。 この値を選択すると、動的オプションの **[ファイル]**が表示されます。|  
+|**変数**|結果を変数に格納します。 この値を選択すると、動的オプションの **[変数]**が表示されます。|  
+  
+### <a name="outputtype-dynamic-options"></a>[OutputType] の動的オプション  
+  
+#### <a name="outputtype--file-connection"></a>[OutputType] = [ファイル接続]  
+ **ファイル**  
+ 一覧で、ファイル接続マネージャーを選択するかクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
+  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="outputtype--variable"></a>[OutputType] = [変数]  
+ **変数**  
+ 一覧に変数を選択するか、をクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
+  
+ **関連項目:** [Integration Services (SSIS) の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>関連コンテンツ  
  technet.microsoft.com のビデオ「 [Web サービス タスクを使用して Web サービスを呼び出す方法 (SQL Server ビデオ)](http://go.microsoft.com/fwlink/?LinkId=259642)」  

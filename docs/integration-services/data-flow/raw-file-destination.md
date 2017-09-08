@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.rawfiledest.f1
+- sql13.dts.designer.rawfiledestinationconnectionmanager.f1
+- sql13.dts.designer.rawfiledestinationcolumns.f1
 helpviewer_keywords:
 - append options [Integration Services]
 - destinations [Integration Services], Raw File
@@ -23,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a890502e4db72f00d21ed9656441cc27fa5e532d
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: d92f79e7a43f8d8368ec44b33aef7297749eb351
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="raw-file-destination"></a>RAW ファイル変換先 (Raw File destination)
@@ -135,6 +137,90 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-content"></a>関連コンテンツ  
  sqlservercentral.com のブログ「 [RAW ファイルは最高](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)」  
+  
+## <a name="raw-file-destination-editor-connection-manager-page"></a>[RAW ファイル変換先エディター]\ ([接続マネージャー] ページ)
+  ファイルに RAW データを書き込むための RAW ファイル変換先を構成するには、RAW ファイル変換先エディターを使用します。  
+  
+ **目的に合ったトピックをクリックしてください**  
+  
+-   [RAW ファイル変換先エディターを開く](#open)  
+  
+-   [[接続マネージャー] タブのオプションの設定](#connection)  
+  
+-   [[列] タブのオプションの設定](#mapping)  
+  
+###  <a name="open"></a> RAW ファイル変換先エディターを開く  
+  
+1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]パッケージに RAW ファイル変換先を追加します。  
+  
+2.  コンポーネントを右クリックし、 **[編集]**をクリックします。  
+  
+###  <a name="connection"></a> [接続マネージャー] タブのオプションの設定  
+ **[アクセス モード]**  
+ ファイル名の指定方法を選択します。 ファイル名とパスを直接入力するには **[ファイル名]** を選択します。ファイル名を含んでいる変数を指定するには、 **[変数からのファイル名]** を選択します。  
+  
+ **[ファイル名]** または **[変数名]**  
+ RAW ファイルの名前とパスを入力するか、またはファイル名を含んでいる変数を選択します。  
+  
+ **[書き込みオプション]**  
+ ファイルの作成およびファイルへの書き込みに使用するメソッドを選択します。  
+  
+ **[初期 RAW ファイルの生成]**  
+ パッケージを実行せずに、列のみを含む空の RAW ファイル (メタデータのみのファイル) を生成するには、このボタンをクリックします。 ファイルには、 **[RAW ファイル変換先エディター]** の **[列]**ページで選択した列が含まれています。 RAW ファイル ソースの参照先を、このメタデータのみのファイルにすることができます。  
+  
+ **[初期 RAW ファイルの生成]**をクリックすると、メッセージ ボックスが表示されます。 ファイルの作成を続行するには、 **[OK]** をクリックします。 **[列]** ページで別の列の一覧を選択するには、 **[キャンセル]** をクリックします。  
+  
+###  <a name="mapping"></a> [列] タブのオプションの設定  
+ **使用できる入力列**  
+ RAW ファイルに書き込む 1 つ以上の入力列を選択します。  
+  
+ **入力列**  
+ **[使用できる入力列]**から選択した場合、このテーブルに入力列が自動的に追加されます。入力列をこのテーブルで直接選択することもできます。  
+  
+ **[出力の別名]**  
+ 出力列に使用する代替名を指定します。  
+  
+## <a name="raw-file-destination-editor-columns-page"></a>[Raw ファイル変換先エディター]\ ([列] ページ)
+  ファイルに RAW データを書き込むための RAW ファイル変換先を構成するには、RAW ファイル変換先エディターを使用します。  
+  
+ **目的に合ったトピックをクリックしてください**  
+  
+-   [RAW ファイル変換先エディターを開く](#open)  
+  
+-   [[接続マネージャー] タブのオプションの設定](#connection)  
+  
+-   [[列] タブのオプションの設定](#mapping)  
+  
+###  <a name="open"></a> RAW ファイル変換先エディターを開く  
+  
+1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]パッケージに RAW ファイル変換先を追加します。  
+  
+2.  コンポーネントを右クリックし、 **[編集]**をクリックします。  
+  
+###  <a name="connection"></a> [接続マネージャー] タブのオプションの設定  
+ **[アクセス モード]**  
+ ファイル名の指定方法を選択します。 ファイル名とパスを直接入力するには **[ファイル名]** を選択します。ファイル名を含んでいる変数を指定するには、 **[変数からのファイル名]** を選択します。  
+  
+ **[ファイル名]** または **[変数名]**  
+ RAW ファイルの名前とパスを入力するか、またはファイル名を含んでいる変数を選択します。  
+  
+ **[書き込みオプション]**  
+ ファイルの作成およびファイルへの書き込みに使用するメソッドを選択します。  
+  
+ **[初期 RAW ファイルの生成]**  
+ パッケージを実行せずに、列のみを含む空の RAW ファイル (メタデータのみのファイル) を生成するには、このボタンをクリックします。 RAW ファイル ソースの参照先を、メタデータのみのファイルにすることができます。  
+  
+ このボタンをクリックすると、列の一覧が表示されます。 [キャンセル] をクリックして列を変更するか、[OK] をクリックしてファイルの作成を続行することができます。  
+  
+###  <a name="mapping"></a> [列] タブのオプションの設定  
+ **使用できる入力列**  
+ RAW ファイルに書き込む 1 つ以上の入力列を選択します。  
+  
+ **入力列**  
+ **[使用できる入力列]**から選択した場合、このテーブルに入力列が自動的に追加されます。入力列をこのテーブルで直接選択することもできます。  
+  
+ **[出力の別名]**  
+ 出力列に使用する代替名を指定します。  
   
 ## <a name="see-also"></a>参照  
  [RAW ファイル ソース](../../integration-services/data-flow/raw-file-source.md)   

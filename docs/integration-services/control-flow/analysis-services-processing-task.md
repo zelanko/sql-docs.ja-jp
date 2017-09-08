@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.asprocessingtask.f1
+- sql13.dts.designer.asprocessingtask.general.f1
+- sql13.dts.designer.asprocessingtask.as.f1
 helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2f607edcad955a4d0a22cc246a13d9d97a06fe24
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 1a5107d988014807892ec405dadf61656c7606a5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 処理タスク
@@ -68,11 +70,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-analysis-services-processing-task"></a>Analysis Services 処理タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [[Analysis Services 処理タスク エディター] &#40;[全般] ページ&#41;](../../integration-services/control-flow/analysis-services-processing-task-editor-general-page.md)  
-  
--   [[Analysis Services 処理タスク エディター] &#40;[Analysis Services] ページ&#41;](../../integration-services/control-flow/analysis-services-processing-task-editor-analysis-services-page.md)  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
 -   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
@@ -81,8 +79,76 @@ ms.lasthandoff: 08/03/2017
 -   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-analysis-services-processing-task"></a>プログラムによる Analysis Services 処理タスクの構成  
- プログラムによってこれらのプロパティを設定する方法の詳細については、次のトピックのいずれかを参照してください。  
+ プログラムによってこれらのプロパティを設定する方法の詳細については、次のトピックを参照してください。  
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask>  
   
+## <a name="analysis-services-processing-task-editor-general-page"></a>[Analysis Services 処理タスク エディター]\ ([全般] ページ)
+  **[Analysis Services 処理タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、Analysis Services 処理タスクの名前と説明を指定できます。  
   
+### <a name="options"></a>オプション  
+ **名前**  
+ Analysis Services 処理タスクに一意の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
+  
+> [!NOTE]  
+>  タスク名はパッケージ内で一意である必要があります。  
+  
+ **Description**  
+ Analysis Services 処理タスクの説明を入力します。  
+  
+## <a name="analysis-services-processing-task-editor-analysis-services-page"></a>[Analysis Services 処理タスク エディター]\([Analysis Services] ページ)
+  **[Analysis Services 処理タスク エディター]** ダイアログ ボックスの **[Analysis Services]** ページを使用すると、Analysis Services 接続マネージャーの指定、処理する分析オブジェクトの選択、処理およびエラー処理オプションの設定を行うことができます。  
+  
+ テーブル モデルを処理する場合は、次の点に注意してください。  
+  
+1.  テーブル モデルでは影響分析を実行できません。  
+  
+2.  テーブル モード用のいくつかの処理オプションが表示されません ([デフラグの処理] や [再計算の処理] など)。 これらの機能は DDL 実行タスクを使用すると実行できます。  
+  
+3.  提供されているいくつかの処理オプション ([インデックスの処理] など) はテーブル モデルには適していないので、使用しないでください。  
+  
+4.  テーブル モデルでは、バッチ設定が無視されます。  
+  
+### <a name="options"></a>オプション  
+ **Analysis Services 接続マネージャー**  
+ 既存の Analysis Services 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。  
+  
+ **[新規作成]**  
+ 新しい Analysis Services 接続マネージャーを作成します。  
+  
+ **関連トピック:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)、 [[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+  
+ **[オブジェクト一覧]**  
+ |プロパティ|Description|  
+|--------------|-----------------|  
+|**Object Name**|指定されたオブジェクト名を表示します。|  
+|**型**|指定されたオブジェクトの種類を表示します。|  
+|**[処理オプション]**|一覧から処理オプションを選択します。<br /><br /> **関連トピック**: [多次元モデルの処理 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**[設定]**|指定されたオブジェクトの処理設定を表示します。|  
+  
+ **[追加]**  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトを一覧に追加します。  
+  
+ **[削除]**  
+ オブジェクトを選択し、 **[削除]**をクリックします。  
+  
+ **[影響分析]**  
+ 選択したオブジェクトに対して影響分析を実行します。  
+  
+ **関連トピック:** [[影響分析] ダイアログ ボックス (Analysis Services - 多次元データ)](http://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
+  
+ **[バッチ設定の概要]**  
+ |プロパティ|Description|  
+|--------------|-----------------|  
+|**[処理順序]**|オブジェクトを順番に処理するか、一括して処理するかを指定します。並行処理を行う場合は、同時に処理するオブジェクトの数を指定します。|  
+|**[トランザクション モード]**|順次処理のトランザクション モードを指定します。|  
+|**[ディメンション エラー]**|エラーが発生したときのタスクの動作を指定します。|  
+|**[ディメンション キーのエラー ログのパス]**|エラーを記録するファイルのパスを指定します。|  
+|**[影響を受けたオブジェクトの処理]**|依存オブジェクトまたは影響を受けたオブジェクトも処理するかどうかを示します。|  
+  
+ **[設定の変更]**  
+ 処理オプションおよびディメンション キー内のエラー処理を変更します。  
+  
+ **関連トピック:** [[設定の変更] ダイアログ ボックス (Analysis Services - 多次元データ)](http://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
+  
+

@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingquerytask.f1
+- sql13.dts.designer.dmquerytask.miningmodel.f1
+- sql13.dts.designer.dmquerytask.query.f1
+- sql13.dts.designer.dmquerytask.output.f1
 helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0b171b2ce21054b6cca5f2de64fa1d04f4fa00c9
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: efffacb30616a880c628894dac2f49201c2b8e24
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="data-mining-query-task"></a>データ マイニング クエリ タスク
@@ -53,14 +56,6 @@ ms.lasthandoff: 08/03/2017
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [[データ マイニング クエリ タスク エディター] &#40;[マイニング モデル] タブ&#41;](../../integration-services/control-flow/data-mining-query-task-editor-mining-model-tab.md)  
-  
--   [[データ マイニング クエリ タスク エディター] &#40;[クエリ] タブ&#41;](../../integration-services/control-flow/data-mining-query-task-editor-query-tab.md)  
-  
--   [[データ マイニング クエリ タスク エディター] &#40;[出力] タブ&#41;](../../integration-services/control-flow/data-mining-query-task-editor-output-tab.md)  
-  
 > [!NOTE]  
 >  [データ マイニング クエリ変換エディター] には、[式] ページがありません。 代わりに **[プロパティ]** ウィンドウを使用して、データ マイニング クエリ タスクのプロパティのプロパティ式を作成、管理するツールにアクセスできます。  
   
@@ -73,4 +68,120 @@ ms.lasthandoff: 08/03/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.DMQueryTask.DMQueryTask>  
   
+## <a name="data-mining-query-task-editor-mining-model-tab"></a>[データ マイニング クエリ タスク エディター]\ ([マイニング モデル] タブ)
+  **[データ マイニング クエリ タスク]** ダイアログ ボックスの **[マイニング モデル]** タブを使用すると、使用するマイニング構造とマイニング モデルを指定できます。  
   
+ パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](../../integration-services/control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](../../analysis-services/data-mining/data-mining-solutions.md)」を参照してください。  
+  
+### <a name="general-options"></a>[全般] のオプション  
+ **名**  
+ データ マイニング クエリ タスクに固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
+  
+> [!NOTE]  
+>  タスク名はパッケージ内で一意である必要があります。  
+  
+ **説明**  
+ データ マイニング クエリ タスクの説明を入力します。  
+  
+### <a name="mining-model-tab-options"></a>[マイニング モデル] タブのオプション  
+ **接続**  
+ 既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。  
+  
+ **関連トピック:**  [Analysis Services 接続マネージャーの追加](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+  
+ **[新規作成]**  
+ 新しい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを作成します。  
+  
+ **関連トピック:** [[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+  
+ **マイニング構造**  
+ 一覧からマイニング構造を選択します。  
+  
+ **[マイニング モデル]**  
+ 選択したマイニング構造に基づいて構築されるマイニング モデルを選択します。  
+
+## <a name="data-mining-query-task-editor-query-tab"></a>[データ マイニング クエリ タスク エディター]\ ([クエリ] タブ)
+  **[データ マイニング クエリ タスク]** ダイアログ ボックスの **[クエリ]** タブを使用すると、マイニング モデルに基づいて予測クエリを作成できます。 このダイアログ ボックスでは、パラメーターおよび結果セットを変数にバインドすることもできます。  
+  
+ パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](../../integration-services/control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](../../analysis-services/data-mining/data-mining-solutions.md)」を参照してください。  
+  
+### <a name="general-options"></a>[全般] のオプション  
+ **名**  
+ データ マイニング クエリ タスクに固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
+  
+> [!NOTE]  
+>  タスク名はパッケージ内で一意である必要があります。  
+  
+ **説明**  
+ データ マイニング クエリ タスクの説明を入力します。  
+  
+### <a name="build-query-tab-options"></a>[クエリの作成] タブのオプション  
+ **[データ マイニング クエリ]**  
+ データ マイニング クエリを入力します。  
+  
+ **関連項目:**  [データ マイニング拡張機能 (DMX) リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)  
+  
+ **[新しいクエリの作成]**  
+ グラフィカル ツールを使用してデータ マイニング クエリを作成します。  
+  
+ **関連項目:** [Data Mining Query](../../integration-services/control-flow/data-mining-query.md)  
+  
+### <a name="parameter-mapping-tab-options"></a>[パラメーター マッピング] タブのオプション  
+ **[パラメーター名]**  
+ オプションで、パラメーター名を更新します。 **[変数名]** 一覧から変数を選択して、パラメーターを変数にマップします。  
+  
+ **[変数名]**  
+ パラメーターにマップする変数を一覧から選択します。  
+  
+ **[追加]**  
+ 一覧にパラメーターを追加します。  
+  
+ **[削除]**  
+ パラメーターを選択してから、 **[削除]**をクリックします。  
+  
+### <a name="result-set-tab-options"></a>[結果セット] タブのオプション  
+ **[結果名]**  
+ オプションで、結果セット名を更新します。 **[変数名]** 一覧から変数を選択して、結果を変数にマップします。  
+  
+ **[追加]**をクリックして結果を追加したら、結果の一意な名前を指定します。  
+  
+ **[変数名]**  
+ 結果セットにマップする変数を一覧から選択します。  
+  
+ **結果の種類**  
+ 1 行だけを返すか、完全な結果セットを返すかを示します。  
+  
+ **[追加]**  
+ 一覧に結果セットを追加します。  
+  
+ **[削除]**  
+ 結果を選択してから、 **[削除]**をクリックします。  
+## <a name="data-mining-query-task-editor-output-tab"></a>[データ マイニング クエリ タスク エディター]\ ([出力] タブ)
+  **[データ マイニング クエリ タスク エディター]** ダイアログ ボックスの **[出力]** タブを使用すると、予測クエリの出力先を指定できます。  
+  
+ パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](../../integration-services/control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](../../analysis-services/data-mining/data-mining-solutions.md)」を参照してください。  
+  
+### <a name="general-options"></a>[全般] のオプション  
+ **名**  
+ データ マイニング クエリ タスクに固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
+  
+> [!NOTE]  
+>  タスク名はパッケージ内で一意である必要があります。  
+  
+ **説明**  
+ データ マイニング クエリ タスクの説明を入力します。  
+  
+### <a name="output-tab-options"></a>[出力] タブのオプション  
+ **接続**  
+ 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。  
+  
+ **新機能**  
+ 新しい接続マネージャーを作成します。 使用できる接続マネージャーの種類は、ADO.NET および OLE DB のみです。  
+  
+ **出力テーブル**  
+ 予測クエリの結果が書き込まれるテーブルを指定します。  
+  
+ **削除し、出力テーブルを再作成**  
+ 予測クエリで、出力先のテーブルを削除して再作成することにより、テーブルの内容を上書きするかどうかを指定します。  
+  
+

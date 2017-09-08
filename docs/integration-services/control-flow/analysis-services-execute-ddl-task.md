@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.asexecuteddltask.f1
+- sql13.dts.designer.asexecuteddltask.general.f1
+- sql13.dts.designer.asexecuteddltask.ddl.f1
 helpviewer_keywords:
 - Analysis Services Execute DDL task
 - DDL
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4db091d5934df75f6dd90295e8501a562aa0a0ef
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: a8272f3306050e8d184fd6d5e4e3d349c4e259e9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 実行タスク
@@ -220,11 +222,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-analysis-services-execute-ddl-task"></a>Analysis Services DDL 実行タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [[Analysis Services DDL 実行タスク エディター] ([全般] ページ)](../../integration-services/control-flow/analysis-services-execute-ddl-task-editor-general-page.md)  
-  
--   [[Analysis Services DDL 実行タスク エディター] ([DDL] ページ)](../../integration-services/control-flow/analysis-services-execute-ddl-task-editor-ddl-page.md)  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
 -   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
@@ -237,4 +235,53 @@ ms.lasthandoff: 08/03/2017
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask>  
   
+## <a name="analysis-services-execute-ddl-task-editor-general-page"></a>[Analysis Services DDL 実行タスク エディター]\ ([全般] ページ)
+  **[Analysis Services DDL 実行タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 実行タスクの名前と説明を入力できます。  
   
+### <a name="options"></a>オプション  
+ **名前**  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 実行タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
+  
+> [!NOTE]  
+>  タスク名はパッケージ内で一意である必要があります。  
+  
+ **Description**  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 実行タスクの説明を入力します。  
+  
+## <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>[Analysis Services DDL 実行タスク エディター]\ ([DDL] ページ)
+  **[Analysis Services DDL 実行タスク エディター]** ダイアログ ボックスの **[DDL]** ページを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースへの接続を指定でき、データ定義言語 (DDL) ステートメントのソースについての情報を表示できます。  
+  
+### <a name="static-options"></a>静的オプション  
+ **接続**  
+ 選択、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクトまたは[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]リスト、またはをクリックして接続マネージャー \<**新しい接続をしています.**> を使用して、 **Analysis Services 接続マネージャーの追加** ダイアログ ボックスに新しい接続を作成します。  
+  
+ **関連トピック:** [[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)、 [Analysis Services 接続マネージャー](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+  
+ **[SourceType]**  
+ DDL ステートメントのソースの種類を指定します。 このプロパティには、次の表に示すオプションがあります。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|**[直接入力]**|**[SourceDirect]** テキスト ボックスに格納される DDL ステートメントへのソースを設定します。 この値を選択すると、次に示す動的オプションが表示されます。|  
+|**[ファイル接続]**|DDL ステートメントを含むファイルへのソースを設定します。 この値を選択すると、次に示す動的オプションが表示されます。|  
+|**変数**|ソースを変数に設定します。 この値を選択すると、次に示す動的オプションが表示されます。|  
+  
+### <a name="dynamic-options"></a>動的オプション  
+  
+#### <a name="sourcetype--direct-input"></a>[SourceType] = [直接入力]  
+ **ソース**  
+ DDL ステートメントを入力するか、参照ボタン ( **[...]** ) をクリックしてから **[DDL ステートメント]** ダイアログ ボックスでステートメントを入力します。  
+  
+#### <a name="sourcetype--file-connection"></a>[SourceType] = [ファイル接続]  
+ **ソース**  
+ 一覧で、ファイルへの接続を選択するかクリックして\<**新しい接続をしています.**> を使用して、**ファイル接続マネージャー**  ダイアログ ボックスに新しい接続を作成します。  
+  
+ **関連トピック:** [[ファイル接続マネージャー エディター]](../../integration-services/connection-manager/file-connection-manager.md)  
+  
+#### <a name="sourcetype--variable"></a>[SourceType] = [変数]  
+ **ソース**  
+ 一覧で、変数を選択するかクリックして\<**新しい変数しています.**> を使用して、**変数の追加** ダイアログ ボックスに新しい変数を作成します。  
+  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)  
+  
+

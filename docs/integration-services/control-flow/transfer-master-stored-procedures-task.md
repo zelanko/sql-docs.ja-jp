@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfermasterspstask.f1
+- sql13.dts.designer.transferstoredprocedurestask.general.f1
+- sql13.dts.designer.transferstoredprocedurestask.storedprocedures.f1
 helpviewer_keywords:
 - Transfer Master Stored Procedures task [Integration Services]
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b309790e8ac39e9ac978c56bc451cfd68c5e3c75
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 83001193fc8cedf13bf7425d6b8bae88ac09c987
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Master ストアド プロシージャ転送タスク
@@ -66,11 +68,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-transfer-master-stored-procedures-task"></a>Master ストアド プロシージャ転送タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [[Master ストアド プロシージャ転送タスク エディター] &#40;[全般] ページ&#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-general-page.md)  
-  
--   [[Master ストアド プロシージャ転送タスク エディター] &#40;[ストアド プロシージャ] ページ&#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
 -   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
@@ -84,6 +82,57 @@ ms.lasthandoff: 08/03/2017
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
 -   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## <a name="transfer-master-stored-procedures-task-editor-general-page"></a>[Master ストアド プロシージャ転送タスク エディター]\ ([全般] ページ)
+  **[Master ストアド プロシージャ転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、Master ストアド プロシージャ転送タスクの名前と説明を入力できます。  
+  
+> [!NOTE]  
+>  このタスクは、コピー元のサーバーの **master** データベースからコピー先のサーバーの **master** データベースに、 **dbo** が所有しているユーザー定義のストアド プロシージャのみを転送します。 コピー先のサーバーでストアド プロシージャを作成するには、そのサーバーの **master** データベースの CREATE PROCEDURE 権限を取得するか、そのサーバーの **sysadmin** 固定サーバー ロールのメンバーである必要があります。  
+  
+### <a name="options"></a>オプション  
+ **名**  
+ Master ストアド プロシージャ転送タスクの一意な名前を入力します。 この名前は、タスク アイコンのラベルとして使用されます。  
+  
+> [!NOTE]  
+>  タスク名はパッケージ内で一意である必要があります。  
+  
+ **Description**  
+ Master ストアド プロシージャ転送タスクの説明を入力します。  
+  
+## <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>[Master ストアド プロシージャ転送タスク エディター]\ ([ストアド プロシージャ] ページ)
+  **[Master ストアド プロシージャ転送タスク エディター]** ダイアログ ボックスの **[ストアド プロシージャ]** ページを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つのインスタンスの **master** データベースから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の別のインスタンスの **master** データベースに、1 つ以上のユーザー定義ストアド プロシージャをコピーする場合のプロパティを指定できます。  
+  
+> [!NOTE]  
+>  このタスクは、コピー元のサーバーの **master** データベースからコピー先のサーバーの **master** データベースに、 **dbo** が所有しているユーザー定義のストアド プロシージャのみを転送します。 コピー先のサーバーでストアド プロシージャを作成するには、そのサーバーの **master** データベースの CREATE PROCEDURE 権限を取得するか、そのサーバーの **sysadmin** 固定サーバー ロールのメンバーである必要があります。  
+  
+### <a name="options"></a>オプション  
+ **SourceConnection**  
+ 一覧で、SMO 接続マネージャーを選択するかクリックして**\<新しい接続 >**移行元サーバーに新しい接続を作成します。  
+  
+ **DestinationConnection**  
+ 一覧で、SMO 接続マネージャーを選択するかクリックして**\<新しい接続 >**移行先サーバーに新しい接続を作成します。  
+  
+ **[IfObjectExists]**  
+ コピー先のサーバーの **master** データベースに存在する名前と同じ名前を持つ、ユーザー定義ストアド プロシージャの処理方法を選択します。  
+  
+ このプロパティには、次の表に示すオプションがあります。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|**[FailTask]**|ストアド プロシージャがコピー先のサーバーの **master** データベースに既に存在する名前と同じ名前を持つ場合、タスクは失敗します。|  
+|**Overwrite**|コピー先のサーバーの **master** データベースにある同じ名前のストアド プロシージャを上書きします。|  
+|**Skip**|コピー先のサーバーの **master** データベースにある同じ名前のストアド プロシージャをスキップします。|  
+  
+ **[TransferAllStoredProcedures]**  
+ コピー元のサーバーの **master** データベースのすべてのユーザー定義ストアド プロシージャをコピー先のサーバーにコピーするかどうかを選択します。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|**True**|**master** データベースのユーザー定義ストアド プロシージャをすべてコピーします。|  
+|**False**|指定したストアド プロシージャのみをコピーします。|  
+  
+ **[StoredProceduresList]**  
+ コピー先の **master** データベースにコピーする、コピー元サーバーの **master** データベースのユーザー定義ストアド プロシージャを選択します。 このオプションは、 **[TransferAllStoredProcedures]** を **[False]**に設定した場合のみ使用できます。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server オブジェクトの転送タスク](../../integration-services/control-flow/transfer-sql-server-objects-task.md)   

@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.executeprocesstask.f1
+- sql13.dts.designer.executeprocesstask.general.f1
+- sql13.dts.designer.executeprocesstask.process.f1
 helpviewer_keywords:
 - Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 86c260189b858f01ef37d736f02e636bd2a9873c
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: e9b4a89e32139f359e049f1f9d3e46d5b27696b1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="execute-process-task"></a>プロセス実行タスク
@@ -40,12 +42,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="configuration-of-the-execute-process-task"></a>プロセス実行タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
-  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [[プロセス実行タスク エディター] &#40;[全般] ページ&#41;](../../integration-services/control-flow/execute-process-task-editor-general-page.md)  
-  
--   [[プロセス実行タスク エディター] &#40;[処理] ページ&#41;](../../integration-services/control-flow/execute-process-task-editor-process-page.md)  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
@@ -89,6 +85,61 @@ ms.lasthandoff: 08/03/2017
  プログラムによってこれらのプロパティを設定する方法の詳細については、次のトピックを参照してください。  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ExecuteProcess.ExecuteProcess>  
+  
+## <a name="execute-process-task-editor-general-page"></a>[プロセス実行タスク エディター]\ ([全般] ページ)
+  **[プロセス実行タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、プロセス実行タスクの名前と説明を入力できます。  
+  
+### <a name="options"></a>オプション  
+ **名前**  
+ プロセス実行タスクの固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
+  
+> [!NOTE]  
+>  タスク名はパッケージ内で一意である必要があります。  
+  
+ **Description**  
+ プロセス実行タスクの説明を入力します。  
+  
+## <a name="execute-process-task-editor-process-page"></a>Execute Process Task Editor (Process Page)
+  **[プロセス実行タスク エディター]** ダイアログ ボックスの **[処理]** ページを使用すると、プロセスを実行する際のオプションを構成できます。 オプションには、実行する実行可能ファイル、そのファイルの場所、コマンド プロンプト引数、入力するための変数、出力をキャプチャする変数などが含まれます。  
+  
+### <a name="options"></a>オプション  
+ **[RequireFullFileName]**  
+ 指定した場所に実行可能ファイルが見つからなかった場合に、タスクを中止するかどうかを指定します。  
+  
+ **[実行可能ファイル]**  
+ 実行する実行可能ファイルの名前を入力します。  
+  
+ **引数**  
+ コマンド プロンプト引数を指定します。  
+  
+ **[WorkingDirectory]**  
+ 実行可能ファイルが置かれているフォルダーのパスを入力するか、参照ボタン ( **[...]** ) をクリックしてフォルダーを指定します。  
+  
+ **[StandardInputVariable]**  
+ 変数を選択して、プロセスへの入力を指定するか、をクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
+  
+ **関連項目:** [変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+ **[StandardOutputVariable]**  
+ 変数を選択して、プロセスの出力をキャプチャするかをクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
+  
+ **[StandardErrorVariable]**  
+ 変数を選択して、プロセッサのエラー出力をキャプチャするかをクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
+  
+ **[FailTaskIfReturnCodeIsNotSuccessValue]**  
+ プロセス終了コードが **[SuccessValue]**で指定されている値と異なった場合、タスクを終了するかどうかを指定します。  
+  
+ **[SuccessValue]**  
+ 実行可能ファイルが正常に終了した場合に返される値を指定します。 既定では、この値は **0**に設定されます。  
+  
+ **[TimeOut]**  
+ プロセスを実行できる秒数を指定します。 値を **0** に指定すると、タイムアウト値が使用されず、プロセスは完了するかエラーが発生するまで実行されます。  
+  
+ **[TerminateProcessAfterTimeOut]**  
+ **[TimeOut]** オプションで指定されたタイムアウト時間の後に、プロセスを強制終了するかどうかを指定します。 このオプションは、 **[TimeOut]** が **0**以外の場合にのみ使用できます。  
+  
+ **[WindowStyle]**  
+ プロセスを実行する際のウィンドウのスタイルを指定します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   

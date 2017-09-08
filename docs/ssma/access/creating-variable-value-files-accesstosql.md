@@ -2,7 +2,7 @@
 title: "変数値ファイル (AccessToSQL) を作成する |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -14,23 +14,23 @@ applies_to:
 - SQL Server
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2ebc00ea1b5fc7eb9ca2383d8887b522f59428d1
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: b7ccb1d92b39d41ec3fa961b03b33c229a274af0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>変数値ファイル (AccessToSQL) を作成します。
-変数の値ファイルと同様に、送信元または送信先のサーバー名に 1 つのサーバーの移行を頻繁に変更するコマンドのパラメーター値で構成される XML ファイルです。 多数のデータベースの移行が発生すると、各送信元サーバーの値を格納するための複数の変数ファイルが作成されでマスター スクリプト ファイルで参照されている、 **– v**コマンド ライン スイッチです。 これは、複数の変数ファイルで変数の値を持ついくつかのスクリプト ファイルの静的な値を維持するために役立ちます。  
+変数値ファイルは、サーバーの移行の間で頻繁に変更 (送信元または送信先のサーバー名) などのコマンドのパラメーター値で構成される XML ファイルです。 多数のデータベースの移行が発生すると、各送信元サーバーの値を格納するための複数の変数ファイルが作成されでマスター スクリプト ファイルで参照されている、 **– v**コマンド ライン スイッチです。 この動作は、複数の変数ファイルで変数の値を持ついくつかのスクリプト ファイルの静的な値を維持する上で役立ちます。  
   
 > [!NOTE]  
-> 1.  変数の名前が始まるし、$ (ドル) 記号が付加されたものです。 変数が変数の値のファイルの値を割り当てられていない場合は、コンソールの実行プロセスの停止の結果として得られるスクリプト ファイルの解析中にエラーが発生します。  
-> 2.  The escape character for **$** is **$$**. パラメーターの変数または静的な値の値を含むかどうか **$** し (ドル) シンボル **$$** 変数の代わりに文字として扱うことを示す指定する必要があります。  
-> 3.  保守容易性のために、変数内で宣言できます`‘variable-group’`ユーザーの論理的な分離の要素は、変数を定義します。  この要素の使用は必須ではありません。  
+> -  変数の名前が始まるし、$ (ドル) 記号が付加されたものです。 変数に変数の値のファイルの値が割り当てられていない場合、スクリプト ファイルの解析中にエラーが発生、その結果、コンソールの実行プロセスの停止にします。  
+> -  The escape character for **$** is **$$**. パラメーターの変数または静的な値の値が含まれている場合、  **$** し (ドル) シンボル **$$** 変数の代わりに文字として扱うことを示す指定する必要があります。  
+> -  保守容易性のために、変数内で宣言できます`‘variable-group’`ユーザー定義変数の論理的な分離の要素。  この要素の使用は必須ではありません。  
   
 **例 :**  
   
@@ -102,6 +102,6 @@ ms.lasthandoff: 08/02/2017
 コンソールの運用には、次の手順は[サーバー接続ファイル &#40; を作成します。AccessToSQL &#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
 ## <a name="see-also"></a>参照  
-[サーバー接続ファイル (アクセス) を作成します。](http://msdn.microsoft.com/en-us/829153be-aa8e-4162-87e8-69882feecf19)  
+[サーバー接続ファイル (アクセス) を作成します。](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   
 

@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.wmidatareadertask.f1
+- sql13.dts.designer.wmidatareadertask.general.f1
+- sql13.dts.designer.wmidatareadertask.wmiquery.f1
 helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Data Reader task [Integration Services]
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 9edd5e03a79fde1aa580a47c3df294e59957e896
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 75beba806fea6d2e680720ef9c9c72b7809dbe70
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="wmi-data-reader-task"></a>WMI データ リーダー タスク
@@ -86,9 +88,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="configuration-of-the-wmi-data-reader-task"></a>WMI データ リーダー タスクの構成  
  プロパティはプログラムによって設定するか、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから設定できます。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [[WMI データ リーダー タスク エディター] &#40;[WMI オプション] ページ&#41;](../../integration-services/control-flow/wmi-data-reader-task-editor-wmi-options-page.md)  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
 -   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
@@ -100,6 +100,87 @@ Select * FROM Win32_QuickFixEngineering
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
 -   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## <a name="wmi-data-reader-task-editor-general-page"></a>[WMI データ リーダー タスク エディター]\ ([全般] ページ)
+  **[WMI データ リーダー タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、WMI データ リーダー タスクの名前と説明を入力できます。  
+  
+  WQL (WMI Query Language) の詳細については、MSDN ライブラリにある Windows Management Instrumentation のトピック「 [WQL を使用したクエリ](http://go.microsoft.com/fwlink/?LinkId=79045)」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **名前**  
+ WMI データ リーダー タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
+  
+> [!NOTE]  
+>  タスク名はパッケージ内で一意である必要があります。  
+  
+ **Description**  
+ WMI データ リーダー タスクの説明を入力します。  
+  
+## <a name="wmi-data-reader-task-editor-wmi-options-page"></a>[WMI データ リーダー タスク エディター]\ ([WMI オプション] ページ)
+  **[WMI データ リーダー タスク エディター]** ダイアログ ボックスの **[WMI オプション]** ページを使用すると、WQL (Windows Management Instrumentation Query Language) クエリのソースおよびクエリ結果の出力先を指定できます。  
+  
+ WQL (WMI Query Language) の詳細については、MSDN ライブラリにある Windows Management Instrumentation のトピック「 [WQL を使用したクエリ](http://go.microsoft.com/fwlink/?LinkId=79045)」を参照してください。  
+  
+### <a name="static-options"></a>静的オプション  
+ **[WMIConnectionName]**  
+ 一覧で、WMI 接続マネージャーを選択するかクリックして\<**新しい WMI 接続しています.**> 新しい接続マネージャーを作成します。  
+  
+ **関連トピック:** [WMI 接続マネージャー](../../integration-services/connection-manager/wmi-connection-manager.md)、[WMI 接続マネージャー エディター](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+  
+ **[WQLQuerySourceType]**  
+ タスクで実行する WQL クエリのソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|**[直接入力]**|ソースを WQL クエリに設定します。 この値を選択すると、動的オプションの **[WQLQuerySourceType]**が表示されます。|  
+|**[ファイル接続]**|WQL クエリを含むファイルを選択します。 この値を選択すると、動的オプションの **[WQLQuerySourceType]**が表示されます。|  
+|**変数**|WQL クエリを定義する変数に、ソースを設定します。 この値を選択すると、動的オプションの **[WQLQuerySourceType]**が表示されます。|  
+  
+ **[OutputType]**  
+ データ テーブル、プロパティ値、またはプロパティ名と値のいずれを出力に含めるかを指定します。  
+  
+ **[OverwriteDestination]**  
+ 出力先のファイルまたは変数内の元のデータを変更しないか、上書きするか、データを追加するかを指定します。  
+  
+ **[DestinationType]**  
+ タスクで実行する WQL クエリの出力先の種類を選択します。 このプロパティのオプションを次の表に示します。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|**[ファイル接続]**|WQL クエリの結果を保存するファイルを選択します。 この値を選択すると、動的オプションの **[DestinationType]**が表示されます。|  
+|**変数**|WQL クエリの結果を保存する変数を設定します。 この値を選択すると、動的オプションの **[DestinationType]**が表示されます。|  
+  
+### <a name="wqlquerysourcetype-dynamic-options"></a>[WQLQuerySourceType] 動的オプション  
+  
+#### <a name="wqlquerysourcetype--direct-input"></a>[WQLQuerySourceType] = [直接入力]  
+ **[WQLQuerySource]**  
+ クエリを指定します。または、参照 ([...]) をクリックし、 **[WQL クエリ]** ダイアログ ボックスを使用してクエリを入力します。  
+  
+#### <a name="wqlquerysourcetype--file-connection"></a>[WQLQuerySourceType] = [ファイル接続]  
+ **[WQLQuerySource]**  
+ 一覧で、ファイル接続マネージャーを選択するかクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
+  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="wqlquerysourcetype--variable"></a>[WQLQuerySourceType] = [変数]  
+ **[WQLQuerySource]**  
+ 一覧で、変数を選択するかクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
+  
+ **関連トピック:** [Integration Services (SSIS) 変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+### <a name="destinationtype-dynamic-options"></a>[DestinationType] 動的オプション  
+  
+#### <a name="destinationtype--file-connection"></a>[DestinationType] = [ファイル接続]  
+ **変換先**  
+ 一覧で、ファイル接続マネージャーを選択するかクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
+  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="destinationtype--variable"></a>[DestinationType] = [変数]  
+ **変換先**  
+ 一覧で、変数を選択するかクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
+  
+ **関連トピック:** [Integration Services (SSIS) 変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   

@@ -2,7 +2,7 @@
 title: "スクリプト ファイル (AccessToSQL) を作成する |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -14,14 +14,14 @@ applies_to:
 - SQL Server
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0798e4aa2ed032b1ab3b015199c17518c533e3fa
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: cec4cf64fcca4a185d8733121305fe186a0f58a8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="creating-script-files-accesstosql"></a>スクリプト ファイル (AccessToSQL) を作成します。
@@ -353,7 +353,7 @@ ms.lasthandoff: 08/02/2017
   
 たとえば、Access データベースの特定のテーブルの一般的なデータの移行は次の階層。 データベース-&gt;テーブル。  
   
-スクリプト ファイル内のすべてのコマンドは正常に実行しても、SSMA コンソール アプリケーションは終了し、ユーザーに、コントロールを返します。 スクリプト ファイルの内容の詳細または小さい静的変数の情報には、いずれかが含まれている、[変数値ファイル](http://msdn.microsoft.com/en-us/808595c3-8ef1-40bd-a93e-5cf237950e08)または変数の値をスクリプト ファイル内の別のセクションでします。  
+スクリプト ファイル内のすべてのコマンドは正常に実行しても、SSMA コンソール アプリケーションは終了し、ユーザーに、コントロールを返します。 スクリプト ファイルの内容の詳細または小さい静的変数の情報には、いずれかが含まれている、[変数値ファイル](http://msdn.microsoft.com/808595c3-8ef1-40bd-a93e-5cf237950e08)または変数の値をスクリプト ファイル内の別のセクションでします。  
   
 **例:**  
   
@@ -397,7 +397,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="script-file-validation"></a>スクリプト ファイルの検証  
 ユーザーが、スキーマ定義ファイルに対して自分のスクリプト ファイルを簡単に検証**'A2SSConsoleScriptSchema.xsd'** 'スキーマ' フォルダー内にあります。  
   
-## <a name="next-step"></a>次の手順  
+## <a name="next-step"></a>次の手順
 コンソールの運用には、次の手順は[変数値ファイルの作成 & #40 です。AccessToSQL &#41;](../../ssma/access/creating-variable-value-files-accesstosql.md).  
   
 ## <a name="see-also"></a>参照  

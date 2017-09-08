@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.adonetsource.f1
+- sql13.dts.designer.adonetsource.connection.f1
+- sql13.dts.designer.adonetsource.columns.f1
+- sql13.dts.designer.adonetsource.erroroutput.f1
 helpviewer_keywords:
 - ADO.NET source
 - sources [Integration Services], ADO.NET
@@ -23,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 78aaa7fb855184f1a13e79cf19a2466c83eeee8e
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 9e7aade0a21f0a77d05c0550aac8aed5b1ace4d8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="ado-net-source"></a>ADO NET ソース
@@ -88,6 +91,116 @@ ms.lasthandoff: 08/03/2017
 -   [ADO NET カスタム プロパティ](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
  プロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+  
+## <a name="ado-net-source-editor-connection-manager-page"></a>[ADO NET 変換元エディター]\ ([接続マネージャー] ページ)
+  **[ADO NET 変換元エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、変換元の [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
+  
+ ADO NET 変換元の詳細については、「 [ADO NET Source](../../integration-services/data-flow/ado-net-source.md)」を参照してください。  
+  
+ **接続マネージャー ページを開きます**  
+  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、ADO NET 変換元を含む [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを開きます。  
+  
+2.  **[データ フロー]** タブで、ADO NET 変換元をダブルクリックします。  
+  
+3.  **[ADO NET 変換元エディター]**で、 **[接続マネージャー]**をクリックします。  
+  
+### <a name="static-options"></a>静的オプション  
+ **ADO.NET 接続マネージャー**  
+ 既存の接続マネージャーを一覧から選択するか、 **[新規作成]**をクリックして新しい接続を作成します。  
+  
+ **新機能**  
+ **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスを使用して、新しい接続マネージャーを作成します。  
+  
+ **データ アクセス モード**  
+ ソースからデータを選択する方法を指定します。  
+  
+|オプション|Description|  
+|------------|-----------------|  
+|[テーブルまたはビュー]|[!INCLUDE[vstecado](../../includes/vstecado-md.md)] データ ソースのテーブルまたはビューからデータを取得します。|  
+|[SQL コマンド]|SQL クエリを使用して、 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] データ ソースからデータを取得します。|  
+  
+ **プレビュー**  
+ **[データ ビュー]** ダイアログ ボックスを使用して、結果をプレビューします。 **プレビュー** では、最大で 200 行を表示できます。  
+  
+> [!NOTE]  
+>  データをプレビューするときに、CLR ユーザー定義型を含む列にはデータが表示されません。 代わりに、値\<値が大きすぎるため表示 > または System.byte[] として表示します。 前者は、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] プロバイダーを使用してデータ ソースにアクセスする場合に表示されます。後者は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client プロバイダーを使用している場合に表示されます。  
+  
+### <a name="data-access-mode-dynamic-options"></a>データ アクセス モードの動的オプション  
+  
+#### <a name="data-access-mode--table-or-view"></a>[データ アクセス モード] = [テーブルまたはビュー]  
+ **テーブルまたはビューの名前**  
+ データ ソースで使用できるテーブルまたはビューの一覧から、テーブルまたはビューの名前を選択します。  
+  
+#### <a name="data-access-mode--sql-command"></a>[データ アクセス モード] = [SQL コマンド]  
+ **SQL コマンド テキスト**  
+ SQL クエリのテキストを入力し、 **[クエリの作成]**をクリックしてクエリを作成するか、 **[参照]**をクリックしてクエリ テキストを含むファイルを指定します。  
+  
+ **クエリを作成します。**  
+ SQL クエリを視覚的に作成するには、 **[クエリ ビルダー]** ダイアログ ボックスを使用します。  
+  
+ **[参照]**  
+ **[開く]** ダイアログ ボックスを使用して、SQL クエリのテキストが含まれているファイルを指定します。  
+  
+## <a name="ado-net-source-editor-columns-page"></a>[ADO NET 変換元エディター]\ ([列] ページ)
+  **[ADO NET 変換元エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (変換元) 列にマップできます。  
+  
+ ADO NET 変換元の詳細については、「 [ADO NET Source](../../integration-services/data-flow/ado-net-source.md)」を参照してください。  
+  
+ **[列] ページを開く**  
+  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、ADO NET 変換元を含む [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを開きます。  
+  
+2.  **[データ フロー]** タブで、ADO NET 変換元をダブルクリックします。  
+  
+3.  **[ADO NET 変換元エディター]**で、 **[列]**をクリックします。  
+  
+### <a name="options"></a>オプション  
+ **使用できる外部列**  
+ データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
+  
+ **外部列**  
+ ここで表示される外部 (変換元) 列の順序は、この変換元のデータを使用するコンポーネントを構成するときの列の表示順に反映されます。  
+  
+ **出力列**  
+ 各出力列の一意な名前を表示します。 既定では選択された外部 (変換元) 列の名前になりますが、一意でわかりやすい名前を付けることもできます。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
+  
+## <a name="ado-net-source-editor-error-output-page"></a>[ADO NET 変換元エディター]\ ([エラー出力] ページ)
+  **[ADO NET 変換元エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
+  
+ ADO NET 変換元の詳細については、「 [ADO NET Source](../../integration-services/data-flow/ado-net-source.md)」を参照してください。  
+  
+ **エラー出力 ページを開きます**  
+  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、ADO NET 変換元を含む [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを開きます。  
+  
+2.  **[データ フロー]** タブで、ADO NET 変換元をダブルクリックします。  
+  
+3.  **[ADO NET 変換元エディター]**で、 **[エラー出力]**をクリックします。  
+  
+### <a name="options"></a>オプション  
+ **入力/出力**  
+ データ ソースの名前を表示します。  
+  
+ **列**  
+ **[ADO NET 変換元エディター]** ダイアログ ボックスの **[接続マネージャー]** ページで選択した外部 (変換元) 列を表示します。  
+  
+ **エラー**  
+ エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
+  
+ **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **切り捨て**  
+ 切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  
+  
+ **Description**  
+ エラーの説明を表示します。  
+  
+ **この値を選択したセルに設定します。**  
+ エラーまたは切り捨てが発生した場合に、選択したすべてのセルに対して障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
+  
+ **適用**  
+ 選択したセルにエラー処理オプションを適用します。  
   
 ## <a name="see-also"></a>参照  
  [DataReader 変換先](../../integration-services/data-flow/datareader-destination.md)   

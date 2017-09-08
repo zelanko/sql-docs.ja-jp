@@ -10,13 +10,15 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 8dd5d857efc47a0dc181a0fc9bf1537cb8b08441
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: a542817a861f968cebf3a66f91cfb016d2a685b8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux 上の SQL Server フルテキスト検索をインストールします。
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 次の手順インストール[SQL Server フルテキスト検索](https://msdn.microsoft.com/library/ms142571.aspx)(**mssql サーバー-fts**) on Linux です。 フルテキスト検索では、SQL Server テーブル内の文字ベースのデータに対してフルテキスト クエリを実行することができます。 このリリースの既知の問題については、次を参照してください。、 [Release Notes](sql-server-linux-release-notes.md)です。
 
@@ -270,7 +272,7 @@ sudo zypper update mssql-server-fts
 3. データベースとログ ファイルを Linux の SQL Server コンピューターに移動します。
 
     > [!TIP]
-    > Linux の Windows からファイルを移動する方法のガイダンスについては、次を参照してください。 [Linux にファイルを転送](sql-server-linux-migrate-restore-database.md#transfer-the-backup-file-to-linux)です。
+    > Linux の Windows からファイルを移動する方法のガイダンスについては、次を参照してください。 [Linux にファイルを転送](sql-server-linux-migrate-restore-database.md#scp)です。
 
 4. 言語統計データベースをアタッチするように Linux SQL Server インスタンス上には、次の TRANSACT-SQL コマンドを実行します。
 

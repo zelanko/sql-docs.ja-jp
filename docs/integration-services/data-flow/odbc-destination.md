@@ -11,16 +11,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.odbcdest.f1
+- sql13.ssis.designer.odbcdest.connection.f1
+- sql13.ssis.designer.odbcdest.columns.f1
+- sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5947fa19295580396ce74f8dd93f75abed653797
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: b17bf59986633097e381e968222c5da670eefd7b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="odbc-destination"></a>ODBC 入力先
@@ -79,14 +82,107 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [ODBC 変換先エディター &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
-  
--   [[ODBC 変換先エディター] &#40;[マッピング] ページ&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
-  
--   [ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
-  
 -   [ODBC 変換先を使用してデータを読み込む](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
   
 -   [ODBC 変換先のカスタム プロパティ](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
+## <a name="odbc-destination-editor-connection-manager-page"></a>[ODBC 変換先エディター] ([接続マネージャー] ページ)
+  **[ODBC 入力先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、入力先の ODBC 接続マネージャーを選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
   
+ **[ODBC 入力先エディター] の [接続マネージャー] ページを開くには**  
+  
+### <a name="task-list"></a>タスク一覧  
+  
+-   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、ODBC 入力先を含む [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] パッケージを開きます。  
+  
+-   **[データ フロー]** タブで、ODBC 入力先をダブルクリックします。  
+  
+-   **[ODBC 入力先エディター]**で、 **[接続マネージャー]**をクリックします。  
+  
+### <a name="options"></a>オプション  
+  
+#### <a name="connection-manager"></a>[ODBC 入力先エディター]  
+ 既存の ODBC 接続マネージャーを一覧から選択するか、[新規作成] をクリックして新しい接続を作成します。 ODBC でサポートされているデータベースへの接続を選択または入力できます。  
+  
+#### <a name="new"></a>新規  
+ **[新規作成]**をクリックします。 新しい接続マネージャーを作成できる **[ODBC 接続マネージャーの構成エディター]** ダイアログ ボックスが開きます。  
+  
+#### <a name="data-access-mode"></a>[データ アクセス モード]  
+ データを入力先に読み込む方法を選択します。 次の表に示すオプションがあります。  
+  
+|オプション|Description|  
+|------------|-----------------|  
+|[テーブル名 - バッチ]|バッチ モードで動作する ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択した場合は、次のオプションを指定できます。|  
+||**[テーブル名またはビュー名]**: 使用できるテーブルまたはビューを一覧から選択します。<br /><br /> この一覧には、最初の 1,000 個のテーブルのみが含まれます。 データベースに 1,000 を超えるテーブルがある場合、テーブル名の最初の文字を入力するか、名前の一部の入力にワイルドカード (\*) を使用すると、目的のテーブルが表示されます。<br /><br /> **[バッチ サイズ]**: 一括読み込みのバッチのサイズを入力します。 これは、バッチとして読み込まれる行数です。|  
+|[テーブル名 - 行ごと]|一度に 1 行ずつ、入力先テーブルに各行を挿入するように ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択した場合は、次のオプションを指定できます。|  
+||**[テーブル名またはビュー名]**: 使用できるテーブルまたはビューを一覧のデータベースから選択します。<br /><br /> この一覧には、最初の 1,000 個のテーブルのみが含まれます。 データベースに 1,000 を超えるテーブルがある場合、テーブル名の最初の文字を入力するか、名前の一部の入力にワイルドカード (*) を使用すると、目的のテーブルが表示されます。|  
+  
+#### <a name="preview"></a>プレビュー  
+ **[プレビュー]** をクリックすると、選択したテーブルのデータが最大で 200 行表示されます。  
+  
+## <a name="odbc-destination-editor-mappings-page"></a>[ODBC 変換先エディター]\ ([マッピング] ページ)
+  **[ODBC 入力先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
+  
+### <a name="options"></a>オプション  
+  
+#### <a name="available-input-columns"></a>使用できる入力列  
+ 使用できる入力列の一覧です。 使用できる変換先列に入力列をドラッグ アンド ドロップして、列をマップできます。  
+  
+#### <a name="available-destination-columns"></a>使用できる変換先列  
+ 使用できる変換先列の一覧です。 使用できる入力列に変換先列をドラッグ アンド ドロップして、列をマップできます。  
+  
+#### <a name="input-column"></a>入力列  
+ 選択した入力列を表示します。 マッピングを削除するを選択すると**\<無視 >**出力から列を除外します。  
+  
+#### <a name="destination-column"></a>変換先列  
+ 使用できるすべての変換先列を表示します (マップ済みの列とマップされていない列を両方とも含む)。  
+  
+## <a name="odbc-destination-editor-error-output-page"></a>ODBC 変換先エディター ([エラー出力] ページ)
+  **[ODBC 入力先エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択できます。  
+  
+ **ODBC 変換先エディター エラー出力 ページを開く**  
+  
+### <a name="task-list"></a>タスク一覧  
+  
+-   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、ODBC 入力先を含む [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] パッケージを開きます。  
+  
+-   **[データ フロー]** タブで、ODBC 入力先をダブルクリックします。  
+  
+-   **[ODBC 入力先エディター]**で、 **[エラー出力]**をクリックします。  
+  
+### <a name="options"></a>オプション  
+  
+#### <a name="inputoutput"></a>[入力または出力]  
+ データ ソースの名前を表示します。  
+  
+#### <a name="column"></a>列  
+ 使用されていません。  
+  
+#### <a name="error"></a>[エラー]  
+ ODBC 入力先でフローのエラーを処理する方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
+  
+#### <a name="truncation"></a>切り捨て  
+ ODBC 入力先でフローの切り捨てを処理する方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
+  
+#### <a name="description"></a>Description  
+ エラーの説明を表示します。  
+  
+#### <a name="set-this-value-to-selected-cells"></a>[選択したセルに設定する値]  
+ エラーまたは切り捨てが発生した場合に、選択したすべてのセルを ODBC 入力先でどのように処理するか (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
+  
+#### <a name="apply"></a>[適用]  
+ 選択したセルにエラー処理オプションを適用します。  
+  
+### <a name="error-handling-options"></a>エラー処理オプション  
+ ODBC 入力先でのエラーと切り捨ての処理方法を構成するには、次のオプションを使用します。  
+  
+#### <a name="fail-component"></a>エラー コンポーネント  
+ エラーまたは切り捨てが発生すると、データ フロー タスクは失敗します。 これは既定の動作です。  
+  
+#### <a name="ignore-failure"></a>エラーを無視する  
+ エラーまたは切り捨ては無視されます。  
+  
+#### <a name="redirect-flow"></a>[フローのリダイレクト]  
+ エラーまたは切り捨てが ODBC 入力先のエラー出力に送られる原因となった行。 詳細については、「ODBC 入力先」を参照してください。  
+  
+

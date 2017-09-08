@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.partitionprocessingdest.f1
+- sql13.dts.designer.partprocessingtransformation.connection.f1
+- sql13.dts.designer.partprocessingtransformation.mapping.f1
+- sql13.dts.designer.partprocessingtransformation.advanced.f1
 helpviewer_keywords:
 - partitions [Analysis Services], processing
 - Partition Processing destination [Integration Services]
@@ -21,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 036b792f9895c6b5d56438ce52455aeb5622e0ba
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 124e43d651641eacbf98d82e1d9b1fffeec54b44
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="partition-processing-destination"></a>パーティション処理変換先
@@ -50,14 +53,6 @@ ms.lasthandoff: 08/03/2017
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[パーティション処理変換先エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [パーティション処理変換先エディター ([接続マネージャー] ページ)](../../integration-services/data-flow/partition-processing-destination-editor-connection-manager-page.md)  
-  
--   [パーティション処理変換先エディター ([マッピング] ページ)](../../integration-services/data-flow/partition-processing-destination-editor-mappings-page.md)  
-  
--   [パーティション処理変換先エディター ([詳細設定] ページ)](../../integration-services/data-flow/partition-processing-destination-editor-advanced-page.md)  
-  
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -66,4 +61,127 @@ ms.lasthandoff: 08/03/2017
   
  データ フロー コンポーネントのプロパティの設定方法については、「 [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
+## <a name="partition-processing-destination-editor-connection-manager-page"></a>[パーティション処理変換先エディター]\ ([接続マネージャー] ページ)
+  **[パーティション処理変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスへの接続を指定できます。  
   
+> [!NOTE]  
+>  ここで説明されているタスクは、Analysis Services テーブル モデルには適用されません。  テーブル モデルで入力列をパーティション列にマップすることはできません。 代わりに Analysis Services DDL 実行タスク [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) を使用してパーティションを処理することができます。  
+  
+### <a name="options"></a>オプション  
+ **Connection manager**  
+ 既存の接続マネージャーを一覧から選択するか、 **[新規作成]**をクリックして新しい接続を作成します。  
+  
+ **[新規作成]**  
+ **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用して、新しい接続を作成します。  
+  
+ **利用可能なパーティションの一覧**  
+ 処理するパーティションを選択します。  
+  
+ **[処理方法]**  
+ 処理方法を選択します。 このオプションの既定値は **[完全]**です。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|[追加 (増分)]|パーティションの増分処理を実行します。|  
+|[完全]|パーティションの完全処理を実行します。|  
+|[データのみ]|パーティションの更新処理を実行します。|  
+  
+## <a name="partition-processing-destination-editor-mappings-page"></a>[パーティション処理変換先エディター]\ ([マッピング] ページ)
+  **[パーティション処理変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列をパーティション列にマップできます。  
+  
+> [!NOTE]  
+>  ここで説明されているタスクは、Analysis Services テーブル モデルには適用されません。  テーブル モデルで入力列をパーティション列にマップすることはできません。 代わりに Analysis Services DDL 実行タスク [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) を使用してパーティションを処理することができます。  
+  
+### <a name="options"></a>オプション  
+ **使用できる入力列**  
+ 使用できる入力列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる入力列を変換先列にマップします。  
+  
+ **使用できる変換先列**  
+ 使用できる変換先列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる変換先列を入力列にマップします。  
+  
+ **入力列**  
+ 上の表で選択された入力列が表示されます。 **[使用できる入力列]**ボックスの一覧を使用して、マッピングを変更できます。  
+  
+ **変換先列**  
+ マップされているかどうかに関係なく、使用できる変換先列を表示します。  
+  
+## <a name="partition-processing-destination-editor-advanced-page"></a>[パーティション処理変換先エディター]\ ([詳細設定] ページ)
+  **[パーティション処理変換先エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、エラー処理を設定できます。  
+  
+> [!NOTE]  
+>  ここで説明されているタスクは、Analysis Services テーブル モデルには適用されません。  テーブル モデルで入力列をパーティション列にマップすることはできません。 代わりに Analysis Services DDL 実行タスク [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) を使用してパーティションを処理することができます。  
+  
+### <a name="options"></a>オプション  
+ **[既定のエラー構成を使用する]**  
+ 既定の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] エラー処理を使用するかどうかを指定します。 既定では、この値は **True**です。  
+  
+ **[キー エラー アクション]**  
+ 許容されないキー値を持つレコードを処理する方法を指定します。  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**ConvertToUnknown**|不正なキー値を不明な値に変換します。|  
+|**DiscardRecord**|レコードを破棄します。|  
+  
+ **[エラーを無視する]**  
+ エラーを無視することを指定します。  
+  
+ **[エラー時に停止する]**  
+ エラーが発生した場合に処理を停止することを指定します。  
+  
+ **[エラー数]**  
+ **[エラー時に停止する]**を選択した場合は、処理を停止するエラーのしきい値を指定します。  
+  
+ **[エラー時のアクション]**  
+ **[エラー時に停止する]**を選択した場合は、エラーのしきい値に達した場合に実行する操作を指定します。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|**StopProcessing**|処理を停止します。|  
+|**StopLogging**|ログ記録エラーを停止します。|  
+  
+ **[見つからないキー]**  
+ 見つからないキーのエラーに対する操作を指定します。 既定では、この値は **[ReportAndContinue]**です。  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|エラーを無視して処理を続行します。|  
+|**[ReportAndContinue]**|エラーを報告して処理を続行します。|  
+|**ReportAndStop**|エラーを報告して処理を停止します。|  
+  
+ **[重複キー]**  
+ 重複キーのエラーに対する操作を指定します。 既定では、この値は **IgnoreError**です。  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|エラーを無視して処理を続行します。|  
+|**[ReportAndContinue]**|エラーを報告して処理を続行します。|  
+|**ReportAndStop**|エラーを報告して処理を停止します。|  
+  
+ **[不明な種類に変換された NULL キー]**  
+ NULL キーが不明な値に変換された場合に実行する操作を指定します。 既定では、この値は **IgnoreError**です。  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|エラーを無視して処理を続行します。|  
+|**[ReportAndContinue]**|エラーを報告して処理を続行します。|  
+|**ReportAndStop**|エラーを報告して処理を停止します。|  
+  
+ **[許可されていない NULL キー]**  
+ NULL キーが許可されていない場合に NULL キーが検出されたときに実行する操作を指定します。 既定では、この値は **[ReportAndContinue]**です。  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|エラーを無視して処理を続行します。|  
+|**[ReportAndContinue]**|エラーを報告して処理を続行します。|  
+|**ReportAndStop**|エラーを報告して処理を停止します。|  
+  
+ **[エラー ログのパス]**  
+ エラー ログのパスを入力するか、 **(...)** 参照ボタンを使用してログの保存先を選択します。  
+  
+ **[...]**  
+ エラー ログのパスを選択します。  
+  
+## <a name="see-also"></a>参照  
+ [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)   
+

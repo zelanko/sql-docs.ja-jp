@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transferjobstask.f1
+- sql13.dts.designer.transferjobstask.general.f1
+- sql13.dts.designer.transferjobstask.jobs.f1
 helpviewer_keywords:
 - Transfer Jobs task [Integration Services]
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 61839f15a36ff679f4edfc4585192100c370bb43
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: a4264d737901fbb7c023e216d3d8faf5309469f9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-jobs-task"></a>ジョブ転送タスク
@@ -64,11 +66,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-transfer-jobs-task"></a>ジョブ転送タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [[ジョブ転送タスク エディター] ([全般] ページ)](../../integration-services/control-flow/transfer-jobs-task-editor-general-page.md)  
-  
--   [[ジョブ転送タスク エディター] ([ジョブ] ページ)](../../integration-services/control-flow/transfer-jobs-task-editor-jobs-page.md)  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
 -   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
@@ -80,6 +78,74 @@ ms.lasthandoff: 08/03/2017
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
 -   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## <a name="transfer-jobs-task-editor-general-page"></a>[ジョブ転送タスク エディター]\ ([全般] ページ)
+  **[ジョブ転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、ジョブ転送タスクの名前と説明を入力できます。  
+  
+> [!NOTE]  
+>  転送先サーバー上の **sysadmin** 固定サーバー ロールのメンバー、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールのうち 1 つのロールのメンバーだけが、転送先にジョブを正常に作成できます。 転送元サーバー上のジョブにアクセスするには、ユーザーは少なくとも転送元サーバー上で **SQLAgentUserRole** 固定データベース ロールのメンバーである必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールおよびその権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **名前**  
+ ジョブ転送タスクの一意な名前を入力します。 この名前は、タスク アイコンのラベルとして使用されます。  
+  
+> [!NOTE]  
+>  タスク名はパッケージ内で一意である必要があります。  
+  
+ **Description**  
+ ジョブ転送タスクの説明を入力します。  
+  
+## <a name="transfer-jobs-task-editor-jobs-page"></a>[ジョブ転送タスク エディター]\ ([ジョブ] ページ)
+  **[ジョブ転送タスク エディター]** ダイアログ ボックスの **[ジョブ]** ページを使用すると、1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つのインスタンスから別のインスタンスにコピーするためのプロパティを指定できます。  
+  
+> [!NOTE]  
+>  コピー元サーバーのジョブにアクセスするには、少なくともサーバーの **SQLAgentUserRole** 固定データベース ロールのメンバーであることが必要です。 コピー先サーバーでジョブを正常に作成するには、 **sysadmin** 固定サーバー ロールのメンバーであるか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールの 1 つであることが必要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールおよびその権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)」をご覧ください。  
+  
+### <a name="options"></a>オプション  
+ **SourceConnection**  
+ 一覧で、SMO 接続マネージャーを選択するかクリックして**\<新しい接続 >**移行元サーバーに新しい接続を作成します。  
+  
+ **DestinationConnection**  
+ 一覧で、SMO 接続マネージャーを選択するかクリックして**\<新しい接続 >**移行先サーバーに新しい接続を作成します。  
+  
+ **[TransferAllJobs]**  
+ コピー元サーバーからコピー先サーバーにすべてコピーするか、指定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブのみをコピーするかを選択します。  
+  
+ このプロパティには、次の表に示すオプションがあります。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|**True**|すべてのジョブをコピーします。|  
+|**False**|指定のジョブのみをコピーします。|  
+  
+ **[JobsList]**  
+ **[...]** ボタンをクリックして、コピーするジョブを選択します。 少なくとも 1 つのジョブを選択する必要があります。  
+  
+> [!NOTE]  
+>  コピーするジョブを選択する前に **[SourceConnection]** を指定します。  
+  
+ **[JobsList]** オプションは、 **[TransferAllJobs]** が **[True]**に設定されている場合は使用できません。  
+  
+ **[IfObjectExists]**  
+ コピー先サーバーに既に存在する名前と同じ名前のジョブをどのように処理するかを選択します。  
+  
+ このプロパティには、次の表に示すオプションがあります。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|**[FailTask]**|ジョブの名前がコピー先サーバーに既に存在する名前と同じである場合、タスクは失敗します。|  
+|**Overwrite**|コピー先サーバーの同じ名前のジョブを上書きします。|  
+|**Skip**|コピー先サーバーの同じ名前のジョブをスキップします。|  
+  
+ **[EnableJobsAtDestination]**  
+ コピー先サーバーにコピーされたジョブを有効にするかどうかを選択します。  
+  
+ このプロパティには、次の表に示すオプションがあります。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|**True**|コピー先サーバーのジョブを有効にします。|  
+|**False**|コピー先サーバーのジョブを無効にします。|  
   
 ## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   

@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.rawfilesource.f1
+- sql13.dts.designer.rawfilesourceconnectionmanager.f1
+- sql13.dts.designer.rawfilesourcecolumns.f1
 helpviewer_keywords:
 - sources [Integration Services], Raw File
 - raw data [Integration Services]
@@ -21,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9ea51c506ebda4ea06da6938f68ae91c655bb3ce
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 14608c3bbf570ecfa4cbc0d45d2961ea7ab48a4d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="raw-file-source"></a>RAW ファイル ソース (Raw File source)
@@ -57,6 +59,10 @@ ms.lasthandoff: 08/03/2017
   
 -   sqlservercentral.com のブログ「 [RAW ファイルは最高](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)」  
   
+## <a name="raw-file-source-editor-connection-manager-page"></a>[生ファイル ソース エディター]\ ([接続マネージャー] ページ)
+  RAW ファイル ソースは、ファイルから生データを読み取ります。 データはソース ファイル固有の方法で表示されるため、変換の必要がなく、ほとんどの場合は解析の必要もありません。   
+## <a name="raw-file-source-editor-columns-page"></a>[生ファイル ソース エディター]\ ([列] ページ)
+  RAW ファイル ソースは、ファイルから生データを読み取ります。 データはソース ファイル固有の方法で表示されるため、変換の必要がなく、ほとんどの場合は解析の必要もありません。   
 ## <a name="see-also"></a>参照  
  [RAW ファイル変換先](../../integration-services/data-flow/raw-file-destination.md)   
  [データ フロー](../../integration-services/data-flow/data-flow.md)  

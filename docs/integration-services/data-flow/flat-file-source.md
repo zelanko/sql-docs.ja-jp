@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.flatfilesource.f1
+- sql13.dts.designer.flatfilesourceadapter.connection.f1
+- sql13.dts.designer.flatfilesourceadapter.columns.f1
+- sql13.dts.designer.flatfilesourceadapter.errorhandling.f1
 helpviewer_keywords:
 - sources [Integration Services], Flat File
 - text file reading [Integration Services]
@@ -22,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79a0d3dd55338815b6b99ce0a1002a174af11984
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 3460c0a209af8b587617e81c28fdccc2d5ff0eed
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="flat-file-source"></a>フラット ファイル ソース
@@ -57,14 +60,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-flat-file-source"></a>フラット ファイル ソースの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[フラット ファイル ソース エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [フラット ファイル ソース エディター ([接続マネージャー] ページ)](../../integration-services/data-flow/flat-file-source-editor-connection-manager-page.md)  
-  
--   [フラット ファイル ソース エディター ([列] ページ)](../../integration-services/data-flow/flat-file-source-editor-columns-page.md)  
-  
--   [フラット ファイル ソース エディター ([エラー出力] ページ)](../../integration-services/data-flow/flat-file-source-editor-error-output-page.md)  
-  
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -73,6 +68,71 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-tasks"></a>関連タスク  
  データ フロー コンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+  
+## <a name="flat-file-source-editor-connection-manager-page"></a>[フラット ファイル ソース エディター] ([接続マネージャー] ページ)
+  **[フラット ファイル ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、フラット ファイル ソースが使用する接続マネージャーを選択できます。 フラット ファイル ソースは、区切り形式、固定幅形式、または区切りと固定幅が混在した形式のテキスト ファイルからデータを読み取ります。  
+  
+ フラット ファイル ソースは、次のいずれかの種類の接続マネージャーを使用できます。  
+  
+-   ソースが単一のフラット ファイルの場合は、フラット ファイル接続マネージャー。 詳しくは「 [フラット ファイル接続マネージャー](../../integration-services/connection-manager/flat-file-connection-manager.md)」をご覧ください。  
+  
+-   ソースが複数フラット ファイルで、データ フロー タスクが For ループ コンテナーなどのループ コンテナーの内部にある場合は、複数フラット ファイル接続マネージャー。 コンテナーの各ループで、フラット ファイル ソースは、複数フラット ファイル接続マネージャーが提供する次のファイル名からデータを読み込みます。 詳細については、「 [複数フラット ファイル接続マネージャー](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **Flat file connection manager**  
+ 既存の接続マネージャーを一覧から選択するか、 **[新規作成]**をクリックして新しい接続マネージャーを作成します。  
+  
+ **[新規作成]**  
+ 新しい接続マネージャーを作成するには、 **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスを使用します。  
+  
+ **[データ ソースの NULL 値をデータ フローで NULL 値として保持する]**  
+ データが抽出されたときに NULL 値を保持するかどうかを指定します。 このプロパティの既定値は **false**です。 この値が**false**である場合、フラット ファイル変換元は変換元データの NULL 値を各列の適切な既定値で置き換えます。たとえば、文字列型の列の場合は空の文字列、数値型の列の場合は 0 です。  
+  
+ **プレビュー**  
+ **[データ ビュー]** ダイアログ ボックスを使用して、結果をプレビューします。 プレビューでは、最大で 200 行を表示できます。  
+  
+## <a name="flat-file-source-editor-columns-page"></a>[フラット ファイル ソース エディター]\ ([列] ページ)
+  **[フラット ファイル ソース エディター]** ダイアログ ボックスの **[列]** ノードを使用すると、出力列を各外部 (変換元) 列にマップできます。  
+  
+> [!NOTE]  
+>  フラット ファイル ソースの **FileNameColumnName** プロパティおよびその出力列の **FastParse** プロパティは、 **[フラット ファイル ソース エディター]**ではアクセスできませんが、 **[詳細エディター]**を使用して設定できます。 これらのプロパティの詳細については、「 [Flat File Custom Properties](../../integration-services/data-flow/flat-file-custom-properties.md)」の「フラット ファイル ソース」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **使用できる外部列**  
+ データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
+  
+ **外部列**  
+ タスクで外部 (変換元) 列を読み取る順序を表示します。 この順序を変更するには、テーブルで選択した列を消去してから、別の順序で一覧から外部列を選択します。  
+  
+ **出力列**  
+ 各出力列の一意な名前を表示します。 既定では選択された外部 (変換元) 列の名前になりますが、一意でわかりやすい名前を付けることもできます。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
+  
+## <a name="flat-file-source-editor-error-output-page"></a>[フラット ファイル ソース エディター]\ ([エラー出力] ページ)
+  **[フラット ファイル ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページでは、エラー処理オプションの選択や、エラー出力列に対するプロパティの設定を行えます。  
+  
+### <a name="options"></a>オプション  
+ **入力/出力**  
+ データ ソースの名前を表示します。  
+  
+ **列**  
+ **[フラット ファイル ソース エディター]** ダイアログ ボックスの **[接続マネージャー]**ページで選択した外部 (変換元) 列を表示します。  
+  
+ **[エラー]**  
+ エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
+  
+ **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **切り捨て**  
+ 切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  
+  
+ **Description**  
+ エラーの説明を表示します。  
+  
+ **この値を選択したセルに設定します。**  
+ エラーまたは切り捨てが発生した場合に、選択したすべてのセルに対して障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
+  
+ **適用**  
+ 選択したセルにエラー処理オプションを適用します。  
   
 ## <a name="see-also"></a>参照  
  [フラット ファイル変換先](../../integration-services/data-flow/flat-file-destination.md)   

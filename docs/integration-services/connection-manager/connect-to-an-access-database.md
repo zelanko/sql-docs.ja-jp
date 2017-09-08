@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e6fe201622d38c10967c9c076da0d99d215ea33f
+ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
+ms.openlocfilehash: b5e60880b40a66a6f669bcfd53dcc59e497bbf0a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="connect-to-an-access-database"></a>Access データベースに接続する
@@ -35,10 +35,22 @@ ms.lasthandoff: 08/03/2017
   
 > [!NOTE]  
 >  64 ビット コンピューターでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access データ ソースに接続するパッケージを 32 ビット モードで実行する必要があります。 32 ビット バージョンで使用できるのは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB Provider と Microsoft Office 12.0 Access 用の OLE DB プロバイダーだけです。  
+
+## <a name="connectivity-components-for-microsoft-excel-and-access-files"></a>Microsoft Excel および Access ファイルの接続コンポーネント
+  
+まだインストールしていない場合は、Microsoft Office ファイル用の接続コンポーネントをダウンロードする必要があります。 最新バージョンの Access や Excel の両方のファイルをここで、接続コンポーネントのダウンロード: [Microsoft Access データベース エンジン 2016 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=54920)です。
+  
+最新のバージョンのコンポーネントは、以前のバージョンの Access によって作成されたファイルを開くことができます。
+
+コンピューターには、Office の 32 ビット バージョンが存在する場合、コンポーネントの 32 ビット バージョンをインストールする必要があるし、およびも 32 ビット モードでパッケージを実行することを確認する必要があります。
+
+Office 365 サブスクリプションがある場合は、し、Microsoft Access 2016 ランタイムではなく、Access データベース エンジン 2016 再頒布可能パッケージをダウンロードすることを確認します。 インストーラーを実行するときに、Office 実行するための コンポーネントと、ダウンロード サイド バイ サイドをインストールすることはできません、エラー メッセージを参照してください可能性があります。 このエラー メッセージをバイパスするには、コマンド プロンプト ウィンドウを開きを実行している quiet モードでインストールを実行します。 します。EXE ファイルと共にダウンロードした、`/quiet`スイッチします。 例:
+
+`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
   
 ## <a name="connecting-to-a-data-source-in-access-2003-or-earlier-format"></a>Access 2003 以前の形式のデータ ソースへの接続  
   
-#### <a name="to-create-an-access-connection-manager-from-the-connection-managers-area"></a>[接続マネージャー] 領域から Access 接続マネージャーを作成するには  
+### <a name="to-create-an-access-connection-manager-from-the-connection-managers-area"></a>[接続マネージャー] 領域から Access 接続マネージャーを作成するには  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、パッケージを開きます。  
   
@@ -50,7 +62,7 @@ ms.lasthandoff: 08/03/2017
   
 4.  **[接続マネージャー]** ダイアログ ボックスの **[プロバイダー]**で **[Microsoft Jet 4.0 OLE DB Provider]**を選択し、接続マネージャーを適切に構成します。  
   
-#### <a name="to-create-an-access-connection-from-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードから Access 接続を作成するには  
+### <a name="to-create-an-access-connection-from-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードから Access 接続を作成するには  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを起動します。  
   
@@ -61,7 +73,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="connecting-to-a-data-source-in-access-2007-format"></a>Access 2007 形式のデータ ソースへの接続  
  Access 2007 データ ソースにアクセスする場合、OLE DB 接続マネージャーでは Microsoft Office 12.0 Access データベース エンジン用の OLE DB プロバイダーが必要です。 このプロバイダーは、2007 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office system と共に自動的にインストールされます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を実行しているコンピューターに 2007 Office system がインストールされていない場合は、プロバイダーを別途インストールする必要があります。 Microsoft Office 12.0 Access データベース エンジン用の OLE DB プロバイダーをインストールするには、「 [2007 Office System ドライバー : データ接続コンポーネント](http://go.microsoft.com/fwlink/?LinkId=98155)」でコンポーネントをダウンロードしてインストールしてください。  
   
-#### <a name="to-create-an-ole-db-connection-manager-from-the-connection-managers-area"></a>[接続マネージャー] 領域から OLE DB 接続マネージャーを作成するには  
+### <a name="to-create-an-ole-db-connection-manager-from-the-connection-managers-area"></a>[接続マネージャー] 領域から OLE DB 接続マネージャーを作成するには  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、パッケージを開きます。  
   
@@ -76,7 +88,7 @@ ms.lasthandoff: 08/03/2017
     > [!NOTE]  
     >  Access 2007 を使用するデータ ソースに接続する場合は、 **[データ ソース]** で **[Microsoft Jet 4.0 OLE DB Provider]**を選択することはできません。  
   
-#### <a name="to-create-an-ole-db-connection-from-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードから OLE DB 接続を作成するには  
+### <a name="to-create-an-ole-db-connection-from-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードから OLE DB 接続を作成するには  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを起動します。  
   

@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transferloginstask.f1
+- sql13.dts.designer.transferloginstask.general.f1
+- sql13.dts.designer.transferloginstask.logins.f1
 helpviewer_keywords:
 - Transfer Logins task [Integration Services]
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 02215c15fbbbcb4f7fd5ee5638afa4e0092e86c9
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 2027b3ea760568ced8a41b72a7a2c3cf225de94f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-logins-task"></a>ログイン転送タスク
@@ -70,11 +72,7 @@ ms.lasthandoff: 08/03/2017
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [[ログイン転送タスク エディター] ([全般] ページ)](../../integration-services/control-flow/transfer-logins-task-editor-general-page.md)  
-  
--   [[ログイン転送タスク エディター] ([ログイン] ページ)](../../integration-services/control-flow/transfer-logins-task-editor-logins-page.md)  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
 -   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
@@ -87,4 +85,59 @@ ms.lasthandoff: 08/03/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferLoginsTask.TransferLoginsTask>  
   
+## <a name="transfer-logins-task-editor-general-page"></a>[ログイン転送タスク エディター]\ ([全般] ページ)
+  **[ログイン転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、ログイン転送タスクの名前と説明を入力します。  
   
+### <a name="options"></a>オプション  
+ **名前**  
+ ログイン転送タスクの一意の名前を入力します。 この名前は、タスク アイコンのラベルとして使用されます。  
+  
+> [!NOTE]  
+>  タスク名はパッケージ内で一意である必要があります。  
+  
+ **Description**  
+ ログイン転送タスクの説明を入力します。  
+  
+## <a name="transfer-logins-task-editor-logins-page"></a>[ログイン転送タスク エディター]\ ([ログイン] ページ)
+  **[ログイン転送タスク エディター]** ダイアログ ボックスの **[ログイン]** ページを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスから別のインスタンスへと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインをコピーする際のプロパティを指定できます。  
+  
+> [!IMPORTANT]  
+>  ログイン転送タスクを実行すると、転送先のサーバー上でランダムなパスワードを使用してログインが作成され、パスワードが無効になります。 このログインを使用するには、 **sysadmin** 固定サーバー ロールのメンバーでパスワードを変更し、そのパスワードを有効にする必要があります。 **sa** ログインは転送できません。  
+  
+### <a name="options"></a>オプション  
+ **SourceConnection**  
+ 一覧で、SMO 接続マネージャーを選択するかクリックして**\<新しい接続 >**移行元サーバーに新しい接続を作成します。  
+  
+ **DestinationConnection**  
+ 一覧で、SMO 接続マネージャーを選択するかクリックして**\<新しい接続 >**移行先サーバーに新しい接続を作成します。  
+  
+ **[LoginsToTransfer]**  
+ 転送元サーバーから転送先サーバーにコピーされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを選択します。 このプロパティには、次の表に示すオプションがあります。  
+  
+|値|説明|  
+|-----------|-----------------|  
+|**[AllLogins]**|転送元サーバーのすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが転送先サーバーにコピーされます。|  
+|**[SelectedLogins]**|**[LoginsList]** に指定されているログインのみが転送先サーバーにコピーされます。|  
+|**[AllLoginsFromSelectedDatabases]**|**[DatabasesList]** で指定されているデータベース内のすべてのログインが転送先サーバーにコピーされます。|  
+  
+ **[LoginsList]**  
+ 転送先サーバーにコピーする、転送元サーバーのログインを選択します。 このオプションは、 **[LoginsToTransfer]** を **[SelectedLogins]**に設定した場合のみ使用できます。  
+  
+ **[DatabasesList]**  
+ 転送先サーバーにコピーするログインが含まれる、転送元サーバー上のデータベースを選択します。 このオプションは、 **[LoginsToTransfer]** を **[AllLoginsFromSelectedDatabases]**に設定した場合のみ使用できます。  
+  
+ **[IfObjectExists]**  
+ 転送先サーバーに同じ名前のログインが既に存在していた場合の処理方法を選択します。  
+  
+ このプロパティには、次の表に示すオプションがあります。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|**[FailTask]**|転送先サーバーに同じ名前のログインが既に存在していた場合、タスクが失敗します。|  
+|**Overwrite**|転送先サーバーにある同じ名前のログインは上書きされます。|  
+|**Skip**|転送先サーバーにある同じ名前のログインはスキップされます。|  
+  
+ **[CopySids]**  
+ ログインに関連付けられたセキュリティ識別子を転送先サーバーにコピーするかどうかを選択します。 ログイン転送タスクをデータベース転送タスクと同時に使用する場合、**[CopySids]** を **[True]** に設定する必要があります。 そのように設定しなかった場合、コピーされたログインは転送されたデータベースで認識されなくなります。  
+  
+

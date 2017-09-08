@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingmodeltrainingdest.f1
+- sql13.dts.designer.dmmtrainingtransformation.connection.f1
+- sql13.dts.designer.dmmtrainingtransformation.columns.f1
 helpviewer_keywords:
 - destinations [Integration Services], Data Mining Model Training
 - Data Mining Model Training destination
@@ -22,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cdb0903098dee37d88e89519cf6bc375b0fb90f0
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 570a7e8c6b20ea528f5980fb3ae53a60037d0243
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="data-mining-model-training-destination"></a>データ マイニング モデル トレーニング変換先
@@ -43,12 +45,6 @@ ms.lasthandoff: 08/03/2017
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[データ マイニング モデル トレーニング エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [データ マイニング モデル トレーニング エディター ([接続] タブ)](../../integration-services/data-flow/data-mining-model-training-editor-connection-tab.md)  
-  
--   [データ マイニング モデル トレーニング エディター([列] タブ)](../../integration-services/data-flow/data-mining-model-training-editor-columns-tab.md)  
-  
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -57,4 +53,39 @@ ms.lasthandoff: 08/03/2017
   
  プロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
+## <a name="data-mining-model-training-editor-connection-tab"></a>[データ マイニング モデル トレーニング エディター]\ ([接続] タブ)
+  **[データ マイニング モデル トレーニング エディター]** ダイアログ ボックスの **[接続]** ページを使用すると、トレーニング用のマイニング モデルを選択できます。  
   
+### <a name="options"></a>オプション  
+ **[ODBC 入力先エディター]**  
+ 既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続の一覧から選択するか、次に示す手順で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [新規作成] **ボタンを使用して新しい** 接続を作成します。  
+  
+ **ボタンを使用して新しい**  
+ **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用して、新しい接続を作成します。  
+  
+ **マイニング構造**  
+ 使用できるマイニング構造の一覧から選択するか、 **[新規作成]**をクリックして新しいマイニング構造を作成します。  
+  
+ **ボタンを使用して新しい**  
+ **データ マイニング ウィザード**を使用して、新しいマイニング構造とマイニング モデルを作成します。  
+  
+ **[マイニング モデル]**  
+ 選択したマイニング構造に関連付けられているマイニング モデルの一覧を表示します。  
+  
+## <a name="data-mining-model-training-editor-columns-tab"></a>[データ マイニング モデル トレーニング エディター]\ ([列] タブ)
+  **[データ マイニング モデル トレーニング エディター]** ダイアログ ボックスの **[列]** タブを使用すると、入力列をマイニング構造の列にマップできます。  
+  
+## <a name="options"></a>オプション  
+ **使用できる入力列**  
+ 使用できる入力列の一覧を表示します。 入力列をドラッグしてマイニング構造列にマップします。  
+  
+ **マイニング構造列**  
+ マイニング構造列の一覧を表示します。 マイニング構造列をドラッグして使用できる入力列にマップします。  
+  
+ **入力列**  
+ 上の表で選択された入力列が表示されます。 マッピングを変更または削除するには、 **[使用できる入力列]**ボックスの一覧を使用します。  
+  
+ **マイニング構造列**  
+ マップされているかどうかに関係なく、使用できるマップ先の列を表示します。  
+  
+

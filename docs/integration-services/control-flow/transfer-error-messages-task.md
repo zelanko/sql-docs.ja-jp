@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfererrormessagestask.f1
+- sql13.dts.designer.transfererrormessagestask.general.f1
+- sql13.dts.designer.transfererrormessagestask.errormessages.F1
 helpviewer_keywords:
 - Transfer Error Messages task [Integration Services]
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3f13e3e6e22e2b4f3b74c80a249a098d93ad5b9f
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: e23bd95e7511274fdf7da62834775c565fdee372
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-error-messages-task"></a>エラー メッセージ転送タスク
@@ -67,11 +69,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-transfer-error-messages-task"></a>エラー メッセージ転送タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [[エラー メッセージ転送タスク エディター] &#40;[全般] ページ&#41;](../../integration-services/control-flow/transfer-error-messages-task-editor-general-page.md)  
-  
--   [[エラー メッセージ転送タスク エディター] &#40;[メッセージ] ページ&#41;](../../integration-services/control-flow/transfer-error-messages-task-editor-messages-page.md)  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
 -   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
@@ -83,6 +81,54 @@ ms.lasthandoff: 08/03/2017
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
 -   [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## <a name="transfer-error-messages-task-editor-general-page"></a>[エラー メッセージ転送タスク エディター]\ ([全般] ページ)
+  **[エラー メッセージ転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、エラー メッセージ転送タスクに名前を付けて説明を記述することができます。 エラー メッセージ転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス間で 1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー定義エラー メッセージを転送します。   
+  
+### <a name="options"></a>オプション  
+ **名**  
+ エラー メッセージ転送タスクの一意の名前を入力します。 この名前は、タスク アイコンのラベルとして使用されます。  
+  
+> [!NOTE]  
+>  タスク名はパッケージ内で一意である必要があります。  
+  
+ **Description**  
+ エラー メッセージ転送タスクの説明を入力します。  
+  
+## <a name="transfer-error-messages-task-editor-messages-page"></a>[エラー メッセージ転送タスク エディター]\ ([メッセージ] ページ)
+  **[エラー メッセージ転送タスク エディター]** ダイアログ ボックスの **[メッセージ]** ページを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからインスタンスへ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー定義エラー メッセージをコピーする際のプロパティを指定できます。 
+  
+### <a name="options"></a>オプション  
+ **SourceConnection**  
+ 一覧で、SMO 接続マネージャーを選択するかクリックして**\<新しい接続 >**移行元サーバーに新しい接続を作成します。  
+  
+ **DestinationConnection**  
+ 一覧で、SMO 接続マネージャーを選択するかクリックして**\<新しい接続 >**移行先サーバーに新しい接続を作成します。  
+  
+ **[IfObjectExists]**  
+ 転送先サーバーに同じ名前のエラー メッセージが既に存在していた場合に、既存のユーザー定義エラー メッセージを上書きするか、既存のメッセージをスキップするか、タスクを失敗させるかを選択します。  
+  
+ **[TransferAllErrorMessages]**  
+ 転送元サーバーから転送先サーバーにすべてのユーザー定義メッセージをコピーするか、指定したユーザー定義メッセージだけをコピーするかを選択します。  
+  
+ このプロパティには、次の表に示すオプションがあります。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|**True**|すべてのユーザー定義メッセージをコピーします。|  
+|**False**|指定されたユーザー定義メッセージのみをコピーします。|  
+  
+ **[ErrorMessagesList]**  
+ **[...]** ボタンをクリックして、コピーするエラー メッセージを選択します。  
+  
+> [!NOTE]  
+>  コピーするエラー メッセージを選択する前に **[SourceConnection]** を指定する必要があります。  
+  
+ **[ErrorMessageLanguagesList]**  
+ **[...]** ボタンをクリックして、転送先サーバーにコピーするユーザー定義エラー メッセージの言語を選択します。 us_english (コード ページ 1033) バージョンのメッセージが、他言語バージョンのメッセージを転送先サーバーに転送する前に、そのサーバーに既に存在している必要があります。  
+  
+> [!NOTE]  
+>  コピーするエラー メッセージを選択する前に **[SourceConnection]** を指定する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   

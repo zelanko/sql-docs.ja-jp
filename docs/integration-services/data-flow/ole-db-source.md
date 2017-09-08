@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.oledbsource.f1
+- sql13.dts.designer.oledbsourceadapter.connection.f1
+- sql13.dts.designer.oledbsourceadapter.columns.f1
+- sql13.dts.designer.oledbsourceadapter.errorhandling.f1
 helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93d3d15703e1c5a405c523d5e912658246e774ad
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 995d2688f0e4f8ab9af751c3521e45cb0626451f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="ole-db-source"></a>OLE DB ソース
@@ -95,14 +98,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuring-the-ole-db-source"></a>OLE DB ソースの構成  
  プロパティはプログラムによって設定するか、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから設定できます。  
   
- **[OLE DB ソース エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [OLE DB ソース エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/ole-db-source-editor-connection-manager-page.md)  
-  
--   [OLE DB ソース エディター &#40;[列] ページ&#41;](../../integration-services/data-flow/ole-db-source-editor-columns-page.md)  
-  
--   [OLE DB ソース エディター &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/ole-db-source-editor-error-output-page.md)  
-  
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -121,6 +116,118 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-content"></a>関連コンテンツ  
  social.technet.microsoft.com の Wiki の記事「 [SSIS with Oracle Connectors](http://go.microsoft.com/fwlink/?LinkId=220670)(SSIS から Oracle への接続)」  
+  
+## <a name="ole-db-source-editor-connection-manager-page"></a>[OLE DB ソース エディター]\ ([接続マネージャー] ページ)
+  **[OLE DB ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、ソースの OLE DB 接続マネージャーを選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
+  
+> [!NOTE]  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 を使用するデータ ソースからデータを読み込むには、OLE DB ソースを使用します。 Excel ソースを使用して Excel 2007 データ ソースからデータを読み込むことはできません。 詳細については、「 [Configure OLE DB Connection Manager](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)」 (OLE DB 接続マネージャーの構成) を参照してください。  
+>   
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 以前のバージョンを使用するデータ ソースからデータを読み込むには、Excel ソースを使用します。 詳細については、「[[Excel ソース エディター] ([接続マネージャー] ページ)](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md)」を参照してください。  
+  
+> [!NOTE]  
+>  OLE DB ソースの **CommandTimeout** プロパティは、**[OLE DB ソース エディター]** ではアクセスできませんが、**[詳細エディター]** を使用して設定できます。 このプロパティの詳細については、「 [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)」(OLE DB のカスタム プロパティ) の Excel ソースのセクションを参照してください。  
+  
+### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>OLE DB ソース エディター ([接続マネージャー] ページ) を開く  
+  
+1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で、OLE DB ソースを [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]パッケージに追加します。  
+  
+2.  ソース コンポーネントを右クリックし、 **[編集]**をクリックします。  
+  
+3.  **[接続マネージャー]**をクリックします。  
+  
+### <a name="static-options"></a>静的オプション  
+ **OLE DB 接続マネージャー**  
+ 既存の接続マネージャーを一覧から選択するか、 **[新規作成]**をクリックして新しい接続を作成します。  
+  
+ **[新規作成]**  
+ **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用して、新しい接続マネージャーを作成します。  
+  
+ **[データ アクセス モード]**  
+ ソースからデータを選択する方法を指定します。  
+  
+|オプション|Description|  
+|------------|-----------------|  
+|[テーブルまたはビュー]|OLE DB データベースのテーブルまたはビューからデータを取得します。|  
+|[テーブル名またはビュー名の変数]|テーブル名またはビュー名を変数で指定します。<br /><br /> **関連情報:** [パッケージで変数を使用する](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|[SQL コマンド]|SQL クエリを使用して、OLE DB データ ソースからデータを取得します。|  
+|[変数からの SQL コマンド]|SQL クエリ テキストを変数で指定します。|  
+  
+ **プレビュー**  
+ **[データ ビュー]** ダイアログ ボックスを使用して、結果をプレビューします。 **プレビュー** では、最大で 200 行を表示できます。  
+  
+> [!NOTE]  
+>  データをプレビューするときに、CLR ユーザー定義型を含む列にはデータが表示されません。 代わりに、値\<値が大きすぎるため表示 > または System.byte[] として表示します。 前者は、SQL OLE DB プロバイダーを使用してデータ ソースにアクセスする場合に表示されます。後者は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client プロバイダーを使用している場合に表示されます。  
+  
+### <a name="data-access-mode-dynamic-options"></a>データ アクセス モードの動的オプション  
+  
+#### <a name="data-access-mode--table-or-view"></a>[データ アクセス モード] = [テーブルまたはビュー]  
+ **テーブルまたはビューの名前**  
+ データ ソースで使用できるテーブルまたはビューの一覧から、テーブルまたはビューの名前を選択します。  
+  
+#### <a name="data-access-mode--table-name-or-view-name-variable"></a>[データ アクセス モード] = [テーブル名またはビュー名の変数]  
+ **[変数名]**  
+ テーブル名またはビュー名を含む変数を選択します。  
+  
+#### <a name="data-access-mode--sql-command"></a>[データ アクセス モード] = [SQL コマンド]  
+ **SQL コマンド テキスト**  
+ SQL クエリのテキストを入力し、 **[クエリの作成]**をクリックしてクエリを作成するか、 **[参照]**をクリックしてクエリ テキストを含むファイルを指定します。  
+  
+ **パラメーター**  
+ クエリ テキスト内でパラメーターのプレースホルダーとして "?" を使用することにより、 パラメーター化クエリを入力した場合は、 **[クエリ パラメーターの設定]** ダイアログ ボックスを使用して、クエリ入力パラメーターをパッケージ変数にマップします。  
+  
+ **Build query**  
+ SQL クエリを視覚的に作成するには、 **[クエリ ビルダー]** ダイアログ ボックスを使用します。  
+  
+ **[参照]**  
+ **[開く]** ダイアログ ボックスを使用して、SQL クエリのテキストが含まれているファイルを指定します。  
+  
+ **[クエリの解析]**  
+ クエリ テキストの構文を検査します。  
+  
+#### <a name="data-access-mode--sql-command-from-variable"></a>データ アクセス モードが [変数からの SQL コマンド] の場合  
+ **[変数名]**  
+ SQL クエリのテキストを含む変数を選択します。  
+  
+## <a name="ole-db-source-editor-columns-page"></a>[OLE DB ソース エディター]\ ([列] ページ)
+  **[OLE DB ソース エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (変換元) 列にマップできます。  
+  
+### <a name="options"></a>オプション  
+ **使用できる外部列**  
+ データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
+  
+ **外部列**  
+ ここで表示される外部 (変換元) 列の順序は、この変換元のデータを使用するコンポーネントを構成するときの列の表示順に反映されます。 この順序を変更するには、テーブルで選択した列を消去してから、別の順序で一覧から外部列を選択します。  
+  
+ **出力列**  
+ 各出力列の一意な名前を表示します。 既定では選択された外部 (変換元) 列の名前になりますが、一意でわかりやすい名前を付けることもできます。 指定された名前は、SSIS デザイナーに表示されます。  
+  
+## <a name="ole-db-source-editor-error-output-page"></a>[OLE DB ソース エディター]\ ([エラー出力] ページ)
+  **[OLE DB ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
+  
+### <a name="options"></a>オプション  
+ **入力/出力**  
+ データ ソースの名前を表示します。  
+  
+ **列**  
+ **[OLE DB ソース エディター]** ダイアログ ボックスの **[接続マネージャー]**ページで選択されている外部 (ソース) 列を表示します。  
+  
+ **エラー**  
+ エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
+  
+ **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **切り捨て**  
+ 切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  
+  
+ **Description**  
+ エラーの説明を表示します。  
+  
+ **この値を選択したセルに設定します。**  
+ エラーまたは切り捨てが発生した場合に、選択したすべてのセルに対して障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
+  
+ **適用**  
+ 選択したセルにエラー処理オプションを適用します。  
   
 ## <a name="see-also"></a>参照  
  [OLE DB 変換先](../../integration-services/data-flow/ole-db-destination.md)   

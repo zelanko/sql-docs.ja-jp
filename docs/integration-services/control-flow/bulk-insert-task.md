@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.bulkinserttask.f1
+- sql13.dts.designer.bulkinserttask.connection.f1
+- sql13.dts.designer.bulkinserttask.general.f1
+- sql13.dts.designer.bulkinserttask.options.f1
 helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 81b72c67ee8d968a2452e7ede94fe8c390c53a9b
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 72f40019acada98168cf425dca983154e0e2dc8f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="bulk-insert-task"></a>一括挿入タスク
@@ -91,13 +94,7 @@ ms.lasthandoff: 08/03/2017
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
-  
--   [一括挿入タスク エディター &#40;[全般] ページ&#41;](../../integration-services/control-flow/bulk-insert-task-editor-general-page.md)  
-  
--   [一括挿入タスク エディター &#40;[接続] ページ&#41;](../../integration-services/control-flow/bulk-insert-task-editor-connection-page.md)  
-  
--   [一括挿入タスク エディター &#40;[オプション] ページ&#41;](../../integration-services/control-flow/bulk-insert-task-editor-options-page.md)  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
 -   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
@@ -121,4 +118,103 @@ ms.lasthandoff: 08/03/2017
   
 -   simple-talk.com の技術記事: [SQL Server Integration Services を使用してデータの一括読み込みを行う](http://go.microsoft.com/fwlink/?LinkId=233701)  
   
+## <a name="bulk-insert-task-editor-connection-page"></a>[一括挿入タスク エディター]\ ([接続] ページ)
+  **[一括挿入タスク エディター]** ダイアログ ボックスの **[接続]** ページを使用すると、一括挿入操作の挿入元と挿入先、および使用するフォーマットを指定できます。  
   
+ 一括挿入操作の詳細については、「[Bulk Insert Task](../../integration-services/control-flow/bulk-insert-task.md)」(一括挿入タスク) と「[データのインポートまたはエクスポート用のフォーマット ファイル (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **接続**  
+ 一覧で、OLE DB 接続マネージャーを選択するかクリックして\<**新しい接続をしています.**> 新しい接続を作成します。  
+  
+ **関連項目:** [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+  
+ **[DestinationTable]**  
+ 挿入先のテーブルまたはビューの名前を入力するか、テーブルまたはビューを一覧から選択します。  
+  
+ **Format**  
+ 一括挿入のフォーマットの挿入元を選択します。 このプロパティのオプションを次の表に示します。  
+  
+|値|Description|  
+|-----------|-----------------|  
+|**[ファイルを使用]**|フォーマット指定が格納されているファイルを選択します。 このオプションを選択すると、動的オプションの **[FormatFile]**が表示されます。|  
+|**[指定]**|フォーマットを指定します。 このオプションを選択すると、動的オプションの **[RowDelimiter]** および **[ColumnDelimiter]**が表示されます。|  
+  
+ **ファイル**  
+ 一覧で、ファイルまたはフラット ファイル接続マネージャーを選択するかクリックして\<**新しい接続をしています.**> 新しい接続を作成します。  
+  
+ このファイルの場所は、このタスクの接続マネージャーに指定されている SQL Server データベース エンジンを基準とする相対パスです。 SQL Server データベース エンジンは、サーバーのローカル ハード ドライブ、共有、または SQL Server にマップされたドライブでこのテキスト ファイルにアクセスできる必要があります。 SSIS ランタイムはこのファイルにアクセスしません。  
+  
+ フラット ファイル接続マネージャーを使用してソース ファイルにアクセスした場合、フラット ファイル接続マネージャーに指定されたフォーマットは一括挿入タスクで使用されません。 その代わり、フォーマット ファイルに指定されたフォーマットか、またはタスクの RowDelimiter プロパティおよび ColumnDelimiter プロパティの値が一括挿入タスクで使用されます。  
+  
+ **関連項目:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[フラット ファイル接続マネージャー](../../integration-services/connection-manager/flat-file-connection-manager.md) 
+  
+ **[テーブルの更新]**  
+ データベースおよびビューの一覧を更新します。  
+  
+### <a name="format-dynamic-options"></a>[Format] の動的オプション  
+  
+#### <a name="format--use-file"></a>[Format] = [ファイルを使用]  
+ **[FormatFile]**  
+ フォーマット ファイルのパスを入力します。または、参照ボタン ( **[...]** ) をクリックし、フォーマット ファイルを指定します。  
+  
+#### <a name="format--specify"></a>[Format] = [指定]  
+ **[RowDelimiter]**  
+ ソース ファイルの行区切り記号を指定します。 既定値は **{CR}{LF}**です。  
+  
+ **[ColumnDelimiter]**  
+ ソース ファイルの列区切り記号を指定します。 既定値は **[タブ]**です。  
+  
+## <a name="bulk-insert-task-editor-general-page"></a>[一括挿入タスク エディター]\ ([全般] ページ)
+  **[一括挿入タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用して、一括挿入タスクの名前と説明を指定します。  
+  
+### <a name="options"></a>オプション  
+ **名前**  
+ 一括挿入タスクに一意の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
+  
+> [!NOTE]  
+>  タスク名はパッケージ内で一意である必要があります。  
+  
+ **Description**  
+ 一括挿入タスクの説明を入力します。  
+ 
+## <a name="bulk-insert-task-editor-options-page"></a>[一括挿入タスク エディター]\ ([オプション] ページ)
+  **[一括挿入タスク エディター]** ダイアログ ボックスの **[オプション]** ページを使用すると、一括挿入操作のプロパティを設定できます。 一括挿入タスクにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルまたはビューに大量のデータがコピーされます。  
+  
+ 一括挿入タスクについては、「[一括挿入タスク](../../integration-services/control-flow/bulk-insert-task.md)」および「[「BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
+  
+### <a name="options"></a>オプション  
+ **CodePage**  
+ データ ファイル内のデータのコード ページを指定します。  
+  
+ **[DataFileType]**  
+ 読み込み操作で使用するデータ型の値を指定します。  
+  
+ **BatchSize**  
+ バッチ内の行数を指定します。 既定では、データ ファイル全体です。 **[BatchSize]** を 0 に設定すると、データは単一のバッチに読み込まれます。  
+  
+ **[LastRow]**  
+ コピーする最後の行を指定します。  
+  
+ **[FirstRow]**  
+ コピーを開始する最初の行を指定します。  
+  
+ **[一括挿入タスク エディター]**  
+ |項目|定義|  
+|----------|----------------|  
+|**CHECK 制約**|テーブルおよび列に対する制約をチェックします。|  
+|**[NULL を保持する]**|空の列に任意の既定値を挿入する代わりに、一括挿入操作中に NULL 値を保持します。|  
+|**[ID 挿入を許可する]**|ID 列に既存の値を挿入します。|  
+|**[テーブル ロック]**|一括挿入中にテーブルをロックします。|  
+|**[トリガーを起動する]**|テーブル上のすべての挿入トリガー、更新トリガー、および削除トリガーを起動します。|  
+  
+ **SortedData**  
+ 一括挿入ステートメントに ORDER BY 句を指定します。 指定する列名は、挿入先テーブル内の有効な列でなければなりません。 既定値は **false**です。 これは、データが ORDER BY 句によって並べ替えられないことを意味します。  
+  
+ **[MaxErrors]**  
+ 一括挿入操作が取り消されるまでに発生が許可される最大エラー数を指定します。 0 の値は、許可されるエラー数が無制限であることを示します。  
+  
+> [!NOTE]  
+>  一括読み込み操作でインポートできない行は、1 つのエラーとしてカウントされます。  
+  
+
