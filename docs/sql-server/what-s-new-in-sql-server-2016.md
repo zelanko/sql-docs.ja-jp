@@ -111,4 +111,4 @@ Microsoft は、このリリースで Reporting Services を全面的に改良�
 - [セットアップとサービスのインストール](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)    
 - [新しい SQL PowerShell モジュール](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
-
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
