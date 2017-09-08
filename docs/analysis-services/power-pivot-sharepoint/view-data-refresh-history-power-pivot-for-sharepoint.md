@@ -1,29 +1,34 @@
 ---
-title: "データ更新履歴の表示 (Power Pivot for SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "自動データ更新 [Analysis Services と SharePoint]"
-  - "データ更新履歴 [Analysis Services と SharePoint]"
-  - "定期データ更新 [Analysis Services と SharePoint]"
-  - "データ更新 [Analysis Services と SharePoint]"
+title: "データ更新履歴 (Power Pivot for SharePoint) の表示 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unattended data refresh [Analysis Services with SharePoint]
+- data refresh history [Analysis Services with SharePoint]
+- scheduled data refresh [Analysis Services with SharePoint]
+- data refresh [Analysis Services with SharePoint]
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bad4593c84946a2957b6b433de359d4857f116ad
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# データ更新履歴の表示 (Power Pivot for SharePoint)
+# <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>データ更新履歴の表示 (Power Pivot for SharePoint)
   データ更新の履歴とは、Excel ブックの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データに対するすべてのデータ更新操作の記録です。 データ更新操作は、指定したスケジュールで SharePoint ファーム内の Analysis Services サーバー インスタンスで実行されます。 既定では、データ更新の履歴は 1 年間保持されます。 ただし、ファーム管理者は、データ更新記録を保持する期間を決定する、使用状況およびイベントの履歴に対する別の保有ポリシーを指定できます。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
@@ -72,9 +77,9 @@ caps.handback.revision: 16
 |[時刻]|データ更新が開始されてから完了するまでの累積時間を示します。|  
 |[状態]|更新操作が成功したか失敗したかの履歴レコードを示します。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [使用状況データ収集の構成 (Power Pivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
- [データ更新のスケジュール (Power Pivot for SharePoint)](http://msdn.microsoft.com/ja-jp/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
+ [データ更新 (Power Pivot for SharePoint) のスケジュールします。](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
  [Power Pivot データ更新](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)  
   
   

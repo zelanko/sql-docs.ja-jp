@@ -1,36 +1,41 @@
 ---
-title: "データ マイニング スキーマ行セット (SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "スキーマ行セット [Analysis Services] で、データ マイニング"
-  - "データ マイニング [Analysis Services], クエリ"
-  - "マイニング モデル コンテンツ"
-  - "データ マイニング [Analysis Services], スキーマ行セット"
-  - "スキーマ行セット [Analysis Services], 取得"
-  - "データ マイニング [Analysis Services], トラブルシューティング"
+title: "データ マイニング スキーマ行セット (SSAs) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- schema rowsets [Analysis Services], data mining
+- data mining [Analysis Services], queries
+- mining model content
+- data mining [Analysis Services], schema rowsets
+- schema rowsets [Analysis Services], retrieving
+- data mining [Analysis Services], troubleshooting
 ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: deaa583071c754683120c1c519232c3c2de6b0b7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# データ マイニング スキーマ行セット (SSAS)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、既存の OLE DB データ マイニング スキーマ行セットの多くが、データ マイニング拡張機能 (DMX) ステートメントを使用して照会できるシステム テーブルのセットとして公開されます。 データ マイニング スキーマ行セットに対するクエリを作成することによって、利用可能なサービスの特定、モデルおよび構造の状態の更新、モデル コンテンツまたはパラメーターに関する詳細の確認を行うことができます。 データ マイニング スキーマ行セットの説明については、「[データ マイニング スキーマ行セット](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)」を参照してください。  
+# <a name="data-mining-schema-rowsets-ssas"></a>データ マイニング スキーマ行セット (SSAS)
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、既存の OLE DB データ マイニング スキーマ行セットの多くが、データ マイニング拡張機能 (DMX) ステートメントを使用して照会できるシステム テーブルのセットとして公開されます。 データ マイニング スキーマ行セットに対するクエリを作成することによって、利用可能なサービスの特定、モデルおよび構造の状態の更新、モデル コンテンツまたはパラメーターに関する詳細の確認を行うことができます。 データ マイニング スキーマ行セットの説明については、「 [データ マイニング スキーマ行セット](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)」を参照してください。  
   
 > [!NOTE]  
->  データ マイニング スキーマ行セットに対するクエリは、XMLA を使用して実行することもできます。 これを SQL Server Management Studio で実行する方法については、「[XMLA を使用したデータ マイニング クエリの作成](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)」を参照してください。  
+>  データ マイニング スキーマ行セットに対するクエリは、XMLA を使用して実行することもできます。 これを SQL Server Management Studio で実行する方法については、「 [XMLA を使用したデータ マイニング クエリの作成](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)」を参照してください。  
   
-## データ マイニング スキーマ行セットの一覧  
+## <a name="list-of-data-mining-schema-rowsets"></a>データ マイニング スキーマ行セットの一覧  
  次の表に、クエリおよび監視に役立つデータ マイニング スキーマ行セットの一覧を示します。  
   
 |行セット名|Description|  
@@ -48,10 +53,10 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  表で示した内容がすべてではありません。トラブルシューティングに特に必要と思われる行セットのみを示しています。  
   
-## 使用例  
+## <a name="examples"></a>使用例  
  次のセクションで、データ マイニング スキーマ行セットに対するクエリの例をいくつか示します。  
   
-### 例 1: データ マイニング サービスの一覧表示  
+### <a name="example-1-list-data-mining-services"></a>例 1: データ マイニング サービスの一覧表示  
  次のクエリでは、現在のサーバーで使用できるマイニング サービス、すなわち有効なアルゴリズムの一覧が返されます。 各マイニング サービスに対して指定される列には、各アルゴリズムで使用できるモデリング フラグとコンテンツの種類、各サービスの GUID、および各サービスに対して追加されている予測の制限が含まれます。  
   
 ```  
@@ -59,7 +64,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### 例 2: データ マイニング モデル パラメーターの一覧表示  
+### <a name="example-2-list-mining-model-parameters"></a>例 2: データ マイニング モデル パラメーターの一覧表示  
  次の例では、特定のマイニング モデルの作成に使用されたパラメーターを返します。  
   
 ```  
@@ -68,7 +73,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### 例 3: すべての行セットの一覧表示  
+### <a name="example-3-list-all-rowsets"></a>例 3: すべての行セットの一覧表示  
  次のクエリでは、現在のサーバーで使用できる行セットの詳細な一覧が返されます。  
   
 ```  
@@ -77,3 +82,4 @@ FROM $system.DBSCHEMA_TABLES
 ```  
   
   
+

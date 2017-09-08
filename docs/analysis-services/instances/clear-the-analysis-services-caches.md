@@ -1,24 +1,29 @@
 ---
-title: "Analysis Services キャッシュのクリア | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Analysis Services キャッシュのクリア |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 67ea43179411006e5e549c44b13d4a3fa1d6074f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services キャッシュのクリア
+# <a name="clear-the-analysis-services-caches"></a>Analysis Services キャッシュのクリア
   Analysis Services は、クエリのパフォーマンス向上のためにデータをキャッシュします。 このトピックでは、MDX クエリへの応答で作成されたキャッシュを、XMLA ClearCache コマンドを使用してクリアするための推奨事項について説明します。 ClearCache を実行した場合の効果は、テーブル モデルまたは多次元モデルのどちらを使用しているかによって異なります。  
   
  **多次元モデルのキャッシュをクリアする場合**  
@@ -33,11 +38,11 @@ caps.handback.revision: 11
   
  また、ClearCache を実行すると、xVelocity メモリ内分析エンジン (VertiPaq) のメモリ内キャッシュもクリアされます。 xVelocity エンジンは、キャッシュされた小さな結果セットを保持します。 ClearCache を実行すると、xVelocity エンジンのキャッシュも無効化されます。  
   
- 最後に、ClearCache を実行すると、テーブル モデルが **DirectQuery** モード用に再構築されるときにメモリ内の残存データも削除されます。 これは、厳密に管理される機密データがモデルに含まれる場合、特に重要です。 この場合、ClearCache の実行は、機密データが想定した場所にのみ存在することを確実にするための予防的なアクションとなります。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用してモデルを配置し、クエリ モードを変更する場合、キャッシュは手動でクリアする必要があります。 一方、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使用して、モデルに **DirectQuery** を指定した場合、そのクエリ モードを使用するようにモデルを切り替えると、パーティションが自動的にキャッシュをクリアします。  
+ 最後に、ClearCache を実行すると、テーブル モデルが **DirectQuery** モード用に再構築されるときにメモリ内の残存データも削除されます。 これは、厳密に管理される機密データがモデルに含まれる場合、特に重要です。 この場合、ClearCache の実行は、機密データが想定した場所にのみ存在することを確実にするための予防的なアクションとなります。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用してモデルを配置し、クエリ モードを変更する場合、キャッシュは手動でクリアする必要があります。 一方、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使用して、モデルに **DirectQuery** を指定した場合、そのクエリ モードを使用するようにモデルを切り替えると、パーティションが自動的にキャッシュをクリアします。  
   
  多次元モデルのキャッシュをパフォーマンス テスト中にクリアするための推奨事項と比べると、テーブル モデルのキャッシュをクリアするための推奨事項はあまり多くありません。 機密データを含むテーブル モデルの配置を管理していない場合は、キャッシュをクリアするために実施される特定の管理タスクはありません。  
   
-## Analysis Services モデルのキャッシュをクリアする  
+## <a name="clear-the-cache-for-analysis-services-models"></a>Analysis Services モデルのキャッシュをクリアする  
  キャッシュをクリアするには、XMLA と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用します。 データベース、キューブ、ディメンション、テーブルのキャッシュ、またはメジャー グループ レベルのキャッシュをクリアできます。 次の手順は、データベース レベルでキャッシュをクリアするために、多次元モデルとテーブル モデルの両方に適用されます。  
   
 > [!NOTE]  
@@ -47,15 +52,15 @@ caps.handback.revision: 11
   
  キャッシュをクリアするには、XMLA クエリの **ClearCache** ステートメントに、オブジェクトの識別子を指定する必要があります。 このトピックの最初のステップでは、オブジェクト識別子を取得する方法を説明します。  
   
-#### 手順 1: オブジェクトの識別子を取得する  
+#### <a name="step-1-get-the-object-identifier"></a>手順 1: オブジェクトの識別子を取得する  
   
-1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でオブジェクトを右クリックし、**[プロパティ]** を選択して、**[プロパティ]** ペインの ID プロパティの値をコピーします。 この方法は、データベース、キューブ、ディメンション、またはテーブルに使用できます。  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でオブジェクトを右クリックし、 **[プロパティ]**を選択して、 **[プロパティ]** ペインの ID プロパティの値をコピーします。 この方法は、データベース、キューブ、ディメンション、またはテーブルに使用できます。  
   
-2.  メジャー グループの ID を取得するには、メジャー グループを右クリックし、**[メジャー グループをスクリプト化]** を選択します。 **[作成]** または **[変更]**のいずれかを選択し、クエリをウィンドウに送信します。 メジャー グループの ID は、オブジェクト定義に表示されます。 オブジェクト定義の ID をコピーします。  
+2.  メジャー グループの ID を取得するには、メジャー グループを右クリックし、 **[メジャー グループをスクリプト化]**を選択します。 **[作成]** または **[変更]**のいずれかを選択し、クエリをウィンドウに送信します。 メジャー グループの ID は、オブジェクト定義に表示されます。 オブジェクト定義の ID をコピーします。  
   
-#### 手順 2: クエリを実行する  
+#### <a name="step-2-run-the-query"></a>手順 2: クエリを実行する  
   
-1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でデータベースを右クリックし、**[新しいクエリ]** をポイントして、**[XMLA]** を選択します。  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でデータベースを右クリックし、 **[新しいクエリ]**をポイントして、 **[XMLA]**を選択します。  
   
 2.  XMLA クエリ ウィンドウに次のコードをコピーします。 **DatabaseID** を現在の接続のデータベース ID に変更します。  
   
@@ -88,8 +93,7 @@ caps.handback.revision: 11
     </return>  
     ```  
   
-## 参照  
- [Analysis Services の管理タスクのスクリプト作成](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md)   
+## <a name="see-also"></a>参照  
  [Analysis Services インスタンスの監視](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   

@@ -1,34 +1,42 @@
 ---
-title: "Invoke-ASCmd コマンドレット | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Invoke-ascmd コマンドレット |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 2896b74a-3911-4b3f-89ab-bb375bdb34d8
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 366263980ae7ad9d5a792e6525888080a38ebbf6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Invoke-ASCmd コマンドレット
+# <a name="invoke-ascmd-cmdlet"></a>Invoke-ASCmd コマンドレット
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   データベース管理者は、XMLA スクリプト、多次元式 (MDX)、データ マイニング拡張機能 (DMX) ステートメント、または表形式モデル スクリプト言語 (TMSL) スクリプトを実行できます。  
   
  TMSL は、SQL Server 2016 Analysis Services インスタンス上の表形式サーバー モードでのみサポートされます。  
   
  データベースまたはその他のオブジェクトを作成する場合は、これのコマンドレットをスクリプト入力ファイルと共に使用します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
  `Invoke-ASCmd –Query <string> [-Server <string>] [-Database <string>] [-Credential <PSCredential>] [-ConnectionTimeout <int>] [-QueryTimeout <int>] [-Variable <string[]>] [-TraceFile <string>] [-TraceFileFormat <TraceFileFormatOption>] [-TraceFileDelimiter <string>] [-TraceTimeout <int>] [-TraceLevel <TraceLevelOption>] [<CommonParameters>]`  
   
  `Invoke-ASCmd –InputFile <string> [-Server <string>] [-Database <string>] [-Credential <PSCredential>] [-ConnectionTimeout <int>] [-QueryTimeout <int>] [-Variable <string[]>] [-TraceFile <string>] [-TraceFileFormat <TraceFileFormatOption>] [-TraceFileDelimiter <string>] [-TraceTimeout <int>] [-TraceLevel <TraceLevelOption>] [<CommonParameters>]`  
   
-## Description  
+## <a name="description"></a>Description  
  Invoke ASCmd コマンドレットは、入力ファイルに含まれるクエリまたはスクリプトを実行できます。  
   
  XMLA でサポートされるコマンド: Alter、Backup、Batch、BeginTransaction、Cancel、ClearCache、CommitTransaction、Create、Delete、DesignAggregations、Drop、Insert、Lock、MergePartitions、NotifyTableChange、Process、Restore、RollbackTransaction、Statement (MDX クエリと DMX ステートメントの実行に使用)、Subscribe、Synchronize、Unlock、Update、UpdateCells。  
@@ -37,10 +45,10 @@ caps.handback.revision: 15
   
  このコマンドレットは、HTTP アクセスに対して Analysis Services インスタンスを構成している場合に使用できる、–Credential パラメーターをサポートします。 –Credential パラメーターは、Windows のユーザー ID を提供する PSCredential オブジェクトを受け取ります。 IIS は、Analysis Services に接続する際、このユーザーの権限を借用します。 スクリプトを実行するために、この ID には、Analysis Services インスタンスに対するシステム管理者権限が必要です。  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
   
-### -Query \<string>  
- ファイル内にではなくコマンド ラインから直接、実際のスクリプト、クエリ、またはステートメントを指定します。 パイプライン入力としてクエリを指定することもできます。 **Invoke-AsCmd** を使用するときは、**–InputFile** または **–Query** パラメーターの値を指定する必要があります。  
+### <a name="-query-string"></a>-クエリ\<文字列 >  
+ ファイル内にではなくコマンド ラインから直接、実際のスクリプト、クエリ、またはステートメントを指定します。 パイプライン入力としてクエリを指定することもできます。 **Invoke-AsCmd** を使用するときは、 **–InputFile** または **–Query**パラメーターの値を指定する必要があります。  
   
 |||  
 |-|-|  
@@ -50,8 +58,8 @@ caps.handback.revision: 15
 |パイプライン入力の受け入れ|True (ByValue)|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### -InputFile \<string>  
- XMLA スクリプト、MDX クエリ、DMX ステートメント、または TMSL スクリプト (JSON 形式) が記述されているファイルを指定します。 **Invoke-AsCmd** を使用するときは、**–InputFile** または **–Query** パラメーターの値を指定する必要があります。  
+### <a name="-inputfile-string"></a>-Inputfile/-i\<文字列 >  
+ XMLA スクリプト、MDX クエリ、DMX ステートメント、または TMSL スクリプト (JSON 形式) が記述されているファイルを指定します。 **Invoke-AsCmd** を使用するときは、 **–InputFile** または **–Query**パラメーターの値を指定する必要があります。  
   
 |||  
 |-|-|  
@@ -61,7 +69,7 @@ caps.handback.revision: 15
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### -Server \<string>  
+### <a name="-server-string"></a>-サーバー\<文字列 >  
  コマンドレットが接続して実行する Analysis Services インスタンスを指定します。 サーバー名が指定されていない場合は、localhost に接続されます。 既定のインスタンスの場合は、サーバー名のみを指定します。 名前付きインスタンスの場合は、servername \instancename 形式を使用します。 HTTP 接続では、http[s]://server[:port]/virtualdirectory/msmdpump.dll 形式を使用します。  
   
 |||  
@@ -72,7 +80,7 @@ caps.handback.revision: 15
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### -Database \<string>  
+### <a name="-database-string"></a>-データベース\<文字列 >  
  MDX クエリまたは DMX ステートメントの実行対象であるデータベースを指定します。 XMLA スクリプトにはデータベース名が埋め込まれているため、コマンドレットで XMLA スクリプトを実行する場合、Database パラメーターは無視されます。  
   
 |||  
@@ -83,14 +91,14 @@ caps.handback.revision: 15
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### -Credential \<PSCredential>  
+### <a name="-credential-pscredential"></a>-Credential \<PSCredential >  
  Windows ユーザー名とパスワードを提供する PSCredential オブジェクトを指定します。 基本認証を使用して、HTTP アクセスに対する Analysis Services インスタンスを構成している場合のみ、このパラメーターを指定します。 統合セキュリティを使用するネイティブ接続では、このパラメーターは無視されます。  
   
  このパラメーターが存在する場合、パラメーターで提供される資格情報は接続文字列に付加されます。 IIS は、Analysis Services に接続する際、このユーザー ID を借用します。 資格情報を指定していない場合は、ツールを実行しているユーザーの既定の Windows アカウントが使用されます。  
   
- このパラメーターを使用するには、まず、Get-Credential を使用して PSCredential オブジェクトを作成し、ユーザー名とパスワードを指定します (`$Cred=Get-Credential “adventure-works\admin”` など)。 その後、このオブジェクトを –Credential パラメーター `(-Credential:$Cred`) にパイプできます。  
+ このパラメーターを使用するには、まず、Get-Credential を使用して PSCredential オブジェクトを作成し、ユーザー名とパスワードを指定します ( `$Cred=Get-Credential “adventure-works\admin”`など)。 その後、このオブジェクトを –Credential パラメーター `(-Credential:$Cred`) にパイプできます。  
   
- 認証と資格情報の使用法の詳細については、「[PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)」(Analysis Services での PowerShell スクリプティング) を参照してください。 HTTP アクセスの詳細については、「[インターネット インフォメーション サービス (IIS) 8.0 上の Analysis Services への HTTP アクセスの構成](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md)」を参照してください。  
+   HTTP アクセスの詳細については、「[インターネット インフォメーション サービス &#40;IIS&#41; 8.0 上の Analysis Services への HTTP アクセスの構成](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)」を参照してください。  
   
 |||  
 |-|-|  
@@ -100,8 +108,8 @@ caps.handback.revision: 15
 |パイプライン入力の受け入れ|True (ByValue)|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### -ConnectionTimeout \<int>  
- Analysis Services インスタンスへの接続がタイムアウトするまでの秒数を指定します。 タイムアウト値には、0 ～ 65,534 の範囲の整数値を指定する必要があります。 0 を指定した場合、接続の試行はタイムアウトしません。  
+### <a name="-connectiontimeout-int"></a>-Connectiontimeout & \<int >  
+ Analysis Services インスタンスへの接続がタイムアウトするまでの秒数を指定します。タイムアウト値には、0 ～ 65,534 の範囲の整数値を指定する必要があります。 0 を指定した場合、接続の試行はタイムアウトしません。  
   
 |||  
 |-|-|  
@@ -111,8 +119,8 @@ caps.handback.revision: 15
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### -QueryTimeout \<int>  
- クエリがタイムアウトになる時間を秒単位で指定します。 タイムアウト値を指定しない場合、クエリはタイムアウトしません。 タイムアウトには、1 ～ 65,535 の範囲の整数値を指定してください。  
+### <a name="-querytimeout-int"></a>-Querytimeout \<int >  
+ クエリがタイムアウトになる時間を秒単位で指定します。タイムアウト値を指定しない場合、クエリはタイムアウトしません。タイムアウトには、1 ～ 65,535 の範囲の整数値を指定してください。  
   
 |||  
 |-|-|  
@@ -122,7 +130,7 @@ caps.handback.revision: 15
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### -Variable \<string[]>  
+### <a name="-variable-string"></a>-可変\<string[] >  
  追加のスクリプト変数を指定します。 各変数は、名前と値のペアです。 スペースや制御文字が値に含まれている場合は、二重引用符で囲む必要があります。 複数の変数とその値を指定するには、PowerShell 配列を使用します。  
   
 |||  
@@ -133,7 +141,7 @@ caps.handback.revision: 15
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### -TraceFile \<string>  
+### <a name="-tracefile-string"></a>-Tracefile &\<文字列 >  
  XMLA スクリプト、MDX クエリ、または DMX ステートメントを実行しているときに Analysis Services トレース イベントを受け取るファイルを指定します。 ファイルが既に存在する場合は、自動的にそのファイルが上書きされます (-TraceLevel:Duration および –TraceLevel:DurationResult パラメーター設定を使用して作成されるトレース ファイルは例外です)。 空白文字を含むファイル名は引用符 (" ") で囲む必要があります。 ファイル名が無効な場合は、エラー メッセージが生成されます。  
   
 |||  
@@ -144,7 +152,7 @@ caps.handback.revision: 15
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### -TraceFileFormat \<string>  
+### <a name="-tracefileformat-string"></a>-Tracefileformat &\<文字列 >  
  –TraceFile パラメーター (このパラメーターを指定している場合) のファイル形式を指定します。 使用できるオプションは text または csv です。 既定値は "csv" です。  
   
 |||  
@@ -155,7 +163,7 @@ caps.handback.revision: 15
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### -TraceFileDelimiter \<string>  
+### <a name="-tracefiledelimiter-string"></a>-Tracefiledelimiter &\<文字列 >  
  トレース ファイルの形式として csv を指定している場合は、どの文字をトレース ファイルの区切り記号として使用するかを指定します。 既定値は | (パイプ、つまり縦棒) です。  
   
 |||  
@@ -166,7 +174,7 @@ caps.handback.revision: 15
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### -TraceTimeout \<int>  
+### <a name="-tracetimeout-int"></a>-Tracetimeout & \<int >  
  トレースを終了するまで Analysis Services エンジンが待機する秒数を指定します (–TraceFile パラメーターを指定している場合)。 指定された秒数の間、トレース メッセージが記録されなかった場合、トレースが終了したと見なされます。 トレース タイムアウトの既定値は 5 秒です。  
   
 |||  
@@ -177,7 +185,7 @@ caps.handback.revision: 15
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### -TraceLevel \<TraceLevelOption>  
+### <a name="-tracelevel-traceleveloption"></a>-Tracelevel \<TraceLevelOption >  
  トレース ファイルにどのようなデータを集めて記録するかを指定します。 指定できる値は、High、Medium、Low、Duration、DurationResult です。  
   
 |||  
@@ -188,10 +196,10 @@ caps.handback.revision: 15
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### \<CommonParameters>  
- このコマンドレットは、-Verbose、-Debug、-ErrorAction、-ErrorVariable、-OutBuffer、および –OutVariable の共通パラメーターをサポートしています。 詳細については、「[About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)」を参照してください。  
+### <a name="commonparameters"></a>\<CommonParameters >  
+ このコマンドレットは、-Verbose、-Debug、-ErrorAction、-ErrorVariable、-OutBuffer、および –OutVariable の共通パラメーターをサポートしています。 詳細については、「 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)」を参照してください。  
   
-## 入力および出力  
+## <a name="inputs-and-outputs"></a>入力および出力  
  入力型は、コマンドレットにパイプできるオブジェクトの型です。 戻り値の型は、コマンドレットが返すオブジェクトの型です。  
   
 |||  
@@ -199,7 +207,7 @@ caps.handback.revision: 15
 |入力|PSObject|  
 |出力|文字列|  
   
-## 例 1 (XMLA 入力ファイル)  
+## <a name="example-1-xmla-input-file"></a>例 1 (XMLA 入力ファイル)  
   
 ```  
 Invoke-ASCmd –InputFile:"C:\MyFolder\DiscoverConnections.xmla"  
@@ -219,7 +227,7 @@ Invoke-ASCmd –InputFile:"C:\MyFolder\DiscoverConnections.xmla"
 </Discover>  
 ```  
   
-## 例 2 (TMSL 入力ファイル)  
+## <a name="example-2-tmsl-input-file"></a>例 2 (TMSL 入力ファイル)  
  この例は、スクリプトが TMSL (JSON) であり、SQL Server 2016 の表形式インスタンスを必要とする点を除いて、最初の例と同じです。 TMSL スクリプトは、SQL Server Management Studio で生成できます。  
   
  複数のインスタンスがあり、表形式インスタンスが名前付きインスタンスである場合は、必ずサーバー名を設定してください。  
@@ -228,16 +236,13 @@ Invoke-ASCmd –InputFile:"C:\MyFolder\DiscoverConnections.xmla"
 Invoke-ASCmd –InputFile "C:\folder-name\T1200-NewDB.json" -Server "server-name\instance-name"  
 ```  
   
-## 例 3 (クエリ)  
+## <a name="example-3-query"></a>例 3 (クエリ)  
   
 ```  
 Invoke-ASCmd -Database:"Adventure Works DW" -Query:"<Discover xmlns='urn:schemas-microsoft-com:xml analysis'><RequestType>DISCOVER_DATASOURCES</RequestType><Restrictions></Restrictions><Properties></Properties></Discover>"  
 ```  
   
- XMLA 検出クエリは、分析サーバーで使用できるデータ ソースとそれらに接続するために必要な情報を返します。 結果は XML 内です。 読みやすくするために、出力を XML ファイルにパイプして (たとえば、`| Out-file C:\Results\XMLAQueryOutput.xml` をコマンドに追加する)、ブラウザーまたは構造化された XML をサポートする他のアプリケーションに結果を表示することができます。  
+ XMLA 検出クエリは、分析サーバーで使用できるデータ ソースとそれらに接続するために必要な情報を返します。 結果は XML 内です。 読みやすくするために、出力を XML ファイルにパイプして (たとえば、 `| Out-file C:\Results\XMLAQueryOutput.xml` をコマンドに追加する)、ブラウザーまたは構造化された XML をサポートする他のアプリケーションに結果を表示することができます。  
   
-## 参照  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [PowerShell を使用したテーブル モデルの管理](http://go.microsoft.com/fwlink/?linkID=227685)  
   
   

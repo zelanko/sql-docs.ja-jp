@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c7ece8c33a4c110898134da60aea6595b936e1e9
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: e718e67c8756d691338a614c775c2ff71df4b06c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>[列パターン プロファイル要求] のオプション (データ プロファイル タスク)
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **Delimiters** 既定では、区切り記号の一覧には、空白文字、水平タブ文字 (\t)、改行文字 (\n)、および復帰文字 (\r) が含まれます。 追加の区切り記号を指定できますが、既定の区切り記号を削除することはできません。  
   
--   **Symbols** 既定では、**記号**の一覧には、`,.;:-"'`~=&/@!?()<>[]{}|#*^%`. For example, if the symbols are "`()-`" が含まれます。値 "(425) 123-4567" は ["(", "425", ")", "123", "-", "4567", ")"] にトークン化されます。  
+-   **シンボル**既定では、一連の**シンボル**、次の文字が含まれています:`,.;:-"'~=&/@!?()<>[]{}|#*^%`です。 たとえば、記号が "`()-`" の場合、値 "(425) 123-4567" は ["(", "425", ")", "123", "-", "4567", ")"] としてトークン化されます。  
   
  1 つの文字を区切り記号と記号の両方に使用することはできません。  
   
@@ -147,7 +147,8 @@ ms.lasthandoff: 08/03/2017
  詳細については、このトピックの「タグ テーブルの使用方法について」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [データ プロファイル タスク エディターと &#40; です。「全般」 ページと &#41; です。](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [単一テーブル クイック プロファイル フォーム &#40; のデータ プロファイル タスクと &#41; です。](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [データ プロファイル タスク エディター ([全般] ページ)](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [単一テーブル クイック プロファイル フォーム (&) #40 です。 データ プロファイル タスク"&"#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
+

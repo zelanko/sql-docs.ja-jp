@@ -1,26 +1,31 @@
 ---
-title: "多次元モデル内のメジャーおよびメジャー グループの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "メジャー グループ [Analysis Services]、定義"
+title: "多次元モデル内のメジャーおよびメジャー グループの作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- measure groups [Analysis Services], defining
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8dc45f7d47484dbc3b1d5e7684f4e3a5d3075dc2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# 多次元モデル内のメジャーおよびメジャー グループの作成
+# <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>多次元モデル内のメジャーおよびメジャー グループの作成
   *メジャー* は、合計値、度数、最小値、最大値、平均値、または自ら作成したカスタム MDX 式のように、数値のデータ値を集計したものです。 *メジャー グループ* は、1 つ以上のメジャーに対応するコンテナーです。 すべてのメジャーは、メジャーが 1 つしかない場合を含め、1 つのメジャー グループ内に存在します。 キューブには、少なくとも 1 つのメジャーとメジャー グループが必要です。  
   
  このトピックのセクションは次のとおりです。  
@@ -41,8 +46,8 @@ caps.handback.revision: 17
 |||  
 |-|-|  
 |キューブ ウィザード|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でキューブ ウィザードを実行してキューブを作成します。<br /><br /> ソリューション エクスプローラーで **[キューブ]** を右クリックし、**[新しいキューブ]** を選択します。 これらの手順については、「[多次元モデリング (Adventure Works チュートリアル)](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)」を参照してください。<br /><br /> 既存のデータ ウェアハウスのテーブルに基づいてキューブを作成すると、メジャーおよびメジャー グループの定義がキューブの作成プロセスの一部として具体化されます。 ウィザードで、キューブ内のメジャーとメジャー グループのオブジェクトのベースとして使用するファクトとファクト テーブルを選択します。|  
-|[新しいメジャー] ダイアログ|キューブが既に [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] に存在していることを前提に、キューブ デザイナーでソリューション エクスプローラー内のキューブ名をダブルクリックして開きます。 [メジャー] ペインで、ソース テーブル、列、集計の型を指定し、最上位のノードを右クリックして新しいメジャー グループまたは新しいメジャーを作成します。 この方法を使用するには、構築済みの関数の固定リストから集計の方法を選択することが必要です。 より一般的に使用されている集計の説明については、「 [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) 」を参照してください。|  
-|計算されるメンバー|計算されるメンバーについては、いつどのように作成するかを制御できるため、それにより [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でキューブに柔軟性と分析機能が追加されます。 ユーザー セッションの期間中、または調査の一部としての Management Studio では、一時的にのみメジャーが必要になることがあります。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、[計算] タブを開いて計算されるメンバーを新規作成します。<br /><br /> メジャーを MDX 式のベースにする場合は、この方法を選択します。 詳細については次のトピックを参照してください: 「[MDX 内でのメジャーの作成](../../analysis-services/multidimensional-models/mdx/building-measures-in-mdx.md)」、「[計算](../../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)」、[多次元モデルの計算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)」、「[MDX スクリプティングの基礎 (Analysis Services)](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)」。|  
+|[新しいメジャー] ダイアログ|キューブが既に [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に存在していることを前提に、キューブ デザイナーでソリューション エクスプローラー内のキューブ名をダブルクリックして開きます。 [メジャー] ペインで、ソース テーブル、列、集計の型を指定し、最上位のノードを右クリックして新しいメジャー グループまたは新しいメジャーを作成します。 この方法を使用するには、構築済みの関数の固定リストから集計の方法を選択することが必要です。 より一般的に使用されている集計の説明については、「 [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) 」を参照してください。|  
+|計算されるメンバー|計算されるメンバーについては、いつどのように作成するかを制御できるため、それにより [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でキューブに柔軟性と分析機能が追加されます。 ユーザー セッションの期間中、または調査の一部としての Management Studio では、一時的にのみメジャーが必要になることがあります。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、[計算] タブを開いて計算されるメンバーを新規作成します。<br /><br /> メジャーを MDX 式のベースにする場合は、この方法を選択します。 詳細については次のトピックを参照してください: 「[MDX 内でのメジャーの作成](../../analysis-services/multidimensional-models/mdx/mdx-building-measures.md)」、「[計算](../../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)」、[多次元モデルの計算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)」、「[MDX スクリプティングの基礎 (Analysis Services)](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)」。|  
 |MDX または XMLA|計算される新しいメジャーを含めるには、SQL Server Management Studio で、MDX または XMLA を実行してデータベースを変更します。 この方法は、ソリューションをサーバーに配置した後の、データのアドホック テストに役立ちます。 「 [Document and Script an Analysis Services Database](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)」を参照してください。|  
   
 ##  <a name="bkmk_comps"></a> メジャーのコンポーネント  
@@ -50,7 +55,7 @@ caps.handback.revision: 17
   
 |||  
 |-|-|  
-|**source**|ほとんどのメジャーは、AdventureWorks データ ウェアハウス内の Internet Sales (インターネット売上) や Reseller Sales (販売店売上) テーブルにある Sales Amount 列など、外部データ ウェアハウス内のファクト テーブルの数値列に由来していますが、定義する計算全体に基づいてメジャーを新規作成することもできます。<br /><br /> ディメンション テーブルの属性列は、メジャーの定義に使用できますが、これらのメジャーの集計動作は、通常、準加法または非加法です。 準加法の動作の詳細については、「[準加法の動作の定義](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)」を参照してください。|  
+|**source**|ほとんどのメジャーは、AdventureWorks データ ウェアハウス内の Internet Sales (インターネット売上) や Reseller Sales (販売店売上) テーブルにある Sales Amount 列など、外部データ ウェアハウス内のファクト テーブルの数値列に由来していますが、定義する計算全体に基づいてメジャーを新規作成することもできます。<br /><br /> ディメンション テーブルの属性列は、メジャーの定義に使用できますが、これらのメジャーの集計動作は、通常、準加法または非加法です。 準加法の動作の詳細については、「 [準加法の動作の定義](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)」を参照してください。|  
 |**集計 (aggregation)**|既定では、各ディメンションに従ってメジャーが集計されます。 ただし、 **AggregateFunction** プロパティを使用するとこの動作を変更できます。 一覧については [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) を参照してください。|  
 |**プロパティ**|プロパティの追加説明については [Configure Measure Properties](../../analysis-services/multidimensional-models/configure-measure-properties.md) を参照してください。|  
   
@@ -69,12 +74,12 @@ caps.handback.revision: 17
   
 -   メジャー列によって、メジャー グループに含まれるメジャーが定義されます。  
   
- キューブ ウィザードを実行すると、外部キーはフィルターで除外されます。 選択する残りの列の一覧に、メジャー列と、外部キーとして識別されないメジャー列および属性列が表示されます。 **FactSalesQuote** の例では、 **CalendarYear** 、 **CalendarQuarter** 、および **SalesAmountQuota**がウィザードにより表示されます。 多次元モデルの場合、実行可能なメジャーは **SalesAmountQuota** メジャー列だけとなります。 日付に基づくその他の列は、各クォータの金額を修飾するために存在します。 キューブ ウィザードのメジャーの一覧から他の列、つまり **CalendarYear** と **CalendarQuarter** を除外する (または後ほど、デザイナーでメジャー グループから削除する) 必要があります。  
+ キューブ ウィザードを実行すると、外部キーはフィルターで除外されます。選択する残りの列の一覧に、メジャー列と、外部キーとして識別されないメジャー列および属性列が表示されます。 **FactSalesQuote** の例では、 **CalendarYear** 、 **CalendarQuarter** 、および **SalesAmountQuota**がウィザードにより表示されます。 多次元モデルの場合、実行可能なメジャーは **SalesAmountQuota** メジャー列だけとなります。 日付に基づくその他の列は、各クォータの金額を修飾するために存在します。 キューブ ウィザードのメジャーの一覧から他の列、つまり **CalendarYear** と **CalendarQuarter**を除外する (または後ほど、デザイナーでメジャー グループから削除する) 必要があります。  
   
  この説明から除外すべき点は、ウィザードによって提供されるすべての列がメジャーとして役立つわけではないということです。 どの列をメジャーとして使用するかを決定する際は、データの理解とデータの使用方法を信頼して決定してください。 データを調べるには、データ ソース ビュー内のテーブルを右クリックしてください。メジャーとして使用する列を特定するのに役立ちます。 詳細については、「[Explore Data in a Data Source View (Analysis Services)](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)」 (データ ソース ビューでのデータの検索 (Analysis Services)) を参照してください。  
   
 > [!NOTE]  
->  すべてのメジャーがファクト テーブルの列に格納されている値から直接派生するわけではありません。 たとえば、Adventure Works DW サンプル キューブの **Sales Quota** メジャー グループに定義されている **Sales Person Count** メジャーは、**FactSalesQuota** ファクト テーブルの **EmployeeKey** 列にある一意の値のカウント (または個別のカウント) に実際に基づいています。  
+>  すべてのメジャーがファクト テーブルの列に格納されている値から直接派生するわけではありません。 たとえば、Adventure Works DW サンプル キューブの **Sales Quota** メジャー グループに定義されている **Sales Person Count** メジャーは、 **FactSalesQuota** ファクト テーブルの **EmployeeKey** 列にある一意の値のカウント (または個別のカウント) に実際に基づいています。  
   
 ##  <a name="bkmk_grain"></a> メジャー グループの粒度  
  メジャー グループには、ファクト テーブルによってサポートされている詳細のレベルを参照する、関連付けられている粒度があります。 粒度は、ディメンションへの外部キーのリレーションシップを介して設定されます。  
@@ -85,8 +90,8 @@ caps.handback.revision: 17
   
  キューブ デザイナーの **[ディメンションの使用法]** タブを使用すると、特定のディメンションに関してメジャー グループの粒度を指定できます。 ディメンションのリレーションシップの詳細については、「 [Dimension Relationships](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)」を参照してください。  
   
-## 「  
+## <a name="see-also"></a>「  
  [多次元モデルのキューブ](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
- [メジャーおよびメジャー グループ](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
+ [メジャーとメジャー グループ](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
   
   

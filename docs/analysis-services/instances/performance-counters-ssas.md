@@ -1,35 +1,40 @@
 ---
-title: "パフォーマンス カウンター (SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "パフォーマンス カウンター (SSAS) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e2d625f6c9060f32fb2a2dc676c84c673f55c8f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# パフォーマンス カウンター (SSAS)
+# <a name="performance-counters-ssas"></a>パフォーマンス カウンター (SSAS)
   パフォーマンス モニターを使用すると、Microsoft SQL Server Analysis Services (SSAS) インスタンスのパフォーマンスをパフォーマンス カウンターで監視できます。  
   
- パフォーマンス モニターは、リソース使用量を追跡する [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール (MMC) スナップインです。 この MMC スナップインを起動するには、コマンド プロンプトで「**PerfMon**」と入力するか、コントロール パネルで **[管理ツール]** をクリックして、**[パフォーマンス モニター]** をクリックします。 パフォーマンス モニターを使用すると、定義済みのオブジェクトやカウンターを使用してサーバーおよびプロセスのパフォーマンスと利用状況を追跡でき、ユーザー定義のカウンターを使用するとイベントを監視できます。 パフォーマンス モニターでは、イベントに関するデータではなく、メモリの使用量、アクティブなトランザクションの数、CPU の利用状況など、イベントに関する数が収集されます。 また、特定のカウンターにしきい値を設定して、オペレーターに通知する警告を生成できます。  
+ パフォーマンス モニターは、リソース使用量を追跡する [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール (MMC) スナップインです。 この MMC スナップインを起動するには、コマンド プロンプトで「 **PerfMon** 」と入力するか、コントロール パネルで **[管理ツール]**をクリックして、 **[パフォーマンス モニター]**をクリックします。 パフォーマンス モニターを使用すると、定義済みのオブジェクトやカウンターを使用してサーバーおよびプロセスのパフォーマンスと利用状況を追跡でき、ユーザー定義のカウンターを使用するとイベントを監視できます。 パフォーマンス モニターでは、イベントに関するデータではなく、メモリの使用量、アクティブなトランザクションの数、CPU の利用状況など、イベントに関する数が収集されます。 また、特定のカウンターにしきい値を設定して、オペレーターに通知する警告を生成できます。  
   
  パフォーマンス モニターでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のリモート インスタンスとローカル インスタンスを監視できます。 詳細については、「 [パフォーマンス モニターを使用する](http://technet.microsoft.com/library/cc749115.aspx)」を参照してください。  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で使用できるカウンターの説明をパフォーマンス モニターに表示するには、 **[カウンターの追加]** ダイアログ ボックスを開き、パフォーマンス オブジェクトを選択して **[説明を表示する]**をクリックします。 最も重要なカウンターは、CPU の使用率、メモリの使用量、ディスクの入出力レートです。 最初はこれらの重要なカウンターを使用することから始めて、監視によってその他のものが改善される見込みが立った場合に、より詳細なカウンターの利用に移ることをお勧めします。 使用できるカウンターの詳細については、「 [SQL Server 2008 R2 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で使用できるカウンターの説明をパフォーマンス モニターに表示するには、 **[カウンターの追加]** ダイアログ ボックスを開き、パフォーマンス オブジェクトを選択して **[説明を表示する]**をクリックします。 最も重要なカウンターは、CPU の使用率、メモリの使用量、ディスクの入出力レートです。 最初はこれらの重要なカウンターを使用することから始めて、監視によってその他のものが改善される見込みが立った場合に、より詳細なカウンターの利用に移ることをお勧めします。 使用できるカウンターの詳細については、「 [SQL Server 2008 R2 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
  カウンターは、関連カウンターをより簡単に見つけることができるようにグループ化されます。  
   
-## グループ別カウンター  
+## <a name="counters-by-groups"></a>グループ別カウンター  
   
 |[グループ]|Description|  
 |-----------|-----------------|  
@@ -47,7 +52,7 @@ caps.handback.revision: 14
 |[ストレージ エンジン クエリ](#bkmk_StorageEngineQuery)|Microsoft Analysis Services のストレージ エンジン クエリに関連する統計。|  
 |[スレッド](#bkmk_Threads)|Microsoft Analysis Services のスレッドに関連する統計。|  
   
-###  <a name="bkmk_Cache"></a> Cache  
+###  <a name="bkmk_Cache"></a> キャッシュ  
  Microsoft Analysis Services の集計キャッシュに関連する統計。  
   
 |カウンター|Description|  
@@ -180,8 +185,8 @@ caps.handback.revision: 14
 |Filestore ページ エラー数/秒|Filestore ページ エラーの割合。|  
 |Filestore 読み取り数/秒|Filestore の 1 秒あたりの読み取りページ数。|  
 |Filestore KB 読み取り数/秒|Filestore KB の 1 秒あたりの読み取り数。|  
-|Filestore 書き込み数/秒|Filestore の 1 秒あたりの書き込みページ数。  書き込みは非同期に行われます。|  
-|Filestore KB 書き込み数/秒|Filestore KB の 1 秒あたりの書き込み数。  書き込みは非同期に行われます。|  
+|Filestore 書き込み数/秒|Filestore の 1 秒あたりのページ書き込み数。書き込みは非同期です。|  
+|Filestore KB 書き込み数/秒|Filestore の 1 秒あたりの書き込み KB 数。書き込みは非同期です。|  
 |Filestore IO エラー数/秒|Filestore IO エラーの割合。|  
 |Filestore IO エラー数|Filestore IO の合計エラー数。|  
 |確認済み Filestore クロック ページ数/秒|立ち退きを考慮するためページを確認しているバックグラウンド クリーナーの比率。|  

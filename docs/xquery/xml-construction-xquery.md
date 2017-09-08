@@ -1,0 +1,680 @@
+---
+title: "XML の構築 (XQuery) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+applies_to:
+- SQL Server
+dev_langs:
+- XML
+helpviewer_keywords:
+- white space [XQuery]
+- computed constructor
+- construct XML structures [XQuery]
+- constructors [XQuery]
+- prolog
+- direct constructor [SQL Server]
+- XML [SQL Server], construction
+- XQuery, XML construction
+ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
+caps.latest.revision: 44
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 28321952ab9629026ce23d46a3af82bb4cb6bd36
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="xml-construction-xquery"></a>XML の構築 (XQuery)
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+  XQuery で使用できます、**直接**と**計算**をクエリ内での XML 構造を構築するコンス トラクターです。  
+  
+> [!NOTE]  
+>  違いはありません、**直接**と**計算**コンス トラクターです。  
+  
+## <a name="using-direct-constructors"></a>直接コンストラクターの使用  
+ 直接コンストラクターを使用するときは、XML の構築時に XML 同様の構文を指定します。 次の例では、直接コンストラクターを使用した XML 構築を示しています。  
+  
+### <a name="constructing-elements"></a>要素の構築  
+ XML の表記法を使用して要素を構築できます。 次の例は、直接要素コンス トラクター式を使用し、作成、 \<ProductModel > 要素。 構築される要素には、次の 3 つの子要素があります。  
+  
+-   テキスト ノード。  
+  
+-   2 つの要素ノード\<概要 > と\<機能 >。  
+  
+    -   \<概要 > 要素が 1 つの子テキスト ノードを"Some description"の値。  
+  
+    -   \<機能 > 要素には次の 3 つの子の要素ノードでは、\<色 >、\<重み >、および\<保証 >。 これらの各ノードには、子テキスト ノードが 1 つあり、それぞれ "Red"、"25"、"2 years parts and labor" という値を持ちます。  
+  
+```  
+declare @x xml;  
+set @x='';  
+select @x.query('<ProductModel ProductModelID="111">;  
+This is product model catalog description.  
+<Summary>Some description</Summary>  
+<Features>  
+  <Color>Red</Color>  
+  <Weight>25</Weight>  
+  <Warranty>2 years parts and labor</Warranty>  
+</Features></ProductModel>')  
+  
+```  
+  
+ 作成された XML を次に示します。  
+  
+```  
+<ProductModel ProductModelID="111">  
+  This is product model catalog description.  
+  <Summary>Some description</Summary>  
+  <Features>  
+    <Color>Red</Color>  
+    <Weight>25</Weight>  
+    <Warranty>2 years parts and labor</Warranty>  
+  </Features>  
+</ProductModel>  
+```  
+  
+ この例で示しているように、定数式から要素を構築すると便利ですが、XQuery 言語機能の真の威力は、データベースから動的にデータを抽出する XML を構築できる点にあります。 中かっこを使用するとクエリ式を指定できます。 作成される XML では、クエリ式がその式の値に置き換えられます。 たとえば、次のクエリの構造、<`NewRoot`> 要素を 1 つの子要素 (<`e`>)。 要素の値 <`e`> は、中かっこ ("{... 内にパス式を指定することによって計算 }").  
+  
+```  
+DECLARE @x xml;  
+SET @x='<root>5</root>';  
+SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');  
+```  
+  
+ 中かっこはコンテキスト切り替えトークンとして機能し、XML の構築からクエリの評価へとクエリを切り替えます。 この場合は、中かっこ内の XQuery パス式で`/root`、評価し、結果が置き換えられます。  
+  
+ 結果を次に示します。  
+  
+```  
+<NewRoot>  
+  <e>  
+    <root>5</root>  
+  </e>  
+</NewRoot>  
+```  
+  
+ 次に示すクエリは先ほどのクエリと似ています。 ただし、中かっこで式を指定します、 **data()**のアトミック値を取得する関数、<`root`> 要素では、構築された要素に代入し、<`e`>。  
+  
+```  
+DECLARE @x xml;  
+SET @x='<root>5</root>';  
+DECLARE @y xml;  
+SET @y = (SELECT @x.query('  
+                           <NewRoot>  
+                             <e> { data(/root) } </e>  
+                           </NewRoot>' ));  
+SELECT @y;  
+```  
+  
+ 結果を次に示します。  
+  
+```  
+<NewRoot>  
+  <e>5</e>  
+</NewRoot>  
+```  
+  
+ コンテキスト切り替えトークンではなく、テキストの一部として中かっこを使用する場合は、次の例に示すように、"}}" や "{{" とすることでエスケープできます。  
+  
+```  
+DECLARE @x xml;  
+SET @x='<root>5</root>';  
+DECLARE @y xml;  
+SET @y = (SELECT @x.query('  
+<NewRoot> Hello, I can use {{ and  }} as part of my text</NewRoot>'));  
+SELECT @y;  
+```  
+  
+ 結果を次に示します。  
+  
+```  
+<NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
+```  
+  
+ 次のクエリは、直接要素コンストラクターを使用して要素を構築する別の例です。 この例でも、<`FirstLocation`> の値は、中かっこ内の式を実行することにより取得されます。 クエリ式では、Production.ProductModel テーブルの Instructions 列の最初のワーク センターの場所での製造手順が返されます。  
+  
+```  
+SELECT Instructions.query('  
+    declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+        <FirstLocation>  
+           { /AWMI:root/AWMI:Location[1]/AWMI:step }  
+        </FirstLocation>   
+') as Result   
+FROM Production.ProductModel  
+WHERE ProductModelID=7;  
+```  
+  
+ 結果を次に示します。  
+  
+```  
+<FirstLocation>  
+  <AWMI:step xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">  
+      Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>.   
+  </AWMI:step>  
+  <AWMI:step xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">  
+      Attach <AWMI:tool>Trim Jig TJ-26</AWMI:tool> to the upper and lower right corners of the aluminum sheet.   
+  </AWMI:step>  
+   ...  
+</FirstLocation>  
+```  
+  
+#### <a name="element-content-in-xml-construction"></a>XML の構築での要素の内容  
+ 次の例では、直接要素コンストラクターを使用して要素内容を構築する際の式の動作を示しています。 次の例では、直接要素コンストラクターで 1 つの式が指定されています。 この式では、構築される XML に 1 つのテキスト ノードが作成されます。  
+  
+```  
+declare @x xml;  
+set @x='  
+<root>  
+  <step>This is step 1</step>  
+  <step>This is step 2</step>  
+  <step>This is step 3</step>  
+</root>';  
+select @x.query('  
+<result>  
+ { for $i in /root[1]/step  
+    return string($i)  
+ }  
+</result>');  
+  
+```  
+  
+ 次に示す結果のように、式を評価した結果のアトミック値のシーケンスがテキスト ノードに追加されます。このシーケンスでは隣り合うアトミック値の間に空白が 1 つ追加されます。 構築される要素には子要素が 1 つあります。 結果に表示される値を含んだテキスト ノードを次に示します。  
+  
+```  
+<result>This is step 1 This is step 2 This is step 3</result>  
+```  
+  
+ 1 つの式ではなく、3 つのテキスト ノードを生成する 3 つの個別の式を指定すると、隣り合ったテキスト ノードが連結されて、作成される XML では 1 つのノードにまとめられます。  
+  
+```  
+declare @x xml;  
+set @x='  
+<root>  
+  <step>This is step 1</step>  
+  <step>This is step 2</step>  
+  <step>This is step 3</step>  
+</root>';  
+select @x.query('  
+<result>  
+ { string(/root[1]/step[1]) }  
+ { string(/root[1]/step[2]) }  
+ { string(/root[1]/step[3]) }  
+</result>');  
+```  
+  
+ 構築される要素ノードには、1 つの子があります。 結果に表示される値を含んだテキスト ノードを次に示します。  
+  
+```  
+<result>This is step 1This is step 2This is step 3</result>  
+```  
+  
+### <a name="constructing-attributes"></a>属性の構築  
+ 直接要素コンストラクターを使用して要素を作成するときに、次の例に示すように、XML 同様の構文を使用して、要素の属性を指定することもできます。  
+  
+```  
+declare @x xml;  
+set @x='';  
+select @x.query('<ProductModel ProductModelID="111">;  
+This is product model catalog description.  
+<Summary>Some description</Summary>  
+</ProductModel>')  
+```  
+  
+ 作成された XML を次に示します。  
+  
+```  
+<ProductModel ProductModelID="111">  
+  This is product model catalog description.  
+  <Summary>Some description</Summary>  
+</ProductModel>  
+```  
+  
+ 構築される要素 <`ProductModel`> は、ProductModelID 属性とこれらの子ノード。  
+  
+-   テキスト ノード`This is product model catalog description.`  
+  
+-   要素ノード <`Summary`>。 このノードには、`Some description` という子テキスト ノードが 1 つあります。  
+  
+ 属性を構築するときに、中かっこ内で式を使用して属性値を指定できます。 この場合、式の結果が属性値として返されます。  
+  
+ 次の例で、 **data()**関数は必須ではありません。 式の値は、属性に割り当てているので**data()**が指定された式の型指定された値を取得する暗黙的に適用します。  
+  
+```  
+DECLARE @x xml;  
+SET @x='<root>5</root>';  
+DECLARE @y xml;  
+SET @y = (SELECT @x.query('<NewRoot attr="{ data(/root) }" ></NewRoot>'));  
+SELECT @y;  
+```  
+  
+ 結果を次に示します。  
+  
+```  
+<NewRoot attr="5" />  
+```  
+  
+ 次に示す別の例では、LocationID 属性と SetupHrs 属性の構築に式を指定しています。 これらの式は、Instruction 列内の XML に対して評価されます。 式の型指定された値が属性に割り当てられます。  
+  
+```  
+SELECT Instructions.query('  
+    declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+        <FirstLocation   
+         LocationID="{ (/AWMI:root/AWMI:Location[1]/@LocationID)[1] }"  
+         SetupHrs = "{ (/AWMI:root/AWMI:Location[1]/@SetupHours)[1] }" >  
+           { /AWMI:root/AWMI:Location[1]/AWMI:step }  
+        </FirstLocation>   
+') as Result   
+FROM  Production.ProductModel  
+where ProductModelID=7;  
+```  
+  
+ 結果の一部を次に示します。  
+  
+```  
+<FirstLocation LocationID="10" SetupHours="0.5" >  
+  <AWMI:step …   
+  </AWMI:step>  
+  ...  
+</FirstLocation>  
+```  
+  
+#### <a name="implementation-limitations"></a>実装の制限事項  
+ 制限事項を次に示します。  
+  
+-   文字列や XQuery 式を複数使用したり、混在して使用する属性式はサポートされません。 たとえば、次のクエリに示すように、XML を構築する場所`Item`定数と、値は、`5`はクエリ式を評価することによって取得します。  
+  
+    ```  
+    <a attr="Item 5" />  
+    ```  
+  
+     文字列定数と式 ({/x}) を混在して使用していますが、このような方法はサポートされないので、次のクエリではエラーが返されます。  
+  
+    ```  
+    DECLARE @x xml  
+    SET @x ='<x>5</x>'  
+    SELECT @x.query( '<a attr="Item {/x}"/>' )   
+    ```  
+  
+     この場合、次の対応方法があります。  
+  
+    -   2 つのアトミック値を連結して 1 つの属性値を作成します。 この 2 つのアトミック値は、間に空白が挿入されて 1 つの属性値へとシリアル化されます。  
+  
+        ```  
+        SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
+        ```  
+  
+         結果を次に示します。  
+  
+        ```  
+        <a attr="Item 5" />  
+        ```  
+  
+    -   使用して、 [concat 関数](../xquery/functions-on-string-values-concat.md)結果の属性値に 2 つの文字列引数を連結します。  
+  
+        ```  
+        SELECT @x.query( '<a attr="{concat(''Item'', /x[1])}"/>' )   
+        ```  
+  
+         この場合、2 つの文字列値の間に空白が追加されません。 2 つの文字列値の間に空白が必要な場合は、明示的に空白を指定する必要があります。  
+  
+         結果を次に示します。  
+  
+        ```  
+        <a attr="Item5" />  
+        ```  
+  
+-   1 つの属性値としての複数の式はサポートされません。 たとえば、次のクエリではエラーが返されます。  
+  
+    ```  
+    DECLARE @x xml  
+    SET @x ='<x>5</x>'  
+    SELECT @x.query( '<a attr="{/x}{/x}"/>' )  
+    ```  
+  
+-   異種シーケンスはサポートされません。 次の例に示すように、1 つの属性値として異種シーケンスを割り当てようとすると、エラーが返されます。 この例では、文字列 "Item" と要素 <`x`> で構成された異種シーケンスが属性値として指定されています。  
+  
+    ```  
+    DECLARE @x xml  
+    SET @x ='<x>5</x>'  
+    select @x.query( '<a attr="{''Item'', /x }" />')  
+    ```  
+  
+     適用する場合、 **data()**関数、クエリは、式のアトミック値を取得するので`/x`、これは、文字列と連結されします。 アトミック値のシーケンスを次に示します。  
+  
+    ```  
+    SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
+    ```  
+  
+     結果を次に示します。  
+  
+    ```  
+    <a attr="Item 5" />  
+    ```  
+  
+-   属性ノード順は、静的な型チェック中ではなく、シリアル化中に適用されます。 たとえば、次のクエリは、属性以外のノードの後に属性を追加しようとするため、失敗します。  
+  
+    ```  
+    select convert(xml, '').query('  
+    element x { attribute att { "pass" }, element y { "Element text" }, attribute att2 { "fail" } }  
+    ')  
+    go  
+    ```  
+  
+     上記のクエリは、次のエラーを返します。  
+  
+    ```  
+    XML well-formedness check: Attribute cannot appear outside of element declaration. Rewrite your XQuery so it returns well-formed XML.  
+    ```  
+  
+### <a name="adding-namespaces"></a>名前空間の追加  
+ 直接コンストラクターを使用して XML を構築するときに、構築される要素と属性の名前を名前空間プレフィックスを使用して修飾できます。 次の方法でプレフィックスを名前空間にバインドできます。  
+  
+-   名前空間宣言属性を使用する方法。  
+  
+-   WITH XMLNAMESPACES 句を使用する方法。  
+  
+-   XQuery プロローグでのバインド。  
+  
+#### <a name="using-a-namespace-declaration-attribute-to-add-namespaces"></a>名前空間宣言属性を使用した名前空間の追加  
+ 次の例では、要素 <`a`> の構築で名前空間宣言属性を使用して、既定の名前空間を宣言しています。 子要素の構築 <`b`> 親要素で宣言された既定の名前空間の宣言を元に戻します。  
+  
+```  
+declare @x xml  
+set @x ='<x>5</x>'  
+select @x.query( '  
+  <a xmlns="a">  
+    <b xmlns=""/>  
+  </a>' )   
+```  
+  
+ 結果を次に示します。  
+  
+```  
+<a xmlns="a">  
+  <b xmlns="" />  
+</a>  
+```  
+  
+ プレフィックスを名前空間に割り当てることができます。 そのプレフィックスは要素 <`a`> の構築で指定されます。  
+  
+```  
+declare @x xml  
+set @x ='<x>5</x>'  
+select @x.query( '  
+  <x:a xmlns:x="a">  
+    <b/>  
+  </x:a>' )  
+```  
+  
+ 結果を次に示します。  
+  
+```  
+<x:a xmlns:x="a">  
+  <b />  
+</x:a>  
+```  
+  
+ XML の構築で既定の名前空間の宣言を解除できますが、名前空間プレフィックスの宣言を解除することはできません。 次のクエリでは、要素 <`b`> の構築で指定されたプレフィックスの宣言を解除できないので、エラーが返されます。  
+  
+```  
+declare @x xml  
+set @x ='<x>5</x>'  
+select @x.query( '  
+  <x:a xmlns:x="a">  
+    <b xmlns:x=""/>  
+  </x:a>' )  
+```  
+  
+ 新しく構築される名前空間は、クエリ内部で使用できます。 たとえば、次のクエリでは要素 <`FirstLocation`> の構築で名前空間を宣言し、LocationID 属性値と SetupHrs 属性値の式でプレフィックスを指定しています。  
+  
+```  
+SELECT Instructions.query('  
+        <FirstLocation xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+         LocationID="{ (/AWMI:root/AWMI:Location[1]/@LocationID)[1] }"  
+         SetupHrs = "{ (/AWMI:root/AWMI:Location[1]/@SetupHours)[1] }" >  
+           { /AWMI:root/AWMI:Location[1]/AWMI:step }  
+        </FirstLocation>   
+') as Result   
+FROM  Production.ProductModel  
+where ProductModelID=7  
+```  
+  
+ この方法で新しい名前空間プレフィックスを作成すると、このプレフィックスの既存の名前空間宣言よりも優先されることに注意してください。 たとえば、クエリ プロローグ内の名前空間宣言 `AWMI="http://someURI"` よりも <`FirstLocation`> 要素内の名前空間宣言が優先されます。  
+  
+```  
+SELECT Instructions.query('  
+declare namespace AWMI="http://someURI";  
+        <FirstLocation xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+         LocationID="{ (/AWMI:root/AWMI:Location[1]/@LocationID)[1] }"  
+         SetupHrs = "{ (/AWMI:root/AWMI:Location[1]/@SetupHours)[1] }" >  
+           { /AWMI:root/AWMI:Location[1]/AWMI:step }  
+        </FirstLocation>   
+') as Result   
+FROM  Production.ProductModel  
+where ProductModelID=7  
+```  
+  
+#### <a name="using-a-prolog-to-add-namespaces"></a>プロローグを使用した名前空間の追加  
+ 次の例では、構築される XML にどのように名前空間が追加されるのかを示しています。 既定の名前空間はクエリ プロローグ内で宣言されます。  
+  
+```  
+declare @x xml  
+set @x ='<x>5</x>'  
+select @x.query( '  
+           declare default element namespace "a";  
+            <a><b xmlns=""/></a>' )  
+```  
+  
+ 要素の作成に注意してください <`b`>、その値として空の文字列で名前空間宣言属性を指定します。 これにより、親要素で宣言されている既定の名前空間の宣言が解除されます。  
+  
+```  
+This is the result:  
+<a xmlns="a">  
+  <b xmlns="" />  
+</a>  
+```  
+  
+### <a name="xml-construction-and-white-space-handling"></a>XML の構築と空白文字の処理  
+ XML の構築では、要素の内容に空白文字を含めることができます。 空白文字は次のように処理されます。  
+  
+-   名前空間 Uri 内の空白文字は、XSD 型として扱われます**anyURI**です。 具体的には、空白文字は次のように処理されます。  
+  
+    -   最初と最後にある空白文字は切り捨てられます。  
+  
+    -   中間にある複数の空白値は 1 つの空白文字にまとめられます。  
+  
+-   属性の内容の途中にある改行文字は、空白に置き換えられます。 その他すべての空白文字はそのままです。  
+  
+-   要素内部の空白文字は保持されます。  
+  
+ 次の例では、XML の構築での空白文字の処理を示しています。  
+  
+```  
+-- line feed is repaced by space.  
+declare @x xml  
+set @x=''  
+select @x.query('  
+  
+declare namespace myNS="   http://       
+ abc/  
+xyz  
+  
+";  
+<test attr="    my   
+test   attr   
+value    " >  
+  
+<a>  
+  
+This     is  a  
+  
+test  
+  
+</a>  
+</test>  
+') as XML_Result  
+  
+```  
+  
+ 結果を次に示します。  
+  
+```  
+-- result  
+<test attr="<test attr="    my test   attr  value    "><a>  
+  
+This     is  a  
+  
+test  
+  
+</a></test>  
+"><a>  
+  
+This     is  a  
+  
+test  
+  
+</a></test>  
+```  
+  
+### <a name="other-direct-xml-constructors"></a>その他の直接 XML コンストラクター  
+ 処理命令や XML コメントのコンストラクターでは、対応する XML の構築と同じ構文を使用します。 テキスト ノードの計算コンストラクターもサポートされますが、主に、テキスト ノードを構築するために XML DML で使用されます。  
+  
+ **注**明示的なテキスト ノード コンス トラクターを使用しての例は、特定の例でを参照してください。 [insert & #40 です。XML DML"&"#41;](../t-sql/xml/insert-xml-dml.md).  
+  
+ 次のクエリでは、構築される XML に 1 つの要素、2 つの属性、1 つのコメント、および 1 つの処理命令が含まれます。 前にコンマが使用されて、<`FirstLocation`> シーケンスが構築されるため、します。  
+  
+```  
+SELECT Instructions.query('  
+  declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+   <?myProcessingInstr abc="value" ?>,   
+   <FirstLocation   
+        WorkCtrID = "{ (/AWMI:root/AWMI:Location[1]/@LocationID)[1] }"  
+        SetupHrs = "{ (/AWMI:root/AWMI:Location[1]/@SetupHours)[1] }" >  
+       <!-- some comment -->  
+       <?myPI some processing instructions ?>  
+       { (/AWMI:root/AWMI:Location[1]/AWMI:step) }  
+    </FirstLocation>   
+') as Result   
+FROM Production.ProductModel  
+where ProductModelID=7;  
+  
+```  
+  
+ 結果の一部を次に示します。  
+  
+```  
+<?myProcessingInstr abc="value" ?>  
+<FirstLocation WorkCtrID="10" SetupHrs="0.5">  
+  <!-- some comment -->  
+  <?myPI some processing instructions ?>  
+  <AWMI:step xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">I  
+  nsert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>.   
+  </AWMI:step>  
+    ...  
+/FirstLocation>  
+  
+```  
+  
+## <a name="using-computed-constructors"></a>計算コンストラクターの使用  
+ のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 このコンストラクターを使用する場合は、構築するノードの種類を特定するキーワードを指定します。 サポートされているキーワードは次の 3 つのみです。  
+  
+-   element  
+  
+-   属性 (attribute)  
+  
+-   text  
+  
+ 要素ノードと属性ノードの場合、これらのキーワードの後にノード名や式を続け、かっこで囲みます。このようにしてノードの内容が生成されます。 この後に示す例では、次の XML を構築しています。  
+  
+```  
+<root>  
+  <ProductModel PID="5">Some text <summary>Some Summary</summary></ProductModel>  
+</root>  
+```  
+  
+ 次に示すのは、計算コンストラクターを使用して XML を生成するクエリです。  
+  
+```  
+declare @x xml  
+set @x=''  
+select @x.query('element root   
+               {   
+                  element ProductModel  
+     {  
+attribute PID { 5 },  
+text{"Some text "},  
+    element summary { "Some Summary" }  
+ }  
+               } ')  
+  
+```  
+  
+ ノードの内容を生成する式ではクエリ式を指定できます。  
+  
+```  
+declare @x xml  
+set @x='<a attr="5"><b>some summary</b></a>'  
+select @x.query('element root   
+               {   
+                  element ProductModel  
+     {  
+attribute PID { /a/@attr },  
+text{"Some text "},  
+    element summary { /a/b }  
+ }  
+               } ')  
+```  
+  
+ XQuery 仕様で定義されているように、要素計算コントラクターおよび属性計算コンストラクターを使用すると、ノード名を計算できることに注意してください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で直接コンストラクターを使用している場合は、element や attribute などのノード名を定数リテラルとして指定する必要があります。 したがって、要素と属性については、直接コンストラクターと計算コンストラクター間に違いはありません。  
+  
+ 次の例では、構築されたノードのコンテンツがの Instructions 列に格納されている製造手順の XML から取得した、 **xml** ProductModel テーブルのデータ型。  
+  
+```  
+SELECT Instructions.query('  
+  declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+   element FirstLocation   
+     {  
+        attribute LocationID { (/AWMI:root/AWMI:Location[1]/@LocationID)[1] },  
+        element   AllTheSteps { /AWMI:root/AWMI:Location[1]/AWMI:step }  
+     }  
+') as Result   
+FROM  Production.ProductModel  
+where ProductModelID=7  
+```  
+  
+ 結果の一部を次に示します。  
+  
+```  
+<FirstLocation LocationID="10">  
+  <AllTheSteps>  
+    <AWMI:step> ... </AWMI:step>  
+    <AWMI:step> ... </AWMI:step>  
+    ...  
+  </AllTheSteps>  
+</FirstLocation>    
+```  
+  
+## <a name="additional-implementation-limitations"></a>実装のその他の制限事項  
+ 属性計算コンストラクターを使用して新しい名前空間を宣言することはできません。 また、次の計算では、コンス トラクターはサポートされていない[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
+  
+-   ドキュメント ノード計算コンストラクター  
+  
+-   処理命令計算コンストラクター  
+  
+-   コメント計算コンストラクター  
+  
+## <a name="see-also"></a>参照  
+ [XQuery 式](../xquery/xquery-expressions.md)  
+  
+  

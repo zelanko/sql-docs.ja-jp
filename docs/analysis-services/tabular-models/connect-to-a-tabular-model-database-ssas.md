@@ -1,24 +1,29 @@
 ---
-title: "テーブル モデル データベースへの接続 (SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "表形式モデル データベース (SSAS) への接続 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 85963e947dbed1fc2d1574a537d0e42f61fbba35
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# テーブル モデル データベースへの接続 (SSAS)
+# <a name="connect-to-a-tabular-model-database-ssas"></a>テーブル モデル データベースへの接続 (SSAS)
   テーブル モデルを構築し、Analysis Services テーブル モード サーバーに配置したら、クライアント アプリケーションからの使用を可能にするための権限を設定する必要があります。 このトピックでは、クライアント アプリケーションからデータベースに接続するための権限と方法について説明します。  
   
 > [!NOTE]  
@@ -47,7 +52,7 @@ caps.handback.revision: 19
   
  テーブル データを含む Excel ブックまたは [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] レポートを表示するには、Excel Services または Reporting Services を実行するアカウントに、Analysis Services インスタンスに対する管理権限が必要です。 これらのサービスが Analysis Services インスタンスによって信頼されるようにするには、管理権限が必要です。  
   
-#### サーバーに対する管理アクセス権の付与  
+#### <a name="grant-administrative-access-on-the-server"></a>サーバーに対する管理アクセス権の付与  
   
 1.  サーバーの全体管理で、[サービス アカウントの構成] ページを開きます。  
   
@@ -57,11 +62,11 @@ caps.handback.revision: 19
   
      次の手順では、これらのアカウントを Analysis Services インスタンスのサーバー ロールに追加します。  
   
-3.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに接続し、サーバー インスタンスを右クリックして **[プロパティ]** を選択します。 オブジェクト エクスプローラーで **[ロール]** を右クリックして、**[新しいロール]** を選択します。  
+3.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、サーバー インスタンスを右クリックして **[プロパティ]**を選択します。 オブジェクト エクスプローラーで **[ロール]** を右クリックして、 **[新しいロール]**を選択します。  
   
-4.  [Analysis Services のプロパティ] ページで、**[セキュリティ]** をクリックします。  
+4.  [Analysis Services のプロパティ] ページで、 **[セキュリティ]**をクリックします。  
   
-5.  **[追加]** をクリックし、Excel Services によって使用されるアカウントを入力します。Reporting Services によって使用されるアカウントも続けて入力します。  
+5.  **[追加]**をクリックし、Excel Services によって使用されるアカウントを入力します。Reporting Services によって使用されるアカウントも続けて入力します。  
   
 ##  <a name="bkmk_excelconn"></a> Excel または SharePoint からの接続  
  Analysis Services データベースへのアクセスを提供するクライアント ライブラリを使用して、テーブル モード サーバー上で実行される model データベースに接続できます。 ライブラリには、Analysis Services OLE DB プロバイダー、ADOMD.NET、および AMO が含まれています。  
@@ -72,25 +77,25 @@ caps.handback.revision: 19
   
 -   次のセクションで説明する手順を使用して、Excel 内からデータ接続を作成します。  
   
--   Analysis Services テーブル モード サーバー上で実行されているデータベースへのリダイレクトを提供する BI セマンティック モデル接続 (.bism) ファイルを SharePoint で作成します。 BI セマンティック モデル接続ファイルにより、その接続で指定した model データベースを使用する Excel を起動する右クリック コマンドが提供されます。 Reporting Services がインストールされている場合には、これによって [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] も起動されます。 BI セマンティック モデル接続ファイルの作成および使用の詳細については、「[テーブル モデル データベースへの BI セマンティック モデル接続の作成](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)」を参照してください。  
+-   Analysis Services テーブル モード サーバー上で実行されているデータベースへのリダイレクトを提供する BI セマンティック モデル接続 (.bism) ファイルを SharePoint で作成します。 BI セマンティック モデル接続ファイルにより、その接続で指定した model データベースを使用する Excel を起動する右クリック コマンドが提供されます。 Reporting Services がインストールされている場合には、これによって [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] も起動されます。 BI セマンティック モデル接続ファイルの作成および使用の詳細については、「 [テーブル モデル データベースへの BI セマンティック モデル接続の作成](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)」を参照してください。  
   
--   データ ソースとしてテーブル データベースを参照する Reporting Services 共有データ ソースを作成します。 SharePoint で共有データ ソースを作成し、[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] を起動するために使用できます。  
+-   データ ソースとしてテーブル データベースを参照する Reporting Services 共有データ ソースを作成します。 SharePoint で共有データ ソースを作成し、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]を起動するために使用できます。  
   
-#### Excel からの接続  
+#### <a name="connect-from-excel"></a>Excel からの接続  
   
-1.  Excel の **[データ]** タブの **[外部データの取り込み]** で、**[その他のデータ ソース]** をクリックします。  
+1.  Excel の **[データ]** タブの **[外部データの取り込み]**で、 **[その他のデータ ソース]**をクリックします。  
   
-2.  **[Analysis Services から]** をクリックします。  
+2.  **[Analysis Services から]**をクリックします。  
   
-3.  **[サーバー名]** に、データベースをホストする Analysis Services インスタンスを指定します。 通常、サーバー名は、サーバー ソフトウェアを実行するコンピューターの名前です。 サーバーを名前付きインスタンスとしてインストールした場合は、\<servername>\\<instancename\> の形式で名前を指定する必要があります。  
+3.  **[サーバー名]**に、データベースをホストする Analysis Services インスタンスを指定します。 通常、サーバー名は、サーバー ソフトウェアを実行するコンピューターの名前です。 サーバーが名前付きインスタンスとしてインストールされた場合は、この形式で名を指定する必要があります: \<servername >\\< instancename\>です。  
   
-     スタンドアロン テーブル配置用にサーバー インスタンスを構成する必要があります。そのサーバー インスタンスには、アクセスを許可する受信の規則が必要です。 詳細については、「[Analysis Services インスタンスのサーバー モードの決定](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)」および「[Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」を参照してください。  
+     スタンドアロン テーブル配置用にサーバー インスタンスを構成する必要があります。そのサーバー インスタンスには、アクセスを許可する受信の規則が必要です。 詳細については、「 [Analysis Services インスタンスのサーバー モードの決定](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md) 」および「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」を参照してください。  
   
-4.  データベースに対する読み取り権限がある場合は、ログオン資格情報について **[Windows 認証を使用する]** を選択します。 それ以外の場合は、**[以下のユーザー名とパスワードを使用する]** を選択し、データベース権限を持つ Windows アカウントのユーザー名とパスワードを入力します。 **[次へ]**をクリックします。  
+4.  データベースに対する読み取り権限がある場合は、ログオン資格情報について **[Windows 認証を使用する]** を選択します。 それ以外の場合は、 **[以下のユーザー名とパスワードを使用する]**を選択し、データベース権限を持つ Windows アカウントのユーザー名とパスワードを入力します。 **[次へ]**をクリックします。  
   
-5.  データベースを選択します。 有効なデータベースを選択すると、データベースの単一の**モデル** キューブが表示されます。 **[次へ]** をクリックし、**[完了]** をクリックします。  
+5.  データベースを選択します。 有効なデータベースを選択すると、データベースの単一の **モデル** キューブが表示されます。 **[次へ]** をクリックし、 **[完了]**をクリックします。  
   
- 接続を確立した後は、データを使用して、ピボットテーブルやピボットグラフを作成できます。 詳細については、「[Excel で分析 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)」を参照してください。  
+ 接続を確立した後は、データを使用して、ピボットテーブルやピボットグラフを作成できます。 詳しくは、後の「 [Excel で分析 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)で [ロール マネージャー] ダイアログ ボックスを使用してロールを定義するテーブル モデル作成者向けです。  
   
 ##  <a name="bkmk_sharepoint"></a> SharePoint からの接続  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を使用している場合は、Analysis Services テーブル モード サーバー上で実行されているデータベースへのリダイレクトを提供する BI セマンティック モデル接続ファイルを SharePoint で作成できます。 BI セマンティック モデル接続により、データベースへの HTTP エンドポイントが提供されます。 また、SharePoint サイト上のドキュメントを定期的に使用するナレッジ ワーカーが簡単にテーブル モデルにアクセスできるようになります。 ナレッジ ワーカーがテーブル モデル データベースにアクセスするために知っておく必要があるのは、BI セマンティック モデル接続ファイルの場所またはその URL だけです。 サーバーの場所やデータベース名に関する詳細は、BI セマンティック モデル接続にカプセル化されます。 BI セマンティック モデル接続ファイルの作成および使用の詳細については、「[Power Pivot BI セマンティック モデル接続 &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)」および「[テーブル モデル データベースへの BI セマンティック モデル接続の作成](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)」を参照してください。  
@@ -102,19 +107,19 @@ caps.handback.revision: 19
   
  データをインポートする場合に、十分な権限がないのに、ウィザードを使用してリモートの Analysis Services サーバー上のテーブル モデル データベースに接続しようとすると、この Microsoft Excel エラーが発生します。 このエラーを解決するには、データベースに対するユーザー アクセス権が必要です。 データへのユーザー アクセスの許可については、このトピックの前半で説明している手順を参照してください。  
   
- **外部データ ソースへの接続を確立しようとしましたが、エラーが発生しました。 次の接続を更新できませんでした: \<model name> サンドボックス**  
+ **外部データ ソースへの接続を確立しようとしましたが、エラーが発生しました。次の接続を更新できませんでした:\<モデル名 > サンド ボックス**  
   
  SharePoint では、モデル データを使用するピボットテーブルでデータのフィルター処理などのデータ操作を実行しようとすると、この Microsoft Excel エラーが発生します。 このエラーは、リモートの Analysis Services サーバーに対する十分な権限がないために発生します。 このエラーを解決するには、データベースに対するユーザー アクセス権が必要です。 データへのユーザー アクセスの許可については、このトピックの前半で説明している手順を参照してください。  
   
- **この操作の実行中にエラーが発生しました。 ブックを再度読み込んで、この操作を再実行してください。**  
+ **この操作の実行中にエラーが発生しました。ブックを再読み込みされ、もう一度この操作を実行してください。**  
   
  SharePoint では、モデル データを使用するピボットテーブルでデータのフィルター処理などのデータ操作を実行しようとすると、この Microsoft Excel エラーが発生します。 このエラーは、Excel Services が、モデル データが配置されている Analysis Services インスタンスによって信頼されていないために発生します。 このエラーを解決するには、Analysis Services インスタンスに対する Excel Services の管理権限を付与します。 管理権限の付与については、このトピックの前半で説明している手順を参照してください。 エラーが引き続き発生する場合は、Excel Services アプリケーション プールを再利用します。  
   
  **ブックで使用されている外部データ ソースへの接続を確立しようとするとエラーが発生しました。**  
   
- SharePoint では、モデル データを使用するピボットテーブルでデータのフィルター処理などのデータ操作を実行しようとすると、この Microsoft Excel エラーが発生します。 このエラーは、ユーザーがブックに対する十分な SharePoint 権限を持っていないために発生します。 ユーザーには、**読み取り**権限以上の権限が必要です。 データにアクセスするには、**表示のみ**権限では不十分です。  
+ SharePoint では、モデル データを使用するピボットテーブルでデータのフィルター処理などのデータ操作を実行しようとすると、この Microsoft Excel エラーが発生します。 このエラーは、ユーザーがブックに対する十分な SharePoint 権限を持っていないために発生します。 ユーザーには、 **読み取り** 権限以上の権限が必要です。 データにアクセスするには、**表示のみ** 権限では不十分です。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [テーブル モデル ソリューションの配置 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

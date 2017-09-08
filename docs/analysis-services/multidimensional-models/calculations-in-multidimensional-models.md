@@ -1,35 +1,40 @@
 ---
-title: "多次元モデルの計算 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "作成する計算 [Analysis Services]"
-  - "計算の削除"
-  - "計算 [Analysis Services], スクリプト"
-  - "キューブ デザイナー"
-  - "スクリプトの変更"
-  - "計算の消去"
-  - "計算 [Analysis Services], 削除"
-  - "スクリプト [Analysis Services], 計算"
-  - "計算のキューブ [Analysis Services]"
-  - "解決順序 [Analysis Services]"
+title: "多次元モデルでの計算 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- calculations [Analysis Services], creating
+- deleting calculations
+- calculations [Analysis Services], scripts
+- Cube Designer
+- modifying scripts
+- removing calculations
+- calculations [Analysis Services], deleting
+- scripts [Analysis Services], calculations
+- cubes [Analysis Services], calculations
+- solve orders [Analysis Services]
 ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 725f0ac6753947e587b6746528b6efc6d409f269
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# 多次元モデルの計算
+# <a name="calculations-in-multidimensional-models"></a>多次元モデルの計算
   キューブ デザイナーの **[計算]** タブを使用して、計算されるメンバー、名前付きセット、およびその他の多次元式 (MDX) 計算を作成します。  
   
  **[計算]** タブには、次の 3 つのペインがあります。  
@@ -41,24 +46,24 @@ caps.handback.revision: 26
 -   計算式ペインでは、フォーム ビューおよびスクリプト ビューがサポートされています。  
   
 > [!NOTE]  
->  MDX スクリプティングの詳細については、「[Microsoft SQL Server 2005 の MDX スクリプトの紹介](http://go.microsoft.com/fwlink/?LinkId=81892)」、および Microsoft TechNet Web サイトの「[SQL Server 2005 - Analysis Services](http://go.microsoft.com/fwlink/?LinkId=80853)」ページにある「その他のリソース」セクションを参照してください。 キューブ デザインに関連するパフォーマンスの問題の詳細については、「[SQL Server 2005 Analysis Services パフォーマンス ガイド](http://go.microsoft.com/fwlink/?LinkId=81621)」を参照してください。  
+>  MDX スクリプティングの詳細については、「 [Microsoft SQL Server 2005 の MDX スクリプトの紹介](http://go.microsoft.com/fwlink/?LinkId=81892)」、および Microsoft TechNet Web サイトの「 [SQL Server 2005 - Analysis Services](http://go.microsoft.com/fwlink/?LinkId=80853) 」ページにある「その他のリソース」セクションを参照してください。 キューブ デザインに関連するパフォーマンスの問題の詳細については、「 [SQL Server 2005 Analysis Services パフォーマンス ガイド](http://go.microsoft.com/fwlink/?LinkId=81621)」を参照してください。  
   
-## 新しい計算の作成  
- 新しい計算を作成するには、キューブ デザイナーの **[計算]** タブの **[キューブ]** メニューで、作成する計算の種類に応じて、**[新しい計算されるメンバー]**、**[新しい名前付きセット]**、または **[新しいスクリプト コマンド]** をクリックします。 また、ツール バーで対応するいずれかのボタンをクリックするか、**[スクリプト オーガナイザー]** ペイン内を右クリックし、ショートカット メニューのいずれかのコマンドをクリックすることもできます。 この操作により、新しい計算が **[スクリプト オーガナイザー]** ペインに追加され、計算式ペインの計算フォームにそのフィールドが表示されます。 新しいスクリプトを作成すると、この操作により計算式ペインに [スクリプト ビュー] が開きます。 3 種類の計算を作成する方法の詳細については、「[計算されるメンバーの作成](../../analysis-services/multidimensional-models/create-calculated-members.md)」、「[名前付きセットの作成](../../analysis-services/multidimensional-models/create-named-sets.md)」、および「[割り当てとその他のスクリプト コマンドの定義](../../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)」を参照してください。  
+## <a name="creating-a-new-calculation"></a>新しい計算の作成  
+ 新しい計算を作成するには、キューブ デザイナーの **[計算]** タブの **[キューブ]** メニューで、作成する計算の種類に応じて、 **[新しい計算されるメンバー]**、 **[新しい名前付きセット]**、または **[新しいスクリプト コマンド]**をクリックします。 また、ツール バーで対応するいずれかのボタンをクリックするか、 **[スクリプト オーガナイザー]** ペイン内を右クリックし、ショートカット メニューのいずれかのコマンドをクリックすることもできます。 この操作により、新しい計算が **[スクリプト オーガナイザー]** ペインに追加され、計算式ペインの計算フォームにそのフィールドが表示されます。 新しいスクリプトを作成すると、この操作により計算式ペインに [スクリプト ビュー] が開きます。 3 種類の計算を作成する方法の詳細については、「 [計算されるメンバーの作成](../../analysis-services/multidimensional-models/create-calculated-members.md)」、「 [名前付きセットの作成](../../analysis-services/multidimensional-models/create-named-sets.md)」、および「 [割り当てとその他のスクリプト コマンドの定義](../../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)」を参照してください。  
   
-## スクリプトの編集  
- **[計算]** タブの計算式ペインでスクリプトを編集します。 計算式ペインには、スクリプト ビューとフォーム ビューの 2 つのビューがあります。 フォーム ビューには、1 つのコマンドの式およびプロパティが表示されます。 MDX スクリプトを編集する場合、式ボックスがフォーム ビュー全体に表示されます。  
+## <a name="editing-scripts"></a>スクリプトの編集  
+ **[計算]** タブの計算式ペインでスクリプトを編集します。計算式ペインには、スクリプト ビューとフォーム ビューの 2 つのビューがあります。 フォーム ビューには、1 つのコマンドの式およびプロパティが表示されます。 MDX スクリプトを編集する場合、式ボックスがフォーム ビュー全体に表示されます。  
   
- スクリプト ビューには、スクリプトを編集するためのコード エディターが用意されています。 計算式ペインがスクリプト ビューにある場合、**[スクリプト オーガナイザー]** ペインは表示されません。 スクリプト ビューには、色分け表示、かっこの対応、オートコンプリート、MDX コード領域などの機能が用意されています。 MDX コード領域は、編集しやすいように折りたたんだり展開したりできます。  
+ スクリプト ビューには、スクリプトを編集するためのコード エディターが用意されています。 計算式ペインがスクリプト ビューにある場合、 **[スクリプト オーガナイザー]** ペインは表示されません。 スクリプト ビューには、色分け表示、かっこの対応、オートコンプリート、MDX コード領域などの機能が用意されています。 MDX コード領域は、編集しやすいように折りたたんだり展開したりできます。  
   
- **[キューブ]** メニューをクリックし、**[計算を表示]** をポイントして、**[スクリプト]** または **[フォーム]** をクリックして、フォーム ビューとスクリプト ビューを切り替えることができます。 また、ツール バーの **[フォーム ビュー]** または **[スクリプト ビュー]** をクリックすることもできます。  
+ **[キューブ]** メニューをクリックし、 **[計算を表示]**をポイントして、 **[スクリプト]** または **[フォーム]**をクリックして、フォーム ビューとスクリプト ビューを切り替えることができます。 また、ツール バーの **[フォーム ビュー]** または **[スクリプト ビュー]** をクリックすることもできます。  
   
-## 解決順序の変更  
- 計算は、**[スクリプト オーガナイザー]** ペインに一覧表示されている順序で解決されます。 計算を右クリックし、ショートカット メニューの **[上へ移動]** または **[下へ移動]** をクリックして、計算の順序を変更できます。 また、計算をクリックし、ツール バーの **[上へ移動]** ボタンまたは **[下へ移動]** ボタンをクリックすることもできます。  
+## <a name="changing-solve-order"></a>解決順序の変更  
+ 計算は、 **[スクリプト オーガナイザー]** ペインに一覧表示されている順序で解決されます。 計算を右クリックし、ショートカット メニューの **[上へ移動]** または **[下へ移動]** をクリックして、計算の順序を変更できます。 また、計算をクリックし、ツール バーの **[上へ移動]** ボタンまたは **[下へ移動]** ボタンをクリックすることもできます。  
   
- 計算されるセルおよび計算されるメンバーについて、この順序を手動で上書きできます。 パス順序と解決順序の詳細については、「[パス順序と解決順序の概要 (MDX)](../../analysis-services/multidimensional-models/mdx/understanding-pass-order-and-solve-order-mdx.md)」を参照してください。  
+ 計算されるセルおよび計算されるメンバーについて、この順序を手動で上書きできます。 パス順序と解決順序の詳細については、「[パス順序と解決順序の概要 (MDX)](../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md)」を参照してください。  
   
-## 計算の削除  
- 既存の計算を削除するには、**[スクリプト オーガナイザー]** ペインの **[計算]** タブで、削除する計算を選択し、**[編集]** メニューの **[削除]** をクリックするか、ツール バーの **[削除]** アイコンをクリックします。 また、**[スクリプト オーガナイザー]** ペインで計算を右クリックし、ショートカット メニューから **[削除]** を選択することもできます。  
+## <a name="deleting-a-calculation"></a>計算の削除  
+ 既存の計算を削除するには、 **[スクリプト オーガナイザー]** ペインの **[計算]** タブで、削除する計算を選択し、 **[編集]** メニューの **[削除]** をクリックするか、ツール バーの **[削除]** アイコンをクリックします。 また、 **[スクリプト オーガナイザー]** ペインで計算を右クリックし、ショートカット メニューから **[削除]** を選択することもできます。  
   
   

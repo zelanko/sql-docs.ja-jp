@@ -1,42 +1,47 @@
 ---
-title: "Analysis Services データベースのバックアップと復元 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.ssmsimbi.Restore.f1"
-  - "sql13.asvs.ssmsimbi.Backup.f1"
-helpviewer_keywords: 
-  - "データベースのバックアップ [Analysis Services]"
-  - "暗号化 [Analysis Services]"
-  - "データベース [Analysis Services], 復元"
-  - "暗号 [Analysis Services]"
-  - "データベース [Analysis Services], バックアップ"
-  - "データベースの復元 [Analysis Services]"
-  - "リカバリ [Analysis Services]"
+title: "Analysis Services データベースのバックアップと復元 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.ssmsimbi.Restore.f1
+- sql13.asvs.ssmsimbi.Backup.f1
+helpviewer_keywords:
+- backing up databases [Analysis Services]
+- encryption [Analysis Services]
+- databases [Analysis Services], restoring
+- cryptography [Analysis Services]
+- databases [Analysis Services], backing up
+- restoring databases [Analysis Services]
+- recovery [Analysis Services]
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 caps.latest.revision: 54
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 54
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 917761cf40eca3847cd304ec4e2aafb46fc06c5d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services データベースのバックアップと復元
+# <a name="backup-and-restore-of-analysis-services-databases"></a>Analysis Services データベースのバックアップと復元
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、特定の時点からデータベースとそのオブジェクトを復旧できるように、バックアップと復元機能が用意されています。 また、バックアップと復元は、アップグレードされたサーバーへのデータベースの移行、サーバー間でのデータベースの移動、実稼働サーバーへのデータベースの配置を行うための有効な方法でもあります。 バックアップ計画をまだ確立しておらず、重要なデータを保持している場合は、データ復旧のために、できるだけ早く計画を作成して実行してください。  
   
- バックアップと復元のコマンドは、配置済みの Analysis Services データベースで実行されます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のプロジェクトおよびソリューションの場合、ソース管理を使用して特定のバージョンのソース ファイルを復旧できるようにし、使用するソース管理システムのリポジトリのデータ復旧プランを作成する必要があります。  
+ バックアップと復元のコマンドは、配置済みの Analysis Services データベースで実行されます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のプロジェクトおよびソリューションの場合、ソース管理を使用して特定のバージョンのソース ファイルを復旧できるようにし、使用するソース管理システムのリポジトリのデータ復旧プランを作成する必要があります。  
   
  ソース データを含む完全バックアップでは、詳細データを含むデータベースをバックアップする必要があります。 具体的には、ROLAP または DirectQuery データベース ストレージを使用している場合、詳細データは Analysis Services データベースとは異なる外部の SQL Server リレーショナル データベースに格納されます。 すべてのオブジェクトがテーブルまたは多次元の場合は、Analysis Services バックアップにはメタデータとソース データの両方が含まれます。  
   
- バックアップを自動化する明らかな利点の 1 つは、自動バックアップ頻度の指定に応じて、データのスナップショットが常に最新の状態に保たれることです。 自動スケジューラにより、バックアップの実行漏れはなくなります。 データベースの復元も自動化が可能です。これはデータをレプリケートする場合に適していますが、レプリケート先のインスタンスの暗号化キー ファイルを必ずバックアップする必要があります。 同期機能は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのレプリケーションに特化していますが、最新でないデータに対してのみ実行されます。 ここで説明する機能はすべて、ユーザー インターフェイス、XML/A コマンド、または AMO 経由でのプログラムの実行によって実装できます。 バックアップの方針の詳細については、「[Microsoft SQL Server 2005 Analysis Services を使用したバックアップの方針](http://go.microsoft.com/fwlink/?LinkId=81888)」を参照してください。  
+ バックアップを自動化する明らかな利点の 1 つは、自動バックアップ頻度の指定に応じて、データのスナップショットが常に最新の状態に保たれることです。 自動スケジューラにより、バックアップの実行漏れはなくなります。 データベースの復元も自動化が可能です。これはデータをレプリケートする場合に適していますが、レプリケート先のインスタンスの暗号化キー ファイルを必ずバックアップする必要があります。 同期機能は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのレプリケーションに特化していますが、最新でないデータに対してのみ実行されます。 ここで説明する機能はすべて、ユーザー インターフェイス、XML/A コマンド、または AMO 経由でのプログラムの実行によって実装できます。 バックアップの方針の詳細については、「 [Microsoft SQL Server 2005 Analysis Services を使用したバックアップの方針](http://go.microsoft.com/fwlink/?LinkId=81888)」を参照してください。  
   
  このトピックのセクションは次のとおりです。  
   
@@ -65,10 +70,10 @@ caps.handback.revision: 54
 -   同じ名前の既存のファイルを確認してください。 同じ名前のファイルが既に存在する場合、ファイルを上書きするオプションを指定しないと、バックアップは失敗します。  
   
 ##  <a name="bkmk_cube"></a> 多次元データベースまたはテーブル データベースのバックアップ  
- 管理者は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのサイズにかかわらず、データベースを 1 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] バックアップ ファイル (.abf) にバックアップできます。 手順の詳細については、「[Analysis Services データベースをバックアップする方法 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html)」と「[Analysis Services データベースのバックアップの自動化 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)」を参照してください。  
+ 管理者は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのサイズにかかわらず、データベースを 1 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] バックアップ ファイル (.abf) にバックアップできます。 手順の詳細については、「 [Analysis Services データベースをバックアップする方法 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) 」と「 [Analysis Services データベースのバックアップの自動化 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]は SharePoint 環境で [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ モデルの読み込みとクエリを実行する際に使用され、SharePoint コンテンツ データベースからそのモデルを読み込みます。 これらのコンテンツ データベースはリレーショナル データベースであり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース エンジン上で動作します。 このため、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ モデルについては、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のバックアップと復元の方法はありません。 SharePoint コンテンツ用の災害復旧計画がある場合、その計画では、コンテンツ データベースに格納されている [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ モデルが対象となります。  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]、の読み込みとクエリを実行するために使用[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]データ モデルを SharePoint 環境では、SharePoint コンテンツ データベースからそのモデルを読み込みます。 これらのコンテンツ データベースはリレーショナル データベースであり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース エンジン上で動作します。 このため、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ モデルについては、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のバックアップと復元の方法はありません。 SharePoint コンテンツ用のディザスター リカバリー計画がある場合、その計画では、コンテンツ データベースに格納されている [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ モデルが対象となります。  
   
  **リモート パーティション**  
   
@@ -96,9 +101,9 @@ caps.handback.revision: 54
 -   バックアップ ファイルの内容を暗号化し、ファイルの復号化および復元の前にパスワードの入力を求めるかどうか。 既定ではバックアップ データは暗号化されません。  
   
     > [!IMPORTANT]  
-    >  バックアップ ファイルごとに、バックアップ コマンドを実行するユーザーは、各ファイルに指定されたバックアップ場所に対する書き込み権限を持っている必要があります。 また、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのサーバー ロールのメンバーであるか、バックアップするデータベースに対してフル コントロール (管理者) 権限を持つデータベース ロールのメンバーであることが条件となります。  
+    >  バックアップ ファイルごとに、バックアップ コマンドを実行するユーザーは、各ファイルに指定されたバックアップ場所に対する書き込み権限を持っている必要があります。 また、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのサーバー ロールのメンバーであるか、バックアップするデータベースに対してフル コントロール (管理者) 権限を持つデータベース ロールのメンバーであることが条件となります。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのバックアップの詳細については、「[バックアップ オプション](../../analysis-services/multidimensional-models/backup-options.md)」 (Backup Options) を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのバックアップの詳細については、「 [バックアップ オプション](../../analysis-services/multidimensional-models/backup-options.md)」 (Backup Options) を参照してください。  
   
 ##  <a name="bkmk_restore"></a> Analysis Services データベースの復元  
  管理者は、1 つまたは複数のバックアップ ファイルから [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを復元できます。  
@@ -117,15 +122,15 @@ caps.handback.revision: 54
 -   復元コマンドを使用して、復元する各パーティションの復元先フォルダーを変更できます。 ローカル パーティションは、データベースの復元先の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに対してローカルな任意のフォルダーに復元できます。 リモート パーティションは、ローカル サーバー以外のサーバーにある任意のフォルダーに復元できます。リモート パーティションをローカルにすることはできません。  
   
     > [!IMPORTANT]  
-    >  バックアップ ファイルごとに、復元コマンドを実行するユーザーは、各ファイルに指定されたバックアップ場所から読み取る権限を持っている必要があります。 サーバーにインストールされていない [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを復元する場合、ユーザーは、その [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのサーバー ロールのメンバーであることも必要です。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを上書きするには、ユーザーは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのサーバー ロールのメンバーか、復元するデータベースに対してフル コントロール (管理者) 権限を持つデータベース ロールのメンバーのいずれかである必要があります。  
+    >  バックアップ ファイルごとに、復元コマンドを実行するユーザーは、各ファイルに指定されたバックアップ場所から読み取る権限を持っている必要があります。 サーバーにインストールされていない [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを復元する場合、ユーザーは、その [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのサーバー ロールのメンバーであることも必要です。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを上書きするには、ユーザーは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのサーバー ロールのメンバーか、復元するデータベースに対してフル コントロール (管理者) 権限を持つデータベース ロールのメンバーのいずれかである必要があります。  
   
     > [!NOTE]  
     >  既存のデータベースを復元すると、データベースを復元したユーザーは、復元されたデータベースにアクセスできなくなる可能性があります。 バックアップの実行時に、ユーザーがサーバー ロールのメンバー、またはフル コントロール (管理者) 権限を持つデータベース ロールのメンバーではなかった場合、このようにアクセスできなくなることがあります。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの復元の詳細については、「[復元オプション](../../analysis-services/multidimensional-models/restore-options.md)」 (Restore Options) を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの復元の詳細については、「 [復元オプション](../../analysis-services/multidimensional-models/restore-options.md)」 (Restore Options) を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データベースのバックアップ、復元、および同期 &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)  
+
   
   

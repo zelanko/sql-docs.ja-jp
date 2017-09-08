@@ -1,29 +1,34 @@
 ---
-title: "マイニング モデルのプロパティ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "マイニング モデル [Analysis Services]、プロパティ"
-  - "データ マイニング [Analysis Services]、プロパティ"
-  - "列 [データ マイニング]、プロパティ"
-  - "データ マイニング デザイナー"
-  - "プロパティ [データ マイニング]"
+title: "マイニング モデルのプロパティ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining models [Analysis Services], properties
+- data mining [Analysis Services], properties
+- columns [data mining], properties
+- Data Mining Designer
+- properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1fa45b604df0a118936f903491e707bd09d58295
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# マイニング モデルのプロパティ
+# <a name="mining-model-properties"></a>マイニング モデルのプロパティ
   マイニング モデルには、次の種類のプロパティがあります。  
   
 -   モデルによって使用されるデータのデータ型および内容を定義するマイニング構造から継承されたプロパティ。  
@@ -36,7 +41,7 @@ caps.handback.revision: 32
   
  モデルのいずれかのプロパティを変更した後は、モデルを再処理して、変更内容をモデルに反映させる必要があります。 列の別名や説明の追加など、変更がメタデータのみに関連する場合でも、再処理が必要です。  
   
-## モデルのプロパティ  
+## <a name="properties-of-models"></a>モデルのプロパティ  
  次の表で、マイニング モデルに固有のプロパティについて説明します。 また、マイニング モデルの個々の列に設定できるプロパティもあります。  
   
 |プロパティ|Description|  
@@ -47,7 +52,7 @@ caps.handback.revision: 32
 |**名前**|マイニング モデルの名前を設定します。|  
 |**AllowDrillThrough**|マイニング モデルでドリルスルーを有効にするかどうかを指定します。|  
   
-## モデル列のプロパティ  
+## <a name="properties-of-model-columns"></a>モデル列のプロパティ  
  マイニング モデルの各列に対して、次のデータ マイニング固有のプロパティを設定できます。 これらのプロパティには、マイニング構造内のマイニング モデルごとに異なる値を設定できます。  
   
 |プロパティ|Description|  
@@ -58,9 +63,9 @@ caps.handback.revision: 32
 |**SourceColumnID**|モデル列の基になるマイニング構造列の名前を示します。<br /><br /> このプロパティは読み取り専用です。|  
 |**使用方法**|マイニング モデルによる列の使用方法を設定します。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [マイニング モデル列](../../analysis-services/data-mining/mining-model-columns.md)   
- [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [マイニング構造 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [マイニング モデル タスクと操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [マイニング モデルのプロパティの変更](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)   
  [データ マイニング ツール](../../analysis-services/data-mining/data-mining-tools.md)   

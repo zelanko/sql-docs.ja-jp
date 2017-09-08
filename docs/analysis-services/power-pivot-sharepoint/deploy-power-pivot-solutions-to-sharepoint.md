@@ -1,25 +1,30 @@
 ---
-title: "SharePoint への PowerPivot ソリューションの配置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SharePoint に Powerpivot ソリューションの配置 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8a9725c24b4cc324db21e9c39cdd9feef0829cae
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# SharePoint への PowerPivot ソリューションの配置
-  SharePoint Server 2010 環境に [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能を追加する 2 つのソリューション パッケージを手動で配置するには、次の手順に従います。 ソリューションの配置は、SharePoint 2010 サーバー上で [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を構成するために必要な手順です。 必要な手順の完全な一覧を確認するには、「[サーバーの全体管理での Power Pivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)」を参照してください。  
+# <a name="deploy-power-pivot-solutions-to-sharepoint"></a>SharePoint への PowerPivot ソリューションの配置
+  SharePoint Server 2010 環境に [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能を追加する 2 つのソリューション パッケージを手動で配置するには、次の手順に従います。 ソリューションの配置は、SharePoint 2010 サーバー上で [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を構成するために必要な手順です。 必要な手順の完全な一覧を確認するには、「 [サーバーの全体管理での Power Pivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)」を参照してください。  
   
- ソリューションの配置には、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールを使用することもできます。 シングル サーバー インストールでは構成ツールを使用するのが簡単で効率的ですが、使い慣れたツールを使用したい場合や、複数の機能を同時に構成する場合は、サーバーの全体管理と PowerShell を使用することもできます。 構成ツールの詳細については、「[Power Pivot の構成ツール](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)」を参照してください。  
+ ソリューションの配置には、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールを使用することもできます。 シングル サーバー インストールでは構成ツールを使用するのが簡単で効率的ですが、使い慣れたツールを使用したい場合や、複数の機能を同時に構成する場合は、サーバーの全体管理と PowerShell を使用することもできます。 構成ツールの詳細については、「 [Power Pivot の構成ツール](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)」を参照してください。  
   
  ソリューションを配置する前に、まず、SQL Server 2012 インストール メディアを使用して、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をインストールする必要があります。 SQL Server セットアップでは、配置しようとしているソリューション パッケージがインストールされます。  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 13
  [Power Pivot ソリューションについて](#intro)  
   
 ##  <a name="bkmk_classic"></a> 前提条件: Web アプリケーションでクラシック モード認証が使用されていることを確認する  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]  for SharePoint は、Windows クラシック モード認証を使用する Web アプリケーションでのみサポートされています。 アプリケーションでクラシック モードが使用されているかどうかを確認するには、以下の PowerShell コマンドレットを **SharePoint 2010 管理シェル**から実行します (**http://\<最上位レベルのサイト名>** は実際の SharePoint サイトの名前に置き換えてください)。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint は、Windows クラシック モード認証を使用する Web アプリケーションでのみサポートされています。 アプリケーションがクラシック モードを使用しているかどうかを確認するから次の PowerShell コマンドレットを実行、 **SharePoint 2010 管理シェル**、 **http://\<最上位のサイト名 >**とSharePoint サイトの名前。  
   
 ```  
 Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthentication  
@@ -47,7 +52,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
  戻り値が **false**になる必要があります。 **true**であれば、この Web アプリケーションで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データにアクセスできません。  
   
 ##  <a name="bkmk_farm"></a> 手順 1: ファーム ソリューションの配置  
- このセクションでは、PowerShell を使用したソリューションの配置方法を紹介しますが、同じタスクを [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールを使用して実行することもできます。 詳細については、「[Power Pivot for SharePoint 2010 の構成または修復 (Power Pivot 構成ツール)](http://msdn.microsoft.com/ja-jp/d61f49c5-efaa-4455-98f2-8c293fa50046)」を参照してください。  
+ このセクションでは、PowerShell を使用したソリューションの配置方法を紹介しますが、同じタスクを [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールを使用して実行することもできます。 詳細については、「 [Power Pivot for SharePoint 2010 の構成または修復 (Power Pivot 構成ツール)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)」を参照してください。  
   
  このタスクは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をインストールした後で、一度だけ実行する必要があります。  
   
@@ -118,7 +123,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  **[ソリューションの取り消し]**をクリックします。  
   
- ファーム ソリューションに起因するサーバー配置の問題が発生した場合は、 **構成ツールで** [修復] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] オプションを実行することで再配置できます。 手動の手順が少なくて済むため、修復操作を行うときはこのツールを使用することをお勧めします。 詳細については、「[Power Pivot for SharePoint 2010 の構成または修復 (Power Pivot 構成ツール)](http://msdn.microsoft.com/ja-jp/d61f49c5-efaa-4455-98f2-8c293fa50046)」を参照してください。  
+ ファーム ソリューションに起因するサーバー配置の問題が発生した場合は、 **構成ツールで** [修復] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] オプションを実行することで再配置できます。 手動の手順が少なくて済むため、修復操作を行うときはこのツールを使用することをお勧めします。 詳細については、「 [Power Pivot for SharePoint 2010 の構成または修復 (Power Pivot 構成ツール)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)」を参照してください。  
   
  すべてのソリューションを再配置する場合は、次の順序で実行してください。  
   
@@ -146,7 +151,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 |powerpivotfarm.wsp|Microsoft.AnalysisServices.SharePoint.Integration.dll をグローバル アセンブリに追加する。<br /><br /> Microsoft.AnalysisServices.ChannelTransport.dll をグローバル アセンブリに追加する。<br /><br /> 機能とリソース ファイルをインストールし、コンテンツ タイプを登録する。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー ライブラリやデータ フィード ライブラリのライブラリ テンプレートを追加する。<br /><br /> サービス アプリケーションの構成、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボード、データ更新、および [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー用のアプリケーション ページを追加する。|  
 |[powerpivotwebapp.wsp]|Web フロントエンドの Web サーバー拡張機能フォルダーに Microsoft.AnalysisServices.SharePoint.Integration.dll リソース ファイルを追加する。<br /><br /> Web フロントエンドに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web サービスを追加する。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーのサムネイル画像生成を追加する。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Power Pivot for SharePoint のアップグレード](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [サーバーの全体管理での Power Pivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Windows PowerShell を使用した Power Pivot の構成](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  

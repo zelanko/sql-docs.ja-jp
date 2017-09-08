@@ -1,24 +1,29 @@
 ---
-title: "テーブル モデル データベースへの BI セマンティック モデル接続の作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "テーブル モデル データベースへの BI セマンティック モデル接続を作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c4e9b6b1814994caf778e0c3d50a69ffc70d4ee
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# テーブル モデル データベースへの BI セマンティック モデル接続の作成
+# <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>テーブル モデル データベースへの BI セマンティック モデル接続の作成
   このトピックでは、SharePoint ファーム外の Analysis Services インスタンスで実行しているテーブル モデル データベースにリダイレクトする BI セマンティック モデル接続を設定する方法について説明します。  
   
  BI セマンティック モデル接続を作成して SharePoint 権限および Analysis Services 権限を構成したら、その接続を Excel または [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] レポートのデータ ソースとして使用できます。  
@@ -40,9 +45,9 @@ caps.handback.revision: 16
 ##  <a name="bkmk_prereq"></a> 前提条件の確認  
  BI セマンティック モデル接続ファイルを作成するには、投稿権限以上の権限が必要です。  
   
- BI セマンティック モデル接続のコンテンツ タイプをサポートしているライブラリが必要です。 詳細については、「[BI セマンティック モデル接続のコンテンツ タイプのライブラリへの追加 (Power Pivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/add bi semantic model connection content type to library.md)」を参照してください。  
+ BI セマンティック モデル接続のコンテンツ タイプをサポートしているライブラリが必要です。 詳細については、「[BI セマンティック モデル接続のコンテンツ タイプのライブラリへの追加 (Power Pivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)」を参照してください。  
   
- BI セマンティック モデル接続を設定するサーバーおよびデータベース名を確認しておく必要があります。 Analysis Services は、テーブル モード用に構成する必要があります。 サーバーで実行しているデータベースは、テーブル モデル データベースである必要があります。 サーバー モードを確認する方法については、「[Analysis Services インスタンスのサーバー モードの決定](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)」を参照してください。  
+ BI セマンティック モデル接続を設定するサーバーおよびデータベース名を確認しておく必要があります。 Analysis Services は、テーブル モード用に構成する必要があります。 サーバーで実行しているデータベースは、テーブル モデル データベースである必要があります。 サーバー モードを確認する方法については、「 [Analysis Services インスタンスのサーバー モードの決定](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)」を参照してください。  
   
  特定のシナリオでは、SharePoint 環境の共有サービスが、Analysis Services インスタンスに対する管理権限を持っている必要があります。 管理権限が必要なサービスは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション、Reporting Services サービス アプリケーション、PerformancePoint サービス アプリケーションなどです。 管理権限を付与する前に、これらのサービス アプリケーションの ID を知っておく必要があります。 ID を確認するには、サーバーの全体管理を使用できます。  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 16
   
 1.  SQL Server Management Studio で Analysis Services インスタンスに接続します。  
   
-2.  サーバー名を右クリックし、**[プロパティ]** をクリックします。  
+2.  サーバー名を右クリックし、 **[プロパティ]**をクリックします。  
   
 3.  **[セキュリティ]**をクリックして、 **[追加]**をクリックします。 サービス アプリケーションを実行する Windows ユーザー アカウントを入力します。  
   
@@ -82,11 +87,11 @@ caps.handback.revision: 16
   
  ロール (および場合によってはロール メンバーシップ) が定義されるのは、モデルが [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で作成されるときです。 SQL Server Management Studio ではロールを作成することはできませんが、定義済みのロールにメンバーを追加することはできます。 ロールの作成の詳細については、「[ロールの作成および管理 (SSAS テーブル)](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)」を参照してください。  
   
-#### ロールのメンバーシップの割り当て  
+#### <a name="assign-role-membership"></a>ロールのメンバーシップの割り当て  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、オブジェクト エクスプローラーでデータベースを展開し、さらに **[ロール]**を展開します。 既に定義されているロールが表示されます。 ロールが存在しない場合は、モデルの作成者に連絡してロールの追加を依頼します。 Management Studio でロールを表示するには、モデルを再配置する必要があります。  
   
-2.  ロールを右クリックし、**[プロパティ]** をクリックします。  
+2.  ロールを右クリックし、 **[プロパティ]**をクリックします。  
   
 3.  [メンバーシップ] ページで、アクセスする必要がある Windows グループ アカウントおよびユーザー アカウントを追加します。  
   
@@ -141,9 +146,9 @@ caps.handback.revision: 16
 4.  **[ユーザー権限の削除]**をクリックします。  
   
 ##  <a name="bkmk_next"></a> 次の手順  
- BI セマンティック モデル接続を作成し、セキュリティで保護したら、データ ソースとして指定できます。 詳細については、「[Excel または Reporting Services での BI セマンティック モデル接続の使用](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)」を参照してください。  
+ BI セマンティック モデル接続を作成し、セキュリティで保護したら、データ ソースとして指定できます。 詳細については、「 [Excel または Reporting Services での BI セマンティック モデル接続の使用](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Power Pivot BI セマンティック モデル接続 (.bism)](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
  [Power Pivot ブックへの BI セマンティック モデル接続の作成](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   

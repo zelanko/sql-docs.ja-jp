@@ -1,33 +1,38 @@
 ---
-title: "Analysis Services トレース イベント | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SQL Server Profiler、Analysis Services"
-  - "Analysis Services の監視 [SQL Server]"
-  - "パフォーマンス [Analysis Services]、SQL Server Profiler"
-  - "イベント [Analysis Services]"
-  - "イベント クラス [Analysis Services]、イベント クラスについて"
-  - "プロファイラー [SQL Server Profiler]、Analysis Services"
-  - "イベント クラス [Analysis Services]"
+title: "Analysis Services トレース イベント |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SQL Server Profiler, Analysis Services
+- monitoring Analysis Services [SQL Server]
+- performance [Analysis Services], SQL Server Profiler
+- events [Analysis Services]
+- event classes [Analysis Services], about event classes
+- Profiler [SQL Server Profiler], Analysis Services
+- event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b97d63ba708128fbd4d42f2e5278273609d144e1
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services トレース イベント
+# <a name="analysis-services-trace-events"></a>Analysis Services トレース イベント
   Microsoft SQL Server Analysis Services (SSAS) インスタンスのアクティビティは、インスタンスによって生成されるトレース イベントを取得し、分析することで追跡できます。  トレース イベントは、関連するトレース イベントをより簡単に見つけることができるようにグループ化されます。  各トレース イベントには、イベントに関連するデータのセットが含まれています。データのすべての部分がすべてのイベントに関連するわけではありません。  
   
- トレース イベントは、**[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]** を使用して開始し、キャプチャすることができます (「[SQL Server Profiler を使用した Analysis Services の監視](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)」を参照)。また、XMLA コマンドから **SQL Server 拡張イベント**として開始し、後で分析することもできます (「[SQL Server 拡張イベントを使用した Analysis Services の監視](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)」を参照)。  
+ トレース イベントは、 **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**を使用して開始し、キャプチャすることができます (「 [SQL Server Profiler を使用した Analysis Services の監視](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)」を参照)。また、XMLA コマンドから **SQL Server 拡張イベント** として開始し、後で分析することもできます (「 [SQL Server 拡張イベントを使用した Analysis Services の監視](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)」を参照)。  
   
  各イベント カテゴリとそのカテゴリに含まれるイベントを次の表で説明します。 各表には次の列があります。  
   
@@ -183,7 +188,7 @@ caps.handback.revision: 37
 |42|Existing Session|既存のセッション。|  
 |43|Session Initialize|セッションの初期化。|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SQL Server Profiler を使用した Analysis Services の監視](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
   
   

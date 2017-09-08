@@ -1,25 +1,30 @@
 ---
-title: "Notification イベントのデータ列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Notification イベントのイベント カテゴリ"
+title: "通知 Events Data Columns |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Notification Events event category
 ms.assetid: 0ecf06da-1586-415a-9da8-60d4c634f030
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f671eb89295049c09da1f037fdb4544db84b7280
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Notification イベントのデータ列
-  Notification イベントとは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のユーザーが直接発生させるものではないイベントのことです。 たとえば、ユーザーがプロアクティブ キャッシュの基になるテーブルを更新すると、通知が発生します。  
+# <a name="notification-events-data-columns"></a>Notification イベントのデータ列
+  Notification イベントとは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のユーザーが直接発生させるものではないイベントのことです。 たとえば、ユーザーがプロアクティブ キャッシュの基になるテーブルを更新すると、通知が発生します。  
   
  Notifications イベントのイベント カテゴリには、次のイベント クラスがあります。  
   
@@ -30,12 +35,12 @@ caps.handback.revision: 30
   
  次の表は、このイベント クラスのデータ列の一覧です。  
   
-## Notification  
+## <a name="notification"></a>Notification  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|イベント クラスを使用してイベントを分類します。|  
-|EventSubclass|1|1|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 次の "**サブクラス ID**:<br />                      **サブクラス名**" のペアが定義されています。<br /><br /> 0: Proactive Caching Begin<br /><br /> 1: Proactive Caching End<br /><br /> 2: Flight Recorder Started<br /><br /> 3: Flight Recorder Stopped<br /><br /> 4: Configuration Properties Updated<br /><br /> 5: SQL Trace<br /><br /> 6: Object Created<br /><br /> 7: Object Deleted<br /><br /> 8: Object Altered<br /><br /> 9: Proactive Caching Polling Begin<br /><br /> 10: Proactive Caching Polling End<br /><br /> 11: Flight Recorder Snapshot Begin<br /><br /> 12: Flight Recorder Snapshot End<br /><br /> 13: Proactive Caching: notifiable object updated<br /><br /> 14: Lazy Processing: start processing<br /><br /> 15: Lazy Processing: processing complete<br /><br /> 16: SessionOpened Event Begin<br /><br /> 17: SessionOpened Event End<br /><br /> 18: SessionClosing Event Begin<br /><br /> 19: SessionClosing Event End<br /><br /> 20: CubeOpened Event Begin<br /><br /> 21: CubeOpened Event End<br /><br /> 22: CubeClosing Event Begin<br /><br /> 23: CubeClosing Event End<br /><br /> 24: Transaction abort requested|  
+|EventSubclass|1|1|イベント サブクラスにより、各イベント クラスに関する追加情報が提供されます。<br /><br /> 次の " **サブクラス ID**:<br />                      **サブクラス名** " のペアが定義されています。<br /><br /> 0: Proactive Caching Begin<br /><br /> 1: Proactive Caching End<br /><br /> 2: Flight Recorder Started<br /><br /> 3: Flight Recorder Stopped<br /><br /> 4: Configuration Properties Updated<br /><br /> 5: SQL Trace<br /><br /> 6: Object Created<br /><br /> 7: Object Deleted<br /><br /> 8: Object Altered<br /><br /> 9: Proactive Caching Polling Begin<br /><br /> 10: Proactive Caching Polling End<br /><br /> 11: Flight Recorder Snapshot Begin<br /><br /> 12: Flight Recorder Snapshot End<br /><br /> 13: Proactive Caching: notifiable object updated<br /><br /> 14: Lazy Processing: start processing<br /><br /> 15: Lazy Processing: processing complete<br /><br /> 16: SessionOpened Event Begin<br /><br /> 17: SessionOpened Event End<br /><br /> 18: SessionClosing Event Begin<br /><br /> 19: SessionClosing Event End<br /><br /> 20: CubeOpened Event Begin<br /><br /> 21: CubeOpened Event End<br /><br /> 22: CubeClosing Event Begin<br /><br /> 23: CubeClosing Event End<br /><br /> 24: Transaction abort requested|  
 |CurrentTime|2|5|Notification イベントの現在の時刻を表します (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |StartTime|3|5|イベントが開始された時刻を表します (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
 |EndTime|4|5|イベントが終了した時刻を表します。 SQL:BatchStarting や SP:Starting などの開始イベント クラスについては、この列に値が格納されません。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
@@ -57,7 +62,7 @@ caps.handback.revision: 30
 |ServerName|43|8|Notification イベントが発生した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前を表します。|  
 |RequestProperties|45|9|XMLA 要求のプロパティを表します。|  
   
-## User Defined  
+## <a name="user-defined"></a>User Defined  
   
 |**列名**|**列 ID**|**列の型**|**列の説明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -75,7 +80,7 @@ caps.handback.revision: 30
 |TextData|42|9|Notification イベントに関連付けられたテキスト データを表します。|  
 |ServerName|43|8|Notification イベントが発生した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前を表します。|  
   
-## 「  
- [Notification イベントのイベント カテゴリ](../../analysis-services/trace-events/notification-events-event-category.md)  
+## <a name="see-also"></a>「  
+ [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   

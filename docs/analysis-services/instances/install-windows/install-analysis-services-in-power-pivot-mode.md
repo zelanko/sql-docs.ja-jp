@@ -1,28 +1,33 @@
 ---
-title: "Power Pivot モードでの Analysis Services のインストール | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot モードで Analysis Services のインストール |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 38
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 035348a23627db2346d319c69030e74e128e744b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Power Pivot モードでの Analysis Services のインストール
+# <a name="install-analysis-services-in-power-pivot-mode"></a>Power Pivot モードでの Analysis Services のインストール
   このトピックでは、SharePoint 配置の [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードで [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバーのシングル サーバー インストールを行う手順について説明します。 手順には、SQL Server インストール ウィザードの実行と、SharePoint サーバーの全体管理を使用する構成タスクが含まれます。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016 &#124; SharePoint 2013|  
+|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
   
  **このトピックの内容:**  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 38
   
 -   **中間層:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ギャラリー、定期データ更新、管理ダッシュボード、データ プロバイダーなどの SharePoint の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] エクスペリエンスを強化します。 中間層のインストールと構成の詳細については、以下を参照してください。  
   
-    -   [Power Pivot for SharePoint アドインのインストールまたはアンインストール &#40;SharePoint 2016&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
+    -   [インストールまたは Power Pivot の SharePoint アドインのアンインストール (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
   
     -   [Power Pivot for SharePoint アドインのインストールまたはアンインストール &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
   
@@ -67,16 +72,16 @@ caps.handback.revision: 38
   
 3.  コンピューターは、Office Online Server (SharePoint 2016) または Excel Services (SharePoint 2013) と同じ Active Directory フォレスト内のドメインに参加する必要があります。  
   
-4.  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] インスタンスの名前を使用できる必要があります。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 名前付きインスタンスが既に存在するコンピューターに、[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] モードの Analysis Services をインストールすることはできません。  
+4.  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] インスタンスの名前を使用できる必要があります。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]名前付きインスタンスが既に存在するコンピューターに、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] モードの Analysis Services をインストールすることはできません。  
   
      **注:** インスタンス名は POWERPIVOT である必要があります。  
   
-5.  「[SharePoint モードの Analysis Services サーバーのハードウェアとソフトウェアの要件](../Topic/Hardware%20and%20Software%20Requirements%20for%20Analysis%20Services%20Server%20in%20SharePoint%20Mode.md)」を参照してください。  
+5.  「 [SharePoint モードの Analysis Services サーバーのハードウェアとソフトウェアの要件](http://msdn.microsoft.com/library/fb86ca0a-518c-4c61-ae78-7680c57fae1f)」を参照してください。  
   
 6.  「 [SQL Server 2016 Release Notes](../../../sql-server/sql-server-2016-release-notes.md)」で、リリース ノートを確認します。  
   
 ###  <a name="bkmk_sqleditions"></a> SQL Server エディションの要件  
- ビジネス インテリジェンス機能は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のすべてのエディションで利用できるわけではありません。 詳細については、「 [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md) 」および「 [Editions and Components of SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。  
+ ビジネス インテリジェンス機能は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のすべてのエディションで利用できるわけではありません。 詳細については、「 [SQL Server 2016 の各エディションでサポートされる Analysis Services 機能](../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)と[Editions and Components の SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md)です。  
   
 ##  <a name="InstallSQL"></a> 手順 1. Power Pivot for SharePoint のインストール  
  この手順では、SQL Server セットアップを実行して、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバーをインストールします。 後の手順で、このサーバーをブックのデータ モデルで使用するように Excel Services を構成します。  
@@ -85,7 +90,7 @@ caps.handback.revision: 38
   
 2.  左側のナビゲーション ウィンドウで、 **[インストール]** を選択します。  
   
-3.  **[SQL Server の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加します]** を選択します。  
+3.  **[SQL Server の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加します]**を選択します。  
   
 4.  **[プロダクト キー]** ページが表示されたら、Evaluation Edition を指定するか、Enterprise Edition のライセンス コピーのプロダクト キーを入力します。 **[次へ]**を選択します。 エディションの詳細については、「 [Editions and Components of SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。  
   
@@ -109,9 +114,9 @@ caps.handback.revision: 38
   
 12. **[インスタンスの構成]** ページで、 **[名前付きインスタンス]** を選択し、インスタンス名に **[POWERPIVOT]** を入力して、 **[次へ]**をクリックします。  
   
-     ![SQL Setup - Instance Configuration Landing Page](../../../analysis-services/instances/install-windows/media/sql2016-pp-instance-config-landing-page.png "SQL Setup - Instance Configuration Landing Page")  
+     ![SQL のセットアップ - インスタンスの構成のランディング ページ](../../../analysis-services/instances/install-windows/media/sql2016-pp-instance-config-landing-page.png "SQL セットアップのインスタンスの構成のランディング ページ")  
   
-13. **[サーバー構成]** のページで、すべてのサービスの **[スタートアップの種類]**を [自動] に設定します。 **SQL Server Analysis Services** に必要なドメイン アカウントとパスワードを指定します。次の図の **(1)** です。  
+13. **[サーバー構成]** のページで、すべてのサービスの **[スタートアップの種類]**を [自動] に設定します。 **SQL Server Analysis Services**に必要なドメイン アカウントとパスワードを指定します。次の図の **(1)** です。  
   
     -   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]では、 **ドメイン ユーザー** アカウントまたは **NetworkService** アカウントを使用できます。 LocalSystem アカウントまたは LocalService アカウントは使用しないでください。  
   
@@ -121,15 +126,15 @@ caps.handback.revision: 38
   
      [ **次へ**] を選択します。  
   
-     ![SQL Setup - Server Configuration landing page](../../../analysis-services/instances/install-windows/media/sql2016-pp-server-config-landing-page.png "SQL Setup - Server Configuration landing page")  
+     ![SQL のセットアップ - サーバー構成のランディング ページ](../../../analysis-services/instances/install-windows/media/sql2016-pp-server-config-landing-page.png "SQL セットアップ - サーバー構成のランディング ページ")  
   
 14. [!INCLUDE[ssDE](../../../includes/ssde-md.md)]をインストールする場合は、 **[データベース エンジンの構成]** ページが表示されます。 [ [!INCLUDE[ssDE](../../../includes/ssde-md.md)] の構成] で、 **[現在のユーザーの追加]** を選択して、データベース エンジン インスタンスに対する管理者権限をユーザー アカウントに付与します。  
   
      [ **次へ**] を選択します。  
   
-15.  **[Analysis Services の構成]** ページの **[サーバー モード]** で、 **[PowerPivot モード]**を選択します。  
+15. **[Analysis Services の構成]** ページの **[サーバー モード]** で、 **[PowerPivot モード]**を選択します。  
   
-     ![SQL Setup - Analysis Services Configuration Landing Page](../../../analysis-services/instances/install-windows/media/sql2016-pp-as-config-landing-page.png "SQL Setup - Analysis Services Configuration Landing Page")  
+     ![SQL のセットアップ - Analysis Services の構成のランディング ページ](../../../analysis-services/instances/install-windows/media/sql2016-pp-as-config-landing-page.png "SQL セットアップ - Analysis Services の構成のランディング ページ")  
   
 16. **[Analysis Services の構成]** ページで、 **[現在のユーザーの追加]** を選択して、ユーザー アカウントに管理権限を付与します。 セットアップの完了後にサーバーを構成するには、管理権限が必要になります。  
   
@@ -152,35 +157,35 @@ caps.handback.revision: 38
   
 22. 環境内にファイアウォールがある場合は、SQL Server オンライン ブックの「 [Configure the Windows Firewall to Allow Analysis Services Access](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」を確認します。  
   
-### SQL Server のインストールの確認  
+### <a name="verify-the-sql-server-installation"></a>SQL Server のインストールの確認  
  Analysis Services サービスが実行されているかどうかを確認します。  
   
 1.  Windows の **[スタート]**ボタンをクリックし、 **[すべてのプログラム]**を選択して、 **[Microsoft SQL Server 2016]** を選択します。  
   
 2.  **[SQL Server Management Studio]**を選択します。  
   
-3.  Analysis Services インスタンス (たとえば、**[サーバー名]\POWERPIVOT**) に接続します。 インスタンスに接続できたら、サービスが実行されていることがわかります。  
+3.  Analysis Services インスタンス (たとえば、 **[サーバー名]\POWERPIVOT**) に接続します。 インスタンスに接続できたら、サービスが実行されていることがわかります。  
   
 ##  <a name="bkmk_config"></a> 手順 2. 基本的な Analysis Services SharePoint 統合の構成  
  SharePoint ドキュメント ライブラリ内で Excel の高度なデータ モデルを操作できるようにするには、次の手順を実行して構成を変更する必要があります。 これらの手順は、SharePoint と SQL Server Analysis Services をインストールしてから実行します。  
   
-### SharePoint 2016  
+### <a name="sharepoint-2016"></a>SharePoint 2016  
  Excel Services は SharePoint 2016 から削除され、代わりに Office Online Server を使用して Excel がホストされるようになりました。  
   
-#### Office Online Server マシン アカウントへの Analysis Services に対する管理権限の付与  
+#### <a name="grant-office-online-server-machine-account-administration-rights-on-analysis-services"></a>Office Online Server マシン アカウントへの Analysis Services に対する管理権限の付与  
  Analysis Services のインストール時に、Analysis Services 管理者として Office Online Server マシン アカウントを追加した場合は、このセクションの手順を実行する必要はありません。  
   
-1.  Analysis Services サーバーで、SQL Server Management Studio を起動し、Analysis Services インスタンス (たとえば、`[MyServer]\POWERPIVOT`) に接続します。  
+1.  Analysis Services サーバーで、SQL Server Management Studio を起動し、Analysis Services インスタンス (たとえば、 `[MyServer]\POWERPIVOT`) に接続します。  
   
-2.  オブジェクト エクスプローラーで、インスタンス名を右クリックし、**[プロパティ]** を選択します。  
+2.  オブジェクト エクスプローラーで、インスタンス名を右クリックし、 **[プロパティ]**を選択します。  
   
-     ![View Properties of an SSAS server](../../../analysis-services/instances/install-windows/media/as-ssms-proeprties.gif "View Properties of an SSAS server")  
+     ![SSAS サーバーのプロパティを表示](../../../analysis-services/instances/install-windows/media/as-ssms-proeprties.gif "SSAS サーバーのプロパティの表示")  
   
 3.  左ペインで、 **[セキュリティ]**を選択します。 Office Online Server がインストールされているマシン アカウントを追加します。  
   
-     ![Security Settings of an SSAS Server](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "Security Settings of an SSAS Server")  
+     ![SSAS サーバーのセキュリティ設定](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "SSAS サーバーのセキュリティ設定")  
   
-#### Office Online Server への Analysis Services サーバーの登録  
+#### <a name="register-analysis-services-server-with-office-online-server"></a>Office Online Server への Analysis Services サーバーの登録  
  Office Online Server で、次の手順を実行します。  
   
 -   管理者として PowerShell コマンド ウィンドウを開きます。  
@@ -193,22 +198,22 @@ caps.handback.revision: 38
   
      `New-OfficeWebAppsExcelBIServer -ServerId [MyServer]\POWERPIVOT]`  
   
-### SharePoint 2013  
+### <a name="sharepoint-2013"></a>SharePoint 2013  
   
-#### Excel Services への Analysis Services に対するサーバー管理権限の付与  
+#### <a name="grant-excel-services-server-administration-rights-on-analysis-services"></a>Excel Services への Analysis Services に対するサーバー管理権限の付与  
  Analysis Services のインストール時に、Analysis Services 管理者として Excel Services アプリケーションのサービス アカウントを追加した場合は、このセクションの手順を実行する必要はありません。  
   
-1.  Analysis Services サーバーで、SQL Server Management Studio を起動し、Analysis Services インスタンス (たとえば、`[MyServer]\POWERPIVOT`) に接続します。  
+1.  Analysis Services サーバーで、SQL Server Management Studio を起動し、Analysis Services インスタンス (たとえば、 `[MyServer]\POWERPIVOT`) に接続します。  
   
-2.  オブジェクト エクスプローラーで、インスタンス名を右クリックし、**[プロパティ]** を選択します。  
+2.  オブジェクト エクスプローラーで、インスタンス名を右クリックし、 **[プロパティ]**を選択します。  
   
-     ![View Properties of an SSAS server](../../../analysis-services/instances/install-windows/media/as-ssms-proeprties.gif "View Properties of an SSAS server")  
+     ![SSAS サーバーのプロパティを表示](../../../analysis-services/instances/install-windows/media/as-ssms-proeprties.gif "SSAS サーバーのプロパティの表示")  
   
 3.  左ペインで、 **[セキュリティ]**を選択します。 手順 1. で Excel Services アプリケーション用に構成したドメイン ログインを追加します。  
   
-     ![Security Settings of an SSAS Server](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "Security Settings of an SSAS Server")  
+     ![SSAS サーバーのセキュリティ設定](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "SSAS サーバーのセキュリティ設定")  
   
-#### Analysis Services 統合のための Excel Services の構成  
+#### <a name="configure-excel-services-for-analysis-services-integration"></a>Analysis Services 統合のための Excel Services の構成  
   
 1.  SharePoint サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]**をクリックします。  
   
@@ -281,10 +286,10 @@ caps.handback.revision: 38
  「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 」では、Analysis Services または [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint には SharePoint Server Enterprise Edition が必要です。 このトピックに示された手順に従って、ポートとファイアウォールを構成できます。 実際に Analysis Services サーバーへのアクセスを許可するためには、これらの手順を組み合わせて実行する必要があります。  
   
 ##  <a name="bkmk_upgrade_workbook"></a> ブックのアップグレードと定期データ更新  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] の以前のバージョンで作成したブックのアップグレードに必要な手順は、そのブックを作成した [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のバージョンによって異なります。 詳細については、「[ブックのアップグレードと定期データ更新 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)」を参照してください。  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] の以前のバージョンで作成したブックのアップグレードに必要な手順は、そのブックを作成した [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のバージョンによって異なります。 詳細については、「 [ブックのアップグレードと定期データ更新 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)」を参照してください。  
   
 ##  <a name="bkmk_multiple_servers"></a> シングル サーバー インストールではない場合 - Power Pivot for Microsoft SharePoint  
- **Web フロントエンド (WFE)** または**中間層:** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーを大規模な SharePoint ファームで SharePoint モードで使用したり、ファームに [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] の追加機能をインストールしたりするには、各 SharePoint サーバーでインストーラー パッケージ **spPowerPivot16.msi (SharePoint 2016) (spPowerPivot.msi (SharePoint 2013))** を実行します。 spPowerPivot16.msi (spPowerPivot.msi) では、必要なデータ プロバイダーと [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 (2013) の構成ツールをインストールします。  
+ **Web フロントエンド (WFE)** または **中間層:** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーを大規模な SharePoint ファームで SharePoint モードで使用したり、ファームに [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] の追加機能をインストールしたりするには、各 SharePoint サーバーでインストーラー パッケージ **spPowerPivot16.msi (SharePoint 2016) (spPowerPivot.msi (SharePoint 2013))** を実行します。 spPowerPivot16.msi (spPowerPivot.msi) では、必要なデータ プロバイダーと [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 (2013) の構成ツールをインストールします。  
   
  中間層のインストールと構成の詳細については、以下を参照してください。  
   
@@ -302,11 +307,11 @@ caps.handback.revision: 38
   
 -   [Excel Services のデータ モデルの設定を管理する (SharePoint 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\)) (http://technet.microsoft.com/library/jj219780(v=office.15))  
   
- ![SharePoint の設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.png "SharePoint の設定") [ご意見および連絡先情報は、SQL Server に関するフィードバックの送信ページ](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback) からお送りください。  
+ ![SharePoint 設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[フィードバックや連絡先の情報を Microsoft SQL Server の接続を介して送信](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [SharePoint 2013 への Power Pivot の移行](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [Power Pivot for SharePoint アドインのインストールまたはアンインストール &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [ブックのアップグレードと定期データ更新 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
+ [ブックと定期データ更新 &#40; をアップグレードします。SharePoint 2013 &#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

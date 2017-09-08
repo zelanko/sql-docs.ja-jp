@@ -1,41 +1,46 @@
 ---
-title: "2 つのテーブル間のリレーションシップの作成 (SSAS テーブル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.createrelatdb.f1"
-  - "sql13.asvs.bidtoolset.managereldb.f1"
+title: "2 つのテーブル (SSAS テーブル) 間のリレーションシップを作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.createrelatdb.f1
+- sql13.asvs.bidtoolset.managereldb.f1
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9bc0373c1b0e018430106530da93107c600bbdee
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# 2 つのテーブル間のリレーションシップの作成 (SSAS テーブル)
-  データ ソース内のテーブルに既存のリレーションシップがない場合、または新しいテーブルを追加する場合は、モデル デザイナーのツールを使用して新しいリレーションシップを作成できます。 テーブル モデルでリレーションシップがどのように使用されるかについては、「[リレーションシップ (SSAS テーブル)](../../analysis-services/tabular-models/relationships-ssas-tabular.md)」を参照してください。  
+# <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>2 つのテーブル間のリレーションシップの作成 (SSAS テーブル)
+  データ ソース内のテーブルに既存のリレーションシップがない場合、または新しいテーブルを追加する場合は、モデル デザイナーのツールを使用して新しいリレーションシップを作成できます。 テーブル モデルでリレーションシップがどのように使用されるかについては、「 [リレーションシップ (SSAS テーブル)](../../analysis-services/tabular-models/relationships-ssas-tabular.md)」を参照してください。  
   
-## 2 つのテーブル間のリレーションシップの作成  
+## <a name="create-a-relationship-between-two-tables"></a>2 つのテーブル間のリレーションシップの作成  
   
-#### ダイアグラム ビューで 2 つのテーブル間のリレーションシップを作成するには (クリックしてドラッグ)  
+#### <a name="to-create-a-relationship-between-two-tables-in-diagram-view-click-and-drag"></a>ダイアグラム ビューで 2 つのテーブル間のリレーションシップを作成するには (クリックしてドラッグ)  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、 **[モデル]** メニューをクリックし、 **[モデル ビュー]**をポイントし、 **[ダイアグラム ビュー]**をクリックします。  
   
 2.  テーブル内の列をクリックして、(マウスのボタンを押しながら) 関連する参照テーブル内の関連する参照列までカーソルをドラッグして、ボタンを離します。 リレーションシップは自動的に正しい順序で作成されます。  
   
-#### ダイアグラム ビューで 2 つのテーブル間のリレーションシップを作成するには (右クリック)  
+#### <a name="to-create-a-relationship-between-two-tables-in-diagram-view-right-click"></a>ダイアグラム ビューで 2 つのテーブル間のリレーションシップを作成するには (右クリック)  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、 **[モデル]** メニューをクリックし、 **[モデル ビュー]**をポイントし、 **[ダイアグラム ビュー]**をクリックします。  
   
-2.  テーブルの見出しまたは列を右クリックして、**[リレーションシップの作成]** をクリックします。  
+2.  テーブルの見出しまたは列を右クリックして、 **[リレーションシップの作成]**をクリックします。  
   
 3.  **[リレーションシップの作成]** ダイアログ ボックスの **[テーブル]**の下矢印をクリックし、一覧からテーブルを選択します。  
   
@@ -45,13 +50,13 @@ caps.handback.revision: 16
   
 5.  **[関連する参照テーブル]**で、 **[テーブル]**で選択したテーブルに関連するデータの列を少なくとも 1 つ含むテーブルを選択します。  
   
-     このテーブルは、"一対多" リレーションシップの "一" の側に当たります。つまり、選択した列には重複する値がないことを意味します。 間違った順序 (多対一ではなく一対多) でリレーションシップを作成しようとすると、**[関連する参照列]** フィールドの横にアイコンが表示されます。 順序を逆にして有効なリレーションシップを作成してください。  
+     このテーブルは、"一対多" リレーションシップの "一" の側に当たります。つまり、選択した列には重複する値がないことを意味します。 間違った順序 (多対一ではなく一対多) でリレーションシップを作成しようとすると、 **[関連する参照列]** フィールドの横にアイコンが表示されます。 順序を逆にして有効なリレーションシップを作成してください。  
   
 6.  **[関連する参照列]**で、 **[列]**で選択した列の値と一致する一意の値を含む列を選択します。  
   
 7.  **[作成]**をクリックします。  
   
-#### データ ビューで 2 つのテーブル間のリレーションシップを作成するには  
+#### <a name="to-create-a-relationship-between-two-tables-in-data-view"></a>データ ビューで 2 つのテーブル間のリレーションシップを作成するには  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、 **[テーブル]** メニューをクリックし、 **[リレーションシップの作成]**をクリックします。  
   
@@ -63,13 +68,13 @@ caps.handback.revision: 16
   
 4.  **[関連する参照テーブル]**で、 **[テーブル]**で選択したテーブルに関連するデータの列を少なくとも 1 つ含むテーブルを選択します。  
   
-     このテーブルは、"一対多" リレーションシップの "一" の側に当たります。つまり、選択した列には重複する値がないことを意味します。 間違った順序 (多対一ではなく一対多) でリレーションシップを作成しようとすると、**[関連する参照列]** フィールドの横にアイコンが表示されます。 順序を逆にして有効なリレーションシップを作成してください。  
+     このテーブルは、"一対多" リレーションシップの "一" の側に当たります。つまり、選択した列には重複する値がないことを意味します。 間違った順序 (多対一ではなく一対多) でリレーションシップを作成しようとすると、 **[関連する参照列]** フィールドの横にアイコンが表示されます。 順序を逆にして有効なリレーションシップを作成してください。  
   
 5.  **[関連する参照列]**で、 **[列]**で選択した列の値と一致する一意の値を含む列を選択します。  
   
 6.  **[作成]**をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [リレーションシップの削除 (SSAS テーブル)](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
  [リレーションシップ (SSAS テーブル)](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
   

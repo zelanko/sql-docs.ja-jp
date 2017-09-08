@@ -1,37 +1,42 @@
 ---
-title: "多次元モデルのデータ ソース ビュー | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データ ソース ビュー [Analysis Services]"
-  - "データ ソース ビュー [Analysis Services], データ ソース ビューについて"
-  - "SQL Server Analysis Services, データ ソース ビュー"
-  - "データ ソース ビュー [Analysis Services], 複数"
-  - "Analysis Services, データ ソース ビュー"
-  - "複数のデータ ソース ビュー"
-  - "SSAS, データ ソース ビュー"
+title: "データ ソース ビューの多次元モデルで |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data source views [Analysis Services]
+- data source views [Analysis Services], about data source views
+- SQL Server Analysis Services, data source views
+- data source views [Analysis Services], multiple
+- Analysis Services, data source views
+- multiple data source views
+- SSAS, data source views
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 717cf118bae358e566c130ede70fb82572a1d38b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# 多次元モデルのデータ ソース ビュー
+# <a name="data-source-views-in-multidimensional-models"></a>多次元モデルのデータ ソース ビュー
   データ ソース ビュー (DSV) は、リレーショナル データ ソースを抽象化し、多次元プロジェクト内でキューブやディメンションを作成する基礎となります。 DSV の目的は、プロジェクトで使用するデータ構造をユーザーが制御できるようにすることと、基になるデータ ソースから独立して動作することです (たとえば、元のデータ ソースを変更せずに、列の名前の変更や列の連結を行うことができます)。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたはデータベースでは 1 つまたは複数のデータ ソースに関する複数のデータ ソース ビューを構築して、各ソリューションの要件を各ビューが満たすようにすることができます。  
   
-## 関連タスク  
+## <a name="related-tasks"></a>関連タスク  
  [データ ソース ビューの定義 (Analysis Services)](../../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
   
  [データ ソース ビューでのテーブルまたはビューの追加または削除 (Analysis Services)](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
@@ -56,8 +61,8 @@ caps.handback.revision: 36
   
  [データ ソース ビューでのスキーマの更新 (Analysis Services)](../../analysis-services/multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [スキーマ生成ウィザード (Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)   
- [サポートされるデータ ソース (SSAS - 多次元)](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [サポートされるデータ ソース &#40;SSASSSAS - 多次元&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

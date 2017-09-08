@@ -1,29 +1,34 @@
 ---
-title: "Analysis Services の高可用性とスケーラビリティ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "高可用性とスケーラビリティの Analysis Services |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5417a642fd9522ffb3453caff198480e1d930a0a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services の高可用性とスケーラビリティ
+# <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services の高可用性とスケーラビリティ
   この記事では、Analysis Services データベースの高可用性とスケーラビリティを確保するために最もよく使用される手法について説明します。 それぞれの目的に個別に対処できますが、実際のところ、この 2 つはほとんどのケースで連携しています。つまり、大規模なクエリまたは処理ワークロードをスケーラブルな方法で配置すると、通常は、高可用性を期待できます。  
   
  ただし、その逆については必ずしも正しいとは限りません。 ミッションクリティカルで中程度のクエリ ワークロードに対して厳格なサービス レベル契約が存在する場合は、スケーラビリティが伴わない高可用性が唯一の目的になることがあります。  
   
  Analysis Services で高可用性とスケーラビリティを確保する手法は、すべてのサーバー モード (多次元、表形式、および SharePoint 統合モード) で同じになる傾向があります。 特に明記しない限り、この記事の情報はすべてのモードに適用されます。  
   
-## 重要なポイント  
+## <a name="key-points"></a>重要なポイント  
  可用性とスケーラビリティの手法はリレーショナル データベース エンジンの手法とは異なるため、Analysis Services で使用される手法の導入部として、重要なポイントを簡単に説明しておきます。  
   
 -   Analysis Services では、Windows のサーバー プラットフォームに組み込まれている高可用性とスケーラビリティ メカニズムであるネットワーク負荷分散 (NLB) または Windows Server フェールオーバー クラスタリング (WSFC)、あるいはその両方が使用されます。  
@@ -31,7 +36,7 @@ caps.handback.revision: 14
     > [!NOTE]  
     >  リレーショナル データベース エンジンの Always On 機能は、Analysis Services には拡張されません。  また、Analysis Services インスタンスを、Always On 可用性グループで実行されるように構成することはできません。  
     >   
-    >  Analysis Services は、Always On 可用性グループで実行されませんが、Always On リレーショナル データベースからデータを取得して、処理することはできます。 高可用性リレーショナル データベースを、Analysis Services で使用できるように構成する方法の手順については、「[Analysis Services と Always On 可用性グループ](../../database-engine/availability-groups/windows/analysis-services-with-always-on-availability-groups.md)」をご覧ください。  
+    >  Analysis Services は、Always On 可用性グループで実行されませんが、Always On リレーショナル データベースからデータを取得して、処理することはできます。 高可用性リレーショナル データベースを、Analysis Services で使用できるように構成する方法の手順については、「 [Analysis Services と Always On 可用性グループ](../../database-engine/availability-groups/windows/analysis-services-with-always-on-availability-groups.md)」をご覧ください。  
   
 -   フェールオーバー クラスターでサーバーの冗長性が確保されている場合は、唯一の目的として高可用性を実現できます。代替ノードのハードウェアおよびソフトウェアの構成は、アクティブ ノードと同じと見なされます。  WSFC はそれ自体で高可用性を提供しますが、スケーラビリティは確保されません。  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 14
   
  単一のハイエンド、マルチコア サーバーは、それ自体で十分なスケーラビリティが用意されていることがあります。 多数のコア、RAM、およびディスク領域を備えたハイエンド システムでは、単一システム内でスケール アップできる可能性があります。  
   
- 多次元データベースの場合は、サーバー構成プロパティを調整して、プロセスとプロセッサの間にアフィニティを確立できます。 詳細については、「[スレッド プール プロパティ](../../analysis-services/server-properties/thread-pool-properties.md)」をご覧ください。  
+ 多次元データベースの場合は、サーバー構成プロパティを調整して、プロセスとプロセッサの間にアフィニティを確立できます。 詳細については、「 [スレッド プール プロパティ](../../analysis-services/server-properties/thread-pool-properties.md) 」をご覧ください。  
   
  **マルチサーバーの配置**  
   
@@ -60,20 +65,20 @@ caps.handback.revision: 14
   
  高可用性の要件に満たすためのもう 1 つの戦略として、仮想マシンを使用することもできます。 代替サーバーを数時間 (数分ではありません) で起動して可用性に対応できる場合は、要求時に開始可能な仮想マシンが使用できる可能性があります。この仮想マシンには、一元化された場所から取得された最新のデータベースを読み込むことができます。  
   
-## 読み取り専用データベースと読み取り/書き込みデータベースを使用したスケーラビリティ  
+## <a name="scalability-using-read-only-and-read-write-databases"></a>読み取り専用データベースと読み取り/書き込みデータベースを使用したスケーラビリティ  
  ネットワーク負荷分散は、クエリと処理のワークロードが多い場合、またはこれをエスカレートする場合にお勧めします。 NLB ソリューションの Analysis Services のデータベースは、クエリ間の一貫性を確保するために、読み取り専用のデータベースとして定義されます。  
   
- 「[Scale-out querying for Analysis Services using read-only databases](https://technet.microsoft.com/library/ff795582\(v=sql.100\).aspx)」(読み取り専用データベースを使用して Analysis Services クエリをスケール アウトする)(2008 年公開) のガイダンスはかなり前のものですが、基本的にはまだ利用できます。 サーバーのオペレーティング システムやコンピューター ハードウェアは進化しているため、プラットフォーム、CPU 制限に関する説明の中には古いものもありますが、読み取り専用データベースと読み取り/書き込みデータベースで大量のクエリを処理する方法は基本的には変わっていません。  
+ 「 [Scale-out querying for Analysis Services using read-only databases](https://technet.microsoft.com/library/ff795582\(v=sql.100\).aspx) 」(読み取り専用データベースを使用して Analysis Services クエリをスケール アウトする)(2008 年公開) のガイダンスはかなり前のものですが、基本的にはまだ利用できます。 サーバーのオペレーティング システムやコンピューター ハードウェアは進化しているため、プラットフォーム、CPU 制限に関する説明の中には古いものもありますが、読み取り専用データベースと読み取り/書き込みデータベースで大量のクエリを処理する方法は基本的には変わっていません。  
   
  このアプローチをまとめると次のようになります。  
   
--   専用のハードウェアと Analysis Services のインスタンスを使用して、データベースを処理します。 処理完了後、データベースを読み取り専用に設定します。 手順については、「[Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)」をご覧ください。  
+-   専用のハードウェアと Analysis Services のインスタンスを使用して、データベースを処理します。 処理完了後、データベースを読み取り専用に設定します。 手順については、「 [Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md) 」をご覧ください。  
   
 -   同じクエリ サーバーを複数使用して、同じ読み取り専用 Analysis Services データベースのコピーを実行します。 サーバーは NLB クラスターに配置されます。このサーバーには、クラスターへの単一のエントリ ポイントとして機能する 1 つの仮想サーバー名を使用してアクセスします。  
   
 -   robocopy を使用して、データ ディレクトリ全体を、処理サーバーから各クエリ サーバーにコピーし、同じデータベースを読み取り専用モードですべてのクエリ サーバーにアタッチします。 SAN スナップショット、同期、または実稼働データベースの移動に使う他のツールまたは方法を使用することもできます。  
   
-## 表形式および多次元ワークロードに対するリソース要求  
+## <a name="resource-demands-for-tabular-and-multidimensional-workloads"></a>表形式および多次元ワークロードに対するリソース要求  
  次の表では、Analysis Services がクエリと処理でシステム リソースをどのように使用しているかを、サーバー モードとストレージ モードに分けて大まかに説明します。 これは、分散ワークロードを処理するマルチサーバー配置での重要事項を把握するうえで役立ちます。  
   
 |||  
@@ -84,7 +89,7 @@ caps.handback.revision: 14
 |MOLAP ストレージを使用した多次元モデル|データをすばやく読み込むためのディスク IO と、キャッシュ データ用の十分な RAM を確保できるバランスの取れた構成を選択します。|  
 |ROLAP ストレージを使用した多次元モデル。|ディスク I/O を最大化し、ネットワーク待機時間を最小限に抑えます。|  
   
-## WSFC による高可用性と冗長性  
+## <a name="highly-availability-and-redundancy-through-wsfc"></a>WSFC による高可用性と冗長性  
  Analysis Services は、最短時間でサービスを復元する高可用性を実現するために、既存の Windows Server フェールオーバー クラスター (WSFC) サービスにインストールできます。  
   
  フェールオーバー クラスターは、データベースへのフル アクセス (読み取りと書き戻し) を 1 ノードずつ提供します。 最初のノードがダウンした場合、セカンダリ データベースは、クラスター内の追加ノードで代替サーバーとして実行されます。  
@@ -97,11 +102,11 @@ caps.handback.revision: 14
 - Analysis Services をクラスター化するときは、クラスターに参加するすべてのノードが同じハードウェアまたは非常によく似たハードウェアで実行され、各ノードの操作コンテキストがオペレーティング システムのバージョンとサービス パック、Analysis Services のバージョンとサービス パック (または累積更新プログラム)、およびサーバー モードに関して同じであることを確認してください。
 - パッシブ ノードを別のワークロードのアクティブ ノードとして再利用するのは避けてください。 ノードが両方のワークロードを処理できないと、実際のフェールオーバー状況が発生した場合に、コンピューター使用率の短期的な効果が失われます。
  
- フェールオーバー クラスターで Analysis Services を配置するための詳細な手順と背景情報については、ホワイトペーパー「[SQL Server Analysis Services をクラスター化する方法](https://msdn.microsoft.com/library/dn736073.aspx)」をご覧ください。 このガイダンスは SQL Server 2012 を対象にしていますが、最新バージョンの Analysis Services にも引き続き適用されます。  
+ フェールオーバー クラスターで Analysis Services を配置するための詳細な手順と背景情報については、ホワイトペーパー「 [SQL Server Analysis Services をクラスター化する方法](https://msdn.microsoft.com/library/dn736073.aspx)」をご覧ください。 このガイダンスは SQL Server 2012 を対象にしていますが、最新バージョンの Analysis Services にも引き続き適用されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Analysis Services データベースの同期](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Forcing NUMA Node affinity for Analysis Services Tabular Databases (Analysis Services 表形式データベースに対する NUMA ノード アフィニティの強制)](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
- [An Analysis Services Case Study: Using Tabular Models in a Large-scale Commercial Solution (Analysis Services のケース スタディ: 大規模な商用ソリューションにおける表形式モデルの使用)](https://msdn.microsoft.com/library/dn751533.aspx)  
+ [Analysis Services 表形式のデータベース用の NUMA 関係の強制](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
+ [Analysis Services のケース スタディ: 大規模な商用ソリューションでテーブル モデルの使用](https://msdn.microsoft.com/library/dn751533.aspx)  
   
   

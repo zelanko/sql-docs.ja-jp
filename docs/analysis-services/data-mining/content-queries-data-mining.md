@@ -1,23 +1,28 @@
 ---
-title: "コンテンツ クエリ (データ マイニング) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "コンテンツ クエリ (データ マイニング) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2d45986f9907903c6ccdf4d7b1c6bfe5d22eee78
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# コンテンツ クエリ (データ マイニング)
+# <a name="content-queries-data-mining"></a>コンテンツ クエリ (データ マイニング)
   コンテンツ クエリは、マイニング モデルの内部の統計および構造に関する情報を抽出するための手段です。 コンテンツ クエリを使用すると、ビューアーでは簡単に得られない詳細な情報がわかる場合があります。 また、コンテンツ クエリの結果を利用して、他の用途のためにプログラムで情報を抽出できます。  
   
  ここでは、コンテンツ クエリを使用して取得できる情報の種類に関する一般的な情報と、コンテンツ クエリの一般的な DMX 構文を紹介します。  
@@ -164,7 +169,7 @@ ORDER BY NODE_SUPPORT DESC
   
  WHERE 句で NODE_TYPE の値を 8 として指定して、ルールのみを取得しています。  
   
- 例については、「[結合モデルのクエリ例](../../analysis-services/data-mining/association-model-query-examples.md)」を参照してください。  
+ 例については、「 [結合モデルのクエリ例](../../analysis-services/data-mining/association-model-query-examples.md)」を参照してください。  
   
 ###  <a name="bkmk_DecTree"></a> 例 2: デシジョン ツリー モデルに対するコンテンツ クエリ  
  デシジョン ツリー モデルは、予測や分類のために使用できます。  この例では、結果を予測するためにモデルを使用していますが、結果の分類に使用できる要因またはルールを見つけることもできます。  
@@ -188,14 +193,14 @@ FROM [<decision tree model name>]
 WHERE NODE_UNIQUE_NAME= '<node id>'  
 ```  
   
- 例については、「[デシジョン ツリー モデルのクエリ例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)」を参照してください。  
+ 例については、「 [デシジョン ツリー モデルのクエリ例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)」を参照してください。  
   
 ##  <a name="bkmk_Results"></a> クエリ結果の操作  
  例が示すように、多くの場合、コンテンツ クエリは表形式の行セットを返しますが、入れ子になった列からの情報も含まれます。 返された行セットはフラット化できますが、結果の操作が複雑になります。 特に、NODE_DISTRIBUTION ノードのコンテンツはネスト化されていますが、モデルに関して非常に興味深い情報を含みます。  
   
  階層的な行セットの操作方法の詳細については、MSDN で OLEDB の仕様を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [DMX 選択ステートメントについて](../../dmx/understanding-the-dmx-select-statement.md)   
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)  
   

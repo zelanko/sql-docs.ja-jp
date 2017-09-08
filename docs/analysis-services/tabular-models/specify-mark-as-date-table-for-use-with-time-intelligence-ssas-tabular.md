@@ -1,29 +1,34 @@
 ---
-title: "タイム インテリジェンスで使用する [日付テーブルとしてマーク] の指定 (SSAS テーブル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "日付テーブルとしてマーク の指定 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 30841d1f-0c3b-4575-8f4a-27a1492e248c
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: c23ab7153ce90c55c9858dde6a0f0083bc92def7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# タイム インテリジェンスで使用する [日付テーブルとしてマーク] の指定 (SSAS テーブル)
-  DAX 数式のタイム インテリジェンス機能を使用するには、日付テーブルと Date データ型の一意の識別子 (datetime) の列を指定する必要があります。 日付テーブルの列が一意の識別子として指定されている場合は、日付テーブル内の列と任意のファクト テーブルのリレーションシップを作成できます。  
+# <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>日付テーブルとしてマーク タイム インテリジェンスで使用するための指定します。
+  DAX の数式でタイム インテリジェンス関数を使用するために、日付テーブルと Date データ型の一意識別子 (datetime) 列を指定する必要があります。 日付テーブルの列が一意の識別子として指定されている場合は、日付テーブル内の列と任意のファクト テーブルのリレーションシップを作成できます。  
   
- タイム インテリジェンス機能を使用する場合、次のルールが適用されます。  
+ タイム インテリジェンス関数を使用する場合は、次の規則が適用されます。  
   
--   DAX タイム インテリジェンス機能を使用する場合は、ファクト テーブルから datetime 列を指定しない。 1 つ以上の datetime 列 (Date データ型で、一意の値を持つ) を含む独立した日付テーブルをモデル内に必ず作成する。  
+-   DAX タイム インテリジェンス関数を使用する場合、ファクト テーブルから datetime 列を指定することはありません。 1 つ以上の datetime 列 (Date データ型で、一意の値を持つ) を含む独立した日付テーブルをモデル内に必ず作成する。  
   
 -   日付テーブルの日付の範囲が連続している。  
   
@@ -33,15 +38,15 @@ caps.handback.revision: 5
   
 -   日付テーブル内の Date データ型の列とファクト テーブルの間にリレーションシップを作成する。  
   
-#### 日付テーブルと一意識別子を指定するには  
+#### <a name="to-specify-a-date-table-and-unique-identifier"></a>日付テーブルと一意識別子を指定するには  
   
 1.  モデル デザイナーで、日付テーブルをクリックします。  
   
-2.   **[テーブル]** メニュー、 **[日付]**、 **Mark as [日付] [テーブル]**の順にクリックします。  
+2.  **[テーブル]** メニュー、 **[日付]**、 **Mark as [日付] [テーブル]**の順にクリックします。  
   
 3.  **[日付テーブルとしてマーク]** ダイアログ ボックスの **[日付]** ボックスの一覧で、一意識別子として使用する列を選択します。 この列は、一意の値を含んでいる必要があり、Date データ型である必要があります。 例:  
   
-    |日付|  
+    |[日付]|  
     |----------|  
     |7/1/2010 12:00:00 AM|  
     |7/2/2010 12:00:00 AM|  
@@ -51,8 +56,8 @@ caps.handback.revision: 5
   
 4.  必要に応じて、ファクト テーブルと日付テーブルの間のリレーションシップを作成します。  
   
-## 参照  
- [計算 (SSAS テーブル)](../../analysis-services/tabular-models/calculations-ssas-tabular.md)   
- [タイム インテリジェンス関数 (DAX)](http://msdn.microsoft.com/ja-jp/91df278d-4b28-40c1-a572-cdb91f081517)  
+## <a name="see-also"></a>参照  
+ [計算](../../analysis-services/tabular-models/calculations-ssas-tabular.md)   
+ [タイム インテリジェンス関数 (DAX)](http://msdn.microsoft.com/en-us/91df278d-4b28-40c1-a572-cdb91f081517)  
   
   

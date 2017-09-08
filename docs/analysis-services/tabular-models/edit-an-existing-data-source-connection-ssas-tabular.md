@@ -1,26 +1,31 @@
 ---
-title: "既存のデータ ソース接続の編集 (SSAS テーブル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.selexistconn.f1"
+title: "既存のデータ ソース接続 (SSAS テーブル) の編集 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.selexistconn.f1
 ms.assetid: 97e63f18-a01d-4c91-a411-e7e6d40a0647
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 67cac388bba3160fe5714a2c21f5741eafd6b32c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# 既存のデータ ソース接続の編集 (SSAS テーブル)
+# <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>既存のデータ ソース接続の編集 (SSAS テーブル)
   このトピックでは、テーブル モデルの既存のデータ ソース接続のプロパティを編集する方法について説明します。  
   
  外部データ ソースへの接続を作成した後、次のようにして接続を変更できます。  
@@ -31,10 +36,10 @@ caps.handback.revision: 13
   
 -   外部データ ソースから取得するテーブル、ビュー、または列を変更できます。  
   
-## 接続の変更  
+## <a name="modify-a-connection"></a>接続の変更  
  この手順では、データベースのデータ ソース接続を変更する方法について説明します。 データ ソース操作用のオプションはデータ ソースの種類によって異なる場合がありますが、その違いは簡単に識別できます。  
   
-#### 現在の接続で使用する外部データ ソースを変更するには  
+#### <a name="to-change-the-external-data-source-used-by-a-current-connection"></a>現在の接続で使用する外部データ ソースを変更するには  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で **[モデル]** メニューをクリックしてから **[既存の接続]**をクリックします。  
   
@@ -53,10 +58,10 @@ caps.handback.revision: 13
     > [!NOTE]  
     >  元のデータ ソースに存在しなかったテーブルが新しいデータ ソースに含まれている場合は、変更した接続を再度開いてテーブルを追加する必要があります。  
   
-## テーブルと列のマッピング (バインド) の編集  
+## <a name="edit-table-and-column-mappings-bindings"></a>テーブルと列のマッピング (バインド) の編集  
  この手順では、データ ソースの変更後にマッピングを編集する方法について説明します。  
   
-#### データ ソースの変更時に列マッピングを編集するには  
+#### <a name="to-edit-column-mappings-when-a-data-source-changes"></a>データ ソースの変更時に列マッピングを編集するには  
   
 1.  モデル デザイナーでテーブルを選択します。  
   
@@ -78,8 +83,8 @@ caps.handback.revision: 13
   
      現在のテーブルのプロパティ セットを保存すると、テーブルを処理する必要があることを示すメッセージが表示される場合があります。 **[処理]** をクリックして、更新されたデータをモデルに読み込みます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データの処理 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)   
- [サポートされているデータ ソース &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
+ [サポートされているデータ ソース (SSAS テーブル)](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

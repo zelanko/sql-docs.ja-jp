@@ -1,26 +1,31 @@
 ---
-title: "テーブル モデル デザイナー (SSAS) | Microsoft Docs"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1"
+title: "テーブル モデル デザイナー (SSAS) |Microsoft ドキュメント"
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: ee8b777d6e7439e94a2e5687a28ccf521e8aebdc
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# テーブル モデル デザイナー (SSAS)
-  テーブル モデル デザイナーは、Microsoft [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に統合された [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]の一部であり、プロフェッショナルなテーブル モデル ソリューションの開発のために特化したプロジェクトの種類のテンプレートが付属しています。  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は無料で Web からダウンロードしてインストールできます。 詳細については、「[SQL Server Data Tools (SSDT) のダウンロード](https://msdn.microsoft.com/library/mt204009.aspx)」を参照してください。   
+# <a name="tabular-model-designer-ssas"></a>テーブル モデル デザイナー (SSAS)
+  テーブル モデル デザイナーは、Microsoft [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に統合された [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]の一部であり、プロフェッショナルなテーブル モデル ソリューションの開発のために特化したプロジェクトの種類のテンプレートが付属しています。  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は無料で Web からダウンロードしてインストールできます。 詳細については、「 [SQL Server Data Tools (SSDT) のダウンロード](https://msdn.microsoft.com/library/mt204009.aspx) 」を参照してください。   
   
 ##  <a name="bkmk_benefits"></a> 利点  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をインストールすると、テーブル モデルを作成するための新しいプロジェクト テンプレートが、使用可能なプロジェクトの種類に追加されます。 いずれかのテンプレートを使用して新しいテーブル モデル プロジェクトを作成した後は、テーブル モデル デザイナー ツール、およびウィザードを使用して、モデル作成を開始できます。  
@@ -31,22 +36,22 @@ caps.handback.revision: 22
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をインストールすると、以下のテーブル モデル プロジェクト テンプレートがビジネス インテリジェンス プロジェクトの種類に追加されます。  
   
  **Analysis Services のテーブル プロジェクト**  
- このテンプレートを使用すると、新しい、空白のテーブル モデル プロジェクトを作成できます。 互換性レベルは、プロジェクトを作成するときに指定します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に組み込まれているすべての機能を使用するには、既定値の **[SQL Server 2016 RTM (1200)]** を選択します。  
+ このテンプレートを使用すると、新しい、空白のテーブル モデル プロジェクトを作成できます。 互換性レベルは、プロジェクトを作成するときに指定します。 **に組み込まれているすべての機能を使用するには、既定値の**[SQL Server 2016 RTM (1200)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を選択します。  
   
  ![ssas_tabularproject_compat1200](../../analysis-services/tabular-models/media/ssas-tabularproject-compat1200.jpg "ssas_tabularproject_compat1200")  
   
  **サーバー (表形式) からのインポート**  
  このテンプレートを使用すると、Analysis Services 内の既存のテーブル モデルからメタデータを抽出して、新しいテーブル モデル プロジェクトを作成できます。  
   
- 既存のモデルには、以前の互換性レベルが設定されています。 モデル定義をインポートした後、互換性レベルのプロパティを変更することで、1200 にアップグレードすることができます。  
+ 既存のモデルには、以前の互換性レベルが設定されています。 モデル定義をインポートした後は、互換性レベルのプロパティを変更することでアップグレードすることができます。  
   
  **インポート: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**  
- このテンプレートを使用すると、[!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] ファイルからメタデータとデータを抽出して、新しいテーブル モデル プロジェクトを作成できます。  
+ このテンプレートを使用すると、 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] ファイルからメタデータとデータを抽出して、新しいテーブル モデル プロジェクトを作成できます。  
   
 ##  <a name="bkmk_wind_men"></a> ウィンドウおよびメニュー  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のテーブル モデルの作成環境には、次が含まれています。  
   
-### デザイナー ウィンドウ  
+### <a name="designer-window"></a>デザイナー ウィンドウ  
  デザイナー ウィンドウは、モデルを視覚的に表現し、テーブル モデルの作成に使用されます。 Model.bim ファイルを開くと、デザイナー ウィンドウにそのモデルが表示されます。 デザイナー ウィンドウでは、2 つの異なる表示モードを使用してモデルを作成することができます。  
   
  **データ ビュー**  
@@ -57,32 +62,32 @@ caps.handback.revision: 22
   
  どちらのビューでもほとんどのモデル作成タスクを実行できます。  
   
-### [コードの表示] ウィンドウ  
- ソリューション エクスプローラーでファイルを右クリックして **[コードの表示]** を選択すると、Model.bim ファイルのコードを表示できます。 互換性レベル 1200 の表形式モデルの場合、モデル定義は JSON で表されます。  
+### <a name="view-code-window"></a>[コードの表示] ウィンドウ  
+ ソリューション エクスプローラーでファイルを右クリックして **[コードの表示]** を選択すると、Model.bim ファイルのコードを表示できます。 互換性レベル 1200 以降の表形式モデル、モデル定義は JSON で表されます。  
   
  JSON エディターを含む、通常版の Visual Studio が必要です。 商用エディションに含まれる追加機能が不要な場合は、 [無料の Visual Studio Community エディション](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) をダウンロードしてインストールできます。  
   
-### ソリューション エクスプローラー  
+### <a name="solution-explorer"></a>ソリューション エクスプローラー  
  ソリューション エクスプローラー ウィンドウには、テーブル モデル プロジェクトの論理的コンテナーとしての作業対象のソリューションと、その関連付けられたアイテムが表示されます。 モデル プロジェクト (.smproj) には、References オブジェクト (空) と Model.bim ファイルのみが含まれます。 このビューからプロジェクト アイテムを開いて、変更やその他の管理作業を直接実行することができます。  
   
  テーブル モデル ソリューションには、通常、1 つのプロジェクトしか含まれませんが、ソリューションには、Integration Services プロジェクトや Reporting Services プロジェクトなど、その他のプロジェクトも含まれる場合があります。 テーブル モデル プロジェクト ファイルと異なる種類で、ビルド アクション プロパティが [なし] に設定されているか、出力ディレクトリにコピー プロパティが [コピーしない] に設定されている場合は、任意数のファイルを追加することができます。  
   
  ソリューション エクスプローラーを表示するには、 **[表示]** メニューの **[ソリューション エクスプローラー]**をクリックします。  
 
-### テーブル モデル エクスプローラー
-  [SQL Server Data Tools](https://msdn.microsoft.com/mt186501) の August 2016 リリース (14.0.60812.0) から使用できるようになったテーブル モデル エクスプローラーは、1200 テーブル モデル内のメタデータ オブジェクト間を移動するのに便利です。
+### <a name="tabular-model-explorer"></a>テーブル モデル エクスプローラー
+  最初の 2016 年 8 月リリース (14.0.60812.0) で利用できる[SQL Server Data Tools](https://msdn.microsoft.com/mt186501)、表形式モデル エクスプ ローラーでは表形式モデルのメタデータ オブジェクトを移動できます。
 
- テーブル モデル エクスプローラーを表示するには、**[表示]** > **[その他のウィンドウ]** の順にクリックして、**[Tabular Model Explorer (テーブル モデル エクスプローラー)]** をクリックします。
+ テーブル モデル エクスプローラーを表示するには、 **[表示]** > **[その他のウィンドウ]**の順にクリックして、 **[Tabular Model Explorer (テーブル モデル エクスプローラー)]**をクリックします。
    
   ![テーブル モデル エクスプローラー](../../analysis-services/tabular-models/media/tabular-model-explorer.png) 
   
- テーブル モデル エクスプローラーでは、メタデータ オブジェクトが、1200 テーブル モデルのスキーマによく似たツリー構造で表示されます。 [データ ソース]、[パースペクティブ]、[リレーションシップ]、[ロール]、[テーブル]、および [翻訳] は、最上位のスキーマ オブジェクトに対応します。 KPI とメジャーだけに当てはまる例外がいくつかあります。KPI とメジャーは技術的には最上位オブジェクトではなく、モデルのさまざまなテーブルの子オブジェクトです。 ただし、すべての KPI とメジャー用に統合された最上位コンテナーがあるため、これらのオブジェクトを (特に、非常に多数のテーブルが含まれている場合に) 簡単に操作できます。 メジャーは対応する親テーブルの下にも表示されるので、実際の親子関係がよくわかります。 最上位のメジャー コンテナーでメジャーを選択すると、テーブルの下にある子コレクションでも同じメジャーが選択され、逆の場合も同様です。  
+ 表形式モデル エクスプ ローラーでは、メタデータ オブジェクトを表形式モデルのスキーマとよく似たツリー構造に整理します。 [データ ソース]、[パースペクティブ]、[リレーションシップ]、[ロール]、[テーブル]、および [翻訳] は、最上位のスキーマ オブジェクトに対応します。 KPI とメジャーだけに当てはまる例外がいくつかあります。KPI とメジャーは技術的には最上位オブジェクトではなく、モデルのさまざまなテーブルの子オブジェクトです。 ただし、すべての KPI とメジャー用に統合された最上位コンテナーがあるため、これらのオブジェクトを (特に、非常に多数のテーブルが含まれている場合に) 簡単に操作できます。 メジャーは対応する親テーブルの下にも表示されるので、実際の親子関係がよくわかります。 最上位のメジャー コンテナーでメジャーを選択すると、テーブルの下にある子コレクションでも同じメジャーが選択され、逆の場合も同様です。  
  
  テーブル モデル エクスプローラーのオブジェクト ノードは、これまでは Visual Studio の [モデル]、[テーブル]、[列] メニューの下に隠れていた適切なメニュー オプションにリンクしています。 オブジェクトを右クリックして、オブジェクトの種類のオプションを確認できます。 コンテキスト メニューがまだないオブジェクト ノードの種類もありますが、今後のリリースでオプションが追加されて機能が強化されます。 
 
  テーブル モデル エクスプローラーでは、便利な検索機能も提供されます。 検索ボックスの名前の部分に入力するだけで、テーブル モデル エクスプローラーのツリー ビューがそれに合わせて絞り込まれます。 
   
-### [プロパティ] ウィンドウ  
+### <a name="properties-window"></a>[プロパティ] ウィンドウ  
  プロパティ ウィンドウには、選択したオブジェクトのプロパティが一覧表示されます。 次のオブジェクトには、プロパティ ウィンドウで表示および編集できるプロパティがあります。  
   
 -   Model.bim  
@@ -99,7 +104,7 @@ caps.handback.revision: 22
   
  **プロパティ** ウィンドウを開くには、 **[表示]** メニューをクリックしてから **[プロパティ ウィンドウ]**をクリックします。  
   
-### エラー一覧  
+### <a name="error-list"></a>エラー一覧  
  エラー一覧ウィンドウには、次のようなモデルの状態に関するメッセージが含まれています。  
   
 -   セキュリティのベスト プラクティスについての通知。  
@@ -112,18 +117,18 @@ caps.handback.revision: 22
   
  既定では、 **エラー一覧** は、エラーが返されない限り表示されません。 ただし、 **エラー一覧** ウィンドウはいつでも表示できます。 **エラー一覧** ウィンドウを表示するには、 **[表示]** メニューをクリックしてから **[エラー一覧]**をクリックします。  
   
-### 出力  
- ビルドと配置の情報が、(進捗状況のモーダル ダイアログに加えて) **出力**ウィンドウに表示されます。 **出力** ウィンドウを表示するには、 **[表示]** をクリックしてから [出力] をクリックします。  
+### <a name="output"></a>出力  
+ ビルドと配置の情報が、(進捗状況のモーダル ダイアログに加えて) **出力** ウィンドウに表示されます。 **出力** ウィンドウを表示するには、 **[表示]** をクリックしてから [出力] をクリックします。  
   
-### メニュー項目  
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をインストールすると、テーブル モデルの作成のために特化したメニュー項目が Visual Studio のメニュー バーに追加されます。 **[モデル]** メニューを使用して、データ インポート ウィザードを起動したり、既存の接続を表示したり、ワークスペース データを処理したりできるほか、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel でモデル ワークスペースを参照することもできます。 **[テーブル]** メニューは、テーブル間のリレーションシップの作成と管理、メジャーの作成と管理のほか、データ テーブルの設定や計算オプションなど、各種のテーブル プロパティを指定する際に使用します。 **[列]** メニューでは、テーブル内の列の追加と削除、列の表示と非表示のほか、列のプロパティ (データ型、フィルターなど) を指定することができます。 テーブル モデル ソリューションは、 **[ビルド]** メニューからビルドおよび配置できます。 コピーと貼り付けの機能は、**[編集]** メニューに含まれています。  
+### <a name="menu-items"></a>メニュー項目  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をインストールすると、テーブル モデルの作成のために特化したメニュー項目が Visual Studio のメニュー バーに追加されます。 **[モデル]** メニューを使用して、データ インポート ウィザードを起動したり、既存の接続を表示したり、ワークスペース データを処理したりできるほか、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel でモデル ワークスペースを参照することもできます。 **[テーブル]** メニューは、テーブル間のリレーションシップの作成と管理、メジャーの作成と管理のほか、データ テーブルの設定や計算オプションなど、各種のテーブル プロパティを指定する際に使用します。 **[列]** メニューでは、テーブル内の列の追加と削除、列の表示と非表示のほか、列のプロパティ (データ型、フィルターなど) を指定することができます。 テーブル モデル ソリューションは、 **[ビルド]** メニューからビルドおよび配置できます。 コピーと貼り付けの機能は、 **[編集]** メニューに含まれています。  
   
  これらのメニュー項目に加えて、Analysis Services のオプションに別途設定が追加されます。追加された設定には、[ツール] のメニュー項目からアクセスすることができます。  
   
-### [ツール バー]  
+### <a name="toolbar"></a>[ツール バー]  
  Analysis Services ツール バーを使用すると、最もよく使用されるモデル作成コマンドにすばやく簡単にアクセスできます。  
   
-##  <a name="bkmk_vsint"></a>  Visual Studio との統合  
+##  <a name="bkmk_vsint"></a> Visual Studio との統合  
  **ソース管理**  
  Analysis Services プロジェクトは、選択したソース管理プラグインと統合されます。 ソース コントロールを使用するように Visual Studio を構成した場合は、ソリューション エクスプローラーからチェックインとチェックアウトを使用できます。 Team Foundation Server を使用するように構成するには、「 [Team Foundation バージョン管理を使用する Visual Studio の構成](http://msdn.microsoft.com/library/ms253064.aspx)」を参照してください。 多くのサード パーティ製ソース管理プラグインもサポートされます。  
   
@@ -133,7 +138,7 @@ caps.handback.revision: 22
  **キーボード ショートカット**  
  Analysis Services のキーボード ショートカットは、[ツール]  > [オプション] > [キーボード] ダイアログで構成/再マップできます。 テーブル モデル デザイナーのコンテキストでは、ビルド、保存、デバッグ、新しいプロジェクトなど、一部のグローバル [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ショートカットがサポートされています。 その他のテーブル モデル デザイナーに固有のショートカットは Analysis Services コンテキストです。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [テーブル モデル プロジェクト (SSAS テーブル)](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
  [プロパティ (SSAS テーブル)](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   

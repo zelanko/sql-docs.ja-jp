@@ -1,29 +1,34 @@
 ---
-title: "リレーショナル マイニング構造の作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ディメンション [Analysis Services], データ マイニング"
-  - "データ マイニング [Analysis Services], 構造"
-  - "マイニング構造 [Analysis Services], 作成"
-  - "リレーショナル マイニング モデル [Analysis Services]"
-  - "OLAP マイニング モデル [Analysis Services]"
+title: "リレーショナル マイニング構造を作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], data mining
+- data mining [Analysis Services], structure
+- mining structures [Analysis Services], creating
+- relational mining models [Analysis Services]
+- OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 82fa652f76c1818ef6538b379723e7f91c8482ab
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# リレーショナル マイニング構造の作成
+# <a name="create-a-relational-mining-structure"></a>リレーショナル マイニング構造の作成
   ほとんどのデータ マイニング モデルは、リレーショナル データ ソースに基づいています。 リレーショナル データ マイニング モデルを作成する利点は、キューブの作成という複雑な作業をせずに、アドホック データをまとめ、モデルをトレーニングおよび更新できることです。  
   
  リレーショナル マイニング構造では、さまざまなソースからデータを取得できます。 生データは、データ ソース ビューの一部として定義可能であれば、テーブル、ファイル、またはリレーショナル データベース システムに格納できます。 たとえば、データが Excel、SQL Server データ ウェアハウス データベース、または SQL Server レポート データベースにある場合、あるいは OLE DB プロバイダーまたは ODBC プロバイダー経由でアクセスする外部ソースにある場合は、リレーショナル マイニング構造を使用する必要があります。  
@@ -42,15 +47,15 @@ caps.handback.revision: 35
   
  [ドリルスルーを有効にする理由と方法](#BKMK_DrillThru)  
   
-## 必要条件  
+## <a name="requirements"></a>必要条件  
  最初に、既存のデータ ソースが必要です。 データ ソースがまだ存在しない場合は、データ ソース デザイナーを使用して、データ ソースを設定できます。 詳細については、「[データ ソースの作成 (SSAS 多次元)](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)」をご覧ください。  
   
- 次に、データ ソース ビュー ウィザードを使用して、必要なデータを 1 つのデータ ソース ビューにまとめます。 データ ソース ビューでデータを選択、変換、フィルター選択、または管理する方法の詳細については、「[多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)」をご覧ください。  
+ 次に、データ ソース ビュー ウィザードを使用して、必要なデータを 1 つのデータ ソース ビューにまとめます。 データ ソース ビューでデータを選択、変換、フィルター選択、または管理する方法の詳細については、「 [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)」をご覧ください。  
   
 ##  <a name="BKMK_Relational_Structure"></a> プロセスの概要  
- ソリューション エクスプローラーで **[マイニング構造]** ノードを右クリックし、**[新しいマイニング構造の追加]** を選択して、データ マイニング ウィザードを起動します。 ウィザードでは、次の手順に従って新しいリレーショナル マイニング モデルの構造を作成します。  
+ ソリューション エクスプローラーで **[マイニング構造]** ノードを右クリックし、 **[新しいマイニング構造の追加]**を選択して、データ マイニング ウィザードを起動します。 ウィザードでは、次の手順に従って新しいリレーショナル マイニング モデルの構造を作成します。  
   
-1.  **[定義方法の選択]**: データ ソースの種類を選択し、**[リレーショナル データベースまたはデータ ウェアハウスを使用する]** を選択します。  
+1.  **[定義方法の選択]**: データ ソースの種類を選択し、 **[リレーショナル データベースまたはデータ ウェアハウスを使用する]**を選択します。  
   
 2.  **[データ マイニング構造の作成]**: 構造のみを作成するか、構造と共にマイニング モデルも作成するかを決定します。  
   
@@ -62,13 +67,13 @@ caps.handback.revision: 35
   
      一意のレコードを識別する方法をアルゴリズムで認識できるように、各テーブルにキーを指定する必要があります。入れ子になったテーブルを追加した場合は、関連レコードも指定します。  
   
-     詳細については、「[マイニング構造列](../../analysis-services/data-mining/mining-structure-columns.md)」をご覧ください。  
+     詳細については、「 [マイニング構造列](../../analysis-services/data-mining/mining-structure-columns.md)」をご覧ください。  
   
-5.  **[トレーニング データの指定]**: このページでは、*ケース テーブル*を選択します。ケース テーブルは、分析するうえで最も重要なデータを含むテーブルです。  
+5.  **[トレーニング データの指定]**: このページでは、 *ケース テーブル*を選択します。ケース テーブルは、分析するうえで最も重要なデータを含むテーブルです。  
   
      一部のデータ セット (特にマーケット バスケット モデルの作成に使用されるデータ セット) では、関連テーブルを含めることもできます。 その入れ子になったテーブル内の値は、メイン テーブル内の 1 つの行 (またはケース) に関連付けられている複数の値として処理されます。  
   
-6.  **[列のコンテンツおよびデータ型の指定]**: 構造で使用する列ごとに、*データ型*と*コンテンツの種類*の両方を選択する必要があります。  
+6.  **[列のコンテンツおよびデータ型の指定]**: 構造で使用する列ごとに、 *データ型* と *コンテンツの種類*の両方を選択する必要があります。  
   
      ウィザードによってデータ型が自動的に検出されますが、ウィザードが推奨するデータ型を使用する必要はありません。 たとえば、データに数値が含まれる場合でも、カテゴリ データを表していることがあります。 キーとして指定した列には、その特定のモデルの種類に適したデータ型が自動的に割り当てられます。 詳細については、「[マイニング モデル列](../../analysis-services/data-mining/mining-model-columns.md)」および「[データ型 (データ マイニング)](../../analysis-services/data-mining/data-types-data-mining.md)」をご覧ください。  
   
@@ -100,7 +105,7 @@ caps.handback.revision: 35
   
  一方、コンテンツの種類はデータ マイニングにとって重要で、分析の結果に影響を与えます。 コンテンツの種類により、アルゴリズムにおけるデータの処理方法 (数値を連続して処理するかビン分割するか、 有効な値がいくつあるか、 各値が重複していないか、 値がキーの場合はキーの種類 (キーが日付/時刻値、シーケンス、他の種類のキーのいずれを示しているか)) が決まります。  
   
- 選択するデータ型によって、コンテンツの種類の選択が制限される場合があります。 たとえば、数値でない値は分離できません。 目的のコンテンツの種類が表示されない場合は、**[戻る]** をクリックしてデータ型のページに戻り、別のデータ型を選択します。  
+ 選択するデータ型によって、コンテンツの種類の選択が制限される場合があります。 たとえば、数値でない値は分離できません。 目的のコンテンツの種類が表示されない場合は、 **[戻る]** をクリックしてデータ型のページに戻り、別のデータ型を選択します。  
   
  コンテンツの種類を間違えてもあまり気にする必要はありません。 新しいモデルを作成し、そのモデル内のコンテンツの種類を変更するのは非常に簡単です。ただし、新しいコンテンツの種類がマイニング構造のデータ型セットでサポートされている必要があります。 また、テスト目的や、別のアルゴリズムの要件に合わせる目的で、さまざまなコンテンツの種類を使用して複数のモデルを作成することも非常に一般的です。  
   
@@ -110,25 +115,25 @@ caps.handback.revision: 35
  ウィザードの終了間際では、データをトレーニング セットとテスト セットのどちらにパーティション分割するかを決定する必要があります。 データのランダムにサンプリングされた部分をテスト用に準備するこの機能により、一貫したテスト データのセットが新しいマイニング構造に関連するすべてのマイニング モデルで使用できるようになるため、非常に便利です。  
   
 > [!WARNING]  
->  このオプションは、すべてのモデルの種類で使用できるわけではありません。 たとえば、予測モデルを作成する場合、タイム シリーズ アルゴリズムではデータ内のギャップが許可されないため、予約データを使用できません。 予約データセットをサポートするモデルの種類の一覧については、「[トレーニング データ セットとテスト データ セット](../../analysis-services/data-mining/training-and-testing-data-sets.md)」をご覧ください。  
+>  このオプションは、すべてのモデルの種類で使用できるわけではありません。 たとえば、予測モデルを作成する場合、タイム シリーズ アルゴリズムではデータ内のギャップが許可されないため、予約データを使用できません。 予約データセットをサポートするモデルの種類の一覧については、「 [トレーニング データ セットとテスト データ セット](../../analysis-services/data-mining/training-and-testing-data-sets.md)」をご覧ください。  
   
  この予約データセットを作成するには、テストに使用するデータの割合を指定します。 残りのすべてのデータはトレーニングに使用されます。 必要に応じて、テストに使用するケースの最大数を設定することや、ランダム選択プロセスの開始時に使用するシード値を設定することができます。  
   
  予約テスト セットの定義はマイニング構造と一緒に格納されます。これにより、構造に基づいて新しいモデルを作成するときに、このテスト データセットを使用してモデルの精度を評価できるようになります。 マイニング構造のキャッシュを削除すると、トレーニングおよびテストに使用したケースに関する情報も削除されます。  
   
 ##  <a name="BKMK_DrillThru"></a> ドリルスルーを有効にする理由と方法  
- ウィザードのほぼ最後に、*ドリルスルー*を有効にするオプションがあります。 このオプションは、見逃しやすいですが、重要なものです。 ドリルスルーを使用すると、マイニング モデルにクエリを実行することにより、マイニング構造内のソース データを表示できます。  
+ ウィザードのほぼ最後に、 *ドリルスルー*を有効にするオプションがあります。 このオプションは、見逃しやすいですが、重要なものです。 ドリルスルーを使用すると、マイニング モデルにクエリを実行することにより、マイニング構造内のソース データを表示できます。  
   
  なぜこれが役に立つのでしょうか。 たとえば、クラスター モデルの結果を表示し、特定のクラスターに配置された顧客を確認する必要がある場合、 ドリルスルーを使用すると、連絡先情報などの詳細を表示できます。  
   
 > [!WARNING]  
 >  ドリルスルーを使用するには、マイニング構造の作成時にドリルスルーを有効にする必要があります。 モデルのドリルスルーはモデルのプロパティを設定することで後から有効にできますが、マイニング構造のこのオプションは最初に設定する必要があります。 詳細については、「[ドリルスルー クエリ (データ マイニング)](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)」をご覧ください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データ マイニング デザイナー](../../analysis-services/data-mining/data-mining-designer.md)   
- [データ マイニング ウィザード (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [データ マイニング ウィザード & #40 です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [マイニング モデルのプロパティ](../../analysis-services/data-mining/mining-model-properties.md)   
- [マイニング構造と構造列のプロパティ](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
+ [マイニング構造列および構造列のプロパティ](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
  [マイニング構造のタスクと操作方法](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

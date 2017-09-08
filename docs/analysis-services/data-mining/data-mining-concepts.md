@@ -1,37 +1,42 @@
 ---
-title: "データ マイニングの概念 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL ServerAnalysis Services、データ マイニング"
-  - "データのクリーニング"
-  - "予測分析"
-  - "学習アルゴリズム"
-  - "データ マイニング [Analysis Services]、概念"
-  - "帰納的学習"
-  - "データ マイニング [Analysis Services]、データ マイニングについて"
-  - "マイニング モデル [Analysis Services]"
-  - "データ アクセス [Analysis Services]"
-  - "機械学習アルゴリズム [Analysis Services]"
-  - "マイニング モデル [Analysis Services]、データ マイニングについて"
-  - "SSAS、データ マイニング"
-  - "Analysis Services、データ マイニング"
+title: "データ マイニングの概念 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Analysis Services, data mining
+- cleaning data
+- predictive analytics
+- learning algorithms
+- data mining [Analysis Services], concepts
+- inductive learning
+- data mining [Analysis Services], about data mining
+- mining models [Analysis Services]
+- data access [Analysis Services]
+- machine learning algorithms [Analysis Services]
+- mining models [Analysis Services], about data mining
+- SSAS, data mining
+- Analysis Services, data mining
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 caps.latest.revision: 48
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d9bad5ee7b9724c7faa1acbe4ebcc3fa2fa6812c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# データ マイニングの概念
+# <a name="data-mining-concepts"></a>データ マイニングの概念
   データ マイニングとは、大規模なデータ セットから実用的な情報を検出するプロセスです。 データ マイニングでは、数学的分析を使用して、データに内在するパターンおよび傾向を抽出します。 通常、これらのパターンは、従来のデータ探索では検出できません。これは、リレーションシップが非常に複雑であるか、またはデータ量が多すぎるためです。  
   
  これらのパターンと傾向を合わせて収集し、 *データ マイニング モデル*として定義できます。 マイニング モデルは、次のような特定のシナリオに適用できます。  
@@ -62,18 +67,18 @@ caps.handback.revision: 48
   
  次の図では、プロセスの各手順の関係と、各手順の実行に使用できる [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテクノロジについて説明します。  
   
- ![データ マイニング処理の主な手順](../../analysis-services/data-mining/media/data-mining-process.gif "データ マイニング処理の主な手順")  
+ ![データ マイニング プロセスの主なステップ](../../analysis-services/data-mining/media/data-mining-process.gif "データ マイニング プロセスの主なステップ")  
   
  図ではプロセスが循環的であることが示されています。これはデータ マイニング モデルの作成が、動的かつ反復的なプロセスであることを意味します。 データを探索した後、適切なマイニング モデルを作成するためにデータが不十分であることがわかれば、さらに多くのデータを探索する必要があります。 また、いくつかのモデルを作成した後で、定義した問題がそれらのモデルで適切に解決されないことがわかれば、問題を再定義する必要があります。 モデルを配置した後、より多くのデータが使用可能になったために、モデルを更新することが必要になる場合があります。 適切なモデルを作成するためには、プロセスの各手順を何度も繰り返すことが必要になる場合もあります。  
   
  Microsoft SQL Server データ マイニングでは、データ マイニング モデルを作成および操作するための統合環境が提供されています。 この環境には、さまざまなプロジェクト用の広範なソリューションを簡単に作成できるデータ マイニング アルゴリズムとクエリ ツールを持つ SQL Server Development Studio、およびモデルの参照とデータ マイニング オブジェクトの管理のためのツールを持つ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]が含まれています。 詳細については、「[SQL Server データ ツール (SSDT) を使用した多次元モデルの作成](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)」を参照してください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールをビジネス シナリオに適用する方法の例については、「[基本的なデータ マイニング チュートリアル](../Topic/Basic%20Data%20Mining%20Tutorial.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールをビジネス シナリオに適用する方法の例については、「 [基本的なデータ マイニング チュートリアル](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を参照してください。  
   
 ##  <a name="DefiningTheProblem"></a> 問題の定義  
  次の図で示すように、データ マイニング プロセスの最初の手順では、問題を明確に定義し、その問題の解決のためにデータを利用する方法について検討します。  
   
- ![データ マイニング手順 1:問題の定義](../../analysis-services/data-mining/media/dmprocess-defining.gif "データ マイニング手順 1:問題の定義")  
+ ![データ マイニング手順 1: 問題の定義](../../analysis-services/data-mining/media/dmprocess-defining.gif "データ マイニング手順 1: 問題の定義")  
   
  この手順には、ビジネス要件の分析、問題の範囲の定義、モデルを評価する基準の定義、およびデータ マイニング プロジェクトの特定の目的の定義が含まれます。 これらのタスクは、次のような質問に言い換えることができます。  
   
@@ -96,7 +101,7 @@ caps.handback.revision: 48
 ##  <a name="PreparingData"></a> データの準備  
  次の図で強調表示されている、データ マイニング プロセスの 2 番目の手順では、「 [問題の定義](#DefiningTheProblem) 」の手順で示したデータの統合および削除を行います。  
   
- ![データ マイニング手順 2:データの準備](../../analysis-services/data-mining/media/dmprocess-preparing.gif "データ マイニング手順 2:データの準備")  
+ ![データ マイニング手順 2: データの準備](../../analysis-services/data-mining/media/dmprocess-preparing.gif "データ マイニング手順 2: データの準備")  
   
  データは会社全体に分散して異なる形式で保存されたり、間違ったエントリや欠落しているエントリなどの矛盾を含んだりしている場合があります。 たとえば、製品が市場で提供される前に製品を購入していたり、自宅から 2,000 マイル離れたところにある店で定期的に買い物をしていたりという矛盾を示す場合があります。  
   
@@ -115,7 +120,7 @@ caps.handback.revision: 48
 ##  <a name="ExploringData"></a> データの探索  
  次の図で強調されているように、データ マイニング プロセスの 3 番目の手順では、準備されたデータを探索します。  
   
- ![データ マイニング手順 3:データの検索](../../analysis-services/data-mining/media/dmprocess-exploring.gif "データ マイニング手順 3:データの検索")  
+ ![データ マイニング手順 3: データの探索](../../analysis-services/data-mining/media/dmprocess-exploring.gif "データ マイニング手順 3: データの探索")  
   
  マイニング モデルの作成時に適切な決定を行うために、データを理解する必要があります。 調査方法には、最小値および最大値の計算、平均偏差および標準偏差の計算、およびデータの分布の確認が含まれます。 たとえば、最大値、最小値、および平均値を調べることで、データが顧客またはビジネス プロセスを表していないことが判明し、その結果、よりバランスの取れたデータを取得するか、予測の基礎となっている前提条件を見直す必要があることが明らかになる場合があります。 標準偏差などの分布値には、結果の安定性および正確性に関する有用な情報が含まれていることがあります。 標準偏差が大きい場合、データを追加することでモデルを改善できる可能性があります。 標準分布から大きく逸脱したデータは、実際の問題を反映していない可能性があります。また、実際の問題を正確に表している可能性もありますが、このようなデータにモデルを適合させるのは困難です。  
   
@@ -123,14 +128,14 @@ caps.handback.revision: 48
   
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] などのツールを使用して使用可能なデータ ソースを詳細に調査し、データ マイニングの使用可能性を判断します。 [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)]や Integration Services の Data Profiler などのツールを使用すると、データ内の値の分布を分析し、間違ったデータや不足データを修復することができます。  
   
- ソースの定義が完了した後、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でデータ ソース ビュー デザイナーを使用して、データ ソース ビューでそれらのソースを組み合わせることができます。 詳細については、「[多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)」を参照してください。 このデザイナーには、データを調べたり、データがモデルの作成に役立つことを確認したりするための複数のツールが含まれています。 詳細については、「[データ ソース ビューでのデータの検索 (Analysis Services)](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)」を参照してください。  
+ ソースの定義が完了した後、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でデータ ソース ビュー デザイナーを使用して、データ ソース ビューでそれらのソースを組み合わせることができます。 詳細については、「 [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)」を参照してください。 このデザイナーには、データを調べたり、データがモデルの作成に役立つことを確認したりするための複数のツールが含まれています。 詳細については、「[データ ソース ビューでのデータの検索 (Analysis Services)](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)」を参照してください。  
   
- モデルを作成すると、モデルに含まれるデータの統計サマリが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって自動的に作成されます。この統計サマリに対してクエリを実行することで、レポートや詳細な分析で使用するデータを取得できます。 詳細については、「[データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)」を参照してください。  
+ モデルを作成すると、モデルに含まれるデータの統計サマリが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって自動的に作成されます。この統計サマリに対してクエリを実行することで、レポートや詳細な分析で使用するデータを取得できます。 詳細については、「 [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)」を参照してください。  
   
 ##  <a name="BuildingModels"></a> モデルの作成  
  次の図で強調されているように、データ マイニング プロセスの 4 番目の手順では、マイニング モデルまたはモデルを作成します。 「 [データの探索](#ExploringData) 」の手順から得た知識を使用すると、モデルの定義および作成に役立ちます。  
   
- ![データ マイニング手順 4:マイニング モデルの構築](../../analysis-services/data-mining/media/dmprocess-building.gif "データ マイニング手順 4:マイニング モデルの構築")  
+ ![データ マイニング手順 4: マイニング モデルの構築](../../analysis-services/data-mining/media/dmprocess-building.gif "データ マイニング手順 4: マイニング モデルの構築")  
   
  マイニング構造を作成して、使用するデータ列を定義します。 マイニング構造では、データ ソースがリンクされますが、処理が完了するまで実際のデータは格納されません。 マイニング構造を処理すると、分析に使用できる集計およびその他の統計情報が [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって生成されます。 この情報は、マイニング構造に基づくすべてのマイニング モデルで使用できます。 マイニング構造とマイニング モデルの関係の詳細については、「[論理アーキテクチャ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)」を参照してください。  
   
@@ -145,38 +150,38 @@ caps.handback.revision: 48
 ##  <a name="ValidatingModels"></a> モデルの調査と検証  
  次の図で強調されているように、データ マイニング プロセスの 5 番目の手順では、作成したマイニング モデルを調査して、その効果をテストします。  
   
- ![データ マイニング手順 5:マイニング モデルの検証](../../analysis-services/data-mining/media/dmprocess-validating.gif "データ マイニング手順 5:マイニング モデルの検証")  
+ ![データ マイニング手順 5: マイニング モデルの検証](../../analysis-services/data-mining/media/dmprocess-validating.gif "データ マイニング手順 5: マイニング モデルの検証")  
   
  モデルを運用環境に配置する前に、モデルのパフォーマンスをテストする必要があります。 また、モデルを作成する場合、通常は構成が異なる複数のモデルを作成し、どのモデルが問題およびデータに最も適した結果をもたらすかを調べるためにすべてのモデルをテストします。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、データをトレーニング データセットとテスト データセットに分割できるツールがあります。これにより、すべてのモデルのパフォーマンスを同じデータに対して正確に評価できます。 トレーニング データセットを使用してモデルを作成し、テスト データセットを使用して予測クエリを作成することによってモデルの精度をテストします。 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]では、このパーティション分割は、マイニング モデルの作成中に自動的に実行されます。 詳細については、「[テストおよび検証 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)」を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、データをトレーニング データセットとテスト データセットに分割できるツールがあります。これにより、すべてのモデルのパフォーマンスを同じデータに対して正確に評価できます。 トレーニング データセットを使用してモデルを作成し、テスト データセットを使用して予測クエリを作成することによってモデルの精度をテストします。 このパーティション分割を行うことができます、マイニング モデルの作成中に自動的にします。 詳細については、「 [テストおよび検証 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)" テンプレートを使用して、データ マイニング プロジェクトを作成します。  
   
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]のデータ マイニング デザイナーのビューアーを使用して、アルゴリズムで検出された傾向およびパターンを調べることができます。 詳細については、「[データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)」を参照してください。 また、リフト チャートや分類マトリックスなどのデザイナーのツールを使用して、モデルがどの程度予測を作成できるかをテストすることもできます。 モデルがデータに固有のものであるか、一般的な母集団の推定に使用できるものであるかを確認する場合は、*クロス検証*と呼ばれる統計手法を使用できます。この手法を使用すると、データのサブセットが自動的に作成され、各サブセットに対してモデルがテストされます。 詳細については、「[テストおよび検証 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)」を参照してください。  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]のデータ マイニング デザイナーのビューアーを使用して、アルゴリズムで検出された傾向およびパターンを調べることができます。 詳細については、「 [データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)」を参照してください。 また、リフト チャートや分類マトリックスなどのデザイナーのツールを使用して、モデルがどの程度予測を作成できるかをテストすることもできます。 モデルがデータに固有のものであるか、一般的な母集団の推定に使用できるものであるかを確認する場合は、*クロス検証*と呼ばれる統計手法を使用できます。この手法を使用すると、データのサブセットが自動的に作成され、各サブセットに対してモデルがテストされます。 詳細については、「[テストおよび検証 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)」を参照してください。  
   
  「 [モデルの作成](#BuildingModels) 」の手順で作成したモデルのパフォーマンスがいずれもよくない場合は、プロセスの前の手順に戻り、問題を再定義するか、元のデータセットのデータを再調査する必要が生じることもあります。  
   
 ##  <a name="DeployingandUpdatingModels"></a> モデルの配置と更新  
  次の図で強調されているように、データ マイニング プロセスの最後の手順では、最適なパフォーマンスを示したモデルを運用環境に配置します。  
   
- ![データ マイニング手順 6:マイニング モデルの配置](../../analysis-services/data-mining/media/dmprocess-deploying.gif "データ マイニング手順 6:マイニング モデルの配置")  
+ ![データ マイニング手順 6: マイニング モデルの配置](../../analysis-services/data-mining/media/dmprocess-deploying.gif "データ マイニング手順 6: マイニング モデルの配置")  
   
  マイニング モデルを運用環境に配置すると、必要に応じて多くのタスクを実行できます。 次のようなタスクを実行できます。  
   
 -   モデルを使用して予測を作成します。これは、業務上の意思決定に使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、予測クエリを作成するための DMX 言語と、クエリを作成するための予測クエリ ビルダーが提供されています。 詳細については、「[データ マイニング拡張機能 (DMX) リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)」を参照してください。  
   
--   モデルから統計情報、ルール、または数式を取得するコンテンツ クエリを作成します。 詳細については、「[データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)」を参照してください。  
+-   モデルから統計情報、ルール、または数式を取得するコンテンツ クエリを作成します。 詳細については、「 [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)」を参照してください。  
   
--   データ マイニング機能をアプリケーションに直接埋め込みます。 マイニング構造とマイニング モデルを作成、変更、処理、および削除するためにアプリケーションで使用できる一連のオブジェクトを含んでいる分析管理オブジェクト (AMO) を含めることができます。 XML for Analysis (XMLA) メッセージを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに直接送信することもできます。 詳細については、「[開発 (Analysis Services - データ マイニング)](https://technet.microsoft.com/library/bb522473\(v=sql.110\).aspx)」を参照してください。  
+-   データ マイニング機能をアプリケーションに直接埋め込みます。 マイニング構造とマイニング モデルを作成、変更、処理、および削除するためにアプリケーションで使用できる一連のオブジェクトを含んでいる分析管理オブジェクト (AMO) を含めることができます。 XML for Analysis (XMLA) メッセージを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに直接送信することもできます。 詳細については、「 [開発 (Analysis Services - データ マイニング)](https://technet.microsoft.com/library/bb522473\(v=sql.110\).aspx)」を参照してください。  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を使用してパッケージを作成します。ここで、マイニング モデルは、入力されたデータを複数のテーブルに適切に分割するために使用されます。 たとえば、潜在的な顧客に関してデータベースが継続的に更新される場合は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と共にマイニング モデルを使用して、製品を購入する可能性のある顧客と製品を購入する可能性のない顧客に入力データを分割できます。 詳細については、「[Integration Services の典型的な使用方法](http://msdn.microsoft.com/ja-jp/3b97897a-d418-4ef4-b5a4-5aabf4fa6bca)」を参照してください。  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を使用してパッケージを作成します。ここで、マイニング モデルは、入力されたデータを複数のテーブルに適切に分割するために使用されます。 たとえば、潜在的な顧客に関してデータベースが継続的に更新される場合は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と共にマイニング モデルを使用して、製品を購入する可能性のある顧客と製品を購入する可能性のない顧客に入力データを分割できます。 詳細については、「 [Integration Services の典型的な使用方法](http://msdn.microsoft.com/en-us/3b97897a-d418-4ef4-b5a4-5aabf4fa6bca)」を参照してください。  
   
 -   ユーザーが既存のマイニング モデルに対して直接クエリを実行できるレポートを作成します。 詳細については、「[SQL Server データ ツールの Reporting Services (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)」を参照してください。  
   
 -   レビューおよび分析を行った後、モデルを更新します。 モデルを更新する場合、モデルの再処理が必要になります。 詳しくは、「 [Processing Data Mining Objects](../../analysis-services/data-mining/processing-data-mining-objects.md)」をご覧ください。  
   
--   組織が新しいデータを入手したときに、モデルを動的に更新します。ソリューションの有効性を向上させるための継続的な変更は、配置戦略の一環として実行する必要があります。 詳細については、「[データ マイニング ソリューションおよびオブジェクトの管理](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)」を参照してください。  
+-   組織が新しいデータを入手したときに、モデルを動的に更新します。ソリューションの有効性を向上させるための継続的な変更は、配置戦略の一環として実行する必要があります。 詳細については、「 [データ マイニング ソリューションおよびオブジェクトの管理](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データ マイニング ソリューション](../../analysis-services/data-mining/data-mining-solutions.md)   
  [データ マイニング ツール](../../analysis-services/data-mining/data-mining-tools.md)  
   

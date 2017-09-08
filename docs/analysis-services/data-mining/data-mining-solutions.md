@@ -1,39 +1,44 @@
 ---
-title: "データ マイニング ソリューション | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データ マイニング [Analysis Services]、データ マイニングについて"
-  - "データ マイニング [Analysis Services], 開発"
+title: "データ マイニング ソリューション |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], about data mining
+- data mining [Analysis Services], development
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 caps.latest.revision: 64
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee2196b673eb9a53d5fefe5c62d1158ae94bf702
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# データ マイニング ソリューション
+# <a name="data-mining-solutions"></a>データ マイニング ソリューション
   データ マイニング ソリューションとは、データ マイニング プロジェクトを少なくとも 1 つ含んだ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ソリューションです。  
   
- このセクションの各トピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を使用した統合データ マイニング ソリューションの設計と実装の方法について説明します。 データ マイニング デザイン プロセスおよび関連ツールの概要については、「[データ マイニングの概念](../../analysis-services/data-mining/data-mining-concepts.md)」を参照してください。  
+ このセクションの各トピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を使用した統合データ マイニング ソリューションの設計と実装の方法について説明します。 データ マイニング デザイン プロセスおよび関連ツールの概要については、「 [データ マイニングの概念](../../analysis-services/data-mining/data-mining-concepts.md)」を参照してください。  
   
- データ マイニングに利用できるその他のプロジェクト タイプの詳細については、「[データ マイニング ソリューションの関連プロジェクト](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)」を参照してください。  
+ データ マイニングに利用できるその他のプロジェクト タイプの詳細については、「 [データ マイニング ソリューションの関連プロジェクト](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)」を参照してください。  
   
- [リレーショナル データ ソースと多次元ソリューションの比較](#bkmk_RelMD)  
+ [リレーショナル データ ソースとします。多次元ソリューション](#bkmk_RelMD)  
   
  [データ マイニング ソリューションの配置](#bkmk_Deploy)  
   
  [ソリューションのチュートリアル](#bkmk_Walkthru)  
   
-##  <a name="bkmk_RelMD"></a> リレーショナル データ ソースと多次元ソリューションの比較  
+##  <a name="bkmk_RelMD"></a>リレーショナル データ ソースとします。多次元ソリューションの比較  
  データ マイニング ソリューションには、多次元データ (既存のキューブ) のほか、純粋なリレーショナル データ (データ ウェアハウス内のテーブルやビュー)、テキスト ファイル、Excel ブック、さらには、外部データ ソースを使用することもできます。  
   
 -   既存の多次元データベース ソリューション内でデータ マイニング オブジェクトを作成できます。  
@@ -47,11 +52,11 @@ caps.handback.revision: 64
 ##  <a name="bkmk_Deploy"></a> データ マイニング ソリューションの配置  
  ソリューションの配置先となる [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスは、多次元オブジェクトとデータ マイニング オブジェクトをサポートするモードで実行されている必要があります。つまり、テーブル モデルや [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データをホストするインスタンスにデータ マイニング オブジェクトを配置することはできません。  
   
- したがって、Visual Studio でデータ マイニング ソリューションを作成するときは、**[Analysis Services 多次元およびデータ マイニング プロジェクト]** テンプレートを必ず使用してください。  
+ したがって、Visual Studio でデータ マイニング ソリューションを作成するときは、 **[Analysis Services 多次元およびデータ マイニング プロジェクト]**テンプレートを必ず使用してください。  
   
  ソリューションを配置すると、データ マイニングに使用されるオブジェクトが、指定された [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに作成されます。作成先は、ソリューション ファイルと同じ名前のデータベースになります。  
   
- リレーショナル ソリューションと多次元ソリューションの両方を配置する方法の詳細については、「[データ マイニング ソリューションの配置](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md)」を参照してください。  
+ リレーショナル ソリューションと多次元ソリューションの両方を配置する方法の詳細については、「 [データ マイニング ソリューションの配置](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md)」を参照してください。  
   
 ##  <a name="bkmk_Walkthru"></a> ソリューションのチュートリアル  
  データ マイニング ウィザードを使用してデータ マイニング ソリューションを作成する方法の概要について説明します。  
@@ -62,7 +67,7 @@ caps.handback.revision: 64
  [Create an OLAP Mining Structure](../../analysis-services/data-mining/create-an-olap-mining-structure.md)  
  OLAP キューブのデータを基にマイニング構造を作成します。 OLAP データから作成したモデルは、データ マイニング ディメンションとして保存できるほか、データ セットやモデルを新しいキューブとして保存することもできます。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
  [データ マイニング プロジェクト](../../analysis-services/data-mining/data-mining-projects.md)  
   
  [データ マイニング オブジェクトの処理](../../analysis-services/data-mining/processing-data-mining-objects.md)  
@@ -71,7 +76,7 @@ caps.handback.revision: 64
   
  [データ マイニング ソリューションの配置](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md)  
   
-## 関連タスクおよびトピック  
+## <a name="related-tasks-and-topics"></a>関連タスクおよびトピック  
  データ ソースとマイニング構造を含む基本的なデータ マイニング ソリューションを作成したら、そのソリューションを基礎として、新しいモデルの追加、モデルのテストや比較、予測の作成、データのサブセットに対する実験などを行うことができます。  
   
  詳細については、次のリンクを参照してください。  
@@ -84,7 +89,7 @@ caps.handback.revision: 64
 |モデルのトレーニング用データにフィルターを適用することによるマイニング モデルのカスタマイズ|[マイニング モデルを構造に追加する &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |データ マイニング ソリューションの更新と管理|Link TBD|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データ マイニングのチュートリアル &#40;Analysis Services&#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
   
   

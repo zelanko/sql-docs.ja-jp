@@ -1,34 +1,39 @@
 ---
-title: "SQL Server Management Studio で DMX クエリを作成する | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "テンプレート [Analysis Services], クエリ"
-  - "SQL Server Management Studio [Analysis Services], DMX クエリ"
-  - "予測 [Analysis Services], DMX 予測クエリ"
-  - "予測 [DMX]"
-  - "予測クエリ [DMX]"
-  - "クエリ [DMX] では、予測クエリ"
-  - "DMX のマイニング モデル [Analysis Services]"
+title: "SQL Server Management Studio で DMX クエリを作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- templates [Analysis Services], queries
+- SQL Server Management Studio [Analysis Services], DMX queries
+- predictions [Analysis Services], DMX prediction queries
+- predictions [DMX]
+- prediction queries [DMX]
+- queries [DMX], prediction queries
+- mining models [Analysis Services], DMX
 ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
 caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 51a8ea188eb54adf0ac208225dd7c5fda417178c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# SQL Server Management Studio で DMX クエリを作成する
+# <a name="create-a-dmx-query-in-sql-server-management-studio"></a>SQL Server Management Studio で DMX クエリを作成する
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、マイニング モデルおよびマイニング構造に対する、予測クエリ、コンテンツ クエリ、およびデータ定義クエリを作成できる一連の機能が用意されています。  
   
--   グラフィカルな予測クエリ ビルダーは、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の両方で使用でき、予測クエリを記述し、データ セットをモデルにマッピングするプロセスを簡略化します。  
+-   グラフィカルな予測クエリ ビルダーは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の両方で使用でき、予測クエリを記述し、データ セットをモデルにマッピングするプロセスを簡略化します。  
   
 -   テンプレート エクスプローラーに用意されているクエリ テンプレートを使用すると、さまざまな種類の予測クエリなど、さまざまな種類の DMX クエリの作成をすぐに開始できます。 テンプレートには、コンテンツ クエリ用、入れ子になったデータ セットを使用したクエリ用、マイニング構造からケースを返すクエリ用だけでなく、データ定義クエリ用もあります。  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 43
   
  頻繁に実行するクエリまたはコマンドのカスタム テンプレートを作成することもできます。  
   
-## XMLA クエリ テンプレート  
+## <a name="xmla-query-templates"></a>XMLA クエリ テンプレート  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、XMLA クエリのテンプレートも用意されています。  
   
  XMLA と DMX を使用して実行できるクエリの種類は一部重複しています。 たとえば、モデル コンテンツ クエリは DMX またはデータ マイニング スキーマ行セットを使用して作成できますが、スキーマ行セットには DMX コンテンツ クエリでは公開されない情報が含まれている場合があります。  
@@ -58,25 +63,25 @@ caps.handback.revision: 43
   
 ##  <a name="BKMK_Building_Queries"></a> DMX クエリの作成と実行  
   
-#### 新しい DMX クエリ ウィンドウを開く  
+#### <a name="open-a-new-dmx-query-window"></a>新しい DMX クエリ ウィンドウを開く  
   
-1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で **[新しいクエリ]** をクリックし、**[新しい分析サーバー DMX クエリ]** を選択します。  
+1.  **で** [新しいクエリ] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]をクリックし、 **[新しい分析サーバー DMX クエリ]**を選択します。  
   
 2.  **[サーバーへの接続]** ダイアログ ボックスが表示されたら、操作するマイニング モデルが含まれている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスを選択します。  
   
-#### テンプレート エクスプローラーを開く  
+#### <a name="open-template-explorer"></a>テンプレート エクスプローラーを開く  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、**[表示]** メニューの **[テンプレート エクスプローラー]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[テンプレート エクスプローラー]**をクリックします。  
   
-2.  **[分析サーバー]** をクリックして、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に適用するテンプレートのツリー ビューを表示します。  
+2.  **[分析サーバー]** をクリックして、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に適用するテンプレートのツリー ビューを表示します。  
   
-#### テンプレートを適用したクエリの作成  
+#### <a name="apply-a-template-to-build-a-query"></a>テンプレートを適用したクエリの作成  
   
--   適切なクエリの種類を右クリックし、**[開く]** をクリックします。  
+-   適切なクエリの種類を右クリックし、 **[開く]**をクリックします。  
   
 -   または、テンプレートをクエリ エディターにドラッグします。  
   
--   また、**[クエリ]** メニューの **[パラメーター値の指定]** オプションを使用して、クエリのパラメーターを入力することもできます。  
+-   また、 **[クエリ]**メニューの **[パラメーター値の指定]** オプションを使用して、クエリのパラメーターを入力することもできます。  
   
  テンプレートから特定の種類のクエリを作成する方法の例については、次の各トピックを参照してください。  
   
@@ -84,8 +89,8 @@ caps.handback.revision: 43
   
  [マイニング モデルのコンテンツ クエリの作成](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データ マイニング クエリ ツール](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [データ マイニング拡張機能 (DMX) リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

@@ -1,31 +1,36 @@
 ---
-title: "テスト、検証タスク、および操作方法 (データ マイニング) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "マイニング精度チャート [Analysis Services]"
-  - "予測モデリング [Analysis Services]"
-  - "マイニング構造 [Analysis Services], 予測モデリング"
-  - "マイニング精度チャート [Analysis Services], 操作方法に関するトピック"
-  - "マイニング モデル [Analysis Services], 予測モデリング"
-  - "予測精度 [データ マイニング]"
+title: "テストと検証タスク、および操作方法 (データ マイニング) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Mining Accuracy Chart [Analysis Services]
+- predictive modeling [Analysis Services]
+- mining structures [Analysis Services], predictive modeling
+- Mining Accuracy Chart [Analysis Services], how-to topics
+- mining models [Analysis Services], predictive modeling
+- predictive accuracy [data mining]
 ms.assetid: 3a0b4dc9-5b64-4be1-aa5f-6ff26f43dbf8
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8e74a79b18f526878981d21e36134ff82d5c862b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# テスト、検証タスク、および操作方法 (データ マイニング)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のデータ マイニング デザイナーの **[マイニング精度チャート]** タブを使用すると、マイニング構造内のマイニング モデルの予測精度を比較できます。  
+# <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>テスト、検証タスク、および操作方法 (データ マイニング)
+  **のデータ マイニング デザイナーの** [マイニング精度チャート] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] タブを使用すると、マイニング構造内のマイニング モデルの予測精度を比較できます。  
   
  次の 4 種類のグラフを作成することができます。  
   
@@ -37,13 +42,13 @@ caps.handback.revision: 41
   
 -   クロス検証レポート  
   
- 最初の 3 つのグラフでは、**[入力の選択]** タブを使用して、グラフの生成に使用するデータを定義します。  
+ 最初の 3 つのグラフでは、 **[入力の選択]** タブを使用して、グラフの生成に使用するデータを定義します。  
   
- クロス検証グラフは、**[クロス検証]** タブで使用できる追加の入力を使用して作成します。 詳細については、「[相互検証 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)」を参照してください。  
+ クロス検証グラフは、 **[クロス検証]** タブで使用できる追加の入力を使用して作成します。詳細については、「[相互検証 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)」を参照してください。  
   
  マイニング精度チャートの使用方法の詳細については、「[テストおよび検証 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)」を参照してください。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
   
 -   [リフト チャート、利益チャート、または分類マトリックスの作成](../../analysis-services/data-mining/create-a-lift-chart-profit-chart-or-classification-matrix.md)  
   

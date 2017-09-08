@@ -1,46 +1,51 @@
 ---
-title: "アソシエーション モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "アイテムセット [Analysis Services]"
-  - "association algorithms [Analysis Services]"
-  - "マイニング モデル コンテンツ, アソシエーション モデル"
-  - "ルール [データ マイニング]"
-  - "アソシエーション [Analysis Services]"
+title: "アソシエーション モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- itemsets [Analysis Services]
+- association algorithms [Analysis Services]
+- mining model content, association models
+- rules [Data Mining]
+- associations [Analysis Services]
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 259335815674dfd8c9d59b1fe6bde7c170d096b6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# アソシエーション モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
-  このトピックでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に適用されるマイニング モデル コンテンツに関連する一般用語と統計用語の説明については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+# <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>アソシエーション モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
+  このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に適用されるマイニング モデル コンテンツに関連する一般用語と統計用語の説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
-## アソシエーション モデルの構造について  
+## <a name="understanding-the-structure-of-an-association-model"></a>アソシエーション モデルの構造について  
  アソシエーション モデルの構造は単純です。 モデルとそのメタデータを表す 1 つの親ノードが各モデルにあり、各親ノードにはアイテムセットとルールのフラット リストがあります。 アイテムセットとルールはツリーを構成していません。次の図のように、最初がアイテムセット、次がルールという順に並んでいます。  
   
- ![アソシエーション モデルのモデル コンテンツの構造](../../analysis-services/data-mining/media/modelcontentstructure-assoc.gif "アソシエーション モデルのモデル コンテンツの構造")  
+ ![アソシエーション モデルのモデル コンテンツの構造体](../../analysis-services/data-mining/media/modelcontentstructure-assoc.gif "アソシエーション モデルのモデル コンテンツの構造")  
   
- 各アイテムセットはそれぞれ固有のノードに含まれています (NODE_TYPE = 7)。 "*ノード*" には、アイテムセットの定義、そのアイテムセットを含むケースの数、およびその他の情報が含まれています。  
+ 各アイテムセットはそれぞれ固有のノードに含まれています (NODE_TYPE = 7)。 " *ノード* " には、アイテムセットの定義、そのアイテムセットを含むケースの数、およびその他の情報が含まれています。  
   
- ルールもそれぞれ固有のノードに含まれています (NODE_TYPE = 8)。 "*ルール*" は、アイテムがどのように関連付けられるかを示す一般的なパターンを記述します。 ルールは IF-THEN ステートメントに似ています。 ルールの左辺は、既存の条件または条件のセットを表します。 ルールの右辺は、左辺の条件に通常関連付けられるデータセット内のアイテムを表します。  
+ ルールもそれぞれ固有のノードに含まれています (NODE_TYPE = 8)。 " *ルール* " は、アイテムがどのように関連付けられるかを示す一般的なパターンを記述します。 ルールは IF-THEN ステートメントに似ています。 ルールの左辺は、既存の条件または条件のセットを表します。 ルールの右辺は、左辺の条件に通常関連付けられるデータセット内のアイテムを表します。  
   
- **注** ルールやアイテムセットを抽出するには、クエリを使用して必要な種類のノードのみを取得します。 詳細については、「[結合モデルのクエリ例](../../analysis-services/data-mining/association-model-query-examples.md)」を参照してください。  
+ **注** ルールやアイテムセットを抽出するには、クエリを使用して必要な種類のノードのみを取得します。 詳細については、「 [結合モデルのクエリ例](../../analysis-services/data-mining/association-model-query-examples.md)」を参照してください。  
   
-## アソシエーション モデルのモデル コンテンツ  
+## <a name="model-content-for-an-association-model"></a>アソシエーション モデルのモデル コンテンツ  
  ここでは、マイニング モデル コンテンツの列のうち、アソシエーション モデルに関連する列についてのみ詳細と例を紹介します。  
   
- スキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+ スキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
  MODEL_CATALOG  
  モデルが格納されているデータベースの名前。  
@@ -99,9 +104,9 @@ caps.handback.revision: 17
 |----------|-----------------|  
 |ITEMSET_COUNT|モデル内のすべてのアイテムセットの数。|  
 |RULE_COUNT|モデル内のすべてのルールの数。|  
-|MIN_SUPPORT|任意の 1 つのアイテムセットに対して検出された最小のサポート。<br /><br /> **注** この値は、*MINIMUM _SUPPORT* パラメーターに設定した値とは異なる場合があります。|  
-|MAX_SUPPORT|任意の 1 つのアイテムセットに対して検出された最大のサポート。<br /><br /> **注** この値は、*MAXIMUM_SUPPORT* パラメーターに設定した値とは異なる場合があります。|  
-|MIN_ITEMSET_SIZE|アイテムの数として表される最小のアイテムセットのサイズ。<br /><br /> 値 0 は、**Missing** 状態が独立したアイテムとして扱われたことを示します。<br /><br /> **注** *MINIMUM_ITEMSET_SIZE* パラメーターの既定値は 1 です。|  
+|MIN_SUPPORT|任意の 1 つのアイテムセットに対して検出された最小のサポート。<br /><br /> **注** この値は、 *MINIMUM _SUPPORT* パラメーターに設定した値とは異なる場合があります。|  
+|MAX_SUPPORT|任意の 1 つのアイテムセットに対して検出された最大のサポート。<br /><br /> **注** この値は、 *MAXIMUM_SUPPORT* パラメーターに設定した値とは異なる場合があります。|  
+|MIN_ITEMSET_SIZE|アイテムの数として表される最小のアイテムセットのサイズ。<br /><br /> 値 0 は、 **Missing** 状態が独立したアイテムとして扱われたことを示します。<br /><br /> **注** *MINIMUM_ITEMSET_SIZE* パラメーターの既定値は 1 です。|  
 |MAX_ITEMSET_SIZE|検出された最大のアイテムセットのサイズを示します。<br /><br /> **注** この値は、モデルの作成時に *MAX_ITEMSET_SIZE* パラメーターに設定した値によって制限されます。 その値を超えることはありませんが、その値より小さくなることはあります。 既定値は、3 です。|  
 |MIN_PROBABILITY|モデル内の任意の 1 つのアイテムセットまたはルールに対して検出された最小の確率。<br /><br /> 例: 0.400390625<br /><br /> **注** アイテムセットの場合、この値は常に、モデルの作成時に *MINIMUM_PROBABILITY* パラメーターに設定した値より大きくなります。|  
 |MAX_PROBABILITY|モデル内の任意の 1 つのアイテムセットまたはルールに対して検出された最大の確率。<br /><br /> 例: 1<br /><br /> **注** アイテムセットの最大確率を制限するパラメーターはありません。 頻度が高すぎるアイテムを除外するには、代わりに *MAXIMUM_SUPPORT* パラメーターを使用します。|  
@@ -157,9 +162,9 @@ caps.handback.revision: 17
   
  2 つ目の行はアソシエーション モデルに固有の行で、ルールの右辺のアイテムセットへのポインターが含まれています。 このポインターは、ATTRIBUTE_VALUE 列で、右辺のアイテムのみを含むアイテムセットの ID として表されます。  
   
- たとえば、`If {A,B} Then {C}` というルールの場合は、アイテム `{C}` の名前と、アイテム C のアイテムセットを含むノードの ID がテーブルに含まれます。  
+ たとえば、 `If {A,B} Then {C}`というルールの場合は、アイテム `{C}`の名前と、アイテム C のアイテムセットを含むノードの ID がテーブルに含まれます。  
   
- アイテムセット ノードからは、右辺の製品を含むケースの合計数を特定できるため、このポインターは便利です。 ルール `If {A,B} Then {C}` が当てはまるケースは、`{C}` のアイテムセットに含まれるケースのサブセットです。  
+ アイテムセット ノードからは、右辺の製品を含むケースの合計数を特定できるため、このポインターは便利です。 ルール `If {A,B} Then {C}` が当てはまるケースは、 `{C}`のアイテムセットに含まれるケースのサブセットです。  
   
  NODE_SUPPORT  
  このノードをサポートするケースの数。  
@@ -177,7 +182,7 @@ caps.handback.revision: 17
   
  **アイテムセット ノード** 空白。  
   
- **ルール ノード** ルールの左辺のアイテムを含むアイテムセットの ID。 たとえば、`If {A,B} Then {C}` というルールの場合は、`{A,B}` のみを含むアイテムセットの ID が含まれます。  
+ **ルール ノード** ルールの左辺のアイテムを含むアイテムセットの ID。 たとえば、 `If {A,B} Then {C}`というルールの場合は、 `{A,B}`のみを含むアイテムセットの ID が含まれます。  
   
  MSOLAP_NODE_SCORE  
  **親ノード** 空白。  
@@ -187,12 +192,12 @@ caps.handback.revision: 17
  **ルール ノード** ルールの重要度スコア。  
   
 > [!NOTE]  
->  重要度の計算方法はアイテムセットとルールで異なります。 詳細については、「[Microsoft アソシエーション アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)」を参照してください。  
+>  重要度の計算方法はアイテムセットとルールで異なります。 詳細については、「 [Microsoft アソシエーション アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)」を参照してください。  
   
  MSOLAP_NODE_SHORT_CAPTION  
  空白。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft アソシエーション アルゴリズム](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [結合モデルのクエリ例](../../analysis-services/data-mining/association-model-query-examples.md)  

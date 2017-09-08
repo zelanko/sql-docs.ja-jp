@@ -1,27 +1,32 @@
 ---
-title: "データ マイニング デザイナーでの単一クエリの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "単一クエリ [Analysis Services]"
-  - "マイニング モデル予測 [Analysis Services], 単一クエリ"
+title: "データ マイニング デザイナーで単一クエリを作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- singleton queries [Analysis Services]
+- Mining Model Prediction [Analysis Services], singleton queries
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dfbb55881c274dee8560cbba14319bcc831b38c2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# データ マイニング デザイナーでの単一クエリの作成
-  単一クエリは、1 つのケースに関する予測を作成する場合に便利です。 単一クエリの詳細については、「[データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)」を参照してください。  
+# <a name="create-a-singleton-query-in-the-data-mining-designer"></a>データ マイニング デザイナーでの単一クエリの作成
+  単一クエリは、1 つのケースに関する予測を作成する場合に便利です。 単一クエリの詳細については、「 [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)」を参照してください。  
   
  データ マイニング デザイナーの **[マイニング モデル予測]** タブでは、多様なクエリを作成できます。 デザイナーを使用するか、データ マイニング拡張機能 (DMX) ステートメントを入力することにより、クエリを作成できます。 最初にデザイナーで作成したクエリを、DMX ステートメントを変更するか、WHERE 句や ORDER BY 句を追加することによって変更することもできます。  
   
@@ -39,7 +44,7 @@ AS [t]
   
  以下の手順は、この予測クエリを作成する方法について説明しています。  
   
-### データ マイニング デザイナーを使用して単一クエリを作成するには  
+### <a name="to-create-a-singleton-query-by-using-the-data-mining-designer"></a>データ マイニング デザイナーを使用して単一クエリを作成するには  
   
 1.  データ マイニング デザイナーの **[マイニング モデル予測]** タブをクリックします。  
   
@@ -49,7 +54,7 @@ AS [t]
   
      予測の作成に使用するモデルを選択します。  
   
-     たとえば、このトピックの冒頭に示したサンプル コードを作成するには、TM_Decision_Tree を選択して **[OK]** をクリックします。  
+     たとえば、このトピックの冒頭に示したサンプル コードを作成するには、TM_Decision_Tree を選択して **[OK]**をクリックします。  
   
 3.  **[マイニング モデル予測]** タブのツール バー上の **[単一クエリ]** をクリックします。  
   
@@ -57,29 +62,29 @@ AS [t]
   
 4.  **[単一クエリ入力]** テーブルの **[値]** 列で、予測を作成するケースについて説明した値を選択します。  
   
-     たとえば、**[Number Children At Home]** で **[2]** を選択し、**[Age]** に「**45**」と入力します。  
+     たとえば、 **[Number Children At Home]** で **[2]**を選択し、 **[Age]** に「 **45**」と入力します。  
   
-5.  **[マイニング モデル]** テーブルの予測可能列をタブの下部にある **[変換元]** 列にドラッグします。 必要に応じて、列の別名を入力できます。  
+5.  **[マイニング モデル]** テーブルの予測可能列をタブの下部にある **[変換元]** 列にドラッグします。必要に応じて、列の別名を入力できます。  
   
-     たとえば、**[Bike Buyer]** を **[変換元]** 列にドラッグします。  
+     たとえば、 **[Bike Buyer]** を **[変換元]** 列にドラッグします。  
   
-6.  クエリに関数を追加するには、**[変換元]** 列のドロップダウン リストから **[予測関数]** または **[カスタム式]** をクリックします。  
+6.  クエリに関数を追加するには、 **[変換元]** 列のドロップダウン リストから **[予測関数]** または **[カスタム式]** をクリックします。  
   
-     たとえば、**[予測関数]** をクリックして **[PredictProbability]** を選択します。  
+     たとえば、 **[予測関数]**をクリックして **[PredictProbability]**を選択します。  
   
 7.  **PredictProbability** 行の **[条件と引数]** をクリックし、予測する列の名前と、必要に応じて予測する特定の値を入力します。  
   
-     たとえば、「**[Bike Buyer], 1**」のように入力します。  
+     たとえば、「 **[Bike Buyer], 1**」のように入力します。  
   
 8.  **PredictProbability** 行の **[別名]** ボックスをクリックし、新しい列を参照する名前を入力します。  
   
-     たとえば、「**ProbableBuyer**」のように入力します。  
+     たとえば、「 **ProbableBuyer**」のように入力します。  
   
 9. **[マイニング モデル予測]** タブのツール バー上の **[クエリ結果ビューに切り替え]** をクリックします。  
   
-     新しい画面が開き、クエリの結果が表示されます。 作成した DMX ステートメントを表示するには、**[SQL]** をクリックします。  
+     新しい画面が開き、クエリの結果が表示されます。 作成した DMX ステートメントを表示するには、 **[SQL]**をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [予測クエリ (データ マイニング)](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   
