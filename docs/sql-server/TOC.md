@@ -14,17 +14,15 @@
 
 # リリース ノート
 
-## [Microsoft SQL Server](../release-notes/microsoft-sql-server.md)
-## [SQL Server リリース ノート](../release-notes/sql-server-release-notes.md)
+## [SQL Server リリース ノート](sql-server-release-notes.md)
 ## [SQL Server 2016 リリース ノート](sql-server-2016-release-notes.md)
 ## [SQL Server 2017 リリース ノート](sql-server-2017-release-notes.md)
-
-## [SQL Server 2014 リリース ノート](../release-notes/sql-server-2014-release-notes.md)
-## [SQL Server 2012 リリース ノート](../release-notes/sql-server-2012-release-notes.md)
-## [SQL Server 2012 SP1 リリース ノート](../release-notes/sql-server-2012-sp1-release-notes.md)
-## [SQL Server 2012 SP2 のリリース ノートします。](../release-notes/sql-server-2012-sp2-release-notes.md)
-## [SQL Server 2012 SP3 リリース ノート](../release-notes/sql-server-2012-sp3-release-notes.md)
-## [SQL Server 2008 R2 SP2 リリース ノート](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
+## [SQL Server 2014 リリース ノート](sql-server-2014-release-notes.md)
+## [SQL Server 2012 SP3 リリース ノート](sql-server-2012-sp3-release-notes.md)
+## [SQL Server 2012 SP2 のリリース ノートします。](sql-server-2012-sp2-release-notes.md)
+## [SQL Server 2012 SP1 リリース ノート](sql-server-2012-sp1-release-notes.md)
+## [SQL Server 2012 リリース ノート](sql-server-2012-release-notes.md)
+## [SQL Server 2008 R2 SP2 リリース ノート](sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
 # [データベース エンジン](../database-engine/sql-server-database-engine-overview.md)
@@ -35,6 +33,7 @@
 # [マスター データ サービス](../master-data-services/master-data-services-overview-mds.md)
 # [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
 # [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)
+# [Data Migration Assistant](../dma/dma-overview.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [SQL Server チュートリアル](tutorials-for-sql-server-2016.md)
-# [ヘルプ ビューアーでのローカル コンテンツ](../release-notes/sql-server-help-installation.md)
+# [ヘルプ ビューアーでのローカル コンテンツ](sql-server-help-installation.md)
