@@ -1,24 +1,29 @@
 ---
-title: "サーバーの全体管理での Power Pivot サービス アプリケーションの作成および構成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "作成し、CA での Power Pivot サービス アプリケーションの構成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 343e3ed597e892e7b9e332d35acb6719e5b27aee
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# サーバーの全体管理での Power Pivot サービス アプリケーションの作成および構成
+# <a name="create-and-configure-power-pivot-service-application-in-ca"></a>作成し、CA で Power Pivot サービス アプリケーションを構成します。
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスの共有サービス インスタンスです。 各サービス アプリケーションは、固有のアプリケーション ID、構成設定、プロパティ、および内部データ ストレージを備えています。  
   
  このトピックには、次のセクションが含まれます。  
@@ -58,13 +63,13 @@ caps.handback.revision: 19
   
 3.  **[SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション]** を選択します。 この項目が一覧に表示されない場合は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint がインストールされていないか、正しく構成されていません。  
   
-4.  **[新しい [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションの作成]** ページで、アプリケーションの名前を入力します。 既定の名前は、"PowerPivotServiceApplication\<番号>" です。 複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを作成する場合は、それぞれの用途を明確に示す名前を付けると他の管理者にわかりやすくなります。  
+4.  **[新しい [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションの作成]** ページで、アプリケーションの名前を入力します。 既定値は PowerPivotServiceApplication\<番号 >。 複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを作成する場合は、それぞれの用途を明確に示す名前を付けると他の管理者にわかりやすくなります。  
   
 5.  [アプリケーション プール] で、このアプリケーションのための新しいアプリケーション プールを作成し (推奨)、 そのアプリケーション プールのマネージ アカウントを選択または作成します。 必ずドメイン ユーザー アカウントを指定してください。 ドメイン ユーザー アカウントにより、パスワードやアカウント情報をまとめて更新できる SharePoint のマネージ アカウント機能を使用できるようになります。 ドメイン アカウントは、配置をスケールアウトして、同じ ID で実行されるサービス インスタンスを追加する場合にも必要です。  
   
 6.  **[データベース サーバー]**の既定値は、ファーム構成データベースをホストする SQL Server データベース エンジン インスタンスです。 このサーバーを使用することも、別の SQL Server を選択することもできます。  
   
-7.  **[データベース名]** の既定値は、"PowerPivotServiceApplication1_\<guid>" です。 各 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションに固有のデータベースを作成する必要があります。 既定のデータベース名は、既定のサービス アプリケーション名に対応しています。 独自のサービス アプリケーション名を入力した場合は、サービス アプリケーションとデータベースを一緒に管理できるように、データベース名に対しても同様の命名規則を使用してください。  
+7.  **データベース名**、既定値は PowerPivotServiceApplication1_\<guid > です。 各 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションに固有のデータベースを作成する必要があります。 既定のデータベース名は、既定のサービス アプリケーション名に対応しています。 独自のサービス アプリケーション名を入力した場合は、サービス アプリケーションとデータベースを一緒に管理できるように、データベース名に対しても同様の命名規則を使用してください。  
   
 8.  **[データベース認証]**の既定値は、"Windows 認証" です。 **[SQL 認証]**を選択する場合は、SharePoint 管理者ガイドを参照して、SharePoint 配置でその認証の種類を使用するためのベスト プラクティスを確認してください。  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 19
   
      既定の接続グループに既に [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションが存在している場合は、それ以上追加しないでください。 同じ型のサービス アプリケーションのエントリを複数追加する構成はサポートされていないため、エラーが発生する可能性があります。 追加のサービス アプリケーションを作成する場合は、既定の接続グループには含めずに、カスタム リストに追加してください。  
   
-     サービスの関連付けの詳細については、「[サーバーの全体管理での SharePoint Web アプリケーションへの PowerPivot サービス アプリケーションの接続](../../analysis-services/power-pivot-sharepoint/connect power pivot service app to sharepoint web app in ca.md)」を参照してください。  
+     サービスの関連付けの詳細については、「 [サーバーの全体管理での SharePoint Web アプリケーションへの PowerPivot サービス アプリケーションの接続](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)」を参照してください。  
   
 10. クリックして **OK.** 作成したサービスが、他のマネージ サービスと共にファームのサービス アプリケーションの一覧に表示されます。  
   
@@ -89,9 +94,9 @@ caps.handback.revision: 19
   
 3.  ダッシュボードの右上隅にある **[アクション]** ボックスの一覧で、 **[サービス アプリケーションの設定の構成]**をクリックします。  
   
-4.  **[データベース読み込みのタイムアウト]** の値を増減させて、データの読み込み要求を転送した SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) インスタンスからの応答を [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービスが待機する時間を変更します。 非常に大規模なデータセットには、ネットワーク上で移動する時間がかかるための十分な時間を許可する必要があります、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Excel ブックを取得し、移動するサービス インスタンス、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クエリ処理の Analysis Services インスタンスへのデータです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データは一般に大きいため、既定値は 30 分に設定されています。  
+4.  **[データベース読み込みのタイムアウト]**の値を増減させて、データの読み込み要求を転送した SQL Server Analysis Services ( [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ) インスタンスからの応答を[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]サービスが待機する時間を変更します。 非常に大規模なデータセットには、ネットワーク上で移動する時間がかかるための十分な時間を許可する必要があります、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Excel ブックを取得し、移動するサービス インスタンス、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クエリ処理の Analysis Services インスタンスへのデータです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データは一般に大きいため、既定値は 30 分に設定されています。  
   
-5.  **[接続プールのタイムアウト]**の値を増減させて、アイドル状態のデータ接続を開いたままにする時間 (分) を変更します。 既定値は 30 分です。 この期間に、同じ SharePoint ユーザーから同じ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データに対する読み取り専用の要求が送られた場合、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービスはアイドル状態のデータ接続を再利用します。 指定した期間にそのデータに対する要求がそれ以上受信されなかった場合は、接続がプールから削除されます。 有効値は 1 ～ 3600 秒です。 接続プールの詳細については、「[構成設定のリファレンス &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)」を参照してください。  
+5.  **[接続プールのタイムアウト]**の値を増減させて、アイドル状態のデータ接続を開いたままにする時間 (分) を変更します。 既定値は 30 分です。 この期間に、同じ SharePoint ユーザーから同じ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データに対する読み取り専用の要求が送られた場合、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービスはアイドル状態のデータ接続を再利用します。 指定した期間にそのデータに対する要求がそれ以上受信されなかった場合は、接続がプールから削除されます。 有効値は 1 ～ 3600 秒です。 接続プールの詳細については、「[構成設定のリファレンス &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)」を参照してください。  
   
 6.  **[ユーザー接続プールの最大サイズ]**の値を増減させて、各 SharePoint ユーザー、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データセット、およびバージョンの組み合わせに関する個々の接続プールに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービスが作成するアイドル接続の最大数を変更します。  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 19
   
      これらの接続プールを使用すると、同じユーザーによる同じ読み取り専用データに対する継続的な接続を、サービスでより効率的にサポートできます。 接続プールを無効にすると、すべての接続が新しく作成されます。  
   
-     接続プール サイズの制限を変更しても (値を 0 に設定した場合も)、接続が切断されることはありません。 接続プールは、データに接続するときの待ち時間を短縮するためのものです。  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービスは、接続プールの設定に基づいて接続を拒否することはありません。  
+     接続プール サイズの制限を変更しても (値を 0 に設定した場合も)、接続が切断されることはありません。 接続プールは、データに接続するときの待ち時間を短縮するためのものです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービスは、接続プールの設定に基づいて接続を拒否することはありません。  
   
 7.  **[管理接続プールの最大サイズ]**の値を増減させて、Analysis Services への [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス接続用に作成された接続プール内の開いている接続の数を変更します。 各 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス インスタンスが同じコンピューター上の Analysis Services インスタンスに独立した管理接続を開きます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービスでは、アイドル状態の接続を確認し、サーバーのヘルスを監視するために管理接続を再利用する、独立したプールを作成します。 接続数の既定値は 200 です。 有効値は、-1 (無制限)、0 (管理接続プールを無効にする)、または 1 ～ 10000 です。 0 を選択すると、すべての接続が新しく作成されます。  
   
@@ -107,9 +112,9 @@ caps.handback.revision: 19
   
 9. [データ更新] の **[営業時間]**では、営業時間を定義する時間の範囲を指定できます。 データ更新スケジュールを営業時間後に実行すると、通常の営業時間中に生成されたトランザクション データを取得できます。  
   
-10. **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 自動データ更新アカウント]**で、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ更新ジョブを実行するための定義済みアカウントを保存する Secure Store Service の定義済みの対象アプリケーションを指定できます。 ID ではなく、必ず対象アプリケーション名を指定してください。 自動データ更新の対象アプリケーションは、SQL Server セットアップで [新しいサーバー] オプションを使用して [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をインストールした場合は自動的に作成されます。 それ以外の場合は、対象アプリケーションを手動で作成する必要があります。 アカウントを構成する方法については、「[Power Pivot 自動データ更新アカウントの構成 (Power Pivot for SharePoint)](http://msdn.microsoft.com/ja-jp/81401eac-c619-4fad-ad3e-599e7a6f8493)」を参照してください。  
+10. **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 自動データ更新アカウント**で、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ更新ジョブを実行するための定義済みアカウントを保存する Secure Store Service の定義済みの対象アプリケーションを指定できます。 ID ではなく、必ず対象アプリケーション名を指定してください。 自動データ更新の対象アプリケーションは、SQL Server セットアップで [新しいサーバー] オプションを使用して [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をインストールした場合は自動的に作成されます。 それ以外の場合は、対象アプリケーションを手動で作成する必要があります。 アカウントを構成する方法については、「 [Power Pivot 自動データ更新アカウントの構成 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)」を参照してください。  
   
-11. **[ユーザーによるカスタムの Windows 資格情報の入力を許可する]**チェック ボックスをオンまたはオフにして、スケジュールの所有者が任意の Windows 資格情報を入力してデータ更新スケジュールを実行できるようにするかどうかを指定します。 このチェック ボックスを選択した場合 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションは作成され、保存された資格情報のセットごとに対象アプリケーションを管理します。 詳細については、「[PowerPivot データ更新用の保存された資格情報の構成 (PowerPivot for SharePoint)](http://msdn.microsoft.com/ja-jp/987eff0f-bcfe-4bbd-81e0-9aca993a2a75)」を参照してください。  
+11. **[ユーザーによるカスタムの Windows 資格情報の入力を許可する]**チェック ボックスをオンまたはオフにして、スケジュールの所有者が任意の Windows 資格情報を入力してデータ更新スケジュールを実行できるようにするかどうかを指定します。 このチェック ボックスを選択した場合 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションは作成され、保存された資格情報のセットごとに対象アプリケーションを管理します。 詳細については、「 [PowerPivot データ更新用の保存された資格情報の構成 (PowerPivot for SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75)」を参照してください。  
   
 12. **[処理履歴の最大の長さ]**では、データ更新処理の履歴レコードを保持する期間を指定できます。 この情報は、データ更新を使用するブックごとに保持されるデータ更新の履歴ページに表示されます。 表示されます、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュ ボード。  
   
@@ -138,9 +143,9 @@ caps.handback.revision: 19
   
 3.  **[サービス接続]**をクリックします。  
   
-4.  **[次の関連付けのグループを編集する]** で、**[既定]** または **[カスタム]** を選択します。  
+4.  **[次の関連付けのグループを編集する]**で、 **[既定]** または **[カスタム]**を選択します。  
   
-5.  **[カスタム]** を選択した場合は、使用する各サービス アプリケーション接続の横のチェック ボックスをオンにします。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション ([型] が **Power Pivot Service Application Proxy** に設定されているアプリケーション) が複数ある場合は、そのうちの 1 つだけを選択してください。  
+5.  **[カスタム]**を選択した場合は、使用する各サービス アプリケーション接続の横のチェック ボックスをオンにします。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション ([型] が **Power Pivot Service Application Proxy**に設定されているアプリケーション) が複数ある場合は、そのうちの 1 つだけを選択してください。  
   
 6.  **[OK]**をクリックします。  
   
@@ -153,7 +158,7 @@ caps.handback.revision: 19
   
 3.  リボンの **[プロパティ]** をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [サーバーの全体管理での Power Pivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
-ms.openlocfilehash: c7aee6098b6cf8eca74dd3f34b9ed9a836bb9d20
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 8c449858a5f72cb7647c32a22b7a5906754d23bf
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="sql-server-encryption"></a>SQL Server の暗号化
@@ -44,7 +44,7 @@ ms.lasthandoff: 07/31/2017
  [暗号化アルゴリズムの選択](../../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
  効果的な暗号化アルゴリズムを選択する方法について説明します。  
   
- [透過的なデータ暗号化 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
+ [透過的なデータ暗号化 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
  データを透過的に暗号化する方法に関する一般情報を提供します。  
   
  [SQL Server とデータベースの暗号化キー &#40;データベース エンジン&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  

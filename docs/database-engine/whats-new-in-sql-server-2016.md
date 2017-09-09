@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: bc39be67f0d2fba9195fe2f8e372f05994f0d49d
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 0d4b7b0b668c6ac8ff2808f2d02576c9285e682a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>データベース エンジンの新機能 - SQL Server 2016
@@ -42,7 +42,8 @@ ms.lasthandoff: 08/16/2017
 
 - Azure アカウントをすでにお持ちですか?  すでにお持ちの場合は、 **[こちら](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** にアクセスして、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] がインストール済みの仮想マシンをすぐにご利用いただけます。
 
-![注](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注") 最新のリリース ノートについては、「[SQL Server 2016 リリース ノート](../sql-server/sql-server-2016-release-notes.md)」を参照してください。
+> [!NOTE]
+> 最新のリリース ノートについては、「[SQL Server 2016 リリース ノート](../sql-server/sql-server-2016-release-notes.md)」を参照してください。
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 Service Pack 1 (SP1)  
 -  `CREATE OR ALTER <object>` 構文を[プロシージャ](../t-sql/statements/create-procedure-transact-sql.md)、[ビュー](../t-sql/statements/create-view-transact-sql.md)、[関数](../t-sql/statements/create-function-transact-sql.md)、[トリガー](../t-sql/statements/create-trigger-transact-sql.md)に使用できるようになりました。
@@ -173,7 +174,7 @@ SQL Server 2014 と 2016 の間で、メモリ最適化テーブルのストレ�
   - ADD インデックスと DROP インデックス。 ハッシュ インデックスの bucket_count を変更します。
   - スキーマ変更: 列の追加/削除/変更、制約の追加/削除。
 
-- 組み合わせた長さが 8,060 バイト ページの長さを超える複数の列をメモリ最適化テーブルに含めることができるようになりました。 例として、 `nvarchar(4000)`型の列が 3 列が含まれているテーブルがあります。 そうした例では、行外に格納される列もあります。 列が行内と行外のどちらにあるかをクエリは意識しないで済みます。
+- 組み合わせた長さが 8,060 バイト ページの長さを超える複数の列をメモリ最適化テーブルに含めることができるようになりました。 例として、 `nvarchar(4000)`型の列が&3; 列が含まれているテーブルがあります。 そうした例では、行外に格納される列もあります。 列が行内と行外のどちらにあるかをクエリは意識しないで済みます。
 
 - [LOB (ラージ オブジェクト) タイプ](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md) `varbinary(max)`、`nvarchar(max)`、`varchar(max)` がメモリ最適化テーブルでサポートされるようになりました。
 
@@ -204,7 +205,7 @@ SQL Server 2014 と 2016 の間で、メモリ最適化テーブルのストレ�
   - ネイティブ プロシージャにおいて文字列関数 (LTrim または Substring など) に渡されるパラメーター。
 
 
-- インライン (つまり1 ステートメントの) テーブル値関数 (TVF) をネイティブ コンパイルできるようになりました。
+- インライン (つまり&1; ステートメントの) テーブル値関数 (TVF) をネイティブ コンパイルできるようになりました。
 
 - スカラーのユーザー定義関数 (UDF) をネイティブ コンパイルできるようになりました。
 
@@ -250,7 +251,7 @@ SQL Server 2014 と 2016 の間で、メモリ最適化テーブルのストレ�
 
 - [複数のアクティブな結果セット &#40;MARS&#41; の使用](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)による接続で、メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャにアクセスできるようになりました。
 
-- [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md) のサポート。 データベースが ENCRYPTION 用に構成されている場合、[メモリ最適化ファイル グループ](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)内のファイルも暗号化されるようになりました。
+- [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md) のサポート。 データベースが ENCRYPTION 用に構成されている場合、[メモリ最適化ファイル グループ](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)内のファイルも暗号化されるようになりました。
 
 詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。
 
@@ -277,7 +278,7 @@ Insert select ステートメントで挿入では、マルチ スレッドは�
 
 
 ####  <a name="TT"></a> テンポラル テーブル
-[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] では、システム バージョン管理されたテンポラル テーブルがサポートされるようになりました。 テンポラル テーブルは新しい種類のテーブルです。このテーブルで、任意の時点でストアド ファクトに関する正しい情報が提供されます。 各テンポラル テーブルは実際には 2 つのテーブルで構成されており、1 つは現在のデータ用で、もう 1 つは履歴データ用です。 現在のデータを含むテーブルのデータが変更された場合、システムによって以前の値が履歴テーブルに格納されます。 クエリの構造は、この複雑さがユーザーにわからないようになっています。 詳細については、「 [Temporal Tables](../relational-databases/tables/temporal-tables.md)」を参照してください。
+[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] では、システム バージョン管理されたテンポラル テーブルがサポートされるようになりました。 テンポラル テーブルは新しい種類のテーブルです。このテーブルで、任意の時点でストアド ファクトに関する正しい情報が提供されます。 各テンポラル テーブルは実際には&2; つのテーブルで構成されており、1 つは現在のデータ用で、もう&1; つは履歴データ用です。 現在のデータを含むテーブルのデータが変更された場合、システムによって以前の値が履歴テーブルに格納されます。 クエリの構造は、この複雑さがユーザーにわからないようになっています。 詳細については、「 [Temporal Tables](../relational-databases/tables/temporal-tables.md)」を参照してください。
 
 ####  <a name="StripedBackupToAzure"></a> Microsoft Azure BLOB Storage へのストライプ バックアップ
 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] では、Microsoft Azure Blob ストレージ サービスを使用した SQL Server Backup to URL がブロック BLOB によるストライプ バックアップ セットをサポートするようになり、最大バックアップ サイズ 12.8 TB をサポートするようになりました。 例については、「 [Code Examples](../relational-databases/backup-restore/sql-server-backup-to-url.md#Examples)」を参照してください。
@@ -414,7 +415,7 @@ SQL Server 2016 Standard Edition で、Always On の基本的な可用性グル�
 
 読み取りを目的とした接続要求を一連の読み取り専用レプリカで負荷分散することがサポートされるようになりました。 以前の動作では常に、ルーティング リストで最初に使用可能な読み取り専用レプリカに直接接続されていました。 詳細については、「[読み取り専用レプリカ間の負荷分散の構成](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)」を参照してください。
 
- 自動フェールオーバーをサポートするレプリカの数が 2 から 3 に増えました。
+ 自動フェールオーバーをサポートするレプリカの数が&2; から&3; に増えました。
 
  Always On フェールオーバー クラスターでグループ管理サービス アカウントがサポートされるようになりました。 詳細については、「 [グループの管理されたサービス アカウントの概要](https://technet.microsoft.com/library/hh831782.aspx)」を参照してください。 Windows Server 2012 R2 の場合は、パスワードの変更後の一時的なダウンタイムを回避するために更新プログラムが必要になります。 更新プログラムを取得する場合は、「 [gMSA ベースのサービスは、Windows Server 2012 R2 のドメインでパスワードを変更した後ログインできません](https://support.microsoft.com/kb/2998082/)」を参照してください。
 

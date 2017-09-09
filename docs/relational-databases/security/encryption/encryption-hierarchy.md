@@ -20,11 +20,11 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93c2bdc00890de016ad26a45786e2d3a9fef9c33
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: ed2f64e9596dd905c0e8b24f6616520942ccc3ce
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="encryption-hierarchy"></a>暗号化階層
@@ -106,7 +106,7 @@ ms.lasthandoff: 06/22/2017
  対称キーは、暗号化と暗号化解除の両方で使用される 1 つのキーです。 対称キーを使用した暗号化および暗号化解除は、高速であり、データベース内の機密データでの定型的な使用に適しています。  
   
 ### <a name="transparent-data-encryption"></a>透過的なデータ暗号化  
- 透過的なデータ暗号化 (TDE) は、対称キーを使用した暗号化の特殊なケースです。 TDE では、データベース暗号化キーという対称キーを使用してデータベース全体を暗号化します。 データベース暗号化キーは、データベース マスター キーまたは EKM モジュールに格納された非対称キーによって保護される、他のキーまたは証明書によって保護されます。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)」をご覧ください。  
+ 透過的なデータ暗号化 (TDE) は、対称キーを使用した暗号化の特殊なケースです。 TDE では、データベース暗号化キーという対称キーを使用してデータベース全体を暗号化します。 データベース暗号化キーは、データベース マスター キーまたは EKM モジュールに格納された非対称キーによって保護される、他のキーまたは証明書によって保護されます。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)」をご覧ください。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [SQL Server の保護](../../../relational-databases/security/securing-sql-server.md)  

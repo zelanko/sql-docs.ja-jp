@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f07eec3427ee1e691da665323455bb35690dc93a
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: 3bf6c76a72b4414163b68f4cbdd00756b5f4f0bf
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="install-sql-server"></a>SQL Server をインストールする
@@ -49,11 +49,7 @@ ms.lasthandoff: 08/02/2017
 
 ## <a name="get-the-installation-media"></a>インストール メディアを入手する
 
-[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のダウンロード場所は、エディションによって異なります。
-
-- **SQL Server Enterprise、Standard、Express の各エディション** は、運用環境用にライセンスされます。 Enterprise および Standard エディションのインストール メディアについては、ソフトウェア販売元に問い合わせてください。 購入に関する情報および Microsoft パートナーのディレクトリについては、 [マイクロソフトの購入 Web サイト](https://www.microsoft.com/en-us/server-cloud/products/sql-server/overview.aspx)をご覧ください。 
-
-- **無料エディション**は「[SQL Server ダウンロード](http://www.microsoft.com/sql-server/sql-server-downloads)」で入手できます。
+[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
 ## <a name="how-to-install-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のインストール方法
  

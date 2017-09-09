@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 64297656b09d9f0843127887b490cef98d07b835
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 36377fe5db9440651b4e63a2c848efc290470d3e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>SQL Server の知的所有権の保護
@@ -34,7 +34,7 @@ ms.lasthandoff: 06/22/2017
 
 ストアド プロシージャおよびデータは暗号化できますが、データ構造は非表示にできないので、サーバー プロセスにデバッガーをアタッチできるユーザーは、実行時にメモリから復号化されたプロシージャとデータを取得できてしまいます。
 
-クライアントがコンピューターの管理者でない場合は、クライアントのアクセスを阻止できます。 ファイル データの暗号化、バックアップの暗号化、すべてのユーザー操作の監査には、[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)を使用できます。 ただし、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] コンピューターの [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] の管理者と管理グループは、これらの操作を取り消すことができます。
+クライアントがコンピューターの管理者でない場合は、クライアントのアクセスを阻止できます。 ファイル データの暗号化、バックアップの暗号化、すべてのユーザー操作の監査には、[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption.md)を使用できます。 ただし、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] コンピューターの [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] の管理者と管理グループは、これらの操作を取り消すことができます。
 
 ## <a name="solution"></a>解決方法
 クライアントのコンピューターに [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] をインストールしなくてもクライアントのデータ アクセスを構成する方法は多数あります。 最も簡単な方法は、クライアントが管理者ではない [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] を [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) と組み合わせて使用する方法です。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] の概要については、「[SQL Database とは SQL データベースの概要](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)」を参照してください。  

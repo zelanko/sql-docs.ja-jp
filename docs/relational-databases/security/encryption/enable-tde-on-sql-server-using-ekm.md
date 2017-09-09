@@ -19,17 +19,17 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8c98c5335ab148d1d36f56c1375ec1f89219908
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 1c1b00aae2e697e0c9de039d64db6875de15c5be
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>EKM の使用による TDE の有効化
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]の拡張キー管理 (EKM) モジュールに格納されている非対称キーを使用してデータベース暗号化キーを保護する透過的なデータ暗号化 (TDE) を可能にする方法について説明します。  
   
- TDE では、データベース暗号化キーという対称キーを使用してデータベース全体のストレージを暗号化します。 データベース暗号化キーは、master データベースのデータベース マスター キーによって保護される証明書を使用して保護することもできます。 データベース マスター キーを使用してデータベース暗号化キーを保護する方法の詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が Azure 仮想マシンで実行されているときに TDE を構成する方法については、「[Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)」を参照してください。 Azure Key Vault でキーを使用して TDE を構成する方法の詳細については、「 [SQL 暗号化機能への SQL Server コネクタの使用](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)」を参照してください。 
+ TDE では、データベース暗号化キーという対称キーを使用してデータベース全体のストレージを暗号化します。 データベース暗号化キーは、master データベースのデータベース マスター キーによって保護される証明書を使用して保護することもできます。 データベース マスター キーを使用してデータベース暗号化キーを保護する方法の詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が Azure 仮想マシンで実行されているときに TDE を構成する方法については、「[Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)」を参照してください。 Azure Key Vault でキーを使用して TDE を構成する方法の詳細については、「 [SQL 暗号化機能への SQL Server コネクタの使用](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)」を参照してください。 
 
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
@@ -161,7 +161,7 @@ ms.lasthandoff: 06/22/2017
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)  
   
 ## <a name="see-also"></a>参照  
- [Azure SQL Database での Transparent Data Encryption](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md)  
+ [Azure SQL Database での Transparent Data Encryption](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
   
   
 

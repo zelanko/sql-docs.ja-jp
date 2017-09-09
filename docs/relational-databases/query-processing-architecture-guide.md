@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
-ms.openlocfilehash: 24f0d590630fb04ff45557dfb72616a8e1795f7e
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 70401c6607263bb593d11f0551214d227be1a96a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/22/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
@@ -1035,5 +1035,6 @@ GO
 ##  <a name="Additional_Reading"></a> その他の情報  
  [プラン表示の論理操作と物理操作のリファレンス](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
  [拡張イベント](../relational-databases/extended-events/extended-events.md)  
- [クエリ ストアを使用する際の推奨事項](../relational-databases/performance/best-practice-with-the-query-store.md)
+ [クエリ ストアを使用する際の推奨事項](../relational-databases/performance/best-practice-with-the-query-store.md)  
+ [基数推定](../relational-databases/performance/cardinality-estimation-sql-server.md)  
 

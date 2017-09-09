@@ -1,24 +1,29 @@
 ---
-title: "PowerPivot ギャラリーの作成およびカスタマイズ | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "作成し、Power Pivot ギャラリーのカスタマイズ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 08/31/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9e98f38071c044aab967690ffafffa6ada634141
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# PowerPivot ギャラリーの作成およびカスタマイズ
+# <a name="create-and-customize-power-pivot-gallery"></a>PowerPivot ギャラリーの作成およびカスタマイズ
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーは、特殊な種類の SharePoint ドキュメント ライブラリです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを含むパブリッシュ済みの Excel ブックおよび Reporting Services レポートを対象とする、豊富なプレビュー機能とドキュメント管理機能を提供します。  
   
 ##  <a name="bkmk_top"></a> このトピックの内容  
@@ -43,7 +48,7 @@ caps.handback.revision: 16
     >  Power Pivot ギャラリーには、Microsoft Silverlight が必要です。  Microsoft Edge ブラウザーでは、Silverlight がサポートされていません。   
     > Edge でライブラリ コンテンツを表示するには、Power Pivot ギャラリーの **[ライブラリ]** タブをクリックして、ドキュメント ライブラリ ビューを **[すべてのドキュメント]**に変更します。    
     > 既定のビューを変更するには、 **[ライブラリ]** タブをクリックしてから、[ビューの変更] をクリックします。 [このビューを既定のビューにする] をクリックし、[OK] をクリックして既定のビューを保存します。  
-    >  Edge のサポート対象について詳しくは、Windows ブログ「 [過去からの離別、第 2 部: ActiveX、VBScript... に別れを告げる](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)」をご覧ください。  
+    >  Edge のサポート対象について詳しくは、Windows ブログ「 [過去からの離別、第 2 部: ActiveX、VBScript... に別れを告げる](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)」をご覧ください。  
   
 -   ライブラリを作成するには、サイト所有者である必要があります。  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 16
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを制限付きサイトに入れることはできません。 信頼済みサイトやローカル イントラネット ゾーンのいずれかに、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを含む親サイトを追加する必要があります。  
   
--   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web アプリケーション ソリューションをアプリに配置し、サイト コレクション用に [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能をアクティブにしておく必要があります。 詳しくは、「 [Deploy Power Pivot Solutions to SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md) 」と「[Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate power pivot integration for site collections in ca.md)」をご覧ください。  
+-   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web アプリケーション ソリューションをアプリに配置し、サイト コレクション用に [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能をアクティブにしておく必要があります。 詳しくは、「 [Deploy Power Pivot Solutions to SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md) 」と「[Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)」をご覧ください。  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックに基づく Reporting Services レポートを表示または作成するには、ブックとレポートが同じ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーに含まれている必要があります。 埋め込みデータを含む [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックをレポートで使うか、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックである外部データ ソースがブックに 1 つだけ含まれている必要があります。  
   
@@ -69,19 +74,19 @@ caps.handback.revision: 16
   
     2.  **[その他のオプション]**をクリックします。  
   
-    3.  [ライブラリ] の **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー]**をクリックします。  
+    3.  [ライブラリ] の **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー**をクリックします。  
   
-    1.  **SharePoint 2013**: 設定のアイコン ![SharePoint の設定](../../analysis-services/media/as-sharepoint2013-settings-gear.png "SharePoint の設定")をクリックします。  **[サイト コンテンツ]**をクリックします。  
+    1.  **SharePoint 2013**: 設定アイコンをクリックして![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")です。 **[サイト コンテンツ]**をクリックします。  
   
     2.  **[アプリケーションの追加]**をクリックします。  
   
-    3.  **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー]**をクリックします。  
+    3.  **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー**をクリックします。  
   
 2.  ライブラリの名前を入力します。 このライブラリが [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックおよび Reporting Services レポートのリッチ プレビューであることがユーザーにわかるように説明情報を入力してください。  
   
 3.  **[作成]**をクリックします。  
   
-4.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを Excel Services の信頼できる場所として追加するように、ファーム管理者またはサービス管理者に依頼します。 この手順は、ユーザーが [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データの更新をブックに構成した場合にエラーが発生するのを防ぐために必要です。 このタスクの詳細については、「[サーバーの全体管理での Power Pivot サイト用の信頼できる場所の作成](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  
+4.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを Excel Services の信頼できる場所として追加するように、ファーム管理者またはサービス管理者に依頼します。 この手順は、ユーザーが [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データの更新をブックに構成した場合にエラーが発生するのを防ぐために必要です。 このタスクの詳細については、「 [サーバーの全体管理での Power Pivot サイト用の信頼できる場所の作成](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー ライブラリへのリンクが、現在のサイトのナビゲーションのクイック起動ペインに表示されます。  
   
@@ -98,7 +103,7 @@ caps.handback.revision: 16
   
  ドキュメントの元の情報を制御する設定を変更することはできません。 個々のドキュメントに関して表示される情報 (ブックを追加したユーザーやブックを最後に変更したユーザーなど) は、変更できない固定の列セットによって決定されます。  
   
-#### 並べ替え順の変更、フィルターの追加、またはドキュメントの数の制限  
+#### <a name="change-sort-order-add-filters-or-limit-the-number-of-documents"></a>並べ替え順の変更、フィルターの追加、またはドキュメントの数の制限  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーには、常に [最終更新日] と [作成者] の値が表示されます。 これらの列を無効にしたり、 ライブラリの他の列を有効にすることはできません。並べ替え順の変更、フィルターの追加、または表示されるドキュメントの数の制限を行うには、次の手順に従ってください。  
   
 1.  SharePoint サイトで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを開きます。  
@@ -120,7 +125,7 @@ caps.handback.revision: 16
 ####  <a name="bkmk_hide_refresh_button"></a> [最新の情報に更新] ボタンの無効化または非表示  
  **[データ更新の管理]** ボタンを非表示にすることはできません。 ただし、十分なアクセス許可がユーザーにない場合は、このボタンは無効になります。  
   
- ![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.png "as_powerpivot_refresh_manage_reresh")  
+ ![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
   
  ブックに対するデータ更新をスケジュールするには、ブックの所有者または作成者が **投稿** 権限を持っている必要があります。 投稿権限のあるユーザーは、ブックのデータ更新構成ページを開いて編集し、データの更新に使用する資格情報およびスケジュール情報を指定できます。  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 16
 |[すべてのドキュメント]|これはドキュメント ライブラリの標準のレイアウトです。 個々のドキュメントを管理する場合、またはライブラリ コンテンツを一覧形式で表示する場合にこのビューを選択できます。<br /><br /> プロパティを編集したり、個々のドキュメントを削除または移動するには、このビューを使用します。<br /><br /> バージョン管理を有効にしている場合は、このビューを使用して、ライブラリでドキュメントをチェックインまたはチェックアウトする必要があります。|  
 |シアター ビューとカルーセル ビュー|これらのビューは、少数の関連ドキュメントを表示する場合に最も適した特殊なビューです。 サムネイルの 360 度回転には、ライブラリ内のすべてのドキュメントのすべてのページが含まれます。 ドキュメント数が多い場合、特定の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックを検索するか開く必要があるユーザーにとってこれらのビューは非実用的である可能性があります。<br /><br /> シアター ビュー: プレビュー領域は中央にあります。 各ワークシートの小さいサムネイルがページの下部の右側または左側に表示されます。<br /><br /> カルーセル ビュー: プレビュー領域は中央にあります。 現在のサムネイルの直前および直後のサムネイルがプレビュー領域に隣接します。|  
   
-### 別のビューへの切り替え  
+### <a name="switch-to-a-different-view"></a>別のビューへの切り替え  
   
 1.  SharePoint サイトで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを開きます。  
   
@@ -147,10 +152,11 @@ caps.handback.revision: 16
   
 3.  [ビューの管理] の [現在のビュー] で、使用するビューを一覧から選択します。 デザイン済みのビューは、ギャラリー ビュー、シアター ビュー、およびカルーセル ビューです。 また、ライブラリのドキュメントを移動、削除、管理する場合は、[すべてのドキュメント] を選択することもできます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Power Pivot for SharePoint インストールのトラブルシューティング](../../analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md)   
- [Power Pivot ギャラリーを使用する](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)   
- [サーバーの全体管理での Power Pivot サイト用の信頼できる場所の作成](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [Power Pivot ギャラリーを使用](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)   
+ [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Power Pivot ギャラリーの削除](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)  
   
   
+

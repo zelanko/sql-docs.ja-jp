@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0250c8370960dc17adf13c020c51bfc603b111c8
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 2d0a6459bc0c46e3f19de59875f73e1ebedd14d4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>メモリ最適化テーブルのストレージの構成
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 -   スピンドルの数が偶数の場合、SQL Server 2014 とは異なり、チェックポイント ファイルがすべてのスピンドル間で均等に分散されます。  
   
 ## <a name="encryption"></a>暗号化  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、メモリ最適化テーブルのストレージの暗号化は、データベースで TDE を有効化する際に行われます。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)」を参照してください。  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、メモリ最適化テーブルのストレージの暗号化は、データベースで TDE を有効化する際に行われます。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [メモリ最適化オブジェクト用ストレージの作成と管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
