@@ -159,7 +159,7 @@ ms.lasthandoff: 09/01/2017
   
  -  **[すべてのデータベース]**  
   
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を除くすべての **[!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]**でメンテナンス プラン ウィザードを使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。  
+**tempdb** を除くすべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを対象として、このタスクを実行するメンテナンス プランを生成します。  
   
 **システム データベース**  
   
