@@ -19,11 +19,11 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 621185759462020bca20985c3133c93814a1f333
 ms.openlocfilehash: ef0c4b8b66af5dfc46c836fc8c18734609b1301a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="delete-columns-from-a-table"></a>テーブルからの列の削除
@@ -66,9 +66,9 @@ ms.lasthandoff: 06/23/2017
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  **オブジェクト エクスプ ローラー**、元の列を削除して、列名を公開する展開のテーブルを検索します。 
+2.  **オブジェクト エクスプローラー**で、列を削除するテーブルを探し、展開して列名を表示します。 
 
-3.  削除、および選択する列を右クリックして**削除**です。  
+3.  削除する列を右クリックして、**[削除]** を選びます。  
   
 3.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]**をクリックします。  
   

@@ -42,11 +42,11 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: 411da6974090c9ccad6aa6184c248537bfdebe79
+ms.translationtype: HT
+ms.sourcegitcommit: 47b0c3fc8aba635dcfd573536b770f13a40956fa
+ms.openlocfilehash: 6510f02e44dfc84c24c19c509a8dd9254845d4a1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="database-level-roles"></a>データベース レベルのロール
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/23/2017
 
 ## <a name="fixed-database-roles"></a>固定データベース ロール
   
- 次の表に、固定データベース ロールとその機能を示します。 これらのロールは、すべてのデータベースに存在します。 を除き、**パブリック**データベース ロール、固定データベース ロールに割り当てられたアクセス許可を変更することはできません。   
+ 次の表に、固定データベース ロールとその機能を示します。 これらのロールは、すべてのデータベースに存在します。 **public** データベース ロールを除き、固定データベース ロールに割り当てられているアクセス許可を変更することはできません。   
   
 |固定データベース ロールの名前|Description|  
 |-------------------------------|-----------------|  
@@ -117,7 +117,7 @@ ms.lasthandoff: 06/23/2017
 
 ## <a name="working-with-r-services"></a>R Services の使用  
 
-**Applies to:** SQL Server starting with [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
+**適用対象:** SQL Server ( [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
 
 R Services がインストールされている場合は、パッケージの管理で追加のデータベース ロールを使用できます。 詳細については、 [SQL Server の R パッケージ管理](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)に関するページを参照してください。
 

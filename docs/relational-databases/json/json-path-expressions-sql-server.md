@@ -17,18 +17,18 @@ ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
 caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 44bfd54aa494dd52174eeed8479e14a99d810af3
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 07c873941669f7a36ff9b93651a938ecae2662b7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON パス式 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- JSON オブジェクトのプロパティを参照するのにには、JSON パス式を使用します。  
+ JSON オブジェクトのプロパティを参照するには、JSON パス式を使用します。  
   
  次の関数を呼び出すときに、パス式を指定する必要があります。  
   
@@ -43,18 +43,18 @@ ms.lasthandoff: 06/23/2017
 ## <a name="parts-of-a-path-expression"></a>パス式の各部
  パス式には 2 つのコンポーネントがあります。  
   
-1.  省略可能な[path モード](#PATHMODE)の値を持つ**lax**または**strict**です。  
+1.  省略可能な [パス モード](#PATHMODE) (値は **lax** または **strict**)。  
   
 2.  [パス](#PATH) 自体。  
 
 ##  <a name="PATHMODE"></a> Path mode  
  必要に応じて、パス式の先頭に **lax** または **strict**キーワードを指定してパス モードを宣言します。 既定値は **lax**です。  
   
--   **Lax**モードでは、この関数を返します空の値、パス式にエラーが含まれている場合。 たとえば、次の値を要求する**$.name**、JSON テキストが含まれていない、**名前**キー、関数は null を返しますが、エラーは発生しません。  
+-   **lax** モードでは、パス式にエラーが含まれている場合、関数は空の値を返します。 たとえば、値 **$.name** を要求するときに JSON テキストに **name** キーが含まれていない場合、関数は null を返しますが、エラーは発生しません。  
   
--   **Strict**モードでは、関数でエラーが発生、パス式にエラーが含まれている場合。  
+-   **strict** モードでは、パス式にエラーが含まれている場合、関数でエラーが発生します。  
 
-次のクエリが明示的に指定`lax`パス式のモード。
+次のクエリでは、パス式で `lax` モードが明示的に指定されています。
 
 ```sql  
 DECLARE @json NVARCHAR(MAX)
@@ -74,7 +74,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
     -   配列の要素。 たとえば、 `$.product[3]`のようにします。 配列は 0 から始まります。  
   
-    -   ドット演算子 (`.`) は、オブジェクトのメンバーを示します。 たとえば、 `$.people[1].surname`、`surname`の子である`people`です。
+    -   ドット演算子 (`.`) は、オブジェクトのメンバーを示します。 たとえば、`$.people[1].surname` では、`surname` は `people` の子です。
   
 ## <a name="examples"></a>使用例  
  このセクションの例では、次の JSON テキストを参照します。  
@@ -102,7 +102,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
 |$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>組み込み関数が重複するパスを処理する方法  
- JSON テキストには、重複するプロパティが含まれているのと同じレベルに同じ名前のキーを 2 つなどの場合、 **JSON_VALUE**と**JSON_QUERY**関数は、パスに一致する最初の値のみを返します。 重複するキーを含む JSON オブジェクトを解析し、すべての値を返すを使用して**OPENJSON**の次の例に示すようにします。  
+ たとえば、同じ名前の 2 つのキーが同じレベルにある場合など、JSON テキストに重複するプロパティが含まれる場合、**JSON_VALUE** および **JSON_QUERY** 関数はパスに一致する最初の値のみを返します。 重複するキーが含まれる JSON オブジェクトを解析してすべての値を取得するには、次の例に示すように **OPENJSON** を使用します。  
   
 ```sql  
 DECLARE @json NVARCHAR(MAX)
@@ -112,8 +112,8 @@ SELECT value
 FROM OPENJSON(@json,'$.person.info') 
 ```  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>詳細については、組み込みの JSON が SQL Server のサポート  
-特定のソリューションの多くは、ケース、および推奨事項を使用して、参照してください、[組み込みの JSON サポートに関するブログの投稿](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)SQL Server および Microsoft のプログラム マネージャー Jovan Popovic による Azure SQL データベースでします。
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>SQL Server に組み込まれている JSON サポートの詳細情報  
+多くの具体的なソリューション、ユース ケース、推奨事項については、Microsoft のプログラム マネージャー Jovan Popovic による SQL Server および Azure SQL Database に[組み込まれている JSON のサポートに関するブログ投稿](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)をご覧ください。
   
 ## <a name="see-also"></a>参照  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)   

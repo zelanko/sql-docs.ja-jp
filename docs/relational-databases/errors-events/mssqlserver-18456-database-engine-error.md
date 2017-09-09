@@ -16,11 +16,11 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 45f30fa7d1153f4ee70a9cfcb7c7e891bc15fec1
 ms.openlocfilehash: 53733118cf5fcf0b2b29544d64ebac6622425d56
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
@@ -77,10 +77,10 @@ ms.lasthandoff: 06/23/2017
 |12|ログインは有効なログインですが、サーバー アクセスに失敗しました。|  
 |18|パスワードを変更する必要があります。|  
 |38, 46|ユーザーによって要求されたデータベースを見つけることができませんでした。|
-|102 - 111|AAD に失敗しました。|
-|122 - 124|空のユーザー名またはパスワードのために失敗しました。|
-|126|ユーザーによって要求されたデータベースが存在しません。|
-|132 - 133|AAD に失敗しました。|
+|102 - 111|AAD のエラーです。|
+|122 - 124|空のユーザー名またはパスワードによるエラーです。|
+|126|ユーザーによって要求されたデータベースは存在しません。|
+|132 - 133|AAD のエラーです。|
   
 エラー状態は他にも存在し、予期しない内部処理エラーを示します。  
   

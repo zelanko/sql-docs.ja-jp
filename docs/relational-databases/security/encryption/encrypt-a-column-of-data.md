@@ -19,11 +19,11 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
 ms.openlocfilehash: c27f699eb519c1e9a72756c26e8b320869786c6c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="encrypt-a-column-of-data"></a>データの列の暗号化
@@ -56,12 +56,12 @@ ms.lasthandoff: 06/23/2017
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
 
-次の例を使用するには、データベース マスター _ キーが必要です。 データベースが既にデータベース マスター _ キーを持たない場合、パスワードを提供する次のステートメントを実行することによって作成します。   
+次の例を使うには、データベース マスター キーが必要です。 データベースにデータベース マスター キーがまだない場合、次のステートメントを実行してパスワードを提供することにより作成します。   
 ```  
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  
 ```  
-常に、データベース マスター _ キーをバックアップします。 データベース マスター _ キーの詳細については、次を参照してください。 [CREATE MASTER KEY & #40 です。TRANSACT-SQL と #41 です。](../../../t-sql/statements/create-master-key-transact-sql.md).
+データベース マスター キーは常にバックアップしてください。 データベース マスター キーの詳細については、「[CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)」をご覧ください。
 
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>単純な対称暗号化を使用してデータ列を暗号化するには  
   

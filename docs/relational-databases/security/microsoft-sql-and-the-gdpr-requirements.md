@@ -1,5 +1,5 @@
 ---
-title: "Microsoft SQL および GDPR 要件 |Microsoft ドキュメント"
+title: "Microsoft SQL と GDPR の要件 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 05/24/2017
 ms.prod: sql
@@ -12,31 +12,31 @@ caps.latest.revision: 2
 author: barbkess
 ms.author: ronitr
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d533818e9498237316dabc08fc538caa2ac31c63
 ms.openlocfilehash: f236ff85204ba08e8c02d5e680a4de43f021b9aa
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="guide-to-enhancing-privacy-and-addressing-gdpr-requirements-with-the-microsoft-sql-platform"></a>プライバシーの強化とアドレス指定 GDPR、Microsoft SQL プラットフォームと要件を概要します。
+# <a name="guide-to-enhancing-privacy-and-addressing-gdpr-requirements-with-the-microsoft-sql-platform"></a>Microsoft SQL プラットフォームでのプライバシーの強化と GDPR 要件への対応に関するガイド
 
 
 ## <a name="summary"></a>概要
-2018 月 25日ヨーロッパのプライバシー法はプライバシーの権利、セキュリティ、およびコンプライアンス対応の新しいグローバル バーの設定を有効になるのためです。 一般的なデータ保護の法規制や GDPR、根本的にについてを保護して、個人のプライバシーの権利を有効にするにはし、管理の方法の個人データが管理され、個々 の選択肢を考慮しながら、保護される厳格なグローバル プライバシー要件を確立します。 
+2018 年 5 月 25 日、プライバシー権利、セキュリティ、およびコンプライアンスに対する新しいグローバル制限を設定するヨーロッパのプライバシー法が発効します。 General Data Protection Regulation (GDPR) は、根本的に、個人のプライバシー権利を保護して有効にし、個々の選択を考慮しながら個人データを管理して保護する方法を管理する厳格なグローバル プライバシー要件を確立することに関係するものです。 
 
-Microsoft SQL のお客様は、GDPR の対象を管理するかどうかクラウド ベースまたは内部設置型データベース、あるいはその両方をことを確認して、データベース システムにデータの条件を満たす的確処理 GDPR 原則に従って保護されている必要があります。 これは、ために多くの顧客が必要を確認または、データベースの管理とデータの処理プロシージャを変更する、GDPR で規定としてのデータ処理のセキュリティに特に注目することです。
+GDPR の対象となる Microsoft SQL のお客様は、管理対象がクラウド ベースのデータベースまたはオンプレミスのデータベースのどちらか一方か両方かに関わらず、データベース システム内の該当データが GDPR の原則に従って適切に処理および保護されていることを確認する必要があります。 つまり、お客様の多くが、特に GDPR で規定されているデータ処理のセキュリティにおいて、データベース管理およびデータ処理の手順を確認または変更する必要があります。
 
-Microsoft SQL ベースのテクノロジは、データのリスクを軽減し、保護とデータを超えると、データベース レベルでの管理の容易性の向上に役立つ多くの組み込みのセキュリティ機能を提供します。 このホワイト ペーパーでは、これらの機能を検証し、GDPR のデータのプライバシーに関する目標を達成するための Microsoft SQL を使用して Microsoft 独自の方法の一部を共有します。
+Microsoft SQL ベースのテクノロジでは、データへのリスクを軽減し、データベース レベル以上でデータの保護と管理を向上させるのに役立つ多くの組み込みセキュリティ機能が提供されています。 このホワイト ペーパーではこれらの機能を検証し、データのプライバシーに関する GDPR の目標を達成するための、 Microsoft SQL を使用した Microsoft 独自のアプローチの一部を紹介します。
    
   
-**ライター:** Ronit Reger
+**作成者:** Ronit Reger
 
-**技術レビューアー:** Conor Cunningham です。ハンマーです。Shai Kariv です。ジュリー Koesmarno です。Alice Kupcik です。Ron Matchoro です。Gilad Mittelman です。Dan Rediske です。Tomer Weisberg 
+**技術レビュー担当者:** Conor Cunningham、Joachim Hammer、Shai Kariv、Julie Koesmarno、Alice Kupcik、Ron Matchoro、Gilad Mittelman、Dan Rediske、Tomer Weisberg 
   
-**公開:** 2017 年 1 月  
+**公開日:** 2017 年 5 月  
   
-**適用されます:** SQL Server (すべてのバージョン)、Azure SQL Database、Azure SQL Data Warehouse、Analytics Platform System 
+**対象:** SQL Server (全バージョン)、Azure SQL Database、Azure SQL Data Warehouse、Analytics Platform System 
   
-ダウンロード ドキュメントを参照してください、[プライバシーを強化して、Microsoft SQL プラットフォームと GDPR 要件への対応について](http://download.microsoft.com/download/4/9/4/4948194B-A613-49ED-90A5-5144313549AB/microsoft-sql-and-the-gdpr.pdf)ドキュメント。   
+ドキュメントを読むには、「[Guide to enhancing privacy and addressing GDPR requirements with the Microsoft SQL platform (Microsoft SQL プラットフォームでのプライバシーの強化と GDPR 要件への対応に関するガイド)](http://download.microsoft.com/download/4/9/4/4948194B-A613-49ED-90A5-5144313549AB/microsoft-sql-and-the-gdpr.pdf)」をダウンロードしてください。   
 

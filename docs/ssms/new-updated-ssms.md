@@ -19,18 +19,18 @@ ms.translationtype: HT
 ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
 ms.openlocfilehash: 4938dd27bf3f42cc85f22de99fef01adbad08ace
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server"></a>新規または最近の更新: SQL Server の SQL Server Management Studio (SSMS)
 
 
 
-ほとんど毎日 Microsoft への更新プログラムの既存のアーティクルのいくつかの[Docs.Microsoft.com](http://docs.microsoft.com/)ドキュメント web サイトです。 この記事では、最近更新された文書からの抜粋を表示します。 新しい情報の記事へのリンクも表示される可能性があります。
+ほとんど毎日、Microsoft は [Docs.Microsoft.com](http://docs.microsoft.com/) ドキュメント Web サイトの既存記事の一部を更新しています。 この記事では、最近更新された記事からの抜粋を示します。 新しい記事へのリンクも示される場合があります。
 
-この記事は、定期的に再実行しているプログラムによって生成されます。 場合によっては抜粋を付けること不完全な書式設定、マークダウンとしてソース アーティクルからです。 イメージはここでは表示されません。
+この記事は、定期的に再実行されるプログラムによって生成されます。 場合によっては、抜粋の形式が不完全であったり、ソース記事からのマークダウンとして表示されることがあります。 イメージはここでは表示されません。
 
-最新の更新プログラムは、次の日付範囲とサブジェクトの報告されます。
+最近の更新として次の日付範囲と対象のものが報告されます。
 
 
 
@@ -63,7 +63,7 @@ ms.lasthandoff: 07/19/2017
 14. [サーバーの登録](register-servers/register-servers.md)
 15. [登録済みサーバーの削除 (SQL Server Management Studio)](register-servers/remove-a-registered-server-sql-server-management-studio.md)
 16. [サーバー グループの削除 (SQL Server Management Studio)](register-servers/remove-a-server-group-sql-server-management-studio.md)
-17. [SQL Server Management Studio で登録済みサーバーを表示する](register-servers/view-registered-servers-in-sql-server-management-studio.md)
+17. [SQL Server Management Studio で登録済みサーバーを表示する方法](register-servers/view-registered-servers-in-sql-server-management-studio.md)
 18. [SQL Server Management Studio のキーボード ショートカット](sql-server-management-studio-keyboard-shortcuts.md)
 19. [Ssms ユーティリティ](ssms-utility.md)
 20. [レッスン 1-1 - SQL Server Management Studio の起動](tutorials/lesson-1-1-start-sql-server-management-studio.md)
@@ -75,7 +75,7 @@ ms.lasthandoff: 07/19/2017
 26. [レッスン 1-7 - 起動オプションの設定](tutorials/lesson-1-7-set-the-startup-options.md)
 27. [レッスン 1-8 - SQL Server Management Studio の既定の構成の復元](tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md)
 28. [レッスン 1-9 - まとめ - 基本操作](tutorials/lesson-1-9-summary-basic-navigation.md)
-29. [レッスン 1: SQL Server Management Studio での基本操作](tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md)
+29. [レッスン 1 : SQL Server Management Studio での基本操作](tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md)
 30. [レッスン 2-1 - クエリ エディターとの接続](tutorials/lesson-2-1-connecting-with-query-editor.md)
 31. [レッスン 2-2 - インデントの追加](tutorials/lesson-2-2-adding-indentation.md)
 32. [レッスン 2-3 - クエリ エディターの最大化](tutorials/lesson-2-3-maximizing-query-editor.md)
@@ -88,7 +88,7 @@ ms.lasthandoff: 07/19/2017
 39. [レッスン 3-3 - プロジェクトまたはソリューションとしてスクリプトを保存する](tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md)
 40. [レッスン 3-4 - まとめ - ソリューションとスクリプト プロジェクト](tutorials/lesson-3-4-summary-solutions-and-script-projects.md)
 41. [レッスン 3: テンプレート、ソリューション、およびスクリプト プロジェクトの操作](tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md)
-42. [チュートリアル: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
+42. [チュートリアル : SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 
 
 
@@ -97,7 +97,7 @@ ms.lasthandoff: 07/19/2017
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>最近更新されたアーティクルの圧縮のリスト
+## <a name="compact-list-of-articles-updated-recently"></a>最近更新された記事の簡易一覧
 
 この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
 
@@ -105,13 +105,13 @@ ms.lasthandoff: 07/19/2017
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>更新されたアーティクルの抜粋が
+## <a name="updated-articles-with-excerpts"></a>更新された記事と抜粋
 
-このセクションでは、大幅な更新が最近発生したアーティクルから収集された更新プログラムの抜粋を表示します。
+このセクションでは、最近大幅な更新があった記事から収集された更新の抜粋を示します。
 
-ここに表示される抜粋は、適切なセマンティック コンテキストから区切りが表示されます。 また、区切ることもあります抜粋が実際の資料の周囲にある重要なマークダウン構文からです。 したがってこれらの抜粋は、一般的なガイダンスのみです。 のみの抜粋を使用するをクリックし、実際の資料を参照してくださいに時間がかかって各自の興味を保証するかどうかを把握できます。
+ここで示す抜粋は、適切なセマンティック コンテキストから切り離されて表示されます。 また、実際の記事で抜粋を囲んでいる重要なマークダウン構文から切り離されていることもあります。 したがって、これらの抜粋は一般的なガイダンス専用です。 抜粋は、クリックして実際の記事を参照する価値があるかどうかを判断するためだけに使用できます。
 
-これらおよびその他の理由は、これらの抜粋からコードをコピーしない場合と受け取らない正確な情報源として任意のテキストの抜粋です。 代わりに、実際の資料を参照してください。
+これらおよびその他の理由から、これらの抜粋からコードをコピーしたり、テキストの抜粋を正確な情報源と考えたりしないでください。 代わりに、実際の記事を参照してください。
 
 
 
@@ -136,31 +136,31 @@ ms.lasthandoff: 07/19/2017
 
 **SSMS 17.1 リリース**
 
-一般的に使用できる |ビルド番号: 14.0.17119.0
+一般公開 | ビルド番号: 14.0.17119.0
 
 **機能強化**
 
 
-- プロファイラー: ヘルプ > 約リリース バージョン番号 (例: 17.1) が表示されます
-- 分析サービスのユーザーが 1200 のデータ ソースの資格情報を更新できます TM モデル以降、データ ソースのコンテキスト メニューから
-- 組み込みの SSIS レポート CTP 2.1 で SSIS のスケール アウトが実行からログを表示するようになりました
-- SSIS のスケール アウトの管理アプリケーション
-  - スケール アウト マスターに関する基本的な情報を表示します。
-  - スケール アウト配置にワーカーが簡単に追加します。
-  - すべてのスケール アウト ワーカーとそれらに関する基本的な情報を表示およびことができますも有効または無効にして簡単にします。
+- プロファイラー: [ヘルプ] > [バージョン情報] でリリース バージョン番号 (例: 17.1) が表示されるようになりました
+- Analysis Service のユーザーは、データ ソースのコンテキスト メニューから 1200 TM モデル以降のデータ ソースの資格情報を更新できます
+- 組み込み SSIS レポートで、CTP 2.1 での SSIS スケールアウト実行からのログが表示されるようになりました
+- SSIS スケールアウト管理アプリケーション
+  - スケールアウト マスターに関する基本的な情報を表示します。
+  - スケールアウトの配置に worker を簡単に追加します。
+  - すべてのスケールアウト worker とそれらに関する基本情報を表示し、それらを簡単に有効化または無効化することもできます。
 
 **バグの修正**
 
 - Always On:
-  - ここで、可用性レプリカのプロパティが常に表示されます「自動フェールオーバー」モードと WSFC Ag の問題を修正しました。
-  - 読み取り専用ルーティング リストが、可用性グループを更新するときに上書きされた問題を修正しました
-- Always Encrypted: 問題を修正、DacFx によって生成される情報を生成されたログ ファイルがありませんでした。
-- ここで、UI が常に実際結合型の属性の表示アダプティブ非結合演算子問題では ShowPlan: 修正。
-- セットアップの実行:
-  - ここで SSMS 17.0 が重大な SSDT Visual Studio 2013 [項目 3133479 の接続] で問題を修正しました
-  - ここでセットアップの最後に"Restart"をクリックしてがないコンピューターの再起動問題を修正しました
-- スクリプト: 一時的に妨げ SSMS そのオプションを無効にして削除スクリプトを作成しようとするときに、Azure のデータベース オブジェクトを誤って削除します。  適切な修正プログラムは、SSMS の今後のリリースになります。
-- オブジェクト エクスプ ローラー: は、「データベース」ノードは展開されませんでした「AS コピー」を使用して作成された Azure データベースへの接続時に、問題を修正
+  - 可用性レプリカのプロパティが WSFC AG に対して常に "自動フェールオーバー" モードと表示された問題を修正しました。
+  - 可用性グループを更新すると読み取り専用ルーティング リストが上書きされた問題を修正しました
+- Always Encrypted: 生成されたログ ファイルに DacFx によって生成された情報が含まれない問題を修正しました。
+- プラン表示: 適応型結合ではない演算子に対して UI に常に 実際の結合の種類属性が表示されていた問題を修正しました。
+- セットアップ:
+  - SSMS 17.0 が Visual Studio 2013 の SSDT を壊していた問題を修正しました [Connect アイテム 3133479]
+  - セットアップの最後で [再起動] をクリックしてもコンピューターが再起動しなかった問題を修正しました
+- スクリプト: 削除スクリプトを作成しようとするときに SSMS が誤って Azure データベース オブジェクトを削除しないようにそのオプションを無効にすることで一時的に防止しています。  適切な修正は SSMS の今後のリリースで行われます。
+- オブジェクト エクスプローラー: "AS COPY" を使って作成された Azure データベースに接続したときに "データベース" ノードが展開されなかった問題を修正しました
 
 
 

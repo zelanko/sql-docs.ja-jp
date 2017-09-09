@@ -14,11 +14,11 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
 ms.openlocfilehash: d4a5651f3ef4f8d848253711ed93721f387c016a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="configure-column-encryption-using-powershell"></a>PowerShell を使用して列の暗号化の構成
@@ -41,7 +41,7 @@ SqlServer PowerShell モジュールでの Always Encrypted のサポートの�
 
 オフライン アプローチの場合、ターゲット テーブル (およびターゲット テーブルに関連するすべてのテーブル。たとえば、ターゲット テーブルと外部キー リレーションシップがあるテーブルなど) は、操作中にトランザクションを書き込むことはできません。 外部キー制約のセマンティクス (**CHECK** または **NOCHECK**) は、オフライン アプローチの場合は常に保持されます。
 
-アプローチではオンライン (SqlServer PowerShell モジュールのバージョンを必要と 21.x またはそれ以降)、コピー、暗号化し復号化、またはデータを再度暗号化の操作が段階的に実行します。 アプリケーションは、データの移動操作中にターゲット テーブルに対してデータの読み取りと書き込みを実行できます。ただし、最後の繰り返しを除きます。期間は **MaxDownTimeInSeconds** パラメーターで制限されます (ユーザーが定義可能)。 データのコピー中にアプリケーションが実行できる変更を検出して処理するために、コマンドレットはターゲット データベースでの[変更の追跡](../../track-changes/enable-and-disable-change-tracking-sql-server.md)を有効にします。 そのため、オフライン アプローチの場合よりサーバー側で使用するリソース量が多くなる可能性があります。 また、オンライン アプローチの場合、操作にかなり時間がかかることがあります。特に、データベースに対して負荷の高い書き込みが実行される場合です。 オンライン アプローチを使用できるのは一度に 1 つのテーブルを暗号化する場合です。テーブルには主キーになります。 既定では、外部キー制約は **NOCHECK** オプションで再作成され、アプリケーションへの影響を最小限に抑えます。 **KeepCheckForeignKeyConstraints** オプションを指定して、外部キー制約のセマンティックを強制的に保持できます。
+オンライン アプローチ (SqlServer PowerShell モジュール バージョン 21.x 以降が必要) では、データのコピーと暗号化、暗号化の解除、再暗号化の操作がインクリメンタルに実行されます。 アプリケーションは、データの移動操作中にターゲット テーブルに対してデータの読み取りと書き込みを実行できます。ただし、最後の繰り返しを除きます。期間は **MaxDownTimeInSeconds** パラメーターで制限されます (ユーザーが定義可能)。 データのコピー中にアプリケーションが実行できる変更を検出して処理するために、コマンドレットはターゲット データベースでの[変更の追跡](../../track-changes/enable-and-disable-change-tracking-sql-server.md)を有効にします。 そのため、オフライン アプローチの場合よりサーバー側で使用するリソース量が多くなる可能性があります。 また、オンライン アプローチの場合、操作にかなり時間がかかることがあります。特に、データベースに対して負荷の高い書き込みが実行される場合です。 オンライン アプローチを使用できるのは一度に 1 つのテーブルを暗号化する場合です。テーブルには主キーになります。 既定では、外部キー制約は **NOCHECK** オプションで再作成され、アプリケーションへの影響を最小限に抑えます。 **KeepCheckForeignKeyConstraints** オプションを指定して、外部キー制約のセマンティックを強制的に保持できます。
 
 ここでは、オフラインとオンラインのいずれかのアプローチを選択する場合のガイドラインを示します。
 
@@ -57,7 +57,7 @@ SqlServer PowerShell モジュールでの Always Encrypted のサポートの�
 
 データベース列の暗号化を構成するために使用される **Set-SqlColumnEncryption** コマンドレットは、Always Encrypted キーとデータベース列に格納されているデータの両方を処理します。 したがって、セキュリティで保護されたコンピューターでコマンドレットを実行することが重要です。 データベースが SQL Server にある場合は、SQL Server インスタンスをホストするコンピューターとは異なるコンピューターからコマンドレットを実行します。 Always Encrypted の主な目的は、データベース システムが侵害されても、暗号化された機密データが確実に保護されるようにすることにあるので、SQL Server コンピューター上でキーや機密データを処理する PowerShell スクリプトが実行されると、機能の効果が低下したり無効になったりするおそれがあります。
 
-タスク  |[アーティクル]  |[プレーンテキストのキー/キー ストアへのアクセス]  |データベースへのアクセス   
+タスク  |[アーティクル]  |プレーンテキストのキー/キー ストアへのアクセス  |データベースへのアクセス   
 ---|---|---|---
 手順 1. PowerShell 環境を起動し、Sql Server のモジュールをインポートします。 | [SqlServer モジュールのインポート](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | いいえ | いいえ
 手順 2. サーバーとデータベースに接続します。 | [データベースへの接続](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | いいえ | はい

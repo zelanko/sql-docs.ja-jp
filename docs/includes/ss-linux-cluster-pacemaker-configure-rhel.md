@@ -1,4 +1,4 @@
-3. すべてのクラスター ノードでは、ペースのファイアウォール ポートを開きます。 `firewalld` を使用してこれらのポートを開くには、次のコマンドを実行します。
+3. すべてのクラスター ノードで、Pacemaker のファイアウォール ポートを開きます。 `firewalld` を使用してこれらのポートを開くには、次のコマンドを実行します。
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
@@ -16,7 +16,7 @@
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
 
-2. Pacemaker と Corosync のパッケージをインストールしたときに作成された既定のユーザー用のパスワードを設定します。 すべてのノードで同じパスワードを使用します。 
+2. Pacemaker と Corosync のパッケージをインストールしたときに作成された既定のユーザー用のパスワードを設定します。 すべてのノードで同じパスワードを使います。 
 
    ```bash
    sudo passwd hacluster

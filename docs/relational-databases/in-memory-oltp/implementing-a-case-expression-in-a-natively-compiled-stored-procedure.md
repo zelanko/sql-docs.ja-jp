@@ -15,17 +15,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 1829f2a3b1d053173145df421ce7d8d35a0e29e3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>ネイティブ コンパイル ストアド プロシージャに CASE 式を実装する
 [!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
 
-  CASE 式は、ネイティブ コンパイル ストアド プロシージャでサポートされます。 次の例では、クエリで CASE 式を使用する方法を示します。 ネイティブ コンパイル モジュールで CASE 式について説明した回避策を不要になったとします。
+  CASE 式は、ネイティブ コンパイル ストアド プロシージャでサポートされています。 次の例では、クエリで CASE 式を使用する方法を示します。 ネイティブ コンパイル モジュールでの CASE 式について説明されている回避策は必要なくなりました。
 
 ``` 
 -- Query using a CASE expression in a natively compiled stored procedure.

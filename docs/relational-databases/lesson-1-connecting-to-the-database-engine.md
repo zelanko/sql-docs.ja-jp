@@ -14,17 +14,17 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
 ms.openlocfilehash: 87f75b288cdf7da9097350a117cbd2bf94b69758
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>レッスン 1: データベース エンジンへの接続
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
- > SQL Server の以前のバージョンに関連するコンテンツでは、次を参照してください。[レッスン 1: データベース エンジンへの接続](https://msdn.microsoft.com/en-US/library/ms345332(SQL.120).aspx)です。
+ > 以前のバージョンの SQL Server に関連するコンテンツについては、「[レッスン 1: データベース エンジンへの接続](https://msdn.microsoft.com/en-US/library/ms345332(SQL.120).aspx)」をご覧ください。
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のインストール時に一緒にインストールされるツールは、エディションとセットアップによって異なります。 このレッスンでは、主要なツールについて確認し、接続して基本機能を実行する方法について学習します。これで、さらに多くのユーザーを認証することができます。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 06/23/2017
   
 ##### <a name="to-start-sql-server-configuration-manager"></a>SQL Server 構成マネージャーを起動するには  
   
-- 現在のバージョンの Windows では、**スタート** ページで「**Configuration Manager**」と入力し、**[SQL Server *バージョン* 構成マネージャー]** をクリックします。   
+- 現在のバージョンの Windows では、 **[スタート]** ページで「 **Configuration Manager**] の順にポイントして、 **[SQL Server *&lt;バージョン&gt;* Configuration Manager**から無料でダウンロードできます。   
 -   以前のバージョンの Windows では、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]]、 **[構成ツール]**の順にポイントして、 **[SQL Server 構成マネージャー]**をクリックします。  
   
 ## <a name="connect"></a>Management Studio を使用した接続  

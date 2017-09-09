@@ -1,4 +1,4 @@
-2. すべてのクラスター ノードでは、SQL Server のユーザー名とペース ログインのパスワードを格納するファイルを作成します。 次のコマンドは、このファイルを作成および設定します。
+2. すべてのクラスター ノードで、Pacemaker にログインするための SQL Server のユーザー名とパスワードを格納するファイルを作成します。 次のコマンドは、このファイルを作成および設定します。
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
@@ -8,7 +8,7 @@
    sudo chmod 600 /var/opt/mssql/secrets/passwd    
    ```
 
-3. すべてのクラスター ノードでは、ペースのファイアウォール ポートを開きます。 `firewalld` を使用してこれらのポートを開くには、次のコマンドを実行します。
+3. すべてのクラスター ノードで、Pacemaker のファイアウォール ポートを開きます。 `firewalld` を使用してこれらのポートを開くには、次のコマンドを実行します。
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
@@ -28,7 +28,7 @@
 
    
 
-2. Pacemaker と Corosync のパッケージをインストールしたときに作成された既定のユーザー用のパスワードを設定します。 すべてのノードで同じパスワードを使用します。 
+2. Pacemaker と Corosync のパッケージをインストールしたときに作成された既定のユーザー用のパスワードを設定します。 すべてのノードで同じパスワードを使います。 
 
    ```bash
    sudo passwd hacluster

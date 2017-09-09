@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 1aa87e3d821e6d111948baa0843edf31d087d739
-ms.openlocfilehash: 09e81a8bbc77e9bbf9f76bb669ab53bd549bef85
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 0a1219eb4dac8621ef678cf309ef36b4b039536b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>AUTO モードで自動的に JSON 出力を書式設定する (SQL Server)
@@ -42,7 +42,7 @@ ms.lasthandoff: 07/18/2017
 ## <a name="examples"></a>使用例
 
 ### <a name="example-1"></a>例 1
- **[データセットのプロパティ]**  
+ **Query**  
   
 クエリで 1 つのテーブルだけが参照されている場合、FOR JSON AUTO 句の結果は、FOR JSON PATH の結果と同様になります。 この場合、FOR JSON AUTO では、入れ子になったオブジェクトは作成されません。 唯一の違いは、FOR JSON AUTO が、入れ子になったオブジェクトではなく、ドット付きのキーとしてドット区切りの別名 (次の例では `Info.MiddleName`) を出力する点です。  
   
@@ -88,7 +88,7 @@ SELECT TOP 5
 
 ### <a name="example-2"></a>例 2
 
-**[データセットのプロパティ]**  
+**Query**  
   
 テーブルを結合すると、最初のテーブル内の列はルート オブジェクトのプロパティとして生成されます。 2 番目のテーブル内の列は、入れ子になったオブジェクトのプロパティとして生成されます。 2 番目のテーブルのテーブル名または別名 (次の例では `D`) は、入れ子になった配列の名前として使用されます。  
   
@@ -126,7 +126,7 @@ FOR JSON AUTO
 
 ### <a name="example-3"></a>例 3
  
-**[データセットのプロパティ]**  
+**Query**  
 FOR JSON AUTO を使用せずに、次の例のように SELECT ステートメントに FOR JSON PATH サブキーを入れ子にすることができます。 この例では、前の例と同じ結果が出力されます。  
   
 ```sql  
@@ -159,8 +159,8 @@ FOR JSON PATH
 }]
 ```  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>詳細については、組み込みの JSON が SQL Server のサポート  
-特定のソリューションの多くは、ケース、および推奨事項を使用して、参照してください、[組み込みの JSON サポートに関するブログの投稿](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)SQL Server および Microsoft のプログラム マネージャー Jovan Popovic による Azure SQL データベースでします。
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>SQL Server に組み込まれている JSON サポートの詳細情報  
+多くの具体的なソリューション、ユース ケース、推奨事項については、Microsoft のプログラム マネージャー Jovan Popovic による SQL Server および Azure SQL Database に[組み込まれている JSON のサポートに関するブログ投稿](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)をご覧ください。
 
 ## <a name="see-also"></a>参照  
  [FOR 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  

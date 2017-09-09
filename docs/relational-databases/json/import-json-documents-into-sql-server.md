@@ -14,17 +14,17 @@ caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 1c842fde925e89901971a525c3e171ffce050269
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 95489b4e72f1321f7e1139f06040eb81a5956b15
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="import-json-documents-into-sql-server"></a>JSON ドキュメントの SQL Server へのインポート
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-このトピックでは、SQL Server に JSON ファイルをインポートする方法について説明します。 現在は多数の JSON ドキュメントをファイルに保存します。 JSON ファイル内のアプリケーション ログ情報、センサーが JSON ファイルなどのために格納されている情報を生成します。 ファイルに保存されている JSON データ読み取り、そのデータを SQL Server に読み込んで分析できることが重要です。
+このトピックでは、SQL Server に JSON ファイルをインポートする方法について説明します。 現在、多数の JSON ドキュメントがファイルに保存されています。 たとえば、アプリケーションは JSON ファイルに情報を記録し、センサーは JSON ファイルに保存される情報を生成します。 ファイルに保存されている JSON データ読み取り、そのデータを SQL Server に読み込んで分析できることが重要です。
 
 ## <a name="import-a-json-document-into-a-single-column"></a>JSON ドキュメントを 1 つの列にインポートする
 **OPENROWSET(BULK)** は、SQL Server が読み取りアクセス権を持っている場所であれば、ローカル ドライブまたはネットワーク上の任意のファイルからデータを読み取ることができるテーブル値関数です。 ファイルの内容を含む 1 列のテーブルを返します。 OPENROWSET(BULK) 関数では、区切り記号など、さまざまなオプションを使用できます。 簡単な場合では、単にファイルの内容全体をテキスト値として読み込むことができます。 (この 1 つの大きな値は、Single Character Large Object (SINGLE_CLOB) と呼ばれます)。 
@@ -38,7 +38,7 @@ SELECT BulkColumn
 
 OPENJSON(BULK) はファイルの内容を読み取り、`BulkColumn` で返します。
 
-読み込むことも、ファイルの内容をローカル変数またはテーブルに次の例で示すように。
+次の例のように、ファイルの内容は、ローカル変数またはテーブルに読み込むことができます。
 
 ```sql
 -- Load file contents into a variable
@@ -51,10 +51,10 @@ SELECT BulkColumn
  FROM OPENROWSET (BULK 'C:\JSON\Books\book.json', SINGLE_CLOB) as j
 ```
 
-JSON ファイルの内容を読み込んだ後に、テーブルの JSON テキストを保存できます。
+JSON ファイルの内容を読み込んだ後、JSON テキストをテーブルに保存できます。
 
 ## <a name="import-multiple-json-documents"></a>複数の JSON ドキュメントをインポートする
-同じアプローチを使用して、ファイル システムからの JSON ファイルのセットを一度に 1 つのローカル変数に読み込むことができます。 ファイルは `book<index>.json` という名前です。
+同じ方法を使用して、ファイル システムから複数の JSON ファイルを一度に 1 つずつローカル変数に読み込むことができます。 ファイルは `book<index>.json` という名前です。
   
 ```sql
 DECLARE @i INT = 1
@@ -71,19 +71,19 @@ END
 ```
 
 ## <a name="import-json-documents-from-azure-file-storage"></a>Azure File Storage から JSON ドキュメントをインポートする
-行えます openrowset (bulk) 上で説明したように SQL Server にアクセスできるその他のファイルの場所から JSON ファイルを読み取る。 たとえば、Azure File Storage は SMB プロトコルをサポートしています。 そのため、次の手順でローカルの仮想ドライブを Azure File Storage 共有にマップできます。
+また、前に説明した OPENROWSET(BULK) を使って、SQL Server がアクセスできる他のファイルの場所から JSON ファイルを読み取ることができます。 たとえば、Azure File Storage は SMB プロトコルをサポートしています。 そのため、次の手順でローカルの仮想ドライブを Azure File Storage 共有にマップできます。
 1.  Azure ポータルまたは Azure PowerShell を使用して、ファイル ストレージ アカウント (`mystorage` など)、ファイル共有 (`sharejson` など)、および Azure File Storage のフォルダーを作成します。
 2.  いくつかの JSON ファイルをファイル ストレージ共有にアップロードします。
 3.  コンピューターの Windows ファイアウォールで、ポート 445 を許可する送信ファイアウォール規則を作成します。 インターネット サービス プロバイダー (ISP) がこのポートをブロックしている可能性があるので注意してください。 次の手順で DNS エラー (エラー 53) が発生する場合は、ポート 445 を開いていないか、ISP がブロックしています。
-4. Azure File Storage 共有としてローカル ドライブをマウントする (たとえば`T:`)。
+4. Azure File Storage 共有をローカル ドライブ (`T:` など) としてマウントします。
 
-    コマンドの構文を次に示します。
+    コマンドの構文は次のとおりです。
 
     ```dos
     net use [drive letter] \\[storage name].file.core.windows.net\[share name] /u:[storage account name] [storage account access key]
     ```
 
-    ローカル ドライブ文字を割り当てる例を次に示します`T:`Azure File Storage 共有。
+    ローカル ドライブ文字 `T:` を Azure File Storage 共有に割り当てる例を次に示します。
 
     ```dos
     net use t: \\mystorage.file.core.windows.net\sharejson /u:myaccount hb5qy6eXLqIdBj0LvGMHdrTiygkjhHDvWjUZg3Gu7bubKLg==
@@ -91,7 +91,7 @@ END
 
     ストレージ アカウント キーと、プライマリまたはセカンダリ ストレージ アカウント アクセス キーは、Azure ポータルの [設定] の [キー] セクションで確認できます。
 
-5.  ようになりました、次の例に示すようにもマップされたドライブを使用して、、JSON ファイルを Azure File Storage 共有からアクセスすることができます。
+5.  マップ済みドライブを使って Azure File Storage 共有から JSON ファイルにアクセスできるようになりました。次にその例を示します。
 
     ```sql
     SELECT book.* FROM
@@ -105,9 +105,9 @@ Azure File Storage の詳細については、「[File Storage](https://azure.mi
 
 ## <a name="import-json-documents-from-azure-blob-storage"></a>Azure Blob Storage から JSON ドキュメントをインポートする
 
-T-SQL で BULK INSERT コマンドまたは OPENROWSET 関数と、Azure Blob ストレージから Azure SQL データベースに直接ファイルを読み込むことができます。
+T-SQL BULK INSERT コマンドまたは OPENROWSET 関数を使用して、Azure Blob Storage のファイルを Azure SQL Database に直接読み込むことができます。
 
-最初に、次の例で示すように、外部データ ソースを作成します。
+まず外部データ ソースを作成します。次に例を示します。
 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
@@ -124,10 +124,10 @@ FROM 'data/product.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
-詳細については、OPENROWSET を使用する例を参照してください[Azure Blob ストレージから Azure SQL データベースにファイルを読み込む](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/)します。
+OPENROWSET の使用の詳細と例については、「[Loading files from Azure Blob Storage into Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/)」(Azure Blob Storage のファイルを Azure SQL Database に読み込む) をご覧ください。
 
 ## <a name="parse-json-documents-into-rows-and-columns"></a>JSON ドキュメントを行と列に解析する
-1 つの値全体の JSON ファイルの読み取り、代わりを解析し、ファイルと行と列には、そのプロパティのブックを取得する可能性があります。 次の例は、JSON ファイルから[このサイト](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json)書籍の一覧を格納します。
+JSON ファイルを 1 つの値として読み取るのではなく、解析して、ファイル内の書籍とそのプロパティを行と列で返すこともできます。 次の例では、書籍の一覧を格納している[こちらのサイト](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json)の JSON ファイルを使います。
 
 ### <a name="example-1"></a>例 1
 最も簡単な例では、単にファイルから一覧全体を読み込むことができます。 
@@ -139,7 +139,7 @@ SELECT value
 ```
 
 ### <a name="example-2"></a>例 2
-OPENROWSET は 1 つのテキスト値をファイルから読み取り、BulkColumn として返し、OPENJSON 関数に渡します。 OPENJSON は BulkColumn 配列内の JSON オブジェクトの配列を反復処理し、JSON として書式設定、各行に 1 つの書籍を返します。
+OPENROWSET は 1 つのテキスト値をファイルから読み取り、BulkColumn として返し、OPENJSON 関数に渡します。 OPENJSON は BulkColumn 配列内の JSON オブジェクトの配列を反復処理し、各行で JSON 形式の 1 冊の書籍を返します。
 
 ```json
 {"id":"978-0641723445″, "cat":["book","hardcover"], "name":"The Lightning Thief", … 
@@ -171,8 +171,8 @@ SELECT book.*
 
 このテーブルをユーザーに返したり、データを別のテーブルに読み込んだりすることができます。
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>詳細については、組み込みの JSON が SQL Server のサポート  
-特定のソリューションの多くは、ケース、および推奨事項を使用して、参照してください、[組み込みの JSON サポートに関するブログの投稿](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)SQL Server および Microsoft のプログラム マネージャー Jovan Popovic による Azure SQL データベースでします。
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>SQL Server に組み込まれている JSON サポートの詳細情報  
+多くの具体的なソリューション、ユース ケース、推奨事項については、Microsoft のプログラム マネージャー Jovan Popovic による SQL Server および Azure SQL Database に[組み込まれている JSON のサポートに関するブログ投稿](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)をご覧ください。
   
 ## <a name="see-also"></a>参照
 [OPENJSON を使用して JSON データを行と列に変換する](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)

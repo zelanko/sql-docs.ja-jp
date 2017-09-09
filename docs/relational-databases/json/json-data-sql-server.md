@@ -18,11 +18,11 @@ caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: e2a427682aebeeccc82a1b7f6521399b8a0b6fe8
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: fed02f20beb9bd84dfd5ac2add3c66daf207e07c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="json-data-sql-server"></a>JSON データ (SQL Server)
@@ -70,7 +70,7 @@ SQL Server がその組み込みの JSON サポートで提供する主な機能
 
 **例**
   
- 次の例では、クエリで使用して両方のリレーショナル データと JSON データ (という名前の列に格納されている`jsonCol`) テーブルから。  
+ 次の例のクエリでは、テーブルからリレーショナル データと (`jsonCol` という名前の列に格納された) JSON データの両方を使用しています。  
   
 ```sql  
 SELECT Name,Surname,
@@ -321,7 +321,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
   
 ### <a name="microsoft-blog-posts"></a>マイクロソフトのブログ記事  
   
--   特定のソリューションの多くは、ケース、および推奨事項を使用して、参照してください、[組み込みの JSON サポートに関するブログの投稿](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)SQL Server および Microsoft のプログラム マネージャー Jovan Popovic による Azure SQL データベースでします。  
+-   多くの具体的なソリューション、ユース ケース、推奨事項については、Microsoft のプログラム マネージャー Jovan Popovic による SQL Server および Azure SQL Database に[組み込まれている JSON のサポートに関するブログ投稿](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)をご覧ください。  
   
 ### <a name="reference-topics"></a>参照トピック  
   
