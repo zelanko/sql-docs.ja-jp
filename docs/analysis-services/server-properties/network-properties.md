@@ -1,56 +1,61 @@
 ---
-title: "ネットワーク プロパティ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "LingerTimeout プロパティ"
-  - "EnableNagleAlgorithm プロパティ"
-  - "MinPendingAcceptExCount プロパティ"
-  - "MaxPendingSendCount プロパティ"
-  - "EnableBinaryXML プロパティ"
-  - "MinPendingReceiveCount プロパティ"
-  - "MaxCompletedReceiveCount プロパティ"
-  - "DisableNonblockingMode プロパティ"
-  - "RequestSizeThreshold プロパティ"
-  - "CompressionLevel プロパティ"
-  - "ReceiveBufferSize プロパティ"
-  - "EnableCompression プロパティ"
-  - "ServerSendTimeout プロパティ"
-  - "IPV4Support プロパティ"
-  - "MaxPendingReceiveCount プロパティ"
-  - "MaxPendingAcceptExCount プロパティ"
-  - "IPV6Support プロパティ"
-  - "MaxAllowedRequestSize プロパティ"
-  - "ServerReceiveTimeout プロパティ"
-  - "EnableLingerOnClose プロパティ"
-  - "InitialConnectTimeout プロパティ"
-  - "SendBufferSize プロパティ"
-  - "ScatterReceiveMultiplier プロパティ"
-  - "ネットワーク プロパティ [Analysis Services]"
+title: "ネットワーク プロパティ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- LingerTimeout property
+- EnableNagleAlgorithm property
+- MinPendingAcceptExCount property
+- MaxPendingSendCount property
+- EnableBinaryXML property
+- MinPendingReceiveCount property
+- MaxCompletedReceiveCount property
+- DisableNonblockingMode property
+- RequestSizeThreshold property
+- CompressionLevel property
+- ReceiveBufferSize property
+- EnableCompression property
+- ServerSendTimeout property
+- IPV4Support property
+- MaxPendingReceiveCount property
+- MaxPendingAcceptExCount property
+- IPV6Support property
+- MaxAllowedRequestSize property
+- ServerReceiveTimeout property
+- EnableLingerOnClose property
+- InitialConnectTimeout property
+- SendBufferSize property
+- ScatterReceiveMultiplier property
+- network properties [Analysis Services]
 ms.assetid: ef4251e2-abe5-4c5b-9868-7549782d0244
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e866ebb50ceb59a43f6d32303aa59092250e230b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# ネットワーク プロパティ
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「[Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)」を参照してください。  
+# <a name="network-properties"></a>ネットワーク プロパティ
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)」を参照してください。  
   
  **適用対象:** 多次元サーバー モードおよびテーブル サーバー モード  
   
-## 全般  
+## <a name="general"></a>全般  
  **ListenOnlyOnLocalConnections**  
  localhost などのローカル接続のみリッスンするかどうかを識別する、ブール型プロパティです。  
   
-## リスナー  
+## <a name="listener"></a>リスナー  
  **IPV4Support**  
  IPv4 プロトコルのサポートを定義する、符号付き 32 ビット整数のプロパティです。 このプロパティは、次の表に示すいずれかの値になります。  
   
@@ -81,14 +86,14 @@ caps.handback.revision: 15
  **ServerSendTimeout**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## 要求  
+## <a name="requests"></a>要求  
  **EnableBinaryXML**  
  サーバーがバイナリ XML 形式の要求を認識するかどうかを指定する、ブール型プロパティです。  
   
  **EnableCompression**  
  要求の圧縮を有効にするかどうかを指定する、ブール型プロパティです。  
   
-## 応答  
+## <a name="responses"></a>応答  
  **CompressionLevel**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
@@ -98,7 +103,7 @@ caps.handback.revision: 15
  **EnableCompression**  
  クライアント要求に対する応答の圧縮を有効にするかどうかを指定する、ブール型プロパティです。  
   
-## TCP  
+## <a name="tcp"></a>TCP  
  **InitialConnectTimeout**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
@@ -141,7 +146,7 @@ caps.handback.revision: 15
  **SocketOptions\ SendBufferSize**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Analysis Services インスタンスのサーバー モードの決定](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

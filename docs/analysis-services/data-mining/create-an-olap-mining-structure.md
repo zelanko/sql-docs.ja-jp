@@ -1,23 +1,28 @@
 ---
-title: "OLAP マイニング構造の作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "OLAP マイニング構造の作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: b4c361d8a255b4ef5dc348692bb688a0421b0abd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# OLAP マイニング構造の作成
+# <a name="create-an-olap-mining-structure"></a>OLAP マイニング構造の作成
   OLAP キューブまたはその他の多次元データ ストアに基づいてデータ マイニング モデルを作成することには、多くの利点があります。 OLAP ソリューションには、適切に整理、クリーンアップ、および書式設定された大量のデータが既に含まれています。ただし、データが複雑なため、アドホック探索でユーザーが有意なパターンを見つけることは困難です。 データ マイニングは、新しい相関関係を発見し、実用的な洞察力を得るための手段を提供します。  
   
  このトピックでは、既存の多次元ソリューションのディメンションおよび関連メジャーに基づいて OLAP マイニング構造を作成する方法について説明します。  
@@ -37,17 +42,17 @@ caps.handback.revision: 12
 ##  <a name="bkmk_Reqs"></a> OLAP マイニング構造およびモデルの要件  
  OLAP マイニング モデルをデザインしている場合、データ ソースは、キューブを作成するために使用したデータベース内に既に存在しています。 リモート キューブに接続してデータ マイニング オブジェクトを作成することはできません。キューブ オブジェクトは、データベースと同じソリューション内で作成対象のマイニング構造として使用可能である必要があります。  
   
- 元のプロジェクト ファイルがない場合、または元のプロジェクト ファイルを変更したくない場合は、Visual Studio の **[サーバーからインポート (多次元またはデータ マイニング)]** オプションを使用して、メタデータおよびソリューション オブジェクトのコピーを取得します。 これにより、既存のオブジェクトに影響を与えることなく、配置ターゲットの変更、データ ソースの編集、およびキューブ オブジェクトの操作を行うことができます。  
+ 元のプロジェクト ファイルがない場合、または元のプロジェクト ファイルを変更したくない場合は、Visual Studio の **[サーバーからインポート (多次元またはデータ マイニング)]**オプションを使用して、メタデータおよびソリューション オブジェクトのコピーを取得します。 これにより、既存のオブジェクトに影響を与えることなく、配置ターゲットの変更、データ ソースの編集、およびキューブ オブジェクトの操作を行うことができます。  
   
- 詳細については、「[Analysis Services インポート ウィザードを使用したデータ マイニング プロジェクトのインポート](../../analysis-services/data-mining/import-a-data-mining-project-using-the-analysis-services-import-wizard.md)」を参照してください。  
+ 詳細については、「 [Analysis Services インポート ウィザードを使用したデータ マイニング プロジェクトのインポート](../../analysis-services/data-mining/import-a-data-mining-project-using-the-analysis-services-import-wizard.md)」を参照してください。  
   
 ##  <a name="bkmk_Overview"></a> OLAP データ マイニング プロセスの概要  
- ソリューション エクスプローラーで **[マイニング構造]** ノードを右クリックし、**[新しいマイニング構造]** をクリックして、データ マイニング ウィザードを起動します。 ウィザードに従って次の手順を実行して、新しい構造およびモデルの構造を作成します。  
+ ソリューション エクスプローラーで **[マイニング構造]** ノードを右クリックし、  **[新しいマイニング構造]**をクリックして、データ マイニング ウィザードを起動します。 ウィザードに従って次の手順を実行して、新しい構造およびモデルの構造を作成します。  
   
 1.  **[定義方法の選択]**: データ ソースの種類を選択し、 **[既存のキューブを使用する]**を選択します。  
   
     > [!NOTE]  
-    >  既に説明したように、ソースとして使用する OLAP キューブは、マイニング構造と同じデータベース内に存在する必要があります。 さらに、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel アドインによって作成されたキューブは、データ マイニング用のソースとして使用できません。  
+    >  既に説明したように、ソースとして使用する OLAP キューブは、マイニング構造と同じデータベース内に存在する必要があります。 さらに、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel アドインによって作成されたキューブは、データ マイニング用のソースとして使用できません。  
   
 2.  **[データ マイニング構造の作成]**: 構造のみを作成するか、構造と共にマイニング モデルも作成するかを決定します。  
   
@@ -113,23 +118,23 @@ caps.handback.revision: 12
 |興味深いセルまたは異常なセルの検索|一般的な傾向に反している店舗売上を識別します。|[!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズム|  
 |相関関係の検索|地域、コンピューターの種類、OS、購入日など、サーバーのダウンタイムに関連する要因を識別します。|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naïve Bayes アルゴリズム|  
   
-##  <a name="bkmk_Filters"></a> キューブのスライスとモデルのフィルター処理  
+##  <a name="bkmk_Filters"></a>キューブのスライスとします。モデルのフィルター処理  
  モデルを作成しているときにキューブをスライスすることは、リレーショナル マイニング モデルにフィルターを作成することと似ています。 リレーショナル モデルでは、データ ソースのフィルターは、SQL ステートメントの WHERE 句として定義されます。キューブでは、エディターを使用して、MDX を使用するフィルター ステートメントを作成します。  
   
  たとえば、全世界における製品の売上に関する情報が含まれているキューブがある一方で、マーケティング キャンペーン用に英国在住の 31 歳以上の女性客を対象とする分析に基づいてモデルを作成したい場合があります。  
   
  このシナリオでは、2 つのフィルターを作成します。  
   
--   1 つ目のフィルターとして、Geography ディメンションを選択します。Region の階層を選択し、**[フィルター式]** ボックスの一覧の [United Kingdom] を選択します。  
+-   1 つ目のフィルターとして、Geography ディメンションを選択します。Region の階層を選択し、 **[フィルター式]** ボックスの一覧の [United Kingdom] を選択します。  
   
 -   2 つ目のフィルターとして、Customer ディメンションを選択します。Customer 属性を選択し、属性値の一覧で [Female] を選択します。  
   
- マイニング構造を作成した後は、キューブ データとフィルター条件の両方の定義を変更できます。 詳しくは、「 [Filter the Source Cube for a Mining Structure](../Topic/Filter%20the%20Source%20Cube%20for%20a%20Mining%20Structure.md)」をご覧ください。  
+ マイニング構造を作成した後は、キューブ データとフィルター条件の両方の定義を変更できます。 詳細については、次を参照してください。[マイニング モデル フィルターの](~/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)します。  
   
  **[マイニング構造]** タブと **[マイニング モデル]** タブのどちらでも、 **[キューブ スライスの定義]**をクリックして既存のマイニング構造にフィルターを追加できます。 **[キューブのスライス]** ダイアログ ボックスでは、ドロップダウン リストから値を選択して有効な MDX フィルター式を作成できます。  
   
 > [!WARNING]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ではキューブをデザインおよび参照するためのインターフェイスが変更されている点に注意してください。 詳細については、「[キューブ内のデータおよびメタデータの参照](../../analysis-services/multidimensional-models/browse-data-and-metadata-in-cube.md)」を参照してください。  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ではキューブをデザインおよび参照するためのインターフェイスが変更されている点に注意してください。 詳細については、「 [キューブ内のデータおよびメタデータの参照](../../analysis-services/multidimensional-models/browse-data-and-metadata-in-cube.md)」を参照してください。  
   
  キューブには、マイニング モデルに必要なデータを返すために必要な数のフィルターを追加できます。 また、個々のキューブ スライスでスライスを定義することもできます。 たとえば、製品に基づいている 2 つの入れ子になったテーブルが構造に含まれている場合は、2004 年 3 月で 1 つのテーブルをスライスし、2004 年 4 月で別のテーブルをスライスできます。 結果として得られるモデルは、3 月の購入に基づいて 4 月に購入を予測するために使用できます。  
   
@@ -158,11 +163,12 @@ caps.handback.revision: 12
 > [!WARNING]  
 >  データ マイニング ディメンションの作成をサポートするモデルは、Microsoft クラスタリング アルゴリズム、Microsoft デシジョン ツリー アルゴリズム、または Microsoft アソシエーション アルゴリズムに基づくモデルのみです。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データ マイニング アルゴリズム (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [マイニング構造列](../../analysis-services/data-mining/mining-structure-columns.md)   
  [マイニング モデル列](../../analysis-services/data-mining/mining-model-columns.md)   
  [マイニング モデルのプロパティ](../../analysis-services/data-mining/mining-model-properties.md)   
- [マイニング構造と構造列のプロパティ](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
+ [マイニング構造列および構造列のプロパティ](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
   
   
+

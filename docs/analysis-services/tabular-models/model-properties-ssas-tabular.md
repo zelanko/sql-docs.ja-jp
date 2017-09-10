@@ -1,27 +1,32 @@
 ---
-title: "モデルのプロパティ (SSAS テーブル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.wspacedbconfig.f1"
-  - "sql13.asvs.bidtoolset.fileprop.f1"
+title: "モデル プロパティ (SSAS テーブル) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.wspacedbconfig.f1
+- sql13.asvs.bidtoolset.fileprop.f1
 ms.assetid: 8ab04656-75a5-485c-9687-7b1ca49f7f80
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: e0d09f3f0bd09017c73579d3f8b04b27e91cabfb
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# モデルのプロパティ (SSAS テーブル)
+# <a name="model-properties-ssas-tabular"></a>モデルのプロパティ (SSAS テーブル)
   このトピックでは、テーブル モデル プロパティについて説明します。 各テーブル モデル プロジェクトには、SQL Server 開発ツールで作成中のモデルの構築とバックアップの方法やワークスペース データベースの保存方法に影響するモデルのプロパティが含まれています。 ここで説明するモデルのプロパティは、既に配置されているモデルには適用されません。  
   
  このトピックのセクション:  
@@ -44,14 +49,15 @@ caps.handback.revision: 30
 >  モデルの作成時に自動的に設定され、変更できないプロパティもあります。  
   
 > [!NOTE]  
->  ワークスペース サーバー、ワークスペースの保有期間、およびデータ バックアップの各プロパティには、新しいモデル プロジェクトを作成するときに既定の設定が適用されます。 [ツール] メニューから開く [オプション] ダイアログ ボックスで、[分析サーバー] 設定の [データ モデリング] ページを使用して、新しいモデルの既定の設定を変更できます。 他のプロパティと同様に、これらのプロパティは [プロパティ] ウィンドウでモデルごとに設定することもできます。 詳細については、「[既定のデータ モデルと配置プロパティの構成 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)」を参照してください。  
+>  ワークスペース サーバー、ワークスペースの保有期間、およびデータ バックアップの各プロパティには、新しいモデル プロジェクトを作成するときに既定の設定が適用されます。 [ツール] メニューから開く [オプション] ダイアログ ボックスで、[分析サーバー] 設定の [データ モデリング] ページを使用して、新しいモデルの既定の設定を変更できます。 他のプロパティと同様に、これらのプロパティは [プロパティ] ウィンドウでモデルごとに設定することもできます。 詳細については、「 [既定のデータ モデルと配置プロパティの構成 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)」を参照してください。  
   
 |プロパティ|既定の設定|Description|  
 |--------------|---------------------|-----------------|  
 |**照合順序**|Visual Studio がインストールされているコンピューターの既定の照合順序。|モデルの照合順序指定子。|  
-|**互換性レベル**|既定またはプロジェクト作成時に選択した他のレベル|SQL Server 2012 Analysis Services SP1 以降に適用されます。 このモデルで利用できる機能と設定を指定します。 詳細については、「[Analysis Services での表形式モデルの互換性レベル](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)」を参照してください。|  
-|**データ バックアップ**|ディスクにバックアップしない|モデル データのバックアップをバックアップ ファイルに保存するかどうかを指定します。 このプロパティの設定には、以下のオプションがあります。<br /><br /> **ディスクにバックアップする** - モデル データのバックアップをディスク上に保持するように指定します。 モデルを保存すると、バックアップ (ABF) ファイルにもデータが保存されます。 このオプションを選択すると、モデルの保存と読み込みが低速化する可能性があります。<br /><br /> **ディスクにバックアップしない** - モデル データのバックアップをディスク上に保持しないように指定します。 保存時間とモデルの読み込み時間が最小限で済みます。<br /><br /> <br /><br /> このプロパティの既定の設定は、[ツール] メニューから開く [オプション] ダイアログ ボックスで、[分析サーバー] 設定の [データ モデリング] ページを使用して変更できます。|  
-|**DirectQuery モード**|Off|このモデルを DirectQuery モードで動作させるかどうかを指定します。 詳細については、「[DirectQuery モード &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)」を参照してください。|  
+|**互換性レベル**|既定またはプロジェクト作成時に選択した他のレベル|SQL Server 2012 Analysis Services SP1 以降に適用されます。 このモデルで利用できる機能と設定を指定します。 詳細については、「 [Analysis Services での表形式モデルの互換性レベル](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)」を参照してください。|  
+|**データ バックアップ**|ディスクにバックアップしない|モデル データのバックアップをバックアップ ファイルに保存するかどうかを指定します。 このプロパティの設定には、以下のオプションがあります。<br /><br /> **ディスクにバックアップする** - モデル データのバックアップをディスク上に保持するように指定します。 モデルを保存すると、バックアップ (ABF) ファイルにもデータが保存されます。 このオプションを選択すると、モデルの保存と読み込みが低速化する可能性があります。<br /><br /> **ディスクにバックアップしない** - モデル データのバックアップをディスク上に保持しないように指定します。 保存時間とモデルの読み込み時間が最小限で済みます。<br /><br /> <br /><br /> このプロパティの既定の設定は、[ツール] メニューから開く [オプション] ダイアログ ボックスで、[分析サーバー] 設定の [データ モデリング] ページを使用して変更できます。| 
+|**既定のフィルターの方向**|一方向|新しいリレーションシップの既定のフィルターの方向を決定します。| 
+|**DirectQuery モード**|Off|このモデルを DirectQuery モードで動作させるかどうかを指定します。 詳しくは、「[DirectQuery モード &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)」をご覧ください。|  
 |**[ファイル名]**|Model.bim|.bim ファイルの名前を指定します。 このファイル名は変更しないでください。|  
 |**完全なパス**|プロジェクトを作成したときに指定したパス。|model.bim ファイルの場所。 このプロパティを [プロパティ] ウィンドウで設定することはできません。|  
 |**言語**|英語|モデルの既定の言語。 既定の言語は Visual Studio の言語によって決まります。 このプロパティを [プロパティ] ウィンドウで設定することはできません。|  
@@ -65,7 +71,7 @@ caps.handback.revision: 30
   
 2.  **[プロパティ]** ウィンドウでプロパティをクリックし、値を入力するか、下矢印をクリックして、設定オプションを選択します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [既定のデータ モデルと配置プロパティの構成 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
  [プロジェクトのプロパティ &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   

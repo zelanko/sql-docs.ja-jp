@@ -1,27 +1,32 @@
 ---
-title: "Naive Bayes モデルのクエリ例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "naive bayes model [Analysis Services]"
-  - "naive bayes algorithms [Analysis Services]"
-  - "コンテンツ クエリ [DMX]"
+title: "Naive Bayes モデルのクエリ例 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- naive bayes model [Analysis Services]
+- naive bayes algorithms [Analysis Services]
+- content queries [DMX]
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6935ffd8851a9454a1a2e53655be814a4eda3af1
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# Naive Bayes モデルのクエリ例
+# <a name="naive-bayes-model-query-examples"></a>Naive Bayes モデルのクエリ例
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 データ マイニング スキーマ行セットに対するクエリによって、モデルに関するメタデータを取得することもできます。 ここでは、Microsoft Naive Bayes アルゴリズムに基づくモデルに対するクエリの作成方法について説明します。  
   
  **Content Queries**  
@@ -42,7 +47,7 @@ caps.handback.revision: 13
   
  [アソシエーションを予測する](#bkmk_Query7)  
   
-## Naive Bayes モデルに関する情報の入手  
+## <a name="finding-information-about-a-naive-bayes-model"></a>Naive Bayes モデルに関する情報の入手  
  Naive Bayes モデルのモデル コンテンツは、トレーニング データの値の分布に関する集計情報です。 データ マイニング スキーマ行セットに対するクエリを作成することによって、モデルのメタデータに関する情報を取得することもできます。  
   
 ###  <a name="bkmk_Query1"></a> サンプル クエリ 1: DMX を使用してモデル メタデータを取得する  
@@ -67,7 +72,7 @@ WHERE MODEL_NAME = 'TM_NaiveBayes_Filtered'
 |PREDICTION_ENTITY|Bike Buyer,Yearly Income|  
 |FILTER|[Region] = 'Europe' OR [Region] = 'North America'|  
   
- この例で使用するモデルは、「 [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md)」で作成した Naive Bayes モデルを基にしていますが、予測可能な属性をもう 1 つ追加し、トレーニング データにフィルターを適用するという修正を加えています。  
+ この例で使用するモデルは、「 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」で作成した Naive Bayes モデルを基にしていますが、予測可能な属性をもう 1 つ追加し、トレーニング データにフィルターを適用するという修正を加えています。  
   
 ###  <a name="bkmk_Query2"></a> サンプル クエリ 2: トレーニング データの一覧を取得する  
  Naive Bayes モデルでは、マージナル統計ノードにトレーニング データの値の分布に関する集計情報を格納します。 この一覧はトレーニング データに対する SQL クエリと同じ情報が得られるので、SQL クエリを作成しなくて済むため便利です。  
@@ -164,7 +169,7 @@ CALL GetPredictableAttributes ('TM_NaiveBayes')
   
  Analysis Services システム ストアド プロシージャの詳細については、「[データ マイニングのストアド プロシージャ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)」をご覧ください。  
   
-## Naive Bayes モデルを使用して予測を作成する  
+## <a name="using-a-naive-bayes-model-to-make-predictions"></a>Naive Bayes モデルを使用して予測を作成する  
  Microsoft Naive Bayes アルゴリズムは、通常、予測に使用するよりも、入力属性と予測可能な属性の間のリレーションシップの検証に使用されます。 ただし、モデルでは予測とアソシエーションの両方に予測関数を使用できます。  
   
 ###  <a name="bkmk_Query5"></a> サンプル クエリ 5: 単一クエリを使用して結果を予測する  
@@ -213,7 +218,7 @@ NATURAL PREDICTION JOIN
  テーブルの最後の行は、不足値のサポートと確率に対する調整を示します。 Naive Bayes モデルは連続値をモデリングできないため、分散値と標準偏差値は常に 0 です。  
   
 ###  <a name="bkmk_Query7"></a> サンプル クエリ 7: アソシエーションを予測する  
- 予測可能な属性をキーとして持つ入れ子になったテーブルがマイニング構造に含まれる場合、Microsoft Naive Bayes アルゴリズムをアソシエーション分析に使用できます。 たとえば、データ マイニング チュートリアルの「[レッスン 3: マーケット バスケット シナリオの作成 &#40;中級者向けデータ マイニング チュートリアル&#41;](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md)」で作成したマイニング構造を使用して、Naive Bayes モデルを作成できます。 この例で使用したモデルは、ケース テーブルに収入および顧客の地域に関する情報を加えるよう変更されています。  
+ 予測可能な属性をキーとして持つ入れ子になったテーブルがマイニング構造に含まれる場合、Microsoft Naive Bayes アルゴリズムをアソシエーション分析に使用できます。 たとえば、データ マイニング チュートリアルの「[レッスン 3: マーケット バスケット シナリオの作成 &#40;中級者向けデータ マイニング チュートリアル&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)」で作成したマイニング構造を使用して、Naive Bayes モデルを作成できます。 この例で使用したモデルは、ケース テーブルに収入および顧客の地域に関する情報を加えるよう変更されています。  
   
  次のクエリの例では、製品 `'Road Tire Tube'`の購入に関連する製品を予測する単一クエリを示します。 この情報は、特定の種類の顧客に製品を勧めるために使用できます。  
   
@@ -238,7 +243,7 @@ AS t
 |Touring-2000|  
 |Touring 1000|  
   
-## 関数一覧  
+## <a name="function-list"></a>関数一覧  
  すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムでは、共通の関数セットがサポートされています。 ただし、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムでは、次の表のような追加の関数がサポートされています。  
   
 |||  
@@ -254,7 +259,7 @@ AS t
   
  特定の関数の構文については、「[データ マイニング拡張機能 &#40;DMX&#41; 関数リファレンス](../../dmx/data-mining-extensions-dmx-function-reference.md)」をご覧ください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Microsoft Naive Bayes アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)   
  [Microsoft Naive Bayes アルゴリズム](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
  [Naive Bayes モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  

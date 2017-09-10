@@ -1,24 +1,29 @@
 ---
-title: "階層の作成および管理 (SSAS テーブル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "作成および管理階層 (SSAS テーブル) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 63c10ca6e8486e67db96d7fe4d1e6afe76133ef8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# 階層の作成および管理 (SSAS テーブル)
+# <a name="create-and-manage-hierarchies-ssas-tabular"></a>階層の作成および管理 (SSAS テーブル)
   階層の作成と管理はダイアグラム ビューのモデル デザイナーで行うことができます。 モデル デザイナーをダイアグラム ビューに表示するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で **[モデル]** メニューをクリックし、 **[モデル ビュー]**をポイントして、 **[ダイアグラム ビュー]**をクリックします。  
   
  このトピックでは、次のタスクについて説明します。  
@@ -32,11 +37,11 @@ caps.handback.revision: 10
 ##  <a name="bkmk_create"></a> 階層の作成  
  列とテーブルのショートカット メニューを使用すると階層を作成できます。 階層を作成すると、選択した列を子レベルに持つ新しい親レベルが表示されます。  
   
-#### ショートカット メニューから階層を作成するには  
+#### <a name="to-create-a-hierarchy-from-the-context-menu"></a>ショートカット メニューから階層を作成するには  
   
-1.  テーブル ウィンドウのモデル デザイナー (ダイアグラム ビュー) で、列を右クリックして **[階層の作成]** をクリックします。  
+1.  テーブル ウィンドウのモデル デザイナー (ダイアグラム ビュー) で、列を右クリックして **[階層の作成]**をクリックします。  
   
-     複数の列を選択するには、列を 1 つずつクリックし、右クリックしてショートカット メニューを開き、**[階層の作成]** をクリックします。  
+     複数の列を選択するには、列を 1 つずつクリックし、右クリックしてショートカット メニューを開き、 **[階層の作成]**をクリックします。  
   
      テーブル ウィンドウの下部に親階層レベルが作成され、選択した列が階層の下に子レベルとしてコピーされます。  
   
@@ -50,13 +55,13 @@ caps.handback.revision: 10
 ##  <a name="bkmk_edit"></a> 階層の編集  
  階層名の変更、子レベルの名前の変更、子レベルの順序の変更、子レベルとしての列の追加、階層内の子レベルの削除、子レベルの基になる名前 (列名) の表示、階層の親レベルと同名の子レベルの非表示を行うことができます。  
   
-#### 階層または子レベルの名前を変更するには  
+#### <a name="to-change-the-name-of-a-hierarchy-or-child-level"></a>階層または子レベルの名前を変更するには  
   
-1.  階層の親レベルまたは子レベルを右クリックし、**[名前の変更]** をクリックします。  
+1.  階層の親レベルまたは子レベルを右クリックし、 **[名前の変更]**をクリックします。  
   
 2.  新しい名前を入力するか、既存の名前を編集します。  
   
-#### 階層内の子レベルの順序を変更するには  
+#### <a name="to-change-the-order-of-a-child-level-in-a-hierarchy"></a>階層内の子レベルの順序を変更するには  
   
 -   子レベルをクリックして、階層内の新しい場所にドラッグします。  
   
@@ -64,39 +69,39 @@ caps.handback.revision: 10
   
 -   または、子レベルをクリックして選択し、Alt キーを押しながら上方向キーを押して一覧内を上へ移動するか、Alt キーを押しながら下方向キーを押して下へ移動します。  
   
-#### 階層に他の子レベルを追加するには  
+#### <a name="to-add-another-child-level-to-a-hierarchy"></a>階層に他の子レベルを追加するには  
   
 -   列をクリックして、親レベルまたは階層内の特定の場所にドラッグします。 階層の子レベルとして列がコピーされます。  
   
--   または、列を右クリックして **[階層に追加]** をポイントし、階層をクリックします。  
+-   または、列を右クリックして **[階層に追加]**をポイントし、階層をクリックします。  
   
 > [!NOTE]  
 >  非表示の列 (レポートで非表示の列) を子レベルとして階層に追加できます。 子レベルは非表示になりません。  
   
-#### 階層から子レベルを削除するには  
+#### <a name="to-remove-a-child-level-from-a-hierarchy"></a>階層から子レベルを削除するには  
   
--   子レベルを右クリックし、**[階層から削除]** をクリックします。  
+-   子レベルを右クリックし、 **[階層から削除]**をクリックします。  
   
 -   または、子レベルをクリックして **Del**キーを押します。  
   
 > [!NOTE]  
 >  階層の子レベルの名前を変更すると、コピー元の列とは同じ名前を共有しなくなります。 コピー元の列を表示するには、 **[基になる列の名前の表示]** を使用します。  
   
-#### 基になる列の名前を表示するには  
+#### <a name="to-show-a-source-name"></a>基になる列の名前を表示するには  
   
--   階層の子レベルを右クリックして、**[基になる列の名前の表示]** をクリックします。 コピー元の列の名前が表示されます。  
+-   階層の子レベルを右クリックして、 **[基になる列の名前の表示]**をクリックします。 コピー元の列の名前が表示されます。  
   
 ##  <a name="bkmk_delete"></a> 階層の削除  
   
-#### 階層と子レベルを削除するには  
+#### <a name="to-delete-a-hierarchy-and-remove-its-child-levels"></a>階層と子レベルを削除するには  
   
 -   親階層レベルを右クリックして、[階層の削除] をクリックします。  
   
 -   または、親階層レベルをクリックし、Del キーを押します。 これにより、すべての子レベルも削除されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [テーブル モデル デザイナー &#40;SSAS&#41;](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
- [階層 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
- [メジャー &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
+ [階層 & #40 です。SSAS テーブル &#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
+ [メジャー (SSAS テーブル)](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   

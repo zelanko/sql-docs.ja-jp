@@ -1,29 +1,34 @@
 ---
-title: "多対多リレーションシップと多対多リレーションシップのプロパティの定義 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "多対多のリレーションシップ [Analysis Services]"
+title: "多対多リレーションシップと多対多リレーションシップのプロパティの定義 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- many-to-many relationships [Analysis Services]
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 164dd337f413200dc0cec3371551aa2b4317ec41
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# 多対多リレーションシップと多対多リレーションシップのプロパティの定義
+# <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>多対多リレーションシップと多対多リレーションシップのプロパティの定義
   このトピックでは、多対多ディメンションを使用する状況と作成方法を含め、Analysis Services 内の多対多ディメンションについて説明します。  
   
-## 概要  
+## <a name="introduction"></a>概要  
  Analysis Services は、多対多ディメンションをサポートし、従来のスター スキーマで記述できる以上に複雑な分析に対応できます。 従来のスター スキーマでは、すべてのディメンションがファクト テーブル内で一対多のリレーションシップを持ちます。 各ファクトは 1 つのディメンション メンバーと結合しています。1 つのディメンション メンバーは複数のファクトに関連付けられます。  
   
  多対多では、単一のファクト (口座残高など) を、同じディメンションの複数のメンバーに関連付けできるようにすること (共同名義口座の残高を、その口座の複数の所有者に帰属させることができる) で、モデル化に関するこの制約を取り除きます。  
@@ -44,15 +49,15 @@ caps.handback.revision: 12
   
  視覚的には、多対多ディメンションのリレーションシップはキューブ図では表示されません。 代わりに、[ディメンションの使用法] タブを使用して、モデル内にあるすべての多対多リレーションシップをすばやく識別することができます。 多対多リレーションシップは、次のアイコンによって示されます。  
   
- ![ディメンション使用法内の多対多アイコン](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "ディメンション使用法内の多対多アイコン")  
+ ![ディメンションの使用法の多対多アイコン](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "多対多ディメンションの使用法のアイコン")  
   
  ボタンをクリックすると、[リレーションシップの定義] ダイアログ ボックスが開き、リレーションシップの種類が多対多であることを確認し、リレーションシップ内で使用されている中間メジャー グループを表示することができます。  
   
- ![ディメンション使用法でのリレーションシップ ボタンの定義](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "ディメンション使用法でのリレーションシップ ボタンの定義")  
+ ![ディメンションの使用法を定義するリレーションシップ ボタン](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "ディメンションの使用法 [リレーションシップの定義] ボタン")  
   
  これ以降のセクションでは、多対多リレーションシップを設定する方法と、モデルの動作をテストする方法を学習します。 代わりに、追加情報を確認する場合や、チュートリアルを最初に試す場合は、この記事の最後にある「 **詳細情報** 」を参照してください。  
   
-## 多対多ディメンションの作成  
+## <a name="create-a-many-to-many-dimension"></a>多対多ディメンションの作成  
  単純な多対多リレーションシップには、多対多の基数を含む 2 つのディメンション、メンバー アソシエーションを格納するための中間メジャー グループ、総売上や銀行口座の残高の合計など測定可能なデータを含むファクト メジャー グループが含まれています。  
   
  多対多リレーションシップ内の各ディメンションには、DSV 内の対応テーブルが含まれている可能性があり、その場合は、モデル内の各ディメンションが、データ ソース内の既存のテーブルに基づいています。 逆に、モデル内のディメンションが、DSV 内の少数の物理テーブルや複数の物理テーブルから派生した可能性もあります。 Sales Reasons と Sales Orders を適切な例として使用して、Adventure Works のサンプル キューブはモデルのみのデータ構造として存在するディメンションを活用して多対多の関係を示しますが、DSV 内に物理的な同等の存在はありません。 Sales Order ディメンションは、基になるデータ ソース内のディメンション テーブルではなく、ファクト テーブルに基づいています。  
@@ -61,7 +66,7 @@ caps.handback.revision: 12
   
  多対多リレーションシップを作成する手順を示すために、Adventure Works のサンプル キューブ内にある多対多リレーションシップの 1 つを、この手順で作成し直します。 リレーショナル データベース エンジンのインスタンスにソース データ (つまり、Adventure Works サンプル データ ウェアハウス) を既にインストールしてある場合は、次の手順に従うことができます。  
   
-#### 手順 1: DSV リレーションシップの確認  
+#### <a name="step-1-verify-dsv-relationships"></a>手順 1: DSV リレーションシップの確認  
   
 1.  SQL Server データ ツールの多次元プロジェクトで、SQL Server データベース エンジンのインスタンスでホストされている Adventure Works DW 2012 リレーショナル データ ウェアハウスに接続するデータ ソースを作成します。  
   
@@ -80,33 +85,33 @@ caps.handback.revision: 12
   
      この手順で使用するテーブルが主キーを使用してリンクされていることを、次の例で確認します。  
   
-     ![関連テーブルを示す DSV](../../analysis-services/multidimensional-models/media/ssas-m2m-dsvpkeys.png "関連テーブルを示す DSV")  
+     ![関連テーブルを示す DSV](../../analysis-services/multidimensional-models/media/ssas-m2m-dsvpkeys.PNG "関連テーブルを示す DSV")  
   
-#### 手順 2: ディメンションとメジャー グループの作成  
+#### <a name="step-2-create-dimensions-and-measure-groups"></a>手順 2: ディメンションとメジャー グループの作成  
   
-1.  SQL Server データ ツールの多次元プロジェクトで、**[ディメンション]** を右クリックし、**[新しいディメンション]** をクリックします。  
+1.  SQL Server データ ツールの多次元プロジェクトで、 **[ディメンション]** を右クリックし、 **[新しいディメンション]**をクリックします。  
   
 2.  既存のテーブル **DimSalesReason**に基づいて新しいディメンションを作成します。 ソースを指定するときに、すべての既定値をそのまま使用します。  
   
      属性に関しては、すべてを選択します。  
   
-     ![新しいディメンション内の属性リスト](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesreason.PNG "新しいディメンション内の属性リスト")  
+     ![新しいディメンションの属性リスト](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesreason.PNG "新しいディメンションの属性リスト")  
   
 3.  既存のテーブル Fact Internet Sales に基づいて 2 番目のディメンションを作成します。 これはファクト テーブルですが、Sales Order 情報を格納しています。 このテーブルを使用して、Sales Order ディメンションを作成します。  
   
 4.  [基になる情報の指定] で、[名前] 列を指定する必要があることを示す警告が表示されます。 [名前] として、 **SalesOrderNumber** を選択します。  
   
-     ![名前列を示す Sales Order ディメンション](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesordersource.PNG "名前列を示す Sales Order ディメンション")  
+     ![[名前] 列を示す sales Order ディメンション](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesordersource.PNG "名前列を示す Sales Order ディメンション")  
   
 5.  ウィザードの次のページで、属性を選択します。 この例では、 **SalesOrderNumber**のみを選択できます。  
   
-     ![属性リストを示す Sales order ディメンション](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorderattrib.PNG "属性リストを示す Sales order ディメンション")  
+     ![Sales order ディメンションを示す属性リスト](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorderattrib.PNG "Sales order ディメンションを示す属性の一覧")  
   
 6.  そのディメンションを **Dim Sales Orders**という名前に変更します。その結果、ディメンションに関して、一貫性のある名前付け規約を使用できます。  
   
      ![ディメンションの名前変更を示すウィザード ページ](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorders.PNG "ディメンションの名前変更を示すウィザード ページ")  
   
-7.  **[キューブ]** を右クリックし、**[新しいキューブ]** をクリックします。  
+7.  **[キューブ]** を右クリックし、 **[新しいキューブ]**をクリックします。  
   
 8.  メジャー グループ テーブルで、 **FactInternetSales** と **FactInternetSalesReason**を選択します。  
   
@@ -122,24 +127,24 @@ caps.handback.revision: 12
   
 11. キューブに名前を付け、 **[完了]**をクリックします。  
   
-#### 手順 3: 多対多リレーションシップの定義  
+#### <a name="step-3-define-many-to-many-relationship"></a>手順 3: 多対多リレーションシップの定義  
   
-1.  キューブ デザイナーで、[ディメンションの使用法] タブをクリックします。 **Dim Sales Reason** と **Fact Internet Sales** の間に、既に多対多アイコンがあることに注意してください。 次のアイコンが、多対多リレーションシップを示していることに注意してください。  
+1.  キューブ デザイナーで、[ディメンションの使用法] タブをクリックします。**Dim Sales Reason** と **Fact Internet Sales**の間に、既に多対多アイコンがあることに注意してください。 次のアイコンが、多対多リレーションシップを示していることに注意してください。  
   
-     ![ディメンション使用法内の多対多アイコン](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "ディメンション使用法内の多対多アイコン")  
+     ![ディメンションの使用法の多対多アイコン](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "多対多ディメンションの使用法のアイコン")  
   
 2.  **Dim Sales Reason** と **Fact Internet Sales**の交差セルをクリックし、ボタンをクリックして [リレーションシップの定義] ダイアログ ボックスを開きます。  
   
      このダイアログ ボックスを使用して、多対多リレーションシップを指定できることがわかります。 代わりに、標準のリレーションシップを持つディメンションを追加する場合は、このダイアログ ボックスを使用して多対多に変更することになります。  
   
-     ![ディメンション使用法でのリレーションシップ ボタンの定義](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "ディメンション使用法でのリレーションシップ ボタンの定義")  
+     ![ディメンションの使用法を定義するリレーションシップ ボタン](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "ディメンションの使用法 [リレーションシップの定義] ボタン")  
   
 3.  プロジェクトを、Analysis Services 多次元インスタンスに配置します。 次の手順で、Excel でこのキューブを参照し、その動作を確認します。  
   
-## 多対多のテスト  
+## <a name="testing-many-to-many"></a>多対多のテスト  
  キューブ内で多対多リレーションシップを定義する場合は、クエリが正しい結果を返すことを確認するために、テストが必要不可欠です。 エンド ユーザーが使用する予定のクライアント アプリケーション ツールで、キューブをテストする必要があります。 次の手順で、Excel を使用してキューブに接続し、クエリ結果を確認します。  
   
-#### Excel 内でのキューブの参照  
+#### <a name="browse-the-cube-in-excel"></a>Excel 内でのキューブの参照  
   
 1.  プロジェクトを配置し、キューブを参照して、集計が有効であることを確認します。  
   
@@ -165,9 +170,9 @@ caps.handback.revision: 12
   
 5.  ワークシートの下端までスクロールします。 他の理由、および総計と比較すると、顧客の購入にとって最も重要な動機が Price (価格) であることがわかります。  
   
-     ![多対多内の合計を示す Excel ブック](../../analysis-services/multidimensional-models/media/ssas-m2m-excelgrandtotal.png "多対多内の合計を示す Excel ブック")  
+     ![多対多の合計を示す Excel ブック](../../analysis-services/multidimensional-models/media/ssas-m2m-excelgrandtotal.png "多対多の合計を示す Excel ブック")  
   
-#### 予期しないクエリ結果を処理するためのヒント  
+#### <a name="tips-for-handling-unexpected-query-results"></a>予期しないクエリ結果を処理するためのヒント  
   
 1.  クエリで意味のある結果を返さない、カウントのような中間メジャー グループ内のメジャーを非表示にします。 この結果、ユーザーが意味のあるデータを作成する目的で集計などを使用することを防止できます。 メジャーを非表示にするには、ディメンション デザイナー内の属性で **Visibility** (表示) を **False** に設定します。  
   
@@ -175,21 +180,19 @@ caps.handback.revision: 12
   
 3.  モデルを変更した後、必ず配置と再接続を行ってください。 Excel で、リボンの [ピボットテーブル ツール] にある [更新] ボタンを使用します。  
   
-4.  複数の多対多リレーションシップで、リンク メジャー グループを使用することは避けてください。特に、これらのリレーションシップが異なるキューブ内に存在する場合です。 このような方法で使用すると、あいまいな集計になります。 詳細については、「[多対多リレーションシップを含むキューブでリンク メジャーの値が不適切](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)」を参照してください。  
+4.  複数の多対多リレーションシップで、リンク メジャー グループを使用することは避けてください。特に、これらのリレーションシップが異なるキューブ内に存在する場合です。 このような方法で使用すると、あいまいな集計になります。 詳細については、「 [多対多リレーションシップを含むキューブでリンク メジャーの値が不適切](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)」を参照してください。  
   
-##  <a name="bkmk_Learn"></a> 詳細情報  
+##  <a name="bkmk_Learn"></a> Learn more  
  以下のリンクを使用して、この内容を習得するのに役立つ詳細情報を参照してください。  
-  
- [Analysis Services で多対多ディメンションを定義する方法](http://go.microsoft.com/fwlink/?LinkId=324759)  
   
  [多対多の回転 2.0](http://go.microsoft.com/fwlink/?LinkId=324760)  
   
  [チュートリアル : SQL Server Analysis Services を対象とする多対多ディメンションの例](http://go.microsoft.com/fwlink/?LinkId=324761)  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [ディメンション リレーションシップ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](../../analysis-services/install sample data and projects.md)   
- [Analysis Services プロジェクトの配置 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
+ [Analysis Services 多次元モデリング チュートリアル用サンプル データとプロジェクトをインストールします。](../../analysis-services/install-sample-data-and-projects.md)   
+ [Analysis Services プロジェクト &#40; を展開します。SSDT &#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
  [多次元モデルのパースペクティブ](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   

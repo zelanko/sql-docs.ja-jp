@@ -1,68 +1,73 @@
 ---
-title: "ログのプロパティ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "QueryLogFileSize プロパティ"
-  - "QueryLogTableName プロパティ"
-  - "TraceBackgroundDistributionPeriod プロパティ"
-  - "TraceMaxRowsetSize プロパティ"
-  - "NullKeyConvertedToUnknown プロパティ"
-  - "CrashReportsFolder プロパティ"
-  - "TraceDefinitionFile プロパティ"
-  - "SQLDumperFlagsOn プロパティ"
-  - "KeyErrorLimit プロパティ"
-  - "SnapshotDefinitionFile プロパティ"
-  - "MinidumpErrorList プロパティ"
-  - "ErrorLogFileName プロパティ"
-  - "KeyDuplicate プロパティ"
-  - "IgnoreDataTruncation プロパティ"
-  - "ログ [Analysis Services]"
-  - "Enabled プロパティ"
-  - "FileSizeMB プロパティ"
-  - "TraceFileWriteTrailerPeriod プロパティ"
-  - "TraceQueryResponseTextChunkSize プロパティ"
-  - "File プロパティ"
-  - "FileBufferSize プロパティ"
-  - "TraceRowsetBackgroundFlushPeriod プロパティ"
-  - "ErrorLogFileSize プロパティ"
-  - "TraceRequestParameters プロパティ"
-  - "KeyErrorLimitAction プロパティ"
-  - "CreateQueryLogTable プロパティ"
-  - "LogDir プロパティ"
-  - "TraceBackgroundFlushPeriod プロパティ"
-  - "TraceFileBufferSize プロパティ"
-  - "SQLDumperFlagsOff プロパティ"
-  - "QueryLogConnectionString プロパティ"
-  - "KeyNotFound プロパティ"
-  - "KeyErrorLogFile プロパティ"
-  - "TraceReportFQDN プロパティ"
-  - "KeyErrorAction プロパティ"
-  - "QueryLogFileName プロパティ"
-  - "MessageLogs プロパティ"
-  - "MiniDumpFlagsOn プロパティ"
-  - "SnapshotFrequencySec プロパティ"
-  - "QueryLogSampling プロパティ"
-  - "CreateAndSendCrashReports プロパティ"
-  - "LogDurationSec プロパティ"
+title: "ログ プロパティ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- QueryLogFileSize property
+- QueryLogTableName property
+- TraceBackgroundDistributionPeriod property
+- TraceMaxRowsetSize property
+- NullKeyConvertedToUnknown property
+- CrashReportsFolder property
+- TraceDefinitionFile property
+- SQLDumperFlagsOn property
+- KeyErrorLimit property
+- SnapshotDefinitionFile property
+- MinidumpErrorList property
+- ErrorLogFileName property
+- KeyDuplicate property
+- IgnoreDataTruncation property
+- logs [Analysis Services]
+- Enabled property
+- FileSizeMB property
+- TraceFileWriteTrailerPeriod property
+- TraceQueryResponseTextChunkSize property
+- File property
+- FileBufferSize property
+- TraceRowsetBackgroundFlushPeriod property
+- ErrorLogFileSize property
+- TraceRequestParameters property
+- KeyErrorLimitAction property
+- CreateQueryLogTable property
+- LogDir property
+- TraceBackgroundFlushPeriod property
+- TraceFileBufferSize property
+- SQLDumperFlagsOff property
+- QueryLogConnectionString property
+- KeyNotFound property
+- KeyErrorLogFile property
+- TraceReportFQDN property
+- KeyErrorAction property
+- QueryLogFileName property
+- MessageLogs property
+- MiniDumpFlagsOn property
+- SnapshotFrequencySec property
+- QueryLogSampling property
+- CreateAndSendCrashReports property
+- LogDurationSec property
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72e9b5094c12d014c361875016b8208264ad2860
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# ログのプロパティ
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すログ サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「[Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)」を参照してください。  
+# <a name="log-properties"></a>ログのプロパティ
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すログ サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)」を参照してください。  
   
-## 全般  
+## <a name="general"></a>全般  
  **ファイル**  
  サーバーのログ ファイルの名前を識別する文字列プロパティです。 このプロパティは、データベース テーブル (既定の動作) ではなく、ディスク ファイルがログ記録に使用される場合にのみ適用されます。  
   
@@ -74,8 +79,8 @@ caps.handback.revision: 23
  **MessageLogs**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## エラー ログ  
- 次のプロパティをサーバー インスタンス レベルで設定し、他のツールとデザイナーに表示されるエラーの構成の既定値を変更できます。 詳細については、「[キューブ、パーティション、およびディメンションに関する処理のエラー構成 (SSAS - 多次元)](../../analysis-services/multidimensional-models/error configuration for cube, partition, and dimension processing.md)」と「<xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>」を参照してください。  
+## <a name="error-log"></a>エラー ログ  
+ 次のプロパティをサーバー インスタンス レベルで設定し、他のツールとデザイナーに表示されるエラーの構成の既定値を変更できます。 参照してください[キューブ、パーティションおよびディメンションの処理 &#40; のエラーの構成SSAS - 多次元 &#41;](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)と<xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>詳細についてはします。  
   
  **ErrorLog\ErrorLogFileName**  
  サーバーによる処理操作の実行時に既定値として使用されるプロパティです。  
@@ -127,7 +132,7 @@ caps.handback.revision: 23
  **ErrorLog\IgnoreDataTruncation**  
  サーバーによる処理操作の実行時に既定値として使用されるプロパティです。  
   
-## 例外  
+## <a name="exception"></a>例外  
  **Exception\CreateAndSendCrashReports**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
@@ -146,7 +151,7 @@ caps.handback.revision: 23
  **Exception\MinidumpErrorList**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## フライト レコーダー  
+## <a name="flight-recorder"></a>フライト レコーダー  
  **FlightRecorder\Enabled**  
  フライト レコーダー機能が有効かどうかを示すブール型プロパティです。  
   
@@ -169,7 +174,7 @@ caps.handback.revision: 23
   
  このプロパティの既定値は空白です。その場合、既定で使用されるファイル名は FlightRecorderTraceDef.xml になります。  
   
-## クエリ ログ  
+## <a name="query-log"></a>クエリ ログ  
  **適用対象:** 多次元サーバー モードのみ  
   
  **QueryLog\QueryLogFileName**  
@@ -197,9 +202,9 @@ caps.handback.revision: 23
  このプロパティの既定値は False であり、サーバーによってログ テーブルが自動的に作成されず、クエリ イベントがログ記録されないことを示します。  
   
 > [!NOTE]  
->  クエリ ログの構成の詳細については、「[Analysis Services クエリ ログの構成](http://go.microsoft.com/fwlink/?LinkId=81890)」を参照してください。  
+>  クエリ ログの構成の詳細については、「 [Analysis Services クエリ ログの構成](http://go.microsoft.com/fwlink/?LinkId=81890)」を参照してください。  
   
-## トレース  
+## <a name="trace"></a>トレース  
  **Trace\TraceBackgroundDistributionPeriod**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
@@ -230,7 +235,7 @@ caps.handback.revision: 23
  **Trace\TraceRowsetBackgroundFlushPeriod**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Analysis Services インスタンスのサーバー モードの決定](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

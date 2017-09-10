@@ -1,39 +1,44 @@
 ---
-title: "SQL Server 拡張イベントを使用した Analysis Services の監視 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "XEvents"
-  - "Sql13.ssms.XeASNewEventSession.General.f1"
-  - "Sql13.ssms.XeASNewEventSession.Events.f1"
-  - "Sql13.ssms.XeASNewEventSession.Targets.f1"
-  - "Sql13.ssms.XeASNewEventSession.Advanced.f1"
+title: "Analysis Services と SQL Server 拡張イベントの監視 |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- XEvents
+- Sql13.ssms.XeASNewEventSession.General.f1
+- Sql13.ssms.XeASNewEventSession.Events.f1
+- Sql13.ssms.XeASNewEventSession.Targets.f1
+- Sql13.ssms.XeASNewEventSession.Advanced.f1
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cec6da660c202dfde5a1169dd34397fca5c51207
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# SQL Server 拡張イベントを使用した Analysis Services の監視
+# <a name="monitor-analysis-services-with-sql-server-extended-events"></a>SQL Server 拡張イベントを使用した Analysis Services の監視
   拡張イベント (*xEvents*) は、わずかなシステム リソースを運用サーバーとテスト サーバーの両方の問題を診断するための理想的なツールに変える、軽量のトレースおよびパフォーマンス監視システムです。 また、拡張性が高く、詳細な構成が可能で、SQL Server 2016 では、新しい組み込みのツール サポートにより使用が簡単です。 SQL Server Management Studio で Analysis Services インスタンスに接続すると、SQL Server Profiler を使用するようにライブ トレースを構成、実行、および監視することができます。 優れたツールを追加することで、SQL Server Profiler から xEvent に置き換える合理性が高まり、データベース エンジンと Analysis Services ワークロードの問題を同等に診断できるようになります。  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] だけでなく [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 拡張イベントのセッションも、以前のリリースでサポートされていたように XMLA スクリプトで構成することができます。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]だけでなく  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 拡張イベントのセッションも、以前のリリースでサポートされていたように XMLA スクリプトで構成することができます。  
   
- 「[拡張イベント](../../relational-databases/extended-events/extended-events.md)」で定義されているように、特定のコンシューマーを対象としたすべての Analysis Services イベントをキャプチャできます。  
+ 「 [拡張イベント](../../relational-databases/extended-events/extended-events.md)」で定義されているように、特定のコンシューマーを対象としたすべての Analysis Services イベントをキャプチャできます。  
   
 > [!NOTE]  
->  SQL Server 2016 Analysis Services の xEvent の詳細については、この[早わかりビデオ](https://www.youtube.com/watch?v=ja2mOHWRVC0&index=1&list=PLv2BtOtLblH1YvzQ5YnjfQFr_oKEvMk19)を見るか、[ブログ投稿](http://blogs.msdn.com/b/analysisservices/archive/2015/09/22/using-extended-events-with-sql-server-analysis-services-2016-cpt-2-3.aspx)を参照してください。  
+>  SQL Server 2016 Analysis Services の xEvent の詳細については、この [早わかりビデオ](https://www.youtube.com/watch?v=ja2mOHWRVC0&index=1&list=PLv2BtOtLblH1YvzQ5YnjfQFr_oKEvMk19) を見るか、 [ブログ投稿](http://blogs.msdn.com/b/analysisservices/archive/2015/09/22/using-extended-events-with-sql-server-analysis-services-2016-cpt-2-3.aspx) を参照してください。  
   
 ##  <a name="bkmk_top"></a> このトピックの内容  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 11
 -   [Analysis Services で拡張イベントを開始する XMLA スクリプト](#bkmk_script_start)  
   
 ##  <a name="bkmk_ssas_extended_events_ssms"></a> Management Studio を使用して Analysis Services を構成する  
- Management Studio は、表形式インスタンスと多次元インスタンスの両方で、ユーザーが開始した xEvent セッションを格納する新しい管理フォルダーを提供します。 一度に複数のセッションを実行することができます。 ただし、現在の実装では、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 拡張イベント ユーザー インターフェイスが既存のセッションの更新または再生をサポートしていません。  
+ Management Studio は、表形式インスタンスと多次元インスタンスの両方で、ユーザーが開始した xEvent セッションを格納する新しい管理フォルダーを提供します。 一度に複数のセッションを実行することができます。 ただし、現在の実装では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 拡張イベント ユーザー インターフェイスが既存のセッションの更新または再生をサポートしていません。  
   
  ![ssas_extended_events_ssms_start](../../analysis-services/instances/media/ssas-extended-events-ssms-start.png "ssas_extended_events_ssms_start")  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 11
   
 -   **CommandBegin** と **CommandEnd**。  
   
--   **QueryBegin**、**QueryEnd**、および **QuerySubcubeVerbose** (サーバーに送信された MDX または DAX クエリ全体が表示されます)。さらに、クエリにより消費されたリソースと、返される行数の統計を示す **ResourceUsage**。  
+-   **QueryBegin**、 **QueryEnd**、および **QuerySubcubeVerbose** (サーバーに送信された MDX または DAX クエリ全体が表示されます)。さらに、クエリにより消費されたリソースと、返される行数の統計を示す **ResourceUsage** 。  
   
 -   **ProgressReportBegin** と **ProgressReportEnd** (処理中の操作用)。  
   
@@ -72,13 +77,13 @@ caps.handback.revision: 11
   
  必要な情報が簡単にわかるように、セッションはイベント フィールドが含まれるように構成してください。  
   
- ダイアログ ボックスの一番端に **[構成]** オプションがあります。  
+ ダイアログ ボックスの一番端に**[構成]** オプションがあります。  
   
- ![ssas-xevents-configure](../../analysis-services/instances/media/ssas-xevents-configure.PNG "ssas-xevents-configure")  
+ ![ssas xevent 構成](../../analysis-services/instances/media/ssas-xevents-configure.PNG "ssas xevent 構成")  
   
  [構成] の [イベント フィールド] タブで **[TextData]** を選択して、このフィールドがサーバーで実行されているクエリを含む戻り値を示した状態でイベントの隣に表示されるようにします。  
   
- 必要なイベントとデータ ストレージのセッションを構成したら、[スクリプト] ボタンをクリックして、ファイル、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の新しいクエリ、クリップボードを含む、サポートされる送信先のいずれかに構成を送信します。  
+ 必要なイベントとデータ ストレージのセッションを構成したら、[スクリプト] ボタンをクリックして、ファイル、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の新しいクエリ、クリップボードを含む、サポートされる送信先のいずれかに構成を送信します。  
   
  **セッションを更新する**  
   
@@ -126,7 +131,7 @@ caps.handback.revision: 11
  このトレースに付ける名前を指定します (通常は、人間が判読できるトレースの定義です)。 *trace_id* の値を名前として使用するのが一般的です。  
   
  *AS_event*  
- 公開する Analysis Services イベントを指定します。 イベントの名前については、「[Analysis Services トレース イベント](../../analysis-services/trace-events/analysis-services-trace-events.md)」を参照してください。  
+ 公開する Analysis Services イベントを指定します。 イベントの名前については、「 [Analysis Services トレース イベント](../../analysis-services/trace-events/analysis-services-trace-events.md) 」を参照してください。  
   
  *data_filename*  
  イベント データを含むファイルの名前を指定します。 この名前には、トレースを繰り返し送信する場合にデータが上書きされないように、タイムスタンプを使用したサフィックスが付けられます。  
@@ -136,7 +141,7 @@ caps.handback.revision: 11
   
 ||  
 |-|  
-|![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [このトピックの内容](#bkmk_top)|  
+|![トップにリンク バックに使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン")[このトピックの内容](#bkmk_top)|  
   
 ##  <a name="bkmk_script_stop"></a> Analysis Services で拡張イベントを停止する XMLA スクリプト  
  拡張イベントのトレース オブジェクトを停止するには、以下のような XMLA のオブジェクト削除スクリプト コマンドを使用して、そのオブジェクトを削除する必要があります。  
@@ -164,9 +169,9 @@ caps.handback.revision: 11
   
 ||  
 |-|  
-|![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.png "[トップに戻る] リンクで使用される矢印アイコン") [このトピックの内容](#bkmk_top)|  
+|![トップにリンク バックに使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン")[このトピックの内容](#bkmk_top)|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)  
   
   

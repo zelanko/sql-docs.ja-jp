@@ -1,24 +1,29 @@
 ---
-title: "メジャーを作成および管理する (SSAS テーブル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "作成およびメジャー (SSAS テーブル) の管理 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 19c19be451a22fef66b98ac71355b4963240767a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# メジャーを作成および管理する (SSAS テーブル)
+# <a name="create-and-manage-measures-ssas-tabular"></a>メジャーを作成および管理する (SSAS テーブル)
   メジャーとは、レポートまたは Excel ピボットテーブル (またはピボットグラフ) で使用するために作成される数式のことです。 COUNT や SUM などの標準の集計関数に基づいてメジャーを作成することも、DAX を使用して独自の数式を定義することもできます。 このトピックのタスクでは、テーブルのメジャー グリッドを使用してメジャーを作成し管理する方法について説明します。  
   
  このトピックでは、次のタスクについて説明します。  
@@ -33,7 +38,7 @@ caps.handback.revision: 18
   
 -   [メジャーを削除するには](#bkmk_delete)  
   
-## 処理手順  
+## <a name="tasks"></a>処理手順  
  メジャーを作成、管理するには、テーブルのメジャー グリッドを使用します。 テーブルのメジャー グリッドは、モデル デザイナーのデータ ビューのみで表示することができます。 ダイアグラム ビューでは、メジャーの作成もメジャー グリッドの表示もできません。ただし、既存のメジャーであれば、ダイアグラム ビューで表示できます。 あるテーブルのメジャー グリッドを表示するには、 **[テーブル]** メニューをクリックしてから **[メジャー グリッドの表示]**をクリックします。  
   
 ###  <a name="bkmk_create_stand"></a> 標準の集計式を使用してメジャーを作成するには  
@@ -58,11 +63,11 @@ caps.handback.revision: 18
   
 ###  <a name="bkmk_delete"></a> メジャーを削除するには  
   
--   メジャー グリッドで、メジャーを右クリックしてから **[削除]** をクリックします。  
+-   メジャー グリッドで、メジャーを右クリックしてから **[削除]**をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [メジャー &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [KPI &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [計算列 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)  
+ [計算列 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

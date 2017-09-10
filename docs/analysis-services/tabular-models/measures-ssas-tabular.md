@@ -1,37 +1,30 @@
 ---
-title: "メジャー (SSAS テーブル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "メジャー |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 38b7467cd4ad765d651ea0ebe4ad57c278c987a1
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# メジャー (SSAS テーブル)
+# <a name="measures"></a>メジャー
   テーブル モデルでは、メジャーとはレポート クライアントで使用するために DAX 数式を使用して作成される計算のことです。 メジャーの評価は、ユーザーがレポート クライアント アプリケーションで選択するフィールド、フィルター、またはスライサーに基づいて行われます。  
-  
- このトピックのセクション:   
-  
--   [利点](#bkmk_understanding)  
-  
--   [メジャー グリッドを使用したメジャーの定義](#bkmk_def_mg)  
-  
--   [メジャーのプロパティ](#bkmk_properties)  
-  
--   [KPI でのメジャーの使用](#bkmk_KPI)  
-  
--   [関連タスク](#bkmk_rel_tasks)  
   
 ##  <a name="bkmk_understanding"></a> 利点  
  AVERAGE、COUNT、SUM などの標準の集計関数に基づいてメジャーを作成することも、DAX を使用して独自の数式を定義することもできます。 各メジャーには、数式に加え、名前、テーブルの詳細、形式、小数点以下桁数などの、メジャーのデータ型によって定義されるプロパティがあります。  
@@ -62,8 +55,8 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |テレビとビデオ|$946,989,702.51|  
 |**総計**|**$4,691,673,731.53**|  
   
-##  <a name="bkmk_def_mg"></a> メジャー グリッドを使用したメジャーの定義  
- メジャーは、モデル デザイナーのメジャー グリッドを使用してデザイン時に作成されます。 各テーブルにはメジャー グリッドがあります。 既定では、メジャー グリッドはモデル デザイナーの各テーブルの下に表示されます。 特定のテーブルのメジャー グリッドを表示しないことも選択できます。 テーブルのメジャー グリッドの表示を切り替えるには、**[テーブル]** メニューの **[メジャー グリッドの表示]** をクリックします。  
+##  <a name="bkmk_def_mg"></a> Defining measures by using the measure grid  
+ メジャーは、モデル デザイナーのメジャー グリッドを使用してデザイン時に作成されます。 各テーブルにはメジャー グリッドがあります。 既定では、メジャー グリッドはモデル デザイナーの各テーブルの下に表示されます。 特定のテーブルのメジャー グリッドを表示しないことも選択できます。 テーブルのメジャー グリッドの表示を切り替えるには、 **[テーブル]** メニューの **[メジャー グリッドの表示]**をクリックします。  
   
  メジャー グリッドでは、次の方法でメジャーを作成できます。  
   
@@ -73,12 +66,12 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
  オート SUM を使用する場合、メジャーの名前は既定で、関連付けられた列の名前、コロン、数式を順番に並べた名前として定義されます。 この名前は、数式バーで変更することも、[プロパティ] ウィンドウの **[メジャー名]** プロパティ設定で変更することもできます。 カスタム式を使用してメジャーを作成する場合は、数式バーに名前、コロン、数式の順に入力するか、[プロパティ] ウィンドウの **[メジャー名]** プロパティ設定で名前を入力します。  
   
- メジャーの名前付けは慎重に行う必要があります。 メジャー名は、レポート クライアントのフィールドの一覧に関連付けられたテーブルと共に表示されます。 KPI の名前付けもベース メジャーに基づいて行われます。 モデル内のテーブルに存在する列と同じ名前をメジャーに付けることはできません。  
+ 重要名前のメジャーを慎重にします。 メジャー名は、レポート クライアントのフィールドの一覧に関連付けられたテーブルと共に表示されます。 KPI の名前付けもベース メジャーに基づいて行われます。 モデル内のテーブルに存在する列と同じ名前をメジャーに付けることはできません。  
   
 > [!TIP]  
 >  複数のテーブルから 1 つのテーブルにメジャーをグループ化することができます。そのためには、空のテーブルを作成し、そのテーブルに、メジャーを移動するか新しいメジャーを作成します。 他のテーブルの列を参照するときは、DAX 式にテーブル名を含める必要があることに注意してください。  
   
- モデルのパースペクティブが定義されている場合、メジャーはこれらのパースペクティブに自動的には追加されません。 [パースペクティブ] ダイアログ ボックスを使用して、手動でメジャーをパースペクティブに追加する必要があります。 詳細については、「[パースペクティブ (SSAS テーブル)](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)」を参照してください。  
+ モデルのパースペクティブが定義されている場合、メジャーはこれらのパースペクティブに自動的には追加されません。 [パースペクティブ] ダイアログ ボックスを使用して、手動でメジャーをパースペクティブに追加する必要があります。 詳細については、次を参照してください。[パースペクティブ](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)です。  
   
 ##  <a name="bkmk_properties"></a> メジャーのプロパティ  
  各メジャーには、そのメジャーを定義するプロパティがあります。 メジャーのプロパティは、関連付けられた列のプロパティと共に [プロパティ] ウィンドウで編集できます。 メジャーには次のプロパティがあります。  
@@ -88,22 +81,22 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |**Description**|空白|メジャーの説明。 レポート クライアントのメジャーの場合、説明は表示されません。|  
 |**形式**|式で参照されている列のデータ型に基づいて自動的に決定されます。|メジャーの形式。 たとえば、通貨やパーセンテージなどです。|  
 |**[数式]**|メジャーの作成時に数式バーに入力された式。|メジャーの数式。|  
-|**メジャー名**|オート SUM を使用する場合は、メジャー名の後に列名、コロンが順に続きます。 カスタム式を入力する場合は、名前の後にコロン、数式を順に入力します。|レポート クライアントのフィールドの一覧に表示されるメジャーの名前。|  
+|**[メジャー名]**|オート SUM を使用する場合は、メジャー名の後に列名、コロンが順に続きます。 カスタム式を入力する場合は、名前の後にコロン、数式を順に入力します。|レポート クライアントのフィールドの一覧に表示されるメジャーの名前。|  
   
 ##  <a name="bkmk_KPI"></a> KPI でのメジャーの使用  
- KPI (主要業績評価指標) は、メジャーによって定義される*基準*値を、同じくメジャーまたは絶対値によって定義される*対象*の値と比較することによって定義されます。 KPI には*状態*も含まれています。状態とは、しきい値間の対象の値と比較して基準値を評価した場合の計算結果をグラフィカルに表示したものです。 KPI は、多くの場合、重要なビジネス基準における傾向を特定するためにビジネス プロフェッショナルによって使用されます。  
+ KPI (主要業績評価指標) は、メジャーによって定義される *基準* 値を、同じくメジャーまたは絶対値によって定義される *対象* の値と比較することによって定義されます。 KPI には *状態*も含まれています。状態とは、しきい値間の対象の値と比較して基準値を評価した場合の計算結果をグラフィカルに表示したものです。 KPI は、多くの場合、重要なビジネス基準における傾向を特定するためにビジネス プロフェッショナルによって使用されます。  
   
- どのメジャーも KPI のベース メジャーとして使用できます。 KPI を作成するには、メジャー グリッドでメジャーを右クリックして、**[KPI の作成]** をクリックします。 [主要業績評価指標] ダイアログ ボックスが開き、(メジャーまたは絶対値によって定義される) 対象の値を指定し、状態しきい値とグラフィック タイプを定義できるようになります。 詳細については、「[KPIs (SSAS Tabular)](../../analysis-services/tabular-models/kpis-ssas-tabular.md)」(KPI (SSAS テーブル)) を参照してください。  
+ どのメジャーも KPI のベース メジャーとして使用できます。 KPI を作成するには、メジャー グリッドでメジャーを右クリックして、 **[KPI の作成]**をクリックします。 [主要業績評価指標] ダイアログ ボックスが開き、(メジャーまたは絶対値によって定義される) 対象の値を指定し、状態しきい値とグラフィック タイプを定義できるようになります。 詳細については、次を参照してください。 [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)です。  
   
-##  <a name="bkmk_rel_tasks"></a> 関連タスク  
+##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[メジャーを作成および管理する (SSAS テーブル)](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|モデル デザイナーのメジャー グリッドを使用してメジャーを作成および管理する方法について説明します。|  
+|[作成するメジャーおよび管理します。](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|モデル デザイナーのメジャー グリッドを使用してメジャーを作成および管理する方法について説明します。|  
   
-## 参照  
- [KPI (SSAS テーブル)](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [KPI を作成および管理する (SSAS テーブル)](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
- [計算列 (SSAS テーブル)](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)  
+## <a name="see-also"></a>参照  
+ [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [作成および管理の Kpi](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
+ [計算列](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

@@ -1,171 +1,178 @@
 ---
-title: "レッスン 2: データの追加 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "レッスン 2: データの追加 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 06/19/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 5f17ae5dc82279056efc825f3d6a8092ea1b7623
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# レッスン 2: データの追加
-このレッスンでは、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] のテーブルのインポート ウィザードを使用して、AdventureWorksDW SQL データベースに接続し、データを選択し、プレビューして、データをフィルター処理した後、それらのデータをモデル ワークスペース内にインポートします。  
+# <a name="lesson-2-add-data"></a>レッスン 2: データの追加
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+
+このレッスンで AdventureWorksDW SQL サンプル データベースへの接続、データの選択、プレビューし、データをフィルター処理およびモデル ワークスペースにデータをインポートする、SSDT でテーブルのインポート ウィザードを使用します。  
   
-テーブルのインポート ウィザードを使用すると、Access、SQL、Oracle、Sybase、Informix、DB2、Teradata など、さまざまなリレーショナル ソースからデータをインポートできます。 それぞれのリレーショナル ソースからデータをインポートする手順は、以下で説明する手順とそれほど変わりません。 また、データはストアド プロシージャを使用して選択できます。  
-  
-データのインポートと、インポート可能なデータ ソースの種類に関する詳細については、「[データ ソース (SSAS テーブル)](../analysis-services/tabular-models/data-sources-ssas-tabular.md)」を参照してください。  
+テーブルのインポート ウィザードを使用すると、Access、SQL、Oracle、Sybase、Informix、DB2、Teradata など、さまざまなリレーショナル ソースからデータをインポートできます。 それぞれのリレーショナル ソースからデータをインポートする手順は、以下で説明する手順とそれほど変わりません。 ストアド プロシージャを使用してデータを選択することもできます。 データとデータ ソースからインポートすることができますのさまざまな種類のインポートの詳細については、次を参照してください。[データソース](../analysis-services/tabular-models/data-sources-ssas-tabular.md)です。  
   
 このレッスンの推定所要時間: **20 分**  
   
-## 前提条件  
-このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンの実習を行う前に、前の「[レッスン 1: 新しいテーブル モデル プロジェクトの作成](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)」を完了している必要があります。  
+## <a name="prerequisites"></a>前提条件  
+このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンの実習を行う前に、前の「 [レッスン 1: 新しいテーブル モデル プロジェクトの作成](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)」を完了している必要があります。  
   
-## 接続の作成  
+## <a name="create-a-connection"></a>接続の作成  
   
-#### AdventureWorksDW2012 データベースへの接続を作成するには  
+#### <a name="to-create-a-connection-to-a-the-adventureworksdw2014-database"></a>接続を作成する、AdventureWorksDW2014 データベース  
   
-1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]で **[モデル]** メニューをクリックし、**[データ ソースからのインポート]** をクリックします。  
+1.  表形式モデル エクスプ ローラーを右クリックして**データソース** > **データ ソースからのインポート**です。  
   
-    テーブルのインポート ウィザードが起動し、その指示に従ってデータ ソースへの接続を設定することができます。 **[データ ソースからのインポート]** がグレーで表示されている場合は、**[ソリューション エクスプローラー]** で **Model.bim** をダブルクリックして、モデルをデザイナーで開きます。  
+    これは、データ ソースへの接続を設定することを支援するテーブルのインポート ウィザードを起動します。 表形式モデル エクスプ ローラーが表示されない、ダブルクリック**Model.bim**で**ソリューション エクスプ ローラー**をデザイナーでモデルを開きます。 
+    
+    ![として-表形式の lesson2-データ](../analysis-services/media/as-tabular-lesson2-tme.png) 
+
+    注: 1400 互換性レベルでモデルを作成する場合、テーブルのインポート ウィザードではなく、新しいデータの取得エクスペリエンスが表示されます。 ダイアログ ボックスが表示されます、以下の手順とは少し異なりますが、まだことができますを進めるためにします。 
   
-2.  **テーブルのインポート ウィザード**の **[リレーショナル データベース]** で **[Microsoft SQL Server]** をクリックし、**[次へ]** をクリックします。  
+2.  テーブルのインポート ウィザードで [**リレーショナル データベース**、] をクリックして**Microsoft SQL Server** > **次**です。  
   
-3.  **[Microsoft SQL Server データベースへの接続]** ページで、**[接続の表示名]** に「**Adventure Works DB from SQL**」と入力します。  
+3.  **[Microsoft SQL Server データベースへの接続]** ページで、 **[接続の表示名]**に「 **Adventure Works DB from SQL**」と入力します。  
   
-4.  **[サーバー名]** に、AdventureWorksDW データベースをインストールしたサーバーの名前を入力します。  
+4.  **サーバー名**、AdventureWorksDW データベースをインストールしたサーバーの名前を入力します。  
   
-5.  **[データベース名]** フィールドで、下矢印をクリックして **[AdventureWorksDW]** を選択し、**[次へ]** をクリックします。  
+5.  **データベース名**フィールドで、選択**AdventureWorksDW**、順にクリック**次**です。  
   
-6.  **[権限借用情報]** ページで、データをインポートおよび処理する際、Analysis Services がデータ ソースへの接続のために使用する資格情報を指定する必要があります。 **[特定の Windows ユーザー名とパスワード]** が選択されていることを確認し、**[ユーザー名]** と **[パスワード]** に Windows のログオン資格情報を入力して、**[次へ]** をクリックします。  
+    ![として、表形式の lesson2-tiw-名前](../analysis-services/media/as-tabular-lesson2-tiw-name.png)
+  
+6.  **[権限借用情報]** ページで、データをインポートおよび処理する際、Analysis Services がデータ ソースへの接続のために使用する資格情報を指定する必要があります。 **[特定の Windows ユーザー名とパスワード]** が選択されていることを確認し、 **[ユーザー名]** と **[パスワード]**に Windows のログオン資格情報を入力して、 **[次へ]**をクリックします。  
   
     > [!NOTE]  
-    > Windows のユーザー アカウントとパスワードを使用することで、最も安全なデータ ソース接続方法が提供されます。 詳細については、「[権限借用 (SSAS テーブル)](../analysis-services/tabular-models/impersonation-ssas-tabular.md)」を参照してください。  
+    > Windows のユーザー アカウントとパスワードを使用することで、最も安全なデータ ソース接続方法が提供されます。 詳細については、次を参照してください。[偽装](../analysis-services/tabular-models/impersonation-ssas-tabular.md)です。  
   
-7.  **[データのインポート方法の選択]** ページで、**[インポートするデータをテーブルとビューの一覧から選択する]** が選択されていることを確認します。 テーブルとビューの一覧から選択するには、**[次へ]** をクリックして、ソース データベース内のすべてのソース テーブルの一覧を表示します。  
+7.  **[データのインポート方法の選択]** ページで、 **[インポートするデータをテーブルとビューの一覧から選択する]** が選択されていることを確認します。 テーブルとビューの一覧から選択するには、 **[次へ]** をクリックして、ソース データベース内のすべてのソース テーブルの一覧を表示します。  
   
-8.  **[テーブルとビューの選択]** ページで、**DimCustomer**、**DimDate**、**DimGeography**、**DimProduct**、**DimProductCategory**、**DimProductSubcategory**、および **FactInternetSales** の各テーブルのチェック ボックスをオンにします。  
+8.  **[テーブルとビューの選択]** ページで、 **DimCustomer**、 **DimDate**、 **DimGeography**、 **DimProduct**、 **DimProductCategory**、 **DimProductSubcategory**、および **FactInternetSales**の各テーブルのチェック ボックスをオンにします。  
   
-9. モデル内のテーブルによりわかりやすい名前を付けましょう。 **DimCustomer** の **[表示名]** 列内にあるセルをクリックします。 DimCustomer から "Dim" を削除して、テーブル名を変更します。  
+    **[完了]** をクリック **しないでください**。  
   
-10. その他のテーブルの名前を次のように変更します。  
+## <a name="FilterData"></a>Filter the table data  
+サンプル データベースからインポートしている DimCustomer テーブルには、元の SQL Server Adventure Works データベースからデータのサブセットが含まれています。 モデルにインポートするときに必要のない、DimCustomer テーブルから列のいくつかの詳細は除外されます。 可能であれば、モデルで使用されるメモリ内の領域を節約するために使用されないデータを抽出します。  
   
-    |ソース名|表示名|  
-    |---------------|-----------------|  
-    |DimDate|日付|  
-    |DimGeography|Geography|  
-    |DimProduct|Product|  
-    |DimProductCategory|Product Category|  
-    |DimProductSubcategory|Product Subcategory|  
-    |FactInternetSales|Internet Sales|  
+#### <a name="to-filter-the-table-data-prior-to-importing"></a>インポート前のテーブル データにフィルターを適用するには  
   
-    **[完了]** をクリック**しないでください**。  
+1.  行を選択、 **DimCustomer**テーブル、およびクリックして**プレビューとフィルター**です。 **[選択したテーブルのプレビュー]** ウィンドウが開き、DimCustomer ソース テーブルのすべての列が表示されます。  
   
-データベースに接続し、インポートするテーブルを選択し、テーブルに表示名を付けたので、次のセクション「[インポート前のテーブル データに対するフィルターの適用](#FilterData)」に進んでください。  
+2.  次の列の上部にあるチェック ボックスをオフにします。 **SpanishEducation**、 **FrenchEducation**、 **SpanishOccupation**、 **FrenchOccupation**」を参照してください。 
+
+    ![として-表形式の lesson2-tiw のクリア](../analysis-services/media/as-tabular-lesson2-tiw-clear.png)
   
-## <a name="FilterData"></a>テーブル データのフィルター処理  
-データベースからインポートしようとしている DimCustomer テーブルには、元の SQL Server Adventure Works データベースから取得されたデータのサブセットが含まれています。 ここでは、DimCustomer テーブルから一部の不要な列を除外します。 可能な場合は、モデルによって使用されるメモリ内領域を節約するために、使用されないデータを除外します。  
+    これらの列の値はインターネット売上分析と関連がないので、これらの列をインポートする必要はありません。 不要な列を排除することはことで、モデルより小さいより効率的です。  
   
-#### インポート前のテーブル データにフィルターを適用するには  
+3.  他の列がすべてオンになっていることを確認し、 **[OK]**をクリックします。  
   
-1.  **Customer** テーブルの行を選択し、**[プレビューとフィルター]** をクリックします。 **[選択したテーブルのプレビュー]** ウィンドウが開き、DimCustomer ソース テーブルのすべての列が表示されます。  
-  
-2.  次の列の上部にあるチェック ボックスをオフにします。  
-  
-    |Customer|  
-    |------------|  
-    |**SpanishEducation**|  
-    |**FrenchEducation**|  
-    |**SpanishOccupation**|  
-    |**FrenchOccupation**|  
-  
-    これらの列の値はインターネット売上分析と関連がないので、これらの列をインポートする必要はありません。 不要な列を削除することで、モデルのサイズを減らせます。  
-  
-3.  他の列がすべてオンになっていることを確認し、**[OK]** をクリックします。  
-  
-    **Customer** 行の **[フィルターの詳細]** 列に **[適用されたフィルター]** と表示されます。そのリンクをクリックすると、適用したフィルターの説明テキストが表示されます。  
+    単語に注意してください**適用されたフィルター**に表示されるようになりました、**フィルターの詳細**内の列、 **DimCustomer**行ですそのリンクのテキスト説明が表示されます をクリックすると、。適用するフィルター。  
+    
+    ![として表形式の lesson2-適用のフィルター](../analysis-services/media/as-tabular-lesson2-applied-filters.png)
+    
   
 4.  各テーブル内の次の列のチェック ボックスをオフにして、残りのテーブルをフィルター処理します。  
+    
+    **DimDate**
+    
+      |列|  
+      |--------|  
+      |**DateKey**|  
+      |**SpanishDayNameOfWeek**|  
+      |**FrenchDayNameOfWeek**|  
+      |**SpanishMonthName**|  
+      |**FrenchMonthName**|  
   
-    |日付|  
-    |--------|  
-    |**DateKey**|  
-    |**SpanishDayNameOfWeek**|  
-    |**FrenchDayNameOfWeek**|  
-    |**SpanishMonthName**|  
-    |**FrenchMonthName**|  
+    **DimGeography**
   
-    |Geography|  
-    |-------------|  
-    |**SpanishCountryRegionName**|  
-    |**FrenchCountryRegionName**|  
-    |**IpAddressLocator**|  
+      |列|  
+      |-------------|  
+      |**SpanishCountryRegionName**|  
+      |**FrenchCountryRegionName**|  
+      |**IpAddressLocator**|  
   
-    |Product|  
-    |-----------|  
-    |**SpanishProductName**|  
-    |**FrenchProductName**|  
-    |**FrenchDescription**|  
-    |**ChineseDescription**|  
-    |**ArabicDescription**|  
-    |**HebrewDescription**|  
-    |**ThaiDescription**|  
-    |**GermanDescription**|  
-    |**JapaneseDescription**|  
-    |**TurkishDescription**|  
+    **DimProduct**
   
-    |Product Category|  
-    |--------------------|  
-    |**SpanishProductCategoryName**|  
-    |**FrenchProductCategoryName**|  
+      |列|  
+      |-----------|  
+      |**SpanishProductName**|  
+      |**FrenchProductName**|  
+      |**FrenchDescription**|  
+      |**ChineseDescription**|  
+      |**ArabicDescription**|  
+      |**HebrewDescription**|  
+      |**ThaiDescription**|  
+      |**GermanDescription**|  
+      |**JapaneseDescription**|  
+      |**TurkishDescription**|  
   
-    |Product Subcategory|  
-    |-----------------------|  
-    |**SpanishProductSubcategoryName**|  
-    |**FrenchProductSubcategoryName**|  
+    **DimProductCategory**
   
-    |Internet Sales|  
-    |------------------|  
-    |**OrderDateKey**|  
-    |**DueDateKey**|  
-    |**ShipDateKey**|  
+      |列|  
+      |--------------------|  
+      |**SpanishProductCategoryName**|  
+      |**FrenchProductCategoryName**|  
   
-不要なデータをプレビューして除外したので、データをインポートする準備が整いました。 次のセクション「**選択したテーブルと列のデータのインポート**」に進んでください。  
+    **DimProductSubcategory**
   
-## <a name="Import"></a>選択したテーブルと列のデータのインポート  
-選択したデータをインポートします。 ウィザードでは、テーブル データと、各テーブル間のリレーションシップがインポートされます。 指定した表示名を使用して、モデル内に新しいテーブルと列が作成されます。除外したデータはインポートされません。  
+      |列|  
+      |-----------------------|  
+      |**SpanishProductSubcategoryName**|  
+      |**FrenchProductSubcategoryName**|  
   
-#### 選択したテーブルと列のデータのインポートするには  
+    **FactInternetSales**
   
-1.  選択内容を確認します。 問題がなければ **[完了]** をクリックします。  
+      |列|  
+      |------------------|  
+      |**OrderDateKey**|  
+      |**DueDateKey**|  
+      |**ShipDateKey**|   
+  
+## <a name="Import"></a>Import the selected tables and column data  
+プレビューし、不要なデータをフィルター選択したら、残りのようにするデータをインポートできます。 ウィザードでは、テーブル データと、各テーブル間のリレーションシップがインポートされます。 新しいテーブルと列がモデルで作成し、除外したデータはインポートされません。  
+  
+#### <a name="to-import-the-selected-tables-and-column-data"></a>選択したテーブルと列のデータのインポートするには  
+  
+1.  選択内容を確認します。 問題がなければ、をクリックして**完了**です。  
   
     データのインポート中、フェッチされた行数が表示されます。 すべてのデータがインポートされると、成功を示すメッセージが表示されます。  
+    
+    ![として表形式の lesson2-成功](../analysis-services/media/as-tabular-lesson2-success.png) 
   
     > [!TIP]  
-    > インポートしたテーブル間に自動的に作成されたリレーションシップを表示するために、**[データ準備]** 行で、**[詳細]** をクリックします。  
+    > インポートしたテーブル間に自動的に作成されたリレーションシップを表示するために、 **[データ準備]** 行で、 **[詳細]**をクリックします。 
   
 2.  **[閉じる]**をクリックします。  
   
-    ウィザードが閉じ、モデル デザイナーが表示されます。 各テーブルが新しいタブとしてモデル デザイナーに追加されています。  
+    ウィザードを閉じるし、モデル デザイナー、インポートされたテーブルに表示されます。 
   
-## モデル プロジェクトの保存  
-モデル プロジェクトは頻繁に保存することが重要です。  
+## <a name="save-your-model-project"></a>モデル プロジェクトを保存します。  
+これが頻繁にモデル プロジェクトを保存する重要です。  
   
-#### モデル プロジェクトを保存するには  
+#### <a name="to-save-the-model-project"></a>モデル プロジェクトを保存するには  
   
--   [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で、**[ファイル]** メニューをクリックし、**[すべてを保存]** をクリックします。  
+-   Click **[ファイル]** > **[すべてを保存]**」を参照してください。  
   
-## 次の手順  
-このチュートリアルを続行するには、次のレッスン「[レッスン 3: 列名の変更](../analysis-services/lesson-3-rename-columns.md)」に進んでください。  
+## <a name="whats-next"></a>次の操作
+次のレッスンに移動:[レッスン 3: 日付テーブルとしてマーク](../analysis-services/lesson-3-mark-as-date-table.md)です。
+
   
   
-  
+

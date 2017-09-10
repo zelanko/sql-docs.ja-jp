@@ -1,35 +1,30 @@
 ---
-title: "KPI (SSAS テーブル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Kpi (SSAS テーブル) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: f4755d0271523b65073b72c6b06f6dec8cfcb90a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# KPI (SSAS テーブル)
-  *KPI* (主要業績評価指標) は、表形式モデルで、*対象*の値に対する*ベース* メジャーによって定義される、また、メジャーまたは絶対値によって定義される値のパフォーマンスの測定に使用されます。 このトピックは、テーブル モデル作成者が表形式モデルの KPI の基本を理解できることを目的としています。  
-  
- このトピックのセクション:  
-  
--   [利点](#bkmk_benefits)  
-  
--   [例](#bkmk_example)  
-  
--   [KPI の作成および編集](#bkmk_create)  
-  
--   [関連タスク](#bkmk_related_tasks)  
+# <a name="kpis"></a>KPI
+  *KPI* (主要業績評価指標) は、表形式モデルで、 *対象* の値に対する *ベース* メジャーによって定義される、また、メジャーまたは絶対値によって定義される値のパフォーマンスの測定に使用されます。 このトピックは、テーブル モデル作成者が表形式モデルの KPI の基本を理解できることを目的としています。  
   
 ##  <a name="bkmk_benefits"></a> 利点  
  ビジネス用語では、主要業績評価指標 (KPI) とは、ビジネス目標を判断するための測定値のことです。 KPI は一定期間中頻繁に評価されます。 たとえば、組織の営業部門では KPI を使用して予測総利益に対する月間売上総利益を測定できます。 経理部門では、月間の収入に対する支出を測定してコストを評価し、人事部門では、四半期単位の従業員離職率を測定することができます。 これらはそれぞれ KPI の一例です。 企業のプロフェッショナルは、グループにまとめて事業のスコアカードに記録した KPI を頻繁に使用し、事業の成功度の履歴要約をすばやく正確に取得したり、傾向を把握したりします。  
@@ -48,7 +43,7 @@ caps.handback.revision: 13
 ##  <a name="bkmk_example"></a> 例  
  Adventure Works の販売責任者は、販売担当者の一定期間 (年) の販売ノルマの達成状況がひとめでわかるようなピボットテーブルを作成しようとしています。 ピボットテーブルには販売担当者ごとの実績販売額 (ドル) と販売ノルマ額 (ドル) を表示し、各担当者がノルマを下回っているか、上回っているかの状態を示す簡単なグラフィックを表示することにします。 データは年単位でスライスできるようにしたいと考えています。  
   
- これを実現するために、組織の BI ソリューション開発者にサポートを依頼し、AdventureWorks 表形式モデルに販売 KPI を追加することにします。 次に、[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] を使用してデータ ソースの Adventure Works 表形式モデルに接続し、ピボットテーブルを作成してフィールド (メジャーと KPI) およびスライサーを設定し、販売担当者がノルマを達成したかどうかを分析します。  
+ これを実現するために、組織の BI ソリューション開発者にサポートを依頼し、AdventureWorks 表形式モデルに販売 KPI を追加することにします。 販売責任者、Adventure Works 表形式モデル データ ソースに接続し、フィールド (メジャーと KPI) と、営業担当者がノルマを達成するかどうかを分析するスライサーをピボット テーブルを作成する Excel が使用されます。  
   
  モデルの FactResellerSales テーブルの SalesAmount 列に、各販売担当者の実績販売額をドル単位で表すメジャーが作成されます。 このメジャーは KPI のベース値を定義します。  
   
@@ -75,7 +70,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  販売責任者は、各販売担当者の実績販売額、販売ノルマ、状態を年単位でスライスできるようになりました。 これによって数年間の売上傾向を分析し、販売担当者の販売ノルマを調整する必要があるかどうかを判断できます。  
   
-##  <a name="bkmk_create"></a> KPI の作成および編集  
+##  <a name="bkmk_create"></a> Create and edit KPIs  
  KPI を作成するには、モデル デザイナーの [主要業績評価指標] ダイアログ ボックスを使用します。 KPI はメジャーと関連付ける必要があるため、ベース値を評価するメジャーを拡張してから、対象の値を評価するメジャーを作成するか、絶対値を入力することにより、KPI を作成します。 ベース メジャー (値) および対象の値が定義された後、状態のしきい値のパラメーターをベース値と対象の値の間で定義できます。 状態は、選択可能なアイコン、バー、グラフ、または色を使用して、グラフィカルな形式で表示されます。 ベース値および対象の値は、状態と同様に、他のデータ フィールドに対してスライスできる値として、レポートまたはピボットテーブルに追加できます。  
   
  [主要業績評価指標] ダイアログ ボックスを表示するには、テーブルのメジャー グリッドで、ベース値として機能するメジャーを右クリックし、 **[KPI の作成]**をクリックします。 ベース値としての KPI にメジャーが拡張された後、メジャー グリッドのメジャー名の横にアイコンが表示され、メジャーが KPI に関連付けられていることを示します。  
@@ -84,10 +79,10 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[KPI の作成および管理 &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|ベース メジャー、対象のメジャー、および状態のしきい値と共に KPI を作成する方法について説明します。|  
+|[作成および管理の Kpi](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|ベース メジャー、対象のメジャー、および状態のしきい値と共に KPI を作成する方法について説明します。|  
   
-## 参照  
- [メジャー &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [パースペクティブ &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
+## <a name="see-also"></a>参照  
+ [メジャー](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [パースペクティブ](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   
   

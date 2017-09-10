@@ -1,26 +1,31 @@
 ---
-title: "パースペクティブの作成と管理 (SSAS テーブル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.perspectivedb.f1"
+title: "作成および管理のパースペクティブ (SSAS テーブル) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.perspectivedb.f1
 ms.assetid: 2a411c2b-2820-4086-ad7f-ce6a941fefc7
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2af9c28c5c63edc873ef549527333b4ba353cb08
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# パースペクティブの作成と管理 (SSAS テーブル)
+# <a name="create-and-manage-perspectives-ssas-tabular"></a>パースペクティブの作成と管理 (SSAS テーブル)
   パースペクティブを使用すると、ビジネス固有またはアプリケーション固有のビューポイントをモデルに対して的を絞って作成するための、表示可能なサブセットを定義できます。 このトピックのタスクでは、モデル デザイナーで **[パースペクティブ]** ダイアログ ボックスを使用して、パースペクティブを作成し管理する方法について説明します。  
   
  このトピックでは、次のタスクについて説明します。  
@@ -35,7 +40,7 @@ caps.handback.revision: 17
   
 -   [パースペクティブをコピーするには](#bkmk_copy)  
   
-## 処理手順  
+## <a name="tasks"></a>処理手順  
  パースペクティブを作成するには、 **[パースペクティブ]** ダイアログ ボックスを使用します。このダイアログ ボックスでは、パースペクティブの追加、編集、削除、コピー、表示の各操作を実行できます。 **[パースペクティブ]** ダイアログ ボックスを表示するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で **[モデル]** メニューをクリックし、 **[パースペクティブ]**をクリックします。  
   
 ###  <a name="bkmk_add"></a> パースペクティブを追加するには  
@@ -50,17 +55,17 @@ caps.handback.revision: 17
   
 ###  <a name="bkmk_rename"></a> パースペクティブの名前を変更するには  
   
--   パースペクティブの列のヘッダー (パースペクティブの名前) にマウス ポインターを合わせると、**[名前の変更]** ボタンが表示されます。 パースペクティブの名前を変更するには、 **[名前の変更]**をクリックした後、新しい名前を入力するか、既存の名前を編集します。  
+-   パースペクティブの列のヘッダー (パースペクティブの名前) にマウス ポインターを合わせると、 **[名前の変更]** ボタンが表示されます。 パースペクティブの名前を変更するには、 **[名前の変更]**をクリックした後、新しい名前を入力するか、既存の名前を編集します。  
   
 ###  <a name="bkmk_delete"></a> パースペクティブを削除するには  
   
--   パースペクティブの列のヘッダー (パースペクティブの名前) にマウス ポインターを合わせると、**[削除]** ボタンが表示されます。 パースペクティブを削除するには、 **[削除]** ボタンをクリックし、確認ウィンドウで **[はい]** をクリックします。  
+-   パースペクティブの列のヘッダー (パースペクティブの名前) にマウス ポインターを合わせると、 **[削除]** ボタンが表示されます。 パースペクティブを削除するには、 **[削除]** ボタンをクリックし、確認ウィンドウで **[はい]** をクリックします。  
   
 ###  <a name="bkmk_copy"></a> パースペクティブをコピーするには  
   
--   パースペクティブの列のヘッダーにマウス ポインターを合わせると、 **[コピー]** ボタンが表示されます。 そのパースペクティブのコピーを作成するには、 **[コピー]** ボタンをクリックします。 既存のパースペクティブの右側に、選択したパースペクティブのコピーが新しいパースペクティブとして追加されます。 新しいパースペクティブは、コピーしたパースペクティブの名前を継承しますが、名前の末尾には "*- コピー*" という注釈が追加されます。 たとえば、 *Sales* というパースペクティブのコピーを作成した場合、新しいパースペクティブの名前は " *Sales – コピー*" になります。  
+-   パースペクティブの列のヘッダーにマウス ポインターを合わせると、 **[コピー]** ボタンが表示されます。 そのパースペクティブのコピーを作成するには、 **[コピー]** ボタンをクリックします。 既存のパースペクティブの右側に、選択したパースペクティブのコピーが新しいパースペクティブとして追加されます。 新しいパースペクティブは、コピーしたパースペクティブの名前を継承しますが、名前の末尾には " *- コピー* " という注釈が追加されます。 たとえば、 *Sales* というパースペクティブのコピーを作成した場合、新しいパースペクティブの名前は " *Sales – コピー*" になります。  
   
-## 「  
+## <a name="see-also"></a>「  
  [パースペクティブ (SSAS テーブル)](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [階層 (SSAS テーブル)](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   

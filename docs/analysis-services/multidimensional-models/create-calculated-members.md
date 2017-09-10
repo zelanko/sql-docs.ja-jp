@@ -1,29 +1,34 @@
 ---
-title: "計算されるメンバーの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "計算されるメンバー [Analysis Services]"
-  - "カスタム メジャー [Analysis Services]"
-  - "メンバー [Analysis Services], 計算される"
-  - "計算 [Analysis Services], 計算されるメンバー"
+title: "計算されるメンバーを作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- calculated members [Analysis Services]
+- custom measures [Analysis Services]
+- members [Analysis Services], calculated
+- calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73feb8d67594c4967fa0ecb0050783b970e58726
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# 計算されるメンバーの作成
+# <a name="create-calculated-members"></a>計算されるメンバーの作成
   キューブ データ、算術演算子、数値、関数などを組み合わせることによって、「計算されるメンバー」と呼ばれる、カスタマイズされたメジャーまたはディメンション メンバーを作成できます。 たとえば、既存のドル メジャーに換算率を掛けて、ドルをユーロに換算する、Euro という計算されるメンバーを作成できます。 Euro は、別個の行または列に表示されます。  
   
  計算されるメンバーの定義は格納されますが、その値はメモリにしか存在しません。 上記の例では、Euro の値はエンド ユーザーに表示されますが、キューブ データとしては格納されません。  
@@ -39,7 +44,7 @@ caps.handback.revision: 26
  また、計算されるメンバーを、ディメンションではなくメジャーに含めることもできます。 この場合も、新しい列ヘッダーまたは行ヘッダーが表示されますが、ブラウザーではメジャーに付加されます。  
   
  **[親メンバー]**  
- 計算されるメンバーを含める親メンバーを選択するには、**[変更]** をクリックします。 親ディメンションとして 1 レベルの階層または MEASURES を選択した場合、このオプションは使用できません。  
+ 計算されるメンバーを含める親メンバーを選択するには、 **[変更]** をクリックします。 親ディメンションとして 1 レベルの階層または MEASURES を選択した場合、このオプションは使用できません。  
   
  階層はレベルに分割され、そこにメンバーが含まれています。 各メンバーによってヘッダーが作成されます。 キューブ内のデータを参照中、選択したヘッダーから、これまで表示されていなかった下位のヘッダーにドリル ダウンできます。 計算されるメンバーのヘッダーは、選択した親メンバーの直下に属するレベルに追加されます。  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 26
 >  計算されるメンバーが、別の計算されるメンバーの値式で使用される場合は、先に作成しておく必要があります。  
   
  書式設定文字列  
- 計算されるメンバーに基づいたセル値の書式を指定します。 このプロパティは、メジャーの **[表示形式]** プロパティと同じ値を使用します。 表示形式の詳細については、「[メジャーのプロパティの構成](../../analysis-services/multidimensional-models/configure-measure-properties.md)」を参照してください。  
+ 計算されるメンバーに基づいたセル値の書式を指定します。 このプロパティは、メジャーの **[表示形式]** プロパティと同じ値を使用します。 表示形式の詳細については、「 [メジャーのプロパティの構成](../../analysis-services/multidimensional-models/configure-measure-properties.md)」を参照してください。  
   
  [表示]  
  計算されるメンバーをキューブ メタデータの取得時に表示するかどうかを決定します。 計算されるメンバーを表示しない場合でも、そのメンバーを MDX 式、ステートメント、およびスクリプトで使用できますが、クライアント ユーザー インターフェイスでは選択可能なオブジェクトとしては表示されません。  
@@ -74,14 +79,14 @@ caps.handback.revision: 26
  [フォントの式]  
  計算されるメンバーの値に基づいてセルのフォント、フォント サイズ、およびフォントの属性を動的に設定する MDX 式を指定します。 クライアント アプリケーションでサポートされていない場合、このプロパティは無視されます。  
   
- キューブ コンポーネントは、**[計算ツール]** ペインの **[メタデータ]** タブから計算式ペインの **[式]** ボックスにコピーまたはドラッグできます。 関数は、**[計算ツール]** ペインの **[関数]** タブから計算式ペインの **[式]** ボックスにコピーまたはドラッグできます。  
+ キューブ コンポーネントは、 **[計算ツール]** ペインの **[メタデータ]** タブから計算式ペインの **[式]** ボックスにコピーまたはドラッグできます。 関数は、 **[計算ツール]** ペインの **[関数]** タブから計算式ペインの **[式]** ボックスにコピーまたはドラッグできます。  
   
-## 計算されるメンバーのアドレス指定  
- **キューブ デザイナー**の **[計算]** タブで、計算されるメンバーを作成する場合は、そのメンバーを格納する親階層を指定します。 親階層では、次の規則に従って、計算されるメンバーのアドレス指定方法を決定します。  
+## <a name="addressing-calculated-members"></a>計算されるメンバーのアドレス指定  
+ **キューブ デザイナー** の **[計算]**タブで、計算されるメンバーを作成する場合は、そのメンバーを格納する親階層を指定します。 親階層では、次の規則に従って、計算されるメンバーのアドレス指定方法を決定します。  
   
 -   計算されるメンバーがメジャー ディメンションで作成された場合、そのメンバーはそのディメンション内でアドレス指定可能です。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [多次元モデルの計算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   

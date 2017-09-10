@@ -1,29 +1,34 @@
 ---
-title: "レポート データ ソースの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "レポート データ ソースを作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b941dc8eb4fb1f0fc14d2565c8f1f65dd3ba4d15
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# レポート データ ソースの作成
+# <a name="create-a-report-data-source"></a>レポート データ ソースの作成
   Power View が多次元モデルに接続するためには、共有レポート データ ソース定義 (.rsds ファイル) を SharePoint ライブラリに作成する必要があります。 .rsds ファイルは、多次元モデルへの接続に使用する Analysis Services サーバー インスタンスの名前、接続の種類、接続文字列、および資格情報の名前を指定します。 ユーザーが .rsds ファイルをクリックすると、新しい空白の Power View レポート (.rdlx ファイル) がブラウザーで開きます。  
   
  .rsds 接続を作成するには、SQL Server 2012 (以降) Reporting Services および SharePoint 2010 または SharePoint 2013 の Reporting Services アドインがインストールされている必要があります。  
   
-## 多次元モデルへのレポート モデル ソース (.rsds) 接続を作成する  
+## <a name="create-a-report-data-source-rsds-connection-to-a-multidimensional-model"></a>多次元モデルへのレポート モデル ソース (.rsds) 接続を作成する  
  開始する前に以下を調べます。  
   
 -   多次元モードで実行中の Analysis Services サーバー インスタンスの名前。  
@@ -36,20 +41,20 @@ caps.handback.revision: 8
   
 -   (オプション) ロケール識別子  
   
-#### 共有レポート データ ソース (.rsds) ファイルを作成するには (SharePoint 2010)  
+#### <a name="to-create-a-shared-report-data-source-rsds-file-sharepoint-2010"></a>共有レポート データ ソース (.rsds) ファイルを作成するには (SharePoint 2010)  
   
 1.  ライブラリ リボンで、 **[ドキュメント]** タブをクリックします。  
   
-2.  **［新しいドキュメント］** > **［レポート データ ソース］** をクリックします。  
+2.  **［新しいドキュメント］** > **［レポート データ ソース］**をクリックします。  
   
     > [!NOTE]  
-    >  メニューに **[レポート データ ソース]** アイテムが表示されない場合は、このライブラリに対してレポート データ ソースのコンテンツ タイプが有効化されていません。 詳細については、「[SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」を参照してください。  
+    >  メニューに **[レポート データ ソース]** アイテムが表示されない場合は、このライブラリに対してレポート データ ソースのコンテンツ タイプが有効化されていません。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」を参照してください。  
   
-3.  **[データ ソースのプロパティ]** ページの **[名前]** に、接続 .rsds ファイルの名前を入力します。  
+3.  **[データ ソースのプロパティ]** ページの **[名前]**に、接続 .rsds ファイルの名前を入力します。  
   
-4.  **[データ ソースの種類]** で **[Power View 用 Microsoft BI セマンティック モデル]** をクリックします。  
+4.  **[データ ソースの種類]**で **[Power View 用 Microsoft BI セマンティック モデル]**をクリックします。  
   
-5.  **[接続文字列]** で、Analysis Services サーバー名、データベース名、キューブ名、およびオプションの設定を指定します。  
+5.  **[接続文字列]**で、Analysis Services サーバー名、データベース名、キューブ名、およびオプションの設定を指定します。  
   
      接続文字列: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’`  
   
@@ -62,13 +67,13 @@ caps.handback.revision: 8
   
 6.  **[資格情報]**で、外部データ ソースにアクセスする際にレポート サーバーが資格情報を取得する方法を指定します。  
   
-    -   レポートを開いたユーザーの資格情報を使用してデータにアクセスする場合は、**[Windows 認証 (統合)]** を選択します。 SharePoint サイトまたはファームでフォーム認証を使用する場合や、信頼済みアカウントを使用してレポート サーバーに接続する場合は、このオプションを選択しないでください。 このレポートのサブスクリプションまたはデータ処理をスケジュールする場合は、このオプションを選択しないでください。 Kerberos 認証が有効なドメインに参加している場合、またはレポート サーバーと同一のコンピューターにデータ ソースがある場合に、このオプションは最適です。 Kerberos 認証が無効になっている場合、Windows 資格情報は別のコンピューター 1 台にしか渡すことができません。 つまり、外部データ ソースが別のコンピューターにあり、別の接続が必要な場合、意図したデータを取得できずにエラーが発生します。  
+    -   レポートを開いたユーザーの資格情報を使用してデータにアクセスする場合は、 **[Windows 認証 (統合)]** を選択します。 SharePoint サイトまたはファームでフォーム認証を使用する場合や、信頼済みアカウントを使用してレポート サーバーに接続する場合は、このオプションを選択しないでください。 このレポートのサブスクリプションまたはデータ処理をスケジュールする場合は、このオプションを選択しないでください。 Kerberos 認証が有効なドメインに参加している場合、またはレポート サーバーと同一のコンピューターにデータ ソースがある場合に、このオプションは最適です。 Kerberos 認証が無効になっている場合、Windows 資格情報は別のコンピューター 1 台にしか渡すことができません。 つまり、外部データ ソースが別のコンピューターにあり、別の接続が必要な場合、意図したデータを取得できずにエラーが発生します。  
   
     -   ユーザーがレポートを実行するたびに資格情報の入力を要求する場合は、 **[資格情報を要求する]** をクリックします。 このレポートのサブスクリプションまたはデータ処理をスケジュールする場合は、このオプションを選択しないでください。  
   
     -   1 組の資格情報を使用してデータにアクセスする場合は、 **[保存された資格情報]** を選択します。 資格情報は暗号化されてから保存されます。 保存されている資格情報の認証方法を指定するオプションを選択できます。 保存された資格情報が Windows ユーザー アカウントに属する場合は、[データ ソースへの接続時に Windows 資格情報として使用する] をクリックします。 データベース サーバーの実行コンテキストを設定する場合は、 **[実行コンテキストをこのアカウントに設定する]** をクリックします。  
   
-    -   接続文字列で資格情報を指定する場合や、最小特権アカウントを使用してレポートを実行する場合は、**[資格情報は必要ありません]** をクリックします。  
+    -   接続文字列で資格情報を指定する場合や、最小特権アカウントを使用してレポートを実行する場合は、 **[資格情報は必要ありません]** をクリックします。  
   
 7.  **[接続テスト]** をクリックして検証します。  
   

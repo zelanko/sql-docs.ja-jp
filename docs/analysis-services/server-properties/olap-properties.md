@@ -1,112 +1,117 @@
 ---
-title: "OLAP のプロパティ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "AggregationPerfLog プロパティ"
-  - "DefaultPageSizeForProp プロパティ"
-  - "UseSinglePassForDimSecurityAutoExist プロパティ"
-  - "DeepCompressValue プロパティ"
-  - "CacheRowsetRows プロパティ"
-  - "Income プロパティ"
-  - "AggregationNewAlgo プロパティ"
-  - "MemoryAdjustFactor プロパティ"
-  - "DimensionLatencyAccuracy プロパティ"
-  - "InitialBonus プロパティ"
-  - "DefaultPageSizeForDataHeader プロパティ"
-  - "MaxCPUUsage プロパティ"
-  - "DistinctBuffer プロパティ"
-  - "PartitionLatencyAccuracy プロパティ"
-  - "MaxRetries プロパティ"
-  - "UseDataCacheRegistryMultiplyKey プロパティ"
-  - "ConvertDeletedToUnknown プロパティ"
-  - "DatabaseConnectionPoolMax プロパティ"
-  - "DataFileInitEnabled プロパティ"
-  - "DefaultPageSizeForHash プロパティ"
-  - "MaxRolapOrConditions プロパティ"
-  - "UseDataCacheFreeLastPageMemory プロパティ"
-  - "OLAP [Analysis Services], プロパティ"
-  - "MapHandleAlgorithm プロパティ"
-  - "IndexBuildEnabled プロパティ"
-  - "MaxObjectsInParallel プロパティ"
-  - "IgnoreNullRolapRows プロパティ"
-  - "DimensionPropertyCacheSize プロパティ"
-  - "DefaultRefreshInterval プロパティ"
-  - "CheckDistinctRecordSortOrder プロパティ"
-  - "BufferMemoryLimit プロパティ"
-  - "EnableTableGrouping プロパティ"
-  - "ExpressNonEmptyUseEnabled プロパティ"
-  - "CopyLinkedDataCacheAndRegistry プロパティ"
-  - "UseDataSlice プロパティ"
-  - "MemoryLimitErrorEnabled プロパティ"
-  - "Enabled プロパティ"
-  - "EnableRolapOptimization プロパティ"
-  - "DatabaseConnectionPoolTimeout プロパティ"
-  - "UseDataCacheRegistryHashTable プロパティ"
-  - "AggregationsBuildEnabled プロパティ"
-  - "Tax プロパティ"
-  - "DatabaseConnectionPoolGeneralTimeout プロパティ"
-  - "DefaultPageSizeForString プロパティ"
-  - "DatabaseConnectionPoolConnectTimeout プロパティ"
-  - "MinimumBalance プロパティ"
-  - "OptimizeSchema プロパティ"
-  - "UseCalculationCacheRegistry プロパティ"
-  - "MaxTableDepth プロパティ"
-  - "DataSliceInitEnabled プロパティ"
-  - "PrefetchLowerGranularities プロパティ"
-  - "UseVBANet プロパティ"
-  - "BufferRecordLimit プロパティ"
-  - "DefaultPageSizeForIndexHeader プロパティ"
-  - "MaximumBalance プロパティ"
-  - "CalculationCacheRegistryMaxIterations プロパティ"
-  - "DefaultDrillthroughMaxRows プロパティ"
-  - "IndexBuildThreshold プロパティ"
-  - "UseDataCacheRegistry プロパティ"
-  - "MemoryAdjustConst プロパティ"
-  - "ApplyIntersect プロパティ"
-  - "IndexFileInitEnabled プロパティ"
-  - "CacheRowsetToDisk プロパティ"
-  - "DataCacheRegistryMaxIterations プロパティ"
-  - "AllowSEFiltering プロパティ"
-  - "ForceMultiPass プロパティ"
-  - "ApplySubtract プロパティ"
-  - "IndexUseEnabled プロパティ"
-  - "AggregationsUseEnabled プロパティ"
-  - "DataPlacementOptimization プロパティ"
-  - "UseMaterializedIterators プロパティ"
-  - "CacheRecordLimit プロパティ"
-  - "ROLAPDimensionProcessingEffort プロパティ"
-  - "DefaultPageSizeForIndex プロパティ"
-  - "EnableRolapDimQueryTableGrouping プロパティ"
-  - "DimensionPropertyKeyCache プロパティ"
-  - "SleepIntervalSecs プロパティ"
-  - "DefaultPageSizeForData プロパティ"
-  - "MapFormatMask プロパティ"
-  - "CalculationEvaluationPolicy プロパティ"
-  - "AggregationMemoryLimitMin プロパティ"
-  - "RecordsReportGranularity プロパティ"
-  - "MemoryLimit プロパティ"
-  - "AggregationMemoryLimitMax プロパティ"
+title: "OLAP プロパティ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- AggregationPerfLog property
+- DefaultPageSizeForProp property
+- UseSinglePassForDimSecurityAutoExist property
+- DeepCompressValue property
+- CacheRowsetRows property
+- Income property
+- AggregationNewAlgo property
+- MemoryAdjustFactor property
+- DimensionLatencyAccuracy property
+- InitialBonus property
+- DefaultPageSizeForDataHeader property
+- MaxCPUUsage property
+- DistinctBuffer property
+- PartitionLatencyAccuracy property
+- MaxRetries property
+- UseDataCacheRegistryMultiplyKey property
+- ConvertDeletedToUnknown property
+- DatabaseConnectionPoolMax property
+- DataFileInitEnabled property
+- DefaultPageSizeForHash property
+- MaxRolapOrConditions property
+- UseDataCacheFreeLastPageMemory property
+- OLAP [Analysis Services], properties
+- MapHandleAlgorithm property
+- IndexBuildEnabled property
+- MaxObjectsInParallel property
+- IgnoreNullRolapRows property
+- DimensionPropertyCacheSize property
+- DefaultRefreshInterval property
+- CheckDistinctRecordSortOrder property
+- BufferMemoryLimit property
+- EnableTableGrouping property
+- ExpressNonEmptyUseEnabled property
+- CopyLinkedDataCacheAndRegistry property
+- UseDataSlice property
+- MemoryLimitErrorEnabled property
+- Enabled property
+- EnableRolapOptimization property
+- DatabaseConnectionPoolTimeout property
+- UseDataCacheRegistryHashTable property
+- AggregationsBuildEnabled property
+- Tax property
+- DatabaseConnectionPoolGeneralTimeout property
+- DefaultPageSizeForString property
+- DatabaseConnectionPoolConnectTimeout property
+- MinimumBalance property
+- OptimizeSchema property
+- UseCalculationCacheRegistry property
+- MaxTableDepth property
+- DataSliceInitEnabled property
+- PrefetchLowerGranularities property
+- UseVBANet property
+- BufferRecordLimit property
+- DefaultPageSizeForIndexHeader property
+- MaximumBalance property
+- CalculationCacheRegistryMaxIterations property
+- DefaultDrillthroughMaxRows property
+- IndexBuildThreshold property
+- UseDataCacheRegistry property
+- MemoryAdjustConst property
+- ApplyIntersect property
+- IndexFileInitEnabled property
+- CacheRowsetToDisk property
+- DataCacheRegistryMaxIterations property
+- AllowSEFiltering property
+- ForceMultiPass property
+- ApplySubtract property
+- IndexUseEnabled property
+- AggregationsUseEnabled property
+- DataPlacementOptimization property
+- UseMaterializedIterators property
+- CacheRecordLimit property
+- ROLAPDimensionProcessingEffort property
+- DefaultPageSizeForIndex property
+- EnableRolapDimQueryTableGrouping property
+- DimensionPropertyKeyCache property
+- SleepIntervalSecs property
+- DefaultPageSizeForData property
+- MapFormatMask property
+- CalculationEvaluationPolicy property
+- AggregationMemoryLimitMin property
+- RecordsReportGranularity property
+- MemoryLimit property
+- AggregationMemoryLimitMax property
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 095706fc60fe06ae2a83969431b390772bee37f2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/01/2017
+
 ---
-# OLAP のプロパティ
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示す OLAP サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「[Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)」を参照してください。  
+# <a name="olap-properties"></a>OLAP のプロパティ
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示す OLAP サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)」を参照してください。  
   
  **適用対象:** 多次元サーバー モードのみ  
   
-## [メモリ]  
+## <a name="memory"></a>[メモリ]  
  **DefaultPageSizeForData**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
@@ -128,7 +133,7 @@ caps.handback.revision: 18
  **DefaultPageSizeForProp**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## レイジー処理  
+## <a name="lazyprocessing"></a>レイジー処理  
  **有効**  
  レイジー集計処理が有効かどうかを示すブール型プロパティです。  
   
@@ -146,7 +151,7 @@ caps.handback.revision: 18
  **MaxRetries**  
  レイジー処理が失敗した場合にエラーが発生する前にイベントでの再試行の回数を定義する、符号付き 32 ビット整数のプロパティです。  
   
-## プロセス プラン  
+## <a name="processplan"></a>プロセス プラン  
  **CacheRowsetRows**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
@@ -185,7 +190,7 @@ caps.handback.revision: 18
  **OptimizeSchema**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## プロアクティブ キャッシュ  
+## <a name="proactivecaching"></a>プロアクティブ キャッシュ  
  **DefaultRefreshInterval**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
@@ -195,7 +200,7 @@ caps.handback.revision: 18
  **PartitionLatencyAccuracy**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## [処理]  
+## <a name="process"></a>[処理]  
  **AggregationMemoryLimitMax**  
  集計処理に充てることができるメモリの最大量を定義する、符号付き 64 ビット倍精度浮動小数点数のプロパティです。物理メモリの比率として表されます。  
   
@@ -286,7 +291,7 @@ caps.handback.revision: 18
  **ROLAPDimensionProcessingEffort**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## Query  
+## <a name="query"></a>Query  
  **AggregationsUseEnabled**  
  保存されている集計が実行時に使用されるかどうかを定義するブール型プロパティです。 このプロパティでは、情報提供およびベンチマークの目的で、集計のデザインを変更したり再処理したりせずに集計を無効にすることができます。  
   
@@ -324,7 +329,7 @@ caps.handback.revision: 18
   
 -   ディメンション キャッシュでより多くのメモリを使用できるようにすると、メモリ使用率のコストが増加します。 実際の使用率は、実行されるクエリによって異なります。 すべてのクエリが、許容される最大量のメモリを使用するわけではありません。  
   
-     これらのキャッシュによって使用されるメモリは縮小不能と見なされ、**[TotalMemoryLimit]** を計算するときはその中に含まれることに注意してください。  
+     これらのキャッシュによって使用されるメモリは縮小不能と見なされ、 **[TotalMemoryLimit]**を計算するときはその中に含まれることに注意してください。  
   
 -   サーバー上のすべてのデータベースに影響します。 **DimensionPropertyCachesize** は、サーバー全体のプロパティです。 このプロパティを変更すると、現在のインスタンスで実行されているすべてのデータベースに影響を与えます。  
   
@@ -430,7 +435,7 @@ caps.handback.revision: 18
  **DataCache\ MemoryModel\ Tax**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## ジョブ  
+## <a name="jobs"></a>ジョブ  
  **ProcessAggregation\ MemoryModel\ Income**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
@@ -476,7 +481,7 @@ caps.handback.revision: 18
  **ProcessAggregation\ ProcessProperty\ Tax**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Analysis Services インスタンスのサーバー モードの決定](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
