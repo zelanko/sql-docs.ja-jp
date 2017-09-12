@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: e0bdc95320ea2e696444048156dffefcd89e1910
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: 43b840061dec69be8e733929477d79ca9d379814
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="sql-server-technical-documentation"></a>SQL Server 技術ドキュメント
@@ -85,13 +85,8 @@ SQL Server のインストール、構成、および使用の際に役立つド
 - [GitHub の SQL Server サンプル](https://github.com/Microsoft/sql-server-samples) 
    
  ## <a name="more-information"></a>詳細情報   
-+ SQL Server ドキュメントをオフラインで表示するには、「[SQL Server のヘルプ ビューアーとオフライン コンテンツ](../release-notes/sql-server-help-installation.md)」を参照してください。
++ SQL Server ドキュメントをオフラインで表示するには、「[SQL Server のヘルプ ビューアーとオフライン コンテンツ](sql-server-help-installation.md)」を参照してください。
 + [SQL Server 構成マネージャー](../relational-databases/sql-server-configuration-manager.md)
 + [SQL Server Update Center - サポート対象のすべてのバージョンのリンクと情報](https://msdn.microsoft.com/library/ff803383.aspx)
-  
-##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) ヘルプの参照 
-- [スタック オーバーフロー (tag sql-server) - SQL 開発に関する質問](http://stackoverflow.com/questions/tagged/sql-server)
-- [MSDN フォーラム - 技術的な質問](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-- [Microsoft Connect - バグ報告と機能依頼](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - SQL Server に関する一般的なディスカッション](https://www.reddit.com/r/SQLServer/)
-- [Microsoft SQL Server ライセンス条項および情報](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
