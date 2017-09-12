@@ -24,7 +24,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>[データ ソースの選択] (SQL Server インポートおよびエクスポート ウィザード)
+# <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>[データ ソースの選択]\(SQL Server インポートおよびエクスポート ウィザード)
   [ようこそ] ページの後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードに **[データ ソースを選ぶ]**が表示されます。 このページでは、データ ソースおよびデータに接続する方法についての情報を指定します。
   
 使用できるデータ ソースの詳細については、「 [どのようなデータ ソースと変換先を使用できるでしょうか。](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)」を参照してください。
