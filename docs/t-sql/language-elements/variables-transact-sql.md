@@ -1,7 +1,7 @@
 ---
 title: "変数 (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -24,7 +24,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="variables-transact-sql"></a>変数 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 TRANSACT-SQL のローカル変数は、特定の種類の 1 つのデータ値を保持できるオブジェクトです。 バッチ内の変数とスクリプトは、通常、次の場合に使用されます。 
 
@@ -39,8 +39,9 @@ TRANSACT-SQL のローカル変数は、特定の種類の 1 つのデータ値�
 
 * ループの実行回数を管理して、挿入する行数を制御します。
 * 整数列に挿入する値を供給します。
-* 文字列に挿入する文字を生成する式の一部として機能させます。
-```
+* 文字列に挿入する文字を生成する式の一部として機能させます。  
+
+```sql
 -- Create the table.
 CREATE TABLE TestTable (cola int, colb char(3));
 GO
@@ -87,19 +88,19 @@ DECLARE ステートメントでは、TRANSACT-SQL 変数を初期化します�
 * システム提供のデータ型またはユーザー定義データ型と長さを割り当てます。 数値変数の場合は、有効桁数と小数点以下桁数も割り当てます。 XML 型の変数の場合は、省略可能なスキーマ コレクションを割り当てることができます。
 * 値を NULL に設定します。
 
-たとえば、次**DECLARE**ステートメントがという名前のローカル変数を作成 **@mycounter**  int データ型を持つ。
-```
+たとえば、次**DECLARE**ステートメントがという名前のローカル変数を作成 **@mycounter**  int データ型を持つ。  
+```sql
 DECLARE @MyCounter int;
 ```
 複数のローカル変数を宣言するには、最初のローカル変数を定義した後にコンマを付け、次のローカル変数名とデータ型を指定します。
 
-たとえば、次**DECLARE**という 3 つのローカル変数を作成するステートメント **@LastName** 、  **@FirstName** と **@StateProvince** 、し、それぞれを NULL に初期化します。
-```
+たとえば、次**DECLARE**という 3 つのローカル変数を作成するステートメント **@LastName** 、  **@FirstName** と **@StateProvince** 、し、それぞれを NULL に初期化します。  
+```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
 
-変数のスコープは、変数を参照できる範囲の TRANSACT-SQL ステートメントです。 変数のスコープは、その変数が宣言された時点で始まり、変数が宣言されたバッチやストアド プロシージャが終了した時点で終了します。 たとえば、次のスクリプトでは変数が宣言されたバッチと変数を参照するバッチが異なるため、構文エラーが発生します。
-```
+変数のスコープは、変数を参照できる範囲の TRANSACT-SQL ステートメントです。 変数のスコープは、その変数が宣言された時点で始まり、変数が宣言されたバッチやストアド プロシージャが終了した時点で終了します。 たとえば、次のスクリプトでは変数が宣言されたバッチと変数を参照するバッチが異なるため、構文エラーが発生します。  
+```sql
 USE AdventureWorks2014;
 GO
 DECLARE @MyVariable int;
@@ -115,9 +116,9 @@ FROM HumanResources.Employee
 WHERE BusinessEntityID = @MyVariable;
 ```
 
-変数にはローカル スコープがあり、その変数が定義されたバッチまたはプロシージャ内でのみ参照されます。 次の例では、sp_executesql の実行のために作成された入れ子になったスコープでは、より上位のスコープで宣言された変数にはアクセスできないので、エラーが返されます。
+変数にはローカル スコープがあり、その変数が定義されたバッチまたはプロシージャ内でのみ参照されます。 次の例では、sp_executesql の実行のために作成された入れ子になったスコープでは、より上位のスコープで宣言された変数にはアクセスできないので、エラーが返されます。  
 
-```
+```sql
 DECLARE @MyVariable int;
 SET @MyVariable = 1;
 EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
@@ -127,9 +128,9 @@ EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
 
 変数を初めて宣言したときは値が NULL に設定されます。 変数に値を代入するには、SET ステートメントを使用します。 変数に値を代入する場合は、この方法を使用することをお勧めします。 SELECT ステートメントの選択リストの中で変数を参照して、変数に値を代入することもできます。
 
-SET ステートメントを使用して変数に値を代入するには、変数名とその変数に代入する値を含めます。 変数に値を代入する場合は、この方法を使用することをお勧めします。 次のバッチの例では、2 つの変数を宣言し、それぞれに値を代入し、`WHERE` ステートメントの `SELECT` 句でその値を使用しています。
+SET ステートメントを使用して変数に値を代入するには、変数名とその変数に代入する値を含めます。 変数に値を代入する場合は、この方法を使用することをお勧めします。 次のバッチの例では、2 つの変数を宣言し、それぞれに値を代入し、`WHERE` ステートメントの `SELECT` 句でその値を使用しています。  
 
-```
+```sql
 USE AdventureWorks2014;
 GO
 -- Declare two variables.
@@ -148,9 +149,9 @@ WHERE FirstName = @FirstNameVariable
 GO
 ```
 
-選択リストの中で変数を参照して、変数に値を代入することもできます。 選択リストの中で変数を参照する場合は、スカラー値を代入することをお勧めします。スカラー値を代入しないと、SELECT ステートメントからは 1 行しか返されません。 例:
+選択リストの中で変数を参照して、変数に値を代入することもできます。 選択リストの中で変数を参照する場合は、スカラー値を代入することをお勧めします。スカラー値を代入しないと、SELECT ステートメントからは 1 行しか返されません。 例:  
 
-```
+```sql
 USE AdventureWorks2014;
 GO
 DECLARE @EmpIDVariable int;
@@ -163,9 +164,9 @@ GO
 > [!WARNING]
 > 1 つの SELECT ステートメントに複数の代入句がある場合、SQL Server では式の評価順序が保証されません。 複数の代入の間に参照がある場合のみ、その影響を確認できることに注意してください。
 
-SELECT ステートメントは複数の行を返し、変数参照、非スカラー式場合、変数は、結果セットの最後の行に式の戻り値に設定されます。 たとえば、次のバッチで **@EmpIDVariable** に設定されている、 **BusinessEntityID** 1 である最後の行の値が返されます。
+SELECT ステートメントは複数の行を返し、変数参照、非スカラー式場合、変数は、結果セットの最後の行に式の戻り値に設定されます。 たとえば、次のバッチで **@EmpIDVariable** に設定されている、 **BusinessEntityID** 1 である最後の行の値が返されます。  
 
-```
+```sql
 USE AdventureWorks2014;
 GO
 DECLARE @EmpIDVariable int;
@@ -186,3 +187,4 @@ GO
  [選択します。@local_variable](../../t-sql/language-elements/select-local-variable-transact-sql.md)  
   
   
+
