@@ -1,0 +1,8 @@
+# [Analysis Services 開発に関するクライアント アーキテクチャの要件](client-architecture-requirements-for-analysis-services-development.md)
+# [Analysis Services で使用するデータ型](data-types-in-analysis-services.md)
+# [ローカル キューブ (Analysis Services - 多次元データ)](local-cubes-analysis-services-multidimensional-data.md)
+# [最大容量仕様 (Analysis Services)](maximum-capacity-specifications-analysis-services.md)
+# [オブジェクトの名前付け規則 (Analysis Services)](object-naming-rules-analysis-services.md)
+# [OLAP エンジンのサーバー コンポーネント](olap-engine-server-components.md)
+# [Microsoft OLAP アーキテクチャについて](understanding-microsoft-olap-architecture.md)
+# [Microsoft OLAP 物理アーキテクチャについて](understanding-microsoft-olap-physical-architecture.md)

@@ -16,6 +16,7 @@
 ## [Azure HDInsight クラスターの作成タスク](azure-hdinsight-create-cluster-task.md)  
 ## [Azure HDInsight クラスターの削除タスク](azure-hdinsight-delete-cluster-task.md)  
 ## [Azure SQL DW のアップロード タスク](azure-sql-dw-upload-task.md)  
+## [Azure Data Lake Store ファイル システム タスク](azure-data-lake-store-file-system-task.md) 
 ## [データベースのバックアップ タスク](back-up-database-task.md)  
 ## [一括挿入タスク](bulk-insert-task.md)  
 ## [CDC 制御タスク](cdc-control-task.md)  

@@ -171,7 +171,7 @@
                     - name: コレクション
                       href: /sql/analysis-services/scripting/collections/
                       homepage: /sql/analysis-services/scripting/collections/accounts-element-assl
-                    - name: プロパティ
+                    - name: '[プロパティ]'
                       href: /sql/analysis-services/scripting/properties/
                       homepage: /sql/analysis-services/scripting/properties/access-element-assl
                 - name: テーブル モデルのスクリプト言語オブジェクト
@@ -567,7 +567,7 @@
               homepage: /sql/relational-databases/graphs/sql-graph-overview
             - name: インポートとエクスポート
               href: /sql/relational-databases/import-export/
-              homepage: /sql/relational-databases/import-export/bulk-import-and-export-of-data-sql-server
+              homepage: /sql/relational-databases/import-export/overview-import-export
             - name: インメモリ OLTP
               href: /sql/relational-databases/in-memory-oltp/
               homepage: /sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization
@@ -925,7 +925,7 @@
                         - name: 実装
                           href: /sql/relational-databases/native-client-odbc-cursors/implementation/
                           homepage: /sql/relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented
-                        - name: プロパティ
+                        - name: '[プロパティ]'
                           href: /sql/relational-databases/native-client-odbc-cursors/properties/
                           homepage: /sql/relational-databases/native-client-odbc-cursors/properties/cursor-properties
                         - name: プログラミング
@@ -1007,9 +1007,6 @@
                         - name: セキュリティ
                           href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/
                           homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations
-        - name: SQL Server Release Notes
-          href: /sql/release-notes/
-          homepage: /sql/release-notes/sql-server-release-notes
         - name: DMX
           href: /sql/dmx/
           homepage: /sql/dmx/data-mining-extensions-dmx-reference
