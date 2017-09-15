@@ -1,7 +1,7 @@
 ---
 title: "(除算代入)(TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,24 +23,22 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c75fb8bf157f1bba666df065e238993909038418
+ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
+ms.openlocfilehash: 796aa8801ebfff9d1bb3ef6e194eadaa907601d6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="divide-equals-transact-sql"></a>(除算代入)(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  1 つの数値を別の数値で除算し、値に演算の結果を設定します。 場合、変数など、 @x 、34 に等しい@x/2 はの元の値を = @x2 で除算し、設定、@xにその新しい値 (17)。  
+  1 つの数値を別の数値で除算し、値に演算の結果を設定します。 場合、変数など、 @x 、34 に等しい`@x /= 2`の元の値を受け取る@x2 で除算し、設定、@xにその新しい値 (17)。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 expression /= expression  
 ```  
   
@@ -53,10 +51,25 @@ expression /= expression
   
 ## <a name="remarks"></a>解説  
  詳細については、次を参照してください。 [&#40; 除算 &#41; & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/divide-transact-sql.md).  
+
+## <a name="examples"></a>使用例  
+次の例では、17 に変数を設定します。 使用して、`/=`オペレータを元の値の半分に変数を設定します。  
+```sql  
+DECLARE @myVariable decimal(5,2);
+SET @myVariable = 17.5;
+SET @myVariable /= 2;
+SELECT @myVariable AS ResultVariable;  
+```
   
+[!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]  
+|ResultVariable | 
+|--- |
+|8.75 |
+
 ## <a name="see-also"></a>参照  
  [複合の演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [式 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
  [演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
+

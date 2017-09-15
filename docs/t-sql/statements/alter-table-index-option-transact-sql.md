@@ -1,7 +1,7 @@
 ---
 title: "index_option (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 09/08/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -19,10 +19,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 64f1d5cec0e74509e59491f50feec3be705badf2
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: e7563f9fe992dcf4f9308cccbf11f6310b7925a7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="alter-table-indexoption-transact-sql"></a>ALTER TABLE index_option (TRANSACT-SQL)
@@ -70,7 +70,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>引数  
- PAD_INDEX  **=**  {ON |**OFF** }  
+ PAD_INDEX ** = ** {ON |**OFF** }  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  インデックスの埋め込みを指定します。 既定値は OFF です。  
@@ -81,7 +81,7 @@ ms.lasthandoff: 09/01/2017
  OFF または*fillfactor*が指定されていません  
  中間レベル ページは、中間ページの一連のキーを考慮しつつ、インデックスが持つことのできる最大サイズの行が少なくとも 1 つ格納できる領域を残して、ほぼ容量いっぱいに使用されます。  
   
- FILLFACTOR  **=**  *fillfactor*  
+ FILLFACTOR ** = ** *fillfactor*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  どの程度を示すパーセンテージを指定します、[!INCLUDE[ssDE](../../includes/ssde-md.md)]インデックスの作成または変更時に各インデックス ページのリーフ レベルを作成する必要があります。 1 ～ 100 の整数値を指定する必要があります。 既定値は 0 です。  
@@ -89,14 +89,14 @@ ms.lasthandoff: 09/01/2017
 > [!NOTE]  
 >  FILL FACTOR 値 0 と 100 は、すべての面でまったく同じ結果になります。  
   
- IGNORE_DUP_KEY  **=**  {ON |**OFF** }  
+ IGNORE_DUP_KEY ** = ** {ON |**OFF** }  
  挿入操作で、一意のインデックスに重複するキー値を挿入しようとした場合のエラー応答を指定します。 IGNORE_DUP_KEY オプションは、インデックスが作成または再構築された後の挿入操作のみに適用されます。 オプションも何も起こりませんの実行時に[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)、 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)、または[更新](../../t-sql/queries/update-transact-sql.md)です。 既定値は OFF です。  
   
  ON  
- 重複したキー値が一意のインデックスに挿入されると、警告メッセージが表示されます。 一意性制約に違反する行のみが失敗します。  
+ 警告メッセージは、重複するキー値が一意のインデックスに挿入するときに発生します。 一意性制約に違反する行だけが失敗します。  
   
  OFF  
- 重複したキー値が一意のインデックスに挿入されると、エラー メッセージが表示されます。 INSERT 操作全体がロールバックされます。  
+ エラー メッセージは、重複するキー値が一意のインデックスに挿入するときに発生します。 INSERT 操作全体がロールバックされます。  
   
  ビューに作成されたインデックス、一意でないインデックス、XML インデックス、空間インデックス、およびフィルター選択されたインデックスの IGNORE_DUP_KEY を ON に設定できません。  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 09/01/2017
   
  旧バージョンと互換性のある構文では、WITH IGNORE_DUP_KEY は WITH IGNORE_DUP_KEY = ON と同じです。  
   
- STATISTICS_NORECOMPUTE  **=**  {ON |**OFF** }  
+ STATISTICS_NORECOMPUTE ** = ** {ON |**OFF** }  
  統計を再計算するかどうかを指定します。 既定値は OFF です。  
   
  ON  
@@ -113,7 +113,7 @@ ms.lasthandoff: 09/01/2017
  OFF  
  自動統計更新が有効です。  
   
- ALLOW_ROW_LOCKS  **=**  { **ON** |オフ}  
+ ALLOW_ROW_LOCKS ** = ** { **ON** |オフ}  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  行ロックを許可するかどうかを指定します。 既定値は ON です。  
@@ -124,7 +124,7 @@ ms.lasthandoff: 09/01/2017
  OFF  
  行ロックは使用されません。  
   
- ALLOW_PAGE_LOCKS  **=**  { **ON** |オフ}  
+ ALLOW_PAGE_LOCKS ** = ** { **ON** |オフ}  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  ページ ロックを許可するかどうかを指定します。 既定値は ON です。  
@@ -135,7 +135,7 @@ ms.lasthandoff: 09/01/2017
  OFF  
  ページ ロックは使用されません。  
   
- SORT_IN_TEMPDB  **=**  {ON |**OFF** }  
+ SORT_IN_TEMPDB ** = ** {ON |**OFF** }  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  並べ替え結果を格納するかどうかを示す**tempdb**です。 既定値は OFF です。  
@@ -146,7 +146,7 @@ ms.lasthandoff: 09/01/2017
  OFF  
  中間の並べ替え結果はインデックスと同じデータベースに格納されます。  
   
- オンライン **=**  {ON |**OFF** }  
+ オンライン** = ** {ON |**OFF** }  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  インデックス操作時に、基になるテーブルや関連するインデックスをクエリやデータ変更で使用できるかどうかを指定します。 既定値は OFF です。 REBUILD は ONLINE 操作として実行できます。  
@@ -168,21 +168,16 @@ ms.lasthandoff: 09/01/2017
 > [!NOTE]  
 >  オンラインでのインデックス操作は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
- MAXDOP  **=**  *max_degree_of_parallelism*  
+ MAXDOP ** = ** *max_degree_of_parallelism*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  上書き、**並列処理の次数の最大**インデックス操作の実行中の構成オプション。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
   
  *max_degree_of_parallelism*を指定できます。  
   
- 1  
- 並列プラン生成を抑制します。  
-  
- \>1  
- 並列インデックス操作で使用される最大プロセッサ数を、指定した数に制限します。  
-  
- 0 (既定値)  
- 現在のシステム ワークロードに基づいて、実際の数以下のプロセッサを使用します。  
+ - 1 - 並列プランの生成を抑制します。  
+ - \>1 - 指定した数に、並列インデックス操作で使用されるプロセッサの最大数を制限します。  
+ - 0 (既定) - 実際のプロセッサ数か、現在のシステム ワークロードに基づいて数が少ない。  
   
  詳細については、「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。  
   
@@ -192,7 +187,7 @@ ms.lasthandoff: 09/01/2017
  DATA_COMPRESSION  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- 指定したテーブル、パーティション番号、またはパーティションの範囲のデータ圧縮オプションを指定します。 次のオプションがあります。  
+ 指定したテーブル、パーティション番号、またはパーティション範囲に、データ圧縮オプションを指定します。 次のオプションがあります。  
   
  なし  
  テーブルまたは指定したパーティションが圧縮されません。 行ストア テーブルにのみ適用され、列ストア テーブルには適用されません。  
@@ -206,32 +201,30 @@ ms.lasthandoff: 09/01/2017
  COLUMNSTORE  
  **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- 列ストア テーブルにのみ適用されます。 COLUMNSTORE は、COLUMNSTORE_ARCHIVE オプションで圧縮されたパーティションを解凍するように指定します。 復元されるデータは、すべての列ストア テーブルに使用された列ストア圧縮を使用して引き続き圧縮されます。  
+ 列ストア テーブルにのみ適用されます。 COLUMNSTORE は、COLUMNSTORE_ARCHIVE オプションで圧縮されたパーティションを解凍するように指定します。 データを復元すると、列ストア インデックスは、すべての列ストア テーブルに使用される列ストア圧縮で圧縮するに続行します。  
   
  COLUMNSTORE_ARCHIVE  
  **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- クラスター化列ストア インデックスを使用して格納されているテーブルである、列ストア テーブルにのみ適用されます。 COLUMNSTORE_ARCHIVE は、指定したパーティションをより小さなサイズにさらに圧縮します。 これは、保存用や、ストレージの使用量を減らす必要があり、しかも保存と取得に時間をかける余裕があるその他の状況で使用できます。  
+ クラスター化列ストア インデックスを使用して格納されているテーブルである、列ストア テーブルにのみ適用されます。 COLUMNSTORE_ARCHIVE をさらに小さいサイズに指定されたパーティションが圧縮されます。 これは、保存用や、ストレージの使用量を減らす必要があり、しかも保存と取得に時間をかける余裕があるその他の状況で使用できます。  
   
  圧縮の詳細については、次を参照してください。[データ圧縮](../../relational-databases/data-compression/data-compression.md)です。  
   
-パーティションで**(** { \<partition_number_expression > |\<範囲 >}[ **,**... *n*  ] **)** **対象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。  
+パーティションで**(** { \<partition_number_expression > |\<範囲 >}[ **,**...* n * ] **)** **対象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。  
   
- DATA_COMPRESSION 設定を適用するパーティションを指定します。 テーブルがパーティション分割されていない場合に ON PARTITIONS 引数を使用すると、エラーが発生します。 ON PARTITIONS 句を指定しないと、パーティション テーブルのすべてのパーティションに対して DATA_COMPRESSION オプションが適用されます。  
+ DATA_COMPRESSION 設定を適用するパーティションを指定します。 テーブルがパーティション分割されていない場合、ON PARTITIONS 引数には、エラーが生成されます。 ON PARTITIONS 句が指定されていない場合は、パーティション テーブルのすべてのパーティションに DATA_COMPRESSION オプションが適用されます。  
   
 \<partition_number_expression > 次のように指定することができます。  
   
 -   数、パーティションをたとえば提供: ON PARTITIONS (2)。  
-  
 -   ON PARTITIONS (1, 5) などのように、複数のパーティションのパーティション番号をコンマで区切って指定します。  
-  
 -   ON PARTITIONS (2, 4, 6 TO 8) などのように、範囲と個別のパーティションの両方を指定します。  
   
- \<範囲 > パーティション番号など、to で区切って指定できます: ON PARTITIONS (6 TO 8)。  
+\<範囲 > パーティション番号など、to で区切って指定できます: ON PARTITIONS (6 TO 8)。  
   
  さまざまなパーティションにさまざまな種類のデータ圧縮を設定するには、次のように DATA_COMPRESSION オプションを複数回指定します。  
   
-```  
+```sql  
 --For rowstore tables  
 REBUILD WITH   
 (  
@@ -252,20 +245,18 @@ DATA_COMPRESSION = COLUMNSTORE_ARCHIVE ON PARTITIONS (2, 4, 6 TO 8)
  ほとんどの場合、インデックスの再構築では、パーティション インデックスのすべてのパーティションを再構築します。 次のオプションを 1 つのパーティションに適用した場合は、すべてのパーティションの再構築は行われません。  
   
 -   SORT_IN_TEMPDB  
-  
 -   MAXDOP  
-  
 -   DATA_COMPRESSION  
   
 **low_priority_lock_wait**  
  **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- A**スイッチ**またはオンライン インデックス再構築は、このテーブルに対するブロック操作がないとすぐに完了するとします。 *WAIT_AT_LOW_PRIORITY*ことを示す、**スイッチ**または待機することがすぐには、オンライン インデックス再構築操作を完了することはできません。 この操作は優先度の低いロックを保持し、DDL ステートメントと競合するロックを保持する他の操作が続行できるようにします。 省略すると、 **WAIT AT LOW PRIORITY**オプションに相当`WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`です。  
+ A**スイッチ**またはオンライン インデックス再構築は、このテーブルに対するブロック操作がないとすぐに完了するとします。 *WAIT_AT_LOW_PRIORITY*ことを示す、**スイッチ**またはオンライン インデックス再構築操作が直ちに完了できない、待機しています。 操作では、他の操作を続行するための DDL ステートメントと競合するロックを保持する、優先度の低いロックを保持します。 省略すると、 **WAIT AT LOW PRIORITY**オプションに相当`WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`です。  
   
 MAX_DURATION =*時間*[**分**]  
- 待機時間 (分単位で指定された整数値) を**スイッチ**または DDL コマンドを実行するときに取得する必要がありますオンライン インデックス再構築のロックが待機します。 スイッチまたはオンライン インデックス再構築の操作は、直ちに完了しようとします。 操作がブロックされている場合、 **MAX_DURATION**のいずれかの時間、 **ABORT_AFTER_WAIT**動作が実行されます。 **MAX_DURATION**時間は分、および、word では常に**分**を省略できます。  
+ 待機時間 (分単位で指定された整数値) を**スイッチ**DDL コマンドを実行するときに取得する必要があります、オンライン インデックス再構築のロックが待機するか。 スイッチまたはオンライン インデックス再構築の操作は、直ちに完了しようとします。 操作がブロックされている場合、 **MAX_DURATION**のいずれかの時間、 **ABORT_AFTER_WAIT**アクションを実行します。 **MAX_DURATION**時間は分、および、word では常に**分**を省略できます。  
   
-ABOUT_AFTER_WAIT = [**NONE** | **SELF** | **ブロッカー** }]  
+ABORT_AFTER_WAIT = [**NONE** | **SELF** | **ブロッカー** }]  
  なし  
  引き続き、**スイッチ**またはオンラインのインデックス (通常の優先順位を使用して) ロックの優先順位を変更することがなく操作を再構築します。  
   

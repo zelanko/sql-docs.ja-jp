@@ -1,0 +1,174 @@
+---
+title: "SQLGetInfo では、Excel の値が返されます |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Excel driver [ODBC], SQLGetInfo
+- SQLGetInfo function [ODBC], returned values for dBase
+- Jet-based ODBC drivers [ODBC], Excel driver
+- desktop database drivers [ODBC], Excel driver
+- ODBC desktop database drivers [ODBC], Excel driver
+ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
+caps.latest.revision: 6
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: 08933503415698a73fe61ee598e5ce37e2bc2c0d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
+---
+# <a name="sqlgetinfo-returned-values-for-excel"></a>SQLGetInfo では、Excel の値が返されます
+次の表に、C 言語 # を defines、 *fInfoType*引数と、対応する値によって返される**SQLGetInfo**です。 この情報は、表示されている C 言語を渡すことによって取得できます #defines **SQLGetInfo**で、 *fInfoType*引数。 によって返される値の詳細については**SQLGetInfo**を参照してください、 *ODBC プログラマ リファレンス*です。  
+  
+> [!NOTE]  
+>  ここで**SQLGetInfo**ビットマスクを 32 ビット、垂直バー (&#124;) を返します OR 演算を表します。  
+  
+|情報の種類|戻り値|  
+|--------------|--------------------|  
+|SQL_ACCESSIBLE_PROCEDURES|"N"|  
+|SQL_ACCESSIBLE_TABLES|"Y"|  
+|SQL_ACTIVE_ENVIRONMENTS|0|  
+|SQL_AGGREGATE_FUNCTIONS|すべての設定|  
+|SQL_ALTER_DOMAIN|0|  
+|SQL_ALTER_TABLE|0|  
+|SQL_ASYNC_MODE|0|  
+|SQL_BATCH_ROW_COUNT|0|  
+|SQL_BATCH_SUPPORT|0|  
+|SQL_BOOKMARK_PERSISTENCE|[複数の値]|  
+|SQL_CATALOG_LOCATION|SQL_QL_START|  
+|SQL_CATALOG_NAME|"Y"|  
+|SQL_CATALOG_NAME_SEPARATOR|[複数の値]|  
+|SQL_CATALOG_TERM|[複数の値]|  
+|SQL_CATALOG_USAGE|[複数の値]|  
+|SQL_COLLATION_SEQ|""|  
+|SQL_COLUMN_ALIAS|"Y"|  
+|SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NON_|  
+|SQL_CONVERT_BIGINT|0|  
+|SQL_CONVERT_BINARY|[複数の値]|  
+|SQL_CONVERT_BIT|0|  
+|SQL_CONVERT_CHAR|[複数の値]|  
+|SQL_CONVERT_DATE|[複数の値]|  
+|SQL_CONVERT_DECIMAL|0|  
+|SQL_CONVERT_DOUBLE|[複数の値]|  
+|SQL_CONVERT_FLOAT|[複数の値]|  
+|SQL_CONVERT_FUNCTIONS|SQL_FN_CVT_CONVERT|  
+|SQL_CONVERT_INTEGER|[複数の値]|  
+|SQL_CONVERT_LONGVARBINARY|[複数の値]|  
+|SQL_CONVERT_LONGVARCHAR|[複数の値]|  
+|SQL_CONVERT_NUMERIC|[複数の値]|  
+|SQL_CONVERT_REAL|[複数の値]|  
+|SQL_CONVERT_SMALLINT|[複数の値]|  
+|SQL_CONVERT_TIME|[複数の値]|  
+|SQL_CONVERT_TIMESTAMP|[複数の値]|  
+|SQL_CONVERT_TINYINT|[複数の値]|  
+|SQL_CONVERT_VARBINARY|[複数の値]|  
+|SQL_CONVERT_VARCHAR|[複数の値]|  
+|SQL_CORRELATION_NAME|SQL_CN_ANY|  
+|SQL_CREATE_ASSERTION|0|  
+|SQL_CREATE_CHARACTER_SET|0|  
+|SQL_CREATE_COLLATION|0|  
+|SQL_CREATE_DOMAIN|0|  
+|SQL_CREATE_SCHEMA|0|  
+|SQL_CREATE_TABLE|SQL_CT_CREATE_TABLE|  
+|SQL_CREATE_TRANSLATION|0|  
+|SQL_CREATE_VIEW|0|  
+|SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
+|SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
+|SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
+|SQL_DATA_SOURCE_NAME|、Odbc.ini の DSN または""Odbc.ini で DRIVER キーワードが使用する場合|  
+|SQL_DATA_SOURCE_READ_ONLY|"Y"|  
+|SQL_DATABASE_NAME|現在のデータベース ディレクトリ|  
+|SQL_DATETIME_LITERALS|0|  
+|SQL_DBMS_NAME|"EXCEL"|  
+|SQL_DBMS_VER|[複数の値]|  
+|SQL_DDL_INDEX|0|  
+|SQL_DEFAULT_TXN_ISOLATION|0|  
+|SQL_DESCRIBE_PARAMETER|0|  
+|SQL_DRIVER_HDBC|ドライバー マネージャーによって処理。|  
+|SQL_DRIVER_HENV|ドライバー マネージャーによって処理。|  
+|SQL_DRIVER_HLIB|ドライバー マネージャーによって処理。|  
+|SQL_DRIVER_HSTMT|ドライバー マネージャーによって処理。|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_ODBC_VER|"3.51.0000"|  
+|SQL_DRIVER_VER|"4.00*nnnn*"(* nnnn *ビルド日を指定します)。|  
+|SQL_DROP_ASSERTION|0|  
+|SQL_DROP_CHARACTER_SET|0|  
+|SQL_DROP_COLLATION|0|  
+|SQL_DROP_DOMAIN|0|  
+|SQL_DROP_SCHEMA|0|  
+|SQL_DROP_TABLE|SQL_DT_DROP_TABLE|  
+|SQL_DROP_TRANSLATION|0|  
+|SQL_DROP_VIEW|SQL_DV_DROP_VIEW|  
+|SQL_EXPRESSIONS_IN_ORDERBY|"Y"|  
+|SQL_FILE_USAGE|[複数の値]|  
+|SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_CA1_NEXT、|  
+|SQL_GETDATA_EXTENSIONS|[複数の値]|  
+|SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
+|SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"'"(後ろ向き引用符)|  
+|SQL_KEYWORDS|[複数の値]|  
+|SQL_LIKE_ESCAPE_CLAUSE|"N"|  
+|SQL_MAX_BINARY_LITERAL_LEN|255|  
+|SQL_MAX_CATALOG_NAME_LEN|66|  
+|SQL_MAX_CHAR_LITERAL_LEN|[複数の値]|  
+|SQL_MAX_COLUMN_NAME_LEN|[複数の値]|  
+|SQL_MAX_COLUMNS_IN_GROUP_BY|10|  
+|SQL_MAX_COLUMNS_IN_INDEX|0|  
+|SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
+|SQL_MAX_COLUMNS_IN_SELECT|255|  
+|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> Microsoft Excel ドライバーを使用して、場合に、CREATE TABLE ステートメントが 256 列を許可する可能性がありますが、255 列数の上限がまだ有効では、256 列に挿入が失敗します。|  
+|SQL_MAX_CONCURRENT_ACTIVITIES|0|  
+|SQL_MAX_CURSOR_NAME_LEN|64|  
+|SQL_MAX_DRIVER_CONNECTIONS|64|  
+|SQL_MAX_INDEX_SIZE|0|  
+|SQL_MAX_PROCEDURE_NAME_LEN|0|  
+|SQL_MAX_ROW_SIZE|65535|  
+|SQL_MAX_ROW_SIZE_INCLUDES_LONG|"Y"|  
+|SQL_MAX_SCHEMA_NAME_LEN|0|  
+|SQL_MAX_STATEMENT_LEN|65000|  
+|SQL_MAX_TABLE_NAME_LEN|[複数の値]|  
+|SQL_MAX_TABLES_IN_SELECT|16|  
+|SQL_MAX_USER_NAME_LEN|0|  
+|SQL_MULT_RESULT_SETS|"N"|  
+|SQL_MULTIPLE_ACTIVE_TXN|"Y"|  
+|SQL_NEED_LONG_DATA_LEN|"N"|  
+|SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
+|SQL_NULL_COLLATION|SQL_NC_LOW|  
+|SQL_NUMERIC_FUNCTIONS|[複数の値]|  
+|SQL_ODBC_SAG_CLI_ 準拠|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SQL_INTEGRITY|"N"|  
+|SQL_ODBC_VER|ドライバー マネージャーから|  
+|SQL_OJ_CAPABILITIES|[複数の値]|  
+|SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
+|SQL_OUTER_JOINS|"Y"|  
+|SQL_PROCEDURE_TERM|""|  
+|SQL_PROCEDURES|"N"|  
+|SQL_QUOTED_IDENTIFIER_CASE|SQL_IC_MIXED|  
+|SQL_ROW_UPDATES|"N"|  
+|SQL_SCHEMA_TERM|""|  
+|SQL_SCHEMA_USAGE|0|  
+|SQL_SCROLL_OPTIONS|[複数の値]|  
+|SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
+|SQL_SERVER_NAME|"EXCEL"|  
+|SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_STRING_FUNCTIONS|[複数の値]|  
+|SQL_SUBQUERIES|[複数の値]|  
+|SQL_SYSTEM_FUNCTIONS|0|  
+|SQL_TABLE_TERM|"TABLE"|  
+|SQL_TIMEDATE_ADD_INTERVALS|0|  
+|SQL_TIMEDATE_DIFF_INTERVALS|0|  
+|SQL_TIMEDATE_FUNCTIONS|[複数の値]|  
+|SQL_TXN_CAPABLE|SQL_TC_NONE|  
+|SQL_TXN_ISOLATION_OPTION|0|  
+|SQL_UNION|[複数の値]|  
+|SQL_USER_NAME|""|
