@@ -22,15 +22,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 3bf6c76a72b4414163b68f4cbdd00756b5f4f0bf
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: eab4b7f0ac099d615df1eda831adf04dfd29a7f6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="install-sql-server"></a>SQL Server をインストールする
 
- > 以前のバージョンの SQL Server に関連するコンテンツについては、「[SQL Server 2014 のインストール](https://msdn.microsoft.com/en-US/library/bb500395(SQL.120).aspx)」を参照してください。
+ > 以前のバージョンの SQL Server に関連するコンテンツについては、「[SQL Server 2014 のインストール](https://msdn.microsoft.com/library/bb500395(SQL.120).aspx)」を参照してください。
 
  [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] は 64 ビット アプリケーションでのみ使用できるようになりました。 SQL Server の入手およびインストールの方法に関する重要な詳細情報を次に示します。
 

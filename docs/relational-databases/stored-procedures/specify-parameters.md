@@ -19,11 +19,11 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9bd44a94f0025524ede2abf189f0dec6944090dc
+ms.translationtype: HT
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: aab54d4c1005a11e9c947a02199eec63fb289b22
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="specify-parameters"></a>パラメーターの指定
@@ -67,10 +67,10 @@ GO
  パラメーターに明示的に名前を付け、プロシージャ呼び出しで各パラメーターに適切な値を代入することで、パラメーターを任意の順序で指定できます。 たとえば、 **my_proc** というプロシージャが **@first**、 **@second**、および **@third**という 3 つのパラメーターを必要とする場合、プロシージャに渡される値は、以下のようにパラメーター名に代入できます。 `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]  
->  1 つのパラメーター値を **@parameter =** *value* の形式で指定した場合は、後続のパラメーターもすべてこの形式で指定する必要があります。 パラメーター値を **@parameter =** *value* の形式で渡さない場合は、CREATE PROCEDURE ステートメント内のパラメーターと同じ順序 (左から右) で値を指定する必要があります。  
+>  1 つのパラメーター値を **@parameter = ***value* の形式で指定した場合は、後続のパラメーターもすべてこの形式で指定する必要があります。 パラメーター値を **@parameter = ***value* の形式で渡さない場合は、CREATE PROCEDURE ステートメント内のパラメーターと同じ順序 (左から右) で値を指定する必要があります。  
   
 > [!WARNING]  
->  **@parameter =** *value* の形式で渡すパラメーターのスペルが間違っていると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってエラーが生成され、プロシージャは実行されません。  
+>  **@parameter = ***value* の形式で渡すパラメーターのスペルが間違っていると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってエラーが生成され、プロシージャは実行されません。  
   
 ## <a name="specifying-parameter-data-types"></a>パラメーターのデータ型の指定  
  パラメーターを CREATE PROCEDURE ステートメントで宣言する場合は、パラメーターのデータ型を定義する必要があります。 パラメーターのデータ型により、プロシージャの呼び出し時にパラメーターとして指定できる値の型と範囲が決まります。 たとえば、 **tinyint** データ型のパラメーターを定義した場合は、そのパラメーターに渡す値として 0 ～ 255 の範囲の数値だけを指定できます。 指定したデータ型と互換性がない値を使用してプロシージャを実行すると、エラーが返されます。  
@@ -89,7 +89,7 @@ GO
   
  パラメーターに対して既定値として適切に値を指定できない場合は、NULL を既定値として指定してください。 パラメーターの値なしでプロシージャを実行する場合は、プロシージャからカスタマイズされたメッセージが返されるようにすることをお勧めします。  
   
- 次の例で、 `usp_GetSalesYTD` という 1 つの入力パラメーターを伴う `@SalesPerson`プロシージャを作成します。 このパラメーターには既定値として NULL が割り当てられています。 `@SalesPerson` パラメーターに値を指定せずにプロシージャを実行した場合にカスタム エラー メッセージを返すエラー処理ステートメントで NULL を使用します。  
+ 次の例で、 `uspGetSalesYTD` という 1 つの入力パラメーターを伴う `@SalesPerson`プロシージャを作成します。 このパラメーターには既定値として NULL が割り当てられています。 `@SalesPerson` パラメーターに値を指定せずにプロシージャを実行した場合にカスタム エラー メッセージを返すエラー処理ステートメントで NULL を使用します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -123,14 +123,14 @@ GO
   
 ```  
 -- Run the procedure without specifying an input value.  
-EXEC Sales.usp_GetSalesYTD;  
+EXEC Sales.uspGetSalesYTD;  
 GO  
 -- Run the procedure with an input value.  
-EXEC Sales.usp_GetSalesYTD N'Blythe';  
+EXEC Sales.uspGetSalesYTD N'Blythe';  
 GO  
 ```  
   
- 既定値が指定されているパラメーターは省略できますが、パラメーターの一覧を切り捨てることしかできません。 たとえば、プロシージャに 5 つのパラメーターがある場合は、4 番目と 5 番目のパラメーターを両方とも省略できます。 ただし、**@parameter =** *value* の形式でパラメーターを指定しない限り、4 番目のパラメーターを省略して 5 番目のパラメーターを指定することはできません。  
+ 既定値が指定されているパラメーターは省略できますが、パラメーターの一覧を切り捨てることしかできません。 たとえば、プロシージャに 5 つのパラメーターがある場合は、4 番目と 5 番目のパラメーターを両方とも省略できます。 ただし、**@parameter = ***value* の形式でパラメーターを指定しない限り、4 番目のパラメーターを省略して 5 番目のパラメーターを指定することはできません。  
   
 ## <a name="specifying-parameter-direction"></a>パラメーターの方向の指定  
  パラメーターの方向は、入力または出力です。入力の場合は、値がプロシージャの本体に渡されます。出力の場合は、プロシージャが呼び出し元のプログラムに値を返します。 既定値は入力パラメーターです。  
@@ -171,7 +171,7 @@ GO
  `usp_GetList` を実行し、原価が $700 未満である [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 製品 (自転車) の一覧を返します。 ここではフロー制御言語と共に OUTPUT パラメーターの **@cost** および **@compareprices** を使用して、 **[メッセージ]** ウィンドウにメッセージを返します。  
   
 > [!NOTE]  
->  プロシージャの作成中にも変数の使用中にも、OUTPUT 変数を定義する必要があります。 パラメーター名と変数名が一致する必要はありません。 ただし、データ型とパラメーターの位置は一致する必要があります (**@listprice =** *variable* が使用されている場合は除きます)。  
+>  プロシージャの作成中にも変数の使用中にも、OUTPUT 変数を定義する必要があります。 パラメーター名と変数名が一致する必要はありません。 ただし、データ型とパラメーターの位置は一致する必要があります (**@listprice = ***variable* が使用されている場合は除きます)。  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  
@@ -210,3 +210,4 @@ These items can be purchased for less than $700.00.
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   
+
