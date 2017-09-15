@@ -1,7 +1,7 @@
 ---
 title: "sql_variant 型 (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/23/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -25,18 +25,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4eb946d5b6ed5a9c6d33789166327bd2dd25d7c1
+ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
+ms.openlocfilehash: 014cf6a2859bc60b4366418363681b1cd53dc5c6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 このデータ型には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートしている各種データ型の値が格納されます。
-  
-**適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658))、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -70,7 +68,7 @@ ODBC でサポートされていません**sql_variant**です。 したがっ�
   
 |データ型階層|データ型ファミリ|  
 |---|---|
-|**sql_variant**|**sql_variant**|  
+|**sql_variant**|sql_variant |  
 |**datetime2**|日付と時刻|  
 |**datetimeoffset**|日付と時刻|  
 |**datetime**|日付と時刻|  
@@ -93,7 +91,7 @@ ODBC でサポートされていません**sql_variant**です。 したがっ�
 |**char**|Unicode|  
 |**varbinary**|Binary|  
 |**[バイナリ]**|Binary|  
-|**uniqueidentifier**|**一意識別子**|  
+|**uniqueidentifier**|一意識別子 |  
   
 次の規則を適用する**sql_variant**比較。
 -   ときに**sql_variant**異なる基本データ型の値を比較し、基本データ型が、別のデータ型ファミリ、階層グラフでデータ型ファミリがより高い値が 2 つの値の大きいと見なされます。  
@@ -115,7 +113,44 @@ ODBC でサポートされていません**sql_variant**です。 したがっ�
 |**sql_variant**|**geography**|  
 |**hierarchyid**|**geometry**|  
 |ユーザー定義データ型|**datetimeoffset**|  
+
+## <a name="examples"></a>使用例  
+
+### <a name="a-using-a-sqlvariant-in-a-table"></a>A. テーブルで、sql_variant 型の使用  
+ 次の例では、sql_variant データ型を持つテーブルを作成します。 例を取得し、`SQL_VARIANT_PROPERTY`については、`colA`値`46279.1`場所`colB`  =`1689`こと、`tableA`が`colA`型である`sql_variant`と`colB`.  
   
+```sql    
+CREATE   TABLE tableA(colA sql_variant, colB int)  
+INSERT INTO tableA values ( cast (46279.1 as decimal(8,2)), 1689)  
+SELECT   SQL_VARIANT_PROPERTY(colA,'BaseType') AS 'Base Type',  
+         SQL_VARIANT_PROPERTY(colA,'Precision') AS 'Precision',  
+         SQL_VARIANT_PROPERTY(colA,'Scale') AS 'Scale'  
+FROM      tableA  
+WHERE      colB = 1689  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]これら 3 つの値の各ことに注意してください、 **sql_variant**です。  
+  
+```  
+Base Type    Precision    Scale  
+---------    ---------    -----  
+decimal      8           2  
+  
+(1 row(s) affected)  
+```  
+  
+### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. 変数として、sql_variant 型の使用   
+ 次の例では、sql_variant データ型を使用して変数を作成し、取得し、`SQL_VARIANT_PROPERTY`という名前の変数に関する情報@v1です。  
+  
+```sql    
+DECLARE @v1 sql_variant;  
+SET @v1 = 'ABC';  
+SELECT @v1;  
+SELECT SQL_VARIANT_PROPERTY(@v1, 'BaseType');  
+SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');  
+```    
+
+
 ## <a name="see-also"></a>参照
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [SQL_VARIANT_PROPERTY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/sql-variant-property-transact-sql.md)

@@ -1,0 +1,62 @@
+---
+title: "updateFloat (int, float) メソッド |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- SQLServerResultSet.updateFloat (int, float)
+apilocation:
+- sqljdbc.jar
+apitype: Assembly
+ms.assetid: c9ddcd7d-1dd4-491a-99ff-6cce7f67a73b
+caps.latest.revision: 8
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: 323cdea02e2f97f047b2e001528d12a69504e3af
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
+---
+# <a name="updatefloat-method-int-float"></a>updateFloat (int, float) メソッド
+[!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
+
+  指定された列の更新、 **float**列インデックスを指定された値。  
+  
+## <a name="syntax"></a>構文  
+  
+```  
+  
+public void updateFloat(int index,  
+                        float x)  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ *インデックス*  
+  
+ **Int**列インデックスを示すです。  
+  
+ *x*  
+  
+ A **float**値。  
+  
+## <a name="exceptions"></a>例外  
+ [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
+  
+## <a name="remarks"></a>解説  
+ この updateFloat メソッドは、java.sql.ResultSet インターフェイスの updateFloat メソッドによって指定されます。  
+  
+## <a name="see-also"></a>参照  
+ [updateFloat メソッド & #40 です。SQLServerResultSet &#41;](../../../connect/jdbc/reference/updatefloat-method-sqlserverresultset.md)   
+ [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
+ [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
+  
+  

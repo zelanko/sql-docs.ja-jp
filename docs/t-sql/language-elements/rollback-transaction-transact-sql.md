@@ -1,7 +1,7 @@
 ---
 title: "ROLLBACK TRANSACTION (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 06/10/2016
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,10 +29,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e31f62560b4061610c0d3c0ec3147110a3e84644
+ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
+ms.openlocfilehash: 7a7cf37490b1dab17a061104ab14b5d11d26632d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
@@ -46,7 +46,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 ROLLBACK { TRAN | TRANSACTION }   
      [ transaction_name | @tran_name_variable  
      | savepoint_name | @savepoint_variable ]   
@@ -55,7 +54,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>引数  
  *では無視*  
- BEGIN TRANSACTION においてトランザクションに割り当てられた名前です。 *では無視*識別子の規則に従う必要がありますが、トランザクション名の最初の 32 文字だけが使用されます。 トランザクションを入れ子にする場合*では無視*最も外側の BEGIN TRANSACTION ステートメントから名前にする必要があります。 *では無視*は常に大文字と小文字、場合でも、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大文字小文字は区別されません。  
+ BEGIN TRANSACTION においてトランザクションに割り当てられた名前です。 *では無視*識別子の規則に従う必要がありますが、トランザクション名の最初の 32 文字だけが使用されます。 トランザクションを入れ子にする場合*では無視*最も外側の BEGIN TRANSACTION ステートメントから名前にする必要があります。 *では無視*、大文字小文字を区別は常に場合でも、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]小文字は区別されません。  
   
  **@***tran_name_variable*  
  有効なトランザクション名を格納しているユーザー定義変数の名前を指定します。 変数を宣言する必要があります、 **char**、 **varchar**、 **nchar**、または**nvarchar**データ型。  
@@ -74,7 +73,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
  ROLLBACK TRANSACTION が参照することはできません、 *savepoint_name* BEGIN DISTRIBUTED TRANSACTION で明示的に開始された分散トランザクションにまたはローカル トランザクションのエスカレートします。  
   
- COMMIT TRANSACTION ステートメントの実行後は、トランザクションをロールバックできません。ただし、COMMIT TRANSACTION が、ロールバックするトランザクション内に含まれている入れ子にされたトランザクションに関連付けられている場合を除きます。 この場合、COMMIT TRANSACTION を発行していたとしても、入れ子にされたトランザクションもロールバックされます。  
+ COMMIT TRANSACTION ステートメントの実行後は、トランザクションをロールバックできません。ただし、COMMIT TRANSACTION が、ロールバックするトランザクション内に含まれている入れ子にされたトランザクションに関連付けられている場合を除きます。 このインスタンスで、入れ子になったトランザクションはロールバックの COMMIT TRANSACTION を発行した場合でもされます。  
   
  トランザクションの中で、同じセーブポイント名を重複して指定することができます。しかし、重複するセーブポイント名を使用する ROLLBACK TRANSACTION は、そのセーブポイント名を使用する最新の SAVE TRANSACTION にしかロールバックできません。  
   
@@ -89,11 +88,11 @@ ROLLBACK { TRAN | TRANSACTION }
   
 -   トリガーを起動したステートメントの後で、バッチ内のステートメントは実行されません。  
   
- @@TRANCOUNT自動コミット モードにある場合でも、トリガーに入るときに、1 が加算されます。 つまり、トリガーは暗黙の入れ子にされたトランザクションとして扱われます。  
+@@TRANCOUNT自動コミット モードにある場合でも、トリガーに入るときに、1 が加算されます。 つまり、トリガーは暗黙の入れ子にされたトランザクションとして扱われます。  
   
- ストアド プロシージャで ROLLBACK TRANSACTION ステートメントを実行しても、そのプロシージャを呼び出したバッチ内にある次のステートメントには影響しません。 トリガーの中の ROLLBACK TRANSACTION ステートメントは、トリガーを起動したステートメントを含むバッチを終了します。バッチ内の以降のステートメントは実行されません。  
+ストアド プロシージャで ROLLBACK TRANSACTION ステートメントを実行しても、そのプロシージャを呼び出したバッチ内にある次のステートメントには影響しません。 トリガーの中の ROLLBACK TRANSACTION ステートメントは、トリガーを起動したステートメントを含むバッチを終了します。バッチ内の以降のステートメントは実行されません。  
   
- カーソル上での ROLLBACK の効果は、次の 3 つのルールによって定義されます。  
+カーソル上での ROLLBACK の効果は、次の 3 つのルールによって定義されます。  
   
 1.  CURSOR_CLOSE_ON_COMMIT が ON の場合、ROLLBACK はオープンしているすべてのカーソルをクローズしますが、その割り当ては解除しません。  
   
@@ -108,21 +107,15 @@ ROLLBACK { TRAN | TRANSACTION }
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、名前付きトランザクションをロールバックした場合の影響を示しています。  
+ 次の例は、名前付きトランザクションをロールバックした場合の影響を示しています。 テーブルを作成すると、次のステートメント名前付きのトランザクションを開始、2 つの行を挿入し、変数に名前付きトランザクションをロールバックして@TransactionNameです。 名前付きのトランザクションの外部で別のステートメントでは、2 つの行を挿入します。 クエリでは、前のステートメントの結果を返します。   
   
-```  
+```sql    
 USE tempdb;  
 GO  
-CREATE TABLE ValueTable ([value] int;)  
+CREATE TABLE ValueTable ([value] int);  
 GO  
   
 DECLARE @TransactionName varchar(20) = 'Transaction1';  
-  
---The following statements start a named transaction,  
---insert two rows, and then roll back  
---the transaction named in the variable @TransactionName.  
---Another statement outside of the named transaction inserts two rows.  
---The query returns the results of the previous statements.  
   
 BEGIN TRAN @TransactionName  
        INSERT INTO ValueTable VALUES(1), (2);  
@@ -133,13 +126,15 @@ INSERT INTO ValueTable VALUES(3),(4);
 SELECT [value] FROM ValueTable;  
   
 DROP TABLE ValueTable;  
-  
---Results  
---value  
--------------  
---3  
---4  
 ```  
+[!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]  
+```  
+value  
+-----   
+3    
+4  
+```  
+  
   
 ## <a name="see-also"></a>参照  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   

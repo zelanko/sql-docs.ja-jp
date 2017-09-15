@@ -1,0 +1,57 @@
+---
+title: "UPDATE、DELETE、および INSERT ステートメント |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- updating data [ODBC], about updating data
+- DELETE [ODBC]
+- UPDATE [ODBC]
+- INSERT [ODBC]
+- data updates [ODBC], about data updates
+ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
+caps.latest.revision: 5
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: b150288c113b1aebf92abedbd6f7eabd0b4b7d24
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
+---
+# <a name="update-delete-and-insert-statements"></a>UPDATE、DELETE、および INSERT ステートメント
+SQL ベースのアプリケーションを実行してテーブルに変更を加える、**更新**、**削除**、および**挿入**ステートメントです。 これらのステートメントでは、Minimum SQL 文法の準拠レベルの一部であるし、すべてのドライバーとデータ ソースでサポートする必要があります。  
+  
+ これらのステートメントの構文です。  
+  
+ **更新***テーブル名  *  
+  
+ **設定***列識別子* ** = ** {*式*& #124 です。**NULL**}  
+  
+ [**、** *列識別子* ** = ** {*式*& #124 です。**NULL**}].  
+  
+ [**場所***検索条件*]  
+  
+ **DELETE FROM** *テーブル名*[**場所***検索条件*]  
+  
+ **INSERT INTO** *テーブル名*[**(***列識別子*[**、** *列識別子*]...**)**]  
+  
+ {*クエリ仕様*& #124 です。**値 (***挿入値*[**、** *挿入値*].**)**}  
+  
+ なお、*クエリ仕様*要素は、コアと拡張 SQL 文法とするでのみ有効、*式*と*検索条件*要素の詳細になりますコアと拡張 SQL 文法で複雑です。  
+  
+ などの他の SQL ステートメント**更新**、**削除**、および**挿入**ステートメントはよりは多くの場合、パラメーターが使用すると、効率的です。 たとえば、次のステートメントを準備および繰り返し実行して、Orders テーブルの複数の行を挿入します。  
+  
+```  
+INSERT INTO Orders (PartID, Description, Price) VALUES (?, ?, ?)  
+```  
+  
+ パラメーター値の配列を渡すことによって、この効率性を強化できます。 ステートメントのパラメーターおよびパラメーター値の配列の詳細については、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)です。
