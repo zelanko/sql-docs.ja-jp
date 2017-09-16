@@ -335,7 +335,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="RotateTextBox"></a>9.(省略可) テキスト ボックスを 270 度回転させる  
 マトリックスを含むレポートは、実行すると、水平方向と垂直方向に拡張されます。 テキストボックスを垂直方向に、つまり 270 度回転させると、水平方向のスペースを節約できます。 表示レポートの幅は狭くなり、Microsoft Word などの形式にエクスポートした場合は、印刷ページ内に収まる可能性が高くなります。  
   
-テキスト ボックスでも、テキストを水平方向または垂直方向 (上から下) に表示できます。 詳細については、次を参照してください。[テキスト ボックス & #40 です。レポート ビルダーおよび SSRS &#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
+テキスト ボックスでも、テキストを水平方向または垂直方向 (上から下) に表示できます。 詳細については、次を参照してください。[テキスト ボックス &#40;です。レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
   
 ### <a name="to-rotate-text-box-270-degrees"></a>テキスト ボックスを 270 度回転させるには  
   
