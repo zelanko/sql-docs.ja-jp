@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 の新機能 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/25/2017
+ms.date: 08/31/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,16 +15,16 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 8d10f9e80eb1cc0c2495042e03ff746a017f8e2a
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: 0e254f84039defcc4a1e56cd966e8607efc92503
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
 SQL Server 2017 は、SQL Server をプラットフォームとする方向に向けた大きな一歩を表します。そのプラットフォームは、SQL Server、Linux、Linux ベースの Docker コンテナー、および Windows の機能を利用することによって、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムの選択肢を提供します。 このトピックでは、最新の SQL Server 2017 リリース候補 (RC2、2017 年 8 月) およびコミュニティ テクニカル プレビュー (CTP) リリースでの特定の機能領域について、新機能をまとめて示します。
 
-[![Evaluation Center からダウンロードする](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  **お試しください:** [最新の SQL Server 2017 リリース (RC2、2017 年 8 月) をダウンロードする](http://go.microsoft.com/fwlink/?LinkID=829477)。
+[![Evaluation Center からダウンロードする](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) ** お試しください:** [最新の SQL Server 2017 リリース (RC2、2017 年 8 月) をダウンロードする](http://go.microsoft.com/fwlink/?LinkID=829477)。
 このリリースには、バグの修正とパフォーマンスの改善が含まれています。
 
 >**Linux での SQL Server の実行** 詳細については、「[SQL Server ドキュメントの再編成](https://docs.microsoft.com/sql/linux/)」を参照してください。
@@ -34,6 +34,7 @@ SQL Server 2017 には多くの新しいデータベース エンジン機能、
 - CTP 2.0 で説明されている `clr strict security` 機能の回避策として、**CLR アセンブリ**をホワイトリストに追加できるようになりました。 信頼できるアセンブリ (RC1) のホワイトリストをサポートするために、[sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)、および [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) が追加されました。  
 - **再開可能なオンライン インデックス リビルド**は、障害 (レプリカへのフェールオーバーや、ディスク領域不足など) 発生後、一時停止した場所からオンライン インデックス リビルド操作を再開します。または、一時停止し、オンライン インデックス リビルド操作を後から再開します。 「[ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)」と「[オンライン インデックス操作のガイドライン](../relational-databases/indexes/guidelines-for-online-index-operations.md)」を参照してください。 (CTP 2.0)
 - ALTER DATABASE SCOPED CONFIGURATION の **IDENTITY_CACHE** オプションを使用すると、サーバーが予期せず再起動したときやセカンダリ サーバーにフェールオーバーしたときに、ID 列の値のギャップを回避できます。 「[ALTER DATABASE SCOPED CONFIGURATION (ALTER データベース スコープ ベースの構成)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。 (CTP 2.0)
+- 新世代のクエリ処理では、最適化戦略がアプリケーション ワークロードの実行時条件に適用される点が改善されています。 **アダプティブ クエリ処理**機能ファミリのこの最初のバージョンでは、3 つの新しい改善点があります。**バッチ モード適応型結合**、**バッチ モード メモリ許可フィードバック**、そして複数ステートメントのテーブル値関数の**インターリーブ実行**です。  「[Microsoft SQL データベースでのアダプティブ クエリの処理](../relational-databases/performance/adaptive-query-processing.md)」を参照してください。
 - **自動データベース チューニング**は、潜在的なクエリ パフォーマンスの問題に関する洞察を提供し、解決策を推奨して、特定された問題を自動的に解決できます。 「[自動調整](../relational-databases/automatic-tuning/automatic-tuning.md)」を参照してください。 (CTP 2.0)
 - 多対多のリレーションシップをモデル化する新しい**グラフ データベース機能**には、ノードとエッジ テーブルを作成するための新しい [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 構文と、クエリ用の [MATCH](../t-sql/queries/match-sql-graph.md) キーワードが含まれています。 「[Graph Processing with SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md)」 (SQL Server 2017 でのグラフ処理) を参照してください。 (CTP 2.0)
 - CLR アセンブリのセキュリティを強化する `clr strict security` という sp_configure オプションが既定で有効になります。 「[CLR strict security](../database-engine/configure-windows/clr-strict-security.md)」 (CLR の厳格なセキュリティ) を参照してください。 (CTP 2.0)
@@ -66,7 +67,7 @@ SQL Server 2017 には多くの新しいデータベース エンジン機能、
     -   SSIS カタログに、SSIS パッケージを実行する既定のモードを指定するための新しいグローバル プロパティが追加されました。
 - 新しい **SSIS の Scale Out** 機能で、実行をトリガーするときに **Use32BitRuntime** パラメーターを使用できるようになりました。 (CTP 2.1)
 - SQL Server 2017 Integration Services (SSIS) で **Linux 上の SQL Server** がサポートされ、新しいパッケージでは、コマンド ラインから Linux で SSIS パッケージを実行できます。 詳細については、[SSIS の Linux サポートをお知らせするブログの投稿](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)を参照してください。 (CTP 2.1)
-- 新しい **SSIS の Scale Out**  機能を使用すると、複数のコンピューターでの SSIS の実行が大幅に簡単になります。 「[Integration Services Scale Out](~/integration-services/scale-out/integration-services-ssis-scale-out.md)」を参照してください。(CTP 1.0)
+- 新しい **SSIS の Scale Out ** 機能を使用すると、複数のコンピューターでの SSIS の実行が大幅に簡単になります。 「[Integration Services Scale Out](~/integration-services/scale-out/integration-services-ssis-scale-out.md)」を参照してください。(CTP 1.0)
 - OData ソースと OData 接続マネージャーで、Microsoft Dynamics AX Online と Microsoft Dynamics CRM Online の OData フィードに接続できるようになりました。 (CTP 1.0)
 
 詳細については、「[SQL Server 2017 の Integration Services の新機能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)」を参照してください。
@@ -112,14 +113,9 @@ SQL Server での開発者は、オープン ソース エコシステムで入�
 
 詳細については、「[What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)」 (SQL Server Machine Learning Services の新機能) を参照してください。
 
-##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) ヘルプの参照 
-- [スタック オーバーフロー (tag sql-server) - SQL 開発に関する質問](http://stackoverflow.com/questions/tagged/sql-server)
-- [MSDN フォーラム - 技術的な質問](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-- [Microsoft Connect - バグ報告と機能依頼](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - SQL Server に関する一般的なディスカッション](https://www.reddit.com/r/SQLServer/)
-- [Microsoft SQL Server ライセンス条項および情報](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
-
 ## <a name="next-steps"></a>次の手順
 - [SQL Server 2017 リリース ノート](sql-server-2017-release-notes.md)を参照してください。
 - 「[Linux 上の SQL Server 2017 の新機能](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)」を参照してください。
 - [SQL Server 2016 の新機能](what-s-new-in-sql-server-2016.md)を確認してください。
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

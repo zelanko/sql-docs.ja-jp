@@ -1,12 +1,12 @@
 ---
-title: "チュートリアル : SQL Server Management Studio | Microsoft Docs"
+title: "チュートリアル: SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: 
-ms.date: 06/02/2016
-ms.prod: sql-server-2016
+ms.date: 08/30/2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- database-engine
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,47 +23,46 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: f632115506e3485e9d84476a95b0606f2c859e83
+ms.sourcegitcommit: 5aa858aff03e93db9db36b8caa710cc3a3b874ca
+ms.openlocfilehash: dde887f6e0999c5ebc107a300c33981a38ec7034
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/31/2017
 
 ---
 # <a name="tutorial-sql-server-management-studio"></a>チュートリアル : SQL Server Management Studio
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のチュートリアルでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インフラストラクチャを管理するための統合環境について説明します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを構成、監視、および管理するためのグラフィカル インターフェイスを提供します。 さらに、データベースなどの、アプリケーションで使用されるデータ層コンポーネントを配置、監視、およびアップグレードすることもできます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、スクリプトを編集およびデバッグするための [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX、XML の各言語エディターも提供します。  
+SQL Server Management Studio (SSMS) のチュートリアルでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインフラストラクチャを管理するための統合環境について説明します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを構成、監視、および管理するためのグラフィカル インターフェイスを提供します。 さらに、データベースなどの、アプリケーションで使用されるデータ層コンポーネントを配置、監視、およびアップグレードすることもできます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、スクリプトを編集およびデバッグするための [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX、XML の各言語エディターも提供します。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
-このチュートリアルでは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] での情報の操作方法と機能の活用方法を学習します。 このチュートリアルでは、ダウンロード センターからダウンロードした無料の [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用します。  
+このチュートリアルでは、SSMS での情報の操作方法とその機能の活用方法を学習します。
   
-[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] に慣れ親しむには、実践的な経験を積むのが最も効果的です。 このチュートリアルでは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のコンポーネントを管理する方法と、頻繁に使用する機能へのアクセス方法について説明します。  
+SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的です。 このチュートリアルでは、SSMS のコンポーネントを管理する方法と、頻繁に使用する機能へのアクセス方法について説明します。  
   
 このチュートリアルは、次の 3 つのレッスンで構成されています。  
   
-[レッスン 1 : SQL Server Management Studio での基本操作](../../tools/sql-server-management-studio/lesson-1-basic-navigation-in-sql-server-management-studio.md)  
+[レッスン 1 : SQL Server Management Studio での基本操作](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
 このレッスンでは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のコンポーネントを使用する方法、環境レイアウトを再構成する方法、および既定のレイアウトを復元する方法を学習します。  
   
-[レッスン 2 : Transact-SQL の記述](../../tools/sql-server-management-studio/lesson-2-writing-transact-sql.md)  
-このレッスンでは、クエリ エディターを開く方法、コードの管理方法、クエリ エディターのその他の新機能を使用する方法を学習します。  
+[レッスン 2 : Transact-SQL の記述](lesson-2-writing-transact-sql.md)  
+このレッスンでは、クエリ エディターを開く方法、コードの管理方法、クエリ エディターのその他の機能を使用する方法を学習します。  
   
-[レッスン 3: テンプレート、ソリューション、およびスクリプト プロジェクトの操作](../../tools/sql-server-management-studio/lesson-3-working-with-templates-solutions-and-script-projects.md)  
+[レッスン 3: テンプレート、ソリューション、およびスクリプト プロジェクトの操作](lesson-3-working-with-templates-solutions-and-script-projects.md)  
 このレッスンでは、テンプレートを使用して、スクリプトをソリューションやプロジェクトにまとめる方法を学習します。  
   
 ## <a name="requirements"></a>必要条件  
-このチュートリアルは、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]には慣れていないが、データベースの概念と [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語を理解している、熟練のデータベース管理者およびデータベース開発者を対象としています。  
+このチュートリアルは、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] には慣れていないが、データベースの概念と [!INCLUDE[tsql](../../includes/tsql-md.md)] を理解している、熟練のデータベース管理者およびデータベース開発者を対象としています。  
   
-このチュートリアルを使用するには、システムに以下のコンポーネントがインストールされている必要があります。  
+このチュートリアルを使用するには、以下のコンポーネントがインストールされている必要があります。  
+
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以降のバージョンおよび [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベース。 セキュリティ強化のため、既定ではサンプル データベースがインストールされません。 サンプル データベースをインストールするには、「 [SQL Server のサンプルとサンプル データベースのインストール](http://sqlserversamples.codeplex.com)」を参照してください。  
-  
--   最新バージョンの [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) をダウンロード センターからダウンロードしてください。  
-  
--   Internet Explorer 9.0 以降  
+-   最新バージョンの [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) をインストールします。  
+-   AdventureWorks サンプル データベースが含まれる SQL Server 2016 以降のバージョン。 AdventureWorks サンプル データベースをインストールするには、「[AdventureWorks2014](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2014)」を参照して AdventureWorks2014 (OLTP) データベースをインストールしてください。  
+
   
 ## <a name="see-also"></a>参照  
 [データベース エンジンのチュートリアル](../../relational-databases/database-engine-tutorials.md)  
