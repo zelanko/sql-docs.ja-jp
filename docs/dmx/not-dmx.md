@@ -56,9 +56,9 @@ NOT Expression1
 |FALSE|TRUE|  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [論理演算子 & #40; DMX & #41;](../dmx/operators-logical.md)   
- [演算子 (&) #40";"DMX"&"#41;](../dmx/operators-dmx.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; 演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [論理演算子 &#40;DMX&#41;](../dmx/operators-logical.md)   
+ [演算子 &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   
 

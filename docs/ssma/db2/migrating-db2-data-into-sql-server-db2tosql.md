@@ -52,7 +52,7 @@ ms.lasthandoff: 08/02/2017
   
 **サーバー側のデータの移行:**  
   
--   サーバー側のデータ移行中に、エンジンは、対象のデータベースに存在します。 拡張機能パックによってインストールされます。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SSMA コンポーネントを SQL サーバーをインストールします。](http://msdn.microsoft.com/en-us/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
+-   サーバー側のデータ移行中に、エンジンは、対象のデータベースに存在します。 拡張機能パックによってインストールされます。 拡張機能パックをインストールする方法の詳細については、次を参照してください[SSMA コンポーネントを SQL サーバーをインストールします](http://msdn.microsoft.com/en-us/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
   
 -   サーバー側での移行を開始するには、選択、**サーバー側のデータ移行のエンジン**オプション、**プロジェクト設定** ダイアログ ボックス。  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 08/02/2017
     > [!NOTE]  
     > SSMA for DB2 の拡張機能パックがのインスタンスにインストールされていないかどうかは[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、場合**サーバー側のデータ移行のエンジン**が選択されている、ターゲット データベースにデータを移行中に、次のエラーが発生しました: ' SSMA データ移行のコンポーネントが見つかりませんでした、SQL Server のサーバー側のデータ移行を実行できなくなります。 拡張機能パックが正しくインストールされているかどうかを確認してください ' です。 をクリックして**キャンセル**データ移行を終了します。  
   
-5.  **DB2 への接続**ダイアログ ボックスで、接続の資格情報を入力し、をクリックして**接続**です。 DB2 への接続の詳細については、次を参照してください[DB2 データベース (&) #40";"DB2ToSQL"&"#41; への接続。](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
+5.  **DB2 への接続**ダイアログ ボックスで、接続の資格情報を入力し、をクリックして**接続**です。 DB2 への接続の詳細については、次を参照してください[DB2 データベース  &#40;DB2ToSQL&#41; への接続。](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   
     ターゲット データベースに接続するため[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]で接続資格情報を入力、 **SQL Server への接続** ダイアログ ボックスをクリック**接続**です。 接続の詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を参照してください[SQL Server に接続します。](http://msdn.microsoft.com/en-us/b59803cb-3cc6-41cc-8553-faf90851410e)  
   
@@ -106,6 +106,6 @@ ms.lasthandoff: 08/02/2017
 > SQL Express エディションは、対象データベースとして使用される、クライアント側のデータの移行のみが許可されているし、サーバー側のデータの移行はサポートされていません。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server (&) #40";"DB2ToSQL"&"#41; への DB2 データの移行](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+[SQL Server &#40;DB2ToSQL&#41; への DB2 データの移行](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   
 
