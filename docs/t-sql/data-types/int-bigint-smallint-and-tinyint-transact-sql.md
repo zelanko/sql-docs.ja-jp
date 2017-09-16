@@ -1,7 +1,7 @@
 ---
 title: "int、bigint、smallint 型、および tinyint (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/22/2017
+ms.date: 09/08/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -32,16 +32,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 07f5adc3d8ea7bb963b399cce22caa701021d6e9
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: 46ac51971b07b38b73ef18d8a953674fc77b4b17
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int、bigint、smallint、および tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-整数データを使用する実数データ型です。
+整数データを使用する実数データ型です。 データベースの容量を節約するには、すべての値を確実に含めることができる最小のデータ型を使用します。 たとえば、255 歳以上である誰に住んでいるために、tinyint は、担当者の経過期間のための十分ななります。 建物として使用できるは、255 年を超えるので tinyint は、建物の経過期間のための十分なはできません。
   
 |データ型|範囲|ストレージ|  
 |---|---|---|
@@ -62,7 +62,7 @@ ms.lasthandoff: 09/01/2017
 >   
 >  したがって、クエリで同じ式を使用しても異なる結果が得られることがあります。 クエリが自動でないと、定数値が最初に変換**数値**の有効桁数が指定されたデータ型に変換する前に、定数の値を保持する大規模だけです。 たとえば、定数の値 1 に変換**numeric (1, 0)**、定数値 250 に変換し、 **numeric (3, 0)**です。  
 >   
->  定数値が常に変換するクエリが自動、 **numeric (10, 0)**最終的なデータ型に変換する前にします。 / 演算子を使用すると、同様のクエリで結果の型の有効桁数が異なるだけでなく、結果の値も異なる場合があります。 たとえば、式を含む自動クエリの結果値`SELECT CAST (1.0 / 7 AS float)`に合わせて自動パラメーター化クエリの結果は切り捨てられますので、自動ではないの同じクエリの結果値と異なります**numeric (10, 0)**データ型。  
+>  定数値が常に変換するクエリが自動、 **numeric (10, 0)**最終的なデータ型に変換する前にします。 / 演算子を使用すると、同様のクエリで結果の型の有効桁数が異なるだけでなく、結果の値も異なる場合があります。 たとえば、式を含む自動クエリの結果値`SELECT CAST (1.0 / 7 AS float)`に収まるように自動パラメーター化クエリの結果は切り捨てられますので、自動ではないの同じクエリの結果値と異なる**numeric (10, 0)**データ型。  
   
 ## <a name="converting-integer-data"></a>整数型のデータを変換します。
 文字のフィールドに収まるように、整数が大きすぎる整数も、文字データ型に暗黙的に変換と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ASCII 文字コード 42、アスタリスク (*) を入力します。
