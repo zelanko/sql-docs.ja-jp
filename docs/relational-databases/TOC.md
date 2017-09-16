@@ -45,7 +45,7 @@
 # [拡張イベント](../relational-databases/extended-events/extended-events.md)
 # [グラフ](../relational-databases/graphs/sql-graph-overview.md)
 # [階層データ](hierarchical-data-sql-server.md)  
-# [インポートとエクスポート](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)
+# [インポートとエクスポート](../relational-databases/import-export/overview-import-export.md)
 # [インメモリ OLTP](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 # [インデックス](../relational-databases/indexes/indexes.md)
 # [JSON](../relational-databases/json/json-data-sql-server.md)
