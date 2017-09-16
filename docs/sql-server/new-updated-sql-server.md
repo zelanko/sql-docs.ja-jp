@@ -1,6 +1,6 @@
 ---
-title: "更新済み - SQL Server のドキュメント |Microsoft ドキュメント"
-description: "更新されたコンテンツで最近変更したドキュメントについては、SQL Server 用のスニペットを表示します。"
+title: "更新済み - SQL Server のドキュメント | Microsoft Docs"
+description: "最近変更された SQL Server に関するドキュメントで更新されたコンテンツのスニペットを示します。"
 services: na
 documentationcenter: 
 author: MightyPen
@@ -16,26 +16,26 @@ ms.devlang: na
 ms.date: 07/17/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
-ms.openlocfilehash: 748f2ec122ea9a889b33cbcf15a188acd5da8459
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: d61aed44a16e78107c36ed4f7b1be387043b6746
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 08/29/2017
 
 ---
-# <a name="new-and-recently-updated-sql-server-docs"></a>新規または最近の更新: SQL Server のドキュメント
+# <a name="new-and-recently-updated-sql-server-docs"></a>新規および最近の更新: SQL Server のドキュメント
 
 
 
-ほとんど毎日 Microsoft への更新プログラムの既存のアーティクルのいくつかの[Docs.Microsoft.com](http://docs.microsoft.com/)ドキュメント web サイトです。 この記事では、最近更新された文書からの抜粋を表示します。 新しい情報の記事へのリンクも表示される可能性があります。
+ほとんど毎日、Microsoft は [Docs.Microsoft.com](http://docs.microsoft.com/) ドキュメント Web サイトの既存記事の一部を更新しています。 この記事では、最近更新された記事からの抜粋を示します。 新しい記事へのリンクも示される場合があります。
 
-この記事は、定期的に再実行しているプログラムによって生成されます。 場合によっては抜粋を付けること不完全な書式設定、マークダウンとしてソース アーティクルからです。 イメージはここでは表示されません。
+この記事は、定期的に再実行されるプログラムによって生成されます。 場合によっては、抜粋の形式が不完全であったり、ソース記事からのマークダウンとして表示されることがあります。 イメージはここでは表示されません。
 
-最新の更新プログラムは、次の日付範囲とサブジェクトの報告されます。
+最近の更新として次の日付範囲と対象のものが報告されます。
 
 
 
 - *更新日の範囲:* &nbsp; **2017 年 5 月 23 日**&nbsp;から &nbsp; **2017 年 7 月 17 日**
-- *サブジェクト領域:* &nbsp; **SQL Server**です。
+- *対象領域:* &nbsp; **SQL Server**。
 
 
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 07/19/2017
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>最近更新されたアーティクルの圧縮のリスト
+## <a name="compact-list-of-articles-updated-recently"></a>最近更新された記事の簡易一覧
 
 この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
 
@@ -65,13 +65,13 @@ ms.lasthandoff: 07/19/2017
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>更新されたアーティクルの抜粋が
+## <a name="updated-articles-with-excerpts"></a>更新された記事と抜粋
 
-このセクションでは、大幅な更新が最近発生したアーティクルから収集された更新プログラムの抜粋を表示します。
+このセクションでは、最近大幅な更新があった記事から収集された更新の抜粋を示します。
 
-ここに表示される抜粋は、適切なセマンティック コンテキストから区切りが表示されます。 また、区切ることもあります抜粋が実際の資料の周囲にある重要なマークダウン構文からです。 したがってこれらの抜粋は、一般的なガイダンスのみです。 のみの抜粋を使用するをクリックし、実際の資料を参照してくださいに時間がかかって各自の興味を保証するかどうかを把握できます。
+ここで示す抜粋は、適切なセマンティック コンテキストから切り離されて表示されます。 また、実際の記事で抜粋を囲んでいる重要なマークダウン構文から切り離されていることもあります。 したがって、これらの抜粋は一般的なガイダンス専用です。 抜粋は、クリックして実際の記事を参照する価値があるかどうかを判断するためだけに使用できます。
 
-これらおよびその他の理由は、これらの抜粋からコードをコピーしない場合と受け取らない正確な情報源として任意のテキストの抜粋です。 代わりに、実際の資料を参照してください。
+これらおよびその他の理由から、これらの抜粋からコードをコピーしたり、テキストの抜粋を正確な情報源と考えたりしないでください。 代わりに、実際の記事を参照してください。
 
 
 
@@ -169,7 +169,7 @@ Developer Edition は引き続き [SQL Server Distributed Replay--../tools/distr
 
 ## <a name="similar-articles"></a>類似した記事
 
-このセクションでは、同じ GitHub.com リポジトリ [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/) 内の他の対象領域の記事で、この対象領域において最近更新された記事とよく似たものの一覧を示します。
+このセクションでは、同じ GitHub.com リポジトリ [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs/) 内の他の対象領域の記事で、この対象領域において最近更新された記事とよく似たものの一覧を示します。
 
 <!--  20170717-1101  -->
 
