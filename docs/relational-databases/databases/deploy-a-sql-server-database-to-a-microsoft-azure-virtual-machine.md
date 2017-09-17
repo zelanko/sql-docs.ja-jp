@@ -252,7 +252,7 @@ ms.lasthandoff: 09/14/2017
 このフィールドで、Microsoft Azure 仮想マシン サービスがアクセスできる共有フォルダーを指定します。  
   
 ##  <a name="Azure_sign-in"></a> Microsoft Azure へのサインイン  
- Microsoft アカウントまたは組織アカウントを使用して Microsoft Azure にサインインします。 Microsoft アカウントまたは組織アカウントは、patc@contoso.com などの電子メール アドレスの形式になっています。 Azure の資格情報の詳細については、「 [Microsoft Account for Organizations FAQ](http://technet.microsoft.com/jj592903) 」(組織向け Microsoft アカウントに関する FAQ) および「 [Troubleshooting Problems](https://technet.microsoft.com/dn197220)」(問題のトラブルシューティング) をご覧ください。  
+ Microsoft アカウントまたは組織アカウントを使用して Microsoft Azure にサインインします。 Microsoft アカウントまたは組織アカウントは、patc@contoso.com などの電子メール アドレスの形式になっています。Azure の資格情報の詳細については、「 [Microsoft Account for Organizations FAQ](http://technet.microsoft.com/jj592903) 」(組織向け Microsoft アカウントに関する FAQ) および「 [Troubleshooting Problems](https://technet.microsoft.com/dn197220)」(問題のトラブルシューティング) をご覧ください。  
   
 ##  <a name="Deployment_settings"></a> 配置の設定
  このページを使用して、配置先サーバーと、新しいデータベースの詳細を指定します。  
