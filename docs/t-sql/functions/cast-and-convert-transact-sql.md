@@ -1,7 +1,7 @@
 ---
 title: "CAST および CONVERT (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 09/07/2017
+ms.date: 09/08/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -39,8 +39,8 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 40f0515c07d78963dd10dc8c4ff52e31e096aba8
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: e1ea8183c7655af863fe5f6267958f4c8df367dc
 ms.contentlocale: ja-jp
 ms.lasthandoff: 09/08/2017
 
@@ -48,7 +48,19 @@ ms.lasthandoff: 09/08/2017
 # <a name="cast-and-convert-transact-sql"></a>CAST および CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-あるデータ型の式を別のデータ型の式に変換します。
+あるデータ型の式を別のデータ型の式に変換します。  
+たとえば、次の例では、有効桁数のレベルが異なるその他の 2 つの型に入力データ型を変更します。
+```sql  
+SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
+    CAST(9.5 AS decimal(6,4)) AS decimal;
+SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
+    CONVERT(decimal(6,4), 9.5) AS decimal;
+```  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+|翻訳元   |int    |decimal |  
+|----|----|----|  
+|9.5 |9 |9.5000 |  
+
 > [!TIP]
 > 多く[例](#BKMK_examples)がこのトピックの下部にします。  
   
@@ -75,17 +87,13 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 対象のデータ型の長さを指定する整数です (省略可能)。 既定値は、30 です。
   
 *スタイル*  
-CONVERT 関数は、変換する方法を指定する整数式です*式*です。 スタイルが NULL の場合は、NULL が返されます。 範囲はによって決まります*data_type*です。 詳細については、「解説」を参照してください。
+CONVERT 関数は、変換する方法を指定する整数式です*式*です。 スタイルが NULL の場合は、NULL が返されます。 範囲はによって決まります*data_type*です。 
   
 ## <a name="return-types"></a>戻り値の型
 返します*式*に変換*data_type*です。
 
-[15 の例では、このトピックの最後にジャンプします。](#BKMK_examples)
-  
-## <a name="remarks"></a>解説  
-  
 ## <a name="date-and-time-styles"></a>日付および時刻のスタイル  
-ときに*式*日付または時刻のデータ型は、*スタイル*次の表に示すように値のいずれかになります。 その他の値は 0 として処理されます。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]から変換するときにサポートされている唯一のスタイルの日付し、時刻型を**datetimeoffset**は 0 または 1 です。 他のすべての変換スタイルでは 9809 が返されます。
+ときに*式*日付または時刻のデータ型は、*スタイル*次の表に示すように値のいずれかになります。 その他の値は 0 として処理されます。 以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]から変換するときにサポートされている唯一のスタイルの日付し、時刻型を**datetimeoffset**は 0 または 1 です。 他のすべての変換スタイルでは 9809 が返されます。
   
 >  [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、アラビア式での日付形式がクウェート アルゴリズムによりサポートされます。

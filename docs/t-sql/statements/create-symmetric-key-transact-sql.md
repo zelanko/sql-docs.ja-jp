@@ -1,7 +1,7 @@
 ---
 title: "対称キー (TRANSACT-SQL) を作成 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/11/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fb573578b51b2e6bf4c5cbedf7ef5bc509523903
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: d3b1490b1ac07d0e6a3f0fc3ed1515dd0872d545
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
@@ -97,26 +97,28 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
- CREATION_DISPOSITION  **=**  CREATE_NEW  
- 拡張キー管理デバイス上の新しいキーを作成します。  デバイスにキーが既に存在する場合は、ステートメントがエラーで失敗します。  
+ CREATION_DISPOSITION ** = ** CREATE_NEW  
+ 拡張キー管理デバイス上で新しいキーを作成します。  デバイスにキーが既に存在する場合は、ステートメントがエラーで失敗します。  
   
- CREATION_DISPOSITION  **=**  OPEN_EXISTING  
+ CREATION_DISPOSITION ** = ** OPEN_EXISTING  
  マップ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]対称キーを既存の拡張キー管理キー。 CREATION_DISPOSITION = OPEN_EXISTING が指定されない場合、この既定値は CREATE_NEW です。  
   
  *certificate_name*  
  対称キーの暗号化に使用する証明書の名前を指定します。 証明書はデータベース内に存在する必要があります。  
   
  **'** *パスワード* **'**  
- 対称キーを保護する TRIPLE_DES キーの派生元パスワードを指定します。 *パスワード*のインスタンスを実行しているコンピューターの Windows パスワード ポリシーの要件を満たす必要がある[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 複雑なパスワードの使用をお勧めします。  
+ 対称キーを保護する TRIPLE_DES キーの派生元パスワードを指定します。 *パスワード*のインスタンスを実行しているコンピューターの Windows パスワード ポリシーの要件を満たす必要がある[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 常に強力なパスワードを使用します。  
   
  *symmetric_key_name*  
- 作成するキーの暗号化に使用する対称キーを指定します。 指定したキーはデータベース内に存在し、開かれている必要があります。  
+ 対称キーを指定します。 作成されるキーを暗号化するために使用します。 指定したキーはデータベース内に存在し、開かれている必要があります。  
   
  *asym_key_name*  
- 作成するキーの暗号化に使用する非対称キーを指定します。 この非対称キーはデータベース内に存在する必要があります。  
+ 非対称キー、指定が作成されるキーを暗号化するために使用します。 この非対称キーはデータベース内に存在する必要があります。  
   
  \<アルゴリズム >  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、AES_128、AES_192、AES_256 以外のすべてのアルゴリズムが使用されなくなりました。 古いアルゴリズムを使用する場合は (推奨されません)、データベース互換性レベルを 120 以下に設定する必要があります。  
+暗号化アルゴリズムを指定します。   
+> [!WARNING]  
+> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、AES_128、AES_192、AES_256 以外のすべてのアルゴリズムが使用されなくなりました。 (推奨しません)、古いアルゴリズムを使用するには、120 以下、データベース互換性レベルを設定する必要があります。  
   
 ## <a name="remarks"></a>解説  
  対称キーを作成するときには、証明書、パスワード、対称キー、非対称キー、PROVIDER のうち少なくとも 1 つを使用して対称キーを暗号化する必要があります。 キーには種類ごとの暗号化を複数指定できます。 つまり、1 つの対称キーを、複数の証明書、パスワード、対称キー、および非対称キーを使用して同時に暗号化できます。  
@@ -128,7 +130,7 @@ CREATE SYMMETRIC KEY key_name
   
  一時キーは、そのキーを作成したユーザーが所有します。 また一時キーは、現在のセッションでのみ有効です。  
   
- IDENTITY_VALUE では、新しい対称キーで暗号化されるデータをタグ付けするための GUID が生成されます。 このタグ付けは、キーと暗号化データの照合に使用できます。 特定の句で生成された GUID は常に同じになります。 句を使用して GUID を生成した後は、句を使用してアクティブになっているセッションが 1 つでもあると、同じ句を再度使用することはできません。 IDENTITY_VALUE は省略可能な句ですが、一時キーで暗号化したデータを保存する場合はこの句を使用することをお勧めします。  
+ IDENTITY_VALUE では、新しい対称キーで暗号化されるデータをタグ付けするための GUID が生成されます。 このタグ付けは、キーと暗号化データの照合に使用できます。 特定の句で生成された GUID は、常に同じです。 句を使用して GUID を生成した後は、句を使用してアクティブになっているセッションが 1 つでもあると、同じ句を再度使用することはできません。 IDENTITY_VALUE は省略可能な句ですが、一時キーで暗号化したデータを保存する場合はこの句を使用することをお勧めします。  
   
  既定の暗号化アルゴリズムはありません。  
   
@@ -142,14 +144,12 @@ CREATE SYMMETRIC KEY key_name
  **DES アルゴリズムに関する説明:**  
   
 -   DESX は不適切な名前でした。 ALGORITHM = DESX を使用して作成された対称キーでは、実際には 192 ビット キーを使用した TRIPLE DES 暗号が使用されます。 DESX アルゴリズムは提供されません。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
-  
 -   ALGORITHM = TRIPLE_DES_3KEY を使用して作成された対称キーでは、192 ビット キーを使用した TRIPLE DES が使用されます。  
-  
 -   ALGORITHM = TRIPLE_DES を使用して作成された対称キーでは、128 ビット キーを使用した TRIPLE DES が使用されます。  
   
  **非推奨の RC4 アルゴリズム:**  
   
- 異なるデータ ブロックに対して同じ RC4 または RC4_128 KEY_GUID を繰り返し使用すると、同一の RC4 キーが生成されます。これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が自動的に salt を提供しないためです。 同一の RC4 キーを繰り返し使用することは、暗号強度を著しく低下させる既知のエラーです。 そのため、RC4 キーワードおよび RC4_128 キーワードは推奨します。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+ に、同一の RC4 キーで繰り返し使用される同じ RC4 または RC4_128 KEY_GUID、データの異なるブロックに対して結果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自動的に salt を行いません。 同一の RC4 キーを繰り返し使用することは、暗号強度を著しく低下させる既知のエラーです。 そのため、RC4 キーワードおよび RC4_128 キーワードは推奨します。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!WARNING]  
 >  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。  

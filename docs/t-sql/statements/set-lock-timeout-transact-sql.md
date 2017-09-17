@@ -1,7 +1,7 @@
 ---
 title: "SET LOCK_TIMEOUT (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/11/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,10 +29,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ff2f355774338fc94a37411a74706c9b46b7c256
+ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
+ms.openlocfilehash: 3de86c7f33afd6e708ad8e773470ec650e092d2c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="set-locktimeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
@@ -45,8 +45,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>構文  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SET LOCK_TIMEOUT timeout_period  
 ```  
   
@@ -70,10 +68,10 @@ SET LOCK_TIMEOUT timeout_period
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-set-the-lock-timeout-to-1800-seconds"></a>A: ロックのタイムアウトを 1,800 秒に設定します。  
+### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A: ロックのタイムアウトを 1,800 ミリ秒に設定します。  
  次の例では、ロックのタイムアウト値を設定`1800`(ミリ秒)。  
   
-```  
+```sql  
 SET LOCK_TIMEOUT 1800;  
 GO  
 ```  
@@ -83,13 +81,13 @@ GO
 ### <a name="b-set-the-lock-timeout-to-wait-forever-for-a-lock-to-be-released"></a>B. ロックが解放されるを無限に待機するロックのタイムアウトを設定します。  
  次の例では、無期限に待機し、無期限にロックのタイムアウトを設定します。 これは、各接続の先頭には既に設定されている既定の動作です。  
   
-```  
+```sql  
 SET LOCK_TIMEOUT -1;  
 ```  
   
  次の例では、ロックのタイムアウト値を設定`1800`(ミリ秒)。 このリリースで[!INCLUDE[ssDW](../../includes/ssdw-md.md)]ステートメントを正常に解析されますが、1800 値を無視するは、および引き続き既定の動作を使用します。  
   
-```  
+```sql  
 SET LOCK_TIMEOUT 1800;  
 ```  
   
