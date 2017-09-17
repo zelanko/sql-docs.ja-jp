@@ -16,16 +16,16 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 6e1d0305fff039aad4d387cbc63026f40db9f97e
-ms.openlocfilehash: 9d229fd4764da21612d1b1cf532f1beaf8116769
+ms.translationtype: MT
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: 51c6e0a0baa59e49ae482db01253c1998894b5f8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>Reporting Services の ReportViewer コントロールを使用して - 開始の統合
 
-開発者が ASP.Net web サイト、および Reporting Services 2016 の ReportViewer コントロールでの Windows フォーム アプリで改ページ調整されたレポートを埋め込むことができる方法について説明します。 コントロールを新しいプロジェクトに追加または既存のプロジェクトを更新することができます。
+開発者が ASP.NET web サイト、および Windows フォーム アプリを Reporting Services 2016 の ReportViewer コントロールで改ページ調整されたレポートを埋め込むことができる方法について説明します。 コントロールを新しいプロジェクトに追加または既存のプロジェクトを更新することができます。
 
 ## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>新しい web プロジェクトへの ReportViewer コントロールの追加
 
@@ -281,6 +281,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>参照
 
 [2016 ReportingViewer コントロール内のデータ コレクション](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-他に質問しますか。 [Reporting Services のフォーラムを再試行してください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムにアクセスします](http://go.microsoft.com/fwlink/?LinkId=620231)
 
 
