@@ -1,0 +1,72 @@
+---
+title: "インターネットへの発行の Microsoft OLE DB Provider |Microsoft ドキュメント"
+ms.prod: sql-non-specified
+ms.technology:
+- drivers
+ms.custom: H1Hack27Feb2017
+ms.date: 01/19/2017
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLE DB provider for Internet publishing [ADO]
+- providers [ADO], OLE DB provider for Internet publishing
+- Internet Publishing provider [ADO]
+ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
+caps.latest.revision: 10
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: d466123e7330eb599847225d2b108ec7f80d9ea9
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
+---
+# <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for Internet パブリッシングの概要
+Microsoft OLE DB Provider for Internet Publishing は、Microsoft や Microsoft Internet Information Server によって提供されたリソースにアクセスする ADO を使用します。 リソースには、HTML ファイル、または Windows 2000 web フォルダーなどの web ソース ファイルが含まれます。
+
+## <a name="connection-string-parameters"></a>接続文字列パラメーター
+ このプロバイダーに接続するには、設定、*プロバイダー*の引数、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティ。
+
+```
+MSDAIPP.DSO
+```
+
+ この値も設定またはを使用して読み取る、[プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)プロパティです。
+
+## <a name="typical-connection-string"></a>一般的な接続文字列
+ このプロバイダーの一般的な接続文字列とは。
+
+```
+"Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
+```
+
+ -または-
+
+```
+"URL=ResourceURL;User ID=MyUserID;Password=MyPassword;"
+```
+
+ 文字列は、これらのキーワードで構成されます。
+
+|Keyword|Description|
+|-------------|-----------------|
+|**プロバイダー**|インターネットへの発行用の OLE DB プロバイダーを指定します。|
+|**データ ソース**- または - **URL**|ファイルまたは Web フォルダーに発行されるディレクトリの URL を指定します。|
+|**[ユーザー ID]**|ユーザー名を指定します。|
+|**Password**|ユーザーのパスワードを指定します。|
+
+> [!NOTE]
+>  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = [はい]**または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。
+
+ 設定した場合、 *ResourceURL*値から、"URL ="で無効な値への接続文字列、既定では、インターネット パブリッシング用プロバイダーを発生させます有効な値を要求するダイアログ ボックス。 これは、ダイアログ ボックスがオフになってされ、コンポーネントからの応答を受信していないためにを固定するのには、クライアントが表示されるまでは、プログラムの実行を中断するために、アプリケーションの中間層のコンポーネントの望ましくない動作です。
+
+> [!NOTE]
+>  場合 MSDAIPP です。DSO は、プロバイダーは、のいずれかの値として明示的に指定された、*プロバイダー*接続文字列キーワード、または**プロバイダー**プロパティは使用できません"URL ="接続文字列にします。 この場合、エラーが発生します。 代わりに、単に URL を指定のトピックで示すように[を使用する ADO、OLE DB Provider for Internet Publishing と](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)です。
+
+## <a name="see-also"></a>参照
+ [シナリオの公開インターネット](../../../ado/guide/data/internet-publishing-scenario.md)[インターネットへの発行用の OLE DB プロバイダー](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)
+

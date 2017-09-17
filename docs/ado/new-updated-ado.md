@@ -1,6 +1,6 @@
 ---
-title: "SQL Server ドキュメント用の Analysis Services の更新済み - |Microsoft ドキュメント"
-description: "更新されたコンテンツで最近変更したドキュメントについては、Microsoft SQL server Analysis Services 用のスニペットを表示します。"
+title: "更新済み - SQL Server ドキュメントの ADO |Microsoft ドキュメント"
+description: "更新されたコンテンツで最近変更したドキュメントについては、ActiveX データ オブジェクト (ADO) 用 Microsoft SQL Server のスニペットを表示します。"
 services: na
 documentationcenter: 
 author: MightyPen
@@ -10,19 +10,19 @@ ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
 ms.custom: UpdArt.exe
-ms.workload: analysis-services
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 09/11/2017
 ms.author: genemi
+ms.workload: ado-activex-data-objects
 ms.translationtype: MT
 ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: a0657f87ae8ab0280ca904947ffa257c3e666538
+ms.openlocfilehash: 3962091c42c67c0ad3319fc76577d4cab54abe5f
 ms.contentlocale: ja-jp
 ms.lasthandoff: 09/13/2017
 
 ---
-# <a name="new-and-recently-updated-analysis-services-for-sql-server"></a>新規または最近更新された: SQL Server 用に Analysis Services
+# <a name="new-and-recently-updated-activex-data-objects-ado-for-sql-server"></a>新規または最近更新された: SQL Server 用の ActiveX Data Objects (ADO)
 
 
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 09/13/2017
 
 
 - *更新プログラムの日付範囲:* &nbsp; **2017-07-18** &nbsp;対&nbsp; **2017 年-09-11**
-- *サブジェクト領域:* &nbsp; **for SQL Server Analysis Services**です。
+- *サブジェクト領域:* &nbsp; **ActiveX データ オブジェクト (ADO) for SQL Server**です。
 
 
 
