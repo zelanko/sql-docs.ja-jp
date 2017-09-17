@@ -56,15 +56,15 @@ SSMA では、プロジェクトの設定の 5 つのセットがあります。
   
 設定と各モードの設定を適用する方法の詳細については、次のトピックを参照してください。  
   
--   [プロジェクトの設定 & #40 です。変換"&"#41;&#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)  
+-   [プロジェクトの設定 &#40です。変換&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)  
   
--   [プロジェクトの設定 & #40 です。移行"&"#41;&#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-migration-db2tosql.md)  
+-   [プロジェクトの設定 &#40です。移行&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-migration-db2tosql.md)  
   
--   [プロジェクトの設定 & #40 です。同期 &#41;&#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)  
+-   [プロジェクトの設定 &#40です。同期&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)  
   
--   [プロジェクトの設定 & #40 です。GUI &#41;&#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-gui-db2tosql.md)  
+-   [プロジェクトの設定 &#40です。GUI&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)  
   
--   [プロジェクトの設定 & #40 です。型のマッピング &#41;&#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)  
+-   [プロジェクトの設定 &#40です。型のマッピング&#41; &#40; DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)  
   
 ## <a name="setting-project-options"></a>プロジェクト オプションの設定  
 SSMA では、すべてのプロジェクトの既定の設定を構成できます。 これらの設定は SSMA 構成ファイルに保存して、作成した新しいプロジェクトに適用します。  
@@ -100,11 +100,11 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
 ## <a name="next-steps"></a>次の手順  
 次の手順では、プロジェクトのニーズによって異なります。  
   
--   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください。[マッピング DB2 と SQL Server データ型 (&) #40";"DB2ToSQL"&"#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)です。  
+-   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください。[マッピング DB2 と SQL Server データ型 &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)です。  
   
--   それ以外の場合、DB2 データベース オブジェクトの定義を変換できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト定義します。 詳細については、次を参照してください。 [DB2 スキーマを変換する (&) #40";"DB2ToSQL"&"#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)です。  
+-   それ以外の場合、DB2 データベース オブジェクトの定義を変換できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト定義します。 詳細については、次を参照してください。 [DB2 スキーマを変換する &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)です。  
   
 ## <a name="see-also"></a>参照  
-[マッピング DB2 と SQL Server データ型 (&) #40";"DB2ToSQL"&"#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  
+[マッピング DB2 と SQL Server データ型 &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  
   
 
