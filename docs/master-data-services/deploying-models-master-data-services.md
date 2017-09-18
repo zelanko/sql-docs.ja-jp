@@ -1,5 +1,5 @@
 ---
-title: "モデル (Master Data Services) の展開 |Microsoft ドキュメント"
+title: "モデルの配置 (マスター データ サービス) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - deployment packages [Master Data Services]
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 caps.latest.revision: 24
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 24067aaaceb2ad1e6704027c4445be9bf393a18f
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 021c2e7c829f8da9cf1633aa5047c561b11702d6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="deploying-models-master-data-services"></a>モデルの配置 (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]におけるパッケージは、配置可能なモデル構造と (必要に応じて) モデル データを含んだ XML ファイルです。 モデル パッケージを使用して、モデルのコピーを MDS 環境間で移動したり、既存の MDS 環境に新しいモデルを作成したりすることができます。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**MDSModelDeploy ツール**で作成されたパッケージと旧バージョンとの互換性のある[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]またはそれ以降。  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] **MDSModelDeploy ツール** は、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降で作成されたパッケージと下位互換性があります。  
   
 ## <a name="tools-for-deploying-models"></a>モデルを展開するためのツール  
  モデル パッケージを使用するには、3 つのツールをニーズに応じて使い分けることができます。  
@@ -73,14 +73,14 @@ ms.lasthandoff: 08/02/2017
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|MDSModelDeploy ツールを使用して、モデル オブジェクトとデータの新しい配置パッケージを作成します。|[MDSModelDeploy を使用して、モデルの配置パッケージを作成します。](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
-|ウィザードを使用して、モデル オブジェクトのみの新しい配置パッケージを作成します。|[ウィザードを使用してモデルの配置パッケージを作成します。](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)|  
-|MDSModelDeploy ツールを使用して、モデル オブジェクトとデータのパッケージを配置します。|[MDSModelDeploy を使用して、モデル配置パッケージを展開します。](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
-|ウィザードを使用して、モデル オブジェクトのみのパッケージを配置します。|[ウィザードを使用してモデル配置パッケージを展開します。](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)|  
-|モデル全体ではなく、モデルの選択した部分を配置するには、モデルの配置パッケージを編集します。|[モデルの配置パッケージを編集します。](../master-data-services/edit-a-model-deployment-package.md)|  
+|MDSModelDeploy ツールを使用して、モデル オブジェクトとデータの新しい配置パッケージを作成します。|[MDSModelDeploy を使用したモデルの配置パッケージの作成](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
+|ウィザードを使用して、モデル オブジェクトのみの新しい配置パッケージを作成します。|[ウィザードを使用したモデルの配置パッケージの作成](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)|  
+|MDSModelDeploy ツールを使用して、モデル オブジェクトとデータのパッケージを配置します。|[MDSModelDeploy を使用したモデルの配置パッケージの配置](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
+|ウィザードを使用して、モデル オブジェクトのみのパッケージを配置します。|[ウィザードを使用したモデルの配置パッケージの展開](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)|  
+|モデル全体ではなく、モデルの選択した部分を配置するには、モデルの配置パッケージを編集します。|[モデルの配置パッケージの編集](../master-data-services/edit-a-model-deployment-package.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [モデル配置オプション & #40 です。マスター データ サービス &#41;](../master-data-services/model-deployment-options-master-data-services.md)  
+-   [モデル配置オプション (マスター データ サービス)](../master-data-services/model-deployment-options-master-data-services.md)  
   
   

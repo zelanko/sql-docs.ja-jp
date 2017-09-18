@@ -1,7 +1,7 @@
 ---
 title: "階層データ (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +21,11 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 502bbf9e763ffc8132e741a33ebe0ec4d0cad499
+ms.translationtype: HT
+ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
+ms.openlocfilehash: 6f4cd91c26935f93d99e2a23965c3c256e2e5bbd
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="hierarchical-data-sql-server"></a>階層データ (SQL Server)
@@ -112,7 +112,7 @@ GO
   
 -   階層の複数セクションにわたるクエリをめったに実行しないとき。 つまり、通常のクエリが、階層内の単一ポイントのみを対象とするとき。 このようなケースでは、同じ場所への配置は重要でありません。 たとえば、個々の従業員の給与処理のみに組織テーブルを使用する場合、親/子の方が優れています。  
   
--   非リーフ サブツリーが頻繁に移動し、かつパフォーマンスが非常に重要なとき。 親/子表現では、階層内の行の場所を変更すると、1 行のみが影響を受けます。 **hierarchyid** 使用時に行の場所を変更すると、 *n* 行が影響を受けます ( *n* は移動されるサブツリー内のノード数)。  
+-   非リーフ サブツリーが頻繁に移動し、かつパフォーマンスが非常に重要なとき。 親/子表現では、階層内の行の場所を変更すると、1 行のみが影響を受けます。 **hierarchyid** 使用時に行の場所を変更すると、*n* 行が影響を受けます (*n* は移動されるサブツリー内のノード数)。  
   
      非リーフ サブツリーが頻繁に移動し、かつパフォーマンスが重要だが、ほとんどの移動が正しく定義された階層レベルで行われるときは、上位レベルと下位レベルを 2 つの階層に分割することを検討してください。 こうすると、すべての移動が上位階層のリーフ レベルになります。 たとえば、サービスによってホストされている Web サイトの階層があるとします。 サイトには、階層状に配置された多くのページが含まれています。 ホストされているサイトは、サイト階層内の他の場所に移動される可能性がありますが、下位ページの配置が変更されることはまれです。 これは、次のように表すことができます。  
   
@@ -533,3 +533,4 @@ GO
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   
+

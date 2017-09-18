@@ -1,5 +1,5 @@
 ---
-title: "ビジネス ルール アクション (マスター データ サービス) |Microsoft ドキュメント"
+title: "ビジネス ルール アクション (マスター データ サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8a4d478795952951063dab5ef6979f517997ff3f
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e95b13ecedad9aaaacb948bc907a9c8950e136de
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="business-rule-actions-master-data-services"></a>ビジネス ルール アクション (マスター データ サービス)
@@ -73,8 +73,8 @@ ms.lasthandoff: 08/02/2017
 |**がワークフローで始まる**|外部ワークフローを開始します。 このアクションが実行される原因となったデータはワークフローに渡されます。 詳細については、「 [SharePoint ワークフローとマスター データ サービスとの統合](http://msdn.microsoft.com/library/gg690195.aspx)」を参照してください。<br /><br /> このアクションは、文字列値、数値、データ値、およびリンク値に有効です。|  
   
 ## <a name="see-also"></a>参照  
- [ビジネス ルール条件 & #40 です。マスター データ サービス &#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
- [ビジネス ルール & #40 です。マスター データ サービス &#41;](../master-data-services/business-rules-master-data-services.md)   
- [作成して発行するビジネス ルール & #40 です。マスター データ サービス &#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+ [ビジネス ルール条件 (マスター データ サービス)](../master-data-services/business-rule-conditions-master-data-services.md)   
+ [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)   
+ [ビジネス ルールを作成しパブリッシュする (マスター データ サービス)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   

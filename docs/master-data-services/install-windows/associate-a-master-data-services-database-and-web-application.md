@@ -1,5 +1,5 @@
 ---
-title: "Master Data Services データベースに関連付けると Web アプリケーション |Microsoft ドキュメント"
+title: "Master Data Services データベースと Web アプリケーションの関連付け | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ccb25672-f71d-4135-b548-f50eb45d8fa5
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 729f1dab03952ff2986973ec387b10a8f14a965f
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 31a1db8384143ead4a5d8adc81a8b905129d6b4e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="associate-a-master-data-services-database-and-web-application"></a>Master Data Services データベースと Web アプリケーションの関連付け
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションを [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースに関連付け、Web 操作に使用するデータベースを指定します。  
+  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションを [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースに関連付け、Web 操作に使用するデータベースを指定します。  
   
 ## <a name="prerequisites"></a>前提条件  
   
--   [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] ローカル コンピューターにインストールする必要があります。 詳細については、「 [マスター データ サービスのインストール](../../master-data-services/install-windows/install-master-data-services.md)」を参照してください。  
+-   [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] がローカル コンピューターにインストールされている必要があります。 詳細については、「 [マスター データ サービスのインストール](../../master-data-services/install-windows/install-master-data-services.md)」を参照してください。  
   
 -   ローカルの [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションが存在している必要があります。 詳細については、「[マスター データ マネージャー Web アプリケーションを作成する方法 &#40;マスター データ サービス&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)」を参照してください。  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 08/02/2017
 -   ユーザーおよびグループを [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]に追加します。 どのユーザーまたはグループも [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] へのアクセス権が付与されていない場合は、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] システム管理者の資格情報を使用して、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] を開く必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../../master-data-services/administrators-master-data-services.md)」および「[Users and Groups &#40;Master Data Services&#41; (ユーザーおよびグループ &#40;Master Data Services&#41;)](../../master-data-services/users-and-groups-master-data-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [マスター データ サービスをインストールします。](../../master-data-services/install-windows/install-master-data-services.md)   
+ [マスター データ サービスのインストール](../../master-data-services/install-windows/install-master-data-services.md)   
  [[Web の構成] ページ &#40;マスター データ サービス構成マネージャー&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
   

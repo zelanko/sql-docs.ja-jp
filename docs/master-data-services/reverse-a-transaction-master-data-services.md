@@ -1,5 +1,5 @@
 ---
-title: "トランザクションを破棄する (マスター データ サービス) |Microsoft ドキュメント"
+title: "トランザクションを破棄する (マスター データ サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - transactions [Master Data Services], reversing
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c0adfc3f27bf8767f759a67001020cbbdff9f31
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 7bfd5c364d0805f32ea738585794d3b3ec47107d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="reverse-a-transaction-master-data-services"></a>トランザクションを破棄する (Master Data Services)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、管理者は、アクションを元に戻す必要があるときにトランザクションを破棄できます。 トランザクションの例としては、属性値の変更、階層の移動、メンバーの削除などがあります。 このページには、トランザクション ログの種類が "属性" であるエンティティのトランザクションのみを表示します。 エクスプローラー ページに移動して、トランザクション ログの種類が "メンバー" であるエンティティの履歴を表示します。  
+# <a name="reverse-a-transaction-master-data-services"></a>トランザクションを破棄する (マスター データ サービス)
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、管理者は、アクションを元に戻す必要があるときにトランザクションを破棄できます。 トランザクションの例としては、属性値の変更、階層の移動、メンバーの削除などがあります。 このページには、トランザクション ログの種類が "属性" であるエンティティのトランザクションのみを表示します。 エクスプローラー ページに移動して、トランザクション ログの種類が "メンバー" であるエンティティの履歴を表示します。  
   
 ## <a name="prerequisites"></a>前提条件  
   
@@ -49,8 +49,8 @@ ms.lasthandoff: 08/02/2017
 7.  確認のダイアログ ボックスで **[OK]**をクリックします。 破棄されたトランザクションを記録するために、別のトランザクションがグリッドに追加されます。  
   
 ## <a name="see-also"></a>参照  
- [トランザクション & #40 です。マスター データ サービス &#41;](../master-data-services/transactions-master-data-services.md)   
- [メンバーまたはコレクション &#40; を再アクティブ化します。マスター データ サービス &#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
+ [トランザクション (マスター データ サービス)](../master-data-services/transactions-master-data-services.md)   
+ [メンバーまたはコレクションを再アクティブ化する (マスター データ サービス)](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
  [メンバー リビジョン履歴のロールバック](../master-data-services/rollback-member-revision-history-master-data-services.md)
   
   

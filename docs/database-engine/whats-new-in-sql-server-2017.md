@@ -1,7 +1,7 @@
 ---
 title: "データベース エンジンの新機能 - SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/26/2017
+ms.date: 09/11/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: e3d06068b28a6870a5c34286f073c32519428e39
+ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
+ms.openlocfilehash: 3d753f75344e4958d36d214fcc74957204579088
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>データベース エンジンの新機能 - SQL Server 2017
@@ -29,16 +29,14 @@ ms.lasthandoff: 08/16/2017
 > [!NOTE]  
 > SQL Server 2017 には、SQL Server 2016 サービス パックに追加された機能も含まれています。 それらの項目については、「[SQL Server 2016 (データベース エンジン) の新機能](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)」を参照してください。
 
+**機能強化**  
 
-## <a name="sql-server-database-engine-rc1"></a>SQL Server データベース エンジン (RC1)  
-- CTP 2.0 で説明されている `clr strict security` 機能の回避策として、CLR アセンブリをホワイトリストに追加できるようになりました。 信頼できるアセンブリのホワイトリストをサポートするために、[sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)、および [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) が追加されました。
-
-## <a name="sql-server-database-engine-previous-ctps"></a>SQL Server データベース エンジン (以前の CTP)  
-- CLR では、セキュリティ境界としてサポートされなくなった、.NET Framework のコード アクセス セキュリティ (CAS) が使用されます。 `PERMISSION_SET = SAFE` で作成された CLR アセンブリが、外部のシステム リソースにアクセスし、非管理対象コードを呼び出し、sysadmin 特権を取得できる場合があります。 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] 以降、CLR アセンブリのセキュリティを強化するために `clr strict security` という `sp_configure` オプションが導入されました。 `clr strict security` は既定で有効になり、`SAFE` および `EXTERNAL_ACCESS` アセンブリを `UNSAFE` とマークされている場合と同様に扱います。 `clr strict security` オプションは、旧バージョンとの互換性のために無効にできますが、これは推奨されません。 Microsoft では、master データベースで `UNSAFE ASSEMBLY` アクセス許可が付与されている対応するログインを含む証明書または非対称キーで、すべてのアセンブリに署名することをお勧めします。 詳しくは、「[CLR の厳密なセキュリティ](configure-windows/clr-strict-security.md)」をご覧ください。  
+- CLR では、セキュリティ境界としてサポートされなくなった、.NET Framework のコード アクセス セキュリティ (CAS) が使用されます。 `PERMISSION_SET = SAFE` で作成された CLR アセンブリが、外部のシステム リソースにアクセスし、非管理対象コードを呼び出し、sysadmin 特権を取得できる場合があります。 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] 以降、CLR アセンブリのセキュリティを強化するために `clr strict security` という `sp_configure` オプションが導入されました。 `clr strict security` は既定で有効になり、`SAFE` および `EXTERNAL_ACCESS` アセンブリを `UNSAFE` とマークされている場合と同様に扱います。 `clr strict security` オプションは、旧バージョンとの互換性のために無効にできますが、これは推奨されません。 Microsoft では、master データベースで `UNSAFE ASSEMBLY` アクセス許可が付与されている対応するログインを含む証明書または非対称キーで、すべてのアセンブリに署名することをお勧めします。 `clr strict security` 機能の回避策として、CLR アセンブリをホワイトリストに追加できます。 信頼できるアセンブリのホワイトリストをサポートするために、[sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)、および [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) が追加されました。 詳しくは、「[CLR の厳密なセキュリティ](configure-windows/clr-strict-security.md)」をご覧ください。  
 - 新しい DMF [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) は、トランザクション ログの正常性の監視に役立つ、トランザクション ログ ファイルに関する概要レベルの属性と情報を公開するために、導入されました。  
 - 再開可能なオンライン インデックス リビルド。 再開可能なオンライン インデックス リビルドを使用すると、障害 (レプリカへのフェールオーバーや、ディスク領域不足など) 発生後、停止した場所からオンライン インデックス リビルド操作を再開できます。 また、一時停止し、オンライン インデックス リビルド操作を後で再開することもできます。 たとえば、利用できるメンテナンス期間が大規模なテーブルには短すぎる場合、別のメンテナンス期間に優先度の高いタスクを実行したり、インデックスのリビルドを完了したりするために、システム リソースの解放が必要になる場合があります。 最終的に、再開可能なオンライン インデックス リビルドでは大量のログ領域は必要ないため、再開可能なリビルド操作の実行中に、ログの切り捨てを実行できます。 「[ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)」と「[オンライン インデックス操作のガイドライン](../relational-databases/indexes/guidelines-for-online-index-operations.md)」を参照してください。
 - **ALTER DATABASE SCOPED CONFIGURATION の IDENTITY_CACHE オプション**。 `ALTER DATABASE SCOPED CONFIGURATION` T-SQL ステートメントに追加された新しい IDENTITY_CACHE オプションです。 このオプションを `OFF` に設定すると、サーバーが予期せず再起動したときやセカンダリ サーバーにフェールオーバーしたときに、データベースが ID 列の値のギャップを回避できます。 「[ALTER DATABASE SCOPED CONFIGURATION (ALTER データベース スコープ ベースの構成)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。   
 -  多対多のリレーションシップをモデル化するグラフ データベース機能が [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] に追加されました。 これには、ノードとエッジ テーブルを作成するための新しい [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 構文と、クエリ用の [MATCH](../t-sql/queries/match-sql-graph.md) キーワードが含まれています。 詳細については、[SQL Server 2017 でのグラフ処理](../relational-databases/graphs/sql-graph-overview.md)に関するページをご覧ください。   
+- 新世代のクエリ処理では、最適化戦略がアプリケーション ワークロードの実行時条件に適用される点が改善されています。 **アダプティブ クエリ処理**機能ファミリのこの最初のバージョンでは、3 つの新しい改善点があります。**バッチ モード適応型結合**、**バッチ モード メモリ許可フィードバック**、そして複数ステートメントのテーブル値関数の**インターリーブ実行**です。  「[Microsoft SQL データベースでのアダプティブ クエリの処理](../relational-databases/performance/adaptive-query-processing.md)」を参照してください。
 - 自動チューニングは、潜在的なクエリ パフォーマンスの問題に関する洞察を提供し、解決策を推奨して、特定された問題を自動的に解決するデータベース機能です。 潜在的なパフォーマンスの問題が検出されると必ず、[!INCLUDE[ssnoversion](../includes/ssnoversion.md)] の自動チューニングにより通知されます。また、修正措置を適用したり、[!INCLUDE[ssde-md](../includes/ssde-md.md)]でパフォーマンスの問題を自動修復したりすることも可能です。 詳しくは、「[自動調整](../relational-databases/automatic-tuning/automatic-tuning.md)」をご覧ください。
 - メモリ最適化テーブルでの非クラスター化インデックス ビルドのパフォーマンス向上。 データベース復旧中の MEMORY_OPTIMIZED テーブルにおける bwtree (非クラスター化) インデックス リビルドのパフォーマンスが大幅に最適化されました。 この機能強化により、非クラスター化インデックス使用時のデータベースの復旧時間が大幅に短縮されます。  
 - [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) には、socket_count、cores_per_socket、numa_node_count の 3 つの新しい列があります。

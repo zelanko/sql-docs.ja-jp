@@ -1,5 +1,5 @@
 ---
-title: "Code (Master Data Services) 以外の属性の値を自動的に生成 |Microsoft ドキュメント"
+title: "Code 以外の属性の値の自動生成 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 caps.latest.revision: 5
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aa9f904e870324a51ae46e94986c3b20cd84f354
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 2709d8389e92b9688e18fba0a055263fa67e33e7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>Code 以外の属性の値の自動生成 (Master Data Services)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、ビジネス ルールが適用されるたびにエンティティの属性値に整数を自動的に割り当てる場合は、属性の値を自動的に生成します。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、ビジネス ルールが適用されるたびにエンティティの属性値に整数を自動的に割り当てる場合は、属性の値を自動的に生成します。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
@@ -71,13 +71,13 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>次の手順  
   
--   [ビジネス ルール &#40; に対して特定のメンバーを検証します。マスター データ サービス &#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+-   [ビジネス ルールに対して特定のメンバーを検証する (マスター データ サービス)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
--   [ビジネス ルール &#40; に対してバージョンを検証します。マスター データ サービス &#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+-   [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
- [コードの自動作成 & #40 です。マスター データ サービス &#41;](../master-data-services/automatic-code-creation-master-data-services.md)   
- [ビジネス ルール & #40 です。マスター データ サービス &#41;](../master-data-services/business-rules-master-data-services.md)   
- [検証と #40 です。マスター データ サービス &#41;](../master-data-services/validation-master-data-services.md)  
+ [コードの自動作成 (マスター データ サービス)](../master-data-services/automatic-code-creation-master-data-services.md)   
+ [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)   
+ [検証 (マスター データ サービス)](../master-data-services/validation-master-data-services.md)  
   
   

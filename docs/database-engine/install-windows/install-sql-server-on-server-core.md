@@ -1,8 +1,10 @@
 ---
 title: "Server Core への SQL Server 2016 のインストール | Microsoft Docs"
 ms.custom: 
-ms.date: 11/10/2016
-ms.prod: sql-server-2016
+ms.date: 09/05/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,18 +17,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 043a3dbcfcdfe75e77e8d50bd9698a05fbbf02c4
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: 501fac02e6146d417572dfb9f4f3906de7b2eeeb
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core への SQL Server のインストール
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、Server Core インストールにインストールできます。 このトピックでは、Server Core に [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] をインストールする場合のセットアップに固有の詳細について説明します。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、Server Core インストールにインストールできます。   
   
- Server Core インストール オプションでは、特定のサーバー ロールを実行するための最低限の環境が提供されます。 これにより、必要な保守と管理が減り、これらのサーバー ロールに対する攻撃の危険性が軽減されます。 Server Core の詳細については、「[Server Core のインストール](https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-core)」を参照してください。 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]に実装された Server Core の詳細については、「 [Windows Server 2012 の Server Core](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) 」(http://msdn.microsoft.com/library/hh846323(VS.85).aspx) を参照してください。  
+Server Core インストール オプションでは、特定のサーバー ロールを実行するための最低限の環境が提供されます。 これにより、必要な保守と管理が減り、これらのサーバー ロールに対する攻撃の危険性が軽減されます。 Server Core の詳細については、「[Server Core のインストール](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core)」を参照してください。 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]に実装された Server Core の詳細については、「 [Windows Server 2012 の Server Core](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) 」(http://msdn.microsoft.com/library/hh846323(VS.85).aspx) を参照してください。  
   
- 現在サポートされているオペレーティング システムの一覧については、「[SQL Server のインストールに必要なハードウェアおよびソフトウェア](https://docs.microsoft.com/en-us/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server)」を参照してください。
+ 現在サポートされているオペレーティング システムの一覧については、「[SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」を参照してください。
 
 ## <a name="prerequisites"></a>前提条件  
   
@@ -78,9 +80,6 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="install"></a>Install  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、Server Core オペレーティング システムでのインストール ウィザードを使用したセットアップはサポートされていません。 Server Core にインストールする場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、/Q パラメーターを使用した非表示モード、または /QS パラメーターを使用した簡易非表示モードがサポートされます。 詳細については、「 [コマンド プロンプトからの SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」を参照してください。  
-  
-> [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 または [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core を実行しているコンピューターに、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とサイド バイ サイドでインストールすることはできません。  
   
  どのインストール方法を使用するかにかかわらず、個人として、または組織を代表して、ソフトウェア ライセンス条項に同意するかどうかを確認する必要があります。ただし、ソフトウェアの使用に別の契約 ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ボリューム ライセンス契約、ISV や OEM とのサード パーティ契約など) が適用される場合を除きます。  
   
@@ -263,7 +262,7 @@ ms.lasthandoff: 08/02/2017
          DefaultSetup.ini ファイルが存在しない場合は、作成し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ソース メディアのルート レベルの \x86 および \x64 フォルダーにコピーできます。  
   
 ## <a name="configure-remote-access-of-includessnoversionincludesssnoversion-mdmd-on-server-core"></a>Server Core で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリモート アクセスを構成する  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 または [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] の Server Core インストールで実行されている [!INCLUDE[win8srv](../../includes/win8srv-md.md)]インスタンスのリモート アクセスを構成するには、以下で説明する処理を実行します。  
+ Server Core で実行している [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] スタンスのリモート アクセスを構成するには、以下で説明する操作を実行します。  
   
 ### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
@@ -291,7 +290,7 @@ ms.lasthandoff: 08/02/2017
 ### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Server Core 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して TCP/IP プロトコルを有効にするには、Windows PowerShell を使用します。 以下の操作を行ってください。  
   
-1.  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 または [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core を実行しているコンピューターで、タスク マネージャーを起動します。  
+1.  サーバーで、タスク マネージャーを起動します。  
   
 2.  **[アプリケーション]** タブで、 **[新しいタスク]**をクリックします。  
   
@@ -299,7 +298,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  **[Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]** ウィンドウで、次のスクリプトを実行して TCP/IP プロトコルを有効にします。  
   
-```  
+```powershell  
 $smo = 'Microsoft.SqlServer.Management.Smo.'  
 $wmi = new-object ($smo + 'Wmi.ManagedComputer')  
 # Enable the TCP protocol on the default instance.  If the instance is named, replace MSSQLSERVER with the instance name in the following line.  
@@ -331,9 +330,9 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
 3.  **[新しいタスクの作成]** ダイアログ ボックスで、 **[名前]** フィールドに「 **cmd** 」と入力して、 [!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
 ## <a name="see-also"></a>参照  
- [構成ファイルを使用した SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
- [コマンド プロンプトからの SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+ [構成ファイルを使用した SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
+ [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [エディションと SQL Server 2017 のサポートされる機能](../../sql-server/editions-and-components-of-sql-server-2017.md)   
  [Server Core のインストール](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
  [Sconfig.cmd を使用して Windows Server 2016 の Server Core インストールを構成する](http://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
  [Windows PowerShell でのフェールオーバー クラスター コマンドレット](http://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   

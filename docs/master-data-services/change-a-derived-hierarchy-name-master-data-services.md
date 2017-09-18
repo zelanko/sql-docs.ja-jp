@@ -1,5 +1,5 @@
 ---
-title: "名前を変更する派生階層 (Master Data Services) |Microsoft ドキュメント"
+title: "派生階層名を変更する (マスター データ サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - derived hierarchies, changing name
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fc5f01765ac92ad49b45fbd48b035d8303fd609a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: c8451eb8bc285c16720b27bf9592c83caa73a4d9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>派生階層名を変更する (マスター データ サービス)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、派生階層の名前を変更できます。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、派生階層の名前を変更できます。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
@@ -52,8 +52,8 @@ ms.lasthandoff: 08/02/2017
 8.  **[派生階層の保存]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [派生階層 & #40 です。マスター データ サービス &#41;](../master-data-services/derived-hierarchies-master-data-services.md)   
- [派生階層 &#40; を作成します。マスター データ サービス &#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [派生階層 &#40; を削除します。マスター データ サービス &#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)  
+ [派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-master-data-services.md)   
+ [派生階層を作成する (マスター データ サービス)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [派生階層を削除する (マスター データ サービス)](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "エンティティを編集する (マスター データ サービス) |Microsoft ドキュメント"
+title: "エンティティを編集する (マスター データ サービス) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - entities [Master Data Services], changing name
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1364db68abbbff7ff13899180af78dc87478737d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: bd0a151b21d3c8bfb138b4aac457587b84699228
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="edit-an-entity-master-data-services"></a>エンティティを編集する (マスター データ サービス)
@@ -63,19 +63,19 @@ ms.lasthandoff: 08/02/2017
 ## <a name="status"></a>[状態]  
  グリッドの状態列には、エンティティに対する操作の状態が示されます。 **[エンティティの保存]**をクリックすると、エンティティが更新中であることを示す次の画像が表示されます。  
   
- ![ステータスの更新のアイコン](../master-data-services/media/mds-statusicon-updating.png "ステータスの更新のアイコン")  
+ ![更新中状態のアイコン](../master-data-services/media/mds-statusicon-updating.png "更新中状態のアイコン")  
   
  エンティティの作成または編集中にエラーが発生すると、次の画像が表示されます。  
   
- ![エラー状態をアイコン](../master-data-services/media/mds-statusicon-error.png "のエラー ステータス アイコン")  
+ ![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン")  
   
  適切な状態のときは、次の画像が表示されます。  
   
- ![[Ok] の状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK ステータス アイコン")  
+ ![適切な状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "適切な状態のアイコン")  
   
 ## <a name="see-also"></a>参照  
  [明示的階層 (マスター データ サービス)](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [エンティティ &#40; を削除します。マスター データ サービス &#41;](../master-data-services/delete-an-entity-master-data-services.md)   
+ [エンティティを削除する (マスター データ サービス)](../master-data-services/delete-an-entity-master-data-services.md)   
  [エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)  
   
   

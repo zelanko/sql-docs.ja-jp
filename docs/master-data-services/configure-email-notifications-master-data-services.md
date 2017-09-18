@@ -1,5 +1,5 @@
 ---
-title: "電子メール通知 (Master Data Services) を構成する |Microsoft ドキュメント"
+title: "電子メール通知を構成する (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - notifications [Master Data Services], configuring notifications
 ms.assetid: 4241a6ab-7465-471b-9890-57c6b572037e
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 10139480120dffc47c93d36022b7c15e196a2a76
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 6d2c212964afe4048e08343324e4fb29294eda08
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="configure-email-notifications-master-data-services"></a>電子メール通知を構成する (Master Data Services)
@@ -45,8 +45,8 @@ ms.lasthandoff: 08/02/2017
 -   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] には、通知に影響を与える設定があります。 これらの設定は、 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] で調整するか、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの System Settings テーブルで直接調整することができます。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../master-data-services/system-settings-master-data-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [通知 & #40 です。マスター データ サービス &#41;](../master-data-services/notifications-master-data-services.md)   
+ [通知 (マスター データ サービス)](../master-data-services/notifications-master-data-services.md)   
  [電子メール通知のトラブルシューティング (Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)   
- [通知 &#40; を送信するビジネス ルールを構成します。マスター データ サービス &#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
+ [通知を送信するようにビジネス ルールを構成する (マスター データ サービス)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

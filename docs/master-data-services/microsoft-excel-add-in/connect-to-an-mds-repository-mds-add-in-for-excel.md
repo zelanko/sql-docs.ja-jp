@@ -1,5 +1,5 @@
 ---
-title: "MDS リポジトリ (MDS アドインを Excel 用) への接続 |Microsoft ドキュメント"
+title: "MDS リポジトリへの接続 (Excel 用 MDS アドイン) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8f427312-4c09-4c8b-b9f9-8b235557a74b
 caps.latest.revision: 12
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 87931c60b791fd106d0476ac037e1dfcd4041fb2
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 29208bf4a5d131e47ded0ba55aa167f6ee80ff3f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="connect-to-an-mds-repository-mds-add-in-for-excel"></a>MDS リポジトリへの接続 (Excel 用 MDS アドイン)
@@ -39,7 +39,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  **[新しい接続の追加]** ダイアログ ボックスの **[説明]** フィールドに、接続の説明を入力します。 この接続は、ツール バーの **[接続]** ボタンの下の矢印をクリックしたときに表示されます。  
   
-5.  **MDS サーバー アドレス**ボックスの URL を入力、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web アプリケーション、たとえば`http://contoso/mds`します。  
+5.  **[MDS サーバー アドレス]** ボックスに、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションの URL (`http://contoso/mds` など) を入力します。  
   
     > [!NOTE]  
     >  必ずコンピューター名を使用してください。"localhost" を使用しないでください。  

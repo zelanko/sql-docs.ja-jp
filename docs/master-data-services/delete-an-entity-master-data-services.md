@@ -1,5 +1,5 @@
 ---
-title: "エンティティを削除する (マスター データ サービス) |Microsoft ドキュメント"
+title: "エンティティを削除する (マスター データ サービス) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - deleting entities [Master Data Services]
 ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4f802b5e2bc1524751af90ae809fa063b86ffa8f
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 433e3a29d3eb64ab4e64ef1dc8d3ea9f9f5a951e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-an-entity-master-data-services"></a>エンティティを削除する (マスター データ サービス)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] でエンティティを削除して、そのエンティティのすべてのメンバーおよび属性を削除します。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でエンティティを削除して、そのエンティティのすべてのメンバーおよび属性を削除します。  
   
 > [!NOTE]  
 >  すべてのバージョンからのエンティティのメンバーが恒久的に削除されます。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 08/02/2017
 6.  確認のダイアログ ボックスで **[OK]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [エンティティと #40 です。マスター データ サービス &#41;](../master-data-services/entities-master-data-services.md)   
- [エンティティ &#40; を作成します。マスター データ サービス &#41;](../master-data-services/create-an-entity-master-data-services.md)  
+ [エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)   
+ [エンティティを作成する (マスター データ サービス)](../master-data-services/create-an-entity-master-data-services.md)  
   
   

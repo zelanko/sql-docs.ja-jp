@@ -2,7 +2,7 @@
 title: "[データベースのプロパティ]([オプション] ページ) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 04/29/2016
+ms.date: 08/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 67
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 49b5572874fd642d738b8ffee362cc84540709ea
+ms.translationtype: HT
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 8d3a9c04f09d48823638e1608722268b360610e8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="database-properties-options-page"></a>[データベースのプロパティ] \([オプション] ページ)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
  データベースの復旧に対して、 **[完全]**、 **[一括ログ]**、または **[単純]**のいずれかのモデルを指定します。 復旧モデルの詳細については、「[復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)」をご覧ください。  
   
  **互換性レベル**  
- データベースがサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最新バージョンを指定します。 指定できる値は、  **[SQL Server 2014 (120)]**、  **[SQL Server 2012 (110)]**、 **[SQL Server 2008 (100)]**です。 SQL Server 2005 データベースを SQL Server 2014 にアップグレードすると、そのデータベースの互換性レベルは 90 から 100 に変更されます。  互換性レベル 90 は SQL Server 2014 ではサポートされていません。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
+ データベースがサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最新バージョンを指定します。 使用可能な値については、「[ALTER DATABASE (Transact-SQL) Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」 (ALTER DATABASE (TRANSACT-SQL) 互換性レベル) を参照してください。 SQL Server データベースがアップグレードされると、そのデータベースの互換性レベルが保持される (可能な場合) か、新しいサポートされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最小レベルに変更されます。 
   
  **[コンテインメントの種類]**  
  これが包含データベースであるかどうかを指定するには、[なし] または [部分] を指定します。 包含データベースの詳細については、「 [Contained Databases](../../relational-databases/databases/contained-databases.md)」をご覧ください。 データベースを包含データベースとして構成するには、 **[包含データベースの有効化]** サーバー プロパティを **TRUE** に設定しておく必要があります。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
  **[自動終了]**  
  最後のユーザーが終了した後で、データベースを即座にシャットダウンしてリソースを解放するかどうかを指定します。 指定できる値は、 **[True]** および **[False]**です。 **[True]**を指定すると、最後のユーザーがログオフした後でデータベースは正常にシャットダウンされてリソースが解放されます。  
   
- 増分統計の自動作成  
+ **[増分統計の自動作成]**  
  パーティションごとの統計を作成するときに増分オプションを使用するかどうかを指定します。 増分統計の詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」をご覧ください。  
   
  **[統計の自動作成]**  
@@ -62,7 +62,7 @@ ms.lasthandoff: 06/22/2017
  データベースで古い最適化統計を自動的に更新するかどうかを指定します。 指定できる値は、 **[True]** および **[False]**です。 **[True]** を指定すると、クエリの最適化に必要な統計が期限切れの場合、最適化時に自動的に構築されます。 詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」をご覧ください。  
   
  **[統計の非同期的自動更新]**  
- **[True]**が指定された場合、古い統計の自動更新を開始するクエリは、統計が更新されるのを待たずにコンパイルを開始します。 後続のクエリは、更新された統計が使用可能になった時点で、その統計を使用します。  
+ **[True]** が指定された場合、古い統計の自動更新を開始するクエリは、統計が更新されるのを待たずにコンパイルを開始します。 後続のクエリは、更新された統計が使用可能になった時点で、その統計を使用します。  
   
  **[False]**が指定された場合、古い統計の自動更新を開始するクエリは、更新された統計をクエリ最適化プランで使用できるようになるまで待機します。  
   
@@ -130,6 +130,9 @@ ms.lasthandoff: 06/22/2017
  FileTable に格納されている FILESTREAM データへの、ファイル システムを通じた非トランザクション アクセスに対するオプションとして、 **OFF**、 **READ_ONLY**、または **FULL**を指定します。 FILESTREAM がサーバー上で有効になっていない場合、この値は OFF に設定され、変更できません。 詳細については、「[FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)」をご覧ください。  
   
 ## <a name="miscellaneous"></a>その他  
+**[スナップショット分離を許可]**  
+この機能を有効にします。  
+
  **[ANSI NULL 既定値]**  
  **CREATE TABLE** または **ALTER TABLE** ステートメントの実行中に、 **NOT NULL** が明示的に定義されていないすべてのユーザー定義データ型または列に対して、NULL 値を許容します (既定の状態)。 詳細については、「[SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)」と「[SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)」をご覧ください。  
   
@@ -155,7 +158,13 @@ ms.lasthandoff: 06/22/2017
  **[True]**を指定すると、データベース内にある FOREIGN KEY 制約でリンクされ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime **列を含んでいる 2 つのテーブル間の相関関係に関する統計が** によって保持されます。  
   
  **[False]**を指定すると、相関関係の統計は保持されません。  
-  
+ 
+ **[遅延持続性]**  
+ この機能を有効にします。  
+ 
+ **[Is Read Committed Snapshot On]**  
+ この機能を有効にします。  
+ 
  **[数値丸め処理アボート]**  
  データベースが丸めエラーを処理する方法を指定します。 指定できる値は、 **[True]** および **[False]**です。 **[True]**を指定すると、式の精度が低下したときにエラーが生成されます。 **[False]**を指定すると、精度が低下してもエラー メッセージは生成されず、結果はそれを格納する列または変数の精度まで丸められます。 詳細については、「[SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md)」をご覧ください。  
   
@@ -191,15 +200,28 @@ ms.lasthandoff: 06/22/2017
  ディスク I/O エラーによる不完全な I/O トランザクションを検出し、報告する場合に使用されるオプションを指定します。 指定できる値は、 **[None]**、 **[TornPageDetection]**、および **[Checksum]**です。 詳細については、「 [suspect_pages テーブルの管理 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)を使用してページを復元する方法について説明します。  
   
  **[ターゲットの復旧時間 (秒)]**  
- クラッシュが発生した場合、指定したデータベースが復旧に要する時間の上限を秒単位で指定します。 詳細については、「[データベース チェックポイント &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)」をご覧ください。  
-  
+ クラッシュが発生した場合、指定したデータベースが復旧に要する時間の上限を秒単位で指定します。 詳細については、「[データベース チェックポイント &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)」を参照してください。  
+
+## <a name="service-broker"></a>Service Broker  
+**[Broker が有効]**  
+Service Broker を有効または無効にします。  
+
+**[Broker の優先度の許可]**  
+Service Broker の読み取り専用プロパティです。  
+
+**[Service Broker 識別子]**  
+読み取り専用の識別子です。  
+
 ## <a name="state"></a>状態  
  **[読み取り専用データベース]**  
- データベースが読み取り専用かどうかを指定します。 指定できる値は、 **[True]** および **[False]**です。 **[True]**を指定すると、ユーザーはデータベースのデータの読み取りのみを実行できます。 データまたはデータベース オブジェクトは変更できませんが、DROP DATABASE ステートメントを使用してデータベース自体を削除することはできます。 データベースの使用中には、 **[読み取り専用データベース]** オプションに新しい値を設定することができできません。 master データベースは例外です。このオプションが設定されていても、システム管理者だけは master データベースを使用できます。  
+ データベースが読み取り専用かどうかを指定します。 指定できる値は、 **[True]** および **[False]**です。 **[True]**を指定すると、ユーザーはデータベースのデータの読み取りのみを実行できます。 データまたはデータベース オブジェクトは変更できませんが、`DROP DATABASE` ステートメントを使用してデータベース自体を削除することはできます。 データベースの使用中には、 **[読み取り専用データベース]** オプションに新しい値を設定することができできません。 master データベースは例外です。このオプションが設定されていても、システム管理者だけは master データベースを使用できます。  
   
  **データベース状態**  
  データベースの現在の状態を表示します。 編集することはできません。 **[データベース状態]**の詳細については、「 [Database States](../../relational-databases/databases/database-states.md)」を参照してください。  
-  
+
+ **[暗号化有効]**  
+ **[True]**の場合、このデータベースはデータベース暗号化に対応しています。 暗号化ではデータベース暗号化キーが必要です。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」をご覧ください。  
+ 
  **[アクセスの制限]**  
  データベースにアクセスできるユーザーを指定します。 有効な値は次のとおりです。  
   
@@ -215,12 +237,10 @@ ms.lasthandoff: 06/22/2017
   
      db_owner、dbcreator、または sysadmin ロールのメンバーのみがデータベースを使用できます。  
   
- **[暗号化有効]**  
- **[True]**の場合、このデータベースはデータベース暗号化に対応しています。 暗号化ではデータベース暗号化キーが必要です。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)」をご覧ください。  
-  
+
+
 ## <a name="see-also"></a>参照  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
-  
   
 

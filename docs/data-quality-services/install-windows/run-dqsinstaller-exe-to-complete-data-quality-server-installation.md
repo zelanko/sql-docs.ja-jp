@@ -1,5 +1,5 @@
 ---
-title: "Data Quality Server のインストールを完了するための DQSInstaller.exe を実行 |Microsoft ドキュメント"
+title: "Data Quality Server のインストールを完了するための DQSInstaller.exe の実行 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,11 +14,11 @@ caps.latest.revision: 33
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e61f0e79491b3c55505031e4b4e1ddef34278ea
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Data Quality Server のインストールを完了するための DQSInstaller.exe の実行
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/02/2017
 3.  データベース マスター キーのパスワードの入力を求めるメッセージが表示されます。 後で [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) に参照データ プロバイダーを設定するときに DQS_MAIN データベースに保存される参照データ サービス プロバイダー キーを暗号化するには、データベース マスター キーが必要です。  
   
     > [!IMPORTANT]  
-    >  パスワードは、8 文字以上にする必要があり、次の 4 つのカテゴリのうち 3 つカテゴリの文字を含める必要があります。英語の大文字 (A、B、C、... Z)、英語の小文字 (a、b、c、... z)、数字 (0 1、2、... 9) と英数字以外の特殊文字 (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/) です。 たとえば、P@ssword のようにします。 現在のパスワードがこの要件を満たしていない場合は、別のパスワードの入力を求めるメッセージが表示されます。  
+    >  パスワードは、8 文字以上にする必要があり、次の 4 つのカテゴリのうち 3 つカテゴリの文字を含める必要があります。英語の大文字 (A、B、C、... Z)、英語の小文字 (a、b、c、... z)、数字 (0 1、2、... 9) と英数字以外の特殊文字 (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/) です。 たとえば、 P@sswordのようにします。 現在のパスワードがこの要件を満たしていない場合は、別のパスワードの入力を求めるメッセージが表示されます。  
   
 4.  パスワードを入力し、さらに確認のためにもう一度そのパスワードを入力してから、Enter キーを押してインストールを続行します。  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 08/02/2017
 |-exportkbs|すべてのナレッジ ベースを DQS バックアップ ファイル (.dqsb) にエクスポートします。 また、エクスポート先の完全なパスとファイル名を指定する必要があります。<br /><br /> 詳細については、「 [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)」を参照してください。|`dqsinstaller.exe –exportkbs <path><filename>`<br /><br /> 例を次に示します。 `dqsinstaller.exe –exportkbs c:\DQSBackup.dqsb`|  
 |-importkbs|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールが完了した後にすべてのナレッジ ベースを DQS バックアップ ファイル (.dqsb) からインポートします。 また、インポート元の完全なパスとファイル名を指定する必要があります。<br /><br /> 詳細については、「 [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)」を参照してください。|`dqsinstaller.exe –importkbs <path><filename>`<br /><br /> 例を次に示します。 `dqsinstaller.exe –importkbs c:\DQSBackup.dqsb`|  
 |-upgrade|DQS データベース スキーマをアップグレードします。 あらかじめ構成された DQS インスタンスに SQL Server 更新プログラムをインストールした後に、このパラメーターを使用する必要があります。 詳細については、「 [Upgrade DQS Databases Schema After Installing SQL Server Update](../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md)」を参照してください。|`dqsinstaller.exe -upgrade`|  
-|-uninstall|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] を現在の SQL Server インスタンスからアンインストールします。<br /><br /> また、Data Quality Server の既存のインストールに含まれるすべてのナレッジ ベースを DQS バックアップ ファイル (.dqsb) にエクスポートしてから、Data Quality Server をアンインストールすることもできます。 詳細については、「 [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)」を参照してください。<br /><br /> **\*\*重要な\* \*** をアンインストールする場合[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]、SQL server インスタンスを使用してから、`–uninstall`コマンド ライン パラメーターをすべてアンインストール プロセスの一部として、DQS オブジェクトが削除されます。 「 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] Data Quality Server オブジェクトの削除 [」でも述べているように、](../../sql-server/install/remove-data-quality-server-objects.md)のアンインストール後に手動でそれらを削除する必要はありません。|**Data Quality Server のアンインストールのみを行うには:**<br /><br /> `dqsinstaller.exe –uninstall`<br /><br /> **すべてのナレッジ ベースをファイルにエクスポートしてから、Data Quality Server をアンインストールするには:**<br /><br /> `dqsinstaller.exe –uninstall <path><filename>`<br /><br /> 例を次に示します。 `dqsinstaller.exe –uninstall c:\DQSBackup.dqsb`|  
+|-uninstall|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] を現在の SQL Server インスタンスからアンインストールします。<br /><br /> また、Data Quality Server の既存のインストールに含まれるすべてのナレッジ ベースを DQS バックアップ ファイル (.dqsb) にエクスポートしてから、Data Quality Server をアンインストールすることもできます。 詳細については、「 [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)」を参照してください。<br /><br /> **\*\* 重要 \*\*** [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] コマンド ライン パラメーターを使用して SQL サーバー インスタンスから `–uninstall` をアンインストールすると、すべての DQS オブジェクトがアンインストール プロセスの一部として削除されます。 「 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] Data Quality Server オブジェクトの削除 [」でも述べているように、](../../sql-server/install/remove-data-quality-server-objects.md)のアンインストール後に手動でそれらを削除する必要はありません。|**Data Quality Server のアンインストールのみを行うには:**<br /><br /> `dqsinstaller.exe –uninstall`<br /><br /> **すべてのナレッジ ベースをファイルにエクスポートしてから、Data Quality Server をアンインストールするには:**<br /><br /> `dqsinstaller.exe –uninstall <path><filename>`<br /><br /> 例を次に示します。 `dqsinstaller.exe –uninstall c:\DQSBackup.dqsb`|  
   
  **コマンド プロンプトから DQSInstaller.exe を実行するには、次の手順を実行します。**  
   
@@ -106,8 +106,8 @@ ms.lasthandoff: 08/02/2017
 -   ソース データにアクセスして DQS 操作を実行できることと、処理後のデータをデータベース内のテーブルにエクスポートできることを確認します。 「 [DQS 操作のためのデータへのアクセス](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Data Quality Services をインストールします。](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [.NET Framework 更新後の SQLCLR アセンブリをアップグレードします。](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
- [DQSInstaller.exe を使用したエクスポートとインポートの DQS ナレッジ ベース](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  
+ [Data Quality Services のインストール](../../data-quality-services/install-windows/install-data-quality-services.md)   
+ [.NET Framework 更新後の SQLCLR アセンブリのアップグレード](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
+ [DQSInstaller.exe を使用した DQS ナレッジ ベースのエクスポートとインポート](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  
   
   

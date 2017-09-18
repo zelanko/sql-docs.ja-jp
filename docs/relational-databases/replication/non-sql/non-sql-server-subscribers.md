@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 以外のサブスクライバー | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -24,15 +24,17 @@ caps.latest.revision: 55
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 90cae789ce180c32c4651f967a7d7fdc246effe2
+ms.translationtype: HT
+ms.sourcegitcommit: 05497c347c94b42bb22488560c89b7f9a7783a4d
+ms.openlocfilehash: feeb6962b9505dd33594f423fff08ca7ca1ff61f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="non-sql-server-subscribers"></a>SQL Server 以外のサブスクライバー
-  以下の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーでは、プッシュ サブスクリプションを使用することで、スナップショット パブリケーションおよびトランザクション パブリケーションにサブスクライブできます。 以下に示す 2 つのデータベースの最新バージョンでは、OLE DB プロバイダーを使用したサブスクリプションがサポートされています。  
+# <a name="non-sql-server-subscribers"></a>SQL Server 以外のサブスクライバー  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+以下の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーでは、プッシュ サブスクリプションを使用することで、スナップショット パブリケーションおよびトランザクション パブリケーションにサブスクライブできます。 以下に示す 2 つのデータベースの最新バージョンでは、OLE DB プロバイダーを使用したサブスクリプションがサポートされています。  
   
  SQL Server 以外のサブスクライバーへの異種レプリケーションは推奨されません。 Oracle パブリッシングは推奨されません。 データを移動するには、変更データ キャプチャと [!INCLUDE[ssIS](../../../includes/ssis-md.md)]を使用してソリューションを作成します。  
   
@@ -43,8 +45,22 @@ ms.lasthandoff: 06/22/2017
 |--------------|----------------------|--------------|  
 |Oracle|Oracle がサポートするすべてのプラットフォーム|Oracle OLE DB プロバイダー (Oracle によって提供されます)|  
 |IBM DB2|MVS、AS400、Unix、Linux、Windows (9.x を除く)|Microsoft Host Integration Server (HIS) OLE DB プロバイダー|  
+
+Oracle バージョン情報:  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、トランザクション レプリケーションとスナップショット レプリケーションに対する次の異種シナリオをサポートします。  
   
- Oracle および IBM DB2, にサブスクリプションを作成する方法の詳細については、「 [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) 」および「 [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)を使用してソリューションを作成します。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーへのデータのパブリッシュ  
+
+-   Oracle に対するデータのパブリッシュには次の制限があります。  
+  | |2016 以前 |2017 以降 |
+  |-------|-------|--------|
+  |Oracle からのレプリケーション |Oracle 10g 以前のみをサポート |Oracle 10g 以前のみをサポート |
+  |Oracle へのレプリケーション |Oracle 12c まで |サポートされていません |
+
+
+ SQL Server 以外のサブスクライバーへの異種レプリケーションは推奨されません。 Oracle パブリッシングは推奨されません。 データを移動するには、変更データ キャプチャと [!INCLUDE[ssIS](../../../includes/ssis-md.md)]を使用してソリューションを作成します。  
+
+Oracle および IBM DB2, にサブスクリプションを作成する方法の詳細については、「 [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) 」および「 [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)を使用してソリューションを作成します。  
   
 ## <a name="considerations-for-non-sql-server-subscribers"></a>SQL Server 以外のサブスクライバーに関する注意点  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーにレプリケートする場合は、以下の点に留意してください。  
@@ -55,9 +71,9 @@ ms.lasthandoff: 06/22/2017
   
 -   パブリケーションの新規作成ウィザードでパブリケーションを作成し、[パブリケーションのプロパティ] ダイアログ ボックスを使用して、このパブリケーションを SQL Server 以外のサブスクライバーに対して有効化する場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーに、サブスクリプション データベース内の全オブジェクトの所有者は指定されません。一方、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、パブリケーション データベース内の対応するオブジェクトの所有者が指定されます。  
   
--   パブリケーションに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーと[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーが含まれる場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーのサブスクリプションを作成する前に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対してパブリケーションを有効化する必要があります。  
+-   パブリケーションに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーが含まれる場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーのサブスクリプションを作成する前に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対してパブリケーションを有効化する必要があります。  
   
--   既定では、スナップショット エージェントが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対して生成したスクリプトには、CREATE TABLE 構文に引用符なしの識別子が使用されます。 したがって、「test」という名前でパブリッシュされたテーブルは「TEST」としてレプリケートされます。 大文字/小文字の指定をパブリケーション データベース内のテーブルと同一にするには、ディストリビューション エージェントの **-QuotedIdentifier** パラメーターを使用します。 パブリッシュされたオブジェクトの名前 (テーブル、列、制約など) に、スペースや、 **以外のサブスクライバーのデータベースのバージョンでの予約語が含まれている場合は、** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パラメーターも使用する必要があります。 このパラメーターの詳細については、「 [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)」を参照してください。  
+-   既定では、スナップショット エージェントが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対して生成したスクリプトには、`CREATE TABLE` 構文に引用符なしの識別子が使用されます。 したがって、「test」という名前でパブリッシュされたテーブルは「TEST」としてレプリケートされます。 大文字/小文字の指定をパブリケーション データベース内のテーブルと同一にするには、ディストリビューション エージェントの **-QuotedIdentifier** パラメーターを使用します。 パブリッシュされたオブジェクトの名前 (テーブル、列、制約など) に、スペースや、 **以外のサブスクライバーのデータベースのバージョンでの予約語が含まれている場合は、** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パラメーターも使用する必要があります。 このパラメーターの詳細については、「 [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)」を参照してください。  
   
 -   ディストリビューション エージェントを実行するアカウントには、OLE DB プロバイダーのインストール ディレクトリに対する読み取りアクセス権が必要です。  
   
@@ -104,3 +120,4 @@ ms.lasthandoff: 06/22/2017
  [パブリケーションのサブスクライブ](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
+

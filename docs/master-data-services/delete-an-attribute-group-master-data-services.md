@@ -1,5 +1,5 @@
 ---
-title: "グループを削除する属性 (マスター データ サービス) |Microsoft ドキュメント"
+title: "属性グループを削除する (マスター データ サービス) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/15/2017
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - attribute groups [Master Data Services], deleting
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d0f472ad35afbf5a7f881638560338e1bf5900c3
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: d3db0c5966aebb609ff62e5f599ad08a8438696e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>属性グループを削除する (マスター データ サービス)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で、[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]の **[エクスプローラー]** 機能領域にタブを表示する必要がなくなった属性グループを削除します。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、 **の** [エクスプローラー] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]機能領域にタブを表示する必要がなくなった属性グループを削除します。  
   
 -   **注** 属性グループが存在する場合、いずれの属性グループにも属さない属性は **[エクスプローラー]**に表示されません。 属性グループが存在しない場合、すべての属性が表示されます。  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/02/2017
 8.  確認のダイアログ ボックスで **[OK]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [属性グループ & #40 です。マスター データ サービス &#41;](../master-data-services/attribute-groups-master-data-services.md)   
- [属性グループ &#40; を作成します。マスター データ サービス &#41;](../master-data-services/create-an-attribute-group-master-data-services.md)  
+ [属性グループ (マスター データ サービス)](../master-data-services/attribute-groups-master-data-services.md)   
+ [属性グループを作成する (マスター データ サービス)](../master-data-services/create-an-attribute-group-master-data-services.md)  
   
   

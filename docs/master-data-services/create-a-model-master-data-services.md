@@ -1,5 +1,5 @@
 ---
-title: "モデル (Master Data Services) を作成 |Microsoft ドキュメント"
+title: "モデルを作成する (マスター データ サービス) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1791558cec3999d3a038bc3b651cd3c8edbd307d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 1a32cc8f778496f5609d44c17b69623b75b8c240
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-model-master-data-services"></a>モデルを作成する (マスター データ サービス)
@@ -57,7 +57,7 @@ ms.lasthandoff: 08/02/2017
   
  作成されたモデルごとに、8 列の行がグリッドに追加されます。 8 つの列は次のとおりです。  
   
--   **[状態]**: モデルの状態。 クリックすると、**保存モデル** ボタン、![更新](../master-data-services/media/mds-model-status-updating.png "更新")イメージを表示すると、モデルが更新中であることを示します。 作成または、モデルを編集するときにエラーがある場合、![エラー](../master-data-services/media/mds-model-status-error.png "エラー")イメージが表示されます。 それ以外の場合は正常な状態であり、 ![[OK]](../master-data-services/media/mds-model-status-ok.png "[OK]") 画像が表示されます。  
+-   **[状態]**: モデルの状態。 **[モデルの保存]** ボタンをクリックすると、モデルが更新されていることを示す ![更新中](../master-data-services/media/mds-model-status-updating.png "更新中") 画像が表示されます。 モデルの作成中または編集中にエラーが発生すると、![エラー](../master-data-services/media/mds-model-status-error.png "エラー") 画像が表示されます。 それ以外の場合は正常な状態であり、 ![[OK]](../master-data-services/media/mds-model-status-ok.png "[OK]") 画像が表示されます。  
   
 -   **[名前]**: モデル名。  
   
@@ -79,9 +79,9 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>参照  
  [モデル (マスター データ サービス)](../master-data-services/models-master-data-services.md)   
- [エンティティと #40 です。マスター データ サービス &#41;](../master-data-services/entities-master-data-services.md)   
- [モデルと #40; を削除します。マスター データ サービスと #41 です。](../master-data-services/delete-a-model-master-data-services.md)   
- [編集モデル & #40 です。マスター データ サービス &#41;](../master-data-services/edit-model-master-data-services.md)   
+ [エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)   
+ [モデルを削除する &#40;マスター データ サービス&#41;](../master-data-services/delete-a-model-master-data-services.md)   
+ [モデルを編集する &#40;マスター データ サービス&#41;](../master-data-services/edit-model-master-data-services.md)   
  [トランザクション (マスター データ サービス)](../master-data-services/transactions-master-data-services.md)  
   
   

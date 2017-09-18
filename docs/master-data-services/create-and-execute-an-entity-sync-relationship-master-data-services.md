@@ -1,5 +1,5 @@
 ---
-title: "作成し、エンティティの同期関係 (Master Data Services) を実行 |Microsoft ドキュメント"
+title: "エンティティの同期関係の作成と実行 (マスター データ サービス) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f9efe68604f73df42930c5b3eb348e5c2b3e7965
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 14bc03c2c8c462895102d6c34c62cf23724c706f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>エンティティの同期関係の作成と実行 (マスター データ サービス)
@@ -99,7 +99,7 @@ ms.lasthandoff: 08/02/2017
   
 |列|Description|  
 |------------|-----------------|  
-|[状態]|同期関係の状態。<br /><br /> クリックすると、**保存**または同期関係を実行、![ステータスの更新のアイコン](../master-data-services/media/mds-statusicon-updating.png "ステータスの更新のアイコン")イメージが表示されます、同期関係が更新中であることを示すです。<br /><br /> 作成、編集、または同期関係を実行するときにエラーがある場合、![のエラー状態をアイコン](../master-data-services/media/mds-statusicon-error.png "のエラー状態をアイコン")イメージが表示されます。<br /><br /> 状態が [ok] をそれ以外の場合、および![OK ステータス アイコン](../master-data-services/media/mds-statusicon-ok.png "OK ステータス アイコン")イメージが表示されます。|  
+|[状態]|同期関係の状態。<br /><br /> **[保存]** をクリックするか、同期関係を実行すると、![更新中状態のアイコン](../master-data-services/media/mds-statusicon-updating.png "更新中状態のアイコン") 画像が表示され、同期関係が更新中であることが示されます。<br /><br /> 同期関係の作成中、編集中、または実行中にエラーが発生すると、![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン") 画像が表示されます。<br /><br /> それ以外の場合は適切な状態であり、![適切な状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "適切な状態のアイコン") が表示されます。|  
 |ソース モデル|ソース モデルの名前。|  
 |ソース バージョン|ソース バージョンの名前。|  
 |ソース エンティティ|ソース エンティティの名前。|  

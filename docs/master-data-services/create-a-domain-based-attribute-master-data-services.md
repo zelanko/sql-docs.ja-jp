@@ -1,5 +1,5 @@
 ---
-title: "ドメイン ベースの属性 (マスター データ サービス) を作成 |Microsoft ドキュメント"
+title: "ドメイン ベースの属性を作成する (マスター データ サービス) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/25/2017
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - attributes [Master Data Services], creating domain-based attributes
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 caps.latest.revision: 12
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 963b974e68187ecf4f42ad06c90ff1cb0ab3aa67
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: a8242d0b8f5285201c32721c793aff995d50b88d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>ドメイン ベースの属性を作成する (マスター データ サービス)
@@ -45,7 +45,7 @@ ms.lasthandoff: 08/02/2017
   
 |列|Description|  
 |------------|-----------------|  
-|状態|属性の状態。<br /><br /> 保存をクリックすると、![ステータスの更新のアイコン](../master-data-services/media/mds-statusicon-updating.png "ステータスの更新のアイコン")イメージ属性を更新していることを示すが表示されます。<br /><br /> 作成または属性を編集するときにエラーがある場合、![のエラー状態をアイコン](../master-data-services/media/mds-statusicon-error.png "のエラー状態をアイコン")イメージが表示されます。<br /><br /> 状態が [ok] をそれ以外の場合、および![OK ステータス アイコン](../master-data-services/media/mds-statusicon-ok.png "OK ステータス アイコン")イメージが表示されます。|  
+|状態|属性の状態。<br /><br /> [保存] をクリックしたときに表示される ![更新中状態のアイコン](../master-data-services/media/mds-statusicon-updating.png "更新中状態のアイコン") 画像は、属性が更新中であることを示します。<br /><br /> 属性の作成中または編集中にエラーが発生すると、![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン") 画像が表示されます。<br /><br /> それ以外の場合は適切な状態であり、![適切な状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "適切な状態のアイコン") が表示されます。|  
 |名前|属性名です。|  
 |表示名|属性の表示名。|  
 |Description|属性の説明。|  
@@ -103,8 +103,8 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>参照  
  [ドメインベースの属性 (マスター データ サービス)](../master-data-services/domain-based-attributes-master-data-services.md)   
- [派生階層 &#40; を作成します。マスター データ サービス &#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [属性名とデータ型 &#40; を変更します。マスター データ サービス &#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [派生階層を作成する (マスター データ サービス)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [属性名とデータ型を変更する &#40;マスター データ サービス&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [属性を削除する (マスター データ サービス)](../master-data-services/delete-an-attribute-master-data-services.md)  
   
   

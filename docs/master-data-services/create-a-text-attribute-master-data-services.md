@@ -1,5 +1,5 @@
 ---
-title: "テキスト属性 (マスター データ サービス) を作成 |Microsoft ドキュメント"
+title: "テキスト属性を作成する (マスター データ サービス) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/15/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating text attributes [Master Data Services]
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cb8300268810dd6389c6744b126da6f7ff460ffa
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: bd59ef0f30ccdb52d1c224b32dfda4d8e557909b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>テキスト属性を作成する (マスター データ サービス)
@@ -42,7 +42,7 @@ ms.lasthandoff: 08/02/2017
   
 |列|Description|  
 |------------|-----------------|  
-|状態|属性の状態。<br /><br /> 保存をクリックすると、![ステータスの更新のアイコン](../master-data-services/media/mds-statusicon-updating.png "ステータスの更新のアイコン")イメージ属性を更新していることを示すが表示されます。<br /><br /> 作成または属性を編集するときにエラーがある場合、![のエラー状態をアイコン](../master-data-services/media/mds-statusicon-error.png "のエラー状態をアイコン")イメージが表示されます。<br /><br /> 状態が [ok] をそれ以外の場合、および![OK ステータス アイコン](../master-data-services/media/mds-statusicon-ok.png "OK ステータス アイコン")イメージが表示されます。|  
+|状態|属性の状態。<br /><br /> [保存] をクリックしたときに表示される ![更新中状態のアイコン](../master-data-services/media/mds-statusicon-updating.png "更新中状態のアイコン") 画像は、属性が更新中であることを示します。<br /><br /> 属性の作成中または編集中にエラーが発生すると、![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン") 画像が表示されます。<br /><br /> それ以外の場合は適切な状態であり、![適切な状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "適切な状態のアイコン") が表示されます。|  
 |名前|属性名です。|  
 |表示名|属性の表示名。|  
 |Description|属性の説明。|  
@@ -96,8 +96,8 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>参照  
  [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)   
- [属性名とデータ型 &#40; を変更します。マスター データ サービス &#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [ドメイン ベースの属性 &#40; を作成します。マスター データ サービス &#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [属性名とデータ型を変更する &#40;マスター データ サービス&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [ドメイン ベースの属性を作成する &#40;マスター データ サービス&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [ファイル属性を作成する (マスター データ サービス)](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

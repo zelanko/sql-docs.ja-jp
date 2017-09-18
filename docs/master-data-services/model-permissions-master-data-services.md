@@ -1,5 +1,5 @@
 ---
-title: "モデル権限 (Master Data Services) |Microsoft ドキュメント"
+title: "モデル アクセス許可 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - permissions [Master Data Services], models
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e54b1bd5e60c600e2447f37bdcf77e6f811e869
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 4ae445565c9d115c0d8a7be32fd27dc80c50d19c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="model-permissions-master-data-services"></a>モデル権限 (Master Data Services)
@@ -42,9 +42,9 @@ ms.lasthandoff: 08/02/2017
  読み取り、作成、更新、削除の各権限は組み合わせることができます。 作成、更新、削除の各権限を割り当てた場合は、読み取り権限が自動的に割り当てられます。  
   
 ## <a name="see-also"></a>参照  
- [モデル オブジェクト権限を割り当てる & #40 です。マスター データ サービス &#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [モデル オブジェクト権限 & #40 です。マスター データ サービス &#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [エンティティのアクセス許可 & #40 です。マスター データ サービス &#41;](../master-data-services/entity-permissions-master-data-services.md)   
- [コレクションの権限 & #40 です。マスター データ サービス &#41;](../master-data-services/collection-permissions-master-data-services.md)  
+ [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [モデル オブジェクト権限 (マスター データ サービス)](../master-data-services/model-object-permissions-master-data-services.md)   
+ [エンティティ アクセス許可 (マスター データ サービス)](../master-data-services/entity-permissions-master-data-services.md)   
+ [コレクション アクセス許可 (マスター データ サービス)](../master-data-services/collection-permissions-master-data-services.md)  
   
   

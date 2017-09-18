@@ -1,5 +1,5 @@
 ---
-title: "トランザクション (マスター データ サービス) |Microsoft ドキュメント"
+title: "トランザクション (マスター データ サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 841657a13d802ba1af2f81436769f76a3c3aa409
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 98cb408b0ec3d5449f0f81dc363e2278ac107f3d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="transactions-master-data-services"></a>トランザクション (マスター データ サービス)
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/02/2017
  **[バージョン管理]** 機能領域では、管理者は、アクセス権を持っているモデルに対する全ユーザーのトランザクションをすべて表示したり、それらのトランザクションを破棄したりできます。
  
 > [!NOTE]  
->  管理者は、読み取り専用権限レベルで適用されていない限り、すべてのユーザーのすべてのトランザクションを表示できます、**バージョン管理**機能領域。 たとえば、管理者の読み取り専用アクセス許可および update アクセス許可レベルを設定すると、管理者は、読み取り専用のアクセス許可が更新プログラムのアクセス許可より優先順位を取得するので、他のユーザー トランザクションを参照してくださいできなきます。
+>  **[バージョン管理]** 機能領域で読み取り専用アクセス許可レベルが適用されていない限り、管理者は全ユーザーの全トランザクションを表示できます。 たとえば、読み取り専用アクセス許可と更新アクセス許可レベルが管理者に設定されている場合、読み取り専用アクセス許可が更新アクセス許可よりも優先されるため、管理者は他のユーザーのトランザクションを表示できません。
   
  **データベースのシステム設定の** [Log retention in Days] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (ログ保有期間日数) プロパティを設定することで、トランザクション ログ データが保持される期間を構成できます。または、モデルを作成または編集するときに、 **[Log Retention Days]** (ログ保有期間の日数) を設定して保有期間を構成できます。 詳細については、「[システム設定 (マスター データ サービス)](../master-data-services/system-settings-master-data-services.md)」および「[モデルの作成 (マスター データ サービス)](../master-data-services/create-a-model-master-data-services.md)」を参照してください。  
   
@@ -98,9 +98,9 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [管理者 & #40 です。マスター データ サービス &#41;](../master-data-services/administrators-master-data-services.md)  
+-   [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)  
   
--   [注釈と #40 です。マスター データ サービス &#41;](../master-data-services/annotations-master-data-services.md)  
+-   [注釈 (マスター データ サービス)](../master-data-services/annotations-master-data-services.md)  
   
   
 

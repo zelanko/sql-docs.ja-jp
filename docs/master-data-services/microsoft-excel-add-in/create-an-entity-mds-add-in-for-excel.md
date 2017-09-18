@@ -1,5 +1,5 @@
 ---
-title: "(MDS アドインを Excel 用) のエンティティを作成 |Microsoft ドキュメント"
+title: "エンティティの作成 (Excel 用 MDS アドイン) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b77e214a86b07da01010357edeedf09e62234345
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: c60ebbff3b77ce4b45eacf082f9f5e427741ff5d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>エンティティの作成 (Excel 用 MDS アドイン)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]管理者は、データを格納する新しいエンティティを作成できます。 エンティティを作成する場合、少なくとも、格納するデータのサンプリングを読み込む必要があります。  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]の管理者は、新しいエンティティを作成してデータを格納することができます。 エンティティを作成する場合、少なくとも、格納するデータのサンプリングを読み込む必要があります。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
@@ -80,6 +80,6 @@ ms.lasthandoff: 08/02/2017
 -   想定していたデータ型として属性が作成されたことを確認します。  
   
 ## <a name="see-also"></a>参照  
- [ドメイン ベースの属性の作成 &#40;Excel 用 MDS アドイン&#41;](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)  
+ [ドメイン ベースの属性の作成 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

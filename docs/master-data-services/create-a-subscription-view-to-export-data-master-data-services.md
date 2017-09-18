@@ -1,5 +1,5 @@
 ---
-title: "データ (Master Data Services) をエクスポートするサブスクリプション ビューを作成 |Microsoft ドキュメント"
+title: "サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4934e49ef7b8e4f6b56439dd3b414fc93d5af832
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 863c5976f20cda1edc4ecba9ae81db599ec94d99
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス)
@@ -69,7 +69,7 @@ ms.lasthandoff: 08/02/2017
   
 |列|Description|  
 |------------|-----------------|  
-|[状態]|ビューの状態。<br /><br /> クリックすると**保存**、![ステータスの更新のアイコン](../master-data-services/media/mds-statusicon-updating.png "ステータスの更新のアイコン")イメージ ビューが更新中であることを示すが表示されます。<br /><br /> 作成またはビューを編集するときにエラーがある場合、![のエラー状態をアイコン](../master-data-services/media/mds-statusicon-error.png "のエラー状態をアイコン")イメージが表示されます。<br /><br /> 状態が [ok] をそれ以外の場合、および![OK ステータス アイコン](../master-data-services/media/mds-statusicon-ok.png "OK ステータス アイコン")イメージが表示されます。|  
+|[状態]|ビューの状態。<br /><br /> **[保存]** をクリックしたときに表示される ![更新中状態のアイコン](../master-data-services/media/mds-statusicon-updating.png "更新中状態のアイコン") 画像は、ビューが更新中であることを示します。<br /><br /> ビューの作成中または編集中にエラーが発生すると、![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン") 画像が表示されます。<br /><br /> それ以外の場合は適切な状態であり、![適切な状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "適切な状態のアイコン") が表示されます。|  
 |名前|サブスクリプション ビュー名。|  
 |[モデル]|モデル名。|  
 |[バージョンのオプション]|バージョン名。|  
@@ -92,7 +92,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>参照  
  [概要: データのエクスポート (マスター データ サービス)](../master-data-services/overview-exporting-data-master-data-services.md)   
- [サブスクリプション ビュー &#40; を削除します。マスター データ サービス &#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
- [バージョン フラグ &#40; を作成します。マスター データ サービス &#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+ [サブスクリプション ビューを削除する &#40;マスター データ サービス&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
+ [バージョン フラグを作成する (マスター データ サービス)](../master-data-services/create-a-version-flag-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "データベースの作成ウィザード (Master Data Services 構成マネージャー) |Microsoft ドキュメント"
+title: "データベースの作成ウィザード (マスター データ サービス構成マネージャー) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.mds.configmanager.createdbwiz.f1
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 442d6db191b1da4a741b05032c67b5d8b4a123a4
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 6676657dba08f5d24b7b60c6f4150effecf12119
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>データベースの作成ウィザード (マスター データ サービス構成マネージャー)
@@ -59,7 +59,7 @@ ms.lasthandoff: 08/02/2017
  作成処理の進捗状況を表示します。 データベースが作成されたら、 **[完了]** をクリックしてデータベースのウィザードを終了し、 **[データベース]** ページに戻ります。 新しいデータベースが選択され、そのシステム設定を表示および変更できます。  
   
 ## <a name="see-also"></a>参照  
- [[データベース構成] ページ &#40;マスター データ サービス構成マネージャー&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
-[マスター データ サービスのインストールと構成](../master-data-services/master-data-services-installation-and-configuration.md)[データベース要件 & #40 です。マスター データ サービス &#41;](../master-data-services/install-windows/database-requirements-master-data-services.md)  
+ [[データベース構成] ページ (マスター データ サービス構成マネージャー)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
+[マスター データ サービスのインストールと構成](../master-data-services/master-data-services-installation-and-configuration.md) [データベース要件 &#40;マスター データ サービス&#41;](../master-data-services/install-windows/database-requirements-master-data-services.md)  
   
   

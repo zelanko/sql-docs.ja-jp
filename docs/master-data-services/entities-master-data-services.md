@@ -1,5 +1,5 @@
 ---
-title: "エンティティ (Master Data Services) |Microsoft ドキュメント"
+title: "エンティティ (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - entities [Master Data Services]
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d59e75dac7220c1ce03913c0c765e816623cc2a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ae0e3ae300d2b896261e7426491448989a5e0f45
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="entities-master-data-services"></a>エンティティ (Master Data Services)
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="how-entities-relate-to-other-model-objects"></a>エンティティと他のモデル オブジェクトの関連付け  
  エンティティはマスター データを含むテーブルと考えることができます。行がメンバーを表し、列が属性を表します。  
   
- ![マスター データ サービスのエンティティがテーブルとして表される](../master-data-services/media/mds-conc-entity-table.gif "テーブルとして表されたマスター データ サービス エンティティ")  
+ ![テーブルとして表されたマスター データ サービス エンティティ](../master-data-services/media/mds-conc-entity-table.gif "テーブルとして表されたマスター データ サービス エンティティ")  
   
  管理対象のマスター データのリストをエンティティに設定します。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="entity-examples"></a>エンティティの例  
  次の例では、エンティティに Name、Code、Subcategory、StandardCost、ListPrice、および FilePhoto という属性があることを示しています。 これらの属性はメンバーを表します。 各メンバーは、属性値の 1 行で表されます。  
   
- ![自転車の製品エンティティ テーブル](../master-data-services/media/mds-conc-entity-table-w-data.gif "自転車の製品エンティティ テーブル")  
+ ![自転車製品エンティティ テーブル](../master-data-services/media/mds-conc-entity-table-w-data.gif "自転車製品エンティティ テーブル")  
   
  次の例では、Product エンティティが中心となるエンティティです。 Subcategory エンティティは、Product エンティティのドメイン ベースの属性です。 Category エンティティは、Subcategory エンティティのドメイン ベースの属性です。 StandardCost および ListPrice は、Product エンティティの自由形式属性で、FilePhoto は Product エンティティのファイル属性です。  
   

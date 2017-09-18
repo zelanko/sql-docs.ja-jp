@@ -1,8 +1,10 @@
 ---
 title: "アクティブなセカンダリ - セカンダリ レプリカでのバックアップ - AlwaysOn 可用性 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 09/01/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -23,17 +25,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c3645d6ab80136fc110c85315ba8dfc36e500eb3
+ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
+ms.openlocfilehash: 2d54e433746548bcef8cb0780f8586ec2568d898
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="active-secondaries-backup-on-secondary-replicas-always-on-availability-groups"></a>アクティブなセカンダリ: セカンダリ レプリカでのバックアップ (AlwaysOn 可用性グループ)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のアクティブなセカンダリ機能では、セカンダリ レプリカでのバックアップ操作の実行をサポートしています。 バックアップ操作では、(バックアップ圧縮により) I/O と CPU に大きな負荷がかかる場合があります。 同期済みまたは同期中のセカンダリ レプリカへバックアップをオフロードすることで、ワークロードが最も多いプライマリ レプリカをホストするサーバー インスタンスでリソースを使用できるようにします。  
-  
+
 > [!NOTE]  
 >  可用性グループのプライマリ データベースとセカンダリ データベースでは、RESTORE ステートメントを使用できません。  
   
@@ -54,11 +56,13 @@ ms.lasthandoff: 08/02/2017
      可用性モード (同期コミットまたは非同期コミット) に関係なく、任意のレプリカ (プライマリまたはセカンダリ) で取得されたログ バックアップ全体にわたって一貫性のあるログ チェーンが保証されます。  
   
 -   セカンダリ データベースをバックアップするには、セカンダリ レプリカがプライマリ レプリカと通信可能で、 **同期済み** または **同期中**であることが必要です。  
-  
+
+分散型可用性グループでは、アクティブ プライマリ レプリカと同じ可用性グループのセカンダリ レプリカ、またはセカンダリ可用性グループのいずれかのプライマリ レプリカでバックアップを実行できます。 セカンダリ レプリカは自身の可用性グループ内のプライマリ レプリカのみと通信するため、セカンダリ可用性グループ内のセカンダリ レプリカでバックアップを実行することはできません。 グローバル プライマリ レプリカと直接通信するレプリカのみがバックアップ操作を実行できます。
+
 ##  <a name="WhereBuJobsRun"></a> バックアップ ジョブを実行する場所の構成  
  セカンダリ レプリカでバックアップを実行してプライマリ運用サーバーからバックアップ ワークロードをオフロードすると、非常に大きな利点があります。 ただし、セカンダリ レプリカでバックアップを実行する場合は、バックアップ ジョブを実行する場所を決定するプロセスは非常に複雑です。 これに対処するには、バックアップ ジョブを実行する場所を次のように構成します。  
   
-1.  可用性グループを構成して、バックアップを優先的に実行する可用性レプリカを指定します。 詳細については、「 *CREATE AVAILABILITY GROUP &amp;#40;Transact-SQL&amp;#41;* 」または「 *ALTER AVAILABILITY GROUP &amp;#40;Transact-SQL&amp;#41;* 」の [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md) または [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)であることが必要です。  
+1.  可用性グループを構成して、バックアップを優先的に実行する可用性レプリカを指定します。 詳細については、「 *CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;* 」または「 *ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;* 」の [CREATE AVAILABILITY GROUP &amp;#40;Transact-SQL&amp;#41;](../../../t-sql/statements/create-availability-group-transact-sql.md) または [ALTER AVAILABILITY GROUP &amp;#40;Transact-SQL&amp;#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)であることが必要です。  
   
 2.  バックアップの実行の候補である可用性レプリカをホストするすべてのサーバー インスタンス上のすべての可用性データベースに対して、スクリプト化されたバックアップ ジョブを作成します。 詳細については、「 [可用性レプリカでのバックアップの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)であることが必要です。  
   

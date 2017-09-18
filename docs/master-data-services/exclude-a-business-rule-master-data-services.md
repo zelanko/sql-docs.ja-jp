@@ -1,5 +1,5 @@
 ---
-title: "ビジネス ルール (マスター データ サービス) を除外する |Microsoft ドキュメント"
+title: "ビジネス ルールを除外する (マスター データ サービス) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - business rules [Master Data Services], excluding
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 264f58554df70d5531cecdaea9bbc94606086e9a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 6d6ae880dffcf2bf01e9a1f3444c9cc775994216
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>ビジネス ルールを除外する (マスター データ サービス)
@@ -57,8 +57,8 @@ ms.lasthandoff: 08/02/2017
 10. 確認のダイアログ ボックスで **[OK]**をクリックします。 **[ビジネス ルールの状態]** 列が **[除外]** になり、 **[除外]** 列が **[はい]**になります。  
   
 ## <a name="see-also"></a>参照  
- [ビジネス ルール &#40; を削除します。マスター データ サービス &#41;](../master-data-services/delete-a-business-rule-master-data-services.md)   
- [作成して発行するビジネス ルール & #40 です。マスター データ サービス &#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
- [ビジネス ルール & #40 です。マスター データ サービス &#41;](../master-data-services/business-rules-master-data-services.md)  
+ [ビジネス ルールを削除する (マスター データ サービス)](../master-data-services/delete-a-business-rule-master-data-services.md)   
+ [ビジネス ルールを作成しパブリッシュする (マスター データ サービス)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
+ [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)  
   
   

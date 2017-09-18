@@ -1,5 +1,5 @@
 ---
-title: "作成およびパブリッシュするビジネス ルール (マスター データ サービス) |Microsoft ドキュメント"
+title: "ビジネス ルールを作成しパブリッシュする (マスター データ サービス) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 caps.latest.revision: 14
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b8ea50a2feb5c35e431422c1786d7731bf97d8fb
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: c74bf4d6520ca399be34da8369f6f62b2eb3d3ec
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>ビジネス ルールを作成しパブリッシュする (マスター データ サービス)
@@ -119,11 +119,11 @@ ms.lasthandoff: 08/02/2017
   
     -   [ビジネス ルールに対して特定のメンバーを検証する (マスター データ サービス)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [ビジネス ルール &#40; に対してバージョンを検証します。マスター データ サービス &#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
  [通知を送信するようにビジネス ルールを構成する (マスター データ サービス)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
- [ビジネス ルールの名前 &#40; を変更します。マスター データ サービス &#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
- [ビジネス ルール &#40; に複数の条件を追加します。マスター データ サービス &#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
+ [ビジネス ルールの名前を変更する &#40;マスター データ サービス&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
+ [ビジネス ルールに複数の条件を追加する &#40;マスター データ サービス&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
   
   

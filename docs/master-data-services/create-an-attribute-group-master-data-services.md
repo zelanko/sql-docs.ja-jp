@@ -1,5 +1,5 @@
 ---
-title: "属性グループ (Master Data Services) を作成 |Microsoft ドキュメント"
+title: "属性グループを作成する (マスター データ サービス) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/15/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating attribute groups [Master Data Services]
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cd89cee45f9f0973764a2b4f4dc32f32abc6d1c9
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 23c3065a689b282da5d44ee81f5023cffa57e361
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>属性グループを作成する (マスター データ サービス)
@@ -75,9 +75,9 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>参照  
  [属性グループ (マスター データ サービス)](../master-data-services/attribute-groups-master-data-services.md)   
- [属性と #40 です。マスター データ サービスと #41 です。](../master-data-services/attributes-master-data-services.md)   
- [属性グループ名 &#40; を変更します。マスター データ サービス &#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)   
- [属性グループ &#40; を削除します。マスター データ サービス &#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)   
+ [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)   
+ [属性グループ名を変更する &#40;マスター データ サービス&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)   
+ [属性グループを削除する &#40;マスター データ サービス&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)   
  [リーフ権限 (マスター データ サービス)](../master-data-services/leaf-permissions-master-data-services.md)   
    
   

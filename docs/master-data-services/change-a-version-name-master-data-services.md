@@ -1,5 +1,5 @@
 ---
-title: "名前を変更するバージョン (Master Data Services) |Microsoft ドキュメント"
+title: "バージョン名を変更する (マスター データ サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - versions [Master Data Services], changing name
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c00530ff2b9938314e50cdde09e6f9fc33791fd8
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 52436cbd38e92c97ce939af21eacb089f3b4797f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="change-a-version-name-master-data-services"></a>バージョン名を変更する (マスター データ サービス)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で組織に合わせてバージョン名を変更してカスタマイズします。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で組織に合わせてバージョン名を変更してカスタマイズします。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
@@ -46,9 +46,9 @@ ms.lasthandoff: 08/02/2017
 4.  Enter キーを押します。  
   
 ## <a name="see-also"></a>参照  
- [ビジネス ルール &#40; に対してバージョンを検証します。マスター データ サービス &#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
- [ロックのバージョンと #40 です。マスター データ サービス &#41;](../master-data-services/lock-a-version-master-data-services.md)   
- [コミット済み & #40 です。マスター データ サービス &#41;](../master-data-services/commit-a-version-master-data-services.md)   
- [バージョンと #40 です。マスター データ サービス &#41;](../master-data-services/versions-master-data-services.md)  
+ [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
+ [バージョンをロックする &#40;マスター データ サービス&#41;](../master-data-services/lock-a-version-master-data-services.md)   
+ [バージョンをコミットする &#40;マスター データ サービス&#41;](../master-data-services/commit-a-version-master-data-services.md)   
+ [バージョン (マスター データ サービス)](../master-data-services/versions-master-data-services.md)  
   
   

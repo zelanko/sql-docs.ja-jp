@@ -17,49 +17,25 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 61dab0bbd770679206c7eebee438f2fa22807ac2
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 512d13d8349be9370bb222e1513f5166f2cabeee
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>別の SQL Server への TDE で保護されたデータベースの移動
   このトピックでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して、透過的なデータ暗号化 (TDE) によってデータベースを保護し、そのデータベースを別の [!INCLUDE[tsql](../../../includes/tsql-md.md)]インスタンスに移動する方法について説明します。 TDE では、データとログ ファイルの暗号化および暗号化解除がリアルタイムの I/O で実行されます。 暗号化にはデータベース暗号化キー (DEK) が使用されます。これは、復旧時に使用できるようにデータベース ブート レコードに保存されます。 DEK は、サーバーの **master** データベースに保存されている証明書を使用して保護される対称キーか、EKM モジュールによって保護される非対称キーです。  
+   
+##  <a name="Restrictions"></a> 制限事項と制約事項  
   
- **このトピックの内容**  
-  
--   **作業を開始する準備:**  
-  
-     [制限事項と制約事項](#Restrictions)  
-  
-     [セキュリティ](#Security)  
-  
--   **透過的なデータ暗号化で保護されたデータベースを作成する方法:**  
-  
-     [SQL Server Management Studio](#SSMSCreate)  
-  
-     [Transact-SQL](#TsqlCreate)  
-  
--   **データベースを移動する方法:**  
-  
-     [SQL Server Management Studio](#SSMSMove)  
-  
-     [Transact-SQL](#TsqlMove)  
-  
-##  <a name="BeforeYouBegin"></a> はじめに  
-  
-###  <a name="Restrictions"></a> 制限事項と制約事項  
-  
--   TDE で保護されたデータベースを移動するとき、DEK を開くために使用される証明書または非対称キーも移動する必要があります。 この証明書または非対称キーは、 **からデータベース ファイルにアクセスできるように、移動先サーバーの** master [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースにインストールする必要があります。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)」をご覧ください。  
+-   TDE で保護されたデータベースを移動するとき、DEK を開くために使用される証明書または非対称キーも移動する必要があります。 この証明書または非対称キーは、 **からデータベース ファイルにアクセスできるように、移動先サーバーの** master [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースにインストールする必要があります。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)」をご覧ください。  
   
 -   証明書を復旧するために、証明書ファイルと秘密キー ファイルの両方のコピーを保持する必要があります。 秘密キーのパスワードは、データベース マスター キーのパスワードと同じにする必要はありません。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、既定で、ここで作成したファイルを **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** に保存します。 ただし、ファイル名と場所は異なる場合があります。  
   
-###  <a name="Security"></a> セキュリティ  
-  
-####  <a name="Permissions"></a> アクセス許可  
+##  <a name="Permissions"></a> アクセス許可  
   
 -   データベース マスター キーを作成するには、 **master** データベースに対する **CONTROL DATABASE** 権限が必要です。  
   
@@ -68,6 +44,8 @@ ms.lasthandoff: 06/22/2017
 -   暗号化されたデータベースに対する **CONTROL DATABASE** 権限と、データベース暗号化キーの暗号化に使用する証明書または非対称キーに対する **VIEW DEFINITION** 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> 透過的なデータ暗号化で保護されたデータベースを作成するには  
+
+次の手順は、SQL Server Management Studio を使用し、TRANSACT-SQL を使用して、TDE で保護されたデータベースを作成する必要があることを示しています。
   
 ###  <a name="SSMSCreate"></a> SQL Server Management Studio の使用  
   
@@ -109,7 +87,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
   
-    ```  
+    ```sql  
     -- Create a database master key and a certificate in the master database.  
     USE master ;  
     GO  
@@ -161,7 +139,9 @@ ms.lasthandoff: 06/22/2017
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)  
   
-##  <a name="TsqlProcedure"></a> データベースを移動するには  
+##  <a name="TsqlProcedure"></a> 透過的なデータ暗号化で保護されたデータベースを移動するには 
+
+次の手順は、SQL Server Management Studio を使用し、TRANSACT-SQL を使用して、TDE で保護されたデータベースを移動する必要があることを示しています。
   
 ###  <a name="SSMSMove"></a> SQL Server Management Studio の使用  
   
@@ -282,7 +262,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
   
-    ```  
+    ```sql  
     -- Detach the TDE protected database from the source server.   
     USE master ;  
     GO  
@@ -327,6 +307,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>参照  
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [Azure SQL Database での Transparent Data Encryption](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md)  
+ [Azure SQL Database での Transparent Data Encryption](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
   
   

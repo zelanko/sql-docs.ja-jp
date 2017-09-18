@@ -1,5 +1,5 @@
 ---
-title: "バージョン (マスター データ サービス) |Microsoft ドキュメント"
+title: "バージョン (マスター データ サービス) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4aa3e9252b57b596ab576616820bbad706a4ea92
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5c633441058f1db8843de596824b235d30ec2eba
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="versions-master-data-services"></a>バージョン (マスター データ サービス)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、モデル内に複数のバージョンのマスター データを作成できます。 データを検証している間はバージョンをロックし、データが検証した後にコミットすることができます。 コミットされたバージョンは、変更の監査可能なレコードを形成します。 作成される各バージョンには、モデルのすべてのメンバー、属性値、階層メンバー、階層リレーションシップ、およびコレクションが含まれます。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、モデル内に複数のバージョンのマスター データを作成できます。 データを検証している間はバージョンをロックし、データが検証した後にコミットすることができます。 コミットされたバージョンは、変更の監査可能なレコードを形成します。 作成される各バージョンには、モデルのすべてのメンバー、属性値、階層メンバー、階層リレーションシップ、およびコレクションが含まれます。  
   
 ## <a name="when-to-use-versions"></a>バージョンを使用するタイミング  
  バージョンは、次の場合に使用します。  
@@ -74,23 +74,23 @@ ms.lasthandoff: 08/02/2017
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|既存のバージョンの名前を変更する。|[バージョン名 &#40; を変更します。マスター データ サービス &#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
-|管理者のみがデータを編集できるようにバージョンをロックする。|[ロックのバージョンと #40 です。マスター データ サービス &#41;](../master-data-services/lock-a-version-master-data-services.md)|  
-|ユーザーがデータを編集できるようにバージョンのロックを解除する。|[バージョン &#40; をロック解除します。マスター データ サービス &#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
-|すべてのデータを検証した後にバージョンをコミットする。|[コミット済み & #40 です。マスター データ サービス &#41;](../master-data-services/commit-a-version-master-data-services.md)|  
-|新しいフラグを作成してバージョンをマークする。|[バージョン フラグ &#40; を作成します。マスター データ サービス &#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
-|既存のバージョンのフラグ名を変更する。|[バージョン フラグ名 &#40; を変更します。マスター データ サービス &#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
-|既存のフラグをバージョンに割り当てる。|[バージョン &#40; にフラグを割り当てるマスター データ サービス &#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|既存のバージョンの新しいコピーを作成する。|[バージョン &#40; をコピーします。マスター データ サービス &#41;](../master-data-services/copy-a-version-master-data-services.md)|  
+|既存のバージョンの名前を変更する。|[バージョン名を変更する (マスター データ サービス)](../master-data-services/change-a-version-name-master-data-services.md)|  
+|管理者のみがデータを編集できるようにバージョンをロックする。|[バージョンをロックする (マスター データ サービス)](../master-data-services/lock-a-version-master-data-services.md)|  
+|ユーザーがデータを編集できるようにバージョンのロックを解除する。|[バージョンをロック解除する (マスター データ サービス)](../master-data-services/unlock-a-version-master-data-services.md)|  
+|すべてのデータを検証した後にバージョンをコミットする。|[バージョンをコミットする (マスター データ サービス)](../master-data-services/commit-a-version-master-data-services.md)|  
+|新しいフラグを作成してバージョンをマークする。|[バージョン フラグを作成する (マスター データ サービス)](../master-data-services/create-a-version-flag-master-data-services.md)|  
+|既存のバージョンのフラグ名を変更する。|[バージョン フラグ名を変更する (マスター データ サービス)](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|既存のフラグをバージョンに割り当てる。|[バージョンにフラグを割り当てる (マスター データ サービス)](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
+|既存のバージョンの新しいコピーを作成する。|[バージョンをコピーする (マスター データ サービス)](../master-data-services/copy-a-version-master-data-services.md)|  
 |既存のバージョンを削除する。|[バージョンを削除する (マスター データ サービス)](../master-data-services/delete-a-version-master-data-services.md)|  
 |論理削除したメンバーをバージョンから削除する|[バージョン メンバーのパージ (マスター データ サービス)](../master-data-services/purge-version-members-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [取り消すトランザクション & #40 です。マスター データ サービス &#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
+-   [トランザクションを破棄する (マスター データ サービス)](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
--   [通知 & #40 です。マスター データ サービス &#41;](../master-data-services/notifications-master-data-services.md)  
+-   [通知 (マスター データ サービス)](../master-data-services/notifications-master-data-services.md)  
   
--   [ビジネス ルール & #40 です。マスター データ サービス &#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)  
   
   

@@ -22,11 +22,11 @@ caps.latest.revision: 66
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bbb8b979ba447263a450a9ac4e617977619298a3
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 24d344d6dc7f42ed57c53442f7fada245d25c65a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure Key Vault を使用する拡張キー管理 (SQL Server)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
  このトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタについて説明します。 その他の情報については、「 [Azure Key Vault を使用した拡張キー管理のセットアップ手順](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)」、「 [SQL 暗号化機能への SQL Server コネクタの使用](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)」、「 [SQL Server コネクタのメンテナンスとトラブルシューティング](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)」を参照してください。  
   
 ##  <a name="Uses"></a> 拡張キー管理 (EKM) の概要と用途  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、[Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)、[列レベルの暗号化 (CLE)](../../../t-sql/functions/cryptographic-functions-transact-sql.md)、[バックアップの暗号化](../../../relational-databases/backup-restore/backup-encryption.md)など、機密データの保護に有効ないくつかの種類の暗号化が用意されています。 いずれのケースも、この従来のキー階層では、対称データ暗号化キー (DEK) を使用してデータが暗号化されます。 対称なデータ暗号化キーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に格納されたキーの階層で暗号化することにより、さらに保護されます。 このモデルに代わるのが、EKM プロバイダー モデルです。 EKM プロバイダーのアーキテクチャでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の外側にある外部暗号化サービス プロバイダーに格納された非対称キーを使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でデータの暗号化キーを保護することができます。 このモデルによって、セキュリティの層が拡充され、キーとデータの管理が分離されます。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、[Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)、[列レベルの暗号化 (CLE)](../../../t-sql/functions/cryptographic-functions-transact-sql.md)、[バックアップの暗号化](../../../relational-databases/backup-restore/backup-encryption.md)など、機密データの保護に有効ないくつかの種類の暗号化が用意されています。 いずれのケースも、この従来のキー階層では、対称データ暗号化キー (DEK) を使用してデータが暗号化されます。 対称なデータ暗号化キーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に格納されたキーの階層で暗号化することにより、さらに保護されます。 このモデルに代わるのが、EKM プロバイダー モデルです。 EKM プロバイダーのアーキテクチャでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の外側にある外部暗号化サービス プロバイダーに格納された非対称キーを使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でデータの暗号化キーを保護することができます。 このモデルによって、セキュリティの層が拡充され、キーとデータの管理が分離されます。  
    
  次の図は、従来のサービスにおけるキー管理階層と Azure Key Vault システムとを比較したものです。  
   

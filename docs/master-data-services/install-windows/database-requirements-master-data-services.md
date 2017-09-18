@@ -1,5 +1,5 @@
 ---
-title: "データベースの要件 (マスター データ サービス) |Microsoft ドキュメント"
+title: "データベース要件 (マスター データ サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 caps.latest.revision: 18
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9f48345ef6fb8bd0a27bf2d40a829e53e2eae308
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 16858dc8ab6dcad69792697b88811cba2689b1fe
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="database-requirements-master-data-services"></a>データベース要件 (マスター データ サービス)
@@ -73,9 +73,9 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>参照  
  [マスター データ サービスのインストール](../../master-data-services/install-windows/install-master-data-services.md)   
- [マスター データ サービス データベースを作成します。](../../master-data-services/install-windows/create-a-master-data-services-database.md)   
+ [マスター データ サービス データベースの作成](../../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [マスター データ サービス データベース](../../master-data-services/master-data-services-database.md)   
- [Master Data Services データベース ダイアログ ボックスへの接続します。](../../master-data-services/connect-to-a-master-data-services-database-dialog-box.md)   
- [データベース ウィザード &#40; を作成します。Master Data Services 構成マネージャー &#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)  
+ [[マスター データ サービス データベースへの接続] ダイアログ ボックス](../../master-data-services/connect-to-a-master-data-services-database-dialog-box.md)   
+ [データベースの作成ウィザード &#40;マスター データ サービス構成マネージャー&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)  
   
   

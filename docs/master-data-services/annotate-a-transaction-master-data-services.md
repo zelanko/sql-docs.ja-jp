@@ -1,5 +1,5 @@
 ---
-title: "トランザクション (マスター データ サービス) の注釈を付ける |Microsoft ドキュメント"
+title: "トランザクションの注釈を設定する (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - annotations [Master Data Services], for transactions
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 279808cca74dbbc7c5ca9aa09c4996660fe949dc
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 8a737c436fa8db5eb10224d62fc0cb05635f47fa
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>トランザクションの注釈を設定する (Master Data Services)
-  履歴を参照する目的でトランザクションの詳細をサポートする場合、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] でトランザクションの注釈を設定します。  
+  履歴を参照する目的でトランザクションの詳細をサポートする場合、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でトランザクションの注釈を設定します。  
   
 > [!NOTE]  
 >  注釈は削除できません。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 08/02/2017
 5.  **[OK]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [注釈と #40 です。マスター データ サービス &#41;](../master-data-services/annotations-master-data-services.md)   
+ [注釈 (マスター データ サービス)](../master-data-services/annotations-master-data-services.md)   
  [トランザクション (マスター データ サービス)](../master-data-services/transactions-master-data-services.md)  
   
   

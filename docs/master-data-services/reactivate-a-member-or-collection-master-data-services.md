@@ -1,5 +1,5 @@
 ---
-title: "メンバーまたはコレクション (Master Data Services) を再アクティブ化 |Microsoft ドキュメント"
+title: "メンバーまたはコレクションを再アクティブ化する (マスター データ サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - leaf members [Master Data Services], reactivating
 ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 caps.latest.revision: 11
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc90708210730332fc2baafa0f6ab61ceadb6840
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: acad653184afbc9207e7b408789927d929fbf355
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>メンバーまたはコレクションを再アクティブ化する (マスター データ サービス)
@@ -68,8 +68,8 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>参照  
  [メンバーまたはコレクションを削除する (マスター データ サービス)](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
- [メンバーと #40 です。マスター データ サービス &#41;](../master-data-services/members-master-data-services.md)   
- [コレクション & #40 です。マスター データ サービス &#41;](../master-data-services/collections-master-data-services.md)  
+ [メンバー (マスター データ サービス)](../master-data-services/members-master-data-services.md)   
+ [コレクション (マスター データ サービス)](../master-data-services/collections-master-data-services.md)  
   
   
 

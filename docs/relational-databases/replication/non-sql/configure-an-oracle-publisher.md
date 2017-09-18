@@ -1,7 +1,7 @@
 ---
 title: "Oracle パブリッシャーの構成 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 60
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2eb98196756e47a5118c8cf777a6ef5e05b950f4
+ms.translationtype: HT
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: c5fb2503568339307c8e63a66f7a3b25bed20cfc
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="configure-an-oracle-publisher"></a>Oracle パブリッシャーの構成
@@ -28,12 +28,25 @@ ms.lasthandoff: 06/22/2017
   
 1.  提供されているスクリプトを使用して Oracle データベース内にレプリケーション管理ユーザーを作成します。  
   
-2.  パブリッシュするテーブルに、各テーブルの SELECT 権限を、手順 1. で作成した Oracle 管理ユーザーに対して直接 (ロールを通じてではなく) 許可します。  
+2.  パブリッシュするテーブルに、各テーブルの SELECT アクセス許可を、手順 1. で作成した Oracle 管理ユーザーに対して直接 (ロールを通じてではなく) 許可します。  
   
 3.  Oracle クライアント ソフトウェアと OLE DB プロバイダーを [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターにインストールしてから、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを停止して再起動します。 ディストリビューターを 64 ビットのプラットフォームで実行している場合は、64 ビット バージョンの Oracle OLE DB プロバイダーを使用する必要があります。  
   
 4.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターで Oracle データベースをパブリッシャーとして構成します。  
+
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、トランザクション レプリケーションとスナップショット レプリケーションに対する次の異種シナリオをサポートします。  
   
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーへのデータのパブリッシュ  
+
+-   Oracle に対するデータのパブリッシュには次の制限があります。  
+  | |2016 以前 |2017 以降 |
+  |-------|-------|--------|
+  |Oracle からのレプリケーション |Oracle 10g 以前のみをサポート |Oracle 10g 以前のみをサポート |
+  |Oracle へのレプリケーション |Oracle 12c まで |サポートされていません |
+
+ SQL Server 以外のサブスクライバーへの異種レプリケーションは推奨されません。 Oracle パブリッシングは推奨されません。 データを移動するには、変更データ キャプチャと [!INCLUDE[ssIS](../../../includes/ssis-md.md)]を使用してソリューションを作成します。  
+
+
  Oracle データベースからレプリケートできるオブジェクトの一覧については、「[Design Considerations and Limitations for Oracle Publishers (Oracle パブリッシャーの設計上の注意点と制限)](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)」を参照してください。  
   
 > [!NOTE]  
@@ -47,7 +60,7 @@ ms.lasthandoff: 06/22/2017
   
  Oracle レプリケーション ユーザー スキーマのセットアップに役立つサンプル スクリプトが提供されています。 このスクリプトは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール後、*\<drive>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>*\MSSQL\Install\oracleadmin.sql ディレクトリで使用できます。 このスクリプトについては、「 [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)」でも説明します。  
   
- DBA 特権を持つアカウントを使用して Oracle データベースに接続し、スクリプトを実行します。 このスクリプトでは、レプリケーション管理ユーザー スキーマのユーザーとパスワード、およびオブジェクトを作成するときに使用する既定のテーブルスペースの入力が要求されます (このテーブルスペースは Oracle データベース内に存在していることが必要です)。 オブジェクトに他のテーブルスペースを指定する方法の詳細については、「[Manage Oracle Tablespaces (Oracle テーブルスペースの管理)](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)」を参照してください。 ユーザー名と複雑なパスワードを選択しますが、後で Oracle データベースをパブリッシャーとして構成するときにこの情報の入力が要求されるため、どちらもメモしておいてください。 スキーマはレプリケーションに必要なオブジェクトでのみ使用し、このスキーマではパブリッシュするテーブルを作成しないでください。  
+ DBA 特権を持つアカウントを使用して Oracle データベースに接続し、スクリプトを実行します。 このスクリプトでは、レプリケーション管理ユーザー スキーマのユーザーとパスワード、およびオブジェクトを作成するときに使用する既定のテーブルスペースの入力が要求されます (このテーブルスペースは Oracle データベース内に存在していることが必要です)。 オブジェクトに他のテーブルスペースを指定する方法の詳細については、「[Manage Oracle Tablespaces (Oracle テーブルスペースの管理)](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)」を参照してください。 ユーザー名と複雑なパスワードを選択しますが、後で Oracle データベースをパブリッシャーとして構成するときにこの情報を提供する必要があるため、どちらもメモしておいてください。 スキーマはレプリケーションに必要なオブジェクトでのみ使用し、このスキーマではパブリッシュするテーブルを作成しないでください。  
   
 ### <a name="creating-the-user-schema-manually"></a>手動によるユーザー スキーマの作成  
  レプリケーション管理ユーザー スキーマを手動で作成する場合は、スキーマに次の権限を直接またはデータベース ロールを通じて許可する必要があります。  
@@ -76,7 +89,7 @@ ms.lasthandoff: 06/22/2017
   
  クライアント ネットワーク ソフトウェアを最も簡単にインストールおよび構成するには、Oracle クライアント ディスクの Oracle Universal Installer と Net Configuration Assistant を使用します。  
   
- Oracle Universal Installer で、次の情報を指定します。  
+ Oracle Universal Installer で、次の情報を指定する必要があります。  
   
 |情報|説明|  
 |-----------------|-----------------|  
@@ -109,9 +122,9 @@ ms.lasthandoff: 06/22/2017
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
-     例 : `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
+     例: `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
   
-4.  ネットワーク構成が正常に行われていれば、ログインは成功し、 `SQL` プロンプトが表示されます。  
+4.  ネットワーク構成が正常に行われていれば、ログインは成功し、`SQL` プロンプトが表示されます。  
   
 5.  Oracle データベースへの接続中に問題が発生した場合は、「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 」の「 [ssNoVersion](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)」を参照してください。  
   
@@ -139,3 +152,4 @@ ms.lasthandoff: 06/22/2017
  [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   
+

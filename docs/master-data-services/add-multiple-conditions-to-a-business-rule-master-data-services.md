@@ -1,5 +1,5 @@
 ---
-title: "ビジネス ルール (マスター データ サービス) に複数の条件を追加 |Microsoft ドキュメント"
+title: "ビジネス ルールに複数の条件を追加する (マスター データ サービス) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - business rules [Master Data Services], multiple conditions
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f32a774b32d76a829e44ef699223c7a7f425dae8
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: be8c4995258fe2e5150a6575682988728bdae94f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>ビジネス ルールに複数の条件を追加する (マスター データ サービス)
@@ -77,7 +77,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>参照  
  [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)   
- [ビジネス ルールの名前 &#40; を変更します。マスター データ サービス &#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
- [通知 &#40; を送信するビジネス ルールを構成します。マスター データ サービス &#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
+ [ビジネス ルールの名前を変更する &#40;マスター データ サービス&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
+ [通知を送信するようにビジネス ルールを構成する (マスター データ サービス)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "(MDS アドインを Excel の) ドメイン ベースの属性を作成 |Microsoft ドキュメント"
+title: "ドメイン ベースの属性の作成 (Excel 用 MDS アドイン) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/25/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f67b43f772e9693f5abbb396b6987527a5220a1d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 0183ba6f178fbc9f392b4e711ccaba49220ffa3e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>ドメイン ベースの属性の作成 (Excel 用 MDS アドイン)
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/02/2017
   
     -   既存のエンティティの値を使用するには、エンティティの名前を選択します。
     
-    50 以上のエンティティがある場合は、フィルター処理および検索エンティティです。 それ以外の場合、ドロップダウン リストからエンティティを選択します。  
+    エンティティが 50 を超える場合は、エンティティをフィルターして検索することができます。 それ以外の場合は、ドロップダウン リストからエンティティを選択します。  
   
 6.  前の手順で **[選択した列]** をクリックした場合は、 **[新しいエンティティ名]** ボックスに新しいエンティティの名前を入力します。 列 (属性) と同じ名前にすることができます。  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>参照  
  [ドメインベースの属性 (マスター データ サービス)](../../master-data-services/domain-based-attributes-master-data-services.md)   
- [エンティティ &#40; を作成します。MDS 用のアドインの Excel &#41;](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)   
+ [エンティティの作成 &#40;Excel 用 MDS アドイン&#41;](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)   
  [モデルの構築 &#40;Excel 用 MDS アドイン&#41;](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
   
   

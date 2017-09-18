@@ -1,5 +1,5 @@
 ---
-title: "モデル (Master Data Services) |Microsoft ドキュメント"
+title: "モデル (マスター データ サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - models [Master Data Services]
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 635cb271e49ec96f889fdbba508e0374b186a8c9
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 0dd8ddbd08e97d1761881d0c955f02d491fce7af
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="models-master-data-services"></a>モデル (Master Data Services)
@@ -48,10 +48,10 @@ ms.lasthandoff: 08/02/2017
   
  次の図は、1 つのモデル内のオブジェクト間のリレーションシップを示しています。  
   
- ![Master Data Services モデル内のオブジェクト](../master-data-services/media/mds-conc-model-circles.gif "Master Data Services モデル内のオブジェクト")  
+ ![マスター データ サービス モデル内のオブジェクト](../master-data-services/media/mds-conc-model-circles.gif "マスター データ サービス モデル内のオブジェクト")  
   
 > [!NOTE]  
->  派生階層はモデル オブジェクトでもありますが、図には示されていません。 派生階層は、エンティティ間に存在するドメイン ベースの属性リレーションシップから派生します。 参照してください[派生階層 & #40 です。マスター データ サービス &#41;](../master-data-services/derived-hierarchies-master-data-services.md)詳細についてはします。  
+>  派生階層はモデル オブジェクトでもありますが、図には示されていません。 派生階層は、エンティティ間に存在するドメイン ベースの属性リレーションシップから派生します。 詳細については、「[派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-master-data-services.md)」を参照してください。  
   
  マスター データは、モデル オブジェクトに含まれるデータです。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、マスター データはエンティティのメンバーとして格納されます。  
   
@@ -74,9 +74,9 @@ ms.lasthandoff: 08/02/2017
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|モデルを作成してマスター データを整理する。|[モデル &#40; を作成します。マスター データ サービス &#41;](../master-data-services/create-a-model-master-data-services.md)|  
-|既存のモデルの名前を変更する。|[編集モデル & #40 です。マスター データ サービス &#41;](../master-data-services/edit-model-master-data-services.md)|  
-|既存のモデルを削除する。|[モデル &#40; を削除します。マスター データ サービス &#41;](../master-data-services/delete-a-model-master-data-services.md)|  
+|モデルを作成してマスター データを整理する。|[モデルを作成する (マスター データ サービス)](../master-data-services/create-a-model-master-data-services.md)|  
+|既存のモデルの名前を変更する。|[モデルを編集する (マスター データ サービス)](../master-data-services/edit-model-master-data-services.md)|  
+|既存のモデルを削除する。|[モデルを削除する (マスター データ サービス)](../master-data-services/delete-a-model-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
@@ -84,10 +84,10 @@ ms.lasthandoff: 08/02/2017
   
 -   [エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)  
   
--   [属性と #40 です。マスター データ サービス &#41;](../master-data-services/attributes-master-data-services.md)  
+-   [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)  
   
--   [モデル &#40; を展開します。マスター データ サービス &#41;](../master-data-services/deploying-models-master-data-services.md)  
+-   [モデルの配置 (マスター データ サービス)](../master-data-services/deploying-models-master-data-services.md)  
   
--   [モデル オブジェクト権限 & #40 です。マスター データ サービス &#41;](../master-data-services/model-object-permissions-master-data-services.md)  
+-   [モデル オブジェクト権限 (マスター データ サービス)](../master-data-services/model-object-permissions-master-data-services.md)  
   
   

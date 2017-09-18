@@ -1,5 +1,5 @@
 ---
-title: "メンバー (マスター データ サービス) |Microsoft ドキュメント"
+title: "メンバー (マスター データ サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - members [Master Data Services]
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 caps.latest.revision: 16
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: abda6e0259b924a184d9d7cf888fdf5f430a8dd6
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 3161b24f55c5473829b5d0a0ea090763d1203295
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="members-master-data-services"></a>メンバー (マスター データ サービス)
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/02/2017
   
  この例では、テーブルはエンティティを、テーブルの行はメンバーを、テーブルの列は属性を、それぞれ表しています。 各セルは特定のメンバーの属性値を表します。  
   
- ![マスター データ サービスのエンティティがテーブルとして表される](../master-data-services/media/mds-conc-entity-table.gif "テーブルとして表されたマスター データ サービス エンティティ")  
+ ![テーブルとして表されたマスター データ サービス エンティティ](../master-data-services/media/mds-conc-entity-table.gif "テーブルとして表されたマスター データ サービス エンティティ")  
   
 ## <a name="member-types"></a>メンバーの種類  
  メンバーには、リーフ メンバー、統合メンバー、およびコレクション メンバーという 2 種類があります。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="member-example"></a>メンバーの例  
  次の例では、各メンバーは、Name、Code、Subcategory、StandardCost、ListPrice、および FilePhoto という属性値で構成されています。  
   
- ![自転車の製品エンティティ テーブル](../master-data-services/media/mds-conc-entity-table-w-data.gif "自転車の製品エンティティ テーブル")  
+ ![自転車製品エンティティ テーブル](../master-data-services/media/mds-conc-entity-table-w-data.gif "自転車製品エンティティ テーブル")  
   
 ## <a name="related-tasks"></a>関連タスク  
   

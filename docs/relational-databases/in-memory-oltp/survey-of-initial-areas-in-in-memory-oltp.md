@@ -1,7 +1,7 @@
 ---
 title: "クイック スタート 1: Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ | Microsoft Docs"
 ms.custom: 
-ms.date: 06/12/2017"
+ms.date: 09/05/2017"
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: db24b73ba03d4cde0dfc090ebf2ed8a1661a55e1
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 481c0843888345d3a3440dd22cae2135c00863e1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>インメモリ OLTP での初期領域の調査
@@ -136,7 +136,7 @@ CREATE TABLE ステートメントの T-SQL キーワード MEMORY_OPTIMIZED は
   
 #### <a name="natively-compiled-modules"></a>ネイティブ コンパイル モジュール  
   
-CREATE PROCEDURE ステートメントの T-SQL キーワード NATIVE_COMPILATION は、ネイティブ プロシージャの作成方法を示します。 T-SQL ステートメントは、データベースがオンラインで循環されるたびにネイティブ プロシージャの初回使用時にコンピューター語コードにコンパイルされます。 T-SQL 命令がそれぞれ解釈されるまで長時間待つ必要はなくなりました。  
+CREATE PROCEDURE ステートメントの T-SQL キーワード NATIVE_COMPILATION は、ネイティブでコンパイルしするストアド プロシージャの作成方法を示します。 T-SQL ステートメントは、データベースがオンラインで循環されるたびにネイティブ プロシージャの初回使用時にコンピューター語コードにコンパイルされます。 T-SQL 命令がそれぞれ解釈されるまで長時間待つ必要はなくなりました。  
   
 - ネイティブ コンパイル ストアド プロシージャの結果は、解釈されたストアド プロシージャの 1/100 の時間で得られます。  
   
@@ -218,14 +218,12 @@ Microsoft SQL Server では、メモリ最適化テーブルを作成する前�
 Azure SQL Database では、このようなファイルグループを作成する必要はありません (作成できません)。  
 
 次のサンプルの T-SQL スクリプトでは、インメモリ OLTP のデータベースを有効にし、すべての推奨設定を構成します。 SQL Server と Azure SQL Database の両方で機能します: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)。
-  
+
+MEMORY_OPTIMIZED_DATA ファイル グループのデータベースでは、サポートされていない SQL Server 機能もあります。 制限の詳細については、「[インメモリ OLTP に対してサポートされていない SQL Server の機能](unsupported-sql-server-features-for-in-memory-oltp.md)」を参照してください。
   
 <a name="create-a-memory-optimized-table-26y"></a>  
   
 ## <a name="4-create-a-memory-optimized-table"></a>4.メモリ最適化テーブルを作成する  
-  
-  
-  
   
 重要な Transact-SQL キーワードは MEMORY_OPTIMIZED です。  
   
@@ -302,6 +300,7 @@ ALTER TABLE...ADD/DROP では、メモリ最適化テーブルの列またはイ
   
 SCHEMABINDING キーワードは、ネイティブ プロシージャで参照されているテーブルを削除するには、先にネイティブ プロシージャを削除しておく必要があることを意味します。 詳細については、「[ネイティブ コンパイル ストアド プロシージャの作成](../../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md)」を参照してください。  
   
+メモリ最適化テーブルにアクセスするために、ネイティブでコンパイルされたストアド プロシージャを作成する必要はありません。 従来のストアド プロシージャとアドホック バッチからメモリ最適化テーブルを参照することもできます。
   
 <a name="execute-the-native-proc-31e"></a>  
   

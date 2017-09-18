@@ -14,17 +14,17 @@ caps.latest.revision: 16
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b60c6ab2bc24a2865d06c949a0bb5b765fdc7454
+ms.translationtype: HT
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 57fa80162feb8a294733ef15ffaec86d11fcf677
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="columnstore-indexes---design-guidance"></a>列ストア インデックス - 設計ガイダンス
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-列ストア インデックスの設計に関する概要レベルの推奨事項です。 少数の適切な意思決定は、列ストア インデックスが提供するように設計されている高いデータ圧縮率とクエリ パフォーマンスの実現に役立ちます。 
+列ストア インデックスの設計に関する概要レベルの推奨事項です。 設計に関する少数の適切な意思決定は、列ストア インデックスが提供するように設計されている高いデータ圧縮率とクエリ パフォーマンスの実現に役立ちます。 
 
 ## <a name="prerequisites"></a>前提条件
 

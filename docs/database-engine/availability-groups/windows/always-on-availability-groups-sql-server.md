@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 519a66344458046238aa4c8ce1b901fe84bacc7f
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 03997ff880842e2cb088ee5f79237a517aca9abb
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="always-on-availability-groups-sql-server"></a>AlwaysOn 可用性グループ (SQL Server)
@@ -89,28 +89,28 @@ ms.lasthandoff: 08/02/2017
     -   PowerShell コマンドレット。 詳細については、「 [Always On 可用性グループの PowerShell コマンドレットの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)」を参照してください。  
   
 ##  <a name="TermsAndDefinitions"></a> 用語と定義  
- 可用性グループ  
+ **可用性グループ**  
  ひとまとまりでフェールオーバーされるデータベースのセット ( *可用性データベース*) のコンテナー。  
   
- 可用性データベース  
+ **可用性データベース**  
  可用性グループに属しているデータベース。 可用性データベースごとに、可用性グループは 1 個の読み取り/書き込み可能なコピー ( *プライマリ データベース*) と 1 ～ 8 個の読み取り専用コピー (*セカンダリ データベース*) を管理します。  
   
- プライマリ データベース  
+ **プライマリ データベース**  
  可用性データベースの読み取り/書き込み可能なコピー。  
   
- セカンダリ データベース (secondary database)  
+ **セカンダリ データベース**  
  可用性データベースの読み取り専用コピー。  
   
- 可用性グループ  
+ **可用性レプリカ**  
  可用性グループのインスタンス化。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の特定のインスタンスによってホストされ、可用性グループに属する各可用性データベースのローカル コピーを保持します。 可用性グループには、2 種類の可用性レプリカ ( *プライマリ レプリカ* と 1 ～ 8 個の *セカンダリ レプリカ*) があります。  
   
- プライマリ レプリカ  
+ **プライマリ レプリカ**  
  クライアントからプライマリ データベースへの読み取り/書き込み接続を可能にし、各プライマリ データベースのトランザクション ログ レコードをすべてのセカンダリ レプリカに送信する可用性レプリカ。  
   
- セカンダリ レプリカ  
+ **セカンダリ レプリカ**  
  各可用性データベースのセカンダリ コピーを保持し、可用性グループの潜在的なフェールオーバー ターゲットとして機能する可用性レプリカ。 必要に応じて、セカンダリ レプリカは、セカンダリ データベースへの読み取り専用アクセスと、セカンダリ データベース上でのバックアップの作成をサポートできます。  
   
- 可用性グループ リスナー  
+ **可用性グループ リスナー**  
  Always On 可用性グループのプライマリ レプリカまたはセカンダリ レプリカ内のデータベースにアクセスするためにクライアントが接続できるサーバー名。 可用性グループ リスナーは、プライマリ レプリカまたは読み取り専用セカンダリ レプリカに着信接続をダイレクトします。  
   
 > [!NOTE]  
@@ -125,7 +125,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [包含データベース](../../../relational-databases/databases/contained-databases.md)  
   
--   [データベース暗号化](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
+-   [データベース暗号化](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
 -   [データベース スナップショット](../../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "どのような &#39; マスター データ サービス (MDS) の |Microsoft ドキュメント"
+title: "マスター データ サービス (MDS) の新機能 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/08/2016
@@ -12,17 +12,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 caps.latest.revision: 85
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e341e5b15e33af6338447f5422138aea1b94240a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 32a43f651f20ca257837de0440505b9ac4179708
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="what39s-new-in-master-data-services-mds"></a>どのような &#39; のマスター データ サービス (MDS)
+# <a name="what39s-new-in-master-data-services-mds"></a>マスター データ サービス (MDS) の新機能
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] このトピックでは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]リリースのマスター データ サービスの変更と更新の概要を説明します。 
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/02/2017
   
  **ダウンロード**  
   
--   [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]をダウンロードするには、  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**にアクセスしてください。  
+-   [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**に移動してください。  
   
 -   Azure アカウントをすでにお持ちですか?  既にお持ちの場合は、 **[こちら](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** にアクセスして、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] がインストール済みの仮想マシンをすぐにご利用いただけます。  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 08/02/2017
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] を最初にインストールしたユーザーにサーバー管理権限がある。|ユーザーにスーパー ユーザー機能権限がある|  
 |ユーザーにモデル レベルの更新権限があり、モデル サブツリーの権限はないため、暗黙的にモデル管理者になる。|ユーザーにモデル レベルの明示的な管理権限がある。|  
 |ユーザーに読み取り専用権限がある。|ユーザーに読み取りアクセス権限がある。|  
-|ユーザーに更新権限がある。|ユーザーに 4; つの権限 (作成、更新、削除、読み取り) がすべてある。|  
+|ユーザーに更新権限がある。|ユーザーに&4; つの権限 (作成、更新、削除、読み取り) がすべてある。|  
 |ユーザーに拒否権限がある。|ユーザーに拒否権限がある。|  
   
  権限の詳細については、「[Security (Master Data Services) (セキュリティ (マスター データ サービス))](../master-data-services/security-master-data-services.md)」を参照してください。  
@@ -161,7 +161,7 @@ ms.lasthandoff: 08/02/2017
 
  **派生階層の多対多リレーションシップ**  
   
- 派生階層を作成して、多対多リレーションシップを表示できます。 2 つのエンティティ間の多対多リレーションシップは、両者間のマッピングを提供する第 3; のエンティティを使用してモデリングできます。 マッピング エンティティは、他のエンティティを参照するドメイン ベースの属性が 2; つ以上含まれているエンティティです。  
+ 派生階層を作成して、多対多リレーションシップを表示できます。 2 つのエンティティ間の多対多リレーションシップは、両者間のマッピングを提供する第&3; のエンティティを使用してモデリングできます。 マッピング エンティティは、他のエンティティを参照するドメイン ベースの属性が&2; つ以上含まれているエンティティです。  
   
  たとえば、エンティティ M のドメイン ベースの属性が A と B をそれぞれ参照しています。A から B への階層は、マッピング エンティティを使用して作成できます。  
   

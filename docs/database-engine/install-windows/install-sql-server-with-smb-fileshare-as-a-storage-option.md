@@ -1,8 +1,10 @@
 ---
-title: "SQL Server をストレージ オプションとして SMB ファイル共有にインストールする | Microsoft Docs"
+title: "SMB ファイル共有ストレージを使用して SQL Server をインストールする | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 09/05/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,28 +17,28 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1f56f9b3716e8950ceea9110f7ece301ac8c0c74
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: 862addca6027f4bb5b45a059d9dd65b254c9f92a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>SQL Server をストレージ オプションとして SMB ファイル共有にインストールする
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、システム データベース (Master、Model、MSDB、TempDB) と [!INCLUDE[ssDE](../../includes/ssde-md.md)] ユーザー データベースをストレージ オプションとしてサーバー メッセージ ブロック (SMB) ファイル サーバーにインストールできます。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スタンドアロン インストールと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インストール (FCI) の両方に当てはまります。  
+# <a name="install-sql-server-with-smb-fileshare-storage"></a>SMB ファイル共有ストレージを使用して SQL Server をインストールする
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、システム データベース (Master、Model、MSDB、TempDB) と [!INCLUDE[ssDE](../../includes/ssde-md.md)] ユーザー データベースをストレージ オプションとしてサーバー メッセージ ブロック (SMB) ファイル サーバーにインストールできます。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スタンドアロン インストールと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インストール (FCI) の両方に当てはまります。  
   
 > [!NOTE]  
 >  Filestream は現在、SMB ファイル共有ではサポートされていません。  
   
 ## <a name="installation-considerations"></a>インストールに関する注意点  
   
-### <a name="smb-file-share-formats"></a>SMB ファイル共有の形式:  
+### <a name="smb-fileshare-formats"></a>SMB ファイル共有の形式:  
  SMB ファイル共有を指定する際にスタンドアロンおよび FCI データベースでサポートされる汎用名前付け規則 (SMB) パスの形式を次に示します。  
   
 -   \\\ServerName\ShareName\  
   
 -   \\\ServerName\ShareName  
   
- 汎用名前付け規則の詳細については、「 [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) 」(http://go.microsoft.com/fwlink/?LinkId=245534) を参照してください。  
+ 汎用名前付け規則の詳細については、「[UNC](http://msdn.microsoft.com/library/gg465305.aspx)」を参照してください。  
   
  ループバック UNC パス (サーバー名が localhost、127.0.0.1、またはローカル コンピューター名である UNC パス) はサポートされません。 特別なケースとして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同じノードでホストされたファイル サーバー クラスターを使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] もサポートされません。 この状況を避けるため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とファイル サーバー クラスターは、別個の Windows クラスターに作成することをお勧めします。  
   
@@ -60,10 +62,6 @@ ms.lasthandoff: 08/02/2017
 3.  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
 4.  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
-  
-5.  [sp_attach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md)  
-  
-6.  [sp_attach_single_file_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md)  
   
 ### <a name="installation-options"></a>インストール オプション  
   
@@ -102,12 +100,12 @@ ms.lasthandoff: 08/02/2017
     > [!NOTE]  
     >  SMB 共有フォルダーに対するフル コントロールの共有権限と NTFS 権限は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウント、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウント、および管理サーバー ロールを持つ Windows ユーザーに制限する必要があります。  
   
-     ドメイン アカウントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントとして使用することをお勧めします。 システム アカウントをサービス アカウントとして使用した場合、コンピューター アカウントのアクセス許可を *<ドメイン名>***\\***<コンピューター名>***$** という形式で指定できます。  
+     ドメイン アカウントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントとして使用することをお勧めします。 システム アカウントをサービス アカウントとして使用した場合、コンピューター アカウントのアクセス許可を \<*domain_name*>\\<*computer_name*>\*$* という形式で指定できます。  
   
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップで、ストレージ オプションとして SMB ファイル共有を指定した場合は、ドメイン アカウントをサービス アカウントとして指定する必要があります。 SMB ファイル共有を使用する場合、システム アカウントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール後にのみサービス アカウントとして指定することができます。  
     >   
-    >  仮想アカウントでは、リモートの場所へアクセスすることはできません。 どの仮想アカウントも、コンピューター アカウントの権限を使用します。 *<domain_name>***\\***<computer_name>***$** の形式でコンピューター アカウントを準備してください。  
+    >  仮想アカウントでは、リモートの場所へアクセスすることはできません。 どの仮想アカウントも、コンピューター アカウントの権限を使用します。 \<*domain_name*>\\<*computer_name*>\*$* の形式でコンピューター アカウントを準備してください。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールに使用するアカウントには、クラスター セットアップの際にデータ ディレクトリとして使用される、SMB ファイル共有フォルダーおよび他のすべてのデータ フォルダー (ユーザー データベース ディレクトリ、ユーザー データベース ログ ディレクトリ、TempDB ディレクトリ、TempDB ログ ディレクトリ、バックアップ ディレクトリ) に対して、フル コントロール権限が必要です。  
   

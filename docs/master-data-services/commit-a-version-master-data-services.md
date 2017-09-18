@@ -1,5 +1,5 @@
 ---
-title: "バージョンをコミットする (マスター データ サービス) |Microsoft ドキュメント"
+title: "バージョンをコミットする (マスター データ サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - versions [Master Data Services], committing
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 28fd453f17c08b708b4a49f1f4646eb1be7a51ab
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: f038c98b3299103753cd9daa58e3edc5ebae568b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="commit-a-version-master-data-services"></a>バージョンをコミットする (マスター データ サービス)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] でモデルのバージョンをコミットして、モデルのメンバーおよびメンバーの属性に対する変更を防止します。 コミットしたバージョンはロック解除できません。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデルのバージョンをコミットして、モデルのメンバーおよびメンバーの属性に対する変更を防止します。 コミットしたバージョンはロック解除できません。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
@@ -54,13 +54,13 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>次の手順  
   
--   [バージョン フラグ &#40; を作成します。マスター データ サービス &#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+-   [バージョン フラグを作成する (マスター データ サービス)](../master-data-services/create-a-version-flag-master-data-services.md)  
   
--   [バージョン &#40; にフラグを割り当てるマスター データ サービス &#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
+-   [バージョンにフラグを割り当てる (マスター データ サービス)](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
--   [バージョン &#40; をコピーします。マスター データ サービス &#41;](../master-data-services/copy-a-version-master-data-services.md)  
+-   [バージョンをコピーする (マスター データ サービス)](../master-data-services/copy-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
- [バージョンと #40 です。マスター データ サービス &#41;](../master-data-services/versions-master-data-services.md)  
+ [バージョン (マスター データ サービス)](../master-data-services/versions-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "階層メンバー権限 (Master Data Services) を削除する |Microsoft ドキュメント"
+title: "階層メンバーのアクセス許可を削除する (マスター データ サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - permissions [Master Data Services], deleting member permissions
 ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c06cb0309491e9663e4b130b9a641bbbc3a07be
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 97e377cb8b63384fbbe3f58ef0b535e2c2da0877
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>階層メンバーの権限を削除する (マスター データ サービス)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] でモデル オブジェクトの権限を削除して、作成されている割り当てを削除します。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデル オブジェクトの権限を削除して、作成されている割り当てを削除します。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/02/2017
 10. **[保存]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [階層メンバーの権限 & #40 です。マスター データ サービス &#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [階層メンバーの権限 &#40; を割り当てるマスター データ サービス &#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
+ [階層メンバーの権限 (マスター データ サービス)](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [階層メンバーの権限を割り当てる (マスター データ サービス)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
   

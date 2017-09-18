@@ -1,5 +1,5 @@
 ---
-title: "テーブル (Master Data Services) からデータをインポート |Microsoft ドキュメント"
+title: "テーブルからのデータのインポート (マスター データ サービス) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/14/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 47c83a225b97e203875f940a03fe52db80525060
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 7d059b2852c864f734c924383a115e61431bcccc
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="import-data-from-tables-master-data-services"></a>テーブルからのデータのインポート (マスター データ サービス)
@@ -27,9 +27,9 @@ ms.lasthandoff: 08/02/2017
   
  **前提条件**  
   
--   Stg. にデータを挿入する権限が必要\<名前 > _Leaf、stg.\<名前 > _Consolidated、stg.\<名前 > _relationship の各テーブルで、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]データベース。  
+-   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの stg.\<名前>_Leaf、 stg.\<名前>_Consolidated、stg.\<名前>_Relationship の各テーブルにデータを挿入するアクセス許可が必要です。  
   
--   いずれか、stg.udp_ を実行するアクセス許可が必要\<名前 > _Leaf、stg.udp\_\<名前 > _Consolidated、または、stg.udp\_\<名前 > _relationship の各ストアド プロシージャ、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]データベース。  
+-   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの stg.udp_\<名前>_Leaf、stg.udp\_\<名前>_Consolidated、または the stg.udp\_\<名前>_Relationship の各ストアド プロシージャのいずれかを実行するアクセス許可が必要です。  
   
 -   モデルのステータスが **[コミット済み]**でないことが必須です。  
   
@@ -37,11 +37,11 @@ ms.lasthandoff: 08/02/2017
   
 1.  必須フィールドの値を指定するなど、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの適切なステージング テーブルにインポートするメンバーを準備します。 ステージング テーブルの概要については、「[概要: テーブルからのデータのインポート (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
   
-    -   リーフ メンバー、テーブルは stg.\<名前 > _Leaf、場所\<名 > は、対応するエンティティを参照します。 必須フィールドの詳細については、「[リーフ メンバー ステージング テーブル (マスター データ サービス)](../master-data-services/leaf-member-staging-table-master-data-services.md)」を参照してください。  
+    -   リーフ メンバーの場合、テーブルは stg.\<名前>_Leaf になります。ここで、\<名前> は対応するエンティティを指します。 必須フィールドの詳細については、「[リーフ メンバー ステージング テーブル (マスター データ サービス)](../master-data-services/leaf-member-staging-table-master-data-services.md)」を参照してください。  
   
-    -   統合メンバー、テーブルは stg.\<名前 > _Consolidated です。 必須フィールドの詳細については、「[統合メンバー ステージング テーブル (マスター データ サービス)](../master-data-services/consolidated-member-staging-table-master-data-services.md)」を参照してください。  
+    -   統合メンバーの場合、テーブルは stg.\<名前>_Consolidated になります。 必須フィールドの詳細については、「[統合メンバー ステージング テーブル (マスター データ サービス)](../master-data-services/consolidated-member-staging-table-master-data-services.md)」を参照してください。  
   
-    -   明示的階層内のメンバーの位置を移動するには、テーブルは stg.\<名前 > _relationship になります。 必須フィールドの詳細については、「[リレーションシップ ステージング テーブル (マスター データ サービス)](../master-data-services/relationship-staging-table-master-data-services.md)」を参照してください。  
+    -   明示的階層内のメンバーの位置を移動する場合、テーブルは stg.\<名前>_Relationship になります。 必須フィールドの詳細については、「[リレーションシップ ステージング テーブル (マスター データ サービス)](../master-data-services/relationship-staging-table-master-data-services.md)」を参照してください。  
   
          明示的階層内のメンバーの移動の概要については、「[概要: テーブルからのデータのインポート (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 08/02/2017
   
          **[ステージング バッチ]** ページで、ドロップダウン リストでデータの追加先のモデルを選択してから、 **[バッチの開始]**をクリックします。 バッチ処理の状態が、 **[状態]** フィールドに示されます。 状態の詳細については、「[インポート状態 (マスター データ サービス)](../master-data-services/import-statuses-master-data-services.md)」を参照してください。  
   
-         ![ステージング バッチ ページでは、マスター データ マネージャー](../master-data-services/media/mds-stagingbatchespage.png "ステージング バッチのマスター データ マネージャー ページ")  
+         ![マスター データ マネージャーでの [ステージング バッチ] ページ](../master-data-services/media/mds-stagingbatchespage.png "マスター データ マネージャーでの [ステージング バッチ] ページ")  
   
          ステージング処理は、 **の** [ステージング バッチの間隔] [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]設定に定められた間隔で開始されます。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../master-data-services/system-settings-master-data-services.md)」を参照してください。  
   

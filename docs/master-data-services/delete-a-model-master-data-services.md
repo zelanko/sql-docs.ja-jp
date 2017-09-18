@@ -1,5 +1,5 @@
 ---
-title: "モデルを削除する (マスター データ サービス) |Microsoft ドキュメント"
+title: "モデルを削除する (マスター データ サービス) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - models [Master Data Services], deleting models
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: be50aa7e9de502b0db2cb427bf894081196b579e
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: f1ac3250d2d1f852ec43bf88fb206b2009fc0430
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-a-model-master-data-services"></a>モデルを削除する (マスター データ サービス)
-  モデルを削除して、モデルおよびそのすべてのデータを [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] から削除します。  
+  モデルを削除して、モデルおよびそのすべてのデータを [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]から削除します。  
   
 > [!NOTE]  
 >  これらの手順が完了すると、モデルのすべてのバージョンのすべてのオブジェクトおよびすべてのデータが完全に削除されます。  
@@ -52,10 +52,10 @@ ms.lasthandoff: 08/02/2017
   
 6.  追加の確認のダイアログ ボックスで **[OK]**をクリックします。  
   
- グリッドの **[状態]** 列には、モデルに対する操作の状態が示されます。 クリックすると、**保存モデル** ボタン、![更新](../master-data-services/media/mds-model-status-updating.png "更新")イメージを表示すると、モデルが更新中であることを示します。 作成または、モデルを編集するときにエラーがある場合、![エラー](../master-data-services/media/mds-model-status-error.png "エラー")イメージが表示されます。 それ以外の場合は正常な状態であり、 ![[OK]](../master-data-services/media/mds-model-status-ok.png "[OK]") 画像が表示されます。  
+ グリッドの **[状態]** 列には、モデルに対する操作の状態が示されます。 **[モデルの保存]** ボタンをクリックすると、モデルが更新されていることを示す ![更新中](../master-data-services/media/mds-model-status-updating.png "更新中") 画像が表示されます。 モデルの作成中または編集中にエラーが発生すると、![エラー](../master-data-services/media/mds-model-status-error.png "エラー") 画像が表示されます。 それ以外の場合は正常な状態であり、 ![[OK]](../master-data-services/media/mds-model-status-ok.png "[OK]") 画像が表示されます。  
   
 ## <a name="see-also"></a>参照  
- [モデルと #40 です。マスター データ サービス &#41;](../master-data-services/models-master-data-services.md)   
- [モデル &#40; を作成します。マスター データ サービス &#41;](../master-data-services/create-a-model-master-data-services.md)  
+ [モデル (マスター データ サービス)](../master-data-services/models-master-data-services.md)   
+ [モデルを作成する (マスター データ サービス)](../master-data-services/create-a-model-master-data-services.md)  
   
   

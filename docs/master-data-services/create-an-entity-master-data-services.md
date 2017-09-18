@@ -1,5 +1,5 @@
 ---
-title: "エンティティ (Master Data Services) を作成 |Microsoft ドキュメント"
+title: "エンティティを作成する (マスター データ サービス) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2766ad2cb250200e7fbb3f19f96eab7b5f748a9a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 9b081ac7c85401a43533863f2495dad9032c7ba0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-an-entity-master-data-services"></a>エンティティを作成する (マスター データ サービス)
@@ -71,7 +71,7 @@ ms.lasthandoff: 08/02/2017
   
 |[名前]|[説明]|  
 |----------|-----------------|  
-|[状態]|エンティティの状態。 **[保存]** をクリックすると、エンティティが更新中であることを示す次のイメージが表示されます。<br /><br /> ![ステータスの更新のアイコン](../master-data-services/media/mds-statusicon-updating.png "ステータスの更新のアイコン")<br /><br /> エンティティの作成または編集中にエラーが発生すると、次のイメージが表示されます。<br /><br /> ![エラー状態をアイコン](../master-data-services/media/mds-statusicon-error.png "のエラー ステータス アイコン")<br /><br /> 適切な状態の場合は、次のイメージが表示されます。<br /><br /> ![[Ok] の状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK ステータス アイコン")|  
+|[状態]|エンティティの状態。 **[保存]** をクリックすると、エンティティが更新中であることを示す次のイメージが表示されます。<br /><br /> ![更新中状態のアイコン](../master-data-services/media/mds-statusicon-updating.png "更新中状態のアイコン")<br /><br /> エンティティの作成または編集中にエラーが発生すると、次のイメージが表示されます。<br /><br /> ![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン")<br /><br /> 適切な状態の場合は、次のイメージが表示されます。<br /><br /> ![適切な状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "適切な状態のアイコン")|  
 |名前|エンティティ名。|  
 |[説明]|エンティティの説明。|  
 |ステージング テーブル|データを格納するために使用されるテーブルのプレフィックス名。|  
@@ -95,8 +95,8 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>参照  
  [エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)   
- [明示的階層と #40 です。マスター データ サービス &#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [エンティティ &#40; を編集します。マスター データ サービス &#41;](../master-data-services/edit-an-entity-master-data-services.md)   
+ [明示的階層 (マスター データ サービス)](../master-data-services/explicit-hierarchies-master-data-services.md)   
+ [エンティティを編集する &#40;マスター データ サービス&#41;](../master-data-services/edit-an-entity-master-data-services.md)   
  [エンティティを削除する (マスター データ サービス)](../master-data-services/delete-an-entity-master-data-services.md)  
   
   

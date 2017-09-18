@@ -1,5 +1,5 @@
 ---
-title: "概要: Excel (MDS アドインを Excel の) からのデータのインポート |Microsoft ドキュメント"
+title: "概要: Excel からのデータのインポート (Excel 用 MDS アドイン) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,20 +12,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c84ecb3308a641a538bcb8aaf85ebcf728d15cb3
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e6aa429d0435515189a28199ca4653a623c50a0f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>概要: Excel からのデータのインポート(Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]で、他のユーザーとデータを共有するには、データを MDS リポジトリにパブリッシュします。 パブリッシュされたデータはすぐに、他のアドイン ユーザーがダウンロードできるようになります。  
   
- データをパブリッシュすると、追加または更新したすべてのデータが MDS リポジトリにパブリッシュされます。 削除したデータはパブリッシュされません。データの削除は個別に行う必要があります。 詳細については、「[行の削除 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/delete-a-row-mds-add-in-for-excel.md)」を参照してください。  
+ データをパブリッシュすると、追加または更新したすべてのデータが MDS リポジトリにパブリッシュされます。 削除したデータはパブリッシュされません。データの削除は個別に行う必要があります。 詳細については、「 [行の削除 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/delete-a-row-mds-add-in-for-excel.md)」を参照してください。  
   
 > [!NOTE]  
 >  パブリッシュは、新しいエンティティの作成には使用できません。 エンティティの作成の詳細については、「[エンティティを作成する (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)」を参照してください。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/02/2017
   
 -   他のユーザーがメンバーに対して行ったトランザクションを表示することができます。 また、特定の属性に対する権限を失った場合でも、メンバーに対して行ったすべてのトランザクションを表示できます。 権限が拒否と設定されている属性を含むトランザクションは表示できません。  
   
- メンバーに対して行われたすべてのトランザクションを表示することができます。 詳細については、「[メンバーのすべての注釈またはトランザクションの表示 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)」を参照してください。  
+ メンバーに対して行われたすべてのトランザクションを表示することができます。 詳細については、「 [メンバーのすべての注釈またはトランザクションの表示 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  500 文字を超える注釈を入力すると、その注釈は自動的に切り捨てられます。  
@@ -64,8 +64,8 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [データの更新 &#40;Excel 用 MDS アドイン&#41;](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md)  
+-   [データの更新 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md)  
   
--   [マスター データ サービス アドインを Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
+-   [Microsoft Excel 用マスター データ サービス アドイン](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   
   

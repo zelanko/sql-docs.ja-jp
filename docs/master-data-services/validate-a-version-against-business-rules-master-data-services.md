@@ -1,5 +1,5 @@
 ---
-title: "ビジネス ルール (マスター データ サービス) に対してバージョンを検証する |Microsoft ドキュメント"
+title: "ビジネス ルールに対してバージョンを検証する (マスター データ サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - business rules [Master Data Services], applying to all members
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 036659fbe3b6cafd1272180bbd37737062ed0967
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 2a31c8b91872276636addc25c673f07ba5b11bc7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>ビジネス ルールに対してバージョンを検証する (マスター データ サービス)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、ビジネス ルールをモデル バージョンのすべてのメンバーに適用するためにバージョンが検証されます。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、ビジネス ルールをモデル バージョンのすべてのメンバーに適用するためにバージョンが検証されます。  
   
- この手順では、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションを使用してデータを検証する方法について説明します。 MDS データベースの権限がある場合は、代わりにストアド プロシージャを使用することができます。 詳細については、「 [Validation Stored Procedure &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)」を参照してください。  
+ この手順では、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションを使用してデータを検証する方法について説明します。 MDS データベースの権限がある場合は、代わりにストアド プロシージャを使用することができます。 詳細については、「 [検証ストアド プロシージャ (マスター データ サービス)](../master-data-services/validation-stored-procedure-master-data-services.md)」を参照してください。  
   
 > [!NOTE]  
 >  バージョンをコミットするには、すべてのメンバーが検証に合格する必要があります。  
@@ -62,13 +62,13 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>次の手順  
   
--   [ロックのバージョンと #40 です。マスター データ サービス &#41;](../master-data-services/lock-a-version-master-data-services.md)  
+-   [バージョンをロックする (マスター データ サービス)](../master-data-services/lock-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
- [検証状態 & #40 です。マスター データ サービス &#41;](../master-data-services/validation-statuses-master-data-services.md)   
- [検証ストアド プロシージャと #40 です。マスター データ サービス &#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
- [バージョンと #40 です。マスター データ サービス &#41;](../master-data-services/versions-master-data-services.md)   
- [ビジネス ルール & #40 です。マスター データ サービス &#41;](../master-data-services/business-rules-master-data-services.md)   
- [ビジネス ルール &#40; に対して特定のメンバーを検証します。マスター データ サービス &#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+ [検証状態 (マスター データ サービス)](../master-data-services/validation-statuses-master-data-services.md)   
+ [検証ストアド プロシージャ (マスター データ サービス)](../master-data-services/validation-stored-procedure-master-data-services.md)   
+ [バージョン (マスター データ サービス)](../master-data-services/versions-master-data-services.md)   
+ [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)   
+ [ビジネス ルールに対して特定のメンバーを検証する (マスター データ サービス)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
   

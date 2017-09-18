@@ -1,5 +1,5 @@
 ---
-title: "データベース オブジェクト セキュリティ (Master Data Services) |Microsoft ドキュメント"
+title: "データベース オブジェクト セキュリティ (マスター データ サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8bfccd4e9d3df93dbc6a968a1fc5961400afe234
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: f4aef82cdb9291215f41bad29e4de8ff61b031a8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="database-object-security-master-data-services"></a>データベース オブジェクト セキュリティ (マスター データ サービス)
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/02/2017
 |------------|---------------|-----------------|  
 |ビジネス ルールに対してデータのバージョンを検証する|mdm.udpValidateModel|EXECUTE|  
   
- 詳細については、「 [Validation Stored Procedure &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)」を参照してください。  
+ 詳細については、「 [検証ストアド プロシージャ (マスター データ サービス)](../master-data-services/validation-stored-procedure-master-data-services.md)」を参照してください。  
   
 ##  <a name="Versions"></a> バージョンを削除する  
   
@@ -87,6 +87,6 @@ ms.lasthandoff: 08/02/2017
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]での動作を制御するために構成可能なシステム設定が用意されています。 これらの設定は [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] で調整できます。または、UPDATE アクセス権を持つ場合は、mdm.tblSystemSetting データベース テーブルで直接調整できます。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../master-data-services/system-settings-master-data-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [セキュリティ &#40;マスター データ サービス&#41;](../master-data-services/security-master-data-services.md)  
+ [セキュリティ (マスター データ サービス)](../master-data-services/security-master-data-services.md)  
   
   

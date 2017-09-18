@@ -1,5 +1,5 @@
 ---
-title: "ビジネス ルールの例 (Master Data Services) |Microsoft ドキュメント"
+title: "ビジネス ルールの例 (マスター データ サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/05/2017
 ms.prod: sql-server-2016
@@ -11,20 +11,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 73f7c989b5a2d99f4eb826f2445adddc7bf9d374
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 57ecfaefcf4ba428e05617b89423e72774a50a51
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="business-rule-examples-master-data-services"></a>ビジネス ルールの例 (マスター データ サービス)
 この記事では、 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]のビジネス ルールの例を示します。 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]のインストールに含まれるサンプル モデルに、これらの例が見つかります。   
   
-サンプル モデルを配置する方法の手順については、次を参照してください。[マスター データ サービスのインストールと構成](../master-data-services/master-data-services-installation-and-configuration.md)です。  
+サンプル モデルを配置する方法の手順については、「[マスター データ サービスのインストールと構成](../master-data-services/master-data-services-installation-and-configuration.md)」を参照してください。  
   
   
 ## <a name="business-rule-examples"></a>ビジネス ルールの例  
@@ -152,13 +152,13 @@ Else
   
 **サンプル モデルのビジネス ルールの例を表示するには**  
 1. MDS をインストールしてから設定する [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web サイトに移動し、 **[システム管理]** ボックスをクリックします。   
-Web サイトの設定手順については、次を参照してください。[マスター データ サービスのインストールと構成](../master-data-services/master-data-services-installation-and-configuration.md)です。  
+Web サイトを設定する手順については、「[マスター データ サービスのインストールと構成](../master-data-services/master-data-services-installation-and-configuration.md)」を参照してください。  
 2. 上記の表に一覧されているビジネス ルールを含むサンプル モデルをクリックして、 **[エンティティ]**をクリックします。  
 3. 上記の表に一覧されているルールを適用するエンティティをクリックして、 **[ビジネス ルール]**をクリックします。  
 4. 表示するビジネス ルールの名前をクリックします。 UI を展開すると、 **If**、 **Then** 、および **Else** ステートメントが表示されます。  
   
 ## <a name="did-this-article-help-you-were-listening"></a>この記事は役に立ちましたか? フィードバックをお待ちしております。   
-どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツ改善のため、フィードバックをお待ちしています。 コメントを送信してください[ sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com)です。   
+どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツ改善のため、フィードバックをお待ちしています。 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com) にコメントをお送りください。   
   
   
   

@@ -1,5 +1,5 @@
 ---
-title: "属性名と変更するデータ型 (Master Data Services) |Microsoft ドキュメント"
+title: "属性名とデータ型を変更する (マスター データ サービス) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/15/2017
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - attributes [Master Data Services], changing name
 ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
+author: smartysanthosh
+ms.author: nagavo
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a1c9e79f7485db3577a17147e2d187d2acc6c521
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: b595042d299890b023edbc604ea0d87bedd0847b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>属性名とデータ型を変更する (マスター データ サービス)
@@ -61,8 +61,8 @@ ms.lasthandoff: 08/02/2017
 9. **[保存]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [テキスト属性 &#40; を作成します。マスター データ サービス &#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [属性 &#40; を削除します。マスター データ サービス &#41;](../master-data-services/delete-an-attribute-master-data-services.md)   
- [属性と #40 です。マスター データ サービス &#41;](../master-data-services/attributes-master-data-services.md)  
+ [テキスト属性を作成する (マスター データ サービス)](../master-data-services/create-a-text-attribute-master-data-services.md)   
+ [属性を削除する &#40;マスター データ サービス&#41;](../master-data-services/delete-an-attribute-master-data-services.md)   
+ [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)  
   
   

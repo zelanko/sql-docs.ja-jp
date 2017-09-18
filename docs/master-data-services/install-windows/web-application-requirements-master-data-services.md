@@ -1,5 +1,5 @@
 ---
-title: "Web アプリケーションの要件 (マスター データ サービス) |Microsoft ドキュメント"
+title: "Web アプリケーションの要件 (マスター データ サービス) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 02/13/2017
@@ -14,20 +14,20 @@ keywords:
 - "マスター データ サービス"
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 caps.latest.revision: 40
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b3ca26f48614ee2ed12275ec148dcaec3c044ce5
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e8e0c4a9f925192c79dcb998c159d311c80256c5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web アプリケーションの要件 (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は、インターネット インフォメーション サービス (IIS) によってホストされる Web アプリケーションです。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は Internet Explorer (IE) 9 以降でのみ動作します。 IE 8 以前のバージョン、Microsoft Edge、Chrome はサポートされていません。  
 
-**インストールして IIS を構成する方法の詳細について**を参照してください[のインストールと IIS を構成する](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS)です。
+**IIS のインストールおよび構成方法については**、「[Installing and Configuring IIS](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS)」(IIS のインストールと構成) を参照してください。
   
  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] Web アプリケーションを作成および構成するには、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] を使用します。 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] は、ローカル コンピューター上の IIS を構成するので、最初に Web 構成タスクを行う場合に最適です。 たとえば、1 つの [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web アプリケーションを使用して [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 環境を構成したり、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]のスケールアウト配置の最初の Web アプリケーションを構成したりします。 スケールアウト配置の複数の Web サーバーの構成など、より複雑なタスクを実行する場合は、IIS ツールを使用します。  
   
@@ -77,7 +77,7 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
 |型|説明|  
 |----------|-----------------|  
 |Windows アカウント|Windows のロール、ロール サービス、および機能を構成し、ローカル コンピューター上の IIS にあるアプリケーション プール、Web サイト、および Web アプリケーションを作成して管理する権限がある Windows アカウントを使用して Web サーバー コンピューターにログオンする必要があります。|  
-|サービス アカウント|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] で [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]Web アプリケーションを作成するときは、アプリケーションが実行されるアプリケーション プールの ID を指定する必要があります。 このアカウントは、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースの作成時に指定したサービス アカウントと異なっていてもかまいません。<br /><br /> この ID はドメイン ユーザー アカウントである必要があり、データベースにアクセスするために [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースの mds_exec データベース ロールに追加されます。 詳細については、次を参照してください。[データベース ログイン、ユーザー、およびロール](../../master-data-services/database-logins-users-and-roles-master-data-services.md)です。 また、このアカウントは、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Windows グループ **MDS_ServiceAccounts**にも追加されます。このグループには、ファイル システムの一時コンパイル ディレクトリ **MDSTempDir**に対する権限が与えられています。 詳細については、「[フォルダーとファイルの権限 &#40;マスター データ サービス&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)」を参照してください。|  
+|サービス アカウント|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] で [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]Web アプリケーションを作成するときは、アプリケーションが実行されるアプリケーション プールの ID を指定する必要があります。 このアカウントは、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースの作成時に指定したサービス アカウントと異なっていてもかまいません。<br /><br /> この ID はドメイン ユーザー アカウントである必要があり、データベースにアクセスするために [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースの mds_exec データベース ロールに追加されます。 詳細については、「[データベース ログイン、ユーザー、およびロール](../../master-data-services/database-logins-users-and-roles-master-data-services.md)」を参照してください。 また、このアカウントは、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Windows グループ **MDS_ServiceAccounts**にも追加されます。このグループには、ファイル システムの一時コンパイル ディレクトリ **MDSTempDir**に対する権限が与えられています。 詳細については、「[フォルダーとファイルの権限 &#40;マスター データ サービス&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
  [マスター データ サービスのインストール](../../master-data-services/install-windows/install-master-data-services.md)   

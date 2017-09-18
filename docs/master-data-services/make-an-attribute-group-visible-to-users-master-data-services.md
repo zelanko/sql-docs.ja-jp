@@ -1,5 +1,5 @@
 ---
-title: "属性グループをユーザー (マスター データ サービス) に表示されるように |Microsoft ドキュメント"
+title: "属性グループのユーザーへの表示 (マスター データ サービス) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/15/2017
@@ -12,18 +12,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d9b4e9b3fb165d2aa8c445daa5d38c7a8d81ed03
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e3922c3ad81de37e73f08bd840def40146c8bf12
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>属性グループのユーザーへの表示 (マスター データ サービス)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で、**[エクスプローラー]** 機能領域のグリッドの上部にタブを表示させる場合は、ユーザーまたはグループに対して属性グループを表示します。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、 **[エクスプローラー]** 機能領域のグリッドの上部にタブを表示させる場合は、ユーザーまたはグループに対して属性グループを表示します。  
   
  属性グループを作成すると、作成者以外のすべてのユーザーに対して自動的に非表示に設定されます。  
   
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/02/2017
   
 -   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
--   少なくとも 1 つの属性グループが必要です。 詳細については、「[属性グループを作成する (マスター データ サービス)](../master-data-services/create-an-attribute-group-master-data-services.md)」を参照してください。  
+-   少なくとも 1 つの属性グループが必要です。 詳細については、「 [属性グループを作成する (マスター データ サービス)](../master-data-services/create-an-attribute-group-master-data-services.md)」を参照してください。  
   
 ### <a name="to-make-an-attribute-group-visible-to-users"></a>属性グループをユーザーに表示するには  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/02/2017
 8.  **[保存]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [属性グループ & #40 です。マスター データ サービス &#41;](../master-data-services/attribute-groups-master-data-services.md)   
- [属性グループ &#40; を作成します。マスター データ サービス &#41;](../master-data-services/create-an-attribute-group-master-data-services.md)  
+ [属性グループ (マスター データ サービス)](../master-data-services/attribute-groups-master-data-services.md)   
+ [属性グループを作成する (マスター データ サービス)](../master-data-services/create-an-attribute-group-master-data-services.md)  
   
   

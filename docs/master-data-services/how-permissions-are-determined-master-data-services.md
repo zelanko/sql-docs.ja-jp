@@ -1,5 +1,5 @@
 ---
-title: "アクセス許可を決定する方法 (Master Data Services) |Microsoft ドキュメント"
+title: "アクセス許可の決定方法 (マスター データ サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - permissions [Master Data Services], determining permissions
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b31073cdf3c4b925bbf3687e3b70e3384ac90cce
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 8348c6102a9c683da3c8ec1e453fb579daf94ef2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>権限の決定方法 (Master Data Services)
@@ -81,6 +81,6 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>参照  
  [ユーザー権限とグループ権限の重複 (マスター データ サービス)](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
- [重複するモデルとメンバーの権限 (&) #40 です。マスター データ サービス &#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [モデル アクセス許可とメンバー アクセス許可の重複 (マスター データ サービス)](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

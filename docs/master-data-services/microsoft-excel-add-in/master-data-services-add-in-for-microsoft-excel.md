@@ -1,5 +1,5 @@
 ---
-title: "マスター データ サービス アドインを Excel の |Microsoft ドキュメント"
+title: "Microsoft Excel 用マスター データ サービス アドイン | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/25/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 caps.latest.revision: 30
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4d7a1a96cde8a7423aaa8d202ac7def518152279
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 07ec9e7ae52bb7adb85c2908c4b9b6da87e6ab19
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Microsoft Excel 用マスター データ サービス アドイン
@@ -30,8 +30,8 @@ ms.lasthandoff: 08/02/2017
  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、Data Quality Services (DQS) を使用して、MDS に読み込む前にデータを照合できます。 これにより、MDS 内のデータの重複を防ぐことができます。  
 
 ## <a name="downloads"></a>ダウンロード 
->*  SQL Server 2016 SP1 からの Excel 用マスター データ サービス アドインをダウンロード[この Microsoft ダウンロード センター ページ](https://go.microsoft.com/fwlink/?linkid=836866)です。 
->* ダウンロード、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]から SQL Server 2017 ctp1[この Microsoft ダウンロード センター ページ](https://go.microsoft.com/fwlink/?linkid=836867)です。 このアドインでは、SQL Server 2017 RC1 のでも動作します。
+>*  [この Microsoft ダウンロード センター ページ](https://go.microsoft.com/fwlink/?linkid=836866)から SQL Server 2016 SP1 の Excel 用マスター データ サービス アドインをダウンロードします。 
+>* [この Microsoft ダウンロード センター ページ](https://go.microsoft.com/fwlink/?linkid=836867)から SQL Server 2017 CTP1 の [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] をダウンロードします。 このアドインは、SQL Server 2017 RC1 でも動作します。
 
  
   

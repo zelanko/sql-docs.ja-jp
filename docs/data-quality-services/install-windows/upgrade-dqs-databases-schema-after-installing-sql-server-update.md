@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 更新プログラムのインストール後の DQS データベース スキーマのアップグレード |Microsoft ドキュメント"
+title: "SQL Server 更新プログラムのインストール後の DQS データベース スキーマのアップグレード | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,11 +14,11 @@ caps.latest.revision: 11
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 85fb184a0c084c0cd13467161c49506a2a56c2ec
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>SQL Server 更新プログラムのインストール後の DQS データベース スキーマのアップグレード
@@ -68,6 +68,6 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
   
 ## <a name="see-also"></a>参照  
  [Data Quality Services のインストール](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [.NET Framework 更新後の SQLCLR アセンブリをアップグレードします。](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)  
+ [.NET Framework 更新後の SQLCLR アセンブリのアップグレード](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)  
   
   

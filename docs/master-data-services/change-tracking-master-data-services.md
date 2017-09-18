@@ -1,5 +1,5 @@
 ---
-title: "変更の追跡 (マスター データ サービス) |Microsoft ドキュメント"
+title: "変更の追跡 (マスター データ サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - change tracking [SQL Server]
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6851da978ab681f0236bc9737e7f628c0089abe0
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 0def93a0f88d19ba894508d4a5d39de59dbd7a28
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="change-tracking-master-data-services"></a>変更の追跡 (マスター データ サービス)
@@ -36,15 +36,15 @@ ms.lasthandoff: 08/02/2017
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|変更の追跡グループに属性を追加します。|[変更の追跡グループ &#40; に属性を追加します。マスター データ サービス &#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
-|属性の変更に基づいてアクションを開始するビジネス ルールを作成します。|[属性値の変更 &#40; に基づいてアクションを開始します。マスター データ サービス &#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|変更の追跡グループに属性を追加します。|[変更の追跡グループに属性を追加する (マスター データ サービス)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|属性の変更に基づいてアクションを開始するビジネス ルールを作成します。|[属性値の変更に基づいてアクションを開始する (マスター データ サービス)](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [検証と #40 です。マスター データ サービス &#41;](../master-data-services/validation-master-data-services.md)  
+-   [検証 (マスター データ サービス)](../master-data-services/validation-master-data-services.md)  
   
--   [ビジネス ルール & #40 です。マスター データ サービス &#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)  
   
--   [属性と #40 です。マスター データ サービス &#41;](../master-data-services/attributes-master-data-services.md)  
+-   [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)  
   
   

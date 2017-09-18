@@ -16,11 +16,11 @@ caps.latest.revision: 12
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f55d3c5e57dfbd0d80e02d5c2fcb0fc6aa9ae81d
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: fc3420c4b87cc1d304e7a58b540d7f9210aac18a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="import-a-policy-based-management-policy"></a>ポリシー ベースの管理ポリシーのインポート
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの監視に使用できるポリシーが用意されています。 これらのポリシーは、既定では [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]にインストールされませんが、既定の場所である C:\Program Files\Microsoft SQL Server\130\Tools\Policies\DatabaseEngine\1033 からインポートできます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの監視に使用できるポリシーが用意されています。 これらのポリシーは、既定では [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] にインストールされませんが、既定の場所である C:\Program Files\Microsoft SQL Server\###\Tools\Policies\DatabaseEngine\1033 または 64 ビット インストールでは C:\Program Files (x86)\Microsoft SQL Server\###\Tools\Policies\DatabaseEngine\1033 からインポートできます。
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -65,3 +65,4 @@ ms.lasthandoff: 06/22/2017
 6.  完了したら、 **[OK]**をクリックします。  
   
   
+

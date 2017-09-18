@@ -1,7 +1,7 @@
 ---
 title: "PolyBase のバージョン管理機能の概要 | Microsoft Docs"
 ms.custom: 
-ms.date: 04/13/2016
+ms.date: 08/29/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: dcfa27ad11e3027519398b9424056b52afb1617b
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 61b23238b26af3e127ae889e20487987c358e6c2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>PolyBase のバージョン管理機能の概要
@@ -44,8 +44,20 @@ SQL Server の製品やサービスで利用可能な PolyBase 機能の概要�
 |Microsoft BI ツールから PolyBase クエリを実行する|はい|いいえ|はい|はい|   
 
 
+## <a name="pushdown-computation-supported-t-sql-operators"></a>プッシュダウン計算でサポートされる T-SQL 演算子
+SQL Server および APS では、すべての T-SQL 演算子を hadoop クラスターにプッシュダウンできるわけではありません。 次の表は、すべてサポートされている演算子と、サポートされていない演算子のサブセットを示しています。 
 
-  
+||||
+|-|-|-| 
+|**演算子の種類**|**Hadoop にプッシュ可能**|**Blob ストレージにプッシュ可能**|
+|列のプロジェクション|はい|いいえ|
+|述語|はい|いいえ|
+|集計|部分的|いいえ|
+|外部テーブル間の結合のみ|いいえ|いいえ|
+|外部テーブルとローカル テーブル間の結合|いいえ|いいえ|
+|並べ替え|いいえ|いいえ|
+
+部分的な集計は、データが SQL Server に達しても Hadoop で集計の一部が発生した後に、最終的な集計を行う必要があることを意味します。 これは、超並列処理システムで一般的な集計の計算方法です。  
 ## <a name="see-also"></a>参照  
  [PolyBase ガイド](../../relational-databases/polybase/polybase-guide.md)  
   

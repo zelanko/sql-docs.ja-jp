@@ -1,5 +1,5 @@
 ---
-title: "属性の順序の変更 |Microsoft ドキュメント"
+title: "属性の順序の変更 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/15/2017
@@ -12,18 +12,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 caps.latest.revision: 5
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 403b8824c09993b79f82422ba9136db73b2f7eb7
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 706bb911a55ff319cf8fdceb9ac31fed419ef960
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="change-the-order-of-attributes"></a>属性の順序の変更
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、属性の順序を変更できます。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性の順序を変更できます。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
@@ -58,6 +58,6 @@ ms.lasthandoff: 08/02/2017
 7.  **[上へ移動]** または **[下へ移動]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [属性と #40 です。マスター データ サービス &#41;](../master-data-services/attributes-master-data-services.md)  
+ [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)  
   
   

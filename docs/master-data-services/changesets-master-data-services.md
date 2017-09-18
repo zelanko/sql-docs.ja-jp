@@ -1,5 +1,5 @@
 ---
-title: "変更セット (Master Data Services) |Microsoft ドキュメント"
+title: "変更セット (マスター データ サービス) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bc6c8911695be4768990f83db618ce72a220b1a7
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5cfdab0f4b48cbb0f4abaca5f1d8e9e07a71d07b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="changesets-master-data-services"></a>変更セット (Master Data Services)
@@ -55,9 +55,9 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>参照  
  [変更セットを作成する (マスター データ サービス)](../master-data-services/create-a-changeset-master-data-services.md)   
- [適用し、変更セット &#40; を更新マスター データ サービス &#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
+ [変更セットの適用および更新 &#40;マスター データ サービス&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
  [変更セットのコミットまたは送信 (マスター データ サービス)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)   
- [承認または却下、変更セット & #40 です。マスター データ サービス &#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)   
- [変更セット &#40; を管理します。マスター データ サービス &#41;](../master-data-services/manage-changesets-master-data-services.md)  
+ [変更セットの承認または拒否 &#40;マスター データ サービス&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)   
+ [変更セットの管理 &#40;マスター データ サービス&#41;](../master-data-services/manage-changesets-master-data-services.md)  
   
   

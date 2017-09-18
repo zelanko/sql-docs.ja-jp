@@ -1,5 +1,5 @@
 ---
-title: "概要: データ テーブルからインポートする (マスター データ サービス) |Microsoft ドキュメント"
+title: "概要: テーブルからデータをインポートする (マスター データ サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a33ef299ad64c4bc6ca5a96b43feb888b9147565
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 98127d5652b06fa012d5ac3f6865d73adcce9f7e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="overview-importing-data-from-tables-master-data-services"></a>概要: テーブルからデータをインポートする (マスター データ サービス)
@@ -78,7 +78,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [リーフ メンバー ステージング テーブル (マスター データ サービス)](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [統合メンバー ステージング テーブルと #40 です。マスター データ サービス &#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [統合メンバー ステージング テーブル (マスター データ サービス)](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
 -   [リレーションシップ ステージング テーブル (マスター データ サービス)](../master-data-services/relationship-staging-table-master-data-services.md)  
   
@@ -90,15 +90,15 @@ ms.lasthandoff: 08/02/2017
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] には、次の種類のステージング ストアド プロシージャが含まれています。  
   
--   stg.udp_\<名前 > _Leaf  
+-   stg.udp_\<name>_Leaf  
   
--   stg.udp_\<名前 > _Consolidated  
+-   stg.udp_\<name>_Consolidated  
   
--   stg.udp_\<名前 > _relationship になります  
+-   stg.udp_\<name>_Relationship  
   
  モデル内の各エンティティには、リーフ メンバー、統合メンバー、リレーションシップ ステージング テーブルに対応する 3 つのストアド プロシージャがあります。  次の画像は、通貨、顧客、製品のエンティティのステージング ストアド テーブルを示しています。  
   
- ![MDS データベースのストアド プロシージャをステージング](../master-data-services/media/mds-staging-storedprocedures.png "ステージング MDS データベースのストアド プロシージャ")  
+ ![MDS データベースのステージング ストアド プロシージャ](../master-data-services/media/mds-staging-storedprocedures.png "MDS データベースのステージング ストアド プロシージャ")  
   
  ストアド プロシージャの詳細については、「[ステージング ストアド プロシージャ (マスター データ サービス)](../master-data-services/staging-stored-procedure-master-data-services.md)」を参照してください。  
   
@@ -109,7 +109,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [検証と #40 です。マスター データ サービス &#41;](../master-data-services/validation-master-data-services.md)  
+-   [検証 (マスター データ サービス)](../master-data-services/validation-master-data-services.md)  
   
 -   [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)  
   

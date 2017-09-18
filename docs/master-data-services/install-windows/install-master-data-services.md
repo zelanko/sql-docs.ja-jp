@@ -1,5 +1,5 @@
 ---
-title: "マスター データ サービスのインストールのタスク |Microsoft ドキュメント"
+title: "マスター データ サービスのインストール作業 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/24/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
 caps.latest.revision: 32
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f810e987b5cebe9f4b790e298725d1593499e7ee
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ffeb77252907d7b2dfae4c60491ee6d9b239e641
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="installation-tasks-for-master-data-services"></a>Master Data Services のインストール タスク
-  この記事では、手順へのリンクをインストールのタスクの概要を示します。 インストールとマスター データ サービスの構成のチュートリアルは、次を参照してください[マスター データ サービスのインストールと構成。](../../master-data-services/master-data-services-installation-and-configuration.md) 
+# <a name="installation-tasks-for-master-data-services"></a>マスター データ サービスのインストール作業
+  この記事では、インストール作業の概要と手順へのリンクを提供します。 インストールとマスター データ サービスの構成のチュートリアルは、「[マスター データ サービスのイントールと構成](../../master-data-services/master-data-services-installation-and-configuration.md)」を参照してください。 
   
 -   [インストール前の作業](#preinstall): [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]をインストールする前に、システム要件を確認します。  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/02/2017
   
 |操作|詳細|関連項目|  
 |------------|-------------|--------------------|  
-|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] を開き、インストール後の操作を実行できるようにします。|セットアップが完了すると、 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]が開きます。 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] では、次に示すインストール後の操作がローカル コンピューターで実行されます。<br /><br /> アプリケーション プールの **サービス アカウントを含めるための Windows グループ**MDS_ServiceAccounts [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] を作成します。<br /><br /> [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] インストール パスの下に MDSTempDir フォルダーを作成し、権限を **MDS_ServiceAccounts**に割り当てます。 このフォルダーは、一時的なコンパイル ファイルが [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーション用にコンパイルされる場所です。<br /><br /> [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web.config ファイルの内容、構成、 **tempDirectory**の属性、 **\<コンパイル >** MDSTempDir フォルダーへのパスを持つ要素。|[フォルダーとファイルの権限 &#40;マスター データ サービス&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)<br /><br /> [Web 設定リファレンス &#40;Master Data Services&#41;](../../master-data-services/web-configuration-reference-master-data-services.md)|  
+|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] を開き、インストール後の操作を実行できるようにします。|セットアップが完了すると、 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]が開きます。 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] では、次に示すインストール後の操作がローカル コンピューターで実行されます。<br /><br /> アプリケーション プールの **サービス アカウントを含めるための Windows グループ**MDS_ServiceAccounts [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] を作成します。<br /><br /> [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] インストール パスの下に MDSTempDir フォルダーを作成し、権限を **MDS_ServiceAccounts**に割り当てます。 このフォルダーは、一時的なコンパイル ファイルが [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーション用にコンパイルされる場所です。<br /><br /> [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web.config ファイルでは、**\<compilation>** 要素の **tempDirectory** 属性が MDSTempDir フォルダーへのパスにより構成されます。|[フォルダーとファイルの権限 &#40;マスター データ サービス&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)<br /><br /> [Web 設定リファレンス &#40;Master Data Services&#41;](../../master-data-services/web-configuration-reference-master-data-services.md)|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースを作成する|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] を使用して、マスター データの [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースを作成します。|[マスター データ サービス データベースの作成](../../master-data-services/install-windows/create-a-master-data-services-database.md)|  
 |[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションを作成する|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] を使用して、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]をホストする Web アプリケーションを作成して構成します。|[マスター データ マネージャー Web アプリケーションの作成 &#40;マスター データ サービス&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースを Web アプリケーションに関連付ける|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] を使用して、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションを [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースに関連付けます。|[Master Data Services データベースと Web アプリケーションの関連付け](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)|  

@@ -1,5 +1,5 @@
 ---
-title: "Web サービス操作 (Master Data Services) の分類 |Microsoft ドキュメント"
+title: "Web サービス操作の分類 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -13,20 +13,20 @@ applies_to:
 - SQL Server 2016 Preview
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5363c242248d57e23da9aae986f39825896d5162
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 783893453fecd48f129bd2936ed6e5f1b5a3bd2e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Web サービス操作の分類 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web サービスには、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] がユーザー インターフェイスを通じて行うすべての機能をコード記述で制御できるようにするための操作が、完全なセットとして含まれています。 Web サービス操作は、<xref:Microsoft.MasterDataServices.IService> インターフェイスによって定義され、<xref:Microsoft.MasterDataServices.ServiceClient> クラスのメソッドとして実装されます。 このトピックでは、Web サービス API の使用方法を理解しやすくするために、Web サービス操作を概念ごとのカテゴリに分類します。  
   
-## <a name="model-operations"></a>モデルの処理  
+## <a name="model-operations"></a>モデルの操作  
  これらの操作は、モデルの作成、更新、削除のほか、モデルの全コンテンツ (エンティティ、階層、バージョンなど) に対する操作に使用されます。 詳細については、「[モデル (マスター データ サービス)](../../master-data-services/models-master-data-services.md)」を参照してください。  
   
 ||  
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A>|  
   
 ## <a name="entity-operations"></a>エンティティの操作  
- これらの操作は、単一のエンティティのメンバーを作成、更新、削除するために使用されます。 詳細については、次を参照してください。[エンティティ & #40 です。マスター データ サービス &#41;](../../master-data-services/entities-master-data-services.md)と[メンバー & #40 です。マスター データ サービス &#41;](../../master-data-services/members-master-data-services.md).  
+ これらの操作は、単一のエンティティのメンバーを作成、更新、削除するために使用されます。 詳細については、「[エンティティ &#40;マスター データ サービス&#41;](../../master-data-services/entities-master-data-services.md)」と「[メンバー &#40;マスター データ サービス&#41;](../../master-data-services/members-master-data-services.md)」を参照してください。  
   
 ||  
 |-|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.ModelMembersGet%2A>|  
   
 ## <a name="attribute-and-hierarchy-operations"></a>属性と階層の操作  
- これらの操作は、属性や階層の情報を取得するために使用されます。 属性と階層は、モデル操作 (<xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A> など) を使用して変更することもできます。 詳細については、次を参照してください。[属性 & #40 です。マスター データ サービス &#41;](../../master-data-services/attributes-master-data-services.md)と[階層 & #40 です。マスター データ サービス &#41;](../../master-data-services/hierarchies-master-data-services.md).  
+ これらの操作は、属性や階層の情報を取得するために使用されます。 属性と階層は、モデル操作 (<xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A> など) を使用して変更することもできます。 詳細については、「[属性 &#40;マスター データ サービス&#41;](../../master-data-services/attributes-master-data-services.md)」と「[階層 &#40;マスター データ サービス&#41;](../../master-data-services/hierarchies-master-data-services.md)」を参照してください。  
   
 ||  
 |-|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.BusinessRulesUpdate%2A>|  
   
 ## <a name="annotation-operations"></a>注釈の操作  
- これらの操作は、注釈を作成、更新、削除するために使用されます。 詳細については、次を参照してください。[注釈 & #40 です。マスター データ サービス &#41;](../../master-data-services/annotations-master-data-services.md).  
+ これらの操作は、注釈を作成、更新、削除するために使用されます。 詳細については、「[注釈 &#40;マスター データ サービス&#41;](../../master-data-services/annotations-master-data-services.md)」を参照してください。  
   
 ||  
 |-|  
@@ -102,7 +102,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.TransactionsReverse%2A>|  
   
 ## <a name="version-and-validation-operations"></a>バージョンと検証の操作  
- これらの操作は、バージョンをコピーおよび検証するために使用されます。 詳細については、次を参照してください。[バージョン & #40 です。マスター データ サービス &#41;](../../master-data-services/versions-master-data-services.md)と[検証 & #40 です。マスター データ サービス &#41;](../../master-data-services/validation-master-data-services.md).  
+ これらの操作は、バージョンをコピーおよび検証するために使用されます。 詳細については、「[バージョン &#40;マスター データ サービス&#41;](../../master-data-services/versions-master-data-services.md)」と「[検証 &#40;マスター データ サービス&#41;](../../master-data-services/validation-master-data-services.md)」を参照してください。  
   
 ||  
 |-|  

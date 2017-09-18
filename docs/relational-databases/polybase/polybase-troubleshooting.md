@@ -2,7 +2,7 @@
 title: "PolyBase のトラブルシューティング | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 10/25/2016
+ms.date: 8/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,10 +21,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: e65ea926f3a2d2fb3c30c511a1fbba6150de7b42
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: 4026b6c7c7ae2945d49d6c4b63792239608ffea0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase のトラブルシューティング
@@ -143,7 +143,7 @@ ms.lasthandoff: 07/31/2017
   
 ## <a name="to-view-the--polybase-query-plan"></a>PolyBase クエリ プランを参照するには  
   
-1.  SSMS で、[ **実際の実行プランを含める** ] \(Ctrl + M) を有効にし、クエリを実行します。  
+1.  SSMS で、[ **実際の実行プランを含める** ] (Ctrl + M) を有効にし、クエリを実行します。  
   
 2.  [ **実行プラン** ] タブをクリックします。  
   
@@ -227,8 +227,17 @@ ms.lasthandoff: 07/31/2017
  - 可変長列の全長を含め、最大行サイズは 1 MB 以下にする必要があります。 
  - PolyBase では、Hive 0.12 以降のデータ型 (つまり、Char(), VarChar()) はサポートされません。   
  - SQL Server または Azure SQL データ ウェアハウスから ORC ファイル形式にデータをエクスポートするとき、java のメモリ不足エラーに起因し、テキストでいっぱいの列はわずか 50 列に制限されることがあります。 この問題を回避するには、列の一部だけをエクスポートします。
-- [SQL Server 2016 のフェールオーバー クラスターにノードを追加すると、PolyBase の機能をインストールできません](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
-  
+ - Hadoop に保存されている暗号化されたデータの読み取りまたは書き込みができません。 これには、HDFS 暗号化ゾーンまたは透過的な暗号化が含まれます。
+ - KNOX が有効になっている場合、PolyBase は、Hortonworks インスタンスに接続できません。 
+
+[SQL Server 2016 のフェールオーバー クラスターにノードを追加すると、PolyBase の機能をインストールできません](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
+
+## <a name="hadoop-name-node-high-availability"></a>Hadoop 名前ノードの高可用性
+PolyBase は現在、Zookeeper や Knox などの Name Node HA サービスとやり取りしません。 ただし、この機能を提供するための実績のある回避策を使用できます。 
+
+回避策: DNS 名を使用して、アクティブな Name Node への接続を再ルーティングします。 これを行うためには、外部データ ソースが DNS 名を使用して Name Node と通信していることを確認する必要があります。 Name Node のフェールオーバーが発生したときには、外部データ ソースの定義で使用される DNS 名に関連付けられている IP アドレスを変更する必要があります。 これには、すべての新しい接続を適切な Name Node に再ルーティングします。 フェールオーバーが発生したときに、既存の接続は失敗します。 このプロセスを自動化するために、"ハートビート" が、アクティブな Name Node の ping を実行できます。 ハートビートが失敗する場合、フェールオーバーが発生し、セカンダリ IP アドレスに自動的に切り替えると想定できます。
+
+
 ## <a name="error-messages-and-possible-solutions"></a>エラー メッセージと考えられる解決策
 
 外部テーブルのエラーのトラブルシューティングについては、Murshed Zaman のブログ [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions")を参照してください。

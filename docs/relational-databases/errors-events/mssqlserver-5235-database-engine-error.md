@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_5235 | Microsoft Docs
 ms.custom: 
-ms.date: 04/04/2017
+ms.date: 09/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bb6ed08c7ffad0e723dea7ad4774439049de3d99
+ms.translationtype: HT
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 4374db61b2ae314fe9a11307d083588e4b15800c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="mssqlserver5235"></a>MSSQLSERVER_5235
@@ -43,24 +43,25 @@ ms.lasthandoff: 06/22/2017
   
 |エラー状態|定義|  
 |---------------|--------------|  
-|状態 0|致命的なメタデータの破損により、ステートメントが終了しました。 このメッセージは、1 件以上のエラー 8930 を伴います。|  
-|状態 1|内部チェック エラーにより、ステートメントが終了しました。 このメッセージは、1 件以上のエラー 8967 を伴います。|  
-|状態 2|ストレージ エンジンのコア システム テーブルの基本システム テーブル チェックが失敗しました。 このメッセージは、1 件以上のエラー [7984](../../relational-databases/errors-events/mssqlserver-7984-database-engine-error.md)、7985、[7986](~/relational-databases/errors-events/mssqlserver-7986-database-engine-error.md)、[7987](~/relational-databases/errors-events/mssqlserver-7987-database-engine-error.md)、または [7988](~/relational-databases/errors-events/mssqlserver-7988-database-engine-error.md) を伴います。|  
-|状態 3|トランザクション ログの再構築後にデータベースを起動できなかったため、DBCC 緊急モードでの修復が失敗しました。 このメッセージは、エラー 7909 を伴います。|  
-|状態 4|コマンドの実行中に、アサーションの失敗またはアクセス違反が発生しました。|  
-|状態 5|不明なエラーが発生し、DBCC コマンドが予期せず終了しました。|  
+|状態 1|致命的なメタデータの破損により、ステートメントが終了しました。 このメッセージは、1 件以上のエラー 8930 を伴います。|  
+|状態 2|内部チェック エラーにより、ステートメントが終了しました。 このメッセージは、1 件以上のエラー 8967 を伴います。|  
+|状態 3|ストレージ エンジンのコア システム テーブルの基本システム テーブル チェックが失敗しました。 このメッセージは、1 件以上のエラー [7984](../../relational-databases/errors-events/mssqlserver-7984-database-engine-error.md)、7985、[7986](~/relational-databases/errors-events/mssqlserver-7986-database-engine-error.md)、[7987](~/relational-databases/errors-events/mssqlserver-7987-database-engine-error.md)、または [7988](~/relational-databases/errors-events/mssqlserver-7988-database-engine-error.md) を伴います。|  
+|状態 4|トランザクション ログの再構築後にデータベースを起動できなかったため、DBCC 緊急モードでの修復が失敗しました。 このメッセージは、エラー 7909 を伴います。|  
+|状態 5|コマンドの実行中に、アサーションの失敗またはアクセス違反が発生しました。|  
+|状態 6|不明なエラーが発生し、DBCC コマンドが予期せず終了しました。|  
+|状態 7|レプリカでのエラーのための異常終了 (Always On)。|  
   
 ## <a name="user-action"></a>ユーザーの操作  
 次の表に、指定されたエラー状態に対応するユーザーのアクションを示します。  
   
 |エラー状態|ユーザーのアクション|  
 |---------------|---------------|  
-|状態 0|バックアップからの復元を行います。|  
-|状態 1|[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) に問い合わせます。|  
-|状態 2|バックアップからの復元を行います。|  
+|状態 1|バックアップからの復元を行います。|  
+|状態 2|[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) に問い合わせます。|  
 |状態 3|バックアップからの復元を行います。|  
+|状態 4|バックアップからの復元を行います。|  
 |状態 4|CSS に問い合わせます。|  
-|状態 5|コマンドを再実行します。 問題が解決しない場合は、CSS に問い合わせます。|  
+|状態 6|コマンドを再実行します。 問題が解決しない場合は、CSS に問い合わせます。|  
   
 ## <a name="see-also"></a>参照  
 [DBCC &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: "モデルの配置オプション (Master Data Services) |Microsoft ドキュメント"
+title: "モデル配置オプション (マスター データ サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b32c2f58468c64d4c311b196f012b1a645bb216f
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 6e4cdd4041ee2065b6cd2aa898068289eda66d9e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="model-deployment-options-master-data-services"></a>モデル配置オプション (マスター データ サービス)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] でモデル パッケージ ファイルを配置するとき、新しいモデルまたは複製モデルを配置するのか、以前に複製したモデルを更新するのかを決定する必要があります。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデル パッケージ ファイルを配置するとき、新しいモデルまたは複製モデルを配置するのか、以前に複製したモデルを更新するのかを決定する必要があります。  
   
 ## <a name="workflows"></a>ワークフロー  
  モデル パッケージを操作する場合、2 つの主要なワークフローがあります。  
@@ -43,8 +43,8 @@ ms.lasthandoff: 08/02/2017
 |Update|パッケージ内のモデルを使用して、既存のモデルを更新します。 両方のモデルの識別子が同じである必要があります。 このオプションは、以前に複製したモデルを更新するために使用します。|以前に複製したモデルのみを更新できます (名前と ID が一致する必要があります)。|  
   
 ## <a name="see-also"></a>参照  
- [MDSModelDeploy を使用して、モデル配置パッケージを展開します。](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)   
- [ウィザードを使用してモデル配置パッケージを展開します。](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)   
- [モデル &#40; を展開します。マスター データ サービス &#41;](../master-data-services/deploying-models-master-data-services.md)  
+ [MDSModelDeploy を使用したモデルの配置パッケージの配置](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)   
+ [ウィザードを使用したモデルの配置パッケージの展開](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)   
+ [モデルの配置 (マスター データ サービス)](../master-data-services/deploying-models-master-data-services.md)  
   
   

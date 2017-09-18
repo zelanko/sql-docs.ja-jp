@@ -1,5 +1,5 @@
 ---
-title: "システム設定 (マスター データ サービス) |Microsoft ドキュメント"
+title: "システム設定 (マスター データ サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - system settings [Master Data Services]
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 caps.latest.revision: 17
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0856c24aee54589941ba96aad979ef732d143f37
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: c2c1d9b5af3b0825e7002c44344ac9428d0e8980
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="system-settings-master-data-services"></a>システム設定 (マスター データ サービス)
@@ -108,11 +108,11 @@ ms.lasthandoff: 08/02/2017
   
 |構成マネージャーの設定|システム設定|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**[通知に対するマスター データ マネージャーの URL]**|**MDMRootURL**|URL、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web アプリケーション、たとえば、電子メール通知のリンクで使用される`http://constoso/mds`です。|  
+|**[通知に対するマスター データ マネージャーの URL]**|**MDMRootURL**|電子メール通知のリンクで使用される [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションの URL (`http://constoso/mds` など)。|  
 |**[通知電子メールの送信間隔]**|**NotificationInterval**|電子メール通知を送信する頻度 (秒数)。 既定値は **120** 秒 (2 分) です。|  
 |**[電子メールごとの通知の数]**|**NotificationsPerEmail**|単一の電子メールに記載される検証の問題の最大数。 これを超える数の問題が存在しても、電子メールには含まれません (ただし、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]では確認できます)。|  
 |**[既定の電子メールの形式]**|**EmailFormat**|すべての電子メール通知の形式。 既定値は **[HTML]** または **1**です。 データベース設定値 **2** は、 **テキスト**を意味します。<br /><br /> 注: この設定は、ユーザーごとに上書きすることができます。上書きするには、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、ユーザーの **[全般]** タブの **[電子メールの形式]** を変更して保存します。|  
-|**[電子メール アドレスの正規表現]**|**EmailRegExPattern**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[ユーザー/グループの権限]** 機能領域で、ユーザーの **[電子メールの形式]** を変更して保存します。 正規表現の詳細については、MSDN ライブラリの「 [正規表現言語要素](http://go.microsoft.com/fwlink/?LinkId=164401) 」を参照してください。|  
+|**[電子メール アドレスの正規表現]**|**EmailRegExPattern**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[ユーザー/グループの権限]** 機能領域で、ユーザーの **[電子メールの形式]** を変更して保存します。正規表現の詳細については、MSDN ライブラリの「 [正規表現言語要素](http://go.microsoft.com/fwlink/?LinkId=164401) 」を参照してください。|  
 |**[データベース メール アカウント]**|**EmailProfilePrincipalAccount**|電子メール通知を送信するときに使用するデータベース メール アカウントを表示します。 既定のプロファイルは **mds_email_user**です。|  
 |**[データベース メール プロファイル]**|**DatabaseMailProfile**|電子メール通知を送信するときに使用するデータベース メール プロファイル。 既定値は空白です。|  
 ||**ValidationIssueHTML**|HTML 形式で、ビジネス ルールによる検証が失敗したときに電子メール ユーザーが取得するテキストを示します。|  
@@ -150,6 +150,6 @@ ms.lasthandoff: 08/02/2017
 -   **AttributeExplorerMarkAllActionMemberCount**  
   
 ## <a name="see-also"></a>参照  
- [データベース オブジェクト セキュリティ & #40 です。マスター データ サービス &#41;](../master-data-services/database-object-security-master-data-services.md)  
+ [データベース オブジェクト セキュリティ (マスター データ サービス)](../master-data-services/database-object-security-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "すべての注釈またはトランザクションの (MDS アドインを Excel 用) のメンバーの表示 |Microsoft ドキュメント"
+title: "メンバーのすべての注釈またはトランザクションの表示 (Excel 用 MDS アドイン) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,18 +12,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 468c203df40b817dd22ada447172fb4d2afee340
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 84b4772712d6b921614470cff72a6d33f3b1df0e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>メンバーのすべての注釈またはトランザクションの表示 (Excel 用 MDS アドイン)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]時間の経過と共にデータの更新を表示するときに、注釈 (コメント) および行のデータ (メンバー) のトランザクションを表示します。  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、データの更新履歴を確認する必要があるときにデータ行 (メンバー) の注釈 (コメント) およびトランザクションを表示できます。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  

@@ -1,5 +1,5 @@
 ---
-title: "Excel からマスター データ サービス (MDS アドインを Excel 用) にデータをインポート |Microsoft ドキュメント"
+title: "Excel からマスター データ サービスにデータをインポートする (Excel 用 MDS アドイン) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 443c12be36c61db7b23dfd01123e1d9c9a22d93b
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 3051e6d5cbeef00ce4b05ee03bc39e79271207be
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="import-data-from-excel-to-master-data-services-mds-add-in-for-excel"></a>Excel からマスター データ サービスにデータをインポートする (Excel 用 MDS アドイン)

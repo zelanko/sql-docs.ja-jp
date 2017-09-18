@@ -1,5 +1,5 @@
 ---
-title: "属性 (マスター データ サービス) |Microsoft ドキュメント"
+title: "属性 (マスター データ サービス) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 55a658c7d4d0638c2dabf82ba910276f29178aa7
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5e34382b2252af20e0959940f2f7ac9c06bf0379
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="attributes-master-data-services"></a>属性 (マスター データ サービス)
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="how-attributes-relate-to-other-model-objects"></a>属性と他のモデル オブジェクトとの関連付け  
  属性は、エンティティ テーブルの列と考えることができます。 属性値は、特定のメンバーを表すために使用される値です。  
   
- ![マスター データ サービスのエンティティがテーブルとして表される](../master-data-services/media/mds-conc-entity-table.gif "テーブルとして表されたマスター データ サービス エンティティ")  
+ ![テーブルとして表されたマスター データ サービス エンティティ](../master-data-services/media/mds-conc-entity-table.gif "テーブルとして表されたマスター データ サービス エンティティ")  
   
  多数の属性を含むエンティティを作成するときは、属性を属性グループに整理できます。 詳細については、「 [属性グループ (マスター データ サービス)](../master-data-services/attribute-groups-master-data-services.md)」を参照してください。  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="attribute-examples"></a>属性の例  
  次の例では、エンティティに Name、Code、Subcategory、StandardCost、ListPrice、および FilePhoto という属性があります。 これらの属性はメンバーを表します。 各メンバーは、属性値の 1 行で表されます。  
   
- ![自転車の製品エンティティ テーブル](../master-data-services/media/mds-conc-entity-table-w-data.gif "自転車の製品エンティティ テーブル")  
+ ![自転車製品エンティティ テーブル](../master-data-services/media/mds-conc-entity-table-w-data.gif "自転車製品エンティティ テーブル")  
   
  次の例では、Product エンティティに次の属性が含まれます。  
   

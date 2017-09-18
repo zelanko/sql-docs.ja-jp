@@ -1,5 +1,5 @@
 ---
-title: "データベース メール プロファイルとアカウント ダイアログ ボックスを作成 |Microsoft ドキュメント"
+title: "[データベース メール プロファイルとアカウントの作成] ダイアログ ボックス | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e8f05588d7ad0a4ab6b723f495a34b5343caab63
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 240967b3909a2b3796534cb29c42dfa5838be692
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>[データベース メール プロファイルとアカウントの作成] ダイアログ ボックス
@@ -41,10 +41,10 @@ ms.lasthandoff: 08/02/2017
   
 |コントロール名|Description|  
 |------------------|-----------------|  
-|**電子メール アドレス**|アカウントの電子メール アドレスの名前を入力します。 これは、電子メールの送信元の電子メール アドレスで、 *email_name*@*domain_name*の形式にする必要があります。 たとえば、電子メール アドレスはsales@contoso.comします。|  
+|**電子メール アドレス**|アカウントの電子メール アドレスの名前を入力します。 これは、電子メールの送信元の電子メール アドレスで、 *email_name*@*domain_name*の形式にする必要があります。 例の電子メール アドレスは sales@contoso.com です。|  
 |**表示名**|この設定は省略可能です。 このアカウントから送信する電子メール メッセージに表示する名前を入力します。 たとえば、表示名は Contoso Sales Group のようになります。|  
-|**[返信用電子メール アドレス]**|この設定は省略可能です。 このアカウントから送信した電子メール メッセージに対する返信に使用する電子メール アドレスを入力します。 たとえば、返信電子メール アドレスはadmin@contoso.comします。|  
-|**[SMTP サーバー]**|アカウントが電子メールの送信に使用する SMTP サーバーの名前または IP アドレスを入力します。 たとえば、SMTP サーバーの形式は **smtp.***<company_name>***.com** のようになります。 詳細については、電子メールの管理者に問い合わせてください。|  
+|**[返信用電子メール アドレス]**|この設定は省略可能です。 このアカウントから送信した電子メール メッセージに対する返信に使用する電子メール アドレスを入力します。 例の返信用電子メール アドレスは admin@contoso.com です。|  
+|**[SMTP サーバー]**|アカウントが電子メールの送信に使用する SMTP サーバーの名前または IP アドレスを入力します。 たとえば、SMTP サーバーの形式は **smtp.***<company_name>***.com** のようになります。詳細については、電子メールの管理者に問い合わせてください。|  
 |**[ポート番号]**|このアカウントで使用する SMTP サーバーのポート番号を入力します。 既定の SMTP ポートは 25 です。|  
 |**[このサーバーはセキュリティで保護された接続 (SSL) を必要とする]**|SSL (Secure Sockets Layer) を使用して通信を暗号化します。|  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/02/2017
 |**[匿名認証]**|SMTP サーバーで認証を要求しないことを指定します。 SMTP サーバーの認証には資格情報をまったく使用しません。|  
   
 ## <a name="see-also"></a>参照  
- [[データベース構成] ページ &#40;マスター データ サービス構成マネージャー&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
-[マスター データ サービスのインストールと構成](../master-data-services/master-data-services-installation-and-configuration.md)
+ [[データベース構成] ページ (マスター データ サービス構成マネージャー)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
+[マスター データ サービスのイントールと構成](../master-data-services/master-data-services-installation-and-configuration.md)
   
   
