@@ -2,7 +2,7 @@
 title: "R (チュートリアル) を使用するデータの概要を表示および |Microsoft ドキュメント"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/14/2017
+ms.date: 09/08/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -190,7 +190,7 @@ Microsoft r、*データソース*RevoScaleR 関数を使用して作成する�
     **[結果]**
 
     ```
-    rxSummary(formula = ~fare_amount:F(passenger_count), data = inDataSource)
+    rxSummary(formula = ~fare_amount:F(passenger_count, 1,6), data = inDataSource)
     Data: inDataSource (RxSqlServerData Data Source)
     Number of valid observations: 1000
     Name  Mean    StdDev   Min Max ValidObs MissingObs

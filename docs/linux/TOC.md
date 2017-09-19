@@ -19,6 +19,7 @@
 ### [SQL Server フルテキスト検索のインストール](sql-server-linux-setup-full-text-search.md)
 ### [SQL Server Integration Services のインストール](sql-server-linux-setup-ssis.md)
 ### [Azure での SQL VM プロビジョニング](sql-server-linux-azure-virtual-machine.md)
+### [GA リポジトリの登録](sql-server-linux-change-repo.md)
 
 ## [構成]
 ### [mssql-conf での構成](sql-server-linux-configure-mssql-conf.md)
