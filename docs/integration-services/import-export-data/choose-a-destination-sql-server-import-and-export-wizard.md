@@ -24,7 +24,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>[変換先の選択] (SQL Server インポートおよびエクスポート ウィザード)
+# <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>[変換先の選択] \(SQL Server インポートおよびエクスポート ウィザード)
  データ ソースとデータへの接続方法を指定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードには、 **[変換先の選択]**が表示されます。 このページでは、データの変換先およびデータに接続する方法についての情報を指定します。
   
 使用できるデータの変換先の詳細については、「 [使用できるデータ ソースと変換先](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)」を参照してください。 
