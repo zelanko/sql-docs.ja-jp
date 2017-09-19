@@ -1,6 +1,7 @@
 ##  <a name="infotipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) ヘルプの参照 
 - [スタック オーバーフロー (tag sql-server) - SQL 開発に関する質問](http://stackoverflow.com/questions/tagged/sql-server)
 - [MSDN フォーラム - 技術的な質問](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqldatabaseengine%2Csqlsetupandupgrade)
+- [MSDN SQL クライアント ツールのフォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltool)
 - [Microsoft Connect - バグ報告と機能依頼](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit - SQL Server に関する一般的なディスカッション](https://www.reddit.com/r/SQLServer/)
 - [Microsoft SQL Server ライセンス条項および情報](https://www.microsoft.com/en-us/download/details.aspx?id=39299)

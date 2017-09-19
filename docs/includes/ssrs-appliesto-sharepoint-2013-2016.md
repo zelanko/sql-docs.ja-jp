@@ -1,1 +1,1 @@
-![はい](media/yes.png)SharePoint 統合モード
+![はい](media/yes.png)SharePoint
