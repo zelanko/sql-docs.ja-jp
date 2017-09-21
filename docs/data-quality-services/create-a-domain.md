@@ -1,25 +1,30 @@
 ---
 title: "ドメインの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/08/2011"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.kb.createdomain.f1"
+ms.custom: 
+ms.date: 11/08/2011
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 777b6f8a914aeea942399ee1291b569f12a419d6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# ドメインの作成
-  このトピックでは、[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でドメインを作成する方法について説明します。 ドメインの値は、フィールド内のデータのセマンティック表現です。 ドメインの詳細については、次を参照してください。 [ドメインの管理](../data-quality-services/managing-a-domain.md)します。  
+# <a name="create-a-domain"></a>ドメインの作成
+  このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でドメインを作成する方法について説明します。 ドメインの値は、フィールド内のデータのセマンティック表現です。 ドメインについて詳しくは、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」をご覧ください。  
   
  新しいドメインを作成するには、次の 2 つの方法があります。 1 つ目は、ナレッジ検出アクティビティのマップ手順中に、データ サンプルを分析する過程でナレッジを新しいまたは既存のナレッジ ベースに追加するときに行います。 2 つ目は、ドメイン管理アクティビティの実行中に、既存のドメインを変更するのではなく、新しいドメインを作成するときに行います。  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 23
   
 ##  <a name="Discovery"></a> ナレッジ検出アクティビティでのドメインの作成  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)です。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、 **[ナレッジ ベースを開く]** をクリックし、ナレッジ ベースを選択するか、 **[新しいナレッジ ベース]** をクリックし、新しいナレッジ ベースのプロパティを入力します。  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 23
   
 4.  **[マップ]** ページで、データ ソースへの接続を指定します。 詳細については、「 [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md)」をご参照ください。  
   
-5.   **マッピング** テーブルでのドロップダウン リストからソース列を選択、 **基になる列** 、空の行の列です。 対応するドメインが存在しない場合は、クリックして、 **ドメインを作成する** アイコン。  
+5.  **"マッピング"** テーブルで、空の行の **[ソース列]** 列のドロップダウン リストからソース列を選択します。 対応するドメインが存在しない場合は、 **[ドメインの作成]** アイコンをクリックします。  
   
 ##  <a name="DomainManagement"></a> ドメイン管理アクティビティでのドメインの作成  
   
@@ -51,22 +56,22 @@ caps.handback.revision: 23
   
 2.  アクティビティとして **[ドメイン管理]** を選択した後に、 **[作成]** をクリックして新しいナレッジ ベースを作成するか、 **[開く]** をクリックして既存のナレッジ ベースを開きます。  
   
-3.   **ドメイン管理** ] ページで、をクリックして、 **ドメインを作成する** ドメイン リストの上のアイコン。  
+3.  **[ドメイン管理]** ページで、ドメイン リストの上にある **[ドメインの作成]** アイコンをクリックします。  
   
 ##  <a name="Properties"></a> ドメインのプロパティの設定  
   
-1.   **ドメインの作成** ] ダイアログ ボックスで、サポート技術情報と 256 文字までの説明に一意の名前を入力します。  
+1.  **[ドメインの作成]** ダイアログ ボックスで、ナレッジ ベースに一意の名前と 256 文字までの説明を入力します。  
   
     > [!NOTE]  
-    >  ドメインのプロパティの詳細については、次を参照してください。 [ドメイン プロパティの設定](../data-quality-services/set-domain-properties.md)します。  
+    >  ドメインのプロパティの詳細については、「 [Set Domain Properties](../data-quality-services/set-domain-properties.md)」を参照してください。  
   
-2.   **データ型** 一覧で、ドメイン内の値のデータ型を選択します。 データ型にすることができます **文字列** (既定)、 **日付**, 、**整数**, 、または **Decimal**します。  
+2.  **[データ型]** の一覧で、ドメイン内の値に対するデータ型を選択します。 データ型には、 **[String]** (既定値)、 **[Date]**、 **[Integer]**、または **[Decimal]**を指定できます。  
   
-3.  選択 **先頭の値を使用して** シノニムのグループの先頭の値が、シノニムの値の代わりに出力をすることを指定します。 選択を解除 **先頭の値を使用して** 各シノニムの値が出力の正確性や修正されたフォームでは、そのグループの先頭の値に置き換えられませんであることを指定します。  
+3.  シノニムの値ではなく、シノニムのグループの先頭の値が出力されることを指定する場合は、 **[先頭の値を使用]** をオンにします。 各シノニムの値が正しいフォームまたは修正されたフォームで出力され、そのグループの先頭の値で置き換えられないことを指定する場合は、 **[先頭の値を使用]** をオフにします。  
   
-4.  データ型がある場合 **文字列**, [ **文字列を正規化** 一致の可能性を向上させることがドメインの値に特殊文字を削除します。  
+4.  データ型が **[String]**の場合は、 **[文字列を正規化する]** をオンにしてドメイン値の特殊文字を削除すると、一致の可能性が高まる場合があります。  
   
-5.   **形式の出力先** ドロップダウン リストで、ドメイン内のデータ値が出力時に適用される書式を選択します。 書式設定は、次の一覧に示すように手順 2. で選択されたデータ型に固有です。  
+5.  **[形式の出力先]** ボックスの一覧で、ドメイン内のデータ値が出力されるときに適用される書式設定を選択します。 書式設定は、次の一覧に示すように手順 2. で選択されたデータ型に固有です。  
   
     -   文字列値の場合は、出力する文字列を大文字、小文字、または先頭文字のみ大文字として指定できます。  
   
@@ -76,19 +81,19 @@ caps.handback.revision: 23
   
     -   10 進数値の場合は、適用される精度と形式マスクの種類を指定できます。  
   
-     選択すると **None** で、 **形式の出力先** ドロップダウン リストでは、一覧内の形式のいずれも適用されることを意味します。  
+     **[形式の出力先]** ボックスで **[なし]** をクリックすると、一覧のどの書式設定も適用されません。  
   
-6.  データ型がある場合 **文字列**, で、 **言語** ドロップダウン リストで、スペル チェックを有効にした場合に適用するスペル チェックの言語バージョンを選択します。  
+6.  データ型が **[String]**の場合は、 **[言語]** ボックスの一覧で、スペル チェックを有効にした場合に適用するスペル チェックの言語バージョンを選択します。  
   
-7.  データ型がある場合 **文字列**, [ **スペル チェックを有効にする** ドメインを設定するときに、すべての文字列値で、スペル チェックを実行します。  
+7.  データ型が **[String]**の場合は、 **[スペル チェックを有効にする]** をオンにして、ドメインを設定するときにすべての文字列値に対してスペル チェックを実行します。  
   
-8.  データ型がある場合 **文字列**, [ **の構文エラーのアルゴリズムを無効にする** に構文エラーの文字列値をチェックせずに、ドメインを設定します。  
+8.  データ型が **[String]**の場合は、 **[構文エラーのアルゴリズムを無効にする]** をオンにして、文字列値の構文エラーをチェックせずにドメインを設定します。  
   
 9. クリックして **OK**です。  
   
-10. **[完了]** をクリックし、「 [End the Domain Management Activity](../Topic/End%20the%20Domain%20Management%20Activity.md)」の説明に従ってドメイン管理アクティビティを完了します。  
+10. **[完了]** をクリックし、「 [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
   
 ##  <a name="FollowUp"></a> 補足情報: ドメインを作成した後  
- ドメインを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳細については、次を参照してください。 [ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md), 、[ドメインの管理](../data-quality-services/managing-a-domain.md), 、または [照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)します。  
+ ドメインを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
   

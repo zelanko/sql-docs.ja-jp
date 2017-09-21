@@ -1,23 +1,28 @@
 ---
 title: "ナレッジ ベースへのナレッジの追加 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/04/2013"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 06/04/2013
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f247bb5a8b739b1f2d35ce4e7fb08c5904ef7d50
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# ナレッジ ベースへのナレッジの追加
-  このトピックでは、[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のナレッジ ベースにナレッジを追加する方法について説明します。 データ品質操作を実行するには、データに関するナレッジを事前に用意しておく必要があります。 このナレッジを取得するには、データ品質ナレッジ ベースを構築および管理し、特定の種類のデータ ソースに関連するナレッジをそのナレッジベースに追加します。 ナレッジ ベースはデータに関するナレッジのリポジトリです。ナレッジ ベースを使用して、データを理解し、その整合性を維持できます。  
+# <a name="adding-knowledge-to-a-knowledge-base"></a>ナレッジ ベースへのナレッジの追加
+  このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のナレッジ ベースにナレッジを追加する方法について説明します。 データ品質操作を実行するには、データに関するナレッジを事前に用意しておく必要があります。 このナレッジを取得するには、データ品質ナレッジ ベースを構築および管理し、特定の種類のデータ ソースに関連するナレッジをそのナレッジベースに追加します。 ナレッジ ベースはデータに関するナレッジのリポジトリです。ナレッジ ベースを使用して、データを理解し、その整合性を維持できます。  
   
  ナレッジ ベースには、データ ソースに関連するデータ ドメインが含まれています。 DQKB には、データ ドメインごとに、データ ソースに対するデータ品質操作の実行に使用できる識別された用語、スペル ミス、検証ルールとビジネス ルール、および参照データがすべて格納されます。 DQS は、正しくないデータまたは無効なデータの識別や照合の実行にこのナレッジを使用します。  
   
@@ -52,17 +57,17 @@ caps.handback.revision: 14
 ##  <a name="DQSFile"></a> .dqs ファイルからのナレッジのインポート  
  .dqs データ ファイルから既存のナレッジ ベースにドメインをインポートしたり、.dqs から新しいナレッジ ベースにナレッジ ベース全体をインポートしたりできます。 これを行うには、まず既存のドメインまたはナレッジ ベースを .dqs ファイルにエクスポートする必要があります。 ドメインを含む .dqs ファイルには、ドメインのすべてのデータが格納されています。ナレッジ ベースを含む .dqs ファイルには、ドメインや照合ポリシーを含むナレッジ ベースのすべての情報が格納されています。  
   
--   ドキュメントの詳細については、次を参照してください。 [.dqs ファイルからドメインをインポート](../data-quality-services/import-a-domain-from-a-dqs-file.md) または [ナレッジ ベースを .dqs ファイルからインポート](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)します。  
+-   ドキュメントについて詳しくは、「[.dqs ファイルからのドメインのインポート](../data-quality-services/import-a-domain-from-a-dqs-file.md)」または「[.dqs ファイルからのナレッジ ベースのインポート](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)」をご覧ください。  
   
 ##  <a name="Excel"></a> Excel ファイルからのナレッジのインポート  
  Excel スプレッドシート ファイルから既存のドメインまたはナレッジ ベースにドメイン値をインポートできます。 これを行うには、まずインポートするドメイン値を含む Excel スプレッドシートを作成し、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] を使用して値をインポートできるように Excel が [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]コンピューターにインストールされていることを確認する必要があります。 ドメインまたはナレッジ ベースから Excel ファイルにドメイン値をエクスポートすることはできません。  
   
--   ドキュメントの詳細については、次を参照してください。 [の値をドメインに Excel ファイルからインポート](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md) または [ナレッジ検出で Excel ファイルからインポート ドメイン](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)します。  
+-   ドキュメントについて詳しく、「[値を Excel ファイルからドメインへインポートする](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)」または「[ナレッジ検出でドメインを Excel ファイルからインポートする](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)」をご覧ください。  
   
 ##  <a name="Project"></a> プロジェクトからナレッジ ベースへのナレッジの再インポート  
  ナレッジ ベースを使用してクレンジングまたは照合データ品質プロジェクトを実行した後、クレンジングまたは照合中に作成されたナレッジをそのナレッジ ベースに再インポートできます。 これにより、プロジェクト中に生成されたナレッジを保持し、ナレッジ ベースにナレッジを継続的に構築することができます。  
   
--   ドキュメントの詳細については、次を参照してください。 [クレンジング プロジェクト値のインポートをドメインに](../data-quality-services/import-cleansing-project-values-into-a-domain.md)します。  
+-   ドキュメントについて詳しくは、「[ドメインへのクレンジング プロジェクトの値のインポート](../data-quality-services/import-cleansing-project-values-into-a-domain.md)」をご覧ください。  
   
 ##  <a name="Default"></a> 既定の DQS ナレッジ ベースの使用  
  DQS には、DQS データと呼ばれる構築済みのナレッジ ベースが同梱されています。このナレッジ ベースには、米国の会社および住所データのドメインが含まれています。 このナレッジ ベースを使用すると、新しいナレッジ ベースを作成することなく、プロジェクトをすばやく開始できます。 DQS データ ナレッジ ベースは読み取り専用ですが、データ スチュワードはこれに基づいて新しいナレッジ ベースを作成できます。  

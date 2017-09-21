@@ -1,28 +1,33 @@
 ---
 title: "ナレッジ検出でドメインを Excel ファイルからインポートする | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a33a9e7a45689a4585c4e091d909420f46d8b23
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# ナレッジ検出でドメインを Excel ファイルからインポートする
-  このトピックでは、[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ナレッジ検出アクティビティで Excel ファイルから 1 つまたは複数のドメインをインポートする方法について説明します。 インポート処理は、ナレッジの生成処理を簡略化し、時間と労力を節約します。 インポートにより、Excel ファイルまたはテキスト ファイルでデータを所有しているユーザーは、そのデータを使用してナレッジ ベースを作成できます。 (参照 [値をドメインに Excel ファイルからインポート](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md) の詳細については、既存のナレッジ ベースのドメインに値をインポートする方法です)。Excel ファイルへのエクスポートはサポートされていません。  
+# <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>ナレッジ検出でドメインを Excel ファイルからインポートする
+  このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ナレッジ検出アクティビティで Excel ファイルから 1 つまたは複数のドメインをインポートする方法について説明します。 インポート処理は、ナレッジの生成処理を簡略化し、時間と労力を節約します。 インポートにより、Excel ファイルまたはテキスト ファイルでデータを所有しているユーザーは、そのデータを使用してナレッジ ベースを作成できます。 (既存のナレッジ ベースのドメインへの値のインポートについて詳しくは、「[値を Excel ファイルからドメインへインポートする](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)」をご覧ください。)Excel ファイルへのエクスポートはサポートされていません。  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
- Excel ファイルからドメインをインポートするには、コンピューターに Excel をインストールする、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] がインストールされているです。 作成する必要がある Excel ファイル ドメイン値を含む (を参照してください [インポートの動作](#How)); しして作成してドメインをインポートするナレッジ ベースを開く必要があります。  
+ Excel ファイルからドメインをインポートするには、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] がインストールされているコンピューターに Excel がインストールされていること、ドメイン値を含む Excel ファイルが作成されていること (「 [How the import works](#How)」を参照)、およびドメインをインポートするナレッジ ベースが作成されていて開いていることが必要です。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 24
   
 ##  <a name="Import"></a> ドメインを Excel ファイルからナレッジ ベースへインポートする  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、次のいずれかの操作を行います。  
   
@@ -45,9 +50,9 @@ caps.handback.revision: 24
   
 5.  **[Excel ファイルの選択]** ダイアログ ボックスで、インポート元の Excel ファイルが格納されているフォルダーに移動し、Excel ファイルを選択して **[開く]**をクリックします。  
   
-6.   **ワークシート** ドロップダウン リストで、Excel ファイルからインポートするワークシートを選択します。  
+6.  **[ワークシート]** ボックスの一覧で、インポート元の Excel ファイルのワークシートを選択します。  
   
-7.  先頭の行をデータ見出しと見なし、先頭の行の値を列名として使用する場合は、 **[先頭の行を見出しとして使用]** をオンにします。 選択を解除 **を使用して最初の行を見出しとして** データ値と見なされるには、最初の行を実行する場合に、その場合 DQS、Excel ヘッダー名を使用する (英文字) 列。  
+7.  先頭の行をデータ見出しと見なし、先頭の行の値を列名として使用する場合は、 **[先頭の行を見出しとして使用]** をオンにします。 先頭の行をデータ値と見なす場合は、 **[先頭の行を見出しとして使用]** をオフにします。この場合、DQS は Excel の見出し名 (英文字) を列に使用します。  
   
 8.  列を選択し、既存のドメインを列にマップするか、新しいドメインを作成して列にマップします。新しいドメインを作成するには、 **[ドメインの作成]** アイコンをクリックし、 **[ドメインの作成]** ダイアログ ボックスでドメインを作成します。 ドメインのデータ型は列のデータ型と一致する必要があります。 スプレッドシートのすべての列について、この手順を繰り返します。  
   
@@ -67,9 +72,9 @@ caps.handback.revision: 24
 14. ナレッジ ベースが発行されたことを確認し、 **[OK]**をクリックします。  
   
 ##  <a name="FollowUp"></a> 補足情報: Excel ファイルからドメインをインポートした後  
- Excel ファイルからドメインをインポートした後で、ドメインのコンテンツに応じてナレッジをドメインに追加したり、ドメインをクレンジング プロジェクトや照合プロジェクトで使用したりすることができます。 詳細については、次を参照してください。 [ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md), 、[ドメインの管理](../data-quality-services/managing-a-domain.md), 、[複合ドメインの管理](../data-quality-services/managing-a-composite-domain.md), 、[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md), 、[データ クレンジング](../data-quality-services/data-cleansing.md), 、または [データ照合](../data-quality-services/data-matching.md)します。  
+ Excel ファイルからドメインをインポートした後で、ドメインのコンテンツに応じてナレッジをドメインに追加したり、ドメインをクレンジング プロジェクトや照合プロジェクトで使用したりすることができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、「[複合ドメインの管理](../data-quality-services/managing-a-composite-domain.md)」、「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」、「[データ クレンジング](../data-quality-services/data-cleansing.md)」、または「[データ照合](../data-quality-services/data-matching.md)」をご覧ください。  
   
-##  <a name="How"></a> インポートの動作  
+##  <a name="How"></a> How the import works  
  インポート操作では、DQS は Excel ファイルを次のように解釈します。  
   
 -   列はドメインを表す  

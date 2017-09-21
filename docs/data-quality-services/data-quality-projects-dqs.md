@@ -1,23 +1,28 @@
 ---
 title: "データ品質プロジェクト (DQS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 041ba9cd08e46fec7d9641b63f191cd924a37db0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# データ品質プロジェクト (DQS)
-  データ品質プロジェクト [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) は、サポート技術情報を使用して実行することによって、ソース データの品質を向上することを意味 *データ クレンジング* と *データ照合* アクティビティ、および SQL Server データベースまたは .csv ファイルに結果のデータをエクスポートします。 データ品質プロジェクトをクレンジング プロジェクトまたは照合プロジェクトとして作成し、それぞれのアクティビティを実行できます。 データ クレンジングと照合のナレッジは同じナレッジ ベースに組み込むことができるため、クレンジング プロジェクトと照合プロジェクトは同じナレッジ ベースを使用して実行できます。  
+# <a name="data-quality-projects-dqs"></a>データ品質プロジェクト (DQS)
+  [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のデータ品質プロジェクトは、ナレッジ ベースを使用してソース データの品質を改善する手段になります。 *データ クレンジング* アクティビティおよび *データ照合* アクティビティを実行して、その結果データを SQL Server データベースや .csv ファイルにエクスポートします。 データ品質プロジェクトをクレンジング プロジェクトまたは照合プロジェクトとして作成し、それぞれのアクティビティを実行できます。 データ クレンジングと照合のナレッジは同じナレッジ ベースに組み込むことができるため、クレンジング プロジェクトと照合プロジェクトは同じナレッジ ベースを使用して実行できます。  
   
  データ品質プロジェクトには次の利点があります。  
   
@@ -30,9 +35,9 @@ caps.handback.revision: 16
 ##  <a name="Cleansing"></a> データ品質プロジェクト: クレンジング アクティビティ  
  クレンジング データ品質プロジェクトでは、ナレッジ ベースに基づいてソース データのクレンジングを行うことができます。 DQS のデータ クレンジング アクティビティは、2 段階のプロセスから成ります。  
   
-1.  A *コンピューター支援型* データ クレンジング プロセスで、サポート技術情報のナレッジと照らし合わせてソース データを分析し、変更を提案します。 処理後のデータは DQS によって分類 (提案、新規、無効、修正済み、および修正) されたうえでユーザーに表示され、さらに処理が行われます。  
+1.  *コンピューター支援型の* データ クレンジング プロセス。ナレッジ ベース内のナレッジと照らし合わせてソース データを分析し、変更を提示します。 処理後のデータは DQS によって分類 (提案、新規、無効、修正済み、および修正) されたうえでユーザーに表示され、さらに処理が行われます。  
   
-2.   *インタラクティブ* クレンジング プロセスを承認するデータ スチュワード、拒否、または、コンピューター支援型データ クレンジング プロセスによって提案されたデータを修正します。  
+2.  *インタラクティブな* クレンジング プロセス。データ スチュワードがコンピューター支援型のデータ クレンジング プロセスによって提案されたデータを承認、拒否、または変更します。  
   
  データ品質プロジェクトのクレンジング アクティビティの詳細については、「 [Data Cleansing](../data-quality-services/data-cleansing.md)」を参照してください。  
   
@@ -48,17 +53,17 @@ caps.handback.revision: 16
  データ品質プロジェクトの照合アクティビティの詳細については、「 [Data Matching](../data-quality-services/data-matching.md)」を参照してください。  
   
 ##  <a name="ProfilingNotification"></a> データ プロファイルと通知  
- データ品質プロジェクトでクレンジングおよび照合アクティビティを実行しながら、DQS で処理中のデータに関する統計と情報をリアルタイムに表示できます。 クレンジングおよび照合プロセスの有効性を評価したり、データ クレンジングまたは照合によりデータ品質がどの程度向上したかを計測したりするのに、データ プロファイルが役立ちます。 2 つのデータ品質ディメンションを提供する DQS のプロファイル: *完全を期すため* (データが存在するエクステント) と *精度* (するデータを使用してその用途のエクステント)。 さらに、データ プロファイル情報に基づいて、データ クレンジングおよびデータ照合操作を向上させるために取ることができるアクションをユーザーに通知します。 データ プロファイルと通知の詳細については、「 [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)」を参照してください。  
+ データ品質プロジェクトでクレンジングおよび照合アクティビティを実行しながら、DQS で処理中のデータに関する統計と情報をリアルタイムに表示できます。 クレンジングおよび照合プロセスの有効性を評価したり、データ クレンジングまたは照合によりデータ品質がどの程度向上したかを計測したりするのに、データ プロファイルが役立ちます。 DQS プロファイルでは、 *完全性* (データがどの程度存在するか) と *正確性* (データがどの程度意図されたとおりに使用できるか) の 2 つのデータ品質ディメンションを提供します。 さらに、データ プロファイル情報に基づいて、データ クレンジングおよびデータ照合操作を向上させるために取ることができるアクションをユーザーに通知します。 データ プロファイルと通知の詳細については、「 [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)」を参照してください。  
   
-## 関連タスク  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|データ品質プロジェクトの作成方法について説明します。|[データ品質プロジェクトの作成](../data-quality-services/create-a-data-quality-project.md)|  
-|開く、ロックを解除、名前の変更、およびデータ品質プロジェクトを削除する方法について説明します。|[開く、ロックを解除、名前の変更、およびデータ品質プロジェクトを削除します。](https://msdn.microsoft.com/library/hh510417.aspx)|  
+|データ品質プロジェクトの作成方法について説明します。|[データ品質プロジェクトを作成する](../data-quality-services/create-a-data-quality-project.md)|  
+|データ品質プロジェクトを開く、ロック解除する、名前を変更する、および削除する方法について説明します。|[データ品質プロジェクトを開く、ロックを解除する、名前を変更する、削除する](https://msdn.microsoft.com/library/hh510417.aspx)|  
 |[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]で Integration Services プロジェクトを開く方法について説明します。|[Data Quality Client で Integration Services プロジェクトを開く](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [DQS のナレッジ ベースとドメイン](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

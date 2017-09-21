@@ -1,28 +1,33 @@
 ---
 title: "データ品質プロジェクトの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.dqproject.newdqproject.f1"
-helpviewer_keywords: 
-  - "create,data quality project"
-  - "データ品質プロジェクト, 作成"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.dqproject.newdqproject.f1
+helpviewer_keywords:
+- create,data quality project
+- data quality project,create
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14dd208db2469021918b696d9a66121a708d3a9c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# データ品質プロジェクトの作成
-  このトピックでは、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]を使用してデータ品質プロジェクトを作成する方法について説明します。 データ品質プロジェクトは、[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でクレンジングおよび照合アクティビティの実行に使用されます。  
+# <a name="create-a-data-quality-project"></a>データ品質プロジェクトの作成
+  このトピックでは、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]を使用してデータ品質プロジェクトを作成する方法について説明します。 データ品質プロジェクトは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でクレンジングおよび照合アクティビティの実行に使用されます。  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 10
   
 ##  <a name="Create"></a> データ品質プロジェクトの作成  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ホーム画面で、 **[新しいデータ品質プロジェクト]**をクリックします。  
   
@@ -44,9 +49,9 @@ caps.handback.revision: 10
   
     1.  **[名前]** ボックスに新しいデータ品質プロジェクトの名前を入力します。  
   
-    2.  (省略可能) **説明** ボックスで、新しいデータ品質プロジェクトの説明を入力します。  
+    2.  (省略可能) **[説明]** ボックスに新しいデータ品質プロジェクトの説明を入力します。  
   
-    3.  **[ナレッジ ベースを使用する]** ボックスの一覧で、データ品質プロジェクトに使用するナレッジ ベースを選択します。  **サポート技術情報の詳細: \< ナレッジ ベース名 >** 右側にある領域には、選択されたナレッジ ベースで使用可能なドメイン名が表示されます。  
+    3.  **[ナレッジ ベースを使用する]** ボックスの一覧で、データ品質プロジェクトに使用するナレッジ ベースを選択します。 右側にある **[ナレッジ ベースの詳細: <ナレッジ ベース名>]** 領域に、選択したナレッジ ベースで使用可能なドメイン名が表示されます。  
   
     4.  **[アクティビティの選択]** 領域で、このデータ品質プロジェクトを使用して実行するアクティビティをクリックします。  
   
@@ -57,6 +62,6 @@ caps.handback.revision: 10
 4.  **[作成]** をクリックし、データ品質プロジェクトを作成します。  
   
 ##  <a name="FollowUp"></a> 補足情報: データ品質プロジェクトを作成した後  
- データ品質プロジェクトを作成した後に、選択したアクティビティ (クレンジングと照合) の実行に使用するウィザードが示されます。 クレンジングおよび照合アクティビティの詳細については、次を参照してください。 [データ クレンジング](../data-quality-services/data-cleansing.md) と [データ照合](../data-quality-services/data-matching.md)します。  
+ データ品質プロジェクトを作成した後に、選択したアクティビティ (クレンジングと照合) の実行に使用するウィザードが示されます。 クレンジングと照合アクティビティについて詳しくは、「[データ クレンジング](../data-quality-services/data-cleansing.md)」および「[データ照合](../data-quality-services/data-matching.md)」をご覧ください。  
   
   

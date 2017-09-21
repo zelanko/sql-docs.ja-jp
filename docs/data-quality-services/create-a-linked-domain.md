@@ -1,33 +1,38 @@
 ---
 title: "リンク ドメインの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/08/2011"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.kb.linkeddomain.f1"
+ms.custom: 
+ms.date: 11/08/2011
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14b11ae1442a695e683aafc60da424cc6c9f9497
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# リンク ドメインの作成
-  このトピックでは、[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースのリンク ドメインを作成する方法について説明します。 リンク ドメインとは、既存の別のドメインから作成されるドメインで、リンク先のドメインから値、ルール、およびプロパティ (名前と説明を除く) をすべて継承します。 リンク ドメインは 1 つのセットとしてまとめて管理できます。 ドメインを別のドメインにリンクすることで、他のドメインの内容を継承するドメインを作成することができます。  
+# <a name="create-a-linked-domain"></a>リンク ドメインの作成
+  このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースのリンク ドメインを作成する方法について説明します。 リンク ドメインとは、既存の別のドメインから作成されるドメインで、リンク先のドメインから値、ルール、およびプロパティ (名前と説明を除く) をすべて継承します。 リンク ドメインは 1 つのセットとしてまとめて管理できます。 ドメインを別のドメインにリンクすることで、他のドメインの内容を継承するドメインを作成することができます。  
   
-## シナリオ  
+## <a name="scenarios"></a>シナリオ  
  リンク ドメインは、次のようなシナリオで特に役立ちます。  
   
-### 値、ルール、およびプロパティを共有するドメインに複数のフィールドをマップする  
- 2 つのフィールドを同じドメインにマップすることはできません。ただし、一方のフィールドを 1 つのドメインにマップし、そのドメインにリンクされた別のドメインにもう一方のフィールドをマップすることができます。 これにより、内容とプロパティ (名前と説明を除く) が同じ 2 つの異なるドメインにそれらのフィールドがマップされます。 詳細については、「 [リンク ドメインへの 2 つのフィールドのマップ](#Map)」をご参照ください。  
+### <a name="mapping-multiple-fields-to-domains-that-share-values-rules-and-properties"></a>値、ルール、およびプロパティを共有するドメインに複数のフィールドをマップする  
+ 2 つのフィールドを同じドメインにマップすることはできません。ただし、一方のフィールドを 1 つのドメインにマップし、そのドメインにリンクされた別のドメインにもう一方のフィールドをマップすることができます。 これにより、内容とプロパティ (名前と説明を除く) が同じ 2 つの異なるドメインにそれらのフィールドがマップされます。 詳細については、「 [Map two fields to linked domains](#Map)」をご参照ください。  
   
-### 複合ドメインのデータ フローを制御する  
+### <a name="controlling-data-flow-to-composite-domains"></a>複合ドメインのデータ フローを制御する  
  リンク ドメインを使用すると、フィールドと複合ドメインの間のデータ フローを制御し、 複合ドメインに含まれるフィールドのデータ フローと、複合ドメインに含まれない非常によく似たフィールドのデータ フローを区別することができます。 これを実現するには、2 つのリンク ドメインの一方を複合ドメインに含め、もう一方を含めないように指定します。 ドメインの観点からは、リンク ドメインは同一であり、 どちらにも同じナレッジが含まれています。 ただし、複合ドメインの観点からは、リンク ドメインは同一ではなく、 一方は複合ドメインに含まれ、もう一方は含まれないという違いがあります。  
   
  たとえば、Customer First Name、Customer Last Name、および Father's First Name というフィールドを含むレコードがあるとします。 顧客の名と父親の名の両方を First Name ドメインにマップし、First Name ドメインと Last Name ドメインを Full Name 複合ドメインに含めるとすると、 姓がない複合ドメインに父親の名を追加することが問題になります。 この場合は、2 つの名のフィールドのそれぞれをドメインにリンクし、その 2 つのドメインをリンクすると、Customer First Name ドメインだけを Full Name 複合ドメインに追加し、Father's First Name フィールドは複合ドメインに追加しないようにすることができます。このようにすると、Father's First Name を複合ドメインに追加せずに済みます。  
@@ -44,11 +49,11 @@ caps.handback.revision: 20
   
 ##  <a name="Create"></a> リンク ドメインの作成  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]**をクリックします。 詳細については、「 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) 」または「 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)」を参照してください。  
   
-3.   **ドメイン リスト** 上、 **ドメイン管理** ] ページで、クリックして、新しいドメインをリンクするドメインを右クリックして **リンク ドメインの作成**します。  
+3.  **[ドメイン管理]** ページの **[ドメイン リスト]** から、新しいドメインをリンクするドメインを右クリックし、 **[リンク ドメインの作成]**をクリックします。  
   
     > [!NOTE]  
     >  リンク ドメインを作成するための専用のアイコンはありません。 この操作は、コンテキスト メニューのコマンドでのみ実行できます。  
@@ -59,9 +64,9 @@ caps.handback.revision: 20
   
 6.  必要に応じて、リンク ドメインの名前や説明を [ドメインのプロパティ] タブで変更できます。  
   
-7.  **[完了]** をクリックし、「 [End the Domain Management Activity](../Topic/End%20the%20Domain%20Management%20Activity.md)」の説明に従ってドメイン管理アクティビティを完了します。  
+7.  **[完了]** をクリックし、「 [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
   
-##  <a name="Map"></a> リンク ドメインへの 2 つのフィールドのマップ  
+##  <a name="Map"></a> Map two fields to linked domains  
   
 1.  ナレッジ検出アクティビティでナレッジ ベースを開き、データベースとテーブルまたはビューにナレッジ ベースをマップします。  
   
@@ -72,7 +77,7 @@ caps.handback.revision: 20
 4.  [ドメインの作成] ダイアログ ボックスで、ドメインの名前と説明を入力し、[OK] をクリックします。  
   
 ##  <a name="FollowUp"></a> 補足情報: リンク ドメインの作成後  
- リンク ドメインを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳細については、次を参照してください。 [ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md), 、[ドメインの管理](../data-quality-services/managing-a-domain.md), 、または [照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)します。  
+ リンク ドメインを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
 ##  <a name="Behavior"></a> リンク ドメインの動作  
  リンク ドメインの設定については、以下の変更が可能です。  
@@ -81,7 +86,7 @@ caps.handback.revision: 20
   
 -   ドメインの **[データ型]**、 **[先頭の値を使用]**、または **[形式の出力先]** のプロパティを変更するには、リンク先のドメインを選択し、そのドメインの **[ドメインのプロパティ]** タブで設定を変更します。 これらの設定は、リンク ドメインのプロパティでは変更できません。 詳細については、「 [Create a Domain](../data-quality-services/create-a-domain.md)」をご参照ください。  
   
--   設定、 **参照データ**, 、**ドメイン ルール**, 、**ドメイン値**, 、および **用語ベースのリレーション** リンクされているドメインまたはそのリンクが、変更は、その他のドメインを継承するドメインのドメイン管理] ページのタブを変更できます。  
+-   [ドメイン管理] ページの **[参照データ]**タブ、 **[ドメイン ルール]**タブ、 **[ドメイン値]**タブ、および **[用語ベースのリレーション]** タブの設定は、リンク ドメインとリンク先のドメインのどちらでも変更できます。一方を変更すると、もう一方に反映されます。  
   
  リンク ドメインには次の特性があります。  
   

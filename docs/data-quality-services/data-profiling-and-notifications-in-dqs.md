@@ -1,22 +1,27 @@
 ---
 title: "DQS でのデータ プロファイルと通知 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57de348a0ce74aa33b3d19baa60116580ad30b3c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# DQS でのデータ プロファイルと通知
+# <a name="data-profiling-and-notifications-in-dqs"></a>DQS でのデータ プロファイルと通知
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のデータ プロファイルは、既存のデータ ソースのデータを分析し、DQS のアクティビティでデータに関する統計情報を表示するプロセスです。 このプロセスでは、データ品質が自動的に測定されます。 DQS のプロファイルは、DQS のナレッジ マネージメントおよびデータ品質プロジェクトに統合されており、 動的に調整が可能です。 プロファイルの主な目的は、一連のデータ品質プロセスを通じて意思決定を支援すること、およびプロセスの有効性を評価することの 2 つです。 DQS のプロファイル プロセスには次の利点があります。  
   
 -   ソース データの品質について調べることができ、データ品質の問題を特定するのに役立ちます。  
@@ -63,13 +68,13 @@ caps.handback.revision: 25
   
  アクティビティに関連する特定のプロファイル統計情報の詳細については、以下のトピックのプロファイルに関するセクションを参照してください。  
   
--   [ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)  
+-   [ナレッジ検出を実行する](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [DQS と #40; を使用してデータをクレンジング内部 & #41 です。ナレッジ](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [DQS &#40;内部&#41; ナレッジを使用したデータのクレンジング](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
--   [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)  
+-   [照合ポリシーを作成する](../data-quality-services/create-a-matching-policy.md)  
   
--   [Run a Matching Project](../data-quality-services/run-a-matching-project.md)  
+-   [照合プロジェクトを実行する](../data-quality-services/run-a-matching-project.md)  
   
 ##  <a name="Monitoring"></a> アクティビティ監視のプロファイル データ  
  ナレッジ検出、照合ポリシー、照合、およびクレンジングのアクティビティに対するプロファイル情報は、Data Quality Client のアクティビティのページだけでなく、アクティビティ監視でも確認できます。 アクティビティ監視には、現在と過去のアクティビティの概要が表示されます。 アクティビティのプロパティおよび関連する計算プロセスに加え、各アクティビティに対して生成されるプロファイル情報を 1 か所で確認することができます。 アクティビティのテーブルでアクティビティを選択すると、下のテーブルにプロファイル結果が表示されます。 プロファイル結果はエクスポートすることもできます。 詳細については、「 [DQS Administration](../data-quality-services/dqs-administration.md)」をご参照ください。  
@@ -79,24 +84,24 @@ caps.handback.revision: 25
   
  DQS の通知は、ユーザーに関連すると思われる問題を提起したり、潜在的な問題に対処したりすることを目的としたものです。 通知が示されたときにそれに対処するかどうかは、目的に関連するかどうかに応じて選択できます。 たとえば、データ クレンジングで修正された値や提案された値がなく、完全性と正確性がどちらも 100% である場合に DQS で通知が生成されたとします。 この通知はアクティビティを実行する必要がないことを示していると考えられますが、 アクティビティを実行するかどうかはユーザーが選択できます。  
   
- 通知は、 **[プロファイル]** タブに感嘆符付きのツールヒントで示されます。 通知に関連付けられた統計情報は、その通知の根拠となる統計情報であることがわかるように赤色で表示されます。  
+ 通知は、 **[プロファイル]** タブに感嘆符付きのツールヒントで示されます。通知に関連付けられた統計情報は、その通知の根拠となる統計情報であることがわかるように赤色で表示されます。  
   
- 有効 (既定) またはで通知を無効にすることができます、 **全般設定** のタブ、 **管理** Data Quality Client のホーム ページのセクションです。 通知を無効にすると、ツールヒントは表示されず、統計情報も赤色になりません。 通知を無効にすることでパフォーマンスが大幅に向上することはありません。 通知を無効にしてもプロファイルは実行されます。  
+ 通知の有効 (既定) と無効の切り替えは、Data Quality Client のホーム ページの **[全般設定]** タブにある **[管理]** セクションで行えます。 通知を無効にすると、ツールヒントは表示されず、統計情報も赤色になりません。 通知を無効にすることでパフォーマンスが大幅に向上することはありません。 通知を無効にしてもプロファイルは実行されます。  
   
  アクティビティの通知に関連付けられている特定の条件については、以下を参照してください。  
   
--   [ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)  
+-   [ナレッジ検出を実行する](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [DQS と #40; を使用してデータをクレンジング内部 & #41 です。ナレッジ](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [DQS &#40;内部&#41; ナレッジを使用したデータのクレンジング](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
--   [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)  
+-   [照合ポリシーを作成する](../data-quality-services/create-a-matching-policy.md)  
   
--   [Run a Matching Project](../data-quality-services/run-a-matching-project.md)  
+-   [照合プロジェクトを実行する](../data-quality-services/run-a-matching-project.md)  
   
-## 関連タスク  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|DQS で通知を有効または無効にする方法について説明します。|[Enable or Disable Profiling Notifications in DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
+|DQS で通知を有効または無効にする方法について説明します。|[DQS のプロファイル通知の有効化または無効化](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
   
   

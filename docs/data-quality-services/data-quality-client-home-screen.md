@@ -1,29 +1,34 @@
 ---
 title: "Data Quality Client のホーム画面 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/29/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.clienthome.f1"
+ms.custom: 
+ms.date: 02/29/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 00ed6a9eaa24ff9981ca4184a7ec8ef3107ffc0f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# Data Quality Client のホーム画面
-  この画面を使用すると、[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) の 3 つの主要なタスク グループ (ナレッジ ベース管理、データ品質プロジェクト、および管理) のそれぞれに対するユーザー インターフェイスにアクセスできます。  
+# <a name="data-quality-client-home-screen"></a>Data Quality Client のホーム画面
+  この画面を使用すると、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) の 3 つの主要なタスク グループ (ナレッジ ベース管理、データ品質プロジェクト、および管理) のそれぞれに対するユーザー インターフェイスにアクセスできます。  
   
-## オプション  
+## <a name="options"></a>オプション  
   
-### [ナレッジ ベース管理]  
+### <a name="knowledge-base-management"></a>[ナレッジ ベース管理]  
  DQS ナレッジ ベースは、データの品質を向上させるために DQS によって使用されるメタデータのリポジトリです。 このメタデータは、コンピューター支援型のナレッジ検出プロセスの DQS プラットフォームとインタラクティブなドメイン管理プロセスのデータ スチュワードの両者によって作成されます。  
   
  **[新しいナレッジ ベース]**  
@@ -37,7 +42,7 @@ caps.handback.revision: 14
   
  ロックされたナレッジ ベースを開いて編集できるのは、自分でロックした場合だけです。 その場合、ナレッジ ベースは閉じたときの状態で開かれます。状態はかっこの中に表示されます。 ナレッジ ベースがロックされていて、自分でロックしたのではない場合は、読み取り専用としてのみ開くことができます。  
   
-### データ品質プロジェクト  
+### <a name="data-quality-projects"></a>データ品質プロジェクト  
  データ品質プロジェクトは、コンピューター支援型のデータ修正とインタラクティブなデータ クレンジングの両方を通じて、DQS がデータ クレンジングとデータ照合を実行するプロセスです。  
   
  **[新しいデータ品質プロジェクト]**  
@@ -49,18 +54,18 @@ caps.handback.revision: 14
  **[最近使用したデータ品質プロジェクト]**  
  画面の一覧から、既に作成されているプロジェクトを選択します。 ロックされているプロジェクトは、自分でロックした場合にのみ開くことができます。 その場合、プロジェクトは閉じたときの状態で開かれます。状態はかっこの中に表示されます。 プロジェクトが完了している場合は、アクティビティのエクスポート手順で開かれます。  
   
-### 管理  
+### <a name="administration"></a>管理  
  DQS 管理では、DQS を監視、構成、および保守することができます。  
   
  **[アクティビティ監視]**  
- 接続されている [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] に関連するすべてのアクティビティ (現在のアクティビティと履歴アクティビティの両方) の状態のビューが表示されます。 監視対象となるアクティビティの種類は、ナレッジ マネージメント、データ品質プロジェクト、および SSIS ベースのデータ修正です。  
+ 接続されている [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]に関連するすべてのアクティビティ (現在のアクティビティと履歴アクティビティの両方) の状態のビューが表示されます。 監視対象となるアクティビティの種類は、ナレッジ マネージメント、データ品質プロジェクト、および SSIS ベースのデータ修正です。  
   
  **構成**  
  参照データ サービス アカウント (Windows Azure Marketplace 経由と参照データ サービス直接の両方)、一般設定 (対話形式のクレンジング、照合、プロファイリング)、およびログの重大度設定に対する構成プロパティが表示されます。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [DQS のナレッジ ベースとドメイン](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
- [データ品質プロジェクト #40; DQS & #41 です。](../data-quality-services/data-quality-projects-dqs.md)   
+ [データ品質プロジェクト &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [DQS 管理](../data-quality-services/dqs-administration.md)  
   
   

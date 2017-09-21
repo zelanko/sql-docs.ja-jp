@@ -1,23 +1,28 @@
 ---
 title: ".dqs ファイルへのナレッジ ベースのエクスポート | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3aa8fa674fc21b52bcf924218448641624673cb7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# .dqs ファイルへのナレッジ ベースのエクスポート
-  このトピックでは、[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で .dqs データ ファイルにナレッジ ベース全体をエクスポートする方法について説明します。 ドメインまたはナレッジ ベース全体をデータ ファイルにエクスポートできます。 ドメインのエクスポートについては、次を参照してください。 [ドメインを .dqs ファイルにエクスポートする](../data-quality-services/export-a-domain-to-a-dqs-file.md)です。  
+# <a name="export-a-knowledge-base-to-a-dqs-file"></a>.dqs ファイルへのナレッジ ベースのエクスポート
+  このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で .dqs データ ファイルにナレッジ ベース全体をエクスポートする方法について説明します。 ドメインまたはナレッジ ベース全体をデータ ファイルにエクスポートできます。 ドメインのエクスポートについては、「[.dqs ファイルへのドメインのエクスポート](../data-quality-services/export-a-domain-to-a-dqs-file.md)」をご覧ください。  
   
  ナレッジ ベースを .dqs ファイルにエクスポートし、後で別のナレッジ ベースとしてインポートすることで、ナレッジの生成処理を簡略化し、時間と労力を節約します。 ナレッジ ベースやその中のナレッジを他のユーザーと共有できます。 .dqs ファイルには、ドメインや照合ポリシーを含むナレッジ ベースのすべての情報が含まれます。ただし、アタッチされた参照データ情報は含まれません。 .dqs ファイルをインポートした後、必要に応じて、必要なドメインを適切な参照データ サービスに再度アタッチします。 ナレッジ ベース内の発行済みのデータと発行されていないデータの両方がエクスポートされます。  
   
@@ -33,19 +38,19 @@ caps.handback.revision: 19
 ####  <a name="Permissions"></a> アクセス許可  
  ナレッジ ベースを .dqs データ ファイルにエクスポートするには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="Export"></a> .dqs ファイルへのナレッジ ベースのエクスポート  
+##  <a name="Export"></a> Export a knowledge base to a .dqs file  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ドメイン管理アクティビティ内のナレッジ ベースを開きます。  
   
-3.  (任意のタブを選択) の [ドメイン管理] ページで、クリックして、 **ナレッジ ベースのエクスポート データ** アイコンをクリックし、ドメイン一覧の上 **ナレッジ ベースのエクスポート**します。 代わりに、右に、 **ドメイン** ボックスの一覧で、ポインターを合わせる **エクスポート**, 、] をクリックし、 **ナレッジ ベースのエクスポート**です。  
+3.  [ドメイン管理] ページで (任意のタブを選択し)、ドメイン リストの上にある **[ナレッジ ベース データをエクスポートします]** アイコンをクリックして、 **[ナレッジ ベースのエクスポート]**をクリックします。 または、 **[ドメイン]** リスト内で右クリックして **[エクスポート]**にマウス ポインターを合わせ、 **[ナレッジ ベースのエクスポート]**をクリックします。  
   
-4.   **データ ファイルにエクスポート** ダイアログ ボックスで、ファイル名に、ファイルを保存またはナレッジ ベース名を保存するフォルダーに移動してください **DQS データ ファイル (\*.dqs)** として、 **名前を付けて** を入力し、クリックして **保存**します。  
+4.  **[データ ファイルにエクスポート]** ダイアログ ボックスで、ファイルを保存するフォルダーに移動し、ファイルに名前を付けるかナレッジ ベース名のままにし、**[ファイルの種類]** を **[DQS データ ファイル (\*.dqs)]** のままにして、**[保存]** をクリックします。  
   
 5.  **[ナレッジ ベースのエクスポート]** ダイアログ ボックスで、ステータス行にエクスポートの完了が表示されていることを確認します。 クリックして **OK**です。  
   
 ##  <a name="FollowUp"></a> 補足情報: ドメインを .dqs ファイルにエクスポートした後  
- ナレッジ ベースを .dqs ファイルにエクスポートした後で、そのナレッジ ベースを (新しい名前で) 同じ [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] にインポートしたり、異なる [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] にインポートしたりできます。  
+ ナレッジ ベースを .dqs ファイルにエクスポートした後で、そのナレッジ ベースを (新しい名前で) 同じ [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] にインポートしたり、異なる [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]にインポートしたりできます。  
   
   

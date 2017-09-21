@@ -1,7 +1,7 @@
 ---
 title: "データベース エンジンへの暗号化接続の有効化 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/12/2017
+ms.date: 09/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5dba6e8516e97ce603b529b8ad4c07eac0db2981
+ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
+ms.openlocfilehash: a00e09f47685eba578296b8e390d3c7d15fc6953
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>データベース エンジンへの暗号化接続の有効化
@@ -50,9 +50,7 @@ ms.lasthandoff: 08/02/2017
 > Azure VM の SQL Server に対する Azure Search インデクサーの暗号化された接続を作成するときは、「 [Azure VM での Azure Search インデクサーから SQL Server への接続の構成](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/)」をご覧ください。 
   
  
-##  <a name="SSMSProcedure"></a>  
-  
-###  <a name="Provision"></a> サーバーに証明書を提供 (インストール) するには  
+##  <a name="Provision"></a> サーバーに証明書を提供 (インストール) するには  
   
 1.  **[スタート]** メニューの **[ファイル名を指定して実行]**をクリックし、 **[名前]** ボックスに「 **MMC** 」と入力して **[OK]**をクリックします。  
   
@@ -74,13 +72,13 @@ ms.lasthandoff: 08/02/2017
   
 10. **[証明書のインポート ウィザード]**を完了して証明書をコンピューターに追加し、MMC コンソールを閉じます。 コンピューターへの証明書の追加の詳細については、Windows のマニュアルを参照してください。  
   
-###  <a name="Export"></a> サーバー証明書をエクスポートするには  
+##  <a name="Export"></a> サーバー証明書をエクスポートするには  
   
 1.  **[証明書]** スナップインで、 **[証明書]** / **[個人]** フォルダーで証明書を探し、 **[証明書]**を右クリックします。次に **[すべてのタスク]**をポイントし、 **[エクスポート]**をクリックします。  
   
 2.  **証明書のエクスポート ウィザード**を実行して、証明書ファイルを使いやすい場所に格納します。  
   
-###  <a name="ConfigureServerConnections"></a> 暗号化された接続を許可するサーバーを構成するには  
+##  <a name="ConfigureServerConnections"></a> 暗号化された接続を許可するサーバーを構成するには  
   
 1.  **SQL Server 構成マネージャー**で、**[SQL Server ネットワークの構成]** を展開し、**[***\<server instance> のプロトコル]* を右クリックします。次に **[プロパティ]** を選びます。  
   
@@ -89,8 +87,13 @@ ms.lasthandoff: 08/02/2017
 3.  **[フラグ]** タブの **[ForceEncryption]** ボックスの一覧の **[はい]**をクリックし、 **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを再開します。  
+
+### <a name="wildcard-certificates"></a>ワイルドカード証明書  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、ワイルドカード証明書がサポートされます。 他のクライアントでは、ワイルドカード証明書がサポートされていない可能性があります。 詳しくは、クライアントのドキュメントをご覧ください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager を使ってワイルドカード証明書を選択することはできません。 ワイルドカード証明書を使うには、`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` のレジストリ キーを編集し、**Certificate** の値に証明書の拇印を (スペースを含めずに) 入力する必要があります。  
+> [!WARNING]  
+> [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry_md.md)]  
   
-###  <a name="ConfigureClientConnections"></a> 暗号化された接続を要求するクライアントを構成するには  
+##  <a name="ConfigureClientConnections"></a> 暗号化された接続を要求するクライアントを構成するには  
   
 1.  元の証明書ファイルまたはエクスポートした証明書ファイルを、クライアント コンピューターにコピーします。  
   
@@ -100,7 +103,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  **[フラグ]** ページの **[プロトコルの暗号化を設定する]** ボックスで、 **[はい]**をクリックします。  
   
-###  <a name="EncryptConnection"></a> SQL Server Management Studio から接続を暗号化するには  
+##  <a name="EncryptConnection"></a> SQL Server Management Studio から接続を暗号化するには  
   
 1.  オブジェクト エクスプローラー ツール バーで **[接続]**をクリックし、 **[データベース エンジン]**をクリックします。  
   

@@ -1,50 +1,55 @@
 ---
 title: "Data Quality Client アプリケーションの実行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.browseforservers.f1"
-  - "sql13.dqs.connecttoserver.f1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.browseforservers.f1
+- sql13.dqs.connecttoserver.f1
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2937eb9f859184eb6ab2f3ecc5f18155afd1e545
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# Data Quality Client アプリケーションの実行
-  実行 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], 、ログオンして、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]です。  
+# <a name="run-the-data-quality-client-application"></a>Data Quality Client アプリケーションの実行
+  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]を実行して [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]にログオンします。  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
- DQSInstaller.exe ファイルを実行して [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] のインストールを完了しておく必要があります。 詳細については、次を参照してください。 [データ品質サーバー インストールの完了に DQSInstaller.exe を実行](../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)します。  
+ DQSInstaller.exe ファイルを実行して [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] のインストールを完了しておく必要があります。 詳細については、「 [Data Quality Server のインストールを完了するための DQSInstaller.exe の実行](../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)」をご覧ください。  
   
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
- [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] にログオンするには、DQS_MAIN データベースに対して、3 つの DQS ロール (dqs_administrator、dqs_kb_editor、dqs_kb_operator) のいずれかが必要です。  
+ [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]にログオンするには、DQS_MAIN データベースに対して、3 つの DQS ロール (dqs_administrator、dqs_kb_editor、dqs_kb_operator) のいずれかが必要です。  
   
 ##  <a name="Run"></a> Data Quality Client の実行  
- 実行する [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] インストールしたコンピューターで。  
+ インストール済みのコンピューターで [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] を実行するには:  
   
-1.  クリックして **開始**, 、] をポイント **すべてのプログラム**, 、] をクリックして **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**, 、] をクリックして **Data Quality Services**, 、順にクリック **Data Quality Client**です。  
+1.  **[スタート]** ボタンをクリックし、**[すべてのプログラム]** をポイントして、**[[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]]**、**[Data Quality Services]**、**[Data Quality Client]** の順にクリックします。  
   
-2.   **サーバーへの接続** ] ダイアログ ボックス。  
+2.  **[サーバーへの接続]** ダイアログ ボックスで、次の操作を実行します。  
   
-    1.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションを接続するサーバーを指定します。 選択 **(LOCAL)** への接続に [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 、ローカル コンピューターです。 下矢印をクリックして選択もできます **\< [参照のサーバーをネットワーク詳細>** 別のサーバーに接続する (または名前でローカル サーバーに接続する)。  **サーバーの参照** ] ダイアログ ボックスが表示されます。 サーバーを選択することができます、 **ローカル サーバー** ] タブまたは [、 **ネットワーク サーバー** ] タブをクリックします。  
+    1.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションを接続するサーバーを指定します。 **[(ローカル)]** を選択し、ローカル コンピューター上の [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] に接続します。 または、下矢印をクリックし、**[\<その他のサーバーをネットワークで参照>]** を選択して別のサーバーに接続する (またはローカル サーバーに名前で接続する) こともできます。 **[サーバーの参照]** ダイアログ ボックスが表示されます。 **[ローカル サーバー]** タブまたは **[ネットワーク サーバー]** タブでサーバーを選択できます。  
   
-    2.  間で転送するデータを暗号化する [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] と [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], 、] をクリックして **オプション**, 、クリックして、 **暗号化接続** ] チェック ボックスです。  
+    2.  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] と [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]の間のデータ転送を暗号化するには、 **[オプション]**をクリックし、 **[暗号化接続]** チェック ボックスをオンにします。  
   
 3.  **[接続]**をクリックします。  
   
- [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面が表示されます。 詳細については、次を参照してください。 [データ品質クライアント ホームの画面](../data-quality-services/data-quality-client-home-screen.md)します。  
+ [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面が表示されます。 詳細については、「[Data Quality Client のホーム画面](../data-quality-services/data-quality-client-home-screen.md)」を参照してください。  
   
   

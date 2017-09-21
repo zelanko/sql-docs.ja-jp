@@ -1,8 +1,10 @@
 ---
 title: "SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 09/08/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -24,16 +26,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8f5fc3acde45aa4dab6738f0d88ec9d8005864b6
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: 3409cf7906f37569763ac2277ea82fe1d0fe4c82
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行するコンピューターの名前を変更した場合、変更後の名前は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に認識されます。 コンピューター名を再設定するためにセットアップを再度実行する必要はありません。 代わりに次の手順を実行して、sys.servers に格納され、システム関数 @@SERVERNAME でレポートされるシステム メタデータを更新します。 @@SERVERNAME を使用するか、sys.servers からサーバー名のクエリを実行するリモート接続およびリモート アプリケーションのコンピューター名の変更を反映するには、システム メタデータを更新します。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行するコンピューターの名前を変更した場合、変更後の名前は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に認識されます。 コンピューター名を再設定するためにセットアップを再度実行する必要はありません。 代わりに次の手順を実行して、sys.servers に格納され、システム関数 @@SERVERNAME でレポートされるシステム メタデータを更新します。 @@SERVERNAME を使用するか、sys.servers からサーバー名のクエリを実行するリモート接続およびリモート アプリケーションのコンピューター名の変更を反映するには、システム メタデータを更新します。  
   
- ここで示す手順を実行しても、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの名前を変更することはできません。 変更できるのは、インスタンス名のうち、コンピューター名に対応する部分のみです。 たとえば、Instance1 という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをホストする MB1 というコンピューターを、MB2 のような別の名前に変更できます。 ただし、名前のインスタンスの部分 (Instance1) は変更されません。 この例では、 \\\\*ComputerName*\\*InstanceName* が、 \\\MB1\Instance1 から \\\MB2\Instance1 に変更されます。  
+ここで示す手順を実行しても、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの名前を変更することはできません。 変更できるのは、インスタンス名のうち、コンピューター名に対応する部分のみです。 たとえば、Instance1 という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをホストする MB1 というコンピューターを、MB2 のような別の名前に変更できます。 ただし、名前のインスタンスの部分 (Instance1) は変更されません。 この例では、 \\\\*ComputerName*\\*InstanceName* が、 \\\MB1\Instance1 から \\\MB2\Instance1 に変更されます。  
   
  **アンインストールの準備**  
   
@@ -51,11 +53,11 @@ ms.lasthandoff: 08/02/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動した後、新しいコンピューター名を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続できます。 @@SERVERNAME がローカル サーバー インスタンスの更新後の名前を返すことを確認するには、シナリオに応じて次のプロシージャを手動で実行する必要があります。 使用するプロシージャは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスと名前付きインスタンスのどちらをホストするコンピューターを更新しているかによって決まります。  
   
-### <a name="to-rename-a-computer-that-hosts-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>スタンドアロン インスタンスをホストするコンピューターの名前を変更するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスをホストするコンピューターの名前を変更する  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスをホストする名前変更されたコンピューターの場合は、次のプロシージャを実行します。  
   
-    ```  
+    ```sql
     sp_dropserver <old_name>;  
     GO  
     sp_addserver <new_name>, local;  
@@ -66,7 +68,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の名前付きインスタンスをホストする名前変更されたコンピューターの場合は、次のプロシージャを実行します。  
   
-    ```  
+    ```sql
     sp_dropserver <old_name\instancename>;  
     GO  
     sp_addserver <new_name\instancename>, local;  
@@ -78,7 +80,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="after-the-renaming-operation"></a>名前変更操作の後  
  コンピューターの名前を変更した場合は、変更前のコンピューター名を使用している接続はすべて、変更後の名前で接続する必要があります。  
   
-#### <a name="to-verify-that-the-renaming-operation-has-completed-successfully"></a>名前変更操作が正常に完了したことを検証するには  
+## <a name="verify-renaming-operation"></a>名前変更操作を確認する  
   
 -   @@SERVERNAME または sys.servers で情報を確認できます。 @@SERVERNAME 関数では新しい名前が返されます。sys.servers テーブルには新しい名前が表示されます。 次は @@SERVERNAME の使用例です。  
   
@@ -93,18 +95,18 @@ ms.lasthandoff: 08/02/2017
   
  このエラーを解決するには、このサーバーに対するリモート ログインを削除する必要があります。  
   
-#### <a name="to-drop-remote-logins"></a>リモート ログインを削除するには  
+### <a name="drop-remote-logins"></a>リモート ログインを削除する  
   
 -   既定のインスタンスの場合は、次のプロシージャを実行します。  
   
-    ```  
+    ```sql
     sp_dropremotelogin old_name;  
     GO  
     ```  
   
 -   名前付きインスタンスの場合は、次のプロシージャを実行します。  
   
-    ```  
+    ```sql
     sp_dropremotelogin old_name\instancename;  
     GO  
     ```  
@@ -114,6 +116,6 @@ ms.lasthandoff: 08/02/2017
  **クライアントのエイリアス** - 名前付きパイプを使用するクライアントのエイリアスはコンピューター名の変更操作の影響を受けます。 たとえば、SRVR1 に対するエイリアス "PROD_SRVR" が作成され、名前付きパイプのプロトコルが使用されている場合、パイプ名は `\\SRVR1\pipe\sql\query`のようになります。 コンピューター名が変更された後は、名前付きパイプのパスは無効になります。 名前付きパイプの詳細については、「 [名前付きパイプを使用した有効な接続文字列の作成](http://go.microsoft.com/fwlink/?LinkId=111063)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server.md)  
+ [SQL Server のインストール](../../database-engine/install-windows/install-sql-server.md)  
   
   

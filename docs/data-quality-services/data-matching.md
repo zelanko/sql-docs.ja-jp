@@ -1,22 +1,27 @@
 ---
 title: "データ照合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04c6e34258d4e732373ea003e8457582bea9c4eb
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# データ照合
+# <a name="data-matching"></a>データ照合
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のデータ照合プロセスでは、データの重複を減らし、データ ソースのデータの精度を高めることができます。 照合では、1 つのデータ ソースのすべてのレコードにおける重複の度合いを分析し、比較したレコードのセットごとに重み付けした一致率を返します。 これにより、一致と見なすレコードを決定し、ソース データに対して適切な処理を実行することができます。  
   
  DQS の照合プロセスには次の利点があります。  
@@ -31,7 +36,7 @@ caps.handback.revision: 29
   
 -   ソースからステージング テーブルにコピーしたデータのインデックスを再作成するかどうかを、照合ポリシーやソース データの状態に応じて選択できます。 インデックスの再作成を省略すると、パフォーマンスが向上することがあります。  
   
- 照合プロセスは、他のデータ クレンジング プロセスと組み合わせて実行できます。これにより、データ全体の品質を向上させることができます。 また、データの重複除去は、マスター データ サービスに組み込まれた DQS の機能を使用して実行することもできます。 詳細については、次を参照してください。 [マスター データ サービスの概要と #40 です。MDS & #41;](../master-data-services/master-data-services-overview-mds.md)します。  
+ 照合プロセスは、他のデータ クレンジング プロセスと組み合わせて実行できます。これにより、データ全体の品質を向上させることができます。 また、データの重複除去は、マスター データ サービスに組み込まれた DQS の機能を使用して実行することもできます。 詳しくは、「[マスター データ サービスの概要 &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)」をご覧ください。  
   
  次の図は、DQS でのデータ照合の実行方法を示したものです。  
   
@@ -67,12 +72,12 @@ caps.handback.revision: 29
   
  照合プロセスの結果は、SQL Server のテーブルまたは .csv ファイルにエクスポートすることができます。 照合結果をエクスポートする方法は 2 種類あり、一致レコードと不一致レコードをエクスポートするか、クラスターで保持するレコードだけを含むサバイバーシップ レコードと不一致レコードをエクスポートできます。 サバイバーシップ レコードでは、保持するレコードとして複数のクラスターで同じレコードが特定された場合、そのレコードが 1 回だけエクスポートされます。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
  DQS では、照合に関連する次のタスクを実行できます。  
   
 |||  
 |-|-|  
-|照合ポリシーの照合ルールの作成とテスト|[Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)|  
-|データ品質プロジェクトでの照合の実行|[Run a Matching Project](../data-quality-services/run-a-matching-project.md)|  
+|照合ポリシーの照合ルールの作成とテスト|[照合ポリシーを作成する](../data-quality-services/create-a-matching-policy.md)|  
+|データ品質プロジェクトでの照合の実行|[照合プロジェクトを実行する](../data-quality-services/run-a-matching-project.md)|  
   
   

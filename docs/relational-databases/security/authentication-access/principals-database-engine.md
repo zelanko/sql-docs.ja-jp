@@ -33,10 +33,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9ac118739640b288307e09c8fd36ba842d0c7ef1
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: e8567384e8546fa5f48ae287794ecf368f728a2e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="principals-database-engine"></a>プリンシパル (データベース エンジン)
@@ -83,6 +83,8 @@ ms.lasthandoff: 07/31/2017
 -   \##MS_PolicyEventProcessingLogin##   
 -   \##MS_PolicySigningCertificate##   
 -   \##MS_PolicyTsqlExecutionLogin##   
+ 
+ これらのプリンシパル アカウントのパスワードは、Microsoft に発行された証明書に基づくので、管理者は変更できません。
   
 ## <a name="the-guest-user"></a>guest ユーザー  
  各データベースには、 `guest`の動作から変更されています。 データベースにはアクセスできるが、データベース内のユーザー アカウントは持っていないユーザーは、 `guest` ユーザーに許可された権限を継承します。 `guest` ユーザーを削除することはできませんが、 CONNECT 権限を取り消すことで無効にすることはできます。 CONNECT 権限を取り消すには、`master` または `tempdb` 以外のデータベース内で `REVOKE CONNECT FROM GUEST;` を実行します。  

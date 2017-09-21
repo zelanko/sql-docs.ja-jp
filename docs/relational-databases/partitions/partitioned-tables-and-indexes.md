@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 00d990aa777630847e0993631ee1c7bbce781d54
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: f723156f18ee6661ffb26f615f9c3598bd6875b4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックス
@@ -68,9 +68,8 @@ ms.lasthandoff: 08/03/2017
 -   インデックス キーが一意であり、テーブルのパーティション分割列を含んでいない。  
   
 -   異なる結合列を使用して多くのテーブルが併置されている結合にベース テーブルを加える。  
-  
- パーティションの解消  
- クエリ オプティマイザーがクエリのフィルター条件を満たすために、関連するパーティションのみにアクセスするときに使用されるプロセス。  
+
+ パーティションの解消 クエリ オプティマイザーがクエリのフィルター条件を満たすために、関連するパーティションのみにアクセスするときに使用されるプロセス。  
   
 ## <a name="performance-guidelines"></a>パフォーマンスに関するガイドライン  
  新しいパーティション数の制限が 15,000 になったことは、メモリ、パーティション インデックス操作、DBCC コマンド、およびクエリに影響します。 ここでは、パーティション数が 1,000 を超えた場合のパフォーマンスへの影響について説明し、必要に応じた回避策を示します。 パーティション数の上限が 15,000 になると、データを保存できる期間が長くなります。 ただし、データの保持期間は必要最小限とし、パフォーマンスとパーティション数とのバランスをとる必要があります。  

@@ -1,36 +1,41 @@
 ---
 title: "Data Quality Client アプリケーション | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2f40568ff94ac2e2a026f2538fa2cb9e6fb9f7c3
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# Data Quality Client アプリケーション
+# <a name="data-quality-client-application"></a>Data Quality Client アプリケーション
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションを使用すると、スタンドアロンのツールを使用してデータ品質に関する操作を実行できます。 このアプリケーションでは、ナレッジ ベースを作成し、データ品質プロジェクトを作成して実行し、管理タスクを実行できます。  
   
- データ資産の管理および高水準のデータ品質の維持を担当するデータ スチュワード、データ エキスパート、または IT プロフェッショナルは、3 種類のロールのいずれかでクライアント アプリケーションを使用できます。DQS KB オペレーターは、データ品質オブジェクトを編集および実行できます。DQS KB エディターは、プロジェクトの機能を実行し、ナレッジ ベースを作成および編集できます。DQS 管理者は、プロジェクトおよびナレッジ ベースの機能を実行し、システムを管理できます。 詳細については、「 [DQS Security](../data-quality-services/dqs-security.md)」をご覧ください。  
+ データ資産の管理および高水準のデータ品質の維持を担当するデータ スチュワード、データ エキスパート、または IT プロフェッショナルは、3 種類のロールのいずれかでクライアント アプリケーションを使用できます。DQS KB オペレーターは、データ品質オブジェクトを編集および実行できます。DQS KB エディターは、プロジェクトの機能を実行し、ナレッジ ベースを作成および編集できます。DQS 管理者は、プロジェクトおよびナレッジ ベースの機能を実行し、システムを管理できます。 詳細については、「 [DQS Security](../data-quality-services/dqs-security.md)」を参照してください。  
   
-## Data Quality Client アプリケーションのインストール  
- [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションは、SQL Server セットアップを使用してインストールします。 クライアント アプリケーションは、[!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] と同じコンピューターまたはリモート コンピューターにインストールできます。 インストールの詳細については、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 、アプリケーションを参照してください [Data Quality Services のインストール](../data-quality-services/install-windows/install-data-quality-services.md)します。  
+## <a name="installing-the-data-quality-client-application"></a>Data Quality Client アプリケーションのインストール  
+ [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションは、SQL Server セットアップを使用してインストールします。 クライアント アプリケーションは、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]と同じコンピューターまたはリモート コンピューターにインストールできます。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションのインストールについて詳しくは、「[Data Quality Services のインストール](../data-quality-services/install-windows/install-data-quality-services.md)」をご覧ください。  
   
-## 関連タスク  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションを使用する方法について説明します。|[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)|  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
   
 |コンテンツの説明|トピック|  
 |-------------------------|-----------|  
@@ -39,7 +44,7 @@ caps.handback.revision: 15
 |DQS で照合を実行する方法について説明します。|[データ照合](../data-quality-services/data-matching.md)|  
 |DQS を管理する方法について説明します。|[DQS 管理](../data-quality-services/dqs-administration.md)|  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Data Quality Client のホーム画面](../data-quality-services/data-quality-client-home-screen.md)  
   
   

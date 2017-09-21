@@ -1,8 +1,10 @@
 ---
-title: "失敗した SQL Server 2016 のインストールの修復 | Microsoft Docs"
+title: "失敗した SQL Server のインストールの修復 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 09/08/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,65 +17,65 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0f32bec6be6df60b1e7d021ac17ce44b83f9be71
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: ae4c284ac746ac087349e9ff07eaeeca24b2a172
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>失敗した SQL Server のインストールの修復
-  修復操作は、以下のシナリオで使用できます。  
+修復操作は、以下のシナリオで使用できます。  
   
--   適切にインストールした後に壊れた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを修復する。  
+- 適切にインストールした後に壊れた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを修復する。 
   
--   新たにアップグレードされたインスタンスにインスタンス名がマップされた後、アップグレード操作のキャンセルまたは失敗が生じた場合に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを修復する。  
+- 新たにアップグレードされたインスタンスにインスタンス名がマップされた後、アップグレード操作のキャンセルまたは失敗が生じた場合に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを修復する。 
   
-    -   概要ログに次のメッセージが表示されている場合は、失敗したアップグレード インスタンスを修復できます。  
+    - 概要ログに次のメッセージが表示されている場合は、失敗したアップグレード インスタンスを修復できます。  
   
          "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアップグレードに失敗しました。 続行するには、失敗の理由を調べて問題を修正し、インストールされたシステムを修復します。"  
   
-    -   概要ログに次のメッセージが表示されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアンインストールして、再度インストールする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを修復することはできません。  
+    - 概要ログに次のメッセージが表示されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアンインストールして、再度インストールする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを修復することはできません。 
   
          "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアップグレードに失敗しました。 続行するには、失敗の理由を調べて問題を修正します。"  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを修復すると、次のようになります。  
   
--   欠落または破損していたすべてのファイルが差し替わります。  
+- 欠落または破損していたすべてのファイルが差し替わります。 
   
--   欠落または破損していたすべてのレジストリ キーが差し替わります。  
+- 欠落または破損していたすべてのレジストリ キーが差し替わります。 
   
--   欠落または破損していたすべての構成値が既定値に設定されます。  
+- 欠落または破損していたすべての構成値が既定値に設定されます。 
   
  続行する前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターに関して、次の重要な情報を確認してください。  
   
--   修復は個々のクラスター ノードで実行する必要があります。  
+- 修復は個々のクラスター ノードで実行する必要があります。 
   
--   準備操作に失敗した後でフェールオーバー クラスター ノードを修復するには、**[ノードの削除]** を使用してから準備手順をもう一度実行します。 詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;セットアップ&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」をご覧ください。  
+- 準備操作に失敗した後でフェールオーバー クラスター ノードを修復するには、**[ノードの削除]** を使用してから準備手順をもう一度実行します。 詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;セットアップ&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」をご覧ください。 
   
-### <a name="to-repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-from-the-installation-center"></a>インストール センターから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の失敗したインストールを修復するには  
+## <a name="repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-from-the-installation-center"></a>インストール センターから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の失敗したインストールを修復する 
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラム (setup.exe) を起動します。  
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラム (setup.exe) を起動します。 
   
-2.  必須コンポーネントのインストールとシステムの検証が実行された後、セットアップ プログラムによって [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センター] ページが表示されます。  
+2. 必須コンポーネントのインストールとシステムの検証が実行された後、セットアップ プログラムによって [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センター] ページが表示されます。 
   
-3.  左側のナビゲーション領域の **[メンテナンス]** をクリックし、 **[修復]** をクリックして修復操作を開始します。  
+3. 左側のナビゲーション領域の **[メンテナンス]** をクリックし、 **[修復]** をクリックして修復操作を開始します。 
   
-    > [!TIP]  
-    >  [スタート] メニューを使用してインストール センターを起動した場合は、この時点で、インストール メディアの場所を指定する必要があります。  
+   >[!TIP]  
+   > [スタート] メニューを使用してインストール センターを起動した場合は、この時点で、インストール メディアの場所を指定する必要があります。 
   
-4.  セットアップ サポート ルールおよびセットアップ サポート ファイルのルーチンが実行されて、システムに必須コンポーネントがインストールされていること、およびコンピューターがセットアップの検証ルールに合格していることが確認されます。 続行するには、 **[OK]** または **[インストール]** をクリックします。  
+4. セットアップ サポート ルールおよびセットアップ サポート ファイルのルーチンが実行されて、システムに必須コンポーネントがインストールされていること、およびコンピューターがセットアップの検証ルールに合格していることが確認されます。 続行するには、 **[OK]** または **[インストール]** をクリックします。 
   
-5.  [インスタンスの選択] ページで、修復するインスタンスを選択し、 **[次へ]** をクリックします。  
+5. [インスタンスの選択] ページで、修復するインスタンスを選択し、 **[次へ]** をクリックします。 
   
-6.  修復ルールが実行され、操作が検証されます。 続行するには、 **[次へ]**をクリックします。  
+6. 修復ルールが実行され、操作が検証されます。 続行するには、 **[次へ]**をクリックします。 
   
-7.  [修復の準備完了] ページで、操作を続行する準備ができたことが示されます。 続行するには、 **[修復]**をクリックします。  
+7. [修復の準備完了] ページで、操作を続行する準備ができたことが示されます。 続行するには、 **[修復]**をクリックします。 
   
-8.  [修復の進行状況] ページに、修復操作の進行状況が表示されます。 [完了] ページでは、操作が完了したことが示されます。  
+8. [修復の進行状況] ページに、修復操作の進行状況が表示されます。 [完了] ページでは、操作が完了したことが示されます。 
   
 ### <a name="to-repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-using-command-prompt"></a>コマンド プロンプトを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の失敗したインストールを修復するには  
   
-1.  コマンド プロンプトで次のコマンドを実行します。  
+1. コマンド プロンプトで次のコマンドを実行します。  
   
     ```  
     Setup.exe /q /ACTION=Repair /INSTANCENAME=instancename  

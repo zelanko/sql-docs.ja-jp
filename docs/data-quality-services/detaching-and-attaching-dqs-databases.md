@@ -1,28 +1,33 @@
 ---
 title: "DQS データベースのデタッチとアタッチ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 00f259597e28f7c2cf841f71dfeaf18467f1ebb0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# DQS データベースのデタッチとアタッチ
+# <a name="detaching-and-attaching-dqs-databases"></a>DQS データベースのデタッチとアタッチ
   ここでは、DQS データベースをデタッチおよびアタッチする方法について説明します。  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Limitations"></a> 制限事項と制約事項  
- 制限事項と制約の一覧は、次を参照してください。 [データベースのデタッチおよびアタッチ & #40 です。SQL Server と #41;](../relational-databases/databases/database-detach-and-attach-sql-server.md)します。  
+ 制限事項と制約事項の一覧については、「 [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md)のデータベースをデタッチする方法について説明します。  
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
@@ -41,26 +46,26 @@ caps.handback.revision: 9
 -   DQS の実行中のアクティビティを終了させたり実行中のプロセスを停止させたりするには、DQS_MAIN データベースの dqs_administrator ロールが必要です。  
   
 ##  <a name="Detach"></a> DQS データベースのデタッチ  
- SQL Server Management Studio を使用して DQS データベースをデタッチすると、デタッチされたファイルはコンピューターに残り、同じ SQL Server インスタンスに再アタッチすることも、別のサーバーに移動して、そこにアタッチすることもできます。 DQS データベース ファイルは通常、Data Quality Services コンピューターの次の場所: C:\Program files \microsoft SQL Server\MSSQL13*。\< Instance_Name >*\MSSQL\DATA します。  
+ SQL Server Management Studio を使用して DQS データベースをデタッチすると、デタッチされたファイルはコンピューターに残り、同じ SQL Server インスタンスに再アタッチすることも、別のサーバーに移動して、そこにアタッチすることもできます。 DQS データベース ファイルは通常、Data Quality Services コンピューターの C:\Program Files\Microsoft SQL Server\MSSQL13.*<インスタンス名>*\MSSQL\DATA にあります。  
   
 1.  Microsoft SQL Server Management Studio を起動し、適切な SQL Server インスタンスに接続します。  
   
 2.  オブジェクト エクスプローラーで、 **[データベース]** ノードを展開します。  
   
-3.  右クリックし、 **DQS_MAIN** データベースを指す **タスク**, 、] をクリックし、 **デタッチ**します。 **[データベースのデタッチ]** ダイアログ ボックスが表示されます。  
+3.  **DQS_MAIN** データベースを右クリックして **[タスク]**をポイントし、 **[デタッチ]**をクリックします。 **[データベースのデタッチ]** ダイアログ ボックスが表示されます。  
   
-4.  下にあるチェック ボックスをオン、 **ドロップ** 列、およびクリック **[ok]** DQS_MAIN データベースをデタッチします。  
+4.  **[削除]** 列の下にあるチェック ボックスをオンにし、 **[OK]** をクリックして DQS_MAIN データベースをデタッチします。  
   
 5.  DQS_PROJECTS データベースと DQS_STAGING_DATA データベースで手順 3. と 4. を繰り返し、それらをデタッチします。  
   
- Transact-SQL ステートメントで sp_detach_db ストアド プロシージャを使用して、DQS データベースをデタッチすることもできます。 TRANSACT-SQL ステートメントを使用してデータベースのデタッチの詳細については、次を参照してください。 [TRANSACT-SQL](../relational-databases/databases/detach-a-database.md#TsqlProcedure) で [データベースをデタッチ](../relational-databases/databases/detach-a-database.md)します。  
+ Transact-SQL ステートメントで sp_detach_db ストアド プロシージャを使用して、DQS データベースをデタッチすることもできます。 Transact-SQL ステートメントを使用したデータベースのデタッチに関する詳細については、「 [Using Transact-SQL](../relational-databases/databases/detach-a-database.md#TsqlProcedure) 」の「 [Detach a Database](../relational-databases/databases/detach-a-database.md)」を参照してください。  
   
 ##  <a name="Attach"></a> DQS データベースのインポート  
  次の手順を使用して、DQS データベースを (デタッチした場所から) 同じ SQL Server インスタンスまたは [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] がインストールされている別の SQL Server インスタンスにアタッチします。  
   
 1.  Microsoft SQL Server Management Studio を起動し、適切な SQL Server インスタンスに接続します。  
   
-2.  オブジェクト エクスプ ローラーで右クリック **データベース**, 、クリックして **アタッチ**します。 **[データベースのデタッチ]** ダイアログ ボックスが表示されます。  
+2.  オブジェクト エクスプローラーで、 **[データベース]**を右クリックし、 **[アタッチ]**をクリックします。 **[データベースのデタッチ]** ダイアログ ボックスが表示されます。  
   
 3.  アタッチするデータベースを指定するには、 **[追加]**をクリックします。 **[データベース ファイルの検索]** ダイアログ ボックスが表示されます。  
   
@@ -70,15 +75,15 @@ caps.handback.revision: 9
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.   **データベースの詳細** (下部) ペインには、添付するファイルの名前が表示されます。 確認したり、ファイルのパス名を変更したりをクリックして、 **参照** ボタン (...)。  
+5.  **[データベースの詳細]** (下部) ペインには、アタッチするファイルの名前が表示されます。 ファイルのパス名を確認または変更するには、 **参照** ボタン ([...]) をクリックします。  
   
-6.  をクリックして **OK** 、DQS_MAIN データベースをアタッチします。  
+6.  DQS_MAIN データベースをアタッチするには、 **[OK]** をクリックします。  
   
 7.  DQS_PROJECTS データベースと DQS_STAGING_DATA データベースで手順 2. ～ 6. を繰り返し、それらをアタッチします。  
   
 8.  また、DQS_MAIN データベースを復元した後の次の手順で Transact-SQL ステートメントを実行する必要もあります。これを実行しない場合、Data Quality Client アプリケーションを使用して Data Quality Server に接続しようとするとエラー メッセージが表示され、接続できません。 ただし、DQS_PROJECTS データベースまたは DQS_STAGING_DATA データベースをアタッチし、DQS_MAIN をアタッチしていない場合、手順 9. と 10. を実行する必要はありません。  
   
-     オブジェクト エクスプ ローラーで TRANSACT-SQL ステートメントを実行するサーバーを右クリックし、をクリックして **新しいクエリ**します。  
+     Transact-SQL ステートメントを実行するには、オブジェクト エクスプローラーで、サーバーを右クリックし、 **[新しいクエリ]**をクリックします。  
   
 9. クエリ エディター ウィンドウで、SQL ステートメントをコピーします。  
   
@@ -92,13 +97,13 @@ caps.handback.revision: 9
   
     ```  
   
-10. F5 キーを押してステートメントを実行します。 [結果] ペインを確認してステートメントが正常に実行されたことを確認します。 次のメッセージが表示されます。 `Configuration option 'clr enabled' changed from 1 to 1. Run the RECONFIGURE statement to install.`  
+10. F5 キーを押してステートメントを実行します。 [結果] ペインを確認してステートメントが正常に実行されたことを確認します。 " `Configuration option 'clr enabled' changed from 1 to 1. Run the RECONFIGURE statement to install.`" というメッセージが表示されます。  
   
 11. Data Quality Client を使用して Data Quality Server に接続し、正常に接続できるかどうかを確認します。  
   
- また、Transact-SQL ステートメントを使用して DQS データベースをアタッチすることもできます。 TRANSACT-SQL ステートメントを使用してデータベースのインポートの詳細については、次を参照してください。 [TRANSACT-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) で [データベースをアタッチする](../relational-databases/databases/attach-a-database.md)です。  
+ また、Transact-SQL ステートメントを使用して DQS データベースをアタッチすることもできます。 Transact-SQL ステートメントを使用したデータベースのインポートに関する詳細については、「 [Using Transact-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) 」の「 [Attach a Database](../relational-databases/databases/attach-a-database.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [DQS データベースの管理](../data-quality-services/manage-dqs-databases.md)  
   
   

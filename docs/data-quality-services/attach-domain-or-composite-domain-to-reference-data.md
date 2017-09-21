@@ -1,25 +1,30 @@
 ---
 title: "参照データへのドメインまたは複合ドメインのアタッチ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.dm.refdata.f1"
-  - "sql13.dqs.dm.refcatalog.f1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.dm.refdata.f1
+- sql13.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c59c87fa8fc86a1e760e90f7ee2a4f4d733836f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# 参照データへのドメインまたは複合ドメインのアタッチ
+# <a name="attach-domain-or-composite-domain-to-reference-data"></a>参照データへのドメインまたは複合ドメインのアタッチ
   このトピックでは、データ品質ナレッジ ベースのドメインと複合ドメインを Windows Azure Marketplace の参照データ サービスにアタッチして、高品質参照データに対するナレッジを構築する方法について説明します。 各参照データ サービスには、スキーマ (データ列) が含まれています。 ドメインまたは複合ドメインを参照データ サービスにアタッチしたら、アタッチしたドメインまたはアタッチした複合ドメイン内の個々のドメインを参照データ サービス スキーマの適切な列にマップする必要があります。 複合ドメインを参照データ サービスにアタッチすると、参照データ サービスに 1 つだけドメインをアタッチして、複合ドメイン内の個々のドメインを参照データ サービス スキーマの適切な列にマップできます。  
   
 > [!WARNING]  
@@ -29,19 +34,19 @@ caps.handback.revision: 17
   
  このトピックでは、複合ドメイン **Address Verification**に 4 つのドメイン ( **Address Line**、 **City**、 **State**、および **Zip**) を作成し、複合ドメインを **Melissa Data – Address Check** 参照データ サービスにアタッチした後、複合ドメイン内の個々のドメインを参照データ サービス スキーマの適切な列にマップします。  
   
-## はじめに  
+## <a name="before-you-begin"></a>はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
- 参照データ サービスを使用するように [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) を構成しておく必要があります。 参照してください [参照データを使用する DQS の構成](../data-quality-services/configure-dqs-to-use-reference-data.md)します。  
+ 参照データ サービスを使用するように [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) を構成しておく必要があります。 「[参照データを使用する DQS の構成](../data-quality-services/configure-dqs-to-use-reference-data.md)」をご覧ください。  
   
 ###  <a name="Security"></a> セキュリティ  
   
-#### アクセス許可  
+#### <a name="permissions"></a>アクセス許可  
  参照データにドメインをマップするには、DQS_MAIN データベースの dqs_kb_editor ロールが必要です。  
   
 ##  <a name="Map"></a> Melissa Data の参照データへのドメインのマップ  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、 **[ナレッジ ベース管理]**の **[新しいナレッジ ベース]**をクリックします。  
   
@@ -66,9 +71,9 @@ caps.handback.revision: 17
          ![[オンライン参照データ プロバイダーのカタログ] ダイアログ ボックス](../data-quality-services/media/dqs-onlinereferencedataproviderscatalog.gif "[オンライン参照データ プロバイダーのカタログ] ダイアログ ボックス")  
   
         > [!NOTE]  
-        >  -   **[オンライン参照データ プロバイダーのカタログ]** ダイアログ ボックスでは、Windows Azure Marketplace でサブスクライブしているすべての参照データ サービス プロバイダーが **[DataMarket Data Quality Services]** ノードに表示されます。 DQS でダイレクト オンライン サード パーティ参照データ サービス プロバイダーを構成した場合と呼ばれる別のノードに表示されます **サード パーティのダイレクト オンライン プロバイダー** (として使用できません。 これでないダイレクト オンライン サード パーティ参照データ サービス プロバイダーが DQS で構成された)。  
+        >  -   **[オンライン参照データ プロバイダーのカタログ]** ダイアログ ボックスでは、Windows Azure Marketplace でサブスクライブしているすべての参照データ サービス プロバイダーが **[DataMarket Data Quality Services]** ノードに表示されます。 ダイレクト オンライン サード パーティ参照データ サービス プロバイダーを DQS で構成している場合は、 **[サード パーティのダイレクト オンライン プロバイダー]** という別のノードに表示されます (ここでは、ダイレクト オンライン サード パーティ参照データ サービス プロバイダーを DQS で構成していないため表示されません)。  
   
-9. **[参照データ]** タブに戻ります。 **[プロバイダーの設定]** 領域で、必要に応じて以下のボックスの値を変更します。  
+9. **[参照データ]** タブに戻ります。**[プロバイダーの設定]** 領域で、必要に応じて以下のボックスの値を変更します。  
   
     -   **[自動修正しきい値]**: 参照データ サービスの修正のうち、信頼レベルがこのしきい値を超える修正は自動的に実行されます。 割合値に相当する値を 10 進数表記で入力します。 たとえば、90% であれば「0.9」と入力します。  
   
@@ -81,10 +86,10 @@ caps.handback.revision: 17
  このナレッジ ベースをデータ品質プロジェクトのクレンジング アクティビティに使用できるようになりました。Windows Azure Marketplace を通じて Melissa Data から提供されるナレッジに基づいて、ソース データに含まれる米国の住所を標準化およびクレンジングできます。  
   
 ##  <a name="FollowUp"></a> 補足情報: 参照データにドメインをマップした後  
- データ品質プロジェクトを作成し、このトピックで作成したナレッジ ベースと照らし合わせて、米国の住所を含むソース データに対するクレンジング アクティビティを実行します。 参照してください [参照データ & #40; を使用してデータのクレンジング外部 & #41 です。ナレッジ](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)です。  
+ データ品質プロジェクトを作成し、このトピックで作成したナレッジ ベースと照らし合わせて、米国の住所を含むソース データに対するクレンジング アクティビティを実行します。 「[参照データ &#40;外部&#41; のナレッジを使用したデータのクレンジング](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)」をご覧ください。  
   
-## 参照  
- [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)   
+## <a name="see-also"></a>参照  
+ [DQS の参照データ サービス](../data-quality-services/reference-data-services-in-dqs.md)   
  [データ クレンジング](../data-quality-services/data-cleansing.md)  
   
   

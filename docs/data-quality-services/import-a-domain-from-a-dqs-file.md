@@ -1,23 +1,28 @@
 ---
 title: ".dqs ファイルからのドメインのインポート | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ae4adc315932a7632077913866b648cba4947a9d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# .dqs ファイルからのドメインのインポート
-  このトピックでは、[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で .dqs ファイルから既存のナレッジ ベースにドメインをインポートする方法について説明します。 .dqs データ ファイルは、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションからドメインまたはナレッジ ベースをエクスポートすることによって作成されます。 .dqs データ ファイルは、表示できないように暗号化されています。  
+# <a name="import-a-domain-from-a-dqs-file"></a>.dqs ファイルからのドメインのインポート
+  このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で .dqs ファイルから既存のナレッジ ベースにドメインをインポートする方法について説明します。 .dqs データ ファイルは、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションからドメインまたはナレッジ ベースをエクスポートすることによって作成されます。 .dqs データ ファイルは、表示できないように暗号化されています。  
   
  .dqs データ ファイルを使用してナレッジ ベースからドメインをエクスポートし、別のナレッジ ベースにインポートすることで、ナレッジの生成処理を簡略化し、時間と労力を節約します。 ドメインやそのナレッジを他のユーザーと共有でき、他のユーザーの時間を節約できます。 ドメインをインポートするときは、1 つの単一ドメインまたは 1 つの複合ドメイン (複数の単一ドメインで構成されるドメイン) をインポートできます。 単一ドメインについての .dqs ファイルには、ドメインのプロパティ、値、ルールのデータを含む、ドメインのすべてのデータが格納されています。ただし、マップされた参照データ情報は格納されません。 複合ドメインについての .dqs ファイルには、複合ドメインに含まれる単一ドメインのすべてのドメイン データと複合ドメインのプロパティ、値のリレーション、CD ルールを含む、複合ドメインのすべてのデータが格納されています。ただし、マップされた参照データ情報は格納されません。 発行済みのデータと発行されていないデータがインポートされます。  
   
@@ -33,15 +38,15 @@ caps.handback.revision: 18
 ####  <a name="Permissions"></a> アクセス許可  
  ドメインを .dqs データ ファイルからインポートするには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="Import"></a> .dqs ファイルからのドメインのインポート  
+##  <a name="Import"></a> Import a domain from a .dqs file  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)です。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ドメイン管理アクティビティ内のナレッジ ベースを開きます。  
   
 3.  **[ドメインをデータ ファイルからインポートします]** アイコンをクリックします。  
   
-4.   **データ ファイルからインポート** からファイルをインポートし、(型の DQS ファイル)、ファイルを選択し、順にクリックするフォルダーへ移動] ダイアログ ボックス、 **開く**します。  
+4.  **[データ ファイルからインポート]** ダイアログ ボックスで、インポートするファイルを含むフォルダーに移動し、ファイル (DQS ファイル) を選択して **[開く]**をクリックします。  
   
 5.  **[ドメインのインポート]** ダイアログ ボックスで、 **[OK]**をクリックします。  
   
@@ -51,6 +56,6 @@ caps.handback.revision: 18
 6.  インポートしたドメインが **[ドメイン]** リストに表示されていることを確認します。 複合ドメインをインポートした場合は、複合ドメインとそれに含まれるすべての単一ドメインが **[ドメイン]** リストに表示されていることを確認します。  
   
 ##  <a name="FollowUp"></a> 補足情報: .dqs ファイルからドメインをインポートした後  
- .dqs ファイルからドメインをインポートした後、ドメインの内容に応じて、ナレッジをドメインに追加したり、ドメインをクレンジング プロジェクトや照合プロジェクトで使用したりすることができます。 詳細については、次を参照してください。 [ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md), 、[ドメインの管理](../data-quality-services/managing-a-domain.md), 、[複合ドメインの管理](../data-quality-services/managing-a-composite-domain.md), 、[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md), 、[データ クレンジング](../data-quality-services/data-cleansing.md), 、または [データ照合](../data-quality-services/data-matching.md)します。  
+ .dqs ファイルからドメインをインポートした後、ドメインの内容に応じて、ナレッジをドメインに追加したり、ドメインをクレンジング プロジェクトや照合プロジェクトで使用したりすることができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、「[複合ドメインの管理](../data-quality-services/managing-a-composite-domain.md)」、「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」、「[データ クレンジング](../data-quality-services/data-cleansing.md)」、または「[データ照合](../data-quality-services/data-matching.md)」をご覧ください。  
   
   

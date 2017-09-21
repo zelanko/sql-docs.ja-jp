@@ -1,32 +1,37 @@
 ---
 title: "クロス ドメイン ルールの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/22/2011"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.dm.testcdrule.f1"
-  - "sql13.dqs.dm.cdrules.f1"
+ms.custom: 
+ms.date: 11/22/2011
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.dm.testcdrule.f1
+- sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73b05f76f59141094279a8b4231b88e9d9ba6999
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# クロス ドメイン ルールの作成
-  このトピックでは、[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースの複合ドメインに対するクロス ドメイン ルールを作成する方法について説明します。 クロス ドメイン ルールとは、複合ドメインに含まれる単一ドメインの値の間の関係をテストするルールです。 ドメイン値が正確で、ビジネス要件に準拠していると見なされるためには、クロス ドメイン ルールが複合ドメイン全体に当てはまる必要があります。 クロス ドメイン ルールは、ドメイン値の検証、修正、および標準化のために使用されます。  
+# <a name="create-a-cross-domain-rule"></a>クロス ドメイン ルールの作成
+  このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースの複合ドメインに対するクロス ドメイン ルールを作成する方法について説明します。 クロス ドメイン ルールとは、複合ドメインに含まれる単一ドメインの値の間の関係をテストするルールです。 ドメイン値が正確で、ビジネス要件に準拠していると見なされるためには、クロス ドメイン ルールが複合ドメイン全体に当てはまる必要があります。 クロス ドメイン ルールは、ドメイン値の検証、修正、および標準化のために使用されます。  
   
  クロス ドメイン ルールの If 句と Then 句は、それぞれ複合ドメイン内の 1 つの単一ドメインに対して定義されます。 それぞれの句を異なる単一ドメインに対して定義する必要があります。 クロス ドメイン ルールは、複数の単一ドメインに関連付ける必要があります。複合ドメインに対して単純なドメイン ルール (単一ドメインのみに対するルール) を定義することはできません。 そのため、単一ドメインに対してドメイン ルールを定義します。 If 句と Then 句のそれぞれに 1 つ以上の条件を含めることができます。  
   
  クロス ドメイン ルールに明確な条件が含まれている場合、その条件では、特定の値だけでなくその値のシノニムにもルールのロジックが適用されます。 If 句と Then 句の明確な条件とは、"値が次の値と等しい"、"値が次の値と等しくない"、"値が次の中に存在する"、または "値が次の中に存在しない" です。 たとえば、複合ドメインに対する "For 'City', if Value is equal to 'Los Angeles', then for 'State', Value is equal to 'CA'" というクロス ドメイン ルールでは、 'Los Angeles' と 'LA' がシノニムであれば、'Los Angeles CA' と 'LA CA' は "適切" になり、'Los Angeles WA' と 'LA WA' は "エラー" になります。  
   
- 除いて知らせるだけでなく、明確なクロス ドメイン ルールの有効性に関して *し* 、クロス ドメイン ルールの句 **値は**, も、データ クレンジング アクティビティ中に、データを修正します。 詳細については、「 [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) 」の「 [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md)」を参照してください。  
+ クロス ドメイン ルールの明確な *Then* 句の **"値が次の値と等しい"**では、単にクロス ドメイン ルールの有効性について知らせるだけでなく、データ クレンジング アクティビティ中にデータの修正も行います。 詳細については、「 [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) 」の「 [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md)」を参照してください。  
   
  クロス ドメイン ルールは、単一ドメインのみに影響するすべての単純なルールの後に考慮されます。 値が単一ドメインのルールに適合する場合しか、クロス ドメイン ルールは適用されません。 ルールの対象となる複合ドメインと単一ドメインはすべて、ルールを実行する前に定義されている必要があります。  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 13
   
 ##  <a name="Create"></a> クロス ドメイン ルールの作成  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]**をクリックします。 詳細については、「 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) 」または「 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)」を参照してください。  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 13
   
 5.  **[新しいドメイン ルールの追加]**をクリックし、ルールの名前と説明を入力します。  
   
-6.  選択 **Active** ルールが実行されます (既定)、ルールが実行されないようにする場合はオフであることを指定します。  
+6.  ルールが実行されるようにする場合は、 **[アクティブ]** を選択します (既定値)。実行されないようにする場合は選択を解除します。  
   
 7.  次の手順に従って If 句を作成します。  
   
@@ -79,11 +84,11 @@ caps.handback.revision: 13
   
 1.  次の手順に従ってクロス ドメイン ルールをテストします。  
   
-    1.  クリックして、 **のテスト データを選択したドメイン ルールを実行** 複合ドメインのペインの右上隅のアイコン。  
+    1.  複合ドメインのペインの右上隅にある **[テスト データについて選択したドメイン ルールを実行します]** アイコンをクリックします。  
   
     2.  **[ドメイン ルールのテスト]** ダイアログ ボックスで、 **[ドメイン ルールの新しいテスト用語を追加]** アイコンをクリックします。  
   
-    3.  If 句に関連付けられている単一ドメインと Then 句に関連付けられている単一ドメインのそれぞれについて、テスト値を入力します。 入力したテスト値の場合は、句がその句の条件を満たす必要がありますかに疑問符 () が入力されます、 **有効** クロス ドメイン ルールは、テスト データには適用されませんを示す列です。  
+    3.  If 句に関連付けられている単一ドメインと Then 句に関連付けられている単一ドメインのそれぞれについて、テスト値を入力します。 If 句に入力したテスト値は、その句の条件を満たす必要があります。条件を満たさない場合、 **[有効性]** 列に疑問符が表示され、クロス ドメイン ルールがテスト データに適用されません。  
   
     4.  **[ドメイン ルールの新しいテスト用語を追加]** アイコンをもう一度クリックして、別の一連のテスト値を追加します。  
   
@@ -91,9 +96,9 @@ caps.handback.revision: 13
   
     6.  テストが完了したら、 **[複合ドメイン ルールのテスト]** ダイアログ ボックスの **[閉じる]** をクリックします。  
   
-2.  クロス ドメイン ルールが完了したら、クリックして **完了** 」の説明に従って、ドメイン管理アクティビティを完了する [ドメイン管理アクティビティを終了](../Topic/End%20the%20Domain%20Management%20Activity.md)します。  
+2.  クロス ドメイン ルールが完成したら、 **[完了]** をクリックし、「 [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
   
 ##  <a name="FollowUp"></a> 補足情報: クロス ドメイン ルールの作成後  
- クロス ドメイン ルールを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳細については、次を参照してください。 [ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md), 、[ドメインの管理](../data-quality-services/managing-a-domain.md), 、または [照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)します。  
+ クロス ドメイン ルールを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
   

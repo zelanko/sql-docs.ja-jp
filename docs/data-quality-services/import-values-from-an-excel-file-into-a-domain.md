@@ -1,27 +1,32 @@
 ---
 title: "値を Excel ファイルからドメインへインポートする | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.kb.importfailing.f1"
-  - "sql13.dqs.kb.importselect.f1"
-  - "sql13.dqs.kb.failingvalues.f1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.kb.importfailing.f1
+- sql13.dqs.kb.importselect.f1
+- sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c007da5bb365b81cd3a8bdd570c139077e44afbd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# 値を Excel ファイルからドメインへインポートする
-  このトピックでは、[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で Excel ファイルからドメインにデータをインポートする方法について説明します。 Excel ファイルを使用して [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションにドメイン値をインポートすることで、ナレッジの生成処理を簡略化し、時間と労力を節約します。 この処理では、有効なデータ値の一覧が保存された Excel ファイルまたはテキスト ファイルを使用して、それらの値をドメインにインポートすることができます。 Excel ファイルからドメインにドメイン値をインポートしたり、ナレッジ ベースにドメインをインポートしたりできます (参照 [ナレッジ検出で Excel ファイルからインポート ドメイン](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) の詳細については、ナレッジ ベースにドメインをインポートする方法です)。Excel ファイルへのエクスポートはサポートされていません。  
+# <a name="import-values-from-an-excel-file-into-a-domain"></a>値を Excel ファイルからドメインへインポートする
+  このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で Excel ファイルからドメインにデータをインポートする方法について説明します。 Excel ファイルを使用して [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションにドメイン値をインポートすることで、ナレッジの生成処理を簡略化し、時間と労力を節約します。 この処理では、有効なデータ値の一覧が保存された Excel ファイルまたはテキスト ファイルを使用して、それらの値をドメインにインポートすることができます。 Excel ファイルからドメインにドメイン値をインポートしたり、ナレッジ ベースにドメインをインポートしたりできます (ナレッジ ベースへのドメインのインポートについて詳しくは、「[ナレッジ検出でドメインを Excel ファイルからインポートする](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)」をご覧ください)。Excel ファイルへのエクスポートはサポートされていません。  
   
  データ値は、次の 2 とおりの方法でインポートできます。  
   
@@ -32,16 +37,16 @@ caps.handback.revision: 26
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
- Excel ファイルからドメインをインポートするには、コンピューターに Excel をインストールする、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ドメイン値または完全なドメインをインポートするためにアプリケーションがインストールされている、ドメイン値を含む Excel ファイルを作成する必要があります (を参照してください [インポートの動作](#How)); しして作成してドメインをインポートするナレッジ ベースを開く必要があります。  
+ Excel ファイルからドメイン値または完全なドメインをインポートするには、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションがインストールされているコンピューターに Excel がインストールされていること、ドメイン値を含む Excel ファイルが作成されていること (「 [How the import works](#How)」を参照)、およびドメインをインポートするナレッジ ベースが作成されていて開いていることが必要です。  
   
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> アクセス許可  
  Excel ファイルからドメイン値をインポートするには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="Import"></a> 値を Excel ファイルからドメインへインポートする  
+##  <a name="Import"></a> Import values from an Excel file into a domain  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)です。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ドメイン管理アクティビティ内のナレッジ ベースを開きます。  
   
@@ -53,9 +58,9 @@ caps.handback.revision: 26
   
 6.  **[ドメイン値のインポート]** ダイアログ ボックスで、 **[参照]**をクリックします。  
   
-7.   **ファイルを選択します** ダイアログ ボックスで、ドメイン値をインポート、(拡張子は .xlsx、.xls、または .csv)、ファイルを選択し、をクリックする Excel ファイルを格納するフォルダへ移動 **開く**します。 選択するファイルは、DQS を実行しているクライアント上のファイルか、ユーザーがアクセスできる共有ファイルでなければなりません。  
+7.  **[ファイルを選択します]** ダイアログ ボックスで、ドメイン値のインポート元の Excel ファイルが格納されているフォルダーに移動し、ファイル (拡張子が .xlsx、.xls、または .csv のファイル) を選択して **[開く]**をクリックします。 選択するファイルは、DQS を実行しているクライアント上のファイルか、ユーザーがアクセスできる共有ファイルでなければなりません。  
   
-8.   **ワークシート** ドロップダウン リストからインポートするワークシートを選択します。  
+8.  **[ワークシート]** ボックスの一覧で、インポートするワークシートを選択します。  
   
 9. ワークシートの先頭の行がドメイン名を表し、残りのすべての行が有効なドメイン値を表す場合は、 **[先頭の行を見出しとして使用]** をオンにします。  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 26
 14. **[完了]** をクリックしてナレッジ ベースに値を追加します。  
   
 ##  <a name="FollowUp"></a> 補足情報: Excel ファイルからドメインに値をインポートした後  
- ドメインに値をインポートした後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳細については、次を参照してください。 [ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md), 、[ドメインの管理](../data-quality-services/managing-a-domain.md), 、または [照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)します。  
+ ドメインに値をインポートした後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
 ##  <a name="Synonyms"></a> シノニムのインポート  
  シノニムのインポートの動作は次のとおりです。  
@@ -87,7 +92,7 @@ caps.handback.revision: 26
   
 -   アプリケーションで何かの理由により手動で値を関連付けることができない場合、インポート操作で適用されません。  
   
-##  <a name="How"></a> インポートの動作  
+##  <a name="How"></a> How the import works  
  インポート操作でインポートされる値を次に示します。  
   
  DQS のインポート操作では、Excel ファイルからのインポートが次のように実行されます。  
@@ -102,11 +107,11 @@ caps.handback.revision: 26
   
 -   各行はドメイン値を表します。  
   
--   先頭の行は、 **[先頭の行を見出しとして使用]** チェック ボックスの設定に応じて、ドメインを表すか、最初のデータ値またはレコードになる .xslx ファイルまたは .xls ファイルを使用する場合に **[先頭の行を見出しとして使用]** をオンにすると、null の列名は自動的に F*n*に変換され、重複する列には番号が付加されます。  
+-   先頭の行は、 **[先頭の行を見出しとして使用]** チェック ボックスの設定に応じて、ドメインを表すか、最初のデータ値またはレコードになる .xslx ファイルまたは .xls ファイルを使用する場合に **Use First Row as header** をオンにすると、null の列名は自動的に F*n*に変換され、重複する列には番号が付加されます。  
   
 -   インポート操作を完了前に取り消した場合、操作がロールバックされ、データはインポートされません。  
   
--   最初の列の値はドメインにインポートされます。 最初の列だけでなく 1 つ以上の列が指定されている場合のこれらの列の値をシノニムとして追加されます (表示 [シノニムのインポート](#Synonyms))。  
+-   最初の列の値はドメインにインポートされます。 最初の列のほかに 1 つ以上の列を追加する場合、それらの列の値はシノニムとして追加されます (「 [シノニムのインポート](#Synonyms)」を参照してください)。  
   
     -   最初の列が先頭の値と見なされ、2 列目以降はシノニムと見なされます。  
   

@@ -1,23 +1,28 @@
 ---
 title: "参照データ (外部) のナレッジを使用したデータのクレンジング | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 453eb45dcefe48397911039ab075b4bb301774a9
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# 参照データ (外部) のナレッジを使用したデータのクレンジング
-  このトピックでは、参照データ プロバイダーから提供されるナレッジを使用してデータをクレンジングする方法について説明します。 クレンジング アクティビティでは実行中のすべての手順を実行中には同じで説明したように、参照データ プロバイダーから提供されるナレッジを使用してデータをクレンジングするため、 [データを使用して DQS のクレンジング & #40";"内部"&"#41 です。ナレッジ](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md), 、このトピックで参照データ サービスを使用してデータのクレンジングに固有の情報を提供する [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)。  
+# <a name="cleanse-data-using-reference-data-external-knowledge"></a>参照データ (外部) のナレッジを使用したデータのクレンジング
+  このトピックでは、参照データ プロバイダーから提供されるナレッジを使用してデータをクレンジングする方法について説明します。 クレンジング アクティビティを実行する手順は、参照データ プロバイダーから提供されるナレッジを使ってデータをクレンジングする場合も「[DQS &#40;内部&#41; ナレッジを使用したデータのクレンジング](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)」で説明した手順とすべて同じですが、このトピックでは、[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) での参照データ サービスを使ったデータ クレンジングに固有の情報を示します。  
   
  DQS の参照データ サービス機能を使用してデータをクレンジングする場合、DQS のクレンジング プロセスで、マップされたドメイン値がバッチ要求として参照データ サービス プロバイダーに送信されます。 参照データ サービスから、次の情報を含む応答が返されます。  
   
@@ -32,16 +37,16 @@ caps.handback.revision: 15
 -   ドメインを参照データ サービスにマップするときに指定した **[自動修正しきい値]** と **[最小信頼度]** の値に基づいて、ドメイン値が信頼レベルに応じて自動的に修正または提案されます。  
   
     > [!NOTE]  
-    >  参照データ サービスのナレッジを使用してデータをクレンジングするときは、 **[全般設定]** タブの **[構成]** セクションで指定したしきい値ではなく、参照データ サービスにドメインをマップするときに指定したしきい値が適用されます。 参照データのクレンジングのためのしきい値の値を指定する方法の詳細については、手順 9. でを参照してください。 [アタッチ ドメインまたは複合ドメインの参照データを](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)します。  
+    >  参照データ サービスのナレッジを使用してデータをクレンジングするときは、 **[全般設定]** タブの **[構成]** セクションで指定したしきい値ではなく、参照データ サービスにドメインをマップするときに指定したしきい値が適用されます。 参照データのクレンジングのしきい値の指定については、「[参照データへのドメインまたは複合ドメインのアタッチ](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)」の手順 9 をご覧ください。  
   
 -   ドメイン値が " **提案**"、" **新規**"、" **無効**"、" **修正済み**"、および " **適切**" に分類されます。  
   
 -   追加データがソースに追加され、クレンジングされたデータと一緒に情報をエクスポートできるようになります。  
   
-## はじめに  
+## <a name="before-you-begin"></a>はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
- DQS のナレッジ ベース内の必要なドメインを適切な参照データ サービスにマップしておく必要があります。 また、クレンジングするデータの種類に関するナレッジがナレッジ ベースに含まれている必要があります。 たとえば、米国の住所が格納されたソース データをクレンジングする場合は、米国の住所に関する高品質データを提供する参照データ サービス プロバイダーにドメインをマップする必要があります。 詳細については、次を参照してください。 [アタッチ ドメインまたは複合ドメインの参照データを](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)します。  
+ DQS のナレッジ ベース内の必要なドメインを適切な参照データ サービスにマップしておく必要があります。 また、クレンジングするデータの種類に関するナレッジがナレッジ ベースに含まれている必要があります。 たとえば、米国の住所が格納されたソース データをクレンジングする場合は、米国の住所に関する高品質データを提供する参照データ サービス プロバイダーにドメインをマップする必要があります。 詳細については、「 [参照データへのドメインまたは複合ドメインのアタッチ](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)」を参照してください。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -49,22 +54,22 @@ caps.handback.revision: 15
  データ クレンジングを実行するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_kb_operator ロールが必要です。  
   
 ##  <a name="Cleanse"></a> 参照データのナレッジを使用したデータのクレンジング  
- 前のトピックでは、マップしたドメインを使用しての同じ例を使用していく [アタッチ ドメインまたは複合ドメインの参照データを](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md), 、Windows Azure Marketplace の Melissa Data サービスとします。 ここでは、同じドメインを使用して、いくつかのサンプルの米国の住所をクレンジングします。 データをクレンジングする手順は、同じ」の説明に従って [データを使用して DQS のクレンジング & #40";"内部"&"#41 です。ナレッジ](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)します。 処理中に注意が必要な箇所には説明を補足しています。  
+ このトピックでは、引き続き、前のトピック「[参照データへのドメインまたは複合ドメインのアタッチ](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)」で Windows Azure Marketplace の Melissa Data サービスにマップしたドメインを例として使います。 ここでは、同じドメインを使用して、いくつかのサンプルの米国の住所をクレンジングします。 データをクレンジングする手順は、「[DQS &#40;内部&#41; ナレッジを使用したデータのクレンジング](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)」で説明されているものと同じです。 処理中に注意が必要な箇所には説明を補足しています。  
   
 1.  データ品質プロジェクトを作成し、 **[クレンジング]** アクティビティを選択します。 「 [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md)」を参照してください。  
   
 2.  **[マップ]** ページで、 **Address Line**、 **City**、 **State**、および **Zip**の 4 つのドメインをソース データの適切な列にマップします。 **[次へ]**をクリックします。  
   
     > [!NOTE]  
-    >  内で 4 つすべてのドメインをマップしている、 **Address Verification** 複合ドメインは、データ クレンジングはここで行われます複合ドメイン レベル、および個々 のドメイン レベルではなく。  
+    >  **Address Verification** 複合ドメイン内の 4 つのドメインをすべてマップしているため、データ クレンジングは、個々のドメイン レベルではなく、複合ドメイン レベルで実行されます。  
   
-3.   **整備** ] ページをクリックして、コンピューター支援型クレンジング プロセスを実行 **開始**します。 クレンジング プロセスが完了したら、 **[次へ]**をクリックします。  
+3.  **[最適化]** ページで、 **[開始]**をクリックしてコンピューター支援型のクレンジング プロセスを実行します。 クレンジング プロセスが完了したら、 **[次へ]**をクリックします。  
   
     > [!NOTE]  
-    >   **整備** ] ページで、DQS には 2 つの方法を次のデータ サービスに参照にアタッチされているドメインに関する情報が表示されます。  
+    >  **[最適化]** ページには、参照データ サービスにアタッチされているドメインに関する情報が次の 2 とおりの方法で表示されます。  
     >   
-    >  -   下に、メッセージが表示されます、 **開始** ] ボタンをクリックします"ドメイン \< Domain1>, 、\< Domain2>,...。 \< DomainN> 参照データ サービス プロバイダーを使用してクレンジングされます"。 この例の場合、“ドメイン Address Verification を、参照データ サービス プロバイダーを使用してクレンジングします” というメッセージが表示されます。  
-    > -   アイコン、 ![RDS にドメインがアタッチされている](../data-quality-services/media/dqs-rdsindicator.png "RDS にドメインがアタッチされている"), に表示される、 **プロファイラー** 参照データ サービス プロバイダーに接続されているドメインの一覧の領域です。 この例の場合、 **Address Verification** 複合ドメインに対してこのアイコンが表示されます。  
+    >  -   **[開始]** ボタンの下に、“ドメイン \<Domain1>、\<Domain2>、...  \<DomainN> を、参照データ サービス プロバイダーを使用してクレンジングします” というメッセージが表示されます。 この例の場合、“ドメイン Address Verification を、参照データ サービス プロバイダーを使用してクレンジングします” というメッセージが表示されます。  
+    > -   参照データ サービス プロバイダーにアタッチされているドメインに対して、**[プロファイラー]** 領域にアイコン ![RDS にドメインがアタッチされている](../data-quality-services/media/dqs-rdsindicator.JPG "RDS にドメインがアタッチされている") が表示されます。 この例の場合、 **Address Verification** 複合ドメインに対してこのアイコンが表示されます。  
   
 4.  **[結果の管理と表示]** ページで、ドメイン値を確認します。 参照データ サービスでは、値に対する提案が複数ある場合、参照データ サービスにドメインをマップするときに **[提案された候補]** ボックスで指定した提案の最大数に応じて表示できます。 たとえば、次の米国の住所に対しては 2 つの提案が表示されます。  
   
@@ -81,16 +86,16 @@ caps.handback.revision: 15
     |1 Microsoft Way|Redmond|WA|98052|  
     |PO Box 1|Redmond|WA|98073|  
   
-     ![Reference Data Services の使用によるクレンジング](../data-quality-services/media/dqs-rdscleansing.JPG "Reference Data Services の使用によるクレンジング")  
+     ![参照データ サービスを使ったクレンジング](../data-quality-services/media/dqs-rdscleansing.JPG "参照データ サービスを使ったクレンジング")  
   
     > [!NOTE]  
     >  複合ドメインについては、さらに、コンピューター支援型のクレンジング プロセスで修正された個々のドメインが別の色で強調表示されます。 たとえば、この例では、 **Address Line** ドメインと **State** ドメインが修正されているため、それらのドメインがシアンで強調表示されます。  
   
 5.  すべてのドメイン値の確認が完了したら、 **[次へ]** をクリックしてデータをエクスポートします。  
   
-6.   **エクスポート** ] ページで表示されます (ソース、理由、信頼度、およびステータス) は、各ドメインに対してクレンジング アクティビティに関する通常の情報が追加情報により Melissa Data 参照データ サービス アドレス、郡の名前、アドレスの緯度と経度など、住所データに関して (高層ビルや番地など) を入力したり提供します。  
+6.  **[エクスポート]** ページに、各ドメインのクレンジング アクティビティに関する通常の情報 (ソース、理由、信頼度、およびステータス) に加え、住所データに関して Melissa Data 参照データ サービスから提供された追加の情報が表示されます。これには、住所の経度と緯度、郡の名前、住所タイプ (高層ビルや番地) などが含まれます。  
   
-7.  (SQL Server、CSV、または Excel) には、必要な転送先にデータをエクスポートし、をクリックして **完了** プロジェクトを閉じます。  
+7.  目的のエクスポート先 (SQL Server、CSV、または Excel) にデータをエクスポートし、 **[完了]** をクリックしてプロジェクトを閉じます。  
   
     > [!IMPORTANT]  
     >  Excel の 64 ビット版を使用している場合、クレンジングされたデータは Excel ファイルにエクスポートできません。SQL Server データベースまたは .csv ファイルにのみエクスポートできます。  

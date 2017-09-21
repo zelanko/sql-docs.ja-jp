@@ -1,22 +1,27 @@
 ---
 title: "DQS データベースのバックアップと復元 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6bab5e3ddb4473a949b12f0ce001a947262966c7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# DQS データベースのバックアップと復元
+# <a name="backing-up-and-restoring-dqs-databases"></a>DQS データベースのバックアップと復元
   このトピックでは、DQS データベースのバックアップと復元を行う方法について説明します。  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
@@ -43,7 +48,7 @@ caps.handback.revision: 12
   
 2.  オブジェクト エクスプローラーで、 **[データベース]** ノードを展開します。  
   
-3.  DQS_STAGING_DATA データベースをバックアップします。 SQL Server データベースのバックアップの詳しい手順については、「 [#40; データベースの完全バックアップする (& r)SQL Server と #41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)します。  
+3.  DQS_STAGING_DATA データベースをバックアップします。 SQL Server データベースのバックアップ手順について詳しくは、「[データベースの完全バックアップの作成 &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)」をご覧ください。  
   
 4.  DQS_PROJECTS データベースをバックアップします。  
   
@@ -51,15 +56,15 @@ caps.handback.revision: 12
   
 6.  SQL Server の現在のインスタンスから切断し、データベースを復元する SQL Server インスタンスに接続します。  
   
-7.  DQS_MAIN データベースを復元します。 SQL Server データベースを復元する手順の詳細については、次を参照してください。 [復元、データベースのバックアップを使用して SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)します。  
+7.  DQS_MAIN データベースを復元します。 SQL Server データベースを復元する手順については、「[SSMS を使用したデータベース バックアップの復元](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)」をご覧ください。  
   
 8.  DQS_PROJECTS データベースを復元します。  
   
 9. DQS_STAGING_DATA データベースを復元します。  
   
-10. オブジェクト エクスプ ローラーで、サーバーを右クリックし、をクリックして **新しいクエリ**します。  
+10. オブジェクト エクスプローラーでサーバーを右クリックし、 **[新しいクエリ]**をクリックします。  
   
-11. クエリ エディター ウィンドウで次の SQL ステートメントをコピーして置き換える *\< パスワード>* データベース マスター_キーの DQS のインストール中に指定したパスワードを使用します。  
+11. クエリ エディター ウィンドウに次の SQL ステートメントをコピーし、*\<PASSWORD>* を DQS サーバーのインストール中に入力したデータベース マスター キーのパスワードで置き換えます。  
   
     ```  
     USE [DQS_MAIN]  
@@ -71,7 +76,7 @@ caps.handback.revision: 12
   
 12. F5 キーを押してステートメントを実行します。 **[結果]** ペインを確認してステートメントが正常に実行されたことを確認します。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [DQS データベースの管理](../data-quality-services/manage-dqs-databases.md)  
   
   

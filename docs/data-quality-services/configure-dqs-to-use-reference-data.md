@@ -1,32 +1,37 @@
 ---
 title: "参照データを使用する DQS の構成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.administration.rdsconfiguration.f1"
-  - "sql13.dqs.administration.configuration.createDirectRDS.f1"
-  - "sql13.dqs.admin.config.rds.f1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.administration.rdsconfiguration.f1
+- sql13.dqs.administration.configuration.createDirectRDS.f1
+- sql13.dqs.admin.config.rds.f1
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: db1e4d797fa5794c24569f18e300bc4ab64c725c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# 参照データを使用する DQS の構成
+# <a name="configure-dqs-to-use-reference-data"></a>参照データを使用する DQS の構成
   このトピックでは、データのクレンジングに参照データを使用するように [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) を構成する方法について説明します。 Windows Azure Marketplace、またはダイレクト オンライン サード パーティ参照データ プロバイダーの参照データを使用することができます。  
   
-## はじめに  
+## <a name="before-you-begin"></a>はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
- Marketplace の参照データを使用するには、Marketplace の有効なアカウント キーを所有している必要があります。 Marketplace アカウント キーの作成の詳細については、次を参照してください。 [アカウントの作成](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936)。 Marketplace のアカウント キーは、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 内で作成することもできます。 **のホーム画面で、** [管理] **の下の** [構成] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] をクリックし、 **[参照データ]** タブの **[DataMarket のアカウント ID を作成]** をクリックします。  
+ Marketplace の参照データを使用するには、Marketplace の有効なアカウント キーを所有している必要があります。 Marketplace のアカウント キーの作成方法の詳細については、「 [アカウントの作成](http://go.microsoft.com/fwlink/?LinkId=212936) 」(http://go.microsoft.com/fwlink/?LinkId=212936) を参照してください。 Marketplace のアカウント キーは、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 内で作成することもできます。 **のホーム画面で、** [管理] **の下の** [構成] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] をクリックし、 **[参照データ]** タブの **[DataMarket のアカウント ID を作成]** をクリックします。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 15
   
 ##  <a name="Marketplace"></a> Marketplace の参照データを使用する DQS の構成  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、 **[管理]**の下の **[構成]**をクリックします。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 15
   
 ##  <a name="ThirdParty"></a> ダイレクト オンライン サード パーティ参照データ プロバイダーの参照データを使用する DQS の構成  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、 **[管理]**の下の **[構成]**をクリックします。  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 15
   
     1.  **[名前]** ボックスに、新しいダイレクト参照データ サービス プロバイダーの名前を入力します。  
   
-    2.  (省略可能) **説明** ボックスに、新しいダイレクト参照データ サービス プロバイダーの説明を入力します。  
+    2.  (省略可) **[説明]** ボックスに、新しいダイレクト参照データ サービス プロバイダーの説明を入力します。  
   
     3.  **[カテゴリ]** ボックスに、新しいダイレクト参照データ サービス プロバイダーによって提供されるデータのカテゴリを入力します。  
   
@@ -76,6 +81,6 @@ caps.handback.revision: 15
  新しく構成されたダイレクト オンライン サード パーティ参照データ サービス プロバイダーの参照データ サービスを DQS で使用する準備が整いました。  
   
 ##  <a name="FollowUp"></a> 補足情報: 参照データを使用するように DQS を構成した後  
- 必要なナレッジ ベース ドメインを、構成したデータ プロバイダーから提供される参照データにマップする必要があります。 これを行うには、次を参照してください。 [アタッチ ドメインまたは複合ドメインの参照データを](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)します。  
+ 必要なナレッジ ベース ドメインを、構成したデータ プロバイダーから提供される参照データにマップする必要があります。 方法については、「[参照データにドメインまたは複合ドメインをアタッチする](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)」をご覧ください。  
   
   

@@ -1,23 +1,28 @@
 ---
 title: ".dqs ファイルからのナレッジ ベースのインポート | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9914672b055d007c76e55f70a87c7af71225de0a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# .dqs ファイルからのナレッジ ベースのインポート
-  このトピックでは、[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で .dqs データ ファイルからナレッジ ベース全体をインポートする方法について説明します。 内から既存のナレッジ ベースをエクスポートすることによって、データ ファイルを作成する、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーション (を参照してください [ナレッジ ベースを .dqs ファイルにエクスポート](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md))。  
+# <a name="import-a-knowledge-base-from-a-dqs-file"></a>.dqs ファイルからのナレッジ ベースのインポート
+  このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で .dqs データ ファイルからナレッジ ベース全体をインポートする方法について説明します。 データ ファイルは、既存のナレッジ ベースを [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションでエクスポートすることによって作成します (「 [Export a Knowledge Base to a .dqs File](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)」を参照)。  
   
  .dqs データ ファイルを使用してナレッジ ベースのコンテンツをエクスポートし、後でそのコンテンツを同じ [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] の別のナレッジ ベースや異なる [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] にインポートすることで、ナレッジの生成処理を簡略化し、時間と労力を節約します。 ナレッジ ベースやその中のナレッジを他のユーザーと共有でき、他のユーザーの時間を節約できます。 .dqs ファイルには、ドメインや照合ポリシーを含むナレッジ ベースのすべての情報が含まれます。ただし、アタッチされた参照データ情報は含まれません。 発行済みのデータと発行されていないデータがインポートされます。  
   
@@ -35,9 +40,9 @@ caps.handback.revision: 17
 ####  <a name="Permissions"></a> アクセス許可  
  ナレッジ ベースを .dqs データ ファイルからインポートするには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="Import"></a> .dqs ファイルからのナレッジ ベースのインポート  
+##  <a name="Import"></a> Import a knowledge base from a .dqs file  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で **[新しいナレッジ ベース]**をクリックします。  
   
@@ -64,6 +69,6 @@ caps.handback.revision: 17
 13. Data Quality Services のホーム ページで、 **[最近使用したナレッジ ベース]**の下にナレッジ ベースが表示されていることを確認します。  
   
 ##  <a name="FollowUp"></a> 補足情報: .dqs ファイルからナレッジ ベースをインポートした後  
- .dqs ファイルからナレッジ ベースをインポートした後で、ナレッジ ベースのコンテンツに応じてナレッジをナレッジ ベースに追加したり、ナレッジ ベースをクレンジング プロジェクトや照合プロジェクトで使用したりすることができます。 詳細については、次を参照してください。 [ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md), 、[ドメインの管理](../data-quality-services/managing-a-domain.md), 、[複合ドメインの管理](../data-quality-services/managing-a-composite-domain.md), 、[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md), 、[データ クレンジング](../data-quality-services/data-cleansing.md), 、または [データ照合](../data-quality-services/data-matching.md)します。  
+ .dqs ファイルからナレッジ ベースをインポートした後で、ナレッジ ベースのコンテンツに応じてナレッジをナレッジ ベースに追加したり、ナレッジ ベースをクレンジング プロジェクトや照合プロジェクトで使用したりすることができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、「[複合ドメインの管理](../data-quality-services/managing-a-composite-domain.md)」、「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」、「[データ クレンジング](../data-quality-services/data-cleansing.md)」、または「[データ照合](../data-quality-services/data-matching.md)」をご覧ください。  
   
   

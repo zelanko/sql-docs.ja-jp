@@ -1,33 +1,38 @@
 ---
 title: "DQS ログ ファイルの重大度レベルの構成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.admin.config.log.f1"
-helpviewer_keywords: 
-  - "severity levels"
-  - "log files,severity levels"
-  - "dqs log files,severity levels"
-  - "logging,severity levels"
-  - "重大度レベルの構成"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.admin.config.log.f1
+helpviewer_keywords:
+- severity levels
+- log files,severity levels
+- dqs log files,severity levels
+- logging,severity levels
+- configure severity levels
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 336ea328d7a72ed46477781fb687135ee78b429a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/09/2017
+
 ---
-# DQS ログ ファイルの重大度レベルの構成
-  このトピックでは、[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] を使用して [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] (DQS) の各種のアクティビティやモジュールの重大度レベルを構成する方法について説明します。 重大度レベルとは、DQS で発生するイベントの重大度を定義したものです。 DQS のイベントの重大度レベルは次のとおりです。ここでは、重大度が高いものから順に示しています。  
+# <a name="configure-severity-levels-for-dqs-log-files"></a>DQS ログ ファイルの重大度レベルの構成
+  このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] を使用して [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)](DQS) の各種のアクティビティやモジュールの重大度レベルを構成する方法について説明します。 重大度レベルとは、DQS で発生するイベントの重大度を定義したものです。 DQS のイベントの重大度レベルは次のとおりです。ここでは、重大度が高いものから順に示しています。  
   
--   **致命的な**:/予期しない深刻な結果を引き起こす可能性のある重要なランタイム エラーです。  
+-   **Fatal**: 予期しない深刻な結果を引き起こす可能性がある重大な実行時エラー。  
   
 -   **Error**: その他の実行時エラー。  
   
@@ -35,9 +40,9 @@ caps.handback.revision: 11
   
 -   **Info**: エラーまたは警告以外の一般的なイベントに関する情報 (DQS のプロセスが開始されたなど)。  
   
--   **デバッグ**: (詳細)、イベント情報を詳しく説明します。  
+-   **Debug**: イベントに関する詳細な情報。  
   
- DQS の各種のアクティビティやモジュールの重大度レベルを構成することで、DQS の対応するアクティビティやモジュールについて、DQS ログ ファイルに書き込む情報をフィルター処理できます。 DQS アクティビティの重大度レベルを設定する場合など **警告**, 警告のみ、高、DQS のアクティビティに関連付けられている重要度メッセージ (Error と Fatal) が記録されます。  
+ DQS の各種のアクティビティやモジュールの重大度レベルを構成することで、DQS の対応するアクティビティやモジュールについて、DQS ログ ファイルに書き込む情報をフィルター処理できます。 たとえば、DQS のアクティビティの重大度レベルを **Warn**に設定すると、DQS のアクティビティに関連するメッセージのうち、警告メッセージとそれよりも重大度が高いメッセージ (Error と Fatal) だけがログに記録されます。  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -49,13 +54,13 @@ caps.handback.revision: 11
 ##  <a name="ConfigureActivity"></a> アクティビティ レベルでの重大度レベルの構成  
  DQS のドメイン管理、ナレッジ検出、照合ポリシー、データ クレンジング、データ照合、および参照データ サービスの各アクティビティについて、ログの重大度設定を構成することができます。 そのためには次を行います。  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で **[構成]**をクリックします。  
   
-3.  次に、クリックして、 **ログ設定** ] タブをクリックします。 次の DQS アクティビティのとおり、重大度レベルを選択できます。 **ドメイン管理**, 、**ナレッジ検出**, 、**クレンジング プロジェクト (例。RDS)**, 、**ポリシーに一致して、プロジェクトに一致する**, 、および **RDS**します。  
+3.  次に **[ログの設定]** タブをクリックします。重大度レベルを選択できる DQS のアクティビティ (**[ドメイン管理]**、**[ナレッジ検出]**、**[プロジェクトのクレンジング (例: RDS)]**、**[一致するポリシーと一致するプロジェクト]**、および **[RDS]**) が表示されます。  
   
-4.  DQS のアクティビティについて、ログに記録する重大度レベルを選択します。 **[Fatal]**、 **[Error]**、 **[Warn]**、 **[Info]**、および **[Debug]**のいずれかを選択できます。 たとえば、重大なメッセージだけが、ナレッジ検出アクティビティの DQS ログ ファイルに書き込む場合は、選択 **Fatal** に対してドロップダウン リストで、 **ナレッジ検出** アクティビティ。  
+4.  DQS のアクティビティについて、ログに記録する重大度レベルを選択します。 **[Fatal]**、 **[Error]**、 **[Warn]**、 **[Info]**、および **[Debug]**のいずれかを選択できます。 たとえば、ナレッジ検出アクティビティに対する重大なメッセージだけを DQS ログ ファイルに書き込む場合は、 **[ナレッジ検出]** アクティビティのドロップダウン リストで **[Fatal]** を選択します。  
   
     > [!NOTE]  
     >  既定では、各アクティビティについて **[Error]** が選択されています。 つまり、既定では、各アクティビティのエラー メッセージと重大なメッセージが DQS ログ ファイルに書き込まれます。  
@@ -77,17 +82,17 @@ caps.handback.revision: 11
   
 1.  **[ログの設定]** タブで、 **[詳細設定]** の下矢印をクリックして領域を表示します。  
   
-2.  表示されたグリッドでのドロップ ダウン リストからモジュール名を選択して、 **モジュール** 列です。  
+2.  表示されたグリッドで、 **[モジュール]** 列のドロップダウン リストからモジュール名を選択します。  
   
-3.  次に、ドロップダウン リストから、モジュールの重大度レベルを選択、 **重要度** 列です。 **[Fatal]**、 **[Error]**、 **[Warn]**、 **[Info]**、および **[Debug]**のいずれかを選択できます。  
+3.  次に、 **[重大度]** 列のドロップダウン リストからモジュールの重大度レベルを選択します。 **[Fatal]**、 **[Error]**、 **[Warn]**、 **[Info]**、および **[Debug]**のいずれかを選択できます。  
   
-     たとえば、ドメイン管理アクティビティに含まれるドメイン ルールの定義機能に対してドメイン管理アクティビティとは異なる粒度を設定するには、 **[Microsoft.Ssdqs.DomainRules.Define]** モジュールを選択し、別の重大度レベルを選択します。 同様に、クロス ドメイン ルール機能に対して異なる粒度レベルを設定を選択して、 **[microsoft.ssdqs.domainrules.condition.crossdomain]** モジュール、および別のログの重大度レベルを選択します。  
+     たとえば、ドメイン管理アクティビティに含まれるドメイン ルールの定義機能に対してドメイン管理アクティビティとは異なる粒度を設定するには、 **[Microsoft.Ssdqs.DomainRules.Define]** モジュールを選択し、別の重大度レベルを選択します。 同様に、クロス ドメイン ルール機能に対して異なる粒度を設定するには、 **[Microsoft.Ssdqs.DomainRules.Condition.CrossDomain]** モジュールを選択し、別の重大度レベルを選択します。  
   
 4.  必要に応じて、他のモジュールに対して手順 2. および 3. を繰り返します。 **[モジュールを追加します]** アイコンと **[モジュールを削除します]** アイコンをクリックして、グリッドの行を追加したり削除したりすることもできます。  
   
 5.  **[閉じる]**をクリックします。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [DQS ログ ファイルの詳細設定の構成](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  
   
   
