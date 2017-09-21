@@ -45,7 +45,7 @@ ms.lasthandoff: 08/03/2017
 |[&#124; & #124 です。& #40 です。論理 OR &#41;& #40 です。SSIS 式 &#41;](../../integration-services/expressions/logical-or-ssis-expression.md)|論理 OR 演算を実行します。|  
 |[& & & #40 です。論理 AND &#41;& #40 です。SSIS 式 &#41;](../../integration-services/expressions/logical-and-ssis-expression.md)|論理 AND 演算を実行します。|  
 |[!& #40 です。論理 Not &#41;& #40 です。SSIS 式 &#41;](../../integration-services/expressions/logical-not-ssis-expression.md)|ブール型のオペランドを否定します。|  
-|[& #124 です。& #40 です。ビット演算子包含的 OR &#41;& #40 です。SSIS 式 &#41;](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)|2 つの整数値の OR 演算をビット単位で実行します。|  
+|[&#124;です &#40;です。ビット演算子包含的 OR&#41; &#40です。SSIS 式&#41;](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)|2 つの整数値の OR 演算をビット単位で実行します。|  
 |[^ (& a) #40 です。ビットごとの排他的 OR &#41;& #40 です。SSIS 式 &#41;](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)|2 つの整数値の排他的 OR 演算をビット単位で実行します。|  
 |[& & #40 です。ビットごとの AND &#41;& #40 です。SSIS 式 &#41;](../../integration-services/expressions/bitwise-and-ssis-expression.md)|2 つの整数値の AND 演算をビット単位で実行します。|  
 |[~ & #40 です。ビットごとの Not &#41;& #40 です。SSIS 式 &#41;](../../integration-services/expressions/bitwise-not-ssis-expression.md)|整数の否定のビット演算を実行します。|  
