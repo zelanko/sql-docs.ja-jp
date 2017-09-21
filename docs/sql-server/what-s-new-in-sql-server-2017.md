@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 の新機能 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/31/2017
+ms.date: 09/14/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,13 +15,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: 0e254f84039defcc4a1e56cd966e8607efc92503
+ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
+ms.openlocfilehash: 42798d6ad1bf9554be5cb3bffd97f56e70ebbf9e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/15/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
+
 SQL Server 2017 は、SQL Server をプラットフォームとする方向に向けた大きな一歩を表します。そのプラットフォームは、SQL Server、Linux、Linux ベースの Docker コンテナー、および Windows の機能を利用することによって、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムの選択肢を提供します。 このトピックでは、最新の SQL Server 2017 リリース候補 (RC2、2017 年 8 月) およびコミュニティ テクニカル プレビュー (CTP) リリースでの特定の機能領域について、新機能をまとめて示します。
 
 [![Evaluation Center からダウンロードする](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) ** お試しください:** [最新の SQL Server 2017 リリース (RC2、2017 年 8 月) をダウンロードする](http://go.microsoft.com/fwlink/?LinkID=829477)。
@@ -29,7 +30,8 @@ SQL Server 2017 は、SQL Server をプラットフォームとする方向に�
 
 >**Linux での SQL Server の実行** 詳細については、「[SQL Server ドキュメントの再編成](https://docs.microsoft.com/sql/linux/)」を参照してください。
 
-## <a name="sql-server-2017-database-engine"></a>SQL Server 2017 データベース エンジン  
+## <a name="sql-server-2017-database-engine"></a>SQL Server 2017 データベース エンジン
+
 SQL Server 2017 には多くの新しいデータベース エンジン機能、機能強化、パフォーマンス向上が含まれています。 
 - CTP 2.0 で説明されている `clr strict security` 機能の回避策として、**CLR アセンブリ**をホワイトリストに追加できるようになりました。 信頼できるアセンブリ (RC1) のホワイトリストをサポートするために、[sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)、および [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) が追加されました。  
 - **再開可能なオンライン インデックス リビルド**は、障害 (レプリカへのフェールオーバーや、ディスク領域不足など) 発生後、一時停止した場所からオンライン インデックス リビルド操作を再開します。または、一時停止し、オンライン インデックス リビルド操作を後から再開します。 「[ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)」と「[オンライン インデックス操作のガイドライン](../relational-databases/indexes/guidelines-for-online-index-operations.md)」を参照してください。 (CTP 2.0)
@@ -101,15 +103,20 @@ CTP 2.1 の時点で、SSRS は SQL Server セットアップを通じてイン�
 
 詳細については、「[What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)」 (SQL Server Reporting Services (SSRS) の新機能) を参照してください。
 
-## <a name="sql-server-2017-machine-learning-services"></a>SQL Server 2017 Machine Learning サービス
+## <a name="machine-learning-in-sql-server-2017"></a>SQL Server 2017 での Machine Learning 
+
 R 言語に加えて Python がサポートされたことに合わせて、SQL Server R Services の名前が **SQL Server Machine Learning Services** に変更されました。 Machine Learning サービス (データベース内) を使用して、SQL Server で R または Python スクリプトを実行したり、**Microsoft Machine Learning Server (スタンドアロン)** をインストールして、SQL Server を必要としない R および Python のモデルを配置し、使用したりすることができます。 
 
-SQL Server での開発者は、オープン ソース エコシステムで入手できるさまざまな Python ML および AI ライブラリと、Microsoft の最新技術を利用できるようになりました。 
+SQL Server での開発者は、オープン ソース エコシステムで入手できるさまざまな Python ML および AI ライブラリと、Microsoft の最新技術を利用できるようになりました。
 
-- **revoscalepy** - この Python 向けバージョンの RevoScaleR には、線形およびロジスティック回帰用並列アルゴリズム、デシジョン ツリー、ブースト ツリー、ランダム フォレストだけでなく、データ変換とデータ移動、リモート計算コンテキスト、およびデータ ソース用の豊富な API が含まれています。
+- **revoscalepy** - この Python と同等の RevoScaleR には、線形およびロジスティック回帰用並列アルゴリズム、デシジョン ツリー、ブースト ツリー、ランダム フォレストだけでなく、データ変換とデータ移動、リモート計算コンテキスト、およびデータ ソース用の豊富な API が含まれています。
 - **microsoftml** - Python バインディングを使用したこの最新パッケージの機械学習アルゴリズムと変換には、深層ニューラル ネットワーク、高速なデシジョン ツリーとデシジョン フォレスト、線形およびロジスティック回帰用に最適化されたアルゴリズムが含まれています。 また、イメージの抽出や感情分析に使用できる ResNet モデルに基づくトレーニング済みモデルも用意されています。
 - **T-SQL を使用した Python 運用可能化** - ストアド プロシージャを使用して、Python コードを簡単に展開できます`sp_execute_external_script`。 SQL から Python プロセスへデータをストリーミングし、MPI リングの並列化を使用して、パフォーマンスを向上することができます。
 - **SQL Server 計算コンテキストでの Python** - データ サイエンティストと開発者は、データを移動することなく、開発環境からリモートで Python コードを実行し、データを探索してモデルを開発することができます。
+- **ネイティブ スコアリング** -  R がインストールされていない場合でも、Transact-SQL のPREDICT 関数を使用して、SQL Server 2017 の任意のインスタンスでスコアリングを実行できます。 必要なのは、サポートされている RevoScaleR と revoscalepy アルゴリズムのいずれかを使用してモデルをトレーニングし、新しいコンパクトなバイナリ形式でモデルを保存することだけです。
+- **パッケージの管理** - T-SQL では、DBA で R パッケージよりも優れた管理を実現する CREATE EXTERNAL LIBRARY ステートメントがサポートされるようになりました。 ロールを使用してプライベートまたは共有パッケージのアクセスを制御し、R パッケージをデータベースに格納して、ユーザー間で共有します。
+- **パフォーマンスの向上** - 列ストア データのバッチ モード実行をサポートするために、ストアド プロシージャ`sp_execute_external_script`が最適化されました。
+
 
 詳細については、「[What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)」 (SQL Server Machine Learning Services の新機能) を参照してください。
 
@@ -119,3 +126,4 @@ SQL Server での開発者は、オープン ソース エコシステムで入�
 - [SQL Server 2016 の新機能](what-s-new-in-sql-server-2016.md)を確認してください。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+

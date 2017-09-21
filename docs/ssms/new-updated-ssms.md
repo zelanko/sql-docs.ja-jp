@@ -12,14 +12,14 @@ ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 07/17/2017
+ms.date: 09/11/2017
 ms.author: genemi
 ms.workload: ssms-sql-server-management-studio
 ms.translationtype: HT
-ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
-ms.openlocfilehash: 4938dd27bf3f42cc85f22de99fef01adbad08ace
+ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
+ms.openlocfilehash: 917198902baf85f2bae57c9ade9f8d3e29dea357
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server"></a>新規または最近の更新: SQL Server の SQL Server Management Studio (SSMS)
@@ -34,7 +34,7 @@ ms.lasthandoff: 07/31/2017
 
 
 
-- *更新日の範囲:* &nbsp; **2017 年 5 月 23 日**&nbsp;から &nbsp; **2017 年 7 月 17 日**
+- *更新日の範囲:* &nbsp; **2017 年 7 月 18 日**&nbsp;から &nbsp; **2017 年 9 月 11 日**
 - *対象領域:* &nbsp; **SQL Server Management Studio (SSMS)**.
 
 
@@ -47,59 +47,7 @@ ms.lasthandoff: 07/31/2017
 以下のリンクは、最近追加された新しい記事に移動します。
 
 
-1. [サーバーの登録の変更 (SQL Server Management Studio)](register-servers/change-a-server-s-registration-sql-server-management-studio.md)
-2. [登録済みサーバーまたは登録済みサーバー グループの名前の変更](register-servers/change-the-name-of-registered-server-or-registered-server-group.md)
-3. [登録済みサーバーへの接続 (SQL Server Management Studio)](register-servers/connect-to-a-registered-server-sql-server-management-studio.md)
-4. [中央管理サーバーおよびサーバー グループの作成](register-servers/create-a-central-management-server-and-server-group.md)
-5. [新しい登録済みサーバーの作成 (SQL Server Management Studio)](register-servers/create-a-new-registered-server-sql-server-management-studio.md)
-6. [サーバー グループの作成または編集 (SQL Server Management Studio)](register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)
-7. [登録済みサーバーからの切断 (SQL Server Management Studio)](register-servers/disconnect-from-a-registered-server-sql-server-management-studio.md)
-8. [複数のサーバーに対するステートメントの同時実行](register-servers/execute-statements-against-multiple-servers-simultaneously.md)
-9. [登録済みサーバー情報のエクスポート (SQL Server Management Studio)](register-servers/export-registered-server-information-sql-server-management-studio.md)
-10. [登録済みサーバー情報のインポート (SQL Server Management Studio)](register-servers/import-registered-server-information-sql-server-management-studio.md)
-11. [登録済みサーバーまたは登録済みサーバー グループの移動](register-servers/move-a-registered-server-or-registered-server-group.md)
-12. [接続済みのサーバーの登録 (SQL Server Management Studio)](register-servers/register-a-connected-server-sql-server-management-studio.md)
-13. [[登録済みサーバー] の F1 ヘルプ](register-servers/registered-servers-f1-help.md)
-14. [サーバーの登録](register-servers/register-servers.md)
-15. [登録済みサーバーの削除 (SQL Server Management Studio)](register-servers/remove-a-registered-server-sql-server-management-studio.md)
-16. [サーバー グループの削除 (SQL Server Management Studio)](register-servers/remove-a-server-group-sql-server-management-studio.md)
-17. [SQL Server Management Studio で登録済みサーバーを表示する方法](register-servers/view-registered-servers-in-sql-server-management-studio.md)
-18. [SQL Server Management Studio のキーボード ショートカット](sql-server-management-studio-keyboard-shortcuts.md)
-19. [Ssms ユーティリティ](ssms-utility.md)
-20. [レッスン 1-1 - SQL Server Management Studio の起動](tutorials/lesson-1-1-start-sql-server-management-studio.md)
-21. [レッスン 1-2 - 登録済みサーバーおよびオブジェクト エクスプローラーを使用した接続](tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)
-22. [レッスン 1-3 - 環境レイアウトの変更](tutorials/lesson-1-3-change-the-environment-layout.md)
-23. [レッスン 1-4 - クエリ ウィンドウの表示](tutorials/lesson-1-4-display-the-query-window.md)
-24. [レッスン 1-5 - [オブジェクト エクスプローラーの詳細] ページの表示](tutorials/lesson-1-5-show-the-object-explorer-details-page.md)
-25. [レッスン 1-6 - キーボード ショートカット スキームの選択](tutorials/lesson-1-6-select-the-keyboard-shortcut-scheme.md)
-26. [レッスン 1-7 - 起動オプションの設定](tutorials/lesson-1-7-set-the-startup-options.md)
-27. [レッスン 1-8 - SQL Server Management Studio の既定の構成の復元](tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md)
-28. [レッスン 1-9 - まとめ - 基本操作](tutorials/lesson-1-9-summary-basic-navigation.md)
-29. [レッスン 1 : SQL Server Management Studio での基本操作](tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md)
-30. [レッスン 2-1 - クエリ エディターとの接続](tutorials/lesson-2-1-connecting-with-query-editor.md)
-31. [レッスン 2-2 - インデントの追加](tutorials/lesson-2-2-adding-indentation.md)
-32. [レッスン 2-3 - クエリ エディターの最大化](tutorials/lesson-2-3-maximizing-query-editor.md)
-33. [レッスン 2-4 - コメントの使用](tutorials/lesson-2-4-using-comments.md)
-34. [レッスン 2-5 - コード ウィンドウを表示するその他の方法](tutorials/lesson-2-5-other-ways-of-viewing-the-code-window.md)
-35. [レッスン 2-6 - テーブルのスクリプト作成](tutorials/lesson-2-6-script-a-table.md)
-36. [レッスン 2 : Transact-SQL の記述](tutorials/lesson-2-writing-transact-sql.md)
-37. [レッスン 3-1 - テンプレートを使用したスクリプトの作成](tutorials/lesson-3-1-create-scripts-using-templates.md)
-38. [レッスン 3-2 - カスタム テンプレートの作成](tutorials/lesson-3-2-create-custom-templates.md)
-39. [レッスン 3-3 - プロジェクトまたはソリューションとしてスクリプトを保存する](tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md)
-40. [レッスン 3-4 - まとめ - ソリューションとスクリプト プロジェクト](tutorials/lesson-3-4-summary-solutions-and-script-projects.md)
-41. [レッスン 3: テンプレート、ソリューション、およびスクリプト プロジェクトの操作](tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md)
-42. [チュートリアル : SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
-
-
-
-
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-## <a name="compact-list-of-articles-updated-recently"></a>最近更新された記事の簡易一覧
-
-この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
+1. [SQL Server Management Studio の出力ウィンドウ](output-window.md)
 
 
 
@@ -115,99 +63,262 @@ ms.lasthandoff: 07/31/2017
 
 
 
+
+
+&nbsp;
+
+<a name="compactupdatedlist"/>
+
+## <a name="compact-list-of-articles-updated-recently"></a>最近更新された記事の簡易一覧
+
+この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
+
+1. [SQL Server Management Studio (SSMS) のダウンロード](#TitleNum_1)
+2. [SQL Server または Azure SQL Database への接続](#TitleNum_2)
+3. [SQL Server Management Studio - Changelog (SSMS)](#TitleNum_3)
+4. [データベース テーブルの作成と更新](#TitleNum_4)
+
+
+
+
 &nbsp;
 
 &nbsp;
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-sql-server-management-studio---changelog-ssmssql-server-management-studio-changelog-ssmsmd"></a>1.&nbsp; [SQL Server Management Studio - 変更ログ (SSMS)](sql-server-management-studio-changelog-ssms.md)
+### <a name="1-nbsp-download-sql-server-management-studio-ssmsdownload-sql-server-management-studio-ssmsmd"></a>1.&nbsp; [SQL Server Management Studio (SSMS) のダウンロード](download-sql-server-management-studio-ssms.md)
 
-*更新日: 2017 年 6 月 8 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*更新日: 2017 年 8 月 7 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([次へ](#TitleNum_2))
+
+<!-- Source markdown line 63.  ms.author= "sstein".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 23260f301f86651061b47065bee43d42c92a7be4 0c2178d96b621b96bfcd2fbb782f24792debb407  (PR=2775  ,  Filename=download-sql-server-management-studio-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=3f12671ace99d5fefc199c7b1c2db31e5b3cfade) -->
+
+
+
+SSMS 17.2 は SQL Server Management Studio の最新バージョンです。 SSMS の 17.x 世代は、SQL Server 2008 から SQL Server 2017 までのほぼすべての機能領域をサポートしています。 バージョン 17.x は、SQL Analysis Service PaaS もサポートしています。
+
+バージョン 17.2 の内容:
+
+- Multi-Factor Authentication (MFA)
+  - 多要素認証を使用したユニバーサル認証 (UA with MFA) 向けの複数ユーザーの Azure AD 認証
+  - 複数ユーザーの認証をサポートするため、MFA を使用したユニバーサル認証用に新しいユーザー資格情報の入力フィールドが追加されました。
+- 接続ダイアログ ボックスで、次の 5 つの認証方法がサポートされるようになりました。
+  - [Windows 認証]
+  - SQL Server 認証 (SQL Server Authentication)
+  - Active Directory - Universal with MFA のサポート
+  - Active Directory - パスワード
+  - Active Directory - 統合
+
+- DacFx のデータベースの Import/Export ウィザードで、MFA を使用したユニバーサル認証が使用できるようになりました。
+- API のサポートについては、「[IUniversalAuthProvider インターフェイス](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx)」を参照してください。
+- MFA を使用した Azure AD ユニバーサル認証で使用される ADAL マネージ ライブラリは、バージョン 3.13.9 にアップグレードされました。
+- SQL Database および SQL Data Warehouse の Azure AD 管理者設定をサポートする新しい CLI インターフェイス。
+
+ Active Directory の認証方法の詳細については、「[SQL Database と SQL Data Warehouse でのユニバーサル認証 (MFA 対応の SSMS サポート)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)」と「[SQL Server Management Studio 用に Azure SQL Database の多要素認証を構成する](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication-configure)」を参照してください。
+
+- 出力ウィンドウには、オブジェクト エクスプローラー ノードの展開時に実行されるクエリのエントリがあります。
+- Azure SQL Databases のビュー デザイナーの有効化
+- SSMS でのオブジェクトのスクリプト作成の既定のスクリプト作成オプションが、オブジェクト エクスプローラーから変更されました。
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_2"/>
+
+### <a name="2-nbsp-connect-to-a-sql-server-or-azure-sql-databaseobjectconnect-to-an-instance-from-object-explorermd"></a>2.&nbsp; [SQL Server または Azure SQL Database への接続](object/connect-to-an-instance-from-object-explorer.md)
+
+*更新日: 2017 年 8 月 25 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([前へ](#TitleNum_1) | [次へ](#TitleNum_3))
+
+<!-- Source markdown line 40.  ms.author= "sstein".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 cfd72893c35c87df96dc8605807e542be28936e2 840981d3a115a15774a8e47ee2f6a0e5c4177b01  (PR=2961  ,  Filename=connect-to-an-instance-from-object-explorer.md  ,  Dirpath=docs\ssms\object\  ,  MergeCommitSha40=21f0cfd102a6fcc44dfc9151750f1b3c936aa053) -->
+
+
+
+   ![firewall--../media/connect-to-server/new-firewall-rule.png)
+
+1. ファイアウォール規則を作成して、サーバーに接続するには、[**OK**] をクリックします。
+
+1. 接続が正常に行われると、**オブジェクト エクスプローラー**にサーバー表示されます。
+
+   ![connected--../media/connect-to-server/connected.png)
+
+**次の手順**
+
+
+[Design, Create, and Update Tables--../visual-db-tools/design-tables-visual-database-tools.md)
+
+**関連項目**
+
+
+[SQL Server Management Studio (SSMS)--../sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)--../download-sql-server-management-studio-ssms.md)
+
+[Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)
+[Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)
+[Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_3"/>
+
+### <a name="3-nbsp-sql-server-management-studio---changelog-ssmssql-server-management-studio-changelog-ssmsmd"></a>3.&nbsp; [SQL Server Management Studio - 変更ログ (SSMS)](sql-server-management-studio-changelog-ssms.md)
+
+*更新日: 2017 年 8 月 7 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([前へ](#TitleNum_2) | [次へ](#TitleNum_4))
 
 <!-- Source markdown line 20.  ms.author= "sstein".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 1668cba64d4988192aedc6daf9362f288668682d 1733ce3c556db1e51cb27bf830429f2c42e8f97e  (PR=1975  ,  Filename=sql-server-management-studio-changelog-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=470e6c83318eaf8eb579d053f65b5353862eb4c7) -->
+<!-- git diff --ignore-all-space --unified=0 1733ce3c556db1e51cb27bf830429f2c42e8f97e 2abb24fd6547e438181039d095cbad027473a57e  (PR=2775  ,  Filename=sql-server-management-studio-changelog-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=3f12671ace99d5fefc199c7b1c2db31e5b3cfade) -->
 
 
 
-**SSMS 17.1 リリース**
+この記事では、SSMS の現在と以前のバージョンの更新、機能強化、およびバグの修正に関する詳細を提供します。 ダウンロード [previous SSMS versions below--#previous-ssms-releases)
 
-一般公開 | ビルド番号: 14.0.17119.0
+**[SSMS 17.2--download-sql-server-management-studio-ssms.md)**
+
+
+一般公開 | ビルド番号: 14.0.17177.0
 
 **機能強化**
 
 
-- プロファイラー: [ヘルプ] > [バージョン情報] でリリース バージョン番号 (例: 17.1) が表示されるようになりました
-- Analysis Service のユーザーは、データ ソースのコンテキスト メニューから 1200 TM モデル以降のデータ ソースの資格情報を更新できます
-- 組み込み SSIS レポートで、CTP 2.1 での SSIS スケールアウト実行からのログが表示されるようになりました
-- SSIS スケールアウト管理アプリケーション
-  - スケールアウト マスターに関する基本的な情報を表示します。
-  - スケールアウトの配置に worker を簡単に追加します。
-  - すべてのスケールアウト worker とそれらに関する基本情報を表示し、それらを簡単に有効化または無効化することもできます。
+- Multi-Factor Authentication (MFA)
+  - 多要素認証を使用したユニバーサル認証 (UA with MFA) 向けの複数ユーザーの Azure AD 認証
+  - 複数ユーザーの認証をサポートするため、MFA を使用したユニバーサル認証用に新しいユーザー資格情報の入力フィールドが追加されました。
+- 接続ダイアログ ボックスで、次の 5 つの認証方法がサポートされるようになりました。
+  - [Windows 認証]
+  - SQL Server 認証 (SQL Server Authentication)
+  - Active Directory - Universal with MFA のサポート
+  - Active Directory - パスワード
+  - Active Directory - 統合
 
-**バグの修正**
+- MFA を使用したユニバーサル認証を使用する DacFx のデータベースのインポート/エクスポート ウィザード。
+- API のサポートについては、「[IUniversalAuthProvider インターフェイス](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx)」を参照してください。
+- MFA を使用した Azure AD ユニバーサル認証で使用される ADAL マネージ ライブラリは、バージョン 3.13.9 にアップグレードされました。
+- SQL Database および SQL Data Warehouse の Azure AD 管理者設定のサポートが実現された新しい CLI インターフェイスの追加。
 
-- Always On:
-  - 可用性レプリカのプロパティが WSFC AG に対して常に "自動フェールオーバー" モードと表示された問題を修正しました。
-  - 可用性グループを更新すると読み取り専用ルーティング リストが上書きされた問題を修正しました
-- Always Encrypted: 生成されたログ ファイルに DacFx によって生成された情報が含まれない問題を修正しました。
-- プラン表示: 適応型結合ではない演算子に対して UI に常に 実際の結合の種類属性が表示されていた問題を修正しました。
-- セットアップ:
-  - SSMS 17.0 が Visual Studio 2013 の SSDT を壊していた問題を修正しました [Connect アイテム 3133479]
-  - セットアップの最後で [再起動] をクリックしてもコンピューターが再起動しなかった問題を修正しました
-- スクリプト: 削除スクリプトを作成しようとするときに SSMS が誤って Azure データベース オブジェクトを削除しないようにそのオプションを無効にすることで一時的に防止しています。  適切な修正は SSMS の今後のリリースで行われます。
-- オブジェクト エクスプローラー: "AS COPY" を使って作成された Azure データベースに接続したときに "データベース" ノードが展開されなかった問題を修正しました
+ Active Directory の認証方法の詳細については、「[SQL Database と SQL Data Warehouse でのユニバーサル認証 (MFA 対応の SSMS サポート)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)」と「[SQL Server Management Studio 用に Azure SQL Database の多要素認証を構成する](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication-configure)」を参照してください。
+
+- 出力ウィンドウには、オブジェクト エクスプローラー ノードの展開時に実行されるクエリのエントリがあります。
 
 
-
-
-
-
-<a name="similars2"/>
 
 &nbsp;
 
+&nbsp;
+
+---
+
+<a name="TitleNum_4"/>
+
+### <a name="4-nbsp-create-and-update-database-tablesvisual-db-toolsdesign-tables-visual-database-toolsmd"></a>4.&nbsp; [データベース テーブルの作成と更新](visual-db-tools/design-tables-visual-database-tools.md)
+
+*更新日: 2017 年 8 月 25 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([前へ](#TitleNum_3))
+
+<!-- Source markdown line 30.  ms.author= "sstein".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 f63884ac2d04889e70c505cb5262c8dd81d73ee7 4b4c7aa5e8a0548405f02d11a66b722219fa78f0  (PR=2961  ,  Filename=design-tables-visual-database-tools.md  ,  Dirpath=docs\ssms\visual-db-tools\  ,  MergeCommitSha40=21f0cfd102a6fcc44dfc9151750f1b3c936aa053) -->
+
+
+
+**テーブルの作成**
+
+
+1. データベースで **[テーブル]** ノードを右クリックし、**[新規作成]** > **[テーブル]** を選択します。
+
+    ![New table--../media/design-tables/new-table.png)
+
+1. [columns--column-properties-visual-database-tools.md) をテーブルに追加:
+
+    ![design table--../media/design-tables/new-table2.png)
+
+1. デザイナーを閉じて、変更を保存します。
+
+**テーブルを更新する**
+
+
+1. データベースの **[テーブル]** ノードの下にあるテーブルを右クリックし、**[デザイン]** を選択します。
+
+   ![Update table--../media/design-tables/update-table.png)
+
+1. 目的のテーブル設定を更新します。
+
+   ![--../media/design-tables/update-table2.png)
+
+1. デザイナーを閉じて、変更を保存します。
+
+**関連項目**
+
+
+[テーブル](http://msdn.microsoft.com/82d7819c-b801-4309-a849-baa63083e83f) [Table Properties &#40;Visual Database Tools&#41;--../../ssms/visual-db-tools/table-properties-visual-database-tools.md) [Column Properties--column-properties-visual-database-tools.md) [Add Columns to a Table--../../relational-databases/tables/add-columns-to-a-table-database-engine.md) [Primary and Foreign Keys--../../relational-databases/tables/primary-and-foreign-key-constraints.md) [Indexes--../../relational-databases/indexes/indexes.md) [Data types (Transact-SQL)--../../t-sql/data-types/data-types-transact-sql.md) [Download SQL Server Management Studio (SSMS)--../download-sql-server-management-studio-ssms.md)
+
+
+
+
+
+
+
 ## <a name="similar-articles"></a>類似した記事
 
-このセクションでは、同じ GitHub.com リポジトリ [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/) 内の他の対象領域の記事で、この対象領域において最近更新された記事とよく似たものの一覧を示します。
+<!--  HOW TO:
+    Refresh this file's line items with the latest 'Count-in-Similars*' content.
+    Then run Run-533-*.BAT
+-->
 
-<!--  20170717-1101  -->
+このセクションでは、パブリック GitHub.com リポジトリ [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/) 内の他の対象領域の記事で、この対象領域において最近更新された記事とよく似たものの一覧を示します。
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のある対象領域
 
-- [新規 + 更新 (4 + 4): **SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新規 + 更新 (2 + 0): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
-- [新規 + 更新 (1 + 2): **SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
-- [新規 + 更新 (6 + 0): **SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
-- [新規 + 更新 (13 + 2): **SQL 用の Linux** に関するドキュメント](../linux/new-updated-linux.md)
-- [新規 + 更新 (1 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
-- [新規 + 更新 (1 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
-- [新規 + 更新 (8 + 4): **SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
-- [新規 + 更新 (2 + 2): **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
-- [新規 + 更新 (0 + 1): **SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
-- [新規 + 更新 (1 + 0): **Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
-- [新規 + 更新 (1 + 0): **SQL 用のツール**に関するドキュメント](../tools/new-updated-tools.md)
-
+- [新規 + 更新 (3 + 12): **SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新規 + 更新 (5 + 0): **SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
+- [新規 + 更新 (5 + 1): **SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
+- [新規 + 更新 (19 + 82): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
+- [新規 + 更新 (1 + 8): **SQL 用の Linux** に関するドキュメント](../linux/new-updated-linux.md)
+- [新規 + 更新 (12 + 1): **SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
+- [新規 + 更新 (0 + 1): **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
+- [新規 + 更新 (7 + 1): **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
+- [新規 + 更新 (1 + 1): **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
+- [新規 + 更新 (0 + 2): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
+- [新規 + 更新 (1 + 4): **SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
+- [新規 + 更新 (4 + 1): **Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
+- [新規 + 更新 (0 + 1): **SQL 用のツール**に関するドキュメント](../tools/new-updated-tools.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のない対象領域
 
 - [新規 + 更新 (0 + 0): **SQL の ActiveX データ オブジェクト (ADO)** に関するドキュメント](../ado/new-updated-ado.md)
+- [新規 + 更新 (0 + 0): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
 - [新規 + 更新 (0 + 0): **SQL の Data Quality Services** に関するドキュメント](../data-quality-services/new-updated-data-quality-services.md)
 - [新規 + 更新 (0 + 0): **SQL のデータ マイニング拡張機能 (DMX)** に関するドキュメント](../dmx/new-updated-dmx.md)
-- [新規 + 更新 (0 + 0): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
+- [新規 + 更新 (0 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
 - [新規 + 更新 (0 + 0): **SQL の多次元式 (MDX)** に関するドキュメント](../mdx/new-updated-mdx.md)
+- [新規 + 更新 (0 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
 - [新規 + 更新 (0 + 0): **SQL の PowerShell** に関するドキュメント](../powershell/new-updated-powershell.md)
-- [新規 + 更新 (0 + 0): **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
 - [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../sample/new-updated-sample.md)
-- [新規 + 更新 (0 + 0): **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
-- [新規 + 更新 (0 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
 - [新規 + 更新 (0 + 0): **SQL の XQuery** に関するドキュメント](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 
 
