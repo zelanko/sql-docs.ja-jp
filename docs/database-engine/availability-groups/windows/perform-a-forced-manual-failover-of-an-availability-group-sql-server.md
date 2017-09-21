@@ -296,7 +296,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [可用性グループの元のトポロジへの復帰](#ReturnToOrigTopology)  
   
-###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
+###  <a name="FailureResponse"></a> メイン データ センターの重大なエラーへの対応  
  次の図は、メイン データ センターでの重大なエラーに対応して、リモート データ センターで実行される一連の操作を示しています。  
   
  ![メイン データ センターのエラーに対応する手順](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "メイン データ センターのエラーに対応する手順")  
