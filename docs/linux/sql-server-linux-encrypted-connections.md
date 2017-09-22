@@ -60,7 +60,7 @@ Linux コンピューターでターミナル コマンドを開く場所[!INCLU
 - アクセスを制限します。`mssql`  
    ```  
    sudo chown mssql:mssql mssql.pem mssql.key 
-   sudo chmod 400 mssql.pem mssql.key 
+   sudo chmod 600 mssql.pem mssql.key 
    ```  
  
 - (省略可能) システム SSL ディレクトリに移動します。  
