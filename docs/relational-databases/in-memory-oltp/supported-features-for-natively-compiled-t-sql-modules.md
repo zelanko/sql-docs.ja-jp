@@ -52,7 +52,7 @@ ms.lasthandoff: 07/31/2017
 次のクエリ構造がサポートされます。  
 
 CASE 式: CASE は、有効な式を使用できる任意のステートメントや句で使用できます。
-   - **適用対象:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]」をご覧ください。  
+   - **適用対象:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。  
     [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降、CASE ステートメントはネイティブ コンパイル T-SQL モジュールに対してサポートされています。
 
 SELECT 句:  
@@ -60,19 +60,19 @@ SELECT 句:
 -   列と名前のエイリアス (AS または = 構文を使用)。  
 
 -   スカラー サブクエリ
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」をご覧ください。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、スカラー サブクエリはネイティブ コンパイル モジュールでサポートされています。
 
 -   TOP*  
 
 -   SELECT DISTINCT  
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」をご覧ください。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、DISTINCT 演算子はネイティブ コンパイル モジュールでサポートされています。
 
               DISTINCT aggregates are not supported.  
 
 -   UNION および UNION ALL
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」をご覧ください。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、UNION および UNION ALL 演算子はネイティブ コンパイル モジュールでサポートされています。
 
 -   変数割り当て  
@@ -84,11 +84,11 @@ FROM 句:
 -   FROM \<ネイティブ コンパイル インライン TVF>  
 
 -   LEFT OUTER JOIN、RIGHT OUTER JOIN、CROSS JOIN、INNER JOIN。
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」をご覧ください。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、JOINS はネイティブ コンパイル モジュールでサポートされています。
 
 -   サブクエリ `[AS] table_alias`。 詳細については、「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。 
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」をご覧ください。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、サブクエリはネイティブ コンパイル モジュールでサポートされています。
 
 WHERE 句:  
@@ -97,7 +97,7 @@ WHERE 句:
 
 -   AND、BETWEEN  
 -   OR、NOT、IN、EXISTS
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」をご覧ください。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、OR/NOT/IN/EXISTS 演算子はネイティブ コンパイル モジュールでサポートされています。
 
 
