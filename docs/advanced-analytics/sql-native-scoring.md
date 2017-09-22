@@ -1,8 +1,8 @@
 ---
 title: "ネイティブ スコアリング |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/16/2017
-ms.prod: sql-server-2016
+ms.date: 09/19/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -13,10 +13,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e1cb06223e5274c1fa439eb9f7d82a005e93a47d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: fe571e3e432d6445c76133c4c2a9c56f2f67eff0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -30,25 +30,26 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="what-is-native-scoring-and-how-is-it-different-from-realtime-scoring"></a>新機能はネイティブ スコア付けとは異なるリアルタイム スコア付けしますか。
 
-SQL Server 2016 では、マイクロソフトは、T-SQL を実行する R スクリプトを可能にする拡張機能フレームワークを作成します。 このフレームワークは、R、複雑な機械学習モデルをトレーニングする単純な関数の範囲で必要なすべての操作をサポートします。 ただし、SQL Server で R のペアをデュアル プロセス アーキテクチャは、操作の複雑さに関係なく、すべての呼び出しの外部 R のプロセスを呼び出す必要がありますを意味します。 テーブルとそれに対して SQL Server の既存のデータをスコア付けから事前トレーニング済みモデルを読み込む場合、R の外部プロセスの呼び出しのオーバーヘッドは、不要なパフォーマンス コストを表します。
+SQL Server 2016 では、マイクロソフトは、T-SQL を実行する R スクリプトを可能にする拡張機能フレームワークを作成します。 このフレームワークは、R、複雑な機械学習モデルをトレーニングする単純な関数の範囲で必要なすべての操作をサポートします。 ただし、デュアル プロセス アーキテクチャでは、操作の複雑さに関係なく、すべての呼び出しの外部 R プロセスを呼び出す必要があります。 テーブルとそれに対して SQL Server の既存のデータをスコア付けから事前トレーニング済みモデルを読み込む場合、R の外部プロセスの呼び出しのオーバーヘッドは、不要なパフォーマンス コストを表します。
 
-_スコア付け_は、2 段階のプロセス: 事前トレーニング済みモデルは、テーブルから読み込まれ、新しい値を生成すると、モデルに新しい入力データを表形式または 1 つの行が渡される (または_スコア_)。 出力には、1 つの列を表す、確率または信頼区間、エラー、または、その予測に役立ちます他の補数を含めて、いくつかの値があります。
+_スコア付け_は、2 段階のプロセスです。 まず、テーブルからの読み込みに事前トレーニング済みモデルを指定します。 2 番目、新しいパスの入力、予測値を生成する関数へのデータ (または_スコア_)。 入力には、表形式または 1 つの行を指定できます。 確率を表す 1 つの列値を出力するか信頼区間、エラー、またはその他の便利ビットごとの補数、予測するなど、いくつかの値を出力する可能性があります。
 
-多くの行のデータをスコア付けに新しい値は通常、スコア付けの手順の一部としてテーブルに挿入されます。  ただし、同時にリアルタイムで 1 つのスコアを取得することもできます。 連続する入力のスコアリング、高速のメモリに再読み込みすることができるように、このモデルをキャッシュ可能性があります。
+入力には、多くのデータ行が含まれている場合、これは通常高速スコア付けプロセスの一部として、テーブルに、予測値を挿入します。  1 つのスコアを生成するは、フォームまたはユーザーの要求から入力値を取得し、クライアント アプリケーションにスコアを返すシナリオではより一般的です。 パフォーマンスを向上させるには、一連のスコアを生成するときにメモリに再読み込みすることができるように、SQL Server は、モデルをキャッシュする可能性があります。
 
 SQL Server マシン ラーニング サービス (および Microsoft Machine Learning サーバー) は、高速のスコア付けをサポートするには、T-SQL または R で使用する組み込みのスコアリング ライブラリを提供します。 あるバージョンに応じて異なるオプションがあります。
 
 **ネイティブのスコアリング**
 
-+ TRANSACT-SQL で予測関数を使用できます_ネイティブ スコアリング_SQL Server 2017 の任意のインスタンスから。 既にトレーニングし、テーブルに保存されたモデルがあること必要のみか、T-SQL を使用して呼び出すことができます。 これはネイティブの T-SQL で関数を使用する、リアルタイムのスコアの種類追加構成は必要ありません。
++ TRANSACT-SQL で予測関数をサポートしている_ネイティブ スコアリング_SQL Server 2017 の任意のインスタンスにします。 T-SQL を使用して呼び出すことができるモデルのトレーニングを既にがあることが必要のみです。 T-SQL を使用してネイティブ スコア付けすると、これらの利点があります。
 
-   R ランタイムは呼び出されません. をインストールする必要はありません。
+    + 追加の構成は必要ありません。
+    + R ランタイムは呼び出されません。 R. をインストールする必要はありません。
 
 **リアルタイムのスコアリング**
 
 + **sp_rxPredict**ストアド プロシージャをリアルタイムをスコア付けを使用して、R ランタイムを呼び出さずに、サポートされているモデルの種類からスコアを生成します。
 
-  リアルタイムのスコア付けを使用する場合にも Microsoft R Server のスタンドアロン インストーラーを使用して、R コンポーネントをアップグレードする場合は、SQL Server 2016 で使用できます。 sp_rxPredict は、SQL Server の 2017 でもサポートされてし、予測関数でサポートされていないモデルの種類のスコア付けしている場合、適切なオプションがあります。
+  このストアド プロシージャも Microsoft R Server のスタンドアロン インストーラーを使用して、R コンポーネントをアップグレードする場合は、SQL Server 2016 で使用できます。 sp_rxPredict は SQL Server 2017 でもサポートされます。 そのため、予測関数でサポートされていないモデルの種類にスコアを生成するときに、この関数を使用する場合があります。
 
 + RxPredict 関数は、高速のスコア付け R コード内で使用できます。
 
@@ -58,7 +59,7 @@ SQL Server マシン ラーニング サービス (および Microsoft Machine L
 
 ## <a name="how-native-scoring-works"></a>ネイティブのスコア付け動作
 
-特殊なバイナリ形式のモデルの読み取りおよびスコアを生成できる Microsoft からのネイティブの C++ ライブラリを使用してネイティブのスコア付けします。 モデルをパブリッシュして、R インタープリターを呼び出さずにスコアリングのために使用できることができます、ために、複数のプロセスの対話処理のオーバーヘッドが減ります。 これは、エンタープライズの実稼働のシナリオで予測のパフォーマンスを向上させる多くをサポートします。
+特殊なバイナリ形式のモデルの読み取りおよびスコアを生成できる Microsoft からのネイティブの C++ ライブラリを使用してネイティブのスコア付けします。 モデルをパブリッシュして、R インタープリターを呼び出さずにスコアリングのために使用できることができます、ために、複数のプロセスの対話処理のオーバーヘッドが減ります。 そのため、ネイティブのスコアリングと、エンタープライズの実稼働のシナリオで予測のパフォーマンスを向上させる多くをサポートします。
 
 このライブラリを使用してスコアを生成するには、スコア付け関数を呼び出すし、次の必須の入力を渡します。
 
@@ -71,6 +72,11 @@ SQL Server マシン ラーニング サービス (および Microsoft Machine L
 
 + [リアルタイムのスコアリングを実行する方法](r/how-to-do-realtime-scoring.md)
 
+ネイティブのスコアを含む完全なソリューションは、SQL Server 開発チームのこれらのサンプルを参照してください。
+
++ ML スクリプトの展開: [Python モデルを使用します。](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
++ ML スクリプトの展開: [R モデルを使用します。](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
+
 ## <a name="requirements"></a>必要条件
 
 サポートされるプラットフォームは次のとおりです。
@@ -80,11 +86,11 @@ SQL Server マシン ラーニング サービス (および Microsoft Machine L
     予測を使用してネイティブ スコア付けには、SQL Server 2017 が必要です。
     Linux を含む、SQL Server 2017 の任意のバージョンで動作します。
 
-    リアルタイムを使用してスコア付けを実行することも、sp_rxPredict SQL CLR を有効にする必要があります。
+    リアルタイムを使用してスコア付けを実行することも sp_rxPredict します。 このストアド プロシージャを使用するには、有効にすることが必要[SQL Server の CLR 統合](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration)です。
 
 + SQL Server 2016
 
-   使用してスコア付けリアルタイム sp_rxPredict は、SQL Server 2016 では可能では、および Microsoft R Server を実行することもできます。 このオプションは、SQLCLR が有効にして、Microsoft R Server のアップグレードをインストールすることが必要です。
+   リアルタイム sp_rxPredict を使用してスコア付けは、SQL Server 2016 で実行できる Microsoft R Server を実行することもできます。 このオプションは、SQLCLR が有効にして、Microsoft R Server のアップグレードをインストールすることが必要です。
    詳細については、次を参照してください[リアルタイムのスコアリング。](Real-time-scoring.md)
 
 ### <a name="model-preparation"></a>モデルの準備
@@ -100,7 +106,7 @@ SQL Server マシン ラーニング サービス (および Microsoft Machine L
   + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
   + [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
   + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
-  + [rxdForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
+  + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
 MicrosoftML からモデルを使用する必要がある場合は、リアルタイム sp_rxPredict スコアリングを使用します。
 
@@ -112,5 +118,5 @@ MicrosoftML からモデルを使用する必要がある場合は、リアル�
 + 使用してモデル化、`rxGlm`または`rxNaiveBayes`RevoScaleR 内のアルゴリズム
 + PMML モデル
 + CRAN または他のリポジトリから他の R ライブラリを使用して作成されたモデル
-+ 他の R の変換を含むモデル
++ その他のすべての R 変換を含むモデル
 

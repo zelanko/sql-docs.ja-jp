@@ -28,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
-ms.openlocfilehash: 22419ce21476588f4ff2859185c8b833306fa896
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 58908fc8a7b18cff36a41ee26e7a3eab8e84a5d0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを使用してデータをインポートおよびエクスポートする
@@ -41,11 +41,11 @@ ms.lasthandoff: 08/17/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードは、変換元から変換先にデータをコピーするための単純な方法です。 この概要では、ウィザードは、ソースと変換先として使用できるデータ ソースと、ウィザードを実行する必要があります。 アクセス許可について説明します。
 
 ## <a name="get-the-wizard"></a>ウィザードを取得します。
-ウィザードを実行する必要はあるが、コンピューターに [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールしていない場合は、SQL Server Data Tools (SSDT) をインストールすることで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードをインストールできます。 詳細については、「 [SQL Server Data Tools (SSDT) のダウンロード](https://msdn.microsoft.com/library/mt204009.aspx)」を参照してください。
+かどうかに、ウィザードを実行する必要はありません [!含める[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)です。
 
 ## <a name="what-happens-when-i-run-the-wizard"></a>新機能は、ウィザードを実行するとどうなりますか。
 -    **手順の一覧を参照してください。** ウィザードの手順については、次を参照してください。 [、SQL Server インポートおよびエクスポート ウィザードの手順を](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)です。 ウィザードの各ページ用のドキュメントの別のページもあります。  
-    \-または\-
+    \- または \-
 -   **単純な例を参照してください。** 一般的なセッションを表示するいくつかの画面で簡単に説明を見てこの単純なエンド ツー エンドの例の 1 ページに[インポートおよびエクスポート ウィザードのこの簡単な例の概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)です。  
 
 ##  <a name="wizardSources"></a>どのようなソースと変換先を使用できるか。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/17/2017
 
 ## <a name="how-do-i-connect-to-my-data"></a>データに接続する方法は?
 一般的に使用されるデータ ソースに接続する方法の詳細については、次のページのいずれかを参照してください。
--   [SQL Server に接続します。](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
+-   [SQL Server への接続](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
 -   [Oracle への接続します。](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
 -   [フラット ファイル (テキスト ファイル) への接続します。](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [Excel への接続します。](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)

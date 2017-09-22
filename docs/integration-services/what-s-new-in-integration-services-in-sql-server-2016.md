@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 5e1127580ff900077fa3d36abcb339cce57857d2
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 82347011d4650d52cca30f43e87f7ba63eca9057
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>どのような &#39; の SQL server 2016 Integration Services
@@ -154,7 +154,7 @@ ms.lasthandoff: 08/21/2017
  詳細については、次を参照してください。 [SSIS カタログ & #40 です。SSISDB &#41;](../integration-services/service/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> SSIS カタログでの Always On 機能のサポート  
- Always On 可用性グループ機能は、データベース ミラーリングに代わる、高可用性と災害復旧のためのエンタープライズ レベルのソリューションです。 可用性グループは、可用性データベースとして知られる、ひとまとまりでフェールオーバーされる別々のユーザー データベース セットのためのフェールオーバー環境をサポートします。 詳細については、「 [AlwaysOn 可用性グループ (SQL Server)](https://msdn.microsoft.com/library/hh510230.aspx)」を参照してください。  
+ Always On 可用性グループ機能は、データベース ミラーリングに代わる、高可用性と災害復旧のためのエンタープライズ レベルのソリューションです。 可用性グループは、可用性データベースとして知られる、ひとまとまりでフェールオーバーされる別々のユーザー データベース セットのためのフェールオーバー環境をサポートします。 詳細については、「 [AlwaysOn 可用性グループ (SQL Server)](/sql-docs/docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server)」を参照してください。  
   
  SQL Server 2016 では、SSIS には、一元化された SSIS カタログ (つまり SSISDB ユーザー データベース) を簡単に配置するのに便利な新しい機能が導入されています。 SSISDB データベースとそのコンテンツ (プロジェクト、パッケージ、実行ログなど) の高可用性を提供するために、SSISDB データベースを (他のユーザー データベースと同じように) AlwaysOn 可用性グループに追加できます。 フェールオーバーが発生すると、セカンダリ ノードのいずれかが自動的に新しいプライマリ ノードになります。  
   
@@ -313,7 +313,7 @@ SQL Server 2016 Service Pack 1 がインストールされている場合、ODat
 ### <a name="better-design-experience"></a>設計エクスペリエンスの強化
 
 ####  <a name="OneDesigner"></a> SSIS デザイナーでの複数ターゲットと複数バージョンのサポート  
- Visual Studio 2015 用の SQL Server Data Tools (SSDT) で SSIS デザイナーを使用して、SQL Server 2016、SQL Server 2014、または SQL Server 2012 をターゲットとするパッケージを作成、管理、および実行できるようになりました。 SSDT を入手する方法については、「 [最新の SQL Server Data Tools のダウンロード](https://msdn.microsoft.com/library/mt204009.aspx)」を参照してください。 
+ Visual Studio 2015 用の SQL Server Data Tools (SSDT) で SSIS デザイナーを使用して、SQL Server 2016、SQL Server 2014、または SQL Server 2012 をターゲットとするパッケージを作成、管理、および実行できるようになりました。 SSDT を入手する方法については、「 [最新の SQL Server Data Tools のダウンロード](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)」を参照してください。 
 
  ソリューション エクスプローラーで Integration Services プロジェクトを右クリックし、 **[プロパティ]** を選択すると、そのプロジェクトのプロパティ ページが開きます。 **[構成プロパティ]** の **[全般]**タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
    

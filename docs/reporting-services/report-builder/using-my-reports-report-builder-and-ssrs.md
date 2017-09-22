@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f394a1ad055276cc7f0a6d28f923215dde8e437a
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 48a6c898c5381bb777863ed7569c6ac302560eb3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>個人用レポートの使用 (レポート ビルダーおよび SSRS)
@@ -27,9 +27,9 @@ ms.lasthandoff: 08/09/2017
   
  概念的には、[個人用レポート] フォルダーは、Windows ファイル システムの [マイ ドキュメント] フォルダーに似ています。 すべてのユーザーに [個人用レポート] というフォルダーがありますが、各ユーザーがアクセスする [個人用レポート] フォルダーは、他のすべてのユーザーが使用するフォルダーとは異なる [個人用レポート] フォルダーです。 ある特定のユーザーが所有する [個人用レポート] フォルダーのコンテンツに対し、レポート サーバー管理者を除く他のユーザーがアクセスすることはできません。  
   
- 個人用レポート機能は、必須機能ではなく、レポート サーバー管理者が無効にすることができます。 有効になっている場合、[ホーム] フォルダー内に [個人用レポート] フォルダーが表示されます。[個人用レポート] フォルダーには、レポート マネージャーまたは Web ブラウザーを使用してアクセスすることができます。 詳細については、「[レポート マネージャーを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/library/dd255286.aspx)」を参照してください。  
+ 個人用レポート機能は、必須機能ではなく、レポート サーバー管理者が無効にすることができます。 有効になっている場合、[ホーム] フォルダー内に [個人用レポート] フォルダーが表示されます。[個人用レポート] フォルダーには、レポート マネージャーまたは Web ブラウザーを使用してアクセスすることができます。 詳細については、次を参照してください[の検索とレポート マネージャー &#40; でレポートを表示する。レポート ビルダーおよび SSRS &#41;](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs).  
   
- SharePoint 統合モードで構成されたレポート サーバーには、個人用レポート フォルダーに相当するフォルダーは存在しません。 詳細については、「[レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)」を参照してください。  
+ SharePoint 統合モードで構成されたレポート サーバーには、個人用レポート フォルダーに相当するフォルダーは存在しません。 詳細については、「 [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -37,11 +37,11 @@ ms.lasthandoff: 08/09/2017
 ## <a name="ways-to-use-my-reports"></a>個人用レポートの使用方法  
  [個人用レポート] フォルダーは、ユーザーがレポートやフォルダー、その他のアイテムを追加するまでは空になっています。 [個人用レポート] フォルダーにコンテンツを追加する方法は次のとおりです。  
   
--   個人のリンク レポートを作成し、これを [個人用レポート] に保存します。 すべてのレポートから、リンク レポートを作成できるわけではありません。 詳細については、「[リンク レポートを作成する](../../reporting-services/reports/create-a-linked-report.md)」を参照してください。  
+-   個人のリンク レポートを作成し、これを [個人用レポート] に保存します。 すべてのレポートから、リンク レポートを作成できるわけではありません。 詳細については、「 [リンク レポートを作成する](../../reporting-services/reports/create-a-linked-report.md)」を参照してください。  
   
--   レポート定義 (.rdl) ファイル、レポート モデル (.smdl) ファイルなどのファイルをファイル システムからアップロードします。 どんなファイルでもアップロードできますが、レポート サーバーで処理できるのは、ファイル拡張子が .rdl または .smdl のレポート ファイルのみです。 詳細については、SQL Server オンライン ブックの [Reporting Services ドキュメント](http://go.microsoft.com/fwlink/?linkid=121312)の「レポート定義」と「[ファイルまたはレポートをアップロード (レポート マネージャー)](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)」を参照してください。  
+-   レポート定義 (.rdl) ファイル、レポート モデル (.smdl) ファイルなどのファイルをファイル システムからアップロードします。 どんなファイルでもアップロードできますが、レポート サーバーで処理できるのは、ファイル拡張子が .rdl または .smdl のレポート ファイルのみです。 詳細についてを参照してレポート定義"で、 [Reporting Services のドキュメント](http://go.microsoft.com/fwlink/?linkid=121312)SQL Server オンライン ブックと[アップロード ファイルまたはレポートと #40 です。レポート マネージャー &#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md).  
   
--   独自のレポートを作成し、個人用レポートにパブリッシュします。 詳細については、「[レポート デザイン ビュー (レポート ビルダー)](../../reporting-services/report-builder/report-design-view-report-builder.md)」を参照してください。  
+-   独自のレポートを作成し、個人用レポートにパブリッシュします。 詳細については、次を参照してください。[レポート デザイン ビュー & #40 です。レポート ビルダー"&"#41;](../../reporting-services/report-builder/report-design-view-report-builder.md).  
   
  通常、[個人用レポート] フォルダーには、ユーザー自身によるフォルダーの管理を許可する権限が設定されています。 ただし、最終的には、レポート サーバー管理者により、ユーザーが実行できる作業が決定されます。 権限が十分でないために [個人用レポート] フォルダーでの作業が行えない場合は、レポート サーバー管理者に問い合わせてください。  
   
@@ -49,6 +49,6 @@ ms.lasthandoff: 08/09/2017
  レポート サーバー データベースを検索する場合、検索を行うユーザーの [個人用レポート] フォルダーのコンテンツは検索対象になりますが、他のユーザーの [個人用レポート] フォルダーのコンテンツは検索対象から除外されます。 検索結果には、アクセス権が与えられているレポートのみが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [検索、表示、およびレポート &#40; を管理します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

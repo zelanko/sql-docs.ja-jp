@@ -1,8 +1,8 @@
 ---
 title: "T-SQL を使用して Python を実行 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/31/2017
-ms.prod: sql-server-2016
+ms.date: 09/19/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,10 +18,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c7ab513960d3e102725bde6762fcf4de117554db
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f2eba50d5c5e57025462c46b38fc0ddbfc947ea0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="run-python-using-t-sql"></a>T-SQL を使用して実行の Python
@@ -57,7 +57,7 @@ GO
 
 次のコード Python 実行可能ファイル、入力のデータを渡しますを読み込んで、入力データの各行の曜日単位のインデックスを表す数で、テーブルの曜日名を更新します。
 
-パラメーターのメモ *@RowsPerRead*です。 このパラメーターは、SQL Server から Python ランタイムに渡される行の数を指定します。
+パラメーターのメモ* @RowsPerRead*です。 このパラメーターは、SQL Server から Python ランタイムに渡される行の数を指定します。
 
 呼ばれる、Python データ分析ライブラリ**パンダ**の SQL Server にデータを渡すことが必要、および既定では、Machine Learning のサービスは含まれています。
 
@@ -127,7 +127,7 @@ GO
 
 ## <a name="step-3-view-the-results"></a>手順 3. 結果を表示します。
 
-ストアド プロシージャは、元のデータを返します、スクリプトを適用しで変更されたデータを返します、**結果**の Management Studio またはその他の SQL クエリ ツール ウィンドウです。
+ストアド プロシージャは、元のデータを取得し、Python スクリプトを適用で変更されたデータを返します、**結果**の Management Studio またはその他の SQL クエリ ツール ウィンドウです。
 
 
 |DayOfWeek (変更前) に、| Amount|DayOfWeek (変更後) |
@@ -173,9 +173,11 @@ ParamINT=2
 ParamCharN=OUTPUT
 ```
 
-+ メッセージ出力には、スクリプトの実行に使用する作業ディレクトリが含まれています。 この例では MSSQLSERVER01 はジョブを管理する SQL Server によって割り当てられたワーカー アカウントを参照します。 GUID は、データとスクリプトの成果物を保管するスクリプトの実行中に作成された一時フォルダーの名前です。 これらの一時フォルダーは、SQL Server がセキュリティで保護されクリーンアップされます Windows ジョブ オブジェクトでスクリプトが終了した後です。
++ **メッセージ**出力には、スクリプトの実行に使用する作業ディレクトリが含まれています。 この例では MSSQLSERVER01 はジョブを管理する SQL Server によって割り当てられたワーカー アカウントを参照します。 
 
-+ メッセージ"Hello World"が含まれたセクションでは、2 回を出力します。 これは、値の *@RowsPerRead*  5 に設定しは、テーブルの 10 行では Python を 2 つの呼び出しがテーブル内のすべての行を処理に必要なため、します。
+    GUID は、データとスクリプトの成果物を保管するスクリプトの実行中に作成された一時フォルダーの名前です。 これらの一時フォルダーは、SQL Server がセキュリティで保護されクリーンアップされます Windows ジョブ オブジェクトでスクリプトが終了した後です。
+
++ メッセージ"Hello World"が含まれたセクションでは、2 回を出力します。 これは、値の* @RowsPerRead * 5 に設定しは、テーブルの 10 行では Python を 2 つの呼び出しがテーブル内のすべての行を処理に必要なため、します。
 
     実行では、運用、各バッチで渡す必要がある行の最大数を決定する値が異なる試してみることをお勧めします。 最適な数の行のデータに依存するは、データセット内の列の番号の両方と渡されたデータの種類によって影響をします。
 
@@ -189,4 +191,4 @@ ParamCharN=OUTPUT
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 
-ストアド プロシージャを見つけられない場合`sp_execute_external_script`、おそらくが終了していない外部のランタイムをサポートするためにインスタンスを構成することを意味します。 SQL Server 2017 セットアップを実行し、機械学習の言語としての Python を選択すると、後にする必要があります明示的に有効にする機能を使用して、 `sp_configure`、インスタンスを再起動します。 詳細については、「 [Python セットアップの Machine Learning サービス](../python/setup-python-machine-learning-services.md)です。
+ストアド プロシージャを見つけられない場合`sp_execute_external_script`、おそらくが終了していない外部スクリプトの実行をサポートするためにインスタンスを構成することを意味します。 SQL Server 2017 セットアップを実行し、機械学習の言語としての Python を選択すると、後にする必要があります明示的に有効にする機能を使用して、 `sp_configure`、インスタンスを再起動します。 詳細については、「 [Python セットアップの Machine Learning サービス](../python/setup-python-machine-learning-services.md)です。

@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f34a56282f5901fe13131cdd2e1c688054fca85f
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: b26e8e92a00fd23441a0417daa15897bab48501c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="database-catalog"></a>データベース カタログ
@@ -69,7 +69,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 
 パラメーターと共通の参照テーブル (その他の複数のスキーマに共通) と共に、ユーザー (ユーザーおよび連絡先) の詳細です。
 
-|Table|Description|
+|テーブル|Description|
 |-----------------------------|---------------------|
 |SystemParameters|システム全体の構成可能なパラメーターが含まれています。|
 |ユーザー|ユーザー名、および、ユーザーがお客様の組織において、Wide World importers 社を処理するため、アプリケーションを使用しているすべての連絡先の情報が含まれています。 これには、スタッフ、顧客、仕入先、およびその他の連絡先が含まれます。 システムまたは web サイトを使用するアクセス許可が付与されたユーザーのための情報には、ログインの詳細が含まれます。|
@@ -84,7 +84,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 
 在庫品目の購入および仕入先の詳細です。
 
-|Table|Description|
+|テーブル|Description|
 |-----------------------------|---------------------|
 |Suppliers|仕入先 (組織) のメイン エンティティ テーブル|
 |SupplierCategories|Suppliers (例: novelties、toys、clothing、パッケージ化など) のカテゴリ|
@@ -97,7 +97,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 
 顧客、販売員、および在庫品目の売上の詳細です。
 
-|Table|Description|
+|テーブル|Description|
 |-----------------------------|---------------------|
 |Customers|お客様 (組織や個人) にメイン エンティティ テーブル|
 |CustomerCategories|お客様 (ie 新奇ストア、スーパー マーケットなど) のカテゴリ|
@@ -113,7 +113,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 
 品目の在庫、保有およびトランザクションの詳細です。
 
-|Table|Description|
+|テーブル|Description|
 |-----------------------------|---------------------|
 |StockItems|ストックの項目のメイン エンティティ テーブル|
 |StockItemHoldings|品目の在庫の非テンポラル列です。 これらの arefrequently には、列が更新されます。|
@@ -181,7 +181,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 
 ### <a name="integration-schema"></a>統合スキーマ
 
-このスキーマ内のストアド プロシージャは、ETL プロセスによって使用されます。 必要な時間帯でさまざまなテーブルから必要なデータを取得する、 [ETL パッケージ](https://msdn.microsoft.com/library/mt734218.aspx)です。
+このスキーマ内のストアド プロシージャは、ETL プロセスによって使用されます。 必要な時間帯でさまざまなテーブルから必要なデータを取得する、 [ETL パッケージ](/sql-docs/docs/sample/world-wide-importers/etl-workflow)です。
 
 ### <a name="dataloadsimulation-schema"></a>DataLoadSimulation スキーマ
 

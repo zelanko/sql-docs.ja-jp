@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3ffb76838940f42d7a696e1c17f227517d89012d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 8d05ec1ae3be89b7a087938c44b356ccc9dbca43
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>作成し、Linux 上の SQL Server エージェント ジョブの実行
@@ -35,7 +35,7 @@ SQL Server ジョブを使用して、定期的に、SQL Server データベー�
 > [!TIP]
 > 任意の T-SQL でクライアントを使用して、これらのコマンドを実行することができます。 たとえば、Linux で行うこともできます[sqlcmd](sql-server-linux-setup-tools.md)または[Visual Studio Code](sql-server-linux-develop-use-vscode.md)です。 リモートの Windows Server からもクエリを実行して SQL Server Management Studio (SSMS) または、次のセクションで説明されているジョブの管理用 UI インターフェイスを使用できます。
 
-1. **ジョブを作成**です。 次の例で[sp_add_job](https://msdn.microsoft.com/library/ms182079.aspx)という名前のジョブを作成する`Daily AdventureWorks Backup`です。
+1. **ジョブを作成**です。 次の例で[sp_add_job](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-job-transact-sql)という名前のジョブを作成する`Daily AdventureWorks Backup`です。
 
     ```tsql
      -- Adds a new job executed by the SQLServerAgent service 
@@ -49,7 +49,7 @@ SQL Server ジョブを使用して、定期的に、SQL Server データベー�
 
     ```
 
-2. **1 つまたは複数のジョブ ステップを追加**です。 次の TRANSACT-SQL スクリプトを使用して[sp_add_jobstep](https://msdn.microsoft.com/library/ms187358.aspx)のバックアップを作成するジョブ ステップを作成、`AdventureWlorks2014`データベース。
+2. **1 つまたは複数のジョブ ステップを追加**です。 次の TRANSACT-SQL スクリプトを使用して[sp_add_jobstep](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)のバックアップを作成するジョブ ステップを作成、`AdventureWlorks2014`データベース。
 
     ```tsql
     -- Adds a step (operation) to the job  
@@ -65,7 +65,7 @@ SQL Server ジョブを使用して、定期的に、SQL Server データベー�
     GO
     ```
 
-3. **ジョブ スケジュールを作成する**です。 この例では[sp_add_schedule](https://msdn.microsoft.com/library/ms366342.aspx)ジョブの毎日のスケジュールを作成します。
+3. **ジョブ スケジュールを作成する**です。 この例では[sp_add_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql)ジョブの毎日のスケジュールを作成します。
 
     ```tsql
     -- Creates a schedule called 'Daily'  
@@ -78,7 +78,7 @@ SQL Server ジョブを使用して、定期的に、SQL Server データベー�
    GO
     ```
 
-4. **ジョブのスケジュールをジョブにアタッチ**です。 使用して[sp_attach_schedule](https://msdn.microsoft.com/library/ms186766.aspx)ジョブにジョブ スケジュールをアタッチします。
+4. **ジョブのスケジュールをジョブにアタッチ**です。 使用して[sp_attach_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)ジョブにジョブ スケジュールをアタッチします。
 
     ```tsql
     -- Sets the 'Daily' schedule to the 'Daily AdventureWorks Backup' Job  
@@ -88,7 +88,7 @@ SQL Server ジョブを使用して、定期的に、SQL Server データベー�
     GO
     ```
 
-5. **対象サーバーにジョブを割り当てます**です。 ターゲット サーバーにジョブを割り当てる[sp_add_jobserver](https://msdn.microsoft.com/library/ms178625.aspx)です。 この例では、ローカル サーバーは、対象です。
+5. **対象サーバーにジョブを割り当てます**です。 ターゲット サーバーにジョブを割り当てる[sp_add_jobserver](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)です。 この例では、ローカル サーバーは、対象です。
 
     ```tsql
     EXEC dbo.sp_add_jobserver  

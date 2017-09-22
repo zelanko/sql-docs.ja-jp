@@ -23,23 +23,23 @@ caps.latest.revision: 57
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8a1cabc088c7c0ec6c69c8290549e035a4cec7bb
+ms.translationtype: MT
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 28ac10f1d46b6af08d452c0c664ef4cd4b5e1d80
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="integrating-reporting-services-into-applications"></a>アプリケーションへの Reporting Services の統合
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、拡張性のあるオープンなレポート プラットフォームであり、ソリューションを開発するための API の包括的なセットを開発者に提供するように設計されています。  
   
- 統合するための 3 つのオプションがある[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]カスタム アプリケーションに: レポート サーバー Web サービスとも呼ばれる、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SOAP API での ReportViewer コントロール[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]、および URL アクセス。 アプリケーションに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を統合する方法は、オプションごとに異なります。  
+ 統合するための 3 つのオプションがある[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]カスタム アプリケーションに: レポート サーバー Web サービスとも呼ばれる、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SOAP API での ReportViewer コントロール[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]、および URL アクセス。 アプリケーションに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を統合する方法は、オプションごとに異なります。  
   
 ## <a name="report-server-web-service"></a>レポート サーバー Web サービス  
  レポート サーバー Web サービスは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に対して開発を行うための主要なインターフェイスです。 レポート カタログを管理するためのコードを開発する場合でも、サポートされている形式でレポートを表示するためのコードを開発する場合でも、Web サービスでは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をアプリケーションに統合するために必要なすべての方法が公開されています。 このような 1 つのアプリケーションの例は、レポート マネージャーに含まれている[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]; をレポート サーバー データベースを管理する Web サービスを使用します。  
   
 ## <a name="reportviewer-controls-for-visual-studio"></a>Visual Studio の ReportViewer コントロール  
- [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] に付属の ReportViewer コントロールは、レポート表示機能をアプリケーションに統合するために使用されます。 コントロールには、Windows フォームベースのアプリケーション用と Web フォームのアプリケーション用の 2 つがあります。 どちらのコントロールにも、レポート サーバーに配置されたレポートを表示する機能と、レポート サーバーがインストールされていない環境にあるレポートを表示する機能があります。  
+ ReportViewer コントロールの使用可能な[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]をアプリケーションに表示するレポートを統合するために使用されます。 コントロールには、Windows フォームベースのアプリケーション用と Web フォームのアプリケーション用の 2 つがあります。 どちらのコントロールにも、レポート サーバーに配置されたレポートを表示する機能と、レポート サーバーがインストールされていない環境にあるレポートを表示する機能があります。  
   
 ## <a name="url-access"></a>URL アクセス  
  URL アクセスは、ReportViewer コントロールがオプションでない場合にレポート表示機能をアプリケーションに統合するためのもう 1 つのオプションです。 さらに、電子メールを介してユーザーにレポートへのリンクを送信するためにも使用できます。  
@@ -55,9 +55,9 @@ ms.lasthandoff: 08/09/2017
  URL アクセスを使用して、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のレポート ナビゲーションを既存のビジネス アプリケーションに統合する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [レポート マネージャーと &#40; です。SSRS ネイティブ モードと &#41; です。](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [レポート マネージャー (SSRS ネイティブ モード)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [URL アクセスと SOAP の選択](../../reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
  [テクニカル リファレンス & #40 です。SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
- [レポート サーバー Web サービス](../../reporting-services/report-server-web-service/report-server-web-service.md)  
+ [レポート サーバー web サービス](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   

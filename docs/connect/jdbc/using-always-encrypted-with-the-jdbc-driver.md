@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7ddf82a6ef055d951c987c8bc156f025c1162f6c
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 4bc5be85fddcc86de0a3fe845620f5152b568015
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC ドライバーで Always Encrypted を使用する
@@ -152,7 +152,7 @@ catch (Exception e)
 - Microsoft JDBC Driver for SQL Server は、SSN 列と BirthDate 列から取得されたデータを透過的に暗号化解除と、プログラムによって印刷されるすべての値は、プレーン テキストになります。
 
 > [!NOTE]  
->  決定論的暗号化を使用して列が暗号化される場合、クエリは列に対して等価比較を実行できます。 詳細については、次を参照してください。、**を選択すると決定性またはランダム化された暗号化**のセクションで、 [Always Encrypted (データベース エンジン)](https://msdn.microsoft.com/library/mt163865.aspx)トピックです。  
+>  決定論的暗号化を使用して列が暗号化される場合、クエリは列に対して等価比較を実行できます。 詳細については、次を参照してください。、**を選択すると決定性またはランダム化された暗号化**のセクションで、 [Always Encrypted (データベース エンジン)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)トピックです。  
 
 ```
 String connectionString =  "jdbc:sqlserver://localhost:1433;databaseName=Clinic;user=sa;password=******;columnEncryptionSetting=Enabled;" ;
@@ -214,7 +214,7 @@ catch (Exception e)
 
 ### <a name="unsupported-data-type-conversion-errors"></a>サポートされていないデータ型変換エラー
 
-Always Encrypted では、暗号化されたデータ型に対するいくつかの変換がサポートされています。 参照してください[Always Encrypted (データベース エンジン)](https://msdn.microsoft.com/library/mt163865.aspx)サポートされる型変換の詳細な一覧についてはします。 データ型の変換エラーを回避するには、次のことを確認してください。
+Always Encrypted では、暗号化されたデータ型に対するいくつかの変換がサポートされています。 参照してください[Always Encrypted (データベース エンジン)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)サポートされる型変換の詳細な一覧についてはします。 データ型の変換エラーを回避するには、次のことを確認してください。
 
 - 値を渡す場合、暗号化された列をターゲットとするパラメーターのパラメーターの SQL Server データ型は、いずれかのように同じ対象列またはパラメーターの SQL Server データ型の変換の種類として、適切な setter メソッドを使用します。ターゲット列の型はサポートされています。 SQLServerPreparedStatement、SQLServerCallableStatement クラスおよび SQLServerResultSet クラス固有の SQL Server データ型に対応するパラメーターを渡すに API の新しいメソッドが追加されたことに注意してください。 たとえば、列が暗号化されていない場合は、パラメーターを渡す、datetime2、datetime 列 setTimestamp() メソッドを使用できます。 列が暗号化されている場合は、データベース内の列の型を表す、正確なメソッドを使用する必要があります。 たとえば、setTimestamp() を使用して、暗号化された datetime2 列に値を渡すし、暗号化された datetime 列に値を渡す setDateTime() を使用します。 参照してください[Always Encrypted API リファレンス、JDBC driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)の新しい Api の完全な一覧についてはします。 
 - 10 進数と数値の SQL Server データ型の列をターゲットとするパラメーターの有効桁数と小数点以下桁数が、ターゲット列に対して構成された有効桁数と小数点と同じである。 SQLServerPreparedStatement、SQLServerCallableStatement クラスおよび SQLServerResultSet クラス有効桁数と小数点以下桁数の decimal および numeric データ型を表すパラメーター/列のデータ値と共にを受け入れるようにする API の新しいメソッドが追加されたことに注意してください。 参照してください[Always Encrypted API リファレンス、JDBC driver ](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) /オーバー ロードされた新しい Api の完全な一覧についてはします。  
@@ -314,7 +314,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >  [azure active directory-ライブラリ-用の java ライブラリ](https://github.com/AzureAD/azure-activedirectory-library-for-java)  
   
 ### <a name="using-windows-certificate-store-provider"></a>Windows 証明書ストアのプロバイダーを使用します。
-Windows 証明書ストアに列マスター_キーを格納する、SQLServerColumnEncryptionCertificateStoreProvider を使用できます。 列マスター_キーと列の暗号化キーの定義をデータベースに作成するのにには、SQL Server Management Studio (SSMS) は Always Encrypted ウィザードまたはサポートされている他のツールを使用します。 ある Windows 証明書ストアに自己署名証明書を生成する、同じウィザードを使用できます、常に暗号化されたデータの列マスター_キーとして使用します。 詳細については、列マスター_キーと列の暗号化キーの T-SQL 構文を参照してください[CREATE COLUMN MASTER KEY](https://msdn.microsoft.com/library/mt146393.aspx)と[CREATE COLUMN ENCRPTION KEY](https://msdn.microsoft.com/library/mt146372.aspx)それぞれします。
+Windows 証明書ストアに列マスター_キーを格納する、SQLServerColumnEncryptionCertificateStoreProvider を使用できます。 列マスター_キーと列の暗号化キーの定義をデータベースに作成するのにには、SQL Server Management Studio (SSMS) は Always Encrypted ウィザードまたはサポートされている他のツールを使用します。 ある Windows 証明書ストアに自己署名証明書を生成する、同じウィザードを使用できます、常に暗号化されたデータの列マスター_キーとして使用します。 詳細については、列マスター_キーと列の暗号化キーの T-SQL 構文を参照してください[CREATE COLUMN MASTER KEY](/sql-docs/docs/t-sql/statements/create-column-master-key-transact-sql)と[CREATE COLUMN ENCRPTION KEY](/sql-docs/docs/t-sql/statements/create-column-encryption-key-transact-sql)それぞれします。
 
 SQLServerColumnEncryptionCertificateStoreProvider の名前が"MSSQL_CERTIFICATE_STORE"、プロバイダー オブジェクトの getName() API によってクエリを実行できます。 ドライバーによって自動的に登録し、アプリケーションを変更せずにシームレスに使用されることができます。
 
@@ -356,7 +356,7 @@ SQLServerColumnEncryptionJavaKeyStoreProvider JKS または PKCS12 キースト�
 
 .Pfx 形式で Windows 証明書ストアから証明書をエクスポートし、SQLServerColumnEncryptionJavaKeyStoreProvider で使用することもできます。 エクスポートした証明書は JKS キーストア型として Java キー ストアにインポートすることもできます。 
 
-Keytool エントリを作成した後は、キー ストア プロバイダー名とキーのパスを必要があるデータベースで列マスター_キーのメタデータを作成する必要があります。 列マスター キー メタデータを作成する方法の詳細については、次を参照してください。 [CREATE COLUMN MASTER KEY](https://msdn.microsoft.com/library/mt146393.aspx)です。 SQLServerColumnEncryptionJavaKeyStoreProvider、キーのパスは、キーの別名だけです。 SQLServerColumnEncryptionJavaKeyStoreProvider の名前は 'MSSQL_JAVA_KEYSTORE' です。 SQLServerColumnEncryptionJavaKeyStoreProvider クラスの getName() パブリック API を使用してこの名前をクエリすることもできます。 
+Keytool エントリを作成した後は、キー ストア プロバイダー名とキーのパスを必要があるデータベースで列マスター_キーのメタデータを作成する必要があります。 列マスター キー メタデータを作成する方法の詳細については、次を参照してください。 [CREATE COLUMN MASTER KEY](/sql-docs/docs/t-sql/statements/create-column-master-key-transact-sql)です。 SQLServerColumnEncryptionJavaKeyStoreProvider、キーのパスは、キーの別名だけです。 SQLServerColumnEncryptionJavaKeyStoreProvider の名前は 'MSSQL_JAVA_KEYSTORE' です。 SQLServerColumnEncryptionJavaKeyStoreProvider クラスの getName() パブリック API を使用してこの名前をクエリすることもできます。 
 
 列マスター _ キーを作成するための T-SQL 構文です。
 
@@ -429,7 +429,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
   
 ## <a name="using-column-master-key-store-providers-for-programmatic-key-provisioning"></a>プログラムによるキーのプロビジョニングに列マスター キー ストア プロバイダーを使用する
 
-暗号化された列にアクセスするときに、Microsoft JDBC Driver for SQL Server は透過的に検索して、列暗号化キーの暗号化を解除するには、右側の列マスター _ キー ストア プロバイダーを呼び出します。 一般的に、通常のアプリケーション コードは列マスター キー ストア プロバイダーを直接呼び出しません。 ただし、プロバイダーを明示的にインスタンス化して呼び出し、プログラムを使用して Always Encrypted キーをプロビジョニングおよび管理することができます。これにより、(たとえば、一部の列マスター キーの回転として) 暗号化された列暗号化キーを生成したり、列暗号化キーを暗号化解除することができます。 詳細については、「 [Overview of Key Management for Always Encrypted](https://msdn.microsoft.com/library/mt708953.aspx)(Always Encrypted のキー管理の概要)」を参照してください。
+暗号化された列にアクセスするときに、Microsoft JDBC Driver for SQL Server は透過的に検索して、列暗号化キーの暗号化を解除するには、右側の列マスター _ キー ストア プロバイダーを呼び出します。 一般的に、通常のアプリケーション コードは列マスター キー ストア プロバイダーを直接呼び出しません。 ただし、プロバイダーを明示的にインスタンス化して呼び出し、プログラムを使用して Always Encrypted キーをプロビジョニングおよび管理することができます。これにより、(たとえば、一部の列マスター キーの回転として) 暗号化された列暗号化キーを生成したり、列暗号化キーを暗号化解除することができます。 詳細については、「 [Overview of Key Management for Always Encrypted](/sql-docs/docs/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted)(Always Encrypted のキー管理の概要)」を参照してください。
 カスタム キー ストア プロバイダーを使用する場合に限り、独自のキー管理ツールの実装が必要になることがあります。 Windows 証明書ストアまたは Azure Key Vault に格納されているキーを使用する場合は、管理およびキーをプロビジョニングする SQL Server Management Studio や PowerShell などの既存のツールを使用することができます。 Java キー ストアに格納されたキーを使用する場合は、キーをプログラムでプロビジョニングする必要があります。 次の例では、Java キー ストアに格納されているキーを使用してキーの暗号化に SQLServerColumnEncryptionJavaKeyStoreProvider クラスの使用を示しています。
 
 ```  
@@ -650,6 +650,6 @@ SQLServerBulkCopy、既に暗号化され、データの暗号化を解除せず
 注: は、データが実際に暗号化されている場合、または同じの暗号化を使用して正しく暗号化されている場合、Microsoft JDBC Driver for SQL Server が参照しないため、データベースが破損する可能性が、AllowEncryptedValueModifications を指定するときに警告を使用します。型、アルゴリズムとキーが対象列とします。
 
 ## <a name="see-also"></a>参照  
- [Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))](https://msdn.microsoft.com/library/mt163865.aspx)  
+ [Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)  
   
   

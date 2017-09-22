@@ -15,11 +15,11 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fe007313e57ec01c5c456b0623b642555a25bf35
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 105f4ca9859a2c8f0d16cb5e961dc1e395a83b62
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Reporting Services モバイル レポートのデータ
@@ -27,9 +27,9 @@ ms.lasthandoff: 08/09/2017
   
 2 つの種類のソースからデータをインポートできます。   
   
-* **ローカルの Excel ファイル**: Excel のドキュメントを選択し、インポートするワークシートを選択します。 インポート後に、データはモバイル レポート定義内に保存されます。 元の Excel ファイルからのデータを更新するには、 **の** [データ] [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Data** tab. 詳細については、 [SSRS モバイル レポート用の Excel データの準備](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)に関する記事を参照してください。  
+* **ローカルの Excel ファイル**: Excel のドキュメントを選択し、インポートするワークシートを選択します。 インポート後に、データはモバイル レポート定義内に保存されます。 元の Excel ファイルからのデータを更新するには、 **の** [データ] [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Data** tab.詳細について[SSRS モバイル レポートを Excel のデータを準備する](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)です。  
   
-* **[!INCLUDE[PRODUCT_NAME](../../includes/server-product-name.md)] 共有データセット**: サーバー上のパブリッシュされたデータセットの一覧を参照し、モバイル レポートに追加するデータセットを選択します。 サーバー データに基づくモバイル レポートは、常に元のサーバーのデータセットに接続され、サーバー上のデータの最新の状態が反映されます。 「 [サポートされるデータ ソースの一覧](https://msdn.microsoft.com/library/ms159219.aspx)」を参照してください。   
+* **[!含める[PRODUCT_NAME](/sql-docs/docs/reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs)です。   
   
   詳細については、 [Mobile Report Publisher での共有データセットからのデータの取得](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md)に関する記事を参照してください。  
   

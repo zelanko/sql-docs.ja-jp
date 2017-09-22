@@ -34,10 +34,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fe808df2a3d0f55ab00946db2bd86aa8d9fb3511
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cccf648270523e86e502caebfbc7f6ba6a55cfd7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Azure SQL データベース)
@@ -130,11 +130,11 @@ CREATE DATABASE database_name
 |150 GB|なし|√|√|√|√|  
 |200 GB|なし|√|√|√|√|  
 |250 GB|なし|√ (D)|√ (D)|√|√|  
-|300 GB|なし|√|√|√|√|  
-|400 GB|なし|√|√|√|√|
-|500 GB|なし|√|√|√ (D)|√|
-|750 GB|なし|√|√|√|√|
-|1024 GB|なし|√|√|√|√ (D)|
+|300 GB|なし|なし|√|√|√|  
+|400 GB|なし|なし|√|√|√|
+|500 GB|なし|なし|√|√ (D)|√|
+|750 GB|なし|なし|√|√|√|
+|1024 GB|なし|なし|√|√|√ (D)|
 |1024 GB から最大 4096 GB 単位での 256 GB * |なし|なし|なし|なし|√|√|  
   
  \*P11 と P15 MAXSIZE を許可する最大 4 TB 1024 GB が既定のサイズをされているとします。  P11 および P15 は、追加料金なしで最大 4 TB の含まれる記憶域を使用できます。 Premium 階層で MAXSIZE が 1 TB を超えるは次の地域で現在使用可能な: 米国 East2、米国西部、米国 Gov バージニア、西ヨーロッパ、ドイツの中央、南東アジア、東日本、オーストラリア東部、カナダ中央、およびカナダ東部です。 現在の制限については、次を参照してください。[データベースをシングル](https://docs.microsoft.com/azure/sql-database-single-database-resources)です。  
@@ -292,7 +292,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 
 -  [sys.dm_database_copies & #40 です。Azure SQL データベース &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 
--   [ALTER DATABASE & #40 です。Azure SQL データベース &#41;](https://msdn.microsoft.com/library/mt574871.aspx)   
+-   [ALTER DATABASE & #40 です。Azure SQL データベース &#41;](/sql-docs/docs/t-sql/statements/alter-database-azure-sql-database)   
     
   
 

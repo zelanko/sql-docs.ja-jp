@@ -22,10 +22,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 30028afc0a7d994441a0958b207b7ab70c40f133
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 677198cbaa71a795d9e08d328b55d5d611901112
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>テーブル モデリング (Adventure Works チュートリアル)
@@ -68,7 +68,7 @@ SQL Server 2017 または Azure Analysis Services を使用して、1400 互換�
 ## <a name="prerequisites"></a>前提条件  
 このチュートリアルを完了するために次の前提条件が必要です。  
   
--   最新バージョン[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]します。 [最新バージョンを入手](https://msdn.microsoft.com/library/mt204009.aspx)です。
+-   最新バージョンの [!含める[ssBIDevStudioFull](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)です。
 
 -   SQL Server Management Studio の最新バージョン。 [最新バージョンを入手](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)です。 
   

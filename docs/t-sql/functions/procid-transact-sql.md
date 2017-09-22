@@ -1,7 +1,7 @@
 ---
 title: "@@PROCID (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,13 +29,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b44e112203f0933d90a4161e0b9dd0ceb0292332
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 9288f472601621b3177e3fa978bb2f53324881c8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="procid-transact-sql"></a>@@PROCID (TRANSACT-SQL)
+# <a name="x40x40procid-transact-sql"></a>& #x 40; & #x 40 です。PROCID (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   現在の [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールのオブジェクト識別子 (ID) を返します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールは、ストアド プロシージャ、ユーザー定義関数、またはトリガーです。 @@PROCID指定することはできません CLR モジュールやインプロセス データ アクセス プロバイダー。  
@@ -45,7 +45,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 @@PROCID  
 ```  
   
@@ -87,3 +86,4 @@ EXECUTE dbo.usp_FindName 'P%', 'A%';
  [RAISERROR と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
+

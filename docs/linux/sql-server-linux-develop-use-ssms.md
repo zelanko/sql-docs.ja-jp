@@ -10,23 +10,23 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: a999ca0248e83d2d9ef59f7ec04ad2dd58378132
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 3c48596ed8bb4b4febc5982a3f37609f2ef4281f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="use-sql-server-management-studio-ssms-on-windows-to-manage-sql-server-on-linux"></a>Windows 上の SQL Server Management Studio (SSMS) を使用して、Linux 上の SQL Server を管理するには
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-このトピックは、使用する方法を示します[SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) Linux 上の SQL Server 2017 RC2 への接続にします。 SSMS は、Windows アプリケーション、ので Linux 上のリモート SQL Server インスタンスに接続できる Windows コンピューターがある場合に SSMS を使用します。 
+このトピックは、使用する方法を示します[SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) Linux 上の SQL Server 2017 RC2 への接続にします。 SSMS は、Windows アプリケーション、ので Linux 上のリモート SQL Server インスタンスに接続できる Windows コンピューターがある場合に SSMS を使用します。 
 
 正常に接続すると、データベースとの通信を確認する簡単な TRANSACT-SQL (T-SQL) クエリを実行します。
 
 ## <a name="install-the-newest-version-of-sql-server-management-studio"></a>SQL Server Management Studio の最新バージョンをインストールします。
 
-SQL Server を使用する場合は、常に最新バージョンの SQL Server Management Studio (SSMS) を使用する必要があります。 SSMS の最新バージョンは継続的に更新および最適化されている 2017 on Linux を SQL Server で現在動作します。 ダウンロードして、最新バージョンをインストールを参照してください。 [SQL Server Management Studio のダウンロード](https://msdn.microsoft.com/library/mt238290.aspx)です。 最新の状態に、SSMS の最新バージョンように求められますダウンロード可能な新しいバージョンがある場合。 
+SQL Server を使用する場合は、常に最新バージョンの SQL Server Management Studio (SSMS) を使用する必要があります。 SSMS の最新バージョンは継続的に更新および最適化されている 2017 on Linux を SQL Server で現在動作します。 ダウンロードして、最新バージョンをインストールを参照してください。 [SQL Server Management Studio のダウンロード](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)です。 最新の状態に、SSMS の最新バージョンように求められますダウンロード可能な新しいバージョンがある場合。 
 
 ## <a name="connect-to-sql-server-on-linux"></a>Linux 上の SQL Server への接続します。
 
@@ -34,7 +34,7 @@ SQL Server を使用する場合は、常に最新バージョンの SQL Server 
 
 1. 入力して、SSMS を起動**Microsoft SQL Server Management Studio** Windows の検索ボックスで、およびデスクトップ アプリをクリックします。
 
-    ![SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/ssms.png)
+    ![[SQL Server Management Studio]](./media/sql-server-linux-develop-use-ssms/ssms.png)
 
 2. **サーバーへの接続** ウィンドウで、次の情報を入力してください (SSMS が既に実行されている場合はクリックして**接続 > データベース エンジン**を開くには、**サーバーへの接続**ウィンドウ)。
 
@@ -59,9 +59,9 @@ SQL Server を使用する場合は、常に最新バージョンの SQL Server 
      
 ## <a name="run-sample-queries"></a>サンプル クエリを実行します。
 
-サーバーに接続した後は、データベースに接続し、サンプル クエリを実行します。 新しいクエリを記述する場合を参照してください。 [TRANSACT-SQL ステートメントの記述](https://msdn.microsoft.com/library/ms365303.aspx)です。
+サーバーに接続した後は、データベースに接続し、サンプル クエリを実行します。 新しいクエリを記述する場合を参照してください。 [TRANSACT-SQL ステートメントの記述](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements)です。
 
-1. に対するクエリの実行に使用するデータベースを識別します。 新しいデータベースで作成した可能性があります、 [TRANSACT-SQL チュートリアル](https://msdn.microsoft.com/library/ms365303.aspx)です。 ことも、 **AdventureWorks**サンプル データベースを[ダウンロードされ、復元](sql-server-linux-migrate-restore-database.md)です。
+1. に対するクエリの実行に使用するデータベースを識別します。 新しいデータベースで作成した可能性があります、 [TRANSACT-SQL チュートリアル](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements)です。 ことも、 **AdventureWorks**サンプル データベースを[ダウンロードされ、復元](sql-server-linux-migrate-restore-database.md)です。
 2. **オブジェクト エクスプ ローラー**サーバー上のターゲット データベースに移動します。
 2. データベースを右クリックし、**新しいクエリ**:
 
@@ -81,7 +81,7 @@ SQL Server を使用する場合は、常に最新バージョンの SQL Server 
 
 だけでなく、クエリを作成し、データベースを管理する T-SQL ステートメントを使用できます。
 
-T-SQL を新しい場合を参照してください[チュートリアル: TRANSACT-SQL ステートメントの記述](https://msdn.microsoft.com/library/ms365303.aspx)と[TRANSACT-SQL リファレンス (データベース エンジン)](https://msdn.microsoft.com/library/bb510741.aspx)です。
+T-SQL を新しい場合を参照してください[チュートリアル: TRANSACT-SQL ステートメントの記述](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements)と[TRANSACT-SQL リファレンス (データベース エンジン)](https://msdn.microsoft.com/library/bb510741.aspx)です。
 
 SSMS を使用する方法の詳細については、次を参照してください。 [SQL Server Management Studio を使用して](https://msdn.microsoft.com/library/ms174173.aspx)です。
 

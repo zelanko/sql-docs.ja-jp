@@ -4,16 +4,16 @@ description: "このクイック スタート チュートリアルでは、SUSE
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 09/07/2017
+ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: d454dca437f64a73879ed689fce1100c74a6fcde
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 57be01c49643bafada701849a32b532679513c71
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>SQL Server をインストールし、SUSE Linux Enterprise Server にデータベースを作成
@@ -72,7 +72,11 @@ SLES で SQL Server を構成するには、インストールするターミナ
    systemctl status mssql-server
    ```
 
-1. リモートで接続する場合はを開くには、ファイアウォールで SQL Server の TCP ポート (既定は 1433) する必要もあります。
+1. リモートで接続する場合はを開くには、ファイアウォールで SQL Server の TCP ポート (既定は 1433) する必要もあります。 SuSE ファイアウォールを使用している場合は、編集する必要があります。、 **/etc/sysconfig/SuSEfirewall2**構成ファイル。 変更、 **FW_SERVICES_EXT_TCP**エントリを SQL Server のポート番号が含まれます。
+
+   ```
+   FW_SERVICES_EXT_TCP="1433"
+   ```
 
 この時点では、SQL Server では、SLES コンピューター上で実行しを使用する準備ができました!
 

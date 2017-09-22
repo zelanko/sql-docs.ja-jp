@@ -1,8 +1,8 @@
 ---
-title: "どのような &#39; Machine Learning のサービスの |Microsoft ドキュメント"
+title: "どのような &#39; s Machine Learning のサービスの新機能 |Microsoft ドキュメント"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/31/2017
+ms.date: 09/08/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8719ec8be1c0f7b7b0dc72093707829c30ebbb3f
+ms.sourcegitcommit: fffe2ab906f659a2fb0e2996363ac8e7da000707
+ms.openlocfilehash: 34a404511d72c5775f25dd182b018926b6d0d62e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/18/2017
 
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>SQL Server の Machine Learning のサービスの新機能
@@ -30,27 +30,27 @@ SQL Server 2017、機械学習は一般的な Python 言語のサポートを追
 
 最新のお知らせは、ここをキャッチします。 [SQL Server 2017 の Python: データベース内の機械学習の強化](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
 
-## <a name="whats-new-in-sql-server-2017-release-candidate-2"></a>SQL Server 2017 Release Candidate 2 の新機能
+## <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
 
-Microsoft Machine Learning サーバー SQL Server では、今すぐを構築およびマシン ラーニング ソリューションを配置するための包括的なサポートを提供します。 このリリースの要点を次に示します。
+Microsoft Machine Learning サーバー SQL Server では、今すぐ R または Python のいずれかで machine learning のソリューションの配置のビルドとの包括的なサポートを提供します。 このリリースの要点を次に示します。
 
 > [!IMPORTANT]
 > 
 > R、Python の使用を含む、マシン学習サービスは現在サポートされていません、Linux 上または Azure SQL データベース、SQL Server を実行している場合。 今後のリリースで変更を探します。
 > 
-> ただし、予測関数を使用してネイティブ スコアリングは現在サポートされて Linux のエディションでします。 
+> Linux のエディションでは、予測関数を使用してネイティブ スコア付けはサポートが現在します。
  
 ### <a name="in-database-python-integration"></a>データベース内の Python の統合
 
-Python ストアド プロシージャ、またはを実行する計算コンテキストとして、SQL Server コンピューターを使用してリモートで Python を実行します。 この統合表示の Python の開発者とデータ科学者、SQL Server の power を使用して、Microsoft からなどの技術革新を探索する膨大なコミュニティのための新しい手法**revoscalepy**と**microsoftml**.
+Python ストアド プロシージャ、またはを実行する計算コンテキストとして、SQL Server コンピューターを使用してリモートで Python を実行します。 この統合は、SQL Server の機能を使用するには、Python の開発者やデータ サイエンティストの膨大なコミュニティの新しい手法が表示されます。 
 
-SQL Server の開発者にアクセスする広範な Python ライブラリ scikit などの一般的なフレームワークを含む、オープン ソース エコシステムから-Tensorflow、Caffe および Theano/Keras を説明します。 
+SQL Server の開発者にアクセスする広範な Python ライブラリ scikit などの一般的なフレームワークを含む、オープン ソース エコシステムから-Tensorflow、Caffe、および Theano/Keras を説明します。 Microsoft からなどの技術革新を試してみてくださいと**revoscalepy**と**microsoftml**!
 
-データベースでは、機械学習; の単に Python を実行しているが、多数の他の潜在的なアプリケーションとの統合に Python SQL より高度な強力なソリューションを提供するそれぞれの言語の長所を活用することがあります。
+データベース内のないあらゆる実行中の Python は機械学習、方法です。 これは、SQL では、Python と統合して、各言語の電源を使用して、高度な強力なソリューションを提供するその他の潜在的なアプリケーションの無数です。
 
 + **revoscalepy**
 
-    このリリースでは最終バージョンの**revoscalepy**、ストリーミング RevoScaleR のアルゴリズムのスケーラブルな対応する Pythonic を渡しています。 線形とロジスティック回帰、デシジョン ツリー、ブースト ツリー、およびランダム フォレスト、すべて並列処理、およびリモート計算コンテキストで実行中の対応の Python モデルを作成することができます。
+    このリリースでは最終バージョンの**revoscalepy**RevoScaleR 内のアルゴリズムに相当する Python を供給します。 線形とロジスティック回帰、デシジョン ツリー、ブースト ツリー、およびランダム フォレスト、すべて並列処理、およびリモート計算コンテキストで実行中の対応の Python モデルを作成することができます。
 
     詳細については、次を参照してください。 [revoscalepy は](python/what-is-revoscalepy.md)します。
 
@@ -60,9 +60,9 @@ SQL Server の開発者にアクセスする広範な Python ライブラリ sci
 
 + Microsoft Machine Learning Server (スタンドアロン) での Python のサポート
 
-    SQL Server 2017 には、Python と R プラットフォームのスタンドアロン バージョンをインストールするオプションが含まれています。 Machine Learning のサーバーを使用するは、配布し、SQL Server を使用せずに R または Python コードをスケールします。
+    SQL Server 2017 には、Microsoft マシン学習のプラットフォームのスタンドアロン バージョンをインストールするオプションが含まれています。 Machine Learning のサーバーを使用するは、配布し、SQL Server を使用せずに R または Python コードをスケールします。
 
-    Microsoft Machine Learning のサーバーでの Python の使用の例は、次を参照してください。[発行 Python コードを使用すると](python/publish-consume-python-code.md)です。
+    Microsoft Machine Learning のサーバーで実行されている Python の例は、次を参照してください。[発行 Python コードを使用すると](python/publish-consume-python-code.md)です。
 
 ### <a name="new-algorithms"></a>新しいアルゴリズム
 
@@ -76,7 +76,7 @@ MicrosoftML パッケージは、R、Python の両方のインターフェイス
 
 このリリースには、展開および機械学習タスクを配布するために、複数のオプションと機能が含まれています。
 
-+ T-SQL の使用
++ 配置し、T-SQL を使用して、マシン Python ソリューションを統合
 
     呼び出すことができる Python コードを使用して、T-SQL での Python の統合を意味`sp_execute_external_script`です。 このセキュリティで保護されたインフラストラクチャでは、Python モデルと単純なストアド プロシージャを使用して、アプリケーションから呼び出すことができるスクリプトのエンタープライズ レベルの展開できるようにします。 その他のパフォーマンスは、SQL から Python プロセスと MPI リングの並列化にデータをストリーミングでです。
 
@@ -86,7 +86,7 @@ MicrosoftML パッケージは、R、Python の両方のインターフェイス
 
 + パフォーマンス
 
-    Microsoft はスコアリングのためのパフォーマンスの境界をプッシュされます。 ごとに 100万行を処理したデータベース内のスコアリングと 2 番目の R モデルを使用します。 このリリースでは、新機能で**リアルタイム スコアリング**と**ネイティブ スコアリング**単一行のスコアと小規模でパフォーマンスの向上をバッチ処理もサポートします。 
+    Microsoft はスコアリングのためのパフォーマンスの境界をプッシュされます。 ごとに 100万行を処理したデータベース内のスコアリングと 2 番目の R モデルを使用します。 このリリースでは、新機能で**リアルタイム スコアリング**と**ネイティブ スコアリング**の単一行のバッチ スコアリング パフォーマンス向上をサポートします。 
 
 ### <a name="realtime-scoring-and-native-scoring"></a>リアルタイムのスコアリングと、ネイティブのスコアリング
 
@@ -95,7 +95,7 @@ MicrosoftML パッケージは、R、Python の両方のインターフェイス
 さらに、SQL Server 2017 の今回のリリースに含まれるネイティブ T-SQL 関数高速スコアリングのため Linux 上であっても、SQL Server の任意のエディションで実行することができます。 関数には、R または追加の構成のインストールは不要です。 つまり、他の場所で、モデルのトレーニング、SQL Server に保存および R. を呼び出さないでスコアリングを実行し、この機能と呼ばれます_ネイティブ スコアリング_です。
 
   - ネイティブ スコアリングは、SQL Server 2017 でのみ使用できます。 Linux を含む、SQL Server の任意のエディションで実行できる T-SQL 関数を使用します。
- - リアルタイムのスコア付けすると、SQL Server の 2017 でおよび Microsoft Machine Learning のサーバーでがサポートされます。 実行することができますストアド プロシージャまたはリアルタイムの R コードのスコア付けを実行します。
+ - リアルタイムのスコア付けすると、SQL Server の 2017 でおよび Microsoft Machine Learning のサーバーでがサポートされます。 ストアド プロシージャを実行したり、リアルタイムの R コードのスコア付けを実行できます。
  - リアルタイムのスコアも利用できます for SQL Server 2016 インスタンスは Microsoft R Server の最新のリリースにアップグレードした場合。
 
 詳細については、次の記事を参照してください。
@@ -104,9 +104,9 @@ MicrosoftML パッケージは、R、Python の両方のインターフェイス
  + [ネイティブのスコアリング](sql-native-scoring.md)
  + [リアルタイムのスコアリングまたはネイティブ スコアリングを実行する方法](r/how-to-do-realtime-scoring.md)
 
-### <a name="upgrade-your-ml-experience-and-get-pre-trained-models"></a>ML エクスペリエンスをアップグレードし、事前トレーニング済みモデルの取得
+### <a name="upgrade-your-machine-learning-experience-and-get-pre-trained-models"></a>機械学習のエクスペリエンスをアップグレードし、事前トレーニング済みモデルの取得
 
-SQL Server 2016 の R Services の以前のバージョンをインストールした場合重要度の最新のライフ サイクル ポリシーを使用するようにサーバーを切り替えることによって、最新バージョンにアップグレードすることができますようになりました。 これにより、R の高速のリリース サイクルの活用し、すべての R コンポーネントを自動的にアップグレードできます。 詳細については、 [Microsoft R Server 9.0.1](https://docs.microsoft.com/r-server/whats-new-in-r-server)に関する記事を参照してください。
+SQL Server 2016 の R Services の以前のバージョンをインストールした場合重要度の最新のソフトウェア ライフ サイクル ポリシーを使用するようにサーバーを切り替えることによって、最新バージョンにアップグレードすることができますようになりました。 これにより、R の高速のリリース サイクルの活用し、すべての R コンポーネントを自動的にアップグレードできます。 詳細については、 [Microsoft R Server 9.0.1](https://docs.microsoft.com/r-server/whats-new-in-r-server)に関する記事を参照してください。
 
 インストーラーでは、バイナリ形式で事前トレーニング済みモデルのコレクションをインストールするオプションも提供します。 これらのモデルでは、ここで難しい可能性があるモデルをトレーニングする大規模なデータセットを検索する顧客の画像認識などのシナリオで機械学習をサポートします。 事前トレーニング済みモデルの 1 つをインストールした後は、時間とコストがこのような大規模で複雑なモデルのトレーニングに関係することがなく、独自のデータの予測使用することができます。
 
@@ -117,8 +117,8 @@ SQL Server 2016 の R Services の以前のバージョンをインストール�
 このリリースには、SQL server パッケージ管理の多くの機能強化が含まれています。 たとえば、次のオブジェクトにアクセスできます。
 
 - DBA は、管理およびアクセス許可を監査するデータベース ロール
-- T-SQL で EXTERAL ライブラリの作成ステートメント
-- インストールするための R 関数の豊富なセットは、削除、または、ユーザーが所有するパッケージを一覧表示します。
+- R を知らなくてもパッケージの管理の Dba を支援する、T-SQL で、外部ライブラリの作成ステートメント
+- インストールするための R 関数の豊富なセットは、削除、または、ユーザーが所有するパッケージを一覧表示
 
 詳細については、次を参照してください。[パッケージの管理](r/r-package-management-for-sql-server-r-services.md)です。
 
@@ -128,4 +128,4 @@ SQL Server 2016 の R Services の以前のバージョンをインストール�
 
 + [SQL Server の Machine Learning のサービスで R を設定します。](r/set-up-sql-server-r-services-in-database.md)
 
-+ [Machine learning のチュートリアル](tutorials/machine-learning-services-tutorials.md)
++ [Machine learning のチュートリアルおよびサンプル](tutorials/machine-learning-services-tutorials.md)

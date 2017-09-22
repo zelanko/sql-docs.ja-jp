@@ -1,7 +1,7 @@
 ---
 title: "@@TEXTSIZE (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/13/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -26,13 +26,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d2525b2cfea6130dba7b84ff918260969738f994
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: f3585a043d8bab53ccf9060502edc4a93806f58c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="textsize-transact-sql"></a>@@TEXTSIZE (TRANSACT-SQL)
+# <a name="x40x40textsize-transact-sql"></a>& #x 40; & #x 40 です。TEXTSIZE (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   現在の値を返します、 [TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md)オプション。  
@@ -42,7 +42,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 @@TEXTSIZE  
 ```  
   
@@ -79,3 +78,4 @@ SELECT @@TEXTSIZE AS 'Text Size'
  [[SET textsize] & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-textsize-transact-sql.md)  
   
   
+

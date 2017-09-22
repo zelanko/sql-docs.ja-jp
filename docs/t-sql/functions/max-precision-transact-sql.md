@@ -1,7 +1,7 @@
 ---
 title: "@@MAX_PRECISION (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -26,13 +26,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d52f6d347c274044d4902508920038e166efb65a
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 530dc9cd780d9dae2df1c326fcd1cc070450290a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="maxprecision-transact-sql"></a>@@MAX_PRECISION (TRANSACT-SQL)
+# <a name="x40x40maxprecision-transact-sql"></a>& #x 40; & #x 40 です。MAX_PRECISION (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   によって使用される有効桁数のレベルを返します**10 進**と**数値**データ型は、現在サーバーに設定します。  
@@ -64,3 +64,4 @@ SELECT @@MAX_PRECISION AS 'Max Precision'
  [有効桁数、小数点以下桁数、および長さ &#40;TRANSACT-SQL と #41 です。](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)  
   
   
+

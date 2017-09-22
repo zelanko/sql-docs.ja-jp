@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 411086a4a75b002faa7e07befa77e7277a494bab
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: e36aeea4440f7c565e9517ebb1b80d21116b4342
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>パッケージとその他の操作を実行するモニター
@@ -51,7 +51,7 @@ ms.lasthandoff: 08/03/2017
  9 つの状態の種類を使用して、操作の状態を示します。 状態の種類の一覧については、「[catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)」を参照してください。  
 
 ## <a name="active_ops"></a>アクティブな操作 ダイアログ ボックス
-  配置、検証、パッケージの実行など、 **サーバー上で現在実行中の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作の状態を表示するには、**[アクティブな操作][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。 このデータは、SSISDB カタログに格納されます。  
+  配置、検証、パッケージの実行など、** サーバー上で現在実行中の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作の状態を表示するには、**[アクティブな操作][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。 このデータは、SSISDB カタログに格納されます。  
   
  関連 [!INCLUDE[tsql](../../includes/tsql-md.md)] ビューの詳細については、「[catalog.operations (SSISDB データベース)](../../integration-services/system-views/catalog-operations-ssisdb-database.md)」、「[catalog.validations (SSISDB データベース)](../../integration-services/system-views/catalog-validations-ssisdb-database.md)」、「[catalog.executions (SSISDB データベース)](../../integration-services/system-views/catalog-executions-ssisdb-database.md)」を参照してください。  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 08/03/2017
  参照してください、<xref:Microsoft.SqlServer.Management.IntegrationServices>名前空間とそのクラスです。  
 
 ## <a name="reports"></a> Reports for the Integration Services Server
-  現在のリリースで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、標準のレポートで使用できる[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]監視に役立つ[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に配置されたプロジェクト、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバー。 これらのレポートは、パッケージの状態と履歴を確認したり、必要に応じてパッケージ実行の失敗の原因を特定したりするのに役立ちます。  
+  現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] サーバーに配置された [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの監視に役立つ標準レポートを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用できるようになりました。 これらのレポートは、パッケージの状態と履歴を確認したり、必要に応じてパッケージ実行の失敗の原因を特定したりするのに役立ちます。  
   
  各レポート ページの先頭にある戻るアイコンをクリックすると、前に表示されていたページに戻ります。最新の情報に更新アイコンをクリックすると、ページに表示されている情報が更新されます。印刷アイコンをクリックすると、現在のページが印刷されます。  
   
@@ -182,7 +182,7 @@ ms.lasthandoff: 08/03/2017
  カスタム レポートの作成および追加方法については、「 [Add a Custom Report to Management Studio](http://msdn.microsoft.com/library/3cf8d726-0a90-4f80-98d0-352a2a59be0f)」(Management Studio へのカスタム レポートの追加) を参照してください。  
 
 ## <a name="view-reports-for-the-integration-services-server"></a>Integration Services サーバーのレポートの表示
-  現在のリリースで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、標準のレポートで使用できる[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]監視に役立つ[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に配置されたプロジェクト、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバー。  レポートの詳細については、「 [Integration Services サーバーのレポート](#reports)」をご覧ください。  
+  現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] サーバーに配置された [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの監視に役立つ標準レポートを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用できるようになりました。  レポートの詳細については、「 [Integration Services サーバーのレポート](#reports)」をご覧ください。  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>Integration Services サーバーのレポートを表示するには  
   
@@ -203,6 +203,6 @@ ms.lasthandoff: 08/03/2017
     -   **すべての接続**  
 
 ## <a name="see-also"></a>参照  
- [プロジェクトとパッケージの実行](https://msdn.microsoft.com/library/hh213290.aspx)   
- [パッケージの実行のレポートのトラブルシューティング](https://msdn.microsoft.com/library/gg471512.aspx)  
+ [プロジェクトとパッケージの実行](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)   
+ [パッケージ実行のレポートのトラブルシューティング](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-reports-for-package-execution)  
 

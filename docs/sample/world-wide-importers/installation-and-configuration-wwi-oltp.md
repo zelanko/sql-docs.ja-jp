@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4102284612e0838fb876708b959266994a0f2b96
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 38890f32a5431b1c67a75f2330cc97ae3428b2fb
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="installation-and-configuration"></a>インストールと構成
@@ -28,7 +28,7 @@ Wide World importers 社の OLTP データベースのインストールと構�
 ## <a name="prerequisites"></a>前提条件
 
 - [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (またはそれ以降) または[Azure SQL Database](https://azure.microsoft.com/services/sql-database/)です。 完全バージョンのサンプルでは、SQL Server Evaluation/Developer または Enterprise Edition を使用します。
-- [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)。 最良の結果は、2016 年 6 月リリースを使用またはそれ以降。
+- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)。 最良の結果は、2016 年 6 月リリースを使用またはそれ以降。
 
 ## <a name="download"></a>ダウンロード
 
@@ -56,7 +56,7 @@ SQL Server インスタンスにバックアップを復元するには、Manage
 5. 必要な場合は、データのターゲットの場所を変更し、で、ログ ファイル、**ファイル**ウィンドウです。 ベスト プラクティスにデータを配置し、ログ ファイルを別のドライブにあることに注意してください。
 6. **[OK]**をクリックします。 データベースの復元が開始されます。 それが完了した後、データベース、SQL Server インスタンスにインストールされている WideWorldImporters があります。
 
-### <a name="azure-sql-database"></a>Azure SQL Database
+### <a name="azure-sql-database"></a>Azure SQL データベース
 
 新しい SQL データベースに bacpac をインポートするには、Management Studio を使用できます。
 

@@ -1,19 +1,19 @@
 ---
 title: "Linux 上の SQL Server の設定の構成 |Microsoft ドキュメント"
 description: "このトピックでは、mssql conf ツールを使用して Linux 上の SQL Server 2017 設定を構成する方法について説明します。"
-author: luisbosquez
-ms.author: lbosq
+author: rothja
+ms.author: jroth
 manager: jhubbard
-ms.date: 08/24/2017
+ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: 5147b648f2b34496bc46f756639ded028b01fe0e
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 68b895f4497fc5e111bc346d01eb85f1bf0ab222
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql conf ツールを使用して Linux 上の SQL Server を構成します。
@@ -55,13 +55,19 @@ ms.lasthandoff: 09/05/2017
 
 **セット照合**オプションがサポートされる照合順序のいずれかに照合順序の値を変更します。
 
+1. 最初[任意のユーザー データベースをバックアップ](sql-server-linux-backup-and-restore-database.md)サーバーにします。
+
+1. 使用して、 [sp_detach_db](../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)ストアド プロシージャ、ユーザー データベースをデタッチします。
+
 1. 実行、**セット照合**オプションを選択し、指示に従います。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set-collation
    ```
 
-1. Mssql conf ユーティリティは、指定された照合順序を使用してデータベースを復元し、サービスを再起動を試みます。 エラーがあるか、ロールバック、照合順序、以前の値にします。
+1. Mssql conf ユーティリティは、指定された照合順序の値に変更し、サービスを再起動を試みます。 エラーがあるか、ロールバック、照合順序、以前の値にします。
+
+1. ユーザー データベースのバックアップを復元します。
 
 サポートされる照合順序の一覧は、実行、 [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)関数:`SELECT Name from sys.fn_helpcollations()`です。
 

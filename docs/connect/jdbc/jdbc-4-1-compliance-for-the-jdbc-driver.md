@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8221755d220caec5588c8ed1343e360799b82694
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cffe6569f7bac5308d49bb89f4fb4db259be445b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>JDBC Driver の JDBC 4.1 への準拠
@@ -56,7 +56,7 @@ ms.lasthandoff: 09/09/2017
   
 |新機能|Description|  
 |-----------------|-----------------|  
-|新しいエスケープ関数<br /><br /> 制限された戻り行エスケープ|部分的にサポートされています。<br /><br /> エスケープ構文: 制限\<行 > [< row_offset > のオフセット]<br /><br /> エスケープ構文には 2 つの部分があります: 返す行の数を指定する必須部分の 'row' と、行を返し始める前にスキップする行数を指定する省略可能部分の 'row_offset' です。<br /><br /> ドライバーは、LIMIT の代わりに 'TOP' を使用するようクエリを変換することにより必須部分のみをサポートします (SQL Server では ‘LIMIT’ はサポートされません)。<br /><br /> 省略可能部分の 'row_offset' が使用された場合、ドライバーは例外をスローします。SQL Server には、それをサポートする組み込みコンストラクトがないためです。<br /><br /> 詳細については、「 [SQL エスケープ シーケンスを使用して](https://msdn.microsoft.com/en-us/library/ms378045.aspx)です。|  
+|新しいエスケープ関数<br /><br /> 制限された戻り行エスケープ|部分的にサポートされています。<br /><br /> エスケープ構文: 制限\<行 >[オフセット < row_offset >](/sql-docs/docs/connect/jdbc/using-sql-escape-sequences)です。|  
   
  Java Database Connectivity API 4.1 仕様は Microsoft JDBC Driver 4.2 for SQL Server によってサポートされ、以下のようにデータ型がマッピングされています。  
   

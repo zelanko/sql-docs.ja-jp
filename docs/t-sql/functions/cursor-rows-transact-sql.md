@@ -1,7 +1,7 @@
 ---
 title: "@@CURSOR_ROWS (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/24/2017
+ms.date: 08/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -25,13 +25,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e3251891dfaa079933ea79c76154f76f7c2e148
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 10a3a6cabae8d25de670cbacb037a62f4c5a2d54
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="cursorrows-transact-sql"></a>@@CURSOR_ROWS (TRANSACT-SQL)
+# <a name="x40x40cursorrows-transact-sql"></a>& #x 40; & #x 40 です。@Cursor_rows (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 接続で最後にオープンされたカーソルに現在取得されている行数を返します。 パフォーマンスを向上させるために[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]できる大きなキーセットと静的カーソルを非同期に作成します。 @@CURSOR_ROWS @ 時に、カーソルの条件を満たす行の数を取得することを確認するのに呼び出せる@CURSOR_ROWSと呼びます。
@@ -40,7 +40,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```
 @@CURSOR_ROWS  
 ```  
   

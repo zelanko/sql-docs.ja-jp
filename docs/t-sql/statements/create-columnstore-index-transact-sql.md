@@ -34,10 +34,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e29110bc0e536375dc2d21ec852a634069fa868
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: a4e3b602b026d359c7eac492fc44480d4b1a18a9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -54,12 +54,12 @@ ms.lasthandoff: 09/01/2017
 -   [非クラスター化列ストア インデックスの例](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
   
 シナリオを参照してください。  
--   [リアルタイム運用分析の列ストア インデックス](https://msdn.microsoft.com/library/dn817827.aspx)  
--   [データ ウェアハウスの列ストア インデックス](https://msdn.microsoft.com/library/dn913734.aspx)  
+-   [リアルタイム運用分析の列ストア インデックス](/sql-docs/docs/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics)  
+-   [データ ウェアハウスの列ストア インデックス](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-data-warehouse)  
   
 詳細情報：  
--   [列ストア インデックス ガイド](https://msdn.microsoft.com/library/gg492088.aspx)  
--   [列ストア インデックス機能の概要](https://msdn.microsoft.com/library/dn934994.aspx)  
+-   [列ストア インデックス ガイド](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-overview)  
+-   [列ストア インデックス機能の概要](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-what-s-new)  
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -298,14 +298,14 @@ ON
 ##  <a name="LimitRest"></a> 制限事項と制約事項  
 
 **次の一般的なビジネス データ型の 1 つの列ストア インデックス内の各列があります。** 
--   datetimeoffset [(  *n*  )]  
--   datetime2 [(  *n*  )]  
+-   datetimeoffset [( * n * )]  
+-   datetime2 [( * n * )]  
 -   datetime  
 -   smalldatetime  
 -   date  
--   時間 [(  *n*  )]  
--   float [(  *n*  )]  
--   real [(  *n*  )]  
+-   時間 [( * n * )]  
+-   float [( * n * )]  
+-   real [( * n * )]  
 -   decimal [(*精度*[ *、小数点以下桁数*] **)** ]
 -   数値 [(*精度*[ *、小数点以下桁数*] **)** ]    
 -   money  
@@ -315,15 +315,15 @@ ON
 -   smallint  
 -   tinyint  
 -   bit  
--   nvarchar [(  *n*  )] 
+-   nvarchar [( * n * )] 
 -   nvarchar (max) (対象[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]およびクラスター化列ストア インデックスのみに Azure SQL データベース premium の価格レベルを)   
--   nchar [(  *n*  )]  
--   varchar [(  *n*  )]  
+-   nchar [( * n * )]  
+-   varchar [( * n * )]  
 -   varchar (max) (対象[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]およびクラスター化列ストア インデックスのみに Azure SQL データベース premium の価格レベルを)
--   char [(  *n*  )]  
--   varbinary [(  *n*  )] 
+-   char [( * n * )]  
+-   varbinary [( * n * )] 
 -   varbinary (max) (対象[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]およびクラスター化列ストア インデックスのみに Azure SQL データベース premium の価格レベルを)
--   バイナリ [(  *n*  )]  
+-   バイナリ [( * n * )]  
 -   一意識別子 (対象[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]およびそれ以降)
   
 基になるテーブルに列ストア インデックスはサポートされていないデータ型の列がある場合は、非クラスター化列ストア インデックスには、その列を省略する必要があります。  

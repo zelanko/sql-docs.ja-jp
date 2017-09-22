@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: f564922466740d2410f686651d889e7a3fec5fe9
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: be817ff6961e68227cdae8aff14049b55652099c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>SQL Server の外部スクリプトの実行に関する一般的な問題
@@ -64,7 +64,7 @@ SQL Server の信頼されたスタート パッド サービスは、外部の�
 - スキャン チェックを行わない (SeChangeNotifyPrivilege)
 - (SeIncreaseQuotaSizePrivilege) プロセスに対してメモリ クォータを調整します。
 
-これらのユーザー権利のについては、「Windows 特権と権利」のセクションを参照してください。[構成の Windows サービス アカウントと権限](https://msdn.microsoft.com/library/ms143504.aspx)です。
+これらのユーザー権利のについては、「Windows 特権と権利」のセクションを参照してください。[構成の Windows サービス アカウントと権限](/sql-docs/docs/database-engine/configure-windows/configure-windows-service-accounts-and-permissions)です。
 
 > [!TIP]
 > SQL サーバーの診断のサポート診断プラットフォーム (SDP) ツールの使用に慣れている場合は、名前 MachineName_UserRights.txt の出力ファイルの確認を SDP を使用できます。
@@ -329,7 +329,7 @@ EXEC sp_execute_external_script @language = N'R',
 
 [Machine Learning のトラブルシューティングのためのデータの収集](data-collection-ml-troubleshooting-process.md)
 
-[アップグレードとインストールに関する FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
+[アップグレードとインストールに関してよく寄せられる質問](r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 [データベース エンジンの接続をトラブルシューティングします。](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)
 

@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 926c0c51b5a55a2869b73666f5620fa56e139cca
-ms.openlocfilehash: 331468a55b793f81b7d5d53e5b1f4e5f24a53cca
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 32ca3905c25a2b2182e519b56f23a6699728e854
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services (SSIS) プロジェクトとパッケージの配置
@@ -271,7 +271,7 @@ static void Main()
   
 2.  プロジェクトとすべてのパッケージの互換性テストが成功した場合は、 **[OK]** をクリックしてパッケージを変換します。  
   
-> **注:** プロジェクトをプロジェクト配置モデルに変換するには、 **Integration Services プロジェクト変換ウィザード**を使用します。 詳細については、「[Integration Services プロジェクトの変換ウィザード](https://msdn.microsoft.com/library/hh213290.aspx)」を参照してください。  
+> **注:** プロジェクトをプロジェクト配置モデルに変換するには、 **Integration Services プロジェクト変換ウィザード**を使用します。 詳細については、「[Integration Services プロジェクトの変換ウィザード](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)」を参照してください。  
 
 ## <a name="integration-services-deployment-wizard"></a>Integration Services 配置ウィザード
   **Integration Services 配置ウィザード** は次の 2 つの配置モデルをサポートしています。
@@ -403,27 +403,27 @@ static void Main()
 14. **[OK]** を 2 回クリックして変更を保存します。  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>ストアド プロシージャを使用した SSIS パッケージの配置と実行
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを、プロジェクト配置モデルを使用するように構成すると、[!INCLUDE[ssIS](../../includes/ssis-md.md)] カタログのストアド プロシージャを使用して、プロジェクトの配置とパッケージの実行を行うことができます。 プロジェクト配置モデルの詳細については、「[プロジェクトとパッケージの展開](https://msdn.microsoft.com/library/hh213290.aspx)」を参照してください。  
+  構成するときに、[です。含める[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)です。  
   
- また、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用して、プロジェクトの配置とパッケージの実行を行うこともできます。 詳細については、「 **関連項目** 」セクションのトピックを参照してください。  
+ また、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用して、プロジェクトの配置とパッケージの実行を行うこともできます。 詳細については、「 **関連項目** 」セクションのトピックを参照してください。  
   
 > [!TIP]  
 >  次の手順を実行することにより、catalog.deploy_project を除き、次の手順に示されるストアド プロシージャの Transact-SQL ステートメントを簡単に生成できます。  
 >   
->  1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、オブジェクト エクスプローラーの **[Integration Services カタログ]** ノードを展開し、実行するパッケージに移動します。  
+>  1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、オブジェクト エクスプローラーの **[Integration Services カタログ]** ノードを展開し、実行するパッケージに移動します。  
 > 2.  パッケージを右クリックし、 **[実行]**をクリックします。  
 > 3.  必要に応じて、パラメーター値、接続マネージャー プロパティ、 **[詳細設定]** タブのオプション (ログ記録レベルなど) を設定します。  
 >   
 >      詳細については、「[SSIS サーバーでのパッケージ実行のログ記録を有効にする](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。  
-> 4.  **[OK]** をクリックしてパッケージを実行する前に、 **[スクリプト]**をクリックします。 Transact-SQL が [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディター ウィンドウに表示されます。  
+> 4.  **[OK]** をクリックしてパッケージを実行する前に、 **[スクリプト]**をクリックします。 Transact-SQL が [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディター ウィンドウに表示されます。  
   
 ### <a name="to-deploy-and-execute-a-package-using-stored-procedures"></a>ストアド プロシージャを使用してパッケージの配置と実行を行うには  
   
 1.  [catalog.deploy_project (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md) を呼び出して、パッケージを含む [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置します。  
   
-     バイナリ コンテンツを取得する、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のプロジェクト配置ファイル、  *@project_stream* パラメーター、OPENROWSET 関数および一括行セット プロバイダーで SELECT ステートメントを使用します。 BULK 行セット プロバイダーを使用すると、ファイルからデータを読み取ることができます。 BULK 行セット プロバイダーの SINGLE_BLOB 引数は、データ ファイルの内容を、varbinary(max) 型の単一行、単一列の行セットとして返します。 詳細については、「[OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)」を参照してください。  
+     バイナリ コンテンツを取得する、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のプロジェクト配置ファイル、 * @project_stream *パラメーター、OPENROWSET 関数および一括行セット プロバイダーで SELECT ステートメントを使用します。 BULK 行セット プロバイダーを使用すると、ファイルからデータを読み取ることができます。 BULK 行セット プロバイダーの SINGLE_BLOB 引数は、データ ファイルの内容を、varbinary(max) 型の単一行、単一列の行セットとして返します。 詳細については、「[OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)」を参照してください。  
   
-     次の例では、SSISPackages_ProjectDeployment プロジェクトを、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーの SSIS パッケージ フォルダーに配置します。 バイナリ データは、プロジェクト ファイル (SSISPackage_ProjectDeployment.ispac) から読み取られ、varbinary(max) 型の *@ProjectBinary* パラメーターに格納されます。  *@ProjectBinary* にパラメーターの値を割り当て、  *@project_stream* パラメーター。  
+     次の例では、SSISPackages_ProjectDeployment プロジェクトを、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーの SSIS パッケージ フォルダーに配置します。 バイナリ データは、プロジェクト ファイル (SSISPackage_ProjectDeployment.ispac) から読み取られ、varbinary(max) 型の *@ProjectBinary* パラメーターに格納されます。 * @ProjectBinary *にパラメーターの値を割り当て、 * @project_stream *パラメーター。  
   
     ```sql
     DECLARE @ProjectBinary as varbinary(max)  

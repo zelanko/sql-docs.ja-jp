@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f42cd86be5f91b54e0ae862bee0fa64fb483c27d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 7069c168d1d144335ac0d1121158193127c67e75
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>JDBC ドライバーでの一括コピーの使用
@@ -858,7 +858,7 @@ public class Program
  次のアプリケーションでは、SQLServerBulkCopy クラスを使用してデータを読み込む方法を示します。 この例では、CSV ファイルを使用し、SQL Server の AdventureWorks データベース内の Production.Product テーブルからエクスポートされたデータを、このデータベース内の同等のテーブルにコピーします。  
   
 > [!IMPORTANT]  
->  」の説明に従って、作業テーブルを作成していない限り、このサンプルは実行されません[テーブルのセットアップ](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)です。 また、Production.Product テーブルからエクスポートされたデータを含む CSV ファイルを作成する必要もあります。このファイルの作成には、SQL Server Management Studio (SSMS) を使用できます。  SSMS がない場合は、参照[SQL Server Management Studio のダウンロード](https://msdn.microsoft.com/library/mt238290.aspx)それを取得します。  
+>  」の説明に従って、作業テーブルを作成していない限り、このサンプルは実行されません[テーブルのセットアップ](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)それを取得します。  
   
 1.  開いている**SQL Server Management Studio**し、AdventureWorks データベースで SQL Server に接続します。  
   

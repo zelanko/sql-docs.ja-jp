@@ -15,11 +15,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: fc9ca2f7181dbda59726b9c38352c349bcf8a472
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 180690083e39317694190a89edc2b57fd9d4bbcf
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server モバイル レポート エンド ツー エンドのチュートリアル。
@@ -37,11 +37,11 @@ ms.lasthandoff: 08/09/2017
 ## <a name="before-we-start"></a>開始前の準備  
 このチュートリアルを実行するには、以下の製品が必要です。  
   
-* データ ソースと KPI を作成し、データセットとモバイル レポートをパブリッシュするには、 [!INCLUDE[ssRSCurrent_md](../../includes/ssrscurrent-md.md)] [レポート サーバーに ネイティブ モードで](https://msdn.microsoft.com/library/ms143711.aspx)アクセスする必要があります。  
-* [共有データセットを作成](#shared-dataset)するには、 [レポート ビルダーをインストール](https://msdn.microsoft.com/library/ff519551.aspx)する必要があります。  
+* アクセスが必要なデータ ソースと Kpi を作成し、データセットとモバイル レポートをパブリッシュ、[です。含める[ssRSCurrent_md](/sql-docs/docs/reporting-services/install-windows/install-reporting-services-native-mode-report-server)です。  
+* [共有データセットを作成](/sql-docs/docs/reporting-services/install-windows/install-report-builder)です。  
 * モバイル レポートを作成するには、 [SQL Server Mobile Report Publisher をインストールします](http://go.microsoft.com/fwlink/?LinkId=717766)。  
 * [AdventureWorks サンプル データベースとスクリプト](http://msftdbprodsamples.codeplex.com/)。  
-*  または: [Microsoft SQL Server サンプル](https://msdn.microsoft.com/library/mt748083.aspx) ページから使用可能な、World Wide Importers サンプル データベース。
+*  OR: World Wide Importers のサンプル データベースから使用可能な[Microsoft SQL Server のサンプル](/sql-docs/docs/sample/microsoft-sql-server-samples)ページ。
 * 結果を表示するには: 
   *   [Power BI サービスにサインアップする](http://go.microsoft.com/fwlink/?LinkID=513879) および
   *  iOS、Android フォン、Windows 10 デバイスなどのモバイル デバイスに[Power BI モバイル アプリをダウンロードする](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/)   
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="create-a-shared-data-source"></a>共有データ ソースの作成  
   
-Reporting Services でサポートされるデータ ソースのいずれもからモバイル レポートの共有データ ソースを作成できます。 「 [サポートされるデータ ソースの一覧](https://msdn.microsoft.com/library/ms159219.aspx)」を参照してください。  
+Reporting Services でサポートされるデータ ソースのいずれもからモバイル レポートの共有データ ソースを作成できます。 参照してください、[サポートされているデータ ソースの一覧](/sql-docs/docs/reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs)です。  
   
 1. [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータルから、 **[新規作成]** > **[データソース]**をクリックします。  
   
@@ -66,11 +66,11 @@ Reporting Services でサポートされるデータ ソースのいずれもか
   
    ![PBI_SSMRP_PortlDataSource](../../reporting-services/mobile-reports/media/pbi-ssmrp-portldatasource.png)  
   
-[Reporting Services の共有データ ソース](https://msdn.microsoft.com/library/ms155845.aspx)の詳細を参照してください。  
+[Reporting Services の共有データ ソース](/sql-docs/docs/reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs)の詳細を参照してください。  
    
 ## <a name="shared-dataset">共有データセットを作成する</a>  
   
-[!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] のレポート デザイナーなど、既存の [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]クライアント ツールを使用して、共有データセットを作成します。  このチュートリアルでは [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]を使用します。 [レポート ビルダーをインストールする](https://msdn.microsoft.com/library/ff519551.aspx)か、Web ポータルから起動します。 3 つのデータセットを Reporting Services モバイル レポートの KPI の値、KPI のトレンド、および詳細フィールド用に 1 つずつ作成します。   
+既存の使用 [!含める[PRODUCT_NAME](/sql-docs/docs/reporting-services/install-windows/install-report-builder)、または web ポータルから起動します。 3 つのデータセットを Reporting Services モバイル レポートの KPI の値、KPI のトレンド、および詳細フィールド用に 1 つずつ作成します。   
   
 1. [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータルから、 **[新規作成]** > **[ページ分割されたレポート]** をクリックし、 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]を起動します。  
   

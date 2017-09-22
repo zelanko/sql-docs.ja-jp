@@ -15,11 +15,11 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 69c0ea4110b678e9bffa959992d48f2c28df5897
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0a59b89b558922f27c91fb2452df157f7baa3918
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>レポート デザインとレポート配置の計画 | Reporting Services
@@ -96,7 +96,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [SQL Server データ ツールの配置およびバージョン サポート (SSRS)](../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
--   [Visual Studio 2015 用 SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx)  
+-   [Visual Studio 2015 用 SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)  
   
 ##  <a name="bkmk_reportviewer"></a> ReportViewer コントロール  
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の ReportViewer コントロールは、ローカル プレビュー モードまたはリモート モードで .rdlc レポートを表示できるほか、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーでホストされている .rdl ファイルを表示できます。 次の表は、ローカル処理 (.rdlc) 用の ReportViewer コントロールでサポートされている RDL バージョンの一覧です。 サーバー側の RDL のサポートについて、 [レポート サーバーと RDL スキーマのサポート](#bkmk_report_server_rdl_schema_support)にまとめられています。  
@@ -117,7 +117,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>参照  
  [レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS)](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Reporting Services ツール](../reporting-services/tools/reporting-services-tools.md)   
- [レポート定義言語 & #40 です。SSRS &#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [レポート定義言語 (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   
 

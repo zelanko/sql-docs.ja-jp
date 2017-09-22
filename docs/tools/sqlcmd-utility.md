@@ -31,10 +31,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2be7d74bde1731e9b4312ec80eb8a9a75b0c4d70
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 49b2acefb625107a65ee8e88ae3f28fc6473851d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
@@ -115,7 +115,7 @@ sqlcmd
 ## <a name="command-line-options"></a>コマンド ライン オプション  
  **ログイン関連のオプション**  
   **-A**  
- 専用管理者接続 (DAC) と SQL Server にログインします。 この種類の接続は、サーバーのトラブルシューティングで使用されます。 またこの接続は、DAC をサポートしているサーバー コンピューターでのみ機能します。 DAC が使用できない場合は、 **sqlcmd** はエラー メッセージを生成して終了します。 DAC の詳細については、「[データベース管理者用の診断接続](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)」を参照してください。 -G オプションでは、-a オプションがサポートされていません。 -A を使用して、SQL データベースに接続するときは、SQL server の管理者があります。 DAC は、使用可能な Azure Active Directory 管理者のではありません。
+ 専用管理者接続 (DAC) と SQL Server にログインします。 この種類の接続は、サーバーのトラブルシューティングで使用されます。 またこの接続は、DAC をサポートしているサーバー コンピューターでのみ機能します。 DAC が使用できない場合は、 **sqlcmd** はエラー メッセージを生成して終了します。 DAC の詳細については、「 [データベース管理者用の診断接続](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)」を参照してください。 -G オプションでは、-a オプションがサポートされていません。 -A を使用して、SQL データベースに接続するときは、SQL server の管理者があります。 DAC は、使用可能な Azure Active Directory 管理者のではありません。
   
  **-C**  
  クライアントでこのスイッチを使用して、サーバーの証明書を検証せずに暗黙的に信頼するようにクライアントを構成できます。 このオプションは、ADO.NET オプションの `TRUSTSERVERCERTIFICATE = true`と同等です。  
@@ -177,10 +177,10 @@ sqlcmd
 **-j** 画面に生のエラー メッセージを出力します。
   
  **-K** *application_intent*  
- アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、 **ReadOnly**だけです。 **-K** を指定しない場合、sqlcmd ユーティリティでは AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、「 [アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](https://msdn.microsoft.com/library/ff878253.aspx)」を参照してください。  
+ アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、 **ReadOnly**だけです。 **-K** を指定しない場合、sqlcmd ユーティリティでは AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](/sql-docs/docs/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups)」を参照してください。  
   
  **-M** *multisubnet_failover*  
- 常に指定**-m**可用性グループの SQL Server または SQL Server フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続するときにします。 **-M** を指定すると、(現在) アクティブなサーバーを迅速に検出して接続できます。 **-M** を指定しない場合、**-M** は無効になります。 [!INCLUDE[ssHADR](../includes/sshadr-md.md)] の詳細については、「[可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)」、「[可用性グループの作成と構成 (SQL Server)](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)」、「フェールオーバー クラスタリングと AlwaysOn 可用性グループ (SQL Server)」 (https://msdn.microsoft.comlibrary/ff929171.aspx)、「アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)」 (https://msdn.microsoft.com/library/ff878253.aspx) を参照してください。  
+ 常に指定**-m**可用性グループの SQL Server または SQL Server フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続するときにします。 **-M** を指定すると、(現在) アクティブなサーバーを迅速に検出して接続できます。 **-M** を指定しない場合、 **-M** は無効になります。 詳細については [!含める[ssHADR](/sql-docs/docs/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover)、[作成し、可用性グループの構成 & #40 です。SQL Server &#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[フェールオーバー クラスタ リングと Always On 可用性グループ (SQL Server)] (https://msdn.microsoft.comlibrary/ff929171.aspx、し、[アクティブなセカンダリ: 読み取り可能なのセカンダリ レプリカ (Always On 可用性グループ)](https://msdn.microsoft.com/library/ff878253.aspx.  
   
  **-N**  
  クライアントでこのスイッチを使用して、暗号化された接続を要求できます。  
@@ -215,11 +215,11 @@ sqlcmd
  **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
  接続先の SQL Server のインスタンスを指定します。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDSERVER が設定されます。  
   
- 指定*server_name*サーバー コンピューターの SQL Server の既定のインスタンスに接続します。 指定*server_name* [  **\\**  *instance_name* ] サーバー コンピューターの SQL Server の名前付きインスタンスに接続します。 サーバー コンピューターが指定されていない場合**sqlcmd**がローカル コンピューターに SQL Server の既定のインスタンスに接続します。 ネットワーク上のリモート コンピューターから **sqlcmd** を実行するときは、このオプションが必要です。  
+ 指定*server_name*サーバー コンピューターの SQL Server の既定のインスタンスに接続します。 指定*server_name* [ ** \\ ** *instance_name* ] サーバー コンピューターの SQL Server の名前付きインスタンスに接続します。 サーバー コンピューターが指定されていない場合**sqlcmd**がローカル コンピューターに SQL Server の既定のインスタンスに接続します。 ネットワーク上のリモート コンピューターから **sqlcmd** を実行するときは、このオプションが必要です。  
   
  *protocol* には、 **tcp** (TCP/IP)、 **lpc** (共有メモリ)、または **np** (名前付きパイプ) を指定できます。  
   
- 指定しない場合、 *server_name* [  **\\**  *instance_name* ] 起動時**sqlcmd**、SQL Server を確認および SQLCMDSERVER 環境変数を使用します。  
+ 指定しない場合、 *server_name* [ ** \\ ** *instance_name* ] 起動時**sqlcmd**、SQL Server を確認および SQLCMDSERVER 環境変数を使用します。  
   
 > [!NOTE]  
 >  OSQLSERVER 環境変数は旧バージョンとの互換性を維持しています。 SQLCMDSERVER 環境変数は OSQLSERVER 環境変数よりも優先されます。これにより、 **sqlcmd** と **osql** を競合することなく組み合わせて使用でき、従来のスクリプトは引き続き機能を実行することができます。  
@@ -273,7 +273,7 @@ sqlcmd
   
  空白を含むファイル パスは、引用符で囲む必要があります。  
   
- このオプションは **-i***input_file* **-I***I input_file* のように複数使用できます。  
+ このオプションは **-i***input_file* **-I***I input_file*のように複数使用できます。  
   
  **-o** *output_file*  
  **sqlcmd**からの出力を受信するファイルを指定します。  
@@ -336,7 +336,7 @@ sqlcmd
  このオプションと共に **-b** を指定すると、 **sqlcmd** はエラーで終了します。 **-b** オプションについては、このトピックの後半で説明します。  
   
  **-t** *query_timeout*  
- コマンド (または SQL ステートメント) の実行待ち時間を秒単位で指定します。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDSTATTIMEOUT が設定されます。 *time_out* 値を指定しないと、コマンドはタイムアウトしません。 *query**time_out* は、1 ～ 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、 **sqlcmd** はエラー メッセージを生成します。  
+ コマンド (または SQL ステートメント) の実行待ち時間を秒単位で指定します。このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDSTATTIMEOUT が設定されます。 *time_out* 値を指定しないと、コマンドはタイムアウトしません。*query**time_out* は、1 ～ 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、 **sqlcmd** はエラー メッセージを生成します。  
   
 > [!NOTE]  
 >  実際のタイムアウト値は、指定した *time_out* 値より数秒異なる場合があります。  
@@ -573,7 +573,7 @@ sqlcmd
  **:List**  
  ステートメント キャッシュの内容を出力します。  
   
- **変数:**  
+ **変数**  
   **:Setvar** \<**var**> [ **"***value***"** ]  
  **sqlcmd** スクリプト変数を定義します。 スクリプト変数は `$(VARNAME)`という形式になります。  
   
@@ -685,7 +685,7 @@ sqlcmd
   
  **その他のコマンド**  
   **:r \<** *filename***>**  
- その他の TRANSACT-SQL ステートメントを解析および**sqlcmd**コマンドで指定されたファイルから **\<** *ファイル名***>**ステートメント キャッシュ内にします。  
+ その他の TRANSACT-SQL ステートメントを解析および**sqlcmd**コマンドで指定されたファイルから** \< ***ファイル名***>**ステートメント キャッシュ内にします。  
   
  ファイルが続いていない TRANSACT-SQL ステートメントを含むかどうか**移動**、入力する必要があります**移動**次の行で**: r**です。  
   
@@ -700,7 +700,7 @@ sqlcmd
  **:Serverlist**  
  ローカルに構成されたサーバーと、ネットワーク上でブロードキャストしているサーバー名の一覧を表示します。  
   
- **:Connect**  *server_name*[**\\***instance_name*] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ **:Connect**  *の既定のインスタンスに接続するには、*[**\\***instance_name*] [-l *timeout*] [-U *user_name* [-P *password*]]  
  SQL Server のインスタンスに接続します。 また、現在の接続を終了します。  
   
  タイムアウト オプション :  

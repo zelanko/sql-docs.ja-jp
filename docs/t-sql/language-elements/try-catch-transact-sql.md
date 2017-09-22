@@ -33,10 +33,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 542fba03b289dd0f393e3e5013cad0730c6d0756
+ms.sourcegitcommit: 6214ff450fd85eb3bd580850aef1e56056a43a54
+ms.openlocfilehash: 0b3842a160ba6a98db1aabb39585d76caa8743f5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
@@ -95,21 +95,21 @@ END CATCH
 ## <a name="retrieving-error-information"></a>エラー情報の取得  
  CATCH ブロックのスコープ内では、次のシステム関数を使用して、CATCH ブロックが実行される原因となったエラーに関する情報を取得できます。  
   
--   ERROR_NUMBER() は、エラーの番号を返します。  
+-   [ERROR_NUMBER()](../../t-sql/functions/error-number-transact-sql.md)エラーの数を返します。  
   
--   ERROR_SEVERITY() は、重大度を返します。  
+-   [ERROR_SEVERITY()](../../t-sql/functions/error-severity-transact-sql.md)重大度を返します。  
   
--   ERROR_STATE() は、エラー状態番号を返します。  
+-   [ERROR_STATE()](../../t-sql/functions/error-state-transact-sql.md)エラー状態番号を返します。  
   
--   ERROR_PROCEDURE() は、エラーが発生したストアド プロシージャまたはトリガーの名前を返します。  
+-   [ERROR_PROCEDURE()](../../t-sql/functions/error-procedure-transact-sql.md)エラーが発生したストアド プロシージャまたはトリガーの名前を返します。  
   
--   ERROR_LINE() は、エラーを発生させたルーチン内の行番号を返します。  
+-   [ERROR_LINE()](../../t-sql/functions/error-line-transact-sql.md)エラーを発生させたルーチン内の行番号を返します。  
   
--   ERROR_MESSAGE() は、エラー メッセージのテキストの全文を返します。 このテキストには、長さ、オブジェクト名、回数など、置き換え可能なパラメーターに提供される値が含まれます。  
+-   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md)エラー メッセージの全文を返します。 このテキストには、長さ、オブジェクト名、回数など、置き換え可能なパラメーターに提供される値が含まれます。  
   
  CATCH ブロックのスコープの外側から呼び出されると、これらの関数は NULL を返します。 エラー情報は、CATCH ブロックのスコープ内のどこからでも、これらの関数を使用して取得できます。 たとえば、次のスクリプトでは、エラー処理関数を含んでいるストアド プロシージャを示しています。 `CATCH` 構造の `TRY…CATCH` ブロックでは、このストアド プロシージャを呼び出して、エラーに関する情報を返しています。  
   
-```  
+```t-sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_GetErrorInfo', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -137,7 +137,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- エラーの機能でも、動作、`CATCH`ブロック、[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)です。  
+ エラー\_ \*関数でも、動作、`CATCH`ブロック、[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)です。  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>TRY...CATCH 構造の影響を受けないエラー  
  TRY...CATCH 構造では、次の条件はトラップされません。  
@@ -162,7 +162,7 @@ END CATCH;
   
  次の例は、オブジェクト名の解決エラーの生成方法を示しています、`SELECT`ステートメントがによってキャッチされない、`TRY…CATCH`構築が、によってキャッチされました、`CATCH`をブロックするときに、同じ`SELECT`ステートメントが実行される格納された内部プロシージャです。  
   
-```  
+```t-sql  
 BEGIN TRY  
     -- Table does not exist; object name resolution  
     -- error not caught.  
@@ -179,7 +179,7 @@ END CATCH
   
  実行している、`SELECT`ストアド プロシージャ内のステートメントより低いレベルで発生するエラーが発生、`TRY`ブロックします。 このエラーは `TRY…CATCH` 構造によって処理されます。  
   
-```  
+```t-sql  
 -- Verify that the stored procedure does not exist.  
 IF OBJECT_ID ( N'usp_ExampleProc', N'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -212,7 +212,7 @@ END CATCH;
 ### <a name="a-using-trycatch"></a>A. TRY...CATCH の使用  
  次の例は、 `SELECT` 0 除算エラーを生成するステートメント。 エラーが原因で、関連付けられているジャンプは実行`CATCH`ブロックします。  
   
-```  
+```t-sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -232,7 +232,7 @@ GO
 ### <a name="b-using-trycatch-in-a-transaction"></a>B. トランザクション内で TRY...CATCH を使用する  
  次の例では、トランザクション内での `TRY…CATCH` ブロックの動作を示しています。 内のステートメント、`TRY`ブロックには、制約違反エラーが生成されます。  
   
-```  
+```t-sql  
 BEGIN TRANSACTION;  
   
 BEGIN TRY  
@@ -261,7 +261,7 @@ GO
 ### <a name="c-using-trycatch-with-xactstate"></a>C. TRY...CATCH と XACT_STATE を使用する  
  次の例を使用する方法を示しています、`TRY…CATCH`コンストラクトをトランザクション内で発生するエラーを処理します。 `XACT_STATE` 関数により、トランザクションをコミットすべきか、またはロールバックすべきかが決定されます。 この例では `SET XACT_ABORT` は `ON` です。 これにより、制約違反エラーが発生したときに、トランザクションはコミット不可能になります。  
   
-```  
+```t-sql  
 -- Check to see whether this stored procedure exists.  
 IF OBJECT_ID (N'usp_GetErrorInfo', N'P') IS NOT NULL  
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -330,7 +330,7 @@ GO
 ### <a name="d-using-trycatch"></a>D. TRY...CATCH の使用  
  次の例は、 `SELECT` 0 除算エラーを生成するステートメント。 エラーが原因で、関連付けられているジャンプは実行`CATCH`ブロックします。  
   
-```  
+```t-sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  

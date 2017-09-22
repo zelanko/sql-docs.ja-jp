@@ -1,0 +1,5 @@
+# [その他のスクリプト コンポーネントの例](additional-script-component-examples.md)
+# [スクリプト コンポーネントによる ODBC 変換先の作成](creating-an-odbc-destination-with-the-script-component.md)
+# [スクリプト コンポーネントによるエラー出力の強化](enhancing-an-error-output-with-the-script-component.md)
+# [スクリプト コンポーネントを使用した標準以外のテキスト ファイル形式の解析](parsing-non-standard-text-file-formats-with-the-script-component.md)
+# [スクリプト コンポーネントに対するエラー出力のシミュレート](simulating-an-error-output-for-the-script-component.md)

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 91659ce1d2946923480c1fc1a0bcf9a6a15094d8
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: a645a57cac6eef7507aed9ea81df9fc75eb32dd4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>手順 3: 概念実証の Ruby を使用して SQL に接続します。
@@ -58,7 +58,7 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="step-3--insert-a-row"></a>手順 3: 行を挿入します。  
   
-この例を実行する方法が表示されます、[挿入](https://msdn.microsoft.com/library/ms174335.aspx)ステートメントは、安全にからアプリケーションを保護するためのパラメーターを渡す[SQL インジェクション](https://technet.microsoft.com/library/ms161953(v=sql.105).aspx)脆弱性、および取得自動生成された[主キー](https://msdn.microsoft.com/library/ms179610.aspx)値。    
+この例を実行する方法が表示されます、[挿入](/sql-docs/docs/t-sql/statements/insert-transact-sql)ステートメントは、安全にからアプリケーションを保護するためのパラメーターを渡す[SQL インジェクション](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints)値。    
   
 TinyTDS を Azure で使用することをお勧めのいくつかを実行すること`SET`ステートメントを現在のセッションが特定の情報を処理する方法を変更します。 推奨`SET`ステートメントは、コード サンプルに用意されています。 たとえば、`SET ANSI_NULL_DFLT_ON`新しい列が列の null 値の許容状態が明示的に記されていない場合でも、null 値を許可するために作成できるようになります。  
   

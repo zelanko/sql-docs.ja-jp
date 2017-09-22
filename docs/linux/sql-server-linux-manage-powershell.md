@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 75bbcf35ae4547c1ba2404324b31eeb4bdd7ea1e
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: e2c1a69f81bafe3f1165c50950bb10fbfc87b579
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Windows PowerShell を使用して、Linux 上の SQL Server を管理するには
@@ -24,7 +24,7 @@ ms.lasthandoff: 08/02/2017
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Windows 上の SQL PowerShell の最新バージョンをインストールします。
 
-[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) Windows に付属している[SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx)です。 SQL Server を使用する場合は、常に最新バージョンの SSMS および SQL PowerShell を使用する必要があります。 SSMS の最新バージョンは継続的に更新および最適化されている linux 2017 RC2 を SQL Server で現在動作します。 ダウンロードして、最新バージョンをインストールを参照してください。 [SQL Server Management Studio のダウンロード](https://msdn.microsoft.com/library/mt238290.aspx)です。 最新の状態に、SSMS の最新バージョンように求められますダウンロード可能な新しいバージョンがある場合。 
+[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) Windows に付属している[SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/sql-server-management-studio-ssms)です。 SQL Server を使用する場合は、常に最新バージョンの SSMS および SQL PowerShell を使用する必要があります。 SSMS の最新バージョンは継続的に更新および最適化されている linux 2017 RC2 を SQL Server で現在動作します。 ダウンロードして、最新バージョンをインストールを参照してください。 [SQL Server Management Studio のダウンロード](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)です。 最新の状態に、SSMS の最新バージョンように求められますダウンロード可能な新しいバージョンがある場合。 
 
 ## <a name="before-you-begin"></a>アンインストールの準備
 
@@ -71,7 +71,7 @@ Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 - インスタンスを作成、[サーバー](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx)オブジェクト
 - 接続、**サーバー**といくつかのプロパティを表示
 
-置き換えます **\<your_server_instance\>**  IP アドレスまたは Linux に SQL Server 2017 RC2 インスタンスのホスト名です。
+置き換えます** \<your_server_instance\> ** IP アドレスまたは Linux に SQL Server 2017 RC2 インスタンスのホスト名です。
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -111,7 +111,7 @@ HostDistribution : Ubuntu
 - 使用して、 **Get SqlErrorLog** Linux 上の SQL Server 2017 インスタンスに接続し、エラーを取得するコマンドレットをログに記録されてから**昨日**
 - 出力をパイプ処理、 **Out-gridview**コマンドレット
 
-置き換えます **\<your_server_instance\>**  IP アドレスまたは Linux に SQL Server 2017 RC2 インスタンスのホスト名です。
+置き換えます** \<your_server_instance\> ** IP アドレスまたは Linux に SQL Server 2017 RC2 インスタンスのホスト名です。
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -123,5 +123,5 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 ## <a name="see-also"></a>参照
-- [SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/hh245198.aspx)
+- [SQL Server PowerShell](/sql-docs/docs/relational-databases/scripting/sql-server-powershell)
 

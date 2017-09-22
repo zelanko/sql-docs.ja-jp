@@ -2,8 +2,8 @@
 title: "Revoscalepy で Python を使用してモデルを作成する |Microsoft ドキュメント"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/03/2017
-ms.prod: sql-server-2016
+ms.date: 09/19/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,19 +15,19 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6b7e166971ff74add56bce628838c82a9a6c1128
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c497ad3e302f2950a65cf41aaa41237f19171ab4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Revoscalepy で Python を使用してモデルを作成するには
 
-この例では、ロジスティック回帰モデルのアルゴリズムを使用して、SQL Server で作成する方法、 **revoscalepy**パッケージです。
+この例では、線形回帰モデルのアルゴリズムを使用して、SQL Server で作成する方法、 **revoscalepy**パッケージです。
 
 **Revoscalepy**用 Python を含むオブジェクト、変換、およびアルゴリズムと同様に指定されたパッケージ、 **RevoScaleR** R 言語用のパッケージです。 このライブラリには、コンピューティング コンテキストを作成する、計算コンテキスト、データを変換およびロジスティックと線形回帰、デシジョン ツリーなどのよく使用されるアルゴリズムを使用して予測モデルのトレーニングの間でデータを移動できます。
 
-詳細については、次を参照してください。 [revoscalepy は何ですか。](../python/what-is-revoscalepy.md)
+詳細については、次を参照してください[revoscalepy は何ですか?](../python/what-is-revoscalepy.md)と[Python 関数リファレンス。](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -112,8 +112,8 @@ def test_linmod_sql():
 
 データ ソースは、計算コンテキストと異なります。 _データソース_コードで使用されるデータを定義します。 _計算コンテキスト_コードを実行する場所を定義します。
 
-1. など、Python 変数の作成`sql_query`と`sql_connection_string`ソースとを使用するデータを定義します。 これらの変数を実装する RxSqlServerData コンス トラクターに渡す、**データ ソース オブジェクト**という`data_source`です。
-2. 使用してコンピューティング コンテキスト オブジェクトを作成、 **RxInSqlServer**コンス トラクターです。 この例では、計算コンテキストとして使用する同じ SQL Server インスタンスにデータがあることを前提に以前に定義された同じ接続文字列を渡します。 ただし、データ ソースと計算コンテキストが別のサーバーになります。 生成される**コンテキスト オブジェクトをコンピューティング**という`sql_cc`です。
+1. など、Python 変数の作成`sql_query`と`sql_connection_string`ソースとを使用するデータを定義します。 これらの変数を渡す、 [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata)コンス トラクターを実装する、**データ ソース オブジェクト**という`data_source`です。
+2. 使用してコンピューティング コンテキスト オブジェクトを作成、 [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserverdata)コンス トラクターです。 この例では、計算コンテキストとして使用する同じ SQL Server インスタンスにデータがあることを前提に以前に定義された同じ接続文字列を渡します。 ただし、データ ソースと計算コンテキストが別のサーバーになります。 生成される**コンテキスト オブジェクトをコンピューティング**という`sql_cc`です。
 3. アクティブなコンピューティング コンテキストを選択します。 既定では、操作はつまり、異なるコンピューティング コンテキストを指定しない場合は、ローカルで実行されます、データ ソースからデータをフェッチする、およびモデルの調整は、現在の Python 環境で実行されます。
 
 ### <a name="changing-compute-contexts"></a>計算コンテキストを変更します。
@@ -126,17 +126,15 @@ def test_linmod_sql():
 
 `summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sql_compute_context)`
 
-関数を使用することもできます。 **rxsetcomputecontext**を既に定義されている計算コンテキストを切り替えます。 
+関数を使用することもできます。 [rx_set_computecontext](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rx-set-compute-context)を既に定義されている計算コンテキストを切り替えます。
 
 ### <a name="setting-the-degree-of-parallelism"></a>並列処理の次数を設定
 
-コンピューティング コンテキストを定義するときに設定することもパラメーター コンピューティング コンテキストでデータを処理する方法を制御します。 これらのパラメーターは、データ ソースの種類によって異なります。 
+コンピューティング コンテキストを定義するときに設定することもパラメーター コンピューティング コンテキストでデータを処理する方法を制御します。 これらのパラメーターは、データ ソースの種類によって異なります。
 
 SQL Server のコンピューティング コンテキストをバッチ サイズを設定したり、タスクの実行で使用する並列処理の次数についてのヒントを提供できます。
 
-設定、サンプルが 4 つのプロセッサを搭載したコンピューターで実行された、 *num_tasks* 4 へのパラメーターです。 この値を 0 に設定した場合、SQL Server は、多くのタスクを並列に実行可能な限り、サーバーの現在の MAXDOP 設定では、既定値を使用します。 ただし、多くのプロセッサを搭載したサーバーであっても割り当てられる可能性がありますのタスクの正確な数によって異なります、サーバーの設定など、他の多くの要因と他のジョブを実行しています。 
-
-詳細については、次を参照してください。 [RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver)です。
+設定、サンプルが 4 つのプロセッサを搭載したコンピューターで実行された、 *num_tasks* 4 へのパラメーターです。 この値を 0 に設定した場合、SQL Server は、多くのタスクを並列に実行可能な限り、サーバーの現在の MAXDOP 設定では、既定値を使用します。ただし、多くのプロセッサを搭載したサーバーであっても割り当てられる可能性がありますのタスクの正確な数によって異なります、サーバーの設定など、他の多くの要因と他のジョブを実行しています。
 
 ## <a name="related-samples"></a>関連するサンプル
 

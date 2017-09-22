@@ -16,10 +16,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4ba3bacb78e49319db1e458d776cead3429e6c60
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cf762b3aaeb222e456b0b46256a7d7f0efddbf48
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="install-sql-server-analysis-services"></a>SQL Server Analysis Services をインストールします。
@@ -32,9 +32,9 @@ ms.lasthandoff: 09/01/2017
 ## <a name="get-tools-and-designers"></a>ツールとデザイナーの取得  
  SQL Server セットアップでは、ソリューション デザインまたはサーバー管理に使用されるモデル デザイナーまたは管理ツールがインストールされなくなりました。 このリリースでは、ツールには次のリンクから入手できる個別のインストールが用意されています。  
   
--   [SQL Server Management Studio (SSMS) のダウンロード](https://msdn.microsoft.com/library/mt238290.aspx)  
+-   [SQL Server Management Studio (SSMS) のダウンロード](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)  
   
--   [SQL Server Data Tools (SSDT) のダウンロード](https://msdn.microsoft.com/library/mt204009.aspx)  
+-   [SQL Server Data Tools (SSDT) のダウンロード](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)  
   
  SSMS および SSDT が Analysis Services インスタンスとデータを操作する必要があります。 ツールは、どこにでもインストールできますが、接続を試行する前に、サーバー上のポートを構成することを確認します。 詳細については、「 [Configure the Windows Firewall to Allow Analysis Services Access](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 」を参照してください。  
   

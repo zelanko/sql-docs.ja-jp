@@ -1,7 +1,7 @@
 ---
 title: "@@OPTIONS (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 10/11/2016
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -24,13 +24,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc5a7b7899715ee06b8b0e6924893d0d8a04b14d
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 9480ffeffa83650b5cf44ad51547c36d5563b13b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="options-transact-sql"></a>@@OPTIONS (TRANSACT-SQL)
+# <a name="x40x40options-transact-sql"></a>& #x 40; & #x 40 ですオプション (TRANSACT-SQL)。
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   現在の SET オプションに関する情報を返します。  
@@ -40,7 +40,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 @@OPTIONS  
 ```  
   
@@ -50,11 +49,11 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>解説  
  オプションは、の使用かられることができます、**設定**コマンドから、または、 **sp_configure ユーザー オプション**値。 セッションの値で構成されている、**設定**コマンドの上書き、 **sp_configure**オプション。 多くのツール (など[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]オプションの設定を自動的に構成します。 各ユーザーが、@@OPTIONS構成を表す関数。  
   
- SET ステートメントを使用することにより、特定のユーザー セッションの言語とクエリ処理オプションを変更できます。 **@@OPTIONS** を ON に設定されているオプションしか検出または OFF です。  
+ SET ステートメントを使用することにより、特定のユーザー セッションの言語とクエリ処理オプションを変更できます。 **@@OPTIONS **を ON に設定されているオプションしか検出または OFF です。  
   
- **@@OPTIONS** 関数には、基本 10 (10 進数) 整数に変換された、オプションのビットマップが返されます。 ビット設定が、トピックの表で説明した場所に格納されている[user options サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)です。  
+ **@@OPTIONS **関数には、基本 10 (10 進数) 整数に変換された、オプションのビットマップが返されます。 ビット設定が、トピックの表で説明した場所に格納されている[user options サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)です。  
   
- デコードする、 **@@OPTIONS** 値、によって返された整数に変換**@@OPTIONS** を binary、次の表では、値を検索および[user options サーバー構成構成オプション](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)です。 たとえば場合、`SELECT @@OPTIONS;`値を返します`5496`、Windows のプログラマ電卓を使用して (**calc.exe**) 10 進数に変換する`5496`バイナリにします。 結果は `1010101111000`です。 右端の文字 (バイナリ 1、2、および 4) が 0 の場合、テーブル内の最初の 3 つの項目が無効になっていることを示すです。 表を参照することを確認、 **DISABLE_DEF_CNST_CHK**と**IMPLICIT_TRANSACTIONS**、および**CURSOR_CLOSE_ON_COMMIT**です。 次の項目 (**ANSI_WARNINGS**で、`1000`位置) にします。 ただしビット マップで作業左を続行し、オプションの一覧で下向きのです。 一番左にあるオプションが 0 の場合は、型変換によって切り捨てられます。 ビットマップ `1010101111000` は実際は `001010101111000` であり、全部で 15 個のオプションを表しています。  
+ デコードする、 **@@OPTIONS **値、によって返された整数に変換**@@OPTIONS **を binary、次の表では、値を検索および[user options サーバー構成構成オプション](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)です。 たとえば場合、`SELECT @@OPTIONS;`値を返します`5496`、Windows のプログラマ電卓を使用して (**calc.exe**) 10 進数に変換する`5496`バイナリにします。 結果は `1010101111000`です。 右端の文字 (バイナリ 1、2、および 4) が 0 の場合、テーブル内の最初の 3 つの項目が無効になっていることを示すです。 表を参照することを確認、 **DISABLE_DEF_CNST_CHK**と**IMPLICIT_TRANSACTIONS**、および**CURSOR_CLOSE_ON_COMMIT**です。 次の項目 (**ANSI_WARNINGS**で、`1000`位置) にします。 ただしビット マップで作業左を続行し、オプションの一覧で下向きのです。 一番左にあるオプションが 0 の場合は、型変換によって切り捨てられます。 ビットマップ `1010101111000` は実際は `001010101111000` であり、全部で 15 個のオプションを表しています。  
   
 ## <a name="examples"></a>使用例  
   

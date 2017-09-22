@@ -1,7 +1,7 @@
 ---
 title: "@@DBTS (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/30/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,13 +23,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f044c71018186baaf2bd5c27076b78aae139b34f
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 4a90150c55cdeb89788fdb86faf8aef8a1efdcd2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="dbts-transact-sql"></a>@@DBTS (TRANSACT-SQL)
+# <a name="x40x40dbts-transact-sql"></a>& #x 40; & #x 40 です DBTS (TRANSACT-SQL)。
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 現在のデータベースの現在の **timestamp** 型の値を返します。 この timestamp はデータベース内で一意になることが保証されます。
@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```
 @@DBTS  
 ```  
   

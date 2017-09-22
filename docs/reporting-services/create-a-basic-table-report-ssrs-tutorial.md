@@ -20,17 +20,17 @@ caps.latest.revision: 67
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7cd0ab1950eeaf54da67e7f8dd5bb2da89a26307
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f20330dab55ad3670f6d30037cb6b1962dd5c02c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>基本的なテーブル レポートの作成 (SSRS チュートリアル)
 
-このチュートリアルで使用するレポート デザイナー SQL Server Data Tools で基本的な[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]に基づいて、テーブルを含むレポートの改ページ調整、  **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]** データベース。 作成することも[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]ページネーションのあるレポート ビルダーでレポートします。 
+このチュートリアルで使用するレポート デザイナー SQL Server Data Tools で基本的な[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]に基づいて、テーブルを含むレポートの改ページ調整、 ** [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] **データベース。 作成することも[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]ページネーションのあるレポート ビルダーでレポートします。 
 
 このチュートリアルを進めるときにレポート プロジェクトを作成、接続情報を設定、クエリの定義、テーブル データ領域を追加、グループしいくつかのフィールドの合計してレポートをプレビューします。  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] データベース。  詳細については、「 [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)」(Adventure Works 2014 サンプル データベース) を参照してください。  
   
- -   レポート デザイナーが必要なため、"SQL Server Reporting Services" コンポーネントがインストールされた[SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx) 。    
+ -   [SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)インストールされて、レポート デザイナーがある場合は"SQL Server Reporting Services"のコンポーネントとします。    
   
 [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] データベースからデータを取得するには読み取り専用権限も必要です。
 
@@ -66,4 +66,4 @@ ms.lasthandoff: 08/09/2017
 
 [Reporting Services のチュートリアル](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-その他のご不明な点は、 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他のご不明な点は、 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

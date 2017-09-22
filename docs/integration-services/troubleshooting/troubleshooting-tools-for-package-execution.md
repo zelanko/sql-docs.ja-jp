@@ -22,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: d4d50bedde83e493c8327d9321ebcfb12bc12985
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 2aeb88c7c6829c0efd0cd5f422f65690dd3da2b6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>パッケージ実行のトラブルシューティング ツール
@@ -72,9 +72,9 @@ ms.lasthandoff: 08/03/2017
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>ログ記録を使ったパッケージ実行のトラブルシューティング  
  ログ記録を有効にすることで、実行中のパッケージで発生する多くの現象を追跡できます。 ログ プロバイダーは、後で分析するために特定のイベントに関する情報をキャプチャし、その情報をデータベース テーブル、フラット ファイル、XML ファイルなどのサポートされている出力形式で保存します。  
   
--   **ログ記録を有効にする**。 イベントのみ、およびキャプチャする情報項目のみを選択することによって、ログの出力を微調整できます。 詳細については、「 [Integration Services (SSIS) のログ記録](https://msdn.microsoft.com/library/ms140246.aspx)」を参照してください。  
+-   **ログ記録を有効にする**。 イベントのみ、およびキャプチャする情報項目のみを選択することによって、ログの出力を微調整できます。 詳細については、「[Integration Services (SSIS) のログ記録](/sql-docs/docs/integration-services/performance/integration-services-ssis-logging)」を参照してください。  
   
--   **パッケージの Diagnostic イベントを選択して、プロバイダーに関する問題のトラブルシューティングを行います。** パッケージと外部データ ソースとのやり取りに関するトラブルシューティングに役立つログ メッセージが用意されています。 詳細については、「 [トラブルシューティング ツールのパッケージ接続](https://msdn.microsoft.com/library/cc879309.aspx)」を参照してください。  
+-   **パッケージの Diagnostic イベントを選択して、プロバイダーに関する問題のトラブルシューティングを行います。** パッケージと外部データ ソースとのやり取りに関するトラブルシューティングに役立つログ メッセージが用意されています。 詳細については、「[トラブルシューティング ツールのパッケージ接続](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity)」を参照してください。  
   
 -   **既定のログ出力を拡張する**。 ログ記録は、通常、パッケージを実行するたびに、ログの記録先に行を追加します。 各行のログ出力では名前や一意識別子でパッケージを識別していますが、一意の ExecutionID で各パッケージの実行も識別しています。そのため、1 つの一覧に大量のログ記録が出力され、分析が難しくなります。  
   

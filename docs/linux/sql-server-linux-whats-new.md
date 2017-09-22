@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 649c7cbd03b6d2e61dbbb572a34cdbcd2a7ab7cd
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 622e0ed2242ddc454028962c63b5760a6baad38a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 の新機能します。
@@ -131,7 +131,7 @@ CTP 1.1 リリースには、次の機能強化と修正が含まれています
 [Service Pack 1 からの機能強化](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)CTP1.1 このリリースでは。
 - 複製は、CLR、Filestream または Filetable、メモリ内とクエリ ストア オブジェクトのデータベースです。
 - **作成**または**ALTER**プログラミング オブジェクトの演算子。
-- 新しい**USE ヒント**クエリ ヒントを指定して、クエリ プロセッサのオプションです。 詳細:[クエリ ヒント](https://msdn.microsoft.com/en-us/library/ms181714.aspx)です。
+- 新しい**USE ヒント**クエリ ヒントを指定して、クエリ プロセッサのオプションです。 詳細:[クエリ ヒント](/sql-docs/docs/t-sql/queries/hints-transact-sql-query)です。
 - SQL サービス アカウント プログラムで識別できますページのロックを有効にするメモリおよびファイルの瞬時初期化のアクセス許可。
 - TempDB ファイルの数、ファイルのサイズとファイル拡張設定をサポートします。
 - Showplan XML での診断の拡張。

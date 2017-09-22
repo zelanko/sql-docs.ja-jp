@@ -18,16 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 581215c25f688b2f1e5661d370a31b5de4aed652
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: fb0172c59d4ba114a98191b5ac5b5c88c94bb4a3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>[TCP/IP のプロパティ]
   **[TCP/IP のプロパティ]** ダイアログ ボックス ([IP アドレス] タブ) では、TCP/IP プロトコルの特定の IP アドレスに関するオプションを構成します。 **[TCP 動的ポート]** と **[TCP ポート]** だけは、 **[IP All]**を選択することですべてのアドレスを一度に構成できます。  
   
- SQL Server を再起動すると変更が有効になります。 SQL Server Browser サービスの開始と停止の詳細については、「[SQL Server Browser サービスの開始および停止](https://msdn.microsoft.com/library/hh403394.aspx)」をご覧ください。  
+ SQL Server を再起動すると変更が有効になります。 SQL Server Browser サービスの開始と停止の詳細については、「[SQL Server Browser サービスの開始および停止](/sql-docs/docs/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services)」をご覧ください。  
   
 ## <a name="static-vs-dynamic-ports"></a>静的ポートと動的ポート  
  SQL Server の既定のインスタンスは、着信接続をポート 1433 でリッスンします。 このポートは、セキュリティ上の理由またはクライアント アプリケーションの要件に応じて変更することができます。 既定では、名前付きインスタンス (SQL Server Express を含む) は動的ポートでリッスンするように構成されています。 静的ポートを構成するには、 **[TCP 動的ポート]** を空白にし、 **[TCP ポート]** に使用可能なポート番号を指定します。 ファイアウォールでポートを開く方法の詳細については、オンライン ブックの「SQL Server のアクセスを許可するための Windows ファイアウォールの構成」を参照してください。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>参照  
  [ネットワーク プロトコルの選択](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
- [TCP/IP を使用した有効な接続文字列を作成します。](https://msdn.microsoft.com/library/ms191260.aspx)   
+ [TCP/IP を使用した有効な接続文字列を作成します。](/sql-docs/docs/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip)   
  [SQL Server Browser サービス](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  
   
   

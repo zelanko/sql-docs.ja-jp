@@ -15,10 +15,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 572af6f86f015c88141bb6e78b781b5825be155c
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: eb98483d6237f2db2fdb0cb9aa444dd938a431f0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="what39s-new-in-sql-server-2017-analysis-services"></a>どのような &#39; s SQL Server 2017 Analysis Services の新機能
@@ -185,7 +185,7 @@ EVALUATE DETAILROWS([Internet Total Sales])
 ```
 
 ## <a name="dax-enhancements"></a>DAX の機能強化
-このリリースには、DAX 式の `IN` 演算子が含まれています。 これは、 [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) 句で複数の値を指定するために一般的に使用されている `WHERE` 演算子と似ています。
+このリリースには、DAX 式の `IN` 演算子が含まれています。 これは、`WHERE` 句で複数の値を指定するために一般的に使用されている [`TSQL IN`](/sql-docs/docs/t-sql/language-elements/in-transact-sql) 演算子と似ています。
 
 以前は、次のメジャー式のように、論理 `OR` 演算子を使用して複数値フィルターを指定するのが一般的でした。
 

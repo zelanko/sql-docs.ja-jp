@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 917329cd5305aac791629300f5a90bf52d9d9ce4
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0fbb1f0699328a59749e5bba7efd7661e9b36e5a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER データベース スコープ ベースの構成 (TRANSACT-SQL)
@@ -44,11 +44,11 @@ ms.lasthandoff: 09/01/2017
   
 - データベースに依存しないクエリ オプティマイザーの基数推定モデルを互換性レベルに設定します。  
   
-- データベース レベルでパラメーター スニッフィングを有効または無効にします。  
+- データベース レベルでパラメーター スニッフィングを有効または無効にします。
   
-- データベース レベルでのクエリ最適化の修正プログラムを有効または無効にします。  
+- データベース レベルでのクエリ最適化の修正プログラムを有効または無効にします。
 
-- 有効にするにまたはデータベース レベルで id キャッシュを無効にします。  
+- 有効にするにまたはデータベース レベルで id キャッシュを無効にします。
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -80,44 +80,54 @@ ALTER DATABASE SCOPED CONFIGURATION
  
 (すべてのセカンダリ データベースは同一の値が必要) のセカンダリ データベースの設定を指定します。  
   
-MAXDOP  **=**  {\<値 > |プライマリ}  
+MAXDOP ** = ** {\<値 > |プライマリ}  
 **\<値 >**  
   
 ステートメントの MAXDOP 設定を使用する既定値を指定します。 0 では、既定値をサーバーの構成が代わりに使用されることを示します。 データベース スコープで MAXDOP オーバーライド (場合を除く 0 に設定されています)、**並列処理の次数の最大**sp_configure でサーバー レベルで設定します。 クエリ ヒントでは、DB をオーバーライドできますもを別の設定を必要とする特定のクエリをチューニングするために MAXDOP をスコープします。 これらすべての設定は、MAXDOP、ワークロード グループの設定によって制限されます。   
 
 max degree of parallelism オプションを使用すると、並列プラン実行で使用するプロセッサの数を制限できます。 SQL Server で並列実行プランをクエリ、インデックス データ定義言語 (DDL) 操作、並列挿入、オンライン alter 列、並行統計 collectiion および静的およびキーセット ドリブン カーソルの作成。
  
-インスタンス レベルでは、このオプションを設定するを参照してください。 [max degree of parallelism サーバー構成オプションを構成する](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)です。 これを行うにはクエリ レベルで、追加、 **querytraceon です**[クエリ ヒント](https://msdn.microsoft.com/library/ms181714.aspx)  
+インスタンス レベルでは、このオプションを設定するを参照してください。 [max degree of parallelism サーバー構成オプションを構成する](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)です。 
+
+> [!TIP] 
+> これを行うにはクエリ レベルで、追加、 **MAXDOP** [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)です。  
   
 PRIMARY  
   
-セカンダリに対してのみ設定して、構成が 1 つのセットをプライマリになることを示します。 場合は、構成変更については、プライマリ、セカンダリが同じ値に調整されます。 **プライマリ**セカンダリの既定の設定は、  
+プライマリ上のデータベース中に、セカンダリに対してのみ設定して、構成が 1 つのセットをプライマリになることを示します。 構成のプライマリの変更では、セカンダリ上の値が変更される場合それに応じてを設定する必要がないセカンダリ値明示的に必要です。 **プライマリ**セカンダリの既定の設定です。  
   
-LEGACY_CARDINALITY_ESTIMATION  **=**  {ON |**OFF** |プライマリ}  
+LEGACY_CARDINALITY_ESTIMATION ** = ** {ON |**OFF** |プライマリ}  
 
-データベースの互換性レベルに依存しない SQL Server 2012 および以前のバージョンにクエリ オプティマイザーの基数の推定モデルを設定できます。 既定値は**OFF**、クエリ オプティマイザーの基数の推定モデルは、データベースの互換性レベルに基づく設定します。 これを設定する**ON**は等価[トレース フラグ 9481](https://support.microsoft.com/en-us/kb/2801413)です。 インスタンス レベルでは、これを設定するを参照してください。[トレース フラグ (TRANSACT-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)です。 これを行うにはクエリ レベルで、追加、 **querytraceon です**[クエリ ヒント](https://msdn.microsoft.com/library/ms181714.aspx)です。  
+データベースの互換性レベルに依存しない SQL Server 2012 および以前のバージョンにクエリ オプティマイザーの基数の推定モデルを設定できます。 既定値は**OFF**、クエリ オプティマイザーの基数の推定モデルは、データベースの互換性レベルに基づく設定します。 これを設定する**ON**を有効にすると等価[トレース フラグ 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)です。 
+
+> [!TIP] 
+> これを行うにはクエリ レベルで、追加、 **querytraceon です**[クエリ ヒント](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)です。 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 では、これを実現するクエリ レベルでは、追加、 **USE ヒント**[クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)トレース フラグを使用する代わりにします。 
   
 PRIMARY  
   
-この値は、セカンダリでのみ有効ですし、すべてのセカンダリのクエリ オプティマイザー基数の推定モデル設定が、プライマリの設定値であることを指定します。 クエリ オプティマイザーの基数の推定モデルのプライマリで構成が変更された場合、セカンダリ上の値を変更します。 **プライマリ**セカンダリの既定の設定です。  
+この値は、プライマリ上でデータベース中にセカンダリでのみ有効です、クエリ オプティマイザー基数推定モデルの設定ですべてのセカンダリがプライマリに設定値であることを指定します。 クエリ オプティマイザーの基数の推定モデルのプライマリで構成が変更された場合、セカンダリ上の値を変更します。 **プライマリ**セカンダリの既定の設定です。  
   
-PARAMETER_SNIFFING  **=**  { **ON** |OFF |プライマリ}  
+PARAMETER_SNIFFING ** = ** { **ON** |OFF |プライマリ}  
 
-有効またはパラメーターを見つけ出す機能を無効にします。 既定値は ON です。 これは、 [トレース フラグ 4136](https://support.microsoft.com/en-us/kb/980653)を指定した場合と同じです。 インスタンス レベルでは、これを設定するを参照してください。[トレース フラグ (TRANSACT-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)です。 クエリ レベルでは、これを設定するを参照してください。、 **OPTIMIZE FOR UNKNOWN** [クエリ ヒント](https://msdn.microsoft.com/library/ms181714.aspx)です。  
+有効または無効に[パラメーターを見つけ出す](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)です。 既定値は ON です。 これは、 [トレース フラグ 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)を指定した場合と同じです。   
+
+> [!TIP] 
+> これを実現するクエリ レベルで、次を参照してください。、 **OPTIMIZE FOR UNKNOWN** [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)です。 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 では、これを実現するクエリ レベルで、 **USE ヒント**[クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)も利用できます。 
   
 PRIMARY  
   
-この値は、セカンダリでのみ有効ですし、すべてのセカンダリでは、この設定に値が、プライマリ セット vale になることを指定します。 場合は、構成変更については、プライマリ、セカンダリ上の値を変更します。 これは、セカンダリの既定の設定です。  
+この値は、プライマリ上でデータベース中にセカンダリでのみ有効です、すべてのセカンダリでは、この設定に値が、プライマリの設定値であることを指定します。 場合を使用するため、プライマリ上の構成[パラメーターを見つけ出す](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)変更、セカンダリ上の値が変更されます適宜を設定する必要がないセカンダリ値、明示的に必要です。 これは、セカンダリの既定の設定です。  
   
-QUERY_OPTIMIZER_HOTFIXES  **=**  {ON |**OFF** |プライマリ}  
+QUERY_OPTIMIZER_HOTFIXES ** = ** {ON |**OFF** |プライマリ}  
 
-有効またはデータベースの互換性レベルに関係なく、クエリ オプティマイザーの修正プログラムを無効にします。 既定値は**OFF**です。 これは、 [トレース フラグ 4199](https://support.microsoft.com/en-us/kb/974006)を指定した場合と同じです。   
+有効またはデータベースの互換性レベルに関係なく、クエリ オプティマイザーの修正プログラムを無効にします。 既定値は**OFF**です。 これは有効にすると同じ[トレース フラグ 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)です。   
 
-インスタンス レベルでは、これを設定するを参照してください。[トレース フラグ (TRANSACT-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)です。 これを行うにはクエリ レベルで、追加、 **querytraceon です**[クエリ ヒント](https://msdn.microsoft.com/library/ms181714.aspx)です。  
+> [!TIP] 
+> これを行うにはクエリ レベルで、追加、 **querytraceon です**[クエリ ヒント](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)です。 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 では、これを実現するクエリ レベルで使用するヒントの追加[クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)トレース フラグを使用する代わりにします。  
   
 PRIMARY  
   
-この値は、セカンダリでのみ有効ですし、すべてのセカンダリでは、この設定に値が、プライマリ セット vale になることを指定します。 場合は、構成変更については、プライマリ、セカンダリ上の値を変更します。 これは、セカンダリの既定の設定です。  
+この値は、プライマリ上でデータベース中にセカンダリでのみ有効です、すべてのセカンダリでは、この設定に値が、プライマリの設定値であることを指定します。 構成のプライマリの変更では、セカンダリ上の値が変更される場合それに応じてを設定する必要がないセカンダリ値明示的に必要です。 これは、セカンダリの既定の設定です。  
   
 クリア PROCEDURE_CACHE  
 
@@ -171,7 +181,7 @@ IDENTITY_CACHE = { **ON** |オフ}
   
  **DacFx**  
   
- ALTER DATABASE SCOPED CONFIGURATION が Azure SQL データベースおよびデータベース スキーマに影響する SQL Server 2016 の新機能であるため (またはデータなし)、スキーマのエクスポートはできません、古いバージョンの SQL Server などの SQL Server 2012 または SQ にインポートします。L Server 2014 です。   エクスポートなど、 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3)または[BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) Azure SQL Database または SQL Server 2016 からこの新しい機能を使用するデータベースはありません、下位レベルのサーバーにインポートすることができます。  
+ ALTER DATABASE SCOPED CONFIGURATION が Azure SQL データベースおよびデータベース スキーマに影響する SQL Server 2016 の新機能であるため (またはデータなし)、スキーマのエクスポートことはできません古いバージョンの SQL Server にインポートする[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]または <。c2 > [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] です。 エクスポートなど、 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3)または[BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4)から、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]または[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]この新しい機能を使用するデータベースが下位レベルのサーバーにインポートすることはありません。  
   
 ## <a name="metadata"></a>メタデータ  
 
@@ -198,10 +208,10 @@ ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 1 ;
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=4 ;  
 ```  
   
-この例は、geo レプリケーションのシナリオでは、プライマリ データベースは、セカンダリ データベースの MAXDOP を設定します。  
+この例では、同じ値に設定されている地理的レプリケーション シナリオでは、プライマリ データベースをセカンダリ データベースの MAXDOP を設定します。  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 ```  
   
 ### <a name="c-set-legacycardinalityestimation"></a>C. LEGACY_CARDINALITY_ESTIMATION を設定します。  
@@ -209,15 +219,13 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY
 この例は、セカンダリ データベースの地理的レプリケーションのシナリオで LEGACY_CARDINALITY_ESTIMATION を ON に設定します。  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY  
-SET LEGACY_CARDINALITY_ESTIMATION=ON ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=ON ;  
 ```  
   
 この例は、geo レプリケーションのシナリオでは、プライマリ データベースは、セカンダリ データベースの LEGACY_CARDINALITY_ESTIMATION を設定します。  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY      
-SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;  
 ```  
   
 ### <a name="d-set-parametersniffing"></a>D. PARAMETER_SNIFFING を設定します。  
@@ -231,16 +239,14 @@ ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING =OFF ;
 この例は、プライマリ データベースの地理的レプリケーションのシナリオで PARAMETER_SNIFFING を OFF に設定します。  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY      
-SET PARAMETER_SNIFFING=OFF  ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;  
 ```  
   
 この例ではプライマリ データベースでは、セカンダリ データベースの PARAMETER_SNIFFING を設定します。   
 geo レプリケーションのシナリオです。  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY      
-SET PARAMETER_SNIFFING =PRIMARY  ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING =PRIMARY ;  
 ```  
   
 ### <a name="e-set-queryoptimizerhotfixes"></a>E. QUERY_OPTIMIZER_HOTFIXES を設定します。  
@@ -276,8 +282,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [推奨事項と SQL Server の"max degree of parallelism"構成オプションのガイドライン](https://support.microsoft.com/en-us/kb/2806535) 
 
 ### <a name="legacycardinalityestimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION リソース    
-* [基数推定 (SQL Server)](https://msdn.microsoft.com/library/dn600374.aspx)
-* [クエリを最適化する計画を作成、SQL Server 2014 の基数推定機能](https://msdn.microsoft.com/library/dn673537.aspx)
+* [基数推定 (SQL Server)](/sql-docs/docs/relational-databases/performance/cardinality-estimation-sql-server)
+* [SQL Server 2014 の基数推定機能によるクエリプランの最適化](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### <a name="parametersniffing-resources"></a>PARAMETER_SNIFFING リソース    
 * [「パラメーターが僕されます」です。](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)

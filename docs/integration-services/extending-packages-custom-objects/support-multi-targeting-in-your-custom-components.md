@@ -17,14 +17,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bf7649b06354bfa621624ddfcf22bdea90bf0467
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 57ac95d7883ce47e1a39d4d50d3f60b968bccf21
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>カスタム コンポーネントに複数バージョン対応サポートします。
- 使えるようになりました SSIS デザイナーで SQL Server Data Tools (SSDT) を作成、保守、およびそのターゲット SQL Server 2016、SQL Server 2014 または SQL Server 2012 のパッケージを実行します。 SSDT for Visual Studio 2015 を参照してください[最新の SQL Server の Data Tools をダウンロード](https://msdn.microsoft.com/library/mt204009.aspx)です。 
+ 使えるようになりました SSIS デザイナーで SQL Server Data Tools (SSDT) を作成、保守、およびそのターゲット SQL Server 2016、SQL Server 2014 または SQL Server 2012 のパッケージを実行します。 SSDT for Visual Studio 2015 を参照してください[最新の SQL Server の Data Tools をダウンロード](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)です。 
 
  ソリューション エクスプローラーで Integration Services プロジェクトを右クリックし、 **[プロパティ]** を選択すると、そのプロジェクトのプロパティ ページが開きます。 **[構成プロパティ]** の **[全般]**タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
    
