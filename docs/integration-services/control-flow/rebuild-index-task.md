@@ -1,29 +1,34 @@
 ---
-title: "インデックスの再構築タスク | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rebuildindextask.f1"
-helpviewer_keywords: 
-  - "再構築、インデックス"
-  - "インデックス [Integration Services]"
-  - "インデックスの再構築タスク"
+title: "インデックスのタスクを再構築 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rebuildindextask.f1
+helpviewer_keywords:
+- rebuilding indexes
+- indexes [Integration Services]
+- Rebuild Index task
 ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
 caps.latest.revision: 50
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 514473610c4e1ba415e1f663a2abf52616cd23ab
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/26/2017
+
 ---
-# インデックスの再構築タスク
-  インデックスの再構築タスクでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのテーブルおよびビュー内のインデックスを再構築します。 インデックスの管理の詳細については、「[インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
+# <a name="rebuild-index-task"></a>インデックスの再構築タスク
+  インデックスの再構築タスクでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのテーブルおよびビュー内のインデックスを再構築します。 インデックスの管理の詳細については、「 [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
   
  インデックスの再構築タスクを使用すると、パッケージは単一データベースまたは複数のデータベース内のインデックスを再構築できます。 このタスクにより単一データベース内のインデックスのみを再構築する場合、タスクによってインデックスを再構築するビューおよびテーブルを選択できます。  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 50
 -   ONLINE = ON と設定すると、テーブルをロックしたままにせず、インデックスの再構築中に基になるテーブルに対するクエリまたは更新を行えるようになります。  
   
     > [!NOTE]  
-    >  オンラインでのインデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2016 の各エディションがサポートする機能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)」を参照してください。  
+    >  オンラインでのインデックス操作は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
 -   並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP の値を指定します。  
   
@@ -51,18 +56,19 @@ caps.handback.revision: 50
 > [!IMPORTANT]  
 >  実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを作成するためにタスクが費やす時間は、タスクが再構築するインデックス数に比例します。 多数のインデックスを含むデータベースのすべてのテーブルおよびビュー内のインデックスの再構築、または複数のデータベース内のインデックスの再構築を実行するようにタスクが構成されている場合、タスクが Transact-SQL ステートメントを生成するには非常に長い時間がかかることがあります。  
   
-## インデックスの再構築タスクの構成  
+## <a name="configuration-of-the-rebuild-index-task"></a>インデックスの再構築タスクの構成  
  プロパティは、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから設定できます。 このタスクは、 **デザイナーの** [ツールボックス] **の** [メンテナンス プランのタスク] [!INCLUDE[ssIS](../../includes/ssis-md.md)] に表示されます。  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
- [[インデックスの再構築タスク] (メンテナンス プラン)](../Topic/Rebuild%20Index%20Task%20\(Maintenance%20Plan\).md)  
+ [[インデックスの再構築タスク] (メンテナンス プラン)](../../relational-databases/maintenance-plans/rebuild-index-task-maintenance-plan.md)  
   
-## 関連タスク  
- これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「[タスクまたはコンテナーのプロパティを設定する](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)」を参照してください。  
+## <a name="related-tasks"></a>関連タスク  
+ これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「 [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
   
   
+

@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 223d43974e6b63f7375a3d3e000492612fb6856e
-ms.openlocfilehash: 2508b5409b48e4b2a6447a6663c143cbc3ff6309
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: fbfcabf1804a8438e07966bac9f612922b37fa4d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 の新機能
@@ -38,7 +38,7 @@ ms.lasthandoff: 07/31/2017
 
  **SQL Server 2016 をお試しください。** 
 - **無料の** [**SQL Server 2016 Developer edition**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers) をダウンロードしてください。
-- 最新バージョンの [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) をダウンロードします。 
+- 最新バージョンの [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) をダウンロードします。 
 - Azure アカウントをすでにお持ちですか? [SQL Server 2016 がインストール済みの仮想マシン](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)をすぐにご利用いただけます。
 
 ## <a name="sql-server-2016-database-engine"></a>SQL Server 2016 データベース エンジン
@@ -60,11 +60,11 @@ ms.lasthandoff: 07/31/2017
 [データベース エンジン](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)に関する記事を参照してください。
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
 SQL Server 2016 Analysis Services では、**1200 互換性レベル**に基づいて、表形式モデルのデータベースに対するパフォーマンス、オーサリング、データベース管理、フィルター、処理などが向上しています。
-- **[SQL Server R サービス](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** は、統計的分析に使用する R プログラミング言語を、SQL Server に統合します。 
+- **[SQL Server R サービス](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md) **は、統計的分析に使用する R プログラミング言語を、SQL Server に統合します。 
 - 新しい **Database Consistency Checker (DBCC)** は、潜在的なデータの破損の問題を検出するために、内部的に実行されます。
 - **直接クエリ**は、最初に外部データをインポートするのではなく、ライブの外部データにクエリを実行します。直接クエリでは、Azure SQL、Oracle、Teradata を含む、より多くのデータ ソースがサポートされるようになりました。 
 - 多数の新しい **DAX (Data Access Expressions) 関数**が追加されています。
-- 新しい **[Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** 名前空間は、表形式モードのインスタンスとモデルを管理します。 
+- 新しい** [Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx) **名前空間は、表形式モードのインスタンスとモデルを管理します。 
 - [Analysis Services Management Objects (AMO)](http://msdn.microsoft.com/library/mt436122.aspx) は、2 つ目のアセンブリ (**Microsoft.AnalysisServices.Core.dll**) を含めるためにリファクタリングされます。
 
 [Analysis Services エンジン (SSAS)](../analysis-services/what-s-new-in-analysis-services.md) に関する記事を参照してください。 
@@ -99,7 +99,7 @@ Microsoft は、このリリースで Reporting Services を全面的に改良�
 - HTML5 をサポートする**再設計されたレポート表示エンジン** 
 - 新しいツリー マップおよびサンバーストの**グラフの種類** 
 
-[Reporting Services (SSRS)](https://msdn.microsoft.com/library/ms170438.aspx) に関する記事を参照してください。
+[Reporting Services (SSRS)](/sql-docs/docs/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs) に関する記事を参照してください。
 
 ## <a name="next-steps"></a>次の手順   
 - [SQL Server セットアップ](../database-engine/install-windows/installation-for-sql-server-2016.md)   

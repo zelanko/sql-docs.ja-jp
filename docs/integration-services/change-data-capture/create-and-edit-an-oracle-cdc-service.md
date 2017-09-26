@@ -1,40 +1,44 @@
 ---
-title: "Oracle CDC Service の作成と編集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "createSrv"
+title: "作成し、Edit an Oracle CDC Service |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5ba2f4af6ef7c21de22b8223dedc538199168521
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/26/2017
+
 ---
-# Oracle CDC Service の作成と編集
+# <a name="create-and-edit-an-oracle-cdc-service"></a>Oracle CDC Service の作成と編集
   新しい Oracle CDC Windows Service の作成と編集は CDC Service 構成コンソールで行います。  
   
- 新しい Oracle CDC Windows Service を作成するには、左側のペインで **[ローカルの CDC Service]** を選択し、 **[アクション]** ペインで **[新しいサービス]** をクリックします。 **[ローカルの CDC Service]** を右クリックして **[新しいサービス]** をクリックすることもできます。 [新しい Oracle CDC Windows Service] ダイアログ ボックスが表示されます。  
+ 新しい Oracle CDC Windows Service を作成するには、左側のペインで **[ローカルの CDC Service]** を選択し、 **[アクション]** ペインで **[新しいサービス]** をクリックします。 **[ローカルの CDC Service]** を右クリックして **[新しいサービス]**をクリックすることもできます。 [新しい Oracle CDC Windows Service] ダイアログ ボックスが表示されます。  
   
  **または**  
   
- CDC Service のプロパティを編集するには、プロパティを編集するサービスを選択し、 **[アクション]** ペインの **[プロパティ]** をクリックします。 操作するサービスを右クリックし、**[プロパティ]** をクリックすることもできます。 [CDC Service のプロパティ] ダイアログ ボックスが表示されます。  
+ CDC Service のプロパティを編集するには、プロパティを編集するサービスを選択し、 **[アクション]** ペインの **[プロパティ]** をクリックします。 操作するサービスを右クリックし、 **[プロパティ]**をクリックすることもできます。 [CDC Service のプロパティ] ダイアログ ボックスが表示されます。  
   
  [新しい Oracle CDC Windows Service] ダイアログ ボックスまたは [CDC Service のプロパティ] ダイアログ ボックスに次の情報を入力します。  
   
- サービス名  
+* * サービス名前 * *  
  新しい Oracle CDC Windows Service の名前を入力します。 可能な限り長い名前は使用しないでください。 / 文字および \ 文字はサービス名で使用できません。  
   
 > [!NOTE]  
-  
- このオプションは、サービスを編集するときは使用できません。 既に存在する Windows サービスの名前を変更することはできません。  
+> このオプションは、サービスを編集するときは使用できません。 既に存在する Windows サービスの名前を変更することはできません。  
   
  **Description**  
  サービスを識別するのに役立つ説明を入力します。  
@@ -56,7 +60,7 @@ caps.handback.revision: 8
   
      ローカルまたはドメインの Windows アカウントをサービス アカウントに使用できます。 この場合、アカウントの **[パスワード]** を入力する必要があります。 このアカウントは、ローカル ホストまたはドメイン アカウント用にすることができます。 パスワードが変更されたときは、必ず Windows のコントロール パネルのローカル サービスを使用してパスワードを更新します。  
   
- **[サーバー名][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: 接続先となる対象の ** インスタンスを選びます (例: **\\\\<コンピューター名>\\<インスタンス名>**)。 既定では、最後に接続していたサーバー インスタンスが表示されます。  
+ **サーバー名**: ターゲットを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに接続する (たとえば、 ** \\ \\< computer_name >\\< instance_name >**)。 既定では、最後に接続していたサーバー インスタンスが表示されます。  
   
  **[認証]**  
  次のいずれかを選択します。  
@@ -65,7 +69,7 @@ caps.handback.revision: 8
   
 -   **[SQL Server 認証]**: このオプションを選択する場合、使用する **ログインの** [ユーザー名] **と** [パスワード] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を入力する必要があります。 Oracle CDC Service は、対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続するときに、これらの資格情報を使用します。  
   
- Oracle CDC Service によって使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインは、public 固定サーバー ロールのメンバーであることだけが必要です。その他の権限は不要です。 新しい Oracle CDC インスタンスが追加されると、そのログインには、関連付けられている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC データベースへの **db_owner** アクセスが与えられます。  
+ Oracle CDC Service によって使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインは、public 固定サーバー ロールのメンバーであることだけが必要です。その他の権限は不要です。 新しい Oracle CDC インスタンスが追加されると、そのログインには、関連付けられている **CDC データベースへの** db_owner [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アクセスが与えられます。  
   
  Oracle CDC Windows Service の定義を作成するには、プログラムに、関連付けられている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内の MSXDBCDC データベースに対する更新アクセスが必要です。 **[OK]**をクリックすると、MSXDBCDC データベースに対する更新アクセスを持つ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを入力するためのダイアログ ボックスが表示されます。  
   
@@ -74,9 +78,9 @@ caps.handback.revision: 8
  **オプション**  
  矢印をクリックして、構成するオプションを表示します。 これらのオプションを既定値のままにすることもできます。 使用可能なオプションは次のとおりです。  
   
--   **[接続タイムアウト]**: CDC Service for Oracle が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続を待機する時間 (秒単位) を入力します。この時間を超過するとタイムアウトとなります。 既定値は **15**です。  
+-   **[接続タイムアウト]**: CDC Service for Oracle が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続を待機する時間 (秒単位) を入力します。この時間を超過するとタイムアウトとなります。既定値は **15**です。  
   
--   **[実行タイムアウト]**: Oracle CDC Windows Service がコマンドの実行を待機する時間 (秒単位) を入力します。この時間を超過するとタイムアウトとなります。 既定値は、 **30**です。  
+-   **[実行タイムアウト]**: Oracle CDC Windows Service がコマンドの実行を待機する時間 (秒単位) を入力します。この時間を超過するとタイムアウトとなります。既定値は、 **30**です。  
   
 -   **[暗号化接続]**: Oracle CDC Service とターゲットの **インスタンスの間の暗号化された接続を使用した通信に対しては、** [暗号化接続] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を選択します。  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 8
   
  高可用性構成で同じサービスの他のインスタンスがクラスターの他のノードで構成されている場合、同じマスター パスワードを使用する必要があります。 マスター パスワードを紛失または変更した場合、Oracle CDC インスタンス データベースに格納されているすべてのログ マイニング パスワードを、CDC デザイナー コンソールを使用して再入力する必要があります。  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [CDC Service を作成および編集する方法](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   

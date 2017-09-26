@@ -16,10 +16,10 @@ ms.devlang: na
 ms.date: 09/11/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: bd22355518bde09b5af006062b2ec03cf11a7597
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 7f1c64e11e1bec44a558cec10c3d1f90f4951dfd
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>新規および最近の更新: SQL Server のドキュメント
@@ -104,7 +104,7 @@ ms.lasthandoff: 09/13/2017
 
 
 - **無料の** [**SQL Server 2016 Developer edition**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers) をダウンロードしてください。
-- 最新バージョンの [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) をダウンロードします。
+- 最新バージョンの [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) をダウンロードします。
 - Azure アカウントをすでにお持ちですか? [SQL Server 2016 がインストール済みの仮想マシン](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)をすぐにご利用いただけます。
 
 **QL Server 2016 データベース エンジン**

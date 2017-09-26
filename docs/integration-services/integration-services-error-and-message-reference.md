@@ -1,32 +1,37 @@
 ---
-title: "Integration Services のエラーおよびメッセージのリファレンス | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "エラー番号 [Integration Services]"
-  - "HRESULT [Integration Services]"
-  - "エラー [Integration Services], 一覧表示"
+title: "Integration Services Error and Message Reference |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- error numbers [Integration Services]
+- hresults [Integration Services]
+- errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 50a5d76125594e3175c2dc03d07de88e56cb2206
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/26/2017
+
 ---
-# Integration Services のエラーおよびメッセージのリファレンス
-  次の表に、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で事前定義されているエラー メッセージ、警告メッセージ、および情報メッセージの一覧を示します。この一覧では、数値コードおよびシンボル名と共に、メッセージをカテゴリごとに昇順の番号順に示します。 ここに示す各エラーは、<xref:Microsoft.SqlServer.Dts.Runtime> 名前空間の <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> クラスのフィールドとして定義されています。  
+# <a name="integration-services-error-and-message-reference"></a>Integration Services のエラーおよびメッセージのリファレンス
+  次の表に、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で事前定義されているエラー メッセージ、警告メッセージ、および情報メッセージの一覧を示します。この一覧では、数値コードおよびシンボル名と共に、メッセージをカテゴリごとに昇順の番号順に示します。 ここに示す各エラーは、 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 名前空間の <xref:Microsoft.SqlServer.Dts.Runtime> クラスのフィールドとして定義されています。  
   
  この一覧は、説明のないエラー コードが表示された場合に便利です。 現時点では、この一覧にトラブルシューティング情報は含まれていません。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の使用時に表示されるエラー メッセージの多くは、他のコンポーネントが原因です。 このトピックには、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] コンポーネントが原因で発生するすべてのエラーを記載しています。 一覧でエラーが見つからない場合、そのエラーは [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 以外のコンポーネントが原因です。 これには、OLE DB プロバイダー、[!INCLUDE[ssDE](../includes/ssde-md.md)]や [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] などの他のデータベース コンポーネント、またはファイル システム、SMTP サーバー、メッセージ キュー (MSMQ) などの他のサービスやコンポーネントなどがあります。 このような外部エラー メッセージの情報については、コンポーネント固有のドキュメントを参照してください。  
+>  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の使用時に表示されるエラー メッセージの多くは、他のコンポーネントが原因です。 このトピックには、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] コンポーネントが原因で発生するすべてのエラーを記載しています。 一覧でエラーが見つからない場合、そのエラーは [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]以外のコンポーネントが原因です。 これには、OLE DB プロバイダー、 [!INCLUDE[ssDE](../includes/ssde-md.md)] や [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] などの他のデータベース コンポーネント、またはファイル システム、SMTP サーバー、メッセージ キュー (MSMQ) などの他のサービスやコンポーネントなどがあります。 このような外部エラー メッセージの情報については、コンポーネント固有のドキュメントを参照してください。  
   
  この一覧には、次のようなメッセージのグループが含まれています。  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 44
 -   [データ フロー コンポーネントのエラー メッセージ (DTSBC_E_*)](#msgPipeline)  
   
 ##  <a name="msgError"></a> エラー メッセージ  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、**DTS_E_** で始まります。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、 **DTS_E_**で始まります。  
   
 |16 進コード|10 進コード|シンボル名|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -135,10 +140,10 @@ caps.handback.revision: 44
 |0xC001400E|-1073659890|DTS_E_NOSQLPROFILERDLL|SQL Server Profiler のログ プロバイダーは、pfclnt.dll を読み込めませんでした。 SQL Server Profiler がインストールされていることを確認してください。|  
 |0xC001400F|-1073659889|DTS_E_LOGFAILED|エラー コード 0x%1!8.8X! により、SSIS ログ記録インフラストラクチャが失敗しました。 このエラーは、特定のログ プロバイダーに起因しないログ記録エラーを示します。|  
 |0xC0014010|-1073659888|DTS_E_LOGPROVIDERFAILED|エラー コード 0x%2!8.8X! (%3) により、SSIS ログ記録プロバイダー "%1" が失敗しました。 (%3)。  これは、指定されたログ プロバイダーに起因するログ記録エラーを示します。|  
-|0xC0014011|-1073659887|DTS_E_SAVETOSQLSERVER_OLEDB|SaveToSQLServer メソッドで OLE DB エラー コード 0x%1!8.8X!  (%2) が検出されました。  発行された SQL ステートメントは失敗しました。|  
-|0xC0014012|-1073659886|DTS_E_LOADFROMSQLSERVER_OLEDB|LoadFromSQLServer メソッドで OLE DB エラー コード 0x%1!8.8X!  (%2) が返されました。  発行された SQL ステートメントは失敗しました。|  
+|0xC0014011|-1073659887|DTS_E_SAVETOSQLSERVER_OLEDB|SaveToSQLServer メソッドで OLE DB エラー コード 0x%1!8.8X! (%2) が検出されました。  発行された SQL ステートメントは失敗しました。|  
+|0xC0014012|-1073659886|DTS_E_LOADFROMSQLSERVER_OLEDB|LoadFromSQLServer メソッドで OLE DB エラー コード 0x%1!8.8X! (%2) が検出されました。  発行された SQL ステートメントは失敗しました。|  
 |0xC0014013|-1073659885|DTS_E_REMOVEFROMSQLSERVER_OLEDB|RemoveFromSQLServer メソッドで OLE DB エラー コード 0x%1!8.8X! (%2) が検出されました。 発行された SQL ステートメントは失敗しました。|  
-|0xC0014014|-1073659884|DTS_E_EXISTSONSQLSERVER_OLEDB|ExistsOnSQLServer メソッドで OLE DB エラー コード 0x%1!8.8X!  (%2) が検出されました。 発行された SQL ステートメントは失敗しました。|  
+|0xC0014014|-1073659884|DTS_E_EXISTSONSQLSERVER_OLEDB|ExistsOnSQLServer メソッドで OLE DB エラー コード 0x%1!8.8X! (%2) が検出されました。 発行された SQL ステートメントは失敗しました。|  
 |0xC0014015|-1073659883|DTS_E_CONNECTIONSTRING|指定された接続文字列が使用されたときに、OLE DB によるデータベース接続が失敗しました。|  
 |0xC0014016|-1073659882|DTS_E_FROMEXECISNOTCHILD|優先順位制約を追加するときに、このコンテナーの子ではない From 実行可能ファイルが指定されました。|  
 |0xC0014017|-1073659881|DTS_E_TOEXECISNOTCHILD|優先順位制約を追加するときに、このコンテナーの子ではない To 実行可能ファイルが指定されました。|  
@@ -186,12 +191,12 @@ caps.handback.revision: 44
 |0xC0014042|-1073659838|DTS_E_FOLDERADDFAILED|"%1" という名前の SQL Server で、フォルダー "%2" にフォルダーを作成中にエラーが発生しました。|  
 |0xC0014043|-1073659837|DTS_E_CREATEFOLDERONSQLSERVER_OLEDB|CreateFolderOnSQLServer メソッドで OLE DB エラー コード 0x%1!8.8X! (%2) が検出されました。 発行された SQL ステートメントは失敗しました。|  
 |0xC0014044|-1073659836|DTS_E_FOLDERRENAMEFAILED|SQL Server にある " %1\\\\%2" というフォルダーの名前を "%1\\\\%3" に変更中にエラーが発生しました。|  
-|0xC0014045|-1073659835|DTS_E_RENAMEFOLDERONSQLSERVER_OLEDB|RenameFolderOnSQLServer メソッドで OLE DB エラー コード 0x%1!8.8X!  (%2) が検出されました。 発行された SQL ステートメントは失敗しました。|  
+|0xC0014045|-1073659835|DTS_E_RENAMEFOLDERONSQLSERVER_OLEDB|RenameFolderOnSQLServer メソッドで OLE DB エラー コード 0x%1!8.8X! (%2) が検出されました。 発行された SQL ステートメントは失敗しました。|  
 |0xC0014046|-1073659834|DTS_E_FOLDERDELETEFAILED|SQL Server フォルダー "%1" を削除中にエラーが発生しました。|  
-|0xC0014047|-1073659833|DTS_E_REMOVEFOLDERFROMSQLSERVER_OLEDB|RemoveFolderOnSQLServer メソッドで OLE DB エラー コード 0x%1!8.8X!  (%2) が検出されました。 発行された SQL ステートメントは失敗しました。|  
+|0xC0014047|-1073659833|DTS_E_REMOVEFOLDERFROMSQLSERVER_OLEDB|RemoveFolderOnSQLServer メソッドで OLE DB エラー コード 0x%1!8.8X! (%2) が検出されました。 発行された SQL ステートメントは失敗しました。|  
 |0xC0014048|-1073659832|DTS_E_INVALIDPATHTOPACKAGE|指定されたパッケージ パスにパッケージ名が含まれていません。 このエラーは、パスに円記号またはスラッシュがまったく含まれていない場合に発生します。|  
 |0xC0014049|-1073659831|DTS_E_FOLDERNOTFOUND|フォルダー "%1" が見つかりません。|  
-|0xC001404A|-1073659830|DTS_E_FINDFOLDERONSQLSERVER_OLEDB|SQL のフォルダーを検索中に、OLE DB エラーが発生し、エラー コード 0x%1!8.8X!  (%2) が検出されました。|  
+|0xC001404A|-1073659830|DTS_E_FINDFOLDERONSQLSERVER_OLEDB|SQL のフォルダーを検索中に、OLE DB エラーが発生し、エラー コード 0x%1!8.8X! (%2) が検出されました。|  
 |0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|SSIS ログ記録プロバイダーは、ログを開けませんでした。 エラー コード: 0x%1!8.8X!。|  
 |0xC001404C|-1073659828|DTS_E_GETCONNECTIONINFOS|エラー 0x%1!8.8X! "%2" により、ConnectionInfos コレクションを取得できませんでした 。 このエラーは、IDTSApplication100::get_ConnectionInfos への呼び出しが失敗した場合に発生します。|  
 |0xC001404D|-1073659827|DTS_E_VARIABLEDEADLOCK|変数をロックしようとしたときに、デッドロックが検出されました。 16 回試行しましたがロックを取得できません。 ロックはタイムアウトしました。|  
@@ -236,7 +241,7 @@ caps.handback.revision: 44
 |0xC0016006|-1073651706|DTS_E_INVALIDSERVERNAME|URL %1 で指定されたサーバー名を解決できません。|  
 |0xC0016007|-1073651705|DTS_E_PROXYAUTH|プロキシ認証が失敗しました。 このエラーは、ログイン資格情報を入力していない場合、または資格情報が正しくない場合に発生します。|  
 |0xC0016008|-1073651704|DTS_E_SECUREFAILURE|サーバーから取得した SSL 証明書の応答が無効です。 要求を処理できません。|  
-|0xC0016009|-1073651703|DTS_E_TIMEOUT|要求がタイムアウトしました。 このエラーは、指定したタイムアウト値が小さすぎる場合や、サーバーまたはプロキシへの接続を確立できなかった場合に発生する可能性があります。 サーバーとプロキシの URL が正しいことを確認してください。|  
+|0xC0016009|-1073651703|DTS_E_TIMEOUT|要求がタイムアウトしました。このエラーは、指定したタイムアウト値が小さすぎる場合や、サーバーまたはプロキシへの接続を確立できなかった場合に発生する可能性があります。 サーバーとプロキシの URL が正しいことを確認してください。|  
 |0xC001600A|-1073651702|DTS_E_CLIENTAUTH|クライアント証明書がありません。 このエラーは、サーバーで SSL クライアント証明書が必要とされているときに、ユーザーが無効な証明書を指定したか、または証明書を指定しなかった場合に発生します。 この接続用にクライアント証明書を構成する必要があります。|  
 |0xC001600B|-1073651701|DTS_E_REDIRECTFAILURE|指定されたサーバーの URL %1 にはリダイレクトが含まれていますが、リダイレクトの要求に失敗しました。|  
 |0xC001600C|-1073651700|DTS_E_SERVERAUTH|サーバー認証が失敗しました。 このエラーは、ログイン資格情報を入力していない場合、または資格情報が正しくない場合に発生します。|  
@@ -303,7 +308,7 @@ caps.handback.revision: 44
 |0xC001B003|-1073631229|DTS_E_NOTEXECUTING|実行可能ファイルが実行されていないか、または最上位の実行可能ファイルではないため、Suspend または Resume の呼び出しに失敗しました。 このエラーは、Execute 呼び出しが現在処理中ではない実行可能ファイルで、クライアントが Suspend または Resume を呼び出した場合に発生します。|  
 |0xC001C002|-1073627134|DTS_E_INVALIDFILE|For Each File 列挙子に指定されたファイルが無効です。 For Each File 列挙子に指定されたファイルが存在することを確認してください。|  
 |0xC001C010|-1073627120|DTS_E_VALUEINDEXNOTINTEGER|値インデックスが整数ではありません。 For Each 変数番号 %1!d! を変数 "%2" に マッピングしています。|  
-|0xC001C011|-1073627119|DTS_E_VALUEINDEXNEGATIVE|値インデックスが負の値です  変数 "%2" への ForEach 変数マッピング番号  %1!d! です。|  
+|0xC001C011|-1073627119|DTS_E_VALUEINDEXNEGATIVE|値インデックスが負の値です 変数 "%2" への ForEach 変数マッピング番号 %1!d! です。|  
 |0xC001C012|-1073627118|DTS_E_FOREACHVARIABLEMAPPING|ForEach 変数マッピング番号 %1!d! を 変数 "%2" に適用できません。|  
 |0xC001C013|-1073627117|DTS_E_OBJECTNOTINFOREACHLOOP|ForEachLoop コンテナーの直接の子ではない ForEachPropertyMapping にオブジェクトを追加しているときにエラーが発生しました。|  
 |0xC001F001|-1073614847|DTS_E_FAILEDSYSTEMVARIABLEREMOVE|システム変数を削除できませんでした。 このエラーは、必要な変数を削除しようとした場合に発生します。  必要な変数は、タスクとランタイムの間の通信を行うためにランタイムで作成される変数です。|  
@@ -324,7 +329,7 @@ caps.handback.revision: 44
 |0xC001F027|-1073614809|DTS_E_PROPERTYWRITEONLY|プロパティ "%1" は書き込み専用です。 このエラーは、プロパティ オブジェクトを使用してプロパティの値を取得しようとしたときに、そのプロパティが書き込み専用である場合に発生します。|  
 |0xC001F028|-1073614808|DTS_E_NODISPATCH|オブジェクトには IDispatch インターフェイスが実装されていません。 このエラーは、プロパティ オブジェクトまたはプロパティのコレクションでオブジェクトの IDispatch インターフェイスにアクセスしようとした場合に発生します。|  
 |0xC001F029|-1073614807|DTS_E_NOCONTAININGTYPELIB|オブジェクトのタイプ ライブラリを取得できません。 このエラーは、プロパティのコレクションで IDispatch インターフェイスによりオブジェクトのタイプ ライブラリを取得しようとした場合に発生します。|  
-|0xC001F02A|-1073614806|DTS_E_INVALIDTASKMONIKER|XML からタスクを作成できません。タスク " %1!s!"、型 " %2!s!"。 エラー: 0x%3!8.8X! "  %4!s!"。|  
+|0xC001F02A|-1073614806|DTS_E_INVALIDTASKMONIKER|XML からタスクを作成できません。タスク " %1!s!"、型 " %2!s!"。 エラー: 0x%3!8.8X! " %4!s!"。|  
 |0xC001F02C|-1073614804|DTS_E_FAILEDCREATEXMLDOCUMENT|XML ドキュメント "%1" を作成できませんでした。|  
 |0xC001F02D|-1073614803|DTS_E_PMVARPROPTYPESDIFFERENT|型の異なる変数からプロパティへのプロパティ マッピングが存在したため、エラーが発生しました。 プロパティの型は変数の型と一致する必要があります。|  
 |0xC001F02E|-1073614802|DTS_E_PMINVALIDPROPMAPTARGET|プロパティ マッピングで、サポートされていないオブジェクト型を対象に設定しようとしました。 このエラーは、サポートされていないオブジェクト型をプロパティ マッピングに渡した場合に発生します。|  
@@ -357,7 +362,7 @@ caps.handback.revision: 44
 |0xC001F206|-1073614330|DTS_E_DTSNAME_BEGINSWITHALPHA|オブジェクト名 "%1" は無効です。 名前の先頭は英文字にする必要があります。|  
 |0xC001F207|-1073614329|DTS_E_DTSNAME_BEGINSWITHALPHAUNDERBAR|オブジェクト名 "%1" は無効です。 名前の先頭は英文字またはアンダースコア "_" にする必要があります。|  
 |0xC001F208|-1073614328|DTS_E_DTSNAME_ALPHADIGITUNDERBAR|オブジェクト名 "%1" は無効です。 名前には英数字またはアンダースコア "_" のみを指定する必要があります。|  
-|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|オブジェクト名 "%1" は無効です。 名前には次のどの文字も含めることができません: / \ : ? " \< > &#124;|  
+|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|オブジェクト名 "%1" は無効です。 名前には次のどの文字も含めることができません: / \ : ? " < > &#124;|  
 |0xC001F420|-1073613792|DTS_E_FAILLOADINGPROPERTY|既定の永続性を使用して値プロパティ "%1" を読み込めませんでした。|  
 |0xC001F422|-1073613790|DTS_E_NODELISTENUM_INVALIDCONNMGRTYPE|接続マネージャー "%1" の種類は "%2" ではありません|  
 |0xC001F423|-1073613789|DTS_E_NODELISTENUM_XPATHISEMPTY|"%1" が空です|  
@@ -366,14 +371,14 @@ caps.handback.revision: 44
 |0xC001F427|-1073613785|DTS_E_OPERATIONFAILCACHEINUSE|キャッシュが使用中のため、操作は失敗しました。|  
 |0xC001F428|-1073613784|DTS_E_PROPERTYCANNOTBEMODIFIED|プロパティは変更できません。|  
 |0xC001F429|-1073613783|DTS_E_PACKAGEUPGRADEFAILED|パッケージのアップグレードに失敗しました。|  
-|0xC00220DE|-1073602338|DTS_E_TKEXECPACKAGE_UNABLETOLOADFILE|エラー 0x%1!8.8X!  がパッケージ ファイル "%3" の読み込み中に発生しました。 %2。|  
+|0xC00220DE|-1073602338|DTS_E_TKEXECPACKAGE_UNABLETOLOADFILE|エラー 0x%1!8.8X! がパッケージ ファイル "%3" の読み込み中に発生しました。 %2。|  
 |0xC00220DF|-1073602337|DTS_E_TKEXECPACKAGE_UNSPECIFIEDPACKAGE|パッケージが指定されていません。|  
 |0xC00220E0|-1073602336|DTS_E_TKEXECPACKAGE_UNSPECIFIEDCONNECTION|接続が指定されていません。|  
 |0xC00220E2|-1073602334|DTS_E_TKEXECPACKAGE_INCORRECTCONNECTIONMANAGERTYPE|接続マネージャー "%1" は、サポートされていない種類 "%2" です。 ファイル接続マネージャーおよび OLE DB 接続マネージャーのみがサポートされています。|  
-|0xC00220E3|-1073602333|DTS_E_TKEXECPACKAGE_UNABLETOLOADXML|エラー 0x%1!8.8X!  がパッケージ ファイル "%3" を XML ドキュメントに読み込み中に発生しました。 %2。|  
-|0xC00220E4|-1073602332|DTS_E_TKEXECPACKAGE_UNABLETOLOAD|エラー 0x%1!8.8X!  がパッケージの読み込みを準備中に発生しました。 %2。|  
-|0xC0024102|-1073594110|DTS_E_TASKVALIDATIONFAILED|タスクの Validate メソッドが失敗し、エラー コード 0x%1!8.8X!  (%2) が返されました。 タスクの Validate メソッドが成功し、"out" パラメーターを使用して結果が示される必要があります。|  
-|0xC0024104|-1073594108|DTS_E_TASKEXECUTEFAILED|タスクの Execute メソッドが失敗し、エラー コード 0x%1!8.8X!  (%2) が検出されました。 タスクの Execute メソッドは成功し、"out" パラメーターを使用して結果が示される必要があります。|  
+|0xC00220E3|-1073602333|DTS_E_TKEXECPACKAGE_UNABLETOLOADXML|エラー 0x%1!8.8X! がパッケージ ファイル "%3" を XML ドキュメントに読み込み中に発生しました。 %2。|  
+|0xC00220E4|-1073602332|DTS_E_TKEXECPACKAGE_UNABLETOLOAD|エラー 0x%1!8.8X! がパッケージの読み込みを準備中に発生しました。 %2。|  
+|0xC0024102|-1073594110|DTS_E_TASKVALIDATIONFAILED|タスクの Validate メソッドが失敗し、エラー コード 0x%1!8.8X! (%2) が検出されました。 タスクの Validate メソッドが成功し、"out" パラメーターを使用して結果が示される必要があります。|  
+|0xC0024104|-1073594108|DTS_E_TASKEXECUTEFAILED|タスクの Execute メソッドが失敗し、エラー コード 0x%1!8.8X! (%2) が検出されました。 タスクの Execute メソッドは成功し、"out" パラメーターを使用して結果が示される必要があります。|  
 |0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|タスク "%1" で依存関係を取得中にエラー 0x%2!8.8X! が 発生しました。 エラーが発生したとき、ランタイムがタスクの依存関係のコレクションから依存関係を取得しようとしていました。 タスクにより、いずれかの依存関係のインターフェイスが正しく実装されなかった可能性があります。|  
 |0xC0024107|-1073594105|DTS_E_TASKVALIDATIONERROR|タスクの検証中にエラーが発生しました。|  
 |0xC0024108|-1073594104|DTS_E_CONNECTIONSTRINGFORMAT|接続文字列の形式が無効です。 セミコロンで区切った X=Y という形式が 1 つ以上含まれている必要があります。 このエラーは、データベース接続マネージャーに、コンポーネントを持たない接続文字列が設定されている場合に発生します。|  
@@ -535,7 +540,7 @@ caps.handback.revision: 44
 |0xC002919E|-1073573474|DTS_E_MSMQTASK_INVALID_QUEUE_PATH|キューのパスが無効です。|  
 |0xC002919F|-1073573473|DTS_E_MSMQTASK_NOT_TRANSACTIONAL|このメッセージ キュー タスクでは、分散トランザクションへの参加がサポートされていません。|  
 |0xC00291A0|-1073573472|DTS_E_MSMQTASK_INVALID_MESSAGE_TYPE|メッセージ型が無効です。|  
-|0xC00291A1|-1073573471|DTS_E_MSMQTASK_TASK_TIMEOUT|メッセージ キューがタイムアウトしました。 メッセージは受信されませんでした。|  
+|0xC00291A1|-1073573471|DTS_E_MSMQTASK_TASK_TIMEOUT|メッセージ キューがタイムアウトしました。メッセージは受信されませんでした。|  
 |0xC00291A2|-1073573470|DTS_E_MSMQTASK_INVALID_PROPERTY_VALUE|指定されたプロパティが無効です。 引数の型が正しいことを確認してください。|  
 |0xC00291A3|-1073573469|DTS_E_MSMQTASK_MESSAGE_NON_AUTHENTICATED|メッセージが認証されていません。|  
 |0xC00291A4|-1073573468|DTS_E_MSMQTASK_INVALID_ENCRYPTION_ALGO_WRAPPER|暗号化アルゴリズムの値を無効なオブジェクトで設定しようとしています。|  
@@ -915,10 +920,10 @@ caps.handback.revision: 44
 |0xC004700E|-1073450994|DTS_E_THREADSTARTUPFAILED|1 つ以上の必要なスレッドを作成できないので、データ フロー タスク エンジンはスタートアップ時に失敗しました。|  
 |0xC004700F|-1073450993|DTS_E_CANTGETMUTEX|初期化時に、スレッドでミューテックスを作成できませんでした。|  
 |0xC0047010|-1073450992|DTS_E_CANTGETSEMAPHORE|初期化時に、スレッドでセマフォを作成できませんでした。|  
-|0xC0047011|-1073450991|DTS_E_BUFFERFAILUREDETAILS|システムから %1!d!  パーセントのメモリの読み込みが報告されています。 物理メモリは %2 バイトで %3 バイトの空き領域があります。 仮想メモリは %4 バイトで %5 の空き領域があります。 ページング ファイルは %6 バイトで %7 バイトの空き領域があります。|  
-|0xC0047012|-1073450990|DTS_E_BUFFERALLOCFAILED|バッファーが %1!d!  バイトです。|  
+|0xC0047011|-1073450991|DTS_E_BUFFERFAILUREDETAILS|システムから %1!d! パーセントのメモリの読み込みが報告されています。 物理メモリは %2 バイトで %3 バイトの空き領域があります。 仮想メモリは %4 バイトで %5 の空き領域があります。 ページング ファイルは %6 バイトで %7 バイトの空き領域があります。|  
+|0xC0047012|-1073450990|DTS_E_BUFFERALLOCFAILED|バッファーが %1!d! バイトです。|  
 |0xC0047013|-1073450989|DTS_E_CANTCREATEBUFFERMANAGER|バッファー マネージャーを作成できませんでした。|  
-|0xC0047015|-1073450987|DTS_E_BUFFERBADSIZE|バッファーの種類 %1!d!  のサイズは %2!I64d! バイトです。|  
+|0xC0047015|-1073450987|DTS_E_BUFFERBADSIZE|バッファーの種類 %1!d! のサイズは %2!I64d! バイトです。|  
 |0xC0047016|-1073450986|DTS_E_DANGLINGWITHPATH|%1 はぶら下がりとしてマークされていますが、パスがアタッチされています。|  
 |0xC0047017|-1073450985|DTS_E_INDIVIDUALVALIDATIONFAILED|%1 が検証に失敗し、エラー コード 0x%2!8.8X! が返されました。|  
 |0xC0047018|-1073450984|DTS_E_INDIVIDUALPOSTEXECUTEFAILED|%1 が実行後フェーズに失敗し、エラー コード 0x%2!8.8X! が返されました。|  
@@ -930,7 +935,7 @@ caps.handback.revision: 44
 |0xC004701F|-1073450977|DTS_E_CANTCOMPARE|データ型 "%1" は比較できません。 このデータ型の比較はサポートされていないので、このデータ型を並べ替えたり、キーとして使用することはできません。|  
 |0xC0047020|-1073450976|DTS_E_REFUSEDFORSHUTDOWN|このスレッドはシャットダウンされたので、入力バッファーを受け取りません。|  
 |0xC0047021|-1073450975|DTS_E_THREADFAILED|SSIS エラー コード DTS_E_THREADFAILED。  エラー コード 0x%2!8.8X! により、スレッド "%1" は終了しました。  このエラーの前に、スレッドが終了した理由の詳細が記載されたエラー メッセージが報告されている可能性があります。|  
-|0xC0047022|-1073450974|DTS_E_PROCESSINPUTFAILED|SSIS エラー コード DTS_E_PROCESSINPUTFAILED。  入力 "%4" (%5!d!) の処理中に、コンポーネント "%1" (%2!d!) の ProcessInput メソッドがエラー コード 0x%3!8.8X!  で失敗しました。 このコンポーネントは、ProcessInput メソッドからエラーを返しました。 このエラーはコンポーネントに固有のものですが、致命的なエラーであるため、データ フロー タスクの実行は停止されます。  このエラーの前に、エラーの詳細が記載されたエラー メッセージが報告されている可能性があります。|  
+|0xC0047022|-1073450974|DTS_E_PROCESSINPUTFAILED|SSIS エラー コード DTS_E_PROCESSINPUTFAILED。  入力 "%4" (%5!d!) の処理中に、コンポーネント "%1" (%2!d!) の ProcessInput メソッドがエラー コード 0x%3!8.8X! で失敗しました。 このコンポーネントは、ProcessInput メソッドからエラーを返しました。 このエラーはコンポーネントに固有のものですが、致命的なエラーであるため、データ フロー タスクの実行は停止されます。  このエラーの前に、エラーの詳細が記載されたエラー メッセージが報告されている可能性があります。|  
 |0xC0047023|-1073450973|DTS_E_CANTREALIZEVIRTUALBUFFERS|一連の仮想バッファーを認識できません。|  
 |0xC0047024|-1073450972|DTS_E_PIPELINETOOCOMPLEX|このパイプラインに必要なスレッド数は %1!d! ですが、これはシステムの制限値 %2!d! を超えています。 パイプラインに必要なスレッドが多すぎるため構成できません。 非同期出力の数が多すぎるか、EngineThreads プロパティに設定された値が大きすぎます。 パイプラインを複数のパッケージに分割するか、EngineThreads プロパティの値を減らしてください。|  
 |0xC0047028|-1073450968|DTS_E_SCHEDULERCOULDNOTCOUNTSOURCES|データ フロー エンジン スケジューラがレイアウト内の変換元の数を取得できません。|  
@@ -938,7 +943,7 @@ caps.handback.revision: 44
 |0xC004702A|-1073450966|DTS_E_COMPONENTVIEWISUNAVAILABLE|コンポーネント ビューを使用できません。 コンポーネント ビューが作成されていることを確認してください。|  
 |0xC004702B|-1073450965|DTS_E_INCORRECTCOMPONENTVIEWID|コンポーネント ビュー ID が正しくありません。 コンポーネント ビューの同期が取れません。 コンポーネント ビューを解放して再作成してください。|  
 |0xC004702C|-1073450964|DTS_E_BUFFERNOTLOCKED|このバッファーはロックされていないので、操作できません。|  
-|0xC004702D|-1073450963|DTS_E_CANTBUILDBUFFERTYPE|データ フロー タスクは、バッファーの定義を作成するためのメモリを割り当てることができません。 バッファーの定義には %1!d!  含まれています。|  
+|0xC004702D|-1073450963|DTS_E_CANTBUILDBUFFERTYPE|データ フロー タスクは、バッファーの定義を作成するためのメモリを割り当てることができません。 バッファーの定義には %1!d! 含まれています。|  
 |0xC004702E|-1073450962|DTS_E_CANTREGISTERBUFFERTYPE|データ フロー タスクは、バッファーの種類を登録できません。 この種類には %1!d! 列含まれており、 これは実行ツリー %2!d! 用の種類です。|  
 |0xC004702F|-1073450961|DTS_E_INVALIDUSESDISPOSITIONSVALUE|UsesDispositions プロパティは初期値から変更できません。 XML が編集され、UsesDispositions 値が変更された場合に発生します。 この値は、パッケージに追加されるときにコンポーネントによって設定されるので、変更は許可されていません。|  
 |0xC0047030|-1073450960|DTS_E_THREADFAILEDINITIALIZE|データ フロー タスクは、必要なスレッドを初期化できなかったため、実行を開始できません。 スレッドから、具体的なエラーが以前に報告されています。|  
@@ -960,7 +965,7 @@ caps.handback.revision: 44
 |0xC0047047|-1073450937|DTS_E_WRONGOBJECTTYPE|要求されたオブジェクトで、オブジェクトの種類が正しくありません。|  
 |0xC0047048|-1073450936|DTS_E_CANTCREATESPOOLFILE|バッファー マネージャーで、BufferTempStoragePath プロパティのどのパスにも一時ストレージ ファイルを作成できません。 ファイル名が無効であるか、権限がないか、すべてのパスが使用済みです。|  
 |0xC0047049|-1073450935|DTS_E_SEEKFAILED|バッファー マネージャーはファイル "%2" のオフセット %1!d! に シークできませんでした。 ファイルが破損しています。|  
-|0xC004704A|-1073450934|DTS_E_EXTENDFAILED|バッファー マネージャーはファイル "%1" を長さ %2!lu!  バイトです。  ディスク領域が不足しています。|  
+|0xC004704A|-1073450934|DTS_E_EXTENDFAILED|バッファー マネージャーはファイル "%1" を長さ %2!lu! バイトです。  ディスク領域が不足しています。|  
 |0xC004704B|-1073450933|DTS_E_FILEWRITEFAILED|バッファー マネージャーはファイル "%2" に %1!d! バイトを %1!d! バイトを書き込めません。 ディスク領域またはクォータが不足しています。|  
 |0xC004704C|-1073450932|DTS_E_FILEREADFAILED|バッファー マネージャーはファイル "%2" から %1!d! バイトを 読み取れません。 ファイルが破損しています。|  
 |0xC004704D|-1073450931|DTS_E_VIRTUALNOTSEQUENTIAL|バッファー ID %1!d! は、 他の仮想バッファーをサポートしているので、シーケンシャル モードに設定できません。 仮想バッファーがサポートされているバッファーで IDTSBuffer100.SetSequentialMode が呼び出されました。|  
@@ -982,7 +987,7 @@ caps.handback.revision: 44
 |0xC0047063|-1073450909|DTS_E_SCHEDULERMEMORY|データ フロー エンジン スケジューラの実行構造に十分なメモリを割り当てられません。 実行を開始する前に、システムのメモリが不足していました。|  
 |0xC0047064|-1073450908|DTS_E_BUFFERNOOBJECTMEMORY|メモリ不足の状態により、バッファー オブジェクトを作成できませんでした。|  
 |0xC0047065|-1073450907|DTS_E_BUFFERNOMAPMEMORY|メモリ不足の状態により、バッファーの系列 ID を DTP_HCOL インデックスにマップできません。|  
-|0xC0047066|-1073450906|DTS_E_INDIVIDUALPUTVARIABLESFAILED|"%1!s!" が  Variables コレクションをキャッシュできず、エラー コード 0x%2!8.8X が返されました。|  
+|0xC0047066|-1073450906|DTS_E_INDIVIDUALPUTVARIABLESFAILED|"%1!s!" が Variables コレクションをキャッシュできず、エラー コード 0x%2!8.8X が返されました。|  
 |0xC0047067|-1073450905|DTS_E_INDIVIDUALPUTCOMPONENTMETADATAFAILED|"%1" がコンポーネント メタデータ オブジェクトをキャッシュできなかったので、エラー コード 0x%2!8.8X! が返されました。|  
 |0xC0047068|-1073450904|DTS_E_SORTEDOUTPUTHASINVALIDSORTKEYPOSITION|"%1" には 0 以外の SortKeyPosition がありますが、その値 (%2!ld!) が大きすぎます。 値は、列数以下である必要があります。|  
 |0xC004706A|-1073450902|DTS_E_SORTEDOUTPUTHASINVALIDSORTKEYPOSITIONS|%1 の IsSorted プロパティは True に設定されていますが、0 以外の出力列 SortKeyPositions の絶対値では、1 から始まり単調に増加するシーケンスが形成されません。|  
@@ -1052,7 +1057,7 @@ caps.handback.revision: 44
 |0xC00470AC|-1073450836|DTS_E_EXPREVALINVALIDCASTSCALE|値 %1!d! は キャストの小数点以下桁数のパラメーターに指定された値 %1!d! が無効です。 小数点以下桁数は %3!d! から %4!d! までの範囲で指定する 必要がありますが、 小数点以下桁数が型キャストの範囲外です。 小数点以下桁数は有効桁数よりも大きい値にすることはできず、正の値にする必要があります。|  
 |0xC00470AD|-1073450835|DTS_E_NONSORTEDOUTPUTHASSORTKEYPOSITIONS|"%1" の IsSorted プロパティは false に設定されていますが、 出力列 SortKeyPositions の %2!lu! は 0 以外です。|  
 |0xC00470AF|-1073450833|DTS_E_EXPREVALCONDITIONALOPCODEPAGEMISMATCH|型 %2 の条件演算子 "%1" のオペランドでは、コード ページが一致している必要があります。 左辺オペランドのコード ページと右辺オペランドのコード ページが一致しません。 指定された型の条件演算子では、コード ページが同一である必要があります。|  
-|0xC00470B1|-1073450831|DTS_E_REFERENCEDMETADATABADCOUNT|入力 "%1" (%2!d!) は入力 "%3" (%4!d!) を参照しますが、両方の入力に含まれる列数が同じではありません。 入力 %5!d! には  %6!d! 列が含まれていますが、 入力 %7!d! には  %8!d! 列 含まれています。|  
+|0xC00470B1|-1073450831|DTS_E_REFERENCEDMETADATABADCOUNT|入力 "%1" (%2!d!) は入力 "%3" (%4!d!) を参照しますが、両方の入力に含まれる列数が同じではありません。 入力 %5!d! には %6!d! 列が含まれていますが、 入力 %7!d! には %8!d! 列 含まれています。|  
 |0xC00470B2|-1073450830|DTS_E_OBJECTLINEAGEIDNOTFOUND|系列 ID が %1!d! のオブジェクトは存在しません。|  
 |0xC00470B3|-1073450829|DTS_E_FILENAMEOUTPUTCOLUMNOTFOUND|ファイル名の出力列が見つかりません。|  
 |0xC00470B4|-1073450828|DTS_E_FILENAMEOUTPUTCOLUMNINVALIDDATATYPE|ファイル名の出力列のデータ型は DT_WSTR ですが、NULL 終端の Unicode 文字列ではありません。|  
@@ -1062,7 +1067,7 @@ caps.handback.revision: 44
 |0xC00470B8|-1073450824|DTS_E_EXPREVALILLEGALESCAPEINSTRINGLITERAL|文字列リテラル "%1" に、無効なエスケープ シーケンス "\\%2!c!" が含まれています。 このエスケープ シーケンスは、式エバリュエーターの文字列リテラルでサポートされていません。 文字列に円記号が必要な場合は、2 つの円記号 "\\\\" を続けて入力してください。|  
 |0xC00470B9|-1073450823|DTS_E_NOOUTPUTCOLUMNS|"%1" には出力列が含まれていません。 非同期出力には出力列が必要です。|  
 |0xC00470BA|-1073450822|DTS_E_LOBDATATYPENOTSUPPORTED|"%1" には、サポートされていない大きなサイズのオブジェクトのデータ型 (DT_TEXT、DT_NTEXT、または DT_IMAGE) があります。|  
-|0xC00470BB|-1073450821|DTS_E_OUTPUTWITHMULTIPLEERRORS|出力 ID %1!d!  が複数のエラー出力の構成に指定されました。 最初は %2!d!  と %3!d!、次は %4!d!  と %5!d! です。|  
+|0xC00470BB|-1073450821|DTS_E_OUTPUTWITHMULTIPLEERRORS|出力 ID %1!d! が複数のエラー出力の構成に指定されました。 最初は %2!d! と %3!d!、次は %4!d! と %5!d! です。|  
 |0xC00470BC|-1073450820|DTS_E_FAILEDDURINGOLEDBDATATYPECONVERSIONCHECK|OLE DB プロバイダーが、"%1" のデータ型変換の確認中に失敗しました。|  
 |0xC00470BD|-1073450819|DTS_E_BUFFERISEOR|このバッファーは行セットの末尾を表すので、その行数を変更できません。  行セット フラグの末尾を保持するバッファーで AddRow または RemoveRow が呼び出されました。|  
 |0xC00470BE|-1073450818|DTS_E_EXPREVALUNSUPPORTEDTYPE|データ型 "%1" は、式ではサポートされていません。 指定した型がサポートされていないか、無効です。|  
@@ -1079,8 +1084,8 @@ caps.handback.revision: 44
 |0xC00470CF|-1073450801|DTS_E_EXPREVALVARIABLECOMPUTEFAILED|エラー コード 0x%2!8.8X! により、変数 "%1" の値を取得できませんでした。|  
 |0xC00470D0|-1073450800|DTS_E_EXPREVALVARIABLETYPENOTSUPPORTED|変数 "%1" のデータ型は、式ではサポートされていません。|  
 |0xC00470D1|-1073450799|DTS_E_EXPREVALCASTCODEPAGEMISMATCH|式 "%1" をデータ型 "%2" からデータ型 "%3" にキャストできません。キャストされている値のコード ページ (%4!d!) が、要求された結果コード ページ (%5!d!) と一致しません。 キャスト元のコード ページは、キャスト先として要求されているコード ページと一致する必要があります。|  
-|0xC00470D2|-1073450798|DTS_E_BUFFERSIZEOUTOFRANGE|既定のバッファー サイズは、%1!d! から  %2!d!  バイトです。 DefaultBufferSize プロパティに設定しようとした値が小さすぎるか、大きすぎます。|  
-|0xC00470D3|-1073450797|DTS_E_BUFFERMAXROWSIZEOUTOFRANGE|バッファー最大行数の既定値は、%1!d!  キャッシュされました。 DefaultBufferMaxRows プロパティに設定しようとした値が小さすぎます。|  
+|0xC00470D2|-1073450798|DTS_E_BUFFERSIZEOUTOFRANGE|既定のバッファー サイズは、%1!d! から %2!d! バイトです。 DefaultBufferSize プロパティに設定しようとした値が小さすぎるか、大きすぎます。|  
+|0xC00470D3|-1073450797|DTS_E_BUFFERMAXROWSIZEOUTOFRANGE|バッファー最大行数の既定値は、%1!d! キャッシュされました。 DefaultBufferMaxRows プロパティに設定しようとした値が小さすぎます。|  
 |0xC00470D4|-1073450796|DTS_E_EXTERNALCOLUMNMETADATACODEPAGEMISMATCH|%1 のコード ページは %2!d! ですが、 %3!d! である必要があります。|  
 |0xC00470D5|-1073450795|DTS_E_THREADCOUNTOUTOFRANGE|データ フロー タスクの EngineThreads プロパティに %3!d! を 割り当てることができませんでした。 %1!d! ～ %2!d! の値を 指定する必要があります。|  
 |0xC00470D6|-1073450794|DTS_E_EXPREVALINVALIDTOKENSINGLEQUOTE|式 "%1" を解析できませんでした。 行番号 "%2"、文字番号 "%3" の単一引用符は予期されていませんでした。|  
@@ -1109,19 +1114,19 @@ caps.handback.revision: 44
 |0xC00470F1|-1073450767|DTS_E_EXPREVALINVALIDCASTLENGTH|値 %1!d! は キャストの長さのパラメーターに指定された値 %1!d! は、負の値なので無効です。 長さには正の値を指定してください。|  
 |0xC00470F2|-1073450766|DTS_E_EXPREVALINVALIDNULLCODEPAGE|値 %1!d! は NULL 関数のコード ページ パラメーターに指定された値 %1!d! が無効です。 指定されたコード ページはコンピューターにインストールされていません。|  
 |0xC00470F3|-1073450765|DTS_E_EXPREVALINVALIDNULLPRECISION|値 %1!d! は 指定された NULL 関数の有効桁数のパラメーターに指定された値 %1!d! が範囲外です。 有効桁数は %3!d! から %4!d! までの範囲で指定する %4!d! までの範囲で指定する必要があります。|  
-|0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|値 %1!d! は 指定された NULL 関数の小数点以下桁数のパラメーターに指定された値 %1!d! が範囲外です。 小数点以下桁数は %3!d! から  %4!d! までの範囲で指定する必要があります。 小数点以下桁数は、有効桁数よりも大きい値にすることも負の値にすることもできません。|  
+|0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|値 %1!d! は 指定された NULL 関数の小数点以下桁数のパラメーターに指定された値 %1!d! が範囲外です。 小数点以下桁数は %3!d! から %4!d! までの範囲で指定する必要があります。 小数点以下桁数は、有効桁数よりも大きい値にすることも負の値にすることもできません。|  
 |0xC00470F5|-1073450763|DTS_E_EXPREVALINVALIDNULLLENGTH|値 %1!d! は 指定された "NULL" 関数の長さのパラメーターに指定された値 %1!d! は、負の値なので無効です。 長さには正の値を指定してください。|  
 |0xC00470F6|-1073450762|DTS_E_NEGATIVESNOTALLOWED|%1 には負の値を代入できません。|  
 |0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|"%2" の "%1" カスタム プロパティを True に設定できません。  列のデータ型には次のいずれかを指定する必要があります: DT_I1、DT_I2、DT_I4、DT_I8、DT_UI1、DT_UI2、DT_UI4、DT_UI8、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAMPOFFSET、DT_DATE、DT_DBDATE、DT_DBTIME、DT_DBTIME2、または DT_FILETIME。|  
 |0xC00470F8|-1073450760|DTS_E_CANNOTREATTACHPATH|"%1" を再アタッチできません。 パスを削除し、新しいパスを追加してから、アタッチしてください。|  
-|0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|関数 "%1" に必要なパラメーター数は  %3!d! ではなく  %2!d! です。 関数名は認識されましたが、パラメーター数が無効です。|  
-|0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|関数 "%1" に必要なパラメーター数は  %3!d! ではなく  %2!d! です。 関数名は認識されましたが、パラメーター数が無効です。|  
-|0xC00470FB|-1073450757|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALPLURAL|関数 "%1" に必要なパラメーター数は  %3!d! ではなく  %2!d! です。 関数名は認識されましたが、パラメーター数が無効です。|  
+|0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|関数 "%1" に必要なパラメーター数は %3!d! ではなく %2!d! です。 関数名は認識されましたが、パラメーター数が無効です。|  
+|0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|関数 "%1" に必要なパラメーター数は %3!d! ではなく %2!d! です。 関数名は認識されましたが、パラメーター数が無効です。|  
+|0xC00470FB|-1073450757|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALPLURAL|関数 "%1" に必要なパラメーター数は %3!d! ではなく %2!d! です。 関数名は認識されましたが、パラメーター数が無効です。|  
 |0xC00470FC|-1073450756|DTS_E_EXPREVALFAILEDTOPARSEEXPRESSIONOUTOFMEMORY|式 "%1" を解析しようとしましたが失敗しました。メモリが不足しています。|  
 |0xC00470FD|-1073450755|DTS_E_INDIVIDUALCHECKPRODUCTLEVELFAILED|%1 は、必要な製品レベル チェックを実行できず、エラー コード 0x%2!8.8X! を返しました。|  
 |0xC00470FE|-1073450754|DTS_E_PRODUCTLEVELTOLOW|SSIS エラー コード DTS_E_PRODUCTLEVELTOLOW。  インストールされている Integration Services %2 では %1 を実行できません。 %3 以上が必要です。|  
 |0xC00470FF|-1073450753|DTS_E_EXPREVALSTRINGLITERALTOOLONG|式の文字列リテラルの長さが許容最大長の %1!d! 文字を 超えています。|  
-|0xC0047100|-1073450752|DTS_E_EXPREVALSTRINGVARIABLETOOLONG|変数 %1 に許容最大長の %2!d! 文字を超える文字列が 含まれています。|  
+|0xC0047100|-1073450752|DTS_E_EXPREVALSTRINGVARIABLETOOLONG|変数 %1 に許容最大長の %2!d! 文字を超える文字列が 超えています。|  
 |0xC0047101|-1073450751|DTS_E_COMPONENT_NOINTERFACE|%1 は検出されましたが、必要な Integration Services インターフェイス (IDTSRuntimeComponent100) をサポートしていません。  このコンポーネントの更新バージョンをコンポーネント プロバイダーから入手してください。|  
 |0xC0048000|-1073446912|DTS_E_CANNOTOPENREGISTRYKEY|レジストリ キー "%1" を開けません。|  
 |0xC0048001|-1073446911|DTS_E_INVALIDCOMPONENTFILENAME|CLSID "%1" のコンポーネントのファイル名を取得できません。 コンポーネントが正しく登録されていること、または指定された CLSID が正しいことを確認してください。|  
@@ -1242,7 +1247,7 @@ caps.handback.revision: 44
 |0xC0202003|-1071636477|DTS_E_ACQUIREDCONNECTIONUNAVAILABLE|取得した接続にアクセスできません。|  
 |0xC0202004|-1071636476|DTS_E_INCORRECTCOLUMNCOUNT|列数が正しくありません。|  
 |0xC0202005|-1071636475|DTS_E_COLUMNNOTFOUND|列 "%1" がデータ ソースに見つかりません。|  
-|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|OLE DB レコードを使用できます。  ソース: "%1" Hresult: 0x%2!8.8X!   説明: "%3"。|  
+|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|OLE DB レコードを使用できます。  ソース: "%1" Hresult: 0x%2!8.8X!  説明: "%3"。|  
 |0xC0202009|-1071636471|DTS_E_OLEDBERROR|SSIS エラー コード DTS_E_OLEDBERROR。  OLE DB エラーが発生しました。 エラー コード: 0x%1!8.8X!。|  
 |0xC020200A|-1071636470|DTS_E_ALREADYCONNECTED|コンポーネントの接続は完了しています。 コンポーネントに接続する前に、接続を切断する必要があります。|  
 |0xC020200B|-1071636469|DTS_E_INCORRECTSTOCKPROPERTYVALUE|プロパティ "%1" の値が正しくありません。|  
@@ -1296,7 +1301,7 @@ caps.handback.revision: 44
 |0xC020205A|-1071636390|DTS_E_RAWFILENAMEREQUIRED|ファイル名が正しく指定されていません。  FileName プロパティに直接指定するか、FileNameVariable プロパティに変数を指定して、RAW ファイルにパスと名前を指定してください。|  
 |0xC020205B|-1071636389|DTS_E_RAWFILECANTOPEN|ファイル "%1" を書き込み用に開けません。 権限がないか、ディスクがいっぱいのときに、エラーが発生することがあります。|  
 |0xC020205C|-1071636388|DTS_E_RAWFILECANTBUFFER|出力ファイルの I/O バッファーを作成できません。 権限がないか、ディスクがいっぱいのときに、エラーが発生することがあります。|  
-|0xC020205D|-1071636387|DTS_E_RAWCANTWRITE|ファイル "%2" に  %1!d! バイトを書き込めません。 詳細については、以前のエラー メッセージを参照してください。|  
+|0xC020205D|-1071636387|DTS_E_RAWCANTWRITE|ファイル "%2" に %1!d! バイトを書き込めません。 詳細については、以前のエラー メッセージを参照してください。|  
 |0xC020205E|-1071636386|DTS_E_RAWBADHEADER|ファイル ヘッダーに無効なメタデータが見つかりました。 ファイルが破損しているか、SSIS で生成された未加工のデータ ファイルではありません。|  
 |0xC020205F|-1071636385|DTS_E_RAWEXISTSCREATEONCE|出力ファイルが既に存在していて、WriteOption が [1 回だけ作成する] に設定されているので、エラーが発生しました。 WriteOption プロパティを [常に作成する] に設定するか、ファイルを削除してください。|  
 |0xC0202060|-1071636384|DTS_E_RAWCANTAPPENDTRUNCATE|プロパティ設定の競合により、エラーが発生しました。 AllowAppend プロパティと ForceTruncate プロパティの両方が True に設定されています。 両方のプロパティを True に設定することはできません。 2 つのプロパティのいずれかを False に設定してください。|  
@@ -1305,11 +1310,11 @@ caps.handback.revision: 44
 |0xC0202064|-1071636380|DTS_E_RAWMETADATAMISMATCH|既存のファイルには、入力からの列 "%1" と一致する列がないので、出力ファイルは追加できません。 古いファイルがメタデータと一致しません。|  
 |0xC0202065|-1071636379|DTS_E_RAWMETADATACOUNTMISMATCH|出力ファイルの列数は、追加先のファイルの列数と一致しないので、出力ファイルは追加できません。 古いファイルがメタデータと一致しません。|  
 |0xC0202067|-1071636377|DTS_E_ERRORRETRIEVINGCOLUMNCODEPAGE|列コード ページ情報を取得中にエラーが発生しました。|  
-|0xC0202068|-1071636376|DTS_E_RAWCANTREAD|ファイル "%2" から  %1!d! バイトを読み取れません。 このエラーの原因は、これ以前に報告されています。|  
-|0xC0202069|-1071636375|DTS_E_RAWUNEXPECTEDEOF|ファイル "%2" から %1!d! バイトを読み取り中に予期しないファイルの末尾が 検出されました。 ファイルに無効な書式が含まれていたため、ファイルが途中で終了しました。|  
+|0xC0202068|-1071636376|DTS_E_RAWCANTREAD|ファイル "%2" から 読み取れません。 このエラーの原因は、これ以前に報告されています。|  
+|0xC0202069|-1071636375|DTS_E_RAWUNEXPECTEDEOF|ファイル "%2" から %1!d! バイトを読み取り中に予期しないファイルの末尾が 読み取れません。 ファイルに無効な書式が含まれていたため、ファイルが途中で終了しました。|  
 |0xC020206A|-1071636374|DTS_E_RAWNOLONGTYPES|列 %1 を使用できません。 未加工アダプターでは、image、text、ntext データはサポートされていません。|  
 |0xC020206B|-1071636373|DTS_E_RAWUNEXPECTEDTYPE|アダプターにより、認識できないデータ型 %1!d! が検出されました。 入力ファイル (ソース) が破損しているか、バッファーの種類 (出力先) が無効である可能性があります。|  
-|0xC020206C|-1071636372|DTS_E_RAWSTRINGTOOLONG|文字列が長すぎます。 アダプターが読み取った文字列の長さは %1!d! バイトでしたが、 想定した文字列はオフセットが %3!d! で  %2!d! バイト未満でした。 これは、入力ファイルが破損していることを示しています。 このファイルに書き込まれている文字列の長さは、バッファー列に対して大きすぎます。|  
+|0xC020206C|-1071636372|DTS_E_RAWSTRINGTOOLONG|文字列が長すぎます。 アダプターが読み取った文字列の長さは %1!d! バイトでしたが、 想定した文字列はオフセットが %3!d! で %2!d! バイト未満でした。 これは、入力ファイルが破損していることを示しています。 このファイルに書き込まれている文字列の長さは、バッファー列に対して大きすぎます。|  
 |0xC020206E|-1071636370|DTS_E_RAWSKIPFAILED|未加工アダプターで、入力ファイルから 系列 ID %3!d! の参照されない列 "%2" の %1!d! バイトをスキップ中にエラーが発生しました。 オペレーティング システムから、これ以前にエラーが報告されています。|  
 |0xC020206F|-1071636369|DTS_E_RAWREADFAILED|未加工アダプターで、入力ファイルから 系列 ID %3!d! の列 "%2" の %1!d! バイトを読み取り中にエラーが発生しました。 オペレーティング システムから、これ以前にエラーが報告されています。|  
 |0xC0202070|-1071636368|DTS_E_RAWFILENAMEINVALID|ファイル名のプロパティが無効です。 ファイル名がデバイス名であるか、ファイル名に無効な文字が使用されています。|  
@@ -1386,7 +1391,7 @@ caps.handback.revision: 44
 |0xC02020B9|-1071636295|DTS_E_TXMERGEJOINNONSTRINGCOMPARISONFLAGSNOTZERO|比較フラグが 0 ではありません。 文字列型でない列の比較フラグは、0 にする必要があります。|  
 |0xC02020BA|-1071636294|DTS_E_TXMERGEJOINCOMPARISONFLAGSMISMATCH|SortKeyPosition 値 %1!ld! を持つ列の比較フラグが 一致しません。|  
 |0xC02020BB|-1071636293|DTS_E_TXPIVOTBADPIVOTKEYVALUENOSTRING|ピボット キーの値を認識できませんでした。|  
-|0xC02020BC|-1071636292|DTS_E_TXLINEAGEINVALIDLINEAGEITEM|系列項目の値 %1!ld! が 無効です。 有効範囲は %2!ld! から  %3!ld! までです。|  
+|0xC02020BC|-1071636292|DTS_E_TXLINEAGEINVALIDLINEAGEITEM|系列項目の値 %1!ld! が 無効です。 有効範囲は %2!ld! から %3!ld! までです。|  
 |0xC02020BD|-1071636291|DTS_E_CANNOTHAVEANYINPUTCOLUMNS|入力列は許可されていません。 入力列数を 0 にする必要があります。|  
 |0xC02020BE|-1071636290|DTS_E_TXLINEAGEDATATYPEMISMATCH|"%1" のデータ型は、指定された系列項目に対して無効です。|  
 |0xC02020BF|-1071636289|DTS_E_TXLINEAGEINVALIDLENGTH|"%1" の長さは、指定された系列項目に対して無効です。|  
@@ -1407,7 +1412,7 @@ caps.handback.revision: 44
 |0xC02020D1|-1071636271|DTS_E_FAILEDTOGETCOMPONENTLOCALEID|コンポーネントのロケール ID を取得中にエラーが発生しました。 エラー コードは 0x%1!8.8X! です。|  
 |0xC02020D2|-1071636270|DTS_E_MISMATCHCOMPONENTCONNECTIONMANAGERLOCALEID|ロケール ID が一致しません。 コンポーネントのロケール ID (%1!d!) が接続マネージャーのロケール ID (%2!d!) と一致しません。|  
 |0xC02020D3|-1071636269|DTS_E_LOCALEIDNOTSET|コンポーネントのロケール ID が設定されていません。 フラット ファイル アダプターによって、フラット ファイル接続マネージャーのロケール ID を設定する必要があります。|  
-|0xC02020D4|-1071636268|DTS_E_RAWBYTESTOOLONG|バイナリ フィールドが大きすぎます。 アダプターが読み取ろうとしたバイナリ フィールドの長さは %1!d!  バイトでしたが、想定したフィールドはオフセットが %3!d! で  %2!d! バイト未満でした。 このエラーは通常、入力ファイルが無効であるときに発生します。 このファイルに書き込まれている文字列の長さは、バッファー列に対して大きすぎます。|  
+|0xC02020D4|-1071636268|DTS_E_RAWBYTESTOOLONG|バイナリ フィールドが大きすぎます。 アダプターが読み取ろうとしたバイナリ フィールドの長さは %1!d! バイトでしたが、想定したフィールドはオフセットが %3!d! で %2!d! バイト未満でした。 このエラーは通常、入力ファイルが無効であるときに発生します。 このファイルに書き込まれている文字列の長さは、バッファー列に対して大きすぎます。|  
 |0xC02020D5|-1071636267|DTS_E_TXSAMPLINGINVALIDPCT|"%1" プロパティの比率 %2!ld! が無効です。 0 から 100 の範囲である必要があります。|  
 |0xC02020D6|-1071636266|DTS_E_TXSAMPLINGINVALIDROWS|行数 %2!ld! は、"%1" プロパティでは有効ではありません。 行数は 0 よりも大きな値にする必要があります。|  
 |0xC02020D7|-1071636265|DTS_E_RAWSTRINGINPUTTOOLONG|アダプターは、長さ %1!I64d! バイトの文字列を書き込むように要求されましたが、 すべてのデータの長さは 4,294,967,295 バイト未満である必要があります。|  
@@ -1446,7 +1451,7 @@ caps.handback.revision: 44
 |0xC0203113|-1071632109|DTS_E_CACHE_INDEXPOS_NOT_CONTINUOUS|キャッシュのインデックス位置は連続している必要があります。 インデックス以外の列では、インデックス位置を 0 にする必要があります。 インデックス列では、インデックス位置に連続する正の数値を指定する必要があります。|  
 |0xC0204000|-1071628288|DTS_E_PROPERTYNOTSUPPORTED|プロパティ "%1" は "%2" に設定できません。 設定しているプロパティは、指定したオブジェクトでサポートされていません。 プロパティの名前、大文字と小文字、綴りを確認してください。|  
 |0xC0204002|-1071628286|DTS_E_CANTCHANGEPROPERTYTYPE|プロパティの型を、コンポーネントによって設定された型から変更できません。|  
-|0xC0204003|-1071628285|DTS_E_CANTADDOUTPUTID|出力 ID %1!d!  を挿入できませんでした。 新しい出力は作成されませんでした。|  
+|0xC0204003|-1071628285|DTS_E_CANTADDOUTPUTID|出力 ID %1!d! を挿入できませんでした。 新しい出力は作成されませんでした。|  
 |0xC0204004|-1071628284|DTS_E_CANTDELETEOUTPUTID|出力 ID %1!d! を 出力のコレクションから削除できません。  この ID は無効であったか、既定の出力またはエラー出力であった可能性があります。|  
 |0xC0204006|-1071628282|DTS_E_FAILEDTOSETPROPERTY|"%2" のプロパティ "%1" を設定できませんでした。|  
 |0xC0204007|-1071628281|DTS_E_FAILEDTOSETOUTPUTCOLUMNTYPE|%1 の型を、型 "%2"、長さ %3!d!、有効桁数 %4!d!、小数点以下桁数 %5!d!、コード ページ %6!d! に設定できませんでした。|  
@@ -1572,7 +1577,7 @@ caps.handback.revision: 44
 |0xC020820A|-1071611382|DTS_E_CONNECTIONMANAGERCOLUMNCOUNTMISMATCH|フラット ファイル接続マネージャー内の列数は、フラット ファイル アダプター内の列数と一致している必要があります。 フラット ファイル接続マネージャーには %1!d! 列ありますが、フラット ファイル アダプターには %2!d! 列あります。|  
 |0xC020820B|-1071611381|DTS_E_MISMATCHCONNECTIONMANAGERCOLUMN|フラット ファイル接続マネージャーの インデックス %2!d! の列 "%1" が、フラット ファイル アダプターの 列コレクションのインデックス %3!d! にありませんでした。|  
 |0xC020820D|-1071611379|DTS_E_EXTERNALMETADATACOLUMNISALREADYMAPPED|ID %1!d! の外部メタデータ列は、 %2 に既にマップされています。|  
-|0xC020820E|-1071611378|DTS_E_TXAGG_STRING_TOO_LONG|変換で、%1!u! 文字を超えるキー列が 見つかりました。|  
+|0xC020820E|-1071611378|DTS_E_TXAGG_STRING_TOO_LONG|変換で、%1!u! 文字を超えるキー列が 超えています。|  
 |0xC020820F|-1071611377|DTS_E_DERIVEDRESULT_TOO_LONG|変換で、%1!u! バイトを超える結果値が バイトです。|  
 |0xC0208210|-1071611376|DTS_E_TXAGG_MEMALLOCERROUTPUTDESCRIPTORS|メモリを割り当てられません。|  
 |0xC0208211|-1071611375|DTS_E_TXAGG_MEMALLOCERRWORKSPACEDESCRIPTORS|メモリを割り当てられません。|  
@@ -1648,7 +1653,7 @@ caps.handback.revision: 44
 |0xC020825F|-1071611297|DTS_E_TXAGG_CDWORKSPACE_CREATEERR|CountDistinct ワークスペース バッファーを作成できません。|  
 |0xC0208260|-1071611296|DTS_E_TXAGG_CDCOLLASSEARRAY_MALLOCERR|CountDistinct 折りたたみ配列にメモリを割り当てられません。|  
 |0xC0208261|-1071611295|DTS_E_TXAGG_CDCHAINHEAP_MALLOCERR|CountDistinct チェーンにメモリを割り当てられません。|  
-|0xC0208262|-1071611294|DTS_E_TXCOPYMAP_MISMATCHED_COLUMN_METADATA|系列 ID %1!d! の列と系列 ID  %2!d!  の列のメタデータが一致していません。 copymap の出力列にマップされた入力列に、同じメタデータ (データ型、有効桁数、小数点以下桁数、長さ、またはコード ページ) がありません。|  
+|0xC0208262|-1071611294|DTS_E_TXCOPYMAP_MISMATCHED_COLUMN_METADATA|系列 ID %1!d! の列と系列 ID %2!d! の列のメタデータが一致していません。 copymap の出力列にマップされた入力列に、同じメタデータ (データ型、有効桁数、小数点以下桁数、長さ、またはコード ページ) がありません。|  
 |0xC0208263|-1071611293|DTS_E_TXCOPYMAP_INCORRECT_OUTPUT_COLUMN_MAPPING|系列 ID "%1!d!" の出力列は 入力列に正しくマップされません。 出力列の CopyColumnId プロパティが正しくありません。|  
 |0xC0208265|-1071611291|DTS_E_CANTGETBLOBDATA|列 "%1" の長い形式のデータを取得できませんでした。|  
 |0xC0208266|-1071611290|DTS_E_CANTADDBLOBDATA|列の長い形式のデータを取得しましたが、データ フロー タスク バッファーに追加できません。|  
@@ -1805,7 +1810,7 @@ caps.handback.revision: 44
 |0xC0208389|-1071610999|DTS_E_DATAREADERDESTCANNOTCONVERT|%1 をデータ型 "%2" からデータ型 "%3" に変換できません。|  
 |0xC020838A|-1071610998|DTS_E_DATAREADERDESTINVALIDCODEPAGE|%1 には、サポートされていないコード ページ %2!d! があります。|  
 |0xC020838B|-1071610997|DTS_E_XMLSRCEXTERNALMETADATACOLUMNNOTINSCHEMA|%1 には、XML スキーマへのマッピングがありません。|  
-|0xC020838D|-1071610995|DTS_E_TXTERMLOOKUP_MISMATCHED_COLUMN_METADATA|系列 ID %1!d! の列と系列 ID  %2!d!  の列のメタデータが一致していません。 出力列にマップされた入力列に、同じメタデータ (データ型、有効桁数、小数点以下桁数、長さ、またはコード ページ) がありません。|  
+|0xC020838D|-1071610995|DTS_E_TXTERMLOOKUP_MISMATCHED_COLUMN_METADATA|系列 ID %1!d! の列と系列 ID %2!d! の列のメタデータが一致していません。 出力列にマップされた入力列に、同じメタデータ (データ型、有効桁数、小数点以下桁数、長さ、またはコード ページ) がありません。|  
 |0xC020838E|-1071610994|DTS_E_DATAREADERDESTREADERTIMEOUT|SSIS IDataReader は閉じています。 読み取りのタイムアウトの期限が切れています。|  
 |0xC020838F|-1071610993|DTS_E_ADOSRCINVALIDSQLCOMMAND|指定された SQL コマンドの実行中にエラーが発生しました: "%1"。 %2|  
 |0xC0208390|-1071610992|DTS_E_JOINTYPEDOESNTMATCHETI|入力列 '%1' に指定された JoinType プロパティは、一致インデックスが最初に作成されたときに、入力列に対応する参照テーブル列に指定された JoinType プロパティと異なります。  指定された JoinType で一致インデックスを再構築するか、または一致インデックスが作成されたときに使用される型と一致するように JoinType を変更してください。|  
@@ -2012,12 +2017,12 @@ caps.handback.revision: 44
 |0xC0209319|-1071607015|DTS_E_TXLOOKUP_UNUSEDINPUTCOLUMN|%1 は、結合またはコピーで使用されていません。 入力列の一覧から未使用の列を削除してください。|  
 |0xC020931A|-1071607014|DTS_E_SORTSTACKOVERFLOW|入力バッファーの並べ替え中に、スタック オーバーフローによって並べ替えが失敗しました。  データ フロー タスクの DefaultBufferMaxRows プロパティを小さくしてください。|  
 |0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|接続文字列の PROVIDER を %1 に変更することを検討するか、http://www.microsoft.com/downloads にアクセスして %2 のサポートを探しインストールしてください。|  
-|||DTS_E_INITTASKOBJECTFAILED|タスク オブジェクトを初期化できませんでした。タスク "%1!s!"、型 "%2!s!"。 エラー: 0x%3!8.8X! "  %4!s!"。|  
+|||DTS_E_INITTASKOBJECTFAILED|タスク オブジェクトを初期化できませんでした。タスク "%1!s!"、型 "%2!s!"。 エラー: 0x%3!8.8X! " %4!s!"。|  
 |||DTS_E_GETRTINTERFACEFAILED|COM コンポーネント カテゴリ マネージャーを作成できませんでした。エラー: 0x%1!8.8X! "%2!s!"。|  
 |||DTS_E_COMPONENTINITFAILED|エラー 0x%2!8.8X! " %3!s!" によって コンポーネント %1!s! の初期化に失敗しました 。|  
   
 ##  <a name="msgWarning"></a> 警告メッセージ  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の警告メッセージのシンボル名は、**DTS_W_** で始まります。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の警告メッセージのシンボル名は、 **DTS_W_**で始まります。  
   
 |16 進コード|10 進コード|シンボル名|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2117,7 +2122,7 @@ caps.handback.revision: 44
 |0x800470C9|-2147192631|DTS_W_EXTERNALMETADATACOLUMNCOLLECTIONNEEDSADDITION|外部列に列 "%1" を追加する必要があります。|  
 |0x800470CA|-2147192630|DTS_W_EXTERNALMETADATACOLUMNCOLLECTIONNEEDSUPDATE|外部列 "%1" を更新する必要があります。|  
 |0x800470CB|-2147192629|DTS_W_EXTERNALMETADATACOLUMNCOLLECTIONNEEDSREMOVAL|外部列から %1 を削除する必要があります。|  
-|0x800470D8|-2147192616|DTS_W_EXPREVALPOTENTIALSTRINGTRUNCATION|式 "%1" の結果文字列は、最大文字数の %2!d! 文字を超えた場合に切り捨てられることが あります。 この式では、結果値が DT_WSTR 型の最大サイズを超える可能性があります。|  
+|0x800470D8|-2147192616|DTS_W_EXPREVALPOTENTIALSTRINGTRUNCATION|式 "%1" の結果文字列は、最大文字数の %2!d! 文字を超えた場合に切り捨てられることが 超えています。 この式では、結果値が DT_WSTR 型の最大サイズを超える可能性があります。|  
 |0x800470E9|-2147192599|DTS_W_COMPONENTLEAKPROCESSINPUT|%2 の入力 %1!d! に対する ProcessInput メソッドへの呼び出しで、 メソッドに渡されたバッファーへの参照が予期せず保持されました。 呼び出し前のそのバッファーの参照カウントは %3!d! で、 呼び出しが返された後に %4!d! に なりました。|  
 |0x800470EB|-2147192597|DTS_W_EXPREVALUNREFERENCEDINPUTCOLUMN|"%2" の "%1" の使用法の種類は READONLY ですが、式によって参照されていません。 使用できる入力列の一覧からその列を削除するか、式でその列を参照してください。|  
 |0x8004801E|-2147188706|DTS_W_COULDNOTFINDCURRENTVERSION|コンポーネント %2 の "%1" 値が見つかりません。 コンポーネントの CurrentVersion 値が見つかりません。 このエラーは、DTSInfo セクションに CurrentVersion 値を含むようにコンポーネントのレジストリ情報が設定されていない場合に発生します。 このメッセージは、コンポーネントが正しく登録されていない状態で、コンポーネントを開発していたり、コンポーネントをパッケージで使用しているときに表示されます。|  
@@ -2163,7 +2168,7 @@ caps.handback.revision: 44
 |0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|テーブル "%1" は変更されています。 このテーブルに新しい列が追加されている可能性があります。|  
   
 ##  <a name="msgInfo"></a> 情報メッセージ  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の情報メッセージのシンボル名は、**DTS_I_** で始まります。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の情報メッセージのシンボル名は、 **DTS_I_**で始まります。  
   
 |16 進コード|10 進コード|シンボル名|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2251,18 +2256,18 @@ caps.handback.revision: 44
 |0x402090DE|1075876062|DTS_I_TOTALDATAROWSPROCESSEDFORFILE|ファイル "%1" に対して処理されたデータ行の合計数は %2!I64d! です。|  
 |0x402090DF|1075876063|DTS_I_FINALCOMMITSTARTED|"%1" にデータを挿入するための最後のコミットを開始しました。|  
 |0x402090E0|1075876064|DTS_I_FINALCOMMITENDED|"%1" にデータを挿入するための最後のコミットが終了しました。|  
-|0x402090E1|1075876065|DTS_I_BEGINHASHINGCACHE|%1!u!  行がキャッシュに追加されます。 システムはその行を処理しています。|  
+|0x402090E1|1075876065|DTS_I_BEGINHASHINGCACHE|%1!u! 行がキャッシュに追加されます。 システムはその行を処理しています。|  
 |0x402090E2|1075876066|DTS_I_SUCCEEDEDHASHINGCACHE|%1 により、キャッシュ内で %2!u! 行を 処理しました。 処理時間は %3 秒でした。 キャッシュは %4!I64u! バイトのメモリを 使用しました。|  
 |0x402090E3|1075876067|DTS_I_FAILEDHASHINGCACHE|%1 により、キャッシュ内の行を処理できませんでした。  処理時間は %2 秒でした。|  
 |0x402090E4|1075876068|DTS_I_SUCCEEDEDPREPARINGCACHE|%1 により、キャッシュの準備に成功しました。 準備時間は %2 秒でした。|  
-|0x40209314|1075876628|DTS_I_TXLOOKUP_PARTIALPERF|%1 は次の操作を実行しました: %2!I64u! 行の処理、 参照データベースへの %3!I64u!  データベース コマンドの発行、部分的なキャッシュを使用した %4!I64u!  参照。|  
-|0x40209315|1075876629|DTS_I_TXLOOKUP_PARTIALPERF2|%1 は次の操作を実行しました: %2!I64u! 行の処理、 参照データベースへの %3!I64u!  データベース コマンドの発行、 部分的なキャッシュを使用した %4!I64u! 参照、 および初期の参照に一致するエントリがない行のキャッシュを使用した %5!I64u! 参照。|  
+|0x40209314|1075876628|DTS_I_TXLOOKUP_PARTIALPERF|%1 は次の操作を実行しました: %2!I64u! 行の処理、 参照データベースへの %3!I64u! データベース コマンドの発行、部分的なキャッシュを使用した %4!I64u! 参照。|  
+|0x40209315|1075876629|DTS_I_TXLOOKUP_PARTIALPERF2|%1 は次の操作を実行しました: %2!I64u! 行の処理、 参照データベースへの %3!I64u! データベース コマンドの発行、 部分的なキャッシュを使用した %4!I64u! 参照、 および初期の参照に一致するエントリがない行のキャッシュを使用した %5!I64u! 参照。|  
 |0x40209316|1075876630|DTS_I_CACHEFILEWRITESTARTED|%1 により、ファイル "%2" にキャッシュを書き込んでいます。|  
 |0x40209317|1075876631|DTS_I_CACHEFILEWRITESUCCEEDED|%1 により、ファイル "%2" にキャッシュを書き込みました。|  
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|OLE DB 変換先 "%1" の挿入コミット サイズの最大値プロパティは 0 に設定されています。 このプロパティの設定により、実行中のパッケージは応答を停止する可能性があります。 詳細については、[OLE DB 変換先エディター] ([接続マネージャー] ページ) の F1 ヘルプ トピックを参照してください。|  
   
 ##  <a name="msgGeneral"></a> 一般的なメッセージおよびイベント メッセージ  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、**DTS_MSG_** で始まります。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、 **DTS_MSG_**で始まります。  
   
 |16 進コード|10 進コード|シンボル名|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2301,7 +2306,7 @@ caps.handback.revision: 44
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|イベント名: %1<br /><br /> メッセージ: %9<br /><br /> 演算子: %2<br /><br /> ソース名: %3<br /><br /> ソース ID: %4<br /><br /> 実行 ID: %5<br /><br /> 開始時刻: %6<br /><br /> 終了時刻: %7<br /><br /> データ コード: %8|  
   
 ##  <a name="msgSuccess"></a> 成功時のメッセージ  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の成功時のメッセージのシンボル名は、**DTS_S_** で始まります。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の成功時のメッセージのシンボル名は、 **DTS_S_**で始まります。  
   
 |16 進コード|10 進コード|シンボル名|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2310,14 +2315,14 @@ caps.handback.revision: 44
 |0x200001|2097153|DTS_S_EXPREVALTRUNCATIONOCCURRED|式の評価中に切り捨てが発生しました。 評価中に切り捨てが発生しました。たとえば、中間手順のある時点で発生した可能性があります。|  
   
 ##  <a name="msgPipeline"></a> データ フロー コンポーネントのエラー メッセージ  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、**DTSBC_E_** で始まります。"BC" は、ほとんどの Microsoft データ フロー コンポーネントが派生しているネイティブ基本クラスであることを示します。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、 **DTSBC_E_**で始まります。"BC" は、ほとんどの Microsoft データ フロー コンポーネントが派生しているネイティブ基本クラスであることを示します。  
   
 |16 進コード|10 進コード|シンボル名|Description|  
 |----------------------|------------------|-------------------|-----------------|  
 |0xC8000002|-939524094|DTSBC_E_INCORRECTEXACTNUMBEROFTOTALOUTPUTS|出力とエラー出力の合計件数 %1!lu! が正しくありません。 正しくは、%2!lu! 件である必要があります。|  
 |0xC8000003|-939524093|DTSBC_E_FAILEDTOGETOUTPUTBYINDEX|インデックス %1!lu! で出力を取得できません。|  
 |0xC8000005|-939524091|DTSBC_E_INCORRECTEXACTNUMBEROFERROROUTPUTS|エラー出力の件数 %1!lu! が正しくありません。 正しくは、%2!lu! 件である必要があります。|  
-|0xC8000006|-939524090|DTSBC_E_INVALIDVALIDATIONSTATUSVALUE|検証状態値 "%1!lu!" が正しくありません 。  値は DTSValidationStatus 列挙に見つかったいずれかの値である必要があります。|  
+|0xC8000006|-939524090|DTSBC_E_INVALIDVALIDATIONSTATUSVALUE|検証状態値 "%1!lu!" が正しくありません " でサポートされていないデータ型です。  値は DTSValidationStatus 列挙に見つかったいずれかの値である必要があります。|  
 |0xC8000007|-939524089|DTSBC_E_INPUTHASNOOUTPUT|入力 "%1!lu!" には、 同期出力はありません。|  
 |0xC8000008|-939524088|DTSBC_E_INPUTHASNOERROROUTPUT|入力 "%1!lu!" には、 同期エラー出力はありません。|  
 |0xC8000009|-939524087|DTSBC_E_INVALIDHTPIVALUE|HowToProcessInput 値 %1!lu! が無効です。 この値は、HowToProcessInput 列挙のいずれかの値である必要があります。|  
@@ -2336,3 +2341,4 @@ caps.handback.revision: 44
 |0xC8000018|-939524072|DTSBC_E_CANTINSERTEXTERNALMETADATACOLUMN|%1 では外部メタデータ列を挿入できません。|  
   
   
+

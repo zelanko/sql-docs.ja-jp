@@ -1,35 +1,40 @@
 ---
-title: "Integration Services のデータ型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "データ型の変更"
-  - "データ型 [Integration Services], 一覧"
-  - "データ型 [Integration Services]"
-  - "列のデータ型 [Integration Services]"
-  - "SSIS、データ型"
-  - "Integration Services、データ型"
-  - "SQL Server Integration Services、データ型"
+title: "Integration Services のデータの種類 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying data types
+- data types [Integration Services], listed
+- data types [Integration Services]
+- column data types [Integration Services]
+- SSIS, data types
+- Integration Services, data types
+- SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 caps.latest.revision: 98
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 98
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 272d0442798d1968a50c124e8422011c2f174718
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/26/2017
+
 ---
-# Integration Services のデータ型
+# <a name="integration-services-data-types"></a>Integration Services のデータ型
   データがパッケージ内のデータ フローに入ると、データを抽出する変換元は、そのデータを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換します。 数値データは数値データ型、文字列データは文字列データ型、および日付データは日付データ型に割り当てられます。 GUID やバイナリ ラージ オブジェクト (BLOB) などの他のデータも、同様に適切な [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に割り当てられます。 データのデータ型が [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換できない場合は、エラーが発生します。  
   
- 一部のデータ フロー コンポーネントでは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型と [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] のマネージ データ型の間でデータ型を変換します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型とマネージ データ型とのマッピングの詳細については、「[データ フロー内のデータ型の処理](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)」を参照してください。  
+ 一部のデータ フロー コンポーネントでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型と [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]のマネージ データ型の間でデータ型を変換します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型とマネージ データ型とのマッピングの詳細については、「 [データ フロー内のデータ型の処理](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)」を参照してください。  
   
- 次の表に、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型を一覧で示します。 表内の一部のデータ型には、これらのデータ型に適用される有効桁数と小数点以下桁数の情報が含まれています。 有効桁数と小数点以下桁数の詳細については、「[有効桁数、小数点以下桁数、および長さ &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」を参照してください。  
+ 次の表に、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型を一覧で示します。 表内の一部のデータ型には、これらのデータ型に適用される有効桁数と小数点以下桁数の情報が含まれています。 有効桁数と小数点以下桁数の詳細については、「[有効桁数、小数点以下桁数、および長さ &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」を参照してください。  
   
 |データ型|Description|  
 |---------------|-----------------|  
@@ -59,11 +64,11 @@ caps.handback.revision: 98
 |DT_UI4|4 バイトの符号なし整数です。|  
 |DT_UI8|8 バイトの符号なし整数です。|  
 |DT_WSTR|NULL で終わる Unicode 文字の文字列で、最大長は 4,000 文字です。 列の値に追加の NULL ターミネータが含まれている場合、その文字列は最初に NULL が出現した箇所で切り捨てられます。|  
-|DT_IMAGE|最大サイズが 2^31-1 (2,147,483,647) バイトのバイナリ値です。 」を参照してください。|  
+|DT_IMAGE|最大サイズが 2^31-1 (2,147,483,647) バイトのバイナリ値です。 のマネージ データ型の間でデータ型を変換します。|  
 |DT_NTEXT|最大長が 2^30 - 1 (1,073,741,823) 文字の Unicode 文字列です。|  
 |DT_TEXT|最大長が 2^31-1 (2,147,483,647) 文字の [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS 文字列です。|  
   
-## データ型の変換  
+## <a name="conversion-of-data-types"></a>データ型の変換  
  列のデータが、変換元のデータ型で割り当てられている長さや桁数をいっぱいまで使用する必要がない場合は、その列のデータ型を変更できます。 各データ行をできるだけ小さくすることにより、データ転送時のパフォーマンスを最適化できます。行が小さくなるほど、変換元から変換先へのデータ移動が高速になるためです。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、数値データ型のセットすべてが含まれているので、データのサイズに最も近いデータ型を選択できます。 たとえば、DT_UI8 データ型の列の値が常に 0 から 3,000 までの整数の場合、このデータ型は DT_UI2 に変更できます。 同様に、DT_CY データ型の列が、整数データ型を使用するパッケージのデータ要件を満たしている場合は、データ型を DT_I4 に変更できます。  
@@ -78,7 +83,7 @@ caps.handback.revision: 98
   
 -   派生列変換を使用して、元の列とは異なるデータ型を持つ列のコピーを作成します。 詳細については、「 [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md)」を参照してください。  
   
-### 文字列と日付/時刻データ型間の変換  
+### <a name="converting-between-strings-and-datetime-data-types"></a>文字列と日付/時刻データ型間の変換  
  次の表に、日付/時刻データ型と文字列の間でキャストまたは変換を行った結果の一覧を示します。  
   
 -   キャスト演算子またはデータ変換の変換を使用した場合、日付または時刻のデータ型は対応する文字列形式に変換されます。 たとえば、DT_DBTIME データ型は "hh:mm:ss" 形式の文字列に変換されます。  
@@ -101,23 +106,23 @@ caps.handback.revision: 98
   
  DT_DBTIMESTAMPOFFSET の日付形式にはタイム ゾーン要素も含まれます。 時間要素とタイム ゾーン要素の間にはスペースがあります。  
   
-### 日付/時刻データ型の変換  
+### <a name="converting-datetime-data-types"></a>日付/時刻データ型の変換  
  日付または時刻のデータを含む列のデータ型を変更し、データの一部である日付または時刻を抽出できます。 次の表に、日付/時刻データ型を別の日付/時刻データ型に変換した結果を示します。  
   
-#### DT_FILETIME からの変換  
+#### <a name="converting-from-dtfiletime"></a>DT_FILETIME からの変換  
   
 |DT_FILETIME の変換|結果|  
 |-----------------------------|------------|  
 |DT_FILETIME|変更なし。|  
 |DT_DATE|データ型を変換します。|  
 |DT_DBDATE|時刻値を削除します。|  
-|DT_DBTIME|日付値を削除します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIME データ型に含めることのできる小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
-|DT_DBTIME2|DT_FILETIME データ型で表される日付値を削除します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIME2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIME|日付値を削除します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIME データ型に含めることのできる小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIME2|DT_FILETIME データ型で表される日付値を削除します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIME2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DBTIMESTAMP|データ型を変換します。|  
-|DT_DBTIMESTAMP2|秒の小数点以下桁数が、DT_DBTIMESTAMP2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
-|DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型のタイム ゾーン フィールドをゼロに設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMPOFFSET データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIMESTAMP2|秒の小数点以下桁数が、DT_DBTIMESTAMP2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型のタイム ゾーン フィールドをゼロに設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMPOFFSET データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
   
-#### DT_DATE からの変換  
+#### <a name="converting-from-dtdate"></a>DT_DATE からの変換  
   
 |DT_DATE の変換|結果|  
 |-------------------------|------------|  
@@ -130,7 +135,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|データ型を変換します。|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型のタイム ゾーン フィールドをゼロに設定します。|  
   
-#### DT_DBDATE からの変換  
+#### <a name="converting-from-dtdbdate"></a>DT_DBDATE からの変換  
   
 |DT_DBDATE の変換|結果|  
 |---------------------------|------------|  
@@ -143,7 +148,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|DT_DBTIMESTAMP データ型の時刻フィールドをゼロに設定します。|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型の時刻フィールドとタイム ゾーン フィールドをゼロに設定します。|  
   
-#### DT_DBTIME からの変換  
+#### <a name="converting-from-dtdbtime"></a>DT_DBTIME からの変換  
   
 |DT_DBTIME の変換|結果|  
 |---------------------------|------------|  
@@ -156,60 +161,60 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|DT_DBTIMESTAMP2 データ型の日付フィールドを現在の日付に設定します。|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型の日付フィールドとタイム ゾーン フィールドをそれぞれ現在の日付とゼロに設定します。|  
   
-#### DT_DBTIME2 からの変換  
+#### <a name="converting-from-dtdbtime2"></a>DT_DBTIME2 からの変換  
   
 |DT_DBTIME2 の変換|結果|  
 |----------------------------|------------|  
-|DT_FILETIME|DT_FILETIME データ型の日付フィールドを現在の日付に設定します。<br /><br /> 秒の小数点以下桁数が、DT_FILETIME データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
-|DT_DATE|DT_DATE データ型の日付フィールドを現在の日付に設定します。<br /><br /> 秒の小数点以下桁数が、DT_DATE データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_FILETIME|DT_FILETIME データ型の日付フィールドを現在の日付に設定します。<br /><br /> 秒の小数点以下桁数が、DT_FILETIME データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DATE|DT_DATE データ型の日付フィールドを現在の日付に設定します。<br /><br /> 秒の小数点以下桁数が、DT_DATE データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DBDATE|DT_DBDATE データ型の日付フィールドを現在の日付に設定します。|  
-|DT_DBTIME|秒の小数点以下桁数が、DT_DBTIME データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
-|DT_DBTIME2|秒の小数点以下桁数が、変換先の DT_DBTIME2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
-|DT_DBTIMESTAMP|DT_DBTIMESTAMP データ型の日付フィールドを現在の日付に設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMP データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
-|DT_DBTIMESTAMP2|DT_DBTIMESTAMP2 データ型の日付フィールドを現在の日付に設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMP2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
-|DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型の日付フィールドとタイム ゾーン フィールドをそれぞれ現在の日付とゼロに設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMPOFFSET データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIME|秒の小数点以下桁数が、DT_DBTIME データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIME2|秒の小数点以下桁数が、変換先の DT_DBTIME2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIMESTAMP|DT_DBTIMESTAMP データ型の日付フィールドを現在の日付に設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMP データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIMESTAMP2|DT_DBTIMESTAMP2 データ型の日付フィールドを現在の日付に設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMP2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型の日付フィールドとタイム ゾーン フィールドをそれぞれ現在の日付とゼロに設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMPOFFSET データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
   
-#### DT_DBTIMESTAMP からの変換  
+#### <a name="converting-from-dtdbtimestamp"></a>DT_DBTIMESTAMP からの変換  
   
 |DT_DBTIMESTAMP の変換|結果|  
 |--------------------------------|------------|  
 |DT_FILETIME|データ型を変換します。|  
-|DT_DATE|DT_DBTIMESTAMP データ型によって表される値が DT_DATE データ型の範囲からオーバーフローする場合は、DB_E_DATAOVERFLOW エラーを返します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DATE|DT_DBTIMESTAMP データ型によって表される値が DT_DATE データ型の範囲からオーバーフローする場合は、DB_E_DATAOVERFLOW エラーを返します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DBDATE|DT_DBTIMESTAMP データ型で表される時刻値を削除します。|  
-|DT_DBTIME|DT_DBTIMESTAMP データ型で表される日付値を削除します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIME データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
-|DT_DBTIME2|DT_DBTIMESTAMP データ型で表される日付値を削除します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIME2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIME|DT_DBTIMESTAMP データ型で表される日付値を削除します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIME データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIME2|DT_DBTIMESTAMP データ型で表される日付値を削除します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIME2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DBTIMESTAMP|変更なし。|  
-|DT_DBTIMESTAMP2|秒の小数点以下桁数が、DT_DBTIMESTAMP2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
-|DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型のタイム ゾーン フィールドをゼロに設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMPOFFSET データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIMESTAMP2|秒の小数点以下桁数が、DT_DBTIMESTAMP2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型のタイム ゾーン フィールドをゼロに設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMPOFFSET データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
   
-#### DT_DBTIMESTAMP2 からの変換  
+#### <a name="converting-from-dtdbtimestamp2"></a>DT_DBTIMESTAMP2 からの変換  
   
 |DT_DBTIMESTAMP2 の変換|結果|  
 |---------------------------------|------------|  
-|DT_FILETIME|秒の小数点以下桁数が、DT_FILETIME データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
-|DT_DATE|DT_DBTIMESTAMP2 データ型によって表される値が DT_DATE データ型の範囲からオーバーフローする場合は、DB_E_DATAOVERFLOW エラーが返されます。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。<br /><br /> 秒の小数点以下桁数が、DT_DATE データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_FILETIME|秒の小数点以下桁数が、DT_FILETIME データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DATE|DT_DBTIMESTAMP2 データ型によって表される値が DT_DATE データ型の範囲からオーバーフローする場合は、DB_E_DATAOVERFLOW エラーが返されます。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。<br /><br /> 秒の小数点以下桁数が、DT_DATE データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DBDATE|DT_DBTIMESTAMP2 データ型で表される時刻値を削除します。|  
-|DT_DBTIME|DT_DBTIMESTAMP2 データ型で表される日付値を削除します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIME データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
-|DT_DBTIME2|DT_DBTIMESTAMP2 データ型で表される日付値を削除します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIME2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
-|DT_DBTIMESTAMP|DT_DBTIMESTAMP2 データ型によって表される値が DT_DBTIMESTAMP データ型の範囲からオーバーフローする場合は、DB_E_DATAOVERFLOW エラーを返します。<br /><br /> DT_DBTIMESTAMP2 は、西暦 1 年 1 月 1 日～ 9999 年 12 月 31 日の範囲の SQL Server データ型、 datetime2 にマップされます。 DT_DBTIMESTAMP は、1753 年 1 月 1 日～ 9999 年 12 月 31 日のより小さな範囲の SQL Server データ型、datetime にマップされます。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMP データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。<br /><br /> エラーの詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
-|DT_DBTIMESTAMP2|秒の小数点以下桁数が、変換先の DT_DBTIMESTAMP2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
-|DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型のタイム ゾーン フィールドをゼロに設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMPOFFSET データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIME|DT_DBTIMESTAMP2 データ型で表される日付値を削除します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIME データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIME2|DT_DBTIMESTAMP2 データ型で表される日付値を削除します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIME2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIMESTAMP|DT_DBTIMESTAMP2 データ型によって表される値が DT_DBTIMESTAMP データ型の範囲からオーバーフローする場合は、DB_E_DATAOVERFLOW エラーを返します。<br /><br /> DT_DBTIMESTAMP2 は、西暦 1 年 1 月 1 日～ 9999 年 12 月 31 日の範囲の SQL Server データ型、 datetime2 にマップされます。 DT_DBTIMESTAMP は、1753 年 1 月 1 日～ 9999 年 12 月 31 日のより小さな範囲の SQL Server データ型、datetime にマップされます。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMP データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。<br /><br /> エラーの詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIMESTAMP2|秒の小数点以下桁数が、変換先の DT_DBTIMESTAMP2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型のタイム ゾーン フィールドをゼロに設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMPOFFSET データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
   
-#### DT_DBTIMESTAMPOFFSET からの変換  
+#### <a name="converting-from-dtdbtimestampoffset"></a>DT_DBTIMESTAMPOFFSET からの変換  
   
 |DT_DBTIMESTAMPOFFSET の変換|結果|  
 |--------------------------------------|------------|  
-|DT_FILETIME|DT_DBTIMESTAMPOFFSET データ型で表される時刻値を協定世界時 (UTC) に変更します。<br /><br /> 秒の小数点以下桁数が、DT_FILETIME データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
-|DT_DATE|DT_DBTIMESTAMPOFFSET データ型で表される時刻値を UTC に変更します。<br /><br /> DT_DBTIMESTAMPOFFSET データ型によって表される値が DT_DATE データ型の範囲からオーバーフローする場合は、DB_E_DATAOVERFLOW エラーを返します。<br /><br /> 秒の小数点以下桁数が、DT_DATE データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。<br /><br /> 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_FILETIME|DT_DBTIMESTAMPOFFSET データ型で表される時刻値を協定世界時 (UTC) に変更します。<br /><br /> 秒の小数点以下桁数が、DT_FILETIME データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DATE|DT_DBTIMESTAMPOFFSET データ型で表される時刻値を UTC に変更します。<br /><br /> DT_DBTIMESTAMPOFFSET データ型によって表される値が DT_DATE データ型の範囲からオーバーフローする場合は、DB_E_DATAOVERFLOW エラーを返します。<br /><br /> 秒の小数点以下桁数が、DT_DATE データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。<br /><br /> 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DBDATE|DT_DBTIMESTAMPOFFSET データ型で表される時刻値を、日付値に影響を及ぼす可能性のある UTC に変更します。 時刻値が次に削除されます。|  
-|DT_DBTIME|DT_DBTIMESTAMPOFFSET データ型で表される時刻値を UTC に変更します。<br /><br /> DT_DBTIMESTAMPOFFSET データ型で表されるデータ値を削除します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIME データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
-|DT_DBTIME2|DT_DBTIMESTAMPOFFSET データ型で表される時刻値を UTC に変更します。<br /><br /> DT_DBTIMESTAMPOFFSET データ型で表される日付値を削除します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIME2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
-|DT_DBTIMESTAMP|DT_DBTIMESTAMPOFFSET データ型で表される時刻値を UTC に変更します。<br /><br /> DT_DBTIMESTAMPOFFSET データ型によって表される値が DT_DBTIMESTAMP データ型の範囲からオーバーフローする場合は、DB_E_DATAOVERFLOW エラーが返されます。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMP データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。<br /><br /> 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
-|DT_DBTIMESTAMP2|DT_DBTIMESTAMPOFFSET データ型で表される時刻値を UTC に変更します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMP2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
-|DT_DBTIMESTAMPOFFSET|秒の小数点以下桁数が、変換先の DT_DBTIMESTAMPOFFSET データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIME|DT_DBTIMESTAMPOFFSET データ型で表される時刻値を UTC に変更します。<br /><br /> DT_DBTIMESTAMPOFFSET データ型で表されるデータ値を削除します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIME データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIME2|DT_DBTIMESTAMPOFFSET データ型で表される時刻値を UTC に変更します。<br /><br /> DT_DBTIMESTAMPOFFSET データ型で表される日付値を削除します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIME2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIMESTAMP|DT_DBTIMESTAMPOFFSET データ型で表される時刻値を UTC に変更します。<br /><br /> DT_DBTIMESTAMPOFFSET データ型によって表される値が DT_DBTIMESTAMP データ型の範囲からオーバーフローする場合は、DB_E_DATAOVERFLOW エラーが返されます。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMP データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。<br /><br /> 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIMESTAMP2|DT_DBTIMESTAMPOFFSET データ型で表される時刻値を UTC に変更します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMP2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
+|DT_DBTIMESTAMPOFFSET|秒の小数点以下桁数が、変換先の DT_DBTIMESTAMPOFFSET データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
   
-## Integration Services のデータ型とデータベースのデータ型とのマッピング  
- 次の表に、特定のデータベースによって使用されるデータ型を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型にマッピングする際のガイダンスを示します。 これらのマッピングは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードでソースからデータをインポートする際に使用されるマッピング ファイルから集約されます。 これらのマッピング ファイルの詳細については、「[SQL Server インポートおよびエクスポート ウィザード](../Topic/SQL%20Server%20Import%20and%20Export%20Wizard.md)」を参照してください。  
+## <a name="mapping-of-integration-services-data-types-to-database-data-types"></a>Integration Services のデータ型とデータベースのデータ型とのマッピング  
+ 次の表に、特定のデータベースによって使用されるデータ型を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型にマッピングする際のガイダンスを示します。 これらのマッピングは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードでソースからデータをインポートする際に使用されるマッピング ファイルから集約されます。 これらのマッピング ファイルの詳細については、「 [SQL Server インポートおよびエクスポート ウィザード](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  これらのマッピングは厳密な対応関係を表しているわけではなく、ガイダンスの提供のみを目的としています。 場合によっては、この表に示されているデータ型とは異なるデータ型を使用する必要があります。  
@@ -219,7 +224,7 @@ caps.handback.revision: 98
   
 |データ型|SQL Server<br /><br /> (SQLOLEDB、SQLNCLI10)|SQL Server (SqlClient)|Jet|Oracle<br /><br /> (OracleClient)|DB2<br /><br /> (DB2OLEDB)|DB2<br /><br /> (IBMDADB2)|  
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
-|DT_BOOL|bit|bit|Bit||||  
+|DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary、varbinary、timestamp|binary、varbinary、timestamp|BigBinary、VarBinary|RAW|||  
 |DT_CY|smallmoney、money|smallmoney、money|Currency||||  
 |DT_DATE|||||||  
@@ -233,13 +238,13 @@ caps.handback.revision: 98
 |DT_FILETIME|||||||  
 |DT_GUID|uniqueidentifier|uniqueidentifier|GUID||||  
 |DT_I1|||||||  
-|DT_I2|smallint|smallint|Short||SMALLINT|SMALLINT|  
+|DT_I2|smallint|smallint|Short||smallint|smallint|  
 |DT_I4|int|int|Long||INTEGER|INTEGER|  
-|DT_I8|bigint|bigint|||BIGINT|BIGINT|  
-|DT_NUMERIC|decimal、numeric|decimal、numeric|Decimal|NUMBER、INT|DECIMAL、NUMERIC|DECIMAL、NUMERIC|  
-|DT_R4|real|real|単一||REAL|REAL|  
+|DT_I8|bigint|bigint|||bigint|bigint|  
+|DT_NUMERIC|decimal、numeric|decimal、numeric|Decimal|NUMBER、INT|decimal、numeric|decimal、numeric|  
+|DT_R4|real|real|単一||real|real|  
 |DT_R8|float|float|Double|FLOAT、REAL|FLOAT、DOUBLE|FLOAT、DOUBLE|  
-|DT_STR|char、varchar||VarChar||CHAR、VARCHAR|CHAR、VARCHAR|  
+|DT_STR|char、varchar||varchar||char、varchar|char、varchar|  
 |DT_UI1|tinyint|tinyint|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
@@ -249,12 +254,13 @@ caps.handback.revision: 98
 |DT_NTEXT|ntext|text、ntext||LONG、CLOB、NCLOB、NVARCHAR、TEXT|LONG VARCHAR、NCHAR、NVARCHAR、TEXT|LONG VARCHAR、DBCLOB、NCHAR、NVARCHAR、TEXT|  
 |DT_TEXT|text||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA、CLOB|  
   
- データ フローでのデータのマッピングついては、「[データ フロー内のデータ型の処理](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)」を参照してください。  
+ データ フローでのデータのマッピングついては、「 [データ フロー内のデータ型の処理](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)」を参照してください。  
   
-## 関連コンテンツ  
+## <a name="related-content"></a>関連コンテンツ  
  blogs.msdn.com のブログ「 [SSIS 2008 のデータ型の変換手法間のパフォーマンス比較](http://go.microsoft.com/fwlink/?LinkId=220823)」  
   
-## 参照  
+## <a name="see-also"></a>参照  
  [データ フロー内のデータ](../../integration-services/data-flow/data-in-data-flows.md)  
   
   
+

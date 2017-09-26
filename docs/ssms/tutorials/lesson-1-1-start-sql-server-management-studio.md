@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
-ms.openlocfilehash: 2d5147747a0b9bac8e90c77cca24fd3632d42240
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 6cc0ed90b88e52e4812011f56714a1f1a662636c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="lesson-1-1---start-sql-server-management-studio"></a>レッスン 1-1 - SQL Server Management Studio の起動
@@ -35,13 +35,13 @@ ms.lasthandoff: 07/31/2017
   * 以前のバージョンの Windows では、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] の順にポイントして、 **[SQL Server Management Studio]**をクリックします。 あるいは、 **[実行]** ダイアログ ボックスで、「 **SSMS.exe** 」と入力し、 **[OK]**をクリックします。  
   
     > [!NOTE]  
-    >  SSMS が表示されない場合は、SSMS が正常にインストールされていない可能性があります。 [ダウンロード センター](https://msdn.microsoft.com/library/mt238290.aspx)から SSMS をインストールしてください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 の場合、SSMS は自動的にインストールされません。 すべての機能にアクセスするには、最新バージョンを使用します。  
+    >  SSMS が表示されない場合は、SSMS が正常にインストールされていない可能性があります。 [ダウンロード センター](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)から SSMS をインストールしてください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 の場合、SSMS は自動的にインストールされません。 すべての機能にアクセスするには、最新バージョンを使用します。  
   
 2.  次の手順では、SSMS の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オブジェクト エクスプローラー] **コンポーネントを使用して、** に接続します。 オブジェクト エクスプローラー ペインが表示されない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]**をクリックします。 オブジェクト エクスプローラー メニューで **[接続]** ボタンをクリックし、 **[データベース エンジン]**をクリックします。 **[サーバーへの接続]** ダイアログ ボックスが表示されます (SSMS が事前にインストールされている場合、ユーザー設定によっては **[サーバーへの接続]** ダイアログ ボックスが自動的に表示されることがあります)。  
   
 3.  **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバー名]** ボックスに名前を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の 3 つの種類のいずれかに接続できます。 種類ごとに、 **[サーバー名]** ボックスの形式が少し異なります。 次のいずれかの形式を使用します。  
   -  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンス:** コンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールするときは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが既定のインスタンス (名前のないインスタンス) または名前付きインスタンスになるように指定することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスに接続する場合は、コンピューターの名前を挿入します。 たとえば、Accounting という名前のコンピューターで SSMS を実行している場合に、そのコンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  の既定のインスタンスに接続するには、 **[サーバー名]** ボックスに「 **Accounting** 」と入力します。  
-  -  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンス:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時に、インスタンスの名前を指定できます。たとえば、Accounting という名前のコンピューター上で、**Receivables** という名前の名前付きインスタンスを指定することが可能です。 名前付きインスタンスに接続するには、 **[サーバー名]** ボックスに、コンピューター名、円記号 (\)、インスタンス名の順に入力します。たとえば「 **Accounting\Receivables**」と入力します。  
+  -  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンス: **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時に、インスタンスの名前を指定できます。たとえば、Accounting という名前のコンピューター上で、**Receivables** という名前の名前付きインスタンスを指定することが可能です。 名前付きインスタンスに接続するには、 **[サーバー名]** ボックスに、コンピューター名、円記号 (\)、インスタンス名の順に入力します。たとえば「 **Accounting\Receivables**」と入力します。  
   -  **Azure SQL Database:** SQL Database のサーバー名の形式は SQL_Server_name.database.windows.net となります。たとえば、 **mydb2.database.windows.net**とすることができます。 サーバー名を決定する際に問題が発生した場合は、Azure ポータルにアクセスして、接続文字列の作成方法を確認してください。  
   
 4. **[認証]** 領域で、認証方法を選択します。  

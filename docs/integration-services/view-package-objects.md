@@ -1,32 +1,37 @@
 ---
-title: "パッケージ オブジェクトを表示する | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Integration Services パッケージ、プロパティ"
-  - "プロパティ [Integration Services]"
-  - "[パッケージ エクスプローラー] ウィンドウ [Integration Services]"
-  - "パッケージ [Integration Services]、プロパティ"
-  - "エクスプローラー ビュー [Integration Services]"
-  - "SSIS パッケージ、プロパティ"
-  - "パッケージ オブジェクトの表示"
-  - "SQL Server Integration Services パッケージ、プロパティ"
+title: "パッケージ オブジェクトの表示 |Microsoft ドキュメント"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Integration Services packages, properties
+- properties [Integration Services]
+- Package Explorer window [Integration Services]
+- packages [Integration Services], properties
+- explorer view [Integration Services]
+- SSIS packages, properties
+- viewing package objects
+- SQL Server Integration Services packages, properties
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
 caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 4314664538d2f3f328e0fbc48965e2541089a95c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/26/2017
+
 ---
-# パッケージ オブジェクトを表示する
+# <a name="view-package-objects"></a>パッケージ オブジェクトを表示する
   [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでは、 **[パッケージ エクスプローラー]** タブで、パッケージをエクスプローラー表示できます。 この表示には、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] アーキテクチャのコンテナー階層が反映されます。 パッケージ コンテナーはこの階層の最上層にあり、パッケージを展開すると、そのパッケージ内にある接続、実行可能ファイル、イベント ハンドラー、ログ プロバイダー、優先順位制約、および変数が表示されます。  
   
  実行可能ファイルとは、パッケージ内のコンテナーおよびタスクのことで、イベント ハンドラー、優先順位制約、および変数を含めることができます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、入れ子構造の階層のコンテナーがサポートされているため、For ループ コンテナー、Foreach ループ コンテナー、およびシーケンス コンテナーは他の実行可能ファイルを含めることができます。  
@@ -37,18 +42,32 @@ caps.handback.revision: 35
   
  次の図は、簡単なパッケージのツリー ビューを示しています。  
   
- ![[パッケージ エクスプローラー] タブのスクリーンショット](../integration-services/media/packageexplorer.gif "[パッケージ エクスプローラー] タブのスクリーンショット")  
+ ![[パッケージ エクスプ ローラー] タブのスクリーン ショット](../integration-services/media/packageexplorer.gif "パッケージ エクスプ ローラー タブのスクリーン ショット")  
   
-### パッケージの内容を表示するには  
+## <a name="view-the-package-structure-and-content"></a>パッケージの構造とコンテンツを表示します。  
   
--   [パッケージ エクスプローラーでパッケージ オブジェクトを表示する](../Topic/View%20Package%20Objects%20in%20Package%20Explorer.md)  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージ エクスプローラー **で表示するパッケージが含まれている**プロジェクトを開きます。  
   
-## 参照  
+2.  **[パッケージ エクスプローラー]** タブをクリックします。  
+  
+3.  **[変数]**、 **[優先順位制約]**、 **[イベント ハンドラー]**、 **[接続マネージャー]**、 **[ログ プロバイダー]**、または **[実行可能ファイル]** フォルダーの内容を表示するには、各フォルダーを展開します。  
+  
+4.  パッケージの構造に基づき、次の任意のレベルのフォルダーを展開します。  
+  
+## <a name="view-the-properties-of-a-package-object"></a>パッケージ オブジェクトのプロパティを表示します。
+  
+-   オブジェクトを右クリックして **[プロパティ]** をクリックし、 **[プロパティ]** ウィンドウを開きます。  
+  
+## <a name="delete-an-object-in-a-package"></a>パッケージ内のオブジェクトを削除します。  
+  
+-   オブジェクトを右クリックし、 **[削除]**をクリックします。 
+ 
+## <a name="see-also"></a>参照  
  [Integration Services タスク](../integration-services/control-flow/integration-services-tasks.md)   
  [Integration Services コンテナー](../integration-services/control-flow/integration-services-containers.md)   
  [優先順位制約](../integration-services/control-flow/precedence-constraints.md)   
- [Integration Services (SSIS) の変数](../integration-services/integration-services-ssis-variables.md)   
- [Integration Services (SSIS) のイベント ハンドラー](../integration-services/integration-services-ssis-event-handlers.md)   
- [Integration Services (SSIS) のログ記録](../integration-services/performance/integration-services-ssis-logging.md)  
+ [Integration Services &#40;SSIS&#41; の変数](../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services & #40 です。SSIS &#41;イベント ハンドラー](../integration-services/integration-services-ssis-event-handlers.md)   
+ [Integration Services & #40 です。SSIS &#41;ログ記録](../integration-services/performance/integration-services-ssis-logging.md)  
   
   

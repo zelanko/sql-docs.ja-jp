@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 71a2cbf181c94c4c1aff877614aadf890b2496e0
-ms.openlocfilehash: e4bc77e76190463864ecab75ae94e28b16624309
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 45915dbb8ce5883c379c0cebdbc62e6ff43ede1a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の変更ログ
-この変更ログは、[SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx) のものです。  
+この変更ログは、[SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt) のものです。  
   
 新機能および変更点の詳細については、[SSDT チーム ブログ](https://blogs.msdn.microsoft.com/ssdt/)をご覧ください。
 
@@ -111,7 +111,7 @@ ms.lasthandoff: 08/23/2017
 - Analysis Services 1400 互換性レベル表形式モデルの PowerQuery 統合でのいくつかの問題を修正しました
 - メジャーを定義するときに代入演算子が新しい行にならない新しい DAX エディター ツール ウィンドウでの問題を修正しました
 - パースペクティブ内のメジャーの名前を変更するときに、テーブル メジャーの表示が更新されない問題を修正しました
-- Analysis Services 統合ワークスペース エンジンとテーブル オブジェクト モデルを更新し、翻訳を含む 1200 テーブル プロジェクトが SQL Server 2016 Analysis Services サーバーへの配置で失敗する原因となったバグ再発を修正しました
+- Analysis Services 統合ワークスペース エンジンとテーブル オブジェクト モデルを更新し、翻訳を含む 1200 テープル プロジェクトが SQL Server 2016 Analysis Services サーバーへの配置で失敗する原因となったバグ再発を修正しました
 - 新しい 1400 テーブル データ ソースの作成/削除が非常に遅くなるパフォーマンスの問題を修正しました
 - 異なる DSV 間ですばやくビューを変更すると多次元モデルの DSV ダイアグラムがレンダリングを停止する問題を修正しました
 
@@ -183,7 +183,7 @@ ms.lasthandoff: 08/23/2017
 - DAX Related() 関数の Intellisense が正常に機能せず、他のテーブルの列が表示されない問題を修正しました。
 - データベースからの AS テーブル プロジェクトのインポートを、AS データベースの一覧を並べ替えることで改善しました。
 - AS 表形式モデルで計算テーブルを作成するときに、候補オブジェクトとしてテーブルが式に表示されない問題を修正しました。
-- コードの表示後に統合ワークスペースを使用してプレビュー 1400 AS モデルを開こうとしたときに発生する問題を修正しました。
+- コードの表示後に統合ワークスペースを使用して プレビュー 1400 AS モデルを開こうとしたときに発生する問題を修正しました。
 - 特定の状況で (初期カタログではサポートされていない) 一部のデータ ソースの正常な動作を妨げていた問題を修正しました。 
 - デプロイ ウィザードは、パーティションを保持するオプションが有効な場合でも、計算テーブルのパーティションに変更を適用する必要があります。
 - 既存の AS Connection に対する [詳細プロパティ] ダイアログで、選択し直すまでリスト全体が表示されない問題を修正しました。
@@ -353,7 +353,7 @@ SSDT テーブルに内部 SSAS インスタンスが含まれるようになり
 * 高 DPI スケールでサイズ変更する際に正しく固定される SSDT AS のプロジェクトのプロパティダイアログに関する問題を修正しました。
 * SSDT AS のプロジェクトにおいて、貼り付けられたテーブルを含む特定のモデルのアップグレード中にエラーが発生する問題を修正しました。
 * SSDT AS において、Excel からシート行全体を貼り付ける処理が非常に遅く、不要な多数の列が作成される問題を修正しました。
-* SSDT AS において、静的な大きい DataTable 式の解析と強調表示が非常に遅い、またはハングする問題を修正しました。
+* SSDT AS において、静的な大きい DataTable式の解析と強調表示が非常に遅い、またはハングする問題を修正しました。
 * SSDT AS において、エディターで選択した現在のパースペクティブにメジャーと KPI 値を追加する際の問題を修正しました。
 * SSDT において、SQL Azure から AS プロジェクトへのデータのインポートで "dbo" 以外のスキーマの種類がサポートされない問題を修正しました。
 
@@ -368,7 +368,7 @@ SSDT テーブルに内部 SSAS インスタンスが含まれるようになり
 
 - **リリース バージョン管理と番号付け:** 月別ではなく数値でリリースがタグ付けされるようになりました。 これは新しい SSMS ポリシーに準拠したもので、リリースや修正プログラムが 1 か月に複数ある場合の処理が簡略化されます。 このリリースは 16.3 であり、RTM リリース後の 3 回目の更新であることを意味します。 修正プログラムは 16.3.1 のように表記され、次回の更新 (来月を予定) は 16.4 になります。
 - **Analysis Services – 表形式モデル エクスプローラー:** 表形式モデル エクスプローラーを使用すると、モデル内のさまざまなメタデータ オブジェクト (データ ソース、テーブル、メジャー、リレーションシップなど) 間を移動できます。 このエクスプローラーは個別のツール ウィンドウとして実装されます。Visual Studio の [表示] メニューを開いて [その他のウィンドウ] をポイントし、[表形式モデル エクスプローラー] をクリックすると表示できます。 既定では、表形式モデル エクスプローラーは個別のタブのソリューション エクスプローラー領域に表示されます。表形式モデル エクスプローラーでは、メタデータ オブジェクトが、表形式モデル 1200 のスキーマによく似たツリー構造で表示されます。また、多数の新機能も追加されています。
-- **データベース ツール – Always Encrypted**:  このリリースには、新しい [Always Encrypted キー管理](https://msdn.microsoft.com/library/mt708953.aspx)ダイアログが用意されています。これにより、データベース プロジェクトまたは SQL Server オブジェクト エクスプローラーのライブ データベースに列マスター キーまたは列暗号化キーを簡単に追加できます。 このリリースは、Windows 証明書ストアの証明書をサポートしています。 今後のリリースでは、Azure Key Vault および CNG プロバイダーがサポートされる予定です。
+- **データベース ツール – Always Encrypted**:  このリリースには、新しい [Always Encrypted キー管理](/sql-docs/docs/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted)ダイアログが用意されています。これにより、データベース プロジェクトまたは SQL Server オブジェクト エクスプローラーのライブ データベースに列マスター キーまたは列暗号化キーを簡単に追加できます。 このリリースは、Windows 証明書ストアの証明書をサポートしています。 今後のリリースでは、Azure Key Vault および CNG プロバイダーがサポートされる予定です。
     - 列マスター キーまたは列暗号化キーを作成する際、[データベースの更新] のクリック直後に SQL Server オブジェクト エクスプローラーに変更が反映されない可能性があります。 この問題を回避するには、SQL Server オブジェクト エクスプローラーでデータベース ノードを更新します。
     - SQL Server オブジェクト エクスプローラーからデータを含むテーブル内の列を暗号化しようとすると、エラーが発生する可能性があります。 現在、この機能は SSDT データベース プロジェクトと SSMS でのみサポートされています。 SQL Server オブジェクト エクスプローラーのサポートは今後のリリースで有効になる予定です。
 
@@ -456,7 +456,7 @@ SSDT の一般提供 (GA) がリリースされました。 2016 年 6 月の SS
 [SQL Server Data Tools &#40;SSDT&#41; のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [以前のリリースの SQL Server Data Tools (SSDT と SSDT-BI)](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
 [データベース エンジンの新機能](https://msdn.microsoft.com/library/bb510411.aspx)  
-[Analysis Services の新機能](https://msdn.microsoft.com/library/bb522628.aspx)  
-[Integration Services の新機能](https://msdn.microsoft.com/library/bb522534.aspx)  
+[Analysis Services の新機能](/sql-docs/docs/analysis-services/what-s-new-in-analysis-services)  
+[Integration Services の新機能](/sql-docs/docs/integration-services/what-s-new-in-integration-services-in-sql-server-2016)  
   
 
