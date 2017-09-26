@@ -111,8 +111,8 @@ GO
  `50`  
   
 ## <a name="see-also"></a>参照
-[メタデータ関数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)  
-ms.date::「07/24/2017」 [TYPEPROPERTY (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/typeproperty-transact-sql.md)
+[メタデータ関数 &#40;TRANSACT-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+ms.date::「07/24/2017」 [TYPEPROPERTY &#40;TRANSACT-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)
   
   
 

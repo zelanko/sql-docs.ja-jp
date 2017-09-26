@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
   
 -   **取り消す**既存削除**GRANT**または**DENY**アクセス許可。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と&#41; です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -88,7 +88,7 @@ REVOKE
  \<class_type > のセキュリティ保護可能なクラス型。 これは、**ログイン**、**データベース**、**オブジェクト**、**スキーマ**、**ロール**、または**ユーザー**. またに権限を付与できる、**サーバー***class_type*が**サーバー**これらのアクセス許可が指定されていません。 **データベース**、アクセス許可がという単語を含む場合が指定されていない**データベース**(たとえば**ALTER ANY DATABASE**)。 ない場合*class_type*が指定されているアクセス許可の種類は、サーバーまたはデータベース クラスに制限は、クラスを想定して**オブジェクト**です。  
   
  *セキュリティ保護可能です*  
- ログイン、データベース、テーブル、ビュー、スキーマ、プロシージャ、ロール、またはを与えるには、ユーザーの名前は、拒否、または、アクセス許可を取り消します。 説明されている 3 部構成の名前付け規則では、オブジェクト名を指定できます[TRANSACT-SQL 構文表記規則 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ログイン、データベース、テーブル、ビュー、スキーマ、プロシージャ、ロール、またはを与えるには、ユーザーの名前は、拒否、または、アクセス許可を取り消します。 説明されている 3 部構成の名前付け規則では、オブジェクト名を指定できます[TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と&#41; です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  *プリンシパル*[ **、**.*n* ]  
  許可するには、1 つまたは複数のプリンシパルでは、拒否、または、アクセス許可を取り消します。 プリンシパルは、ログイン、データベース ユーザー、またはデータベース ロールの名前です。  
