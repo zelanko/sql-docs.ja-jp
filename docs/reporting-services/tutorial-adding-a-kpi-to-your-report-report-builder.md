@@ -59,7 +59,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
 5.  **[次へ]**をクリックします。  
   
-6.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択します。 使用できるデータ ソースがなく、レポート サーバーにもアクセスできない場合は、代わりに埋め込みデータ ソースを使用できます。 詳細については、次を参照してください[チュートリアル: 基本的なテーブル レポート &#40; を作成する。レポート ビルダー"&"#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択します。 使用できるデータ ソースがなく、レポート サーバーにもアクセスできない場合は、代わりに埋め込みデータ ソースを使用できます。 詳細については、次を参照してください[チュートリアル: 基本的なテーブル レポート &#40;を作成する。レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  **[次へ]**をクリックします。  
   
@@ -262,7 +262,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
 ![report-builder-linear-kpi](../reporting-services/media/report-builder-linear-kpi.png) 
   
 ## <a name="Indicator"></a>5.インジケーターを使用して KPI を表示する  
-インジケーターは、データ値をひとめでわかるようにするための単純で小さなゲージです。 そのサイズと単純さのために、テーブルやマトリックスでよく使用されます。 詳細については、次を参照してください。[インジケーター & #40 です。レポート ビルダーおよび SSRS &#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+インジケーターは、データ値をひとめでわかるようにするための単純で小さなゲージです。 そのサイズと単純さのために、テーブルやマトリックスでよく使用されます。 詳細については、次を参照してください。[インジケーター &#40; です。レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>インジケーターを使用して KPI の現在の状態を表示するには  
   
