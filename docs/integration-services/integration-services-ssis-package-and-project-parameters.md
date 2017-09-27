@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 55d240737f84e8e260222bbb921bd602d2d19062
+ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
+ms.openlocfilehash: eb3b444f7cc248e89d21970d174d9792711dfbc6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) パッケージとプロジェクト パラメーター
@@ -133,7 +133,7 @@ ms.lasthandoff: 09/21/2017
   
 4.  プロジェクトを保存して、変更をパラメーターに保存します。 パラメーターの値はプロジェクト ファイルに格納されます。  
   
-    > **警告!!** リストで直接編集することも、**[プロパティ]** ウィンドウを使用してパラメーターのプロパティの値を変更することもできます。 **[削除] (X)** ツール バー ボタンを使用して、パラメーターを削除できます。 ツール バーの最後のボタンを使用すると、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] でパッケージを実行するときにのみ使用されるパラメーターの値を指定できます。  
+    > **警告!!** リストで直接編集することも、**[プロパティ]** ウィンドウを使用してパラメーターのプロパティの値を変更することもできます。 **[削除]\(X)** ツール バー ボタンを使用して、パラメーターを削除できます。 ツール バーの最後のボタンを使用すると、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] でパッケージを実行するときにのみ使用されるパラメーターの値を指定できます。  
   
     > **注:** プロジェクトを [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で開かずにパッケージ ファイルを再度開くと、**[パラメーター]** タブは空になり、無効になります。  
   
@@ -162,10 +162,10 @@ ms.lasthandoff: 09/21/2017
   
 5.  プロジェクトを保存して、変更をパラメーターに保存します。 パラメーター値はプロジェクト ファイルの構成に格納されます。 プロジェクト ファイルを保存して、パラメーター値の変更をディスクにコミットしてください。  
   
-    > **警告!!!** リストで直接編集することも、**[プロパティ]** ウィンドウを使用してパラメーターのプロパティの値を変更することもできます。 **[削除] (X)** ツール バー ボタンを使用して、パラメーターを削除できます。 ツール バーの最後のボタンを使用すると、**[パラメーター値の管理]** ダイアログ ボックスを開いて、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] でパッケージを実行するときにのみ使用されるパラメーターの値を指定できます。  
+    > **警告!!!** リストで直接編集することも、**[プロパティ]** ウィンドウを使用してパラメーターのプロパティの値を変更することもできます。 **[削除]\(X)** ツール バー ボタンを使用して、パラメーターを削除できます。 ツール バーの最後のボタンを使用すると、**[パラメーター値の管理]** ダイアログ ボックスを開いて、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] でパッケージを実行するときにのみ使用されるパラメーターの値を指定できます。  
     
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
-**パラメーター化** ダイアログ ボックスでは、タスクのプロパティを使用して、新規または既存のパラメーターを関連付けることができます。 タスクまたは制御フロー] タブで、右クリックしてダイアログ ボックスを開く [!含める[ssIS](/sql-docs/docs/integration-services/integration-services-ssis-package-and-project-parameters)です。
+**パラメーター化** ダイアログ ボックスでは、タスクのプロパティを使用して、新規または既存のパラメーターを関連付けることができます。 このダイアログ ボックスを開くには、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでタスクまたは [制御フロー] タブを右クリックし、**[パラメーター化]** をクリックします。 次の一覧では、このダイアログ ボックスの UI 要素について説明します。 パラメーターの詳細については、「 [Integration Services (SSIS) パラメーター](https://msdn.microsoft.com/library/hh213214.aspx)」を参照してください。
   
 ### <a name="options"></a>オプション  
  **プロパティ**  

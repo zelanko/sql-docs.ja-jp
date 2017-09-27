@@ -36,7 +36,7 @@ SQL Server Integration Services をインストールするには、この記事
 1.  パブリック リポジトリ鍵キーをインポートします。
 
     ```bash
-    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add –
+    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     ```
 
 

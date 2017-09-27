@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 44308a0c36e49852f199fb8dbfdb6de9db789c9f
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 5aee9077dcf9c0c31746c3e8d3b056376a8e61dc
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="generating-dump-files-for-package-execution"></a>パッケージ実行用のダンプ ファイルを生成する
@@ -36,7 +36,7 @@ ms.lasthandoff: 09/21/2017
   
      実行中のパッケージを一時停止してダンプ ファイルを作成する場合に、このストアド プロシージャを呼び出します。  
   
- パッケージ配置モデルを使用する場合は、 **dtexec** ユーティリティまたは **dtutil** ユーティリティを使用して、コマンド ラインでデバッグ ダンプ オプションを指定することによって、デバッグ ダンプ ファイルを作成します。 詳細については、次を参照してください。 [dtexec ユーティリティ](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)と[レガシ パッケージの配置 & #40 です。SSIS &#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
+ パッケージ配置モデルを使用する場合は、 **dtexec** ユーティリティまたは **dtutil** ユーティリティを使用して、コマンド ラインでデバッグ ダンプ オプションを指定することによって、デバッグ ダンプ ファイルを作成します。 詳細については、「[dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md)」と「[dtutil ユーティリティ](../../integration-services/dtutil-utility.md)」を参照してください。 パッケージ配置モデルの詳細については、「[Integration Services (SSIS) プロジェクトとパッケージの配置](https://msdn.microsoft.com/library/hh213290.aspx)」と「[レガシー パッケージの配置 &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)」を参照してください。   
   
 ## <a name="debug-dump-file-format"></a>デバッグ ダンプ ファイルの形式  
  デバッグ ダンプ オプションを指定した場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって作成されるデバッグ ダンプ ファイルを次に示します。  

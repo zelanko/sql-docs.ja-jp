@@ -15,17 +15,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 1b59268e884d3e797a74ef65d9e75c405d75a0d5
+ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
+ms.openlocfilehash: 9eee58be471d8b39b051c1343f9eb26a2960b6d6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>インポートおよびエクスポート ウィザードのこの簡単な例の概要します。
 SQL Server データベースへの Excel スプレッドシートからデータをインポートする - 一般的なシナリオを用いて、SQL Server インポートおよびエクスポート ウィザードに含まれる新機能について説明します。 別のソースと別の変換先を使用することを計画する場合でもこのトピックではほとんどのウィザードの実行について知っておく必要があります。
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>前提条件、お使いのコンピューターにインストールされているウィザードとは
-かどうかに、ウィザードを実行する必要はありません [!含める[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)です。
+ウィザードを実行する必要はあるが、コンピューターに [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールしていない場合は、SQL Server Data Tools (SSDT) をインストールすることで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードをインストールできます。 詳細については、「 [SQL Server Data Tools (SSDT) のダウンロード](https://msdn.microsoft.com/library/mt204009.aspx)」を参照してください。
 
 ## <a name="heres-the-excel-source-data-for-this-example"></a>この例の Excel ソースのデータを次に示します
 -WizardWalkthrough.xlsx Excel ブックの WizardWalkthrough ワークシートに 2 列の小さなテーブルにコピーしようとしているソース データを次に示します。
