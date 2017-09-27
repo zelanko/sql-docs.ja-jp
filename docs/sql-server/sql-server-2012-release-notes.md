@@ -504,9 +504,9 @@ Data Quality Client のマップ ステージ中にいずれかの DQS アクテ
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|はい|可|可|可|はい|  
 |SQL Native Client 11.0 OLEDB|いいえ|はい|可|いいえ|いいえ|  
-|ADO.NET with .NET Framework 4.0 と接続性に関する修正プログラム**\&#42;**|[ユーザー アカウント制御]|可|可|可|[ユーザー アカウント制御]|  
-|ADO.NET with .NET Framework 3.5 SP1 と接続性に関する修正プログラム **\&#42;\&#42;**|[ユーザー アカウント制御]|可|可|可|はい|  
-|Microsoft JDBC Driver 4.0 for SQL Server|はい|可|可|可|[ユーザー アカウント制御]|  
+|ADO.NET with .NET Framework 4.0 と接続性に関する修正プログラム**\&#42;**|可|可|可|可|可|  
+|ADO.NET with .NET Framework 3.5 SP1 と接続性に関する修正プログラム **\&#42;\&#42;**|可|可|可|可|はい|  
+|Microsoft JDBC Driver 4.0 for SQL Server|はい|可|可|可|可|  
   
 **\&#42;** ADO .NET with .NET Framework 4.0 用の接続性に関する修正プログラムをダウンロードしてください ( [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211))。  
   
