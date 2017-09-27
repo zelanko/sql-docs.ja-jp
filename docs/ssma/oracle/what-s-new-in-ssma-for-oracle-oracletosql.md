@@ -2,7 +2,7 @@
 title: "どのような &#39; SSMA for Oracle (OracleToSQL) の |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,14 +15,22 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 690d34e4391bcdbcbf7adfe1d80ed8c503d80895
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: 0dfba12d3b2d06677817bb087f11cbd922ca390d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
-# <a name="what39s-new-in-ssma--for-oracle-oracletosql"></a>どのような &#39; SSMA for Oracle (OracleToSQL) の
+# <a name="what39s-new-in-ssma-for-oracle-oracletosql"></a>どのような &#39; SSMA for Oracle (OracleToSQL) の
 このトピックでは、Oracle での変更の各リリース SSMA が一覧表示します。  
+
+## <a name="ssma-v75"></a>SSMA v7.5
+SSMA for Oracle の v7.5 リリースには、次の変更が含まれています。
+- 障碍の大きいアクセシビリティを確認するいくつかの機能強化で強化されています。
+- お客様のフィードバックに基づいて、データの移行中に日付と float データ型の処理の向上などの品質、および変換のメトリックを対象となる修正プログラムを向上させるために更新されます。
+
+> [!IMPORTANT]
+> .Net 4.5.2 は、SSMA v7.5 をインストールするための事前必須コンポーネントです。 さらに、v7.4 から始まり、SSMA の 32 ビット バージョンは廃止されています。
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 SSMA for Oracle の v7.4 リリースには、次の変更が含まれています。
@@ -65,7 +73,7 @@ SSMA for Oracle の v7.2 リリースには、次の変更が含まれていま�
 - 製品利用統計情報をお客様の問題をトラブルシューティングし、SSMA の換算率を向上させる優れたデータ ポイントを提供する拡張機能です。
 
 ## <a name="ssma-v71"></a>SSMA v7.1
-SSMA for Access の v7.1 リリースには、次の変更が含まれています。
+SSMA for Oracle の v7.1 リリースには、次の変更が含まれています。
 - Windows と Linux CTP1 では、SQL Server 2017 は、移行のサポート対象のターゲット プラットフォームではようになりました。 この機能は、technical preview ではあり、SQL の対象サーバーにスキーマとデータの移動を許可します。
 - SSMA は、使用可能になるとすぐには、SSMA の最新バージョンをダウンロードする自動更新をサポートします。
 - SSMA インストール可能なバイナリは、Windows インストーラー パッケージ ファイル (.msi) により配信されるようになりました。

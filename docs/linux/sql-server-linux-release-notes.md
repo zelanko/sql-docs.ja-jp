@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: baa5826e9722bfb23afacf729d80bebf88985ed3
+ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
+ms.openlocfilehash: 14277304baaaf6aa40fe279af407c7ce915eaa60
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
 | [SQL Server Data Tools for Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
 | [Visual Studio Code](https://code.visualstudio.com)で、 [mssql 拡張機能](https://aka.ms/mssql-marketplace) | 最新 |
 
-### <a name="unsupported-features-and-services"></a>サポートされていない機能とサービス
+### <a name="Unsupported"></a>サポートされていない機能とサービス
 
 次の機能とサービスは現時点では Linux で使用できません。 プレビュー プログラムの毎月の反復の更新中に、これらの機能のサポートをしだいに有効なります。
 

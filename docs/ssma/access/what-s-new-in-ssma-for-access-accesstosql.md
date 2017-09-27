@@ -2,7 +2,7 @@
 title: "どのような &#39; SSMA Access(AccessToSQL) for の |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,14 +18,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 06347e6e199fe2aea5f4854b3b355bf28d8d1769
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: d955f186e5a533839becdec5aefebc0af750bef1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-access-accesstosql"></a>どのような &#39; SSMA for Access (AccessToSQL) の
 このトピックでは、各リリースでのアクセスの変更の SSMA が一覧表示します。  
+
+## <a name="ssma-v75"></a>SSMA v7.5
+SSMA for Access の v7.5 リリースは、障碍の大きいアクセシビリティを確認するいくつかの機能強化で強化されています。
+
+> [!IMPORTANT]
+> .Net 4.5.2 は、SSMA v7.5 をインストールするための事前必須コンポーネントです。 さらに、v7.4 から始まり、SSMA の 32 ビット バージョンは廃止されています。
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 SSMA for Access の v7.4 リリースには、次の変更が含まれています。

@@ -2,7 +2,7 @@
 title: "どのような &#39; SSMA for MySQL (MySQLToSql) の |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,14 +18,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 6dff8473750c454984d824eee17abb9358ce18fe
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: e5d5ca50b24eb8c7d21fa2058e9be6fed0af2270
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-mysql-mysqltosql"></a>どのような &#39; SSMA for MySQL (MySQLToSql) の
 このトピックでは、MySQL での変更の各リリース SSMA が一覧表示します。 
+
+## <a name="ssma-v75"></a>SSMA v7.5
+SSMA の MySQL の v7.5 リリースは、障碍の大きいアクセシビリティを確認するいくつかの機能強化で強化されています。
+
+> [!IMPORTANT]
+> .Net 4.5.2 は、SSMA v7.5 をインストールするための事前必須コンポーネントです。 さらに、v7.4 から始まり、SSMA の 32 ビット バージョンは廃止されています。
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 SSMA の MySQL v7.4 のリリースには、次の変更が含まれています。

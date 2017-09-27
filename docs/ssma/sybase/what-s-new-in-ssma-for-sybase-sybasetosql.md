@@ -1,7 +1,7 @@
 ---
-title: "どのような &#39; SSMA for Sybase (SybaseToSQL) の |Microsoft ドキュメント"
+title: "どのような &#39; SSMA for SAP ASE (SybaseToSQL) の |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,14 +18,22 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 1054c9279039eda01320e1afd9745b6a53200b3f
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: ceb656fe1a2a210f26ce9f548a6c5ab7c68a29f7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
-# <a name="what39s-new-in-ssma--for-sybase-sybasetosql"></a>どのような &#39; SSMA for Sybase (SybaseToSQL) の
-このトピックでは、Sybase での変更の各リリース SSMA が一覧表示します。 
+# <a name="what39s-new-in-ssma-for-sap-ase-sybasetosql"></a>どのような &#39; SSMA for SAP ASE (SybaseToSQL) の
+このトピックでは、SAP ASE (旧称 SSMA for Sybase) での変更の各リリース SSMA が一覧表示します。 
+
+## <a name="ssma-v75"></a>SSMA v7.5
+SSMA の SAP ASE v7.5 のリリースには、次の変更が含まれています。
+-   障碍の大きいアクセシビリティを確認するいくつかの機能強化で強化されています。
+-   更新を作成または置換構文のサポートを提供します。
+
+> [!IMPORTANT]
+> .Net 4.5.2 は、SSMA v7.5 をインストールするための事前必須コンポーネントです。 さらに、v7.4 から始まり、SSMA の 32 ビット バージョンは廃止されています。  
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 Sybase 用 SSMA の v7.4 リリースには、次の変更が含まれています。
