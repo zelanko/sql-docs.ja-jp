@@ -217,7 +217,7 @@ dtexec /option [value] [/option [value]]...
   
      **/ConsoleLog** オプションの例については、「 **解説** 」を参照してください。  
   
--   * */D[ts](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)です。  
+-   **/D[ts](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)です。  
   
      *package_path* 引数には、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージの相対パスを指定します。このパスは SSIS パッケージ ストアのルートから始まり、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージの名前を含むパスです。 *package_path* 引数に指定するパスまたはファイル名に空白文字を含める場合は、 *package_path* 引数を引用符で囲む必要があります。  
   
