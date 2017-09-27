@@ -14,7 +14,8 @@
 ## [新規および最近の更新記事](new-updated-database-engine.md)
 
 # [インストール](../database-engine/install-windows/installation-for-sql-server-2016.md)
-# [可用性グループ](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 # [構成](../database-engine/configure-windows/configure-database-engine-instances-sql-server.md)
-# [データベース ミラーリング](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)
-# [ログ配布](../database-engine/log-shipping/about-log-shipping-sql-server.md)
+# [高可用性](sql-server-business-continuity-dr.md)
+## [可用性グループ](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
+## [データベース ミラーリング](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)
+## [ログ配布](../database-engine/log-shipping/about-log-shipping-sql-server.md)
