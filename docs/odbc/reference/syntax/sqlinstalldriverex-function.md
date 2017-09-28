@@ -69,7 +69,7 @@ BOOL SQLInstallDriverEx(
  [入力]長さ*lpszPathOut*です。  
   
  *pcbPathOut*  
- [出力](Null 終了文字を除く) バイトの合計数で返される使用可能な*lpszPathOut*です。 場合は、使用できるバイト数を返すより大きいまたは等しい*cbPathOutMax*、出力パス*lpszPathOut*に切り捨てられます*cbPathOutMax*マイナス、null 終端文字です。 *PcbPathOut*引数が null ポインターを指定できます。  
+ [出力]\(Null 終了文字を除く) バイトの合計数で返される使用可能な*lpszPathOut*です。 場合は、使用できるバイト数を返すより大きいまたは等しい*cbPathOutMax*、出力パス*lpszPathOut*に切り捨てられます*cbPathOutMax*マイナス、null 終端文字です。 *PcbPathOut*引数が null ポインターを指定できます。  
   
  *起こり*  
  [入力]要求の種類。 *起こり*引数は、次の値のいずれかを含める必要があります。  

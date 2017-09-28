@@ -63,7 +63,7 @@ BOOL SQLGetTranslator(
  [入力]最大長、 *lpszName*バッファー。  
   
  *pcbNameOut*  
- [入力/出力](Null 終了バイトを除く) バイトの合計数が指定値を渡したりで返される*lpszName*です。 場合は、使用できるバイト数を返すより大きいまたは等しい*cbNameMax*で変換プログラム名*lpszName*に切り捨てられます*cbNameMax*マイナス、null 終端文字です。 *PcbNameOut*引数が null ポインターを指定できます。  
+ [入力/出力]\(Null 終了バイトを除く) バイトの合計数が指定値を渡したりで返される*lpszName*です。 場合は、使用できるバイト数を返すより大きいまたは等しい*cbNameMax*で変換プログラム名*lpszName*に切り捨てられます*cbNameMax*マイナス、null 終端文字です。 *PcbNameOut*引数が null ポインターを指定できます。  
   
  *lpszPath*  
  [出力]トランスレーター DLL の完全パス。  

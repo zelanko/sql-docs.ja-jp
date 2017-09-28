@@ -66,7 +66,7 @@ RETCODE SQLInstallerError(
  [入力]最大長、*後*バッファー。 以下 SQL_MAX_MESSAGE_LENGTH をマイナスした null 終端文字があります。  
   
  *pcbErrorMsg*  
- [出力](Null 終了文字を除く) バイトの総数へのポインターで返される使用可能な*lpszErrorMsg*です。 場合は、使用できるバイト数を返すより大きいまたは等しい*cbErrorMsgMax*、エラー メッセージ テキスト*lpszErrorMsg*に切り捨てられます*cbErrorMsgMax*マイナス、null 終端文字のバイト数です。 *PcbErrorMsg*引数が null ポインターを指定できます。  
+ [出力]\(Null 終了文字を除く) バイトの総数へのポインターで返される使用可能な*lpszErrorMsg*です。 場合は、使用できるバイト数を返すより大きいまたは等しい*cbErrorMsgMax*、エラー メッセージ テキスト*lpszErrorMsg*に切り捨てられます*cbErrorMsgMax*マイナス、null 終端文字のバイト数です。 *PcbErrorMsg*引数が null ポインターを指定できます。  
   
 ## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、または SQL_ERROR です。  
