@@ -57,7 +57,7 @@ ms.lasthandoff: 09/07/2017
 |[状態]|インデックスの状態。<br /><br /> **[保存]** をクリックしたときに表示される ![更新中状態のアイコン](../master-data-services/media/mds-statusicon-updating.png "更新中状態のアイコン") 画像は、インデックスが更新中であることを示します。<br /><br /> インデックスの作成中または編集中にエラーが発生すると、![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン") 画像が表示されます。<br /><br /> それ以外の場合は適切な状態であり、![適切な状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "適切な状態のアイコン") 画像が表示されます。|  
 |名前|インデックス名。|  
 |[Is Unique]|インデックスが一意かどうかを示します。|  
-|[On Attributes] (属性)|インデックスが定義されている属性の表示名を示します。|  
+|[On Attributes]\(属性)|インデックスが定義されている属性の表示名を示します。|  
   
  インデックスをクリックすると、次の情報が表示されます。  
   
