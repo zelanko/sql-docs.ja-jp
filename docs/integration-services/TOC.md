@@ -6,6 +6,28 @@
 ## [新規および最近の更新記事](new-updated-integration-services.md)
 ## [SQL Server の各エディションがサポートする Integration Services の機能](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Integration Services の旧バージョンとの互換性](integration-services-backward-compatibility.md)
+
+# クイック スタート
+## 配置
+### [SSMS を使用した配置](./ssis-quickstart-deploy-ssms.md)
+### [Transact-SQL を使用した配置 (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
+### [Transact-SQL を使用した配置 (VS コード)](ssis-quickstart-deploy-tsql-vscode.md)
+### [コマンド プロンプトからの配置](./ssis-quickstart-deploy-cmdline.md)
+### [PowerShell を使用した配置](ssis-quickstart-deploy-powershell.md)
+### [C# を使用した配置](./ssis-quickstart-deploy-dotnet.md) 
+## [実行]
+### [SSMS を使用しての実行](./ssis-quickstart-run-ssms.md)
+### [Transact-SQL を使用しての実行 (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
+### [Transact-SQL を使用しての実行 (VS コード)](ssis-quickstart-run-tsql-vscode.md)
+### [コマンド プロンプトからの実行](./ssis-quickstart-run-cmdline.md)
+### [PowerShell を使用しての実行](ssis-quickstart-run-powershell.md)
+### [C# を使用しての実行](./ssis-quickstart-run-dotnet.md) 
+
+# [SSIS パッケージを Azure にリフト アンド シフトする](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+## [チュートリアル - Azure でのパッケージを配置、実行、監視する](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+## [Azure で SSIS カタログに接続する](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Azure でのパッケージ実行をスケジュールする](lift-shift/ssis-azure-schedule-packages.md)
+## [Windows 認証でデータ ソースに接続する](lift-shift/ssis-azure-connect-with-windows-auth.md)
 # [インストールまたはアップグレード](../integration-services/install-windows/install-integration-services.md)
 
 # [開発ツールと管理ツール](integration-services-ssis-development-and-management-tools.md)

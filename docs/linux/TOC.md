@@ -4,6 +4,7 @@
 ## [リリース ノート](sql-server-linux-release-notes.md)
 ## [このリリースの新機能](sql-server-linux-whats-new.md)
 ## [新規および最近の更新記事](new-updated-linux.md)
+## [エディションとサポートされる機能](sql-server-linux-editions-and-components-2017.md)
 
 # クイック スタート
 ## [インストールと接続 - Red Hat](quickstart-install-connect-red-hat.md)
@@ -19,7 +20,6 @@
 ### [SQL Server フルテキスト検索のインストール](sql-server-linux-setup-full-text-search.md)
 ### [SQL Server Integration Services のインストール](sql-server-linux-setup-ssis.md)
 ### [Azure での SQL VM プロビジョニング](sql-server-linux-azure-virtual-machine.md)
-### [GA リポジトリの登録](sql-server-linux-change-repo.md)
 
 ## [構成]
 ### [mssql-conf での構成](sql-server-linux-configure-mssql-conf.md)
@@ -45,7 +45,10 @@
 ### [Windows から BACPAC のエクスポートとインポート](sql-server-linux-migrate-ssms.md)
 ### [SQL Server Migration Assistant を使用した移行](sql-server-linux-migrate-ssma.md)
 ### [bcp を使用した一括コピー](sql-server-linux-migrate-bcp.md)
-### [(SSIS) を使用したデータの読み込み](sql-server-linux-migrate-ssis.md)
+
+## [抽出、変換、読み込み](sql-server-linux-migrate-ssis.md)
+### [SSIS の構成](sql-server-linux-configure-ssis.md)
+### [SSIS パッケージのスケジュール設定](sql-server-linux-schedule-ssis-packages.md)
 
 ## [ビジネス継続性の構成](sql-server-linux-business-continuity-dr.md)
 ### [バックアップと復元](sql-server-linux-backup-and-restore-database.md)

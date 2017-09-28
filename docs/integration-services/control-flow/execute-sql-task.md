@@ -149,7 +149,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
  **関連項目:** [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)」、「 [ODBC 接続マネージャー](../../integration-services/connection-manager/odbc-connection-manager.md)」、「 [ADO 接続マネージャー](../../integration-services/connection-manager/ado-connection-manager.md)」、「 [ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)」、「 [SQL Server Compact Edition 接続マネージャー](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **接続**  
- 定義済みの接続マネージャーの一覧から接続を選択します。 新しい接続を作成するには、次のように選択します\<**新しい接続をしています.。**>.  
+ 定義済みの接続マネージャーの一覧から接続を選択します。 新しい接続を作成するには、次のように選択します\<**新しい接続をしています...**>。  
   
  **[Sqlsourcetype]**  
  タスクが実行する SQL ステートメントのソースの種類を選択します。  
