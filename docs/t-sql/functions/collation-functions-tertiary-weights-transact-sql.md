@@ -40,8 +40,6 @@ SQL の第 3 の照合順序で定義された Unicode 以外の文字列式で�
 ## <a name="syntax"></a>構文  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 TERTIARY_WEIGHTS( non_Unicode_character_string_expression )  
 ```  
   
