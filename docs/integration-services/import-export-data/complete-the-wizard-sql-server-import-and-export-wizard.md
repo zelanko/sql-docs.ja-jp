@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/26/2017
 
 ---
-# <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>[ウィザードの完了] (SQL Server インポートおよびエクスポート ウィザード)
+# <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>[ウィザードの完了]\(SQL Server インポートおよびエクスポート ウィザード)
 すぐに、コピー操作を実行するかどうかを指定した後と、必要に応じて、ウィザードで作成された、パッケージを保存した後、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インポートおよびエクスポート ウィザードの番組**ウィザードを完了**です。 このページでは、ウィザードで選択した内容を確認し、 **[完了]** をクリックしてコピー操作を開始します。
  
 ## <a name="screen-shot-of-the-complete-the-wizard-page"></a>[ウィザードの完了] ページのスクリーン ショット 

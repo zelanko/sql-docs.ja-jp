@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/26/2017
 
 ---
-# <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>[フラット ファイルの変換先の構成] (SQL Server インポートおよびエクスポート ウィザード)
+# <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>[フラット ファイルの変換先の構成]\(SQL Server インポートおよびエクスポート ウィザード)
   フラット ファイル変換先を選択した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インポートおよびエクスポート ウィザードの番組**フラット ファイル変換先の構成**テーブルをコピーすることを指定するクエリを指定する後またはします。 このページで、宛先のフラット ファイルの書式設定オプションを指定します 必要に応じて、個々の列のマッピングを確認し、サンプル データをプレビューします。  
   
 ## <a name="screen-shot-of-the-configure-flat-file-destination-page"></a>[フラット ファイル変換先の構成] ページのスクリーン ショット  
