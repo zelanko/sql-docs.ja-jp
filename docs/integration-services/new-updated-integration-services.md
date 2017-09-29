@@ -1991,7 +1991,7 @@ ms.lasthandoff: 09/13/2017
 > [!IMPORTANT]
 >  HTTP 接続マネージャーでは、匿名認証と基本認証のみがサポートされています。 Windows 認証はサポートされていません。
 
- **関連項目:** [HTTP 接続マネージャー--../../integration-services/connection-manager/http-connection-manager.md)、[HTTP 接続マネージャー エディター] (&) #40 です。サーバー] ページ &#41;--./../integration-services/connection-manager/http-connection-manager-editor-server-page.md)
+ **関連項目:** [HTTP 接続マネージャー--../../integration-services/connection-manager/http-connection-manager.md)、[HTTP 接続マネージャー エディター]\(&) #40 です。サーバー] ページ &#41;--./../integration-services/connection-manager/http-connection-manager-editor-server-page.md)
 
  **[Wsdlfile]** 、コンピューターのローカルにある WSDL ファイルの完全修飾パスを入力するか、参照ボタンをクリックして**(ΓÇª)**このファイルを見つけます。
 

@@ -92,7 +92,7 @@ Microsoft を実行し、SSMA 動作を制御する堅牢な一連のコマン�
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 出力のオプション: x/xmloutput [xmloutputfile]  
 このコマンドはコンソールにするか、xml ファイルを xml 形式でコマンドの出力メッセージを出力するために使用されます。  
   
-2 つのオプション使用できるが、xmloutput viz。。、:  
+2 つのオプション使用できるが、xmloutput viz..,:  
   
 -   Xmloutput スイッチの後にファイル パスが指定した場合は、ファイルに出力がリダイレクトされます。  
   
