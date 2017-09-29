@@ -95,7 +95,7 @@ C# および Visual Basic などの .NET マネージ言語とは、ADO.NET の�
 
 <a name="an-116-csharp-ef-orm" />
 
-## <a name="entity-framework-logoimage-ref-333-ef-entity-framework-ef-with-cx23"></a>![Entity Framework のロゴ][image-ref-333-ef] C & #x23; entity Framework (EF)
+## <a name="entity-framework-logoimage-ref-333-ef-entity-framework-ef-with-cx23"></a>![Entity Framework のロゴ][image-ref-333-ef] C&#x23; entity Framework (EF)
 
 Entity Framework (EF) は、オブジェクト リレーショナル マッピング (ORM) を提供します。 ORM では、SQL リレーショナル データベースから取得されたデータを操作するオブジェクト指向プログラミング (OOP) ソース コードを簡単にします。
 
@@ -118,7 +118,7 @@ EF には、次のテクノロジに直接的または間接的なリレーシ�
 |     |     |
 | :-- | :-- |
 | [EF 6.x](http://docs.microsoft.com/ef/ef6/) | まず、Microsoft では、EF が 2008 年 8 月にリリースしました。 Microsoft では 2015 年 3 月に発表される EF 6.x が最終の Microsoft を開発します。 Microsoft では、パブリック ドメインにソース コードをリリースしました。<br /><br />最初に .NET Framework の一部であった EF です。 EF 6.x が .NET Framework から削除されました。<br /><br />[Github のリポジトリ内の EF 6.x ソース コード*aspnet/EntityFramework6*](http://github.com/aspnet/EntityFramework6) |
-| [EF コア](http://docs.microsoft.com/ef/core/) | Microsoft では、2016 年 6 月で、新しく作成した EF コアをリリースしました。 EF コアは、柔軟性と移植性の向上のために設計されています。 EF コアは、Microsoft Windows 以外のオペレーティング システムで実行できます。 EF コアは、Microsoft SQL Server だけを超えるデータベースとその他のリレーショナル データベースと対話できます。<br /><br />**C & #x23;コードの例:**<br />[Entity Framework Core の概要](https://docs.microsoft.com/ef/core/get-started/index)<br />[EF Core 既存のデータベースでの .NET Framework の使用を開始します。](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
+| [EF コア](http://docs.microsoft.com/ef/core/) | Microsoft では、2016 年 6 月で、新しく作成した EF コアをリリースしました。 EF コアは、柔軟性と移植性の向上のために設計されています。 EF コアは、Microsoft Windows 以外のオペレーティング システムで実行できます。 EF コアは、Microsoft SQL Server だけを超えるデータベースとその他のリレーショナル データベースと対話できます。<br /><br />**C&#x23;コードの例:**<br />[Entity Framework Core の概要](https://docs.microsoft.com/ef/core/get-started/index)<br />[EF Core 既存のデータベースでの .NET Framework の使用を開始します。](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
 EF と関連するテクノロジは強力ですが、なり領域全体を習得するには、開発者の学習に多くなります。

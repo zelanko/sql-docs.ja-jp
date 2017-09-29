@@ -73,7 +73,7 @@ BOOL SQLDataSourceToDriver(
  [入力]長さ*rgbValueOut*です。  
   
  *pcbValueOut*  
- [出力](Null 終了バイトを除く) バイトの合計数で返される使用可能な*rgbValueOut*です。  
+ [出力]\(Null 終了バイトを除く) バイトの合計数で返される使用可能な*rgbValueOut*です。  
   
  文字またはバイナリ データ、これより大きいまたは等しい場合の*cbValueOutMax*、内のデータ*rgbValueOut*に切り捨てられます*cbValueOutMax*バイトです。  
   
@@ -88,7 +88,7 @@ BOOL SQLDataSourceToDriver(
  [入力]長さ*後*です。  
   
  *pcbErrorMsg*  
- [出力](Null 終了バイトを除く) バイトの総数へのポインターで返される使用可能な*後*です。 これより大きいまたは等しい場合*cbErrorMsg*、内のデータ*後*に切り捨てられます*cbErrorMsgMax*マイナス、null 終端文字です。 *PcbErrorMsg*引数が null ポインターを指定できます。  
+ [出力]\(Null 終了バイトを除く) バイトの総数へのポインターで返される使用可能な*後*です。 これより大きいまたは等しい場合*cbErrorMsg*、内のデータ*後*に切り捨てられます*cbErrorMsgMax*マイナス、null 終端文字です。 *PcbErrorMsg*引数が null ポインターを指定できます。  
   
 ## <a name="returns"></a>返します。  
  変換が成功した場合、false の場合、変換に失敗した場合は TRUE。  
