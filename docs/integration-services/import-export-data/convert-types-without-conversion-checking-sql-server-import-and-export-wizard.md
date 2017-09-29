@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/26/2017
 
 ---
-# <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>[変換の確認を伴わない型変換] (SQL Server インポートおよびエクスポート ウィザード)
+# <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>[変換の確認を伴わない型変換]\(SQL Server インポートおよびエクスポート ウィザード)
   指定したクエリをコピーまたは確認する既存のテーブルやビューを選択すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインポートおよびエクスポート ウィザードに **[変換の確認を伴わない型変換]**が表示される場合があります。 ウィザードで、変換元と変換先でデータ型のマップに必要なデータ型変換およびマッピング ファイルを 1 つ以上特定できない場合、このページが表示されます。 このページには、不足している事項を把握するために役立つ情報が掲載されています。
   
  データ型の変換が成功するかどうかはわからないまま継続するには、 **[次へ]** をクリックします。 それ以外の場合は、 **[戻る]** をクリックして選択内容を変更するか、 **[キャンセル]** をクリックしてウィザードを終了します。

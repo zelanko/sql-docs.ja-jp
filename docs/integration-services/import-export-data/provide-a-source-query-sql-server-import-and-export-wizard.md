@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/26/2017
 
 ---
-# <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>[基になるクエリの指定] (SQL Server インポートおよびエクスポート ウィザード)
+# <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>[基になるクエリの指定]\(SQL Server インポートおよびエクスポート ウィザード)
 コピーするデータを選択するためにクエリを提供するように指定した場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードに **[基になるクエリの指定]**が表示されます。 このページで、データ ソースから転送先にコピーするデータを選択する SQL クエリを書き込んでテストします。 保存済みのクエリのテキストを貼り付けるしたり、クエリ テキストをファイルから読み込むできます。
 
 ## <a name="screen-shot-of-the-source-query-page"></a>[基になるクエリの指定] ページのスクリーン ショット  

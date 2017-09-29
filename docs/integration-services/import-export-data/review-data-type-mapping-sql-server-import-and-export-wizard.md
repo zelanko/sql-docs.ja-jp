@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/26/2017
 
 ---
-# <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>[データ型マッピングの確認] (SQL Server インポートおよびエクスポート ウィザード)
+# <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>[データ型マッピングの確認]\(SQL Server インポートおよびエクスポート ウィザード)
 指定したデータ型マッピングが **[列マッピング]** ダイアログ ボックスの **[マッピング]** 一覧で成功しなかった場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [インポートおよびエクスポート ウィザード] に **[データ型マッピングの確認]** ページが表示されます。 このページでは、変換元のデータと変換先のデータの互換性を確保するためにウィザードで実行する必要があるデータ型変換についての詳細情報を確認します。 この情報には、エラーまたは切り捨てが発生する可能性がありますの変換から成功が予想されるデータ型変換を区別するために視覚的な手掛かりが含まれています。 変換ごとに、ウィザードによって提案された変換を受け入れるかどうかを決定したり、発生したエラーの処理方法を指定したりします。   
   
 > [!TIP]

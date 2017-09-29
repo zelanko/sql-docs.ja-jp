@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/26/2017
 
 ---
-# <a name="performing-operation-sql-server-import-and-export-wizard"></a>[操作を実行しています] (SQL Server インポートおよびエクスポート ウィザード)
+# <a name="performing-operation-sql-server-import-and-export-wizard"></a>[操作を実行しています]\(SQL Server インポートおよびエクスポート ウィザード)
 ウィザードで行った選択を見直して **[ウィザードを完了する]** ページで **[完了]** をクリックすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードに **[操作を実行しています]**と表示されます。 このページでは、前のページで構成した操作の進行状況と結果を確認できます。 このページで必要な操作はありません。
 
 ## <a name="screen-shot---operation-in-progress"></a>スクリーン ショット - 実行中の操作 

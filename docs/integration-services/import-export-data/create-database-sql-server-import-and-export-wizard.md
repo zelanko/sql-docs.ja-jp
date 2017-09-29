@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/26/2017
 
 ---
-# <a name="create-database-sql-server-import-and-export-wizard"></a>[データベースの作成] (SQL Server インポートおよびエクスポート ウィザード)
+# <a name="create-database-sql-server-import-and-export-wizard"></a>[データベースの作成]\(SQL Server インポートおよびエクスポート ウィザード)
 **[変換先の選択]** ページで **[新規]** を選択して新しい SQL Server 変換先データベースを作成する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードに **[データベースの作成]** ダイアログ ボックスが表示されます。 このページでは、新しいデータベースの名前を指定します。 必要に応じて、新しいデータベースとそのログ ファイルの初期サイズと自動拡張の設定を変更することもできます。 
 
 **Create Database**ウィザード ダイアログ ボックスには、新しい SQL Server データベースを作成するために使用できる基本的なオプションのみが用意されています。 表示し、新しいすべてのオプションを構成する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]データベースを作成するか、ウィザードによって作成した後、データベースを構成します。 
@@ -34,7 +34,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="screen-shot-of-the-create-database-page"></a>[データベースの作成] ページのスクリーン ショット  
 以下のスクリーンショットでは、ウィザードの **[データベースの作成]** ダイアログ ボックスを示します。  
 
-![インポートおよびエクスポート ウィザードの [作成データベース ページ](../../integration-services/import-export-data/media/create-database.png "インポートおよびエクスポート ウィザードの作成のデータベース] ページ")  
+![インポートおよびエクスポート ウィザードの作成データベース ページ](../../integration-services/import-export-data/media/create-database.png "インポートおよびエクスポート ウィザードの作成のデータベースページ")  
 
 ## <a name="provide-a-name-for-the-new-database"></a>新しいデータベースの名前を入力する  
 **名前**  

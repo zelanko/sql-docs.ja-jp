@@ -73,7 +73,7 @@ SQL Server と Parallel Data Warehouse では、マスター _ キー通常お�
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]と[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]、パスワード保護と見なされないように、マスター _ キーのサービス マスター _ キーの保護は、データベースがの移動先 1 台のサーバーから別の状況でのデータ損失シナリオを防ぐために安全機構Microsoft Azure プラットフォームによって管理されます。 したがって、メーザ キーのパスワードは省略可能で[!INCLUDE[ssSDS](../../includes/sssds-md.md)]と[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]です。
   
 > [!IMPORTANT]  
->  使用して、マスター _ キーをバックアップする必要があります[マスター _ キーのバックアップ](../../t-sql/statements/backup-master-key-transact-sql.md)し、オフサイトの安全な場所にバックアップを格納します。  
+>  使用して、マスター _ キーをバックアップする必要があります [マスター _ キーのバックアップ](../../t-sql/statements/backup-master-key-transact-sql.md) し、オフサイトの安全な場所にバックアップを格納します。  
   
  サービス マスター キーとデータベース マスター キーは、AES-256 アルゴリズムを使用して保護されます。  
   
@@ -90,12 +90,12 @@ GO
 
   
 ## <a name="see-also"></a>参照  
- [sys.symmetric_keys & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.symmetric_keys &#40;です。TRANSACT-SQL と&#41; です。](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [MASTER KEY &#40; を開くTRANSACT-SQL と #41 です。](../../t-sql/statements/open-master-key-transact-sql.md)   
+ [MASTER KEY &#40;を開くTRANSACT-SQL と&#41; です。](../../t-sql/statements/open-master-key-transact-sql.md)   
  [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)   
- [DROP MASTER KEY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-master-key-transact-sql.md)   
- [CLOSE MASTER KEY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/close-master-key-transact-sql.md)   
+ [DROP MASTER KEY &#40;です。TRANSACT-SQL と&#41; です。](../../t-sql/statements/drop-master-key-transact-sql.md)   
+ [CLOSE MASTER KEY &#40;です。TRANSACT-SQL と&#41; です。](../../t-sql/statements/close-master-key-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

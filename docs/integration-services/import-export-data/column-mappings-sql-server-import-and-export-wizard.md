@@ -23,7 +23,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/26/2017
 
 ---
-# <a name="column-mappings-sql-server-import-and-export-wizard"></a>[列マッピング] (SQL Server インポートおよびエクスポート ウィザード)
+# <a name="column-mappings-sql-server-import-and-export-wizard"></a>[列マッピング]\(SQL Server インポートおよびエクスポート ウィザード)
   指定したクエリをコピーまたは確認する既存のテーブルやビューを選択した後、 **[マッピングの編集]**をクリックすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインポートおよびエクスポート ウィザードに **[列マッピング]** ダイアログ ボックスが表示されます。 このページを指定し、ソース列からコピーしたデータを受信する変換先列を構成します。 多くの場合、このページで何も変更する必要はありません。
   
 選択したテーブル内のすべての列をコピーしない場合は、このページで行うことができますしている必要がない列を除外します。 選択**無視**で、**先**の列、**マッピング**をコピーする列の一覧です。
