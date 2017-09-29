@@ -27,7 +27,7 @@ ms.lasthandoff: 09/01/2017
   テーブル モデルを構築し、Analysis Services テーブル モード サーバーに配置したら、クライアント アプリケーションからの使用を可能にするための権限を設定する必要があります。 このトピックでは、クライアント アプリケーションからデータベースに接続するための権限と方法について説明します。  
   
 > [!NOTE]  
->  既定では、ファイアウォールを構成するまで、Analysis Services へのリモート接続は利用できません。 クライアント接続の名前付きインスタンスまたは既定のインスタンスを構成する場合は、適切なポートを開いていることを確認する必要があります。 詳細については、「 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご参照ください。  
+>  既定では、ファイアウォールを構成するまで、Analysis Services へのリモート接続は利用できません。 クライアント接続の名前付きインスタンスまたは既定のインスタンスを構成する場合は、適切なポートを開いていることを確認する必要があります。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご参照ください。  
   
  このトピックには、次のセクションが含まれます。  
   

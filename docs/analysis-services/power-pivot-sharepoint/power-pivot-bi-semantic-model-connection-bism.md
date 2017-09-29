@@ -33,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_prereq"></a> サポートされるデータベース  
  BI セマンティック モデル接続は、テーブル モデル データを参照します。 このデータには、次の 3 つのソースがあります。  
   
--   表形式サーバー モードのスタンドアロン Analysis Services インスタンスで実行されている表形式モデル データベース。 スタンドアロン Analysis Services インスタンスは、ファーム外部に配置されます。 ファーム外部のデータ ソースにアクセスするには、追加の権限が必要です。追加の権限については、「 [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)」を参照してください。  
+-   表形式サーバー モードのスタンドアロン Analysis Services インスタンスで実行されている表形式モデル データベース。 スタンドアロン Analysis Services インスタンスは、ファーム外部に配置されます。 ファーム外部のデータ ソースにアクセスするには、追加の権限が必要です。追加の権限については、「 [テーブル モデル データベースへの BI セマンティック モデル接続の作成](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)」を参照してください。  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブック。 Excel ブックに埋め込まれた [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースが、スタンドアロン Analysis Services 表形式モード サーバーで実行されるテーブル モデル データベースに相当します。 既に [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel と [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を使用している場合は、SharePoint ライブラリ内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックを参照する BI セマンティック モデル接続を定義し、既存の [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] データを使用して [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] レポートを作成できます。  SQL Server 2008 R2 または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] バージョンの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel で作成されたブックを使用できます。  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 09/01/2017
   
  [Power Pivot ブックへの BI セマンティック モデル接続の作成](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [テーブル モデル データベースへの BI セマンティック モデル接続の作成](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
  [Excel または Reporting Services での BI セマンティック モデル接続の使用](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   

@@ -91,7 +91,7 @@ SQL Server 2017、サポートに将来的に実行する追加の言語で、�
 
 + [SQL Server のハードウェアでの R のパフォーマンスの調整](..\r\sql-server-configuration-r-services.md)
 
-    ハードウェアを構成するためのガイダンスを提供する[!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md) ]および外部スクリプトのサポートを向上させる SQL Server インスタンスを構成するためにインストールします。 特に便利ですが**データベース管理者**です。
+    ハードウェアを構成するためのガイダンスを提供する[!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)]および外部スクリプトのサポートを向上させる SQL Server インスタンスを構成するためにインストールします。 特に便利ですが**データベース管理者**です。
 
 + [SQL Server - コードとデータの R のパフォーマンスの調整の最適化](..\r\r-and-data-optimization-r-services.md)
 

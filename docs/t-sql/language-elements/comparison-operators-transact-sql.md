@@ -44,9 +44,9 @@ ms.lasthandoff: 09/01/2017
 |[>= (以上)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|以上|  
 |[<= (以下)](../../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)|以下|  
 |[<> (等しくない)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)|等しくない|  
-|[! = (等しくない)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|等しくない (ISO 標準外)|  
-|[! < (より小さくない)](../../t-sql/language-elements/not-less-than-transact-sql.md)|より小さくない (ISO 標準外)|  
-|[! > (より大きくない)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|より大きくない (ISO 標準外)|  
+|[!= (等しくない)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|等しくない (ISO 標準外)|  
+|[!< (より小さくない)](../../t-sql/language-elements/not-less-than-transact-sql.md)|より小さくない (ISO 標準外)|  
+|[!> (より大きくない)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|より大きくない (ISO 標準外)|  
   
 ## <a name="boolean-data-type"></a>ブール値型  
  比較演算子の結果は、**ブール**データ型。 有効値には、TRUE、FALSE、UNKNOWN があります。 返す式、**ブール**データ型はブール式と呼ばれます。  

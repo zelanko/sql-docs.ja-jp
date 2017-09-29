@@ -71,7 +71,7 @@ SQLRETURN SQLDrivers(
  [出力]文字 (null 終了文字を除く) の合計数を返すバッファーへのポインターで返される使用可能な\* *DriverDescription*です。 返される文字数がより大きいかに等しい場合*BufferLength1*、ドライバーの説明で\* *DriverDescription*に切り捨てられます*BufferLength1* null 終端文字の長さマイナスです。  
   
  *DriverAttributes*  
- [出力](「コメント」を参照してください) ドライバー属性値のペアの一覧を返すバッファーへのポインター。  
+ [出力]\(「コメント」を参照してください) ドライバー属性値のペアの一覧を返すバッファーへのポインター。  
   
  場合*DriverAttributes*が NULL の場合、 *AttributesLengthPtr*はバイト (文字データの null 終端文字を除く) の合計数を返しますが、バッファーに返される使用可能なによって示される*DriverAttributes*です。  
   

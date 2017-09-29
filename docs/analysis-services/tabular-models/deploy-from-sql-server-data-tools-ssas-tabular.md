@@ -28,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 # <a name="deploy-from-sql-server-data-tools"></a>SQL Server データ ツールからの配置
   このトピックの SSDT で Deploy コマンドを使用して、テーブル モデル ソリューションを展開するのにタスクを使用します。  
   
-##  <a name="bkmk_deploy"></a> Configure deployment options and deployment server properties  
+##  <a name="bkmk_deploy"></a> 配置オプションおよび配置サーバー プロパティの構成  
  テーブル モデル ソリューションを配置する前に、まず、配置オプションと配置サーバーのプロパティを指定する必要があります。 展開のプロパティおよび設定に関する詳細については、次を参照してください。[表形式モデル ソリューションの配置](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)です。  
   
 #### <a name="to-configure-options-and-properties"></a>オプションとプロパティを構成するには  

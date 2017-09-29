@@ -50,7 +50,7 @@ A*非推奨の機能*将来のリリースで製品から廃止されますが�
 |多次元|プロアクティブ キャッシュ用の SQL Server テーブル通知。  <br />これに代えて、アクティブ キャッシュ用にポーリングを使用します。 <br />「[プロアクティブ キャッシュ (ディメンション)](../analysis-services/multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md)」および「[プロアクティブ キャッシュ (パーティション)](../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)」を参照してください。|  
 |多次元|セッション キューブ。 これに代わる機能はありません。|  
 |多次元|ローカル キューブ。 これに代わる機能はありません。|  
-|テーブル|表形式モデルの 1100 および 1103 互換性レベルは、将来のリリースではサポートされません。 代わりのモデルの互換性レベル 1200 以上に設定モデル定義を表形式メタデータに変換を開始します。 「 [Compatibility Level for Tabular models in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)」を参照してください。|  
+|テーブル|表形式モデルの 1100 および 1103 互換性レベルは、将来のリリースではサポートされません。 代わりのモデルの互換性レベル 1200 以上に設定モデル定義を表形式メタデータに変換を開始します。 「 [Analysis Services での表形式モデルの互換性レベル](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)」を参照してください。|  
 |ツール|SQL Server Profiler for Trace Capture<br /><br /> この機能に代えて、SQL Server Management Studio に組み込まれている Extended Events Profiler を使用します。  <br /> 「 [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)」を参照してください。|  
 |ツール|Server Profiler for Trace Replay <br />置換します。 これに代わる機能はありません。|  
 |トレース管理オブジェクトおよびトレース API|Microsoft.AnalysisServices.Trace オブジェクト (Analysis Services Trace および Replay オブジェクトの API を含みます)。 置き換えは、複数の手順で行います。<br /><br /> - トレース構成:  Microsoft.SqlServer.Management.XEvent<br />- トレース読み取り:  Microsoft.SqlServer.XEvent.Linq<br />- トレース再生: なし|  
