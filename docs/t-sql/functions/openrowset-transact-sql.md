@@ -115,7 +115,7 @@ OPENROWSET
 > [!NOTE]  
 >  OPENROWSET (BULK ...) を完全復旧モデルでデータのインポートに使用する場合、ログ記録は最適化されません。  
   
- 一括インポートのデータを準備する方法については、次を参照してください[データを一括エクスポートまたはインポート &#40; を準備します。。SQL Server &#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
+ 一括インポートのデータを準備する方法については、次を参照してください[データを一括エクスポートまたはインポート &#40; を準備しますSQL Server &#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
   
  '*data_file*'  
  データを対象テーブルにコピーするデータ ファイルの完全なパスを指定します。   
