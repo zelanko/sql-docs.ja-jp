@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: def6c774a66262f2baa7cdfc726a0ddf6c299075
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 936a53d9174b199860432e0cfcb9c8add97529ca
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (TRANSACT-SQL)
@@ -67,7 +67,7 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
   
 ![OPENJSON TVF の句での構文](../../relational-databases/json/media/openjson-shema-syntax.png "WITH OPENJSON 構文")
 
-*with_clause*それらの種類を持つ列の一覧を含む**OPENJSON**を返します。 既定では、 **OPENJSON**内のキーと一致する*jsonExpression*で列名を持つ*with_clause*です。 列名でキー名が一致しない場合は、使用できる、省略可能な*column_path*、これは、 [JSON パス式](../../relational-databases/json/json-path-expressions-sql-server.md)内のキーを参照する、 *jsonExpression*です。 
+*with_clause*それらの種類を持つ列の一覧を含む**OPENJSON**を返します。 既定では、 **OPENJSON**内のキーと一致する*jsonExpression*で列名を持つ*with_clause* (この場合、一致するキーはことを意味、大文字小文字を区別)。 列名でキー名が一致しない場合は、使用できる、省略可能な*column_path*、これは、 [JSON パス式](../../relational-databases/json/json-path-expressions-sql-server.md)内のキーを参照する、 *jsonExpression*です。 
 
 ## <a name="arguments"></a>引数  
 ### <a name="jsonexpression"></a>*jsonExpression*  
