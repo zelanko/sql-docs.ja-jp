@@ -22,11 +22,11 @@ caps.latest.revision: 40
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d848c756eee54184aa10b5553779d0ebf1807366
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: c5a9e33d2ea86fa57c0e7fee684b2096f4c459f5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>データベースの復旧モデルの表示または変更 (SQL Server)
@@ -36,13 +36,13 @@ ms.lasthandoff: 06/22/2017
   
   *復旧モデル* は、トランザクションをログに記録する方法、トランザクション ログのバックアップを必須 (および可能) にするかどうか、利用できる復元操作の種類などを制御するデータベース プロパティです。 復旧モデルの種類は、単純、完全、および一括ログの 3 種類です。 通常、データベースには完全復旧モデルまたは単純復旧モデルが使用されます。 データベースは、任意の時点で別の復旧モデルに切り替えることができます。 **model** データベースは、新しいデータベースの既定の復旧モデルを設定します。  
   
-  [復旧モデル](https://msdn.microsoft.com/library/ms189275.aspx)についての詳細な説明は、 [SQL Server Recovery Models](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) の提供する「 [SQL Server Recovery Models](https://www.mssqltips.com/)」 (SQL Server 復旧モデル) を参照してください。
+  [復旧モデル](recovery-models-sql-server.md)についての詳細な説明は、 [SQL Server Recovery Models](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) の提供する「 [SQL Server Recovery Models](https://www.mssqltips.com/)」 (SQL Server 復旧モデル) を参照してください。
   
   
 ##  <a name="BeforeYouBegin"></a> アンインストールの準備  
   
 
--   [Back up the transaction log](https://msdn.microsoft.com/library/ms179478.aspx) **before** switching from the [full recovery or bulk-logged recovery model](https://msdn.microsoft.com/library/ms189275.aspx).  
+-   [完全復旧モデルまたは一括ログ復旧モデル](recovery-models-sql-server.md)から切り替える**前**に、[トランザクション ログをバックアップ](back-up-a-transaction-log-sql-server.md)してください。  
   
 -   一括ログ復旧モデルでは特定の時点に復旧できません。 一括ログ復旧モデルでトランザクション ログの復元を必要とするトランザクションを実行すると、データが失われる可能性があります。 障害復旧シナリオでデータをより確実に復旧するには、次の条件下でのみ一括ログ復旧モデルに切り替えることをお勧めします。  
   

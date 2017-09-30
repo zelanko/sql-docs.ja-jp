@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
-ms.openlocfilehash: f13f4f60d8df7d2a2fb668cc6d5a93f092973116
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dcc8a068ee429f889726cfc1b5fa3d0be579135e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="how-query-store-collects-data"></a>クエリ ストアがデータを収集するしくみ
@@ -45,7 +45,7 @@ ms.lasthandoff: 07/31/2017
 |**sys.query_store_runtime_stats_interval**|クエリ ストアは、自動的に生成される時間枠 (間隔) ごとに時間を分割し、すべての実行済みプランにその間隔で集計された統計を格納します。 間隔のサイズは、([!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の) 構成オプションの統計収集間隔、または [ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) を使用する `INTERVAL_LENGTH_MINUTES` によって制御されます。|  
 |**sys.query_store_runtime_stats**|実行済みプランで集計されたランタイム統計です。 キャプチャされたすべてのメトリックが平均、最小、最大、標準偏差の 4 つの統計関数の形式で表されます。|  
   
- クエリ ストアのビューの詳細は、「 **クエリのストアを使用した、パフォーマンスの監視** 」の「 [関連するビュー、関数、プロシージャ](https://msdn.microsoft.com/library/dn817826.aspx)」のセクションを参照してください。  
+ クエリ ストアのビューの詳細は、「 **クエリのストアを使用した、パフォーマンスの監視** 」の「 [関連するビュー、関数、プロシージャ](monitoring-performance-by-using-the-query-store.md)」のセクションを参照してください。  
   
 ## <a name="query-processing"></a>クエリ処理  
  クエリ ストアは次の重要な点についてクエリ処理のパイプラインと対話します。  

@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 40b7bd5f5f8bf6682a7c85d332cce420baf06105
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 54be2f39c2f0b3c8ea640c1df720213f7936823d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>メモリ最適化テーブルでのトランザクション
@@ -84,18 +84,18 @@ SQL Server のトランザクション開始モードは次のとおりです。
   
   
   
-    SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-    GO  
+      SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
+      GO  
   
-    BEGIN TRANSACTION;  -- 明示的なトランザクション。  
+      BEGIN TRANSACTION;  -- Explicit transaction.  
   
       -- Order_mo  is a memory-optimized table.  
-    SELECT *  
+      SELECT *  
        FROM  
-                dbo.Order_mo  as o  WITH (SNAPSHOT)  -- テーブル ヒント。  
+                dbo.Order_mo  as o  WITH (SNAPSHOT)  -- Table hint.  
            JOIN dbo.Customer  as c  on c.CustomerId = o.CustomerId;  
       
-    COMMIT TRANSACTION;  
+      COMMIT TRANSACTION;  
   
 なお、データベース オプション `WITH (SNAPSHOT)` を使用することで、 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`ヒントの必要はなくなります。 このオプションを `ON`に設定すると、低い分離レベルでのメモリ最適化テーブルへのアクセスは、自動的に SNAPSHOT 分離に昇格されます。  
   
@@ -308,7 +308,7 @@ Transact-SQL コードの例を次に示します。
   
 - ネイティブ プロシージャの本文では、明示的なトランザクション制御ステートメントは許可されません。 BEGIN TRANSACTION、ROLLBACK TRANSACTION など、どれも許可されていません。  
   
-- ATOMIC ブロックに関するトランザクション制御の詳細については、「 [ATOMIC ブロック](https://msdn.microsoft.com/library/dn452281.aspx)」を参照してください。  
+- ATOMIC ブロックに関するトランザクション制御の詳細については、「 [ATOMIC ブロック](atomic-blocks-in-native-procedures.md)」を参照してください。  
   
 <a name="othertxnlinks44ni"/>  
   

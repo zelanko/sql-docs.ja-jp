@@ -161,7 +161,7 @@ ms.lasthandoff: 09/01/2017
  **ポート**  
  サーバーがクライアント接続をリッスンするポート番号を定義する整数のプロパティです。 このプロパティを設定しない場合、サーバーは最初の未使用ポートを動的に検出します。  
   
- このプロパティの既定値は 0 であり、ポート 2383 が既定により使用されます。 ポートの構成の詳細については、「 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご覧ください。  
+ このプロパティの既定値は 0 であり、ポート 2383 が既定により使用されます。 ポートの構成の詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご覧ください。  
   
  **ServerTimeout**  
  クエリのタイムアウトを秒単位で定義する整数です。 既定値は 3600 秒 (60 分) です。 ゼロ (0) はクエリがタイムアウトにならないことを指定します。  

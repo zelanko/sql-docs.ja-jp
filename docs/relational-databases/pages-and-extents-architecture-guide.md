@@ -17,11 +17,11 @@ caps.latest.revision: 2
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 970981a0f8db1baa802a68ea1186211f031488e6
+ms.translationtype: HT
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 0b7dc681acb41c7d90360ae67331621a738a7cfd
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/20/2017
 
 ---
 # <a name="pages-and-extents-architecture-guide"></a>ページとエクステントのアーキテクチャ ガイド
@@ -45,7 +45,7 @@ SQL Server では、ページのサイズは 8 KB です。 したがって、SQ
 |-------|-------|
 |Data |text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max)、xml データを除くすべてのデータが含まれるデータ行 (text in row が ON に設定されている場合)。 |
 |インデックス |インデックスのエントリ。 |
-|テスト/イメージ |ラージ オブジェクト データ型: text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max)、xml データ <br> 可変長列 (データ行のサイズが 8 KB を超える場合): varchar、nvarchar、varbinary、sql_variant |
+|テキスト/イメージ |ラージ オブジェクト データ型: text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max)、xml データ <br> 可変長列 (データ行のサイズが 8 KB を超える場合): varchar、nvarchar、varbinary、sql_variant |
 |グローバル アロケーション マップ、セカンダリ グローバル アロケーション マップ |エクステントが割り当てられているかどうかについての情報。 |
 |ページ空き容量 (PFS) |ページ割り当てとページ上で使用可能な空き容量に関する情報。 |
 |Index Allocation Map (Index Allocation Map) |テーブルまたはインデックスによって使用されるエクステントに関するアロケーション ユニットごとの情報。 |

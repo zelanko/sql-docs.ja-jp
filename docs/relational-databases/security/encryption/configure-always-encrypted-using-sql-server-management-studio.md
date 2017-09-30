@@ -20,17 +20,17 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 80c832db0ffdb9a3666b60a19fdf11a01750b2e1
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 097ce7fb331df64de9b293a6af9e05e7d95f1b37
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>SQL Server Management Studio を使用した Always Encrypted の構成
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-この記事では、[SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) を使用して Always Encrypted を構成し、Always Encrypted を使用したデータベースを管理するためのタスクについて説明します。
+この記事では、[SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) を使用して Always Encrypted を構成し、Always Encrypted を使用したデータベースを管理するためのタスクについて説明します。
 
 SSMS を使用して Always Encrypted を構成する場合、SSMS によって Always Encrypted のキーと機密データの両方が処理されます。結果、キーとデータは両方とも SSMS プロセス内ではプレーンテキストの形式で表示されます。 したがって、セキュリティで保護されたコンピューターで SSMS を実行することが重要です。 データベースが SQL Server でホストされている場合は、SQL Server インスタンスをホストするコンピューターとは異なるコンピューターで SSMS を実行する必要があります。 Always Encrypted の主な目的は、データベース システムが侵害されても、暗号化された機密データが確実に保護されるようにすることにあるので、SQL Server コンピューター上でキーまたは機密データを処理する PowerShell スクリプトが実行されると、機能の効果が低下したり無効になったりするおそれがあります。 追加の推奨事項については、 [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)(キー管理でのセキュリティに関する考慮事項) を参照してください。
 
@@ -89,7 +89,7 @@ SSN が `char(11)` テーブルで暗号化された `Patients` 列であると�
 
 ![always-encrypted-patients](../../../relational-databases/security/encryption/media/always-encrypted-patients.png)
  
-### <a name="en-dis"></a> Enabling and disabling Always Encrypted for a database connection   
+### <a name="en-dis"></a> データベース接続での Always Encrypted の有効化と無効化   
 
 データベース接続で Always Encrypted を有効にすると、以下の操作を透過的に試行するように、SQL Server Management Studio で使用される NET Framework Data Provider for SQL Server に指示されます。   
 -   暗号化された列から取得され、クエリ結果に返される値の暗号化を解除する。   
@@ -105,7 +105,7 @@ SSN が `char(11)` テーブルで暗号化された `Patients` 列であると�
 >  4.   **[追加のプロパティ]** タブを選択し、`Column Encryption Setting=Enabled` を入力する (Always Encrypted の動作を有効にする) か、設定を削除します (Always Encrypted の動作を無効にする)。   
 >  5.   **[接続]**をクリックします。   
    
-### <a name="param"></a>Parameterization for Always Encrypted   
+### <a name="param"></a>Always Encrypted のパラメーター化   
  
 Always Encrypted のパラメーター化は、Transact-SQL 変数をクエリ パラメーター ([SqlParameter クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)のインスタンス) に自動的に変換する、SQL Server Management Studio の機能です  (SSMS バージョン 17.0 以降が必要です)。これにより、基になる .NET Framework Data Provider for SQL Server は暗号化された列をターゲットとするデータを検出し、データベースに送信する前にそのデータを暗号化できます。 
   

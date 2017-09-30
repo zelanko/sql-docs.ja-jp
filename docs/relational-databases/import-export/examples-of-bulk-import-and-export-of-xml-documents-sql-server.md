@@ -22,11 +22,11 @@ caps.latest.revision: 65
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 17f350c10f32dbd230d7c372820178a3dde081d2
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 4e051789fad041a9515e00b01d6025cd2d7e6aed
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML ドキュメントの一括インポートと一括エクスポートの例 (SQL Server)
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   - [bcp ユーティリティを使用した一括データのインポートとエクスポート (SQL Server)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
    - [BULK INSERT または OPENROWSET(BULK...) を使用した一括データのインポート (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
     - [XML 一括ロード コンポーネントを使用して XML を SQL Server にインポートする方法](https://support.microsoft.com/en-us/kb/316005)
-     - [XML スキーマ コレクション (SQL Server)](https://msdn.microsoft.com/library/ms187856.aspx)
+     - [XML スキーマ コレクション (SQL Server)](../xml/xml-schema-collections-sql-server.md)
   
 ## <a name="examples"></a>使用例  
  次に例を示します。  

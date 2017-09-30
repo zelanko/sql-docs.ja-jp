@@ -23,10 +23,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09bb30a44ef1675353fe8fa5bd9245c3f25c3894
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6631665bbb24d8404e6b115ee0dd608bb6dbef85
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>満杯になったトランザクション ログのトラブルシューティング (SQL Server エラー 9002)
@@ -40,7 +40,7 @@ ms.lasthandoff: 07/31/2017
  特定の条件でログの切り捨てができなくなっている原因を見つけるには、**sys.database** カタログ ビューの **log_reuse_wait** 列と **log_reuse_wait_desc** 列を使用します。 詳細については、「[sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)」を参照してください。 ログの切り捨てが遅れる要因については、「[トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
   
 > **重要!!**  
->  データベースの復旧中に 9002 エラーが発生した場合、問題を解決した後で [ALTER DATABASE *database_name* SET ONLINE](https://msdn.microsoft.com/library/bb522682.aspx) ステートメントを使用してデータベースを復旧します。  
+>  データベースの復旧中に 9002 エラーが発生した場合、問題を解決した後で [ALTER DATABASE *database_name* SET ONLINE](../../t-sql/statements/alter-database-transact-sql-set-options.md) ステートメントを使用してデータベースを復旧します。  
   
  満杯になったトランザクション ログのその他の対処法には、以下があります。  
   
@@ -104,14 +104,14 @@ ms.lasthandoff: 07/31/2017
 ## <a name="complete-or-kill-a-long-running-transaction"></a>実行時間の長いトランザクションの完了または強制終了
 ### <a name="discovering-long-running-transactions"></a>実行時間の長いトランザクションの検出
 実行時間の非常に長いトランザクションがあると、トランザクション ログがいっぱいになる可能性があります。 実行時間の長いトランザクションを検索するには、以下のいずれかの方法を使用します。
- - **[sys.dm_tran_database_transactions](https://msdn.microsoft.com/library/ms186957.aspx)。**
-この動的管理ビューは、データベース レベルでのトランザクションに関する情報を返します。 実行時間の長いトランザクションで特に関係のある列としては、最初のログ レコードの時間 [(database_transaction_begin_time)](https://msdn.microsoft.com/library/ms186957.aspx)、トランザクションの現在の状態 [(database_transaction_state)](https://msdn.microsoft.com/library/ms186957.aspx)、トランザクション ログ内の開始レコードの [ログ シーケンス番号 (LSN)](https://msdn.microsoft.com/library/ms191459.aspx) [(database_transaction_begin_lsn)](https://msdn.microsoft.com/library/ms186957.aspx)があります。
+ - **[sys.dm_tran_database_transactions](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)。**
+この動的管理ビューは、データベース レベルでのトランザクションに関する情報を返します。 実行時間の長いトランザクションで特に関係のある列としては、最初のログ レコードの時間 [(database_transaction_begin_time)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)、トランザクションの現在の状態 [(database_transaction_state)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)、トランザクション ログ内の開始レコードの [ログ シーケンス番号 (LSN)](../backup-restore/recover-to-a-log-sequence-number-sql-server.md) [(database_transaction_begin_lsn)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)があります。
 
- - **[DBCC OPENTRAN](https://msdn.microsoft.com/library/ms182792.aspx)。**
+ - **[DBCC OPENTRAN](../../t-sql/database-console-commands/dbcc-opentran-transact-sql.md)。**
 このステートメントを使用すると、トランザクション所有者のユーザー ID を特定できます。これにより、トランザクションの実行元を特定して、より規則正しくトランザクションを終了する (トランザクションをロールバックするのではなくコミットする) ことができます。
 
 ### <a name="kill-a-transaction"></a>トランザクションの強制終了
-状況によっては、単にプロセスを終了する必要があります。このような場合、 [KILL](https://msdn.microsoft.com/library/ms173730.aspx) ステートメントを使用することがあります。 ただし、強制終了したくない重要なプロセスが実行中の場合は特に、このステートメントの使用には十分注意してください。 詳細については、「 [KILL (Transact-SQL)](https://msdn.microsoft.com/library/ms173730.aspx)」を参照してください。
+状況によっては、単にプロセスを終了する必要があります。このような場合、 [KILL](../../t-sql/language-elements/kill-transact-sql.md) ステートメントを使用することがあります。 ただし、強制終了したくない重要なプロセスが実行中の場合は特に、このステートメントの使用には十分注意してください。 詳細については、「 [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)」を参照してください。
 
 ## <a name="see-also"></a>参照  
 [サポート技術情報の記事 - SQL Server を実行しているコンピューターでトランザクション ログのサイズが予期せず増大する、または、ログがいっぱいになる](https://support.microsoft.com/en-us/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

@@ -15,10 +15,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 041ba9cd08e46fec7d9641b63f191cd924a37db0
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 97f98fe5190f03e1d9ac8e78d5832d3b55c5835f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="data-quality-projects-dqs"></a>データ品質プロジェクト (DQS)
@@ -60,7 +60,7 @@ ms.lasthandoff: 09/09/2017
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |データ品質プロジェクトの作成方法について説明します。|[データ品質プロジェクトを作成する](../data-quality-services/create-a-data-quality-project.md)|  
-|データ品質プロジェクトを開く、ロック解除する、名前を変更する、および削除する方法について説明します。|[データ品質プロジェクトを開く、ロックを解除する、名前を変更する、削除する](https://msdn.microsoft.com/library/hh510417.aspx)|  
+|データ品質プロジェクトを開く、ロック解除する、名前を変更する、および削除する方法について説明します。|[データ品質プロジェクトを開く、ロックを解除する、名前を変更する、削除する](open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]で Integration Services プロジェクトを開く方法について説明します。|[Data Quality Client で Integration Services プロジェクトを開く](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
 ## <a name="see-also"></a>参照  

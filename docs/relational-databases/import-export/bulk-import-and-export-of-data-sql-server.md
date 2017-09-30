@@ -29,10 +29,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: c51503eae95459aa4530032ef551d0eedf60caa4
-ms.openlocfilehash: 284ecb40056837fac33f71bcadf0a886293db6f6
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0cd72ac1a99d3a2ccf121b4b659229b2fc6117c0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>データの一括インポートと一括エクスポート (SQL Server)
@@ -50,7 +50,7 @@ ms.lasthandoff: 07/31/2017
 |[bcp ユーティリティ](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|データの一括エクスポートと一括インポート、およびフォーマット ファイルの生成を行うコマンド ライン ユーティリティ (Bcp.exe)。|可|可|  
 |[BULK INSERT ステートメント](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|データ ファイルのデータをデータベース テーブルまたはパーティション分割されていないビューに直接インポートする [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント。|可|不可|  
 |[INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメント](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|INSERT ステートメントでデータを選択するために OPENROWSET(BULK...) 関数を指定することによって、OPENROWSET 一括行セット プロバイダーを使用してデータを [!INCLUDE[tsql](../../includes/tsql-md.md)] テーブルに一括インポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメント。|可|いいえ| 
-|[SQL Server インポートおよびエクスポート ウィザード](https://msdn.microsoft.com/library/ms141209.aspx)|このウィザードでは、データセット、スプレッドシート、テキスト ファイルなど、さまざまな一般的なデータ形式の間でデータをインポートまたはエクスポートする簡単なパッケージが作成されます。|可|可|  
+|[SQL Server インポートおよびエクスポート ウィザード](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|このウィザードでは、データセット、スプレッドシート、テキスト ファイルなど、さまざまな一般的なデータ形式の間でデータをインポートまたはエクスポートする簡単なパッケージが作成されます。|可|可|  
   
 > [!IMPORTANT]
 > SQL Server の一括インポート操作では、コンマ区切り (CSV) ファイルがサポートされていません。 ただし、場合によっては、SQL Server に対してデータを一括インポートする際、CSV ファイルをデータ ファイルとして使用できます。 CSV ファイルのフィールド ターミネータは必ずしもコンマである必要はありません。 詳細については、「 [一括エクスポートまたは一括インポートのデータの準備 (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)」を参照してください。

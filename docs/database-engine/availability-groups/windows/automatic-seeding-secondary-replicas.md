@@ -3,7 +3,7 @@ title: "セカンダリ レプリカの自動シード処理 (SQL Server) | Micr
 description: "自動シード処理を使用して、セカンダリ レプリカを初期化します。"
 services: data-lake-analytics
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/25/2017
 ms.prod:
 - sql-server-2016
 - sql-server-2017
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Automatic seeding [SQL Server], secondary replica
 ms.assetid: 
 caps.latest.revision: 
-author: MikeRayMSFT
+author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: a472109765c0ac77e9064a385a7125877cee0423
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8c1fc9f84428fc60283d6d53bab21a90b5c4049d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>セカンダリ レプリカの自動シード処理
@@ -54,7 +54,7 @@ SQL Server 2012 および 2014 では、SQL Server Always On 可用性グルー�
 
 自動シード処理は、最大 5 つのデータベースを処理できるシングル スレッド プロセスです。 シングル スレッドは、可用性グループに複数のデータベースがある場合は特に、パフォーマンスに影響する可能性があります。
 
-自動シード処理では圧縮を使用できますが、既定では使用不可になっています。 圧縮を有効にすると、ネットワーク帯域幅が減り、プロセス速度が上がる可能性はありますが、その代わりにプロセッサのオーバーヘッドが増えます。 自動シード処理中に圧縮を使用するには、トレース フラグ 9567 を有効にします (「[可用性グループの圧縮の調整](tune-compression-for-availability-group.md)」を参照)。
+自動シード処理では圧縮を使用できますが、既定では使用不可になっています。 圧縮を有効にすると、ネットワーク帯域幅が減り、プロセス速度が上がる可能性はありますが、その代りにプロセッサのオーバーヘッドが増えます。 自動シード処理中に圧縮を使用するには、トレース フラグ 9567 を有効にします (「[可用性グループの圧縮の調整](tune-compression-for-availability-group.md)」を参照)。
 
 ### <a name = "disklayout"></a> ディスク レイアウト
 
@@ -64,7 +64,7 @@ SQL Server 2017 では、可用性グループに参加するすべてのレプ�
 
 次の表は、自動シード処理に対応できるサポート対象のデータ ディスク レイアウトの例をまとめたものです。
 
-|プライマリ インスタンス</br>既定のデータ パス|セカンダリ インスタンス</br>既定のデータ パス|プライマリ インスタンス</br>ソース ファイルの場所|セカンダリ インスタンス</br> ターゲット ファイルの場所
+|[プライマリ インスタンス]</br>既定のデータ パス|セカンダリ インスタンス</br>既定のデータ パス|[プライマリ インスタンス]</br>ソース ファイルの場所|セカンダリ インスタンス</br> ターゲット ファイルの場所
 |:------|:------|:------|:------
 |c:\\data\\ |/var/opt/mssql/data/ |c:\\data\\ |/var/opt/mssql/data/|
 |c:\\data\\ |/var/opt/mssql/data/ |c:\\data\\group1\\ |/var/opt/mssql/data/group1/|
@@ -73,7 +73,7 @@ SQL Server 2017 では、可用性グループに参加するすべてのレプ�
 
 プライマリおよびセカンダリのレプリカ データベースの場所がインスタンスの既定のパスではないシナリオは、この変更の影響を受けません。 セカンダリ レプリカ ファイルのパスをプライマリ レプリカ ファイルのパスと合わせるという要件は同じままです。
 
-|プライマリ インスタンス</br>既定のデータ パス|セカンダリ インスタンス</br>既定のデータ パス|プライマリ インスタンス</br>ファイルの場所|セカンダリ インスタンス</br> ファイルの場所
+|[プライマリ インスタンス]</br>既定のデータ パス|セカンダリ インスタンス</br>既定のデータ パス|[プライマリ インスタンス]</br>ファイルの場所|セカンダリ インスタンス</br> ファイルの場所
 |:------|:------|:------|:------
 |c:\\data\\ |c:\\data\\ |d:\\group1\\ |d:\\group1\\
 |c:\\data\\ |c:\\data\\ |d:\\data\\ |d:\\data\\
@@ -81,7 +81,7 @@ SQL Server 2017 では、可用性グループに参加するすべてのレプ�
 
 プライマリ レプリカとセカンダリ レプリカで既定のパスと既定以外のパスを混合していると、SQL Server 2017 は以前のリリースと異なる動作になります。 次の表は、SQL Server 2017 の動作の一覧です。
 
-|[プライマリ インスタンス]</br>既定のデータ パス |セカンダリ インスタンス</br>既定のデータ パス |プライマリ インスタンス</br>ファイルの場所 |SQL Server 2016 </br>セカンダリ インスタンス</br>ファイルの場所 |SQL Server 2017 </br>セカンダリ インスタンス</br>ファイルの場所
+|[プライマリ インスタンス]</br>既定のデータ パス |セカンダリ インスタンス</br>既定のデータ パス |[プライマリ インスタンス]</br>ファイルの場所 |SQL Server 2016 </br>セカンダリ インスタンス</br>ファイルの場所 |SQL Server 2017 </br>セカンダリ インスタンス</br>ファイルの場所
 |:------|:------|:------|:------|:------
 |c:\\data\\ |d:\\data\\ |c:\\data\\ |c:\\data\\ |d:\\data\\ 
 |c:\\data\\ |d:\\data\\ |c:\\data\\group1\\ |c:\\data\\group1\\ |d:\\data\\group1\\
@@ -273,11 +273,9 @@ GO
 
 [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)
 
-[CREATE AVAILABILITY GROUP (Transact-SQL)](https://msdn.microsoft.com/library/ff878399.aspx)
+[CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
 [Always On 可用性グループのトラブルシューティングと監視のガイド](http://technet.microsoft.com/library/dn135328.aspx)
-
-> この記事の執筆者は [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt) (マイクロソフト MVP) です。
 
 <!--Image references-->
 [1]: ./media/auto-seed-new-availability-group.png

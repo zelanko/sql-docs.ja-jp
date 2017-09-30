@@ -24,10 +24,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0d09693778fa9382d40dfb02f0c3fb4b212f86ed
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 4557b2183cf0043050cbf240b837b53796150653
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>SSMS を使用したデータベース バックアップの復元
@@ -36,7 +36,7 @@ ms.lasthandoff: 07/31/2017
   このトピックでは、SQL Server Management Studio を使用して、データベースの完全バックアップを復元する方法について説明します。    
        
 ### <a name="important"></a>重要:    
-完全復旧モデルまたは一括ログ復旧モデルでデータベースを復旧する前に、アクティブ トランザクション ログ ( [ログの末尾](https://msdn.microsoft.com/library/ms179314.aspx)と呼ばれる) をバックアップする必要がある場合があります。 詳細については、「 [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)と呼ばれる) をバックアップする必要がある場合があります。  
+完全復旧モデルまたは一括ログ復旧モデルでデータベースを復旧する前に、アクティブ トランザクション ログ ( [ログの末尾](tail-log-backups-sql-server.md)と呼ばれる) をバックアップする必要がある場合があります。 詳細については、「 [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)と呼ばれる) をバックアップする必要がある場合があります。  
 
 別のインスタンスからデータベースを復元するときは、「 [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」の情報を考慮してください。   
     

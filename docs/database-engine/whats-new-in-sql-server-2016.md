@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 0d4b7b0b668c6ac8ff2808f2d02576c9285e682a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0feecce7b6f80df96d77273863ca1873bd74523e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>データベース エンジンの新機能 - SQL Server 2016
@@ -438,7 +438,7 @@ Always On で、暗号化されたデータベースがサポートされるよ�
 ###  <a name="Tools"></a> ツールの機能強化
 
 ####  <a name="SSMS"></a> Management Studio
-最新の [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)をダウンロードしてください。
+最新の [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)をダウンロードしてください。
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] では、Microsoft Azure への接続用に開発中の Active Directory 認証ライブラリ (ADAL) がサポートされます。 これは、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] で使用される証明書ベース認証に代わるものです。
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のインストールでは、前提条件として .NET 4.6 をインストールする必要があります。 .NET 4.6 は、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のインストール時のセットアップに応じて自動的にインストールされます。

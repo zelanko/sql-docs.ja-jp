@@ -14,11 +14,11 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4d54ac6d74c9794acfcc241e56ee6c128c9c50e2
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: db336415059b9bc6b6251d9e590ac852903b66f8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-engine-tutorials"></a>データベース エンジンのチュートリアル
@@ -48,10 +48,10 @@ ms.lasthandoff: 06/22/2017
 [チュートリアル : ポリシー ベースの管理を使用したサーバーの管理](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 このチュートリアルでは、サイト管理の基準を適用するポリシーを作成する方法を説明します。  
   
-[チュートリアル: Windows Azure Blob Storage サービスへの SQL Server のバックアップと復元](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+[チュートリアル: Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
 このチュートリアルでは、Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元を実行する方法について説明します。  
   
-[Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases (チュートリアル: Microsoft Azure BLOB ストレージ サービスと SQL Server 2016 データベースの使用) ](https://msdn.microsoft.com/library/dn466438.aspx)  
+[Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases (チュートリアル: Microsoft Azure BLOB ストレージ サービスと SQL Server 2016 データベースの使用) ](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
 このチュートリアルにより、Windows Azure BLOB ストレージ サービスに SQL Server データ ファイルを直接格納する方法について把握できます。  
   
 ## <a name="see-also"></a>参照  

@@ -15,11 +15,11 @@ caps.latest.revision: 31
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9113272fdba93720cdca5dcedb737092af8d4e1d
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 69fce52c0c651388656f5065b1b7b84ff98cbe82
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>列ストア インデックス - データ読み込みガイダンス
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
 
 ## <a name="what-is-bulk-loading"></a>一括読み込みとは
 *一括読み込み*は、大量の行がデータ ストアに追加される方法を表します。 これは、バッチの行を対象とするため、データを列ストア インデックスに移動するために、最もパフォーマンスが良い方法です。 一括読み込みでは、行グループを最大容量まで入れ、直接列ストアに圧縮します。 行グループごとに最小値の 102,400 行に一致しない読み込みの最後の行のみが、デルタストアに移動されます。  
-一括読み込みを実行するには、[bcp ユーティリティ](https://msdn.microsoft.com/library/ms162802.aspx)、[Integration Services](https://msdn.microsoft.com/library/ms141026.aspx) を使用したり、ステージング テーブルから行を選択したりすることができます。
+一括読み込みを実行するには、[bcp ユーティリティ](../../tools/bcp-utility.md)、[Integration Services](../../integration-services/sql-server-integration-services.md) を使用したり、ステージング テーブルから行を選択したりすることができます。
 
 ![クラスター化列ストア インデックスへの読み込み](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Loading into a clustered columnstore index")  
   
@@ -103,7 +103,7 @@ INSERT INTO <columnstore index>  WITH (TABLOCK)  SELECT <list of columns> FROM <
   
 ## <a name="what-is-trickle-insert"></a>トリクル挿入とは
 
-*トリクル挿入*は、個々の行が列ストア インデックスに移動する方法を表します。 トリクル挿入では、[INSERT INTO](https://msdn.microsoft.com/library/ms174335.aspx) ステートメントを使用します。 トリクル挿入を使用すると、すべての行はデルタストアに移動されます。 これは行が少数のときに便利ですが、大量の読み込みは実用的ではありません。
+*トリクル挿入*は、個々の行が列ストア インデックスに移動する方法を表します。 トリクル挿入では、[INSERT INTO](../../t-sql/statements/insert-transact-sql.md) ステートメントを使用します。 トリクル挿入を使用すると、すべての行はデルタストアに移動されます。 これは行が少数のときに便利ですが、大量の読み込みは実用的ではありません。
   
 ```  
 INSERT INTO <table-name> VALUES (<set of values>)  

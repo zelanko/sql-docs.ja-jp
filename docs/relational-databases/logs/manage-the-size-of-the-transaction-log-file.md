@@ -17,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
-ms.openlocfilehash: cd1931ef0f77c0a1e31c29833f38c51416e267c8
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 9076e3fbddd2af5459e4d8895ce969c61a4315ad
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>トランザクション ログ ファイルのサイズの管理
@@ -61,7 +61,7 @@ ms.lasthandoff: 07/31/2017
   
 
 ##  <a name="AddOrEnlarge"></a> ログ ファイルの追加または拡大  
- 既存のログ ファイルを拡大するか (ディスク領域が十分にある場合)、通常、別のディスク上にあるデータベースにログ ファイルを追加することによって、領域を確保することができます。  
+ 既存のログ ファイルを拡大するか (ディスク領域が十分にある場合)、別のディスク上にあるデータベースにログ ファイルを追加することによって、領域を確保することができます。  
   
 -   データベースにログ ファイルを追加するには、ALTER DATABASE ステートメントの ADD LOG FILE 句を使用します。 ログ ファイルを追加すると、ログを大きくすることができます。  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 07/31/2017
 -   現在のサイズを KB、MB、GB、および TB 単位で変更する場合は、SIZE オプションを使用します。  
   -   拡張増分値で変更するには、FILEGROWTH オプションを使用します。 0 は、自動拡張がオフで、領域を追加できないことを示します。 ログ ファイルの自動拡張の増分値が小さい場合も、パフォーマンスが低下することがあります。 ログ ファイルの拡張増分値は、拡張を頻繁に行わなくても済むように十分な大きさにする必要があります。 通常は、既定の拡張増分値 (10%) が適しています。  
 
-ログ ファイルのファイル拡張プロパティを変更する方法については、「 [ALTER DATABASE (Transact-SQL)](https://msdn.microsoft.com/library/ms174269.aspx)」を参照してください。  
+ログ ファイルのファイル拡張プロパティを変更する方法については、「 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
 -   ログ ファイルの最大サイズを KB、MB、GB、および TB 単位で制御するか、拡張値を UNLIMITED に設定するには、MAXSIZE オプションを使用します。  
   

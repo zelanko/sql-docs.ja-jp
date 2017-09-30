@@ -14,11 +14,11 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1167a74aff5a5cfa495bc5a00a6b52e30a5c2e7b
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 9c4dfd2aa4f511e9ef7615dccf05ed46757f1e0c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>列マスター キーを作成して保存する (Always Encrypted)
@@ -51,7 +51,7 @@ Always Encrypted が有効なクライアント ドライバーは Always Encryp
 
 ### <a name="supported-tools"></a>サポートされているツール
 
-[SQL Server Management Studio](https://msdn.microsoft.com/library/Hh213248.aspx) と [SQL Server PowerShell モジュール](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) を使用して、Always Encrypted を構成し、Always Encrypted キーを管理することができます。 これらのツールをサポートしているキー ストアの一覧は、次を参照してください。
+[SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) と [SQL Server PowerShell モジュール](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) を使用して、Always Encrypted を構成し、Always Encrypted キーを管理することができます。 これらのツールをサポートしているキー ストアの一覧は、次を参照してください。
 
 - [SQL Server Management Studio を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 - [PowerShell を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)

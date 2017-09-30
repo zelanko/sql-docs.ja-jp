@@ -18,11 +18,11 @@ caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ba3bc85a1b6fced603f9f0a137f638a921c0f447
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 41831fe1852600666f5f3cf370cbab675e723cca
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>トランザクション ログのバックアップ (SQL Server)
@@ -31,11 +31,11 @@ ms.lasthandoff: 06/22/2017
    
 ##  <a name="Restrictions"></a> 制限事項と制約事項  
   
--   BACKUP ステートメントは、明示的または [暗黙的](https://msdn.microsoft.com/library/ms187807.aspx) なトランザクションでは使用できません。  明示的なトランザクションとは、トランザクションの開始と終了を明示的に定義したものです。
+-   BACKUP ステートメントは、明示的または [暗黙的](../../t-sql/statements/set-implicit-transactions-transact-sql.md) なトランザクションでは使用できません。  明示的なトランザクションとは、トランザクションの開始と終了を明示的に定義したものです。
   
 ##  <a name="Recommendations"></a> 推奨事項  
   
--   データベースで完全または一括ログ[復旧モデル](https://msdn.microsoft.com/library/ms189275.aspx)を使用している場合は、データを保護し、[トランザクション ログがいっぱいになる](https://msdn.microsoft.com/library/ms175495.aspx)のを防ぐために、十分な頻度で定期的にトランザクション ログをバックアップする必要があります。 これによってログが切り捨てられ、特定の時点へのデータベースの復元がサポートされます。 
+-   データベースで完全または一括ログ[復旧モデル](recovery-models-sql-server.md)を使用している場合は、データを保護し、[トランザクション ログがいっぱいになる](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)のを防ぐために、十分な頻度で定期的にトランザクション ログをバックアップする必要があります。 これによってログが切り捨てられ、特定の時点へのデータベースの復元がサポートされます。 
   
 -   既定では、バックアップ操作が成功するたびに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログおよびシステム イベント ログにエントリが 1 つ追加されます。 ログを頻繁にバックアップすると、これらの成功メッセージがすぐに蓄積され、エラー ログが大きくなり、他のメッセージを探すのが困難になります。 そのような場合、これらのエントリに依存するスクリプトがなければ、トレース フラグ 3226 を使用することによってこれらのログ エントリを除外できます。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。  
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
-ms.openlocfilehash: c105f4fae3b3fffb61ef892cecbbe75754ccfd28
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: fb653826a9a53251cbd5fe6ef20b4b0f664c1422
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 内の SQL Server データ ファイル
@@ -30,7 +30,7 @@ ms.lasthandoff: 07/31/2017
   
  このトピックでは、SQL Server データ ファイルを Microsoft Azure ストレージ サービスに格納する場合の重要な概念と考慮事項について説明します。  
   
- この新機能の使用方法に関する実際の実地体験については、「 [チュートリアル: Microsoft Azure ストレージ サービス内の SQL Server データ ファイル ](https://msdn.microsoft.com/library/dn466438.aspx)」をご覧ください。  
+ この新機能の使用方法に関する実際の実地体験については、「 [チュートリアル: Microsoft Azure ストレージ サービス内の SQL Server データ ファイル ](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」をご覧ください。  
   
 ## <a name="why-use-sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure で SQL Server データ ファイルを使用する理由 
   
@@ -38,7 +38,8 @@ ms.lasthandoff: 07/31/2017
   
 -   **コストと無制限のストレージの利点:** この機能を使用すると、オンプレミスの環境のコンピューティング リソースを活用しつつ、Microsoft Azure 内に無制限のオフサイト ストレージを確保することができます。 格納場所として Microsoft Azure を使用すると、ハードウェア管理のオーバーヘッドがなく、アプリケーション ロジックに専念することが容易になります。 内部設置型のコンピューティング ノードが失われた場合は、データを移動することなく新しいノードをセットアップできます。  
   
--   **高可用性と障害復旧の利点:** Microsoft Azure 機能で SQL Server データ ファイルを使用すると、高可用性と障害復旧のソリューションが簡略化される可能性があります。 たとえば、Microsoft Azure の仮想マシンまたは SQL Server のインスタンスがクラッシュした場合、Microsoft Azure BLOB へのリンクを再設定するだけで、新しい SQL Server インスタンスにデータベースを再作成できます。  
+-   
+            **高可用性とディザスター リカバリーの利点:** Microsoft Azure 機能で SQL Server データ ファイルを使用すると、高可用性とディザスター リカバリーのソリューションが簡略化される可能性があります。 たとえば、Microsoft Azure の仮想マシンまたは SQL Server のインスタンスがクラッシュした場合、Microsoft Azure BLOB へのリンクを再設定するだけで、新しい SQL Server インスタンスにデータベースを再作成できます。  
   
 -   **セキュリティの利点:** この新しい機能強化では、コンピューティング インスタンスをストレージ インスタンスから分離することができます。 データベースをフルに暗号化し、暗号化解除をストレージ インスタンスではなくコンピューティング インスタンスのみで行うことができます。 つまり、この新しい機能強化では、データとは物理的に分離された TDE (Transparent Data Encryption: 透過的なデータ暗号化) 証明書を使用して、パブリック クラウドに置くすべてのデータを暗号化できます。 TDE キーは、物理的に安全なオンプレミスのコンピューターに格納され、ローカルでバックアップされている master データベースに保存できます。 これらのローカル キーを使用して、Microsoft Azure ストレージ上に存在するデータを暗号化することができます。 クラウド内のストレージ アカウントの資格情報が盗用されても、TDE 証明書は常に内部設置型の環境にあるため、データの安全性が維持されます。  
   
@@ -134,7 +135,7 @@ ON
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio のサポート  
  SQL Server Management Studio では、複数のダイアログ ウィンドウでこの機能を使用することができます。 たとえば、ストレージ コンテナーの URL パス (https://teststorageaccnt.blob.core.windows.net/testcontainer/ など) を、
  
- **[新しいデータベース]** 、 **[データベースのアタッチ]**、 **[データベースの復元]**などの複数のダイアログ ウィンドウの **[パス]**として入力できます。 詳細については、「 [チュートリアル: Windows Azure ストレージ サービス内の SQL Server データ ファイル](https://msdn.microsoft.com/library/dn466438.aspx)」をご覧ください。  
+ **[新しいデータベース]** 、 **[データベースのアタッチ]**、 **[データベースの復元]**などの複数のダイアログ ウィンドウの **[パス]**として入力できます。 詳細については、「 [チュートリアル: Windows Azure ストレージ サービス内の SQL Server データ ファイル](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」をご覧ください。  
   
 ### <a name="sql-server-management-objects-support"></a>SQL Server 管理オブジェクトのサポート  
  Azure 機能で SQL Server データ ファイルを使用する場合は、すべての SQL Server 管理オブジェクト (SMO) がサポートされます。 SMO オブジェクトにファイル パスが必要であれば、ローカル ファイル パスの代わりに BLOB の URL 形式 (`https://teststorageaccnt.blob.core.windows.net/testcontainer/` など) を使用します。 SQL Server 管理オブジェクト (SMO) の詳細については、SQL Server オンライン ブックの「[SQL Server 管理オブジェクト &#40;SMO&#41; プログラミング ガイド](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) 」をご覧ください。  
@@ -155,10 +156,10 @@ ON
     解決方法: Azure Storage にあるアクティブなデータベース ファイルで使用中の資格情報を削除しようとすると、このエラーが発生することがあります。 資格情報を削除するには、まずこのデータベース ファイルのある関連 BLOB を削除する必要があります。 アクティブなリースを保持している BLOB を削除するには、先にリースを終了する必要があります。  
   
 -   *コンテナーに対して Shared Access Signature が正しく作成されていません。*   
-     解決方法: コンテナーに対して Shared Access Signature が正しく作成されていることを確認します。 「 [チュートリアル: Microsoft Azure ストレージ サービス内の SQL Server データ ファイル ](https://msdn.microsoft.com/library/dn466435.aspx)」のレッスン 2 で示されている指示を確認してください。  
+     解決方法: コンテナーに対して Shared Access Signature が正しく作成されていることを確認します。 「 [チュートリアル: Microsoft Azure ストレージ サービス内の SQL Server データ ファイル ](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)」のレッスン 2 で示されている指示を確認してください。  
   
 -   *SQL Server 資格情報が正しく作成されていません。*   
-    解決策: **[ID]** フィールドに 'Shared Access Signature' を使用して、シークレットを正しく作成したことを確認します。 「 [チュートリアル: Microsoft Azure ストレージ サービス内の SQL Server データ ファイル](https://msdn.microsoft.com/library/dn466436.aspx)」のレッスン 3 で示されている指示を確認してください。  
+    解決策: **[ID]** フィールドに 'Shared Access Signature' を使用して、シークレットを正しく作成したことを確認します。 「 [チュートリアル: Microsoft Azure ストレージ サービス内の SQL Server データ ファイル](../lesson-3-database-backup-to-url.md)」のレッスン 3 で示されている指示を確認してください。  
   
  **BLOB リース エラー**  
   
@@ -167,10 +168,10 @@ ON
  **データベース エラー**  
   
 1.  *データベースの作成中にエラーが発生しました*   
-    解決策: 「 [チュートリアル: Microsoft Azure ストレージ サービス内の SQL Server データ ファイル](https://msdn.microsoft.com/library/dn466431.aspx)」のレッスン 4 で示されている指示を確認してください。  
+    解決策: 「 [チュートリアル: Microsoft Azure ストレージ サービス内の SQL Server データ ファイル](../lesson-4-restore-database-to-virtual-machine-from-url.md)」のレッスン 4 で示されている指示を確認してください。  
   
 2.  *ALTER ステートメントの実行中にエラーが発生しました*   
-    解決方法: ALTER DATABASE ステートメントは、必ずデータベースがオンライン状態のときに実行してください。 データ ファイルを Azure Storage にコピーするときは常に、ブロック BLOB ではなくページ BLOB を作成します。 そうしないと、ALTER DATABASE は失敗します。 「 [チュートリアル: Microsoft Azure ストレージ サービス内の SQL Server データ ファイル](https://msdn.microsoft.com/library/dn466438.aspx)」のレッスン 7 で示されている指示を確認してください。  
+    解決方法: ALTER DATABASE ステートメントは、必ずデータベースがオンライン状態のときに実行してください。 データ ファイルを Azure Storage にコピーするときは常に、ブロック BLOB ではなくページ BLOB を作成します。 そうしないと、ALTER DATABASE は失敗します。 「 [チュートリアル: Microsoft Azure ストレージ サービス内の SQL Server データ ファイル](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」のレッスン 7 で示されている指示を確認してください。  
   
 3.  *エラー コード 5120 物理ファイル "%.\*ls" を開けません。オペレーティング システム エラー %d: "%ls"*   
     解決方法: 現在、この新しい機能強化では、Azure Storage 内の同じデータベース ファイルに複数の SQL Server インスタンスで同時にアクセスすることはできません。 ServerA がアクティブなデータベース ファイルとオンライン接続されているときに、誤って起動された ServerB に同じデータ ファイルを指すデータベースがある場合、2 番目のサーバーでは、次のエラーでデータベースの起動に失敗します。エラー コード *5120 物理ファイル "%.\*ls" を開けません。オペレーティング システム エラー %d: "%ls"*。  

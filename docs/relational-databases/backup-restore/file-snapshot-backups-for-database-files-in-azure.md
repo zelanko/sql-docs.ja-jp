@@ -16,11 +16,11 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ed2e98c34b3efed454130e7e1c6de86545ba6aea
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 509c4b512bc1f0aeafcd82eb896b9291af450aff
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure でのデータベース ファイルのファイル スナップショット バックアップ
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 >  トランザクション ログのバックアップ チェーンの確立に必要な最初の完全バックアップ (ファイル スナップショット バックアップの場合もあり) の後、各トランザクション ログのファイル スナップショット ファイルはすべて、データベースの復元やログの復元の実行に使用できるため、トランザクション ログのバックアップのみを実行するのみで済みます。 データベースの最初の完全バックアップの後は、各ファイル スナップショットや各データベース ファイルのベース BLOB の現在の状態の違いは Azure BLOB ストレージ サービスが処理するため、追加の完全バックアップや差分バックアップは不要です。  
   
 > [!NOTE]  
->  Microsoft Azure BLOB ストレージ サービスでの SQL Server 2016 の使用方法に関するチュートリアルについては、「 [チュートリアル: Windows Azure ストレージ サービス内の SQL Server データ ファイル](https://msdn.microsoft.com/library/dn466438.aspx)」をご覧ください。  
+>  Microsoft Azure BLOB ストレージ サービスでの SQL Server 2016 の使用方法に関するチュートリアルについては、「 [チュートリアル: Windows Azure ストレージ サービス内の SQL Server データ ファイル](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」をご覧ください。  
   
 ### <a name="restore-using-file-snapshot-backups"></a>ファイル スナップショット バックアップを使用した復元  
  各ファイル スナップショット バックアップ セットには各データベース ファイルのファイル スナップショットが含まれているため、復元プロセスには、最大で隣接する 2 つのファイル スナップショット バックアップ セットが必要です。 これは、バックアップ セットが完全バックアップまたはログ バックアップからのものであるかに関係なく当てはまります。 これは、従来のストリーミング バックアップ ファイルを使用して復元プロセスを実行するときとまったく異なります。 従来のストリーミング バックアップでは、復元プロセスにバックアップ セットのチェーン全体 (完全バックアップ、差分バックアップ、1 つ以上のトランザクション ログのバックアップ) を使用する必要があります。 復元プロセスの復旧の部分は、復元にファイル スナップショット バックアップまたはストリーミング バックアップ セットを使用しているかどうかに関係なく、同じです。  
@@ -184,7 +184,7 @@ GO
  どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツ改善のため、フィードバックをお待ちしています。 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20File-Snapshot%20Backups%20for%20Database%20Files%20in%20Azure%20page) にコメントをお送りください  
   
 ## <a name="see-also"></a>参照  
- [チュートリアル: Windows Azure ストレージ サービス内の SQL Server データ ファイル](https://msdn.microsoft.com/library/dn466438.aspx)  
+ [チュートリアル: Windows Azure ストレージ サービス内の SQL Server データ ファイル](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   
 

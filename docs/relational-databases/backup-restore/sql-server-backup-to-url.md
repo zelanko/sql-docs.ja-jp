@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7b520a605648e8619f8462ae9125842fdeb37ebc
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d0fea4f1ffe507d0b410a16a668a138a7f0dee2e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server Backup to URL
@@ -259,7 +259,7 @@ SQL Server 資格情報を使用して SQL Server Management Studio のバック
   
      [[データベースの復元] &#40;[全般] ページ&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
-     [データベースの復元 &#40;ファイル ページ&#41;](../../relational-databases/backup-restore/restore-database-files-page.md)  
+     [[データベースの復元] &#40;[ファイル] ページ&#41;](../../relational-databases/backup-restore/restore-database-files-page.md)  
   
      [[データベースの復元] &#40;[オプション] ページ&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)  
   
@@ -273,7 +273,7 @@ SQL Server 資格情報を使用して SQL Server Management Studio のバック
 -   [STOPAT を使って特定の時点の状態に復元する](#PITR)  
   
 > [!NOTE]  
->  Microsoft Azure BLOB ストレージ サービスでの SQL Server 2016 の使用方法に関するチュートリアルについては、「 [チュートリアル: Windows Azure ストレージ サービス内の SQL Server データ ファイル](https://msdn.microsoft.com/library/dn466438.aspx)」をご覧ください。  
+>  Microsoft Azure BLOB ストレージ サービスでの SQL Server 2016 の使用方法に関するチュートリアルについては、「 [チュートリアル: Windows Azure ストレージ サービス内の SQL Server データ ファイル](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」をご覧ください。  
   
 ###  <a name="SAS"></a> Shared Access Signature の作成  
  次の例では、新しく作成されたコンテナーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報の作成に使用できる Shared Access Signature を作成します。 次のスクリプトは、保存されたアクセス ポリシーに関連付けられた Shared Access Signature を作成します。 詳細については、「 [Shared Access Signature、第 1 部: SAS モデルについて](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)」を参照してください。 この例では、Microsoft Azure Powershell が必要です。 Azure PowerShell のインストールと使用方法については、「 [Azure PowerShell のインストールおよび構成方法](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)」をご覧ください。  
@@ -412,6 +412,6 @@ Write-Host $tSql
 ## <a name="see-also"></a>参照  
  [SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [システム データベースのバックアップと復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
- [チュートリアル: Windows Azure ストレージ サービス内の SQL Server データ ファイル](https://msdn.microsoft.com/library/dn466438.aspx)  
+ [チュートリアル: Windows Azure ストレージ サービス内の SQL Server データ ファイル](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   

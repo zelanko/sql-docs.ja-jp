@@ -18,11 +18,11 @@ caps.latest.revision: 65
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d23b661d9fd99090a5140100513886d8351460b9
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6e2b36af7393ecd115feefb5c3dffba5e28d1304
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="the-transaction-log-sql-server"></a>トランザクション ログ (SQL Server)
@@ -44,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
 -   トランザクション レプリケーションのサポート  
   
--   高可用性および災害復旧ソリューションのサポート: [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、データベース ミラーリング、およびログ配布
+-   高可用性およびディザスター リカバリー ソリューションのサポート: [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、データベース ミラーリング、およびログ配布
 
 ## <a name="individual-transaction-recovery"></a>個別のトランザクションの復旧
 アプリケーションで ROLLBACK ステートメントが実行されるか、データベース エンジンでクライアントとの通信の喪失などのエラーが検出された場合、未完了のトランザクションによって加えられた変更をロールバックするために、ログ レコードが使用されます。 
@@ -60,7 +60,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="supporting-transactional-replication"></a>トランザクション レプリケーションのサポート
 ログ リーダー エージェントは、トランザクション レプリケーション用に構成された各データベースのトランザクション ログを監視し、レプリケーションのマークが付けられたトランザクションをトランザクション ログからディストリビューション データベースにコピーします。 詳しくは、「 [トランザクション レプリケーションの動作方法](http://msdn.microsoft.com/library/ms151706.aspx)」をご覧ください。
 
-## <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>高可用性と障害復旧ソリューションのサポート
+## <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>高可用性とディザスター リカバリー ソリューションのサポート
 スタンバイ サーバー ソリューション、AlwaysOn 可用性グループ、データベース ミラーリング、およびログ配布は、トランザクション ログに大きく依存しています。 
 
 AlwaysOn 可用性グループのシナリオでは、データベース (プライマリ レプリカ) に対するすべての更新は、別に存在するデータベースの完全なコピー (セカンダリ レプリカ) で直ちに再現されます。 プライマリ レプリカは各ログ レコードを直ちにセカンダリ レプリカに送信し、セカンダリ レプリカは受信したログ レコードを可用性グループのデータベースに適用します。このようにして継続的に展開されます。 詳しくは、「 [AlwaysOn フェールオーバー クラスター インスタンス](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」をご覧ください。
@@ -78,7 +78,7 @@ AlwaysOn 可用性グループのシナリオでは、データベース (プラ
 -  トランザクション ログは、複数のファイルとして実装できます。 ログの FILEGROWTH 値を設定することで、これらのファイルが自動的に拡張されるように定義できます。 これにより、トランザクション ログが領域不足になる可能性が減り、同時に管理のオーバーヘッドも減少します。 詳しくは、「 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)」をご覧ください。
 -  ログ ファイル内の領域を再利用するメカニズムは高速で、トランザクションのスループットに及ぼす影響も最小限で済みます。
 
-##  <a name="Truncation"></a> Transaction log truncation  
+##  <a name="Truncation"></a> トランザクション ログの切り捨て  
  ログの切り捨てによりログ ファイルの領域が解放され、トランザクション ログで再利用できるようになります。 トランザクション ログの定期的な切り捨ては、ログがいっぱいにならないようにするために不可欠です (実際にいっぱになります)。 いくつかの要因によってログの切り捨てが遅れる可能性があるため、ログのサイズを監視することは重要です。 一部の操作は、トランザクション ログのサイズへの影響を軽減するためにログへの記録を最小限に抑えることができます。  
  
   ログの切り捨てでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの論理トランザクション ログから非アクティブな仮想ログ ファイルが削除されます。また、論理ログの領域が解放され、物理トランザクション ログで再利用できるようになります。 トランザクション ログが切り捨てられなければ、物理ログ ファイルに割り当てられているディスク上の領域がいっぱいになってしまいます。  
@@ -118,12 +118,12 @@ AlwaysOn 可用性グループのシナリオでは、データベース (プラ
 |13|OLDEST_PAGE|データベースが間接的なチェックポイントを使用するように構成されている場合、データベース上の最も古いページはチェックポイントの LSN よりも古くなることがある。 この場合、最も古いページのログの切り捨てが遅れる可能性があります (すべての復旧モデル)。<br /><br /> 間接的なチェックポイントの詳細については、「 [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)」を参照してください。|  
 |14|OTHER_TRANSIENT|この値は現在使用されていません。|  
   
-##  <a name="MinimallyLogged"></a> Operations that can be minimally logged  
- *最小ログ記録* では、トランザクションの復旧に必要な情報だけが記録されます。特定の時点への復旧はサポートしません。 このトピックでは、一括ログ [復旧モデル](https://msdn.microsoft.com/library/ms189275.aspx) で (バックアップが実行されていない場合は単純復旧モデルで) 最小ログが記録される操作について説明します。  
+##  <a name="MinimallyLogged"></a> 最小ログ記録が可能な操作  
+ *最小ログ記録* では、トランザクションの復旧に必要な情報だけが記録されます。特定の時点への復旧はサポートしません。 このトピックでは、一括ログ [復旧モデル](../backup-restore/recovery-models-sql-server.md) で (バックアップが実行されていない場合は単純復旧モデルで) 最小ログが記録される操作について説明します。  
   
 > **注:** 最小ログ記録は、メモリ最適化テーブルではサポートされていません。  
   
-> **もう 1 つ注意してください。** 完全 [復旧モデル](https://msdn.microsoft.com/library/ms189275.aspx)では、すべての一括操作が完全にログに記録されます。 ただし、一括操作のためにデータベースを一時的に一括ログ復旧モデルに切り替えることで、一連の一括操作用のログ記録を最小限に抑えることができます。 最小ログ記録は、完全ログ記録より効率的であり、一括トランザクションの実行中に、使用可能なトランザクション ログ領域が大規模な一括操作でいっぱいになる可能性を低減します。 ただし、最小ログ記録が有効なときにデータベースが破損または消失した場合は、データベースを障害発生時点まで復旧できません。  
+> **もう 1 つ注意してください。** 完全 [復旧モデル](../backup-restore/recovery-models-sql-server.md)では、すべての一括操作が完全にログに記録されます。 ただし、一括操作のためにデータベースを一時的に一括ログ復旧モデルに切り替えることで、一連の一括操作用のログ記録を最小限に抑えることができます。 最小ログ記録は、完全ログ記録より効率的であり、一括トランザクションの実行中に、使用可能なトランザクション ログ領域が大規模な一括操作でいっぱいになる可能性を低減します。 ただし、最小ログ記録が有効なときにデータベースが破損または消失した場合は、データベースを障害発生時点まで復旧できません。  
   
  次に示す操作は、完全復旧モデルで完全にログ記録されますが、単純復旧モデルと一括ログ復旧モデルでは最小限にしかログ記録されません。  
   
@@ -151,7 +151,7 @@ AlwaysOn 可用性グループのシナリオでは、データベース (プラ
   
     -   DROP INDEX による新しいヒープの再構築 (適用可能な場合)。 ( [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 操作中のインデックス ページの割り当て解除は、 **常に** 完全にログ記録されます。)
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="RelatedTasks"></a> 関連タスク  
  **トランザクション ログの管理**  
   
 -   [トランザクション ログ ファイルのサイズの管理](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  

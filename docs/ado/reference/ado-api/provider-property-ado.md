@@ -37,7 +37,7 @@ ms.lasthandoff: 09/09/2017
  取得または設定、**文字列**プロバイダー名を示す値。  
   
 ## <a name="remarks"></a>解説  
- 使用して、**プロバイダー**プロパティを設定または接続のプロバイダーの名前を取得します。 内容でこのプロパティを設定することできますも、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティまたは*ConnectionString*の引数、[開く](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッドですただし、プロバイダーを指定します。。呼び出し中に複数の場所で、**開く**メソッドは、予期しない結果を持つことができます。 プロパティは既定 MSDASQL にプロバイダーが指定されていない場合 ([Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md))。  
+ 使用して、**プロバイダー**プロパティを設定または接続のプロバイダーの名前を取得します。 内容でこのプロパティを設定することできますも、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティまたは*ConnectionString*の引数、[開く](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッドですただし、プロバイダーを指定します。呼び出し中に複数の場所で、**開く**メソッドは、予期しない結果を持つことができます。 プロパティは既定 MSDASQL にプロバイダーが指定されていない場合 ([Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md))。  
   
  **プロバイダー**プロパティが読み取り/書き込みが開いているとき、接続が閉じていて、読み取り専用です。 設定は有効になりませんまで開くか、**接続**オブジェクトまたはアクセス、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)のコレクション、**接続**オブジェクト。 設定が有効でない場合は、エラーが発生します。  
   

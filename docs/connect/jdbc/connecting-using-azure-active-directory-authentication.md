@@ -44,7 +44,7 @@ Azure Active Directory 認証をサポートするために、2 つの新しい�
 *   6.2 (またはそれ以降) の Microsoft JDBC Driver for SQL Server
 *   アクセス トークンに基づく認証モードを使用している場合は必要[azure active directory-ライブラリ-用の java](https://github.com/AzureAD/azure-activedirectory-library-for-java)とその依存関係からを実行する例では、この記事の内容。 参照してください**アクセス トークンを使用した接続**詳細についてはします。
 *   ActiveDirectoryPassword 認証モードを使用している場合は必要[azure active directory-ライブラリ-用の java](https://github.com/AzureAD/azure-activedirectory-library-for-java)とその依存関係。 参照してください**ActiveDirectoryPassword 認証モードを使用して接続する**詳細についてはします。
-*   ActiveDirectoryIntegrated モードを使用している場合は、for SQL Server (ADALSQL Active Directory 認証ライブラリをインストールする必要があります。。DLL) および sqljdbc_auth.dll です。
+*   ActiveDirectoryIntegrated モードを使用している場合は、for SQL Server (ADALSQL Active Directory 認証ライブラリをインストールする必要があります.DLL) および sqljdbc_auth.dll です。
     * ADALSQL です。DLL は、Azure Active Directory を使用して Microsoft Azure SQL データベースへの認証にアプリケーションを使用できます。 DLL をダウンロード[Microsoft SQL Server 用 Microsoft Active Directory 認証ライブラリ](http://www.microsoft.com/en-us/download/details.aspx?id=48742)
     * ADALSQL します。DLL 2 つバイナリ バージョン X86 および X64 をダウンロードします。 間違ったのバイナリのバージョンがインストールされているか、ドライバーで、次のエラーを発生させる、DLL が見つからない場合、:"adalsql.dll をロードできません (Authentication =...')。 エラー コード: 0x2。"です。 このような場合、ADALSQL の適切なバージョンをダウンロードします。DLL です。 
     * sqljdbc_auth.dll は、ドライバー パッケージで使用できます。 JDBC ドライバーがインストールされているコンピューター上の Windows システム パス上のディレクトリに sqljdbc_auth.dll ファイルをコピーします。 または、java.libary.path システム プロパティを設定して sqljdbc_auth.dll のディレクトリを指定することもできます。 

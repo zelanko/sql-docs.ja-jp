@@ -17,18 +17,18 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08287922d15adabd1128da2edbb1caa65bc3f85f
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 121ec11d9bf1dbd380716da37e78463467d41f54
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="execute-user-defined-functions"></a>ユーザー定義関数の実行
   Transact-SQL を使用してユーザー定義関数を実行する
   
 
-> **注:** ユーザー定義関数の詳細については、「  [ユーザー定義関数](https://msdn.microsoft.com/library/ms191007.aspx) 」および「 [CREATE FUNCTION (Transact SQL)](https://msdn.microsoft.com/library/ms186755.aspx) 」を参照してください。 
+> **注:** ユーザー定義関数の詳細については、「  [ユーザー定義関数](user-defined-functions.md) 」および「 [CREATE FUNCTION (Transact SQL)](../../t-sql/statements/create-function-transact-sql.md) 」を参照してください。 
   
  
 ##  <a name="BeforeYouBegin"></a> アンインストールの準備  
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
- [EXECUTE](https://msdn.microsoft.com/library/ms188332.aspx) ステートメントの実行に権限は必要ありませんが、 EXECUTE 文字列内で参照されるセキュリティ保護可能なリソースに対しては権限が **必要です** 。 たとえば、この文字列に [INSERT](https://msdn.microsoft.com/library/ms174335.aspx) ステートメントが含まれている場合、EXECUTE ステートメントの呼び出し元は対象のテーブルに対する INSERT 権限が必要です。 EXECUTE ステートメントは、モジュール内に含まれている場合でも、検出されるたびに権限が確認されます。 詳細については、「[EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)」を参照してください。  
+ [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) ステートメントの実行に権限は必要ありませんが、 EXECUTE 文字列内で参照されるセキュリティ保護可能なリソースに対しては権限が **必要です** 。 たとえば、この文字列に [INSERT](../../t-sql/statements/insert-transact-sql.md) ステートメントが含まれている場合、EXECUTE ステートメントの呼び出し元は対象のテーブルに対する INSERT 権限が必要です。 EXECUTE ステートメントは、モジュール内に含まれている場合でも、検出されるたびに権限が確認されます。 詳細については、「[EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)」を参照してください。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

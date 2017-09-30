@@ -1,7 +1,7 @@
 ---
 title: "ドメインに依存しない可用性グループ (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/12/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], domain independent
 ms.assetid: 
 caps.latest.revision: 
-author: MikeRayMSFT
+author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 847c34fedcaa48149a6545d830af021aae26f530
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: b6953bbfb9af88bb0d6c4bb575feb97557c43ea2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -45,7 +45,7 @@ Windows Server 2016 では、Active Directory がデタッチされたクラス�
 
 ![1 つのドメインに参加している 2 つのノードを含むワークグループ クラスター][2]
 
-ドメインに依存しない可用性グループは、マルチサイトまたはディザスター リカバリー シナリオに使用するためだけではありません。 これは、1 つのデータ センターに展開することができ、[基本的な可用性グループ](https://msdn.microsoft.com/library/mt614935.aspx) (Standard Edition 可用性グループとしても知られる) でも使用され、次のように証明書を含むデータベース モニタリングを使用して達成するために使用されるものに同様のアーキテクチャを提供します。
+ドメインに依存しない可用性グループは、マルチサイトまたはディザスター リカバリー シナリオに使用するためだけではありません。 これは、1 つのデータ センターに展開することができ、[基本的な可用性グループ](basic-availability-groups-always-on-availability-groups.md) (Standard Edition 可用性グループとしても知られる) でも使用され、次のように証明書を含むデータベース モニタリングを使用して達成するために使用されるものに同様のアーキテクチャを提供します。
 
 
 ![Standard Edition の AG の高レベルのビュー][3]
@@ -123,7 +123,7 @@ CREATE CERTIFICATE [InstanceB_Cert]
 AUTHORIZATION InstanceB_User
 FROM FILE = 'Restore_path\InstanceB_Cert.cer'
 ```
-12. レプリカになる各インスタンスに、可用性グループによって使用されるエンドポイントを作成します。 可用性グループの場合は、エンドポイントに DATABASE_MIRRORING の型がある必要があります。 エンドポイントでは、手順 4 で認証のインスタンスのために作成した証明書を使用します。 以下の構文は、証明書を使用してエンドポイントを作成する例を示しています。 適切な暗号化方法と、環境に関連するその他のオプションを使用します。 使用できるオプションの詳細については、「[CREATE ENDPOINT (Transact-SQL)](https://msdn.microsoft.com/library/ms181591.aspx)」を参照してください。
+12. レプリカになる各インスタンスに、可用性グループによって使用されるエンドポイントを作成します。 可用性グループの場合は、エンドポイントに DATABASE_MIRRORING の型がある必要があります。 エンドポイントでは、手順 4 で認証のインスタンスのために作成した証明書を使用します。 以下の構文は、証明書を使用してエンドポイントを作成する例を示しています。 適切な暗号化方法と、環境に関連するその他のオプションを使用します。 使用できるオプションの詳細については、「[CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md)」を参照してください。
 ```
 CREATE ENDPOINT DIAG_EP
 STATE = STARTED
@@ -141,7 +141,7 @@ FOR DATABASE_MIRRORING (
 GRANT CONNECT ON ENDPOINT::DIAG_EP TO 'InstanceX_User';
 GO
 ```
-14. 基になる証明書とエンドポイントのセキュリティが構成されたら、指定した方法を使用して、可用性グループを作成します。 セカンダリの初期化に使用するバックアップを手動でバックアップ、コピー、および復元するか、または[自動シード処理](https://msdn.microsoft.com/library/mt735149.aspx)を使用することをお勧めします。 セカンダリ レプリカを初期化するためのウィザードの使用には、サーバー メッセージ ブロック (SMB) ファイルが関係し、ドメインに参加していないワークグループ クラスターを使用する場合は動作しない可能性があります。
+14. 基になる証明書とエンドポイントのセキュリティが構成されたら、指定した方法を使用して、可用性グループを作成します。 セカンダリの初期化に使用するバックアップを手動でバックアップ、コピー、および復元するか、または[自動シード処理](automatically-initialize-always-on-availability-group.md)を使用することをお勧めします。 セカンダリ レプリカを初期化するためのウィザードの使用には、サーバー メッセージ ブロック (SMB) ファイルが関係し、ドメインに参加していないワークグループ クラスターを使用する場合は動作しない可能性があります。
 15. リスナーを作成する場合は、その名前と IP アドレスの両方が DNS に登録されていることを確認します。
 
 ### <a name="next-steps"></a>次の手順 
@@ -151,8 +151,6 @@ GO
 - [[新しい可用性グループ] ダイアログ ボックスの使用 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 - [Transact-SQL での可用性グループの作成](create-an-availability-group-transact-sql.md)
-
->このコンテンツは [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt) (マイクロソフト MVP) によって作成されたものです。
 
 <!--Image references-->
 [1]: ./media/diag-wsfc-two-data-centers-same-domain.png

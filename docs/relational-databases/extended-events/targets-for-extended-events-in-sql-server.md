@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f61a7661093216f4aae6ebf71b9d7159200e5dbd
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 640fa43bc4db2907f676dadad8688b7cf5a1bef4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントのターゲット
@@ -45,7 +45,7 @@ ms.lasthandoff: 07/31/2017
 
 
 - 頻繁に更新される SQL Server Management Studio (SSMS.exe) ユーティリティの最近のバージョンをインストールしてあること。 詳細については、次の項目を参照してください。
-    - [SQL Server Management Studio (SSMS) のダウンロード](https://msdn.microsoft.com/library/mt238290.aspx)
+    - [SQL Server Management Studio (SSMS) のダウンロード](../../ssms/download-sql-server-management-studio-ssms.md)
 
 
 - SSMS.exe の **オブジェクト エクスプローラー** でイベント セッションのターゲット ノードを右クリックして [出力データを簡単に表示する](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)方法を知っていること。

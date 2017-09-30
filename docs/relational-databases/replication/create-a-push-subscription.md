@@ -21,10 +21,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e8fbc50a3d0e2c8e9df837f40bdfa5b787225fb3
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 7a78735cc1ccee742982c51a12bab2b5d47b046e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-a-push-subscription"></a>プッシュ サブスクリプションの作成
@@ -95,7 +95,7 @@ ms.lasthandoff: 08/03/2017
   
     -   **allow_push** の値が **0**の場合は、**@property** に **allow_push** を、**@value** に **true** を指定して、 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を実行します。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addsubscription](https://msdn.microsoft.com/library/ms181702.aspx)を実行します。 **@publication**、 **@subscriber**、および **@destination_db**を指定します。 **@subscription_type** に **push** を指定します。 サブスクリプションの更新方法の詳細については、「 [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx)」を参照してください。  
+2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)を実行します。 **@publication**、 **@subscriber**、および **@destination_db**を指定します。 **@subscription_type** に **push** を指定します。 サブスクリプションの更新方法の詳細については、「 [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)」を参照してください。  
   
 3.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)を実行します。 次の指定を行います。  
   
@@ -157,7 +157,7 @@ ms.lasthandoff: 08/03/2017
 ##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
  レプリケーション管理オブジェクト (RMO) を使用することで、プログラムによってプッシュ サブスクリプションを作成できます。 プッシュ サブスクリプションを作成する際に使用する RMO クラスは、作成するサブスクリプションの対象となるパブリケーションの種類によって異なります。  
   
-> **重要:** 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 Windows .NET Framework に用意されている [暗号化サービス](http://go.microsoft.com/fwlink/?LinkId=34733) [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  
+> **重要:** 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](http://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  
   
 #### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションに対するプッシュ サブスクリプションを作成するには  
   

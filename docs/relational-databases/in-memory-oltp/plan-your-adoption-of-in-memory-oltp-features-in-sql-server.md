@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
-ms.openlocfilehash: bf29cd596c9b52ecf88fc715a580253de5477271
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d1a1f9dceede34a4ccf9c6914b0fb4c50c5babdf
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>SQL Server でのインメモリ OLTP 機能の採用計画
@@ -99,7 +99,7 @@ Azure SQL データベースのクラウド サービスでホストされてい
 メモリ最適化アドバイザー ツールでは、ディスク ベース テーブルからメモリ最適化テーブルへの変換に役立つスクリプトを生成できます。 このツールは、SQL Server Data Tools (SSDT) の一部としてインストールされます。
 
 - [メモリ最適化アドバイザー](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)
-- [SQL Server Data Tools (SSDT) のダウンロード](https://msdn.microsoft.com/library/mt204009.aspx)
+- [SQL Server Data Tools (SSDT) のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)
 
 
 #### <a name="dacpac-file"></a>.dacpac ファイル

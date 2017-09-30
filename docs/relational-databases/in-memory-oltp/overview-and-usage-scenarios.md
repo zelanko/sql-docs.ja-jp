@@ -14,11 +14,11 @@ caps.latest.revision: 5
 author: jodebrui
 ms.author: jodebrui
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: edf397a4e4922167ae2eafd2c8e78ac97858bd37
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 13128a755dcfd302224a8291a006878a68bdd09f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="overview-and-usage-scenarios"></a>概要と使用シナリオ
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
 
 それでは、このパフォーマンス向上は何に由来するのでしょうか。 基本的に、インメモリ OLTP は、データ アクセスとトランザクションの実行を効率化し、同時に実行されるトランザクション間のロックとラッチの競合を取り除くことで、トランザクション プロセスのパフォーマンスを改善します。高速化の理由はデータがメモリ内にあるからではなく、メモリ内のデータを中心にして最適化しているためです。 メモリ内の同時処理が多い計算に関する最新の機能強化を利用するように、データ ストレージ、アクセス、処理アルゴリズムはゼロから再設計されました。
 
-現在では、データがメモリ内にあるからというだけで、障害が発生したときにデータが失われることを意味しなくなりました。 既定で、すべてのトランザクションは完全に持続可能になりました。つまり、SQL Server の他のテーブルと同じ持続可能性の保証があります。トランザクション コミットの一部として、すべての変更はディスク上のトランザクション ログに書き込まれます。 トランザクション コミット後のどこかの時点で障害が発生すると、データベースがオンラインに戻ったときに、コミットされたデータを利用できます。 さらに、インメモリ OLTP は、SQL Server の高可用性と障害復旧機能 (AlwaysOn、バックアップ/復元など) と連携します。
+現在では、データがメモリ内にあるからというだけで、障害が発生したときにデータが失われることを意味しなくなりました。 既定で、すべてのトランザクションは完全に持続可能になりました。つまり、SQL Server の他のテーブルと同じ持続可能性の保証があります。トランザクション コミットの一部として、すべての変更はディスク上のトランザクション ログに書き込まれます。 トランザクション コミット後のどこかの時点で障害が発生すると、データベースがオンラインに戻ったときに、コミットされたデータを利用できます。 さらに、インメモリ OLTP は、SQL Server の高可用性とディザスター リカバリー機能 (AlwaysOn、バックアップ/復元など) と連携します。
 
 データベースでインメモリ OLTP を利用するには、次に示すオブジェクトの種類から 1 つまたは複数使用します。
 
@@ -63,8 +63,8 @@ ms.lasthandoff: 06/22/2017
 中核となるトランザクション テーブル (つまり、最もパフォーマンスが重要なトランザクションがあるテーブル) にメモリ最適化テーブルを使用します。 ネイティブでコンパイルされたストアド プロシージャを使用して、ビジネス トランザクションに関連付けられたロジックの実行を最適化します。 データベースのストアド プロシージャに組み込むことができるロジック数が多いほど、インメモリ OLTP の利点も大きくなります。
 
 既存のアプリケーションで開始するには:
-1. [トランザクション パフォーマンス分析レポート](https://msdn.microsoft.com/library/dn205133.aspx) を使用して移行するオブジェクトを特定し、 
-2. 移行に [メモリ最適化](https://msdn.microsoft.com/library/dn284308.aspx) および [ネイティブ コンパイル](https://msdn.microsoft.com/library/dn358355.aspx) アドバイザーを利用します。
+1. [トランザクション パフォーマンス分析レポート](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) を使用して移行するオブジェクトを特定し、 
+2. 移行に [メモリ最適化](memory-optimization-advisor.md) および [ネイティブ コンパイル](native-compilation-advisor.md) アドバイザーを利用します。
 
 #### <a name="customer-case-studies"></a>お客様の導入事例
 
@@ -82,8 +82,8 @@ ms.lasthandoff: 06/22/2017
 
 データの取り込みにメモリ最適化テーブルを使用します。 取り込みの大部分が (更新ではなく) 挿入で構成され、データのインメモリ OLTP ストレージの占有領域が重要な場合、次のいずれかを行います。
 
-- [を実行するジョブを使用して、](https://msdn.microsoft.com/library/gg492088.aspx)クラスター化列ストア インデックス `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`が指定されたディスクベースのテーブルに定期的にデータを一括オフロードします。または、
-- [一時メモリ最適化テーブル](https://msdn.microsoft.com/library/mt590207.aspx) を使用して、履歴データを管理します。このモードでは、履歴データはディスクに保存され、データの移動はシステムによって管理されます。
+- [を実行するジョブを使用して、](../indexes/columnstore-indexes-overview.md)クラスター化列ストア インデックス `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`が指定されたディスクベースのテーブルに定期的にデータを一括オフロードします。または、
+- [一時メモリ最適化テーブル](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) を使用して、履歴データを管理します。このモードでは、履歴データはディスクに保存され、データの移動はシステムによって管理されます。
 
 SQL Server サンプル リポジトリに一時メモリ最適化テーブル、メモリ最適化テーブル型、およびネイティブ コンパイル ストアド プロシージャを使用するスマート グリッド アプリケーション含めることでデータの取り込みを高速化し、センサー データのインメモリ OLTP ストレージの占有領域を管理しています。 
 
@@ -228,10 +228,10 @@ ASP.NET セッションの状態のメモリ最適化を始めるには、GitHub
 - インメモリ OLTP を使用したパフォーマンス デモ: [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 - [インメモリ OLTP の説明とデモを紹介する 17 分のビデオ](https://www.youtube.com/watch?v=l5l5eophmK4) (デモは 8:25 から)
 - [インメモリ OLTP を有効にして推奨されるオプションを設定するスクリプト](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
-- [主なインメモリ OLTP ドキュメント](https://msdn.microsoft.com/library/dn133186.aspx)
+- [主なインメモリ OLTP ドキュメント](in-memory-oltp-in-memory-optimization.md)
 - [インメモリ OLTP が Azure SQL Database のパフォーマンスとリソース活用にもたらす利点](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
 - [メモリ最適化を使用して一時テーブルとテーブル変数のパフォーマンスを改善する](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
 [SQL Database でインメモリ テクノロジを使用してパフォーマンスを最適化する](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
-- [メモリ最適化テーブルでのシステム バージョン管理された一時テーブル](https://msdn.microsoft.com/library/mt590207.aspx)
+- [メモリ最適化テーブルでのシステム バージョン管理された一時テーブル](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項](http://msdn.microsoft.com/library/dn673538.aspx) 
 

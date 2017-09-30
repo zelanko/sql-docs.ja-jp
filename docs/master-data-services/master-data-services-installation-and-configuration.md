@@ -16,10 +16,10 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: da09783f5d8bdcd491f73a1b46390918bbb7dd8d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 1993aee7d27d51a3788df44288a014374fcf430c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="master-data-services-installation-and-configuration"></a>マスター データ サービスのイントールと構成
@@ -140,7 +140,7 @@ ms.lasthandoff: 09/07/2017
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
-     Windows 照合順序の詳細については、「 [Windows 照合順序名 (Transact-SQL)](https://msdn.microsoft.com/library/ms188046.aspx)」を参照してください。  
+     Windows 照合順序の詳細については、「 [Windows 照合順序名 (Transact-SQL)](../t-sql/statements/windows-collation-name-transact-sql.md)」を参照してください。  
   
 5.  **[ユーザー名]** フィールドで、マスター データ サービスの既定のスーパー ユーザーになるユーザーの Windows アカウントを指定します。 スーパー ユーザーには、すべての機能領域へのアクセス権があり、すべてのモデルを追加、削除、および更新できます。  
 

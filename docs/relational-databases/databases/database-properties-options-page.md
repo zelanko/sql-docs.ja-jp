@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: 8d3a9c04f09d48823638e1608722268b360610e8
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 24561dd19ef8992aba1d5e48ceadd49a68f18c1f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-properties-options-page"></a>[データベースのプロパティ] \([オプション] ページ)
@@ -105,10 +105,10 @@ ms.lasthandoff: 08/29/2017
  データベースの互換性レベルに依存しない、セカンダリ (存在する場合) のクエリ オプティマイザーの基数推定モデルを指定します。 これは、 [トレース フラグ 9481](https://support.microsoft.com/en-us/kb/2801413)を指定した場合と同じです。  
   
  **最大 DOP**  
- ステートメントで使用される、プライマリの [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) 設定の既定値を指定します。  
+ ステートメントで使用される、プライマリの [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 設定の既定値を指定します。  
   
  **セカンダリの最大 DOP**  
- ステートメントで使用される、セカンダリ (存在する場合) の [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) 設定の既定値を指定します。  
+ ステートメントで使用される、セカンダリ (存在する場合) の [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 設定の既定値を指定します。  
   
  **パラメーター スニッフィング**  
  プライマリのパラメーター スニッフィングを有効にするか無効にするかを指定します。 これは、 [トレース フラグ 4136](https://support.microsoft.com/en-us/kb/980653)を指定した場合と同じです。  
