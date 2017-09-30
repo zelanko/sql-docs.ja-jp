@@ -173,7 +173,7 @@ ms.lasthandoff: 09/21/2017
   
 -   管理オブジェクト モデル (MOM) API  
   
- 詳細については、次を参照してください [デプロイ Integration Services (SSIS) プロジェクトとパッケージ] (..。/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md します。  
+ 詳細については、次を参照してください [デプロイ Integration Services (SSIS) プロジェクトとパッケージ] (.../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md します。  
 
 ####  <a name="encrypted"></a> SSIS カタログでの Always Encrypted のサポート  
  SSIS は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の Always Encrypted 機能を既にサポートしています。 詳細については、次のログの投稿を参照してください。  
