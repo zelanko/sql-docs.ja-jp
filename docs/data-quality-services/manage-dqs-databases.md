@@ -33,7 +33,7 @@ ms.lasthandoff: 09/09/2017
   
 -   DQS データベースが [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]として機能するために必要な DQS データベース以外のいくつかのエンティティがあります。具体的には、2 つの SQL Server ログイン (##MS_dqs_db_owner_login## と ##MS_dqs_service_login##)、およびマスター データベースの初期化ストアド プロシージャ (DQInitDQS_MAIN) です。  
   
- SQL Server でのデータベースのバックアップと復元の詳細については、「 [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)」を参照してください。  
+ SQL Server でのデータベースのバックアップと復元の詳細については、「 [SQL Server データベースのバックアップと復元](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)」を参照してください。  
   
 ### <a name="default-autogrowth-size-and-recovery-model-for-the-dqs-databases"></a>DQS データベースの既定の自動拡張サイズと復旧モデル  
  DQS データベースおよびトランザクション ログが無限に拡張してハード ディスクがいっぱいになるのを防ぐためには  
