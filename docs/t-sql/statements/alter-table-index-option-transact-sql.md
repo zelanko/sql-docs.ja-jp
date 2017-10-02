@@ -70,7 +70,7 @@ ms.lasthandoff: 09/08/2017
 ```  
   
 ## <a name="arguments"></a>引数  
- PAD_INDEX ** = ** {ON |**OFF** }  
+ PAD_INDEX  **=**  {ON |**OFF** }  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  インデックスの埋め込みを指定します。 既定値は OFF です。  
@@ -81,7 +81,7 @@ ms.lasthandoff: 09/08/2017
  OFF または*fillfactor*が指定されていません  
  中間レベル ページは、中間ページの一連のキーを考慮しつつ、インデックスが持つことのできる最大サイズの行が少なくとも 1 つ格納できる領域を残して、ほぼ容量いっぱいに使用されます。  
   
- FILLFACTOR ** = ** *fillfactor*  
+ FILLFACTOR  **=**  *fillfactor*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  どの程度を示すパーセンテージを指定します、[!INCLUDE[ssDE](../../includes/ssde-md.md)]インデックスの作成または変更時に各インデックス ページのリーフ レベルを作成する必要があります。 1 ～ 100 の整数値を指定する必要があります。 既定値は 0 です。  
@@ -89,7 +89,7 @@ ms.lasthandoff: 09/08/2017
 > [!NOTE]  
 >  FILL FACTOR 値 0 と 100 は、すべての面でまったく同じ結果になります。  
   
- IGNORE_DUP_KEY ** = ** {ON |**OFF** }  
+ IGNORE_DUP_KEY  **=**  {ON |**OFF** }  
  挿入操作で、一意のインデックスに重複するキー値を挿入しようとした場合のエラー応答を指定します。 IGNORE_DUP_KEY オプションは、インデックスが作成または再構築された後の挿入操作のみに適用されます。 オプションも何も起こりませんの実行時に[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)、 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)、または[更新](../../t-sql/queries/update-transact-sql.md)です。 既定値は OFF です。  
   
  ON  
@@ -104,7 +104,7 @@ ms.lasthandoff: 09/08/2017
   
  旧バージョンと互換性のある構文では、WITH IGNORE_DUP_KEY は WITH IGNORE_DUP_KEY = ON と同じです。  
   
- STATISTICS_NORECOMPUTE ** = ** {ON |**OFF** }  
+ STATISTICS_NORECOMPUTE  **=**  {ON |**OFF** }  
  統計を再計算するかどうかを指定します。 既定値は OFF です。  
   
  ON  
@@ -113,7 +113,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  自動統計更新が有効です。  
   
- ALLOW_ROW_LOCKS ** = ** { **ON** |オフ}  
+ ALLOW_ROW_LOCKS  **=**  { **ON** |オフ}  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  行ロックを許可するかどうかを指定します。 既定値は ON です。  
@@ -124,7 +124,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  行ロックは使用されません。  
   
- ALLOW_PAGE_LOCKS ** = ** { **ON** |オフ}  
+ ALLOW_PAGE_LOCKS  **=**  { **ON** |オフ}  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  ページ ロックを許可するかどうかを指定します。 既定値は ON です。  
@@ -135,7 +135,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  ページ ロックは使用されません。  
   
- SORT_IN_TEMPDB ** = ** {ON |**OFF** }  
+ SORT_IN_TEMPDB  **=**  {ON |**OFF** }  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  並べ替え結果を格納するかどうかを示す**tempdb**です。 既定値は OFF です。  
@@ -146,7 +146,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  中間の並べ替え結果はインデックスと同じデータベースに格納されます。  
   
- オンライン** = ** {ON |**OFF** }  
+ オンライン **=**  {ON |**OFF** }  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  インデックス操作時に、基になるテーブルや関連するインデックスをクエリやデータ変更で使用できるかどうかを指定します。 既定値は OFF です。 REBUILD は ONLINE 操作として実行できます。  
@@ -168,7 +168,7 @@ ms.lasthandoff: 09/08/2017
 > [!NOTE]  
 >  オンラインでのインデックス操作は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
- MAXDOP ** = ** *max_degree_of_parallelism*  
+ MAXDOP  **=**  *max_degree_of_parallelism*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  上書き、**並列処理の次数の最大**インデックス操作の実行中の構成オプション。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
@@ -210,7 +210,7 @@ ms.lasthandoff: 09/08/2017
   
  圧縮の詳細については、次を参照してください。[データ圧縮](../../relational-databases/data-compression/data-compression.md)です。  
   
-パーティションで**(** { \<partition_number_expression > |\<範囲 >}[ **,**...* n * ] **)** **対象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。  
+パーティションで**(** { \<partition_number_expression > |\<範囲 >}[ **,**... *n*  ] **)** **対象**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。  
   
  DATA_COMPRESSION 設定を適用するパーティションを指定します。 テーブルがパーティション分割されていない場合、ON PARTITIONS 引数には、エラーが生成されます。 ON PARTITIONS 句が指定されていない場合は、パーティション テーブルのすべてのパーティションに DATA_COMPRESSION オプションが適用されます。  
   
