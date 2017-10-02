@@ -43,7 +43,7 @@ ms.lasthandoff: 09/21/2017
   
 -   **トランザクションを使ってデータの整合性の確認を支援する**。 詳細については、「 [Integration Services のトランザクション](../../integration-services/integration-services-transactions.md)」を参照してください。  
   
--   **チェックポイントを使って、エラーが発生した時点からパッケージを再開する**。 詳細については、「 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
+-   **チェックポイントを使って、エラーが発生した時点からパッケージを再開する**。 詳細については、「 [チェックポイントを使用してパッケージを再開する](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>イベント ハンドラーを使用したパッケージ エラーのキャッチおよび処理  
  イベント ハンドラーを使用することにより、パッケージやパッケージ内のオブジェクトで発生する多くのイベントに対応できます。  
