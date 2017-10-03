@@ -2,7 +2,7 @@
 title: "どのような &#39; SQL server 2016 Integration Services の |Microsoft ドキュメント"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 03/16/2017
+ms.date: 09/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,18 +19,28 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 82347011d4650d52cca30f43e87f7ba63eca9057
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 084c6eeaf3b83df5435092f3fc424fb9c86ea446
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>どのような &#39; の SQL server 2016 Integration Services
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
- このトピックが追加または SQL Server 2016 で更新された機能について説明[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]です。  
-  
-## <a name="improvements-grouped-by-category"></a>カテゴリ別の機能強化  
+このトピックが追加または SQL Server 2016 で更新された機能について説明[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]です。 追加または更新の機能も含まれています、 [Azure Feature Pack for Integration Services & #40 です。SSIS &#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) SQL Server 2016 の時間枠内にします。  
+
+## <a name="new-for-ssis-in-azure-data-factory"></a>Azure Data Factory で SSIS の新機能
+
+Azure Data Factory 2017 年 9 月にバージョン 2 のパブリック プレビュー版、今すぐ、次の処理の操作を行うことができます。
+-   Azure SQL データベースで、SSIS カタログ データベース (SSISDB) にパッケージを展開します。
+-   Azure SSIS の統合ランタイム、Azure Data Factory バージョン 2 のコンポーネントで Azure に展開されているパッケージを実行します。
+
+詳細については、次を参照してください。[をクラウドにリフト アンド シフトの SQL Server Integration Services のワークロード](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)です。
+
+これらの新機能では、SQL Server Data Tools (SSDT) 17.2 以降のバージョンを必要とは、SQL Server 2017 年 1 または SQL Server 2016 は必要ありません。 Azure にパッケージを配置する場合、パッケージの展開ウィザードは、パッケージを常に最新のパッケージ形式にアップグレードされます。
+
+## <a name="2016-improvements-by-category"></a>カテゴリ別 2016 の機能強化  
   
 -   **管理の容易性**  
   
@@ -154,7 +164,7 @@ ms.lasthandoff: 09/21/2017
  詳細については、次を参照してください。 [SSIS カタログ & #40 です。SSISDB &#41;](../integration-services/service/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> SSIS カタログでの Always On 機能のサポート  
- Always On 可用性グループ機能は、データベース ミラーリングに代わる、高可用性と災害復旧のためのエンタープライズ レベルのソリューションです。 可用性グループは、可用性データベースとして知られる、ひとまとまりでフェールオーバーされる別々のユーザー データベース セットのためのフェールオーバー環境をサポートします。 詳細については、「 [AlwaysOn 可用性グループ (SQL Server)](/sql-docs/docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server)」を参照してください。  
+ Always On 可用性グループ機能は、データベース ミラーリングに代わる、高可用性と災害復旧のためのエンタープライズ レベルのソリューションです。 可用性グループは、可用性データベースとして知られる、ひとまとまりでフェールオーバーされる別々のユーザー データベース セットのためのフェールオーバー環境をサポートします。 詳細については、「 [AlwaysOn 可用性グループ (SQL Server)](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)」を参照してください。  
   
  SQL Server 2016 では、SSIS には、一元化された SSIS カタログ (つまり SSISDB ユーザー データベース) を簡単に配置するのに便利な新しい機能が導入されています。 SSISDB データベースとそのコンテンツ (プロジェクト、パッケージ、実行ログなど) の高可用性を提供するために、SSISDB データベースを (他のユーザー データベースと同じように) AlwaysOn 可用性グループに追加できます。 フェールオーバーが発生すると、セカンダリ ノードのいずれかが自動的に新しいプライマリ ノードになります。  
   
@@ -313,7 +323,7 @@ SQL Server 2016 Service Pack 1 がインストールされている場合、ODat
 ### <a name="better-design-experience"></a>設計エクスペリエンスの強化
 
 ####  <a name="OneDesigner"></a> SSIS デザイナーでの複数ターゲットと複数バージョンのサポート  
- Visual Studio 2015 用の SQL Server Data Tools (SSDT) で SSIS デザイナーを使用して、SQL Server 2016、SQL Server 2014、または SQL Server 2012 をターゲットとするパッケージを作成、管理、および実行できるようになりました。 SSDT を入手する方法については、「 [最新の SQL Server Data Tools のダウンロード](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)」を参照してください。 
+ Visual Studio 2015 用の SQL Server Data Tools (SSDT) で SSIS デザイナーを使用して、SQL Server 2016、SQL Server 2014、または SQL Server 2012 をターゲットとするパッケージを作成、管理、および実行できるようになりました。 SSDT を入手する方法については、「 [最新の SQL Server Data Tools のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。 
 
  ソリューション エクスプローラーで Integration Services プロジェクトを右クリックし、 **[プロパティ]** を選択すると、そのプロジェクトのプロパティ ページが開きます。 **[構成プロパティ]** の **[全般]**タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
    

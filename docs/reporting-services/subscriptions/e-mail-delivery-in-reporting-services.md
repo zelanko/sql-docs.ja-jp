@@ -20,10 +20,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: bd3def842c9171dd20e53eff37128a7a95779ddf
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0b50ccb5717de8f64f915d7cbedc663ec8345400
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services の電子メール配信
@@ -88,7 +88,7 @@ ms.lasthandoff: 09/21/2017
  ネイティブ モード レポート サーバーの場合、電子メール配信拡張機能は、ネイティブ モード [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ファイルを編集することで構成されます。 SharePoint モード レポート サーバーの場合、電子メール配信拡張機能は、SharePoint 管理ページと PowerShell スクリプトで構成されます。  
   
  
- ネイティブ モード レポート サーバーを構成する方法については、次を参照してください[電子メール設定 - Reporting Services のネイティブ モード (構成マネージャー)。](/sql-docs/docs/reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager)
+ ネイティブ モード レポート サーバーを構成する方法については、次を参照してください[電子メール設定 - Reporting Services のネイティブ モード (構成マネージャー)。](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
  
  
  SharePoint モード レポート サーバーの構成方法については、次のトピックを参照してください。  

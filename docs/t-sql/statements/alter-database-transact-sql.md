@@ -31,10 +31,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 218bc141af70829a34ea91f0cf0e22ad05860652
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6c498acedd2821127137ec6be1bd2e04e6b3da09
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
@@ -122,7 +122,7 @@ ALTER DATABASE { database_name  | CURRENT }
   
  使用中の現在のデータベースを変更することを指定します。  
   
- MODIFY NAME ** = ** *new_database_name*  
+ MODIFY NAME  **=**  *new_database_name*  
  として指定された名前のデータベースの名前を変更*new_database_name*です。  
   
  COLLATE *collation_name*  
@@ -252,7 +252,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
-- [ALTER DATABASE & #40 です。Azure SQL データベース &#41;](/sql-docs/docs/t-sql/statements/alter-database-azure-sql-database)  
+- [ALTER DATABASE & #40 です。Azure SQL データベース &#41;](alter-database-azure-sql-database.md)  
 - [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
 - [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
 - [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   

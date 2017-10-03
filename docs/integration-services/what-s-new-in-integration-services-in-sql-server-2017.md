@@ -1,7 +1,7 @@
 ---
 title: "どのような &#39; SQL Server 2017 における Integration Services の |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/11/2017
+ms.date: 09/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: 87b850c06bea8992ad6869c56acdecd45fa289f4
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 63aba0f64bc63a3a86e5aa07245375938acdf6e4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>どのような &#39; の SQL Server 2017 における Integration Services
@@ -29,13 +29,23 @@ ms.lasthandoff: 08/29/2017
 
 ## <a name="highlights-of-this-release"></a>このリリースの重要なポイント
 
-SQL Server 2017 の Integration Services で最も重要な新機能を示します。
+SQL Server 2017 で Integration Services の最も重要な新機能を次に示します。
 
 -   **スケール アウト**です。複数のワーカーのコンピューター間で SSIS パッケージの実行をより簡単に配布および単一のマスター コンピューターから実行と作業を管理します。 詳細については、次を参照してください。 [Services スケール アウト統合](../integration-services/scale-out/integration-services-ssis-scale-out.md)です。
 
 -   **Linux 上の integration Services**です。 Linux コンピューターでは、SSIS パッケージを実行します。 詳細については、次を参照してください。[抽出、変換、および SSIS での Linux にデータを読み込む](../linux/sql-server-linux-migrate-ssis.md)します。
 
 -   **接続性の向上**です。 OData の更新されたコンポーネントでの Microsoft Dynamics AX Online、Microsoft Dynamics CRM Online OData フィードに接続します。 
+
+## <a name="new-in-azure-data-factory"></a>Azure Data Factory の新機能
+
+Azure Data Factory 2017 年 9 月にバージョン 2 のパブリック プレビュー版、今すぐ、次の処理の操作を行うことができます。
+-   Azure SQL データベースで、SSIS カタログ データベース (SSISDB) にパッケージを展開します。
+-   Azure SSIS の統合ランタイム、Azure Data Factory バージョン 2 のコンポーネントで Azure に展開されているパッケージを実行します。
+
+詳細については、次を参照してください。[をクラウドにリフト アンド シフトの SQL Server Integration Services のワークロード](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)です。
+
+これらの新機能では、SQL Server Data Tools (SSDT) 17.2 以降のバージョンを必要とは、SQL Server 2017 年 1 または SQL Server 2016 は必要ありません。 Azure にパッケージを配置する場合、パッケージの展開ウィザードは、パッケージを常に最新のパッケージ形式にアップグレードされます。
 
 ## <a name="new-in-the-azure-feature-pack"></a>Azure Feature Pack の新機能
 

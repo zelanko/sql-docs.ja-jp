@@ -16,10 +16,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2f9e5d07831070ad69ccf23a3975fbdc19fa4c83
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: ab4bfb890124538878fd4d618dee05d393a4864c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Analysis Services AMO では、表形式オブジェクト モデル (TOM) の概要
@@ -55,11 +55,11 @@ TOM は多次元および表形式のデータベース互換性レベル 1200 �
 
 ### <a name="tom-and-xmla"></a>TOM と XMLA
 
-ネットワーク上で TOM、XMLA プロトコルを使用して、Analysis Services サーバーとの通信オブジェクトを管理します。 表ではないオブジェクトを管理するには、TOM を使用して[ASSL](/sql-docs/docs/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla)XMLA の Analysis Services スクリプト言語拡張機能です。 表形式オブジェクトを管理するには、TOM プロトコルを使って SSAS 表形式も XMLA の拡張機能です。 参照してください[MS-t SSAS SQL Server Analysis Services 表形式のプロトコルのドキュメント](https://msdn.microsoft.com/library/mt719260.aspx)詳細についてはします。
+ネットワーク上で TOM、XMLA プロトコルを使用して、Analysis Services サーバーとの通信オブジェクトを管理します。 表ではないオブジェクトを管理するには、TOM を使用して[ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md)XMLA の Analysis Services スクリプト言語拡張機能です。 表形式オブジェクトを管理するには、TOM プロトコルを使って SSAS 表形式も XMLA の拡張機能です。 参照してください[MS-t SSAS SQL Server Analysis Services 表形式のプロトコルのドキュメント](https://msdn.microsoft.com/library/mt719260.aspx)詳細についてはします。
 
 ### <a name="tom-and-json"></a>TOM と JSON
 
-表形式のメタデータは、JSON ドキュメントとして構成されているが、新しいコマンドとオブジェクト モデル定義の構文、表形式モデル スクリプト言語を使用して[TMSL](/sql-docs/docs/analysis-services/tabular-model-scripting-language-tmsl-reference)です。 スクリプト言語は、要求と応答の本文の JSON を使用します。
+表形式のメタデータは、JSON ドキュメントとして構成されているが、新しいコマンドとオブジェクト モデル定義の構文、表形式モデル スクリプト言語を使用して[TMSL](../tabular-model-scripting-language-tmsl-reference.md)です。 スクリプト言語は、要求と応答の本文の JSON を使用します。
 
 TMSL と TOM の両方が同じオブジェクトを公開 (**テーブル**、**列**など) と同じ操作、および (**作成**、**削除**、 **更新**)、TOM (プロトコルを使用して、MS SSAS 表形式代わりに、前述のとおり)、ネットワーク上で TMSL を使用しません。
 

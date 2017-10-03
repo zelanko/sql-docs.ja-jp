@@ -1,7 +1,7 @@
 ---
 title: "発行および Python コードを使用する |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 04/14/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,25 +13,26 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 77a4c36636b48474a6d227f6ea18e08e50add4bc
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 550056f595b881484f3be272b8ae8b2a6d5455af
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 
 # <a name="publish-and-consume-python-web-services"></a>発行および Python web サービスの利用
 
-**適用されます SQL Server 2017 CTP 2.0 (パブリック プレビュー)。**
+Web サービスに、作業用 Python ソリューションを展開するには、Microsoft Machine Learning のサーバーの操作運用の機能を使用します。 このトピックでは、正常に発行し、ソリューションを実行する手順について説明します。
 
-Web サービスに、作業用 Python ソリューションを展開するには、Microsoft Machine Learning のサーバーの操作運用の機能を使用します。
-
-このトピックでは、以下のを正常に発行し、ソリューションを実行する手順について説明します。
+> [!IMPORTANT]
+>
+> このサンプルは、Machine Learning サーバー バージョン 9.1.0 に機能を使用してマシン ラーニング Server (スタンドアロン) に含まれている Python のバージョン用に開発されました。
+ > 
+ > Microsoft Machine Learning のサーバーのバージョン 9.2.0 の最新のリリースで機能を利用して同様の例を表示する Machine Learning サーバー サイトでこの記事を参照してください:[展開および Python で web サービスを管理](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services)です。
 
 この記事の対象読者は、データ サイエンティストは、Microsoft Machine Learning のサーバーでホストされる web サービスとしての Python コードまたはモデルを発行する方法を学習します。 アプリケーションで使用する方法も説明、コードまたはモデル。 この記事では、Python に習熟していることを前提としています。
 
-> [!IMPORTANT]
-> Python web サービスは、SQL Server 2017 CTP 2.0 (パブリック プレビュー) の Python が有効なインストールでのみ使用できます。 この機能の可用性は将来のリリースで展開されます。
+**適用されます SQL server 2017 機械学習のサーバー (スタンドアロン)。**
 
 ## <a name="overview-of-workflow"></a>ワークフローの概要
 

@@ -27,16 +27,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0fbb1f0699328a59749e5bba7efd7661e9b36e5a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 19d2d42ff513020b5d4bb9492f0714893101bdcb
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER データベース スコープ ベースの構成 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  このステートメントで複数のデータベース構成設定を使用する、**個々 のデータベース**レベル。 このステートメントは、両方で使用できる[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]し、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。 これらの設定は次のとおりです。  
+  このステートメントで複数のデータベース構成設定を使用する、**個々 のデータベース**レベル。 このステートメントは、両方で使用できる[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]し、[[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。 これらの設定は次のとおりです。  
   
 - プロシージャ キャッシュをクリアします。  
   
@@ -282,7 +282,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [推奨事項と SQL Server の"max degree of parallelism"構成オプションのガイドライン](https://support.microsoft.com/en-us/kb/2806535) 
 
 ### <a name="legacycardinalityestimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION リソース    
-* [基数推定 (SQL Server)](/sql-docs/docs/relational-databases/performance/cardinality-estimation-sql-server)
+* [基数推定 (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
 * [SQL Server 2014 の基数推定機能によるクエリプランの最適化](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### <a name="parametersniffing-resources"></a>PARAMETER_SNIFFING リソース    

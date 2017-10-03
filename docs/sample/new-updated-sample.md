@@ -12,14 +12,14 @@ ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.workload: sample
 ms.translationtype: MT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: 5a4df3896205d7d58858534d588f96d8616908fe
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 947d95a9fbdeb42bb7775a113b856d7ae44ab777
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-sample-for-sql-server"></a>新規または最近更新された: SQL Server のサンプル
@@ -34,7 +34,7 @@ ms.lasthandoff: 09/13/2017
 
 
 
-- *更新プログラムの日付範囲:* &nbsp; **2017-07-18** &nbsp;対&nbsp; **2017 年-09-11**
+- *更新プログラムの日付範囲:* &nbsp; **2017 年-09-11** &nbsp;対&nbsp; **2017 年-09-27**
 - *サブジェクト領域:* &nbsp; **SQL Server のサンプル**です。
 
 
@@ -44,7 +44,7 @@ ms.lasthandoff: 09/13/2017
 
 ## <a name="new-articles-created-recently"></a>最近新しく作成された記事
 
-次のリンクは、最近追加された新しいアーティクルにジャンプします。
+以下のリンクは、最近追加された新しい記事に移動します。
 
 
 ***今回は新しい記事はありません。***
@@ -55,7 +55,7 @@ ms.lasthandoff: 09/13/2017
 
 ## <a name="updated-articles-with-excerpts"></a>更新された記事と抜粋
 
-このセクションでは、大幅な更新が最近発生したアーティクルから収集された更新プログラムの抜粋を表示します。
+このセクションでは、最近大幅な更新があった記事から収集された更新の抜粋を示します。
 
 ここで示す抜粋は、適切なセマンティック コンテキストから切り離されて表示されます。 また、実際の記事で抜粋を囲んでいる重要なマークダウン構文から切り離されていることもあります。 したがって、これらの抜粋は一般的なガイダンス専用です。 抜粋は、クリックして実際の記事を参照する価値があるかどうかを判断するためだけに使用できます。
 
@@ -69,9 +69,9 @@ ms.lasthandoff: 09/13/2017
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>最近更新された記事の簡易一覧
+### <a name="compact-list-of-articles-updated-recently"></a>最近更新された記事の簡易一覧
 
-この圧縮リストは、抜粋セクションに記載されているすべての更新されたアーティクルへのリンクを提供します。
+この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
 
 
 
@@ -93,35 +93,35 @@ ms.lasthandoff: 09/13/2017
     Then run Run-533-*.BAT
 -->
 
-このセクションには、パブリック GitHub.com リポジトリ内の他のサブジェクト領域で、最近更新されたアーティクルのアーティクルを非常に似ていますが一覧表示されます: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)です。
+このセクションでは、パブリック GitHub.com リポジトリ [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/) 内の他の対象領域の記事で、この対象領域において最近更新された記事とよく似たものの一覧を示します。
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のある対象領域
 
-- [新しい + 更新 (3 + 12): **SQL の Advanced Analytics** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新しい + 更新 (5 + 0): **SQL への接続**docs](../connect/new-updated-connect.md)
-- [新しい + 更新 (5 + 1): **SQL のデータベース エンジン**docs](../database-engine/new-updated-database-engine.md)
-- [新しい + 更新 (19 + 82): **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
-- [新しい + 更新 (1 + 8): **SQL の Linux** docs](../linux/new-updated-linux.md)
-- [新しい + 更新 (12 + 1):**リレーショナル データベースを SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [新しい + 更新 (0 + 1): **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
-- [新しい + 更新 (7 + 1): **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [新しい + 更新 (1 + 1): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [新しい + 更新 (0 + 2): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [新しい + 更新 (1 + 4): **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [新しい + 更新 (4 + 1): **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
-- [新しい + 更新 (0 + 1): **Tools for SQL** docs](../tools/new-updated-tools.md)
+- [新しい + 更新 (0 + 1): **SQL の Advanced Analytics** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新しい + 更新 (0 + 1): **SQL 用に Analysis Services** docs](../analysis-services/new-updated-analysis-services.md)
+- [新しい + 更新 (4 + 1): **SQL のデータベース エンジン**docs](../database-engine/new-updated-database-engine.md)
+- [新しい + 更新 (17 + 0): **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
+- [新しい + 更新 (3 + 0): **SQL の Linux** docs](../linux/new-updated-linux.md)
+- [新しい + 更新 (1 + 1):**リレーショナル データベースを SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [新しい + 更新 (2 + 0): **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
+- [新しい + 更新 (0 + 1): **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [新しい + 更新 (0 + 1): **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のない対象領域
 
 - [新規 + 更新 (0 + 0): **SQL の ActiveX データ オブジェクト (ADO)** に関するドキュメント](../ado/new-updated-ado.md)
-- [新しい + 更新 (0 0 以降): **SQL 用に Analysis Services** docs](../analysis-services/new-updated-analysis-services.md)
+- [新しい + 更新 (0 0 以降): **SQL への接続**docs](../connect/new-updated-connect.md)
 - [新規 + 更新 (0 + 0): **SQL の Data Quality Services** に関するドキュメント](../data-quality-services/new-updated-data-quality-services.md)
 - [新規 + 更新 (0 + 0): **SQL のデータ マイニング拡張機能 (DMX)** に関するドキュメント](../dmx/new-updated-dmx.md)
-- [新しい + 更新 (0 0 以降): **SQL のように、マスター データ サービス (MDS)** docs](../master-data-services/new-updated-master-data-services.md)
+- [新規 + 更新 (0 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
 - [新規 + 更新 (0 + 0): **SQL の多次元式 (MDX)** に関するドキュメント](../mdx/new-updated-mdx.md)
 - [新規 + 更新 (0 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
 - [新規 + 更新 (0 + 0): **SQL の PowerShell** に関するドキュメント](../powershell/new-updated-powershell.md)
 - [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../sample/new-updated-sample.md)
+- [新しい + 更新 (0 0 以降): **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [新規 + 更新 (0 + 0): **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
+- [新規 + 更新 (0 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
+- [新しい + 更新 (0 0 以降): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [新規 + 更新 (0 + 0): **SQL の XQuery** に関するドキュメント](../xquery/new-updated-xquery.md)
 
 

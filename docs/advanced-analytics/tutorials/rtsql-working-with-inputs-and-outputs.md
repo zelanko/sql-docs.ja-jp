@@ -18,15 +18,15 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 5cebde92184ac69093222d57eb91750fa13e369c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a5ffcfafc29f0b741d8e6ada0d50ef6f94fecc7f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>入力と出力 (R で SQL のクイック スタート) の使用
 
-SQL Server で R コードを実行する場合は、システム ストアド プロシージャで R スクリプトをラップする必要があります[sp_execute_external_script](/sql-docs/docs/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)です。 このストアド プロシージャを使用して、SQL Server のコンテキストで、R ランタイムを起動します。このランタイムは、データを R に渡し、R ユーザー セッションを安全に管理し、結果をクライアントに返します。
+SQL Server で R コードを実行する場合は、システム ストアド プロシージャで R スクリプトをラップする必要があります[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)です。 このストアド プロシージャを使用して、SQL Server のコンテキストで、R ランタイムを起動します。このランタイムは、データを R に渡し、R ユーザー セッションを安全に管理し、結果をクライアントに返します。
 
 ## <a name="bkmk_SSMSBasics"></a>単純なテスト データを作成する
 

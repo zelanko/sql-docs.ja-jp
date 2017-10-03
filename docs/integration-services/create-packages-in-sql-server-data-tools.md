@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 6b712ca0975108b0b7fb4bfe0a5ffa50ce44c8fb
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0d949644408de74f118d352a89047137cdcd0350
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>SQL Server データ ツールでのパッケージの作成
@@ -52,7 +52,7 @@ ms.lasthandoff: 09/21/2017
  既定のパッケージ テンプレートを使用して基本的なパッケージを作成する方法のデモ ビデオについては、「 [基本パッケージの作成 (SQL Server ビデオ)](http://go.microsoft.com/fwlink/?LinkId=131023)」を参照してください。  
 
 ## <a name="get-sql-server-data-tools"></a>SQL Server Data Tools を取得する
-SQL Server Data Tools (SSDT) をインストールするには、「 [SQL Server Data Tools (SSDT) のダウンロード](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)」を参照してください。
+SQL Server Data Tools (SSDT) をインストールするには、「 [SQL Server Data Tools (SSDT) のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。
 
 ## <a name="create-a-package-in-sql-server-data-tools-using-the-package-template"></a>パッケージ テンプレートを使用して SQL Server データ ツールでパッケージを作成する  
   

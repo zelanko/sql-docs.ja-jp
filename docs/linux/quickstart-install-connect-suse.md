@@ -4,23 +4,23 @@ description: "このクイック スタート チュートリアルでは、SUSE
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 09/20/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 57be01c49643bafada701849a32b532679513c71
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: b39414933684939c69bb3fd80d4e8aba21efa824
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>SQL Server をインストールし、SUSE Linux Enterprise Server にデータベースを作成
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-このクイック スタート チュートリアルでは、SUSE Linux Enterprise Server (SLES) v12 SP2 に初めて SQL Server 2017 RC2 をインストールするだけです。 接続し、 **sqlcmd**を最初にデータベースを作成し、クエリを実行します。
+このクイック スタート チュートリアルでは、SUSE Linux Enterprise Server (SLES) v12 SP2 に初めて SQL Server 2017 をインストールするだけです。 接続し、 **sqlcmd**を最初にデータベースを作成し、クエリを実行します。
 
 > [!TIP]
 > このチュートリアルでは、ユーザー入力と、インターネット接続が必要です。 興味のある場合、[無人](sql-server-linux-setup.md#unattended)または[オフライン](sql-server-linux-setup.md#offline)インストール手順を参照してください[Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md)です。
@@ -37,12 +37,18 @@ SLES v12 SP2 コンピューターでする必要があります**3.25 GB 以上
 
 SLES で SQL Server を構成するには、インストールするターミナル次のコマンドを実行、 **mssql サーバー**パッケージ。
 
+> [!IMPORTANT]
+> 既に CTP または SQL Server 2017 年 1 の RC リリースをインストールされている場合は、GA リポジトリを登録する前に、古いリポジトリを削除する必要があります。 詳細については、次を参照してください[GA リポジトリにプレビュー リポジトリからリポジトリを変更。](sql-server-linux-change-repo.md)
+
 1. Microsoft SQL Server SLES リポジトリの構成ファイルをダウンロードするには。
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
    sudo zypper --gpg-auto-import-keys refresh
    ```
+
+   > [!NOTE]
+   > これは、累積的な更新プログラム (CU) リポジトリです。 詳細については、リポジトリ オプションとそれらの相違点については、次を参照してください。[ソース リポジトリを変更](sql-server-linux-setup.md#repositories)です。
 
 1. SQL Server をインストールするには、次のコマンドを実行します。
 
@@ -57,14 +63,10 @@ SLES で SQL Server を構成するには、インストールするターミナ
    ```
 
    > [!TIP]
-   > (最小長さが 8 文字で、大文字と小文字のアルファベット、基本 10 桁の数字や英数字以外の記号) は、SA アカウントの強力なパスワードを指定することを確認してください。
+   > このチュートリアルでは SQL Server 2017 を行う場合、次のエディションのライセンスは自由に: Evaluation、Developer、および高速です。
 
-   > [!TIP]
-   > RC2 をインストールするときに、各エディションのいずれかを購入したライセンスは必要ありません。 リリース候補になっているために、選択したエディションに関係なく、次のメッセージが表示されます。
-   >
-   > `This is an evaluation version.  There are [175] days left in the evaluation period.`
-   >
-   > このメッセージは、選択したエディションには反映されません。 RC2 のプレビューの期間に関連します。
+   > [!NOTE]
+   > (最小長さが 8 文字で、大文字と小文字のアルファベット、基本 10 桁の数字や英数字以外の記号) は、SA アカウントの強力なパスワードを指定することを確認してください。
 
 1. 構成を完了すると、サービスが実行されていることを確認します。
 

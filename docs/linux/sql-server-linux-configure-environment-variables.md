@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 4951f503a7b5c395f86cb6daf2ba705ca69fbd83
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 2bbb64b775ab59665ac2c8eefdd21e514b4906cd
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux 上の環境変数と SQL Server の設定を構成します。
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-いくつかの別の環境変数を使用して、Linux 上の SQL Server 2017 RC2 を構成することができます。 これらの変数は、2 つのシナリオで使用されます。
+いくつかの別の環境変数を使用して、Linux 上の SQL Server 2017 を構成することができます。 これらの変数は、2 つのシナリオで使用されます。
 
 - 初期セットアップの構成、`mssql-conf setup`コマンド。
 - 新しい構成を[Docker でコンテナーを SQL Server](quickstart-install-connect-docker.md)です。
@@ -71,13 +71,13 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0
 Linux/macOS で Docker を実行している場合は、単一引用符で、次の構文を使用します。
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux:2017-latest
 ```
 
 Windows で Docker を実行している場合は、二重引用符で、次の構文を使用します。
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux:2017-latest
 ```
 
 ## <a name="next-steps"></a>次の手順

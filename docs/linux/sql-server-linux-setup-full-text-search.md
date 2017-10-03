@@ -4,16 +4,16 @@ description: "このトピックでは、Linux に SQL Server フルテキスト
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 67f11f3e21151dba66127b6a86fe0b82a245ad23
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 1f19074764820bddf2cc2a0e8fe4204120a5041d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux 上の SQL Server フルテキスト検索をインストールします。
@@ -86,7 +86,7 @@ sudo zypper update mssql-server-fts
 
 ## <a name="supported-languages"></a>サポートされている言語
 
-フルテキスト検索を使用して[ワード ブレーカー](/sql-docs/docs/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search)言語に基づいて個々 の単語を識別する方法を決定します。 クエリを実行して登録されているワード ブレーカーの一覧を取得することができます、 **sys.fulltext_languages**カタログ ビューです。 SQL Server 2017 RC2 を使用して、次の言語のワード ブレーカーがインストールされます。
+フルテキスト検索を使用して[ワード ブレーカー](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)言語に基づいて個々 の単語を識別する方法を決定します。 クエリを実行して登録されているワード ブレーカーの一覧を取得することができます、 **sys.fulltext_languages**カタログ ビューです。 次の言語のワード ブレーカーは、SQL Server 2017 とともにインストールされます。
 
 | 言語 | 言語 ID |
 |---|---|
@@ -146,9 +146,9 @@ sudo zypper update mssql-server-fts
 
 ## <a id="filters"></a>フィルター
 
-フルテキスト検索は、バイナリ ファイルに格納されているテキストのでも動作します。 必須でここでは、インストールされているフィルターは、ファイルを処理します。 フィルターの詳細については、次を参照してください。[検索用フィルターの管理と構成](/sql-docs/docs/relational-databases/search/configure-and-manage-filters-for-search)です。
+フルテキスト検索は、バイナリ ファイルに格納されているテキストのでも動作します。 必須でここでは、インストールされているフィルターは、ファイルを処理します。 フィルターの詳細については、次を参照してください。[検索用フィルターの管理と構成](../relational-databases/search/configure-and-manage-filters-for-search.md)です。
 
-呼び出すことによってインストールされているフィルターの一覧を表示できる**sp_help_fulltext_system_components 'filter'**です。 SQL Server 2017 RC2 では、次のフィルターがインストールされます。
+呼び出すことによってインストールされているフィルターの一覧を表示できる**sp_help_fulltext_system_components 'filter'**です。 SQL Server 2017 年 1、次のフィルターがインストールされます。
 
 | [コンポーネント名] | クラス ID | バージョン |
 |---|---|---|
@@ -258,37 +258,28 @@ sudo zypper update mssql-server-fts
 |.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>セマンティック検索
-[セマンティック検索](/sql-docs/docs/relational-databases/search/semantic-search-sql-server)を抽出し、統計的に関連するインデックス、フルテキスト検索機能を上に構築*キー フレーズ*です。 これにより、データベース内のドキュメント内で意味を照会することができます。 ようなドキュメントを識別することもできます。
+[セマンティック検索](../relational-databases/search/semantic-search-sql-server.md)を抽出し、統計的に関連するインデックス、フルテキスト検索機能を上に構築*キー フレーズ*です。 これにより、データベース内のドキュメント内で意味を照会することができます。 ようなドキュメントを識別することもできます。
 
-セマンティック検索を使用するためにする必要があります最初のダウンロードし、アタッチ、[セマンティック言語統計データベース](/sql-docs/docs/relational-databases/search/install-and-configure-semantic-search)です。
+セマンティック検索を使用するのには、最初のコンピューターに、セマンティック言語統計データベースを復元する必要があります。
 
-1. Windows コンピューターでは、[をダウンロードします。セマンティック言語統計データベースの MSI ファイル](https://www.microsoft.com/download/details.aspx?id=54277)です。
+1. などのツールを使用[sqlcmd](sql-server-linux-setup-tools.md)Linux の SQL Server インスタンスで、次の TRANSACT-SQL コマンドを実行します。 このコマンドは、言語統計データベースを復元します。
 
-    > [!NOTE]
-    > この時刻に、ダウンロード、データベースが、します。MSI ファイルは Windows マシンはこの手順に必要なためです。
+   ```sql
+   RESTORE DATABASE [semanticsdb] FROM
+   DISK = N'/opt/mssql/misc/semanticsdb.bak' WITH FILE = 1,
+   MOVE N'semanticsdb' TO N'/var/opt/mssql/data/semanticsDB.mdf',
+   MOVE N'semanticsdb_log' TO N'/var/opt/mssql/data/semanticsdb_log.ldf', NOUNLOAD, STATS = 5
+   GO
+   ```
 
-2. 実行します。MSI ファイルをデータベースを抽出し、ログ ファイルです。
+   > [!NOTE]
+   > 必要に応じて、前の RESTORE コマンドには、構成を調整するパスを更新します。
 
-3. データベースとログ ファイルを Linux の SQL Server コンピューターに移動します。
+1. セマンティック言語統計データベースを登録する次の TRANSACT-SQL コマンドを実行します。
 
-    > [!TIP]
-    > Linux の Windows からファイルを移動する方法のガイダンスについては、次を参照してください。 [Linux にファイルを転送](sql-server-linux-migrate-restore-database.md#scp)です。
-
-4. 言語統計データベースをアタッチするように Linux SQL Server インスタンス上には、次の TRANSACT-SQL コマンドを実行します。
-
-    ```tsql
-    CREATE DATABASE semanticsdb  
-            ON ( FILENAME = N'var/opt/mssql/data/semanticsdb.mdf' )  
-            LOG ON ( FILENAME = N'var/opt/mssql/data/semanticsdb_log.ldf' )  
-            FOR ATTACH;  
-    GO  
-    ```
-
-5. セマンティック言語統計データベースを登録する次の TRANSACT-SQL コマンドを実行します。
-
-    ```tsql
+    ```sql
     EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
-    GO  
+    GO
     ```
 
 ## <a name="next-steps"></a>次の手順

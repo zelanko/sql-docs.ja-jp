@@ -16,16 +16,16 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 8768b00b0bfcd64fae9db63350b94ab4edce2c20
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a48df35dacab91324966eff5c26609c00ecfbfe6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshoot-reporting-services"></a>Reporting Services のトラブルシューティング
   このセクションのトピックは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に関する問題を特定し、トラブルシューティングを行うのに役立ちます。  
 
-![小さいファイル フォルダー アイコン](../../reporting-services/troubleshooting/media/filefolder-small.png)**Reporting Services に関する問題のトラブルシューティング   **  
+![小さいファイル フォルダー アイコン](../../reporting-services/troubleshooting/media/filefolder-small.png)**Reporting Services に関する問題のトラブルシューティング**   
 + [Reporting Services レポートの問題のトラブルシューティング](../../reporting-services/troubleshooting/troubleshoot-reporting-services-report-issues.md)    
 +  [Reporting Services のサブスクリプションと配信に関するトラブルシューティング](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
 
@@ -39,9 +39,9 @@ ms.lasthandoff: 09/21/2017
 
 +  [ネイティブ モードのレポート サーバーでのレポートのパブリッシュまたは表示のトラブルシューティング](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
 
-+  [サーバーと Serivces をレポートにデータベース接続の問題をトラブルシューティングします。](/sql-docs/docs/reporting-services/troubleshooting/troubleshoot-server-and-database-connection-problems-with-reporting-services)  
++  [サーバーと Serivces をレポートにデータベース接続の問題をトラブルシューティングします。](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
 
- ![小さいファイル フォルダー アイコン](../../reporting-services/troubleshooting/media/filefolder-small.png)**エラーとイベントのリファレンス   **  
+ ![小さいファイル フォルダー アイコン](../../reporting-services/troubleshooting/media/filefolder-small.png)**エラーとイベントのリファレンス**   
  + [エラーとイベントのリファレンス (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 
 +  [Reporting Services エラーの原因と解決方法](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  

@@ -22,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2aeb88c7c6829c0efd0cd5f422f65690dd3da2b6
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: b7a7ecd3e1a181dda15cb360e336a22af837aa92
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>パッケージ実行のトラブルシューティング ツール
@@ -43,7 +43,7 @@ ms.lasthandoff: 09/21/2017
   
 -   **トランザクションを使ってデータの整合性の確認を支援する**。 詳細については、「 [Integration Services のトランザクション](../../integration-services/integration-services-transactions.md)」を参照してください。  
   
--   **チェックポイントを使って、エラーが発生した時点からパッケージを再開する**。 詳細については、「 [チェックポイントを使用してパッケージを再開する](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
+-   **チェックポイントを使って、エラーが発生した時点からパッケージを再開する**。 詳細については、「 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>イベント ハンドラーを使用したパッケージ エラーのキャッチおよび処理  
  イベント ハンドラーを使用することにより、パッケージやパッケージ内のオブジェクトで発生する多くのイベントに対応できます。  
@@ -72,9 +72,9 @@ ms.lasthandoff: 09/21/2017
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>ログ記録を使ったパッケージ実行のトラブルシューティング  
  ログ記録を有効にすることで、実行中のパッケージで発生する多くの現象を追跡できます。 ログ プロバイダーは、後で分析するために特定のイベントに関する情報をキャプチャし、その情報をデータベース テーブル、フラット ファイル、XML ファイルなどのサポートされている出力形式で保存します。  
   
--   **ログ記録を有効にする**。 イベントのみ、およびキャプチャする情報項目のみを選択することによって、ログの出力を微調整できます。 詳細については、「[Integration Services (SSIS) のログ記録](/sql-docs/docs/integration-services/performance/integration-services-ssis-logging)」を参照してください。  
+-   **ログ記録を有効にする**。 イベントのみ、およびキャプチャする情報項目のみを選択することによって、ログの出力を微調整できます。 詳細については、「[Integration Services (SSIS) のログ記録](../performance/integration-services-ssis-logging.md)」を参照してください。  
   
--   **パッケージの Diagnostic イベントを選択して、プロバイダーに関する問題のトラブルシューティングを行います。** パッケージと外部データ ソースとのやり取りに関するトラブルシューティングに役立つログ メッセージが用意されています。 詳細については、「[トラブルシューティング ツールのパッケージ接続](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity)」を参照してください。  
+-   **パッケージの Diagnostic イベントを選択して、プロバイダーに関する問題のトラブルシューティングを行います。** パッケージと外部データ ソースとのやり取りに関するトラブルシューティングに役立つログ メッセージが用意されています。 詳細については、「[トラブルシューティング ツールのパッケージ接続](troubleshooting-tools-for-package-connectivity.md)」を参照してください。  
   
 -   **既定のログ出力を拡張する**。 ログ記録は、通常、パッケージを実行するたびに、ログの記録先に行を追加します。 各行のログ出力では名前や一意識別子でパッケージを識別していますが、一意の ExecutionID で各パッケージの実行も識別しています。そのため、1 つの一覧に大量のログ記録が出力され、分析が難しくなります。  
   

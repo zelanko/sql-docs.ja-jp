@@ -1,5 +1,5 @@
 ---
-title: "どのような &#39; SSMA for Oracle (OracleToSQL) の |Microsoft ドキュメント"
+title: "どのような & #39; SSMA for Oracle (OracleToSQL) の |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.custom: 
 ms.date: 09/22/2017
@@ -15,14 +15,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
-ms.openlocfilehash: 0dfba12d3b2d06677817bb087f11cbd922ca390d
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: cc5ee3189d00f7124754769b12f5d3cb1b8156b5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/30/2017
 
 ---
-# <a name="what39s-new-in-ssma-for-oracle-oracletosql"></a>どのような &#39; SSMA for Oracle (OracleToSQL) の
+# <a name="what39s-new-in-ssma-for-oracle-oracletosql"></a>どのような & #39; SSMA for Oracle (OracleToSQL) の
 このトピックでは、Oracle での変更の各リリース SSMA が一覧表示します。  
+
+## <a name="ssma-v76"></a>SSMA v7.6
+SSMA for Oracle の v7.6 リリースの品質、および変換のメトリックを向上する対象となる修正プログラムと SQL Server 2017 (パブリック プレビュー) のサポートが拡張されました。 Windows および Linux での SQL Server 2017 のサポートは、パブリック プレビューではの運用環境の移行は使用できません。
+
+> [!IMPORTANT]
+> SSMA v7.4 とそれ以降のバージョンでは、.Net 4.5.2 は、のインストール前提条件、およびツールの 32 ビット バージョンは廃止されました。
 
 ## <a name="ssma-v75"></a>SSMA v7.5
 SSMA for Oracle の v7.5 リリースには、次の変更が含まれています。
@@ -37,7 +43,7 @@ SSMA for Oracle の v7.4 リリースには、次の変更が含まれていま�
 
 - SSMA for Oracle では、移行のターゲット プラットフォームとして Azure SQL Data Warehouse をサポートしているようになりました。
 
-    ![新しいプロジェクト ウィンドウ](../media/new-project.png)
+    ![新しいプロジェクト] ウィンドウ](../media/new-project.png)
   - 次の図のように、データ ウェアハウス ストレージのオプションをサポートしています。
 
     ![データ ウェアハウスのストレージ オプション](../media/storage-options_red.png)
@@ -72,8 +78,8 @@ SSMA for Oracle の v7.2 リリースには、次の変更が含まれていま�
 - 改善の品質、および変換のメトリックを対象となる修正プログラムがお客様のフィードバックに基づきます。
 - 製品利用統計情報をお客様の問題をトラブルシューティングし、SSMA の換算率を向上させる優れたデータ ポイントを提供する拡張機能です。
 
-## <a name="ssma-v71"></a>SSMA v7.1
-SSMA for Oracle の v7.1 リリースには、次の変更が含まれています。
+## <a name="ssma-v71"></a>SSMA v7.1]
+SSMA for Oracle の v7.1] リリースには、次の変更が含まれています。
 - Windows と Linux CTP1 では、SQL Server 2017 は、移行のサポート対象のターゲット プラットフォームではようになりました。 この機能は、technical preview ではあり、SQL の対象サーバーにスキーマとデータの移動を許可します。
 - SSMA は、使用可能になるとすぐには、SSMA の最新バージョンをダウンロードする自動更新をサポートします。
 - SSMA インストール可能なバイナリは、Windows インストーラー パッケージ ファイル (.msi) により配信されるようになりました。

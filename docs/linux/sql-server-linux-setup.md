@@ -4,23 +4,23 @@ description: "インストール、更新、および Linux に SQL Server を�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/28/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: f746037f695301881ce9a993f3d556db44f44292
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 0220ef0349acac274567bb75bcb0e8b38a3126ce
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上の SQL Server のインストールのガイダンス
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-このトピックでは、インストール、更新、および Linux に SQL Server 2017 をアンインストールする方法について説明します。 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、および Ubuntu では、SQL Server 2017 RC2 をサポートします。 Linux または Docker を Windows/ファルダ上の Docker エンジンで実行できる、Docker のイメージとして使用
+このトピックでは、インストール、更新、および Linux に SQL Server 2017 をアンインストールする方法について説明します。 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、および Ubuntu では、SQL Server 2017 をサポートします。 Linux または Docker を Windows/ファルダ上の Docker エンジンで実行できる、Docker のイメージとして使用
 
 > [!TIP]
 > 手始めに、用のクイック スタート チュートリアルのいずれかにジャンプ[RHEL](quickstart-install-connect-red-hat.md)、 [SLES](quickstart-install-connect-suse.md)、 [Ubuntu](quickstart-install-connect-ubuntu.md)、または[Docker](quickstart-install-connect-docker.md)です。
@@ -43,7 +43,7 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 |||
 |-----|-----|
 | **[メモリ]** | 3.25 GB |
-| **ファイル システム** | **XFS**または**EXT4** (その他のファイル システム**BTRFS**、サポートされていません) |
+| **[ファイル システム]** | **XFS**または**EXT4** (その他のファイル システム**BTRFS**、サポートされていません) |
 | **ディスク領域** | 6 GB |
 | **プロセッサ速度** | 2 GHz |
 | **プロセッサ コア** | 2 コア |
@@ -51,6 +51,12 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 
 > [!NOTE]
 > SQL Server エンジンがされてこの時点で最大 1 TB のメモリをテストします。
+
+使用する場合**Network File System (NFS)** 、実稼働環境でのリモートの共有は、次のサポート要件を注意してください。
+
+- 使用して NFS version **4.2 以上**です。 NFS の古いバージョンでは、スパース ファイルの作成、最新のファイル システムに共通 fallocate など、必要な機能はできません。
+- のみを検索、 **/var/opt/mssql** NFS マウント上のディレクトリ。 SQL Server システム バイナリなどその他のファイルはサポートされていません。
+- NFS クライアントが、そのリモート共有をマウントするときに、'nolock' オプションを使用することを確認します。
 
 ## <a id="platforms"></a> SQL Server のインストール
 
@@ -91,7 +97,55 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 > SQL Server 2017 など、同じメジャー バージョンのリリースにダウン グレードすることのみサポートされます。
 
 > [!IMPORTANT]
-> ダウン グレードは、この時点で RC2 と RC1 の間でのみサポートされます。
+> ダウン グレードは、この時点で RTM、RC2 では、RC1 の間でのみサポートされます。
+
+## <a id="repositories"></a>変更のソース リポジトリ
+
+インストールまたは SQL Server をアップグレードするときに、構成されている Microsoft リポジトリから SQL Server の最新バージョンを取得します。 ことが重要の各配布リポジトリの 2 つの主な種類があることに注意してください。
+
+- **累積的な更新プログラム (CU)**:、累積的な更新プログラム (CU) リポジトリには、そのリリース以降、基本の SQL Server リリースおよびバグの修正や改善用のパッケージが含まれます。 累積的更新プログラムは、SQL Server 2017 などのリリース バージョンに固有です。 正規わかりませんがリリースされます。
+
+- **GDR**: の GDR リポジトリには、そのリリース以降、基本の SQL Server リリースのみ重要な修正プログラムとセキュリティ更新プログラム用のパッケージが含まれています。 これらの更新プログラムは、次の CU リリースにも追加されます。
+
+各 CU および GDR のリリースには、完全な SQL Server パッケージとそのリポジトリの以前のすべての更新が含まれています。 CU リリースに GDR のリリースから更新は、SQL Server 用に構成されているリポジトリを変更することによってサポートされています。 こともできます[ダウン グレード](#rollback)メジャー バージョン内で任意のリリースに (ex: 2017)。
+
+> [!NOTE]
+> 更新 CU から GDR リリースにリリースはサポートされていません。
+
+変更するには、CU リポジトリに GDR リポジトリは、次の手順を使用します。
+
+1. 以前に構成されたプレビュー リポジトリを削除します。
+
+   | プラットフォーム | リポジトリの削除 コマンド |
+   |-----|-----|
+   | RHEL | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
+   | SLES | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+   | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
+
+1. 新しいリポジトリを構成します。
+
+   | プラットフォーム | リポジトリ | Command |
+   |-----|-----|-----|
+   | RHEL | CU | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+   | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+   | SLES | CU  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles12/mssql-server-2017.repo` |
+   | SLES | GDR | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles12/mssql-server-2017-gdr.repo` |
+   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
+   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
+
+1. システムを更新します。
+
+   | プラットフォーム | Update コマンド |
+   |-----|-----|
+   | RHEL | `sudo yum update` |
+   | SLES | `sudo zypper --gpg-auto-import-keys refresh` |
+   | Ubuntu | `sudo apt-get update` |
+
+
+1. [インストール](#platforms)または[更新](#upgrade)新しいリポジトリから SQL Server。
+
+   > [!IMPORTANT]
+   > 使用して、フル インストールを実行する場合、この時点で、[クイック スタート チュートリアル](#platforms)ターゲットのリポジトリを構成したことに注意してください。 チュートリアルではその手順は繰り返されません。 これは、クイック スタート チュートリアル CU リポジトリを使用するために GDR リポジトリを構成する場合に特に当てはまります。
 
 ## <a id="uninstall"></a>SQL Server をアンインストールします。
 

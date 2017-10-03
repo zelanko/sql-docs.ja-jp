@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 9b2fb2de59b10315691ea177522fd9c36da4f4c8
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: f1ea7333aa847916f45d648c582f07de0774eda6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>ステップ 3: PHP を使用した SQL への接続を概念実証する
@@ -83,7 +83,7 @@ ms.lasthandoff: 09/21/2017
   
 ## <a name="step-3--insert-a-row"></a>手順 3: 行を挿入します。  
   
-この例を実行する方法が表示されます、[挿入](/sql-docs/docs/t-sql/statements/insert-transact-sql)ステートメントは、安全にからアプリケーションを保護するためのパラメーターを渡す[SQL インジェクション](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints)値。    
+この例を実行する方法が表示されます、[挿入](../../t-sql/statements/insert-transact-sql.md)ステートメントは、安全にからアプリケーションを保護するためのパラメーターを渡す[SQL インジェクション](../../relational-databases/tables/primary-and-foreign-key-constraints.md)値。    
   
   
 ```php 

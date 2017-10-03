@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: cffe6569f7bac5308d49bb89f4fb4db259be445b
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d5b8e44c007766354e5c03058d16a41cbb72ad0e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>JDBC Driver の JDBC 4.1 への準拠
@@ -56,7 +56,7 @@ ms.lasthandoff: 09/21/2017
   
 |新機能|Description|  
 |-----------------|-----------------|  
-|新しいエスケープ関数<br /><br /> 制限された戻り行エスケープ|部分的にサポートされています。<br /><br /> エスケープ構文: 制限\<行 >[オフセット < row_offset >](/sql-docs/docs/connect/jdbc/using-sql-escape-sequences)です。|  
+|新しいエスケープ関数<br /><br /> 制限された戻り行エスケープ|部分的にサポートされています。<br /><br /> エスケープ構文: 制限\<行 >[オフセット < row_offset >](using-sql-escape-sequences.md)です。|  
   
  Java Database Connectivity API 4.1 仕様は Microsoft JDBC Driver 4.2 for SQL Server によってサポートされ、以下のようにデータ型がマッピングされています。  
   

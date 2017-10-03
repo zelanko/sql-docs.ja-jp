@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: b840ffc9c1cf621d1c59ee927fff26949b013c0d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 114e51f111e4b3dfece42c9510a35bb9be5d5652
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>Integration Services バージョンのサイド バイ サイド インストール
@@ -29,7 +29,7 @@ ms.lasthandoff: 09/21/2017
       [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Integration Services (SSIS) サイド バイ サイド SSIS の旧バージョンとします。 このトピックでは、サイド バイ サイド インストールの制限事項について説明します。  
   
 ## <a name="designing-and-maintaining-packages"></a>パッケージの設計と管理  
- SQL Server 2016、SQL Server 2014、または SQL Server 2012 を対象とするパッケージを設計および管理するには、Visual Studio 2015 用の SQL Server Data Tools (SSDT) を使用します。 SSDT を入手する方法については、「 [最新の SQL Server Data Tools のダウンロード](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)」を参照してください。  
+ SQL Server 2016、SQL Server 2014、または SQL Server 2012 を対象とするパッケージを設計および管理するには、Visual Studio 2015 用の SQL Server Data Tools (SSDT) を使用します。 SSDT を入手する方法については、「 [最新の SQL Server Data Tools のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。  
   
  Integration Services プロジェクトのプロパティ ページでは、 **[構成プロパティ]** の **[全般]**タブで **[TargetServerVersion]** プロパティを選択し、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
   

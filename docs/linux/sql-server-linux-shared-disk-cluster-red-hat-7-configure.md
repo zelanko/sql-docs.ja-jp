@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: eb3ac975b6962a36e1aaa60a421e977fe42cda90
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 1708138f5eeb082f022f78dfb685f333f3f0a17b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを構成します。
@@ -90,7 +90,7 @@ ms.lasthandoff: 08/02/2017
    sudo ip addr show
    ```
 
-   各ノードで、コンピューター名を設定します。 各ノード一意の名前は 15 文字以下です。 追加することによって、コンピューター名を設定`/etc/hosts`です。 次のスクリプトを編集できます。`/etc/hosts`で`vi`です。 
+   各ノードで、コンピューター名を設定します。 各ノード一意の名前は 15 文字以下です。 追加することによって、コンピューター名を設定`/etc/hosts`です。 次のスクリプトを使うと、`vi` で `/etc/hosts` を編集できます。 
 
    ```bash
    sudo vi /etc/hosts
@@ -315,7 +315,7 @@ NFS サーバー上には、次の操作を行います。
    sudo pcs cluster start --all
    ```
 
-   > RHEL HA アドオンは、VMWare と KVM エージェントをフェンスがします。 フェンス操作は、他のすべてのハイパーバイザーで無効にする必要があります。 実稼働環境では、フェンス操作エージェントを無効にしないでください。 RC2 時間帯の時点では、HyperV またはクラウド環境のフェンス操作エージェントがありません。 これらの構成を実行している場合は、フェンス操作を無効にする必要があります。 \**これは、説明は、実稼働システムでは推奨されません。**
+   > RHEL HA アドオンは、VMWare と KVM エージェントをフェンスがします。 フェンス操作は、他のすべてのハイパーバイザーで無効にする必要があります。 実稼働環境では、フェンス操作エージェントを無効にしないでください。 時間帯、時点では、HyperV またはクラウド環境のフェンス操作エージェントがありません。 これらの構成を実行している場合は、フェンス操作を無効にする必要があります。 \**これは、説明は、実稼働システムでは推奨されません。**
 
    次のコマンドでは、フェンス操作エージェントが無効にします。
 

@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 052e0f66818fd3d9e4cd4ad59720da4a7280c988
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 36fd7c4ac62280fb980bb24c89306a006605b665
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>グループ単位でのヘッダーとフッターの表示 (レポート ビルダーおよび SSRS)
   Tablix データ領域では、グループに関連付けられている動的行と一緒に、静的行 (グループ ヘッダー、グループ フッターなど) を表示するかどうかを制御できます。  
   
- 複数のページですべての列見出しまたは行見出しを繰り返し表示するには、Tablix データ領域のプロパティを設定します。 詳細については、次を参照してください。[表示行および列ヘッダーを複数のページ (レポート ビルダーおよび SSRS) で](/sql-docs/docs/reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs)です。  
+ 複数のページですべての列見出しまたは行見出しを繰り返し表示するには、Tablix データ領域のプロパティを設定します。 詳細については、次を参照してください。[表示行および列ヘッダーを複数のページ (レポート ビルダーおよび SSRS) で](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)です。  
   
  入れ子になったグループに関連付けられている動的行と動的列の表示動作、または、ラベルや小計に関連付けられている静的行と静的列の表示動作を制御するには、Tablix メンバーのプロパティを設定する必要があります。 Tablix メンバーは、静的な行または列、あるいは動的な行または列を表します。 静的メンバーが表示されるのは 1 回だけです。 たとえば、代表的な静的行に、総計行があります。 動的メンバーは、1 グループにつき 1 回表示されます。 たとえば、特定のグループに対し [Territory] というグループ式が割り当てられているとき、そのグループに関連付けられている行は、一意の区域 (territory) 値ごとに 1 回表示されることになります。 Tablix メンバーの詳細については、次を参照してください。 [Tablix データ領域のセル、行と列 & #40 です。レポート ビルダー"&"#41;SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)です。  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 09/21/2017
 5.  (省略可) レポートをプレビューします。 可能な限り、レポート レンダラーは指定された列グループ メンバーと共にこのメンバーを維持します。  
   
 ## <a name="see-also"></a>参照  
- [Tablix データ領域のセル、行、および列 (レポート ビルダー) と SSRS](/sql-docs/docs/reporting-services/report-design/tablix-data-region-report-builder-and-ssrs)   
+ [Tablix データ領域のセル、行、および列 (レポート ビルダー) と SSRS](tablix-data-region-report-builder-and-ssrs.md)   
  
   
   

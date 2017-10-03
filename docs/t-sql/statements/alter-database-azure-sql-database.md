@@ -3,7 +3,7 @@ title: "ALTER DATABASE (Azure SQL データベース) |Microsoft ドキュメン
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 08/07/2017
+ms.date: 09/25/2017
 ms.prod: 
 ms.reviewer: 
 ms.service: sql-database
@@ -18,10 +18,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fe1ad8f6331d853b65ac10c64ae9d0349d962cfb
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: f525c0ca01f49be05c1920897951059b126c83e9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL データベース)
@@ -34,29 +34,27 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      -- Azure SQL Database Syntax  
+-- Azure SQL Database Syntax  
 ALTER DATABASE { database_name }  
 {  
-    MODIFY NAME =new_database_name  
+    MODIFY NAME = new_database_name  
   | MODIFY ( <edition_options> [, ... n] )   
   | SET { <option_spec> [ ,... n ] }   
   | ADD SECONDARY ON SERVER <partner_server_name>  
-      [WITH (\<add-secondary-option>::= [, ... n] ) ]  
+      [WITH ( <add-secondary-option>::= [, ... n] ) ]  
   | REMOVE SECONDARY ON SERVER <partner_server_name>  
   | FAILOVER  
   | FORCE_FAILOVER_ALLOW_DATA_LOSS  
 }  
-  
+[;] 
+
 <edition_options> ::=   
 {  
 
       MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }    
     | EDITION = { 'basic' | 'standard' | 'premium' | 'premiumrs' }   
-    | SERVICE_OBJECTIVE =   
-                 {  'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
-                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' | 
-                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |
+    | SERVICE_OBJECTIVE = 
+                 {  <service-objective>
                  | { ELASTIC_POOL (name = <elastic_pool_name>) }   
                  }   
 }  
@@ -65,21 +63,22 @@ ALTER DATABASE { database_name }
    {  
       ALLOW_CONNECTIONS = { ALL | NO }  
      | SERVICE_OBJECTIVE =   
-                 {  'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
-                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15' |
-                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |  
+                 {  <service-objective> 
                  | { ELASTIC_POOL ( name = <elastic_pool_name>) }   
                  }   
    }  
-  
- [;]  
+
+<service-objective> ::=  { 'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
+                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' | 
+                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | }
+
 ```  
   
-```  
-SET OPTIONS AVAILABLE FOR SQL Database  
-Full descriptions of the set options are available in the topic   
-ALTER DATABASE SET Options. The supported syntax is listed here.  
-  
+```
+-- SET OPTIONS AVAILABLE FOR SQL Database  
+-- Full descriptions of the set options are available in the topic   
+-- ALTER DATABASE SET Options. The supported syntax is listed here.  
+
 <optionspec> ::=   
 {  
     <auto_option>   
@@ -107,7 +106,7 @@ ALTER DATABASE SET Options. The supported syntax is listed here.
 }  
   
 <compatibility_level_option>::=  
-COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }  
+COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }  
   
 <cursor_option> ::=   
 {  
@@ -191,15 +190,27 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
  使用中の現在のデータベースを変更することを指定します。  
   
  MODIFY NAME  **=**  *new_database_name*  
- として指定された名前のデータベースの名前を変更*new_database_name*です。  
-  
+ として指定された名前のデータベースの名前を変更*new_database_name*です。 次の例は、データベースの名前を変更`db1`に`db2`:   
+
+```  
+ALTER DATABASE db1  
+    MODIFY Name = db2 ;  
+```    
+
  MODIFY (EDITION  **=**  ['basic' |'standard' |'premium' |premiumrs'])    
- データベースのサービス階層を変更します。  エディションの変更は、データベースの MAXSIZE プロパティがそのエディションでサポートされている有効な範囲外の値に設定されている場合に失敗します。  
+ データベースのサービス階層を変更します。 次の例の変更するにはエディション`premium`:
   
+```  
+ALTER DATABASE current 
+    MODIFY (EDITION = 'premium');
+``` 
+
+エディションの変更は、データベースの MAXSIZE プロパティがそのエディションでサポートされている有効な範囲外の値に設定されている場合に失敗します。  
+
  変更 (MAXSIZE  **=**  [100 MB | 500 MB | 1 | 1024.4096] GB)  
  データベースの最大サイズを指定します。 最大サイズは、データベースの EDITION プロパティの有効な値セットに準拠している必要があります。 データベースの最大サイズを変更すると、データベースの EDITION も変更される場合があります。 次の表のサポートされる MAXSIZE 値と既定値 (D) の一覧、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]サービス層です。  
   
-|**MAXSIZE**|**基本**|**S0 S2**|**S3 S12**|**P1 P6 と PRS1 PRS6**| **P11 P15** 
+|**MAXSIZE**|**基本**|**S0 S2**|**S3 S12**|**P1 P6 と PRS1 PRS6**|**P11 P15**|  
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|  
@@ -217,10 +228,10 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
 |200 GB|なし|√|√|√|√|  
 |250 GB|なし|√ (D)|√ (D)|√|√|  
 |300 GB|なし|√|√|√|√|  
-|400 GB|なし|√|√|√|√|
-|500 GB|なし|√|√|√ (D)|√|
-|750 GB|なし|√|√|√|√|
-|1024 GB|なし|√|√|√|√ (D)|
+|400 GB|なし|√|√|√|√|  
+|500 GB|なし|√|√|√ (D)|√|  
+|750 GB|なし|√|√|√|√|  
+|1024 GB|なし|√|√|√|√ (D)|  
 |1024 GB から最大 4096 GB 単位での 256 GB *|なし|なし|なし|なし|√|√|  
   
  \*P11 と P15 MAXSIZE を許可する最大 4 TB 1024 GB が既定のサイズをされているとします。  P11 および P15 は、追加料金なしで最大 4 TB の含まれる記憶域を使用できます。 Premium 階層で MAXSIZE が 1 TB を超えるは次の地域で現在使用可能な: 米国 East2、米国西部、米国 Gov バージニア、西ヨーロッパ、ドイツの中央、南東アジア、東日本、オーストラリア東部、カナダ中央、およびカナダ東部です。 現在の制限については、次を参照してください。[データベースをシングル](https://docs.microsoft.com/azure/sql-database-single-database-resources)です。  
@@ -233,11 +244,19 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
 -   EDITION が指定され、MAXSIZE が指定されていない場合は、エディションの既定値が使用されます。 たとえばは、EDITION が Standard に設定し、MAXSIZE が指定されていない場合、MAXSIZE は自動的に 500 MB に設定します。  
   
 -   MAXSIZE も EDITION が指定されている場合、EDITION は、標準 (S0) に設定し、MAXSIZE は 250 GB に設定します。  
+ 
+
+ 変更 (SERVICE_OBJECTIVE =\<サービス目標 >)  
+ パフォーマンス レベルを指定します。 次の例の変更はサービスに premium データベースの目標`P6`:
+ 
+```  
+ALTER DATABASE current 
+    MODIFY (SERVICE_OBJECTIVE = 'P6');
+```  
+ サービス目標の使用可能な値: `S0`、 `S1`、 `S2`、 `S3`、 `S4`、 `S6`、 `S7`、 `S9`、 `S12`、 `P1`、 `P2`、`P4`、 `P6`、 `P11`、 `P15`、 `PRS1`、 `PRS2`、 `PRS4`、および`PRS6`です。 サービス目標に関する説明と、サイズ、エディション、およびサービス目標の組み合わせの詳細については、次を参照してください。 [Azure SQL データベース サービス階層とパフォーマンス レベル](http://msdn.microsoft.com/library/azure/dn741336.aspx)です。 指定した SERVICE_OBJECTIVE が EDITION によってサポートされていません、エラーが表示されます。 SERVICE_OBJECTIVE の値を 1 つの階層から別の階層に変更する場合 (たとえば、S1 から P1) は、EDITION の値も変更する必要があります。  
   
- SERVICE_OBJECTIVE の変更 {'S0' |'S1' |'S2' |' S3"|'S4' |'S6' |'S7' |'S9' |'S12' |'P1' |'P2' |'P4' |'P6' |'P11' |'P15' |'PRS1' |'PRS2' |'PRS4' |'PRS6' |  
- パフォーマンス レベルを指定します。 サービス目標に関する説明と、サイズ、エディション、およびサービス目標の組み合わせの詳細については、次を参照してください。 [Azure SQL データベース サービス階層とパフォーマンス レベル](http://msdn.microsoft.com/library/azure/dn741336.aspx)です。 指定した SERVICE_OBJECTIVE が EDITION によってサポートされていません、エラーが表示されます。 SERVICE_OBJECTIVE の値を 1 つの階層から別の階層に変更する場合 (たとえば、S1 から P1) は、EDITION の値も変更する必要があります。  
-  
-ELASTIC_POOL (名前 = \<elastic_pool_name >)、弾力性プールに、既存のデータベースを追加するには、ELASTIC_POOL にデータベースの SERVICE_OBJECTIVE を設定および弾力性プールの名前を指定します。 同じサーバー内の別の柔軟なプールにデータベースを変更するのに、このオプションを使用することもできます。 詳細については、次を参照してください。[作成し、SQL Database の弾力性プールの管理](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)です。 柔軟なプールからデータベースを削除するには、ALTER DATABASE を使用して、SERVICE_OBJECTIVE を 1 つのデータベースのパフォーマンス レベルに設定します。  
+ 変更 (SERVICE_OBJECTIVE 柔軟なを =\_プール (名前 = \<elastic_pool_name >)  
+ 柔軟なプールには、既存のデータベースを追加するには、ELASTIC_POOL にデータベースの SERVICE_OBJECTIVE を設定し、柔軟なプールの名前を指定します。 同じサーバー内の別の柔軟なプールにデータベースを変更するのに、このオプションを使用することもできます。 詳細については、次を参照してください。[作成し、SQL Database の弾力性プールの管理](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)です。 柔軟なプールからデータベースを削除するには、ALTER DATABASE を使用して、SERVICE_OBJECTIVE を 1 つのデータベースのパフォーマンス レベルに設定します。  
 
  セカンダリにサーバーの追加\<partner_server_name >  
  主キー、地理的レプリケーションにローカルのデータベースを作成して、パートナー サーバーで同じ名前での地理的レプリケーションのセカンダリ データベースを作成し、非同期的に新しいセカンダリへのプライマリからのデータのレプリケーションを開始します。 セカンダリ上と同じ名前のデータベースが既に存在する場合、コマンドは失敗します。 コマンドは、プライマリとなるローカル データベースをホストしているサーバー上の master データベースで実行されます。  
@@ -322,21 +341,17 @@ ELASTIC_POOL (名前 = \<elastic_pool_name >)、弾力性プールに、既存�
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-changing-the-name-of-a-database"></a>A. データベースの名前を変更する  
- 次の例では、`db1` データベースの名前を `db2` に変更します。  
-  
-```  
-ALTER DATABASE db1  
-Modify Name = db2 ;  
-```    
-
-### <a name="b-changing-the-edition-size-and-service-objective-for-an-existing-database"></a>B. 既存のデータベースのエディション、サイズおよびサービス目標を変更します。
+### <a name="a-check-the-edition-options-and-change-them"></a>A. Edition オプションを確認し、それらを変更します。
 
 ```
+SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
+        ServiceObjective = DATABASEPROPERTYEX('db1', 'ServiceObjective'),
+        MaxSizeInBytes =  DATABASEPROPERTYEX('db1', 'MaxSizeInBytes');
+
 ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJECTIVE = 'P15');
 ```
 
-### <a name="c-moving-a-database-to-a-different-elastic-pool"></a>C. データベースを別の柔軟なプールに移動します。  
+### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>B. データベースを別の柔軟なプールに移動します。  
  Pool1 をという名前のプールに、既存のデータベースを移動します。  
   
 ```  
@@ -344,8 +359,8 @@ ALTER DATABASE db1
 MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;  
 ```  
   
-### <a name="d-add-a-geo-replication-secondary"></a>D. 地理的レプリケーション セカンダリを追加します。  
- ローカル サーバーで db1 secondaryserver をサーバー上に、読み取り不可のセカンダリ データベース db1 を作成します。  
+### <a name="c-add-a-geo-replication-secondary"></a>C. 地理的レプリケーション セカンダリを追加します。  
+ サーバー上の読み取り不可のセカンダリ データベース db1 の作成`secondaryserver`db1 ローカル サーバー上のです。  
   
 ```  
 ALTER DATABASE db1   
@@ -353,16 +368,16 @@ ADD SECONDARY ON SERVER secondaryserver
 WITH ( ALLOW_CONNECTIONS = NO )  
 ```  
   
-### <a name="e-remove-a-geo-replication-secondary"></a>E. セカンダリ Geo レプリケーションを削除します。  
- Server secondaryserver で db1 セカンダリ データベースを削除します。  
+### <a name="d-remove-a-geo-replication-secondary"></a>D. セカンダリ Geo レプリケーションを削除します。  
+ サーバー上のセカンダリ データベース db1 の削除`secondaryserver`です。  
   
 ```  
 ALTER DATABASE db1   
 REMOVE SECONDARY ON SERVER testsecondaryserver   
 ```  
   
-### <a name="f-failover-to-a-geo-replication-secondary"></a>F. 地理的レプリケーションのセカンダリにフェールオーバー  
- Secondaryserver をサーバー上で実行されるとき、新しいプライマリ データベースに secondaryserver をサーバー上でセカンダリ データベース db1 を昇格させます。  
+### <a name="e-failover-to-a-geo-replication-secondary"></a>E. 地理的レプリケーションのセカンダリにフェールオーバー  
+ サーバー上のセカンダリ データベース db1 の昇格`secondaryserver`に新しいプライマリ データベース サーバーで実行されるときになる`secondaryserver`です。  
   
 ```  
 ALTER DATABASE db1 FAILOVER  

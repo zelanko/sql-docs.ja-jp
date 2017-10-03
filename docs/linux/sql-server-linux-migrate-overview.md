@@ -11,17 +11,17 @@ ms.technology: database-engine
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 61b4ba948df071768380d4a6f2b4ddc4421692d8
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 3e29e84d1aa2fcae2dca2d36bd0e3698eedc54a8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>Linux 上の SQL Server にデータベースと構造化データを移行します。 
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Linux で実行されている SQL Server 2017 RC2 には、データベースとデータを移行できます。 使用する方法は、ソース データと特定のシナリオによって異なります。 次のセクションでは、さまざまな移行シナリオのベスト プラクティスを提供します。
+Linux で実行されている SQL Server 2017 には、データベースとデータを移行できます。 使用する方法は、ソース データと特定のシナリオによって異なります。 次のセクションでは、さまざまな移行シナリオのベスト プラクティスを提供します。
 
 ## <a name="migrate-from-sql-server-on-windows"></a>Windows 上の SQL Server からの移行します。
 Linux 上の SQL Server 2017 に Windows 上の SQL Server データベースを移行する場合は、推奨される手法は、SQL Server のバックアップを使用して復元します。

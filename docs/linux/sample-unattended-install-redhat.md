@@ -4,22 +4,22 @@ description: "SQL Server スクリプトのサンプル - Red Hat Enterprise Lin
 author: edmacauley
 ms.author: edmacauley
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 8b97ec59acf463f73a9277566a89f32a2498a856
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 50f3e867f17987c36a15810eaace668d59b738f2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Red Hat Enterprise Linux 用のサンプル: SQL Server を無人インストール スクリプト
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-このサンプル バッシュ スクリプトは、対話型の入力なし Red Hat Enterprise Linux (RHEL) 上の SQL Server 2017 RC2 をインストールします。 データベース エンジン、SQL Server エージェント、SQL Server コマンド ライン ツールのインストールの例を紹介し、インストール後の手順を実行します。 必要に応じて、フルテキスト検索をインストールし、管理ユーザーを作成できます。
+このサンプル バッシュ スクリプトは、対話型の入力なし Red Hat Enterprise Linux (RHEL) での SQL Server 2017 をインストールします。 データベース エンジン、SQL Server エージェント、SQL Server コマンド ライン ツールのインストールの例を紹介し、インストール後の手順を実行します。 必要に応じて、フルテキスト検索をインストールし、管理ユーザーを作成できます。
 
 > [!TIP]
 > SQL Server をインストールする最も簡単な方法に従う場合は、無人インストール スクリプトを使用する必要はありません、 [Red Hat のクイック スタート チュートリアル](quickstart-install-connect-red-hat.md)です。 その他のセットアップについては、次を参照してください。 [Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md)です。

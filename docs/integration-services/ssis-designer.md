@@ -29,10 +29,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 03e33d60d1d19449d8f7275ae957b4fa2a74e8e2
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="ssis-designer"></a>SSIS デザイナー
@@ -85,7 +85,7 @@ ms.lasthandoff: 09/21/2017
 ### <a name="parameters-tab"></a>[パラメーター] タブ  
  Integration Services (SSIS) パラメーターを使用すると、パッケージの実行時にパッケージ内のプロパティに値を割り当てることができます。 プロジェクト パラメーターはプロジェクト レベル、パッケージ パラメーターはパッケージ レベルで作成できます。 プロジェクト パラメーターは、プロジェクトが受け取る外部入力をプロジェクト内の 1 つまたは複数のパッケージに指定するために使用します。 パッケージ パラメーターを使用すると、パッケージを編集したり再配置したりせずにパッケージ実行を変更できます。 このタブでは、パッケージ パラメーターを管理できます。  
   
- パラメーターの詳細については、「[Integration Services (SSIS) パラメーター](/sql-docs/docs/integration-services/integration-services-ssis-package-and-project-parameters)」を参照してください。  
+ パラメーターの詳細については、「[Integration Services (SSIS) パラメーター](integration-services-ssis-package-and-project-parameters.md)」を参照してください。  
   
 > **重要!!**  パラメーターを使用できるのは、プロジェクトの配置モデル用に開発したプロジェクトに対してのみです。 したがって、プロジェクト配置モデルを使用するように構成されているプロジェクトの一部であるパッケージに対してのみ、[パラメーター] タブが表示されます。  
   

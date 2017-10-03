@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: e36aeea4440f7c565e9517ebb1b80d21116b4342
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2555a719c2677c2c573a07dfa803ad80b3946ebf
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>パッケージとその他の操作を実行するモニター
@@ -51,7 +51,7 @@ ms.lasthandoff: 09/21/2017
  9 つの状態の種類を使用して、操作の状態を示します。 状態の種類の一覧については、「[catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)」を参照してください。  
 
 ## <a name="active_ops"></a>アクティブな操作 ダイアログ ボックス
-  配置、検証、パッケージの実行など、** サーバー上で現在実行中の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作の状態を表示するには、**[アクティブな操作][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。 このデータは、SSISDB カタログに格納されます。  
+  配置、検証、パッケージの実行など、 **サーバー上で現在実行中の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作の状態を表示するには、**[アクティブな操作][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。 このデータは、SSISDB カタログに格納されます。  
   
  関連 [!INCLUDE[tsql](../../includes/tsql-md.md)] ビューの詳細については、「[catalog.operations (SSISDB データベース)](../../integration-services/system-views/catalog-operations-ssisdb-database.md)」、「[catalog.validations (SSISDB データベース)](../../integration-services/system-views/catalog-validations-ssisdb-database.md)」、「[catalog.executions (SSISDB データベース)](../../integration-services/system-views/catalog-executions-ssisdb-database.md)」を参照してください。  
   
@@ -203,6 +203,6 @@ ms.lasthandoff: 09/21/2017
     -   **すべての接続**  
 
 ## <a name="see-also"></a>参照  
- [プロジェクトとパッケージの実行](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)   
- [パッケージ実行のレポートのトラブルシューティング](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-reports-for-package-execution)  
+ [プロジェクトとパッケージの実行](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
+ [パッケージ実行のレポートのトラブルシューティング](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
 

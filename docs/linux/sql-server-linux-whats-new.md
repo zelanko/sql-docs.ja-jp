@@ -1,19 +1,19 @@
 ---
-title: "Linux 上の SQL Server 2017 RC1 の新機能 |Microsoft ドキュメント"
+title: "SQL Server 2017 on Linux の新機能 |Microsoft ドキュメント"
 description: "このトピックでは、Linux 上の SQL Server 2017 の現在のリリースの新機能が強調表示されます。"
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 622e0ed2242ddc454028962c63b5760a6baad38a
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 381dcb3e22f123bfa07c2b387598d3429398e21f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 の新機能します。
@@ -21,6 +21,13 @@ ms.lasthandoff: 09/21/2017
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 このトピックでは、Linux で実行されている SQL Server 2017 の新機能について説明します。
+
+## <a name="ga"></a>GA
+
+一般 Availaiblity (GA) リリースには、次の機能強化と修正が含まれています。
+
+- データベース ファイルは、NFS 上でホストできます。 コンテナーのプラットフォーム用のリモート記憶域をマウントし、Docker for Windows のフォルダーをマウント、NFS 共有ディスク シナリオに問題が修正されました。
+- その他の他のバグ修正と機能強化。
 
 ## <a name="rc2"></a>RC2
 
@@ -131,7 +138,7 @@ CTP 1.1 リリースには、次の機能強化と修正が含まれています
 [Service Pack 1 からの機能強化](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)CTP1.1 このリリースでは。
 - 複製は、CLR、Filestream または Filetable、メモリ内とクエリ ストア オブジェクトのデータベースです。
 - **作成**または**ALTER**プログラミング オブジェクトの演算子。
-- 新しい**USE ヒント**クエリ ヒントを指定して、クエリ プロセッサのオプションです。 詳細:[クエリ ヒント](/sql-docs/docs/t-sql/queries/hints-transact-sql-query)です。
+- 新しい**USE ヒント**クエリ ヒントを指定して、クエリ プロセッサのオプションです。 詳細:[クエリ ヒント](../t-sql/queries/hints-transact-sql-query.md)です。
 - SQL サービス アカウント プログラムで識別できますページのロックを有効にするメモリおよびファイルの瞬時初期化のアクセス許可。
 - TempDB ファイルの数、ファイルのサイズとファイル拡張設定をサポートします。
 - Showplan XML での診断の拡張。

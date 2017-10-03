@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0d019b77e70316f3976a610cb399e270b54f52b6
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 3e2139cf2c56b1f716aac32aa6b3f71cb49a2d61
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 09/21/2017
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSISDB **データベースがアタッチされている** インスタンスが停止したか、応答しない場合、ISServerExec.exe プロセスは終了します。 メッセージが Windows イベント ログに書き込まれます。  
 >   
->  クラスター フェールオーバーの一環として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースがフェールオーバーした場合、実行中のパッケージは再開されません。 チェックポイントを使用してパッケージを再開できます。 詳細については、「 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
+>  クラスター フェールオーバーの一環として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースがフェールオーバーした場合、実行中のパッケージは再開されません。 チェックポイントを使用してパッケージを再開できます。 詳細については、「 [チェックポイントを使用してパッケージを再開する](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
 ## <a name="features-and-capabilities"></a>特徴と機能  
   
@@ -563,7 +563,7 @@ ms.lasthandoff: 09/21/2017
      ![SSISDB アップグレード ウィザードで結果をレビュー](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "SSISDB アップグレード ウィザードで結果を確認")  
 
 ## <a name="always-on-for-ssis-catalog-ssisdb"></a>Always On for SSIS Catalog (SSISDB)
-  Always On 可用性グループ機能は、データベース ミラーリングに代わる、高可用性と災害復旧のためのエンタープライズ レベルのソリューションです。 可用性グループは、可用性データベースというひとまとまりでフェールオーバーされる個別のユーザー データベースのセットのためのフェールオーバー環境をサポートします。 詳細については、「 [AlwaysOn 可用性グループ (SQL Server)](/sql-docs/docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server)」を参照してください。  
+  Always On 可用性グループ機能は、データベース ミラーリングに代わる、高可用性と災害復旧のためのエンタープライズ レベルのソリューションです。 可用性グループは、可用性データベースというひとまとまりでフェールオーバーされる個別のユーザー データベースのセットのためのフェールオーバー環境をサポートします。 詳細については、「 [AlwaysOn 可用性グループ (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)」を参照してください。  
   
  SSIS カタログ (SSISDB) とそのコンテンツ (プロジェクト、パッケージ、実行ログなど) の高可用性を実現するには、(他のユーザー データベースと同様に) SSISDB データベースを Always On 可用性グループに追加できます。 フェールオーバーが発生すると、セカンダリ ノードのいずれかが自動的に新しいプライマリ ノードになります。  
  
@@ -585,7 +585,7 @@ ms.lasthandoff: 09/21/2017
   
 2.  クラスターの各ノードに SQL Server 2016 with Integration Services (SSIS) 機能をインストールします。  
   
-3.  各 SQL Server インスタンスの Always On 可用性グループを有効にします。 詳細については、「 [Always On 可用性グループの有効化と無効化 (SQL Server)](/sql-docs/docs/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) 」を参照してください。  
+3.  各 SQL Server インスタンスの Always On 可用性グループを有効にします。 詳細については、「 [Always On 可用性グループの有効化と無効化 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md) 」を参照してください。  
   
 ###  <a name="Firsttime"></a> Always On の SSIS サポートを構成する  
   
@@ -607,12 +607,12 @@ ms.lasthandoff: 09/21/2017
   
 3.  **[CLR 統合を有効にする]**をクリックします。 カタログは CLR ストアド プロシージャを使用します。  
   
-4.  SSIS サーバー インスタンスを再起動するたびに **catalog.startup** ストアド プロシージャが実行されるようにするには、 [[SQL Server のスタートアップ時に Integration Services ストアド プロシージャを自動実行できるようにする]](/sql-docs/docs/integration-services/system-stored-procedures/catalog-startup) をクリックします。 このストアド プロシージャは、SSISDB カタログに対する操作の状態のメンテナンスを実行します。 SSIS サーバー インスタンスがダウンした場合に、実行されていたパッケージの状態を修正します。  
+4.  SSIS サーバー インスタンスを再起動するたびに **catalog.startup** ストアド プロシージャが実行されるようにするには、 [[SQL Server のスタートアップ時に Integration Services ストアド プロシージャを自動実行できるようにする]](../system-stored-procedures/catalog-startup.md) をクリックします。 このストアド プロシージャは、SSISDB カタログに対する操作の状態のメンテナンスを実行します。 SSIS サーバー インスタンスがダウンした場合に、実行されていたパッケージの状態を修正します。  
   
-5.  **パスワード**を入力し、 **[OK]**をクリックします。 カタログ データを暗号化するために使用されるデータベース マスター キーがパスワードで保護されます。 パスワードは安全な場所に保管してください。 データベース マスター キーをバックアップすることもお勧めします。 詳細については、「 [データベース マスター キーのバックアップ](/sql-docs/docs/relational-databases/security/encryption/back-up-a-database-master-key)」を参照してください。  
+5.  **パスワード**を入力し、 **[OK]**をクリックします。 カタログ データを暗号化するために使用されるデータベース マスター キーがパスワードで保護されます。 パスワードは安全な場所に保管してください。 データベース マスター キーをバックアップすることもお勧めします。 詳細については、「 [データベース マスター キーのバックアップ](../../relational-databases/security/encryption/back-up-a-database-master-key.md)」を参照してください。  
   
 ####  <a name="Step2"></a> 手順 2: SSISDB を Always On 可用性グループに追加する  
- SSISDB データベースを Always On 可用性グループに追加する手順は、他のユーザー データベースを可用性グループに追加する場合とほぼ同じです。 「 [可用性グループ ウィザードの使用](/sql-docs/docs/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio)」を参照してください。  
+ SSISDB データベースを Always On 可用性グループに追加する手順は、他のユーザー データベースを可用性グループに追加する場合とほぼ同じです。 「 [可用性グループ ウィザードの使用](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)」を参照してください。  
   
  **新しい可用性グループ** ウィザードの **[データベースの選択]** ページで SSIS カタログを作成するときに指定したパスワードを入力する必要があります。  
   
