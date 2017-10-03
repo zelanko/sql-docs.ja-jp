@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 6bd05a89f0c06bc03de931b898be18f3cbea0c8c
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: a34954f14ad4c40fdc7376f3f35c6a3def6e2ec7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Linux 上のバックアップと復元の SQL Server データベース
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-他のプラットフォームと同じツールを使用して、Linux 上の SQL Server 2017 RC2 からのデータベースのバックアップを実行できます。 使用することができます、Linux サーバー `sqlcmd` SQL Server に接続し、バックアップを実行します。 Windows は、Linux 上の SQL Server に接続し、ユーザー インターフェイスとバックアップを実行します。 バックアップ機能は、プラットフォーム間で同じです。 ローカルをリモート ドライブ、またはデータベースをバックアップするなど、 [Microsoft Azure Blob ストレージ サービス](http://msdn.microsoft.com/library/dn435916.aspx)です。 
+他のプラットフォームと同じツールを使用して、Linux 上の SQL Server 2017 からのデータベースのバックアップを実行できます。 使用することができます、Linux サーバー `sqlcmd` SQL Server に接続し、バックアップを実行します。 Windows は、Linux 上の SQL Server に接続し、ユーザー インターフェイスとバックアップを実行します。 バックアップ機能は、プラットフォーム間で同じです。 ローカルをリモート ドライブ、またはデータベースをバックアップするなど、 [Microsoft Azure Blob ストレージ サービス](http://msdn.microsoft.com/library/dn435916.aspx)です。 
 
 ## <a name="backup-with-sqlcmd"></a>Sqlcmd でのバックアップ
 
@@ -75,7 +75,7 @@ Windows コンピューターからは、SSMS を使用して、Linux データ�
 
 次の手順では、SSMS でのバックアップの作成について説明します。 
 
-1. SSMS を起動し、Linux 上の SQL Server 2017 RC2 内のサーバーに接続します。
+1. SSMS を起動し、Linux 上の SQL Server 2017 内のサーバーに接続します。
 
 1. オブジェクト エクスプ ローラーでをクリックして、データベースを右クリックして**タスク**、クリックして**をバックアップしています.**.
 
