@@ -9,6 +9,11 @@
 ## [SQL Server のエディション別の計算容量制限](compute-capacity-limits-by-edition-of-sql-server.md)
 ## [カスタマー エクスペリエンス向上プログラム](customer-experience-improvement-program-for-sql-server-data-tools.md)
 ## [フィードバックを Microsoft に送信する SQL Server の構成](sql-server-customer-feedback.md)
+### パートナー
+#### [監視](partner-monitor-sql-server.md)
+#### [高可用性とディザスター リカバリー](partner-hadr-sql-server.md)
+#### [管理](partner-management-sql-server.md)
+#### [開発](partner-dev-sql-server.md)
 
 # [SQL Server の記事を最近更新](sql-server-new-updated-sql-docs-pr.md)
 

@@ -39,10 +39,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 49ad187a9cdee375d8e03dfabff37fc110b60d94
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: da8692d3cf786157c5e573e18df51e27c41c19c2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 の各エディションとサポートされている機能
@@ -116,7 +116,7 @@ ms.lasthandoff: 09/21/2017
 |-------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブック|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の主要マニュアル。| 
 
-**Developer Edition と Evaluation Edition **  
+**Developer Edition と Evaluation Edition**   
 Developer Edition と Evaluation Edition でサポートされている機能については、下の表に記載されている SQL Server Enterprise Edition の機能をご覧ください。
 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 の Developer Edition に追加された機能の一覧については、[SQL Server 2016 SP1 の各エディション](https://aka.ms/uw6cw4)に関するページをご覧ください。  
 
@@ -378,7 +378,7 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|不可|不可| 
 |StreamInsight HA|StreamInsight Premium Edition|不可|いいえ|いいえ|不可|   
   
-> [![SSMS をダウンロードする](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) **[最新バージョンの SQL Server Management Studio をダウンロードする](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**    
+> [![SSMS をダウンロードする](../ssms/download-sql-server-management-studio-ssms.md) **[最新バージョンの SQL Server Management Studio をダウンロードする](../ssms/download-sql-server-management-studio-ssms.md)**    
   
 ## <a name="see-also"></a>参照  
  [SQL Server の製品仕様](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
