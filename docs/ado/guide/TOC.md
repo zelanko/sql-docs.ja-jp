@@ -1,0 +1,17 @@
+# [ADO プログラマー ガイド](ado-programmer-s-guide.md)
+
+# [データ +](../../ado/guide/data/ado-fundamentals.md)
+# [拡張機能 +](../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+# [多次元 +](../../ado/guide/multidimensional/ado-md-fundamentals.md)
+# [リモート データ サービス +](../../ado/guide/remote-data-service/remote-data-service-rds.md)
+# [付録 +](../../ado/guide/appendixes/appendix-a-providers.md)
+
+# [Visual C++ アプリケーションで ADO ライブラリを参照する](referencing-the-ado-libraries-in-a-visual-c-application.md)
+# [Visual Basic 6 アプリケーションで ADO ライブラリを参照する](referencing-the-ado-libraries-in-a-visual-basic-6-application.md)
+# [ADO の概要](ado-introduction.md)
+# [ADO セキュリティ デザイン機能に関する問題](ado-security-design-issues.md)
+# [ADO 履歴](ado-history.md)
+# [ADO ライブラリを参照する](referencing-the-ado-libraries.md)
+# [ADO のドキュメントを使用するための前提条件](prerequisites-for-using-the-ado-documentation.md)
+# [ADO テクノロジ テーブル](ado-technology-table.md)
+# [ADO タスク テーブル](ado-task-table.md)
