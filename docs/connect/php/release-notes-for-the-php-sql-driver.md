@@ -44,7 +44,7 @@ ms.lasthandoff: 09/09/2017
 
 - PHP 7.0 のサポート  
 - 完全な 64 ビット サポート
-- Ubuntu 15.04、Ubuntu 16.04、RedHat 7 のサポート
+- Ubuntu 15.04、Ubuntu 16.04、Red Hat 7 のサポート
 
 ## <a name="whats-new-in-version-32"></a>バージョン 3.2 の新機能 
 

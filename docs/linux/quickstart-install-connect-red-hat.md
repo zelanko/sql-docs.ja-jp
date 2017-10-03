@@ -16,7 +16,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="install-sql-server-and-create-a-database-on-red-hat"></a>SQL Server をインストールし、Red hat でデータベースを作成
+# <a name="install-sql-server-and-create-a-database-on-red-hat"></a>SQL Server をインストールし、Red Hat でデータベースを作成
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
