@@ -43,7 +43,7 @@ Python - pyodbc on Windows を使用して SQL データベースに接続しま
 
   
 ## <a name="linux"></a>Linux 
-Python - Ubuntu と RedHat pyodbc を使用して SQL データベースに接続します。
+Python - Ubuntu と Red Hat pyodbc を使用して SQL データベースに接続します。
   
 1. **開いているターミナル**  
 
@@ -54,7 +54,7 @@ Python - Ubuntu と RedHat pyodbc を使用して SQL データベースに接�
 > sh installodbc.sh  
 ```   
 
-  RedHat 6、7 の 
+  Red Hat 6、7 の 
 ``` 
 > sudo su 
 > wget https://gallery.technet.microsoft.com/ODBC-Driver-13-for-SQL-8d067754/file/153653/4/install.sh 
