@@ -17,10 +17,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 8fe9d54e1d635b5c8f1dd6e00e33bd92136343b4
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: bdd86896b43d79b5d7cd00383476700735accff4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>R での OLAP キューブからのデータの使用
@@ -81,7 +81,7 @@ OLAP や MDX クエリの初心者の場合、Wikipedia の記事「 [OLAP Cubes
 
 ### <a name="samples"></a>サンプル
 
-キューブの詳細については、Analysis Services チュートリアル「 [多次元モデリング (Adventure Works チュートリアル)](/sql-docs/docs/analysis-services/multidimensional-modeling-adventure-works-tutorial)」のレッスン 4 までに従って、これらの例で使用されているキューブを作成してみてください。
+キューブの詳細については、Analysis Services チュートリアル「 [多次元モデリング (Adventure Works チュートリアル)](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)」のレッスン 4 までに従って、これらの例で使用されているキューブを作成してみてください。
 
 また、既存のキューブをバックアップとしてダウンロードし、Analysis Services のインスタンスに復元することもできます。 たとえば、 [Adventure Works Multidimensional Model SQL 2014](http://msftdbprodsamples.codeplex.com/downloads/get/882334)用の完全に処理されたキューブを zip 形式でダウンロードし、SSAS インスタンスに復元できます。 詳細については、「 [Analysis Services データベースのバックアップと復元](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)」または「 [Restore-ASDatabase コマンドレット](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)」を参照してください。
 

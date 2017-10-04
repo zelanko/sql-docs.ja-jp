@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0bbbee2d86c0ec82172ec63317039ace7a19b50c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: f063c61d46765587cb4b298544d5aa51960efd2e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>レポート作成の概念 (レポート ビルダーおよび SSRS)
@@ -41,7 +41,7 @@ ms.lasthandoff: 09/21/2017
  [データ領域とマップ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  レポート レイアウトに追加できるデータ領域の種類について説明します。 レポートの外観 (テーブル、マトリックス、一覧、グラフ) は、データ領域によって決まります。  
   
- [レポート パラメーターの概念 (レポート ビルダーおよび SSRS)](/sql-docs/docs/reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs)  
+ [レポート パラメーターの概念 (レポート ビルダーおよび SSRS)](report-parameters-concepts-report-builder-and-ssrs.md)  
  レポート パラメーターを定義および使用する方法と、それらをレポート サーバー上でレポート定義とは別に管理する方法について説明します。  
   
 ## <a name="see-also"></a>参照  

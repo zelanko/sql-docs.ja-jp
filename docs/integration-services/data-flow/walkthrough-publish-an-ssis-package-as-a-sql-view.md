@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: a7479a6682c2cd95e3cc465b74642347bf682951
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8e540a232445e0df9f6eb313b5fadfa839a73fea
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>チュートリアル: SSIS パッケージを SQL ビューとして公開する
@@ -32,7 +32,7 @@ ms.lasthandoff: 09/21/2017
   
 1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以降と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を起動します。  
   
-2.  [SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)  
+2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)  
   
 ## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>手順 1: SSIS プロジェクトを構築して SSIS カタログに配置する  
  この手順では、SSIS 対応データ ソース ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを使用します) からデータを抽出し、そのデータを Data Streaming Destination コンポーネントを使用して出力する SSIS パッケージを作成します。 その後、SSIS プロジェクトを構築して SSIS カタログに配置します。  

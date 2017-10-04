@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 02cf781a1035326ad5073f6a6d3219e8a7d9c070
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 8e4f84fe50051d1d09c5057a04840cbf19c4d1b0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>SQL Server の SLES 共有ディスク クラスターを構成します。
@@ -23,9 +23,6 @@ ms.lasthandoff: 08/02/2017
 このガイドでは、SQL Server SUSE Linux Enterprise Server (SLES) 上の 2 ノードの共有ディスク クラスターを作成する方法を提供します。 クラスタ リングのレイヤーが SUSE に基づいて[高可用性の拡張機能 (HAE)](https://www.suse.com/products/highavailability)の上に構築[ペース](http://clusterlabs.org/)です。 
 
 クラスターの構成、リソース エージェント オプション、管理、ベスト プラクティス、および推奨事項の詳細については、次を参照してください。 [SUSE Linux Enterprise 高可用性拡張子 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)です。
-
-> [!NOTE]
-> この時点では、Linux 上のペースで SQL Server の統合は Windows での WSFC でとして結合します。 SQL 内ではありません、クラスターの存在についてのナレッジ、すべてのオーケストレーションが外であり、サービスは、スタンドアロン インスタンスとしてペースによって制御されます。 また、仮想ネットワーク名は、WSFC を特定、相当するのと同じペースではありません。 推測 @ を@servernameと sys.servers クラスター dmv sys.dm_os_cluster_nodes と sys.dm_os_cluster_properties にレコードがないときに、ノード名を返すにします。 文字列のサーバー名を指す接続文字列を使用して、ip アドレスを使用しない、これらには、選択したサーバーの名前 (後述) の仮想 IP リソースを作成するために使用する ip アドレスが DNS サーバーに登録する必要があります。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -163,7 +160,7 @@ NFS サーバーを構成するのには、SUSE ドキュメントでは、次�
 4. **SQL Server の FCI リソース エージェントをインストールします**。 両方のノードで、次のコマンドを実行します。
 
     ```bash
-    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
     sudo zypper --gpg-auto-import-keys refresh
     sudo zypper install mssql-server-ha
     ```

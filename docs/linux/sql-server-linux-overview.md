@@ -4,21 +4,21 @@ description: "ここでは、SQL Server on Linux を実行し、方法の詳細�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 1192afb7032f34f0af98c3c1051808e89dc22b63
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 6fdb36fbf294ea1f109728a1f304b5a3f3662122
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sql-server-on-linux"></a>SQL Server on Linux
 
-SQL Server は、Linux で実行されます。 この最新リリースは、SQL Server 2017 RC2 では、Linux 上で実行し、さまざまな方法では、SQL Server だけです。 ような多くの機能とサービスは、オペレーティング システムに関係なく、同じ SQL Server データベース エンジンを勧めします。
+SQL Server 2017 が Linux で実行されます。 ような多くの機能とサービスは、オペレーティング システムに関係なく、同じ SQL Server データベース エンジンを勧めします。
 
 ## <a name="install"></a>Install
 

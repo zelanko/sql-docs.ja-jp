@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 87d6c0b358d7747b20ed37f159e713cc10018866
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: b9f6ceba4d3609a7e7ff816d31446a77c4fea64c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="install-microsoft-r-server-from-the-command-line"></a>コマンドラインから Microsoft R Server をインストールする
@@ -83,7 +83,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR /IACCEPTROPENLICENSETERMS /
 
 インストールされる機能ごとに個別にサブフォルダーが作成されます。
 
-Microsoft R Server の別のインスタンスと同じパラメーターを設定するにはインストール中に作成する構成ファイルを再利用できます。 詳細については、次を参照してください[SQL Server を使用したインストール、構成ファイル。](/sql-docs/docs/database-engine/install-windows/install-sql-server-2016-using-a-configuration-file)
+Microsoft R Server の別のインスタンスと同じパラメーターを設定するにはインストール中に作成する構成ファイルを再利用できます。 詳細については、次を参照してください[SQL Server を使用したインストール、構成ファイル。](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)
 
 
 ## <a name="customize-your-r-environment"></a>R 環境内をカスタマイズします。

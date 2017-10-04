@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 1ad3eee80539ea31af3ccf9e117b2f39b4921846
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 4f8368ff8e8b2ce8674a7d74b973474c758717bd
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS)
@@ -54,7 +54,7 @@ ms.lasthandoff: 09/21/2017
  パブリッシュされたレポートのセキュリティは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のロールベースのセキュリティ モデルを使用したロールの割り当てによって確保されます。 パブリッシュされたレポートにアクセスするには、URL、SharePoint Web パーツ、または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルを使用します。また、レポート ビルダーでレポートの場所に移動して開くこともできます。  
   
 ### <a name="report-snapshots"></a>レポート スナップショット  
- レポートは、レイアウト情報とレポートが最初に実行された時点のデータの両方を含むスナップショットとしてパブリッシュすることもできます。 レポート スナップショットは、特定の表示形式では保存されません。 その代わりに、レポート スナップショットは、ユーザーまたはアプリケーションが要求したときのみ、最終的な表示形式 (HTML など) で表示されます。 詳細については、次を参照してください[の検索とレポート マネージャー &#40; でレポートを表示する。レポート ビルダーおよび SSRS &#41;](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs).  
+ レポートは、レイアウト情報とレポートが最初に実行された時点のデータの両方を含むスナップショットとしてパブリッシュすることもできます。 レポート スナップショットは、特定の表示形式では保存されません。 その代わりに、レポート スナップショットは、ユーザーまたはアプリケーションが要求したときのみ、最終的な表示形式 (HTML など) で表示されます。 詳細については、次を参照してください[の検索とレポート マネージャー &#40; でレポートを表示する。レポート ビルダーおよび SSRS &#41;](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
   
 ## <a name="rendered-reports"></a>表示レポート  
  表示レポートは、表示に適した形式 (HTML など) で、データおよびレイアウト情報の両方を含む完全に処理されたレポートです。 レポートは出力形式に変換しないと、表示されません。 レポートを表示するには、次のいずれかの操作を実行します。  

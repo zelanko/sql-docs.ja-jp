@@ -18,10 +18,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8b56417b89b618598f716245e7562f5986a911b5
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 5b9e63d4c7cdc57814b04b2e96e52bda17a25f5a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Analysis Services で使用するツールとアプリケーション
@@ -42,7 +42,7 @@ ms.lasthandoff: 09/01/2017
   
  SQL Server Management Studio (SSMS) は、Analysis Services を含む、すべての SQL Server 機能の主要な管理ツールです。 SSMS は毎月更新され、無料の web ダウンロードです。 
   
-**[SQL Server Management Studio のダウンロード](https://msdn.microsoft.com/library/mt238290.aspx)** 
+**[SQL Server Management Studio をダウンロードします。](../ssms/download-sql-server-management-studio-ssms.md)** 
   
  SSMS には、SQL Server Profiler トレースの監視活動と SQL Server 2016 と Azure Analysis Services サーバーで問題を診断するために軽量な代替手段を提供する拡張イベント (Xevent) が含まれています。 詳細については、「 [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md) 」を参照してください。  
   

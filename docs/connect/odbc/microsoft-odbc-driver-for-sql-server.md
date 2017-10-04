@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: cf501a1e52a499ac2e2df8df49024da9763ed66d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: bbb36ba4a739f0c7871261b61d298428ec3b2191
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft SQL Server 用 ODBC Driver
@@ -27,7 +27,7 @@ ms.lasthandoff: 09/21/2017
 
 ODBC は、SQL Server の C および C++ で記述されたアプリケーションのプライマリ ネイティブ データ アクセス API です。 ほとんどのデータ ソース用の ODBC ドライバーがあります。 ODBC を使用できるその他の言語には、COBOL、Perl、PHP、および Python が含まれます。 ODBC は、データ統合のシナリオで広く使用されます。
 
-ODBC ドライバーは、ツールが付属など[ **sqlcmd** ](/sql-docs/docs/tools/sqlcmd-utility)と[ **bcp**](/sql-docs/docs/tools/bcp-utility)です。 **Sqlcmd**ユーティリティでは、TRANSACT-SQL ステートメント、システム プロシージャ、および SQL スクリプトを実行することができます。 **Bcp**ユーティリティ一括が選択した形式で Microsoft SQL Server のインスタンスとデータ ファイル間でデータをコピーします。 使用することができます**bcp** SQL Server テーブルに大量の新規行をインポートするか、テーブルからデータ ファイルにエクスポートします。  
+ODBC ドライバーは、ツールが付属など[ **sqlcmd** ](../../tools/sqlcmd-utility.md)と[ **bcp**](../../tools/bcp-utility.md)です。 **Sqlcmd**ユーティリティでは、TRANSACT-SQL ステートメント、システム プロシージャ、および SQL スクリプトを実行することができます。 **Bcp**ユーティリティ一括が選択した形式で Microsoft SQL Server のインスタンスとデータ ファイル間でデータをコピーします。 使用することができます**bcp** SQL Server テーブルに大量の新規行をインポートするか、テーブルからデータ ファイルにエクスポートします。  
 
 ## <a name="code-example-in-c"></a>C++ でのコード例
 

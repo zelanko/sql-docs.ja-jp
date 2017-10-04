@@ -20,11 +20,11 @@ caps.latest.revision: 38
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aecc25b2c402c27d2a425107565573ba0390effa
+ms.translationtype: HT
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 56ca94eab2b7245d3d42c898fbf5d51c4c249026
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>bcp を使用した互換性のためのデータ形式の指定 (SQL Server)
@@ -39,7 +39,7 @@ ms.lasthandoff: 06/22/2017
   
 -   ファイル保存形式  
   
-     *ファイル ストレージ型* は、データ ファイルへのデータの格納方法を記述します。 データ ファイルには、データベース テーブルの型 (ネイティブ形式)、文字表現 (文字形式)、または暗黙的な型変換がサポートされているデータ型のいずれかでデータをエクスポートできます。暗黙的な型変換では、たとえば、 **smallint** は **int**としてコピーされます。 ユーザー定義のデータ型は、基本データ型としてエクスポートされます。 詳細については、「 [bcp を使用したファイル ストレージ型の指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)」を参照してください。  
+     *ファイル ストレージ型* は、データ ファイルへのデータの格納方法を記述します。 データ ファイルには、データベース テーブルの型 (ネイティブ形式)、文字表現 (文字形式)、または暗黙的な型変換がサポートされているデータ型のいずれかでデータをエクスポートできます。暗黙的な型変換では、たとえば、 **smallint** は **int**としてコピーされます。ユーザー定義のデータ型は、基本データ型としてエクスポートされます。 詳細については、「 [bcp を使用したファイル ストレージ型の指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)」を参照してください。  
   
 -   プレフィックス長  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 06/22/2017
   
  コマンドでフォーマット ファイルもデータ型も指定しないと、 **bcp** からデータ形式情報が要求されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コマンド プロンプトで、次のように入力します。  
   
-```  
+```cmd
 bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T  
 ```  
   

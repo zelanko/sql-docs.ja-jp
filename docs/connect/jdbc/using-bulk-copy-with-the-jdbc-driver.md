@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 7069c168d1d144335ac0d1121158193127c67e75
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 4edc1b7348e9b34c924236819f0122ea5277d3e8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>JDBC ドライバーでの一括コピーの使用
@@ -858,7 +858,7 @@ public class Program
  次のアプリケーションでは、SQLServerBulkCopy クラスを使用してデータを読み込む方法を示します。 この例では、CSV ファイルを使用し、SQL Server の AdventureWorks データベース内の Production.Product テーブルからエクスポートされたデータを、このデータベース内の同等のテーブルにコピーします。  
   
 > [!IMPORTANT]  
->  」の説明に従って、作業テーブルを作成していない限り、このサンプルは実行されません[テーブルのセットアップ](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)それを取得します。  
+>  」の説明に従って、作業テーブルを作成していない限り、このサンプルは実行されません[テーブルのセットアップ](../../ssms/download-sql-server-management-studio-ssms.md)それを取得します。  
   
 1.  開いている**SQL Server Management Studio**し、AdventureWorks データベースで SQL Server に接続します。  
   

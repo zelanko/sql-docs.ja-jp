@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: 501fac02e6146d417572dfb9f4f3906de7b2eeeb
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d6ba2f29d8c6c21a6f96c575dbebc354e0885f8d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core への SQL Server のインストール
@@ -52,7 +52,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|いいえ||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|いいえ||  
 |クライアント ツール接続|可||  
-|Integration Services サーバー|可|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の新しい Integration Services サーバーとその機能の詳細については、「 [Integration Services (SSIS) Server](https://msdn.microsoft.com/library/bb522534.aspx)」を参照してください。|  
+|Integration Services サーバー|はい|新しい Integration Services サーバーとその機能の詳細については、[!INCLUDE[ssCurrent](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md) を参照してください。|  
 |クライアント ツールの旧バージョンとの互換性|いいえ||  
 |クライアント ツール SDK|いいえ||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブック|いいえ||  

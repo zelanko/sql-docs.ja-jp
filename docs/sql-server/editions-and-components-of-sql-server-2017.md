@@ -3,7 +3,7 @@ title: "SQL Server 2017 の各エディションとサポートされている�
 ms.custom:
 - SQL2016_New_Updated
 - SQL2017_New_Updated
-ms.date: 07/14/2017
+ms.date: 09/14/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -40,10 +40,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 22507f627c33c9424d725ca5d249bd04628b3ea6
+ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
+ms.openlocfilehash: 0a51b818a33e2ee3eb4ce3c3d5682ee571c1c412
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 の各エディションとサポートされている機能
@@ -57,8 +57,6 @@ ms.lasthandoff: 08/28/2017
 * [SQL Server 2016](editions-and-components-of-sql-server-2016.md)。  
 * [SQL Server 2014](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)。
 
->[!NOTE]
->この記事に記載した情報はすべて SQL Server 2017 の暫定リリースに適用されるため、変更される可能性があります。 
   
 インストールの前提条件は、アプリケーションのニーズによって異なります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にはさまざまなエディションがあり、組織や個人の独自のパフォーマンス、ランタイム、および価格に関する要件に対応できます。 インストールする [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンポーネントは、ユーザーの特定の要件によっても異なります。 この後のセクションでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の最適なエディションおよびコンポーネントを選択する方法について説明します。  
 
@@ -84,7 +82,7 @@ ms.lasthandoff: 08/28/2017
 |Enterprise|プレミアム製品である [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise Edition は、非常に優れたパフォーマンス、無制限の仮想化、およびエンド ツー エンドのビジネス インテリジェンスを備えた包括的なハイエンド データセンター機能を提供することで、ミッション クリティカルなワークロードのための高水準のサービス レベルを実現し、エンド ユーザーがデータの意味を理解できるようにします。|  
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard Edition は、企業部門や小規模組織がアプリケーションを実行するための基本的なデータ管理/ビジネス インテリジェンス データベースを提供し、内部設置型およびクラウド用の一般的な開発ツールをサポートすることで、最小限の IT リソースでデータベースを効果的に管理することを可能にします。|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition は、大小さまざまな規模の Web 資産に対応できるスケーラビリティ、経済性、および管理性を備えた、Web ホスティング企業および Web VAP 向けの総保有コストの低いオプションです。|  
-|開発者|開発者は、[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上で動作するあらゆる種類のアプリケーションを開発できます。 このエディションには Enterprise Edition の機能がすべて含まれていますが、実稼動サーバーとして使用するのではなく、開発およびテスト システムとしての利用に対してライセンスが供与されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer は、<br />                [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] をビルドし、アプリケーションをテストするユーザーに適しています。|  
+|開発者|開発者は、[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上で動作するあらゆる種類のアプリケーションを開発できます。 このエディションには Enterprise Edition の機能がすべて含まれていますが、実稼動サーバーとして使用するのではなく、開発およびテスト システムとしての利用に対してライセンスが供与されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer は、アプリケーションを作成し、テストするユーザーに適しています。|  
 |Express Edition|Express Edition はエントリレベルの無料のデータベースで、学習や、デスクトップおよび小規模サーバー データ ドリブン アプリケーションの構築などに適しています。 このエディションは、独立系ソフトウェア ベンダー、開発者、クライアント アプリケーションを趣味で開発する開発者などに最適です。 さらに高度なデータベース機能が必要な場合には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の他の上位バージョンにシームレスにアップグレードできます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB は、Express の簡易バージョンです。Express のプログラミング機能をすべて備えながら、ユーザー モードで実行でき、前提条件が少なく構成不要の高速インストールが可能です。|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] とインターネット サーバーの使用  
@@ -157,9 +155,9 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
 |データベース ミラーリング|はい|はい<br /><br /> FULL SAFETY のみ|ミラーリング監視のみ|ミラーリング監視のみ|ミラーリング監視のみ| 
 |バックアップ圧縮|はい|可|いいえ|いいえ|不可| 
 |データベース スナップショット|はい|可|可|可|はい|
-|Always On フェールオーバー クラスター インスタンス|はい<br /><br /> ノードの数はオペレーティング システムの最大容量|はい<br /><br /> 2 つのノードのサポート|不可|いいえ|不可|  
-|Always On 可用性グループ|はい<br /><br /> 2 個の同期セカンダリ レプリカを含む最大 8 個のセカンダリ レプリカ|不可|いいえ|いいえ|不可|
-|基本的な可用性グループ <sup>2</sup>|不可|はい<br /><br /> 2 つのノードのサポート|不可|いいえ|不可|
+|Always On フェールオーバー クラスター インスタンス<sup>2</sup>|はい|可|いいえ|いいえ|不可|  
+|Always On 可用性グループ<sup>3</sup>|はい|いいえ|いいえ|いいえ|不可|
+|基本的な可用性グループ <sup>4</sup>|不可|可|いいえ|いいえ|不可|
 |オンライン ページおよびファイルの復元|はい|いいえ|いいえ|いいえ|不可|
 |オンラインのインデックス構築|はい|いいえ|いいえ|いいえ|不可|
 |再開可能なオンライン インデックス再構築|はい|いいえ|いいえ|いいえ|不可|
@@ -170,12 +168,18 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
 |データベース復旧アドバイザー|はい|可|可|可|はい|
 |暗号化されたバックアップ|はい|可|いいえ|いいえ|不可|
 |Windows Azure へのハイブリッド バックアップ (URL へのバックアップ)|はい|可|いいえ|いいえ|不可|
-|クラスターを使用しない可用性グループ|はい|可|可|いいえ|いいえ|不可|
+|クラスターを使用しない可用性グループ|はい|可|いいえ|いいえ|いいえ|不可|
 |最小レプリカ コミット可用性グループ|はい|可|可|いいえ|いいえ|不可|
   
- <sup>1</sup> Server Core への SQL Server のインストールの詳細については、「[Server Core への SQL Server のインストール](../database-engine/install-windows/install-sql-server-on-server-core.md)」を参照してください。 
 
-<sup>2</sup> 基本的な可用性グループの詳細については、「 [基本的な可用性グループ](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)」を参照してください。  
+<sup>1</sup> Server Core への SQL Server のインストールの詳細については、「[Server Core への SQL Server のインストール](../database-engine/install-windows/install-sql-server-on-server-core.md)」を参照してください。 
+
+<sup>2</sup> Enterprise Edition では、ノードの数はオペレーティング システムの最大容量です。 Standard Edition では、2 つのノードがサポートされます。 
+
+<sup>3</sup> Enterprise Edition では、2 個の同期セカンダリ レプリカを含む最大 8 個のセカンダリ レプリカがサポートされます。 
+
+<sup>4</sup> Standard Edition では、基本的な可用性グループがサポートされます。 基本的な可用性グループは、1 つのデータベースで、2 つのレプリカをサポートします。 基本的な可用性グループの詳細については、「[基本的な可用性グループ](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)」を参照してください。  
+
 
 ##  <a name="RDBMSSP"></a> RDBMS のスケーラビリティとパフォーマンス  
   
@@ -263,8 +267,8 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
 |ユーザー インスタンス|不可|いいえ|いいえ|はい|はい| 
 |LocalDB|不可|いいえ|いいえ|可|不可| 
 |専用管理者接続|はい|可|はい|可 (トレース フラグを使用)|可 (トレース フラグを使用)|   
-|PowerShell スクリプティングのサポート|はい|可|可|可|はい| 
 |SysPrep のサポート <sup>1</sup>|はい|可|可|可|はい| 
+|PowerShell スクリプティングのサポート<sup>2</sup>|はい|可|可|可|はい| 
 |データ層アプリケーション コンポーネントの操作のサポート - 抽出、配置、アップグレード、削除|はい|可|可|可|はい| 
 |ポリシー オートメーション (変更時とスケジュールに基づいて確認)|はい|可|可|いいえ|不可|   
 |パフォーマンス データ コレクター|はい|可|可|いいえ|不可| 
@@ -282,6 +286,7 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
   
  <sup>1</sup> 詳細については、「 [SysPrep を使用した SQL Server のインストールに関する注意点](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)」を参照してください。  
  
+ <sup>2</sup> Linux では、Linux 上の SQL Server をターゲットとする Windows コンピューターから PowerShell スクリプトがサポートされます。 
 ##  <a name="DevTools"></a> 開発ツール  
   
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express| 
@@ -393,7 +398,7 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|不可|不可| 
 |StreamInsight HA|StreamInsight Premium Edition|不可|いいえ|いいえ|不可|   
   
-> [![SSMS をダウンロードする](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **[最新バージョンの SQL Server Management Studio をダウンロードする](https://msdn.microsoft.com/library/mt238290.aspx)**    
+> [![SSMS をダウンロードする](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) **[最新バージョンの SQL Server Management Studio をダウンロードする](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**    
   
 ## <a name="next-steps"></a>次の手順 
  [SQL Server の製品仕様](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   

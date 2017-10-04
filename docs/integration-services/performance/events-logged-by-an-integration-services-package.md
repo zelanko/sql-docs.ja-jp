@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 1afd17d5ba2879fd13f0b3703ca84ea02b3cd416
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: df4b2e68a9b024ed2911d4b5c1d5bcea8984ae15
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services パッケージによってログに記録されるイベント
@@ -29,7 +29,7 @@ ms.lasthandoff: 09/21/2017
   
  このトピックでは、アプリケーション イベント ログに記録される一般的なイベント メッセージについて説明します。 既定では、パッケージのログ記録が有効になっていない場合でも、一部のメッセージはログに記録されます。 それ以外のメッセージは、パッケージのログ記録が有効になっている場合にのみログに記録されます。 既定でログに記録されたか、ログ記録を有効にしたことによってログに記録されたかに関係なく、これらのメッセージのイベント ソースは SQLISPackage になります。  
   
- SSIS パッケージの実行方法に関する一般的な情報については、「[プロジェクトとパッケージの実行](/sql-docs/docs/integration-services/packages/run-integration-services-ssis-packages)」をご覧ください。  
+ SSIS パッケージの実行方法に関する一般的な情報については、「[プロジェクトとパッケージの実行](../packages/run-integration-services-ssis-packages.md)」をご覧ください。  
   
  パッケージの実行に関するトラブルシューティング方法については、「 [パッケージ実行のトラブルシューティング ツール](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)」をご覧ください。  
   

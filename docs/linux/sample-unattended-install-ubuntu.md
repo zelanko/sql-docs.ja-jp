@@ -4,22 +4,22 @@ description: "SQL Server スクリプトのサンプル - Ubuntu で無人イン
 author: edmacauley
 ms.author: edmacauley
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 191d39779fd38fcf342dcbeae1ee3a14632ab59a
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 9ab85f20c1bc8660c54d8d1a2ec946a2121f59f9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Ubuntu 用のサンプル: SQL Server の無人インストール スクリプト
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-このサンプル バッシュ スクリプトは、対話型の入力なし、Ubuntu 16.04 を SQL Server 2017 RC2 をインストールします。 データベース エンジン、SQL Server エージェント、SQL Server コマンド ライン ツールのインストールの例を紹介し、インストール後の手順を実行します。 必要に応じて、フルテキスト検索をインストールし、管理ユーザーを作成できます。
+このサンプル バッシュ スクリプトは、対話型の入力なし、Ubuntu 16.04 を SQL Server 2017 をインストールします。 データベース エンジン、SQL Server エージェント、SQL Server コマンド ライン ツールのインストールの例を紹介し、インストール後の手順を実行します。 必要に応じて、フルテキスト検索をインストールし、管理ユーザーを作成できます。
 
 > [!TIP]
 > SQL Server をインストールする最も簡単な方法に従う場合は、無人インストール スクリプトを使用する必要はありません、 [Ubuntu のクイック スタート チュートリアル](quickstart-install-connect-ubuntu.md)です。 その他のセットアップについては、次を参照してください。 [Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md)です。
@@ -63,7 +63,7 @@ fi
 
 echo Adding Microsoft repositories...
 sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-repoargs="$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list)"
+repoargs="$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
 sudo add-apt-repository "${repoargs}"
 repoargs="$(curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
 sudo add-apt-repository "${repoargs}"

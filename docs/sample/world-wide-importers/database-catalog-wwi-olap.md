@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: b26e8e92a00fd23441a0417daa15897bab48501c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 036afa491ae8390c38520d7dff2e5c6cd0d1a419
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-catalog"></a>データベース カタログ
@@ -181,7 +181,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 
 ### <a name="integration-schema"></a>統合スキーマ
 
-このスキーマ内のストアド プロシージャは、ETL プロセスによって使用されます。 必要な時間帯でさまざまなテーブルから必要なデータを取得する、 [ETL パッケージ](/sql-docs/docs/sample/world-wide-importers/etl-workflow)です。
+このスキーマ内のストアド プロシージャは、ETL プロセスによって使用されます。 必要な時間帯でさまざまなテーブルから必要なデータを取得する、 [ETL パッケージ](etl-workflow.md)です。
 
 ### <a name="dataloadsimulation-schema"></a>DataLoadSimulation スキーマ
 

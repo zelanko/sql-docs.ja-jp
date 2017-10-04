@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Migration Assistant |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 09/30/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,10 +18,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
-ms.openlocfilehash: 6310f16ee3f3a57c46e1aab1023c18fcaf6bf074
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 7a199b65ceb8fdd1692b37e307dd544c52ad618b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
@@ -31,13 +31,13 @@ Microsoft SQL Server Migration Assistant (SSMA) は、Microsoft Access、DB2、M
   
 -   [SQL Server Migration Assistant for Access](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
   
-- [SQL Server Migration Assistant for DB2](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
+-   [SQL Server Migration Assistant for DB2](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
   
 -   [SQL Server Migration Assistant for MySQL](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
   
 -   [SQL Server Migration Assistant for Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
--  [SQL Server Migration Assistant SAP ASE for](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
+-   [SQL Server Migration Assistant SAP ASE for](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
 ## <a name="supported-sources-and-target-versions"></a>サポートされているソースおよびターゲット バージョン
 サポートされているソースの場合は、SSMA ダウンロードするため、ダウンロード センターにある情報を確認します。
@@ -77,7 +77,7 @@ Microsoft SQL Server Migration Assistant (SSMA) は、Microsoft Access、DB2、M
   
 -   プレミア サポート - Premier 契約があれば取得できますプレミア サポートで、 [Premier Online のポータル](https://premier.microsoft.com/)です。  
   
--   – 支援するパートナーを移行するためのコンサルティング サービスが移動してください。、[パートナー ポータル](https://www.platformmodernization.org/Pages/default.aspx)です。  
+-   移行には、go を支援してコンサルティング サービス-パートナーの[パートナー ポータル](https://www.platformmodernization.org/Pages/default.aspx)です。  
   
 ## <a name="legal-notice-ssma"></a>免責事項 (SSMA)  
 このソフトウェアおよびマニュアルに記載されている参照用のアプリケーションを含んだ内容は、情報の提供のみを目的としており、明示または黙示にかかわらず、このマニュアルは保証なしで提供されます。 このソフトウェアの仕様およびマニュアルに記載されている事柄は、将来予告なしに変更することがあります。 お客様が本製品を運用した結果の影響については、お客様が負うものとします。  
@@ -88,7 +88,7 @@ Microsoft SQL Server Migration Assistant (SSMA) は、Microsoft Access、DB2、M
   
 マイクロソフトは、このマニュアルに記載されている内容に関し、特許、特許申請、商標、著作権、またはその他の無体財産権を有する場合があります。 このマニュアルはこれらの特許、商標、著作権、またはその他の無体財産権に関する権利をお客様に許諾するものではありません。  
   
-© 2015 Microsoft Corporation. All rights reserved.  
+© 2017 Microsoft Corporation. All rights reserved.  
   
 Microsoft、Windows、Windows NT、Windows Server、Active Directory、ActiveX、BackOffice、bCentral、BizTalk、DirectX、Excel、Hotmail、IntelliSense、J/Direct、Jscript、Microsoft Press、MSDN、MS-DOS、Outlook、PivotChart、PivotTable、PowerPoint、SharePoint、SQL Server、Visual Basic、Visual C#、Visual C++、Visual FoxPro、Visual InterDev、Visual J#、Visual J++、Visual SourceSafe、Visual Studio、Win32、Win32s、Windows Mobile、Windows Server System、および WinFX は、米国 Microsoft Corporation の米国およびその他の国における登録商標または商標です。  
   
@@ -101,7 +101,7 @@ SQL Server のドキュメントに記載されている内容は、十分なテ
   
 機能によっては、お客様が直接使用しないものもあり、そのような機能に関してはドキュメントに記載されていません。 Microsoft が発行する SQL Server のドキュメントに記載されていない機能については、サード パーティの書籍や Web サイトの内容は Microsoft カスタマー サポートによってサポートされません。実稼働データベースやアプリケーションでは使用しないでください。  
   
-お客様は、ドキュメントに記載されていない API、ストアド プロシージャ、拡張ストアド プロシージャ、関数、ビュー、テーブル、列、プロパティ、メタデータなどを使用しないでください。 Microsoft カスタマー サポートでは、ドキュメントに記載されていないエントリ ポイントを応用または使用したデータベースやアプリケーションをサポートしません。  
+お客様は、ドキュメントに記載されていない API、ストアド プロシージャ、拡張ストアド プロシージャ、関数、ビュー、テーブル、列、プロパティ、メタデータなどを使用しないでください。 Microsoft カスタマー サポートでは、文書化されていないエントリ ポイントを使用または応用したデータベースやアプリケーションは使用できません。  
   
 ドキュメントに記載されていないエントリ ポイントを応用または使用するアプリケーションやデータベースについては、将来のバージョンの SQL Server に対応させるためのサーバーおよびデータベースのアップグレードは保証されません。 SQL Server 機能の使用は、Microsoft SQL Server のドキュメントに記載されている方法に限定されます。 機能が Microsoft SQL Server のドキュメントに記載されていない場合は、SQL Server のサポート対象から除外されます。  
   

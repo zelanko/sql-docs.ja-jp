@@ -4,23 +4,23 @@ description:
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 7fc69e2d9a5e86e63ceb40e43befa65ab2cfdb7d
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 1463c56a247a2d578fc0a69f96cb8ead829dfba3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>SQL Server on Linux に bcp を使用したデータの一括コピー
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-このトピックの内容を使用する方法を示しています、 [bcp](/sql-docs/docs/tools/bcp-utility) Linux 上の SQL Server 2017 RC2 のインスタンスと、ユーザー指定の形式でデータ ファイル間でデータの一括コピーするコマンド ライン ユーティリティです。
+このトピックの内容を使用する方法を示しています、 [bcp](../tools/bcp-utility.md) Linux 上の SQL Server 2017 のインスタンスと、ユーザー指定の形式でデータ ファイル間でデータの一括コピーするコマンド ライン ユーティリティです。
 
 使用することができます`bcp`SQL Server テーブルに大量の行をインポートする、または SQL Server テーブルからデータ ファイルにデータをエクスポートします。 Queryout オプションと共に使用する場合を除く`bcp`TRANSACT-SQL の知識は必要ありません。 `bcp`コマンド ライン ユーティリティは、内部設置型を実行する Microsoft SQL Server または Linux、Windows または Docker と Azure SQL Database および Azure SQL Data Warehouse でのクラウドで動作します。
 
@@ -136,8 +136,8 @@ cat ~/test_export.txt
 ```
 
 ## <a name="see-also"></a>参照
-- [bcp ユーティリティ](/sql-docs/docs/tools/bcp-utility)
-- [Bcp を使用した互換性のためのデータの形式](/sql-docs/docs/relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server)
-- [BULK INSERT を使用してデータを一括インポート](/sql-docs/docs/relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server)
-- [一括挿入 (TRANSACT-SQL)](/sql-docs/docs/t-sql/statements/bulk-insert-transact-sql)
+- [bcp ユーティリティ](../tools/bcp-utility.md)
+- [Bcp を使用した互換性のためのデータの形式](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
+- [BULK INSERT を使用してデータを一括インポート](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
+- [一括挿入 (TRANSACT-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)
 

@@ -16,10 +16,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 48a6c898c5381bb777863ed7569c6ac302560eb3
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: fc31861f7eef73a2ddb88faa4aa59b1bf289d2ea
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>個人用レポートの使用 (レポート ビルダーおよび SSRS)
@@ -27,7 +27,7 @@ ms.lasthandoff: 09/21/2017
   
  概念的には、[個人用レポート] フォルダーは、Windows ファイル システムの [マイ ドキュメント] フォルダーに似ています。 すべてのユーザーに [個人用レポート] というフォルダーがありますが、各ユーザーがアクセスする [個人用レポート] フォルダーは、他のすべてのユーザーが使用するフォルダーとは異なる [個人用レポート] フォルダーです。 ある特定のユーザーが所有する [個人用レポート] フォルダーのコンテンツに対し、レポート サーバー管理者を除く他のユーザーがアクセスすることはできません。  
   
- 個人用レポート機能は、必須機能ではなく、レポート サーバー管理者が無効にすることができます。 有効になっている場合、[ホーム] フォルダー内に [個人用レポート] フォルダーが表示されます。[個人用レポート] フォルダーには、レポート マネージャーまたは Web ブラウザーを使用してアクセスすることができます。 詳細については、次を参照してください[の検索とレポート マネージャー &#40; でレポートを表示する。レポート ビルダーおよび SSRS &#41;](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs).  
+ 個人用レポート機能は、必須機能ではなく、レポート サーバー管理者が無効にすることができます。 有効になっている場合、[ホーム] フォルダー内に [個人用レポート] フォルダーが表示されます。[個人用レポート] フォルダーには、レポート マネージャーまたは Web ブラウザーを使用してアクセスすることができます。 詳細については、次を参照してください[の検索とレポート マネージャー &#40; でレポートを表示する。レポート ビルダーおよび SSRS &#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
   
  SharePoint 統合モードで構成されたレポート サーバーには、個人用レポート フォルダーに相当するフォルダーは存在しません。 詳細については、「 [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)」を参照してください。  
   

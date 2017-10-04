@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 45915dbb8ce5883c379c0cebdbc62e6ff43ede1a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0de164b7e0a0330902bc8d967d32d333c5ac15fe
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の変更ログ
-この変更ログは、[SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt) のものです。  
+この変更ログは、[SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) のものです。  
   
 新機能および変更点の詳細については、[SSDT チーム ブログ](https://blogs.msdn.microsoft.com/ssdt/)をご覧ください。
 
@@ -368,7 +368,7 @@ SSDT テーブルに内部 SSAS インスタンスが含まれるようになり
 
 - **リリース バージョン管理と番号付け:** 月別ではなく数値でリリースがタグ付けされるようになりました。 これは新しい SSMS ポリシーに準拠したもので、リリースや修正プログラムが 1 か月に複数ある場合の処理が簡略化されます。 このリリースは 16.3 であり、RTM リリース後の 3 回目の更新であることを意味します。 修正プログラムは 16.3.1 のように表記され、次回の更新 (来月を予定) は 16.4 になります。
 - **Analysis Services – 表形式モデル エクスプローラー:** 表形式モデル エクスプローラーを使用すると、モデル内のさまざまなメタデータ オブジェクト (データ ソース、テーブル、メジャー、リレーションシップなど) 間を移動できます。 このエクスプローラーは個別のツール ウィンドウとして実装されます。Visual Studio の [表示] メニューを開いて [その他のウィンドウ] をポイントし、[表形式モデル エクスプローラー] をクリックすると表示できます。 既定では、表形式モデル エクスプローラーは個別のタブのソリューション エクスプローラー領域に表示されます。表形式モデル エクスプローラーでは、メタデータ オブジェクトが、表形式モデル 1200 のスキーマによく似たツリー構造で表示されます。また、多数の新機能も追加されています。
-- **データベース ツール – Always Encrypted**:  このリリースには、新しい [Always Encrypted キー管理](/sql-docs/docs/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted)ダイアログが用意されています。これにより、データベース プロジェクトまたは SQL Server オブジェクト エクスプローラーのライブ データベースに列マスター キーまたは列暗号化キーを簡単に追加できます。 このリリースは、Windows 証明書ストアの証明書をサポートしています。 今後のリリースでは、Azure Key Vault および CNG プロバイダーがサポートされる予定です。
+- **データベース ツール – Always Encrypted**:  このリリースには、新しい [Always Encrypted キー管理](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)ダイアログが用意されています。これにより、データベース プロジェクトまたは SQL Server オブジェクト エクスプローラーのライブ データベースに列マスター キーまたは列暗号化キーを簡単に追加できます。 このリリースは、Windows 証明書ストアの証明書をサポートしています。 今後のリリースでは、Azure Key Vault および CNG プロバイダーがサポートされる予定です。
     - 列マスター キーまたは列暗号化キーを作成する際、[データベースの更新] のクリック直後に SQL Server オブジェクト エクスプローラーに変更が反映されない可能性があります。 この問題を回避するには、SQL Server オブジェクト エクスプローラーでデータベース ノードを更新します。
     - SQL Server オブジェクト エクスプローラーからデータを含むテーブル内の列を暗号化しようとすると、エラーが発生する可能性があります。 現在、この機能は SSDT データベース プロジェクトと SSMS でのみサポートされています。 SQL Server オブジェクト エクスプローラーのサポートは今後のリリースで有効になる予定です。
 
@@ -456,7 +456,7 @@ SSDT の一般提供 (GA) がリリースされました。 2016 年 6 月の SS
 [SQL Server Data Tools &#40;SSDT&#41; のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [以前のリリースの SQL Server Data Tools (SSDT と SSDT-BI)](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
 [データベース エンジンの新機能](https://msdn.microsoft.com/library/bb510411.aspx)  
-[Analysis Services の新機能](/sql-docs/docs/analysis-services/what-s-new-in-analysis-services)  
-[Integration Services の新機能](/sql-docs/docs/integration-services/what-s-new-in-integration-services-in-sql-server-2016)  
+[Analysis Services の新機能](../analysis-services/what-s-new-in-analysis-services.md)  
+[Integration Services の新機能](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   
 

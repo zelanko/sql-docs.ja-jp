@@ -4,16 +4,16 @@ description: "このトピックの内容が Linux に SQL Server でデータ�
 author: meet-bhagdev
 ms.author: meetb
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: tbd
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 838a7d492f9826d966da205fc4727eae48ff6e42
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 77eed5cce942dbb91b0b9eb5afbd9ad11403e1d2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>データベース メールと Linux 上の SQL エージェントによる電子メールのアラート
@@ -23,11 +23,12 @@ ms.lasthandoff: 08/02/2017
 次の手順は、データベース メールをセットアップし、SQL Server エージェントで使用する方法を示します (**mssql server エージェント**) on Linux です。 
 
 > [!NOTE]
-> SQL Server on Linux では、データベース メールを使用するには、SQL Server 2017 RC2 を使用する必要がありますまたはそれ以降。
+> Linux 上の SQL Server でデータベース メールを使用するには、SQL Server 2017 RC1 を使用する必要がありますまたはそれ以降。
 
 ## <a name="prerequisites"></a>前提条件
--   SQL Server 2017 RC2 以降
--   SQL Server エージェント v14.0.800.90 2 以上 (アラートの電子メールを使用する場合)
+
+- SQL Server 2017 RC1 以降
+- SQL Server エージェント v14.0.800.90 2 以上 (アラートの電子メールを使用する場合)
 
 ## <a name="1-enable-db-mail"></a>1.データベース メールを有効にします。
 

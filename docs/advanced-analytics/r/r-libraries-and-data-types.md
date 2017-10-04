@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: bedc8b9d5e8e4c2a9bd8c3271a8463fc860f3fd5
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: c4ab2ed64eaaf970057987c7169d12e93c4380ad
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="r-libraries-and-r-data-types"></a>R ライブラリと R データ型
@@ -80,7 +80,7 @@ SQL server パッケージ管理システムでは、複数のユーザー、同
 
 ## <a name="data-types-not-supported-by-r"></a>R でサポートされていないデータ型
 
-[SQL Server 型システム](/sql-docs/docs/t-sql/data-types/data-types-transact-sql)でサポートされるデータ型のカテゴリのうち、次の型は R コードに渡されるときに問題が発生する可能性があります。
+[SQL Server 型システム](../../t-sql/data-types/data-types-transact-sql.md)でサポートされるデータ型のカテゴリのうち、次の型は R コードに渡されるときに問題が発生する可能性があります。
 
 + 示されたデータ型、**他**SQL 型システム」の「:**カーソル**、**タイムスタンプ**、 **hierarchyid**、 **uniqueidentifier**、 **sql_variant**、 **xml**、**テーブル**
 + すべての空間型
@@ -111,7 +111,7 @@ Microsoft SQL Server 2016 と Microsoft Azure SQL Database には、データ型
 
 R コードで使用するためのデータをデータベースから取得する場合、R で使用できない列だけでなく、GUID (一意識別子)、タイムスタンプ、監査に使用されるその他の列など、分析に使用できない列と、ETL プロセスによって作成された系列情報を常に除外する必要があります。 
 
-不要な列を含めると、基数の大きい列が係数として使用されている場合には特に、R コードのパフォーマンスが大幅に低下することがあります。 そのため、SQL Server システム ストアド プロシージャと情報ビューを使用して、事前に特定のテーブルのデータ型を取得し、互換性のない列を排除または変換することをお勧めします。 詳しくは、「[システム情報スキーマ ビュー (TRANSACT-SQL)](/sql-docs/docs/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql)」をご覧ください
+不要な列を含めると、基数の大きい列が係数として使用されている場合には特に、R コードのパフォーマンスが大幅に低下することがあります。 そのため、SQL Server システム ストアド プロシージャと情報ビューを使用して、事前に特定のテーブルのデータ型を取得し、互換性のない列を排除または変換することをお勧めします。 詳しくは、「[システム情報スキーマ ビュー (TRANSACT-SQL)](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)」をご覧ください
 
 特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型が R でサポートされておらず、R スクリプトでデータの列を使用する必要がある場合、R スクリプトでデータを使用する前に、[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) 関数を使用してデータ型変換が意図したとおりに実行されることを確認することをお勧めします。  
 

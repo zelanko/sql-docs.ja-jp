@@ -1,6 +1,6 @@
 ---
 title: "リフトし、SQL Server Integration Services のワークロードをクラウドに移動 |Microsoft ドキュメント"
-ms.date: 09/25/2017
+ms.date: 09/28/2017
 ms.topic: article
 ms.prod: sql-server-2017
 ms.technology:
@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 3d22689e440b2a498f76d43ede74ad3f6f756796
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: a3693b84ed02583cd47921fbfda84c7df9559b68
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>クラウドにリフト アンド シフトの SQL Server Integration Services のワークロード
@@ -48,14 +48,20 @@ SSIS 赤外線をプロビジョニングする際に、スケール アップ�
 
 データ ファクトリには、統合ランタイムの他の種類もサポートしています。 赤外線の SSIS との統合のランタイムの他の種類の詳細については、次を参照してください。 [Azure Data Factory で統合ランタイム](/azure/data-factory/concepts-integration-runtime.md)です。
 
-## <a name="package-features-on-azure"></a>Azure でのパッケージの機能
+## <a name="prerequisites"></a>前提条件
+このトピックで説明する機能は、SQL Server Data Tools (SSDT) 17.2 以降のバージョンを必要とは、SQL Server 2017 年 1 または SQL Server 2016 は必要ありません。 Azure にパッケージを配置する場合、パッケージの展開ウィザードは、パッケージを常に最新のパッケージ形式にアップグレードされます。
+
+Azure での前提条件の詳細については、次を参照してください。[を Azure に SQL Server Integration Services (SSIS) パッケージのリフト アンド シフト](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md)です。
+
+## <a name="ssis-features-on-azure"></a>Azure での SSIS 機能
+
 SSISDB をホストする SQL データベースのインスタンスをプロビジョニングする際に、Azure Feature Pack for SSIS をアクセス再頒布可能パッケージがインストールされます。 これらのコンポーネントは、Excel および Access ファイルとさまざまな Azure のデータ ソースへの接続を提供します。 この時点で、SSIS のサード パーティのコンポーネントをインストールできません。
 
-設計し、パッケージ オンプレミス SSDT では、または SSDT のインストールでは Visual Studio でのビルドを続行します。
+SSISDB をホストする SQL データベースの名前を展開および SSDT および SSMS - からパッケージを管理するときに使用する 4 部構成の名前の最初の部分になります`<sql_database_name>.database.windows.net`です。
 
 Azure SQL データベースで SSISDB に配置するプロジェクトのプロジェクト配置モデルをパッケージ配置モデルではなくを使用する必要があります。
 
-SSISDB をホストする SQL データベースの名前を展開および SSDT および SSMS - からパッケージを管理するときに使用する 4 部構成の名前の最初の部分になります`<sql_database_name>.database.windows.net`です。
+設計し、パッケージ オンプレミス SSDT では、または SSDT のインストールでは Visual Studio でのビルドを続行します。
 
 Windows 認証では、クラウドからオンプレミス データ ソースに接続する方法の詳細については、次を参照してください。 [Windows 認証でオンプレミス データ ソースへの接続](ssis-azure-connect-with-windows-auth.md)です。
 

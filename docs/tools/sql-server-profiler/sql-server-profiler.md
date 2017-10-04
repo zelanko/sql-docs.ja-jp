@@ -30,10 +30,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0ab5d4cbddc6922bc13a37dc42c1915cdd149367
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: ec5830ac7d4a4bf468f7c9af0ae1866e05725ca2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
@@ -49,7 +49,7 @@ Analysis Services のワークロード用の**は廃止されず、引き続き
 
  ## <a name="where-is-the-profiler"></a>プロファイラーはどこにありますか?
  
- SSMS 内から、多数の方法でプロファイラーを起動できます。 [次にプロファイラーを起動する方法を示すトピックを示します。](/sql-docs/docs/tools/sql-server-profiler/start-sql-server-profiler)
+ SSMS 内から、多数の方法でプロファイラーを起動できます。 [次にプロファイラーを起動する方法を示すトピックを示します。](start-sql-server-profiler.md)
   
 ## <a name="capture-and-replay-trace-data"></a>トレース データをキャプチャし再生する 
 以下の表に、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でトレース データのキャプチャおよび再生を行うために使用が推奨される機能を示します。
@@ -57,8 +57,8 @@ Analysis Services のワークロード用の**は廃止されず、引き続き
 ||||  
 |-|-|-|  
 |**機能 \ 対象のワークロード**|**リレーショナル エンジン**|**Analysis Services**|  
-|**トレースのキャプチャ**|SQL Server Management Studio の[拡張イベント](/sql-docs/docs/relational-databases/extended-events/extended-events) のグラフィカル ユーザー インターフェイス|SQL Server Profiler|  
-|**トレースの再生**|[分散再生](/sql-docs/docs/tools/distributed-replay/sql-server-distributed-replay)|SQL Server Profiler|  
+|**トレースのキャプチャ**|SQL Server Management Studio の[拡張イベント](../../relational-databases/extended-events/extended-events.md) のグラフィカル ユーザー インターフェイス|SQL Server Profiler|  
+|**トレースの再生**|[分散再生](../distributed-replay/sql-server-distributed-replay.md)|SQL Server Profiler|  
   
 ## <a name="sql-server-profiler"></a>SQL Server Profiler  
  Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] または Analysis Services のインスタンスを監視するための SQL トレースのグラフィカル ユーザー インターフェイスです。 各イベントに関するデータをキャプチャし、ファイルやテーブルに保存して、後で分析できます。 たとえば、稼動環境を監視して、どのストアド プロシージャの実行が遅く、パフォーマンスに影響を与えているかを確認できます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]アクティビティで使用など。  

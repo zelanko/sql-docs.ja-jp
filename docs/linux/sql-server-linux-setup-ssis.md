@@ -3,17 +3,18 @@ title: "Linux 上の SQL Server Integration Services のインストール |Micr
 description: "このトピックでは、Linux に SQL Server Integration Services をインストールする方法について説明します。"
 author: leolimsft
 ms.author: lle
+ms.reviewer: douglasl
 manager: craigg
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: integration-services
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c3943870ec10b8430ac4819398908c5459a8b03c
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 520b650e0f1dac950797d481609478c6c6548f5a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux 上の SQL Server Integration Services (SSIS) のインストールします。
@@ -27,11 +28,8 @@ SQL Server Integration Services をインストールするには、この記事
 - [Ubuntu](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
-
-
 ## <a name="ubuntu"></a>Ubuntu で SSIS をインストールします。
 インストールする、 `mssql-server-is` Ubuntu でパッケージ化、これらの手順に従います。
-
 
 1.  パブリック リポジトリ鍵キーをインポートします。
 
@@ -39,13 +37,11 @@ SQL Server Integration Services をインストールするには、この記事
     curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     ```
 
-
 2.  Microsoft SQL Server Ubuntu リポジトリを登録します。
 
     ```bash
     curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list | sudo tee /etc/apt/sources.list.d/mssql-server.list
     ```
-
 
 3.  SQL Server Integration Services をインストールする次のコマンドを実行します。
 
@@ -55,12 +51,11 @@ SQL Server Integration Services をインストールするには、この記事
     ```
 
 
-4.  Integration Services をインストールすると、実行`ssis-conf`です。
+4.  Integration Services をインストールすると、実行`ssis-conf`です。 詳細については、次を参照してください。 [ssis conf Linux での構成の SSIS](sql-server-linux-configure-ssis.md)です。
 
     ```bash
     sudo /opt/ssis/bin/ssis-conf setup
     ```
-
 
 5.  構成が完了したら、パスを設定します。
 
@@ -68,20 +63,18 @@ SQL Server Integration Services をインストールするには、この記事
     export PATH=/opt/ssis/bin:$PATH
     ```
 
-
+### <a name="update-ssis"></a>SSIS を更新します。
 既に存在する場合`mssql-server-is`インストールされている、次のように次のコマンドで最新バージョンに更新できます。
 
 ```bash
 sudo apt-get install mssql-server-is
 ```
 
-
+### <a name="remove-ssis"></a>SSIS を削除します。
 削除する`mssql-server-is`、次のコマンドを実行することができます。
 ```bash
 sudo apt-get remove msssql-server-is
 ```
-
-
 
 ## <a name="RHEL"></a>RHEL に SSIS をインストールします。
 インストールする、 `mssql-server-is` RHEL にパッケージ化、これらの手順に従います。
@@ -115,7 +108,7 @@ sudo apt-get remove msssql-server-is
     ```
 
 
-5.  インストールを実行してください。`ssis-conf`です。
+5.  インストールが完了したら実行`ssis-conf`です。 詳細については、次を参照してください。 [ssis conf Linux での構成の SSIS](sql-server-linux-configure-ssis.md)です。
 
     ```bash
     sudo /opt/ssis/bin/ssis-conf setup
@@ -128,14 +121,14 @@ sudo apt-get remove msssql-server-is
     export PATH=/opt/ssis/bin:$PATH
     ```
 
-
+### <a name="update-ssis"></a>SSIS を更新します。
 既に存在する場合`mssql-server-is`インストールされている、次のように次のコマンドで最新バージョンに更新できます。
 
 ```bash
 sudo yum update mssql-server-is
 ```
 
-
+### <a name="remove-ssis"></a>SSIS を削除します。
 削除する`mssql-server-is`、次のコマンドを実行することができます。
 ```bash
 sudo yum remove msssql-server-is

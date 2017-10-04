@@ -31,10 +31,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 49b2acefb625107a65ee8e88ae3f28fc6473851d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d8bec900fef84f2a1c75105b39a9c8aad31db250
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
@@ -177,10 +177,10 @@ sqlcmd
 **-j** 画面に生のエラー メッセージを出力します。
   
  **-K** *application_intent*  
- アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、 **ReadOnly**だけです。 **-K** を指定しない場合、sqlcmd ユーティリティでは AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](/sql-docs/docs/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups)」を参照してください。  
+ アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、 **ReadOnly**だけです。 **-K** を指定しない場合、sqlcmd ユーティリティでは AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
  **-M** *multisubnet_failover*  
- 常に指定**-m**可用性グループの SQL Server または SQL Server フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続するときにします。 **-M** を指定すると、(現在) アクティブなサーバーを迅速に検出して接続できます。 **-M** を指定しない場合、 **-M** は無効になります。 詳細については [!含める[ssHADR](/sql-docs/docs/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover)、[作成し、可用性グループの構成 & #40 です。SQL Server &#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[フェールオーバー クラスタ リングと Always On 可用性グループ (SQL Server)] (https://msdn.microsoft.comlibrary/ff929171.aspx、し、[アクティブなセカンダリ: 読み取り可能なのセカンダリ レプリカ (Always On 可用性グループ)](https://msdn.microsoft.com/library/ff878253.aspx.  
+ 常に指定**-m**可用性グループの SQL Server または SQL Server フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続するときにします。 **-M** を指定すると、(現在) アクティブなサーバーを迅速に検出して接続できます。 **-M** を指定しない場合、 **-M** は無効になります。 詳細については [!含める[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[作成し、可用性グループの構成 & #40 です。SQL Server &#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[フェールオーバー クラスタ リングと Always On 可用性グループ (SQL Server)] (https://msdn.microsoft.comlibrary/ff929171.aspx、し、[アクティブなセカンダリ: 読み取り可能なのセカンダリ レプリカ (Always On 可用性グループ)](https://msdn.microsoft.com/library/ff878253.aspx.  
   
  **-N**  
  クライアントでこのスイッチを使用して、暗号化された接続を要求できます。  
@@ -215,11 +215,11 @@ sqlcmd
  **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
  接続先の SQL Server のインスタンスを指定します。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDSERVER が設定されます。  
   
- 指定*server_name*サーバー コンピューターの SQL Server の既定のインスタンスに接続します。 指定*server_name* [ ** \\ ** *instance_name* ] サーバー コンピューターの SQL Server の名前付きインスタンスに接続します。 サーバー コンピューターが指定されていない場合**sqlcmd**がローカル コンピューターに SQL Server の既定のインスタンスに接続します。 ネットワーク上のリモート コンピューターから **sqlcmd** を実行するときは、このオプションが必要です。  
+ 指定*server_name*サーバー コンピューターの SQL Server の既定のインスタンスに接続します。 指定*server_name* [  **\\**  *instance_name* ] サーバー コンピューターの SQL Server の名前付きインスタンスに接続します。 サーバー コンピューターが指定されていない場合**sqlcmd**がローカル コンピューターに SQL Server の既定のインスタンスに接続します。 ネットワーク上のリモート コンピューターから **sqlcmd** を実行するときは、このオプションが必要です。  
   
  *protocol* には、 **tcp** (TCP/IP)、 **lpc** (共有メモリ)、または **np** (名前付きパイプ) を指定できます。  
   
- 指定しない場合、 *server_name* [ ** \\ ** *instance_name* ] 起動時**sqlcmd**、SQL Server を確認および SQLCMDSERVER 環境変数を使用します。  
+ 指定しない場合、 *server_name* [  **\\**  *instance_name* ] 起動時**sqlcmd**、SQL Server を確認および SQLCMDSERVER 環境変数を使用します。  
   
 > [!NOTE]  
 >  OSQLSERVER 環境変数は旧バージョンとの互換性を維持しています。 SQLCMDSERVER 環境変数は OSQLSERVER 環境変数よりも優先されます。これにより、 **sqlcmd** と **osql** を競合することなく組み合わせて使用でき、従来のスクリプトは引き続き機能を実行することができます。  
@@ -685,7 +685,7 @@ sqlcmd
   
  **その他のコマンド**  
   **:r \<** *filename***>**  
- その他の TRANSACT-SQL ステートメントを解析および**sqlcmd**コマンドで指定されたファイルから** \< ***ファイル名***>**ステートメント キャッシュ内にします。  
+ その他の TRANSACT-SQL ステートメントを解析および**sqlcmd**コマンドで指定されたファイルから **\<** *ファイル名***>**ステートメント キャッシュ内にします。  
   
  ファイルが続いていない TRANSACT-SQL ステートメントを含むかどうか**移動**、入力する必要があります**移動**次の行で**: r**です。  
   

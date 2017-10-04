@@ -30,10 +30,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 4ef09ff12c41b6bb5a7610134cb317a81caaf3cf
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 42ea70f08c2f051970898fa4e3e9498f7f8c1627
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>ディメンション データへのカスタム アクセス権の付与 (Analysis Services)
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/21/2017
  基本的なディメンション セキュリティが最も簡単です。ロールに含めるまたはロールから除外するディメンション属性と属性階層を選択するだけです。 強化されたセキュリティはより複雑なため、MDX スクリプトの専門知識が必要です。 両方の方法について次に説明します。  
 
 > [!NOTE]  
->  次の手順では、MDX でクエリを発行するクライアント接続を想定しています。 クライアントが Power BI の Power View などの DAX を使用する場合、ディメンションのセキュリティはクエリ結果で明らかになりません。 詳細については、「[多次元モデルの Power View について](/sql-docs/docs/analysis-services/multidimensional-models/understanding-power-view-for-multidimensional-models)」を参照してください。
+>  次の手順では、MDX でクエリを発行するクライアント接続を想定しています。 クライアントが Power BI の Power View などの DAX を使用する場合、ディメンションのセキュリティはクエリ結果で明らかになりません。 詳細については、「[多次元モデルの Power View について](understanding-power-view-for-multidimensional-models.md)」を参照してください。
       
 ## <a name="prerequisites"></a>前提条件  
  すべてのメジャーまたはディメンション メンバーがカスタム アクセス シナリオで使用できる訳ではありません。 ロールが既定のメジャーまたはメンバーへのアクセスを制限したり、メジャー式の一部であるメジャーへのアクセスを制限したりすると、接続は失敗します。  

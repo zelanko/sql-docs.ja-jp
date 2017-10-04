@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
+ms.sourcegitcommit: 7811cfe9238c92746673fac4fce40a4af44d6dcd
+ms.openlocfilehash: b9f7ca16589b2383eaed959c6556f0b2b6c4cf74
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Reporting Services のツリー マップとサンバースト グラフ
@@ -32,12 +32,13 @@ ms.lasthandoff: 08/09/2017
   
  ツリー マップ グラフでは、グラフ領域がデータ階層のさまざまなレベルと相対サイズを表す複数の四角形に分割されます。 マップは、幹から次第に小さな枝へと分かれていく、木の枝に似ています。 各四角形は、階層内の次のレベルを表す、より小さな四角形に分割されます。 最上位レベルのツリー マップ四角形は、最も大きな四角形がグラフの左上隅に、最も小さな四角形が右下隅にという並びで順々に配置されます。  四角形内では、次のレベルの四角形が同様に左上から右下へ大きい順に配置されます。  
   
- たとえば、次のサンプル ツリー マップの図では、南西区域が最も大きく、ドイツが最も小さくなっています。 南西区域内では、ロード バイクがマウンテン バイクよりも大きくなっています。  
+ たとえば、次のサンプル ツリー マップの図では、南西区域が最も大きいし、ドイツが最も小さくなってます。 南西区域内では、ロード バイクがマウンテン バイクよりも大きくなっています。  
   
  ![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
   
 ### <a name="to-insert-a-tree-map-chart-and-configure-for-the-sample-adventureworks-data"></a>ツリー マップ グラフを挿入し、Adventureworks のサンプル データに対して構成するには  
- **注:** レポートにグラフを追加する前に、データ ソースとデータセットを作成します。  サンプル データとサンプル クエリについては、このトピックのセクション「 [AdventureWorks データのサンプル](#bkmk_sample_data) 」を参照してください。  
+   
+[!NOTE] レポートにグラフを追加する前に、データ ソースとデータセットを作成します。  サンプル データとサンプル クエリについては、このトピックのセクション「 [AdventureWorks データのサンプル](#bkmk_sample_data) 」を参照してください。  
   
 1.  デザイン画面を右クリックし、 **[挿入]**、 **[グラフ]** の順にクリックします。  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 08/09/2017
  ![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
   
 ### <a name="to-insert-a-sunburst-chart-and-configure-for-the-sample-adventureworks-data"></a>サンバースト グラフを挿入し、Adventureworks のサンプル データに対して構成するには  
- **注:** レポートにグラフを追加する前に、データ ソースとデータセットを作成します。  サンプル データとサンプル クエリについては、このトピックのセクション「 [AdventureWorks データのサンプル](#bkmk_sample_data) 」を参照してください。  
+ [!NOTE] レポートにグラフを追加する前に、データ ソースとデータセットを作成します。  サンプル データとサンプル クエリについては、このトピックのセクション「 [AdventureWorks データのサンプル](#bkmk_sample_data) 」を参照してください。  
   
 1.  デザイン画面を右クリックし、 **[挿入]**、 **[グラフ]** の順にクリックします。  
   
@@ -100,11 +101,13 @@ ms.lasthandoff: 08/09/2017
   
 5.  既定のグラフ タイトルを "区域別の売上と販売理由" に変更します。  
   
-6.  |||  
+6.
+    |||  
     |-|-|  
-    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|サンバーストにラベルとしてカテゴリ グループの値を追加するには、ラベルのプロパティ **[Visible]** を true に設定し、 **[UseValueAsLabel]**を false に設定します。<br /><br /> 表示されるラベル値は、フォントのサイズ、グラフ領域全体のサイズ、および特定の四角形のサイズに影響されます。  より多くのラベルを表示するには、LineTotal の [ラベル フォント] プロパティを既定の 10 pt から 8 pt に変更します。|  
+    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|サンバーストにラベルとしてカテゴリ グループの値を追加するには、ラベルのプロパティ **[Visible]** を true に設定し、 **[UseValueAsLabel]**を false に設定します。<br /><br /> 表示されるラベル値は、フォントのサイズ、グラフ領域全体のサイズ、および特定の四角形のサイズに影響されます。  より多くのラベルを表示するには、LineTotal の [ラベル フォント] プロパティを既定の 10 pt から 8 pt に変更します。|
   
 7.  色の範囲を変更する場合は、グラフの **[パレット]** プロパティを変更します。  
+  
   
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
   

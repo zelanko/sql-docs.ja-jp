@@ -1,8 +1,8 @@
 ---
-title: "どのような &#39; SSMA for MySQL (MySQLToSql) の |Microsoft ドキュメント"
+title: "どのような & #39; SSMA for MySQL (MySQLToSql) の |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 09/30/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,14 +18,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
-ms.openlocfilehash: e5d5ca50b24eb8c7d21fa2058e9be6fed0af2270
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 30529df439a1910573b2e4b8f9e1a5f21075c4d7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/30/2017
 
 ---
-# <a name="what39s-new-in-ssma-for-mysql-mysqltosql"></a>どのような &#39; SSMA for MySQL (MySQLToSql) の
+# <a name="what39s-new-in-ssma-for-mysql-mysqltosql"></a>どのような & #39; SSMA for MySQL (MySQLToSql) の
 このトピックでは、MySQL での変更の各リリース SSMA が一覧表示します。 
+
+## <a name="ssma-v76"></a>SSMA v7.6
+品質と変換のメトリックを向上する対象となる修正プログラムと SQL Server 2017 (パブリック プレビュー) のサポートの SSMA for MySQL の v7.6 リリースが拡張されました。 Windows および Linux での SQL Server 2017 のサポートは、パブリック プレビューではの運用環境の移行は使用できません。
+
+> [!IMPORTANT]
+> SSMA v7.4 とそれ以降のバージョンでは、.Net 4.5.2 は、のインストール前提条件、およびツールの 32 ビット バージョンは廃止されました。
 
 ## <a name="ssma-v75"></a>SSMA v7.5
 SSMA の MySQL の v7.5 リリースは、障碍の大きいアクセシビリティを確認するいくつかの機能強化で強化されています。
@@ -59,8 +65,8 @@ SSMA の MySQL v7.2 のリリースには、次の変更が含まれています
 - 改善の品質、および変換のメトリックを対象となる修正プログラムがお客様のフィードバックに基づきます。
 - 製品利用統計情報をお客様の問題をトラブルシューティングし、SSMA の換算率を向上させる優れたデータ ポイントを提供する拡張機能です。
 
-## <a name="ssma-v71"></a>SSMA v7.1
-SSMA for Access の v7.1 リリースには、次の変更が含まれています。
+## <a name="ssma-v71"></a>SSMA v7.1]
+SSMA for Access の v7.1] リリースには、次の変更が含まれています。
 - Windows と Linux CTP1 では、SQL Server 2017 は、移行のサポート対象のターゲット プラットフォームではようになりました。 この機能は、technical preview ではあり、SQL の対象サーバーにスキーマとデータの移動を許可します。
 - SSMA は、使用可能になるとすぐには、SSMA の最新バージョンをダウンロードする自動更新をサポートします。
 - SSMA インストール可能なバイナリは、Windows インストーラー パッケージ ファイル (.msi) により配信されるようになりました。
@@ -137,9 +143,9 @@ SSMA の MySQL の 2010 年 7 月リリースには、次の機能が含まれ�
   
 1.  **ユーザー インターフェイスの機能強化:**  
   
-    -   'SQL モード' MySQL データベースのオブジェクト タブ  
+    -   'SQL モード' MySQL データベースのオブジェクト] タブ  
     -   MySQL データベース オブジェクトの [設定] タブ  
-    -   MySQL テーブルの 'データ' タブ  
+    -   MySQL テーブルの 'データ'] タブ  
     -   変換と移行」ページで、更新されたプロジェクトの設定  
     -   テーブル レベルで [データ移行の設定]  
   

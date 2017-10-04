@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 21b7d94bcf15e1ae2d99dd44f4b0030929b92111
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: fdaa3435a26bc96a0dfbd3b1043e92f800ab9915
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>SQL Server on Linux をトラブルシューティングします。
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-このドキュメントでは、Linux または、Docker コンテナーで実行されている Microsoft SQL Server のトラブルシューティングを行う方法について説明します。 SQL Server on Linux のトラブルシューティングを行うときは、このプライベート プレビュー リリースの制限事項に注意してくださいを確認してください。 これらの一覧を検索することができます、[リリース ノート](sql-server-linux-release-notes.md)です。
+このドキュメントでは、Linux または、Docker コンテナーで実行されている Microsoft SQL Server のトラブルシューティングを行う方法について説明します。 Linux に SQL Server のトラブルシューティングを行うときサポートされる機能およびにおける既知の制限を確認してください、 [SQL Server on Linux のリリース ノート](sql-server-linux-release-notes.md)です。
 
 ## <a id="connection"></a>接続エラーをトラブルシューティングします。
 Linux SQL Server への接続に問題が発生した場合は、いくつかを確認します。 
@@ -38,11 +38,11 @@ Linux SQL Server への接続に問題が発生した場合は、いくつかを
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > この手法の 1 つの例外は、Azure Vm に関連しています。 Azure vm で[Azure ポータルで VM のパブリック IP を見つける](sql-server-linux-azure-virtual-machine.md#connect)です。
+   > この手法の 1 つの例外は、Azure Vm に関連しています。 Azure vm で[Azure ポータルで VM のパブリック IP を見つける](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect)です。
 
 - 該当する場合は、ファイアウォール上の SQL Server ポート (既定は 1433) が開かれていることを確認します。
 
-- Azure vm であることを確認、 [SQL Server の既定ポートのネットワーク セキュリティ グループ ルール](sql-server-linux-azure-virtual-machine.md#remote)です。
+- Azure vm であることを確認、 [SQL Server の既定ポートのネットワーク セキュリティ グループ ルール](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote)です。
 
 - ユーザー名とパスワードを含まないこと誤りがないか、余分なスペースか不適切な大文字小文字の区別を確認します。
 

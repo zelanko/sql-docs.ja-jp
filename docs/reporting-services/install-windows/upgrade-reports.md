@@ -25,10 +25,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 56ab6a26866958c27b5fc4895fae24316e8a3517
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 640c298b1fbbc22561d04e62e236e683b186ef87
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/21/2017
   
  レポートをローカルでアップグレードした後、またはレポート サーバーでアップグレードした後で、エラー、警告、およびメッセージがさらに通知される場合があります。 これは、内部のレポート オブジェクト モデルと処理コンポーネントが変更されたために、レポートに潜んでいた問題が検出され、メッセージが出力されるようになったものです。 詳細については、[Reporting Services Backward Compatibility] を参照してください[](../../reporting-services/reporting-services-backward-compatibility.md "旧バージョンとの互換性 |。Reporting Services")です。  
   
- 新機能の詳細については [!含める[ssRSCurrent](/sql-docs/docs/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs)です。  
+ 新機能の詳細については [!含める[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md)です。  
 
 ##  <a name="bkmk_versionsupported"></a> アップグレード可能なバージョン  
  以前のどのバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で作成されたレポートもアップグレードできます。 以下のバージョンがあります。  

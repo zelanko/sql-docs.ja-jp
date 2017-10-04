@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: c13295c229dc4450b9661c25f86d7eacf669787d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 085a86b5ae97ea07a33049c0755af2677a3c5217
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>行の高さまたは列の幅の変更 (レポート ビルダーおよび SSRS)
@@ -70,11 +70,11 @@ ms.lasthandoff: 09/21/2017
 3.  列の端をクリックしてつかみ、左または右に動かして列の幅を調整します。  
   
 ## <a name="see-also"></a>参照  
- [Tablix データ領域 (レポート ビルダーおよび SSRS)](/sql-docs/docs/reporting-services/report-design/tablix-data-region-report-builder-and-ssrs)   
- [Tablix データ領域のセル、行、および列 (レポート ビルダー) と SSRS](/sql-docs/docs/reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs)   
+ [Tablix データ領域 (レポート ビルダーおよび SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
+ [Tablix データ領域のセル、行、および列 (レポート ビルダー) と SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
  [テーブル (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [マトリックス (レポート ビルダーおよび SSRS)](/sql-docs/docs/reporting-services/report-design/create-a-matrix-report-builder-and-ssrs)   
- [一覧 (レポート ビルダーおよび SSRS)](/sql-docs/docs/reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs)   
+ [マトリックス (レポート ビルダーおよび SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
+ [一覧 (レポート ビルダーおよび SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

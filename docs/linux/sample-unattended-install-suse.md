@@ -4,22 +4,22 @@ description: "SQL Server スクリプトのサンプル - SUSE Linux Enterprise 
 author: edmacauley
 ms.author: edmacauley
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: de58e55b803eca22d3305f6e0a89f9e13883c627
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: e181fb02497f1673a8993687d159f6636aca4959
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>SUSE Linux Enterprise Server のサンプル: SQL Server を無人インストール スクリプト
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-このサンプル バッシュ スクリプトは、SUSE Linux Enterprise Server (SLES) v12 SP2 対話型の入力せずに SQL Server 2017 RC2 をインストールします。 データベース エンジン、SQL Server エージェント、SQL Server コマンド ライン ツールのインストールの例を紹介し、インストール後の手順を実行します。 必要に応じて、フルテキスト検索をインストールし、管理ユーザーを作成できます。
+このサンプル バッシュ スクリプトは、SUSE Linux Enterprise Server (SLES) v12 SP2 対話型の入力せずに SQL Server 2017 をインストールします。 データベース エンジン、SQL Server エージェント、SQL Server コマンド ライン ツールのインストールの例を紹介し、インストール後の手順を実行します。 必要に応じて、フルテキスト検索をインストールし、管理ユーザーを作成できます。
 
 > [!TIP]
 > SQL Server をインストールする最も簡単な方法に従う場合は、無人インストール スクリプトを使用する必要はありません、 [SLES のクイック スタート チュートリアル](quickstart-install-connect-suse.md)です。 その他のセットアップについては、次を参照してください。 [Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md)です。
@@ -31,7 +31,7 @@ ms.lasthandoff: 08/02/2017
 - その他のシステム要件については、次を参照してください。 [Linux に SQL Server のシステム要件](sql-server-linux-setup.md#system)です。
 
 > [!IMPORTANT]
-> SQL Server 2017 RC2 では、libsss_nss_idmap0 で、既定の SLES リポジトリによって提供されていない必要があります。 SLES v12 SP2 SDK からインストールすることができます。
+> SQL Server 2017 libsss_nss_idmap0 で、既定の SLES リポジトリによって提供されていませんが必要です。 SLES v12 SP2 SDK からインストールすることができます。
 
 ## <a name="sample-script"></a>サンプル スクリプト
 
@@ -65,7 +65,7 @@ then
 fi
 
 echo Adding Microsoft repositories...
-sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
 sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo 
 sudo zypper --gpg-auto-import-keys refresh
 

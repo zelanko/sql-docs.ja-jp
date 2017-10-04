@@ -19,10 +19,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bf5b724d58fde9162bc75a4052f569b5218bbe8c
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 77cde7d5ad701ec6d2ae98ade32a77f6af6b9e8a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="xml-format-files-sql-server"></a>XML フォーマット ファイル (SQL Server)
@@ -181,7 +181,7 @@ ms.lasthandoff: 08/03/2017
 ####  <a name="AttrOfFieldElement"></a>\<FIELD> 要素の属性  
  ここでは、次のスキーマ構文に示す \<FIELD> 要素の属性について説明します。  
   
- \<FIELD  
+ <FIELD  
   
  ID **="***fieldID***"**  
   
@@ -232,7 +232,7 @@ ms.lasthandoff: 08/03/2017
 ####  <a name="AttrOfColumnElement"></a>\<COLUMN> 要素の属性  
  ここでは、次のスキーマ構文に示す \<COLUMN> 要素の属性について説明します。  
   
- \<要素の xsi:type 値  
+ <COLUMN  
   
  SOURCE = "*fieldID*"  
   
@@ -313,7 +313,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="PutXsiTypeValueIntoDataSet"></a> xsi:type 値のデータセットへの格納  
  XML ドキュメントが XML Schema Definition (XSD) 言語で検証されると、xsi:type 値はデータセットに格納されません。 ただし、次のコードに示すように、XML フォーマット ファイルを XML ドキュメント (たとえば、 `myDoc`) に読み込んで、xsi:type の情報をデータセットに格納することができます。  
   
-```  
+```cs
 ...;  
 myDoc.LoadXml(xmlFormat);  
 XmlNodeList ColumnList = myDoc.GetElementsByTagName("COLUMN");  
@@ -362,7 +362,7 @@ for(int i=0;i<ColumnList.Count;i++)
   
  データ フィールドは、テーブルの列と一対一に対応します。 `<ROW>` 要素で、列 `Age` を 1 番目のフィールドに、列 `FirstName` を 2 番目のフィールドに、列 `LastName` を 3 番目のフィールドにマッピングします。  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -398,7 +398,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  `<ROW>` 要素で、列 `Age` を 1 番目のフィールドに、列 `FirstName` を 3 番目のフィールドに、列 `LastName` を 2 番目のフィールドにマッピングします。  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -433,7 +433,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  `<ROW>` 要素で、列 `Age` を 1 番目のフィールドに、列 `FirstName` を 3 番目のフィールドに、列 `LastName` を 4 番目のフィールドにマッピングします。  
   
-```  
+```xml
+<?xml version = "1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -464,7 +465,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="MapXSItype"></a> D. \<FIELD> xsi:type を \<COLUMN> xsi:type にマッピングする場合  
  次の例では、さまざまな型のフィールド、および列への各フィールドのマッピングを示します。  
   
-```  
+```xml
 <?xml version = "1.0"?>  
 <BCPFORMAT  
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -501,13 +502,13 @@ xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"
 ###  <a name="MapXMLDataToTbl"></a> E. XML データをテーブルにマッピングする場合  
  次の例では、2 列の空テーブル (`t_xml`) を作成し、1 番目の列を `int` データ型に、2 番目の列を `xml` データ型にマッピングしています。  
   
-```  
+```sql
 CREATE TABLE t_xml (c1 int, c2 xml)  
 ```  
   
  次の XML フォーマット ファイルを使用すると、テーブル `t_xml`にデータ ファイルが読み込まれます。  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -525,7 +526,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="ImportFixedFields"></a> F. 固定長フィールドまたは固定幅フィールドをインポートする場合  
  次の例では、長さと幅がそれぞれ `10` 文字または `6` 文字に固定されたフィールドについて説明します。 これらのフィールドの長さと幅は `LENGTH="10"` および `LENGTH="6"`としてそれぞれ表現されています。 データ ファイルのすべての行の末尾には、復帰と改行の組み合わせ ({CR}{LF}) が記述されます。フォーマット ファイルでは `TERMINATOR="\r\n"`として表現されています。  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT  
        xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"  

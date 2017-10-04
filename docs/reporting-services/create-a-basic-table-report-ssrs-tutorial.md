@@ -21,16 +21,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: f20330dab55ad3670f6d30037cb6b1962dd5c02c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 3fce85745c90ee7cae060c26a24042eccbd0ee10
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>基本的なテーブル レポートの作成 (SSRS チュートリアル)
 
-このチュートリアルで使用するレポート デザイナー SQL Server Data Tools で基本的な[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]に基づいて、テーブルを含むレポートの改ページ調整、 ** [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] **データベース。 作成することも[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]ページネーションのあるレポート ビルダーでレポートします。 
+このチュートリアルで使用するレポート デザイナー SQL Server Data Tools で基本的な[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]に基づいて、テーブルを含むレポートの改ページ調整、  **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]** データベース。 作成することも[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]ページネーションのあるレポート ビルダーでレポートします。 
 
 このチュートリアルを進めるときにレポート プロジェクトを作成、接続情報を設定、クエリの定義、テーブル データ領域を追加、グループしいくつかのフィールドの合計してレポートをプレビューします。  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 09/21/2017
   
 -   [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] データベース。  詳細については、「 [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)」(Adventure Works 2014 サンプル データベース) を参照してください。  
   
- -   [SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)インストールされて、レポート デザイナーがある場合は"SQL Server Reporting Services"のコンポーネントとします。    
+ -   [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)インストールされて、レポート デザイナーがある場合は"SQL Server Reporting Services"のコンポーネントとします。    
   
 [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] データベースからデータを取得するには読み取り専用権限も必要です。
 

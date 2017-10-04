@@ -2,7 +2,7 @@
 title: "どのような &#39; s Machine Learning のサービスの新機能 |Microsoft ドキュメント"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/08/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: fffe2ab906f659a2fb0e2996363ac8e7da000707
-ms.openlocfilehash: 34a404511d72c5775f25dd182b018926b6d0d62e
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 0452a71d844cea46ac48871a9e987171a4c241d3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>SQL Server の Machine Learning のサービスの新機能
@@ -30,16 +30,13 @@ SQL Server 2017、機械学習は一般的な Python 言語のサポートを追
 
 最新のお知らせは、ここをキャッチします。 [SQL Server 2017 の Python: データベース内の機械学習の強化](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
 
+[!NOTE]
+> これで Azure SQL データベースで R を実行できます。 詳細については、次を参照してください。[この資料](r/using-r-in-azure-sql-database.md)、または SQL Server 開発チームのブログ: [Announcing preview Machine Learning のサービスの Azure SQL データベースでの R のサポートと](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/09/25/announcing-preview-of-machine-learning-services-with-r-support-in-azure-sql-database/)です。
+
 ## <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
 
 Microsoft Machine Learning サーバー SQL Server では、今すぐ R または Python のいずれかで machine learning のソリューションの配置のビルドとの包括的なサポートを提供します。 このリリースの要点を次に示します。
 
-> [!IMPORTANT]
-> 
-> R、Python の使用を含む、マシン学習サービスは現在サポートされていません、Linux 上または Azure SQL データベース、SQL Server を実行している場合。 今後のリリースで変更を探します。
-> 
-> Linux のエディションでは、予測関数を使用してネイティブ スコア付けはサポートが現在します。
- 
 ### <a name="in-database-python-integration"></a>データベース内の Python の統合
 
 Python ストアド プロシージャ、またはを実行する計算コンテキストとして、SQL Server コンピューターを使用してリモートで Python を実行します。 この統合は、SQL Server の機能を使用するには、Python の開発者やデータ サイエンティストの膨大なコミュニティの新しい手法が表示されます。 
@@ -60,9 +57,13 @@ SQL Server の開発者にアクセスする広範な Python ライブラリ sci
 
 + Microsoft Machine Learning Server (スタンドアロン) での Python のサポート
 
-    SQL Server 2017 には、Microsoft マシン学習のプラットフォームのスタンドアロン バージョンをインストールするオプションが含まれています。 Machine Learning のサーバーを使用するは、配布し、SQL Server を使用せずに R または Python コードをスケールします。
+    SQL Server 2017 には、Microsoft Machine Learning Server のスタンドアロン バージョンをインストールするオプションが含まれています。 Machine Learning のサーバーを使用するは、配布し、SQL Server を使用せずに R または Python コードをスケールします。
 
-    Microsoft Machine Learning のサーバーで実行されている Python の例は、次を参照してください。[発行 Python コードを使用すると](python/publish-consume-python-code.md)です。
+### <a name="linux-support"></a>Linux サポート
+
+データベースを使用して R または Python での機械学習は SQL Server on Linux で現在サポートされていません。 以降のリリースのお知らせを参照してください。
+
+ただし、Linux で行うことができます[ネイティブ スコアリング](sql-native-scoring.md)T-SQL で予測関数を使用します。 ネイティブのスコア付けするには、設定しなくても呼び出すことも、R ランタイム、非常に高速で、事前トレーニング済みモデルからスコア付けすることができます。 これは、Linux に SQL Server を使用するには非常に高速で、クライアント アプリケーションを提供する予測を生成することを意味します。
 
 ### <a name="new-algorithms"></a>新しいアルゴリズム
 

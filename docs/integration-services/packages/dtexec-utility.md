@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: f76aa1cfbcad38e383abca8a79005b3851767e2a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0c021c5f17266bfbba65d3d364136dd0d61d74f3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="dtexec-utility"></a>dtexec ユーティリティ
@@ -217,11 +217,11 @@ dtexec /option [value] [/option [value]]...
   
      **/ConsoleLog** オプションの例については、「 **解説** 」を参照してください。  
   
--   **/D[ts](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)です。  
+--   **/D [ts]** *package_path*: (省略可能)。 SSIS パッケージ ストアからパッケージを読み込みます。 SSIS パッケージ ストアに格納されているパッケージは、従来のパッケージ配置モデルを使用して配置されます。 プロジェクト配置モデルを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージを実行するには、 **/ISServer** オプションを使用します。 パッケージとプロジェクトの配置モデルの詳細については、「 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)」を参照してください。  
   
-     *package_path* 引数には、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージの相対パスを指定します。このパスは SSIS パッケージ ストアのルートから始まり、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージの名前を含むパスです。 *package_path* 引数に指定するパスまたはファイル名に空白文字を含める場合は、 *package_path* 引数を引用符で囲む必要があります。  
+     The *package_path* argument specifies the relative path of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package, starting at the root of the SSIS Package Store, and includes the name of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
-     **/DTS** オプションは、 **/File** オプションまたは **/SQL** オプションと同時に使用できません。 複数のオプションが指定された場合、 **dtexec** は失敗します。  
+     The **/DTS** option cannot be used together with the **/File** or **/SQL** option. If multiple options are specified, **dtexec** fails.  
   
 -   **/De[crypt]**  *password*: (省略可能)。 パスワードが暗号化されているパッケージを読み込むときに使用する暗号化解除用パスワードを設定します。  
   
@@ -262,10 +262,9 @@ dtexec /option [value] [/option [value]]...
      **/Env[Reference]** オプションは、 **/ISServer** オプションおよび **/Server** オプションと共に使用します。  
   
      このパラメーターは SQL Server エージェントによって使用されます。  
-  
--   * */F[ile](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)  
-  
-     *filespec* 引数には、パッケージのパスとファイル名を指定します。 汎用名前付け規則 (UNC) 形式のパス、またはローカル パスのどちらかでパスを指定できます。 *filespec* 引数に指定するパスまたはファイル名に空白文字を含める場合は、 *filespec* 引数を引用符で囲む必要があります。  
+  --   **/F [ile]** *filespec*: (省略可能)。 ファイル システムに保存されているパッケージを読み込みます。 ファイル システムに保存されているパッケージは、従来のパッケージ配置モデルを使用して配置されます。 プロジェクト配置モデルを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージを実行するには、 **/ISServer** オプションを使用します。 パッケージとプロジェクトの配置モデルの詳細については、「 [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
+
+  *filespec* 引数には、パッケージのパスとファイル名を指定します。 汎用名前付け規則 (UNC) 形式のパス、またはローカル パスのどちらかでパスを指定できます。 *filespec* 引数に指定するパスまたはファイル名に空白文字を含める場合は、 *filespec* 引数を引用符で囲む必要があります。  
   
      **/File** オプションは、 **/DTS** オプションまたは **/SQL** オプションと同時に使用できません。 複数のオプションが指定された場合、 **dtexec** は失敗します。  
   
@@ -413,21 +412,21 @@ dtexec /option [value] [/option [value]]...
   
      **/Ser[ver]** オプションが指定されている場合、 **/ISServer** オプションは必須です。  
   
--   * */SQ[L](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)です。  
+--   **/SQ [L]** *package_path*: に格納されているパッケージを読み込みます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の**msdb**データベース。 **msdb** データベースに格納されているパッケージは、パッケージ配置モデルを使用して配置されます。 プロジェクト配置モデルを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージを実行するには、 **/ISServer** オプションを使用します。 パッケージとプロジェクトの配置モデルの詳細については、「 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)」を参照してください。   
   
-     *package_path* 引数には、取得するパッケージの名前を指定します。 パス名を指定する場合、パス内のフォルダーの最後には円記号 ("\\") を指定します。 *Package_path* 値は引用符で囲むことができます。 *package_path* 引数に指定するパスまたはファイル名に空白文字を含める場合は、 *package_path* 引数を引用符で囲む必要があります。  
+     The *package_path* argument specifies the name of the package to retrieve. If folders are included in the path, they are terminated with backslashes ("\\"). The *package_path* value can be quoted. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
-     **/User**、 **/Password**、 **/Server** の各オプションは、 **/SQL** オプションと共に使用できます。  
+     You can use the **/User**, **/Password**, and **/Server** options together with the **/SQL** option.  
   
-     **/User** オプションを省略した場合、パッケージへのアクセスに Windows 認証が使用されます。 **/User** オプションを使用する場合、指定する **/User** ログイン名は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証に関連付けられます。  
+     If you omit the **/User** option, Windows Authentication is used to access the package. If you use the **/User** option, the **/User** login name specified is associated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
   
-     **/Password** オプションは、 **/User** オプションと共に使用する必要があります。 **/Password** オプションを使用する場合、パッケージは指定されたユーザー名とパスワード情報を使用してアクセスされます。 **/Password** オプションを省略した場合、空白のパスワードが使用されます。  
+     The **/Password** option is used only together with the **/User** option. If you use the **/Password** option, the package is accessed with the user name and password information provided. If you omit the **/Password** option, a blank password is used.  
   
-    > **重要!!** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+    > **IMPORTANT!!** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-     **/Server** オプションを省略した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のローカル インスタンスが使用されます。  
+     If the **/Server** option is omitted, the default local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is assumed.  
   
-     **/SQL** オプションは、 **/DTS** オプションまたは **/File** オプションと同時に使用できません。 複数のオプションが指定された場合、 **dtexec** は失敗します。  
+     The **/SQL** option cannot be used together with the **/DTS** or **/File** option. If multiple options are specified, **dtexec** fails.  
   
 -   **/Su[m]**: (省略可能)。 後続のコンポーネントが受け取る行数を示す増分カウンターを表示します。  
   

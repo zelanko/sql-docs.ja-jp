@@ -27,10 +27,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0ec83d1e567c44abba880716bbd700af2810be60
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: cb825e9f5a654ec7dd24059d43dcea5b7d91e1e1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services サービス (SSIS サービス)
@@ -71,7 +71,7 @@ ms.lasthandoff: 09/21/2017
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンポーネントのインストール時に、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスもインストールされます。 既定では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが起動され、スタートアップの種類が自動に設定されます。 ただし、サービスを使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の格納されたパッケージおよび実行中のパッケージを管理するには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールする必要があります。  
   
 > [!NOTE]
-> レガシー Integration Services サービスに直接接続するには、Integration Services サービスが実行されている SQL Server のバージョンと合わせたバージョンの SQL Server Management Studio (SSMS) を使用する必要があります。 たとえば、SQL Server 2016 のインスタンスで実行されているレガシ Integration Services サービスに接続するには、SQL Server 2016 用にリリースされたバージョンの SSMS を使用する必要があります。 [SQL Server Management Studio (SSMS) をダウンロードします](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)。
+> レガシー Integration Services サービスに直接接続するには、Integration Services サービスが実行されている SQL Server のバージョンと合わせたバージョンの SQL Server Management Studio (SSMS) を使用する必要があります。 たとえば、SQL Server 2016 のインスタンスで実行されているレガシ Integration Services サービスに接続するには、SQL Server 2016 用にリリースされたバージョンの SSMS を使用する必要があります。 [SQL Server Management Studio (SSMS) をダウンロードします](../../ssms/download-sql-server-management-studio-ssms.md)。
 >
 >   SSMS の **[サーバーへの接続]** ダイアログ ボックスで、旧バージョンの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが実行されているサーバーの名前を入力することはできません。 ただし、リモート サーバーに格納されるパッケージを管理するために、そのリモート サーバー上の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスのインスタンスに接続する必要はありません。 代わりに、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルを編集し、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でリモート サーバーに格納されているパッケージが表示されるようにします。   
   
@@ -278,7 +278,7 @@ ms.lasthandoff: 09/21/2017
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] または他の管理アプリケーションからリモート サーバー上の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のインスタンスに接続するには、アプリケーションのユーザーがそのサーバーに対して特定の権限を持っている必要があります。  
   
 > [!IMPORTANT]
-> レガシ Integration Services サービスに直接接続するには、Integration Services サービスが実行されている SQL Server のバージョンと合わせたバージョンの SQL Server Management Studio (SSMS) を使用する必要があります。 たとえば、SQL Server 2016 のインスタンスで実行されているレガシ Integration Services サービスに接続するには、SQL Server 2016 用にリリースされたバージョンの SSMS を使用する必要があります。 [SQL Server Management Studio (SSMS) をダウンロードしてください](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)。
+> レガシ Integration Services サービスに直接接続するには、Integration Services サービスが実行されている SQL Server のバージョンと合わせたバージョンの SQL Server Management Studio (SSMS) を使用する必要があります。 たとえば、SQL Server 2016 のインスタンスで実行されているレガシ Integration Services サービスに接続するには、SQL Server 2016 用にリリースされたバージョンの SSMS を使用する必要があります。 [SQL Server Management Studio (SSMS) をダウンロードしてください](../../ssms/download-sql-server-management-studio-ssms.md)。
 >
 >  リモート サーバーに格納されるパッケージを管理するために、そのリモート サーバー上の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスのインスタンスに接続する必要はありません。 代わりに、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルを編集し、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でリモート サーバーに格納されているパッケージが表示されるようにします。
   

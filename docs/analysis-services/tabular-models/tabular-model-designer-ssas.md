@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: f8f894ec1836e12eb57a7b2e629ff06464f266fb
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 7450b51aac58dc148dd1ef37e90ad20aff50883c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="tabular-model-designer-ssas"></a>テーブル モデル デザイナー (SSAS)
-  テーブル モデル デザイナーの一部である [!含める[ssBIDevStudioFull](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)詳細についてはします。   
+テーブル モデル デザイナーは、Microsoft [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に統合された [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]の一部であり、プロフェッショナルなテーブル モデル ソリューションの開発のために特化したプロジェクトの種類のテンプレートが付属しています。  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は無料で Web からダウンロードしてインストールできます。 詳細については、「[SQL Server Data Tools (SSDT) のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。    
   
 ##  <a name="bkmk_benefits"></a> 利点  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をインストールすると、テーブル モデルを作成するための新しいプロジェクト テンプレートが、使用可能なプロジェクトの種類に追加されます。 いずれかのテンプレートを使用して新しいテーブル モデル プロジェクトを作成した後は、テーブル モデル デザイナー ツール、およびウィザードを使用して、モデル作成を開始できます。  

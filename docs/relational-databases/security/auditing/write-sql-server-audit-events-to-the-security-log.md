@@ -1,7 +1,7 @@
 ---
 title: "セキュリティ ログへの SQL サーバー監査イベントの書き込み | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,45 +19,32 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 268f1fbd8ea57db8626c84999a3454e4c4459511
+ms.translationtype: HT
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 990b47afdf34cc16f15a658f5a69f840d44a27fe
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/21/2017
 
----
-# <a name="write-sql-server-audit-events-to-the-security-log"></a>セキュリティ ログへの SQL サーバー監査イベントの書き込み
-  高度なセキュリティ環境では、オブジェクト アクセスを記録するイベントを書き込むのに適切な場所は Windows セキュリティ ログです。 他の監査場所は、サポートされていますが、改ざんされる可能性が高くなります。  
+---  
+
+# <a name="write-sql-server-audit-events-to-the-security-log"></a>セキュリティ ログへの SQL サーバー監査イベントの書き込み  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+高度なセキュリティ環境では、オブジェクト アクセスを記録するイベントを書き込むのに適切な場所は Windows セキュリティ ログです。 他の監査場所は、サポートされていますが、改ざんされる可能性が高くなります。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サーバー監査を Windows セキュリティ ログに書き込むための主要な要件は 2 つあります。  
   
 -   オブジェクト アクセスの監査の設定は、イベントをキャプチャするように構成する必要があります。 監査ポリシー ツール (`auditpol.exe`) は、" **オブジェクト アクセスの監査** " カテゴリでさまざまなサブポリシー設定を公開しています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がオブジェクト アクセスを監査できるようにするには、 **application generated** 設定を構成します。  
-  
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを実行しているアカウントは、Windows セキュリティ ログに書き込むための " **セキュリティ監査の生成** " 権限を持っている必要があります。 既定では、LOCAL SERVICE アカウントおよび NETWORK SERVICE アカウントにこの権限があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がこれらのアカウントのいずれかで実行されている場合、この手順は必要ありません。  
+-   レジストリ ハイブ `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security` への [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントに完全なアクセス許可を提供します。  
+
+  > [!IMPORTANT]  
+  > [!INCLUDE[ssnoteregistry-md](../../../includes/ssnoteregistry-md.md)]   
   
- Windows の監査ポリシーは、Windows セキュリティ ログに書き込むように構成されている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の監査に影響を与えることがあります。監査ポリシーが不適切に構成された場合は、イベントが失われる可能性があります。 通常、Windows セキュリティ ログは、古いイベントを上書きするよう設定されます。 これにより、最新のイベントが保持されます。 ただし、Windows セキュリティ ログが古いイベントを上書きするよう設定されていない場合、セキュリティ ログがいっぱいになると、システムは Windows イベント 1104 (ログがいっぱいです) を発行します。 このとき、次の点に注意してください。  
-  
+Windows の監査ポリシーは、Windows セキュリティ ログに書き込むように構成されている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の監査に影響を与えることがあります。監査ポリシーが不適切に構成された場合は、イベントが失われる可能性があります。 通常、Windows セキュリティ ログは、古いイベントを上書きするよう設定されます。 これにより、最新のイベントが保持されます。 ただし、Windows セキュリティ ログが古いイベントを上書きするよう設定されていない場合、セキュリティ ログがいっぱいになると、システムは Windows イベント 1104 (ログがいっぱいです) を発行します。 このとき、次の点に注意してください。  
 -   それ以降のセキュリティ イベントは記録されません。  
-  
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はシステムがイベントをセキュリティ ログに記録できないことを検出できないため、監査イベントが失われる場合があります。  
-  
 -   ボックス管理者によってセキュリティ ログが修復されると、ログ動作は正常に戻ります。  
-  
- **このトピックの内容**  
-  
--   **作業を開始する準備:**  
-  
-     [制限事項と制約事項](#Restrictions)  
-  
-     [セキュリティ](#Security)  
-  
--   **セキュリティ ログに SQL サーバー監査イベントを書き込むには:**  
-  
-     [auditpol を使用した Windows のオブジェクト アクセスの監査の設定](#auditpolAccess)  
-  
-     [secpol を使用した Windows のオブジェクト アクセスの監査の設定](#secpolAccess)  
-  
-     [secpol を使用した "セキュリティ監査の生成" 権限のアカウントへの許可](#secpolPermission)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -125,3 +112,4 @@ ms.lasthandoff: 06/22/2017
  [SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   
+

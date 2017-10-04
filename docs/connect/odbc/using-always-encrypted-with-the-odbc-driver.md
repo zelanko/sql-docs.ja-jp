@@ -15,18 +15,18 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2d0ac1f1a8e9a78539a2c7824f06d3ed3507c0b5
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d28b647de71c5064dfbe0d49f399119f6a9ac283
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-131-for-sql-server"></a>SQL Server 用 ODBC Driver 13.1 で Always Encrypted を使用します。
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-この記事の内容を使用する ODBC アプリケーションを開発する方法について情報を提供する[Always Encrypted (データベース エンジン)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)と[SQL Server 用 ODBC Driver 13.1](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)です。
+この記事の内容を使用する ODBC アプリケーションを開発する方法について情報を提供する[Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)と[SQL Server 用 ODBC Driver 13.1](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)です。
 
-Always Encrypted を使用すると、クライアント アプリケーションは SQL Server または Azure SQL データベースにデータまたは暗号化キーを開示することなく、機密データを暗号化することができます。 Always Encrypted が有効になっているドライバーなどが、SQL Server 用 ODBC Driver 13.1 がこれを透過的に暗号化およびクライアント アプリケーション内の機密データを復号化を実現します。 ドライバーは、どのクエリ パラメーターが機密データベース列 (Always Encrypted を使用して保護される) に対応するかを自動的に決定し、SQL Server または Azure SQL データベースにデータを渡す前にこれらのパラメーターの値を暗号化します。 同様に、ドライバーは、クエリ結果内の暗号化されたデータベース列から取得されたデータを透過的に暗号化解除します。 詳細については、「 [Always Encrypted (データベース エンジン)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)」を参照してください。
+Always Encrypted を使用すると、クライアント アプリケーションは SQL Server または Azure SQL データベースにデータまたは暗号化キーを開示することなく、機密データを暗号化することができます。 Always Encrypted が有効になっているドライバーなどが、SQL Server 用 ODBC Driver 13.1 がこれを透過的に暗号化およびクライアント アプリケーション内の機密データを復号化を実現します。 ドライバーは、どのクエリ パラメーターが機密データベース列 (Always Encrypted を使用して保護される) に対応するかを自動的に決定し、SQL Server または Azure SQL データベースにデータを渡す前にこれらのパラメーターの値を暗号化します。 同様に、ドライバーは、クエリ結果内の暗号化されたデータベース列から取得されたデータを透過的に暗号化解除します。 詳細については、「 [Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)」を参照してください。
 
 ### <a name="prerequisites"></a>前提条件
 
@@ -240,7 +240,7 @@ while (SQL_SUCCEEDED(SQLFetch(hstmt)))
 
 ##### <a name="unsupported-data-type-conversion-errors"></a>サポートされていないデータ型の変換エラー
 
-Always Encrypted では、暗号化されたデータ型に対するいくつかの変換がサポートされています。 参照してください[Always Encrypted (データベース エンジン)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)サポートされる型変換の詳細な一覧についてはします。 データ型変換エラーを回避するのには、SQLBindParameter を暗号化された列をターゲットとするパラメーターを使用すると、次の点を確認することを確認します。
+Always Encrypted では、暗号化されたデータ型に対するいくつかの変換がサポートされています。 参照してください[Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)サポートされる型変換の詳細な一覧についてはします。 データ型変換エラーを回避するのには、SQLBindParameter を暗号化された列をターゲットとするパラメーターを使用すると、次の点を確認することを確認します。
 
 - SQL の型パラメーターがか正確に対象の列の型と同じまたは SQL 型から列の型への変換はサポートされています。
 
@@ -284,7 +284,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>メタデータを取得するクエリ パラメーターのラウンド トリップを制御します。
 
-接続に対して Always Encrypted が有効になっている場合、ODBC Driver 13.1 SQL Server が、既定では、呼び出す[sys.sp_describe_parameter_encryption](/sql-docs/docs/relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql)パラメーター化各クエリの渡す (パラメーターを指定しないで、クエリ ステートメントSQL Server には値)。 このストアド プロシージャを調べる場合は、すべてのパラメーターを暗号化する必要がある場合に、クエリ ステートメントを分析し、それらを暗号化するドライバーを許可するには、各パラメーターの暗号化に関連する情報を返します。 上記の動作により、クライアント アプリケーションへの透過性の高度な: アプリケーション (およびアプリケーション開発者) は暗号化された列をターゲットとする値が渡される限り、暗号化された列にアクセスするクエリについて注意する必要ありませんドライバーのパラメーターにします。
+接続に対して Always Encrypted が有効になっている場合、ODBC Driver 13.1 SQL Server が、既定では、呼び出す[sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)パラメーター化各クエリの渡す (パラメーターを指定しないで、クエリ ステートメントSQL Server には値)。 このストアド プロシージャを調べる場合は、すべてのパラメーターを暗号化する必要がある場合に、クエリ ステートメントを分析し、それらを暗号化するドライバーを許可するには、各パラメーターの暗号化に関連する情報を返します。 上記の動作により、クライアント アプリケーションへの透過性の高度な: アプリケーション (およびアプリケーション開発者) は暗号化された列をターゲットとする値が渡される限り、暗号化された列にアクセスするクエリについて注意する必要ありませんドライバーのパラメーターにします。
 
 ### <a name="per-statement-always-encrypted-behavior"></a>ステートメントごとの動作を常に暗号化します。
 
@@ -344,7 +344,7 @@ SQL Server 用 ODBC Driver 13.1 は、次の組み込みキー ストア プロ�
 |Azure Key Vault |Azure Key Vault でのストアの Cmk | `AZURE_KEY_VAULT` |Windows、Linux、macOS|
 |Windows 証明書ストア|キーストアを Windows に Cmk をローカルに格納します。| `MSSQL_CERTIFICATE_STORE`|Windows|
 
-- (または、DBA) 列マスター_キーのメタデータで構成されているプロバイダー名が正しいこと、および列マスター_キーのパスが指定されたプロバイダーのキー パスの形式に準拠しているかどうかを確認する必要があります。 [CREATE COLUMN MASTER KEY (Transact-SQL)](/sql-docs/docs/t-sql/statements/create-column-master-key-transact-sql) ステートメントを発行した際に有効なプロバイダー名とキー パスを自動的に生成する、SQL Server Management Studio などのツールを使用してキーを構成することをお勧めします。
+- (または、DBA) 列マスター_キーのメタデータで構成されているプロバイダー名が正しいこと、および列マスター_キーのパスが指定されたプロバイダーのキー パスの形式に準拠しているかどうかを確認する必要があります。 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) ステートメントを発行した際に有効なプロバイダー名とキー パスを自動的に生成する、SQL Server Management Studio などのツールを使用してキーを構成することをお勧めします。
 
 - アプリケーションは、キー ストア内のキーにアクセスできるようにする必要があります。 アプリケーションのキーや、キーストアに応じて、キーストアへのアクセスを許可またはその他のキー ストア固有の構成手順を実行する可能性があります。 たとえば、Azure Key Vault にアクセスするにキー ストアへの正しい資格情報を提供する必要があります。
 
@@ -514,10 +514,10 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>Always Encrypted を使用する場合は、ODBC ドライバーの制限事項
 
 ### <a name="bulk-copy-function-usage"></a>一括コピー関数の使用法
-使用、 [SQL 一括コピー関数](/sql-docs/docs/relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc)Always Encrypted で ODBC ドライバーを使用する場合はサポートされていません。 SQL 一括コピー関数で使用される暗号化された列に対して透過的な暗号化/暗号化解除は行われません。
+使用、 [SQL 一括コピー関数](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)Always Encrypted で ODBC ドライバーを使用する場合はサポートされていません。 SQL 一括コピー関数で使用される暗号化された列に対して透過的な暗号化/暗号化解除は行われません。
 
 ### <a name="asynchronous-operations"></a>非同期操作
-ODBC ドライバーの使用を許可中に[非同期操作](/sql-docs/docs/relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel)Always encrypted によりは、パフォーマンスに影響操作で Always Encrypted が有効にするとします。 呼び出し`sys.sp_describe_parameter_encryption`、ステートメントがブロックしているとすると、サーバーを返す前に、メタデータを返すまで待機するドライバーを暗号化メタデータを決定する`SQL_STILL_EXECUTING`です。
+ODBC ドライバーの使用を許可中に[非同期操作](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md)Always encrypted によりは、パフォーマンスに影響操作で Always Encrypted が有効にするとします。 呼び出し`sys.sp_describe_parameter_encryption`、ステートメントがブロックしているとすると、サーバーを返す前に、メタデータを返すまで待機するドライバーを暗号化メタデータを決定する`SQL_STILL_EXECUTING`です。
 
 ## <a name="always-encrypted-api-summary"></a>Always Encrypted の API の概要
 
@@ -552,7 +552,7 @@ ODBC ドライバーの使用を許可中に[非同期操作](/sql-docs/docs/rel
 
 ## <a name="see-also"></a>参照
 
-- [Always Encrypted (データベース エンジン)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)
+- [Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted 関連のブログ](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 
 

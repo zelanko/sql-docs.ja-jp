@@ -48,10 +48,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 68aa9ada24b5bcf1dedf7ff8d60d5fad31d68126
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: f61b6469e40ba303cbff14db9bde15161b225ca7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
@@ -580,7 +580,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
 **適用されます**: SQL Server (SQL Server 2014 以降) と Azure SQL データベースです。
   
- オンライン インデックス再構築では、このテーブルに対する操作がブロックされるまで待機する必要があります。 **WAIT_AT_LOW_PRIORITY**オンライン インデックス再構築操作が他の操作を続行しながら、オンライン インデックス構築操作が待機している、優先度の低いロックを待つことを示します。 省略すると、 **WAIT AT LOW PRIORITY**オプションに相当`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`です。 詳細については、次を参照してください。 [WAIT_AT_LOW_PRIORITY](/sql-docs/docs/t-sql/statements/alter-index-transact-sql)です。 
+ オンライン インデックス再構築では、このテーブルに対する操作がブロックされるまで待機する必要があります。 **WAIT_AT_LOW_PRIORITY**オンライン インデックス再構築操作が他の操作を続行しながら、オンライン インデックス構築操作が待機している、優先度の低いロックを待つことを示します。 省略すると、 **WAIT AT LOW PRIORITY**オプションに相当`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`です。 詳細については、次を参照してください。 [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)です。 
   
  MAX_DURATION =*時間*[**分**]  
   
@@ -618,7 +618,7 @@ WAIT_AT_LOW_PRIORITY を併用**再開可能 = ON**と**ONLINE = ON**です。
   
 **適用されます**: SQL Server 2017、および Azure SQL データベース (機能が公開プレビュー) で始まる
   
- このテーブルに対するブロック操作の待機を一時停止した後は、オンラインのインデックスの再構築を再開しています。 **WAIT_AT_LOW_PRIORITY**オンライン インデックス再構築操作が他の操作を続行しながら、オンライン インデックス構築操作が待機している、優先度の低いロックを待つことを示します。 省略すると、 **WAIT AT LOW PRIORITY**オプションに相当`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`です。 詳細については、次を参照してください。 [WAIT_AT_LOW_PRIORITY](/sql-docs/docs/t-sql/statements/alter-index-transact-sql)です。 
+ このテーブルに対するブロック操作の待機を一時停止した後は、オンラインのインデックスの再構築を再開しています。 **WAIT_AT_LOW_PRIORITY**オンライン インデックス再構築操作が他の操作を続行しながら、オンライン インデックス構築操作が待機している、優先度の低いロックを待つことを示します。 省略すると、 **WAIT AT LOW PRIORITY**オプションに相当`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`です。 詳細については、次を参照してください。 [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)です。 
 
 
 一時停止
@@ -1176,8 +1176,8 @@ GO
   
 ## <a name="see-also"></a>参照  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [空間インデックス &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-spatial-index-transact-sql.md)   
- [XML インデックス &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-xml-index-transact-sql.md)   
+ [空間インデックス & #40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-spatial-index-transact-sql.md)   
+ [XML インデックス & #40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-xml-index-transact-sql.md)   
  [DROP INDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-index-transact-sql.md)   
  [インデックスと制約を無効にします。](../../relational-databases/indexes/disable-indexes-and-constraints.md)   
  [XML インデックス &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   

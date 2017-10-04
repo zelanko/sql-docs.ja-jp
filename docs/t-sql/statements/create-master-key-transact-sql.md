@@ -73,7 +73,7 @@ SQL Server と Parallel Data Warehouse では、マスター _ キー通常お�
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]と[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]、パスワード保護と見なされないように、マスター _ キーのサービス マスター _ キーの保護は、データベースがの移動先 1 台のサーバーから別の状況でのデータ損失シナリオを防ぐために安全機構Microsoft Azure プラットフォームによって管理されます。 したがって、メーザ キーのパスワードは省略可能で[!INCLUDE[ssSDS](../../includes/sssds-md.md)]と[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]です。
   
 > [!IMPORTANT]  
->  使用して、マスター _ キーをバックアップする必要があります [マスター _ キーのバックアップ](../../t-sql/statements/backup-master-key-transact-sql.md) し、オフサイトの安全な場所にバックアップを格納します。  
+>  使用して、マスター _ キーをバックアップする必要があります [BACKUP MASTER KEY](../../t-sql/statements/backup-master-key-transact-sql.md) し、オフサイトの安全な場所にバックアップを格納します。  
   
  サービス マスター キーとデータベース マスター キーは、AES-256 アルゴリズムを使用して保護されます。  
   

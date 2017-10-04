@@ -112,7 +112,7 @@ ms.lasthandoff: 07/31/2017
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コマンド プロンプトで、次のように入力します。  
   
-```  
+```cmd
 bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, -r \n -T  
 ```  
   
@@ -145,7 +145,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
 ### <a name="examples"></a>使用例  
  この例では、前述の例で作成された `Department-c-t.txt` データ ファイルから、 `myDepartment` サンプル データベースの [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] テーブルに、文字データを一括インポートします。 このテーブルを作成しないと、例を実行できません。 **dbo** スキーマでこのテーブルを作成するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターで次のコードを実行します。  
   
-```tsql  
+```sql  
 USE AdventureWorks;  
 GO  
 DROP TABLE myDepartment;  
@@ -163,7 +163,7 @@ GO
   
  Windows コマンド プロンプトで、次のように入力します。  
   
-```  
+```cmd
 bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T  
 ```  
   
@@ -178,7 +178,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターで、次のコードを実行します。  
   
-```tsql  
+```sql  
 USE AdventureWorks;  
 GO  
 BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'  

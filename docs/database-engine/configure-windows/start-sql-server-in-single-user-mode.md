@@ -1,7 +1,7 @@
 ---
 title: "シングル ユーザー モードでの SQL Server の起動 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a68b8a10ce5ecc12ee43bdbc7349d76c25a0f3be
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: bf04867e8e9a0e913d09c58598d10994d771adb2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>シングル ユーザー モードでの SQL Server の起動
@@ -38,9 +38,14 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 >  シングル ユーザー モードの場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続する前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを停止してください。そうしないと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスによってその接続が使用されるため、SQL Server のインスタンスがブロックされます。  
   
- シングル ユーザー モードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを起動すると、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続できます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のオブジェクト エクスプローラーでは、一部の操作で複数の接続が必要になるため失敗することがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をシングル ユーザー モードで管理するには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のクエリ エディターのみを介して接続することにより [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ステートメントを実行するか、 [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)を使用します。  
+シングル ユーザー モードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを起動すると、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続できます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のオブジェクト エクスプローラーでは、一部の操作で複数の接続が必要になるため失敗することがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をシングル ユーザー モードで管理するには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のクエリ エディターのみを介して接続することにより [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ステートメントを実行するか、 [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)を使用します。  
   
- **sqlcmd** または **で** -m [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]オプションを使用すると、接続を特定のクライアント アプリケーションに限定できます。 たとえば、 **-m"sqlcmd"** を使用すると、接続が、 **sqlcmd** クライアント プログラムとして識別される必要がある単一の接続に限定されます。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をシングル ユーザー モードで起動するときに、その唯一の接続を不明なクライアント アプリケーションによって使用されていた場合に使用します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のクエリ エディターを使用して接続するには、 **-m"Microsoft SQL Server Management Studio - Query"**を使用します。  
+**SQLCMD** または [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で **-m** オプションを使用すると、接続を特定のクライアント アプリケーションに限定できます。 
+
+> [!NOTE]
+> Linux では、**SQLCMD** は、このように大文字で入力する必要があります。
+
+たとえば、**-m"SQLCMD"** を使用すると、接続が、**SQLCMD** クライアント プログラムとして識別される必要がある単一の接続に限定されます。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をシングル ユーザー モードで起動するときに、その唯一の接続を不明なクライアント アプリケーションによって使用されていた場合に使用します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のクエリ エディターを使用して接続するには、 **-m"Microsoft SQL Server Management Studio - Query"**を使用します。  
   
 > [!IMPORTANT]  
 >  このオプションをセキュリティ機能として使用しないでください。 クライアント アプリケーションの名前はクライアント アプリケーションによって接続文字列の一部として指定されるため、本当の名前が指定されるとは限りません。  
@@ -72,3 +77,4 @@ ms.lasthandoff: 08/02/2017
  [データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)  
   
   
+

@@ -24,11 +24,11 @@ caps.latest.revision: 41
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 280e52e4ffbb86b02007493c4d000d3be0decece
+ms.translationtype: HT
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 74e0dabe8b6691e467e82d7267c40ef578d84490
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>一括インポート中の NULL の保持または既定値の使用 (SQL Server)
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
 
 |[外枠]|
 |---|
-|[Null 値を維持する](#keep_nulls)<br />[既定値と INSERT ... を使用するSELECT * FROM OPENROWSET(BULK...)](#keep_default)<br />[テスト条件の例](#etc)<br />&emsp;&#9679;&emsp;[サンプル テーブル](#sample_table)<br />&emsp;&#9679;&emsp;[サンプル データ ファイル](#sample_data_file)<br />&emsp;&#9679;&emsp;[XML 形式以外のフォーマット ファイルのサンプル](#nonxml_format_file)<br />[一括インポート中の NULL の保持または既定値の使用](#import_data)<br />&emsp;&#9679;&emsp;[フォーマット ファイルなしで bcp を使用して Null 値を維持する方法](#bcp_null)<br />&emsp;&#9679;&emsp;[XML 形式以外のフォーマット ファイルで bcp を使用して Null 値を維持する方法](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[フォーマット ファイルなしで bcp と既定値を使用する方法](#bcp_default)<br />&emsp;&#9679;&emsp;[XML 形式以外のフォーマット ファイルで bcp と既定値を使用する方法](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[フォーマット ファイルなしで BULK INSERT を使用して Null 値を維持する方法](#bulk_null)<br />&emsp;&#9679;&emsp;[XML 形式以外のフォーマット ファイルで BULK INSERT を使用して Null 値を維持する方法](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[フォーマット ファイルなしで BULK INSERT と既定値を使用する方法](#bulk_default)<br />&emsp;&#9679;&emsp;[XML 形式以外のフォーマット ファイルで BULK INSERT と既定値を使用する方法](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[XML 形式以外のフォーマット ファイルで OPENROWSET(BULK...) を使用して Null 値を維持する方法](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[XML 形式以外のフォーマット ファイルで OPENROWSET(BULK...) と既定値を使用する方法](#openrowset__default_fmt)<p>                                                                                                                                                                                                                  </p>|
+|[Null 値を維持する](#keep_nulls)<br />[既定値と INSERT ... を使用するSELECT * FROM OPENROWSET(BULK...)](#keep_default)<br />[テスト条件の例](#etc)<br />&emsp;&#9679;&emsp;[サンプル テーブル](#sample_table)<br />&emsp;&#9679;&emsp;[サンプル データ ファイル](#sample_data_file)<br />&emsp;&#9679;&emsp;[XML 形式以外のフォーマット ファイルのサンプル](#nonxml_format_file)<br />[一括インポート中の NULL の保持または既定値の使用](#import_data)<br />&emsp;&#9679;&emsp;[フォーマット ファイルなしで bcp を使用して Null 値を維持する方法](#bcp_null)<br />&emsp;&#9679;&emsp;[XML 形式以外のフォーマット ファイルで bcp を使用して Null 値を維持する方法](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[フォーマット ファイルなしで bcp と既定値を使用する方法](#bcp_default)<br />&emsp;&#9679;&emsp;[XML 形式以外のフォーマット ファイルで bcp と既定値を使用する方法](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[フォーマット ファイルなしで BULK INSERT を使用して Null 値を維持する方法](#bulk_null)<br />&emsp;&#9679;&emsp;[XML 形式以外のフォーマット ファイルで BULK INSERT を使用して Null 値を維持する方法](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[フォーマット ファイルなしで BULK INSERT と既定値を使用する方法](#bulk_default)<br />&emsp;&#9679;&emsp;[XML 形式以外のフォーマット ファイルで BULK INSERT と既定値を使用する方法](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[XML 形式以外のフォーマット ファイルで OPENROWSET(BULK...) を使用して Null 値を維持する方法](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[XML 形式以外のフォーマット ファイルで OPENROWSET(BULK...) と既定値を使用する方法](#openrowset__default_fmt)
 
 ## Null 値を維持する<a name="keep_nulls"></a>  
 以下の修飾子は、一括インポート操作中、テーブル列の既定値がある場合にその既定値を継承するのではなく、データ ファイルの空のフィールドにそのフィールドの NULL 値を保持することを指定しています。  [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)の場合、既定では、一括読み込み操作で指定されていないすべての列が NULL に設定されます。
@@ -67,7 +67,8 @@ ms.lasthandoff: 06/22/2017
 
 ### **サンプル テーブル**<a name="sample_table"></a>
 以下のスクリプトでは、テスト データベースと `myNulls`という名前のテーブルが作成されます。  4 番目のテーブル列 `Kids`には既定値があることに注意してください。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
-```tsql
+
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -83,6 +84,7 @@ CREATE TABLE dbo.myNulls (
 
 ### **サンプル データ ファイル**<a name="sample_data_file"></a>
 メモ帳を使用して、空のファイル `D:\BCP\myNulls.bcp` を作成し、次のデータを挿入します。  4 列目の 3 つ目のレコードに値はありません。
+
 ```
 1,Anthony,Grosse,Yes,1980-02-23
 2,Alica,Fatnowna,No,1963-11-14
@@ -90,6 +92,7 @@ CREATE TABLE dbo.myNulls (
 ```
 
 また、次の PowerShell スクリプトを実行して、データ ファイルを作成および設定することもできます。
+
 ```powershell
 cls
 # revise directory as desired
@@ -120,7 +123,7 @@ Invoke-Item $bcpFile;
 ### **XML 形式以外のフォーマット ファイルのサンプル**<a name="nonxml_format_file"></a>
 SQL Server は、非 XML 形式と XML 形式の 2 種類のフォーマット ファイルをサポートしています。  XML 以外のフォーマットとは、以前のバージョンの SQL Server でサポートされる従来のフォーマットです。  詳細については、「 [XML 以外のフォーマット ファイル (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 」を参照してください。  次のコマンドでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用し、 `myNulls.fmt`のスキーマに基づいて XML 以外のフォーマット ファイル `myNulls`を生成します。  [bcp](../../tools/bcp-utility.md) コマンドを使用してフォーマット ファイルを作成するには、 **format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。  format オプションには、次に示す **-f** オプションが必要です。  さらに、この例では、修飾子 **c** を使用して文字データを指定し、 **t** を使用して [フィールド ターミネータ](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)としてコンマを指定し、 **T** を使用して統合セキュリティによる信頼された接続を指定します。  コマンド プロンプトで、次のコマンドを入力します。
 
- ```
+ ```cmd
 bcp TestDatabase.dbo.myNulls format nul -c -f D:\BCP\myNulls.fmt -t, -T
 
 REM Review file
@@ -141,7 +144,8 @@ Notepad D:\BCP\myNulls.fmt
 ### **フォーマット ファイルなしで [bcp](../../tools/bcp-utility.md) を使用して Null 値を維持する方法**<a name="bcp_null"></a>
 
 **-k** スイッチ。  コマンド プロンプトで、次のコマンドを入力します。
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNulls;"
 
@@ -152,9 +156,10 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
   
-### **Using [bcp](../../tools/bcp-utility.md) and Keeping Null Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_null_fmt"></a>
+### **フォーマット ファイルなしで [bcp](../../tools/bcp-utility.md) で [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_null_fmt"></a>
 **-k** スイッチと **-f** スイッチ。 コマンド プロンプトで、次のコマンドを入力します。
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNulls;"
 
@@ -167,7 +172,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 
 ### **フォーマット ファイルなしで [bcp](../../tools/bcp-utility.md) と既定値を使用する方法**<a name="bcp_default"></a>
 コマンド プロンプトで、次のコマンドを入力します。
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNulls;"
 
@@ -178,9 +184,10 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
   
-### **Using [bcp](../../tools/bcp-utility.md) and Using Default Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_default_fmt"></a>
+### **フォーマット ファイルなしで [bcp](../../tools/bcp-utility.md) で [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_default_fmt"></a>
 **-f** スイッチ。  コマンド プロンプトで、次のコマンドを入力します。
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNulls;"
 
@@ -193,7 +200,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 
 ### **フォーマット ファイルなしで [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) を使用して Null 値を維持する方法**<a name="bulk_null"></a>
 **KEEPNULLS** 引数。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
-```tsql
+
+```sql
 USE TestDatabase;
 GO
 TRUNCATE TABLE dbo.myNulls; -- for testing
@@ -209,9 +217,10 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Keeping Null Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_null_fmt"></a>
+### **フォーマット ファイルなしで [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) で [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_null_fmt"></a>
 **KEEPNULLS** 引数と **FORMATFILE** 引数。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
-```tsql
+
+```sql
 USE TestDatabase;
 GO
 
@@ -229,7 +238,8 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 
 ### **フォーマット ファイルなしで [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) と既定値を使用する方法**<a name="bulk_default"></a>
 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
-```tsql
+
+```sql
 USE TestDatabase;
 GO
 
@@ -245,9 +255,10 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Using Default Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_default_fmt"></a>
+### **フォーマット ファイルなしで [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) で [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_default_fmt"></a>
 **FORMATFILE** 引数。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
-```tsql
+
+```sql
 USE TestDatabase;
 GO
 
@@ -262,10 +273,10 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Keeping Null Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset__null_fmt"></a>
+### **フォーマット ファイルなしで [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) で [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset__null_fmt"></a>
 **FORMATFILE** 引数。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
 
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -281,10 +292,10 @@ INSERT INTO dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Using Default Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset__default_fmt"></a>
+### **フォーマット ファイルなしで [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) で [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset__default_fmt"></a>
 **KEEPDEFAULTS** テーブル ヒントと **FORMATFILE** 引数。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
 
-```tsql
+```sql
 USE TestDatabase;
 GO
 

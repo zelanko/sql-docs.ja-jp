@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 009c30b7f14fe10099257c97a5a310aa41df71b0
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2cb08ab16291e87a25eb2596f75f4d01616a80db
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>パッケージに対する SQL Server エージェント ジョブ
@@ -189,7 +189,7 @@ ms.lasthandoff: 09/21/2017
     >  スケジュールに名前を付けるときには、他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのスケジュールとの区別がより簡単にできるように、一意でわかりやすい名前を使用してください。  
 
 ## <a name="see-also"></a>参照  
- [プロジェクトとパッケージの実行](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)  
+ [プロジェクトとパッケージの実行](deploy-integration-services-ssis-projects-and-packages.md)  
 
 ## <a name="external-resources"></a>外部リソース  
   
