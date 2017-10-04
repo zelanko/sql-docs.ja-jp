@@ -28,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 ---
 
 # <a name="insert-sql-graph"></a>挿入 (SQL グラフ)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]  
 
   1 つまたは複数の行を追加、`node`または`edge`テーブルに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 
 
@@ -41,8 +41,6 @@ ms.lasthandoff: 09/01/2017
 ノードのテーブルに挿入するための構文は、通常のテーブルのと同じです。 
 
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  
