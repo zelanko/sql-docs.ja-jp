@@ -160,7 +160,7 @@ NFS サーバーを構成するのには、SUSE ドキュメントでは、次�
 4. **SQL Server の FCI リソース エージェントをインストールします**。 両方のノードで、次のコマンドを実行します。
 
     ```bash
-    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
     sudo zypper --gpg-auto-import-keys refresh
     sudo zypper install mssql-server-ha
     ```

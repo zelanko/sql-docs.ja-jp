@@ -7,7 +7,7 @@ manager: craigg
 ms.date: 09/26/2017
 ms.topic: article
 ms.prod: sql-linux
-ms.technology: integration-services
+ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
@@ -40,7 +40,7 @@ Cron ジョブとは、指定された間隔で定期的に実行する構成可
 
 パッケージを実行する 1 つのコマンドのみを格納するシェル スクリプトの簡単な例を次に示します。 必要に応じて、他のコマンドを追加できます。
 
-```
+```bash
 # A simple shell script that contains a simple package execution command
 # Script name: SSISpackageName.daily
 
