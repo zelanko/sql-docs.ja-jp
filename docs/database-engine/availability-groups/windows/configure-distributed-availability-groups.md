@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 01f0e6dfacfab0d8528d3b399267c45afef95a11
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 5112630e01953d16f1ed6cec04e16ee5af55d470
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/20/2017
 
 ---
 
@@ -233,7 +233,10 @@ GO
         );  
        
       ```  
-  
+   >[!NOTE]
+   >標準の可用性グループと同様に、分散型可用性グループの 2 つの可用性グループのレプリカ部分の同期状態は、両方のレプリカの可用性モードによって異なります。 たとえば、同期コミットを発生させるには、現在のプライマリ可用性グループとセカンダリ可用性グループの両方が、synchronous_commit 可用性モードで構成されている必要があります。  
+
+
 1. 分散型可用性グループの状態が `SYNCHRONIZED`に変化するまで待機します。 プライマリ可用性グループのプライマリ レプリカをホストする SQL Server で、次のクエリを実行します。 
     
       ```sql  
@@ -340,3 +343,4 @@ ALTER AVAILABILITY GROUP [SQLFCIDAG]
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
+

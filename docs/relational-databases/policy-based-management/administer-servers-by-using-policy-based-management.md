@@ -24,11 +24,11 @@ caps.latest.revision: 76
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bc3d3e94cd6d5993b9647a394338649fe357f021
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 401b50d1999f5b5c2ffec0391b8703c873abd3ed
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>ポリシー ベースの管理を使用したサーバーの管理
@@ -74,11 +74,9 @@ ms.lasthandoff: 06/22/2017
      自動ポリシーが有効になっていない場合、ポリシー ベースの管理はシステム パフォーマンスに影響しません。  
   
 ## <a name="terms"></a>用語  
- **ポリシー ベースの管理の管理対象** 
-ポリシー ベースの管理で管理するエンティティ ([!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンス、データベース、テーブル、インデックスなど)。 サーバー インスタンス内のすべての対象で、対象となる階層が構成されます。 対象セットは、対象となる階層に一連の対象フィルターを適用した結果得られる一連の対象です (HumanResources スキーマが所有するデータベース内のすべてのテーブルなど)。  
+ **ポリシー ベースの管理の管理対象** ポリシー ベースの管理で管理するエンティティ ([!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンス、データベース、テーブル、インデックスなど)。 サーバー インスタンス内のすべての対象で、対象となる階層が構成されます。 対象セットは、対象となる階層に一連の対象フィルターを適用した結果得られる一連の対象です (HumanResources スキーマが所有するデータベース内のすべてのテーブルなど)。  
   
- **ポリシー ベースの管理ファセット**
- 特定の種類の管理対象の動作または特性をモデル化した一連の論理プロパティ。 プロパティの数と特性がファセットに組み込まれ、その追加や削除はファセットの作成者のみが実行できます。 1 種類の対象で 1 つ以上の管理ファセットを実装したり、1 種類以上の対象で 1 つの管理ファセットを実装したりすることができます。 ファセットのプロパティの中には、特定のバージョンにしか適用できないものもあります。  
+ **ポリシー ベースの管理ファセット** 特定の種類の管理対象の動作または特性をモデル化した一連の論理プロパティ。 プロパティの数と特性がファセットに組み込まれ、その追加や削除はファセットの作成者のみが実行できます。 1 種類の対象で 1 つ以上の管理ファセットを実装したり、1 種類以上の対象で 1 つの管理ファセットを実装したりすることができます。 ファセットのプロパティの中には、特定のバージョンにしか適用できないものもあります。  
   
  **ポリシー ベースの管理条件**  
  管理ファセットについて、ポリシー ベースの管理の管理対象の一連の許可状態を指定するブール式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、条件の評価時に照合順序に従おうとします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序が Windows の照合順序と一致しないときは、条件をテストして、アルゴリズムによる競合の解決方法を調べてください。  
@@ -108,7 +106,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="links-to-specific-tasks"></a>特定のタスクへのリンク 
 
- - [ポリシー ベースの管理のストレージ](https://msdn.microsoft.com/library/hh213476.aspx)|  
+ - [ポリシー ベースの管理のストレージ](policy-based-management-storage.md)|  
  - [ポリシー管理者にポリシー エラーを通知する警告の構成](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
  - [新しいポリシー ベースの管理条件の作成](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
  - [ポリシー ベースの管理条件の削除](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
@@ -121,8 +119,8 @@ ms.lasthandoff: 06/22/2017
 
   
  ## <a name="examples"></a>使用例
- - ["既定でオフ" ポリシーの作成](https://msdn.microsoft.com/library/bb500172.aspx)
-  - ["既定でオフ" ポリシーを実行するためのサーバーの構成](https://msdn.microsoft.com/library/bb522470.aspx)
+ - ["既定でオフ" ポリシーの作成](lesson-1-1-create-the-off-by-default-policy.md)
+  - ["既定でオフ" ポリシーを実行するためのサーバーの構成](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)
 ## <a name="see-also"></a>参照  
  [ポリシーベースの管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

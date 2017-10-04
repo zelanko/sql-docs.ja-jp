@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 2204d520152b1363657a407e5e0534e5051a4e94
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>クエリ ストアを使用するときの推奨事項
@@ -255,7 +255,7 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
-## <a name="set-the-optimal-query-capture-mode"></a>最適なクエリ ャプチャ モードを設定する  
+## <a name="set-the-optimal-query-capture-mode"></a>最適なクエリ キャプチャ モードを設定する  
  最も重要なデータをクエリ ストアに保存します。 次の表では、各クエリ キャプチャ モードの一般的なシナリオについて説明します。  
   
 |クエリ キャプチャ モード|Scenario|  
@@ -320,7 +320,15 @@ WHERE is_forced_plan = 1;
  実行プランは、3 つの要素で構成される名前 (`database.schema.object`) を使用してオブジェクトを参照します。   
 
 データベース名を変更すると、プランの強制適用が失敗し、その後のすべてのクエリ実行で再コンパイルが発生します。  
+
+##  <a name="Recovery"></a> ミッション クリティカルなサーバーにトレース フラグを使用して、障害からの回復を向上させる
+ 
+  高可用性とディザスター リカバリーのシナリオでクエリ ストアのパフォーマンスを向上させるには、グローバル トレース フラグ 7745 と 7752 を使用できます。
   
+  トレース フラグ 7745 では、SQL Server がシャットダウンされる前に、クエリ ストアによってディスクにデータを書き込む既定の動作が行われないようにします。
+  
+  トレース フラグ 7752 では、クエリ ストアが完全に読み込まれる前に、SQL Server がクエリを実行できるようにします。 クエリ ストアの既定の動作は、クエリ ストアが回復する前に、クエリが実行ないようにします。
+
 ## <a name="see-also"></a>参照  
  [クエリ ストアのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [クエリ ストアのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   

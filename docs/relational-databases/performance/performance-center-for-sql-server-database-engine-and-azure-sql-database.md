@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 179a23bbe2d53febcf01d02d5129ca94e18243b1
-ms.openlocfilehash: ebb2cf6bdd6d776fc8f960f7d763f62e82fb15d5
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6490c2356c0753f68e7ef5261ede3d699a08b863
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/12/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター
@@ -63,8 +63,8 @@ ms.lasthandoff: 08/12/2017
 |-|-|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[インデックス](../../relational-databases/indexes/indexes.md)**|-   [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)<br />-   [インデックスの FILL FACTOR の指定](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)<br />-   [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)<br />-   [インデックスの SORT_IN_TEMPDB オプション](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)<br />-   [フルテキスト インデックスのパフォーマンスの向上](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[パーティション テーブルとパーティション インデックス](../../relational-databases/partitions/partitioned-tables-and-indexes.md)**|-   [パーティション分割の利点](https://msdn.microsoft.com/library/ms190787.aspx#Anchor_0)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[ストアド プロシージャ](../../relational-databases/native-client/ole-db/stored-procedures.md)**|-   [ストアド プロシージャの利点](https://msdn.microsoft.com/en-us/library/ms190782.aspx)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[ユーザー定義関数](../../relational-databases/user-defined-functions/user-defined-functions.md)**|-   [ユーザー定義関数の利点](https://msdn.microsoft.com/en-us/library/ms191007.aspx)|  
+|![security-center-both](../stored-procedures/stored-procedures-database-engine.md)|  
+|![security-center-both](../user-defined-functions/user-defined-functions.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **並列処理の最適化**|-   [max worker threads サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)<br />-   [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **クエリ オプティマイザーの最適化**|-   [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[統計](../../relational-databases/statistics/statistics.md)**|-   [統計を更新する場合](https://msdn.microsoft.com/library/ms190397.aspx#Anchor_3)<br />-   [統計の更新](../../relational-databases/statistics/update-statistics.md)|  

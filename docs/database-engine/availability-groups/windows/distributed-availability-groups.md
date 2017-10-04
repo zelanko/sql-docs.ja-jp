@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], distributed
 ms.assetid: 
 caps.latest.revision: 
-author: MikeRayMSFT
+author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: d523a3270815fc263fe0ee6fdf7cbce6350529ed
+ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
+ms.openlocfilehash: ee06ae8d3a3a60d77e72ee9e55ee615a1bcf0cb9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/02/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="distributed-availability-groups"></a>分散型可用性グループ
@@ -40,7 +40,7 @@ ms.lasthandoff: 09/02/2017
 
 分散型可用性グループでは、基になる可用性グループにリスナーが存在する必要があります。 従来の可用性グループではスタンドアロン インスタンスに対して基になるサーバー名を指定しましたが (または、SQL Server フェールオーバー クラスター インスタンス (FCI) の場合は、ネットワーク名リソースに関連付けられた値)、分散型可用性グループでは、可用性グループを作成するときに ENDPOINT_URL パラメーターで分散型可用性グループに構成されているリスナーを指定します。 分散型可用性グループの基になる各可用性グループにはリスナーがありますが、分散型可用性グループにはリスナーはありません。
 
-次の図では、それぞれが専用の WSFC クラスターに構成されている 2 つの可用性グループ (AG 1 および AG 2) にまたがる分散型可用性グループの概略を示します。 分散型可用性グループには、可用性グループごとに 2 つずつ、合計で 4 つのレプリカがあります。 各可用性グループは最大数までのレプリカをサポートできるので、Standard Edition に基づく分散型可用性グループでは最大 4 個のレプリカ、Enterprise Edition に基づく分散型可用性グループでは最大 18 個のレプリカを、持つことができます。
+次の図では、それぞれが専用の WSFC クラスターに構成されている 2 つの可用性グループ (AG 1 および AG 2) にまたがる分散型可用性グループの概略を示します。 分散型可用性グループには、可用性グループごとに 2 つずつ、合計で 4 つのレプリカがあります。 可用性グループごとにレプリカの最大数までサポートできるため、分散型の可用性ではレプリカを最大合計 18 個まで所有することができます。
 
 <a name="fig1"></a>
 ![分散型可用性グループの概要][1]
@@ -59,7 +59,7 @@ AG 2 のプライマリ レプリカが挿入、更新、削除を受け付け�
 現在、分散型可用性グループは、メジャー バージョンが同じ SQL Server で作成された可用性グループでのみ機能します。 たとえば、分散型可用性グループに参加するすべての可用性グループは、現在、SQL Server 2016 で作成されている必要があります。 SQL Server 2012 または 2014 には分散型可用性グループ機能が存在しなかったため、これらのバージョンで作成された可用性グループは、分散型可用性グループに参加できません。 
 
 > [!NOTE]
-> 分散型可用性グループは Standard Edition または Enterprise Edition で構成できますが、1 つの分散型可用性グループに両方のエディションを混在させることはサポートされていません。
+> 分散型可用性グループは、Standard Edition を使って構成したり、Standard Edition と Enterprise Edition を組み合わせて構成したりすることはできません。
 
 2 つの異なる可用性グループが存在するため、分散型可用性グループに参加しているレプリカに Service Pack または累積更新プログラムをインストール プロセスは、従来の可用性グループと少し異なります。
 
@@ -267,8 +267,6 @@ and ag.is_distributed = 1
 * [[新しい可用性グループ] ダイアログ ボックスの使用 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 * [Transact-SQL での可用性グループの作成](create-an-availability-group-transact-sql.md)
-
-このコンテンツの執筆者は [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt) (マイクロソフト MVP) です。
 
 <!--Image references-->
 [1]: ./media/dag-01-high-level-view-distributed-ag.png
