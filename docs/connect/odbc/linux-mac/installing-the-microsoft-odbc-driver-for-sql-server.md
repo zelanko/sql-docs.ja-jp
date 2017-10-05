@@ -232,7 +232,7 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 - Red Hat: glibc e2fsprogs、krb5 ライブラリ、openssl unixODBC
 - SuSE: glibc libuuid1、krb5、openssl unixODBC
 
-これらの各パッケージが独自の依存関係があり、システムに存在していない可能性があります。 この問題に一般的なソリューションは、配布のパッケージ マネージャーのドキュメントを参照してください: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)、 [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)、および[SUSE](https://en.opensuse.org/Portal:Zypper)
+これらの各パッケージが独自の依存関係があり、システムに存在していない可能性があります。 この問題に一般的なソリューションは、配布のパッケージ マネージャーのドキュメントを参照してください: [Red Hat](https://wiki.centos.org/HowTos/CreateLocalRepos)、 [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)、および[SUSE](https://en.opensuse.org/Portal:Zypper)
 
 終了したすべての依存パッケージを手動でダウンロード、インストール コンピューター上に一緒に配置し、各パッケージを手動でインストールに共通ではまた、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 パッケージです。
 

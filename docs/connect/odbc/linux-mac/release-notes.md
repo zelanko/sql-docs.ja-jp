@@ -28,7 +28,7 @@ ODBC Driver 13.1 for [!INCLUDEssNoVersion] は、常に暗号化および Micros
 
 **新しいディストリビューションがサポートされている**: OS X 10.11 や macOS 10.12 が macOS 上の ODBC ドライバーの最初のリリースでサポートされています。 Ubuntu 16.10 今すぐも加え、サポートが Red Hat 6、7、および SUSE 12 です。 各プラットフォームには、プラットフォームに関連するパッケージ (RPM または DEB) のインストールと構成が容易になります。  参照してください[ドライバーをインストールする](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)インストール手順についてはします。
 
-**unixODBC Driver Manager 2.3.1 のサポートの変更**:「ODBC ドライバー不要になった unixODBC driver manager については、カスタム パッケージに依存 (RedHat 6 では除く)、代わり UnixODBC の依存関係を解決するのには、配布パッケージ マネージャーには分布のリポジトリ。
+**unixODBC Driver Manager 2.3.1 のサポートの変更**:「ODBC ドライバー不要になった unixODBC driver manager については、カスタム パッケージに依存 (Red Hat 6 では除く)、代わり UnixODBC の依存関係を解決するのには、配布パッケージ マネージャーには分布のリポジトリ。
 
 **BCP API サポート**: Linux や macOS の ODBC ドライバーが現在の使用をサポート、 [BCP API 関数 (**bcp_init**, などです)。](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
 

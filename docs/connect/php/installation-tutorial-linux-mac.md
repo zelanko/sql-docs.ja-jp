@@ -16,7 +16,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="php-linux-and-mac-drivers-installation-tutorial"></a>PHP の Linux および Mac のドライバーのインストールのチュートリアル
-以下の手順は、クリーンな環境を想定し、PHP 7.x、Microsoft ODBC ドライバー、Apache、および Microsoft PHP をインストールする方法を示して Ubuntu 15.10、16.04、RedHat 7、Debian 8、および Mac OS X 上のドライバーです。
+以下の手順は、クリーンな環境を想定し、PHP 7.x、Microsoft ODBC ドライバー、Apache、および Microsoft PHP をインストールする方法を示して Ubuntu 15.10、16.04、Red Hat 7、Debian 8、および Mac OS X 上のドライバーです。
 ## <a name="installing-the-drivers-on-ubuntu-1510-for-php-70"></a>PHP 7.0 Ubuntu 15.10 でドライバーのインストール
 Ubuntu 15.10 の使用可能な PHP 7.1 パッケージはありません。
 ### <a name="step-1-install-php"></a>手順 1. PHP をインストールします。
