@@ -106,11 +106,11 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`hierarchyidRepresentation    StringRepresentation`
-  
-`-------------------------    -----------------------`
-  
-`0x5ADE                       /1/1/3/`
+```
+hierarchyidRepresentation    StringRepresentation
+-------------------------    -----------------------
+0x5ADE                       /1/1/3/
+```
   
 ### <a name="c-clr-example"></a>C. CLR の例  
 次のコード スニペットは、ToString() メソッドを呼び出します。

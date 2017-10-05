@@ -116,23 +116,19 @@ DROP TABLE #TMP
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`After declare`
+```
+After declare
+---------------
+-1  
   
-`---------------`
+After Open
+----------
+1  
   
- `-1`  
-  
-`After Open`
-  
-`----------`
-  
- `1`  
-  
-`After Close`
-  
-`-----------`
-  
- `-1`  
+After Close
+-----------
+-1
+```  
   
 ## <a name="see-also"></a>参照
 [カーソル関数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cursor-functions-transact-sql.md)  

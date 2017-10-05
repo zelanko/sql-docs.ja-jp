@@ -128,11 +128,12 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
+```
+-----------
+0
   
- `0`  
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="d-performing-a-case-sensitive-search"></a>D. 大文字小文字を区別する検索を実行する  
 次の例は、文字列の大文字と小文字を実行`'TEST'`で`'This is a Test``'`です。
@@ -148,9 +149,10 @@ SELECT CHARINDEX ( 'TEST',
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
-  
- `0`  
+```
+-----------
+0
+```  
   
 次の例は、文字列の大文字と小文字を実行`'Test'`で`'This is a Test'`です。
   
@@ -165,9 +167,10 @@ SELECT CHARINDEX ( 'Test',
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
-  
- `13`  
+```
+-----------
+13
+```  
   
 ### <a name="e-performing-a-case-insensitive-search"></a>E. 大文字小文字を区別しない検索を実行する  
 次の例は、文字列の大文字と小文字の検索を実行`'TEST'`で`'This is a Test'`です。
@@ -184,9 +187,10 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
-  
- `13`  
+```
+-----------
+13
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -199,9 +203,10 @@ SELECT CHARINDEX('is', 'This is a string');
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`---------`
-  
- `3`  
+```
+---------
+3
+```  
   
 ### <a name="g-searching-from-a-position-other-than-the-first-position"></a>G. 最初の位置以外の位置から検索  
 次の例の最初の位置を返します、`is`で文字列`This is a string`、4 番目の位置で開始します。
@@ -212,9 +217,10 @@ SELECT CHARINDEX('is', 'This is a string', 4);
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`---------`
-  
- `6`  
+```
+---------
+ 6
+ ```  
   
 ### <a name="h-results-when-the-string-is-not-found"></a>H. 文字列が見つからない場合の結果  
 例を次に、戻り値のときに、 *string_pattern*検索文字列が見つかりません。
@@ -225,9 +231,10 @@ SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`---------`
-  
- `0`  
+```
+---------
+0
+```  
   
 ## <a name="see-also"></a>参照
 [文字列関数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)  
