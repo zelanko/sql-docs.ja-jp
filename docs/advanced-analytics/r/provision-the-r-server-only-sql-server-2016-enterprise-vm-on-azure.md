@@ -91,7 +91,7 @@ Ubuntu、Centos、および Centos CSP のイメージが提供されます。
 
 この仮想マシンには、スタンドアロン インストーラーが含まれています。 [R Server 9.1 です。](https://msdn.microsoft.com/microsoft-r/rserver-whats-new) 新しいソフトウェアの最新のライフ サイクルのライセンス モデルをサポートします。
 
- R Server も Linux CentOS バージョン 7.2、Linux RedHat バージョン 7.2、および Ubuntu バージョン 16.04 用のイメージで使用できます。
+ R Server も Linux CentOS バージョン 7.2、Linux Red Hat バージョン 7.2、および Ubuntu バージョン 16.04 用のイメージで使用できます。
 
  > [!NOTE]
  > これらの仮想マシンは、Azure Marketplace でこれまで入手可能であった **RRE for Windows Virtual Machine** の後継です。
