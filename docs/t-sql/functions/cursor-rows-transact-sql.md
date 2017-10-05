@@ -78,19 +78,21 @@ GO
   
 以下に結果セットを示します。
   
-`-----------`
-  
- `0`  
-  
-`LastName`
-  
-`---------------`
-  
-`Sanchez`
-  
-`-----------`
-  
- `-1`  
+```
+-----------
+0  
+```
+
+```
+LastName
+---------------
+Sanchez
+```
+
+```
+-----------
+-1
+```  
   
 ## <a name="see-also"></a>参照
 [カーソル関数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cursor-functions-transact-sql.md)  

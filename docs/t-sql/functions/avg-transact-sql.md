@@ -93,13 +93,13 @@ WHERE JobTitle LIKE 'Vice President%';
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`Average vacation hours       Total sick leave hours`
+```
+Average vacation hours       Total sick leave hours
+ ----------------------       ----------------------
+25                           97
   
-`----------------------       ----------------------`
-  
-`25                           97`
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="b-using-the-sum-and-avg-functions-with-a-group-by-clause"></a>B. GROUP BY 句を伴う SUM 関数と AVG 関数を使用する  
 各集計関数を `GROUP BY` 句と共に使用した場合、テーブル全体ではなく、グループごとに 1 つの値が返されます。 次の例は、販売区域ごとの集計の値を返し、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。 このサマリーでは、各区域の販売員が受け取ったボーナスの平均額と、各区域ごとの今年度の売上累計額が一覧表示されます。
@@ -141,11 +141,12 @@ FROM Production.Product;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`------------------------------`
+```
+------------------------------
+437.4042
   
-`437.4042`
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="d-using-avg-without-distinct"></a>D. DISTINCT を伴わない AVG を使用する  
 DISTINCT がない場合、`AVG` 関数は、重複する値を含め、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Product` テーブル内のすべての製品の平均表示価格を返します。
@@ -157,11 +158,12 @@ FROM Production.Product;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`------------------------------`
+```
+------------------------------
+438.6662
   
-`438.6662`
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="e-using-the-over-clause"></a>E. OVER 句を使用する  
 次の例に各区域の年間売り上げの移動平均を提供する、OVER 句と AVG 関数を使用して、`Sales.SalesPerson`テーブルに、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。 データがパーティション分割`TerritoryID`によって論理的に順序付けと`SalesYTD`です。 つまり、AVG 関数は年を基にして区域ごとに計算されます。 ことに注意して`TerritoryID`1 の場合、そこが 2005 年の 2 つの行を表す 2 つの販売員の売上その年です。 これら 2 行の平均売上が計算された後、2006 年の売上を表す 3 番目の行が計算に組み込まれます。

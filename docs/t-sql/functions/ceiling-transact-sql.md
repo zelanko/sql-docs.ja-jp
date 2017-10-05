@@ -77,9 +77,10 @@ SELECT CEILING(123.45), CEILING(-123.45), CEILING(0.0);
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`------- --------- --------`
-  
-`124.00  -123.00   0.00`
+```
+------- --------- --------
+124.00  -123.00   0.00
+```
   
 ## <a name="see-also"></a>参照
 [システム関数 & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
