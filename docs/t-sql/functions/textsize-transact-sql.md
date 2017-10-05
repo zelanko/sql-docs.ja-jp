@@ -32,7 +32,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40textsize-transact-sql"></a>& #x 40; & #x 40 です。TEXTSIZE (TRANSACT-SQL)
+# <a name="x40x40textsize-transact-sql"></a>&#x40;&#x40;です。TEXTSIZE (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   現在の値を返します、 [TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md)オプション。  
@@ -75,7 +75,7 @@ SELECT @@TEXTSIZE AS 'Text Size'
   
 ## <a name="see-also"></a>参照  
  [構成関数 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [[SET textsize] & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-textsize-transact-sql.md)  
+ [[SET textsize] &#40;です。TRANSACT-SQL と&#41;です。](../../t-sql/statements/set-textsize-transact-sql.md)  
   
   
 

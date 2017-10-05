@@ -30,7 +30,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40servicename-transact-sql"></a>& #x 40; & #x 40 です。SERVICENAME (TRANSACT-SQL)
+# <a name="x40x40servicename-transact-sql"></a>&#x40;&#x40;です。SERVICENAME (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   レジストリ キーの名前を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されています。 @@SERVICENAME 'MSSQLSERVER' を返す場合、現在のインスタンスの既定のインスタンスでは、現在のインスタンスが名前付きインスタンスの場合、この関数は、インスタンス名を返します。  
