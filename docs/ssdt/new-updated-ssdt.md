@@ -12,14 +12,14 @@ ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.workload: ssdt-sql-server-data-tools
 ms.translationtype: HT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: 8ae9a49443525524cf7f6ffceba4fb44984c7052
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 3051fd04a8e3377ff93ad560e9bb600d80527d23
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-data-tools-ssdt"></a>新規および最近の更新: SQL Server Data Tools (SSDT)
@@ -34,7 +34,7 @@ ms.lasthandoff: 09/13/2017
 
 
 
-- *更新日の範囲:* &nbsp; **2017 年 7 月 18 日**&nbsp;から &nbsp; **2017 年 9 月 11 日**
+- *更新日の範囲:* &nbsp; **2017 年 9 月 11 日**&nbsp;から &nbsp; **2017 年 9 月 27 日**
 - *対象領域:* &nbsp; **SQL Server Data Tools (SSDT)**.
 
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 09/13/2017
 以下のリンクは、最近追加された新しい記事に移動します。
 
 
-1. [SQL Server Data Tools - ライセンス条項](sql-server-data-tools-license-terms-vs2017.md)
+***今回は新しい記事はありません。***
 
 
 
@@ -69,79 +69,17 @@ ms.lasthandoff: 09/13/2017
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>最近更新された記事の簡易一覧
+### <a name="compact-list-of-articles-updated-recently"></a>最近更新された記事の簡易一覧
 
 この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
 
-1. [SQL Server Data Tools (SSDT) の変更ログ](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-changelog-for-sql-server-data-tools-ssdtchangelog-for-sql-server-data-tools-ssdtmd"></a>1.&nbsp; [SQL Server Data Tools (SSDT) の変更ログ](changelog-for-sql-server-data-tools-ssdt.md)
-
-*更新日: 2017 年 8 月 23 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 23.  ms.author= "sstein".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 536fe0fe41b023a4186f494a509fa14fcbafccf4 e5bc7b76c1755f5a1af77f6cd63d8e8691dafe7b  (PR=2927  ,  Filename=changelog-for-sql-server-data-tools-ssdt.md  ,  Dirpath=docs\ssdt\  ,  MergeCommitSha40=71a2cbf181c94c4c1aff877614aadf890b2496e0) -->
-
-
-
-**SSDT for Visual Studio 2017 (15.3.0 プレビュー)**
-
-ビルド番号: 14.0.16121.0
-
-**新機能**
-
-
-このプレビューは、SSDT for Visual Studio 2017 の最初のバージョンです。 このリリースでは、Visual Studio 2017 (15.3 以降) での SQL Server データベース、Analysis Services、Reporting Services、および Integration Services のプロジェクトに対してスタンドアロン Web インストール エクスペリエンスを導入します。
-
-
-**既知の問題**
-
-- インストーラーはローカライズされていません。
-- SSIS はローカライズされていません。
-- *ExecuteOutofProcess* が *True* に設定されると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
-- すべての変更の一覧については、[changelog--changelog-for-sql-server-data-tools-ssdt.md) をご覧ください。
-- [SSDT Connect フィードバック](https://connect.microsoft.com/SQLServer/Feedback) サイトで問題を報告します。
-- サード パーティの拡張機能を含む SSIS パッケージは、その他のサーバー バージョンを対象にするように切り替えることはできません。
-
-
-**SSDT 17.2 for Visual Studio 2015**
-
-ビルド番号: 14.0.61707.300
-
-**新機能**
-
-
-
-**AS プロジェクト:**
-- 1400 互換性レベル表形式モデルでの高度なセキュリティの [*ロール*] ダイアログでオブジェクト レベルのセキュリティを構成できるようになりました。
-- VS2017 の SSDT AS プロジェクトの AS Azure モデルにメール アドレスがないユーザーに対する新しい AAD ロール メンバー選択。
-- ADAL 資格情報のキャッシュ動作をカスタマイズするための SSDT AS テーブル プロジェクトでの新しい AS Azure の "Always Prompt" プロジェクト プロパティ。
-
-
-**バグの修正**
-
-
-**全般**
-- SQL Server 2017 の参照のブランド化が更新されました。
-
-**AS プロジェクト**
-- DAX メジャーの変更とその他のモデルの編集をコミットするときのエクスペリエンスを向上させるため、大幅なパフォーマンスの修正が行われました。
-- 1400 互換性レベル表形式モデルを使用する Analysis Services プロジェクトでの Power Query 統合で複数の問題を修正しました。
-- VS2017 でデザイン集計デザイナーのみが読み込みに失敗する場合がある、多次元プロジェクトの問題を修正しました。
-
+***この期間にこの分野に関して更新された記事はありません。***
 
 
 
@@ -159,24 +97,20 @@ ms.lasthandoff: 09/13/2017
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のある対象領域
 
-- [新規 + 更新 (3 + 12): **SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新規 + 更新 (5 + 0): **SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
-- [新規 + 更新 (5 + 1): **SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
-- [新規 + 更新 (19 + 82): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
-- [新規 + 更新 (1 + 8): **SQL 用の Linux** に関するドキュメント](../linux/new-updated-linux.md)
-- [新規 + 更新 (12 + 1): **SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
-- [新規 + 更新 (0 + 1): **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
-- [新規 + 更新 (7 + 1): **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
-- [新規 + 更新 (1 + 1): **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
-- [新規 + 更新 (0 + 2): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
-- [新規 + 更新 (1 + 4): **SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
-- [新規 + 更新 (4 + 1): **Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
-- [新規 + 更新 (0 + 1): **SQL 用のツール**に関するドキュメント](../tools/new-updated-tools.md)
+- [新規 + 更新 (0 + 1): **SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新規 + 更新 (0 + 1): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
+- [新規 + 更新 (4 + 1): **SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
+- [新規 + 更新 (17 + 0): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
+- [新規 + 更新 (3 + 0): **Linux 上の SQL** に関するドキュメント](../linux/new-updated-linux.md)
+- [新規 + 更新 (1 + 1): **SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
+- [新規 + 更新 (2 + 0): **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
+- [新規 + 更新 (0 + 1): **SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
+- [新規 + 更新 (0 + 1): **Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のない対象領域
 
 - [新規 + 更新 (0 + 0): **SQL の ActiveX データ オブジェクト (ADO)** に関するドキュメント](../ado/new-updated-ado.md)
-- [新規 + 更新 (0 + 0): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
+- [新規 + 更新 (0 + 0): **SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
 - [新規 + 更新 (0 + 0): **SQL の Data Quality Services** に関するドキュメント](../data-quality-services/new-updated-data-quality-services.md)
 - [新規 + 更新 (0 + 0): **SQL のデータ マイニング拡張機能 (DMX)** に関するドキュメント](../dmx/new-updated-dmx.md)
 - [新規 + 更新 (0 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
@@ -184,6 +118,10 @@ ms.lasthandoff: 09/13/2017
 - [新規 + 更新 (0 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
 - [新規 + 更新 (0 + 0): **SQL の PowerShell** に関するドキュメント](../powershell/new-updated-powershell.md)
 - [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../sample/new-updated-sample.md)
+- [新規 + 更新 (0 + 0): **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
+- [新規 + 更新 (0 + 0): **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
+- [新規 + 更新 (0 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
+- [新規 + 更新 (0 + 0): **Tools for SQL**  に関するドキュメント](../tools/new-updated-tools.md)
 - [新規 + 更新 (0 + 0): **SQL の XQuery** に関するドキュメント](../xquery/new-updated-xquery.md)
 
 
