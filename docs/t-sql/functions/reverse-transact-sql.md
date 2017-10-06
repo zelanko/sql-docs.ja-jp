@@ -69,19 +69,16 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `FirstName      Reverse`  
-  
- `-------------- --------------`  
-  
- `Ken            neK`  
-  
- `Rob            boR`  
-  
- `Roberto        otreboR`  
-  
- `Terri          irreT`  
-  
- `(4 row(s) affected)`  
+ ```
+FirstName      Reverse
+-------------- --------------
+Ken            neK
+Rob            boR
+Roberto        otreboR
+Terri          irreT
+
+(4 row(s) affected)
+```  
   
  次の例では、変数内の文字列を逆に並べ替えます。  
   

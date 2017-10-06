@@ -116,8 +116,10 @@ JOIN sys.dm_exec_connections AS conn
   
  場合は、セッション ID または UOW のロールバックが完了した場合、KILL*セッション ID*|*UOW* WITH STATUSONLY ステートメントを実行すると、セッション ID または UOW がロールバックされていない、KILL場合または*セッション ID*|*UOW* WITH STATUSONLY は、次のエラーを返します。  
   
- `"Msg 6120, Level 16, State 1, Line 1"`  
- `"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."`  
+ ```
+"Msg 6120, Level 16, State 1, Line 1"  
+"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."
+```  
   
  同じ状態レポートは、同じ KILL を繰り返すことで取得できます*セッション ID*|*UOW* ; WITH STATUSONLY オプションを使用することがなくステートメントただし、お勧めしませんこれを行います。 強制終了を繰り返し*セッション ID*ロールバックが完了すると、新しい KILL ステートメントの実行前にセッション ID は、新しいタスクに再割り当てされました、ステートメントが新しいプロセスを終了する可能性があります。 WITH STATUSONLY を指定すると、このような状況が発生しなくなります。  
   

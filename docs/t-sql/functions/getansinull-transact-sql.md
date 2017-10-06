@@ -75,11 +75,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `------`  
-  
- `1`  
-  
- `(1 row(s) affected)`  
+ ```
+ ------  
+1  
+
+(1 row(s) affected)
+ ```  
   
 ## <a name="see-also"></a>参照  
  [システム関数 & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  

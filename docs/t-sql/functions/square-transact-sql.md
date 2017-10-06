@@ -87,13 +87,12 @@ FROM Containers;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Name           VolSquared`  
-  
- `-------------  ----------`  
-  
- `Cylinder       15680.05`  
-  
- `Cube             575.04`  
+ ```
+Name           VolSquared
+-------------  ----------
+Cylinder       15680.05
+Cube             575.04
+```  
   
 ## <a name="see-also"></a>参照  
  [数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)  

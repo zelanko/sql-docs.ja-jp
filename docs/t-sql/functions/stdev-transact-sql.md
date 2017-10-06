@@ -102,11 +102,11 @@ FROM dbo.FactSalesQuota;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Distinct_Values   All_Values`  
-  
- `----------------  ----------------`  
-  
- `398974.27         398450.57`  
+ ```
+Distinct_Values   All_Values
+----------------  ----------------
+398974.27         398450.57
+ ```  
   
 ### <a name="c-using-stdev-with-over"></a>C. OVER で STDEV の使用  
  次の例では、カレンダー年度の四半期ごとの販売ノルマの値の標準偏差を返します。 OVER 句内の ORDER BY、STDEV を orders、ORDER BY、SELECT ステートメントの結果セットを並べ替えますことを確認します。  
@@ -123,17 +123,14 @@ ORDER BY CalendarQuarter;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Year  Quarter  SalesQuota              StdDeviation`  
-  
- `----  -------  ----------------------  -------------------`  
-  
- `2002  1         91000.0000             null`  
-  
- `2002  2        140000.0000             34648.23`  
-  
- `2002  3         70000.0000             35921.21`  
-  
- `2002  4        154000.0000             39752.36`  
+ ```
+Year  Quarter  SalesQuota              StdDeviation
+----  -------  ----------------------  -------------------
+2002  1         91000.0000             null
+2002  2        140000.0000             34648.23
+2002  3         70000.0000             35921.21
+2002  4        154000.0000             39752.36
+ ```  
   
 ## <a name="see-also"></a>参照  
  [集計関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)   

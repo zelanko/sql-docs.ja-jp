@@ -158,9 +158,10 @@ WHERE SalesOrderNumber IN (N'SO43659', N'SO43660', N'SO43664');
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `------`  
-  
- `5.1865`  
+ ```
+ ------  
+ 5.1865
+ ```  
   
 ### <a name="d-using-min-with-over"></a>D. OVER での最小値の使用  
  次の例では、MIN OVER() 分析関数を使用して、販売注文ごとに、最も安価な製品の価格を返します。 結果セットがパーティション分割、`SalesOrderID`列です。  
@@ -177,15 +178,13 @@ ORDER BY SalesOrderNumber;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LeastExpensiveProduct SalesOrderID`  
-  
- `--------------------- ----------`  
-  
- `5.1865                SO43659`  
-  
- `419.4589              SO43660`  
-  
- `28.8404               SO43664`  
+ ```
+LeastExpensiveProduct SalesOrderID  
+--------------------- ----------  
+5.1865                SO43659  
+419.4589              SO43660  
+28.8404               SO43664
+```  
   
 ## <a name="see-also"></a>参照  
  [集計関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)   

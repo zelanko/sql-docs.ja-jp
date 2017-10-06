@@ -101,9 +101,10 @@ SELECT LOG10(145.175642);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-------------------`  
-  
- `2.16`  
+ ```
+-------------------  
+2.16
+```  
   
 ## <a name="see-also"></a>参照  
  [数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)   

@@ -77,11 +77,12 @@ GO
   
  次に、ユーザーが sysadmin 固定サーバー ロールのメンバーである場合の結果セットを示します。  
   
- `------------------------------`  
+ ```
+------------------------------  
+dbo  
   
- `dbo`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ### <a name="c-using-username-in-the-where-clause"></a>C. WHERE 句で USER_NAME を使用する  
  次の例では、`sysusers` の行を検索します。検索される名前は、ユーザー識別番号 `USER_NAME` に対してシステム関数 `1` を適用した結果と同じになります。  
@@ -93,13 +94,13 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `name`  
+ ```
+name  
+------------------------------  
+dbo  
   
- `------------------------------`  
-  
- `dbo`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ### <a name="d-calling-username-during-impersonation-with-execute-as"></a>D. EXECUTE AS での権限借用中に USER_NAME を呼び出す  
  例を次にどのように`USER_NAME`権限借用中に動作します。  
@@ -119,11 +120,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DBO`  
-  
- `Zelig`  
-  
- `DBO`  
+ ```
+DBO  
+Zelig  
+DBO
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

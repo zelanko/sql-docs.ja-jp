@@ -242,17 +242,14 @@ GROUP BY LastName, FirstName;
   
  部分的な結果セットを次に示します。  
   
- `RowNumber  FirstName  LastName            SalesQuota`  
-  
- `---------  ---------  ------------------  -------------`  
-  
- `1          Jillian    Carson              12,198,000.00`  
-  
- `2          Linda      Mitchell            11,786,000.00`  
-  
- `3          Michael    Blythe              11,162,000.00`  
-  
- `4          Jae        Pak                 10,514,000.00`  
+ ```
+RowNumber  FirstName  LastName            SalesQuota
+---------  ---------  ------------------  -------------
+1          Jillian    Carson              12,198,000.00
+2          Linda      Mitchell            11,786,000.00
+3          Michael    Blythe              11,162,000.00
+4          Jae        Pak                 10,514,000.00
+ ```  
   
 ### <a name="f-using-rownumber-with-partition"></a>F. ROW_NUMBER() を PARTITION と共に使用する  
  次の例では、`ROW_NUMBER` 関数を `PARTITION BY` 引数と共に使用します。 これにより、`ROW_NUMBER`に各パーティション内の行を番号関数。  
@@ -273,23 +270,17 @@ GROUP BY LastName, FirstName, SalesTerritoryKey;
   
  部分的な結果セットを次に示します。  
   
- `RowNumber  LastName            Territory  SalesQuota`  
-  
- `---------  ------------------  ---------  -------------`  
-  
- `1          Campbell            1           4,025,000.00`  
-  
- `2          Ansman-Wolfe        1           3,551,000.00`  
-  
- `3          Mensa-Annan         1           2,275,000.00`  
-  
- `1          Blythe              2          11,162,000.00`  
-  
- `1          Carson              3          12,198,000.00`  
-  
- `1          Mitchell            4          11,786,000.00`  
-  
- `2          Ito                 4           7,804,000.00`  
+ ```
+RowNumber  LastName            Territory  SalesQuota
+---------  ------------------  ---------  -------------
+1          Campbell            1           4,025,000.00
+2          Ansman-Wolfe        1           3,551,000.00
+3          Mensa-Annan         1           2,275,000.00
+1          Blythe              2          11,162,000.00
+1          Carson              3          12,198,000.00
+1          Mitchell            4          11,786,000.00
+2          Ito                 4           7,804,000.00
+ ```  
   
 ## <a name="see-also"></a>参照  
  [ランクと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rank-transact-sql.md)   

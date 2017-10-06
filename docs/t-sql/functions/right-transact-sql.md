@@ -100,17 +100,14 @@ ORDER BY EmployeeKey;
   
  部分的な結果セットを次に示します。  
   
- `Name`  
-  
- `-----`  
-  
- `lbert`  
-  
- `Brown`  
-  
- `rello`  
-  
- `lters`  
+ ```
+Name
+-----
+lbert
+Brown
+rello
+lters
+ ```  
   
 ### <a name="c-using-right-with-a-character-string"></a>C. 文字の文字列での右の使用  
  次の例で`RIGHT`を文字の文字列の 2 つの右端の文字を返す`abcdefg`です。  
@@ -123,9 +120,10 @@ SELECT TOP(1) RIGHT('abcdefg',2) FROM dbo.DimProduct;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-------`  
-  
- `fg`  
+```
+-------  
+fg
+```  
   
 ## <a name="see-also"></a>参照  
  [CAST および CONVERT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md)   

@@ -102,11 +102,11 @@ FROM dbo.FactSalesQuota;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Distinct_Values   All_Values`  
-  
- `----------------  ----------------`  
-  
- `159180469909.18   158762853821.10`  
+ ```
+Distinct_Values   All_Values
+----------------  ----------------
+159180469909.18   158762853821.10
+ ```  
   
 ### <a name="c-using-var-with-over"></a>C. OVER で VAR を使用します。  
  次の例では、カレンダー年度の四半期ごとの販売ノルマの値の統計的変位を返します。 統計的変位を注文内で、OVER 句の ORDER BY、ORDER BY、SELECT ステートメントの結果セットを並べ替えますことを確認します。  
@@ -123,17 +123,14 @@ ORDER BY CalendarQuarter;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Year  Quarter  SalesQuota              Variance`  
-  
- `----  -------  ----------------------  -------------------`  
-  
- `2002  1         91000.0000             null`  
-  
- `2002  2        140000.0000             1200500000.00`  
-  
- `2002  3         70000.0000             1290333333.33`  
-  
- `2002  4        154000.0000             1580250000.00`  
+ ```
+Year  Quarter  SalesQuota              Variance
+----  -------  ----------------------  -------------------
+2002  1         91000.0000             null
+2002  2        140000.0000             1200500000.00
+2002  3         70000.0000             1290333333.33
+2002  4        154000.0000             1580250000.00
+ ```  
   
 ## <a name="see-also"></a>参照  
  [集計関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)   
