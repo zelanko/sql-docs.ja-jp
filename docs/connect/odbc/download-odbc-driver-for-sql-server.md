@@ -33,8 +33,8 @@ ms.lasthandoff: 09/09/2017
 ### <a name="linux-and-macos"></a>Linux および macOS
 
 - [Debian 8 .deb パッケージ](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
-- [RedHat 6 .rpm パッケージ](https://packages.microsoft.com/rhel/6.8/prod/)
-- [RedHat 7 .rpm パッケージ](https://packages.microsoft.com/rhel/7/prod/)
+- [Red Hat 6 .rpm パッケージ](https://packages.microsoft.com/rhel/6.8/prod/)
+- [Red Hat 7 .rpm パッケージ](https://packages.microsoft.com/rhel/7/prod/)
 - [SuSE 12 .rpm パッケージ](https://packages.microsoft.com/sles/12/prod/)
 - [Ubuntu 15.10 .deb パッケージ](https://packages.microsoft.com/ubuntu/15.10/prod/pool/main/m/msodbcsql/)
 - [Ubuntu 16.04 .deb パッケージ](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/)
