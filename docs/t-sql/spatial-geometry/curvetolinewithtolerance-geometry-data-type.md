@@ -78,45 +78,46 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. CircularString インスタンスに対して異なる tolerance 値を使用する  
  次の例は、許容範囲の設定方法に影響を示しています、`LineString`から返されるインスタンス、`CircularString`インスタンス。  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.01, 0).STNumPoints();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)'); 
+ SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.01, 0).STNumPoints();
+ ```  
   
 ### <a name="b-using-the-method-on-a-multilinestring-instance-containing-one-linestring"></a>B. 1 つの LineString を含む MultiLineString インスタンスに対してこのメソッドを使用する  
  次の例では、`MultiLineString` インスタンスを 1 つだけ含む `LineString` インスタンスから返される結果を示します。  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('MULTILINESTRING((1 3, 4 8, 6 9))');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('MULTILINESTRING((1 3, 4 8, 6 9))'); 
+ SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
+ ```  
   
 ### <a name="c-using-the-method-on-a-multilinestring-instance-containing-multiple-linestrings"></a>C. 複数の LineString を含む MultiLineString インスタンスに対してこのメソッドを使用する  
  次の例では、複数の `MultiLineString` インスタンスを含む `LineString` インスタンスから返される結果を示します。  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('MULTILINESTRING((1 3, 4 8, 6 9),(4 4, 9 18))');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('MULTILINESTRING((1 3, 4 8, 6 9),(4 4, 9 18))'); 
+ SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
+ ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. 呼び出し元の CurvePolygon インスタンスに対して relative を true に設定する  
  次の例では、`CurvePolygon`を呼び出すインスタンス`CurveToLineWithTolerance()`で*相対*true に設定します。  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))';`  
-  
- `SELECT @g.CurveToLineWithTolerance(.5,1).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
+ SELECT @g.CurveToLineWithTolerance(.5,1).ToString();
+ ```  
   
 ### <a name="e-using-the-method-on-a-geometrycollection-instance"></a>E. GeometryCollection インスタンスに対してメソッドを使用する  
  次の例では`CurveToLineWithTolerance()`上、`GeometryCollection`を含む、2 次元`CurvePolygon`インスタンスと 1 次元`CircularString`インスタンス。 `CurveToLineWithTolerance()`線のセグメントの種類を両方の円弧型を変換しで返されます、`GeometryCollection`型です。  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('GEOMETRYCOLLECTION(CURVEPOLYGON( COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), (4 2, 0 2))), CIRCULARSTRING(4 4, 8 6, 9 5))');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.1, 0).ToString();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('GEOMETRYCOLLECTION(CURVEPOLYGON( COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), (4 2, 0 2))), CIRCULARSTRING(4 4, 8 6, 9 5))'); 
+ SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.1, 0).ToString();
+ ```  
   
 ## <a name="see-also"></a>参照  
  [CurveToLineWithTolerance (&) #40";"geography データ型"&"#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   

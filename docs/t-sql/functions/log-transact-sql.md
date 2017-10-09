@@ -117,9 +117,11 @@ SELECT LOG(10);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `----------------`  
+ ```
+ ----------------`  
   
- `2.30`  
+ 2.30
+ ```  
   
 ### <a name="d-calculating-the-logarithm-of-the-exponent-of-a-number"></a>D. 数値の指数の自然対数を計算  
  次の例では、数値の指数の `LOG` を計算します。  

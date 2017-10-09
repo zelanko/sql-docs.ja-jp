@@ -65,9 +65,10 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-using-stcurven-on-a-circularstring-instance"></a>A. CircularString インスタンスに対して STCurveN() を使用する  
  次の例では、2 番目の曲線を返して、`CircularString`インスタンス。  
   
- `DECLARE @g geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';`  
-  
- `SELECT @g.STCurveN(2).ToString();`  
+```
+ DECLARE @g geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
+ SELECT @g.STCurveN(2).ToString();
+ ```  
   
  このトピックの前の例では、次の値が返されます。  
   
@@ -76,9 +77,10 @@ ms.lasthandoff: 09/01/2017
 ### <a name="b-using-stcurven-on-a-compoundcurve-instance-with-one-circularstring-instance"></a>B. 1 つの CircularString インスタンスを持つ CompoundCurve インスタンスに対して STCurveN() を使用する  
  次の例では、2 番目の曲線を返して、`CompoundCurve`インスタンス。  
   
- `DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0))';`  
-  
- `SELECT @g.STCurveN(2).ToString();`  
+```
+ DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0))';  
+ SELECT @g.STCurveN(2).ToString();
+ ```  
   
  このトピックの前の例では、次の値が返されます。  
   
@@ -87,9 +89,10 @@ ms.lasthandoff: 09/01/2017
 ### <a name="c-using-stcurven-on-a-compoundcurve-instance-with-three-circularstring-instances"></a>C. 3 つの CircularString インスタンスを持つ CompoundCurve インスタンスに対して STCurveN() を使用する  
  次の例では、3 つの異なる `CompoundCurve` インスタンスを前の例と同じ曲線シーケンスに結合した `CircularString` インスタンスを使用します。  
   
- `DECLARE @g geometry = 'COMPOUNDCURVE (CIRCULARSTRING (0 0, 1 2.1082, 3 6.3246), CIRCULARSTRING(3 6.3246, 0 7, -3 6.3246), CIRCULARSTRING(-3 6.3246, -1 2.1082, 0 0))';`  
-  
- `SELECT @g.STCurveN(2).ToString();`  
+```
+ DECLARE @g geometry = 'COMPOUNDCURVE (CIRCULARSTRING (0 0, 1 2.1082, 3 6.3246), CIRCULARSTRING(3 6.3246, 0 7, -3 6.3246), CIRCULARSTRING(-3 6.3246, -1 2.1082, 0 0))';  
+ SELECT @g.STCurveN(2).ToString();
+ ```  
   
  このトピックの前の例では、次の値が返されます。  
   
@@ -100,21 +103,16 @@ ms.lasthandoff: 09/01/2017
 ### <a name="d-validating-the-parameter-before-calling-stcurven"></a>D. STCurveN() を呼び出す前に、パラメーターを検証する  
  次の例は、確認する方法を示しています。`@n`を呼び出す前に有効では、`STCurveN()`メソッド。  
   
- `DECLARE @g geometry;`  
-  
- `DECLARE @n int;`  
-  
- `SET @n = 3;`  
-  
- `SET @g = geometry::Parse('CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');`  
-  
- `IF @n >= 1 AND @n <= @g.STNumCurves()`  
-  
- `BEGIN`  
-  
- `SELECT @g.STCurveN(@n).ToString();`  
-  
- `END`  
+```
+ DECLARE @g geometry;  
+ DECLARE @n int;  
+ SET @n = 3;  
+ SET @g = geometry::Parse('CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');  
+ IF @n >= 1 AND @n <= @g.STNumCurves()  
+ BEGIN  
+ SELECT @g.STCurveN(@n).ToString();  
+ END
+ ```  
   
 ## <a name="see-also"></a>参照  
  [STNumCurves (&) #40";"geometry データ型"&"#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   

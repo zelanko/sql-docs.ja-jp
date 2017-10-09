@@ -102,11 +102,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `------------------------------------------------`  
-  
- `The order is due on 04/23/2007`  
-  
- `(1 row(s) affected)`  
+ ```
+ ------------------------------------------------  
+ The order is due on 04/23/2007  
+ (1 row(s) affected)
+ ```  
   
 ### <a name="c-using-multiple-string-concatenation"></a>C. 複数の文字列の連結を使用する  
  次の例では、複数の文字列を連結して 1 つの長い文字列を形成し、[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] の副社長の姓と、名のイニシャルを表示します。 姓の後ろにコンマを追加し、名のイニシャルの後ろにピリオドを追加します。  
@@ -125,17 +125,15 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Name               Title`  
-  
- `-------------      ---------------`  
-  
- `Duffy, T.          Vice President of Engineering`  
-  
- `Hamilton, J.       Vice President of Production`  
-  
- `Welcker, B.        Vice President of Sales`  
-  
- `(3 row(s) affected)`  
+ ```
+ Name               Title  
+ -------------      ---------------`  
+ Duffy, T.          Vice President of Engineering  
+ Hamilton, J.       Vice President of Production  
+ Welcker, B.        Vice President of Sales  
+
+ (3 row(s) affected)
+ ```  
  
 ### <a name="d-using-large-strings-in-concatenation"></a>D. 大きな文字列連結を使用してください。
 次の例では、1 つの長い文字列を形成する複数の文字列を連結し、最終的な文字列の長さの計算を試みます。 結果セットの最終的な長さ 16000 から式の評価の開始が残っているため、 @x + @z + @y = > (@x + @z) +@yです。 この場合の結果 (@x + @z) が 8,000 バイトで切り捨てられ、 @y 16000 最終的な文字列の長さは、結果セットに追加されます。 @y文字列大きな値の型は、切り捨ては行われません。
@@ -151,13 +149,13 @@ GO
 ```
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `y      `  
+ ```
+ y        
+ -------  
+ 16000  
   
- `-------`  
-  
- `16000`  
-  
-  `(1 row(s) affected)`  
+ (1 row(s) affected)
+ ```  
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-string-concatenation"></a>E. 文字列連結を使用する  

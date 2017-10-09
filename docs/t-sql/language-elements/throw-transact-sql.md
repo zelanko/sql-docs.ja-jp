@@ -83,9 +83,11 @@ THROW 51000, 'The record does not exist.', 1;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Msg 51000, Level 16, State 1, Line 1`  
+ ```
+ Msg 51000, Level 16, State 1, Line 1  
   
- `The record does not exist.`  
+ The record does not exist.
+ ```  
   
 ### <a name="b-using-throw-to-raise-an-exception-again"></a>B. THROW を使用して例外を再度発生させる  
  次の例では、`THROW`最後スローされた例外を再度を発生させるステートメントです。  
@@ -111,13 +113,12 @@ END CATCH;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `PRINT 'In catch block.';`  
-  
- `Msg 2627, Level 14, State 1, Line 1`  
-  
- `Violation of PRIMARY KEY constraint 'PK__TestReth__3214EC272E3BD7D3'. Cannot insert duplicate key in object 'dbo.TestRethrow'.`  
-  
- `The statement has been terminated.`  
+ ```
+ PRINT 'In catch block.';  
+ Msg 2627, Level 14, State 1, Line 1  
+ Violation of PRIMARY KEY constraint 'PK__TestReth__3214EC272E3BD7D3'. Cannot insert duplicate key in object 'dbo.TestRethrow'.  
+ The statement has been terminated.
+ ```  
   
 ### <a name="c-using-formatmessage-with-throw"></a>C. FORMATMESSAGE を THROW と共に使用する  
  次の例を使用する方法を示しています、`FORMATMESSAGE`で機能`THROW`カスタマイズされたエラー メッセージをスローします。 この例では、まず、`sp_addmessage` を使用して、ユーザー定義のエラー メッセージを作成します。 THROW ステートメントは置換パラメーターで許可されないため、*メッセージ*エラー メッセージ 60000 で想定されている 3 つのパラメーター値を渡す方法では、RAISERROR FORMATMESSAGE 関数のパラメーターを使用します。  
@@ -138,9 +139,10 @@ THROW 60000, @msg, 1;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Msg 60000, Level 16, State 1, Line 2`  
-  
- `This is a test message with one numeric parameter (500), one string parameter (First string), and another string parameter (second string).`  
+ ```
+ Msg 60000, Level 16, State 1, Line 2  
+ This is a test message with one numeric parameter (500), one string parameter (First string), and another string parameter (second string).
+ ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -153,9 +155,11 @@ THROW 51000, 'The record does not exist.', 1;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Msg 51000, Level 16, State 1, Line 1`  
+ ```
+ Msg 51000, Level 16, State 1, Line 1  
   
- `The record does not exist.`  
+ The record does not exist.
+ ```  
   
 ## <a name="see-also"></a>参照  
  [FORMATMESSAGE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/formatmessage-transact-sql.md)   

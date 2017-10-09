@@ -77,23 +77,26 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-calling-stbuffer-with-parametervalue--0-on-one-dimensional-geometry-instance"></a>A. 1 次元の geometry インスタンスに対して、パラメーターに 0 を下回る (< 0) 値を指定して、STBuffer() を呼び出す  
  次の例は、空白を返します`GeometryCollection`インスタンス。  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer(-1).ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer(-1).ToString();
+ ```  
   
 ### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>B. Polygon インスタンスに対して、パラメーターに 0 を下回る (< 0) 値を指定して、STBuffer() を呼び出す  
  次の例を返します、`Polygon`バッファーが負の値を持つインスタンス。  
   
- `DECLARE @g geometry = 'POLYGON((1 1, 1 5, 5 5, 5 1, 1 1))';`  
-  
- `SELECT @g.STBuffer(-1).ToString();`  
+```
+ DECLARE @g geometry = 'POLYGON((1 1, 1 5, 5 5, 5 1, 1 1))'; 
+ SELECT @g.STBuffer(-1).ToString();
+ ```  
   
 ### <a name="c-calling-stbuffer-with-parametervalue--0-on-a-curvepolygon-instance"></a>C. CurvePolygon インスタンスに対して、パラメーターに 0 を下回る (< 0) 値を指定して、STBuffer() を呼び出す  
  次の例を返します、`Polygon`からバッファーが負の値を持つインスタンス、`CurvePolygon`インスタンス。  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))';`  
-  
- `SELECT @g.STBuffer(-1).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
+ SELECT @g.STBuffer(-1).ToString();
+ ```  
   
 > [!NOTE]  
 >  A`Polygon`の代わりにインスタンスが返されます、`CurvePolygon`インスタンス。  返される、`CurvePolygon`インスタンスは、「 [BufferWithCurves (& a) #40; geometry データ型 &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
@@ -101,47 +104,52 @@ ms.lasthandoff: 09/01/2017
 ### <a name="d-calling-stbuffer-with-a-negative-parameter-value-that-returns-an-empty-instance"></a>D. 負のパラメーター値を指定して STBuffer() を呼び出し、空のインスタンスを取得する  
  次の例は、何が発生したときに、*距離*パラメーターが-2 の前の例です。  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))';`  
-  
- `SELECT @g.STBuffer(-2).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
+ SELECT @g.STBuffer(-2).ToString();
+ ```  
   
  これは、**選択**ステートメントから返される、`GEOMETRYCOLLECTION EMPTY.`  
   
 ### <a name="e-calling-stbuffer-with-parametervalue--0"></a>E. パラメーターに 0 を指定して STBuffer() を呼び出す  
  次の例は、呼び出し元のコピーを返します`geometry`インスタンス。  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer(0).ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer(0).ToString();
+ ```  
   
 ### <a name="f-calling-stbuffer-with-a-non-zero-parameter-value-that-is-extremely-small"></a>F. パラメーターに 0 以外の非常に小さい値を指定して、STBuffer() を呼び出す  
  次の例では、呼び出し元のコピーも返されます`geometry`インスタンス。  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';`  
-  
- `DECLARE @distance float = 1e-20;`  
-  
- `SELECT @g.STBuffer(@distance).ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';  
+ DECLARE @distance float = 1e-20;  
+ SELECT @g.STBuffer(@distance).ToString();
+ ```  
   
 ### <a name="g-calling-stbuffer-with-parametervalue--0"></a>G. パラメーターに 0 を上回る (> 0) 値を指定して STBuffer() を呼び出す  
  次の例を返します、`Polygon`インスタンス。  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer(2).ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer(2).ToString();
+ ```  
   
 ### <a name="h-calling-stbuffer-with-a-string-parameter-value"></a>H. 文字列のパラメーター値を指定して STBuffer() を呼び出す  
  次の例は、同じを返します`Polygon`前述のインスタンスが、文字列パラメーターがメソッドに渡されます。  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer('2').ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer('2').ToString();
+ ```  
   
  次の例では、エラーがスローされます。  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer('a').ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer('a').ToString();
+ ```  
   
 > [!NOTE]  
 >  前の 2 つの例では、リテラルの文字列が渡さ、`STBuffer()`です。  最初の方の例は、文字列リテラルを数値に変換できるので機能します。 ただし、2 番目の例では、スロー、`ArgumentException`です。  
@@ -149,13 +157,12 @@ ms.lasthandoff: 09/01/2017
 ### <a name="i-calling-stbuffer-on-a-multipoint-instance"></a>I. MultiPoint インスタンスに対して STBuffer() を呼び出す  
  次の例では、2 つを返します`MultiPolygon`インスタンスと 1 つ`Polygon`インスタンス。  
   
- `DECLARE @g geometry = 'MULTIPOINT((1 1),(1 4))';`  
-  
- `SELECT @g.STBuffer(1).ToString();`  
-  
- `SELECT @g.STBuffer(1.5).ToString();`  
-  
- `SELECT @g.STBuffer(1.6).ToString();`  
+```
+ DECLARE @g geometry = 'MULTIPOINT((1 1),(1 4))'; 
+ SELECT @g.STBuffer(1).ToString(); 
+ SELECT @g.STBuffer(1.5).ToString(); 
+ SELECT @g.STBuffer(1.6).ToString();
+ ```  
   
  最初の 2 つ**選択**ステートメントを返します、`MultiPolygon`インスタンスため、パラメーター*距離*と同じかそれよりも少ない 1/2、2 つの間の距離が指す (1 1) と (1 4)。 3 番目**選択**ステートメントから返される、`Polygon`インスタンスは、2 つのバッファー内のインスタンス (1 1) を参照するためと (1 4) が重複します。  
   

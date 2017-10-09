@@ -57,20 +57,20 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-using-stnumcurves-on-a-circularstring-instance"></a>A. CircularString インスタンスに対して STNumCurves() を使用する  
  次の例では、`CircularString` インスタンスに含まれる曲線の数を取得する方法を示します。  
   
- `DECLARE @g geography;`  
-  
- `SET @g = geography::Parse('CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)');`  
-  
- `SELECT @g.STNumCurves();`  
+```
+ DECLARE @g geography; 
+ SET @g = geography::Parse('CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)');  
+ SELECT @g.STNumCurves();
+ ```  
   
 ### <a name="b-using-stnumcurves-on-a-compoundcurve-instance"></a>B. CompoundCurve インスタンスに対して STNumCurves() を使用する  
  次の例で`STNumCurves()`内の曲線の数を返す、`CompoundCurve`インスタンス。  
   
- `DECLARE @g geography;`  
-  
- `SET @g = geography::Parse('COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))');`  
-  
- `SELECT @g.STNumCurves();`  
+```
+ DECLARE @g geography;  
+ SET @g = geography::Parse('COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))');  
+ SELECT @g.STNumCurves();
+ ```  
   
 ## <a name="see-also"></a>参照  
  [空間データ型の概要](../../relational-databases/spatial/spatial-data-types-overview.md)   

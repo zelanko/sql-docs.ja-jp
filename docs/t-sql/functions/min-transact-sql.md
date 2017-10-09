@@ -94,11 +94,13 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-------------------`  
+ ```
+ -------------------
   
- `5.00`  
+ 5.00
   
- `(1 row(s) affected)`  
+ (1 row(s) affected)
+ ```  
   
 ### <a name="b-using-the-over-clause"></a>B. OVER 句を使用する  
  次の例では、OVER 句と共に、MIN、MAX、AVG、COUNT 関数をで部署ごとの集計値を指定する、`HumanResources.Department`テーブルに、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  

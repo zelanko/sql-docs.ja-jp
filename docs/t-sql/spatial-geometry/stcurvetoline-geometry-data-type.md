@@ -60,50 +60,44 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>A. 初期化されていないジオメトリ変数と空のインスタンスを使用する  
  次の例では、最初の**選択**ステートメントを使用して、初期化されていない**geometry**を呼び出すインスタンス、`STCurveToLine`メソッド、および 2 番目**選択**ステートメントは、空を使用して**geometry**インスタンス。 そのため、このメソッドが返されます**NULL**最初のステートメントに、 **GeometryCollection** 2 番目のステートメントのコレクション。  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = @g.STCurveToLine();`  
-  
- `SELECT @g.STGeometryType();`  
-  
- `SET @g = geometry::Parse('LINESTRING EMPTY');`  
-  
- `SELECT @g.STGeometryType();`  
+```
+ DECLARE @g geometry; 
+ SET @g = @g.STCurveToLine(); 
+ SELECT @g.STGeometryType(); 
+ SET @g = geometry::Parse('LINESTRING EMPTY'); 
+ SELECT @g.STGeometryType();
+ ```  
   
 ### <a name="b-using-a-linestring-instance"></a>B. LineString インスタンスを使用する  
  **選択**ステートメントは次の例では使用して、 **LineString** STCurveToLine メソッドを呼び出すインスタンス。 そのため、このメソッドが返されます、 **LineString**インスタンス。  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('LINESTRING(1 3, 5 5, 4 3, 1 3)');`  
-  
- `SET @g = @g.STCurveToLine();`  
-  
- `SELECT @g.STGeometryType();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('LINESTRING(1 3, 5 5, 4 3, 1 3)'); 
+ SET @g = @g.STCurveToLine(); 
+ SELECT @g.STGeometryType();
+ ```  
   
 ### <a name="c-using-a-circularstring-instance"></a>C. CircularString インスタンスを使用する  
  最初の**選択**ステートメントは次の例では使用して、 **CircularString** STCurveToLine メソッドを呼び出すインスタンス。 そのため、このメソッドが返されます、 **LineString**インスタンス。 これは、**選択**ステートメントも同じでは約 2 つのインスタンスの長さの比較できます。  最後に、2 つ目**選択**ステートメントの各インスタンスのポイントの数を返します。  5 ポイントのみが返されます、 **CircularString**インスタンスは 65 個のポイントに対して、 **LineString**インスタンス。  
   
- `DECLARE @g1 geometry, @g2 geometry;`  
-  
- `SET @g1 = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)');`  
-  
- `SET @g2 = @g1.STCurveToLine();`  
-  
- `SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type], @g1.STLength() AS [G1 Perimeter], @g2.STLength() AS [G2 Perimeter], @g2.ToString() AS [G2 Def];`  
-  
- `SELECT @g1.STNumPoints(), @g2.STNumPoints();`  
+```
+ DECLARE @g1 geometry, @g2 geometry; 
+ SET @g1 = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)'); 
+ SET @g2 = @g1.STCurveToLine(); 
+ SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type], @g1.STLength() AS [G1 Perimeter], @g2.STLength() AS [G2 Perimeter], @g2.ToString() AS [G2 Def]; 
+ SELECT @g1.STNumPoints(), @g2.STNumPoints();
+ ```  
   
 ### <a name="d-using-a-curvepolygon-instance"></a>D. CurvePolygon インスタンスを使用する  
  **選択**ステートメントは次の例では使用して、 **CurvePolygon** STCurveToLine メソッドを呼び出すインスタンス。 そのため、このメソッドが返されます、**多角形**インスタンス。  
   
- `DECLARE @g1 geometry, @g2 geometry;`  
-  
- `SET @g1 = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))');`  
-  
- `SET @g2 = @g1.STCurveToLine();`  
-  
- `SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type];`  
+```
+ DECLARE @g1 geometry, @g2 geometry; 
+ SET @g1 = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))'); 
+ SET @g2 = @g1.STCurveToLine(); 
+ SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type];
+ ```  
   
 ## <a name="see-also"></a>参照  
  [空間データ型の概要](../../relational-databases/spatial/spatial-data-types-overview.md)   

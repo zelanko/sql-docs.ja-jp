@@ -548,11 +548,11 @@ GO
   
  以下に、2004 年 4 月 12 日 ('`2004-04-12'`) に生成された結果セットを示します。 注意して、`ScrapReasonIDActual`と`ModifiedDate`列で提供される値ではなく、トリガー操作によって生成される値の反映、`INSERT`ステートメントです。  
   
- `ScrapReasonID  Name             ModifiedDate`  
-  
- `-------------  ---------------- -----------------------`  
-  
- `17             My scrap reason  2004-04-12 16:23:33.050`  
+ ```
+ ScrapReasonID  Name             ModifiedDate  
+ -------------  ---------------- -----------------------  
+ 17             My scrap reason  2004-04-12 16:23:33.050
+ ```  
   
 ### <a name="i-using-output-into-with-identity-and-computed-columns"></a>I. OUTPUT INTO を、ID 列および計算列と共に使用する  
  次の例を作成、`EmployeeSales`テーブルが表示され、いくつかの行を使用して挿入、`INSERT`ステートメントを`SELECT`ステートメントのソース テーブルからデータを取得します。 `EmployeeSales`テーブルに id 列が含まれています (`EmployeeID`) し、計算列 (`ProjectedSales`)。  

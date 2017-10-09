@@ -68,9 +68,10 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-using-stcurven-on-a-circularstring"></a>A. CircularString に対して STCurveN() を使用する  
  次の例では、2 番目の曲線を返して、 **CircularString**インスタンス。  
   
- `DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';`  
-  
- `SELECT @g.STCurveN(2).ToString();`  
+```
+ DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
+ SELECT @g.STCurveN(2).ToString();
+ ```  
   
  この例では、以下が返されます。  
   
@@ -79,9 +80,10 @@ ms.lasthandoff: 09/01/2017
 ### <a name="b-using-stcurven-on-a-compoundcurve"></a>B. CompoundCurve に対して STCurveN() を使用する  
  次の例では、2 番目の曲線を返して、 **CompoundCurve**インスタンス。  
   
- `DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';`  
-  
- `SELECT @g.STCurveN(2).ToString();`  
+```
+ DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
+ SELECT @g.STCurveN(2).ToString();
+ ```  
   
  この例では、以下が返されます。  
   
@@ -90,9 +92,10 @@ ms.lasthandoff: 09/01/2017
 ### <a name="c-using-stcurven-on-a-compoundcurve-containing-three-circularstrings"></a>C. 3 つの CircularStrings を含む CompoundCurve に対して STCurveN() を使用する  
  次の例では、 **CompoundCurve**を組み合わせた 3 つの異なるインスタンス**CircularString**インスタンスを同じ曲線シーケンスは、前の例として。  
   
- `DECLARE @g geography = 'COMPOUNDCURVE (CIRCULARSTRING (-122.358 47.653, -122.348 47.649, -122.348 47.658), CIRCULARSTRING(-122.348 47.658, -122.358 47.658, -122.358 47.653))';`  
-  
- `SELECT @g.STCurveN(2).ToString();`  
+```
+ DECLARE @g geography = 'COMPOUNDCURVE (CIRCULARSTRING (-122.358 47.653, -122.348 47.649, -122.348 47.658), CIRCULARSTRING(-122.348 47.658, -122.358 47.658, -122.358 47.653))';  
+ SELECT @g.STCurveN(2).ToString();
+ ```  
   
  この例では、以下が返されます。  
   
@@ -103,21 +106,16 @@ ms.lasthandoff: 09/01/2017
 ### <a name="d-testing-for-validity-before-calling-stcurve"></a>D. STCurve() を呼び出す前に有効性をテストする  
  次の例は、ことを確認する方法を示しています。  *n*  STCurveN() メソッドを呼び出す前に有効では。  
   
- `DECLARE @g geography;`  
-  
- `DECLARE @n int;`  
-  
- `SET @n = 2;`  
-  
- `SET @g = geography::Parse('LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)');`  
-  
- `IF @n >= 1 AND @n <= @g.STNumCurves()`  
-  
- `BEGIN`  
-  
- `SELECT @g.STCurveN(@n).ToString();`  
-  
- `END`  
+```
+ DECLARE @g geography;  
+ DECLARE @n int;  
+ SET @n = 2;  
+ SET @g = geography::Parse('LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)');  
+ IF @n >= 1 AND @n <= @g.STNumCurves()  
+ BEGIN  
+ SELECT @g.STCurveN(@n).ToString();  
+ END
+  ```  
   
 ## <a name="see-also"></a>参照  
  [Geography インスタンスの OGC メソッド](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

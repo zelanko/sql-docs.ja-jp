@@ -58,15 +58,13 @@ ConvexHullAggregate ( geography_operand )
 ## <a name="examples"></a>使用例  
  次の例を返します、`GeometryCollection`のセットを含むインスタンス**geography**オブジェクト。  
   
- `USE AdventureWorks2012`  
-  
- `GO`  
-  
- `SELECT geography::CollectionAggregate(SpatialLocation).ToString() AS SpatialLocation`  
-  
- `FROM Person.Address`  
-  
- `WHERE City LIKE ('Bothell')`  
+ ```
+ USE AdventureWorks2012  
+ GO  
+ SELECT geography::CollectionAggregate(SpatialLocation).ToString() AS SpatialLocation  
+ FROM Person.Address  
+ WHERE City LIKE ('Bothell')
+ ```  
   
 ## <a name="see-also"></a>参照  
  [拡張された静的な地理メソッド](../../t-sql/spatial-geography/extended-static-geography-methods.md)  

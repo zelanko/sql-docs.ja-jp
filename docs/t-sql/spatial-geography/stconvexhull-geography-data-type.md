@@ -54,31 +54,34 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>A. 初期化されていない geography インスタンスに STConvexHull() を使用する  
  次の例で`STConvexHull()`、初期化されていない**geography**インスタンス。  
   
- `DECLARE @g geography;`  
-  
- `SELECT @g.STConvexHull();`  
+```
+ DECLARE @g geography;  
+ SELECT @g.STConvexHull();
+ ```  
   
 ### <a name="b-using-stconvexhull-on-an-empty-geography-instance"></a>B. 空の geography インスタンスに STConvexHull を使用する  
  次の例で`STConvexHull()`、空で`Polygon`インスタンス。  
   
- `DECLARE @g geography = 'POLYGON EMPTY';`  
-  
- `SELECT @g.STConvexHull().ToString();`  
+```
+ DECLARE @g geography = 'POLYGON EMPTY';  
+ SELECT @g.STConvexHull().ToString();
+ ```  
   
 ### <a name="c-finding-the-convex-hull-of-a-non-convex-polygon-instance"></a>C. 凸のない Polygon インスタンスの凸包を見つける  
  次の例で`STConvexHull()`を凸のないの凸包を見つける`Polygon`インスタンス。  
   
 ```  
-DECLARE @g geography;  
-SET @g = geography::Parse('POLYGON((-120.533 46.566, -118.283 46.1, -122.3 47.45, -120.533 46.566))');  
-SELECT @g.STConvexHull().ToString();  
+ DECLARE @g geography;  
+ SET @g = geography::Parse('POLYGON((-120.533 46.566, -118.283 46.1, -122.3 47.45, -120.533 46.566))');  
+ SELECT @g.STConvexHull().ToString();  
 ```  
   
 ### <a name="d-finding-the-convex-hull-on-a-geography-instance-with-an-envelope-angle-larger-than-90-degrees"></a>D. エンベロープの角度が 90 度より大きい geography インスタンスで凸包を見つける  
  次の例で`STConvexHull()`上、 **geography**エンベロープの角度が 90 度より大きいインスタンス。  
   
- `DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';`  
-  
- `SELECT @g.STConvexHull().ToString();`  
+```
+ DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';  
+ SELECT @g.STConvexHull().ToString();
+ ```  
   
   

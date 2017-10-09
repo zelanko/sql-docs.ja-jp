@@ -58,27 +58,19 @@ EnvelopeAggregate ( geometry_operand )
 ## <a name="examples"></a>使用例  
  次の例は、テーブル変数列のオブジェクトのセットの境界ボックスを返します。  
   
- `-- Setup table variable for EnvelopeAggregate example`  
-  
- `DECLARE @Geom TABLE`  
-  
- `(`  
-  
- `shape geometry,`  
-  
- `shapeType nvarchar(50)`  
-  
- `)`  
-  
- `INSERT INTO @Geom(shape,shapeType) VALUES('CURVEPOLYGON(CIRCULARSTRING(2 3, 4 1, 6 3, 4 5, 2 3))', 'Circle'),`  
-  
- `('POLYGON((1 1, 4 1, 4 5, 1 5, 1 1))', 'Rectangle');`  
-  
- `-- Perform EnvelopeAggregate on @Geom.shape column`  
-  
- `SELECT geometry::EnvelopeAggregate(shape).ToString()`  
-  
- `FROM @Geom;`  
+ ```
+ -- Setup table variable for EnvelopeAggregate example 
+DECLARE @Geom TABLE 
+( 
+shape geometry, 
+shapeType nvarchar(50) 
+) 
+INSERT INTO @Geom(shape,shapeType) VALUES('CURVEPOLYGON(CIRCULARSTRING(2 3, 4 1, 6 3, 4 5, 2 3))', 'Circle'), 
+('POLYGON((1 1, 4 1, 4 5, 1 5, 1 1))', 'Rectangle'); 
+-- Perform EnvelopeAggregate on @Geom.shape column 
+SELECT geometry::EnvelopeAggregate(shape).ToString() 
+FROM @Geom;
+ ```  
   
 ## <a name="see-also"></a>参照  
  [拡張された静的なジオメトリ メソッド](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  

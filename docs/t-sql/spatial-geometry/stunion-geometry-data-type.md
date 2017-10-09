@@ -68,11 +68,11 @@ SELECT @g.STUnion(@h).ToString();
 ### <a name="b-computing-the-union-of-a-polygon-instance-with-a-curvepolygon-instance"></a>B. Polygon インスタンスと CurvePolygon インスタンスの和集合を計算する  
  次の例を返します、`GeometryCollection`円弧のセグメントを格納しているインスタンス。  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(0 -4, 4 0, 0 4, -4 0, 0 -4))';`  
-  
- `DECLARE @h geometry = 'POLYGON((5 -1, 5 -3, 7 -3, 7 -1, 5 -1))';`  
-  
- `SELECT @g.STUnion(@h).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(0 -4, 4 0, 0 4, -4 0, 0 -4))';  
+ DECLARE @h geometry = 'POLYGON((5 -1, 5 -3, 7 -3, 7 -1, 5 -1))';  
+ SELECT @g.STUnion(@h).ToString();
+ ```  
   
  `STUnion()` を呼び出したインスタンスは円弧セグメントを含んでいるため、`STUnion()` は円弧セグメントを含む結果を返します。  
   

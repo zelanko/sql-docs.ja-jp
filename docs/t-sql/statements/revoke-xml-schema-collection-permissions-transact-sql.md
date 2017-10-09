@@ -126,11 +126,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ## <a name="examples"></a>使用例  
  次の例では失効`EXECUTE`XML スキーマ コレクションに対する権限`Invoices4`ユーザーから`Wanida`です。 XML スキーマ コレクション`Invoices4`内にある、`Sales`のスキーマ、`AdventureWorks2012`データベース。  
   
- `USE AdventureWorks2012;`  
-  
- `REVOKE EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 FROM Wanida;`  
-  
- `GO`  
+ ```
+ USE AdventureWorks2012;  
+ REVOKE EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 FROM Wanida;  
+ GO
+ ```  
   
 ## <a name="see-also"></a>参照  
  [XML スキーマ コレクションの権限 &#40; を許可します。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   

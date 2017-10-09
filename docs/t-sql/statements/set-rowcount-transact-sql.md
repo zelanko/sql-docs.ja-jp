@@ -84,13 +84,13 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Count`  
-  
- `-----------`  
-  
- `537`  
-  
- `(1 row(s) affected)`  
+ ```
+ Count 
+ ----------- 
+ 537 
+ 
+ (1 row(s) affected)
+ ```  
   
  これで、設定`ROWCOUNT`に`4`し 4 行だけが返されることを示すためにすべての行を返します。  
   
@@ -100,9 +100,9 @@ SELECT *
 FROM Production.ProductInventory  
 WHERE Quantity < 300;  
 GO  
-```  
   
- `(4 row(s) affected)`  
+(4 row(s) affected)
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  SET ROWCOUNT を指定した場合、指定した数の行が返されると処理は停止します。 次の例では、20 を超える行がの条件を満たすことに注意してください`AccountType = 'Assets'`です。 SET ROWCOUNT の適用後、すべての行が返されたわけではないことがわかります。  
