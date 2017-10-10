@@ -21,10 +21,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d4fe098c9d9f9b8e01deee95c1d52e3582b13658
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 5462b0eb9a5eedc48e841ba8aae3bb3514be447d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="hierarchy-mdx"></a>Hierarchy (MDX)
@@ -51,7 +51,7 @@ Level_Expression.Hierarchy
  レベルを返す有効な多次元式 (MDX) 式です。  
   
 ### <a name="examples"></a>使用例  
- 次の例では、AdventureWorks キューブの Data ディメンションの Calendar 階層の名前を返します。  
+ 次の例では、AdventureWorks キューブで Date ディメンションの Calendar 階層の名前を返します。  
   
  `WITH`  
   

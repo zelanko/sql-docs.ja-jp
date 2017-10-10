@@ -2,7 +2,7 @@
 title: "どのような &#39; s Machine Learning のサービスの新機能 |Microsoft ドキュメント"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/29/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 0452a71d844cea46ac48871a9e987171a4c241d3
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 37f3b12dc792060b45e67264e49a4a6180167676
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/30/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>SQL Server の Machine Learning のサービスの新機能
@@ -37,6 +37,16 @@ SQL Server 2017、機械学習は一般的な Python 言語のサポートを追
 
 Microsoft Machine Learning サーバー SQL Server では、今すぐ R または Python のいずれかで machine learning のソリューションの配置のビルドとの包括的なサポートを提供します。 このリリースの要点を次に示します。
 
+> [!IMPORTANT]
+> 
+> R、Python の使用を含む、マシン学習サービスは現在サポートされていません、Linux 上または Azure SQL データベース、SQL Server を実行している場合。 今後のリリースで変更を探します。
+> 
+> Linux のエディションでは、予測関数を使用してネイティブ スコア付けはサポートが現在します。
+
+### <a name="whats-new-in-cumulative-update-1-for-sql-server-2017"></a>SQL Server 2017 累積的な更新プログラム 1 の新機能
+
+Machine Learning サーバー 9.2.1 に、Python と R コンポーネントをアップグレードすることができますようになりました。 このリリースの特徴は多くの機能強化**revoscalepy**と**RevoScaleR**パフォーマンスの向上を含むです。
+ 
 ### <a name="in-database-python-integration"></a>データベース内の Python の統合
 
 Python ストアド プロシージャ、またはを実行する計算コンテキストとして、SQL Server コンピューターを使用してリモートで Python を実行します。 この統合は、SQL Server の機能を使用するには、Python の開発者やデータ サイエンティストの膨大なコミュニティの新しい手法が表示されます。 

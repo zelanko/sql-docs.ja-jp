@@ -1,7 +1,7 @@
 ---
 title: "外部ライブラリ (TRANSACT-SQL) を ALTER |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 08/18/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,16 +20,17 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 541419770828e01cca82fb33ead1b22170f8e4f3
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: b728fa43959ee047173b1533e70d46e5b1e0f7c1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER 外部ライブラリ (TRANSACT-SQL)  
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
 
-既存のライブラリのコンテンツを変更します。  
+[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+
+既存のパッケージの外部ライブラリの内容を変更します。
 
 ## <a name="syntax"></a>構文
 
@@ -77,6 +78,13 @@ WITH ( LANGUAGE = 'R' )
 
 ライブラリ ファイルの場所を含む外部データ ソースの名前を指定します。 この場所は、Azure blob ストレージ パスを参照する必要があります。 外部データ ソースを作成するには、使用[外部データ ソースの作成 (TRANSACT-SQL)](create-external-data-source-transact-sql.md)です。
 
+> [!IMPORTANT] 
+> 現時点では、blob は、SQL Server 2017 リリースのデータ ソースとしてサポートされていません。
+
+**library_bits**
+
+アセンブリのような 16 進数のリテラルとして、パッケージのコンテンツを指定します。 このオプションが必要なアクセス許可が、サーバーがアクセスできる任意のフォルダーにファイルのパスへのアクセスはありません、ライブラリを変更するライブラリを作成することができます。
+
 **プラットフォーム WINDOWS を =**
 
 コンテンツ ライブラリのプラットフォームを指定します。 この値は、さまざまなプラットフォームを追加する既存のライブラリを変更する場合に必要です。 Windows は、唯一サポートされているプラットフォームです。
@@ -84,22 +92,29 @@ WITH ( LANGUAGE = 'R' )
 ## <a name="remarks"></a>解説
 
 R 言語用には、zip 形式のアーカイブ ファイルの形式でパッケージを準備します。Windows の ZIP 拡張子です。 現時点では、Windows プラットフォームのみがサポートされています。  
+
 `ALTER EXTERNAL LIBRARY`ステートメントがデータベースにのみライブラリ ビットをアップロードします。 変更したライブラリが実際にインストールされていないユーザーが実行されるまで外部のスクリプトは、その後を実行して[sp_execute_external_script (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)です。
 
 ## <a name="permissions"></a>Permissions
+
 必要があります、`ALTER ANY EXTERNAL LIBRARY`権限です。 外部のライブラリを作成したユーザーは、その外部のライブラリを変更できます。
 
 ## <a name="examples"></a>使用例
 
 次の例では、customPackage と呼ばれる外部ライブラリを変更します。
 
-```sql  
+### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>A. ファイルを使用してライブラリの内容を置き換えます
+
+次の例では、更新されたビットを含む zip 形式のファイルを使用して、customPackage と呼ばれる外部ライブラリを変更します。
+
+```sql
 ALTER EXTERNAL LIBRARY customPackage 
 SET 
   (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip')
 WITH (LANGUAGE = 'R');
 ```  
-実行し、`sp_execute_external_script`手順、ライブラリをインストールします。
+
+更新されたライブラリをインストールするには、ストアド プロシージャを実行`sp_execute_external_script`です。
 
 ```sql   
 EXEC sp_execute_external_script 
@@ -107,15 +122,22 @@ EXEC sp_execute_external_script
 @script=N'
 # load customPackage
 library(customPackage)
-
 # call customPackageFunc
 OutputDataSet <- customPackageFunc()
 '
-with result sets (([result] int));    
+WITH RESULT SETS (([result] int));
 ```
 
+### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>B. バイト ストリームを使用して既存のライブラリを変更します。
+
+次の例では、新しいビットとして渡し、16 進数リテラル、既存のライブラリを変更します。
+
+```SQL
+ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+```
 
 ## <a name="see-also"></a>参照  
+
 [外部ライブラリ (TRANSACT-SQL) を作成する](create-external-library-transact-sql.md)
 [(TRANSACT-SQL) の外部ライブラリの削除](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  

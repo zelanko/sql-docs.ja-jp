@@ -20,10 +20,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 3e535ef444e43860e35befbf0f33fe1eb582801d
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: a8c8f93212e62b148671305354599b88e6f3d318
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Reporting Services ネイティブ モードのレポート サーバーのインストール
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/17/2017
   
 -   レポート サーバー データベース用の接続情報 (データ ソース名 (DSN) とも呼ばれます)。  
   
- セットアップでは、自動実行用アカウント、レポート サーバーの電子メール、暗号化キーのバックアップ、およびスケールアウト配置が構成されません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して、これらのプロパティを構成できます。 詳細については、「 [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。
+ セットアップでは、自動実行用アカウント、レポート サーバーの電子メール、暗号化キーのバックアップ、およびスケールアウト配置が構成されません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して、これらのプロパティを構成できます。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。
   
 ##  <a name="bkmk_whentoinstalldefaultconfig"></a> ネイティブ モードの既定の構成をインストールする場合  
  既定の構成では、セットアップの完了後すぐにレポート サーバーを使用できるように、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] が操作可能な状態でインストールされます。 このモードは、他のモードであれば [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで実行すべき必須の構成タスクを省いて手順を省略する場合に指定します。  
@@ -155,7 +155,7 @@ ms.lasthandoff: 08/17/2017
   
 9. 機能構成ルール: 渡されたルールを検証します。 ルールがすべて成功した場合は、セットアップ ウィザードは自動的に **[インストールの準備完了]** に進みます。  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に固有のルールでは、レポート サーバー カタログと一時カタログデータベースがまだ存在していないことを確認します。  
   
-10. ![注](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注")上、**インストールの準備完了** ページで、サーバーの初期の適切な概要については後で参照できるように、構成ファイルへのパスに注意してください[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などの構成コンポーネントをインストールするには、サービス アカウントと管理者です。  
+10. **[インストールの準備完了]** ページで、インストールされたコンポーネント、サービス アカウント、および管理者などのサーバーの初期の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成の概要を入手するために、後で参照できるように構成ファイルへのパスをメモします。  
   
 11. SQL Server インストール ウィザードの完了後、次の基本的な手順を使用して、既定のネイティブ モードのインストールを確認します。  
   
@@ -188,8 +188,8 @@ ms.lasthandoff: 08/17/2017
 [レポート サーバー データベース接続を構成します。](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [ファイルのみのインストール &#40;Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)   
 [レポート サーバーを初期化します。](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
-[ネイティブ モード レポート サーバーで SSL 接続を構成します。](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
+[ネイティブ モードのレポート サーバーでの SSL 接続の構成](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
 [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
 

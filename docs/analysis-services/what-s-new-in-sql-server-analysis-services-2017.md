@@ -1,37 +1,34 @@
 ---
-title: "どのような &#39; SQL Server 2017 Analysis Services の |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 09/21/2017
+title: "SQL Server 2017 Analysis Services の新機能 |Microsoft ドキュメント"
+ms.date: 10/03/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
-caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: c75d1ec210f3511408e2c976df28f9db22d7272f
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 59f753e85f2d10d70d7784335205e0d231c5ae00
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 
-# <a name="what39s-new-in-sql-server-2017-analysis-services"></a>どのような &#39; s SQL Server 2017 Analysis Services の新機能
+# <a name="whats-new-in-sql-server-2017-analysis-services"></a>SQL Server 2017 Analysis Services の新機能
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
 
-SQL Server 2017 Analysis Services には、SQL Server 2012 以降の最も重要な機能強化の一部が表示されます。 これまでよりもより強力な表形式モデルは、このリリース (SQL Server 2012 Analysis Services で初めて導入された) 表形式モードでの成功時に構築します。
+SQL Server 2017 Analysis Services は、SQL Server 2012 以降、最も重要な機能強化の一部を表示します。 これまでよりもより強力な表形式モデルは、このリリース (SQL Server 2012 Analysis Services で初めて導入された) 表形式モードでの成功時に構築します。
 
 多次元モードと SharePoint モード用の Power Pivot は、多くの Analysis Services の配置のホチキス止めです。 Analysis Services の製品ライフ サイクルでは、これらのモードは完成度の高いです。 このリリースでこれらのモードのいずれかの新機能はありません。 ただし、バグの修正とパフォーマンスの向上はも含まれます。
 
-SQL Server 2017 Analysis Services では、ここで説明する機能が含まれています。 それらを利用するための最新バージョンを使用する必要がありますも[SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) (SSDT) および[SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS)。 SSDT および SSMS が更新された SQL Server の新しい機能がある新機能と更新を毎月の conincide 機能を通常します。  
+SQL Server 2017 Analysis Services では、ここで説明する機能が含まれています。 それらを利用するための最新バージョンを使用する必要がありますも[SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) (SSDT) および[SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS)。 SSDT と SSMS では、SQL Server の新機能と通常一致新規および改良された機能を使用して毎月更新されます。  
 
-すべての新機能をオフ ラッパーを楽しいですが、これも知ることが重要対象は廃止されており、このリリースと今後のリリースで廃止されました。 チェック アウトを必ず[旧バージョンとの互換性 (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md)です。
+すべての新機能について説明する重要ですが、これも知ることが重要対象は廃止されており、このリリースと今後のリリースで廃止されました。 チェック アウトを必ず[旧バージョンとの互換性 (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md)です。
 
 このリリースでは、主要な新機能をいくつか見てをみましょう。
 
@@ -56,12 +53,12 @@ SQL Server Data Tools (SSDT) を表形式モデルにデータ ソースから�
 
 ![AS_Get_Data_in_SSDT](../analysis-services/media/as-get-data-in-ssdt.png)
 
- 強力で直感的なユーザー インターフェイスでは、データとデータ変換/マッシュ アップ機能をより簡単に選択を確認します。
+ 強力で直感的なユーザー インターフェイスは、データとデータ変換/マッシュ アップ機能をより簡単に選択します。
 
 ![高度なマッシュ アップ](../analysis-services/media/as-get-data-advanced.png)
 
 
-最新データの取得が発生し、1400 を互換性レベル 1200 の表形式モデルの既存の ugraded に M マッシュ アップ機能は適用されません。 新しいエクスペリエンスは、1400 互換性レベルで作成した新しいモデルにのみ適用されます。
+最新データの取得が発生し、1400 を互換性レベル 1200 の表形式モデルの既存の upraded に M マッシュ アップ機能は適用されません。 新しいエクスペリエンスは、1400 互換性レベルで作成した新しいモデルにのみ適用されます。
 
 ## <a name="encoding-hints"></a>エンコードのヒント
 このリリースでは、メモリ内の大規模な表形式モデルの処理 (データの更新) を最適化するために使用される高度な機能、エンコードのヒントを紹介します。 エンコードして理解するには、次を参照してください。[パフォーマンス チューニングのテーブル モデルの SQL Server 2012 Analysis Services](https://msdn.microsoft.com/library/dn393915.aspx)エンコードを理解するには」のホワイト ペーパー。
@@ -70,9 +67,9 @@ SQL Server Data Tools (SSDT) を表形式モデルにデータ ソースから�
 
 * ハッシュのエンコードが group by の列 (多くの場合、ディメンション テーブルの値) と外部キー用に推奨します。 文字列型の列は、常にエンコードされるハッシュです。
 
-数値列には、いずれかのエンコード方法を使用できます。 各数値の列値またはハッシュのエンコードを適用するかどうかを決定するのサンプル値の取得と Analysis Services が、いずれかのテーブルが空の場合 (またはパーティションに分割せず)、テーブルの処理を開始、テーブル全体の処理操作が実行されて、. 既定では、値のエンコードを選択すると、列の個別の値のサンプルでは、十分な大きさ – それ以外の場合ハッシュのエンコードは通常説明圧縮効率の改善。 Analysis services、列が部分的に処理された後、データの分布に関する詳しい情報に基づくエンコード方式を変更し、エンコード プロセスを再起動することができます。 これは、もちろん処理時間が増加し、効率的ではありません。 パフォーマンス チューニングに関するホワイト ペーパーでは、さらに詳しく再エンコードについて説明し、SQL Server Profiler を使用することを検出する方法について説明します。
+数値列には、いずれかのエンコード方法を使用できます。 各数値の列値またはハッシュのエンコードを適用するかどうかを決定するのサンプル値の取得と Analysis Services が、いずれかのテーブルが空の場合 (またはパーティションに分割せず)、テーブルの処理を開始、テーブル全体の処理操作が実行されて、. 既定では、値のエンコードが選択すると、列の個別の値のサンプルでは、十分な大きさ: それ以外の場合ハッシュのエンコード圧縮効率の改善を提供通常されます。 列が部分的に処理された後、データの分布に関する詳しい情報に基づくエンコード方式を変更し、エンコード プロセス; を再起動する Analysis Services のことがただし、この処理時間を向上し、効率的ではありません。 パフォーマンス チューニングに関するホワイト ペーパーでは、さらに詳しく再エンコードについて説明し、SQL Server Profiler を使用することを検出する方法について説明します。
 
-エンコードのヒントは、データ プロファイルからやトレース イベントを再エンコードへの応答の知識を指定されたエンコーディング メソッドの基本設定を指定するモデルを使用できます。 ハッシュでエンコードされた列での集計は列の値でエンコードされた値のエンコードとして指定できるこのような列のヒントよりも遅くなります。 優先順位が適用されることです。 は保証されません。そのため、設定とは対照的にヒントを勧めします。 エンコードのヒントを指定するには、列に EncodingHint プロパティを設定します。 使用可能な値は"Default"、"Value"および「ハッシュ」です。 JSON ベースのメタデータを Model.bim ファイルからの次のスニペットは、Sales Amount 列のエンコード値を指定します。
+エンコードのヒントは、データ プロファイルからやトレース イベントを再エンコードへの応答の知識を指定されたエンコーディング メソッドの基本設定を指定するモデルを使用できます。 ハッシュでエンコードされた列での集計は列の値でエンコードされた値のエンコードとして指定できるこのような列のヒントよりも遅くなります。 優先順位が適用されることは保証されません。 これは、設定とは対照的です。 エンコードのヒントを指定するには、列に EncodingHint プロパティを設定します。 使用可能な値は"Default"、"Value"および「ハッシュ」です。 JSON ベースのメタデータを Model.bim ファイルからの次のスニペットは、Sales Amount 列のエンコード値を指定します。
 
 ```
 {
@@ -116,7 +113,7 @@ SQL Server Data Tools (SSDT) を表形式モデルにデータ ソースから�
 
 ![AS_Detail_Rows_Expression_Property](../analysis-services/media/as-detail-rows-expression-property.png)
 
-[SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) DAX 関数は、詳細行の式でよく使用されます。 次の例では、サンプル Adventure Works テーブル モデルの Internet Sales テーブルの行について返される列を定義しています。
+[SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) DAX 関数は、詳細行の式でよく使用します。 次の例では、サンプル Adventure Works テーブル モデルの Internet Sales テーブルの行について返される列を定義しています。
 
 ```
 SELECTCOLUMNS(
@@ -133,7 +130,7 @@ SELECTCOLUMNS(
 ![AS_Detail_Rows](../analysis-services/media/as-detail-rows.png)
 
 #### <a name="default-detail-rows-expression-property-for-tables"></a>テーブルの既定の [詳細行の式] プロパティ
-メジャーだけでなく、テーブルにも、詳細行式を定義できるプロパティがあります。 **[Default Detail Rows Expression]** (既定の詳細行の式) プロパティは、テーブル内のすべてのメジャーについて既定として動作します。 式が定義されていないメジャーは、テーブルから式が継承され、テーブルに定義されている行セットが表示されます。 これで式が再利用できるようになり、後でテーブルに新しいメジャーを追加すると、式が自動的に継承されます。
+メジャーだけでなく、テーブルにも、詳細行式を定義できるプロパティがあります。 **[Default Detail Rows Expression]** (既定の詳細行の式) プロパティは、テーブル内のすべてのメジャーについて既定として動作します。 定義された、独自の式がないメジャーは、テーブルから式を継承し、テーブルに対して定義されている行を表示します。 これにより、式の再利用し、テーブルに後で自動的に追加する新しいメジャーが式を継承します。
 
 ![AS_Default_Detail_Rows_Expression](../analysis-services/media/as-default-detail-rows-expression.png)
  
@@ -244,7 +241,7 @@ Filtered Sales:=CALCULATE (
 * 階層と列を再利用は、Power BI のフィールド リストでの有用な場所で確認できます。
 * 日付関係を簡単に日付フィールドに基づく日付ディメンションへのリレーションシップを作成します。
 * Analysis Services の既定のインストール オプションは、表形式モードのようになりました。
-* 新しいデータの取得 (電源 Qery) データ ソース。
+* 新しいデータ ソースのデータ (Power Query) を取得します。
 * SSDT 用の DAX エディター。
 * M クエリの既存の DirectQuery データ ソースをサポートします。
 * SSMS の向上、表示、編集、およびスクリプトの構造化されたデータ ソースのサポートなどです。

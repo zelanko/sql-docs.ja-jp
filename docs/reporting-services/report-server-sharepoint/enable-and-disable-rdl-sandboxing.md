@@ -1,7 +1,7 @@
 ---
-title: "有効にして、RDL サンド ボックス化を無効化 |Microsoft ドキュメント"
+title: "有効にして、SharePoint 統合モードで Reporting Services の RDL サンド ボックス化を無効にする |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/20/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,27 +10,33 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
-caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2a435c6f6b5dc2d9df676f504837393d448820a4
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 62c6df096133ec0d41996a4df99173cb8727e408
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
-# <a name="enable-and-disable-rdl-sandboxing"></a>RDL サンドボックスの有効化と無効化
-  RDL (レポート定義言語) サンドボックス機能を使用すると、複数のテナントが 1 つのレポート サーバー Web ファームを使用している環境で、個々のテナントによる特定の種類のリソースの使用を検出および制限できるようになります。 このような例として、複数のテナントまたは複数の企業によって使用される単一のレポート サーバー Web ファームを管理するホスティング サービスのシナリオがあります。 レポート サーバー管理者は、次の目的を達成するためにこの機能を有効にできます。  
+# <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>有効にして、SharePoint 統合モードで Reporting Services の RDL サンド ボックス化を無効にします。
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+RDL (レポート定義言語) サンド ボックス機能では、検出および特定の種類のレポート サーバーの 1 つの web ファームを使用する複数のテナントの環境で、個々 のテナント別に、リソースの使用量を制限できます。 このような例として、複数のテナントまたは複数の企業によって使用される単一のレポート サーバー Web ファームを管理するホスティング サービスのシナリオがあります。 レポート サーバー管理者は、次の目的を達成するためにこの機能を有効にできます。  
   
 -   外部リソースのサイズを制限する。 外部リソースには、画像、.xslt ファイル、およびマップ データが含まれます。  
   
 -   レポートのパブリッシュ時に、式のテキストで使用される型およびメンバーを制限する。  
   
--   レポートの処理時に、テキストの長さおよび式の戻り値のサイズを制限する。  
-  
+-   レポートの処理時に、テキストの長さおよび式の戻り値のサイズを制限する。
+
+> [!NOTE]
+> SQL Server 2016 より後に、SharePoint と reporting Services の統合を使用できなくします。
+
  RDL サンドボックスが有効になると、次の機能は無効になります。  
   
 -   カスタム コード、 **\<コード >**レポート定義の要素。  
@@ -41,7 +47,7 @@ ms.lasthandoff: 08/09/2017
   
  このトピック内の各要素の説明、 \< **RDLSandboxing**>、RSReportServer.Config ファイル内の要素。 このファイルの編集の詳細については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 RDL サンドボックス機能に関連した操作は、サーバー トレース ログに記録されます。 トレース ログの詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。  
   
-## <a name="example-configuration"></a>構成例  
+## <a name="example-configuration"></a>構成の例
  次の例の設定および値の例を示しています、 \< **RDLSandboxing**>、RSReportServer.Config ファイル内の要素。  
   
 ```  
@@ -59,9 +65,10 @@ ms.lasthandoff: 08/09/2017
       <Deny>StrDup</Deny>  
    </Members>  
 </RDLSandboxing>  
-```  
-  
-## <a name="configuration-settings"></a>構成設定  
+```
+
+## <a name="configuration-settings"></a>構成設定
+
  次の表では、構成設定に関する情報を示します。 構成ファイルに出現する順に、設定を示します。  
   
 |設定|Description|  
@@ -73,13 +80,14 @@ ms.lasthandoff: 08/09/2017
 |**型**|RDL 式内で許可されるメンバーの一覧です。|  
 |**Allow**|RDL 式で許可される型または型のセットです。|  
 |**名前空間**|**Allow** の属性の 1 つであり、Value に適用される 1 つ以上の型を含む名前空間です。 このプロパティでは、大文字と小文字が区別されません。|  
-|**AllowNew**|ブール属性**許可**または、RDL で RDL 式で作成する型の新しいインスタンスが許可されているかどうかを制御する**\<クラス >**要素。<br /><br /> 注: **RDLSandboxing** が有効であるときは、 **AllowNew**の設定に関係なく、RDL 式に新しい配列を作成できません。|  
+|**AllowNew**|ブール属性**許可**または、RDL で RDL 式で作成する型の新しいインスタンスが許可されているかどうかを制御する**\<クラス >**要素。<br /><br /> ときに**RDLSandboxing**が有効の設定に関係なく、RDL 式に新しい配列を作成することはできません**AllowNew**です。|  
 |**値**|**Allow** に対する値であり、RDL 式で許可される型の名前を示します。 値が **\*** の場合は、名前空間内のすべての型が許可されることを意味します。 このプロパティでは、大文字と小文字が区別されません。|  
 |**メンバー**|含まれる型の一覧については、 **\<型 >**要素、RDL 式で許可されていないメンバー名の一覧です。|  
-|**Deny**|RDL 式で許可されないメンバーの名前です。 このプロパティでは、大文字と小文字が区別されません。<br /><br /> 注: メンバーに対して **Deny** が指定されている場合、この名前を持つすべての型のメンバーがすべて許可されません。|  
+|**Deny**|RDL 式で許可されないメンバーの名前です。 このプロパティでは、大文字と小文字が区別されません。<br /><br /> ときに**Deny**が指定されているメンバーのすべての種類には、この名前を持つすべてのメンバーは許可されていません。|  
   
-## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>RDL サンドボックスが有効なときの式の操作  
- 式で使用されるリソースの管理を容易にするために、RDL サンドボックス機能を次のような方法で変更できます。  
+## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>RDL サンド ボックスが有効にすると、式の操作
+
+式で使用されるリソースの管理を容易にするために、RDL サンドボックス機能を次のような方法で変更できます。  
   
 -   式に使用する文字数を制限する。  
   
@@ -96,7 +104,8 @@ ms.lasthandoff: 08/09/2017
   
  RDL 式の結果は、実行時に検証されます。 RDL 式は、レポートのパブリッシュ時にレポート定義で検証されます。 レポート サーバーのトレース ログで、違反がないかどうかを確認できます。 詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。  
   
-### <a name="working-with-types"></a>型の操作  
+### <a name="working-with-types"></a>型の使用
+
  許可一覧に型を追加することで、RDL 式にアクセスする次のエントリ ポイントを制御できます。  
   
 -   型の静的メンバー  
@@ -139,7 +148,8 @@ ms.lasthandoff: 08/09/2017
   
  カスタム アセンブリから許可一覧に型を追加しても、アセンブリに対して暗黙に実行権限が付与されることはありません。 コード アクセス セキュリティ ファイルを具体的に変更して、アセンブリに実行権限を提供する必要があります。 詳細については、「 [Reporting Services のコード アクセス セキュリティ](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)」を参照してください。  
   
-#### <a name="maintaining-the-deny-list-of-members"></a>保守、\<拒否 > のメンバーの一覧  
+#### <a name="maintaining-the-deny-list-of-members"></a>保守、 \<Deny > のメンバーの一覧
+
  許可一覧に新しい型を追加するときには、次に示す場合に、メンバーのブロック一覧の更新が必要となります。  
   
 -   新しい型を導入するバージョンでカスタム アセンブリを更新する場合。  
@@ -152,7 +162,8 @@ ms.lasthandoff: 08/09/2017
   
 -   RDL 型に新しいメンバーが追加された可能性があるため、新しい RDL スキーマを処理できるようにレポート サーバーを更新する場合  
   
-### <a name="working-with-operators-and-new"></a>演算子と New の操作  
+### <a name="working-with-operators-and-new"></a>演算子と new の操作
+
  既定では、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework の言語演算子は、 **New**を除いて常に許可されます。 **新規**によって演算子が制御されます、 **AllowNew**属性を**\<許可 >**要素。 既定のコレクション アクセサー演算子 **!** や [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework のキャスト マクロ ( **CInt**など) のような、他の言語演算子は常に許可されます。  
   
  カスタム演算子を含め、ブロック一覧への演算子の追加はサポートされていません。 特定の型に対して演算子を除外するには、次の手順を実行する必要があります。  
@@ -169,8 +180,9 @@ ms.lasthandoff: 08/09/2017
   
 -   このクラスを許可一覧に追加します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
+
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [レポート サーバー サービスのトレース ログ](../../reporting-services/report-server/report-server-service-trace-log.md)  
-  
-  
+
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

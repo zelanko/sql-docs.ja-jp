@@ -1,7 +1,7 @@
 ---
 title: "計算列 (SSAS テーブル) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 05/22/2017
+ms.date: 10/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,17 +17,15 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5155ce65d240db9bec2f01ada5dcba61c9926037
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 3c36cd3b55617c7ca6c20c244a9488227a2f6ff5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="calculated-columns"></a>計算列
   テーブル モデルでの計算列を使用すると、新しいデータをモデルに追加できます。 列に値を貼り付けまたはインポートする代わりに、列の行レベルの値を定義する DAX 数式を作成します。 すると、計算列を他のデータ列と同じように、レポート、ピボットテーブル、またはピボットグラフで使用できるようになります。  
-  
-> [!NOTE]  
->  計算列は、DirectQuery モードでのテーブル モデルではサポートされません。 詳細については、次を参照してください。 [DirectQuery モード](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)です。  
+ 
   
   
 ##  <a name="bkmk_understanding"></a> 利点  
@@ -49,7 +47,7 @@ ms.lasthandoff: 09/01/2017
  この数式では、StartDate 列から月を抽出します。 そして、テーブルの各行について月の最終日を計算します。 2 番目のパラメーターは、StartDate の月より前または後の月数を指定します。この場合、0 は同じ月であることを表します。 たとえば、StartDate 列の値が 6/1/2001 の場合、計算列の値は 6/30/2001 になります。  
   
 ##  <a name="bkmk_naming"></a> Naming a calculated column  
- 既定では、新しい計算列はテーブル内のその他の列の右側に追加され、 **CalculatedColumn1**、 **CalculatedColumn2**などの既定の名前が自動的に割り当てられます。 列を右クリックしてから [列の挿入] をクリックして、2 つの既存列の間に新しい列を作成することもできます。 クリックしてドラッグすることで、同じテーブル内の列を並べ替えることができます。また、列の作成後に名前を変更することもできます。ただし、計算列の変更に対する次の制限事項に注意してください。  
+ 既定では、新しい計算列はテーブル内のその他の列の右側に追加され、 **CalculatedColumn1**、 **CalculatedColumn2**などの既定の名前が自動的に割り当てられます。 列を右クリックしてから 列の挿入をクリックして、2 つの既存列の間に新しい列を作成することもできます。 クリックしてドラッグすることで、同じテーブル内の列を並べ替えることができます。また、列の作成後に名前を変更することもできます。ただし、計算列の変更に対する次の制限事項に注意してください。  
   
 -   それぞれの列名は、1 つのテーブル内で一意である必要があります。  
   
@@ -78,7 +76,7 @@ ms.lasthandoff: 09/01/2017
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[計算列を作成します。](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)|このトピックのタスクでは、テーブルに新しい計算列を追加する方法について説明します。|  
+|[計算列の作成](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)|このトピックのタスクでは、テーブルに新しい計算列を追加する方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
  [テーブルと列](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
@@ -86,3 +84,4 @@ ms.lasthandoff: 09/01/2017
  [計算](../../analysis-services/tabular-models/calculations-ssas-tabular.md)  
   
   
+

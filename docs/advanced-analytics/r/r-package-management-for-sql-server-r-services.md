@@ -1,7 +1,7 @@
 ---
 title: "SQL Server の R パッケージの管理 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 08/20/2017
+ms.date: 10/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,97 +17,88 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f19982251b629d12215595685c0633b4c6b61c98
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: e0c6725ff2c0c541e2546858dc02f1021812bbc5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="r-package-management-for-sql-server"></a>SQL Server の R パッケージの管理
 
-このトピックでは、SQL Server のインスタンスで実行されている R パッケージの管理に使用できるパッケージの管理機能について説明します。
+この記事では、SQL Server 2017 と SQL Server 2016 での R パッケージを管理するための機能について説明します。
+
++ 2016 と 2017 年 1 の間で R パッケージのインストール方法の変更
++ R パッケージを管理するための推奨事項
++ SQL Server 2017 でパッケージの管理のため、新しいデータベース ロール
++ SQL Server 2017 でパッケージの管理のための新しい T-SQL ステートメント
 
 **適用されます:** SQL Server 2016 の R Services、SQL Server 2017 機械学習のサービス
 
-## <a name="package-management-using-t-sql"></a>T-SQL を使用してパッケージの管理
+## <a name="differences-in-package-management-between-sql-server-2016-and-sql-server-2017"></a>SQL Server 2016 および SQL Server 2017 パッケージの管理での違い
 
-Machine learning のジョブのサーバーを使用する場合は、これらの特権がある場合、コンピューターの管理者として R パッケージをインストールする続行することができます。
+**SQL Server 2017**、インスタンス レベルでは、パッケージの管理を有効にし、データベース レベルでのパッケージを追加するユーザーのアクセス許可を管理できます。
 
-ただし、パッケージを他のユーザーと共有する必要がある場合、または複数の人が、サーバーで machine learning のジョブを実行する必要がある場合、パッケージの共有ライブラリを設定するより効率的です。 SQL Server では、データベース ロールを介して、これをサポートします。
+これは、データベース管理者が必要なデータベース オブジェクトを作成するスクリプトを実行して、パッケージの管理機能を有効にする必要があります。 詳細については、次を参照してください。 [R パッケージの管理を有効にする方法](r-package-how-to-enable-or-disable.md)です。
 
-データベース管理者は、ロールの設定、およびロールにユーザーを追加することを担当します。 ロールを介したデータベース管理者は追加または SQL Server 環境から R パッケージを削除するアクセス許可を持つユーザー、およびパッケージのインストールを監査することができますを制御できます。
+**SQL Server 2016**管理者は、インスタンスに関連付けられた R ライブラリで R パッケージをインストールする必要があります。 インスタンスで R コードを実行しているすべてのユーザーは、これらのパッケージを使用します。 SQL server で実行されている R コードでは、ユーザーのライブラリでインストールされているパッケージを使用できません。 ただし、管理者を許可できます個々 のユーザーを特定のデータベース内の R スクリプトを実行する機能。
+
+**利点との違いの概要**
+
++ SQL Server 2017 で Machine Learning のサービスを使用している場合は、管理および新しいデータベース ロールと T-SQL ステートメントを使用して R ツールに基づく従来の方法のいずれかを使用して R パッケージをインストールできます。
+
++ 後者の方法では、管理者の詳細に制御を提供するためと組み合わせるとユーザーの自由度が高くすることをお勧めします。 たとえば、ユーザー パッケージをインストールできます独自、ストアド プロシージャを使用するか、または R コード、および他のユーザーと共有のパッケージを使用します。 
+
+    パッケージは、データベースにスコープすることができます、各ユーザー分離のパッケージのサンド ボックスを取得するため、別のバージョンの同じ R パッケージをインストールする簡単です。 コピーまたは、データベース間でユーザーと、パッケージを移動することができますも簡単にします。 
+
++ SQL server パッケージ管理機能の使用によってバックアップおよび復元操作、簡単にします。 作業データベースを新しいサーバーに移行するときに、すべてのパッケージの一覧を読み取るし、新しいサーバー上のデータベースにインストールを行うパッケージ同期関数を使用できます。
+
++ Machine learning のジョブのサーバーを使用する場合は、従来の R ツールを使用して、コンピューターの管理者として R パッケージをインストールする方が便利あります。
+
++ SQL Server 2016 の R Services を使用している場合は、R ツールを使用して、インスタンスで使用される R パッケージのインストールを続行する必要があります > のインスタンスに関連付けられた R ライブラリを使用してください。
+
+次のセクションでは、パッケージの管理の方法についての詳細を提供するこれら 2 つのオプションを使用して実行します。
+
+## <a name="r-package-management-using-t-sql"></a>T-SQL を使用して R パッケージの管理
+
+SQL Server 2017 には、DBA は、データベース レベルでの R パッケージより詳細に制御を提供する新しい T-SQL ステートメントが含まれています。 同時に、DBA は、ユーザーができるよう必要があるあり、他のユーザーと共有するパッケージをインストールする機能。
+
+パッケージを他のユーザーと共有する必要があります。 または、パッケージの管理を有効にすることをお勧め複数のユーザーは、サーバーで machine learning のジョブを実行する必要がある場合、データベース ロールにユーザーの割り当てし、ユーザーが共有できるようにパッケージをアップロードします。
+
+SQL Server 2017 でパッケージの管理は、これらの新しいデータベース オブジェクトと機能に依存します。
+
++ パッケージのアクセスと使用を管理するための新しいデータベース ロール
++ 別の共有とプライベートのパッケージのパッケージのスコープ
++ サーバーに新しいコード ライブラリをアップロードするための外部ライブラリの作成ステートメント
++ SQL Server で、パッケージのインストールをサポートするために、RevoScaleR に新しい R 関数の計算コンテキスト
++ パッケージの簡単なバックアップと復元を確認するため、パッケージ同期
 
 ### <a name="database-roles-for-package-management"></a>パッケージ管理のデータベース ロール
 
-次の新しいデータベース ロールは、SQL Server のセキュリティで保護されたインストールし、R パッケージの管理をサポートします。
+データベース管理者は、パッケージの管理を実行して、スクリプトの説明に従ってここで使用されるロールを作成する必要があります:[を有効にするか、パッケージの管理を無効にする](r-package-how-to-enable-or-disable.md)です。
 
-- `rpkgs-users`: すべてのメンバーによってインストールされた共有のパッケージを使用するユーザーをできるように、`rpkgs-shared`ロール。
+このスクリプトを実行した後は、次の新しいデータベース ロールが表示されます。
 
-- `rpkgs-private`: と同じ権限で共有のパッケージへのアクセスを提供する、`rpkgs-users`ロール。 このロールのメンバーは、プライベート スコープのパッケージをインストール、削除および使用することもできます。
++ `rpkgs-users`: このロールのメンバー パッケージを使用して、共有別にインストールされた`rpkgs-shared`ロールのメンバーです。
 
--  `rpkgs-shared`: 同じアクセス許可を提供する、`rpkgs-private`ロール。 このロールのメンバーであるユーザーは、共有パッケージをインストールまたは削除することもできます。
++ `rpkgs-private`: このロールのメンバーのメンバーと同じ権限での共有パッケージへのアクセスがある、`rpkgs-users`ロール。 このロールのメンバーことができますもインストール、削除、およびスコープを持つ個別のパッケージを使用します。
 
-- `db_owner`: 同じアクセス許可を持つ、`rpkgs-shared`ロール。 また、共有パッケージとプライベート パッケージの両方をインストールまたは削除する権利をユーザーに付与することもできます。
++ `rpkgs-shared`: このロールのメンバーのメンバーと同じアクセス許可がある、`rpkgs-private`ロール。 さらに、このロールのメンバーは、インストールまたは共有のパッケージを削除します。
 
-### <a name="creating-an-external-package-library-using-t-sql"></a>T-SQL を使用して外部パッケージ ライブラリを作成します。
++ `db_owner`: このロールのメンバーのメンバーと同じアクセス許可がある、`rpkgs-shared`ロール。 さらに、このロールのメンバーが**付与**他のユーザーが、インストール、または両方を削除する権利を共有およびプライベート パッケージです。
 
-さらに、T-SQL ステートメントをサポートしている SQL Server 2017**外部ライブラリの作成**、外部ライブラリのデータベース管理者による管理をサポートします。 現在このステートメントを使用して、Python パッケージや、Linux など、他のプラットフォームで実行用に作成されたパッケージの将来のサポートを計画し、r です。 追加の Windows ベースのライブラリを作成することができます。
+DBA は、パッケージをインストールするためのユーザーの権限を制御する、データベースごとにロールにユーザーを追加します。
 
-詳細については、次を参照してください。[外部ライブラリの作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)です。
+### <a name="package-scope"></a>パッケージのスコープ
 
-## <a name="package-management-using-r"></a>R を使用するパッケージの管理
+新しいパッケージ管理機能は、これらは、プライベート、または複数のユーザーで共有できるかどうかによってパッケージを区別します。
 
-**RevoScaleR**パッケージには、関数簡単のインストールと R パッケージの管理をサポートするにはようになりましたが含まれています。 パッケージの管理用のデータベース ロールと組み合わせて、これらの新しい関数には、これらのシナリオがサポートされています。
++ **共有スコープ**
 
-- データ サイエンティストは、SQL Server コンピューターに管理アクセスしなくても、SQL Server に必要な R パッケージをインストールできます。
-- データベース単位ごとに、パッケージがインストールされているし、データベースが移動されると、パッケージが一緒に移動します。
-- パッケージを他のユーザーと共有すると簡単です。 ローカル パッケージ リポジトリを設定する場合、各データ サイエンティストは、自分のデータベースにパッケージをインストールするリポジトリを使用できます。
-- データベース管理者は、R コマンドを実行する方法を学習する必要はありませんし、複雑なパッケージの依存関係を追跡する必要はありません。
-- DBA は、インストール、アンインストール、またはパッケージを使用する SQL Server ユーザーが許可されているコントロールの使い慣れたデータベース ロールを使用できます。
+    *共有範囲*意味共有スコープのロールの権限が与えられているユーザー (`rpkgs-shared`) インストールして、指定したデータベースへのパッケージをアンインストールします。 共有スコープ ライブラリにインストールされたパッケージは、インストールされた R パッケージの使用を許可されたユーザーであれば、SQL Server 上のデータベースの他のユーザーが使用できます。
 
-### <a name="r-package-management-functions"></a>R パッケージの管理機能
++ **プライベート スコープ**
 
-次のパッケージ管理機能は、指定された計算コンテキストでパッケージのインストールと削除のための RevoScaleR で提供されます。
-
-+ [rxInstalledPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstalledpackages): 指定された計算コンテキストでインストールされているパッケージに関する情報を確認します。
-
-+ [rxInstallPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstallpackages): パッケージの zip 形式を指定したリポジトリから、またはローカルに保存されたを読み取ることにより、コンピューティング コンテキストにパッケージをインストールします。
-
-+ [rxRemovePackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxremovepackages): インストール済みパッケージのコンピューティング コンテキストから削除します。
-
-+ [rxFindPackage](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxfindpackage): 指定された計算コンテキストで 1 つまたは複数のパッケージのパスを取得します。
-
-+ [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages): 指定された計算のコンテキストで、ファイル システムおよびデータベース間でパッケージのライブラリにコピーします。
-
-+ [rxSqlLibPaths](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqllibpaths): SQL Server 内で実行中にパッケージのライブラリ ツリーの検索パスを取得します。
-
-これらのパッケージは、既定では、SQL Server 2017 も含まれます。 以上を使用するインスタンスをアップグレードする場合は、SQL Server 2016 のインスタンスにパッケージを追加することができます Microsoft R 9.0.1 です。 詳細については、次を参照してください。 [R をアップグレードするのを使用して SqlBindR.exe](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
-
-これらの関数については、RevoScaleR 関数のリファレンス ページを参照してください: (https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)
-
-## <a name="how-package-management-works"></a>パッケージ管理のしくみ
-
-パッケージをインストールするアクセス許可を持っている場合、R コードのパッケージ管理関数のいずれかを実行し、パッケージを追加または削除する計算コンテキストを指定します。 計算コンテキストは、ローカル コンピューターまたは SQL Server インスタンス上のデータベースの場合があります。 パッケージをインストールする呼び出しが SQL Server で実行されると、資格情報でサーバー上の操作が完了したかどうかが判断されます。 パッケージのインストール関数では、依存関係を確認し、ローカル計算コンテキストでの R パッケージのインストールなど、関連するパッケージを SQL Server にインストールできることを確認します。 パッケージをアンインストールする関数では、依存関係を計算し、SQL Server の他のパッケージで使用されなくなったパッケージが削除されていることを確認し、リソースを解放します。
-
-各データ サイエンティストは、プライベート sandbox R パッケージを作成、他のユーザーに表示されていないプライベート パッケージをインストールできます。 パッケージをデータベースにスコープすることができます、各ユーザー データベースごとに分離されたパッケージのサンド ボックスを取得するため、別のバージョンの同じ R パッケージをインストールする簡単です。
-
-新しいサーバーに、作業用のデータベースを移行する場合、すべてのパッケージの一覧を読み取るし、新しいサーバー上のデータベースにインストールを行うパッケージ同期関数を使用できます。
-
-> [!NOTE]
-> 
-> パッケージの管理の R 関数は、Microsoft R Server 9.0.1 で始まる提供されます。 RevoScaleR の関数は、できない場合は、おそらく最新バージョンにアップグレードする必要があります。
-
-### <a name="bkmk_scope"></a>ロールによるパッケージのスコープの設定
-
-新しいパッケージ管理関数には、SQL Server の特定のデータベース上でのパッケージのインストールと使用のために 2 つのスコープが用意されています。
-
-- **共有スコープ**
-
-  *共有範囲*意味共有スコープのロールの権限が与えられているユーザー (`rpkgs-shared`) インストールして、指定したデータベースへのパッケージをアンインストールします。 共有スコープ ライブラリにインストールされたパッケージは、インストールされた R パッケージの使用を許可されたユーザーであれば、SQL Server 上のデータベースの他のユーザーが使用できます。
-
-- **プライベート スコープ**
-
-  *プライベート スコープ*意味プライベート スコープのロールのメンバーシップが与えられたユーザー (`rpkgs-private`) インストールしたり、ユーザーごとに定義されたプライベートなライブラリの場所にパッケージをアンインストールします。 そのため、プライベート スコープにインストールされているすべてのパッケージは、そのパッケージをインストールしたユーザーのみが使用できます。 言い換えると、SQL Server 上のユーザーは、他のユーザーがインストールしたプライベート パッケージを使用できません。
+    *プライベート スコープ*意味プライベート スコープのロールのメンバーシップが与えられたユーザー (`rpkgs-private`) インストールしたり、ユーザーごとに定義されたプライベートなライブラリの場所にパッケージをアンインストールします。 そのため、プライベート スコープにインストールされているすべてのパッケージは、そのパッケージをインストールしたユーザーのみが使用できます。 言い換えると、SQL Server 上のユーザーは、他のユーザーがインストールしたプライベート パッケージを使用できません。
 
 SQL Server 上のパッケージの展開と管理のために、 *共有* スコープと *プライベート* スコープのモデルを組み合わせてカスタムのセキュア システムを開発できます。
 
@@ -115,101 +106,94 @@ SQL Server 上のパッケージの展開と管理のために、 *共有* ス�
 
 また、ユーザー間をさらに厳格に分離するシナリオや、複数のバージョンのパッケージを使用するシナリオがあります。 この場合、プライベート スコープを使用して、個別のアクセス許可をデータ サイエンティストに付与し、必要なパッケージについてのみインストールと使用を許可することができます。 パッケージはユーザーごとにインストールされるため、1 人のユーザーがインストールしたパッケージは、同じ SQL Server データベースを使用する他のユーザーの作業に影響はありません。
 
-### <a name="synchronizing-r-package-libraries"></a>同期の R パッケージ ライブラリ
+### <a name="create-external-library"></a>外部ライブラリを作成します。
+
+[外部ライブラリの作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)データベース管理者がユーザーの R ツールをしなくてもパッケージを操作に役立つ SQL Server 2017 に導入された新しい T-SQL ステートメントです。 
+
+使用する、**外部ライブラリの作成**zip 形式のファイル形式でインスタンス外部のライブラリにアップロードするステートメント。 承認されたユーザー、ライブラリにアクセスし、自分で使用するためをインストールします。
+
+たとえば、R プロジェクトごとに異なるバージョンの複数のコピーを作成できます。 別個のライブラリとしてアップロードするには、いくつかのバージョンをプライベートに保持し、いくつかのバージョンを他のユーザーと共有することができます。
+
+"Library"は、基本的に、1 つの名前のユーザーを使用できるようにする外部のパッケージのコレクションです。 たとえば、外部ライブラリとして SQL Server に、次のいずれかを公開する可能性があります。
+
++ 依存関係のないと、作成した 1 つの R パッケージ
++ をインストールするパッケージとインストールに必要な依存関係
++ 特定のタスクまたはその依存関係と、プロジェクトに関連する R パッケージのコレクション
+
+ライブラリの名前は、パッケージまたは SQL Server でパッケージのコレクションを管理するためと、インストールされているパッケージから独立していることができます。 ただし、ライブラリ名は、インスタンス間で一意である必要があります。
+
+このステートメントを使用するには、パッケージ管理機能をインスタンスで有効にする必要があります。 詳細については、次を参照してください。[外部ライブラリの作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)です。
+
+> [!NOTE]
+> 現在このステートメントを使用して、r です。 サポートが将来的に Python パッケージと、Linux などの他のプラットフォームで実行されるパッケージで計画的なだけの Windows ベースのライブラリを作成することができます。
+
+外部のライブラリは、サーバーにアップロードされている、インスタンスに関連付けられた R パッケージのライブラリをインストールする必要があります。 これにはこれを行ういくつかの方法があります。
+
++ 標準的な R コマンドを実行`install.packages`sp_execute_external_script 内です。 パッケージをインストールするアクセス許可を持つアカウントを使用して接続をしてください。
+
++ リモート R クライアントから SQL Server に接続し、実行[rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) SQL Server のコンピューティング コンテキストでします。 もう一度、アクセス許可が必要パッケージのインストールにこれを行うプライベートまたは共有のスコープのいずれか。
+
+R と T-SQL の両方を使用してインストール例を参照してください[SQL Server の他のパッケージをインストール](install-additional-r-packages-on-sql-server.md)です。
+
+### <a name="new-r-functions-for-package-installation"></a>パッケージのインストール用の新しい R 関数
+
+ユーザーがの新しい関数を使用してもパッケージの管理用のデータベース ロールを有効にすると、 [ **RevoScaleR** ](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)パッケージを SQL Server のコンピューティング コンテキストとして指定されたインスタンスにインストールします。
+
++ データ サイエンティストは、SQL Server コンピューターに直接アクセスしなくても、SQL Server に必要な R パッケージをインストールできます。
+
++ ユーザーは、パッケージをインストールし、共有スコープを持つパッケージをインストールすることによって、他のユーザーと共有できます。 同じ SQL Server データベースの権限のある他のユーザーは、パッケージにアクセスできます。
+
++ ユーザーは、プライベート sandbox R パッケージを作成、他のユーザーに表示されていないプライベート パッケージをインストールできます。
+
+次のパッケージ管理機能は、指定された計算コンテキストでパッケージのインストールと削除のための RevoScaleR で提供されます。
+
+-   [rxInstalledPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstalledpackages): 指定された計算コンテキストでインストールされているパッケージに関する情報を確認します。
+
+-   [rxInstallPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstallpackages): パッケージの zip 形式を指定したリポジトリから、またはローカルに保存されたを読み取ることにより、コンピューティング コンテキストにパッケージをインストールします。
+
+-   [rxRemovePackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxremovepackages): インストール済みパッケージのコンピューティング コンテキストから削除します。
+
+-   [rxFindPackage](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxfindpackage): 指定された計算コンテキストで 1 つまたは複数のパッケージのパスを取得します。
+
+-   [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages): 指定された計算のコンテキストで、ファイル システムおよびデータベース間でパッケージのライブラリにコピーします。
+
+-   [rxSqlLibPaths](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqllibpaths): SQL Server 内で実行中にパッケージのライブラリ ツリーの検索パスを取得します。
+
+これらの関数を使用するには、必要なアクセス許可のある、SQL Server のコンピューティング コンテキストを使用して SQL Server のインスタンスに接続します。 接続するときに、資格情報は、サーバーで、操作を完了できるかどうかを決定します。
+
+パッケージのインストール関数では、依存関係を確認し、ローカル計算コンテキストでの R パッケージのインストールなど、関連するパッケージを SQL Server にインストールできることを確認します。 パッケージをアンインストールする関数では、依存関係を計算し、SQL Server の他のパッケージで使用されなくなったパッケージが削除されていることを確認し、リソースを解放します。
+
+> [!NOTE]
+> 
+> SQL Server 2017 で既定では、これらの新しい関数が含まれています。 Microsoft R Server では、Microsoft R Server 9.0.1 などの以降のバージョンを使用するインスタンスをアップグレードすることによってこれらの関数を取得する RevoScaleR のバージョンを更新することができます。
+> 
+> 詳細については、次を参照してください。[アップグレード プログラムを使用して SqlBindR.exe](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
+
+### <a name="synchronization-of-r-package-libraries"></a>R パッケージのライブラリの同期
 
 SQL Server 2017 (および Microsoft R Server の 2017 年 4 月リリース) の CTP 2.0 リリースでは、新しい R 関数の*パッケージを同期する*です。
 
 パッケージの同期では、データベース エンジンがパッケージを特定の所有者と、グループによって使用され、必要な場合、それらのパッケージをファイル システムに記述できますを追跡することを意味します。 これらのシナリオでは、パッケージの同期を使用できます。
 
-+ SQL Server のインスタンス間で R パッケージを移動します。
++ SQL Server のインスタンス間で R パッケージを移動するには。
 + 特定のユーザー用のパッケージを再インストールするか、データベースを復元した後にグループ化する必要があります。
 
-詳細については、次を参照してください。 [rxSyncPackages](../r/package-install-uninstall-and-sync.md)です。
+有効にして、この機能を使用する方法の詳細については、次を参照してください。 [for SQL Server の R パッケージ同期](package-install-uninstall-and-sync.md)です。
 
-## <a name="examples"></a>使用例
+## <a name="r-package-management-using-traditional-r-tools"></a>従来の R ツールを使用して R パッケージの管理
 
-これらの例では、パッケージの管理機能の基本的な使用法を示しています。 これらのコマンドを実行するには、インスタンスで R コマンドを実行する権限があることが必要です。
+インスタンス上の R パッケージを管理するための従来の方法をインストールして、R のツールとコマンドを使用してパッケージを一覧表示します。 
 
-+ ターミナル リモート R から実行すると、SQL Server インスタンスを指定するコンピューティング コンテキスト オブジェクトを作成し、引数としてコンピューティング コンテキストを渡すこと、関数を実行します。
++ このオプションは、SQL Server 2016 の初期のリリースを使用している場合、唯一のオプションにすることがあります。  
++ R パッケージの唯一のユーザーは、し、サーバーに管理者としてアクセスしても、このオプションが便利な可能性があります。
++ R パッケージのバージョンの管理を容易にするを使用することができます[miniCRAN](create-a-local-package-repository-using-minicran.md)をローカル リポジトリを作成し、インスタンス間で共有します。
 
-+ ストアド プロシージャからのパッケージ管理機能を実行する必要がありますをラップするそれらの呼び出しで`sp_execute_external_script`です。
+詳細については、次の記事を参照してください。
 
-### <a name="package-scoping"></a>パッケージのスコープ
++ [SQL Server に追加の R パッケージをインストールします。](install-additional-r-packages-on-sql-server.md)
++ [SQL Server にインストールされているパッケージの確認](determine-which-packages-are-installed-on-sql-server.md)
 
-この例は、インスタンスにインストールされているパッケージを確認`myServer`、データベースに`TestDB`です。 パッケージの管理は、特定のデータベースとユーザーに制限されます。 ユーザーが指定されていない場合は、コンピューティング コンテキスト コールを実行するユーザーが使用されます。 詳細については、次を参照してください。[ロールによってパッケージの Scoping](#bkmk_scope)です。
-
-```R
-sqlServerCompute <- RxInSqlServer(connectionString = "Driver=SQL Server;Server=myServer;Database=TestDB;Uid=myID;Pwd=myPwd;");
-sqlPackagePaths <- rxFindPackage(package = "RevoScaleR", computeContext = sqlServerCompute);
-```
-
-### <a name="get-package-location-on-a-remote-sql-server-compute-context"></a>リモート SQL Server のコンピューティング コンテキストでパッケージの場所を取得します。
-
-この例では、計算コンテキスト **sqlServer** の *RevoScaleR*パッケージのパスを取得します。
-
-  ```R
-  sqlPackagePaths <- rxFindPackage(package = "RevoScaleR", computeContext = sqlServerL)
-  ```
-
-### <a name="get-locations-for-multiple-packages"></a>複数のパッケージの場所を取得する
-
-次の例では、計算コンテキスト **sqlServer** の **RevoScaleR** および *lattice*パッケージのパスを取得します。 複数のパッケージに関する情報を取得するには、パッケージ名を含む文字列のベクトルを渡します。
-
-  ```R
-  packagePaths <- rxFindPackage(package = c("RevoScaleR", "lattice"), computeContext = sqlServer)
-  ```
-
-### <a name="use-a-stored-procedure-to-list-packages-in-sql-server"></a>SQL Server でパッケージを一覧表示、ストアド プロシージャを使用します。
-
-Management Studio または現在のインスタンスにインストールされているパッケージの一覧を取得する、T-SQL をサポートしている別のツールからこのコマンドを実行を使用して`rxInstalledPackages`ストアド プロシージャでします。
-
-```SQL
-EXEC sp_execute_external_script 
-  @language=N'R', 
-  @script=N'
-    myPackages <- rxInstalledPackages();
-    OutputDataSet <- as.data.frame(myPackages);
-    '
-```
-
-### <a name="get-package-versions-on-a-remote-compute-context"></a>リモートのコンピューティング コンテキストでパッケージのバージョンを取得します。
-
-コンピューティング コンテキストでインストールされているパッケージのビルド番号とバージョン番号を取得する、R コンソールからこのコマンドを実行*sqlServer*です。
-
-  ```R
-  sqlPackages <- rxInstalledPackages(fields = c("Package", "Version", "Built"), computeContext = sqlServer)
-```
-
-### <a name="install-a-package-on-sql-server"></a>SQL Server にパッケージをインストールする
-
-この例では、 **ggplot2** パッケージとその依存関係を計算コンテキスト *sqlServer*にインストールします。
-
-  ```R
-  pkgs <- c("ggplot2")
-  rxInstallPackages(pkgs = pkgs, verbose = TRUE, scope = "private", computeContext = sqlServer)
-  ```
-
-### <a name="remove-a-package-from-sql-server"></a>パッケージを SQL Server から削除する
-
-この例では、 **ggplot2** パッケージとその依存関係を計算コンテキスト *sqlServer*から削除します。
-
-  ```R
-  pkgs <- c("ggplot2")
-  rxRemovePackages(pkgs = pkgs, verbose = TRUE, scope = "private", computeContext = sqlServer)
-  ```
-
-### <a name="package-synchronization"></a>パッケージの同期
-
-次の例では、データベースで管理されているパッケージの一覧で、ファイル システムにインストールされているパッケージを同期します。 一部のパッケージが存在しない場合は、ファイル システムにインストールされます。
-
-```R
-# Instantiate the compute context
-connectionString <- "Driver=SQL Server;Server=myServer;Database=TestDB;Trusted_Connection=True;"
-computeContext <- RxInSqlServer(connectionString = connectionString )
-
-# Synchronize the packages in the file system for all scopes and users
-rxSyncPackages(computeContext=computeContext, verbose=TRUE)
-```
+SQL Server の 2017 のことをお勧め外部ライブラリの作成に使用することをユーザーと、R パッケージを管理するデータベース ロールを提供します。
 
 ## <a name="next-steps"></a>次の手順
 

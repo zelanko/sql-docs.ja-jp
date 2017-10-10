@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3f531d6b3bd3732c6c4d8c257561a3b3c5c865f2
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 3508b4ac9188906a85a272918ae5cabf4628a3eb
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="view-and-explore-the-data-using-sql-walkthrough"></a>表示して、SQL (チュートリアル) を使用してデータの探索
@@ -53,7 +53,7 @@ ms.lasthandoff: 09/01/2017
     ```SQL
     SELECT TOP 1000 * FROM [dbo].[nyctaxi_sample]
     ```
-    テーブル内のデータが表示されない場合は、前のセクションの「 [トラブルシューティング](/walkthrough-prepare-the-data.md) 」セクションを参照してください。
+    テーブル内のデータが表示されない場合は、前のセクションの「 [トラブルシューティング](walkthrough-prepare-the-data.md) 」セクションを参照してください。
 
 4. このデータ テーブルは、[columnstore インデックス](../../relational-databases/indexes/columnstore-indexes-overview.md)を追加することにより、セットベースの計算に対して最適化されています。 テーブルに簡単な概要を生成するには、このステートメントを実行します。
 
@@ -69,9 +69,9 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="next-lesson"></a>次のレッスン
 
-[R を使用するデータを概要します。](/walkthrough-view-and-summarize-data-using-r.md)
+[R を使用するデータを概要します。](walkthrough-view-and-summarize-data-using-r.md)
 
 ## <a name="previous-lesson"></a>前のレッスン
 
-[PowerShell を使用してデータを準備します。](/walkthrough-prepare-the-data.md)
+[PowerShell を使用してデータを準備します。](walkthrough-prepare-the-data.md)
 

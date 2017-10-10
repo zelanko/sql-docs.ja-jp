@@ -9,16 +9,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: a1df574e0436a9fa81e714dfdc21bcbd43c0bda8
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 0f1c7733f0ce6b132c209961a1fd12da80cbd282
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>ISDeploymentWizard.exe でコマンド プロンプトから、SSIS プロジェクトを配置します。
 このクイック スタート チュートリアルは、Integration Services 配置ウィザードを実行して、コマンド プロンプトから、SSIS プロジェクトを配置する方法を示します`ISDeploymentWizard.exe`です。
 
-Integration Services 配置ウィザードの詳細については、次を参照してください。 [Integration Services 配置ウィザード](/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)です。
+Integration Services 配置ウィザードの詳細については、次を参照してください。 [Integration Services 配置ウィザード](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)です。
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Integration Services 配置ウィザードを開始します。
 1. コマンド プロンプト ウィンドウを開きます。

@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 913aa9c71234d1b170a14f9707be82d45b1cd5b8
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 0ce2e3272c30057f533796e0822256c6235de0c1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="float-and-real-transact-sql"></a>float 型と real 型 (Transact-SQL)
@@ -65,7 +65,7 @@ ms.lasthandoff: 09/01/2017
   
 変換するときに**float**または**実際**を文字データ、CAST () よりも便利な通常は、STR 文字列関数を使用します。 これは、STR 関数の方がより柔軟に形式を制御できるためです。 詳細については、次を参照してください。 [STR & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/str-transact-sql.md)と[関数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/functions.md).
   
-変換**float**値を科学的表記法を使用する**decimal**または**数値**17 桁のみを有効桁数の値に制限されます。 有効桁数が 17 より多い値はゼロに丸められます。
+変換**float**値を科学的表記法を使用する**decimal**または**数値**17 桁のみを有効桁数の値に制限されます。 任意の値 < 5e-18 が 0 に切り捨てです。
   
 ## <a name="see-also"></a>参照
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  

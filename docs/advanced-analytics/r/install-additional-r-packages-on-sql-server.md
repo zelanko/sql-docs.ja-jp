@@ -1,8 +1,8 @@
 ---
-title: "SQL Server に追加の R パッケージをインストールする | Microsoft Docs"
+title: "SQL Server に追加の R パッケージをインストール |Microsoft ドキュメント"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 11/08/2016
+ms.date: 10/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,135 +16,352 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: adc0e5fc229547632759c5702e98d87f4b71cbb3
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: a7afdf4230bd27505afff271a6b4782214eedfb3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
-# <a name="install-additional-r-packages-on-sql-server"></a>SQL Server に追加の R パッケージをインストールする
-このトピックでは、インターネットにアクセスできるコンピューターで、新しい R パッケージを [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] インスタンスにインストールする方法について説明します。
+# <a name="install-additional-r-packages-on-sql-server"></a>SQL Server に追加の R パッケージをインストールします。
 
-## <a name="1-locate-the-windows-binaries-in-zip-file-format"></a>1.ZIP ファイル形式の Windows バイナリを見つける
+この記事では、機械学習が有効になっている SQL Server のインスタンスに新しい R パッケージをインストールする方法について説明します。
 
-R パッケージは、多くのプラットフォームでサポートされます。 インストールするパッケージが Windows プラットフォーム向けのバイナリ形式であることを確認する必要があります。 それ以外の場合、ダウンロードしたパッケージは機能しません。
+> [!IMPORTANT]
+> 新しいパッケージを追加するプロセスは、SQL Server を実行していると、ツールを使用しているのバージョンによって異なります。 
 
-たとえば、 [FISHalyseR](http://bioconductor.org/packages/release/bioc/html/FISHalyseR.html) パッケージを Bioconductor から取得する場合は次の手順に従います。  
-  
-1.  **[パッケージ アーカイブ]** ボックスの一覧で、 **Windows バイナリ** バージョンを見つけます。  
-  
-2.  ZIP ファイルへのリンクを右クリックし、  **[対象をファイルに保存]**を選択します。  
-  
-3.  ZIP 形式のパッケージを格納するローカル フォルダーに移動して、 **[保存]**をクリックします。  
-  
- このプロセスにより、パッケージのローカル コピーが作成されます。 その後、パッケージをインストールするか、ZIP 形式のパッケージをインターネットにアクセスしないサーバーにコピーできます。  
-  
-  
-## <a name="2-open-the-default-r-package-library-for-sql-server-r-services"></a>2.SQL Server R Services の既定の R パッケージ ライブラリを開く 
+**適用されます:** SQL Server 2016 の R Services、SQL Server 2017 機械学習のサービス
 
-[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] が関連付けられている R パッケージがインストールされているサーバー上のフォルダーに移動します。 パッケージは、現在のインスタンスに関連付けられている既定のライブラリにインストールすることが重要です。 
+## <a name="overview-of-package-installation-process"></a>パッケージのインストール処理の概要
 
-このライブラリを検索する方法については、「[Installing and Managing R Packages](../../advanced-analytics/r-services/installing-and-managing-r-packages.md)」 (R パッケージのインストールと管理) を参照してください。
+1.  Windows のバージョンのパッケージがあるかどうかを判断します[適切なパッケージのバージョンと形式を取得する。](#packageVersion)
 
-   パッケージを実行するインスタンスごとに、パッケージの別のコピーをインストールする必要があります。 現時点では、インスタンス間でパッケージを共有することはできません。
-     
-  
-## <a name="3-open-an-administrative-command-prompt"></a>3.管理コマンド プロンプトを開く 
+2.  サーバーがインターネットにアクセスできる、事前に、バイナリのダウンロード: [zip ファイルのダウンロード](#bkmk_zipPreparation)
 
-管理者として R を開きます。  これは、Windows のコマンド プロンプトを使用するか、いずれかの R ユーティリティを使用して行うことができます。
-  
-### <a name="using-the-windows-command-prompt"></a>Windows コマンド プロンプトを使用する 
+    パッケージの依存関係を確認し、インストール中に必要となるすべての関連するパッケージを取得することを確認します。 パッケージとその依存関係のコレクションを準備することをお勧め、 [miniCRAN パッケージ](#bkmk_packageDependencies)です。
 
-1. 管理者として Windows コマンド プロンプトを開き、RTerm.Exe または RGui.exe ファイルが格納されているディレクトリに移動します。  
-  
-    既定のインストールでは、R **\bin** ディレクトリとなります。 たとえば、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、R ツールは次の場所に配置されます。 
+3.  パッケージのインストール方法によって異なります、サーバーがあるインターネットにアクセスするかどうかと SQL Server のバージョン。 推奨されるプロセスは次のとおりです。
 
-    **既定のインスタンス**
-
-     `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin` 
- 
-     **名前付きインスタンス**
-   
-     `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`  
-  
-2. **R.Exe**を実行します。  
-  
-### <a name="using-the-r-command-line-utilities"></a>R コマンドライン ユーティリティを使用する 
-  
-1. Windows エクスプローラーを使用して、R ツールが格納されているディレクトリに移動します。  
-  
-2. **RGui.exe** または **R.exe** を右クリックし、**[管理者として実行]** をクリックします。  
-## <a name="4-install-the-package"></a>4.パッケージをインストールする
-
-パッケージをインストールするための R コマンドは、パッケージをインターネットから取得するか、ローカルの ZIP 形式のファイルから取得するかによって異なります。  
-  
-### <a name="install-package-from-internet"></a>インターネットからパッケージをインストールする  
-  
-1.  一般に、CRAN またはいずれかのミラー サイトから新しいパッケージをインストールするには、次のコマンドを使用します。  
-  
-    ```  
-    install.packages("target_package_name")  
-    ```
+    **SQL Server 2016 用のパッケージのインストール**
     
-    パッケージ名は必ず二重引用符で囲む必要があります。
+    1. データ サイエンティストは、プロジェクトまたはチームに必要なパッケージを提供します。 使用して[miniCRAN](create-a-local-package-repository-using-minicran.md)をその依存関係を持つパッケージのコレクションを準備します。
 
-2.  パッケージがインストールされるライブラリを指定するために、次のようなコマンドを使用してライブラリの場所を設定します。
+    2. データベース管理者は、R ツールを使用してインスタンス ライブラリに、パッケージをインストールします。
+
+    **SQL Server 2017 年 1 のパッケージのインストール**
+
+    1. データベース管理者は、インスタンス上のパッケージの管理を有効にし、新しいパッケージの管理ロールにユーザーを追加します。
+
+    2. データ サイエンティストは、プロジェクトまたはチームに必要なパッケージを提供します。 使用して[miniCRAN](create-a-local-package-repository-using-minicran.md)をその依存関係を持つパッケージのコレクションを準備します。
+
+    3. 外部ライブラリの作成ステートメントを使用して、SQL Server インスタンスには、パッケージをアップロードします。
     
-    ```  
-    lib.SQL <- "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\R_SERVICES\\library"    
+    4. 適切なアクセス許可を持つユーザーがパッケージをインストールから R コードを呼び出すことにより、R スクリプトの実行でデータベースにインスタンスにパッケージを追加すると、したら`sp_execute_external_script`です。
+    
+    5. 適切なアクセス許可を持つユーザーをインストールしたり、パッケージの管理の新しい RevoScaleR 関数を使用して、リモート R クライアントからのパッケージを検索できます。
+
+## <a name="install-new-packages"></a>新しいパッケージをインストールします。
+
+このセクションでは、次のキー パッケージのインストール シナリオの詳細な手順を提供します。 使用するための最適な方法は、これら factores によって異なります。
+
+- 使用している SQL Server のバージョン
+
+- インスタンスの唯一の所有者かは、データベース ロールを使用して複数のユーザーの mamaneg パッケージにしようとしています。
+
+- 依存関係を持つ 1 つのパッケージ、または複数のパッケージをインストールするかどうか
+
+**SQL Server パッケージ管理を使用します。**
+
+インスタンスは、パッケージ管理機能をサポートする場合は、T-SQL または従来の R ツールのいずれかを使用することができます。
+
+-  パッケージの管理と役割に基づいたパッケージのアクセスが SQL Server へのアップロード、R パッケージが有効になっているとします。 ユーザーは、T-SQL を使用してパッケージをインストールします。
+
+    [外部ライブラリの作成を使用してパッケージをインストールします。](#bkmk_sqlInstall)
+
+- サーバーに新しいパッケージを追加するのにには、リモート R クライアントを使用します。 SQL Server 2017 が必要です。 サーバーでパッケージの管理が有効になっている必要があります。 
+
+    [R を使用して、パッケージの管理が有効にすると、サーバーにパッケージをインストールするには](#bkmk_rAddPackage)
+
+- 外部ライブラリの作成を含むその依存関係と共に複数のパッケージで使用するには、パッケージ ライブラリを準備します。
+
+    [MiniCRAN リポジトリからの複数のパッケージをインストールします。](#bkmk_minicran)
+
+**従来の R rools を使用します。**
+
+SQL Server R services の以前のバージョンを使用している場合は従来の R ツールを使用してパッケージをインストールする手順に従います。 必要に応じて、miniCRAN を使用して、インストールのパッケージのコレクションを準備します。
+
+-  R ツールを使用して、既定のインスタンスのライブラリに、R パッケージをインストールします。 管理アクセス権が必要です。
+
+    [R ツールを使用してインスタンス ライブラリ内のパッケージをインストールします。](#bkmk_rInstall)
+
+- 複数のパッケージとその依存関係の簡単なインストールをサポートするためにパッケージの共有のコレクションを作成します。
+
+    [MiniCRAN を使用してパッケージ リポジトリを作成します。](create-a-local-package-repository-using-minicran.md)
+
+### <a name="bkmk_sqlInstall"></a>SQL Server のツールを使用してパッケージをインストールします。
+
+1. インスタンスで SQL Server 2017 の外部ライブラリの管理機能が有効になっていることを確認します。
+
+    [有効にするにまたはパッケージの管理を無効にする方法](r-package-how-to-enable-or-disable.md)
+
+2. このトピックで説明されているサポート対象のデータベース ロールの 1 つを使用して、新しいパッケージをインストールするアクセス許可を持つアカウントを使用してサーバーへの接続: [for SQL Server の R パッケージの管理](r-package-management-for-sql-server-r-services.md)
+
+3.  など、サーバー コンピューター上のフォルダーにインストールする R パッケージを含む zip 形式のファイルをコピー、**ユーザー**または**ドキュメント**フォルダーです。 ネットワーク ドライブまたはクライアント コンピューター上のフォルダーからパッケージを追加することはできません。 パッケージ リポジトリを作成する miniCRAN を使用している場合パッケージ リポジトリ全体をコピー、サーバー上の任意のローカル フォルダー: つまり、ネットワーク ドライブにありません。
+
+    サーバー上の任意のフォルダーへのアクセスを持っていない場合は、バイナリ形式で、パッケージのコンテンツを渡すことができます。 参照してください[外部ライブラリの作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)例についてはします。
+
+4.  パッケージを使用する、データベースから実行、[外部ライブラリの作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)ステートメントです。
+
+    この例では、アカウントがサーバーに新しいパッケージをアップロードして、データベース内の共有のスコープにインストールする権限を持っているものとします。
+
+    次のステートメントは、のリリース版を追加、 [zoo](https://cran.r-project.org/web/packages/zoo/index.html)ローカルのファイル共有から、現在のデータベース コンテキストにパッケージします。
+
+    ```SQL
+    CREATE EXTERNAL LIBRARY zoo
+    FROM (CONTENT = 'C:\Temp\RPackages\zoo_1.8-0.zip')
+    WITH (LANGUAGE = 'R');
     ```
 
-    [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] では、現在 1 つのパッケージ ライブラリのみを使用できることに注意してください。 ユーザー ライブラリにパッケージをインストールしないでください。これを行った場合、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] からパッケージを実行できなくなります。   
-     
-3.  ライブラリの場所が定義されていると、次のステートメントは、人気のある e1070 パッケージを、R Services で使用されるパッケージ ライブラリにインストールします。  
-  
-    ```  
-    install.packages("e1071", lib = lib.SQL)  
-    ```  
-  
-4.  パッケージの取得元のミラー サイトを指定するよう求められます。 現在の場所から便利なミラー サイトを選択します。  
-  
-    現在の CRAN ミラー サイトの一覧については、 [こちら](https://cran.r-project.org/mirrors.html)を参照してください。  
-  
-    > [!TIP]  
-    >  新しいパッケージを追加するたびにミラー サイトを選択しなくても済むように、常に同じリポジトリが使用されるように R 開発環境を構成することができます。  
-    >   
-    >  これを行うには、グローバル R 設定ファイル (.Rprofile) を編集して、次の行を追加します。  
-    >   
-    >  `options(repos=structure(c(CRAN="<mirror site URL>")))`  
-    >   
-    >  R ランタイムの開始時に読み込まれる基本設定およびその他のファイルの詳細については、R コンソールから次のコマンドを実行してください。  
-    >   
-    >  `?Startup`  
-  
-5.  目的のパッケージがその他のパッケージに依存している場合、R インストーラーは依存関係にあるパッケージを自動的にダウンロードしてインストールします。  
-  
-### <a name="manual-package-installation-or-installing-on-computer-with-no-internet-access"></a>パッケージの手動のインストール、またはインターネットにアクセスしないコンピューターへのインストール 
+    データベース所有者 (dbo ロールのメンバー) であるアカウントを使用して、接続する場合、パッケージを使用可能で**共有**スコープ: メンバーとなっているすべてのユーザーは、インストールすることができますの`rpkgs-users`ロール。
 
-1. インストールするパッケージに依存関係がある場合は、必要なパッケージを前もって取得しておき、他のパッケージの ZIP 形式のファイルと一緒にフォルダーに追加します。
+    かどうかにのみアクセスできるアカウントを使用してパッケージをアップロードする**プライベート**スコープだけがこのパッケージをインストールすることができます。
 
-    > [!TIP]
+4.  インスタンスによって使用される R の既定のライブラリにパッケージをインストールするには、R を実行`library()`ストアド プロシージャ sp_execute_external_script コマンド。
+
+    ```SQL
+    EXEC sp_execute_external_script
+    @language =N'R',
+    @script=N'
+    # load the binaries in zoo
+    library(zoo)'
+    ```
+
+    成功した場合、**メッセージ**「パッケージ 'zoo' が正常に展開および MD5 合計チェック」など、ウィンドウは、メッセージを報告する必要があります。 必要なパッケージが既にインストールされている場合、インストール プロセスがアタッチし、必要なパッケージを読み込めません。
+
+    > [!NOTE]
+    > 必要なパッケージが利用できない場合、エラーが返されます。"と呼ばれるパッケージはありません\<required_package\>"です。 
     > 
-    > R パッケージの頻繁なオフライン インストールをサポートする必要がある場合は、[miniCRAN](https://mran.revolutionanalytics.com/package/miniCRAN/) を使用してローカル リポジトリを設定することをお勧めします。  
-  
-2.  R コマンド プロンプトで、次のコマンドを入力し、インストールするパッケージのパスと名前を指定します。  
-   
-    ```  
-    install.packages("C:\\Temp\\Downloaded packages\\mynewpackage.zip", repos=NULL)  
-    ``` 
-     
-    このコマンドはローカルの ZIP 形式のファイルから R パッケージを抽出し (ディレクトリ `C:\Temp\Downloaded packages`にコピーが保存されていると仮定した場合)、ローカル コンピューター上の R ライブラリにパッケージ (および依存関係にあるもの) をインストールします。  
-  
-3.  これまでにコンピューター上の R 環境を変更したことがある場合は、R 環境変数 `.libPath` が、1 つのパスだけを使用していることを確認する必要があります。それはインスタンスの R_SERVICES フォルダーを参照しています。  
-  
-> [!NOTE]
-> SQL Server R Services に加え、Microsoft R Server (スタンドアロン) もインストールする場合、コンピューターには、すべての R ツールとライブラリが付属する R の別のインストールが用意されます。 R_SERVER ライブラリにインストールされるパッケージは、Microsoft R Server のみが使用し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はアクセスできません。  
-> 
->  SQL Server で使用するパッケージをインストールするときは、常に R_SERVICES ライブラリを使用してください。
+    > エラーを避けるためには、パッケージの依存関係を事前に確認またはを実行する前に、1 つの zip ファイルに必要なすべてのパッケージを収集する miniCRAN を使用することをお勧め`CREATE EXTERNAL LIBRARY`です。
 
-  
-## <a name="see-also"></a>参照  
- [SQL Server R Services &#40;データベース内&#41; をセットアップする](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md)  
-  
-  
+### <a name="bkmk_rAddPackage"></a>R を使用して、パッケージの管理が有効にすると、サーバーにパッケージをインストールするには
+
+インスタンス上のパッケージの管理が既に有効な場合は、パッケージの管理の RevoScaleR 関数を使用して、リモート R クライアントから新しい R パッケージをインストールできます。
+
+1. 開始する前に、これらの条件を満たしていることを確認します。
+
+    + R クライアントでは、RevoScale の最新バージョンがあります。 プレリリース版では、一部のパッケージ管理機能は含まれませんでした。
+    + インスタンスであり、データベースに、パッケージの管理を有効になっています。
+    + データベースの管理ロールのいずれかのアクセス許可があります。
+
+2. 文字列変数にインストールするパッケージを一覧表示します。
+
+    ```R
+    packageList <- c("e1071")
+
+3. Define a connection string to the instance and database where package management is enabled, and use the connection string to create a SQL Server compute context.
+
+    ```R
+    sqlcc <- RxInSqlServer(connectionString = myConnString, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
+    ```
+
+4. 呼び出す`rxInstallPackages`コンピューティング コンテキストおよびパッケージ名を含む文字列変数を渡します。
+
+    ```R
+    rxInstallPackages(pkgs = packageList, verbose = TRUE, computeContext = sqlcc)
+    ```
+
+    依存パッケージが必要な場合、それらもダウンロードされます。
+    
+    この例では、接続を行うユーザーの資格情報を使用して、パッケージがインストールされて、パッケージの所有者とスコープが指定されていないためとそのユーザーの既定のスコープを使用してパッケージをインストールします。
+
+### <a name="bkmk_rInstall"></a>R ツールを使用してインスタンス ライブラリ内のパッケージをインストールします。
+
+R ツールを使用すると、SQL Server 2016 および SQL Server 2017 の両方に新しいパッケージをインストールします。 ただし、これを行う管理者をする必要があります。
+
+1.  サーバーがインターネットにアクセスを持たない場合は、あらかじめパッケージをダウンロードします。
+
+    パッケージ リポジトリを使用して、オフラインのパッケージのコレクションを準備することをお勧めします。 詳細については、次を参照してください。 [miniCRAN を使用して、ローカルのパッケージ リポジトリを作成する](create-a-local-package-repository-using-minicran.md)です。
+
+2.  インスタンスは、R ライブラリがインストールされているサーバー上のフォルダーに移動します。
+
+    > [!IMPORTANT] 
+    > 現在のインスタンスに関連付けられている既定のライブラリにパッケージをインストールすることを確認します。 ユーザーのディレクトリにパッケージをインストールことはありません。 既定のライブラリを検索する方法については、次を参照してください。 [SQL Server と共にインストールされている R パッケージ](installing-and-managing-r-packages.md)です。
+
+    パッケージを実行するインスタンスごとに、パッケージの個別のコピーをインストールします。 パッケージは、インスタンス間で共有することはできません。
+
+4.  R コマンド プロンプトを管理者として開きます。
+
+    たとえば、Windows のコマンド プロンプトを使用している場合は、RTerm.Exe または RGui.exe ファイルが配置されているディレクトリに移動します。 
+
+    **[既定のインスタンス]**
+
+    SQL Server 2017:`C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+    
+    SQL Server 2016 の場合:`C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
+
+    **[名前付きインスタンス]**
+
+    SQL Server 2017:`C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
+    
+    SQL Server 2016 の場合:`C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
+
+5.  R コマンドを実行`install.packages`パッケージをインストールします。
+
+    構文は、インターネットやローカルの zip ファイルからパッケージを取得するがかどうかによって異なります。 
+
+    **インターネット接続を使用してパッケージをインストールします。**
+
+    たとえば、次のステートメントは、人気のある e1071 パッケージをインストールします。 二重引用符は、パッケージ名に必要なは常にします。
+
+    ```R
+    install.packages("e1071", lib = lib.SQL)
+    ```
+
+    ミラー サイトを求められたら、現在の場所は便利では任意のサイトを選択します。
+
+    目的のパッケージがその他のパッケージに依存している場合、R インストーラーは依存関係にあるパッケージを自動的にダウンロードしてインストールします。
+
+    **インターネットにアクセスできないと、パッケージを手動でまたは、コンピューターにインストールします。**
+
+    インストールするパッケージに依存関係がある場合は、必要なパッケージを前もって取得しておき、他のパッケージの ZIP 形式のファイルと一緒にフォルダーに追加します。 参照してください、[インストール ヒント](#bkmk_tips)セクション パッケージの準備に関するヘルプを参照します。
+
+    R コマンド プロンプトで、次のコマンドを入力し、インストールするパッケージのパスと名前を指定します。
+
+    ```R
+    install.packages("C:\\Temp\\Downloaded packages\\mynewpackage.zip", repos=NULL)
+    ```
+
+    このコマンドは、ディレクトリにコピーを保存すると仮定した場合、ローカル zip ファイルから 1 つの R パッケージを抽出`C:\Temp\Downloaded packages`、し、ローカル コンピューター上の R ライブラリに (その依存関係) を使用してパッケージをインストールします。
+
+### <a name="bkmk_minicran"></a>MiniCRAN リポジトリからの複数のパッケージをインストールします。
+
+MiniCRAN リポジトリからパッケージをインストールする場合、全体的なプロセスは、1 つの zip ファイルからパッケージをインストールするとよく似ています。 ただし、zip 形式で個々 のパッケージをアップロードするのではなく miniCRAN リポジトリが含まれています、関連の必要なパッケージと同様に、対象パッケージです。
+
+1.  MiniCRAN リポジトリを準備し、サーバー上のローカル フォルダーに zip 形式のファイルをコピーします。
+
+2.  管理者が、T-SQL ステートメントを実行する T-SQL を使用している場合`CREATE EXTERNAL LIBRARY`zip 形式のパッケージのコレクションをデータベースにアップロードします。
+
+    たとえば、次のステートメントは、randomForest パッケージとその依存関係を含む miniCRAN リポジトリを参照します。
+
+    ```R
+    CREATE EXTERNAL LIBRARY randomForest
+    FROM (CONTENT = 'C:\Downloads\Rpackages\randomForest_4.6-12.zip')
+    WITH (LANGUAGE = 'R');
+    ```
+
+3. SQL Server で使用するパッケージをインストールするには、ストアド プロシージャで R コードの一部として、次のコマンドを実行します。
+    
+    ```SQL
+    EXEC sp_execute_external_script
+    @language =N'R',
+    @script=N'
+    # install randomForest and its dependencies
+    library(randomForest)'
+    ```
+
+    成功した場合、**メッセージ**「'randomForest' が正常に開梱済みのパッケージおよび MD5 の合計値をチェック」とも「完了チェーンの実行」などのウィンドウでメッセージを報告する必要があります。
+
+## <a name="package-installation-tips"></a>パッケージのインストールに関するヒント
+
+このセクションでは、さまざまなヒントと SQL Server で R パッケージのインストールに関連するサンプル コードを提供します。 
+
+###  <a name="packageVersion"></a>適切なパッケージのバージョンと形式を取得します。
+
+R パッケージの供給元は複数あります。その中でもよく知られているのは CRAN と Bioconductor です。 R 言語の公式サイト (<https://www.r-project.org/>) には、これらのリソースが多数掲載されています。 または、GitHub に多くのパッケージが公開されており、ここではソース コードを取得できます。 ただし、社内の誰かによって開発された R パッケージが提供されている場合もあります。
+
+元に関係なくをインストールするパッケージが、Windows プラットフォームのバイナリ形式を持つことを確認する必要があります。 それ以外の場合、ダウンロードしたパッケージは、SQL Server 環境で実行できません。
+
+また、パッケージが SQL Server で実行されている R のバージョンと互換性があるかどうかを確認する必要があります。
+
+### <a name="bkmk_zipPreparation"></a>Zip 形式のファイルとしてパッケージをダウンロードします。
+
+サーバーのインストールに、インターネットにアクセスせず、オフライン インストールの zip ファイルの形式でパッケージのコピーをダウンロードします。 パッケージを解凍できません。
+
+たとえば、次の手順は、の正しいバージョンを取得するようになりましたについて説明します。、 [FISHalyseR](http://bioconductor.org/packages/release/bioc/html/FISHalyseR.html)パッケージを Bioconductor、コンピューターがインターネットにアクセスしていると仮定してからです。
+
+1.  **[パッケージ アーカイブ]** ボックスの一覧で、 **Windows バイナリ** バージョンを見つけます。
+
+2.  リンクを右クリックします。ZIP ファイル、および選択**として保存ターゲット**です。
+
+3.  Zip 形式のパッケージが格納されているをクリックして、ローカル フォルダーに移動**保存**です。
+
+このプロセスにより、パッケージのローカル コピーが作成されます。 パッケージをインストールしたり、zip 形式のパッケージをインターネット アクセスが許可されていないサーバーにコピーできます。
+
+ZIP ファイル形式のコンテンツと、R パッケージの作成方法の詳細については、R プロジェクトのサイトから PDF 形式でダウンロードできる、次のチュートリアルを参照することをお勧めします: [Freidrich Leisch: Creating R Packages](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf) (R パッケージの作成)。
+
+### <a name="bkmk_packageDependencies"></a>パッケージの依存関係を取得します。
+
+R パッケージは、多くの場合、これらのいくつかできない可能性があります、インスタンスによって使用される既定の R ライブラリで、その他の複数のパッケージに依存します。 または、パッケージが既にインストールされている依存パッケージの別のバージョンを必要とします。
+
+複数のパッケージをインストールまたは正しいパッケージの種類とバージョン、組織内のすべてのユーザーを取得することを確認する必要がある場合は、複数のユーザーまたはコンピューター間で共有できるローカル リポジトリを作成し、miniCRAN パッケージを使用することをお勧めします。 詳細については、次を参照してください。 [miniCRAN を使用して、ローカルのパッケージ リポジトリを作成する](create-a-local-package-repository-using-minicran.md)です。
+
+### <a name="permissions"></a>Permissions
+
+経験の R ユーザーの場合は、特別なアクセス許可がないか、ダウンロードしておかなくても事前に、コマンドラインからパッケージをインストールすることに慣れてする必要があります。 ただし、ほとんどのサーバーには、インターネット接続がありません。 ファイル共有へのアクセスをさらに、または記憶域が制限されている可能性があります。
+
+このセクションでは、さまざまなレベルの SQL Server 2016 および SQl Server 2017 でパッケージをインストールするために必要な権限について説明します。 インストールを行うことができますの R ツールまたは SQL Server を使用して、プロセスとアクセス許可が若干異なりますが、します。
+
+-   SQL Server 2016
+
+    このリリースでは、コンピューターの管理者のみが必要な場所にパッケージをインストールできます。 標準の R ツールを使用して、パッケージをインストールするが、管理者として実行して、インスタンスに関連付けられた R ツールを使用する必要があります。
+
+-   SQL Server 2017
+
+    このリリースでは、データベース管理者がユーザーにパッケージのインストールを委任することのできる新しい機能を提供します。 DBA は、インスタンスごとのパッケージの管理機能を有効にする必要があります。 この機能を有効にすると、DBA はデータベース ロールを使用して個々 のユーザーに、必要に応じて、パッケージをインストールするか、データベースごとにパッケージを共有する機能を提供します。
+
+    詳細については、次を参照してください。 [for SQL Server の R パッケージの管理](r-package-management-for-sql-server-r-services.md)です。
+
+
+> [!IMPORTANT]
+> 
+> 経験豊富な R ユーザーはユーザー ライブラリで、パッケージをインストールして、ファイル パスを指定して R ソリューションの一部としてそのフォルダー内のパッケージを参照することに慣れてます。 ただし、この方法は、SQL Server ではサポートされません。 詳細と回避策については、次を参照してください。[ユーザー ライブラリでパッケージを使用する方法](packages-installed-in-user-libraries.md)です。
+
+### <a name="comparing-package-management-methods"></a>パッケージの管理方法の比較
+
+このセクションでは、使用可能なパッケージのインストール方法を比較し、いくつか追加の考慮事項と適切なパッケージの管理とインストール方法を決定するのに役立つヒントを示します。
+
+#### <a name="using-sql-server-package-management-features"></a>SQL Server パッケージ管理機能を使用します。
+
+パッケージの管理を有効にした場合は、特定のデータベースのパッケージをインストールします。 R スクリプトが有効になっているすべてのデータベースでパッケージを使用する必要がある場合は、各データベースにインストールする必要があります。
+
+ただし、SQL Server がどのパッケージを使用するアクセス権があるどのユーザーに関する情報を管理するためのユーザーとデータベース間でのパッケージに関する情報をコピーする簡単です。 インスタンス間で移動するときに、一連のユーザーまたはデータベースを復元するときに複数のユーザーや、作業用パッケージを再構築に簡単です。
+
+SQL Server 2017 で T-SQL とパッケージの管理機能の使用は推奨される方法な複数のデータベース ユーザーをインストールするか、R パッケージを実行しています。
+
+この機能は、SQL Server 2017 から使用可能です。
+
+#### <a name="using-r-tools-to-install-packages-for-the-sql-server-instance"></a>R ツールを使用して、SQL Server インスタンスのパッケージをインストールするには
+
+このメソッドを使用する場合、インスタンスにインストールされているパッケージは任意のデータベースで使用できます。 ただし、パッケージがインストールされるため、ファイル システムに直接は、SQL Server の外部、管理する必要があります。 パッケージをバックアップまたは復元することはできません。 さらに、データベース管理者は必要があります R ツールの使用について説明します。
+
+ただし、このソリューションは最も簡単な 1 つの場合、データベースの唯一の所有者です。
+
+#### <a name="managing-multiple-packages-and-multiple-versions-of-the-same-package"></a>複数のパッケージと同じパッケージの複数のバージョンを管理します。
+
+R パッケージのオフライン インストールを実行する必要がある場合のローカル リポジトリを使用して、セットアップ[miniCRAN](https://mran.revolutionanalytics.com/package/miniCRAN/)パッケージを共有し、組織で使用可能なバージョンを管理することができます。
+
+#### <a name="establish-a-single-mirror-site-as-standard"></a>1 つのミラー サイトを標準として確立します。
+
+新しいパッケージを追加するたびにミラー サイトを選択しなくても済むように、常に同じリポジトリが使用されるように R 開発環境を構成することができます。 これを行うには、グローバル R 設定ファイルを編集**です。Rprofile**、し、次の行を追加します。
+
+`options(repos=structure(c(CRAN="<mirror site URL>")))`
+
+示されている現在の CRAN ミラー[このサイト](https://cran.r-project.org/mirrors.html)です。
+
+基本設定および R ランタイムの開始時に読み込まれるその他のファイルの詳細については、R コンソールからこのコマンドを実行します。`?Startup`
+
+#### <a name="know-which-library-you-are-using-for-installation"></a>インストールを使用しているライブラリを知る
+
+何もインストールする前に以前、コンピューター上の R 環境を変更した場合の一時停止後、R の環境変数をことを確認して`.libPath`は 1 つのパスを使用します。
+
+このパスは、インスタンスの R_SERVICES フォルダーを指す必要があります。 詳細については、次を参照してください。 [SQL Server と共にインストールされている R パッケージ](installing-and-managing-r-packages.md)です。
+
+#### <a name="side-by-side-installation-with-r-server"></a>R Server とサイド バイ サイド インストール
+
+SQL Server マシン ラーニング サービスに加えて Microsoft マシン ラーニング Server (スタンドアロン) をインストールした場合、コンピューターが各がどちらも、すべての R ツールとライブラリの重複の R の別のインストールに必要です。
+
+> [!IMPORTANT]
+> 
+> R_SERVER ライブラリにインストールされているパッケージは、Microsoft R Server によってのみ使用され、SQL Server がアクセスできないされます。
+> 
+> 使用してください、`R_SERVICES`ライブラリ SQL Server で使用するパッケージをインストールするときにします。
 

@@ -1,7 +1,7 @@
 ---
-title: "レポート サーバーと Power View Integration Features in SharePoint のアクティブ化 |Microsoft ドキュメント"
+title: "レポート サーバーと SharePoint の Power View 統合機能のアクティブ化 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,38 +10,38 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: c7f64a54-c555-4d31-bf99-3abe57dc8626
-caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: bca4115307f7bf9dab5ffc9d2ab02ababb209d65
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: e97378914a59fab938fc3e4c7926847effcffc94
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
-# <a name="site-collection-features---report-server-and-power-view"></a>サイト コレクション機能のレポート サーバーと Power View
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサイト コレクション機能は、通常、SharePoint 製品用の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] アドインをインストールすると、既定でアクティブ化されます。 場合によっては、この機能を手動でアクティブ化する必要があります。  
+# <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>レポート サーバーと SharePoint の Power View 統合機能のアクティブ化します。
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+  インストールした後、Reporting Services サイト コレクションの機能は既定でアクティブ化、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint 製品用アドインです。 一部の状況では、機能を手動でアクティブ化する必要があります。  
+
+> [!NOTE]
+> SQL Server 2016 より後に、SharePoint と reporting Services の統合を使用できなくします。
+
+ SharePoint 製品のインストール後に SharePoint 2010 製品用 Reporting Services アドインをインストールする場合、レポート サーバーの統合機能と Power View の統合機能はでのみアクティブ化ルート サイト コレクション。 他のサイト コレクション機能を手動でアクティブ化する必要があります。 サイト コレクションがある場合など、 **http://[my サーバー名] [サイト コレクション name]/sites/** Reporting Services サイト コレクションの機能を手動でアクティブ化する必要があります。  
   
- SharePoint 製品のインストール後に SharePoint 2010 製品用の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインをインストールした場合、レポート サーバーの統合機能と Power View の統合機能はルート サイト コレクションでのみアクティブ化されます。 他のサイト コレクションについては、この機能を手動でアクティブ化する必要があります。 たとえば、 **http://[my server name]/sites/[site collection name]** というサイト コレクションが存在する場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサイト コレクション機能を手動でアクティブ化する必要があります。  
-  
- ルート サイト コレクションがない場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインによって、次のようなメッセージがログに記録されます。  
+ ルート サイト コレクションがない場合は、Reporting Services アドインがログには、次のようなメッセージ。  
   
  "SharePoint Web アプリケーション 80 にはルート サイト コレクションがありません"  
   
- メッセージは、"RS_SP_#.log" (# は増加する値) という名前のアドイン インストール ログに記録されます。 ログ ファイルは、現在のユーザーの Temp フォルダー (例: C:\Users\\[user name]\AppData\Local\Temp) にあります。 アドインのインストール方法の詳細については、「 [SharePoint 用 Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)」を参照してください。  
+ メッセージはアドインのインストール ログで、"RS_SP # .log"# には、増分する番号が見つかりました。 ログ ファイルが見つかると、現在のユーザーの Temp フォルダーに、たとえば C:\Users\\[ユーザー名] \AppData\Local\Temp です。アドインのインストール方法の詳細については、「 [SharePoint 用 Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)」を参照してください。  
+
+## <a name="activate-the-report-server-and-power-view-integration-site-collection-features"></a>レポート サーバーと Power View の統合サイト コレクション機能をアクティブ化します。
   
- このトピックの内容:  
-  
--   [レポート サーバーと Power View の統合サイト コレクション機能をアクティブ化するには](#bkmk_features)  
-  
--   [Reporting Services の全体管理のサイト コレクション機能をアクティブ化または非アクティブ化するには](#bkmk_centraladmin)  
-  
-##  <a name="bkmk_features"></a> レポート サーバーと Power View の統合サイト コレクション機能をアクティブ化するには  
-  
-1.  ブラウザーで、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の機能をアクティブ化するサイトを開きます。  
+1.  Reporting Services の機能アクティブなサイトにブラウザーを開きます。  
   
 2.  **[サイトの操作]**をクリックします。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/09/2017
   
  機能を非アクティブ化するには、 **[アクティブ化]** ではなく **[非アクティブ化]**をクリックする点を除き、同じ手順を実行します。  
   
-##  <a name="bkmk_centraladmin"></a> Reporting Services の全体管理のサイト コレクション機能をアクティブ化または非アクティブ化するには  
+## <a name="activate-or-deactivate-reporting-services-central-administration-site-collection-feature"></a>アクティブ化または Reporting Services の非アクティブ化サーバーの全体管理サイト コレクション機能
   
 1.  ブラウザーで SharePoint サーバーの全体管理を開きます。  
   
@@ -71,10 +71,8 @@ ms.lasthandoff: 08/09/2017
   
  機能を非アクティブ化するには、 **[アクティブ化]** ではなく **[非アクティブ化]**をクリックする点を除き、同じ手順を実行します。  
   
-## <a name="next-steps"></a>次の手順  
- 機能をアクティブ化した後、サーバーの統合を続行できます。  
-  
-## <a name="see-also"></a>参照  
- [SharePoint 用 Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
-  
-  
+## <a name="next-steps"></a>次の手順
+
+機能をアクティブ化した後、サーバーの統合を続行できます。
+
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

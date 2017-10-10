@@ -1,6 +1,6 @@
 ---
 title: "リフトし、SQL Server Integration Services のワークロードをクラウドに移動 |Microsoft ドキュメント"
-ms.date: 09/28/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod: sql-server-2017
 ms.technology:
@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
-ms.openlocfilehash: a3693b84ed02583cd47921fbfda84c7df9559b68
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 85ab11747276f0c6c58b13cd409df3e5774915ae
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>クラウドにリフト アンド シフトの SQL Server Integration Services のワークロード
@@ -46,12 +46,15 @@ SSIS 赤外線をプロビジョニングする際に、スケール アップ�
 
 のみ、1 回を SSIS IR にプロビジョニングを行う必要があるとします。 その後、SQL Server Data Tools (SSDT) および SQL Server Management Studio (SSMS) を展開する構成、実行、監視、スケジュール、およびパッケージの管理などの使い慣れたツールを使用できます。
 
-データ ファクトリには、統合ランタイムの他の種類もサポートしています。 赤外線の SSIS との統合のランタイムの他の種類の詳細については、次を参照してください。 [Azure Data Factory で統合ランタイム](/azure/data-factory/concepts-integration-runtime.md)です。
+> [!NOTE]
+> このパブリック プレビュー期間中、Azure SSIS の統合ランタイムはのみ使用可能な米国東部、北ヨーロッパ地域でします。
+
+データ ファクトリには、統合ランタイムの他の種類もサポートしています。 赤外線の SSIS との統合のランタイムの他の種類の詳細については、次を参照してください。 [Azure Data Factory で統合ランタイム](https://docs.microsoft.com/en-us/azure/data-factory/concepts-integration-runtime)です。
 
 ## <a name="prerequisites"></a>前提条件
 このトピックで説明する機能は、SQL Server Data Tools (SSDT) 17.2 以降のバージョンを必要とは、SQL Server 2017 年 1 または SQL Server 2016 は必要ありません。 Azure にパッケージを配置する場合、パッケージの展開ウィザードは、パッケージを常に最新のパッケージ形式にアップグレードされます。
 
-Azure での前提条件の詳細については、次を参照してください。[を Azure に SQL Server Integration Services (SSIS) パッケージのリフト アンド シフト](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md)です。
+Azure での前提条件の詳細については、次を参照してください。[を Azure に SQL Server Integration Services (SSIS) パッケージのリフト アンド シフト](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)です。
 
 ## <a name="ssis-features-on-azure"></a>Azure での SSIS 機能
 
@@ -68,7 +71,7 @@ Windows 認証では、クラウドからオンプレミス データ ソース�
 ## <a name="common-tasks"></a>よく使用するタスク
 
 ### <a name="provision"></a>プロビジョニング
-展開して、Azure で SSIS パッケージを実行することが、前に SSISDB カタログ データベースと Azure SSIS の統合ランタイムをプロビジョニングする必要があります。 この記事でプロビジョニングの手順に従ってください:[を Azure に SQL Server Integration Services (SSIS) パッケージのリフト アンド シフト](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md)です。
+展開して、Azure で SSIS パッケージを実行することが、前に SSISDB カタログ データベースと Azure SSIS の統合ランタイムをプロビジョニングする必要があります。 この記事でプロビジョニングの手順に従ってください:[を Azure に SQL Server Integration Services (SSIS) パッケージのリフト アンド シフト](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)です。
 
 ### <a name="deploy-and-run-packages"></a>展開して、パッケージの実行
 プロジェクトの配置を SQL データベースでのパッケージの実行は、いくつかの使い慣れたツールやスクリプト作成オプションのいずれかを使用できます。
@@ -92,6 +95,6 @@ SQL データベースに格納されたパッケージの実行をスケジュ�
 
 ## <a name="next-steps"></a>次の手順
 Azure での SSIS ワークロードで開始するには、次の記事を参照してください。
--   [Azure に SQL Server Integration Services (SSIS) パッケージをリフト アンド シフト](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md)
+-   [Azure に SQL Server Integration Services (SSIS) パッケージをリフト アンド シフト](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)
 -   [配置、実行、および Azure で SSIS パッケージの監視](ssis-azure-deploy-run-monitor-tutorial.md)
 
