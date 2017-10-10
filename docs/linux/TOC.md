@@ -57,6 +57,7 @@
 ### [bcp を使用した一括コピー](sql-server-linux-migrate-bcp.md)
 
 ## [抽出、変換、読み込み](sql-server-linux-migrate-ssis.md)
+### [制限事項と既知の問題](sql-server-linux-ssis-known-issues.md)
 ### [SSIS の構成](sql-server-linux-configure-ssis.md)
 ### [SSIS パッケージのスケジュール設定](sql-server-linux-schedule-ssis-packages.md)
 

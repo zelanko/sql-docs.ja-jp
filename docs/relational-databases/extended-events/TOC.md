@@ -8,6 +8,7 @@
 # [拡張イベント エンジン](sql-server-extended-events-engine.md)  
 # [拡張イベント セッション](sql-server-extended-events-sessions.md)  
 # [拡張イベントのツール](extended-events-tools.md)  
+## [SSMS XEvent プロファイラーの使用](use-the-ssms-xe-profiler.md)
 ## [system_health セッションの使用](use-the-system-health-session.md)  
 ## [拡張イベントへの PowerShell プロバイダーの使用](use-the-powershell-provider-for-extended-events.md)  
 # [拡張イベント セッションの変更](alter-an-extended-events-session.md)  
