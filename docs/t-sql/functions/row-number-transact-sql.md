@@ -78,7 +78,7 @@ ROW_NUMBER ( )
 
 次のクエリでは、アルファベット順に 4 つのシステム テーブルを返します。
 
-```
+```t-sql
 SELECT 
   name, recovery_model_desc
 FROM sys.databases 
@@ -97,7 +97,7 @@ ORDER BY name ASC;
 
 各行の前に行番号列を追加するを持つ列を追加、`ROW_NUMBER`ここではという名前の関数`Row#`です。 移動する必要があります、`ORDER BY`まで句、`OVER`句。
 
-```
+```t-sql
 SELECT 
   ROW_NUMBER() OVER(ORDER BY name ASC) AS Row#,
   name, recovery_model_desc
@@ -116,7 +116,7 @@ WHERE database_id < 5;
 
 追加する、`PARTITION BY`の句を`recovery_model_desc`列は振りときに、`recovery_model_desc`値の変更。 
  
-```
+```t-sql
 SELECT 
   ROW_NUMBER() OVER(PARTITION BY recovery_model_desc ORDER BY name ASC) 
     AS Row#,
@@ -137,7 +137,7 @@ FROM sys.databases WHERE database_id < 5;
 ### <a name="b-returning-the-row-number-for-salespeople"></a>B. 販売員の行番号を返す  
  次の例では、[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] の販売員について、今年に入ってからの売り上げ順位に基づく行番号を返します。  
   
-```  
+```t-sql  
 USE AdventureWorks2012;   
 GO  
 SELECT ROW_NUMBER() OVER(ORDER BY SalesYTD DESC) AS Row,   
@@ -171,7 +171,7 @@ Row FirstName    LastName               SalesYTD
 ### <a name="c-returning-a-subset-of-rows"></a>C. 行のサブセットを返す  
  次の例では、`SalesOrderHeader` テーブル内のすべての行の行番号を `OrderDate` の順序で計算し、`50` から `60` までの行のみを返します。  
   
-```  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 WITH OrderedOrders AS  
@@ -188,7 +188,7 @@ WHERE RowNumber BETWEEN 50 AND 60;
 ### <a name="d-using-rownumber-with-partition"></a>D. ROW_NUMBER() を PARTITION と共に使用する  
  次の例では、`PARTITION BY` 引数を使用して、列 `TerritoryName` を基準にクエリ結果セットをパーティションに分割します。 `ORDER BY` 句に指定した `OVER` 句によって、列 `SalesYTD` を基準に各パーティション内の行の順序付けが行われます。 `ORDER BY` ステートメントの `SELECT` 句によって、`TerritoryName` を基準にクエリ結果セット全体の順序付けが行われます。  
   
-```  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FirstName, LastName, TerritoryName, ROUND(SalesYTD,2,1) AS SalesYTD,  
@@ -226,7 +226,7 @@ Jae        Pak                  United Kingdom       4116871.22    1
 ### <a name="e-returning-the-row-number-for-salespeople"></a>E. 販売員の行番号を返す  
  次の例を返します、`ROW_NUMBER`営業担当者が、割り当てられている販売ノルマを基にします。  
   
-```  
+```t-sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) 
@@ -255,7 +255,7 @@ RowNumber  FirstName  LastName            SalesQuota
 ### <a name="f-using-rownumber-with-partition"></a>F. ROW_NUMBER() を PARTITION と共に使用する  
  次の例では、`ROW_NUMBER` 関数を `PARTITION BY` 引数と共に使用します。 これにより、`ROW_NUMBER`に各パーティション内の行を番号関数。  
   
-```  
+```t-sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(PARTITION BY SalesTerritoryKey 
