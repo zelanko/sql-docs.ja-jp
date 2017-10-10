@@ -19,11 +19,11 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9646e838fa2d1c8e7f22fd8b53287060a871a686
+ms.translationtype: HT
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 77a4561aa148a98a593d0279f217a354d01c7b31
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>ユーザー定義データ型の別名の作成
@@ -66,8 +66,8 @@ ms.lasthandoff: 06/22/2017
      **データ型**  
      基本データ型をリスト ボックスから選択します。 リスト ボックスには、 **geography**、 **geometry**、 **hierarchyid**、 **sysname**、 **timestamp** 、および **xml** の各データ型以外のすべてのデータ型が表示されます。 既存のユーザー定義データ型のデータ型は編集できません。  
   
-     **既定値**  
-     必要に応じて、ユーザー定義データ型の別名にバインドするルールまたは既定値を選択します。  
+     **[Default]**  
+     必要に応じて、ユーザー定義データ型の別名にバインドする既定値を選択します。  
   
      **[長さ]/[有効桁数]**  
      データ型の長さまたは有効桁数を表示します (適用可能な場合)。 **[長さ]** は、文字ベースのユーザー定義データ型に適用されます。 **[有効桁数]** は、数値に基づくユーザー定義データ型にのみ適用されます。 ラベルは、先に選択されたデータ型によって変わります。 選択されているデータ型の長さまたは有効桁数が固定されている場合、このボックスは変更できません。  
@@ -132,3 +132,4 @@ FROM varchar(11) NOT NULL ;
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)  
   
   
+

@@ -3,7 +3,7 @@ title: "SQL Server データベース エンジンと Azure SQL Database のセ�
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 06/28/2017
+ms.date: 09/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.service: 
@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: f83091b5d69be9b0096a6f286b1535b354c86883
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: ec39e8b4a49d0a452a4030a18f7b7a4c7a5d9922
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/28/2017
   
 |||  
 |-|-|  
-|**だれが認証したか**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Windows 認証<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証|だれが認証したか (Windows または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])<br /><br /> [認証モードの選択](../../relational-databases/security/choose-an-authentication-mode.md)<br /><br /> [Azure Active Directory の認証を使用して、SQL データベースに接続します。](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)|  
+|**だれが認証したか**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") Windows 認証<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Azure Active Directory|だれが認証したか (Windows または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])<br /><br /> [認証モードの選択](../../relational-databases/security/choose-an-authentication-mode.md)<br /><br /> [Azure Active Directory の認証を使用して、SQL データベースに接続します。](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)|  
 |**どこで認証されたか**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") マスター データベース: ログインと DB ユーザー<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") ユーザー データベース: 包含 DB ユーザー|マスター データベースでの認証 (ログインとデータベース ユーザー)<br /><br /> [SQL Server ログインの作成](../../relational-databases/security/authentication-access/create-a-login.md)<br /><br /> [Azure SQL データベースにおけるデータベースとログインの管理](http://msdn.microsoft.com/library/ee336235.aspx)<br /><br /> [データベース ユーザーの作成](../../relational-databases/security/authentication-access/create-a-database-user.md)<br /><br /> <br /><br /> ユーザー データベースでの認証<br /><br /> [包含データベース ユーザー - データベースの可搬性を確保する](../../relational-databases/security/contained-database-users-making-your-database-portable.md)|  
 |**他の ID の使用**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 資格情報<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") 別のログインとして実行<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 別のデータベース ユーザーとして実行|[資格情報 &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)<br /><br /> [別のログインとして実行](../../t-sql/statements/execute-as-transact-sql.md)<br /><br /> [別のデータベース ユーザーとして実行](../../t-sql/statements/execute-as-transact-sql.md)|  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 08/28/2017
   
 |||  
 |-|-|  
-|**自動監査**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査 (サーバーと DB レベル)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 監査 (データベース レベル)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") 脅威検出|[SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL データベースの監査](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [SQL データベース脅威検出を開始](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/)|  
+|**自動監査**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査 (サーバーと DB レベル)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 監査 (データベース レベル)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") 脅威検出| <br /><br /> [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL データベースの監査](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [SQL データベース脅威検出を開始](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/) <br /><br /> [SQL データベースの脆弱性評価](https://docs.microsoft.com/en-us/azure/sql-database/sql-vulnerability-assessment) |  
 |**カスタム監査**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") トリガー|カスタム監査の実装: [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md) と [DML Triggers](../../relational-databases/triggers/dml-triggers.md)の作成|  
 |**準拠**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") コンプライアンス|SQL Server:<br />                        [情報セキュリティ国際評価基準](http://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> SQL データベース:<br />                        [Microsoft Azure セキュリティ センター: 機能による準拠](http://azure.microsoft.com/support/trust-center/services/)|  
   

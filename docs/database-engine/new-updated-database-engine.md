@@ -13,13 +13,13 @@ ms.custom: UpdArt.exe
 ms.workload: database-engine
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: ce80496cdf82c2bc2df2447ed043216e6c78ad7e
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: dc4a5516662b200b4224facbb4c9cf4588c1b42e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-database-engine-docs"></a>新規ドキュメントと最近更新されたドキュメント: データベース エンジン ドキュメント
@@ -34,7 +34,7 @@ ms.lasthandoff: 09/13/2017
 
 
 
-- *更新日の範囲:* &nbsp; **2017 年 7 月 18 日**&nbsp;から&nbsp;**2017 年 9 月 11 日**
+- *更新日の範囲:* &nbsp; **2017 年 9 月 11 日**&nbsp;から &nbsp; **2017 年 9 月 27 日**
 - *件名:* &nbsp; **データベース エンジン**
 
 
@@ -47,11 +47,10 @@ ms.lasthandoff: 09/13/2017
 以下のリンクは、最近追加された新しい記事に移動します。
 
 
-1. [SQL Server のインストール](install-windows/installation-for-sql-server.md)
-2. [SQL Server 2017 のサポートされているバージョンとエディションのアップグレード](install-windows/supported-version-and-edition-upgrades-2017.md)
-3. [SQL Server データベース エンジン](sql-server-database-engine-overview.md)
-4. [データベース エンジンの新機能 - SQL Server 2016](whats-new-in-sql-server-2016.md)
-5. [データベース エンジンの新機能 - SQL Server 2017](whats-new-in-sql-server-2017.md)
+1. [SQL Server のインスタンスへの機能の追加 (セットアップ)](install-windows/add-features-to-an-instance-of-sql-server-setup.md)
+2. [コマンド プロンプトからの SQL Server のインストール](install-windows/install-sql-server-from-the-command-prompt.md)
+3. [構成ファイルを使用した SQL Server のインストール](install-windows/install-sql-server-using-a-configuration-file.md)
+4. [ビジネス継続性とデータベースの復旧 - SQL Server](sql-server-business-continuity-dr.md)
 
 
 
@@ -73,11 +72,11 @@ ms.lasthandoff: 09/13/2017
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>最近更新された記事の簡易一覧
+### <a name="compact-list-of-articles-updated-recently"></a>最近更新された記事の簡易一覧
 
 この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
 
-1. [セカンダリ レプリカの自動シード処理](#TitleNum_1)
+1. [コマンド プロンプトからの更新プログラムのインストール](#TitleNum_1)
 
 
 
@@ -88,41 +87,36 @@ ms.lasthandoff: 09/13/2017
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-automatic-seeding-for-secondary-replicasavailability-groupswindowsautomatic-seeding-secondary-replicasmd"></a>1.&nbsp; [セカンダリ レプリカの自動シード処理](availability-groups/windows/automatic-seeding-secondary-replicas.md)
+### <a name="1-nbsp-installing-updates-from-the-command-promptinstall-windowsinstalling-updates-from-the-command-promptmd"></a>1.&nbsp; [コマンド プロンプトからの更新プログラムのインストール](install-windows/installing-updates-from-the-command-prompt.md)
 
-*更新日: 2017 年 8 月 21 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*更新日: 2017 年 9 月 12 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 55.  ms.author= "mikeray".  -->
+<!-- Source markdown line 48.  ms.author= "mikeray".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 0b7b6a23f38bfe5959ccd170527a9bbdb308dc4b dc51fdf69649ed6cae03584cff7bc900d5b72149  (PR=2896  ,  Filename=automatic-seeding-secondary-replicas.md  ,  Dirpath=docs\database-engine\availability-groups\windows\  ,  MergeCommitSha40=80642503480add90fc75573338760ab86139694c) -->
+<!-- git diff --ignore-all-space --unified=0 04abb23d0682c23654a55e7926d2140f0b6ae408 a4bb1e27ae99460a66da72848ace1417b148f85c  (PR=3122  ,  Filename=installing-updates-from-the-command-prompt.md  ,  Dirpath=docs\database-engine\install-windows\  ,  MergeCommitSha40=1df54edd5857ac2816fa4b164d268835d9713638) -->
 
 
 
-SQL Server 2016 以前では、自動シード処理でデータベースが作成されるフォルダーが既に存在しており、プライマリ レプリカのパスと同じである必要があります。
+- コンピューター上の ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] のすべてのインスタンス、..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] のようなすべての共有コンポーネント、管理ツールを更新します。
 
-SQL Server 2017 では、可用性グループに参加するすべてのレプリカで同じデータとログ ファイルのパスを使用することをお勧めしますが、必要に応じて別のパスを使用することもできます。 たとえば、クロス プラットフォーム可用性グループの場合、SQL Server のあるインスタンスは Windows 上に、SQL Server の別インスタンスは Linux 上に展開することができます。 プラットフォームによって、既定のパスは異なります。 SQL Server 2017 は、既定のパスが異なる SQL Server のインスタンス上にある可用性グループ レプリカをサポートしています。
+```
+    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /AllInstances.
+```
 
-次の表は、自動シード処理に対応できるサポート対象のデータ ディスク レイアウトの例をまとめたものです。
+- ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] の単一のインスタンス、..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] のようなすべての共有コンポーネント、管理ツールから更新プログラムを削除します。
 
-|[プライマリ インスタンス]</br>既定のデータ パス|セカンダリ インスタンス</br>既定のデータ パス|[プライマリ インスタンス]</br>ソース ファイルの場所|セカンダリ インスタンス</br> ターゲット ファイルの場所
-|:------|:------|:------|:------
-|c:\\data\\ |/var/opt/mssql/data/ |c:\\data\\ |/var/opt/mssql/data/|
-|c:\\data\\ |/var/opt/mssql/data/ |c:\\data\\group1\\ |/var/opt/mssql/data/group1/|
-|c:\\data\\ |d:\\data\\ |c:\\data\\ |d:\\data\\
-|c:\\data\\ |d:\\data\\ |c:\\data\\group1\\ |d:\\data\\group1\
+```
+    <package_name>.exe /qs /Action=RemovePatch /InstanceName=MyInstance.
+```
 
-プライマリおよびセカンダリのレプリカ データベースの場所がインスタンスの既定のパスではないシナリオは、この変更の影響を受けません。 セカンダリ レプリカ ファイルのパスをプライマリ レプリカ ファイルのパスと合わせるという要件は同じままです。
+- ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] のような ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] の共有コンポーネントのみ、および管理ツールから更新プログラムを削除します。
 
-|[プライマリ インスタンス]</br>既定のデータ パス|セカンダリ インスタンス</br>既定のデータ パス|[プライマリ インスタンス]</br>ファイルの場所|セカンダリ インスタンス</br> ファイルの場所
-|:------|:------|:------|:------
-|c:\\data\\ |c:\\data\\ |d:\\group1\\ |d:\\group1\\
-|c:\\data\\ |c:\\data\\ |d:\\data\\ |d:\\data\\
-|c:\\data\\ |c:\\data\\ |d:\\data\\group1\\ |d:\\data\\group1\\
-
-プライマリ レプリカとセカンダリ レプリカで既定のパスと既定以外のパスを混合していると、SQL Server 2017 は以前のリリースと異なる動作になります。 次の表は、SQL Server 2017 の動作の一覧です。
+```
+    <package_name>.exe /qs /Action=RemovePatch
+```
 
 
 
@@ -141,24 +135,20 @@ SQL Server 2017 では、可用性グループに参加するすべてのレプ�
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のある対象領域
 
-- [新規 + 更新 (3 + 12): **SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新規 + 更新 (5 + 0): **SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
-- [新規 + 更新 (5 + 1): **SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
-- [新規 + 更新 (19 + 82): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
-- [新規 + 更新 (1 + 8): **SQL 用の Linux** に関するドキュメント](../linux/new-updated-linux.md)
-- [新規 + 更新 (12 + 1): **SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
-- [新規 + 更新 (0 + 1): **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
-- [新規 + 更新 (7 + 1): **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
-- [新規 + 更新 (1 + 1): **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
-- [新規 + 更新 (0 + 2): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
-- [新規 + 更新 (1 + 4): **SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
-- [新規 + 更新 (4 + 1): **Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
-- [新規 + 更新 (0 + 1): **SQL 用のツール**に関するドキュメント](../tools/new-updated-tools.md)
+- [新規 + 更新 (0 + 1): **SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新規 + 更新 (0 + 1): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
+- [新規 + 更新 (4 + 1): **SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
+- [新規 + 更新 (17 + 0): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
+- [新規 + 更新 (3 + 0): **SQL 用の Linux** に関するドキュメント](../linux/new-updated-linux.md)
+- [新規 + 更新 (1 + 1): **SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
+- [新規 + 更新 (2 + 0): **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
+- [新規 + 更新 (0 + 1): **SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
+- [新規 + 更新 (0 + 1): **Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のない対象領域
 
 - [新規 + 更新 (0 + 0): **SQL の ActiveX データ オブジェクト (ADO)** に関するドキュメント](../ado/new-updated-ado.md)
-- [新規 + 更新 (0 + 0): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
+- [新規 + 更新 (0 + 0): **SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
 - [新規 + 更新 (0 + 0): **SQL の Data Quality Services** に関するドキュメント](../data-quality-services/new-updated-data-quality-services.md)
 - [新規 + 更新 (0 + 0): **SQL のデータ マイニング拡張機能 (DMX)** に関するドキュメント](../dmx/new-updated-dmx.md)
 - [新規 + 更新 (0 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
@@ -166,6 +156,10 @@ SQL Server 2017 では、可用性グループに参加するすべてのレプ�
 - [新規 + 更新 (0 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
 - [新規 + 更新 (0 + 0): **SQL の PowerShell** に関するドキュメント](../powershell/new-updated-powershell.md)
 - [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../sample/new-updated-sample.md)
+- [新規 + 更新 (0 + 0): **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
+- [新規 + 更新 (0 + 0): **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
+- [新規 + 更新 (0 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
+- [新規 + 更新 (0 + 0): **SQL のツール**に関するドキュメント](../tools/new-updated-tools.md)
 - [新規 + 更新 (0 + 0): **SQL の XQuery** に関するドキュメント](../xquery/new-updated-xquery.md)
 
 

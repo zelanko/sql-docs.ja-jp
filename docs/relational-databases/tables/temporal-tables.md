@@ -16,16 +16,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: 5f9f128cab773951438aa89998ad76e7ba29bb4d
+ms.sourcegitcommit: 20a301e257244b66e1c149c7cf8cf1f2489eb489
+ms.openlocfilehash: 7115b3aa6dcad15fa26603dfe8555287af015bdf
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="temporal-tables"></a>テンポラル テーブル
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016 では、現時点の正しいデータのみではなく、テーブルに保存されていた任意の時点のデータ情報を提供することを組み込みでサポートするデータベース機能として、システム バージョン管理されたテンポラル テーブルが導入されました。 テンポラルは、ANSI SQL 2011 で導入され、現在は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でサポートされているデータベース機能です。  
+  SQL Server 2016 では、現時点の正しいデータのみではなく、テーブルに保存されていた任意の時点のデータ情報を提供することを組み込みでサポートするデータベース機能として、システム バージョン管理されたテンポラル テーブルが導入されました。 テンポラルは、ANSI SQL 2011 で導入されたデータベース機能です。  
   
  **クイック スタート**  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 07/31/2017
 -   **ビデオ:** 「 [SQL Server 2016 でのテンポラル](http://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016)」でテンポラルに関する 20 分間の説明を参照してください。  
   
 ## <a name="what-is-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルとは  
- システム バージョン管理されたテンポラル テーブルは、データ変更の履歴を完全に保持し、特定の時点の分析を簡単に実行できるよう設計された [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の新しい種類のユーザー テーブルです。 各行の有効期間はシステム (つまりデータベース エンジン) によって管理されているため、この種類のテンポラル テーブルは、システム バージョン管理されたテンポラル テーブルと呼ばれています。  
+ システム バージョン管理されたテンポラル テーブルは、データ変更の履歴を完全に保持し、特定の時点の分析を簡単に実行できるよう設計されたユーザー テーブルの一種です。 各行の有効期間はシステム (つまりデータベース エンジン) によって管理されているため、この種類のテンポラル テーブルは、システム バージョン管理されたテンポラル テーブルと呼ばれています。  
   
  すべてのテンポラル テーブルには、それぞれに **datetime2** データ型が明示的に定義されている 2 つの列があります。 これらの列は、期間列と呼ばれます。 これら期間列は、行が変更されるたびに各行の有効期間を記録するためにシステムのみに使用されます。  
   
