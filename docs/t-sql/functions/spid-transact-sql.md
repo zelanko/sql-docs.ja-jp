@@ -34,7 +34,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40spid-transact-sql"></a>& #x 40; & #x 40 です。SPID (TRANSACT-SQL)
+# <a name="x40x40spid-transact-sql"></a>&#x40;&#x40;です。SPID (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   現在のユーザー プロセスのセッション ID を返します。  
@@ -77,7 +77,7 @@ SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', 
   
 ## <a name="see-also"></a>参照  
  [構成関数](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [sp_lock & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sp_lock &#40;です。TRANSACT-SQL と&#41;です。](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   

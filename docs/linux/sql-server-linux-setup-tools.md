@@ -60,14 +60,12 @@ ms.lasthandoff: 08/02/2017
 1. 以前のバージョンがあれば**mssql ツール**インストールされている、古い unixODBC パッケージを削除します。
 
    ```bash
-   sudo yum update
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
 1. インストールする次のコマンド実行**mssql ツール**unixODBC 開発者パッケージにします。
 
    ```bash
-   sudo yum update
    sudo yum install mssql-tools unixODBC-devel
    ```
 

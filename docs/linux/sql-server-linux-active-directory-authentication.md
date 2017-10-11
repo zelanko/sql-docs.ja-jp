@@ -2,7 +2,7 @@
 title: "SQL Server on Linux での active Directory 認証 |Microsoft ドキュメント"
 description: "このチュートリアルでは、SQL Server on Linux の AAD 認証の構成手順を提供します。"
 author: meet-bhagdev
-ms.date: 09/25/2017
+ms.date: 10/09/2017
 ms.author: meetb
 manager: jhubbard
 ms.topic: article
@@ -11,10 +11,10 @@ ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 57b03ac7c571bc23477b49c39104fa48220495cb
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 09a837b606b0fad62c77db982000cf3d7dc5c48f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>SQL Server on Linux での active Directory 認証
@@ -50,13 +50,15 @@ AD の認証を構成する前にする必要があります。
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 > [!IMPORTANT]
-> この時点では、データベース ミラーリング エンドポイントでサポートされる唯一の認証方法は、証明書です。 WINDOWS 認証方法は、将来のリリースで有効にするされます。
+> 制限事項:
+> - この時点では、データベース ミラーリング エンドポイントでサポートされる唯一の認証方法は、証明書です。 WINDOWS 認証方法は、将来のリリースで有効にするされます。
+> - Centrify、Powerbroker いる Vintela などのサード パーティ AD ツールはサポートされていません 
 
 ## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>参加[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]AD ドメインにホスト
 
 参加を次の手順を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Active Directory ドメインにホストします。
 
-1. 使用して** [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html) **ホスト コンピューターを AD ドメインに参加させる。 まだインストールしていない場合に、realmd と Kerberos クライアント パッケージの両方をインストール、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ホスト マシンの Linux ディストリビューションのパッケージ マネージャーを使用します。
+1. 使用して **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** ホスト コンピューターを AD ドメインに参加させる。 まだインストールしていない場合に、realmd と Kerberos クライアント パッケージの両方をインストール、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ホスト マシンの Linux ディストリビューションのパッケージ マネージャーを使用します。
 
    ```bash
    # RHEL
@@ -206,7 +208,7 @@ AD の認証を構成する前にする必要があります。
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. AD ユーザーが、前の手順で作成した keytab ファイルを作成します。 使用してこれを行うに** [ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**です。 メッセージが表示されたらは、その AD アカウントのパスワードを入力します。
+2. AD ユーザーが、前の手順で作成した keytab ファイルを作成します。 使用してこれを行うに **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**です。 メッセージが表示されたらは、その AD アカウントのパスワードを入力します。
 
    ```bash
    sudo ktutil

@@ -36,7 +36,7 @@ ms.lasthandoff: 09/12/2017
 >   
 >  Integration Services 内にある、Integration Services パッケージ化プロセス内で DQS クレンジングを実行するデータ クレンジング変換を使用します。この機能は Integration Services のインストール時に自動的にインストールされます。 Integration Services のインストールの詳細については、「 [Integration Services のインストール](../../integration-services/install-windows/install-integration-services.md)」を参照してください。  
 >   
->  マスター データ サービスの DQS 統合を有効にして、Excel 用マスター データ サービス アドインの DQS 照合機能を使用します。 詳細については、「 [Enable Data Quality Services Integration with Master Data Services](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)」を参照してください。  
+>  マスター データ サービスの DQS 統合を有効にして、Excel 用マスター データ サービス アドインの DQS 照合機能を使用します。 詳細については、「 [マスター データ サービスを使用した Data Quality Services 統合の有効化](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)」を参照してください。  
   
  DQS インストール プロセスは、3 つの部分から成ります。  
   

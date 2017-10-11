@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 0220ef0349acac274567bb75bcb0e8b38a3126ce
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: d8e99fdb0c3383190c140997e619a05feb9bf3ee
 ms.contentlocale: ja-jp
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上の SQL Server のインストールのガイダンス
@@ -31,7 +31,7 @@ SQL Server 2017 は次の Linux プラットフォームでサポートされて
 
 | プラットフォーム | サポートされているバージョン | 取得
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3 | [RHEL 7.3 を取得します。](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3 または 7.4 | [RHEL 7.4 を取得します。](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [SLES v12 SP2 を入手します。](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Ubuntu 16.04 を取得します。](http://www.ubuntu.com/download/server)
 | **Docker エンジン** | 1.8+ | [Docker を取得します。](http://www.docker.com/products/overview)
@@ -49,9 +49,6 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 | **プロセッサ コア** | 2 コア |
 | **プロセッサの種類** | x64 と互換性のあるのみ |
 
-> [!NOTE]
-> SQL Server エンジンがされてこの時点で最大 1 TB のメモリをテストします。
-
 使用する場合**Network File System (NFS)** 、実稼働環境でのリモートの共有は、次のサポート要件を注意してください。
 
 - 使用して NFS version **4.2 以上**です。 NFS の古いバージョンでは、スパース ファイルの作成、最新のファイル システムに共通 fallocate など、必要な機能はできません。
@@ -66,6 +63,7 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 - [SUSE Linux Enterprise Server をインストールします。](quickstart-install-connect-suse.md)
 - [Ubuntu をインストールします。](quickstart-install-connect-ubuntu.md)
 - [Docker で実行します。](quickstart-install-connect-docker.md)
+- [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 ## <a id="upgrade"></a>SQL Server を更新します。
 
@@ -122,6 +120,12 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
    | SLES | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
    | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
 
+1. **Ubuntu のみ**、パブリック リポジトリ鍵キーをインポートします。
+
+   ```bash
+   sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   ```
+
 1. 新しいリポジトリを構成します。
 
    | プラットフォーム | リポジトリ | Command |
@@ -130,17 +134,8 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
    | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
    | SLES | CU  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
    | SLES | GDR | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
-   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
-   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
-
-1. システムを更新します。
-
-   | プラットフォーム | Update コマンド |
-   |-----|-----|
-   | RHEL | `sudo yum update` |
-   | SLES | `sudo zypper --gpg-auto-import-keys refresh` |
-   | Ubuntu | `sudo apt-get update` |
-
+   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && sudo apt-get update` |
+   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" && sudo apt-get update` |
 
 1. [インストール](#platforms)または[更新](#upgrade)新しいリポジトリから SQL Server。
 

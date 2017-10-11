@@ -87,17 +87,14 @@ WHERE dh.EndDate IS NULL;
   
  部分的な結果セットを次に示します。  
   
- `DepartmentName        MedianCont    MedianDisc`  
-  
- `--------------------   ----------   ----------`  
-  
- `Document Control       16.8269      16.8269`  
-  
- `Engineering            34.375       32.6923`  
-  
- `Executive              54.32695     48.5577`  
-  
- `Human Resources        17.427850    16.5865`  
+ ```
+DepartmentName        MedianCont    MedianDisc
+--------------------   ----------   ----------
+Document Control       16.8269      16.8269
+Engineering            34.375       32.6923
+Executive              54.32695     48.5577
+Human Resources        17.427850    16.5865
+```
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -118,17 +115,14 @@ FROM dbo.DimEmployee;
   
  部分的な結果セットを次に示します。  
   
- `DepartmentName        MedianCont    MedianDisc`  
-  
- `--------------------   ----------   ----------`  
-  
- `Document Control       16.826900    16.8269`  
-  
- `Engineering            34.375000    32.6923`  
-  
- `Human Resources        17.427850    16.5865`  
-  
- `Shipping and Receiving  9.250000     9.0000`  
+ ```
+DepartmentName        MedianCont    MedianDisc  
+--------------------   ----------   ----------  
+Document Control       16.826900    16.8269  
+Engineering            34.375000    32.6923  
+Human Resources        17.427850    16.5865  
+Shipping and Receiving  9.250000     9.0000
+```  
   
 ## <a name="see-also"></a>参照  
  [PERCENTILE_CONT と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/percentile-cont-transact-sql.md)  

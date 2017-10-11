@@ -13,13 +13,13 @@ ms.custom: UpdArt.exe
 ms.workload: relational-databases
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: ee7d66bcd8720234f4aec97d24ce16ed21888a3c
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 70cb071dc7b6f4ff15c5c7dee3f24bb352d6eb61
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>新規または最近の更新: リレーショナル データベース ドキュメント
@@ -34,7 +34,7 @@ ms.lasthandoff: 09/13/2017
 
 
 
-- *更新日の範囲:* &nbsp; **2017 年 7 月 18 日**&nbsp;から&nbsp;**2017 年 9 月 11 日**
+- *更新日の範囲:* &nbsp; **2017 年 9 月 11 日**&nbsp;から &nbsp; **2017 年 9 月 27 日**
 - *対象領域:* &nbsp; **リレーショナル データベース**。
 
 
@@ -47,18 +47,7 @@ ms.lasthandoff: 09/13/2017
 以下のリンクは、最近追加された新しい記事に移動します。
 
 
-1. [Excel から SQL Server または Azure SQL Database にデータをインポートする](import-export/import-data-from-excel-to-sql.md)
-2. [PolyBase Kerberos の接続性のトラブルシューティング](polybase/polybase-troubleshoot-connectivity.md)
-3. [透過的なデータ暗号化 (TDE)](security/encryption/transparent-data-encryption.md)
-4. [Azure SQL Database と Data Warehouse 用の Transparent Data Encryption](security/encryption/transparent-data-encryption-azure-sql.md)
-5. [Azure SQL Database および Data Warehouse 用の Bring Your Own Key サポートによる Transparent Data Encryption](security/encryption/transparent-data-encryption-byok-azure-sql.md)
-6. [PowerShell: Azure Key Vault の自分のキーを使用して Transparent Data Encryption を有効にする](security/encryption/transparent-data-encryption-byok-azure-sql-configure.md)
-7. [PowerShell を使用して Transparent Data Encryption (TDE) プロテクターをローテーションする](security/encryption/transparent-data-encryption-byok-azure-sql-key-rotation.md)
-8. [PowerShell を使用して Transparent Data Encryption (TDE) プロテクターを削除する](security/encryption/transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)
-9. [SQL Server 共有管理オブジェクト (SMO) ライセンス条項](server-management-objects-smo/smo-license-terms.md)
-10. [sys.external_libraries (Transact-SQL)](system-catalog-views/sys-external-libraries-transact-sql.md)
-11. [sys.external_library_files (Transact-SQL)](system-catalog-views/sys-external-library-files-transact-sql.md)
-12. [sp_rxPredict](system-stored-procedures/sp-rxpredict-transact-sql.md)
+1. [SQL Server および Azure SQL Database のデータをインポートおよびエクスポートする](import-export/overview-import-export.md)
 
 
 
@@ -80,11 +69,11 @@ ms.lasthandoff: 09/13/2017
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>最近更新された記事の簡易一覧
+### <a name="compact-list-of-articles-updated-recently"></a>最近更新された記事の簡易一覧
 
 この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
 
-1. [自動調整](#TitleNum_1)
+1. [空間データ型の概要](#TitleNum_1)
 
 
 
@@ -95,44 +84,34 @@ ms.lasthandoff: 09/13/2017
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-automatic-tuningautomatic-tuningautomatic-tuningmd"></a>1.&nbsp; [自動調整](automatic-tuning/automatic-tuning.md)
+### <a name="1-nbsp-spatial-data-types-overviewspatialspatial-data-types-overviewmd"></a>1.&nbsp; [空間データ型の概要](spatial/spatial-data-types-overview.md)
 
-*更新日: 2017 年 8 月 16 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*更新日: 2017 年 9 月 26 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 64.  ms.author= "jovanpop".  -->
+<!-- Source markdown line 27.  ms.author= "rickbyh".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 be765a1acf9bdfd5485520d16160677583e81f8e 135d926227094374e6ec5484e7babee625b44bb2  (PR=2860  ,  Filename=automatic-tuning.md  ,  Dirpath=docs\relational-databases\automatic-tuning\  ,  MergeCommitSha40=e4a6157cb56c6db911406585f841046a431eef99) -->
+<!-- git diff --ignore-all-space --unified=0 96dd44cf49e96d1d543a629d49de297dba9c1753 2e9629f852ea42a213c7c24831bcfa53e40358f2  (PR=0  ,  Filename=spatial-data-types-overview.md  ,  Dirpath=docs\relational-databases\spatial\  ,  MergeCommitSha40=b33976cf92f23fbb13cee0c353fd40608d002d94) -->
 
 
 
-**自動プラン選択の修正**
-
-
-..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] は、プラン選択の機能低下が検出されると常に、最後の既知の正常なプランに自動的に切り替えることができます。
-
-![SQL plan choice correction--media/force-last-good-plan.png "SQL プラン選択修正")
-
-..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] は、正しくないプランの代わりに使う必要があるプランなど、プラン選択機能低下の可能性を自動的に検出します。
-..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] は、最後の既知の正常なプランを適用するとき、適用されたプランのパフォーマンスを自動的に監視します。 適用されたプランが機能低下したプランよりよくない場合、新しいプランは適用されなくなり、..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] は新しいプランをコンパイルします。 適用されたプランが機能低下したプランよりよい場合は、適用されたプランが再コンパイルまで維持されます (たとえば、次の統計またはスキーマ変更時)。
-
-**自動プラン選択修正の有効化**
-
-
-データベースごとに自動調整を有効にし、プラン変更の機能低下が検出されたときは最後の正常なプランを適用することを指定できます。 自動調整は、次のコマンドを使って有効にします。
-
-```
-ALTER DATABASE current
-SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
-```
-このオプションを有効にすると、..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] は、予想される CPU ゲインが 10 秒より大きいか、新しいプランのエラー数が推奨プランのエラー数より多い場合は、推奨を自動的に適用し、適用されたプランが現在のプランよりよいことを検証します。
-
-**代替 - 手動プラン選択修正**
-
-
-自動調整しないときは、ユーザーが定期的にシステムを監視し、機能低下したクエリを検索する必要があります。 プランの機能が低下した場合、ユーザーが見つける必要があります。
+ -  空間データには 2 つの型があります。 **geometry** データ型は平面 (ユークリッド (平面地球)) データをサポートしています。 **geometry** データ型 (平面) は、Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.1.0 および SQL MM (ISO 標準) の両方に準拠しています。
+ -
+ - ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] ではその他に、**geography** データ型もサポートされています。このデータ型は、GPS の緯度経度座標などの楕円体 (球体地球) データを格納します。
+ -
+ -> [!IMPORTANT]
+ -> 空間データ型の機能強化を含め、..!NCLUDE-NotShown--ssSQL11--../../includes/sssql11-md.md)] に導入された空間機能の詳細な説明とサンプルについては、ホワイト ペーパー「[New Spatial Features in SQL Server Code-Named "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407)」 (SQL Server コードネーム "Denali" の新しい空間機能) をダウンロードしてください。
+ -
+ -##  <a name="objects"></a> 空間データ オブジェクト
+ - **geometry** データ型と **geography** データ型は、16 の空間データ オブジェクト (インスタンス型) をサポートしています。 ただし、 *インスタンス化可能*なインスタンス型、つまりデータベース内でインスタンスを作成して使用することができる (インスタンス化できる) インスタンス型は、そのうちの 11 種類のみです。 これらのインスタンスは、親データ型から派生するプロパティによって、 **Points**、 **LineStrings, CircularStrings**、 **CompoundCurves**、 **Polygons**、 **CurvePolygons** 、または **GeometryCollection** 内の複数の **geometry** インスタンスや **geography**インスタンスとして識別されます。 **Geography** 型には、 **FullGlobe**という追加のインスタンス型があります。
+ -
+ - 次の図は、 **geometry** の階層を表しています。 **geometry** データ型と **geography** データ型はこの階層に基づいています。 **geometry** と **geography** のインスタンス化可能な型は青で示されています。
+ -
+ - ![geom_hierarchy--../../relational-databases/spatial/media/geom-hierarchy.gif)
+ -
+ - 図に示されているように、 **geometry** データ型と **geography** データ型のインスタンス化可能な型は **Point**、 **MultiPoint**、 **LineString**、 **CircularString**、 **MultiLineString**、 **CompoundCurve**、 **Polygon**、 **CurvePolygon**、 **MultiPolygon**、および **GeometryCollection**の 10 種類です。 geography データ型には、もう 1 つ **FullGlobe**というインスタンス化可能な型があります。 **geometry** 型および **geography** 型は、特定のインスタンスが適切な形式のインスタンスである限り、明示的に定義されていない場合でも、そのインスタンスを認識できます。 たとえば、STPointFromText() メソッドを使用して **Point** インスタンスを明示的に定義した場合、そのインスタンスは、メソッドの入力が適切な形式である限り、 **geometry** と **geography** によって **Point**として認識されます。 `STGeomFromText()` メソッドを使用して同じインスタンスを定義した場合は、 **geometry** データ型と **geography** データ型の両方で **Point**として認識されます。
 
 
 
@@ -151,24 +130,20 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のある対象領域
 
-- [新規 + 更新 (3 + 12): **SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新規 + 更新 (5 + 0): **SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
-- [新規 + 更新 (5 + 1): **SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
-- [新規 + 更新 (19 + 82): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
-- [新規 + 更新 (1 + 8): **SQL 用の Linux** に関するドキュメント](../linux/new-updated-linux.md)
-- [新規 + 更新 (12 + 1): **SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
-- [新規 + 更新 (0 + 1): **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
-- [新規 + 更新 (7 + 1): **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
-- [新規 + 更新 (1 + 1): **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
-- [新規 + 更新 (0 + 2): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
-- [新規 + 更新 (1 + 4): **SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
-- [新規 + 更新 (4 + 1): **Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
-- [新規 + 更新 (0 + 1): **SQL 用のツール**に関するドキュメント](../tools/new-updated-tools.md)
+- [新規 + 更新 (0 + 1): **SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新規 + 更新 (0 + 1): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
+- [新規 + 更新 (4 + 1): **SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
+- [新規 + 更新 (17 + 0): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
+- [新規 + 更新 (3 + 0): **SQL 用の Linux** に関するドキュメント](../linux/new-updated-linux.md)
+- [新規 + 更新 (1 + 1): **SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
+- [新規 + 更新 (2 + 0): **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
+- [新規 + 更新 (0 + 1): **SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
+- [新規 + 更新 (0 + 1): **Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事のない対象領域
 
 - [新規 + 更新 (0 + 0): **SQL の ActiveX データ オブジェクト (ADO)** に関するドキュメント](../ado/new-updated-ado.md)
-- [新規 + 更新 (0 + 0): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
+- [新規 + 更新 (0 + 0): **SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
 - [新規 + 更新 (0 + 0): **SQL の Data Quality Services** に関するドキュメント](../data-quality-services/new-updated-data-quality-services.md)
 - [新規 + 更新 (0 + 0): **SQL のデータ マイニング拡張機能 (DMX)** に関するドキュメント](../dmx/new-updated-dmx.md)
 - [新規 + 更新 (0 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
@@ -176,6 +151,10 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 - [新規 + 更新 (0 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
 - [新規 + 更新 (0 + 0): **SQL の PowerShell** に関するドキュメント](../powershell/new-updated-powershell.md)
 - [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../sample/new-updated-sample.md)
+- [新規 + 更新 (0 + 0): **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
+- [新規 + 更新 (0 + 0): **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
+- [新規 + 更新 (0 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
+- [新規 + 更新 (0 + 0): **SQL のツール**に関するドキュメント](../tools/new-updated-tools.md)
 - [新規 + 更新 (0 + 0): **SQL の XQuery** に関するドキュメント](../xquery/new-updated-xquery.md)
 
 

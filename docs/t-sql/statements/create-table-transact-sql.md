@@ -1042,21 +1042,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `(1 row(s) affected)`  
-  
- `Test1Col`  
-  
- `-----------`  
-  
- `1`  
-  
- `(1 row(s) affected)`  
-  
- `Test2Col`  
-  
- `-----------`  
-  
- `2`  
+ ```
+ (1 row(s) affected) 
+ Test1Col 
+ ----------- 
+ 1 
+
+ (1 row(s) affected) 
+ Test2Col 
+ ----------- 
+ 2 
+ ```
   
  ローカル一時テーブルまたはグローバル一時テーブルを作成する場合、CREATE TABLE の構文では、FOREIGN KEY 制約を除く制約定義をサポートします。 一時テーブルで FOREIGN KEY 制約が指定されていると、ステートメントは、制約が省略されたことを示す警告メッセージを返します。 テーブルは FOREIGN KEY 制約なしで作成されます。 FOREIGN KEY 制約の中で一時テーブルを参照することはできません。  
   

@@ -1,8 +1,10 @@
 ---
 title: "基本的な可用性グループ (Always On 可用性グループ) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 09/27/2016
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: ff8775c5af9f11abeec6ec04b894010a43f722ef
+ms.sourcegitcommit: b5ac9749e7ba4aecad3f6211750623afa71c9e69
+ms.openlocfilehash: 83bccd06657b880cc4ebf7a21f8b327753dc4bee
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>基本的な可用性グループ (AlwaysOn 可用性グループ)
@@ -32,23 +34,25 @@ ms.lasthandoff: 09/25/2017
 ## <a name="limitations"></a>制限事項  
  基本的な可用性グループでは、SQL Server 2016 Enterprise Edition の拡張可用性グループとは異なり、機能の一部のみを使用します。 基本的な可用性グループには以下の制限があります。  
   
--   使用できるレプリカは 2 つ (プライマリとセカンダリ) までです。  
+- 使用できるレプリカは 2 つ (プライマリとセカンダリ) までです。  
   
--   セカンダリ レプリカに対する読み取りアクセス権はありません。  
+- セカンダリ レプリカに対する読み取りアクセス権はありません。  
   
--   セカンダリ レプリカではバックアップできません。  
-  
--   SQL Server 2016 Community Technology Preview 3 (CTP3) より前のバージョンの SQL Server を実行するサーバーでホストされるレプリカはサポートされません。  
-  
--   既存の基本的な可用性グループに対するレプリカの追加や削除はサポートされません。  
-  
--   可用性データベースは 1 つしかサポートされません。  
-  
--   基本的な可用性グループを拡張可用性グループにアップグレードすることはできません。 グループを削除し、SQL Server 2016 Enterprise Edition のみを実行するサーバーを含むグループに再度追加する必要があります。  
-  
--   基本的な可用性グループがサポートされるのは Standard Edition サーバーの場合のみです。 
+- セカンダリ レプリカではバックアップできません。  
 
--   基本的な可用性グループを分散型可用性グループの一部にすることはできません。 
+- セカンダリ レプリカに対する整合性チェックはありません。 
+
+- SQL Server 2016 Community Technology Preview 3 (CTP3) より前のバージョンの SQL Server を実行するサーバーでホストされるレプリカはサポートされません。  
+  
+- 既存の基本的な可用性グループに対するレプリカの追加や削除はサポートされません。  
+  
+- 可用性データベースは 1 つしかサポートされません。  
+  
+- 基本的な可用性グループを拡張可用性グループにアップグレードすることはできません。 グループを削除し、SQL Server 2016 Enterprise Edition のみを実行するサーバーを含むグループに再度追加する必要があります。  
+  
+- 基本的な可用性グループがサポートされるのは Standard Edition サーバーの場合のみです。 
+
+- 基本的な可用性グループを分散型可用性グループの一部にすることはできません。 
   
 ## <a name="configuration"></a>構成  
  基本的な AlwaysOn 可用性グループは、2 つの SQL Server 2016 Standard Edition サーバーで作成できます。 基本的な可用性グループを作成する場合、作成時に両方のレプリカを指定する必要があります。  

@@ -1,7 +1,7 @@
 ---
-title: "R パッケージの管理を有効または無効にする方法 | Microsoft Docs"
+title: "有効にするにまたは SQL Server の R パッケージの管理を無効にする |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 12/21/2016
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,63 +15,89 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aac055d9a2337f1278d648fbcd17435afe1bd3b3
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 88337da76b3a44b9dc797fd1d9f187bfda7396c8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
-# <a name="r-package---how-to-enable-or-disable"></a>R パッケージ - 有効と無効の切り替え方法
+# <a name="enable-or-disable-r-package-management-for-sql-server"></a>有効にするにまたは SQL Server の R パッケージの管理を無効にします。
 
-既定では、R Services サービスがインストールされている場合でも、SQL Server インスタンスでのパッケージ管理は無効になります。 この機能を有効にする場合は、2 段階の処理で行います。この処理はデータベース管理者が行う必要があります。 
+この記事では、有効または SQL Server 2017 の新しいパッケージ管理機能を無効にするプロセスについて説明します。 この機能により、データベース管理者は、インスタンス上のパッケージのインストールを制御します。 この機能は、ユーザー、必要な R パッケージをインストールする許可を与える、他のユーザーとパッケージを共有したり、新しいデータベース ロールに依存します。
 
-1. SQL Server インスタンス (SQL Server インスタンスごと) のパッケージ管理を有効にする 
-2. SQL Database (SQL Server データベースごと) のパッケージ管理を有効にする 
+既定では、SQL Server の外部のパッケージ管理機能は無効、マシン学習機能がインストールされている場合でもです。
 
+[を有効にする](#bkmk_enable)この機能は 2 段階のプロセスであり、データベース管理者からのいくつかのヘルプが必要です。
 
-パッケージの管理機能を無効にする場合、データベース レベルのパッケージとアクセス許可を削除し、サーバーからロールを削除するプロセスを逆行します。
- 
-1. 各データベース (データベースごと) のパッケージ管理を無効にする 
-2. SQL Server インスタンス (インスタンスごと) のパッケージ管理を無効にする 
+1.  SQL Server インスタンス (SQL Server インスタンスごと) のパッケージ管理を有効にする
 
-> [!IMPORTANT]
-> この機能は開発中です。 構文や機能が今後のリリースで変更される可能性があることに注意してください。 
+2.  SQL Database (SQL Server データベースごと) のパッケージ管理を有効にする
 
-### <a name="to-enable-package-management"></a>パッケージ管理を有効にするには
+[を無効にする](#bkmk_disable)パッケージ管理機能では、データベース レベルのパッケージと、アクセス許可を削除するプロセスを反転し、サーバーから役割を削除します。
 
-パッケージ管理を有効または無効にするには、コマンド ライン ユーティリティ **RegisterRExt.exe**が必要です。これは、SQL Server R Services と共にインストールされる **RevoScaleR** パッケージに含まれています。 既定の場所は次のとおりです。
+1.  各データベース (データベースごと) のパッケージ管理を無効にする
 
-`<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe` 
-    
-1. 管理者特権のコマンド プロンプトを開き、次のコマンドを使用します。
+2.  SQL Server インスタンス (インスタンスごと) のパッケージ管理を無効にする
+
+## <a name="bkmk_enable"></a>パッケージの管理を有効にします。
+
+有効にするにまたはパッケージの管理を無効にする必要があります、コマンド ライン ユーティリティ**RegisterRExt.exe**に含まれている、 **RevoScaleR**パッケージです。
+
+1. 管理者特権のコマンド プロンプトを開き、ユーティリティ、RegisterRExt.exe を含むフォルダーに移動します。 既定の場所は`<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`します。
+
+2. 環境内の適切な引数を指定して、次のコマンドを実行します。
 
     `RegisterRExt.exe /installpkgmgmt [/instance:name] [/user:username] [/password:*|password]`
 
-    このコマンドは、パッケージ管理に必要なインスタンス レベルの成果物を SQL Server コンピューターに作成します。 
+    このコマンドは、パッケージの管理に必要な SQL Server コンピューターのインスタンス レベルのオブジェクトを作成します。 また、インスタンスのスタート パッドを再起動します。
 
-2. データベース レベルでパッケージ管理を追加する場合は、パッケージをインストールする必要があるデータベースごとに、管理者特権のコマンド プロンプトから次のコマンドを実行します。 
+    インスタンスを指定しないと、既定のインスタンスが使用されます。
 
-    `RegisterRExt.exe /installpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]` 
+    ユーザーを指定しないと、現在のセキュリティ コンテキストが使用されます。
 
-    このコマンドは、ユーザーのアクセス許可を制御するために必要な **rpkgs-users**, **rpkgs-private**、および **rpkgs-shared**というデータベース ロールを含む、いくつかのデータベース成果物を作成します。 
+2.  データベース レベルでは、パッケージの管理を追加するには、管理者特権でコマンド プロンプトから、次のコマンドを実行します。
 
-### <a name="to-disable-package-management"></a>パッケージ管理を無効にするには 
+    `RegisterRExt.exe /installpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
+   
+    このコマンドは、ユーザーのアクセス許可を制御するために使用される次のデータベース ロールを含む一部のデータベース アイテムを作成します。 `rpkgs-users`、 `rpkgs-private`、および`rpkgs-shared`です。
 
-1. 管理者特権のコマンド プロンプトから、次のコマンドを実行し、データベース レベルでパッケージ管理を無効にします。
+    ユーザーを指定しないと、現在のセキュリティ コンテキストが使用されます。
 
-   `RegisterRExt.exe /uninstallpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]` 
+3. パッケージをインストールする必要がありますデータベースごとに、コマンドを繰り返します。
 
-    このコマンドは、指定されたデータベースからパッケージ管理に関連するデータベース成果物を削除します。  また、このコマンドは、SQL Server コンピューター上の保護ファイル システムの場所からデータベースごとにインストールされたすべてのパッケージも削除します。
-    
-    コマンドは、パッケージ管理が使用されたデータベースごとに 1 回実行する必要があります。
- 
-2. (省略可能) インスタンスからパッケージ管理機能を完全に削除するには、前の手順ですべてのデータベースのパッケージを削除した後で、管理者特権のコマンド プロンプトから以下のコマンドを実行します。
+4.  新しいロールが正常に作成されたことを確認するには、SQL Server Management Studio でデータベースをクリックして、展開**セキュリティ**、展開と**データベース ロール**です。
+
+    Sys.database_principals、次のようにクエリを実行することもできます。
+
+    ```SQL
+    SELECT pr.principal_id, pr.name, pr.type_desc,   
+        pr.authentication_type_desc, pe.state_desc,   
+        pe.permission_name, s.name + '.' + o.name AS ObjectName  
+    FROM sys.database_principals AS pr  
+    JOIN sys.database_permissions AS pe  
+        ON pe.grantee_principal_id = pr.principal_id  
+    JOIN sys.objects AS o  
+        ON pe.major_id = o.object_id  
+    JOIN sys.schemas AS s  
+        ON o.schema_id = s.schema_id;
+    ```
+
+4.  適切なアクセス許可を持つユーザーを使用できる機能が有効にすると、[外部ライブラリの作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)パッケージに追加するには、t-sql ステートメントです。 このしくみの例は、次を参照してください。 [SQL Server のその他のパッケージをインストール](install-additional-r-packages-on-sql-server.md)です。
+
+## <a name="bkmk_disable"></a>パッケージの管理を無効にします。
+
+1.  管理者特権のコマンド プロンプトから、次のコマンドを実行し、データベース レベルでパッケージ管理を無効にします。
+
+    `RegisterRExt.exe /uninstallpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
+
+    パッケージの管理が使用されたデータベースごとに 1 回、このコマンドを実行します。 このコマンドは、指定されたデータベースからパッケージの管理に関連するデータベース オブジェクトが削除されます。 SQL Server コンピューターのセキュリティで保護されたファイル システムの場所からインストールされたすべてのパッケージも削除されます。
+
+2.  (省略可能)前の手順を使用してパッケージのすべてのデータベースが消去された後は、管理者特権でコマンド プロンプトから次のコマンドを実行します。
 
     `RegisterRExt.exe /uninstallpkgmgmt [/instance:name] [/user:username] [/password:*|password]`
 
-    このコマンドは、SQL Server インスタンスからパッケージ管理で使用されたインスタンス レベルの成果物を削除します。 
-
+    このコマンドは、インスタンスからパッケージの管理機能を削除します。
 
 ## <a name="see-also"></a>参照
-[SQL Server R Services の R パッケージ管理](../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)
 
+[SQL Server の R パッケージの管理](r-package-management-for-sql-server-r-services.md)

@@ -1,5 +1,5 @@
 # [概要](in-memory-oltp-in-memory-optimization.md)  
-# [クイック スタート 1: Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](survey-of-initial-areas-in-in-memory-oltp.md)  
+# [Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジのインベントリ](survey-of-initial-areas-in-in-memory-oltp.md)  
 # [概要と使用シナリオ](overview-and-usage-scenarios.md)
 # [SQL Server 2016 内部構造に関するホワイト ペーパー](sql-server-in-memory-oltp-internals-for-sql-server-2016.md) 
 # [SQL Server でのインメモリ OLTP 機能の採用計画](plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  

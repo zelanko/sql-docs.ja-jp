@@ -206,9 +206,10 @@ SELECT TOP(1) DATEPART (day,'12/20/1974') FROM dbo.DimCustomer;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`--------`
-  
- `20`  
+```
+--------
+20
+```  
   
 次の例は、日付の年の部分を返します`12/20/1974`です。
   
@@ -220,9 +221,10 @@ SELECT TOP(1) DATEPART (year,'12/20/1974') FROM dbo.DimCustomer;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`--------`
-  
- `1974`  
+```
+--------
+1974
+```  
   
 ## <a name="see-also"></a>参照
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)

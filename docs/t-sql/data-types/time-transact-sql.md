@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f79bc1df77566540cdce25e12e7ed20c6836e122
+ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
+ms.openlocfilehash: fc0a9e68c9dc3ad664a4f091b73b073038c7f4c1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
@@ -44,12 +44,12 @@ ms.lasthandoff: 09/01/2017
   
 |プロパティ|値|  
 |--------------|-----------|  
-|構文|**時間**[(*秒の小数部の有効桁数*)]|  
+|構文|**時間**[(*小数部の 2 番目のスケール*)]|  
 |使用方法|宣言@MyTime **time (7)**<br /><br /> Table1 のテーブルの作成 (Column1 **time (7)** )|  
-|*秒の小数部の有効桁数*|秒の小数点以下の有効桁数を指定します。<br /><br /> 0 ～ 7 の整数を指定できます。 Informatica の 0 から 3 の整数を指定できます。<br /><br /> 既定の有効桁数は 7 (100ns) です。|  
+|*秒の小数部の桁数*|秒の小数点以下の有効桁数を指定します。<br /><br /> 0 ～ 7 の整数を指定できます。 Informatica の 0 から 3 の整数を指定できます。<br /><br /> 既定の小数部のスケールは、7 (100 ns) です。|  
 |既定の文字列リテラル形式<br /><br /> (下位のクライアントに使用)|hh:mm:ss [.nnnnnnn] (Informatica の hh:mm:ss [.nnn])<br /><br /> 詳細については、これに続く「ダウンレベルのクライアントの旧バージョンとの互換性」セクションを参照してください.|  
 |範囲|00:00:00.0000000 から 23:59:59.9999999 (00:00:00.000 Informatica の 23:59:59.999 経由)|  
-|要素範囲|hh は、0 ～ 23 の時を表す 2 桁の数字です。<br /><br /> mm は、0 ～ 59 の分を表す 2 桁の数字です。<br /><br /> ss は、0 ～ 59 の秒を表す 2 桁の数字です。<br /><br /> n* は、秒の有効桁数を表す 0 ～ 7 桁の数字です (0 ～ 9999999)。 Informatica での n\* 0 から 999 まで 3 桁の数字のゼロです。|  
+|要素範囲|hh は、0 ～ 23 の時を表す 2 桁の数字です。<br /><br /> mm は、0 ～ 59 の分を表す 2 桁の数字です。<br /><br /> ss は、0 ～ 59 の秒を表す 2 桁の数字です。<br /><br /> n\*0 ~ 9999999、秒の小数部を表す、0 ~ 7 桁の数字です。 Informatica での n\* 0 から 999 まで 3 桁の数字のゼロです。|  
 |文字長|最大 16 (hh:mm:ss.nnnnnnn) に 8 文字以上 (hh:mm:ss)。 Informatica、最大値は 12 (hh:mm:ss.nnn) です。|  
 |有効桁数、小数点以下桁数<br /><br /> (ユーザーは小数点以下桁数のみ指定)|次の表を参照してください。|  
 |ストレージのサイズ|既定では 5 バイト固定 (秒部分の既定の有効桁数は 100ns) です。 Informatica、既定値は 4 バイト、小数部を 1 ミリ秒の既定値は、固定有効桁数を 2 番目です。|  

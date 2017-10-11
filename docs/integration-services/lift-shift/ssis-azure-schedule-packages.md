@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 7efd6f635391afba3133b508fadeeab1132273c0
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: a3ecfce9a6adac332b72033955ba51271ed8197b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Azure で SSIS パッケージの実行をスケジュールします。
@@ -58,13 +58,13 @@ ms.lasthandoff: 09/25/2017
 
 ## <a name="elastic"></a>SQL Database の弾力性ジョブを使用してパッケージのスケジュール
 
-SQL データベースでエラスティック ジョブに関する詳細については、次を参照してください。[管理するスケール アウト クラウド データベース](/azure/sql-database/sql-database-elastic-jobs-overview.md)です。
+SQL データベースでエラスティック ジョブに関する詳細については、次を参照してください。[管理するスケール アウト クラウド データベース](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)です。
 
 ### <a name="prerequisites"></a>前提条件
 
 弾力性ジョブを使用して、Azure SQL データベース サーバー上の SSISDB カタログ データベースに格納されている SSIS パッケージをスケジュールすることができます、前に、次の作業を行う必要があります。
 
-1.  インストールし、弾力性データベース ジョブ コンポーネントを構成します。 詳細については、次を参照してください。[弾力性データベースをインストールするジョブの概要](/azure/sql-database/sql-database-elastic-jobs-service-installation.md)です。
+1.  インストールし、弾力性データベース ジョブ コンポーネントを構成します。 詳細については、次を参照してください。[弾力性データベースをインストールするジョブの概要](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation)です。
 
 2. ジョブを使用して、SSIS カタログ データベースにコマンドを送信するデータベース スコープ資格情報を作成します。 詳細については、次を参照してください。 [CREATE DATABASE SCOPED CREDENTIAL (TRANSACT-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)です。
 
@@ -110,7 +110,7 @@ Azure データ ファクトリ SQL Server ストアド プロシージャ ア�
 3.  ドライブのスケジュール設定を出力データセットを作成します。
 4.  SSIS パッケージを実行する SQL Server ストアド プロシージャ アクティビティを使用する Data Factory パイプラインを作成します。
 
-このセクションでは、これらの手順の概要を示します。 データ ファクトリの完全なチュートリアルは、この記事の範囲外です。 詳細については、次を参照してください。 [SQL Server ストアド プロシージャ アクティビティ](/azure/data-factory/data-factory-stored-proc-activity.md)です。
+このセクションでは、これらの手順の概要を示します。 データ ファクトリの完全なチュートリアルは、この記事の範囲外です。 詳細については、次を参照してください。 [SQL Server ストアド プロシージャ アクティビティ](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity)です。
 
 ### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>SQL データベースのリンクされたサービスをホストする SSISDB の作成
 リンクされたサービスには、SSISDB に接続するデータ ファクトリことができます。
@@ -221,4 +221,4 @@ GO
 ## <a name="next-steps"></a>次の手順
 SQL Server エージェントに関する詳細については、次を参照してください。[パッケージの SQL Server エージェント ジョブ](../packages/sql-server-agent-jobs-for-packages.md)です。
 
-SQL データベースでエラスティック ジョブに関する詳細については、次を参照してください。[管理するスケール アウト クラウド データベース](/azure/sql-database/sql-database-elastic-jobs-overview.md)です。
+SQL データベースでエラスティック ジョブに関する詳細については、次を参照してください。[管理するスケール アウト クラウド データベース](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)です。

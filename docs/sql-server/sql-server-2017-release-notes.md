@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 リリース ノート | Microsoft Docs"
 ms.custom: 
-ms.date: 08/25/2017
+ms.date: 10/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,21 +15,56 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 0288cee4b9dee5fba6b67b21e81193bdbe374a94
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 373d01cf6a8032d76c36af0b84be7180c79a7117
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 リリース ノート
-このトピックでは、 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]での制限事項と問題について説明します。 関連情報については、次を参照してください。
-- [SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)。
-- [SQL Server on Linux リリース ノート](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)。
+このトピックでは、SQL Server 2017 での制限事項と問題について説明します。 関連情報については、次を参照してください。
+- [SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)
+- [Linux 上の SQL Server のリリース ノート](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)
 
-[![Evaluation Center からダウンロードする](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  **お試しください:** [最新の SQL Server 2017 リリース (RC2、2017 年 8 月) をダウンロードする](http://go.microsoft.com/fwlink/?LinkID=829477)。
+**SQL Server をお試しください。**
+- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 のダウンロード](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Virtual Machine の作成](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [SQL Server 2017 で Virtual Machine をすぐにご利用いただけます](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
+## <a name="sql-server-2017---general-availability-release-october-2017"></a>SQL Server 2017 - 一般提供リリース (2017 年 10 月)
+### <a name="database-engine"></a>データベース エンジン
+
+- **問題およびユーザーへの影響:** アップグレード後、既存の FILESTREAM のネットワーク共有が使用できなくなる場合がある。
+
+- **回避策:** 最初にコンピューターを再起動し、FILESTREAM のネットワーク共有が利用可能かどうかを確認します。 それでも共有が使用できない場合は、次の操作を行います。
+
+    1. SQL Server 構成マネージャーで SQL Server インスタンスを右クリックして、**[プロパティ]** をクリックします。 
+    2. **[FILESTREAM]** タブの **[ファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする]** のチェックを外して、**[適用]** をクリックします。
+    3. もう一度、元の共有名で **[ファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする]** をチェックして、**[適用]** をクリックします。
+
+### <a name="master-data-services-mds"></a>マスター データ サービス (MDS)
+- **問題およびユーザーへの影響:** [user permissions]\(ユーザーのアクセス許可)\ のページで、エンティティのツリー ビューのルート レベルにアクセス許可を付与すると、次のエラーが表示される: `"The model permission cannot be saved. The object guid is not valid"`
+
+- **回避策:** 
+  - ツリー ビューのルート レベルではなくサブノードにアクセス許可を付与します。
+  - または
+  - MDS チーム ブログの[エンティティ レベルでのアクセス許可適用時のエラー](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)に関する投稿に記されているスクリプトを実行します
+
+### <a name="analysis-services"></a>Analysis Services
+- **問題およびユーザーへの影響:** 1400 の互換性レベルの表形式モデルで Get Data を使用すると、Amazon Redshift、IBM Netezza、Impala などの一部のデータ ソースのデータ コネクタがまだ使用できない。
+- **回避策:** ありません。   
+
+- **問題およびユーザーへの影響:** パースペクティブを含む 1400 の互換性レベルの直接クエリ モデルが、メタデータのクエリまたは検索時に失敗する場合がある。
+- **回避策:** パースペクティブを削除して、再展開します。
+
+### <a name="tools"></a>ツール
+- **問題およびユーザーへの影響:** *DReplay* の実行が "Error DReplay Unexpected error occurred!"\(DReplay エラー 予期しないエラーが発生しました)\ のメッセージにより失敗する。
+- **回避策:** ありません。
+
+
+![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 リリース候補 (RC2、2017 年 8 月)
 このリリースに対する、Windows 上の SQL Server のリリース ノートはありません。 [Linux 上の SQL Server のリリース ノート](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)に関する記事をご覧ください。
+
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>SQL Server 2017 リリース候補 (RC1 - 2017 年 7 月)

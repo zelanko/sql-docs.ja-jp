@@ -1,6 +1,6 @@
 ---
 title: "Linux 上の SQL Server Integration Services のインストール |Microsoft ドキュメント"
-description: "このトピックでは、Linux に SQL Server Integration Services をインストールする方法について説明します。"
+description: "このトピックでは、Linux に SQL Server Integration Services (SSIS) をインストールする方法について説明します。"
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
@@ -8,13 +8,12 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
-ms.technology: integration-services
-ms.assetid: 
+ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 520b650e0f1dac950797d481609478c6c6548f5a
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: cd81ffd71eb78a553703fc31650a0e60a8c513aa
 ms.contentlocale: ja-jp
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux 上の SQL Server Integration Services (SSIS) のインストールします。
@@ -31,37 +30,36 @@ SQL Server Integration Services をインストールするには、この記事
 ## <a name="ubuntu"></a>Ubuntu で SSIS をインストールします。
 インストールする、 `mssql-server-is` Ubuntu でパッケージ化、これらの手順に従います。
 
-1.  パブリック リポジトリ鍵キーをインポートします。
+1. パブリック リポジトリ鍵キーをインポートします。
 
-    ```bash
-    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-    ```
+   ```bash
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   ```
 
-2.  Microsoft SQL Server Ubuntu リポジトリを登録します。
+2. Microsoft SQL Server Ubuntu リポジトリを登録します。
 
-    ```bash
-    curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list | sudo tee /etc/apt/sources.list.d/mssql-server.list
-    ```
+   ```bash
+   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
+   ```
 
-3.  SQL Server Integration Services をインストールする次のコマンドを実行します。
+3. SQL Server Integration Services をインストールする次のコマンドを実行します。
 
-    ```bash
-    sudo apt-get update
-    sudo apt-get install -y mssql-server-is
-    ```
+   ```bash
+   sudo apt-get update
+   sudo apt-get install -y mssql-server-is
+   ```
 
+4. Integration Services をインストールすると、実行`ssis-conf`です。 詳細については、次を参照してください。 [ssis conf Linux での構成の SSIS](sql-server-linux-configure-ssis.md)です。
 
-4.  Integration Services をインストールすると、実行`ssis-conf`です。 詳細については、次を参照してください。 [ssis conf Linux での構成の SSIS](sql-server-linux-configure-ssis.md)です。
+   ```bash
+   sudo /opt/ssis/bin/ssis-conf setup
+   ```
 
-    ```bash
-    sudo /opt/ssis/bin/ssis-conf setup
-    ```
+5. 構成が完了したら、パスを設定します。
 
-5.  構成が完了したら、パスを設定します。
-
-    ```bash
-    export PATH=/opt/ssis/bin:$PATH
-    ```
+   ```bash
+   export PATH=/opt/ssis/bin:$PATH
+   ```
 
 ### <a name="update-ssis"></a>SSIS を更新します。
 既に存在する場合`mssql-server-is`インストールされている、次のように次のコマンドで最新バージョンに更新できます。
@@ -79,47 +77,30 @@ sudo apt-get remove msssql-server-is
 ## <a name="RHEL"></a>RHEL に SSIS をインストールします。
 インストールする、 `mssql-server-is` RHEL にパッケージ化、これらの手順に従います。
 
+1. Microsoft SQL Server の Red Hat リポジトリの構成ファイルをダウンロードします。
 
-1.  スーパー ユーザーのモードを入力します。
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
+   ```
 
-    ```bash
-    sudo su
-    ```
+1. SQL Server Integration Services をインストールする次のコマンドを実行します。
 
-
-2.  Microsoft SQL Server の Red Hat リポジトリの構成ファイルをダウンロードします。
-
-    ```bash
-    curl https://packages.microsoft.com/config/rhel/7/mssql-server.repo > /etc/yum.repos.d/mssql-server.repo
-    ```
+   ```bash
+   sudo yum install -y mssql-server-is
+   ```
 
 
-3.  スーパー ユーザーのモードを終了します。
+1. インストールが完了したら実行`ssis-conf`です。 詳細については、次を参照してください。 [ssis conf Linux での構成の SSIS](sql-server-linux-configure-ssis.md)です。
 
-    ```bash
-    exit
-    ```
+   ```bash
+   sudo /opt/ssis/bin/ssis-conf setup
+   ```
 
+1. 構成を完了すると、パスを設定します。
 
-4.  SQL Server Integration Services をインストールする次のコマンドを実行します。
-
-    ```bash
-    sudo yum install -y mssql-server-is
-    ```
-
-
-5.  インストールが完了したら実行`ssis-conf`です。 詳細については、次を参照してください。 [ssis conf Linux での構成の SSIS](sql-server-linux-configure-ssis.md)です。
-
-    ```bash
-    sudo /opt/ssis/bin/ssis-conf setup
-    ```
-
-
-6.  構成を完了すると、パスを設定します。
-
-    ```bash
-    export PATH=/opt/ssis/bin:$PATH
-    ```
+   ```bash
+   export PATH=/opt/ssis/bin:$PATH
+   ```
 
 ### <a name="update-ssis"></a>SSIS を更新します。
 既に存在する場合`mssql-server-is`インストールされている、次のように次のコマンドで最新バージョンに更新できます。

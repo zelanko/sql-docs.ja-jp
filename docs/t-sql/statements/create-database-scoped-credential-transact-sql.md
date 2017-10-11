@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7e1eeda5d365f5c625e68c498c741754bf59c9d7
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 49ff2aa300fc8f8e74424ae6e334bee823e8176c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>データベース スコープ ベースの資格情報 (TRANSACT-SQL) の作成します。
@@ -103,7 +103,7 @@ GO
 ```  
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. データベースを作成するには、共有アクセス署名の資格情報がスコープ設定されます。   
-次の例を作成するために使用するデータベース スコープ資格情報の作成、[外部データ ソース](../../t-sql/statements/create-external-data-source-transact-sql.md)を実行できるなどの一括操作について、 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)と[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).   
+次の例を作成するために使用するデータベース スコープ資格情報の作成、[外部データ ソース](../../t-sql/statements/create-external-data-source-transact-sql.md)を実行できるなどの一括操作について、 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)と[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). 共有アクセス署名は、SQL Server、AP、または SQL DW に PolyBase では使用できません。
 ```tsql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',

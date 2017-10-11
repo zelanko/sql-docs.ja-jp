@@ -58,19 +58,15 @@ UnionAggregate ( geography_operand )
 ## <a name="examples"></a>使用例  
  次の例を実行、`UnionAggregate`のセットに対して**geography**市区町村内の場所。  
   
- `USE AdventureWorks2012`  
-  
- `GO`  
-  
- `SELECT City,`  
-  
- `geography::UnionAggregate(SpatialLocation) AS SpatialLocation`  
-  
- `FROM Person.Address`  
-  
- `WHERE PostalCode LIKE('981%')`  
-  
- `GROUP BY City;`  
+ ```
+ USE AdventureWorks2012  
+ GO  
+ SELECT City,  
+ geography::UnionAggregate(SpatialLocation) AS SpatialLocation  
+ FROM Person.Address  
+ WHERE PostalCode LIKE('981%')  
+ GROUP BY City;
+ ```  
   
 ## <a name="see-also"></a>参照  
  [拡張された静的な地理メソッド](../../t-sql/spatial-geography/extended-static-geography-methods.md)  

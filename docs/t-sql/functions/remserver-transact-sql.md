@@ -30,7 +30,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40remserver-transact-sql"></a>& #x 40; & #x 40 です。REMSERVER (TRANSACT-SQL)
+# <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;です。REMSERVER (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     

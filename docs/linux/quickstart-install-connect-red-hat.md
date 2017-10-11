@@ -1,4 +1,4 @@
----
+﻿---
 title: "Red Hat Enterprise Linux に SQL Server 2017 の概要 |Microsoft ドキュメント"
 description: "このクイック スタート チュートリアルでは、Red Hat Enterprise Linux に SQL Server 2017 をインストールし、作成し、sqlcmd によるデータベースのクエリを実行する方法を示します。"
 author: rothja
@@ -10,25 +10,24 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 19493e3abce27068f71ca5640b62fe1b17261eb4
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: d70cf0645f00dc8a5296588548edb29b56380034
 ms.contentlocale: ja-jp
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>SQL Server をインストールし、Red hat でデータベースを作成
 
-
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-このクイック スタート チュートリアルの最初をインストールする SQL Server 2017 Red Hat Enterprise Linux (RHEL) 7.3 にします。 接続し、 **sqlcmd**を最初にデータベースを作成し、クエリを実行します。
+このクイック スタート チュートリアルではまずインストールする SQL Server 2017 に Red Hat Enterprise Linux (RHEL) 7.3 以降。 接続し、 **sqlcmd**を最初にデータベースを作成し、クエリを実行します。
 
 > [!TIP]
 > このチュートリアルでは、ユーザー入力と、インターネット接続が必要です。 興味のある場合、[無人](sql-server-linux-setup.md#unattended)または[オフライン](sql-server-linux-setup.md#offline)インストール手順を参照してください[Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md)です。
 
 ## <a name="prerequisites"></a>前提条件
 
-RHEL 7.3 コンピューターにする必要があります**3.25 GB 以上**メモリです。
+RHEL 7.3 または 7.4 マシンで必要**3.25 GB 以上**メモリです。
 
 自分のコンピューター上の Red Hat Enterprise Linux をインストールするに移動[http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)です。 Azure で RHEL 仮想マシンを作成することもできます。 参照してください[作成と Azure CLI を使用して Linux Vm の管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)、および使用`--image RHEL`への呼び出しで`az vm create`です。
 
@@ -53,7 +52,6 @@ RHEL で SQL Server を構成するをインストールするターミナルで
 1. SQL Server をインストールするには、次のコマンドを実行します。
 
    ```bash
-   sudo yum update
    sudo yum install -y mssql-server
    ```
 
@@ -96,14 +94,12 @@ RHEL で SQL Server を構成するをインストールするターミナルで
 1. 以前のバージョンがあれば**mssql ツール**インストールされている、古い unixODBC パッケージを削除します。
 
    ```bash
-   sudo yum update
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
 1. インストールする次のコマンド実行**mssql ツール**unixODBC 開発者パッケージにします。
 
    ```bash
-   sudo yum update
    sudo yum install -y mssql-tools unixODBC-devel
    ```
 

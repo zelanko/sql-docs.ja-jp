@@ -28,10 +28,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f9dfaf40ac3d7722c39592fc3e7b4d4e790ec25f
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 8055c9410631f303c9f8633fd332e5f7d6f6d763
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="sysutcdatetime-transact-sql"></a>SYSUTCDATETIME (Transact-SQL)
@@ -71,26 +71,19 @@ SYSUTCDATETIME ( )
   
 ```  
 SELECT SYSDATETIME() AS SYSDATETIME  
-    ,SYSDATETIMEOFFSET() AS SYSDATETIMEOFFSET  
-    ,SYSUTCDATETIME() AS SYSUTCDATETIME  
-    ,CURRENT_TIMESTAMP AS CURRENT_TIMESTAMP  
-    ,GETDATE() AS GETDATE  
-    ,GETUTCDATE() AS GETUTCDATE;  
+    , SYSDATETIMEOFFSET() AS SYSDATETIMEOFFSET  
+    , SYSUTCDATETIME() AS SYSUTCDATETIME  
+    , CURRENT_TIMESTAMP AS [CURRENT_TIMESTAMP]
+    , GETDATE() AS GETDATE  
+    , GETUTCDATE() AS GETUTCDATE;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `SYSDATETIME()      2007-04-30 13:10:02.0474381`  
-  
- `SYSDATETIMEOFFSET()2007-04-30 13:10:02.0474381 -07:00`  
-  
- `SYSUTCDATETIME()   2007-04-30 20:10:02.0474381`  
-  
- `CURRENT_TIMESTAMP  2007-04-30 13:10:02.047`  
-  
- `GETDATE()          2007-04-30 13:10:02.047`  
-  
- `GETUTCDATE()       2007-04-30 20:10:02.047`  
+| SYSDATETIME | SYSDATETIMEOFFSET | SYSUTCDATETIME | CURRENT_TIMESTAMP | GETDATE | GETUTCDATE |
+| --- | --- | --- | --- | --- | --- |
+| 2007-04-30 13:10:02.0474381 | 2007-04-30 13:10:02.0474381 -07:00 | 2007-04-30 20:10:02.0474381 | 2007-04-30 13:10:02.047 | 2007-04-30 13:10:02.047 | 2007-04-30 20:10:02.047 |
+
   
 ### <a name="b-converting-date-and-time-to-date"></a>B. 日付と時刻を日付に変換する  
  次の例は、日付と時刻の値に変換する方法を示します`date`です。  
@@ -106,34 +99,31 @@ SELECT CONVERT (date, SYSDATETIME())
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
+ ```
+2007-04-30
+2007-04-30
+2007-04-30
+2007-04-30
+2007-04-30
+2007-04-30
+```  
   
 ### <a name="c-converting-date-and-time-values-to-time"></a>C. 日付と時刻の値を時刻に変換する  
  次の例は、日付と時刻の値に変換する方法を示します`time`です。  
   
- `DECLARE @DATETIME DATETIME = GetDate();`  
-  
- `DECLARE @TIME TIME`  
-  
- `SELECT @TIME = CONVERT(time, @DATETIME)`  
-  
- `SELECT @TIME AS 'Time', @DATETIME AS 'Date Time'`  
+ ```
+DECLARE @DATETIME DATETIME = GetDate();
+DECLARE @TIME TIME
+SELECT @TIME = CONVERT(time, @DATETIME)
+SELECT @TIME AS 'Time', @DATETIME AS 'Date Time'
+```
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Time             Date Time`  
-  
- `13:49:33.6330000 2009-04-22 13:49:33.633`  
+ ```
+Time             Date Time  
+13:49:33.6330000 2009-04-22 13:49:33.633
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例は、6 つを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返す現在の日付と時刻を日付、時刻、またはその両方を返すシステム関数です。 値は順番に返されるため、秒の小数部が異なる可能性があります。  
@@ -152,17 +142,14 @@ SELECT SYSDATETIME() AS SYSDATETIME
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `SYSDATETIME()      2007-04-30 13:10:02.0474381`  
-  
- `SYSDATETIMEOFFSET()2007-04-30 13:10:02.0474381 -07:00`  
-  
- `SYSUTCDATETIME()   2007-04-30 20:10:02.0474381`  
-  
- `CURRENT_TIMESTAMP  2007-04-30 13:10:02.047`  
-  
- `GETDATE()          2007-04-30 13:10:02.047`  
-  
- `GETUTCDATE()       2007-04-30 20:10:02.047`  
+ ```
+SYSDATETIME()      2007-04-30 13:10:02.0474381
+SYSDATETIMEOFFSET()2007-04-30 13:10:02.0474381 -07:00
+SYSUTCDATETIME()   2007-04-30 20:10:02.0474381
+CURRENT_TIMESTAMP  2007-04-30 13:10:02.047
+GETDATE()          2007-04-30 13:10:02.047
+GETUTCDATE()       2007-04-30 20:10:02.047
+```  
   
 ### <a name="e-converting-date-and-time-to-date"></a>E. 日付と時刻を日付に変換する  
  次の例は、日付と時刻の値に変換する方法を示します`date`です。  
@@ -178,34 +165,31 @@ SELECT CONVERT (date, SYSDATETIME())
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
+ ```
+2007-04-30
+2007-04-30
+2007-04-30
+2007-04-30
+2007-04-30
+2007-04-30
+```  
   
 ### <a name="f-converting-date-and-time-values-to-time"></a>F. 日付と時刻の値を時刻に変換する  
  次の例は、日付と時刻の値に変換する方法を示します`time`です。  
   
- `DECLARE @DATETIME DATETIME = GetDate();`  
-  
- `DECLARE @TIME TIME`  
-  
- `SELECT @TIME = CONVERT(time, @DATETIME)`  
-  
- `SELECT @TIME AS 'Time', @DATETIME AS 'Date Time'`  
+ ```
+DECLARE @DATETIME DATETIME = GetDate();
+DECLARE @TIME TIME
+SELECT @TIME = CONVERT(time, @DATETIME)
+SELECT @TIME AS 'Time', @DATETIME AS 'Date Time'
+```
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Time             Date Time`  
-  
- `13:49:33.6330000 2009-04-22 13:49:33.633`  
+ ```
+Time             Date Time  
+13:49:33.6330000 2009-04-22 13:49:33.633
+```  
   
 ## <a name="see-also"></a>参照  
  [CAST および CONVERT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md)   

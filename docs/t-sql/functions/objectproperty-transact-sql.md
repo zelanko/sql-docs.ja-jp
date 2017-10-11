@@ -213,9 +213,10 @@ GO
   
  結果セットを表示する`ufnGetProductDealerPrice`決定的関数ではありません。  
   
- `-----`  
-  
- `0`  
+ ```
+-----  
+0
+```  
   
 ### <a name="c-finding-the-objects-that-belong-to-a-specific-schema"></a>C. 特定のスキーマに属するオブジェクトを見つける  
  次の例では、`SchemaId` プロパティを使用して、スキーマ `Production` に属するすべてのオブジェクトを返します。  

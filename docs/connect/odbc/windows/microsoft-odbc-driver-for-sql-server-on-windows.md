@@ -48,7 +48,7 @@ Microsoft ODBC Driver for SQL Server は、新しいアプリケーションの�
 -   [ODBC ドライバーで Always Encrypted を使用します。](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 -   [ODBC ドライバーで Azure Active Directory の使用](../../../connect/odbc/using-azure-active-directory.md) 
 -   [透過ネットワーク IP 解決を使用してください。](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
-  
+
 ## <a name="community"></a>コミュニティ  
 - [Microsoft ODBC Driver For SQL Server チーム ブログ](http://blogs.msdn.com/sqlnativeclient/default.aspx)  
 - [SQL Server データ アクセス フォーラム](http://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  

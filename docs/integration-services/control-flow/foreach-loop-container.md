@@ -36,10 +36,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: 709fd98f48764c19b4e358812c20cbf1dc52b8e4
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 21fdac9e8c4fffa0a87eee72e3587c2a3378ad66
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="foreach-loop-container"></a>Foreach ループ コンテナー
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/29/2017
   
 -   Foreach ADO 列挙子は、テーブル内の行を列挙します。 たとえば、ADO レコードセット内の行を取得できます。  
   
-     レコードセット変換先では、 **Object** データ型のパッケージ変数に格納されるレコードセットのメモリにデータが保存されます。 通常は、Foreach ループ コンテナーと Foreach ADO 列挙子を使用して、一度に 1 つのレコードセット行を処理します。 Foreach ADO 列挙子に指定する変数は、Object データ型である必要があります。 レコードセット変換先の詳細については、「 [Use a Recordset Destination](../../integration-services/data-flow/use-a-recordset-destination.md)」を参照してください。  
+     レコードセット変換先では、 **Object** データ型のパッケージ変数に格納されるレコードセットのメモリにデータが保存されます。 通常は、Foreach ループ コンテナーと Foreach ADO 列挙子を使用して、一度に 1 つのレコードセット行を処理します。 Foreach ADO 列挙子に指定する変数は、Object データ型である必要があります。 レコード セット変換先の詳細については、次を参照してください。 [Use a Recordset Destination](../../integration-services/data-flow/use-a-recordset-destination.md)です。  
   
 -   Foreach ADO.NET Schema Rowset 列挙子は、データ ソースに関するスキーマ情報を列挙します。 たとえば、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内のテーブルを列挙して一覧を取得できます。  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 08/29/2017
   
 -   Foreach Azure BLOB 列挙子は、Azure Storage の BLOB コンテナーで BLOB を列挙します。  
 
--   ADLS ディレクトリ内のファイルを列挙する Foreach ADLS File 列挙子。
+-   Azure Data Lake Store 内のディレクトリにファイルを列挙する Foreach ADLS File 列挙子。
   
  次の図は、ファイル システム タスクを含む Foreach ループ コンテナーを示しています。 Foreach ループは Foreach File 列挙子を使用し、ファイル システム タスクがファイルをコピーするように構成します。 列挙子が指定するフォルダーに 4 つのファイルが含まれる場合、ループが 4 回繰り返されて 4 つのファイルがコピーされます。  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 08/29/2017
 |Foreach SMO|データベースへの接続と、列挙する SMO オブジェクトを指定します。|  
 |Foreach HDFS File Enumerator (Foreach HDFS ファイル列挙子)|フォルダーと、列挙するファイル、取得するファイルのファイル名の形式、およびサブフォルダーをスキャンするかどうかを指定します。|  
 |Foreach Azure BLOB|列挙する BLOB を含む Azure BLOB コンテナーを指定します。|  
-|Foreach ADLS ファイル|一部のフィルターと共に、列挙するファイルを含む ADLS ディレクトリを指定します。|
+|Foreach ADLS ファイル|列挙するファイルを含む Azure Data Lake Store ディレクトリを指定します。|
 
 ## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>Foreach ループ コンテナーと制御フローに列挙を追加します。
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Foreach ループ コンテナー、簡単にファイルとパッケージの制御フロー内のオブジェクトを列挙するループ構造を含めるようにする制御フロー要素が含まれます。 詳細については、「 [Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md)」を参照してください。  
@@ -151,20 +151,20 @@ ms.lasthandoff: 08/29/2017
   
     -   Foreach From Variable 列挙子を使用するには、 **[変数]** 一覧で変数を選択します。  
   
-    -   Foreach NodeList 列挙子を使用するには、[DocumentSourceType] をクリックし、リストからソースの種類を選択し、[DocumentSource] をクリックします。 選択した DocumentSourceType の値に応じて、一覧から変数またはファイル接続を選択するか、新しい変数またはファイル接続を作成するか、 **[ドキュメント ソース エディター]**で XML ソースを入力します。  
+    -   Foreach NodeList 列挙子を使用するには、DocumentSourceTypeをクリックし、リストからソースの種類を選択し、DocumentSourceをクリックします。 選択した DocumentSourceType の値に応じて、一覧から変数またはファイル接続を選択するか、新しい変数またはファイル接続を作成するか、 **[ドキュメント ソース エディター]**で XML ソースを入力します。  
   
-         次に、[EnumerationType] をクリックし、一覧から列挙型を選択します。 [EnumerationType] が **[Navigator]、[Node]、または [NodeText]**の場合、[OuterXPathStringSourceType] をクリックし、ソースの種類を選択し、[OuterXPathString] をクリックします。 設定した OuterXPathStringSourceType の値に応じて、一覧から変数またはファイル接続を選択するか、新しい変数またはファイル接続を作成するか、外部の XML パス言語 (XPath) 式の文字列を入力します。  
+         次に、[EnumerationType] をクリックし、一覧から列挙型を選択します。 EnumerationType が **Navigator、Node、または NodeText**の場合、OuterXPathStringSourceTypeをクリックし、ソースの種類を選択し、OuterXPathStringをクリックします。 設定した OuterXPathStringSourceType の値に応じて、一覧から変数またはファイル接続を選択するか、新しい変数またはファイル接続を作成するか、外部の XML パス言語 (XPath) 式の文字列を入力します。  
   
-         [EnumerationType] が **[ElementCollection]**の場合、前述のように [OuterXPathStringSourceType] と [OuterXPathString] を設定します。 次に [InnerElementType] をクリックし、内部要素の 列挙型を選択し、[InnerXPathStringSourceType] をクリックします。 設定した InnerXPathStringSourceType の値に応じて、変数またはファイル接続を選択するか、新しい変数またはファイル接続を作成するか、内部の XPath 式の文字列を入力します。  
+         EnumerationType 場合**ElementCollection**、前述のように、OuterXPathStringSourceType と OuterXPathString を設定します。 次に InnerElementTypeをクリックし、内部要素の 列挙型を選択し、InnerXPathStringSourceTypeをクリックします。 設定した InnerXPathStringSourceType の値に応じて、変数またはファイル接続を選択するか、新しい変数またはファイル接続を作成するか、内部の XPath 式の文字列を入力します。  
   
     -   Foreach SMO 列挙子を使用するには、 **[接続]** 一覧で既存の ADO.NET 接続を選択するか、 **[新しい接続]** をクリックします。次に、使用する文字列を入力するか、 **[参照]**をクリックします。 **[参照]**をクリックした場合は、 **[SMO 列挙の選択]** ダイアログ ボックスで、列挙するオブジェクトの種類と列挙型を選択し、 **[OK]**をクリックします。  
   
-6.  必要に応じて、 **[コレクション]** ページの **[式]** テキスト ボックスにある参照ボタン ( **[...]** ) をクリックし、プロパティ値を更新する式を作成します。 詳細については、「 [Add or Change a Property Expression](../../integration-services/expressions/add-or-change-a-property-expression.md)」(プロパティ式を追加または変更する) を参照してください。  
+6.  必要に応じて、 **[コレクション]** ページの **[式]** テキスト ボックスにある参照ボタン ( **[...]** ) をクリックし、プロパティ値を更新する式を作成します。 詳細については、「 [プロパティ式を追加または変更する](../../integration-services/expressions/add-or-change-a-property-expression.md)」を参照してください。  
   
     > [!NOTE]  
-    >  **[プロパティ]** 一覧に表示されるプロパティは、列挙子ごとに異なります。  
+    >  プロパティに一覧表示、**プロパティ**リストが列挙子によって異なります。  
   
-7.  必要に応じて、**[変数のマッピング]** をクリックし、オブジェクトのプロパティをコレクションの値にマップします。その後、次の操作を行います。  
+7.  必要に応じて、をクリックして**変数のマッピング**オブジェクトのプロパティをコレクションの値にマップし、次のオプションを実行します。  
   
     1.  **変数**一覧で変数を選択するかをクリックして**\<新しい変数 >**新しい変数を作成します。  
   
@@ -185,23 +185,23 @@ ms.lasthandoff: 08/29/2017
  Foreach ループ コンテナーとその構成方法については、「 [Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md) 」と「 [Foreach ループ コンテナーを構成する](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)」を参照してください。  
   
 ### <a name="options"></a>オプション  
- **名**  
+ **名前**  
  Foreach ループ コンテナーの一意な名前を指定します。 この名前は、タスク アイコンとログでラベルとして使用されます。  
   
 > [!NOTE]  
 >  オブジェクト名はパッケージ内で一意である必要があります。  
   
- **説明**  
+ **Description**  
  Foreach ループ コンテナーの説明を入力します。  
 
 ## <a name="collection-page---foreach-loop-editor"></a>コレクション ページで Foreach ループ エディター
- **[Foreach ループ エディター]** ダイアログ ボックスの **[コレクション]** ページを使用すると、列挙子の型を指定して列挙子を構成できます。  
+ 使用して、**コレクション**のページ、 **Foreach ループ エディター**  ダイアログ ボックスを列挙子の型を指定し、列挙子を構成します。  
   
  Foreach ループ コンテナーとその構成方法については、「 [Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md) 」と「 [Foreach ループ コンテナーを構成する](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)」を参照してください。  
   
 ### <a name="static-options"></a>静的オプション  
  **列挙子**  
- 列挙子の型を一覧から選択します。 このプロパティのオプションを次の表に示します。  
+ 列挙子の型を一覧から選択します。 このプロパティには、次の表に示すオプションがあります。  
   
 |値|Description|  
 |-----------|-----------------|  
@@ -214,7 +214,7 @@ ms.lasthandoff: 08/29/2017
 |**Foreach SMO 列挙子**|SMO オブジェクトを列挙します。 この値を選択すると、セクション **[Foreach SMO 列挙子]**に動的オプションが表示されます。|  
 |**Foreach HDFS File Enumerator (Foreach HDFS ファイル列挙子)**|指定された HDFS の場所にある HDFS ファイルを列挙します。 この値を選択すると、セクション **[Foreach HDFS File Enumerator]**(Foreach HDFS ファイル列挙子) に動的オプションが表示されます。|  
 |**Foreach Azure Blob 列挙子**|指定された BLOB の場所に BLOB ファイルを列挙します。 この値を選択すると、セクション **[Foreach Azure Blob 列挙子]**に動的オプションが表示されます。|  
-|**ADLS の Foreach File 列挙子**|フィルターを使用して ADLS 上のファイルを列挙します。 動的オプションが表示されます セクションで、この値を選択する**Foreach ADLS File 列挙子**です。|
+|**ADLS の Foreach File 列挙子**|指定された Data Lake Store ディレクトリにファイルを列挙します。 動的オプションが表示されます セクションで、この値を選択する**Foreach ADLS File 列挙子**です。|
   
  **式**  
  **[式]** をクリックして展開すると、既存のプロパティ式のリストが表示されます。 参照ボタン (**[...]**) ボタンをクリックして、列挙子プロパティのプロパティ式を追加するか、既存のプロパティ式を編集して評価します。  
@@ -226,13 +226,13 @@ ms.lasthandoff: 08/29/2017
 #### <a name="enumerator--foreach-file-enumerator"></a>[Enumerator] = [Foreach File 列挙子]  
  Foreach File 列挙子を使用して、フォルダー内のファイルを列挙します。 たとえば、Foreach ループに SQL 実行タスクが含まれている場合、Foreach File 列挙子を使用して、SQL 実行タスクが実行する SQL ステートメントが含まれているファイルを列挙できます。 この列挙子は、サブフォルダーが含められるように構成することができます。  
   
- Foreach File 列挙子が列挙するフォルダーとサブフォルダーの内容は、ループの実行中に変化する場合があります。これは、外部プロセスまたはループ内のタスクによって、ループの実行時にファイルの追加、名前変更、または削除が発生するためです。 これは、次のような予期しない状況が発生する可能性を意味しています。  
+ Foreach File 列挙子が列挙するフォルダーとサブフォルダーの内容は、ループの実行中に変化する場合があります。これは、外部プロセスまたはループ内のタスクによって、ループの実行時にファイルの追加、名前変更、または削除が発生するためです。 これらの変更は複数の予期しない状況が発生する可能性があります。  
   
--   ファイルが削除された場合、Foreach ループ内の 1 つのタスクで使用されたものとは異なるファイルのセットが、それ以降のタスクで使用される可能性があります。  
+-   ファイルが削除されると、Foreach ループで 1 つのタスクの動作が異なる一連の後続のタスクで使用されるファイルよりもファイルにあります。  
   
--   ファイルの名前が変更され、それらのファイルを置き換えるためのファイルが外部プロセスによって自動的に追加されると、Foreach ループは同じファイル コンテンツに対して 2 回作業を実行することになる可能性があります。  
+-   ファイルの名前が変更された外部プロセス、名前が変更されたファイルを置き換えますファイルを自動的に追加する場合は、Foreach ループ内のタスクの動作がありますの同じファイルに 2 回。  
   
--   ファイルが追加されると、Foreach ループがどのファイルに対して作業を実行したか判断することが困難になる可能性があります。  
+-   ファイルを追加する場合は、ファイル、Foreach ループが影響を調べることは難しい場合があります。  
   
  **フォルダー**  
  列挙するルート フォルダーのパスを示します。  
@@ -246,12 +246,12 @@ ms.lasthandoff: 08/29/2017
 > [!NOTE]  
 >  ワイルドカード文字 (*) を使用して、コレクションに含めるファイルを指定します。 たとえば、名前に "abc" が含まれているファイルを追加するには、 \*abc\*というフィルターを使用します。  
 >   
->  ファイル名の拡張子を指定すると、列挙子は、文字が追加された同じ拡張子のファイルも返します (これは、旧バージョンとの互換性のために 8.3 ファイル名も比較する、オペレーティング システムの **dir** コマンドと同じ動作です)。この列挙子の動作は、予期しない結果になる場合があります。 たとえば、Excel 2003 ファイルのみを列挙する場合は「*.xls」と指定しますが、 列挙子は Excel 2007 のファイルも返します。これらのファイルの拡張子が ".xlsx" であるためです。  
+>  ファイル名の拡張子を指定すると、列挙子は、文字が追加された同じ拡張子のファイルも返します (これは、旧バージョンとの互換性のために 8.3 ファイル名も比較する、オペレーティング システムの **dir** コマンドと同じ動作です)。この列挙子の動作は、予期しない結果になる場合があります。 たとえば、Excel 2003 ファイルのみを列挙する場合は「*.xls」と指定しますが、 ただし、列挙子も返しますそれらのファイル、拡張子が付いているために、Excel 2007 がファイル".xlsx"です。  
 >   
 >  コレクションに追加するファイルを式で指定するには、 **[コレクション]** ページの **[式]** を展開し、 **[FileSpec]** プロパティを選択して参照ボタン ([…]) をクリックし、プロパティ式を追加します。  
   
  **完全修飾**  
- ファイル名の完全修飾パスを取得する場合に選択します。 [ファイル] オプションにワイルドカード文字が指定されている場合、返された完全修飾パスはフィルターに一致します。  
+ ファイル名の完全修飾パスを取得する場合に選択します。 ファイル オプションにワイルドカード文字を指定する場合、返される完全修飾パスは、フィルターに一致します。  
   
  **名前のみ**  
  ファイル名のみを取得する場合に選択します。 [ファイル] オプションにワイルドカード文字が指定されている場合、返されたファイル名はフィルターに一致します。  
@@ -296,7 +296,7 @@ ms.lasthandoff: 08/29/2017
 > [!NOTE]  
 >  変数は、Object データ型にする必要があります。それ以外の場合はエラーが発生します。  
   
- **関連トピック:** [Integration Services (SSIS) 変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **最初のテーブル内の行**  
  最初のテーブルの行のみを列挙する場合に選択します。  
@@ -332,7 +332,7 @@ ms.lasthandoff: 08/29/2017
  **変数**  
  一覧で、変数を選択するかクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
   
- **関連トピック:** [Integration Services (SSIS) 変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="enumerator--foreach-nodelist-enumerator"></a>[Enumerator] = [Foreach NodeList 列挙子]  
  Foreach Nodelist 列挙子は、XPath 式を XML ファイルに適用した結果として生成された XML ノードのセットを列挙するために使用します。 たとえば、Foreach ループにスクリプト タスクが含まれている場合、Foreach NodeList 列挙子を使用して、XPath 式の条件を満たす値を XML ファイルからスクリプト タスクに渡すことができます。  
@@ -342,7 +342,7 @@ ms.lasthandoff: 08/29/2017
  XML ドキュメントとデータの操作の詳細については、MSDN ライブラリの「[.NET Framework における XML の使用](http://go.microsoft.com/fwlink/?LinkId=56214)」を参照してください。  
   
  **DocumentSourceType**  
- XML ドキュメントのソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
+ XML ドキュメントのソースの種類を選択します。 このプロパティには、次の表に示すオプションがあります。  
   
 |値|Description|  
 |-----------|-----------------|  
@@ -355,14 +355,14 @@ ms.lasthandoff: 08/29/2017
   
  場合**DocumentSourceType**に設定されている**ファイルの接続**をファイル接続マネージャーを選択するかをクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  場合**DocumentSourceType**に設定されている**変数**を既存の変数を選択するかをクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
   
  **関連項目**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **EnumerationType**  
- 一覧から列挙型を選択します。 このプロパティのオプションを次の表に示します。  
+ 一覧から列挙型を選択します。 このプロパティには、次の表に示すオプションがあります。  
   
 |値|Description|  
 |-----------|-----------------|  
@@ -372,7 +372,7 @@ ms.lasthandoff: 08/29/2017
 |**ElementCollection**|XPath 操作によって返された要素ノードを列挙します。|  
   
  **OuterXPathStringSourceType**  
- XPath 文字列のソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
+ XPath 文字列のソースの種類を選択します。 このプロパティには、次の表に示すオプションがあります。 
   
 |値|Description|  
 |-----------|-----------------|  
@@ -385,7 +385,7 @@ ms.lasthandoff: 08/29/2017
   
  場合**OuterXPathStringSourceType**に設定されている**ファイルの接続**をファイル接続マネージャーを選択するかをクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  場合**OuterXPathStringSourceType**に設定されている**変数**を既存の変数を選択するかをクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
   
@@ -395,7 +395,7 @@ ms.lasthandoff: 08/29/2017
  **[EnumerationType]** が **[ElementCollection]**に設定されている場合は、一覧の内部要素の型を選択します。  
   
  **InnerXPathStringSourceType**  
- 内部 XPath 文字列のソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
+ 内部 XPath 文字列のソースの種類を選択します。 このプロパティには、次の表に示すオプションがあります。  
   
 |値|Description|  
 |-----------|-----------------|  
@@ -408,14 +408,14 @@ ms.lasthandoff: 08/29/2017
   
  場合**InnerXPathStringSourceType**に設定されている**ファイルの接続**をファイル接続マネージャーを選択するかをクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  場合**InnerXPathStringSourceType**に設定されている**変数**を既存の変数を選択するかをクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
   
  **関連項目**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="enumerator--foreach-smo-enumerator"></a>[Enumerator] = [Foreach SMO 列挙子]  
- Foreach SMO 列挙子は、SQL Server 管理オブジェクト (SMO) のオブジェクトを列挙するために使用します。 たとえば、Foreach ループに SQL 実行タスクが含まれている場合、Foreach SMO 列挙子を使用して、 **AdventureWorks** データベース内のテーブルを列挙し、各テーブル内の行数をカウントするクエリを実行できます。  
+ Foreach SMO 列挙子は、SQL Server 管理オブジェクト (SMO) のオブジェクトを列挙するために使用します。 たとえば、Foreach ループには、SQL 実行タスクが含まれている場合、Foreach SMO 列挙子を行えます内のテーブルを列挙、 **AdventureWorks**データベースし、各テーブルの行の数をカウントするクエリを実行します。  
   
  **接続**  
  既存の ADO.NET 接続マネージャーを選択するかクリックして\<**新しい接続をしています.**> 新しい接続マネージャーを作成します。  
@@ -440,14 +440,14 @@ ms.lasthandoff: 08/29/2017
  列挙する HDFS ファイルが格納されている HDFS ディレクトリの名前を指定します。  
   
  **ファイル名フィルター**  
- 特定の名前のパターンを持つファイルを選択する名前フィルターを指定します。 たとえば、MySheet*.xls\* の場合、MySheet001.xls や MySheetABC.xlsx などのファイルが含まれます。  
+ 特定の名前のパターンを持つファイルを選択する名前フィルターを指定します。 たとえば、MySheet*.xls\* MySheet001.xls や MySheetABC.xlsx などのファイルが含まれています。  
   
  **ファイル名を取得します。**  
  SSIS によって取得されたファイル名の種類を指定します。  
   
--   **[Fully qualified name]** (完全修飾名) は、ディレクトリ パスとファイル名を含む完全な名前を意味します。  
+-   **完全修飾名**ディレクトリのパスとファイル名を含む完全な名前を意味します。  
   
--   **[名前のみ]** は、ファイル名のみが取得されることを意味します。  
+-   **名前のみ**パスを含まないファイル名が取得されることを意味します。  
   
  **サブフォルダーをスキャンします。**  
  サブフォルダーを再帰的にループ処理するかどうかを指定します。  
@@ -455,7 +455,7 @@ ms.lasthandoff: 08/29/2017
  エディターの **[変数のマッピング]** ページで、列挙された HDFS ファイルの名前を格納する変数を選択または作成します。  
   
 ####  <a name="ForeachAzureBlob"></a>列挙子 = Foreach Azure Blob 列挙子  
- **[Azure BLOB 列挙子]** を指定すると、SSIS パッケージは、指定した BLOB の場所にある BLOB ファイルを列挙します。 列挙された BLOB ファイルの名前は変数に格納され、Foreach ループ コンテナー内のタスクで使用されます。  
+ **[Azure BLOB 列挙子]** を指定すると、SSIS パッケージは、指定した BLOB の場所にある BLOB ファイルを列挙します。 列挙された blob ファイルの名前を変数に格納し、Foreach ループ コンテナー内のタスクで使用できます。  
   
  **Azure BLOB 列挙子**は、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 用の SQL Server Integration Services (SSIS) Feature Pack for Azure のコンポーネントです。 Feature Pack は [こちら](http://go.microsoft.com/fwlink/?LinkID=626967)からダウンロードしてください。  
   
@@ -465,28 +465,28 @@ ms.lasthandoff: 08/29/2017
  関連項目: [Azure Storage Connection Manager](../../integration-services/connection-manager/azure-storage-connection-manager.md)です。  
   
  **BLOB コンテナーの名前**  
- 列挙する BLOB ファイルを含む BLOB コンテナーの名前を指定します。  
+ 列挙する blob ファイルを含む blob コンテナーの名前を指定します。
   
  **Blob ディレクトリ**  
- 列挙する BLOB ファイルを含む BLOB ディレクトリの名前を指定します。 BLOB ディレクトリは仮想階層構造です。  
+ 列挙する blob ファイルを含む blob ディレクトリを指定します。 BLOB ディレクトリは仮想階層構造です。  
   
  **Blob 名のフィルター**  
- 特定の名前のパターンを持つファイルを列挙する名前フィルターを指定します。 例: MySheet*.xls\* の場合、MySheet001.xls や MySheetABC.xlsx などのファイルが含まれます。  
+ 特定の名前のパターンを持つファイルを列挙する名前フィルターを指定します。 たとえば、 `MySheet*.xls\*` MySheet001.xls や MySheetABC.xlsx などのファイルが含まれています。  
   
  **Blob 時間範囲からフィルター**  
- 時間範囲フィルターを指定します。 **TimeRangeFrom** の後から **TimeRangeTo** の前までに変更されたファイルが列挙されます。 
+ 時間範囲フィルターを指定します。 変更されたファイル**TimeRangeFrom**前に**TimeRangeTo**が列挙されます。 
 
 ####  <a name="ForeachAdlsFile"></a>列挙子 = Foreach ADLS File 列挙子 
-**ADLS File 列挙子**ADLS にフィルターを使用してファイルを列挙する SSIS パッケージを有効にします。 スラッシュ (`/`)-列挙するファイルのプレフィックスが指定された完全なパスを変数に格納されているし、Foreach ループ コンテナー内のタスクで使用されることができます。
+**ADLS File 列挙子**SSIS パッケージは、Azure Data Lake Store にファイルを列挙します。 列挙されたファイルの完全なパスを格納することができます (スラッシュの付いた`/`) では、変数を使用して、Foreach ループ コンテナー内のタスクでファイルのパス。
   
 **AzureDataLakeConnection**  
 Azure Data Lake 接続マネージャーを指定または ADLS アカウントを参照する新しい 1 つを作成します。   
   
 **AzureDataLakeDirectory**  
-検索する ADLS ディレクトリを指定します。
+列挙するファイルを含む ADLS ディレクトリを指定します。
   
 **FileNamePattern**  
-ファイル名のフィルターを指定します。 指定したパターンに一致するファイルのみが列挙されます。 ワイルドカード`*`と`?`はサポートされています。 
+ファイル名のフィルターを指定します。 指定したパターンに一致する名前のファイルのみが列挙されます。 ワイルドカード`*`と`?`はサポートされています。 
   
 **SearchRecursively**  
 指定したディレクトリ内で再帰的に検索するかどうかを指定します。  
@@ -494,20 +494,20 @@ Azure Data Lake 接続マネージャーを指定または ADLS アカウント�
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>Foreach ループ エディター-変数のマッピング ページ
  **[Foreach ループ エディター]** ダイアログ ボックスの **[変数のマッピング]** ページを使用すると、コレクションの値に変数をマップできます。 変数の値は、ループの各反復処理でコレクションの値を使用して更新されます。  
   
- Integration Services パッケージでの Foreach Loop コンテナーの使用方法の詳細については、「 [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md) 」を参照してください。 構成方法の詳細については、「 [Foreach ループ コンテナーを構成する](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)」を参照してください。  
+ Integration Services パッケージで Foreach ループ コンテナーを使用する方法の詳細については、次を参照してください。 [Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md)です。 構成方法の詳細については、「 [Foreach ループ コンテナーを構成する](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)」を参照してください。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] チュートリアルの「簡単な ETL パッケージの作成」には、Foreach ループの追加および構成について説明するレッスンが含まれています。  
   
 ### <a name="options"></a>オプション  
  **変数**  
- 既存の変数を選択するかクリックして\<**新しい変数しています.**> 新しい変数を作成します。  
+ 既存の変数を選択するかクリックして**新しい変数しています.**新しい変数を作成します。  
   
 > [!NOTE]  
 >  変数をマップした後、新しい行が **[変数]** リストに自動的に追加されます。  
   
  **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
- **インデックス**  
+ **Index**  
  Foreach Item 列挙子を使用する場合、変数にマップするコレクションの値に列のインデックスを指定します。 他の列挙子の型では、インデックスは読み取り専用です。  
   
 > [!NOTE]  
@@ -520,7 +520,7 @@ Azure Data Lake 接続マネージャーを指定または ADLS アカウント�
 **[スキーマの制限]** ダイアログ ボックスを使用すると、Foreach ADO.NET Schema Rowset 列挙子に適用するスキーマの制限を設定できます。  
   
 ### <a name="options"></a>オプション  
- **制限事項**  
+ **制限**  
  スキーマに適用する制約を設定します。  
   
  **変数**  
@@ -548,7 +548,7 @@ Azure Data Lake 接続マネージャーを指定または ADLS アカウント�
  列を選択してから、 **[削除]**をクリックします。  
  
  ## <a name="select-smo-enumeration-dialog-box"></a>[SMO 列挙の選択] ダイアログ ボックス
-**[SMO 列挙の選択]** ダイアログ ボックスを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のインスタンスの列挙対象となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) オブジェクトを指定し、列挙型を選択できます。  
+**[SMO 列挙の選択]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のインスタンスの列挙対象となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) オブジェクトを指定し、列挙型を選択できます。  
   
 ### <a name="options"></a>オプション  
  **列挙します。**  

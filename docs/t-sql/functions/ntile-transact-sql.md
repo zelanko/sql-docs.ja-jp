@@ -104,7 +104,8 @@ David          Campbell              3         1,573,012.94   98055
 Garrett        Vargas                4         1,453,719.47   98027  
 Lynn           Tsoflias              4         1,421,810.92   98055  
 Pamela         Ansman-Wolfe          4         1,352,577.13   98027  
- (14 row(s) affected)  
+
+(14 row(s) affected)  
 ```  
   
 ### <a name="b-dividing-the-result-set-by-using-partition-by"></a>B. PARTITION BY を使用して結果セットを分割する  
@@ -173,43 +174,26 @@ ORDER BY Quartile, e.LastName;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LastName          Quartile SalesYTD`  
-  
- `----------------- -------- ------------`  
-  
- `Blythe            1        4,716,000.00`  
-  
- `Carson            1        4,350,000.00`  
-  
- `Mitchell          1        4,682,000.00`  
-  
- `Pak               1        5,142,000.00`  
-  
- `Varkey Chudukatil 1        2,940,000.00`  
-  
- `Ito               2        2,644,000.00`  
-  
- `Reiter            2        2,768,000.00`  
-  
- `Saraiva           2        2,293,000.00`  
-  
- `Vargas            2        1,617,000.00`  
-  
- `Ansman-Wolfe      3        1,183,000.00`  
-  
- `Campbell          3        1,438,000.00`  
-  
- `Mensa-Annan       3        1,481,000.00`  
-  
- `Valdez            3        1,294,000.00`  
-  
- `Abbas             4          172,000.00`  
-  
- `Albert            4          651,000.00`  
-  
- `Jiang             4          544,000.00`  
-  
- `Tsoflias          4          867,000.00`  
+ ```
+LastName          Quartile SalesYTD  
+----------------- -------- ------------`  
+Blythe            1        4,716,000.00  
+Carson            1        4,350,000.00  
+Mitchell          1        4,682,000.00  
+Pak               1        5,142,000.00  
+Varkey Chudukatil 1        2,940,000.00  
+Ito               2        2,644,000.00  
+Saraiva           2        2,293,000.00  
+Vargas            2        1,617,000.00  
+Ansman-Wolfe      3        1,183,000.00  
+Campbell          3        1,438,000.00  
+Mensa-Annan       3        1,481,000.00  
+Valdez            3        1,294,000.00  
+Abbas             4          172,000.00  
+Albert            4          651,000.00  
+Jiang             4          544,000.00  
+Tsoflias          4          867,000.00
+```  
   
 ### <a name="d-dividing-the-result-set-by-using-partition-by"></a>D. PARTITION BY を使用して結果セットを分割する  
  次の例は、例 A のコードに PARTITION BY 引数を追加します。行が最初にパーティション分割`SalesTerritoryCountry`ごとに 2 つのグループに分割し、`SalesTerritoryCountry`です。 OVER 句内の ORDER BY、NTILE を orders、ORDER BY、SELECT ステートメントの結果セットを並べ替えますことを確認します。  
@@ -232,43 +216,27 @@ ORDER BY st.SalesTerritoryCountry, Quartile;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LastName          Quartile SalesYTD       SalesTerritoryCountry`  
-  
- `----------------- -------- -------------- ------------------`  
-  
- `Tsoflias          1         867,000.00     Australia`  
-  
- `Saraiva           1        2,293,000.00    Canada`  
-  
- `Varkey Chudukatil 1        2,940,000.00    France`  
-  
- `Valdez            1        1,294,000.00    Germany`  
-  
- `Alberts           1          651,000.00    NA`  
-  
- `Jiang             1          544,000.00    NA`  
-  
- `Pak               1        5,142,000.00    United Kingdom`  
-  
- `Mensa-Annan       1        1,481,000.00    United States`  
-  
- `Campbell          1        1,438,000.00    United States`  
-  
- `Reiter            1        2,768,000.00    United States`  
-  
- `Blythe            1        4,716,000.00    United States`  
-  
- `Carson            1        4,350,000.00     United States`  
-  
- `Mitchell          1        4,682,000.00     United States`  
-  
- `Vargas            2        1,617,000.00     Canada`  
-  
- `Abbas             2          172,000.00     NA`  
-  
- `Ito               2        2,644,000.00     United States`  
-  
- `Ansman-Wolfe      2        1,183,000.00     United States`  
+ ```
+LastName          Quartile SalesYTD       SalesTerritoryCountry  
+----------------- -------- -------------- ------------------  
+Tsoflias          1         867,000.00     Australia  
+Saraiva           1        2,293,000.00    Canada  
+Varkey Chudukatil 1        2,940,000.00    France  
+Valdez            1        1,294,000.00    Germany  
+Alberts           1          651,000.00    NA  
+Jiang             1          544,000.00    NA  
+Pak               1        5,142,000.00    United Kingdom  
+Mensa-Annan       1        1,481,000.00    United States  
+Campbell          1        1,438,000.00    United States  
+Reiter            1        2,768,000.00    United States  
+Blythe            1        4,716,000.00    United States  
+Carson            1        4,350,000.00     United States  
+Mitchell          1        4,682,000.00     United States  
+Vargas            2        1,617,000.00     Canada  
+Abbas             2          172,000.00     NA  
+Ito               2        2,644,000.00     United States  
+Ansman-Wolfe      2        1,183,000.00     United States
+```  
   
 ## <a name="see-also"></a>参照  
  [ランクと #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rank-transact-sql.md)   

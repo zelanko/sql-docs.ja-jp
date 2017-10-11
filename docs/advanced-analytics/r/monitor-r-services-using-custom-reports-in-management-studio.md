@@ -1,7 +1,7 @@
 ---
 title: "Management Studio でカスタム レポートを使用して R Services を監視する | Microsoft Docs"
 ms.custom: 
-ms.date: 02/20/2017
+ms.date: 10/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,22 +15,25 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 14f6d6d7373afd452f06acae43f7023de136bc71
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 5a1990a7612eab44029c36129e73050854337930
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
-# <a name="monitor-r-services-using-custom-reports-in-management-studio"></a>Management Studio でカスタム レポートを使用して R Services を監視する
-SQL Server R Services を管理しやすくするために、製品チームでは多くのサンプル カスタム レポートを用意しています。これらを Server Management Studio に追加して、次のような R Services の詳細を表示することができます。
+# <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Management Studio でのカスタム レポートを使用して、マシン学習サービスの監視します。
 
-- アクティブな R セッションのリスト
-- 現在のインスタンスの R 構成
-- R ランタイムの実行統計
-- R Services の拡張イベント リスト
-- 現在のインスタンスにインストールされている R パッケージのリスト
+機械学習に使用されるインスタンスを管理しやすいように、製品チームが SQL Server Management Studio に追加できるカスタム レポートのサンプルの数を指定します。 これらのレポートなどの詳細を表示できます。
 
-このトピックでは、レポートのインストールおよび使用方法について説明します。 Management Studio のカスタム レポートの詳細については、「 [Management Studio におけるカスタム レポート](~/ssms/object/custom-reports-in-management-studio.md)」を参照してください。
+- アクティブな R、Python またはセッション
+- インスタンスの構成設定
+- Machine learning のジョブの実行の統計
+- R Services の拡張イベント
+- 現在のインスタンスにインストールされている R または Python のパッケージ
+
+この記事では、インストールして、マシン leaerning 専用に用意されているカスタム レポートを使用する方法について説明します。 
+
+Management Studio でのレポートを一般的な概要については、次を参照してください。 [Management Studio でのカスタムのレポート](../../ssms/object/custom-reports-in-management-studio.md)です。
 
 ## <a name="how-to-install-the-reports"></a>レポートのインストール方法
 
@@ -45,10 +48,13 @@ SQL Server R Services を管理しやすくするために、製品チームで�
 
 ### <a name="step-1-download-the-reports"></a>手順 1. サンプルのダウンロード
 
-1. [SQL Server の製品サンプル](https://github.com/Microsoft/sql-server-samples)を含む GitHub リポジトリを開き、このページからサンプル レポートをダウンロードします。 
+1. 格納されている GitHub リポジトリを開く[SQL Server 製品サンプル](https://github.com/Microsoft/sql-server-samples)、およびサンプル レポートをダウンロードします。 
 
-   + [SSMS カスタム レポート](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/r-services/ssms-custom-reports)
-      
+    + [SSMS のカスタム レポート](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)
+
+    > [!NOTE]
+    > レポートは、SQL Server 2017 Machiine 学習サービス、または SQL Server 2016 の R Services のいずれかで使用できます。
+
 2. サンプルをダウンロードする場合、GitHub にログインし、サンプルのローカル分岐を作成することもできます。 
 
 ### <a name="step-2-copy-the-reports-to-management-studio"></a>手順 2. Management Studio へのレポートのコピー
@@ -65,65 +71,52 @@ SQL Server R Services を管理しやすくするために、製品チームで�
 ### <a name="step-3-run-the-reports"></a>手順 3. レポートの実行
 
 5. Management Studio で、レポートを実行するインスタンスの **[データベース]** ノードを右クリックします。
-6. **[レポート]**、 **[カスタム レポート]**の順にクリックします。 
+6. **[レポート]**、 **[カスタム レポート]**の順にクリックします。
 7. **[ファイルを開く]** ダイアログ ボックスで、カスタム レポート フォルダーを見つけます。
 8. ダウンロードした RDL ファイルを選択し、 **[開く]**をクリックします。
 
 > [!IMPORTANT]
-> 高 DPI または 1080 p を超える解像度のディスプレイ デバイスを持つ一部のコンピューターや、一部のリモート デスクトップ セッションでは、これらのレポートは使用できません。 SSMS のレポート ビューアー コントロールには、レポートのクラッシュの原因となるバグがあります。  
+> 高 DPI または 1080 p を超える解像度のディスプレイ デバイスを持つ一部のコンピューターや、一部のリモート デスクトップ セッションでは、これらのレポートは使用できません。 SSMS のレポート ビューアー コントロールには、レポートのクラッシュの原因となるバグがあります。
 
+## <a name="report-list"></a>レポートの一覧
 
-## <a name="report-list"></a>レポート リスト
-
-現在、GitHub の製品サンプル リポジトリには、SQL Server R Services 用の以下のレポートが含まれています。
+現在、GitHub の製品サンプル リポジトリには、次のレポートが含まれています。
 
 + **R Services - Active Sessions**
 
-  このレポートを使用して、現在、SQL インスタンスに接続し、R ジョブを実行しているユーザーを表示します。 
+  このレポートを使用すると、SQL Server インスタンスと学習のジョブ実行中のコンピューターに現在接続しているユーザーを表示します。 
   
 + **R Services - Configuration**
 
-  このレポートを使用して、R Services の R ランタイムと構成のプロパティを表示します。 レポートでは、再起動が必要かどうかが示され、必要なネットワーク プロトコルが確認されます。 
+  このレポートを使用すると、外部スクリプトの実行時と関連サービスの構成を表示します。 レポートでは、再起動が必要かどうかが示され、必要なネットワーク プロトコルが確認されます。 
   
-  SQL 計算コンテキストで R を実行する場合は、暗黙の認証が必要になります。これを確認するために、レポートでは、グループ SQLRUserGroup のデータベース ログインが存在するかどうかが確認されます。
-
-  > [!NOTE]
-  > これらのフィールドの詳細については、「 [Package metadata](http://r-pkgs.had.co.nz/description.html)」 (パッケージ メタデータ) (作成者: Hadley Wickam) を参照してください。 たとえば、導入された R ランタイムの *[ニックネーム]* フィールドは、各リリースを区別するのに役立ちます。 
+  黙示的な認証は、コンピューティング コンテキストとして SQL Server で実行されている機械学習タスクに必要です。 その黙示的な認証が構成されていることを確認するには、このレポートは、グループ SQLRUserGroup データベース ログインが存在するかどうかを確認します。
 
  + **R Services - Configure Instance** 
 
-   このレポートは、インストール後に R Services を構成する場合に役立ちます。 R Services が正しく構成されていない場合は、前のレポートから実行できます。
+   このレポートは、機械学習を構成できます。 前のレポート内で見つかった構成エラーを解決するには、このレポートを実行することもできます。
  
 + **R Services - Execution Statistics**
 
-  このレポートを使用して、R Services の実行統計を表示します。 たとえば、実行された R スクリプトの合計数、並列実行の数、および最も頻繁に使用される RevoScaleR 関数を確認できます。
+  このレポートを使用すると、マシン学習のジョブの実行の統計を表示します。 たとえば、実行された R スクリプトの合計数、並列実行の数、および最も頻繁に使用される RevoScaleR 関数を確認できます。 をクリックして**SQL スクリプトの表示**をこのレポートの背後にある完全な T-SQL コードを取得します。
+
   現在、レポートで監視されるのは、RevoScaleR パッケージ関数の統計のみです。
-  このレポートの T-SQL コードを取得する場合は、 **[SQL スクリプトの表示]** をクリックします。 
 
 + **R Services - Extended Events**
 
-  このレポートを使用して、R スクリプトの実行を監視するために使用できる拡張イベントのリストを表示します。 
-  このレポートの T-SQL コードを取得する場合は、 **[SQL スクリプトの表示]** をクリックします。
+  このレポートを使用すると、外部スクリプトのランタイムに関連するタスクを監視するために使用可能な拡張イベントの一覧を表示します。 をクリックして**SQL スクリプトの表示**をこのレポートの背後にある完全な T-SQL コードを取得します。
 
 + **R Services - Packages**
 
-  このレポートを使用して、SQL Server インスタンスにインストールされている R パッケージのリストを表示します。 現在、レポートには以下のパッケージ プロパティが含まれます。 
-  + パッケージ (名前)
-  + バージョン 
-  + 依存
-  + ライセンス
-  + ビルド済み
-  + lib パス
+  このレポートを使用すると、SQL Server インスタンスにインストールされている R または Python のパッケージの一覧を表示します。
 
 + **R Services - Resource Usage**
 
-  このレポートを使用して、SQL Server R スクリプトの実行ごとに CPU、メモリ、および I/O リソースの消費量を表示します。 外部のリソース プールのメモリ設定を表示することもできます。 
-
+  このレポートを使用すると、外部スクリプトの実行で CPU、メモリ、および I/O リソースの消費状況を表示します。 外部のリソース プールのメモリ設定を表示することもできます。
 
 ## <a name="see-also"></a>参照
 
 [R Services の監視](../../advanced-analytics/r-services/monitoring-r-services.md)
 
 [R Services の拡張イベント](../../advanced-analytics/r-services/extended-events-for-sql-server-r-services.md)
-
 

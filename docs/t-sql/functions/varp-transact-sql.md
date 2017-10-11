@@ -102,11 +102,11 @@ FROM dbo.FactSalesQuota;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Distinct_Values   All_Values`  
-  
- `----------------  ----------------`  
-  
- `158146830494.18   157788848582.94`  
+ ```
+Distinct_Values   All_Values
+----------------  ----------------
+158146830494.18   157788848582.94
+```  
   
 ### <a name="c-using-varp-with-over"></a>C. OVER で VARP を使用します。  
  次の例を返します、`VARP`のカレンダー年度の四半期ごとの販売ノルマの値。 統計的変位を注文内で、OVER 句の ORDER BY、ORDER BY、SELECT ステートメントの結果セットを並べ替えますことを確認します。  
@@ -123,17 +123,14 @@ ORDER BY CalendarQuarter;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Year  Quarter  SalesQuota              Variance`  
-  
- `----  -------  ----------------------  -------------------`  
-  
- `2002  1         91000.0000             0.00`  
-  
- `2002  2        140000.0000             600250000.00`  
-  
- `2002  3         70000.0000             860222222.22`  
-  
- `2002  4        154000.0000             1185187500.00`  
+ ```
+Year  Quarter  SalesQuota              Variance
+----  -------  ----------------------  -------------------
+2002  1         91000.0000             0.00
+2002  2        140000.0000             600250000.00
+2002  3         70000.0000             860222222.22
+2002  4        154000.0000             1185187500.00
+```  
   
 ## <a name="see-also"></a>参照  
  [集計関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)   

@@ -113,13 +113,12 @@ ORDER BY Price ASC;
   
  以下に結果セットを示します。  
   
- `Model         Color      Price`  
-  
- `------------- ---------- -------`  
-  
- `sedan         red        10000.00`  
-  
- `convertible   blue       15000.00`  
+ ```
+ Model         Color      Price  
+ ------------- ---------- -------  
+ sedan         red        10000.00  
+ convertible   blue       15000.00
+ ```  
   
  TOP 句は論理的には ORDER BY 句の前に実行され、演算子 (この場合は UNION ALL) の結果が並べ替えられるため、予期しない結果が返されます。 したがって、前のクエリは任意の赤色の自動車と青色の自動車を 1 つずつ返し、その和集合の結果を価格で並べ替えます。 目的の結果を得るための正しいクエリの例を次に示します。  
   
@@ -141,13 +140,12 @@ FROM (SELECT TOP(1) Model, Color, Price
   
  以下に結果セットを示します。  
   
- `Model         Color      Price`  
-  
- `------------- ---------- -------`  
-  
- `sedan         red        10000.00`  
-  
- `van           blue        8000.00`  
+ ```
+ Model         Color      Price  
+ ------------- ---------- -------  
+ sedan         red        10000.00  
+ van           blue        8000.00
+ ```  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  TOP を INSERT、UPDATE、MERGE、または DELETE と共に使用する場合、参照される行は任意の順序に並べられません。また、これらのステートメントで、ORDER BY 句を直接指定することはできません。 TOP を使用して意味のある順序で行を挿入、削除、変更する必要がある場合は、サブセレクト ステートメントで ORDER BY 句を指定して TOP を使用する必要があります。 例については、後の「例」のセクションを参照してください。  

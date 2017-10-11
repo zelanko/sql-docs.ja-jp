@@ -32,7 +32,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40timeticks-transact-sql"></a>& #x 40; & #x 40 です。TIMETICKS (TRANSACT-SQL)
+# <a name="x40x40timeticks-transact-sql"></a>&#x40;&#x40<です。TIMETICKS (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   タイマーのティックをミリ秒数で返します。  
@@ -59,7 +59,7 @@ SELECT @@TIMETICKS AS 'Time Ticks';
 ```  
   
 ## <a name="see-also"></a>参照  
- [システム統計関数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [システム統計関数 &#40;です。TRANSACT-SQL と&#41;です。](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   
 

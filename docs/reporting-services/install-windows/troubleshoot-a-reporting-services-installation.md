@@ -1,7 +1,7 @@
 ---
-title: "Reporting Services のインストールのトラブルシューティング |Microsoft ドキュメント"
+title: "Reporting Services のインストールに関するトラブルシューティング |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,23 +14,23 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 79d064c7ddb43531fdff086eda71ba1e28d71fd6
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 8a70fbb9bd9f54b06544f8d9b625c7998f74109d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
-# <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services インストール時の問題解決
+# <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services インストールをトラブルシューティングします。
 
   セットアップ中にエラーが発生して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインストールできない場合は、このトピックで示す手順に従って、インストール エラーの原因として最も可能性が高い状況に対処してください。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に関連するその他のエラーや問題については、「 [SSRS の問題とエラーのトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)」を参照してください。  
   
- 発生した問題がリリース ノートに記載されている場合があるので、 [オンライン リリース ノート](http://go.microsoft.com/fwlink/?linkid=236893) を参照してください。  
+ 確認、[オンライン リリース ノート](http://go.microsoft.com/fwlink/?linkid=236893)が発生する問題がリリース ノートに記載されている場合にします。  
   
-##  <a name="bkmk_setuplogs"></a> セットアップ ログのチェック  
+##  <a name="bkmk_setuplogs"></a>セットアップ ログを確認します。  
  セットアップ エラーは、 **[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Setup Bootstrap\Log** フォルダーにあるログ ファイルに記録されます。 セットアップを実行するたびにサブフォルダーが作成されます。 サブフォルダー名はセットアップを実行した日時です。 セットアップ ログ ファイルの表示方法については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。  
   
 -   ログ ファイルには複数のファイルが含まれます。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
 -   \_\*のセットアップ情報を表示するには、*_RS [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] _ComponentUpdateSetup.log を開きます。  
   
-##  <a name="bkmk_prereq"></a> 前提条件のチェック  
+##  <a name="bkmk_prereq"></a>前提条件の確認  
  セットアップでは、前提条件が自動的にチェックされます。 ただし、セットアップ時の問題のトラブルシューティングを行う場合は、セットアップでチェックされる前提条件を把握しておくと役に立ちます。  
   
 -   セットアップを実行するには、アカウントがローカルの Administrators グループのメンバーであることが必要です。 セットアップには、ファイルの追加、レジストリの設定、ローカル セキュリティ グループの作成、および権限の設定を行うための権限が必要です。 既定の構成をインストールする場合は、インストールする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにレポート サーバー データベースを作成する権限がセットアップに必要です。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/09/2017
   
  インターネット インフォメーション サービス (IIS) または [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]はセットアップでチェックされなくなりました。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には MDAC 2.0 および [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 が必要です。これらがインストールされていない場合は、セットアップで自動的にインストールされます。  
   
-##  <a name="bkmk_tshoot_sharepoint"></a> SharePoint モードのインストールでのトラブルシューティング  
+##  <a name="bkmk_tshoot_sharepoint"></a>SharePoint モードのインストールで oroblems をトラブルシューティングします。  
   
 -   [Reporting Services 構成マネージャーが起動しない](#bkmk_configmanager_notstart)  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [RS_SHP は PREPAREIMAGE でサポートされないことを示すエラー メッセージが表示される](#bkmk_RS_SHP_notsupported)  
 
-### <a name="bkmk_configmanager_notstart"></a> Reporting Services 構成マネージャーが起動しない
+### <a name="bkmk_configmanager_notstart"></a>Reporting Services 構成マネージャーが起動しません。
 
  **説明:**この問題は SQL Server 2012 以降をデザインします。 Reporting Services は、SharePoint サービス アーキテクチャ用に設計されています。 SharePoint モードで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を構成および管理するために、構成マネージャーを使用する必要はなくなりました。  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 08/09/2017
   
 -   SQL Server のインストール メディアから、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードをインストールします。  
   
- **注:** 解決方法のいずれかを完了したときに **SharePoint 2013/2016 管理シェル** が開いていた場合は、管理シェルをいったん閉じてから開き直します。  
+ 場合、 **SharePoint 2013/2016 管理シェル**が開いて、回避策のいずれかは、終了し、管理シェルを閉じて再度開きます。  
   
  詳細については、以下を参照してください。  
   
@@ -197,7 +197,7 @@ ms.lasthandoff: 08/09/2017
   
  ![トップにリンク バックに使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "トップにリンク バックに使用される矢印アイコン") [SharePoint モードのインストールに関する問題のトラブルシューティング](#bkmk_tshoot_sharepoint)  
   
-##  <a name="bkmk_tshoot_native"></a> ネイティブ モードのインストールでのトラブルシューティング  
+##  <a name="bkmk_tshoot_native"></a>ネイティブ モードのインストールに関する問題をトラブルシューティングします。  
   
 ###  <a name="PerfCounters"></a> Windows Vista または Windows Server 2008 にアップグレードするとパフォーマンス カウンターが表示されない  
  [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] を実行するコンピューターでオペレーティング システムを [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]にアップグレードした場合、アップグレード後に [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のパフォーマンス カウンターが設定されなくなります。  

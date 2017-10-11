@@ -104,15 +104,24 @@
 
 # [操作方法](r/sql-server-machine-learning-tasks.md)
 
-## [R パッケージの管理](r/r-package-management-for-sql-server-r-services.md)
+## [SQL Server の R パッケージの管理](r/r-package-management-for-sql-server-r-services.md)
+
+### [SQL Server に新しい R パッケージをインストールする](r/install-additional-r-packages-on-sql-server.md)
 
 ### [SQL Server インスタンスの R パッケージ管理を有効にする](r/r-package-how-to-enable-or-disable.md)
-### [R パッケージを取得する場所](r/installing-and-managing-r-packages.md)
-### [SQL Server に追加の Machine Learning パッケージをインストールする](r/install-additional-r-packages-on-sql-server.md)
-### [miniCRAN を使用してローカル パッケージ リポジトリを作成する](r/create-a-local-package-repository-using-minicran.md)
+
 ### [SQL Server にインストールされているパッケージの確認](r/determine-which-packages-are-installed-on-sql-server.md)
-### [ユーザー パッケージ ライブラリ](r/packages-installed-in-user-libraries.md)
-### [SQL Server で使用される R パッケージを同期する](r/package-install-uninstall-and-sync.md)
+
+### [RevoScaleR 関数を使用した SQL Server での R パッケージの検出またはインストール](r/use-revoscaler-to-manage-r-packages.md)
+
+### [SQL Server にインストールされている R パッケージの同期](r/package-install-uninstall-and-sync.md)
+
+### [SQL Server にインストールされている R パッケージ](r/installing-and-managing-r-packages.md)
+
+### [miniCRAN を使用したローカル パッケージ リポジトリの作成](r/create-a-local-package-repository-using-minicran.md)
+
+### [R のユーザー パッケージ ライブラリによるエラーの回避](r/packages-installed-in-user-libraries.md)
+
 
 ## データ探索と予測モデリング
 

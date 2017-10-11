@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: b68d454230d414ff52d90b4f3f71dd68ee65c6bc
-ms.openlocfilehash: f55266b6ec28e2552047cc36a5060945006b2caa
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: 7449932a07aa0284fe2248828270b7f391713175
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="download-sql-server-powershell-module"></a>SQL Server PowerShell モジュールのダウンロード
@@ -28,11 +28,37 @@ SQL Server Management Studio の 17.0 リリースの一部として、SQL Serve
 
 Windows Management Framework の最新バージョンのインストールおよび PowerShell モジュールの一般的なインストール方法に関する完全なドキュメントについては、[PowerShell ギャラリー](https://www.powershellgallery.com/)のサイトをご覧ください。
 
-SQL Server をモジュールをインストールする PowerShell コマンドは次のとおりです。
+SQL Server モジュールをインストールする PowerShell コマンドは次のとおりです。
 
-> Install-module -Name SqlServer -Scope CurrentUser
+> Install-Module -Name SqlServer
+
+このコマンドは、コンピューターのすべてのユーザーに対するモジュールをインストールします。 管理者として PowerShell プロセスを実行している必要があります。
+
+> Install-Module -Name SqlServer -Scope CurrentUser
+
+このコマンドは、PowerShell の現在のプロセスを実行しているユーザーに対するモジュールをインストールします。 管理者権限で PowerShell プロセスを実行している必要はありません。
 
 コンピューターに SQL Server PowerShell モジュールの以前のバージョンがある場合は、"-AllowClobber" パラメーターの指定が必要になる場合があります。  
 
-PowerShell ギャラリーにリリースされる SQL Server PowerShell モジュールのバージョンは、バージョン管理をサポートし、PowerShell バージョン 5.0 以降が必要です。
+管理者として実行していて、コンピューターのすべてのユーザーに対するモジュールをインストールする場合
+
+> Install-Module -Name SqlServer -AllowClobber
+
+管理者として実行できない、または現在のユーザーに対してのみインストールする場合
+
+> Install-Module -Name SqlServer -Scope CurrentUser -AllowClobber
+
+SqlServer モジュールの更新バージョンがある場合、Update-Module コマンドを使用してバージョンを更新できます
+
+> Update-Module -Name SqlServer
+
+使用可能なマシンにインストールされているモジュールのバージョンを表示する場合
+
+> Get-Module SqlServer -ListAvailable
+
+インポートに使用できるスクリプトで特定のバージョンのモジュールを使用する場合
+
+> Import-Module SqlServer -Version 21.0.17178
+
+PowerShell ギャラリーにリリースされる SQL Server PowerShell モジュールのバージョンは、バージョン管理をサポートし、PowerShell バージョン 5.0 以降が必要です。 SqlServer モジュールは [PowerShell ギャラリー](https://www.powershellgallery.com/packages/Sqlserver/)にあります 
 
