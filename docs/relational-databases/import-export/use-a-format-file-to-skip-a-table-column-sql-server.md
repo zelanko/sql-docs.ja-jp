@@ -17,11 +17,11 @@ caps.latest.revision: 50
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1de1c7d6881885035eaa3537ff287a7b45857485
+ms.translationtype: HT
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: d933bccabc8db140dd3807741cdb044f8a1f87ff
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>フォーマット ファイルを使用したテーブル列のスキップ (SQL Server)
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="sample-table-and-data-file"></a>サンプル テーブルとデータ ファイル  
  次の例では、 `myTestSkipCol` サンプル データベースで [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] というテーブルを **dbo** スキーマを使用して作成する必要があります。 このテーブルは次のように作成します。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE myTestSkipCol   
@@ -48,7 +48,6 @@ GO
 1,DataForColumn3  
 1,DataForColumn3  
 1,DataForColumn3  
-  
 ```  
   
  `myTestSkipCol2.dat` から `myTestSkipCol` テーブルにデータを一括インポートするには、フォーマット ファイルで最初のデータ フィールドを `Col1`にマップし、 `Col3`をスキップして 2 番目のフィールドを `Col2`にマップする必要があります。  
@@ -59,7 +58,7 @@ GO
 ### <a name="creating-a-default-non-xml-format-file"></a>XML 以外の既定のフォーマット ファイルの作成  
  ここでは、以下の `myTestSkipCol` bcp **コマンドで** サンプル テーブル用に作成した、XML 以外の既定のフォーマット ファイルを使用します。  
   
-```  
+```cmd
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c -T  
 ```  
   
@@ -109,7 +108,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
 #### <a name="using-bulk-insert"></a>BULK INSERT の使用  
  次の例を動作させるには、このトピックの「XML 以外のフォーマット ファイルを変更する方法」で既に作成した、変更後の XML 以外のフォーマット ファイルの 1 つを使用します。 この例では、変更後のフォーマット ファイルの名前を `C:\myTestSkipCol2.fmt`とします。 `BULK INSERT` を使用して `myTestSkipCol2.dat` データ ファイルを一括インポートするには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターで次のコードを実行します。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BULK INSERT myTestSkipCol   
@@ -130,13 +129,13 @@ GO
 ### <a name="creating-a-default-xml-format-file"></a>既定の XML フォーマット ファイルの作成  
  変換後のフォーマット ファイルの例は、このトピックの「サンプル テーブルとデータ ファイル」で既に作成した `myTestSkipCol` サンプル テーブルおよびデータ ファイルを基にしています。 次の **bcp** コマンドを実行すると、 `myTestSkipCol` テーブルの既定の XML フォーマット ファイルが作成されます。  
   
-```  
+```cmd
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c -x -T  
 ```  
   
  作成される既定の XML フォーマット ファイルには、次に示すように、データ ファイル フィールドとテーブル列の一対一の対応が記述されます。  
   
-```  
+```xml
 \<?xml version="1.0"?>  
 \<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -158,7 +157,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 ### <a name="examples"></a>使用例  
  ここに記載している例は、このトピックの「サンプル テーブルとデータ ファイル」で既に作成した `myTestSkipCol` サンプル テーブルおよび `myTestSkipCol2.dat` サンプル データ ファイルを使用します。 `myTestSkipCol2.dat` から `myTestSkipCol` テーブルにデータをインポートするため、変更した XML フォーマット ファイル `myTestSkipCol2-x.xml`を使用します。 このファイルは、このトピックの「既定の XML フォーマット ファイルの作成」で既に作成したフォーマット ファイルを基にしています。  
   
-```  
+```xml
 \<?xml version="1.0"?>  
 \<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -177,7 +176,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターで、次のコードを実行します。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 INSERT INTO myTestSkipCol  
@@ -194,7 +193,7 @@ GO
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターで、次のコードを実行します。  
   
-```tsql  
+```sql  
 CREATE VIEW v_myTestSkipCol AS  
     SELECT Col1,Col3  
     FROM myTestSkipCol;  
