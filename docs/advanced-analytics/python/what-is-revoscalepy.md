@@ -1,7 +1,7 @@
 ---
 title: "Introducing revoscalepy |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 08/20/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -13,10 +13,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 661e4e24baeb6eba805c9fba6a9a60875c172c9b
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: e7135947e2a8ed23b960575cae0689a77bcdd97d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="introducing-revoscalepy"></a>Revoscalepy の概要
@@ -32,16 +32,17 @@ ms.lasthandoff: 09/01/2017
 
 MicrosoftML パッケージは、R、Python の両方も提供されます。 詳細については、次を参照してください[SQL server を使用して MicrosoftML。](../using-the-microsoftml-package.md)
 
-> [!WARNING]
-> 
-> Python をサポートでは、SQL Server 2017 年 1 の新機能し、は現在プレビューの目的でのみサポートされてです。
-
 ## <a name="versions-and-supported-platforms"></a>バージョンとサポートされるプラットフォーム
 
 **Revoscalepy**のみインストールするときに、次の Microsoft 製品のいずれかのモジュールが利用。
 
-+ Machine Learning サービス、SQL Server 2017 CTP 2.0 またはそれ以降
-+ Microsoft Machine Learning サーバー 9.1.0 です。 SQL Server 2017 CTP 2.0 またはそれ以降のセットアップを使用してインストールが必要です。
++ 機械学習の SQL Server 2017 では、サービス
++ Microsoft Machine Learning Server 9.2.0 以降
+
+Revoscalepy の最新バージョンを入手するには、SQL Server 2017 の Cumulative Update 1 をインストールします。 含む、Python で多くの機能強化が含まれています。
+
++ 新しい Python 関数の場合、`rx_create_col_info`と同様に、SQL Server データ ソースからスキーマ情報を取得する[rxCreateColInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcreatecolinfo)の 
++ 機能強化[rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec)を使用した並列のシナリオをサポートするために、`RxLocalParallel`コンテキストを計算します。 
 
 ## <a name="supported-functions-and-data-types"></a>サポートされている関数とデータ型
 

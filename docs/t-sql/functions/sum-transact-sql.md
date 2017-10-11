@@ -104,17 +104,15 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Color`  
-  
- `--------------- --------------------- ---------------------`  
-  
- `Black           27404.84              5214.9616`  
-  
- `Silver          26462.84              14665.6792`  
-  
- `White           19.00                 6.7926`  
-  
- `(3 row(s) affected)`  
+ ```
+Color
+--------------- --------------------- ---------------------
+Black           27404.84              5214.9616
+Silver          26462.84              14665.6792
+White           19.00                 6.7926
+
+(3 row(s) affected)
+ ```  
   
 ### <a name="b-using-the-over-clause"></a>B. OVER 句を使用する  
  次の例で、OVER 句に各区域の年間売り上げの累積合計を提供する SUM 関数を使用する、`Sales.SalesPerson`テーブルに、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。 データがパーティション分割`TerritoryID`によって論理的に順序付けと`SalesYTD`です。 つまり、SUM 関数は年を基にして区域ごとに計算されます。 ことに注意して`TerritoryID`1 の場合、そこが 2005 年の 2 つの行を表す 2 つの販売員の売上その年です。 これら 2 行の累計売上が計算された後、2006 年の売上を表す 3 番目の行が計算に組み込まれます。  
@@ -207,17 +205,14 @@ ORDER BY ProductKey;
   
  部分的な結果セットを次に示します。  
   
- `ProductKey  TotalPerProduct`  
-  
- `----------  ---------------`  
-  
- `214         31421.0200`  
-  
- `217         31176.0900`  
-  
- `222         29986.4300`  
-  
- `225          7956.1500`  
+ ```
+ProductKey  TotalPerProduct
+----------  ---------------
+214         31421.0200
+217         31176.0900
+222         29986.4300
+225          7956.1500
+ ```
   
 ### <a name="d-calculating-group-totals-with-more-than-one-column"></a>D. 1 つ以上の列でグループ合計を計算します。  
  次の例では、`ListPrice` テーブルに一覧された色ごとに `StandardCost` と `Product` の合計を計算します。  
@@ -234,19 +229,15 @@ ORDER BY Color;
   
  結果セットの最初の部分は、次に示します。  
   
- `Color       TotalList      TotalCost`  
-  
- `----------  -------------  --------------`  
-  
- `Black       101295.7191    57490.5378`  
-  
- `Blue         24082.9484    14772.0524`  
-  
- `Grey           125.0000       51.5625`  
-  
- `Multi          880.7468      526.4095`  
-  
- `NA            3162.3564     1360.6185`  
+ ```
+Color       TotalList      TotalCost
+----------  -------------  --------------
+Black       101295.7191    57490.5378
+Blue         24082.9484    14772.0524
+Grey           125.0000       51.5625
+Multi          880.7468      526.4095
+NA            3162.3564     1360.6185
+ ```  
   
 ## <a name="see-also"></a>参照  
  [集計関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)   

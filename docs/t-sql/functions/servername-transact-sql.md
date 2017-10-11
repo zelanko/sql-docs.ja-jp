@@ -29,7 +29,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40servername-transact-sql"></a>& #x 40; & #x 40 です。サーバー名 (TRANSACT-SQL)
+# <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;です。サーバー名 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   実行されているローカル サーバーの名前を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
@@ -81,7 +81,7 @@ ACCTG
 ## <a name="see-also"></a>参照  
  [構成関数 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
- [sp_addserver & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)  
+ [sp_addserver &#40;です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)  
   
   
 

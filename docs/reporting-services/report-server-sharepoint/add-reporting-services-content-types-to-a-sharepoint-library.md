@@ -1,7 +1,7 @@
 ---
-title: "SharePoint ライブラリに Reporting Services コンテンツの種類を追加 |Microsoft ドキュメント"
+title: "SharePoint ライブラリに Reporting Services コンテンツ タイプを追加 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,24 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2ecb38b65092e15139b0a7c969903105c88a88aa
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 77b7a28486715b0583fb64a8ae6da169a27507da
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
-# <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、共有データ ソース (.rsds) ファイル、レポート モデル (.smdl)、レポート ビルダーのレポート定義 (.rdl) ファイルを管理する際に使用するコンテンツの種類が、あらかじめ定義されています。 コンテンツの種類として、 **[レポート ビルダー レポート]**、 **[レポート モデル]**、および **[レポート データ ソース]** をライブラリに追加すると、 **[新規作成]** コマンドが有効になり、その種類のドキュメントを新規作成できるようになります。  
-  
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード:  
-  
+# <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>SharePoint ライブラリに Reporting Services コンテンツ タイプを追加します。
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、共有データ ソース (.rsds) ファイル、レポート モデル (.smdl)、レポート ビルダーのレポート定義 (.rdl) ファイルを管理する際に使用するコンテンツの種類が、あらかじめ定義されています。 コンテンツの種類として、 **[レポート ビルダー レポート]**、 **[レポート モデル]**、および **[レポート データ ソース]** をライブラリに追加すると、 **[新規作成]** コマンドが有効になり、その種類のドキュメントを新規作成できるようになります。
+
+> [!NOTE]
+> SQL Server 2016 より後に、SharePoint と reporting Services の統合を使用できなくします。
+
  コンテンツの種類をライブラリに追加するには、サイトの管理者であるか、またはフル コントロール レベルの権限を持っている必要があります。  
   
  次のサイト テンプレートの種類から作成された既存のサイト コレクションのすべてのドキュメント ライブラリで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンテンツの種類およびコンテンツの種類の管理が自動的に有効になります。  
@@ -112,7 +118,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  コンテンツの種類の追加操作が完了したら、 **[OK]**をクリックします。  
   
-9. > [!NOTE]  
+    > [!NOTE]  
     >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンテンツの種類のグループ **[SQL Server Reporting Services のコンテンツの種類]** が **[コンテンツ タイプの追加]** ページに表示されない場合は、次のいずれかの状況に該当しています。  
   
     -   SharePoint 製品用の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインがインストールされていません。 詳細については、「 [SharePoint 用 Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)」を参照してください。 このトピックには、アドインのインストール方法、アドインのファイルのみのインストールをステップ実行して問題に対処する方法が記載されています。  
@@ -155,7 +161,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  コンテンツの種類の追加操作が完了したら、 **[OK]**をクリックします。  
   
-##  <a name="bkmk_enable_multiple_sites"></a> 複数の BI サイトのコンテンツの種類とコンテンツ管理を有効にするには  
+##  <a name="bkmk_enable_multiple_sites"></a>コンテンツの種類と複数の BI サイトのコンテンツ管理を有効にするには  
   
 1.  SQL Server Reporting Services 2008 および 2008 R2 レポート サーバーの場合は、複数のビジネス インテリジェンス センター サイトのコンテンツの種類とコンテンツ管理を有効にすることができます。  
   

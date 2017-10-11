@@ -13,7 +13,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
 ms.openlocfilehash: 000325a2e2c53e36f7a74a725962b8dd3be98988
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>クライアントの Microsoft SQL Server へのプログラミングのホームページ
@@ -52,9 +52,9 @@ ms.lasthandoff: 09/13/2017
 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
-| &nbsp;[![C# のロゴ][イメージの ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[![ORM Entity Framework での .NET Framework][イメージの ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[![Java ロゴ][イメージの ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp;[![Node.js のロゴ][イメージの ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[![PHP のロゴ][イメージの ref-360-php]](#an-170-php-docu) |
-| &nbsp;[![Python ロゴ][イメージの ref-370-python]](#an-180-python-docu) | &nbsp;[![Ruby ロゴ][イメージの ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
+| &nbsp;[ ![C# ロゴ][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM Entity Framework では、.NET Framework の][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Java ロゴ][image-ref-330-java]](#an-130-jdbc-docu) |
+| &nbsp;[ ![Node.js ロゴ][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[ ![PHP ロゴ][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp;[ ![Python ロゴ][image-ref-370-python]](#an-180-python-docu) | &nbsp;[ ![Ruby ロゴ][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
@@ -103,7 +103,7 @@ EF には、次のテクノロジに直接的または間接的なリレーシ�
 
 - .NET Framework
 - [LINQ to SQL](http://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/)、または[LINQ to Entities](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
-- 言語の構文の機能強化など、 ** => ** (C#) 演算子。
+- 言語の構文の機能強化など、  **=>**  (C#) 演算子。
 - SQL データベースのテーブルにマップされるクラスのソース コードを生成する便利なプログラムです。 たとえば、 [EdmGen.exe](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe)です。
 
 
@@ -152,7 +152,7 @@ JDBC のドキュメントには、次の主要な領域が含まれています
 | :-- | :-- |
 | [Java Database Connectivity (JDBC)](./jdbc/index.md) | この JDBC ドキュメントのルートです。 |
 | [リファレンス](./jdbc/reference/index.md) | インターフェイス、クラス、およびメンバー。 |
-| [JDBC SQL ドライバーのガイドのプログラミング](./jdbc/programming-guide-for-jdbc-sql-driver.md) | 構成については、コード例も紹介します。 |
+| [JDBC SQL ドライバーのプログラミング ガイド](./jdbc/programming-guide-for-jdbc-sql-driver.md) | 構成については、コード例も紹介します。 |
 | &nbsp; | <br /> |
 
 

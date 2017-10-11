@@ -91,17 +91,14 @@ SELECT SYSDATETIME()
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `SYSDATETIME()      2007-04-30 13:10:02.0474381`  
-  
- `SYSDATETIMEOFFSET()2007-04-30 13:10:02.0474381 -07:00`  
-  
- `SYSUTCDATETIME()   2007-04-30 20:10:02.0474381`  
-  
- `CURRENT_TIMESTAMP  2007-04-30 13:10:02.047`  
-  
- `GETDATE()          2007-04-30 13:10:02.047`  
-  
- `GETUTCDATE()       2007-04-30 20:10:02.047`  
+ ```
+SYSDATETIME()      2007-04-30 13:10:02.0474381
+SYSDATETIMEOFFSET()2007-04-30 13:10:02.0474381 -07:00
+SYSUTCDATETIME()   2007-04-30 20:10:02.0474381
+CURRENT_TIMESTAMP  2007-04-30 13:10:02.047
+GETDATE()          2007-04-30 13:10:02.047
+GETUTCDATE()       2007-04-30 20:10:02.047
+```  
   
 ### <a name="b-getting-the-current-system-date"></a>B. 現在のシステム日付を取得する  
   
@@ -117,17 +114,14 @@ SELECT CONVERT (date, SYSDATETIME())
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `SYSDATETIME()          2007-05-03`  
-  
- `SYSDATETIMEOFFSET()    2007-05-03`  
-  
- `SYSUTCDATETIME()       2007-05-04`  
-  
- `CURRENT_TIMESTAMP      2007-05-03`  
-  
- `GETDATE()              2007-05-03`  
-  
- `GETUTCDATE()           2007-05-04`  
+```
+SYSDATETIME()          2007-05-03  
+SYSDATETIMEOFFSET()    2007-05-03  
+SYSUTCDATETIME()       2007-05-04  
+CURRENT_TIMESTAMP      2007-05-03  
+GETDATE()              2007-05-03  
+GETUTCDATE()           2007-05-04
+``` 
   
 ### <a name="c-getting-the-current-system-time"></a>C. 現在のシステム時刻を取得する  
   
@@ -143,17 +137,14 @@ SELECT CONVERT (time, SYSDATETIME())
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `SYSDATETIME()      13:18:45.3490361`  
-  
- `SYSDATETIMEOFFSET()13:18:45.3490361`  
-  
- `SYSUTCDATETIME()   20:18:45.3490361`  
-  
- `CURRENT_TIMESTAMP  13:18:45.3470000`  
-  
- `GETDATE()          13:18:45.3470000`  
-  
- `GETUTCDATE()       20:18:45.3470000`  
+```
+SYSDATETIME()      13:18:45.3490361  
+SYSDATETIMEOFFSET()13:18:45.3490361  
+SYSUTCDATETIME()   20:18:45.3490361  
+CURRENT_TIMESTAMP  13:18:45.3470000  
+GETDATE()          13:18:45.3470000  
+GETUTCDATE()       20:18:45.3470000  
+```
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例は、3 つを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返す現在の日付と時刻を日付、時刻、またはその両方を返すシステム関数です。 値は順番に返されるため、秒の小数部が異なる可能性があります。  

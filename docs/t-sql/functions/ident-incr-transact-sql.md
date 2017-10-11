@@ -82,25 +82,18 @@ WHERE IDENT_INCR(TABLE_SCHEMA + '.' + TABLE_NAME) IS NOT NULL;
   
  部分的な結果セットを次に示します。  
   
- `TABLE_SCHEMA        TABLE_NAME                IDENT_INCR`  
-  
- `------------        ------------------------  ----------`  
-  
- `Person              Address                            1`  
-  
- `Production          ProductReview                      1`  
-  
- `Production          TransactionHistory                 1`  
-  
- `Person              AddressType                        1`  
-  
- `Production          ProductSubcategory                 1`  
-  
- `Person              vAdditionalContactInfo             1`  
-  
- `dbo                 AWBuildVersion                     1`  
-  
- `Production          BillOfMaterials                    1`  
+ ```
+ TABLE_SCHEMA        TABLE_NAME                IDENT_INCR  
+------------        ------------------------  ----------  
+Person              Address                            1  
+Production          ProductReview                      1  
+Production          TransactionHistory                 1  
+Person              AddressType                        1  
+Production          ProductSubcategory                 1  
+Person              vAdditionalContactInfo             1  
+dbo                 AWBuildVersion                     1  
+Production          BillOfMaterials                    1
+```  
   
 ## <a name="see-also"></a>参照  
  [式 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   

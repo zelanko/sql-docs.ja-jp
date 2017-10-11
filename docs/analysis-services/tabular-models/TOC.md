@@ -20,6 +20,7 @@
 ### [サポートされているデータ ソース](data-sources-supported-ssas-tabular.md)  
 ### [サポートされているデータ型](data-types-supported-ssas-tabular.md)  
 ### [権限借用](impersonation-ssas-tabular.md)  
+### [ネイティブ クエリを使用したデータのインポート](ssas-import-query.md)
 ### [データのインポート - リレーショナル データ ソース](ssas-import-data-relational-data-source.md)  
 ### [データのインポート - 多次元データ ソース](ssas-import-data-multidimensional-data-source.md)  
 ### [データのインポート - データ フィード](ssas-import-data-data-feed.md)  

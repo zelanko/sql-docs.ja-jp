@@ -103,11 +103,11 @@ FROM ProductInventory;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Distinct_Values   All_Values`  
-  
- `----------------  ----------------`  
-  
- `397676.79         397226.44`  
+ ```
+Distinct_Values   All_Values  
+----------------  ----------------  
+397676.79         397226.44
+```  
   
 ### <a name="c-using-stdevp-with-over"></a>C. OVER で STDEVP を使用します。  
  次の例を返します、`STDEVP`のカレンダー年度の四半期ごとの販売ノルマの値。 `ORDER BY` 句の `OVER` によって `STDEVP` が順序付けされ、`ORDER BY` ステートメントの `SELECT` によって結果セットが順序付けされることに注目してください。  
@@ -124,17 +124,14 @@ ORDER BY CalendarQuarter;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Year  Quarter  SalesQuota              StdDeviation`  
-  
- `----  -------  ----------------------  -------------------`  
-  
- `2002  1         91000.0000             0.00`  
-  
- `2002  2        140000.0000             24500.00`  
-  
- `2002  3         70000.0000             29329.55`  
-  
- `2002  4        154000.0000             34426.55`  
+ ```
+Year  Quarter  SalesQuota              StdDeviation  
+----  -------  ----------------------  -------------------  
+2002  1         91000.0000             0.00  
+2002  2        140000.0000             24500.00  
+2002  3         70000.0000             29329.55  
+2002  4        154000.0000             34426.55
+```  
   
 ## <a name="see-also"></a>参照  
  [集計関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)   

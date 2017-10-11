@@ -1,4 +1,4 @@
----
+﻿---
 title: "手順 1: pyodbc Python 開発環境の構成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/08/2017
@@ -54,7 +54,7 @@ Python - Ubuntu と Red Hat pyodbc を使用して SQL データベースに接�
 > sh installodbc.sh  
 ```   
 
-  Red Hat 6、7 用
+  Red Hat 6、7 の 
 ``` 
 > sudo su 
 > wget https://gallery.technet.microsoft.com/ODBC-Driver-13-for-SQL-8d067754/file/153653/4/install.sh 

@@ -144,8 +144,10 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Msg 15600, Level 15, State 1, Line 1`   
- `An invalid parameter or option was specified for procedure 'mysp_CreateCustomer'.`  
+ ```
+ Msg 15600, Level 15, State 1, Line 1   
+ An invalid parameter or option was specified for procedure 'mysp_CreateCustomer'.
+ ```  
   
  *状態*  
  0 ～ 255 の整数です。 負の値を 1 に既定値です。 255 より大きい値には使用できません。 

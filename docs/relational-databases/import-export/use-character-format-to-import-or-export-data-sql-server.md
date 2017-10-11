@@ -17,11 +17,11 @@ caps.latest.revision: 42
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: babd3dc4daaa60af026d8694e0cc69292ab44ce0
+ms.translationtype: HT
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 927bc546612f0d56ce857a41fbb2ba49ca32d47e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>文字形式を使用したデータのインポートまたはエクスポート (SQL Server)
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/22/2017
 -   [bcp ユーティリティ](../../tools/bcp-utility.md)は [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 型の値をエクスポートする場合、コンマなどの桁区切り文字で区切らずに、小数点以下 4 桁の文字形式データ ファイルとしてエクスポートします。 たとえば、値 1,234,567.123456 を含む [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 型の列は、文字列 1234567.1235 としてデータ ファイルに一括エクスポートされます。  
   
 ## 文字形式のコマンド オプション<a name="command_options"></a>  
-文字形式のデータは、[bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)、または [INSERT ...SELECT * FROM OPENROWSET(BULK...) を使用してテーブルにインポートできます](../../t-sql/functions/openrowset-transact-sql.md)。 [bcp](../../tools/bcp-utility.md) コマンドまたは [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ステートメントの場合は、ステートメントでデータ形式を指定できます。  [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) ステートメントの場合は、フォーマット ファイルでデータ形式を指定する必要があります。  
+文字形式のデータは、[bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)、または [INSERT ...SELECT * FROM OPENROWSET(BULK...) を使用してテーブルにインポートできます](../../t-sql/functions/openrowset-transact-sql.md)。[bcp](../../tools/bcp-utility.md) コマンドまたは [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ステートメントの場合は、ステートメントでデータ形式を指定できます。  [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) ステートメントの場合は、フォーマット ファイルでデータ形式を指定する必要があります。  
   
 文字形式は、次のコマンド オプションでサポートされています。  
   
@@ -81,7 +81,8 @@ ms.lasthandoff: 06/22/2017
 
 ### **サンプル テーブル**<a name="sample_table"></a>
 次のスクリプトは、 `myChar` という名前のテーブルのテスト データベースを作成し、テーブルにいくつかの初期値を設定します。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
-```tsql
+
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -108,7 +109,7 @@ SELECT * FROM TestDatabase.dbo.myChar;
 ### **XML 形式以外のフォーマット ファイルのサンプル**<a name="nonxml_format_file"></a>
 SQL Server は、非 XML 形式と XML 形式の 2 種類のフォーマット ファイルをサポートしています。  XML 以外のフォーマットとは、以前のバージョンの SQL Server でサポートされる従来のフォーマットです。  詳細については、「 [XML 以外のフォーマット ファイル (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 」を参照してください。  次のコマンドでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用し、 `myChar.fmt`のスキーマに基づいて XML 以外のフォーマット ファイル `myChar`を生成します。  [bcp](../../tools/bcp-utility.md) コマンドを使用してフォーマット ファイルを作成するには、 **format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。  format オプションには、次に示す **-f** オプションが必要です。  さらに、この例では、修飾子 **c** を使用して文字データを指定し、 **T** を使用して統合セキュリティによる信頼関係接続を指定します。  コマンド プロンプトで、次のコマンドを入力します。
 
-```
+```cmd
 bcp TestDatabase.dbo.myChar format nul -f D:\BCP\myChar.fmt -T -c 
 
 REM Review file
@@ -126,7 +127,8 @@ Notepad D:\BCP\myChar.fmt
 
 ### **bcp と文字形式を使用したデータのエクスポート**<a name="bcp_char_export"></a>
 **-c** スイッチと **OUT** コマンドです。  注: この例で作成するデータ ファイルをその後のすべての例で使用します。  コマンド プロンプトで、次のコマンドを入力します。
-```
+
+```cmd
 bcp TestDatabase.dbo.myChar OUT D:\BCP\myChar.bcp -T -c
 
 REM Review results
@@ -135,7 +137,8 @@ NOTEPAD D:\BCP\myChar.bcp
 
 ### **フォーマット ファイルなしで bcp と文字形式を使用してデータをインポートする方法**<a name="bcp_char_import"></a>
 **-c** スイッチと **IN** コマンドです。  コマンド プロンプトで、次のコマンドを入力します。
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myChar;"
 
@@ -148,7 +151,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 
 ### **XML 形式以外のフォーマット ファイルで bcp と文字形式を使用してデータをインポートする方法**<a name="bcp_char_import_fmt"></a>
 **-c** および **-f** スイッチと **IN** コマンドです。  コマンド プロンプトで、次のコマンドを入力します。
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myChar;"
 
@@ -161,7 +165,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 
 ### **フォーマット ファイルなしで BULK INSERT と文字形式を使用する方法**<a name="bulk_char"></a>
 **DATAFILETYPE** 引数です。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
-```tsql
+
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myChar; -- for testing
 BULK INSERT TestDatabase.dbo.myChar
     FROM 'D:\BCP\myChar.bcp'
@@ -175,7 +180,8 @@ SELECT * FROM TestDatabase.dbo.myChar;
 
 ### **XML 形式以外のフォーマット ファイルで BULK INSERT と文字形式を使用する方法**<a name="bulk_char_fmt"></a>
 **FORMATFILE** 引数。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
-```tsql
+
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myChar; -- for testing
 BULK INSERT TestDatabase.dbo.myChar
    FROM 'D:\BCP\myChar.bcp'
@@ -189,7 +195,8 @@ SELECT * FROM TestDatabase.dbo.myChar;
 
 ### **XML 形式以外のフォーマット ファイルで OPENROWSET と文字形式を使用する方法**<a name="openrowset_char_fmt"></a>
 **FORMATFILE** 引数。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
-```tsql
+
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myChar;  -- for testing
 INSERT INTO TestDatabase.dbo.myChar
     SELECT *

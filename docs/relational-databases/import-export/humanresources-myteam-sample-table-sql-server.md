@@ -40,7 +40,7 @@ ms.lasthandoff: 10/04/2017
 |**[タイトル]**|**nvarchar (50)**|[可]|チームにおける従業員の肩書き。|  
 |**背景情報**|**nvarchar (50)**|不可|行が最後に更新された日時 (既定値)。|  
   
- **HumanResources.myTeam テーブルを作成するには**  
+**HumanResources.myTeam テーブルを作成するには**  
   
 -   次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用します。  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 10/04/2017
     GO  
     ```  
   
- **HumanResources.myTeam テーブルに行を設定するには**  
+**HumanResources.myTeam テーブルに行を設定するには**  
   
 -   次の `INSERT` ステートメントでは、テーブルに 2 つの行を設定します。  
   

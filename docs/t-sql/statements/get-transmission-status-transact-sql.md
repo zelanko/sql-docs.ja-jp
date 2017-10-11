@@ -75,11 +75,11 @@ SELECT Status =
   
  行の長さの編集、サンプルの結果セットを次に示します。  
   
- `Status`  
-  
- `-------------------------------`  
-  
- `The Service Broker protocol transport is disabled or not configured.`  
+ ```
+ Status  
+ ------------------------------- 
+ The Service Broker protocol transport is disabled or not configured.
+ ```  
   
  この場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が使用できるように構成されていない[!INCLUDE[ssSB](../../includes/sssb-md.md)]ネットワーク経由で通信するためにします。  
   

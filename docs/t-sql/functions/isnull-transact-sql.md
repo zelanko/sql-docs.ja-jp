@@ -76,11 +76,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `--------------------------`  
+ ```
+ -------------------------- 
+59.79  
   
- `59.79`  
-  
- `(1 row(s) affected)`  
+ (1 row(s) affected)
+ ```  
   
 ### <a name="b-using-isnull"></a>B. ISNULL を使用する  
  次の例では、`AdventureWorks2012` のすべての特価品について、説明、値引き率、最小数量、および最大数量を選択します。 ある特価品の最大数量が NULL の場合、結果セットに表示される `MaxQty` は `0.00` です。  

@@ -2,7 +2,7 @@
 title: "Power BI のレポート サーバーの統合 (構成マネージャー) |Microsoft ドキュメント"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 08/17/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,14 @@ f1_keywords:
 - pbi
 - power bi
 - power bi integration
-ms.assetid: 902b7c31-7399-4855-90f2-42f89d847fff
-caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 3d39c8851c43adba12102f7d2440ae55e8216e1e
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: c6f8c9440a6229726c655dae42ea7ab955e35f54
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
@@ -33,13 +31,11 @@ ms.lasthandoff: 08/17/2017
 
 **構成マネージャーの** [Power BI 統合] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ページを使用して、レポート サーバーを目的の Azure Active Directory (AD) 管理対象テナントに登録すると、レポート サーバーのユーザーはサポートされるレポート アイテムを [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ダッシュボードにピン留めできるようになります。 ピン留めできるサポートされているアイテムの一覧については、「 [Power BI ダッシュボードへの Reporting Services のアイテムのピン留め](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)」を参照してください。
 
-![rs_powerbi_icon](../../reporting-services/media/ssrs-powerbi-icon.png "rs_powerbi_icon")
-
 ##  <a name="bkmk_requirements"></a> Power BI 統合の要件
 
 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] サービスを参照できるようにするためのアクティブなインターネット接続に加え、 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]統合を完了するには次の要件があります。
 
-- **Azure Active Directory:** 組織で Azure Active Directory を使用する必要があります。Azure Active Directory では、Azure サービスと Web アプリケーションのディレクトリと ID を管理できます。 詳細については、「 [Azure Active Directory とは](https://azure.microsoft.com/en-us/documentation/articles/active-directory-whatis/)」を参照してください。
+- **Azure Active Directory:** 組織で Azure Active Directory を使用する必要があります。Azure Active Directory では、Azure サービスと Web アプリケーションのディレクトリと ID を管理できます。 詳細については、次を参照してください。 [Azure Active Directory は何ですか。](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
 
 - **管理対象テナント:** レポート アイテムをピン留めする [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ダッシュボードは、Azure AD 管理対象テナントに属している必要があります。  管理対象テナントは、組織が Office 365 や Microsoft Intune などの Azure サービスに初めてサブスクライブしたときに自動的に作成されます。   バイラル テナントは現在サポートされていません。  詳細については、「 [Azure AD ディレクトリとは](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)」の「Azure AD テナントとは」および「Azure AD ディレクトリを取得する方法」を参照してください。
 
@@ -53,7 +49,7 @@ ms.lasthandoff: 08/17/2017
 
 セクションを参照して、資格情報を保存する方法の詳細については「構成の保存されたレポートに固有のデータ ソースの資格情報」で[Reporting Services データ ソースに資格情報を格納](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)です。
 
-管理者は、  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のログ ファイルで詳細を確認できます。  次のようなメッセージが表示されます。 ![注](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注")確認および監視する優れた方法[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ログ ファイルは、使用する[!INCLUDE[msCoName](../../includes/msconame-md.md)]ファイルを Power Query です。  詳細情報と短いビデオについては、「 [レポート サーバー サービスのトレース ログ](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。
+管理者は、  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のログ ファイルで詳細を確認できます。  次のようなメッセージが表示されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のログ ファイルを確認および監視する優れた方法として、ファイルに対して [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query を使用します。  詳細情報と短いビデオについては、「 [レポート サーバー サービスのトレース ログ](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。
 
     subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
 
@@ -65,15 +61,13 @@ ms.lasthandoff: 08/17/2017
 
 1. [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 統合ページを選択します。
 
-     ![rs_powerbi_integration](../../reporting-services/install-windows/media/ssrs-powerbi-integration.png "rs_powerbi_integration")
-
 2. **[Power BI に登録]**を選択します。
 
 3. [!INCLUDE[msCoName](../../includes/msconame-md.md)] サインイン ダイアログで、 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]へのサインインに使用する資格情報を入力します。
 
 4. 登録が完了すると、 **[Power BI の登録の詳細]** セクションに Azure テナント ID とリダイレクト URL が示されます。  この URL は、 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ダッシュボードが登録済みのレポート サーバーと通信するためのサインインおよび通信プロセスの中で使用されます。
 
-5. ![注](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注")選択、**コピー**ボタンをクリックして、**結果**ウィンドウにそれらを今後の参照を保存できるように、登録の詳細を Windows クリップボードにコピーします。
+5. **[結果]** ウィンドウの **[コピー]** ボタンをクリックして、登録の詳細を Windows クリップボードにコピーし、後で参照できるように保存します。
 
 ##  <a name="bkmk_unregister"></a> Power BI への登録の解除
 
@@ -127,7 +121,7 @@ ms.lasthandoff: 08/17/2017
 
 1. ユーザーが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] でレポートをプレビューし、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]でレポート アイテムをクリックして初めてピン留めすると、
 
-2. Azure AD サインイン ページにリダイレクトされます。 ユーザーは、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. ユーザーが Azure 管理対象テナントにサインインすると、Azure アカウントと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のアクセス許可の間に関係が確立されます。  詳細については、「 [Power BI 統合の個人用設定 &#40;Web ポータル&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)」を参照してください。
+2. Azure AD サインイン ページにリダイレクトされます。 ユーザーは、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. ユーザーが Azure 管理対象テナントにサインインすると、Azure アカウントと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のアクセス許可の間に関係が確立されます。  詳細については、次を参照してください。 [Power BI の統合 (&) #40";"web ポータル"&"#41; の個人用設定](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)です。
 
 3. ユーザーのセキュリティ トークンがレポート サーバーに返されます。
 
@@ -139,7 +133,7 @@ ms.lasthandoff: 08/17/2017
 
 7. ダッシュボード タイルのレポート アイテムのスケジュールされた更新を管理するために、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションが作成されます。 サブスクリプションでは、ユーザーがサインインしたときに作成されたセキュリティ トークンを使用します。
 
-     **注:**  トークンの有効期間は **90 日間**です。有効期間を過ぎたら、ユーザーはもう一度サインインして新しいユーザー トークンを作成する必要があります。 トークンの有効期限が切れても、ピン留めされたタイルはダッシュボードに引き続き表示されますが、データは更新されなくなります。  新しいユーザー トークンが作成されるまで、ピン留めされたアイテムに使用される [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションでエラーが発生します。 「 [Power BI 統合の個人用設定 &#40;Web ポータル&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)」を参照してください。 」を参照してください。
+     トークンが適して**90 日間**、もう一度サインインすると、新しいユーザー トークンを作成する必要のあるユーザーの後にします。 トークンの有効期限が切れても、ピン留めされたタイルはダッシュボードに引き続き表示されますが、データは更新されなくなります。  新しいユーザー トークンが作成されるまで、ピン留めされたアイテムに使用される [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションでエラーが発生します。 参照してください[Power BI の統合 (&) #40";"web ポータル"&"#41; の個人用設定](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)です。 」を参照してください。
 
 ユーザーが 2 回目にアイテムをピン留めするときは、手順 1 ～ 4 がスキップされます。代わりに、ReportServer データベースからアプリ ID と URL が取得され、手順 5 からフローが続行されます。
 
@@ -163,8 +157,8 @@ ms.lasthandoff: 08/17/2017
 
 ## <a name="next-steps"></a>次の手順
 
-[Power BI 統合のために設定](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[Power BI 統合のために設定](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
 [Power BI ダッシュボードへの Reporting Services のアイテムのピン留め](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
 [Power BI のダッシュボード](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
   
  **シナリオ 1: サービスが開始されていない**  
   
- SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) インスタンスが開始されていません。 パスワードの期限が切れると、サービスの実行が停止します。 パスワードの変更方法の詳細については、「 [Configure Power Pivot Service Accounts](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) 」および「 [Start or Stop a Power Pivot for SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)」を参照してください。  
+ SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) インスタンスが開始されていません。 パスワードの期限が切れると、サービスの実行が停止します。 パスワードの変更方法の詳細については、「 [Power Pivot サービス アカウントの構成](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) 」および「 [PowerPivot for SharePoint サーバーの開始または停止](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)」を参照してください。  
   
  **シナリオ 2a: サーバー上で以前バージョンのブックを開こうとしている**  
   

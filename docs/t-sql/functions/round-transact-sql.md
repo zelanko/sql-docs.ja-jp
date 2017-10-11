@@ -118,17 +118,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `----------`  
-  
- `123.4500`  
-  
- `(1 row(s) affected)`  
-  
- `--------`  
-  
- `100.00`  
-  
- `(1 row(s) affected)`  
+ ```
+----------
+123.4500
+
+(1 row(s) affected)
+
+--------
+100.00
+
+(1 row(s) affected)
+```
   
 ### <a name="c-using-round-to-truncate"></a>C. ROUND を使用して切り捨てを行う  
  次の例を使用して 2 つ`SELECT`ステートメントを丸め処理と切り捨ての違いを示します。 最初のステートメントは、結果を丸めます。 2 番目のステートメントは、結果を切り捨てます。  
@@ -164,10 +164,11 @@ SELECT ROUND(123.994999, 3), ROUND(123.995444, 3);
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `--------  ---------`  
-  
- `123.995000    123.995444`  
+
+ ```
+--------  ---------
+123.995000    123.995444
+```
   
 ### <a name="e-using-round-and-rounding-approximations"></a>E. ROUND を使用して概数を丸める  
  次の例では、数値を丸めて概数化します。  
@@ -177,10 +178,11 @@ SELECT ROUND(123.4545, 2), ROUND(123.45, -2);
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `--------  ----------`  
-  
- `123.45    100.00`  
+
+ ```
+--------  ----------
+123.45    100.00
+```
   
 ## <a name="see-also"></a>参照  
  [CEILING & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ceiling-transact-sql.md)   

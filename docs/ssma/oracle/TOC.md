@@ -1,5 +1,6 @@
 # [SSMA for Oracle のインストール (OracleToSQL)](installing-ssma-for-oracle-oracletosql.md)
 # [SSMA for Oracle 入門 (OracleToSQL)](getting-started-with-ssma-for-oracle-oracletosql.md)
+# [SQL Server への Oracle HR スキーマの変換](sql-server-linux-convert-from-oracle.md)
 # [法的通知 (SSMA for Oracle)](legal-notice-ssma-for-oracle.md)
 # [SSMA for Oracle クライアントのインストール (OracleToSQL)](installing-ssma-for-oracle-client-oracletosql.md)
 # [SSMA for Oracle の新機能 (OracleToSQL)](what-s-new-in-ssma-for-oracle-oracletosql.md)

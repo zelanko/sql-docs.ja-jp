@@ -1,7 +1,7 @@
 ---
-title: "SharePoint サイト上のレポート ビューアー web パーツを展開 |Microsoft ドキュメント"
+title: "SharePoint サイト上の SQL Server Reporting Services レポート ビューアー web パーツを展開 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 09/15/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,27 +14,24 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
-ms.openlocfilehash: ed93b0fd5161686becb4cca05c005fd281f2c176
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: a75ad193204e17e1d053aa4e00adba5f551d684b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
-# <a name="deploy-the-report-viewer-web-part-on-a-sharepoint-site"></a>SharePoint サイト上のレポート ビューアー web パーツを展開します。
+# <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>SharePoint サイト上の SQL Server Reporting Services レポート ビューアー web パーツを展開します。
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-レポート ビューアー Web パーツは、レポートを表示する SQL Server Reporting Services (ネイティブ モード)、SharePoint サイト内で使用できるカスタム Web パーツです。 表示、移動、印刷、Web パーツを使用し、レポート サーバー上のレポートをエクスポートできます。 レポート ビューアー Web パーツは SQL Server Reporting Services レポート サーバーまたは Power BI のレポート サーバーによって処理されるレポート定義 (.rdl) ファイルに関連付けられています。 このレポート ビューアー web パーツは、Power BI のレポート サーバーでホストされている Power BI レポートで使用できません。
+レポート ビューアー web パーツとは、レポートを表示する SQL Server Reporting Services (ネイティブ モード)、SharePoint サイト内で使用できるカスタム web パーツです。 表示、移動、印刷、web パーツを使用し、レポート サーバー上のレポートをエクスポートできます。 レポート ビューアー web パーツは、SQL Server Reporting Services レポート サーバーまたは Power BI のレポート サーバーによって処理されるレポート定義 (.rdl) ファイルに関連付けられます。 このレポート ビューアー web パーツは、Power BI のレポート サーバーでホストされている Power BI レポートで使用できません。
 
 レポート ビューアー web パーツを SharePoint Server 2013 または SharePoint Server 2016 の環境に追加するソリューション パッケージを手動で展開するのにには、次の手順を使用します。 Web パーツを構成するために必要な手順は、ソリューションを配置します。
 
 **レポート ビューアー web パーツは、ソリューション パッケージがスタンドアロンと SQL Server Reporting Services の SharePoint 統合モードに関連付けられていません。**
 
 ## <a name="requirements"></a>必要条件
-
-**サポートされるオペレーティング システム:**  
-* Windows Server 2008 R2 SP1 以降
 
 **SharePoint サーバーのバージョンをサポートします。**  
 * SharePoint Server 2016
@@ -48,7 +45,7 @@ ms.lasthandoff: 09/15/2017
 
 レポート ビューアー web パーツは、Microsoft ダウンロード センターで使用可能なです。
 
-[レポート ビューアー web パーツのソリューション パッケージをダウンロードします。](https://www.microsoft.com/en-us/download/details.aspx?id=55949)
+[レポート ビューアー web パーツのソリューション パッケージをダウンロードします。](https://www.microsoft.com/download/details.aspx?id=55949)
 
 ## <a name="deploy-the-farm-solution"></a>ファーム ソリューションを配置します。
 
@@ -84,15 +81,15 @@ ms.lasthandoff: 09/15/2017
 
     ![サイトの設定は、歯車アイコンをクリックします。](media/sharepoint-site-settings.png)
 
-    既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 つまり、多くの場合、入力することで SharePoint サイトにアクセスすることができますを*http://<computer name> *を開くには、ルート サイト コレクション。
+    既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 つまり、多くの場合、入力することで SharePoint サイトにアクセスすることができますを*http://<computer name>* を開くには、ルート サイト コレクション。
 
 3. **サイト コレクションの管理****サイト コレクション機能**します。
 
-4. ページが表示されるまで下へスクロールして、**レポート ビューアー Web パーツ**機能します。
+4. ページが表示されるまで下へスクロールして、**レポート ビューアー web パーツ**機能します。
 
 5. **[アクティブ化]**を選びます。
 
-    ![レポート ビューアー Web パーツの機能をアクティブ化します。](media/web-part-activiate-feature.png)
+    ![レポート ビューアー web パーツの機能をアクティブ化します。](media/web-part-activiate-feature.png)
 
 6. 各サイトを開き、サイトの操作をクリックして、追加のサイト コレクションに対して繰り返します。
 
@@ -124,9 +121,9 @@ SharePoint サーバーの全体管理でソリューションの取り消しを
 
     ![サイトの設定は、歯車アイコンをクリックします。](media/sharepoint-site-settings.png)
 
-    既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 つまり、多くの場合、入力することで SharePoint サイトにアクセスすることができますを*http://<computer name> *を開くには、ルート サイト コレクション。
+    既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 つまり、多くの場合、入力することで SharePoint サイトにアクセスすることができますを*http://<computer name>* を開くには、ルート サイト コレクション。
 
-2. **Web デザイナー ギャラリー** **Web パーツ**です。
+2. **Web デザイナー ギャラリー** **web パーツ**です。
 
 3. 選択、 **編集 アイコン** の横に**ReportViewerNativeMode.dwp**です。 結果の最初のページには表示されません。
 
@@ -134,7 +131,23 @@ SharePoint サーバーの全体管理でソリューションの取り消しを
 
     ![編集し、レポート ビューアーのネイティブ モードの web パーツを削除](media/report-viewer-native-mode-edit-delete.png)
 
-PowerShell を使用して、web パーツの削除を試行するが、直接コマンドがありません。 スクリプトの例では、次を参照してください。 [Web パーツ ギャラリーから Web パーツを削除する方法](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f)です。
+PowerShell を使用して、web パーツの削除を試行するが、直接コマンドがありません。 スクリプトの例では、次を参照してください。 [web パーツ ギャラリーから web パーツを削除する方法](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f)です。
+
+## <a name="supported-languages"></a>サポートされている言語
+
+Web パーツでは、次の言語がサポートされています。
+
+* 英語 (en)
+* ドイツ語 (de)
+* スペイン語 (sp)
+* フランス語 (fr)
+* イタリア語 (it)
+* 日本語 (ja)
+* 韓国語 (ko)
+* ポルトガル語 (pt)
+* ロシア語 (ru)
+* 簡体字中国語 - zh HANS と ZH-CHS)
+* 中国語 (繁体 - それおよび ZH-CHT の)
 
 ## <a name="next-steps"></a>次の手順
 

@@ -26,10 +26,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 67952c30acf82b7ad073ab243e0f38ed4a2aa23f
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: f594525c8d79e53b6b4ae1b223ab9b50e85e6a5d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>BULK INSERT または OPENROWSET(BULK...) を使用した一括データのインポート (SQL Server)
@@ -37,7 +37,8 @@ ms.lasthandoff: 10/04/2017
 
   このトピックでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] の BULK INSERT ステートメントと INSERT...SELECT * FROM OPENROWSET(BULK...) ステートメントを使用して、データ ファイルから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルにデータを一括インポートする方法の概要を説明します。 また、BULK INSERT および OPENROWSET(BULK...) を使用する場合のセキュリティの注意点や、リモート データ ソースから一括インポートする方法についても説明します。  
   
-> **注:** BULK INSERT または OPENROWSET(BULK...) を使用する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンで権限の借用がどのように処理されるかを理解しておくことが重要です。 詳細については、後の「セキュリティの注意点」を参照してください。  
+> [!NOTE]
+> BULK INSERT または OPENROWSET(BULK...) を使用する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンで権限の借用がどのように処理されるかを理解しておくことが重要です。 詳細については、後の「セキュリティの注意点」を参照してください。  
   
 ## <a name="bulk-insert-statement"></a>BULK INSERT ステートメント  
  BULK INSERT では、データ ファイルからテーブルにデータが読み込まれます。 この機能は、 **bcp** コマンドの **in** オプションと似ていますが、データ ファイルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスによって読み取られる点が異なります。 BULK INSERT の構文の説明については、「 [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
@@ -112,7 +113,7 @@ ms.lasthandoff: 10/04/2017
 ## <a name="bulk-importing-from-a-remote-data-file"></a>リモート データ ファイルからの一括インポート  
  BULK INSERT または INSERT...SELECT \* FROM OPENROWSET(BULK...) を使用して別のコンピューターからデータを一括インポートするには、データ ファイルを 2 台のコンピューター間で共有している必要があります。 共有データ ファイルを指定するには、UNC (汎用名前付け規則) 名を使用します。UNC 名の一般的な形式は、 **\\\\***Servername***\\***Sharename***\\***Path***\\***Filename*です。 また、データ ファイルへのアクセスに使用されるアカウントは、リモート ディスク上のファイルの読み取りに必要な権限を持っている必要があります。  
   
- たとえば、次の `BULK INSERT` ステートメントでは、 `SalesOrderDetail` というデータ ファイルから `AdventureWorks` データベースの `newdata.txt`テーブルにデータの一括インポートを行います。 このデータ ファイルは、 `\dailyorders` というシステムの `salesforce` というネットワーク共有ディレクトリの `computer2`という共有フォルダーにあります。  
+ たとえば、次の `BULK INSERT` ステートメントでは、 `SalesOrderDetail` というデータ ファイルから `AdventureWorks` データベースの `newdata.txt`テーブルにデータの一括インポートを行います。 このデータ ファイルは、`\dailyorders` というシステムの `salesforce` というネットワーク共有ディレクトリの `computer2` という共有フォルダーにあります。  
   
 ```sql
 BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail  
@@ -120,7 +121,8 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 GO  
 ```  
   
-> **注:** クライアントが読み取るファイルは **とは無関係であるため、** bcp [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にはこの制限は適用されません。  
+> [!NOTE]
+> クライアントが読み取るファイルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とは無関係であるため、**bcp** にはこの制限は適用されません。  
   
 ## <a name="see-also"></a>参照  
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   

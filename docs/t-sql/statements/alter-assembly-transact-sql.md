@@ -201,10 +201,10 @@ CLR アセンブリを変更するために必要な次のアクセス許可と`
 > [!NOTE]  
 >  アセンブリ `ComplexNumber` は、サンプル スクリプト UserDefinedDataType を実行することによって作成できます。 詳細については、次を参照してください。[ユーザー定義型](http://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191)です。  
   
- `ALTER ASSEMBLY ComplexNumber`  
-  
- `FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll'`  
-  
+ ```
+ ALTER ASSEMBLY ComplexNumber 
+ FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll' 
+  ```
 ### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>B. ファイルを追加してアセンブリに関連付ける  
  次の例は、ソース コード ファイルをアップロード`Class1.cs`アセンブリに関連付ける`MyClass`です。 この例では、アセンブリ `MyClass` がデータベースに既に作成されていることを前提としています。  
   

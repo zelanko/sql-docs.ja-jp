@@ -117,9 +117,11 @@ SELECT LOG(10);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `----------------`  
+ ```
+ ----------------`  
   
- `2.30`  
+ 2.30
+ ```  
   
 ### <a name="d-calculating-the-logarithm-of-the-exponent-of-a-number"></a>D. 数値の指数の自然対数を計算  
  次の例では、数値の指数の `LOG` を計算します。  
@@ -130,9 +132,10 @@ SELECT LOG(EXP (10));
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `---------`  
-  
- `10.00`  
+ ```
+---------  
+10.00
+```  
   
 ## <a name="see-also"></a>参照  
  [数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)   

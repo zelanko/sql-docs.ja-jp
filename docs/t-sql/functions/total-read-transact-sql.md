@@ -32,7 +32,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40totalread-transact-sql"></a>& #x 40; & #x 40 です。TOTAL_READ (TRANSACT-SQL)
+# <a name="x40x40totalread-transact-sql"></a>&#x40;&#x40;です。TOTAL_READ (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返します、ディスク読み取りの数、していないキャッシュの読み取り、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ため[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が最後に起動します。  
@@ -68,8 +68,8 @@ Reads       Writes      As of
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_monitor & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [システム統計関数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/system-statistical-functions-transact-sql.md)   
+ [sp_monitor &#40;です。TRANSACT-SQL と&#41;です。](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
+ [システム統計関数 &#40;です。TRANSACT-SQL と&#41;です。](../../t-sql/functions/system-statistical-functions-transact-sql.md)   
  [@@TOTAL_WRITE &#40;Transact-SQL&#41;](../../t-sql/functions/total-write-transact-sql.md)  
   
   

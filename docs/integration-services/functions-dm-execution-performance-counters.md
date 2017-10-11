@@ -28,7 +28,7 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>構文  
   
-```tsql  
+```sql  
 dm_execution_performance_counters [ @execution_id = ] execution_id  
   
 ```  
@@ -69,14 +69,14 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="example"></a>例  
  次の例では、ID が 34 である処理中の実行の統計を関数で返します。  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (34)  
 ```  
   
 ## <a name="example"></a>例  
  次の例では、関数で実行されているすべての実行の統計を返します。、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]権限に応じて、サーバーです。  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (NULL)  
   
 ```  

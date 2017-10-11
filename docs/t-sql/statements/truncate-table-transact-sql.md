@@ -29,10 +29,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7ee541357482633787726addb17434dbd59b82d9
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 1d393c67c8489765aa92c861bc28c8e4d0e2eea4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
@@ -75,7 +75,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
  *table_name*  
  切り捨てるまたはすべての行を削除するテーブルの名前を指定します。 *table_name*リテラルを指定する必要があります。 *table_name*することはできません、 **OBJECT_ID()**関数または変数です。  
   
- 使用 (パーティション ({ \< *partition_number_expression*> |\<*範囲*>} [、...n]))  
+ 使用 (パーティション ({ \< *partition_number_expression*> |\<*範囲*>} [、.. .n]))  
 **適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
  切り捨てるパーティション、またはすべての行を削除するパーティションを指定します。 テーブルがパーティション分割されていない場合、**でパーティション**引数でエラーが発生します。 場合、**でパーティション**句が指定されていない、テーブル全体が切り捨てられます。  
@@ -122,7 +122,13 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
   
  これらの特性を 1 つ以上持つテーブルには、代わりに DELETE ステートメントを使用します。  
   
- TRUNCATE TABLE では、個別の行の削除がログに記録されないため、この操作によってトリガーをアクティブ化することはできません。 詳細については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)」を参照してください。  
+ TRUNCATE TABLE では、個別の行の削除がログに記録されないため、この操作によってトリガーをアクティブ化することはできません。 詳細については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)」を参照してください。 
+ 
+ [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[sspdw](../../includes/sspdw-md.md)]:
+
+- 説明文の中では、TRUNCATE TABLE は許可されていません。
+
+- TRUNCATE TABLE は、トランザクション内で実行できません。
   
 ## <a name="truncating-large-tables"></a>大きなテーブルの切り捨て  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を削除するか、削除に必要なすべてのエクステントに対する同時ロックを保持することがなく、128 を超えるエクステントを持つテーブルを切り捨てる権限を持ちます。  

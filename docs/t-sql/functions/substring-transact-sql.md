@@ -105,13 +105,13 @@ SELECT x = SUBSTRING('abcdef', 2, 3);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `x`  
+ ```
+x  
+----------  
+bcd  
   
- `----------`  
-  
- `bcd`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ### <a name="b-using-substring-with-text-ntext-and-image-data"></a>B. SUBSTRING に text、ntext、および image 型のデータを使用する  
   
@@ -130,13 +130,13 @@ WHERE pub_id = '1756';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `pub_id logo    pr_info`  
-  
- `------ ---------------------- ----------`  
-  
- `1756   0x474946383961E3002500 This is sa`  
-  
- `(1 row(s) affected)`  
+ ```
+ pub_id logo    pr_info
+------ ---------------------- ----------
+1756   0x474946383961E3002500 This is sa
+
+(1 row(s) affected)
+```  
   
  次の例は、両方で SUBSTRING の効果を示します**テキスト**と**ntext**データ。 最初に、この例での新しいテーブルを作成、`pubs`という名前のデータベース`npub_info`です。 例を次に、作成、`pr_info`内の列、`npub_info`テーブルの最初の 80 文字から、`pub_info.pr_info`列を追加し、`ü`最初の文字として。 最後に、`INNER JOIN`すべてのパブリッシャー id 番号を取得し、`SUBSTRING`両方の**テキスト**と**ntext**パブリッシャー情報列です。  
   
@@ -196,15 +196,13 @@ ORDER BY LastName;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LastName             Initial`  
-  
- `-------------------- -------`  
-  
- `Barbariol            A`  
-  
- `Barber               D`  
-  
- `Barreto de Mattos    P`  
+ ```
+LastName             Initial
+-------------------- -------
+Barbariol            A
+Barber               D
+Barreto de Mattos    P
+```  
   
  次の例は、2 つ目を返す方法を示します、3 番目と 4 番目の文字を文字列定数の`abcdef`します。  
   
@@ -216,11 +214,11 @@ SELECT TOP 1 SUBSTRING('abcdef', 2, 3) AS x FROM dbo.DimCustomer;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `x`  
-  
- `-----`  
-  
- `bcd`  
+ ```
+x
+-----
+bcd
+```  
   
 ## <a name="see-also"></a>参照  
  [文字列関数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/string-functions-transact-sql.md)  

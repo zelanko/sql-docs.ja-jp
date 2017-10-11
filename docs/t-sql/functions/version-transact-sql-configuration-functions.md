@@ -31,7 +31,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40version---transact-sql-configuration-functions"></a>& #x 40; & #x 40 です。バージョン - Transact SQL 構成関数
+# <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;です。バージョン - Transact SQL 構成関数
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   現在のインストールのシステムとビルドの情報を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/19/2017
  **nvarchar**  
   
 ## <a name="remarks"></a>解説  
- @@VERSION結果は 1 つの nvarchar 文字列として表示されます。 使用することができます、 [SERVERPROPERTY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/serverproperty-transact-sql.md)個々 のプロパティ値を取得します。  
+ @@VERSION結果は 1 つの nvarchar 文字列として表示されます。 使用することができます、 [SERVERPROPERTY &#40;です。TRANSACT-SQL と&#41;です。](../../t-sql/functions/serverproperty-transact-sql.md)個々 のプロパティ値を取得します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、次の情報が返されます。  
   

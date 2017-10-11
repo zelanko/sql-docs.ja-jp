@@ -1,8 +1,10 @@
 ---
 title: "Microsoft Azure 内の SQL Server データ ファイル | Microsoft Docs"
 ms.custom: 
-ms.date: 08/31/2016
-ms.prod: sql-server-2016
+ms.date: 10/02/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: fb653826a9a53251cbd5fe6ef20b4b0f664c1422
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 59dd3517d0b0e4cfdafb470132e620576f1ffbc7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 内の SQL Server データ ファイル
@@ -26,7 +28,9 @@ ms.lasthandoff: 09/27/2017
   
  Microsoft Azure 内の SQL Server データ ファイルにより、Microsoft Azure BLOB として格納された SQL Server データベース ファイルに対するネイティブ サポートが有効になります。 この機能を使用すると、オンプレミスの環境または Microsoft Azure 仮想マシンで実行されている SQL Server でデータベースを作成し、Microsoft Azure BLOB ストレージに専用のデータ保存場所を用意できます。 この機能強化では特に、デタッチとアタッチの操作を使用することにより、コンピューター間でのデータベース移動が容易になります。 また、Microsoft Azure ストレージを復元元または復元先として使用することで、データベースのバックアップ ファイルに代替の格納場所が提供されます。 このため、データの仮想化、移動、セキュリティ、および可用性の面での利点と、低コストと容易なメンテナンスで実現できる高可用性と柔軟なスケーリングにより、いくつかのハイブリッド ソリューションが有効になります。
  
-> [AZURE.IMPORTANT]システム データベースを Azure BLOB ストレージに格納することは推奨されず、サポートされていません。 
+> [!IMPORTANT]  
+>  システム データベースを Azure BLOB ストレージに格納することは推奨されず、サポートされていません。 
+
   
  このトピックでは、SQL Server データ ファイルを Microsoft Azure ストレージ サービスに格納する場合の重要な概念と考慮事項について説明します。  
   
@@ -50,10 +54,10 @@ ms.lasthandoff: 09/27/2017
 ### <a name="azure-storage-concepts"></a>Azure Storage の概念  
  Microsoft Azure 機能で SQL Server データ ファイルを使用する場合は、Microsoft Azure 内でストレージ アカウントとコンテナーを作成する必要があります。 次に、SQL Server 資格情報を作成する必要があります。これには、コンテナーのポリシーに関する情報と、コンテナーにアクセスするために必要な Shared Access Signature が含まれます。  
   
- [Microsoft Azure](https://azure.microsoft.com)の [Azure Storage](https://azure.microsoft.com/services/storage/) アカウントは、BLOB にアクセスするための名前空間の最高レベルを表します。 ストレージ アカウントには、合計サイズが 500 TB までであれば、無制限の数のコンテナーを含めることができます。 ストレージの制限に関する最新情報については、「 [Azure のサブスクリプションとサービスの制限、クォータ、および制約](http://azure.microsoft.com/documentation/articles/azure-subscription-service-limits/)」をご覧ください。 コンテナーでは、一連の [BLOB](https://azure.microsoft.com/documentation/articles/storage-introduction/#blob-storage)をグループ化することができます。 BLOB はすべて、コンテナー内に存在する必要があります。 アカウントには、無制限の数のコンテナーを含めることができます。 同様に、コンテナーには、無制限の数の BLOB を格納できます。 Azure Storage に格納できる BLOB には、ブロック BLOB とページ BLOB の 2 種類があります。 この新しい機能ではページ BLOB が使用されます。ページ BLOB では 1 TB までのサイズがサポートされ、ファイル内のバイト範囲が頻繁に変更される場合はこちらの方が効率的です。 BLOB には、 `http://storageaccount.blob.core.windows.net/<container>/<blob>`という URL 形式を使用してアクセスできます。  
+ [Microsoft Azure](https://azure.microsoft.com)の [Azure Storage](https://azure.microsoft.com/services/storage/) アカウントは、BLOB にアクセスするための名前空間の最高レベルを表します。 ストレージ アカウントには、合計サイズがストレージの制限内であれば、無制限の数のコンテナーを含めることができます。 ストレージの制限に関する最新情報については、「 [Azure のサブスクリプションとサービスの制限、クォータ、および制約](http://docs.microsoft.com/azure/azure-subscription-service-limits)」をご覧ください。 コンテナーでは、一連の [BLOB](http://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage)をグループ化することができます。 BLOB はすべて、コンテナー内に存在する必要があります。 アカウントには、無制限の数のコンテナーを含めることができます。 同様に、コンテナーには、無制限の数の BLOB を格納できます。 Azure Storage に格納できる BLOB には、ブロック BLOB とページ BLOB の 2 種類があります。 この新しい機能ではページ BLOB が使用されます。ファイル内のバイト範囲が頻繁に変更される場合はこちらの方が効率的です。 BLOB には、 `http://storageaccount.blob.core.windows.net/<container>/<blob>`という URL 形式を使用してアクセスできます。  
   
 ### <a name="azure-billing-considerations"></a>Azure の課金に関する注意点  
- Azure サービスの使用コストを見積もることは、意思決定および計画のプロセスにおいて重要です。 Azure Storage に SQL Server データ ファイルを格納する場合は、ストレージとトランザクションに関連するコストを支払う必要があります。 さらに、Azure Storage の機能への SQL Server データ ファイルの格納を実装する場合は、45 ～ 60 秒ごとに BLOB のリースの暗黙的な更新が必要になります。 その結果、.mdf、.ldf などのデータベース ファイルごとのトランザクション コストも必要になります。 予測では、2 個のデータベース ファイル (.mdf と .ldf) のリースを更新するコストは、現在の価格のモデルで 1 か月につき約 2 セントになります。 Azure Storage と Azure Virtual Machines の使用に関する月額コストを見積もるには、「 [Azure 料金](http://azure.microsoft.com/pricing/) 」の情報をご覧ください。  
+ Azure サービスの使用コストを見積もることは、意思決定および計画のプロセスにおいて重要です。 Azure Storage に SQL Server データ ファイルを格納する場合は、ストレージとトランザクションに関連するコストを支払う必要があります。 さらに、Azure Storage の機能への SQL Server データ ファイルの格納を実装する場合は、45 ～ 60 秒ごとに BLOB のリースの暗黙的な更新が必要になります。 その結果、.mdf、.ldf などのデータベース ファイルごとのトランザクション コストも必要になります。 Azure Storage と Azure Virtual Machines の使用に関する月額コストを見積もるには、「[Azure の価格](http://azure.microsoft.com/pricing/) 」の情報をご覧ください。  
   
 ### <a name="sql-server-concepts"></a>SQL サーバーの概念  
  この新しい機能強化を使用する場合は、次のことを行う必要があります。  
@@ -64,16 +68,13 @@ ms.lasthandoff: 09/27/2017
   
 -   Azure Storage コンテナー、関連するポリシー名、および SAS キーに関する情報を SQL Server 資格情報ストアに格納する必要があります。  
   
- 次の例では、Azure ストレージ コンテナーが作成され、読み取り、書き込み、および一覧表示の権限でポリシーが作成されていることを前提としています。 コンテナーのポリシーを作成すると、SAS キーが生成されます。SAS キーは暗号化せずに安全にメモリ内に保持でき、SQL Server がコンテナー内の BLOB ファイルにアクセスする際に必要になります。 次のコード スニペットでは、 `'your SAS key'` を `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`のようなエントリと置き換えます。 詳細については、「 [Azure のストレージ リソースへのアクセスの管理](http://azure.microsoft.com/en-us/documentation/articles/storage-manage-access-to-resources/)」をご覧ください。  
+ 次の例では、Azure ストレージ コンテナーが作成され、読み取り、書き込み、および一覧表示の権限でポリシーが作成されていることを前提としています。 コンテナーのポリシーを作成すると、SAS キーが生成されます。SAS キーは暗号化せずに安全にメモリ内に保持でき、SQL Server がコンテナー内の BLOB ファイルにアクセスする際に必要になります。 次のコード スニペットでは、 `'<your SAS key>'` を `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`のようなエントリと置き換えます。 詳細については、「 [Azure のストレージ リソースへのアクセスの管理](http://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources)」をご覧ください。  
   
-```  
-  
--- Create a credential  
+```sql
 CREATE CREDENTIAL [https://testdb.blob.core.windows.net/data]  
 WITH IDENTITY='SHARED ACCESS SIGNATURE',  
-SECRET = 'your SAS key'  
+SECRET = '<your SAS key>'  
   
--- Create database with data and log files in Windows Azure container.  
 CREATE DATABASE testdb   
 ON  
 ( NAME = testdb_dat,  
@@ -81,7 +82,6 @@ ON
  LOG ON  
 ( NAME = testdb_log,  
     FILENAME =  'https://testdb.blob.core.windows.net/data/TestLog.ldf')  
-  
 ```  
   
  **重要な注意事項:** コンテナーのデータ ファイルに対するアクティブな参照が存在する場合、対応する SQL Server 資格情報を削除しようとすると失敗します。  
@@ -98,9 +98,9 @@ ON
 ### <a name="installation-prerequisites"></a>インストールの前提条件  
  Azure に SQL Server データ ファイルを格納する場合のインストールに関する前提条件は次のとおりです。  
   
--   **オンプレミスの SQL Server:** この機能は、SQL Server 2016 バージョンに含まれています。 SQL Server 2016 のダウンロード方法については、「 [SQL Server 2016](https://www.microsoft.com/en-us/cloud-platform/sql-server)」をご覧ください。  
+-   **オンプレミスの SQL Server:** この機能は、SQL Server 2016 以降のバージョンに含まれています。 最新バージョンの SQL Server をダウンロードする方法については、[SQL Server](http://www.microsoft.com/sql-server/sql-server-downloads) に関するページを参照してください。  
   
--   Azure Virtual Machine で実行されている SQL Server: [Azure Virtual Machine に SQL Server](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)をインストールする場合は、SQL Server 2016 をインストールするか、既存のインスタンスを更新します。 同様に、SQL Server 2016 CTP2 のプラットフォーム イメージを使用して Azure に新しい仮想マシンを作成することもできます。
+-   Azure Virtual Machine で実行されている SQL Server: [Azure Virtual Machine に SQL Server](http://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1)をインストールする場合は、SQL Server 2016 をインストールするか、既存のインスタンスを更新します。 同様に、SQL Server 2016 CTP2 のプラットフォーム イメージを使用して Azure に新しい仮想マシンを作成することもできます。
 
   
 ###  <a name="bkmk_Limitations"></a> 制限事項  
@@ -113,13 +113,13 @@ ON
   
 -   Azure 機能で SQL Server データ ファイルを使用する場合は、ストレージ アカウントに対する地理的レプリケーションはサポートされません。 ストレージ アカウントで地理的レプリケーションが実行されている場合に、地理的フェールオーバーが発生すると、データの破損が発生する可能性があります。  
   
--   各 BLOB のサイズは、最大 1 TB にすることができます。 この値により、Azure Storage に格納できる個々のデータベース データとログ ファイルの上限が決定されます。  
+-   容量の制限については、「[Blob Storage の概要](http://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)」を参照してください。  
   
 -   Azure Storage 機能で SQL Server データ ファイルを使用する場合は、インメモリ OLTP データを Azure BLOB ストレージ内に格納することはできません。 これは、インメモリ OLTP に **FileStream** に対する依存関係があり、この機能の現在のリリースでは、Azure Storage に **FileStream** データを格納することがサポートされていないためです。  
   
 -   Azure 機能で SQL Server データ ファイルを使用する場合は、SQL Server は **master** データベース内で設定された照合順序を使用して、すべての URL 比較やパス比較を実行します。  
   
--   **AlwaysOn 可用性グループ** は、プライマリ データベースに新しいデータベース ファイルを追加しない限りサポートされます。 データベース操作でプライマリ データベースに新しいファイルを作成する必要がある場合は、まずセカンダリ ノードで AlwaysOn 可用性グループを無効にします。 次に、プライマリ データベースに対してデータベース操作を実行し、プライマリ ノードでデータベースをバックアップします。 さらに、データベースをセカンダリ ノードに復元し、セカンダリ ノードで AlwaysOn 可用性グループを有効にします。 Azure 機能で SQL Server データ ファイルを使用する場合は、Always On フェールオーバー クラスター インスタンスはサポートされません。  
+-   **AlwaysOn 可用性グループ**は、プライマリ データベースに新しいデータベース ファイルを追加しない限りサポートされます。 データベース操作でプライマリ データベースに新しいファイルを作成する必要がある場合は、まずセカンダリ ノードで AlwaysOn 可用性グループを無効にします。 次に、プライマリ データベースに対してデータベース操作を実行し、プライマリ ノードでデータベースをバックアップします。 さらに、データベースをセカンダリ ノードに復元し、セカンダリ ノードで AlwaysOn 可用性グループを有効にします。 Azure 機能で SQL Server データ ファイルを使用する場合は、Always On フェールオーバー クラスター インスタンスはサポートされません。  
   
 -   通常の運用中、SQL Server では一時リースを使用して BLOB をストレージ用に予約し、各 BLOB リースを 45 ～ 60 秒ごとに更新します。 サーバーがクラッシュし、同じ BLOB を使用するように構成された別の SQL Server インスタンスが起動された場合、新しいインスタンスは、BLOB の既存リース期限が切れるまで最大 60 秒間待機します。 リース期限が 60 秒以内に切れるのを待機できない場合にデータベースを別のインスタンスにアタッチするには、BLOB のリースを明示的に終了してアタッチ操作でのエラーを回避することができます。  
   
@@ -137,7 +137,7 @@ ON
  
  **[新しいデータベース]** 、 **[データベースのアタッチ]**、 **[データベースの復元]**などの複数のダイアログ ウィンドウの **[パス]**として入力できます。 詳細については、「 [チュートリアル: Windows Azure ストレージ サービス内の SQL Server データ ファイル](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」をご覧ください。  
   
-### <a name="sql-server-management-objects-support"></a>SQL Server 管理オブジェクトのサポート  
+### <a name="sql-server-management-objects-smo-support"></a>SQL Server 管理オブジェクト (SMO) のサポート  
  Azure 機能で SQL Server データ ファイルを使用する場合は、すべての SQL Server 管理オブジェクト (SMO) がサポートされます。 SMO オブジェクトにファイル パスが必要であれば、ローカル ファイル パスの代わりに BLOB の URL 形式 (`https://teststorageaccnt.blob.core.windows.net/testcontainer/` など) を使用します。 SQL Server 管理オブジェクト (SMO) の詳細については、SQL Server オンライン ブックの「[SQL Server 管理オブジェクト &#40;SMO&#41; プログラミング ガイド](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) 」をご覧ください。  
   
 ### <a name="transact-sql-support"></a>Transact-SQL のサポート  
@@ -186,6 +186,6 @@ ON
   
     4.  データベースをオンラインに設定します。  
 
+## <a name="next-steps"></a>次の手順  
   
-  
-
+[データベースの作成](create-a-database.md)

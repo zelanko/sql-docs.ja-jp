@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 技術ドキュメント | Microsoft Docs"
-ms.date: 08/07/2017
+ms.date: 10/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0412057a8d3e0849ddaeecfeb199e00b46a96d7b
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 8898a815eac39966c1dd8ced8d6230e2cf8b4cac
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sql-server-technical-documentation"></a>SQL Server 技術ドキュメント
@@ -49,8 +49,8 @@ SQL Server のインストール、構成、および使用の際に役立つド
 **SQL Server をお試しください。**    
 - [![Evaluation Center からダウンロードする](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 のダウンロード](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [SQL Server 2016 のダウンロード](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
-- [SQL Server 2016 がインストール済みの仮想マシン](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)をすぐにご利用いただけます。
-- [![](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)Evaluation Center からダウンロードする[SQL Server Management Studio (SSMS) のダウンロード](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)   
+- [![Virtual Machine の作成](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [SQL Server 2016 SP1 または SQL Server 2017 で Virtual Machine をすぐにご利用いただけます](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [SQL Server Management Studio (SSMS) のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)
 - [![Evaluation Center からダウンロードする](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [SQL Server Data Tools (SSDT) のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)
     
 ## <a name="sql-server-technologies"></a>SQL Server のテクノロジ    

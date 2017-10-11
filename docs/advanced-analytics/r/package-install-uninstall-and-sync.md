@@ -1,7 +1,7 @@
 ---
-title: "パッケージのインストール、アンインストール、および同期 |Microsoft ドキュメント"
+title: "SQL Server の R パッケージの同期 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 04/12/2017
+ms.date: 10/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,127 +13,106 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 959282395d178a090a3d447769ced4dca8882f89
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: ed7dbf99b0f492b5ca8879bb67a7256fdfae3306
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 
 # <a name="r-package-synchronization-for-sql-server"></a>SQL Server の R パッケージの同期
 
-SQL Server 2017 CTP 2.0 には、R パッケージ、および SQL Server データベースに関連付けられた R パッケージのコレクションの復元のバックアップをサポートするを同期するための新しい関数が含まれています。 この機能により、複雑なユーザーによって作成された R パッケージのセットが失われないし、簡単に復元することができます。  
+SQL Server 2017 には、ファイル システムと、インスタンスとデータベース間のパッケージが使用されている R パッケージのコレクションを同期する機能が含まれています。
+この機能は、SQL Server データベースに関連付けられた R パッケージのコレクションをバックアップするが簡単に提供されました。 この機能を使用して、そのデータベースで作業してデータ研究員によって使用されたすべての R パッケージは、データベースだけでなく、管理者は復元できます。
 
-このトピックは、パッケージの同期機能は、内容と使用方法について説明します。、 `rxSyncPackages()` 、次のタスクを実行する関数。
+このトピックは、パッケージの同期機能と使用方法について説明します、 [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages)次のタスクを実行する関数。
 
-+  SQL Server データベース全体をパッケージの一覧を同期させる
-+  ユーザーのグループまたは個々 のユーザーによって使用とパッケージ
++ SQL Server データベース全体をパッケージの一覧を同期させる
+
++ パッケージが、個別のユーザーやユーザーのグループによって使用の同期します。
+
++ R. によって必要に応じて、新しいサーバー上のファイル システムにインストールされる、ユーザーのパッケージは、ユーザーは、別の SQL Server に移動した場合と、ユーザーの作業用のデータベースのバックアップを実行して、新しいサーバーに復元できます。
+
+たとえば、これらのシナリオでパッケージの同期を使用する場合があります。
+
++ DBA は新しいマシンに SQL Server のインスタンスを復元し、R クライアントから接続し、実行をユーザーに要求する`rxSyncPackages`を更新し、そのパッケージを復元します。
+
++ 実行するために、ファイル システム上の R パッケージが破損するいると思われる`rxSyncPackages`SQL Server にします。
+
+## <a name="requirements"></a>必要条件
+
+パッケージの同期を使用することができます、前に、Microsoft R の適切なバージョンが必要し、関連するデータベース機能を有効にします。
+
+### <a name="determine-whether-your-server-supports-package-management"></a>サーバーがパッケージの管理をサポートするかどうかを確認します。
+
+この機能は、SQL Server 2017 CTP 2 で使用できる以降です。
+
+この機能は、Microsoft R バージョン 9.1.0 で R 関数を使用するため機能を追加できますこの SQL Server 2016 のインスタンスには Microsoft r です。 最新バージョンを使用するインスタンスをアップグレードすることで詳細については、次を参照してください。 [SQL Server R Services のアップグレードに使用する SqlBindR.exe](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
+
+### <a name="enable-the-package-management-feature"></a>パッケージの管理機能を有効にします。
+
+パッケージの同期を使用するには、R のタスクの実行に使用される個々 のデータベースと SQL Server インスタンスで、新しいパッケージ管理機能を有効にする必要があります。
+
+1. サーバーの管理者は、SQL Server インスタンスの機能を有効します。
+2. 各データベースについて、管理者によって、インストールしたり、R パッケージを共有する機能がユーザーに許可されます。
+
+これを行うときに、ユーザーと、インストールされているパッケージに関する情報は、SQL Server インスタンスに格納されます。 この情報は、ファイル システムでの R パッケージの更新を適用できます。
+
+パッケージの管理機能を使用して新しいパッケージを追加するたびに SQL Server およびファイル システムで、両方のレコードが更新されます。
 
 > [!NOTE]
-> この関数は、プレリリース版ソフトウェアの一部として提供し、最終リリース前に変更されます。
+> インストールする場合がされた R パッケージ、従来の方法では、R ツールを使用して、ファイル システムに直接パッケージをインストールするパッケージの同期を使用することはできません。
+### <a name="permissions"></a>Permissions
 
-## <a name="what-is-package-synchronization"></a>パッケージの同期とは 
++ パッケージの同期関数を実行したユーザーは、SQL Server インスタンスと、パッケージであるデータベース プリンシパルのセキュリティをする必要があります。
 
-パッケージの同期は、計算コンテキストを具体的には SQL Server で動作する、新しい機能です。 特定のユーザーまたはグループの特定のデータベースにインストールされている R パッケージの一覧を取得し、パッケージに表示されている一致するファイル システム、データベースのことを確認するものではします。 
++ 関数の呼び出し元は、これらのパッケージの管理ロールのいずれかのメンバーである必要があります: **rpkgs 共有**または**rpkgs プライベート**です。
 
-これは、ユーザー データベースを移動し、データベースと共にパッケージを移動する必要がある場合に役立ちます。 バックアップして、R ジョブで使用される SQL Server データベースを復元する場合は、パッケージの同期を使用することもできます。
++ としてマークされているパッケージを同期するために**共有**、関数が実行されている人のメンバである必要があります、 **rpkgs 共有**ロール、およびパッケージを移動している必要がありますがインストールされている共有するスコープのライブラリです。
 
-パッケージの同期で使用する、新しい関数`rxSyncPackages()`です。 パッケージの一覧を同期するためには、インスタンスと、使用するデータベースを定義する計算コンテキストを渡す、および、パッケージ スコープまたは、ユーザー名または所有者名を指定し、R コマンド プロンプトを開きます。 
++ としてマークされているパッケージを同期するために**プライベート**、パッケージまたは管理者の所有者は、関数を実行する必要がありますいずれかと、パッケージをプライベートにする必要があります。
 
-### <a name="how-packages-are-managed-in-r-and-sql-server"></a>R と SQL Server でパッケージを管理する方法
++ 所有者を他のユーザーに代わってパッケージを同期するのメンバーである必要があります、 **db_owner**データベース ロール。
 
-通常、標準の R ツールを使用して R スクリプトを実行すると、R パッケージは、ファイル システムにインストールされます。 場合は、複数のユーザーは、同じコンピューターに R を使用して、別のフォルダー、または別のユーザーのライブラリでは、同じパッケージのコピー数である可能性があります。
+## <a name="how-package-synchronization-works"></a>パッケージの同期のしくみ
 
-ただし、SQL Server から、R パッケージを使用するのには、パッケージをインスタンスに関連付けられている既定の R ライブラリでインストールする必要があります。 サーバー コンピューターに有効な場合、R で SQL Server の複数のインスタンスをホストする可能性があり、この場合、各インスタンスが別の R パッケージのセットを持つことができます。 
+パッケージの同期を使用するのには、呼び出す[rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages)の新機能である[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)です。 Sp_execute_external_script を使用して SQL Server からこの関数を呼び出すことができます、または R クライアントをリモートから実行し、SQL Server のコンピューティング コンテキストを指定することができます。 
 
-データベース管理者は、そのインスタンスにパッケージをインストールするためです。 ただし、パッケージの管理ライブラリと、管理者がユーザーにこの責任を委任できます。 
+パッケージは呼び出しごとに、データベース レベルで管理されるため`rxSyncPackages`、SQL Server インスタンスおよびデータベース、およびパッケージの一覧を指定するか、パッケージ スコープを指定する必要があります。
 
-+ データベースごとに、管理者ユーザーができるように自由に必要な R パッケージをインストールする機能。 この機構により、複数のユーザーが SQL Server コンピューターの他のユーザーの競合を引き起こすことがなく別のバージョンの R パッケージをインストールできるようにします。 個々 のユーザーは自分で使用するのパッケージをインストールできるとしてマークされているファイル システムの場所を使用して**プライベート**データベース ロールに属している場合は、 **rpkgs プライベート**です。
+1. 使用して SQL Server のコンピューティング コンテキストを作成、`RxInSqlServer`関数。 コンピューティング コンテキストを指定しない場合は、現在のコンピューティング コンテキストが使用されます。
 
-+ 管理者では、データベースで、パッケージのユーザーのグループを設定でき、グループ内のすべてのユーザーによって共有されているパッケージをインストールすることができます。 パッケージは、データベース ロールのメンバーの間で共有できる**rpkgs 共有**です。 このようなユーザーは、パッケージをプライベート スコープの場所にインストールすることもできます。 
+2. 指定された計算コンテキストのインスタンスでデータベースの名前を指定します。 パッケージは、データベースごとに管理されます。
 
-### <a name="goal-of-package-synchronization"></a>パッケージの同期の目的
+3. 同期するためにパッケージを一覧表示します。
 
-サーバー上のデータベースが失われたか、パッケージの同期を使用して、移動する必要がある場合は、データベース、ユーザー、またはグループに、特定のパッケージのセットを復元できます。 
+4.  必要に応じて、使用して、*スコープ*パッケージ 1 人のユーザーまたはユーザーのグループを同期するかどうかを示すために渡す引数。 いずれかを指定せず、関数を実行する場合**プライベート**または**共有**スコープのすべてのスコープの使用可能なパッケージのセット全体、ユーザーがコピーされます。
 
-ユーザーと、インストールされているパッケージに関する情報は、SQL Server インスタンスに格納されてし、ファイル システムにパッケージを更新するために使用します。 パッケージの管理機能を使用して新しいパッケージを追加するたびに SQL Server およびファイル システムで、両方のレコードが更新されます。 そのため、ユーザーは、別の SQL Server に移動した場合、ユーザーの作業用のデータベースのバックアップを実行して、新しいサーバーに復元でき、R. によって必要に応じて、新しいサーバー上のファイル システムにインストールされる、ユーザーのパッケージは、
+コマンドが正常に実行された場合、ファイル システム内の既存のパッケージは、指定されたスコープの所有者と、データベースに追加されます。 ファイル システムが破損している場合、データベースで保守管理の一覧に基づいて、パッケージが復元されます。
 
-
-### <a name="supported-versions"></a>Supported Versions
-
-この関数は、SQL Server 2017 CTP 2.0 に含まれます。
-
-この関数は、Microsoft R バージョン 9.1.0 の一部であるため機能を追加できますこの SQL Server 2016 のインスタンスには Microsoft r です。 最新バージョンを使用するインスタンスをアップグレードすることで詳細については、次を参照してください。 [SQL Server R Services のアップグレードに使用する SqlBindR.exe](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
-
-## <a name="to-synchronize-packages"></a>同期するためにパッケージ化します。
-
-呼び出す`rxSyncPackages`後を新しいコンピューターに SQL Server のインスタンスを復元するか、R パッケージのファイル システムの場合は壊れていると考えられています。
-
-コマンドが正常に実行された場合、ファイル システム内の既存のパッケージは、データベース、スコープ、および指定された所有者に追加されます。 ファイル システムが破損している場合、パッケージは、データベースで保守管理リストに基づく restred、します。
-
-### <a name="syntax"></a>構文
-`rxSyncPackages(computeContext = rxGetOption("computeContext"),  scope = c("shared", "private"), owner = c(), verbose = getOption("verbose"))`
-
-+ 計算コンテキスト
-
-    インスタンスとデータベースと同期するパッケージで構成される、SQL Server のコンピューティング コンテキストを定義します。使用して、SQ サーバー コンテキストを作成、`RxInSqlServer`関数。 コンピューティング コンテキストを指定しない場合は、現在のコンピューティング コンテキストが使用されます。 
-
-+ スコープ
-
-  単一のユーザー、またはユーザーのグループに対してパッケージをインストールするかどうかを指定します。 
-
-    + **プライベート**操作が使用する指定された所有者によってインストールされたパッケージのみに含まれます。
-    + **共有**oepration がユーザーのグループにインストールされているすべてのパッケージが含まれます。 
-
-  プライベートまたは共有のいずれかのスコープを指定せずに関数を実行する場合は、両方のスコープが適用されます。 その結果、すべてのスコープとユーザーの使用可能なパッケージのセット全体がコピーされます。
-
-+ 所有者 
-
-    同期するために、パッケージの所有者を指定します。 所有者名は、有効な SQL データベース ユーザーである必要があります。 空にすること、接続で指定された SQL ログインのユーザー名が使用されます。
-
-
-### <a name="requirements"></a>必要条件
-
-+ 関数を実行したユーザーは、SQL Server インスタンスと、パッケージが存在し、パッケージの管理ロールのメンバーである必要がありますデータベース上のセキュリティ プリンシパルである必要があります: **rpkgs 共有**または**rpkgs プライベート** 
-  + としてマークされているパッケージを同期するために**共有**、関数が実行されている人のメンバである必要があります、 **rpkgs 共有**ロール、およびパッケージを移動している必要がありますがインストールされている共有するスコープのライブラリです。
-  + としてマークされている同期パッケージに**プライベート**、パッケージまたは管理者の所有者は、関数を実行する必要がありますいずれかと、パッケージをプライベートにする必要があります。
-+ **rpkgs ユーザー** -このロールのメンバーから SQL Server インスタンスにインストールされているパッケージを使用するコードを実行できますが、インストールことはできません、またはパッケージを同期します。
-+ 所有者が他のユーザーに代わってパッケージを同期するには、メンバーである必要があります、 **db_owner**データベース ロール。
-
-## <a name="examples"></a>使用例
-
-次の例は、SQL Server の特定のインスタンスへの接続を作成し、データベースを指定、一連の同期するためにパッケージを指定します。 
-
-ときに呼び出しに`rxSyncPackages`行われると、パッケージのリストが、ファイル システムとデータベース間で同期されます。 
-
-### <a name="synchronize-all-by-database"></a>データベースですべての同期します。
+### <a name="example-1-synchronize-all-package-by-database"></a>例 1. データベースでのすべてのパッケージを同期します。
 
 この例では、データベース [TestDB] でインストールされているすべてのパッケージを取得します。 特定の所有者がないため、一覧には、プライベートと共有のスコープにインストールされているすべてのパッケージが含まれています。
 
 ```R
 connectionString <- "Driver=SQL Server;Server=myServer;Database=TestDB;Trusted_Connection=True;"
 computeContext <- RxInSqlServer(connectionString = connectionString )
-
 rxSyncPackages(computeContext=computeContext, verbose=TRUE)
 ```
 
-### <a name="restrict-synchronized-packages-by-scope"></a>スコープによって同期されているパッケージを制限します。 
+### <a name="example-2-restrict-synchronized-packages-by-scope"></a>例 2。 スコープによって同期されているパッケージを制限します。
 
-次の例の同期共有のスコープまたはプライベートのスコープのいずれかのパッケージのみです。
-
-**共有スコープ**
+次の例では、指定されたスコープ内のパッケージのみを同期します。
 
 ```R
+#Shared scope
 rxSyncPackages(computeContext=computeContext, scope="shared", verbose=TRUE)
-```
 
-**プライベート スコープ**
-
-```R
+#Private scope
 rxSyncPackages(computeContext=computeContext, scope="private", verbose=TRUE)
 ```
 
-### <a name="restrict-synchronized-packages-by-owner"></a>所有者によって同期されているパッケージを制限します。 
+### <a name="example-3-restrict-synchronized-packages-by-owner"></a>例 3 です。 所有者によって同期されているパッケージを制限します。
 
 次の例では、特定のユーザーにインストールされたパッケージのみを取得する方法を示します。 この例では、ユーザーが SQL ログイン名で識別される*user1*です。
 
@@ -141,6 +120,20 @@ rxSyncPackages(computeContext=computeContext, scope="private", verbose=TRUE)
 rxSyncPackages(computeContext=computeContext, scope="private", owner = "user1", verbose=TRUE))
 ```
 
-## <a name="see-also"></a>参照
+### <a name="example-4-restrict-synchronized-packages-by-owner"></a>例 4 です。 所有者によって同期されているパッケージを制限します。
 
-[SQL Server の R パッケージの管理](../r/r-package-management-for-sql-server-r-services.md)
+次の例では、データベースで管理されているパッケージの一覧で、ファイル システムにインストールされているパッケージを同期します。 いずれかのパッケージが見つからない場合、ファイル システムにインストールされます。
+
+```R
+# Instantiate the compute context
+connectionString <- "Driver=SQL Server;Server=myServer;Database=TestDB;Trusted_Connection=True;"
+computeContext <- RxInSqlServer(connectionString = connectionString )
+
+# Synchronize the packages in the file system for all scopes and users
+rxSyncPackages(computeContext=computeContext, verbose=TRUE)
+```
+
+## <a name="related-resources"></a>関連リソース
+
+[SQL Server の R パッケージの管理](r-package-management-for-sql-server-r-services.md)
+

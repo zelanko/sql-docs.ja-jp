@@ -21,10 +21,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 972ab981eccb6271dfa2f18e0b482f43020ff36b
+ms.sourcegitcommit: 6419c75df8a5b6742b102a3f56adfa7e2efd9ef1
+ms.openlocfilehash: 630c835cf7be720ad235b0f33bb093ac5a1ed926
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/03/2017
 
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services の旧バージョンとの互換性 (SQL 2017)
@@ -40,10 +40,11 @@ A*非推奨の機能*将来のリリースで製品から廃止されますが�
 |||  
 |-|-|  
 |**モード/カテゴリ**|**機能**|
-|テーブル|リモート リンク メジャー グループ|
+|多次元|データ マイニング|
+|多次元|リモート リンク メジャー グループ|
 |テーブル|1100 と 1103 互換性レベル モデル|
 |テーブル|表形式オブジェクト モデルのプロパティ: Column.TableDetailPosition、Column.IsDefaultLabel、Column.IsDefaultImage|
-|多次元|データ マイニング|
+
 
 ## <a name="discontinued-features"></a>廃止された機能
 A*提供が中止された機能*以前のリリースでは推奨されなくなりました。 現在のリリースに含まれる継続可能性がありますが、現在サポートされていません。 廃止された機能を削除することがあります、将来のリリースか更新します。
@@ -70,8 +71,9 @@ A*互換性に影響する変更*現在のリリースにアップグレード�
 ## <a name="behavior-changes"></a>動作の変更
 A*動作の変更*現在のリリース以前のリリースと比較して同じ機能の動作に影響します。 重要な動作の変更のみを説明します。 ユーザー インターフェイスの変更は含まれません。
 
-このリリースでの動作の変更はありません。
+MDSCHEMA_MEASUREGROUP_DIMENSIONS と DISCOVER_CALC_DEPENDENCY への変更の詳細で、 [Analysis Services 用 SQL Server 2017 CTP 2.1 の新機能](https://blogs.msdn.microsoft.com/analysisservices/2017/05/18/whats-new-in-sql-server-2017-ctp-2-1-for-analysis-services/)お知らせします。
 
 
 ## <a name="see-also"></a>参照
 [Analysis Services の旧バージョンとの互換性 (SQL Server 2016)](analysis-services-backward-compatibility.md)
+

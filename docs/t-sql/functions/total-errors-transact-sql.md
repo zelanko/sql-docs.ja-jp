@@ -34,7 +34,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40totalerrors-transact-sql"></a>& #x 40; & #x 40 です。TOTAL_ERRORS (TRANSACT-SQL)
+# <a name="x40x40totalerrors-transact-sql"></a>&#x40;&#x40;です。TOTAL_ERRORS (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動してから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で発生したディスクの書き込みエラーの数を返します。  
@@ -69,8 +69,8 @@ Errors      As of
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_monitor & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [システム統計関数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [sp_monitor &#40;です。TRANSACT-SQL と&#41;です。](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
+ [システム統計関数 &#40;です。TRANSACT-SQL と&#41;です。](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   
 

@@ -9,3 +9,10 @@
 # [ODBC Driver for SQL Server のドライバー対応接続プール](driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)
 
 # [非同期実行 (通知方法) の例](asynchronous-execution-notification-method-sample.md)
+
+# ヘルプ トピック
+## [データ ソース ウィザード画面 1](dsn-wizard-1.md)
+## [データ ソース ウィザード画面 2](dsn-wizard-2.md)
+## [データ ソース ウィザード画面 3](dsn-wizard-3.md)
+## [データ ソース ウィザード画面 4](dsn-wizard-4.md)
+## [SQL Server のログイン ダイアログ](sql-server-login-dialog.md)

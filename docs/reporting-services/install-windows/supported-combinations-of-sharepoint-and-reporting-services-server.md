@@ -1,5 +1,5 @@
 ---
-title: "SharePoint と Reporting Services サーバーのサポートされる組み合わせ |Microsoft ドキュメント"
+title: "SharePoint と Reporting Services のサーバーのサポートされる組み合わせ |Microsoft ドキュメント"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/01/2017
@@ -19,15 +19,15 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 507c09d09f22f8326898b557997bc109785f30c0
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: b9fc7191c5ebb97cca0596b40e7db149d8293fd2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
-# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>SharePoint と Reporting Services サーバーのサポートされる組み合わせ
+# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>SharePoint と Reporting Services のサーバーのサポートされる組み合わせ
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -38,7 +38,7 @@ SharePoint モードでインストールされた SQL Server Reporting Services
 > [!NOTE]
 > SQL Server 2016 より後に、SharePoint と reporting Services の統合を使用できなくします。
 
-## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>SharePoint および Reporting Services コンポーネントのサポートされる組み合わせ
+## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>SharePoint と Reporting Services のコンポーネントのサポートされる組み合わせ
 
  次の表には、レポート サーバー、SharePoint 製品用 Reporting Services アドイン、および SharePoint 製品のサポートされる組み合わせの概要が示されています。 次の表に記載されていない組み合わせはサポートされません。
 
@@ -66,7 +66,7 @@ SharePoint モードでインストールされた SQL Server Reporting Services
 
  アドインのダウンロード ページへのリンクについては、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
 
- **追加情報:**
+ **追加の考慮事項:**
 
 - 必ず、ファーム内のすべての SharePoint サーバーをアップグレードしてください。 これには、アプリと Web フロントエンド サーバーが含まれます。
 
@@ -86,4 +86,4 @@ SharePoint モードでインストールされた SQL Server Reporting Services
  [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

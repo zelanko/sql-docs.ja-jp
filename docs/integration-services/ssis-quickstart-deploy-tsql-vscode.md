@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: cfc4ae035e699ac496760cd0fc540e72fd463a50
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 2dc6de798ca76b43627a3c381fe628506c3e7480
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Transact SQL を使用した Visual Studio のコードから、SSIS プロジェクトを配置します。
@@ -21,7 +21,7 @@ ms.lasthandoff: 09/22/2017
 > [!NOTE]
 > VS Code で Azure SQL データベース サーバーに接続するときに、この記事で説明されているメソッドを使用できません。 `catalog.deploy_project`ストアド プロシージャへのパスが必要ですが、 `.ispac` (オンプレミス) ローカル ファイル システム内のファイルです。
 
-Visual Studio のコードは、Windows、macOS、およびなど、拡張機能をサポートする Linux のコード エディター、 `mssql` Microsoft SQL Server、Azure SQL データベース、または Azure SQL Data Warehouse に接続するための拡張機能です。 VS Code の詳細については、次を参照してください。 [Visual Studio Cod](https://code.visualstudio.com/)です。
+Visual Studio のコードは、Windows、macOS、およびなど、拡張機能をサポートする Linux のコード エディター、 `mssql` Microsoft SQL Server、Azure SQL データベース、または Azure SQL Data Warehouse に接続するための拡張機能です。 VS Code の詳細については、次を参照してください。 [Visual Studio Code](https://code.visualstudio.com/)です。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -31,7 +31,7 @@ Visual Studio のコードは、Windows、macOS、およびなど、拡張機能
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>VS コードでの sql 言語モードに設定します。
 
-有効にする`mssql`セット言語モードに設定されているコマンドと T-SQL は、IntelliSense、 **SQL** Visual Studio のコードにします。
+有効にする`mssql`コマンドと T-SQL で IntelliSense など、言語モードを設定**SQL** Visual Studio のコードにします。
 
 1. Visual Studio のコードを開き、新しいウィンドウを開きます。 
 

@@ -31,10 +31,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e8b6972868c221ec0368b689164eff740ae6f1a7
+ms.sourcegitcommit: a85dbb34e357d4d00a411e35dce877991337d876
+ms.openlocfilehash: 885ff94e3cecb82bb93e0abac26838d6c265275c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 句 (Transact-SQL)
@@ -140,13 +140,12 @@ FROM Cities;
   
  別名を使用して、式の結果の名前を指定することもできます。たとえば、次のようにします。  
   
- `USE AdventureWorks2012`;  
-  
- `GO`  
-  
- `SELECT AVG(UnitPrice) AS [Average Price]`  
-  
- `FROM Sales.SalesOrderDetail;`  
+ ```sql
+ USE AdventureWorks2012;  
+ GO  
+ SELECT AVG(UnitPrice) AS [Average Price]  
+ FROM Sales.SalesOrderDetail;
+ ```  
   
  *column_alias* ORDER BY 句で使用できます。 ただし、WHERE 句、GROUP BY 句、または HAVING 句の中では使用できません。 クエリ式が DECLARE CURSOR ステートメントの一部である場合*column_alias* FOR UPDATE 句では使用できません。  
   

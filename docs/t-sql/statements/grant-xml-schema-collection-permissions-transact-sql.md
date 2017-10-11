@@ -128,11 +128,11 @@ GRANT permission  [ ,...n ] ON
 ## <a name="examples"></a>使用例  
  次の例では、XML スキーマ コレクション `EXECUTE` の `Invoices4` 権限をユーザー `Wanida` に許可します。 XML スキーマ コレクション`Invoices4`内にある、`Sales`のスキーマ、`AdventureWorks2012`データベース。  
   
- `USE AdventureWorks2012;`  
-  
- `GRANT EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;`  
-  
- `GO`  
+ ```
+ USE AdventureWorks2012;  
+ GRANT EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;  
+ GO
+ ```  
   
 ## <a name="see-also"></a>参照  
  [XML スキーマ コレクションの権限 &#40; を拒否します。TRANSACT-SQL と #41 です。](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   

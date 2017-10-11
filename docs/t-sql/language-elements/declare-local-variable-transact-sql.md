@@ -216,17 +216,15 @@ WHERE LastName LIKE @find;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LastName            FirstName               Phone`  
+ ```
+LastName            FirstName               Phone
+------------------- ----------------------- -------------------------
+Manchepalli         Ajay                    1 (11) 500 555-0174
+Manek               Parul                   1 (11) 500 555-0146
+Manzanares          Tomas                   1 (11) 500 555-0178
   
- `------------------- ----------------------- -------------------------`  
-  
- `Manchepalli         Ajay                    1 (11) 500 555-0174`  
-  
- `Manek               Parul                   1 (11) 500 555-0146`  
-  
- `Manzanares          Tomas                   1 (11) 500 555-0178`  
-  
- `(3 row(s) affected)`  
+(3 row(s) affected)
+```  
   
 ### <a name="b-using-declare-with-two-variables"></a>B. DECLARE で 2 つの変数を使用する  
  次の例では、北米販売区域に勤務しており、年間売上高が $2,000,000 以上である [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 販売担当者の名前を取得します。  

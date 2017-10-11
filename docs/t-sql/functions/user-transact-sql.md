@@ -72,11 +72,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----------------------------------------------------------------------`  
+ ```
+-----------------------------------------------------------------------  
+The current user's database username is: dbo  
   
- `The current user's database username is: dbo`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ### <a name="b-using-user-with-default-constraints"></a>B. USER を DEFAULT 制約と共に使用する  
  次の例では、sales 行の販売員に対する `USER` 制約として `DEFAULT` を使用し、テーブルを作成します。  
@@ -113,21 +114,17 @@ GO
   
  次に結果セットを示します。`entry-person` の値に注意してください。  
   
- `part_id     description                    entry_person`  
+ ```
+part_id     description                    entry_person
+----------- ------------------------------ -------------------------
+100         Red pencil                     dbo
+101         Blue pencil                    dbo
+102         Green pencil                   dbo
+103         Black pencil                   dbo
+104         Yellow pencil                  dbo
   
- `----------- ------------------------------ -------------------------`  
-  
- `100         Red pencil                     dbo`  
-  
- `101         Blue pencil                    dbo`  
-  
- `102         Green pencil                   dbo`  
-  
- `103         Black pencil                   dbo`  
-  
- `104         Yellow pencil                  dbo`  
-  
- `(5 row(s) affected)`  
+(5 row(s) affected)
+```  
   
 ### <a name="c-using-user-in-combination-with-execute-as"></a>C. USER を EXECUTE AS と組み合わせて使用する  
  次の例では、権限を借用したセッションを内部で呼び出すときの、`USER` の動作を示します。  
@@ -147,11 +144,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DBO`  
-  
- `Mario`  
-  
- `DBO`  
+ ```
+DBO
+Mario
+DBO
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -167,11 +164,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----------------------------------------------------------------------`  
+ ```
+-----------------------------------------------------------------------  
+The current user's database username is: dbo  
   
- `The current user's database username is: dbo`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ## <a name="see-also"></a>参照  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

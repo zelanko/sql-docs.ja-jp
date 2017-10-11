@@ -50,28 +50,24 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-testing-circularstring-type-for-compatibility-with-compatibility-level-110"></a>A. 互換性レベル 110 で CircularString 型の互換性をテストする  
  次の例のテスト、`CircularString`以前のバージョンの互換性のためインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
- `DECLARE @g geometry = 'CIRCULARSTRING(3 4, 8 9, 5 6)';`  
-  
- `IF @g.MinDbCompatibilityLevel() <= 110`  
-  
- `BEGIN`  
-  
- `SELECT @g.ToString();`  
-  
- `END`  
+```
+ DECLARE @g geometry = 'CIRCULARSTRING(3 4, 8 9, 5 6)'; 
+ IF @g.MinDbCompatibilityLevel() <= 110 
+ BEGIN 
+ SELECT @g.ToString(); 
+ END
+ ```  
   
 ### <a name="b-testing-linestring-type-for-compatibility-with-compatibility-level-100"></a>B. 互換性レベル 100 で LineString 型の互換性をテストする  
  次の例では、`LineString` インスタンスの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] との互換性をテストします。  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 9, 5 6)';`  
-  
- `IF @g.MinDbCompatibilityLevel() <= 100`  
-  
- `BEGIN`  
-  
- `SELECT @g.ToString();`  
-  
- `END`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 9, 5 6)'; 
+ IF @g.MinDbCompatibilityLevel() <= 100 
+ BEGIN 
+ SELECT @g.ToString(); 
+ END
+``` 
   
 ## <a name="see-also"></a>参照  
  [ALTER DATABASE 互換性レベル &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  

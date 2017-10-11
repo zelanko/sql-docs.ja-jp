@@ -28,7 +28,7 @@ ms.lasthandoff: 09/01/2017
   
  Analysis Services、Power BI Desktop と Excel の Power Pivot で DAX が使用されますが、このトピックは SQL Server Data Tools (SSDT) で作成されたため、Analysis Services テーブル モデル プロジェクトに複数適用されます。  
   
-##  <a name="bkmk_DAX"></a> DAX formulas in calculated columns, measures, and row filters  
+##  <a name="bkmk_DAX"></a> 計算列、メジャー、および行フィルターにおける DAX の数式  
  SSDT で作成表形式モデル、DAX の数式は、計算列、メジャー、および行フィルターで使用されます。  
   
 ### <a name="calculated-columns"></a>計算列  
@@ -97,10 +97,10 @@ ms.lasthandoff: 09/01/2017
   
  DAX 式で使用される演算子の詳細については、「 [DAX 演算子リファレンス](http://msdn.microsoft.com/en-us/1befbddc-6178-472c-8bc4-05dafd62207e)」を参照してください。  
   
-##  <a name="bkmk_DAX_Formulas"></a> DAX formulas  
+##  <a name="bkmk_DAX_Formulas"></a> DAX の数式  
  計算列やメジャーに使用する計算を作成したり、行レベルのフィルターを使用してデータのセキュリティを確保するうえで、DAX の数式は欠かすことができません。 計算列とメジャーの数式を作成するには、モデル デザイナー ウィンドウまたは DAX エディターの上部にある数式バーを使用します。 行フィルターに使用する数式を作成するには、[ロール マネージャー] ダイアログ ボックスを使用します。 このセクションの情報は、DAX の数式に関する基礎知識を初めての方にわかりやすく伝えることを目的としています。  
   
-###  <a name="basics"></a> Formula basics  
+###  <a name="basics"></a> 数式の基本  
  DAX を使用すると、計算列の一部として、およびテーブルに関連付けられているメジャー (テーブルには直接表示されない) として、テーブル モデルの作成者がカスタム計算をモデル テーブルに定義できます。 また、モデル作成者がデータのセキュリティを確保できるのも DAX の利点です。ブール値を返す計算を作成し、特定の (または関連する) テーブルに関連付けられているロールのメンバー ユーザーがそのテーブルからクエリできる行を定義することができます。  
   
  DAX の数式には、非常に単純なものもあれば、きわめて複雑なものもあります。 次の表には、計算列で使用できる基本的な単純な数式の例を示しています。  
@@ -175,7 +175,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 > [!NOTE]  
 >  メジャーでは、関数の入れ子化にいくつかの制限があります。これらの制限は、列間の依存関係から必要になる多数の計算によるパフォーマンスへの影響を防ぐために設けられています。  
   
-##  <a name="bkmk_DAX_functions"></a> DAX functions  
+##  <a name="bkmk_DAX_functions"></a> DAX 関数  
  ここでは、DAX でサポートされる関数の *種類* の概要について説明します。 詳細については、「 [DAX 関数リファレンス](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)」を参照してください。  
   
  DAX には、日時を使った計算、条件値の作成、文字列の操作、リレーションシップに基づく参照を行うことのできる各種関数に加え、テーブル全体で繰り返し実行して再帰的な計算を行う機能が用意されています。 これらの関数の多くは、Excel の数式と非常によく似ています。ただし、DAX の数式は、次の点が大きく異なります。  
@@ -212,7 +212,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ### <a name="time-intelligence-functions"></a>タイム インテリジェンス関数  
  DAX で提供されているタイム インテリジェンス関数を使用して、カレンダーおよび日付に関して組み込まれた知識を使用する計算を作成できます。 時刻と日付の範囲を集計や計算と一緒に使用することで、比較可能な複数期間の売上、在庫などに関する有意な比較を構築できます。 詳細については、次を参照してください。[タイム インテリジェンス関数 (DAX)](http://msdn.microsoft.com/en-us/91df278d-4b28-40c1-a572-cdb91f081517)です。  
   
-###  <a name="bkmk_TableFunc"></a> Table-valued functions  
+###  <a name="bkmk_TableFunc"></a> テーブル値関数  
  DAX 関数には、テーブルを出力する関数、入力としてテーブルを受け取る関数、またはその両方を行う関数が存在します。 テーブルに含めることができるのは 1 列であるため、テーブル値関数も入力として 1 列を受け取ります。 DAX の数式を最大限に活用するには、このようなテーブル値関数の使い方を理解することが大切です。 DAX には、次の種類のテーブル値関数があります。  
   
   **フィルター関数**-列、テーブル、または現在の行に関連する値を返します。  
@@ -221,7 +221,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
     
   **タイム インテリジェンス関数**- 日付のテーブルを返すか、集計の計算に日付のテーブルを使用します。  
   
-##  <a name="bkmk_context"></a> Context in DAX formulas  
+##  <a name="bkmk_context"></a> DAX の数式のコンテキスト  
  DAX を使用して数式を作成する場合、*コンテキスト* の概念を理解することが重要です。 コンテキストを使用すると動的分析を行うことができます。数式の結果は、現在の行またはセルの選択や関連データを反映して変化するためです。 高性能な動的分析の作成や、数式に関する問題のトラブルシューティングを行うには、コンテキストをよく理解して効果的に使用することが重要です。  
   
  テーブル モデルの数式は、次のような設計要素に対応して、さまざまなコンテキストで評価されます。  
@@ -234,7 +234,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  コンテキストには、 *行コンテキスト*、 *クエリ コンテキスト*、 *フィルター コンテキスト*という種類があります。  
   
-###  <a name="bkmk_row_context"></a> Row context  
+###  <a name="bkmk_row_context"></a> 行コンテキスト  
  *行コンテキスト* は、"現在の行" と考えることができます。 計算列に数式を作成した場合、その数式の行コンテキストは、現在の行内の全列からの値を含んでいます。 テーブルが別のテーブルに関連付けられている場合、コンテキストには、現在の行に関連付けられている他のテーブルの値もすべて含まれます。  
   
  たとえば、同じテーブルの Freight と Tax の 2 つの列の値を加算する `=[Freight] + [Tax]`という計算列を作成したとします。 この数式は、指定した列の現在の行の値のみを自動的に取得します。  
@@ -264,7 +264,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  つまり、EARLIER 関数は、現在の操作に先行する操作からの行コンテキストを格納します。 この関数は常に、メモリに 2 つのコンテキスト セットを格納します。1 つのコンテキスト セットは、数式の内側のループに対する現在行を表し、もう一方のセットは、数式の外側のループに対する現在行を表します。 DAX では、2 つのループの間で値が自動的に提供されるので、複雑な集計を作成することができます。  
   
-####  <a name="bkmk_query_context"></a> Query context  
+####  <a name="bkmk_query_context"></a> クエリ コンテキスト  
  *クエリ コンテキスト* とは、数式に対して暗黙的に取得されるデータのサブセットを指します。 テーブル モデルに基づくレポートまたはピボットテーブルに、メジャーまたは他の値のフィールドを配置すると、エンジンが、行見出しと列見出し、スライサー、およびレポート フィルターを調べてコンテキストを決定します。 次に、必要なクエリがデータ ソースに対して実行され、データの正しいサブセットを取得し、数式で定義された計算を行い、ピボットテーブルの各セルまたはレポートに値を含めます。 取得されるデータのセットは、各セルのクエリ コンテキストです。  
   
 > [!WARNING]  
@@ -278,7 +278,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  実際、ピボットテーブルで、列ヘッダーや行ヘッダー、スライサーを追加したり削除したりすると、コンテキストが変わります。 ピボットテーブルに列または行の見出しを追加するたびに、メジャーが評価されるクエリ コンテキストが変化します。 スライス操作やフィルター処理もコンテキストに影響を及ぼします。 したがって、メジャーで使用される同じ数式は、セルごとに異なる *クエリ コンテキスト* で評価されます。  
   
-####  <a name="bkmk_filter_context"></a> Filter context  
+####  <a name="bkmk_filter_context"></a> フィルター コンテキスト  
  *フィルター コンテキスト* は、各列が含むことができる値のセット、または関連するテーブルから取得される値が含むことができる値のセットです。 フィルターを適用できるのは、デザイナーまたはプレゼンテーション層 (レポートおよびピボットテーブル) の列です。 また、数式内のフィルター式によって明示的に定義することもできます。  
   
  フィルター コンテキストは、数式の引数を使用して列やテーブルの使用可能な値のセットにフィルター制約を指定すると追加されます。 行コンテキストやクエリ コンテキストなど、他のコンテキストに加えて適用されます。  
@@ -291,7 +291,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  数式内のフィルターを選択的にクリアして適用する方法の例については、「 [ALLEXCEPT 関数 (DAX)](http://msdn.microsoft.com/en-us/a6f575a1-9803-4bb2-85b3-c95c060f1fb1)」を参照してください。  
   
-####  <a name="bkmk_determine_context"></a> Determining context in formulas  
+####  <a name="bkmk_determine_context"></a> 数式のコンテキストの決定  
  DAX 数式を作成すると、構文が有効かどうかが最初にテストされます。次に、数式に含まれる列やテーブルの名前が現在のコンテキストで見つかるかどうかがテストされます。 数式に指定された列またはテーブルが見つからない場合は、エラーが返されます。  
   
  検証中のコンテキスト (および再計算操作) は、前のセクションで説明したように、モデル内の使用可能なテーブル、テーブル間のリレーションシップ、および適用されたフィルターを使用して決定されます。  
@@ -312,7 +312,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 5.  [EARLIER 関数 (DAX)](http://msdn.microsoft.com/en-us/6d126c4d-2315-49ec-899d-cb396eefbae6) と [EARLIEST 関数 (DAX)](http://msdn.microsoft.com/en-us/9befa04d-78db-492e-a463-80b8b77206d6) を使用すると、内側のループの値を参照しながら計算を実行してテーブルをループ処理することができます。 再帰の概念や内側と外側のループについてよく知っている場合は、このトピックを読むと EARLIER および EARLIEST 関数の威力がわかります。 これらの概念についてよく知らなくても、例の手順に注意して従うことで、計算で内側と外側のコンテキストがどのように使用されるのかを理解できます。  
   
-##  <a name="bkmk_RelModel"></a> Formulas and the tabular model  
+##  <a name="bkmk_RelModel"></a> 数式とテーブル モデル  
  SSDT では、モデル デザイナーは、データの複数のテーブルを操作して、テーブル モデル内のテーブルを関連付けることができます領域です。 このモデルでは、共通の値 (キー) を含む列のリレーションシップによってテーブルが結合されます。 テーブル モデルでは、他のテーブルの列に値をリンクして、より有益な計算を行うことができます。 リレーショナル データベースと同様に、関連するテーブルの多くのレベルを結び付け、任意のテーブルの列を結果で使用できます。  
   
  たとえば、売上テーブル、製品テーブル、および製品カテゴリ テーブルをリンクすると、ユーザーは、ピボットテーブルやレポートで、列のさまざまな組み合わせを使用できます。 関連するフィールドは、接続されたテーブルをフィルター処理したり、サブセットに対する計算を作成したりするために使用できます (リレーショナル データベースおよびテーブルと結合の作業に慣れていない場合は、次を参照してください[リレーションシップ](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。)。  
@@ -325,7 +325,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 -   リレーションシップを使用してモデル内のテーブルをリンクする場合は、数式を評価するスコープ (または *コンテキスト*とも呼ばれる) が拡大されます。 新しいテーブルや新しいリレーションシップを追加したため、またはアクティブなリレーションシップを変更したためにコンテキストが変化すると、予測していなかった結果の変更が生じることがあります。 詳細については、このトピックの「 [DAX の数式のコンテキスト](#bkmk_context) 」を参照してください。  
   
-##  <a name="bkmk_tables"></a> Working with tables and columns  
+##  <a name="bkmk_tables"></a> テーブルと列の操作  
  テーブル モデルにおけるテーブルは、外観が Excel テーブルと似ていますが、データや数式を処理する方法は異なります。  
   
 -   数式では、テーブルおよび列のみを使用できます。個々のセル、範囲参照、配列などは使用できません。  
@@ -350,7 +350,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  DAX 関数の多くでは、参照先の列を見つけて意味のある結果を返すために、テーブル間のリレーションシップが必要になります。 リレーションシップを特定しようとする関数もありますが、最適な結果を得るには、可能な限りリレーションシップを作成するようにしてください。 詳細については、このトピックの「 [数式とテーブル モデル](#bkmk_RelModel) 」を参照してください。  
   
-##  <a name="bkmk_RefreshRecalc"></a> Updating the results of formulas (Process)  
+##  <a name="bkmk_RefreshRecalc"></a> 数式の結果の更新 (処理)  
  *データ処理* と *再計算* は、別個の操作ですが互いに関連しています。 複雑な数式、大量のデータ、または外部データ ソースから取得されるデータを含むモデルをデザインする場合には、これらの概念を十分理解している必要があります。  
   
  *データ処理* は、外部データ ソースの新しいデータでモデル内のデータを更新する処理です。  
@@ -365,7 +365,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  詳細については、「 [データの処理 (SSAS テーブル)](../../analysis-services/tabular-models/process-data-ssas-tabular.md)」を参照してください。  
   
-##  <a name="bkmk_troubleshoot"></a> Troubleshooting errors in formulas  
+##  <a name="bkmk_troubleshoot"></a> 数式内のエラーのトラブルシューティング  
  数式を定義するときにエラーが発生した場合は、その数式に *構文エラー*、 *セマンティック エラー*、または *計算エラー*が含まれている可能性があります。  
   
  構文エラーの解決は非常に簡単です。 かっこやコンマが不足している場合がよくあります。 個々の関数の構文については、「 [DAX 関数リファレンス](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)」を参照してください。  
@@ -384,7 +384,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  最初の 4 つのケースでは、DAX は無効な数式を含んでいる列全体にフラグを設定します。 最後のケースでは、DAX は列をグレーで表示し、その列が未処理状態であることを示します。  
   
-##  <a name="bkmk_addional_resources"></a> Additional resources  
+##  <a name="bkmk_addional_resources"></a> その他のリソース  
  「[テーブル モデリング &#40;Adventure Works チュートリアル&#41;](../../analysis-services/tabular-modeling-adventure-works-tutorial.md)」では、計算列、メジャー、および行フィルターに多数の計算を含んだテーブル モデルの作成手順について説明します。 ほとんどの数式について、それぞれの目的が説明されています。  
   
  [Analysis Services チーム ブログ](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409)最新の情報、ヒント、ニュースと知らせを提供します。 

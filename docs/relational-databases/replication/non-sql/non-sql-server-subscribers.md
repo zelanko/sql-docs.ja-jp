@@ -81,7 +81,7 @@ Oracle および IBM DB2, にサブスクリプションを作成する方法の
   
     -   Oracle の場合、1 つのサーバーに 1 つのデータベースしか作成できないため、データベースを指定する必要はありません。  
   
-    -   IBM DB2 の場合、DB2 接続文字列によってデータベースを指定します。 詳細については、「 [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)」を参照してください。  
+    -   IBM DB2 の場合、DB2 接続文字列によってデータベースを指定します。 詳細については、「 [SQL Server 以外のサブスクライバーのサブスクリプションの作成](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)」を参照してください。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターが 64 ビット プラットフォームで実行されている場合、該当する OLE DB プロバイダーの 64 ビット バージョンを使用する必要があります。  
   
