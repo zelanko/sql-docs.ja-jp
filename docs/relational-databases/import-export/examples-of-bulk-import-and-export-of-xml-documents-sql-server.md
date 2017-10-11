@@ -23,10 +23,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 4e051789fad041a9515e00b01d6025cd2d7e6aed
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 7a79319a6488d3d13d02a5c297f1ee8a99d76806
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML ドキュメントの一括インポートと一括エクスポートの例 (SQL Server)
@@ -44,12 +44,12 @@ ms.lasthandoff: 09/27/2017
 -   BULK INSERT  
   
 -   INSERT ...SELECT * FROM OPENROWSET(BULK...)  
-  
- **注:** 詳細については、以下をご覧ください。 
-  - [bcp ユーティリティを使用した一括データのインポートとエクスポート (SQL Server)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
-   - [BULK INSERT または OPENROWSET(BULK...) を使用した一括データのインポート (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
-    - [XML 一括ロード コンポーネントを使用して XML を SQL Server にインポートする方法](https://support.microsoft.com/en-us/kb/316005)
-     - [XML スキーマ コレクション (SQL Server)](../xml/xml-schema-collections-sql-server.md)
+
+詳細については、次の各トピックを参照してください。
+- [bcp ユーティリティを使用した一括データのインポートとエクスポート (SQL Server)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
+- [BULK INSERT または OPENROWSET(BULK...) を使用した一括データのインポート (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
+- [XML 一括ロード コンポーネントを使用して XML を SQL Server にインポートする方法](https://support.microsoft.com/en-us/kb/316005)
+- [XML スキーマ コレクション (SQL Server)](../xml/xml-schema-collections-sql-server.md)
   
 ## <a name="examples"></a>使用例  
  次に例を示します。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 09/27/2017
 #### <a name="sample-table"></a>サンプル テーブル  
  例 A をテストするには、サンプル テーブル `T`を作成します。  
   
-```  
+```sql
 USE tempdb  
 CREATE TABLE T (IntCol int, XmlCol xml);  
 GO  
@@ -79,8 +79,8 @@ GO
 #### <a name="sample-data-file"></a>サンプル データ ファイル  
  例 A を実行する前に、次のサンプル インスタンスが指定する`C:\SampleFolder\SampleData3.txt`エンコード体系を含む、UTF-8 エンコードのファイル ( `UTF-8` ) を作成する必要があります。  
   
-```  
-\<?xml version="1.0" encoding="UTF-8"?>  
+```xml  
+<?xml version="1.0" encoding="UTF-8"?>  
 <Root>  
           <ProductDescription ProductModelID="5">  
              <Summary>Some Text</Summary>  
@@ -91,7 +91,7 @@ GO
 #### <a name="example-a"></a>例 A  
  この例では、 `SINGLE_BLOB` オプションを `INSERT ... SELECT * FROM OPENROWSET(BULK...)` ステートメントで使用して、 `SampleData3.txt` という名前のファイルからデータをインポートし、XML インスタンスを 1 列のテーブル (サンプル テーブル `T`) に挿入します。  
   
-```  
+```sql
 INSERT INTO T(XmlCol)  
 SELECT * FROM OPENROWSET(  
    BULK 'c:\SampleFolder\SampleData3.txt',  
@@ -120,7 +120,7 @@ SELECT * FROM OPENROWSET(
 #### <a name="sample-data-file"></a>サンプル データ ファイル  
  例 B では、例 A の `SampleData3.txt` サンプル データ ファイルを変更したバージョンを使用します。 例 B を実行するには、このファイルの内容を次のように修正します。  
   
-```  
+```xml
 <Root>  
           <ProductDescription ProductModelID="10">  
              <Summary>Some New Text</Summary>  
@@ -130,7 +130,7 @@ SELECT * FROM OPENROWSET(
   
 #### <a name="example-b"></a>例 B  
   
-```  
+```sql  
 -- Query before update shows initial state of XmlCol values.  
 SELECT * FROM T  
 UPDATE T  
@@ -166,14 +166,14 @@ GO
 #### <a name="sample-data-file"></a>サンプル データ ファイル  
  一括インポートの例をテストする前に、次のサンプル インスタンスを含むファイル (`C:\temp\Dtdfile.xml`) を作成します。  
   
-```  
+```xml 
 <!DOCTYPE DOC [<!ATTLIST elem1 attr1 CDATA "defVal1">]><elem1>January</elem1>  
 ```  
   
 #### <a name="sample-table"></a>サンプル テーブル  
  例 C では、次の `T1` ステートメントで作成した `CREATE TABLE` サンプル テーブルを使用します。  
   
-```  
+```sql  
 USE tempdb;  
 CREATE TABLE T1(XmlCol xml);  
 GO  
@@ -182,7 +182,7 @@ GO
 #### <a name="example-c"></a>例 C  
  この例では `OPENROWSET(BULK...)` を使用して、 `CONVERT` 句内で `SELECT` オプションを指定し、 `Dtdfile.xml` から XML データをサンプル テーブル `T1`にインポートします。  
   
-```  
+```sql
 INSERT T1  
   SELECT CONVERT(xml, BulkColumn, 2) FROM   
     OPENROWSET(Bulk 'c:\temp\Dtdfile.xml', SINGLE_BLOB) [rowsetresults];  
@@ -226,7 +226,7 @@ B7 EF BA B7 EF BF B8 C3-B8 3C 2F 72 6F 6F 74 3E  *.........</root>*
   
  この例では、サンプル テーブル `xTable` のフィールド ターミネータの使用方法を示します。 サンプル テーブルを作成するには、次の `CREATE TABLE` ステートメントを使用します。  
   
-```  
+```sql
 USE tempdb;  
 CREATE TABLE xTable (xCol xml);  
 GO  
@@ -246,7 +246,7 @@ GO
 #### <a name="example-d"></a>例 D  
  この例では、 `Xmltable.fmt` ステートメントで `BULK INSERT` フォーマット ファイルを使用して、 `Xmltable.dat`という XML データ ファイルの内容をインポートします。  
   
-```  
+```sql
 BULK INSERT xTable   
 FROM 'C:\Xmltable.dat'  
 WITH (FORMATFILE = 'C:\Xmltable.fmt');  
@@ -258,7 +258,7 @@ GO
 ## <a name="bulk_export_xml_data"></a> XML データの一括エクスポートを行う  
  次の例では、 `bcp` を使用し、同じ XML フォーマット ファイルを使用して、前の例で作成されたテーブルから XML データの一括エクスポートを行います。 次の `bcp` コマンドで、 `<server_name>` と `<instance_name>` はプレースホルダーであり、適切な値との差し替えが必要です。  
   
-```  
+```cmd
 bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>  
 ```  
   
