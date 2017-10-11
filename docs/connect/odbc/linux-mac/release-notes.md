@@ -1,4 +1,4 @@
----
+﻿---
 title: "リリース ノート - Microsoft ODBC Driver for SQL Server on Linux and macOS |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 01/19/2017

@@ -1,4 +1,4 @@
----
+﻿---
 title: "手順 1: pyodbc Python 開発環境の構成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/08/2017
