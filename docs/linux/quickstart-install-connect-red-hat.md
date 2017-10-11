@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Red Hat Enterprise Linux に SQL Server 2017 の概要 |Microsoft ドキュメント"
 description: "このクイック スタート チュートリアルでは、Red Hat Enterprise Linux に SQL Server 2017 をインストールし、作成し、sqlcmd によるデータベースのクエリを実行する方法を示します。"
 author: rothja
