@@ -70,7 +70,7 @@ ELSE
        SELECT 'Weekday';
 ```  
   
- 例については、次を参照してください[ELSE &#40; IF しています.。ELSE &#41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/else-if-else-transact-sql.md).  
+ 例については、次を参照してください[ELSE &#40; IF しています。ELSE &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/else-if-else-transact-sql.md).  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例で`IF…ELSE`内の項目の重み付けに基づいて、ユーザーを表示する 2 つの応答の決定、`DimProduct`テーブル。  
@@ -100,7 +100,7 @@ ELSE
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [中に & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/while-transact-sql.md)   
  [場合 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/case-transact-sql.md)   
- [フロー制御言語 & #40 です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40; IF しています.ELSE &#41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/else-if-else-transact-sql.md) 
+ [フロー制御言語 & #40 です。TRANSACT-SQL と &#41;です。](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40; IF しています.ELSE &#41;&#40;です。TRANSACT-SQL と &#41; です。](../../t-sql/language-elements/else-if-else-transact-sql.md) 
   
   
 
