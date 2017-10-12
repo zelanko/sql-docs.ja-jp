@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 10/09/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,113 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: f12afa26bb406a17c41059b12cc8e1b7a9c411a1
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 9b477c4c755e98d5aaae6ba92f4a67ff4d02d190
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 
 この記事では、SSMS の現在と以前のバージョンの更新、機能強化、およびバグの修正に関する詳細を提供します。 [SSMS の以前のバージョン](#previous-ssms-releases)は以下でダウンロードできます。
 
-## <a name="ssms-172download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.2](download-sql-server-management-studio-ssms.md)
 
+## <a name="ssms-173download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.3](download-sql-server-management-studio-ssms.md)
+一般公開 | ビルド番号: 14.0.17199.0
+
+### <a name="enhancements"></a>機能強化
+
+- インテリジェントなフレームワークを使用して、CSV ファイルのインポート エクスペリエンスを効率化するための新しい "フラット ファイルのインポート" ウィザードが追加されました。これは最小限のユーザーの介入または特殊なドメインの知識で使用できます。 詳細については、「[Import Flat File to SQL Wizard](../relational-databases/import-export/import-flat-file-wizard.md)」 (フラット ファイルを SQL ウィザードにインポートする) を参照してください。
+- オブジェクト エクスプローラーに "XEvent プロファイラー" ノードが追加されました。 詳細については、「[SSMS XEvent プロファイラーの使用](../relational-databases/extended-events/use-the-ssms-xe-profiler.md)」を参照してください。
+- パフォーマンス ダッシュボードでの待機の履歴レポートの待機のフィルター処理と分類を更新しました。
+- "Predict" 関数の構文チェックを追加しました。
+- 外部ライブラリ管理のクエリの構文チェックを追加しました。
+- 外部ライブラリ管理の SMO サポートを追加しました。
+- [登録済みサーバー] ウィンドウに [PowerShell の起動] のサポートを追加しました (新しい SQL PowerShell モジュールが必要)。
+- Always On: 可用性グループに[読み取り専用ルーティングのサポート](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)を追加しました。
+- [Active Directory - MFA で汎用のサポート] ログインの出力ウィンドウにトレースの詳細を送信するオプションを追加しました (既定ではオフになっているため、[ツール] > [オプション] > [Azure サービス] > [Azure クラウド] > [ADAL 出力ウィンドウのトレース レベル] の下にあるユーザー設定で有効にする必要があります)。 
+- クエリ ストア: 
+  - クエリ ストア UI は、QDS が何らかのデータを記録している限り、QDS がオフになっている場合でもアクセスできます。
+  - クエリ ストア UI で、既存レポートのすべての待機の分類法が公開されるようになりました。 これにより、顧客が上位の待機中のクエリのシナリオのロック解除などができるようになります。
+- [スクリプト パラメーター ヘッダーを含める] がオプションになりました (既定で無効になっており、[ツール] > [オプション] > [SQL Server オブジェクト エクスプローラー] > [スクリプト] > [スクリプト パラメーター ヘッダーを含める] の下のユーザー設定で有効にすることができます) - [Connect アイテム 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199)。
+- "RC" ブランド化を削除しました。
+
+### <a name="bug-fixes"></a>バグの修正
+
+**SSMS 全般**
+
+- XEvent: 
+   - SSMS が .xel ファイル内のイベントの一部だけを開く問題を修正しました。
+   - 既定のデータベースが 'マスター' でない場合の "ライブ データの監視" のエクスペリエンスが向上しました。[Connect アイテム 1222582](https://connect.microsoft.com/SQLServer/feedback/details/1222582)
+- Always On: ログ バックアップの復元がエラー "このバックアップ セットのログは LSN x で終了します。これはデータベースに適用するには古すぎます" で失敗する可能性がある問題を修正しました。
+- ジョブの利用状況モニター: 一貫性のないアイコンを修正しました。[Connect アイテム 3133100](https://connect.microsoft.com/SQLServer/feedback/details/3133100)
+- クエリ ストア: クエリ ストア レポートでユーザーが "カスタム" の日付範囲を選択できない問題を修正しました。 以下の Connect アイテムにリンクされています。
+   - [Connect アイテム 3139842](https://connect.microsoft.com/SQLServer/feedback/details/3139842)
+   - [Connect アイテム 3139399](http://connect.microsoft.com/SQLServer/feedback/details/3139399)
+- 保存されている情報に指定したデータベースがあり、ユーザーが <default> を選択した場合に、接続ダイアログで最近使用したデータベースが "クリア" されない問題を修正しました。
+- オブジェクト スクリプト作成:
+    - ユーザーが DW データベースをサーバー上で一時停止したが、別の非 DW データベースを選択してそれをスクリプト作成しようとした場合に、"データベース スクリプトの生成" が機能せず、エラーがスローされる問題を修正しました。
+    - スクリプト作成したストアド プロシージャのヘッダーがスクリプトの設定と一致せず、誤解を招くスクリプトになる問題を修正しました。[Connect アイテム 3139784](http://connect.microsoft.com/SQLServer/feedback/details/3139784)
+    - SQL Azure オブジェクトをターゲットにしたときに、"スクリプト ボタン" が再度有効になります。
+    - Azure SQL データベースに接続しているときに、一部のオブジェクト (UDF、ビュー、SP、トリガー) で "Alter" または "Execute" のスクリプト作成が許可されない SSMS の問題を修正しました。[Connect アイテム 3136386](https://connect.microsoft.com/SQLServer/feedback/details/3136386)
+- クエリ エディター:
+  - Azure SQL Database をターゲットにする際の IntelliSense が向上しました。
+  - 有効期限が切れた認証トークン (ユニバーサル認証) によりクエリが失敗する問題を修正しました。
+  - Azure SQL Database に対して作業を行うときの IntelliSense が向上しました (特に、Azure SQL Database の接続時には、最新の T-SQL 文法 (140) が使用されます)。
+  - サーバー上の DataWarehouse 以外のデータベースへの接続でクエリ ウィンドウを開くと、そのサーバーの DataWarehouse データベースへの後続のクエリ ウィンドウのすべてで、サポートされない型/オプションに関するさまざまなエラーがスローされます。
+- Always On:
+   - Always On ダッシュボードと AG プロパティ ページにシード処理モード列が追加されました。
+   - プライマリが Windows にある場合に、Linux AG が作成できない問題を修正しました。[Connect アイテム 3139856](https://connect.microsoft.com/SQLServer/feedback/details/3139856)
+- クエリ実行時の SSMS での複数の "メモリ不足" 問題を修正しました。[Connect アイテム 2845190](https://connect.microsoft.com/SQLServer/feedback/details/2845190)、[Connect アイテム 3123864](https://connect.microsoft.com/SQLServer/feedback/details/3123864)
+- Profiler: 
+   - SQL 2005 をターゲットとしたときに、Profiler が機能しない問題を修正しました。
+   - Profiler が [サーバー証明書を信頼する] 接続オプションを受け入れない問題を修正しました。
+- 利用状況モニター: Linux で実行されている SQL Server がポイントされた場合に利用状況モニターが機能しない問題を修正しました。
+- 外部データ ソースまたは外部ファイル形式のオブジェクトを転送しない SMO 転送クラスの問題を修正しました。これらの種類のオブジェクトは、正しく転送に含まれるようになりました。
+- 登録済みサーバー:
+   - UA サーバーに対してマルチサーバー クエリが有効になりました (グループ内のすべての UA サーバーに対して同じトークンを使用しようとします)。
+- AD ユニバーサル認証:
+   - Azure AD 認証がサポートされない問題を修正しました。
+   - テーブル/ビュー デザイナーが機能しない問題を修正しました。
+   - "上位 1000 行を選択" と "上位 200 行を編集" が機能しない問題を修正しました。
+- データベースの復元: ファイルを別の場所に移動したときに、パスの最後のフォルダーが復元で除外される問題を修正しました。
+- 圧縮ウィザード:
+   - インデックスの圧縮ウィザードの管理問題を修正しました。SQL 2016 以前のバージョンでデータの圧縮ウィザードが破損する問題を修正しました。
+        https://connect.microsoft.com/SQLServer/feedback/details/3139342
+   - Azure のテーブルとインデックスに圧縮ウィザードが追加されました。
+- Showplan: 
+   - PDW 演算子が認識されない問題を修正しました。
+- サーバー プロパティ : 
+   - サーバー プロセッサのアフィニティを変更できない問題を修正しました。
+
+
+**Analysis Services (AS)**
+
+- 1400 互換性レベルのテーブル モデルと Power Query データ ソースをサポートする展開ウィザードの多くの問題を修正しました。
+- コマンドラインから実行する際に、展開ウィザードで AS Azure に展開できるようになりました。
+- AS Azure で Windows 認証を使用する際に、ユーザーがオブジェクト エクスプローラーでユーザー アカウントの名前を正しく確認できるようになりました。
+
+
+### <a name="known-issues-in-this-173-release"></a>この 17.3 リリースの既知の問題:
+
+**SSMS 全般**
+
+- MFA を使用した UA を使用する Azure AD 認証では、次の SSMS 機能はサポートされていません。
+   - データベース エンジン チューニング アドバイザーは Azure AD の認証ではサポートされていません。ユーザーに表示されるエラー メッセージが少し曖昧だという既知の問題があります。"Could not load file or assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…" (ファイルまたはアセンブリ 'Microsoft.IdentityModel.Clients.ActiveDirectory を読み込めませんでした…) が、正常なメッセージである "Database Engine Tuning Advisor does not support Microsoft Azure SQL Database. (DTAClient) (Database Engine Tuning Advisor は Microsoft Azure SQL Database をサポートしていません(DTAClient)) の代わりに表示されます。
+- DTA でクエリを分析しようとすると、次のエラーが発生します。"Object must implement IConvertible. (mscorlib)" (オブジェクトで IConvertible を実装する必要があります (mscorlib))。
+- *[低下したクエリ]* がオブジェクト エクスプローラーのレポートのクエリ ストアのリストにありません。
+   - 回避策: **[クエリ ストア]** ノードを右クリックし、**[View Regressed Queries]\(低下したクエリを表示します\)** を選択します。
+
+**Integration Services (IS)**
+
+- [catalog].[event_messagea] の [Execution_path] は、Scale Out でのパッケージの実行には正しくありません。[execution_path] は、パッケージの実行可能ファイルのオブジェクト名ではなく、"\Package" で開始します。 SSMS でパッケージ実行の概要レポートを表示すると、実行の概要の "実行パス" のリンクが機能しません。 回避策として、概要レポートの [メッセージの表示] をクリックして、すべてのイベント メッセージを確認します。
+
+
+## <a name="previous-ssms-releases"></a>以前のリリースの SSMS
+
+以前のバージョンの SSMS をダウンロードするには、次のセクションのタイトル リンクをクリックします。
+
+## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
 一般公開 | ビルド番号: 14.0.17177.0
 
 ### <a name="enhancements"></a>機能強化
@@ -77,11 +172,11 @@ ms.lasthandoff: 09/21/2017
   - CTRL + F キーを使用します。
 
 
-### <a name="analysis-services-as"></a>Analysis Services (AS)
+**Analysis Services (AS)**
 
 - SSMS の AS Azure モデルにメール アドレスがないユーザーに対する新しい AAD ロール メンバー選択
 
-### <a name="integration-services-is"></a>Integration Services (IS)
+**Integration Services (IS)**
 
 - SSIS の実行レポートに追加された新しい列 ([実行数])
 
@@ -100,7 +195,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - **登録済みサーバー** コンポーネントは、Azure AD 認証をサポートしません。
   - **データベース エンジン チューニング アドバイザー**は、Azure AD 認証でサポートされていません。 ユーザーに表示されるエラー メッセージが有益ではないという既知の問題があります。*Could not load file or assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…* (ファイルまたはアセンブリ 'Microsoft.IdentityModel.Clients.ActiveDirectory を読み込めませんでした…) が、正常なメッセージである *Database Engine Tuning Advisor does not support Microsoft Azure SQL Database.(DTAClient)* (Database Engine Tuning Advisor は Microsoft Azure SQL Database をサポートしていません(DTAClient)) の代わりに表示されます。
 
-**AS**
+**Analysis Services (AS)**
 
 - SSAS のオブジェクト エクスプローラーは、AS Azure の接続プロパティに Windows 認証のユーザー名を表示しません。
 
@@ -140,7 +235,8 @@ The connection is broken and recovery is not possible. The client driver attempt
 - DTA: 特定の境界値を持つパーティション関数を評価するときに、ヒープの破損により DTAEngine.exe が終了する問題を修正しました。
 
 
-Analysis Services (AS)
+**Analysis Services (AS)**
+
 - データベースに ID とは異なる名前が含まれていると、AS データベースの復元がエラーにより失敗する問題を修正しました。
 - DAX クエリ ウィンドウで [IntelliSense が有効] を切り替えるメニュー オプションが無視される問題を修正しました。
 - msmdpump IIS http/https アドレスを介した SSAS への接続を妨げる問題を修正しました。
@@ -149,14 +245,9 @@ Analysis Services (AS)
 - 読み込み時にデータベースの削除ダイアログにエラーを引き起こす非常にまれな問題を修正しました。
 - SQL クエリと M のパーティション定義が混在する 1400 互換性レベル モデルでパーティションを表示しようとするときに発生する可能性のある問題を修正しました。
 
-Integration Services (IS)
+**Integration Services (IS)**
 - SSISDB カタログの実行情報レポートを表示できない問題を修正しました。
 - 多数のプロジェクトまたはパッケージによるパフォーマンス低下に関する SSMS の問題に対処しました。
-
-
-## <a name="previous-ssms-releases"></a>以前のリリースの SSMS
-
-以前のバージョンの SSMS をダウンロードするには、次のセクションのタイトル リンクをクリックします。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-171httpsgomicrosoftcomfwlinklinkid849819"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=849819)
 一般公開 | ビルド番号: 14.0.17119.0
@@ -355,7 +446,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 * SSMS 16.5.2 で、テーブルに複数のスパース列がある場合に 'Table' ノードが拡張される原因となっていた問題が修正されました。
 
-* ユーザーは、SSIS カタログに、Microsoft Dynamics AX/CRM Online のリソースに接続される OData 接続マネージャーを含む SSIS パッケージを展開できます。 詳細については、「[OData 接続マネージャー](/sql-docs/docs/integration-services/connection-manager/odata-connection-manager)」を参照してください。
+* ユーザーは、SSIS カタログに、Microsoft Dynamics AX/CRM Online のリソースに接続される OData 接続マネージャーを含む SSIS パッケージを展開できます。 詳細については、「[OData 接続マネージャー](../integration-services/connection-manager/odata-connection-manager.md)」を参照してください。
 
 * 関連付けられていないオブジェクトで既存のテーブルに対して Always Encrypted を構成すると、エラーが発生して実行できない ( [Connect ID 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects) を参照)。
 
@@ -481,7 +572,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 * [新しい認証オプション **「Active Directory ユニバーサル認証」**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)。 これは、多要素、パスワード、および統合認証メカニズムをサポートする Azure Active Directory によって実行されるトークン ベースの認証メカニズムです。
 
-* SQL Server Profiler テンプレートの機能に適した新しい拡張イベント テンプレート [(Microsoft Connect アイテム #2543925)](/sql-docs/docs/tools/sql-server-profiler/sql-server-profiler-templates)。
+* SQL Server Profiler テンプレートの機能に適した新しい拡張イベント テンプレート [(Microsoft Connect アイテム #2543925)](../tools/sql-server-profiler/sql-server-profiler-templates.md)。
 
 * Azure SQL データベースの新しい [データベースの作成] と [データベースのプロパティ] ダイアログ ボックス。
 
@@ -600,7 +691,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 ## <a name="downloadssdtmediadownloadpng-ssms-june-2016httpgomicrosoftcomfwlinklinkid799832"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 2016 年 6 月](http://go.microsoft.com/fwlink/?LinkID=799832)
 一般公開 |バージョン番号: 13.0.15000.23
 
-* SSMS を 2016 年 6 月リリースから一般公開。
+* SSMS を 2016年 6 月リリースから一般公開。
 
 * 現在のドキュメントへの統合が強化され、正規表現を使用した検索が可能な SSMS の新しいクイック検索ダイアログ。 
 *リンクされている、顧客のバグ要求:*  
