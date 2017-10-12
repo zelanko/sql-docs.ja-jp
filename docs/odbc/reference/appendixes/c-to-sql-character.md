@@ -41,7 +41,7 @@ ODBC C データ型の文字の識別子は次のとおりです。
 |-------------------------|----------|--------------|  
 |SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|データのバイト長 < 列の長さを = です。<br /><br /> データのバイト長 > 列の長さ。|n/a<br /><br /> 22001|  
 |SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|データの文字長 < 列の長さを = です。<br /><br /> データの文字長 > 列の長さ。|n/a<br /><br /> 22001|  
-|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT|データを切り捨てることがなく変換<br /><br /> データ変換 [e] 桁の小数部の切り捨て<br /><br /> [E] (ではなく小数部) の整数桁の数字が失われる結果のデータの変換<br /><br /> データの値が、*数値リテラル*|n/a<br /><br /> 22001<br /><br /> 22001<br /><br /> 22018|  
+|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT|データを切り捨てることがなく変換<br /><br /> データ変換 [e] 桁の小数部の切り捨て<br /><br /> [E]\(ではなく小数部) の整数桁の数字が失われる結果のデータの変換<br /><br /> データの値が、*数値リテラル*|n/a<br /><br /> 22001<br /><br /> 22001<br /><br /> 22018|  
 |SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|データが数の変換先のデータ型の範囲内<br /><br /> データが数の変換先のデータ型の範囲外です。<br /><br /> データの値が、*数値リテラル*|n/a<br /><br /> 22003<br /><br /> 22018|  
 |SQL_BIT|データが 0 または 1 です。<br /><br /> データが 0 より大きく、2、未満と 1 に等しくないです。<br /><br /> データがより小さい 0 より大きいまたは 2 に等しい<br /><br /> データがない、*数値リテラル*|n/a<br /><br /> 22001<br /><br /> 22003<br /><br /> 22018|  
 |SQL_BINARY<br /><br /> SQL_VARBINARY<br /><br /> SQL_LONGVARBINARY|(データのバイト長)/2 < バイト長の列を =<br /><br /> (データのバイト長)/2 > の列のバイト長<br /><br /> データ値は、16 進数の値ではありません。|n/a<br /><br /> 22001<br /><br /> 22018|  
