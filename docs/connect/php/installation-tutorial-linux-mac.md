@@ -373,6 +373,6 @@ function FormatErrors( $errors )
 }
 ?>
 ```
-Http://localhost/testsql.php (macos http://localhost:8080/testsql.php) をお使いのブラウザーをポイントします。 SQL Server と Azure SQL データベースに接続できるようになりましたに。
+http://localhost/testsql.php (macos http://localhost:8080/testsql.php) をお使いのブラウザーをポイントします。 SQL Server と Azure SQL データベースに接続できるようになりましたに。
 
 
