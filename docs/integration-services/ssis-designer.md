@@ -1,5 +1,5 @@
 ---
-title: "SSIS デザイナー |Microsoft ドキュメント"
+title: "SSIS デザイナー | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-server-2016
@@ -32,7 +32,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="ssis-designer"></a>SSIS デザイナー
@@ -52,7 +52,7 @@ ms.lasthandoff: 09/27/2017
   
  次の図は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーと **[ツールボックス]** ウィンドウを示しています。  
   
- ![SSIS のスクリーン ショット デザイナーとツールボックス](../integration-services/media/denali-designerandtoolbox.gif "SSIS のスクリーン ショット デザイナーとツールボックス")  
+ ![SSIS デザイナーとツールボックスのスクリーンショット](../integration-services/media/denali-designerandtoolbox.gif "SSIS デザイナーとツールボックスのスクリーンショット")  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、さらに、パッケージに機能を追加するダイアログ ボックスとウィンドウが含まれており、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、開発環境を構成しパッケージを使用するためのウィンドウとダイアログ ボックスが用意されています。 詳細については、「 [Integration Services のユーザー インターフェイス](../integration-services/integration-services-user-interface.md)」を参照してください。  
   
@@ -158,7 +158,7 @@ ms.lasthandoff: 09/27/2017
  **Del**  
  イベント ハンドラーを選択し、**[削除]** をクリックすると、パッケージからイベント ハンドラーを削除できます。  
   
- **ここをクリックして、作成、\<イベント ハンドラー名\>実行可能ファイルの\<実行可能ファイル名\>**  
+ **実行可能ファイル \<executable name\> の \<event handler name\> を作成するには、ここをクリックします**  
  イベント ハンドラーを作成する場合にクリックします。  
   
  制御フローを作成するには、 [!INCLUDE[ssIS](../includes/ssis-md.md)] タスクおよびコンテナーを表すグラフィカル オブジェクトを、 **ツールボックス** から **[イベント ハンドラー]** タブのデザイン画面にドラッグします。次に、優先順位制約を使用してオブジェクトどうしを接続して、その実行の順序を定義します。  
@@ -170,7 +170,7 @@ ms.lasthandoff: 09/27/2017
   
  パッケージ要素を右クリックして、 **[プロパティ]** をクリックすると **[プロパティ]** ウィンドウに要素のプロパティが表示され、 **[削除]** をクリックすると要素が削除されます。 
  
-## <a name="progress-tab"></a>進行状況 タブ
+## <a name="progress-tab"></a>[進行状況] タブ
 **デザイナーの** [進行状況] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]パッケージを実行するときに、その進行状況を表示できます。 **[進行状況]** タブには、1) パッケージおよび実行可能ファイルの検証と実行の開始時刻、終了時刻、および経過時間、2) パッケージの情報または警告、3) 進行状況通知、4) パッケージの成功または失敗、5) パッケージの実行中に生成されたエラー メッセージなどが表示されます。  
   
  **[進行状況]** タブでのメッセージの表示を有効または無効にするには、 **[SSIS]** メニューの **[進行状況レポートのデバッグ]** オプションを切り替えます。 進行状況レポートを無効にすると、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]で複雑なパッケージを実行する際のパフォーマンスを向上させることができます。  
