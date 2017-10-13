@@ -42,7 +42,7 @@ SQL Server から Azure BLOB ストレージに一括アクセスする場合、
  
 `IDENTITY` (`SHARED ACCESS SIGNATURE` に設定します) を利用してデータベース スコープ資格情報を作成します。 Azure ポータルのシークレットを使用します。 例:  
 
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL UploadInvoices  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
@@ -51,7 +51,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 
 ## <a name="accessing-data-in-a-csv-file-referencing-an-azure-blob-storage-location"></a>Azure BLOB ストレージの場所を参照する CSV ファイルのデータにアクセスする   
 次の例では、`newinvoices` という名前の Azure ストレージ アカウントを指す外部データ ソースを使用します。   
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,
@@ -61,7 +61,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 ```   
 
 次に、`OPENROWSET` ステートメントがコンテナー名 (`week3`) をファイルの説明に追加します。 ファイルの名前は `inv-2017-01-19.csv` です。
-```tsql     
+```sql     
 SELECT * FROM OPENROWSET(
    BULK  'week3/inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',
@@ -70,7 +70,7 @@ SELECT * FROM OPENROWSET(
 
 `BULK INSERT` を利用し、コンテナーとファイルの説明を使用します。
 
-```tsql
+```sql
 BULK INSERT Colors2
 FROM 'week3/inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
@@ -80,7 +80,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
 ## <a name="accessing-data-in-a-csv-file-referencing-a-container-in-an-azure-blob-storage-location"></a>Azure BLOB ストレージの場所にあるコンテナーを参照する CSV ファイルのデータにアクセスする   
 
 次の例では、Azure ストレージ アカウントにあるコンテナー (`week3` という名前) を指す外部データ ソースを使用します。   
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoicesContainer
     WITH  (
         TYPE = BLOB_STORAGE,
@@ -90,7 +90,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoicesContainer
 ```  
   
 `OPENROWSET` ステートメントはコンテナー名をファイルの説明に追加しません。
-```tsql
+```sql
 SELECT * FROM OPENROWSET(
    BULK  'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoicesContainer',
@@ -99,7 +99,7 @@ SELECT * FROM OPENROWSET(
 
 `BULK INSERT` を利用し、ファイルの説明にコンテナー名を使用しません。 
 
-```tsql
+```sql
 BULK INSERT Colors2
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoicesContainer',

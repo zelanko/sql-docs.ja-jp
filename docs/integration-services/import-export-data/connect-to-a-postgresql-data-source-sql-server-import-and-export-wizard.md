@@ -72,14 +72,18 @@ PostgreSQL データベースの名前。
 ### <a name="connection-string-format"></a>接続文字列の形式
 一般的な接続文字列の形式を次に示します。 
 
+    ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=<server>;Port=<port>;Database=<database>;UID=<user id>;PWD=<password>
+    ```
 
 ### <a name="enter-the-connection-string"></a>接続文字列を入力します。
 内の接続文字列を入力、 **ConnectionString**フィールド、または DSN 名を入力、 **Dsn**フィールドに、**データ ソースを選択**または**変換先を選択**ページ。 接続文字列を入力すると後、ウィザードは、文字列を解析し、個々 のプロパティとその値を一覧に表示します。
 
 次の例では、この接続文字列を使用します。
 
+    ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=127.0.0.1;Port=5432;Database=postgres;UID=postgres;PWD=********
+    ```
 
 ここで、接続文字列を入力した後に表示される画面です。
 

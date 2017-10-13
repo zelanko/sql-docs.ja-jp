@@ -39,7 +39,7 @@ ms.lasthandoff: 10/04/2017
  データ ファイルから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルまたはパーティション分割されていないビューにデータを一括インポートする場合、次の機能を使用できます。  
   
 -   **bcp** ユーティリティ  
- **bcp** ユーティリティは、パーティション分割されたビューを含めて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースで SELECT ステートメントが機能する任意の場所からデータをエクスポートするためにも使用できます。  
+    **bcp** ユーティリティは、パーティション分割されたビューを含めて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースで SELECT ステートメントが機能する任意の場所からデータをエクスポートするためにも使用できます。  
   
 -   BULK INSERT  
   

@@ -49,7 +49,7 @@ ms.lasthandoff: 08/09/2017
 
 ### **サンプル テーブル**<a name="sample_table"></a>
 以下のスクリプトでは、テスト データベースと `myFirstImport`という名前のテーブルが作成されます。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -104,7 +104,7 @@ SQL Server は、非 XML 形式と XML 形式の 2 種類のフォーマット �
 ### **XML 以外のフォーマット ファイルの作成**<a name="nonxml_format_file"></a>
 詳細については、「 [XML 以外のフォーマット ファイル (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 」を参照してください。  次のコマンドでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用し、 `myFirstImport.fmt`のスキーマに基づいて XML 以外のフォーマット ファイル `myFirstImport`を生成します。  bcp コマンドを使用してフォーマット ファイルを作成するには、 **format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。  format オプションには、次に示す **-f** オプションが必要です。  さらに、この例では、修飾子 **c** を使用して文字データを指定し、 **t** を使用して [フィールド ターミネータ](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)としてコンマを指定し、 **T** を使用して統合セキュリティによる信頼された接続を指定します。  コマンド プロンプトで、次のコマンドを入力します。
 
-```
+```cmd
 bcp TestDatabase.dbo.myFirstImport format nul -c -f D:\BCP\myFirstImport.fmt -t, -T
 
 REM Review file
@@ -129,7 +129,7 @@ Notepad D:\BCP\myFirstImport.fmt
 
 ### **XML フォーマット ファイルの作成**<a name="xml_format_file"></a>  
 詳細については、「 [XML フォーマット ファイル (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) 」を参照してください。  次のコマンドでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用し、 `myFirstImport.xml`のスキーマに基づいて XML のフォーマット ファイル `myFirstImport`を生成します。 bcp コマンドを使用してフォーマット ファイルを作成するには、 **format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。  format オプションには常に **-f** オプションが必要です。XML フォーマット ファイルを作成するには、 **-x** オプションも指定する必要があります。  さらに、この例では、修飾子 **c** を使用して文字データを指定し、 **t** を使用して [フィールド ターミネータ](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)としてコンマを指定し、 **T** を使用して統合セキュリティによる信頼された接続を指定します。  コマンド プロンプトで、次のコマンドを入力します。
-```
+```cmd
 bcp TestDatabase.dbo.myFirstImport format nul -c -x -f D:\BCP\myFirstImport.xml -t, -T
 
 REM Review file
@@ -137,7 +137,7 @@ Notepad D:\BCP\myFirstImport.xml
 ```
 
 XML フォーマット ファイルの `D:\BCP\myFirstImport.xml` は次のようになります。
-```
+```xml
 \<?xml version="1.0"?>
 \<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
@@ -160,7 +160,7 @@ XML フォーマット ファイルの `D:\BCP\myFirstImport.xml` は次のよ�
 
 ### **[bcp](../../tools/bcp-utility.md) と [XML 以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)の使用**<a name="bcp_nonxml"></a>
 コマンド プロンプトで、次のコマンドを入力します。
-```
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.MyFirstImport;"
 
@@ -174,7 +174,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.MyFirstImport"
 
 ### **[bcp](../../tools/bcp-utility.md) と [XML フォーマット ファイル](../../relational-databases/import-export/xml-format-files-sql-server.md)の使用**<a name="bcp_xml"></a>
 コマンド プロンプトで、次のコマンドを入力します。
-```
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.MyFirstImport;"
 
@@ -188,7 +188,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.MyFirstImport;"
 
 ### **[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) と [XML 以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)の使用**<a name="bulk_nonxml"></a>
 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -204,7 +204,7 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
 
 ### **[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) と [XML フォーマット ファイル](../../relational-databases/import-export/xml-format-files-sql-server.md)の使用**<a name="bulk_xml"></a>
 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -220,7 +220,7 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
 
 ### **[OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) と [XML 以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)の使用**<a name="openrowset_nonxml"></a>    
 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -239,7 +239,7 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
 
 ### **[OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) と [XML フォーマット ファイル](../../relational-databases/import-export/xml-format-files-sql-server.md)の使用**<a name="openrowset_xml"></a>
 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
-```tsql
+```sql
 USE TestDatabase;  
 GO
 

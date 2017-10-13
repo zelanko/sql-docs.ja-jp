@@ -71,7 +71,9 @@ Oracle サーバーの名前。
 ### <a name="connection-string-format"></a>接続文字列の形式
 一般的な接続文字列の形式を次に示します。
 
+    ```
     Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
+    ```
 
 ### <a name="enter-the-connection-string"></a>接続文字列を入力します。
 内の接続文字列を入力、 **ConnectionString**フィールド、または DSN 名を入力、 **Dsn**フィールドに、**データ ソースを選択**または**変換先を選択**ページ。 接続文字列を入力すると後、ウィザードは、文字列を解析し、個々 のプロパティとその値を一覧に表示します。

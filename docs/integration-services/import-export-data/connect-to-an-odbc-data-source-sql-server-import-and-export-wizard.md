@@ -93,7 +93,9 @@ DSN (データ ソース名) で接続情報を提供する場合は、使用、
 
 この例は、Microsoft SQL Server に接続する次の接続文字列を使用しようとしています。
 
+    ```
     Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+    ```
 
 内の接続文字列を入力、 **ConnectionString**フィールドに、**データ ソースを選択**または**変換先の選択**ページ。 接続文字列を入力すると後、ウィザードは、文字列を解析し、個々 のプロパティとその値を一覧に表示します。
 
@@ -138,20 +140,24 @@ ODBC ドライバーをオンラインの接続文字列が見つかりません
 
 10. メモ帳または別のテキスト エディターで、保存したファイルを開きます。 この SQL Server の例の内容を次に示します。
 
-        [ODBC]  
-        DRIVER=ODBC Driver 13 for SQL Server  
-        TrustServerCertificate=No  
-        DATABASE=WideWorldImporters    
-        WSID=<local computer name>  
-        APP=Microsoft® Windows® Operating System  
-        Trusted_Connection=Yes  
-        SERVER=localhost   
+    ```   
+    [ODBC]  
+    DRIVER=ODBC Driver 13 for SQL Server  
+    TrustServerCertificate=No  
+    DATABASE=WideWorldImporters    
+    WSID=<local computer name>  
+    APP=Microsoft® Windows® Operating System  
+    Trusted_Connection=Yes  
+    SERVER=localhost   
+    ```
         
 11. コピーし、名前と値のペアがセミコロンで区切られた接続文字列に必要な値を貼り付けます。
 
     サンプル ファイル DSN から必要な値を作成すると、次の接続文字列があります。
     
+        ```
         DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+        ```
 
     すべての設定を操作する接続文字列を作成する ODBC データ ソース アドミニストレーターによって作成された DSN で通常必要はありません。  
     -   常に、ODBC ドライバーを指定する必要があるとします。
