@@ -59,14 +59,14 @@ ms.lasthandoff: 09/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
-2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]**をクリックします。 詳細については、「 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) 」または「 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)」を参照してください。  
+2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]**をクリックします。 詳細については、「 [ナレッジ ベースの作成](../data-quality-services/create-a-knowledge-base.md) 」または「 [ナレッジ ベースを開く](../data-quality-services/open-a-knowledge-base.md)」を参照してください。  
   
     > [!NOTE]  
     >  Data Quality Service クライアントのドメイン管理用のページには、それぞれ異なるドメイン管理操作に対応する 5 つのタブが含まれています。 ウィザード ベースのプロセスではないため、任意の管理操作を個別に実行することができます。  
   
-3.  **[ドメイン管理]** ページの **[ドメイン リスト]** から、値を変更するドメインを選択するか、新しいドメインを作成します。 新しいドメインを作成する必要がある場合は、「 [Create a Domain](../data-quality-services/create-a-domain.md)」を参照してください。 **[ドメイン値]** タブをクリックします。  
+3.  **[ドメイン管理]** ページの **[ドメイン リスト]** から、値を変更するドメインを選択するか、新しいドメインを作成します。 新しいドメインを作成する必要がある場合は、「 [ドメインの作成](../data-quality-services/create-a-domain.md)」を参照してください。 **[ドメイン値]** タブをクリックします。  
   
-4.  **"値"** テーブルで、変更する必要がある値を表示します。 詳細については、次の「 [How to Display the Appropriate Values](#Display) 」を参照してください。  
+4.  **"値"** テーブルで、変更する必要がある値を表示します。 詳細については、次の「 [適切な値を表示する方法](#Display) 」を参照してください。  
   
 5.  値の状態を変更するには、次の手順に従います。  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 09/09/2017
   
  **[クレンジング]** アクティビティの **[結果の管理と表示]** ページでインタラクティブなデータ クレンジングを実行する際には、 **[結果の管理と表示]** ページの **[無効]** タブに "無効" と "エラー" の両方の値が含まれます。  
   
-##  <a name="Display"></a> How to Display the Appropriate Values  
+##  <a name="Display"></a> 適切な値を表示する方法  
  次のようにして表示を変更することができます。  
   
 -   **[フィルター]** ボックスの一覧で状態を選択して、テーブルに表示する結果を状態に基づいて**絞り込み**ます。  
