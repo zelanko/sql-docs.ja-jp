@@ -28,13 +28,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: f01d73c9ec0a0aca7237603169f8a290af0ce225
+ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
+ms.openlocfilehash: 9263eac53d78da42752704019d95e72431eabcc0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 10/12/2017
 
 ---
-# <a name="x40x40cpubusy-transact-sql"></a>& #x 40; & #x 40 です。CPU_BUSY (TRANSACT-SQL)
+# <a name="x40x40cpubusy-transact-sql"></a>&#x40;&#x40;です。CPU_BUSY (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 時間を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が前回起動されてからの作業に費やしたします。 結果は、CPU 時間単位、または「チックで」し、は、他のすべての Cpu の累積なので、実際の経過時間を超える可能性があります。 乗算@TIMETICKS(マイクロ秒) に変換します。
@@ -77,7 +77,7 @@ CPU microseconds As of
 [@@IDLE &#40;Transact-SQL&#41;](../../t-sql/functions/idle-transact-sql.md)  
 [@@IO_BUSY &#40;Transact-SQL&#41;](../../t-sql/functions/io-busy-transact-sql.md)  
 [sp_monitor & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)  
-[システム統計関数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/system-statistical-functions-transact-sql.md)
+[システム統計関数 &#40;です。TRANSACT-SQL と&#41;です。](../../t-sql/functions/system-statistical-functions-transact-sql.md)
   
   
 
