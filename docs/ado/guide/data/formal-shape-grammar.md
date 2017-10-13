@@ -68,7 +68,7 @@ ms.lasthandoff: 09/09/2017
 |\<番号 >|[数字] の数字|  
 |\<新しい exp >|新しい\<フィールド型 > [(\<番号 > [、\<番号 >])]|  
 |\<フィールドの種類 >|OLE DB または ADO データ型です。|  
-|\<文字列 >|unicode char [unicode 文字..]。|  
+|\<文字列 >|unicode char [unicode 文字...]|  
 |\<式 >|アプリケーションの式のオペランドが同じ行の場合は、他の非計算列用の Visual Basic の場合。|  
   
 ## <a name="see-also"></a>参照  
