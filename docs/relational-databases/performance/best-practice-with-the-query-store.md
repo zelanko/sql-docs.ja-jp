@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 2204d520152b1363657a407e5e0534e5051a4e94
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 69f93d0bc7a7a0126f505bbe7e97c68d5677c7eb
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>クエリ ストアを使用するときの推奨事項
@@ -323,11 +323,11 @@ WHERE is_forced_plan = 1;
 
 ##  <a name="Recovery"></a> ミッション クリティカルなサーバーにトレース フラグを使用して、障害からの回復を向上させる
  
-  高可用性とディザスター リカバリーのシナリオでクエリ ストアのパフォーマンスを向上させるには、グローバル トレース フラグ 7745 と 7752 を使用できます。
+  高可用性とディザスター リカバリーのシナリオでクエリ ストアのパフォーマンスを向上させるには、グローバル トレース フラグ 7745 と 7752 を使用できます。 詳細については、「[Trace Flags](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」(トレース フラグ) を参照してください
   
   トレース フラグ 7745 では、SQL Server がシャットダウンされる前に、クエリ ストアによってディスクにデータを書き込む既定の動作が行われないようにします。
   
-  トレース フラグ 7752 では、クエリ ストアが完全に読み込まれる前に、SQL Server がクエリを実行できるようにします。 クエリ ストアの既定の動作は、クエリ ストアが回復する前に、クエリが実行ないようにします。
+  トレース フラグ 7752 を使用すると、クエリ ストアの非同期読み込みが可能になります。また、クエリ ストアを完全に読み込む前に SQL Server でクエリを実行することができます。 クエリ ストアの既定の動作は、クエリ ストアが回復する前に、クエリが実行ないようにします。
 
 ## <a name="see-also"></a>参照  
  [クエリ ストアのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

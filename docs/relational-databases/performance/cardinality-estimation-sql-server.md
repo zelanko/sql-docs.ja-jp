@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 5ea0741bdfd8ff724390de6bb8c298af2e138648
+ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
+ms.openlocfilehash: 2d334f4397fdbf4097adbbc75d284202fd0fd8df
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="cardinality-estimation-sql-server"></a>基数推定 (SQL Server)
@@ -59,7 +59,7 @@ SELECT d.name, d.compatibility_level
 go  
 ```  
   
- 互換性レベルが 120 以上に設定されている SQL Server データベースの場合、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 をアクティブにすると、システムは強制的に CE バージョン 70 を使用します。  
+ 互換性レベルが 120 以上に設定されている SQL Server データベースの場合、[トレース フラグ 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) をアクティブにすると、システムは強制的に CE バージョン 70 を使用します。  
   
  **レガシ CE:** 互換性レベルが 120 以上に設定されている SQL Server データベースの場合、[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) を使用して、データベース レベルで CE バージョン 70 をアクティブにすることができます。
   
@@ -83,7 +83,7 @@ SELECT CustomerId, OrderAddedDate
     OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
- **クエリ ストア:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 で開始されたクエリ ストアは、クエリのパフォーマンスを確認するための便利なツールです。  [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] (SSMS.exe) では、**オブジェクト エクスプローラー**で、データベース ノードの下に**クエリ ストア** ノードが表示されます (クエリ ストアが ON の場合)。  
+ **クエリ ストア:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から導入されたクエリ ストアは、クエリのパフォーマンスを確認する場合に便利なツールです。 クエリ ストアを有効にすると、[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] の**オブジェクト エクスプローラー**で、データベース ノード以下に**クエリ ストア** ノードが表示されます。  
   
 ```tsql  
 ALTER DATABASE <yourDatabase>  
@@ -103,9 +103,9 @@ ALTER DATABASE <yourDatabase>
 ```  
   
  > [!TIP] 
- > 最新リリースの [(SSMS.exe)](http://msdn.microsoft.com/library/mt238290.aspx) を毎月インストールすることをお勧めします。  
+ > 最新リリースの [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) をインストールし、頻繁に更新することをお勧めします。  
   
- 基数推定処理を追跡するための別のオプションは、**query_optimizer_estimate_cardinality** という名前の拡張イベントを使用することです。  次の T-SQL コードを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で実行します。 これは C:\Temp\ に .xel ファイルを書き込みます (ただし、パスを変更することができます)。 .xel ファイルを SSMS で開くと、ユーザー フレンドリな方法で詳細情報が表示されます。  
+ 基数推定処理を追跡するための別のオプションは、**query_optimizer_estimate_cardinality** という名前の拡張イベントを使用することです。 次の T-SQL コードを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で実行します。 これは C:\Temp\ に .xel ファイルを書き込みます (ただし、パスを変更することができます)。 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] で .xel ファイルを開くと、ユーザーにわかりやすい方法で詳細情報が表示されます。  
   
 ```tsql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -134,7 +134,7 @@ ALTER EVENT SESSION Test_the_CE_qoec_1
 go  
 ```  
   
- Azure SQL Database 向けに調整された拡張イベントの詳細については、「 [SQL データベースの拡張イベント](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)」を参照してください。  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 向けに拡張されたイベントの詳細については、「[SQL Database の拡張イベント](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)」を参照してください。  
   
   
 ## <a name="steps-to-assess-the-ce-version"></a>CE のバージョンを評価する手順  

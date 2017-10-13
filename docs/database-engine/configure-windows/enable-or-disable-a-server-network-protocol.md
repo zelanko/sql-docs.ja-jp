@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7bb0a9abeba4730bd2d5d4e57cd7b02b2b93b55c
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: e6716392a65ce797e2f0bae543f50899b9fbeb2d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # サーバー ネットワーク プロトコルの有効化または無効化
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のセットアップ時に、ログインは BUILTIN\Users グループに追加されます。 これにより、コンピューターの認証されたすべてのユーザーが public ロールのメンバーとして [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインスタンスにアクセスできるようになります。 BUILTIN\Users ログインを安全に削除して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] アクセスを、個別のログインを持つコンピューター ユーザーまたはログインを持つ他の Windows グループのメンバーに制限できます。  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[msCoName](../../includes/msconame-md.md)] 向けの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ プロバイダーでは、SSL 3.0、TLS 1.0 がサポートされています。 オペレーティング システムの SChannel 層を変更して別のプロトコル (TLS 1.1、TLS 1.2 など) を適用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続に失敗する可能性があります。  
+>  [!INCLUDE[sssql14](../../includes/sssql14-md.md)] までの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向けの [!INCLUDE[msCoName](../../includes/msconame-md.md)] データ プロバイダーは、既定で TLS 1.0 および SSL 3.0 のみをサポートしています。 オペレーティング システムの SChannel レイヤーを変更して異なるプロトコル (TLS 1.1、TLS 1.2 など) を適用する場合、<a href="https://support.microsoft.com/en-us/help/3135244/tls-1-2-support-for-microsoft-sql-server">こちら</a>に記載されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に TLS 1.1 および 1.2 のサポートを追加する適切な更新プログラムをインストールしていなければ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続は失敗する可能性があります。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 以降、SQL Server のすべてのリリース バージョンには TLS 1.2 のサポートが含まれているため、更新プログラムをさらにインストールする必要はありません。
   
  **このトピックの内容**  
   
@@ -133,3 +133,4 @@ ms.lasthandoff: 08/02/2017
     ```  
   
   
+

@@ -1,7 +1,7 @@
 ---
 title: "トランザクション ログ (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 02/01/2017
+ms.date: 10/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,19 +19,22 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6e2b36af7393ecd115feefb5c3dffba5e28d1304
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 5a9d2a8533e95c275e62071c37ab44d887ac32c1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="the-transaction-log-sql-server"></a>トランザクション ログ (SQL Server)
   すべての SQL Server データベースにはトランザクション ログがあり、データベース内のすべてのトランザクションとそれらのトランザクションによって加えられた変更が記録されます。
   
-トランザクション ログは、データベースの重要なコンポーネントです。 システム障害がある場合、データベースを一貫性のある状態に戻すには、そのログが必要になります。 もたらされる影響を完全に理解していない限り、このログを削除または移動しないでください。 
+トランザクション ログは、データベースの重要なコンポーネントです。 システム障害がある場合、データベースを一貫性のある状態に戻すには、そのログが必要になります。 
 
-  
- > **注:** データベース復旧時にトランザクション ログの適用を開始する既知の最適なポイントがチェックポイントによって作成されます。 詳細については、「[Database Checkpoints (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)」 (データベース チェックポイント (SQL Server)) をご覧ください。  
+> [!IMPORTANT] 
+> もたらされる影響を完全に理解していない限り、このログを削除または移動しないでください。 
+
+> [!TIP]
+> データベース復旧時にトランザクション ログの適用を開始する既知の最適なポイントがチェックポイントによって作成されます。 詳細については、「[Database Checkpoints (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)」 (データベース チェックポイント (SQL Server)) をご覧ください。  
   
 ## <a name="operations-supported-by-the-transaction-log"></a>トランザクション ログによりサポートされる操作  
  トランザクション ログでは、次の操作がサポートされます。  
@@ -73,13 +76,13 @@ AlwaysOn 可用性グループのシナリオでは、データベース (プラ
 ##  <a name="Characteristics"></a>Transaction Log characteristics
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のトランザクション ログには、次のような特性があります。 
--  トランザクション ログは、データベース内に別個のファイルまたはファイル セットとして実装されます。 ログ キャッシュはデータ ページ用のバッファー キャッシュとは別に管理され、単純かつ高速の、堅牢なコードとしてデータベース エンジンに実装されています。
+-  トランザクション ログは、データベース内に別個のファイルまたはファイル セットとして実装されます。 ログ キャッシュはデータ ページ用のバッファー キャッシュとは別に管理され、単純かつ高速の、堅牢なコードとしてデータベース エンジンに実装されています。 詳細については、「[トランザクション ログの物理アーキテクチャ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)」を参照してください。
 -  ログのレコードとページの形式は、データ ページの形式に従うように制約はされません。
--  トランザクション ログは、複数のファイルとして実装できます。 ログの FILEGROWTH 値を設定することで、これらのファイルが自動的に拡張されるように定義できます。 これにより、トランザクション ログが領域不足になる可能性が減り、同時に管理のオーバーヘッドも減少します。 詳しくは、「 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)」をご覧ください。
+-  トランザクション ログは、複数のファイルとして実装できます。 ログの FILEGROWTH 値を設定することで、これらのファイルが自動的に拡張されるように定義できます。 これにより、トランザクション ログが領域不足になる可能性が減り、同時に管理のオーバーヘッドも減少します。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。
 -  ログ ファイル内の領域を再利用するメカニズムは高速で、トランザクションのスループットに及ぼす影響も最小限で済みます。
 
 ##  <a name="Truncation"></a> トランザクション ログの切り捨て  
- ログの切り捨てによりログ ファイルの領域が解放され、トランザクション ログで再利用できるようになります。 トランザクション ログの定期的な切り捨ては、ログがいっぱいにならないようにするために不可欠です (実際にいっぱになります)。 いくつかの要因によってログの切り捨てが遅れる可能性があるため、ログのサイズを監視することは重要です。 一部の操作は、トランザクション ログのサイズへの影響を軽減するためにログへの記録を最小限に抑えることができます。  
+ ログの切り捨てによりログ ファイルの領域が解放され、トランザクション ログで再利用できるようになります。 トランザクション ログの定期的な切り捨ては、ログがいっぱいにならないようにするために不可欠です (実際にいっぱいになります)。 いくつかの要因によってログの切り捨てが遅れる可能性があるため、ログのサイズを監視することは重要です。 一部の操作は、トランザクション ログのサイズへの影響を軽減するためにログへの記録を最小限に抑えることができます。  
  
   ログの切り捨てでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの論理トランザクション ログから非アクティブな仮想ログ ファイルが削除されます。また、論理ログの領域が解放され、物理トランザクション ログで再利用できるようになります。 トランザクション ログが切り捨てられなければ、物理ログ ファイルに割り当てられているディスク上の領域がいっぱいになってしまいます。  
   
@@ -91,12 +94,13 @@ AlwaysOn 可用性グループのシナリオでは、データベース (プラ
   
  詳細については、このトピックの「 [ログの切り捨てが遅れる原因となる要因](#FactorsThatDelayTruncation)」を参照してください。  
   
-> **注:** ログの切り捨てを行っても、物理ログ ファイルのサイズは縮小されません。 物理ログ ファイルの物理サイズを削減するには、ログ ファイルを圧縮する必要があります。 物理ログ ファイルのサイズの圧縮の詳細については、「 [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)」を参照してください。  
+> [!NOTE]
+> ログの切り捨てを行っても、物理ログ ファイルのサイズは縮小されません。 物理ログ ファイルの物理サイズを削減するには、ログ ファイルを圧縮する必要があります。 物理ログ ファイルのサイズの圧縮の詳細については、「 [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)」を参照してください。  
   
 ##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
  このトピックで前述したように、ログ レコードが長い間アクティブなままになると、トランザクション ログの切り捨てが遅れて、トランザクション ログがいっぱいになります。  
   
-> **重要!!** トランザクション ログがいっぱいに応答する方法については、「 [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)」を参照してください。  
+> [!IMPORTANT} 満杯になったトランザクション ログに応答する方法については、「[満杯になったトランザクション ログのトラブルシューティング &#40;SQL Server エラー 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)」を参照してください。  
   
  実際に、ログの切り捨てはさまざまな理由で遅延が発生する場合があります。 ログの切り捨てを妨げている原因を、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの **log_reuse_wait** 列と **log_reuse_wait_desc** 列に対するクエリを実行して確認してください。 次の表では、これらの列の値について説明します。  
   
@@ -121,9 +125,11 @@ AlwaysOn 可用性グループのシナリオでは、データベース (プラ
 ##  <a name="MinimallyLogged"></a> 最小ログ記録が可能な操作  
  *最小ログ記録* では、トランザクションの復旧に必要な情報だけが記録されます。特定の時点への復旧はサポートしません。 このトピックでは、一括ログ [復旧モデル](../backup-restore/recovery-models-sql-server.md) で (バックアップが実行されていない場合は単純復旧モデルで) 最小ログが記録される操作について説明します。  
   
-> **注:** 最小ログ記録は、メモリ最適化テーブルではサポートされていません。  
+> [!NOTE]
+> 最小ログ記録は、メモリ最適化テーブルではサポートされていません。  
   
-> **もう 1 つ注意してください。** 完全 [復旧モデル](../backup-restore/recovery-models-sql-server.md)では、すべての一括操作が完全にログに記録されます。 ただし、一括操作のためにデータベースを一時的に一括ログ復旧モデルに切り替えることで、一連の一括操作用のログ記録を最小限に抑えることができます。 最小ログ記録は、完全ログ記録より効率的であり、一括トランザクションの実行中に、使用可能なトランザクション ログ領域が大規模な一括操作でいっぱいになる可能性を低減します。 ただし、最小ログ記録が有効なときにデータベースが破損または消失した場合は、データベースを障害発生時点まで復旧できません。  
+> [!NOTE]
+> 完全 [復旧モデル](../backup-restore/recovery-models-sql-server.md)では、すべての一括操作が完全にログに記録されます。 ただし、一括操作のためにデータベースを一時的に一括ログ復旧モデルに切り替えることで、一連の一括操作用のログ記録を最小限に抑えることができます。 最小ログ記録は、完全ログ記録より効率的であり、一括トランザクションの実行中に、使用可能なトランザクション ログ領域が大規模な一括操作でいっぱいになる可能性を低減します。 ただし、最小ログ記録が有効なときにデータベースが破損または消失した場合は、データベースを障害発生時点まで復旧できません。  
   
  次に示す操作は、完全復旧モデルで完全にログ記録されますが、単純復旧モデルと一括ログ復旧モデルでは最小限にしかログ記録されません。  
   
@@ -139,7 +145,8 @@ AlwaysOn 可用性グループのシナリオでは、データベース (プラ
   
 -   [text](../../t-sql/queries/writetext-transact-sql.md) 、 [ntext](../../t-sql/queries/updatetext-transact-sql.md) 、 **image**の各データ型列に新規データを挿入または追加するときの **WRITETEXT**ステートメントおよび **UPDATETEXT** ステートメント。 既存の値を更新する場合は、最小ログ記録は使用されません。  
   
-    >  WRITETEXT ステートメントおよび UPDATETEXT ステートメントの使用は **推奨されなくなりました**。新しいアプリケーションでは、これらを使用しないようにしてください。  
+    > [!IMPORTANT]
+    > WRITETEXT ステートメントおよび UPDATETEXT ステートメントの使用は **推奨されなくなりました**。新しいアプリケーションでは、これらを使用しないようにしてください。  
   
 -   データベースが単純復旧モデルまたは一括ログ復旧モデルに設定されている場合、一部のインデックス DDL 操作は、オフラインで実行されても、オンラインで実行されても、最小ログ記録の対象になります。 最小ログ記録が行われるインデックス操作は、次のとおりです。  
   
@@ -147,7 +154,8 @@ AlwaysOn 可用性グループのシナリオでは、データベース (プラ
   
     -   [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) REBUILD 操作または DBCC DBREINDEX 操作。  
   
-        > **DBCC DBREINDEX ステートメント** の使用は **推奨されなくなりました**。新しいアプリケーションでは、これを使用しないようにしてください。  
+        > [!IMPORTANT]
+        > **DBCC DBREINDEX ステートメント**は**推奨されなくなりました**。新しいアプリケーションでは使用しないようにしてください。  
   
     -   DROP INDEX による新しいヒープの再構築 (適用可能な場合)。 ( [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 操作中のインデックス ページの割り当て解除は、 **常に** 完全にログ記録されます。)
   

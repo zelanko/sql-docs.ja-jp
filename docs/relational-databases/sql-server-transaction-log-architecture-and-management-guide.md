@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: da7bf96dbacf57f7086c5cfda298b2e810c43a07
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 559172415fef699a60e88111a5e13eb6accbeb3c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server トランザクション ログのアーキテクチャと管理ガイド
@@ -66,8 +66,15 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="physical_arch"></a> トランザクション ログの物理アーキテクチャ  
  データベースのトランザクション ログは、1 つ以上の物理ファイルにマップされます。 概念的には、ログ ファイルは一続きのログ レコードです。 物理的には、一連のログ レコードは、トランザクション ログを実装する一連の物理ファイルに効率的に格納されます。 1 つのデータベースにトランザクション ログ ファイルが少なくとも 1 つ必要です。  
   
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] により、各物理ログ ファイルは内部的に多くの仮想ログ ファイルに分割されています。 仮想ログ ファイルのサイズは固定されておらず、1 つの物理ログ ファイルに対する仮想ログ ファイルの数も決まっていません。 仮想ログ ファイルのサイズは、ログ ファイルの作成時や拡張時に [!INCLUDE[ssDE](../includes/ssde-md.md)] により動的に選択されます。 [!INCLUDE[ssDE](../includes/ssde-md.md)] では、管理する仮想ファイルの数を少なく保とうとします。 ログ ファイルを拡張した後の仮想ファイルのサイズは、既存のログのサイズと増加した新しいファイルのサイズの合計になります。 管理者が仮想ログ ファイルのサイズや数を構成または設定することはできません。  
-  
+ [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] により、各物理ログ ファイルは内部的に多くの仮想ログ ファイル (VLF) に分割されています。 仮想ログ ファイルのサイズは固定されておらず、1 つの物理ログ ファイルに対する仮想ログ ファイルの数も決まっていません。 仮想ログ ファイルのサイズは、ログ ファイルの作成時や拡張時に [!INCLUDE[ssDE](../includes/ssde-md.md)] により動的に選択されます。 [!INCLUDE[ssDE](../includes/ssde-md.md)] では、管理する仮想ファイルの数を少なく保とうとします。 ログ ファイルを拡張した後の仮想ファイルのサイズは、既存のログのサイズと増加した新しいファイルのサイズの合計になります。 管理者が仮想ログ ファイルのサイズや数を構成または設定することはできません。  
+
+> [!NOTE]
+> 次の方法に従って VLF を作成します。
+> - 次の増加量が現在のログの物理サイズの 1/8 未満の場合、増加分のサイズに対応する 1 個の VLF を作成します ([!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 以降)。
+> - 増加分が 64 MB 未満の場合、増加分のサイズに対応する 4 個の VLF を作成します (たとえば、1 MB 増加の場合は 4 個の 256 KB VLF を作成します)
+> - 増加分が 64 MB 以上 1 GB 以下の場合、増加分のサイズに対応する 8 個の VLF を作成します (たとえば、512 MB 増加の場合は 8 個の 64 MB VLF を作成します)
+> - 増加分が 1 GB を超える場合、増加分のサイズに対応する 16 個の VLF を作成します (たとえば、8 GB 増加の場合は 16 個の 512 MB VLF を作成します)
+
  仮想ログ ファイルがシステムのパフォーマンスに影響を与えるのは、小さな *size* 値と *growth_increment* 値で物理ログ ファイルを定義した場合のみです。 *size* 値はログ ファイルの初期サイズであり、 *growth_increment* 値は新しい領域が必要になるたびにファイルに追加される容量を示します。 小さな増加が繰り返されることにより、これらのログ ファイルが大きいサイズに拡張された場合、多くの仮想ログ ファイルが生成されます。 このような状況では、データベースの起動、ログのバックアップ操作、およびログの復元操作の速度が低下する場合があります。 ログ ファイルの *size* には最終的に必要なサイズに近い値を割り当て、*growth_increment* には比較的大きい値を割り当てることをお勧めします。 これらのパラメーターの詳細については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。  
   
  トランザクション ログは、循環して使用されるファイルです。 たとえば、4 つの仮想ログ ファイルに分割された 1 つの物理ログ ファイルが格納されたデータベースがあるとします。 このデータベースの作成時、論理ログ ファイルは物理ログ ファイルの先頭から始まります。 新しいログ レコードは論理ログの末尾に追加され、物理ログの末尾に向かって拡張されます。 ログの切り捨てにより、最小復旧ログ シーケンス番号 (MinLSN) より前にあるすべての仮想ログ レコードが解放されます。 *MinLSN* は、データベース全体を正常にロールバックするために必要な最も古いログ レコードのログ シーケンス番号です。 例として挙げたデータベースのトランザクション ログは、次の図のようになります。  
@@ -82,7 +89,7 @@ ms.lasthandoff: 08/09/2017
   
 -   ログで FILEGROWTH の設定が有効になっていて、ディスクの領域が使用できる場合、ファイルは *growth_increment* パラメーターで指定した量だけ拡張され、新規ログ レコードがその拡張部分に追加されます。 FILEGROWTH 設定の詳細については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。  
   
--   FILEGROWTH の設定が有効になっていない場合、またはログ ファイルを保持しているディスクの空き領域が *growth_increment* で指定した量よりも少ない場合は、エラー 9002 が生成されます。  
+-   FILEGROWTH の設定が有効になっていない場合、またはログ ファイルを保持しているディスクの空き領域が *growth_increment* で指定した量よりも少ない場合は、エラー 9002 が生成されます。 詳細については、「[満杯になったトランザクション ログのトラブルシューティング](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)」を参照してください。  
   
  ログに複数の物理ログ ファイルが含まれている場合、論理ログは、すべての物理ログ ファイルの領域を使用し終えてから、最初の物理ログ ファイルの先頭に戻ります。  
   
@@ -106,7 +113,7 @@ ms.lasthandoff: 08/09/2017
  ログの切り捨ては、さまざまな要因で遅延が発生する場合があります。 ログの切り捨てで長時間の遅延が発生すると、トランザクション ログがいっぱいになる可能性があります。 詳細については、「[ログの切り捨てが遅れる原因となる要因](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)」と「[満杯になったトランザクション ログのトラブルシューティング &#40;SQL Server エラー 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)」を参照してください。  
   
 ##  <a name="WAL"></a> 先行書き込みトランザクション ログ  
- このセクションでは、データの変更をディスクに記録するときの先行書き込みトランザクション ログの役割について説明します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、先行書き込みログ (WAL) を使用します。これにより、関連付けられているログ レコードより前にデータ変更がディスクに書き込まれることがなくなります。 これにより、トランザクションの ACID プロパティが維持されます。  
+ このセクションでは、データの変更をディスクに記録するときの先行書き込みトランザクション ログの役割について説明します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、先行書き込みログ (WAL) アルゴリズムを使用します。これにより、関連付けられているログ レコードより前にデータ変更がディスクに書き込まれることがなくなります。 これにより、トランザクションの ACID プロパティが維持されます。  
   
  先行書き込みログがどのように機能するのかを理解するには、変更されたデータがディスクに書き込まれるしくみを把握しておくことが重要です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はバッファー キャッシュを保持し、データを取得する必要がある場合は、そのキャッシュの中へデータ ページを読み取ります。 ページがバッファー キャッシュ内で変更されたとき、その変更が直ちにディスクに書き戻されるわけではありません。代わりに、そのページは *ダーティ*とマークされます。 データ ページが物理的にディスクに書き込まれる前には、複数回の論理書き込みが行われる可能性があります。 論理書き込みを行うたびに、トランザクション ログ レコードが、変更を記録するログ キャッシュに挿入されます。 ログ レコードは、関連付けられているダーティ ページがバッファー キャッシュから削除されディスクに書き込まれる前に、ディスクに書き込まれる必要があります。 チェックポイント プロセスでは、指定されたデータベースからのページを含むバッファーのバッファー キャッシュを定期的にスキャンし、ダーティ ページをすべてディスクに書き込みます。 チェックポイントは、すべてのダーティ ページがディスクに書き込まれたことを確認するために作成されるポイントで、その後の復旧の時間を短縮します。  
   
@@ -187,7 +194,7 @@ SQL Server データベース エンジンでは自動チェックポイント�
 > [!TIP]  
 >  一部の種類のチェックポイントでは、データベース管理者が -k SQL Server の詳細設定オプションを使用して、I/O サブシステムのスループットに基づいてチェックポイントの I/O 動作を調整できます。 -k 設定オプションは、自動チェックポイントと、-k を使用しなければ調整されないチェックポイントに適用されます。 
  
-データベースで単純復旧モデルを使用している場合、自動チェックポイントにより、トランザクション ログの未使用のセクションが切り捨てられます。 ただし、データベースで完全復旧モデルまたは一括ログ復旧モデルを使用している場合は、自動チェックポイントにより、ログが切り捨てられることはありません。 詳細については、「 [トランザクション ログ](../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください. 
+データベースで単純復旧モデルを使用している場合、自動チェックポイントにより、トランザクション ログの未使用のセクションが切り捨てられます。 ただし、データベースで完全復旧モデルまたは一括ログ復旧モデルを使用している場合は、自動チェックポイントにより、ログが切り捨てられることはありません。 詳細については、「 [トランザクション ログ](../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。 
 
 CHECKPOINT ステートメントでは、チェックポイントが終了するまでの時間を秒単位で指定する checkpoint_duration 引数が使用できるようになりました。この引数は省略可能です。 詳細については、「 [CHECKPOINT](../t-sql/language-elements/checkpoint-transact-sql.md)」を参照してください。
 
@@ -217,8 +224,11 @@ LSN 148 はトランザクション ログの最後のレコードです。 LSN 
 ## <a name="additional-reading"></a>その他の情報  
  トランザクション ログに関するその他の情報については、次の記事および書籍を参照することをお勧めします。  
   
- [SQL Server のログ記録と復旧について (著者: Paul Randal)](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
-  
+ [トランザクション ログ ファイルのサイズの管理](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
+ [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
+ [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
+ [トランザクション ログ &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)        
+ [SQL Server のログ記録と復旧について (著者: Paul Randal)](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
  [SQL Server Transaction Log Management (SQL Server のトランザクション ログ管理) (著者: Tony Davis、Gail Shaw)](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   

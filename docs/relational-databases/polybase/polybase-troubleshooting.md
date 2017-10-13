@@ -21,10 +21,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: 4026b6c7c7ae2945d49d6c4b63792239608ffea0
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 240e02e3dd0d40f53f8436e241af228b503a43d9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase のトラブルシューティング
@@ -143,7 +143,7 @@ ms.lasthandoff: 09/13/2017
   
 ## <a name="to-view-the--polybase-query-plan"></a>PolyBase クエリ プランを参照するには  
   
-1.  SSMS で、[ **実際の実行プランを含める** ] \(Ctrl + M) を有効にし、クエリを実行します。  
+1.  SSMS で、[ **実際の実行プランを含める** ] (Ctrl + M) を有効にし、クエリを実行します。  
   
 2.  [ **実行プラン** ] タブをクリックします。  
   
@@ -229,6 +229,8 @@ ms.lasthandoff: 09/13/2017
  - SQL Server または Azure SQL データ ウェアハウスから ORC ファイル形式にデータをエクスポートするとき、java のメモリ不足エラーに起因し、テキストでいっぱいの列はわずか 50 列に制限されることがあります。 この問題を回避するには、列の一部だけをエクスポートします。
  - Hadoop に保存されている暗号化されたデータの読み取りまたは書き込みができません。 これには、HDFS 暗号化ゾーンまたは透過的な暗号化が含まれます。
  - KNOX が有効になっている場合、PolyBase は、Hortonworks インスタンスに接続できません。 
+ - transactional = true の Hive テーブルを使用している場合、PolyBase は Hive テーブルのディレクトリにあるデータにアクセスできません。 
+
 
 [SQL Server 2016 のフェールオーバー クラスターにノードを追加すると、PolyBase の機能をインストールできません](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 

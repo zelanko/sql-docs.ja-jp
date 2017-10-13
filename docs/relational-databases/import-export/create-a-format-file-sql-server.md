@@ -17,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 7f4686ae082a68b7c5d866e5c2c885936c5450dc
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: f043381909cd5a7fb7146f424163af69a443022c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="create-a-format-file-sql-server"></a>フォーマット ファイルの作成 (SQL Server)
@@ -123,7 +123,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.f
 #### <a name="c-creating-a-non-xml-format-file-for-unicode-native-data"></a>C. Unicode ネイティブ データ用の XML 以外のフォーマット ファイルの作成  
  `HumanResources.Department` テーブルの、Unicode ネイティブ データ用の XML 以外のフォーマット ファイルを作成するには、次のコマンドを使用します。  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -N -f Department-n.fmt  
 ```  
   
@@ -132,14 +132,14 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -N -f Department-
 #### <a name="d-creating-a-non-xml-format-file-for-unicode-character-data"></a>D. Unicode 文字データ用の XML 以外のフォーマット ファイルの作成  
  既定のターミネータを使用する `HumanResources.Department` テーブルの、Unicode 文字データ用の XML 以外のフォーマット ファイルを作成するには、次のコマンドを使用します。  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-w.fmt  
 ```  
   
  Unicode 文字データの使用方法の詳細については、「[Unicode 文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)」を参照してください。  
   
 #### <a name="f-using-a-format-file-with-the-code-page-option"></a>F. コード ページ オプションを使用したフォーマット ファイルの使用  
- bcp コマンドを使用してフォーマット ファイルを作成する場合 (つまり、"`bcp forma`t..." を使用する場合 )、照合順序およびコード ページに関する情報がフォーマット ファイルに記述されます。   
+bcp コマンドを使用して (つまり `bcp format` を使用して) フォーマット ファイルを作成する場合、照合順序/コード ページに関する情報がフォーマット ファイルに記述されます。   
 次に、照合順序が含まれる、5 つの列があるテーブル用のフォーマット ファイルの例を示します。  
   
 ```  
