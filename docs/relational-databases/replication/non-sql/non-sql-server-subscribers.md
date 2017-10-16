@@ -60,7 +60,7 @@ Oracle バージョン情報:
 
  SQL Server 以外のサブスクライバーへの異種レプリケーションは推奨されません。 Oracle パブリッシングは推奨されません。 データを移動するには、変更データ キャプチャと [!INCLUDE[ssIS](../../../includes/ssis-md.md)]を使用してソリューションを作成します。  
 
-Oracle および IBM DB2, にサブスクリプションを作成する方法の詳細については、「 [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) 」および「 [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)を使用してソリューションを作成します。  
+Oracle および IBM DB2, にサブスクリプションを作成する方法の詳細については、「 [Oracle サブスクライバー](../../../relational-databases/replication/non-sql/oracle-subscribers.md) 」および「 [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)を使用してソリューションを作成します。  
   
 ## <a name="considerations-for-non-sql-server-subscribers"></a>SQL Server 以外のサブスクライバーに関する注意点  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーにレプリケートする場合は、以下の点に留意してください。  
@@ -73,7 +73,7 @@ Oracle および IBM DB2, にサブスクリプションを作成する方法の
   
 -   パブリケーションに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーが含まれる場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーのサブスクリプションを作成する前に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対してパブリケーションを有効化する必要があります。  
   
--   既定では、スナップショット エージェントが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対して生成したスクリプトには、`CREATE TABLE` 構文に引用符なしの識別子が使用されます。 したがって、「test」という名前でパブリッシュされたテーブルは「TEST」としてレプリケートされます。 大文字/小文字の指定をパブリケーション データベース内のテーブルと同一にするには、ディストリビューション エージェントの **-QuotedIdentifier** パラメーターを使用します。 パブリッシュされたオブジェクトの名前 (テーブル、列、制約など) に、スペースや、 **以外のサブスクライバーのデータベースのバージョンでの予約語が含まれている場合は、** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パラメーターも使用する必要があります。 このパラメーターの詳細については、「 [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)」を参照してください。  
+-   既定では、スナップショット エージェントが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対して生成したスクリプトには、`CREATE TABLE` 構文に引用符なしの識別子が使用されます。 したがって、「test」という名前でパブリッシュされたテーブルは「TEST」としてレプリケートされます。 大文字/小文字の指定をパブリケーション データベース内のテーブルと同一にするには、ディストリビューション エージェントの **-QuotedIdentifier** パラメーターを使用します。 パブリッシュされたオブジェクトの名前 (テーブル、列、制約など) に、スペースや、 **以外のサブスクライバーのデータベースのバージョンでの予約語が含まれている場合は、** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パラメーターも使用する必要があります。 このパラメーターの詳細については、 [レプリケーション ディストリビューション エージェント](../../../relational-databases/replication/agents/replication-distribution-agent.md) を参照してください。  
   
 -   ディストリビューション エージェントを実行するアカウントには、OLE DB プロバイダーのインストール ディレクトリに対する読み取りアクセス権が必要です。  
   
@@ -93,7 +93,7 @@ Oracle および IBM DB2, にサブスクリプションを作成する方法の
   
 -   NULL 値の扱いはデータベースによって異なり、空白値、空の文字列、および NULL の表示方法に影響します。 また、UNIQUE 制約が定義されている列に値を挿入する際の動作にも影響します。 たとえば、Oracle では一意な列に複数の NULL 値を挿入できますが、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では一意な列に 1 つの NULL 値しか挿入できません。  
   
-     他にも注意が必要なのは、列に対して NOT NULL が定義されている場合、NULL 値、空の文字列、および空白値がどのように扱われるかという点です。 Oracle サブスクライバーでのこの問題の対処方法の詳細については、「 [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md)」を参照してください。  
+     他にも注意が必要なのは、列に対して NOT NULL が定義されている場合、NULL 値、空の文字列、および空白値がどのように扱われるかという点です。 Oracle サブスクライバーでのこの問題の対処方法の詳細については、「 [Oracle サブスクライバー](../../../relational-databases/replication/non-sql/oracle-subscribers.md)」を参照してください。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーからサブスクリプションが削除されても、レプリケーション関連のメタデータ (トランザクション シーケンス テーブル) は削除されません。  
   
