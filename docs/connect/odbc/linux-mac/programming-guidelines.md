@@ -20,7 +20,7 @@ ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="programming-guidelines"></a>プログラミング ガイドライン
-[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]プログラミング機能、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 およびの 13.1 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] macOS および Linux では、ODBC に基づいて[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client ([SQL Server ・ Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151))。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client は Windows Data Access Components の ODBC に基づいて ([ODBC プログラマ リファレンス](http://go.microsoft.com/fwlink/?LinkID=45250))。  
+[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)] プログラミング機能、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 およびの 13.1 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] macOS および Linux では、ODBC に基づいて[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client ([SQL Server ・ Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151))。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client は Windows Data Access Components の ODBC に基づいて ([ODBC プログラマ リファレンス](http://go.microsoft.com/fwlink/?LinkID=45250))。  
 
 複数のアクティブな結果セット (MARS) およびその他の ODBC アプリケーションで使用できます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]特定の機能を含めることによって`/usr/local/include/msodbcsql.h`unixODBC ヘッダーを含めた後 (`sql.h`、 `sqlext.h`、 `sqltypes.h`、および`sqlucode.h`)。 場合は、同じシンボル名を使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Windows ODBC アプリケーションでは特定の項目。  
 
