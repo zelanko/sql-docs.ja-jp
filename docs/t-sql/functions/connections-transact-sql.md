@@ -32,7 +32,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40connections-transact-sql"></a>& #x 40; & #x 40 です。接続 (TRANSACT-SQL)
+# <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;です。接続 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動後に、成功または失敗した接続試行数を返します。
@@ -53,7 +53,7 @@ ms.lasthandoff: 09/19/2017
   
 いくつか含むレポートを表示する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]統計情報、実行、接続試行を含む**sp_monitor**です。
   
-@@MAX_CONNECTIONSサーバーに同時に許可される接続の最大数です。 @@CONNECTIONS @ そのため、ログインが試行されるたびにインクリメントされます@CONNECTIONS@ よりも大きくすることは@MAX_CONNECTIONSします。
+@@MAX_CONNECTIONSサーバーに同時に許可される接続の最大数です。 @@CONNECTIONS そのため、ログインが試行されるたびにインクリメントされます @@CONNECTIONS よりも大きくすることは @@MAX_CONNECTIONSします。
   
 ## <a name="examples"></a>使用例  
 次の例では、現在のシステム上の日付と時刻におけるログイン試行数を返します。

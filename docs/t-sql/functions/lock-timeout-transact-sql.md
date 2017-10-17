@@ -68,7 +68,7 @@ Lock Timeout
 -1  
 ```  
   
- この例は、LOCK_TIMEOUT を 1,800 ミリ秒に設定し、を呼び出して@LOCK_TIMEOUTです。  
+ この例は、LOCK_TIMEOUT を 1,800 ミリ秒に設定し、を呼び出して@LOCK_TIMEOUT です。  
   
 ```  
 SET LOCK_TIMEOUT 1800;  
