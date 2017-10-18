@@ -30,7 +30,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/01/2017
 
 ---
-# <a name="x40x40error-transact-sql"></a>& #x 40; & #x 40 です。エラー (TRANSACT-SQL)
+# <a name="x40x40error-transact-sql"></a>&#x40;&#x40; です。エラー (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   最後のエラー番号を返します[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを実行します。  
@@ -51,13 +51,13 @@ ms.lasthandoff: 09/01/2017
   
  直前のステートメントでエラーが発生した場合は、エラー番号が返されます。 エラーがあった場合、sys.messages カタログ ビューに、エラーのいずれか、@ERRORそのエラーの対応する sys.messages.message_id 列から値を格納します。 関連付けられているテキストを表示することができます、@@ERROR sys.messages 内でエラー番号。  
   
- @@ERRORがオフになって、各ステートメントの実行にリセットし、みることを確認して、ステートメントの直後、または後で確認できるローカル変数に保存します。  
+ @@ERROR がオフになって、各ステートメントの実行にリセットし、みることを確認して、ステートメントの直後、または後で確認できるローカル変数に保存します。  
   
- エラーを処理するには、TRY...CATCH 構造を使用します。 TRY しています.CATCH は作成もサポートするその他のシステム関数 (ERROR_LINE、ERROR_MESSAGE、ERROR_PROCEDURE、ERROR_SEVERITY、および ERROR_STATE) @ よりも詳細なエラー情報を返す@ERRORです。 また、ERROR_NUMBER 関数もサポートされます。この関数では、エラーが発生したステートメントの直後のステートメントでエラー番号を返すなどの操作を行えます。 詳細については、「 [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)」を参照してください。  
+ エラーを処理するには、TRY...CATCH 構造を使用します。 TRY しています.CATCH は作成もサポートするその他のシステム関数 (ERROR_LINE、ERROR_MESSAGE、ERROR_PROCEDURE、ERROR_SEVERITY、および ERROR_STATE) よりも詳細なエラー情報を返す @@ERROR です。 また、ERROR_NUMBER 関数もサポートされます。この関数では、エラーが発生したステートメントの直後のステートメントでエラー番号を返すなどの操作を行えます。 詳細については、「 [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-using-error-to-detect-a-specific-error"></a>A. を使用して@ERROR特定のエラーを検出するには  
+### <a name="a-using-error-to-detect-a-specific-error"></a>A. を使用して @@ERROR 特定のエラーを検出するには  
  次の例で`@@ERROR`にチェック制約違反 (エラー #547) を確認する、`UPDATE`ステートメントです。  
   
 ```  
@@ -71,7 +71,7 @@ IF @@ERROR = 547
 GO  
 ```  
   
-### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. を使用して@ERRORを条件付きでプロシージャを終了するには  
+### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. を使用して @@ERROR を条件付きでプロシージャを終了するには  
  次の例で`IF...ELSE`ステートメントをテスト`@@ERROR`後、`INSERT`ストアド プロシージャ内のステートメント。 値、`@@ERROR`変数がプロシージャの成功または失敗を示す、呼び出し元のプログラムに送信されるリターン コードを決定します。  
   
 ```  
@@ -106,7 +106,7 @@ ELSE
 GO  
 ```  
   
-### <a name="c-using-error-with-rowcount"></a>C. を使用する@ERRORと @@ROWCOUNT  
+### <a name="c-using-error-with-rowcount"></a>C. を使用する @@ERROR と @@ROWCOUNT   
  次の例で`@@ERROR`で`@@ROWCOUNT`の動作を検証する、`UPDATE`ステートメントです。 値`@@ERROR`、エラーの兆候がチェックおよび`@@ROWCOUNT`テーブル内の行に、更新プログラムが正しく適用されていることを確認するために使用します。  
   
 ```  
@@ -176,9 +176,9 @@ GO
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40; です。TRANSACT-SQL と&#41; です。](../../t-sql/functions/error-state-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [sys.messages & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
+ [sys.messages &#40; です。TRANSACT-SQL と&#41; です。](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
   
   
 
