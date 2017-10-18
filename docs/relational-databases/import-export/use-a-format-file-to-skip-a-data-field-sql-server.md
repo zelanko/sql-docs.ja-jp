@@ -17,11 +17,11 @@ caps.latest.revision: 38
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 41484cb9478231533d5d48fb445582f08e5762f9
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 07658ca2dbba706c7355220349f78b3703fe988e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>フォーマット ファイルを使用したデータ フィールドのスキップ (SQL Server)
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
 ### サンプル テーブル<a name="sample_table"></a>
 以下のスクリプトでは、テスト データベースと `myTestSkipField`という名前のテーブルが作成されます。  Microsoft SQL Server Management Studio (SSMS) で、次の Transact SQL を実行します。
  
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -184,7 +184,7 @@ bcp TestDatabase.dbo.myTestSkipField IN D:\BCP\myTestSkipField.bcp -f D:\BCP\myT
 
 ### [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) と [XML 以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)の使用<a name="bulk_nonxml"></a>
 Microsoft SQL Server Management Studio (SSMS) で、次の Transact SQL を実行します。
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -200,7 +200,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
 ### [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) と [XML フォーマット ファイル](../../relational-databases/import-export/xml-format-files-sql-server.md)の使用<a name="bulk_xml"></a>
 Microsoft SQL Server Management Studio (SSMS) で、次の Transact SQL を実行します。
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -216,7 +216,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
 ### [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) と[ XML 以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)の使用<a name="openrowset_nonxml"></a>    
 Microsoft SQL Server Management Studio (SSMS) で、次の Transact SQL を実行します。
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -235,7 +235,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
 ### [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) と [XML フォーマット ファイル](../../relational-databases/import-export/xml-format-files-sql-server.md)の使用<a name="openrowset_xml"></a>
 Microsoft SQL Server Management Studio (SSMS) で、次の Transact SQL を実行します。
-```tsql
+```sql
 USE TestDatabase;  
 GO
 

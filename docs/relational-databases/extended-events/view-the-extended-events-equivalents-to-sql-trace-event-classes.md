@@ -19,11 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bfa6eb722a8dcbd4c3a9e72d731fe8a59d436ba8
+ms.translationtype: HT
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 008cdb3fc158b36793f7d4b42ee4b24fd2b56ea5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/16/2017
 
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>SQL トレースのイベント クラスと等価な拡張イベントを確認する
@@ -71,20 +71,8 @@ ms.lasthandoff: 06/22/2017
   
 -   ユーザーが構成できる SQL トレースのイベント クラス (UserConfigurable:1 ～ UserConfigurable:9) は、拡張イベントでは単一のイベントに置き換えられます。 このイベントには、user_event という名前が付けられます。 このイベントは、SQL トレースと同じ sp_trace_generateevent ストアド プロシージャを使用して生成されます。 user_event イベントは、ストアド プロシージャに渡されたイベント ID に関係なく返されます。 ただし、event_id フィールドは、イベント データの一部として返されます。 これによって、イベント ID に基づく述語の作成が可能となります。 たとえば、UserConfigurable:0 (イベント ID = 82) をコード内で使用する場合、user_event イベントをセッションに追加し、'event_id = 82' という述語を指定することができます。 拡張イベントの user_event イベントも SQL トレースにおける等価なイベント クラスも sp_trace_generateevent ストアド プロシージャによって生成されるため、コードを変更する必要はありません。  
   
--   イベント クラス列を除くすべての列で NULL が返された場合、そのイベント クラスは SQL トレースから移行されなかったことを意味します。  
-  
--   拡張イベント アクション列の値のみが NULL である場合、次のいずれかの条件に該当します。  
-  
-    -   SQL トレース列は、拡張イベントのイベントに関連付けられているいずれかのデータ フィールドに対応する。  
-  
-        > [!NOTE]  
-        >  拡張イベントの各イベントは、結果セットに自動的に追加される既定のデータ フィールドのセットを持っています。  
-  
-    -   アクション列には、意味のある等価な拡張イベントが存在しない。 たとえば、SQL トレースの EventClass 列がこれに該当します。 同じ目的はイベント名によって満たされるため、拡張イベントにこの列は必要ありません。  
-  
--   ユーザーが構成できる SQL トレースのイベント クラス (UserConfigurable:1 ～ UserConfigurable:9) は、拡張イベントでは単一のイベントに置き換えられます。 このイベントには、user_event という名前が付けられます。 このイベントは、SQL トレースと同じ sp_trace_generateevent ストアド プロシージャを使用して生成されます。 user_event イベントは、ストアド プロシージャに渡されたイベント ID に関係なく返されます。 ただし、event_id フィールドは、イベント データの一部として返されます。 これによって、イベント ID に基づく述語の作成が可能となります。 たとえば、UserConfigurable:0 (イベント ID = 82) をコード内で使用する場合、user_event イベントをセッションに追加し、'event_id = 82' という述語を指定することができます。 拡張イベントの user_event イベントも SQL トレースにおける等価なイベント クラスも sp_trace_generateevent ストアド プロシージャによって生成されるため、コードを変更する必要はありません。  
-  
 ## <a name="see-also"></a>参照  
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)  
   
   
+

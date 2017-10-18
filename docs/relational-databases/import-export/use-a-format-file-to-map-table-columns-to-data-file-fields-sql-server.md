@@ -17,11 +17,11 @@ caps.latest.revision: 40
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d90982485ab979118f4f7b02881aa8ea53cc9818
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 9d5d0f33d21e61741bd021dc012c70a43207a13f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング (SQL Server)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
 
 |[外枠]|
 |---|
-|[テスト条件の例](#etc)<br />&emsp;&#9679;&emsp;[サンプル テーブル](#sample_table)<br />&emsp;&#9679;&emsp;[サンプル データ ファイル](#sample_data_file)<br />[フォーマット ファイルの作成](#create_format_file)<br />&emsp;&#9679;&emsp;[XML 以外のフォーマット ファイルの作成](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[XML 以外のフォーマット ファイルの変更](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[XML フォーマット ファイルの作成](#xml_format_file)<br />&emsp;&#9679;&emsp;[XML フォーマット ファイルの変更](#modify_xml_format_file)<br />[フォーマット ファイルを使用してデータをインポートして、テーブル列をデータ ファイル フィールドにマッピングする](#import_data)<br />&emsp;&#9679;&emsp;[bcp と XML 以外のフォーマット ファイルの使用](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[bcp と XML フォーマット ファイルの使用](#bcp_xml)<br />&emsp;&#9679;&emsp;[BULK INSERT と XML 以外のフォーマット ファイルの使用](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[BULK INSERT と XML フォーマット ファイルの使用](#bulk_xml)<br />&emsp;&#9679;&emsp;[OPENROWSET(BULK...) と XML 以外のフォーマット ファイルの使用](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[OPENROWSET(BULK...) と XML フォーマット ファイルの使用](#openrowset_xml)<p>                                                                                                                                                                                                                  </p>|
+|[テスト条件の例](#etc)<br />&emsp;&#9679;&emsp;[サンプル テーブル](#sample_table)<br />&emsp;&#9679;&emsp;[サンプル データ ファイル](#sample_data_file)<br />[フォーマット ファイルの作成](#create_format_file)<br />&emsp;&#9679;&emsp;[XML 以外のフォーマット ファイルの作成](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[XML 以外のフォーマット ファイルの変更](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[XML フォーマット ファイルの作成](#xml_format_file)<br />&emsp;&#9679;&emsp;[XML フォーマット ファイルの変更](#modify_xml_format_file)<br />[フォーマット ファイルを使用してデータをインポートして、テーブル列をデータ ファイル フィールドにマッピングする](#import_data)<br />&emsp;&#9679;&emsp;[bcp と XML 以外のフォーマット ファイルの使用](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[bcp と XML フォーマット ファイルの使用](#bcp_xml)<br />&emsp;&#9679;&emsp;[BULK INSERT と XML 以外のフォーマット ファイルの使用](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[BULK INSERT と XML フォーマット ファイルの使用](#bulk_xml)<br />&emsp;&#9679;&emsp;[OPENROWSET(BULK...) と XML 以外のフォーマット ファイルの使用](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[OPENROWSET(BULK...) と XML フォーマット ファイルの使用](#openrowset_xml)|
 
 > [!NOTE]  
 >  XML 以外のフォーマット ファイルまたは XML フォーマット ファイルを使用して、データ ファイルをテーブルに一括インポートできます。その場合、[bcp ユーティリティ](../../tools/bcp-utility.md) コマンド、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ステートメント、または INSERT ...SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) ステートメント。 詳細については、「[データの一括インポートでのフォーマット ファイルの使用 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)」を参照してください。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 06/22/2017
 
 ### サンプル テーブル<a name="sample_table"></a>
 以下のスクリプトでは、テスト データベースと `myRemap`という名前のテーブルが作成されます。  Microsoft SQL Server Management Studio (SSMS) で、次の Transact SQL を実行します。
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -77,9 +77,9 @@ bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 ```
 ### XML 以外のフォーマット ファイルの変更 <a name="modify_nonxml_format_file"></a>
 用語については、「 [XML 以外のフォーマット ファイルの構造](../../relational-databases/import-export/non-xml-format-files-sql-server.md#Structure) 」を参照してください。  メモ帳で `D:\BCP\myRemap.fmt` を開き、次のように変更します。
-1) 行が `myRemap.bcp`のデータと同じ順序になるようにフォーマット ファイルの行の順序を配置し直します。
-2) ホスト ファイル フィールドの順序の値が順番になっていることを確認します。
-3) 最後のフォーマット ファイル行の後にキャリッジ リターンがあることを確認します。
+1.  行が `myRemap.bcp`のデータと同じ順序になるようにフォーマット ファイルの行の順序を配置し直します。
+2.  ホスト ファイル フィールドの順序の値が順番になっていることを確認します。
+3.  最後のフォーマット ファイル行の後にキャリッジ リターンがあることを確認します。
 
 変更内容を比較します。     
 **[指定日付より前]**
@@ -115,9 +115,9 @@ bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 ```
 ### XML フォーマット ファイルの変更 <a name="modify_xml_format_file"></a>
 用語については、「 [XML フォーマット ファイルのスキーマ構文](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) 」を参照してください。  メモ帳で `D:\BCP\myRemap.xml` を開き、次のように変更します。
-1) フォーマット ファイルで \<FIELD> 要素が宣言される順序は、データ ファイルでフィールドが表示される順序と同じです。したがって、ID 属性 2 と 3 を使用して \<FIELD> 要素の順序を逆にします。
-2) \<FIELD> ID 属性値が順番になっていることを確認します。
-3) \<ROW> 要素内の \<COLUMN> 要素の順序により、一括操作で返される順序が決定されます。  XML フォーマット ファイルでは、一括インポート操作の対象になるテーブルの列とのリレーションシップがない各 \<COLUMN> 要素にローカル名が割り当てられます。  \<COLUMN> 要素の順序は、\<RECORD> 定義の \<FIELD> 要素の順序とは関係ありません。  各 \<COLUMN> 要素は、\<FIELD> 要素に対応しています (FIELD> 要素の ID は、\<COLUMN> 要素の SOURCE 属性で指定されます)。  このため、\<COLUMN> SOURCE の値は、リビジョンを必要とする属性のみとなります。  順序を反転 \<COLUMN> SOURCE 属性 2 および 3 の順番を逆にします。
+1. フォーマット ファイルで \<FIELD> 要素が宣言される順序は、データ ファイルでフィールドが表示される順序と同じです。したがって、ID 属性 2 と 3 を使用して \<FIELD> 要素の順序を逆にします。
+2. \<FIELD> ID 属性値が順番になっていることを確認します。
+3. \<ROW> 要素内の \<COLUMN> 要素の順序により、一括操作で返される順序が決定されます。  XML フォーマット ファイルでは、一括インポート操作の対象になるテーブルの列とのリレーションシップがない各 \<COLUMN> 要素にローカル名が割り当てられます。  \<COLUMN> 要素の順序は、\<RECORD> 定義の \<FIELD> 要素の順序とは関係ありません。  各 \<COLUMN> 要素は、\<FIELD> 要素に対応しています (FIELD> 要素の ID は、\<COLUMN> 要素の SOURCE 属性で指定されます)。  このため、\<COLUMN> SOURCE の値は、リビジョンを必要とする属性のみとなります。  順序を反転 \<COLUMN> SOURCE 属性 2 および 3 の順番を逆にします。
 
 変更内容を比較します。  
 **[指定日付より前]**
@@ -180,7 +180,7 @@ bcp TestDatabase.dbo.myRemap IN D:\BCP\myRemap.bcp -f D:\BCP\myRemap.xml -T
 
 ### [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) と [XML 以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)の使用<a name="bulk_nonxml"></a>
 Microsoft SQL Server Management Studio (SSMS) で、次の Transact SQL を実行します。
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -196,7 +196,7 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
 ### [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) と [XML フォーマット ファイル](../../relational-databases/import-export/xml-format-files-sql-server.md)の使用<a name="bulk_xml"></a>
 Microsoft SQL Server Management Studio (SSMS) で、次の Transact SQL を実行します。
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -212,7 +212,7 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
 ### [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) と[ XML 以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)の使用<a name="openrowset_nonxml"></a>    
 Microsoft SQL Server Management Studio (SSMS) で、次の Transact SQL を実行します。
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -231,7 +231,7 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
 ### [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) と [XML フォーマット ファイル](../../relational-databases/import-export/xml-format-files-sql-server.md)の使用<a name="openrowset_xml"></a>
 Microsoft SQL Server Management Studio (SSMS) で、次の Transact SQL を実行します。
-```tsql
+```sql
 USE TestDatabase;  
 GO
 

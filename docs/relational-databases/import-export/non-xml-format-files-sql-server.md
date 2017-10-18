@@ -18,11 +18,11 @@ caps.latest.revision: 63
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7593a0015328cba74de239f55575217687ff5193
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 990578bd6e9efd4e29f5db35fad27089b04512d5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="non-xml-format-files-sql-server"></a>XML 以外のフォーマット ファイル (SQL Server)
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 -   文字データやネイティブ データなど、特定のデータ型のフォーマット ファイルを作成できます。  
   
-     各データ フィールドに対話的に指定された属性を含む XML 以外のフォーマット ファイルを作成できます。 詳細については、「[bcp を使用した互換性のためのデータ形式の指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)」を参照してください。  
+-   各データ フィールドに対話的に指定された属性を含む XML 以外のフォーマット ファイルを作成できます。 詳細については、「[bcp を使用した互換性のためのデータ形式の指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)」を参照してください。  
   
 > [!NOTE]  
 >  XML フォーマット ファイルには、XML 以外のフォーマット ファイルに比べていくつかの利点があります。 詳細については、「 [XML フォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)です。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
  次の図は、XML 以外のフォーマット ファイルのサンプルの、フォーマット ファイル フィールドを示しています。  
   
- ![XML 以外の形式ファイルのフィールドの指定](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif "XML 以外の形式ファイルのフィールドの指定")  
+ ![非 XML 形式ファイルのフィールドの指定](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif)
   
  " **バージョン** " フィールドおよび " **列の数** " フィールドは XML 以外のフォーマット ファイルごとに 1 つだけ存在します。 次の表で、各フィールドの意味を説明します。  
   
