@@ -102,10 +102,10 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  SQL Server または Sybase のソース テーブルには、id 列が含まれている場合、ADO NET 変換先の前に IDENTITY_INSERT を有効にして、後でもう一度無効にする SQL 実行タスクを使用する必要があります。 (Id 列のプロパティは、列の増分値を指定します。 SET IDENTITY_INSERT ステートメントにより、コピー先のテーブル内の id 列に挿入されるソース テーブルからの明示的な値です。)  
 >   
->   SET IDENTITY_INSERT ステートメントおよびデータの読み込みを正常を実行するには、次の作業を行うができます。
->       1. SQL 実行タスクや ADO.NET 変換先は、同じの ADO.NET 接続マネージャーを使用します。
->       2. 接続マネージャーの設定、 **RetainSameConnection**プロパティおよび**MultipleActiveResultSets**プロパティを True にします。
->       3. ADO.NET 変換先の設定、 **UseBulkInsertWhenPossible**プロパティを False にします。
+>   SET IDENTITY_INSERT ステートメントおよびデータの読み込みを正常を実行するには、次の作業を行うができます。 
+>       1. SQL 実行タスクや ADO.NET 変換先は、同じの ADO.NET 接続マネージャーを使用します。 
+>       2. 接続マネージャーの設定、 **RetainSameConnection**プロパティおよび**MultipleActiveResultSets**プロパティを True にします。 
+>       3. ADO.NET 変換先の設定、 **UseBulkInsertWhenPossible**プロパティを False にします。 
 >
 >  詳細については、「[SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md)」および「[IDENTITY &#40;プロパティ&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)」を参照してください。  
   
@@ -172,3 +172,4 @@ ms.lasthandoff: 08/17/2017
  選択したセルにエラー処理オプションを適用します。  
   
   
+
