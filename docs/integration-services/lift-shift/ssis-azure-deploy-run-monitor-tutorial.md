@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: c2dbdf818ef15dc97020dd7b35f88cfa080537d3
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 2e16666c412870cc55024e7156752f43ddbc1800
 ms.contentlocale: ja-jp
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>配置、実行、および Azure で SSIS パッケージの監視
@@ -22,7 +22,7 @@ ms.lasthandoff: 10/06/2017
 
 開始する前に 17.2 または SQL Server Management Studio のそれ以降のバージョンであることを確認します。 SSMS の最新バージョンをダウンロードするを参照してください。[ダウンロード SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)です。
 
-また、SSISDB データベースを設定している Azure SSIS の統合ランタイムをプロビジョニングすることを確認してください。 Azure での SSIS をプロビジョニングする方法については、次を参照してください。[を Azure に SQL Server Integration Services (SSIS) パッケージのリフト アンド シフト](https://docs.microsoft.com/en-us/azure/tutorial-deploy-ssis-packages-azure)です。
+また、SSISDB データベースを設定している Azure SSIS の統合ランタイムをプロビジョニングすることを確認してください。 Azure での SSIS をプロビジョニングする方法については、次を参照してください。[を Azure に SQL Server Integration Services (SSIS) パッケージのリフト アンド シフト](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)です。
 
 ## <a name="connect-to-the-ssisdb-database"></a>SSISDB データベースへの接続します。
 

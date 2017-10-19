@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c4ad800c684bcf69a52828969ca816a135901280
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: f54170fc9f17ff7eb69f5de8cfdf865fd31bd4d8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
@@ -101,56 +101,6 @@ Result
 2.  ときに*分数*50 の値を持つと*精度*しの値で、2 の値を持つ*分数*50/100 秒を表します。  
   
 3.  ときに*分数*500 の値を持つと*精度*しの値の第 3 の値を持つ*分数*秒の 500/1000 を表します。  
-  
-```sql
-SELECT DATETIME2FROMPARTS ( 2011, 8, 15, 14, 23, 44, 5, 1 );  
-SELECT DATETIME2FROMPARTS ( 2011, 8, 15, 14, 23, 44, 50, 2 );  
-SELECT DATETIME2FROMPARTS ( 2011, 8, 15, 14, 23, 44, 500, 3 );  
-GO  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-----------------------  
-2011-08-15 14:23:44.5  
-  
-(1 row(s) affected)  
-  
-----------------------  
-2011-08-15 14:23:44.50  
-  
-(1 row(s) affected)  
-  
-----------------------  
-2011-08-15 14:23:44.500  
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-simple-example-without-fractions-of-a-second"></a>C. 秒の小数部を使用しない場合の簡単な例  
-  
-```sql
-SELECT DATETIME2FROMPARTS ( 2010, 12, 31, 23, 59, 59, 0, 0 ) AS Result;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-Result  
----------------------------  
-2010-12-31 23:59:59.0000000  
-  
-(1 row(s) affected)  
-```  
-  
-### <a name="d-example-with-fractions-of-a-second"></a>D. 秒の小数部を使用する場合の例  
-次の例での使用、*分数*と*精度*パラメーター。
-1.  ときに*分数*5 の値を持つと*精度*しの値の 1 の値を持つ*分数*5/10 秒を表します。  
-1.   ときに*分数*50 の値を持つと*精度*しの値で、2 の値を持つ*分数*50/100 秒を表します。  
-1.   ときに*分数*500 の値を持つと*精度*しの値の第 3 の値を持つ*分数*秒の 500/1000 を表します。  
   
 ```sql
 SELECT DATETIME2FROMPARTS ( 2011, 8, 15, 14, 23, 44, 5, 1 );  

@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fe203e646f1ec0cb9732ff63ba8ee0dbe38c899a
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 665607c3b6ea9411d90137fba416d96d3d46a4c1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
@@ -103,56 +103,6 @@ Result
 ### <a name="b-example-with-fractions-of-a-second"></a>B. 秒の小数部を使用する場合の例  
 次の例での使用、*分数*と*精度*パラメーター。
 1.   ときに*分数*5 の値を持つと*精度*しの値の 1 の値を持つ*分数*5/10 秒を表します。  
-1.   ときに*分数*50 の値を持つと*精度*しの値で、2 の値を持つ*分数*50/100 秒を表します。  
-1.   ときに*分数*500 の値を持つと*精度*しの値の第 3 の値を持つ*分数*秒の 500/1000 を表します。  
-  
-```sql
-SELECT DATETIMEOFFSETFROMPARTS ( 2011, 8, 15, 14, 30, 00, 5, 12, 30, 1 );  
-SELECT DATETIMEOFFSETFROMPARTS ( 2011, 8, 15, 14, 30, 00, 50, 12, 30, 2 );  
-SELECT DATETIMEOFFSETFROMPARTS ( 2011, 8, 15, 14, 30, 00, 500, 12, 30, 3 );  
-GO  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-----------------------------------  
-2011-08-15 14:30:00.5 +12:30  
-  
-(1 row(s) affected)  
-  
-----------------------------------  
-2011-08-15 14:30:00.50 +12:30  
-  
-(1 row(s) affected)  
-  
-----------------------------------  
-2011-08-15 14:30:00.500 +12:30  
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-simple-example-without-fractions-of-a-second"></a>C. 秒の小数部を使用しない場合の簡単な例  
-  
-```sql
-SELECT DATETIMEOFFSETFROMPARTS ( 2010, 12, 31, 14, 23, 23, 0, 12, 0, 7 ) AS Result;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-Result  
--------------------------------------------  
-2010-12-07 00:00:00.0000000 +00:00  
-  
-(1 row(s) affected)  
-```  
-  
-### <a name="d-example-with-fractions-of-a-second"></a>D. 秒の小数部を使用する場合の例  
-次の例での使用、*分数*と*精度*パラメーター。
-1.  ときに*分数*5 の値を持つと*精度*しの値の 1 の値を持つ*分数*5/10 秒を表します。  
 1.   ときに*分数*50 の値を持つと*精度*しの値で、2 の値を持つ*分数*50/100 秒を表します。  
 1.   ときに*分数*500 の値を持つと*精度*しの値の第 3 の値を持つ*分数*秒の 500/1000 を表します。  
   

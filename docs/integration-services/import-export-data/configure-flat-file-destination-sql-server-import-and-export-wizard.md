@@ -17,13 +17,13 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e604c8c55cfa0bdb977840ee742d062573abeeeb
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 93fbd5e9429d06e3f011f6f0aff03d76a3db9000
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/13/2017
 
 ---
-# <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>[フラット ファイルの変換先の構成]\(SQL Server インポートおよびエクスポート ウィザード)
+# <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>[フラット ファイルの変換先の構成] (SQL Server インポートおよびエクスポート ウィザード)
   フラット ファイル変換先を選択した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インポートおよびエクスポート ウィザードの番組**フラット ファイル変換先の構成**テーブルをコピーすることを指定するクエリを指定する後またはします。 このページで、宛先のフラット ファイルの書式設定オプションを指定します 必要に応じて、個々の列のマッピングを確認し、サンプル データをプレビューします。  
   
 ## <a name="screen-shot-of-the-configure-flat-file-destination-page"></a>[フラット ファイル変換先の構成] ページのスクリーン ショット  
@@ -33,7 +33,7 @@ ms.lasthandoff: 09/26/2017
 -   **行区切り記号**」を参照してください。 出力内のデータの各行は、キャリッジ リターン、ライン フィードの組み合わせで終了します。
 -   **列区切り記号**」を参照してください。 列の各行に含まれるデータは、コンマで区切られます。
 
- ![インポートおよびエクスポート ウィザードの [構成フラット ファイル] ページ](../../integration-services/import-export-data/media/flat-file.png "インポートおよびエクスポート ウィザードの [構成フラット ファイル] ページ")  
+ ![インポートおよびエクスポート ウィザードのフラット ファイル ページを構成します。](../../integration-services/import-export-data/media/flat-file.png)
   
 ## <a name="pick-a-source-table"></a>ソース テーブルを選択します。
  **ソース テーブルまたはビュー**  

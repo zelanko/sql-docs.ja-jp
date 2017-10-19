@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 75ab644da296ecc613c803916eb0b70907ad0cf6
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: fce97e74e2b4bbc5ae0fbdadf596734677734155
 ms.contentlocale: ja-jp
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER データベース スコープ ベースの構成 (TRANSACT-SQL)
@@ -119,7 +119,7 @@ PRIMARY
   
 QUERY_OPTIMIZER_HOTFIXES  **=**  {ON |**OFF** |プライマリ}  
 
-有効またはデータベースの互換性レベルに関係なく、クエリ オプティマイザーの修正プログラムを無効にします。 既定値は**OFF**です。 これは有効にすると同じ[トレース フラグ 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)です。   
+有効またはデータベースの互換性レベルに関係なく、クエリ オプティマイザーの修正プログラムを無効にします。 既定値は**OFF**、無効にクエリ オプティマイザーの修正プログラム、最高の使用可能な互換性レベルは、特定のバージョンの導入された後にリリースされていた (RTM)。 これを設定する**ON**を有効にすると等価[トレース フラグ 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)です。   
 
 > [!TIP] 
 > これを行うにはクエリ レベルで、追加、 **querytraceon です**[クエリ ヒント](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)です。 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 では、これを実現するクエリ レベルで使用するヒントの追加[クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)トレース フラグを使用する代わりにします。  
@@ -140,7 +140,6 @@ IDENTITY_CACHE  **=**  { **ON** |オフ}
 
 > [!NOTE] 
 > このオプションは、プライマリの場合にのみ設定できます。 詳細については、次を参照してください。 [id 列](create-table-transact-sql-identity-property.md)です。  
->
 
 ##  <a name="Permissions"></a> アクセス許可  
  必要と任意のデータベース スコープ構成を変更します   
@@ -156,7 +155,7 @@ IDENTITY_CACHE  **=**  { **ON** |オフ}
  ALTER_DATABASE_SCOPED_CONFIGURATION イベントは、DDL トリガーを起動するために使用できる DDL イベントとして追加されます。 これは、ALTER_DATABASE_EVENTS トリガー グループの子です。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
- **MAXDOP**  
+**MAXDOP**  
   
  詳細な設定はグローバル ルールを上書きでき、そのリソース ガバナーは、他のすべての MAXDOP 設定に上限を設定します。  MAXDOP 設定ロジック次に示します。  
   
@@ -170,15 +169,15 @@ IDENTITY_CACHE  **=**  { **ON** |オフ}
   
 -   Sp_configure の設定は、リソース ガバナーの設定によってオーバーライドされます。  
   
- **QUERY_OPTIMIZER_HOTFIXES**  
+**QUERY_OPTIMIZER_HOTFIXES**  
   
  Querytraceon ですヒントを使用して、従来のクエリ オプティマイザーまたはクエリ オプティマイザー修正プログラムを有効にする、クエリ ヒントとデータベース スコープの構成設定であり、いずれかが有効な場合、オプションが適用されます、OR 条件があります。  
   
- **GeoDR**  
+**GeoDR**  
   
  Always On 可用性グループや GeoReplication などの読み取り可能なセカンダリ データベースは、データベースの状態をチェックして、セカンダリの値を使用します。 場合でも、フェールオーバーでは再コンパイルしないし、技術的には新しいプライマリがセカンダリの設定を使用しているクエリ、つまり、ワークロードが異なると、キャッシュされたクエリは、そのために、プライマリとセカンダリの間で設定が異なるだけこと新しいクエリでは、それらの適切な新しい設定を取得します。 一方、最適な設定を使用します。  
   
- **DacFx**  
+**DacFx**  
   
  ALTER DATABASE SCOPED CONFIGURATION が Azure SQL データベースおよびデータベース スキーマに影響する SQL Server 2016 の新機能であるため (またはデータなし)、スキーマのエクスポートことはできません古いバージョンの SQL Server にインポートする[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]または <。c2 > [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] です。 エクスポートなど、 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3)または[BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4)から、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]または[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]この新しい機能を使用するデータベースが下位レベルのサーバーにインポートすることはありません。  
   
@@ -245,7 +244,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;
 geo レプリケーションのシナリオです。  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING =PRIMARY ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;  
 ```  
   
 ### <a name="e-set-queryoptimizerhotfixes"></a>E. QUERY_OPTIMIZER_HOTFIXES を設定します。  

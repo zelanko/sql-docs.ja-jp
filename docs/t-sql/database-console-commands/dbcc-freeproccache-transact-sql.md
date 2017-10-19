@@ -1,7 +1,7 @@
 ---
 title: "DBCC FREEPROCCACHE (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 10/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,10 +29,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: b91dcf6191f6ec3336c9bf3d3588e8f1daad0867
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 58eed9c590594f8c2cff402418aa2ebebd0c65db
 ms.contentlocale: ja-jp
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/16/2017
 
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
@@ -62,20 +62,20 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
   
 ## <a name="arguments"></a>引数  
  ({ *plan_handle* | *sql_handle* | *pool_name* })  
- *plan_handle*を既に実行されていて、そのプランがプラン キャッシュに存在するバッチのクエリ プランを一意に識別します。 *plan_handle*は**varbinary (64)**され、次の動的管理オブジェクトから取得できます。  
+*plan_handle*を既に実行されていて、そのプランがプラン キャッシュに存在するバッチのクエリ プランを一意に識別します。 *plan_handle*は**varbinary (64)**され、次の動的管理オブジェクトから取得できます。  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 
- *sql_handle*が消去されるバッチの SQL ハンドルです。 *sql_handle*は**varbinary (64)**され、次の動的管理オブジェクトから取得できます。  
+*sql_handle*が消去されるバッチの SQL ハンドルです。 *sql_handle*は**varbinary (64)**され、次の動的管理オブジェクトから取得できます。  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
  -   [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
 
- *pool_name*リソース ガバナー リソース プールの名前を指定します。 *pool_name*は**sysname**とクエリを実行して取得できます、 [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)動的管理ビュー。  
+*pool_name*リソース ガバナー リソース プールの名前を指定します。 *pool_name*は**sysname**とクエリを実行して取得できます、 [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)動的管理ビュー。  
  関連付けるには、リソース ガバナー ワークロード グループをリソース プールに、クエリ、 [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)動的管理ビュー。 セッションのワークロード グループについては、クエリ、 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)動的管理ビュー。  
 
   
@@ -87,11 +87,14 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
   
  ALL  
  各計算ノードおよび [管理] ノードからは、クエリ プランのキャッシュを消去します。  
-  
-## <a name="remarks"></a>解説  
-DBCC FREEPROCCACHE を使用してプラン キャッシュをクリアする際には注意が必要です。 たとえば、プラン キャッシュを解放すると、ストアド プロシージャはキャッシュから再利用されるのではなく、再コンパイルされます。 
 
-これにより、クエリ パフォーマンスが一時的に急激に低下する場合があります。 各キャッシュ ストアが消去、プラン キャッシュ内の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー ログには、次の情報メッセージにが含まれます"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]キャッシュ ストアのために '%s' キャッシュ ストア (プラン キャッシュの一部) のフラッシュを %d 個検出が発生しました ' DBCC。FREEPROCCACHE' または ' DBCC FREESYSTEMCACHE' 操作です"。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
+> [!NOTE]
+> 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、`ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE`スコープ内のデータベースのプロシージャ (プラン) キャッシュをクリアします。
+
+## <a name="remarks"></a>解説  
+DBCC FREEPROCCACHE を使用してプラン キャッシュをクリアする際には注意が必要です。 以前にキャッシュされたプランを再使用せず、プロシージャ キャッシュとすべてのプランを削除して受信したクエリの実行は、新しいプランをコンパイル (プラン) を消去しています。 
+
+これには、突然、一時的なクエリのパフォーマンス低下数の新しいコンパイル数の増加として可能性があります。 各キャッシュ ストアが消去、プラン キャッシュ内の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー ログには、次の情報メッセージにが含まれます"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]キャッシュ ストアのために '%s' キャッシュ ストア (プラン キャッシュの一部) のフラッシュを %d 個検出が発生しました ' DBCC。FREEPROCCACHE' または ' DBCC FREESYSTEMCACHE' 操作です"。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
 
 次の再構成操作でもプロシージャ キャッシュはクリアされます。
 -   access check cache bucket count  
@@ -115,16 +118,15 @@ DBCC FREEPROCCACHE を使用してプラン キャッシュをクリアする際
 WITH NO_INFOMSGS 句が指定されていない場合、DBCC FREEPROCCACHE を返します:"DBCC の実行が完了しました。 DBCC がエラー メッセージを出力した場合は、システム管理者に相談してください。"
   
 ## <a name="permissions"></a>Permissions  
-適用されます SQL Server、並列データ ウェアハウス。 
-
+適用されます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 - サーバーに対する ALTER SERVER STATE 権限が必要です。  
 
-適用対象: Azure SQL Data Warehouse
+適用されます。[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
 - DB_OWNER 固定サーバー ロールのメンバーシップが必要です。  
 
 ## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>全般的な解説[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 複数の DBCC FREEPROCCACHE コマンドは、同時に実行することができます。
-[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、クエリ プランのキャッシュをクリアする場合がありますクエリのパフォーマンスの一時的な低下クエリが再コンパイルします。 
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、プラン キャッシュをクリアすることができますが発生するクエリのパフォーマンスの一時的な低下着信クエリ、新しいプランをコンパイルすると、再利用するのではなく以前キャッシュされたプランです。 
 
 DBCC FREEPROCCACHE (コンピューティング) でのみ発生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンピューティング ノードで実行された場合は、クエリを再コンパイルします。 行われません[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]コントロールのノードで生成される並列クエリ プランを再コンパイルします。
 実行中には、DBCC FREEPROCCACHE をキャンセルできます。
@@ -135,11 +137,11 @@ DBCC FREEPROCCACHE をトランザクション内で実行できません。
   
 ## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>メタデータを[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC FREEPROCCACHE を実行すると、新しい行が sys.pdw_exec_requests システム ビューに追加されます。
-  
+
 ## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>例:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>A. プラン キャッシュから特定のクエリ プランを削除する  
-次の例では、クエリ プラン ハンドルを指定して、プラン キャッシュから特定のクエリ プランを削除します。 まず、この例のクエリがプラン キャッシュに含まれるようにするために、クエリを実行します。 `sys.dm`_`exec` \_ `cached_plans`と`sys.dm` \_ `exec` \_ `sql` \_ `text`動的管理ビューを返すクエリを実行しますクエリのプラン ハンドル。 
+次の例では、クエリ プラン ハンドルを指定して、プラン キャッシュから特定のクエリ プランを削除します。 まず、この例のクエリがプラン キャッシュに含まれるようにするために、クエリを実行します。 `sys.dm_exec_cached_plans`と`sys.dm_exec_sql_text`動的管理ビューは、クエリのプラン ハンドルを返すクエリを実行します。 
 
 結果セットからプラン ハンドルの値が、挿入、`DBCC FREEPROCACHE`プラン キャッシュからそのプランのみを削除するステートメント。
   
@@ -195,7 +197,7 @@ GO
   
 ```sql
 USE UserDbSales;  
-DBCC FREEPROCCACHE (COMPUTE) WITH NO_INFOMSGS;  
+DBCC FREEPROCCACHE (COMPUTE) WITH NO_INFOMSGS;
 ```  
   
  次の例は、前の例と同じ結果が結果に情報メッセージが表示されます。  
@@ -211,12 +213,14 @@ DBCC FREEPROCCACHE (COMPUTE);
 次の例では、David DBCC FREEPROCCACHE を実行するためのアクセス許可のログインを使用できます。  
   
 ```sql
-GRANT ALTER SERVER STATE TO David;  
+GRANT ALTER SERVER STATE TO David; 
+GO
 ```  
   
 ## <a name="see-also"></a>参照  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)
+[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)  
+[ALTER データベース スコープ ベースの構成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
   
   
 

@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f15d9d23726f7558f0bf73aff3f8c3c5253cb24d
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: ad4e69ea267af2a9575558737e17e79bbdad684f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="errormessage-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
@@ -100,22 +100,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-errormessage-in-a-catch-block"></a>C. CATCH ブロックで ERROR_MESSAGE を使用する  
- 次のコード例は、 `SELECT` 0 除算エラーを生成するステートメント。 ここではエラーのメッセージが返されます。  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-GO  
-```  
-  
-### <a name="d-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>D. CATCH ブロックで、別のエラー処理ツールと一緒に ERROR_MESSAGE を使用する  
+### <a name="c-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>C. CATCH ブロックで、別のエラー処理ツールと一緒に ERROR_MESSAGE を使用する  
  次のコード例は、 `SELECT` 0 除算エラーを生成するステートメント。 ここではエラー メッセージと共に、エラーに関連する情報が返されます。  
   
 ```  
@@ -134,18 +119,6 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ```  
-  
-## <a name="see-also"></a>参照  
- [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
- [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
- [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
- [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
- [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
- [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/error-state-transact-sql.md)   
- [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
-  
   
 
 

@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f989318c49c6782b82ebda2b51636900768dbd39
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: cb65492a3be74474cd5afccdcaf0487d7cbd5167
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="errornumber-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
@@ -99,21 +99,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-errornumber-in-a-catch-block"></a>C. CATCH ブロックで ERROR_NUMBER を使用する  
- 次のコード例は、 `SELECT` 0 除算エラーを生成するステートメント。 エラーの番号が返されます。  
-  
-```  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT ERROR_NUMBER() AS ErrorNumber;  
-END CATCH;  
-GO  
-```  
-  
-### <a name="d-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>D. CATCH ブロックで ERROR_NUMBER を他のエラー処理ツールと一緒に使用する  
+### <a name="c-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>C. CATCH ブロックで ERROR_NUMBER を他のエラー処理ツールと一緒に使用する  
  次のコード例は、 `SELECT` 0 除算エラーを生成するステートメント。 エラー番号と共に、エラーに関連する情報が返されます。  
   
 ```  

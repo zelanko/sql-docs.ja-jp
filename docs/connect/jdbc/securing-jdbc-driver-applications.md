@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e8033e1690fcaa01ca73ce1a7d0d9972ac2d3ba9
+ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
+ms.openlocfilehash: 097978fa39709dc3c5cd1b8ef150ce4f4c189b17
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="securing-jdbc-driver-applications"></a>JDBC ドライバー アプリケーションのセキュリティ保護
@@ -32,13 +32,14 @@ ms.lasthandoff: 09/09/2017
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[接続文字列を保護します。](../../connect/jdbc/securing-connection-strings.md)|データ ソースへの接続に使用される情報を保護する方法について説明します。|  
+|[接続文字列のセキュリティ保護](../../connect/jdbc/securing-connection-strings.md)|データ ソースへの接続に使用される情報を保護する方法について説明します。|  
 |[ユーザー入力の検証](../../connect/jdbc/validating-user-input.md)|ユーザー入力を検証する方法について説明します。|  
-|[アプリケーションのセキュリティ](../../connect/jdbc/application-security.md)|Java のポリシー アクセス許可を使用して、JDBC ドライバー アプリケーションをセキュリティで保護する方法について説明します。|  
-|[SSL 暗号化を使用します。](../../connect/jdbc/using-ssl-encryption.md)|セキュリティで保護された通信チャネルを確立する方法について説明します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]安全な Sockets Layer (SSL) を使用してデータベースします。|  
-|[FIPS モード](../../connect/jdbc/fips-mode.md)|FIPS complainant モードで JDBC ドライバーを使用する方法について説明します。| 
+|[アプリケーション セキュリティ](../../connect/jdbc/application-security.md)|Java のポリシー アクセス許可を使用して、JDBC ドライバー アプリケーションをセキュリティで保護する方法について説明します。|  
+|[SSL 暗号化の使用](../../connect/jdbc/using-ssl-encryption.md)|セキュリティで保護された通信チャネルを確立する方法について説明します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]安全な Sockets Layer (SSL) を使用してデータベースします。|  
+|[FIPS モード](../../connect/jdbc/fips-mode.md)|FIPS 準拠モードでは JDBC driver を使用する方法について説明します。| 
   
 ## <a name="see-also"></a>参照  
  [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
+

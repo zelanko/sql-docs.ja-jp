@@ -9,10 +9,10 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 78778dd3f43872fd6d97ae042cc337a68b6bab2c
+ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
+ms.openlocfilehash: 1f3cc214be4eaac2199c17c3bea1da7fd02956f1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/14/2017
 
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker コンテナーでの SQL Server データベースを復元します。
@@ -59,17 +59,22 @@ ms.lasthandoff: 10/02/2017
 
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
-       --name 'sql1' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+       --name 'sql1' -p 1401:1433 \
+       -v sql1data:/var/opt/mssql \
+       -d microsoft/mssql-server-linux:2017-latest
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
-       --name "sql1" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+       --name "sql1" -p 1401:1433 `
+       -v sql1data:/var/opt/mssql `
+       -d microsoft/mssql-server-linux:2017-latest
     ```
 
-    このコマンドを使用して、SQL Server 2017 コンテナーを作成、**開発者**エディションです。 SQL Server ポート**1433**ポートとして、ホストで公開された**1401**です。 省略可能な`-v sql1data:/var/opt/mssql`パラメーターという名前のデータ ボリューム コンテナーを作成する**sql1ddata**です。 SQL Server によって作成されたデータの保持に使用されます。
+    このコマンドは、Developer edition (既定値) を SQL Server 2017 コンテナーを作成します。 SQL Server ポート**1433**ポートとして、ホストで公開された**1401**です。 省略可能な`-v sql1data:/var/opt/mssql`パラメーターという名前のデータ ボリューム コンテナーを作成する**sql1ddata**です。 SQL Server によって作成されたデータの保持に使用されます。
+
+   > [!NOTE]
+   > コンテナーで実稼働 SQL Server のエディションを実行するためのプロセスは若干異なります。 詳細については、次を参照してください。[実稼働環境にコンテナー イメージを実行](sql-server-linux-configure-docker.md#production)です。 同じコンテナー名とポートを使用する場合、このチュートリアルの残りの部分は実稼働のコンテナーで動作します。
 
 1. 表示するには、Docker コンテナーを使用して、`docker ps`コマンド。
 

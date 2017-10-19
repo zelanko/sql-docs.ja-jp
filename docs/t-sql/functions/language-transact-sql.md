@@ -25,13 +25,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: cd64185b31ad5aba9496e55031eae15ae46d5180
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 33fcf5ceb2481b517844cb5334dd67c97b039b77
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 10/17/2017
 
 ---
-# <a name="x40x40language-transact-sql"></a>& #x 40; & #x 40 です。言語 (TRANSACT-SQL)
+# <a name="x40x40language-transact-sql"></a>&#x40;&#x40;です。言語 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   現在使用されている言語の名前を返します。  
@@ -51,21 +51,6 @@ ms.lasthandoff: 09/19/2017
  有効な公式言語名を含めて、言語設定に関する情報を表示するには実行**sp_helplanguage**パラメーターを指定します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、現在のセッションで使用されている言語を返します。  
-  
-```  
-SELECT @@LANGUAGE AS 'Language Name';  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-Language Name                   
-------------------------------  
-us_english                      
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、現在のセッションで使用されている言語を返します。  
   
 ```  

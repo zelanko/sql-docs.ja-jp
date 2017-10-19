@@ -1,7 +1,7 @@
 ---
 title: "DBCC INPUTBUFFER (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 10/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ba54322c814911babe19e172a2cfafc4f00011a7
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 3d9b6acfbfef3125d6ee715708492de1cae2b3a2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/16/2017
 
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
@@ -49,22 +49,23 @@ DBCC INPUTBUFFER ( session_id [ , request_id ])
 ```  
   
 ## <a name="arguments"></a>引数  
- *session_id*  
- アクティブな各プライマリ接続に関連付けられているセッション ID を指定します。  
+*session_id*  
+アクティブな各プライマリ接続に関連付けられているセッション ID を指定します。  
   
- *request_id*  
- 現在のセッション内で検索する具体的な要求 (バッチ) を指定します。  
- 次のクエリを返します*request_id*:  
+*request_id*  
+現在のセッション内で検索する具体的な要求 (バッチ) を指定します。  
+
+次のクエリを返します*request_id*:  
 ```sql
 SELECT request_id   
 FROM sys.dm_exec_requests   
 WHERE session_id = @@spid;  
 ```  
- のすべてのメンションを  
- オプションを指定可能にします。  
+のすべてのメンションを  
+オプションを指定可能にします。  
   
- NO_INFOMSGS  
- 重大度レベル 0 から 10 のすべての情報メッセージを表示しないようにします。  
+NO_INFOMSGS  
+重大度レベル 0 から 10 のすべての情報メッセージを表示しないようにします。  
   
 ## <a name="result-sets"></a>結果セット  
 DBCC INPUTBUFFER では、次の列を含む結果セットが返されます。
@@ -77,7 +78,7 @@ DBCC INPUTBUFFER では、次の列を含む結果セットが返されます。
   
 たとえば、DBCC INPUTBUFFER では、バッファー内の最後のイベントが DBCC INPUTBUFFER(11) である場合、次の結果セットが返されます。
   
-```sql
+```
 EventType      Parameters EventInfo               
 -------------- ---------- ---------------------   
 Language Event 0          DBCC INPUTBUFFER (11)  
@@ -86,7 +87,10 @@ Language Event 0          DBCC INPUTBUFFER (11)
   
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
-  
+
+> [!NOTE]
+> 以降で[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SP2 では、使用[sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)のインスタンスに送信されたステートメントに関する情報を返す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。
+
 ## <a name="permissions"></a>Permissions  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]次のいずれかが必要です。
 -   ユーザーのメンバーである必要があります、 **sysadmin**固定サーバー ロール。  
@@ -120,7 +124,8 @@ DBCC INPUTBUFFER (52);
 
 ## <a name="see-also"></a>参照  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)
+[sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
+[sys.dm_exec_input_buffer & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
   
   
 

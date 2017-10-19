@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: d8e99fdb0c3383190c140997e619a05feb9bf3ee
+ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
+ms.openlocfilehash: 308bac675b9d2563d45106cf3332e5ed6ce2e6b2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/14/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上の SQL Server のインストールのガイダンス
@@ -97,7 +97,7 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 > [!IMPORTANT]
 > ダウン グレードは、この時点で RTM、RC2 では、RC1 の間でのみサポートされます。
 
-## <a id="repositories"></a>変更のソース リポジトリ
+## <a id="repositories"></a>ソース リポジトリを構成します。
 
 インストールまたは SQL Server をアップグレードするときに、構成されている Microsoft リポジトリから SQL Server の最新バージョンを取得します。 ことが重要の各配布リポジトリの 2 つの主な種類があることに注意してください。
 
@@ -110,9 +110,9 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 > [!NOTE]
 > 更新 CU から GDR リリースにリリースはサポートされていません。
 
-変更するには、CU リポジトリに GDR リポジトリは、次の手順を使用します。
+CU または GDR のリポジトリを構成するのには、次の手順を使用します。
 
-1. 以前に構成されたプレビュー リポジトリを削除します。
+1. 必要に応じて、以前に構成のリポジトリを削除します。
 
    | プラットフォーム | リポジトリの削除 コマンド |
    |-----|-----|

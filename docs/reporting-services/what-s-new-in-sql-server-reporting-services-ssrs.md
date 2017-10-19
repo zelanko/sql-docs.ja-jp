@@ -1,6 +1,6 @@
 ---
 title: "新機能 Reporting Services (SSRS) |Microsoft ドキュメント"
-ms.date: 07/02/2017
+ms.date: 10/10/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -9,21 +9,14 @@ ms.technology:
 - reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords:
-- what's new [Reporting Services]
-- Reporting Services, what's new
-- SQL Server Reporting Services, what's new
-- SSRS, what's new
-ms.assetid: bc909063-6b84-4b3a-80d2-e93fc04b4b9d
-caps.latest.revision: 206
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 3a8ed8433d06f9f0250c42f6e5a190bc64e30235
+ms.translationtype: MT
+ms.sourcegitcommit: 52c2f8fae79884b025e067b7d628cd3154ba93f4
+ms.openlocfilehash: 323873f42f6d3abd8442683731deef478dd2ebfb
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 
@@ -32,20 +25,32 @@ ms.lasthandoff: 08/09/2017
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
 SQL Server の新機能について学習[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]です。 ここでは、主な機能領域を扱います。新しいアイテムがリリースされた場合は更新します。
-  
+
   新機能 SQL Server の他の領域については、次を参照してください。[の SQL Server 2017 新](../sql-server/what-s-new-in-sql-server-2017.md)または[SQL Server 2016 の新](../sql-server/what-s-new-in-sql-server-2016.md)です。
-  
+
  **ダウンロード** ![download](../analysis-services/media/download.png "download")
- 
-- Power BI Desktop リリース (SQL Server Reporting Services)、および SQL Server Reporting Services での Power BI レポートの技術プレビュー (2017 年 1 月) をダウンロードするには、 **[Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?linkid=839351)**にアクセスします。
-  
--   [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**に移動してください。  
-  
--   Azure アカウントをすでにお持ちですか?  次いで**[ここ](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1enterprisewindowsserver2016/)**から既にインストールされている SQL server 仮想マシンを起動します。  
 
- ![注](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注")現在のリリース ノートについては、次を参照してください。 [SQL Server 2016 リリース ノート](../sql-server/sql-server-2016-release-notes.md)または[Power BI のレポート サーバーのリリース ノート](https://powerbi.microsoft.com/documentation/reportserver-release-notes/)です。
+- SQL Server 2017 Reporting Services をダウンロードするには、  **[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=55252)**です。
 
-Power BI のレポート サーバーについては、次を参照してください。 [Power BI のレポート サーバーの概要](https://powerbi.microsoft.com/documentation/reportserver-get-started/)です。
+現在のリリース ノートについては、次を参照してください。 [SQL Server 2017 年 1 リリース ノート](../sql-server/sql-server-2017-release-notes.md)または[Power BI のレポート サーバーのリリース ノート](https://powerbi.microsoft.com/documentation/reportserver-release-notes/)です。 Power BI のレポート サーバーについては、次を参照してください。 [Power BI のレポート サーバーの概要](https://powerbi.microsoft.com/documentation/reportserver-get-started/)です。
+
+## <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
+
+### <a name="comments-on-reports"></a>レポートのコメント
+
+レポートでコメントが使用できるようになり、分析観点の追加や、他のユーザーとの共同作業ができるようになりました。 コメントに添付ファイルを含めることもできます。
+
+![レポート サーバー内のコメント](media/what-s-new-in-sql-server-reporting-services-ssrs/report-server-comments.png)
+
+詳細については、次を参照してください。[のレポート サーバーでレポートにコメントを追加](https://powerbi.microsoft.com/documentation/reportserver-add-comments/)です。
+
+### <a name="dax-queries-in-reporting-tools"></a>レポート作成ツールで DAX クエリ
+
+レポート ビルダーと SQL Server Data Tools の最新リリースでは、クエリ デザイナーで必要なフィールドをドラッグ アンド ドロップすることで、サポートされている SQL Server Analysis Services 表形式データ モデルに対するネイティブの DAX クエリを作成できます。 [Reporting Services のブログ](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)を参照してください。
+
+### <a name="rest-api-support"></a>REST API のサポート
+
+最新のアプリケーションとカスタマイズの開発を有効にするには、SQL Server Reporting Services は今すぐ完全 OpenAPI 対応 rest ベースの API をサポートします。 完全 API 仕様およびマニュアル今すぐにあります[swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0)です。
 
 ## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>DAX では、今すぐレポート ビルダーおよび SQL Server Data Tools のデザイナー サポートをクエリします。
 
@@ -69,7 +74,7 @@ Power BI のレポート サーバーについては、次を参照してくだ�
   
  ![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
  
- #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] のカスタム ブランド化 
+ #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
   ブランド化パックを使用して、組織のロゴや色で [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] をカスタマイズできます。  
   
   カスタムブランド化の詳細については、「 [Web ポータルのブランド化](http://msdn.microsoft.com/en-us/6dac97f7-02a6-4711-81a3-e850a6b40bf1)」を参照してください。
@@ -106,7 +111,7 @@ Reporting Services モバイル レポートは、多様なフォーム ファ�
  
 詳細については、以下をご覧ください。  
   
--   [SharePoint、Reporting Services サーバー、Reporting Services アドインのサポートされる組み合わせ (SQL Server 2016)](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+-   [SharePoint と Reporting Services サーバーおよびアドインでは、(&) #40; のサポートされる組み合わせSQL Server 2016 &#41;](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 -   [SharePoint 製品用 Reporting Services アドインの検索場所](../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
@@ -131,9 +136,9 @@ Reporting Services モバイル レポートは、多様なフォーム ファ�
   
  ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
   
- 詳細については、「[Power BI レポート サーバーの統合 &#40;構成マネージャー&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)[Power BI ダッシュボードへの Reporting Services のアイテムのピン留め](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)」を参照してください。  
+ 詳細については、次を参照してください。 [Power BI のレポート サーバーの統合 & #40 です。構成マネージャー &#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)と[Power BI ダッシュ ボードにピン留め Reporting Services のアイテム](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)です。  
  
- **PowerPoint のレンダリングとエクスポート:** Microsoft PowerPoint (PPTX) 形式は、[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] の新しい表示拡張機能です。 通常のアプリケーション (レポート ビルダー、レポート デザイナー (SSDT)、および [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]) から PPTX 形式のレポートをエクスポートできます。 たとえば、次の図は [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]のエクスポート メニューを示しています。 
+ **PowerPoint のレンダリングとエクスポート:** Microsoft PowerPoint (PPTX) 形式は、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] の新しい表示拡張機能です。 通常のアプリケーション (レポート ビルダー、レポート デザイナー (SSDT)、および [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]) から PPTX 形式のレポートをエクスポートできます。 たとえば、次の図は [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]のエクスポート メニューを示しています。 
   
  ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
   
@@ -156,7 +161,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 |**サブスクリプションを有効または無効にする**: サブスクリプションを簡単に無効または有効にできる新しいユーザー インターフェイス オプション。 サブスクリプションを無効にしても、スケジュールなどの他の構成プロパティは維持され、簡単に有効にすることができます。<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> 詳細については、「 [レポートとサブスクリプションの処理を無効化または一時停止する](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)」を参照してください。|ネイティブ モード|  
 |**サブスクリプションの説明**: 新しいサブスクリプションを作成するときに、サブスクリプションのプロパティの一部として、レポートの説明を含めることができるようになりました。 説明はサブスクリプションの概要ページに表示されます。|SharePoint モードとネイティブ モード|  
 |**サブスクリプションの所有者の変更**: サブスクリプションの所有者をすばやく変更できる拡張ユーザー インターフェイス。 以前のバージョンの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、管理者はスクリプトを使用してサブスクリプションの所有者を変更できます。 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] リリース以降では、ユーザー インターフェイスまたはスクリプトを使用してサブスクリプションの所有者を変更できます。 サブスクリプションの所有者の変更は、ユーザーが組織を離れたり、組織での役割が変更されたりしたときに行う一般的な管理タスクです。|SharePoint モードとネイティブ モード|  
-|**ファイル共有サブスクリプションの共有資格情報**: [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のファイル共有サブスクリプションには、現在&amp;2; つのワークフローがあります。<br /><br /> このリリースでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 管理者が&amp;1; つのファイル共有アカウントを構成し、そのアカウントを&amp;1; つ以上のサブスクリプションで使用できるようになりました。 ファイル共有アカウントは、ネイティブ モードの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーで **[ファイル共有アカウントの指定]**を使用して構成します。その後、サブスクリプション構成ページで、ユーザーが **[ファイル共有アカウントの使用]**を選択します。<br /><br /> 個々のサブスクリプションに、宛先のファイル共有の資格情報を具体的に構成します。<br /><br /> この&2; つの方法を組み合わせて、一部のファイル共有サブスクリプションでは管理者が構成したファイル共有アカウントを使用し、他のサブスクリプションでは特定の資格情報を使用することもできます。|ネイティブ モード|  
+|**ファイル共有サブスクリプションの共有資格情報**: [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のファイル共有サブスクリプションには、現在&2; つのワークフローがあります。<br /><br /> このリリースでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 管理者が&1; つのファイル共有アカウントを構成し、そのアカウントを&1; つ以上のサブスクリプションで使用できるようになりました。 ファイル共有アカウントは、ネイティブ モードの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーで **[ファイル共有アカウントの指定]**を使用して構成します。その後、サブスクリプション構成ページで、ユーザーが **[ファイル共有アカウントの使用]**を選択します。<br /><br /> 個々のサブスクリプションに、宛先のファイル共有の資格情報を具体的に構成します。<br /><br /> この&2; つの方法を組み合わせて、一部のファイル共有サブスクリプションでは管理者が構成したファイル共有アカウントを使用し、他のサブスクリプションでは特定の資格情報を使用することもできます。|ネイティブ モード|  
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
  新しいリリースの SSDT には、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]用のプロジェクト テンプレート (レポート サーバー プロジェクト ウィザードとレポート サーバー プロジェクト) が含まれています。 SSDT のダウンロードについては、 [SQL Server Data Tools for Visual Studio 2015](http://go.microsoft.com/fwlink/?LinkId=827542)に関するページをご覧ください。  
@@ -175,7 +180,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
  ![レポート データ ペインで、パラメーター ペインのパラメーター リスト](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "レポート データ ペインで、パラメーター ペインのパラメーター リスト")  
 
   
-**高 DPI サポート:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)]高 DPI (インチあたりのドット数) スケーリングとデバイスをサポートします。  高 DPI の詳細については、次の記事をご覧ください。  
+**High DPI のサポート:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] では、高 DPI (インチあたりのドット数) スケーリングと高 DPI デバイスをサポートします。  高 DPI の詳細については、次の記事をご覧ください。  
   
 -   [Windows 8.1 の DPI スケーリング拡張機能](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
   
@@ -190,6 +195,6 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 [SQL Server 2016 の各エディションがサポートする Reporting Services の機能](http://msdn.microsoft.com/en-us/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [Reporting Services のアップグレードと移行](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
-[Power BI のレポート サーバー](https://powerbi.microsoft.com/documentation/reportserver-get-started/)  
+[Power BI レポート サーバー](https://powerbi.microsoft.com/documentation/reportserver-get-started/)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)

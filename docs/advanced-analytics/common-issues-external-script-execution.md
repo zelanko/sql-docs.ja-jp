@@ -2,7 +2,7 @@
 title: "SQL Server の外部スクリプトの実行に関する一般的な問題 |Microsoft ドキュメント"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 08/20/2017
+ms.date: 10/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 1837605f8eaf59224b90a2a00f7dffa32a6d63b1
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 2be854d38728670d5f68325da0bcf8136aef53f9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>SQL Server の外部スクリプトの実行に関する一般的な問題
@@ -92,7 +92,7 @@ R をインストールするボリュームが短いファイル名をサポー
 > [!NOTE] 
 > この制約はその後のリリースで除去されました。 この問題が発生した場合は、次のいずれかをインストールします。
 > * SQL Server 2016 SP1 および CU1: [SQL Server の累積更新プログラム 1](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1)です。
-> * SQL Server 2016 RTM、Service Pack 3、およびそのこの[修正プログラム](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3)、これは要求時に使用します。
+> * SQL Server 2016 RTM、累積的な更新プログラム 3、およびそのこの[修正プログラム](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3)、これは要求時に使用します。
 
 #### <a name="the-user-group-for-launchpad-cannot-log-on-locally"></a>スタート パッドのユーザー グループがローカルでログオンできません。
 
@@ -102,7 +102,7 @@ SQL Server が Windows ユーザー グループを作成する機械学習サ�
 
 問題を解決するには、グループ **SQLRUserGroup** に**ローカルのログオンを許可する**システム権限があることを確認します。
 
-詳細については、「 [Windows サービス アカウントと権限の構成](https://msdn.microsoft.com/library/ms143504.aspx#Windows)」を参照してください。
+詳細については、次を参照してください。[構成の Windows サービス アカウントと権限](https://msdn.microsoft.com/library/ms143504.aspx#Windows)です。
 
 #### <a name="improper-setup-leading-to-mismatched-dlls"></a>先頭の不一致の Dll に不適切なセットアップ
 
@@ -110,19 +110,19 @@ SQL Server が Windows ユーザー グループを作成する機械学習サ�
 
 この問題を避けるためには、必ずサーバー インスタンスとして同じパッチ レベルに新機能をインストールします。
 
-**アップグレードを間違ったやり方**:
+**間違ったやり方をアップグレードする:**
 
 1. R Services なしの SQL Server 2016 をインストールします。
 2. SQL Server 2016 Cumulative Update 2 にアップグレードします。
 3. R Services (In-database) をインストールするには、RTM メディアを使用します。
 
-**アップグレードするための正しい方法**:
+**アップグレードを適切な方法:**
 
 1. R Services なしの SQL Server 2016 をインストールします。
 2. SQL Server 2016 を必要な修正プログラムのレベルにアップグレードします。 たとえば、Service Pack 1 とし、累積更新プログラム 2 をインストールします。
 3. 修正レベルで機能を追加するに SP1 および CU2 のセットアップを再実行し、R Services (In-database) を選択します。 
 
-#### <a name="check-to-see-whether-a-user-has-rights-to-run-external-scripts"></a>ユーザーが外部のスクリプトを実行する権限を持っているかどうかを確認してください。
+#### <a name="check-whether-a-user-has-rights-to-run-external-scripts"></a>ユーザーが外部のスクリプトを実行する権限を持っているかどうかを確認します。
 
 スタート パッドが正しく構成されている場合でもは、ユーザーが R または Python スクリプトを実行するアクセス許可を持たない場合、エラーを返します。
 
@@ -131,8 +131,10 @@ SQL Server が Windows ユーザー グループを作成する機械学習サ�
 SQL Server Management Studio での問題を解決するのには、セキュリティ管理者は、次のスクリプトを実行しても、SQL ログインまたは Windows ユーザー アカウントに変更できます。
 
 ```SQL
-GRANT EXECUTE ANY EXTERNAL SCRIPT
+GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 ```
+
+詳細については、次を参照してください。 [GRANT (TRANSACT-SQL](../t-sql/statements/grant-transact-sql.md)です。
 
 ### <a name="common-launchpad-errors"></a>スタート パッドの一般的なエラー
 
@@ -212,17 +214,17 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT
 
 ## <a name="r-script-issues"></a>R スクリプトの問題
 
-このセクションには、R スクリプトを実行し、R スクリプトのエラーに固有のいくつかの一般的な問題が含まれています。 一覧ではありません、包括的な R パッケージが多数あるし、エラーは、同じの R パッケージのバージョン間で異なる場合があります。 R スクリプトのエラーを投稿することをお勧め、 [Microsoft R Server フォーラム](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)、関連するすべての製品をサポートする: R Services (In-database)、Python、Microsoft R クライアント、および Microsoft R Server と Machine Learning サービス。
+このセクションには、R スクリプトを実行し、R スクリプトのエラーに固有のいくつかの一般的な問題が含まれています。 一覧ではありません、包括的な R パッケージが多数あるし、エラーは、同じの R パッケージのバージョン間で異なる場合があります。 R スクリプトのエラーを投稿することをお勧め、 [Microsoft R Server フォーラム](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR)をサポートする、機械学習 R Services (In-database)、Python、Microsoft R クライアント、および Microsoft R でマシン学習サービスで使用されるコンポーネントサーバー。
 
 ### <a name="multiple-r-instances-on-the-same-computer"></a>同じコンピューター上の複数の R インスタンス
 
-R の複数の配布、同じコンピューターにインストールするかの異なるバージョン同じ R パッケージの複数のコピーをインストールするには簡単です。 たとえば、Machine Learning Server (スタンドアロン) と Machine Learning Services (In-database) の両方をインストールする場合、インストーラーは別のバージョンの R ライブラリを作成します。 
+さまざまなバージョンで、同じの R パッケージの複数のコピーと同様に、同じコンピューター上の R の複数のディストリビューション気づいたらやすいことができます。 たとえば、Machine Learning Server (スタンドアロン) と Machine Learning Services (In-database) の両方をインストールする場合、インストーラーは別のバージョンの R ライブラリを作成します。 
 
-重複は、コマンドラインからスクリプトを実行しようとして、使用しているどのライブラリがわからない場合に、わかりにくくなる可能性がします。 誤って別のライブラリにパッケージをインストールして SQL Server から実行しようとすると、パッケージを見つけることができません混乱を招くできます。
+コマンドラインからスクリプトを実行しようとして、使用しているどのライブラリがわからない場合に、このような重複は問題になります。 または、誤って別のライブラリにパッケージをインストールし、後で不思議に思えるかもしれません SQL Server からパッケージを見つけられない理由があります。
 
 + 新しいパッケージのインストールまたはの R ライブラリとツールがインストールされている SQL Server インスタンスを使用するため除くトラブルシューティングなど、限られた場合を直接使用しないでください。 
-+ インストールすることができます、R コマンド ライン ツールを使用する必要がある場合[Microsoft R クライアント](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client)です。
-+ SQL Server では、R パッケージのデータベース内の管理を提供します。 これは、ユーザー間で共有できる R パッケージ ライブラリを作成する最も簡単な方法です。 詳細については、次を参照してください。 [R パッケージの管理をインストールおよび](r/installing-and-managing-r-packages.md)です。
++ インストールすることができます、R コマンド ライン ツールを使用する必要がある場合[Microsoft R クライアント](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client)です。 
++ SQL Server では、R パッケージのデータベース内の管理を提供します。 これは、ユーザー間で共有できる R パッケージ ライブラリを作成する最も簡単な方法です。 詳細については、次を参照してください。 [for SQL Server の R パッケージの管理](r/r-package-management-for-sql-server-r-services.md)です。
 
 ### <a name="avoid-clearing-the-workspace-while-youre-running-r-in-a-sql-compute-context"></a>SQL のコンピューティング コンテキストで R を実行しているときに、ワークスペースをオフにしないで
 
@@ -325,9 +327,9 @@ EXEC sp_execute_external_script @language = N'R',
 
 ## <a name="next-steps"></a>次の手順
 
-[機械学習のトラブルシューティングと既知の問題](machine-learning-troubleshooting-faq.md)
+[Machine Learning のサービスのトラブルシューティングと既知の問題](machine-learning-troubleshooting-faq.md)
 
-[Machine Learning のトラブルシューティングのためのデータの収集](data-collection-ml-troubleshooting-process.md)
+[機械学習のトラブルシューティングのためのデータの収集](data-collection-ml-troubleshooting-process.md)
 
 [アップグレードとインストールに関してよく寄せられる質問](r/upgrade-and-installation-faq-sql-server-r-services.md)
 

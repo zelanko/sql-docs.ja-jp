@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 545d3b5a0635c80f55aeb5b0a7a4e1804098e19c
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 76d0725816d3795715d396639bd213652bdf40f3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="lower-transact-sql"></a>LOWER (Transact-SQL)
@@ -54,29 +54,6 @@ LOWER ( character_expression )
  **varchar**または**nvarchar**  
   
 ## <a name="examples"></a>使用例  
- 次の例では、$11 ～ $20 の価格の製品名を選択する際に、`LOWER` 関数、`UPPER` 関数、`UPPER` 関数を入れ子にしている `LOWER` 関数を使用しています。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
-  
-```  
-SELECT LOWER(SUBSTRING(Name, 1, 20)) AS Lower,   
-   UPPER(SUBSTRING(Name, 1, 20)) AS Upper,   
-   LOWER(UPPER(SUBSTRING(Name, 1, 20))) As LowerUpper  
-FROM Production.Product  
-WHERE ListPrice between 11.00 and 20.00;  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
-Lower                    Upper                    LowerUpper  
----------------------    ---------------------    --------------------  
-minipump                 MINIPUMP                 minipump 
-taillights - battery     TAILLIGHTS - BATTERY     taillights - battery  
-  
-(2 row(s) affected)
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、$11 ～ $20 の価格の製品名を選択する際に、`LOWER` 関数、`UPPER` 関数、`UPPER` 関数を入れ子にしている `LOWER` 関数を使用しています。  
   
 ```  
