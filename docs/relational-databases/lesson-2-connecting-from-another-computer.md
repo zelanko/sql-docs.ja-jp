@@ -60,7 +60,7 @@ ms.lasthandoff: 06/22/2017
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  **SQL Server 構成マネージャー**で **SQL Server ネットワークの構成**を展開し、 **** *<InstanceName>*をクリックします。  
+2.  **SQL Server 構成マネージャー**で **[SQL Server ネットワークの構成]**を展開し、 をクリックします **プロトコル** *<InstanceName>*。  
   
     既定のインスタンス (名前のないインスタンス) は、 **MSSQLSERVER**として一覧表示されます。 名前付きインスタンスをインストールした場合は、指定した名前が表示されます。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] は **SQLEXPRESS**としてしてインストールされます (セットアップ中に名前を変更した場合を除く)。  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-open-a-port-in-the-windows-firewall-for-tcp-access-windows-7"></a>TCP アクセス用に Windows ファイアウォールのポートを開くには (Windows 7)  
   
-1.  [スタート] ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックして「 **WF.msc**」と入力し、 **[OK]**をクリックします。 ****  
+1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックして「 **WF.msc**」と入力し、 **[OK]** をクリックします。  
   
 2.  **[セキュリティが強化された Windows ファイアウォール]**の左ペインの **[受信の規則]**をクリックし、[操作] ペインの **[新規の規則]** をクリックします。  
   

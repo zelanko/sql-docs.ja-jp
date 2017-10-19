@@ -55,7 +55,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  プラス記号をクリックして **[ファセット]** フォルダーを展開します。  
   
-5.  プロパティを表示するファセットを右クリックし、 **[プロパティ]**をクリックします。 **&lt;ファセット名&gt;**** ダイアログ ボックスで使用可能なオプションの詳細については、「 [[ファセットのプロパティ] ダイアログ ボックスの [全般] ページ](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md)」、「 [[ファセットのプロパティ] ダイアログ ボックスの [依存ポリシー] ページ](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md)」、および「 [[ファセットのプロパティ] ダイアログ ボックスの [依存条件] ページ](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md)」をご覧ください。  
+5.  プロパティを表示するファセットを右クリックし、 **[プロパティ]**をクリックします。 **ファセットのプロパティ–***ファセット名* ダイアログ ボックスで使用可能なオプションの詳細については、「 [[ファセットのプロパティ] ダイアログ ボックスの [全般] ページ](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md)」、「 [[ファセットのプロパティ] ダイアログ ボックスの [依存ポリシー] ページ](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md)」、および「 [[ファセットのプロパティ] ダイアログ ボックスの [依存条件] ページ](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md)」をご覧ください。  
   
 6.  完了したら、 **[閉じる]**をクリックします。  
   

@@ -39,7 +39,7 @@ INSERT INTO Person VALUES
    ,('P3','Joe',N'<SomeTag attr3="data" PersonID="P">content</SomeTag>');  
 ```  
   
- このクエリでは、 `Person` テーブルから列を取得します。 `Overflow` 列には *AttributeName* が指定されていませんが、ユニバーサル テーブルの列名の一部として、 **  ディレクティブ `XMLTEXT` が設定されています。  
+ このクエリでは、 `Person` テーブルから列を取得します。 `Overflow` 列には *AttributeName* が指定されていませんが、ユニバーサル テーブルの列名の一部として、 *ディレクティブ* `XMLTEXT` が設定されています。  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  
@@ -102,7 +102,7 @@ FOR XML EXPLICIT;
   
  *AttributeName* と `xmltext` ディレクティブの両方を指定した場合、<`overflow`> 要素の属性は、囲み要素である <`Parent`> のサブ要素の属性として追加されます。 *AttributeName* に指定された名前がサブ要素の名前になります。  
   
- このクエリでは、*AttributeName* (<`overflow`>) と `xmltext` ディレクティブの両方が指定されています。**  
+ このクエリでは、*AttributeName* (<`overflow`>) と `xmltext` ディレクティブ *の両方が指定されています。*  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  

@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  **[監査]** フォルダーを展開します。  
   
-3.  表示する監査ログを右クリックし、 **[監査ログの表示]**をクリックします。 **server_name**** ダイアログ ボックスが開きます。 詳細については、「 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)」を参照してください。  
+3.  表示する監査ログを右クリックし、 **[監査ログの表示]**をクリックします。 [**ジョブ カテゴリの管理***server_name*] ダイアログ ボックスが開きます。 詳細については、「 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)」を参照してください。  
   
 4.  完了したら、 **[閉じる]**をクリックします。  
   
