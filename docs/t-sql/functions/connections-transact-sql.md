@@ -53,7 +53,7 @@ ms.lasthandoff: 09/19/2017
   
 いくつか含むレポートを表示する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]統計情報、実行、接続試行を含む**sp_monitor**です。
   
-@@MAX_CONNECTIONS サーバーに同時に許可される接続の最大数です。 @@CONNECTIONS そのため、ログインが試行されるたびにインクリメントされます @@CONNECTIONS よりも大きくすることは @@MAX_CONNECTIONSします。
+@@MAX_CONNECTIONS サーバーに同時に許可される接続の最大数です。 @@CONNECTIONS そのため、ログインが試行されるたびにインクリメントされます @@CONNECTIONS よりも大きくすることは @@MAX_CONNECTIONS します。
   
 ## <a name="examples"></a>使用例  
 次の例では、現在のシステム上の日付と時刻におけるログイン試行数を返します。
