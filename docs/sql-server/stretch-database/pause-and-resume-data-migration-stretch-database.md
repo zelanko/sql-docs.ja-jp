@@ -44,7 +44,7 @@ ms.lasthandoff: 04/11/2017
 ### <a name="use-transact-sql-to-pause-data-migration"></a>Transact-SQL を使用してデータ移行を一時停止する  
  次のコマンドを実行します。  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <Stretch-enabled table name>  
@@ -63,7 +63,7 @@ GO
 ### <a name="use-transact-sql-to-resume-data-migration"></a>Transact-SQL を使用してデータ移行を再開する  
  次のコマンドを実行します。  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <Stretch-enabled table name>   

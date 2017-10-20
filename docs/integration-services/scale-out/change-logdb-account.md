@@ -34,7 +34,7 @@ ms.lasthandoff: 08/03/2017
 [カタログ] のストアド プロシージャを呼び出します。[update_logdb_info] Sql Server 名と接続文字列パラメーターとして使用します。
 
 #### <a name="example"></a>例
-```tsql
+```sql
 SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
 SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
 EXEC [internal].[update_logdb_info] @serverName, @connectionString

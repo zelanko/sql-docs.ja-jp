@@ -85,7 +85,7 @@ ms.lasthandoff: 07/29/2017
   
  次に、テーブル全体を移行し、データ移行をすぐに開始する例を示します。  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <table name>  
@@ -95,7 +95,7 @@ GO
   
  次に、 `dbo.fn_stretchpredicate` インライン テーブル値関数によって識別される行だけを移行し、データ移行を延期する例を示します。 フィルター関数の詳細については、「 [フィルター関数を使用して、移行する行を選択する](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)」を参照してください。  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <table name>  
@@ -112,7 +112,7 @@ ALTER TABLE <table name>
   
  次に、テーブル全体を移行し、データ移行をすぐに開始する例を示します。  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 CREATE TABLE <table name>
@@ -123,7 +123,7 @@ GO
   
  次に、 `dbo.fn_stretchpredicate` インライン テーブル値関数によって識別される行だけを移行し、データ移行を延期する例を示します。 フィルター関数の詳細については、「 [フィルター関数を使用して、移行する行を選択する](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)」を参照してください。  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 CREATE TABLE <table name> 

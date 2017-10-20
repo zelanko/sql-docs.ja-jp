@@ -84,7 +84,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="analyze-xml-validation-output-with-a-transact-sql-query"></a>XML 検証の出力を Transact-SQL クエリで分析する  
  XML 検証の出力に大量のエラーが含まれている場合、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に出力を読み込むことができます。 そのうえで、WHERE、GROUP BY、ORDER BY、JOINなどの T-SQL 言語の機能をフル活用して、エラー一覧を分析できます。  
   
-```tsql  
+```sql  
 DECLARE @xml XML;  
   
 SELECT @xml = XmlDoc     

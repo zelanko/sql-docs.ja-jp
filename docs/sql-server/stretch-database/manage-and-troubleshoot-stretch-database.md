@@ -38,7 +38,7 @@ ms.lasthandoff: 04/11/2017
  
  SQL Server で Stretch 対応テーブルが使用する領域の量を表示するには、次のステートメントを実行します。
  
- ```tsql
+ ```sql
 USE <Stretch-enabled database name>;
 GO
 EXEC sp_spaceused '<Stretch-enabled table name>', 'true', 'LOCAL_ONLY';
@@ -65,7 +65,7 @@ GO
  
 Azure で Stretch 対応テーブルが使用する領域の量を表示するには、次のステートメントを実行します。
  
- ```tsql
+ ```sql
 USE <Stretch-enabled database name>;
 GO
 EXEC sp_spaceused '<Stretch-enabled table name>', 'true', 'REMOTE_ONLY';
@@ -119,7 +119,7 @@ GO
   
 たとえば、次のクエリではローカルの結果だけが返されます。  
   
- ```tsql  
+ ```sql  
 USE <Stretch-enabled database name>;
 GO
 SELECT * FROM <Stretch_enabled table name> WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = LOCAL_ONLY) WHERE ... ;

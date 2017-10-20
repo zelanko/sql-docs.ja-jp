@@ -84,7 +84,7 @@ GO
   
 3.  Stretch Database 用に SQL Server データベースを構成するには、データベースにデータベース マスター キーが必要です。 データベース マスター キーは、Stretch Database がリモート データベースへの接続に使用する資格情報をセキュリティで保護します。 新しいデータベース マスター キーを作成する例を次に示します。  
   
-    ```tsql  
+    ```sql  
     USE <database>; 
     GO  
   
@@ -103,7 +103,7 @@ GO
         
         新しい資格情報を作成する例を次に示します。
   
-        ```tsql  
+        ```sql  
         CREATE DATABASE SCOPED CREDENTIAL <db_scoped_credential_name>  
             WITH IDENTITY = '<identity>' , SECRET = '<secret>' ;
         GO   
@@ -127,7 +127,7 @@ GO
   
     2.  CREDENTIAL 引数で既存の管理者資格情報を指定するか、または FEDERATED_SERVICE_ACCOUNT = ON を指定します。 次の例では既存の資格情報を指定しています。  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE <database name>  
         SET REMOTE_DATA_ARCHIVE = ON  
             (  

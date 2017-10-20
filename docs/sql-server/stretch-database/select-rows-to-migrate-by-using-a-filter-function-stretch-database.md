@@ -48,7 +48,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="basic-requirements-for-the-filter-function"></a>フィルター関数の基本的な要件  
  Stretch Database のフィルター述語に必要なインライン テーブル値関数は次の例のようになります。  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datatype1, @column2 datatype2 [, ...n])  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -94,7 +94,7 @@ RETURN  SELECT 1 AS is_eligible
   
      次の例では、 *date* 列の値が &lt; 1/1/2016 であるかどうかを確認します。  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datetime)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -116,7 +116,7 @@ RETURN  SELECT 1 AS is_eligible
   
      次の例では、 *shipment_status*  列の値が `IN (N'Completed', N'Returned', N'Cancelled')`であるかどうかを確認します。  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate(@column1 nvarchar(15))  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -160,7 +160,7 @@ RETURN  SELECT 1 AS is_eligible
 ## <a name="add-a-filter-function-to-a-table"></a>フィルター関数をテーブルに追加する  
  **ALTER TABLE** ステートメントを実行し、 **FILTER_PREDICATE** パラメーターの値として既存のインライン テーブル値関数を指定して、テーブルにフィルター関数を追加します。 例:  
   
-```tsql  
+```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
     FILTER_PREDICATE = dbo.fn_stretchpredicate(column1, column2),  
     MIGRATION_STATE = <desired_migration_state>  
@@ -185,7 +185,7 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
 
 たとえば、次の例のように 3 部構成の列名を指定すると、ステートメントは正常に実行されますが、テーブルに対する後続のクエリは失敗します。
 
-```tsql
+```sql
 ALTER TABLE SensorTelemetry 
   SET ( REMOTE_DATA_ARCHIVE = ON (
     FILTER_PREDICATE=dbo.fn_stretchpredicate(dbo.SensorTelemetry.ScanDate),
@@ -195,7 +195,7 @@ ALTER TABLE SensorTelemetry
 
 代わりに、次の例で示すように、1 部構成の列名を持つフィルター関数を指定します。
 
-```tsql
+```sql
 ALTER TABLE SensorTelemetry 
   SET ( REMOTE_DATA_ARCHIVE = ON  (
     FILTER_PREDICATE=dbo.fn_stretchpredicate(ScanDate),
@@ -209,7 +209,7 @@ ALTER TABLE SensorTelemetry
   
 1. 移行の方向を反転し、既に移行されたデータを戻します。 この操作は開始すると取り消すことはできません。 また、送信データ転送 (エグレス) のための Azure のコストも発生します。 詳細については、「 [Data Transfers (データ転送) の料金詳細](https://azure.microsoft.com/pricing/details/data-transfers/)」を参照してください。  
   
-    ```tsql  
+    ```sql  
     ALTER TABLE <table name>  
         SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;   
     ```  
@@ -220,7 +220,7 @@ ALTER TABLE SensorTelemetry
   
 4. 関数をテーブルに追加し、Azure へのデータ移行を再開します。  
   
-    ```tsql  
+    ```sql  
     ALTER TABLE <table name>  
         SET ( REMOTE_DATA_ARCHIVE  
             (           
@@ -233,7 +233,7 @@ ALTER TABLE SensorTelemetry
 ## <a name="filter-rows-by-date"></a>日付による行のフィルター  
  次の例では、 **date** 列に 2016 年 1 月 1 日より前の値が含まれている行を移行します。  
   
-```tsql  
+```sql  
 -- Filter by date  
 --  
 CREATE FUNCTION dbo.fn_stretch_by_date(@date datetime2)  
@@ -248,7 +248,7 @@ GO
 ## <a name="filter-rows-by-the-value-in-a-status-column"></a>status 列の値による行のフィルター  
  次の例では、 **status** 列に指定した値のいずれかが含まれている行を移行します。  
   
-```tsql  
+```sql  
 -- Filter by status column  
 --  
 CREATE FUNCTION dbo.fn_stretch_by_status(@status nvarchar(128))  
@@ -269,7 +269,7 @@ GO
   
  **systemEndTime** 列に 2016 年 1 月 1 日より前の値が含まれている行を移行する、次の例のようなフィルター関数から始めます。  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_StretchBySystemEndTime20160101(@systemEndTime datetime2)   
 RETURNS TABLE   
 WITH SCHEMABINDING    
@@ -281,7 +281,7 @@ RETURN SELECT 1 AS is_eligible
   
  フィルター関数をテーブルに適用します。  
   
-```tsql  
+```sql  
 ALTER TABLE <table name>   
 SET (   
         REMOTE_DATA_ARCHIVE = ON   
@@ -302,7 +302,7 @@ SET (
   
 3.  必要に応じて、 **DROP FUNCTION**を呼び出して不要になった以前のフィルター関数を削除します。 (この手順は例には含まれていません)。  
   
-```tsql  
+```sql  
 BEGIN TRAN  
 GO  
         /*(1) Create new predicate function definition */  
@@ -332,7 +332,7 @@ COMMIT ;
   
 -   次の例では、AND 論理演算子を使用して 2 つのプリミティブ条件を結合しています。  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate((@column1 datetime, @column2 nvarchar(15))  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -350,7 +350,7 @@ COMMIT ;
   
 -   次の例では、複数の条件と CONVERT による決定論的変換を使用しています。  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example1(@column1 datetime, @column2 int, @column3 nvarchar)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -363,7 +363,7 @@ COMMIT ;
   
 -   次の例では、算術演算子と関数を使用しています。  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example2(@column1 float)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -376,7 +376,7 @@ COMMIT ;
   
 -   次の例では、BETWEEN 演算子と NOT BETWEEN 演算子を使用しています。 BETWEEN 演算子と NOT BETWEEN 演算子を同等の AND 式と OR 式に置き換えた後、結果的に作成される関数がここで説明するルールに準拠するため、この使用方法は有効です。  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example3(@column1 int, @column2 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -390,7 +390,7 @@ COMMIT ;
   
      BETWEEN 演算子と NOT BETWEEN 演算子を同等の AND 式と OR 式に置き換えた結果、置換前の関数は置換後の関数と等しくなっています。  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example4(@column1 int, @column2 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -405,7 +405,7 @@ COMMIT ;
   
 -   非決定論的変換が含まれているため、次の関数は無効です。  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example5(@column1 datetime)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -418,7 +418,7 @@ COMMIT ;
   
 -   非決定論的な関数呼び出しが含まれているため、次の関数は無効です。  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example6(@column1 datetime)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -431,7 +431,7 @@ COMMIT ;
   
 -   サブクエリが含まれているため、次の関数は無効です。  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example7(@column1 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -444,7 +444,7 @@ COMMIT ;
   
 -   関数を定義するときに、代数演算子または組み込み関数を使用する式は定数に評価する必要があるため、次の関数は無効です。 代数式や関数呼び出しに列参照を含めることはできません。  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example8(@column1 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -465,7 +465,7 @@ COMMIT ;
   
 -   BETWEEN 演算子を同等の AND 式に置き換えると、ここで説明するルールに違反するため、次の関数は無効です。  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example10(@column1 int, @column2 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING  
@@ -478,7 +478,7 @@ COMMIT ;
   
      BETWEEN 演算子を同等の AND 式に置き換えた結果、置換前の関数は置換後の関数と等しくなっています。 プリミティブ条件で使用できるのは OR 論理演算子だけであるため、この関数は無効です。  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example11(@column1 int, @column2 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -492,7 +492,7 @@ COMMIT ;
 ## <a name="how-stretch-database-applies-the-filter-function"></a>Stretch Database がフィルター関数を適用するしくみ  
  Stretch Database では、CROSS APPLY 演算子を使用してテーブルにフィルター関数を適用し、対象となる行を決定します。 例:  
   
-```tsql  
+```sql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  
 ```  
   
@@ -501,7 +501,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
 ## <a name="replacePredicate"></a>既存のフィルター関数の置き換え  
  以前に指定したフィルター関数を置き換えるには、 **ALTER TABLE** ステートメントをもう一度実行し、 **FILTER_PREDICATE** パラメーターに新しい値を指定します。 例:  
   
-```tsql  
+```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
     FILTER_PREDICATE = dbo.fn_stretchpredicate2(column1, column2),  
     MIGRATION_STATE = <desired_migration_state>  
@@ -523,7 +523,7 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
 ### <a name="example-of-a-valid-replacement"></a>有効な置換の例  
  次の関数が現在のフィルター関数であると仮定します。  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_stretchpredicate_old(@column1 datetime, @column2 int)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -537,7 +537,7 @@ GO
   
  (元の決算日よりも後の日付を指定した) 新しい日付定数によって関数の制約が減るため、次の関数は有効な置換です。  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_stretchpredicate_new(@column1 datetime, @column2 int)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -552,7 +552,7 @@ GO
 ### <a name="examples-of-replacements-that-arent-valid"></a>無効な置換の例  
  (元の決算日よりも前の日付を指定した) 新しい日付定数によって関数の制約が減らないため、次の関数は無効な置換です。  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_notvalidreplacement_1(@column1 datetime, @column2 int)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -566,7 +566,7 @@ GO
   
  比較演算子の 1 つが削除されているため、次の関数は無効な置換です。  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_notvalidreplacement_2(@column1 datetime, @column2 int)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -580,7 +580,7 @@ GO
   
  AND 論理演算子を使用して新しい条件が追加されているため、次の関数は無効な置換です。  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_notvalidreplacement_3(@column1 datetime, @column2 int)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -596,7 +596,7 @@ GO
 ## <a name="remove-a-filter-function-from-a-table"></a>テーブルからのフィルター関数の削除  
  選択した行ではなく、テーブル全体を移行するには、 **FILTER_PREDICATE**  を null に設定して既存の関数を削除します。 例:  
   
-```tsql  
+```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
     FILTER_PREDICATE = NULL,  
     MIGRATION_STATE = <desired_migration_state>  

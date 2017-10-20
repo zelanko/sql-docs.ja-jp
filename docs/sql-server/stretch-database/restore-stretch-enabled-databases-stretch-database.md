@@ -73,7 +73,7 @@ Azure ポータルを使用して、削除された Azure データベースを�
   
     -   リモート データのコピーを作成するかどうかを指定し、コピーに接続します (推奨)。  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     EXEC sp_rda_reauthorize_db

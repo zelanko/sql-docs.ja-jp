@@ -94,7 +94,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="example"></a>例  
  次の例では、cleanup_server_execution_keys ストアド プロシージャを呼び出します。  
   
-```tsql  
+```sql  
 USE [SSISDB]  
 GO  
   

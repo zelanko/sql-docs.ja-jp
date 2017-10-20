@@ -85,7 +85,7 @@ cleanup_server_log
 ## <a name="example"></a>例  
  次の例では、cleanup_server_log ストアド プロシージャを呼び出します。  
   
-```tsql  
+```sql  
 USE [SSISDB]  
 GO  
   

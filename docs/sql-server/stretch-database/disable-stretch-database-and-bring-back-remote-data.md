@@ -69,7 +69,7 @@ ms.lasthandoff: 07/29/2017
 
     このコマンドは取り消すことができません。  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     ALTER TABLE <Stretch-enabled table name>  
@@ -82,7 +82,7 @@ ms.lasthandoff: 07/29/2017
   
 -   テーブルに対する Stretch を無効にして、リモート データを破棄するには、次のコマンドを実行します。  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     ALTER TABLE <Stretch-enabled table name>  
@@ -108,7 +108,7 @@ ms.lasthandoff: 07/29/2017
 ### <a name="use-transact-sql-to-disable-stretch-database-for-a-database"></a>Transact-SQL を使用してデータベースに対する Stretch Database を無効にする  
  次のコマンドを実行します。  
   
-```tsql  
+```sql  
 ALTER DATABASE <Stretch-enabled database name>  
     SET REMOTE_DATA_ARCHIVE = OFF ;  
 GO 
