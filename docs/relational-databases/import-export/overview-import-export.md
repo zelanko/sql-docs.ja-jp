@@ -1,7 +1,7 @@
 ---
 title: "SQL Server および Azure SQL Database のデータをインポートおよびエクスポートする | Microsoft Docs"
 ms.custom: 
-ms.date: 09/12/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,10 +13,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
-ms.openlocfilehash: 3c41be0642b13b63367c5601b716b506808472e7
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 1d37d86ab2e2bac04ceb8ce36fad63ae25f0f92b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>SQL Server および Azure SQL Database のデータをインポートおよびエクスポートする
@@ -31,6 +31,11 @@ ms.lasthandoff: 09/14/2017
 
 ### <a name="use-bcp-from-the-command-prompt"></a>コマンド プロンプトから BCP を使用する
 BCP コマンドライン ユーティリティを使って、データをインポートおよびエクスポートできます。 詳しくは、「[bcp ユーティリティを使用した一括データのインポートとエクスポート](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)」をご覧ください。
+
+### <a name="use-the-import-flat-file-wizard"></a>フラット ファイルのインポート ウィザードを使用する
+インポート ウィザードやエクスポート ウィザードおよびその他のツールで使用可能な構成オプションが必ずしもすべて必要ではない場合、SQL Server Management Studio (SSMS) の**フラット ファイルのインポート ウィザード**を使用して、テキスト ファイルを SQL Server にインポートできます。 詳細については、次の記事をご覧ください。
+- [SQL Server Management Studio 17.3 の新機能](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
+- [SSMS 17.3 の新しいフラット ファイルのインポート ウィザードの概要](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
 ### <a name="use-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを使用する
 SQL Server インポートおよびエクスポート ウィザードを使って、さまざまなソースとデスティネーションの間で、データをインポートおよびエクスポートできます。 ウィザードを使うには、SQL Server Integration Services (SSIS) または SQL Server Data Tools (SSDT) がインストールされている必要があります。 詳しくは、「[SQL Server インポートおよびエクスポート ウィザードを使用してデータをインポートおよびエクスポートする](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」をご覧ください。

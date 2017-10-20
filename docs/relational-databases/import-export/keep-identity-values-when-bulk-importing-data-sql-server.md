@@ -18,11 +18,11 @@ caps.latest.revision: 22
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 484b11226fbf523d7d2ba1dac47a12b04ef6eec9
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 2a20a9d0b7b8cc5aa32863bc687f7095ce33623a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>データの一括インポート時の ID 値の保持 (SQL Server)
@@ -53,7 +53,7 @@ ID 値を含んでいるデータ ファイルを Microsoft SQL Server のイン
 
 ### **サンプル テーブル**<a name="sample_table"></a>
 以下のスクリプトでは、テスト データベースと `myIdentity`という名前のテーブルが作成されます。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -136,7 +136,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
 
-### **Using [bcp](../../tools/bcp-utility.md) and Keeping Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_identity_fmt"></a>
+### **[XML 形式以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)で [bcp](../../tools/bcp-utility.md) を使用して ID 値を維持する方法**<a name="bcp_identity_fmt"></a>
 **-E** スイッチと **-f** スイッチ。  コマンド プロンプトで、次のコマンドを入力します。
 ```
 REM Truncate table (for testing)
@@ -162,7 +162,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
   
-### **Using [bcp](../../tools/bcp-utility.md) and Generated Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_default_fmt"></a>
+### **[XML 形式以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)で [bcp](../../tools/bcp-utility.md) と生成された ID 値を使用する方法**<a name="bcp_default_fmt"></a>
 既定値と **-f** スイッチを使用します。  コマンド プロンプトで、次のコマンドを入力します。
 ```
 REM Truncate table (for testing)
@@ -177,7 +177,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
   
 ### **フォーマット ファイルなしで [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) を使用して ID 値を維持する方法**<a name="bulk_identity"></a>
 **KEEPIDENTITY** 引数。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -194,9 +194,9 @@ BULK INSERT dbo.myIdentity
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
-### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Keeping Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_identity_fmt"></a>
+### **[XML 形式以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)で [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) を使用して ID 値を維持する方法**<a name="bulk_identity_fmt"></a>
 **KEEPIDENTITY** 引数と **FORMATFILE** 引数。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -214,7 +214,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 ### **フォーマット ファイルなしで [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) と生成される ID 値を使用する方法**<a name="bulk_default"></a>
 既定値を使用します。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -230,9 +230,9 @@ BULK INSERT dbo.myIdentity
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
-### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Generated Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_default_fmt"></a>
+### **[XML 形式以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)で [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) と生成された ID 値を使用する方法**<a name="bulk_default_fmt"></a>
 既定値と **FORMATFILE** 引数を使用します。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -249,7 +249,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 ### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Keeping Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_identity_fmt"></a>
 **KEEPIDENTITY** テーブル ヒントと **FORMATFILE** 引数。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -269,7 +269,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
  
 ### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Generated Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_default_fmt"></a>
 既定値と **FORMATFILE** 引数を使用します。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
-```tsql
+```sql
 USE TestDatabase;
 GO
 

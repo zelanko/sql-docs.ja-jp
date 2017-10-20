@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
-ms.openlocfilehash: 3d753f75344e4958d36d214fcc74957204579088
+ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
+ms.openlocfilehash: 6cc679441602d4aa1d125c2f61f9d538e3b716a2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>データベース エンジンの新機能 - SQL Server 2017
@@ -39,11 +39,11 @@ ms.lasthandoff: 09/12/2017
 - 新世代のクエリ処理では、最適化戦略がアプリケーション ワークロードの実行時条件に適用される点が改善されています。 **アダプティブ クエリ処理**機能ファミリのこの最初のバージョンでは、3 つの新しい改善点があります。**バッチ モード適応型結合**、**バッチ モード メモリ許可フィードバック**、そして複数ステートメントのテーブル値関数の**インターリーブ実行**です。  「[Microsoft SQL データベースでのアダプティブ クエリの処理](../relational-databases/performance/adaptive-query-processing.md)」を参照してください。
 - 自動チューニングは、潜在的なクエリ パフォーマンスの問題に関する洞察を提供し、解決策を推奨して、特定された問題を自動的に解決するデータベース機能です。 潜在的なパフォーマンスの問題が検出されると必ず、[!INCLUDE[ssnoversion](../includes/ssnoversion.md)] の自動チューニングにより通知されます。また、修正措置を適用したり、[!INCLUDE[ssde-md](../includes/ssde-md.md)]でパフォーマンスの問題を自動修復したりすることも可能です。 詳しくは、「[自動調整](../relational-databases/automatic-tuning/automatic-tuning.md)」をご覧ください。
 - メモリ最適化テーブルでの非クラスター化インデックス ビルドのパフォーマンス向上。 データベース復旧中の MEMORY_OPTIMIZED テーブルにおける bwtree (非クラスター化) インデックス リビルドのパフォーマンスが大幅に最適化されました。 この機能強化により、非クラスター化インデックス使用時のデータベースの復旧時間が大幅に短縮されます。  
-- [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) には、socket_count、cores_per_socket、numa_node_count の 3 つの新しい列があります。
+- [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) には、socket_count、cores_per_socket、numa_node_count の 3 つの新しい列があります。 過度の NUMA はホストの過剰な介入につながり、最終的にパフォーマンスの問題に変わる可能性があるため、これは VM でサーバーを実行する場合に便利です。
 - 新しい列 modified_extent_page_count\, は、データベースの各データベース ファイルの差分変更を追跡するために [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) に導入されました。 新しい列 modified_extent_page_count を使用すると、スマート バックアップ ソリューションをビルドできます。このソリューションは、データベース内の変更されたページの割合がしきい値 (たとえば、70 ～ 80%) を下回る場合は差分バックアップを実行し、それ以外の場合はデータベースの完全バックアップを実行します。
 - SELECT INTO … ON FileGroup - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) で、SELECT INTO TSQL 構文に追加された **ON** キーワードのサポートにより、ユーザーの既定のファイル グループ以外のファイル グループにテーブルを読み込むことができるようになりました。
 - Tempdb セットアップの機能強化 - セットアップ時に、ファイルあたり **256 GB** (262,144 MB) までの初期 tempdb ファイル サイズを指定できるようになりました。ファイル サイズが 1 GB より大きい値に設定されている場合、IFI が有効になっていないと、警告が顧客に表示されます。 指定されたtempdb データ ファイルの初期サイズによっては、セットアップ時間が指数関数的に長くなる可能性がある状況で、ファイルの瞬時初期化 (IFI) を有効にしない場合の影響を理解しておくことが重要です。 IFI はトランザクション ログ サイズには適用されないため、トランザクション ログに大きな値を指定すると、SQL Server サービス アカウントの IFI 設定に関係なく、セットアップ時に tempdb を起動中、セットアップ時間が必ず長くなります。
-- データベースごとのバージョン ストアの使用状況を追跡するために、dmv [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) が新しく導入されました。 この新しい dmv は、tempdb でバージョン ストアの使用状況を監視するときに便利で、tempdb サイズ変更を、運用サーバーでのパフォーマンスの低下やオーバーヘッドなしで、各データベースのバージョン ストア使用要件に基づいて事前に計画できます。
+- データベースごとのバージョン ストアの使用状況を追跡するために、dmv [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) が新たに導入されました。 この新しい dmv は、tempdb でバージョン ストアの使用状況を監視するときに便利で、tempdb サイズ変更を、運用サーバーでのパフォーマンスの低下やオーバーヘッドなしで、各データベースのバージョン ストア使用要件に基づいて事前に計画できます。
 - DBCC LOGINFO と似た VLF 情報を公開し、VLF の数やサイズが原因で発生する可能性があるトランザクション ログの問題や、顧客の shrinkfile に関する問題を監視、警告、および回避するために、DMF [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) が新しく導入されました。
 - ハイエンド サーバーにおける小規模データベースのバックアップ パフォーマンスが向上 - SQL Server でデータベースをバックアップをするとき、バックアップ プロセスでは、バッファー プールを複数回繰り返すことで、継続的 I/O をドレインする必要があります。 このため、バックアップ時間は、データベース サイズだけでなく、アクティブなバッファー プール サイズにも関連します。 SQL Server 2017 では、バックアップが最適化され、バッファー プールの繰り返しが回避されるため、小規模から中規模データベースのバックアップ パフォーマンスが大幅に向上します。 バックアップするページが増加してデータベースのサイズが大きくなり、バッファー プールを繰り返す場合と比べ、バックアップ IO の時間が長くなると、バッファー プールのパフォーマンスの向上の幅が小さくなります。  
 - クエリ ストアが、待機統計概要情報を追跡するようになりました。 クエリ ストアの各クエリの待機統計情報カテゴリを追跡すると、パフォーマンス トラブルシューティング エクスペリエンスのレベルが上がり、クエリ ストアの主要メリットを維持しながら、ワークロードのパフォーマンスとそのボトルネックをさらに細かく把握できます。  

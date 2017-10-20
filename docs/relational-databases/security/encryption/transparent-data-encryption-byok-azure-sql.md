@@ -18,10 +18,10 @@ ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: fddb53ecae2ab1f15ba50a42ea59f30bff740804
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 2950cf2e403cd0afd337c1578d7bbe656f2a6e53
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 10/16/2017
 
 --- 
 
@@ -141,7 +141,7 @@ SQL Database のバックアップの復旧については、「[データベー
 
 すばやいキー復旧を確保し、Azure 以外のデータにアクセスできるようにするには、以下のことをお勧めします。
 - ローカル HSM デバイスのローカルに暗号化キーを作成します (Azure Key Vault に格納できるように、必ず非対称の RSA 2048 キーを作成してください)。
-- 暗号化キー ファイル (.pfx、.byok、または .backup) を Azure Key Vault にインポートします。 
+- 暗号化キー ファイル (.pfx、.byok、または .backup) を Azure Key Vault にインポートします。 想定外のキー削除からの復旧保護のために、[論理的な削除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)が有効な Key Vault を使用することを検討してください。
 - 初めて Azure Key Vault でキーを使用する前に、Azure Key Vault キーのバックアップを作成します。 詳細については、 [Backup-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) コマンドを参照してください。
 - キーに何らかの変更を加える場合 (ACL の追加、タグの追加、キー属性の追加など) は常に、新しい Azure Key Vault キーのバックアップを作成してください。
 - キーのロールオーバーでは、古いデータベース バックアップを復元できるように、Key Vault に**以前のバージョンのキーを残しておきます**。 

@@ -1,7 +1,7 @@
 ---
 title: "クエリ処理アーキテクチャ ガイド | Microsoft Docs"
 ms.custom: 
-ms.date: 05/03/2017
+ms.date: 10/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 70401c6607263bb593d11f0551214d227be1a96a
+ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
+ms.openlocfilehash: 3189dade2df1e1767ba26263960a59d6b8241aa4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
@@ -64,7 +64,7 @@ ms.lasthandoff: 09/07/2017
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーは、リソース コストが最も低い実行プランに限定して選択するわけではありません。妥当なリソース コストで、最も迅速に結果を返すプランを選択します。 たとえば、クエリを並列に処理すれば、直列に処理するよりもリソースを多く使用します。ただし、クエリの完了時間は短縮されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーは、サーバー側の負荷に悪影響がない限り、並列実行プランを使用して結果を返します。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーは、テーブルやインデックスから情報を取り出す複数の方法のリソース コストを算出する場合、分布統計に大きく依存します。 分布統計は、列やインデックスごとに保存されています。 この統計情報は、特定のインデックスや列の値の選択度を表しています。 たとえば、車を表すテーブルの場合、同メーカーの車がいくつもあります。ただし、VIN (車両番号) はそれぞれの車両固有のものです。 VIN のインデックスの方が、メーカーのインデックスよりも選択度が高いと言えます。 インデックス統計が最新でない場合、クエリ オプティマイザーはテーブルの現在の状態に対して最適な選択ができないことがあります。 インデックス統計を最新に保つ方法の詳細については、「クエリのパフォーマンスを向上させるための統計の使用」を参照してください。 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーは、テーブルやインデックスから情報を取り出す複数の方法のリソース コストを算出する場合、分布統計に大きく依存します。 分布統計は、列やインデックスごとに保存されています。 この統計情報は、特定のインデックスや列の値の選択度を表しています。 たとえば、車を表すテーブルの場合、同メーカーの車がいくつもあります。ただし、VIN (車両番号) はそれぞれの車両固有のものです。 VIN のインデックスの方が、メーカーのインデックスよりも選択度が高いと言えます。 インデックス統計が最新でない場合、クエリ オプティマイザーはテーブルの現在の状態に対して最適な選択ができないことがあります。 インデックス統計を最新に維持する方法の詳細については、「[統計](../relational-databases/statistics/statistics.md)」を参照してください。 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーを使用すると、プログラマやデータベース管理者が入力しなくても、データベース内の状態の変化に合わせてデータベース サーバーを動的に調整できるので、クエリ オプティマイザーは不可欠です。 これにより、プログラマはクエリの最終結果の記述だけに重点を置くことができます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーは、ステートメントを実行するたびに、データベースの状態に合わせて効率的な実行プランを構築します。
 
@@ -384,6 +384,7 @@ SELECT *
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
+
 ```tsql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
@@ -1037,4 +1038,5 @@ GO
  [拡張イベント](../relational-databases/extended-events/extended-events.md)  
  [クエリ ストアを使用する際の推奨事項](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [基数推定](../relational-databases/performance/cardinality-estimation-sql-server.md)  
+ [アダプティブ クエリ処理](../relational-databases/performance/adaptive-query-processing.md)
 

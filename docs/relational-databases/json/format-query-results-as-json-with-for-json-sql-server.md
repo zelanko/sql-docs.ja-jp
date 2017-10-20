@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: bfda43cbc97a641a5e2654f7cb4c92cdddaf1532
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 8ee99c52515908e93a44e936504fd8ccbd74793f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>FOR JSON を使用してクエリ結果を JSON として書式設定する (SQL Server)
@@ -35,18 +35,18 @@ ms.lasthandoff: 07/31/2017
   
 -   JSON 出力の形式を継続して完全に制御するには、**FOR JSON PATH** を使用します。 ラッパー オブジェクトを作成して、複雑なプロパティを入れ子にすることができます。  
   
--   SELECT ステートメントの構造に基づいて JSON 出力を自動的に書式設定するには、**FOR JSON AUTO** を使用します。  
+-   SELECT ステートメントの構造に基づいて JSON 出力を自動的に形式設定するには、**FOR JSON AUTO** を使用します。  
   
 **FOR JSON** 句とその出力を使用した **SELECT** ステートメントの例を次に示します。
   
- ![JSON の](../../relational-databases/json/media/jsonslides2forjson.png "JSON の")  
+ ![JSON の](../../relational-databases/json/media/jsonslides2forjson.png)
   
 ## <a name="option-1---you-control-output-with-for-json-path"></a>オプション 1 - FOR JSON PATH でユーザーが出力を制御する
 **PATH** モードではドット構文を使用できます。たとえば、ネストした出力を書式設定するには、 `'Item.Price'` と指定します。  
 
 **FOR JSON** 句で **PATH** モードを使用するサンプル クエリを次に示します。 次の例では、**ROOT** オプションを使用して名前付きのルート要素を指定しています。 
   
- ![FOR JSON 出力のフロー図](../../relational-databases/json/media/forjson-example1.png "FOR JSON 出力のフロー図")  
+ ![FOR JSON 出力のフローの図](../../relational-databases/json/media/forjson-example1.png) 
 
 ### <a name="more-info-about-for-json-path"></a>FOR JSON PATH に関する詳細情報
 詳細と例については、「[PATH モードで入れ子になった JSON 出力を書式設定する &#40;SQL Server&#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md)」を参照してください。
@@ -85,7 +85,7 @@ FOR JSON AUTO
 構文と使用法については、「 [FOR 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)。  
   
 ## <a name="control-other-json-output-options"></a>他の JSON 出力オプションを制御する  
-次の追加オプションを使用して、**FOR JSON** 句の出力を制御します。  
+**FOR JSON** 句の出力を制御するには、次の追加オプションを使用します。  
   
 -   **ROOT**。 JSON 出力に最上位の単一要素を追加するには、 **ROOT** オプションを指定します。 このオプションを指定しないと、JSON 出力にはルート要素がありません。 詳細については、「 [ROOT オプションを使用して JSON 出力にルート ノードを追加する &#40;SQL Server&#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md)。  
   
@@ -102,7 +102,7 @@ FOR JSON AUTO
         -   出力設定が**結果をグリッドに表示**の場合、SQL Server Management Studio (SSMS) は既定で結果を単一行に連結します。 SSMS のステータス バーに、実際の行数が表示されます。
         -   他のクライアント アプリケーションでは、複数の行の内容を連結することによって長い結果を単一の有効な JSON 文字列に結合し直すにはコードが必要になることがあります。 C# アプリケーションでのこのコードの例については、「[C# クライアント アプリで FOR JSON 出力を使用する](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app)」をご覧ください。
   
-     ![FOR JSON 出力の例](../../relational-databases/json/media/forjson-example2.png "FOR JSON 出力の例")  
+     ![FOR JSON 出力の例](../../relational-databases/json/media/forjson-example2.png)  
   
 2.  結果は JSON オブジェクトの配列として書式設定されます。  
   
@@ -148,11 +148,12 @@ FOR JSON AUTO
 ```  
 
  **FOR JSON** 句の出力に表示される内容の詳細については、次のトピックを参照してください。  
+
 -   [FOR JSON が SQL Server データ型を JSON データ型に変換する方法 &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server.md)  
-**FOR JSON** 句では、このトピックで説明する規則を使用して、JSON 出力で SQL データ型を JSON 型に変換します。  
+    **FOR JSON** 句では、このトピックで説明する規則を使用して、JSON 出力で SQL データ型を JSON 型に変換します。  
 
 -   [FOR JSON での特殊文字のエスケープと制御文字 &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)  
- **FOR JSON** 句は、このトピックで説明する形式で JSON 出力の特殊文字をエスケープし、制御文字を表します。  
+    **FOR JSON** 句は、このトピックで説明する形式で JSON 出力の特殊文字をエスケープし、制御文字を表します。  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>SQL Server に組み込まれている JSON サポートの詳細情報  
 多くの具体的なソリューション、ユース ケース、推奨事項については、Microsoft のプログラム マネージャー Jovan Popovic による SQL Server および Azure SQL Database に[組み込まれている JSON のサポートに関するブログ投稿](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)をご覧ください。

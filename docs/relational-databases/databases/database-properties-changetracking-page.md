@@ -16,11 +16,11 @@ caps.latest.revision: 13
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2aab898a267244d585d1d09bc66eaca4814895a1
+ms.translationtype: HT
+ms.sourcegitcommit: 1c55b7b8b39e7b1ec296ee529bc66d2e14256994
+ms.openlocfilehash: 6edc4a6d0a4a72e8cec739b78419ce8ce3b4f6cc
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="database-properties-changetracking-page"></a>[データベースのプロパティ] \([変更の追跡] ページ)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
  [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)を使用して変更追跡を構成することもできます。  
   
  **保有期間**  
- データベースに変更追跡情報を保持する最低限の期間を指定します。 データは、 **[自動クリーンアップ]**の値が **True**の場合にのみ削除されます。  
+ データベースに変更追跡情報を保持する最低限の期間を指定します。 データは、**[自動クリーンアップ]** の値が **True** の場合にのみ削除されます。  
   
  既定値は 2 です。  
   

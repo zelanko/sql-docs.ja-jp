@@ -21,10 +21,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
-ms.openlocfilehash: fe23cb7ab3fbc0461f0c0853aedaa4444e4bb543
+ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
+ms.openlocfilehash: 2a25a75485ecfb5bae812b01f142a9650ce2933c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>決定的関数と非決定的関数
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/16/2017
  このトピックでは、組み込みのシステム関数の決定性について説明し、ユーザー定義関数の決定的なプロパティに拡張ストアド プロシージャへの呼び出しが含まれている場合のこのプロパティへの影響を確認します。  
   
 ## <a name="built-in-function-determinism"></a>組み込み関数の決定性  
- 組み込み関数の決定性には、影響を与えることができません。 各組み込み関数が決定的であるか非決定的であるかは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]による関数の実装方法に基づきます。 たとえば、クエリに ORDER BY 句を指定しても、そのクエリで使用される関数の決定性は変更されません。  
+ 組み込み関数の決定性には、影響を与えることができません。 各組み込み関数が決定的であるか非決定的であるかは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]による関数の実装方法に基づきます。 たとえば、クエリに ORDER BY 句を指定しても、そのクエリで使用される関数の決定性は変わりません。  
   
  組み込みの文字列関数はすべて決定的です。 文字列関数の一覧については、「[文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)」を参照してください。  
   

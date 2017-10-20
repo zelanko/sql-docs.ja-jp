@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0feecce7b6f80df96d77273863ca1873bd74523e
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 687bddd3ce51c60e286cfa0e2634790a8a492500
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>データベース エンジンの新機能 - SQL Server 2016
@@ -349,7 +349,8 @@ model データベースの新しい値および新しいデータベースの�
 - [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md) では、テーブルを使用可能な状態にしたままで、多くの列の変更アクションを実行できるようになりました。
 - フルテキスト インデックス DMV の[sys.dm_fts_index_keywords_position_by_document &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-position-by-document-transact-sql.md) では、ドキュメント内のキーワードの位置が返されます。 この DMV は [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP2 と [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP1 でも追加されています。
 - 新しいクエリ ヒントの **NO_PERFORMANCE_SPOOL** で、スプール演算子がクエリ プランに追加されないようにすることができます。 これにより、多くの同時実行クエリがスプール操作で実行されているときのパフォーマンスを向上させることができます。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-query.md)」を参照してください。
-- [FORMATMESSAGE &#40;Transact-SQL&#41;](../t-sql/functions/formatmessage-transact-sql.md) ステートメントが強化され、msg_string 引数を受け入れるようになりました。NONCLUSTERED インデックスの最大インデックス キー サイズは、1700 バイトに引き上げられました。
+- [FORMATMESSAGE &#40;Transact-SQL&#41;](../t-sql/functions/formatmessage-transact-sql.md) ステートメントが強化され、msg_string 引数を受け入れるようになりました。
+- 非クラスター化インデックスの最大インデックス キーのサイズが 1700 バイトに引き上げられました。
 - AGGREGATE、ASSEMBLY、COLUMN、CONSTRAINT、DATABASE、DEFAULT、FUNCTION、INDEX、PROCEDURE、ROLE、RULE、SCHEMA、SECURITY POLICY、SEQUENCE、SYNONYM、TABLE、TRIGGER、TYPE、USER、VIEW に関連する DROP ステートメントに対して、新しい DROP IF 構文が追加されました。 構文については、個々の構文のトピックを参照してください。
 - 並列処理の次数を指定するために、MAXDOP オプションが [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)、[DBCC CHECKDB &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、[DBCC CHECKFILEGROUP &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md) に追加されました。
 - SESSION_CONTEXT を設定できるようになりました。 これには、[SESSION_CONTEXT &#40;Transact-SQL&#41;](../t-sql/functions/session-context-transact-sql.md) 関数、[CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../t-sql/functions/current-transaction-id-transact-sql.md) 関数、[sp_set_session_context &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md) プロシージャが含まれます。
