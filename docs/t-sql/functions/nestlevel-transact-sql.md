@@ -30,7 +30,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40nestlevel-transact-sql"></a>& #x 40; & #x 40 です。NESTLEVEL (TRANSACT-SQL)
+# <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40; です。NESTLEVEL (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   現在のストアド プロシージャがローカル サーバーで実行中のトランザクションの入れ子レベルを返します (初期値は 0)。  
@@ -49,11 +49,11 @@ ms.lasthandoff: 09/19/2017
 ## <a name="remarks"></a>解説  
  ストアド プロシージャが別のストアド プロシージャを呼び出したり、共通言語ランタイム (CLR) のルーチン、型、または集計を参照してマネージ コードを実行するたびに、入れ子レベルが増加します。 この値が最大値の 32 を超えると、そのトランザクションは終了します。  
   
- 場合 @@NESTLEVEL内で実行される、[!INCLUDE[tsql](../../includes/tsql-md.md)]文字列は 1 + 現在の入れ子レベルに、値が返されます。 場合 @@NESTLEVELが実行される動的に sp_executesql を使用して、返される値は 2 + 現在の入れ子レベル。  
+ 場合 @@NESTLEVEL 内で実行される、[!INCLUDE[tsql](../../includes/tsql-md.md)]文字列は 1 + 現在の入れ子レベルに、値が返されます。 場合 @@NESTLEVEL が実行される動的に sp_executesql を使用して、返される値は 2 + 現在の入れ子レベル。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-using-nestlevel-in-a-procedure"></a>A. を使用して@NESTLEVELプロシージャ  
+### <a name="a-using-nestlevel-in-a-procedure"></a>A. を使用して @@NESTLEVEL プロシージャ  
  次の例では、別のプロシージャを呼び出すプロシージャと、それぞれの `@@NESTLEVEL` 設定を表示するプロシージャの、2 つのプロシージャを作成します。  
   
 ```  
@@ -88,7 +88,7 @@ Inner Level
 2
 ```  
   
-### <a name="b-calling-nestlevel"></a>B. を呼び出す@NESTLEVEL  
+### <a name="b-calling-nestlevel"></a>B. を呼び出す @@NESTLEVEL   
  次の例では、`SELECT`、`EXEC`、および `sp`_`executesql` のそれぞれが `@@NESTLEVEL` を呼び出すときに、それらが返す値の違いを示します。  
   
 ```  

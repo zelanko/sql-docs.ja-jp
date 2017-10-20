@@ -37,10 +37,10 @@ ms.lasthandoff: 10/12/2017
 # <a name="x40x40cpubusy-transact-sql"></a>&#x40;&#x40;です。CPU_BUSY (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-時間を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が前回起動されてからの作業に費やしたします。 結果は、CPU 時間単位、または「チックで」し、は、他のすべての Cpu の累積なので、実際の経過時間を超える可能性があります。 乗算@TIMETICKS(マイクロ秒) に変換します。
+時間を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が前回起動されてからの作業に費やしたします。 結果は、CPU 時間単位、または「チックで」し、は、他のすべての Cpu の累積なので、実際の経過時間を超える可能性があります。 乗算 @@TIMETICKS (マイクロ秒) に変換します。
   
 > [!NOTE]  
->  に時間が返された場合@CPU_BUSYまたは @@IO_BUSY約 49 日の累積 CPU 時間を超える場合、演算オーバーフロー警告が表示されます。 その場合の値を @@CPU_BUSY、@@IO_BUSYおよび @@IDLE変数が正確ではありません。  
+>  に時間が返された場合 @@CPU_BUSY または @@IO_BUSY 約 49 日の累積 CPU 時間を超える場合、演算オーバーフロー警告が表示されます。 その場合の値を @@CPU_BUSY 、 @@IO_BUSY および @@IDLE 変数が正確ではありません。  
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
