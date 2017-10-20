@@ -1,5 +1,5 @@
 ---
-title: "どのような & #39; SSMA for SAP ASE (SybaseToSQL) の |Microsoft ドキュメント"
+title: "どのような &#39; SSMA for SAP ASE (SybaseToSQL) の |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 09/30/2017
 ms.prod: sql-non-specified
@@ -24,7 +24,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/30/2017
 
 ---
-# <a name="what39s-new-in-ssma-for-sap-ase-sybasetosql"></a>どのような & #39; SSMA for SAP ASE (SybaseToSQL) の
+# <a name="what39s-new-in-ssma-for-sap-ase-sybasetosql"></a>どのような &#39; SSMA for SAP ASE (SybaseToSQL) の
 このトピックでは、SAP ASE (旧称 SSMA for Sybase) での変更の各リリース SSMA が一覧表示します。 
 
 ## <a name="ssma-v76"></a>SSMA v7.6
@@ -69,8 +69,8 @@ SSMA の Sybase v7.2 のリリースには、次の変更が含まれていま�
 - 改善の品質、および変換のメトリックを対象となる修正プログラムがお客様のフィードバックに基づきます。
 - 製品利用統計情報をお客様の問題をトラブルシューティングし、SSMA の換算率を向上させる優れたデータ ポイントを提供する拡張機能です。
 
-## <a name="ssma-v71"></a>SSMA v7.1]
-SSMA for Access の v7.1] リリースには、次の変更が含まれています。
+## <a name="ssma-v71"></a>SSMA v7.1
+SSMA for Access の v7.1 リリースには、次の変更が含まれています。
 - Windows と Linux CTP1 では、SQL Server 2017 は、移行のサポート対象のターゲット プラットフォームではようになりました。 この機能は、technical preview では、SQL の対象サーバーにスキーマとデータの移動をサポートしています。
 - SSMA は、使用可能になるとすぐには、SSMA の最新バージョンをダウンロードする自動更新をサポートします。
 - SSMA インストール可能なバイナリは、Windows インストーラー パッケージ ファイル (.msi) により配信されるようになりました。
@@ -196,7 +196,7 @@ Sybase SSMA の 2006 年 11 月のリリースには、次の変更が含まれ�
     -   RAISERROR のユーザー メッセージ エラー番号。  
     -   未解決の識別子を含むステートメントを更新します。  
 -   SSMA が外側にある日付を処理する方法を指定できる新しい移行オプションを追加、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]日付範囲にします。  
--   追加、**フォーマット SQL**の設定、 **SQL**が読みやすくするためのコードを書式設定] タブ。  
+-   追加、**フォーマット SQL**の設定、 **SQL**が読みやすくするためのコードを書式設定 タブ。  
 -   以下のもののバグ修正:  
     -   SSMA は、ロック テーブル今すぐに変換します*テーブル*IN {SHARED |。後続するか、TABLOCK、TABLOCKX ヒントを追加することによって排他的} のモード ステートメントは、テーブルでのクエリを選択します。  
     -   Binary データ型は文字式で使用すると、必要なキャストは追加されました。  
@@ -206,4 +206,4 @@ Sybase SSMA の 2006 年 11 月のリリースには、次の変更が含まれ�
 SSMA for Sybase は、2006 年 7 月のリリースが初回のリリースでした。  
   
 ## <a name="see-also"></a>参照  
-[For Sybase & #40; SSMA の概要SybaseToSQL & #41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)
+[For Sybase &#40; SSMA の概要SybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

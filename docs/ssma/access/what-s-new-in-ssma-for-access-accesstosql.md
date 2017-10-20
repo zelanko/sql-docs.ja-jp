@@ -1,5 +1,5 @@
 ---
-title: "どのような & #39; SSMA Access(AccessToSQL) for の |Microsoft ドキュメント"
+title: "どのような &#39; SSMA Access(AccessToSQL) for の |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.custom: 
 ms.date: 09/22/2017
@@ -24,7 +24,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/30/2017
 
 ---
-# <a name="what39s-new-in-ssma-for-access-accesstosql"></a>どのような & #39; SSMA for Access (AccessToSQL) の
+# <a name="what39s-new-in-ssma-for-access-accesstosql"></a>どのような &#39; SSMA for Access (AccessToSQL) の
 このトピックでは、各リリースでのアクセスの変更の SSMA が一覧表示します。  
 
 ## <a name="ssma-v76"></a>SSMA v7.6
@@ -67,8 +67,8 @@ SSMA for Access の v7.2 リリースには、次の変更が含まれていま�
 - 改善の品質、および変換のメトリックを対象となる修正プログラムがお客様のフィードバックに基づきます。
 - 製品利用統計情報をお客様の問題をトラブルシューティングし、SSMA の換算率を向上させる優れたデータ ポイントを提供する拡張機能です。
 
-## <a name="ssma-v71"></a>SSMA v7.1]
-SSMA for Access の v7.1] リリースには、次の変更が含まれています。
+## <a name="ssma-v71"></a>SSMA v7.1
+SSMA for Access の v7.1 リリースには、次の変更が含まれています。
 - Windows と Linux CTP1 では、SQL Server 2017 は、移行のサポート対象のターゲット プラットフォームではようになりました。 この機能は、technical preview では、SQL の対象サーバーにスキーマとデータの移動をサポートしています。
 - SSMA は、使用可能になるとすぐには、SSMA の最新バージョンをダウンロードする自動更新をサポートします。
 - SSMA インストール可能なバイナリは、Windows インストーラー パッケージ ファイル (.msi) により配信されるようになりました。

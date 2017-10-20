@@ -1,5 +1,5 @@
 ---
-title: "どのような & #39; SSMA for MySQL (MySQLToSql) の |Microsoft ドキュメント"
+title: "どのような &#39; SSMA for MySQL (MySQLToSql) の |Microsoft ドキュメント"
 ms.prod: sql-non-specified
 ms.custom: 
 ms.date: 09/30/2017
@@ -24,7 +24,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 09/30/2017
 
 ---
-# <a name="what39s-new-in-ssma-for-mysql-mysqltosql"></a>どのような & #39; SSMA for MySQL (MySQLToSql) の
+# <a name="what39s-new-in-ssma-for-mysql-mysqltosql"></a>どのような &#39; SSMA for MySQL (MySQLToSql) の
 このトピックでは、MySQL での変更の各リリース SSMA が一覧表示します。 
 
 ## <a name="ssma-v76"></a>SSMA v7.6
@@ -65,8 +65,8 @@ SSMA の MySQL v7.2 のリリースには、次の変更が含まれています
 - 改善の品質、および変換のメトリックを対象となる修正プログラムがお客様のフィードバックに基づきます。
 - 製品利用統計情報をお客様の問題をトラブルシューティングし、SSMA の換算率を向上させる優れたデータ ポイントを提供する拡張機能です。
 
-## <a name="ssma-v71"></a>SSMA v7.1]
-SSMA for Access の v7.1] リリースには、次の変更が含まれています。
+## <a name="ssma-v71"></a>SSMA v7.1
+SSMA for Access の v7.1 リリースには、次の変更が含まれています。
 - Windows と Linux CTP1 では、SQL Server 2017 は、移行のサポート対象のターゲット プラットフォームではようになりました。 この機能は、technical preview ではあり、SQL の対象サーバーにスキーマとデータの移動を許可します。
 - SSMA は、使用可能になるとすぐには、SSMA の最新バージョンをダウンロードする自動更新をサポートします。
 - SSMA インストール可能なバイナリは、Windows インストーラー パッケージ ファイル (.msi) により配信されるようになりました。
@@ -143,9 +143,9 @@ SSMA の MySQL の 2010 年 7 月リリースには、次の機能が含まれ�
   
 1.  **ユーザー インターフェイスの機能強化:**  
   
-    -   'SQL モード' MySQL データベースのオブジェクト] タブ  
+    -   'SQL モード' MySQL データベースのオブジェクト タブ  
     -   MySQL データベース オブジェクトの [設定] タブ  
-    -   MySQL テーブルの 'データ'] タブ  
+    -   MySQL テーブルの 'データ' タブ  
     -   変換と移行」ページで、更新されたプロジェクトの設定  
     -   テーブル レベルで [データ移行の設定]  
   
