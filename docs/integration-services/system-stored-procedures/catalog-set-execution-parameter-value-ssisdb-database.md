@@ -31,11 +31,10 @@ ms.lasthandoff: 08/03/2017
 ## <a name="syntax"></a>構文  
   
 ```sql  
-set_execution_parameter_value [ @execution_id = execution_id  
+catalog.set_execution_parameter_value [ @execution_id = execution_id  
     , [ @object_type = ] object_type  
     , [ @parameter_name = ] parameter_name  
     , [ @parameter_value = ] parameter_value  
-  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -117,16 +116,15 @@ set_execution_parameter_value [ @execution_id = execution_id
 ## <a name="example"></a>例  
  次の例では、パッケージの実行中にエラーが発生した場合に、Integration Services サーバーによりダンプ ファイルが生成されるように指定しています。  
   
-```  
+```sql
 exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 0,@execution_id out  
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_ERROR',1  
-  
 ```  
   
 ## <a name="example"></a>例  
  次の例では、パッケージの実行中にイベントが発生した場合に、Integration Services サーバーによりダンプ ファイルが生成されるように指定し、サーバーによるファイルの生成が行われる原因となるイベントを指定しています。  
   
-```  
+```sql
 exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 0,@execution_id out  
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_EVENT',1  
   

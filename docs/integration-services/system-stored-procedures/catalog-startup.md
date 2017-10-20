@@ -34,7 +34,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="syntax"></a>構文  
   
 ```sql  
-Catalog.startup  
+catalog.startup  
 ```  
   
 ## <a name="return-code-value"></a>リターン コード値  
