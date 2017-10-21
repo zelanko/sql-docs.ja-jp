@@ -76,7 +76,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
  **統計情報の収集間隔:** 実行時統計情報を収集する間隔を定義します (既定値は 1 時間)。 この間隔を短くして、問題を検出して軽減するまでの時間を短縮したい場合は、値を小さくすることを検討してください。ただし、クエリ ストアのデータのサイズに直接影響があるので注意が必要です。 統計情報の収集間隔に別の値を設定するには、SSMS または TRANSACT-SQL を使用します。  
   
 ```tsql  
-ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);  
+ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
  **古いクエリのしきい値 (日):** 保存する実行時統計と非アクティブ クエリの保有期間を制御する、時間ベースのクリーンアップ ポリシーです。  
@@ -86,7 +86,7 @@ ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
-SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));  
+SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
   
  **サイズ ベースのクリーンアップ モード:** クエリ ストアのデータ サイズが制限に達したときに、データの自動クリーンアップを行うかどうかを指定します。  
