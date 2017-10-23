@@ -11,9 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 caps.latest.revision: 40
-author: BYHAM
-ms.author: rickbyh
-manager: craigg
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
 ms.translationtype: HT
 ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
 ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
@@ -22,8 +22,6 @@ ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server チュートリアル
-[!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] には、新しいテクノロジと機能の学習に役立つチュートリアルが用意されています。 通常、以前のバージョンのチュートリアルを新しいバージョンで使用できます。 チュートリアルで新しい機能が使われている場合は、チュートリアルを実行できる最低限のバージョンが示されています。  
      
 -   チュートリアルでいずれかの [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] データベースが使われている場合は、最新のバージョンを CodePlex からダウンロードして使う必要があります。 詳しくは、「[AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502)」(SQL Server 2016 CTP3 の AdventureWorks データベースとスクリプト) をご覧ください。    
