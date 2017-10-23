@@ -73,10 +73,10 @@ CPU microseconds As of
 ```
   
 ## <a name="see-also"></a>参照
-[sys.dm_os_sys_info & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)  
+[sys.dm_os_sys_info &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)  
 [@@IDLE &#40;Transact-SQL&#41;](../../t-sql/functions/idle-transact-sql.md)  
 [@@IO_BUSY &#40;Transact-SQL&#41;](../../t-sql/functions/io-busy-transact-sql.md)  
-[sp_monitor & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)  
+[sp_monitor &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)  
 [システム統計関数 &#40;です。TRANSACT-SQL と&#41;です。](../../t-sql/functions/system-statistical-functions-transact-sql.md)
   
   
