@@ -71,6 +71,8 @@
 
 
 # 開発者
+## [REST API](developer/rest-api.md)
+## [REST API のサンプル](https://github.com/Microsoft/Reporting-Services)
 ## [アプリケーションの統合](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
 ## [レポート サーバー web サービス](../reporting-services/report-server-web-service/report-server-web-service.md)
 ## [拡張機能](../reporting-services/extensions/reporting-services-extension-library.md)
