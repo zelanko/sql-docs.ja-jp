@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 359dc6c1bd396a0909aea36c5039a4ba5195f326
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  確認して**Recordset**の境界を越えてオブジェクトは、**レコード セット**レコード ポインターを移動する前にします。 しようとする場合**MoveNext**とき**EOF** true または**MovePrev**とき**BOF** True の場合は、エラーが発生します。 いずれかを実行する場合、**移動**メソッドと両方**EOF**と**BOF** True は、エラーが生成されます。  
   
  などの操作を実行しようとする場合に、エラーも発生は**シーク**と**検索**、空で**レコード セット**です。
+

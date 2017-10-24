@@ -19,6 +19,7 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4a1b4ad6c837bb442af7f5bd5a98ab09527ef707
@@ -88,3 +89,4 @@ WHERE(
  上で説明したように、WHERE 句でセットを使用すると、セット内のすべてのメンバーに関する値が暗黙的に集計されます。 この例の場合、クエリは各セルに米国と英国の集計値を表示します。  
   
   
+

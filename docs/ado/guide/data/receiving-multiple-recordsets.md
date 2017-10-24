@@ -17,6 +17,7 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ab72906b1f36e22bba58b58ca7917b3399ebc458
@@ -38,3 +39,4 @@ SELECT ProductID, ProductName, UnitPrice
  使用することができます、 **Recordset.NextRecordset** 2 つのオブジェクトを列挙するメソッド。  
   
  詳細については、次を参照してください。 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)です。
+

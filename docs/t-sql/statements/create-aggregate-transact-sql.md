@@ -25,6 +25,7 @@ caps.latest.revision: 50
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: ad5cf36e97bf3903cc9d42ec5179de6375624f95
@@ -123,3 +124,4 @@ GO
  [DROP AGGREGATE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-aggregate-transact-sql.md)  
   
   
+

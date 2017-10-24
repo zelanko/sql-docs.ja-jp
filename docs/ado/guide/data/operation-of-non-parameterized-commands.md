@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a19b939b0b0eb33d436a3924a04562473b4c06a
@@ -49,3 +50,4 @@ SHAPE {SELECT * FROM Customers}
  [データ シェイプの例](../../../ado/guide/data/data-shaping-example.md)   
  [図形の正式な文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般的な図形コマンド](../../../ado/guide/data/shape-commands-in-general.md)
+

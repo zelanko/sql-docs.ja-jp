@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
 ms.openlocfilehash: c7437cff5e2828db7c841e289e329526390e5b69
@@ -290,3 +291,4 @@ SQL Server 2017 を使用して、マシン学習サービスをインストー�
 [T-SQL で Python を使用します。](../tutorials/run-python-using-t-sql.md)
 
 [Python を revoscalepy を使用してモデルを作成します。](../tutorials/use-python-revoscalepy-to-create-model.md)
+

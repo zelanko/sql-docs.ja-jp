@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8f084616a0dd548fe9ee939f5e770b1f69f125f1
@@ -87,3 +88,4 @@ ms.lasthandoff: 09/01/2017
     -   **[キャプションに MDX を使用]** ボックスの一覧では、キャプションが MDX かどうかを指定します。 このフィールドは、サーバーに対して **[キャプション]** の内容を MDX 式として評価するかどうかを示します。  
   
   
+

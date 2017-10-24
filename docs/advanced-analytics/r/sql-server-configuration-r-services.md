@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: dbd29457adf7a3dd05211c2dc0688d45a54e405e
@@ -242,3 +243,4 @@ SQL Server の利点の 1 つは、膨大な並列内の行を処理する機能
 [R の R のパフォーマンスの調整コードとデータの最適化](../r/r-and-data-optimization-r-services.md)
 
 [パフォーマンスのチューニングのケース スタディ結果](../r/performance-case-study-r-services.md)
+

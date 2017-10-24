@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56510bc99d0a6a7c20d18b93b22a60decdfcc2e2
@@ -70,3 +71,4 @@ End Sub
 ```  
   
  **接続**で宣言されているオブジェクト、**フォーム**レベルを使用して、 **WithEvents**イベント処理を有効にするキーワードです。 Form_Load イベント ハンドラーが新しいを割り当てることによって、オブジェクトを実際に作成**接続**オブジェクトを*connEvent*し、その接続を開きます。 もちろん、実際のアプリケーションでは、ここに表示されている Form_Load イベント ハンドラーでより多くの処理は実行します。
+

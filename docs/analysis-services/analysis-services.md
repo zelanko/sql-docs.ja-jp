@@ -21,6 +21,7 @@ caps.latest.revision: 60
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 8c3a514f91e9af8de54fdbd4d9ef851c72f1911e
@@ -64,3 +65,4 @@ Analysis Services がクラウドで Azure のサービスとして使用でき�
 *  [チュートリアル](../analysis-services/analysis-services-tutorials-ssas.md)   
 *  [開発者向けドキュメント](https://msdn.microsoft.com/library/bb500153(SQL.130).aspx)  
 *  [テクニカル リファレンス (SSAS)](../analysis-services/powershell/technical-reference-ssas.md)
+

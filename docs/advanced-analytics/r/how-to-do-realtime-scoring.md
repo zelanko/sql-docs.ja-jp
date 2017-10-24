@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
 ms.openlocfilehash: 175a9bc664a2032d828ca790312920339f971b9b
@@ -254,3 +255,4 @@ Machine Learning のサーバーには、分散のリアルタイム web サー�
 + [Azureml モデル管理 sdk web サービスとしての Python モデルを配置します。](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [新しい web サービスとしての R コード ブロックまたはリアルタイム モデルをパブリッシュします。](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [R の mrsdeploy パッケージ](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
+

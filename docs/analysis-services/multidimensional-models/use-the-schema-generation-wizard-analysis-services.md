@@ -19,6 +19,7 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3ebce1becae5b9133d577a81234ee5d2f8fa37a8
@@ -66,3 +67,4 @@ ms.lasthandoff: 09/01/2017
  スキーマ生成ウィザードの **[名前付け規則の指定]** ページで、サブジェクト領域データベースに特定のオブジェクトを生成するときにウィザードが使用する名前付け規則を定義できます。 **[名前付け規則の指定]** ページで使用できるオプションの詳細については、「[[名前付け規則の指定] &#40;スキーマ生成ウィザード&#41; &#40;Analysis Services - 多次元データ&#41;](http://msdn.microsoft.com/library/02d830ea-5b1f-4485-9f94-d64b8bea592b)」を参照してください。  
   
   
+

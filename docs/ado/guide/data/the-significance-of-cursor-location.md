@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4dbeab2366d53499eaab2f21198ab4b7ebe6f570
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
  ただし、これはサーバー側カーソルは、ことを指摘する — 少なくとも一時的に — すべてのアクティブなクライアント貴重なサーバー リソースを消費します。 サーバー ハードウェアがすべてのアクティブなクライアントから要求されたサーバー側カーソルを管理できることを確認するそれに従って計画する必要があります。 また、サーバー側カーソルが遅くなる 1 つの行にしかアクセスを提供するため、使用できる batch カーソルはありません。  
   
  サーバー側のカーソルは挿入、更新、またはレコードを削除する場合に便利です。 サーバー側のカーソルで同じ接続で複数のアクティブ ステートメントを持つことができます。
+

@@ -28,6 +28,7 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f0426730b33f0b70fda11a8cb07242a365d10fae
@@ -90,3 +91,4 @@ ms.lasthandoff: 09/01/2017
      これらのオプションのうち 1 つでも正しく設定しなかった場合は、インデックス付きビューに対して、または計算列にインデックスが含まれているテーブルに対して INSERT、UPDATE、DELETE、DBCC CHECKDB、および DBCC CHECKTABLE を実行すると操作は失敗します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではエラーが発生し、正しく設定されなかったすべてのオプションが一覧表示されます。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、このようなテーブルやインデックス付きビューに対して SELECT ステートメントを実行すると、計算列またはビューにインデックスが存在しないものとして処理されます。  
   
   
+

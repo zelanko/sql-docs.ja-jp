@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c8f574b00b5c53caef2184d2923e79746d3ef56c
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  たとえば、カーソル エンジンなど[for OLE DB カーソル サービス](http://msdn.microsoft.com/en-us/57638feb-4ecd-4051-becb-8f828d21cf44)、スクロール可能なデータを生成するために、シーケンシャル、前方参照専用のデータ ストアからデータを使用できるサービス コンポーネントです。 ADO でよく使用されるその他のサービス プロバイダーが含まれて、 [Microsoft OLE DB Persistence Provider (ADO サービス プロバイダー)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) (データ ファイルに保存する)、用、 [Microsoft Data Shaping Service for OLE DB (ADO サービス プロバイダー)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (の階層**レコード セット**)、および[Microsoft OLE DB のリモート処理のプロバイダー (ADO サービス プロバイダー)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (リモート コンピューター上のデータ プロバイダーの呼び出し) 用です。  
   
  サービスとデータ プロバイダーの詳細については、次を参照してください。[付録 a: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)です。
+

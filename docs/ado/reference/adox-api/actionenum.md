@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 60d5d800137febfa9b0ba01994e3b32cd159ec31
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 |**adAccessGrant**|1|グループまたはユーザー権限を持つには、少なくとも、要求されました。|  
 |**adAccessRevoke**|4|グループまたはユーザーのすべての明示的なアクセス権が取り消されます。|  
 |**adAccessSet**|2|グループまたはユーザーには、要求されたアクセス許可だけがあります。|
+

@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 93011b8b30d552e5bf3852c9e4d483161d90fc55
@@ -91,3 +92,4 @@ ms.lasthandoff: 09/09/2017
  [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)   
  [ADO オブジェクトとインターフェイス](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [ADO のプロパティ](../../../ado/reference/ado-api/ado-properties.md)
+

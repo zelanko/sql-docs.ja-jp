@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b15df02c70e2dcdc2efb2ba468b76219a233d65a
@@ -65,3 +66,4 @@ ADOX の特定の機能は、OLE DB データ プロバイダーによってサ�
 |**キー**コレクション|**Append**と**削除**メソッドはサポートされていません。|  
 |**ユーザー**コレクション|**ユーザー**はサポートされていません。|  
 |**グループ**コレクション|**グループ**はサポートされていません。|
+

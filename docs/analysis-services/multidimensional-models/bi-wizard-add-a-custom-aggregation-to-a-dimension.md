@@ -22,6 +22,7 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 548b9695bba6377fcea91b1a1c78578a141e1ba0
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/01/2017
  **[基になる列]** で、単項演算子を含む文字列の列を選択します  (この選択によって、親属性の **UnaryOperatorColumn** プロパティが設定されます)。ディメンション テーブルには、単項ロールアップ演算子を指定する文字列の列も必要です。 この列の文字列値には、有効な集計演算子が含まれている必要があります。 行が空の場合は、対応するメンバーが普通に計算されます。 列の式が有効でない場合は、そのメンバーを使用するセル値が取得されたときに実行時エラーが発生します。 詳細については、 [「親子ディメンションの単項演算子」](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)を参照してください。  
   
   
+

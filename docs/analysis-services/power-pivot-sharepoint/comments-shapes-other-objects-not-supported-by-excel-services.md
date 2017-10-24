@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: bb73f60aea4a67a2e7fe7967dc9411762fe8e8f9
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/01/2017
  このエラーは無視してかまいません。 **[OK]** をクリックして、エラー メッセージを閉じ、ブックとスライサーの使用を問題なく続けることができます。  
   
   
+

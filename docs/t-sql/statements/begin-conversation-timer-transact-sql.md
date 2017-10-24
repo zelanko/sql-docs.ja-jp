@@ -36,6 +36,7 @@ caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b70228860699b3fefe9a1b5adcfc0250ce5d34e1
@@ -95,3 +96,4 @@ TIMEOUT = 120 ;
  [受信 (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/receive-transact-sql.md)  
   
   
+

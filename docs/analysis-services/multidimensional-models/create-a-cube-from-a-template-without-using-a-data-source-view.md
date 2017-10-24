@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 80680ae03ee8ac059cfe3c9b47c3abe6b67db511
@@ -103,3 +104,4 @@ ms.lasthandoff: 09/01/2017
  **[ウィザードの完了]** ページで新しいキューブの構造を確認し、 **[キューブ名]** ボックスにキューブ名を入力します。 必要に応じて、 **[今すぐスキーマを生成する]** チェック ボックスをオンにして、スキーマ生成ウィザードを開始します。 追加オブジェクトを作成する計画がある場合は、このチェック ボックスはオンにしないでください。 また、キューブ デザイナーを使用して、後でスキーマを生成することもできます。  
   
   
+

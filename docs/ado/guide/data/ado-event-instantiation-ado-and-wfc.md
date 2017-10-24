@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4d46ec3bdad80879ddc4a931d8668a5298972e58
@@ -70,3 +71,4 @@ ADO の Windows Foundation Class (ADO/WFC) は、ADO イベント モデルで�
  [イベントのパラメーター](../../../ado/guide/data/event-parameters.md)   
  [イベント ハンドラーがどのように連携](../../../ado/guide/data/how-event-handlers-work-together.md)   
  [イベントの種類](../../../ado/guide/data/types-of-events.md)
+

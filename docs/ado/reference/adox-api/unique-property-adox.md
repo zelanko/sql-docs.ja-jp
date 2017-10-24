@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 042426f4fc9f31f0553daa01919d4a338060baed
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>参照  
  [主キーと一意のプロパティの例 (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
  [キー オブジェクト (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+

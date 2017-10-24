@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 32762183ff5273998848978238788cc830319b91
@@ -76,3 +77,4 @@ Python の Machine Learning のサービスのインストールの一環とし�
 ## <a name="see-also"></a>参照
 
 [Python ライブラリとデータ型](python-libraries-and-data-types.md)
+

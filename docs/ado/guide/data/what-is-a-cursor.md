@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 03b7d4fe16a379e04fe25fe8fef95802aedabe1d
@@ -76,3 +77,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="scrollability"></a>スクロール可能  
  アプリケーションで採用されているカーソルの種類も影響を受ける機能を結果セット内の行を前方と後方に移動するにはこれは、スクロール機能と呼ばれます。 前方に移動する機能*と*結果を旧バージョンとセットは、カーソルの複雑さを追加し、実装する高価であるためです。 このため、必要な場合にのみ、この機能によりカーソルを要求する必要があります。
+

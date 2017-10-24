@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 0a574a1159d984e59a7a8ee5ff58ae63f16199b0
@@ -111,3 +112,4 @@ C:\PS>New-PowerPivotServiceApplication -ServiceApplicationName "PowerPivot Servi
  この例では、新しいサービス アプリケーションを作成します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 名前付きインスタンスとしてインストールされた AdvWorks-SRV01 という名前のデータベース サーバーでサービス アプリケーション データベースが作成されます。多くの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint インストールの共通の構成です。 データベースを作成するには、SQL Server インスタンス上で dbcreator 権限が必要です。 SharePoint 構成データベースで db_owner である必要があります。 これは、1 つあるため [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションに、ファームの既定のプロキシ グループのメンバーである必要があります。  
   
   
+

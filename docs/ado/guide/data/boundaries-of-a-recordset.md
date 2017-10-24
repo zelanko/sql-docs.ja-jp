@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 66dec387cc91a2d0bd4d3aded73a6b4301aff593
@@ -74,3 +75,4 @@ else
  このスキームでは、すべての種類のカーソル動作し、は、基になるプロバイダーに依存しません。 空かを決定しようとする場合、 **Recordset**オブジェクトを確認する場合、 **RecordCount**プロパティの値がゼロ (0) か、適切なカーソルとプロバイダーを使用する予防措置を行う必要がありますを結果内のレコードの数を返すをサポートします。  
   
  最後の残りのレコードを削除する場合、 **Recordset**オブジェクト、カーソルは、不定状態のままにします。 **BOF**と**EOF**プロパティが残る可能性がある**False**まで、現在のレコードの位置を変更しようとすると、プロバイダーによって異なります。 詳細については、次を参照してください。 [Delete メソッドを使用してレコードを削除すると、](../../../ado/guide/data/deleting-records-using-the-delete-method.md)です。
+

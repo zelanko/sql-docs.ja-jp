@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a8b090a9d5a9ed0a9f63b8f666fa9985089305ed
@@ -94,3 +95,4 @@ SQL Server 2017 CTP 2.0 以降には、以前 R Server でのみ利用可能だ�
 5. 構成を続行、 **mrsdeploy** 」の説明に従ってサービス:[管理者用の構成](https://docs.microsoft.com/r-server/operationalize/configure-start-for-administrators)
 
 6. 詳細については、次を参照してください。 [mrsdeploy 関数](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package)です。
+

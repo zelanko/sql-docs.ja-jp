@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d4879ea2bc89552409e29847ed39c9418ba668c8
@@ -49,3 +50,4 @@ A*トランザクション*の先頭と末尾の一連のデータ アクセス�
   
 ## <a name="nested-transactions"></a>入れ子になったトランザクション  
  呼び出し入れ子になったトランザクションをサポートするプロバイダのため、 **BeginTrans**開いているトランザクション内でメソッドが、新しい入れ子になったトランザクションを開始します。 戻り値は、入れ子のレベルを示します:「1」の戻り値は、最上位レベルのトランザクションを開いていることを示します (つまり、トランザクションは入れ子になっていない別のトランザクション内で)、「2」は、(第 2 レベルのトランザクションが開かれていることを示しますトランザクション内で入れ子に最上位レベルのトランザクション) などです。 呼び出す**CommitTrans**または**RollbackTrans**影響のみ、最後に開いたトランザクション以外の場合は、上位レベルのトランザクションを解決する前に、現在のトランザクションをロールバック閉じたりする必要があります。
+

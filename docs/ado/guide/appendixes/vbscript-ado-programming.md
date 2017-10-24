@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bc40ecab95aa419ac81ada509133de6dd108a823
@@ -88,3 +89,4 @@ Response.Write("Success!")
 -   使用することはできません**エラー goto で\<ラベル >** VBScript 内です。  
   
 -   VBScript をサポートしているいくつかの組み込みの Visual Basic 関数など**Msgbox**、**日付**、および**IsNumeric**です。 ただし、VBScript は、Visual Basic のサブセットであるために、すべての組み込み関数はサポートされます。 たとえば、VBScript はサポートされません、**形式**関数およびファイル I/O 関数。
+

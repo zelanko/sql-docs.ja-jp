@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2e15f52d48f5870cfe4df8cd6149d56012b42abf
@@ -38,3 +39,4 @@ boolean = recordset.Supports(CursorOptions )
  使用して、**サポート**メソッドの機能を確認することができます、 **Recordset**新しいレコードを追加、ブックマークを使用して、使用するオブジェクト、**検索**方法、スクロールを使用して、を使用します。**インデックス**プロパティ、およびバッチ更新を実行します。 定数とその意味の一覧については、次を参照してください。 [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)です。  
   
  **サポート**メソッドが返す可能性があります**True**の特定の機能とは限りませんプロバイダーは、実行できること、機能のすべての状況で使用可能な。 **サポート**メソッドは単に特定の条件が満たされたと仮定した場合で、指定された機能をプロバイダーがサポートできるかどうかを返します。 たとえば、**をサポートしている**メソッド可能性があります、**レコード セット**オブジェクトは、カーソルは、複数のテーブル結合に基づいている場合でも、更新をサポートしている — 一部の列は更新不可能なです。
+

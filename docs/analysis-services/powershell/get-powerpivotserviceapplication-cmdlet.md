@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 2c96b18bb421d264c99a683af04a51d6e60597d3
@@ -90,3 +91,4 @@ C:\PS>get-PowerPivotServiceApplication -Identity 1234567-890a-bcde-fghijklm
  この例では、1 つのサービス アプリケーションを返し、表示名、アプリケーションの種類、およびアプリケーションの GUID を表示します。 表示名が長い場合は、切り捨てられます。 format-list オプションを使用すると完全名が表示されます。  
   
   
+

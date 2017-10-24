@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b84d5aef9958c15682c6aeae2942487f30a6581
@@ -78,3 +79,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="formunload"></a>Form_Unload  
  **Form_Unload**いくつかの理由のサブルーチンは重要です。 最初に、これはサンプル アプリケーションであるため、form_unload をアプリケーションが終了する前に、データベースに加えられた変更します。 次に、コードは、コマンドを実行して、開いているから直接方法**接続**オブジェクトを使用して、 **Execute**メソッドです。 最後に、データ ソースに対する非行を返さないクエリ (UPDATE クエリ) を実行する例を示します。
+

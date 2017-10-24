@@ -14,6 +14,7 @@ caps.latest.revision: 30
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
 ms.openlocfilehash: f2b67ff49d5773890ff94f44eddeb01f2d5aaddf
@@ -254,3 +255,4 @@ Microsoft R のソース コードを表示したい場合はダウンロード�
 [Microsoft R Server をインストールします。](https://docs.microsoft.com/r-server/install/r-server-install-windows)
 
 この記事では、R Services のサポート チームが SQL Server 2016 では、無人インストールまたは R services のアップグレードを実行する方法を示します:[インターネットにアクセスできないコンピューターでの R Services の配置](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/)です。
+

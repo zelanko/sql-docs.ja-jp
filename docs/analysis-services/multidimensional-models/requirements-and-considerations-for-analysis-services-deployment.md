@@ -27,6 +27,7 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c698473d796548f3ed9d7d17dfb19206804f634f
@@ -109,3 +110,4 @@ ms.lasthandoff: 09/01/2017
 -   クエリのパフォーマンスは低いが、ローカル サーバーのプロセッサおよびメモリ リソースを増やすことができない場合は、2 つ以上の実稼働サーバーに [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを配置することを検討してください。 ネットワーク負荷分散 (NLB) を使用して、サーバーを 1 つのクラスターに結合できます。 NLB クラスターでは、クエリは NLB クラスター内のすべてのサーバーに自動的に分散されます。  
   
   
+

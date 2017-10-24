@@ -22,6 +22,7 @@ caps.latest.revision: 53
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ce3a87eed86b8f876c8bf9bdde305166c2681d18
@@ -83,3 +84,4 @@ ms.lasthandoff: 09/01/2017
      当然、"NT Service\ MSOLAP$TABULAR" に付与されていたデータベースおよびファイルの権限は無効になります。 それまでサービスによって実行されてきたタスクや操作を従来と同じように実行するためには、新しくデータベースとファイルの権限を "NT Service\ MSOLAP$TAB2" に付与する必要があります。  
   
   
+

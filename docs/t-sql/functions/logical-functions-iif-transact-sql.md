@@ -21,6 +21,7 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 86ff2683e1ee71a3d11baa024753e0f52e5b3ee9
@@ -111,3 +112,4 @@ NULL
  [選択 (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   
+

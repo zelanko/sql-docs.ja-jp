@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8d4c04ac80d1d353b07fb78305294803ad69dffe
@@ -84,3 +85,4 @@ oConn.Close
  ここでトランザクション処理は、ことを確認して、操作の 1 つの単位として 2 つのレコードが更新に交換またはまったく変更されていない 2 つの製品名であることに使用されます。  
   
  トランザクション処理の詳細な説明を参照してください[更新およびデータの永続化](../../../ado/guide/data/updating-and-persisting-data.md)です。
+

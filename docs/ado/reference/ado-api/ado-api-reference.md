@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 47b51707aac7eab9e24610f7ae72b073432ee120
@@ -54,3 +55,4 @@ ADO のドキュメントのこのセクションには、各 ADO オブジェ�
  [付録 c: ADO を使用したプログラミング](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
  [付録 a: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)   
  [ADO の履歴](../../../ado/guide/ado-history.md)
+

@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b60f1804e6d465a397704b284c30611b42524420
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/01/2017
 -   SharePoint ライブラリで、.rsds 共有レポートのデータ ソース接続 (多次元モデルに接続する .rsds ファイル) の横の矢印をクリックし、 **[Power View レポートの作成]**をクリックします。  
   
   
+

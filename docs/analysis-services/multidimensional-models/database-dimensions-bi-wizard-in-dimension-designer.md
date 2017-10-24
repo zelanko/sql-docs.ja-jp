@@ -18,6 +18,7 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 459bae71d8b93278b71d29a601c01b0ed4954e97
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/01/2017
 -   ビジネス インテリジェンスを追加するディメンションを開いて、ツール バーの **[ビジネス インテリジェンスの追加]** ボタンをクリックします。 または、オブジェクト エクスプローラーまたはソリューション エクスプローラーでディメンションを右クリックし、 **[ビジネス インテリジェンスの追加]**をクリックします。  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 226842eb86c8eb7d5981407c805e18495dfb2579
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/01/2017
  [データ接続が Windows 認証を使用して、ユーザーの資格情報を委任できませんでした。次の接続を更新できませんでした: Power Pivot データ](../../analysis-services/power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md)  
   
   
+

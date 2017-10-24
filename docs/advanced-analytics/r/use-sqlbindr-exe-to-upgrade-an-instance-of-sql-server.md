@@ -16,6 +16,7 @@ caps.latest.revision: 15
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
 ms.openlocfilehash: 9b2d59d860d72207b196ac60a1db66f09baa1228
@@ -218,3 +219,4 @@ Microsoft R Server 9.0.1 に含まれているアップグレードのユーテ�
 + [R Server の以前のリリースから機能の発表内容](https://docs.microsoft.com/r-server/whats-new-in-r-server)
 
 + [非推奨、廃止された、または変更された機能](https://docs.microsoft.com/machine-learning-server/resources-deprecated-features)
+

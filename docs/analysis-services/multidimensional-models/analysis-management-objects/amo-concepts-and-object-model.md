@@ -26,6 +26,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b53eed2fa7d7061958db31576e387e3a4af5b14c
@@ -123,3 +124,4 @@ ms.lasthandoff: 09/01/2017
  データのクエリには、AMO を使用できません。 キューブやマイニング モデルなどの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データにクエリを実行するには、ユーザー アプリケーションから ADOMD.NET を使用してください。 詳細については、次を参照してください。 [ADOMD.NET での開発](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)です。  
   
   
+

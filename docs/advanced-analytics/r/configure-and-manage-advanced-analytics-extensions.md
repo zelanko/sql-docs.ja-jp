@@ -15,6 +15,7 @@ caps.latest.revision: 21
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 872acf107d72989b4623a9d5f4ccb85c44d1f2f9
@@ -99,3 +100,4 @@ SQL Server サービスの実行に必要なアクセス許可の詳細につい
 ## <a name="see-also"></a>参照
 
 [セキュリティに関する考慮事項](security-considerations-for-the-r-runtime-in-sql-server.md)
+

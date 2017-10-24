@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f03f0c8274d52f61e5db2d75fe21e3fe90a4ce26
@@ -47,3 +48,4 @@ PRINT @hid.ToString();
  [演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
+

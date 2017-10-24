@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 19a4275d339132db8efd4b09a313b482fc8cb666
@@ -45,3 +46,4 @@ oRs.Move NumRecords, Start
  内のブックマークを渡した場合、*開始*引数は、このブックマーク レコードに対して相対的です。 移動と仮定した場合、**レコード セット**オブジェクトは、ブックマークをサポートしています。 使用して、ブックマークを取得、[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)プロパティです。 指定しない場合、現在のレコード相対移動パスです。  
   
  使用している場合、 **CacheSize**受け渡し、プロバイダーからのレコードをローカルにキャッシュするプロパティ、 *NumRecords*引数キャッシュされているレコードの現在のグループの外側、現在のレコードの位置を移動します。強制的にレコードを送信先レコードからの新しいグループを取得します。 **CacheSize**プロパティは、新たに取得したグループのサイズを決定し、送信先レコードは、最初のレコードを取得します。
+

@@ -14,6 +14,7 @@ caps.latest.revision: 1
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9b9156a3dc9dec21187eec8dc0b5a44059fb5e31
@@ -73,3 +74,4 @@ ms.lasthandoff: 09/01/2017
 3.  再構成されたインスタンスの SQL Server サービスを再起動します。 これは自動的に再起動、関連する[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]サービスもします。
 
 3. カスタム セキュリティ設定が構成されている場合や、SQL Server を使用してリモート計算コンテキストをサポートする場合は、追加の手順が必要な場合があります。 詳細については、次を参照してください。 [machine learning のセットアップに関するトラブルシューティング](../machine-learning-troubleshooting-faq.md)です。
+

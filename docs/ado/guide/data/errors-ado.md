@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 271e5d4e246a59d7adb97b6e4dc5db4c08875e1c
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 ADO オブジェクトに関連するすべての操作は、1 つまたは複数のプロバイダー エラーを生成できます。 各エラーが発生すると、1 つまたは複数**エラー**でオブジェクトを配置している、**エラー**のコレクション、**接続**オブジェクト。 ADO アプリケーションで警告およびエラーの処理の詳細については、「 [Error Handling](../../../ado/guide/data/error-handling.md)です。  
   
  別のメカニズムによって、アプリケーション エラーが発生することができます。 たとえば、Visual Basic の場合で、 **Err**アプリケーション レベルのエラーをオブジェクトに含まれます。
+

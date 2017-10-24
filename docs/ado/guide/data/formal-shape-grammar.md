@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ae47b751e9e62d84188927186f186c6c9d344ce0
@@ -79,3 +80,4 @@ ms.lasthandoff: 09/09/2017
  [一般的な図形コマンド](../../../ado/guide/data/shape-commands-in-general.md)   
  [図形の COMPUTE 句](../../../ado/guide/data/shape-compute-clause.md)   
  [Visual Basic アプリケーション関数](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+

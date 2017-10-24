@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b9b520b7fc7e97498f4b46a43ad991558025123a
@@ -114,3 +115,4 @@ SQL Server の他の機能の詳細についてを参照してください。
 + [SQL Server 2016 の各エディションとサポートされる機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 
 
 Microsoft R の機能と大規模なデータ セット用のソリューションを最適化する方法の詳細については、次を参照してください。、 [Microsoft R Server](https://docs.microsoft.com/r-server/r/tutorial-large-data-tips)ドキュメント。
+

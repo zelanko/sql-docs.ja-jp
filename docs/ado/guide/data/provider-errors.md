@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c6e4934d8dc43c29629687a19a5d76ae46dab515
@@ -83,3 +84,4 @@ End Function
  **エラー**イベントに関連するエラーが発生したときにも、オブジェクトが使用されます。 チェックして、ADO イベントを発生させたプロセスでエラーが発生するかどうかを決定できます、**エラー**イベント パラメーターとして渡されるオブジェクト。  
   
  イベントの原因となる操作が正常に行われる場合、 *adStatus*イベント ハンドラーのパラメーターに設定されます*adStatusOK*です。 その一方で、イベントを発生させた操作が成功しなかった場合、 *adStatus*にパラメーターが設定されている*adStatusErrorsOccurred*です。 その場合は、 *pError*パラメーターが含まれます、**エラー**エラーを説明するオブジェクト。
+

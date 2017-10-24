@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 918c7727a7af1f85f93d110652da450f1ea770cb
@@ -358,3 +359,4 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
 -   既定では計算されるメンバーでは許可されませんサブセレクトです。ただし、この制限は、セッション単位でに値を割り当てることによって、**サブクエリ**で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または**DBPROP_MSMD_SUBQUERIES** 内のプロパティ[サポートされる XMLA プロパティ & #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) または **DBPROP_MSMD_SUBQUERIES** の値に基づく計算されたメンバーの動作の詳細については、「 **サブセレクトとサブキューブで計算されるメンバー**」を参照してください。  
   
   
+

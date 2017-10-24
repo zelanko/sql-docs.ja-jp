@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: db0b4def85eb08c193ece45b89e3773419b4feda
@@ -294,3 +295,4 @@ R は通常、グラフィック出力の R デバイスを利用して画像を
 ## <a name="previous-lesson"></a>前のレッスン
 
 [レッスン 2: PowerShell を使用して SQL server のデータをインポートします。](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+

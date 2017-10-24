@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7096b27b40d42ce11035feee9871a151c1460c76
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/01/2017
 3.  サーバー グループを右クリックし、[新規サーバーの登録] をクリックします。 サーバーが名前付きインスタンスとしてインストールされた場合は、インスタンス名を含めて、ローカルまたはリモート サーバーのネットワーク名を入力します。 必要に応じて、[登録済みサーバー] に表示される、登録済みサーバーの名前を指定できます。 この名前は、[登録済みサーバー] でのみ使用されます。 サーバーの名前変更に使用することも、接続文字列に使用することもできません。 登録済みサーバー名は、実際のサーバー名よりもわかりやすくしたり、このサーバーを他のサーバーと区別するために他の識別特性を含めたりできます。  
   
   
+

@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a451023d3e3501ac60cd2724349337f30c46b689
@@ -55,3 +56,4 @@ ADO イベント モデルは、同期および非同期 ADO する特定の操�
  [ADO イベント](../../../ado/reference/ado-api/ado-events.md)   
  [イベントのパラメーター](../../../ado/guide/data/event-parameters.md)   
  [イベントの種類](../../../ado/guide/data/types-of-events.md)
+

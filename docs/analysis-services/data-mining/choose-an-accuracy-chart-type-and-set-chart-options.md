@@ -20,6 +20,7 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 40b6e4e67306c225af2ba3d2cd418ceaed2d2541
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/01/2017
  クロス検証レポートの形式はすべてのモデルの種類で同じであり、構成することはできません。 ただし、レポートの内容は、分析するモデルの種類や、予測可能な属性のデータ型によって異なります。 レポートの結果をクリップボードにコピーして、データを Excel で操作することもできます。  
   
   
+

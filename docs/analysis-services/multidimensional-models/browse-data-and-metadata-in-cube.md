@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 564e6236a13c7def4201058c443dbb802e685715
@@ -112,3 +113,4 @@ ms.lasthandoff: 09/01/2017
  データ ペイン内を右クリックして **[空のセルを表示]**をクリックすると、データ グリッド内の空のセルを非表示にすることができます。  
   
   
+

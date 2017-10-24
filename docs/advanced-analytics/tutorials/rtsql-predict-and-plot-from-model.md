@@ -17,6 +17,7 @@ caps.latest.revision: 15
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a84e702b364da8614dd21b8f6adb57e4f2bac487
@@ -183,3 +184,4 @@ R サンプルの詳細については、これらの追加リソースを参照
 + [MicrosoftML を概要します。](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
 
     高速でスケーラブルな機械学習 Microsoft Research からのアルゴリズムの詳細を表示します。
+

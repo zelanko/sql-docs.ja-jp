@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: bdac1899707b3caa4f4c515324511a47830f2722
@@ -63,3 +64,4 @@ ms.lasthandoff: 09/01/2017
  [NULL と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/is-null-transact-sql.md)  
   
   
+

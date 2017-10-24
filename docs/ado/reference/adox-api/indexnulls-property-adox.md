@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f040cded9fb01fbe140a2a7215fd7ba333f4104a
@@ -44,3 +45,4 @@ Null 値を持つインデックス フィールドにレコードがインデ�
   
 ## <a name="see-also"></a>参照  
  [IndexNulls プロパティの例 (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)
+

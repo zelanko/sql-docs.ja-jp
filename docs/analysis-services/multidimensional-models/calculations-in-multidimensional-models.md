@@ -27,6 +27,7 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 725f0ac6753947e587b6746528b6efc6d409f269
@@ -67,3 +68,4 @@ ms.lasthandoff: 09/01/2017
  既存の計算を削除するには、 **[スクリプト オーガナイザー]** ペインの **[計算]** タブで、削除する計算を選択し、 **[編集]** メニューの **[削除]** をクリックするか、ツール バーの **[削除]** アイコンをクリックします。 また、 **[スクリプト オーガナイザー]** ペインで計算を右クリックし、ショートカット メニューから **[削除]** を選択することもできます。  
   
   
+

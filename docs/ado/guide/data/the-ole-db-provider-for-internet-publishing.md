@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c19f0a93a5f7f685d7cd8dcdf6d916ae3955cff8
@@ -59,3 +60,4 @@ ADO[レコード](../../../ado/reference/ado-api/record-object-ado.md)と[スト
 >  Msdaipp.dso が、プロバイダーは、のいずれかの値として明示的に指定されている場合、*プロバイダー*接続文字列キーワード、または**プロバイダー**プロパティは使用できません"URL ="接続文字列にします。 この場合、エラーが発生します。 代わりに、単に URL を指定前に示したようです。  
   
  インターネット、パブリッシング用プロバイダーの詳細については、次を参照してください[Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)、または使用する送信元アプリケーションで提供されるプロバイダーのドキュメントの OLE DB プロバイダー。Internet Publishing がインストールされた: Windows 2000、Office 2000、または Internet Explorer 5.0 です。
+

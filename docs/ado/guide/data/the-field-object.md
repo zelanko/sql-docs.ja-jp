@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1f3d141fc218101902ae094ff2a4db385d204fa3
@@ -122,3 +123,4 @@ ms.lasthandoff: 09/09/2017
  使用すると、現在のレコードがない場合、 **GetChunk**または**AppendChunk**メソッドを**フィールド**オブジェクト、3021 (現在のレコードがありません) エラーが発生します。  
   
  これらのメソッドを使用してバイナリ データを操作するの例は、次を参照してください。、 [AppendChunk メソッド](../../../ado/reference/ado-api/appendchunk-method-ado.md)と[GetChunk メソッド](../../../ado/reference/ado-api/getchunk-method-ado.md)の例では、 *ADO プログラマーズ リファレンス*です。
+

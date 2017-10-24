@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d11617fc364b3ce9f2c4f5b37623f4c74f968517
@@ -73,3 +74,4 @@ ADO は、現在、 [Recordset](../../../ado/reference/ado-api/recordset-object-
 -   [ストリームへの結果セットの取得](../../../ado/guide/data/retrieving-resultsets-into-streams.md)  
   
 -   [インターネットへの発行の ADO を使用します。](../../../ado/guide/data/using-ado-for-internet-publishing.md)
+

@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d1918f82bfe2361a90ca6f2479934ae1deba7664
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/09/2017
 |-|-|  
 |[Clone メソッド (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)|[LockType プロパティ (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)|  
 |[Open メソッド (ADO レコード セット)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|[アクティビ ティー イベント (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)|
+

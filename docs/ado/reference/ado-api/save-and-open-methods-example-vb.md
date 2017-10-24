@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ad4d79342ae4903e3469f3685210e882d64d318f
@@ -105,3 +106,4 @@ Attribute VB_Name = "Save"
  [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [レコード セットの保存に関する詳細情報](../../../ado/guide/data/more-about-recordset-persistence.md)   
  [Save メソッド](../../../ado/reference/ado-api/save-method.md)
+

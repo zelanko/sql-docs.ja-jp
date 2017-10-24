@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c291da043764d9599311704af86952eec47578b6
@@ -57,3 +58,4 @@ End Sub
  [インターネット発行シナリオ](../../../ado/guide/data/internet-publishing-scenario.md)   
  [手順 1: Visual Basic プロジェクトの設定します。](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
  [手順 3: フィールドのリスト ボックスを表示します。](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+

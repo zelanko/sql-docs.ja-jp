@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6e14c59fd0620129486408d33339e80624743f02
@@ -87,3 +88,4 @@ Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec
  [マルチ ディメンション スキーマとデータの概要](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [ADO MD を使用したプログラミング](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [ADO MD と ADO の併用](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)
+

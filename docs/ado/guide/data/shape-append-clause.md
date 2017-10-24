@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 52c9495e221ba7a4b71ba91d276eefd576f6715d
@@ -128,3 +129,4 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
  [データ シェイプの例](../../../ado/guide/data/data-shaping-example.md)   
  [図形の正式な文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般的な図形コマンド](../../../ado/guide/data/shape-commands-in-general.md)
+

@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1a8533cd43964bf7bd2a456ff2cadce1be00b223
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 |--------------|-----------|-----------------|  
 |**adDefaultStream**|-1|既定値を含むフィールドを参照して[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトに関連付けられている、**レコード**です。|  
 |**adRecordURL**|-2|現在の絶対 URL 文字列を含むフィールドを参照して**レコード**です。|
+

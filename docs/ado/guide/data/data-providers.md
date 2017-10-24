@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5a5264398741c58ac6f9aae504237ec1139ecb2c
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  ADO では強力で柔軟ないくつかの別のデータ プロバイダーのいずれかに接続し、指定されたプロバイダーの特定の機能に関係なく、同じプログラミング モデルを公開します。 ただし、各データ プロバイダーが一意であるため、アプリケーションが ADO とやり取りする方法によって異なりますデータ プロバイダー。  
   
  機能と、OLE DB Provider for Microsoft SQL Server データベースへのアクセスに使用される、SQL Server の機能が大きく異なるため、Microsoft OLE DB Provider for Internet Publishing ファイルへのアクセスに使用されるものはたとえば、Web サーバーに保存します。
+

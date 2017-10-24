@@ -39,6 +39,7 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0a182451583f04bd52a4f720c4cc057226261e21
@@ -194,3 +195,4 @@ ms.lasthandoff: 09/01/2017
  DDL に直接存在しない **Binding** 内で許容されるもう 1 つの要素は、 **ParentColumnID**です。これはデータ マイニングの入れ子になったテーブルに使用されます。 この場合は、バインドを提供する入れ子になったテーブルの親列を指定する必要があります。  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 44d731d8c9e61c29f1dc9eb0c8ea12d57402639c
@@ -48,3 +49,4 @@ Visual C アプリケーションで ADO の最新バージョンを使用する
 -   *msado21.tlb*、ADO 2.1 のタイプ ライブラリ  
   
 -   *msado20.tlb*、ADO 2.0 タイプ ライブラリ
+

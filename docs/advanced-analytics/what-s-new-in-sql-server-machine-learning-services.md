@@ -15,6 +15,7 @@ caps.latest.revision: 36
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
 ms.openlocfilehash: 37f3b12dc792060b45e67264e49a4a6180167676
@@ -140,3 +141,4 @@ SQL Server 2016 の R Services の以前のバージョンをインストール�
 + [SQL Server の Machine Learning のサービスで R を設定します。](r/set-up-sql-server-r-services-in-database.md)
 
 + [Machine learning のチュートリアルおよびサンプル](tutorials/machine-learning-services-tutorials.md)
+

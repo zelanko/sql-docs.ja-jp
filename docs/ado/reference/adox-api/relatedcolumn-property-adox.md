@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fb09cdefcb35afdc86f7e296d4a809329a7e4e4b
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>参照  
  [キーは、メソッド、キーの種類、RelatedColumn、RelatedTable および UpdateRule プロパティの例 (VB を) 追加します。](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [キー オブジェクト (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+

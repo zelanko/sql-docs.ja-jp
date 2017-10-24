@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 09a30dc2e51e07a9720e0796666c3a89534acdbe
@@ -61,3 +62,4 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
 |[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: サーバーの全体管理用に構成されているスタンドアロン WFE に ADOMD.NET がインストールされていません。|いいえ|いいえ|SharePoint 2013<br /><br /> SharePoint 2010|ADOMD.NET は、Analysis Services データベースへの接続をサポートする Analysis Services クライアント ライブラリです。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint の配置では、ADOMD.NET を使用して、サーバーの全体管理で [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理ダッシュボードの組み込みレポートにアクセスできます。 組み込みレポートは、実際には、埋め込み Analysis Services のデータが含まれた [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ブックです。 管理ダッシュボードでは、ADOMD.NET を使用して、ブックに含まれているデータを読み込むサーバーに接続要求を送信します。<br /><br /> スタンドアロン Web フロントエンド サーバーで実行されているサーバーの全体管理を含むトポロジで、管理ダッシュボードにこれらのレポートを表示する場合は、ADOMD.NET を手動でインストールする必要があります。 詳細については、「 [サーバーの全体管理を実行している Web フロントエンド サーバーに ADOMD.NET をインストールする方法](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e)」を参照してください。|  
   
   
+

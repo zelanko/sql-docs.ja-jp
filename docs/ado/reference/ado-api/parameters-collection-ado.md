@@ -21,6 +21,7 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9dcfec51eb94eb1ca290ebb3323012e2aaa558b5
@@ -92,3 +93,4 @@ ms.lasthandoff: 09/09/2017
  [Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter メソッド (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [パラメーター オブジェクト](../../../ado/reference/ado-api/parameter-object.md)
+

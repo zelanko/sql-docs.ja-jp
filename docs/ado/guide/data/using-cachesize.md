@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 74ec85c5907485edc5ad8dbcb6c24826fc21ccf3
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
  キャッシュから取得したレコードでは、他のユーザーが、ソース データに対する同時変更は反映されません。 すべてのキャッシュされたデータの更新を強制するを使用して、[再同期](../../../ado/reference/ado-api/resync-method.md)メソッドです。  
   
  場合**CacheSize**ナビゲーション方法 1 より大きい値に設定されます ([移動](../../../ado/reference/ado-api/move-method-ado.md)、 [MoveFirst、MoveLast、MoveNext、および MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md))、削除されたへの移動されない可能性がありますレコードを取得した後、削除が発生した場合に記録します。 最初のフェッチ後以降の削除は反映されませんデータ キャッシュ内の削除された行のデータ値にアクセスしようとするまで。 ただし、設定**CacheSize**を 1 に削除された行はフェッチできないためにこの問題を排除します。
+

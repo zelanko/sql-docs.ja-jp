@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 368e3b3a793bce6b6182ba262493d9a8ed1ac1bd
@@ -170,3 +171,4 @@ Loop
  元の終了**レコード セット**は、そのコピーを閉じませんも閉じるコピーの終了では、元または他のコピーのいずれか。  
   
  複製することができます、 **Recordset**ブックマークをサポートするかどうかのオブジェクトのみです。 ブックマークの値は同義です。いずれかからのブックマーク参照は、 **Recordset**オブジェクトの複製のいずれかで同じレコードを参照します。
+
