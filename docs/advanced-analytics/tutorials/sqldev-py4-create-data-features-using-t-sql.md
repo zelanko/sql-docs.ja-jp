@@ -1,7 +1,7 @@
 ---
 title: "手順 4: T-SQL を使用してデータ機能を作成する | Microsoft Docs"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,15 +20,17 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e429c4ee6874538af52784f5dbe841cb0a420b7d
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: aec9f035404cbd08c40d518db576e443b28a210a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="step-4-create-data-features-using-t-sql"></a>手順 4: T-SQL を使用してデータ機能を作成する
 
 データ探索後から、データをある程度の知見を収集および上に移動する準備が整いました*機能のエンジニア リング*です。 生データから機能を作成するには、このプロセスは、高度な分析のモデリングの重要なステップを指定できます。
+
+この記事では、チュートリアルのパート[SQL 開発者のためのデータベースでの Python analytics](sqldev-in-database-python-for-sql-developers.md)です。 
 
 この手順では、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数を利用し、生データから機能を作成する方法について説明します。 その後、その関数をストアド プロシージャから呼び出し、機能の値を含むテーブルを作成します。
 
@@ -121,14 +123,11 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="next-step"></a>次の手順
 
-[手順 5: 手順 5: T-SQL を使用してモデルをトレーニングし保存する](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[手順 5: トレーニングおよび T-SQL を使用して、Python モデルを保存](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>前の手順
 
 [手順 3: データの探索と視覚化](sqldev-py3-explore-and-visualize-the-data.md)
 
-## <a name="see-also"></a>参照
-
-[Machine Learning Python のサービス](../python/sql-server-python-services.md)
 
 

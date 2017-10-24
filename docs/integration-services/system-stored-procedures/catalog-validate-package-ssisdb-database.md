@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8b4dbd030c457bfb90ac4ec7fae886de28f96854
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 869b758e3ac922762c293eb8aa9a9537a4397bd6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package (SSISDB データベース)
@@ -31,9 +31,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-validate_package [ @folder_name = ] folder_name  
+```sql
+catalog.validate_package [ @folder_name = ] folder_name  
     , [ @project_name = ] project_name  
     , [ @package_name = ] package_name  
     , [ @validation_id = ] validation_id OUTPUT  
@@ -59,7 +58,7 @@ validate_package [ @folder_name = ] folder_name
  64 ビット オペレーティング システムでパッケージを実行する 32 ビット ランタイムを使用するかどうかを示します。 値を使用して`1`64 ビット オペレーティング システムで実行されているときに、32 ビット ランタイムを使用してパッケージを実行します。 値 `0` を使用すると、64 ビット オペレーティング システムで実行しているときに、64 ビット ランタイムでパッケージが実行されます。 このパラメーターはオプションです。 *Use32bitruntime*は**ビット**です。  
   
  [ @environment_scope =] *environment_scope*  
- 検証が考慮する環境参照を示します。 値が `A` の場合は、プロジェクトに関連するすべての環境参照が検証に含まれます。 値が `S` の場合は、1 つの環境参照のみが含まれます。 値が`D`、環境参照は含まれず、各パラメーターでは、検証に合格するために既定のリテラル値があります。 このパラメーターは省略可能です。文字 `D` が既定で使用されます。 *Environment_scope*は**char (1)**です。  
+ 検証が考慮する環境参照を示します。 値が `A` の場合は、プロジェクトに関連するすべての環境参照が検証に含まれます。 値が `S` の場合は、1 つの環境参照のみが含まれます。 値が`D`、環境参照は含まれず、各パラメーターでは、検証に合格するために既定のリテラル値があります。 このパラメーターはオプションです。 文字`D`は既定で使用します。 *Environment_scope*は**char (1)**です。  
   
  [ @reference_id =] *reference_id*  
  環境参照の一意の ID。 検証で、1 つの環境参照が含まれている場合にのみ、このパラメーターは必要なときに*environment_scope*は`S`します。 *Reference_id*は**bigint**です。  
@@ -97,6 +96,6 @@ validate_package [ @folder_name = ] folder_name
 -   変数がパッケージ パラメーターで参照されるが、参照先の環境が検証に含まれなかった  
   
 ## <a name="remarks"></a>解説  
- 検証では、パッケージが正常に実行されない問題を特定することができます。 使用して、 [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md)または[catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)検証の状態を監視するビュー。  
+ 検証により、パッケージが正常に実行されない可能性がありますのある問題を特定できます。 使用して、 [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md)または[catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)検証の状態を監視するビュー。  
   
   

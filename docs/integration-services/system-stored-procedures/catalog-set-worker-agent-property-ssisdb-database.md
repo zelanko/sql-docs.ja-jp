@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: d0476bbb67cff44a05aed1441a31d679882b4cb3
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: c1caf4a71e5802968d9471711b8206a26f9c28d5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogsetworkeragentproperty-ssisdb-database"></a>catalog.set_worker_agent_property (SSISDB データベース)
@@ -28,22 +28,22 @@ ms.lasthandoff: 09/08/2017
 
 ## <a name="syntax"></a>構文
 
-```tsql
-set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId, [ @PropertyName = ] PropertyName, [ @PropertyValue = ] PropertyValue 
+```sql
+catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyName =] PropertyName, [@PropertyValue =] PropertyValue 
 ```
 
 ## <a name="arguments"></a>引数
-[ @WorkerAgentId =] *WorkerAgentId*  
-ワーカーのエージェントは、スケール アウト ワーカーの id。 *WorkerAgentId*は**uniqueidentifier**です。
+[@WorkerAgentId =] *WorkerAgentId*  
+ワーカーのエージェントの ID のスケール アウト ワーカー。 *WorkerAgentId*は**uniqueidentifier**です。
 
-[ @PropertyName =] *PropertyName*  
+[@PropertyName =] *PropertyName*  
 プロパティの名前。 *PropertyName*は**nvarchar (256)**です。
 
-[ @PropertyValue =] *PropertyValue*  
-プロパティの値。 *PropertyValue*は**nvarchar (max)**です。
+[@PropertyValue =] *PropertyValue*  
+プロパティの値です。 *PropertyValue*は**nvarchar (max)**です。
 
 ## <a name="remarks"></a>解説
-有効なプロパティの名前は**DisplayName**、**説明**、**タグ**です。
+有効なプロパティ名は、 **DisplayName**、**説明**、**タグ**です。
 
 ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  
@@ -58,13 +58,13 @@ set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId, [ @PropertyName = 
   
 -   メンバーシップを**sysadmin**サーバーの役割
 
-## <a name="erros-and-warnings"></a>エラーと警告
+## <a name="errors-and-warnings"></a>エラーおよび警告
   エラーまたは警告が発生する可能性がある条件を以下に示します。  
   
 -   ユーザーに適切な権限がない 
 
--   ワーカー エージェント id が正しくありません。
+-   ワーカー エージェント ID が正しくありません。
 
 -   プロパティ名が正しくありません。
 
--   プロパティ値は、vilid ではありません。  
+-   プロパティの値が正しくありません。  

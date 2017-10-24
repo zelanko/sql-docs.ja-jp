@@ -2,7 +2,7 @@
 title: "Machine Learning のサービスの既知の問題 |Microsoft ドキュメント"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/19/2017
+ms.date: 10/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,11 +15,12 @@ caps.latest.revision: 53
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2d21756a05e9e51379faa194ec331517e510988d
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 63ad249e32f259eca850d5b872d940faa313750c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Machine Learning のサービスの既知の問題
@@ -167,6 +168,19 @@ data <- RxSqlServerData(sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM Airline
 この問題を回避するには、キャストを使用する SQL クエリを書き直すことができます、または変換して正しいデータ型を使用してデータを R に提供します。 一般に、パフォーマンスは、操作する際にデータを R コードでデータを変更することによってではなく、SQL を使用しています。
 
 **適用されます:** SQL Server 2016 の R Services
+
+### <a name="limits-on-size-of-serialized-models"></a>シリアル化されたモデルのサイズの制限
+
+モデルを SQL Server テーブルに保存すると、モデルをシリアル化およびバイナリ形式で保存する必要があります。 理論上はこのメソッドを使用して格納できるモデルの最大サイズは、2 GB は、SQL Server の varbinary 列の最大サイズです。
+
+大規模なモデルを使用する必要がある場合は、次の回避策を使用できます。
+
++ 使用して、 [memCompress](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/memCompress)を SQL Server に渡す前に、モデルのサイズを減らすために基本の r 関数。 モデルが 2 GB の制限に近い場合は、このオプションをお勧めします。
++ 大規模なモデルではなく varbinary 列を使用して、モデルを格納する、使用できます、 [FileTable](..\relational-databases\blob\filetables-sql-server.md) SQL Server で提供される機能です。
+
+    Filetable を使用するには、Filetable に格納されたデータは、Filestream ファイル システム ドライバーで SQL Server で管理され、既定のファイアウォール規則は、ネットワーク ファイルへのアクセスをブロックするため、ファイアウォールの例外を追加する必要があります。 詳細については、次を参照してください。 [FileTable の前提条件を有効にする](../relational-databases/blob/enable-the-prerequisites-for-filetable.md)です。 
+
+    FileTable を有効にした後、モデルの書き込み先、FileTable の API を使用して SQL からのパスを取得してその場所に、R コードからモデルを作成します。 モデルの読み取りに必要なときは、SQL からパスを取得して、R スクリプトからのパスを使用して、モデルを呼び出します。 詳細については、次を参照してください。 [Filetable へのアクセスとファイル入出力 Api](../relational-databases/blob/access-filetables-with-file-input-output-apis.md)です。
 
 ### <a name="avoid-clearing-workspaces-when-you-execute-r-code-in-a-includessnoversionincludesssnoversion-mdmd-compute-context"></a>R コードを実行するときに、ワークスペースをオフにしないで、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]計算コンテキスト
 

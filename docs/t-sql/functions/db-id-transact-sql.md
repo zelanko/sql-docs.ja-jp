@@ -26,11 +26,12 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 99497c63e037054daf249ac75ef35073f102a498
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 30d34b3509517d18559d4fbb0aa02a92e6d6cfe8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="dbid-transact-sql"></a>DB_ID (Transact-SQL)
@@ -78,7 +79,7 @@ GO
 ```  
   
 ### <a name="c-using-dbid-to-specify-the-value-of-a-system-function-parameter"></a>C. DB_ID を使用してシステム関数パラメーターの値を指定する  
-次の例で`DB`_`ID`のデータベース ID を返す、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]システム関数でデータベース`sys.dm_db` \_ `index` \_ `operational` \_ `stats`. この関数はデータベース ID を最初のパラメーターとしてとります。
+次の例で`DB_ID`のデータベース ID を返す、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]システム関数でデータベース`sys.dm_db_index_operational_stats`です。 この関数はデータベース ID を最初のパラメーターとしてとります。
   
 ```sql
 DECLARE @db_id int;  

@@ -22,11 +22,12 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94cbf96a25a84af1eddce9d94555be9c558c3470
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 166a85e5fe33a95cd8a36f221c2a774e4a0a9fb2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>照合順序関数、COLLATIONPROPERTY (TRANSACT-SQL)
@@ -51,10 +52,10 @@ COLLATIONPROPERTY( collation_name , property )
   
 |プロパティ名|Description|  
 |---|---|
-|**CodePage**|照合順序の Unicode 以外のコード ページ。|  
-|**LCID**|照合順序の Windows LCID。|  
-|**ComparisonStyle**|照合順序の Windows 比較形式。 すべてのバイナリ照合順序は、0 を返します。|  
-|**バージョン**|照合順序 ID のバージョン フィールドから継承した照合順序のバージョン。 2、1、または 0 が返されます。<br /><br /> 名前に「100」との照合順序) では、2 を返します。<br /><br /> 名前に "90" が含まれる照合順序では、1 が返されます。<br /><br /> 他のすべての照合順序では 0 が返されます。|  
+|**CodePage**|照合順序の Unicode 以外のコード ページ。 参照してください[付録 G DBCS/Unicode マッピング テーブル](https://msdn.microsoft.com/en-us/library/cc194886.aspx)と[付録 H コード ページ](https://msdn.microsoft.com/en-us/library/cc195051.aspx)をこれらの値を変換し、その文字マッピングを参照してください。|  
+|**LCID**|照合順序の Windows LCID。 参照してください[LCID 構造](https://msdn.microsoft.com/en-us/library/cc233968.aspx)これらの値を変換する (に変換する必要があります`VARBINARY`最初)。|  
+|**ComparisonStyle**|照合順序の Windows 比較形式。 すべてのバイナリ照合順序は 0 を返します (両方`_BIN`と`_BIN2`) だけでなくすべてのプロパティが機密性の高い場合。 ビットマスク値を指定します。<br /><br /> 大文字小文字を区別します 1。<br /><br /> アクセントを区別しない: 2<br /><br /> ひらがなとカタカナ: 65536<br /><br /> 幅を無視: 131072|  
+|**バージョン**|照合順序 ID のバージョン フィールドから継承した照合順序のバージョン。 0 ~ 3 の範囲の整数値を返します。<br /><br /> 照合順序名に「140」では、3 を返します。<br /><br /> 名前に「100」との照合順序は、2 を返します。<br /><br /> 名前に「90」照合順序は、1 を返します。<br /><br /> 他のすべての照合順序では 0 が返されます。|  
   
 ## <a name="return-types"></a>戻り値の型
 **sql_variant**

@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 365fb52c9808e0402323d52c85371c35555d833e
+ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
+ms.openlocfilehash: e9d1b8851f113fa44264230a79d0e496007ed96b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server のエディションでサポートされている integration Services 機能
@@ -29,7 +29,7 @@ Evaluation および Developer エディションでサポートされる機能�
 最新のリリース ノートと新しい情報は、次の記事を参照してください。
 -   [SQL Server 2016 リリース ノート](../sql-server/sql-server-2016-release-notes.md)
 -   [SQL Server 2016 の Integration Services の新機能](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)
--   [SQL Server 2017 における Integration Services の新機能](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
+-   [SQL Server 2017 の Integration Services の新機能](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
     
 **SQL Server 2016 をお試しください。**    
 
@@ -53,7 +53,7 @@ Evaluation および Developer エディションでサポートされる機能�
 
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|SQL Server インポートおよびエクスポート ウィザード|可|[ユーザー アカウント制御]|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい|  
+|SQL Server インポートおよびエクスポート ウィザード|可|可|可|可|はい|  
 
 ## <a name="IS"></a> Integration Services  
   
@@ -70,8 +70,8 @@ Evaluation および Developer エディションでサポートされる機能�
   
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|By Attunity 高パフォーマンスの Oracle 変換先|はい|||||  
-|By Attunity の高パフォーマンスの Teradata 変換先|はい|||||  
+|高パフォーマンスの Oracle ソースと by Attunity の変換先|はい|||||  
+|高パフォーマンスの Teradata 変換元と by Attunity の変換先|はい|||||  
 |SAP BW 変換元と変換先|はい|||||  
 |データ マイニング モデル トレーニング変換先|はい|||||  
 |ディメンション処理変換先|はい|||||  
@@ -81,7 +81,6 @@ Evaluation および Developer エディションでサポートされる機能�
   
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|永続的な (高パフォーマンス) 参照|はい|||||  
 |変更データ キャプチャ コンポーネント by Attunity <sup>1</sup>|はい|||||  
 |データ マイニング クエリ変換|はい|||||  
 |あいまいグループ化とあいまい参照変換|はい|||||  

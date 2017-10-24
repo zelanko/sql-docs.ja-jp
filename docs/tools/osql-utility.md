@@ -27,11 +27,12 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 64781fa0b670cc854f5f8a5ff687c8ab481ce922
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: b55693fd4a51c335db63d879a1c255f9d8a855c5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="osql-utility"></a>osql ユーティリティ
@@ -107,10 +108,10 @@ C:\>osql
  *osql* の開始時に USE **db_name**ステートメントを発行します。  
   
  **-l** *time_out*  
- **osql** がログイン タイムアウトになる時間を秒単位で指定します。 **osql** でのログインに関する既定のタイムアウトは 8 秒です。  
+ **osql** がログイン タイムアウトになる時間を秒単位で指定します。**osql** でのログインに関する既定のタイムアウトは 8 秒です。  
   
  **-t** *time_out*  
- コマンドの実行待ち時間を秒単位で指定します。 *time_out* 値を指定しないと、コマンドはタイムアウトしません。  
+ コマンドの実行待ち時間を秒単位で指定します。*time_out* 値を指定しないと、コマンドはタイムアウトしません。  
   
  **-h** *headers*  
  列ヘッダーの間に出力する行数を指定します。 既定では、各クエリの結果に対して、ヘッダーは 1 つだけ表示されます。 ヘッダーを出力しない場合は、-1 を指定します。 -1 を使用する場合、パラメーターと設定値の間には空白を入れないでください (**-h -1**ではなく、 **-h-1**を使用)。  
@@ -173,7 +174,7 @@ osql -E -q "select name, object_id from %table%"
  パフォーマンス統計を出力します。  
   
  **-b**  
- エラーが発生したときに、 **osql** を終了し、DOS ERRORLEVEL 値を返します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のエラー メッセージの重大度が 11 以上の場合は、DOS ERRORLEVEL 変数に返される値は 1 です。それ以外の場合は、値 0 が返されます。 [!INCLUDE[msCoName](../includes/msconame-md.md)]MS-DOS バッチ ファイルは、DOS ERRORLEVEL の値をテストし、エラーを適切に処理できます。  
+ エラーが発生したときに、 **osql** を終了し、DOS ERRORLEVEL 値を返します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のエラー メッセージの重大度が 11 以上の場合は、DOS ERRORLEVEL 変数に返される値は 1 です。それ以外の場合は、値 0 が返されます。 [!INCLUDE[msCoName](../includes/msconame-md.md)] MS-DOS バッチ ファイルにより、DOS ERRORLEVEL の値をテストすることができ、エラーを適切に処理できます。  
   
  **-u**  
  *input_file* の形式に関係なく、 *output_file*を Unicode 形式で格納するように指定します。  
@@ -339,9 +340,9 @@ GO
  このステートメントの実行結果は `10.3496`で、小数点以下のすべての桁をそのままにして値を格納することを示しています。  
   
 ## <a name="see-also"></a>参照  
- [コメント & #40 です。MDX と #41 です。](../mdx/comment-mdx.md)   
+ [コメント &#40;MDX&#41;](../mdx/comment-mdx.md)   
  [--& #40 です。コメント &#41;& #40 です。MDX と #41 です。](../mdx/comment-mdx-operator-reference.md)   
- [CAST および CONVERT &#40;Transact-SQL&#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST および CONVERT & #40 です。TRANSACT-SQL と #41 です。](../t-sql/functions/cast-and-convert-transact-sql.md)   
  [RAISERROR と #40 です。TRANSACT-SQL と #41 です。](../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

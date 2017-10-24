@@ -24,11 +24,12 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bf23c40678950000b65a66dc29bdba8b4615c7b1
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 5e6a0baf8fb2f060ab1819613cc1b417ff2c9802
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-equals-transact-sql"></a>= (等しい) (Transact-SQL)
@@ -91,7 +92,7 @@ DepartmentID Name
 ```  
   
 ### <a name="b-comparing-null-and-non-null-values"></a>B. NULL 値と NULL 以外の値を比較する  
- 次の例は、等号 (`=`) と不等号 (`<>`) と比較する比較演算子`NULL`と、テーブル内の null 以外の値。 例では、ことも示しています`IS NULL`は影響しません、 `SET ANSI`_`NULLS`設定します。  
+ 次の例は、等号 (`=`) と不等号 (`<>`) と比較する比較演算子`NULL`と、テーブル内の null 以外の値。 例では、ことも示しています`IS NULL`は影響しません、`SET ANSI_NULLS`設定します。  
   
 ```  
 -- Create table t1 and insert 3 rows.  

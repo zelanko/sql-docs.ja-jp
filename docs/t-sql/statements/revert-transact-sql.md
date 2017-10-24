@@ -26,11 +26,12 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2074ef0a9e434ac5c427c5438633c61ead0eb25a
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 033442da3e10fd834963df30ea071a220464de6f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
@@ -76,7 +77,7 @@ GO
 EXECUTE dbo.usp_myproc;   
 ```  
   
- この場合、`REVERT`_`usp` 内で定義された `myproc` ステートメントでは、モジュール内で設定されている実行コンテキストが切り替えられますが、モジュール外で設定されている実行コンテキストに影響はありません。 つまり、セッションの実行コンテキストに設定されたまま`login1`です。  
+ `REVERT`ステートメント内で定義される`usp_myproc`モジュール内に設定された実行コンテキストを切り替えるには、モジュールの外部に設定された実行コンテキストは影響しません。 つまり、セッションの実行コンテキストに設定されたまま`login1`です。  
   
  スタンドアロンのステートメントとして指定した場合、REVERT はバッチまたはセッション内で定義された EXECUTE AS に適用されます。 対応する EXECUTE AS ステートメントに WITH NO REVERT 句が含まれている場合、REVERT は無効です。 この場合、実行コンテキストはセッションが削除されるまで有効です。  
   

@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 95c07e2550330ff9a2ac1cc70107d11147ae53dd
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 7e9d38935a91bba81359bee7fdbd64dba86d0d26
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (SSISDB データベース)
@@ -30,40 +30,40 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="syntax"></a>構文  
   
-```tsql  
-create_execution [ @folder_name = folder_name  
-     , [ @project_name = ] project_name  
-     , [ @package_name = ] package_name  
-  [  , [ @reference_id = ] reference_id ]  
-  [  , [ @use32bitruntime = ] use32bitruntime ] 
-  [  , [ @runinscaleout = ] runinscaleout ]
-  [  , [ @useanyworker = ] useanyworker ] 
-     , [ @execution_id = ] execution_id OUTPUT  
+```sql  
+catalog.create_execution [@folder_name = folder_name  
+     , [@project_name =] project_name  
+     , [@package_name =] package_name  
+  [  , [@reference_id =] reference_id ]  
+  [  , [@use32bitruntime =] use32bitruntime ] 
+  [  , [@runinscaleout =] runinscaleout ]
+  [  , [@useanyworker =] useanyworker ] 
+     , [@execution_id =] execution_id OUTPUT  
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @folder_name =] *folder_name*  
+ [@folder_name =] *folder_name*  
  実行するパッケージが格納されているフォルダーの名前。 *Folder_name*は**nvarchar (128)**です。  
   
- [ @project_name =] *project_name*  
+ [@project_name =] *project_name*  
  実行するパッケージを含むプロジェクトの名前。 *Project_name*は**nvarchar (128)**です。  
   
- [ @package_name =] *package_name*  
+ [@package_name =] *package_name*  
  実行するパッケージの名前。 *Package_name*は**nvarchar (260)**です。  
   
- [ @reference_id =] *reference_id*  
+ [@reference_id =] *reference_id*  
  環境参照の一意識別子。 このパラメーターはオプションです。 *Reference_id*は**bigint**です。  
   
- [ @use32bitruntime =] *use32bitruntime*  
+ [@use32bitruntime =] *use32bitruntime*  
  64 ビット オペレーティング システムでパッケージを実行する 32 ビット ランタイムを使用するかどうかを示します。 64 ビットのオペレーティング システムで実行されているときに、32 ビット ランタイムを使用してパッケージを実行するのにには、1 の値を使用します。 値 0 を使用すると、64 ビット オペレーティング システムで実行しているときに、64 ビット ランタイムでパッケージを実行します。 このパラメーターはオプションです。 *Use32bitruntime*は**ビット**です。  
  
- [ @runinscaleout =] *runinscaleout*  
- 実行がスケール アウトであるかどうかを示します。 1 の値を使用してスケール アウトでパッケージを実行します。 スケール アウトせずパッケージを実行するのにには、0 の値を使用します。 このパラメーターはオプションです。 [Ssisdb] DEFAULT_EXECUTION_MODE に設定されます。[カタログ] です。[catalog_properties] で指定されていない場合。 *Runinscaleout*は**ビット**です。 
+ [@runinscaleout =] *runinscaleout*  
+ 実行がスケール アウトであるかどうかを示します。1 の値を使用してスケール アウトでパッケージを実行します。スケール アウトせずパッケージを実行するのにには、0 の値を使用します。このパラメーターはオプションです。 指定しない場合、その値は [ssisdb] DEFAULT_EXECUTION_MODE に設定されます。[カタログ] です。[catalog_properties] です。 *Runinscaleout*は**ビット**です。 
  
- [ @useanyworker =] *useanyworker*  
-  実行を行うには、スケール アウト ワーカーを許可するかどうかを示します。 スケール アウト ワーカーを使用してパッケージを実行するのにには、1 の値を使用します。 パッケージを実行するのにすべてのスケール アウト ワーカーが許可されていることを示すために 0 の値を使用します。 このパラメーターはオプションです。 これを 1 に設定指定しなかった場合は。 *Useanyworker*は**ビット**です。 
+ [@useanyworker =] *useanyworker*  
+  実行を行うには、スケール アウト ワーカーを許可するかどうかを示します。 スケール アウト ワーカーを使用してパッケージを実行するのにには、1 の値を使用します。 パッケージを実行するのにすべてのスケール アウト ワーカーが許可されていることを示すために 0 の値を使用します。 このパラメーターはオプションです。 指定しない場合、その値は 1 に設定します。 *Useanyworker*は**ビット**です。 
   
- [ @execution_id =] *execution_id*  
+ [@execution_id =] *execution_id*  
  実行のインスタンスの一意識別子を返します。 *Execution_id*は**bigint**です。  
 
   
@@ -75,9 +75,9 @@ create_execution [ @folder_name = folder_name
  実行で指定できるのは、エントリ ポイントのパッケージとしてマークされたパッケージのみです。 エントリ ポイントではないパッケージを指定すると、実行が失敗します。  
   
 ## <a name="example"></a>例  
- 次の例では、スケール アウトではない Child1.dtsx パッケージの実行のインスタンスを作成する catalog.create_execution を呼び出します。 integration Services Project1 にはパッケージが含まれています。 例では catalog.set_execution_parameter_value を呼び出して、Parameter1、Parameter2、および LOGGING_LEVEL の各パラメーターの値を設定します。 例では catalog.start_execution を呼び出して、実行のインスタンスを起動します。  
+ 次の例では、スケール アウトではない Child1.dtsx パッケージの実行のインスタンスを作成する catalog.create_execution を呼び出します。integration Services Project1 にはパッケージが含まれています。 例では catalog.set_execution_parameter_value を呼び出して、Parameter1、Parameter2、および LOGGING_LEVEL の各パラメーターの値を設定します。 例では catalog.start_execution を呼び出して、実行のインスタンスを起動します。  
   
-```  
+```sql  
 Declare @execution_id bigint  
 EXEC [SSISDB].[catalog].[create_execution] @package_name=N'Child1.dtsx', @execution_id=@execution_id OUTPUT, @folder_name=N'TestDeply4', @project_name=N'Integration Services Project1', @use32bitruntime=False, @reference_id=Null  
 Select @execution_id  
@@ -89,7 +89,6 @@ DECLARE @var2 smallint = 1
 EXEC [SSISDB].[catalog].[set_execution_parameter_value] @execution_id, @object_type=50, @parameter_name=N'LOGGING_LEVEL', @parameter_value=@var2  
 EXEC [SSISDB].[catalog].[start_execution] @execution_id  
 GO  
-  
 ```  
   
 ## <a name="return-code-value"></a>リターン コード値  
@@ -98,7 +97,7 @@ GO
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>Permissions  
  このストアド プロシージャには、次の権限のいずれかが必要です。  
   
 -   プロジェクトの READ および EXECUTE 実行権限と、該当する場合は、参照先の環境での READ 権限  

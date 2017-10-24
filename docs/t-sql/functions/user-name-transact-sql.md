@@ -27,11 +27,12 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5179a5d031dbc654f1624f4d64c3e94bf28efe40
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: f51938b0f918a1a85955df4038ded45480bd1a45
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="username-transact-sql"></a>USER_NAME (Transact-SQL)
@@ -128,14 +129,7 @@ DBO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-username"></a>E. USER_NAME を使用する  
- 次の例では、ユーザー ID `13` のユーザー名を返します。  
-  
-```  
-SELECT USER_NAME(13);  
-```  
-  
-### <a name="f-using-username-without-an-id"></a>F. ID を指定せずに USER_NAME を使用する  
+### <a name="e-using-username-without-an-id"></a>E. ID を指定せずに USER_NAME を使用する  
  次の例では、ID を指定せずに、現在のユーザーの名前を検索します。  
   
 ```  
@@ -144,14 +138,12 @@ SELECT USER_NAME();
   
  現在のログイン ユーザーの結果セットを次に示します。  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
 ```  
 ------------------------------   
 User7                              
 ```  
   
-### <a name="g-using-username-in-the-where-clause"></a>G. WHERE 句で USER_NAME を使用する  
+### <a name="f-using-username-in-the-where-clause"></a>F. WHERE 句で USER_NAME を使用する  
  次の例では、`sysusers` の行を検索します。検索される名前は、ユーザー識別番号 `USER_NAME` に対してシステム関数 `1` を適用した結果と同じになります。  
   
 ```  

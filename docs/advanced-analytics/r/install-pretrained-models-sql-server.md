@@ -2,8 +2,8 @@
 title: "事前トレーニング済みの機械学習モデルを SQL Server のインストール |Microsoft ドキュメント"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/15/2017
-ms.prod: sql-server-2016
+ms.date: 10/18/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,34 +15,42 @@ caps.latest.revision: 1
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: b52fcc1e4ac77df2968a4ea6cbd6e546ff1b74ac
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 8f4a145700d12f31a868cc3fc20a9dbdbe6f45ea
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>事前トレーニング済みの機械学習の SQL Server 上のモデルをインストールします。
 
-このトピックでは、事前トレーニング済みモデルを SQL Server のインスタンスに追加済みの R Services または Machine Learning のサービスのインストール方法について説明します。
+この記事では、事前トレーニング済みモデルを SQL Server のインスタンスに追加済みの R Services または Machine Learning のサービスのインストール方法について説明します。
 
-事前トレーニング済みモデルは、Microsoft R Server (または Microsoft Machine Learning のサーバーに更新プログラム) に、更新プログラムで提供されます。 インスタンスをアップグレードおよび Microsoft R の最新バージョンを取得する方法については、次を参照してください。 [R Services のインスタンスで R コンポーネントをアップグレード](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
+事前トレーニング済みモデルは、Microsoft R Server をインストールするとき、またはスタンドアロンのインストーラーを使用して、マシン学習サーバー オプションとして提供されます。 このインストーラーを使用すると、事前トレーニング済みモデルだけを取得することができますか、コンピューターをアップグレードする SQL Server 2016 または SQl Server 2017 のインスタンス内のコンポーネントの学習を行うこともできます。
 
-R Server の Windows ベースの独立したインストーラーを実行しているだけでは、これらのモデルをインストールできます。
-ただし、これには、モデルを SQL Server にインストールするときに使用する追加の手順があります。 このトピックでは、プロセスについて説明します。
+インストーラーを実行して、事前トレーニング済みモデルをダウンロードしたら、SQL Server を使用するためのモデルを構成する追加の手順があります。 この記事では、プロセスについて説明します。
+
+詳細については、次の記事を参照してください。
+
++ [事前トレーニング済みの機械学習のセンチメント分析とイメージ検出モデル](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)
+
++ [R Services のインスタンスで R コンポーネントをアップグレード](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
 
 ## <a name="benefits-of-using-pretrained-models"></a>事前トレーニング済みモデルを使用する利点
 
-事前トレーニング済みモデルがの特性付け、画像のまたはセンチメント分析などのタスクを実行する必要がありますが、大規模なデータセットを取得するか、複雑なモデルをトレーニングするリソースがない顧客をサポートするために使用可能な行われました。 事前トレーニング済みモデルを使用するには、テキストおよびイメージ最も効率的に処理を開始することができます。
+これらの事前トレーニング済みモデルは、顧客の特性付け、画像のまたはセンチメント分析などのタスクを実行する必要がありますが、大規模なデータセットを取得するか、複雑なモデルをトレーニングするリソースがないのために作成されています。 事前トレーニング済みモデルを使用するには、テキストおよびイメージ最も効率的に処理を開始することができます。
 
-現在使用できるモデルは深層ニューラル ネットワーク (DNN) センチメント分析とイメージ分類モデルです。 4 つすべての事前トレーニング済みモデルは、CNTK に対してトレーニングされました。 各ネットワークの構成が次の参照の実装に基づいています。
+現在使用できるモデルは深層ニューラル ネットワーク (DNN) センチメント分析とイメージ分類モデルです。 Microsoft を使用してすべての事前トレーニング済みモデル トレーニングを受けた[計算ネットワーク Toolkit](https://cntk.ai/Features/Index.html)、または**CNTK**です。 
+
+各ネットワークの構成が次の参照の実装に基づいています。
 
 + ResNet 18
 + ResNet 50
 + ResNet 101
 + AlexNet
 
-深層残存ネットワークおよび CNTK を使用して実装する方法の詳細については、次の記事を参照してください。
+ネットワークの詳細な学習および CNTK を使用してその実装の詳細については、次の記事を参照してください。
 
 + [Microsoft の調査担当者のアルゴリズム ImageNet チャレンジ マイルス トーンを設定します。](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
 
@@ -50,60 +58,74 @@ R Server の Windows ベースの独立したインストーラーを実行し�
 
 ## <a name="how-to-install-the-models-on-sql-server"></a>SQL Server にモデルをインストールする方法
 
-   > [!NOTE]
-   > 
-   > Microsoft R Server をインストールするか、SQL Server のインスタンスをアップグレードする個別の Windows ベースのインストーラーを使用する場合、事前トレーニング済みモデルはインストーラーから入手できます。 参照してください[インストール R Server for Windows](https://docs.microsoft.com/en-us/r-server/install/r-server-install-windows)です。
-   > 
-   > 追加の手順は、Microsoft R Server で、モデルを使用する必要があります。 詳細については、次を参照してください[事前トレーニング済み MicrosoftML の機械学習モデルをインストールおよび展開する方法。](https://docs.microsoft.com/r-server/install/microsoftml-install-pretrained-models)
+1. Machine Learning のサーバーの Windows ベースの独立したインストーラーを実行します。 ダウンロードの場所を参照してください。
 
-1. 既定では、SQL Server をインストールするときに事前トレーニング済みモデルはインストールされません。SQL Server セットアップが完了したら、コマンド ライン セットアップ ユーティリティを実行して、それらを追加する必要があります。
+    + [機械学習の windows Server をインストールします。](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
+    + [R Server 9.1 を Windows をインストールします。](https://docs.microsoft.com/r-server/install/r-server-install-windows)
 
-2. 管理者特権でコマンド プロンプトを開くし、Microsoft R インストーラーが含まれる SQL Server のセットアップ ブートス トラップ フォルダーに移動します。
+2. インストールする機能の選択内容は、のモデルを取得するか、インストーラーを使用して他の更新を実行するかによって異なります。
+ 
+    + これは、Machine Learning のサーバーの新規インストールと、R、Python またはコンポーネントにその他の変更を加えるたくない場合**のみ**事前トレーニング済みモデル オプション。 使用許諾契約書を含む、他のすべてのメッセージをそのまま使用します。
 
-    SQL Server 2017 年 1 RC 1 の既定のインスタンスにこれは、次のようになります。
+    + 同時に、R または Python コンポーネントをアップグレードするに更新するには使用する言語 (R、Python、またはその両方) を選択し、事前トレーニング済みモデル オプションを選択します。 これらの変更を適用する 1 つまたは複数のインスタンスを選択します。
+
+    + 前のすべての選択のままにして以前に Machine Learning のサーバーをインストールおよび更新されたバインド オプションを使用して R または Python のコンポーネントが場合、**は**、事前トレーニング済みモデルのオプションを選択します。 以前に選択したオプションの選択を解除できませんまたは削除される予定です。
+
+3. インストールが完了したら、Windows コマンド プロンプトを開き**管理者として**、し、Microsoft R インストーラーが含まれる SQL Server のセットアップ ブートス トラップ フォルダーに移動します。 SQL Server 2017 の既定のインスタンスで、フォルダーになります。
     
-    `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\SQL2017RC1\x64\`
+    `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\SQL2017\x64\`
 
-3. をインストールするコンポーネントと、次の引数を使用して、事前トレーニング済みモデルを追加する必要がありますフォルダーを指定します。
+4. インストールするコンポーネント、バージョン、およびこれらの例で示すように、RSetup.exe に引数を使用して、モデルのソース ファイルを含むフォルダーを指定します。
 
-  + 使用したモデルを使用する**R_SERVICES**
+  + 使用したモデルを使用する**R_SERVICES**、次の構文とパスを使用します。
 
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\R_SERVICES`
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\R_SERVICES\library\MicrosoftML\mxLibs\x64`
 
-    たとえば、SQL Server 2017 の既定のインスタンスに R を使用する事前トレーニング済みモデルの使用を有効にするには、このステートメントを実行しました。
+    たとえば、SQL Server の 2017 の既定のインスタンスでの R の事前トレーニング済みモデルの最新バージョンの使用を有効にするには、このステートメントを実行します。
 
-    `RSetup.exe /install /component MLM /version 9.2.0.22 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES"`
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
-  + 使用したモデルを使用する**PYTHON_SERVICES**
+    名前付きインスタンスのコマンドは、ようになります次のような
 
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\PYTHON_SERVICES`
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
-    たとえばの既定のインスタンスの SQL Server の 2017、Python を使用して事前トレーニング済みモデルの使用を有効にするには、このステートメントを実行します。
+  + 使用したモデルを使用する**PYTHON_SERVICES**、次の構文とパスを使用します。
 
-    `RSetup.exe /install /component MLM /version 9.2.0.22 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES"`
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
 
-4. バージョン パラメーターには、次の値がサポートされています。
+    たとえば、事前トレーニング済みモデルの最新バージョンの SQL Server の 2017 の既定のインスタンスでの Python のために使用するには、このステートメントを実行します。
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs"`
+
+    名前付きインスタンスのコマンドは、ようになります次のような
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs"`
+
+5. バージョン パラメーターには、次の値がサポートされています。
 
     + リリース候補 0:**されていた 9.1.0.0**
     + リリース候補 1: **9.2.0.22**
-    + 最終バージョン番号 (リリースではありません): **9.2.0.100**
+    + RTM: **9.2.0.100**
+    + 累積更新プログラム 1: **9.2.0.24**
 
-5. 次のモデルを R に追加する必要がありますのインストールが成功した場合は、\_SERVICES または PYTHON\_SERVICES フォルダー。
+6. 次のモデルを R に追加する必要がありますのインストールが成功した場合は、\_SERVICES または PYTHON\_SERVICES フォルダー。
 
-    - AlexNet_Updated.model
-    - ImageNet1K_mean.xml
+    - AlexNet\_Updated.model
+    - ImageNet1K\_mean.xml
     - pretrained.model
-    - ResNet_101_Updated.model
-    - ResNet_18_Updated.model
-    - ResNet_50_Updated.model
+    - ResNet\_101\_Updated.model
+    - ResNet\_18\_Updated.model
+    - ResNet\_50\_Updated.model
 
 ## <a name="examples"></a>使用例
 
-モデルをインストールした後は、R コードから呼び出すことによって、モデルを使用できます。
+モデルをインストールした後は、コードから呼び出すことによって、モデルを使用できます。
 
 ### <a name="image-featurization-example"></a>イメージの特性付けの例
 
-イメージの事前トレーニング済みモデルを指定するイメージの特性付けがサポートされています。 使用するには、モデルを呼び出す、 **featurizeImage**を変換します。
+イメージの事前トレーニング済みモデルを指定するイメージの特性付けがサポートされています。 使用してこの特定のモデルのトレーニングが行われた[CNTK](https://docs.microsoft.com/cognitive-toolkit/)です。 
+
+使用するには、モデルを呼び出す、 **featurizeImage**を変換します。
 
 + [featurizeImage: Machine Learning イメージの特性付けの変換](https://docs.microsoft.com/r-server/r-reference/microsoftml/featurizeimage)
 
@@ -125,12 +147,12 @@ R Server の Windows ベースの独立したインストーラーを実行し�
 ```
 
 > [!NOTE]
-> 
-> 読み取り、または事前トレーニング済みモデル自体を変更することはできません。 この特定のモデルに基づいている[CNTK](https://docs.microsoft.com/cognitive-toolkit/)モデルが、パフォーマンス向上のためのネイティブ形式を使用して圧縮されました。
+> パフォーマンスを向上させるために、ネイティブ形式を使用して圧縮されているために、読み取り、または事前トレーニング済みのモデルを変更することはありません。
+
 
 ### <a name="text-analysis-example"></a>テキスト分析の例
 
-このサンプルでは、分類の事前トレーニング済みモデルの使用を示します。
+事前トレーニング済みのテキストの特性付けのモデルを使用してテキスト分類する方法の例については、次の例を参照してください。
 
 [テキスト フィーチャライザーを使用してセンチメント分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 

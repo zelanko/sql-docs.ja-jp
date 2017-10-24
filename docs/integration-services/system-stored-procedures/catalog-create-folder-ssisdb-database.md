@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: df7b4750e813601b7e4d2a02c8f1f277f1000d9c
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 43d128f9dcc4cea632c810a13d21eb5e1ddb61df
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreatefolder-ssisdb-database"></a>catalog.create_folder (SSISDB データベース)
@@ -28,15 +28,15 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>構文  
   
-```tsql  
-create_folder [ @folder_name = ] folder_name, [ @folder_id = ] folder_id OUTPUT  
+```sql  
+catalog.create_folder [@folder_name =] folder_name, [@folder_id =] folder_id OUTPUT  
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @folder_name =] *folder_name*  
+ [@folder_name =] *folder_name*  
  新しいフォルダーの名前です。 *Folder_name*は**nvarchar (128)**です。  
   
- [ @folder_name =] *folder_id*  
+ [@folder_name =] *folder_id*  
  フォルダーの一意識別子 (ID)。 *Folder_id*は**bigint**です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
@@ -53,6 +53,6 @@ create_folder [ @folder_name = ] folder_name, [ @folder_id = ] folder_id OUTPUT
 -   メンバーシップを**sysadmin**サーバーの役割  
   
 ## <a name="errors-and-warnings"></a>エラーおよび警告  
- 同じ名前のフォルダーが既に存在する場合、ストアド プロシージャはエラーを返します。  
+同じ名前のフォルダーが既に存在する場合、ストアド プロシージャは、エラーを返します。  
   
   

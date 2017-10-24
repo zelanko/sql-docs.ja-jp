@@ -40,11 +40,12 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fa99ed46f0d5248f2cb0552a62ec1547d5b4f296
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: ad0a32f2f11c7b0ca781c7e01635204da38fcbdd
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="search-condition-transact-sql"></a>検索条件 (Transact-SQL)
@@ -187,7 +188,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-where-with-like-and-escape-syntax"></a>A. WHERE を LIKE および ESCAPE 構文と共に使用する  
- 次の例では、`LargePhotoFileName` 列に文字列 `green_` が含まれている行を検索します。`ESCAPE` がワイルドカード文字であるため、`_` オプションを使用しています。 `ESCAPE` オプションを指定しないと、単語 `green` の後に `_` 以外の 1 文字が続く文字列を含む description 列の値もクエリで検索してしまいます。  
+ 次の例である行の検索、`LargePhotoFileName`列が文字`green_`を使用して、 `ESCAPE` _ ワイルドカード文字は、オプションを指定します。 指定せず、`ESCAPE`オプション、説明の値、単語を含むクエリで検索が`green`_ 文字以外の任意の 1 文字が続きます。  
   
 ```  
 USE AdventureWorks2012 ;  

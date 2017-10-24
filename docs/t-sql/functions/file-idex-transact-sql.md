@@ -26,24 +26,24 @@ caps.latest.revision: 35
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: df818b30ca850fbb3b7cb0df816aacb6afa12a76
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 9a65a49a1e6d8c23a28b117fc90b0276ce185556
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在のデータベース内のデータ、ログ、またはフルテキスト ファイルについて、指定された論理ファイル名のファイル識別 (ID) 番号を返します。  
+現在のデータベース内のデータ、ログ、またはフルテキスト ファイルについて、指定された論理ファイル名のファイル識別 (ID) 番号を返します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 FILE_IDEX ( file_name )  
 ```  
   
@@ -64,12 +64,12 @@ FILE_IDEX ( file_name )
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-retrieving-the-file-id-of-a-specified-file"></a>A. 指定されたファイルのファイル ID を取得する  
- 次の例では、`AdventureWorks_Data` というファイルのファイル ID が返されます。  
+次の例では、`AdventureWorks_Data` というファイルのファイル ID が返されます。  
   
 ```tsql  
 USE AdventureWorks2012;  
 GO  
-SELECT FILE_IDEX('AdventureWorks2012_Data')AS 'File ID';  
+SELECT FILE_IDEX('AdventureWorks2012_Data') AS 'File ID';  
 GO  
 ```  
   
@@ -83,13 +83,12 @@ File ID
 ```  
   
 ### <a name="b-retrieving-the-file-id-when-the-file-name-is-not-known"></a>B. ファイル名が不明の場合のファイル ID を取得する  
- 次の例のファイル ID を返して、`AdventureWorks`から論理ファイル名を選択して、ログ ファイル、 `sys.database`_`files`カタログ ビューのファイルの種類と等しい`1`(ログ) です。  
+次の例のファイル ID を返して、`AdventureWorks`から論理ファイル名を選択して、ログ ファイル、`sys.database_files`カタログ ビューのファイルの種類と等しい`1`(ログ) です。  
   
 ```tsql  
 USE AdventureWorks2012;  
 GO  
-SELECT FILE_IDEX((SELECT TOP(1)name FROM sys.database_files   
-WHERE type = 1))AS 'File ID';  
+SELECT FILE_IDEX((SELECT TOP (1) name FROM sys.database_files WHERE type = 1)) AS 'File ID';  
 GO  
 ```  
   
@@ -102,7 +101,7 @@ File ID
 ```  
   
 ### <a name="c-retrieving-the-file-id-of-a-full-text-catalog-file"></a>C. フルテキスト カタログ ファイルのファイル ID を取得する  
- 次の例では、フルテキスト ファイルのファイル ID を返してから論理ファイル名を選択して、 `sys.database`_`files`カタログ ビューのファイルの種類と等しい`4`(フル テキスト)。 この例では、フルテキスト カタログが存在しない場合、NULL が返されます。  
+次の例では、フルテキスト ファイルのファイル ID を返してから論理ファイル名を選択して、`sys.database_files`カタログ ビューのファイルの種類と等しい`4`(フル テキスト)。 この例では、フルテキスト カタログが存在しない場合、NULL が返されます。  
   
 ```tsql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  
@@ -115,3 +114,4 @@ AS 'File_ID';
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   
+

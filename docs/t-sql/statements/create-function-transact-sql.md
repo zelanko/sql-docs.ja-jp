@@ -39,11 +39,12 @@ caps.latest.revision: 162
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 80708ece5b84d5e8477e2c6cc8ab5c0618bdc2a5
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: c74e3a3322dcc2268fa8e386fda5d55f59be98c5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
@@ -774,7 +775,7 @@ GO
 ```  
   
 ### <a name="d-creating-a-clr-function"></a>D. CLR 関数を作成する  
- この例では、CLR 関数 `len`_`s` を作成します。 関数が作成される前に、アセンブリ`SurrogateStringFunction.dll`がローカル データベースに登録します。  
+ 例では、CLR 関数を作成する`len_s`です。 関数が作成される前に、アセンブリ`SurrogateStringFunction.dll`がローカル データベースに登録します。  
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   

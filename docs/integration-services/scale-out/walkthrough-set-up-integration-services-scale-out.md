@@ -14,10 +14,10 @@ author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9cc5c653fe454b45148583f2e17654657a85b0a5
+ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
+ms.openlocfilehash: c386b01043764405872365af379cfdedb036b65f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="walkthrough-set-up-integration-services-scale-out"></a>チュートリアル: Integration Services Scale Out をセットアップする
@@ -144,7 +144,7 @@ Scale Out Worker を有効にするには、パラメーターとして *WorkerA
 
 #### <a name="example"></a>例
 この例では、スケール アウト Worker コンピューター a を有効にします。
-```tsql
+```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]
 GO
 -- Result: --
@@ -155,4 +155,4 @@ EXEC [catalog].[enable_worker_agent] '6583054A-E915-4C2A-80E4-C765E79EF61D'
 GO 
 ```
 ## <a name="next-steps"></a>次の手順
-Scale Out 機能のセットアップが終わりました。 スケール アウトでパッケージを実行できます。 詳しくは、「[Integration Services (SSIS) Scale Out でパッケージを実行する](run-packages-in-integration-services-ssis-scale-out.md)」をご覧ください。
+Scale Out 機能のセットアップが終わりました。 スケール アウトでパッケージを実行できます。詳しくは、「[Integration Services (SSIS) Scale Out でパッケージを実行する](run-packages-in-integration-services-ssis-scale-out.md)」をご覧ください。

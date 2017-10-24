@@ -24,11 +24,12 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 006862850eebb2db1d3f256ca5556016cdb02ab2
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: c0ea8313662a84b71f665ac2402733aa15eaac7a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="alter-database-encryption-key-transact-sql"></a>ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
@@ -90,17 +91,6 @@ ALTER DATABASE ENCRYPTION KEY
  データベースに対する CONTROL 権限と、データベース暗号化キーの暗号化に使用する証明書または非対称キーに対する VIEW DEFINITION 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`AES_256` アルゴリズムを使用するようにデータベース暗号化キーを変更します。  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-ALTER DATABASE ENCRYPTION KEY  
-REGENERATE WITH ALGORITHM = AES_256;  
-GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、`AES_256` アルゴリズムを使用するようにデータベース暗号化キーを変更します。  
   
 ```  

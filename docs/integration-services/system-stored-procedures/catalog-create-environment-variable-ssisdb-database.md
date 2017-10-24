@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 62aa7f67d7c7b33ac61d63b10fe45d604029500b
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 5636651cccbb43c6c1627d1f28eccd9b3f9b5b0d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable (SSISDB データベース)
@@ -28,36 +28,36 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>構文  
   
-```tsql  
-create_environment_variable [ @folder_name = ] folder_name  
-    , [ @environment_name = ] environment_name  
-    , [ @variable_name = ] variable_name  
-    , [ @data_type = ] data_type  
-    , [ @sensitive = ] sensitive  
-    , [ @value = ] value  
-    , [ @description = ] description  
+```sql  
+catalog.create_environment_variable [@folder_name =] folder_name  
+    , [@environment_name =] environment_name  
+    , [@variable_name =] variable_name  
+    , [@data_type =] data_type  
+    , [@sensitive =] sensitive  
+    , [@value =] value  
+    , [@description =] description  
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @folder_name =] *folder_name*  
+ [@folder_name =] *folder_name*  
  環境を含むフォルダーの名前。 *Folder_name*は**nvarchar (128)**です。  
   
- [ @environment_name =] *environment_name*  
+ [@environment_name =] *environment_name*  
  環境の名前。 *Environment_name*は**nvarchar (128)**です。  
   
- [ @variable_name =] *variable_name*  
+ [@variable_name =] *variable_name*  
  環境変数の名前。 *Variable_name*は**nvarchar (128)**です。  
   
- [ @data_type =] *data_type*  
+ [@data_type =] *data_type*  
  変数のデータ型。 環境変数のデータ型はサポートされている**ブール**、**バイト**、 **DateTime**、**二重**、 **Int16**、 **Int32**、 **Int64**、**単一**、**文字列**、 **UInt32**、および**UInt64**です。 サポートされていない環境変数のデータ型は**Char**、 **DBNull**、**オブジェクト**、および**Sbyte**です。 データ型、 *data_type*パラメーターは**nvarchar (128)**です。  
   
- [ @sensitive =]*機密性の高い*  
+ [@sensitive =]*機密性の高い*  
  変数がセンシティブ値を含むかどうかを示します。 値を使用して`1`環境変数の値を区別するかの値であることを示す`0`されていないことを示すためにします。 センシティブ値が格納される場合、その値は暗号化されます。 機密性の高いではない値は、プレーン テキストで格納されます。*機密性の高い*は**ビット**です。  
   
- [ @value =]*値*  
+ [@value =]*値*  
  環境変数の値。 *値*は**sql_variant**です。  
   
- [ @description =]*の説明*  
+ [@description =]*の説明*  
  環境変数の説明。 *値*は**nvarchar (1024)**です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
@@ -92,7 +92,7 @@ create_environment_variable [ @folder_name = ] folder_name
 > [!TIP]  
 >  使用を検討して、 **Int16**のデータ型の[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]ではなく、サポートされていない**Sbyte**データ型。  
   
- このストアド プロシージャに渡される値、*値*パラメーターから変換されます、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のデータ型、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]次の表に従って、データ型。  
+ このストアド プロシージャに渡される値、*値*からパラメーターを変換、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のデータ型、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]次の表に従って、データ型。  
   
 |Integration Services データ型|SQL Server データ型|  
 |------------------------------------|--------------------------|  
@@ -105,7 +105,7 @@ create_environment_variable [ @folder_name = ] folder_name
 |**Int64**|**bigint**|  
 |**単一**|正確な numeric: **decimal**、**数値**です。おおよその numeric: **float**、 **real**|  
 |**文字列**|**varchar**、 **nvarchar**、 **char**|  
-|**UInt32**|**int** (これは、使用可能なマッピングに最も近い**Uint32**)。|  
-|**UInt64**|**bigint** (これは、使用可能なマッピングに最も近い**Uint64**)。|  
+|**UInt32**|**int** (**int**が利用可能なマッピングに最も近い**Uint32**)。|  
+|**UInt64**|**bigint** (**int**が利用可能なマッピングに最も近い**Uint64**)。|  
   
   

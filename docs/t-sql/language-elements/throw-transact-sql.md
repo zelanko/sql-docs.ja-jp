@@ -21,11 +21,12 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7e61cb9edc75dda4368e31e9eac6e4e452d4387f
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 919d12395255bc754fe89a20659576435ab51e9e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
@@ -144,23 +145,6 @@ THROW 60000, @msg, 1;
  This is a test message with one numeric parameter (500), one string parameter (First string), and another string parameter (second string).
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="d-using-throw-to-raise-an-exception"></a>D. THROW を使用して例外を発生させる  
- 次の例を使用する方法を示しています、`THROW`ステートメントから例外が発生します。  
-  
-```tsql  
-THROW 51000, 'The record does not exist.', 1;  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
- Msg 51000, Level 16, State 1, Line 1  
-  
- The record does not exist.
- ```  
-  
 ## <a name="see-also"></a>参照  
  [FORMATMESSAGE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/formatmessage-transact-sql.md)   
  [データベース エンジン エラーの重大度](../../relational-databases/errors-events/database-engine-error-severities.md)   
@@ -169,7 +153,7 @@ THROW 51000, 'The record does not exist.', 1;
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40; です。TRANSACT-SQL と&#41; です。](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
  [GOTO & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/goto-transact-sql.md)   

@@ -1,7 +1,7 @@
 ---
 title: "SQL Server インポートおよびエクスポート ウィザードでデータ インポートおよびエクスポート |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
-ms.openlocfilehash: 22419ce21476588f4ff2859185c8b833306fa896
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 6cd388215de02072522011b149a9cecc3239b64c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを使用してデータをインポートおよびエクスポートする
@@ -45,25 +45,25 @@ ms.lasthandoff: 09/27/2017
 
 ## <a name="what-happens-when-i-run-the-wizard"></a>新機能は、ウィザードを実行するとどうなりますか。
 -    **手順の一覧を参照してください。** ウィザードの手順については、次を参照してください。 [、SQL Server インポートおよびエクスポート ウィザードの手順を](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)です。 ウィザードの各ページ用のドキュメントの別のページもあります。  
-    \-または\-
--   **単純な例を参照してください。** 一般的なセッションを表示するいくつかの画面で簡単に説明を見てこの単純なエンド ツー エンドの例の 1 ページに[インポートおよびエクスポート ウィザードのこの簡単な例の概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)です。  
+    \- または \-
+-   **例を参照してください。** 一般的なセッションを表示するいくつかの画面で簡単に説明を見てこの簡単な例の 1 ページに[インポートおよびエクスポート ウィザードのこの簡単な例の概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)です。  
 
 ##  <a name="wizardSources"></a>どのようなソースと変換先を使用できるか。  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インポートおよびエクスポート ウィザードは、次の表に、データ ソースとの間に、データにコピーできます。 これらのデータ ソースの一部に接続するには、ダウンロードして追加のファイルをインストールする必要があります。
  
 | データ ソース | 追加ファイルをダウンロードする必要があるかどうか |
 |-------------|-----------------------------------------|
-|**エンタープライズ データベース**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、DB2、およびその他のユーザーです。|SQL Server または SQL Server Data Tools (SSDT) のインストールへの接続に必要なファイル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 SSDT は、Oracle または IBM DB2 などその他の企業データベースに接続する必要のあるすべてのファイルをインストールしません。<br/><br/>エンタープライズ データベースに接続するには、通常存在する必要が 2 つの操作。<br/><br/>1.**クライアント ソフトウェア**です。 エンタープライズ データベース システム用のクライアント ソフトウェアを既にインストールしている場合、通常は接続するために必要なファイルは用意されています。 クライアント ソフトウェアをインストールしていない場合は、ライセンス コピーのインストール方法をデータベース管理者に問い合わせください。<br/><br/>2.**ドライバーまたはプロバイダー**です。 Microsoft では、ドライバーと Oracle への接続にプロバイダーをインストールします。 IBM DB2 に接続するに Microsoft® OLEDB Provider for DB2 v5.0 の取得から Microsoft SQL Server、 [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676)です。|
-|**テキスト ファイル**(フラット ファイル)|追加ファイルは必要ありません。|
+|**エンタープライズ データベース**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、DB2、およびその他のユーザーです。|SQL Server または SQL Server Data Tools (SSDT) のインストールへの接続に必要なファイル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 SSDT は、Oracle または IBM DB2 などその他の企業データベースに接続する必要のあるすべてのファイルをインストールしません。<br/><br/>エンタープライズ データベースに接続するには、通常存在する必要が 2 つの操作。<br/><br/>1.**クライアント ソフトウェア**です。 エンタープライズ データベース システム用のクライアント ソフトウェアを既にインストールしている場合、通常は接続するために必要なファイルは用意されています。 クライアント ソフトウェアをインストールしていない場合は、ライセンス コピーのインストール方法をデータベース管理者に問い合わせください。<br/><br/>2.**ドライバーまたはプロバイダー**です。 Microsoft では、ドライバーと Oracle への接続にプロバイダーをインストールします。 IBM DB2 に接続するに Microsoft® OLEDB Provider for DB2 v5.0 の取得から Microsoft SQL Server、 [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676)です。<br/><br/>詳細については、次を参照してください。 [SQL Server データ ソースへの接続](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)または[Oracle データ ソースへの接続](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)です。|
+|**テキスト ファイル**(フラット ファイル)|追加ファイルは必要ありません。<br/><br/>詳細については、次を参照してください。[フラット ファイル データ ソースへの接続](connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)です。|
 |**Microsoft Excel ファイルと Microsoft Access ファイル**|Microsoft Office は、Excel と Access のファイルにデータ ソースとして接続するために必要なすべてのファイルはインストールしません。 次のダウンロード - を入手する[Microsoft Access データベース エンジン 2016 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=54920)です。<br/><br/>詳細については、次を参照してください。 [Excel データ ソースへの接続](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)または[Access データ ソースへの接続](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)です。|
 |**Azure データ ソース**<br/>現在 Azure BLOB ストレージのみ。|SQL Server Data Tools には、データ ソースとしての Azure Blob ストレージへの接続に必要なファイルをインストールしないでください。 次のダウンロードを取得してください - [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492)。<br/><br/>詳細については、次を参照してください。 [Azure ブログの記憶域への接続](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)です。|
-|**オープン ソース データベース**<br/>PostgreSQL、MySql、およびその他のユーザーです。|これらのデータ ソースに接続するには、追加ファイルをダウンロードする必要があります。<br/><br/>- **PostgreSQL**を参照してください[PostgreSQL データ ソースへの接続](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)です。<br/>- **MySql**を参照してください[MySQL データ ソースへの接続](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)です。|
+|**オープン ソース データベース**<br/>PostgreSQL、MySql、およびその他のユーザーです。|これらのデータ ソースに接続するには、追加のファイルをダウンロードする必要があります。<br/><br/>- **PostgreSQL**を参照してください[PostgreSQL データ ソースへの接続](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)です。<br/>- **MySql**を参照してください[MySQL データ ソースへの接続](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)です。|
 |**他のデータ ソースのドライバーまたはプロバイダーを使用**|通常、次の種類のデータ ソースに接続するために追加ファイルをダウンロードする必要があります。<br/><br/>- **ODBC ドライバー** を使用できるソース。 詳細については、次を参照してください。 [ODBC データ ソースへの接続](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)です。<br/>- **.Net Framework Data Provider** を使用できるソース。<br/>- **OLE DB プロバイダー** を使用できるソース。<br/><br/>他のデータ ソースの元とコピー先の機能を提供するサード パーティ コンポーネントが場合がありますとして販売されているアドオン製品用 SQL Server Integration Services (SSIS)。|
 
 ## <a name="how-do-i-connect-to-my-data"></a>データに接続する方法は?
 一般的に使用されるデータ ソースに接続する方法の詳細については、次のページのいずれかを参照してください。
--   [SQL Server に接続します。](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
--   [Oracle への接続します。](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
+-   [SQL Server への接続](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
+-   [Oracle への接続](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
 -   [フラット ファイル (テキスト ファイル) への接続します。](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [Excel への接続します。](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
 -   [アクセスに接続します。](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)

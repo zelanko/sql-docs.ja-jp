@@ -38,11 +38,12 @@ caps.latest.revision: 97
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 03f3352a494bef2072ca7527dd3da804a072689e
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 6ae83ccf18cac45339d63e4ce1326c72a58c0339
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
@@ -670,18 +671,7 @@ WHERE ManagerID = 5;
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="n-using-a-simple-from-clause"></a>N. 単純な FROM 句を使用する  
- 次の例では取得、`SalesTerritoryID`と`SalesTerritoryRegion`からの列、`DimSalesTerritory`テーブル。  
-  
-```tsql
--- Uses AdventureWorks  
-  
-SELECT SalesTerritoryKey, SalesTerritoryRegion  
-FROM DimSalesTerritory  
-ORDER BY SalesTerritoryKey;  
-```  
-  
-### <a name="o-using-the-inner-join-syntax"></a>O.  INNER JOIN 構文を使用します。  
+### <a name="n-using-the-inner-join-syntax"></a>N. INNER JOIN 構文を使用します。  
  次の例を返します、 `SalesOrderNumber`、 `ProductKey`、および`EnglishProductName`からの列、`FactInternetSales`と`DimProduct`テーブルの結合キー `ProductKey`、両方のテーブルに一致します。 `SalesOrderNumber`と`EnglishProductName`各列に存在テーブルのみのいずれかが示すように、これらの列を持つテーブルの別名を指定する必要はありません。 これらのエイリアスは読みやすくするために含まれます。 単語**AS**エイリアスの前に名前は必要ありませんが、ANSI 標準に準拠して読みやすくするためにはお勧めします。  
   
 ```tsql
@@ -717,7 +707,7 @@ WHERE fis.SalesOrderNumber > 'SO50000'
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="p-using-the-left-outer-join-and-right-outer-join-syntax"></a>P. LEFT OUTER JOIN、RIGHT OUTER JOIN 構文を使用します。  
+### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O.  LEFT OUTER JOIN、RIGHT OUTER JOIN 構文を使用します。  
  次の例の結合、`FactInternetSales`と`DimProduct`でテーブル、`ProductKey`列です。 左外部結合の構文が左から一致しない行を保持 (`FactInternetSales`) テーブルです。 以降、`FactInternetSales`テーブル含まない`ProductKey`値と一致しない、`DimProduct`テーブルでは、このクエリは、最初の内部結合例と同じ行を返します。  
   
 ```tsql
@@ -766,7 +756,7 @@ RIGHT OUTER JOIN DimSalesTerritory AS dst
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="q-using-the-full-outer-join-syntax"></a>Q.  FULL OUTER JOIN 構文を使用します。  
+### <a name="p-using-the-full-outer-join-syntax"></a>P. FULL OUTER JOIN 構文を使用します。  
  次の例では、両方の結合テーブルからすべての行を返しますが、別のテーブルと一致しない値は NULL を返しますが、完全外部結合を示します。  
   
 ```tsql
@@ -791,7 +781,7 @@ FULL JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="r-using-the-cross-join-syntax"></a>R.  CROSS JOIN 構文を使用します。  
+### <a name="q-using-the-cross-join-syntax"></a>Q.  CROSS JOIN 構文を使用します。  
  次の例のクロス積を返します、`FactInternetSales`と`DimSalesTerritory`テーブル。 すべての組み合わせの一覧`SalesOrderNumber`と`SalesTerritoryKey`が返されます。 ない場合に注意してください、`ON`クロス結合クエリ内の句。  
   
 ```tsql
@@ -803,7 +793,7 @@ CROSS JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="s-using-a-derived-table"></a>S.  派生テーブルを使用する  
+### <a name="r-using-a-derived-table"></a>R.  派生テーブルを使用する  
  次の例では、派生テーブル (、`SELECT`後のステートメント、`FROM`句) を返す、`CustomerKey`と`LastName`内の顧客すべての列、`DimCustomer`を持つテーブル`BirthDate`1 月 1 日より後の値1970、姓と名 'Smith' です。  
   
 ```tsql
@@ -817,7 +807,7 @@ WHERE LastName = 'Smith'
 ORDER BY LastName;  
 ```  
   
-### <a name="t-reduce-join-hint-example"></a>T.  結合ヒントの例を減らす  
+### <a name="s-reduce-join-hint-example"></a>S.  結合ヒントの例を減らす  
  次の例では、`REDUCE`結合ヒントをクエリ内で派生テーブルの処理を変更します。 使用する場合、`REDUCE`このクエリで結合ヒント、`fis.ProductKey`は射影、レプリケートされ、個別にし、参加していると`DimProduct`のランダム再生中に`DimProduct`で`ProductKey`です。 結果として得られる派生テーブルに分散させて`fis.ProductKey`です。  
   
 ```tsql
@@ -833,7 +823,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="u-replicate-join-hint-example"></a>U.  レプリケート結合ヒントの例  
+### <a name="t-replicate-join-hint-example"></a>T.  レプリケート結合ヒントの例  
  次の例は、という点以外、前の例と同じクエリを示しています、`REPLICATE`の代わりに結合ヒントを使用、`REDUCE`結合ヒント。 使用、`REPLICATE`ヒント内の値の原因、 `ProductKey` (参加) の列から、`FactInternetSales`すべてのノードにレプリケートされるテーブル。 `DimProduct`テーブルは、それらの値のレプリケートされたバージョンに結合します。  
   
 ```tsql
@@ -849,7 +839,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="v-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>V.  ディストリビューションの互換性のない結合のため、ランダム再生の移動を保証するために REDISTRIBUTE ヒントを使用します。  
+### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>U.  ディストリビューションの互換性のない結合のため、ランダム再生の移動を保証するために REDISTRIBUTE ヒントを使用します。  
  次のクエリは、ディストリビューションの互換性のない結合に再配布のクエリ ヒントを使用します。 これにより、クエリ オプティマイザーはクエリ プランで、ランダム再生の移動を使用します。 これは、クエリ プランは分散テーブルは、レプリケートされたテーブルに移動するブロードキャスト move を使用しないも保証されます。  
   
  次の例では REDISTRIBUTE ヒント強制的 ProductKey は DimProduct の配布] 列であり、FactInternetSales のディストリビューション列ではないため、FactInternetSales テーブルで、[ランダム再生の移動にします。  

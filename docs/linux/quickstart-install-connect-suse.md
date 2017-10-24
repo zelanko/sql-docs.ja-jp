@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: b39414933684939c69bb3fd80d4e8aba21efa824
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: a15f88d8bc7d7684e8e8d0014bb24a082c5b0be2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/21/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>SQL Server をインストールし、SUSE Linux Enterprise Server にデータベースを作成
@@ -31,6 +31,9 @@ SLES v12 SP2 コンピューターでする必要があります**3.25 GB 以上
 
 自分のコンピューター上の SUSE Linux Enterprise Server をインストールするに移動[https://www.suse.com/products/server](https://www.suse.com/products/server)です。 Azure で SLES 仮想マシンを作成することもできます。 参照してください[作成と Azure CLI を使用して Linux Vm の管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)、および使用`--image SLES`への呼び出しで`az vm create`です。
 
+> [!NOTE]
+> この時点で、 [for Linux の Windows サブシステム](https://msdn.microsoft.com/commandline/wsl/about)Windows 10 は、インストール対象としてサポートされていません。
+
 その他のシステム要件については、次を参照してください。 [Linux に SQL Server のシステム要件](sql-server-linux-setup.md#system)です。
 
 ## <a id="install"></a>SQL Server をインストールします。
@@ -38,7 +41,7 @@ SLES v12 SP2 コンピューターでする必要があります**3.25 GB 以上
 SLES で SQL Server を構成するには、インストールするターミナル次のコマンドを実行、 **mssql サーバー**パッケージ。
 
 > [!IMPORTANT]
-> 既に CTP または SQL Server 2017 年 1 の RC リリースをインストールされている場合は、GA リポジトリを登録する前に、古いリポジトリを削除する必要があります。 詳細については、次を参照してください[GA リポジトリにプレビュー リポジトリからリポジトリを変更。](sql-server-linux-change-repo.md)
+> 既に CTP または SQL Server 2017 年 1 の RC リリースをインストールされている場合は、GA リポジトリを登録する前に、古いリポジトリを削除する必要があります。 詳細については、次を参照してください。[プレビュー リポジトリからリポジトリを GA リポジトリに変更](sql-server-linux-change-repo.md)です。
 
 1. Microsoft SQL Server SLES リポジトリの構成ファイルをダウンロードするには。
 

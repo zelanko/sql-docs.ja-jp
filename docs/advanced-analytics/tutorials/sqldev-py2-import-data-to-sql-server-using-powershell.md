@@ -1,7 +1,7 @@
 ---
-title: "手順 2: PowerShell を使用して SQL Server にデータをインポートする | Microsoft Docs"
+title: "手順 2: PowerShell を使用して SQL server のデータのインポート |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-vnext-ctp2
 ms.reviewer: 
 ms.suite: 
@@ -20,19 +20,23 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 62a06d6c442428132f84b3f8e5a665e872a8d361
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: b4741dcfee4bdc2e5ca2327b50f5dd727be9de55
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/18/2017
 
 ---
-# <a name="step-2-import-data-to-sql-server-using-powershell"></a>手順 2: PowerShell を使用して SQL Server にデータをインポートする
+# <a name="step-2-import-data-to-sql-server-using-powershell"></a>手順 2: PowerShell を使用して SQL server のデータをインポートします。
 
-この手順では、ダウンロードしたスクリプトのいずれかを実行して、チュートリアルで必要なデータベース オブジェクトを作成します。 スクリプトでは、使用するほとんどのストアド プロシージャも作成し、指定したデータベース内のテーブルにサンプル データをアップロードします。
+この記事では、チュートリアルのパート[SQL 開発者のためのデータベースでの Python analytics](sqldev-in-database-python-for-sql-developers.md)です。 
 
-## <a name="create-sql-objects-and-data"></a>SQL オブジェクトとデータを作成します。
+この手順で、チュートリアルに必要なデータベース オブジェクトを作成するにはダウンロードしたスクリプトのいずれかを実行します。 スクリプトは、いくつかのストアド プロシージャを作成し、指定したデータベース内のテーブルにサンプル データをアップロードします。
 
-ダウンロードしたファイルの中に、PowerShell スクリプトがあるはずです。 チュートリアルの環境を準備するには、このスクリプトを実行します。  このスクリプトで、次のアクションが実行されます。
+## <a name="create-database-objects-and-load-data"></a>データベース オブジェクトを作成し、データを読み込みます
+
+PowerShell スクリプトでは、表示、ダウンロードしたファイルの間で`RunSQL_SQL_Walkthrough.ps1`です。 このスクリプトの目的は、チュートリアルでは、環境の準備を開始します。
+
+このスクリプトで、次のアクションが実行されます。
 
 - まだインストールされていない場合は、SQL Native Client と SQL のコマンド ライン ユーティリティをインストールします。 これらのユーティリティは、 **bcp**を使用して、データベースにデータを一括読み込みするために必要です。
 
@@ -40,54 +44,57 @@ ms.lasthandoff: 09/01/2017
 
 - 複数の SQL 関数およびストアド プロシージャを作成します。
 
-### <a name="run-the-script"></a>スクリプトを実行します。
+問題に遭遇した場合は、手動で手順を実行する参照としてスクリプトを使用できます。
 
-1. 管理者として PowerShell コマンド プロンプトを開き、次のコマンドを実行します。
+1. 管理者として PowerShell コマンド プロンプトを開きます。 いない場合は既に、前の手順で作成したフォルダーで、フォルダーを移動し、次のコマンドを実行します。
   
-    ```  
-    .\RunSQL_SQL_Walkthrough.ps1  
-    ```  
+    ```ps
+    .\RunSQL_SQL_Walkthrough.ps1
+    ```
 
-    次の情報を入力するように求められます。
-    - 名前またはアドレスの[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]機械学習の Python のサービスがインストールされているインスタンス
-    - インスタンス上のアカウントのユーザー名とパスワード。 使用するアカウントには、データベースを作成し、テーブルおよびストアド プロシージャを作成して、データをテーブルにアップロードする権限が必要です。 ユーザー名とパスワードを指定しない場合、Windows id は SQL Server へのサインインに使用されます。
-    - ダウンロードしたばかりのサンプル データ ファイルのパスとファイル名。 たとえば、IPv4 アドレスの場合、「 `C:\tempRSQL\nyctaxi1pct.csv`
+2. スクリプトは、次の情報が表示されます。
+
+    - 名前またはアドレスの[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Python の Machine Learning のサービスがインストールされているインスタンス。
+    - インスタンス上のアカウントのユーザー名とパスワード。 データベースを作成し、テーブルおよびストアド プロシージャを作成してデータの一括読み込みのテーブルに機能を使用するアカウントが必要です。 
+    - ユーザー名とパスワードを指定しない場合は、SQL Server へのサインインに使用される、Windows id れ、パスワードの入力に昇格されます。
+    - ダウンロードしたばかりのサンプル データ ファイルのパスとファイル名。 たとえば、IPv4 アドレスの場合、「 `C:\temp\pysql\nyctaxi1pct.csv`
 
     > [!NOTE]
-    > Xmlrw.dll が、bcp.exe と同じフォルダーにあることを確認してください。 それ以外の場合は、経由でコピーしてください。
+    > データを正常に読み込むには、ライブラリ xmlrw.dll は bcp.exe と同じフォルダーでなければなりません。
 
-2.  この手順の一部として、すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトも変更して、プレースホルダーをスクリプトの入力として使用するデータベース名とユーザー名に置き換えます。
+3. スクリプトを変更も、[!INCLUDE[tsql](../../includes/tsql-md.md)]したユーザーとデータベースの名前で置き換えます。 置き換えプレース ホルダー名、以前にダウンロードしたスクリプトを提供します。
   
-3. 少し時間をかけて、スクリプトによって作成されたストアド プロシージャと関数を確認してください。
-     
-    |**SQL スクリプト ファイル名**|**関数**|
-    |------|------|
-    |create-db-tb-upload-data.sql|データベースと 2 つのテーブルを作成します。<br /><br />nyctaxi_sample: メインの NYC タクシー データセットを格納します。 ストレージとクエリのパフォーマンスを向上させるために、クラスター化列ストア インデックスをテーブルに追加します。 NYC タクシー データセットの 1% のサンプルが、このテーブルに挿入されます。<br /><br />nyc_taxi_models: トレーニング済みの Advanced Analytics モデルを保持するために使用します。|
-    |fnCalculateDistance.sql|乗車と降車の場所間の直線距離を計算するスカラー値関数を作成します。|
-    |fnEngineerFeatures.sql|モデルのトレーニング用の新しいデータ機能を作成するテーブル値関数を作成します。|
-    |TrainingTestingSplit.sql|2 つの部分に nyctaxi_sample テーブル内のデータを分割: nyctaxi_sample_training nyctaxi_sample_testing とします。|
-    |PredictTipSciKitPy.sql|トレーニング済みモデルを呼び出すストアド プロシージャを作成 (scikit-説明) モデルを使用して予測を作成します。 ストアド プロシージャは、その入力パラメーターとしてクエリを受け取り、入力行のスコアを格納する数値の列を返します。|
-    |PredictTipRxPy.sql|モデルを使用して予測を作成、トレーニング済みモデル (revoscalepy) を呼び出すストアド プロシージャを作成します。 ストアド プロシージャは、その入力パラメーターとしてクエリを受け取り、入力行のスコアを格納する数値の列を返します。|
-    |PredictTipSingleModeSciKitPy.sql|トレーニング済みモデルを呼び出すストアド プロシージャを作成 (scikit-説明) モデルを使用して予測を作成します。 このストアド プロシージャは、インライン パラメーターとして渡された個々の機能の値と共に、入力として新しい監視を受け取り、新しい監視の結果を予測する値を返します。|
-    |PredictTipSingleModeRxPy.sql|モデルを使用して予測を作成、トレーニング済みモデル (revoscalepy) を呼び出すストアド プロシージャを作成します。 このストアド プロシージャは、インライン パラメーターとして渡された個々の機能の値と共に、入力として新しい監視を受け取り、新しい監視の結果を予測する値を返します。|
-  
-4. このチュートリアルの後半部分で、いくつかの追加のストアド プロシージャを作成します。
-    
-    |**SQL スクリプト ファイル名**|**関数**|
-    |------|------|
-    |SerializePlots.sql|データ探索のためのストアド プロシージャを作成します。 このストアド プロシージャは、Python を使用してグラフィックスを作成し、そのグラフのオブジェクトをシリアル化します。|
-    |TrainTipPredictionModelSciKitPy.sql|ロジスティック回帰モデルをトレーニングするストアド プロシージャを作成 (scikit-説明)。 モデルでは、先端が、列の値を予測してはトレーニング データのランダムに選択された 60% を使用します。 ストアド プロシージャの出力は、テーブル nyc_taxi_models に保存されているトレーニング済みのモデルです。|
-    |TrainTipPredictionModelRxPy.sql|(Revoscalepy) ロジスティック回帰モデルをトレーニングするストアド プロシージャを作成します。 モデルでは、先端が、列の値を予測してはトレーニング データのランダムに選択された 60% を使用します。 ストアド プロシージャの出力は、テーブル nyc_taxi_models に保存されているトレーニング済みのモデルです。|
-  
-3. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および指定したログインを使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] インスタンスにログインし、作成されたデータベース、テーブル、関数、およびストアド プロシージャが表示されることを確認します。
+4. スクリプトが完了すると、ログインに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースがテーブルを確認する、指定したログインを使用して、インスタンスは、次の関数、およびストアド プロシージャが作成されています。 次の図は、オブジェクトで[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]です。
 
     ![SSMS でのテーブル参照](media/sqldev-python-browsetables1.png "SSMS でのテーブルの表示")
 
     > [!NOTE]
-    > データベース オブジェクトが既に存在する場合、それらを再作成することはできません。 テーブルが既に存在する場合、データは追加され、上書きされません。 そのため、スクリプトを実行する前に、既存のオブジェクトを削除してください。
-    > 指示に従って[ここ](https://docs.microsoft.com/en-us/sql/advanced-analytics/r/set-up-sql-server-r-services-in-database#bkmk_enableFeature)外部スクリプト サービスを有効にします。
-    
+    > データベース オブジェクトが既に存在していた場合は、再度作成することはできません。
+    > 
+    > 同じ名前とスキーマの既存のテーブルが見つからないかどうかは、データが追加されます、上書きされません。 そのため、ドロップまたはスクリプトを実行する前に既存のテーブルを切り捨てることを確認します。
 
+## <a name="list-of-stored-procedures-and-functions"></a>ストアド プロシージャと関数の一覧
+
+次の SQL Server オブジェクトは、スクリプトによって作成されます。
+
+|**SQL スクリプト ファイル名**|**関数**|
+|------|------|
+|create-db-tb-upload-data.sql|データベースと 2 つのテーブルを作成します。<br /><br />nyctaxi_sample: メインの NYC タクシー データセットを格納します。 ストレージとクエリのパフォーマンスを向上させるために、クラスター化列ストア インデックスをテーブルに追加します。 NYC タクシー データセットの 1% のサンプルが、このテーブルに挿入されます。<br /><br />nyc_taxi_models: トレーニング済みの Advanced Analytics モデルを保持するために使用します。|
+|fnCalculateDistance.sql|乗車と降車の場所間の直線距離を計算するスカラー値関数を作成します。|
+|fnEngineerFeatures.sql|モデルのトレーニング用の新しいデータ機能を作成するテーブル値関数を作成します。|
+|TrainingTestingSplit.sql|2 つの部分に nyctaxi_sample テーブル内のデータを分割: nyctaxi_sample_training nyctaxi_sample_testing とします。|
+|PredictTipSciKitPy.sql|トレーニング済みモデルを呼び出すストアド プロシージャを作成 (scikit-説明) モデルを使用して予測を作成します。 ストアド プロシージャは、その入力パラメーターとしてクエリを受け取り、入力行のスコアを格納する数値の列を返します。|
+|PredictTipRxPy.sql|モデルを使用して予測を作成、トレーニング済みモデル (revoscalepy) を呼び出すストアド プロシージャを作成します。 ストアド プロシージャは、その入力パラメーターとしてクエリを受け取り、入力行のスコアを格納する数値の列を返します。|
+|PredictTipSingleModeSciKitPy.sql|トレーニング済みモデルを呼び出すストアド プロシージャを作成 (scikit-説明) モデルを使用して予測を作成します。 このストアド プロシージャは、インライン パラメーターとして渡された個々の機能の値と共に、入力として新しい監視を受け取り、新しい監視の結果を予測する値を返します。|
+|PredictTipSingleModeRxPy.sql|モデルを使用して予測を作成、トレーニング済みモデル (revoscalepy) を呼び出すストアド プロシージャを作成します。 このストアド プロシージャは、インライン パラメーターとして渡された個々の機能の値と共に、入力として新しい監視を受け取り、新しい監視の結果を予測する値を返します。|
+
+このチュートリアルの後半では、これらの追加のストアド プロシージャを作成します。
+    
+|**SQL スクリプト ファイル名**|**関数**|
+|------|------|
+|SerializePlots.sql|データ探索のためのストアド プロシージャを作成します。 このストアド プロシージャは、Python を使用してグラフィックスを作成し、そのグラフのオブジェクトをシリアル化します。|
+|TrainTipPredictionModelSciKitPy.sql|ロジスティック回帰モデルをトレーニングするストアド プロシージャを作成 (scikit-説明)。 モデルでは、先端が、列の値を予測してはトレーニング データのランダムに選択された 60% を使用します。 ストアド プロシージャの出力は、テーブル nyc_taxi_models に保存されているトレーニング済みのモデルです。|
+|TrainTipPredictionModelRxPy.sql|(Revoscalepy) ロジスティック回帰モデルをトレーニングするストアド プロシージャを作成します。 モデルでは、先端が、列の値を予測してはトレーニング データのランダムに選択された 60% を使用します。 ストアド プロシージャの出力は、テーブル nyc_taxi_models に保存されているトレーニング済みのモデルです。|
 
 ## <a name="next-step"></a>次の手順
 
@@ -96,10 +103,5 @@ ms.lasthandoff: 09/01/2017
 ## <a name="previous-step"></a>前の手順
 
 [手順 1: サンプル データのダウンロード](sqldev-py1-download-the-sample-data.md)
-
-## <a name="see-also"></a>参照
-
-[Machine Learning Python のサービス](../python/sql-server-python-services.md)
-
 
 

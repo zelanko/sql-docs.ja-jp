@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: aab83dd2f179c8e6b90ad9ff7a212597a51038de
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 8f4a8cd24278742ffb13d16791ce5f1f3a95f301
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogdisableworkeragent-ssisdb-database"></a>catalog.disable_worker_agent (SSISDB データベース)
@@ -28,15 +28,16 @@ ms.lasthandoff: 09/08/2017
 
 ## <a name="syntax"></a>構文
 
-```tsql
-disable_worker_agent [@WorkerAgentId = ] WorkerAgentId
+```sql
+catalog.disable_worker_agent [@WorkerAgentId =] WorkerAgentId
 ```
 ## <a name="arguments"></a>引数
-[ @WorkerAgentId =] *WorkerAgentId*スケール アウト ワーカーのワーカーのエージェントの id。 *WorkerAgentId*は**uniqueidentifier**です。
+[@WorkerAgentId =] *WorkerAgentId*ワーカー エージェント ID のスケール アウト ワーカーです。 *WorkerAgentId*は**uniqueidentifier**です。
 
 ## <a name="example"></a>例
 この例では、スケール アウト Worker MachineA を無効にします。
-```tsql
+
+```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]
 GO
 -- Result: --
@@ -61,5 +62,5 @@ GO
 -   メンバーシップを**sysadmin**サーバーの役割 
 
 ## <a name="errors-and-warnings"></a>エラーおよび警告
-ストアド プロシージャは、ワーカー エージェント ID が有効でない場合に、エラーを返します。
+ワーカー エージェント ID が有効でない場合、ストアド プロシージャはエラーを返します。
 

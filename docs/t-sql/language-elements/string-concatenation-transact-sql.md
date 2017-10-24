@@ -24,11 +24,12 @@ caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 66f482d424c6be56d89e8ec5b99cff30b2ddab0b
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 1fd13b0b05dcb3b15d37d5a642a734b99ad004e5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (文字列連結) (Transact-SQL)
@@ -158,18 +159,7 @@ GO
  ```  
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-string-concatenation"></a>E. 文字列連結を使用する  
- 次の例は、列見出しの下の 1 つの列を作成`Name`後に、コンマ、1 つのスペース、および連絡先の姓の連絡先の姓を複数の文字の列からです。 結果セットは、姓、名の順で昇順に表示されます。  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT (LastName + ', ' + FirstName) AS Name  
-FROM DimEmployee  
-ORDER BY LastName ASC, FirstName ASC;  
-```  
-  
-### <a name="f-using-multiple-string-concatenation"></a>F. 複数の文字列の連結を使用する  
+### <a name="e-using-multiple-string-concatenation"></a>E. 複数の文字列の連結を使用する  
  次の例では、姓、名、およびサンプル データベース内の副社長のファースト ネームのイニシャルを表示する 1 つの長い文字列を形成する複数の文字列を連結します。 姓の後ろにコンマを追加し、名のイニシャルの後ろにピリオドを追加します。  
   
 ```  

@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: d70cf0645f00dc8a5296588548edb29b56380034
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: d5f7a249e43619e0730da0a30fd5597788441bb8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/21/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>SQL Server をインストールし、Red hat でデータベースを作成
@@ -38,7 +38,7 @@ RHEL 7.3 または 7.4 マシンで必要**3.25 GB 以上**メモリです。
 RHEL で SQL Server を構成するをインストールするターミナルで次のコマンドを実行、 **mssql サーバー**パッケージ。
 
 > [!IMPORTANT]
-> 既に CTP または SQL Server 2017 年 1 の RC リリースをインストールされている場合は、GA リポジトリを登録する前に、古いリポジトリを削除する必要があります。 詳細については、次を参照してください[GA リポジトリにプレビュー リポジトリからリポジトリを変更。](sql-server-linux-change-repo.md)
+> 既に CTP または SQL Server 2017 年 1 の RC リリースをインストールされている場合は、GA リポジトリを登録する前に、古いリポジトリを削除する必要があります。 詳細については、次を参照してください。[プレビュー リポジトリからリポジトリを GA リポジトリに変更](sql-server-linux-change-repo.md)です。
 
 1. Microsoft SQL Server の Red Hat リポジトリの構成ファイルをダウンロードするには。
 

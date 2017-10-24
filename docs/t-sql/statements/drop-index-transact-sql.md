@@ -36,11 +36,12 @@ caps.latest.revision: 99
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8755a7463eca39c7002075d12f91b8626b76c2b4
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 59f78a8c62e8257eb09327d4b629ad678d9c0e69
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
@@ -279,7 +280,7 @@ OFFLINE でクラスター化インデックスを削除すると、クラスタ
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-dropping-an-index"></a>A. インデックスを削除する  
- 次の例は、インデックスを削除`IX_ProductVendor`_`VendorID`上、`ProductVendor`テーブルに、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
+ 次の例は、インデックスを削除`IX_ProductVendor_VendorID`上、`ProductVendor`テーブルに、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
   
 ```  
 DROP INDEX IX_ProductVendor_BusinessEntityID   

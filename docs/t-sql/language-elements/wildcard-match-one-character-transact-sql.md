@@ -28,17 +28,18 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e47fdb9e12a632323971558d2e894fb7b181498e
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: a8992de1c0eadc11902bae537b97100a4b3cda55
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (ワイルドカード - 1 文字に一致) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  アンダー スコア文字を使用して`_`など、パターン マッチを伴う文字列比較操作で任意の 1 文字と一致する`LIKE`と`PATINDEX`です。  
+など、パターン マッチを伴う文字列比較操作で単一の文字をアンダー スコア文字 _ を使用して`LIKE`と`PATINDEX`です。  
   
 ## <a name="examples"></a>使用例  
 
@@ -62,10 +63,10 @@ msdb
 複数のアンダー スコアを使用すると、複数の文字を表します。 変更、`LIKE`を 2 つのアンダー スコアを含める条件`'m__%`結果で、master データベースが含まれています。
 
 ### <a name="b-more-complex-example"></a>B: より複雑な例
- 次の例では、`_`内のすべてのユーザーを検索する演算子、`Person`で終わる 3 文字の姓を持つテーブルは、`an`です。  
+ 次の例では、_ 演算子が、内のすべてのユーザーの検索を使用して、`Person`で終わる 3 文字の姓を持つテーブルは、`an`です。  
   
 ```tsql  
--- Uses AdventureWorks  
+-- USE AdventureWorks2012
   
 SELECT FirstName, LastName  
 FROM Person.Person  
@@ -104,6 +105,5 @@ db_securityadmin
   [% (ワイルドカード - 一致する文字列)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
   [& #91。& #93 です。(ワイルドカード - 一致する文字列)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
  [& #91、^ (& a) #93 です。(ワイルドカード - 一致しない文字列)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
-  
   
 

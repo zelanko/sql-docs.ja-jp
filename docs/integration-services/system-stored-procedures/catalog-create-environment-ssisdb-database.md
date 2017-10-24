@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2d3ff080d50545b75a416e459b73ebd8bbb44666
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 588728b6f86090e5b8f492ba3a117e0ccd47132e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreateenvironment-ssisdb-database"></a>catalog.create_environment (SSISDB データベース)
@@ -28,20 +28,20 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>構文  
   
-```tsql  
-create_environment [ @folder_name = ] folder_name  
-     , [ @environment_name = ] environment_name  
-  [  , [ @environment_description = ] environment_description ]  
+```sql  
+catalog.create_environment [@folder_name =] folder_name  
+     , [@environment_name =] environment_name  
+  [  , [@environment_description =] environment_description ]  
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @folder_name =] *folder_name*  
- 環境を含むフォルダーの名前。 *Folder_name*は**nvarchar (128)**です。  
+ [@folder_name =] *folder_name*  
+ 環境を格納するフォルダーの名前。 *Folder_name*は**nvarchar (128)**です。  
   
- [ @environment_name =] *environment_name*  
+ [@environment_name =] *environment_name*  
  環境の名前。 *Environment_name*は**nvarchar (128)**です。  
   
- [ @environment_description=] *environment_description*  
+ [@environment_description=] *environment_description*  
  省略可能な環境の説明。 *Environment_description*は**nvarchar (1024)**です。  
   
 ## <a name="return-code-value"></a>リターン コード値  

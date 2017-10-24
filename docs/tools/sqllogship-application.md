@@ -16,11 +16,12 @@ caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8ee9ecbf0af08791636b9ef8920d0f9de0e14f27
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 4c712a94883ce48c321a8ccc15b766b709da7648
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="sqllogship-application"></a>sqllogship アプリケーション
@@ -66,10 +67,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |4|すべてのデバッグおよびトレースのメッセージを出力します。|  
   
  **–logintimeout** *timeout_value*  
- サーバー インスタンスへのログインを試みてからタイムアウトするまでの時間を指定します。 既定値は 15 秒です。 *timeout_value* のデータ型は **int***です。*  
+ サーバー インスタンスへのログインを試みてからタイムアウトするまでの時間を指定します。既定値は 15 秒です。 *timeout_value* のデータ型は **int***です。*  
   
  **-querytimeout** *timeout_value*  
- 指定した操作を開始してからタイムアウトするまでの時間を指定します。 既定では、タイムアウトはありません。 *timeout_value* のデータ型は **int***です。*  
+ 指定した操作を開始してからタイムアウトするまでの時間を指定します。既定では、タイムアウトはありません。 *timeout_value* のデータ型は **int***です。*  
   
 ## <a name="remarks"></a>解説  
  可能な限り、バックアップ、コピー、および復元ジョブでバックアップ、コピー、および復元を行うことをお勧めします。 バッチ操作や他のアプリケーションからこれらのジョブを開始するには、 [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) ストアド プロシージャを呼び出します。  
@@ -83,7 +84,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
   
 |オプション|ディレクトリ アクセス|権限|  
 |------------|----------------------|-----------------|  
-|**-backup**|バックアップ ディレクトリの読み取り/書き込みアクセス許可が必要です。|BACKUP ステートメントと同一の権限が必要です。 詳細については、「[BACKUP &#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md)」を参照してください。|  
+|**-backup**|バックアップ ディレクトリの読み取り/書き込みアクセス許可が必要です。|BACKUP ステートメントと同一の権限が必要です。 詳細については、「 [BACKUP &#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md)」を参照してください。|  
 |**-copy**|バックアップ ディレクトリの読み取りアクセス許可と、コピー ディレクトリの書き込みアクセス許可が必要です。|[sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) ストアド プロシージャと同一の権限が必要です。|  
 |**-restore**|コピー ディレクトリの読み取り/書き込みアクセス許可が必要です。|RESTORE ステートメントと同一の権限が必要です。 詳細については、「[RESTORE &#40;Transact-SQL&#41;](../t-sql/statements/restore-statements-transact-sql.md)」を参照してください。|  
   
@@ -100,3 +101,4 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  [sp_start_job &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)  
   
   
+

@@ -34,11 +34,12 @@ caps.latest.revision: 104
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eee6b205e9e33a8aa5879eddf56ecc60104798a1
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 67a2880a573a1b0ff0f1e9a56216ebe8c60ddaf5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="execute-transact-sql"></a>実行の TRANSACT-SQL
@@ -526,7 +527,7 @@ GO
 ```  
   
 ### <a name="h-using-execute-with-recompile"></a>H. EXECUTE WITH RECOMPILE を使用する  
- 次の例を実行、 `Proc`_`Test` \_ `Defaults`コンパイルする新しいクエリ プランが使用され、モジュールの実行後に破棄されたストアド プロシージャを強制的に実行します。  
+ 次の例を実行、`Proc_Test_Defaults`コンパイルする新しいクエリ プランが使用され、モジュールの実行後に破棄されたストアド プロシージャを強制的に実行します。  
   
 ```  
 EXECUTE dbo.Proc_Test_Defaults @p2 = 'A' WITH RECOMPILE;  

@@ -39,11 +39,12 @@ caps.latest.revision: 212
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4e80db92abd988b86b1224f07c92ecb2b20bb883
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: de8574d6d4f2322c63743828b7b8a03d4e6fa576
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="create-database-sql-server-transact-sql"></a>CREATE DATABASE (SQL Server Transact-SQL)
@@ -535,9 +536,9 @@ GO
 ```  
   
 ### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. データ ファイルとトランザクション ログ ファイルを指定してデータベースを作成する  
- 次の例は、データベースを作成`Sales`です。 PRIMARY キーワードが使用されていないので、最初のファイル (`Sales`_`dat`) がプライマリ ファイルになります。 `Sales`\_`dat` ファイルの SIZE パラメーターに MB も KB も指定されていないため、ファイルは MB を使用し、メガバイト単位で割り当てられます。 `Sales`\_`log` ファイルは、 `MB` パラメーターに `SIZE` サフィックスが明示的に指定されているため、メガバイト単位で割り当てられます。  
+ 次の例は、データベースを作成`Sales`です。 PRIMARY キーワードがない使用されるため、最初のファイル (`Sales_dat`) がプライマリ ファイルとなります。 `Sales_dat` ファイルの SIZE パラメーターに MB も KB も指定されていないため、ファイルは MB を使用し、メガバイト単位で割り当てられます。 `Sales_log` ファイルは、`SIZE` パラメーターに `MB` サフィックスが明示的に指定されているため、メガバイト単位で割り当てられます。  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -559,7 +560,7 @@ GO
 ### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. 複数のデータ ファイルとトランザクション ログ ファイルを指定してデータベースを作成する  
  次の例では、3 つの `Archive` のデータ ファイルと 2 つの `100-MB` のトランザクション ログ ファイルがある `100-MB` データベースを作成します。 プライマリ ファイルはリストの最初のファイルであり、`PRIMARY` キーワードによって明示的に指定されます。 次のトランザクション ログ ファイルが指定された、`LOG ON`キーワード。 内のファイルで使用される拡張子に注意してください、`FILENAME`オプション:`.mdf`プライマリ データ ファイルを使用`.ndf`セカンダリ データ ファイルを使用し、`.ldf`トランザクション ログ ファイルを使用します。 この例にデータベースを格納する、`D:`の代わりにドライブを`master`データベース。  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE Archive   
@@ -597,7 +598,7 @@ GO
 ### <a name="d-creating-a-database-that-has-filegroups"></a>D. ファイル グループのあるデータベースを作成する  
  次の例は、データベースを作成`Sales`次のファイル グループを含みます。  
   
--   プライマリ ファイル グループのファイルを`Spri1`_`dat`と`Spri2` \_`dat`です。 これらのファイルの FILEGROWTH 増加量は、`15%` に指定されています。  
+-   プライマリ ファイル グループのファイルを`Spri1_dat`と`Spri2_dat`です。 これらのファイルの FILEGROWTH 増加量は、`15%` に指定されています。  
   
 -   名前のファイル グループ`SalesGroup1`ファイルと`SGrp1Fi1`と`SGrp1Fi2`です。  
   
@@ -605,7 +606,7 @@ GO
   
  この例では、データ ファイルとログ ファイルは、パフォーマンスを向上させるために別のディスクに格納します。  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -654,7 +655,7 @@ GO
 ### <a name="e-attaching-a-database"></a>E. データベースをアタッチする  
  次の例では、例 D で作成された `Archive` データベースをデタッチしてから、`FOR ATTACH` 句を使用してこのデータベースをアタッチします。 `Archive`複数のデータに定義されたファイルとログ ファイルです。 ただし、作成された後に、ファイルの場所が変更されていないため、プライマリ ファイルのみがで指定する、`FOR ATTACH`句。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降では、アタッチされているデータベースの一部であるフルテキスト ファイルは、データベースと共にアタッチされます。  
   
-```  
+```tsql  
 USE master;  
 GO  
 sp_detach_db Archive;  
@@ -666,11 +667,11 @@ GO
 ```  
   
 ### <a name="f-creating-a-database-snapshot"></a>F. データベース スナップショットを作成する  
- 次の例では、`sales`_`snapshot0600` データベース スナップショットを作成します。 データベース スナップショットは読み取り専用であるため、ログ ファイルは指定できません。 構文に準拠して、ソース データベース内のすべてのファイルが指定され、ファイル グループは指定されません。  
+ 次の例は、データベース スナップショットを作成`sales_snapshot0600`です。 データベース スナップショットは読み取り専用であるため、ログ ファイルは指定できません。 構文に準拠して、ソース データベース内のすべてのファイルが指定され、ファイル グループは指定されません。  
   
  この例のソース データベースは、`Sales`例 D で作成されたデータベース  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE sales_snapshot0600 ON  
@@ -687,7 +688,7 @@ GO
 ### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. データベースを作成し、照合順序名とオプションを指定する  
  次の例は、データベースを作成`MyOptionsTest`です。 照合順序名が指定され、`TRUSTYWORTHY` および `DB_CHAINING` オプションが `ON` に設定されます。  
   
-```  
+```tsql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -708,7 +709,7 @@ GO
 ### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. 移動されたフルテキスト カタログをアタッチする  
  次の例は、フルテキスト カタログをアタッチ`AdvWksFtCat`と共に、`AdventureWorks2012`データとログ ファイルです。 この例では、フルテキスト カタログは、既定の場所から新しい場所、`c:\myFTCatalogs` に移されます。 データおよびログ ファイルは、それぞれの既定の場所に残ります。  
   
-```  
+```tsql  
 USE master;  
 GO  
 --Detach the AdventureWorks2012 database  
@@ -733,7 +734,7 @@ GO
   
 -   `FileStreamResumes`FILESTREAM データが含まれています。 これには、1 つの FILESTREAM データ コンテナー `FSResumes` (`C:\MyFSfolder\Resumes` にある) が含まれます。  
   
-```  
+```tsql  
 USE master;  
 GO  
 -- Get the SQL Server data path.  

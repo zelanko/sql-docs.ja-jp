@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 84cf217faf0980d3ef1daf9a86a4aa362931d199
+ms.sourcegitcommit: fffb61c4c3dfa58edaf684f103046d1029895e7c
+ms.openlocfilehash: cee7f5dbcf66a5357ae68192703d841ae1601a35
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/19/2017
 
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC ドライバーで Always Encrypted を使用する
@@ -268,34 +268,12 @@ Microsoft JDBC Driver for SQL Server は、次の組み込み列マスター キ
 ### <a name="using-azure-key-vault-provider"></a>Azure Key Vault Provider を使用する
 Azure Key Vault は、特にアプリケーションが Azure でホストされている場合、Always Encrypted の列マスター キーの格納と管理に便利なオプションです。 Microsoft JDBC Driver for SQL Server では、組み込みのプロバイダー、SQLServerColumnEncryptionAzureKeyVaultProvider、Azure Key Vault に格納されたキーを持つアプリケーションに含まれます。 このプロバイダーの名前は、AZURE_KEY_VAULT です。 Azure Key Vault のストア プロバイダーを使用するために、アプリケーション開発者は Azure で資格情報コンテナーとキーを作成し、キーにアクセスするアプリケーションを構成する必要があります。 Key vault をセットアップして、列マスター _ キーを作成する方法の詳細についてを参照してください[Azure Key Vault – key vault を設定する方法の詳細については、ステップ バイ ステップ](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)と[AzureKeyVaultで列マスター_キーの作成](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2).  
   
-Azure Key Vault を使用するには、クライアント アプリケーションは、SQLServerColumnEncryptionAzureKeyVaultProvider をインスタンス化し、ドライバーに登録する必要があります。 インターフェイス経由でアプリケーションには、JDBC ドライバー デリゲート認証には、key vault からアクセス トークンを取得するためのメソッドを持つ SQLServerKeyVaultAuthenticationCallback が呼び出されます。 Azure Key Vault のストア プロバイダーのインスタンスを作成するアプリケーション開発者と呼ばれる唯一の方法の実装を提供する必要があります**getAccessToken** Azure Key Vault に格納されているキーのアクセス トークンを取得します。  
-  
-SQLServerKeyVaultAuthenticationCallback と SQLServerColumnEncryptionAzureKeyVaultProvider の初期化の例を次に示します。  
+Azure Key Vault を使用するには、クライアント アプリケーションは、SQLServerColumnEncryptionAzureKeyVaultProvider をインスタンス化し、ドライバーに登録する必要があります。
+
+SQLServerColumnEncryptionAzureKeyVaultProvider の初期化の例を次に示します。  
   
 ```  
-// String variables clientID and clientSecret hold the client id and client secret values respectively.  
-  
-ExecutorService service = Executors.newFixedThreadPool(10);  
-SQLServerKeyVaultAuthenticationCallback authenticationCallback = new SQLServerKeyVaultAuthenticationCallback() {  
-       @Override  
-    public String getAccessToken(String authority, String resource, String scope) {  
-        AuthenticationResult result = null;  
-        try{  
-                AuthenticationContext context = new AuthenticationContext(authority, false, service);  
-            ClientCredential cred = new ClientCredential(clientID, clientSecret);  
-  
-            Future<AuthenticationResult> future = context.acquireToken(resource, cred, null);  
-            result = future.get();  
-        }  
-        catch(Exception e){  
-            e.printStackTrace();  
-        }  
-        return result.getAccessToken();  
-    }  
-};  
-  
-SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(authenticationCallback, service);  
-  
+SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey); 
 ```
 
 SQL Server を使用するための Microsoft JDBC Driver 内でインスタンスを登録するアプリケーションに必要なアプリケーションでは、SQLServerColumnEncryptionAzureKeyVaultProvider のインスタンスが作成された後、SQLServerConnection.registerColumnEncryptionKeyStoreProviders() メソッドです。 強くお勧め、既定の参照名、SQLServerColumnEncryptionAzureKeyVaultProvider.getName() API を呼び出すことによって取得できる AZURE_KEY_VAULT を使用して、インスタンスを登録します。 既定の名前を使用して使用すると、プロビジョニングする SQL Server Management Studio や PowerShell などのツールを使用し、Always Encrypted のキー (ツールは、列マスター _ キーをメタデータ オブジェクトを生成する既定の名前を使用) を管理できます。 次の例で、Azure Key Vault provider の登録を示しています。 SQLServerConnection.registerColumnEncryptionKeyStoreProviders() メソッドの詳細については、次を参照してください。 [Always Encrypted API リファレンス、JDBC driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)です。 
@@ -653,3 +631,4 @@ SQLServerBulkCopy、既に暗号化され、データの暗号化を解除せず
  [Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
   
+

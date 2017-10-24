@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 381dcb3e22f123bfa07c2b387598d3429398e21f
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: f76985a8721e154269b36b0bdcb40a83f6136cb3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 の新機能します。
@@ -137,6 +137,7 @@ CTP 1.1 リリースには、次の機能強化と修正が含まれています
 
 [Service Pack 1 からの機能強化](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)CTP1.1 このリリースでは。
 - 複製は、CLR、Filestream または Filetable、メモリ内とクエリ ストア オブジェクトのデータベースです。
+  - **更新 10/18/2017**: 以降のテスト時に Filestream は現在サポートされていませんの GA リリースの Linux 上の SQL Server 2017  
 - **作成**または**ALTER**プログラミング オブジェクトの演算子。
 - 新しい**USE ヒント**クエリ ヒントを指定して、クエリ プロセッサのオプションです。 詳細:[クエリ ヒント](../t-sql/queries/hints-transact-sql-query.md)です。
 - SQL サービス アカウント プログラムで識別できますページのロックを有効にするメモリおよびファイルの瞬時初期化のアクセス許可。

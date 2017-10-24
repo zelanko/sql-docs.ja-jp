@@ -22,11 +22,12 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2a453b99d7ab0512e57275b5ad1805f5a66522ba
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 39bd8a393a9cc3e19e457cda98c0521492e07911
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
@@ -37,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 > [!IMPORTANT]  
 >  プライバシーを重視する場合は、この関数は使用しないでください。 次に生成される GUID の値が予測されるため、その GUID に関連するデータへのアクセスが発生する可能性があります。  
   
- NEWSEQUENTIALID は、windows のラッパーを[UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027)関数。  
+ NEWSEQUENTIALID は、windows のラッパーを[UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027)でいくつかの関数[バイトをシャッフル適用](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/)です。
   
 > [!WARNING]  
 >  UuidCreateSequential の関数には、ハードウェアの依存関係があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、連続した値のクラスターがデータベース (包含データベース) などがその他のコンピューターに移動したときに開発できます。 Always On を使用する場合とで[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]、連続した値のクラスターが、データベースが別のコンピューターにフェールオーバーした場合に開発できます。  

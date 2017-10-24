@@ -15,14 +15,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b765b02717c0eef59fda5dfa12cb64a1b9197587
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 568d02ef58102b47501415d35f64369e997e875b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>フラット ファイル データ ソース (SQL Server インポートおよびエクスポート ウィザード) への接続します。
-このトピックに接続する方法、**フラット ファイル**(テキスト ファイル) のデータ ソースから、**データ ソースを選択**または**変換先の選択**の SQL Server インポートおよびエクスポート ページウィザード。 フラット ファイル、に関しては、これら 2 つのページ、ウィザードは、このトピックの内容について説明します、フラット ファイル ソースと移行先とは別に別々 の一連のオプションを提示します。
+このトピックに接続する方法、**フラット ファイル**(テキスト ファイル) のデータ ソースから、**データ ソースを選択**または**変換先の選択**の SQL Server インポートおよびエクスポート ページウィザード。 フラット ファイル、に関しては、これら 2 つのページ、ウィザードは、このトピックについて説明し、フラット ファイル変換先、フラット ファイル ソースとは別に別々 の一連のオプションを提示します。
+
+## <a name="an-alternative-for-simple-text-import"></a>代替の単純なテキスト ファイルのインポート
+テキスト ファイルを SQL Server にインポートする必要がある場合、インポートおよびエクスポート ウィザードで使用可能なすべての構成オプションの必要はありませんは、使用を検討して、**フラット ファイルのインポート ウィザード**SQL Server Management Studio (SSMS)。 詳細については、次の記事をご覧ください。
+- [SQL Server Management Studio 17.3 の新機能](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
+- [SSMS 17.3 の新しいフラット ファイルのインポート ウィザードの概要](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
 ## <a name="connect-to-a-flat-file-source"></a>フラット ファイル ソースへの接続します。
  
@@ -193,7 +198,7 @@ ms.lasthandoff: 09/26/2017
 
 ![フラット ファイル、区切り形式、[詳細] ページ](../../integration-services/import-export-data/media/flat-file-delimited-advanced-page.jpg)
 
-スクリーン ショット、なお、 **id**列で、数値が含まれている、最初に、あるデータ型の文字列。
+スクリーン ショット、わかるように、 **id**番号を含む列が最初に文字列のデータ型を持ちます。
 
 ### <a name="options-to-specify-advanced-page"></a>指定するオプション (**詳細** ページ)
 
@@ -202,10 +207,10 @@ ms.lasthandoff: 09/26/2017
   
 |プロパティ|Description|  
 |--------------|-----------------|  
-|**名前**|わかりやすい列名を指定します。 名前を入力しないと、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって、列 1、列 2 などの形式で自動的に名前が作成されます。|
+|**名前**|わかりやすい列名を指定します。 名前を入力していない場合[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]形式列 0、1 列目などの名前を自動的に作成します。|
 |**[列区切り記号]**|使用できる列区切り記号の一覧から、列区切り記号を選択します。 テキストに出現しないと思われる区切り記号を選択してください。 固定幅列の場合、この値は無視されます。<br /><br /> **{CR}{LF}**。 列は、復帰と改行の組み合わせで区切られます。<br /><br /> **{CR}**。 列は、復帰で区切られます。<br /><br /> **{LF}**。 列は、改行で区切られます。<br /><br /> **セミコロン {;}**。 列は、セミコロンで区切られます。<br /><br /> **コロン {:}**。 列は、コロンで区切られます。<br /><br /> **コンマ {,}**。 列は、コンマで区切られます。<br /><br /> **タブ {t}**。 列は、タブで区切られます。<br /><br /> **縦棒 {&#124;}**。 列は、縦棒で区切られます。|
 |**[列の型]**|列が区切り形式、固定幅形式、幅合わせしない形式のうちどれであるかを示します。 このプロパティは読み取り専用です。 幅合わせしない形式のファイルとは、最後の列を除くすべての列が固定幅のファイルです。 最後の列は、行区切り記号で区切られます。|  
-|**[入力列の幅]**|格納する値をバイト数で指定します。Unicode ファイルの場合、これは文字数として表示されます。 区切られた列の場合、この値は無視されます。<br /><br /> **注** オブジェクト モデルでは、このプロパティの名前は ColumnWidth です。|
+|**[入力列の幅]**|バイトの数として格納される値を指定します。Unicode ファイルのこの値は、文字の数です。 区切られた列の場合、この値は無視されます。<br /><br /> **注** オブジェクト モデルでは、このプロパティの名前は ColumnWidth です。|
 |**[データ精度]**|数値データの精度を指定します。 精度とは、桁数です。|
 |**[データ スケール]**|数値データの小数点以下の精度を指定します。 これは小数点以下の桁数を表します。|
 |**DataType**|使用できるデータ型を一覧から選択します。<br/>詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。|
@@ -229,7 +234,7 @@ ms.lasthandoff: 09/26/2017
  
 **[型の推測]** をクリックすると、**[列の型の推測]** ダイアログ ボックスが表示されます。 
 
-![フラット ファイル接続の推測機能](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
+![フラット ファイル接続の種類 ダイアログ ボックスを提案します。](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
 
 オプションを選択した後、 **[列の型**] ダイアログ ボックスをクリック**OK**ウィザードの一部の列のデータ型を変更する可能性があります。
 
@@ -293,7 +298,7 @@ ms.lasthandoff: 09/26/2017
  ファイルによって使用されている場合は、テキスト修飾子を指定します。 たとえば、テキスト フィールドを引用符で囲むことを指定できます。 (このプロパティのみに適用区切りのファイル)。 
   
 > [!NOTE] 
-> テキスト修飾子を選択した後ことはできませんを再度選択する、 **None**オプション。 テキスト修飾子の選択を解除するには、「 **なし** 」と入力します。  
+> テキスト修飾子を選択すると、後にすることはできませんを選択し直して、 **None**オプション。 テキスト修飾子の選択を解除するには、「 **なし** 」と入力します。  
 
 ## <a name="see-also"></a>参照
 [データ ソースを選択します。](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  

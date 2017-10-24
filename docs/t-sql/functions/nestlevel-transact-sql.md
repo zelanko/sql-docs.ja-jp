@@ -23,11 +23,12 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: d02995ee7093d311cbdc6f4b69430a8bc66a618c
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 4945bbe718bd8561100a3dd8e296a9f1faa9d93a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40; です。NESTLEVEL (TRANSACT-SQL)
@@ -89,7 +90,7 @@ Inner Level
 ```  
   
 ### <a name="b-calling-nestlevel"></a>B. を呼び出す @@NESTLEVEL   
- 次の例では、`SELECT`、`EXEC`、および `sp`_`executesql` のそれぞれが `@@NESTLEVEL` を呼び出すときに、それらが返す値の違いを示します。  
+ 次の例は、によって返される値の違いを示しています。 `SELECT`、 `EXEC`、および`sp_executesql`それらの各を呼び出すと`@@NESTLEVEL`です。  
   
 ```  
 CREATE PROC usp_NestLevelValues AS  

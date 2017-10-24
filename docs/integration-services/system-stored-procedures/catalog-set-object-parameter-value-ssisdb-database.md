@@ -15,50 +15,50 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9c27cff7ad828ab5c19183febd2ad562d5c9b925
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 3a5dc70b1e955b3c702dc9e9dbe4776cc4ebd5ac
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのパラメーターの値を設定します。 他の値が割り当てられていない場合は、値を環境変数に関連付けるか、または既定で使用されるリテラル値を割り当てます。  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのパラメーターの値を設定します。 環境変数に値を関連付けるか、またはその他の値が割り当てられていないときに既定で使用されるリテラル値を割り当てます。  
   
 ## <a name="syntax"></a>構文  
   
-```tsql  
-set_object_parameter_value [ @object_type = ] object_type   
-    , [ @folder_name = ] folder_name   
-    , [ @project_name = ] project_name   
-    , [ @parameter_name = ] parameter _name   
-    , [ @parameter_value = ] parameter_value   
- [  , [ @object_name = ] object_name ]  
- [  , [ @value_type = ] value_type ]  
+```sql  
+catalog.set_object_parameter_value [@object_type =] object_type   
+    , [@folder_name =] folder_name   
+    , [@project_name =] project_name   
+    , [@parameter_name =] parameter _name   
+    , [@parameter_value =] parameter_value   
+ [  , [@object_name =] object_name ]  
+ [  , [@value_type =] value_type ]  
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @object_type =] *object_type*  
+ [@object_type =] *object_type*  
  パラメーターの型。 値を使用して`20`プロジェクト パラメーターまたは値を示す`30`パッケージ パラメーターを示すためにします。 *Object_type*は**smallInt**です。  
   
- [ @folder_name =] *folder_name*  
+ [@folder_name =] *folder_name*  
  パラメーターを含むフォルダーの名前。 *Folder_name*は**nvarchar (128)**です。  
   
- [ @project_name =] *project_name*  
+ [@project_name =] *project_name*  
  パラメーターを含むプロジェクトの名前。 *Project_name*は**nvarchar (128)**です。  
   
- [ @parameter_name =] *parameter_name*  
+ [@parameter_name =] *parameter_name*  
  パラメーターの名前。 *Parameter_name*は**nvarchar (128)**です。  
   
- [ @parameter_value =]*パラメーター*  
+ [@parameter_value =]*パラメーター*  
  パラメーターの値。 *パラメーター*は**sql_variant**です。  
   
- [ @object_name =] *object_name*  
+ [@object_name =] *object_name*  
  パッケージの名前です。 パラメーターがパッケージ パラメーターである場合に必要な引数です。 *Object_name*は**nvarchar (260)**です。  
   
- [ @value_type =] *value_type*  
- パラメーター値の型。 文字を使用して`V`ことを示す*パラメーター*が実行する前にない他の値の既定で使用されるリテラル値が割り当てられています。 文字を使用して`R`ことを示す*パラメーター*参照されている値は、環境変数の名前に設定されています。 この引数は省略可能です。文字 `V` が既定で使用されます。 *Value_type*は**char (1)**です。  
+ [@value_type =] *value_type*  
+ パラメーター値の型。 文字を使用して`V`ことを示す*パラメーター*実行前にその他の値が割り当てられていないときに既定で使用されるリテラル値です。 文字を使用して`R`ことを示す*パラメーター*参照されている値は、環境変数の名前に設定されています。 この引数は省略可能です。文字 `V` が既定で使用されます。 *Value_type*は**char (1)**です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  

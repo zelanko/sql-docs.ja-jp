@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: c3d8adf8dedbee9b5c49cda25171f8f327fc5048
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: ea8a0eb15a17cb7bc0032cf951c3fce0830761ac
 ms.contentlocale: ja-jp
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/21/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>SQL Server をインストールし、Ubuntu でデータベースを作成
@@ -27,9 +27,12 @@ ms.lasthandoff: 10/02/2017
 
 ## <a name="prerequisites"></a>前提条件
 
-Ubuntu コンピューターにする必要があります**3.25 GB 以上**メモリです。
+Ubuntu 16.04 コンピューターにする必要があります**3.25 GB 以上**メモリです。
 
 Ubuntu を自分のコンピューターにインストールするに移動[http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server)です。 Azure の Ubuntu 仮想マシンを作成することもできます。 参照してください[を作成および管理の Azure CLI を使用して Linux Vm](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)です。
+
+> [!NOTE]
+> この時点で、 [for Linux の Windows サブシステム](https://msdn.microsoft.com/commandline/wsl/about)Windows 10 は、インストール対象としてサポートされていません。
 
 その他のシステム要件については、次を参照してください。 [Linux に SQL Server のシステム要件](sql-server-linux-setup.md#system)です。
 
@@ -38,7 +41,7 @@ Ubuntu を自分のコンピューターにインストールするに移動[htt
 Ubuntu で SQL Server を構成するをインストールするターミナルで次のコマンドを実行、 **mssql サーバー**パッケージです。
 
 > [!IMPORTANT]
-> 既に CTP または SQL Server 2017 年 1 の RC リリースをインストールされている場合は、GA リポジトリを登録する前に、古いリポジトリを削除する必要があります。 詳細については、次を参照してください[GA リポジトリにプレビュー リポジトリからリポジトリを変更。](sql-server-linux-change-repo.md)
+> 既に CTP または SQL Server 2017 年 1 の RC リリースをインストールされている場合は、GA リポジトリを登録する前に、古いリポジトリを削除する必要があります。 詳細については、次を参照してください。[プレビュー リポジトリからリポジトリを GA リポジトリに変更](sql-server-linux-change-repo.md)です。
 
 1. パブリック リポジトリ鍵キーをインポートします。
 

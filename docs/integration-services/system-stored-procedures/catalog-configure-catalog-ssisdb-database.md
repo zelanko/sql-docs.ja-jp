@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c9e285e62e2b391939d8811b5a194a12ad55636d
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 15bec231bf1de825cea952e07827074d56751386
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogconfigurecatalog-ssisdb-database"></a>catalog.configure_catalog (SSISDB データベース)
@@ -28,9 +28,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-configure_catalog [ @property_name = ] property_name , [ @property_value = ] property_value  
+```sql
+catalog.configure_catalog [ @property_name = ] property_name , [ @property_value = ] property_value  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -51,7 +50,7 @@ configure_catalog [ @property_name = ] property_name , [ @property_value = ] pro
   
  このストアド プロシージャは、実行が保留中、キュー状態、実行中、一時停止中など、アクティブな実行がない場合にのみ実行できます  
   
- カタログが構成されているその他のすべてのカタログに格納プロシージャの失敗のエラー メッセージ「サーバーは現在構成されている」されます。  
+ カタログが構成されているときにその他のすべてのカタログ ストアド プロシージャの失敗、エラー メッセージ「サーバーは現在構成されています」
   
  カタログが構成されている場合は、エントリが操作ログに書き込まれます。  
   

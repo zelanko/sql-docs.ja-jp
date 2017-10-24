@@ -18,23 +18,24 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f23e4034bdfe2cb41161313ae577342ba3f3eda9
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 8cb1639a291bbef1dd50ada615ef5eb61c4b226f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="lesson-1-2---viewing-tuning-recommendations"></a>レッスン 1、2、チューニングの推奨設定を表示します。
-ここでは、「[チューニング ワークロードの作成](../../tools/dta/lesson-1-1-tuning-a-workload.md)」で作成したチューニング セッションを使用します。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] スクリプト MyScript.sql を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] データベースをチューニングすると、その結果が [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの **[推奨設定]** タブに表示されます。 次の作業では、 **チューニング アドバイザーのグラフィカル ユーザー インターフェイス (GUI) の** [推奨設定] [!INCLUDE[ssDE](../../includes/ssde-md.md)] タブについて学習し、このタブに表示されるチューニング セッションの結果について検証します。  
+ここでは、「 [チューニング ワークロードの作成](../../tools/dta/lesson-1-1-tuning-a-workload.md)」で作成したチューニング セッションを使用します。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] スクリプト MyScript.sql を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] データベースをチューニングすると、その結果が [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの **[推奨設定]** タブに表示されます。次の作業では、 **チューニング アドバイザーのグラフィカル ユーザー インターフェイス (GUI) の** [推奨設定] [!INCLUDE[ssDE](../../includes/ssde-md.md)] タブについて学習し、このタブに表示されるチューニング セッションの結果について検証します。  
   
 ### <a name="view-tuning-recommendations"></a>チューニング推奨設定の表示  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーを起動します。 「 [データベース エンジン チューニング アドバイザーの起動](../../tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md)」を参照してください。 「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ワークロードのチューニング [」の実習で使用した](../../tools/dta/lesson-1-1-tuning-a-workload.md)インスタンスに接続していることを確認します。  
   
-2.  **[セッション モニター]** ペインの **[MySession]** をダブルクリックします。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]チューニング アドバイザーの以前のチューニング セッションからセッション情報を読み込み、表示、**の推奨事項**タブです。 チューニング オプションをすべて既定値に設定しており、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [チューニング オプション] **タブで** [パーティション分割なし] **を選択しているため、** チューニング アドバイザーの **[推奨パーティション]** には何も表示されません。  
+2.  **[セッション モニター]** ペインの **[MySession]** をダブルクリックします。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 前のチューニング セッションからセッション情報が読み込まれ、 **[推奨設定]** タブが表示されます。チューニング オプションをすべて既定値に設定しており、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [チューニング オプション] **タブで** [パーティション分割なし] **を選択しているため、** チューニング アドバイザーの **[推奨パーティション]** には何も表示されません。  
   
-3.  **[推奨設定]** タブで、 **[推奨インデックス]** のすべての列を表示するには、このページの下部にあるスクロール バーを使用します。 各行は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーによって削除または作成が推奨されているデータベース オブジェクト (インデックスまたはインデックス ビュー) です。 右端の列までスクロールし、 **[定義]**をクリックします。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]チューニング アドバイザーが表示されます、 **SQL スクリプトのプレビュー**ウィンドウを表示することができます、[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプトを作成するか、その行に、データベース オブジェクトを削除します。 **[閉じる]** をクリックし、プレビュー ウィンドウを閉じます。  
+3.  **[推奨設定]** タブで、 **[推奨インデックス]** のすべての列を表示するには、このページの下部にあるスクロール バーを使用します。 各行は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーによって削除または作成が推奨されているデータベース オブジェクト (インデックスまたはインデックス ビュー) です。 右端の列までスクロールし、 **[定義]**をクリックします。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]**[SQL スクリプトのプレビュー]** ウィンドウが表示されます。このウィンドウには、その行のデータベース オブジェクトを作成または削除する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトが表示されます。 **[閉じる]** をクリックし、プレビュー ウィンドウを閉じます。  
   
     リンクを含む **[定義]** を見つけにくい場合は、タブ付きページの下部にある **[既存のオブジェクトを表示する]** チェック ボックスをオフにすると、表示される行数が少なくなり、 推奨設定が生成されたオブジェクトのみが [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーに表示されます。 **[既存のオブジェクトを表示する]** チェック ボックスをオンにすると、現在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに存在するすべてのデータベース オブジェクトが表示されます。 タブ ページ右側のスクロール バーを使用し、すべてのオブジェクトを表示します。  
   

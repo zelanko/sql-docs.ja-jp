@@ -1,6 +1,6 @@
 ---
-title: "テーブル モデル デザイナー (SSAS) |Microsoft ドキュメント"
-ms.date: 03/14/2017
+title: "テーブル モデル デザイナー |Microsoft ドキュメント"
+ms.date: 10/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,10 +18,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 7450b51aac58dc148dd1ef37e90ad20aff50883c
+ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
+ms.openlocfilehash: b660ee5e5923b47c45e3198297042607fa59f874
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="tabular-model-designer-ssas"></a>テーブル モデル デザイナー (SSAS)
@@ -32,13 +32,11 @@ ms.lasthandoff: 09/27/2017
   
  プロフェッショナルな多次元のテーブル モデル ソリューション作成のための新しいテンプレートとツールのほかに、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境には、組織のために最も強力な BI ソリューションを作成するための、デバッグ、およびプロジェクトのライフ サイクルに関する機能が用意されています。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]の詳細については、「 [Visual Studio の概要](http://go.microsoft.com/fwlink/?LinkId=206389)」を参照してください。  
   
-##  <a name="bkmk_proj_temp"></a> プロジェクト テンプレート  
+##  <a name="bkmk_proj_temp"></a>プロジェクト テンプレート  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をインストールすると、以下のテーブル モデル プロジェクト テンプレートがビジネス インテリジェンス プロジェクトの種類に追加されます。  
   
  **Analysis Services のテーブル プロジェクト**  
- このテンプレートを使用すると、新しい、空白のテーブル モデル プロジェクトを作成できます。 互換性レベルは、プロジェクトを作成するときに指定します。 **に組み込まれているすべての機能を使用するには、既定値の**[SQL Server 2016 RTM (1200)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を選択します。  
-  
- ![ssas_tabularproject_compat1200](../../analysis-services/tabular-models/media/ssas-tabularproject-compat1200.jpg "ssas_tabularproject_compat1200")  
+ このテンプレートを使用すると、新しい、空白のテーブル モデル プロジェクトを作成できます。 互換性レベルは、プロジェクトを作成するときに指定します。
   
  **サーバー (表形式) からのインポート**  
  このテンプレートを使用すると、Analysis Services 内の既存のテーブル モデルからメタデータを抽出して、新しいテーブル モデル プロジェクトを作成できます。  
@@ -62,7 +60,7 @@ ms.lasthandoff: 09/27/2017
   
  どちらのビューでもほとんどのモデル作成タスクを実行できます。  
   
-### <a name="view-code-window"></a>[コードの表示] ウィンドウ  
+### <a name="view-code-window"></a>コード ウィンドウを表示します。  
  ソリューション エクスプローラーでファイルを右クリックして **[コードの表示]** を選択すると、Model.bim ファイルのコードを表示できます。 互換性レベル 1200 以降の表形式モデル、モデル定義は JSON で表されます。  
   
  JSON エディターを含む、通常版の Visual Studio が必要です。 商用エディションに含まれる追加機能が不要な場合は、 [無料の Visual Studio Community エディション](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) をダウンロードしてインストールできます。  
@@ -118,7 +116,7 @@ ms.lasthandoff: 09/27/2017
  既定では、 **エラー一覧** は、エラーが返されない限り表示されません。 ただし、 **エラー一覧** ウィンドウはいつでも表示できます。 **エラー一覧** ウィンドウを表示するには、 **[表示]** メニューをクリックしてから **[エラー一覧]**をクリックします。  
   
 ### <a name="output"></a>出力  
- ビルドと配置の情報が、(進捗状況のモーダル ダイアログに加えて) **出力** ウィンドウに表示されます。 **出力** ウィンドウを表示するには、 **[表示]** をクリックしてから [出力] をクリックします。  
+ ビルドと配置の情報が、(進捗状況のモーダル ダイアログに加えて) **出力** ウィンドウに表示されます。 **出力** ウィンドウを表示するには、 **表示** をクリックしてから 出力をクリックします。  
   
 ### <a name="menu-items"></a>メニュー項目  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をインストールすると、テーブル モデルの作成のために特化したメニュー項目が Visual Studio のメニュー バーに追加されます。 **[モデル]** メニューを使用して、データ インポート ウィザードを起動したり、既存の接続を表示したり、ワークスペース データを処理したりできるほか、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel でモデル ワークスペースを参照することもできます。 **[テーブル]** メニューは、テーブル間のリレーションシップの作成と管理、メジャーの作成と管理のほか、データ テーブルの設定や計算オプションなど、各種のテーブル プロパティを指定する際に使用します。 **[列]** メニューでは、テーブル内の列の追加と削除、列の表示と非表示のほか、列のプロパティ (データ型、フィルターなど) を指定することができます。 テーブル モデル ソリューションは、 **[ビルド]** メニューからビルドおよび配置できます。 コピーと貼り付けの機能は、 **[編集]** メニューに含まれています。  
@@ -128,7 +126,7 @@ ms.lasthandoff: 09/27/2017
 ### <a name="toolbar"></a>[ツール バー]  
  Analysis Services ツール バーを使用すると、最もよく使用されるモデル作成コマンドにすばやく簡単にアクセスできます。  
   
-##  <a name="bkmk_vsint"></a> Visual Studio との統合  
+##  <a name="bkmk_vsint"></a>Visual Studio の統合  
  **ソース管理**  
  Analysis Services プロジェクトは、選択したソース管理プラグインと統合されます。 ソース コントロールを使用するように Visual Studio を構成した場合は、ソリューション エクスプローラーからチェックインとチェックアウトを使用できます。 Team Foundation Server を使用するように構成するには、「 [Team Foundation バージョン管理を使用する Visual Studio の構成](http://msdn.microsoft.com/library/ms253064.aspx)」を参照してください。 多くのサード パーティ製ソース管理プラグインもサポートされます。  
   
@@ -143,3 +141,4 @@ ms.lasthandoff: 09/27/2017
  [プロパティ (SSAS テーブル)](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   
+
