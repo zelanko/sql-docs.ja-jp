@@ -1,7 +1,7 @@
 ---
 title: "DAX では、テーブル モデル (SSAS テーブル) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 04/10/2017
+ms.date: 10/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 653c715b8a3b990cc6073b2455887232c71c32b4
+ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
+ms.openlocfilehash: 2a72b3e1ec1dad514eb8394460267b44bca79d7d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/23/2017
 
 ---
 # <a name="dax-in-tabular-models-ssas-tabular"></a>DAX では、テーブル モデル (SSAS テーブル)
-  Data Analysis Expressions (DAX) は、分析サービス、Power BI Desktop と Power Pivot in Excel でカスタムの計算を作成するための数式言語です。 DAX の数式は、テーブル内や列内のデータに対して高度な計算を実行するための関数、演算子、値などで構成されます。  
+  Data Analysis Expressions (DAX) は、Analysis Services、Power BI Desktop と Power Pivot in Excel でカスタムの計算を作成するための数式言語です。 DAX の数式は、テーブル内や列内のデータに対して高度な計算を実行するための関数、演算子、値などで構成されます。  
   
  Analysis Services、Power BI Desktop と Excel の Power Pivot で DAX が使用されますが、このトピックは SQL Server Data Tools (SSDT) で作成されたため、Analysis Services テーブル モデル プロジェクトに複数適用されます。  
   
@@ -202,6 +202,9 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ### <a name="mathematical-and-trigonometric-functions"></a>数学関数と三角関数  
  DAX の数学関数は、Excel の数学関数や三角関数と非常によく似ています。 ただし DAX 関数で使用する数値データ型には、小さな違いがいくつかあります。 詳細については、「 [数学関数と三角関数 (DAX)](http://msdn.microsoft.com/en-us/1f408ec1-e769-43d6-a68c-567bc30d893f)」を参照してください。  
+ 
+### <a name="other-functions"></a>その他の関数  
+ これらの関数に属している他のほとんどの関数のカテゴリのいずれかで定義できない一意のアクションを実行します。 詳細については、次を参照してください。[その他の関数 (DAX)](https://msdn.microsoft.com/mt150101)です。
   
 ### <a name="statistical-functions"></a>統計関数  
  DAX には、集計を行う統計関数があります。 DAX では、集計と平均の作成や最小値と最大値の特定に加えて、集計前に列をフィルター処理したり、関連テーブルに基づき集計を作成したりすることができます。 詳細については、「 [統計関数 (DAX)](http://msdn.microsoft.com/en-us/ba4c1298-57a0-40fc-b6f6-00e187ace559)」を参照してください。  
@@ -397,6 +400,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [計算列](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [ロール](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [サポートされるデータ ソース](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
+ [サポートされているデータ ソース](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
+
