@@ -19,16 +19,15 @@
 
 # リリース ノート
 
-## [SQL Server リリース ノート](sql-server-release-notes.md)
-## [SQL Server 2017 リリース ノート](sql-server-2017-release-notes.md)
-## [SQL Server 2016 リリース ノート](sql-server-2016-release-notes.md)
-## [SQL Server 2014 リリース ノート](sql-server-2014-release-notes.md)
-## [SQL Server 2012 SP4 リリース ノート](sql-server-2012-sp4-release-notes.md)
-## [SQL Server 2012 SP3 リリース ノート](sql-server-2012-sp3-release-notes.md)
-## [SQL Server 2012 SP2 のリリース ノートします。](sql-server-2012-sp2-release-notes.md)
-## [SQL Server 2012 SP1 リリース ノート](sql-server-2012-sp1-release-notes.md)
-## [SQL Server 2012 リリース ノート](sql-server-2012-release-notes.md)
-## [SQL Server 2008 R2 SP2 リリース ノート](sql-server-2008-r2-sp2-release-notes.md)
+## [SQL Server 2017 ノート](sql-server-2017-release-notes.md)
+## [SQL Server 2016 ノート](sql-server-2016-release-notes.md)
+## [SQL Server 2014 ノート](sql-server-2014-release-notes.md)
+## [SQL Server 2012 SP4 ノート](sql-server-2012-sp4-release-notes.md)
+## [SQL Server 2012 SP3 ノート](sql-server-2012-sp3-release-notes.md)
+## [SQL Server 2012 SP2 ノート](sql-server-2012-sp2-release-notes.md)
+## [SQL Server 2012 SP1 ノート](sql-server-2012-sp1-release-notes.md)
+## [SQL Server 2012 ノート](sql-server-2012-release-notes.md)
+## [SQL Server 2008 R2 SP2 ノート](sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
 # [データベース エンジン](../database-engine/sql-server-database-engine-overview.md)
@@ -42,4 +41,17 @@
 # [Data Migration Assistant](../dma/dma-overview.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [SQL Server チュートリアル](tutorials-for-sql-server-2016.md)
-# [ヘルプ ビューアーでのローカル コンテンツ](sql-server-help-installation.md)
+
+# リソース
+## ブログ
+### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
+### [SQL Server データベース エンジン](https://blogs.msdn.microsoft.com/sqlserverstorageengine/)
+### [SQL Server のセキュリティ](https://blogs.msdn.microsoft.com/sqlsecurity/)
+
+## フィードバックとヘルプ
+### [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
+### [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
+### [MSDN フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
+### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
+### [Reddit](https://www.reddit.com/r/SQLServer)
+## [ヘルプ ビューアーでのローカル コンテンツ](sql-server-help-installation.md)
