@@ -51,9 +51,9 @@ SSMA をインストールする前に、コンピューターが、次の要件
   
 -   Oracle クライアント 9.0 または以降のバージョンとを移行する Oracle データベースへの接続。 Oracle クライアント バージョンは、バージョンと同じ、または Oracle データベースのバージョンより新しいバージョンにする必要があります。  
   
-    Oracle 製品メディアまたは Oracle Web サイトからは、Oracle クライアントをインストールすることができます。 接続の詳細については、次を参照してください。 [Oracle データベース (&) #40";"OracleToSQL"&"#41; への接続](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)です。  
+    Oracle 製品メディアまたは Oracle Web サイトからは、Oracle クライアントをインストールすることができます。 接続の詳細については、次を参照してください。 [Oracle データベース &#40;OracleToSQL"&"#41; への接続](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)です。  
   
--   アクセスおよびのターゲット インスタンスをホストするコンピューターに十分なアクセス許可[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB の場所はで移行するデータベース オブジェクトとデータ。 詳細については、次を参照してください。 [SQL Server (&) #40";"OracleToSQL"&"#41; への接続](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)です。  
+-   アクセスおよびのターゲット インスタンスをホストするコンピューターに十分なアクセス許可[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB の場所はで移行するデータベース オブジェクトとデータ。 詳細については、次を参照してください。 [SQL Server &#40;OracleToSQL"&"#41; への接続](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)です。  
   
 -   4 GB の RAM (推奨)。  
   
@@ -81,10 +81,10 @@ SSMA は Web からダウンロードします。 最新バージョンをダウ
   
 既定のインストール場所は C:\Program files \microsoft SQL Server Migration Assistant for Oracle です。  
   
-SSMA のプログラム ファイルに加えてもにインストールする必要 SSMA for Oracle の拡張機能パック[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 詳細については、次を参照してください。 [SQL Server (&) #40";"OracleToSQL"&"#41; SSMA コンポーネントのインストール中](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)です。  
+SSMA のプログラム ファイルに加えてもにインストールする必要 SSMA for Oracle の拡張機能パック[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 詳細については、次を参照してください。 [SQL Server &#40;OracleToSQL"&"#41; SSMA コンポーネントのインストール中](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)です。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server (&) #40";"OracleToSQL"&"#41; SSMA コンポーネントをインストールします。](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
-[SQL Server (&) #40";"OracleToSQL"&"#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[SQL Server &#40;OracleToSQL"&"#41; SSMA コンポーネントをインストールします。](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
+[SQL Server &#40;OracleToSQL"&"#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
 

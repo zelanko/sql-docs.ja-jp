@@ -95,6 +95,6 @@ SSMA では、データ型マッピングの既定のセットがあります。
 移行プロセスの次の手順は、いずれかに[評価レポートを作成する](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357)または[Oracle データベースのオブジェクトを SQL Server の構文に変換](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272)です。 評価レポートを作成する場合、Oracle オブジェクトは、評価時に自動的に変換されます。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server (&) #40";"OracleToSQL"&"#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[SQL Server &#40;OracleToSQL"&"#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
 

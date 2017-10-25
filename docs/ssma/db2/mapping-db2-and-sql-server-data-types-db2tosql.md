@@ -93,9 +93,9 @@ SSMA では、データ型マッピングの既定のセットがあります。
         継承されたマッピングを削除することはできません。 ただし、継承されたマッピングは、特定のオブジェクトまたはオブジェクト カテゴリにカスタムへのマッピングによって上書きされます。  
   
 ## <a name="next-steps"></a>次の手順  
-移行プロセスの次の手順は、いずれかに[評価レポート (&) #40";"DB2ToSQL"&"#41;](../../ssma/db2/assessment-report-db2tosql.md)または[DB2 スキーマを変換する (&) #40";"DB2ToSQL"&"#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)です。 評価レポートを作成する場合、DB2 オブジェクトは、評価時に自動的に変換されます。  
+移行プロセスの次の手順は、いずれかに[評価レポート &#40;DB2ToSQL"&"#41;](../../ssma/db2/assessment-report-db2tosql.md)または[DB2 スキーマを変換する &#40;DB2ToSQL"&"#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)です。 評価レポートを作成する場合、DB2 オブジェクトは、評価時に自動的に変換されます。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server (&) #40";"DB2ToSQL"&"#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[SQL Server &#40;DB2ToSQL"&"#41; への DB2 データベースの移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
 

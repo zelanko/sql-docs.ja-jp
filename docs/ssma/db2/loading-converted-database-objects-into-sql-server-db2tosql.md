@@ -80,9 +80,9 @@ SSMA を使用して作成する[!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
 **スクリプトを変更するには**  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **ファイル** メニューのをポイント**開く**、順にクリック**ファイル**です。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **ファイル**メニューのをポイント**開く**、順にクリック**ファイル**です。  
   
-2.  **開く**ダイアログ ボックスでは、スクリプト ファイルを選択し、[ok] をクリックします。
+2.  **開く**ダイアログ ボックスでは、スクリプト ファイルを選択し、okをクリックします。
   
 3.  クエリ エディターを使用して、スクリプト ファイルを編集します。  
   
@@ -95,7 +95,7 @@ SSMA を使用して作成する[!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
 **スクリプトを実行するには**  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **ファイル** メニューのをポイント**開く**、順にクリック**ファイル**です。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **ファイル**メニューのをポイント**開く**、順にクリック**ファイル**です。  
   
 2.  **開く** ダイアログ ボックスで、スクリプト ファイルを選択し、[!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
@@ -114,6 +114,6 @@ SSMA を使用して作成する[!INCLUDE[ssNoVersion](../../includes/ssnoversio
 移行プロセスの次の手順が、 [SQL Server 内の DB2 データの移行](http://msdn.microsoft.com/en-us/86cbd39f-6dac-409a-9ce1-7dd54403f84b)です。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server (&) #40";"DB2ToSQL"&"#41; への DB2 データの移行](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+[SQL Server &#40;DB2ToSQL"&"#41; への DB2 データの移行](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   
 
