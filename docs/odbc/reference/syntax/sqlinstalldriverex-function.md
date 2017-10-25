@@ -87,7 +87,7 @@ BOOL SQLInstallDriverEx(
  関数は、それが成功した場合、FALSE が失敗した場合に TRUE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLInstallDriverEx**は FALSE を返します、関連付けられている* \*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**です。 次の表、 * \*pfErrorCode*によって返される値**SQLInstallerError**とコンテキストでこの関数のいずれかを説明します。  
+ ときに**SQLInstallDriverEx**は FALSE を返します、関連付けられている *\*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**です。 次の表、  *\*pfErrorCode*によって返される値**SQLInstallerError**とコンテキストでこの関数のいずれかを説明します。  
   
 |*\*pfErrorCode*|[エラー]|Description|  
 |---------------------|-----------|-----------------|  
@@ -103,9 +103,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>コメント  
  *LpszDriver*引数は、キーワードと値のペアの形式で属性の一覧を示します。 各ペアは、null バイトで終了し、null バイトのリスト全体が終了します。 (つまり、2 つの null バイトの末尾を示す一覧です。)この一覧の形式は次のとおりです。  
   
- *ドライバー desc* ** \\ **0Driver**=***ドライバー DLL-filename* ** \\ **0 [セットアップ**=***セットアップ DLL-filename***\\**0]  
+ *ドライバー desc*  **\\** 0Driver**=***ドライバー DLL-filename*  **\\** 0 [セットアップ**=***セットアップ DLL-filename***\\**0]  
   
- [*ドライバー attr-keyword1***=***value1***\\**0] [*ドライバー attr-keyword2* ** = ** *value2***\\**0].** \\ **0  
+ [*ドライバー attr-keyword1***=***value1***\\**0] [*ドライバー attr-keyword2*  **=**  *value2***\\**0]. **\\** 0  
   
  null バイトを \0 がここでと*ドライバー attr-keywordn*ドライバー属性のキーワードです。 キーワードは、指定した順序で表示する必要があります。 たとえば、書式設定されたテキスト ファイル用のドライバーが個別のドライバーとセットアップ Dll いるとし、.txt、.csv の拡張子を持つファイルを使用できます。 *LpszDriver*このドライバーの引数を次のようにすることがあります。  
   

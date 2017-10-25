@@ -66,7 +66,7 @@ SQLRETURN SQLNativeSql(
  場合*OutStatementText* null、 *TextLength2Ptr*は文字 (文字データの null 終端文字を除く) の合計数を返しますが、バッファーに返される使用可能なによって示される*OutStatementText*です。  
   
  *BufferLength*  
- [入力]内の文字数、 \* *OutStatementText*バッファー。 値が返される場合* \*InStatementText* Unicode 文字列です (呼び出し時に**SQLNativeSqlW**) では、 *BufferLength*引数は偶数である必要があります。  
+ [入力]内の文字数、 \* *OutStatementText*バッファー。 値が返される場合 *\*InStatementText* Unicode 文字列です (呼び出し時に**SQLNativeSqlW**) では、 *BufferLength*引数は偶数である必要があります。  
   
  *TextLength2Ptr*  
  [出力]文字 (除外 null 終了あり) で返される使用可能な数の合計を返すバッファーへのポインター \* *OutStatementText*です。 返される文字数がより大きいかに等しい場合*BufferLength*では、SQL 文字列を翻訳\* *OutStatementText*に切り捨てられます*BufferLength* null 終端文字の長さマイナスです。  
@@ -85,7 +85,7 @@ SQLRETURN SQLNativeSql(
 |08S01|通信リンクが失敗しました|関数は完了しました処理する前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクが失敗しました。|  
 |22007|無効な datetime 形式|**InStatementText*値が無効な日付、時刻、またはタイムスタンプ escape 句が含まれています。|  
 |24000|カーソル状態が無効|または、結果セットの終了後に結果セットの開始前に、ステートメントで参照されるカーソルが配置されました。 このエラーをネイティブ DBMS カーソルの実装を持つドライバーによって返されないことができます。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、 * \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY009|無効な null ポインターの使用|(DM) **InStatementText*が null ポインターでした。|  
 |HY010|関数のシーケンス エラー|(DM) の非同期的に実行中の関数が呼び出された、 *ConnectionHandle*この関数が呼び出されたときに実行されているとします。|  

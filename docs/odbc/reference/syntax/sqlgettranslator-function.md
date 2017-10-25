@@ -81,7 +81,7 @@ BOOL SQLGetTranslator(
  関数が正常に終了したが失敗した場合、またはユーザーがダイアログ ボックスを取り消す場合に TRUE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLGetTranslator**は FALSE を返します、関連付けられている* \*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**です。 次の表、 * \*pfErrorCode*によって返される値**SQLInstallerError**とコンテキストでこの関数のいずれかを説明します。  
+ ときに**SQLGetTranslator**は FALSE を返します、関連付けられている *\*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**です。 次の表、  *\*pfErrorCode*によって返される値**SQLInstallerError**とコンテキストでこの関数のいずれかを説明します。  
   
 |*\*pfErrorCode*|[エラー]|Description|  
 |---------------------|-----------|-----------------|  

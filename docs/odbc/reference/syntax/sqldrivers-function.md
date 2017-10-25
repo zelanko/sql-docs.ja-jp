@@ -76,7 +76,7 @@ SQLRETURN SQLDrivers(
  場合*DriverAttributes*が NULL の場合、 *AttributesLengthPtr*はバイト (文字データの null 終端文字を除く) の合計数を返しますが、バッファーに返される使用可能なによって示される*DriverAttributes*です。  
   
  *BufferLength2*  
- [入力]長さ、 \* *DriverAttributes*文字バッファー。 場合、 * \*DriverDescription*値は Unicode 文字列です (呼び出し時に**SQLDriversW**) では、 *BufferLength*引数は偶数である必要があります。  
+ [入力]長さ、 \* *DriverAttributes*文字バッファー。 場合、  *\*DriverDescription*値は Unicode 文字列です (呼び出し時に**SQLDriversW**) では、 *BufferLength*引数は偶数である必要があります。  
   
  *AttributesLengthPtr*  
  [出力]合計バイト数 (null 終了バイトを除く) を返すバッファーへのポインターで返される使用可能な\* *DriverAttributes*です。 場合は、使用できるバイト数を返すより大きいまたは等しい*BufferLength2*、属性値のペアの一覧\* *DriverAttributes*に切り捨てられます*BufferLength2* null 終端文字の長さマイナスです。  
@@ -91,7 +91,7 @@ SQLRETURN SQLDrivers(
 |--------------|-----------|-----------------|  
 |01000|一般的な警告|(DM) ドライバー マネージャー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |01004|文字列データで、右側が切り捨てられました|(DM) バッファー \* *DriverDescription*を完全なドライバーの説明を返すのに十分な大きさがありません。 そのため、説明が切り捨てられました。 完全なドライバーの説明の長さが返される\* *DescriptionLengthPtr*です。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。<br /><br /> (DM) バッファー \* *DriverAttributes*属性値のペアの完全な一覧を返すのに十分な大きさがありません。 そのため、一覧が切り捨てられました。 切り詰められていない属性値ペアのリストの長さが返される **AttributesLengthPtr*です。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、 * \*MessageText*バッファーは、エラーとその原因について説明します。|  
+|HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバー マネージャーは、(DM) は、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY010|関数のシーケンス エラー|(DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**で呼び出され、 *StatementHandle*し SQL_PARAM_DATA_ が返されました使用できます。 ストリーミングのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、可能性のあるメモリ不足の状況が原因であるために、関数呼び出しを処理できませんでした。|  
