@@ -568,7 +568,7 @@ RETURNS return_data_type
   
 -   拡張ストアド プロシージャを呼び出す EXECUTE ステートメント。  
   
--   詳細については、次を参照してください。[作成するユーザー定義関数 (&) #40; データベース エンジン"&"#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)です。  
+-   詳細については、次を参照してください。[作成するユーザー定義関数 &#40; データベース エンジン"&"#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)です。  
   
 ### <a name="computed-column-interoperability"></a>計算列の相互運用性  
  関数には次のプロパティがあります。 これらのプロパティの値によって、保存される計算列またはインデックス付き計算列で関数を使用できるかどうかが決まります。  
