@@ -54,7 +54,7 @@ ms.lasthandoff: 09/26/2017
   
  **入力列**のページ、**スクリプト変換エディター**列のリスト、データ フローの上流コンポーネントの出力から使用可能な列を示しています。 変換する列、またはそのまま出力する列を選択します。 変換するすべての列の適切な場所に、読み取り/書き込みのマークを付けます。  
   
- 詳細については、**入力列**のページ、**スクリプト変換エディター**を参照してください[スクリプト変換エディター (&) #40";"の入力列 ページ"&"#41;](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)です。  
+ 詳細については、**入力列**のページ、**スクリプト変換エディター**を参照してください[スクリプト変換エディター &#40;の入力列 ページ"&"#41;](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)です。  
   
 ### <a name="configuring-inputs-outputs-and-output-columns"></a>入力、出力、および出力列の設定  
  変換コンポーネントには、1 つ以上の出力を設定できます。  

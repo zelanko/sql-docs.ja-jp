@@ -202,7 +202,7 @@ ms.lasthandoff: 09/26/2017
 |ID|Integer|出力を一意に識別する値。|  
 |[IdentificationString]|文字列|出力を識別する文字列。|  
 |IsErrorOut|ブール値|出力がエラー出力かどうかを示します。|  
-|IsSorted|ブール値|出力を並べ替えるかどうかを示します。 既定値は **False**です。<br /><br /> **\*\*重要な\* \* **の値を設定、 **IsSorted**プロパティを**True**データは並べ替えられません。 このプロパティでは、データが既に並べ替えられている下流コンポーネントにヒントのみを提供します。 詳細については、「 [Sort Data for the Merge and Merge Join Transformations](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」(マージ変換およびマージ結合変換用にデータを並べ替える方法) を参照してください。|  
+|IsSorted|ブール値|出力を並べ替えるかどうかを示します。 既定値は **False**です。<br /><br /> **\*\*重要な\* \*** の値を設定、 **IsSorted**プロパティを**True**データは並べ替えられません。 このプロパティでは、データが既に並べ替えられている下流コンポーネントにヒントのみを提供します。 詳細については、「 [Sort Data for the Merge and Merge Join Transformations](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」(マージ変換およびマージ結合変換用にデータを並べ替える方法) を参照してください。|  
 |名前|文字列|出力の名前。|  
 |SynchronousInputID|Integer|出力に同期する入力の ID。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row**|  

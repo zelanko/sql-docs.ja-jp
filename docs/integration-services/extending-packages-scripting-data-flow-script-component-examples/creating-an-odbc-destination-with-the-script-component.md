@@ -43,7 +43,7 @@ ms.lasthandoff: 09/26/2017
   
 -   **OdbcCommand**位置指定パラメーターが必要です。 パラメーターの位置は、コマンドのテキストの疑問符 (?) で示されます  (これに対し、 **SqlCommand**名前付きパラメーターが必要です)。  
   
- この例では、 **Person.Address**テーブルに、 **AdventureWorks**サンプル データベース。 例では、最初と 4 番目の列に渡します、 * *int*AddressID** * と**nvarchar (30) 市区町村**をデータ フローには、このテーブルの列です。 この同じデータが変換元、変換、および、トピック「変換先の例で使用される[スクリプト コンポーネント種類特定の開発](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)です。  
+ この例では、 **Person.Address**テーブルに、 **AdventureWorks**サンプル データベース。 例では、最初と 4 番目の列に渡します、  **int*AddressID** * と**nvarchar (30) 市区町村**をデータ フローには、このテーブルの列です。 この同じデータが変換元、変換、および、トピック「変換先の例で使用される[スクリプト コンポーネント種類特定の開発](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)です。  
   
 #### <a name="to-configure-this-script-component-example"></a>このスクリプト コンポーネントの例を構成するには  
   
