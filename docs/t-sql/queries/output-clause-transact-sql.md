@@ -144,7 +144,7 @@ DELETE Sales.ShoppingCartItem
  MERGE ステートメントでのみ使用できます。 型の列を示す**nvarchar (10)**を返す行ごとに 3 つの値のいずれかの MERGE ステートメントで OUTPUT 句で: 'INSERT'、'UPDATE'、または 'DELETE'、その行に対して実行されたアクションに従ってします。  
   
 ## <a name="remarks"></a>解説  
- 出力\<dml_select_list > 句、および出力\<dml_select_list > INTO { ** @ ** *table_variable*  |  *output_table* } 句を単一の INSERT、UPDATE、DELETE、または MERGE ステートメントで定義することができます。  
+ 出力\<dml_select_list > 句、および出力\<dml_select_list > INTO {  **@**  *table_variable*  |  *output_table* } 句を単一の INSERT、UPDATE、DELETE、または MERGE ステートメントで定義することができます。  
   
 > [!NOTE]  
 >  特に指定しない限り、OUTPUT 句への参照は、OUTPUT 句と OUTPUT INTO 句の両方を参照します。  
