@@ -18,11 +18,11 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 06b00c9eceac816935b2c0fa69306a6681383d80
+ms.translationtype: HT
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 1458934e810b1ddc5cc4ae856ef4fffa0f5da1ef
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="create-a-database"></a>データベースの作成
@@ -112,7 +112,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 `Sales`データベースを作成します。 PRIMARY キーワードが使用されていないので、最初のファイル (`Sales`_`dat`) がプライマリ ファイルになります。 `Sales`\_`dat` ファイルの SIZE パラメーターに MB も KB も指定されていないため、ファイルは MB を使用し、メガバイト単位で割り当てられます。 `Sales`\_`log` ファイルは、 `MB` パラメーターに `SIZE` サフィックスが明示的に指定されているため、メガバイト単位で割り当てられます。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 `Sales`データベースを作成します。 PRIMARY キーワードが使用されていないので、最初のファイル (`Sales_dat`) がプライマリ ファイルになります。 `Sales_dat` ファイルの SIZE パラメーターに MB も KB も指定されていないため、ファイルは MB を使用し、メガバイト単位で割り当てられます。 `Sales_log` ファイルは、`SIZE` パラメーターに `MB` サフィックスが明示的に指定されているため、メガバイト単位で割り当てられます。  
   
 ```tsql  
 USE master ;  
@@ -139,6 +139,6 @@ GO
  [データベース ファイルとファイル グループ](../../relational-databases/databases/database-files-and-filegroups.md)   
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
+ [データベースに対するデータ ファイルまたはログ ファイルの追加](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
   
   

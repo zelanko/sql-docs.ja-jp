@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 7eb8ea4b29caaf7f1600bbd31db4f669b86476c1
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 715ce3fff853f4eab433d095ffd952033defad69
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="return-data-from-a-stored-procedure"></a>ストアド プロシージャからデータを返す
@@ -111,7 +111,7 @@ GO
     >  カーソルがクローズしているかどうかが問題になるのは、結果セットが返される時点のみです。 たとえば、プロシージャの途中でカーソルを閉じ、その後で再び開いて、そのカーソルの結果セットを呼び出し元のバッチ、プロシージャ、またはトリガーに返すのは有効な操作です。  
   
 ### <a name="examples-of-cursor-output-parameters"></a>cursor 出力パラメーターの例  
- 次の例では、 `@currency`cursor`cursor` データ型の出力パラメーター **_** を指定したプロシージャを作成します。 作成したプロシージャはバッチで呼び出します。  
+ 次の例では、**cursor** データ型の出力パラメーター `@currency_cursor` を指定したプロシージャを作成します。 作成したプロシージャはバッチで呼び出します。  
   
  まず、Currency テーブルに対してカーソルを宣言し、そのカーソルを開くプロシージャを作成します。  
   

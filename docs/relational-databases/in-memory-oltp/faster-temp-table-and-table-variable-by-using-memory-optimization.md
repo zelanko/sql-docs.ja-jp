@@ -1,7 +1,7 @@
 ---
 title: "メモリ最適化を使用した一時テーブルとテーブル変数の高速化 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/12/2017
+ms.date: 10/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4e2fb53cbb1d9a8999a9260b6907f5319c0fe203
+ms.sourcegitcommit: fffb61c4c3dfa58edaf684f103046d1029895e7c
+ms.openlocfilehash: 2c44f6288c4e58caa45748e6e832465f43145b83
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/19/2017
 
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>メモリ最適化を使用した一時テーブルとテーブル変数の高速化
@@ -65,6 +65,8 @@ ms.lasthandoff: 07/31/2017
   
 ## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. シナリオ: グローバル tempdb &#x23;&#x23;table の置換  
   
+グローバル一時テーブルとメモリ最適化 SCHEMA_ONLY テーブルの置換は非常に単純です。 最大の変更は、テーブルを実行時ではなく展開時に作成することです。 メモリ最適化テーブルの作成は、コンパイル時に最適化されるため、従来のテーブルの作成よりも時間がかかります。 メモリ最適化テーブルをオンライン ワークロードの一部として作成およびドロップすると、ワークロードのパフォーマンスだけでなく、AlwaysOn セカンダリおよびデータベース復旧の再実行のパフォーマンスにも影響します。
+
 次のグローバル一時テーブルがあると想定します。  
   
   
@@ -102,13 +104,15 @@ DURABILITY = SCHEMA_ONLY を含む、次のメモリ最適化テーブルを使�
   
   
 1. 従来のディスク上のテーブルと同様に、一度、**dbo.soGlobalB** テーブルを作成します。  
-2. Transact-SQL から、**&#x23;&#x23;tempGlobalB** テーブルの作成を削除します。  
+2. Transact-SQL から、**&#x23;&#x23;tempGlobalB** テーブルの作成を削除します。  テーブルの作成から生じるコンパイルのオーバーヘッドを回避するには、メモリ最適化テーブルを実行時ではなく展開時に作成することが重要です。
 3. T-SQL で、**&#x23;&#x23;tempGlobalB** のすべてのメンションを **dbo.soGlobalB** に置き換えます。  
   
   
 ## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. シナリオ: セッション tempdb &#x23;table の置換  
   
 セッションの一時テーブルを置換するための準備には、以前のグローバル一時テーブルのシナリオよりも多く T-SQL が含まれます。 追加の T-SQL で、変換を行うために必要な労力が増えるということではありません。  
+
+グローバル一時テーブルのシナリオと同様、最も大きな変更はコンパイルのオーバーヘッドを回避するため、テーブルを実行時ではなく展開時に作成することです。
   
 次のセッションの一時テーブルがあると想定します。  
   
@@ -184,7 +188,7 @@ DURABILITY = SCHEMA_ONLY を含む、次のメモリ最適化テーブルを使�
 1. Transact-SQL ステートメントの一時テーブルのすべての参照をメモリ最適化テーブルに変更します。
     - _旧:_ &#x23;tempSessionC  
     - _新:_ dbo.soSessionC  
-2. コードの `CREATE TABLE #tempSessionC` ステートメントを `DELETE FROM dbo.soSessionC` に置換し、同じ session_id の前のセッションにより挿入されるテーブル コンテンツにセッションが公開されないようにします。
+2. コードの `CREATE TABLE #tempSessionC` ステートメントを `DELETE FROM dbo.soSessionC` に置換し、同じ session_id の前のセッションにより挿入されるテーブル コンテンツにセッションが公開されないようにします。 テーブルの作成から生じるコンパイルのオーバーヘッドを回避するには、メモリ最適化テーブルを実行時ではなく展開時に作成することが重要です。
 3. コードから `DROP TABLE #tempSessionC` ステートメントを削除します。メモリ サイズが問題となる可能性がある場合、任意で `DELETE FROM dbo.soSessionC` ステートメントを挿入できます。
   
   
