@@ -146,7 +146,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>参照  
  [Geography インスタンスの拡張メソッド](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [BufferWithCurves (&) #40";"geometry データ型"&"#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
+ [BufferWithCurves &#40;geometry データ型"&"#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   
   
 

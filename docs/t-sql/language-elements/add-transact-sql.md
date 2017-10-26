@@ -132,7 +132,7 @@ ORDER BY TotalHoursAway ASC;
  [複合の演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [+ = (& a) #40 です。追加等しい &#41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/add-equals-transact-sql.md)   
  [CAST および CONVERT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [データ型の変換 (&) #40";"データベース エンジン"&"#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [データ型の変換 &#40;データベース エンジン"&"#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  

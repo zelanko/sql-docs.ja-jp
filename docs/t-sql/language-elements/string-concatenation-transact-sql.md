@@ -184,7 +184,7 @@ Welcker, B.        Vice President of Sales
 ## <a name="see-also"></a>参照  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CAST および CONVERT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [データ型の変換 (&) #40";"データベース エンジン"&"#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [データ型の変換 &#40;データベース エンジン"&"#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [式 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   

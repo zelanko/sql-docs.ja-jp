@@ -66,8 +66,8 @@ ms.lasthandoff: 09/01/2017
  ```  
   
 ## <a name="see-also"></a>参照  
- [STLength (&) #40";"geography データ型"&"#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)   
- [STNumPoints (&) #40";"geography データ型"&"#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)   
+ [STLength &#40;geography データ型"&"#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)   
+ [STNumPoints &#40;geography データ型"&"#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)   
  [空間データ型の概要](../../relational-databases/spatial/spatial-data-types-overview.md)  
   
   

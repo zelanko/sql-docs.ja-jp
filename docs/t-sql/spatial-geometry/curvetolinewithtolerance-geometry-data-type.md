@@ -121,8 +121,8 @@ ms.lasthandoff: 09/01/2017
  ```  
   
 ## <a name="see-also"></a>参照  
- [CurveToLineWithTolerance (&) #40";"geography データ型"&"#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   
- [STCurveToLine (&) #40";"geometry データ型"&"#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
+ [CurveToLineWithTolerance &#40;geography データ型"&"#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   
+ [STCurveToLine &#40;geometry データ型"&"#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
   
   
 

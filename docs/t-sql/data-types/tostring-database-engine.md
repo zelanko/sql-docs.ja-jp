@@ -32,7 +32,7 @@ ms.lasthandoff: 09/01/2017
 # <a name="tostring-database-engine"></a>ToString (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-文字列の論理表現を返します*この*です。 変換するとき暗黙的に呼び出されます ToString **hierarchyid**を文字列型が発生します。 逆の役割を果たします[Parse & #40";"データベース エンジン"&"#41;](../../t-sql/data-types/parse-database-engine.md)です。
+文字列の論理表現を返します*この*です。 変換するとき暗黙的に呼び出されます ToString **hierarchyid**を文字列型が発生します。 逆の役割を果たします[Parse &#40;データベース エンジン"&"#41;](../../t-sql/data-types/parse-database-engine.md)です。
   
 ## <a name="syntax"></a>構文  
   

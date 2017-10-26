@@ -116,7 +116,7 @@ ms.lasthandoff: 09/01/2017
  ```  
   
 ## <a name="see-also"></a>参照  
- [STNumCurves (&) #40";"geometry データ型"&"#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
+ [STNumCurves &#40;geometry データ型"&"#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
  [Geometry インスタンスの OGC メソッド](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

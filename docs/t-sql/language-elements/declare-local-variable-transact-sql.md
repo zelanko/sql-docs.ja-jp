@@ -275,7 +275,7 @@ GO
 ```  
   
 ### <a name="d-declaring-a-variable-of-user-defined-table-type"></a>D. ユーザー定義テーブル型の変数を宣言する  
- 次の例では、`@LocationTVP` というテーブル値パラメーターまたはテーブル変数を作成します。 呼ばれる対応するユーザー定義テーブル型が必要です`LocationTableType`です。 ユーザー定義テーブル型を作成する方法の詳細については、次を参照してください。[の種類の作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-type-transact-sql.md). テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター (&) #40";"データベース エンジン"&"#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)です。  
+ 次の例では、`@LocationTVP` というテーブル値パラメーターまたはテーブル変数を作成します。 呼ばれる対応するユーザー定義テーブル型が必要です`LocationTableType`です。 ユーザー定義テーブル型を作成する方法の詳細については、次を参照してください。[の種類の作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-type-transact-sql.md). テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;データベース エンジン"&"#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)です。  
   
 ```  
 DECLARE @LocationTVP   

@@ -71,7 +71,7 @@ ms.lasthandoff: 09/01/2017
  ```  
   
 ## <a name="see-also"></a>参照  
- [ShortestLineTo (&) #40";"geography データ型"&"#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
+ [ShortestLineTo &#40;geography データ型"&"#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
   
   
 

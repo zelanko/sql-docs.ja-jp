@@ -104,7 +104,7 @@ OPENROWSET
  操作するオブジェクトを一意に識別するオブジェクト名を指定します。  
   
  '*クエリ*'  
- プロバイダーに送られ、プロバイダーによって実行される文字列定数を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスでは、このクエリは処理されず、プロバイダーから返されたクエリ結果が処理されます (パススルー クエリ)。 パススルー クエリは、表形式のデータをテーブル名ではなくコマンド言語のみで公開するプロバイダーで使用すると便利です。 パススルー クエリは、クエリ プロバイダーは、OLE DB コマンド オブジェクトとその必須インターフェイスをサポートしている限り、リモート サーバーでサポートされます。 詳細については、次を参照してください[SQL Server Native Client (&) #40";"OLE DB"&"#41;。参照](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)です。  
+ プロバイダーに送られ、プロバイダーによって実行される文字列定数を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスでは、このクエリは処理されず、プロバイダーから返されたクエリ結果が処理されます (パススルー クエリ)。 パススルー クエリは、表形式のデータをテーブル名ではなくコマンド言語のみで公開するプロバイダーで使用すると便利です。 パススルー クエリは、クエリ プロバイダーは、OLE DB コマンド オブジェクトとその必須インターフェイスをサポートしている限り、リモート サーバーでサポートされます。 詳細については、次を参照してください[SQL Server Native Client &#40;OLE DB"&"#41;。参照](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)です。  
   
  BULK  
  ファイルからのデータ読み取りに OPENROWSET の BULK 行セット プロバイダーを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、OPENROWSET を使用すると、データを対象テーブルに読み込むことなくデータ ファイルからの読み取りができます。 このため、OPENROWSET は簡単な SELECT ステートメントで使用できます。  

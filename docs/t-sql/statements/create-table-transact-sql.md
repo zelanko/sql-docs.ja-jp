@@ -582,7 +582,7 @@ TEXTIMAGE_ON のみ「LOB ストレージ領域」の場所を変更、データ
  アルゴリズム  
  必要があります**'AEAD_AES_256_CBC_HMAC_SHA_256'**です。  
   
- 機能の制約を含むの詳細については、次を参照してください。 [Always Encrypted & #40";"データベース エンジン"&"#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)です。  
+ 機能の制約を含むの詳細については、次を参照してください。 [Always Encrypted &#40;データベース エンジン"&"#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)です。  
   
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   

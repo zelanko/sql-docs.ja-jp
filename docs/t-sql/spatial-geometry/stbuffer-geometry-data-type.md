@@ -168,7 +168,7 @@ ms.lasthandoff: 09/01/2017
  最初の 2 つ**選択**ステートメントを返します、`MultiPolygon`インスタンスため、パラメーター*距離*と同じかそれよりも少ない 1/2、2 つの間の距離が指す (1 1) と (1 4)。 3 番目**選択**ステートメントから返される、`Polygon`インスタンスは、2 つのバッファー内のインスタンス (1 1) を参照するためと (1 4) が重複します。  
   
 ## <a name="see-also"></a>参照  
- [BufferWithTolerance (&) #40";"geometry データ型"&"#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
+ [BufferWithTolerance &#40;geometry データ型"&"#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
  [Geometry インスタンスの OGC メソッド](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -35,7 +35,7 @@ ms.lasthandoff: 09/26/2017
  通常、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] を開くことによって、カタログの [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] オブジェクトを管理します。 ただし、データベース ビューとストアド プロシージャを直接使用することも、マネージ API を呼び出すカスタム コードを記述することもできます。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]マネージ API は、ビューに対してクエリし、多くのタスクを実行するには、このセクションで説明されているストアド プロシージャを呼び出します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ビュー (&) #40";"Integration Services カタログ"&"#41;](../integration-services/system-views/views-integration-services-catalog.md)  
+ [ビュー &#40;Integration Services カタログ"&"#41;](../integration-services/system-views/views-integration-services-catalog.md)  
  検査するビューをクエリ[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]オブジェクト、設定、およびオペレーション データ。  
   
  [ストアド プロシージャ &#40; Integration Services カタログ"&"#41;](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
