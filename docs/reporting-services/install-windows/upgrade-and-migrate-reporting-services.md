@@ -24,7 +24,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
 ms.openlocfilehash: b5706abc4f362ee3bd4f042c1e081951dcd9ad1d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/25/2017
 
 ---
 
@@ -164,7 +164,7 @@ ms.lasthandoff: 09/27/2017
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 製品用アドイン。 詳細については、「 [SharePoint 用 Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)」を参照してください。  
   
- SharePoint モードのインストールを移行する方法の詳細な手順は、次を参照してください[Reporting Services のインストール &#40; を移行します。。SharePoint モード &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
+ SharePoint モードのインストールを移行する方法の詳細な手順は、次を参照してください[Reporting Services のインストール &#40; を移行しますSharePoint モード &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
   
 > [!IMPORTANT]  
 >  次のシナリオでは、異なるテクノロジをアップグレードする必要があるため、SharePoint 環境のダウンタイムが発生する場合があります。 ダウンタイムの発生を許容できない場合は、インプレース アップグレードではなく、移行操作を実行する必要があります。  
@@ -252,4 +252,4 @@ ms.lasthandoff: 09/27/2017
 [レポートのアップグレード](../../reporting-services/install-windows/upgrade-reports.md)   
 [インストール ウィザードを使用した SQL Server 2016 へのアップグレード &#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 
-他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
