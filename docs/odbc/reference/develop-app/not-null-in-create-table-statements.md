@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dc96de9df9724e500709488054b3357b3c7e50aa
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="not-null-in-create-table-statements"></a>CREATE TABLE ステートメントで NOT NULL します。
 いくつかのデータベース、および特にデスクトップ データベースをサポートしていない、 **NOT NULL**内の列制約**CREATE TABLE**ステートメントです。 詳細についてで SQL_NON_NULLABLE_COLUMNS オプションを参照して、 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)関数の説明。
+

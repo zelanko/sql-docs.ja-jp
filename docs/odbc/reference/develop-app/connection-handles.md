@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ba20d3fcb6d943f4669774013dcb62c8ad896d8d
@@ -40,3 +41,4 @@ A*接続*ドライバーと、データ ソースで構成されます。 接続
  接続ハンドルは、主に使用して、データ ソースに接続するときに (**SQLConnect**、 **SQLDriverConnect**、または**SQLBrowseConnect**)、データから切断していますソース (**SQLDisconnect**)、ドライバーとデータ ソースに関する情報の取得 (**SQLGetInfo**)、診断を取得する (**SQLGetDiagField**と**SQLGetDiagRec**)、トランザクションを実行して (**SQLEndTran**)。 設定または接続属性を取得するときにも使用されます (**SQLSetConnectAttr**と**SQLGetConnectAttr**) SQL ステートメントのネイティブ形式を取得するときに、(**SQLNativeSql**).  
   
  接続ハンドルが割り当てられます**SQLAllocHandle**およびに解放された**SQLFreeHandle**です。
+

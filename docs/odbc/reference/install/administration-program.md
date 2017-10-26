@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 476c4710a4265214235bdd7b80a330fad5b37f34
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 -   **追加、変更、またはサイレント モードでのデータ ソースを削除します。** 管理プログラム呼び出し**SQLConfigDataSource**インストーラー DLL とパスで、null のウィンドウを処理、追加、変更、または削除するデータ ソースの名前と、レジストリの値の一覧です。 インストーラー DLL 呼び出し**ConfigDSN**ドライバー セットアップ DLL に実際に追加するには、変更、またはデータ ソースを削除します。  
   
 -   **追加、変更、または既定のデータ ソースを削除します。** 既定のデータ ソースは、その名前が既定する点を除いて、他のデータ ソースとして同じです。 追加、変更されると、またはその他のデータ ソースと同じ方法で削除します。
+

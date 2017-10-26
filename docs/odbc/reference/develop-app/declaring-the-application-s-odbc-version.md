@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 32bfeff983ef5dff4ebfe3e575bcf36e855184d0
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  ODBC 3 に続くアプリケーション。*x*仕様は、ODBC 3 に新しい機能を使用しないように条件付きのコードを使用する必要があります*。x* ODBC 2 を使用する場合*。x*ドライバー。 ODBC 2 です。*x*ドライバーでは、ODBC 3 に新しい機能をサポートしていません*。x*アプリケーションでは、ODBC 3 に従っていることを宣言からといって*。x*仕様です。 さらに、ODBC 3 です。*x*ドライバーは ODBC 3 に新しい機能をサポートするために停止されません*。x*アプリケーションでは、ODBC 2 に従っていることを宣言からといって*。x*仕様です。
+

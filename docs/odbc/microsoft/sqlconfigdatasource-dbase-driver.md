@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f4db30f9e0c291151409d5af6a63226c0c2292bd
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 |READONLY|読み取り専用ファイルを作成する場合は TRUE読み取り専用ファイルを作成する場合は FALSE。<br /><br /> 同じオプションを設定**読み取り専用**設定 ダイアログ ボックスをオンにします。|  
 |STATISTICS|DBASE ドライバーのテーブルのサイズの統計情報を概算するかどうかを判断します。 このオプションは、ODBC ドライバーを使用するすべてのデータ ソースに適用されることに注意してください。<br /><br /> として同じオプションを設定**行のカウントの概数**設定 ダイアログ ボックスをオンにします。|  
 |スレッド|使用する、エンジンのバック グラウンド スレッドの数。 この値は 3 であるため、変更できません。<br /><br /> 同じオプションを設定**スレッド**設定 ダイアログ ボックスをオンにします。|
+

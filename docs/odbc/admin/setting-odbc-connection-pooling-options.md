@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6e22b3c2c09f4bc356b54ed2ecb73988f0de2764
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
 |作成されたプール|作業中に、削除のプールを含む、アクティブなプールの数。 このカウンターは、接続プール内の接続を管理するドライバーを Windows 8 で追加されました。 詳細については、次を参照してください。[ドライバー対応接続プール](../../odbc/reference/develop-app/driver-aware-connection-pooling.md)です。|  
   
  独自の監視パラメーターを指定する必要があります。 パフォーマンスの監視用のサンプルは、ODBC のこのバージョンに付属されています。
+

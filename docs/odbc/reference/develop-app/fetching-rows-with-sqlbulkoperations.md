@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f0e3f46b5dd742ff1e77c87a8486038c41839764
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 4.  呼び出し**SQLBulkOperations**で、*操作*引数 SQL_FETCH_BY_BOOKMARK に設定します。  
   
  特定の列上で実行される操作を防ぐために、行操作配列を使用するアプリケーションの必要はありません。 アプリケーションでは、バインドされたブックマーク配列にこれらの行のブックマークのみをコピーすることによってフェッチする行を選択します。
+

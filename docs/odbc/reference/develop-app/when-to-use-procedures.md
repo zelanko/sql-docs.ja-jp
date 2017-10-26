@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7bae5e984d66d8b71a9e4b84708f3ea126c1e0b
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/09/2017
  2 つ目の欠点は、多くの Dbms によってプロシージャがサポートされないことです。 ここでも、さまざまな Dbms を実行するように設計垂直方向のアプリケーションの問題が発生する可能性がします。 アプリケーションを呼び出すプロシージャがサポートされているかどうかを判断するのに**SQLGetInfo** SQL_PROCEDURES オプションを使用します。  
   
  3 つ目の欠点は、特にアプリケーションの開発環境に適切であるが、ODBC には、プロシージャを作成するための標準的な文法は定義しません。 つまり、アプリケーションでは、interoperably プロシージャを呼び出すことができます、これらは作成できません interoperably。
+

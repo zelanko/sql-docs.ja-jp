@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4c38b613ed4c2e6efb5737118030905ab9de60b1
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  アプリケーションが呼び出すことができます**SQLNumResultCols**ステートメントが準備または実行後にします。 ただし、一部のデータ ソースは、準備されたステートメントによって作成される結果セットを簡単に記述できない、ためパフォーマンスが低下する場合は**SQLNumResultCols**は、ステートメントを準備した後が実行される前に呼び出されます。  
   
  一部のデータ ソースは、SQL ステートメントが返す結果セット内の行の数を決定するもサポートします。 そのためには、アプリケーション呼び出し**SQLRowCount**です。 (カーソルの種類) に応じて SQL_DYNAMIC_CURSOR_ATTRIBUTES2、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2、SQL_KEYSET_CURSOR_ATTRIBUTES2、または SQL_STATIC_CURSOR_ATTRIBUTES2 オプションの設定で示される正確にどのような行の数を表します呼び出しによって返される**SQLGetInfo**です。 このビットマスクは、各種類のカーソルに対して返される行の数が、概数、正確なであるかどうかを示しますか、まったく使用可能なではありません。 静的行をカウントするかどうか、またはキーセット ドリブン カーソルがを通じて行われた変更によって影響を受ける**SQLBulkOperations**または**SQLSetPos**、位置指定更新または delete ステートメントでは、によってその他のビットに依存します。前の表に、同じオプション引数が返されます。 詳細については、次を参照してください。、 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)関数の説明。
+

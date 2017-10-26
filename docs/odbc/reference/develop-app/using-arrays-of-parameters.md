@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7c6a6ee4f066925d2a7ec46a2186134d75cb7e4
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
 -   ドライバーでの値が解釈されないため、 *ParameterValuePtr*の引数**SQLBindParameter**アプリケーションが、配列へのポインターを提供している場合、実行時データ パラメーターの**SQLParamData**いませんを抽出し、アプリケーションをこの配列の要素を返します。 代わりに、アプリケーションのスカラー値が提供を返します。 つまり、によって返される値**SQLParamData**は対象のパラメーターを指定する十分なアプリケーションに必要なデータを送信以外の場合は、アプリケーションが現在の行番号を考慮する必要もします。  
   
      ときにだけでパラメーターの配列の要素の一部は実行時データ パラメーターで、アプリケーションする必要がありますのアドレスを渡すの配列で*ParameterValuePtr*すべてのパラメーターの要素を含むです。 この配列は、実行時データ パラメーターではないパラメーターの通常どおりに解釈されます。 実行時データ パラメーターの値を**SQLParamData**への提供、アプリケーションでは、通常を使用すると、ドライバーを何度でこの要求しているデータを特定するのには、配列のアドレスでは常にします。
+

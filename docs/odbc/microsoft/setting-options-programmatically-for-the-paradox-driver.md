@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c353ec7cca4744a4189891a4123eaf6263b8fd51
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 |ディレクトリを選択します。|アクセスするファイルを含むディレクトリを選択 ダイアログ ボックスが表示されます。<br /><br /> データ ソース ディレクトリを定義すると、最もよく使用されているファイル ディレクトリをどのように指定する場合は、配置されます。 ODBC ドライバーは、このディレクトリを既定のディレクトリとして使用します。 頻繁に使用される場合は、その他のファイルをこのディレクトリにコピーします。 または、ディレクトリの名前で、SELECT ステートメント内のファイル名を修飾することができます。<br /><br /> 選択\*C:\MYDIR\EMP から<br /><br /> またはを使用して新しい既定のディレクトリを指定することができます、 **SQLSetConnectOption**関数 SQL_CURRENT_QUALIFIER オプションを使用します。|このオプションを動的に設定するには、使用、 **DEFAULTDIR**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)です。|  
 |ネットワーク フォルダーを選択します。|Pdoxusrs.net ファイルが含まれているために、ロックの paradox を含むディレクトリの完全なパス (Paradox 4* 。x*) または Paradox.net ファイル (Paradox 5* 。x*)。 ディレクトリがこれらのファイルのいずれかにもない場合、Paradox ドライバーは 1 つを作成します。 これらのファイルについては、Paradox ドキュメントを参照してください。<br /><br /> ネットワーク ディレクトリを選択することができます、前に Paradox ユーザー名を入力する必要があります、**ユーザー名**テキスト ボックス。 をクリックして**ネットワーク ディレクトリの選択**ネットワーク ディレクトリを選択します。|このオプションを動的に設定するには、使用、 **PARADOXNETPATH**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)です。|  
 |[ユーザー名]|Paradox ユーザー名。 これは、ロックが発生したときに、Paradox ファイルの他のユーザーに表示される名前です。|このオプションを動的に設定するには、使用、 **PARADOXUSERNAME**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)です。|
+

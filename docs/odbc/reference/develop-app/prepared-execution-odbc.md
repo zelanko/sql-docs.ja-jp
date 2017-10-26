@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d6b2437d1958e2583dabb75c0a4c26a2ed472975
@@ -96,3 +97,4 @@ while (GetPrice(&PartID, &Price)) {
  ドライバーは、ステートメントの準備をエミュレートできない場合は、ステートメントが格納時に**SQLPrepare**が呼び出され、実行のために送信時に**SQLExecute**と呼びます。  
   
  エミュレートされたステートメントの準備が完全ではないため**SQLExecute**によって通常返されたエラーを返すことができます**SQLPrepare**です。
+

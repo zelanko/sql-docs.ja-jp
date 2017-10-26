@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dfe477bf0ca518d4f4e83d141a24bcb4c2640ed2
@@ -37,3 +38,4 @@ ODBC では、環境、接続、またはステートメントに関連付けら
  ドライバーには、ODBC によって定義された属性、に加えて、独自の接続とステートメント属性を定義できます。 2 つのドライバーの製造元が同じ整数値に割り当てない異なる、専用の属性を確認するグループを開くには、ドライバー定義の属性を登録する必要があります。 詳細については、次を参照してください。[ドライバー固有のデータ型、記述子の種類、情報の種類、診断の種類、および属性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)です。  
   
  属性の一覧については、次を参照してください。 [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)、 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)、および[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)です。 ほとんどの属性に影響を与える ODBC 関数の説明にも説明します。
+

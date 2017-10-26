@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2369b39ff415a5387205ce62811594fe08a9f324
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  ODBC では、それぞれ SQL および C データ型間でデータを変換する方法を定義します。 基本的には、ODBC では、整数および浮動小数点、整数の文字など、すべての適切な変換をサポートし、日付する浮動小数点数など、正しく定義されていない変換をサポートしていません。 ドライバーがサポートする各 SQL データ型のすべての変換をサポートするために必要です。 SQL と C データ型間の変換の一覧については、次を参照してください。[に変換するデータを SQL から C データ型に](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)と[に変換するデータを C から SQL データ型を](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)付録 d: データ型にします。  
   
  ODBC では、データに変換する 1 つの SQL データ型から別のスカラー関数も定義します。 **変換**スカラー関数は、基になるスカラー関数または変換を実行するデータ ソースで定義されている関数へのドライバーによってもマップされます。 この関数が DBMS 固有の関数にマップされているために、これらの変換のしくみや、どのような変換をサポートする必要がありますが ODBC に定義されていません。 アプリケーション検出で SQL_CONVERT オプションによって、特定のドライバーとデータ ソースでどのような変換がサポートされている**SQLGetInfo**です。 詳細については、**変換**スカラー関数を参照してください[odbc エスケープ シーケンス](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)と[明示的なデータ型変換関数](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md)です。
+

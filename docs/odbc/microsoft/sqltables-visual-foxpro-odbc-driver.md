@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd3e59437eae02a94353a6205e567fde208f4b97
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 >  Visual FoxPro ODBC ドライバーが区別[データベース テーブル](../../odbc/microsoft/visual-foxpro-terminology.md)と[テーブルの空き](../../odbc/microsoft/visual-foxpro-terminology.md)テーブルの両方の種類が、システム上の同じディレクトリに格納されている場合でも、します。 データ ソースが、無料のテーブルのディレクトリの場合は、Visual FoxPro ODBC ドライバーはいないカタログまたはデータベースに関連付けられているすべてのテーブルの名前を返します。  
   
  詳細については、次を参照してください。 [SQLTables](../../odbc/reference/syntax/sqltables-function.md)で、 *ODBC プログラマ リファレンス*です。
+

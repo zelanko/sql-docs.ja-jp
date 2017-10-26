@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0c99959fac35ac1cd312ab3d434f607c3f256dd8
@@ -52,3 +53,4 @@ SQLSTATEs では、警告またはエラーの原因に関する詳細情報を�
  SQLSTATE HYC00 (省略可能な機能が実装されていません) は、ドライバーが特定のステートメントまたは接続属性をサポートしているかどうか、アプリケーションを判別する唯一の方法であるため特に重要です。  
   
  SQLSTATEs であり、どのような機能を返すことの完全な一覧を参照してください。[付録 a: ODBC エラー コード](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)です。 各関数を特定の SQLSTATE を返す場合がありますの条件の詳細については、その関数を参照してください。
+

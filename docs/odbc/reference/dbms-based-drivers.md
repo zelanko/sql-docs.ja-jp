@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 09265543685ea8fd573ee20bea90093f920b6e49
@@ -35,3 +36,4 @@ DBMS に基づいたドライバーは、ドライバーを使用するための
  次の図は、DBMS に基づいたドライバーの 3 つの異なる構成を示します。 最初の構成で、ドライバーとデータ ソースが同じコンピューター上に常駐します。 2 番目ので、ドライバーとデータ ソースが異なるコンピューターに存在します。 3 番目でドライバーとデータ ソースが異なるコンピューター上に存在し、ゲートウェイはさらに別のコンピューター上にあるそれらの間に配置します。  
   
  ![DBMS の 3 つの構成 &#45; ベースのドライバー](../../odbc/reference/media/pr07.gif "pr07")
+

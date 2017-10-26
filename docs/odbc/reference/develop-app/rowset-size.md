@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b7d3abee6c42fe95205bbb74edc671d8dc02bf87
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLSetPos**前の呼び出しの時点で有効になっている行セットのサイズを使用して**SQLFetch**または**SQLFetchScroll**ので、 **SQLSetPos**を演算し、既に設定されている行セット。 **SQLSetPos**も場合を選択し、新しい行セット サイズを**SQLBulkOperations**が行セットのサイズが変更された後に呼び出されています。  
   
 -   **SQLBulkOperations**すべてフェッチされる行セットの独立したテーブルに対する操作が実行されるため、呼び出し時に有効で、行セット サイズを使用します。
+

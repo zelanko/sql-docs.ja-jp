@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: adb6f66ecfbff558fd163437a56453efb4265185
@@ -41,3 +42,4 @@ Odbc 関数では、2 つの方法で診断情報を返します。 リターン
 -   [SQLGetDiagRec および SQLGetDiagField を実装します。](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md)  
   
 -   [診断の処理の例](../../../odbc/reference/develop-app/diagnostic-handling-examples.md)
+

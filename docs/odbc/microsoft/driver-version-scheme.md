@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e3a8132d535b764818fb9dcab72b3cba8bb48154
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  リリース 2.573.2973 は、名前付け規則の原因がいくつかの混乱 2.573 2.73 より以前のリリースがあるビルド番号の各セクションを個別に考慮する必要があります。 573 は 73 より大きいのでより新しいバージョンであります。 また、「2.5」は、ドライバーのバージョン番号を示します。
+

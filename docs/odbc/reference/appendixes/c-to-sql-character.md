@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e8d6ab676fc351afd7819c1fe60d59a58bfe7207
@@ -68,3 +69,4 @@ ODBC C データ型の文字の識別子は次のとおりです。
   
 > [!NOTE]  
 >  アプリケーション開発者は、文字データをバイナリ SQL データ型にバインドしないことお勧めします。 この変換は、非効率的で低速では通常です。
+

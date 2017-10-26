@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8af5cd175cdd9ab7d96cdb141bcd0a6b6100ea80
@@ -304,3 +305,4 @@ ODBC 接続では、次の状態があります。
 |C0<br /><br /> ありません Env です。|C1<br /><br /> 未割り当て|C2<br /><br /> 割り当てられています。|C3<br /><br /> データが必要|C4<br /><br /> 接続済み|C5<br /><br /> ステートメントから削除してください。|C6<br /><br /> トランザクション|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(組み込み)|(組み込み)|(組み込み)|(組み込み)|(組み込み)|--|--|
+

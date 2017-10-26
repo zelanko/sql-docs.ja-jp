@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 50b6c5ffec8dd088bdc730699cfa88abea860768
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 -   データ ソースに対してトランザクションの境界でカーソルを閉じることのカーソル ライブラリ、カーソルを閉じるし、接続ですべてのステートメントのキャッシュを削除します。  
   
 -   をトランザクション境界で準備されたステートメントを削除するデータ ソースのアプリケーションは、それらの前に、接続ですべての準備されたステートメントを再び準備する必要があります。
+

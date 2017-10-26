@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bbb6396dc1a49d984834ec6f105b3a9ba42d95c4
@@ -47,3 +48,4 @@ Timestamp ODBC C データ型の識別子です。
  C のタイムスタンプ データが文字 SQL データに変換されると、結果の文字データは、"*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f.*]"の形式です。  
   
  ドライバーは、タイムスタンプ C データ型からデータを変換するときに長さ/インジケーター値を無視し、データ バッファーのサイズが timestamp C データ型のサイズであると見なされます。 長さ/インジケーター値に渡されます、 *StrLen_or_Ind*引数**SQLPutData**とで指定したバッファー内の*StrLen_or_IndPtr* で引数**SQLBindParameter**です。 データ バッファーを指定した、 *DataPtr*引数**SQLPutData**と*ParameterValuePtr*引数**SQLBindParameter**.
+

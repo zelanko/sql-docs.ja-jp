@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 673298af856478eb1c94db4f79ef5fb56ee3396b
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  特定の関連付け処理を停止する*hstmt*に関連付けられた開いているカーソルを閉じ、 *hstmt*、保留中の結果を破棄し、必要に応じて、ステートメントに関連付けられているすべてのリソースを解放処理します。  
   
  詳細については、次を参照してください。 [SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md)で、 *ODBC プログラマ リファレンス*です。
+

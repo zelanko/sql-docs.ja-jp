@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 78bdb77c8aa4d9351e040b97d9690bb09374856d
@@ -68,3 +69,4 @@ ms.lasthandoff: 09/09/2017
 |位置指定削除|SQL_ROW_DELETED|古い値|古い値|  
   
  [1] で、アプリケーションは、位置指定更新ステートメントを実行する前に、行セットのバッファー内の値を更新する必要があります。位置指定の update ステートメントを実行するは、カーソル ライブラリは、行セットのバッファーでのキャッシュに値をコピーします。
+

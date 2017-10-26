@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1f563e798c985ebb8ea8ab7925ed39f3d154d144
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
  環境ハンドルは、ODBC アプリケーションで頻繁には使用されません。 呼び出しで常に使用される**SQLDataSources**と**SQLDrivers**への呼び出しでときどき使わと**SQLAllocHandle**、 **SQLEndTran**、**SQLFreeHandle**、 **SQLGetDiagField**、および**SQLGetDiagRec**です。  
   
  ODBC ドライバー マネージャー (ドライバー) を実装するコードの各部分には、1 つまたは複数の環境ハンドルが含まれています。 たとえば、ドライバー マネージャーは、それに接続されている各アプリケーションの別の環境ハンドルを保持します。 環境ハンドルが割り当てられます**SQLAllocHandle**およびに解放された**SQLFreeHandle**です。
+

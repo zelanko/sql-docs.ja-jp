@@ -21,6 +21,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eb35e0e2dde90261e913ffd9ba3dc28e5859e012
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLProcedures**|データ ソース内のプロシージャの一覧を返します。 パッケージ化されたプロシージャの場合、プロシージャ名の列はで*packagename.procedurename*形式です。<br /><br /> Oracle で関数をパッケージにパッケージ化されたプロシージャを区別するための方法が提供されないため、ドライバーは PROCEDURE_TYPE 列を SQL_PT_UNKNOWN を返します。|  
 |**SQLSetPos**|行セットのカーソル位置を設定します。 使用することができます**SQLSetPos**で**SQLGetData**行セット内の特定の行にカーソルを配置した後、バインドされていない列から行を取得します。 使用して設定の結果に追加された行*fOption* SQL_ADD が結果セットの最後の行の後に追加されます。|  
 |**SQLSetScrollOptions**|Hstmt、ステートメント ハンドルに関連付けられているカーソルの動作を制御するオプションを設定します。 詳細については、「[カーソルの種類および同時実行の組み合わせ](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)です。|
+

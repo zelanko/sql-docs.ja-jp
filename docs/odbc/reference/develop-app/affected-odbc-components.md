@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a316cf7760534530b5663782532ada9fd6990662
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  標準に準拠したアプリケーション — たとえば、Open Group または ISO CLI 標準に従って書き込まれているアプリケーション、ODBC 3 を使用することが保証*.x*ドライバーは ODBC 3*.x*ドライバー マネージャー。 アプリケーションを使用している機能は、ドライバーで使用できることと見なされます。 ODBC 3 で標準に準拠したアプリケーションがコンパイルされていると見なされますも*.x*ヘッダー ファイルです。
+

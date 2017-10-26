@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 899a0c01994963a95b6b40936f481882e9634927
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
 -   SQL_KEYSET_CURSOR_ATTRIBUTES2 または SQL_STATIC_CURSOR_ATTRIBUTES2 (カーソルの種類) によって異なります。 静的カーソルとキーセット ドリブン カーソルは、独自の更新、削除、および挿入を検出できるかどうかを示します。  
   
  アプリケーションは、実行時にカーソル機能を呼び出すことによって判断できます**SQLGetInfo**でこれらのオプションです。 これは一般的に、汎用アプリケーションによって実行します。 カーソル機能もを決定できるアプリケーションの開発とハード コーディングされた、使用中に、アプリケーションにします。 これは、垂直方向およびカスタム アプリケーションで一般的に実行されますが、ODBC カーソル ライブラリなど、クライアント側カーソルの実装を使用する汎用アプリケーションによって行うこともできます。
+

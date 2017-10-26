@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c46b87a3d9ea3f30524a261bc81bd37aa03c9aca
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!CAUTION]  
 >  MDAC/Windows DAC 経由での Oracle ソフトウェアをインストールすると、現在のバージョンの MDAC が上書きされます。 ODBC コンポーネントを使用して問題が発生した場合は、MDAC を再インストールします。
+

@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 322978a4006460fc61a438c6aff5ed8eca0c6c93
@@ -51,3 +52,4 @@ ODBC アプリケーションの最初のタスクが、ドライバー マネ�
  ときに**SQLFreeHandle**が呼び出されると、ドライバーのリリース環境についての情報を格納する構造体を使用します。 なお**SQLFreeHandle**まで環境ハンドルをその環境ハンドルのすべての接続ハンドルが解放された後に呼び出すことができません。  
   
  環境ハンドルの詳細については、次を参照してください。[環境処理](../../../odbc/reference/develop-app/environment-handles.md)です。
+

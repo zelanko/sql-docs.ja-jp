@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e781871cc8507d10617e1a147fa6d5a7c06ac756
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
 |FORMAT|テキスト ドライバーの FIXEDLENGTH、TABDELIMITED、CSVDELIMITED (コンマ)、またはできます DELIMITED() (によって、かっこで指定された特殊文字)。 特殊文字 1 つの文字の長さでは、文字、10 進数または 16 進数形式であることができます。|  
 |MAXSCANROWS|既存のデータに基づいて、列のデータ型を設定する場合にスキャンする行の数。<br /><br /> テキスト ドライバーのできます番号を入力する、1 から 32767 まで; をスキャンする行の数ただし、この値は常に既定値 25。 (制限外の数値はエラーを返します。)<br /><br /> として同じオプションを設定**スキャンする行数**設定 ダイアログ ボックスをオンにします。|  
 |READONLY|読み取り専用ファイルを作成する場合は TRUE読み取り専用ファイルを作成する場合は FALSE。<br /><br /> 同じオプションを設定**読み取り専用**設定 ダイアログ ボックスをオンにします。|
+

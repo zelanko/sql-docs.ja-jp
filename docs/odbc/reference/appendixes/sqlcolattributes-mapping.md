@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d21d1a9a9565ad2c0accbebb716d0b24f18f854d
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  ODBC 3*.x*ドライバーは、すべての ODBC 3 をサポートする必要があります*.x* *FieldIdentifiers*に登録されている**SQLColAttribute**です。  
   
  ODBC 3*.x*ドライバー必要があります SQL_COLUMN_PRECISION と SQL_DESC_PRECISION、SQL_COLUMN_SCALE と SQL_DESC_SCALE、および SQL_COLUMN_LENGTH およびサポート SQL_DESC_LENGTH です。 ODBC 3 に有効桁数、小数点以下桁数、および長さが異なる方法でに定義されるため、これらの値が異なる*.x* ODBC 2 よりも*。x*です。 詳細については、次を参照してください。[列のサイズ、小数点以下桁数、転送オクテット長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d: データ型にします。
+

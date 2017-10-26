@@ -1,7 +1,7 @@
 ---
 title: "ネイティブなクエリ (Analysis Services) を使用してデータ インポート |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 10/02/2017
+ms.date: 10/26/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -22,6 +22,8 @@ ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="import-data-by-using-a-native-query"></a>ネイティブ クエリを使用してデータのインポート
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
 表形式の 1400 モデルの Visual Studio の Analysis Services プロジェクトで新しいデータの取得エクスペリエンス非常に多くの柔軟性マッシュ アップする方法、データのインポート中にできます。 この記事では、データ ソースに接続を作成し、データのインポートを指定するネイティブ SQL クエリを作成について説明します。
 

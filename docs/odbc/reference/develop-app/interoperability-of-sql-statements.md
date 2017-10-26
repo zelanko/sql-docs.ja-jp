@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e59fd91f1347d3521b0bcf3667cf7bb0482b5cd3
@@ -33,3 +34,4 @@ SQL ステートメントには、アプリケーションの残りの部分と�
 -   [SQL 文法を選択します。](../../../odbc/reference/develop-app/choosing-an-sql-grammar.md)  
   
 -   [相互運用可能な SQL ステートメントの作成](../../../odbc/reference/develop-app/constructing-interoperable-sql-statements.md)
+

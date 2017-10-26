@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 52afd6864229173b699df74410349b0cac482c98
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  ドライバーの種類を決定するとき、ドライバー マネージャーが呼び出す**SQLSetConnectAttr**し、接続時に SQL_ATTR_ANSI_APP 属性を設定します。 SQL_ATTR_ANSI_APP は SQL_AA_TRUE に設定する場合は、アプリケーションは、ANSI Api を使用して、および Unicode を使用している場合 SQL_AA_FALSE の値に設定されます。 ドライバーも、アプリケーションの種類に基づく動作の違いに優れているため、この属性を使用します。 属性をアプリケーションで、直接設定することはできずではサポートされていません**SQLGetConnectAttr**です。 場合は、ドライバーは、ANSI と Unicode の両方のアプリケーションの同じ動作を示します、この属性の SQL_ERROR を返します。 ドライバーは SQL_SUCCESS を返します、ドライバー マネージャーは、接続プールが使用するときに、ANSI と Unicode の接続を分割します。
+

@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aa16463daf34d3851a2a1dc214e9f4ba87de6132
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |**選択**またはカタログに関数|[手順 4 a: 結果のフェッチ](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
 |**更新**、**削除**、または**挿入**|[手順 4 b: 行の数を取得](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
 |その他のすべての SQL ステートメント|手順 3: ビルドし、(このトピックの) SQL ステートメントを実行または[手順 5: トランザクションをコミットします](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 503af3ea0dbac61cee506b932f79eccab5dedcf8
@@ -58,3 +59,4 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
  ODBC 3 SQL_GET_BOOKMARK ステートメント オプションが廃止*.x*です。 ODBC 3*.x* ODBC 2 を使用するドライバー* 。x* SQL_GET_BOOKMARK を使用するアプリケーション SQL_GET_BOOKMARK をサポートする必要があります。 ODBC 3*.x* ODBC 2 を使用するドライバー* 。x*アプリケーションは、その必要がありますサポート SQL_UB_ON SQL_USE_BOOKMARKS に設定し、固定長のブックマークを公開する必要があります。 場合、ODBC 3*.x*ドライバーは、可変長ブックマークいない固定長のブックマークをサポートしている、SQLSTATE HYC00 を返す必要があります (省略可能な機能が実装されていません) 場合は、ODBC 2* 。x*アプリケーション SQL_UB_ON に SQL_USE_BOOKMARKS を設定しようとしました。  
   
  ODBC 3*.x*ドライバー、ドライバー マネージャーは、不要になったを確認するかどうか*オプション*SQL_STMT_OPT_MIN と SQL_STMT_OPT_MAX、間、または SQL_CONNECT_OPT_DRVR_START よりも大きいです。 ドライバーは、これをチェックする必要があります。
+

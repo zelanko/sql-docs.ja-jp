@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ff05f946dee8f6034d04c5d719ada475255ba643
@@ -36,3 +37,4 @@ SELECT CharCol, BinaryCol, IntegerCol FROM MyTable
  一部のデータ型のリテラルは、特別なプレフィックスおよびサフィックスが必要です。 前の例では、文字リテラル (ABC) では、プレフィックスとサフィックスの両方として単一引用符 (') が必要です、バイナリ リテラル (FFFF) には 0 x プレフィックス、および整数リテラル (10) としてから、プレフィックスを必要とまたはサフィックスが付いていない文字が必要です。  
   
  日付、時刻、およびタイムスタンプを除くすべてのデータ型の相互運用可能なアプリケーションが、LITERAL_PREFIX および LITERAL_SUFFIX 列で作成された結果セットで返される値を使用します。 **SQLGetTypeInfo**です。 日付、時刻、タイムスタンプ、および datetime 間隔のリテラル、相互運用可能アプリケーションは、前のセクションで説明されているエスケープ シーケンスを使用する必要があります。
+

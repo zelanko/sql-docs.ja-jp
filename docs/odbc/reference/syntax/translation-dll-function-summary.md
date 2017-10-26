@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b5035faace47e33eae7f0c3d425d1dbd40267974
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
 |----------|-------------------|-------------|  
 |データ変換を行います|[SQLDataSourceToDriver](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|データ ソースからドライバーに送られて、すべてのデータを変換します。|  
 ||[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|データ ソースに、ドライバーから送られて、すべてのデータを変換します。|
+

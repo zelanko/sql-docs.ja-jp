@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 678ba0fa4e256402e9fc25e2e4e60ba4877c6c44
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
  接続ハンドルの割り当てではありません、ドライバーの読み込みと同じに重要です。 接続の関数が呼び出されるまで、ドライバーが読み込まれていません。 したがって、接続ハンドルの割り当て後と、ドライバーまたはデータ ソースに接続する前に、関数のみが、アプリケーションが接続ハンドルを使用して呼び出すことができますが**SQLSetConnectAttr**、 **SQLGetConnectAttr**、または**SQLGetInfo** SQL_ODBC_VER オプションを使用します。 接続ハンドルを持つその他の関数を呼び出す**SQLEndTran**、SQLSTATE 08003 (接続が開かれていません) を返します。 詳細については、次を参照してください。[付録 b: ODBC 状態遷移表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)です。  
   
  接続ハンドルの詳細については、次を参照してください。[接続ハンドル](../../../odbc/reference/develop-app/connection-handles.md)です。
+

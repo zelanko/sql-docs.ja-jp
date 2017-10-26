@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 48ed4bc9b52b6a905972e566870e7e2f86fc4734
@@ -95,3 +96,4 @@ ms.lasthandoff: 09/09/2017
  [1] 重要な機能がこの関数は、上位の準拠レベルでのみ使用可能なです。  
   
  [2] の特定の属性を既定以外の値に設定すると、準拠レベルに依存します。 詳細については、次のセクションを参照してください。[属性への準拠](../../../odbc/reference/develop-app/attribute-conformance.md)です。
+

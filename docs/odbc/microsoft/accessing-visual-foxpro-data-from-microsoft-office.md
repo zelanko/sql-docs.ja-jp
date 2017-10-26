@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b3b509830bbba4405269a766e95ce7fa585ff7a4
@@ -36,3 +37,4 @@ Microsoft Visual FoxPro ODBC ドライバーを使用するには、Microsoft Of
 |Microsoft Access を使用します。|[クエリを実行して、Visual FoxPro データ アクセスからの更新](../../odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md)<br /><br /> [Microsoft Access Visual FoxPro データをインポートします。](../../odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md)|  
 |Microsoft Excel を使用します。|[Visual FoxPro データ ソースから Microsoft Excel へのアクセス](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md)<br /><br /> [Visual FoxPro データベースから Microsoft Excel にデータをインポートします。](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)|  
 |Microsoft Word を使用します。|[宛名ラベル Visual FoxPro データを使用して Microsoft Word で作成します。](../../odbc/microsoft/creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data.md)|
+

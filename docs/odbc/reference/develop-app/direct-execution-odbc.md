@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bdc332f2541fd8537fbd924e1da9ea631d8d3189
@@ -57,3 +58,4 @@ SQLExecDirect(hstmt, SQLStatement, SQL_NTS);
     -   実行のデータ ソースに変換されるパラメーター値とステートメントを送信します。  
   
     -   すべてのエラーを返します。 シーケンス処理または SQLSTATE 24000 など状態診断 (無効なカーソルの状態)、SQLSTATE 42000 (構文エラーまたはアクセス違反、) などの構文エラーとセマンティック エラー SQLSTATE 42S02 などが含まれます (ベース テーブルまたはビューが見つかりません)。
+

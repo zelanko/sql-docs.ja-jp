@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8906d8672c44eaf6a2e8cc6fbfc63189a4dcbda2
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 -   あるデータ ソースに対してのみ機能[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)です。 ドライバー エラーが返されます「ドライバーはこの関数をサポートしていません」データ ソースがのディレクトリの場合[テーブルの空き](../../odbc/microsoft/visual-foxpro-terminology.md)です。  
   
  詳細については、次を参照してください。 [SQLPrimaryKeys](../../odbc/reference/syntax/sqlprimarykeys-function.md)で、 *ODBC プログラマ リファレンス*です。
+

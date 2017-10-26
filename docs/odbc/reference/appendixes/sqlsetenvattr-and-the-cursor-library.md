@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c08fab3b713e1f1a57d7a81f53ed29b1678893cd
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  このトピックの使用、 **SQLSetEnvAttr**カーソル ライブラリの関数。 に関する一般的な情報**SQLSetEnvAttr**を参照してください[SQLSetEnvAttr 関数](../../../odbc/reference/syntax/sqlsetenvattr-function.md)です。  
   
  カーソル ライブラリは、アプリケーションのバージョンまたはドライバーのバージョンに関係なく、また環境属性の設定による影響はありません。
+

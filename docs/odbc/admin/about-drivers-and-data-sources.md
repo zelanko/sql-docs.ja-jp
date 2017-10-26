@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 79ae9e95ce31df371366e9073cb36f88c5bd9ece
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  ユーザーおよびシステム データ ソースは、として総称*マシン*データ ソースをローカル コンピューターにあるためです。  
   
  これらのデータ ソースは、タブ、 **ODBC データ ソース アドミニストレーター**  ダイアログ ボックス。 使用できるデータ ソースの詳細については、「 [データ ソース](../../odbc/reference/data-sources.md)」を参照してください。
+

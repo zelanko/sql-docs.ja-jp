@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8e73ba4a1fe0bd8a7fb65b8986745f9d2edee550
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_ROW_NUMBER|結果セット内の現在の行の位置を示す 32 ビット整数を返します。 取得のみです。設定できません。|  
 |SQL_ROWSET_SIZE|4,294,967,296 行を超えることはできません。ただし、リクエストを処理するコンピューターに十分な仮想メモリが必要です。|  
 |SQL_USE_BOOKMARKS|SQL_UB_ON に SQL_USE_BOOKMARKS の設定をサポートし、固定長のブックマークを公開します。|
+

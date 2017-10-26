@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b11d6337c2e0ca2853838d964842be536454c5f4
@@ -68,3 +69,4 @@ ms.lasthandoff: 09/09/2017
 >  Visual Studio Analyzer のサポートが以降 (Visual Studio Analyzer のみに含まれていました Visual Studio の古いバージョンです。) Windows 8 では削除されました。 トラブルシューティング メカニズムの代わりの BID トレースを使用します。  
   
  Visual Studio® アナライザー トレース、パフォーマンスと、ODBC 層に関するデバッグ情報を提供します。 すべての送信イベントは、最上位のインターフェイスとして表示する正確な画像、できるだけ ODBC コンポーネントに費やされた時間の関連で実行されます。 Visual Studio Analyzer のトレース ソースを設定するときに登録するすべてのイベント ソースが必要です。 このようなトレースの詳細については、Visual Studio のマニュアルを参照してください。
+

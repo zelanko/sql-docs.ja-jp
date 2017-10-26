@@ -23,6 +23,7 @@ caps.latest.revision: 47
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fd62d43d9f77f0baf63487c15381e07814eea63d
@@ -151,3 +152,4 @@ ms.lasthandoff: 06/22/2017
      マージ レプリケーションの場合、レプリケーション モニターの **[同期の履歴]** タブには、同期中に処理される各アーティクルの詳細な統計情報が表示されます。この統計には、各処理フェーズ (変更のアップロードやダウンロードなど) にかかる時間などが含まれます。 この情報によって、速度低下の原因となっているテーブルを特定することができます。マージ サブスクリプションのパフォーマンスに関するトラブルシューティングを、この情報から開始することをお勧めします。 詳細な統計情報の表示の詳細については、「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する (レプリケーション モニター)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
   
   
+

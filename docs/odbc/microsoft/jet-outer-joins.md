@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cb380d18747842fca36b7982d6d9bbcf87bfc3f0
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="jet-outer-joins"></a>Jet: 外部結合
 SELECT ステートメントでは、OUTER JOIN 句の一覧を含めることができます。 入れ子になった外部結合はサポートされています。 外部結合の詳細については、次を参照してください。、 *Microsoft Jet データベース エンジン プログラマ ガイド*です。
+

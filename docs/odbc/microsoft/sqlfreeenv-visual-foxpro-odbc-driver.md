@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b36bd3b9743c8cdd351ac3c7ed6e2f0afafd7d7e
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Visual FoxPro ODBC ドライバーを閉じ、ドライバーに関連付けられているすべてのメモリを解放します。  
   
  詳細については、次を参照してください。 [SQLFreeEnv](../../odbc/reference/syntax/sqlfreeenv-function.md)で、 *ODBC プログラマ リファレンス*です。
+

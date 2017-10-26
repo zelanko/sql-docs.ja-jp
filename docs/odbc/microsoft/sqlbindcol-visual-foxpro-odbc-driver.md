@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8f08ffe2a80f89040dc148543c2b3a3985b76eca
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  結果列の記憶域スペースを割り当てられ、結果の種類を指定します。 ときに[SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md)または[SQLExtendedFetch](../../odbc/microsoft/sqlextendedfetch-visual-foxpro-odbc-driver.md)が呼び出されると、ドライバーにより、データ バインドのすべての列に対して割り当て済みの場所にします。 参照してください[SQLGetTypeInfo](../../odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver.md) ODBC と Visual FoxPro のデータ型間のマッピングにします。  
   
  詳細については、次を参照してください。 [SQLBindCol](../../odbc/reference/syntax/sqlbindcol-function.md)で、 *ODBC プログラマ リファレンス*です。
+

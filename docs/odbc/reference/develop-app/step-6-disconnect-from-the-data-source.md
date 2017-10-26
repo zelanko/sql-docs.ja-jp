@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ce3ea03a637e8edce89c83f196e4fcafd97dfdc8
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  次に、アプリケーションを使用して、データ ソースから接続が切断**SQLDisconnect**と接続ハンドルを解放し、 **SQLFreeHandle**です。 詳細については、次を参照してください。[データ ソースまたはドライバーからの切断](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)です。  
   
  アプリケーションが使用して、環境ハンドルを解放する最後に、 **SQLFreeHandle**と、ドライバー マネージャーをアンロードします。 詳細については、次を参照してください。[環境ハンドルの割り当て](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)です。
+

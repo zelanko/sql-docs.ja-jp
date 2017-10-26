@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d8e1aa6617d19c9028ff08dcf171abac060bb6f1
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  カーソル ライブラリは、トランザクションがコミットまたはデータ ソースとしてロールバック時に、同じカーソル動作を実装します。 つまり、コミットまたはいずれかを呼び出して、トランザクションのロールバック**SQLEndTran** SQL_ATTR_AUTOCOMMIT 接続属性を使用することができますを発生させる、データ ソースをアクセス プランを削除し、すべてのステートメントのカーソルを閉じる接続します。 詳細についてで SQL_CURSOR_COMMIT_BEHAVIOR と SQL_CURSOR_ROLLBACK_BEHAVIOR 情報の種類を参照してください。 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)です。
+

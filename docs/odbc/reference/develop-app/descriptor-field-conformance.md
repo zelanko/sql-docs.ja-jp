@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 049208450144fdd1c1d3b902093517627486ccf9
@@ -80,3 +81,4 @@ ms.lasthandoff: 09/09/2017
  [これらのレコードのフィールドのサポート 1] が、ドライバーは、該当するデータ型をサポートしている場合にのみ必要です。  
   
  [2] のコア レベルへの準拠、ドライバーは SQL_PARAM_INPUT をサポートする必要があります。 レベル 2 インターフェイスへの準拠のドライバーを SQL_PARAM_INPUT_OUTPUT と SQL_PARAM_OUTPUT もサポートする必要があります。
+

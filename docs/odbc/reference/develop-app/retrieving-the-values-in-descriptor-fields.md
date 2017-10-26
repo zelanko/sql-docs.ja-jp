@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f86dd2e2cb625da359c677fedd297b510fee8593
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
 アプリケーションが呼び出すことができます**SQLGetDescField**を記述子レコードの 1 つのフィールドを取得します。 **Sqlgetdescfield による**ODBC では、定義されたすべての記述子フィールドとドライバーの定義済みのフィールドも、アプリケーションにアクセスします。  
   
  **SQLGetDescRec**列またはパラメーターのデータのストレージとデータ型に影響する複数の記述子フィールドの設定を取得すると呼ばれることができます。
+

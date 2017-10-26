@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 49fb588f5793eb3ee2fce7417632301794a65a22
@@ -62,3 +63,4 @@ ms.lasthandoff: 09/09/2017
 |メモ|メモ列の最大長は 65,500 バイトです。|  
   
  データ型に複数の制限事項は含まれて[データ型の制限事項](../../odbc/microsoft/data-type-limitations.md)です。
+

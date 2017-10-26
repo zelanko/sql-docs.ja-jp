@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cc1da3dfbe7f06e7d98430c5cec8fbaab3176971
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  したがってが本当に文法を使用する 2 つの選択肢: SQL 92 文法 (およびエスケープ シーケンス ODBC)、DBMS に固有の文法とします。 2 つの SQL 92 文法のみは、相互運用可能なすべての相互運用可能なアプリケーションで使用する必要があります。 相互運用可能なアプリケーションには、SQL 92 文法または DBMS 固有の文法を使用できます。 DBMS に固有の文法がある 2 つの利点: sql-92 に含まれないすべての機能を利用して、ドライバーに修正することがあるないために若干速くはします。 後者の機能は、ドライバーの検索と置換のエスケープ シーケンスを停止する、SQL_ATTR_NOSCAN ステートメント属性を設定して、部分的に適用できます。  
   
  SQL 92 文法を使用する場合、アプリケーションがわかる修正方法、ドライバーによって呼び出すことによって**SQLNativeSql**です。 これは、アプリケーションのデバッグ時に多くの場合に便利です。 **SQLNativeSql** SQL ステートメントを受け取り、ドライバーが変更された後にそれを返します。 この関数は、コア インターフェイスへの準拠レベルにあるため、すべてのドライバーでサポートされています。
+

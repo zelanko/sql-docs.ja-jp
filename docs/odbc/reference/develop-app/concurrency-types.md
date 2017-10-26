@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 737fadc881109457051cf30bfce9b493bd164f1c
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
 -   **行のバージョンを使用してオプティミスティック同時実行と値を使用してオプティミスティック同時実行**カーソルはオプティミスティック同時実行制御を使用: 更新または最後の読み取り以降に変更されていない場合にのみ、行を削除します。 変更を検出するには、行のバージョンまたは値を比較します。 カーソルは更新または行を削除するようになりますが、同時実行性がロックを使用する場合より高い保証はありません。 詳細については、次のセクションを参照してください。[オプティミスティック同時実行制御](../../../odbc/reference/develop-app/optimistic-concurrency.md)です。  
   
  アプリケーションでは、SQL_ATTR_CONCURRENCY ステートメント属性で使用するカーソルが同時実行の種類を指定します。 サポートされる種類を決定するには、呼び出し**SQLGetInfo** SQL_SCROLL_CONCURRENCY オプションを使用します。
+

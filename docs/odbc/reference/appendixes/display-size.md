@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3faac66828cdc408f9bd153377a3aefe74b882b0
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_GUID|36 (文字数、 *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee*形式|  
   
  [a] の変数の型の列またはパラメーターの長さを判断できないのは、ドライバー場合、SQL_NO_TOTAL が返されます。
+

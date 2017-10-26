@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 34fe599aee975dc0c01fc1fbc36f1bed6cab6b6b
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_ROW_DELETED|前回のフェッチ後、行が削除されました。|  
 |SQL_ROW_ADDED|によって、行が挿入された**SQLBulkOperations**です。 行が再度フェッチまたはによって更新されるかどうか**SQLSetPos**、その状態は SQL_ROW_SUCCESS します。<br /><br /> この値が設定されていない**SQLFetch**または**SQLFetchScroll**です。|  
 |SQL_ROW_NOROW|行セットには、結果セットの末尾がオーバー ラップされ、行の状態配列のこの要素に対応する行が返されません。|
+

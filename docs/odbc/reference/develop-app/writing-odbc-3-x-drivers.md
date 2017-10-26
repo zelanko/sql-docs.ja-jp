@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 41ca6ddf1535899ed8e5e0f065cf2f5f0ca19dca
@@ -120,3 +121,4 @@ ms.lasthandoff: 09/09/2017
  [5]、特定の状況下にあるドライバーは、この関数をサポートする必要があります。 詳細については、この関数のリファレンス ページを参照してください。  
   
  [6]、ドライバーがサポートするために選択できます**SQLGetFunctions**ドライバーでサポートされる関数のセットは異なる接続から接続する場合。
+

@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e22537b5ce7b2b1ecfdf579e78859812895671c2
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 3.  ステートメントが SELECT ステートメントの場合は、アプリケーションは、結果を返すため、アプリケーションのバッファーで CLI 関数を呼び出します。 通常、この関数を返します 1 行または 1 つの列のデータ、時にします。  
   
 4.  アプリケーションでは、DBMS から切断する CLI 関数を呼び出します。
+

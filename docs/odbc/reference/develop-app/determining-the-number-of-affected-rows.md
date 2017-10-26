@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b2f030be011864be17c8539d8ab94f6980f0f791
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  SQL ステートメントのバッチを実行すると場合、影響を受けた行の数は、バッチ内のすべてのステートメントの合計数またはバッチ内の各ステートメントの個別のカウント。 詳細については、次を参照してください。 [SQL ステートメントのバッチ](../../../odbc/reference/develop-app/batches-of-sql-statements.md)と[複数の結果](../../../odbc/reference/develop-app/multiple-results.md)です。  
   
  影響を受けた行の数は、ステートメント ハンドルに関連付けられている診断の区分で SQL_DIAG_ROW_COUNT 診断ヘッダー フィールドにも返されます。 ただし、このフィールドのデータはリセット後、同じステートメント ハンドルにすべての関数の呼び出しによって返される値は**SQLRowCount**への呼び出しまでは同じ**SQLBulkOperations**、 **SQLExecute**、 **SQLExecDirect**、 **SQLPrepare**、または**SQLSetPos**です。
+

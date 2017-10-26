@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2af859a38f288507ad87564cfbbfffa2b8f6ecf8
@@ -93,3 +94,4 @@ SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_
  アプリケーションが呼び出す、ドライバーが間隔のリテラルの ODBC エスケープ シーケンスをサポートするかどうかを確認、 **SQLGetTypeInfo**です。 データ ソースは、datetime interval データ型をサポートする場合、対応するエスケープ シーケンスもサポートする必要があります。  
   
  データ ソースには、ANSI sql-92 仕様で定義されている datetime 間隔リテラルの ODBC エスケープ シーケンスは、異なる日付時刻リテラルもサポートできます。 データ ソースが ANSI リテラルをサポートするかどうかを決定するには、アプリケーションが呼び出す**SQLGetInfo** SQL_ANSI_SQL_DATETIME_LITERALS オプションを使用します。
+

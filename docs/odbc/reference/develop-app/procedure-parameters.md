@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4cf4aa29c376ac600842804eb4b7e3b935fb049b
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
  ステートメントが実行された後に、ドライバーは、これらのパラメーターにバインドされた変数に、入力/出力の返された値と出力パラメーターを格納します。 値がプロシージャによって返されるすべての結果がフェッチされた後までに設定する保証はありませんこれらが返されますと**SQLMoreResults** SQL_NO_DATA が返されました。 ステートメントの実行エラーが発生する場合、入力/出力パラメーター バッファーまたは出力パラメーターのバッファーの内容は未定義です。  
   
  アプリケーションが呼び出す**SQLProcedure**プロシージャに戻り値があるかどうかを確認します。 呼び出す**SQLProcedureColumns**を各プロシージャ パラメーターの型 (戻り値、入力、入力/出力、または出力) を決定します。
+

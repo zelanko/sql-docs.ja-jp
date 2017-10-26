@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 09ec943add25acfd029fd6651f3ff5f31aa1a419
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  接続ハンドルを解放し、ハンドルの割り当てられたすべてのメモリを解放します。  
   
  詳細については、次を参照してください。 [SQLFreeConnect](../../odbc/reference/syntax/sqlfreeconnect-function.md)で、 *ODBC プログラマ リファレンス*です。
+

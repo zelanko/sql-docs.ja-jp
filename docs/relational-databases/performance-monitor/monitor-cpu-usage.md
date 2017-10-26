@@ -26,6 +26,7 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 53ee7928baad42733f9b9cfaaf699153b993a287
@@ -60,3 +61,4 @@ ms.lasthandoff: 06/22/2017
  多数のクライアント要求が処理されている場合に、使用率が 100% 前後の値を示しているとき、プロセスが待ち行列内でプロセッサ時間を待っているために、ボトルネックが生じていることが考えられます。 この問題を解決するには、より高速なプロセッサを追加します。  
   
   
+

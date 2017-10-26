@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eca660cf2c38539dbf4a0fa560bfc67a1b1be115
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |3.0 または 4.0、Microsoft Excel|ドライバー、DriverID|ドライバー {Excel ドライバー (*.xls)} を = です。DBQ = c:\temp です。DriverID 278 を =|  
 |Microsoft Excel 5.0 または 7.0|ドライバー、DriverID、DBQ|ドライバー {Excel ドライバー (*.xls)} を = です。DBQ=c:\temp\sample.xls です。DriverID 22 を =|  
 |Microsoft Excel 97 以降|ドライバー、DriverID、DBQ|ドライバー {Excel ドライバー (*.xls)} を = です。DBQ=c:\temp\sample.xls です。DriverID 790 を =|
+

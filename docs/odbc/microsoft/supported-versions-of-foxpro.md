@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 425821e0de310c28f18796cb74308600cd91476f
@@ -43,3 +44,4 @@ FoxPro テーブルに格納されているデータにアクセスする Micros
  データ ソースに接続する方法の詳細については、次を参照してください。 [Visual FoxPro データ ソースを追加する](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md)です。  
   
  ドライバーをダウンロードするを参照してください。 [Visual FoxPro ODBC ドライバーのダウンロード サイト](http://go.microsoft.com/fwlink/?LinkId=121318)です。
+

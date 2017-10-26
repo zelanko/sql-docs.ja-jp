@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 587acf7ca97d0bce03609b42f6188aa97bd595b3
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/09/2017
  [d] ドライバーでは、SQL_NULL_DATA などの特殊な値であるかどうかを確認するには、この値を必ず確認する必要があります。  
   
  ドライバーの動作が実行時にパラメーター値は、ドライバーによって異なります。 必要に応じて、ドライバーは、値をバインドされた変数の C データ型とバイト長から SQL データ型、有効桁数、およびパラメーターの小数点以下桁数に変換します。 ほとんどの場合、ドライバーは、データ ソースに値を送信します。 場合によっては、値がテキストとして書式設定し、データ ソースに、ステートメントを送信する前に、SQL ステートメントに挿入します。
+

@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fc566977fab687bb035c00c11426d9d1dbe830d1
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/09/2017
 -   [SQLTransact (Excel ドライバー)](../../odbc/microsoft/sqltransact-excel-driver.md)  
   
 -   [読み取り専用の状態 (Excel ドライバー)](../../odbc/microsoft/read-only-status-excel-driver.md)
+

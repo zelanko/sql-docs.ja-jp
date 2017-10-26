@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c1f9e266e4379b2d1cfc9ee771ac49694cd3c58b
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 |107|データベースの特定の操作を実行する SQL ステートメントではなく ODBC 関数を使用: **SQLSetPos** SQL_POSITION と SQL_REFRESH を使用します。|  
 |108|呼び出して、バッチおよびストアド プロシージャは、によって生成された複数の結果セットの内容にアクセスできるように**SQLMoreResults**です。|  
 |109|True 原子性と SQL_ROLLBACK を指定することで複数の ODBC 関数にまたがるトランザクションを区切るため**SQLEndTran**です。|
+

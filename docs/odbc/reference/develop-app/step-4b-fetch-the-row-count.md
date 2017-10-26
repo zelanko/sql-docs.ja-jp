@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9b3526d1aad0475cb487f9c1fba6822604286834
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  手順 3. で実行されたステートメントだった場合、**更新**、**削除**、または**挿入**ステートメントでは、アプリケーションが影響を受ける行の数を取得**SQLRowCount**です。 詳細については、次を参照してください。[の影響を受ける行の数を決定する](../../../odbc/reference/develop-app/determining-the-number-of-affected-rows.md)です。  
   
  今すぐ、アプリケーションを同じトランザクションで別のステートメントを実行する 3 ステップに戻るか、手順 5. をコミットまたはロールバック、トランザクションが続行されます。
+

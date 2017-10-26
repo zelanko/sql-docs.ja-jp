@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 736cfc952412780a4720fd92239e36106affeba7
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
  結果の取得の詳細については、次を参照してください。[を取得する結果 (基本)](../../../odbc/reference/develop-app/retrieving-results-basic.md)と[(詳細) を取得する結果](../../../odbc/reference/develop-app/retrieving-results-advanced.md)です。  
   
  今すぐアプリケーションを返します"手順 3:: ビルドと実行、SQL ステートメントに"を同じトランザクションで別のステートメントを実行するにはまたは、"手順 5:: Commit Transaction"をコミットまたはトランザクションをロールバックしてに進みます。
+

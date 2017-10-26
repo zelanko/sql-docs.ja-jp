@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6a6b4e1992ea5f446203b125261f5572c2bd9db7
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
  C 型の間隔の既定の変換は、対応する年-月間隔 SQL 型にです。  
   
  ドライバーは、間隔 C データ型からデータを変換するときに長さ/インジケーター値を無視し、データ バッファーのサイズが間隔 C データ型のサイズであると見なされます。 長さ/インジケーター値に渡されます、 *StrLen_or_Ind*引数**SQLPutData**とで指定したバッファー内の*StrLen_or_IndPtr* で引数**SQLBindParameter**です。 データ バッファーを指定した、 *DataPtr*引数**SQLPutData**と*ParameterValuePtr*引数**SQLBindParameter**.
+

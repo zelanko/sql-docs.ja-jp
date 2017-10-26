@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56543f0de0d95bad6fa85fc415dddd7da58f3667
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  ODBC 3 です。*x*アプリケーションを使用しないでください**SQLExtendedFetch**または SQL_ROWSET_SIZE ステートメント属性。 代わりに、使用する必要があります**SQLFetchScroll**および SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性。 ODBC 3 です。*x*アプリケーションを使用しないでください**SQLSetPos**で、*操作*SQL_ADD の使用する必要がありますが、 **SQLBulkOperations** で*操作*SQL_ADD のです。
+

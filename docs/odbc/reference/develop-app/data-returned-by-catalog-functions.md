@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 39d795314d2333c5d33cb55057b68e652082ae89
@@ -42,3 +43,4 @@ SELECT "Customer Name" FROM "Accounts Payable"
  カタログ関数は、ユーザー名とパスワードに基づいての接続が確立され、ユーザーが特権を持ってデータのみが返されます SQL に似た承認モデルに基づきます。 このモデルに適合しません、個々 のファイルのパスワード保護では、ドライバー定義されます。  
   
  カタログ関数によって返される結果セットは更新可能なほとんどありませんし、これらの結果セット内のデータを変更することによって、データベースの構造を変更することができるアプリケーションを期待できません。
+

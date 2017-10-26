@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e5806fe1dcdbabbc27e25c0387f2d06ea25f64ee
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
  C の日付データが文字 SQL データに変換されると、結果の文字データは、"*yyyy*-*mm*-*dd*"の形式です。  
   
  ドライバーは、日付 C データ型からデータを変換するときに長さ/インジケーター値を無視し、データ バッファーのサイズが、日付 C データ型のサイズであると見なされます。 長さ/インジケーター値に渡されます、 *StrLen_or_Ind*引数**SQLPutData**とで指定したバッファー内の*StrLen_or_IndPtr* で引数**SQLBindParameter**です。 データ バッファーを指定した、 *DataPtr*引数**SQLPutData**と*ParameterValuePtr*引数**SQLBindParameter**.
+

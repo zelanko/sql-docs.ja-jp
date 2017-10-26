@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c5845411fd329869cc49a5f4caaa5be987135841
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 |タスク|関数名|用途|  
 |----------|-------------------|-------------|  
 |データ ソースと変換プログラムの設定|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)<br /><br /> [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)<br /><br /> [ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|インストールするか、ドライバーをアンインストールします。<br /><br /> 追加、変更、またはデータ ソースを削除します。<br /><br /> 既定の変換オプションを返します。|
+

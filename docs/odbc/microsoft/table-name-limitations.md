@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 690b6242b9e8d38b6a1f26ddbd823215030e2b15
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  Microsoft Access ドライバーを使用すると、テーブル名は 64 文字以内に制限されます。  
   
  DBASE、Excel 3.0 または 4.0 では、Paradox、またはテキストのドライバーが使用すると、MS-DOS の特別なキーワード CON、AUX、LPT1、LPT2 する必要がありますテーブル名として使用されません。
+

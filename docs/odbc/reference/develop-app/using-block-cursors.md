@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 51f02b5b243286a650897fecdcac5d8778bd3f40
@@ -37,3 +38,4 @@ ODBC 3 には、ブロック カーソルのサポートが組み込まれてい
 -   [フェッチされた行の数と状態](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)  
   
 -   [SQLGetData とブロック カーソルです。ブロック カーソル](../../../odbc/reference/develop-app/sqlgetdata-and-block-cursors.md)
+

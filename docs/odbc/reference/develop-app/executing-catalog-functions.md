@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 489cd057a15e90794c71cfb433931cd9bc687016
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  カタログ関数を実行するには、アプリケーションは、関数を呼び出すだけです。  
   
  カタログ関数の詳細については、次を参照してください。[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)です。
+

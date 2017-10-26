@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 560d6b98c27cefe438e99e2948decaded827e618
@@ -58,3 +59,4 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
   
 ## <a name="remarks"></a>解説  
  レコードまたはファイルをロックする最初の試行は成功は限りません。 多くの場合、レコードまたはファイルは、ネットワーク上の別のユーザーによってロックされています。 設定を再処理すると、Visual FoxPro は、追加の試行を最初の試行が成功すると、レコードまたはファイルをロックするかどうかを判断します。 指定するに何回か追加の試行が行われるまたは時間の試行が行われます。 ON エラー ルーチンでは、試行の処理方法に失敗した場合のロックに影響します。
+

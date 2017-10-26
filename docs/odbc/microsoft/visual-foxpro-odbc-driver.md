@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dab3cacffff383170a6403065c555f5ef105f672
@@ -49,3 +50,4 @@ Microsoft Visual FoxPro は、データベースの構築とアプリケーシ�
 |サポートされているハードウェアとソフトウェアの一覧を参照してください。|[システム要件](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)|  
   
  ダウンロードして、Visual FoxPro ODBC ドライバーのインストールについては、次を参照してください。 [Visual FoxPro ODBC ドライバー](http://go.microsoft.com/fwlink/?LinkId=121318) MSDN のダウンロードをします。
+

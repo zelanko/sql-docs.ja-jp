@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d78b3b7ac10fae37bb35f88cefaf5983e0df09a4
@@ -35,3 +36,4 @@ WHERE OrderID = ?
  呼び出すことができます**SQLColumns** OrderID 列にします。  
   
  アプリケーション容易に判別できなくパラメーターのメタデータのみの状況、ユーザーがパラメーター化されたステートメントを入力したときです。 この場合、アプリケーションが呼び出す**SQLPrepare** 、ステートメントを準備**SQLNumParams** 、パラメーターの数を決定するおよび**SQLDescribeParam**を記述するには各パラメーター。 ただし、前述したよう、ほとんどのデータ ソースは用意されていない、したがってパラメーターのメタデータを検出するドライバーを**SQLDescribeParam**広くサポートされていません。
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 94d240284ce0273e0700bfbabfb38fd0a41884cf
@@ -35,3 +36,4 @@ A*遅延バッファー*はしばらくの間で値が使用される 1 つ*後*
 |更新または結果の行を挿入するデータの送信の設定|遅延の入力|**SQLBindCol**|**SQLSetPos**|  
 |出力パラメーターと入出力パラメーターのデータを返す|遅延出力|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
 |データを設定する結果を返す|遅延出力|**SQLBindCol**|**SQLFetch**<br /> **SQLFetchScroll SQLSetPos**|
+

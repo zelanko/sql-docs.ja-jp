@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d4ed6e517d9a8fa6f4c28c7b05541d36262df2a8
@@ -59,3 +60,4 @@ ODBC では、GUID のリテラルのエスケープ シーケンスを使用し
  *hex_digit* :: 0 (&) #124; 1 &#124; = 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 & #124 です。A & #124 です。B & #124 です。C & #124 です。D & #124 です。E & #124 です。F  
   
  GUID データ型が、データ ソースによってサポートされている場合、GUID のリテラルのエスケープ シーケンスはサポートされています。 アプリケーションを呼び出す必要があります**SQLGetTypeInfo**をこのデータ型はサポートされているかどうかを判断します。
+

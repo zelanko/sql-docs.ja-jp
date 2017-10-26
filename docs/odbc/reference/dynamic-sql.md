@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4c24d1dbab68a1e47b5dfe7b48dc3df86fb9f692
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
 3.  プログラムは、動的ステートメントが実行されるたびに異なるパラメーター値を指定して、EXECUTE ステートメントを繰り返し、使用できます。  
   
  準備実行はまだありません静的 SQL と同じです。 静的な SQL で SQL ステートメントの処理の最初の 4 つの手順はコンパイル時に行われます。 準備実行では、次の手順も実行、実行時に、1 回だけ実行されます。プランの実行は、EXECUTE を呼び出したときにのみ行われます。 これにより、動的 SQL のアーキテクチャに固有のパフォーマンスの欠点の一部を排除できます。 次の図は、静的 SQL、即時実行は、動的 SQL、準備実行での動的 SQL の相違を示します。
+

@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d3a826dbe1bb1d2900f787f72a725aa984b844a2
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 >  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないように、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
   
  カーソル ライブラリには、呼び出すことはできません。 **SQLBulkOperations**です。 に関する一般的な情報**SQLBulkOperations**を参照してください[SQLBulkOperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)です。
+

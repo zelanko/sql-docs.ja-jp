@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6d05a47366c0781480fd20c9afee2f5d10b4b84f
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 -   [SQLGetInfo では、Excel の値が返されます](../../odbc/microsoft/sqlgetinfo-returned-values-for-excel.md)  
   
 -   [その他の Excel ドライバーのプログラミングの詳細](../../odbc/microsoft/other-excel-driver-programming-details.md)
+

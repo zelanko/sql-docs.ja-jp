@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b39d5b3971d316e65e21a86f76c1dcf5338d9b46
@@ -25,3 +26,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="sqlgetstmtoption-desktop-database-drivers"></a>SQLGetStmtOption (デスクトップ データベース ドライバー)
 によって返されるブックマーク、 *fOption*の SQL_GETBOOKMARK のみ有効なクエリが開いている状態とは、クエリを再発行するとき、検証します。 永続的なブックマークがサポートされていません。
+

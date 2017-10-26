@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f615aa92da79c391e84539fdf5cf402d523ab690
@@ -75,3 +76,4 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
 -   SQL_DEFAULT_PARAM です。 プロシージャでは、対応するデータ バッファー内の値ではなくプロシージャの入力パラメーターの既定値を使用します。  
   
 -   SQL_COLUMN_IGNORE です。 **SQLBulkOperations**または**SQLSetPos**が、データ バッファーに値を無視します。 呼び出しによってデータの行を更新するときに**SQLBulkOperations**または**SQLSetPos、**列の値は変更されません。 呼び出しによって新しいデータの行を挿入するときに**SQLBulkOperations**列の値が既定の設定にまたは、列には、null、既定値はありません。
+

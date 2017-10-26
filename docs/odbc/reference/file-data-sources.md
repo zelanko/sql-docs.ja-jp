@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4ddd3e0db3987ed14984a978c88befbd076562b5
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  .Dsn ファイルが共有可能なことができますもあります。 共有不能な .dsn ファイルは、1 台のコンピューター上に存在し、コンピューターのデータ ソースを指します。 共有不能なファイルのデータ ソースは、ファイル データ ソースと共にのみ使用するアプリケーションを設計できるようにコンピューターのデータ ソースのファイル データ ソースへの簡単な変換を許可するには、主に存在します。 ドライバー マネージャーは、データ ソースに共有不能なファイル情報を送信するとき、必要に応じて、.dsn ファイルを指すコンピューターのデータ ソースへ接続します。  
   
  ファイルのデータ ソースの詳細については、次を参照してください。[を使用してファイル データ ソースの接続](../../odbc/reference/develop-app/connecting-using-file-data-sources.md)、または[SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md)関数の説明。
+

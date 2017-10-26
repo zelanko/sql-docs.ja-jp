@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 085ab9bd928d7a25bd5d9e1d75f3355bdad0fd8e
@@ -52,3 +53,4 @@ Query をインストールした場合は、Visual FoxPro データに接続す
 8.  [使用] をクリックします。  
   
  開いているクエリにテーブルを追加できます。 クエリの作成の詳細については、次を参照してください。 [Visual FoxPro データベースから Microsoft Excel へのデータのインポート](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)です。
+

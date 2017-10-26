@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c272637e15d95a09862170ec871274adb624c271
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 |209|また、ステートメント属性 SQL_ATTR_CONCURRENCY を SQL_CONCUR_READ_ONLY 以外には、少なくとも 1 つの値に設定します。|  
 |210|ログイン要求のタイムアウトが発生し、SQL クエリ (SQL_ATTR_LOGIN_TIMEOUT および SQL_ATTR_QUERY_TIMEOUT) する権限です。|  
 |211|既定の分離レベルを変更する機能「シリアル化可能な」分離レベルでのトランザクションを実行する権限です。|
+

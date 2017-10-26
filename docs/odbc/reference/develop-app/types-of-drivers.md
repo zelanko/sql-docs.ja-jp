@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 464ba066af26c84c35f178b1a008d2e10a852119
@@ -66,3 +67,4 @@ ODBC ドライバーは、次のように分類できます。
   
 > [!NOTE]  
 >  16 ビット ODBC ドライバーは、ODBC 3 と直接は機能しません。*x*ドライバー マネージャー。 ただし、可能であれば、後で、3 つまでサンク 2.0 ODBC ドライバー マネージャーを使用する 16 ビット ドライバー用です。*x*ドライバー マネージャー。
+

@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c99c74a1a294d7d43774fe9d53d169eece98d3ad
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
  3 つの方法のいずれかで関数を呼び出すことができます: Unicode 専用の関数呼び出しとして (で、 *W*サフィックス)、ANSI 専用の関数呼び出しとして (で、 *A*サフィックス)、またはサフィックスなし、ODBC 関数呼び出しとして。 関数の 3 つの形式の引数と同じです。 SQLCHAR と関数のみ\*引数または文字列を指す SQLPOINTER 引数は、Unicode と ANSI のフォームを必要とします。 など、文字型として宣言できる引数を持つ関数の**SQLBindCol**または**SQLGetData** (これがない Unicode と ANSI 形式)、引数は、Unicode 型として宣言することができますANSI 型、または C の場合は、型引数、SQL_C_TCHAR マクロです。 詳細については、次を参照してください。 [Unicode データ](../../../odbc/reference/develop-app/unicode-data.md)です。  
   
  動作するために使用可能な Unicode ドライバーがない場合でも、Unicode アプリケーションとしてアプリケーションを記述することができます。 ドライバー マネージャーは、Unicode 関数とデータ型を ANSI にマップされます。 Unicode と ANSI のマッピングを実行できるいくつかの制限があります。 Unicode アプリケーションで動作するための Unicode ドライバーの存在は、パフォーマンスを向上させるし、Unicode ANSI へのマッピングからに固有の制限が削除されます。
+

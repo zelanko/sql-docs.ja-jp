@@ -22,6 +22,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ba4e9a05f3dba74a973bf2b8b8a83a52ef78811
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/09/2017
 -   データ ソースからの接続を切断します。  
   
  SQL を使用した、ほとんどのデータにアクセスする作業が行われるために、アプリケーションが ODBC を使用する主なタスクは SQL ステートメントを送信し、これらのステートメントによって生成された結果 (存在する場合) を取得するです。 アプリケーションが ODBC を使用するその他のタスクには、特定しドライバーの機能を調整して、データベース カタログの参照が含まれます。
+

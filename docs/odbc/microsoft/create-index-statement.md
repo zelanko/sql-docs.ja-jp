@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0f6e7525059640e7ffdadd79ec26a62229eabae9
@@ -36,3 +37,4 @@ CREATE INDEX ステートメントの構文です。
  Paradox ドライバーを使用する場合、CREATE INDEX ステートメントは、Paradox キー ファイルのプライマリとセカンダリ ファイルを作成します。  
   
  このステートメントは、Microsoft Excel またはテキストのドライバーでサポートされていません。
+

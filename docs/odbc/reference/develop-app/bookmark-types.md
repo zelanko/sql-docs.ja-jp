@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a4ab42d7a8b18ebb2b37c871f46981c69c84b908
@@ -32,3 +33,4 @@ ODBC 3 のすべてのブックマーク*.x*可変長のブックマークがし
  アプリケーションが呼び出すことができます**SQLColAttribute**で、 *FieldIdentifier*引数が、ブックマークの長さを取得する SQL_DESC_OCTET_LENGTH に設定します。 可変長のブックマークには、long 型の値を使用できますがため、ブックマークは、行セット内の行の多くを使用しない限り、列 0 にアプリケーションはバインドできません。  
   
  固定長のブックマークは、旧バージョンとの互換性のみサポートされます。 ODBC 2 場合。*x* ODBC 3 作業アプリケーション*.x*ドライバー呼び出し**SQLSetStmtOption** SQL_USE_BOOKMARKS SQL_UB_ON に設定には SQL_UB_VARIABLE をドライバー マネージャーで、マップ. 可変長ブックマークが使用される場合でもの 32 ビットのみが生成されます。 ドライバーは、固定長のブックマークをサポートする場合は、可変長のブックマークをサポートします。 場合、ODBC 3*.x* ODBC 2 を使用するアプリケーション*。x*ドライバー呼び出し**SQLSetStmtAttr** SQL_ATTR_USE_BOOKMARKS SQL_UB_VARIABLE に設定には SQL_UB_ON をドライバー マネージャーで、マップし、32 ビットの固定長ブックマークを使用します。 SQL_ATTR_FETCH_BOOKMARK_PTR ステートメント属性は、32 ビットのブックマークをポイントする必要があります。 使用されるブックマークをブックマークとして主キーを使用する場合などの 32 ビットよりも長い場合、カーソルは、32 ビット値に、実際の値をマップする必要があります。 でした、たとえば、ビルドする必要がそれらのハッシュ テーブルです。 ときに ODBC 3*.x* ODBC 2 を使用するアプリケーション*。x*ドライバーのブックマークをバインドする、バッファーの長さは 4 である必要があります。
+

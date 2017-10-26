@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f4e63f722842846815fd96bed7293388c4f86c75
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  アプリケーションで定義されている順序に従う必要がありますフィールドを個別に設定するときに[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)です。 一部のフィールドを設定すると、その他のフィールドを設定するドライバーとします。 これにより記述子が常に、アプリケーションのデータ型が指定した後で使用する準備がされます。 SQL_DESC_TYPE フィールドの設定、アプリケーション、ドライバーはその他の種類を指定するフィールドが有効で一貫性のあることを確認します。  
   
  記述子フィールドを設定する関数呼び出しが失敗した場合、記述子フィールドの内容が、失敗した関数を呼び出した後定義できません。
+

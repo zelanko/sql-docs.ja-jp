@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ca36f0da35640ca26102f83f33ef93a6dcfae869
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  環境ハンドルのメモリを割り当てます*henv*、し、アプリケーションで使用する ODBC の呼び出しレベルのインターフェイスを初期化します。  
   
  詳細については、次を参照してください。 [SQLAllocEnv](../../odbc/reference/syntax/sqlallocenv-function.md)で、 *ODBC プログラマ リファレンス*です。
+

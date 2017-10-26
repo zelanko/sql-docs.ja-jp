@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bd79255e4cda68d1fd4d425544702e589f44336b
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 3.  呼び出し**SQLBulkOperations**で、*操作*引数 SQL_ADD に設定します。  
   
  後に**SQLBulkOperations**が返される、現在の行は変更されません。 ブックマーク列 (列 0) がバインドされている場合**SQLBulkOperations**その列にバインドされている行セットのバッファーに挿入された行のブックマークを返します。
+

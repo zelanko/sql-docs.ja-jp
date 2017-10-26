@@ -20,6 +20,7 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 29667a31a69460d6408a84d21035a1a16cf4dc31
@@ -87,3 +88,4 @@ ms.lasthandoff: 06/22/2017
 |[MSSQL_REPL027183](../../relational-databases/replication/mssql-repl027183.md)|マージ処理で、パラメーター化された行フィルターを使用して、アーティクル内の変更情報を列挙できませんでした。 このエラーが継続して発生する場合、このプロセスのクエリ タイムアウト値を増やし、パブリケーションの保有期間を減少し、パブリッシュされたテーブルのインデックスを強化してください。|  
   
   
+

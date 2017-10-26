@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5c269705f5e4c0c855b5b7f929b1a76ee9523bd7
@@ -43,3 +44,4 @@ Driver : REG_SZ : SQL Server
   
 > [!NOTE]  
 >  既定のサブキーに含まれている既定のドライバーは、既定のユーザー DSN または既定のシステム DSN のいずれかを参照できます。 最初に作成された DSN として有効なエントリができない可能性がありますので DSN が作成された既定のユーザー DSN と既定のシステムの両方場合は、既定のドライバーが 最後に、作成された DSN によって決まります。
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5f6ed33a938a990d45d544595b10ebd3a418fd41
@@ -32,3 +33,4 @@ A*プロシージャ*データ ソースに格納されている実行可能オ�
 -   [プロシージャを使用する場合](../../../odbc/reference/develop-app/when-to-use-procedures.md)  
   
 -   [プロシージャの実行](../../../odbc/reference/develop-app/executing-procedures.md)
+

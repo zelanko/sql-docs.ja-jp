@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 601dd559d7bf13d1a12d032d8431a8c3fe0287d4
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
  Visual FoxPro ODBC ドライバーには、Dll の変換がありません。  
   
  詳細については、次を参照してください。 [SQLGetStmtOption](../../odbc/reference/syntax/sqlgetstmtoption-function.md)で、 *ODBC プログラマ リファレンス*です。
+

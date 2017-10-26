@@ -22,6 +22,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 322246bbb6634386955c8655c2e20e3cfe5b6fed
@@ -45,3 +46,4 @@ Microsoft Visual FoxPro ODBC ドライバーをサポートします。
   
 ## <a name="sort-order"></a>並べ替え順 (sort order)  
  並べ替え順序は、別の並べ替え規則を組み込む*ロケール*s、それらの言語でデータを正しく並べ替えるにすることができます。 Visual FoxPro には、現在の並べ替え順序は、文字式の比較と、レコード内の表示インデックスまたはテーブルの並べ替え順序の結果を決定します。
+

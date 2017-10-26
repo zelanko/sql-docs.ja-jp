@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bed7fb14102c754d16409259fe7e1f5177652d05
@@ -42,3 +43,4 @@ SET UNIQUE ON | OFF
   
 ## <a name="remarks"></a>解説  
  インデックス ファイルでは、インデックスの再作成を発行したときに、その一意の設定の設定が保持されます。 詳細については、次を参照してください。[インデックス](../../odbc/microsoft/index-command.md)です。
+

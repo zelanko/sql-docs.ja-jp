@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a551d51a434d17162a5f5bcf0091e593d25f283a
@@ -54,3 +55,4 @@ _C_TYPE_TIMESTAMP|タイムスタンプの秒部分の切り捨て [a]<br /><br 
  [f] これは、対応する C データ型のサイズです。  
   
  SQL のタイムスタンプ データが文字データに変換されると、結果の文字列は、"*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f.*]"形式、秒の小数部の最大 9 桁の数字を使用できます。 この形式は Windows® 国設定の影響を受けません。 (、小数点と秒の小数部を除く全体の書式設定する必要があります使用、timestamp SQL データ型の有効桁数に関係なく)。
+

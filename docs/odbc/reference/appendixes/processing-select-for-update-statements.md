@@ -22,6 +22,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ada17f95371246e3b43e1e9482ab9595f85a8db1
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  相互運用性を最大にするため、アプリケーションが位置指定更新ステートメントを使用して実行することによって更新される結果セットを生成する必要があります、**更新用に選択**ステートメントです。 カーソル ライブラリでは、この必要はありません、位置指定の update ステートメントをサポートするほとんどのデータ ソースが必要です。  
   
  カーソル ライブラリ内の列を無視する、 **FOR UPDATE**の句、 **SELECT FOR UPDATE**ステートメントです。 ステートメントをドライバーに渡す前にこの句を削除します。 カーソル ライブラリで、前のセクションで説明した制限と共に、SQL_ATTR_CONCURRENCY ステートメント属性コントロール結果内の列を設定するかどうかを更新できます。
+

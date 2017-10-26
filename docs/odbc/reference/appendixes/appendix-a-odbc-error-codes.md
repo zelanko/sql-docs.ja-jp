@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 725d16d6326d5fb99ce8d923bd35c64351b3e6cb
@@ -154,3 +155,4 @@ ms.lasthandoff: 09/09/2017
 |IM013|トレース ファイルのエラー|すべての ODBC 関数。|  
 |IM014|ファイル DSN の名が無効です。|**SQLDriverConnect**|  
 |IM015|破損したファイルのデータ ソース|**SQLDriverConnect**|
+

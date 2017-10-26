@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1bc2426cdceebcd3537815e9bb1238eba160729f
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 |システム データベース|Microsoft Access データベースで使用する Microsoft Access のシステム データベースの完全なパスにアクセスします。<br /><br /> クリックして、**システム データベース**ボタンを使用するシステム データベースを選択します。 ODBC Microsoft Access ドライバーには、ユーザー名とパスワードが求められます。 既定の名前は管理者と管理者のユーザーの Microsoft Access での既定のパスワードが空の文字列。<br /><br /> Microsoft Access データベースのセキュリティを強化するには、管理者ユーザーを置き換えるし、管理ユーザーを削除する新しいユーザーを作成または管理ユーザーがアクセスしているオブジェクトを変更します。|このオプションを動的に設定するには、使用、 **SYSTEMDB**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)です。|  
 |スレッド|使用する、エンジンのバック グラウンド スレッドの数。 Microsoft Access ドライバーは、この値は、既定値は 3 が、変更することができます。 ユーザーは、大量のデータベース内のアクティビティがある場合は、スレッドの数を増やす可能性があります。<br /><br /> このオプションが含まれる、**高度なオプションの設定**Microsoft Access ドライバーのダイアログ ボックス。|このオプションを動的に設定するには、使用、**スレッド**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)です。|  
 |UserCommitSync|Microsoft Access ドライバーが明示的なユーザー定義のトランザクションを非同期的に実行されるかどうかを判断します。 この値は"Yes"は、Microsoft Access ドライバーが完了するユーザー定義のトランザクションのコミットを待機することを意味する初期設定されます。<br /><br /> False には、このオプションを設定すると、マルチ ユーザー環境で予期しない結果があります。|このオプションを動的に設定するには、使用、 **USERCOMMITSYNC**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)です。|
+

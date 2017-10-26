@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 678f2f8f720823ef5658ba7ee1e1391bbebc1c50
@@ -46,3 +47,4 @@ ODBC では、LIKE 句のエスケープ シーケンスを使用します。 �
  *Esc 終端の ODBC* :: =}  
   
  ドライバーが LIKE エスケープをサポートしているかどうかはシーケンス、アプリケーションが呼び出すことができます**SQLGetInfo** SQL_LIKE_ESCAPE_CLAUSE 情報の種類とします。
+

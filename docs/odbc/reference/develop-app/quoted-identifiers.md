@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 07a0c8299fc4063e72353025465309c426a3a251
@@ -35,3 +36,4 @@ SELECT * FROM "Accounts Payable"
  ステートメントを解析するためには識別子を囲むためです。 たとえば、Accounts Payable が示されていない前のステートメントでは場合、パーサーはアカウントと Payable、2 つのテーブルがと、コンマで区切られたいなかった構文エラーを返します。 引用符文字の識別子はドライバー固有であり SQL_IDENTIFIER_QUOTE_CHAR オプションで取得した**SQLGetInfo**です。 SQL_SPECIAL_CHARACTERS と SQL_KEYWORDS のオプションでキーワードと特殊文字の一覧が取得されます**SQLGetInfo**です。  
   
  安全のため、相互運用可能アプリケーションは、Oracle では、ROWID 列などの擬似列を除くすべての識別子を多くの場合、見積もりです。 **SQLSpecialColumns**擬似列の一覧を返します。 また、オブジェクト名で特殊文字を表示する場所にアプリケーション固有の制限がある場合は相互運用可能なアプリケーションでは、これらの位置で特殊文字を使用してのことをお勧めします。
+

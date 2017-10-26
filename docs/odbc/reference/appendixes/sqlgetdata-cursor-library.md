@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 19aa94323ee9ad9655e374bd3fe466fcb78f3c48
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLGetData** 、次の条件が満たされたときにのみ呼び出すことができます。**選択**ステートメントには、結果セットが生成された以外の場合は、**選択**ステートメントに、結合が含まれていない、 **共用体**句、または**GROUP BY**句; と、選択リストで、エイリアスまたは式を使用するすべての列にバインドされていない**SQLBindCol**です。  
   
 -   カーソル ライブラリが結果を実行する前にセットの残りの部分をフェッチして、ドライバーは、1 つだけのアクティブなステートメントをサポートする場合、**選択**ステートメントと呼び出し元**SQLGetData**です。
+

@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b85711437c50ccc246ad1af1432d9475d1cfc3d
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/09/2017
  Odbcjt32.dll では、Microsoft Jet API の上に ODBC 関数を実装します。 ODBC および Microsoft Jet の関数の間で直接マッピングただしです。 カーソル モデルでは、SQL のマッピングなど、さまざまな要因は、関数の直接的な相関関係を回避します。  
   
  ODBC ドライバーは、Microsoft Jet エンジンと ODBC ドライバー マネージャーの間に存在します。 アプリケーションによって呼び出されたいくつかの ODBC 関数がドライバー マネージャーによって処理され、ドライバーに渡されません。 Microsoft Jet をこれらの関数には、ドライバー マネージャーへの直接接続があるないために、呼び出す関数を表示されません。
+

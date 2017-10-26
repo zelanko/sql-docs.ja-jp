@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2b97769aebb017ab60de531f4242ed2421b76835
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 >  カーソル ライブラリが列のキャッシュを更新していない場合 **StrLen_or_IndPtr*バッファーが SQL_DATA_AT_EXEC または SQL_LEN_DATA_AT_EXEC マクロの結果には、対応する行セット内です。  
   
  ときに、列、データ ソースは空白パッド固定長文字データおよび必要に応じて 0 パッドの固定長バイナリ データを更新します。 など、データ ソースは、"Smith"として char (10) の列に"Smith"を格納します。 カーソル ライブラリでは、位置指定の update ステートメントを実行した後、キャッシュにこのデータをコピーするとき、行セットのバッファーでデータを空白パッドまたはゼロで埋め込んでされません。 そのため、必要な場合、カーソル ライブラリのキャッシュの値は、空白が埋め込まれますまたはゼロが埋め込まれること、いる必要があります空白パッドや 0 パッド行セットのバッファー内の値、位置指定の update ステートメントを実行する前にします。
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2b630be96f099e1f2553c8d03b9896f32ea3e670
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
  SQL_LOCK_NO_CHANGE はサポートされて*fLock*です。 SQL_LOCK_EXCLUSIVE と SQL_LOCK_UNLOCK はサポートされていません。  
   
  **SQLSetPos**更新可能な結合をサポートしています。 (詳細については、次を参照してください、 *Microsoft Jet データベース エンジン プログラマ ガイド*。)。
+

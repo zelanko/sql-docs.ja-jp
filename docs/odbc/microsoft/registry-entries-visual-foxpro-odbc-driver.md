@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6a975ff73eb4b2ef48af05ccfdf595ae9c3233f0
@@ -61,3 +62,4 @@ Visual FoxPro ODBC ドライバーをインストールするときに、イン�
  この情報を直接アクセスしないでください。レジストリのすべての管理には、追加、変更、またはデータ ソースを削除するときに ODBC アドミニストレーターによっては処理されます。  
   
  これらのキーワードと値の一部を使用するにはパラメーターとして、 [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) ODBC API 関数。
+

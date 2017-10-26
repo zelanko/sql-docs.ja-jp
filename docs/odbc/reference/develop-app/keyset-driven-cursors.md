@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7cbd7ca159b09ee1482139ef76bfff48115a62bd
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
  キーセット ドリブン カーソルでは、結果セットの各行のキーを格納する一時テーブルを作成することで一般的な実装されます。 カーソルは、行が更新されているかどうかも決定する必要があります、ために、このテーブルには行バージョン管理情報を持つ列もよく含まれています。  
   
  元の結果セットをスクロールするには、キーセット ドリブン カーソルは、一時テーブルには静的カーソルを開きます。 元の結果セット内の行を取得するには、カーソルは最初に、一時テーブルから適切なキーを取得や、行の現在の値を取得します。 ブロック カーソルを使用している場合、カーソルは複数のキーと行を取得する必要があります。
+

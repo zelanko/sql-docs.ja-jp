@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ac33a8370cbd76a3dde43df68c12c9417fc78e07
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  行セットのすべての行を削除するときに (*RowNumber*が 0 に等しい)、アプリケーションが使用できなくドライバーの更新操作と同じ方法で、行操作配列を使用して、特定の行を削除する**SQLSetPos**. (を参照してください[SQLSetPos で行セット内の行を更新](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md))。  
   
  削除対象の各行は、行セット内に存在する行でなければなりません。 フェッチによってアプリケーション バッファーが入力し、行の状態配列が維持されている場合は、これらの各の行位置でその値しないで SQL_ROW_DELETED、SQL_ROW_ERROR、または SQL_ROW_NOROW です。
+

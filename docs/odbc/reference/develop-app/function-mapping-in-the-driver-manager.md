@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4ea01836108b8cf2524aa52001927bef852ce2a1
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/09/2017
  ドライバー マネージャーが Unicode に対応した内部的にします。 その結果、最適なパフォーマンスは、ドライバー マネージャーでは、ドライバーを通じて Unicode 関数だけが渡されるから Unicode アプリケーションの場合、Unicode のドライバーを使用して取得されます。 使用する場合、ANSI アプリケーションは、ANSI ドライバー、ドライバー マネージャーは、必要があります文字列に変換 ANSI から Unicode など一部の関数の処理時に**SQLDriverConnect**です。 関数を処理した後、ドライバー マネージャー必要がありますし、ANSI に変換する Unicode 文字列戻す関数を ANSI ドライバーに送信する前にします。  
   
  アプリケーションの変更またはドライバーには、SQL_STILL_EXECUTING または SQL_NEED_DATA が返されるときにバインドされたパラメーターにより、バッファーを読み取る必要がありますできません。 ドライバー マネージャーは、ドライバーが SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、または SQL_ERROR に戻るまで、ANSI にバインドされたバッファーを残します。 マルチ スレッド アプリケーションでは、別のスレッドが実行されている SQL ステートメントのバインドされたパラメーター値にアクセスできないようにする必要があります。 ドライバー マネージャーは、データを Unicode から ANSI「インプレース」に変換し、他のスレッド、ドライバーには、SQL ステートメントがまだ処理中にこれらのバッファーに ANSI データが表示可能性があります。 ANSI ドライバーに Unicode データをバインドするアプリケーションは、同じアドレスに 2 つの列をバインドできません必要があります。
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a60688231bc01f55cf5b49fae3bb8d6da4a54950
@@ -47,3 +48,4 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
  このステートメントを作成する最初の行セットは、元の結果セット内の次の行セット、2 つ目の結果セット: この場合は、Customers テーブル内の行のセット。 カーソルは、この行セットをアプリケーションに返します。  
   
  興味深いは、この方法で実装される動的カーソルは、多くの結果セットを実際に作成して、元の結果セットに変更を検出することができます。 アプリケーションはこれら補助次の結果セットの存在を学習します。カーソルが元の結果セットへの変更を検出できない場合は、単が表示されます。
+

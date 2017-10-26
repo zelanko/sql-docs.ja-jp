@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 03bf019ac788e5879667db83855c91ad0a3aa0ad
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 |各デスクトップ データベース ドライバーで使用されるファイル|ODBC ドライバー ファイル|  
 |各デスクトップ データベース ドライバーで使用される Microsoft Jet ファイル|Microsoft Jet ファイル|  
 |Microsoft Jet とその他の DBMS の間でデータ アクセスを提供する IISAM ドライバー ファイル|インストール可能な ISAM ドライバー ファイル|
+

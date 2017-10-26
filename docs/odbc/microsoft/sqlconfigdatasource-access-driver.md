@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 24154cb8cf4f07699385f773608b929a9a4ed4a3
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/09/2017
 |スレッド|使用する、エンジンのバック グラウンド スレッドの数。 この値は、既定値は 3 が、変更することができます。<br /><br /> 同じオプションを設定**スレッド**設定 ダイアログ ボックスをオンにします。|  
 |UID|ユーザー ID の名前は、Microsoft Access ドライバーのログインに使用します。|  
 |USERCOMMITSYNC|Microsoft Access ドライバーがユーザー定義のトランザクションを非同期的に実行されるかどうかを判断します。 この値は"Yes"は、Microsoft Access ドライバーが完了するユーザー定義のトランザクションのコミットを待機することを意味する初期設定されます。<br /><br /> このオプションの値は、結果を入念に考慮することがなくいない変更しなければなりません。 オプションの詳細については、次を参照してください。、 *Microsoft Jet データベース エンジン プログラマ ガイド*です。<br /><br /> これと同じオプションを設定**UserCommitSync**設定 ダイアログ ボックスをオンにします。|
+

@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4426465ea41b257a4805399b703f28ccc22d704b
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 6.  呼び出し**SQLBulkOperations**で、*操作*引数 SQL_UPDATE_BY_BOOKMARK に設定します。  
   
  更新プログラムとしてデータ ソースに送信されるすべての行でアプリケーション バッファーは有効な行データである必要があります。 アプリケーション バッファーがいっぱいになった場合、フェッチによって行の状態配列が維持されている場合、および行の状態値が SQL_ROW_DELETED、SQL_ROW_ERROR、または SQL_ROW_NOROW である場合は、無効なデータは、データ ソースに誤って送信でした。
+

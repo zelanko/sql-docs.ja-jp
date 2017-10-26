@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 991dd021935617a9c0bfbe87ecf7be35d35938c9
@@ -50,3 +51,4 @@ _C_BINARY|データのバイト長 < = *BufferLength*<br /><br /> データの�
  [b] の間隔の有効桁数が 1 つのフィールド (年、月の 1 つ) の場合、SQL 型の間隔が、正確な numeric (SQL_C_STINYINT、SQL_C_UTINYINT、SQL_C_USHORT、SQL_C_SHORT、SQL_C_SLONG、SQL_C_ULONG、または SQL_C_NUMERIC) に変換できます。  
   
  間隔の SQL 型の既定の変換は、対応する C interval データ型です。 アプリケーション、列またはパラメーターをバインド (または、ARD の適切なレコードで、SQL_DESC_DATA_PTR フィールドを設定)、初期化された SQL_INTERVAL_STRUCT 構造体を指す (または、としてsql_INTERVAL_STRUCT構造体へのポインターを渡す*TargetValuePtr*への呼び出しで引数**SQLGetData**)。
+

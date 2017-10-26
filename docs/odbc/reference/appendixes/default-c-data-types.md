@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 83040ffdab8b9715fc8caeb024bec6a9fc05d4d4
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
      SQL_C_DEFAULT はプログラミングの利便性としてのみ提供される、ため、アプリケーションが実際の C データ型を指定する場合の機能をすべてを失うしていません。  
   
  各 SQL データ型の既定の C データ型を示すテーブルが含まれている[に変換するデータを SQL から C データ型に](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)、後の「します。
+

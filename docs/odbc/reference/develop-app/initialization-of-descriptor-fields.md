@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a42ff3940f5d1620c7ee310df24016dfa39a4cd
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  IRD のフィールドについて、既定値の概念が正しくありません。 アプリケーションは、関連付けられている準備または実行されたステートメントがある場合にのみ、IRD のフィールドへのアクセスを取得できます。  
   
  ドライバーが自動的に設定されて、IPD 後にのみ、IPD の特定のフィールドが定義されます。 いない場合は、定義はありません。 これらのフィールドは SQL_DESC_CASE_SENSITIVE、SQL_DESC_FIXED_PREC_SCALE、SQL_DESC_TYPE_NAME、SQL_DESC_UNSIGNED、および SQL_DESC_LOCAL_TYPE_NAME です。
+

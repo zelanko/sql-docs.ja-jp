@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7c5396150d9b3ae7e3c79fa3568c1468f775cb8e
@@ -41,3 +42,4 @@ ODBC ドライバーと ODBC ドライバー マネージャーをテストに�
  以前のドキュメントのこのセクション内に含まれていたヘルプ トピックは、ODBC テスト プログラム内に含まれています。 Odbcte32.exe または Odbct32w.exe、開く開く、**ヘルプ** メニューをクリックして**ヘルプ トピック**です。  
   
  であっても、個別のファイル、32 ビット バージョンと同じ名前をこれらのアプリケーションは、64 ビット Microsoft Windows オペレーティング システム用の 64 ビット バージョンがあることに注意してください。 つまり ODBC テストの 64 ビット バージョンの Unicode バージョンの名前は、odbct32w.exe がします。
+

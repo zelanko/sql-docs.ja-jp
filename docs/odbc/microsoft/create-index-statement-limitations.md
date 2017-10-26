@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 874aba454df680626a126f19faa821f885e9d040
@@ -36,3 +37,4 @@ CREATE INDEX ステートメントは、Microsoft Excel またはテキストの
  DBASE ドライバーを使用する場合は、CREATE UNIQUE INDEX ステートメントによって作成されたインデックスが実際には一意でないとインデックス付き列に重複する値を挿入できます。 インデックスには、同一のキー値を持つセットから 1 つのレコードを追加できます。  
   
  Paradox ドライバーを使用する場合、連続した最初の列を含め、テーブル内の列のサブセットに一意のインデックスを定義する必要があります。 テーブルまたは Borland データベース エンジンの実装は持たない Paradox ドライバーを使用すると、一意のインデックスが定義されていない場合、Paradox ドライバーによって、テーブルを更新できません。
+

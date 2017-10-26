@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d03483adc4a566d4691bb7687f231b41ca0b41bd
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
  カーソル ライブラリでは、バインディングのオフセットを有効にする SQL_ATTR_PARAM_BIND_OFFSET_PTR または SQL_ATTR_ROW_BIND_OFFSET_PTR ステートメント属性の設定をサポートします。 バインディングのオフセットは、呼び出しのためには使用されません**SQLFetch** ODBC 2 で、カーソル ライブラリを使用した場合*。x*ドライバー。  
   
  カーソル ライブラリでは、SQL_UB_VARIABLE SQL_ATTR_USE_BOOKMARKS ステートメント属性に設定をサポートします。
+

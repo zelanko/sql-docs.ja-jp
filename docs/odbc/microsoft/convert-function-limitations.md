@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dbe4a62045da6fd493c24fec81b863f504b73750
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 NULL に設定されている影響を受ける列に変換エラーの結果を入力します。  
   
  日付でも、タイムスタンプのデータ型は、CONVERT 関数が別のデータ型 (または自体) に変換できます。
+

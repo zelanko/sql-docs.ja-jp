@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 146e16608f0f2f790bf49a84de2ef4610df33d0f
@@ -74,3 +75,4 @@ typedef struct tagSQL_DAY_SECOND
 ```  
   
  *Interval_type*和集合にどのような構造が保持されているアプリケーションに、SQL_INTERVAL_STRUCT のフィールドを示しも構造体のメンバーは、関連します。 *Interval_sign*フィールド値 SQL_FALSE フィールドの先頭の間隔が署名されていない場合は SQL_TRUE の場合、先頭のフィールドが負の値。 先頭フィールド自体の値は、常の値に関係なく、署名付き*interval_sign*です。 *Interval_sign*フィールドは符号ビットとして機能します。
+

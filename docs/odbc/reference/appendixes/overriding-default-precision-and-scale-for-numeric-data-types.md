@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 613ec65d838a525251b6682cca477c5c8d24a162
@@ -35,3 +36,4 @@ ARD の SQL_DESC_TYPE フィールド設定されている場合、SQL_C_NUMERIC
  アプリケーションを呼び出す場合**SQLGetData** SQL_C_NUMERIC 構造にデータを返す、既定の SQL_DESC_SCALE と SQL_DESC_PRECISION フィールドが使用されます。 既定値が許容できない場合は、アプリケーションを呼び出す必要があります**SQLSetDescRec**または**SQLSetDescField** 、フィールドを設定し、呼び出す**SQLGetData** で*TargetType* SQL_ARD_TYPE の記述子フィールドの値を使用するのです。  
   
  ときに**SQLPutData**が呼び出されると、呼び出しを使用して、実行時データ パラメーターまたは列に対応する記述子レコードの SQL_DESC_SCALE および SQL_DESC_PRECISION フィールドへの呼び出しに APD フィールドは**SQLExecute**または**SQLExecDirect**、または呼び出しのために ARD フィールド**SQLBulkOperations**または**SQLSetPos**です。
+

@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cd72cc24ff011559addeabd0bcc95b172db1a60f
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
 |LONGCHAR|固定長のいずれかで LONGCHAR 列の幅に、理論的な制限または区切り記号付きのテーブルが 65500 K です。 テキスト ISAM は、最大で約 32 K の信頼性の高いサポートを提供する可能性が高くなります。|  
   
  データ型に複数の制限事項は含まれて[データ型の制限事項](../../odbc/microsoft/data-type-limitations.md)です。
+

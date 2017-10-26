@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: efe7ea13150afe1eb9df7586df1a1a83e8f3f92f
@@ -98,3 +99,4 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |{間隔 '223.16' 第 2}<br /><br /> {間隔 '223' YEAR}|先頭の有効桁数が指定された既定値は 2、これが指定されたリテラルを保持するためには小さすぎます。|  
 |{間隔 '22.1234567' 第 2}|既定値は 6 ために、秒の有効桁数は指定しません。 リテラルは、7 桁の数字を小数点後がします。|  
 |{月間隔 ' 163-13' YEAR(3)}<br /><br /> {INTERVAL ' 163 65' 時間に DAY(3)}<br /><br /> {間隔分に '163 62:39' DAY(3)}<br /><br /> {間隔 SECOND(3) に '163 12:125:59.163' DAY(3)}<br /><br /> {間隔 '163:144' 分に HOUR(3)}<br /><br /> {間隔 '163:567:234.163' SECOND(4) に HOUR(3)}<br /><br /> {間隔 '163:591.163' SECOND(5) に MINUTE(3)}|末尾のフィールドが構成のグレゴリオ暦カレンダーの規則に従っていません。|
+

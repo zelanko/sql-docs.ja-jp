@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ba3d5db821bbbfa287efb811db0ca616b01df244
@@ -69,3 +70,4 @@ ms.lasthandoff: 09/09/2017
  カーソル ライブラリでは、カーソルが開いているときに APD または ARD SQL_DESC_BIND_TYPE フィールドを変更することはできません。 カーソルが閉じられた後にのみ、および新しいカーソルが開かれる前に、SQL_DESC_BIND_TYPE フィールドを変更できます。 カーソル ライブラリが、カーソルが開いているときに変更をサポートする唯一の記述子フィールドは SQL_DESC_ARRAY_STATUS_PTR、SQL_DESC_BIND_OFFSET_PTR、SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、SQL_DESC_OCTET_LENGTH_PTR、および SQL_DESC_ROWS_PROCESSED_PTR。  
   
  カーソル ライブラリが後 ARD の SQL_DESC_COUNT フィールドの変更をサポートしていない**SQLExtendedFetch**または**SQLFetchScroll**が呼び出されて、カーソルが閉じられた前にします。
+

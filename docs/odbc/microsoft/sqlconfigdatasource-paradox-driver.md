@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b9acd359d2d99531e3fe4092b3bd20f00e94622a
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
 |PWD|パスワード。<br /><br /> これは省略可能なキーワードであり、ドライバーによって、ファイルに書き込むことはありません。 呼び出しで使用されている**SQLDriverConnect** Paradox ファイルのパスワードで保護されたとします。 テーブルを開くたびに使用するパスワードが有効になります。 接続文字列にパスワードが渡されない場合、そのテーブルのパスワードは確立されません。 テーブルがある別のパスワードは、同じセッションで、少なくとも 1 つ開くことができませんでない場合は、テーブルを結合することができます。|  
 |READONLY|読み取り専用ファイルを作成する場合は TRUE読み取り専用ファイルを作成する場合は FALSE。<br /><br /> 同じオプションを設定**読み取り専用**設定 ダイアログ ボックスをオンにします。|  
 |スレッド|使用する、エンジンのバック グラウンド スレッドの数。 この値は 3 であるため、変更できません。<br /><br /> 同じオプションを設定**スレッド**設定 ダイアログ ボックスをオンにします。|
+

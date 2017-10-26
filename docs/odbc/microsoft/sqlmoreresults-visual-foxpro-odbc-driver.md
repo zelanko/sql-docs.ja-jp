@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4e3228a1a56de7a8220fc634ab46707d20253e37
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  多くの結果が保留中かどうかを判断、ステートメント ハンドルで*hstmt*SELECT、UPDATE、INSERT、または DELETE ステートメントを含む、およびそれらの結果の処理を初期化します。  
   
  詳細については、次を参照してください。 [SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md)で、 *ODBC プログラマ リファレンス*です。
+

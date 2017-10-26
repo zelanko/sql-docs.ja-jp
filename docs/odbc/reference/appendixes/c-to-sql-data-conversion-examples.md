@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 46c1a95015858fbec4ff1e1b5f10bb9b409c9482
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
  [この一覧に c] の数値は、SQL_DATE_STRUCT 構造体のフィールドに格納されている番号です。  
   
  [この一覧に d] で、数値は、SQL_TIMESTAMP_STRUCT 構造体のフィールドに格納されている番号です。
+

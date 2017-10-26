@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1e5cabca53c503e2cd0c12147248b11da84ed157
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  場合は、カーソル ライブラリは、ODBC 2 と共に使用されます。*x*ドライバー、オフセット (で定義されている SQL_ATTR_ROW_BIND_OFFSET_PTR ステートメント属性) のバインドがない場合に使用**SQLFetch**と呼びます。  
   
  アプリケーションが呼び出すことはできません、カーソル ライブラリが読み込まれるときに**SQLFetch**ブックマーク列をフェッチします。 カーソル ライブラリへの呼び出しに渡します**SQLFetch**を介して、ドライバーが、関数にブックマークを有効にして、ブックマーク列をバインドへの呼び出しによって傍受されるカーソル ライブラリです。
+

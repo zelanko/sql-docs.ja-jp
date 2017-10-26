@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4723b48732065ccc2f307d9eeef46f8b35574c2d
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  汎用アプリケーション、特にアドホック クエリをサポートして、作成する結果セットのメタデータを知ることはほぼありません。 関数を使用して実行時にメタデータを検出する必要がありますので、 **SQLNumResultCols**、 **SQLDescribeCol**、および**SQLColAttribute**で説明される、次のセクション「 [SQLDescribeCol と SQLColAttribute](../../../odbc/reference/develop-app/sqldescribecol-and-sqlcolattribute.md)です。  
   
  その種類に関係なく、すべてのアプリケーションでは、カタログ関数によって返される結果セットのメタデータをハード コーディングことができます。 これらの結果セットは、このマニュアルのリファレンスのセクションで定義されます。
+

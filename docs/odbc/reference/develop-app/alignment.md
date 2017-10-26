@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 412c04f8181997738bac1fc7b457c9ec0c3efcde
@@ -51,3 +52,4 @@ ODBC アプリケーションで配置の問題は一般にまったく同じ、
  ![最大の配置境界によるバインド](../../../odbc/reference/develop-app/media/pr26.gif "pr26")  
   
  このソリューションより大きな穴を残します、それを実装するコードが比較的単純で高速です。 ほとんどの場合は、未使用のメモリ内で、パフォーマンス低下をオフセットします。 このメソッドを使用する例は、次を参照してください。[を使用して SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)です。
+

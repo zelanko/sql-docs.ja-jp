@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 44565d371ca75d4d707274b90d52794473f63a72
@@ -54,3 +55,4 @@ ms.lasthandoff: 06/22/2017
 -   実行するアクションに電子メール メッセージの送信が含まれる場合は、メール アカウントを構成する必要があります。 データベース メールを使用することをお勧めします。 データベース メールをセットアップする方法の詳細については、「 [データベース メール アカウントの作成](../../relational-databases/database-mail/create-a-database-mail-account.md)」を参照してください。  
   
   
+

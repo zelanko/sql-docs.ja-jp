@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d3bc36063659da3cf0cd6b2b837be0c4fce46c6f
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLSetCursorName**|カーソル名をアクティブなステートメント ハンドルに関連付けます*hstmt*です。|  
 |**SQLSetParam**|ODBC 2 の場合は、SQLBindParameter に置換されます。*x*です。|  
 |**SQLTransact**|コミットまたはロールバック操作は、すべてのステートメント ハンドル (hstmts)、接続に関連付けられているすべてのアクティブな操作や環境ハンドルに関連付けられているすべての接続を要求*henv*です。 手動モードのときに、コミットが失敗した場合、トランザクションが消えないです。トランザクションをロールバックまたはコミット操作を再試行することができます。 コミット操作は、自動トランザクション モードのときに失敗すると、トランザクションは自動的にロールバックします。トランザクションは、非アクティブにすることはできません。|
+

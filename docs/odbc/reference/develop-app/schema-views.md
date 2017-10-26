@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 06b9546950d5ae84b6ac5811ae4413fa1841c065
@@ -31,3 +32,4 @@ ODBC カタログ関数を呼び出すことによって、または INFORMATION
  DBMS およびドライバーによってサポートされる、INFORMATION_SCHEMA ビューは、ODBC カタログ関数のメタデータを取得するより強力で包括的な手段を提供します。 アプリケーションが独自のカスタムを実行できる**選択**に対してこれらのビューのいずれかのステートメントは、ビューに参加できますまたはビューに対して和集合を実行することができます。 大きいユーティリティとさまざまなメタデータを提供しながら INFORMATION_SCHEMA ビューは、DBMS によって多くの場合、サポートされていません。 これは、Dbms とドライバーの詳細、sql-92 と順守の実現とに変更する可能性があります。  
   
  アプリケーションが呼び出す調べるにはどのビューはサポートされて、 **SQLGetInfo** SQL_INFO_SCHEMA_VIEWS オプションを使用します。 アプリケーションの実行をサポートされているビューからメタデータを取得する、**選択**スキーマに必要な情報を指定するステートメント。
+

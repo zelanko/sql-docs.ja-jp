@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 62a4b7edd47ca6c9a6b1c7469e18269af3ab907d
@@ -57,3 +58,4 @@ UPDATE Parts SET Price = 0.9 * Price WHERE Price > 100.00
  これは、すべての結果を利用する前に、バッチ全体ステートメントが実行するかどうかドライバーに固有です。 一部の実装では、ケースでは、呼び出す他のユーザーに**SQLMoreResults**バッチ内の次のステートメントの実行を開始します。  
   
  バッチ内のステートメントのいずれかが失敗した場合、 **SQLMoreResults** SQL_ERROR または SQL_SUCCESS_WITH_INFO が返されます。 ステートメントが失敗したか失敗したステートメントがバッチ内の最後のステートメントとバッチが中止された場合**SQLMoreResults** SQL_ERROR が返されます。 ステートメントが失敗しました、障害が発生したステートメントなしで、バッチの最後のステートメントとバッチが中断されていない場合**SQLMoreResults** sql_success_with_info が返されます。 SQL_SUCCESS_WITH_INFO は、少なくとも 1 つの結果セットまたはカウントが生成されたことと、バッチが中断されていないことを示します。
+

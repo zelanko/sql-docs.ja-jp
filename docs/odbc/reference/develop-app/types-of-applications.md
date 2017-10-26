@@ -20,6 +20,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 26835fa277391f359d628ec25c03d38364e398e7
@@ -84,3 +85,4 @@ ODBC アプリケーションは、次のように分類できます。
     -   条件付きコード内でのみ ODBC の以降のバージョンの新機能を使用します。  
   
     -   動作の変更を処理する条件付きコードが制限されているまたは以前のバージョンの ODBC アプリケーションに登録されています。
+

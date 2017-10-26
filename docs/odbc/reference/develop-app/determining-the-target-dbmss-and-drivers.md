@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6be642b6c64da8193ba97de9df8b21ecb9e5a27c
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  Oracle、DB2、および SQL Server などのデータベースをサーバー完全トランザクション サポートを提供するには、多数の同時ユーザーをサポートおよびリッチ sql です。 これらは高コストいてより小規模のインストール ベースです。 その一方で、ソフトウェアの価格は、以降では、やや小さい潜在的な市場をオフセットする傾向があります。  
   
  このため、ターゲットの Dbms 場合がありますを選択できます、アプリケーションと、アプリケーションのターゲットの市場によって必要とされる機能に基づいて。 たとえば、大規模企業向けの注文入力システム可能性があります対象デスクトップ データベースの適切なトランザクションのサポートをこれらがないためです。 小規模企業向けのようなシステムでは、ほとんどのサーバー データベースはコストに基づいてを除外できます。 汎用アプリケーションの開発者は対象に両方 server データベースでの高度な機能を使用しないでください。
+

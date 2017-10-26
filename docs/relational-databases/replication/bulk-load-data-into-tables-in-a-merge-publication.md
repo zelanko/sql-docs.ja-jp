@@ -20,6 +20,7 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: cbcbfedbd5b2296da2cb266bf78ca3f7db9760ac
@@ -41,3 +42,4 @@ ms.lasthandoff: 06/22/2017
     -   データの挿入先のデータベースで、[sp_addtabletocontents &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql.md) を実行する。 データの挿入先のテーブル名を **@table_name**を実行する。  
   
   
+

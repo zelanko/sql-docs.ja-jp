@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ec2f197029fab2467c7dced5f1cb720cf88f598
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  ODBC では、さまざまな種類の SQL 識別子を定義します。 ただし、ドライバーでは、これらの識別子のすべてを使用する必要はありません。 代わりに、基になるデータ ソースでサポートされている SQL データ型を公開する必要がある識別子のみを使用します。 基になるデータ ソースには、SQL データ型がサポートされている場合は、どの型識別子のない対応、ドライバーは追加の型識別子を定義できます。 詳細については、次を参照してください。[ドライバー固有のデータ型、記述子の種類、情報の種類、診断の種類、および属性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)です。  
   
  SQL 型識別子の詳細については、次を参照してください。 [C データ型](../../../odbc/reference/appendixes/c-data-types.md)付録 d: データ型にします。
+

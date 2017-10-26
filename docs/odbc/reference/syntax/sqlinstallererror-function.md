@@ -23,6 +23,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bb17b0ab5da8770c4622c7359c16de6876688c17
@@ -84,3 +85,4 @@ RETCODE SQLInstallerError(
  アプリケーションが呼び出す関数の呼び出しを複数のエラーを取得する**SQLInstallerError**複数回です。  
   
  詳細についてがない場合に**SQLInstallerError** 、SQL_NO_DATA が返される、 *pfErrorCode*引数が定義されていない、 *pcbErrorMsg*引数が 0 に等しいと*lpszErrorMsg*引数には、1 つの null 終了文字が含まれています (しない限り、 *cbErrorMsgMax*引数が 0 に等しい)。
+

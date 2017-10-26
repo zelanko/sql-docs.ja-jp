@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56fa0c8ea21d4cfb620acfb633b3a4297ccd27fd
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 |*szTableOwner*|唯一の有効な引数*szTableOwner* NULL では、ドライバーのサポート所有者名。 *SzTableOwner*を NULL に設定すると、すべてのテーブルが返されます。 TABLE_OWNER 列に NULL が返されます。|  
 |*szTableQualifier*|TABLE_QUALIFIER 列で**SQLTables**ディレクトリへのパスを取得します。|  
 |*SzTableType*|"TABLE"は、サポートされている唯一のテーブル型です。<br /><br /> Text driver を使用する場合、によって返されるファイルの一覧**SQLTables**でのファイル拡張子によって決まりますが、**拡張機能リスト**ボックスに、 **ODBC テキスト セットアップ** ダイアログ ボックス。|
+

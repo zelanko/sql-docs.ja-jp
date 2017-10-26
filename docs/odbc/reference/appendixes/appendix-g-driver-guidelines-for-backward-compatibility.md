@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e326abbc0a10899028bf93d27f219fadd8d7dd29
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 -   [非推奨の関数のマップ](../../../odbc/reference/appendixes/mapping-deprecated-functions.md): 重複する機能は、ODBC 3 に異なる方法で実装されている機能です*。x*および ODBC 2* 。x*です。 ODBC 3 です。*x*ドライバーは、ドライバー マネージャーは、ODBC 2 を常にマップされるので、重複する機能との下位互換性について心配する必要はありません*。x* ODBC 3 に機能します*。x* ODBC 3 を呼び出すときに機能します*。x*ドライバー。 したがって、ODBC 3 です。*x*ドライバーは ODBC 3 のみを表示します*。x*機能します。 詳細については、これらのマッピング後の「を参照してください。  
   
 -   [動作の変更と ODBC 3.x ドライバー](../../../odbc/reference/appendixes/behavioral-changes-and-odbc-3-x-drivers.md) — 動作の変更は、ODBC 3 が異なる方法で処理する機能*。x*および ODBC 2* 。x*です。 ODBC 3 です。*x*ドライバーは、動作の変更について心配し、アプリケーションによって設定される、また環境属性への応答で操作する必要があります。
+

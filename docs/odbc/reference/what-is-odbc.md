@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5aaa2a57f9439eb1588a30c362118af9b5355a8d
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  ODBC がデータベースの機能を公開するありませんこれらを補足するものに設計されているかを理解しておく必要があります。 したがって、アプリケーションの作成者では、ODBC を使用してが突然変換する単純なデータベースを完全に機能を備えたのリレーショナル データベース エンジンには限りません。 また、ドライバーの作成者は、基になるデータベースに含まれない機能を実装するが必要です。 この例外は、ファイル データ (ファイルのデータを Xbase) などに直接アクセスするドライバーを記述する開発者が最低限の SQL 機能をサポートするデータベース エンジンを書き込みに必要なことです。 別の例外は、以前に、Microsoft Data Access Components (MDAC) SDK 含まれている、Windows SDK の ODBC コンポーネントは、特定のレベルの機能を実装するドライバーのスクロール可能なカーソルをシミュレートするカーソル ライブラリを提供です。  
   
  ODBC を使用するアプリケーションでは、データベース間の機能をすべてを担当します。 たとえば、ODBC が異種結合エンジンもありません分散トランザクション プロセッサ。 ただし、これは、DBMS に依存しないであるために、このようなデータベースにまたがるツールを構築する使用できます。
+

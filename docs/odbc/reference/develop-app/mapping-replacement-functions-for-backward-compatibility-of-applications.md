@@ -22,6 +22,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 461f41eb5f8ae7481b65d293b0c3a619b59e7f9c
@@ -482,3 +483,4 @@ SQLGetStmtOption(hstmt, SQL_GET_BOOKMARK, TargetValuePtr)
   
 ### <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
  ODBC 3 時にします。*x* ODBC 2 を使用するアプリケーション*。x*ドライバー呼び出し**SQLSetStmtAttr** SQL_UB_VARIABLE に SQL_ATTR_USE_BOOKMARKS 属性を設定するにドライバー マネージャーが、基になる ODBC 2 で SQL_UB_ON に属性を設定します*。x*ドライバー。
+

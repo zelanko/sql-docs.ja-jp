@@ -23,6 +23,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f9de00042d81ac74bbda54be2060a331cf1ac3ad
@@ -75,3 +76,4 @@ BOOL ConfigTranslator(
 |変換オプションを取得します。|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |翻訳者を選択します。|[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|  
 |翻訳オプションの設定|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|
+

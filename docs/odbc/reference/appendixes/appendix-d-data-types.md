@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a543430479a33953e087fd50c91f7f2a307fc204
@@ -63,3 +64,4 @@ ODBC データ型の 2 つのセットを定義します。 SQL データ型と 
 -   [データを C から SQL データ型に変換します。](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)  
   
  ODBC データ型の詳細については、次を参照してください。 [ODBC でのデータ型](../../../odbc/reference/develop-app/data-types-in-odbc.md)です。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。
+

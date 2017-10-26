@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6875fa4ac03511b57239deadac748da1c37a0114
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  Oracle ODBC アクセスのトラブルシューティングを行う 7.x と Oracle8 RDBMS サーバーで必要があることを確認する、基になる SQL * Net および Oracle プロトコルのアダプターが正しくインストールされています。 これを行うには、ユーティリティを使用して、Oracle が提供 Nettest.exe Orawin\Bin ディレクトリにします。  
   
  含む、Nettest がインストールされている SQL のみを使用して、選択したサーバーにログオンしようとする単純なユーティリティ * Net の Oracle クライアントの一部であるソフトウェアです。 ログイン名を求められたら、パスワード、および TNS 接続文字列。 Oracle クライアントが正しくインストールされている場合、単が表示されます「Ping 成功します」 ログインが成功しなかった場合は、データベース管理者に相談する必要があります。
+

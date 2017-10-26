@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd665c63873ba8331290ddeae4ad91137ef1e3c7
@@ -82,3 +83,4 @@ ms.lasthandoff: 09/09/2017
 3.  適用可能なデータ ソース フィールドを変更し、[ok] をクリックします。  
   
  このダイアログ ボックスで情報の変更が完了したら、odbc データ ソース アドミニストレーターは、レジストリ情報を更新します。
+

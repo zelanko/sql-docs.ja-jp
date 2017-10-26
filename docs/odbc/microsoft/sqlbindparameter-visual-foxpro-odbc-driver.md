@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e449fd186255d508724754b2038b8f2233d6300e
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  バッファーを SQL ステートメントにパラメーター マーカーに関連付けます。 Visual FoxPro ODBC ドライバーで指定された入力パラメーターをサポートしている、 *fParamType*引数。  
   
  詳細については、次を参照してください。 [SQLBindParameter](../../odbc/reference/syntax/sqlbindparameter-function.md)で、 *ODBC プログラマ リファレンス*です。
+

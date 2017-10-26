@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cbcc75d7a527104ced19727797e282b63af2a6ae
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  SQL_ALL_EXCEPT_LIKE が返されます、検索可能な列で、バイトのカウンター、Double、1 つの時間の長いと短い形式のデータ型。 (LIKE の機能は、値を比較を実行して、ODBC 標準の変換関数を使用する文字に変換することによって実現できます)。  
   
  Microsoft Excel ドライバーを使用すると、ODBC 型名が返されます、TYPE_NAME 列によって返されるの**SQLGetTypeInfo**です。
+

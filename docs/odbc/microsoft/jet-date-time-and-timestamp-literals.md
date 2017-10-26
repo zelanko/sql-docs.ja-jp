@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c1a98ca0b68198dada19e4ac81f8637798a99b95
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 -   時刻リテラルの {t '*値*'} ここで、 *valu*"hh:mm:ss"形式では、e  
   
  タイムスタンプのリテラルの {ts'*値*'} ここで、 *valu*電子メールの形式は"- yyyy-mm-dd hh:mm:ss [. f。..]"です。
+

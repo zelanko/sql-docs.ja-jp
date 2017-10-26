@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3cd7f827ecfc367536654b9ad825302f4dba9fcf
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLSpecialColumns**|テーブル内の行を一意に識別する列の最適なセットを取得します。|  
 |**SQLStatistics**|1 つのテーブルとインデックス、またはテーブルに関連付けられているタグ名に関する統計情報の一覧を取得します。 ドライバーは、情報の結果セットとしてを返します。|  
 |**SQLTables**|内のパラメーターで指定されたテーブル名の一覧を返します、 **SQLTables**ステートメントです。 パラメーターが指定されていない場合は、現在のデータ ソースに格納されているテーブル名を返します。 ドライバーは、情報の結果セットとしてを返します。<br /><br /> 列挙型の呼び出しでは、リモート ビュー、またはローカル パラメーター化されたビューの結果セットのエントリは表示されません。 ただしへの呼び出し**SQLTables**一意テーブルの名前指定子は、一致を見つけるこのようなビューには、存在する場合、その名前を持つです。 これにより、API を新しいテーブルを作成する前に名前の競合を確認します。<br /><br /> パブリック シノニムが TABLE_OWNER 値と共に返される""です。<br /><br /> SYS またはシステムによって所有されているビューは、システム ビューとして識別されます。|
+

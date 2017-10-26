@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 26d4afc99e13e8abd5579a01b461eb6df2a05571
@@ -32,3 +33,4 @@ Microsoft Office アプリケーションを使用して、または SQL API を
 |Microsoft Access、Microsoft Excel または Word|[Microsoft Office から Visual FoxPro データにアクセスします。](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)|  
 |C または C++ アプリケーション|[SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)<br /><br /> [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)|  
 |Visual Basic アプリケーション|[Visual FoxPro ODBC ドライバーを使用してアプリケーションを使用して Visual Basic](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)|
+

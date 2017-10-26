@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b12ba1b5b8c70e6ab0f7efe6f0811984411a6022
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  関数は、 **SQLBindParam**特殊なケースです。 **SQLBindParam**が重複している機能です。 これは、ODBC 2 ではありません*.x*関数が、Open Group および ISO 規格に存在する関数。 この関数によって提供される機能はのによって完全に包含されています。 **SQLBindParameter**です。 ドライバー マネージャーがへの呼び出しをマップするため、 **SQLBindParam**に**SQLBindParameter**基になるドライバーが ODBC 3 の場合*。x*ドライバー。 ただし、ときに、基になるドライバーは、ODBC 2*.x*ドライバー、ドライバー マネージャーはこのマッピングを実行していません。
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eb3d75a78a5eaa516921e561cb2d34786804d182
@@ -25,3 +26,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="obtaining-descriptor-handles"></a>処理記述子を取得します。
 アプリケーションへの呼び出しの出力引数としての明示的に割り当てられた記述子ハンドルを取得する**SQLAllocHandle**です。 呼び出すことによって暗黙的に割り当てられた記述子ハンドルを取得**SQLGetStmtAttr**です。
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f477169cfc2f4912763ca90a38112104b237f9bd
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 |*szTableOwner*|唯一の有効な引数*szTableOwner*所有者名をサポートするドライバーは NULL です。 *SzTableOwner*を NULL に設定すると、すべてのテーブルが返されます。 TABLE_OWNER 列に NULL が返されます。|  
 |*szTableQualifier*|TABLE_QUALIFIER 列で**SQLTables**ディレクトリへのパスを取得します。|  
 |*SzTableType*|DBASE ファイルを"TABLE"はサポートされている唯一のテーブル型です。|
+

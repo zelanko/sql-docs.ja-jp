@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9099d9a84fb79132249c74d1d24cc240bcf8aae0
@@ -65,3 +66,4 @@ ODBC Paradox ドライバーは、Paradox データ型を ODBC SQL データ型�
 |timestamp|値が、Paradox ドライバーによって TIMESTAMP 列に挿入し、列から取得した後で、取得した値によって異なる場合が値が挿入される 1 秒程度で丸め処理を行うためです。|  
   
  データ型に複数の制限事項は含まれて[データ型の制限事項](../../odbc/microsoft/data-type-limitations.md)です。
+

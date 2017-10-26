@@ -24,6 +24,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8eefb9897492d0b6550b2f3ee80b07119e184b43
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLBrowseConnect**、データ ソースとやり取りしながら、接続文字列が完了します。  
   
  **SQLConnect**接続文字列を使用しませんを使用して**SQLConnect**は正確に 3 つのキーワード/値ペアの接続文字列を使用して接続するのと似ています (データ ソース名とは、必要に応じて、ユーザー ID とパスワード)。.
+

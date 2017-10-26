@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 16369d96931bd2b01d644756ab7e1e22fd325a85
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
  もう 1 つのアプリケーションの削除行 11 および 101 を今すぐとします。 カーソルが行 11 を取得しようとすると、その発生する形の穴をこの行のキーを持つ行が存在しないためこれは、キーセット ドリブンの動作です。 カーソルが 101 行を取得しようとすると、カーソルが検出されません、行のキーがあるないため、行が不足していること。 代わりに、構成していた行 102 が取得されます。 これは、動的カーソルの動作です。  
   
  キーセットのサイズが結果セットのサイズに等しい場合に、混合カーソルはキーセット ドリブン カーソルと同じです。 キーセットのサイズが 1 に等しい場合に、混合カーソルは dynamic カーソルと同じです。
+

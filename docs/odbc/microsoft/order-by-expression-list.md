@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b64ad53abb02d04077548a1b4483d89307b0a5a0
@@ -33,3 +34,4 @@ ORDER BY a+b,c+d,e
 ```  
   
  集合関数または set 関数を含む式で順序付けは許可されません。
+

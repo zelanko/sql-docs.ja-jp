@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e9f19c26cf77e0f5cfbff8a8ebad193ba9e9cdf2
@@ -77,3 +78,4 @@ bad_number:
 -   **エラー処理**DBMS が、SQL 通信領域、または SQLCA によるアプリケーションのプログラムを実行時のエラーを報告します。 前のコード例では、最初の埋め込まれた SQL ステートメントは、含める SQLCA がします。 これは、プログラムに含める SQLCA 構造体、またはプリコンパイル済みを示しています。 これは、機能は、プログラムは、DBMS によって返されたエラーを処理するたびに必要です。 WHENEVER しています.GOTO ステートメントは、特定のラベルを使用しているときにエラーを分岐に発生するエラー処理コードを生成するプリを指示します。  
   
 -   **単一選択**データを返すために使用するステートメントは単一の SELECT ステートメントです。 つまり、1 行のデータのみを返します。 そのため、コード例を宣言したり、しないカーソルを使用します。
+

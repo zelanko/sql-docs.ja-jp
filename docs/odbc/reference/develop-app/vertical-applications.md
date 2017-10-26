@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a3f4f8eca8309cb40b6ef9d2a7f9baac77c05f84
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  垂直方向のアプリケーションでは、スクロール可能なカーソルやトランザクションなどの特定の機能では、通常必要なためすべて Dbms ほとんどサポートします。 代わりに、限られた一連の Dbms の間で高い相互運用できるように、傾向があります。 通常、垂直方向アプリケーション開発者は、市場の大規模な分数を表し、残りの部分を無視するそれらの Dbms をサポートするために選択します。 これらのテストを削減する Dbms および製品のサポート コストを特定のドライバーをサポートするためもできます。  
   
  垂直方向のアプリケーションでは、既知の Dbms のセットをサポートできますがので、場合によって、格納されるドライバー固有または DBMS に固有のコード。 ただし、このようなコードは、最適なを最小限にとどめるが維持するために余分な時間が必要です。
+

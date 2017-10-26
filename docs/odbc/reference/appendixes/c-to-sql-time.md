@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6f1a59c15d2ebf1866d4543fa89662888154d4da
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
  C 時のデータが文字 SQL データに変換されると、結果の文字データは、"*hh*:*mm*:*ss*"の形式です。  
   
  ドライバーは、C データ型であり、データ バッファーのサイズが時間 C データ型のサイズであると見なされますの時刻からデータを変換するときに、長さ/インジケーターの値を無視します。 長さ/インジケーター値に渡されます、 *StrLen_or_Ind*引数**SQLPutData**とで指定したバッファー内の*StrLen_or_IndPtr* で引数**SQLBindParameter**です。 データ バッファーを指定した、 *DataPtr*引数**SQLPutData**と*ParameterValuePtr*引数**SQLBindParameter**.
+

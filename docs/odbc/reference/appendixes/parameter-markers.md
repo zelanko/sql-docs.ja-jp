@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c2c8708c18abee3609fc0b01f6ccd2e0362e5706
@@ -45,3 +46,4 @@ SQL 92 仕様に従って、アプリケーションは、次の場所にパラ�
 -   引数として、*セット関数リファレンス*  
   
  パラメーター マーカーの詳細については、SQL 92 仕様を参照してください。 パラメーターの詳細については、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)です。
+

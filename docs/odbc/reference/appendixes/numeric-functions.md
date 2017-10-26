@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f41ae1e8ad665da3db472941ee47afebefa63dd3
@@ -63,3 +64,4 @@ ms.lasthandoff: 09/09/2017
 |**SQRT (** *float_exp* **)** (ODBC 1.0)|平方根を返します*float_exp*です。|  
 |**TAN (** *float_exp* **)** (ODBC 1.0)|タンジェントを返します*float_exp*ここで、 *float_exp*角度をラジアン単位で表されます。|  
 |**TRUNCATE (** *numeric_exp*、 *integer_exp***)** (ODBC 2.0)|返します*numeric_exp*に切り捨て*integer_exp*小数点の右側に配置します。 場合*integer_exp*が負の値、 *numeric_exp*に切り捨てられます (& m); #124*integer_exp*(& a) #124; 小数点の左側の桁数。|
+

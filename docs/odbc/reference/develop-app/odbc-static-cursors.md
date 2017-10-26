@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aaddef08bfea9e1a1820727743e5212557d823d4
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  SQL_ATTR_ROW_STATUS_PTR ステートメント属性によって指定された行の状態配列では、任意の行の SQL_ROW_SUCCESS、SQL_ROW_SUCCESS_WITH_INFO、または SQL_ROW_ERROR を含めることができます。 更新、削除、またはカーソルがこのような変更を検出できると仮定すると、カーソルによって挿入された行の SQL_ROW_UPDATED、SQL_ROW_DELETED、または SQL_ROW_ADDED を返します。  
   
  静的カーソルは通常、コピーを作成または、結果セット内の行をロックによって実装または、スナップショットは、結果セットです。 行ロックを行うには比較的簡単ですが、同時実行制御が大幅に削減の欠点があります。 コピーを作成するとにより、同時実行性に大きくと独自の更新、削除、変更を追跡する、カーソルを使用し、コピーを変更することで挿入します。 ただし、コピーはコストが増大してそのデータが他のユーザーによって変更されると、基になるデータから分岐できます。
+

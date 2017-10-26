@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 558789a4f435e9fc54176b1423d71369f6b4cc22
@@ -39,3 +40,4 @@ Microsoft ODBC のデスクトップ データベース ドライバーでは、
 |timestamp|TIMESTAMP データ型は、CONVERT 関数によってそれ自体に変換できません。|  
 |TINYINT|TINYINT 値は常に符号付きではありません。|  
 |長さ 0 の文字列|DBASE、Excel、Paradox、または Textdriver 使用すると、長さ 0 の文字列を列に挿入実際には NULL が挿入、代わりにします。|
+

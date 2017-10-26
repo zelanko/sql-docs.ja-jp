@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0ea30c211e3cfd66acf1588ef9ca2a45fd1037d1
@@ -89,3 +90,4 @@ SQLCloseCursor(hstmt);
  一部のドライバーでは、これらの制限は適用されません。 存在したり、呼び出すことによって制限は適用されませんを調べたり、相互運用可能なアプリケーションが想定するか、必要があります**SQLGetInfo** SQL_GETDATA_EXTENSIONS オプションを使用します。  
   
  アプリケーションに文字またはバイナリ データ列のすべてのデータが必要がない場合、ネットワーク トラフィックが減少 DBMS に基づいたドライバーの属性を設定して、SQL_ATTR_MAX_LENGTH ステートメント、ステートメントを実行する前にします。 これは、任意の文字またはバイナリ列に返されるデータのバイト数を制限します。 たとえば、列には、長いテキストのドキュメントが含まれているとします。 この列を含むテーブルを参照するアプリケーションは、各ドキュメントの最初のページのみを表示する必要があります。 このステートメント属性をシミュレートできるは、ドライバーで、ただし、これを行う必要はありません。 具体的には、アプリケーションは、文字またはバイナリ データの切り捨てを希望する場合にする必要がありますバインド小さなバッファー列に**SQLBindCol**し、データの切り捨て、ドライバーを使用できます。
+

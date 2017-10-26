@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e561aab3359acb1f236aea38e76da33289e630ef
@@ -58,3 +59,4 @@ ms.lasthandoff: 09/09/2017
  たとえば、Visual FoxPro ODBC ドライバーは、見つかりませんでした。 ファイル employee.dbf と、次のエラー メッセージが返す可能性があります。  
   
  "[*Microsoft*] [*ODBC Visual FoxPro ドライバー*] 'employee.dbf' ファイルが存在しない"
+

@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 55a10004936cc2333eca14fd66123b929e8b9e5c
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  コミットまたはロールバック、トランザクションは、明示的に呼び出すか**SQLEndTran**または自動コミット モードで動作して一部のデータ ソース接続ですべてのステートメントでのすべてのカーソルを閉じると発生します。 詳細についてで SQL_CURSOR_COMMIT_BEHAVIOR および SQL_CURSOR_ROLLBACK_BEHAVIOR 属性を参照してください、 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)関数の説明。
+

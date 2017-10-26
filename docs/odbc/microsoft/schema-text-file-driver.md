@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b16b1cc455afd9f1f6b95d99d23bf2b3afe44d20
@@ -25,3 +26,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="schema-text-file-driver"></a>スキーマ (テキスト ファイル ドライバー)
 スキーマには、テーブルの形式、oem メーカーを使用して、ソース ファイルが書き込まれるかどうか、テーブルの最初の行が列名を格納するかどうかを決定列の種類、スキャンする行の数を含む、データ ソースの各テーブル (テキスト ファイル) に関する情報が含まれていますかANSI コードページと各列の名前、データ型、および幅。
+

@@ -22,6 +22,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9e1624febc9b53c654c1b01f5aafb601b97b3cbf
@@ -46,3 +47,4 @@ DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUser
  キーワードと値のペアで**SQLDriverConnect**特定構文規則に従う必要があります。 キーワードとその値を含めないで、 **{} ()、;?\*=! @**文字です。 値、 **DSN**キーワードは、空白のみ含めることはできませんし、先頭の空白を含めることはできません。 レジストリの文法のためのキーワードおよびデータ ソース名が円記号を含めることはできません (\\) 文字です。 スペースはキーワード/値ペア内の等号 (=) を使用できません。  
   
  **FILEDSN**キーワードへの呼び出しで使用することができます**SQLDriverConnect**をデータ ソースの情報を含むファイルの名前を指定する (を参照してください[接続を使用してファイル データ ソース](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)、このセクションで後述)。 **SAVEFILE**への呼び出しによって正常な接続のキーワードと値のペアが行われた .dsn ファイルの名前を指定するキーワードを使用できる**SQLDriverConnect**は保存されます。 ファイルのデータ ソースの詳細については、次を参照してください。、 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)関数の説明。
+

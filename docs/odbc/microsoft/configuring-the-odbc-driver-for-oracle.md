@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 64e6dfe9f31eb983170f08e9fcd3e0705ba9ae62
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
 -   **タブに関する**ODBC コンポーネントのインストール ファイルを一覧表示します。  
   
  使用することができます、データ ソースを追加した後、 **ODBC データ ソース アドミニストレーター**ダイアログ ボックスを使用するデータ ソースへのアクセスを構成します。 データ ソースを選択し、編集、または情報を確認するには、タブのいずれかをクリックします。
+

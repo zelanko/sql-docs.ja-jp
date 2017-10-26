@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1a9afffd67b839b36e663404048ac741e068b015
@@ -63,3 +64,4 @@ ms.lasthandoff: 09/09/2017
 |**領域 (** *カウント* **)** (ODBC 2.0)|成る文字列を返します*カウント*スペースです。|  
 |**部分文字列 (** *string_exp*、*開始*、長さ**)** (ODBC 1.0)|派生した文字列を返します*string_exp*で指定された文字位置から始まる、*開始*の*長さ*文字です。|  
 |**UCASE (** *string_exp* **)** (ODBC 1.0)|文字列を以下にするを返します*string_exp*、すべて小文字を大文字に変換します。|
+

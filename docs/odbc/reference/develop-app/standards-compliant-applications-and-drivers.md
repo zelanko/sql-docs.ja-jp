@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1aba299d163aaf9ec14d86740e5d8aa91ddb7b3b
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
 -   ISO CLI、ODBC 3 に合うように*.x*ヘッダー ファイルへの呼び出しで使用される情報の型のエイリアスを含める**SQLGetInfo**です。 標準に準拠したアプリケーションは、これらの別名を使用して、ODBC 3 ではなく*.x*情報の種類。 詳細については、次のトピックを参照してください。[ヘッダー ファイル](../../../odbc/reference/develop-app/header-files.md)です。  
   
 -   標準に準拠したアプリケーションでは、サポートするすべての機能は、ドライバーでは動作でサポートされていることを確認してください。 SQL_SCROLLABLE と設定に SQL_ATTR_CURSOR_SCROLLABLE ステートメント属性を設定する SQL_INSENSITIVE または SQL_SENSITIVE SQL_ATTR_CURSOR_SENSITIVITY ステートメント属性は、標準のオプション機能として利用可能な機能ODBC 3 に含まれていませんが、*.x*コア レベルおよび可能性がありますでサポートされていないすべての ODBC 3*.x*ドライバー。 標準に準拠したアプリケーションでは、これらの機能を使用する場合、ドライバーでは動作をサポートしていることを確認する必要があります。
+

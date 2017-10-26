@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e091bf31e034eaabb9c87931bc6b128f5bdeba84
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  \*pcbValue **SQLGetData**返す可能性があります 2 倍の数文字を実際に使用できる Jet 4.0 データベースで 510 文字より長く ANSI データをバインドする場合。 以下の 510 文字値では、実際の cbValue を返します。
+

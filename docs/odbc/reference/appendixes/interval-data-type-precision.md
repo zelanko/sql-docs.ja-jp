@@ -22,6 +22,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dc397e2aade6d016a647f1caf00a91fad48ad8e1
@@ -39,3 +40,4 @@ Interval データ型の有効桁数には、有効桁数、間隔の有効桁�
  2 番目のフィールドを持つ任意の間隔データ型が、*秒の有効桁数*です。 これは、秒の値の小数部では許可の 10 進数です。 これは、有効桁数が小数点の前に数字の数を示す他のデータ型と異なる。 Interval データ型の秒の有効桁数が、小数点の数字の数。 たとえば、秒の有効桁数は 6 に設定されている場合番号 123456 小数フィールドでは解釈.123456 と番号 1230.001230 として解釈されるようです。 他のデータ型のこの呼びますスケールします。 間隔の秒の有効桁数は、記述子の SQL_DESC_PRECISION フィールドに含まれます。 SQL 間隔の値の秒の小数部のコンポーネントの有効桁数がどのような C 間隔の構造体に格納できるよりも大きい場合はドライバーで定義されている SQL の間隔の秒の小数部の値が丸められますまたは C に変換すると切り捨てかどうか間隔の構造体。  
   
  SQL_DESC_TYPE フィールドが SQL_INTERVAL に設定されている SQL_DESC_CONCISE_TYPE フィールドは、interval データ型に設定されているときに、SQL_DESC_DATETIME_INTERVAL_CODE が interval データ型のコードに設定されているとします。 SQL_DESC_DATETIME_INTERVAL_PRECISION フィールドは自動的に第 2 の既定の間隔先頭の精度に設定し、SQL_DESC_PRECISION フィールドは自動的に 6 の既定の間隔 (秒) の有効桁数に設定します。 これらの値のいずれかの情報が適切でない場合、アプリケーションを呼び出すことによって、記述子フィールドに明示的に設定する必要があります**SQLSetDescField**です。
+

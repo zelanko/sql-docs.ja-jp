@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 29d7759aa941a04014a3ed87ac75c5794ef2ad29
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |PAGES|NULL は常に返されます。|  
   
  一意性に基づくフィルター処理は、(、 *fUnique*引数)。 *FAccuracy*パラメーターは無視されます。
+

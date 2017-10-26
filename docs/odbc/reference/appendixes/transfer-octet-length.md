@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 763f6fdd2790de695e1e2307cbcac4e0ed3018ae
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_GUID|16 (GUID 構造体のサイズ)。|  
   
  [a] の変数の型の列またはパラメーターの長さを判断できないのは、ドライバー場合、SQL_NO_TOTAL が返されます。
+

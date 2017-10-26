@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b997bfd1cc338f9c7a9dbb4b1b5b1ce851e71072
@@ -57,3 +58,4 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
 |SQL_NO_DATA|以上のデータを使用でした。 アプリケーションの呼び出し**SQLGetDiagRec**または**SQLGetDiagField**追加情報を取得します。 クラス 02xxx 内の 1 つまたは複数のドライバーの定義済みの状態レコードが返される可能性があります。 **注:** Odbc 2* 。x*、これは、コードが SQL_NO_DATA_FOUND という名前が返されます。|  
 |SQL_NEED_DATA|実行時にパラメーターのデータが送信されたときより多くのデータが必要なまたは、追加の接続情報が必要です。 アプリケーションの呼び出し**SQLGetDiagRec**または**SQLGetDiagField**に存在する場合、追加の情報を取得します。|  
 |SQL_STILL_EXECUTING|非同期的に起動された関数が実行中です。 アプリケーションの呼び出し**SQLGetDiagRec**または**SQLGetDiagField**に存在する場合、追加の情報を取得します。|
+

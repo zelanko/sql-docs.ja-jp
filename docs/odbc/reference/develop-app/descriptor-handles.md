@@ -27,6 +27,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 99b1b3dc2eabd38aea148ad5ba946d7dd0da857d
@@ -50,3 +51,4 @@ A*記述子*SQL ステートメントのパラメーターまたは結果セッ�
  ODBC でのほとんどの操作は、アプリケーションによって記述子の明示的な使用せずに実行できます。 ただし、記述子は、いくつかの操作の便利なショートカットを提供します。 たとえば、アプリケーションがバッファーの 2 つの異なるセットからデータを挿入しようとします。 バッファーの最初のセットを使用するのには繰り返し呼び出すことが**SQLBindParameter**のパラメーターにバインドして、**挿入**ステートメントと、ステートメントを実行します。 バッファーの 2 番目のセットを使用するのには、このプロセスを繰り返しますが。 または、バインディング記述子が 1 つのバッファーの最初のセットにし、別の記述子にバッファーの 2 番目のセットをそのセットアップでした。 バインドのセットの間には、アプリケーションは単に呼び出します**SQLSetStmtAttr**し APD としてステートメントを使用して、正しい記述子を関連付けます。  
   
  記述子の詳細については、次を参照してください。[型の記述子](../../../odbc/reference/develop-app/types-of-descriptors.md)です。
+

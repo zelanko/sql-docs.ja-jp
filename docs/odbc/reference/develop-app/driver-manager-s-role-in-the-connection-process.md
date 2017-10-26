@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 32a6629892ad9667b7d56a6bb6752c68001dddc9
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
  ドライバー マネージャーは、環境ハンドルがロックされます (*henv*)、運転免許を呼び出す前に**SQLAllocHandle**と**SQLFreeHandle**とき*HandleType*に設定されている**sql_handle_dbc として**です。  
   
  アプリケーションを呼び出すと**SQLDisconnect**、ドライバー マネージャー呼び出し**SQLDisconnect**ドライバーにします。 ただし、アプリケーションがドライバーに再接続する場合に読み込まれているドライバーに任せます。 アプリケーションを呼び出すと**SQLFreeHandle** sql_handle_dbc としてオプションを使用して、ドライバー マネージャーを呼び出す**SQLFreeHandle**ドライバーにします。 他の接続で、ドライバーを使用しない場合、ドライバー マネージャーは、呼び出し**SQLFreeHandle** sql_handle_env として使用してドライバーのオプションを選択し、ドライバーをアンロードします。
+

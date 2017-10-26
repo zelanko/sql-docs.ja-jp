@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b49962bfce3474269b4d9a91dee74212b0d02234
@@ -46,3 +47,4 @@ Save-SqlMigrationReport [ -MigrationType OLTP ] [ -Server server -Database datab
  -FolderPath パラメーターで指定したフォルダーには、Tables と Stored Procedures という名前の 2 つのフォルダーが作成されます。 対象のオブジェクトがテーブルの場合、レポートは Tables フォルダー内に生成されます。 ストアド プロシージャの場合は、レポートは Stored Procedures フォルダー内に生成されます。  
   
   
+

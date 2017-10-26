@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3ae017de17892595dac94a0dd4bbb843d6d5f658
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
  アプリケーション自体では、オプティミスティック同時実行制御を実装する場合は、行を読み取る SQL_CONCUR_READ_ONLY を SQL_ATTR_CONCURRENCY ステートメント属性を設定します。 行のバージョンを比較し、行バージョン列が認識していない場合は呼び出し**SQLSpecialColumns**この列の名前を決定する SQL_ROWVER オプションを使用します。  
   
  アプリケーションを更新または SQL_CONCUR_LOCK (書き込みアクセスするために、行) を実行して同時実行を増やすことで、行を削除、**更新**または**削除**ステートメントを**場所**バージョンを指定または行の値を句は、アプリケーションで読み取られるときに必要があります。 その後、行が変更された場合、ステートメントは失敗します。 場合、**場所**句が行を一意に識別されない、ステートメント可能性がありますも更新、またはその他の行を削除以外の場合は行のバージョンでは、行、常に一意に識別する、行の値は行を一意に識別、主キーが含まれる場合にのみです。
+

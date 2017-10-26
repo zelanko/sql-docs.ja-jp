@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4b14b5374cedece38295bac840a72acae5895ca8
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  この時点では使用する一般的な**SQLGetInfo**ドライバーの機能を検出します。 詳細については、次を参照してください。[使用するデータベース機能を検討して](../../../odbc/reference/develop-app/considering-database-features-to-use.md)です。  
   
  すべてのアプリケーションを使用して、ステートメント ハンドルを割り当てる必要があります**SQLAllocHandle**、多くのアプリケーションで、カーソルの種類などのステートメント属性を設定して**SQLSetStmtAttr**です。 詳細については、次を参照してください。[ステートメント ハンドルの割り当て](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md)と[ステートメント属性](../../../odbc/reference/develop-app/statement-attributes.md)です。
+

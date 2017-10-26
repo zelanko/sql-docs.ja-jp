@@ -22,6 +22,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 367062f5e671b366771b1a04f129b8e312f48cca
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
 -   ドライバーは、1 つだけのアクティブなステートメントをサポートする場合、結果の残りの部分を設定および位置指定を実行する前に、キャッシュから現在の行セットを変わりませんカーソル ライブラリのフェッチを更新または delete ステートメント。 その後、アプリケーションが結果セットのメタデータを返す関数を呼び出す場合 (たとえば、 **SQLNumResultCols**または**SQLDescribeCol**)、カーソル ライブラリには、エラーが返されます。  
   
 -   場合、更新プログラムを実行するたびに自動的に更新されるタイムスタンプ列を含むテーブルの列の位置指定更新または削除ステートメントが実行される後続のすべての位置指定更新または削除ステートメントは失敗タイムスタンプ列がある場合バインドされています。 これは、カーソル ライブラリを作成するステートメントが正確には更新する行を識別しません、検索結果を更新または削除するために発生します。 Timestamp 列の検索結果のステートメントで値には、timestamp 列の自動的に更新された値はありません。
+

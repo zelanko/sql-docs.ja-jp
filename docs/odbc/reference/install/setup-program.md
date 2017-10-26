@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 30637bacfb73d56528233ea13c4c6daeabecf814
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  インストールの量を行うことも、セットアップ プログラムによっては、インストーラー DLL での呼び出し機能によって異なります。 DLL のインストーラーには、ODBC の個々 のコンポーネントをインストールする機能が含まれています。 セットアップ プログラムを呼び出すだけ**SQLInstallDriverManager**、 **SQLInstallDriverEx**、または**SQLInstallTranslatorEx**インストーラーのパスを取得するための DLL で、コンポーネントがインストールされると、コンポーネントの概要情報をレジストリに追加するディレクトリ。 これらの関数がファイルを実際にはコピーしないでください。セットアップ プログラムはこの情報を使用して、これらの関数の引数で行われます。  
   
  インストーラーの DLL には、ODBC コンポーネントを削除する関数も含まれています。 セットアップ プログラム呼び出し**SQLRemoveDriverManager**、 **SQLRemoveDriver**、または**SQLRemoveTranslator**内のインストーラーに、コンポーネントの使用状況をデクリメントするための DLL の数、レジストリと、コンポーネントの新しい使用状況カウントが 0 になった場合は、コンポーネントに関するすべての情報をレジストリから削除します。 これらの関数が、コンポーネントのファイルを実際には削除しないでください。新しい使用状況カウントが 0 になる場合はこのセットアップ プログラムによって行われます。
+

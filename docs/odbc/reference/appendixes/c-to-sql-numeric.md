@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2cbdbbd3da828d5a995dbd9bff9c6b95aed1420a
@@ -72,3 +73,4 @@ ms.lasthandoff: 09/09/2017
  [b]"n/a"場合は、ドライバーが必要に応じてを返す SQL_SUCCESS_WITH_INFO と 01S07 小数部の切り捨てがある場合にです。  
   
  ドライバーは、数値の C データ型からデータを変換するときに長さ/インジケーター値を無視し、データ バッファーのサイズが数値の C データ型のサイズであると見なされます。 長さ/インジケーター値に渡されます、 *StrLen_or_Ind*引数**SQLPutData**とで指定したバッファー内の*StrLen_or_IndPtr* で引数**SQLBindParameter**です。 データ バッファーを指定した、 *DataPtr*引数**SQLPutData**と*ParameterValuePtr*引数**SQLBindParameter**.
+

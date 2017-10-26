@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3aba3d69d8bbb90b1296bf821b6552d25a05b7b2
@@ -60,3 +61,4 @@ SQLSetStmtOption(StatementHandle, fOption, vParam)
  アプリケーションを呼び出すと**SQLSetStmtAttr** SQL_ATTR_USE_BOOKMARKS を SQL_UB_ON ODBC 3 に設定する*.x*ドライバー、SQL_ATTR_USE_BOOKMARKS ステートメント属性が SQL_UB_FIXED に設定します。 SQL_UB_ON は、SQL_UB_FIXED として同じ定数です。 ドライバー マネージャーは、を通じて SQL_UB_FIXED をドライバーに渡します。 ODBC 3 SQL_UB_FIXED は廃止されて*.x*が、ODBC 3*.x*ドライバーは ODBC 2 と連動するを実装する必要があります*。x*固定長のブックマークを使用するアプリケーション。  
   
  ODBC 3*.x*ドライバー、ドライバー マネージャーがチェックされなくなるかどうかを*オプション*SQL_STMT_OPT_MIN と SQL_STMT_OPT_MAX、間、または SQL_CONNECT_OPT_DRVR_START よりも大きいです。
+

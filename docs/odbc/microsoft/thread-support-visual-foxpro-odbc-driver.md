@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cd540c727f1e8a77dbb6d8201715c213ff688909
@@ -34,3 +35,4 @@ Visual FoxPro ODBC ドライバーは、スレッド セーフです。 環境�
  ドライバーは、プログレッシブ フェッチを使用すると、データをフェッチするのに別のスレッドを使用します。 データ ソースのプログレッシブ フェッチを使用するのには、選択、**バック グラウンドでデータをフェッチ**チェック ボックスをオン、 [ODBC Visual FoxPro セットアップ ダイアログ ボックス](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)キーワードを使用して、BackgroundFetch 属性は、接続または文字列。 マルチ スレッド アプリケーションからドライバーを呼び出す場合は、バック グラウンドでフェッチを使用しないでください。 接続文字列キーワードの属性については、次を参照してください。[接続文字列を使用して](../../odbc/microsoft/using-connection-strings.md)です。  
   
  スレッドの詳細については、 **SQLCancel**を参照してください[SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md)で、 *ODBC プログラマ リファレンス*です。
+

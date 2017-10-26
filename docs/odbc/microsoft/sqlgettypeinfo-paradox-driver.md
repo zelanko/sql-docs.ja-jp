@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1c95d4c4519b420324e9ec1364d2ac9f352ba346
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  によって生成されるテーブルの型 (TYPE_NAME) の名前が返される**SQLGetTypeInfo**データ ソースによって最もよく使用される名前になります。  
   
  SQL_ALL_EXCEPT_LIKE が返されます、検索可能な列で、バイトのカウンター、Double、1 つの時間の長いと短い形式のデータ型。 (値を ODBC 標準の変換関数を使用する文字に変換することにより、LIKE の機能を実現できますと比較を実行します)。
+

@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8754e568c166113a0812878ef8bc91a196776100
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
 -   [割り当てと解放記述子](../../../odbc/reference/develop-app/allocating-and-freeing-descriptors.md)  
   
 -   [取得および記述子フィールドを設定します。](../../../odbc/reference/develop-app/getting-and-setting-descriptor-fields.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c9392f5ccc17497b6f2c185b22d7cdd9c4873120
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 -   [C または C++ アプリケーションで Visual FoxPro ODBC ドライバーの使用](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)  
   
 -   [Microsoft Office から Visual FoxPro データにアクセスします。](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)
+

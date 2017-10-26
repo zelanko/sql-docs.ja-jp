@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 075d6ddd515e06091e875cc1123295a555bf7a90
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="native-error"></a>ネイティブ エラー
 正のネイティブ エラー コードは、デスクトップ データベース ドライバーによって生成されます。 負のエラー コードは、Microsoft Jet によって生成されます。 詳細については、次を参照してください。、 *Microsoft Jet データベース エンジン プログラマ ガイド*です。
+

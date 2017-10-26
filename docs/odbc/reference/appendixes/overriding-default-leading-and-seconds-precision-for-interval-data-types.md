@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1ce549be1e3222f41615e5935418cf3e02e767a4
@@ -46,3 +47,4 @@ ARD の SQL_DESC_TYPE フィールド設定されている場合に、datetime �
  アプリケーションを呼び出す場合**SQLGetData** datetime または C 型の間隔にデータを返す、既定の間隔の主要な有効桁数と間隔の秒の有効桁数を使用します。 いずれかの既定値が許容されない場合、アプリケーションを呼び出す必要があります**SQLSetDescField**いずれかの記述子フィールドを設定または**SQLSetDescRec** SQL_DESC_PRECISION を設定します。 呼び出し**SQLGetData**が必要な*TargetType* SQL_ARD_TYPE の記述子フィールドの値を使用するのです。  
   
  ときに**SQLPutData**が呼び出されると、先頭の有効桁数と間隔 (秒) 有効桁数は、実行時データ パラメーターまたは列に対応する記述子レコードのフィールドから読み取ら APD のフィールドの呼び出しのためには、間隔**SQLExecute**または**SQLExecDirect**、または呼び出しのために ARD フィールド**SQLBulkOperations**または**SQLSetPos**です。
+

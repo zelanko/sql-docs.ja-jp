@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 308e1ad6f2d99a0a6b7e73d8a82ac62362fea9a2
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/09/2017
 6.  呼び出し**SQLParamData**のすべての列のデータ、送信されたことを示すためにもう一度です。 ドライバーが SQL_NEED_DATA と、次の実行時データ列の一意の値を返します、データが送信されていないすべての実行時データ列がある場合アプリケーションは、手順 5 を返します。 すべての実行時データ列のデータが送信された場合、行のデータはデータ ソースに送信します。 **SQLParamData**返し SQL_SUCCESS または SQL_SUCCESS_WITH_INFO が返す任意の SQLSTATE を**SQLBulkOperations**または**SQLSetPos**返すことができます。  
   
  後に**SQLBulkOperations**または**SQLSetPos** SQL_NEED_DATA を返しますあり、データが最後の実行時データ列を完全に送信される前に、ステートメントで状態のデータの必要があります。 この状態で、アプリケーションはのみ呼び出すことができます**SQLPutData**、 **SQLParamData**、 **SQLCancel**、 **SQLGetDiagField**、または**SQLGetDiagRec**; 他のすべての関数を返す SQLSTATE HY010 (関数のシーケンス エラーです)。 呼び出す**SQLCancel**ステートメントの実行をキャンセルし、以前の状態を返します。 詳細については、次を参照してください。[付録 b: ODBC 状態遷移表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)です。
+

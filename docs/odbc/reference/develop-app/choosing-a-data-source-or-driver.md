@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f7263f7814e4ab286d1fd678604b3f84a45108f
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 -   **特定の DBMS に 1 回だけにアクセスします。** たとえば、ODBC 関数を呼び出すことによってデータを取得するスプレッドシートがあります、**ドライバー**キーワードを特定のドライバーを識別します。 ドライバー名は、そのドライバーを持っている任意のユーザーに意味のあるであるため、スプレッドシートをそれらのユーザー間で渡すことができます。 スプレッドシートにデータ ソース名が含まれている場合は、各ユーザーがスプレッドシートを使用する同じデータ ソースを作成する必要があります。  
   
 -   **特定のドライバーにアクセスできるすべてのデータベースのシステムを参照しています。** 詳細については、次を参照してください。 [SQLBrowseConnect による接続](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md)、このセクションで後述します。
+

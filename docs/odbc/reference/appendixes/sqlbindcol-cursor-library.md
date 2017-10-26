@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cf5a445725a72a517b0ea779ea1fc547e55cb803
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
  カーソル ライブラリ呼び出しをサポートする**SQLBindCol**ブックマーク列をバインドします。  
   
  ODBC 2 を使用場合します。*x*ドライバー、カーソル ライブラリで SQLSTATE HY090 が返されます (無効な文字列長またはバッファー長) と**SQLBindCol**ブックマーク列のバッファーの長さを 4 に等しくない値に設定すると呼びます。 ODBC 3 を使用するときに*.x*ドライバー、カーソル ライブラリにより、バッファーのサイズを変更します。
+

@@ -24,6 +24,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3b1ee296ea292be7287c2cd4a8e93c9e33cb04bb
@@ -53,3 +54,4 @@ DSN=XYZ Corp;
  ユーザーは、データ ソースを選択し、ドライバー マネージャーがそのデータ ソースを指定する接続文字列を構築して、ドライバーに渡します。 ドライバーは、必要なその他の情報のユーザーを要求し、ことができます。  
   
  ドライバーが、ユーザーを要求する条件はによって制御されます、 *DriverCompletion*フラグ以外の場合は、常に確認する、必要に応じての確認、またはメッセージを表示せずにオプションがあります。 このフラグの詳細については、次を参照してください。、 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)関数の説明。
+

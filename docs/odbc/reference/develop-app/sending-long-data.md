@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1f2fad149692bf76c118837daf05e0b77ebf4c38
@@ -49,3 +50,4 @@ Dbms 定義*長いデータ*任意の文字または文字で 254 文字など�
  後に**SQLExecute**または**SQLExecDirect** SQL_NEED_DATA を返しますあり、データが最後の実行時データ パラメーターに完全に送信される前に、ステートメントで状態のデータの必要があります。 アプリケーションがのみ呼び出すことができます、ステートメントは、データの必要がある状態では、 **SQLPutData**、 **SQLParamData**、 **SQLCancel**、 **SQLGetDiagField**、または**SQLGetDiagRec**; 他のすべての関数を返す SQLSTATE HY010 (関数のシーケンス エラーです)。 呼び出す**SQLCancel**ステートメントの実行をキャンセルし、以前の状態を返します。 詳細については、次を参照してください。[付録 b: ODBC 状態遷移表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)です。  
   
  実行時にデータを送信するの例は、次を参照してください。、 [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)関数の説明。
+

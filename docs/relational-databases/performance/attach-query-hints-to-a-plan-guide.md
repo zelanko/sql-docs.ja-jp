@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e6d6f9200e590a2f9a9fdaf63536d884aa186175
@@ -33,3 +34,4 @@ ms.lasthandoff: 06/22/2017
  また、INDEX、FORCESCAN、および FORCESEEK のテーブル ヒントをクエリ ヒントとして指定できます。 クエリ ヒントとして指定すると、これらのヒントはインライン テーブルまたはビュー ヒントと同じように動作します。 INDEX ヒントは、指定したインデックスのみを使用して、参照されているテーブルやビューのデータにアクセスするよう、クエリ オプティマイザーに指示します。 FORCESEEK ヒントは、インデックスのシーク操作のみを使用して参照先テーブルやビューのデータにアクセスするよう、オプティマイザーに指示します。 これらのヒントによってプラン ガイド機能が拡張され、プラン ガイドを使用するクエリをさらに最適化することができます。  
   
   
+

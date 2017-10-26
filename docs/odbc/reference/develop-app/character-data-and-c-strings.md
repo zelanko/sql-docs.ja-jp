@@ -24,6 +24,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c786c1ce1ea3457da20d4f50c54ea7b797c70c1b
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
  アプリケーションやドライバー、文字データを保持するためによく C 文字列 (文字の null で終わる配列) を使用して、これを行う必要はありません。 C では、文字データがまた (null 終了あり) なしの文字の配列を個別に渡された長さ/インジケーター バッファーのバイト長として扱われますことができます。  
   
  -Null で終わる非配列内の文字データを保持できるバイト長が個別に渡されるためは、文字データに null 文字を埋め込むことが可能です。 ただし、ODBC 関数の動作でもは未定義とかどうか、ドライバーこれを正しく処理ドライバー固有の仕様はします。 したがって、相互運用可能アプリケーションでは、バイナリ データとして埋め込まれた null 文字を含めることができる文字データが常に処理します。
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b8f7497cb6b36602908443ab4fd9bdeb592ce8af
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_TXN_ISOLATION|SQL_TXN_ISOLATION は SQL_TXN_READ_COMMITTED では常にします。|  
   
  [Microsoft Access ドライバーでは、1] は、アトミック トランザクションはサポートされていません。 値が書き込まれる時間と、トランザクションはコミット時間の間、有限の遅延が存在する Microsoft Access ドライバーを使用してトランザクションをコミットするときにディスクにします。 この遅延は、Microsoft Jet エンジンに特有の遅延によって決定されます。 ページのタイムアウトはできません、最小値よりも小さい PageTimeout オプションを設定したその値を下回る場合でもです。 その結果、あるデータをコミットするという保証はありません、安定した遅延の間に変更を行うためです。
+

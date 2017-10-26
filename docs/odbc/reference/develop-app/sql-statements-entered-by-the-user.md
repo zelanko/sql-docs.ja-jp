@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b234123c01d4bdf4590c000b996a4febe4ad485e
@@ -53,3 +54,4 @@ if ((rc1 == SQL_ERROR) || rc1 == SQL_SUCCESS_WITH_INFO) {
 ```  
   
  この手法では、アプリケーションのコーディング; 簡略化します。アプリケーションには、SQL ステートメントを作成して、ステートメントの有効性を確認するデータ ソースが依存しています。 十分に複雑な SQL を公開するグラフィカル ユーザー インターフェイスの作成が困難になっているため、SQL ステートメントのテキストを入力するユーザーに依頼するだけと、望ましい代替可能性があります。 ただし、SQL だけでなく、クエリ対象データ ソースのスキーマを知っているユーザーが必要です。 一部のアプリケーションでは、ユーザー基本的な SQL ステートメントを作成し、また使用する、ユーザーが変更できるテキスト インターフェイスを提供するのグラフィカル ユーザー インターフェイスを提供します。
+

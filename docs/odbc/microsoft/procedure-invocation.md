@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd42836285c29e36e6bb64ebe594df570876ff6e
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  プロシージャ名には、ダッシュが含まれている場合、名前は逆引用符 (') で区切る必要があります。  
   
  前のステートメントを使用してパラメーター化クエリを呼び出すことができます。
+

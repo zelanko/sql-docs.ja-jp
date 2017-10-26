@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a80ef1756ca2d106b7a786609fb3bbce9b9539e4
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  ステートメント ハンドルのメモリを割り当て、ステートメント ハンドルで指定した接続に関連付けます*hdbc*です。 ドライバー マネージャーのメモリを割り当てると、ドライバーには、この呼び出しを渡す、 *hstmt*構造体。  
   
  詳細については、次を参照してください。 [SQLAllocStmt](../../odbc/reference/syntax/sqlallocstmt-function.md)で、 *ODBC プログラマ リファレンス*です。
+

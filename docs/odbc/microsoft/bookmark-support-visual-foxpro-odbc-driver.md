@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 50b8d192a0487a921e75a05145511441dc98b53b
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 Visual FoxPro ODBC ドライバーには、単純なブックマークがサポートしています。 呼び出すと[SQLGetInfo](../../odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md) 、SQL_BOOKMARK_PERSISTENCE で*情報の種類*、戻り値は、SQL_BP_SCROLL です。  
   
  ブックマークの詳細については、次を参照してください。[ブックマーク (ODBC)](../../odbc/reference/develop-app/bookmarks-odbc.md)です。
+

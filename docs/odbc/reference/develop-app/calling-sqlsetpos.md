@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 434031a496faae19ee37b8273341cc0ede6d0313
@@ -46,3 +47,4 @@ SQLSetPos(hstmt, iRow, fOption, fLock);
 3.  アプリケーションを呼び出すと**SQLSetStmtAttr**ドライバー マネージャーの設定を SQL_ATTR_ROW_STATUS_PTR を設定するには、 *fSetPosError*と等しい値を True です。  
   
 4.  アプリケーションを呼び出すと**SQLSetPos**で*fSetPosError* SQLSTATE HY011 の SQL_ERROR が true の場合、ドライバー マネージャーに等しいかどうかを発生させます (属性はここで設定することはできません) ことを示すアプリケーション呼び出そうとしました**SQLSetPos**行の状態のポインターを変更した後、呼び出しの前に**SQLFetchScroll**です。
+

@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 04e952a79e026697592f8412c48eb2e065da18df
@@ -46,3 +47,4 @@ ODBC アーキテクチャには、4 つのコンポーネントがあります�
 -   [ドライバー](../../odbc/reference/drivers.md)  
   
 -   [データ ソース](../../odbc/reference/data-sources.md)
+

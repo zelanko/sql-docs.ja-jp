@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 74410e39c16c2239471f3f2d328bf29a39dc7cec
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  カーソル名をアクティブなステートメント ハンドルに関連付けます*hstmt*です。 **SQLSetCursorName**のため Visual FoxPro ODBC ドライバー API には含まレベル ODBC API のコア機能の一部である以外の場合は、ドライバーが位置指定更新をサポートしていないためには、他の API 関数と共に使用することはできません。  
   
  詳細については、次を参照してください。 [SQLSetCursorName](../../odbc/reference/syntax/sqlsetcursorname-function.md)で、 *ODBC プログラマ リファレンス*です。
+

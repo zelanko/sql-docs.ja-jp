@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a5e2fb7cf9f54177ce357058e51e541b6a442379
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  パイプ文字 (&#124;) バック引用符で囲まれた名前が囲まれているかどうかどうか、列名では使用できません。  
   
  テキストのドライバーを使用すると、ドライバーは、列名が指定されていない場合、既定の名前を提供します。 たとえば、ドライバーは、最初の列 F1、F2、2 列目となどを呼び出します。
+

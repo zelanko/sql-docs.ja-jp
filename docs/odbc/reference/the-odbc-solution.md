@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c7288fcb9fad7b2567f7fec16cf0f407b2f6b2e4
@@ -60,3 +61,4 @@ ms.lasthandoff: 09/09/2017
      ODBC に 2 つの関数は、アプリケーションでは、ドライバー機能を判断でき、DBMS サポートように (**SQLGetInfo**と**SQLGetFunctions**) ドライバーと DBMS に関する一般的な情報を返す機能と関数の一覧、ドライバーをサポートします。 ODBC では、API と SQL の文法準拠レベル、ドライバーでサポートされる機能の広範な範囲を指定するも定義します。 詳細については、次を参照してください。[準拠レベル](../../odbc/reference/develop-app/conformance-levels.md)です。  
   
      ことが重要 ODBC が公開される機能のすべての共通のインターフェイスを定義することに注意してください。 このため、アプリケーションが機能に固有のコード、DBMS 固有コードではなく、含まれているし、これらの機能を公開するすべてのドライバーを使用できます。 これの利点の 1 つは、アプリケーションが DBMS によってサポートされる機能を備えています。 ときに更新する必要はありません。代わりに、更新されたドライバーがインストールされているときに、アプリケーションに自動的に機能を使用そのコードがドライバー固有または DBMS に固有ではない、機能に固有であるためです。
+

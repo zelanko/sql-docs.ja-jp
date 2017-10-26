@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
@@ -141,3 +142,4 @@ ms.lasthandoff: 08/03/2017
      イベントの再生では、データをキャプチャしたデータベース環境のテスト コピーを設定して、キャプチャしたイベントを実際のシステムで発生したとおりに再生できます。 この機能は、Distributed Replay Utility または [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]でのみ提供されます。 イベントの再生速度は、実際に発生したときと同じ速度にすることができます。また、システムに負荷を与えるためにできる限り高速にしたり、多くの場合に行われるように、一度に 1 ステップずつ再生して、各イベントの発生後にシステムを分析することもできます。 テスト環境で実稼動システムとまったく同じイベントを分析できるので、実稼動システムへの悪影響を防ぐことができます。 詳細については、「 [トレースの再生](../../tools/sql-server-profiler/replay-traces.md)」を参照してください。  
   
   
+

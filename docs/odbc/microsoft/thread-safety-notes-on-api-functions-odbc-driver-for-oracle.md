@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cc4a28976342768f5c7b2d1cfe8a1d3be6544306
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  Microsoft ODBC Driver for Oracle はスレッド セーフです。ただし、Oracle では、単一の接続で複数の同時実行ステートメントは使用はできません。 ドライバーは、この制限を強制します。 つまり、マルチ スレッド アプリケーションで、任意のスレッドがいつでも for Oracle ODBC ドライバーに呼び出すことができますが、ドライバー ブロックが同じ接続で、ドライバーから他のスレッド、元のスレッドが、ドライバーを離れるまでします。  
   
  ドライバーは、次の 2 つの異なる接続で 2 つのステートメントがある場合にブロックされません。 ただし、2 つのステートメントで 1 つの接続がある場合はブロックが発生する可能性です。
+

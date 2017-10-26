@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3cd82106bf81b5885f74adf6c1759883110ea913
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 5.  ドラッグして、テーブルの下半分デザイナーのクエリのフィールドを選択します。  
   
 6.  Microsoft のクエリを閉じます。 選択したデータは、Microsoft Excel スプレッドシートにインポートされます。
+

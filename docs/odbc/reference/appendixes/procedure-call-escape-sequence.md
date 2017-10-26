@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0ba89ae47d223ea17f02cb07976510d78ff3660e
@@ -73,3 +74,4 @@ ODBC では、プロシージャ呼び出しのエスケープ シーケンス�
  (プロシージャのパラメーターが空の文字列の場合は、プロシージャ、既定値、パラメーターに対して使用します。)  
   
  アプリケーションが呼び出すことができます、データ ソースには、プロシージャがサポートしていて、ドライバーは ODBC のプロシージャの呼び出し構文をサポートするかどうかを調べるに**SQLGetInfo** SQL_PROCEDURES 情報の種類とします。
+

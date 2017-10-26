@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 641c6b6324ccb0f12cb5b28bd25b06dc0fcc5029
@@ -30,3 +31,4 @@ Microsoft Excel ドライバーを使用すると、データ ソース テー�
  アプリケーションは、Microsoft Excel ドライバーを使用して Microsoft Excel データでの名前を付けて保存コマンドを実行、アプリケーションを新しいテーブルを作成し、新しいテーブルに保存するデータを挿入します。 挿入は、テーブルに、追加で発生します。 テーブルの他の操作は実行されませんは閉じて再度開くまでです。 表が閉じられると、後続の挿入できるため実行できませんは、読み取り専用テーブル。  
   
  Excel ドライバーを使用する場合は、値を更新することが、Microsoft Excel スプレッドシートに基づいているため、更新プログラムとは見なされません、Excel ドライバーで正式にサポートされているテーブルから行を削除できません。
+

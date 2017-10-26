@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f907cf8700a683988277e84b93f9fc3bdae11317
@@ -67,3 +68,4 @@ SQLExecDirect(hstmt, "{call PARTS_IN_ORDERS(?)}", SQL_NTS);
  データ ソースがプロシージャをサポートしているかどうかを決定するには、アプリケーションを呼び出す**SQLGetInfo** SQL_PROCEDURES オプションを使用します。  
   
  プロシージャの詳細については、次を参照してください。[プロシージャ](../../../odbc/reference/develop-app/procedures-odbc.md)です。
+

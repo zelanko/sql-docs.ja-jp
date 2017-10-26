@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cf5155a44827adb972881da17ac2bc05d92a0cd4
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
  結果のサイズであると、カーソル内の行の数は、設定、診断のヘッダーの SQL_DIAG_CURSOR_ROW_COUNT フィールドとして使用できます。 このフィールドの値が後でだけ定義されている**SQLExecute**、 **SQLExecDirect**、または**SQLMoreResult**が呼び出されています。 この数には、カウントの概数またはドライバーの機能によって、正確な数のいずれかを指定できます。 ドライバーのサポートを呼び出すことによって判断**SQLGetInfo**カーソルの属性の種類の情報と SQL_CA2_CRC_APPROXIMATE または SQL_CA2_CRC_EXACT ビットがカーソルの型に対して返されるかどうかをチェックします。  
   
  動的カーソルの正確な行の数がサポートされていることはありません。 他の種類のカーソルでは、ドライバーは、真数または概数値の行カウントが両方をサポートできます。 ドライバーには、正確なもおおよそがサポートされている場合は、行カウントの種類の特定のカーソルに対して、SQL_DIAG_CURSOR_ROW_COUNT フィールドが、これまでにフェッチされる行の数が含まれています。 どのようなドライバーをサポートするのに関係なく**SQLFetchScroll**で、*操作*SQL_FETCH_LAST のにより SQL_DIAG_CURSOR_ROW_COUNT フィールドに正確な行の数を格納します。
+

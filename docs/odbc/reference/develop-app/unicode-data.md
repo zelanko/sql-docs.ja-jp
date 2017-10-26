@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 407a67c6c4d641366b1ffabef10b22a6931a2212
@@ -52,3 +53,4 @@ SQLBindParameter(StatementHandle, 1, SQL_PARAM_INPUT, SQL_C_TCHAR, SQL_WCHAR, Na
  Unicode のドライバーでは、SQL_CHAR を含む、ANSI データ型はサポートもする必要があります。 Unicode ドライバーで動作するアプリケーションは、SQL_CHAR にバインドした場合、ドライバー マネージャーは SQL_WCHAR に SQL_CHAR データをマップされません。 Unicode ドライバーでは、SQL_CHAR データを受け取る必要があります。  
   
  ドライバー マネージャーは、Unicode でドライバーおよび DSN 名を格納し、必要に応じて、ANSI にマッピングします。 文字を変換できませんでしたが既定の文字 sup によって表される場合は、Unicode 文字は、ANSI 文字 (ように、コンピューターのネイティブ コード ページではないコード ページから文字ドライバーと DSN 名で使用する場合に発生することができます) にマップすることはできません、システムによって plied です。
+

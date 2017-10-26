@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7d57b8ec52324dd4bec320b6179507ab3102e629
@@ -37,3 +38,4 @@ SQLBindCol(hstmt, 1, SQL_C_TYPE_DATE, &dsDate, 0, &DateInd);
  説明したように、[割り当てと解放バッファー](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)  セクションで、遅延のバッファーのアドレス必要があるまで有効なバッファーがバインド解除します。  
   
  具体的には禁止されている場合を除き、データ バッファーのアドレスは、null ポインターを指定できます。 ドライバーにデータを送信するために使用、バッファーのこれにより、バッファーに通常含まれる情報を無視するドライバーです。 ドライバーからのデータの取得に使用されるバッファーの場合、これが原因に値を返さないドライバー。 どちらの場合は、ドライバーは、対応するデータのバッファー長の引数を無視します。
+

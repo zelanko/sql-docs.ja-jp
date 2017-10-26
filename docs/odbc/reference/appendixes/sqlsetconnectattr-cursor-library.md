@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bf6a14b8215f981e5e0e9c0ca6e9b2e1a2269f65
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  アプリケーションを呼び出す必要があります**SQLSetConnectAttr**呼び出された後に、カーソル ライブラリの使用法を指定する**SQLAllocHandle**で、 *HandleType*割り当てるを sql_handle_dbc としての接続およびデータ ソースに接続する前にします。 アプリケーションを呼び出す場合**SQLSetConnectAttr** SQL_ATTR_ODBC_CURSORS 属性を持つ接続がアクティブであるときに、カーソル ライブラリ エラーが返されます。  
   
  接続に関連付けられているすべてのステートメントのカーソル ライブラリでサポートされているステートメント属性を設定するアプリケーションを呼び出す必要があります**SQLSetConnectAttr**とする前に、データ ソースに接続した後は、そのステートメント属性カーソルを開きます。 アプリケーションを呼び出す場合**SQLSetConnectAttr**ステートメントを持つ属性と、カーソルが開いている接続に関連付けられているステートメントで、ステートメント属性は適用されませんそのステートメントにカーソルが閉じられるまで、再度開きます。
+

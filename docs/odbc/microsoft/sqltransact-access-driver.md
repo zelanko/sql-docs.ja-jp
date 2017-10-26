@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 657d0324132b279300e2a61151c790f066e4a3f5
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  Microsoft Access ドライバーを使用すると指定してと SQL_ROLLBACK はサポートされて、 *fType*への呼び出しで引数**SQLTransact**です。  
   
  Microsoft Access ドライバーのセットアップまたは REPAIR_DB キーワードを使用して、[修復] オプションを使用して、影響を受けたデータベースを修復できるコミット処理でエラーが発生した場合、 **SQLConfigDataSource**関数。
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fc4385eecdc86c47ae9e0ade82520143ae892e0c
@@ -25,3 +26,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="sqlstate"></a>SQLSTATE
 データ ソースで発生したエラーの場合は、ODBC ドライバーは、返されたネイティブ エラーを適切な SQLSTATE にマップされます。 ドライバーまたは ODBC ドライバー、ドライバー マネージャーによって検出されたエラーまたはドライバー マネージャーが適切な SQLSTATE を生成します。
+

@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 667ed133862e0ea67f4f995520ead7b372fae74e
@@ -47,3 +48,4 @@ ODBC SQL データ型が日付の識別子。
  [c] これは、対応する C データ型のサイズです。  
   
  SQL データの日付が文字データに変換されると、結果の文字列は、"*yyyy*-*mm*-*dd*"の形式です。 この形式は Windows® 国設定の影響を受けません。
+

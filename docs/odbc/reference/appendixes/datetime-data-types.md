@@ -25,6 +25,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 92ab5f52282fddf89c48bef73fa7817684ae3496
@@ -44,3 +45,4 @@ ODBC 3*.x*、識別子、日付、時刻、および timestamp SQL データ型�
  呼び出しですべてのデータ型を要求するときに**SQLGetTypeInfo**、関数によって返される結果セットが格納されます両方 SQL_TYPE_DATE、SQL_TYPE_TIME、および SQL_TYPE_TIMESTAMP ODBC 3 で定義されている*.x*、SQL_DATE、SQL_TIME、および SQL_TIMESTAMP ODBC 2 で定義されています。*x*です。  
   
  方法により、ODBC 3*.x*ドライバー マネージャーが、日付、時刻、および timestamp データ型、ODBC 3 のマッピングを実行*.x*だけ必要なドライバーが認識**#defines** 91 の 92、および入力した日付、時刻、および timestamp C データ型の 93、 *TargetType*の引数**SQLBindCol**と**SQLGetData**または*ValueType*の引数**SQLBindParameter**、必要なだけが認識と**#defines** 91 92、93 の日付、時間、および timestamp SQL データ型が、で入力*ParameterType*の引数**SQLBindParameter**または*DataType*の引数**SQLGetTypeInfo**です。 詳細については、次を参照してください。 [Datetime データ型の変更](../../../odbc/reference/develop-app/datetime-data-type-changes.md)です。
+

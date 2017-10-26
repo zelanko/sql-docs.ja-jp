@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 06baaaff03f75cbf04da86527a25ea60755a473e
@@ -106,3 +107,4 @@ ms.lasthandoff: 09/09/2017
          (2)、ドライバーが適切な小数点以下桁数 (これも 0 にすることができます) を Y で文字列を丸めます、-2-x に結果を書き込みます  
   
          (3) ドライバーも切り捨てますも丸めますがだけ-2-x に Y の最初の LT 文字をコピー
+

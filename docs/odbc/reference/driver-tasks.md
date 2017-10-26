@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 331e3aee3a4a60cbfa1a1308b71da80bf9772f23
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 -   データを送信し、アプリケーションで指定されたデータ型を変換する場合など、データ ソースからのデータの取得。  
   
 -   ODBC SQLSTATEs DBMS 固有のエラーにマップします。
+

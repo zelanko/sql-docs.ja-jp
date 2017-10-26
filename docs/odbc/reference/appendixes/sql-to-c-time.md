@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b424acc8e42f94c23e793a8b811b0c2347a313a1
@@ -49,3 +50,4 @@ ODBC SQL データ型は、時間の識別子。
  [d] これは、対応する C データ型のサイズです。  
   
  時間 SQL データが文字データに変換されると、結果の文字列は、"*hh*:*mm*:*ss*"の形式です。 この形式は Windows® 国設定の影響を受けません。
+

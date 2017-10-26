@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5dcd41f599a6e57a55d05a8a869363ec70c5f756
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 |使用される値**IN**|式または式でパラメーター マーカーがある場合は、最初の値と同じ|  
 |使用されるパターン値**など**|VARCHAR|  
 |使用される、更新値**更新**|[更新] 列と同じ|
+

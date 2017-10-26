@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1b149b1e9df8338b5502d57e6e7eb355b66bcc3f
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 -   Interval データ型の後続の秒フィールドの秒フィールドの値が 0 ~ 59.9 でなければなりません (*n*), inclusive、場所* n *の数字の数が、秒の小数部の有効桁数です。  
   
 -   Datetime データ型の後続の秒フィールドの秒フィールドの値は 0 ~ 61.9 の間にする必要があります (*n*)、包含的な場所* n * 「9」の数を指定します値と数字* n *秒の小数部の有効桁数です。 (秒の範囲は、sidereal 時間の同期を維持するために最大で 2 つのうるう秒を許可する)。
+

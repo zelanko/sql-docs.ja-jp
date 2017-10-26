@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8a1eb337e91595b5be013067847f73c3de117e97
@@ -38,3 +39,4 @@ ODBC が関数を提供する ODBC 型識別子を基になる SQL データ型�
 -   ODBC で使用するためのデータ型の名前を定義しません**CREATE TABLE**と**ALTER TABLE**ステートメントです。 代わりに、アプリケーションがによって返される結果セットの TYPE_NAME 列で返される名前を使用する必要があります**SQLGetTypeInfo**です。 この理由は、する SQL のほとんどが一定の Dbms の間で、データ型の名前も異なります大幅です。 ドライバーを SQL ステートメントを解析し、標準的なデータ型の名前を DBMS に固有のデータ型の名前に置き換えるのではなく、ODBC には、まず DBMS 固有の名前を使用するアプリケーションが必要です。  
   
  なお**SQLGetTypeInfo**必ずしもについては説明しませんすべてのデータ型が、アプリケーションが発生することができます。 具体的には、結果セットには、直接サポートされていないデータ ソースのデータ型があります。 たとえば、ODBC カタログ関数によって返される結果セット内の列のデータ型の定義は、およびこれらのデータ型は、データ ソースでサポートされていない可能性があります。 結果セット内のデータ型の特性を判断するには、アプリケーションが呼び出す**SQLColAttribute**です。
+

@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4c42213c629c5fa79cd5c6522f4a36f29f36bd8c
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="sqlnodata"></a>SQL_NO_DATA
 ODBC 3 時にします。*x*アプリケーション呼び出し**SQLExecDirect**、 **SQLExecute**、または**SQLParamData** ODBC 2* 。x*検索の更新を実行またはデータ ソース、ドライバーでの任意の行には影響しませんステートメントを削除するドライバーが SQL_SUCCESS、いない SQL_NO_DATA を返す必要があります。 ODBC 2 時にします。*x*または ODBC 3* 。x* ODBC 3 を使用するアプリケーション*。x*ドライバー呼び出し**SQLExecDirect**、 **SQLExecute**、または**SQLParamData** ODBC 3、同じ結果にします*。x*ドライバーが SQL_NO_DATA を返す必要があります。
+

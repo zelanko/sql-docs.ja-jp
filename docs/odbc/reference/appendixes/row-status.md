@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8f164b8269e1150cdf7a85e486bcc3fd93a9411f
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   正常に使用して、データ ソースから行をフェッチと SQL_ROW_SUCCESS **SQLFetch**です。  
   
 -   SQL_ROW_UPDATED 行に位置指定の update ステートメントを実行するとします。
+

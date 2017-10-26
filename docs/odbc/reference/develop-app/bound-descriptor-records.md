@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d1ecc435a6b62d75527292ab8dc098e8cb121627
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  記述子が、APD の場合は、バインドされた各レコードは、バインドされたパラメーターを構成します。 入力パラメーターは、アプリケーションは、ステートメントを実行する前に SQL ステートメントで各動的パラメーター マーカーにパラメーターをバインドする必要があります。 出力パラメーター、アプリケーションは、パラメーターをバインドできません必要があります。  
   
  記述子は、ARD では、データベースのデータの行を記述するには、バインドされた各レコードは、バインドされた列を構成します。
+

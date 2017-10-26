@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6bebbe74b8ee9a7cf3ac09335af0d63c8f7186d9
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  指定された結果セットの現在のレコードの単一のフィールドの値を取得します。  
   
  詳細については、次を参照してください。 [SQLGetData](../../odbc/reference/syntax/sqlgetdata-function.md)で、 *ODBC プログラマ リファレンス*です。
+

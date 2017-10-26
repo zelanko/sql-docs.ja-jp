@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 38967637f505191a5ff353c13b4ebfbbe08e615a
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 -   APD の SQL_DESC_OCTET_LENGTH_PTR フィールドに null 値があり、ユーザーが、パラメーターは、文字の文字列は、ドライバーは、文字列が null で終わるであると仮定します。 出力の動的パラメーターに対してこのフィールドに null 値には、長さの情報を返すからドライバーができなくなります。 (SQL_DESC_TYPE フィールドが文字の文字列パラメーターを示していない場合、SQL_DESC_OCTET_LENGTH_PTR フィールドは無視されます。)  
   
  アプリケーションは、割り当てを解除できませんまたはフィールドとそれらを関連付けます時間と、ドライバーの読み取りまたは書き込みに時間の間の遅延のフィールドに使用される変数を破棄します。
+

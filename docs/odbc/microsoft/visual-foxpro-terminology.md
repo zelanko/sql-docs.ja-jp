@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7204f0e0185373d88606fb01a5d3382a23dd91a1
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
  Visual FoxPro には、レコードがテーブルに格納されます。 テーブルの各行は、レコードを表し、テーブルの列はレコードのフィールドを表します。 各 Visual FoxPro テーブルは .dbf 拡張子を持つ独自のファイルに格納されます。 Visual FoxPro テーブルは、データベースを関連付けることができます。  
   
  FoxPro バージョン 2 です。*x*テーブルがデータベースに関連付けられていません。
+

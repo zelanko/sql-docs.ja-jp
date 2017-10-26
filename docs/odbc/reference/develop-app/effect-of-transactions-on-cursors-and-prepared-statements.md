@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2533778f9b0e837ce59850d4f70a3c4545f8be60
@@ -62,3 +63,4 @@ ms.lasthandoff: 09/09/2017
  アプリケーション、特にスクリーン ベースのアプリケーションでユーザーが結果セットと更新プログラムの周囲をスクロールまたは行の削除は、コードがこの問題を回避するように注意する必要があります。  
   
  データ ソースでのトランザクションがコミットまたはロールバックされたときの動作方法を決定するには、アプリケーションを呼び出す**SQLGetInfo** SQL_CURSOR_COMMIT_BEHAVIOR と SQL_CURSOR_ROLLBACK_BEHAVIOR オプションを使用します。
+

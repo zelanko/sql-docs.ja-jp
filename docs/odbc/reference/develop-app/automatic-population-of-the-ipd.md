@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d637ddfebc0563ed2591740498d519f91e34321e
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  呼び出しでパラメーター マーカーを含む SQL ステートメントが準備した後に、ドライバーが、IPD のフィールドを設定します自動作成はサポートされているし、有効になっている、 **SQLPrepare**です。 アプリケーションが呼び出すことでこの情報を取得できます**SQLGetDescField**または**SQLGetDescRec**、または**SQLDescribeParam**です。 パラメーターに最も適切なアプリケーション バッファーをバインドするか、データ変換を指定する、アプリケーションは、情報を使用できます。  
   
  IPD の自動設定には、パフォーマンスの低下を生じる可能性があります。 アプリケーションをオフに SQL_FALSE (既定値) に SQL_ATTR_ENABLE_AUTO_IPD ステートメント属性をリセットすることで。
+

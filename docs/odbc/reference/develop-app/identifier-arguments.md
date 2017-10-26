@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: df3509e6b13d68858909d0739df1048b79fa8e45
@@ -40,3 +41,4 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "\"Accounts Payable\"", SQL_NTS, NULL, 0);
  引用符で囲まれた識別子は、Oracle で ROWID など、同じ名前の擬似列の場合は true。 列名を区別するために使用されます。 "ROWID"が、カタログ関数の引数で渡される場合がある場合に、関数は ROWID 擬似列を持つ機能します。 擬似列が存在しない場合、関数は"ROWID"列では動作します。 ROWID がカタログ関数の引数で渡されると場合、関数は、ROWID 列と連動します。  
   
  引用符で囲まれた識別子の詳細については、次を参照してください。[引用符で囲まれた識別子](../../../odbc/reference/develop-app/quoted-identifiers.md)です。
+

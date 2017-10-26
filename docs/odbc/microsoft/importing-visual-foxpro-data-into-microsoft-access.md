@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6bdf35fb9c9b7b4688aa7f5bf4173b2a6a9eefb5
@@ -45,3 +46,4 @@ Visual FoxPro データベースにインポートのオプションを使用し
  インポートした Visual FoxPro テーブル内のデータを操作するのに Microsoft Access を使用できます。 インポートするデータは、Visual FoxPro; に格納されているデータのスナップショットインポートされたデータに加えた変更は、Visual FoxPro データ ソースには送信されません。  
   
  Visual FoxPro データ ソースのデータを変更するを参照してください Microsoft Access で行った変更する場合は[クエリの実行および Microsoft Access からの Visual FoxPro データの更新](../../odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md)です。
+

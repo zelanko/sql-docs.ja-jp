@@ -22,6 +22,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 70c6dba19353cc503dc42b33640c18c4ee72caa9
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
 -   [一般的なエラー チェック](../../../odbc/reference/develop-app/general-error-checks.md)  
   
 -   [ドライバー マネージャーのエラーと警告のチェック](../../../odbc/reference/develop-app/driver-manager-error-and-warning-checks.md)
+

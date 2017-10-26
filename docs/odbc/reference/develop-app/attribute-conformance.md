@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9d615371a5bcf305158cb5f29c22a087110f95ac
@@ -106,3 +107,4 @@ ms.lasthandoff: 09/09/2017
  [2] の第 2 レベル インターフェイスに準拠して、ドライバーは SQL_CONCUR_READ_ONLY およびその他の少なくとも 1 つの値をサポートする必要があります。  
   
  [3] をレベル 1 インターフェイスに準拠して、ドライバーは SQL_CURSOR_FORWARD_ONLY およびその他の少なくとも 1 つの値をサポートする必要があります。 レベル 2 インターフェイスに準拠して、ドライバーはこのドキュメントで定義されたすべての値をサポートする必要があります。
+

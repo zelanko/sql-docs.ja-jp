@@ -21,6 +21,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cdd0b22d4e75e6e665dc07fd8e2be5bb2e178548
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 5.  DBMS では、アクセスの計画を実行して、ステートメントを実行します。  
   
  データベースへのアクセスが必要として、必要な時間の量の量、SQL ステートメントを処理するための手順が異なります。 SQL ステートメントを解析し、データベースへのアクセスをしないため、非常に迅速に行うことができます。 その一方は、CPU を大量に消費、最適化を処理し、システム カタログへのアクセスが必要です。 だけで複雑なクエリでは、オプティマイザーは何千もの同じクエリを実行するさまざまな方法を調べることがあります。 ただし、効率的でないクエリを実行するコストは非常に高いため、最適化に要した時間が増加したクエリの実行速度の回復は、複数のでは通常です。 これは、反復的なクエリを実行する同じのアクセスを最適化プランを繰り返し使用できる場合、さらに大きなです。
+

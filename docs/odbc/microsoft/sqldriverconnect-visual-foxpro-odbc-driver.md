@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 363a727cd209f7ed3a5994f353f1e21922fe00ca
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/09/2017
  データ ソース名が指定されていない場合、ドライバー マネージャーを求める情報 (の設定に応じて、 *fDriverCompletion*引数) して続行します。 詳細については、必要なは、Visual FoxPro ODBC ドライバーのプロンプト ダイアログが表示されます。  
   
  詳細については、次を参照してください。 [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md)で、 *ODBC プログラマ リファレンス*です。
+

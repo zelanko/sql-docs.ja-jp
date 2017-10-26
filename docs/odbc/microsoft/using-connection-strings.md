@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f95e0a2ed1b93e89254e5e357cc3889dc5817554
@@ -37,3 +38,4 @@ DSN=TasTrade;Exclusive=Yes
  属性のキーワードと、接続文字列に含めることができます値の一覧は、次を参照してください。 [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)です。  
   
  接続文字列の構文の完全な説明については、次を参照してください。 [SQLBrowseConnect](../../odbc/reference/syntax/sqlbrowseconnect-function.md)で、 *ODBC プログラマ リファレンス*です。
+

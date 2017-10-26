@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d91c7789fbcd0c4dc197f2da13b23c1da34666bb
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
 -   場合速度精度およびすべてのエラーよりも重要が小さいする可能性があります。 たとえば、会社が多くの小さい売り上げ高を行うことと、大規模な営業はまれであるとします。 開いているすべての売上の合計値を推定するトランザクションでは、Read Uncommitted 分離レベルを安全に使用可能性があります。 注文が開かれたり閉じられたりするは、その後、トランザクションが含まれますが、ロールバックこれらは一般的にも無効にし、ことが、このような順序を検出するたびにブロックされていないために、トランザクションがはるかに高速です。  
   
  詳細については、次を参照してください。[オプティミスティック同時実行制御](../../../odbc/reference/develop-app/optimistic-concurrency.md)です。
+

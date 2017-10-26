@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a99ea01cbd5a00ea4aa12e4b1461ca7f1ce9afa5
@@ -41,3 +42,4 @@ SQL ステートメントは、次の 5 つのカテゴリに疎分類できま�
 -   **管理ステートメント**これらは、データベースの管理の目的で使用する SQL ステートメント。 たとえば、 **GRANT**と**取り消す**です。  
   
  最初の 2 つのカテゴリ内の SQL ステートメントは、として総称*ステートメントの結果を生成する*です。 後者の 3 つのカテゴリ内の SQL ステートメントは、として総称*ステートメントの結果のない*です。 ODBC では、ステートメントの結果をもたらすだけを含むバッチのセマンティクスを定義します。 これらのセマンティクスは、大きく異なるし、データ ソース固有であるためです。 たとえば、オブジェクトを削除してを参照するか、同じバッチ内の同じオブジェクトを再作成するには、この SQL Server driver はサポートされません。 そのため、用語*バッチ*このマニュアルは結果を生成するのバッチのみを参照で使用されているステートメント。
+

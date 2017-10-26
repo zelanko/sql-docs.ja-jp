@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7d50d2c9ac987a623d3f25968c6246a735fe4f41
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="group-by-expression-list"></a>GROUP BY 式リスト
 GROUP BY 式のリストだけでなく、列名をサポートします。 GROUP BY 句が SELECT ステートメントの選択リストは、GROUP BY 句の式に含まれるのみまたは関数を設定します。
+

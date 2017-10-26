@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a96868755475c6fd72b2dd977375fbe0d88c22df
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
 4.  ドライバー マネージャーは、アプリケーション変数にアプリケーションをドライバー マネージャーは、ステートメント ハンドルを返します。  
   
  ステートメント ハンドルでは、ODBC 関数を呼び出すときに使用する内のどのステートメントを識別します。 ステートメント ハンドルの詳細については、次を参照してください。[ステートメント ハンドル](../../../odbc/reference/develop-app/statement-handles.md)です。
+

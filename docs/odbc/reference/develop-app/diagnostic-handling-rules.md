@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7cfd05e9c41fee1e0a753e2c4e4fa4f86db641b3
@@ -62,3 +63,4 @@ ms.lasthandoff: 09/09/2017
  1 つの ODBC コンポーネント、ドライバー マネージャー以外。  
   
 -   ネイティブのエラーに基づいて SQLSTATE を設定する必要があります。 ファイル ベースのドライバーとゲートウェイを使用しない DBMS に基づいたドライバーの場合は、ドライバーは SQLSTATE を設定する必要があります。 DBMS に基づいたドライバーのゲートウェイを使用する場合は、ドライバーまたは ODBC をサポートするゲートウェイのいずれかが、SQLSTATE を設定できます。
+

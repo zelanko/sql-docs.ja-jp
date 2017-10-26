@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ab8cb4066a8c5c7ab2e31401dd1e80d003d5b38
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  次の図は、ネットワーク ファイル サーバー上のファイル ベースのドライバー、データがローカルに存在する 1 つが存在する 2 つの異なる構成を示します。  
   
  ![ファイルの 2 つの構成 &#45; ベースのドライバー](../../odbc/reference/media/pr06.gif "pr06")
+

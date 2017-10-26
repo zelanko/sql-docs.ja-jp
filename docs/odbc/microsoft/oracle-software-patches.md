@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bab4a7bed2fdc63224fd7a2f86757d11375f2cd2
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Oracle では、現在のバージョンでバグを修正し、ソフトウェアの修正プログラムを使用して以前のバージョンにし、それら retrofits、ために、使用可能な最新の修正プログラムをダウンロードすることをお勧めします。 これは、Oracle サーバーのクライアント コンポーネントに特に当てはまります。 これらの更新プログラムのインストールに関する質問がある場合は、Oracle のサポートに問い合わせてください。
+
