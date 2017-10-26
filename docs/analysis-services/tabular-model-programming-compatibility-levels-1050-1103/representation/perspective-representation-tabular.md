@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 6fbef7caf08fe13a1f86e9797277c609b836bc5d
@@ -140,3 +141,4 @@ private void updatePerspective_Click(
  ただし、理解を使用する方法の作成およびパースペクティブ表現を操作するのには AMO を参照してください、AMO to Tabular サンプルのソース コードです。 このサンプルは、Codeplex から入手できます。 このコードに関する重要な注意事項: このコードは、ここで説明する論理的概念を補足するためにのみ提供されています。運用環境では使用しないでください。教育目的以外の目的にも使用しないでください。  
   
   
+

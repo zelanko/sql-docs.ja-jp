@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: e72d34abbe3291010d568d6a7fa7d4bfb23e774d
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  **RelationshipEndVisualizationProperties** 、要素、 **DefaultDetailsPosition**要素には詳細のコレクションの既定の詳細要素の位置が含まれています。 既定値の**false**使用する既定の詳細がないことを示します。  
   
   
+

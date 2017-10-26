@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4fe8eea6f5252adcf17f4c1f350c23042b2aeba6
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  **RelationshipEndVisualizationProperties** 、要素、 **CommonIdentifierPosition**要素には詳細のコレクション内の共通識別子要素の位置が含まれています。 既定値の**false**使用される共通識別子がないことを示します。  
   
   
+

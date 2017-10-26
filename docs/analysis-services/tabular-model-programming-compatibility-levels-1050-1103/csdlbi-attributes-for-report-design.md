@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: d0adb4ce534d0e70a309bf99b6e6a16479c931f3
@@ -79,3 +80,4 @@ ms.lasthandoff: 09/01/2017
 |**Kpi**<br /><br /> **KpiGoal**<br /><br /> **KpiStatus**|サブ要素|メジャー要素が KPI として使用されることを示します。 KPI サブ要素では、KpiGoal および KpiStauts 要素を使用して、関連する表示画像とターゲット範囲が定義されます。|  
   
   
+

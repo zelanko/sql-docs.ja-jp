@@ -15,6 +15,7 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9688a692d25d484b05bca88e0779d2812944f3af
@@ -123,3 +124,4 @@ Microsoft.AnalysisServices.Tabular.dll、せず Microsoft.AnalysisServices.dll �
 AMO および TOM の再配布は、使用、 **sql_as_amo.msi**インストール パッケージです。 AMO または TOM を呼び出すクライアント アプリケーションのセットアップ プログラムを作成する場合は追加**sql_as_amo.msi**用の実行可能にします。 これは、AMO と TOM クライアント ライブラリを再配布するためのサポートされている唯一の方法です。  
   
 パッケージは自己完結型であり、コードで AMO および TOM を呼び出すために必要なすべてのアセンブリを提供します。 SQL_AS_OLEDB.msi またはある SQL_AS_ADOMD.msi をなど、他のパッケージは、TOM プログラミング シナリオを具体的には必要ではありません。
+

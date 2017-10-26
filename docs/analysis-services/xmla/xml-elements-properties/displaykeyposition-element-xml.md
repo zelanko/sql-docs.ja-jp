@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 06526a6e7ccb25e4deefe0556c63622a491635be
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  **RelationshipEndVisualizationProperties** 、要素、 **DisplayKeyPosition**要素には詳細のコレクション内の表示キー要素の位置が含まれています。 既定値は、使用する表示キーがないことを示します。  
   
   
+

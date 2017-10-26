@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 95a50d5ed10e8714b50e33ac4e182ff208c4c840
@@ -143,3 +144,4 @@ ms.lasthandoff: 09/01/2017
  モデルでテーブルを評価し、常に個別のアイテムとして表示する必要のある詳細行を含むテーブルにテーブル動作プロパティを設定した後で、追加のプロパティまたは設定によってモデルをさらに最適化できます。  
   
   
+

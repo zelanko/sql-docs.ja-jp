@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 03122814773bd2e11b0ea1dc24b91b4c21a8f1a8
@@ -98,3 +99,4 @@ Analysis Services には、処理パフォーマンスが向上する 2 つま�
 |[テーブル モデル パーティションの処理 (SSAS テーブル)](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して配置済みテーブル モデルでパーティションを処理する方法について説明します。|  
   
   
+

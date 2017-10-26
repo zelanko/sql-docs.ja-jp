@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 8a0509c571af328e4f5a459dbcbc68e1672d00f4
@@ -102,3 +103,4 @@ private void AddPartition(
  ただし、AMO を使用して作成し、パーティションを操作する方法を理解するに表現する際に、AMO to Tabular サンプルのソース コード参照してください。 このサンプルは、Codeplex から入手できます。 このコードに関する重要な注意事項: このコードは、ここで説明する論理的概念を補足するためにのみ提供されています。運用環境では使用しないでください。教育目的以外の目的にも使用しないでください。  
   
   
+

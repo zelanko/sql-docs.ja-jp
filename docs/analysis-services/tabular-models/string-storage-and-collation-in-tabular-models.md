@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9009024f08b7c4a4bce3d6b57bd3231025b38a59
@@ -91,3 +92,4 @@ ms.lasthandoff: 09/01/2017
  通常、ソース データベースでの言語識別子と照合順序はテーブル モデルの列に値が格納される方法にほとんど影響しないかまったく影響しないことに注意してください。 例外は、ソース データベースが要求された値を変換またはフィルター選択する場合です。  
   
   
+

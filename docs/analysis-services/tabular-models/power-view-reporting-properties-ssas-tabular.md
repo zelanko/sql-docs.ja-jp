@@ -16,6 +16,7 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f57ef9048cc2028ed8e4b056c8120b96ddb29c95
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/01/2017
 |[Power View レポートのテーブル動作プロパティの構成 (SSAS テーブル)](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)|詳細行をより細かなレベルで公開するテーブル動作プロパティの構成方法を説明します。 テーブル動作プロパティの設定により、詳細行のグループ化動作を変更できます。また、タイル、カード、およびチャートのレイアウトを使用して、識別情報の適切な既定位置を設定できます。|  
   
   
+

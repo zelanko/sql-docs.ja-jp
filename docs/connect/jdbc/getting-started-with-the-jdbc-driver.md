@@ -14,6 +14,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: afd76c4ecd2fa1d2d85cb659896b68e2bc139c16
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 * [手順 1: Java の開発のための開発環境を構成します。](../../connect/jdbc/step-1-configure-development-environment-for-java-development.md)  
 * [手順 2: Java の開発用の SQL データベースを作成します。](../../connect/jdbc/step-2-create-a-sql-database-for-java-development.md)  
 * [手順 3: 概念実証の Java を使用して SQL に接続します。](../../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md)
+

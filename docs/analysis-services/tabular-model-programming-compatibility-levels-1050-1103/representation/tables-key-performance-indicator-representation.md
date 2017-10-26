@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 11a88bc42863076381cf2798a9bbc7c4a73f070e
@@ -231,3 +232,4 @@ private void addStaticKPI(object sender, EventArgs e)
  表現は、AMO を使用して作成し、主要業績評価指標を操作する方法を理解するには、AMO to Tabular サンプル; のソース コードを参照してください。具体的には次のソース ファイルで確認してください: AddKPIs.cs です。 このサンプルは、Codeplex から入手できます。 このコードに関する重要な注意事項: このコードは、ここで説明する論理的概念を補足するためにのみ提供されています。運用環境では使用しないでください。教育目的以外の目的にも使用しないでください。  
   
   
+

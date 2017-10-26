@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c351e2be7d1faf77542b68079b4f413e554e54f1
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/01/2017
 |[Power Pivot からのインポート (SSAS テーブル)](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)|このトピックでは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel ファイル (.xlsx) からメタデータおよびデータを抽出することにより新しいテーブル モデル プロジェクトを作成する方法について説明します。|  
   
   
+
