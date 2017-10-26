@@ -252,7 +252,7 @@ PARTITION
    
 **適用されます**: SQL Server (SQL Server 2008 以降) と Azure SQL データベースです。  
   
- SORT_IN_TEMPDB、MAXDOP、および DATA_COMPRESSION は、1 つのパーティションを再構築するときに指定できるオプションを示します (パーティション = * n *)。 XML インデックスは、単一のパーティションの再構築操作では指定できません。  
+ SORT_IN_TEMPDB、MAXDOP、および DATA_COMPRESSION は、1 つのパーティションを再構築するときに指定できるオプションを示します (パーティション =  *n* )。 XML インデックスは、単一のパーティションの再構築操作では指定できません。  
   
  DISABLE  
  インデックスを無効とマークし、[!INCLUDE[ssDE](../../includes/ssde-md.md)]で使用されないようにします。 どのインデックスも無効にできます。 無効になったインデックスのインデックス定義は、基になるインデックス データがなくてもシステム カタログに残ります。 クラスター化インデックスを無効にすると、基になるテーブル データをユーザーのアクセスができなくなります。 インデックスを有効にするには、ALTER INDEX REBUILD または CREATE INDEX WITH DROP_EXISTING を使用します。 詳細については、次を参照してください。[無効にするインデックスと制約](../../relational-databases/indexes/disable-indexes-and-constraints.md)と[Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md)です。  
@@ -357,7 +357,7 @@ FILLFACTOR = *fillfactor*
   
  詳細については、次を参照してください。[インデックスの SORT_IN_TEMPDB オプション](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)です。  
   
- IGNORE_DUP_KEY ** = ** {ON |オフ}  
+ IGNORE_DUP_KEY  **=**  {ON |オフ}  
  挿入操作で、一意のインデックスに重複するキー値を挿入しようとした場合のエラー応答を指定します。 IGNORE_DUP_KEY オプションは、インデックスが作成または再構築された後の挿入操作のみに適用されます。 既定値は OFF です。  
   
  ON  
@@ -372,7 +372,7 @@ FILLFACTOR = *fillfactor*
   
  旧バージョンと互換性のある構文では、WITH IGNORE_DUP_KEY は WITH IGNORE_DUP_KEY = ON と同じです。  
   
- STATISTICS_NORECOMPUTE ** = ** {ON |オフ}  
+ STATISTICS_NORECOMPUTE  **=**  {ON |オフ}  
  分布統計を再計算するかどうかを指定します。 既定値は OFF です。  
   
  ON  
@@ -408,7 +408,7 @@ FILLFACTOR = *fillfactor*
  
 **適用されます**: SQL Server (SQL Server 2014 以降) と Azure SQL データベースです。  
   
- オンライン** = ** {ON |**OFF** } \<rebuild_index_option に適用する >  
+ オンライン **=**  {ON |**OFF** } \<rebuild_index_option に適用する >  
  インデックス操作時に、基になるテーブルや関連するインデックスをクエリやデータ変更で使用できるかどうかを指定します。 既定値は OFF です。  
   
  XML インデックスまたは空間インデックスの場合、ONLINE = OFF だけがサポートされます。ONLINE を ON に設定すると、エラーが発生します。  
@@ -434,7 +434,7 @@ FILLFACTOR = *fillfactor*
 
 -  V12 で前に SQL データベースと SQL Server 2012 より前の SQL Server が許可されていない、`ONLINE`オプションをクラスター化インデックスの構築またはベース テーブルが含まれている場合は、操作を再構築**varchar (max)**または**varbinary (max)**列です。
 
-再開可能な** = ** {ON |**OFF**}
+再開可能な **=**  {ON |**OFF**}
 
 **適用されます**: SQL Server 2017、および Azure SQL データベース (機能が公開プレビュー) で始まる  
 
@@ -444,13 +444,13 @@ FILLFACTOR = *fillfactor*
 
  インデックスをオフは、操作は再開可能な状態ではありません。
 
-MAX_DURATION ** = ** *時間*[**分**] と共に使用**再開可能 = ON** (必要**ONLINE = ON**).
+MAX_DURATION  **=**  *時間*[**分**] と共に使用**再開可能 = ON** (必要**ONLINE = ON**).
  
 **適用されます**: SQL Server 2017、および Azure SQL データベース (機能が公開プレビュー) で始まる  
 
 時間を示します (分単位で指定された整数値)、再開可能なオンライン インデックス操作が一時停止する前に実行します。 
 
-ALLOW_ROW_LOCKS ** = ** { **ON** |オフ}  
+ALLOW_ROW_LOCKS  **=**  { **ON** |オフ}  
  
 **適用されます**: SQL Server (SQL Server 2008 以降) と Azure SQL データベースです。  
   
@@ -462,7 +462,7 @@ ALLOW_ROW_LOCKS ** = ** { **ON** |オフ}
  OFF  
  行ロックは使用されません。  
   
-ALLOW_PAGE_LOCKS ** = ** { **ON** |オフ}  
+ALLOW_PAGE_LOCKS  **=**  { **ON** |オフ}  
   
 **適用されます**: SQL Server (SQL Server 2008 以降) と Azure SQL データベースです。
   
@@ -477,7 +477,7 @@ ALLOW_PAGE_LOCKS ** = ** { **ON** |オフ}
 > [!NOTE]
 >  ALLOW_PAGE_LOCKS を OFF に設定した場合、インデックスを再構成することはできません。  
   
- MAXDOP ** = ** max_degree_of_parallelism  
+ MAXDOP  **=**  max_degree_of_parallelism  
  
 **適用されます**: SQL Server (SQL Server 2008 以降) と Azure SQL データベースです。  
   
@@ -502,7 +502,7 @@ ALLOW_PAGE_LOCKS ** = ** { **ON** |オフ}
 > [!NOTE]
 >  並列インデックス操作はすべてのエディションで使用できない[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
   
- COMPRESSION_DELAY ** = ** { **0** |*期間 [分]* }  
+ COMPRESSION_DELAY  **=**  { **0** |*期間 [分]* }  
  この機能は SQL Server 2016 以降で使用できます。  
   
  ディスク ベース テーブルでは、SQL Server を使用すると、圧縮された行グループに圧縮できる前に、遅延はデルタ行グループで閉じられた状態で、デルタ行グループがある必要があります (分) の最小数を指定します。 ディスク ベース テーブルの挿入を追跡および更新されないため時間個々 の行に SQL Server を適用の遅延が閉じられた状態で、デルタ行グループ。  
@@ -565,7 +565,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );  
 ```  
   
- オンライン** = ** {ON |**OFF** } \<single_partition_rebuild_index_option に適用 >  
+ オンライン **=**  {ON |**OFF** } \<single_partition_rebuild_index_option に適用 >  
  かどうか、インデックスまたは基になるテーブルのインデックス パーティションの再構築オンラインまたはオフラインを指定します。 場合**リビルド**はオンラインで実行 (**ON**) このテーブルのデータはクエリやデータの変更、インデックス操作中に使用します。  既定値は**OFF**です。  
   
  ON  
@@ -1177,8 +1177,8 @@ GO
   
 ## <a name="see-also"></a>参照  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [空間インデックス & #40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-spatial-index-transact-sql.md)   
- [XML インデックス & #40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-xml-index-transact-sql.md)   
+ [空間インデックス &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-spatial-index-transact-sql.md)   
+ [XML インデックス &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-xml-index-transact-sql.md)   
  [DROP INDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-index-transact-sql.md)   
  [インデックスと制約を無効にします。](../../relational-databases/indexes/disable-indexes-and-constraints.md)   
  [XML インデックス &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
