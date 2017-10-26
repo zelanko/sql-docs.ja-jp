@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 83b1db3be39a5472fd422f23955eff9bafb5265f
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/09/2017
  ドメインを .dqs ファイルにエクスポートします。 このコマンドによって **[データ ファイルにエクスポート]** ダイアログ ボックスが表示されます。 このコマンドは、ページ上部にあるメニュー バーの **[エクスポート]** メニューで、または [ドメイン リスト] ペイン内を右クリックすることで利用できます。 詳細については、「 [.dqs ファイルへのドメインのエクスポート](../data-quality-services/export-a-domain-to-a-dqs-file.md)」を参照してください。  
   
   
+

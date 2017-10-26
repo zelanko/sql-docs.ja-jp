@@ -17,6 +17,7 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 967a838712819e5bdcefe5f88907fe9047da0fa1
@@ -206,3 +207,4 @@ ms.lasthandoff: 09/26/2017
   
  標準解析は、各言語のデータのデータ型変換をサポートしており、データ形式が高速解析でサポートされていない場合に使用する必要があります。 オートメーション データ型変換 API の詳細については、 [MSDN ライブラリ](http://go.microsoft.com/fwlink/?LinkId=79427)にある「データ型変換 API」を参照してください。 
  
+

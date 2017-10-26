@@ -27,6 +27,7 @@ caps.latest.revision: 92
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: fb43bfdf7199604e4ab9d967481a7a9dcca881cb
@@ -348,3 +349,4 @@ ms.lasthandoff: 08/03/2017
 -   support.microsoft.com の技術記事「 [SSIS で Oracle 接続マネージャーを使用すると、"DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" というエラー メッセージが表示される](http://go.microsoft.com/fwlink/?LinkId=233696)」  
   
   
+

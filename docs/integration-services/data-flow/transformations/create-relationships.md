@@ -16,6 +16,7 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a9f511b91e0e085c07dcf4dfb7742514ddad6070
@@ -59,3 +60,4 @@ ms.lasthandoff: 08/03/2017
  [用語参照変換エディターと &#40; です。用語参照」 タブと &#41; です。](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
   
   
+

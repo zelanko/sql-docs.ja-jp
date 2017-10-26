@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e536bbaee8f9dd934f24504e8c1226c9db7db9de
@@ -68,3 +69,4 @@ Pooling=No
 [方法: Windows 認証を使用して接続する](../../connect/php/how-to-connect-using-windows-authentication.md)  
 [方法: SQL Server 認証を使用して接続する](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
   
+

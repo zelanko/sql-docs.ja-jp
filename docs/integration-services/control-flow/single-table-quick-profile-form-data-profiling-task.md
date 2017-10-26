@@ -18,6 +18,7 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 76de0987bec5d7886b41d2d415af2bd00e187f87
@@ -60,3 +61,4 @@ ms.lasthandoff: 08/03/2017
  [データ プロファイル タスク エディターと &#40; です。プロファイル要求 ページと &#41; です。](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   
   
+

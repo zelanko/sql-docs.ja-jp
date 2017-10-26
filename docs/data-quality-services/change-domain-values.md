@@ -16,6 +16,7 @@ caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3181deac2265f069531a37aebad7804a649310d9
@@ -139,3 +140,4 @@ ms.lasthandoff: 09/09/2017
  **[ドメイン値]** タブの各値テーブルに DQS_NULL という値が 1 つ含まれています。 データ ソース内の null は、値テーブルでは SQL_NULL として表示されます。 null に相当する値は、DQS_NULL のシノニムとして設定することができます。 これにより、null と null に相当する値がすべて DQS_NULL として処理されます。  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7da07e66203c9bcfb4a690ccb747ff9180df8db
@@ -25,3 +26,4 @@ ms.lasthandoff: 09/09/2017
 マイクロソフトは、お客様に最新の情報をご提供するため、この製品のオンライン ドキュメントを削除しました。 参照してください、 [Microsoft Developer Network (MSDN) での SQL Server ドライバー](https://msdn.microsoft.com/library/mt654049.aspx)詳細についてはします。  
   
 © 2016 Microsoft. All rights reserved. 
+

@@ -16,6 +16,7 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: 293e4a68eba8fa8cbc5a01773c948d5b56de1a91
@@ -107,3 +108,4 @@ ms.lasthandoff: 08/03/2017
          この変換を使用して更新と削除を適用する方法の例については、「 [変換先に変更を適用する](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)」を参照してください。  
   
   
+

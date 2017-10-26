@@ -35,6 +35,7 @@ caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
 ms.openlocfilehash: 21fdac9e8c4fffa0a87eee72e3587c2a3378ad66
@@ -581,3 +582,4 @@ Azure Data Lake 接続マネージャーを指定または ADLS アカウント�
  [Integration Services コンテナー](../../integration-services/control-flow/integration-services-containers.md)  
   
   
+

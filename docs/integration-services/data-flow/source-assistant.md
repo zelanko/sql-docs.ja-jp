@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9b7406edf9f7234db739730473772d77c42399ec
@@ -55,3 +56,4 @@ ms.lasthandoff: 09/26/2017
 |インストールされているもののみを表示する|インストールされているソースのみを表示するかどうかを指定します。|  
 |OK|変更を保存し、後続のダイアログ ボックスを開いてその他のオプションを構成する場合にクリックします。| 
   
+

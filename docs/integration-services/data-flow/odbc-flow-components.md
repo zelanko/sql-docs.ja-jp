@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bb47de9a618b4d83e961ff2e032861375b0d6c22
@@ -140,3 +141,4 @@ ODBC 3.8 仕様で規定されている 拡張 C 型はサポートされませ�
 -   [ODBC 入力先](../../integration-services/data-flow/odbc-destination.md)  
   
  
+

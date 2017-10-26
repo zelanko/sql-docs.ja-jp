@@ -15,6 +15,7 @@ f1_keywords:
 author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
 ms.openlocfilehash: cbc72958f992e0b5cae12cdfc8c0996378f9708c
@@ -53,3 +54,4 @@ Azure データ Lake Store ファイル システム タスクのコンポーネ
 - **AzureDataLakeDirectory:**をダウンロードするファイルを含む ADLS ソース ディレクトリを指定します。
 - **SearchRecursively:**再帰的にダウンロードするファイルのソース ディレクトリ内で検索するかどうかを指定します。
 - **LocalDirectory:**ダウンロードしたファイルを保存する先のディレクトリを指定します。
+

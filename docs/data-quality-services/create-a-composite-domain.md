@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 14599472b440d54b9ce247c8c52f9cfad5815a7d
@@ -106,3 +107,4 @@ ms.lasthandoff: 09/09/2017
  ナレッジ ベースの解析を使用する場合、複合ドメイン内のドメインよりもソース データ内の値の方が少ないときは、不足しているドメインに null が格納されます。 複合ドメイン内のドメインよりもソース データ内の値の方が多いときは、余分なデータがいずれかの列に追加されます。 複数のドメインに同じ値が含まれる場合、データ ソースは最初に一致したドメインに解析されます。  
   
   
+

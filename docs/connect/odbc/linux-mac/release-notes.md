@@ -1,4 +1,4 @@
-﻿---
+---
 title: "リリース ノート - Microsoft ODBC Driver for SQL Server on Linux and macOS |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 01/19/2017
@@ -12,6 +12,7 @@ ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
 ms.openlocfilehash: 84bb78e184f1bca9e683aeebf46b178e3a7dd61f

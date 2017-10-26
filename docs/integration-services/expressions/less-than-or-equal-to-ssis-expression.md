@@ -17,6 +17,7 @@ caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 975fffa437744be85fc351ff075b41edb09df4ec
@@ -114,3 +115,4 @@ ListPrice <= 500
  [演算子 &#40; です。SSIS 式と &#41; です。](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
+

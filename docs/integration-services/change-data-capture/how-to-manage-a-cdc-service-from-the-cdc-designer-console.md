@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 80fc7320cb47a9fc46b331b119ff91ec0a1cdc19
@@ -47,3 +48,4 @@ ms.lasthandoff: 08/03/2017
  その他の CDC サービス タスクは、CDC Service 構成コンソールを使用して実行されます。 サービス構成コンソールで実行できるタスクの詳細については、サービス構成コンソールのオンライン ヘルプを参照してください。  
   
   
+

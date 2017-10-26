@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: db156f59fe1e77bd3abb50be85ecca1f693a0b73
@@ -39,3 +40,4 @@ ms.lasthandoff: 08/03/2017
 5.  新しいインスタンス ウィザードで必要な情報を入力し、新しいインスタンスを作成します。 このウィザードに必要な情報の詳細については、「 [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)」を参照してください。  
   
   
+

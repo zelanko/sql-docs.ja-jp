@@ -21,6 +21,7 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: b9dd44fec24717695813010067b25d14c4a8036d
@@ -45,3 +46,4 @@ ms.lasthandoff: 08/03/2017
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログにパッケージを配置したら、実行時にパッケージのデータ フローを分析して、パフォーマンスを確認したり、他の問題を見つけたりすることができます。 パッケージの状態と履歴を表示できる標準レポートを利用できます。また、パッケージ実行に関する詳細情報を提供するデータベース ビューに対してクエリを実行することもできます。 実行時にデータ タップを動的に追加および削除して、パッケージの特定のコンポーネントをターゲットとすることもできます。 詳細については、「 [データ フローのデバッグ](../../integration-services/troubleshooting/debugging-data-flow.md)」を参照してください。  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc3effea9b3d20e556707d31852d3003b7b27a65
@@ -73,3 +74,4 @@ ms.lasthandoff: 08/03/2017
  Inventory データベースには、ProductID 列と StockOnHand 列を含む ProductsInventory テーブルがあります。 ProductID、CustomerID、および Quantity の各列を含む Shipments テーブルでは、顧客に対する製品の出荷を追跡しています。 ProductInventory テーブルは、Shipments テーブルの情報に基づいて毎日更新する必要があります。 1 つの MERGE ステートメントによって、出荷が行われると ProductInventory テーブルの在庫が減少します。 製品の在庫が 0 まで減少した場合は、その MERGE ステートメントによって、ProductInventory テーブルからその製品の行も削除されます。  
   
   
+
