@@ -46,16 +46,16 @@ ms.lasthandoff: 09/27/2017
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 
--   [ALTER DATABASE & #40 です。Azure SQL データベース &#41;](alter-database-azure-sql-database.md) 
+-   [ALTER DATABASE &#40;です。Azure SQL データベース &#41;](alter-database-azure-sql-database.md) 
 
--   [ALTER DATABASE & #40 です。Azure SQL Data Warehouse &#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)  
+-   [ALTER DATABASE &#40;です。Azure SQL Data Warehouse &#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)  
   
--   [ALTER DATABASE & #40 です。並列データ ウェアハウス"&"#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)  
+-   [ALTER DATABASE &#40;です。並列データ ウェアハウス"&"#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)  
   
-データベース ミラーリングは、 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、および互換性レベルを`SET`オプションが、別のトピックに記載されている、長くなるためです。 詳細については、次を参照してください。[データベースのデータベース ミラーリングを変更する (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)、 [ALTER DATABASE SET HADR & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)、および[ALTER DATABASE 互換性レベル & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+データベース ミラーリングは、 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、および互換性レベルを`SET`オプションが、別のトピックに記載されている、長くなるためです。 詳細については、次を参照してください。[データベースのデータベース ミラーリングを変更する (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)、 [ALTER DATABASE SET HADR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)、および[ALTER DATABASE 互換性レベル &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
->  使用して、現在のセッションの多くのデータベースの set オプションを構成することができます[SET ステートメント & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md)と接続するときに多くの場合、アプリケーションで構成します。 セッション レベルの set オプションの上書き、 **ALTER DATABASE SET**値。 次のデータベース オプションは、セッション用に設定できる値であり、他の SET オプションの値は明示的に指定されていません。  
+>  使用して、現在のセッションの多くのデータベースの set オプションを構成することができます[SET ステートメント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-statements-transact-sql.md)と接続するときに多くの場合、アプリケーションで構成します。 セッション レベルの set オプションの上書き、 **ALTER DATABASE SET**値。 次のデータベース オプションは、セッション用に設定できる値であり、他の SET オプションの値は明示的に指定されていません。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -454,7 +454,7 @@ SET
  GLOBAL  
  GLOBAL を指定すると、カーソルが作成時に LOCAL として定義されていない場合、カーソルのスコープはその接続に対してグローバルになります。 カーソル名は、その接続によって実行されるストアド プロシージャやバッチの中で参照できます。  
   
- 接続が切断されたときだけカーソルが暗黙的に割り当てを解除されます。 詳細については、次を参照してください。 [DECLARE CURSOR & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/declare-cursor-transact-sql.md).  
+ 接続が切断されたときだけカーソルが暗黙的に割り当てを解除されます。 詳細については、次を参照してください。 [DECLARE CURSOR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/declare-cursor-transact-sql.md).  
   
  このオプションの状態を確認するには、sys.databases カタログ ビューの is_local_cursor_default 列、または DATABASEPROPERTYEX 関数の IsLocalCursorsDefault プロパティを調べてください。  
   
@@ -486,7 +486,7 @@ SET
  データベース暗号化の状態を制御します。  
   
  ENCRYPTION {ON | OFF}  
- データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 データベース暗号化の詳細については、次を参照してください。 [Transparent Data Encryption & #40 です。TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)、および[Azure SQL Database の Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)です。  
+ データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 データベース暗号化の詳細については、次を参照してください。 [Transparent Data Encryption &#40;です。TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)、および[Azure SQL Database の Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)です。  
   
  データベース レベルで暗号化を有効にすると、すべてのファイル グループが暗号化されます。 すべての新しいファイル グループに、その暗号化プロパティが継承されます。 データベース内のすべてのファイル グループが設定されている場合**READ ONLY**、データベース暗号化操作は失敗します。  
   
@@ -622,7 +622,7 @@ MULTI_USER
  DEFAULT_LANGUAGE  
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- 新しく作成するすべてのログインの既定の言語を指定します。 ローカル ID (LCID)、言語の名前、または言語のエイリアスを提供することで言語を指定することができます。 使用可能な言語の名前と別名の一覧は、次を参照してください。 [sys.syslanguages & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). このオプションは、CONTAINMENT が PARTIAL に設定されている場合にのみ使用できます。 CONTAINMENT が NONE に設定されている場合、エラーが発生します。  
+ 新しく作成するすべてのログインの既定の言語を指定します。 ローカル ID (LCID)、言語の名前、または言語のエイリアスを提供することで言語を指定することができます。 使用可能な言語の名前と別名の一覧は、次を参照してください。 [sys.syslanguages &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). このオプションは、CONTAINMENT が PARTIAL に設定されている場合にのみ使用できます。 CONTAINMENT が NONE に設定されている場合、エラーが発生します。  
   
  NESTED_TRIGGERS  
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -662,7 +662,7 @@ MULTI_USER
   
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  利用できない[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
   
- 参照してください[ALTER DATABASE SET HADR & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).  
+ 参照してください[ALTER DATABASE SET HADR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).  
   
  **\<mixed_page_allocation_option >:: =**  
   
@@ -757,7 +757,7 @@ OPERATION_MODE
  メディア障害が発生した後に、トランザクション ログのバックアップを使用して、完全復旧を行います。 データ ファイルが破損した場合、メディアの復旧によって、コミットされたすべてのトランザクションを復元できます。 詳細については、「[復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)」を参照してください。  
   
  BULK_LOGGED  
- メディア障害が発生した後に、特定の大規模操作または一括操作において、パフォーマンスが最もよく、ログ領域の使用量が最も小さくなるようにして、復旧を行います。 どのような操作が最小ログ記録方法の詳細については、次を参照してください。[トランザクション ログ & #40 です。SQL Server &#41;](../../relational-databases/logs/the-transaction-log-sql-server.md). BULK_LOGGED 復旧モデルでは、これらの操作に関するログ記録は最小になります。 詳細については、「[復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)」を参照してください。  
+ メディア障害が発生した後に、特定の大規模操作または一括操作において、パフォーマンスが最もよく、ログ領域の使用量が最も小さくなるようにして、復旧を行います。 どのような操作が最小ログ記録方法の詳細については、次を参照してください。[トランザクション ログ &#40;です。SQL Server &#41;](../../relational-databases/logs/the-transaction-log-sql-server.md). BULK_LOGGED 復旧モデルでは、これらの操作に関するログ記録は最小になります。 詳細については、「[復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)」を参照してください。  
   
  SIMPLE  
  最小のログ領域を使用する、単純なバックアップ方法が実行されます。 ログ領域は、サーバー障害の復旧での使用が終わると自動的に再利用できるようになります。 詳細については、「[復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)」を参照してください。  
@@ -765,7 +765,7 @@ OPERATION_MODE
 > [!IMPORTANT]  
 >  単純復旧モデルは、他の 2 つのモデルよりも管理が簡単ですが、データ ファイルが破損した場合にデータが失われる危険性が高くなります。 前回のデータベースのバックアップ作成や差分バックアップ作成の後に行った変更はすべて失われるため、手作業で入力し直す必要があります。  
   
- 既定の復旧モデルの復旧モデルによって決定されます、**モデル**データベース。 詳細については、適切な復旧モデルを選択すると、次を参照してください。[復旧モデル & #40 です。SQL Server &#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ 既定の復旧モデルの復旧モデルによって決定されます、**モデル**データベース。 詳細については、適切な復旧モデルを選択すると、次を参照してください。[復旧モデル &#40;です。SQL Server &#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  このオプションの状態を調べることで決定できます、 **recovery_model**と**recovery_model_desc** sys.databases カタログ ビューまたは、DATABASEPROPERTYEX の Recovery プロパティ内の列関数。  
   
@@ -806,7 +806,7 @@ OPERATION_MODE
   
 -   CHECKSUM は、TORN_PAGE_DETECTION と共存できません。 両方のオプションを同時に有効化することはできません。  
   
- 破損ページまたはチェックサム エラーが検出された場合には、データを復元することで復旧できます。障害がインデックス ページだけに限られていれば、インデックスを再構築することで復旧できる可能性があります。 チェックサム エラーが発生した場合、影響を受けるデータベース ページの種類を判別するには、DBCC CHECKDB を実行します。 復元オプションの詳細については、次を参照してください。 [RESTORE の引数 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md). データを復元すれば、データ破損の問題は解決しますが、エラーが継続的に発生することを防ぐには、ディスク ハードウェア障害などの根本的な原因を、直ちに診断して修正しておく必要があります。  
+ 破損ページまたはチェックサム エラーが検出された場合には、データを復元することで復旧できます。障害がインデックス ページだけに限られていれば、インデックスを再構築することで復旧できる可能性があります。 チェックサム エラーが発生した場合、影響を受けるデータベース ページの種類を判別するには、DBCC CHECKDB を実行します。 復元オプションの詳細については、次を参照してください。 [RESTORE の引数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/restore-statements-arguments-transact-sql.md). データを復元すれば、データ破損の問題は解決しますが、エラーが継続的に発生することを防ぐには、ディスク ハードウェア障害などの根本的な原因を、直ちに診断して修正しておく必要があります。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]4 回に、チェックサム、破損ページ、またはその他の I/O エラーで失敗したすべての読み取りを再試行します。 いずれかの再試行で読み取りに成功した場合には、エラー ログにメッセージが書き込まれ、その読み取りを起動したコマンドは続行されます。 再試行が失敗した場合には、そのコマンドはエラー メッセージ 824 で失敗します。  
   
@@ -829,7 +829,7 @@ REMOTE_DATA_ARCHIVE = {ON (サーバー = \<< >、{資格情報 = \<db_scoped_cr
  Azure サーバーのアドレスを指定します。 含める、`.database.windows.net`名の部分です。 たとえば、 `MyStretchDatabaseServer.database.windows.net`のようにします。  
   
 資格情報 = \<db_scoped_credential_name >  
- データベース スコープの資格情報を指定のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用して、Azure サーバーに接続します。 このコマンドを実行する前に、資格情報が存在することを確認します。 詳細については、次を参照してください。 [CREATE DATABASE SCOPED CREDENTIAL & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
+ データベース スコープの資格情報を指定のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用して、Azure サーバーに接続します。 このコマンドを実行する前に、資格情報が存在することを確認します。 詳細については、次を参照してください。 [CREATE DATABASE SCOPED CREDENTIAL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
   
 FEDERATED_SERVICE_ACCOUNT = ON |オフ  
  オンプレミスの SQL Server のフェデレーション サービス アカウントを使用するには、次の条件をすべて満たす場合に、リモート Azure サーバーと通信します。  
@@ -937,7 +937,7 @@ FEDERATED_SERVICE_ACCOUNT = ON |オフ
   
  既定では、このオプションは OFF になっています。  
   
- このオプションの現在の設定を調べることで決定できます、 **is_memory_optimized_elevate_to_snapshot_on**内の列、 [sys.databases & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)カタログ ビューです。  
+ このオプションの現在の設定を調べることで決定できます、 **is_memory_optimized_elevate_to_snapshot_on**内の列、 [sys.databases &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)カタログ ビューです。  
   
  **\<sql_option >:: =**  
   
@@ -952,7 +952,7 @@ FEDERATED_SERVICE_ACCOUNT = ON |オフ
  OFF  
  既定値は NOT NULL になります。  
   
- SET ステートメントを使用した接続レベルの設定は、ANSI_NULL_DEFAULT に関するデータベースレベルの既定の設定よりも優先されます。 ODBC および OLE DB クライアントは既定では、セッションの ANSI_NULL_DEFAULT をオンに設定する接続レベルの SET ステートメントを発行のインスタンスに接続するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 詳細については、次を参照してください。 [ANSI_NULL_DFLT_ON の設定 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md).  
+ SET ステートメントを使用した接続レベルの設定は、ANSI_NULL_DEFAULT に関するデータベースレベルの既定の設定よりも優先されます。 ODBC および OLE DB クライアントは既定では、セッションの ANSI_NULL_DEFAULT をオンに設定する接続レベルの SET ステートメントを発行のインスタンスに接続するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 詳細については、次を参照してください。 [ANSI_NULL_DFLT_ON の設定 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md).  
   
  ANSI 互換性を確保するために、データベース オプション ANSI_NULL_DEFAULT を ON に設定すると、データベースの既定値が NULL に変更されます。  
   
@@ -1093,7 +1093,7 @@ FEDERATED_SERVICE_ACCOUNT = ON |オフ
  MINUTES  
  *target_recovery_time* が分単位で表されていることを示します。  
   
- 間接的なチェックポイントの詳細については、次を参照してください。[データベース チェックポイント & #40 です。SQL Server &#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
+ 間接的なチェックポイントの詳細については、次を参照してください。[データベース チェックポイント &#40;です。SQL Server &#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
  **\<終了 >:: =**  
   
@@ -1276,7 +1276,7 @@ SET QUERY_STORE = ON
  [変更の追跡の有効化と無効化 &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
- [SET TRANSACTION ISOLATION LEVEL & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
+ [SET TRANSACTION ISOLATION LEVEL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.data_spaces と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
