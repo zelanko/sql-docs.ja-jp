@@ -126,10 +126,10 @@ ms.lasthandoff: 07/31/2017
 >  ユーザー アカウント制御 (UAC) は Windows セキュリティ機能であり、管理操作または管理アプリケーションの承認を管理者が実行前に明示的に行う必要があります。 UAC は既定でオンになっているため、高度な特権を必要とする特定の操作について許可するよう求めるメッセージが表示されます。 UAC を構成して既定の動作を変更することも、特定のプログラム用に UAC をカスタマイズすることもできます。 UAC および UAC 構成の詳細については、「[User Account Control Step by Step Guide](http://go.microsoft.com/fwlink/?linkid=196350)」(Windows ユーザー アカウント制御手順ガイド) と「[User Account Control (Wikipedia)](http://go.microsoft.com/fwlink/?linkid=196351)」(ユーザー アクセス制御) を参照してください。  
   
 ### <a name="see-also"></a>参照  
- [サービス アカウントの構成 &#40;Analysis Services#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md) [Windows サービス アカウントと権限の構成 ](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
+ [サービス アカウントの構成 &#40;Analysis Services#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md) [Windows サービス アカウントとアクセス許可の構成 ](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
  ## <a name="analysis-services-configuration---data-directories"></a>Analysis Services の構成 - データ ディレクトリ
-  次の表にある既定のディレクトリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ中にユーザーが構成できます。 これらのファイルにアクセスする権限は、ローカル管理者と、セットアップ中に作成されて準備される SQLServerMSASUser$\<インスタンス> セキュリティ グループのメンバーに付与されます。  
+  次の表にある既定のディレクトリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ中にユーザーが構成できます。 これらのファイルへのアクセス許可は、ローカル管理者と、セットアップ中に作成およびプロビジョニングされる SQLServerMSASUser$\<インスタンス> セキュリティ グループのメンバーに付与されます。  
   
 ### <a name="uielement-list"></a>UI 要素の一覧  
   
@@ -219,7 +219,7 @@ ms.lasthandoff: 07/31/2017
   
 ### <a name="see-also"></a>参照  
 ### <a name="analysis-services-configuration---data-directories"></a>Analysis Services の構成 - データ ディレクトリ
-  次の表にある既定のディレクトリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ中にユーザーが構成できます。 これらのファイルにアクセスする権限は、ローカル管理者と、セットアップ中に作成されて準備される SQLServerMSASUser$\<インスタンス> セキュリティ グループのメンバーに付与されます。  
+  次の表にある既定のディレクトリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ中にユーザーが構成できます。 これらのファイルへのアクセス許可は、ローカル管理者と、セットアップ中に作成およびプロビジョニングされる SQLServerMSASUser$\<インスタンス> セキュリティ グループのメンバーに付与されます。  
   
 #### <a name="uielement-list"></a>UI 要素の一覧  
   
@@ -355,9 +355,9 @@ ms.lasthandoff: 07/31/2017
  このページで入力するパスワードは、強力なパスワード ポリシーの要件を満たす必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用したオートメーションを使用している場合、必ず強力なパスワード ポリシーの要件を満たすパスワードを指定してください。  
   
 ### <a name="related-content"></a>関連コンテンツ  
- Windows 認証と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]詳細については、「[認証モードの選択](../../relational-databases/security/choose-an-authentication-mode.md)」をご覧ください。  
+ Windows 認証と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証の詳細については、「[認証モードの選択](../../relational-databases/security/choose-an-authentication-mode.md)」をご覧ください。  
   
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を実行するアカウントの選択の詳細については、「[Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」をご覧ください。
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を実行するアカウントの選択の詳細については、「[Windows サービス アカウントとアクセス許可の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」をご覧ください。
   
 ## <a name="database-engine-configuration---tempdb"></a>データベース エンジンの構成 - TempDB
   このページを利用し、**tempdb** のデータとログ ファイルの場所、サイズ、拡張設定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] のファイル数を指定します。 インストールの種類により、サポートされるストレージにはローカル ディスク、共有ストレージ、または SMB ファイル サーバーが含まれる場合があります。  

@@ -92,7 +92,7 @@ BULK INSERT
  テーブルまたはビューのスキーマの名前を指定します。 *schema_name*場合は、一括インポート操作を実行するユーザーの既定のスキーマは、指定したテーブルまたはビューのスキーマは省略します。 場合*スキーマ*が指定されていないと、一括インポート操作を実行するユーザーの既定のスキーマは、指定したテーブルまたはビューから、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー メッセージ、および一括インポート操作が取り消されるを返します。  
   
  *table_name*  
- データの一括インポート先のテーブル名またはビュー名を指定します。 指定できるビューは、すべての列が同じベース テーブルを参照するビューだけです。 ビューにデータの読み込みの制限に関する詳細については、次を参照してください。 [INSERT & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/insert-transact-sql.md).  
+ データの一括インポート先のテーブル名またはビュー名を指定します。 指定できるビューは、すべての列が同じベース テーブルを参照するビューだけです。 ビューにデータの読み込みの制限に関する詳細については、次を参照してください。 [INSERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/insert-transact-sql.md).  
   
  **'** *data_file* **'**  
  指定のテーブルまたはビューにインポートするデータが含まれているデータ ファイルの完全なパスを指定します。 BULK INSERT を使用して、ディスク (ネットワーク、フロッピー ディスク、ハード ディスクなど) からデータをインポートすることができます。   
@@ -173,7 +173,7 @@ FORMATFILE_DATASOURCE  **=**  'data_source_name'
  KEEPIDENTITY  
  インポートしたデータ ファイルの ID 値 (複数可) を ID 列に使用することを指定します。 この列の id 値を検証するがインポートされない KEEPIDENTITY を指定しない場合および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル作成時に指定されたシードと増分値に基づいて一意の値を自動的に割り当てます。 データ ファイルにテーブルまたはビュー内の id 列の値が含まれていない場合は、フォーマット ファイルを使用して、テーブルまたはビュー内の id 列が、データをインポートするときにスキップすることを指定するには[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列の一意の値を自動的に割り当てます。 詳細については、「[DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)」をご覧ください。  
   
- 詳細については、保持するかを参照してください。 特定の値を参照してください[維持の Id 値とデータの一括インポート & #40 です。SQL Server &#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).  
+ 詳細については、保持するかを参照してください。 特定の値を参照してください[維持の Id 値とデータの一括インポート &#40;です。SQL Server &#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).  
   
  KEEPNULLS  
  一括インポート操作時、空の列が挿入される場合は NULL 値が保持されます。その列の既定値は格納されません。 詳細については、「[一括インポート中の NULL の保持または既定値の使用 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)」をご覧ください。  
@@ -300,7 +300,7 @@ GO
 |SQLBINARY または SQLVARBIN|データは変換なしで送られます。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
- BULK INSERT ステートメント、INSERT ... 選択\*openrowset (bulk) からステートメントでは、および**bcp**コマンドを参照してください[一括インポートし、データ ファイルのエクスポート & #40 です。SQL Server &#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+ BULK INSERT ステートメント、INSERT ... 選択\*openrowset (bulk) からステートメントでは、および**bcp**コマンドを参照してください[一括インポートし、データ ファイルのエクスポート &#40;です。SQL Server &#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   
  データを一括インポートの準備については、次を参照してください[データを一括エクスポートまたはインポート &#40; を準備する。SQL Server &#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
   
@@ -310,7 +310,7 @@ GO
   
 ### <a name="importing-data-from-a-csv-file"></a>CSV ファイルからのデータのインポート  
 以降で[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1、一括挿入は、CSV 形式をサポートしています。  
-前に[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1 でコンマ区切り値 (CSV) ファイルはサポートされていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一括インポート操作します。 ただし、場合によっては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対してデータを一括インポートする際、CSV ファイルをデータ ファイルとして使用できます。 CSV データ ファイルからデータをインポートするための要件については、次を参照してください[データを一括エクスポートまたはインポート &#40; を準備します。。SQL Server &#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
+前に[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1 でコンマ区切り値 (CSV) ファイルはサポートされていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一括インポート操作します。 ただし、場合によっては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対してデータを一括インポートする際、CSV ファイルをデータ ファイルとして使用できます。 CSV データ ファイルからデータをインポートするための要件については、次を参照してください[一括エクスポートまたは一括インポートのデータの準備 &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
   
 ## <a name="logging-behavior"></a>ログ記録の動作  
  一括インポートによって実行される行挿入操作がトランザクション ログに記録される条件について詳しくは、「[一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」をご覧ください。  
@@ -332,7 +332,7 @@ GO
   
  このエラーを解決するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を指定し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のセキュリティ プロファイルを使用するログインを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロセス アカウント、または Windows セキュリティ アカウントの委任を有効にするを構成します。 ユーザー アカウントの信頼性を委任の対象として有効にする方法の詳細については、Windows ヘルプを参照してください。  
   
- このおよび BULK INSERT を使用するための他のセキュリティの考慮事項に関する詳細については、次を参照してください[を使用して BULK INSERT または OPENROWSET &#40; した一括データのインポート。BULK..."&"#41;& #40 です。SQL Server &#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+ このおよび BULK INSERT を使用するための他のセキュリティの考慮事項に関する詳細については、次を参照してください[を使用して BULK INSERT または OPENROWSET &#40; した一括データのインポート。BULK..."&"#41;&#40;です。SQL Server &#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="permissions"></a>Permissions  
  INSERT および ADMINISTER BULK OPERATIONS 権限が必要です。 ただし次の操作を 1 つ以上行う場合は、さらに ALTER TABLE 権限が必要になります。  
@@ -456,7 +456,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [一括エクスポートまたはインポート &#40; のデータを準備します。SQL Server &#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
- [sp_tableoption & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
+ [sp_tableoption &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
   
   
 
