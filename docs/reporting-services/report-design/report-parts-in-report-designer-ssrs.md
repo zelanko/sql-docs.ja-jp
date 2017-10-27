@@ -17,7 +17,8 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 66d5312047b516176e8aa1b331b36745bcdb20d9
 ms.contentlocale: ja-jp
@@ -29,7 +30,7 @@ ms.lasthandoff: 08/09/2017
 
   レポート デザイナーで、プロジェクトのテーブル、グラフ、および他のページ分割されたレポート アイテムを作成した後、それらを " *レポート パーツ* " として、レポート サーバーまたはレポート サーバーと統合されている SharePoint サイトにパブリッシュできます。これにより、自分や他のユーザーが、それらのレポート パーツを別のレポートで再利用できるようになります。  
   
- 通常、レポート パーツはレポート デザイナーおよびレポート ビルダーで同じように機能します。 基本的な機能について参照してください[レポート パーツと #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+ 通常、レポート パーツはレポート デザイナーおよびレポート ビルダーで同じように機能します。 基本的な機能の詳細については、「[レポート パーツ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)」を参照してください。  
   
  ただし、レポート デザイナーでのレポート パーツの機能の仕方には、大きく異なる点があります。 主な違いはワークフローです。 レポート ビルダーでは、コラボレーションによる作成が可能です。つまり、あるユーザーがレポート パーツを作成してパブリッシュすると、 別のユーザーがそのパーツを再利用して変更し、再パブリッシュすることができます。 レポート デザイナーでは、パブリッシュは一方向です。つまり、あるユーザーがレポート デザイナーからレポート パーツをパブリッシュすることができ、別のユーザーはそれを再利用することができます。 しかし、既存のレポート パーツを、レポート デザイナーでレポートに再利用することはできません。 このトピックでは、レポート パーツの概要について説明した後、これらの違いについて詳述します。  
   
@@ -101,3 +102,4 @@ ms.lasthandoff: 08/09/2017
 [レポート パーツの管理](../../reporting-services/report-design/managing-report-parts.md)  
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+

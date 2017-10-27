@@ -15,6 +15,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: fd7b39c2600bc683a37f6cec43041ccf8ebb009f
@@ -63,3 +64,4 @@ SharePoint 権限の詳細については、「 [ユーザー権限とアクセ�
 [Reporting Services のデータ警告](../reporting-services/reporting-services-data-alerts.md)  
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -15,7 +15,8 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bfa852d24647ae9553ec05167dc8eba58dfd3f73
 ms.contentlocale: ja-jp
@@ -46,17 +47,17 @@ ms.lasthandoff: 08/09/2017
   
 -   **データセット** : データセットは、レポートまたはレポートが依存する共有データ ソースから切り離してパブリッシュおよび管理できます。 ユーザーまたはデータベース所有者は、レポート作成者が使用する最適化されたクエリを提供できます。 クエリを変更すると、共有データセットを使用するすべてのレポートで更新されたクエリが使用されます。 データセットのキャッシュを有効にして、パフォーマンスを向上できます。 特定の時間にクエリ キャッシュをスケジュールすることも、共有スケジュールを使用することもできます。  
   
--   **レポート パーツで使用するデータ** : レポート パーツには、そのレポート パーツが依存するデータを含めることができます。 レポート パーツの詳細については、次を参照してください[レポート デザイナー &#40; でのレポート パーツ。SSRS &#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
+-   **レポート パーツで使用するデータ**: レポート パーツには、そのレポート パーツが依存するデータを含めることができます。 レポート パーツの詳細については、「[レポート デザイナーでのレポート パーツ &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)」をご覧ください。  
   
--   **データのフィルター選択** : レポート データは、クエリまたはレポートでフィルター選択できます。 データセットとクエリ変数を使用してカスケード パラメーターを作成し、ユーザーが何千もの選択肢を管理しやすい数にまで絞り込めるようにすることができます。 パラメーター値または指定するその他の値に基づいて、テーブルまたはグラフでデータをフィルター選択できます。  
+-   **データのフィルター選択**: レポート データは、クエリまたはレポートでフィルター選択できます。 データセットとクエリ変数を使用してカスケード パラメーターを作成し、ユーザーが何千もの選択肢を管理しやすい数にまで絞り込めるようにすることができます。 パラメーター値または指定するその他の値に基づいて、テーブルまたはグラフでデータをフィルター選択できます。  
   
--   **パラメーター** : クエリ変数を含むデータセット クエリ コマンドを使用すると、対応するレポート パラメーターが自動的に作成されます。 パラメーターは手動で作成することもできます。 レポートを表示すると、レポート ツール バーにパラメーターが表示されます。 ユーザーは値を選択して、レポート データまたはレポートの外観を制御できます。 特定の対象ユーザー用にレポート データをカスタマイズするには、同じレポート定義にリンクされた、異なる既定値を持つレポート パラメーターのセットを作成するか、組み込みの **UserID** フィールドを使用します。 詳細については、次を参照してください。[レポート パラメーターと #40 です。レポート ビルダーおよびレポート デザイナー &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)と[式 &#40; 内で組み込みコレクションレポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
+-   **パラメーター** : クエリ変数を含むデータセット クエリ コマンドを使用すると、対応するレポート パラメーターが自動的に作成されます。 パラメーターは手動で作成することもできます。 レポートを表示すると、レポート ツール バーにパラメーターが表示されます。 ユーザーは値を選択して、レポート データまたはレポートの外観を制御できます。 特定の対象ユーザー用にレポート データをカスタマイズするには、同じレポート定義にリンクされた、異なる既定値を持つレポート パラメーターのセットを作成するか、組み込みの **UserID** フィールドを使用します。 詳しくは、「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」および「[式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)」をご覧ください。  
   
--   **データ警告** : レポートがパブリッシュされたら、レポート データに基づいて警告を作成し、そのレポート データが指定したルールに合致した場合に電子メール メッセージを受信できます。  
+-   **データ警告**: レポートがパブリッシュされたら、レポート データに基づいて警告を作成し、そのレポート データが指定したルールに合致した場合に電子メール メッセージを受信できます。  
   
--   **データのグループ化および集計** : レポート データは、クエリまたはレポートでグループ化および集計できます。 クエリで値を集計する場合は、重要であるという制約の範囲内で、引き続きレポートの値を結合できます。  詳細については、次を参照してください。[フィルター、グループ、およびデータを並べ替える & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)と[集計関数と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md).  
+-   **データのグループ化および集計** : レポート データは、クエリまたはレポートでグループ化および集計できます。 クエリで値を集計する場合は、重要であるという制約の範囲内で、引き続きレポートの値を結合できます。  詳しくは、「[データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」および「[集計関数 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)」をご覧ください。  
   
--   **データの並べ替え** : レポート データは、クエリまたはレポートで並べ替えることができます。 また、テーブルでは、対話的な並べ替えボタンを追加して、ユーザーが並べ替え順序を制御できるようにすることができます。  
+-   **データの並べ替え**: レポート データは、クエリまたはレポートで並べ替えることができます。 また、テーブルでは、対話的な並べ替えボタンを追加して、ユーザーが並べ替え順序を制御できるようにすることができます。  
   
 -   **式に基づくデータ** : ほとんどのレポート プロパティは式に基づくことができ、式にはデータセット フィールドおよびレポート パラメーターへの参照を含めることができるため、強力な式を記述してレポートのデータと外観を制御できます。 パラメーターを定義することで、ユーザーが表示されるデータを制御できるようにすることができます。  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 08/09/2017
   
 -   使用できるデータ ソースは、インストールされている [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のデータ拡張機能によって異なります。 データ ソースのサポートは、クライアント作成ツール、レポート サーバーのバージョン、およびレポート サーバーのプラットフォームによって異なる可能性があります。 詳しくは、「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」をご覧ください。  
   
--   データ ソースの資格情報は、データ ソースの種類、およびクライアントと、レポート サーバーまたは SharePoint サイトのどちらでレポートを表示しているかによって異なります。 詳細については、次を参照してください[SharePoint サイト &#40; 上のレポート サーバー アイテムに対するアクセス許可の設定。Reporting Services の SharePoint モード &#41; と統合](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)、[資格情報の指定とレポート データ ソースの接続情報を](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)、各ツールに固有の資格情報と[Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)です。  
+-   データ ソースの資格情報は、データ ソースの種類、およびクライアントと、レポート サーバーまたは SharePoint サイトのどちらでレポートを表示しているかによって異なります。 詳しくは、「[SharePoint サイト上のレポート サーバー アイテムに対する権限の設定 &#40;Reporting Services の SharePoint 統合モード&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)」、「[レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」、および「[Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)」の各ツールに固有の資格情報をご覧ください。  
   
 ## <a name="related-tasks"></a>関連タスク  
  以下に、データ接続の作成、外部ソース、データセット、およびクエリからのデータの追加に関連するタスクを示します。  
@@ -95,3 +96,4 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="related-content"></a>関連コンテンツ  
   
+

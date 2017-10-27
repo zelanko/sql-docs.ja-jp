@@ -38,7 +38,7 @@ ms.lasthandoff: 08/03/2017
   
  序数値と対応する操作を照合するよりも、操作のニーモニックを使用する方が簡単です。 たとえば、'D' は削除操作、'I' は挿入操作というように簡単に表すことができます。 「 [変更データを取得する関数の作成](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)」で作成したクエリ例では、序数値が新しい列に返される表示文字列値に変換されます。 次のコードのセグメントは、この変換を示しています。  
   
-```  
+```sql
 select   
     ...  
     case __$operation  

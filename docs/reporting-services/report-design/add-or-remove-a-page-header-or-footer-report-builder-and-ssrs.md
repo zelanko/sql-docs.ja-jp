@@ -15,7 +15,8 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 88e933ca66ab9f8f6e90237ef045b12927fab40c
 ms.contentlocale: ja-jp
@@ -68,6 +69,7 @@ ms.lasthandoff: 08/09/2017
 >  ページ ヘッダーまたはページ フッターを削除すると、レポートから消去されます。 それまでにページ ヘッダーまたはページ フッターに追加したアイテムは、後でページ ヘッダーまたはページ フッターを再び追加しても再表示されません。  
   
 ## <a name="see-also"></a>参照  
- [ページ ヘッダーとフッター & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
+ [ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
   
   
+

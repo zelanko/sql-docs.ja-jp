@@ -101,7 +101,7 @@ ms.lasthandoff: 09/01/2017
   
 -   CHECK 制約が定義されているか、ルールが有効化されているテーブル  
   
- *column_list*  
+*column_list*  
  INTO 句の対象テーブル上のオプションの列名のリストです。 使用できる列リストに似ていますが、[挿入](../../t-sql/statements/insert-transact-sql.md)ステートメントです。  
   
  *scalar_expression*  

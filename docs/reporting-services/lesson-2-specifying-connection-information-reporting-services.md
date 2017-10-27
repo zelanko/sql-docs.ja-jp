@@ -16,7 +16,8 @@ caps.latest.revision: 53
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Active
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4d0667dec1b59d5560ca24176634dddc5d6d8d18
 ms.contentlocale: ja-jp
@@ -62,7 +63,7 @@ ms.lasthandoff: 08/09/2017
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] データ ソース **AdventureWorks2014** が **レポート データ** ペインに追加されます。  
 ![ssrs_adventureworks_datasource](../reporting-services/media/ssrs-adventureworks-datasource.png)  
 ## <a name="next-task"></a>次の作業  
-[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] サンプル データベースへの接続が正常に定義されました。 次に、レポートを作成します。 参照してください[レッスン 3: テーブル レポート &#40; のデータセットの定義Reporting Services &#41;](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
+[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] サンプル データベースへの接続が正常に定義されました。 次に、レポートを作成します。 「[レッスン 3: テーブル レポートのデータセットの定義 (Reporting Services)](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [Data Connections, Data Sources, and Connection Strings in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  

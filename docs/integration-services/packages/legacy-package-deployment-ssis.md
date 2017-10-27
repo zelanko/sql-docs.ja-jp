@@ -156,7 +156,7 @@ ms.lasthandoff: 09/27/2017
   
  次の SQL ステートメントは、パッケージ構成ウィザードで提供される既定の CREATE TABLE ステートメントを示しています。  
   
-```  
+```sql
 CREATE TABLE [dbo].[SSIS Configurations]  
 (  
 ConfigurationFilter NVARCHAR(255) NOT NULL,  

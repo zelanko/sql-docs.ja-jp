@@ -16,7 +16,8 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 285ade0eaf63fee0733fcfcb9e8f627e8c666a6b
 ms.contentlocale: ja-jp
@@ -24,7 +25,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>レッスン 5: レポート ウィザードを使用して子レポートを設計する
-子レポートのデータ接続とデータ テーブルを作成した後は、レポート デザイナーのレポート ウィザードを使用して子レポートを設計します。 レポート デザイナーの詳細については、次を参照してください。[レポートをデザインすると、レポート デザイナーと #40 です。SSRS &#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
+子レポートのデータ接続とデータ テーブルを作成した後は、レポート デザイナーのレポート ウィザードを使用して子レポートを設計します。 レポート デザイナーの詳細については、[「レポート デザイナーを使用してレポートをデザインする (SSRS)」](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) を参照してください。  
   
 ### <a name="to-design-the-child-report-using-the-report-wizard"></a>レポート ウィザードを使用して子レポートを設計するには  
   

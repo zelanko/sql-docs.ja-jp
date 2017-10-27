@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: b521a0a2198d74c8766f18fb8d7a199b25005efe
@@ -68,3 +69,4 @@ SQL Server Reporting Services は、組織で利用するレポートの作成�
  Reporting Services の概要については、次を参照してください。 [Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブック。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンポーネント、ツール、およびリソースについては、 [SQL Server オンライン ブック](../../sql-server/sql-server-technical-documentation.md)を参照してください。  
 
 その他のご不明な点は、 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -1,7 +1,7 @@
 ---
 title: "UPDATETEXT (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 10/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -33,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   既存の更新**テキスト**、 **ntext**、または**イメージ**フィールドです。 一部のみを変更する UPDATETEXT を使用して、**テキスト**、 **ntext**、または**イメージ**の列に適切です。 WRITETEXT を使用して更新し、全体を置き換える**テキスト**、 **ntext**、または**イメージ**フィールドです。  
   

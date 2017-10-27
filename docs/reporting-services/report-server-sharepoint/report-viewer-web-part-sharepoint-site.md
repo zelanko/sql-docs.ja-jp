@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: a37ed5efe7c365c601deb95d9fe761d227e7021e
@@ -56,3 +57,4 @@ Reporting Services のインストール モードを 1 つだけがある SQL S
 ## <a name="next-steps"></a>次の手順
 
 更新されたレポート ビューアー web パーツで開始するを参照してください。 [SharePoint サイト上のレポート ビューアー web パーツを展開](deploy-report-viewer-web-part.md)です。
+

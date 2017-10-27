@@ -22,7 +22,8 @@ caps.latest.revision: 70
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Active
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 49f990d30564a2c4fc38a527e7da1e97f9a21ca1
 ms.contentlocale: ja-jp
@@ -122,3 +123,4 @@ SharePoint 統合モードで Reporting Services にレポートをパブリッ�
 * [Reporting Services の power BI のレポート](../reporting-services/power-bi-reports-in-reporting-services.md)
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -15,7 +15,8 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8deb7c183ab46007fb0d4c4aee17762676963c4d
 ms.contentlocale: ja-jp
@@ -40,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
  同じデータ領域内の同じデータ ソースから取得されるデータ グループを入れ子にする場合は、データ領域を使用してください。 同じデータ領域内の異なるデータ ソースから取得されるデータのグループを入れ子にしたり、複数の親レポートで同じサブレポートを再利用したり、別のレポート内にスタンドアロンのレポートを表示する場合は、サブレポートを使用してください。 たとえば、別のレポートの本文内に複数のサブレポートを配置して、"抄録ファイル" を作成することもできます。  
   
- データ領域はサブレポートと同じ機能の多くが提供され、柔軟性も同等ですが、パフォーマンスの点で優れています。 サブレポートは、それぞれのインスタンスが個別のレポートとして処理されるので、レポート サーバーのパフォーマンスに影響することがあります。 詳細については、「 [入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)」を参照してください。  
+ データ領域はサブレポートと同じ機能の多くが提供され、柔軟性も同等ですが、パフォーマンスの点で優れています。 サブレポートは、それぞれのインスタンスが個別のレポートとして処理されるので、レポート サーバーのパフォーマンスに影響することがあります。 詳細については、[「入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;」](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md) を参照してください。  
   
 ## <a name="using-parameters-in-subreports"></a>サブレポートでのパラメーターの使用  
  親レポートからサブレポートにパラメーターを渡すには、サブレポートとして使用するレポートでレポート パラメーターを定義します。 親レポートにサブレポートを配置するときに、レポート パラメーターと、親レポートからサブレポート内のレポート パラメーターに渡す値を選択できます。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
  サブレポートは、レポート本文内またはデータ領域内に配置できます。 データ領域にサブレポートを配置する場合、同じサブレポートがグループのインスタンスまたはデータ領域の行ごとに配置されます。 グループまたは行からサブレポートに値を渡すには、サブレポートの値のプロパティで、サブレポート パラメーターに渡す値を含むフィールド用のフィールド式を使用します。  
   
- サブレポートの操作の詳細については、次を参照してください[サブレポートおよびパラメーター &#40; を追加。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
+ サブレポートの操作方法の詳細については、「[サブレポートおよびパラメーターの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="specifying-subreport-names-and-locations"></a>サブレポートの名前と場所の指定  
  同じレポート サーバー上の異なるフォルダーにあるサブレポートを指定するようにメイン レポートを設定できます。  
@@ -60,6 +61,7 @@ ms.lasthandoff: 08/09/2017
  レポート ビルダーからメイン レポートのサブレポートをプレビューするには、両方のレポートが同じレポート サーバーに存在するか、サブレポートの完全なパスを指定する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (&) #40;レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   
+

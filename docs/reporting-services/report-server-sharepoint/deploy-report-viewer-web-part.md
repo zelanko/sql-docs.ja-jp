@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: a75ad193204e17e1d053aa4e00adba5f551d684b
@@ -154,3 +155,4 @@ Web パーツでは、次の言語がサポートされています。
 レポート ビューアー web パーツが展開されているとアクティブ化では、SharePoint ページに web パーツを追加できます。 詳細については、次を参照してください。 [SharePoint ページに追加のレポート ビューアー web パーツ](add-report-viewer-web-part-to-page.md)です。
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+

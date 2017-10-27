@@ -17,7 +17,8 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 75e9c44d9cb75cef338ff2cd684c38969aa1751f
 ms.contentlocale: ja-jp
@@ -48,6 +49,7 @@ ms.lasthandoff: 08/09/2017
 4.  同じ値で引き続き検索を続ける場合は、 **[次へ]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [Web ページ &#40; をレポート ビューアー Web パーツを追加します。Reporting Services の SharePoint モード &#41; と統合](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
+ [レポート ビューアー Web パーツを Web ページに追加する (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   
+

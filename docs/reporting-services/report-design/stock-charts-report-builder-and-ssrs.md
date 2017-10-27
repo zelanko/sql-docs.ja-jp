@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4a37208813e989353a381070e1ecfa0888e1e33b
 ms.contentlocale: ja-jp
@@ -29,7 +30,7 @@ ms.lasthandoff: 08/09/2017
   
  ![株価チャート](../../reporting-services/report-design/media/rs-stockchart.gif "株価チャート")  
   
- 株価チャートの例は、サンプル レポート ビルダーのレポートとして使用できます。 このサンプル レポートおよびその他のサンプル レポートをダウンロードする方法の詳細については、 [レポート ビルダーおよびレポート デザイナーのサンプル レポート](http://go.microsoft.com/fwlink/?LinkId=198283)に関するページを参照してください。  
+ 株価チャートの例は、サンプル レポート ビルダーのレポートとして使用できます。 このサンプル レポートおよびその他のダウンロードの詳細については、次を参照してください。[レポート ビルダーおよびレポート デザイナーのサンプル レポート](http://go.microsoft.com/fwlink/?LinkId=198283)です。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -54,3 +55,4 @@ ms.lasthandoff: 08/09/2017
 [軸のプロパティ ダイアログ ボックスで、軸のオプション](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+

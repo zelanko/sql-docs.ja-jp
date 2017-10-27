@@ -22,7 +22,8 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9939a592288fb5bc031dc53b94ac21c3809d0314
 ms.contentlocale: ja-jp
@@ -30,7 +31,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成
-  レポート サーバー インスタンスをローカルに管理しようとする場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーを次のオペレーティング システムのいずれかに配置するには、追加の構成手順が必要です。 このトピックでは、レポート サーバーをローカル管理用に構成する方法を説明します。 インストールされていないか、レポート サーバーを構成が場合に、次を参照してください[から、インストール ウィザード &#40; SQL Server 2016 のインストール。セットアップ &#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)と[Reporting Services ネイティブ モード レポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)です。  
+  レポート サーバー インスタンスをローカルに管理しようとする場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーを次のオペレーティング システムのいずれかに配置するには、追加の構成手順が必要です。 このトピックでは、レポート サーバーをローカル管理用に構成する方法を説明します。 レポート サーバーのインストールまたは構成をまだ行っていない場合は、[「インストール ウィザードからの SQL Server 2016 のインストール (セットアップ)」](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) および [「Reporting Services ネイティブ モードのレポート サーバーの管理」](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md) を参照してください。  
   
 ||  
 |-|  
@@ -82,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  **[許可]** をクリックして続行します。  
   
-3.  URL アドレスにレポート マネージャーの URL を入力します。 手順については、次を参照してください。[レポート マネージャー & #40 です。SSRS ネイティブ モード &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
+3.  URL アドレスにレポート マネージャーの URL を入力します。 手順については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの [「レポート マネージャー (SSRS ネイティブ モード)」](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を参照してください。  
   
 4.  **[ツール]**をクリックします。  
   
@@ -142,7 +143,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_configure_ssms"></a> ローカル レポート サーバー管理を行う目的で SQL Server Management Studio (SSMS) を構成するには  
  既定では、管理者権限を使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開始した場合以外は、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で使用できるレポート サーバー プロパティのいずれにもアクセスできません。  
   
- **構成する[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**ロールのプロパティとロールの割り当てを開始する必要はありませんので[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]たびに、管理者特権で。  
+ **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** ロール プロパティとロールの割り当てを構成して、高度な権限で [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を毎回起動する必要をなくすには、以下の手順を実行します。  
   
 -   **[スタート]** メニューの **[すべてのプログラム]**をクリックし、 **[SQL Server 2014]**をクリックし、 **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**を右クリックして **[管理者として実行]**をクリックします。  
   
@@ -190,3 +191,4 @@ ms.lasthandoff: 08/09/2017
  [「Reporting Services ネイティブ モードのレポート サーバーの管理」](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   
+

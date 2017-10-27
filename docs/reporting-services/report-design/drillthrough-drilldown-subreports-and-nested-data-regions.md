@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 45658226a90008784ca76ab781282dda1dd01dd0
 ms.contentlocale: ja-jp
@@ -49,7 +50,7 @@ ms.lasthandoff: 08/09/2017
 |データの取得方法|メイン レポートと同時にデータを取得|詳細レポートごとにデータを取得|メイン レポートと同時にすべてのデータを取得|  
 |処理と表示のタイミング|メイン レポートと同時|リンクがクリックされたとき|メイン レポートと同時|  
 |パフォーマンス|低速 (メイン レポートと同時にすべてのデータを取得)|高速 (メイン レポートとは別にデータを取得)|高速 (メイン レポートと同時にすべてのデータを取得)|  
-|パラメーターを使用するかどうか|可|[ユーザー アカウント制御]|いいえ|  
+|パラメーターを使用するかどうか|可|可|いいえ|  
 |再利用できるかどうか|レポート、または他のレポートのサブレポートか詳細レポートとして再利用可|レポート、または他のレポートのサブレポートか詳細レポートとして再利用可|再利用不可|  
 |置かれる場所|メイン レポートの外部、同じまたは別のレポート サーバー|メイン レポートの外部、同じレポート サーバー|メイン レポートの内部|  
 |表示される場所|メイン レポート内|別のレポート内|メイン レポート内|  
@@ -85,22 +86,23 @@ ms.lasthandoff: 08/09/2017
   
   
 ##  <a name="InThisSection"></a> このセクションの内容  
- [ドリルスルー レポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)  
+ [詳細レポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)  
  ユーザーがメイン レポート内のリンクをクリックすると開くレポートについて説明します。  
   
- [サブレポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)  
+ [サブレポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)  
  メイン レポートの本文内に表示されるレポートについて説明します。  
   
- [入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)  
+ [入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)  
  マトリックス内に入れ子になっているグラフなど、データ領域を別のデータ領域に入れ子にする方法について説明します。  
   
- [ドリルダウン アクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)  
+ [ドリルダウン アクション (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)  
  ドリルダウン アクションによるレポート アイテムの表示と非表示の切り替えについて説明します。  
   
- [外部アイテムへのパスの指定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)  
+ [外部アイテムへのパスの指定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  レポート定義ファイルの外部にあるアイテムを参照する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   
+

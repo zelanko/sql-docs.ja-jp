@@ -58,13 +58,13 @@ ms.lasthandoff: 09/27/2017
   
  次の例では、ID が 34 である処理中の実行の統計を関数で返します。  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (34)  
 ```  
   
  次の例では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーで処理中のすべての実行の統計を関数で返します。  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (NULL)  
   
 ```  

@@ -15,7 +15,8 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c057de4b56529de08385a1e13e1a119550632eda
 ms.contentlocale: ja-jp
@@ -82,7 +83,7 @@ Excel ファイルをモバイル レポート用のデータセットとして�
   
     2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
   
-または列全体を選択する日付として書式設定する必要があるセルを変換すると、>**コンテキスト**メニュー >**セルの書式設定** > **日付**から、**カテゴリ** ボックスの一覧です。 また、Excel の区切り位置ウィザードを使用して、テキスト セルを適切に書式設定された日付に変換することができます。  
+セルを変換したら、セルを日付として書式設定する必要があります。そのためには、該当するセルを選択するか、列全体を選択し、**[コンテキスト]** メニュー > **[セルの書式設定]** の順に選択し、**[カテゴリ]** ボックスの一覧から**[日付]** を選択します。 また、Excel の区切り位置ウィザードを使用して、テキスト セルを適切に書式設定された日付に変換することができます。  
   
 ## <a name="unsupported"></a>サポートされていない  
   

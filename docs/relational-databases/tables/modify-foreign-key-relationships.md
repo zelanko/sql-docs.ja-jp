@@ -20,6 +20,7 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d938937ff7d4009ec874ebc9bbd33b2e87960def
@@ -153,3 +154,4 @@ ms.lasthandoff: 06/22/2017
  Transact-SQL を使用して FOREIGN KEY 制約を変更するには、まず既存の FOREIGN KEY 制約を削除してから、新しい定義を使用して再作成する必要があります。 詳細については、「 [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) 」および「 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)」を参照してください。  
   
 ###  <a name="TsqlExample"></a>  
+

@@ -20,7 +20,8 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 69e4b50bdfd9dcffd285dbd7a37e095efdca621c
 ms.contentlocale: ja-jp
@@ -145,7 +146,7 @@ ms.lasthandoff: 08/09/2017
 13. **[許可]** 列の **[アカウントの有効化]**、 **[リモートの有効化]**、 **[セキュリティの読み取り]**をオンにして、 **[OK]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services 構成マネージャー & #40 です。ネイティブ モード &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   
 

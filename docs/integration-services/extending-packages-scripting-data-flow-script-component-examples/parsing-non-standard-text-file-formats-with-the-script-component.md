@@ -72,7 +72,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  変換先データベースを選択し、新しいクエリ ウィンドウを開きます。 クエリ ウィンドウで、次のスクリプトを実行して変換先テーブルを作成します。  
   
-    ```  
+    ```sql
     create table RowDelimitedData  
     (  
     FirstName varchar(32),  
@@ -226,7 +226,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 3.  変換先データベースを選択し、新しいクエリ ウィンドウを開きます。 クエリ ウィンドウで、変換先テーブルを作成する次のスクリプトを実行します。  
   
-    ```  
+    ```sql
     CREATE TABLE [dbo].[Parents]([ParentID] [int] NOT NULL,  
     [ParentRecord] [varchar](32) NOT NULL,  
      CONSTRAINT [PK_Parents] PRIMARY KEY CLUSTERED   

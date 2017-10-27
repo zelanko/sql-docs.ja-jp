@@ -15,7 +15,8 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d4ca3cc183fb405fc9379f29012a92e39b7ad95b
 ms.contentlocale: ja-jp
@@ -31,7 +32,7 @@ ms.lasthandoff: 08/09/2017
   
  比較する系列が 3 つ以上ある場合は、グラフ内で複数の系列を比較して表示する際に別の方法を検討します。 詳細については、次を参照してください。[グラフ上の複数の系列](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)です。  
   
- このグラフについては、サンプル レポートに例が含まれています。 このサンプル レポートおよびその他のサンプル レポートをダウンロードする方法の詳細については、 [のレポート ビルダーおよびレポート デザイナーのサンプル レポートに関するページ](http://go.microsoft.com/fwlink/?LinkId=198283)を参照してください。  
+ このグラフについては、サンプル レポートに例が含まれています。 このサンプル レポートおよびその他のダウンロードの詳細については、次を参照してください。[レポート ビルダーおよびレポート デザイナーのサンプル レポート](http://go.microsoft.com/fwlink/?LinkId=198283)です。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -48,3 +49,4 @@ ms.lasthandoff: 08/09/2017
 [軸の間隔を指定します。](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)  
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+

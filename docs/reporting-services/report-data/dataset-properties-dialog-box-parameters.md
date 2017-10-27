@@ -19,6 +19,7 @@ caps.latest.revision: 40
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4e4a62f8a01d973063370df81bfef5af1fc929c1
@@ -58,3 +59,4 @@ ms.lasthandoff: 08/09/2017
  [レポート パラメーターの順序の変更 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
   
+

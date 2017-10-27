@@ -18,7 +18,8 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ba05b4727499c702b9f8827de9564aad444c1ebc
 ms.contentlocale: ja-jp
@@ -87,6 +88,7 @@ ms.lasthandoff: 08/09/2017
 7.  **[適用]**をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [SharePoint サイトとレポート サーバー アイテムのリスト権限のリファレンス](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ [レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
   
+

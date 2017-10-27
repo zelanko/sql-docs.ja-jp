@@ -12,6 +12,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
 ms.openlocfilehash: 8a478bba3cde66967594d5ef02f867de5b33edd7
@@ -104,3 +105,4 @@ Kerberos の制約付き委任を使用する環境では、SharePoint Server �
 4. 使用して、SharePoint サーバーの全体管理の Windows トークン サービスに対するクレームを開始、**管理サーバーのサービスの**ページ。 このサービスは、アクションを実行するサーバーで起動する必要があります。 たとえば、WFE とだけを実行して、SQL Server Reporting Services 共有サービスを持つアプリケーション サーバーである別のサーバーは、アプリケーション サーバーで C2WTS を起動する必要があります。 サーバーがある場合。 C2WTS は、レポート ビューアー web パーツを実行している場合に、WFE サーバーにのみ必要です。
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1356d575f58eb36d00f52bcbac1483ce902b1954
 ms.contentlocale: ja-jp
@@ -31,13 +32,13 @@ ms.lasthandoff: 08/09/2017
   
  インジケーターの値および状態は、更新することができます。 詳細については、次の各トピックを参照してください。  
   
--   [インジケーター アイコンとインジケーター セットの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [インジケーター アイコンとインジケーター セットの変更 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [設定および測定単位の構成 &#40; レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [測定単位の設定および構成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [同期スコープの設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [同期スコープの設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
   
- インジケーターは、ゲージ パネル内に配置されるため、**[インジケーターのプロパティ]** ダイアログ ボックスまたは**プロパティ** ペインを使用してインジケーターを構成するには、パネルの代わりにインジケーターを選択する必要があります。 次の図は、ゲージ パネルで選択されたインジケーターを示します。  
+ インジケーターは、ゲージ パネル内に配置されるため、 **[インジケーターのプロパティ]** ダイアログ ボックスまたは **プロパティ** ペインを使用してインジケーターを構成するには、パネルの代わりにインジケーターを選択する必要があります。 次の図は、ゲージ パネルで選択されたインジケーターを示します。  
   
  ![rs_GaugePanelWithIndicator](../../reporting-services/report-design/media/rs-gaugepanelwithindicator.gif "rs_GaugePanelWithIndicator")  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-add-an-indicator-to-a-table-or-matrix"></a>テーブルまたはマトリックスにインジケーターを追加するには  
   
-1.  表示するデータのテーブルおよびマトリックスが含まれる既存のレポートを開くか、新しいレポートを作成します。 詳細については、次を参照してください。[テーブル & #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)または[マトリックス](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)です。  
+1.  表示するデータのテーブルおよびマトリックスが含まれる既存のレポートを開くか、新しいレポートを作成します。 詳細については、「[テーブル (レポート ビルダーおよび SSRS&)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)」または「[マトリックス (レポート ビルダーおよび SSRS&)](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)」を参照してください。  
   
 2.  テーブルまたはマトリックスに列を挿入します。 詳細については、「[列の挿入または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -79,3 +80,4 @@ ms.lasthandoff: 08/09/2017
  [インジケーター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
+

@@ -142,7 +142,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  作成し、変換先コンポーネントを構成するように、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換先、または変換先コンポーネントのサンプルに示されている[スクリプト コンポーネントによる変換先の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)、予想される、 **AddressID**と**市区町村**列です。 変換元のコンポーネントを変換先に接続します  (変換を介さずに変換元を直接変換先に接続することもできます)。コピー先のテーブルを作成するには、次を実行して[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンドを**AdventureWorks**データベース。  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  
@@ -275,7 +275,7 @@ ms.lasthandoff: 09/26/2017
   
 7.  作成し、変換先コンポーネントを構成するように、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換先、または変換先コンポーネントのサンプルに示されている[スクリプト コンポーネントによる変換先の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)です。 変換元のコンポーネントを変換先に接続します  (変換を介さずに変換元を直接変換先に接続することもできます)。コピー先のテーブルを作成するには、次を実行して[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンドを**AdventureWorks**データベース。  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

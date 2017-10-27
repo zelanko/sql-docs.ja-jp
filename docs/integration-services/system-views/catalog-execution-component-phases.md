@@ -47,7 +47,7 @@ ms.lasthandoff: 08/03/2017
 > [!WARNING]  
 >  catalog.execution_component_phases ビューでは、パッケージ実行のログ記録レベルが [パフォーマンス] または [詳細] に設定されている場合のみ、この情報が表示されます。 詳細については、「 [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。  
   
-```  
+```sql
 use SSISDB  
 select package_name, task_name, subcomponent_name, execution_path,  
     SUM(DATEDIFF(ms,start_time,end_time)) as active_time,  

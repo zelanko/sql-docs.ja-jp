@@ -16,7 +16,8 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2c2056dccbb2d65e880928e4ec37a70080cfbf53
 ms.contentlocale: ja-jp
@@ -28,7 +29,7 @@ ms.lasthandoff: 08/09/2017
 
 レポート ビルダー チュートリアルを実行するには、レポート サーバー上、またはレポート サーバーと統合されている SharePoint サイト上で、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] のページ分割されたレポートを表示および保存できる必要があります。 データの場合は、すべてのチュートリアルは、SQL Server のインスタンスによって処理される必要があるリテラル クエリを使用します。  
   
-レポート サーバーやサイト、またはデータ ソースにアクセスできない場合は、オフラインのレポートを作成することによってレポート ビルダーについて学習できます。 参照してください[チュートリアル: オフラインでのクイック グラフ レポート &#40; を作成します。レポート ビルダー"&"#41;](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+レポート サーバーやサイト、またはデータ ソースにアクセスできない場合は、オフラインのレポートを作成することによってレポート ビルダーについて学習できます。 「[チュートリアル: オフラインでのクイック グラフ レポートの作成 (レポート ビルダー)](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)」を参照してください。  
 
 ## <a name="requirements"></a>必要条件
 
@@ -55,3 +56,4 @@ ms.lasthandoff: 08/09/2017
 [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md)  
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+

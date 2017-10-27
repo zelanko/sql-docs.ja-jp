@@ -16,7 +16,8 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4d862dc34dcbb81ce8d50cfac53d81a80f47d29c
 ms.contentlocale: ja-jp
@@ -64,7 +65,7 @@ ms.lasthandoff: 08/09/2017
     GO  
     ```  
   
-7.  をクリックして**!実行**ツールバー。  
+7.  ツールバーの **[実行]** をクリックします。  
   
 8.  SELECT ステートメントを使用して、3 行のデータがあることを確認します。 例: `select * from OrderInfo`  
   
@@ -80,3 +81,4 @@ ms.lasthandoff: 08/09/2017
 [基本的なテーブル レポートの作成](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+

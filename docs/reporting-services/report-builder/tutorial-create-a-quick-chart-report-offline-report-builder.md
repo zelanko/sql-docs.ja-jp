@@ -19,7 +19,8 @@ caps.latest.revision: 31
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a09ebdeda6679c80f3eb32602d38068114e7bf36
 ms.contentlocale: ja-jp
@@ -82,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  **[接続の種類の選択]** ボックスで、 **[XML]**をクリックします。  
   
-8.  クリックして、**資格情報**] タブで [**を使用して現在の Windows ユーザーです。Kerberos 委任が必要になる**、クリックして**OK**です。  
+8.  **[資格情報]** タブで、**[現在の Windows ユーザーを使用する。Kerberos 委任が必要になる場合があります。]** を選択し、**[OK]** をクリックします。  
   
 9. **[データ ソースへの接続の選択]** ページで **[MyPieChart]**をクリックし、 **[次へ]**をクリックします。  
   
@@ -234,11 +235,12 @@ ms.lasthandoff: 08/09/2017
   
  最後に、レポートをレポート サーバーまたはレポート サーバーと統合されている SharePoint サイトに保存するには、URL と権限が必要です。 作成したレポートは自分のコンピューターから直接実行できますが、レポート サーバーまたは SharePoint サイトから実行するとレポートの機能が増えます。 自分のレポートまたはその他のレポートをパブリッシュ元のレポート サーバーまたは SharePoint サイトから実行する権限が必要です。 アクセス権を取得するには、システム管理者に問い合わせてください。  
   
- 開始する前に、いくつかの概念や用語について確認しておくと役立つ場合があります。 参照してください[レポート オーサリングの概念と #40 です。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). また、レポートを初めて自分で作成する前に、計画の時間を取ってください。 時間を費やす価値があります。 「[レポートの計画 &#40;レポート ビルダー&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)」を参照してください。  
+ 開始する前に、いくつかの概念や用語について確認しておくと役立つ場合があります。 「[レポート作成の概念 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)」を参照してください。 また、レポートを初めて自分で作成する前に、計画の時間を取ってください。 時間を費やす価値があります。 「[レポートの計画 &#40;レポート ビルダー&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)」を参照してください。  
 
 ## <a name="next-steps"></a>次の手順
 
 [レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)   
 [SQL Server 2016 のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-その他のご不明な点は、 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -15,11 +15,12 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 98ebdbf63808c31b1e1fc5b9b2bcde91ebe2e33d
-ms.openlocfilehash: 8d7bb0e524b90ac621570da5c2653db6e0a4cb6a
+ms.workload: Inactive
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 698548e71d8d346d04f0aa93eef8b8074a2417c0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="cache-shared-datasets-ssrs"></a>複数の共有データセットのキャッシュ (SSRS)
@@ -58,7 +59,7 @@ ms.lasthandoff: 08/09/2017
   
  パラメーターの特定の組み合わせに対するクエリ結果がキャッシュ内にある間、それらのパラメーター値を持つ共有データセットを参照するレポートが起動されて処理されると、キャッシュされたデータが使用されます。  
   
- キャッシュ内にデータを保持する有効期限が切れるまでの期間を指定できます。 詳細については、次を参照してください。[キャッシュ ページ、共有データセットと #40 です。レポート マネージャー &#41;](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea).  
+ キャッシュ内にデータを保持する有効期限が切れるまでの期間を指定できます。 詳細については、「[共有データセットの [キャッシュ] ページ (レポート マネージャー)](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)」を参照してください。  
   
 ## <a name="preloading-the-cache"></a>キャッシュを事前に読み込む  
  キャッシュ更新計画を作成することによって、キャッシュを事前に読み込むことができます。 更新計画を使用すると、アイテム固有のスケジュールまたは共有スケジュールを使用して、キャッシュを更新する頻度を指定できます。 同一アイテムに対して複数のキャッシュ エントリが作成されることを防ぐため、スケジュールでは、外部データ ソースに対するクエリ処理が実行されるのに十分な時間を指定する必要があります。 たとえば、クエリの実行に 20 分かかる場合は、更新スケジュール間隔も 20 分より長くする必要があります。 詳細については、「 [Schedules](../../reporting-services/subscriptions/schedules.md)」を参照してください。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 08/09/2017
   
 -   共有データセットに対して ReadPolicy 権限および UpdatePolicy 権限が必要です。  
   
- キャッシュ更新計画は、共有データセットおよびレポートの両方に適用されます。 詳細については、次を参照してください。[キャッシュ更新オプション & #40 です。レポート マネージャー &#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
+ キャッシュ更新計画は、共有データセットおよびレポートの両方に適用されます。 詳細については、「[キャッシュ更新オプション (レポート マネージャー)](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)」を参照してください。  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>キャッシュが有効期限切れとなる条件  
  次の状況においては、共有データセット キャッシュが無効になる可能性があります。  
@@ -104,3 +105,4 @@ ms.lasthandoff: 08/09/2017
  [共有データセットを管理する](../../reporting-services/report-data/manage-shared-datasets.md)  
   
   
+

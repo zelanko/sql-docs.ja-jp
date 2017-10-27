@@ -12,6 +12,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 52c2f8fae79884b025e067b7d628cd3154ba93f4
 ms.openlocfilehash: 5ce83ff18d6908441a3eaaf05599068ec5876308
@@ -138,3 +139,4 @@ SQL Server 2016 Reporting Services ネイティブ モードをインストー�
 SQL Server Data Tools を使用してレポートを作成する[SQL Server Data Tools のダウンロード](http://go.microsoft.com/fwlink/?LinkID=616714)です。
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](http://go.microsoft.com/fwlink/?LinkId=620231)
+

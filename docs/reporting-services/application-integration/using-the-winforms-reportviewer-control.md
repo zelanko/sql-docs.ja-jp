@@ -19,7 +19,8 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Active
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4b6a64a6d5832461e7d1d73597499e6a67e4bc4b
 ms.contentlocale: ja-jp
@@ -33,7 +34,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  いずれかを使用して新しい Windows アプリケーションの作成[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[csprcs](../../includes/csprcs-md.md)]または[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]です。  
   
-     \- または、  
+     \-または、  
   
      既存の Windows アプリケーション プロジェクトを開いて新しいフォームを追加します。  
   

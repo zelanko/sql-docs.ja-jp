@@ -18,7 +18,8 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 20adc5eb8b830b960fe07d39f3717279abca3f23
 ms.contentlocale: ja-jp
@@ -73,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  レポート サーバー ノードを右クリックして、 **[プロパティ]**をクリックします。  
   
-3.  **[詳細設定]** をクリックすると、プロパティ ページが表示されます。 詳細については、次を参照してください。[サーバーのプロパティ & #40 です。[詳細] ページ &#41;-Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
+3.  **[詳細設定]** をクリックすると、プロパティ ページが表示されます。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[サーバーのプロパティ ([詳細設定] ページ) - Reporting Services」](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)を参照してください。  
   
 4.  **EnableRemoteErrors**で **True**を選択します。  
   
@@ -119,3 +120,4 @@ ms.lasthandoff: 08/09/2017
     >  レポート サーバー データベースで **ConfigurationInfo** テーブルを編集して、 **EnableRemoteErrors** を **True**に設定できますが、レポート サーバーが現在使用中の場合は、SQL Server Management Studio またはスクリプトを使用して設定を変更する必要があります。 データベース内で設定を変更した場合、変更は [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスの再起動後に反映されます。  
   
   
+

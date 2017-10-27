@@ -18,7 +18,8 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f89c8f0d330561aacd678e4556fdaf2910b5dcc7
 ms.contentlocale: ja-jp
@@ -54,6 +55,7 @@ ms.lasthandoff: 08/09/2017
      印刷する前にレポートを表示するには、 **[プレビュー]** ボタンをクリックします。 これにより、レポートの最初のページが別のプレビュー ウィンドウに表示されます。 残りのページは、レポート サーバーでレポートが表示されると利用可能になります。 レポートのプレビューは、EMF 形式で表示されます。 プレビューでは前後のページに移動することができ、最後のページに到達すると、 **[次へ]** ボタンが無効になります。 プレビュー ページの印刷余白を変更するには、 **[余白]** ボタンをクリックします。 **[余白]** ダイアログ ボックスが表示されます。 上下および左右の余白を設定し、 **[OK]**をクリックします。 ダイアログ ボックスが閉じ、プレビューの表示および印刷の設定が保存されます。  
   
 ## <a name="see-also"></a>参照  
- [有効にして、Reporting Services のクライアント側印刷機能を無効にします。](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
+ [Reporting Services のクライアント側印刷機能の有効化と無効化](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   
+

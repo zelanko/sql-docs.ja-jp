@@ -17,7 +17,8 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9a23cb8cb401de31b69049a065b5bd34cc29e9b1
 ms.contentlocale: ja-jp
@@ -59,9 +60,9 @@ SharePoint 製品およびテクノロジ (rssharepoint.msi) 用 [!INCLUDE[msCoN
   
  アドインをダウンロードしてインストールするには、以下の [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロード センターを参照してください。  
   
--   **SP1 アドイン:**  [Microsoft® SharePoint® 用 Microsoft® SQL Server® 2012 SP1 Reporting Services アドイン](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583)。  
+-   **SP1 add-in:**  [Microsoft® SQL Server® 2012 SP1 Reporting Services Add-in for Microsoft® SharePoint®](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583).  
   
--   **SP1:**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](http://go.microsoft.com/fwlink/p/?LinkID=255906) (http://go.microsoft.com/fwlink/p/?LinkID=255906)。  
+-   **SP1:**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](http://go.microsoft.com/fwlink/p/?LinkID=255906) (http://go.microsoft.com/fwlink/p/?LinkID=255906).  
 
 ##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SharePoint 2010 製品用 Reporting Services アドイン
 
@@ -70,6 +71,7 @@ SQL Server 2016 のリリースでアドインをインストールできます�
 ## <a name="next-steps"></a>次の手順
 
 [SharePoint 用 Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[Reporting Services アドインをアンインストールした後は、既定以外のゾーンで SharePoint ページを参照することはできません。](http://support.microsoft.com/kb/2009212)  
+[Reporting Services アドインをアンインストールした後に既定以外のゾーンでの SharePoint ページを参照できません。](http://support.microsoft.com/kb/2009212)  
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -14,7 +14,8 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: dcac784ffea9845be91f35f03fb45e2ca6a6e530
 ms.contentlocale: ja-jp
@@ -62,12 +63,12 @@ SQL Server モバイル レポートでは、さまざまな状況に役立つ�
   
 1. 左上隅にある **[データ]** タブを選択します。  
   
-2. **[データの追加]**を選択し、次に **ローカル Excel** または **[SSRS サーバー]**を選択します。  
+2. 選択**データ追加**、し、いずれか**ローカル Excel**または**SSRS サーバー**です。  
   
    > **ヒント**: データが [モバイル レポートに適した形式](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)であることを確認してください。  
   
 3. 目的のワークシートを選択し、 **[インポート]**を選択します。  
-   [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]でデータを確認します。  
+   [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] でデータを確認します。  
   
 4. **[データ]** ビュー、**[データのプロパティ]** パネル、**[キー]** の順に移動して、左のボックスからマップ データを含むテーブルを選択し、右のボックスから、マップ内の領域に一致するキー フィールドを選択します。  
   
@@ -84,7 +85,7 @@ SQL Server モバイル レポートでは、さまざまな状況に役立つ�
 8. 左上隅の **[保存]** アイコンを選択して、コンピューターに **[ローカルに保存]** するか、または **[サーバーに保存]**します。  
   
 ### <a name="see-also"></a>参照  
--  [Reporting Services モバイル レポートのカスタム マップ](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
+-  [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (SQL Server Mobile Report Publisher でモバイル レポートを作成し発行する)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   

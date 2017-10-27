@@ -20,7 +20,8 @@ caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e99d13a8e80a0ed2a5e584dcc0e20591507f8c92
 ms.contentlocale: ja-jp
@@ -30,7 +31,7 @@ ms.lasthandoff: 08/09/2017
 
 # <a name="start-report-builder"></a>レポート ビルダーの起動
 
-[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] は、スタンドアロンのレポート作成環境です。 この環境を使用すると、ページ分割されたレポートを作成して、ネイティブ モードまたは SharePoint 統合モードでインストールされた [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にパブリッシュできます。  
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]スタンドアロン レポートは、環境を作成します。 この環境を使用すると、ページ分割されたレポートを作成して、ネイティブ モードまたは SharePoint 統合モードでインストールされた [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にパブリッシュできます。  
   
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] Web ポータルまたは SharePoint 統合モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] から [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を初めて起動する場合は、Microsoft ダウンロード センターからダウンロードするように求められます。 
  
@@ -73,6 +74,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>次の手順
 
 [SQL Server 2016 のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
-[レポート ビルダーの既定のオプションを設定する](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
+[レポート ビルダーの既定のオプションを設定します。](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+

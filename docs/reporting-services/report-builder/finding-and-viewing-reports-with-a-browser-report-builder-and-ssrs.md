@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a94db96fd785ebaa1ed511f5bf9c6e262d180104
 ms.contentlocale: ja-jp
@@ -29,7 +30,7 @@ ms.lasthandoff: 08/09/2017
   
  レポートの Web アドレスがわからない場合は、レポート サーバーの Web アドレスを開いてから、レポート サーバーのフォルダー階層を参照して、表示するレポートを選択することができます。 次の図は、ブラウザー ウィンドウに表示されたフォルダー階層を表しています。  
   
- ![ブラウザーでのフォルダー](../../reporting-services/report-builder/media/rs-browserfolder.GIF "ブラウザーでのフォルダー")  
+ ![ブラウザーに表示されたフォルダー](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Folders in a browser")  
 ブラウザーに表示されたフォルダー  
   
 > [!NOTE]  
@@ -63,3 +64,4 @@ ms.lasthandoff: 08/09/2017
  URL の構築方法など、URL を介してレポートにアクセスする方法の詳細については、 [Reporting Services のドキュメント](http://go.microsoft.com/fwlink/?linkid=121312) (SQL Server オンライン ブック) の「URL アクセス」を参照してください。  
   
   
+

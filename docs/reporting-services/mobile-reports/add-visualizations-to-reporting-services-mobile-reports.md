@@ -14,7 +14,8 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7a6554de812f8f85c9adbd7a3338ab744555e9a0
 ms.contentlocale: ja-jp
@@ -44,7 +45,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="change-aggregation"></a>集計の変更 
 グラフの数値フィールドにおける既定の集計は合計です。 この値は、平均、カウント、最小、最大、先頭、最後に変更できます。
 
-* 選択、**データ** タブで、し、**データ プロパティ****オプション**数値フィールドの横にある > 異なる集計を選択します。
+* [**データ**] タブを選択してから、[**データ プロパティ**] で、数値フィールドの横にある [**オプション**] を選択し、異なる集計を選択します。
 
 ### <a name="set-or-clear-filters"></a>フィルターの設定またはクリア
 
@@ -64,15 +65,15 @@ ms.lasthandoff: 08/09/2017
 
 1. [ **レイアウト** ] タブからデザイン画面に **時間グラフ** をドラッグし、そのサイズを変更します。
 
-2. 既定では、積み上げ横棒グラフとなります。 これは、[ **系列の視覚化**] で変更できます。
+2. 既定では、積み上げ横棒グラフとなります。 これは、[**系列の視覚化**] で変更できます。
 
-3. グラフは、既にレポートされていないデータを必要とする場合は、選択、**データ**タブ >**データを追加**に[Excel または共有データセットからデータを取得する](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)です。
+3. レポートにまだ存在していないデータがグラフで必要な場合は、[**データ**] タブ、[**データの追加**] の順に選択して、[Excel または共有データセットからデータを取得](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md) します。
 
-3. **[データ プロパティ]** ペインに表示される **[主要な系列]** は **[SimulatedTable]**です。 ボックス内の矢印を選択し、テーブルを選択します。
+3. [**データ プロパティ**] ウィンドウでは、[**主要な系列**] は [**SimulatedTable**] です。 ボックス内の矢印を選択し、テーブルを選択します。
 
-5. 設定した場合**データ構造体**に**列によって**(で、**レイアウト** タブ > **Visual プロパティ**ペイン) にここでは、**データ プロパティ**ウィンドウの数値の複数の列を選択することができます。
+5. [**データ構造**] を [**列ごと**] に設定した場合 ([**レイアウト**] タブで、[**ビジュアルのプロパティ**] ウィンドウを選択)、[**データ プロパティ**] ウィンドウでは、数値の複数の列を選択することができます。
 
-   [ **データ構造** ] を [ **行ごと**] に設定した場合、[ **データ プロパティ** ] ウィンドウで [ **系列名フィールド** ] を 1 つと数値の列を 1 つ選択できます。
+   [**データ構造**] を [**行ごと**] に設定した場合、[**データ プロパティ**] ウィンドウで [**系列名フィールド**] を 1 つと数値の列を 1 つ選択できます。
    
 詳細については、 [「grouping data by columns or rows」](../../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md)(列または行ごとにデータをグループ化する) を参照してください。
   

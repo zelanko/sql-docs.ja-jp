@@ -19,7 +19,8 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 670c061b0c624eb321fd00c0f4e2f372b6ba9e71
 ms.contentlocale: ja-jp
@@ -31,7 +32,7 @@ ms.lasthandoff: 08/09/2017
 
   レポート サーバー構成で重要なのは、機密情報の暗号化に使用される対称キーのバックアップ コピーの作成です。 キーのバックアップ コピーは多くのルーチン処理で必要とされ、キーのバックアップ コピーにより新しいインストールで既存のレポート サーバー データベースを再利用できます。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
   
  次のいずれかが行われた場合、暗号化キーのバックアップ コピーを復元する必要があります。  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  複雑なパスワードを入力します。  
   
-4.  格納されたキーを含むファイルを指定します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ファイルに .snk ファイル拡張子を追加します。 このファイルを、レポート サーバーとは別のディスクに保存することを検討してください。  
+4.  格納されたキーを含むファイルを指定します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、ファイルに .snk ファイル拡張子が付けられます。 このファイルを、レポート サーバーとは別のディスクに保存することを検討してください。  
   
 5.  [ **OK**] を選択します。  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 08/09/2017
     ```  
   
 ## <a name="see-also"></a>参照  
- [構成および暗号化キー &#40; を管理します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
 

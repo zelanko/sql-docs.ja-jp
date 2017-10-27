@@ -19,7 +19,8 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7df29304e469a78f64a8b81198d7991f956953fe
 ms.contentlocale: ja-jp
@@ -51,7 +52,7 @@ ms.lasthandoff: 08/09/2017
   
  .odc ファイルに関する知識があまりなくても、次の手順を使用して .odc ファイルを作成およびエクスポートすることができます。 OLE DB データ ソース用に .odc ファイルを作成する簡単な方法の 1 つは、Excel 2007 とデータ接続ウィザードを使用することです。 ただし、このウィザードではデータ ソースが作成されないので、定義済みの外部データ ソースを用意しておく必要があります。  
   
- 既存の .odc ファイルは、レポートやクエリと完全な互換性がある場合にのみ使用してください。 レポートまたは .odc ファイルに対して大幅な変更が必要になるようなエラーが発生する場合は、レポート用に .rsds ファイルを新しく作成します。 .Rsds ファイルを使用する共有データ ソースを作成する方法の詳細については、次を参照してください。[作成および共有データ ソースの管理 & #40 です。Reporting Services の SharePoint モード &#41; と統合](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ 既存の .odc ファイルは、レポートやクエリと完全な互換性がある場合にのみ使用してください。 レポートまたは .odc ファイルに対して大幅な変更が必要になるようなエラーが発生する場合は、レポート用に .rsds ファイルを新しく作成します。 .rsds ファイルを使用する共有データ ソースを作成する方法の詳細については、「[共有データ ソースを作成および管理する &#40;Reporting Services の SharePoint 統合モード&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)」をご覧ください。  
   
 ### <a name="to-create-and-export-an-odc-file"></a>.odc ファイルを作成してエクスポートするには  
   
@@ -109,3 +110,4 @@ ms.lasthandoff: 08/09/2017
  [共有データ ソースを作成、変更、および削除する &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   
+

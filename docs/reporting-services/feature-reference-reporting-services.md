@@ -20,7 +20,8 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e9a913cf74cb021d59ed5099483b2b1b04af554e
 ms.contentlocale: ja-jp
@@ -56,3 +57,4 @@ ms.lasthandoff: 08/09/2017
  [レポート ビルダー 1.0 を使用したレポートのデザインと実装](http://go.microsoft.com/fwlink/?LinkId=142601)  
   
   
+

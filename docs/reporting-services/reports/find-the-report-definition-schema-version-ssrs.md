@@ -19,7 +19,8 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 354f69ea0d63502a66db541f968f0efe2e690a6e
 ms.contentlocale: ja-jp
@@ -90,6 +91,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>次の手順
 
 [レポートのアップグレード](../../reporting-services/install-windows/upgrade-reports.md)   
-[レポート定義言語 (Report Definition Language)](../../reporting-services/reports/report-definition-language-ssrs.md)  
+[レポート定義言語](../../reporting-services/reports/report-definition-language-ssrs.md)  
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+

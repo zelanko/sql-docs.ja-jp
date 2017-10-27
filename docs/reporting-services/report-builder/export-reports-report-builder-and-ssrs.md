@@ -18,7 +18,8 @@ caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Active
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: db9a6cef14a145c8546a0f47a71bf83a358d483c
 ms.contentlocale: ja-jp
@@ -40,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **レポート データをデータ フィードとしてアプリケーションで使用する。** たとえば、Power Pivot や Power BI を消費する、Power Pivot や Power BI のデータを使用する Atom 準拠のデータ フィードを生成できます。 詳細については、次を参照してください[レポートからのデータ フィードの生成。](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)  
   
--   レポート サーバーでレポートを変換するのが便利なのは、サブスクリプションを設定したり電子メールでレポートを配信したりする場合や、レポート サーバーで利用可能なレポートを保存する場合です。 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
+-   レポート サーバーでレポートを変換するのが便利なのは、サブスクリプションを設定したり電子メールでレポートを配信したりする場合や、レポート サーバーで利用可能なレポートを保存する場合です。 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、さまざまな表示拡張機能が用意されており、一般的なファイル形式へのレポートのエクスポートがサポートされます。 これらの表示拡張機能では、ソフト改ページを含むファイル形式 (Word や Excel など)、ハード改ページを含むファイル形式 (PDF や TIFF など)、またデータのみのファイル形式 (CSV や Atom 準拠の XML など) がサポートされます。  
   
@@ -196,9 +197,10 @@ http://<Report Server Name/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%
 
 ## <a name="next-steps"></a>次の手順
 
-[改ページ、見出し、列、および行 &#40; を制御します。レポート ビルダーおよび SSRS &#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
-[レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+[改ページ、見出し、列、および行の制御 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+[レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
 [レポートの印刷 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
-[レポート &#40; を保存します。レポート ビルダー"&"#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
+[レポートの保存 &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
 
 他に質問しますか。 [Reporting Services のフォーラムで質問してみてください。](http://go.microsoft.com/fwlink/?LinkId=620231)
+

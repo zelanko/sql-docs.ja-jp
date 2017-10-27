@@ -18,7 +18,8 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a9cb113f44e01052d03fc5354c2cff6da4afb460
 ms.contentlocale: ja-jp
@@ -46,7 +47,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  テキスト エディターで `RsReportServer.config` ファイルを開きます。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」をご覧ください。  
   
-2.  レポート サーバー Web サービスを有効にするには、 **IsWebServiceEnabled** を **true**に設定します。  
+2.  レポート サーバー Web サービスを有効にするには、**IsWebServiceEnabled** を **true** に設定します。  
   
     ```  
     <IsWebServiceEnabled>true</IsWebServiceEnabled>  
@@ -82,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  テキスト エディターで RsReportServer.config ファイルを開きます。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」をご覧ください。  
   
-2.  スケジュールされたレポート処理および配信を有効にするには、 **IsSchedulingService**、 **IsNotificationService**、および **IsEventService** を **true**に設定します。  
+2.  スケジュールされたレポート処理および配信を有効にするには、**IsSchedulingService**、**IsNotificationService**、および **IsEventService** を **true** に設定します。  
   
     ```  
     <IsSchedulingService>true</IsSchedulingService>  
@@ -124,7 +125,7 @@ ms.lasthandoff: 08/09/2017
   
 ##  <a name="WebPortal"></a>Web ポータル
   
-以前のバージョンで無効にすることレポート マネージャーを設定して**IsReportManagerEnabled**を false に設定します。 **IsReportManagerEnabled** SQL Server 2016 Reporting Services Cumulative Update 2 の時点では推奨されていません。 Web ポータルは常に有効になります。
+以前のバージョンで無効にすることレポート マネージャーを設定して**IsReportManagerEnabled**を false に設定します。 **IsReportManagerEnabled** SQL Server 2016 Reporting Services Cumulative Update 2 の時点では推奨されていません。 Web ポータルは、常に有効にします。
   
 ##  <a name="ReportBuilder"></a> レポート ビルダー  
   

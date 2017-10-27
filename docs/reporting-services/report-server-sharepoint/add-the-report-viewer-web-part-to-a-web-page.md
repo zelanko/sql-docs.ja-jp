@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: 26080938c9849d6021f30d970ab2262f405df00c
@@ -64,3 +65,4 @@ Web パーツを web ページを追加するには、サイト レベルでペ�
  [レポート ビューアー web パーツをカスタマイズします。](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)   
  [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [SharePoint 用 Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+
