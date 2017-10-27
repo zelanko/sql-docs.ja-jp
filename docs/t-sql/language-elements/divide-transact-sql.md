@@ -100,11 +100,11 @@ FROM DimEmployee;
 ## <a name="see-also"></a>参照  
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
+ [演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [ここで & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)   
- [&#40; 分割等号"&"#41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/divide-equals-transact-sql.md)   
- [複合の演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [ここで &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/where-transact-sql.md)   
+ [&#40; 分割等号"&"#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/divide-equals-transact-sql.md)   
+ [複合の演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

@@ -107,14 +107,14 @@ FROM DimEmployee;
 ```  
   
 ## <a name="see-also"></a>参照  
- [算術演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)   
- [-(& a) #40 です。負の値"&"#41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/unary-operators-negative.md)   
+ [算術演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)   
+ [-(& a) #40 です。負の値"&"#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/unary-operators-negative.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [式 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [-= (& a) #40 です。減算代入 &#41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
- [複合の演算子 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [-= (& a) #40 です。減算代入 &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
+ [複合の演算子 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

@@ -58,7 +58,7 @@ ms.lasthandoff: 09/26/2017
   
  スクリプト コンポーネントによる接続マネージャーを使用する方法に関する一般情報は、次を参照してください。[スクリプト コンポーネントでデータ ソースに接続する](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)です。  
   
- 詳細については、**接続マネージャー**のページ、**スクリプト変換エディター**を参照してください[スクリプト変換エディター & #40 です。接続マネージャー ページ &#41;](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md).  
+ 詳細については、**接続マネージャー**のページ、**スクリプト変換エディター**を参照してください[スクリプト変換エディター &#40;です。接続マネージャー ページ &#41;](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md).  
   
 ### <a name="configuring-inputs-and-input-columns"></a>入力および入力列の設定  
  変換先コンポーネントには、1 つの入力があり、出力はありません。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 09/26/2017
   
  スクリプト コンポーネントで変数を使用する方法に関する一般情報は、次を参照してください。[スクリプト コンポーネントで変数を使用して](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)です。  
   
- 詳細については、**スクリプト**のページ、**スクリプト変換エディター**を参照してください[スクリプト変換エディター & #40 です。[スクリプト] ページ &#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+ 詳細については、**スクリプト**のページ、**スクリプト変換エディター**を参照してください[スクリプト変換エディター &#40;です。[スクリプト] ページ &#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
   
 ## <a name="scripting-a-destination-component-in-code-design-mode"></a>コード デザイン モードでの変換先コンポーネントのスクリプト作成  
  コンポーネントのメタデータを構成した後、カスタム スクリプトを記述できます。 **スクリプト変換エディター**の**スクリプト**] ページで [**スクリプトの編集**を開くには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDEここで、カスタム スクリプトを追加することができます。 使用するスクリプト言語が選択されているかどうかに依存[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Basic または[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual c# のスクリプト言語として、 **[scriptlanguage]**プロパティを**スクリプト**ページです。  

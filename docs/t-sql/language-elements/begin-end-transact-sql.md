@@ -100,9 +100,9 @@ END;
   
 ## <a name="see-also"></a>参照  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [フロー制御言語 & #40 です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md)   
+ [フロー制御言語 &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
- [END & #40 です。作業を開始してください.終了"&"#41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/end-begin-end-transact-sql.md)  
+ [END &#40;です。作業を開始してください.終了"&"#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/end-begin-end-transact-sql.md)  
   
   
 

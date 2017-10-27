@@ -27,7 +27,7 @@ ms.lasthandoff: 09/01/2017
 
   新しいデータベースを作成、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]アプライアンスです。 このステートメントを使用する、アプライアンスのデータベースに関連付けられているすべてのファイルを作成して、最大サイズとデータベースのテーブルとトランザクション ログの自動拡張オプションを設定します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -109,7 +109,7 @@ GO
  データベース オブジェクトの共有ロックを取得します。  
   
 ## <a name="metadata"></a>メタデータ  
- この操作に成功したら、エントリにこのデータベースが表示されますが、 [sys.databases & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)と[sys.objects & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)メタデータのビューです。  
+ この操作に成功したら、エントリにこのデータベースが表示されますが、 [sys.databases &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)と[sys.objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)メタデータのビューです。  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -147,7 +147,7 @@ CREATE DATABASE mytest
 ```  
   
 ## <a name="see-also"></a>参照  
- [ALTER DATABASE & #40 です。並列データ ウェアハウス"&"#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)   
+ [ALTER DATABASE &#40;です。並列データ ウェアハウス"&"#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   
   

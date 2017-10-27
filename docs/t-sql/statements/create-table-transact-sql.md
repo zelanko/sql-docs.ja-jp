@@ -364,7 +364,7 @@ column_name <data_type>
  
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
  
- 新しいテーブルを FileTable として作成します。 FileTable には固定スキーマがあるため、列は指定しません。 Filetable の詳細については、次を参照してください。 [Filetable & #40 です。SQL Server &#41;](../../relational-databases/blob/filetables-sql-server.md).  
+ 新しいテーブルを FileTable として作成します。 FileTable には固定スキーマがあるため、列は指定しません。 Filetable の詳細については、次を参照してください。 [Filetable &#40;です。SQL Server &#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
  *column_name*  
  *computed_column_expression*  
@@ -431,7 +431,7 @@ TEXTIMAGE_ON のみ「LOB ストレージ領域」の場所を変更、データ
   
  内のファイル グループ、`FILESTREAM_ON <filegroup>`句、またはパーティション構成で指定されている各 FILESTREAM ファイル グループには、ファイル グループに対して定義されている 1 つのファイルが必要です。 このファイルを使用して定義する必要があります、 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md)または[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)ステートメントです。 それ以外の場合、エラーが発生します。  
   
- 関連する FILESTREAM のトピックを参照してください。[バイナリ ラージ オブジェクト & #40 です。Blob &#41;データ & #40 です。SQL Server &#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+ 関連する FILESTREAM のトピックを参照してください。[バイナリ ラージ オブジェクト &#40;です。Blob &#41;データ &#40;です。SQL Server &#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
  [ *type_schema_name***です。** *type_name*  
  列のデータ型と、そのデータ型が所属するスキーマを指定します。 ディスク ベース テーブルの場合、データ型は次のいずれかです。  
@@ -568,7 +568,7 @@ TEXTIMAGE_ON のみ「LOB ストレージ領域」の場所を変更、データ
  使用して暗号化列を指定します、 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)機能します。  
   
  COLUMN_ENCRYPTION_KEY = *key_name*  
- 列の暗号化キーを指定します。 詳細については、次を参照してください。 [CREATE COLUMN ENCRYPTION KEY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-column-encryption-key-transact-sql.md).  
+ 列の暗号化キーを指定します。 詳細については、次を参照してください。 [CREATE COLUMN ENCRYPTION KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-column-encryption-key-transact-sql.md).  
   
  ENCRYPTION_TYPE = {決定的 |ランダム化}  
  **確定的な暗号化** は常に任意のプレーン テキストを指定した値の場合は、同じ暗号化された値を生成するメソッドを使用します。 確定的な暗号化を使用すると、グループ化、および暗号化された値に基づいて、等しいかどうかの結合を使用して、テーブルへの参加の等値比較を使用して検索をできますも確認するには、暗号化された列のパターンについては、暗号化された値を推測する承認されていないユーザーを許可することができます。 確定的に暗号化された列に 2 つのテーブルを結合すると、両方の列が同じ列の暗号化キーを使用して暗号化されている場合にのみ可能なです。 明確な暗号化では、バイナリ 2 文字型の列の並べ替え順序を持つ列の照合順序を使用する必要があります。  
@@ -621,7 +621,7 @@ TEXTIMAGE_ON のみ「LOB ストレージ領域」の場所を変更、データ
   
  Windows と SQL 照合順序名の詳細については、次を参照してください。 [Windows 照合順序名](../../t-sql/statements/windows-collation-name-transact-sql.md)と[SQL 照合順序名](../../t-sql/statements/sql-server-collation-name-transact-sql.md)です。  
   
- COLLATE 句の詳細については、次を参照してください。 [COLLATE & #40 です。TRANSACT-SQL と #41 です。](~/t-sql/statements/collations.md).  
+ COLLATE 句の詳細については、次を参照してください。 [COLLATE &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/statements/collations.md).  
   
  CONSTRAINT  
  PRIMARY KEY 制約、NOT NULL 制約、UNIQUE 制約、FOREIGN KEY 制約、または CHECK 制約の開始を示す省略可能なキーワードです。  
@@ -814,7 +814,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 ```  
   
  \<index_option >:: =  
- 1 つ以上のインデックス オプションを指定します。 これらのオプションの詳細については、次を参照してください。 [CREATE INDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-index-transact-sql.md).  
+ 1 つ以上のインデックス オプションを指定します。 これらのオプションの詳細については、次を参照してください。 [CREATE INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-index-transact-sql.md).  
   
  PAD_INDEX = {ON |**OFF** }  
  ON の場合、FILLFACTOR で指定された空き領域の割合が、インデックスの中間レベル ページに適用されます。 OFF の場合や、FILLFACTOR 値が指定されていない場合は、中間レベル ページは、中間ページの一連のキーを考慮しつつ、インデックスが持つことのできる最大サイズの行が少なくとも 1 つ格納できる領域を残して、ほぼ容量いっぱいに使用されます。 既定値は OFF です。  
@@ -933,7 +933,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
      この操作によりデータ転送コストが発生し、取り消すことはできません。  
   
--   指定`PAUSED`を一時停止またはデータの移行を延期します。 詳細については、次を参照してください。[一時停止と再開データの移行 & #40 です。Stretch Database &#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
+-   指定`PAUSED`を一時停止またはデータの移行を延期します。 詳細については、次を参照してください。[一時停止と再開データの移行 &#40;です。Stretch Database &#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
   
  MEMORY_OPTIMIZED  
    
@@ -1642,22 +1642,22 @@ GO
   
 ## <a name="see-also"></a>参照  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [COLUMNPROPERTY & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [COLUMNPROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/columnproperty-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [DROP INDEX & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-index-transact-sql.md)   
+ [DROP INDEX &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-index-transact-sql.md)   
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
- [DROP TABLE & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-table-transact-sql.md)   
+ [DROP TABLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-table-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [sp_helpconstraint & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpconstraint-transact-sql.md)   
+ [sp_helpconstraint &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpconstraint-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sp_spaceused & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
+ [sp_spaceused &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
   
   
 

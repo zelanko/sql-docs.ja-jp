@@ -93,7 +93,7 @@ DECLARE
 *data_type*  
  システム提供の共通言語ランタイム (CLR) ユーザー定義テーブル型または別名データ型を指定します。 変数は指定できません**テキスト**、 **ntext**、または**イメージ**データ型。  
   
- システム データ型の詳細については、次を参照してください。[データ型 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/data-types-transact-sql.md). CLR ユーザー定義型または別名データ型の詳細については、次を参照してください。[の種類の作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-type-transact-sql.md).  
+ システム データ型の詳細については、次を参照してください。[データ型 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/data-types-transact-sql.md). CLR ユーザー定義型または別名データ型の詳細については、次を参照してください。[の種類の作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-type-transact-sql.md).  
   
  =*値*  
  インラインで値を変数に代入します。 値には定数または式を指定できますが、変数宣言の型と同じであるか、その型に暗黙的に変換できる必要があります。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
@@ -127,7 +127,7 @@ CURSOR
  [部単位で印刷*collation_name*]  
  列の照合順序を指定します。 *collation_name* Windows 照合順序名または SQL 照合順序名のいずれかを指定できますの列に対してのみ、 **char**、 **varchar**、**テキスト**、 **nchar**、 **nvarchar**、および**ntext**データ型。 collation_name を指定しないと、列がユーザー定義データ型である場合はユーザー定義データ型の照合順序、または現在のデータベースの照合順序が列に割り当てられます。  
   
- Windows と SQL 照合順序名の詳細については、次を参照してください。 [COLLATE & #40 です。TRANSACT-SQL と #41 です。](~/t-sql/statements/collations.md).  
+ Windows と SQL 照合順序名の詳細については、次を参照してください。 [COLLATE &#40;です。TRANSACT-SQL と #41 です。](~/t-sql/statements/collations.md).  
   
  DEFAULT  
  挿入の際に明示的な値を指定しない場合に、列に入力される値を指定します。 として定義されているものを除くすべての列に DEFAULT 定義を適用できる**タイムスタンプ**または IDENTITY プロパティを持つ。 テーブルが削除されると、DEFAULT 定義も削除されます。 既定値として使用できるのは、文字列などの定数値、SYSTEM_USER() などのシステム関数、または NULL だけです。 旧バージョンとの互換性を維持する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]制約の名前は、既定値に割り当てることができます。  
@@ -189,7 +189,7 @@ CURSOR
   
  カーソル変数には、次の特徴があります。  
   
--   カーソルの種類または別のカーソル変数の対象になります。 詳細については、次を参照してください。[設定@local_variable& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
+-   カーソルの種類または別のカーソル変数の対象になります。 詳細については、次を参照してください。[設定@local_variable&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
   
 -   カーソル変数に現在カーソルが割り当てられていない場合、EXECUTE ステートメント内の出力カーソル パラメーターの対象として参照できます。  
   
@@ -275,7 +275,7 @@ GO
 ```  
   
 ### <a name="d-declaring-a-variable-of-user-defined-table-type"></a>D. ユーザー定義テーブル型の変数を宣言する  
- 次の例では、`@LocationTVP` というテーブル値パラメーターまたはテーブル変数を作成します。 呼ばれる対応するユーザー定義テーブル型が必要です`LocationTableType`です。 ユーザー定義テーブル型を作成する方法の詳細については、次を参照してください。[の種類の作成 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-type-transact-sql.md). テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;データベース エンジン"&"#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)です。  
+ 次の例では、`@LocationTVP` というテーブル値パラメーターまたはテーブル変数を作成します。 呼ばれる対応するユーザー定義テーブル型が必要です`LocationTableType`です。 ユーザー定義テーブル型を作成する方法の詳細については、次を参照してください。[の種類の作成 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-type-transact-sql.md). テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;データベース エンジン"&"#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)です。  
   
 ```  
 DECLARE @LocationTVP   

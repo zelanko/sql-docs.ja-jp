@@ -96,12 +96,12 @@ ELSE
 ```  
   
 ## <a name="see-also"></a>参照  
- [作業を開始してください.END & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [END & #40 です。作業を開始してください.終了"&"#41;& #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/end-begin-end-transact-sql.md)   
+ [作業を開始してください.END &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [END &#40;です。作業を開始してください.終了"&"#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/end-begin-end-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [中に & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/while-transact-sql.md)   
- [場合 & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/case-transact-sql.md)   
- [フロー制御言語 & #40 です。TRANSACT-SQL と &#41;です。](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40; IF しています.ELSE &#41;&#40;です。TRANSACT-SQL と &#41; です。](../../t-sql/language-elements/else-if-else-transact-sql.md) 
+ [中に &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/while-transact-sql.md)   
+ [場合 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/case-transact-sql.md)   
+ [フロー制御言語 &#40;です。TRANSACT-SQL と &#41;です。](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40; IF しています.ELSE &#41;&#40;です。TRANSACT-SQL と &#41; です。](../../t-sql/language-elements/else-if-else-transact-sql.md) 
   
   
 
